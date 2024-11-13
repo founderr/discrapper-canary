@@ -1,27 +1,27 @@
 var i = n(200651),
-    l = n(192379),
-    r = n(481060),
-    a = n(246364),
-    s = n(388032);
+    r = n(192379),
+    a = n(481060),
+    l = n(246364),
+    o = n(388032);
 t.Z = function (e) {
-    let { className: t, sortOrder: n, onSortChange: o } = e,
-        c = l.useMemo(
+    let { className: t, sortOrder: n, onSortChange: c } = e,
+        s = r.useMemo(
             () => [
                 {
-                    value: a.Nw.TIMESTAMP_DESC,
-                    label: s.intl.string(s.t.eoXe0t)
+                    value: l.Nw.TIMESTAMP_DESC,
+                    label: o.intl.string(o.t.eoXe0t)
                 },
                 {
-                    value: a.Nw.TIMESTAMP_ASC,
-                    label: s.intl.string(s.t.mmeWUF)
+                    value: l.Nw.TIMESTAMP_ASC,
+                    label: o.intl.string(o.t.mmeWUF)
                 }
             ],
             []
         );
-    return (0, i.jsx)(r.SingleSelect, {
+    return (0, i.jsx)(a.SingleSelect, {
         className: t,
-        onChange: o,
+        onChange: c,
         value: n,
-        options: c
+        options: s
     });
 };

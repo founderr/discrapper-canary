@@ -9,7 +9,7 @@ n.d(t, {
         return _;
     },
     aF: function () {
-        return m;
+        return f;
     }
 });
 var i = n(200651),
@@ -23,14 +23,14 @@ var i = n(200651),
     d = n(981631),
     h = n(921944),
     p = n(388032),
-    f = n(737116);
-function m(e) {
+    m = n(737116);
+function f(e) {
     let { title: t } = e;
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsx)(r.Heading, {
             variant: 'heading-md/semibold',
             color: 'header-primary',
-            className: f.title,
+            className: m.title,
             children: t
         })
     });
@@ -40,7 +40,7 @@ function g(e) {
     return (0, i.jsx)(r.Text, {
         variant: 'text-xs/normal',
         color: 'text-muted',
-        className: f.message,
+        className: m.message,
         children: t
     });
 }
@@ -51,7 +51,7 @@ function C(e) {
         look: r.ButtonLooks.FILLED,
         size: r.ButtonSizes.SMALL,
         color: r.ButtonColors.BRAND,
-        className: f.button,
+        className: m.button,
         onClick: t,
         children: (0, i.jsx)(r.Text, {
             variant: 'text-sm/semibold',
@@ -70,7 +70,7 @@ function _(e) {
     }, [t.id]);
     let _ = r === u.xn ? p.intl.string(p.t.Y95lq6) : r === u.nJ ? p.intl.string(p.t['1UjqaG']) : p.intl.string(p.t.MA2x2N),
         v = l.useCallback(() => (0, i.jsx)(g, { message: p.intl.string(p.t.VuqJFR) }), []),
-        x = l.useCallback(() => (0, i.jsx)(m, { title: _ }), [_]),
+        x = l.useCallback(() => (0, i.jsx)(f, { title: _ }), [_]),
         I = l.useCallback(() => {
             (0, c.aN)({
                 guildId: t.id,
@@ -80,7 +80,7 @@ function _(e) {
         }, [t.id]),
         b = l.useCallback(() => (0, i.jsx)(C, { onClick: I }), [I]);
     return (0, i.jsx)(o.Z, {
-        className: f.notice,
+        className: m.notice,
         guild: t,
         onDismissed: () => n(h.L.DISMISS),
         title: x,

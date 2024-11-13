@@ -103,7 +103,7 @@ function f(e) {
         let e = (0, u.pP)(T);
         return (0, u.YP)(e, document.body), () => (0, u.UC)(e, document.body);
     }, [T]);
-    let x = 0 !== h;
+    let A = 0 !== h;
     return (0, i.jsxs)('div', {
         className: a()(p.container, t),
         ref: N,
@@ -140,7 +140,7 @@ function f(e) {
                     })
                 ]
             }),
-            x &&
+            A &&
                 (0, i.jsxs)(o.TabBar, {
                     type: 'top',
                     look: 'brand',

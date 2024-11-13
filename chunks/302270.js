@@ -33,8 +33,8 @@ var i = n(200651),
     y = n(146085),
     P = n(427679),
     M = n(592473),
-    L = n(831002),
-    R = n(903108),
+    R = n(831002),
+    L = n(903108),
     k = n(981631),
     O = n(474936),
     D = n(388032),
@@ -57,7 +57,7 @@ function B(e) {
                     align: 'right',
                     renderPopout: (e) =>
                         (0, i.jsx)(I.Z, {
-                            children: (0, i.jsx)(L.Z, {
+                            children: (0, i.jsx)(R.Z, {
                                 ...e,
                                 channelId: n.id,
                                 appContext: p
@@ -122,9 +122,9 @@ function U(e) {
         I = (0, s.e7)([Z.Z], () => Z.Z.getGuild(a.guild_id), [a.guild_id]),
         E = null !== (t = null == I ? void 0 : I.maxStageVideoChannelUsers) && void 0 !== t ? t : 0,
         b = (null == I ? void 0 : I.isCommunity()) ? E < k.TU7 : (null == I ? void 0 : I.premiumTier) !== k.Eu4.TIER_3 && E <= k.eez,
-        A = (0, R.Z)(a),
+        A = (0, L.Z)(a),
         M = (0, s.e7)([N.Z], () => N.Z.can(y.yP, a)),
-        L = () => {
+        R = () => {
             d.Z.updateStageVideoLimitBoostUpsellDismissed(a.id, !0),
                 S.default.track(k.rMx.BOOSTING_UPSELL_CLICKED, {
                     guild_id: a.guild_id,
@@ -228,7 +228,7 @@ function U(e) {
                                         children: [
                                             (0, i.jsx)(c.Button, {
                                                 className: w.notNowButton,
-                                                onClick: L,
+                                                onClick: R,
                                                 look: c.Button.Looks.BLANK,
                                                 size: c.Button.Sizes.SMALL,
                                                 children: D.intl.string(D.t.L5eIZ2)
@@ -254,7 +254,7 @@ function U(e) {
                                     })
                                   : (0, i.jsx)(c.Button, {
                                         className: w.notNowButton,
-                                        onClick: L,
+                                        onClick: R,
                                         look: c.Button.Looks.BLANK,
                                         size: c.Button.Sizes.SMALL,
                                         children: D.intl.string(D.t.WAI6xs)

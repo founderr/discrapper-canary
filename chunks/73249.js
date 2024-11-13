@@ -18,7 +18,7 @@ var r = t(200651),
 function C() {
     (0, o.closeModal)(g.U);
 }
-function S(e) {
+function v(e) {
     let { onClick: n, tooltipText: t, children: i, selected: a, ...s } = e;
     return (0, r.jsx)(o.Tooltip, {
         text: t,
@@ -37,9 +37,9 @@ function S(e) {
         }
     });
 }
-function v() {
+function S() {
     let { zoomed: e, setZoomed: n } = (0, p.Y)();
-    return (0, r.jsx)(S, {
+    return (0, r.jsx)(v, {
         onClick: () => n(!e),
         tooltipText: e ? _.intl.string(_.t.vOFof3) : _.intl.string(_.t.Kt4gZ2),
         children: e ? (0, r.jsx)(o.MagnifyingGlassMinusIcon, {}) : (0, r.jsx)(o.MagnifyingGlassPlusIcon, {})
@@ -75,14 +75,14 @@ function E(e) {
         }, [l, d]),
         { canForwardMessages: h } = (0, s.yk)({ location: 'ForwardLink' }, { autoTrackExposure: !1 });
     return null != l && h && (0, u.h)(l)
-        ? (0, r.jsx)(S, {
+        ? (0, r.jsx)(v, {
               onClick: m,
               tooltipText: _.intl.string(_.t.I3ltXF),
               children: (0, r.jsx)(o.ArrowAngleRightUpIcon, {})
           })
         : null;
 }
-function L(e) {
+function y(e) {
     let { item: n } = e;
     if (!('VIDEO' === n.type || (h.isPlatformEmbedded && null == n.children && 'IMAGE' === n.type && (0, d.gS)(n.url)))) return null;
     let t = (0, d.s$)(n.url);
@@ -94,18 +94,18 @@ function L(e) {
                 (0, o.showToast)((0, o.createToast)(_.intl.string(_.t.R0RpRU), o.ToastType.FAILURE));
             }
     }
-    return (0, r.jsx)(S, {
+    return (0, r.jsx)(v, {
         onClick: i,
         tooltipText: _.intl.string(_.t['1WjMbG']),
         children: (0, r.jsx)(o.DownloadIcon, {})
     });
 }
-function y(e) {
+function L(e) {
     var n;
     let { item: t } = e;
     if (!(0, d.Jj)(t.url)) return null;
     let i = (0, d.s$)(null !== (n = t.original) && void 0 !== n ? n : t.url);
-    return (0, r.jsx)(S, {
+    return (0, r.jsx)(v, {
         onClick: () => (0, m.q)({ href: i }),
         tooltipText: _.intl.string(_.t.wuRE8P),
         children: (0, r.jsx)(o.WindowLaunchIcon, {})
@@ -180,7 +180,7 @@ function A(e) {
                   }),
               children: (e) => {
                   let { onClick: n } = e;
-                  return (0, r.jsx)(S, {
+                  return (0, r.jsx)(v, {
                       tooltipText: _.intl.string(_.t.UKOtz8),
                       onClick: () => a(!t),
                       selected: t,
@@ -195,10 +195,10 @@ n.Z = i.memo(function (e) {
     return (0, r.jsxs)('div', {
         className: x.actionButtons,
         children: [
-            (0, r.jsx)(v, {}),
+            (0, r.jsx)(S, {}),
             !t &&
                 (0, r.jsxs)(r.Fragment, {
-                    children: [(0, r.jsx)(E, { item: n }), (0, r.jsx)(L, { item: n }), (0, r.jsx)(y, { item: n }), (0, r.jsx)(A, { item: n })]
+                    children: [(0, r.jsx)(E, { item: n }), (0, r.jsx)(y, { item: n }), (0, r.jsx)(L, { item: n }), (0, r.jsx)(A, { item: n })]
                 })
         ]
     });

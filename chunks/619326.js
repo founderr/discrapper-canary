@@ -35,7 +35,7 @@ function f(e) {
     }
     let f = t === m.p6O,
         C = f ? c : t,
-        I = (0, i.jsx)(o.CheckmarkLargeIcon, {
+        v = (0, i.jsx)(o.CheckmarkLargeIcon, {
             size: 'custom',
             width: 32,
             height: 24,
@@ -45,11 +45,11 @@ function f(e) {
             orientation: 'horizontal',
             isDisabled: l
         }),
-        N = (0, o.useRadioItem)({
+        I = (0, o.useRadioItem)({
             isSelected: f,
             label: h.intl.formatToPlainString(h.t.ZC69mJ, { colorHex: (0, a.Rf)(m.p6O) })
         }),
-        v = (0, o.useRadioItem)({
+        N = (0, o.useRadioItem)({
             isSelected: !f,
             label: h.intl.formatToPlainString(h.t['3kiLZW'], { colorHex: (0, a.Rf)(t) })
         });
@@ -67,12 +67,12 @@ function f(e) {
                               n(m.p6O);
                           },
                     'aria-disabled': l,
-                    ...N,
+                    ...I,
                     children: [
                         (0, i.jsx)('div', {
                             className: g.swatch,
                             style: { backgroundColor: (0, a.Rf)(m.p6O) },
-                            children: f ? I : null
+                            children: f ? v : null
                         }),
                         (0, i.jsx)(o.Text, {
                             className: g.swatchDescription,
@@ -90,12 +90,12 @@ function f(e) {
                     (0, i.jsxs)(o.Clickable, {
                         onClick: l ? void 0 : u,
                         'aria-disabled': l,
-                        ...v,
+                        ...N,
                         children: [
                             (0, i.jsx)('div', {
                                 className: s()(g.customSwatch, { [g.defaultSwatch]: C === m.p6O }),
                                 style: { '--custom-color': (0, a.Rf)(C) },
-                                children: f ? null : I
+                                children: f ? null : v
                             }),
                             (0, i.jsx)(o.Text, {
                                 className: g.swatchDescription,

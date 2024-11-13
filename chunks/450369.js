@@ -82,7 +82,7 @@ let y = 16 / 9,
             { reducedMotion: v } = l.useContext(o.AccessibilityPreferencesContext),
             { id: Z, blocked: P } = t,
             M = (0, s.Wu)([_.Z], () => _.Z.getAllActiveStreams(), []),
-            { selectedParticipant: L, largeStream: R } = (0, s.cj)([p.Z], () => ({
+            { selectedParticipant: R, largeStream: L } = (0, s.cj)([p.Z], () => ({
                 selectedParticipant: null != a ? p.Z.getSelectedParticipant(a.id) : null,
                 largeStream: null != a && p.Z.getStageStreamSize(a.id)
             })),
@@ -92,9 +92,9 @@ let y = 16 / 9,
                         if (!(0, g.p9)(a, b.Z, I.Z, E.Z, m.Z)[0]) return;
                         (0, u.rn)((0, f.my)(e.id), { forceMultiple: t.shiftKey });
                     }
-                    (null == L ? void 0 : L.id) === e.id ? (R ? (c.Z.selectParticipant(a.id, null), c.Z.updateStageStreamSize(a.id, !1)) : c.Z.updateStageStreamSize(a.id, !0)) : (c.Z.updateStageStreamSize(a.id, !1), c.Z.selectParticipant(a.id, e.id));
+                    (null == R ? void 0 : R.id) === e.id ? (L ? (c.Z.selectParticipant(a.id, null), c.Z.updateStageStreamSize(a.id, !1)) : c.Z.updateStageStreamSize(a.id, !0)) : (c.Z.updateStageStreamSize(a.id, !1), c.Z.selectParticipant(a.id, e.id));
                 },
-                [M, a, L, R]
+                [M, a, R, L]
             );
         return (0, i.jsx)(
             N.Z,

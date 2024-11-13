@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return A;
+        return y;
     }
 }),
     n(47120),
@@ -22,14 +22,14 @@ var i = n(200651),
     p = n(764260),
     f = n(946724),
     C = n(95242),
-    I = n(530198),
+    v = n(530198),
     _ = n(420966),
-    N = n(203377),
-    v = n(981631),
+    I = n(203377),
+    N = n(981631),
     T = n(856651),
     j = n(388032),
-    S = n(16297),
-    b = n(571621);
+    b = n(16297),
+    S = n(571621);
 let E = (0, h.hQ)();
 function R(e, t) {
     return t !== m.O1.AND ? Object.values(o().groupBy(e, (e) => ''.concat(e.connectionType, ':').concat(e.applicationId))) : 0 === e.length ? [] : [[...e]];
@@ -37,21 +37,21 @@ function R(e, t) {
 function Z(e) {
     let { handleAddVerificationClicked: t, locked: n } = e;
     return (0, i.jsxs)('div', {
-        className: S.headerNoConfigContainer,
+        className: b.headerNoConfigContainer,
         children: [
             (0, i.jsx)(d.Heading, {
-                className: S.headerHeading,
+                className: b.headerHeading,
                 variant: 'eyebrow',
                 children: j.intl.string(j.t.nMir29)
             }),
             (0, i.jsx)(d.Text, {
                 variant: 'text-sm/normal',
                 color: 'header-secondary',
-                children: j.intl.format(j.t.q5f7tL, { helpdeskArticleUrl: g.Z.getArticleURL(v.BhN.CONNECTION_DETAILS_ADMIN) })
+                children: j.intl.format(j.t.q5f7tL, { helpdeskArticleUrl: g.Z.getArticleURL(N.BhN.CONNECTION_DETAILS_ADMIN) })
             }),
             (0, i.jsx)(d.Button, {
                 disabled: n,
-                className: S.addVerificationButton,
+                className: b.addVerificationButton,
                 size: d.Button.Sizes.MEDIUM,
                 look: d.Button.Looks.FILLED,
                 color: d.Button.Colors.BRAND,
@@ -61,10 +61,10 @@ function Z(e) {
         ]
     });
 }
-function A(e) {
+function y(e) {
     let { guild: t, role: n, locked: l, setSelectedSection: a, integrations: o } = e,
-        { headerHeight: h, headerRef: A } = (0, C.Z)(0),
-        { scrolledToTop: L, handleScroll: y } = (0, _.V)(),
+        { headerHeight: h, headerRef: y } = (0, C.Z)(0),
+        { scrolledToTop: A, handleScroll: L } = (0, _.V)(),
         D = (0, c.e7)(
             [x.Z],
             () => {
@@ -77,12 +77,12 @@ function A(e) {
             var e;
             return null !== (e = f.Z.getEditedRoleConnectionConfigurationsMap().get(n.id)) && void 0 !== e ? e : [];
         }),
-        M = O.length > 1 ? m.O1.OR : m.O1.AND,
-        P = r.useMemo(() => (M === m.O1.OR ? O.flat() : null != O && O.length > 0 ? O[0] : []), [M, O]),
-        k = r.useMemo(() => new Set(P.map((e) => e.connectionType)), [P]);
+        k = O.length > 1 ? m.O1.OR : m.O1.AND,
+        M = r.useMemo(() => (k === m.O1.OR ? O.flat() : null != O && O.length > 0 ? O[0] : []), [k, O]),
+        P = r.useMemo(() => new Set(M.map((e) => e.connectionType)), [M]);
     function w(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
-            i = [...P];
+            i = [...M];
         i.push({
             connectionType: e,
             connectionMetadataField: void 0,
@@ -90,36 +90,36 @@ function A(e) {
             operator: void 0,
             value: void 0
         }),
-            (0, p.d_)(n.id, R(i, M));
+            (0, p.d_)(n.id, R(i, k));
     }
     function B() {
         u.Z.dispatch({
             type: 'CONNECTIONS_GRID_MODAL_SHOW',
             onComplete: (e) => w(e),
-            excludedPlatformTypes: k,
+            excludedPlatformTypes: P,
             integrations: o,
             onCompleteApplication: (e) => w(T.Kt, e)
         });
     }
     let U = null;
-    if (0 === P.length)
+    if (0 === M.length)
         U = (0, i.jsx)(Z, {
             handleAddVerificationClicked: B,
             locked: l
         });
-    else if (P.length > 0) {
+    else if (M.length > 0) {
         var G, F;
         let e = null;
-        P.length < 10 &&
+        M.length < 10 &&
             (e = (0, i.jsx)(d.Button, {
-                className: s()(S.addVerificationButton, S.addVerificationButtonAppend),
+                className: s()(b.addVerificationButton, b.addVerificationButtonAppend),
                 size: d.Button.Sizes.LARGE,
                 look: d.Button.Looks.BLANK,
                 color: d.Button.Colors.LINK,
                 onClick: B,
                 disabled: l,
                 children: (0, i.jsxs)('div', {
-                    className: S.addVerificationButtonAppendTextContainer,
+                    className: b.addVerificationButtonAppendTextContainer,
                     children: [
                         (0, i.jsx)(d.CirclePlusIcon, {
                             size: 'xs',
@@ -136,17 +136,17 @@ function A(e) {
                     (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsxs)('div', {
-                                className: S.headerTitleContainer,
+                                className: b.headerTitleContainer,
                                 children: [
                                     (0, i.jsx)('div', {
-                                        className: S.headerTitleTextContainer,
+                                        className: b.headerTitleTextContainer,
                                         children: (0, i.jsx)(d.Heading, {
                                             variant: 'eyebrow',
                                             children: j.intl.string(j.t.nMir29)
                                         })
                                     }),
                                     (0, i.jsx)(d.Button, {
-                                        className: S.headerTitleButton,
+                                        className: b.headerTitleButton,
                                         size: d.Button.Sizes.TINY,
                                         look: d.Button.Looks.LINK,
                                         color: d.Button.Colors.LINK,
@@ -158,14 +158,14 @@ function A(e) {
                             }),
                             (0, i.jsx)(d.Text, {
                                 variant: 'text-sm/normal',
-                                children: j.intl.format(j.t.q5f7tL, { helpdeskArticleUrl: g.Z.getArticleURL(v.BhN.CONNECTION_DETAILS_ADMIN) })
+                                children: j.intl.format(j.t.q5f7tL, { helpdeskArticleUrl: g.Z.getArticleURL(N.BhN.CONNECTION_DETAILS_ADMIN) })
                             })
                         ]
                     })),
                     (function (e, t, n, r, l) {
                         let s = R(r, m.O1.OR);
                         return (0, i.jsx)(d.FormItem, {
-                            className: S.operatorContainer,
+                            className: b.operatorContainer,
                             title: j.intl.string(j.t.Xs7PHR),
                             children: (0, i.jsx)(d.RadioGroup, {
                                 options: [
@@ -184,7 +184,7 @@ function A(e) {
                                 'aria-labelledby': E
                             })
                         });
-                    })(l, n.id, M, P, (e, t) => (0, p.d_)(n.id, R(e, t))),
+                    })(l, n.id, k, M, (e, t) => (0, p.d_)(n.id, R(e, t))),
                     (function (e, t, n, r, l) {
                         function s(n, i) {
                             let r = [];
@@ -234,10 +234,10 @@ function A(e) {
                             });
                         }
                         return (0, i.jsx)('div', {
-                            className: S.configurationsContainer,
+                            className: b.configurationsContainer,
                             children: Array.from(a.values()).map((e) =>
                                 (0, i.jsx)(
-                                    I.Z,
+                                    v.Z,
                                     {
                                         configurationItems: e,
                                         onConfigurationChange: s,
@@ -248,38 +248,38 @@ function A(e) {
                                 )
                             )
                         });
-                    })(P, (e) => (0, p.d_)(n.id, R(e, M)), l, n.id, o),
+                    })(M, (e) => (0, p.d_)(n.id, R(e, k)), l, n.id, o),
                     e
                 ]
             }));
     }
     return (0, i.jsx)(d.AdvancedScrollerAuto, {
-        className: S.scroller,
+        className: b.scroller,
         style: { scrollPaddingTop: h },
-        onScroll: y,
+        onScroll: L,
         children: (0, i.jsxs)('div', {
-            className: b.contentWidth,
+            className: S.contentWidth,
             children: [
                 (0, i.jsx)('div', {
-                    className: s()(b.header, b.stickyHeader, { [b.stickyHeaderElevated]: !L }),
-                    ref: A,
+                    className: s()(S.header, S.stickyHeader, { [S.stickyHeaderElevated]: !A }),
+                    ref: y,
                     children: (0, i.jsx)(_.Z, {
                         guild: t,
                         role: n,
-                        selectedSection: N.ZI.VERIFICATIONS,
+                        selectedSection: I.ZI.VERIFICATIONS,
                         setSelectedSection: a
                     })
                 }),
                 (null != D ? D : 0) > 0
                     ? (0, i.jsxs)('div', {
-                          className: S.warningContainer,
+                          className: b.warningContainer,
                           children: [
                               (0, i.jsx)(d.CircleWarningIcon, {
                                   size: 'custom',
                                   width: 20,
                                   height: 20,
                                   color: 'currentColor',
-                                  className: S.warningIcon
+                                  className: b.warningIcon
                               }),
                               (0, i.jsx)(d.Text, {
                                   variant: 'text-sm/normal',

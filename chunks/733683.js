@@ -32,13 +32,13 @@ function f(e, t, n) {
     );
 }
 let C = -1,
-    I = (0, h.Mg)(u.Z.PREMIUM_GUILD_PROGRESS_BAR_PROGRESS_BAR_WIDTH),
+    v = (0, h.Mg)(u.Z.PREMIUM_GUILD_PROGRESS_BAR_PROGRESS_BAR_WIDTH),
     _ = (0, h.Mg)(u.Z.PREMIUM_GUILD_PROGRESS_BAR_TIER_MARKER_SIZE),
-    N = {
+    I = {
         tension: 140,
         friction: 30
     },
-    v = {
+    N = {
         tension: 800,
         friction: 20
     };
@@ -131,7 +131,7 @@ class T extends (i = l.Component) {
                     (0, r.jsx)(m.Spring, {
                         from: { scale: 1 },
                         to: { scale: f ? 1.625 : 1 },
-                        config: v,
+                        config: N,
                         children: (t) =>
                             (0, r.jsx)(o.animated.div, {
                                 ...e,
@@ -161,7 +161,7 @@ class T extends (i = l.Component) {
                 (0, r.jsx)('rect', {
                     x: '0',
                     y: '0',
-                    width: I,
+                    width: v,
                     height: e,
                     fill: 'white'
                 }),
@@ -169,9 +169,9 @@ class T extends (i = l.Component) {
                     (0, r.jsx)(
                         'circle',
                         {
-                            cx: I / 2,
+                            cx: v / 2,
                             cy: e.y,
-                            r: I / 2,
+                            r: v / 2,
                             fill: 'black'
                         },
                         e.key
@@ -194,7 +194,7 @@ class T extends (i = l.Component) {
                 (0, r.jsx)(m.Spring, {
                     from: { height: 0 },
                     to: { height: n },
-                    config: N,
+                    config: I,
                     delay: i ? 0 : this.props.initialAnimationDelay,
                     onChange: this.handleForegroundFrame,
                     onRest: i ? void 0 : this.handleFinishedInitialAnimation,
@@ -220,8 +220,8 @@ class T extends (i = l.Component) {
             style: { height: i },
             children: [
                 (0, r.jsxs)('svg', {
-                    viewBox: '0 0 '.concat(I, ' ').concat(i),
-                    width: I,
+                    viewBox: '0 0 '.concat(v, ' ').concat(i),
+                    width: v,
                     height: i,
                     children: [this.renderProgressMask(i), this.renderProgressBar(i, n)]
                 }),

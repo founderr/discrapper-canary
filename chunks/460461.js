@@ -1,6 +1,6 @@
 n.d(t, {
     J: function () {
-        return L;
+        return A;
     }
 }),
     n(47120),
@@ -27,19 +27,19 @@ var i = n(200651),
     p = n(134432),
     f = n(813197),
     C = n(208567),
-    I = n(496675),
+    v = n(496675),
     _ = n(768581),
-    N = n(63063),
-    v = n(434404),
+    I = n(63063),
+    N = n(434404),
     T = n(999382),
     j = n(450474),
-    S = n(190287),
-    b = n(981631),
+    b = n(190287),
+    S = n(981631),
     E = n(731455),
     R = n(388032),
     Z = n(527337);
-let A = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
-    L = () => {
+let y = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
+    A = () => {
         let {
             guild: e,
             guildMetadata: t,
@@ -52,11 +52,11 @@ let A = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
         return (0, i.jsx)(d.Z, {
             submitting: n,
             onReset: () => {
-                if (null != e) v.Z.init(e.id);
+                if (null != e) N.Z.init(e.id);
             },
             onSave: () => {
                 if (null != e)
-                    v.Z.saveGuild(e.id, {
+                    N.Z.saveGuild(e.id, {
                         discoverySplash: e.discoverySplash,
                         description: e.description
                     }),
@@ -75,19 +75,19 @@ let A = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
             }
         });
     },
-    y = () => {
+    L = () => {
         var e;
         let t = r.useRef(null),
             n = (0, l.e7)([T.Z], () => T.Z.getGuild()),
-            [d, L] = r.useState(!1);
+            [d, A] = r.useState(!1);
         r.useEffect(() => {
-            !d && null != n && (u.le(), u.aC(n.id), u.i3(n.id), L(!0));
+            !d && null != n && (u.le(), u.aC(n.id), u.i3(n.id), A(!0));
         }, [n, d]);
-        let { canManageGuild: y } = (0, l.cj)([I.Z], () => ({ canManageGuild: I.Z.can(b.Plq.MANAGE_GUILD, n) })),
+        let { canManageGuild: L } = (0, l.cj)([v.Z], () => ({ canManageGuild: v.Z.can(S.Plq.MANAGE_GUILD, n) })),
             D = (0, l.e7)([T.Z], () => T.Z.isGuildMetadataLoaded()),
             O = (0, l.e7)([T.Z], () => (null != n ? T.Z.getMetadata() : null)),
-            M = (0, l.e7)([T.Z], () => (null != n && (null == O ? void 0 : O.isPublished) ? T.Z.getSlug() : null)),
-            [P, k] = r.useState([!0]),
+            k = (0, l.e7)([T.Z], () => (null != n && (null == O ? void 0 : O.isPublished) ? T.Z.getSlug() : null)),
+            [M, P] = r.useState([!0]),
             [w, B] = r.useState(!0),
             [U, G] = r.useState([!1]),
             [F, H] = r.useState(['']),
@@ -105,7 +105,7 @@ let A = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                           value: e
                       });
             },
-            V = (e) => {
+            W = (e) => {
                 try {
                     var t, n, i, r;
                     let l = new URL(e).hostname.split('.');
@@ -123,20 +123,20 @@ let A = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                     t = [];
                 O.socialLinks.forEach((n, i) => {
                     if ('' !== n) {
-                        let r = V(n);
+                        let r = W(n);
                         null !== r ? ((t[i] = r), (e[i] = !0)) : (e[i] = !1);
                     } else e[i] = !0;
                 }),
                     H(t),
-                    k(e),
+                    P(e),
                     B(e.every((e) => !0 === e));
             }
         }, [O]);
-        let W = (0, l.e7)([T.Z], () => (null != n ? T.Z.getErrors() : null)),
+        let V = (0, l.e7)([T.Z], () => (null != n ? T.Z.getErrors() : null)),
             Y = (0, l.e7)([m.Z], () => m.Z.getPrimaryCategories(), [], m.j);
         if (null == n || null == O) return null;
         let K = (e) => {
-                v.Z.updateGuild({ discoverySplash: e });
+                N.Z.updateGuild({ discoverySplash: e });
             },
             q = (e) => {
                 var t;
@@ -144,7 +144,7 @@ let A = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
             },
             X = (e) => {
                 var t;
-                v.Z.updateGuild({ description: null !== (t = null == e ? void 0 : e.replaceAll('\n', '')) && void 0 !== t ? t : '' });
+                N.Z.updateGuild({ description: null !== (t = null == e ? void 0 : e.replaceAll('\n', '')) && void 0 !== t ? t : '' });
             },
             Q = (e) => {
                 u.mA(n.id, e);
@@ -176,7 +176,7 @@ let A = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                               socialLinks: O.socialLinks,
                               about: O.about
                           }),
-                    v.Z.saveGuild(n.id, {
+                    N.Z.saveGuild(n.id, {
                         discoverySplash: n.discoverySplash,
                         description: n.description
                     });
@@ -190,8 +190,8 @@ let A = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
             ee = (e, t) => {
                 let i = [...O.socialLinks],
                     r = [...F],
-                    l = [...P];
-                (r[t] = e), (i[t] = E.zo[e].baseUrl), (l[t] = !0), k(l), H(r), B(l.every((e) => !0 === e)), u.t$(n.id, i);
+                    l = [...M];
+                (r[t] = e), (i[t] = E.zo[e].baseUrl), (l[t] = !0), P(l), H(r), B(l.every((e) => !0 === e)), u.t$(n.id, i);
             },
             et = (e, t) => {
                 let i = [...O.socialLinks],
@@ -203,8 +203,8 @@ let A = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
             en = (e) => {
                 let t = [...U];
                 t.splice(e, 1), G(t);
-                let i = [...P];
-                i.splice(e, 1), k(i);
+                let i = [...M];
+                i.splice(e, 1), P(i);
                 let r = [...F];
                 r.splice(e, 1), H(r);
                 let l = [...O.socialLinks];
@@ -273,11 +273,11 @@ let A = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                             (0, i.jsxs)(a.FormText, {
                                                 className: Z.tabMainDescription,
                                                 type: a.FormTextTypes.DESCRIPTION,
-                                                children: [R.intl.format(R.t['+ScrMT'], { discordURL: window.GLOBAL_ENV.MARKETING_ENDPOINT }), ' ', R.intl.format(R.t.T6WtKy, { learnMoreURL: N.Z.getArticleURL(b.BhN.SERVER_WEB_PAGES) })]
+                                                children: [R.intl.format(R.t['+ScrMT'], { discordURL: window.GLOBAL_ENV.MARKETING_ENDPOINT }), ' ', R.intl.format(R.t.T6WtKy, { learnMoreURL: I.Z.getArticleURL(S.BhN.SERVER_WEB_PAGES) })]
                                             }),
                                             (() => {
-                                                if (!O.isPublished || null == M) return;
-                                                let e = A + M;
+                                                if (!O.isPublished || null == k) return;
+                                                let e = y + k;
                                                 return (0, i.jsx)(i.Fragment, {
                                                     children: (0, i.jsxs)(a.FormSection, {
                                                         className: Z.noDividerFormSection,
@@ -321,7 +321,7 @@ let A = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                 placeholder: R.intl.string(R.t.XqMe3N),
                                                                 options: es,
                                                                 onChange: q,
-                                                                disabled: !y,
+                                                                disabled: !L,
                                                                 searchable: !0,
                                                                 clearable: !0
                                                             }),
@@ -335,16 +335,16 @@ let A = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                     (0, i.jsx)(j.Z, {
                                                                         guild: n,
                                                                         guildMetadata: O,
-                                                                        disabled: !y
+                                                                        disabled: !L
                                                                     })
                                                                 ]
                                                             }),
-                                                            (null == W ? void 0 : W.category) != null
+                                                            (null == V ? void 0 : V.category) != null
                                                                 ? (0, i.jsx)(a.Text, {
                                                                       color: 'text-danger',
                                                                       className: Z.error,
                                                                       variant: 'text-sm/normal',
-                                                                      children: W.category
+                                                                      children: V.category
                                                                   })
                                                                 : null
                                                         ]
@@ -375,7 +375,7 @@ let A = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                                 children: [
                                                                                     R.intl.string(R.t.yG2pUl),
                                                                                     (0, i.jsx)(f.ZP, {
-                                                                                        disabled: !y,
+                                                                                        disabled: !L,
                                                                                         onChange: K
                                                                                     })
                                                                                 ]
@@ -390,7 +390,7 @@ let A = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                                 splash: e,
                                                                                 size: 512 * (0, p.x_)()
                                                                             }),
-                                                                        disabled: !y,
+                                                                        disabled: !L,
                                                                         onChange: K,
                                                                         hint: R.intl.string(R.t.uPvxqK),
                                                                         imageClassName: Z.imageUploaderInnerSquare,
@@ -398,11 +398,11 @@ let A = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                     })
                                                                 ]
                                                             }),
-                                                            (null == W ? void 0 : W.discovery_splash) != null
+                                                            (null == V ? void 0 : V.discovery_splash) != null
                                                                 ? (0, i.jsx)(a.Text, {
                                                                       color: 'text-danger',
                                                                       variant: 'text-sm/normal',
-                                                                      children: W.discovery_splash
+                                                                      children: V.discovery_splash
                                                                   })
                                                                 : null
                                                         ]
@@ -425,7 +425,7 @@ let A = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                         placeholder: R.intl.string(R.t.rFa9Ul),
                                                         onChange: X,
                                                         maxLength: 120,
-                                                        disabled: !y
+                                                        disabled: !L
                                                     })
                                                 ]
                                             }),
@@ -452,18 +452,18 @@ let A = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                         }),
                                                         (0, i.jsx)('div', {
                                                             className: Z.reasonToJoin,
-                                                            children: (0, i.jsx)(S.Z, {
+                                                            children: (0, i.jsx)(b.Z, {
                                                                 reasonMinLength: 10,
                                                                 reasonMaxLength: 128,
                                                                 guildId: n.id,
                                                                 reasons: e
                                                             })
                                                         }),
-                                                        (null == W ? void 0 : W.reasons_to_join) != null
+                                                        (null == V ? void 0 : V.reasons_to_join) != null
                                                             ? (0, i.jsx)(a.Text, {
                                                                   color: 'text-danger',
                                                                   variant: 'text-sm/normal',
-                                                                  children: W.reasons_to_join
+                                                                  children: V.reasons_to_join
                                                               })
                                                             : null
                                                     ]
@@ -493,18 +493,18 @@ let A = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                     onChange: Q,
                                                                     minLength: 300,
                                                                     maxLength: 2400,
-                                                                    disabled: !y,
+                                                                    disabled: !L,
                                                                     defaultDirty: (null === (e = O.about) || void 0 === e ? void 0 : e.length) > 0
                                                                 },
                                                                 'text-area-'.concat(D)
                                                             )
                                                         ]
                                                     }),
-                                                    (null == W ? void 0 : W.about) != null
+                                                    (null == V ? void 0 : V.about) != null
                                                         ? (0, i.jsx)(a.Text, {
                                                               color: 'text-danger',
                                                               variant: 'text-sm/normal',
-                                                              children: W.about
+                                                              children: V.about
                                                           })
                                                         : null
                                                 ]
@@ -540,7 +540,7 @@ let A = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                                 placeholder: R.intl.string(R.t.xSALIC),
                                                                                 value: F[t],
                                                                                 onChange: (e) => ee(e, t),
-                                                                                isDisabled: !y
+                                                                                isDisabled: !L
                                                                             },
                                                                             'dropdown-' + t
                                                                         ),
@@ -552,11 +552,11 @@ let A = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                                 onChange: (e) => et(e, t),
                                                                                 placeholder: R.intl.string(R.t.Q6o4pK),
                                                                                 maxLength: 150,
-                                                                                disabled: !y
+                                                                                disabled: !L
                                                                             },
                                                                             'link-' + t
                                                                         ),
-                                                                        P[t]
+                                                                        M[t]
                                                                             ? (0, i.jsx)(
                                                                                   a.CircleCheckIcon,
                                                                                   {
@@ -579,7 +579,7 @@ let A = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                                   },
                                                                                   'validation-failed-' + t
                                                                               ),
-                                                                        y &&
+                                                                        L &&
                                                                             (0, i.jsx)(
                                                                                 o.Z,
                                                                                 {
@@ -593,18 +593,18 @@ let A = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                 'social-container-' + t
                                                             )
                                                         ),
-                                                        (null == W ? void 0 : W.social_links) != null
+                                                        (null == V ? void 0 : V.social_links) != null
                                                             ? (0, i.jsx)(a.Text, {
                                                                   color: 'text-danger',
                                                                   variant: 'text-sm/normal',
-                                                                  children: W.social_links
+                                                                  children: V.social_links
                                                               })
                                                             : null,
                                                         (0, i.jsx)(a.Button, {
                                                             size: a.Button.Sizes.SMALL,
                                                             color: a.Button.Colors.PRIMARY,
                                                             onClick: $,
-                                                            disabled: !y || O.socialLinks.length >= 9,
+                                                            disabled: !L || O.socialLinks.length >= 9,
                                                             children: R.intl.string(R.t.QvovjY)
                                                         })
                                                     ]
@@ -629,18 +629,18 @@ let A = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                     size: a.Button.Sizes.SMALL,
                                                                     color: a.Button.Colors.RED,
                                                                     onClick: () => J(!1),
-                                                                    disabled: !y,
+                                                                    disabled: !L,
                                                                     children: R.intl.string(R.t['DCHd/P'])
                                                                 })
                                                             ]
                                                         })
                                                     ]
                                                 }),
-                                            (null == W ? void 0 : W.is_published) != null
+                                            (null == V ? void 0 : V.is_published) != null
                                                 ? (0, i.jsx)(a.Text, {
                                                       color: 'text-danger',
                                                       variant: 'text-sm/normal',
-                                                      children: W.is_published
+                                                      children: V.is_published
                                                   })
                                                 : null
                                         ]
@@ -653,7 +653,7 @@ let A = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                 children: el,
                                                 buttonLabel: R.intl.string(R.t.tVK6S0),
                                                 buttonCallback: () => J(!0),
-                                                disabled: !y || !w
+                                                disabled: !L || !w
                                             })
                                         })
                                 ]
@@ -664,4 +664,4 @@ let A = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
             })
         });
     };
-t.Z = () => (null == (0, l.e7)([T.Z], () => T.Z.getGuild()) ? null : (0, i.jsx)(y, {}));
+t.Z = () => (null == (0, l.e7)([T.Z], () => T.Z.getGuild()) ? null : (0, i.jsx)(L, {}));

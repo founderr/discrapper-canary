@@ -15,8 +15,8 @@ var i = n(200651),
     d = n(481060),
     h = n(153867),
     p = n(771845),
-    f = n(624138),
-    m = n(727258),
+    m = n(624138),
+    f = n(727258),
     g = n(276952),
     C = n(199540),
     _ = n(40153),
@@ -26,24 +26,24 @@ var i = n(200651),
     b = n(388032),
     S = n(115376),
     E = n(767573);
-let Z = (0, f.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
-    N = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE),
-    y = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_MARGIN);
+let N = (0, m.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
+    Z = (0, m.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE),
+    y = (0, m.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_MARGIN);
 function T(e) {
-    let { folderNode: t, setNodeRef: n, selected: r, expanded: u, mediaState: f, mentionCount: T = 0, unread: j = !1, defaultFolderName: A, useCircleMask: P = !1, draggable: M = !1, sorting: R = !1, onDragStart: L, onDragEnd: w, onExpandCollapse: D, onContextMenu: O, renderChildNode: k, folderIconContent: G } = e,
+    let { folderNode: t, setNodeRef: n, selected: r, expanded: u, mediaState: m, mentionCount: T = 0, unread: A = !1, defaultFolderName: j, useCircleMask: P = !1, draggable: R = !1, sorting: M = !1, onDragStart: L, onDragEnd: w, onExpandCollapse: D, onContextMenu: O, renderChildNode: k, folderIconContent: G } = e,
         { id: U, name: B, children: H } = t,
         [V, F] = l.useState(!1),
         [W, z] = l.useState(!1),
         Y = V || W;
     l.useEffect(() => {
-        R && F(!1);
-    }, [R]);
+        M && F(!1);
+    }, [M]);
     let [{ dragging: K }, q] = (0, o.c)({
-            type: m.eD.FOLDER,
+            type: f.eD.FOLDER,
             item: () => (
                 null == L || L(),
                 {
-                    type: m.eD.FOLDER,
+                    type: f.eD.FOLDER,
                     nodeId: t.id
                 }
             ),
@@ -55,21 +55,21 @@ function T(e) {
         Q = l.useCallback((e) => {
             z(e);
         }, []),
-        X = l.useCallback(
+        J = l.useCallback(
             (e) => {
                 (('ArrowRight' === e.key && !u) || ('ArrowLeft' === e.key && u)) && D();
             },
             [D, u]
         ),
-        J = null != B && '' !== B ? B : null != A && '' !== A ? A : b.intl.string(b.t.xV9hVl),
+        X = null != B && '' !== B ? B : null != j && '' !== j ? j : b.intl.string(b.t.xV9hVl),
         $ = (0, c.Ie)(''.concat(U)),
         ee = 'folder-items-'.concat(U),
-        et = H.length * (N + y),
+        et = H.length * (Z + y),
         en = (0, d.useTransition)(!K && u, {
             from: { height: 0 },
             enter: { height: 1 },
             leave: { height: 0 },
-            config: { duration: Z }
+            config: { duration: N }
         }),
         ei = l.useCallback((e) => (null == n ? void 0 : n(U, e)), [n, U]),
         el = (0, i.jsxs)(x.H, {
@@ -78,41 +78,41 @@ function T(e) {
                     disabled: K || u,
                     hovered: V,
                     selected: r,
-                    unread: j,
+                    unread: A,
                     className: E.pill
                 }),
                 (0, i.jsx)(I.Z, {
-                    text: J,
-                    disabled: R,
+                    text: X,
+                    disabled: M,
                     selected: r,
                     disableWrapper: !0,
                     children: (0, i.jsx)('div', {
-                        ref: M ? q : void 0,
+                        ref: R ? q : void 0,
                         className: a()({ [E.wobble]: !K && W && !u }),
-                        'data-dnd-name': J,
+                        'data-dnd-name': X,
                         children: K
                             ? (0, i.jsx)(v.Z, {})
                             : (0, i.jsx)(C.Z, {
                                   folderNode: t,
                                   expanded: u,
                                   forceCircular: P,
-                                  sorting: R,
-                                  mediaState: f,
+                                  sorting: M,
+                                  mediaState: m,
                                   mentionCount: T,
-                                  tooltipName: J,
+                                  tooltipName: X,
                                   folderGroupId: ee,
                                   onClick: D,
                                   onContextMenu: O,
                                   onHoverChange: F,
-                                  onKeyDown: X,
+                                  onKeyDown: J,
                                   treeItemProps: $,
                                   folderIconContent: G
                               })
                     })
                 }),
-                M
+                R
                     ? (0, i.jsx)(_.ZP, {
-                          name: J,
+                          name: X,
                           targetNode: t,
                           onDragOverChanged: Q
                       })
@@ -148,9 +148,9 @@ function T(e) {
                     )
                 );
             }),
-            M && u
+            R && u
                 ? (0, i.jsx)(_.Zu, {
-                      name: J,
+                      name: X,
                       targetNode: t
                   })
                 : null

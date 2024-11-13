@@ -23,34 +23,34 @@ var i = n(200651),
 t.Z = (e) => {
     var t;
     let n, T;
-    let { guildId: x, inviteCode: A } = e,
-        [b, Z] = r.useState(v.hO.INITIAL),
-        y = (0, l.e7)([p.Z], () => p.Z.get(x)),
-        L = (0, l.e7)([f.Z], () => f.Z.getRequest(x)),
-        R = (0, l.e7)([c.Z], () => c.Z.getGuild(x)),
-        { hasFetchedRequestToJoinGuilds: O, guildPreviewDisabled: j } = (0, l.cj)([f.Z], () => ({
+    let { guildId: A, inviteCode: b } = e,
+        [x, Z] = r.useState(v.hO.INITIAL),
+        L = (0, l.e7)([p.Z], () => p.Z.get(A)),
+        y = (0, l.e7)([f.Z], () => f.Z.getRequest(A)),
+        R = (0, l.e7)([c.Z], () => c.Z.getGuild(A)),
+        { hasFetchedRequestToJoinGuilds: O, guildPreviewDisabled: P } = (0, l.cj)([f.Z], () => ({
             hasFetchedRequestToJoinGuilds: f.Z.hasFetchedRequestToJoinGuilds,
-            guildPreviewDisabled: f.Z.getJoinRequestGuild(x)
+            guildPreviewDisabled: f.Z.getJoinRequestGuild(A)
         }));
     r.useEffect(() => {
-        null != R && (0, o.uL)(C.Z5c.CHANNEL(x));
-    }, [R, x]),
+        null != R && (0, o.uL)(C.Z5c.CHANNEL(A));
+    }, [R, A]),
         r.useEffect(() => {
             !O && h.Z.fetchRequestToJoinGuilds();
         }, [O]);
-    let P = r.useCallback((e) => {
+    let j = r.useCallback((e) => {
             Z((t) => Math.max(t, e));
         }, []),
         D = async (e) => {
-            await m.ZP.submitVerificationForm(x, e);
+            await m.ZP.submitVerificationForm(A, e);
         },
         M = () => {
-            h.Z.resetGuildJoinRequest(x);
+            h.Z.resetGuildJoinRequest(A);
         };
     let w =
-            ((n = S.intl.format(S.t['9ZezpK'], { name: null == j ? void 0 : j.toString() })),
+            ((n = S.intl.format(S.t['9ZezpK'], { name: null == P ? void 0 : P.toString() })),
             (T = () => {
-                Z(Math.max(b, v.hO.FILLING)), h.Z.removeGuildJoinRequest(x), (0, o.uL)(C.Z5c.ME);
+                Z(Math.max(x, v.hO.FILLING)), h.Z.removeGuildJoinRequest(A), (0, o.uL)(C.Z5c.ME);
             }),
             () => {
                 (0, a.openModal)((e) =>
@@ -70,10 +70,10 @@ t.Z = (e) => {
                 );
             }),
         k =
-            (null == y ? void 0 : null === (t = y.guild) || void 0 === t ? void 0 : t.splash) != null
+            (null == L ? void 0 : null === (t = L.guild) || void 0 === t ? void 0 : t.splash) != null
                 ? u.ZP.getGuildSplashURL({
-                      id: y.guild.id,
-                      splash: y.guild.splash
+                      id: L.guild.id,
+                      splash: L.guild.splash
                   })
                 : (0, d.gK)();
     return (0, i.jsx)('div', {
@@ -81,19 +81,19 @@ t.Z = (e) => {
         children: (0, i.jsxs)(s.Z, {
             embedded: !0,
             splash: k,
-            waveState: b,
+            waveState: x,
             showLogo: !1,
-            updateWaveState: P,
+            updateWaveState: j,
             children: [
                 (0, i.jsx)('div', { className: N.dragRegion }),
                 (0, i.jsx)('div', {
                     className: N.contentWrapper,
                     children: (() => {
-                        switch (null == L ? void 0 : L.applicationStatus) {
+                        switch (null == y ? void 0 : y.applicationStatus) {
                             case g.wB.SUBMITTED:
                                 return (0, i.jsx)(E.Z, {
                                     onWithdrawApplication: w,
-                                    guild: j
+                                    guild: P
                                 });
                             case g.wB.REJECTED:
                                 return (0, i.jsx)(_.Z, {
@@ -101,13 +101,13 @@ t.Z = (e) => {
                                     onReapply: M,
                                     confirmText: S.intl.string(S.t.mqtdmZ),
                                     onWithdrawApplication: w,
-                                    rejectionReason: null == L ? void 0 : L.rejectionReason,
-                                    guild: j
+                                    rejectionReason: null == y ? void 0 : y.rejectionReason,
+                                    guild: P
                                 });
                             default:
                                 return (0, i.jsx)(I.Z, {
-                                    guildId: x,
-                                    inviteCode: A,
+                                    guildId: A,
+                                    inviteCode: b,
                                     onComplete: D,
                                     disableVerification: !0
                                 });

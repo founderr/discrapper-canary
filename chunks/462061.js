@@ -3,7 +3,7 @@ n.d(t, {
         return w;
     },
     Z: function () {
-        return P;
+        return j;
     }
 });
 var i = n(200651),
@@ -49,19 +49,19 @@ function w(e) {
           })
         : null;
 }
-function P(e) {
-    let { participant: t, channel: n, inCall: a, width: o, paused: v, selected: w, fit: P, onVideoResize: j, blocked: R, noVideoRender: M = !1, pulseSpeakingIndicator: O = !1 } = e,
+function j(e) {
+    let { participant: t, channel: n, inCall: a, width: o, paused: v, selected: w, fit: j, onVideoResize: P, blocked: R, noVideoRender: M = !1, pulseSpeakingIndicator: O = !1 } = e,
         L = _.Z.getVideoComponent(),
         k = (0, s.e7)([S.default], () => S.default.getId()),
         { user: D, streamId: U, speaking: V } = t,
         F = D.id === k,
-        G = (0, Z.ZP)(t),
-        W = (0, s.e7)([x.Z], () => x.Z.isFocused()),
+        W = (0, Z.ZP)(t),
+        G = (0, s.e7)([x.Z], () => x.Z.isFocused()),
         B = (0, s.e7)([h.Z], () => h.Z.getWindowFocused(C.KJ3.CHANNEL_CALL_POPOUT)),
         z = (0, s.e7)([_.Z], () => null != D.id && _.Z.isLocalVideoDisabled(D.id, (0, m.Z)(t.type)), [D.id, t.type]),
         H = (0, s.e7)([I.ZP], () => I.ZP.isGuestOrLurker(n.guild_id, D.id)),
         Y = E.ZP.getName(n.getGuildId(), n.id, D) + (H ? ' '.concat(T.intl.string(T.t['pFO/Pj'])) : ''),
-        J = V && (B || W),
+        J = V && (B || G),
         q = o < 124 ? N : A,
         { avatarSrc: X, avatarDecorationSrc: K } = (0, g.Z)({
             user: D,
@@ -71,19 +71,19 @@ function P(e) {
         }),
         Q = (0, s.e7)([d.Z], () => d.Z.getSelectedParticipant(n.id));
     return (l.useEffect(() => {
-        n.isGuildStageVoice() && !G && (null == Q ? void 0 : Q.id) === D.id && c.Z.selectParticipant(n.id, null);
-    }, [G]),
-    a && !z && !M && G && !w && null != L && _.Z.supports(y.AN.VIDEO))
+        n.isGuildStageVoice() && !W && (null == Q ? void 0 : Q.id) === D.id && c.Z.selectParticipant(n.id, null);
+    }, [W]),
+    a && !z && !M && W && !w && null != L && _.Z.supports(y.AN.VIDEO))
         ? (0, i.jsx)(
               p.Z,
               {
-                  onResize: j,
+                  onResize: P,
                   wrapperClassName: b.videoWrapper,
                   className: b.content,
                   mirror: F,
                   streamId: U,
                   videoComponent: L,
-                  fit: P,
+                  fit: j,
                   paused: v,
                   videoSpinnerContext: D.id === k ? u.m.SELF_VIDEO : u.m.REMOTE_VIDEO,
                   userId: D.id

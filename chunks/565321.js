@@ -1,59 +1,59 @@
 t(47120);
-var r = t(200651),
-    a = t(192379),
-    i = t(481060),
-    o = t(881052),
+var i = t(200651),
+    l = t(192379),
+    a = t(481060),
+    r = t(881052),
     s = t(484455),
-    l = t(592286),
+    o = t(592286),
     c = t(388032),
     d = t(631403);
 n.Z = function (e) {
     let { guildId: n, onSave: t, formDescription: u, disable: m } = e,
-        [f, h] = a.useState(null),
-        [x, p] = a.useState(u),
-        g = a.useRef(!1),
-        C = a.useRef(!1);
-    a.useEffect(
+        [x, f] = l.useState(null),
+        [h, g] = l.useState(u),
+        v = l.useRef(!1),
+        j = l.useRef(!1);
+    l.useEffect(
         () => () => {
-            C.current = !0;
+            j.current = !0;
         },
         []
     );
-    let b = a.useCallback(async () => {
-        if (!g.current) {
-            h(null);
+    let C = l.useCallback(async () => {
+        if (!v.current) {
+            f(null);
             try {
-                await t(n, x);
+                await t(n, h);
             } catch (e) {
-                if (C.current) return;
-                h(new o.Hx(e).getAnyErrorMessage());
+                if (j.current) return;
+                f(new r.Hx(e).getAnyErrorMessage());
             } finally {
-                if (C.current) return;
-                g.current = !1;
+                if (j.current) return;
+                v.current = !1;
             }
         }
-    }, [x, n, t]);
-    return (0, r.jsxs)(s.Z, {
+    }, [h, n, t]);
+    return (0, i.jsxs)(s.Z, {
         title: c.intl.string(c.t.aDJAfn),
         children: [
-            (0, r.jsx)(i.TextArea, {
+            (0, i.jsx)(a.TextArea, {
                 className: d.fieldBackground,
-                maxLength: l.Us,
-                value: null != x ? x : '',
+                maxLength: o.Us,
+                value: null != h ? h : '',
                 placeholder: c.intl.string(c.t.AJfv3d),
                 onChange: (e) => {
-                    p(e);
+                    g(e);
                 },
-                onBlur: b,
+                onBlur: C,
                 autosize: !0,
                 disabled: m
             }),
-            null != f && '' !== f
-                ? (0, r.jsx)(i.Text, {
+            null != x && '' !== x
+                ? (0, i.jsx)(a.Text, {
                       className: d.errorText,
                       variant: 'text-xs/normal',
                       color: 'text-danger',
-                      children: f
+                      children: x
                   })
                 : null
         ]

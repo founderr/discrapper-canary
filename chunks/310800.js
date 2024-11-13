@@ -22,7 +22,7 @@ function f(e) {
     let { guildId: t, handleCreateOrEditProduct: u } = e,
         f = (0, c.ue)(t, { publishedOnly: !1 }),
         { shouldRestrictUpdatingCreatorMonetizationSettings: C } = (0, a.gX)(t),
-        I = (e) => {
+        v = (e) => {
             (0, o.Je)(t, e, { published: !1 });
         },
         _ = (e, r) => {
@@ -37,18 +37,18 @@ function f(e) {
                     });
             });
         },
-        N = (e, t) => {
+        I = (e, t) => {
             (0, r.J)((0, d.ar)(e, t));
         },
-        v = f.length > 0;
+        N = f.length > 0;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(l.FormTitle, {
                 className: x.productListingsHeader,
                 id: p,
-                children: v ? g.intl.string(g.t.RwuStb) : g.intl.string(g.t.WKMcMT)
+                children: N ? g.intl.string(g.t.RwuStb) : g.intl.string(g.t.WKMcMT)
             }),
-            v
+            N
                 ? (0, i.jsx)('ul', {
                       className: x.productListings,
                       'aria-labelledby': p,
@@ -60,9 +60,9 @@ function f(e) {
                                       guildId: t,
                                       product: e,
                                       onEditProduct: () => u(e.id),
-                                      onUnpublishProduct: () => I(e.id),
+                                      onUnpublishProduct: () => v(e.id),
                                       onDeleteProduct: () => _(e.id, e.name),
-                                      onCopyProductLink: () => N(t, e.id),
+                                      onCopyProductLink: () => I(t, e.id),
                                       onTestDownload: () =>
                                           m.Z.open({
                                               guildId: t,

@@ -23,25 +23,25 @@ var i = n(200651),
     p = n(26323),
     f = n(307707),
     C = n(734893),
-    I = n(216701),
+    v = n(216701),
     _ = n(150512),
-    N = n(516129),
-    v = n(813197),
+    I = n(516129),
+    N = n(813197),
     T = n(210887),
     j = n(314897),
-    S = n(592125),
-    b = n(984933),
+    b = n(592125),
+    S = n(984933),
     E = n(430824),
     R = n(709586),
     Z = n(768581),
-    A = n(700785),
-    L = n(434404),
-    y = n(999382),
+    y = n(700785),
+    A = n(434404),
+    L = n(999382),
     D = n(8426),
     O = n(969632),
-    M = n(535907),
-    P = n(981631),
-    k = n(30513),
+    k = n(535907),
+    M = n(981631),
+    P = n(30513),
     w = n(486324),
     B = n(200299),
     U = n(388032),
@@ -49,8 +49,8 @@ var i = n(200651),
     F = n(91716),
     H = n(470264),
     z = n(710043),
-    V = n(847950);
-function W(e) {
+    W = n(847950);
+function V(e) {
     let { guildId: t, welcomeMessage: l } = e,
         o = r.useCallback(() => {
             if (null != t)
@@ -106,27 +106,27 @@ function W(e) {
 }
 function Y(e) {
     var t, l, o, d, u;
-    let { guildId: g, action: x, actionIndex: p, onChange: _, onDelete: N, onDragStart: v, onDragComplete: T, onDragReset: j } = e,
-        b = (0, a.e7)([S.Z], () => S.Z.getChannel(x.channelId)),
+    let { guildId: g, action: x, actionIndex: p, onChange: _, onDelete: I, onDragStart: N, onDragComplete: T, onDragReset: j } = e,
+        S = (0, a.e7)([b.Z], () => b.Z.getChannel(x.channelId)),
         R = (0, a.e7)([E.Z], () => E.Z.getGuild(g)),
-        { customEmoji: A, unicodeEmoji: L } = (0, f.Z)(null === (t = x.emoji) || void 0 === t ? void 0 : t.id, null === (l = x.emoji) || void 0 === l ? void 0 : l.name),
-        y = null == x.emoji || null != A || null != L,
+        { customEmoji: y, unicodeEmoji: A } = (0, f.Z)(null === (t = x.emoji) || void 0 === t ? void 0 : t.id, null === (l = x.emoji) || void 0 === l ? void 0 : l.name),
+        L = null == x.emoji || null != y || null != A,
         D = Z.ZP.getNewMemberActionIconURL({
             channelId: x.channelId,
             icon: x.icon
         }),
         O = null;
-    null != b && (0, C.kb)(b) ? !y && (O = U.intl.string(U.t.wAkIZW)) : (O = U.intl.string(U.t.CbTEKC));
+    null != S && (0, C.kb)(S) ? !L && (O = U.intl.string(U.t.wAkIZW)) : (O = U.intl.string(U.t.CbTEKC));
     let {
-            drag: M,
-            dragSourcePosition: P,
-            drop: k,
+            drag: k,
+            dragSourcePosition: M,
+            drop: P,
             setIsDraggable: w
         } = (0, h.Z)({
             type: 'NEW_MEMBER_ACTION',
             index: p,
             optionId: x.channelId,
-            onDragStart: v,
+            onDragStart: N,
             onDragComplete: T,
             onDragReset: j
         }),
@@ -140,22 +140,22 @@ function Y(e) {
                             guildId: g,
                             action: x,
                             onSave: (e, t, n) => _(p, e, t, n),
-                            onDelete: () => N(p)
+                            onDelete: () => I(p)
                         });
                 });
-        }, [g, x, p, _, N]);
-    if (null == b || null == R) return null;
-    let F = null !== (u = (0, m.KS)(b)) && void 0 !== u ? u : c.TextIcon;
+        }, [g, x, p, _, I]);
+    if (null == S || null == R) return null;
+    let F = null !== (u = (0, m.KS)(S)) && void 0 !== u ? u : c.TextIcon;
     return (0, i.jsxs)('div', {
         className: s()(G.actionItemContainer),
         children: [
             (0, i.jsxs)('div', {
                 className: s()(G.actionItem, {
-                    [G.dropIndicatorBefore]: null != P && p < P,
-                    [G.dropIndicatorAfter]: null != P && p > P,
+                    [G.dropIndicatorBefore]: null != M && p < M,
+                    [G.dropIndicatorAfter]: null != M && p > M,
                     [G.actionItemError]: null != O
                 }),
-                ref: (e) => M(k(e)),
+                ref: (e) => k(P(e)),
                 children: [
                     (0, i.jsx)('div', {
                         className: G.dragContainer,
@@ -181,10 +181,10 @@ function Y(e) {
                           })
                         : (0, i.jsx)('div', {
                               className: G.actionItemEmojiWrapper,
-                              children: (0, i.jsx)(I.Z, {
+                              children: (0, i.jsx)(v.Z, {
                                   emojiId: null === (o = x.emoji) || void 0 === o ? void 0 : o.id,
                                   emojiName: null === (d = x.emoji) || void 0 === d ? void 0 : d.name,
-                                  size: I.R.MEDIUM,
+                                  size: v.R.MEDIUM,
                                   defaultComponent: (0, i.jsx)(F, {})
                               })
                           }),
@@ -199,7 +199,7 @@ function Y(e) {
                             (0, i.jsx)(c.Text, {
                                 variant: 'text-xs/medium',
                                 color: 'header-secondary',
-                                children: U.intl.format(U.t.Ngk8Nj, { channelName: b.name })
+                                children: U.intl.format(U.t.Ngk8Nj, { channelName: S.name })
                             })
                         ]
                     }),
@@ -417,12 +417,12 @@ function J(e) {
     var t;
     let { guildId: l } = e,
         s = (0, a.e7)([E.Z], () => E.Z.getGuild(l)),
-        o = null !== (t = null == s ? void 0 : s.hasFeature(P.oNc.BANNER)) && void 0 !== t && t,
+        o = null !== (t = null == s ? void 0 : s.hasFeature(M.oNc.BANNER)) && void 0 !== t && t,
         d = r.useCallback(
             (e, t) => {
                 if (null != l) {
                     if (null == e || void 0 === t) {
-                        L.Z.saveGuild(l, { homeHeader: null });
+                        A.Z.saveGuild(l, { homeHeader: null });
                         return;
                     }
                     (0, c.openModalLazy)(async () => {
@@ -431,7 +431,7 @@ function J(e) {
                             (0, i.jsx)(r, {
                                 imgURI: e,
                                 file: t,
-                                onCrop: (e) => L.Z.saveGuild(l, { homeHeader: e }),
+                                onCrop: (e) => A.Z.saveGuild(l, { homeHeader: e }),
                                 uploadType: w.pC.HOME_HEADER,
                                 ...n
                             });
@@ -445,10 +445,10 @@ function J(e) {
                 e.preventDefault(),
                     e.stopPropagation(),
                     null != s &&
-                        ((0, u.yw)(P.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
+                        ((0, u.yw)(M.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                             location: {
-                                section: P.jXE.GUILD_SETTINGS_ONBOARDING,
-                                object: P.qAy.LEARN_MORE
+                                section: M.jXE.GUILD_SETTINGS_ONBOARDING,
+                                object: M.qAy.LEARN_MORE
                             },
                             guild_id: null == s ? void 0 : s.id,
                             location_stack: []
@@ -456,18 +456,18 @@ function J(e) {
                         (0, p.Z)({
                             analyticsLocations: [],
                             analyticsSourceLocation: {
-                                section: P.jXE.GUILD_SETTINGS_ONBOARDING,
-                                object: P.qAy.ONBOARDING_EDIT,
-                                page: P.ZY5.GUILD_SETTINGS
+                                section: M.jXE.GUILD_SETTINGS_ONBOARDING,
+                                object: M.qAy.ONBOARDING_EDIT,
+                                page: M.ZY5.GUILD_SETTINGS
                             },
                             guild: s,
-                            perks: (0, k.XO)()
+                            perks: (0, P.XO)()
                         }));
             },
             [s]
         );
     if (null == s) return null;
-    let h = (0, i.jsx)(N.Z, {
+    let h = (0, i.jsx)(I.Z, {
         image: s.homeHeader,
         makeURL: (e) =>
             null != e
@@ -496,7 +496,7 @@ function J(e) {
                           (0, i.jsx)(x.Z, {
                               className: G.boostIndicator,
                               guild: s,
-                              guildFeature: P.oNc.BANNER,
+                              guildFeature: M.oNc.BANNER,
                               onClick: m
                           })
                       ]
@@ -517,7 +517,7 @@ function J(e) {
                                       className: G.uploadButton,
                                       children: [
                                           U.intl.string(U.t.yG2pUl),
-                                          (0, i.jsx)(v.ZP, {
+                                          (0, i.jsx)(N.ZP, {
                                               onChange: d,
                                               maxFileSizeBytes: B.B
                                           })
@@ -543,7 +543,7 @@ function J(e) {
                           (0, i.jsx)(x.Z, {
                               className: G.boostIndicator,
                               guild: s,
-                              guildFeature: P.oNc.BANNER,
+                              guildFeature: M.oNc.BANNER,
                               onClick: m
                           })
                       ]
@@ -595,18 +595,18 @@ function $(e) {
     let { guildId: t, resourceChannel: l, index: o, onDragComplete: d, onDragStart: u, onDragReset: m } = e,
         g = (0, a.e7)([E.Z], () => E.Z.getGuild(t)),
         { title: x, channelId: p, description: f } = l,
-        I = S.Z.getChannel(p),
+        v = b.Z.getChannel(p),
         _ = null;
-    (null == I || !(0, C.k3)(I)) && (_ = U.intl.string(U.t.kTdL8f));
-    let N = null == f || 0 === f.length,
-        v = Z.ZP.getResourceChannelIconURL({
+    (null == v || !(0, C.k3)(v)) && (_ = U.intl.string(U.t.kTdL8f));
+    let I = null == f || 0 === f.length,
+        N = Z.ZP.getResourceChannelIconURL({
             channelId: l.channelId,
             icon: l.icon
         }),
         {
             drag: T,
             dragSourcePosition: j,
-            drop: b,
+            drop: S,
             setIsDraggable: R
         } = (0, h.Z)({
             type: 'RESOURCE_CHANNEL',
@@ -616,13 +616,13 @@ function $(e) {
             onDragComplete: d,
             onDragReset: m
         }),
-        A = r.useCallback(
+        y = r.useCallback(
             (e) => {
                 (0, D.XG)(l.channelId, e);
             },
             [l.channelId]
         ),
-        L = r.useCallback(
+        A = r.useCallback(
             (e, n) => {
                 if (null == t) return;
                 let i = O.Z.getSettings();
@@ -634,7 +634,7 @@ function $(e) {
             },
             [t, l]
         ),
-        y = r.useCallback(() => {
+        L = r.useCallback(() => {
             if (null != t)
                 return (0, c.openModalLazy)(async () => {
                     let { default: e } = await n.e('84725').then(n.bind(n, 462499));
@@ -643,13 +643,13 @@ function $(e) {
                             ...n,
                             guildId: t,
                             resourceChannel: l,
-                            onSave: A,
+                            onSave: y,
                             onDelete: () => (0, D.Hz)(l.channelId),
-                            onIconUpload: L
+                            onIconUpload: A
                         });
                 });
-        }, [t, l, A, L]);
-    return null == g || null == I
+        }, [t, l, y, A]);
+    return null == g || null == v
         ? null
         : (0, i.jsxs)('div', {
               className: s()(G.resourceChannelContainer),
@@ -660,7 +660,7 @@ function $(e) {
                           [G.dropIndicatorAfter]: null != j && o > j,
                           [G.resourceChannelError]: null != _
                       }),
-                      ref: (e) => T(b(e)),
+                      ref: (e) => T(S(e)),
                       children: [
                           (0, i.jsx)('div', {
                               className: G.dragContainer,
@@ -672,11 +672,11 @@ function $(e) {
                                   className: G.dragIcon
                               })
                           }),
-                          null != v &&
+                          null != N &&
                               (0, i.jsx)('div', {
                                   className: G.iconWrapper,
                                   children: (0, i.jsx)('img', {
-                                      src: v,
+                                      src: N,
                                       className: G.icon,
                                       width: 32,
                                       height: 32,
@@ -693,7 +693,7 @@ function $(e) {
                                       color: 'header-primary',
                                       children: x
                                   }),
-                                  !N &&
+                                  !I &&
                                       (0, i.jsx)(c.Text, {
                                           className: G.resourceChannelDescription,
                                           variant: 'text-xs/medium',
@@ -711,7 +711,7 @@ function $(e) {
                                       className: G.resourceChannelEditButton,
                                       innerClassName: G.resourceChannelEditButtonInner,
                                       size: c.Button.Sizes.MIN,
-                                      onClick: y,
+                                      onClick: L,
                                       children: [
                                           (0, i.jsx)(c.PencilIcon, {
                                               size: 'md',
@@ -780,8 +780,8 @@ function et(e) {
             return null !== (t = null === (e = O.Z.getSettings().resourceChannels) || void 0 === e ? void 0 : e.map((e) => e.channelId)) && void 0 !== t ? t : [];
         }),
         s = (0, a.Wu)([O.Z], () => O.Z.getDismissedSuggestedChannelIds(t)),
-        o = (0, a.e7)([b.ZP], () => (null == t ? [] : b.ZP.getSelectableChannels(t)))
-            .filter((e) => !s.includes(e.channel.id) && !l.includes(e.channel.id) && e.channel.type === P.d4z.GUILD_TEXT && A.Uu(P.Plq.VIEW_CHANNEL, e.channel) && !A.Uu(P.Plq.SEND_MESSAGES, e.channel) && e.channel.id !== (null == n ? void 0 : n.rulesChannelId))
+        o = (0, a.e7)([S.ZP], () => (null == t ? [] : S.ZP.getSelectableChannels(t)))
+            .filter((e) => !s.includes(e.channel.id) && !l.includes(e.channel.id) && e.channel.type === M.d4z.GUILD_TEXT && y.Uu(M.Plq.VIEW_CHANNEL, e.channel) && !y.Uu(M.Plq.SEND_MESSAGES, e.channel) && e.channel.id !== (null == n ? void 0 : n.rulesChannelId))
             .slice(0, 5),
         d = r.useCallback(() => {
             let e = o.map((e) => e.channel.id);
@@ -917,7 +917,7 @@ function en(e) {
 }
 function ei(e) {
     let { saveOnClose: t } = e,
-        n = (0, a.e7)([y.Z], () => y.Z.getGuildId());
+        n = (0, a.e7)([L.Z], () => L.Z.getGuildId());
     return null == n
         ? null
         : (0, i.jsx)(er, {
@@ -929,7 +929,7 @@ function er(e) {
     let { saveOnClose: t, guildId: n } = e,
         l = (0, a.cj)([O.Z], () => {
             var e;
-            return null !== (e = O.Z.getSettings().welcomeMessage) && void 0 !== e ? e : M.z;
+            return null !== (e = O.Z.getSettings().welcomeMessage) && void 0 !== e ? e : k.z;
         }),
         [s, d] = r.useState('new'),
         u = [
@@ -973,7 +973,7 @@ function er(e) {
                         }),
                         (0, i.jsx)('div', {
                             className: G.section,
-                            children: (0, i.jsx)(W, {
+                            children: (0, i.jsx)(V, {
                                 guildId: n,
                                 welcomeMessage: l
                             })
@@ -1063,7 +1063,7 @@ function er(e) {
                         }),
                         (0, i.jsx)('img', {
                             className: G.previewImage,
-                            src: (0, o.ap)(m) ? ('existing' === s ? H : V) : 'existing' === s ? F : z,
+                            src: (0, o.ap)(m) ? ('existing' === s ? H : W) : 'existing' === s ? F : z,
                             alt: U.intl.string(U.t.ST4UOz)
                         }),
                         (0, i.jsx)(c.SegmentedControl, {
@@ -1082,7 +1082,7 @@ function er(e) {
     );
 }
 function el() {
-    let e = (0, a.e7)([y.Z], () => y.Z.getGuild()),
+    let e = (0, a.e7)([L.Z], () => L.Z.getGuild()),
         t = (0, a.e7)([O.Z], () => O.Z.getSettings()),
         n = (0, a.e7)([O.Z], () => O.Z.getSubmitting());
     return null == e

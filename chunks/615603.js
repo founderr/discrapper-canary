@@ -118,7 +118,7 @@ t.Z = function (e) {
         b = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
         L = (0, o.e7)([C.default], () => C.default.getCurrentUser()),
         Z = (0, T.Vp)(),
-        F = A === j.a$.FP_SUB,
+        F = A === j.a$.FP_SUB_PAUSED,
         M = A !== j.a$.NONE,
         k = x && !F,
         {

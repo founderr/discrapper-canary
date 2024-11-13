@@ -18,8 +18,8 @@ var l = n(120356),
     d = n(884338),
     h = n(565799),
     p = n(501655),
-    f = n(199902),
-    m = n(592125),
+    m = n(199902),
+    f = n(592125),
     g = n(594174),
     C = n(938475),
     _ = n(823379),
@@ -29,7 +29,7 @@ var l = n(120356),
     b = n(388032),
     S = n(516126),
     E = n(64056);
-function Z(e, t) {
+function N(e, t) {
     return 0 === t.length
         ? null
         : (0, i.jsxs)('div', {
@@ -47,12 +47,12 @@ function Z(e, t) {
               ]
           });
 }
-function N() {
+function Z() {
     var e, t;
-    let n = (0, s.Wu)([x.Z, m.Z], () =>
+    let n = (0, s.Wu)([x.Z, f.Z], () =>
             v.default
                 .keys(x.Z.getFavoriteChannels())
-                .map((e) => m.Z.getChannel(e))
+                .map((e) => f.Z.getChannel(e))
                 .filter(_.lm)
         ),
         l = n.map((e) => e.id),
@@ -79,15 +79,15 @@ function N() {
                     })
             )
         ),
-        N = (0, s.e7)([h.Z], () => {
+        Z = (0, s.e7)([h.Z], () => {
             let e = 0;
             for (let t of a) e += h.Z.getParticipantCount(t, p.pV.AUDIENCE);
             return e;
         }),
         y = (0, s.Wu)(
-            [f.Z],
+            [m.Z],
             () =>
-                f.Z.getAllApplicationStreams()
+                m.Z.getAllApplicationStreams()
                     .filter((e) => l.includes(e.channelId))
                     .map((e) => e.ownerId),
             [l]
@@ -105,15 +105,15 @@ function N() {
             },
             [l]
         ),
-        j = (0, s.Wu)([g.default], () => T.map((e) => g.default.getUser(e)), [T]),
-        A = (0, s.Wu)([g.default], () => y.map((e) => g.default.getUser(e)), [y]),
-        P = Z(
+        A = (0, s.Wu)([g.default], () => T.map((e) => g.default.getUser(e)), [T]),
+        j = (0, s.Wu)([g.default], () => y.map((e) => g.default.getUser(e)), [y]),
+        P = N(
             c.VoiceNormalIcon,
             b.filter((e) => !y.includes(e.id) && !T.includes(e.id))
         );
-    let M =
+    let R =
             ((e = E),
-            (t = N),
+            (t = Z),
             0 === e.length
                 ? null
                 : (0, i.jsxs)('div', {
@@ -146,13 +146,13 @@ function N() {
                           })
                       ]
                   })),
-        R = Z(
+        M = N(
             c.ScreenArrowIcon,
-            A.filter((e) => null != e && !T.includes(e.id))
+            j.filter((e) => null != e && !T.includes(e.id))
         ),
-        L = Z(c.ActivitiesIcon, j);
+        L = N(c.ActivitiesIcon, A);
     return (0, i.jsxs)(i.Fragment, {
-        children: [M, P, R, L]
+        children: [R, P, M, L]
     });
 }
 function y() {
@@ -165,7 +165,7 @@ function y() {
                     children: b.intl.string(b.t.wMWycn)
                 })
             }),
-            (0, i.jsx)(N, {})
+            (0, i.jsx)(Z, {})
         ]
     });
 }

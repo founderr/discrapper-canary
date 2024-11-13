@@ -20,16 +20,16 @@ var i = n(200651),
     p = n(290511),
     f = n(388032),
     C = n(84877);
-function I(e) {
+function v(e) {
     let { guild: t, prejoinOnly: n, postjoinOnly: l } = e,
         c = (0, a.e7)([g.Z], () => g.Z.editedOnboardingPrompts),
         u = c.filter((e) => e.inOnboarding),
         m = u.length,
         {
             drag: x,
-            drop: I,
+            drop: v,
             dragSourcePosition: _,
-            setIsDraggable: N
+            setIsDraggable: I
         } = (0, d.Z)({
             type: 'ONBOARDING_PROMPT_CARD',
             index: m,
@@ -38,16 +38,16 @@ function I(e) {
             onDragComplete: () => {},
             onDragReset: () => {}
         }),
-        v = r.useRef(null);
+        N = r.useRef(null);
     return (
         r.useEffect(() => {
-            N(!1);
-        }, [N]),
+            I(!1);
+        }, [I]),
         r.useEffect(() => {
-            x(I(v));
-        }, [x, I, v]),
+            x(v(N));
+        }, [x, v, N]),
         (0, i.jsxs)('div', {
-            ref: v,
+            ref: N,
             className: s()(C.separatorSection, {
                 [C.dropIndicatorBefore]: null != _ && m < _,
                 [C.dropIndicatorAfter]: null != _ && m > _
@@ -98,10 +98,10 @@ function _(e) {
     let { guildId: t, prejoinOnly: n, postjoinOnly: r, includeCount: l, singleColumn: s } = e,
         d = (0, a.e7)([m.Z], () => m.Z.getGuild(t)),
         _ = (0, a.e7)([g.Z], () => g.Z.editedOnboardingPrompts),
-        N = _.filter((e) => e.inOnboarding),
-        v = _.filter((e) => !0 !== e.inOnboarding),
+        I = _.filter((e) => e.inOnboarding),
+        N = _.filter((e) => !0 !== e.inOnboarding),
         T = [
-            ...N.map((e) => ({
+            ...I.map((e) => ({
                 id: e.id,
                 data: e
             })),
@@ -109,15 +109,15 @@ function _(e) {
                 id: 'separator',
                 data: (0, p.ae)()
             },
-            ...v.map((e) => ({
+            ...N.map((e) => ({
                 id: e.id,
                 data: e
             }))
         ],
         {
             handleDragStart: j,
-            handleDragReset: S,
-            handleDragComplete: b
+            handleDragReset: b,
+            handleDragComplete: S
         } = (0, u.Z)(T, (e) => {
             let t = e.findIndex((e) => 'separator' === e.id),
                 n = e.slice(0, t).map((e) => ({
@@ -162,7 +162,7 @@ function _(e) {
                                               })
                                           ]
                                       }),
-                                N.map((e, t) =>
+                                I.map((e, t) =>
                                     (0, i.jsx)(
                                         x.Z,
                                         {
@@ -174,15 +174,15 @@ function _(e) {
                                             promptIndex: t,
                                             dragIndex: t,
                                             onPromptDragStart: j,
-                                            onPromptDragReset: S,
-                                            onPromptDragComplete: b
+                                            onPromptDragReset: b,
+                                            onPromptDragComplete: S
                                         },
                                         e.id
                                     )
                                 )
                             ]
                         }),
-                  (0, i.jsx)(I, {
+                  (0, i.jsx)(v, {
                       guild: d,
                       prejoinOnly: n,
                       postjoinOnly: r
@@ -191,17 +191,17 @@ function _(e) {
                       ? null
                       : (0, i.jsxs)(i.Fragment, {
                             children: [
-                                v.map((e, t) =>
+                                N.map((e, t) =>
                                     (0, i.jsx)(
                                         x.Z,
                                         {
                                             guild: d,
                                             prompt: e,
-                                            promptIndex: t + N.length,
-                                            dragIndex: t + N.length + 1,
+                                            promptIndex: t + I.length,
+                                            dragIndex: t + I.length + 1,
                                             onPromptDragStart: j,
-                                            onPromptDragReset: S,
-                                            onPromptDragComplete: b
+                                            onPromptDragReset: b,
+                                            onPromptDragComplete: S
                                         },
                                         e.id
                                     )

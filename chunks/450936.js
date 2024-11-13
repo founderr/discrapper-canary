@@ -75,10 +75,10 @@ function C(e) {
         y = i.useMemo(() => (null != A ? m.Z.createFromServer(A) : void 0), [A]),
         P = (0, u.q)(null == y && x ? Z : void 0),
         M = null !== (n = null != y ? y : P) && void 0 !== n ? n : void 0,
-        L = null == M || (j && 0 === T.length);
+        R = null == M || (j && 0 === T.length);
     return {
         application: M,
-        isInitialLoading: L,
+        isInitialLoading: R,
         primaryEntryPointCommand: S,
         isProfileFetching: _,
         wasProfileFetching: I,

@@ -21,16 +21,16 @@ var i = n(200651),
     S = n(167533),
     N = n(925329),
     T = n(707409),
-    x = n(210887),
-    A = n(283595),
-    b = n(417363),
+    A = n(210887),
+    b = n(283595),
+    x = n(417363),
     Z = n(941128),
-    y = n(451478),
-    L = n(424218),
+    L = n(451478),
+    y = n(424218),
     R = n(780570),
     O = n(353042),
-    j = n(86826),
-    P = n(981631),
+    P = n(86826),
+    j = n(981631),
     D = n(388032),
     M = n(734744);
 function w(e, t, n) {
@@ -77,17 +77,17 @@ let k = (e) => {
     };
 function B(e, t) {
     switch (t) {
-        case P.f07.POST_INSTALL_SCRIPTS:
-        case P.f07.PLANNING:
-        case P.f07.FINALIZING:
-        case P.f07.ALLOCATING_DISK:
+        case j.f07.POST_INSTALL_SCRIPTS:
+        case j.f07.PLANNING:
+        case j.f07.FINALIZING:
+        case j.f07.ALLOCATING_DISK:
             return ''.concat(e);
         default:
-            return (0, L.BU)(e, { useKibibytes: !0 });
+            return (0, y.BU)(e, { useKibibytes: !0 });
     }
 }
-let H = {
-    [P.vxO.INSTALLING]: {
+let V = {
+    [j.vxO.INSTALLING]: {
         [T.J6.NONE]: (e, t, n, i) =>
             D.intl.formatToPlainString(D.t.JfJt9f, {
                 percent: e,
@@ -116,7 +116,7 @@ let H = {
                 timeRemaining: i
             })
     },
-    [P.vxO.UPDATING]: {
+    [j.vxO.UPDATING]: {
         [T.J6.NONE]: (e, t, n, i) =>
             D.intl.formatToPlainString(D.t.JsqXXF, {
                 percent: e,
@@ -145,7 +145,7 @@ let H = {
                 timeRemaining: i
             })
     },
-    [P.vxO.REPAIRING]: {
+    [j.vxO.REPAIRING]: {
         [T.J6.NONE]: (e, t, n, i) =>
             D.intl.formatToPlainString(D.t.JfJt9f, {
                 percent: e,
@@ -175,8 +175,8 @@ let H = {
             })
     }
 };
-function V(e, t, n, i, r) {
-    let l = H[t],
+function H(e, t, n, i, r) {
+    let l = V[t],
         a = null != l ? Object.keys(l) : [],
         { unit: s, time: o } = (0, T.CI)(null != e ? e / 60 : null, a);
     if (null != l && null != s) {
@@ -190,41 +190,41 @@ function F(e) {
         s = B(l, n),
         o = B(r, n);
     switch (n) {
-        case P.f07.QUEUED:
+        case j.f07.QUEUED:
             if (0 === r) return D.intl.string(D.t.RpfBqa);
             return D.intl.formatToPlainString(D.t.uNjCXV, {
                 percent: i,
                 progress: o,
                 total: s
             });
-        case P.f07.PLANNING:
+        case j.f07.PLANNING:
             return D.intl.formatToPlainString(D.t.sfuCUV, { percent: i });
-        case P.f07.ALLOCATING_DISK:
+        case j.f07.ALLOCATING_DISK:
             return D.intl.formatToPlainString(D.t.XigoJy, { percent: i });
-        case P.f07.PATCHING:
-            return V(a, t, i, o, s);
-        case P.f07.FINALIZING:
+        case j.f07.PATCHING:
+            return H(a, t, i, o, s);
+        case j.f07.FINALIZING:
             return D.intl.formatToPlainString(D.t['6PHDUF'], { percent: i });
-        case P.f07.PAUSING:
+        case j.f07.PAUSING:
             return D.intl.formatToPlainString(D.t.vjxhWl, {
                 percent: i,
                 progress: o,
                 total: s
             });
-        case P.f07.VERIFYING:
+        case j.f07.VERIFYING:
             return D.intl.formatToPlainString(D.t.bbilvr, {
                 percent: i,
                 progress: o,
                 total: s
             });
-        case P.f07.POST_INSTALL_SCRIPTS:
+        case j.f07.POST_INSTALL_SCRIPTS:
             return D.intl.formatToPlainString(D.t.c5vRUl, {
                 percent: i,
                 progress: o,
                 total: s
             });
-        case P.f07.REPAIRING:
-            if (t === P.vxO.REPAIRING) return V(a, t, i, o, s);
+        case j.f07.REPAIRING:
+            if (t === j.vxO.REPAIRING) return H(a, t, i, o, s);
             return D.intl.formatToPlainString(D.t.OCzETU, {
                 percent: i,
                 progress: o,
@@ -282,7 +282,7 @@ class K extends r.PureComponent {
         let { item: e } = this.props;
         return this.renderBody({
             message: D.intl.format(D.t.z1oxGB, { remove: () => g.wi(e.applicationId, e.branchId) }),
-            foregroundColor: (0, u.ap)(e.theme) ? P.Ilk.PRIMARY_300 : P.Ilk.PRIMARY_500,
+            foregroundColor: (0, u.ap)(e.theme) ? j.Ilk.PRIMARY_300 : j.Ilk.PRIMARY_500,
             percent: 100
         });
     }
@@ -298,7 +298,7 @@ class K extends r.PureComponent {
                     a = B(i, l),
                     s = Math.floor((t = R.xI(i, r)));
                 e =
-                    l === P.f07.PAUSING
+                    l === j.f07.PAUSING
                         ? D.intl.formatToPlainString(D.t.vjxhWl, {
                               percent: s,
                               progress: a,
@@ -315,7 +315,7 @@ class K extends r.PureComponent {
             (null == t || null == e) && ((t = 0), (e = D.intl.string(D.t['qS+iKS']))),
             this.renderBody({
                 percent: t,
-                foregroundColor: (0, u.ap)(i) ? P.Ilk.PRIMARY_300 : P.Ilk.PRIMARY_500,
+                foregroundColor: (0, u.ap)(i) ? j.Ilk.PRIMARY_300 : j.Ilk.PRIMARY_500,
                 message: e
             })
         );
@@ -334,18 +334,18 @@ class K extends r.PureComponent {
                     ? D.intl.string(D.t['+pfsFR'])
                     : D.intl.formatToPlainString(D.t['+feX8f'], {
                           percent: l,
-                          progress: (0, L.BU)(n),
-                          total: (0, L.BU)(i)
+                          progress: (0, y.BU)(n),
+                          total: (0, y.BU)(i)
                       });
         return this.renderBody({
             message: a,
-            foregroundColor: (0, u.ap)(t) ? P.Ilk.PRIMARY_300 : P.Ilk.PRIMARY_500,
+            foregroundColor: (0, u.ap)(t) ? j.Ilk.PRIMARY_300 : j.Ilk.PRIMARY_500,
             percent: r
         });
     }
     renderProgressPatching() {
         return (0, i.jsx)(O.Z, {
-            getHistoricalTotalBytes: b.Z.getHistoricalTotalBytesWritten,
+            getHistoricalTotalBytes: x.Z.getHistoricalTotalBytesWritten,
             updateInterval: 5000,
             children: this.renderProgressPatchingBody
         });
@@ -366,14 +366,14 @@ class K extends r.PureComponent {
                 progress: n,
                 total: t
             }),
-            foregroundColor: P.Ilk.BLUE_345
+            foregroundColor: j.Ilk.BLUE_345
         });
     }
     renderProgress() {
         let { state: e } = this.props.item;
         switch (null != e ? e.stage : null) {
-            case P.f07.PATCHING:
-            case P.f07.REPAIRING:
+            case j.f07.PATCHING:
+            case j.f07.REPAIRING:
                 return this.renderProgressPatching();
             default:
                 return this.renderProgressDefault();
@@ -383,7 +383,7 @@ class K extends r.PureComponent {
         let { item: e, cellProps: t } = this.props;
         if (e.finished) return this.renderFinished();
         if (e.index > 0) return this.renderQueued();
-        if (null != e.state && (e.state.type === P.vxO.UPDATING || e.state.type === P.vxO.REPAIRING || e.state.type === P.vxO.INSTALLING)) return null != t && t.paused ? this.renderPaused() : this.renderProgress();
+        if (null != e.state && (e.state.type === j.vxO.UPDATING || e.state.type === j.vxO.REPAIRING || e.state.type === j.vxO.INSTALLING)) return null != t && t.paused ? this.renderPaused() : this.renderProgress();
         return null;
     }
     constructor(...e) {
@@ -486,11 +486,11 @@ let q = () =>
                                         libraryApplication: e.libraryApplication,
                                         size: h.Button.Sizes.SMALL,
                                         className: M.gameActionButton,
-                                        source: P.Sbl.APPLICATION_LIBRARY_UPDATES
+                                        source: j.Sbl.APPLICATION_LIBRARY_UPDATES
                                     })
                                   : null)
                         : null != e.state
-                          ? e.state.type !== P.vxO.UP_TO_DATE && ((n = e.index > 0 ? (0, i.jsx)(Q, { item: e }) : null != t && t.paused ? (0, i.jsx)(q, {}) : (0, i.jsx)(X, { item: e })), (r = (0, i.jsx)(J, { item: e })))
+                          ? e.state.type !== j.vxO.UP_TO_DATE && ((n = e.index > 0 ? (0, i.jsx)(Q, { item: e }) : null != t && t.paused ? (0, i.jsx)(q, {}) : (0, i.jsx)(X, { item: e })), (r = (0, i.jsx)(J, { item: e })))
                           : (r = (0, i.jsx)(J, { item: e })),
                     (0, i.jsxs)(v.Z, {
                         justify: v.Z.Justify.END,
@@ -528,18 +528,18 @@ class ee extends r.PureComponent {
                       (0, i.jsxs)('div', {
                           className: M.headerRow,
                           children: [
-                              (0, i.jsx)(j.Z, {
+                              (0, i.jsx)(P.Z, {
                                   className: a()(M.headerCell, M.networkProgress),
                                   title: D.intl.string(D.t.ytoXKi),
-                                  getHistoricalTotalBytes: b.Z.getHistoricalTotalBytesDownloaded,
-                                  color: P.Ilk.GREEN_360,
+                                  getHistoricalTotalBytes: x.Z.getHistoricalTotalBytesDownloaded,
+                                  color: j.Ilk.GREEN_360,
                                   animate: r
                               }),
-                              (0, i.jsx)(j.Z, {
+                              (0, i.jsx)(P.Z, {
                                   className: a()(M.headerCell, M.diskProgress),
                                   title: D.intl.string(D.t.SjohhI),
-                                  getHistoricalTotalBytes: b.Z.getHistoricalTotalBytesWritten,
-                                  color: P.Ilk.BLUE_345,
+                                  getHistoricalTotalBytes: x.Z.getHistoricalTotalBytesWritten,
+                                  color: j.Ilk.BLUE_345,
                                   animate: r
                               })
                           ]
@@ -610,7 +610,7 @@ function et(e, t, n, i) {
                     branchId: s,
                     state: c,
                     application: o,
-                    libraryApplication: A.Z.getLibraryApplication(a, s),
+                    libraryApplication: b.Z.getLibraryApplication(a, s),
                     finished: t,
                     index: l
                 }),
@@ -619,13 +619,13 @@ function et(e, t, n, i) {
     }, []);
 }
 t.Z = (0, E.Z)(
-    c.ZP.connectStores([I.Z, b.Z, Z.Z, x.Z, y.Z], () => {
-        let e = et(Z.Z.activeItems, !1, I.Z, b.Z);
+    c.ZP.connectStores([I.Z, x.Z, Z.Z, A.Z, L.Z], () => {
+        let e = et(Z.Z.activeItems, !1, I.Z, x.Z);
         return {
-            applications: [...e, ...et(Z.Z.finishedItems, !0, I.Z, b.Z)],
+            applications: [...e, ...et(Z.Z.finishedItems, !0, I.Z, x.Z)],
             paused: Z.Z.paused,
-            isFocused: y.Z.isFocused(),
-            theme: x.Z.theme
+            isFocused: L.Z.isFocused(),
+            theme: A.Z.theme
         };
     })((0, _.Z)(ee))
 );

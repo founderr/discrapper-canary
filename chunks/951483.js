@@ -6,7 +6,7 @@ n.d(t, {
         return E;
     },
     Zg: function () {
-        return Z;
+        return N;
     }
 }),
     n(411104);
@@ -21,8 +21,8 @@ var i = n(186070),
     d = n(337482),
     h = n(679080),
     p = n(510761),
-    f = n(189509),
-    m = n(673553),
+    m = n(189509),
+    f = n(673553),
     g = n(280492),
     C = n(746887),
     _ = n(721383),
@@ -50,8 +50,8 @@ let S = {
         [x.EkH.MENTION_CHANNEL_PREV]: v.uX,
         [x.EkH.TOGGLE_PREVIOUS_GUILD]: l.$c,
         [x.EkH.JUMP_TO_GUILD]: r.u,
-        [x.EkH.SUBMIT]: f.z,
-        [x.EkH.TEXTAREA_FOCUS]: m.U,
+        [x.EkH.SUBMIT]: m.z,
+        [x.EkH.TEXTAREA_FOCUS]: f.U,
         [x.EkH.MARK_CHANNEL_READ]: a.f,
         [x.EkH.MARK_SERVER_READ]: o.l,
         [x.EkH.TOGGLE_MUTE]: g.iN,
@@ -68,7 +68,7 @@ let S = {
         [x.EkH.QUICKSWITCHER_SHOW]: c.$
     },
     E = { [x.EkH.QUICKSWITCHER_SHOW]: c.$ };
-function Z() {
+function N() {
     return [
         {
             description: I.intl.string(I.t.bx4Uy8),

@@ -43,7 +43,7 @@ function C(e, t) {
     if (n < 0) return !1;
     (h.resourceChannels[n] = { ...t }), (h.resourceChannels = [...h.resourceChannels]);
 }
-function I() {
+function v() {
     (g = !1), (h = l().cloneDeep(Object.assign({}, o.Z.getSettings(m))));
 }
 class _ extends (i = s.ZP.PersistedStore) {
@@ -91,8 +91,8 @@ d(_, 'displayName', 'GuildSettingsOnboardingHomeSettingsStore'),
         GUILD_HOME_SETTINGS_UPDATE_START: function () {
             g = !0;
         },
-        GUILD_HOME_SETTINGS_UPDATE_SUCCESS: I,
-        GUILD_HOME_SETTINGS_UPDATE_FAIL: I,
+        GUILD_HOME_SETTINGS_UPDATE_SUCCESS: v,
+        GUILD_HOME_SETTINGS_UPDATE_FAIL: v,
         GUILD_NEW_MEMBER_ACTION_UPDATE_SUCCESS: function (e) {
             let { action: t } = e;
             return f(t.channelId, t);

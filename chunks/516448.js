@@ -20,14 +20,14 @@ var i = n(200651),
     p = n(574085),
     f = n(293810),
     C = n(388032),
-    I = n(517194);
+    v = n(517194);
 function _(e) {
     let { allSubscriptionListings: t } = e,
         { editStateId: n, guildId: _ } = (0, o.N)(),
-        [N, v] = c.UE(n),
+        [I, N] = c.UE(n),
         [T, j] = c.R7(n),
-        S = r.useMemo(() => t.filter((e) => e.id !== n), [t, n]),
-        { isFullServerGating: b } = (0, d.Z)(_),
+        b = r.useMemo(() => t.filter((e) => e.id !== n), [t, n]),
+        { isFullServerGating: S } = (0, d.Z)(_),
         E = (0, s.Dt)(),
         R = (0, a.mY)();
     return (0, i.jsxs)(u.Z, {
@@ -40,23 +40,23 @@ function _(e) {
                 children: [
                     (0, i.jsx)(l.FormText, {
                         type: l.FormText.Types.DESCRIPTION,
-                        className: I.formDescription,
+                        className: v.formDescription,
                         disabled: R,
                         children: C.intl.string(C.t.kHalVF)
                     }),
                     (0, i.jsx)(m.Z, {
-                        channelBenefits: N,
+                        channelBenefits: I,
                         intangibleBenefits: T,
-                        subscriptionListings: S,
+                        subscriptionListings: b,
                         onImport: function (e, t) {
-                            v((t) => t.concat(e)), j((e) => e.concat(t));
+                            N((t) => t.concat(e)), j((e) => e.concat(t));
                         }
                     }),
                     (0, i.jsx)(l.Spacer, { size: 8 }),
                     (0, i.jsx)(m.w, {
                         guildId: _,
                         onImport: function (e) {
-                            v((t) => {
+                            N((t) => {
                                 let n = new Set(
                                     t.map((e) => {
                                         let { ref_id: t } = e;
@@ -86,11 +86,11 @@ function _(e) {
                 children: [
                     (0, i.jsx)(l.FormText, {
                         type: l.FormText.Types.DESCRIPTION,
-                        className: I.formDescription,
+                        className: v.formDescription,
                         disabled: R,
                         children: C.intl.string(C.t['5a4Axc'])
                     }),
-                    b &&
+                    S &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsx)(h.Z, {
@@ -110,7 +110,7 @@ function _(e) {
                 children: [
                     (0, i.jsx)(l.FormText, {
                         type: l.FormText.Types.DESCRIPTION,
-                        className: I.formDescription,
+                        className: v.formDescription,
                         disabled: R,
                         children: C.intl.string(C.t.zAww7e)
                     }),

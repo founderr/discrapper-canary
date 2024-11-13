@@ -15,10 +15,10 @@ var i = n(200651),
     _ = n(846488),
     E = n(181211),
     S = n(811085),
-    f = n(967254),
-    g = n(981631),
-    m = n(388032),
-    p = n(262714);
+    g = n(967254),
+    f = n(981631),
+    p = n(388032),
+    m = n(262714);
 function T() {
     let t = (0, E.Z)(),
         e = (0, _.e)(),
@@ -28,24 +28,24 @@ function T() {
         c.yq();
     }, []),
     a.useEffect(() => {
-        e && (o.default.track(g.rMx.SAFETY_HUB_VIEWED, { account_standing: n.state }), r.Z.increment({ name: l.V.SAFETY_HUB_VIEW }));
+        e && (o.default.track(f.rMx.SAFETY_HUB_VIEWED, { account_standing: n.state }), r.Z.increment({ name: l.V.SAFETY_HUB_VIEW }));
     }, [e]),
     t)
         ? (0, i.jsx)('div', { children: (0, i.jsx)(s.Spinner, {}) })
         : null != T
           ? (0, i.jsxs)(s.Notice, {
                 color: s.NoticeColors.DANGER,
-                className: p.nagbar,
+                className: m.nagbar,
                 children: [
-                    m.intl.string(m.t.TDRvqq),
+                    p.intl.string(p.t.TDRvqq),
                     (0, i.jsx)(s.NoticeButton, {
                         onClick: () => c.yq(),
-                        children: m.intl.string(m.t.R1AN4O)
+                        children: p.intl.string(p.t.R1AN4O)
                     })
                 ]
             })
           : (0, i.jsxs)('div', {
-                className: p.container,
-                children: [(0, i.jsx)(S.Z, {}), (0, i.jsx)(f.N, {})]
+                className: m.container,
+                children: [(0, i.jsx)(S.Z, {}), (0, i.jsx)(g.N, {})]
             });
 }

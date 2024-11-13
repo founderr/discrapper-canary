@@ -19,9 +19,9 @@ var r = t(200651),
     f = t(388032),
     p = t(619377);
 function g(e) {
-    let { onClose: n, items: t, startingIndex: a, onIndexChange: g, shouldRedactExplicitContent: _, shouldHideMediaOptions: x = !1, className: C, ...S } = e,
-        [v, E] = i.useState(null != a ? a : 0),
-        [L, y] = i.useState(!1);
+    let { onClose: n, items: t, startingIndex: a, onIndexChange: g, shouldRedactExplicitContent: _, shouldHideMediaOptions: x = !1, className: C, ...v } = e,
+        [S, E] = i.useState(null != a ? a : 0),
+        [y, L] = i.useState(!1);
     i.useEffect(() => {
         if (null != n)
             return (
@@ -39,19 +39,19 @@ function g(e) {
         ),
         A = i.useMemo(
             () => ({
-                zoomed: L,
-                setZoomed: y
+                zoomed: y,
+                setZoomed: L
             }),
-            [L]
+            [y]
         ),
-        R = t[v];
+        R = t[S];
     return (0, r.jsx)(o.ThemeProvider, {
         theme: h.BRd.DARK,
         children: (e) =>
             (0, r.jsx)(o.ModalRoot, {
                 hideShadow: !0,
                 className: l()(p.carouselModal, e),
-                ...S,
+                ...v,
                 size: o.ModalSize.DYNAMIC,
                 fullscreenOnMobile: !1,
                 'aria-label': f.intl.string(f.t.AMTX3t),
@@ -64,7 +64,7 @@ function g(e) {
                         }),
                         (0, r.jsx)(d.Z, {
                             items: t,
-                            startIndex: v,
+                            startIndex: S,
                             onIndexChange: I,
                             shouldRedactExplicitContent: _,
                             shouldHideMediaOptions: x

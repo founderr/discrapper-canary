@@ -19,9 +19,9 @@ function h(e) {
 }
 n.Z = i.memo(function (e) {
     let { media: n, obscured: t = !1, onContextMenu: i } = e,
-        { width: d, height: f, url: p, proxyUrl: g, alt: _, type: x, maxWidth: C, maxHeight: S, ...v } = n,
-        { width: E, height: L } = (0, u.zp)(null != d ? d : 0, null != f ? f : 0),
-        y = (0, s.q)({
+        { width: d, height: f, url: p, proxyUrl: g, alt: _, type: x, maxWidth: C, maxHeight: v, ...S } = n,
+        { width: E, height: y } = (0, u.zp)(null != d ? d : 0, null != f ? f : 0),
+        L = (0, s.q)({
             proxyURL: g,
             url: p
         }),
@@ -32,12 +32,12 @@ n.Z = i.memo(function (e) {
         if (null == e) return null;
         let a = null !== (A = n.renderLinkComponent) && void 0 !== A ? A : o.iT;
         return (0, r.jsx)(l.Z, {
-            ...v,
-            src: y,
+            ...S,
+            src: L,
             width: d,
             height: f,
             maxWidth: E,
-            maxHeight: L,
+            maxHeight: y,
             responsive: !0,
             poster: e,
             naturalWidth: d,
@@ -55,13 +55,13 @@ n.Z = i.memo(function (e) {
     if ('IMAGE' === x)
         return I
             ? (0, r.jsx)(a.ZP, {
-                  ...v,
-                  src: y,
+                  ...S,
+                  src: L,
                   width: d,
                   height: f,
                   shouldLink: !1,
                   maxWidth: E,
-                  maxHeight: L,
+                  maxHeight: y,
                   animated: !t && n.animated,
                   autoPlay: !t,
                   alt: _,
@@ -70,7 +70,7 @@ n.Z = i.memo(function (e) {
                   responsive: !0
               })
             : (0, r.jsx)('img', {
-                  src: y,
+                  src: L,
                   alt: _,
                   onContextMenu: i,
                   className: m.dimensionlessImage

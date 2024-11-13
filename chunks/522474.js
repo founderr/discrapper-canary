@@ -184,7 +184,7 @@ let x = new L(c.Z, {
     POPOUT_WINDOW_CLOSE: function (e) {
         let { key: t } = e,
             n = I[t];
-        null != n && !n.closed && (N(t), n.close());
+        null != n && !n.closed && (N(t), n.close(), (I[t] = null));
     },
     POPOUT_WINDOW_SET_ALWAYS_ON_TOP: function (e) {
         let { key: t, alwaysOnTop: n } = e;

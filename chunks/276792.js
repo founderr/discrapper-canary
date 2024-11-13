@@ -24,8 +24,8 @@ function _(e) {
         S = 'AnnouncementModalVariant1_'.concat(r.z[Number(_.dismissKey)]),
         { onClose: N } = E,
         T = null != _.button && '' !== _.button.copy ? _.button.copy : p.intl.string(p.t.YScQSE),
-        x = (null === (t = _.button) || void 0 === t ? void 0 : t.buttonAction) === l.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button',
-        A =
+        A = (null === (t = _.button) || void 0 === t ? void 0 : t.buttonAction) === l.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button',
+        b =
             (null === (n = _.button) || void 0 === n ? void 0 : n.buttonAction) === l.Wc.OPEN_MARKETING_PAGE
                 ? () => {
                       (0, o.uL)(m.Z5c.APPLICATION_STORE), N();
@@ -43,7 +43,7 @@ function _(e) {
                               e && N();
                           }
                       }),
-        b =
+        x =
             '' !== _.helpArticleId
                 ? () =>
                       (0, i.jsxs)(i.Fragment, {
@@ -72,22 +72,22 @@ function _(e) {
                 type: 'image',
                 src: v ? _.heroArtImageLinkLightTheme : _.heroArtImageLinkDarkTheme
             });
-    let y = v ? u.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL : u.VE.PREMIUM_TIER_2_WHITE_FILL,
-        L =
+    let L = v ? u.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL : u.VE.PREMIUM_TIER_2_WHITE_FILL,
+        y =
             '' !== _.modalTopPill
                 ? () =>
                       (0, i.jsx)(u.Cy, {
                           text: _.modalTopPill,
                           className: g.modalTopPill,
-                          colorOptions: y
+                          colorOptions: L
                       })
                 : void 0;
     return {
         renderModalProps: E,
         header: _.header,
-        modalTopExtra: L,
+        modalTopExtra: y,
         subHeader: _.subheader,
-        subHeaderExtra: b,
+        subHeaderExtra: x,
         body: _.body,
         heroArt: Z,
         featureCards: _.featureCards.map((e) => ({
@@ -107,11 +107,11 @@ function _(e) {
                 onClick: () => {
                     c.default.track(m.rMx.CHANGE_LOG_CTA_CLICKED, {
                         change_log_id: S,
-                        cta_type: x,
+                        cta_type: A,
                         seconds_open: Math.round((Date.now() - e) / 1000),
                         target: S
                     }),
-                        A();
+                        b();
                 },
                 children: [
                     (0, i.jsx)('img', {

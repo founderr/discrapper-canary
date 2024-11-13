@@ -1,62 +1,62 @@
 let r;
-t(47120), t(653041);
-var a,
-    i = t(442837),
-    o = t(570140);
-function s(e, n, t) {
+n(47120), n(653041);
+var i,
+    a = n(442837),
+    o = n(570140);
+function l(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: t,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = t),
+            : (e[t] = n),
         e
     );
 }
-let l = { guildNoticeDismissed: [] },
+let s = { guildNoticeDismissed: [] },
     c = new Map(),
-    d = new Set();
-class u extends (a = i.ZP.PersistedStore) {
+    u = new Set();
+class d extends (i = a.ZP.PersistedStore) {
     initialize() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l;
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : s;
         r = e;
     }
     getState() {
         return r;
     }
     shouldShowChannelNotice(e) {
-        var n, t;
-        return !r.guildNoticeDismissed.includes(e) && (null !== (t = null === (n = c.get(e)) || void 0 === n ? void 0 : n.size) && void 0 !== t ? t : 0) > 0;
+        var t, n;
+        return !r.guildNoticeDismissed.includes(e) && (null !== (n = null === (t = c.get(e)) || void 0 === t ? void 0 : t.size) && void 0 !== n ? n : 0) > 0;
     }
-    canShowOverviewTooltip(e, n) {
-        var t;
-        return (null === (t = c.get(e)) || void 0 === t ? void 0 : t.has(n)) === !0;
+    canShowOverviewTooltip(e, t) {
+        var n;
+        return (null === (n = c.get(e)) || void 0 === n ? void 0 : n.has(t)) === !0;
     }
     canShowToggleTooltip(e) {
-        return d.has(e);
+        return u.has(e);
     }
 }
-s(u, 'displayName', 'CommandsMigrationStore'),
-    s(u, 'persistKey', 'CommandsMigrationStore'),
-    (n.Z = new u(o.Z, {
+l(d, 'displayName', 'CommandsMigrationStore'),
+    l(d, 'persistKey', 'CommandsMigrationStore'),
+    (t.Z = new d(o.Z, {
         COMMANDS_MIGRATION_UPDATE_SUCCESS: function (e) {
-            let { guildId: n, integrationIdsWithAppCommands: t } = e;
-            return c.set(n, new Set(t)), !0;
+            let { guildId: t, integrationIdsWithAppCommands: n } = e;
+            return c.set(t, new Set(n)), !0;
         },
         COMMANDS_MIGRATION_NOTICE_DISMISSED: function (e) {
-            let { guildId: n } = e;
-            r.guildNoticeDismissed.push(n);
+            let { guildId: t } = e;
+            r.guildNoticeDismissed.push(t);
         },
         COMMANDS_MIGRATION_OVERVIEW_TOOLTIP_DISMISSED: function (e) {
-            var n;
-            let { guildId: t, integrationId: r } = e;
-            null === (n = c.get(t)) || void 0 === n || n.clear(), d.add(r);
+            var t;
+            let { guildId: n, integrationId: r } = e;
+            null === (t = c.get(n)) || void 0 === t || t.clear(), u.add(r);
         },
         COMMANDS_MIGRATION_TOGGLE_TOOLTIP_DISMISSED: function (e) {
-            let { integrationId: n } = e;
-            d.delete(n);
+            let { integrationId: t } = e;
+            u.delete(t);
         }
     }));

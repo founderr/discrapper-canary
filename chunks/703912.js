@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return A;
+        return b;
     }
 }),
     n(789020),
@@ -38,12 +38,12 @@ async function T(e, t, n) {
         c,
         d,
         v,
-        { client_id: N, response_type: T = 'code', redirect_uri: x, code_challenge: A, code_challenge_method: b, state: Z, nonce: y, scope: L, permissions: R, guild_id: O, channel_id: j, prompt: P, disable_guild_select: D, integration_type: M, pid: w, signal: k } = e;
+        { client_id: N, response_type: T = 'code', redirect_uri: A, code_challenge: b, code_challenge_method: x, state: Z, nonce: L, scope: y, permissions: R, guild_id: O, channel_id: P, prompt: j, disable_guild_select: D, integration_type: M, pid: w, signal: k } = e;
     if (null == k ? void 0 : k.aborted) throw new C.Z({ errorCode: S.lTL.UNKNOWN_ERROR }, 'Request aborted');
     if (null == N) throw new C.Z({ errorCode: S.lTL.OAUTH2_ERROR }, 'No Client ID provided');
-    if (null != x) throw new C.Z({ errorCode: S.lTL.OAUTH2_ERROR }, 'Redirect URI cannot be used in the RPC OAuth2 Authorization flow');
+    if (null != A) throw new C.Z({ errorCode: S.lTL.OAUTH2_ERROR }, 'Redirect URI cannot be used in the RPC OAuth2 Authorization flow');
     let U = [];
-    if (('string' == typeof L ? (U = L.split(' ').filter((e) => e.length > 0)) : Array.isArray(L) && (U = L), null == _.default.getCurrentUser())) throw new C.Z({ errorCode: S.lTL.OAUTH2_ERROR }, 'Client is not logged in');
+    if (('string' == typeof y ? (U = y.split(' ').filter((e) => e.length > 0)) : Array.isArray(y) && (U = y), null == _.default.getCurrentUser())) throw new C.Z({ errorCode: S.lTL.OAUTH2_ERROR }, 'Client is not logged in');
     let G = null !== (l = u.Z.getApplication(N)) && void 0 !== l ? l : null;
     (null == G ||
         (function (e) {
@@ -59,9 +59,9 @@ async function T(e, t, n) {
             clientId: N,
             scopes: U,
             responseType: T,
-            redirectUri: x,
-            codeChallenge: A,
-            codeChallengeMethod: b,
+            redirectUri: A,
+            codeChallenge: b,
+            codeChallengeMethod: x,
             state: Z,
             integrationType: o,
             signal: k
@@ -76,7 +76,7 @@ async function T(e, t, n) {
         let { body: e } = t;
         throw new C.Z({ errorCode: S.lTL.OAUTH2_ERROR }, 'OAuth2 Authorization Error: '.concat((null == e ? void 0 : e.message) || 'Unknown Error'));
     }
-    if (P === p.s.NONE && null != c && c.authorized && v)
+    if (j === p.s.NONE && null != c && c.authorized && v)
         try {
             return (
                 await (0, m.Iq)({
@@ -84,11 +84,11 @@ async function T(e, t, n) {
                     clientId: N,
                     scopes: U,
                     responseType: T,
-                    redirectUri: x,
-                    codeChallenge: A,
-                    codeChallengeMethod: b,
+                    redirectUri: A,
+                    codeChallenge: b,
+                    codeChallengeMethod: x,
                     state: Z,
-                    nonce: y,
+                    nonce: L,
                     integrationType: o
                 })
             ).location;
@@ -96,10 +96,10 @@ async function T(e, t, n) {
             let { body: e } = t;
             throw new C.Z({ errorCode: S.lTL.OAUTH2_ERROR }, 'OAuth2 Authorize Error: '.concat((null == e ? void 0 : e.message) || 'Unknown Error'));
         }
-    null == n || n(c.application, j, w);
-    let H = I.Hn;
+    null == n || n(c.application, P, w);
+    let V = I.Hn;
     try {
-        H = a.vB(null != R ? R : 0);
+        V = a.vB(null != R ? R : 0);
     } catch (e) {}
     return (
         null != c.integration_type && Object.values(r.Y).includes(c.integration_type) && (s = new Map()).set(c.integration_type, c),
@@ -107,15 +107,15 @@ async function T(e, t, n) {
             clientId: N,
             authorizations: s,
             scopes: U,
-            parsedPermissions: H,
+            parsedPermissions: V,
             responseType: T,
-            redirectUri: x,
-            codeChallenge: A,
-            codeChallengeMethod: b,
+            redirectUri: A,
+            codeChallenge: b,
+            codeChallengeMethod: x,
             state: Z,
             guildId: O,
-            channelId: j,
-            prompt: P,
+            channelId: P,
+            prompt: j,
             disableGuildSelect: D,
             disclosures: d,
             integrationType: o,
@@ -123,7 +123,7 @@ async function T(e, t, n) {
         })
     );
 }
-function x(e, t) {
+function A(e, t) {
     if (e.authorization.accessToken) throw new C.Z({ errorCode: S.lTL.INVALID_COMMAND }, 'Already authenticated');
     if (e.authorization.authing) throw new C.Z({ errorCode: S.lTL.INVALID_COMMAND }, 'Already authenticating');
     return (
@@ -165,7 +165,7 @@ function x(e, t) {
             })
     );
 }
-function A(e, t) {
+function b(e, t) {
     return {
         [S.Etm.AUTHENTICATE]: (0, o.S)(S.Etm.AUTHENTICATE, {
             handler(n) {
@@ -207,7 +207,7 @@ function A(e, t) {
                                         }),
                                             c.K.set(N, l);
                                     })(n, l.access_token, l.scope, l.expires_in),
-                                    x(r, l.access_token)
+                                    A(r, l.access_token)
                                 );
                             });
                     return null !=
@@ -219,7 +219,7 @@ function A(e, t) {
                                 delete n[e], c.K.set(N, n);
                             }
                         })(n, o))
-                        ? x(r, s).catch(
+                        ? A(r, s).catch(
                               () => (
                                   !(function (e) {
                                       var t;
@@ -232,7 +232,7 @@ function A(e, t) {
                         : d();
                 }
                 if (null == s) throw new C.Z({ errorCode: S.lTL.INVALID_TOKEN }, 'No access token provided');
-                return x(r, s);
+                return A(r, s);
             }
         }),
         [S.Etm.AUTHORIZE]: {

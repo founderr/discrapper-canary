@@ -76,7 +76,7 @@ function C(e) {
             },
             [A, l, C]
         ),
-        L = i.useCallback(
+        R = i.useCallback(
             async (e) => {
                 if (A) return;
                 if (null != t && null == o.Z.getMutualGuilds(t.id)) {
@@ -119,7 +119,7 @@ function C(e) {
             },
             [y, A, t]
         ),
-        R = i.useCallback(
+        L = i.useCallback(
             (e, t, n) => {
                 let i = (i, l) => {
                         l && d.kJ.updateSetting(i),
@@ -150,10 +150,10 @@ function C(e) {
             [y]
         );
     return {
-        acceptMessageRequest: x ? L : y,
+        acceptMessageRequest: x ? R : y,
         rejectMessageRequest: P,
         rejectAll: M,
-        markAsNotSpam: R,
+        markAsNotSpam: L,
         isAcceptLoading: v,
         isRejectLoading: I,
         isUserProfileLoading: b,

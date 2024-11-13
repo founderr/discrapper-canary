@@ -39,7 +39,7 @@ n.d(t, {
         return e_;
     },
     QM: function () {
-        return ec;
+        return eu;
     },
     V$: function () {
         return ea;
@@ -102,8 +102,8 @@ var r = n(654861),
     a = n(536402),
     o = n(533800),
     E = n(149765),
-    u = n(866442),
-    c = n(379649),
+    c = n(866442),
+    u = n(379649),
     d = n(911969),
     _ = n(933557),
     A = n(710845),
@@ -129,7 +129,7 @@ var r = n(654861),
     x = n(765305),
     G = n(388032);
 let F = new A.Z('AuditLogUtils'),
-    y = [c.J6.DAYS, c.J6.HOURS, c.J6.MINUTES, c.J6.SECONDS],
+    y = [u.J6.DAYS, u.J6.HOURS, u.J6.MINUTES, u.J6.SECONDS],
     B = () => ({ [v.zUn.REASON]: () => G.t['2IW3Cw'] }),
     j = () => ({
         [v.zUn.NAME]: () => G.t.CkDiND,
@@ -692,13 +692,13 @@ function eE(e) {
     let n = es().find((t) => t.value === e.action);
     return null != ea(v.zUn.COMMUNICATION_DISABLED_UNTIL, e) ? G.intl.string(G.t.z3wbj4) : null !== (t = null == n ? void 0 : n.label) && void 0 !== t ? t : null;
 }
-let eu = {
-    [c.J6.SECONDS]: (e) => G.intl.formatToPlainString(G.t.geSp4O, { seconds: e }),
-    [c.J6.MINUTES]: (e) => G.intl.formatToPlainString(G.t.iXLF9f, { minutes: e }),
-    [c.J6.HOURS]: (e) => G.intl.formatToPlainString(G.t.xCjYxM, { hours: e }),
-    [c.J6.DAYS]: (e) => G.intl.formatToPlainString(G.t.k2UNz8, { days: e })
+let ec = {
+    [u.J6.SECONDS]: (e) => G.intl.formatToPlainString(G.t.geSp4O, { seconds: e }),
+    [u.J6.MINUTES]: (e) => G.intl.formatToPlainString(G.t.iXLF9f, { minutes: e }),
+    [u.J6.HOURS]: (e) => G.intl.formatToPlainString(G.t.xCjYxM, { hours: e }),
+    [u.J6.DAYS]: (e) => G.intl.formatToPlainString(G.t.k2UNz8, { days: e })
 };
-function ec(e) {
+function eu(e) {
     let t = ea(v.zUn.COMMUNICATION_DISABLED_UNTIL, e),
         n = eo(v.zUn.ROLES_ADD, e).length > 0,
         r = eo(v.zUn.ROLES_REMOVE, e).length > 0;
@@ -707,12 +707,12 @@ function ec(e) {
             let n = new Date(null == t ? void 0 : t.newValue).getTime(),
                 r = n - M.default.extractTimestamp(e.id),
                 l = Math.round(r / 1000 / 60),
-                i = (0, c.CI)(l, y);
+                i = (0, u.CI)(l, y);
             if (null == i.unit || null == i.time) return null;
-            if (i.unit in eu) {
+            if (i.unit in ec) {
                 let e = i.unit,
-                    t = i.unit === c.J6.SECONDS ? Math.round(r / 1000) : i.time;
-                return eu[e](t);
+                    t = i.unit === u.J6.SECONDS ? Math.round(r / 1000) : i.time;
+                return ec[e](t);
             }
         } else if ((null == t ? void 0 : t.oldValue) != null) return G.intl.string(G.t.MA1ltr);
     } else if (n && r) return G.intl.string(G.t.RdMMe3);
@@ -1303,9 +1303,9 @@ function eg(e, t) {
                                 case v.zUn.BITRATE:
                                     return eR(e, (e) => e / 1000);
                                 case v.zUn.COLOR:
-                                    return eR(e, (e) => (0, u.Rf)(e).toUpperCase());
+                                    return eR(e, (e) => (0, c.Rf)(e).toUpperCase());
                                 case v.zUn.THEME_COLORS:
-                                    return eR(e, (e) => ''.concat((0, u.Rf)(e[0]).toUpperCase(), ', ').concat((0, u.Rf)(e[1]).toUpperCase()));
+                                    return eR(e, (e) => ''.concat((0, c.Rf)(e[0]).toUpperCase(), ', ').concat((0, c.Rf)(e[1]).toUpperCase()));
                                 case v.zUn.MAX_AGE:
                                     return eR(e, (e) => {
                                         let t = L.ZP.getMaxAgeOptions.find((t) => {

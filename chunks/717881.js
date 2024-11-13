@@ -31,11 +31,11 @@ var i = n(200651),
     A = n(153066),
     N = n(981631),
     w = n(388032),
-    P = n(247111);
-function j(e) {
+    j = n(247111);
+function P(e) {
     let { type: t, source: n, activity: l, applicationStream: a, user: r, guildId: s, channelId: c, onAction: d, isEmbedded: f = (0, u.Z)(l), actionColor: p } = e;
     return (0, i.jsx)(m.Z, {
-        className: (0, A.l)(P, 'actions', t),
+        className: (0, A.l)(j, 'actions', t),
         type: t,
         source: n,
         activity: l,
@@ -75,9 +75,9 @@ t.Z = function (e) {
             if (null != t) return null != t.application_id ? f.Z.getApplication(t.application_id) : f.Z.getApplicationByName(t.name);
             return null;
         }),
-        G = (0, p.Z)(),
-        W = (0, I.Z)(n),
-        B = G && null != t && W;
+        W = (0, p.Z)(),
+        G = (0, I.Z)(n),
+        B = W && null != t && G;
     return (l.useEffect(() => {
         (null == t ? void 0 : t.type) === N.IIU.HANG_STATUS &&
             k &&
@@ -101,9 +101,9 @@ t.Z = function (e) {
               renderActions: o
                   ? () =>
                         (0, i.jsxs)('div', {
-                            className: r()(B && P.actionsWrapper),
+                            className: r()(B && j.actionsWrapper),
                             children: [
-                                (0, i.jsx)(j, {
+                                (0, i.jsx)(P, {
                                     ...R,
                                     applicationStream: L,
                                     activity: t,

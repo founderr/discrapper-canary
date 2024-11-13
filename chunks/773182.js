@@ -21,8 +21,8 @@ var i = n(200651),
     d = n(481060),
     h = n(350810),
     p = n(110924),
-    f = n(410030),
-    m = n(100527),
+    m = n(410030),
+    f = n(100527),
     g = n(970606),
     C = n(824991),
     _ = n(931515),
@@ -32,15 +32,15 @@ var i = n(200651),
     b = n(863249),
     S = n(937111),
     E = n(667105),
-    Z = n(451478),
-    N = n(602147),
+    N = n(451478),
+    Z = n(602147),
     y = n(981631),
     T = n(308083),
-    j = n(921944),
-    A = n(49898),
+    A = n(921944),
+    j = n(49898),
     P = n(128449),
-    M = n(46140),
-    R = n(388032),
+    R = n(46140),
+    M = n(388032),
     L = n(877861);
 function w(e) {
     let { color: t } = e;
@@ -104,20 +104,20 @@ let D = l.memo(function (e) {
     let { children: t } = e,
         n = (0, o.TH)(),
         { games: r, treatment: p, hasFetchedGames: b } = (0, _.I9)(),
-        [S, D] = (0, v.US)([u.z.RAPIDASH_MORE_GUILDS_UPSELL], j.R.SIDEBAR, !0),
-        O = (0, E.Ws)({ location: M.dr.CONFLICT_CHECKS }),
+        [S, D] = (0, v.US)([u.z.RAPIDASH_MORE_GUILDS_UPSELL], A.R.SIDEBAR, !0),
+        O = (0, E.Ws)({ location: R.dr.CONFLICT_CHECKS }),
         k = S !== u.z.RAPIDASH_MORE_GUILDS_UPSELL,
         G = (0, h.Z)(),
         U = n.pathname === y.Z5c.GUILD_DISCOVERY || n.pathname.startsWith(y.Z5c.GLOBAL_DISCOVERY),
         B = O && !G && !k && !U,
         [H, V] = l.useState(0),
-        F = (0, f.ZP)(),
+        F = (0, m.ZP)(),
         W = l.useMemo(() => r.map((e) => e.id), [r]),
-        z = (0, c.e7)([Z.Z], () => Z.Z.isFocused());
+        z = (0, c.e7)([N.Z], () => N.Z.isFocused());
     l.useEffect(() => {
         B &&
             (0, g.tv)({
-                location: m.Z.GUILDS_LIST,
+                location: f.Z.GUILDS_LIST,
                 treatment: p,
                 gameApplicationIds: W
             });
@@ -131,27 +131,27 @@ let D = l.memo(function (e) {
         }, [V, W, B, z]);
     let Y = l.useCallback(() => {
             if (
-                (O && D(j.L.TAKE_ACTION),
+                (O && D(A.L.TAKE_ACTION),
                 (0, g.GS)({
-                    location: m.Z.GUILDS_LIST,
+                    location: f.Z.GUILDS_LIST,
                     treatment: p,
                     gameApplicationIds: W
                 }),
                 B)
             )
                 (0, I.u)({
-                    tab: A.F$.SERVERS,
-                    selectedServersTab: P.vf.GUILDS,
+                    tab: j.F$.SERVERS,
+                    selectedServersTab: P.vf.FEATURED,
                     entrypoint: P.Qq.GUILDS_BAR
                 });
             else {
                 let e = x.Z.getField('selectedTab');
-                (0, N.o)(e);
+                (0, Z.o)(e);
             }
         }, [O, p, W, B, D]),
         K = l.useCallback(
             (e) => {
-                e(), D(j.L.USER_DISMISS);
+                e(), D(A.L.USER_DISMISS);
             },
             [D]
         ),
@@ -163,7 +163,7 @@ let D = l.memo(function (e) {
             exitBeforeEnter: !0
         }),
         Q = l.useCallback((e) => (null != e ? { backgroundImage: 'url('.concat(e, ')') } : {}), []),
-        X = l.useMemo(() => t({ onClick: Y }), [t, Y]);
+        J = l.useMemo(() => t({ onClick: Y }), [t, Y]);
     return p !== T.O7.GAME_SPECIFIC || b
         ? (0, i.jsxs)('div', {
               className: L.container,
@@ -215,7 +215,7 @@ let D = l.memo(function (e) {
                                   }),
                                   (0, i.jsxs)('div', {
                                       className: a()(L.popoutContent),
-                                      children: [(0, i.jsx)(C.aF, { title: R.intl.string(R.t.B2wKJi) }), (0, i.jsx)(C.To, { message: R.intl.string(R.t.Cs2Bio) }), (0, i.jsx)(C.Xu, { onClick: Y })]
+                                      children: [(0, i.jsx)(C.aF, { title: M.intl.string(M.t.B2wKJi) }), (0, i.jsx)(C.To, { message: M.intl.string(M.t.Cs2Bio) }), (0, i.jsx)(C.Xu, { onClick: Y })]
                                   }),
                                   (0, i.jsx)('div', { className: L.popoutCaret })
                               ]
@@ -231,10 +231,10 @@ let D = l.memo(function (e) {
                               className: L.popoutAnchor
                           })
                   }),
-                  X
+                  J
               ]
           })
-        : (0, i.jsx)(i.Fragment, { children: X });
+        : (0, i.jsx)(i.Fragment, { children: J });
 });
 function O(e) {
     let { onActivate: t, children: n } = e,
@@ -269,12 +269,12 @@ function O(e) {
                                             children: [
                                                 (0, i.jsx)(d.Heading, {
                                                     variant: 'heading-md/medium',
-                                                    children: R.intl.string(R.t.fRUGzs)
+                                                    children: M.intl.string(M.t.fRUGzs)
                                                 }),
                                                 (0, i.jsx)(d.Text, {
                                                     variant: 'text-xs/normal',
                                                     color: 'text-muted',
-                                                    children: R.intl.string(R.t.ja0Tg4)
+                                                    children: M.intl.string(M.t.ja0Tg4)
                                                 })
                                             ]
                                         }),
@@ -283,7 +283,7 @@ function O(e) {
                                             size: d.ButtonSizes.SMALL,
                                             color: d.ButtonColors.BRAND,
                                             onClick: a,
-                                            children: R.intl.string(R.t.E0MgHh)
+                                            children: M.intl.string(M.t.E0MgHh)
                                         })
                                     ]
                                 }),

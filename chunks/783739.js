@@ -43,7 +43,7 @@ function b(e) {
         { fractionalState: F } = (0, l.Z)(),
         M = (null == t ? void 0 : t.isPausedOrPausePending) === !0 && F === N.a$.NONE,
         k = (null == t ? void 0 : t.isPausedOrPausePending) !== !0 && F === N.a$.NONE,
-        w = j && F === N.a$.FP_SUB;
+        w = j && F === N.a$.FP_SUB_PAUSED;
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(a.oQ, { className: A.blockedPaymentsWarning }),

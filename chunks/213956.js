@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return N;
     }
 });
 var i = n(200651),
@@ -19,23 +19,23 @@ var i = n(200651),
     p = n(464610),
     f = n(733629),
     C = n(598622),
-    I = n(921944),
+    v = n(921944),
     _ = n(388032),
-    N = n(176981);
-function v(e) {
+    I = n(176981);
+function N(e) {
     let t,
         { hideChangelog: n } = e,
-        v = (0, l.e7)([m.Z], () => m.Z.getGuildId()),
-        T = (0, l.e7)([u.Z], () => u.Z.getGuild(v)),
+        N = (0, l.e7)([m.Z], () => m.Z.getGuildId()),
+        T = (0, l.e7)([u.Z], () => u.Z.getGuild(N)),
         j = (0, l.e7)([g.Z], () => g.Z.getCurrentPage());
     if (
         (r.useEffect(() => {
-            (0, o.EW)(s.z.COMMUNITY_GUILD_SETTINGS_SAFETY, { dismissAction: I.L.AUTO });
+            (0, o.EW)(s.z.COMMUNITY_GUILD_SETTINGS_SAFETY, { dismissAction: v.L.AUTO });
         }, []),
         null == T)
     )
         return null;
-    let S = (0, C.Q)(T);
+    let b = (0, C.Q)(T);
     switch (j) {
         case x.u.OVERVIEW:
             t = (0, i.jsx)(p.Z, {
@@ -46,13 +46,13 @@ function v(e) {
         case x.u.CAPTCHA_AND_RAID_PROTECTION:
             t = (0, i.jsx)(f.Z, {
                 title: _.intl.string(_.t['53eF5u']),
-                settings: S[x.u.CAPTCHA_AND_RAID_PROTECTION]
+                settings: b[x.u.CAPTCHA_AND_RAID_PROTECTION]
             });
             break;
         case x.u.DM_AND_SPAM_PROTECTION:
             t = (0, i.jsx)(f.Z, {
                 title: _.intl.string(_.t.O0SfFx),
-                settings: S[x.u.DM_AND_SPAM_PROTECTION]
+                settings: b[x.u.DM_AND_SPAM_PROTECTION]
             });
             break;
         case x.u.AUTOMOD:
@@ -61,15 +61,15 @@ function v(e) {
         case x.u.PERMISSIONS:
             t = (0, i.jsx)(f.Z, {
                 title: _.intl.string(_.t.BXoNiY),
-                settings: S[x.u.PERMISSIONS]
+                settings: b[x.u.PERMISSIONS]
             });
     }
     return (0, i.jsxs)(i.Fragment, {
         children: [
             j !== x.u.OVERVIEW &&
                 (0, i.jsxs)(a.Button, {
-                    className: N.back,
-                    innerClassName: N.backButton,
+                    className: I.back,
+                    innerClassName: I.backButton,
                     look: a.Button.Looks.BLANK,
                     size: a.Button.Sizes.MIN,
                     onClick: () => {
@@ -77,7 +77,7 @@ function v(e) {
                     },
                     children: [
                         (0, i.jsx)(d.Z, {
-                            className: N.__invalid_arrow,
+                            className: I.__invalid_arrow,
                             direction: d.Z.Directions.LEFT
                         }),
                         (0, i.jsx)(a.Text, {

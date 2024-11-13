@@ -79,10 +79,10 @@ let b = (e) => {
               );
     };
 function N(e) {
-    let { className: t, mute: n, localMute: i, localVideoDisabled: a, serverMute: r, deaf: c, serverDeaf: d, collapsed: f, video: p, isStreaming: h, disabled: g, isWatching: _, iconClassName: T, embeddedApplication: b, otherClientSessionType: N, voicePlatform: w, hangStatusActivity: R, showHangStatus: M, isSelf: O, application: L, guildId: k, channelId: D, user: U, handleHoverHangStatus: V, handleHoverIcons: F, disconnected: G } = e;
+    let { className: t, mute: n, localMute: i, localVideoDisabled: a, serverMute: r, deaf: c, serverDeaf: d, collapsed: f, video: p, isStreaming: h, disabled: g, isWatching: _, iconClassName: T, embeddedApplication: b, otherClientSessionType: N, voicePlatform: w, hangStatusActivity: R, showHangStatus: M, isSelf: O, application: L, guildId: k, channelId: D, user: U, handleHoverHangStatus: V, handleHoverIcons: F, disconnected: W } = e;
     if (f || g) return null;
-    let W = [],
-        B = (0, l.jsx)(j, {
+    let G = [],
+        B = (0, l.jsx)(P, {
             iconClassName: T,
             mute: n,
             localMute: i,
@@ -92,7 +92,7 @@ function N(e) {
         });
     p &&
         (a
-            ? W.push(
+            ? G.push(
                   (0, l.jsx)(
                       o.TooltipContainer,
                       {
@@ -108,7 +108,7 @@ function N(e) {
                       'video'
                   )
               )
-            : W.push(
+            : G.push(
                   (0, l.jsx)(
                       o.TooltipContainer,
                       {
@@ -123,8 +123,8 @@ function N(e) {
                       'video'
                   )
               )),
-        G &&
-            W.push(
+        W &&
+            G.push(
                 (0, l.jsx)(
                     o.TooltipContainer,
                     {
@@ -139,7 +139,7 @@ function N(e) {
                 )
             ),
         null != b &&
-            W.push(
+            G.push(
                 (0, l.jsx)(
                     o.TooltipContainer,
                     {
@@ -155,7 +155,7 @@ function N(e) {
                 )
             ),
         N === Z.YE.XBOX || w === E.wR.XBOX
-            ? W.push(
+            ? G.push(
                   (0, l.jsx)(
                       'div',
                       {
@@ -166,7 +166,7 @@ function N(e) {
                   )
               )
             : (N === Z.YE.PLAYSTATION || w === E.wR.PLAYSTATION) &&
-              W.push(
+              G.push(
                   (0, l.jsx)(
                       'div',
                       {
@@ -177,7 +177,7 @@ function N(e) {
                   )
               ),
         h
-            ? W.push(
+            ? G.push(
                   (0, l.jsx)(
                       'div',
                       {
@@ -188,7 +188,7 @@ function N(e) {
                   )
               )
             : _ &&
-              W.push(
+              G.push(
                   (0, l.jsx)(
                       o.TooltipContainer,
                       {
@@ -205,7 +205,7 @@ function N(e) {
               );
     let z = null != L && !(0, I.yE)(L.flags, x.udG.EMBEDDED),
         H = null == R && z;
-    return 0 !== W.length || null != B || M || H
+    return 0 !== G.length || null != B || M || H
         ? (0, l.jsxs)('div', {
               className: s()(y.icons, t),
               children: [
@@ -213,7 +213,7 @@ function N(e) {
                       className: y.iconGroup,
                       onMouseEnter: () => (null == F ? void 0 : F(!0)),
                       onMouseLeave: () => (null == F ? void 0 : F(!1)),
-                      children: [B, W]
+                      children: [B, G]
                   }),
                   M || H
                       ? (0, l.jsx)('div', {
@@ -222,7 +222,7 @@ function N(e) {
                             onMouseLeave: () => (null == V ? void 0 : V(!1)),
                             children: H
                                 ? (0, l.jsx)(
-                                      P,
+                                      j,
                                       {
                                           application: L,
                                           iconClassName: T,
@@ -364,7 +364,7 @@ class w extends (i = a.Component) {
             });
     }
 }
-function P(e) {
+function j(e) {
     let { application: t, iconClassName: n, guildId: i, channelId: r, userId: u } = e,
         [m, f] = a.useState(!1),
         h = (0, c.O)((e) => f(e));
@@ -400,7 +400,7 @@ function P(e) {
         })
     );
 }
-function j(e) {
+function P(e) {
     let { iconClassName: t, mute: n, localMute: i, serverMute: a, deaf: r, serverDeaf: c } = e,
         u = (0, o.useRedesignIconContext)().enabled,
         d = [];

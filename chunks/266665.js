@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return A;
+        return y;
     }
 }),
     n(47120);
@@ -20,38 +20,38 @@ var i = n(200651),
     p = n(134433),
     f = n(325476),
     C = n(496675),
-    I = n(671533),
+    v = n(671533),
     _ = n(946724),
-    N = n(970129),
-    v = n(712181),
+    I = n(970129),
+    N = n(712181),
     T = n(420966),
     j = n(203377),
-    S = n(981631),
-    b = n(388032),
+    b = n(981631),
+    S = n(388032),
     E = n(100161);
 let R = 'DRAGGABLE_ROLE';
 function Z(e) {
     var t, r;
     let l,
-        { guild: d, role: h, highestRole: g, selectedItem: f, onClick: C, currentPosition: I, onDragStart: _, onDragReset: v, onDragComplete: T, roleStyle: j } = e,
-        b = (0, N.T)(d, g, h),
+        { guild: d, role: h, highestRole: g, selectedItem: f, onClick: C, currentPosition: v, onDragStart: _, onDragReset: N, onDragComplete: T, roleStyle: j } = e,
+        S = (0, I.T)(d, g, h),
         Z = (0, x.pM)(d.id, h.id),
-        A = null == b && !Z,
-        L = (null === (t = h.tags) || void 0 === t ? void 0 : t.guild_connections) !== void 0,
-        [, y] = (0, a.c)({
+        y = null == S && !Z,
+        A = (null === (t = h.tags) || void 0 === t ? void 0 : t.guild_connections) !== void 0,
+        [, L] = (0, a.c)({
             type: R,
             item: () => (
                 _(h.id),
                 {
                     id: h.id,
-                    position: I
+                    position: v
                 }
             ),
-            canDrag: () => A,
+            canDrag: () => y,
             end: (e, t) => {
                 let n = t.getDropResult();
                 if (null == n) {
-                    v();
+                    N();
                     return;
                 }
                 T(n.roleId);
@@ -59,16 +59,16 @@ function Z(e) {
         }),
         [{ dragSourcePosition: D }, O] = (0, o.L)({
             accept: R,
-            canDrop: () => A,
+            canDrop: () => y,
             collect: (e) => {
                 let t = e.getItem();
                 return null != t && e.isOver() && e.canDrop() ? { dragSourcePosition: t.position } : { dragSourcePosition: null };
             },
             drop: () => ({ roleId: h.id })
         }),
-        M = null !== (r = h.colorString) && void 0 !== r ? r : (0, c.Rf)(S.p6O);
+        k = null !== (r = h.colorString) && void 0 !== r ? r : (0, c.Rf)(b.p6O);
     return (
-        (l = L
+        (l = A
             ? (0, i.jsx)(p.Z, {
                   size: 12,
                   color: h.colorString,
@@ -76,15 +76,15 @@ function Z(e) {
               })
             : 'dot' === j
               ? (0, i.jsx)(u.RoleDot, {
-                    color: M,
+                    color: k,
                     background: !1,
                     tooltip: !1
                 })
-              : (0, i.jsx)(u.RoleCircle, { color: M })),
+              : (0, i.jsx)(u.RoleCircle, { color: k })),
         (0, i.jsxs)(u.TabBar.Item, {
             className: s()(E.row, {
-                [E.dragBefore]: null !== D && I < D,
-                [E.dragAfter]: null !== D && I > D
+                [E.dragBefore]: null !== D && v < D,
+                [E.dragAfter]: null !== D && v > D
             }),
             id: h.id,
             selectedItem: f,
@@ -104,14 +104,14 @@ function Z(e) {
             'aria-label': h.name,
             clickableRef: (e) => {
                 var t;
-                return y(O(null !== (t = null == e ? void 0 : e.ref) && void 0 !== t ? t : null));
+                return L(O(null !== (t = null == e ? void 0 : e.ref) && void 0 !== t ? t : null));
             },
             children: [
                 l,
-                null != b
-                    ? (0, i.jsx)(N.Z, {
+                null != S
+                    ? (0, i.jsx)(I.Z, {
                           className: E.lock,
-                          tooltipText: b
+                          tooltipText: S
                       })
                     : null,
                 (0, i.jsx)(u.Text, {
@@ -124,20 +124,20 @@ function Z(e) {
         })
     );
 }
-function A(e) {
+function y(e) {
     let { guild: t, currentRoleId: n, setCurrentRoleId: l, setSelectedSection: a } = e,
         o = (0, d.e7)([_.Z], () => _.Z.roles),
         c = (0, d.e7)([C.Z], () => C.Z.getHighestRole(t)),
         m = (0, d.e7)([g.Z], () => g.Z.roleStyle),
         [x, p] = r.useState(o.length),
-        { scrolledToTop: N, handleScroll: S } = (0, T.V)(),
-        { handleDragStart: R, handleDragReset: A, handleDragComplete: L } = (0, v.Z)(o),
-        y = r.useRef(null),
+        { scrolledToTop: I, handleScroll: b } = (0, T.V)(),
+        { handleDragStart: R, handleDragReset: y, handleDragComplete: A } = (0, N.Z)(o),
+        L = r.useRef(null),
         D = r.useCallback(
             (e) => {
                 var t, n;
                 let i = o.findIndex((t) => t.id === e);
-                null === (n = y.current) || void 0 === n || null === (t = n.getScrollerNode()) || void 0 === t || t.scrollTo({ top: Math.max((i - 2) * 34, 0) });
+                null === (n = L.current) || void 0 === n || null === (t = n.getScrollerNode()) || void 0 === t || t.scrollTo({ top: Math.max((i - 2) * 34, 0) });
             },
             [o]
         );
@@ -156,28 +156,28 @@ function A(e) {
             className: E.container,
             children: [
                 (0, i.jsxs)('div', {
-                    className: s()(E.titleContainer, { [E.titleElevated]: !N }),
+                    className: s()(E.titleContainer, { [E.titleElevated]: !I }),
                     children: [
                         (0, i.jsxs)(u.Clickable, {
                             className: E.title,
                             onClick: () => l(null),
                             children: [
-                                (0, i.jsx)(I.Z, { direction: I.Z.Directions.LEFT }),
+                                (0, i.jsx)(v.Z, { direction: v.Z.Directions.LEFT }),
                                 (0, i.jsx)(u.Text, {
                                     className: E.titleText,
                                     variant: 'text-md/semibold',
                                     color: 'none',
-                                    children: b.intl.string(b.t['13/7kZ'])
+                                    children: S.intl.string(S.t['13/7kZ'])
                                 })
                             ]
                         }),
                         (0, i.jsx)(u.Tooltip, {
                             position: 'top',
-                            'aria-label': b.intl.string(b.t.AbxKtr),
+                            'aria-label': S.intl.string(S.t.AbxKtr),
                             text: (0, i.jsx)(u.Text, {
                                 className: E.tooltip,
                                 variant: 'text-sm/normal',
-                                children: b.intl.string(b.t.AbxKtr)
+                                children: S.intl.string(S.t.AbxKtr)
                             }),
                             children: (e) =>
                                 (0, i.jsx)(u.Clickable, {
@@ -196,8 +196,8 @@ function A(e) {
                 }),
                 (0, i.jsx)(u.AdvancedScroller, {
                     className: E.list,
-                    ref: y,
-                    onScroll: S,
+                    ref: L,
+                    onScroll: b,
                     children: (0, i.jsx)(u.TabBar, {
                         selectedItem: n,
                         onItemSelect: (e) => l(e),
@@ -213,8 +213,8 @@ function A(e) {
                                     onClick: () => l(e.id),
                                     currentPosition: r,
                                     onDragStart: R,
-                                    onDragReset: A,
-                                    onDragComplete: L,
+                                    onDragReset: y,
+                                    onDragComplete: A,
                                     roleStyle: m
                                 },
                                 e.id

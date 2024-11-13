@@ -386,12 +386,12 @@ function eN(e) {
                       (0, q.rf)({ [eC]: 'true' }));
             }
         }, [eZ, j, eY, m, f]),
-        e6 = (null == eZ ? void 0 : eZ.id) === em.g,
-        [e8, e5] = a.useState(!1),
+        e5 = (null == eZ ? void 0 : eZ.id) === em.g,
+        [e8, e6] = a.useState(!1),
         [e4, e7] = a.useState(!1),
         [te, tt] = a.useState(!0),
         tn = (e) => {
-            null != e && e5(e.scrollHeight > e.clientHeight);
+            null != e && e6(e.scrollHeight > e.clientHeight);
         },
         ti = null != eK && eK.length > 0,
         ta = (null == eZ ? void 0 : eZ.flags) != null,
@@ -689,7 +689,7 @@ function eN(e) {
                                                                                   src: n(744050)
                                                                               })
                                                                       }),
-                                                                  e6 && (0, i.jsx)(ee.Z, { className: eh.partnerBadge })
+                                                                  e5 && (0, i.jsx)(ee.Z, { className: eh.partnerBadge })
                                                               ]
                                                           }),
                                                           (0, i.jsxs)('div', {

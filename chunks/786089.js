@@ -22,59 +22,59 @@ var i = n(200651),
     N = n(388032),
     T = n(874976);
 t.Z = (0, r.memo)(function (e) {
-    var t, n, l, x, A;
-    let { quest: b } = e,
-        [Z, y] = (0, r.useState)(!1),
-        [L, R] = (0, r.useState)(24),
-        [O, j] = (0, r.useState)(!1),
-        P = (0, r.useRef)(null),
+    var t, n, l, A, b;
+    let { quest: x } = e,
+        [Z, L] = (0, r.useState)(!1),
+        [y, R] = (0, r.useState)(24),
+        [O, P] = (0, r.useState)(!1),
+        j = (0, r.useRef)(null),
         D = (0, r.useRef)(null),
         M = (0, r.useRef)(null),
         w = (0, o.e7)([f.default], () => f.default.getCurrentUser()),
         { ref: k, height: U = 0 } = (0, u.Z)(),
         G = (0, h.ZP)(),
-        B = (0, I.B6)(null === (t = b.userStatus) || void 0 === t ? void 0 : t.claimedAt, {
+        B = (0, I.B6)(null === (t = x.userStatus) || void 0 === t ? void 0 : t.claimedAt, {
             month: 'numeric',
             day: 'numeric'
         }),
-        H = null !== (x = null === (n = b.userStatus) || void 0 === n ? void 0 : n.claimedTier) && void 0 !== x ? x : 0,
-        V = b.config.rewards[H],
-        F = (null == V ? void 0 : V.type) === s.w.COLLECTIBLE,
-        { product: z } = (0, p.T)(F && null != V ? V.skuId : null),
+        V = null !== (A = null === (n = x.userStatus) || void 0 === n ? void 0 : n.claimedTier) && void 0 !== A ? A : 0,
+        H = x.config.rewards[V],
+        F = (null == H ? void 0 : H.type) === s.w.COLLECTIBLE,
+        { product: z } = (0, p.T)(F && null != H ? H.skuId : null),
         Y = null == z ? void 0 : null === (l = z.items) || void 0 === l ? void 0 : l[0];
-    (0, u.P)(P, (e) => {
+    (0, u.P)(j, (e) => {
         let { height: t } = e;
-        if (!F || null == t || null == D.current || null == P.current || null == M.current) return;
-        let n = P.current.getBoundingClientRect(),
+        if (!F || null == t || null == D.current || null == j.current || null == M.current) return;
+        let n = j.current.getBoundingClientRect(),
             i = D.current.getBoundingClientRect(),
             r = M.current.getBoundingClientRect();
         R((i.top - n.top - r.height) / 2);
     });
     let W = (0, c.wj)(G),
-        K = (0, r.useMemo)(() => (0, v.fh)(b, v.eC.LOGO_TYPE, 'dark'), [b]),
-        q = (0, r.useMemo)(() => (0, v.fh)(b, v.eC.REWARD), [b]),
+        K = (0, r.useMemo)(() => (0, v.fh)(x, v.eC.LOGO_TYPE, 'dark'), [x]),
+        q = (0, r.useMemo)(() => (0, v.fh)(x, v.eC.REWARD), [x]),
         X = Z ? U + 8 : 0,
         Q = () => {
-            y(!0),
+            L(!0),
                 _.default.track(S.rMx.QUEST_HOVER, {
-                    quest_id: b.id,
+                    quest_id: x.id,
                     ...(0, E.mH)(C.jn.TROPHY_CASE_CARD)
                 });
         },
-        J = () => y(!1),
+        J = () => L(!1),
         $ = (e) => {
-            j(!0),
+            P(!0),
                 _.default.track(S.rMx.QUEST_ASSET_LOADING_FAILURE, {
                     source: e,
                     asset_id: e,
-                    quest_id: b.id
+                    quest_id: x.id
                 });
         };
-    return null == V || O
+    return null == H || O
         ? null
         : (0, i.jsx)(d.FocusRing, {
               children: (0, i.jsxs)('div', {
-                  ref: P,
+                  ref: j,
                   tabIndex: 0,
                   onFocus: Q,
                   onBlur: J,
@@ -87,7 +87,7 @@ t.Z = (0, r.memo)(function (e) {
                           (0, i.jsx)('div', {
                               ref: M,
                               className: T.decoWrapper,
-                              style: { top: L },
+                              style: { top: y },
                               children: (0, i.jsx)(m.Z, {
                                   avatarDecorationOverride: Y,
                                   user: w,
@@ -101,7 +101,7 @@ t.Z = (0, r.memo)(function (e) {
                                     autoPlay: !1,
                                     children: (0, i.jsx)('source', {
                                         src: q.url,
-                                        type: null !== (A = q.mimetype) && void 0 !== A ? A : void 0,
+                                        type: null !== (b = q.mimetype) && void 0 !== b ? b : void 0,
                                         onError: () => $(q.url)
                                     })
                                 })
@@ -109,7 +109,7 @@ t.Z = (0, r.memo)(function (e) {
                           : (0, i.jsx)('img', {
                                 className: T.image,
                                 src: q.url,
-                                alt: b.config.messages.questName,
+                                alt: x.config.messages.questName,
                                 onError: () => $(q.url)
                             }),
                       (0, i.jsx)('div', {
@@ -125,7 +125,7 @@ t.Z = (0, r.memo)(function (e) {
                           children: (0, i.jsx)('img', {
                               className: T.logo,
                               src: K.url,
-                              alt: b.config.messages.gameTitle
+                              alt: x.config.messages.gameTitle
                           })
                       }),
                       (0, i.jsxs)('div', {
@@ -136,14 +136,14 @@ t.Z = (0, r.memo)(function (e) {
                                   className: T.title,
                                   variant: 'heading-md/semibold',
                                   color: 'always-white',
-                                  children: N.intl.format(N.t.EAYZAg, { questName: b.config.messages.questName })
+                                  children: N.intl.format(N.t.EAYZAg, { questName: x.config.messages.questName })
                               }),
                               (0, i.jsx)(d.Text, {
                                   variant: 'text-sm/medium',
                                   color: W ? 'text-muted' : 'always-white',
                                   style: { opacity: W ? 1 : 0.75 },
                                   children: N.intl.format(N.t.kXVcV1, {
-                                      reward: V.name,
+                                      reward: H.name,
                                       claimedDate: B
                                   })
                               })

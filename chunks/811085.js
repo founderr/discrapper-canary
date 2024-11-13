@@ -1,6 +1,6 @@
 n.d(e, {
     Z: function () {
-        return g;
+        return f;
     }
 }),
     n(47120);
@@ -16,23 +16,23 @@ var i = n(200651),
     _ = n(959562),
     E = n(800530),
     S = n(388032),
-    f = n(596175);
-function g() {
+    g = n(596175);
+function f() {
     let t = (0, d.P)(),
         e = (0, s.e7)([c.default], () => c.default.getCurrentUser()),
-        [n, g] = a.useState(36),
-        m = a.useRef({
+        [n, f] = a.useState(36),
+        p = a.useRef({
             [u.Sn.ALL_GOOD]: null,
             [u.Sn.LIMITED]: null,
             [u.Sn.VERY_LIMITED]: null,
             [u.Sn.AT_RISK]: null,
             [u.Sn.SUSPENDED]: null
         }),
-        p = a.useCallback(() => {
-            g(
+        m = a.useCallback(() => {
+            f(
                 Math.max(
                     Math.max(
-                        ...Object.values(m.current).map((t) => {
+                        ...Object.values(p.current).map((t) => {
                             var e;
                             return null !== (e = null == t ? void 0 : t.getBoundingClientRect().height) && void 0 !== e ? e : 36;
                         })
@@ -42,10 +42,10 @@ function g() {
             );
         }, []);
     a.useEffect(() => {
-        p();
-        let t = (0, l.debounce)(p, 100);
+        m();
+        let t = (0, l.debounce)(m, 100);
         window.addEventListener('resize', t);
-    }, [p]);
+    }, [m]);
     let T = {
             [u.Sn.ALL_GOOD]: {
                 title: S.t.uaKrRk,
@@ -89,21 +89,21 @@ function g() {
         { title: h, description: A, color: x, Icon: I } = T[t.state],
         v = Object.keys(T).length;
     return (0, i.jsxs)(o.Card, {
-        className: f.container,
+        className: g.container,
         outline: !1,
         children: [
             (0, i.jsx)('div', {
-                className: f.profile,
+                className: g.profile,
                 children: (0, i.jsx)(_.Z, {
                     user: e,
                     size: o.AvatarSizes.SIZE_80
                 })
             }),
             (0, i.jsxs)('div', {
-                className: f.status,
+                className: g.status,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: f.title,
+                        className: g.title,
                         children: [
                             (0, i.jsx)(o.Heading, {
                                 color: 'header-primary',
@@ -126,38 +126,38 @@ function g() {
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: f.health,
+                        className: g.health,
                         style: { height: n },
                         children: [
-                            (0, i.jsx)('div', { className: f.line }),
+                            (0, i.jsx)('div', { className: g.line }),
                             Object.entries(T).map((e, n) => {
                                 let [a, l] = e,
                                     s = parseInt(a) === t.state;
                                 return (0, i.jsxs)(
                                     'div',
                                     {
-                                        className: f.statusOption,
-                                        ref: (t) => (m.current[parseInt(a)] = t),
+                                        className: g.statusOption,
+                                        ref: (t) => (p.current[parseInt(a)] = t),
                                         children: [
                                             s
                                                 ? (0, i.jsx)(I, {
-                                                      className: f.marker,
+                                                      className: g.marker,
                                                       color: l.color
                                                   })
                                                 : (0, i.jsx)('div', {
-                                                      className: f.marker,
+                                                      className: g.marker,
                                                       style: {
                                                           marginLeft: 0 === n ? -6 : 0,
                                                           marginRight: n === v - 1 ? -6 : 0
                                                       },
-                                                      children: (0, i.jsx)('div', { className: f.empty })
+                                                      children: (0, i.jsx)('div', { className: g.empty })
                                                   }),
                                             S.intl.format(l.status, {
                                                 hook: (t) =>
                                                     (0, i.jsx)(o.Text, {
                                                         color: 'text-normal',
                                                         variant: 'text-sm/normal',
-                                                        className: f.statusLabel,
+                                                        className: g.statusLabel,
                                                         children: t
                                                     })
                                             })

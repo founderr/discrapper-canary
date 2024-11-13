@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return A;
+        return b;
     }
 });
 var i = n(200651),
@@ -25,22 +25,22 @@ var i = n(200651),
     S = n(687683),
     N = n(981631),
     T = n(388032),
-    x = n(908120);
-function A() {
+    A = n(908120);
+function b() {
     let e = r.useRef(null),
         t = (0, E.Z)(),
         n = (0, I.w)(),
         l = (0, g.V)(),
-        A = (0, d.N)(),
-        b = (0, u.Z)('message-requests-spam-list'),
+        b = (0, d.N)(),
+        x = (0, u.Z)('message-requests-spam-list'),
         { channelId: Z } = (0, _._)(),
-        y = r.useCallback(() => {
+        L = r.useCallback(() => {
             (0, c.showToast)((0, c.createToast)(T.intl.string(T.t.EDYbS0), c.ToastType.FAILURE));
         }, []),
-        { rejectAll: L } = (0, f.m)({ onError: y }),
+        { rejectAll: y } = (0, f.m)({ onError: L }),
         R = r.useCallback(() => {
-            L(t.map((e) => e.channel.id));
-        }, [t, L]);
+            y(t.map((e) => e.channel.id));
+        }, [t, y]);
     r.useEffect(() => {
         p.default.track(N.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }), m.Z.increment({ name: o.V.SPAM_MESSAGE_REQUEST_VIEW });
     }, []);
@@ -56,8 +56,8 @@ function A() {
                     {
                         index: s,
                         className: a()({
-                            [x.selected]: null != Z && Z === d,
-                            [x.siblingSelected]: null != Z && Z === c
+                            [A.selected]: null != Z && Z === d,
+                            [A.siblingSelected]: null != Z && Z === c
                         }),
                         channel: o.channel,
                         user: o.user,
@@ -68,19 +68,19 @@ function A() {
             },
             [t, l, Z]
         ),
-        j = r.useCallback(
+        P = r.useCallback(
             () =>
                 (0, i.jsxs)(
                     h.Z,
                     {
-                        className: x.sectionTitle,
+                        className: A.sectionTitle,
                         children: [
                             T.intl.format(T.t.C79Edn, { count: n }),
-                            A && n > 0
+                            b && n > 0
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           (0, i.jsx)(c.Text, {
-                                              className: x.titleDivider,
+                                              className: A.titleDivider,
                                               variant: 'eyebrow',
                                               color: 'header-secondary',
                                               tag: 'span',
@@ -91,7 +91,7 @@ function A() {
                                               look: c.ButtonLooks.LINK,
                                               color: c.ButtonColors.LINK,
                                               size: c.ButtonSizes.SMALL,
-                                              className: x.clearAllButton,
+                                              className: A.clearAllButton,
                                               'aria-label': T.intl.string(T.t.p6t7RE),
                                               children: T.intl.string(T.t.p6t7RE)
                                           })
@@ -102,19 +102,19 @@ function A() {
                     },
                     'message-requests-spam-title'
                 ),
-            [n, R, A]
+            [n, R, b]
         );
     return 0 === t.length
         ? (0, i.jsx)(C.Z, { section: S.pS.SPAM })
         : (0, i.jsx)(s.bG, {
-              navigator: b,
+              navigator: x,
               children: (0, i.jsx)(s.SJ, {
                   children: (n) => {
                       let { ref: r, role: l, ...a } = n;
                       return (0, i.jsx)(
                           c.List,
                           {
-                              className: x.list,
+                              className: A.list,
                               innerRole: l,
                               innerAriaLabel: T.intl.string(T.t.e7GWjY),
                               ref: (t) => {
@@ -125,7 +125,7 @@ function A() {
                               paddingBottom: 24,
                               sectionHeight: S.oi,
                               rowHeight: S.WN,
-                              renderSection: j,
+                              renderSection: P,
                               renderRow: O,
                               sections: [t.length],
                               chunkSize: 30,

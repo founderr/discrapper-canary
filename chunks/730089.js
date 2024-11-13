@@ -32,7 +32,7 @@ let g = (e, t, n, i) => (
         });
     },
     p = async (e) => {
-        let { data: t, file: n, guildId: c, uploadId: p, roles: f, image: C, hideErrorModal: I } = e,
+        let { data: t, file: n, guildId: c, uploadId: p, roles: f, image: C, hideErrorModal: v } = e,
             _ = o.ZP.sanitizeEmojiName(n.name.split('.')[0]);
         if (o.ZP.isFileTooBig(n)) {
             if ('image/gif' === n.type) return g(n.name, n.size, c, p);
@@ -78,7 +78,7 @@ let g = (e, t, n, i) => (
                             : (null != i.image || i.code === u.evJ.INVALID_FILE_ASSET_SIZE_RESIZE_GIF) && (n = s.d.RESIZE_GIF)),
                 429 === l && ((e = m.intl.string(m.t['Whhv4+'])), (n = s.d.RATE_LIMIT)),
                 null != e &&
-                    !I &&
+                    !v &&
                     r.Z.show({
                         title: m.intl.string(m.t.iufib2),
                         body: e

@@ -1,64 +1,64 @@
 t(47120);
-var r = t(200651),
-    a = t(192379),
-    i = t(120356),
-    o = t.n(i),
+var i = t(200651),
+    l = t(192379),
+    a = t(120356),
+    r = t.n(a),
     s = t(100621),
-    l = t(481060),
+    o = t(481060),
     c = t(393238),
     d = t(388032),
     u = t(379000);
-n.Z = a.memo(function (e) {
-    let { renderHeader: n, children: t, isExpanded: i, isStuck: m, onExpand: f, disableAnimation: h, disableBackground: x } = e,
-        [p, g] = a.useState(!0),
-        [C, b] = a.useState(!1),
-        { ref: v, height: _ = 0 } = (0, c.Z)(),
-        { ref: y, height: T = 0 } = (0, c.Z)(),
-        [I, j] = a.useState(i),
-        N = (0, l.useSpring)(
+n.Z = l.memo(function (e) {
+    let { renderHeader: n, children: t, isExpanded: a, isStuck: m, onExpand: x, disableAnimation: f, disableBackground: h } = e,
+        [g, v] = l.useState(!0),
+        [j, C] = l.useState(!1),
+        { ref: p, height: N = 0 } = (0, c.Z)(),
+        { ref: I, height: T = 0 } = (0, c.Z)(),
+        [F, b] = l.useState(a),
+        y = (0, o.useSpring)(
             {
-                height: I ? T + _ : _,
+                height: F ? T + N : N,
                 config: {
                     ...s.config.stiff,
                     clamp: !0
                 },
                 onStart: () => {
-                    b(!1);
+                    C(!1);
                 },
                 onRest: () => {
-                    b(!0);
+                    C(!0);
                 }
             },
-            p || h ? 'animate-never' : 'respect-motion-settings'
+            g || f ? 'animate-never' : 'respect-motion-settings'
         );
     return (
-        a.useLayoutEffect(() => {
-            b(!1), j(i);
-        }, [i]),
-        a.useLayoutEffect(() => {
+        l.useLayoutEffect(() => {
+            C(!1), b(a);
+        }, [a]),
+        l.useLayoutEffect(() => {
             let e = setTimeout(() => {
-                g(!1);
+                v(!1);
             }, 100);
             return () => clearTimeout(e);
         }, []),
-        (0, r.jsx)(l.Clickable, {
-            className: o()(u.editCard, {
-                [u.toggled]: i,
-                [u.noBackground]: x
+        (0, i.jsx)(o.Clickable, {
+            className: r()(u.editCard, {
+                [u.toggled]: a,
+                [u.noBackground]: h
             }),
-            children: (0, r.jsxs)(s.animated.div, {
-                className: o()(u.contentExpandContainer, { [u.showOverflow]: i && C }),
-                style: N,
+            children: (0, i.jsxs)(s.animated.div, {
+                className: r()(u.contentExpandContainer, { [u.showOverflow]: a && j }),
+                style: y,
                 children: [
-                    (0, r.jsx)(l.Clickable, {
-                        innerRef: v,
-                        onClick: m ? void 0 : f,
-                        className: o()(u.innerHeader, { [u.toggled]: i && m }),
+                    (0, i.jsx)(o.Clickable, {
+                        innerRef: p,
+                        onClick: m ? void 0 : x,
+                        className: r()(u.innerHeader, { [u.toggled]: a && m }),
                         'aria-label': d.intl.string(d.t.dcl9MT),
                         children: n
                     }),
-                    (0, r.jsx)('div', {
-                        ref: y,
+                    (0, i.jsx)('div', {
+                        ref: I,
                         children: t
                     })
                 ]

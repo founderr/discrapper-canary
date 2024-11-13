@@ -1,12 +1,12 @@
 n.d(t, {
     Pw: function () {
-        return c;
+        return u;
     },
     ms: function () {
         return d;
     },
     p5: function () {
-        return u;
+        return c;
     }
 });
 var r = n(913527),
@@ -28,7 +28,7 @@ function E(e, t, n) {
         e
     );
 }
-function u(e) {
+function c(e) {
     if (e === o.rsA.ALL) return o.KFR.ALL;
     if (e <= o.rsA.GUILD_UPDATE) return o.KFR.GUILD;
     if (e <= o.rsA.CHANNEL_DELETE || e === o.rsA.MESSAGE_BULK_DELETE) return o.KFR.CHANNEL;
@@ -60,7 +60,7 @@ function u(e) {
     else if (e <= o.rsA.GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE) return o.KFR.GUILD_SCHEDULED_EVENT_EXCEPTION;
     return s.Z.captureMessage('Unknown target type for: '.concat(e)), o.KFR.UNKNOWN;
 }
-function c(e) {
+function u(e) {
     switch (e) {
         case o.rsA.CHANNEL_CREATE:
         case o.rsA.CHANNEL_OVERWRITE_CREATE:
@@ -150,7 +150,7 @@ class d {
 class _ extends i.Z {
     constructor(e) {
         var t, n, r, i, s, o;
-        super(), E(this, 'id', void 0), E(this, 'actionType', void 0), E(this, 'action', void 0), E(this, 'targetType', void 0), E(this, 'targetId', void 0), E(this, 'target', void 0), E(this, 'userId', void 0), E(this, 'changes', void 0), E(this, 'timestampStart', void 0), E(this, 'timestampEnd', void 0), E(this, 'user', void 0), E(this, 'options', void 0), (this.id = e.id), (this.action = e.action), (this.actionType = c(this.action)), (this.targetId = e.targetId), (this.timestampStart = null !== (t = e.timestampStart) && void 0 !== t ? t : l()(a.default.extractTimestamp(this.id))), (this.timestampEnd = null !== (n = e.timestampEnd) && void 0 !== n ? n : this.timestampStart), (this.userId = e.userId), (this.changes = null !== (r = e.changes) && void 0 !== r ? r : []), (this.targetType = u(this.action)), (this.options = null !== (i = e.options) && void 0 !== i ? i : {}), (this.target = null !== (s = e.target) && void 0 !== s ? s : e.id), (this.user = null !== (o = e.user) && void 0 !== o ? o : null);
+        super(), E(this, 'id', void 0), E(this, 'actionType', void 0), E(this, 'action', void 0), E(this, 'targetType', void 0), E(this, 'targetId', void 0), E(this, 'target', void 0), E(this, 'userId', void 0), E(this, 'changes', void 0), E(this, 'timestampStart', void 0), E(this, 'timestampEnd', void 0), E(this, 'user', void 0), E(this, 'options', void 0), (this.id = e.id), (this.action = e.action), (this.actionType = u(this.action)), (this.targetId = e.targetId), (this.timestampStart = null !== (t = e.timestampStart) && void 0 !== t ? t : l()(a.default.extractTimestamp(this.id))), (this.timestampEnd = null !== (n = e.timestampEnd) && void 0 !== n ? n : this.timestampStart), (this.userId = e.userId), (this.changes = null !== (r = e.changes) && void 0 !== r ? r : []), (this.targetType = c(this.action)), (this.options = null !== (i = e.options) && void 0 !== i ? i : {}), (this.target = null !== (s = e.target) && void 0 !== s ? s : e.id), (this.user = null !== (o = e.user) && void 0 !== o ? o : null);
     }
 }
 t.ZP = _;

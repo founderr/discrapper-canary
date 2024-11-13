@@ -1,48 +1,48 @@
-t(47120);
-var r = t(192379),
-    a = t(399606),
-    i = t(544891),
-    o = t(570140),
-    s = t(367907),
-    l = t(430824),
-    c = t(496675),
-    d = t(626135),
-    u = t(70956),
-    m = t(997787),
-    f = t(981631);
-let h = 1 * u.Z.Millis.DAY,
-    x = new Map();
-n.Z = {
+n(47120);
+var r = n(192379),
+    i = n(399606),
+    a = n(544891),
+    o = n(570140),
+    l = n(367907),
+    s = n(430824),
+    c = n(496675),
+    u = n(626135),
+    d = n(70956),
+    _ = n(997787),
+    m = n(981631);
+let p = 1 * d.Z.Millis.DAY,
+    h = new Map();
+t.Z = {
     useShouldShowChannelNotice(e) {
-        let n = (0, a.e7)([l.Z, c.Z], () => {
-            let n = l.Z.getGuild(e);
-            return null != n && c.Z.can(f.Plq.ADMINISTRATOR, n);
+        let t = (0, i.e7)([s.Z, c.Z], () => {
+            let t = s.Z.getGuild(e);
+            return null != t && c.Z.can(m.Plq.ADMINISTRATOR, t);
         });
         r.useEffect(() => {
-            n &&
+            t &&
                 !(function (e) {
-                    var n;
-                    let t = Date.now(),
-                        r = null !== (n = x.get(e)) && void 0 !== n ? n : 0;
-                    if (!(t < r + h))
-                        x.set(e, t),
-                            i.tn.post({ url: f.ANM.GUILD_MIGRATE_COMMAND_SCOPE(e) }).then(
-                                (n) => {
-                                    var t, r;
+                    var t;
+                    let n = Date.now(),
+                        r = null !== (t = h.get(e)) && void 0 !== t ? t : 0;
+                    if (!(n < r + p))
+                        h.set(e, n),
+                            a.tn.post({ url: m.ANM.GUILD_MIGRATE_COMMAND_SCOPE(e) }).then(
+                                (t) => {
+                                    var n, r;
                                     o.Z.dispatch({
                                         type: 'COMMANDS_MIGRATION_UPDATE_SUCCESS',
                                         guildId: e,
-                                        integrationIdsWithAppCommands: null !== (r = null === (t = n.body) || void 0 === t ? void 0 : t.integration_ids_with_app_commands) && void 0 !== r ? r : []
+                                        integrationIdsWithAppCommands: null !== (r = null === (n = t.body) || void 0 === n ? void 0 : n.integration_ids_with_app_commands) && void 0 !== r ? r : []
                                     });
                                 },
                                 () => {
-                                    x.set(e, r);
+                                    h.set(e, r);
                                 }
                             );
                 })(e);
-        }, [e, n]);
-        let t = (0, a.e7)([m.Z], () => m.Z.shouldShowChannelNotice(e));
-        return n && t;
+        }, [e, t]);
+        let n = (0, i.e7)([_.Z], () => _.Z.shouldShowChannelNotice(e));
+        return t && n;
     },
     dismissNotice(e) {
         o.Z.dispatch({
@@ -50,29 +50,29 @@ n.Z = {
             guildId: e
         });
     },
-    dismissOverviewTooltip(e, n) {
-        var t;
+    dismissOverviewTooltip(e, t) {
+        var n;
         o.Z.dispatch({
             type: 'COMMANDS_MIGRATION_OVERVIEW_TOOLTIP_DISMISSED',
             guildId: e,
-            integrationId: n.id
+            integrationId: t.id
         }),
-            d.default.track(f.rMx.COMMANDS_MIGRATION_TOOLTIP_DISMISSED, {
-                ...(0, s.hH)(e),
-                application_id: null === (t = n.application) || void 0 === t ? void 0 : t.id,
+            u.default.track(m.rMx.COMMANDS_MIGRATION_TOOLTIP_DISMISSED, {
+                ...(0, l.hH)(e),
+                application_id: null === (n = t.application) || void 0 === n ? void 0 : n.id,
                 location: 'overview'
             });
     },
-    dismissToggleTooltip(e, n) {
-        var t;
-        if (void 0 !== n)
+    dismissToggleTooltip(e, t) {
+        var n;
+        if (void 0 !== t)
             o.Z.dispatch({
                 type: 'COMMANDS_MIGRATION_TOGGLE_TOOLTIP_DISMISSED',
-                integrationId: n.id
+                integrationId: t.id
             }),
-                d.default.track(f.rMx.COMMANDS_MIGRATION_TOOLTIP_DISMISSED, {
-                    ...(0, s.hH)(e),
-                    application_id: null === (t = n.application) || void 0 === t ? void 0 : t.id,
+                u.default.track(m.rMx.COMMANDS_MIGRATION_TOOLTIP_DISMISSED, {
+                    ...(0, l.hH)(e),
+                    application_id: null === (n = t.application) || void 0 === n ? void 0 : n.id,
                     location: 'toggle'
                 });
     }

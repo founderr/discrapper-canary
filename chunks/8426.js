@@ -1,6 +1,6 @@
 n.d(t, {
     Hr: function () {
-        return I;
+        return v;
     },
     Hz: function () {
         return j;
@@ -15,10 +15,10 @@ n.d(t, {
         return p;
     },
     ad: function () {
-        return N;
+        return I;
     },
     bj: function () {
-        return L;
+        return A;
     },
     el: function () {
         return C;
@@ -27,19 +27,19 @@ n.d(t, {
         return _;
     },
     lq: function () {
-        return S;
+        return b;
     },
     mM: function () {
-        return b;
+        return S;
     },
     oo: function () {
         return E;
     },
     q6: function () {
-        return A;
+        return y;
     },
     r2: function () {
-        return v;
+        return N;
     },
     vR: function () {
         return f;
@@ -78,7 +78,7 @@ function C(e, t) {
         action: t
     });
 }
-function I(e) {
+function v(e) {
     s.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_DELETE_NEW_MEMBER_ACTION',
         channelId: e
@@ -90,7 +90,7 @@ function _(e) {
         actions: e
     });
 }
-async function N(e, t, n, i) {
+async function I(e, t, n, i) {
     if (!i) return Promise.resolve();
     try {
         let i = await l.tn.patch({
@@ -120,7 +120,7 @@ async function N(e, t, n, i) {
         );
     }
 }
-function v(e) {
+function N(e) {
     s.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_ADD_RESOURCE_CHANNEL',
         resourceChannel: e
@@ -139,13 +139,13 @@ function j(e) {
         resourceChannelId: e
     });
 }
-function S(e) {
+function b(e) {
     s.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_REORDER_RESOURCE_CHANNEL',
         resourceChannels: e
     });
 }
-async function b(e, t, n) {
+async function S(e, t, n) {
     try {
         let i = await l.tn.put({
                 url: g.ANM.RESOURCE_CHANNEL(e, t),
@@ -240,7 +240,7 @@ async function Z(e, t) {
             });
     }
 }
-function A(e, t) {
+function y(e, t) {
     null != e &&
         s.Z.dispatch({
             type: 'GUILD_SETTINGS_ONBOARDING_DISMISS_RESOURCE_CHANNEL_SUGGESTION',
@@ -248,6 +248,6 @@ function A(e, t) {
             channelIds: t
         });
 }
-function L() {
+function A() {
     s.Z.dispatch({ type: 'GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_RESET' });
 }

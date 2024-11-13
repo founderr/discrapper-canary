@@ -23,20 +23,20 @@ function C() {
     var e;
     let { editStateId: t } = (0, u.N)(),
         [n, l] = m.TT(t),
-        [C, I] = m.F2(t),
+        [C, v] = m.F2(t),
         _ = (0, c.oC)(t),
-        { options: N } = (0, g.Z)(null !== (e = null == _ ? void 0 : _.active_trial) && void 0 !== e ? e : null),
-        v = (0, h.Z)(),
+        { options: I } = (0, g.Z)(null !== (e = null == _ ? void 0 : _.active_trial) && void 0 !== e ? e : null),
+        N = (0, h.Z)(),
         T = null != n,
         j = r.useCallback(
             (e) => {
-                let t = N.find((e) => e.isDefault);
+                let t = I.find((e) => e.isDefault);
                 s()(null != t, 'Missing default trial duartion option'), l(e ? t.value : null);
             },
-            [l, N]
+            [l, I]
         ),
-        S = (0, d.mY)(),
-        b = (0, o.Dt)(),
+        b = (0, d.mY)(),
+        S = (0, o.Dt)(),
         E = (0, o.Dt)();
     return (0, i.jsxs)(x.Z, {
         title: p.intl.string(p.t['6antoq']),
@@ -45,31 +45,31 @@ function C() {
             (0, i.jsx)(a.FormSwitch, {
                 onChange: (e, t) => j(e),
                 value: T,
-                disabled: S,
+                disabled: b,
                 hideBorder: !0,
                 children: p.intl.string(p.t['+hTmdX'])
             }),
             (0, i.jsxs)(a.FormSection, {
                 title: p.intl.string(p.t.m1KuWV),
-                titleId: b,
-                disabled: !T || S,
+                titleId: S,
+                disabled: !T || b,
                 children: [
                     (0, i.jsx)(a.FormText, {
                         type: a.FormText.Types.DESCRIPTION,
                         className: f.formDescription,
-                        disabled: !T || S,
+                        disabled: !T || b,
                         children: p.intl.string(p.t.NB9NLC)
                     }),
                     (0, i.jsx)(a.Spacer, { size: 8 }),
                     (0, i.jsx)(a.SingleSelect, {
-                        'aria-labelledby': b,
-                        options: N,
+                        'aria-labelledby': S,
+                        options: I,
                         className: f.formInput,
                         placeholder: p.intl.string(p.t.WZG1BQ),
                         value: n,
                         onChange: l,
                         maxVisibleItems: 5,
-                        isDisabled: !T || S,
+                        isDisabled: !T || b,
                         look: a.SelectLooks.CUSTOM
                     })
                 ]
@@ -78,22 +78,22 @@ function C() {
             (0, i.jsxs)(a.FormSection, {
                 title: p.intl.string(p.t['/JD9oa']),
                 titleId: E,
-                disabled: !T || S,
+                disabled: !T || b,
                 children: [
                     (0, i.jsx)(a.FormText, {
                         type: a.FormText.Types.DESCRIPTION,
                         className: f.formDescription,
-                        disabled: !T || S,
+                        disabled: !T || b,
                         children: p.intl.string(p.t.Cg5eBg)
                     }),
                     (0, i.jsx)(a.SingleSelect, {
                         'aria-labelledby': E,
-                        options: v,
+                        options: N,
                         className: f.formInput,
                         value: C,
-                        onChange: I,
+                        onChange: v,
                         maxVisibleItems: 5,
-                        isDisabled: !T || S,
+                        isDisabled: !T || b,
                         look: a.SelectLooks.CUSTOM
                     })
                 ]

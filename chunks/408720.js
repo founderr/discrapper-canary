@@ -1,6 +1,6 @@
 r.d(t, {
     f: function () {
-        return f;
+        return L;
     }
 });
 var n = r(469359),
@@ -19,7 +19,7 @@ var n = r(469359),
     N = r(873567),
     T = r(454463),
     d = r(163162);
-let f = (0, o._I)((e = {}) => {
+let L = (0, o._I)((e = {}) => {
     let t = {
         console: !0,
         dom: !0,

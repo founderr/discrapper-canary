@@ -1,20 +1,20 @@
-t(47120);
-var r,
-    a,
-    i,
-    o,
-    s = t(392711),
-    l = t.n(s),
-    c = t(906280),
-    d = t.n(c),
-    u = t(442837),
-    m = t(570140),
-    f = t(944163),
-    h = t(77498),
-    x = t(116175),
-    p = t(308083);
-function g(e) {
-    return new Set(Array.from(e).filter((e) => null != h.Z.getDetectableGame(e)));
+n(47120);
+var i,
+    r,
+    l,
+    s,
+    a = n(392711),
+    o = n.n(a),
+    c = n(906280),
+    d = n.n(c),
+    u = n(442837),
+    m = n(570140),
+    h = n(944163),
+    g = n(77498),
+    x = n(116175),
+    p = n(308083);
+function f(e) {
+    return new Set(Array.from(e).filter((e) => null != g.Z.getDetectableGame(e)));
 }
 let C = () => ({
         gameApplicationIds: new Set(),
@@ -23,7 +23,7 @@ let C = () => ({
         description: '',
         wildcardDescriptors: [p.U6, p.U6, p.U6],
         tag: '',
-        verificationForm: { ...f.t },
+        verificationForm: { ...h.t },
         badgeKind: x.ZD.SWORD,
         badgePrimaryColor: x.sg['0'].primary,
         badgeSecondaryColor: x.sg['0'].secondary,
@@ -31,90 +31,90 @@ let C = () => ({
         brandPrimaryColor: p.ym['0'].primary,
         brandSecondaryColor: p.ym['0'].secondary
     }),
-    b = C(),
-    v = d()(b),
-    _ = !1,
-    y = !1,
+    v = C(),
+    _ = d()(v),
+    I = !1,
+    N = !1,
     T = {};
-class I extends (r = u.ZP.Store) {
+class j extends (i = u.ZP.Store) {
     getState() {
         return {
-            initialSettings: b,
-            settings: v,
-            dirty: _,
+            initialSettings: v,
+            settings: _,
+            dirty: I,
             errors: T,
-            submitting: y
+            submitting: N
         };
     }
 }
-(o = 'ClanSettingsStore'),
-    (i = 'displayName') in (a = I)
-        ? Object.defineProperty(a, i, {
-              value: o,
+(s = 'ClanSettingsStore'),
+    (l = 'displayName') in (r = j)
+        ? Object.defineProperty(r, l, {
+              value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (a[i] = o),
-    (n.Z = new I(m.Z, {
+        : (r[l] = s),
+    (t.Z = new j(m.Z, {
         CLAN_SETTINGS_FETCH_START: function () {
-            (y = !1), (b = C()), (v = d()(b)), (_ = !1), (T = {});
+            (N = !1), (v = C()), (_ = d()(v)), (I = !1), (T = {});
         },
         CLAN_SETTINGS_FETCH_SUCCESS: function (e) {
-            let { settings: n } = e;
-            (b = {
+            let { settings: t } = e;
+            (v = {
                 ...C(),
-                ...n
+                ...t
             }),
-                ((v = d()(b)).gameApplicationIds = g(v.gameApplicationIds)),
-                (_ = !1);
+                ((_ = d()(v)).gameApplicationIds = f(_.gameApplicationIds)),
+                (I = !1);
         },
         CLAN_SETTINGS_UPDATE: function (e) {
-            let { updates: n } = e,
-                { gameApplicationIds: t } = n;
-            for (let e in (null != t && (n.gameApplicationIds = g(t)),
-            (v = {
-                ...v,
-                ...d()(n)
+            let { updates: t } = e,
+                { gameApplicationIds: n } = t;
+            for (let e in (null != n && (t.gameApplicationIds = f(n)),
+            (_ = {
+                ..._,
+                ...d()(t)
             }),
-            n))
+            t))
                 delete T[e], (T = { ...T });
-            _ = !l().isEqual(l().omit(v, 'verificationForm'), l().omit(b, 'verificationForm'));
+            I = !o().isEqual(o().omit(_, 'verificationForm'), o().omit(v, 'verificationForm'));
         },
         CLAN_SETTINGS_SUBMIT: function () {
-            (y = !0), (T = {});
+            (N = !0), (T = {});
         },
         CLAN_SETTINGS_SUBMIT_SUCCESS: function () {
-            (y = !1), (b = d()(v)), (_ = !1), (T = {});
+            (N = !1), (v = d()(_)), (I = !1), (T = {});
         },
         CLAN_SETTINGS_SUBMIT_ERROR: function (e) {
-            let { error: n } = e;
-            (y = !1),
+            let { error: t } = e;
+            (N = !1),
                 (T = {
-                    gameApplicationIds: n.getFirstFieldErrorMessage('game_application_ids'),
-                    playstyle: n.getFirstFieldErrorMessage('play_style'),
-                    description: n.getFirstFieldErrorMessage('description'),
-                    wildcardDescriptors: n.getFirstFieldErrorMessage('wildcard_descriptors'),
-                    interests: n.getFirstFieldErrorMessage('search_terms'),
-                    tag: n.getFirstFieldErrorMessage('tag'),
-                    verificationForm: n.getFirstFieldErrorMessage(['verification_form', 'form_fields'])
+                    gameApplicationIds: t.getFirstFieldErrorMessage('game_application_ids'),
+                    playstyle: t.getFirstFieldErrorMessage('play_style'),
+                    description: t.getFirstFieldErrorMessage('description'),
+                    wildcardDescriptors: t.getFirstFieldErrorMessage('wildcard_descriptors'),
+                    interests: t.getFirstFieldErrorMessage('search_terms'),
+                    tag: t.getFirstFieldErrorMessage('tag'),
+                    verificationForm: t.getFirstFieldErrorMessage(['verification_form', 'form_fields'])
                 });
         },
         MEMBER_VERIFICATION_FORM_UPDATE: function (e) {
-            let { form: n, isLocalUpdate: t } = e;
-            if (null == v.verificationForm) return !1;
+            let { form: t, isLocalUpdate: n } = e;
+            if (null == _.verificationForm) return !1;
             if (
-                ((v = {
-                    ...v,
+                ((_ = {
+                    ..._,
                     verificationForm: {
-                        ...v.verificationForm,
-                        ...n
+                        ..._.verificationForm,
+                        ...t
                     }
                 }),
-                t)
+                n)
             ) {
-                var r;
-                _ = !l().isEqual(v.verificationForm.formFields, null === (r = b.verificationForm) || void 0 === r ? void 0 : r.formFields);
-            } else _ = !1;
+                var i;
+                I = !o().isEqual(_.verificationForm.formFields, null === (i = v.verificationForm) || void 0 === i ? void 0 : i.formFields);
+            } else I = !1;
         }
     }));

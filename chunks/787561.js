@@ -21,14 +21,14 @@ var i = n(200651),
     p = n(430824),
     f = n(496675),
     C = n(699516),
-    I = n(594174),
+    v = n(594174),
     _ = n(434404),
-    N = n(999382),
-    v = n(54842),
+    I = n(999382),
+    N = n(54842),
     T = n(981631),
     j = n(731455),
-    S = n(388032),
-    b = n(105459),
+    b = n(388032),
+    S = n(105459),
     E = n(922905);
 let R = 'dismissedCommunityFeaturesUpsell',
     Z = () => {
@@ -37,14 +37,14 @@ let R = 'dismissedCommunityFeaturesUpsell',
                 guild: t,
                 submitting: n,
                 errors: r
-            } = (0, a.cj)([N.Z], () => ({
-                submitting: N.Z.isSubmitting(),
-                guild: N.Z.getGuild(),
-                errors: N.Z.getErrors()
+            } = (0, a.cj)([I.Z], () => ({
+                submitting: I.Z.isSubmitting(),
+                guild: I.Z.getGuild(),
+                errors: I.Z.getErrors()
             })),
             l = Object.keys(r),
             s = l.length > 0 ? l[0] : null;
-        if ('rules_channel_id' === s) e = S.intl.string(S.t['7IrBYm']);
+        if ('rules_channel_id' === s) e = b.intl.string(b.t['7IrBYm']);
         else e = null != s ? r[s] : void 0;
         return (0, i.jsx)(u.Z, {
             submitting: n,
@@ -65,7 +65,7 @@ let R = 'dismissedCommunityFeaturesUpsell',
             errorMessage: e
         });
     },
-    A = (e) => {
+    y = (e) => {
         let { discoveryEnabled: t, onboardingEnabled: n, guild: l } = e,
             [s, u] = r.useState(!0 === c.K.get(R)),
             m = (0, a.e7)([x.Z], () => {
@@ -82,9 +82,9 @@ let R = 'dismissedCommunityFeaturesUpsell',
                 .catch(() => f(!1));
         }, []);
         let C = (0, a.e7)([p.Z], () => p.Z.getGuild('942897714956472401')),
-            I = l.isCommunity() && m >= 1000 && g && !(null != C);
-        if (t && n && !I) return null;
-        let N = async () => {
+            v = l.isCommunity() && m >= 1000 && g && !(null != C);
+        if (t && n && !v) return null;
+        let I = async () => {
             try {
                 let e = await o.tn.post({
                     url: T.ANM.JOIN_ADMIN_SERVER(l.id),
@@ -93,40 +93,40 @@ let R = 'dismissedCommunityFeaturesUpsell',
                 _.Z.close(), (0, h.X)(e.body.id);
             } catch {}
         };
-        return s && !I
+        return s && !v
             ? null
             : (0, i.jsxs)('div', {
-                  className: b.upsellContainer,
+                  className: S.upsellContainer,
                   children: [
                       (0, i.jsxs)('div', {
-                          className: b.upsellContent,
+                          className: S.upsellContent,
                           children: [
                               (0, i.jsx)('img', {
                                   src: E,
                                   alt: '',
                                   width: 60,
-                                  className: b.upsellImage
+                                  className: S.upsellImage
                               }),
                               (0, i.jsxs)('div', {
                                   children: [
                                       (0, i.jsx)(d.Heading, {
                                           variant: 'heading-md/semibold',
-                                          className: b.upsellHeader,
-                                          children: S.intl.string(S.t['pR/BgY'])
+                                          className: S.upsellHeader,
+                                          children: b.intl.string(b.t['pR/BgY'])
                                       }),
                                       (0, i.jsx)(d.Text, {
                                           variant: 'text-sm/normal',
-                                          children: S.intl.string(S.t['V+Yo1t'])
+                                          children: b.intl.string(b.t['V+Yo1t'])
                                       })
                                   ]
                               })
                           ]
                       }),
                       (0, i.jsx)(d.Button, {
-                          'aria-label': S.intl.string(S.t.cpT0Cg),
+                          'aria-label': b.intl.string(b.t.cpT0Cg),
                           look: d.Button.Looks.BLANK,
                           size: d.Button.Sizes.NONE,
-                          className: b.upsellClose,
+                          className: S.upsellClose,
                           onClick: () => {
                               c.K.set(R, !0), u(!0);
                           },
@@ -136,14 +136,14 @@ let R = 'dismissedCommunityFeaturesUpsell',
                           })
                       }),
                       (0, i.jsxs)('div', {
-                          className: b.upsellFooter,
+                          className: S.upsellFooter,
                           children: [
-                              I &&
+                              v &&
                                   (0, i.jsx)(d.Button, {
                                       size: d.Button.Sizes.SMALL,
-                                      onClick: N,
-                                      className: b.upsellButton,
-                                      children: S.intl.string(S.t.iF1Asr)
+                                      onClick: I,
+                                      className: S.upsellButton,
+                                      children: b.intl.string(b.t.iF1Asr)
                                   }),
                               n
                                   ? null
@@ -152,8 +152,8 @@ let R = 'dismissedCommunityFeaturesUpsell',
                                         onClick: () => {
                                             _.Z.setSection(T.pNK.ONBOARDING);
                                         },
-                                        className: b.upsellButton,
-                                        children: S.intl.string(S.t['S/DfiY'])
+                                        className: S.upsellButton,
+                                        children: b.intl.string(b.t['S/DfiY'])
                                     }),
                               t
                                   ? null
@@ -162,26 +162,26 @@ let R = 'dismissedCommunityFeaturesUpsell',
                                         onClick: () => {
                                             _.Z.setSection(T.pNK.DISCOVERY);
                                         },
-                                        className: b.upsellButton,
+                                        className: S.upsellButton,
                                         color: d.Button.Colors.PRIMARY,
-                                        children: S.intl.string(S.t['0kmJd3'])
+                                        children: b.intl.string(b.t['0kmJd3'])
                                     }),
                               (0, i.jsx)(d.Button, {
                                   size: d.Button.Sizes.SMALL,
                                   onClick: () => {
                                       _.Z.setSection(T.pNK.ANALYTICS);
                                   },
-                                  className: b.upsellButton,
+                                  className: S.upsellButton,
                                   color: d.Button.Colors.PRIMARY,
-                                  children: S.intl.string(S.t.BQIYTU)
+                                  children: b.intl.string(b.t.BQIYTU)
                               })
                           ]
                       })
                   ]
               });
     },
-    L = () => {
-        let e = (0, a.e7)([N.Z], () => N.Z.getGuild()),
+    A = () => {
+        let e = (0, a.e7)([I.Z], () => I.Z.getGuild()),
             { canManageGuild: t, isGuildAdmin: n } = (0, a.cj)([f.Z], () => ({
                 canManageGuild: f.Z.can(T.Plq.MANAGE_GUILD, e),
                 isGuildAdmin: f.Z.can(T.Plq.ADMINISTRATOR, e)
@@ -197,7 +197,7 @@ let R = 'dismissedCommunityFeaturesUpsell',
                 t.type === T.d4z.GUILD_TEXT &&
                     h.push({
                         value: t.id,
-                        label: (0, m.F6)(t, I.default, C.Z, !0)
+                        label: (0, m.F6)(t, v.default, C.Z, !0)
                     });
             });
         let x = () => {
@@ -216,7 +216,7 @@ let R = 'dismissedCommunityFeaturesUpsell',
                         publicUpdatesChannelId: null
                     });
             },
-            v = (e) => {
+            N = (e) => {
                 _.Z.updateGuild({ rulesChannelId: e });
             },
             E = (e) => {
@@ -225,10 +225,10 @@ let R = 'dismissedCommunityFeaturesUpsell',
             Z = (e) => {
                 _.Z.updateGuild({ publicUpdatesChannelId: e });
             },
-            L = (e) => {
+            A = (e) => {
                 _.Z.updateGuild({ preferredLocale: e });
             },
-            y = (e) => {
+            L = (e) => {
                 _.Z.updateGuild({ description: e });
             },
             D = () => {
@@ -236,13 +236,13 @@ let R = 'dismissedCommunityFeaturesUpsell',
                     ? (0, d.openModal)((e) =>
                           (0, i.jsx)(d.ConfirmModal, {
                               ...e,
-                              header: S.intl.string(S.t.iBnVHR),
-                              confirmText: S.intl.string(S.t['cY+Ooa']),
-                              cancelText: S.intl.string(S.t.oEAioK),
+                              header: b.intl.string(b.t.iBnVHR),
+                              confirmText: b.intl.string(b.t['cY+Ooa']),
+                              cancelText: b.intl.string(b.t.oEAioK),
                               onConfirm: p,
                               children: (0, i.jsx)(d.Text, {
                                   variant: 'text-sm/normal',
-                                  children: S.intl.string(S.t['P+Sh8f'])
+                                  children: b.intl.string(b.t['P+Sh8f'])
                               })
                           })
                       )
@@ -250,13 +250,13 @@ let R = 'dismissedCommunityFeaturesUpsell',
                       ? (0, d.openModal)((e) =>
                             (0, i.jsx)(d.ConfirmModal, {
                                 ...e,
-                                header: S.intl.string(S.t.iBnVHR),
-                                confirmText: S.intl.string(S.t['cY+Ooa']),
-                                cancelText: S.intl.string(S.t.oEAioK),
+                                header: b.intl.string(b.t.iBnVHR),
+                                confirmText: b.intl.string(b.t['cY+Ooa']),
+                                cancelText: b.intl.string(b.t.oEAioK),
                                 onConfirm: p,
                                 children: (0, i.jsx)(d.Text, {
                                     variant: 'text-sm/normal',
-                                    children: S.intl.string(S.t['eMx/ub'])
+                                    children: b.intl.string(b.t['eMx/ub'])
                                 })
                             })
                         )
@@ -264,13 +264,13 @@ let R = 'dismissedCommunityFeaturesUpsell',
                         ? (0, d.openModal)((e) =>
                               (0, i.jsx)(d.ConfirmModal, {
                                   ...e,
-                                  header: S.intl.string(S.t.iBnVHR),
-                                  confirmText: S.intl.string(S.t['cY+Ooa']),
-                                  cancelText: S.intl.string(S.t.oEAioK),
+                                  header: b.intl.string(b.t.iBnVHR),
+                                  confirmText: b.intl.string(b.t['cY+Ooa']),
+                                  cancelText: b.intl.string(b.t.oEAioK),
                                   onConfirm: p,
                                   children: (0, i.jsx)(d.Text, {
                                       variant: 'text-sm/normal',
-                                      children: S.intl.string(S.t.l1wLeX)
+                                      children: b.intl.string(b.t.l1wLeX)
                                   })
                               })
                           )
@@ -278,78 +278,78 @@ let R = 'dismissedCommunityFeaturesUpsell',
                           ? (0, d.openModal)((e) =>
                                 (0, i.jsx)(d.ConfirmModal, {
                                     ...e,
-                                    header: S.intl.string(S.t.iBnVHR),
+                                    header: b.intl.string(b.t.iBnVHR),
                                     confirmButtonColor: d.Button.Colors.BRAND,
-                                    confirmText: S.intl.string(S.t.izNBMz),
-                                    cancelText: S.intl.string(S.t.oEAioK),
+                                    confirmText: b.intl.string(b.t.izNBMz),
+                                    cancelText: b.intl.string(b.t.oEAioK),
                                     onConfirm: x,
                                     children: (0, i.jsx)(d.Text, {
                                         variant: 'text-sm/normal',
-                                        children: S.intl.string(S.t.kQzUNj)
+                                        children: b.intl.string(b.t.kQzUNj)
                                     })
                                 })
                             )
                           : p();
             };
         return (0, i.jsxs)(d.FormSection, {
-            title: S.intl.string(S.t.nRtNqq),
+            title: b.intl.string(b.t.nRtNqq),
             tag: d.FormTitleTags.H1,
             children: [
                 u
-                    ? (0, i.jsx)(A, {
+                    ? (0, i.jsx)(y, {
                           discoveryEnabled: e.features.has(T.oNc.DISCOVERABLE),
                           onboardingEnabled: e.features.has(T.oNc.GUILD_ONBOARDING),
                           guild: e
                       })
                     : null,
                 (0, i.jsxs)(d.FormSection, {
-                    className: s()(b.twoColumnFormSection, b.firstSection),
+                    className: s()(S.twoColumnFormSection, S.firstSection),
                     children: [
                         (0, i.jsxs)('div', {
-                            className: b.descriptionColumn,
+                            className: S.descriptionColumn,
                             children: [
                                 (0, i.jsx)(d.FormTitle, {
-                                    className: b.formTitle,
-                                    children: S.intl.string(S.t.otcXPz)
+                                    className: S.formTitle,
+                                    children: b.intl.string(b.t.otcXPz)
                                 }),
                                 (0, i.jsx)(d.FormText, {
                                     type: d.FormTextTypes.DESCRIPTION,
-                                    className: b.__invalid_formDescription,
-                                    children: S.intl.string(S.t.BtwmYG)
+                                    className: S.__invalid_formDescription,
+                                    children: b.intl.string(b.t.BtwmYG)
                                 })
                             ]
                         }),
                         (0, i.jsx)('div', {
-                            className: b.selectColumn,
+                            className: S.selectColumn,
                             children: (0, i.jsx)(d.SearchableSelect, {
                                 value: e.rulesChannelId,
                                 options: h,
-                                onChange: v,
+                                onChange: N,
                                 isDisabled: !t
                             })
                         })
                     ]
                 }),
-                (0, i.jsx)(d.FormDivider, { className: b.divider }),
+                (0, i.jsx)(d.FormDivider, { className: S.divider }),
                 (0, i.jsxs)(d.FormSection, {
-                    className: s()(b.twoColumnFormSection, b.firstSection),
+                    className: s()(S.twoColumnFormSection, S.firstSection),
                     children: [
                         (0, i.jsxs)('div', {
-                            className: b.descriptionColumn,
+                            className: S.descriptionColumn,
                             children: [
                                 (0, i.jsx)(d.FormTitle, {
-                                    className: b.formTitle,
-                                    children: S.intl.string(S.t.vAyDGR)
+                                    className: S.formTitle,
+                                    children: b.intl.string(b.t.vAyDGR)
                                 }),
                                 (0, i.jsx)(d.FormText, {
                                     type: d.FormTextTypes.DESCRIPTION,
-                                    className: b.__invalid_formDescription,
-                                    children: S.intl.string(S.t.ZFeonp)
+                                    className: S.__invalid_formDescription,
+                                    children: b.intl.string(b.t.ZFeonp)
                                 })
                             ]
                         }),
                         (0, i.jsx)('div', {
-                            className: b.selectColumn,
+                            className: S.selectColumn,
                             children: (0, i.jsx)(d.SearchableSelect, {
                                 value: e.publicUpdatesChannelId,
                                 options: h,
@@ -359,26 +359,26 @@ let R = 'dismissedCommunityFeaturesUpsell',
                         })
                     ]
                 }),
-                (0, i.jsx)(d.FormDivider, { className: b.divider }),
+                (0, i.jsx)(d.FormDivider, { className: S.divider }),
                 (0, i.jsxs)(d.FormSection, {
-                    className: s()(b.twoColumnFormSection, b.firstSection),
+                    className: s()(S.twoColumnFormSection, S.firstSection),
                     children: [
                         (0, i.jsxs)('div', {
-                            className: b.descriptionColumn,
+                            className: S.descriptionColumn,
                             children: [
                                 (0, i.jsx)(d.FormTitle, {
-                                    className: b.formTitle,
-                                    children: S.intl.string(S.t.sMkYEx)
+                                    className: S.formTitle,
+                                    children: b.intl.string(b.t.sMkYEx)
                                 }),
                                 (0, i.jsx)(d.FormText, {
                                     type: d.FormTextTypes.DESCRIPTION,
-                                    className: b.__invalid_formDescription,
-                                    children: S.intl.string(S.t.htioQk)
+                                    className: S.__invalid_formDescription,
+                                    children: b.intl.string(b.t.htioQk)
                                 })
                             ]
                         }),
                         (0, i.jsx)('div', {
-                            className: b.selectColumn,
+                            className: S.selectColumn,
                             children: (0, i.jsx)(d.SearchableSelect, {
                                 value: e.safetyAlertsChannelId,
                                 options: h,
@@ -388,81 +388,81 @@ let R = 'dismissedCommunityFeaturesUpsell',
                         })
                     ]
                 }),
-                (0, i.jsx)(d.FormDivider, { className: b.divider }),
+                (0, i.jsx)(d.FormDivider, { className: S.divider }),
                 (0, i.jsxs)(d.FormSection, {
-                    className: b.twoColumnFormSection,
+                    className: S.twoColumnFormSection,
                     children: [
                         (0, i.jsxs)('div', {
-                            className: b.descriptionColumn,
+                            className: S.descriptionColumn,
                             children: [
                                 (0, i.jsx)(d.FormTitle, {
-                                    className: b.formTitle,
-                                    children: S.intl.string(S.t.pO60f3)
+                                    className: S.formTitle,
+                                    children: b.intl.string(b.t.pO60f3)
                                 }),
                                 (0, i.jsx)(d.FormText, {
                                     type: d.FormTextTypes.DESCRIPTION,
-                                    className: b.__invalid_formDescription,
-                                    children: S.intl.string(S.t.aIR73d)
+                                    className: S.__invalid_formDescription,
+                                    children: b.intl.string(b.t.aIR73d)
                                 })
                             ]
                         }),
                         (0, i.jsx)('div', {
-                            className: b.selectColumn,
+                            className: S.selectColumn,
                             children: (0, i.jsx)(d.SearchableSelect, {
                                 value: e.preferredLocale,
                                 options: o,
-                                onChange: L,
+                                onChange: A,
                                 isDisabled: !t
                             })
                         })
                     ]
                 }),
-                (0, i.jsx)(d.FormDivider, { className: b.divider }),
+                (0, i.jsx)(d.FormDivider, { className: S.divider }),
                 (() => {
                     var n;
                     if (null != e)
                         return (0, i.jsxs)(d.FormSection, {
                             children: [
                                 (0, i.jsx)(d.FormTitle, {
-                                    className: b.formTitle,
-                                    children: S.intl.string(S.t['RSfm+v'])
+                                    className: S.formTitle,
+                                    children: b.intl.string(b.t['RSfm+v'])
                                 }),
                                 (0, i.jsx)(d.FormText, {
-                                    className: b.description,
+                                    className: S.description,
                                     type: d.FormTextTypes.DESCRIPTION,
-                                    children: S.intl.string(S.t['/B6PR0'])
+                                    children: b.intl.string(b.t['/B6PR0'])
                                 }),
                                 (0, i.jsx)(d.TextArea, {
                                     value: null !== (n = e.description) && void 0 !== n ? n : '',
-                                    placeholder: S.intl.string(S.t.Nvfows),
-                                    onChange: y,
+                                    placeholder: b.intl.string(b.t.Nvfows),
+                                    onChange: L,
                                     maxLength: 120,
                                     disabled: !t
                                 })
                             ]
                         });
                 })(),
-                (0, i.jsx)(d.FormDivider, { className: b.divider }),
+                (0, i.jsx)(d.FormDivider, { className: S.divider }),
                 (0, i.jsxs)(d.FormSection, {
-                    className: b.twoColumnFormSection,
+                    className: S.twoColumnFormSection,
                     children: [
                         (0, i.jsxs)('div', {
-                            className: b.descriptionColumn,
+                            className: S.descriptionColumn,
                             children: [
                                 (0, i.jsx)(d.FormTitle, {
-                                    className: b.formTitle,
-                                    children: S.intl.string(S.t.c1BmbG)
+                                    className: S.formTitle,
+                                    children: b.intl.string(b.t.c1BmbG)
                                 }),
                                 (0, i.jsx)(d.FormText, {
                                     type: d.FormTextTypes.DESCRIPTION,
-                                    className: b.__invalid_formDescription,
-                                    children: S.intl.string(S.t.aQzVFx)
+                                    className: S.__invalid_formDescription,
+                                    children: b.intl.string(b.t.aQzVFx)
                                 })
                             ]
                         }),
                         (0, i.jsx)(d.Tooltip, {
-                            text: n ? null : S.intl.string(S.t['pjG+T0']),
-                            'aria-label': n ? void 0 : S.intl.string(S.t['pjG+T0']),
+                            text: n ? null : b.intl.string(b.t['pjG+T0']),
+                            'aria-label': n ? void 0 : b.intl.string(b.t['pjG+T0']),
                             children: (e) =>
                                 (0, i.jsx)(d.Button, {
                                     size: d.Button.Sizes.SMALL,
@@ -470,7 +470,7 @@ let R = 'dismissedCommunityFeaturesUpsell',
                                     color: d.Button.Colors.RED,
                                     disabled: !n,
                                     ...e,
-                                    children: S.intl.string(S.t.c1BmbG)
+                                    children: b.intl.string(b.t.c1BmbG)
                                 })
                         })
                     ]
@@ -479,6 +479,6 @@ let R = 'dismissedCommunityFeaturesUpsell',
         });
     };
 t.Z = () => {
-    let e = (0, a.e7)([N.Z], () => N.Z.getGuild());
-    return null == e ? null : e.features.has(T.oNc.COMMUNITY) ? (0, i.jsx)(L, {}) : (0, i.jsx)(v.Z, { guild: e });
+    let e = (0, a.e7)([I.Z], () => I.Z.getGuild());
+    return null == e ? null : e.features.has(T.oNc.COMMUNITY) ? (0, i.jsx)(A, {}) : (0, i.jsx)(N.Z, { guild: e });
 };

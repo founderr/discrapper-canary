@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return b;
     }
 }),
     n(653041);
@@ -20,9 +20,9 @@ var i = n(200651),
     p = n(827907),
     f = n(868814),
     C = n(981631),
-    I = n(388032),
+    v = n(388032),
     _ = n(697913);
-function N(e) {
+function I(e) {
     let { guild: t, channel: r } = e,
         l = (0, p.Mf)(r.id);
     return 'null' === r.id
@@ -82,7 +82,7 @@ function N(e) {
               ]
           });
 }
-let v = r.memo(function () {
+let N = r.memo(function () {
         return (0, i.jsx)('div', { className: _.separator });
     }),
     T = r.memo(function (e) {
@@ -98,15 +98,15 @@ let v = r.memo(function () {
         );
     }),
     j = r.memo(function (e) {
-        let { channel: t, category: r, guild: l, isFirstChannel: g, isLastChannel: N, tooltipDirection: j = 'right' } = e,
-            S = (0, p.Mf)(t.id, r.id),
-            b = (0, p.t4)(t.id, r.id),
+        let { channel: t, category: r, guild: l, isFirstChannel: g, isLastChannel: I, tooltipDirection: j = 'right' } = e,
+            b = (0, p.Mf)(t.id, r.id),
+            S = (0, p.t4)(t.id, r.id),
             E = (0, p.EH)(t.id, r.id),
             R = (0, p.lL)(l.id, r.id),
             Z = null != (0, f.Z)(l).find((e) => e.id === t.id),
-            A = (0, m.mn)(t.id),
-            L = (e) => {
-                if (!b)
+            y = (0, m.mn)(t.id),
+            A = (e) => {
+                if (!S)
                     return (
                         e.stopPropagation(),
                         (0, u.s)(l.id, t.id)
@@ -123,7 +123,7 @@ let v = r.memo(function () {
                         !0
                     );
             },
-            y = (e) => {
+            L = (e) => {
                 t.isGuildVocal()
                     ? (0, c.jW)(e, async () => {
                           let { default: e } = await Promise.all([n.e('79695'), n.e('38902'), n.e('58059'), n.e('61447'), n.e('18320'), n.e('83331'), n.e('22328')]).then(n.bind(n, 213202));
@@ -135,7 +135,7 @@ let v = r.memo(function () {
                               });
                       })
                     : (0, c.jW)(e, async () => {
-                          let { default: e } = await Promise.all([n.e('77298'), n.e('23357'), n.e('50506'), n.e('96211'), n.e('99152'), n.e('29549'), n.e('79695'), n.e('12013'), n.e('52249'), n.e('99783'), n.e('31605'), n.e('26182'), n.e('95900'), n.e('32776'), n.e('6380'), n.e('18543'), n.e('87624'), n.e('51269'), n.e('60691'), n.e('72181'), n.e('13351'), n.e('57674'), n.e('41309'), n.e('95393'), n.e('38902'), n.e('56602'), n.e('10274'), n.e('25788'), n.e('46097'), n.e('8739'), n.e('58059'), n.e('18895'), n.e('73974'), n.e('99393'), n.e('99008'), n.e('7590'), n.e('47485'), n.e('60178'), n.e('89943'), n.e('43053'), n.e('69057'), n.e('77564'), n.e('62880'), n.e('31915'), n.e('47321'), n.e('84804'), n.e('37220'), n.e('61447'), n.e('82158'), n.e('91315'), n.e('18320'), n.e('91458'), n.e('27974')]).then(n.bind(n, 373651));
+                          let { default: e } = await Promise.all([n.e('77298'), n.e('23357'), n.e('50506'), n.e('96211'), n.e('99152'), n.e('29549'), n.e('79695'), n.e('12013'), n.e('52249'), n.e('99783'), n.e('31605'), n.e('26182'), n.e('95900'), n.e('32776'), n.e('6380'), n.e('18543'), n.e('87624'), n.e('51269'), n.e('60691'), n.e('40216'), n.e('13351'), n.e('57674'), n.e('41309'), n.e('95393'), n.e('38902'), n.e('56602'), n.e('10274'), n.e('25788'), n.e('46097'), n.e('8739'), n.e('58059'), n.e('18895'), n.e('73974'), n.e('99393'), n.e('99008'), n.e('7590'), n.e('47485'), n.e('60178'), n.e('89943'), n.e('43053'), n.e('69057'), n.e('77564'), n.e('62880'), n.e('31915'), n.e('47321'), n.e('84804'), n.e('37220'), n.e('61447'), n.e('82158'), n.e('91315'), n.e('18320'), n.e('91458'), n.e('27974')]).then(n.bind(n, 373651));
                           return (n) =>
                               (0, i.jsx)(e, {
                                   ...n,
@@ -154,12 +154,12 @@ let v = r.memo(function () {
                         (0, i.jsxs)(o.Clickable, {
                             className: s()(_.channelRow, {
                                 [_.firstChannel]: g,
-                                [_.lastChannel]: N,
-                                [_.disabled]: b
+                                [_.lastChannel]: I,
+                                [_.disabled]: S
                             }),
                             ...e,
-                            onClick: L,
-                            onContextMenu: y,
+                            onClick: A,
+                            onContextMenu: L,
                             children: [
                                 (0, i.jsx)('div', {
                                     className: _.channelInfo,
@@ -176,7 +176,7 @@ let v = r.memo(function () {
                                                     className: _.channelText,
                                                     variant: 'text-md/medium',
                                                     lineClamp: 1,
-                                                    color: b ? 'text-muted' : 'text-normal',
+                                                    color: S ? 'text-muted' : 'text-normal',
                                                     children: t.name
                                                 })
                                             }),
@@ -188,7 +188,7 @@ let v = r.memo(function () {
                                                               variant: 'text-xs/medium',
                                                               className: _.channelSubtitle,
                                                               color: 'text-brand',
-                                                              children: I.intl.string(I.t.mPxmeH)
+                                                              children: v.intl.string(v.t.mPxmeH)
                                                           })
                                                       ]
                                                   })
@@ -200,11 +200,11 @@ let v = r.memo(function () {
                                     className: _.channelActions,
                                     children: (0, u.s)(t.guild_id, t.id)
                                         ? (0, i.jsx)(o.Checkbox, {
-                                              'aria-checked': S,
-                                              value: S,
+                                              'aria-checked': b,
+                                              value: b,
                                               type: o.Checkbox.Types.INVERTED,
-                                              disabled: b,
-                                              color: A ? a.Z.colors.TEXT_BRAND.css : a.Z.colors.BUTTON_SECONDARY_BACKGROUND.css,
+                                              disabled: S,
+                                              color: y ? a.Z.colors.TEXT_BRAND.css : a.Z.colors.BUTTON_SECONDARY_BACKGROUND.css,
                                               innerClassName: _.checkboxInner,
                                               displayOnly: !0
                                           })
@@ -222,7 +222,7 @@ let v = r.memo(function () {
                                                   (0, i.jsx)(o.Text, {
                                                       variant: 'text-sm/medium',
                                                       color: 'none',
-                                                      children: I.intl.string(I.t.zA9d1N)
+                                                      children: v.intl.string(v.t.zA9d1N)
                                                   })
                                               ]
                                           })
@@ -230,17 +230,17 @@ let v = r.memo(function () {
                             ]
                         })
                 }),
-                !N && (0, i.jsx)(v, {})
+                !I && (0, i.jsx)(N, {})
             ]
         });
     });
-function S(e) {
+function b(e) {
     let { categories: t, guild: n, className: l, hasSidebar: s } = e,
         a = r.useCallback(
             (e) => {
                 let r = t._categories[e];
                 return (0, i.jsx)(
-                    N,
+                    I,
                     {
                         channel: r.channel,
                         guild: n

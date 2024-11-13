@@ -26,13 +26,13 @@ var i,
     p = n(881052),
     f = n(751189),
     C = n(409059),
-    I = n(518936),
+    v = n(518936),
     _ = n(999382),
-    N = n(58346),
-    v = n(388032),
+    I = n(58346),
+    N = n(388032),
     T = n(759985),
     j = n(113207);
-function S(e, t, n) {
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,12 +45,12 @@ function S(e, t, n) {
         e
     );
 }
-class b extends (i = d.ZP.Store) {
+class S extends (i = d.ZP.Store) {
     getTemplate() {
         let e = _.Z.getProps().guild;
         if (null == e) return null;
         let t = C.Z.getForGuild(e.id);
-        return null != t && t.state !== N.Rj.RESOLVING ? t : null;
+        return null != t && t.state !== I.Rj.RESOLVING ? t : null;
     }
     showNotice() {
         let e = this.getTemplate();
@@ -58,10 +58,10 @@ class b extends (i = d.ZP.Store) {
     }
     constructor(...e) {
         super(...e),
-            S(this, 'name', ''),
-            S(this, 'description', ''),
-            S(this, 'error', null),
-            S(this, 'reset', () => {
+            b(this, 'name', ''),
+            b(this, 'description', ''),
+            b(this, 'error', null),
+            b(this, 'reset', () => {
                 let e = this.getTemplate();
                 if (null != e) {
                     var t, n;
@@ -69,22 +69,22 @@ class b extends (i = d.ZP.Store) {
                 } else (this.name = ''), (this.description = '');
                 this.emitChange();
             }),
-            S(this, 'setName', (e) => {
+            b(this, 'setName', (e) => {
                 (this.name = e), this.emitChange();
             }),
-            S(this, 'setDescription', (e) => {
+            b(this, 'setDescription', (e) => {
                 (this.description = e), this.emitChange();
             }),
-            S(this, 'setError', (e) => {
+            b(this, 'setError', (e) => {
                 (this.error = e), this.emitChange();
             }),
-            S(this, 'save', async () => {
+            b(this, 'save', async () => {
                 await f.Z.updateGuildTemplate(_.Z.getProps().guild.id, this.getTemplate().code, this.name, this.description), this.emitChange();
             });
     }
 }
-S(b, 'displayName', 'GuildSettingsTemplateMetadataStore_');
-let E = new b(h.Z);
+b(S, 'displayName', 'GuildSettingsTemplateMetadataStore_');
+let E = new S(h.Z);
 function R() {
     let [e, t] = l.useState(!1),
         n = async () => {
@@ -102,22 +102,22 @@ function Z() {
         children: (0, r.jsxs)(m.HeadingLevel, {
             component: (0, r.jsx)(m.FormTitle, {
                 tag: m.FormTitleTags.H1,
-                children: v.intl.string(v.t.KUw7Sk)
+                children: N.intl.string(N.t.KUw7Sk)
             }),
             children: [
                 (0, r.jsx)(m.FormText, {
                     className: j.marginBottom20,
                     type: m.FormTextTypes.DESCRIPTION,
-                    children: v.intl.format(v.t.c0m8bG, {})
+                    children: N.intl.format(N.t.c0m8bG, {})
                 }),
-                (0, r.jsx)(L, {}),
+                (0, r.jsx)(A, {}),
                 (0, r.jsx)(m.FormDivider, { className: T.divider }),
-                (0, r.jsx)(A, {})
+                (0, r.jsx)(y, {})
             ]
         })
     });
 }
-function A() {
+function y() {
     let { guild: e } = _.Z.getProps();
     c()(null != e, 'guild cannot be null');
     let t = (0, d.e7)([E], () => E.error),
@@ -185,7 +185,7 @@ function A() {
         ]
     });
 }
-function L() {
+function A() {
     return (0, r.jsxs)('div', {
         className: T.descriptionBox,
         children: [
@@ -194,7 +194,7 @@ function L() {
                 children: [
                     (0, r.jsx)(m.Heading, {
                         variant: 'eyebrow',
-                        children: v.intl.string(v.t['f8u+VF'])
+                        children: N.intl.string(N.t['f8u+VF'])
                     }),
                     (0, r.jsxs)('div', {
                         className: T.descriptionRow,
@@ -205,7 +205,7 @@ function L() {
                                 color: u.Z.unsafe_rawColors.GREEN_360.css,
                                 secondaryColor: u.Z.unsafe_rawColors.WHITE_500.css
                             }),
-                            v.intl.string(v.t.K2tn19)
+                            N.intl.string(N.t.K2tn19)
                         ]
                     }),
                     (0, r.jsxs)('div', {
@@ -217,7 +217,7 @@ function L() {
                                 color: u.Z.unsafe_rawColors.GREEN_360.css,
                                 secondaryColor: u.Z.unsafe_rawColors.WHITE_500.css
                             }),
-                            v.intl.string(v.t.om5gNj)
+                            N.intl.string(N.t.om5gNj)
                         ]
                     }),
                     (0, r.jsxs)('div', {
@@ -229,7 +229,7 @@ function L() {
                                 color: u.Z.unsafe_rawColors.GREEN_360.css,
                                 secondaryColor: u.Z.unsafe_rawColors.WHITE_500.css
                             }),
-                            v.intl.string(v.t['/VNqdH'])
+                            N.intl.string(N.t['/VNqdH'])
                         ]
                     })
                 ]
@@ -239,7 +239,7 @@ function L() {
                 children: [
                     (0, r.jsx)(m.Heading, {
                         variant: 'eyebrow',
-                        children: v.intl.string(v.t['8zhJEh'])
+                        children: N.intl.string(N.t['8zhJEh'])
                     }),
                     (0, r.jsxs)('div', {
                         className: T.descriptionRow,
@@ -250,7 +250,7 @@ function L() {
                                 color: u.Z.unsafe_rawColors.RED_400.css,
                                 secondaryColor: u.Z.unsafe_rawColors.WHITE_500.css
                             }),
-                            v.intl.string(v.t.WOKI6u)
+                            N.intl.string(N.t.WOKI6u)
                         ]
                     }),
                     (0, r.jsxs)('div', {
@@ -262,7 +262,7 @@ function L() {
                                 color: u.Z.unsafe_rawColors.RED_400.css,
                                 secondaryColor: u.Z.unsafe_rawColors.WHITE_500.css
                             }),
-                            v.intl.string(v.t.ddhDJC)
+                            N.intl.string(N.t.ddhDJC)
                         ]
                     }),
                     (0, r.jsxs)('div', {
@@ -274,7 +274,7 @@ function L() {
                                 color: u.Z.unsafe_rawColors.RED_400.css,
                                 secondaryColor: u.Z.unsafe_rawColors.WHITE_500.css
                             }),
-                            v.intl.string(v.t['6Q/DHh'])
+                            N.intl.string(N.t['6Q/DHh'])
                         ]
                     })
                 ]
@@ -282,19 +282,19 @@ function L() {
         ]
     });
 }
-function y(e) {
+function L(e) {
     let { cancel: t, confirm: n } = e;
     return (0, r.jsx)(m.DeclarativeConfirmModal, {
         dismissable: !0,
-        header: v.intl.string(v.t['cN/RFB']),
-        confirmText: v.intl.string(v.t['cN/RFB']),
-        cancelText: v.intl.string(v.t['ETE/oK']),
+        header: N.intl.string(N.t['cN/RFB']),
+        confirmText: N.intl.string(N.t['cN/RFB']),
+        cancelText: N.intl.string(N.t['ETE/oK']),
         onCancel: t,
         onConfirm: n,
         children: (0, r.jsx)(m.Text, {
             variant: 'text-md/normal',
             color: 'text-normal',
-            children: v.intl.string(v.t.apCQv7)
+            children: N.intl.string(N.t.apCQv7)
         })
     });
 }
@@ -306,23 +306,23 @@ function D() {
         children: [
             (0, r.jsx)(m.FormItem, {
                 className: j.marginBottom20,
-                title: v.intl.string(v.t.z1a9R0),
+                title: N.intl.string(N.t.z1a9R0),
                 error: null == n ? void 0 : n.getFirstFieldErrorMessage('name'),
                 children: (0, r.jsx)(m.TextInput, {
                     value: e,
                     onChange: (e) => E.setName(e),
-                    placeholder: v.intl.string(v.t.bMlpvr),
+                    placeholder: N.intl.string(N.t.bMlpvr),
                     maxLength: 100
                 })
             }),
             (0, r.jsx)(m.FormItem, {
                 className: j.marginBottom20,
-                title: v.intl.string(v.t.GxirWV),
+                title: N.intl.string(N.t.GxirWV),
                 error: null == n ? void 0 : n.getFirstFieldErrorMessage('description'),
                 children: (0, r.jsx)(m.TextArea, {
                     value: t,
                     onChange: (e) => E.setDescription(e),
-                    placeholder: v.intl.string(v.t.n1FBXl),
+                    placeholder: N.intl.string(N.t.n1FBXl),
                     maxLength: 120
                 })
             })
@@ -332,15 +332,15 @@ function D() {
 function O(e) {
     let { guild: t, guildTemplate: n } = e;
     return null == n
-        ? (0, r.jsx)(M, { guild: t })
+        ? (0, r.jsx)(k, { guild: t })
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(m.FormItem, {
-                      title: v.intl.string(v.t.zGGcLy),
+                      title: N.intl.string(N.t.zGGcLy),
                       children: (0, r.jsx)(g.Z, {
                           buttonLook: m.Button.Looks.FILLED,
                           buttonColor: m.Button.Colors.BRAND,
-                          value: (0, I.Z)(n.code)
+                          value: (0, v.Z)(n.code)
                       })
                   }),
                   n.isDirty &&
@@ -348,20 +348,20 @@ function O(e) {
                           color: 'text-warning',
                           className: j.marginTop8,
                           variant: 'text-sm/normal',
-                          children: v.intl.string(v.t.aWsjtL)
+                          children: N.intl.string(N.t.aWsjtL)
                       }),
                   (0, r.jsxs)('div', {
                       className: a()(j.marginTop20, T.buttonContainer),
                       children: [
                           n.isDirty &&
-                              (0, r.jsx)(P, {
+                              (0, r.jsx)(M, {
                                   guild: t,
                                   guildTemplate: n
                               }),
                           (0, r.jsxs)('div', {
                               className: T.rightButtonContainer,
                               children: [
-                                  (0, r.jsx)(k, {
+                                  (0, r.jsx)(P, {
                                       guild: t,
                                       guildTemplate: n
                                   }),
@@ -373,12 +373,12 @@ function O(e) {
                   n.isDirty &&
                       (0, r.jsx)('div', {
                           className: T.lastSync,
-                          children: v.intl.format(v.t.v0AVur, { timestamp: new Date(n.updatedAt) })
+                          children: N.intl.format(N.t.v0AVur, { timestamp: new Date(n.updatedAt) })
                       })
               ]
           });
 }
-function M(e) {
+function k(e) {
     var t;
     let { guild: n } = e,
         i = (0, d.e7)([E], () => E.name),
@@ -397,10 +397,10 @@ function M(e) {
         disabled: !(null != (t = i) && t.trim().length >= 2),
         color: m.Button.Colors.BRAND,
         onClick: o,
-        children: v.intl.string(v.t.Wxdi8P)
+        children: N.intl.string(N.t.Wxdi8P)
     });
 }
-function P(e) {
+function M(e) {
     let { guild: t, guildTemplate: n } = e,
         [i, s] = l.useState(!1),
         a = async () => {
@@ -416,10 +416,10 @@ function P(e) {
         submitting: i,
         className: T.button,
         onClick: a,
-        children: v.intl.string(v.t['Nw+0Y2'])
+        children: N.intl.string(N.t['Nw+0Y2'])
     });
 }
-function k(e) {
+function P(e) {
     let { guild: t, guildTemplate: n } = e,
         [i, s] = l.useState(!1),
         a = async () => {
@@ -438,10 +438,10 @@ function k(e) {
                 className: T.button,
                 color: m.Button.Colors.RED,
                 onClick: () => s(!0),
-                children: v.intl.string(v.t['cN/RFB'])
+                children: N.intl.string(N.t['cN/RFB'])
             }),
             i
-                ? (0, r.jsx)(y, {
+                ? (0, r.jsx)(L, {
                       confirm: a,
                       cancel: () => s(!1)
                   })
@@ -463,6 +463,6 @@ function w(e) {
                         guildTemplate: t
                     });
             }),
-        children: v.intl.string(v.t.YI3iV1)
+        children: N.intl.string(N.t.YI3iV1)
     });
 }

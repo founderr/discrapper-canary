@@ -48,10 +48,10 @@ t.Z = function (e) {
             var e;
             return null !== (e = u.Z.getSearchResults(S)) && void 0 !== e ? e : _;
         }),
-        x = null !== (t = (0, o.Z)(T)) && void 0 !== t ? t : _,
-        { results: A, totalPages: b } = r.useMemo(() => (N === d.M.FETCHING ? x : T), [N, x, T]),
-        Z = r.useMemo(() => (null == A ? void 0 : A.filter((e) => !(e.type !== l.s.APPLICATION))), [A]),
-        y = r.useCallback((e) => {
+        A = null !== (t = (0, o.Z)(T)) && void 0 !== t ? t : _,
+        { results: b, totalPages: x } = r.useMemo(() => (N === d.M.FETCHING ? A : T), [N, A, T]),
+        Z = r.useMemo(() => (null == b ? void 0 : b.filter((e) => !(e.type !== l.s.APPLICATION))), [b]),
+        L = r.useCallback((e) => {
             let { page: t, activeCategoryId: n, onSuccessCallback: i, guildId: r, fetchCounts: l } = e;
             l &&
                 c.yC({
@@ -70,12 +70,12 @@ t.Z = function (e) {
                 });
         }, []);
     return (r.useEffect(() => {
-        y({
+        L({
             page: I,
             activeCategoryId: n,
             onSuccessCallback: () => {}
         });
-    }, [n, y, I]),
+    }, [n, L, I]),
     N === d.M.ERROR)
         ? (0, i.jsx)('div', {
               className: f.errorContainer,
@@ -106,7 +106,7 @@ t.Z = function (e) {
                   }),
                   (0, i.jsx)(s.Paginator, {
                       className: f.paginationInput,
-                      totalCount: Math.min(b * g.IV, g.Et * g.IV),
+                      totalCount: Math.min(x * g.IV, g.Et * g.IV),
                       pageSize: g.IV,
                       disablePaginationGap: !0,
                       hideMaxPage: !0,

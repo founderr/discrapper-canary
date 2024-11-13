@@ -1,54 +1,54 @@
 n.r(t);
 var i = n(200651),
-    l = n(192379),
-    r = n(442837),
-    a = n(100527),
-    s = n(906732),
-    o = n(252618),
-    c = n(598077),
+    r = n(192379),
+    a = n(442837),
+    l = n(100527),
+    o = n(906732),
+    c = n(252618),
+    s = n(598077),
     d = n(430824),
     u = n(693546),
     m = n(863249),
-    h = n(328977),
-    x = n(208257),
-    b = n(853486),
-    j = n(388032),
+    f = n(328977),
+    b = n(208257),
+    x = n(853486),
+    h = n(388032),
     p = n(271648);
 t.default = function (e) {
     let { guildId: t } = e,
-        { analyticsLocations: n } = (0, s.ZP)(a.Z.GUILD_MEMBER_APPLICATION_REVIEW),
-        g = (0, h.L)({ guildId: t }),
-        { user: v } = null != g ? g : {},
-        f = l.useMemo(() => (null != v ? new c.Z(v) : null), [v]),
-        C = (0, r.e7)([d.Z], () => d.Z.getGuild(t), [t]);
-    (0, o.Tt)({
-        subsection: j.intl.string(j.t.nqrK8f),
-        location: null == C ? void 0 : C.name
+        { analyticsLocations: n } = (0, o.ZP)(l.Z.GUILD_MEMBER_APPLICATION_REVIEW),
+        g = (0, f.L)({ guildId: t }),
+        { user: C } = null != g ? g : {},
+        _ = r.useMemo(() => (null != C ? new s.Z(C) : null), [C]),
+        v = (0, a.e7)([d.Z], () => d.Z.getGuild(t), [t]);
+    (0, c.Tt)({
+        subsection: h.intl.string(h.t.nqrK8f),
+        location: null == v ? void 0 : v.name
     }),
-        l.useEffect(() => {
+        r.useEffect(() => {
             m.ZP.fetchVerificationForm(t);
         }, [t]);
-    let I = null != g && null != C && null != f;
-    return (0, i.jsxs)(s.Gt, {
+    let j = null != g && null != v && null != _;
+    return (0, i.jsxs)(o.Gt, {
         value: n,
         children: [
             (0, i.jsx)('div', {
                 className: p.content,
-                children: (0, i.jsx)(x.Z, {
+                children: (0, i.jsx)(b.Z, {
                     guildId: t,
-                    isSidebarOpen: I
+                    isSidebarOpen: j
                 })
             }),
-            I &&
+            j &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)('div', { className: p.sidebarSeparator }),
                         (0, i.jsx)('section', {
                             className: p.sidebar,
-                            children: (0, i.jsx)(b.Z, {
-                                guild: C,
+                            children: (0, i.jsx)(x.Z, {
+                                guild: v,
                                 guildJoinRequest: g,
-                                guildJoinRequestUser: f,
+                                guildJoinRequestUser: _,
                                 onClose: () => u.Z.setSelectedGuildJoinRequest(t, null)
                             })
                         })

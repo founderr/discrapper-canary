@@ -25,21 +25,21 @@ var i = n(200651),
     S = n(606304),
     N = n(979651),
     T = n(938475),
-    x = n(823379),
-    A = n(557177),
-    b = n(981631);
+    A = n(823379),
+    b = n(557177),
+    x = n(981631);
 function Z(e, t, n, i) {
     r.useEffect(() => {
         let r = t(),
             l = new s.Fh(e, () => {
                 let e = t(),
                     l = n(r, e);
-                null != l && !I.Z.isSoundDisabled(l) && (0, A.GN)(l, null != i ? i : 0.4), (r = e);
+                null != l && !I.Z.isSoundDisabled(l) && (0, b.GN)(l, null != i ? i : 0.4), (r = e);
             });
         return l.attach('useSound'), () => l.detach();
     });
 }
-function y() {
+function L() {
     return (
         Z(
             [E.Z, v.Z],
@@ -67,7 +67,7 @@ function y() {
         null
     );
 }
-function L() {
+function y() {
     return (
         Z(
             [f.Z, C.Z, v.Z, c.Z],
@@ -80,8 +80,8 @@ function L() {
                 return {
                     channelType: t,
                     guildId: n,
-                    connected: r === b.hes.RTC_CONNECTED,
-                    connectHasStarted: (!i && r !== b.hes.DISCONNECTED) || r === b.hes.RTC_CONNECTED,
+                    connected: r === x.hes.RTC_CONNECTED,
+                    connectHasStarted: (!i && r !== x.hes.DISCONNECTED) || r === x.hes.RTC_CONNECTED,
                     awaitingRemote: null != c.Z.getAwaitingRemoteSessionInfo(),
                     connectedRemote: null != c.Z.getRemoteSessionId()
                 };
@@ -113,7 +113,7 @@ function R() {
             (e, t) => {
                 if (e !== t) {
                     let e = E.Z.isSelfMute();
-                    if (E.Z.getMode() === b.pM4.PUSH_TO_TALK && !e) return t ? 'ptt_start' : 'ptt_stop';
+                    if (E.Z.getMode() === x.pM4.PUSH_TO_TALK && !e) return t ? 'ptt_start' : 'ptt_stop';
                 }
             }
         ),
@@ -128,14 +128,14 @@ function O() {
             (e, t) => {
                 if (e !== t) {
                     let e = E.Z.isSelfMute();
-                    if (E.Z.getMode() === b.pM4.VOICE_ACTIVITY && !e) return t ? 'ptt_stop' : 'ptt_start';
+                    if (E.Z.getMode() === x.pM4.VOICE_ACTIVITY && !e) return t ? 'ptt_stop' : 'ptt_start';
                 }
             }
         ),
         null
     );
 }
-function j() {
+function P() {
     return (
         Z(
             [N.Z],
@@ -147,7 +147,7 @@ function j() {
         null
     );
 }
-function P() {
+function j() {
     return (
         Z(
             [v.Z, N.Z],
@@ -182,7 +182,7 @@ function D() {
                 }
                 let o = null;
                 return (
-                    (null == (o = 1 === s.length ? s[0] : p.Z.getCurrentUserActiveStream()) ? void 0 : o.state) === b.jm8.CONNECTING && (o = null),
+                    (null == (o = 1 === s.length ? s[0] : p.Z.getCurrentUserActiveStream()) ? void 0 : o.state) === x.jm8.CONNECTING && (o = null),
                     null != o && ((l = (0, d.V9)(o)), (a = p.Z.getViewerIds(l).filter((e) => e !== i).length)),
                     {
                         channelType: e,
@@ -236,15 +236,15 @@ function M() {
                     t = v.Z.getChannelId(),
                     n = o.ZP.getConnectedActivityChannelId(),
                     i = g.default.getId(),
-                    r = (0, x.lm)(t) ? o.ZP.getEmbeddedActivitiesForChannel(t) : o.i6,
-                    l = (0, x.lm)(e) ? o.ZP.getEmbeddedActivitiesForChannel(e) : o.i6,
-                    a = (0, x.lm)(n) ? o.ZP.getEmbeddedActivitiesForChannel(n) : o.i6;
+                    r = (0, A.lm)(t) ? o.ZP.getEmbeddedActivitiesForChannel(t) : o.i6,
+                    l = (0, A.lm)(e) ? o.ZP.getEmbeddedActivitiesForChannel(e) : o.i6,
+                    a = (0, A.lm)(n) ? o.ZP.getEmbeddedActivitiesForChannel(n) : o.i6;
                 return {
                     voiceChannelId: e,
                     currentUserId: i,
                     channelActivities: r,
                     connectedChannelActivities: a,
-                    userConnectedActivity: (0, x.lm)(n) ? o.ZP.getSelfEmbeddedActivityForChannel(n) : null,
+                    userConnectedActivity: (0, A.lm)(n) ? o.ZP.getSelfEmbeddedActivityForChannel(n) : null,
                     voiceChannelActivities: l
                 };
             },
@@ -252,15 +252,15 @@ function M() {
                 let n,
                     { voiceChannelId: i, currentUserId: r, channelActivities: l, connectedChannelActivities: a, userConnectedActivity: s, voiceChannelActivities: o } = t;
                 let c = o.some((e) => e.applicationId === (null == s ? void 0 : s.applicationId) && e.launchId === s.launchId);
-                if ((0, x.lm)(i)) {
+                if ((0, A.lm)(i)) {
                     let t = e.voiceChannelActivities.find((e) => e.userIds.has(r)),
                         i = o.find((e) => e.userIds.has(r));
-                    e.voiceChannelActivities.length < o.length && (0, x.lm)(e.voiceChannelId) && (n = 'activity_launch'), void 0 === i && (0, x.lm)(t) && (n = 'activity_end'), void 0 === t && (0, x.lm)(i) && i.userIds.size > 1 && (n = 'activity_user_join'), (0, x.lm)(i) && (0, x.lm)(t) && (i.userIds.size > t.userIds.size && (n = 'activity_user_join'), i.userIds.size < t.userIds.size && (n = 'activity_user_left'));
+                    e.voiceChannelActivities.length < o.length && (0, A.lm)(e.voiceChannelId) && (n = 'activity_launch'), void 0 === i && (0, A.lm)(t) && (n = 'activity_end'), void 0 === t && (0, A.lm)(i) && i.userIds.size > 1 && (n = 'activity_user_join'), (0, A.lm)(i) && (0, A.lm)(t) && (i.userIds.size > t.userIds.size && (n = 'activity_user_join'), i.userIds.size < t.userIds.size && (n = 'activity_user_left'));
                 }
                 if (!c) {
                     e.connectedChannelActivities.length < a.length && e.channelActivities.length < l.length && (n = 'activity_launch');
                     let t = e.userConnectedActivity;
-                    null == s && (0, x.lm)(t) && (n = 'activity_end'), (0, x.lm)(s) && (0, x.lm)(t) && (s.userIds.size > t.userIds.size && (n = 'activity_user_join'), s.userIds.size < t.userIds.size && (n = 'activity_user_left'));
+                    null == s && (0, A.lm)(t) && (n = 'activity_end'), (0, A.lm)(s) && (0, A.lm)(t) && (s.userIds.size > t.userIds.size && (n = 'activity_user_join'), s.userIds.size < t.userIds.size && (n = 'activity_user_left'));
                 }
                 return n;
             }
@@ -289,6 +289,6 @@ function w() {
 }
 function k() {
     return (0, i.jsxs)(i.Fragment, {
-        children: [(0, i.jsx)(y, {}), (0, i.jsx)(L, {}), (0, i.jsx)(R, {}), (0, i.jsx)(O, {}), (0, i.jsx)(j, {}), (0, i.jsx)(D, {}), (0, i.jsx)(P, {}), (0, i.jsx)(M, {}), (0, i.jsx)(w, {})]
+        children: [(0, i.jsx)(L, {}), (0, i.jsx)(y, {}), (0, i.jsx)(R, {}), (0, i.jsx)(O, {}), (0, i.jsx)(P, {}), (0, i.jsx)(D, {}), (0, i.jsx)(j, {}), (0, i.jsx)(M, {}), (0, i.jsx)(w, {})]
     });
 }

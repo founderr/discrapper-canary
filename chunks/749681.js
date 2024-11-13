@@ -9,32 +9,32 @@ n.d(t, {
     n(815648),
     n(47120),
     n(411104);
-var r = n(207796),
-    i = n(859921),
-    a = n(341907),
-    s = n(703656),
+var i = n(207796),
+    l = n(859921),
+    r = n(341907),
+    a = n(703656),
     o = n(836768),
-    l = n(49898),
-    u = n(981631),
-    c = n(128449);
+    s = n(49898),
+    c = n(981631),
+    u = n(128449);
 function d(e) {
     let t = e.tab;
     switch ((o.Z.setState({ selectedTab: t }), t)) {
-        case l.F$.SERVERS:
+        case s.F$.SERVERS:
             var n, d;
-            let f = e.selectedServersTab;
-            null != f
-                ? i.Z.setState({
-                      selectedTab: f,
-                      entrypoint: null !== (n = e.entrypoint) && void 0 !== n ? n : c.Qq.UNKNOWN
+            let h = e.selectedServersTab;
+            null != h
+                ? l.Z.setState({
+                      selectedTab: h,
+                      entrypoint: null !== (n = e.entrypoint) && void 0 !== n ? n : u.Qq.UNKNOWN
                   })
-                : i.Z.setState({ entrypoint: null !== (d = e.entrypoint) && void 0 !== d ? d : c.Qq.UNKNOWN });
-            let _ = (function (e) {
+                : l.Z.setState({ entrypoint: null !== (d = e.entrypoint) && void 0 !== d ? d : u.Qq.UNKNOWN });
+            let p = (function (e) {
                 let { extra: t } = e,
                     n = {},
-                    i = r.GN.getState().entrypointGameId;
+                    l = i.GN.getState().entrypointGameId;
                 return (
-                    null != i && (n.search = '?game='.concat(i)),
+                    null != l && (n.search = '?game='.concat(l)),
                     null != t &&
                         (n = {
                             ...t,
@@ -43,16 +43,16 @@ function d(e) {
                     n
                 );
             })({ extra: e.extra });
-            return (0, s.uL)(u.Z5c.GLOBAL_DISCOVERY_SERVERS, _);
-        case l.F$.APPS:
-            if (null != e.applicationId) return (0, s.uL)(u.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(e.applicationId));
+            return (0, a.uL)(c.Z5c.GLOBAL_DISCOVERY_SERVERS, p);
+        case s.F$.APPS:
+            if (null != e.applicationId) return (0, a.uL)(c.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(e.applicationId));
             if (null != e.query) {
                 let t = new URLSearchParams();
-                return t.set('q', e.query), null != e.categoryId && t.set('category_id', e.categoryId.toString()), null != e.page && t.set('page', e.page.toString()), (0, s.uL)(u.Z5c.GLOBAL_DISCOVERY_APPS_SEARCH, { search: t.toString() });
-            } else if (null != e.categoryId) return (0, s.uL)(u.Z5c.GLOBAL_DISCOVERY_APPS_CATEGORY(e.categoryId.toString()));
-            else return (0, s.uL)(u.Z5c.GLOBAL_DISCOVERY_APPS);
-        case l.F$.QUESTS:
-            return (0, a.navigateToQuestHome)(e.location, e.questContent, e.questId);
+                return t.set('q', e.query), null != e.categoryId && t.set('category_id', e.categoryId.toString()), null != e.page && t.set('page', e.page.toString()), (0, a.uL)(c.Z5c.GLOBAL_DISCOVERY_APPS_SEARCH, { search: t.toString() });
+            } else if (null != e.categoryId) return (0, a.uL)(c.Z5c.GLOBAL_DISCOVERY_APPS_CATEGORY(e.categoryId.toString()));
+            else return (0, a.uL)(c.Z5c.GLOBAL_DISCOVERY_APPS);
+        case s.F$.QUESTS:
+            return (0, r.navigateToQuestHome)(e.location, e.questContent, e.questId);
         default:
             throw Error('[transitionToGlobalDiscovery] Unhandled tab type: '.concat(t));
     }

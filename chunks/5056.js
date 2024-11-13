@@ -1,27 +1,27 @@
-var r = t(200651),
-    a = t(192379),
-    i = t(120356),
-    o = t.n(i),
+var i = t(200651),
+    l = t(192379),
+    a = t(120356),
+    r = t.n(a),
     s = t(481060),
-    l = t(838221),
+    o = t(838221),
     c = t(246364),
     d = t(700833),
     u = t(388032),
     m = t(631403);
-function f(e) {
-    let { onClick: n, text: t, icon: a } = e;
-    return (0, r.jsx)('div', {
+function x(e) {
+    let { onClick: n, text: t, icon: l } = e;
+    return (0, i.jsx)('div', {
         className: m.addFormFieldContainer,
-        children: (0, r.jsxs)(s.Clickable, {
+        children: (0, i.jsxs)(s.Clickable, {
             className: m.addFormField,
             onClick: n,
             children: [
-                (0, r.jsx)(a, {
+                (0, i.jsx)(l, {
                     className: m.icon,
                     size: 'xs',
                     color: 'currentColor'
                 }),
-                (0, r.jsx)(s.FormText, {
+                (0, i.jsx)(s.FormText, {
                     className: m.addFormFieldText,
                     children: t
                 })
@@ -30,47 +30,47 @@ function f(e) {
     });
 }
 n.Z = function (e) {
-    let { addFormField: n, showManualApprovalWarning: i, guild: h, showHeader: x } = e,
-        p = a.useCallback(
+    let { addFormField: n, showManualApprovalWarning: a, guild: f, showHeader: h } = e,
+        g = l.useCallback(
             (e) => {
-                (0, d.Md)(e, n, h);
+                (0, d.Md)(e, n, f);
             },
-            [n, h]
+            [n, f]
         ),
-        g = a.useCallback(
+        v = l.useCallback(
             (e) => {
-                i
+                a
                     ? (0, s.openModalLazy)(async () => {
                           let { default: n } = await t.e('54845').then(t.bind(t, 199836));
                           return (t) =>
-                              (0, r.jsx)(n, {
+                              (0, i.jsx)(n, {
                                   ...t,
-                                  onSubmit: () => p(e)
+                                  onSubmit: () => g(e)
                               });
                       })
-                    : p(e);
+                    : g(e);
             },
-            [i, p]
+            [a, g]
         );
-    return (0, r.jsxs)('div', {
-        className: o()(m.spacingContainer, m.backgroundContainer),
+    return (0, i.jsxs)('div', {
+        className: r()(m.spacingContainer, m.backgroundContainer),
         children: [
-            x &&
-                (0, r.jsx)('div', {
+            h &&
+                (0, i.jsx)('div', {
                     className: m.containerTopHat,
-                    children: (0, r.jsx)(s.Text, {
+                    children: (0, i.jsx)(s.Text, {
                         className: m.containerTopHatText,
                         variant: 'text-xs/bold',
                         color: 'header-secondary',
                         children: u.intl.string(u.t.neG9U1)
                     })
                 }),
-            (0, r.jsxs)('div', {
+            (0, i.jsxs)('div', {
                 className: m.leftRailIconContainer,
                 children: [
-                    (0, r.jsx)('div', {
+                    (0, i.jsx)('div', {
                         className: m.iconContainer,
-                        children: (0, r.jsx)(s.PlusSmallIcon, {
+                        children: (0, i.jsx)(s.PlusSmallIcon, {
                             size: 'custom',
                             color: 'currentColor',
                             width: 18,
@@ -78,38 +78,38 @@ n.Z = function (e) {
                             className: m.icon
                         })
                     }),
-                    (0, r.jsxs)(s.FormSection, {
+                    (0, i.jsxs)(s.FormSection, {
                         children: [
-                            (0, r.jsx)(s.FormTitle, {
+                            (0, i.jsx)(s.FormTitle, {
                                 tag: 'h3',
                                 className: m.leftRailIconContainerTitle,
                                 children: u.intl.string(u.t['7v2xvr'])
                             }),
-                            (0, r.jsx)(s.FormText, {
+                            (0, i.jsx)(s.FormText, {
                                 className: m.leftRailIconContainerDescription,
                                 type: s.FormText.Types.DESCRIPTION,
                                 children: u.intl.string(u.t.DyARHR)
                             }),
-                            (0, r.jsx)(f, {
+                            (0, i.jsx)(x, {
                                 formFieldType: c.QJ.TEXT_INPUT,
                                 addFormField: n,
-                                icon: (0, s.makeIconCompat)(l.Z),
+                                icon: (0, s.makeIconCompat)(o.Z),
                                 text: u.intl.string(u.t.w6Q9w8),
-                                onClick: () => g(c.QJ.TEXT_INPUT)
+                                onClick: () => v(c.QJ.TEXT_INPUT)
                             }),
-                            (0, r.jsx)(f, {
+                            (0, i.jsx)(x, {
                                 formFieldType: c.QJ.PARAGRAPH,
                                 addFormField: n,
                                 icon: s.ChannelListIcon,
                                 text: u.intl.string(u.t.gG0JBA),
-                                onClick: () => g(c.QJ.PARAGRAPH)
+                                onClick: () => v(c.QJ.PARAGRAPH)
                             }),
-                            (0, r.jsx)(f, {
+                            (0, i.jsx)(x, {
                                 formFieldType: c.QJ.MULTIPLE_CHOICE,
                                 addFormField: n,
                                 icon: s.ListBulletsIcon,
                                 text: u.intl.string(u.t.ooKh3t),
-                                onClick: () => g(c.QJ.MULTIPLE_CHOICE)
+                                onClick: () => v(c.QJ.MULTIPLE_CHOICE)
                             })
                         ]
                     })

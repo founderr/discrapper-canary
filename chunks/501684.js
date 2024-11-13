@@ -1,10 +1,10 @@
 let n, a, _, o, i;
 r.d(t, {
     $A: function () {
-        return L;
+        return f;
     },
     PR: function () {
-        return f;
+        return L;
     },
     YF: function () {
         return h;
@@ -33,10 +33,10 @@ var E = r(622916),
     N = r(288570);
 let T = {},
     d = {};
-function f(e, t = !1) {
+function L(e, t = !1) {
     return G('cls', e, C, n, t);
 }
-function L(e, t = !1) {
+function f(e, t = !1) {
     return G('lcp', e, P, _, t);
 }
 function O(e) {

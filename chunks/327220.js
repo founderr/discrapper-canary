@@ -12,7 +12,7 @@ function o(e) {
     let t = (0, a.e7)([l.Z], () => l.Z.getPrivateChannelsVersion()),
         n = (0, a.e7)([l.Z], () => l.Z.getMutableDMsByUserIds(), [t]),
         o = (0, a.e7)([i.ZP], () => i.ZP.getMutedChannels(null)),
-        c = r.useMemo(() => {
+        s = r.useMemo(() => {
             let e = new Set();
             for (let t in n) {
                 let r = n[t];
@@ -25,9 +25,9 @@ function o(e) {
             null == e
                 ? void 0
                 : e.filter((e) => {
-                      for (let t of e.participants) if (c.has(t)) return !1;
+                      for (let t of e.participants) if (s.has(t)) return !1;
                       return !0;
                   }),
-        [e, c]
+        [e, s]
     );
 }

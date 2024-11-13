@@ -40,14 +40,14 @@ function p(e) {
 function f(e) {
     var t, n;
     let { rule: l, onChangeText: a, className: o } = e,
-        { patterns: m, valueError: f, errors: C, validatePatternsChanged: I, validateEditingValueChanged: _ } = (0, d.Z)(l, a),
-        [N] = r.useState(() => ({
+        { patterns: m, valueError: f, errors: C, validatePatternsChanged: v, validateEditingValueChanged: _ } = (0, d.Z)(l, a),
+        [I] = r.useState(() => ({
             tags: m,
             value: '',
             selections: [],
             isSelecting: !1
         })),
-        v = r.useMemo(
+        N = r.useMemo(
             () =>
                 C.reduce((e, t) => {
                     let { pattern: n, message: i, description: r, erroringCharacterLength: l = n.length, erroringCharacterOffset: s = 0 } = t;
@@ -65,9 +65,9 @@ function f(e) {
         ),
         T = r.useCallback(
             (e) => {
-                I(e, m);
+                v(e, m);
             },
-            [I, m]
+            [v, m]
         ),
         j = r.useCallback(
             (e) => {
@@ -80,10 +80,10 @@ function f(e) {
         children: [
             (0, i.jsx)(c.Z, {
                 placeholder: '^b(a|@)d$\nw(o|0)rd(s|$)',
-                initialValue: N,
+                initialValue: I,
                 onChangeTags: T,
                 onChangeNewTagValue: j,
-                tagErrors: v,
+                tagErrors: N,
                 maxTags: u.VW
             }),
             (0, i.jsx)(p, {

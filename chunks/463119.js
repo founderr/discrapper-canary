@@ -26,19 +26,19 @@ var i = n(200651),
     S = n(744112),
     N = n(267097),
     T = n(141594),
-    x = n(302800),
-    A = n(981631),
-    b = n(388032),
+    A = n(302800),
+    b = n(981631),
+    x = n(388032),
     Z = n(283522);
-let y = (e) => {
+let L = (e) => {
         let { color: t } = e;
         return (0, i.jsx)(d.TextBadge, {
             className: Z.newBadge,
             color: null != t ? t : E.Z.STATUS_DANGER_BACKGROUND,
-            text: b.intl.string(b.t.y2b7CA)
+            text: x.intl.string(x.t.y2b7CA)
         });
     },
-    L = (e) => {
+    y = (e) => {
         let { selected: t, locationState: n, icon: l, onMouseEnter: a, onMouseLeave: o, children: c, ...u } = e,
             m = (0, s.JA)('shop'),
             p = g.Z.HOME_PAGE_SHOP_TAB,
@@ -54,9 +54,9 @@ let y = (e) => {
             );
         return (0, i.jsx)(h.Qj, {
             selected: t,
-            route: A.Z5c.COLLECTIBLES_SHOP,
+            route: b.Z5c.COLLECTIBLES_SHOP,
             icon: null != l ? l : d.ShopIcon,
-            text: b.intl.string(b.t.pWG4zc),
+            text: x.intl.string(x.t.pWG4zc),
             locationState: n,
             ...m,
             ...u,
@@ -68,10 +68,10 @@ let y = (e) => {
     },
     R = (e) => {
         let { selected: t, locationState: n } = e;
-        return (0, i.jsx)(L, {
+        return (0, i.jsx)(y, {
             selected: t,
             locationState: n,
-            children: (0, i.jsx)(y, {})
+            children: (0, i.jsx)(L, {})
         });
     },
     O = r.memo(function (e) {
@@ -112,31 +112,31 @@ let y = (e) => {
             ]
         });
     }),
-    j = (e) => {
+    P = (e) => {
         var t, n, l, s, u, h, g, f, _, E, I, v;
         let S, N;
-        let { selected: T, locationState: x, displayOptions: A } = e,
+        let { selected: T, locationState: A, displayOptions: b } = e,
             R = (0, o.e7)([p.Z], () => p.Z.useReducedMotion),
-            [j, P] = r.useState(0),
+            [P, j] = r.useState(0),
             [D, M] = r.useState(!1),
             w = (0, m.ZP)(),
-            k = A.entrypointDecorationAssets,
+            k = b.entrypointDecorationAssets,
             U = (0, c.wj)(w);
-        D ? (U ? ((S = null === (t = A.entryPointBackgroundAssets) || void 0 === t ? void 0 : t.srcDarkHovered), (N = null === (l = A.entrypointBackgroundStyle) || void 0 === l ? void 0 : null === (n = l.hovered) || void 0 === n ? void 0 : n.dark)) : ((S = null === (s = A.entryPointBackgroundAssets) || void 0 === s ? void 0 : s.srcLightHovered), (N = null === (h = A.entrypointBackgroundStyle) || void 0 === h ? void 0 : null === (u = h.hovered) || void 0 === u ? void 0 : u.light))) : U ? ((S = null === (g = A.entryPointBackgroundAssets) || void 0 === g ? void 0 : g.srcDark), (N = null === (_ = A.entrypointBackgroundStyle) || void 0 === _ ? void 0 : null === (f = _.resting) || void 0 === f ? void 0 : f.dark)) : ((S = null === (E = A.entryPointBackgroundAssets) || void 0 === E ? void 0 : E.srcLight), (N = null === (v = A.entrypointBackgroundStyle) || void 0 === v ? void 0 : null === (I = v.resting) || void 0 === I ? void 0 : I.light));
+        D ? (U ? ((S = null === (t = b.entryPointBackgroundAssets) || void 0 === t ? void 0 : t.srcDarkHovered), (N = null === (l = b.entrypointBackgroundStyle) || void 0 === l ? void 0 : null === (n = l.hovered) || void 0 === n ? void 0 : n.dark)) : ((S = null === (s = b.entryPointBackgroundAssets) || void 0 === s ? void 0 : s.srcLightHovered), (N = null === (h = b.entrypointBackgroundStyle) || void 0 === h ? void 0 : null === (u = h.hovered) || void 0 === u ? void 0 : u.light))) : U ? ((S = null === (g = b.entryPointBackgroundAssets) || void 0 === g ? void 0 : g.srcDark), (N = null === (_ = b.entrypointBackgroundStyle) || void 0 === _ ? void 0 : null === (f = _.resting) || void 0 === f ? void 0 : f.dark)) : ((S = null === (E = b.entryPointBackgroundAssets) || void 0 === E ? void 0 : E.srcLight), (N = null === (v = b.entrypointBackgroundStyle) || void 0 === v ? void 0 : null === (I = v.resting) || void 0 === I ? void 0 : I.light));
         let G = r.useCallback(
                 (e) => {
-                    P((e) => (e + 1) % A.assetIds.length), M(!0), null == e || e();
+                    j((e) => (e + 1) % b.assetIds.length), M(!0), null == e || e();
                 },
-                [A.assetIds.length]
+                [b.assetIds.length]
             ),
             B = r.useCallback((e) => {
                 M(!1), null == e || e();
             }, []),
-            H = A.title();
+            V = b.title();
         return (0, i.jsx)(d.Tooltip, {
             text: (0, i.jsx)(O, {
-                displayOptions: A,
-                assetId: A.assetIds[j],
+                displayOptions: b,
+                assetId: b.assetIds[P],
                 reducedMotion: R
             }),
             tooltipClassName: Z.marketingBadgeTooltip,
@@ -144,13 +144,13 @@ let y = (e) => {
             delay: 100,
             allowOverflow: !0,
             hideOnClick: !1,
-            'aria-label': 'string' == typeof H ? H : b.intl.string(b.t.rSXaxc),
+            'aria-label': 'string' == typeof V ? V : x.intl.string(x.t.rSXaxc),
             children: (e) =>
-                (0, i.jsxs)(L, {
-                    className: null != A.entryPointClassName ? (0, C.l)(Z, A.entryPointClassName) : void 0,
+                (0, i.jsxs)(y, {
+                    className: null != b.entryPointClassName ? (0, C.l)(Z, b.entryPointClassName) : void 0,
                     selected: T,
-                    locationState: x,
-                    icon: A.entryPointIcon,
+                    locationState: A,
+                    icon: b.entryPointIcon,
                     ...e,
                     onMouseEnter: () => G(e.onMouseEnter),
                     onMouseLeave: () => B(e.onMouseLeave),
@@ -175,12 +175,12 @@ let y = (e) => {
                                 alt: '',
                                 'aria-hidden': !0
                             }),
-                        (0, i.jsx)(y, { color: A.badgeColor })
+                        (0, i.jsx)(L, { color: b.badgeColor })
                     ]
                 })
         });
     },
-    P = (e) => {
+    j = (e) => {
         let { selected: t, locationState: n, displayOptions: l } = e,
             a = r.useMemo(() => {
                 var e;
@@ -199,11 +199,11 @@ let y = (e) => {
             hideOnClick: !1,
             'aria-label': l.title(),
             children: (e) =>
-                (0, i.jsx)(L, {
+                (0, i.jsx)(y, {
                     selected: t,
                     locationState: n,
                     ...e,
-                    children: (0, i.jsx)(y, { color: l.badgeColor })
+                    children: (0, i.jsx)(L, { color: l.badgeColor })
                 })
         });
     },
@@ -214,19 +214,19 @@ let y = (e) => {
             l = (0, S.b)('Collectibles Shop Button');
         if (null != r)
             switch (r.type) {
-                case x.k2.TOOLTIP:
-                    return (0, i.jsx)(P, {
-                        selected: t,
-                        locationState: n,
-                        displayOptions: r
-                    });
-                case x.k2.COACHTIP:
+                case A.k2.TOOLTIP:
                     return (0, i.jsx)(j, {
                         selected: t,
                         locationState: n,
                         displayOptions: r
                     });
-                case x.k2.BADGE:
+                case A.k2.COACHTIP:
+                    return (0, i.jsx)(P, {
+                        selected: t,
+                        locationState: n,
+                        displayOptions: r
+                    });
+                case A.k2.BADGE:
                     return (0, i.jsx)(R, {
                         selected: t,
                         locationState: n
@@ -235,7 +235,7 @@ let y = (e) => {
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 l && (0, i.jsx)(D, {}),
-                (0, i.jsx)(L, {
+                (0, i.jsx)(y, {
                     selected: t,
                     locationState: n
                 })

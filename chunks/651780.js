@@ -19,10 +19,10 @@ var i = n(200651),
     p = n(899667),
     f = n(626135),
     C = n(267642),
-    I = n(63063),
+    v = n(63063),
     _ = n(999382),
-    N = n(981631),
-    v = n(388032),
+    I = n(981631),
+    N = n(388032),
     T = n(720898);
 function j(e) {
     let { endsAt: t, appliedGuildBoostsToMaintain: n, tierName: r } = e,
@@ -32,11 +32,11 @@ function j(e) {
         : (0, i.jsx)(i.Fragment, {
               children:
                   0 === l && 0 === s
-                      ? v.intl.format(v.t.kF0HER, {
+                      ? N.intl.format(N.t.kF0HER, {
                             tierName: r,
                             numPremiumSubscriptions: n
                         })
-                      : v.intl.format(v.t.neDJho, {
+                      : N.intl.format(N.t.neDJho, {
                             days: l,
                             hours: s,
                             tierName: r,
@@ -44,7 +44,7 @@ function j(e) {
                         })
           });
 }
-function S(e) {
+function b(e) {
     let { appliedGuildBoosts: t, guildId: n } = e,
         r = (0, C.gZ)(t, n),
         l = (0, C.nW)((0, C.rF)(t.length, n));
@@ -55,7 +55,7 @@ function S(e) {
         children: [
             (0, i.jsx)('div', {
                 className: T.guildBoostingGracePeriodTitle,
-                children: v.intl.format(v.t.LG7vvr, {})
+                children: N.intl.format(N.t.LG7vvr, {})
             }),
             (0, i.jsx)(j, {
                 endsAt: r,
@@ -65,7 +65,7 @@ function S(e) {
         ]
     });
 }
-let b = (e) => {
+let S = (e) => {
     let { isAnimatedTo: t, onSetRef: n, subscriptionCount: r, tier: l, tiers: s, tierIndex: a, guildId: o } = e;
     return (0, i.jsx)(
         x.Z,
@@ -95,10 +95,10 @@ function E() {
                 children: [
                     (0, i.jsx)(s.FormTitle, {
                         tag: s.FormTitleTags.H1,
-                        children: v.intl.string(v.t.nLovSU)
+                        children: N.intl.string(N.t.nLovSU)
                     }),
                     null != t && null != e
-                        ? (0, i.jsx)(S, {
+                        ? (0, i.jsx)(b, {
                               appliedGuildBoosts: t,
                               guildId: e.id
                           })
@@ -106,24 +106,24 @@ function E() {
                     (0, i.jsx)(s.FormText, {
                         type: s.FormText.Types.DESCRIPTION,
                         className: T.titleBlurb,
-                        children: v.intl.format(v.t.hLOkp6, { helpdeskArticle: I.Z.getArticleURL(N.BhN.GUILD_SUBSCRIPTIONS) })
+                        children: N.intl.format(N.t.hLOkp6, { helpdeskArticle: v.Z.getArticleURL(I.BhN.GUILD_SUBSCRIPTIONS) })
                     })
                 ]
             }),
             (0, i.jsx)(g.Z, {
-                tiers: (0, C.cP)(null != e && e.hasFeature(N.oNc.COMMUNITY) && e.maxStageVideoChannelUsers >= N.B9o),
-                renderTier: b
+                tiers: (0, C.cP)(null != e && e.hasFeature(I.oNc.COMMUNITY) && e.maxStageVideoChannelUsers >= I.B9o),
+                renderTier: S
             }),
             (0, i.jsx)('div', { className: T.divider }),
             n ? (0, i.jsx)(h.Z, {}) : null,
             n
                 ? (0, i.jsx)(m.Z, {
                       onOpenPremiumClick: () =>
-                          void f.default.track(N.rMx.PREMIUM_PROMOTION_OPENED, {
+                          void f.default.track(I.rMx.PREMIUM_PROMOTION_OPENED, {
                               location: {
-                                  page: N.ZY5.GUILD_SETTINGS,
-                                  section: N.jXE.NITRO_CROSS_PROMO_FROM_BOOSTING,
-                                  object: N.qAy.BUTTON_CTA
+                                  page: I.ZY5.GUILD_SETTINGS,
+                                  section: I.jXE.NITRO_CROSS_PROMO_FROM_BOOSTING,
+                                  object: I.qAy.BUTTON_CTA
                               }
                           })
                   })

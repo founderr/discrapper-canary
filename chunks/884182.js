@@ -17,12 +17,12 @@ let g = Math.round((I.mT - 8) / 3),
     C = Math.round((I.Jj - 4) / 2),
     f = Math.round((2 * (I.mT - 4)) / 3),
     j = f / 2;
-function y(e) {
+function v(e) {
     let { visualMediaItems: n, footer: t } = e;
     null != t && r()(1 === n.length, 'footer only gets applied to single items');
     let l = n.length;
     if (1 === l)
-        return (0, i.jsx)(v, {
+        return (0, i.jsx)(y, {
             itemsForLayout: n,
             isSingleImage: !0,
             footer: t
@@ -32,10 +32,10 @@ function y(e) {
     if (4 === l) return (0, i.jsx)(N, { itemsForLayout: n });
     let o = l % 3;
     return (0, i.jsxs)(i.Fragment, {
-        children: [1 === o && (0, i.jsx)(v, { itemsForLayout: n.slice(0, o) }), 2 === o && (0, i.jsx)(E, { itemsForLayout: n.slice(0, o) }), 0 === o ? (0, i.jsx)(T, { itemsForLayout: n }) : (0, i.jsx)(T, { itemsForLayout: n.slice(o) })]
+        children: [1 === o && (0, i.jsx)(y, { itemsForLayout: n.slice(0, o) }), 2 === o && (0, i.jsx)(E, { itemsForLayout: n.slice(0, o) }), 0 === o ? (0, i.jsx)(T, { itemsForLayout: n }) : (0, i.jsx)(T, { itemsForLayout: n.slice(o) })]
     });
 }
-function v(e) {
+function y(e) {
     let { itemsForLayout: n, isSingleImage: t, footer: l } = e,
         o = n[0];
     return (0, i.jsx)('div', {
@@ -194,14 +194,14 @@ n.Z = function (e) {
                           children: [
                               (0, i.jsx)('div', {
                                   className: x.visualMediaItemContainer,
-                                  children: (0, i.jsx)(y, { visualMediaItems: o })
+                                  children: (0, i.jsx)(v, { visualMediaItems: o })
                               }),
                               t
                           ]
                       })
                     : (0, i.jsx)('div', {
                           className: x.visualMediaItemContainer,
-                          children: (0, i.jsx)(y, { visualMediaItems: o })
+                          children: (0, i.jsx)(v, { visualMediaItems: o })
                       })),
             a.length > 0 &&
                 a.map((e) => {
@@ -213,7 +213,7 @@ n.Z = function (e) {
                         'div',
                         {
                             className: x.visualMediaItemContainer,
-                            children: (0, i.jsx)(y, {
+                            children: (0, i.jsx)(v, {
                                 visualMediaItems: [e],
                                 footer: n
                             })

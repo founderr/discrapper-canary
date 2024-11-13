@@ -116,7 +116,7 @@ function f(e) {
     (0, s.RD)(t.id);
     let f = (0, a.Z6)(t.id),
         { rulesByTriggerType: C } = (0, s.pH)(t.id),
-        { numEnabledRules: I, numRules: _ } = r.useMemo(() => {
+        { numEnabledRules: v, numRules: _ } = r.useMemo(() => {
             let e = 0,
                 t = 0;
             return null == C
@@ -142,11 +142,11 @@ function f(e) {
                       numRules: t
                   });
         }, [f, C]),
-        N = (0, m.Q)(t),
-        v = N[u.u.CAPTCHA_AND_RAID_PROTECTION],
-        T = N[u.u.DM_AND_SPAM_PROTECTION],
-        j = N[u.u.PERMISSIONS],
-        S = (0, o.pr)(t.id);
+        I = (0, m.Q)(t),
+        N = I[u.u.CAPTCHA_AND_RAID_PROTECTION],
+        T = I[u.u.DM_AND_SPAM_PROTECTION],
+        j = I[u.u.PERMISSIONS],
+        b = (0, o.pr)(t.id);
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(l.Heading, {
@@ -163,8 +163,8 @@ function f(e) {
                         icon: n(14215),
                         title: h.intl.string(h.t['53eF5u']),
                         subtitle: h.intl.formatToPlainString(h.t.TG7NYG, {
-                            enabled: v.filter((e) => e.enabled).length,
-                            total: v.length
+                            enabled: N.filter((e) => e.enabled).length,
+                            total: N.length
                         }),
                         page: u.u.CAPTCHA_AND_RAID_PROTECTION
                     }),
@@ -179,14 +179,14 @@ function f(e) {
                         page: u.u.DM_AND_SPAM_PROTECTION
                     }),
                     (0, i.jsx)('div', { className: g.divider }),
-                    S &&
+                    b &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsx)(p, {
                                     icon: n(145136),
                                     title: h.intl.string(h.t.uRelg4),
                                     subtitle: h.intl.formatToPlainString(h.t.TG7NYG, {
-                                        enabled: I,
+                                        enabled: v,
                                         total: _
                                     }),
                                     page: u.u.AUTOMOD

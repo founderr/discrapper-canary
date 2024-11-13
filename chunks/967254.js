@@ -16,10 +16,10 @@ var i = n(200651),
     _ = n(709054),
     E = n(219230),
     S = n(531441),
-    f = n(236289),
-    g = n(788080),
-    m = n(467432),
-    p = n(451284),
+    g = n(236289),
+    f = n(788080),
+    p = n(467432),
+    m = n(451284),
     T = n(613734),
     h = n(800530),
     A = n(981631),
@@ -103,15 +103,15 @@ let v = (t) => {
                 children: x.intl.string(x.t.RV3AXV)
             })
         }),
-    U = (t) => {
+    b = (t) => {
         let { timestamp: e } = t;
         return (0, i.jsx)(o.Text, {
             variant: 'text-xs/normal',
             className: I.timestamp,
-            children: (0, g.XX)(e)
+            children: (0, f.XX)(e)
         });
     },
-    b = () =>
+    U = () =>
         (0, i.jsx)(o.Text, {
             variant: 'text-xs/bold',
             className: I.newBadge,
@@ -121,9 +121,9 @@ let v = (t) => {
         let { classification: e } = t,
             { id: l, description: r } = e,
             c = _.default.extractTimestamp(l),
-            u = (0, m.e)(e),
+            u = (0, p.e)(e),
             d = (0, E.B)('violations_container'),
-            f = a.useMemo(() => {
+            g = a.useMemo(() => {
                 var t, n, a;
                 let l = {
                     description: r,
@@ -134,7 +134,7 @@ let v = (t) => {
                             children: t
                         })
                 };
-                if (!(d && (0, g.FB)(e))) return x.intl.format(x.t.QY4g5u, l);
+                if (!(d && (0, f.FB)(e))) return x.intl.format(x.t.QY4g5u, l);
                 return (null == e ? void 0 : null === (t = e.guild_metadata) || void 0 === t ? void 0 : t.member_type) === S.wO.OWNER
                     ? x.intl.format(x.t.Lb0HVl, {
                           ...l,
@@ -151,7 +151,7 @@ let v = (t) => {
             {
                 onClick: () => {
                     (0, o.openModalLazy)(async () => {
-                        let { default: t } = await Promise.all([n.e('72181'), n.e('25183'), n.e('46097'), n.e('18831'), n.e('92999')]).then(n.bind(n, 41164));
+                        let { default: t } = await Promise.all([n.e('40216'), n.e('25183'), n.e('46097'), n.e('18831'), n.e('92999')]).then(n.bind(n, 41164));
                         return (e) =>
                             (0, i.jsx)(t, {
                                 classificationId: l,
@@ -164,10 +164,10 @@ let v = (t) => {
                 children: (0, i.jsxs)('div', {
                     className: I.descriptionContainer,
                     children: [
-                        u ? (0, i.jsx)(b, {}) : (0, i.jsx)(U, { timestamp: c }),
+                        u ? (0, i.jsx)(U, {}) : (0, i.jsx)(b, { timestamp: c }),
                         (0, i.jsx)(o.Heading, {
                             variant: 'heading-lg/normal',
-                            children: f
+                            children: g
                         })
                     ]
                 })
@@ -179,8 +179,8 @@ let v = (t) => {
         let { status: e, classifications: n } = t,
             [l, s] = a.useState(!1),
             [c, u] = a.useState(3),
-            _ = (0, p.P)(),
-            E = (0, r.e7)([f.Z], () => f.Z.getIsDsaEligible()),
+            _ = (0, m.P)(),
+            E = (0, r.e7)([g.Z], () => g.Z.getIsDsaEligible()),
             S = a.useMemo(() => n.slice(0, c), [n, c]);
         a.useEffect(() => {
             l &&
@@ -193,7 +193,7 @@ let v = (t) => {
                     is_dsa_eligible: E
                 });
         }, [l, _.state, S, E]);
-        let g = n.length - S.length > 3 ? 3 : n.length - S.length;
+        let f = n.length - S.length > 3 ? 3 : n.length - S.length;
         return (0, i.jsxs)('div', {
             className: I.dropdown,
             children: [
@@ -225,8 +225,8 @@ let v = (t) => {
                                         }),
                                         (0, i.jsx)('button', {
                                             className: I.paginationButton,
-                                            onClick: () => u((t) => t + g),
-                                            children: x.intl.format(x.t['9Ml56O'], { nextPageSize: g })
+                                            onClick: () => u((t) => t + f),
+                                            children: x.intl.format(x.t['9Ml56O'], { nextPageSize: f })
                                         })
                                     ]
                                 }),

@@ -1,15 +1,15 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
-        return h;
+        return g;
     }
 });
-var r = t(200651);
-t(192379);
-var a = t(249849),
-    i = t(907561),
-    o = t(388032),
-    s = t(409814);
-let l = ['#cc99ff', '#ffffff'],
+var i = n(200651);
+n(192379);
+var r = n(249849),
+    l = n(907561),
+    s = n(388032),
+    a = n(409814);
+let o = ['#cc99ff', '#ffffff'],
     c = ['#2d3dee', '#ffffff'],
     d = [0.3, 1],
     u = [
@@ -23,7 +23,7 @@ let l = ['#cc99ff', '#ffffff'],
         }
     ],
     m = [0.3, 1],
-    f = [
+    h = [
         {
             base: 2,
             tint: 1
@@ -33,31 +33,31 @@ let l = ['#cc99ff', '#ffffff'],
             tint: 1
         }
     ];
-function h(e) {
-    let { width: n, height: t, primaryTintColor: h, secondaryTintColor: x, ...p } = e,
-        { primaryColorsTransformed: g, secondaryColorsTransformed: C } = (0, a.s)({
-            primaryBaseColors: l,
-            primaryTintColor: h,
+function g(e) {
+    let { width: t, height: n, primaryTintColor: g, secondaryTintColor: x, ...p } = e,
+        { primaryColorsTransformed: f, secondaryColorsTransformed: C } = (0, r.s)({
+            primaryBaseColors: o,
+            primaryTintColor: g,
             primaryTintLuminances: d,
             primaryLuminanceWeights: u,
             secondaryBaseColors: c,
             secondaryTintColor: x,
             secondaryTintLuminances: m,
-            secondaryLuminanceWeights: f
+            secondaryLuminanceWeights: h
         }),
-        { styleContent: b, containerId: v } = (0, i.bC)(g, C);
-    return (0, r.jsxs)('svg', {
+        { styleContent: v, containerId: _ } = (0, l.bC)(f, C);
+    return (0, i.jsxs)('svg', {
         ...p,
-        'aria-label': o.intl.string(o.t.nH6S2d),
-        width: n,
-        height: t,
-        viewBox: '0 0 '.concat(i.Km, ' ').concat(i.md),
+        'aria-label': s.intl.string(s.t.nH6S2d),
+        width: t,
+        height: n,
+        viewBox: '0 0 '.concat(l.Km, ' ').concat(l.md),
         children: [
-            (0, r.jsxs)('defs', {
+            (0, i.jsxs)('defs', {
                 children: [
-                    (0, r.jsxs)('defs', {
+                    (0, i.jsxs)('defs', {
                         children: [
-                            (0, r.jsxs)('radialGradient', {
+                            (0, i.jsxs)('radialGradient', {
                                 id: 'fog-gradient-primary',
                                 cx: '.5',
                                 cy: '.5',
@@ -66,17 +66,17 @@ function h(e) {
                                 fy: '.33',
                                 spreadMethod: 'pad',
                                 children: [
-                                    (0, r.jsx)('stop', {
-                                        stopColor: g[1],
+                                    (0, i.jsx)('stop', {
+                                        stopColor: f[1],
                                         offset: '0%'
                                     }),
-                                    (0, r.jsx)('stop', {
-                                        stopColor: g[0],
+                                    (0, i.jsx)('stop', {
+                                        stopColor: f[0],
                                         offset: '70%'
                                     })
                                 ]
                             }),
-                            (0, r.jsxs)('radialGradient', {
+                            (0, i.jsxs)('radialGradient', {
                                 id: 'fog-gradient-secondary',
                                 cx: '.5',
                                 cy: '.5',
@@ -85,11 +85,11 @@ function h(e) {
                                 fy: '.33',
                                 spreadMethod: 'pad',
                                 children: [
-                                    (0, r.jsx)('stop', {
+                                    (0, i.jsx)('stop', {
                                         stopColor: C[1],
                                         offset: '0%'
                                     }),
-                                    (0, r.jsx)('stop', {
+                                    (0, i.jsx)('stop', {
                                         stopColor: C[0],
                                         offset: '70%'
                                     })
@@ -97,19 +97,19 @@ function h(e) {
                             })
                         ]
                     }),
-                    (0, r.jsx)('style', { children: b })
+                    (0, i.jsx)('style', { children: v })
                 ]
             }),
-            (0, r.jsx)('use', {
-                href: ''.concat(s, '#wrapper-layer'),
-                id: v
+            (0, i.jsx)('use', {
+                href: ''.concat(a, '#wrapper-layer'),
+                id: _
             }),
-            (0, r.jsx)('use', {
-                href: ''.concat(s, '#clan-banner-warp-tunnel-secondary'),
+            (0, i.jsx)('use', {
+                href: ''.concat(a, '#clan-banner-warp-tunnel-secondary'),
                 style: { fill: 'url(#fog-gradient-secondary)' }
             }),
-            (0, r.jsx)('use', {
-                href: ''.concat(s, '#clan-banner-warp-tunnel-primary'),
+            (0, i.jsx)('use', {
+                href: ''.concat(a, '#clan-banner-warp-tunnel-primary'),
                 style: { fill: 'url(#fog-gradient-primary)' }
             })
         ]

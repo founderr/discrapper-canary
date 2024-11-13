@@ -69,13 +69,13 @@ function A(e) {
             },
             [p]
         ),
-        L = l.useCallback(
+        R = l.useCallback(
             (e) => {
                 e.stopPropagation(), e.preventDefault(), o();
             },
             [o]
         ),
-        R = (0, c.useTransition)(
+        L = (0, c.useTransition)(
             a,
             {
                 from: {
@@ -107,7 +107,7 @@ function A(e) {
         O = k ? T.intl.formatToPlainString(T.t.qFqINz, { guildName: n.name }) : T.intl.formatToPlainString(T.t.bFwASk, { guildName: n.name }),
         D = k ? T.intl.string(T.t.eA1ymp) : T.intl.string(T.t.MF0Ntb),
         w = k ? T.intl.formatToPlainString(T.t['60PXOz'], { guildName: n.name }) : T.intl.formatToPlainString(T.t.i27ioq, { guildName: n.name });
-    return R((e, t) => {
+    return L((e, t) => {
         var l, a;
         return (
             t &&
@@ -122,7 +122,7 @@ function A(e) {
                 ref: C,
                 children: (0, i.jsx)(c.ClickableContainer, {
                     'aria-label': w,
-                    onClick: L,
+                    onClick: R,
                     children: (0, i.jsxs)('div', {
                         className: r()(j.toastContainerInner, m ? j.hovered : null),
                         children: [

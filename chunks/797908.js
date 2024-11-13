@@ -19,7 +19,7 @@ t.Z = function (e) {
         T = r.useCallback(() => {
             I(E.id);
         }, [I, E.id]),
-        x = r.useMemo(
+        A = r.useMemo(
             () =>
                 d.ZP.getApplicationIconURL({
                     id: E.id,
@@ -28,8 +28,8 @@ t.Z = function (e) {
                 }),
             [E]
         ),
-        A = (null !== (f = null === (n = E.directory_entry) || void 0 === n ? void 0 : n.guild_count) && void 0 !== f ? f : 0) > 0 || v.length > 0,
-        b = (0, i.jsx)(s.Z, {
+        b = (null !== (f = null === (n = E.directory_entry) || void 0 === n ? void 0 : n.guild_count) && void 0 !== f ? f : 0) > 0 || v.length > 0,
+        x = (0, i.jsx)(s.Z, {
             application: E,
             textVariant: 'text-xs/medium',
             mutualGuilds: v,
@@ -51,13 +51,13 @@ t.Z = function (e) {
                         (0, i.jsx)(u.Z, {
                             application: E,
                             bannerType: 'card',
-                            iconURL: x
+                            iconURL: A
                         }),
                         (0, i.jsx)('div', {
                             className: m.avatarContainer,
                             style: { height: p },
                             children: (0, i.jsx)('img', {
-                                src: x,
+                                src: A,
                                 alt: '',
                                 className: m.avatar,
                                 height: 48,
@@ -121,10 +121,10 @@ t.Z = function (e) {
                             lineClamp: Z || N ? 2 : 3,
                             children: null !== (_ = null === (g = E.directory_entry) || void 0 === g ? void 0 : g.short_description) && void 0 !== _ ? _ : E.description
                         }),
-                        A
+                        b
                             ? (0, i.jsx)('div', {
                                   className: m.memberDetails,
-                                  children: b
+                                  children: x
                               })
                             : null
                     ]

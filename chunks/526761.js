@@ -1,4 +1,4 @@
-var n, a, _, o, i, E, c, s, l, u, I, R, A, N, T, d, f;
+var n, a, _, o, i, E, c, s, l, u, I, R, A, N, T, d, L;
 r.d(t, {
     Ax: function () {
         return l;
@@ -34,7 +34,7 @@ r.d(t, {
         return g;
     },
     oX: function () {
-        return L;
+        return f;
     },
     rP: function () {
         return o;
@@ -55,7 +55,7 @@ r.d(t, {
         return c;
     }
 });
-let L = 250,
+let f = 250,
     O = 762880,
     p = 'ROLE_SUBSCRIPTIONS',
     h = 'APPLICATION_SUBSCRIPTION_SUBSECTION',
@@ -96,4 +96,4 @@ let g = {
         UNREADS_ONLY_MENTIONS: 4096,
         UNREADS_ALL_MESSAGES: 2048
     };
-((f = u || (u = {})).USER = 'user'), (f.STREAM = 'stream');
+((L = u || (u = {})).USER = 'user'), (L.STREAM = 'stream');

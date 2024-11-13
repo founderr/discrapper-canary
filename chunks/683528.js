@@ -63,17 +63,17 @@ function g(e) {
                 children: n.map((e, i) => {
                     let s = i === t,
                         u = s ? m.t['qv/U5e'] : m.t.zviMAA;
-                    return (0, r.jsx)(
+                    return (0, r.jsxs)(
                         o.Clickable,
                         {
                             id: f(i),
-                            className: l()(h.galleryItem, { [h.selected]: s }),
+                            className: h.galleryItem,
                             'aria-label': m.intl.formatToPlainString(u, {
                                 pageNumber: i + 1,
                                 totalPages: n.length
                             }),
                             onClick: () => a(i),
-                            children: (0, r.jsx)(p, { item: e })
+                            children: [(0, r.jsx)('div', { className: l()(h.galleryItemOverlay, { [h.selected]: s }) }), (0, r.jsx)(p, { item: e })]
                         },
                         i
                     );

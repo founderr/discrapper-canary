@@ -21,16 +21,16 @@ var i,
     S = n(906732),
     N = n(812206),
     T = n(933557),
-    x = n(194082),
-    A = n(264165),
-    b = n(630186),
+    A = n(194082),
+    b = n(264165),
+    x = n(630186),
     Z = n(925329),
-    y = n(102172),
-    L = n(871118),
+    L = n(102172),
+    y = n(871118),
     R = n(707409),
     O = n(849171),
-    j = n(314897),
-    P = n(592125),
+    P = n(314897),
+    j = n(592125),
     D = n(594174),
     M = n(395361),
     w = n(639351),
@@ -38,8 +38,8 @@ var i,
     U = n(823379),
     G = n(51144),
     B = n(599706),
-    H = n(981631),
-    V = n(388032),
+    V = n(981631),
+    H = n(388032),
     F = n(534255);
 let z = {
         SMALL: 64,
@@ -131,7 +131,7 @@ class Q extends a.Component {
                               })
                           }),
                     (0, l.jsxs)('div', {
-                        children: [W(null != r && '' !== r ? r : V.intl.string(V.t['2TbM/P'])), null != a ? K(a) : null, this.renderTimePlayed()]
+                        children: [W(null != r && '' !== r ? r : H.intl.string(H.t['2TbM/P'])), null != a ? K(a) : null, this.renderTimePlayed()]
                     })
                 ]
             })
@@ -219,7 +219,7 @@ $.Icon = J;
 let ee = (e) => {
     let { children: t, className: n, ...i } = e;
     return (0, l.jsx)(u.FocusRing, {
-        children: (0, l.jsx)(b.Z, {
+        children: (0, l.jsx)(x.Z, {
             className: o()(n, F.wrapper),
             padded: !0,
             ...i,
@@ -230,7 +230,7 @@ let ee = (e) => {
 (ee.Header = $),
     (ee.Body = (e) => {
         let { children: t } = e;
-        return (0, l.jsx)(b.Z, {
+        return (0, l.jsx)(x.Z, {
             inset: !0,
             padded: !1,
             className: F.body,
@@ -315,7 +315,7 @@ let ee = (e) => {
                           })
                         : null,
                     (0, l.jsxs)('div', {
-                        children: [W(n), K(V.intl.formatToPlainString(V.t.C4WXvb, { memberCount: i.totalSize }))]
+                        children: [W(n), K(H.intl.formatToPlainString(H.t.C4WXvb, { memberCount: i.totalSize }))]
                     }),
                     (0, l.jsx)(B.Z, {
                         partySize: i,
@@ -335,7 +335,7 @@ let ee = (e) => {
                     (0, l.jsx)(w.Z, { className: F.xboxSectionIcon }),
                     (0, l.jsxs)('div', {
                         className: F.__invalid_xboxSectionDetails,
-                        children: [W(t), K(V.intl.string(V.t['JG9r+/']))]
+                        children: [W(t), K(H.intl.string(H.t['JG9r+/']))]
                     })
                 ]
             })
@@ -390,7 +390,7 @@ let ee = (e) => {
             { name: c, details: d, assets: h, application_id: m } = i;
         if (null != h && (0, C.Z)(i)) {
             var g;
-            t = (0, l.jsx)(A.Z, {
+            t = (0, l.jsx)(b.Z, {
                 className: F.twitchSectionPreviewWrapper,
                 aspectRatio: 16 / 9,
                 children: (0, l.jsxs)(u.Clickable, {
@@ -422,7 +422,7 @@ let ee = (e) => {
                     children: [
                         (0, l.jsx)('img', {
                             alt: '',
-                            src: p.Z.get(H.ABu.TWITCH).icon.lightSVG,
+                            src: p.Z.get(V.ABu.TWITCH).icon.lightSVG,
                             className: F.twitchSectionIcon
                         }),
                         (0, l.jsxs)('div', {
@@ -445,13 +445,13 @@ let ee = (e) => {
     (ee.ApplicationStreamingSection = (e) => {
         var t, n;
         let { activity: i, user: r, applicationStream: a, onPreviewClick: s, guildId: o } = e,
-            d = (0, c.e7)([P.Z], () => P.Z.getChannel(a.channelId)),
-            [h, m] = (0, y.wq)(d),
+            d = (0, c.e7)([j.Z], () => j.Z.getChannel(a.channelId)),
+            [h, m] = (0, L.wq)(d),
             p = (0, l.jsxs)(u.Clickable, {
                 onClick: h ? s : void 0,
                 className: F.applicationStreamingPreviewWrapper,
                 children: [
-                    (0, l.jsx)(L.Z, {
+                    (0, l.jsx)(y.Z, {
                         stream: a,
                         className: F.applicationStreamingPreviewSize
                     }),
@@ -459,11 +459,11 @@ let ee = (e) => {
                         className: F.applicationStreamingHoverText,
                         variant: 'text-sm/medium',
                         color: 'always-white',
-                        children: (0, y.P9)(m)
+                        children: (0, L.P9)(m)
                     })
                 ]
             }),
-            g = null !== (n = null === (t = (0, v.Z)(i, a)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : V.intl.string(V.t.eXan7O);
+            g = null !== (n = null === (t = (0, v.Z)(i, a)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : H.intl.string(H.t.eXan7O);
         return (0, l.jsxs)(X, {
             children: [
                 (0, l.jsxs)('div', {
@@ -478,7 +478,7 @@ let ee = (e) => {
                         (0, l.jsxs)('div', {
                             children: [W(G.ZP.getName(r)), K(g)]
                         }),
-                        (0, l.jsx)(x.ZP, { size: x.ZP.Sizes.SMALL })
+                        (0, l.jsx)(A.ZP, { size: A.ZP.Sizes.SMALL })
                     ]
                 }),
                 p
@@ -496,9 +496,9 @@ let ee = (e) => {
                     return o(t);
                 });
         }, [d]);
-        let h = (0, c.Wu)([D.default, j.default], () =>
+        let h = (0, c.Wu)([D.default, P.default], () =>
                 Array.from(r)
-                    .map((e) => (j.default.getId() === e ? null : D.default.getUser(e)))
+                    .map((e) => (P.default.getId() === e ? null : D.default.getUser(e)))
                     .filter(U.lm)
             ),
             p = (0, m.O)(),
@@ -568,7 +568,7 @@ let ee = (e) => {
                                                     analyticsLocations: f
                                                 });
                                         },
-                                        children: V.intl.string(V.t.VJlc0d)
+                                        children: H.intl.string(H.t.VJlc0d)
                                     })
                                 })
                             ]

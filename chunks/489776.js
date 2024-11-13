@@ -20,42 +20,42 @@ function g(e) {
         g = r.useMemo(() => () => (0, o.ep)(t, n), [t, n]),
         [x] = r.useState(g),
         [p, f] = r.useState(!1),
-        { editingRule: C, createNewEditingRule: I } = (0, d.V)(),
+        { editingRule: C, createNewEditingRule: v } = (0, d.V)(),
         { getDefaultRuleName: _ } = c.I6[n],
-        N = !(0, o.Vb)(C) && (null == C ? void 0 : C.triggerType) === n,
-        [v, T] = r.useState(N ? C : x),
+        I = !(0, o.Vb)(C) && (null == C ? void 0 : C.triggerType) === n,
+        [N, T] = r.useState(I ? C : x),
         j = (0, a.useSpring)({
-            opacity: N ? 0 : 1,
-            pointerEvents: N ? 'none' : 'all',
+            opacity: I ? 0 : 1,
+            pointerEvents: I ? 'none' : 'all',
             config: {
                 ...l.config.stiff,
                 clamp: !0
             }
         }),
-        S = (0, a.useSpring)({
-            opacity: N ? 1 : 0,
-            pointerEvents: N ? 'all' : 'none',
+        b = (0, a.useSpring)({
+            opacity: I ? 1 : 0,
+            pointerEvents: I ? 'all' : 'none',
             config: {
                 ...l.config.stiff,
                 clamp: !0
             },
             onStart: () => {
-                T(N ? C : x);
+                T(I ? C : x);
             },
             onRest: () => {
-                T(N ? C : x), f(N);
+                T(I ? C : x), f(I);
             }
         });
-    return null == C || N
+    return null == C || I
         ? (0, i.jsxs)('div', {
               className: h.mainRuleContainer,
-              style: { height: N ? 'auto' : '60px' },
+              style: { height: I ? 'auto' : '60px' },
               children: [
                   (0, i.jsx)(l.animated.div, {
                       className: h.animatedRuleCardContainer,
-                      style: S,
+                      style: b,
                       children: (0, i.jsx)(u.Z, {
-                          rule: v,
+                          rule: N,
                           persistEdit: p
                       })
                   }),
@@ -65,7 +65,7 @@ function g(e) {
                       children: (0, i.jsxs)(a.Clickable, {
                           className: h.addAnotherRuleCardContainer,
                           onClick: () => {
-                              I(t, n);
+                              v(t, n);
                           },
                           children: [
                               (0, i.jsx)(a.CirclePlusIcon, {

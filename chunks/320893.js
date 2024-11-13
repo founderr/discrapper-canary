@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return b;
     }
 });
 var i = n(200651);
@@ -20,7 +20,7 @@ var r = n(780384),
     p = n(458050),
     f = n(334364),
     C = n(431712);
-function I(e) {
+function v(e) {
     return (0, r.wj)(e) ? c.revenueSharePercentageDark : c.revenueSharePercentageLight;
 }
 function _() {
@@ -40,7 +40,7 @@ function _() {
                     (0, i.jsx)(l.Spacer, { size: 8 }),
                     (0, i.jsx)(l.Heading, {
                         variant: 'heading-md/bold',
-                        className: I(e),
+                        className: v(e),
                         children: o.intl.string(o.t.LdjJGx)
                     })
                 ]
@@ -53,7 +53,7 @@ function _() {
         ]
     });
 }
-function N() {
+function I() {
     let e = (0, s.ZP)();
     function t(e) {
         let { length: t, horizontal: n } = e;
@@ -124,7 +124,7 @@ function N() {
         ]
     });
 }
-function v() {
+function N() {
     return (0, i.jsxs)('div', {
         className: c.earningBenefitCard,
         children: [
@@ -136,7 +136,7 @@ function v() {
             (0, i.jsx)(l.Spacer, { size: 32 }),
             (0, i.jsx)(_, {}),
             (0, i.jsx)(l.Spacer, { size: 24 }),
-            (0, i.jsx)(N, {})
+            (0, i.jsx)(I, {})
         ]
     });
 }
@@ -171,7 +171,7 @@ function j() {
             (0, i.jsxs)('div', {
                 children: [
                     (0, i.jsxs)(l.Heading, {
-                        className: I(e),
+                        className: v(e),
                         style: {
                             fontSize: '50px',
                             lineHeight: '52px'
@@ -194,7 +194,7 @@ function j() {
         ]
     });
 }
-function S() {
+function b() {
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(l.Heading, {
@@ -205,7 +205,7 @@ function S() {
             (0, i.jsx)(l.Spacer, { size: 24 }),
             (0, i.jsxs)('div', {
                 className: c.creatorBenefitsContainer,
-                children: [(0, i.jsx)(v, {}), (0, i.jsx)(T, {}), (0, i.jsx)(j, {})]
+                children: [(0, i.jsx)(N, {}), (0, i.jsx)(T, {}), (0, i.jsx)(j, {})]
             })
         ]
     });

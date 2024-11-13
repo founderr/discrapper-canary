@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return S;
     }
 }),
     n(47120);
@@ -20,10 +20,10 @@ var i = n(200651),
     p = n(295141),
     f = n(723047),
     C = n(290348),
-    I = n(450215),
+    v = n(450215),
     _ = n(981631),
-    N = n(388032),
-    v = n(443305);
+    I = n(388032),
+    N = n(443305);
 let T = 'guild-role-subscription-tier-template-selector',
     j = (e) => {
         let [t, n] = r.useState(!0),
@@ -41,27 +41,27 @@ let T = 'guild-role-subscription-tier-template-selector',
             }
         );
     };
-function S(e) {
+function b(e) {
     let { guildId: t, priceTiers: l, groupListingId: p } = e,
         j = (0, x._k)(p),
-        { editStateIds: S, addNewEditStateId: b, addNewEditStateFromTemplate: E, removeEditStateId: R } = C.B7(p, t, { includeSoftDeleted: !0 }),
-        [Z, A] = r.useState({}),
-        L = r.useMemo(() => {
-            let e = S.map((e) => {
+        { editStateIds: b, addNewEditStateId: S, addNewEditStateFromTemplate: E, removeEditStateId: R } = C.B7(p, t, { includeSoftDeleted: !0 }),
+        [Z, y] = r.useState({}),
+        A = r.useMemo(() => {
+            let e = b.map((e) => {
                 var t;
                 return null !== (t = Z[e]) && void 0 !== t ? t : e;
             });
             return (0, a.uniq)(e);
-        }, [S, Z]),
-        y = (e, t) => {
-            A((n) => ({
+        }, [b, Z]),
+        L = (e, t) => {
+            y((n) => ({
                 ...n,
                 [e]: t
             }));
         },
         D = (0, g.ss)(t),
         O = (0, g.Gp)(),
-        M = r.useCallback(() => {
+        k = r.useCallback(() => {
             O &&
                 h.jJ.trackExposure({
                     guildId: t,
@@ -76,36 +76,36 @@ function S(e) {
                                       ...n,
                                       guildId: t,
                                       addNewEditStateFromTemplate: E,
-                                      addNewEditStateFromScratch: b,
+                                      addNewEditStateFromScratch: S,
                                       priceTiers: l
                                   });
                           },
                           { modalKey: T }
                       )
-                    : b();
-        }, [t, E, b, l, O, D]),
-        P = C.Lo(L),
-        k = r.useCallback(() => L.forEach(C.GM), [L]),
+                    : S();
+        }, [t, E, S, l, O, D]),
+        M = C.Lo(A),
+        P = r.useCallback(() => A.forEach(C.GM), [A]),
         w = (0, f.mY)(),
         B = (0, o.e7)([m.Z], () => m.Z.getProps().subsection);
     return (
         r.useEffect(
             () => (
-                B === _.KsC.ROLE_SUBSCRIPTION_TIER_TEMPLATE && M(),
+                B === _.KsC.ROLE_SUBSCRIPTION_TIER_TEMPLATE && k(),
                 () => {
                     (0, d.closeModal)(T);
                 }
             ),
-            [B, M]
+            [B, k]
         ),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)('div', {
-                    className: v.groupListings,
+                    className: N.groupListings,
                     children: [
-                        L.map((e) =>
+                        A.map((e) =>
                             (0, i.jsx)(
-                                I.Z,
+                                v.Z,
                                 {
                                     guildId: t,
                                     initialEditStateId: e,
@@ -113,26 +113,26 @@ function S(e) {
                                     priceTiers: l,
                                     groupListingId: p,
                                     onDeleteEditState: () => R(e),
-                                    onBeforeDispatchNewListing: (t) => y(t.id, e),
+                                    onBeforeDispatchNewListing: (t) => L(t.id, e),
                                     onAfterDispatchNewListing: () => R(e)
                                 },
                                 e
                             )
                         ),
                         (0, i.jsxs)(d.Clickable, {
-                            onClick: w ? void 0 : M,
-                            className: s()(v.createTierButton, { [v.disabled]: w }),
+                            onClick: w ? void 0 : k,
+                            className: s()(N.createTierButton, { [N.disabled]: w }),
                             'aria-disabled': w,
                             children: [
                                 (0, i.jsx)(d.CirclePlusIcon, {
                                     size: 'xs',
                                     color: 'currentColor',
-                                    className: v.createTierIcon
+                                    className: N.createTierIcon
                                 }),
                                 (0, i.jsx)(d.Text, {
                                     variant: 'text-md/normal',
                                     color: 'interactive-active',
-                                    children: N.intl.string(N.t.PiFnn5)
+                                    children: I.intl.string(I.t.PiFnn5)
                                 })
                             ]
                         })
@@ -140,29 +140,29 @@ function S(e) {
                 }),
                 (0, i.jsx)(c.W, {
                     component: 'div',
-                    className: v.contentRegion,
-                    children: P && (0, i.jsx)(d.SlideIn, { children: (0, i.jsx)(u.Z, { onReset: k }) })
+                    className: N.contentRegion,
+                    children: M && (0, i.jsx)(d.SlideIn, { children: (0, i.jsx)(u.Z, { onReset: P }) })
                 })
             ]
         })
     );
 }
-function b(e) {
+function S(e) {
     let { guildId: t } = e,
         { priceTiers: n } = j(t),
         r = (0, x.GG)(t),
         { maxTiers: l } = (0, g.s1)(t),
         s = r.map((e) => e.id);
     return (0, i.jsxs)(d.FormSection, {
-        title: N.intl.string(N.t['72+Soq']),
-        className: v.container,
+        title: I.intl.string(I.t['72+Soq']),
+        className: N.container,
         children: [
             (0, i.jsx)(d.FormText, {
                 type: d.FormText.Types.DESCRIPTION,
-                children: N.intl.format(N.t.nHRSvL, { maxTiers: l })
+                children: I.intl.format(I.t.nHRSvL, { maxTiers: l })
             }),
             (0, i.jsx)(d.Spacer, { size: 16 }),
-            (0, i.jsx)(S, {
+            (0, i.jsx)(b, {
                 priceTiers: n,
                 guildId: t,
                 groupListingId: s[0]

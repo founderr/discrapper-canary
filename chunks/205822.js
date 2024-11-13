@@ -6,8 +6,8 @@ var r = n(200651),
     a = n(481060),
     o = n(310752),
     E = n(531643),
-    u = n(388032),
-    c = n(570486),
+    c = n(388032),
+    u = n(570486),
     d = n(351915);
 function _(e, t, n) {
     return (
@@ -24,7 +24,7 @@ function _(e, t, n) {
 }
 function A() {
     return (0, r.jsxs)('div', {
-        children: [(0, r.jsx)('div', { className: s()(d.sparkleWhite, c.sparkleOne) }), (0, r.jsx)('div', { className: s()(d.sparkleWhite, c.sparkleTwo) }), (0, r.jsx)('div', { className: s()(d.lightWhite, c.lightOne) }), (0, r.jsx)('div', { className: s()(d.lightWhite, c.lightTwo) }), (0, r.jsx)('div', { className: s()(d.crossWhite, c.crossOne) }), (0, r.jsx)('div', { className: s()(d.crossWhite, c.crossTwo) }), (0, r.jsx)('div', { className: s()(d.popWhite, c.popOne) })]
+        children: [(0, r.jsx)('div', { className: s()(d.sparkleWhite, u.sparkleOne) }), (0, r.jsx)('div', { className: s()(d.sparkleWhite, u.sparkleTwo) }), (0, r.jsx)('div', { className: s()(d.lightWhite, u.lightOne) }), (0, r.jsx)('div', { className: s()(d.lightWhite, u.lightTwo) }), (0, r.jsx)('div', { className: s()(d.crossWhite, u.crossOne) }), (0, r.jsx)('div', { className: s()(d.crossWhite, u.crossTwo) }), (0, r.jsx)('div', { className: s()(d.popWhite, u.popOne) })]
     });
 }
 class T extends l.Component {
@@ -40,26 +40,26 @@ class T extends l.Component {
         let { title: e, description: t, icons: n, style: l, className: i } = this.props;
         return (0, r.jsx)('div', {
             ref: this.elementDOMRef,
-            className: s()(i, c.uploadArea, {
-                [c.droppable]: this.state.isDragging,
-                [c.uploadModalIn]: this.state.isOverZone
+            className: s()(i, u.uploadArea, {
+                [u.droppable]: this.state.isDragging,
+                [u.uploadModalIn]: this.state.isOverZone
             }),
             style: l,
             children: (0, r.jsxs)('div', {
-                className: c.uploadDropModal,
+                className: u.uploadDropModal,
                 children: [
                     this.state.isDragging && (0, r.jsx)(A, {}),
-                    (0, r.jsx)('div', { className: c.bgScale }),
+                    (0, r.jsx)('div', { className: u.bgScale }),
                     (0, r.jsxs)('div', {
-                        className: c.inner,
+                        className: u.inner,
                         children: [
                             (0, r.jsx)(o.Z, { icons: n }),
                             (0, r.jsx)('div', {
-                                className: c.title,
+                                className: u.title,
                                 children: e
                             }),
                             (0, r.jsx)('div', {
-                                className: c.instructions,
+                                className: u.instructions,
                                 children: (0, r.jsx)('pre', { children: t })
                             })
                         ]
@@ -104,8 +104,8 @@ class T extends l.Component {
                     n &&
                         (t.setState({ isDragging: !1 }),
                         (0, E.openUploadError)({
-                            title: u.intl.string(u.t.azO1PT),
-                            help: u.intl.string(u.t.Koklr6),
+                            title: c.intl.string(c.t.azO1PT),
+                            help: c.intl.string(c.t.Koklr6),
                             icons: t.props.icons
                         })),
                     !1)

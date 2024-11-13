@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return x;
+            return A;
         },
         useAppSidebarState: function () {
             return N;
@@ -31,21 +31,21 @@ let N = (0, l.Ue)(() => ({ isOpen: !0 }));
 function T(e) {
     e.stopPropagation();
 }
-function x() {
+function A() {
     let e = (0, a.e7)([_.Z], () => _.Z.getChannelId()),
         t = (0, a.e7)([g.Z], () => g.Z.getChannel(e), [e]),
         n = f.Z.getGuild(null == t ? void 0 : t.guild_id),
         l = N((e) => e.isOpen),
-        { hasBugReporterAccess: x } = c.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 });
+        { hasBugReporterAccess: A } = c.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 });
     r.useLayoutEffect(() => {
         I.ZP.setMinimumSize(v.J, v.N);
     }, []);
-    let b = r.useCallback(() => {
+    let x = r.useCallback(() => {
         (0, E.isMac)() && I.ZP.maximize();
     }, []);
     return (0, i.jsxs)('div', {
         className: S.bar,
-        onDoubleClick: b,
+        onDoubleClick: x,
         children: [
             (0, i.jsx)('div', {
                 className: S.left,
@@ -59,7 +59,7 @@ function x() {
                                 onClick: () => {
                                     N.setState({ isOpen: !N.getState().isOpen });
                                 },
-                                children: (0, i.jsx)(A, {})
+                                children: (0, i.jsx)(b, {})
                             }),
                             (0, i.jsx)(s.Clickable, {
                                 onClick: () => {
@@ -93,12 +93,12 @@ function x() {
             (0, i.jsxs)('div', {
                 className: S.right,
                 onDoubleClick: T,
-                children: [(0, i.jsx)(p.Z, {}), x ? (0, i.jsx)(h.Z, {}) : (0, i.jsx)(u.Z, {}), (0, i.jsx)(m.Z, {})]
+                children: [(0, i.jsx)(p.Z, {}), A ? (0, i.jsx)(h.Z, {}) : (0, i.jsx)(u.Z, {}), (0, i.jsx)(m.Z, {})]
             })
         ]
     });
 }
-function A() {
+function b() {
     return (0, i.jsxs)('svg', {
         xmlns: 'http://www.w3.org/2000/svg',
         className: S.icon,

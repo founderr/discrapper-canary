@@ -3,7 +3,7 @@ r.d(t, {
         return E;
     },
     Cd: function () {
-        return f;
+        return L;
     },
     HY: function () {
         return d;
@@ -155,7 +155,7 @@ function d(e) {
         version: r
     };
 }
-function f(e, t, r, a) {
+function L(e, t, r, a) {
     let o = e.sdkProcessingMetadata && e.sdkProcessingMetadata.dynamicSamplingContext;
     return {
         event_id: e.event_id,

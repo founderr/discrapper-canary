@@ -25,17 +25,17 @@ var i = n(200651),
     S = n(474936),
     N = n(981631),
     T = n(388032),
-    x = n(756),
-    A = n(886733);
-let b = {
+    A = n(756),
+    b = n(886733);
+let x = {
     width: 14,
     height: 14
 };
 function Z(e) {
     let { recipientUser: t, giftIntentType: n, analyticsPage: l, shouldHighlight: Z } = e,
-        { analyticsLocations: y } = (0, u.ZP)(),
-        { isHovered: L, setIsHovered: R, onMouseEnter: O, onMouseLeave: j } = (0, p.Z)(200, 300),
-        { enableEmojiCTA: P } = E.w.useExperiment({ location: 'GiftIntentActionButton' }, { autoTrackExposure: !1 });
+        { analyticsLocations: L } = (0, u.ZP)(),
+        { isHovered: y, setIsHovered: R, onMouseEnter: O, onMouseLeave: P } = (0, p.Z)(200, 300),
+        { enableEmojiCTA: j } = E.w.useExperiment({ location: 'GiftIntentActionButton' }, { autoTrackExposure: !1 });
     r.useEffect(() => {
         let e = g.Z.getUserAffinity(t.id);
         (0, h.h)({
@@ -65,7 +65,7 @@ function Z(e) {
                     initialPlanId: null,
                     giftRecipient: t,
                     analyticsLocation: (0, C.F)(n).actionButton,
-                    analyticsLocations: y,
+                    analyticsLocations: L,
                     analyticsObject: {
                         page: l,
                         section: N.jXE.FRIENDS_LIST_FRIEND_ROW,
@@ -84,38 +84,38 @@ function Z(e) {
             return (0, _.Ou)(n);
         },
         U = () =>
-            P
+            j
                 ? (0, i.jsx)(d.Clickable, {
                       'aria-label': k(),
                       onClick: M,
-                      className: a()(A.actionButton, x.popoutButton, {
-                          [A.highlight]: Z,
-                          [A.actionButtonMobile]: c.tq
+                      className: a()(b.actionButton, A.popoutButton, {
+                          [b.highlight]: Z,
+                          [b.actionButtonMobile]: c.tq
                       }),
                       onMouseEnter: D,
-                      onMouseLeave: j,
+                      onMouseLeave: P,
                       children: (0, i.jsx)(s.animated.div, {
-                          className: x.spriteContainer,
-                          children: (0, i.jsx)('div', { className: x.sprite })
+                          className: A.spriteContainer,
+                          children: (0, i.jsx)('div', { className: A.sprite })
                       })
                   })
                 : (0, i.jsx)(d.Button, {
                       onClick: M,
                       onMouseEnter: D,
-                      onMouseLeave: j,
+                      onMouseLeave: P,
                       children: (0, i.jsxs)('div', {
-                          className: x.pillContentContainer,
+                          className: A.pillContentContainer,
                           children: [
                               (0, i.jsx)(d.GiftIcon, {
                                   size: 'custom',
-                                  width: b.width,
-                                  height: b.height,
+                                  width: x.width,
+                                  height: x.height,
                                   color: 'currentColor'
                               }),
                               (0, i.jsx)(d.Text, {
                                   variant: 'text-sm/medium',
                                   color: 'always-white',
-                                  className: x.pillButtonText,
+                                  className: A.pillButtonText,
                                   children: k()
                               })
                           ]
@@ -125,7 +125,7 @@ function Z(e) {
         animation: d.Popout.Animation.FADE,
         nudgeAlignIntoViewport: !1,
         closeOnScroll: !0,
-        shouldShow: L,
+        shouldShow: y,
         position: 'right',
         align: 'top',
         spacing: 9,
@@ -138,7 +138,7 @@ function Z(e) {
                 premiumGiftIntentCardType: v.U.COACHMARK,
                 recipientUser: t,
                 onMouseEnter: O,
-                onMouseLeave: j,
+                onMouseLeave: P,
                 popoutPosition: e.position,
                 analyticsPage: l,
                 analyticsSection: N.jXE.FRIENDS_LIST_FRIEND_ROW_GIFT_POPOUT,

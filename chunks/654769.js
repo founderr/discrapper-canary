@@ -4,8 +4,8 @@ var r,
     l = n.n(a),
     i = n(525654),
     o = n.n(i),
-    c = n(579806),
-    s = n(292959),
+    s = n(579806),
+    c = n(292959),
     d = n(246946),
     u = n(626135),
     h = n(358085),
@@ -26,18 +26,18 @@ function p(e, t, n) {
     );
 }
 let b = h.isPlatformEmbedded && (0, h.isWindows)(),
-    g = b && 10 > parseFloat(c.Z.os.release),
+    g = b && 10 > parseFloat(s.Z.os.release),
     v = !0;
 if (b && !g) {
-    let [e, , t] = c.Z.os.release.split('.');
+    let [e, , t] = s.Z.os.release.split('.');
     v = parseInt(e) > 10 || parseInt(t) >= 15063;
 }
 let C = (b && v) || ('Chrome' === o().name && 47 > parseFloat(o().version)) || ('Firefox' === o().name && 52 > parseFloat(o().version)),
-    j = l().throttle(m.GN, 1000, { leading: !0 });
-function _() {
+    _ = l().throttle(m.GN, 1000, { leading: !0 });
+function j() {
     x.ZP.flashFrame(!1);
 }
-b && (window.addEventListener('focus', _), x.ZP.on('MAIN_WINDOW_FOCUS', _));
+b && (window.addEventListener('focus', j), x.ZP.on('MAIN_WINDOW_FOCUS', j));
 let T = window.Notification;
 g &&
     (x.ZP.on('NOTIFICATION_CLICK', (e, t) => {
@@ -82,7 +82,7 @@ function S() {
 function y(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
         n = arguments.length > 2 ? arguments[2] : void 0;
-    e.includes('message') ? j(e, t, void 0, n) : (0, m.GN)(e, t);
+    e.includes('message') ? _(e, t, void 0, n) : (0, m.GN)(e, t);
 }
 function N(e) {
     return (d.Z.disableNotifications && null == e.overrideStreamerMode) || !S() || (h.isPlatformEmbedded && !x.ZP.shouldDisplayNotifications());
@@ -96,13 +96,13 @@ t.Z = {
             });
     },
     showNotification: function (e, t, n, r, a) {
-        var i, o, c, d;
+        var i, o, s, d;
         let m;
         if (N(a)) {
             null != a.sound && !1 !== a.playSoundIfDisabled && y(a.sound, null !== (o = a.volume) && void 0 !== o ? o : 1, a.soundpack);
             return;
         }
-        null != a.sound && y(a.sound, null !== (c = a.volume) && void 0 !== c ? c : 1, a.soundpack);
+        null != a.sound && y(a.sound, null !== (s = a.volume) && void 0 !== s ? s : 1, a.soundpack);
         let p = null !== (d = null == a ? void 0 : a.tag) && void 0 !== d ? d : null;
         (0, h.isLinux)() && (n = l().escape(n));
         let g = {
@@ -111,7 +111,7 @@ t.Z = {
             tag: p,
             silent: !0
         };
-        b && s.Z.taskbarFlash && x.ZP.flashFrame(!0);
+        b && c.Z.taskbarFlash && x.ZP.flashFrame(!0);
         try {
             m = new T(t, g);
         } catch (e) {

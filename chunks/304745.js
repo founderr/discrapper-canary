@@ -34,15 +34,15 @@ function T(e) {
         j = (0, p.KF)(t.id),
         A = (0, p.g5)(j),
         y = j !== p.jy.CAN_LAUNCH || T,
-        { isHovered: P, setIsHovered: M, onMouseEnter: L, onMouseLeave: R } = (0, I.Z)(200, 300),
+        { isHovered: P, setIsHovered: M, onMouseEnter: R, onMouseLeave: L } = (0, I.Z)(200, 300),
         k = (0, h.a)(),
         O = (0, u.Z)({ channelId: t.id }),
         D = !y,
         w = l.useCallback(
             (e) => {
-                'focus' !== e.type && L();
+                'focus' !== e.type && R();
             },
-            [L]
+            [R]
         ),
         B = (0, o.O)(),
         U = (0, c.bp)() === b.IlC.POPOUT,
@@ -89,8 +89,8 @@ function T(e) {
                                   ref: l,
                                   channel: t,
                                   closePopout: n,
-                                  onMouseEnter: L,
-                                  onMouseLeave: R,
+                                  onMouseEnter: R,
+                                  onMouseLeave: L,
                                   isHovered: P,
                                   onClick: () => a(Z.L.UNKNOWN)
                               })
@@ -117,7 +117,7 @@ function T(e) {
                                                     F(), (l === r.z.ACTIVITIES_MINI_SHELF_SPARKLES || l === r.z.ACTIVITY_GDM_ROCKET_SPARKLE || l === r.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || l === r.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES || l === r.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP) && a(Z.L.TAKE_ACTION);
                                                 },
                                                 onMouseEnter: w,
-                                                onMouseLeave: R
+                                                onMouseLeave: L
                                             })
                                         })
                                 }),

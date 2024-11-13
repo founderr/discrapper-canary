@@ -1,22 +1,22 @@
-t.d(n, {
+n.d(t, {
     M: function () {
-        return o;
+        return s;
     }
 }),
-    t(724458);
-var r = t(544891),
-    a = t(981631);
-let i = (e) =>
+    n(724458);
+var i = n(544891),
+    r = n(981631);
+let l = (e) =>
     e.reduce(
-        (e, n) => (
-            (e[n.game_application_id] = {
-                level: n.activity_level,
-                score: n.activity_score
+        (e, t) => (
+            (e[t.game_application_id] = {
+                level: t.activity_level,
+                score: t.activity_score
             }),
             e
         ),
         {}
     );
-async function o(e) {
-    return i((await r.tn.get({ url: a.ANM.GUILD_TOP_GAMES(e) })).body.top_games);
+async function s(e) {
+    return l((await i.tn.get({ url: r.ANM.GUILD_TOP_GAMES(e) })).body.top_games);
 }

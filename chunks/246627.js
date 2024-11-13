@@ -10,7 +10,7 @@ var r = n(192379),
     a = n(235587);
 function s(e) {
     let { guildId: t, leaderboardId: n, intervalStart: s } = e,
-        o = (0, i.e7)(
+        o = (0, i.Wu)(
             [a.Z],
             () => {
                 var e, r;
@@ -18,7 +18,7 @@ function s(e) {
             },
             [t, s, n]
         ),
-        l = (0, i.e7)(
+        l = (0, i.Wu)(
             [a.Z],
             () => {
                 var e, r;

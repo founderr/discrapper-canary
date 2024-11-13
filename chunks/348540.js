@@ -32,8 +32,8 @@ var l = n(442837),
 function j(e) {
     let { user: t, currentUser: n, displayProfile: j, channel: A, isHovering: y, onOpenProfile: P } = e,
         M = (0, l.e7)([r.Z], () => r.Z.getRelationshipType(t.id)),
-        L = (0, l.e7)([s.Z], () => s.Z.hidePersonalInformation),
-        R = (0, l.e7)([c.Z], () => {
+        R = (0, l.e7)([s.Z], () => s.Z.hidePersonalInformation),
+        L = (0, l.e7)([c.Z], () => {
             var e;
             return null === (e = c.Z.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application;
         }),
@@ -55,7 +55,7 @@ function j(e) {
                 nicknameIcons: (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(g.Z, { userId: t.id }),
-                        !L &&
+                        !R &&
                             (0, i.jsx)(E.Z, {
                                 userId: t.id,
                                 isHovering: y,
@@ -82,7 +82,7 @@ function j(e) {
             (0, i.jsxs)(_.Z.Overlay, {
                 className: T.overlay,
                 children: [
-                    !L &&
+                    !R &&
                         (null == j ? void 0 : j.bio) != null &&
                         (null == j ? void 0 : j.bio) !== '' &&
                         (0, i.jsx)(v.Z, {
@@ -95,10 +95,10 @@ function j(e) {
                                 userId: t.id
                             })
                         }),
-                    (null == R ? void 0 : R.popularApplicationCommandIds) != null &&
+                    (null == L ? void 0 : L.popularApplicationCommandIds) != null &&
                         (0, i.jsx)(h.Z, {
-                            applicationId: R.id,
-                            commandIds: R.popularApplicationCommandIds,
+                            applicationId: L.id,
+                            commandIds: L.popularApplicationCommandIds,
                             channel: A
                         }),
                     (0, i.jsx)(v.Z, {

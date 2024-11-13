@@ -36,7 +36,7 @@ let R = (0, a._I)((e = {}) => {
                                     let E = (function (e, t) {
                                         return (!t && e instanceof Request) || (e instanceof Request && e.bodyUsed) ? e : new Request(e, t);
                                     })(t, n);
-                                    f() && (([e, o] = A('Cookie', E)), ([a, i] = A('Set-Cookie', r)));
+                                    L() && (([e, o] = A('Cookie', E)), ([a, i] = A('Set-Cookie', r)));
                                     let c = d({
                                         url: E.url,
                                         method: E.method,
@@ -63,7 +63,7 @@ let R = (0, a._I)((e = {}) => {
                                 !(function (e, t, r, n) {
                                     if (T(e, t.status, t.responseURL)) {
                                         let e, a, o;
-                                        if (f()) {
+                                        if (L()) {
                                             try {
                                                 let e = t.getResponseHeader('Set-Cookie') || t.getResponseHeader('set-cookie') || void 0;
                                                 e && (a = N(e));
@@ -173,7 +173,7 @@ function d(e) {
         r
     );
 }
-function f() {
+function L() {
     let e = (0, o.s3)();
     return !!e && !!e.getOptions().sendDefaultPii;
 }

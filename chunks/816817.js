@@ -15,21 +15,21 @@ var i = n(200651),
     p = n(583628),
     f = n(129512),
     C = n(330065);
-let I = [16, 16, 14, 14, 12, 10, 8];
+let v = [16, 16, 14, 14, 12, 10, 8];
 t.Z = function (e) {
     var t, n;
-    let { guild: l, disabled: _, small: N, loading: v = !1, description: T, memberCount: j, presenceCount: S, className: b } = e,
+    let { guild: l, disabled: _, small: I, loading: N = !1, description: T, memberCount: j, presenceCount: b, className: S } = e,
         E = (0, c.ZP)(),
         [R, Z] = r.useState(!1);
-    if (null == l || v)
+    if (null == l || N)
         return (0, i.jsx)('div', {
-            className: s()(b, p.card, p.cardPlaceholder, {
-                [p.cardSmall]: N,
+            className: s()(S, p.card, p.cardPlaceholder, {
+                [p.cardSmall]: I,
                 [p.cardDisabled]: _
             })
         });
-    let { name: A } = l,
-        L =
+    let { name: y } = l,
+        A =
             null != l.discoverySplash && /^data:/.test(l.discoverySplash)
                 ? l.discoverySplash
                 : h.ZP.getGuildDiscoverySplashURL({
@@ -37,7 +37,7 @@ t.Z = function (e) {
                       splash: l.discoverySplash,
                       size: 240 * (0, m.x_)()
                   }),
-        y = (0, a.wj)(E) ? f : C,
+        L = (0, a.wj)(E) ? f : C,
         D =
             null !==
                 (t = h.ZP.getGuildIconURL({
@@ -48,30 +48,30 @@ t.Z = function (e) {
                 ? t
                 : void 0,
         O = null != l.description ? l.description : T,
-        M = null != j ? j : null == l ? void 0 : l.memberCount,
-        P = null != S ? S : null == l ? void 0 : l.presenceCount,
-        k = null;
+        k = null != j ? j : null == l ? void 0 : l.memberCount,
+        M = null != b ? b : null == l ? void 0 : l.presenceCount,
+        P = null;
     if (null != D)
-        k = (0, i.jsx)('img', {
+        P = (0, i.jsx)('img', {
             src: D,
             alt: '',
             className: p.avatar
         });
     else {
         let e = (0, g.Zg)(l.name);
-        k = (0, i.jsx)('div', {
+        P = (0, i.jsx)('div', {
             className: p.defaultIcon,
             children: (0, i.jsx)(o.Text, {
                 className: p.acronym,
-                style: { fontSize: null !== (n = I[e.length]) && void 0 !== n ? n : I[I.length - 1] },
+                style: { fontSize: null !== (n = v[e.length]) && void 0 !== n ? n : v[v.length - 1] },
                 variant: 'text-sm/normal',
                 children: e
             })
         });
     }
     return (0, i.jsxs)('div', {
-        className: s()(b, p.card, {
-            [p.cardSmall]: N,
+        className: s()(S, p.card, {
+            [p.cardSmall]: I,
             [p.cardDisabled]: _,
             [p.splashLoaded]: R
         }),
@@ -82,7 +82,7 @@ t.Z = function (e) {
                     (0, i.jsx)('div', {
                         className: p.splash,
                         children: (0, i.jsx)('img', {
-                            src: null != L ? L : y,
+                            src: null != A ? A : L,
                             alt: '',
                             className: p.splashImage,
                             onLoad: () => Z(!0)
@@ -100,7 +100,7 @@ t.Z = function (e) {
                                     mask: d.ZP.Masks.SQUIRCLE,
                                     width: 40,
                                     height: 40,
-                                    children: null != k ? k : null
+                                    children: null != P ? P : null
                                 })
                             })
                         })
@@ -121,7 +121,7 @@ t.Z = function (e) {
                             (0, i.jsx)(o.Text, {
                                 className: p.guildName,
                                 variant: 'text-md/normal',
-                                children: (0, i.jsx)('span', { children: A })
+                                children: (0, i.jsx)('span', { children: y })
                             })
                         ]
                     }),
@@ -133,25 +133,25 @@ t.Z = function (e) {
                     (0, i.jsxs)('div', {
                         className: p.memberInfo,
                         children: [
-                            null != P &&
+                            null != M &&
                                 (0, i.jsxs)('div', {
                                     className: p.memberCount,
                                     children: [
                                         (0, i.jsx)('div', { className: p.dotOnline }),
                                         (0, i.jsx)(o.Text, {
                                             variant: 'text-xs/normal',
-                                            children: N ? x.intl.formatToPlainString(x.t.YMor7u, { count: P }) : x.intl.formatToPlainString(x.t['LC+S+v'], { membersOnline: P })
+                                            children: I ? x.intl.formatToPlainString(x.t.YMor7u, { count: M }) : x.intl.formatToPlainString(x.t['LC+S+v'], { membersOnline: M })
                                         })
                                     ]
                                 }),
-                            null != M &&
+                            null != k &&
                                 (0, i.jsxs)('div', {
                                     className: p.memberCount,
                                     children: [
                                         (0, i.jsx)('div', { className: p.dotOffline }),
                                         (0, i.jsx)(o.Text, {
                                             variant: 'text-xs/normal',
-                                            children: N ? x.intl.formatToPlainString(x.t.YMor7u, { count: M }) : x.intl.formatToPlainString(x.t.zRl6XV, { count: M })
+                                            children: I ? x.intl.formatToPlainString(x.t.YMor7u, { count: k }) : x.intl.formatToPlainString(x.t.zRl6XV, { count: k })
                                         })
                                     ]
                                 })

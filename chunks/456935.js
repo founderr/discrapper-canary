@@ -3,12 +3,12 @@ t.d(n, {
         return m;
     }
 });
-var r = t(200651),
-    a = t(192379),
-    i = t(692547),
-    o = t(481060),
+var i = t(200651),
+    l = t(192379),
+    a = t(692547),
+    r = t(481060),
     s = t(496675),
-    l = t(484455),
+    o = t(484455),
     c = t(981631),
     d = t(388032),
     u = t(631403);
@@ -26,68 +26,68 @@ function m(e) {
             return '';
     }
 }
-let f = {
+let x = {
     [c.sFg.NONE]: '',
-    [c.sFg.LOW]: i.Z.unsafe_rawColors.GREEN_360.css,
-    [c.sFg.MEDIUM]: i.Z.unsafe_rawColors.YELLOW_300.css,
-    [c.sFg.HIGH]: i.Z.unsafe_rawColors.ORANGE_345.css,
-    [c.sFg.VERY_HIGH]: i.Z.unsafe_rawColors.RED_400.css
+    [c.sFg.LOW]: a.Z.unsafe_rawColors.GREEN_360.css,
+    [c.sFg.MEDIUM]: a.Z.unsafe_rawColors.YELLOW_300.css,
+    [c.sFg.HIGH]: a.Z.unsafe_rawColors.ORANGE_345.css,
+    [c.sFg.VERY_HIGH]: a.Z.unsafe_rawColors.RED_400.css
 };
 n.ZP = function (e) {
     let { guild: n } = e,
-        i = s.Z.can(c.Plq.MANAGE_GUILD, n),
-        h = n.verificationLevel,
-        x = h === c.sFg.VERY_HIGH ? o.MobilePhoneIcon : o.EnvelopeIcon,
-        p = a.useMemo(() => m(h), [h]),
-        g = f[h],
-        C = (0, r.jsx)('div', {
+        a = s.Z.can(c.Plq.MANAGE_GUILD, n),
+        f = n.verificationLevel,
+        h = f === c.sFg.VERY_HIGH ? r.MobilePhoneIcon : r.EnvelopeIcon,
+        g = l.useMemo(() => m(f), [f]),
+        v = x[f],
+        j = (0, i.jsx)('div', {
             className: u.verificationLevelTitle,
             children: d.intl.format(d.t.OpV87e, {
                 verificationLevelHook: function () {
-                    return (0, r.jsx)(
-                        o.Text,
+                    return (0, i.jsx)(
+                        r.Text,
                         {
                             className: u.verificationLevelHook,
-                            style: { color: g },
+                            style: { color: v },
                             variant: 'text-sm/semibold',
-                            children: p
+                            children: g
                         },
                         'hook'
                     );
                 }
             })
         }),
-        b = h === c.sFg.VERY_HIGH ? d.intl.string(d.t.IlXyd3) : d.intl.string(d.t.JlzMPj);
-    return (0, r.jsx)(l.Z, {
-        title: C,
-        children: (0, r.jsxs)('div', {
+        C = f === c.sFg.VERY_HIGH ? d.intl.string(d.t.IlXyd3) : d.intl.string(d.t.JlzMPj);
+    return (0, i.jsx)(o.Z, {
+        title: j,
+        children: (0, i.jsxs)('div', {
             className: u.verificationContainer,
             children: [
-                (0, r.jsx)(x, {
+                (0, i.jsx)(h, {
                     size: 'custom',
                     color: 'currentColor',
                     width: 20,
                     height: 20,
                     className: u.icon
                 }),
-                (0, r.jsx)(o.Text, {
+                (0, i.jsx)(r.Text, {
                     className: u.guildVerificationText,
                     variant: 'text-sm/normal',
-                    children: b
+                    children: C
                 }),
-                i &&
-                    (0, r.jsx)(o.Clickable, {
+                a &&
+                    (0, i.jsx)(r.Clickable, {
                         className: u.iconInteractiveContainer,
                         onClick: () =>
-                            (0, o.openModalLazy)(async () => {
+                            (0, r.openModalLazy)(async () => {
                                 let { default: e } = await t.e('72458').then(t.bind(t, 694278));
                                 return (t) =>
-                                    (0, r.jsx)(e, {
+                                    (0, i.jsx)(e, {
                                         ...t,
                                         guild: n
                                     });
                             }),
-                        children: (0, r.jsx)(o.PencilIcon, {
+                        children: (0, i.jsx)(r.PencilIcon, {
                             size: 'custom',
                             color: 'currentColor',
                             width: 20,

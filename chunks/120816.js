@@ -4,8 +4,8 @@ var r,
     l,
     i,
     o = n(772848),
-    c = n(756647),
-    s = n(442837),
+    s = n(756647),
+    c = n(442837),
     d = n(570140),
     u = n(314897),
     h = n(906467);
@@ -13,7 +13,7 @@ let m = 0,
     x = [],
     f = [],
     p = !1;
-class b extends (r = s.ZP.Store) {
+class b extends (r = c.ZP.Store) {
     initialize() {
         this.waitFor(h.Z);
     }
@@ -47,7 +47,7 @@ class b extends (r = s.ZP.Store) {
                         key: (m++).toString(),
                         event: t,
                         properties: n,
-                        fingerprint: null != (a = r) ? (0, c.s)(a) : u.default.getId(),
+                        fingerprint: null != (a = r) ? (0, s.s)(a) : u.default.getId(),
                         timestamp: new Date()
                     }
                 ]).length > 500 && x.shift();

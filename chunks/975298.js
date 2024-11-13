@@ -51,7 +51,7 @@ function g() {
                 throw ((0, _.g9)(t, { extra: { entitlementIds: e } }), Error(t));
             }
             g({
-                fractionalState: null == i || h.JwP.INACTIVE.has(i.status) ? m.a$.FP_ONLY : m.a$.FP_SUB,
+                fractionalState: null == i || h.JwP.INACTIVE.has(i.status) || i.isBoostOnly ? m.a$.FP_ONLY : m.a$.FP_SUB_PAUSED,
                 endsAt: o()(e[0].endsAt)
             });
         }, [t, n, i]),

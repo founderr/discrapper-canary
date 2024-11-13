@@ -132,7 +132,7 @@ t.Z = function (e) {
         v = (0, u.ye)(t),
         S = (0, p.u)(l),
         N = t.bot,
-        { botBannerUrl: T, botBannerUrlAnimated: x } = r.useMemo(
+        { botBannerUrl: T, botBannerUrlAnimated: A } = r.useMemo(
             () =>
                 (null == N ? void 0 : N.id) == null || (null == N ? void 0 : N.banner) == null
                     ? {}
@@ -170,13 +170,13 @@ t.Z = function (e) {
                       application: t,
                       isHovered: c,
                       botBannerUrl: null == T ? void 0 : T,
-                      botBannerUrlAnimated: null == x ? void 0 : x
+                      botBannerUrlAnimated: null == A ? void 0 : A
                   })
                 : null != T
                   ? (0, i.jsx)(I, {
                         isHovered: c,
                         url: T,
-                        animatedUrl: x
+                        animatedUrl: A
                     })
                   : null
     });

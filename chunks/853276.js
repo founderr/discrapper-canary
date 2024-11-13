@@ -96,27 +96,27 @@ let h = r.forwardRef(function (e, t) {
             });
 });
 function g(e) {
-    let { value: t, onChange: n, onBlur: l, onFocus: g, onRemove: x, isSelected: p, isSelecting: f, error: C, forceShowErrorTooltip: I } = e,
+    let { value: t, onChange: n, onBlur: l, onFocus: g, onRemove: x, isSelected: p, isSelecting: f, error: C, forceShowErrorTooltip: v } = e,
         _ = r.useRef(null),
-        N = r.useRef(null),
-        [v, T] = r.useState(!1),
-        { ref: j, width: S = 0 } = (0, c.Z)(v),
-        { ref: b, width: E = 0 } = (0, c.Z)(v),
+        I = r.useRef(null),
+        [N, T] = r.useState(!1),
+        { ref: j, width: b = 0 } = (0, c.Z)(N),
+        { ref: S, width: E = 0 } = (0, c.Z)(N),
         R = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
-        [Z, A] = r.useState(I),
-        L = r.useRef(null),
-        y = S > E ? S : E;
+        [Z, y] = r.useState(v),
+        A = r.useRef(null),
+        L = b > E ? b : E;
     r.useEffect(() => {
-        I
-            ? (A(!0),
-              (L.current = setTimeout(() => {
-                  A(!1), (L.current = null);
+        v
+            ? (y(!0),
+              (A.current = setTimeout(() => {
+                  y(!1), (A.current = null);
               }, u.I5)))
-            : A(!1);
-    }, [I]),
+            : y(!1);
+    }, [v]),
         r.useEffect(
             () => () => {
-                clearTimeout(L.current);
+                clearTimeout(A.current);
             },
             []
         );
@@ -129,29 +129,29 @@ function g(e) {
         O = r.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                if ((t.trim().length <= 0 && x(), null != _.current && null != j.current && null != N.current)) {
+                if ((t.trim().length <= 0 && x(), null != _.current && null != j.current && null != I.current)) {
                     var n;
-                    _.current.scrollTo(0, 0), _.current.setSelectionRange(0, 0), (_.current.scrollLeft = 0), (j.current.scrollLeft = 0), (null === (n = N.current) || void 0 === n ? void 0 : n.ref) != null && (N.current.ref.scrollLeft = 0);
+                    _.current.scrollTo(0, 0), _.current.setSelectionRange(0, 0), (_.current.scrollLeft = 0), (j.current.scrollLeft = 0), (null === (n = I.current) || void 0 === n ? void 0 : n.ref) != null && (I.current.ref.scrollLeft = 0);
                 }
                 T(!1), l(e);
             },
             [t, j, l, x]
         ),
-        M = r.useCallback(
+        k = r.useCallback(
             (e) => {
                 let n = t.trim().length <= 0;
                 u.ye.has(e.key) ? (e.preventDefault(), e.stopPropagation(), O(!0)) : 'Backspace' === e.key && n && (e.preventDefault(), e.stopPropagation(), O(!0));
             },
             [O, t]
         ),
-        P = r.useCallback(
+        M = r.useCallback(
             (e) => {
                 let t = e.metaKey || e.ctrlKey;
                 g(t), t ? e.preventDefault() : T(!0), e.stopPropagation();
             },
             [g]
         ),
-        k = r.useCallback(
+        P = r.useCallback(
             (e) => {
                 x();
             },
@@ -160,53 +160,53 @@ function g(e) {
     return (0, i.jsx)('div', {
         className: m.chipletFlexContainer,
         children: (0, i.jsxs)('div', {
-            ref: b,
+            ref: S,
             className: s()(m.chipletContainer, {
-                [m.isEditing]: v,
-                [m.smallBlink]: !v && !R,
+                [m.isEditing]: N,
+                [m.smallBlink]: !N && !R,
                 [m.isSelected]: p,
                 [m.isSelecting]: f,
-                [m.isError]: null != C && !v
+                [m.isError]: null != C && !N
             }),
             children: [
                 (0, i.jsxs)(o.Clickable, {
                     tag: 'div',
                     onBlur: () => O(!1),
-                    onClick: P,
+                    onClick: M,
                     ignoreKeyPress: !0,
-                    onMouseEnter: () => A(!0),
-                    onMouseLeave: () => A(!1),
+                    onMouseEnter: () => y(!0),
+                    onMouseLeave: () => y(!1),
                     className: s()(m.chipletContainerInner, {
                         [m.isSelecting]: f,
-                        [m.isEditing]: v
+                        [m.isEditing]: N
                     }),
-                    ref: N,
+                    ref: I,
                     children: [
                         (0, i.jsx)('input', {
                             className: s()(m.chipletInput, {
-                                [m.isEditing]: v,
+                                [m.isEditing]: N,
                                 [m.isSelecting]: f
                             }),
                             ref: _,
                             onChange: D,
-                            onKeyDownCapture: M,
+                            onKeyDownCapture: k,
                             value: t,
-                            style: { width: y > 0 ? y : 'calc('.concat(t.length, 'ch + 10px)') }
+                            style: { width: L > 0 ? L : 'calc('.concat(t.length, 'ch + 10px)') }
                         }),
                         (0, i.jsx)(h, {
                             ref: j,
                             value: t,
-                            isEditing: v,
+                            isEditing: N,
                             isSelected: p,
                             error: C,
-                            forceShowErrorTooltip: Z || v
+                            forceShowErrorTooltip: Z || N
                         })
                     ]
                 }),
-                !v &&
+                !N &&
                     (0, i.jsx)(o.Clickable, {
                         className: m.closeIconContainer,
-                        onClick: k,
+                        onClick: P,
                         children: (0, i.jsx)(o.XSmallIcon, {
                             size: 'xxs',
                             color: 'currentColor',

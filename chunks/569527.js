@@ -26,8 +26,8 @@ function v(e) {
     var t;
     let { query: n, onSelectApplication: v } = e,
         [S, N] = r.useState(),
-        [T, x] = r.useState(1),
-        { fetchState: A, searchResults: b } = (0, s.cj)([h.Z], () => ({
+        [T, A] = r.useState(1),
+        { fetchState: b, searchResults: x } = (0, s.cj)([h.Z], () => ({
             fetchState: h.Z.getFetchState({
                 query: n,
                 categoryId: S,
@@ -57,10 +57,10 @@ function v(e) {
                   }
                 : {};
         }),
-        y = (0, c.Z)(b),
-        L = r.useMemo(() => (A === u.M.FETCHING ? y : b), [A, y, b]);
+        L = (0, c.Z)(x),
+        y = r.useMemo(() => (b === u.M.FETCHING ? L : x), [b, L, x]);
     r.useEffect(() => {
-        x(1);
+        A(1);
     }, [n]);
     let R = r.useCallback(
             (e) => {
@@ -73,13 +73,13 @@ function v(e) {
                         categoryId: S
                     }
                 }),
-                    x(e);
+                    A(e);
             },
             [n, S]
         ),
         O = r.useCallback(
             (e) => {
-                x(1),
+                A(1),
                     N(e),
                     d.yC({
                         query: n,
@@ -109,13 +109,13 @@ function v(e) {
                                 })
                             }),
                             (0, i.jsx)(p.Z, {
-                                loading: A === u.M.FETCHING,
+                                loading: b === u.M.FETCHING,
                                 children: (0, i.jsx)('div', {
                                     className: C.content,
                                     children:
-                                        null == L
+                                        null == y
                                             ? void 0
-                                            : L.results.map((e) => {
+                                            : y.results.map((e) => {
                                                   if (e.type === l.s.APPLICATION) {
                                                       let t = e.data;
                                                       return (0, i.jsx)(
@@ -134,7 +134,7 @@ function v(e) {
                             }),
                             (0, i.jsx)(o.Paginator, {
                                 className: C.paginationInput,
-                                totalCount: Math.min((null !== (t = null == L ? void 0 : L.totalPages) && void 0 !== t ? t : 0) * I.IV, I.Et * I.IV),
+                                totalCount: Math.min((null !== (t = null == y ? void 0 : y.totalPages) && void 0 !== t ? t : 0) * I.IV, I.Et * I.IV),
                                 pageSize: I.IV,
                                 disablePaginationGap: !0,
                                 hideMaxPage: !0,

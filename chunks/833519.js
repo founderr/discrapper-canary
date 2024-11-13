@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return G;
+        return W;
     },
     _: function () {
         return F;
@@ -34,8 +34,8 @@ var i = n(200651),
     A = n(442168),
     N = n(822296),
     w = n(916771),
-    P = n(792517),
-    j = n(979425),
+    j = n(792517),
+    P = n(979425),
     R = n(651183),
     M = n(623825),
     O = n(981631),
@@ -64,19 +64,19 @@ function F(e) {
         ]
     });
 }
-function G(e) {
+function W(e) {
     let { participant: t, selected: n, onVideoResize: a, paused: m, fit: f, inPopout: v, width: R, focused: M } = e,
         F = C.Z.getVideoComponent(),
-        G = (0, s.e7)([E.default], () => E.default.getId()),
-        W = (0, p.Z)(),
+        W = (0, s.e7)([E.default], () => E.default.getId()),
+        G = (0, p.Z)(),
         { stream: B, user: z, streamId: H } = t,
         Y = (0, s.e7)([Z.Z], () => Z.Z.getChannel(B.channelId)),
         J = (0, s.e7)([x.Z], () => x.Z.getActiveStreamForUser(z.id, B.guildId), [z.id, B.guildId]),
         q = (0, s.e7)([x.Z], () => x.Z.getAllActiveStreams().length > 0),
         X = (0, s.e7)([y.Z], () => y.Z.isFocused()),
-        K = (null == J ? void 0 : J.ownerId) === G,
+        K = (null == J ? void 0 : J.ownerId) === W,
         Q = K && !X && !v,
-        $ = null != J ? (0, h.Z)(J, z, z.id === G, Q) : null,
+        $ = null != J ? (0, h.Z)(J, z, z.id === W, Q) : null,
         ee = R < 195;
     if (
         (l.useEffect(() => {
@@ -91,13 +91,13 @@ function G(e) {
                     .concat(C.Z.supports(k.AN.VIDEO))
             );
         }, [F, J, n]),
-        W)
+        G)
     )
-        return (0, i.jsx)(j.Z, {
+        return (0, i.jsx)(P.Z, {
             stream: t.stream,
             isSmall: ee,
             selected: n,
-            isSelfStream: z.id === G
+            isSelfStream: z.id === W
         });
     if ((null == J ? void 0 : J.state) === O.jm8.ENDED)
         return (0, i.jsx)(N.Z, {
@@ -112,7 +112,7 @@ function G(e) {
             width: R
         });
     else if (t.type === L.fO.HIDDEN_STREAM)
-        return (0, i.jsx)(P.Z, {
+        return (0, i.jsx)(j.Z, {
             selected: n,
             participant: t,
             width: R

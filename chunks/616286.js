@@ -102,20 +102,20 @@ function E(e) {
         event: x.CkL.FOCUS_CHAT_BUTTON,
         handler: b ? null : P
     });
-    let [M, L] = l.useState(!1),
-        R = l.useCallback(() => {
-            h && L(!0);
+    let [M, R] = l.useState(!1),
+        L = l.useCallback(() => {
+            h && R(!0);
         }, [h]);
     (0, m.yp)({
         event: x.CkL.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
-        handler: R
+        handler: L
     }),
         l.useEffect(() => {
             let e;
             return (
                 M &&
                     (e = setTimeout(() => {
-                        L(!1);
+                        R(!1);
                     }, 3000)),
                 () => {
                     clearTimeout(e);

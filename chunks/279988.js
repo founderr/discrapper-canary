@@ -1,55 +1,55 @@
 t(47120);
-var r = t(200651);
+var i = t(200651);
 t(192379);
-var a = t(120356),
-    i = t.n(a),
-    o = t(692547),
+var l = t(120356),
+    a = t.n(l),
+    r = t(692547),
     s = t(481060),
-    l = t(259580),
+    o = t(259580),
     c = t(196345),
     d = t(137158),
     u = t(388032),
     m = t(631403);
 n.Z = function (e) {
-    let { channelId: n, formField: t, index: a, isDragEnabled: f, isDropHovered: h, onDrop: x, onEdit: p, onRemove: g, canRemove: C, title: b, actionsLocation: v } = e,
-        _ = t.values,
-        y = _.slice(0, 1),
-        T = _.length - y.length;
-    return (0, r.jsxs)(d.Z, {
+    let { channelId: n, formField: t, index: l, isDragEnabled: x, isDropHovered: f, onDrop: h, onEdit: g, onRemove: v, canRemove: j, title: C, actionsLocation: p } = e,
+        N = t.values,
+        I = N.slice(0, 1),
+        T = N.length - I.length;
+    return (0, i.jsxs)(d.Z, {
         field: t,
-        index: a,
-        isDragEnabled: f,
-        isDropHovered: h,
-        onDrop: x,
-        onEdit: p,
-        onRemove: g,
-        title: b,
-        canRemove: C,
-        actionsLocation: v,
+        index: l,
+        isDragEnabled: x,
+        isDropHovered: f,
+        onDrop: h,
+        onEdit: g,
+        onRemove: v,
+        title: C,
+        canRemove: j,
+        actionsLocation: p,
         children: [
-            (0, r.jsx)(c.EK, {
-                className: i()(m.fieldBackground, { [m.withFooter]: 0 !== T }),
-                terms: y,
+            (0, i.jsx)(c.EK, {
+                className: a()(m.fieldBackground, { [m.withFooter]: 0 !== T }),
+                terms: I,
                 channelId: n
             }),
             0 !== T &&
-                (0, r.jsxs)(s.Clickable, {
-                    className: i()(m.fieldFooterContainer, m.clickable),
-                    onClick: p,
+                (0, i.jsxs)(s.Clickable, {
+                    className: a()(m.fieldFooterContainer, m.clickable),
+                    onClick: g,
                     children: [
-                        (0, r.jsx)(s.FormText, {
+                        (0, i.jsx)(s.FormText, {
                             className: m.clickable,
                             children: u.intl.format(u.t.jnhD0d, { count: T })
                         }),
-                        (0, r.jsx)(l.Z, {
+                        (0, i.jsx)(o.Z, {
                             className: m.termsFieldCaretIcon,
                             height: 14,
                             width: 14,
-                            color: o.Z.unsafe_rawColors.WHITE_500.css
+                            color: r.Z.unsafe_rawColors.WHITE_500.css
                         })
                     ]
                 }),
-            (0, r.jsx)(c.G0, {
+            (0, i.jsx)(c.G0, {
                 disabled: !0,
                 checked: !1
             })

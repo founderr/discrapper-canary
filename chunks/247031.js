@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return P;
+        return M;
     }
 }),
     n(47120),
@@ -21,19 +21,19 @@ var i = n(200651),
     p = n(246946),
     f = n(594174),
     C = n(251625),
-    I = n(226951),
+    v = n(226951),
     _ = n(51144),
-    N = n(434404),
-    v = n(372454),
+    I = n(434404),
+    N = n(372454),
     T = n(999382),
     j = n(84613),
-    S = n(740903),
-    b = n(1080),
+    b = n(740903),
+    S = n(1080),
     E = n(981631),
     R = n(388032),
     Z = n(828965),
-    A = n(869042);
-function L(e, t, n) {
+    y = n(869042);
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -46,7 +46,7 @@ function L(e, t, n) {
         e
     );
 }
-function y(e) {
+function L(e) {
     let { transitionState: t, guild: n, user: l, ban: s, hideDiscriminator: a, onClose: o } = e,
         [d, m] = r.useState(!1),
         [x, p] = r.useState(null);
@@ -130,7 +130,7 @@ class D extends r.PureComponent {
     render() {
         let { user: e, hideDiscriminator: t, guild: n } = this.props;
         return (0, i.jsxs)(c.Clickable, {
-            className: s()(Z.bannedUser, A.card),
+            className: s()(Z.bannedUser, y.card),
             onClick: this.handleShowModal,
             onContextMenu: this.handleContextMenu,
             children: [
@@ -160,10 +160,10 @@ class D extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            L(this, 'handleShowModal', () => {
+            A(this, 'handleShowModal', () => {
                 let { guild: e, user: t, hideDiscriminator: n, ban: r } = this.props;
                 (0, c.openModal)((l) =>
-                    (0, i.jsx)(y, {
+                    (0, i.jsx)(L, {
                         ...l,
                         guild: e,
                         user: t,
@@ -172,7 +172,7 @@ class D extends r.PureComponent {
                     })
                 );
             }),
-            L(this, 'handleContextMenu', (e) => {
+            A(this, 'handleContextMenu', (e) => {
                 (0, d.jW)(e, async () => {
                     let { default: e } = await n.e('23835').then(n.bind(n, 768079));
                     return (t) =>
@@ -188,7 +188,7 @@ class O extends r.PureComponent {
     makeFilter(e) {
         if (null == e || 0 === e.length) return (e) => null != e;
         {
-            let t = RegExp('^'.concat(I.Z.escape(e)), 'i');
+            let t = RegExp('^'.concat(v.Z.escape(e)), 'i');
             return (n) => null != n && (n.id === e || t.test(n.username));
         }
     }
@@ -205,17 +205,17 @@ class O extends r.PureComponent {
         });
     }
     handleModerationClick() {
-        N.Z.setSection(E.pNK.SAFETY), (0, j.K)(S.u.DM_AND_SPAM_PROTECTION);
+        I.Z.setSection(E.pNK.SAFETY), (0, j.K)(b.u.DM_AND_SPAM_PROTECTION);
     }
     handleQueryChange(e) {
-        N.Z.setSearchQuery(e);
+        I.Z.setSearchQuery(e);
     }
     handleQueryClear() {
-        N.Z.setSearchQuery('');
+        I.Z.setSearchQuery('');
     }
     constructor(...e) {
         super(...e),
-            L(
+            A(
                 this,
                 'getSortedBans',
                 (0, C.oH)((e, t) => {
@@ -229,7 +229,7 @@ class O extends r.PureComponent {
                     return i.sort((e, t) => e.username.localeCompare(t.username));
                 })
             ),
-            L(this, 'getRowHeight', (e, t) => {
+            A(this, 'getRowHeight', (e, t) => {
                 var n;
                 if (e > 0) return 0;
                 let { bans: i, searchQuery: r } = this.props,
@@ -239,7 +239,7 @@ class O extends r.PureComponent {
                     a = null == i ? void 0 : i.get(null !== (n = null == s ? void 0 : s.id) && void 0 !== n ? n : '');
                 return null == s || null == a ? 0 : 56;
             }),
-            L(this, 'renderRow', (e) => {
+            A(this, 'renderRow', (e) => {
                 var t;
                 let { section: n, row: r } = e,
                     { bans: l, streamerMode: s, guild: a, searchQuery: o } = this.props;
@@ -267,12 +267,12 @@ class O extends r.PureComponent {
                         d.id
                     );
             }),
-            L(this, 'getSectionHeight', (e) => {
+            A(this, 'getSectionHeight', (e) => {
                 if (e > 0) return 0;
                 let { bans: t } = this.props;
                 return null == t ? 462 : 120;
             }),
-            L(this, 'renderSection', () => {
+            A(this, 'renderSection', () => {
                 var e;
                 let t;
                 let { bans: r, theme: l, searchQuery: s } = this.props;
@@ -331,7 +331,7 @@ class O extends r.PureComponent {
             });
     }
 }
-let M = o.ZP.connectStores([T.Z, x.Z, p.Z], () => {
+let k = o.ZP.connectStores([T.Z, x.Z, p.Z], () => {
     let { bans: e, guild: t, searchQuery: n } = T.Z.getProps();
     return {
         searchQuery: null != n ? n : '',
@@ -341,15 +341,15 @@ let M = o.ZP.connectStores([T.Z, x.Z, p.Z], () => {
         streamerMode: p.Z.hidePersonalInformation
     };
 })(O);
-function P() {
+function M() {
     var e;
     let { guild: t } = (0, o.e7)([T.Z], () => T.Z.getProps(), [], a.isEqual),
-        { enabled: n } = v.T.useExperiment(
+        { enabled: n } = N.T.useExperiment(
             {
                 guildId: null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : E.lds,
                 location: '4d6318_1'
             },
             { autoTrackExposure: !0 }
         );
-    return n ? (0, i.jsx)(b.Z, {}) : (0, i.jsx)(M, {});
+    return n ? (0, i.jsx)(S.Z, {}) : (0, i.jsx)(k, {});
 }

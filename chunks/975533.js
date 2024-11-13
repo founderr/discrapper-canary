@@ -20,8 +20,8 @@ var i = n(570140),
     S = n(626135),
     N = n(554174),
     T = n(981631),
-    x = n(65154);
-let A = {
+    A = n(65154);
+let b = {
     [T.kg4.TOGGLE_PRIORITY_SPEAKER]: {
         onTrigger() {},
         keyEvents: {}
@@ -32,7 +32,7 @@ let A = {
     },
     [T.kg4.PUSH_TO_TALK]: {
         onTrigger(e, t) {
-            E.Z.getMode(t.context) === T.pM4.PUSH_TO_TALK && ((A[T.kg4.PUSH_TO_TALK].isPressed = e), E.Z.getMediaEngine().eachConnection((t) => t.setForceAudioInput(e, !1), t.context));
+            E.Z.getMode(t.context) === T.pM4.PUSH_TO_TALK && ((b[T.kg4.PUSH_TO_TALK].isPressed = e), E.Z.getMediaEngine().eachConnection((t) => t.setForceAudioInput(e, !1), t.context));
         },
         keyEvents: {
             keyup: !0,
@@ -42,7 +42,7 @@ let A = {
     },
     [T.kg4.PUSH_TO_TALK_PRIORITY]: {
         onTrigger(e) {
-            E.Z.getMode() === T.pM4.PUSH_TO_TALK && ((A[T.kg4.PUSH_TO_TALK_PRIORITY].isPressed = e), E.Z.getMediaEngine().eachConnection((t) => t.setForceAudioInput(e, !0), x.Yn.DEFAULT));
+            E.Z.getMode() === T.pM4.PUSH_TO_TALK && ((b[T.kg4.PUSH_TO_TALK_PRIORITY].isPressed = e), E.Z.getMediaEngine().eachConnection((t) => t.setForceAudioInput(e, !0), A.Yn.DEFAULT));
         },
         keyEvents: {
             keyup: !0,
@@ -52,7 +52,7 @@ let A = {
     },
     [T.kg4.PUSH_TO_MUTE]: {
         onTrigger(e) {
-            if (!(E.Z.getMode() !== T.pM4.VOICE_ACTIVITY || E.Z.isSelfDeaf())) (A[T.kg4.PUSH_TO_MUTE].isPressed = e), r.Z.setTemporarySelfMute(e);
+            if (!(E.Z.getMode() !== T.pM4.VOICE_ACTIVITY || E.Z.isSelfDeaf())) (b[T.kg4.PUSH_TO_MUTE].isPressed = e), r.Z.setTemporarySelfMute(e);
         },
         keyEvents: {
             keyup: !0,
@@ -221,15 +221,15 @@ let A = {
         }
     }
 };
-class b extends c.Z {
+class x extends c.Z {
     _initialize() {
         i.Z.wait(() =>
             i.Z.dispatch({
                 type: 'KEYBINDS_REGISTER_GLOBAL_KEYBIND_ACTIONS',
-                keybinds: A
+                keybinds: b
             })
         );
     }
     _terminate() {}
 }
-t.Z = new b();
+t.Z = new x();

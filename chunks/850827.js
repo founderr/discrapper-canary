@@ -27,19 +27,19 @@ var l = n(120356),
     A = n(611459),
     N = n(544671),
     w = n(757182),
-    P = n(910424),
-    j = n(981631),
+    j = n(910424),
+    P = n(981631),
     R = n(193710);
 t.Z = (0, u.Z)((e) => {
     let { activity: t, embeddedActivity: n, user: l, applicationStream: r, className: u, guildId: M, channelId: O, source: L, color: k = c.Button.Colors.WHITE, look: D = c.Button.Looks.OUTLINED, type: U, onAction: V, isEmbedded: F = !1 } = e,
-        G = (0, o.e7)([h.default], () => {
+        W = (0, o.e7)([h.default], () => {
             let e = h.default.getCurrentUser();
             return s()(null != e, 'UserActivityActions: currentUser cannot be undefined'), e;
         }),
-        W = U === x.Y.STREAM_PREVIEW || null != r,
+        G = U === x.Y.STREAM_PREVIEW || null != r,
         B = (0, I.Z)(t),
-        z = B || W ? m.Z.Direction.HORIZONTAL : m.Z.Direction.VERTICAL,
-        H = (null == t ? void 0 : t.type) === j.IIU.HANG_STATUS,
+        z = B || G ? m.Z.Direction.HORIZONTAL : m.Z.Direction.VERTICAL,
+        H = (null == t ? void 0 : t.type) === P.IIU.HANG_STATUS,
         Y = (0, o.e7)([g.Z, p.Z], () => {
             var e;
             return H ? p.Z.getChannel(null === (e = g.Z.getVoiceStateForUser(l.id)) || void 0 === e ? void 0 : e.channelId) : null;
@@ -56,7 +56,7 @@ t.Z = (0, u.Z)((e) => {
                 return (0, i.jsx)(
                     E.Z,
                     {
-                        platform: d.Z.get(j.ABu.XBOX),
+                        platform: d.Z.get(P.ABu.XBOX),
                         look: D,
                         color: k,
                         onAction: V,
@@ -64,13 +64,13 @@ t.Z = (0, u.Z)((e) => {
                     },
                     'ConnectPlatformActivityButton'
                 );
-            if ((null == t ? void 0 : t.platform) === j.M7m.PS4 || (null == t ? void 0 : t.platform) === j.M7m.PS5)
+            if ((null == t ? void 0 : t.platform) === P.M7m.PS4 || (null == t ? void 0 : t.platform) === P.M7m.PS5)
                 return (0, i.jsx)(
                     E.Z,
                     {
                         look: D,
                         color: k,
-                        platform: d.Z.get(j.ABu.PLAYSTATION),
+                        platform: d.Z.get(P.ABu.PLAYSTATION),
                         onAction: V,
                         Icon: v.Z
                     },
@@ -123,11 +123,11 @@ t.Z = (0, u.Z)((e) => {
                           e.channelId
                       );
             }
-            return W
+            return G
                 ? (0, i.jsx)(
-                      P.Z,
+                      j.Z,
                       {
-                          isCurrentUser: G.id === l.id,
+                          isCurrentUser: W.id === l.id,
                           color: k,
                           look: D,
                           applicationStream: r,

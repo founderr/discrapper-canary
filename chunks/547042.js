@@ -33,12 +33,12 @@ let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                 analyticsLocation: r,
                 analyticsType: N,
                 ctaText: T,
-                dismissText: x,
-                description: A,
-                learnMore: b,
+                dismissText: A,
+                description: b,
+                learnMore: x,
                 title: Z,
-                videoPosterUrl: y,
-                videoUrl: L,
+                videoPosterUrl: L,
+                videoUrl: y,
                 ctaOnClick: R
             } = (function (e) {
                 switch (e) {
@@ -108,8 +108,8 @@ let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
         a.useEffect(() => {
             f.default.track(_.rMx.TOOLTIP_VIEWED, { type: N });
         }, [N]);
-        let j = (0, c.bp)() === _.IlC.POPOUT,
-            P = (0, s.e7)([g.Z], () => g.Z.getChannel(t), [t]);
+        let P = (0, c.bp)() === _.IlC.POPOUT,
+            j = (0, s.e7)([g.Z], () => g.Z.getChannel(t), [t]);
         return (0, l.jsx)(m.Gt, {
             value: O,
             children: (0, l.jsx)('div', {
@@ -121,8 +121,8 @@ let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                         children: [
                             (0, l.jsx)(p.Z, {
                                 className: C.video,
-                                src: L,
-                                poster: y,
+                                src: y,
+                                poster: L,
                                 width: 224,
                                 height: 126,
                                 loop: !0,
@@ -143,8 +143,8 @@ let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                                 variant: 'text-xs/normal',
                                 color: 'always-white',
                                 children: [
-                                    A,
-                                    b
+                                    b,
+                                    x
                                         ? (0, l.jsxs)(l.Fragment, {
                                               children: [
                                                   ' ',
@@ -166,7 +166,7 @@ let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                                         onClick: () => {
                                             n(E.L.UNKNOWN);
                                         },
-                                        children: x
+                                        children: A
                                     }),
                                     (0, l.jsx)(o.Button, {
                                         color: o.Button.Colors.BRAND_INVERTED,
@@ -174,21 +174,21 @@ let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                                             null != R
                                                 ? R
                                                 : () => {
-                                                      if ((n(E.L.UNKNOWN), null != P))
+                                                      if ((n(E.L.UNKNOWN), null != j))
                                                           (0, u.Z)({
-                                                              channel: P.isGuildVoice() ? P : void 0,
-                                                              guildId: P.guild_id,
+                                                              channel: j.isGuildVoice() ? j : void 0,
+                                                              guildId: j.guild_id,
                                                               locationObject: {
                                                                   page: _.ZY5.GUILD_CHANNEL,
                                                                   section: _.jXE.GUILD_CHANNEL_LIST,
                                                                   object: _.qAy.ACTIVITIES_COACH_MARK,
                                                                   objectType: _.Qqv.ACTIVITY
                                                               },
-                                                              openInPopout: j,
+                                                              openInPopout: P,
                                                               analyticsLocations: O,
                                                               opensAppLauncherModal: !0
                                                           }),
-                                                              (0, d.w1)({ guildId: P.guild_id });
+                                                              (0, d.w1)({ guildId: j.guild_id });
                                                   },
                                         children: T
                                     })

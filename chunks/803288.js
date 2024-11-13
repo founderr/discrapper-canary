@@ -1,9 +1,9 @@
 n.d(t, {
     T: function () {
-        return A;
+        return y;
     },
     Z: function () {
-        return y;
+        return L;
     }
 }),
     n(757143),
@@ -24,14 +24,14 @@ var i = n(200651),
     p = n(26323),
     f = n(366980),
     C = n(246946),
-    I = n(709586),
+    v = n(709586),
     _ = n(267642),
-    N = n(999382),
-    v = n(621319),
+    I = n(999382),
+    N = n(621319),
     T = n(44550),
     j = n(770270),
-    S = n(981631),
-    b = n(30513),
+    b = n(981631),
+    S = n(30513),
     E = n(388032),
     R = n(279404);
 function Z(e, t, n) {
@@ -47,29 +47,29 @@ function Z(e, t, n) {
         e
     );
 }
-let A = a.ZP.connectStores([N.Z, T.Z], () => {
+let y = a.ZP.connectStores([I.Z, T.Z], () => {
     let e = T.Z.vanityURLCode,
-        t = N.Z.getGuildId();
+        t = I.Z.getGuildId();
     return {
         vanityURLCode: e,
         guildId: t,
         onReset() {
-            (0, v.H7)();
+            (0, N.H7)();
         },
         onSave() {
-            null != t && (0, v.en)(t, e);
+            null != t && (0, N.en)(t, e);
         }
     };
 })(d.Z);
-class L extends r.PureComponent {
+class A extends r.PureComponent {
     componentWillUnmount() {
-        (0, v.xv)();
+        (0, N.xv)();
     }
     renderEditCard() {
         let { isRemoving: e } = this.state,
             { hasError: t, originalVanityURLCode: n, vanityURLCode: r, vanityURLUses: l, guild: s } = this.props;
         if (null == r) return (0, i.jsx)(o.Spinner, {});
-        let a = (null == s ? void 0 : s.hasFeature(S.oNc.VANITY_URL)) === !0;
+        let a = (null == s ? void 0 : s.hasFeature(b.oNc.VANITY_URL)) === !0;
         return (0, i.jsxs)(o.Card, {
             editable: !0,
             className: R.editVanityUrlCard,
@@ -114,7 +114,7 @@ class L extends r.PureComponent {
             innerClassName: R.upsellButton,
             onClick: this.handleVanityUrlUpsellButton,
             children: [
-                (0, i.jsx)(I.Z, {
+                (0, i.jsx)(v.Z, {
                     height: 16,
                     width: 16,
                     className: R.premiumUpsellBadge
@@ -146,10 +146,10 @@ class L extends r.PureComponent {
         }
     }
     handleRemoveVanityURL() {
-        (0, v.Gy)('');
+        (0, N.Gy)('');
     }
     handleInviteCodeChange(e) {
-        (0, v.Gy)(e.replace(/ /g, '-'));
+        (0, N.Gy)(e.replace(/ /g, '-'));
     }
     render() {
         let { hide: e, guild: t } = this.props;
@@ -166,7 +166,7 @@ class L extends r.PureComponent {
                                 (0, i.jsx)('div', { children: E.intl.string(E.t['5XZKy8']) }),
                                 (0, i.jsx)(x.Z, {
                                     guild: t,
-                                    guildFeature: S.oNc.VANITY_URL,
+                                    guildFeature: b.oNc.VANITY_URL,
                                     className: R.guildFeatureAvailabilityIndicator,
                                     onClick: this.handleVanityUrlUpsellIndicator
                                 })
@@ -199,10 +199,10 @@ class L extends r.PureComponent {
                 e.preventDefault(), e.stopPropagation();
                 let { guild: l, analyticsLocations: s } = this.props;
                 null != l &&
-                    ((0, m.yw)(S.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
+                    ((0, m.yw)(b.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                         location: {
                             section: n,
-                            object: S.qAy.LEARN_MORE,
+                            object: b.qAy.LEARN_MORE,
                             objectType: (0, _.ge)(t),
                             location_stack: s
                         },
@@ -213,22 +213,22 @@ class L extends r.PureComponent {
                         analyticsSourceLocation: {
                             section: n,
                             object: i,
-                            page: S.ZY5.GUILD_SETTINGS
+                            page: b.ZY5.GUILD_SETTINGS
                         },
                         guild: l,
                         perks: r
                     }));
             }),
             Z(this, 'handleVanityUrlUpsellIndicator', (e) => {
-                this.handleShowModalUpsell(e, S.Eu4.TIER_3, S.jXE.GUILD_SETTINGS_VANITY_URL, S.qAy.BADGE, (0, b.WW)());
+                this.handleShowModalUpsell(e, b.Eu4.TIER_3, b.jXE.GUILD_SETTINGS_VANITY_URL, b.qAy.BADGE, (0, S.WW)());
             }),
             Z(this, 'handleVanityUrlUpsellButton', (e) => {
-                this.handleShowModalUpsell(e, S.Eu4.TIER_3, S.jXE.GUILD_SETTINGS_VANITY_URL, S.qAy.BUTTON_CTA, (0, b.WW)());
+                this.handleShowModalUpsell(e, b.Eu4.TIER_3, b.jXE.GUILD_SETTINGS_VANITY_URL, b.qAy.BUTTON_CTA, (0, S.WW)());
             });
     }
 }
-function y() {
-    let e = (0, a.e7)([N.Z], () => N.Z.getGuild()),
+function L() {
+    let e = (0, a.e7)([I.Z], () => I.Z.getGuild()),
         t = (0, a.cj)([T.Z], () => ({
             vanityURLCode: T.Z.vanityURLCode,
             vanityURLUses: T.Z.vanityURLUses,
@@ -240,7 +240,7 @@ function y() {
         { analyticsLocations: r } = (0, h.ZP)(u.Z.VANITY_URL);
     return (0, i.jsx)(h.Gt, {
         value: r,
-        children: (0, i.jsx)(L, {
+        children: (0, i.jsx)(A, {
             guild: e,
             ...t,
             hide: n,

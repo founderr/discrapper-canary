@@ -15,30 +15,30 @@ var i = n(200651),
     p = n(389134),
     f = n(35313),
     C = n(94963),
-    I = n(745628),
+    v = n(745628),
     _ = n(950279),
-    N = n(796918),
-    v = n(513532),
+    I = n(796918),
+    N = n(513532),
     T = n(741595),
     j = n(974842),
-    S = n(359380),
-    b = n(308083),
+    b = n(359380),
+    S = n(308083),
     E = n(981631),
     R = n(231338),
     Z = n(388032),
-    A = n(766064);
-let L = (e) => [
+    y = n(766064);
+let A = (e) => [
         {
             section: m.ID.HEADER,
             label: Z.intl.string(Z.t['7r0U+/'])
         },
         {
-            section: b.Wy.GAMES,
+            section: S.Wy.GAMES,
             label: Z.intl.string(Z.t['6umL+/']),
             hasError: (null == e ? void 0 : e.gameApplicationIds) != null
         },
         {
-            section: b.Wy.PLAYSTYLE,
+            section: S.Wy.PLAYSTYLE,
             label: Z.intl.string(Z.t.SWXqQE),
             hasError: (null == e ? void 0 : e.playstyle) != null
         },
@@ -48,16 +48,16 @@ let L = (e) => [
             label: Z.intl.string(Z.t['eNC+OT'])
         },
         {
-            section: b.Wy.UTILITY_TRAITS,
+            section: S.Wy.UTILITY_TRAITS,
             label: Z.intl.string(Z.t.oBixMj)
         },
         {
-            section: b.Wy.INTERESTS,
+            section: S.Wy.INTERESTS,
             label: Z.intl.string(Z.t.WqEH5O),
             hasError: (null == e ? void 0 : e.interests) != null
         },
         {
-            section: b.Wy.DESCRIPTION,
+            section: S.Wy.DESCRIPTION,
             label: Z.intl.string(Z.t.SnIjAQ),
             hasError: (null == e ? void 0 : e.description) != null || (null == e ? void 0 : e.wildcardDescriptors) != null
         },
@@ -67,18 +67,18 @@ let L = (e) => [
             label: Z.intl.string(Z.t.qEgjwM)
         },
         {
-            section: b.Wy.CUSTOMIZE_TAG_BADGE,
+            section: S.Wy.CUSTOMIZE_TAG_BADGE,
             label: Z.intl.string(Z.t.MuFv4e),
             hasError: (null == e ? void 0 : e.tag) != null || (null == e ? void 0 : e.badgeKind) != null || (null == e ? void 0 : e.badgePrimaryColor) != null || (null == e ? void 0 : e.badgeSecondaryColor) != null
         },
         {
-            section: b.Wy.CUSTOMIZE_BANNER,
+            section: S.Wy.CUSTOMIZE_BANNER,
             label: Z.intl.string(Z.t['/A+uVF']),
             hasError: (null == e ? void 0 : e.banner) != null || (null == e ? void 0 : e.brandPrimaryColor) != null || (null == e ? void 0 : e.brandSecondaryColor) != null
         },
         { section: m.ID.DIVIDER },
         {
-            section: b.Wy.MEMBER_APPLICATION,
+            section: S.Wy.MEMBER_APPLICATION,
             label: Z.intl.string(Z.t.aOQWKi),
             hasError: (null == e ? void 0 : e.verificationForm) != null
         },
@@ -86,10 +86,10 @@ let L = (e) => [
         {
             section: m.ID.CUSTOM,
             label: Z.intl.string(Z.t.vc5h39),
-            element: y
+            element: L
         }
     ],
-    y = (e) => {
+    L = (e) => {
         let { guildId: t, onClose: l, dirty: s } = e,
             [a, c] = r.useState(!1),
             d = async () => {
@@ -102,7 +102,7 @@ let L = (e) => [
             };
         return (0, i.jsxs)(o.TabBar.Item, {
             selectedItem: !1,
-            className: A.deleteItem,
+            className: y.deleteItem,
             'aria-label': Z.intl.string(Z.t.vc5h39),
             onClick: () => {
                 if (s) {
@@ -130,7 +130,7 @@ let L = (e) => [
                 (0, i.jsx)(o.TrashIcon, {
                     size: 'xs',
                     color: 'currentColor',
-                    className: A.statusDanger
+                    className: y.statusDanger
                 }),
                 (0, i.jsx)(o.Text, {
                     variant: 'text-md/medium',
@@ -146,12 +146,12 @@ let L = (e) => [
             r = (0, o.useToken)(o.tokens.colors.TEXT_MUTED, R.BR.DARK);
         return t
             ? (0, i.jsxs)('div', {
-                  className: A.tooltipContents,
+                  className: y.tooltipContents,
                   children: [
                       (0, i.jsx)(o.WarningIcon, {
                           size: 'xs',
                           color: 'currentColor',
-                          className: A.errorIconTooltip
+                          className: y.errorIconTooltip
                       }),
                       (0, i.jsxs)('div', {
                           children: [
@@ -173,12 +173,12 @@ let L = (e) => [
     };
 t.Z = (e) => {
     let { guildId: t, onClose: n } = e,
-        [R, y] = r.useState(b.Wy.GAMES),
+        [R, L] = r.useState(S.Wy.GAMES),
         {
             initialSettings: O,
-            settings: M,
-            errors: P,
-            submitting: k,
+            settings: k,
+            errors: M,
+            submitting: P,
             dirty: w
         } = (0, s.cj)([p.Z], () => {
             var e;
@@ -193,7 +193,7 @@ t.Z = (e) => {
         }),
         B = r.useCallback(
             (e) => {
-                w ? h.S.dispatch(E.CkL.EMPHASIZE_NOTICE) : y(e);
+                w ? h.S.dispatch(E.CkL.EMPHASIZE_NOTICE) : L(e);
             },
             [w]
         ),
@@ -225,23 +225,23 @@ t.Z = (e) => {
     let F = r.useCallback((e) => (0, g.mf)(t, { gameApplicationIds: e }), [t]),
         H = r.useCallback((e) => (0, g.mf)(t, { playstyle: e }), [t]),
         z = r.useCallback((e) => (0, g.mf)(t, { interests: e }), [t]),
-        V = r.useCallback((e) => (0, g.mf)(t, e), [t]),
-        W = r.useCallback(() => {
+        W = r.useCallback((e) => (0, g.mf)(t, e), [t]),
+        V = r.useCallback(() => {
             w ? h.S.dispatch(E.CkL.EMPHASIZE_NOTICE) : n();
         }, [w, n]),
         Y = async () => {
-            await (0, g.Ii)(t, M), (0, x.Af)(t);
+            await (0, g.Ii)(t, k), (0, x.Af)(t);
         },
-        K = r.useMemo(() => null != P && Object.values(P).some((e) => null != e), [P]);
-    if (null == M) return null;
-    let q = L(P);
+        K = r.useMemo(() => null != M && Object.values(M).some((e) => null != e), [M]);
+    if (null == k) return null;
+    let q = A(M);
     return (0, i.jsxs)(l.animated.div, {
         style: U,
-        className: A.modal,
+        className: y.modal,
         children: [
             (0, i.jsx)(o.Tooltip, {
                 color: o.Tooltip.Colors.GREY,
-                tooltipClassName: A.tooltip,
+                tooltipClassName: y.tooltip,
                 text: (0, i.jsx)(D, { isErrorVisible: K }),
                 position: 'left',
                 'aria-label': null != K ? Z.intl.string(Z.t.M6w76e) : void 0,
@@ -250,18 +250,18 @@ t.Z = (e) => {
                 children: (e) =>
                     (0, i.jsx)(d.Z, {
                         ...e,
-                        className: A.closeButton,
-                        closeAction: W,
+                        className: y.closeButton,
+                        closeAction: V,
                         keybind: 'ESC'
                     })
             }),
             (0, i.jsxs)('div', {
-                className: A.modalContents,
+                className: y.modalContents,
                 children: [
                     (0, i.jsx)('div', {
-                        className: A.sidebarWrapper,
+                        className: y.sidebarWrapper,
                         children: (0, i.jsx)(o.TabBar, {
-                            className: A.sidebar,
+                            className: y.sidebar,
                             selectedItem: R,
                             onItemSelect: B,
                             orientation: 'vertical',
@@ -286,7 +286,7 @@ t.Z = (e) => {
                                         return (0, i.jsx)(
                                             o.TabBar.Item,
                                             {
-                                                className: A.settingsTab,
+                                                className: y.settingsTab,
                                                 'aria-label': e.label,
                                                 id: e.section,
                                                 children: (0, i.jsxs)(i.Fragment, {
@@ -302,7 +302,7 @@ t.Z = (e) => {
                                                                         size: 'xs',
                                                                         color: 'currentColor',
                                                                         ...e,
-                                                                        className: A.errorIcon
+                                                                        className: y.errorIcon
                                                                     })
                                                             })
                                                     ]
@@ -315,74 +315,74 @@ t.Z = (e) => {
                         })
                     }),
                     (0, i.jsxs)('div', {
-                        className: A.mainContent,
+                        className: y.mainContent,
                         children: [
                             (0, i.jsx)(o.ScrollerThin, {
                                 children: (() => {
                                     switch (R) {
-                                        case b.Wy.GAMES:
+                                        case S.Wy.GAMES:
                                             var e;
                                             return (0, i.jsx)(_.Z, {
                                                 title: Z.intl.string(Z.t.t6Mbq6),
                                                 description: Z.intl.string(Z.t.E7Ymwc),
                                                 onUpdateGames: F,
-                                                gameApplicationIds: null !== (e = M.gameApplicationIds) && void 0 !== e ? e : new Set(),
-                                                error: P.gameApplicationIds,
+                                                gameApplicationIds: null !== (e = k.gameApplicationIds) && void 0 !== e ? e : new Set(),
+                                                error: M.gameApplicationIds,
                                                 guildId: t,
                                                 includeSuggestedGames: !0
                                             });
-                                        case b.Wy.PLAYSTYLE:
+                                        case S.Wy.PLAYSTYLE:
                                             return (0, i.jsx)(T.Z, {
                                                 title: Z.intl.string(Z.t.W0h7pa),
                                                 description: Z.intl.string(Z.t.JHYekZ),
                                                 onUpdatePlaystyle: H,
-                                                playstyle: M.playstyle,
-                                                error: P.playstyle
+                                                playstyle: k.playstyle,
+                                                error: M.playstyle
                                             });
-                                        case b.Wy.UTILITY_TRAITS:
-                                            return (0, i.jsx)(S.Z, {
+                                        case S.Wy.UTILITY_TRAITS:
+                                            return (0, i.jsx)(b.Z, {
                                                 guildId: t,
                                                 title: Z.intl.string(Z.t.G4tP09),
                                                 description: Z.intl.string(Z.t['6Eos19']),
                                                 onUpdateTraits: z,
-                                                progress: M
+                                                progress: k
                                             });
-                                        case b.Wy.INTERESTS:
-                                            return (0, i.jsx)(N.Z, {
-                                                guildId: t,
-                                                handleUpdate: V,
-                                                progress: M,
-                                                error: P.interests
-                                            });
-                                        case b.Wy.DESCRIPTION:
+                                        case S.Wy.INTERESTS:
                                             return (0, i.jsx)(I.Z, {
                                                 guildId: t,
-                                                handleUpdate: V,
-                                                progress: M,
-                                                errors: P
+                                                handleUpdate: W,
+                                                progress: k,
+                                                error: M.interests
                                             });
-                                        case b.Wy.CUSTOMIZE_TAG_BADGE:
-                                            return (0, i.jsx)(j.Z, {
-                                                handleUpdate: V,
-                                                tag: M.tag,
-                                                error: P.tag,
-                                                badge: M.badgeKind,
-                                                primaryColor: M.badgePrimaryColor,
-                                                secondaryColor: M.badgeSecondaryColor,
-                                                furthestStep: b.Wy.CUSTOMIZE_TAG_BADGE,
-                                                inSettings: !0
-                                            });
-                                        case b.Wy.MEMBER_APPLICATION:
+                                        case S.Wy.DESCRIPTION:
                                             return (0, i.jsx)(v.Z, {
                                                 guildId: t,
-                                                inSettings: !0,
-                                                error: P.verificationForm
+                                                handleUpdate: W,
+                                                progress: k,
+                                                errors: M
                                             });
-                                        case b.Wy.CUSTOMIZE_BANNER:
+                                        case S.Wy.CUSTOMIZE_TAG_BADGE:
+                                            return (0, i.jsx)(j.Z, {
+                                                handleUpdate: W,
+                                                tag: k.tag,
+                                                error: M.tag,
+                                                badge: k.badgeKind,
+                                                primaryColor: k.badgePrimaryColor,
+                                                secondaryColor: k.badgeSecondaryColor,
+                                                furthestStep: S.Wy.CUSTOMIZE_TAG_BADGE,
+                                                inSettings: !0
+                                            });
+                                        case S.Wy.MEMBER_APPLICATION:
+                                            return (0, i.jsx)(N.Z, {
+                                                guildId: t,
+                                                inSettings: !0,
+                                                error: M.verificationForm
+                                            });
+                                        case S.Wy.CUSTOMIZE_BANNER:
                                             return (0, i.jsx)(C.Z, {
                                                 guildId: t,
-                                                handleUpdate: V,
-                                                progress: M
+                                                handleUpdate: W,
+                                                progress: k
                                             });
                                         default:
                                             return null;
@@ -394,14 +394,14 @@ t.Z = (e) => {
                                 children:
                                     w &&
                                     (0, i.jsx)(o.SlideIn, {
-                                        className: A.noticeRegion,
+                                        className: y.noticeRegion,
                                         children: (0, i.jsx)(u.Z, {
                                             onSave: Y,
-                                            submitting: k,
+                                            submitting: P,
                                             onReset: () => {
                                                 (0, g.mf)(t, O);
                                             },
-                                            errorMessage: Object.values(P).find((e) => null != e)
+                                            errorMessage: Object.values(M).find((e) => null != e)
                                         })
                                     })
                             })

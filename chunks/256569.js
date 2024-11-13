@@ -64,50 +64,50 @@ function x(e) {
     let { initialValue: n, onChangeTags: l, onChangeNewTagValue: o, tagErrors: d = {}, placeholder: h, className: x, maxTags: p } = e,
         f = r.useRef(null),
         C = r.useRef(null),
-        I = r.useRef(null),
+        v = r.useRef(null),
         _ = (0, u.V)(n),
         {
-            handlePasteEvent: N,
-            handleInputChange: v,
+            handlePasteEvent: I,
+            handleInputChange: N,
             handleKeyDown: T,
             handleContainerKeyUp: j,
-            handleRemoveTag: S,
-            handleTagChangeEvent: b,
+            handleRemoveTag: b,
+            handleTagChangeEvent: S,
             handleSelectTag: E,
             handleUnselectTag: R,
             handleResetTagSelections: Z,
-            handleInputBlurEvent: A
+            handleInputBlurEvent: y
         } = (0, u.Q)(_, {
-            scrollerRef: I,
+            scrollerRef: v,
             mainInputRef: f,
             mainContainerRef: C
         }),
         {
-            state: { value: L, tags: y, selections: D, isSelecting: O }
+            state: { value: A, tags: L, selections: D, isSelecting: O }
         } = _,
-        [M, P] = r.useState(!1),
-        k = r.useCallback(() => {
+        [k, M] = r.useState(!1),
+        P = r.useCallback(() => {
             var e;
-            P(!1), Z(), null === (e = f.current) || void 0 === e || e.focus({ preventScroll: !0 });
+            M(!1), Z(), null === (e = f.current) || void 0 === e || e.focus({ preventScroll: !0 });
         }, [Z]);
     r.useEffect(() => {
-        if (!M) l(y);
-    }, [l, y, M]),
+        if (!k) l(L);
+    }, [l, L, k]),
         r.useEffect(() => {
-            if (!M) o(L);
-        }, [o, L, M]);
+            if (!k) o(A);
+        }, [o, A, k]);
     let w = r.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                e && k(), P(!1);
+                e && P(), M(!1);
             },
-            [k]
+            [P]
         ),
         B = r.useCallback(
             (e) => (t) => {
                 if (t) {
                     var n;
-                    let t = D.includes(y[e]);
+                    let t = D.includes(L[e]);
                     null === (n = f.current) || void 0 === n || n.focus(),
                         t
                             ? R(e)
@@ -120,9 +120,9 @@ function x(e) {
                                           return null === (e = C.current) || void 0 === e ? void 0 : e.focus();
                                       }, 16);
                               }));
-                } else R(e, !0), P(!0);
+                } else R(e, !0), M(!0);
             },
-            [E, R, D, y]
+            [E, R, D, L]
         );
     return (0, i.jsxs)('div', {
         className: s()(m.mainContainer, x),
@@ -131,35 +131,35 @@ function x(e) {
         onKeyUp: j,
         children: [
             (0, i.jsxs)(g, {
-                ref: I,
-                onClick: k,
+                ref: v,
+                onClick: P,
                 children: [
-                    y.map((e, t) =>
+                    L.map((e, t) =>
                         (0, i.jsx)(
                             c.Z,
                             {
                                 value: e,
-                                onChange: b(t),
+                                onChange: S(t),
                                 onBlur: w,
                                 onFocus: B(t),
-                                onRemove: () => S(t),
+                                onRemove: () => b(t),
                                 isSelected: D.includes(e),
                                 isSelecting: O,
                                 error: d[e],
-                                forceShowErrorTooltip: !M && t === y.length - 1
+                                forceShowErrorTooltip: !k && t === L.length - 1
                             },
                             t
                         )
                     ),
                     (0, i.jsx)('input', {
-                        className: s()(m.mainTextInput, { [m.isEditingOtherNodes]: M }),
+                        className: s()(m.mainTextInput, { [m.isEditingOtherNodes]: k }),
                         ref: f,
-                        onChange: v,
+                        onChange: N,
                         onKeyDownCapture: T,
-                        onPaste: N,
-                        onBlur: A,
-                        placeholder: 0 === y.length ? h : void 0,
-                        value: L
+                        onPaste: I,
+                        onBlur: y,
+                        placeholder: 0 === L.length ? h : void 0,
+                        value: A
                     })
                 ]
             }),
@@ -168,7 +168,7 @@ function x(e) {
                     variant: 'text-xs/normal',
                     color: 'text-muted',
                     className: m.maxTags,
-                    children: [null !== (t = null == y ? void 0 : y.length) && void 0 !== t ? t : 0, '/', p]
+                    children: [null !== (t = null == L ? void 0 : L.length) && void 0 !== t ? t : 0, '/', p]
                 })
         ]
     });

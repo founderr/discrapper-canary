@@ -1304,19 +1304,19 @@ t.ZP = Object.freeze({
                     paymentGatewayName: w.Vz[e.paymentGateway],
                     subscriptionManagementLink: ey(e.paymentGateway, 'SUBSCRIPTION_MANAGEMENT')
                 });
-            let i = new Date(t.subscriptionPeriodStart);
-            if (r.length > 0) {
+            let s = new Date(t.subscriptionPeriodStart);
+            if (r.length > 0 && i.fractionalState === x.a$.FP_SUB_PAUSED) {
                 let e = eZ(r);
-                i.setHours(i.getHours() + e);
+                s.setHours(s.getHours() + e);
             }
             return n
                 ? M.intl.format(M.t.Vl3cEB, {
                       planName: M.intl.string(M.t.Ipxkoq),
-                      renewalDate: i,
+                      renewalDate: s,
                       price: a
                   })
                 : M.intl.format(M.t.Q18lRE, {
-                      renewalDate: i,
+                      renewalDate: s,
                       price: a
                   });
         }

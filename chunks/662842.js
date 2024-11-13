@@ -26,16 +26,16 @@ var i,
     S = n(230900),
     N = n(854698),
     T = n(703656),
-    x = n(922482),
-    A = n(565799),
-    b = n(501655),
+    A = n(922482),
+    b = n(565799),
+    x = n(501655),
     Z = n(427679),
-    y = n(448206),
-    L = n(184301),
+    L = n(448206),
+    y = n(184301),
     R = n(347475),
     O = n(496675),
-    j = n(594174),
-    P = n(662868),
+    P = n(594174),
+    j = n(662868),
     D = n(981631),
     M = n(765305),
     w = n(388032),
@@ -55,12 +55,12 @@ function U(e) {
             [s, r]
         ),
         B = null == i ? void 0 : i.id,
-        H = (0, c.Wu)([A.Z], () => [...new Set(A.Z.getMutableParticipants(B, b.pV.SPEAKER).map((e) => e.user))], [B]),
-        V = (0, c.e7)([A.Z], () => (null != B ? A.Z.getParticipantCount(B, b.pV.AUDIENCE) : 0), [B]),
+        V = (0, c.Wu)([b.Z], () => [...new Set(b.Z.getMutableParticipants(B, x.pV.SPEAKER).map((e) => e.user))], [B]),
+        H = (0, c.e7)([b.Z], () => (null != B ? b.Z.getParticipantCount(B, x.pV.AUDIENCE) : 0), [B]),
         F = (0, c.e7)([O.Z], () => O.Z.can(D.Plq.CONNECT, i)),
-        z = (0, y.Z)(null == i ? void 0 : i.id),
+        z = (0, L.Z)(null == i ? void 0 : i.id),
         Y = null == r ? void 0 : r.creator_id,
-        W = (0, c.e7)([j.default], () => j.default.getUser(Y), [Y]);
+        W = (0, c.e7)([P.default], () => P.default.getUser(Y), [Y]);
     a.useEffect(() => {
         null != Y && (0, h.PR)(Y);
     }, [Y]);
@@ -280,13 +280,13 @@ function U(e) {
                 canConnect: F,
                 myRole: z,
                 eventCreator: W,
-                speakers: H,
-                listenerCount: V,
+                speakers: V,
+                listenerCount: H,
                 isEventNoticeHidden: G,
                 isStageNoticeHidden: U,
                 isStudyRoomNotice: n
             }),
-        [r, s, i, F, z, W, H, V, G, U, n]
+        [r, s, i, F, z, W, V, H, G, U, n]
     );
     return null == K
         ? null
@@ -308,7 +308,7 @@ function U(e) {
                   (0, l.jsxs)('div', {
                       className: k.header,
                       children: [
-                          (0, l.jsx)(P.Z, {
+                          (0, l.jsx)(j.Z, {
                               color: d.Z.unsafe_rawColors.GREEN_230.css,
                               width: 16,
                               height: 16
@@ -328,7 +328,7 @@ function U(e) {
                                   (0, l.jsx)(
                                       u.Popout,
                                       {
-                                          preload: () => (0, L.Z)(e, { guildId: t.id }),
+                                          preload: () => (0, y.Z)(e, { guildId: t.id }),
                                           renderPopout: (n) =>
                                               (0, l.jsx)(R.Z, {
                                                   ...n,
@@ -375,7 +375,7 @@ function U(e) {
                             size: u.Button.Sizes.SMALL,
                             color: u.Button.Colors.GREEN,
                             onClick: () => {
-                                if (J) null != i && null != i.getGuildId() && ((0, x.Cq)(i), (0, T.XU)(i.getGuildId(), i.id));
+                                if (J) null != i && null != i.getGuildId() && ((0, A.Cq)(i), (0, T.XU)(i.getGuildId(), i.id));
                                 else {
                                     if (null == r) return;
                                     (0, g.bO)({ eventId: r.id });

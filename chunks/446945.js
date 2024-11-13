@@ -1,39 +1,39 @@
-var r = t(200651);
+var i = t(200651);
 t(192379);
-var a = t(481060),
-    i = t(239091),
-    o = t(838221),
+var l = t(481060),
+    a = t(239091),
+    r = t(838221),
     s = t(246364),
-    l = t(700833),
+    o = t(700833),
     c = t(388032),
     d = t(207029);
 function u(e) {
     let { addFormField: n, onSelect: t, guild: u } = e;
-    return (0, r.jsx)(a.Menu, {
+    return (0, i.jsx)(l.Menu, {
         navId: 'add-questions',
         className: d.menu,
-        onClose: i.Zy,
+        onClose: a.Zy,
         'aria-label': c.intl.string(c.t.liqwPD),
         onSelect: t,
-        children: (0, r.jsxs)(a.MenuGroup, {
+        children: (0, i.jsxs)(l.MenuGroup, {
             children: [
-                (0, r.jsx)(a.MenuItem, {
+                (0, i.jsx)(l.MenuItem, {
                     id: 'text-input',
-                    icon: (0, a.makeIconCompat)(o.Z),
+                    icon: (0, l.makeIconCompat)(r.Z),
                     label: c.intl.string(c.t.w6Q9w8),
-                    action: () => (0, l.Md)(s.QJ.TEXT_INPUT, n, u)
+                    action: () => (0, o.Md)(s.QJ.TEXT_INPUT, n, u)
                 }),
-                (0, r.jsx)(a.MenuItem, {
+                (0, i.jsx)(l.MenuItem, {
                     id: 'paragraph',
-                    icon: a.ChannelListIcon,
+                    icon: l.ChannelListIcon,
                     label: c.intl.string(c.t.gG0JBA),
-                    action: () => (0, l.Md)(s.QJ.PARAGRAPH, n, u)
+                    action: () => (0, o.Md)(s.QJ.PARAGRAPH, n, u)
                 }),
-                (0, r.jsx)(a.MenuItem, {
+                (0, i.jsx)(l.MenuItem, {
                     id: 'multiple-choice',
-                    icon: a.ListBulletsIcon,
+                    icon: l.ListBulletsIcon,
                     label: c.intl.string(c.t.ooKh3t),
-                    action: () => (0, l.Md)(s.QJ.MULTIPLE_CHOICE, n, u)
+                    action: () => (0, o.Md)(s.QJ.MULTIPLE_CHOICE, n, u)
                 })
             ]
         })
@@ -41,11 +41,11 @@ function u(e) {
 }
 n.Z = function (e) {
     let { addFormField: n, guild: t } = e,
-        o = (e) => {
-            (0, i.vq)(
+        r = (e) => {
+            (0, a.vq)(
                 e,
                 (e) =>
-                    (0, r.jsx)(u, {
+                    (0, i.jsx)(u, {
                         ...e,
                         addFormField: n,
                         guild: t
@@ -56,20 +56,20 @@ n.Z = function (e) {
                 }
             );
         };
-    return (0, r.jsx)(a.Tooltip, {
+    return (0, i.jsx)(l.Tooltip, {
         text: c.intl.string(c.t.nsI4dX),
         children: (e) =>
-            (0, r.jsxs)(a.Clickable, {
+            (0, i.jsxs)(l.Clickable, {
                 ...e,
                 className: d.container,
-                onClick: o,
+                onClick: r,
                 children: [
-                    (0, r.jsx)(a.PlusSmallIcon, {
+                    (0, i.jsx)(l.PlusSmallIcon, {
                         size: 'md',
                         color: 'currentColor',
                         className: d.icon
                     }),
-                    (0, r.jsx)(a.Text, {
+                    (0, i.jsx)(l.Text, {
                         color: 'interactive-active',
                         variant: 'text-md/semibold',
                         children: c.intl.string(c.t.CoHdoK)

@@ -15,14 +15,14 @@ var i = n(200651),
     p = n(388032),
     f = n(333913),
     C = n(438825),
-    I = n(236140),
+    v = n(236140),
     _ = n(37069),
-    N = n(518513),
-    v = n(168179),
+    I = n(518513),
+    N = n(168179),
     T = n(348986),
     j = n(930065),
-    S = n(345669);
-let b = () => [
+    b = n(345669);
+let S = () => [
         {
             icon: c.AnalyticsIcon,
             color: o.Z.unsafe_rawColors.GREEN_360.css,
@@ -88,19 +88,19 @@ let b = () => [
             rightAlign: !0
         },
         {
-            iconSrc: N,
+            iconSrc: I,
             name: 'Learn Latin',
             position: [-280, -30],
             faded: !0
         },
         {
-            iconSrc: v,
+            iconSrc: N,
             name: 'r/leagueoflegends',
             position: [-320, -30],
             rightAlign: !0
         },
         {
-            iconSrc: S,
+            iconSrc: b,
             name: 'Sneaker Fans',
             position: [-250, 40]
         },
@@ -169,8 +169,8 @@ t.Z = (e) => {
     let { guild: t } = e,
         [n, l] = r.useState(0),
         [s, o] = r.useState(0),
-        [_, N] = r.useState(),
-        v = (0, a.e7)([m.Z], () => m.Z.can(g.Plq.ADMINISTRATOR, t)),
+        [_, I] = r.useState(),
+        N = (0, a.e7)([m.Z], () => m.Z.can(g.Plq.ADMINISTRATOR, t)),
         T = null == _ ? void 0 : _.offsetWidth,
         j = null == _ ? void 0 : _.offsetHeight;
     r.useEffect(() => {
@@ -179,7 +179,7 @@ t.Z = (e) => {
         r.useEffect(() => {
             (0, d.Kw)(x.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL);
         }, []);
-    let S = () => {
+    let b = () => {
         u.Z.open();
     };
     return (0, i.jsxs)('div', {
@@ -187,7 +187,7 @@ t.Z = (e) => {
         children: [
             (0, i.jsxs)('div', {
                 className: f.banner,
-                ref: (e) => N(e),
+                ref: (e) => I(e),
                 children: [
                     E.map((e) =>
                         (0, i.jsx)(
@@ -207,7 +207,7 @@ t.Z = (e) => {
                     }),
                     (0, i.jsx)('img', {
                         alt: '',
-                        src: I,
+                        src: v,
                         className: f.sparkles
                     })
                 ]
@@ -223,13 +223,13 @@ t.Z = (e) => {
                 children: p.intl.format(p.t['52EgsL'], { helpdeskArticle: h.Z.getArticleURL(g.BhN.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES) })
             }),
             (0, i.jsx)(c.Tooltip, {
-                text: v ? null : p.intl.string(p.t['pjG+T0']),
-                'aria-label': v ? void 0 : p.intl.string(p.t['pjG+T0']),
+                text: N ? null : p.intl.string(p.t['pjG+T0']),
+                'aria-label': N ? void 0 : p.intl.string(p.t['pjG+T0']),
                 children: (e) =>
                     (0, i.jsx)(c.Button, {
-                        onClick: S,
+                        onClick: b,
                         className: f.button,
-                        disabled: !v,
+                        disabled: !N,
                         ...e,
                         children: p.intl.string(p.t.LhlgY2)
                     })
@@ -248,7 +248,7 @@ t.Z = (e) => {
             }),
             (0, i.jsx)('div', {
                 className: f.features,
-                children: b().map((e, t) => (0, i.jsx)(R, { ...e }, t))
+                children: S().map((e, t) => (0, i.jsx)(R, { ...e }, t))
             })
         ]
     });

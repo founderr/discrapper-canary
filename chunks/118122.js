@@ -14,8 +14,8 @@ var i = n(200651),
     d = n(885714),
     h = n(155409),
     p = n(430824),
-    f = n(594174),
-    m = n(40153),
+    m = n(594174),
+    f = n(40153),
     g = n(603592),
     C = n(981631),
     _ = n(675999),
@@ -43,12 +43,12 @@ function S(e) {
     let { disableTooltip: t, lastTargetNode: n } = e,
         o = (0, r.e7)([p.Z], () => p.Z.getGuilds()),
         S = l.useMemo(() => Object.values(o), [o]),
-        E = (0, r.e7)([f.default], () => f.default.getCurrentUser()),
-        Z = l.useMemo(() => S.some((e) => e.isOwner(E)), [S, E]),
-        N = (0, a.useModalsStore)((e) => (0, a.hasModalOpenSelector)(e, _.PU)),
+        E = (0, r.e7)([m.default], () => m.default.getCurrentUser()),
+        N = l.useMemo(() => S.some((e) => e.isOwner(E)), [S, E]),
+        Z = (0, a.useModalsStore)((e) => (0, a.hasModalOpenSelector)(e, _.PU)),
         { analyticsLocations: y } = (0, s.ZP)(),
         T = (0, a.useRedesignIconContext)().enabled,
-        j = (0, i.jsx)(g.Z, {
+        A = (0, i.jsx)(g.Z, {
             showPill: !1,
             id: 'create-join-button',
             onClick: () => {
@@ -63,23 +63,23 @@ function S(e) {
                       })
                     : c.Z.openCreateGuildModal({ location: 'Guild List' });
             },
-            selected: N,
+            selected: Z,
             onContextMenu: b,
             tooltip: v.intl.string(v.t.l5WIbW),
             icon: T ? a.PlusMediumIcon : a.PlusSmallIcon
         });
     return t
-        ? j
+        ? A
         : (0, i.jsx)('div', {
               className: x.tutorialContainer,
               children: (0, i.jsxs)(h.Z, {
-                  tutorialId: Z ? 'create-more-servers' : 'create-first-server',
+                  tutorialId: N ? 'create-more-servers' : 'create-first-server',
                   inlineSpecs: I,
                   position: 'right',
                   children: [
-                      j,
+                      A,
                       null != n &&
-                          (0, i.jsx)(m.ZP, {
+                          (0, i.jsx)(f.ZP, {
                               name: v.intl.string(v.t['45xjMz']),
                               targetNode: n,
                               below: !0,

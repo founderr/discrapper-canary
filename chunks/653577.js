@@ -14,8 +14,8 @@ var i = n(200651),
     d = n(111028),
     h = n(454585),
     p = n(626135),
-    f = n(981631),
-    m = n(388032),
+    m = n(981631),
+    f = n(388032),
     g = n(447871),
     C = n(554034);
 function _(e) {
@@ -23,29 +23,29 @@ function _(e) {
         b = (0, o.e7)([u.Z], () => u.Z.getChannelStatus(t)),
         S = null != b && b.length > 0,
         E = (0, c.ZP)(t, !0),
-        Z = (!x || !!I) && E,
-        N = null != _ && _.length > 0;
+        N = (!x || !!I) && E,
+        Z = null != _ && _.length > 0;
     l.useEffect(() => {
         S &&
-            p.default.track(f.rMx.VOICE_CHANNEL_TOPIC_VIEWED, {
+            p.default.track(m.rMx.VOICE_CHANNEL_TOPIC_VIEWED, {
                 guild_id: t.guild_id,
                 channel_id: t.id
             });
     }, [t.id, S, t.guild_id]);
     let y = (0, s.useRedesignIconContext)().enabled ? 12 : 14;
     if (null == t.guild_id) return null;
-    let T = a()(g.statusDiv, n && Z ? g.hoverable : null);
+    let T = a()(g.statusDiv, n && N ? g.hoverable : null);
     if (S)
         return (0, i.jsx)(s.Clickable, {
             className: T,
-            onClick: Z ? v : void 0,
+            onClick: N ? v : void 0,
             children: (0, i.jsx)(s.Text, {
                 variant: 'text-xs/medium',
                 className: a()(g.statusText, C.markup),
                 children: (0, i.jsx)(d.Z, { children: h.Z.parseVoiceChannelStatus(b, !0, { channelId: t.id }) })
             })
         });
-    if (n && Z && (!N || r))
+    if (n && N && (!Z || r))
         return (0, i.jsxs)(s.Clickable, {
             className: T,
             onClick: v,
@@ -53,7 +53,7 @@ function _(e) {
                 (0, i.jsx)(s.Text, {
                     variant: 'text-xs/medium',
                     className: g.statusText,
-                    children: m.intl.string(m.t.Mgpxi4)
+                    children: f.intl.string(f.t.Mgpxi4)
                 }),
                 (0, i.jsx)(s.PencilIcon, {
                     size: 'custom',
@@ -64,6 +64,6 @@ function _(e) {
                 })
             ]
         });
-    if (N) return (0, i.jsx)(d.Z, { children: _ });
+    if (Z) return (0, i.jsx)(d.Z, { children: _ });
     return null;
 }

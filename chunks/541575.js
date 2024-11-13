@@ -15,10 +15,10 @@ var r = n(780384),
     p = n(388032),
     f = n(691440);
 t.Z = function (e) {
-    let { guild: t, disabled: C, role: I } = e,
+    let { guild: t, disabled: C, role: v } = e,
         _ = (0, s.ZP)(),
-        N = (0, u.oC)(t.id, I),
-        { analyticsLocations: v } = (0, o.ZP)(),
+        I = (0, u.oC)(t.id, v),
+        { analyticsLocations: N } = (0, o.ZP)(),
         T = () => {
             (0, l.openModalLazy)(async () => {
                 let { default: e } = await n.e('22942').then(n.bind(n, 660727));
@@ -26,13 +26,13 @@ t.Z = function (e) {
                     (0, i.jsx)(e, {
                         ...n,
                         guildId: t.id,
-                        onUploadIcon: (e) => (0, h._l)(I.id, e, null),
-                        onSelectUnicodeEmoji: (e) => (0, h._l)(I.id, null, e)
+                        onUploadIcon: (e) => (0, h._l)(v.id, e, null),
+                        onSelectUnicodeEmoji: (e) => (0, h._l)(v.id, null, e)
                     });
             });
         },
         j = t.features.has(g.oNc.ROLE_ICONS),
-        S = (e) => {
+        b = (e) => {
             !j &&
                 ((0, a.yw)(g.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                     location: {
@@ -40,10 +40,10 @@ t.Z = function (e) {
                         section: g.jXE.CUSTOM_ROLE_ICONS_TOOLTIP
                     },
                     guild_id: null == t ? void 0 : t.id,
-                    location_stack: v
+                    location_stack: N
                 }),
                 (0, m.Z)({
-                    analyticsLocations: v,
+                    analyticsLocations: N,
                     analyticsSourceLocation: {
                         page: g.ZY5.GUILD_SETTINGS,
                         section: g.jXE.GUILD_ROLE_EDIT_UPSELL_MODAL,
@@ -53,14 +53,14 @@ t.Z = function (e) {
                     perks: (0, x.Yp)()
                 }));
         },
-        b = (0, i.jsx)(d.Z, {
+        S = (0, i.jsx)(d.Z, {
             className: f.availabilityIndicator,
             guild: t,
             guildFeature: g.oNc.ROLE_ICONS,
             tooltipPosition: 'top',
             hideTooltip: j,
             onClick: () =>
-                S({
+                b({
                     object: g.qAy.LEARN_MORE,
                     objectType: g.Qqv.TIER_2
                 })
@@ -70,7 +70,7 @@ t.Z = function (e) {
         children: [
             (0, i.jsxs)(l.FormTitle, {
                 className: f.formTitle,
-                children: [(0, i.jsx)('div', { children: p.intl.string(p.t.B9grJy) }), b]
+                children: [(0, i.jsx)('div', { children: p.intl.string(p.t.B9grJy) }), S]
             }),
             (0, i.jsx)(l.FormText, {
                 className: f.description,
@@ -82,9 +82,9 @@ t.Z = function (e) {
                     (0, i.jsx)('div', {
                         className: f.previewContainer,
                         children:
-                            null != N
+                            null != I
                                 ? (0, i.jsx)(c.Z, {
-                                      ...N,
+                                      ...I,
                                       className: f.roleIconPreview,
                                       enableTooltip: !1
                                   })
@@ -100,17 +100,17 @@ t.Z = function (e) {
                         className: f.button,
                         color: (0, r.ap)(_) ? l.Button.Colors.PRIMARY : l.Button.Colors.WHITE,
                         look: l.Button.Looks.OUTLINED,
-                        onClick: () => (t.hasFeature(g.oNc.ROLE_ICONS) ? T() : S({ object: g.qAy.UPLOAD_IMAGE })),
+                        onClick: () => (t.hasFeature(g.oNc.ROLE_ICONS) ? T() : b({ object: g.qAy.UPLOAD_IMAGE })),
                         disabled: C,
                         children: p.intl.string(p.t.mD1oGB)
                     }),
-                    null != N
+                    null != I
                         ? (0, i.jsx)(l.Button, {
                               className: f.button,
                               color: (0, r.ap)(_) ? l.Button.Colors.PRIMARY : l.Button.Colors.TRANSPARENT,
                               look: l.Button.Looks.BLANK,
                               onClick: () => {
-                                  (0, h._l)(I.id, null, null);
+                                  (0, h._l)(v.id, null, null);
                               },
                               disabled: C,
                               children: p.intl.string(p.t['uY+Nk5'])

@@ -14,14 +14,14 @@ var i = n(200651),
     p = n(210887),
     f = n(598077),
     C = n(699516),
-    I = n(594174),
+    v = n(594174),
     _ = n(259580),
-    N = n(51144),
-    v = n(426563),
+    I = n(51144),
+    N = n(426563),
     T = n(909746),
     j = n(501801),
-    S = n(981631),
-    b = n(388032),
+    b = n(981631),
+    S = n(388032),
     E = n(451316);
 class R extends r.PureComponent {
     render() {
@@ -32,7 +32,7 @@ class R extends r.PureComponent {
             children: [
                 (0, i.jsx)(d.Text, {
                     variant: 'text-md/normal',
-                    children: N.ZP.getUserTag(e, { mode: 'username' })
+                    children: I.ZP.getUserTag(e, { mode: 'username' })
                 }),
                 '0' !== e.discriminator &&
                     (0, i.jsxs)(d.Text, {
@@ -48,7 +48,7 @@ class Z extends r.PureComponent {
     hasChangesToRender() {
         let { log: e } = this.props,
             { changes: t } = e;
-        return (e.actionType !== S.vB8.DELETE || e.action === S.rsA.MEMBER_BAN_ADD || e.action === S.rsA.MEMBER_KICK || e.action === S.rsA.MEMBER_PRUNE) && null != t && t.some((t) => !(0, j.xO)(e, t));
+        return (e.actionType !== b.vB8.DELETE || e.action === b.rsA.MEMBER_BAN_ADD || e.action === b.rsA.MEMBER_KICK || e.action === b.rsA.MEMBER_PRUNE) && null != t && t.some((t) => !(0, j.xO)(e, t));
     }
     renderTitle() {
         let { log: e, onUserContextMenu: t, onTargetContextMenu: n, onChannelContextMenu: r } = this.props,
@@ -57,7 +57,7 @@ class Z extends r.PureComponent {
         return null != o
             ? (0, i.jsx)('div', {
                   className: E.overflowEllipsis,
-                  children: b.intl.format(o, {
+                  children: S.intl.format(o, {
                       user: l,
                       target: s.toString(),
                       userHook: (n, r) => {
@@ -73,12 +73,12 @@ class Z extends r.PureComponent {
                           if (null != e.options.integration_type) {
                               var l;
                               let t = u.Z.get(e.options.integration_type);
-                              return null !== (l = null == t ? void 0 : t.name) && void 0 !== l ? l : b.intl.string(b.t['n+olu7']);
+                              return null !== (l = null == t ? void 0 : t.name) && void 0 !== l ? l : S.intl.string(S.t['n+olu7']);
                           }
-                          return b.intl.string(b.t['30mdIy']);
+                          return S.intl.string(S.t['30mdIy']);
                       },
                       targetHook: (t, r) =>
-                          e.targetType === S.KFR.USER && e.target instanceof f.Z
+                          e.targetType === b.KFR.USER && e.target instanceof f.Z
                               ? (0, i.jsx)(
                                     R,
                                     {
@@ -96,7 +96,7 @@ class Z extends r.PureComponent {
                                     r
                                 ),
                       count: a.count,
-                      channel: null == a.channel || 'string' == typeof a.channel ? a.channel : (0, h.F6)(a.channel, I.default, C.Z, !0),
+                      channel: null == a.channel || 'string' == typeof a.channel ? a.channel : (0, h.F6)(a.channel, v.default, C.Z, !0),
                       channelHook: (e, t) =>
                           (0, i.jsx)(
                               'span',
@@ -148,7 +148,7 @@ class Z extends r.PureComponent {
                             e.stopPropagation(), n.onClick(e);
                         },
                         className: E.avatar,
-                        src: ((r = e), (l = t), r.action === S.rsA.AUTO_MODERATION_BLOCK_MESSAGE || r.action === S.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL || r.action === S.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED || r.action === S.rsA.AUTO_MODERATION_QUARANTINE_USER ? (0, v.j)() : null === (s = r.user) || void 0 === s ? void 0 : s.getAvatarURL(l, 40)),
+                        src: ((r = e), (l = t), r.action === b.rsA.AUTO_MODERATION_BLOCK_MESSAGE || r.action === b.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL || r.action === b.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED || r.action === b.rsA.AUTO_MODERATION_QUARANTINE_USER ? (0, N.j)() : null === (s = r.user) || void 0 === s ? void 0 : s.getAvatarURL(l, 40)),
                         'aria-hidden': !0,
                         size: d.AvatarSizes.SIZE_40
                     });
@@ -188,7 +188,7 @@ class Z extends r.PureComponent {
                       variant: 'text-sm/normal',
                       children: [u, '\u2014', m]
                   });
-        let h = o ? l : S.dG4;
+        let h = o ? l : b.dG4;
         return (0, i.jsx)(a.mh, {
             id: t.id,
             children: (l) =>

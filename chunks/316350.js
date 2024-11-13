@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return b;
     }
 }),
     n(47120);
@@ -20,14 +20,14 @@ var i,
     p = n(402766),
     f = n(267642),
     C = n(981631),
-    I = n(388032),
+    v = n(388032),
     _ = n(366667);
-let N = {
+let I = {
         tension: 200,
         friction: 20
     },
-    v = {
-        ...N,
+    N = {
+        ...I,
         clamp: !0
     };
 function T(e) {
@@ -47,7 +47,7 @@ function T(e) {
     return (0, a.jsx)(m.Spring, {
         from: { opacity: 0 },
         to: { opacity: 1 },
-        config: v,
+        config: N,
         shouldAnimate: 'animate-always',
         children: (e) =>
             (0, a.jsxs)(u.animated.div, {
@@ -61,7 +61,7 @@ function T(e) {
                     }),
                     (0, a.jsx)('div', {
                         className: d()(_.tierCloseHint, x),
-                        children: I.intl.format(I.t.qV3Erq, { numLeft: r - i })
+                        children: v.intl.format(v.t.qV3Erq, { numLeft: r - i })
                     }),
                     (0, a.jsx)(m.Clickable, {
                         onClick: l,
@@ -89,7 +89,7 @@ function j(e) {
         (0, a.jsx)(m.Spring, {
             from: { unlockedTranslateY: 50 },
             to: { unlockedTranslateY: 0 === f ? 50 : 0 },
-            config: N,
+            config: I,
             children: (e) =>
                 (0, a.jsx)('div', {
                     className: d()(
@@ -113,7 +113,7 @@ function j(e) {
                                 children: l.title
                             }),
                             s
-                                ? (0, a.jsx)(b, {
+                                ? (0, a.jsx)(S, {
                                       transform: null == e ? void 0 : e.unlockedTranslateY.to((e) => 'translate3d(0, '.concat(e, 'px, 0)')),
                                       headerButton: c,
                                       subscriptionsRequired: u,
@@ -130,11 +130,11 @@ function j(e) {
         })
     );
 }
-function S(e) {
+function b(e) {
     let { children: t, subscriptionCount: n, onSetRef: i, tier: r, isAnimatedTo: l, hasBottomMargin: s, headerButton: o = null, withCardBody: c = !0, guildId: u, showHeaderLockStatus: h = !0 } = e,
         p = (0, f.vn)(u)[r.tier],
-        N = l && n >= p,
-        v = r.tier !== C.Eu4.NONE && r.tier !== C.Eu4.TIER_1,
+        I = l && n >= p,
+        N = r.tier !== C.Eu4.NONE && r.tier !== C.Eu4.TIER_1,
         T = (e, t) => {
             var n;
             let { icon: i, className: r } = (0, g.t)(e.icon, t);
@@ -159,7 +159,7 @@ function S(e) {
                                         e.isNew
                                             ? (0, a.jsx)(m.TextBadge, {
                                                   className: _.newBadge,
-                                                  text: I.intl.string(I.t.y2b7CA)
+                                                  text: v.intl.string(v.t.y2b7CA)
                                               })
                                             : null
                                     ]
@@ -192,7 +192,7 @@ function S(e) {
                     guildId: u,
                     hasBottomMargin: s,
                     subscriptionsRequired: p,
-                    hasAnimatedUnlocked: N,
+                    hasAnimatedUnlocked: I,
                     isAnimatedTo: l
                 }),
                 (0, a.jsx)('div', {
@@ -202,16 +202,16 @@ function S(e) {
                             ? t
                             : (0, a.jsxs)(a.Fragment, {
                                   children: [
-                                      v
+                                      N
                                           ? (0, a.jsx)('div', {
                                                 className: _.previousPerks,
-                                                children: I.intl.string(I.t.oKzyRU)
+                                                children: v.intl.string(v.t.oKzyRU)
                                             })
                                           : null,
                                       null != r.perks &&
                                           (0, a.jsx)('div', {
                                               className: _.perks,
-                                              children: r.perks.map((e) => T(e, N))
+                                              children: r.perks.map((e) => T(e, I))
                                           })
                                   ]
                               })
@@ -222,7 +222,7 @@ function S(e) {
     );
 }
 ((l = i || (i = {}))[(l.OPEN = 0)] = 'OPEN'), (l[(l.CLOSING = 1)] = 'CLOSING'), (l[(l.CLOSED = 2)] = 'CLOSED'), ((s = r || (r = {}))[(s.NONE = 0)] = 'NONE'), (s[(s.UNLOCKED_SLIDE = 1)] = 'UNLOCKED_SLIDE');
-let b = (e) => {
+let S = (e) => {
         let { transform: t, hasAnimatedUnlocked: n, headerButton: i, subscriptionsRequired: r } = e;
         return null !== i ? i : n ? (0, a.jsx)(E, { transform: t }) : (0, a.jsx)(R, { subscriptionsRequired: r });
     },
@@ -231,7 +231,7 @@ let b = (e) => {
         return (0, a.jsx)(u.animated.div, {
             style: { transform: t },
             className: _.tierUnlocked,
-            children: I.intl.string(I.t.dNGM0t)
+            children: v.intl.string(v.t.dNGM0t)
         });
     },
     R = (e) => {
@@ -240,7 +240,7 @@ let b = (e) => {
             children: [
                 (0, a.jsx)('div', {
                     className: _.tierRequirement,
-                    children: I.intl.format(I.t.t2Wbo6, { required: t })
+                    children: v.intl.format(v.t.t2Wbo6, { required: t })
                 }),
                 (0, a.jsx)(m.LockIcon, {
                     size: 'md',

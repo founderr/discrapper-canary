@@ -24,17 +24,17 @@ function x(e) {
             let t = s.default.getCurrentUser();
             return (null == e ? void 0 : e.isOwner(t)) === !0;
         }),
-        { error: C, loading: I, createEnableRequest: _, submittedRequest: N } = (0, c.Z)(null == e ? void 0 : e.id),
-        { loading: v, error: T, refresh: j, eligibility: S } = (0, d.Z)(null == e ? void 0 : e.id),
-        { isApplicationRejected: b, requestCooldownDuration: E } = (0, u.Z)(S),
+        { error: C, loading: v, createEnableRequest: _, submittedRequest: I } = (0, c.Z)(null == e ? void 0 : e.id),
+        { loading: N, error: T, refresh: j, eligibility: b } = (0, d.Z)(null == e ? void 0 : e.id),
+        { isApplicationRejected: S, requestCooldownDuration: E } = (0, u.Z)(b),
         R = (null == e ? void 0 : e.hasFeature(h.oNc.CREATOR_MONETIZABLE_RESTRICTED)) === !0 || (null == e ? void 0 : e.hasFeature(h.oNc.CREATOR_MONETIZABLE_DISABLED)) === !0,
         { isMonetizationReapplicationDisabled: Z } = (0, l.eC)(null == e ? void 0 : e.id),
-        A = N || (null == S ? void 0 : S.isApplicationPending) === !0,
-        L = (null == S ? void 0 : S.canApply) === !0,
-        y = g.intl.format(g.t.aJUdOj, { faqUrl: a.Z.getArticleURL(h.BhN.CREATOR_FAQ) });
-    b && Z
+        y = I || (null == b ? void 0 : b.isApplicationPending) === !0,
+        A = (null == b ? void 0 : b.canApply) === !0,
+        L = g.intl.format(g.t.aJUdOj, { faqUrl: a.Z.getArticleURL(h.BhN.CREATOR_FAQ) });
+    S && Z
         ? (t = !0 === x ? g.intl.format(g.t['0o1Q+v'], { communityGuidelineUrl: h.EYA.GUIDELINES }) : g.intl.format(g.t.b6h59v, { communityGuidelineUrl: h.EYA.GUIDELINES }))
-        : b &&
+        : S &&
           null != E &&
           (t = g.intl.format(g.t.TvX209, {
               requestCooldownDuration: E,
@@ -42,31 +42,31 @@ function x(e) {
           }));
     let D = n && f && !1 === p,
         O = n && !1 === x,
-        M = (0, m.f)(),
-        P = b && L && f ? g.intl.format(g.t.wbVIUF, {}) : void 0;
+        k = (0, m.f)(),
+        M = S && A && f ? g.intl.format(g.t.wbVIUF, {}) : void 0;
     return (
         i.useEffect(() => {
             D && j();
         }, [j, D]),
         {
-            resubmittingEnableRequest: I,
+            resubmittingEnableRequest: v,
             resubmissionError: C,
             isGuildOwner: f,
             createEnableRequest: _,
-            resubmittedRequest: N,
-            eligibilityLoading: v,
+            resubmittedRequest: I,
+            eligibilityLoading: N,
             eligibilityError: T,
             refreshEligibility: j,
-            eligibility: S,
-            eligibleForMonetization: L,
-            isApplicationPending: A,
-            hasPreviousApplicationRejection: b,
+            eligibility: b,
+            eligibleForMonetization: A,
+            isApplicationPending: y,
+            hasPreviousApplicationRejection: S,
             requestRejectedNoticeText: t,
-            reapplyNoticeText: P,
+            reapplyNoticeText: M,
             showAcceptTermsFlow: O,
-            wasRejectedInV1: O && (R || b),
-            requirementsFinePrintText: y,
-            acceptTermsCheckboxText: M
+            wasRejectedInV1: O && (R || S),
+            requirementsFinePrintText: L,
+            acceptTermsCheckboxText: k
         }
     );
 }

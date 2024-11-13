@@ -1,11 +1,11 @@
 t.d(n, {
     A: function () {
-        return i;
+        return a;
     }
 });
-var r = t(442837),
-    a = t(826581);
-function i(e) {
+var i = t(442837),
+    l = t(826581);
+function a(e) {
     let { guildId: n } = e;
-    return (0, r.e7)([a.Z], () => a.Z.getSubmittedGuildJoinRequestTotal(n), [n]);
+    return (0, i.e7)([l.Z], () => l.Z.getSubmittedGuildJoinRequestTotal(n), [n]);
 }

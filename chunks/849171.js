@@ -35,8 +35,8 @@ var i,
     A = n(314897),
     N = n(819640),
     w = n(594174),
-    P = n(823379),
-    j = n(5192),
+    j = n(823379),
+    P = n(5192),
     R = n(388032),
     M = n(456608);
 ((l = i || (i = {}))[(l.SMALL = 0)] = 'SMALL'), (l[(l.MEDIUM = 1)] = 'MEDIUM'), (l[(l.LARGE = 2)] = 'LARGE');
@@ -52,7 +52,7 @@ function L(e) {
         max: 4,
         renderUser: (e) => {
             if (null == e) return null;
-            let t = j.ZP.getName(n, i, e);
+            let t = P.ZP.getName(n, i, e);
             return (0, a.jsx)(
                 u.TooltipContainer,
                 {
@@ -81,12 +81,12 @@ function k(e) {
         x = (0, c.Wu)([w.default, A.default], () =>
             Array.from(s)
                 .map((e) => ((0, p.J)(e, A.default) ? null : w.default.getUser(e.userId)))
-                .filter(P.lm)
+                .filter(j.lm)
         ),
         E = (0, c.e7)([m.ZP], () => m.ZP.getEmbeddedActivitiesForChannel(v.id).find((e) => e.applicationId === g.id)),
         { analyticsLocations: Z } = (0, C.ZP)(),
         T = (0, d.O)(),
-        b = j.ZP.getName(v.getGuildId(), v.id, null == x ? void 0 : x[0]),
+        b = P.ZP.getName(v.getGuildId(), v.id, null == x ? void 0 : x[0]),
         N =
             (0, h.s5)({
                 userId: null === (t = w.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,

@@ -21,7 +21,7 @@ r.d(t, {
         return O;
     },
     XU: function () {
-        return L;
+        return f;
     },
     _4: function () {
         return p;
@@ -59,7 +59,7 @@ let I = 0,
     R = 1;
 function A(e) {
     let { spanId: t, traceId: r } = e.spanContext(),
-        { data: a, op: _, parent_span_id: o, status: i, origin: E } = L(e);
+        { data: a, op: _, parent_span_id: o, status: i, origin: E } = f(e);
     return (0, n.Jr)({
         parent_span_id: o,
         span_id: t,
@@ -72,7 +72,7 @@ function A(e) {
 }
 function N(e) {
     let { spanId: t, traceId: r } = e.spanContext(),
-        { parent_span_id: a } = L(e);
+        { parent_span_id: a } = f(e);
     return (0, n.Jr)({
         parent_span_id: a,
         span_id: t,
@@ -85,12 +85,12 @@ function T(e) {
     return (0, a.$p)(t, r, n);
 }
 function d(e) {
-    return 'number' == typeof e ? f(e) : Array.isArray(e) ? e[0] + e[1] / 1000000000 : e instanceof Date ? f(e.getTime()) : (0, _.ph)();
-}
-function f(e) {
-    return e > 9999999999 ? e / 1000 : e;
+    return 'number' == typeof e ? L(e) : Array.isArray(e) ? e[0] + e[1] / 1000000000 : e instanceof Date ? L(e.getTime()) : (0, _.ph)();
 }
 function L(e) {
+    return e > 9999999999 ? e / 1000 : e;
+}
+function f(e) {
     if (
         (function (e) {
             return 'function' == typeof e.getSpanJSON;

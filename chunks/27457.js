@@ -32,8 +32,8 @@ var i = n(200651),
     A = n(352978),
     N = n(936847),
     w = n(512384),
-    P = n(6242),
-    j = n(757692),
+    j = n(6242),
+    P = n(757692),
     R = n(386542),
     M = n(933843),
     O = n(746599),
@@ -43,8 +43,8 @@ var i = n(200651),
     U = n(695346),
     V = n(937995),
     F = n(456631),
-    G = n(274459),
-    W = n(314897),
+    W = n(274459),
+    G = n(314897),
     B = n(857192),
     z = n(77498),
     H = n(131951),
@@ -71,19 +71,19 @@ var i = n(200651),
     ef = n(810190);
 let ep = l.memo((e) => {
     var t, n, a, c, x;
-    let { participant: C, onDoubleClick: y, onContextMenu: X, onClick: K, onMouseDown: ea, onKeyDown: ep, className: eh, style: ev, containerStyle: eS, channel: eI, width: e_, inPopout: ex, onVideoResize: eE, inCall: eZ = !1, selected: eC = !1, noBorder: ey = !1, noVideoRender: eT = !1, focused: eb = !1, blocked: eA = !1, fit: eN = A.L.CONTAIN, paused: ew = !1, pulseSpeakingIndicator: eP = !1, forceIdle: ej = !1 } = e,
-        eR = l.useContext(V.h9) || ej,
+    let { participant: C, onDoubleClick: y, onContextMenu: X, onClick: K, onMouseDown: ea, onKeyDown: ep, className: eh, style: ev, containerStyle: eS, channel: eI, width: e_, inPopout: ex, onVideoResize: eE, inCall: eZ = !1, selected: eC = !1, noBorder: ey = !1, noVideoRender: eT = !1, focused: eb = !1, blocked: eA = !1, fit: eN = A.L.CONTAIN, paused: ew = !1, pulseSpeakingIndicator: ej = !1, forceIdle: eP = !1 } = e,
+        eR = l.useContext(V.h9) || eP,
         [eM, eO] = l.useState(!1),
         eL = U.Sb.useSetting(),
         ek = (0, o.e7)([B.default], () => B.default.isStreamInfoOverlayEnabled),
         [eD, eU] = l.useState(!1),
-        eV = (0, o.e7)([W.default], () => W.default.getId()),
+        eV = (0, o.e7)([G.default], () => G.default.getId()),
         eF = (0, o.e7)([J.default], () => J.default.getCurrentUser()),
-        eG = C.type === eo.fO.ACTIVITY ? null : null === (t = C.user) || void 0 === t ? void 0 : t.id,
-        [eW] = (0, h.Z)(C.type === eo.fO.ACTIVITY ? [C.id] : []),
+        eW = C.type === eo.fO.ACTIVITY ? null : null === (t = C.user) || void 0 === t ? void 0 : t.id,
+        [eG] = (0, h.Z)(C.type === eo.fO.ACTIVITY ? [C.id] : []),
         eB = (0, o.e7)([T.Z], () => T.Z.getEnabled()),
-        ez = (0, o.e7)([H.Z], () => null != eG && H.Z.isLocalVideoDisabled(eG, (0, g.Z)(C.type)), [eG, C.type]),
-        eH = (0, o.e7)([H.Z], () => (null != eG ? H.Z.getVideoToggleState(eG, (0, g.Z)(C.type)) : es.ZUi.NONE), [eG, C.type]),
+        ez = (0, o.e7)([H.Z], () => null != eW && H.Z.isLocalVideoDisabled(eW, (0, g.Z)(C.type)), [eW, C.type]),
+        eH = (0, o.e7)([H.Z], () => (null != eW ? H.Z.getVideoToggleState(eW, (0, g.Z)(C.type)) : es.ZUi.NONE), [eW, C.type]),
         eY = eH === es.ZUi.AUTO_PROBING,
         { speaking: eJ, ringing: eq, hasVideo: eX } = (0, er.Z)(C, eV),
         eK = (function (e, t, n) {
@@ -125,7 +125,7 @@ let ep = l.memo((e) => {
                 deafened: null !== (r = t.type === eo.fO.USER && (null === (l = t.voiceState) || void 0 === l ? void 0 : l.isVoiceDeafened())) && void 0 !== r && r
             };
         })(eV, C, eI.getGuildId()),
-        eQ = C.type === eo.fO.STREAM && eG === eV;
+        eQ = C.type === eo.fO.STREAM && eW === eV;
     l.useEffect(() => {
         if (eQ && !Q.ZP.isPremium(eF) && null != eI.hdStreamingUntil && new Date(eI.hdStreamingUntil) > new Date()) {
             let e = setTimeout(
@@ -143,10 +143,10 @@ let ep = l.memo((e) => {
         { hqStreamingState: e0 } = (0, R.k)(s.q.STREAM_HIGH_QUALITY),
         e1 = (0, L.Z)(),
         e2 = e$ && eQ && null != e1,
-        e9 = (0, j.o)(C, eF),
-        e3 = (0, P.lL)('CallTile', !0, eF, e9),
-        e7 = (0, o.e7)([F.Z], () => (C.type === eo.fO.USER && null != eG ? F.Z.getEffectForUserId(eG) : null)),
-        e8 = (0, o.e7)([q.Z], () => q.Z.getVoicePlatformForChannel(eI.id, null != eG ? eG : es.lds)),
+        e9 = (0, P.o)(C, eF),
+        e3 = (0, j.lL)('CallTile', !0, eF, e9),
+        e7 = (0, o.e7)([F.Z], () => (C.type === eo.fO.USER && null != eW ? F.Z.getEffectForUserId(eW) : null)),
+        e8 = (0, o.e7)([q.Z], () => q.Z.getVoicePlatformForChannel(eI.id, null != eW ? eW : es.lds)),
         { enableHangStatus: e4 } = Z.n.useExperiment({
             guildId: eI.guild_id,
             location: 'VoiceUsers'
@@ -156,15 +156,15 @@ let ep = l.memo((e) => {
         { hangStatusActivity: te, gameActivity: tt } = (0, o.cj)(
             [Y.Z],
             () => ({
-                hangStatusActivity: e4 && null != eG ? Y.Z.findActivity(eG, (e) => e.type === es.IIU.HANG_STATUS) : null,
-                gameActivity: e5 && null != eG ? Y.Z.findActivity(eG, (e) => null != e.application_id && e.type === es.IIU.PLAYING) : null
+                hangStatusActivity: e4 && null != eW ? Y.Z.findActivity(eW, (e) => e.type === es.IIU.HANG_STATUS) : null,
+                gameActivity: e5 && null != eW ? Y.Z.findActivity(eW, (e) => null != e.application_id && e.type === es.IIU.PLAYING) : null
             }),
-            [e4, eG, e5]
+            [e4, eW, e5]
         ),
         tn = (0, o.e7)([z.Z], () => ((null == tt ? void 0 : tt.application_id) != null ? z.Z.getDetectableGame(tt.application_id) : null)),
         ti = (0, o.e7)([p.Z], () => (null != tn && (null == tt ? void 0 : tt.application_id) != null ? p.Z.getApplication(null == tt ? void 0 : tt.application_id) : void 0)),
         tl = (0, D.wV)({
-            userId: eG,
+            userId: eW,
             channelId: eI.id,
             location: 'CallTile'
         }),
@@ -193,8 +193,8 @@ let ep = l.memo((e) => {
             td && tu(!1);
         }, [td]);
     let tf = l.useCallback(() => {
-            null != eG && d.Z.toggleLocalMute(eG, ed.Yn.STREAM);
-        }, [eG]),
+            null != eW && d.Z.toggleLocalMute(eW, ed.Yn.STREAM);
+        }, [eW]),
         tp = l.useCallback(() => {
             (0, O.hP)();
         }, []),
@@ -255,7 +255,7 @@ let ep = l.memo((e) => {
                 width: e_,
                 blocked: eA,
                 noVideoRender: eT || eY,
-                pulseSpeakingIndicator: eP
+                pulseSpeakingIndicator: ej
             })),
                 (t_ = (0, i.jsx)(el.T, {
                     userId: C.user.id,
@@ -271,7 +271,7 @@ let ep = l.memo((e) => {
                 channel: eI,
                 width: e_
             })),
-                (tx = em.intl.formatToPlainString(em.t.YCvOsL, { activityName: null == eW ? void 0 : eW.name }));
+                (tx = em.intl.formatToPlainString(em.t.YCvOsL, { activityName: null == eG ? void 0 : eG.name }));
             break;
         case eo.fO.HIDDEN_STREAM:
             tI = (0, i.jsx)(ei.Z, {
@@ -314,7 +314,7 @@ let ep = l.memo((e) => {
                             }),
                             noBorder: ey,
                             style: ev,
-                            participantUserId: eG,
+                            participantUserId: eW,
                             children: (0, i.jsxs)(u.ClickableContainer, {
                                 'aria-label': tx,
                                 className: ef.tileChild,
@@ -325,18 +325,18 @@ let ep = l.memo((e) => {
                                 onKeyDown: ep,
                                 focusProps: { offset: 1 },
                                 children: [
-                                    null != e7 && null != eG
-                                        ? (0, i.jsx)(G.Z, {
+                                    null != e7 && null != eW
+                                        ? (0, i.jsx)(W.Z, {
                                               voiceChannelEffect: e7,
-                                              onComplete: () => (0, F.H)(eG),
-                                              userId: eG
+                                              onComplete: () => (0, F.H)(eW),
+                                              userId: eW
                                           })
                                         : null,
                                     C.type === eo.fO.USER
                                         ? (0, i.jsx)('div', {
                                               className: ef.voiceChannelEffectsContainer,
                                               children: (0, i.jsx)(v.Z, {
-                                                  userId: eG,
+                                                  userId: eW,
                                                   channelId: eI.id,
                                                   guildId: eI.getGuildId(),
                                                   containerDimensions: {
@@ -386,7 +386,7 @@ let ep = l.memo((e) => {
                                               hideAudioIcon: eQ,
                                               onContextMenu: tv,
                                               onToggleMute: tf,
-                                              participantUserId: eG,
+                                              participantUserId: eW,
                                               hangStatusActivity: te,
                                               application: ti,
                                               speaking: eJ,
@@ -454,7 +454,7 @@ function eh(e) {
 }
 ep.displayName = 'CallTile';
 let eg = l.memo((e) => {
-    let { muted: t, deafened: n, localMuted: l, serverMuted: a, serverDeafened: s, idle: d, title: m, width: f, hasVideo: p, inCall: h, localVideoDisabled: v, videoToggleState: S, focused: I, blocked: _, hideAudioIcon: E, participantType: Z, participantUserId: T, onContextMenu: b, onToggleMute: A, platform: N, hangStatusActivity: w, application: P, speaking: j, secureFramesVerified: R } = e,
+    let { muted: t, deafened: n, localMuted: l, serverMuted: a, serverDeafened: s, idle: d, title: m, width: f, hasVideo: p, inCall: h, localVideoDisabled: v, videoToggleState: S, focused: I, blocked: _, hideAudioIcon: E, participantType: Z, participantUserId: T, onContextMenu: b, onToggleMute: A, platform: N, hangStatusActivity: w, application: j, speaking: P, secureFramesVerified: R } = e,
         M = null,
         O = null,
         L = null,
@@ -554,21 +554,21 @@ let eg = l.memo((e) => {
                           children: (0, i.jsx)(y.Z, {
                               hangStatusActivity: w,
                               className: ef.hangStatusIcon,
-                              animate: j
+                              animate: P
                           })
                       })
               }))
             : Z === eo.fO.USER &&
-              null != P &&
+              null != j &&
               (k = (0, i.jsx)(u.Tooltip, {
-                  text: em.intl.formatToPlainString(em.t.Sq9xJy, { game: P.name }),
+                  text: em.intl.formatToPlainString(em.t.Sq9xJy, { game: j.name }),
                   children: (e) =>
                       (0, i.jsx)('div', {
                           ...e,
                           className: r()(ef.hangStatusContainer, { [ef.hangStatusSmall]: f < 500 }),
                           children: (0, i.jsx)(x.Z, {
                               className: ef.hangStatusIcon,
-                              game: P,
+                              game: j,
                               size: x.Z.Sizes.SMALL
                           })
                       })

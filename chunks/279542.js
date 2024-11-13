@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: function () {
-        return L;
+        return A;
     },
     fp: function () {
         return R;
@@ -26,21 +26,21 @@ var i = n(200651),
     p = n(594174),
     f = n(63063),
     C = n(78451),
-    I = n(434404),
+    v = n(434404),
     _ = n(999382),
-    N = n(181339),
-    v = n(193544),
+    I = n(181339),
+    N = n(193544),
     T = n(981631),
     j = n(388032),
-    S = n(10105);
-function b(e) {
+    b = n(10105);
+function S(e) {
     let { guild: t } = e,
         n = (0, o.e7)([g.Z], () => null != t && g.Z.can(T.Plq.MANAGE_GUILD, t), [t]),
         l = r.useCallback(
             async (e) => {
                 let { value: n } = e;
                 try {
-                    await I.Z.saveGuild(t.id, { verificationLevel: n }), I.Z.updateGuild({ verificationLevel: n });
+                    await v.Z.saveGuild(t.id, { verificationLevel: n }), v.Z.updateGuild({ verificationLevel: n });
                 } catch (e) {
                     (0, c.showToast)((0, c.createToast)(j.intl.string(j.t['46Rs3t']), c.ToastType.FAILURE));
                 }
@@ -56,10 +56,10 @@ function b(e) {
         }, [t]),
         a = r.useMemo(() => s.find((e) => e.value === (null == t ? void 0 : t.verificationLevel)), [t, s]);
     return (0, i.jsxs)('div', {
-        className: S.setupContainer,
+        className: b.setupContainer,
         children: [
             (0, i.jsxs)('div', {
-                className: S.switchItemTextContent,
+                className: b.switchItemTextContent,
                 children: [
                     (0, i.jsx)(c.Text, {
                         color: 'header-primary',
@@ -73,7 +73,7 @@ function b(e) {
                     })
                 ]
             }),
-            (0, i.jsx)(v.Z, {
+            (0, i.jsx)(N.Z, {
                 changeTitle: j.intl.string(j.t.TxESJC),
                 value: null == a ? void 0 : a.value,
                 options: s,
@@ -90,7 +90,7 @@ function E(e) {
             async (e) => {
                 let { value: n } = e;
                 try {
-                    await I.Z.saveGuild(t.id, { explicitContentFilter: n }), I.Z.updateGuild({ explicitContentFilter: n });
+                    await v.Z.saveGuild(t.id, { explicitContentFilter: n }), v.Z.updateGuild({ explicitContentFilter: n });
                 } catch (e) {
                     (0, c.showToast)((0, c.createToast)(j.intl.string(j.t['46Rs3t']), c.ToastType.FAILURE));
                 }
@@ -107,12 +107,12 @@ function E(e) {
         m = r.useMemo(() => u.find((e) => e.value === (null == t ? void 0 : t.explicitContentFilter)), [t, u]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            l && (0, i.jsx)(c.FormDivider, { className: S.divider }),
+            l && (0, i.jsx)(c.FormDivider, { className: b.divider }),
             (0, i.jsxs)('div', {
-                className: s()(S.setupContainer, n),
+                className: s()(b.setupContainer, n),
                 children: [
                     (0, i.jsxs)('div', {
-                        className: S.switchItemTextContent,
+                        className: b.switchItemTextContent,
                         children: [
                             (0, i.jsx)(c.Text, {
                                 color: 'header-primary',
@@ -126,7 +126,7 @@ function E(e) {
                             })
                         ]
                     }),
-                    (0, i.jsx)(v.Z, {
+                    (0, i.jsx)(N.Z, {
                         changeTitle: j.intl.string(j.t['eBd+Ul']),
                         value: null == m ? void 0 : m.value,
                         options: u,
@@ -141,7 +141,7 @@ function E(e) {
 async function R(e, t) {
     if (e.hasFeature(T.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) === t) return;
     let n = e.features;
-    return t ? n.add(T.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) : n.delete(T.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY), await I.Z.saveGuild(e.id, { features: n });
+    return t ? n.add(T.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) : n.delete(T.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY), await v.Z.saveGuild(e.id, { features: n });
 }
 function Z(e) {
     let { guild: t } = e,
@@ -160,21 +160,21 @@ function Z(e) {
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsxs)('div', {
-                      className: S.setupContainer,
+                      className: b.setupContainer,
                       children: [
                           (0, i.jsx)(c.FormSwitch, {
                               value: a,
                               onChange: u,
-                              className: S.switchItem,
+                              className: b.switchItem,
                               disabled: !n,
                               hideBorder: !0,
                               children: (0, i.jsxs)('div', {
-                                  className: S.switchItemTextContent,
+                                  className: b.switchItemTextContent,
                                   children: [
                                       (0, i.jsxs)(c.Text, {
                                           color: 'header-primary',
                                           variant: 'text-md/semibold',
-                                          children: [j.intl.string(j.t.jDarm5), (0, i.jsx)(m.Z, { className: S.betaTag })]
+                                          children: [j.intl.string(j.t.jDarm5), (0, i.jsx)(m.Z, { className: b.betaTag })]
                                       }),
                                       (0, i.jsx)(c.Text, {
                                           color: 'header-secondary',
@@ -191,11 +191,11 @@ function Z(e) {
                           })
                       ]
                   }),
-                  (0, i.jsx)(c.FormDivider, { className: S.divider })
+                  (0, i.jsx)(c.FormDivider, { className: b.divider })
               ]
           });
 }
-function A(e) {
+function y(e) {
     let { guild: t, mfaLevel: n } = e,
         l = (0, o.e7)([g.Z], () => null != t && g.Z.can(T.Plq.MANAGE_GUILD, t), [t]),
         s = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
@@ -215,7 +215,7 @@ function A(e) {
         h = n === T.BpS.ELEVATED,
         x = (0, a.throttle)(async (e) => {
             if (!!u && !m)
-                await I.Z.updateMFALevel({
+                await v.Z.updateMFALevel({
                     guildId: t.id,
                     level: e ? T.BpS.ELEVATED : T.BpS.NONE,
                     isEnabled: !e
@@ -224,18 +224,18 @@ function A(e) {
     return l
         ? (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, i.jsx)(c.FormDivider, { className: S.divider }),
+                  (0, i.jsx)(c.FormDivider, { className: b.divider }),
                   (0, i.jsxs)('div', {
-                      className: S.setupContainer,
+                      className: b.setupContainer,
                       children: [
                           (0, i.jsx)(c.FormSwitch, {
                               value: h,
                               onChange: x,
-                              className: S.switchItem,
+                              className: b.switchItem,
                               disabled: !u,
                               hideBorder: !0,
                               children: (0, i.jsxs)('div', {
-                                  className: S.switchItemTextContent,
+                                  className: b.switchItemTextContent,
                                   children: [
                                       (0, i.jsx)(c.Text, {
                                           color: 'header-primary',
@@ -266,7 +266,7 @@ function A(e) {
           })
         : null;
 }
-function L() {
+function A() {
     let { guild: e, mfaLevel: t } = (0, o.cj)([_.Z], () => _.Z.getProps(), []),
         n = (0, o.e7)([x.Z], () => x.Z.enabled, []);
     return null == e
@@ -276,19 +276,19 @@ function L() {
           : (0, i.jsxs)(c.FormSection, {
                 title: j.intl.string(j.t['suhY+f']),
                 tag: c.FormTitleTags.H1,
-                titleClassName: S.headerContainer,
+                titleClassName: b.headerContainer,
                 children: [
                     (0, i.jsx)(Z, { guild: e }),
-                    (0, i.jsx)(b, { guild: e }),
-                    (0, i.jsx)(A, {
+                    (0, i.jsx)(S, { guild: e }),
+                    (0, i.jsx)(y, {
                         guild: e,
                         mfaLevel: t
                     }),
                     (0, i.jsx)(E, { guild: e }),
-                    (0, i.jsx)(c.FormDivider, { className: S.divider }),
+                    (0, i.jsx)(c.FormDivider, { className: b.divider }),
                     (0, i.jsx)('div', {
-                        className: s()(S.setupContainer),
-                        children: (0, i.jsx)(N.w, { guild: e })
+                        className: s()(b.setupContainer),
+                        children: (0, i.jsx)(I.w, { guild: e })
                     })
                 ]
             });

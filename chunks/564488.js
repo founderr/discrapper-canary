@@ -13,10 +13,10 @@ t.Z = r.memo(function (e) {
         { hasChanges: h, editingRule: g, createNewEditingRule: x, setEditingRule: p } = (0, a.V)(),
         { isLoading: f } = (0, a.w)(),
         [C] = r.useState(() => !(0, l.Vb)(t)),
-        I = (null == g ? void 0 : g.id) === t.id || n,
+        v = (null == g ? void 0 : g.id) === t.id || n,
         _ = (0, s.U)(null == t ? void 0 : t.id),
-        N = I && null != g ? g : t,
-        v = r.useMemo(() => (0, o.af)(t.name), [null == t ? void 0 : t.name]),
+        I = v && null != g ? g : t,
+        N = r.useMemo(() => (0, o.af)(t.name), [null == t ? void 0 : t.name]),
         T = r.useCallback(() => {
             x(t.guildId, t.triggerType);
         }, [t.guildId, t.triggerType, x]),
@@ -29,32 +29,32 @@ t.Z = r.memo(function (e) {
     r.useEffect(() => {
         m && p(t, !0);
     }, [m, t, p]);
-    let S = r.useCallback(() => {
-        I
+    let b = r.useCallback(() => {
+        v
             ? !h && p(null)
             : h
-              ? v(() => {
+              ? N(() => {
                     p(t);
                 })
               : p(t);
-    }, [I, h, v, t, p]);
+    }, [v, h, N, t, p]);
     return (0, i.jsx)(d.Z, {
         renderHeader: (0, i.jsx)(u.Z, {
-            rule: N,
-            forceSetup: C && !I && !_,
+            rule: I,
+            forceSetup: C && !v && !_,
             triggerType: t.triggerType,
-            isEditMode: I,
+            isEditMode: v,
             isDefaultRule: _,
             onChangeRule: j,
             onSetupRule: T
         }),
-        isStuck: I && h,
-        isExpanded: I,
-        onExpand: S,
+        isStuck: v && h,
+        isExpanded: v,
+        onExpand: b,
         children:
-            I &&
+            v &&
             (0, i.jsx)(c.Z, {
-                rule: N,
+                rule: I,
                 isLoading: f,
                 onChangeRule: j
             })

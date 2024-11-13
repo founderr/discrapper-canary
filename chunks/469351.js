@@ -1,6 +1,6 @@
 n.d(t, {
     t: function () {
-        return A;
+        return y;
     }
 }),
     n(47120),
@@ -21,29 +21,29 @@ var i,
     p = n(962086),
     f = n(225675),
     C = n(703656),
-    I = n(430824),
+    v = n(430824),
     _ = n(594174),
-    N = n(63063),
-    v = n(267101),
+    I = n(63063),
+    N = n(267101),
     T = n(294294),
     j = n(310800),
-    S = n(833695),
-    b = n(981631),
+    b = n(833695),
+    S = n(981631),
     E = n(176505),
     R = n(388032),
     Z = n(85490);
-function A(e) {
+function y(e) {
     let { guildId: t, hasValidApplication: n } = e,
-        { listingsLoaded: i } = (0, v.eD)(t),
-        r = (0, o.e7)([I.Z], () => I.Z.getGuild(t)),
-        A = (0, o.e7)([_.default], () => _.default.getCurrentUser()),
-        L = (null == r ? void 0 : r.isOwner(A)) === !0,
-        { loading: y } = (0, d.H)(t),
+        { listingsLoaded: i } = (0, N.eD)(t),
+        r = (0, o.e7)([v.Z], () => v.Z.getGuild(t)),
+        y = (0, o.e7)([_.default], () => _.default.getCurrentUser()),
+        A = (null == r ? void 0 : r.isOwner(y)) === !0,
+        { loading: L } = (0, d.H)(t),
         [D, O] = s.useState(n ? 'manage_listings' : 'payment');
     (0, h.P)(r);
-    let M = s.useCallback(() => {
+    let k = s.useCallback(() => {
         if (null == r) return;
-        let e = I.Z.getRole(r.id, r.getEveryoneRoleId());
+        let e = v.Z.getRole(r.id, r.getEveryoneRoleId());
         if (null == e) return;
         x.Z.close();
         let t = { [e.id]: e };
@@ -51,13 +51,13 @@ function A(e) {
             type: f.z.SERVER_SHOP,
             roles: t,
             initialTab: 'guild_products',
-            returnToSection: b.pNK.GUILD_PRODUCTS
+            returnToSection: S.pNK.GUILD_PRODUCTS
         }),
-            (0, C.uL)(b.Z5c.CHANNEL(r.id, E.oC.GUILD_SHOP));
+            (0, C.uL)(S.Z5c.CHANNEL(r.id, E.oC.GUILD_SHOP));
     }, [r]);
-    if (!i || y) return (0, l.jsx)(c.Spinner, {});
+    if (!i || L) return (0, l.jsx)(c.Spinner, {});
     if (null == r) return null;
-    let P = (0, l.jsxs)(l.Fragment, {
+    let M = (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(c.FormTitle, {
                     tag: c.FormTitleTags.H1,
@@ -66,13 +66,13 @@ function A(e) {
                 (0, l.jsx)(c.FormText, {
                     type: c.FormText.Types.DESCRIPTION,
                     children: R.intl.format(R.t.xiYuDg, {
-                        monetizationPolicyLink: N.Z.getArticleURL(b.BhN.CREATOR_POLICY),
-                        serverProductsSupportLink: N.Z.getCreatorSupportArticleURL(b.BhN.SERVER_PRODUCTS)
+                        monetizationPolicyLink: I.Z.getArticleURL(S.BhN.CREATOR_POLICY),
+                        serverProductsSupportLink: I.Z.getCreatorSupportArticleURL(S.BhN.SERVER_PRODUCTS)
                     })
                 })
             ]
         }),
-        k = (0, l.jsxs)(c.TabBar, {
+        P = (0, l.jsxs)(c.TabBar, {
             type: 'top',
             look: 'brand',
             className: Z.tabBar,
@@ -92,7 +92,7 @@ function A(e) {
                     disabled: !n,
                     children: R.intl.string(R.t.wlZ1mp)
                 }),
-                L
+                A
                     ? (0, l.jsx)(c.TabBar.Item, {
                           id: 'payment',
                           className: Z.tabBarItem,
@@ -103,7 +103,7 @@ function A(e) {
                     ? (0, l.jsx)('div', {
                           className: Z.previewButton,
                           children: (0, l.jsx)(c.Button, {
-                              onClick: M,
+                              onClick: k,
                               color: c.Button.Colors.PRIMARY,
                               size: c.Button.Sizes.SMALL,
                               look: c.Button.Looks.OUTLINED,
@@ -116,7 +116,7 @@ function A(e) {
         w = (0, a.EQ)(D)
             .with('basic_info', () => (0, l.jsx)(T.Z, { guildId: t }))
             .with('manage_listings', () => (0, l.jsx)(j.Z, { guildId: t }))
-            .with('payment', () => (0, l.jsx)(S.Z, { guildId: t }))
+            .with('payment', () => (0, l.jsx)(b.Z, { guildId: t }))
             .exhaustive(),
         B = i
             ? (0, l.jsx)(c.TabBar.Panel, {
@@ -127,11 +127,11 @@ function A(e) {
     return (0, l.jsxs)(u.AL, {
         guildId: t,
         children: [
-            P,
+            M,
             (0, l.jsx)(g.Z, { guild: r }),
             (0, l.jsx)('div', {
                 className: Z.tabBarContainer,
-                children: k
+                children: P
             }),
             B
         ]

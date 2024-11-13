@@ -33,9 +33,9 @@ var r,
     i = n(486472),
     o = n(430824);
 n(626135);
-var c = n(981631),
-    s = n(388032);
-let d = 86400000 * c.eBq;
+var s = n(981631),
+    c = n(388032);
+let d = 86400000 * s.eBq;
 function u() {
     let e = l.h2.getSetting();
     return 0 === i.Z.totalUnavailableGuilds && (e = e.filter((e) => null != o.Z.getGuild(e))), e;
@@ -53,7 +53,7 @@ function x() {
     return 0 === i.Z.totalUnavailableGuilds && (e = e.filter((e) => null != o.Z.getGuild(e))), e;
 }
 function f(e) {
-    return (e & c.HGf) === c.HGf
+    return (e & s.HGf) === s.HGf
         ? {
               all: !0,
               mutualFriends: !0,
@@ -61,8 +61,8 @@ function f(e) {
           }
         : {
               all: !1,
-              mutualFriends: (e & c.SOq.MUTUAL_FRIENDS) === c.SOq.MUTUAL_FRIENDS,
-              mutualGuilds: (e & c.SOq.MUTUAL_GUILDS) === c.SOq.MUTUAL_GUILDS
+              mutualFriends: (e & s.SOq.MUTUAL_FRIENDS) === s.SOq.MUTUAL_FRIENDS,
+              mutualGuilds: (e & s.SOq.MUTUAL_GUILDS) === s.SOq.MUTUAL_GUILDS
           };
 }
 function p(e, t) {
@@ -77,18 +77,18 @@ let b = {
 function g() {
     return [
         {
-            name: s.intl.string(s.t['/yLMRU']),
-            desc: s.intl.string(s.t['3fzkPj']),
+            name: c.intl.string(c.t['/yLMRU']),
+            desc: c.intl.string(c.t['3fzkPj']),
             value: 1
         },
         {
-            name: s.intl.string(s.t['21fP2d']),
-            desc: s.intl.string(s.t.ggJ9jY),
+            name: c.intl.string(c.t['21fP2d']),
+            desc: c.intl.string(c.t.ggJ9jY),
             value: 2
         },
         {
-            name: s.intl.string(s.t['OWIo8/']),
-            desc: s.intl.string(s.t.HqYXp6),
+            name: c.intl.string(c.t['OWIo8/']),
+            desc: c.intl.string(c.t.HqYXp6),
             value: 0
         }
     ];

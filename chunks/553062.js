@@ -28,8 +28,8 @@ function A(e, t = {}) {
         N = !1,
         T = 'externalFinish',
         d = !t.disableAutoFinish,
-        f = [],
-        { idleTimeout: L = R.idleTimeout, finalTimeout: O = R.finalTimeout, childSpanTimeout: p = R.childSpanTimeout, beforeSpanEnd: h } = t,
+        L = [],
+        { idleTimeout: f = R.idleTimeout, finalTimeout: O = R.finalTimeout, childSpanTimeout: p = R.childSpanTimeout, beforeSpanEnd: h } = t,
         S = (0, _.s3)();
     if (!S || !(0, E.z)()) return new l.b();
     let D = (0, _.nZ)(),
@@ -45,7 +45,7 @@ function A(e, t = {}) {
         P(),
             (r = setTimeout(() => {
                 !N && 0 === A.size && d && ((T = 'idleTimeout'), g.end(e));
-            }, L));
+            }, f));
     }
     function M(e) {
         r = setTimeout(() => {
@@ -68,7 +68,7 @@ function A(e, t = {}) {
         }
     });
     function G(e) {
-        (N = !0), A.clear(), f.forEach((e) => e()), (0, c.D)(D, C);
+        (N = !0), A.clear(), L.forEach((e) => e()), (0, c.D)(D, C);
         let t = (0, s.XU)(g),
             { start_timestamp: r } = t;
         if (!r) return;
@@ -85,7 +85,7 @@ function A(e, t = {}) {
                 o.X && a.kg.log('[Tracing] Cancelling span since span ended early', JSON.stringify(t, void 0, 2)));
             let { timestamp: r = 0, start_timestamp: n = 0 } = (0, s.XU)(t),
                 i = n <= e,
-                E = r - n <= (O + L) / 1000;
+                E = r - n <= (O + f) / 1000;
             if (o.X) {
                 let e = JSON.stringify(t, void 0, 2);
                 i ? !E && a.kg.log('[Tracing] Discarding span since it finished after idle span final timeout', e) : a.kg.log('[Tracing] Discarding span since it happened after idle span was finished', e);
@@ -95,7 +95,7 @@ function A(e, t = {}) {
             _ > 0 && g.setAttribute('sentry.idle_span_discarded_spans', _);
     }
     return (
-        f.push(
+        L.push(
             S.on('spanStart', (e) => {
                 if (!N && e !== g && !(0, s.XU)(e).timestamp) {
                     if ((0, s.Dp)(g).includes(e)) {
@@ -105,13 +105,13 @@ function A(e, t = {}) {
                 }
             })
         ),
-        f.push(
+        L.push(
             S.on('spanEnd', (e) => {
                 var t;
-                if (!N) (t = e.spanContext().spanId), A.has(t) && A.delete(t), 0 === A.size && U((0, n.ph)() + L / 1000);
+                if (!N) (t = e.spanContext().spanId), A.has(t) && A.delete(t), 0 === A.size && U((0, n.ph)() + f / 1000);
             })
         ),
-        f.push(
+        L.push(
             S.on('idleSpanEnableAutoFinish', (e) => {
                 e === g && ((d = !0), U(), A.size && M());
             })

@@ -29,8 +29,8 @@ var i = n(200651),
     y = n(46332),
     P = n(555573),
     M = n(213459),
-    L = n(456007),
-    R = n(10718),
+    R = n(456007),
+    L = n(10718),
     k = n(998698),
     O = n(895924),
     D = n(581364),
@@ -83,8 +83,8 @@ var i = n(200651),
     ey = n(838440),
     eP = n(228488),
     eM = n(127654),
-    eL = n(979956),
-    eR = n(655687),
+    eR = n(979956),
+    eL = n(655687),
     ek = n(165540),
     eO = n(583027),
     eD = n(25007),
@@ -149,7 +149,7 @@ class eq extends l.PureComponent {
         if (null == e.interactionData) return;
         let { channel: t } = this.props,
             { commandKey: n, interactionOptions: i } = (0, D.XA)(e.interactionData),
-            { command: l, application: a } = R.Xq(t, n);
+            { command: l, application: a } = L.Xq(t, n);
         if (null != l) {
             var r, s;
             let e =
@@ -167,7 +167,7 @@ class eq extends l.PureComponent {
                 command: l,
                 section: e,
                 location: O.Vh.RECALL,
-                initialValues: (0, L.Dw)(l, null != i ? i : [])
+                initialValues: (0, R.Dw)(l, null != i ? i : [])
             });
         }
     }
@@ -410,8 +410,8 @@ class eq extends l.PureComponent {
                             }
                         );
                     if (null != n && n.length > 0) {
-                        let e = (0, eL.KZ)(n);
-                        if ((0, eL.Bf)(e, null == s ? void 0 : s.id))
+                        let e = (0, eR.KZ)(n);
+                        if ((0, eR.Bf)(e, null == s ? void 0 : s.id))
                             return (
                                 (0, eM.G)(o, e),
                                 {
@@ -553,7 +553,7 @@ class eX extends l.PureComponent {
                 ]
             }),
             M = b && Z,
-            L = M && Z ? y : P;
+            R = M && Z ? y : P;
         return (0, i.jsx)(
             _.Z,
             {
@@ -621,11 +621,11 @@ class eX extends l.PureComponent {
                                                                 n.isPrivate()
                                                                     ? (0, i.jsx)(eU.Z, {
                                                                           channel: n,
-                                                                          children: L
+                                                                          children: R
                                                                       })
                                                                     : (0, i.jsx)(eH.Z, {
                                                                           channel: n,
-                                                                          children: L
+                                                                          children: R
                                                                       }),
                                                                 (0, i.jsx)(v.Z, {
                                                                     channel: n,
@@ -733,7 +733,7 @@ function eJ(e) {
 }
 t.Z = l.memo(function (e) {
     let { channel: t, guild: n, chatInputType: a, filterAfterTimestamp: r } = e,
-        { placeholder: s, accessibilityLabel: o } = (0, eR.Z)(t),
+        { placeholder: s, accessibilityLabel: o } = (0, eL.Z)(t),
         c = (0, ed.S)(eZ.default.getCurrentUser(), t),
         [d] = (0, J.AB)(null == n ? void 0 : n.id),
         u = (0, Y.Ux)(null == n ? void 0 : n.id),

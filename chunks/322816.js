@@ -21,14 +21,14 @@ var i = n(200651),
     p = n(764260),
     f = n(631969),
     C = n(95242),
-    I = n(420966),
+    v = n(420966),
     _ = n(275296),
-    N = n(203377),
-    v = n(981631),
+    I = n(203377),
+    N = n(981631),
     T = n(388032),
     j = n(366468),
-    S = n(571621);
-function b(e) {
+    b = n(571621);
+function S(e) {
     let { guild: t, role: n, locked: l } = e,
         s = (0, o.e7)([m.default], () => m.default.getCurrentUser()),
         d = r.useMemo(
@@ -107,7 +107,7 @@ function E(e) {
     return (0, i.jsxs)('div', {
         className: j.permissionsWrapper,
         children: [
-            (0, i.jsx)(b, {
+            (0, i.jsx)(S, {
                 guild: t,
                 role: n,
                 locked: l
@@ -146,27 +146,27 @@ function R(e) {
             }))
             .filter((e) => e.permissions.length > 0),
         { headerHeight: x, headerRef: p } = (0, C.Z)(0),
-        { scrolledToTop: f, handleScroll: b } = (0, I.V)(),
+        { scrolledToTop: f, handleScroll: S } = (0, v.V)(),
         R = r.useRef(!1);
     return (
         r.useEffect(() => {
-            if (!R.current && '' !== d.trimStart()) h.default.track(v.rMx.SEARCH_STARTED, { search_type: 'Permissions' }), (R.current = !0);
+            if (!R.current && '' !== d.trimStart()) h.default.track(N.rMx.SEARCH_STARTED, { search_type: 'Permissions' }), (R.current = !0);
         }, [d]),
         (0, i.jsx)(c.AdvancedScrollerAuto, {
             className: j.scroller,
             style: { scrollPaddingTop: x },
-            onScroll: b,
+            onScroll: S,
             children: (0, i.jsxs)('div', {
-                className: S.contentWidth,
+                className: b.contentWidth,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: s()(S.header, S.stickyHeader, { [S.stickyHeaderElevated]: !f }),
+                        className: s()(b.header, b.stickyHeader, { [b.stickyHeaderElevated]: !f }),
                         ref: p,
                         children: [
-                            (0, i.jsx)(I.Z, {
+                            (0, i.jsx)(v.Z, {
                                 guild: t,
                                 role: n,
-                                selectedSection: N.ZI.PERMISSIONS,
+                                selectedSection: I.ZI.PERMISSIONS,
                                 setSelectedSection: a
                             }),
                             (0, i.jsx)('div', {

@@ -76,7 +76,7 @@ let P = r.memo(function (e) {
         function M() {
             (0, E.DT)(t, i.user.id, !0);
         }
-        let L = (e) => {
+        let R = (e) => {
             (0, p.jW)(e, async () => {
                 let { default: e } = await Promise.all([n.e('79695'), n.e('92453'), n.e('13125'), n.e('91864')]).then(n.bind(n, 757387));
                 return (n) =>
@@ -111,7 +111,7 @@ let P = r.memo(function (e) {
                         var t;
                         return (0, a.jsxs)(h.Clickable, {
                             className: y.participantMemberContainer,
-                            onContextMenu: L,
+                            onContextMenu: R,
                             ...e,
                             children: [
                                 (0, a.jsx)(m.Z, {
@@ -174,7 +174,7 @@ let P = r.memo(function (e) {
             ]
         });
     }),
-    L = r.memo(function (e) {
+    R = r.memo(function (e) {
         let { channel: t } = e,
             [n, i] = (0, S.h)(t.id);
         return (0, a.jsx)(h.FormSwitch, {
@@ -184,7 +184,7 @@ let P = r.memo(function (e) {
             children: A.intl.string(A.t.GYCh0d)
         });
     }),
-    R = r.memo(function () {
+    L = r.memo(function () {
         return (0, a.jsxs)('div', {
             className: y.emptyStateContainer,
             children: [
@@ -236,9 +236,9 @@ function k(e) {
                     let { section: n, row: i } = e;
                     switch (n) {
                         case 0:
-                            return (0, a.jsx)(L, { channel: t }, 'rts-toggle');
+                            return (0, a.jsx)(R, { channel: t }, 'rts-toggle');
                         case 1: {
-                            if (0 === l.length) return (0, a.jsx)(R, {}, 'participants-empty');
+                            if (0 === l.length) return (0, a.jsx)(L, {}, 'participants-empty');
                             let e = l[i];
                             return (0, a.jsx)(
                                 M,

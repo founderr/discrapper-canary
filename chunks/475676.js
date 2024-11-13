@@ -76,10 +76,10 @@ function Z(e) {
             leaderboard: _,
             guildId: N
         }),
-        null == _ || null == k)
+        null == _)
     )
         return null;
-    if (0 === _.users.length || null == A) return (0, l.jsx)(L, { selected: y });
+    if (0 === _.users.length || null == A || null == k) return (0, l.jsx)(L, { selected: y });
     let { sort_by_statistic_id: R } = _.guild_settings,
         b = null !== (j = null == M ? void 0 : null === (n = M.statistics) || void 0 === n ? void 0 : null === (t = n[R]) || void 0 === t ? void 0 : t.value) && void 0 !== j ? j : 0,
         { currentRank: H } = A;

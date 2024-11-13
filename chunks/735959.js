@@ -9,8 +9,8 @@ var r = n(200651),
     l = n(436772),
     i = n(913527),
     o = n.n(i),
-    c = n(330711),
-    s = n(442837),
+    s = n(330711),
+    c = n(442837),
     d = n(481060),
     u = n(424395),
     h = n(665149),
@@ -19,7 +19,7 @@ var r = n(200651),
     f = n(257785),
     p = n(388032);
 function b() {
-    let e = (0, s.e7)([m.default], () => m.default.locale),
+    let e = (0, c.e7)([m.default], () => m.default.locale),
         [t, n] = a.useState(),
         i = (0, l.runtimeHashMessageKey)(null != t ? t : ''),
         b = a.useMemo(() => p.t[i], [i]);
@@ -50,7 +50,7 @@ function b() {
                     }),
                     (0, r.jsx)(f.Z9, {
                         name: 'common i18n',
-                        children: c.Z.getLocale()
+                        children: s.Z.getLocale()
                     }),
                     (0, r.jsx)(f.Z9, {
                         name: 'Moment',

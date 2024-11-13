@@ -868,7 +868,7 @@ let th = {
     premium_tenure_60_month: 60,
     premium_tenure_72_month: 72
 };
-((q = A || (A = {}))[(q.NONE = 0)] = 'NONE'), (q[(q.FP_ONLY = 1)] = 'FP_ONLY'), (q[(q.FP_SUB = 2)] = 'FP_SUB'), ((Q = N || (N = {}))[(Q.HOUR = 1)] = 'HOUR'), (Q[(Q.DAY = 2)] = 'DAY');
+((q = A || (A = {}))[(q.NONE = 0)] = 'NONE'), (q[(q.FP_ONLY = 1)] = 'FP_ONLY'), (q[(q.FP_SUB_PAUSED = 2)] = 'FP_SUB_PAUSED'), ((Q = N || (N = {}))[(Q.HOUR = 1)] = 'HOUR'), (Q[(Q.DAY = 2)] = 'DAY');
 let tm = {
     [X.a.PREMIUM_TIER_2_1_HOUR]: [1, 1],
     [X.a.PREMIUM_TIER_2_1_DAY]: [2, 1]

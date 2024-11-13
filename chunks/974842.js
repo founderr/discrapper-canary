@@ -1,98 +1,98 @@
-t(47120);
-var r = t(200651),
-    a = t(192379),
-    i = t(688619),
-    o = t.n(i),
-    s = t(120356),
-    l = t.n(s),
-    c = t(866442),
-    d = t(481060),
-    u = t(550271),
-    m = t(688298),
-    f = t(995119),
-    h = t(116175),
-    x = t(308083),
-    p = t(388032),
-    g = t(880867),
-    C = t(602075);
-let b = [h.ZD.SWORD, h.ZD.WATER_DROP, h.ZD.SKULL, h.ZD.TOADSTOOL, h.ZD.MOON, h.ZD.LIGHTNING, h.ZD.LEAF, h.ZD.HEART, h.ZD.FIRE, h.ZD.COMPASS, h.ZD.CROSSHAIRS, h.ZD.FLOWER, h.ZD.FORCE, h.ZD.GEM, h.ZD.LAVA, h.ZD.PSYCHIC, h.ZD.SMOKE, h.ZD.SNOW, h.ZD.SOUND, h.ZD.SUN, h.ZD.WIND];
-n.Z = (e) => {
-    let { handleUpdate: n, badge: t, primaryColor: i, secondaryColor: s, tag: v, error: _, furthestStep: y, inSettings: T } = e,
-        I = a.useMemo(() => {
-            let e = (0, h.yf)();
+n(47120);
+var i = n(200651),
+    r = n(192379),
+    l = n(688619),
+    s = n.n(l),
+    a = n(120356),
+    o = n.n(a),
+    c = n(866442),
+    d = n(481060),
+    u = n(550271),
+    m = n(688298),
+    h = n(995119),
+    g = n(116175),
+    x = n(308083),
+    p = n(388032),
+    f = n(880867),
+    C = n(602075);
+let v = [g.ZD.SWORD, g.ZD.WATER_DROP, g.ZD.SKULL, g.ZD.TOADSTOOL, g.ZD.MOON, g.ZD.LIGHTNING, g.ZD.LEAF, g.ZD.HEART, g.ZD.FIRE, g.ZD.COMPASS, g.ZD.CROSSHAIRS, g.ZD.FLOWER, g.ZD.FORCE, g.ZD.GEM, g.ZD.LAVA, g.ZD.PSYCHIC, g.ZD.SMOKE, g.ZD.SNOW, g.ZD.SOUND, g.ZD.SUN, g.ZD.WIND];
+t.Z = (e) => {
+    let { handleUpdate: t, badge: n, primaryColor: l, secondaryColor: a, tag: _, error: I, furthestStep: N, inSettings: T } = e,
+        j = r.useMemo(() => {
+            let e = (0, g.yf)();
             return {
-                primary: null != i ? i : e.primary,
-                secondary: null != s ? s : e.secondary
+                primary: null != l ? l : e.primary,
+                secondary: null != a ? a : e.secondary
             };
-        }, [i, s]);
-    a.useEffect(() => {
-        (null == i || null == s) &&
-            n({
-                badgePrimaryColor: I.primary,
-                badgeSecondaryColor: I.secondary
+        }, [l, a]);
+    r.useEffect(() => {
+        (null == l || null == a) &&
+            t({
+                badgePrimaryColor: j.primary,
+                badgeSecondaryColor: j.secondary
             });
-    }, [I.primary, I.secondary, n, i, s]);
-    let j = a.useMemo(() => {
-            for (let e = 0; e < h.sg.length; e++) if (h.sg[e].primary === I.primary && h.sg[e].secondary === I.secondary) return 1 + e;
+    }, [j.primary, j.secondary, t, l, a]);
+    let b = r.useMemo(() => {
+            for (let e = 0; e < g.sg.length; e++) if (g.sg[e].primary === j.primary && g.sg[e].secondary === j.secondary) return 1 + e;
             return 0;
-        }, [I.primary, I.secondary]),
-        [N, S] = a.useState(!1),
-        E = a.useCallback(() => {
-            let e = b[Math.floor(Math.random() * b.length)],
-                t = o().random().hex();
-            n({
+        }, [j.primary, j.secondary]),
+        [S, E] = r.useState(!1),
+        R = r.useCallback(() => {
+            let e = v[Math.floor(Math.random() * v.length)],
+                n = s().random().hex();
+            t({
                 badgeKind: e,
-                badgePrimaryColor: t,
-                badgeSecondaryColor: o().random().hex()
+                badgePrimaryColor: n,
+                badgeSecondaryColor: s().random().hex()
             });
-        }, [n]);
+        }, [t]);
     return (
-        a.useEffect(() => {
-            y === x.Wy.CUSTOMIZE_TAG_BADGE &&
+        r.useEffect(() => {
+            N === x.Wy.CUSTOMIZE_TAG_BADGE &&
                 !T &&
-                n({
-                    brandPrimaryColor: I.primary,
-                    brandSecondaryColor: I.secondary
+                t({
+                    brandPrimaryColor: j.primary,
+                    brandSecondaryColor: j.secondary
                 });
-        }, [n, I.primary, I.secondary, y, i, s, T]),
-        (0, r.jsxs)('div', {
+        }, [t, j.primary, j.secondary, N, l, a, T]),
+        (0, i.jsxs)('div', {
             className: C.slideContent,
             children: [
-                (0, r.jsx)(d.Heading, {
+                (0, i.jsx)(d.Heading, {
                     variant: 'heading-xxl/medium',
                     className: C.title,
                     children: p.intl.string(p.t.ZcHHvr)
                 }),
-                (0, r.jsx)(d.Text, {
+                (0, i.jsx)(d.Text, {
                     variant: 'text-md/normal',
                     color: 'header-secondary',
                     className: C.subtitle,
                     children: p.intl.string(p.t.Tr399P)
                 }),
-                (0, r.jsx)(f.Z, { onClick: E }),
-                (0, r.jsxs)('div', {
-                    className: g.container,
+                (0, i.jsx)(h.Z, { onClick: R }),
+                (0, i.jsxs)('div', {
+                    className: f.container,
                     children: [
-                        (0, r.jsxs)('div', {
-                            className: g.badgesContainer,
+                        (0, i.jsxs)('div', {
+                            className: f.badgesContainer,
                             children: [
-                                (0, r.jsxs)('div', {
-                                    className: g.pickerContainer,
+                                (0, i.jsxs)('div', {
+                                    className: f.pickerContainer,
                                     children: [
-                                        (0, r.jsx)(d.Text, {
+                                        (0, i.jsx)(d.Text, {
                                             variant: 'text-xs/semibold',
                                             color: 'text-muted',
                                             children: p.intl.string(p.t.eyPefn)
                                         }),
-                                        (0, r.jsx)('div', {
-                                            className: g.pickerGrid,
-                                            children: b.map((e) =>
-                                                (0, r.jsx)(
+                                        (0, i.jsx)('div', {
+                                            className: f.pickerGrid,
+                                            children: v.map((e) =>
+                                                (0, i.jsx)(
                                                     d.Clickable,
                                                     {
-                                                        onClick: () => n({ badgeKind: e }),
-                                                        className: l()(g.badgeAssetContainer, { [g.badgeAssetContainerSelected]: e === t }),
-                                                        children: (0, r.jsx)(u.A, {
+                                                        onClick: () => t({ badgeKind: e }),
+                                                        className: o()(f.badgeAssetContainer, { [f.badgeAssetContainerSelected]: e === n }),
+                                                        children: (0, i.jsx)(u.A, {
                                                             badge: e,
                                                             width: 32,
                                                             height: 32
@@ -104,55 +104,55 @@ n.Z = (e) => {
                                         })
                                     ]
                                 }),
-                                (0, r.jsxs)('div', {
-                                    className: g.pickerContainer,
+                                (0, i.jsxs)('div', {
+                                    className: f.pickerContainer,
                                     children: [
-                                        (0, r.jsx)(d.Text, {
+                                        (0, i.jsx)(d.Text, {
                                             variant: 'text-xs/semibold',
                                             color: 'text-muted',
                                             children: p.intl.string(p.t['93wr6e'])
                                         }),
-                                        (0, r.jsxs)('div', {
-                                            className: g.pickerGrid,
+                                        (0, i.jsxs)('div', {
+                                            className: f.pickerGrid,
                                             children: [
-                                                (0, r.jsx)(m.Z, {
-                                                    showSecondaryColor: h.ME[t] >= 2,
-                                                    palette: I,
+                                                (0, i.jsx)(m.Z, {
+                                                    showSecondaryColor: g.ME[n] >= 2,
+                                                    palette: j,
                                                     onPrimaryColorChange: (e) => {
-                                                        n({ badgePrimaryColor: (0, c.Rf)(e) });
+                                                        t({ badgePrimaryColor: (0, c.Rf)(e) });
                                                     },
                                                     onSecondaryColorChange: (e) => {
-                                                        n({ badgeSecondaryColor: (0, c.Rf)(e) });
+                                                        t({ badgeSecondaryColor: (0, c.Rf)(e) });
                                                     },
-                                                    shouldShow: N,
-                                                    onRequestClose: () => S(!1),
+                                                    shouldShow: S,
+                                                    onRequestClose: () => E(!1),
                                                     children: (e) =>
-                                                        (0, r.jsx)(d.Clickable, {
+                                                        (0, i.jsx)(d.Clickable, {
                                                             ...e,
                                                             onClick: () => {
-                                                                S((e) => !e);
+                                                                E((e) => !e);
                                                             },
-                                                            className: l()(g.badgeAssetContainer, { [g.badgeAssetContainerSelected]: 0 === j }),
-                                                            children: (0, r.jsx)(d.PaintPaletteIcon, {
+                                                            className: o()(f.badgeAssetContainer, { [f.badgeAssetContainerSelected]: 0 === b }),
+                                                            children: (0, i.jsx)(d.PaintPaletteIcon, {
                                                                 size: 'custom',
                                                                 width: 20,
                                                                 height: 20
                                                             })
                                                         })
                                                 }),
-                                                h.sg.map((e, a) =>
-                                                    (0, r.jsx)(
+                                                g.sg.map((e, r) =>
+                                                    (0, i.jsx)(
                                                         d.Clickable,
                                                         {
                                                             onClick: () => {
-                                                                n({
-                                                                    badgePrimaryColor: h.sg[a].primary,
-                                                                    badgeSecondaryColor: h.sg[a].secondary
+                                                                t({
+                                                                    badgePrimaryColor: g.sg[r].primary,
+                                                                    badgeSecondaryColor: g.sg[r].secondary
                                                                 });
                                                             },
-                                                            className: l()(g.badgeAssetContainer, { [g.badgeAssetContainerSelected]: a + 1 === j }),
-                                                            children: (0, r.jsx)(u.A, {
-                                                                badge: t,
+                                                            className: o()(f.badgeAssetContainer, { [f.badgeAssetContainerSelected]: r + 1 === b }),
+                                                            children: (0, i.jsx)(u.A, {
+                                                                badge: n,
                                                                 width: 32,
                                                                 height: 32,
                                                                 primaryTintColor: e.primary,
@@ -168,41 +168,41 @@ n.Z = (e) => {
                                 })
                             ]
                         }),
-                        (0, r.jsxs)('div', {
-                            className: g.tagContainer,
+                        (0, i.jsxs)('div', {
+                            className: f.tagContainer,
                             children: [
-                                (0, r.jsx)(d.Text, {
+                                (0, i.jsx)(d.Text, {
                                     variant: 'text-xs/semibold',
                                     color: 'text-muted',
                                     children: p.intl.string(p.t['3eZP8/'])
                                 }),
-                                null != _ &&
-                                    (0, r.jsx)(d.Text, {
+                                null != I &&
+                                    (0, i.jsx)(d.Text, {
                                         variant: 'text-sm/normal',
                                         color: 'status-danger',
                                         className: C.errorText,
-                                        children: _
+                                        children: I
                                     }),
-                                (0, r.jsx)(d.TextInput, {
-                                    className: g.tagInputWrapper,
-                                    inputClassName: g.tagInput,
-                                    value: null != v ? v : '',
-                                    onChange: (e) => n({ tag: e }),
+                                (0, i.jsx)(d.TextInput, {
+                                    className: f.tagInputWrapper,
+                                    inputClassName: f.tagInput,
+                                    value: null != _ ? _ : '',
+                                    onChange: (e) => t({ tag: e }),
                                     maxLength: x.cG,
                                     placeholder: p.intl.string(p.t['0V0ZFx']),
                                     autoFocus: !0,
-                                    prefixElement: (0, r.jsx)(u.A, {
-                                        badge: t,
+                                    prefixElement: (0, i.jsx)(u.A, {
+                                        badge: n,
                                         width: 40,
                                         height: 40,
-                                        primaryTintColor: I.primary,
-                                        secondaryTintColor: I.secondary
+                                        primaryTintColor: j.primary,
+                                        secondaryTintColor: j.secondary
                                     })
                                 }),
-                                (0, r.jsx)(d.Text, {
+                                (0, i.jsx)(d.Text, {
                                     variant: 'text-xs/medium',
                                     color: 'text-muted',
-                                    className: g.tagValidationText,
+                                    className: f.tagValidationText,
                                     children: p.intl.string(p.t.lGtFwM)
                                 })
                             ]

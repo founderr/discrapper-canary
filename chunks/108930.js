@@ -1,15 +1,15 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
-        return h;
+        return g;
     }
 });
-var r = t(200651);
-t(192379);
-var a = t(249849),
-    i = t(907561),
-    o = t(388032),
-    s = t(307536);
-let l = ['#50599c', '#cc99ff', '#fefefe'],
+var i = n(200651);
+n(192379);
+var r = n(249849),
+    l = n(907561),
+    s = n(388032),
+    a = n(307536);
+let o = ['#50599c', '#cc99ff', '#fefefe'],
     c = ['#39306f', '#aeaad2'],
     d = [0.05, 0.4, 1],
     u = [
@@ -27,7 +27,7 @@ let l = ['#50599c', '#cc99ff', '#fefefe'],
         }
     ],
     m = [0.05, 0.4],
-    f = [
+    h = [
         {
             base: 8,
             tint: 1
@@ -37,30 +37,30 @@ let l = ['#50599c', '#cc99ff', '#fefefe'],
             tint: 1
         }
     ];
-function h(e) {
-    let { width: n, height: t, primaryTintColor: h, secondaryTintColor: x, ...p } = e,
-        { primaryColorsTransformed: g, secondaryColorsTransformed: C } = (0, a.s)({
-            primaryBaseColors: l,
-            primaryTintColor: h,
+function g(e) {
+    let { width: t, height: n, primaryTintColor: g, secondaryTintColor: x, ...p } = e,
+        { primaryColorsTransformed: f, secondaryColorsTransformed: C } = (0, r.s)({
+            primaryBaseColors: o,
+            primaryTintColor: g,
             primaryTintLuminances: d,
             primaryLuminanceWeights: u,
             secondaryBaseColors: c,
             secondaryTintColor: x,
             secondaryTintLuminances: m,
-            secondaryLuminanceWeights: f
+            secondaryLuminanceWeights: h
         }),
-        { styleContent: b, containerId: v } = (0, i.bC)(g, C);
-    return (0, r.jsxs)('svg', {
+        { styleContent: v, containerId: _ } = (0, l.bC)(f, C);
+    return (0, i.jsxs)('svg', {
         ...p,
-        'aria-label': o.intl.string(o.t.nH6S2d),
-        width: n,
-        height: t,
-        viewBox: '0 0 '.concat(i.Km, ' ').concat(i.md),
+        'aria-label': s.intl.string(s.t.nH6S2d),
+        width: t,
+        height: n,
+        viewBox: '0 0 '.concat(l.Km, ' ').concat(l.md),
         children: [
-            (0, r.jsx)('defs', { children: (0, r.jsx)('style', { children: b }) }),
-            (0, r.jsx)('use', {
-                href: ''.concat(s, '#wrapper-layer'),
-                id: v
+            (0, i.jsx)('defs', { children: (0, i.jsx)('style', { children: v }) }),
+            (0, i.jsx)('use', {
+                href: ''.concat(a, '#wrapper-layer'),
+                id: _
             })
         ]
     });

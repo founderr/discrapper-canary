@@ -11,21 +11,21 @@ var r = n(200651),
     f = n(37234),
     _ = n(835473),
     p = n(358221),
-    h = n(928518),
-    m = n(703656),
-    g = n(607187),
-    E = n(937995),
-    v = n(366050),
-    I = n(944486),
-    b = n(594174),
-    S = n(566620),
-    T = n(317381),
-    y = n(175894),
-    A = n(246106),
-    N = n(963614),
-    C = n(917107),
-    R = n(208156),
-    O = n(748492),
+    h = n(703656),
+    m = n(607187),
+    g = n(937995),
+    E = n(366050),
+    v = n(944486),
+    I = n(594174),
+    b = n(566620),
+    S = n(317381),
+    T = n(175894),
+    y = n(246106),
+    A = n(963614),
+    N = n(917107),
+    C = n(208156),
+    R = n(748492),
+    O = n(486003),
     D = n(701488),
     L = n(918559),
     x = n(981631),
@@ -35,41 +35,41 @@ var r = n(200651),
     k = n(852401);
 function U(e) {
     var t, n, a;
-    let { channel: y, isLoading: A } = e,
+    let { channel: T, isLoading: y } = e,
         [U, G] = i.useState(!1),
-        B = (0, o.e7)([T.ZP], () => T.ZP.getSelfEmbeddedActivityForChannel(y.id)),
-        Z = (0, o.e7)([T.ZP], () => T.ZP.getActivityPanelMode()),
+        B = (0, o.e7)([S.ZP], () => S.ZP.getSelfEmbeddedActivityForChannel(T.id)),
+        Z = (0, o.e7)([S.ZP], () => S.ZP.getActivityPanelMode()),
         F = (0, _.q)(null == B ? void 0 : B.applicationId),
         V = null == B ? void 0 : B.launchId,
-        j = (0, o.e7)([I.Z], () => I.Z.getChannelId() === y.id),
-        { dockedRect: H, isHidden: Y } = (0, o.cj)([v.Z], () => {
-            let e = v.Z.pipWindow;
+        j = (0, o.e7)([v.Z], () => v.Z.getChannelId() === T.id),
+        { dockedRect: H, isHidden: Y } = (0, o.cj)([E.Z], () => {
+            let e = E.Z.pipWindow;
             return {
-                dockedRect: null != e ? v.Z.getDockedRect(e.id) : null,
-                isHidden: v.Z.isEmbeddedActivityHidden()
+                dockedRect: null != e ? E.Z.getDockedRect(e.id) : null,
+                isHidden: E.Z.isEmbeddedActivityHidden()
             };
         }),
-        W = (0, o.e7)([h.Z], () => h.Z.getWindow(x.KJ3.CHANNEL_CALL_POPOUT)),
+        W = (0, O.sU)({ channelId: T.id }),
         {
             activityParticipant: K,
             selectedParticipant: z,
             participantsOpen: q
         } = (0, o.cj)([p.Z], () => ({
-            activityParticipant: null != B ? p.Z.getParticipant(y.id, B.applicationId) : null,
-            selectedParticipant: p.Z.getSelectedParticipant(y.id),
-            participantsOpen: p.Z.getParticipantsOpen(y.id)
+            activityParticipant: null != B ? p.Z.getParticipant(T.id, B.applicationId) : null,
+            selectedParticipant: p.Z.getSelectedParticipant(T.id),
+            participantsOpen: p.Z.getParticipantsOpen(T.id)
         })),
         Q = j || null != W,
-        X = (0, C.Z)(y.id),
+        X = (0, N.Z)(T.id),
         J = X && (null == z ? void 0 : z.type) !== w.fO.ACTIVITY,
         $ = !X && Z === L.Ez.PIP,
         ee = (!Q || (Q && (J || $) && null == H)) && !Y,
-        et = ee && null != v.Z.pipVideoWindow && null != v.Z.pipActivityWindow;
+        et = ee && null != E.Z.pipVideoWindow && null != E.Z.pipActivityWindow;
     function en() {
         var e;
-        null != B && c.Z.selectParticipant(y.id, B.applicationId);
-        let t = null !== (e = y.getGuildId()) && void 0 !== e ? e : x.ME;
-        d.Z.channelListScrollTo(t, y.id), (0, m.XU)(t, y.id), null == W && (0, f.Ou)();
+        null != B && c.Z.selectParticipant(T.id, B.applicationId);
+        let t = null !== (e = T.getGuildId()) && void 0 !== e ? e : x.ME;
+        d.Z.channelListScrollTo(t, T.id), (0, h.XU)(t, T.id), null == W && (0, f.Ou)();
     }
     function er() {
         G(!U);
@@ -84,24 +84,24 @@ function U(e) {
             });
         }
     }, [null == B ? void 0 : B.applicationId, ee]);
-    if (null == B || null == V || (null == K && (0, C.Z)(y.id)) || null == F) return null;
+    if (null == B || null == V || (null == K && (0, N.Z)(T.id)) || null == F) return null;
     let ei = Array.from(B.userIds)
-            .map((e) => b.default.getUser(e))
+            .map((e) => I.default.getUser(e))
             .filter((e) => null != e),
         ea = {
             instance_id: null !== (a = null !== (n = B.compositeInstanceId) && void 0 !== n ? n : B.launchId) && void 0 !== a ? a : '',
-            channel_id: y.id,
+            channel_id: T.id,
             location_id: null === (t = B.location) || void 0 === t ? void 0 : t.id,
             launch_id: B.launchId
         };
     return (
-        null != y.guild_id && '' !== y.guild_id && (ea.guild_id = y.guild_id),
-        (0, r.jsx)(E.ZP, {
+        null != T.guild_id && '' !== T.guild_id && (ea.guild_id = T.guild_id),
+        (0, r.jsx)(g.ZP, {
             timeout: 2000,
             children: (e) => {
                 var t, n, i, a, o, u, c, d;
                 let { idle: f, onActive: _, onForceIdle: p } = e;
-                return (0, r.jsxs)(g.Z, {
+                return (0, r.jsxs)(m.Z, {
                     className: s()(M.root, {
                         [M.pipMode]: ee,
                         [k.elevationHigh]: ee,
@@ -123,10 +123,10 @@ function U(e) {
                                 (c = ei),
                                 ee && null != B && ((null == K ? void 0 : K.type) === w.fO.ACTIVITY || u)
                                     ? (null === (d = B.config) || void 0 === d ? void 0 : d.useInteractivePIP)
-                                        ? (0, r.jsx)(O.of, {
+                                        ? (0, r.jsx)(R.of, {
                                               onJumpToChannel: en,
                                               applicationId: B.applicationId,
-                                              channel: y,
+                                              channel: T,
                                               showControls: !o,
                                               onMouseDown: i,
                                               onMouseMove: i,
@@ -137,15 +137,15 @@ function U(e) {
                                           })
                                         : u
                                           ? (0, r.jsx)(r.Fragment, {
-                                                children: (0, r.jsx)(O.q5, {
+                                                children: (0, r.jsx)(R.q5, {
                                                     idle: o,
                                                     onMouseMove: i,
                                                     onMouseDown: i,
                                                     onMouseLeave: a,
                                                     onJumpToChannel: () => {
-                                                        en(), (0, S.tg)(L.Ez.PANEL);
+                                                        en(), (0, b.tg)(L.Ez.PANEL);
                                                     },
-                                                    channel: y,
+                                                    channel: T,
                                                     applicationId: B.applicationId,
                                                     users: c
                                                 })
@@ -161,13 +161,13 @@ function U(e) {
                                                           className: M.clickShield,
                                                           onDoubleClick: en
                                                       }),
-                                                      (0, r.jsx)(O.YB, {
+                                                      (0, r.jsx)(R.YB, {
                                                           idle: o,
                                                           onMouseMove: i,
                                                           onMouseDown: i,
                                                           onMouseLeave: a,
                                                           onJumpToChannel: en,
-                                                          channel: y,
+                                                          channel: T,
                                                           applicationId: B.applicationId,
                                                           selectedParticipant: K
                                                       })
@@ -175,15 +175,15 @@ function U(e) {
                                               })
                                     : null)
                         }),
-                        A
+                        y
                             ? (0, r.jsx)(l.Spinner, {
                                   className: s()(M.iframe, {
                                       [M.pipModeShort]: ee && !U,
                                       [M.pipModeTall]: ee && U
                                   })
                               })
-                            : (0, r.jsx)(R.J, {
-                                  allowPopups: (0, N.h)(F),
+                            : (0, r.jsx)(C.J, {
+                                  allowPopups: (0, A.h)(F),
                                   referrerPolicy: D.um.has(B.applicationId) ? 'no-referrer' : 'origin',
                                   url: B.url,
                                   queryParams: ea,
@@ -195,10 +195,10 @@ function U(e) {
                                   shouldRefocus: !ee && j
                               }),
                         !ee &&
-                            (0, r.jsx)(O.Ds, {
+                            (0, r.jsx)(R.Ds, {
                                 participantsOpen: q,
                                 showToggleParticipants: !1,
-                                channelId: y.id
+                                channelId: T.id
                             })
                     ]
                 });
@@ -208,9 +208,9 @@ function U(e) {
 }
 t.Z = (e) => {
     let { channel: t, ...n } = e,
-        { userActivity: i, inActivity: a } = (0, A.Z)(t.id);
+        { userActivity: i, inActivity: a } = (0, y.Z)(t.id);
     return (
-        (0, y.Z)({
+        (0, T.Z)({
             channel: t,
             userActivity: i
         }),

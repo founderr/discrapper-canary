@@ -33,8 +33,8 @@ let T = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
     },
     N = { opacity: 0 },
     w = { opacity: 1 },
-    P = { borderRadius: ''.concat(T, 'px ').concat(T, 'px ').concat(T, 'px ').concat(T, 'px') },
-    j = { borderRadius: '0px '.concat(T, 'px ').concat(T, 'px 0px') },
+    j = { borderRadius: ''.concat(T, 'px ').concat(T, 'px ').concat(T, 'px ').concat(T, 'px') },
+    P = { borderRadius: '0px '.concat(T, 'px ').concat(T, 'px 0px') },
     R = {
         mass: 1,
         tension: 500,
@@ -46,8 +46,8 @@ let T = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
             a,
             { participant: s, isUpsellEnabled: o, shape: d, size: g, didTrackUpsellViewed: T, setDidTrackUpsellViewed: b, className: A, premiumIndicator: N } = e,
             w = (0, _.Wc)(s),
-            { analyticsLocations: P } = (0, p.ZP)(),
-            j = null != (0, x.Z)(s);
+            { analyticsLocations: j } = (0, p.ZP)(),
+            P = null != (0, x.Z)(s);
         try {
             t = (0, _.nG)(w);
         } catch (e) {
@@ -82,22 +82,22 @@ let T = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                         type: Z.cd.STREAM_QUALITY_INDICATOR,
                         has_premium_stream_fps: t,
                         has_premium_stream_resolution: a,
-                        location_stack: P
+                        location_stack: j
                     }),
                     b(!0));
-            }, [t, a, R, T, b, P]),
+            }, [t, a, R, T, b, j]),
             null == w)
         )
             return null;
         let D = (0, i.jsx)(m.Tooltip, {
-            text: j ? C.intl.string(C.t.q8TiVl) : R ? C.intl.string(C.t.IHgpEh) : C.intl.string(C.t.vLb0VV),
+            text: P ? C.intl.string(C.t.q8TiVl) : R ? C.intl.string(C.t.IHgpEh) : C.intl.string(C.t.vLb0VV),
             position: 'bottom',
             color: m.Tooltip.Colors.GREY,
             children: (e) =>
                 (0, i.jsxs)(m.Clickable, {
                     ...e,
                     onClick: k,
-                    className: r()(y.qualityIndicator, g, h.eE[d], j ? y.qualityIndicatorLowQuality : y.qualityIndicatorFullQuality, { [y.clickable]: L && R }),
+                    className: r()(y.qualityIndicator, g, h.eE[d], P ? y.qualityIndicatorLowQuality : y.qualityIndicatorFullQuality, { [y.clickable]: L && R }),
                     children: [
                         R
                             ? (0, i.jsx)(m.NitroWheelIcon, {
@@ -144,7 +144,7 @@ t.Z = (e) => {
         ),
         x = (0, m.useSpring)(
             {
-                to: S ? j : P,
+                to: S ? P : j,
                 config: R
             },
             'animate-always'

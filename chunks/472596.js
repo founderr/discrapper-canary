@@ -25,8 +25,8 @@ var r,
     a = n(906732),
     o = n(171368),
     E = n(430824),
-    u = n(594174),
-    c = n(91047),
+    c = n(594174),
+    u = n(91047),
     d = n(981631);
 let _ = (e, t) => {
     let { guildId: n, userId: r, colorRoleId: l } = e;
@@ -46,10 +46,10 @@ function A(e, t, n, r) {
     return i.useCallback(
         (i) => {
             if (null == e) return;
-            let s = u.default.getUser(e.userId);
+            let s = c.default.getUser(e.userId);
             if (null != s)
                 i.stopPropagation(),
-                    (0, c.nm)(i, {
+                    (0, u.nm)(i, {
                         user: s,
                         guildId: e.guildId,
                         analyticsLocations: null != n ? [n] : l,
@@ -65,10 +65,10 @@ function T(e, t, n) {
     return i.useCallback(
         (l) => {
             if (null == e) return;
-            let i = u.default.getUser(e.userId);
+            let i = c.default.getUser(e.userId);
             if (null != i)
                 l.stopPropagation(),
-                    (0, c._j)(l, {
+                    (0, u._j)(l, {
                         user: i,
                         guildId: e.guildId,
                         analyticsLocations: null != t ? [t] : r,

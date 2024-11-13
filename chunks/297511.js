@@ -7,15 +7,15 @@ n.r(t),
 var a = n(200651),
     r = n(192379),
     i = n(593473),
-    c = n(442837),
-    s = n(893776),
+    s = n(442837),
+    c = n(893776),
     o = n(830064),
     d = n(388905),
     l = n(625128),
     u = n(362762),
     m = n(353926),
-    g = n(571457),
-    p = n(703656),
+    p = n(571457),
+    g = n(703656),
     E = n(314897),
     _ = n(626135),
     f = n(963202),
@@ -26,49 +26,49 @@ var a = n(200651),
     L = n(940956);
 function D(e) {
     let { match: t, location: n } = e,
-        D = (0, c.e7)([u.Z], () => u.Z.getState('discovery')),
-        I = (0, c.e7)([E.default], () => E.default.isAuthenticated()),
-        N = (0, f.iN)('game_discovery_entry_point'),
+        D = (0, s.e7)([u.Z], () => u.Z.getState('discovery')),
+        N = (0, s.e7)([E.default], () => E.default.isAuthenticated()),
+        I = (0, f.iN)('game_discovery_entry_point'),
         C = t.params.gameId,
         S = (0, f.io)('landing page'),
-        O = (0, c.e7)([m.Z], () => m.Z.hasLoadedExperiments);
+        O = (0, s.e7)([m.Z], () => m.Z.hasLoadedExperiments);
     if (
         (r.useEffect(() => {
             let { utm_source: e } = i.parse(n.search);
-            (0, _.setUTMContext)({ utmSource: e }), (n.search = ''), (0, p.dL)(n);
+            (0, _.setUTMContext)({ utmSource: e }), (n.search = ''), (0, g.dL)(n);
         }, []),
         r.useEffect(() => {
-            O && S && (0, g.HV)({ gameId: C });
+            O && S && (0, p.HV)({ gameId: C });
         }, [C, O, S]),
         r.useEffect(() => {
-            !O && s.Z.getExperiments();
+            !O && c.Z.getExperiments();
         }, [O]),
         r.useEffect(() => {
             if (O) {
                 if (!S) {
-                    (0, p.dL)({ pathname: h.Z5c.GLOBAL_DISCOVERY });
+                    (0, g.dL)({ pathname: h.Z5c.GLOBAL_DISCOVERY });
                     return;
                 }
                 if (null == D)
-                    (0, g.zY)({ gameId: C }),
+                    (0, p.zY)({ gameId: C }),
                         l.Z.openNativeAppModal('discovery', h.Etm.DEEP_LINK, {
                             type: x.jE.DISCOVERY_GAME_RESULTS,
                             params: { gameId: C }
                         });
                 else if (D === h.kEZ.OPEN_FAIL) {
-                    if (!I) return;
-                    if (!N) {
-                        (0, p.dL)({ pathname: h.Z5c.GLOBAL_DISCOVERY_SERVERS });
+                    if (!N) return;
+                    if (!I) {
+                        (0, g.dL)({ pathname: h.Z5c.GLOBAL_DISCOVERY_SERVERS });
                         return;
                     }
-                    (0, p.dL)({
+                    (0, g.dL)({
                         pathname: h.Z5c.GLOBAL_DISCOVERY_SERVERS,
                         search: '?game='.concat(C)
                     });
                 }
             }
-        }, [C, O, I, N, D, S]),
-        D === h.kEZ.OPEN_FAIL && !I)
+        }, [C, O, N, I, D, S]),
+        D === h.kEZ.OPEN_FAIL && !N)
     )
         return (0, a.jsx)(b.Z, { gameId: C });
     let y = null == D || D === h.kEZ.OPENING;
@@ -93,4 +93,4 @@ function D(e) {
         ]
     });
 }
-c.ZP.initialize();
+s.ZP.initialize();

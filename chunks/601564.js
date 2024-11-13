@@ -27,8 +27,8 @@ var i = n(200651),
     S = n(843445),
     N = n(981631),
     T = n(388032),
-    x = n(256109);
-function A(e, t, n) {
+    A = n(256109);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,7 +41,7 @@ function A(e, t, n) {
         e
     );
 }
-let b = (0, f.Un)({
+let x = (0, f.Un)({
     createPromise: () => Promise.all([n.e('1868'), n.e('99838')]).then(n.bind(n, 496691)),
     webpackId: 496691
 });
@@ -49,7 +49,7 @@ function Z(e) {
     return e < S.x ? S.b.SMALL : S.b.LARGE;
 }
 s.ZP.initialize();
-class y extends r.PureComponent {
+class L extends r.PureComponent {
     componentDidMount() {
         (0, o.Y)(this.props.location),
             (this.stopListeningToHistory = (0, E.s1)().listen((e) => {
@@ -73,11 +73,11 @@ class y extends r.PureComponent {
         let { isAuthenticated: e, location: t } = this.props,
             n = e
                 ? (0, i.jsx)('div', {
-                      className: x.applicationStore,
+                      className: A.applicationStore,
                       children: this.renderContent()
                   })
-                : (0, i.jsx)(b, {
-                      className: x.applicationStore,
+                : (0, i.jsx)(x, {
+                      className: A.applicationStore,
                       location: t,
                       render: this.renderContent
                   });
@@ -88,8 +88,8 @@ class y extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            A(this, 'stopListeningToHistory', void 0),
-            A(this, 'renderStoreListing', (e) => {
+            b(this, 'stopListeningToHistory', void 0),
+            b(this, 'renderStoreListing', (e) => {
                 let {
                         match: {
                             params: { skuId: t, applicationId: n, slug: r }
@@ -111,7 +111,7 @@ class y extends r.PureComponent {
                     })
                 });
             }),
-            A(this, 'renderContent', () =>
+            b(this, 'renderContent', () =>
                 (0, i.jsxs)(a.rs, {
                     children: [
                         (0, i.jsx)(a.AW, {
@@ -146,4 +146,4 @@ class y extends r.PureComponent {
             );
     }
 }
-t.default = (0, a.EN)((0, u.Z)((0, h.Z)(y)));
+t.default = (0, a.EN)((0, u.Z)((0, h.Z)(L)));

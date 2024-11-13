@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return L;
+        return R;
     }
 }),
     n(47120),
@@ -100,7 +100,7 @@ function M(e, t) {
     }
     return !0;
 }
-function L(e) {
+function R(e) {
     var t;
     let { channel: n } = e,
         a = v.default.getCurrentUser(),

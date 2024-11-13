@@ -28,8 +28,8 @@ var r,
     a = n(192379),
     o = n(100527),
     E = n(367907),
-    u = n(314897),
-    c = n(626135),
+    c = n(314897),
+    u = n(626135),
     d = n(981631);
 function _(e, t, n) {
     var r;
@@ -37,7 +37,7 @@ function _(e, t, n) {
         ...t,
         ...(0, E.hH)(null !== (r = t.guild_id) && void 0 !== r ? r : n)
     };
-    c.default.track(e, l);
+    u.default.track(e, l);
 }
 function A(e) {
     return a.useCallback(
@@ -90,7 +90,7 @@ function g(e, t) {
         (t) => {
             let s = {
                 action_type: t,
-                mod_user_id: u.default.getId(),
+                mod_user_id: c.default.getId(),
                 guild_id: e,
                 location: n,
                 locations: i,

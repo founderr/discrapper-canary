@@ -96,7 +96,7 @@ class v extends (r = i.ZP.PersistedStore) {
         return null == e ? l : null !== (t = c[e]) && void 0 !== t ? t : l;
     }
     getApplication(e) {
-        return u[e];
+        if (null != e) return u[e];
     }
     getApplicationByName(e) {
         if (null == e) return;

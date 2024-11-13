@@ -9,7 +9,7 @@ var r = n(200651),
     s = n(701865);
 function o(e) {
     let { location: t, contextKey: o, onCloseCallback: l, ...u } = e,
-        c = (0, a.K)(t);
+        c = (0, a.Kc)(t);
     (0, i.openModalLazy)(
         async () => {
             let { default: e } = c ? await n.e('39476').then(n.bind(n, 97594)) : await n.e('87267').then(n.bind(n, 950120));

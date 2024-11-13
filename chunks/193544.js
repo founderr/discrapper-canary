@@ -18,34 +18,34 @@ var i = n(200651),
     g = n(441519);
 function x(e) {
     var t, n, l;
-    let { changeTitle: x, value: p, options: f, className: C, onChange: I } = e,
-        [_, N] = r.useState(p),
-        [v, T] = r.useState(!1),
-        [j, S] = r.useState(!1),
-        b = r.useRef(null);
+    let { changeTitle: x, value: p, options: f, className: C, onChange: v } = e,
+        [_, I] = r.useState(p),
+        [N, T] = r.useState(!1),
+        [j, b] = r.useState(!1),
+        S = r.useRef(null);
     r.useEffect(() => {
-        N(p);
+        I(p);
     }, [p]),
         r.useEffect(
             () => () => {
-                clearTimeout(b.current);
+                clearTimeout(S.current);
             },
             []
         );
     let E = f.find((e) => e.value === _),
         R = (e) => {
             if (!e.disabled && e.value !== _)
-                S(!0),
-                    null == I || I(e),
-                    N(e.value),
-                    (b.current = setTimeout(() => {
-                        S(!1), T(!1);
+                b(!0),
+                    null == v || v(e),
+                    I(e.value),
+                    (S.current = setTimeout(() => {
+                        b(!1), T(!1);
                     }, 1000));
         };
     return (0, i.jsx)(u.Z, {
-        title: v ? x : null !== (t = null == E ? void 0 : E.title) && void 0 !== t ? t : x,
-        description: v ? '('.concat(null !== (n = null == E ? void 0 : E.title) && void 0 !== n ? n : h.intl.string(h.t.PoWNfX), ')') : null !== (l = null == E ? void 0 : E.description) && void 0 !== l ? l : '',
-        highlightColor: v ? d.q.NONE : null == E ? void 0 : E.highlightColor,
+        title: N ? x : null !== (t = null == E ? void 0 : E.title) && void 0 !== t ? t : x,
+        description: N ? '('.concat(null !== (n = null == E ? void 0 : E.title) && void 0 !== n ? n : h.intl.string(h.t.PoWNfX), ')') : null !== (l = null == E ? void 0 : E.description) && void 0 !== l ? l : '',
+        highlightColor: N ? d.q.NONE : null == E ? void 0 : E.highlightColor,
         action: (0, i.jsx)(a.Button, {
             look: a.Button.Looks.LINK,
             size: a.Button.Sizes.MIN,

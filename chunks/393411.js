@@ -161,7 +161,7 @@ t.Z = function (e) {
     let { subscription: s, renewalInvoicePreview: l, paymentSource: g, busy: R, analyticsLocation: U } = e,
         { analyticsLocations: V } = (0, m.ZP)(u.Z.SUBSCRIPTION_HEADER),
         { fractionalState: G } = (0, h.Z)({ forceFetch: !1 }),
-        Y = G === P.a$.FP_SUB,
+        Y = G === P.a$.FP_SUB_PAUSED,
         { enabled: H } = (0, b.ZP)({ location: 'subscription_header' });
     (!P.pj.has(s.planId) || !D.JwP.ALL_PAUSEABLE.has(s.status) || Y) && (H = !1);
     let z = (0, v.Ng)(),

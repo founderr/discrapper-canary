@@ -21,25 +21,25 @@ var i = n(200651),
     p = n(65912),
     f = n(51248),
     C = n(546513),
-    I = n(572456),
+    v = n(572456),
     _ = n(273504),
-    N = n(981631),
-    v = n(388032),
+    I = n(981631),
+    N = n(388032),
     T = n(603211);
 function j(e) {
     var t, n;
-    let { guildId: j, setPreventNavigation: S = () => {} } = e,
-        { editingRule: b, setEditingRule: E } = (0, p.V)(),
+    let { guildId: j, setPreventNavigation: b = () => {} } = e,
+        { editingRule: S, setEditingRule: E } = (0, p.V)(),
         { guild: R, subsection: Z } = (0, l.cj)([o.Z], () => o.Z.getProps()),
-        A = null !== (n = null !== (t = null == R ? void 0 : R.id) && void 0 !== t ? t : j) && void 0 !== n ? n : N.lds,
-        L = null != b,
-        [y] = (0, h.RD)(A),
-        { rulesByTriggerType: D } = (0, h.pH)(A),
+        y = null !== (n = null !== (t = null == R ? void 0 : R.id) && void 0 !== t ? t : j) && void 0 !== n ? n : I.lds,
+        A = null != S,
+        [L] = (0, h.RD)(y),
+        { rulesByTriggerType: D } = (0, h.pH)(y),
         O = {
-            [g.vh.MEMBERS]: v.intl.string(v.t.sx4E5u),
-            [g.vh.CONTENT]: v.intl.string(v.t.fphZb2)
+            [g.vh.MEMBERS]: N.intl.string(N.t.sx4E5u),
+            [g.vh.CONTENT]: N.intl.string(N.t.fphZb2)
         },
-        M = r.useMemo(
+        k = r.useMemo(
             () =>
                 Object.values(null != D ? D : {})
                     .flat()
@@ -47,16 +47,16 @@ function j(e) {
             [D]
         );
     r.useEffect(() => {
-        L && E(null);
-    }, [A]);
-    let P = r.useCallback(
+        A && E(null);
+    }, [y]);
+    let M = r.useCallback(
             (e, t) => {
                 if (null != e) {
                     var n, i;
                     return null !==
                         (i =
                             null ===
-                                (n = M.find((t) => {
+                                (n = k.find((t) => {
                                     let { id: n } = t;
                                     return n === e;
                                 })) || void 0 === n
@@ -67,16 +67,16 @@ function j(e) {
                 }
                 return null != t ? g.I6[t].getDefaultRuleName() : null;
             },
-            [M]
+            [k]
         ),
-        k = r.useMemo(() => {
+        P = r.useMemo(() => {
             var e, t;
-            return P(null !== (e = null == b ? void 0 : b.id) && void 0 !== e ? e : null, null !== (t = null == b ? void 0 : b.triggerType) && void 0 !== t ? t : null);
-        }, [P, b]);
+            return M(null !== (e = null == S ? void 0 : S.id) && void 0 !== e ? e : null, null !== (t = null == S ? void 0 : S.triggerType) && void 0 !== t ? t : null);
+        }, [M, S]);
     r.useEffect(() => {
-        S(L, (0, I.af)(k));
-    }, [S, L, k]);
-    let w = (0, g.Z6)(A),
+        b(A, (0, v.af)(P));
+    }, [b, A, P]);
+    let w = (0, g.Z6)(y),
         B = (e) =>
             (0, i.jsx)(i.Fragment, {
                 children: e.map((e) => {
@@ -84,17 +84,17 @@ function j(e) {
                     return (0, i.jsx)(
                         C.Z,
                         {
-                            guildId: A,
+                            guildId: y,
                             triggerType: e,
                             rules: null !== (t = D[e]) && void 0 !== t ? t : [],
-                            initWithEdit: Z === N.KsC.AUTOMOD_MENTION_SPAM && e === _.fX.MENTION_SPAM
+                            initWithEdit: Z === I.KsC.AUTOMOD_MENTION_SPAM && e === _.fX.MENTION_SPAM
                         },
                         e
                     );
                 })
             });
     return (0, i.jsxs)(a.FormSection, {
-        title: v.intl.string(v.t.uRelg4),
+        title: N.intl.string(N.t.uRelg4),
         tag: 'h1',
         children: [
             (0, i.jsxs)('div', {
@@ -108,12 +108,12 @@ function j(e) {
                             (0, i.jsx)(a.Text, {
                                 variant: 'text-md/medium',
                                 color: 'header-secondary',
-                                children: v.intl.string(v.t.EwuSCQ)
+                                children: N.intl.string(N.t.EwuSCQ)
                             }),
                             (0, i.jsx)(a.Text, {
                                 variant: 'text-sm/medium',
                                 className: T.helpUrl,
-                                children: v.intl.format(v.t['B+sgGh'], { helpUrl: u.Z.getArticleURL(N.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE) })
+                                children: N.intl.format(N.t['B+sgGh'], { helpUrl: u.Z.getArticleURL(I.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE) })
                             })
                         ]
                     }),
@@ -123,7 +123,7 @@ function j(e) {
                             (0, i.jsx)(a.Avatar, {
                                 src: (0, m.j)(),
                                 size: a.AvatarSizes.SIZE_80,
-                                'aria-label': v.intl.string(v.t.hG1StL)
+                                'aria-label': N.intl.string(N.t.hG1StL)
                             }),
                             (0, i.jsx)(a.TextBadge, {
                                 text: (0, i.jsxs)('div', {
@@ -137,7 +137,7 @@ function j(e) {
                                         (0, i.jsx)(a.Text, {
                                             variant: 'text-xs/bold',
                                             className: T.automodText,
-                                            children: v.intl.string(v.t.hG1StL)
+                                            children: N.intl.string(N.t.hG1StL)
                                         })
                                     ]
                                 }),
@@ -148,7 +148,7 @@ function j(e) {
                     })
                 ]
             }),
-            y
+            L
                 ? (0, i.jsx)(x.Z, {})
                 : Object.entries(w).map((e) => {
                       let [t, n] = e;
@@ -181,10 +181,10 @@ function j(e) {
                     className: T.explicitContentFilterSection
                 }),
             (0, i.jsx)(f.Z, {
-                guildId: A,
-                existingRules: M
+                guildId: y,
+                existingRules: k
             }),
-            L && (0, i.jsx)('div', { className: T.endSpacer })
+            A && (0, i.jsx)('div', { className: T.endSpacer })
         ]
     });
 }

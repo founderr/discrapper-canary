@@ -6,7 +6,7 @@ r.d(t, {
         return l;
     },
     Dt: function () {
-        return f;
+        return L;
     },
     HH: function () {
         return T;
@@ -47,7 +47,7 @@ let _ = /^\s*at (\S+?)(?::(\d+))(?::(\d+))\s*$/i,
                     let e = i.exec(r[2]);
                     e && ((r[2] = e[1]), (r[3] = e[2]), (r[4] = e[3]));
                 }
-                let [e, t] = L(r[1] || n.Fi, r[2]);
+                let [e, t] = f(r[1] || n.Fi, r[2]);
                 return a(t, e, r[3] ? +r[3] : void 0, r[4] ? +r[4] : void 0);
             }
         }
@@ -65,7 +65,7 @@ let _ = /^\s*at (\S+?)(?::(\d+))(?::(\d+))\s*$/i,
                 }
                 let e = t[3],
                     r = t[1] || n.Fi;
-                return ([r, e] = L(r, e)), a(e, r, t[4] ? +t[4] : void 0, t[5] ? +t[5] : void 0);
+                return ([r, e] = f(r, e)), a(e, r, t[4] ? +t[4] : void 0, t[5] ? +t[5] : void 0);
             }
         }
     ],
@@ -94,8 +94,8 @@ let _ = /^\s*at (\S+?)(?::(\d+))(?::(\d+))\s*$/i,
         }
     ],
     d = [E, l],
-    f = (0, n.pE)(...d),
-    L = (e, t) => {
+    L = (0, n.pE)(...d),
+    f = (e, t) => {
         let r = -1 !== e.indexOf('safari-extension'),
             a = -1 !== e.indexOf('safari-web-extension');
         return r || a ? [-1 !== e.indexOf('@') ? e.split('@')[0] : n.Fi, r ? `safari-extension:${t}` : `safari-web-extension:${t}`] : [e, t];

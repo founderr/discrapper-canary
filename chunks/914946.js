@@ -33,7 +33,7 @@ n.d(t, {
         return W;
     },
     s9: function () {
-        return H;
+        return V;
     },
     t9: function () {
         return Y;
@@ -45,7 +45,7 @@ n.d(t, {
         return K;
     },
     zM: function () {
-        return V;
+        return H;
     },
     zy: function () {
         return F;
@@ -78,22 +78,22 @@ var i,
     S = n(979651),
     N = n(70956),
     T = n(5192),
-    x = n(226951),
-    A = n(996106),
-    b = n(863141),
+    A = n(226951),
+    b = n(996106),
+    x = n(863141),
     Z = n(186901),
-    y = n(981631);
-let L = null !== (i = r.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && void 0 !== i ? i : 'localhost',
+    L = n(981631);
+let y = null !== (i = r.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && void 0 !== i ? i : 'localhost',
     R = (function () {
-        let e = L.split(':')[0];
+        let e = y.split(':')[0];
         if (!e.includes('.')) return e;
         let t = e.split('.'),
             n = t[t.length - 1];
         return /^\d+$/.test(n) ? e : t.slice(-2).join('.');
     })(),
-    O = new RegExp('^'.concat(x.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(x.Z.escape(R), '|discordapp.com|discord.com)$')),
-    j = 1 * N.Z.Millis.MINUTE,
-    P = {};
+    O = new RegExp('^'.concat(A.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(A.Z.escape(R), '|discordapp.com|discord.com)$')),
+    P = 1 * N.Z.Millis.MINUTE,
+    j = {};
 function D(e) {
     return 'customEmoji' === e.type && (e.type = 'emoji'), 'emoji' === e.type && e.src && (e.src = M(e.src)), Array.isArray(e.content) && (e.content = e.content.map(D)), e;
 }
@@ -114,13 +114,13 @@ function k(e, t) {
     let n = [],
         i = e.getGuildId();
     return (
-        ![y.d4z.GUILD_CATEGORY, ...p.tx].includes(e.type) &&
+        ![L.d4z.GUILD_CATEGORY, ...p.tx].includes(e.type) &&
             n.push(
                 new Promise((t) => {
                     I.Z.whenReady(e.id, () => t()),
                         c.Z.fetchMessages({
                             channelId: e.id,
-                            limit: y.AQB
+                            limit: L.AQB
                         });
                 })
             ),
@@ -184,7 +184,7 @@ function G(e, t, n) {
             self_deaf: a,
             suppress: s
         },
-        user: (0, b.Z)(c)
+        user: (0, x.Z)(c)
     };
 }
 function B(e, t, n) {
@@ -192,7 +192,7 @@ function B(e, t, n) {
         a = v.default.getUser(t);
     return {
         type: e,
-        user: null != a ? (0, b.Z)(a) : null,
+        user: null != a ? (0, x.Z)(a) : null,
         presence: {
             status: C.Z.getStatus(t),
             activity: null != r ? C.Z.getApplicationActivity(t, r) : C.Z.getPrimaryActivity(t)
@@ -201,7 +201,7 @@ function B(e, t, n) {
         userIgnored: l
     };
 }
-function H(e) {
+function V(e) {
     let t;
     if (null == e) return !1;
     let n = window.location.origin;
@@ -213,15 +213,15 @@ function H(e) {
     }
     return (window.location.hostname === t && 'localhost' === t) || (null == e.match('staging') && (!!(O.test(e) && O.test(n)) || !1));
 }
-function V(e, t, n) {
+function H(e, t, n) {
     let i = _.Z.getGuild(e.getGuildId());
     return (null != i ? i.getApplicationId() : e.getApplicationId()) === t || n.indexOf(l.x.MESSAGES_READ) > -1;
 }
 function F(e) {
     switch (e) {
-        case y.hes.RTC_CONNECTED:
-        case y.hes.RTC_CONNECTING:
-        case y.hes.RTC_DISCONNECTED:
+        case L.hes.RTC_CONNECTED:
+        case L.hes.RTC_CONNECTING:
+        case L.hes.RTC_DISCONNECTED:
             return e.replace(/^RTC_/, 'VOICE_');
         default:
             return e;
@@ -231,16 +231,16 @@ function z(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         { instance: n, secrets: i, party: r } = e,
         l = 0;
-    return (n && (l |= y.xjy.INSTANCE), (null == i ? void 0 : i.join) != null && (l |= y.xjy.JOIN), t) ? ((l |= y.xjy.EMBEDDED), (l |= y.xjy.PARTY_PRIVACY_VOICE_CHANNEL)) : (((null == r ? void 0 : r.privacy) === y.RYY.PUBLIC || o.K.get('ACTIVITIES_FORCE_PUBLIC')) && (m.cP.getSetting() && (l |= y.xjy.PARTY_PRIVACY_FRIENDS), m.Ou.getSetting() && (l |= y.xjy.PARTY_PRIVACY_VOICE_CHANNEL)), l);
+    return (n && (l |= L.xjy.INSTANCE), (null == i ? void 0 : i.join) != null && (l |= L.xjy.JOIN), t) ? ((l |= L.xjy.EMBEDDED), (l |= L.xjy.PARTY_PRIVACY_VOICE_CHANNEL)) : (((null == r ? void 0 : r.privacy) === L.RYY.PUBLIC || o.K.get('ACTIVITIES_FORCE_PUBLIC')) && (m.cP.getSetting() && (l |= L.xjy.PARTY_PRIVACY_FRIENDS), m.Ou.getSetting() && (l |= L.xjy.PARTY_PRIVACY_VOICE_CHANNEL)), l);
 }
 function Y(e, t, n) {
-    if (e === y.mFx.JOIN) return null != t && null != t.id && null != n.join;
+    if (e === L.mFx.JOIN) return null != t && null != t.id && null != n.join;
     return !1;
 }
 function W(e, t, n) {
     return a.tn
         .get({
-            url: y.ANM.APPLICATION_RPC(t),
+            url: L.ANM.APPLICATION_RPC(t),
             oldFormErrors: !0,
             retries: 3
         })
@@ -252,8 +252,8 @@ function W(e, t, n) {
                 if ('string' == typeof n) {
                     if (e.transport === Z.He.POST_MESSAGE) {
                         let e = (0, d.Z)(t);
-                        if (null == e || !w(n, [e])) throw new A.Z({ closeCode: y.$VG.INVALID_ORIGIN }, 'Invalid Origin');
-                    } else if (!w(n, r)) throw new A.Z({ closeCode: y.$VG.INVALID_ORIGIN }, 'Invalid Origin');
+                        if (null == e || !w(n, [e])) throw new b.Z({ closeCode: L.$VG.INVALID_ORIGIN }, 'Invalid Origin');
+                    } else if (!w(n, r)) throw new b.Z({ closeCode: L.$VG.INVALID_ORIGIN }, 'Invalid Origin');
                 }
                 e.application = {
                     id: l,
@@ -264,13 +264,13 @@ function W(e, t, n) {
                 };
             },
             () => {
-                throw new A.Z({ closeCode: y.$VG.INVALID_CLIENTID }, 'Invalid Client ID');
+                throw new b.Z({ closeCode: L.$VG.INVALID_CLIENTID }, 'Invalid Client ID');
             }
         );
 }
 async function K(e, t) {
-    let n = P[e];
-    null == n && ((n = new s.Z(t ? 2 : 60, j)), (P[e] = n)), await n.process();
+    let n = j[e];
+    null == n && ((n = new s.Z(t ? 2 : 60, P)), (j[e] = n)), await n.process();
 }
 function q(e, t) {
     null == t && (e.authorization.scopes = [Z.lH]);
@@ -327,9 +327,9 @@ function Q(e, t) {
     };
 }
 function J(e) {
-    if (e !== Z.He.POST_MESSAGE) throw new A.Z({ errorCode: y.lTL.INVALID_COMMAND }, 'command not available from "'.concat(e, ' transport'));
+    if (e !== Z.He.POST_MESSAGE) throw new b.Z({ errorCode: L.lTL.INVALID_COMMAND }, 'command not available from "'.concat(e, ' transport'));
 }
 function $(e) {
-    if (null == e.id) throw new A.Z({ errorCode: y.lTL.INVALID_COMMAND }, 'Invalid application');
+    if (null == e.id) throw new b.Z({ errorCode: L.lTL.INVALID_COMMAND }, 'Invalid application');
     return e.id;
 }

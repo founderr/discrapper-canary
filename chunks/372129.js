@@ -75,17 +75,17 @@ t.Z = (e) => {
     let { onChange: t, multiple: o = !0, disabled: c, className: d, tabIndex: m = -1, 'aria-label': h, filters: g, setLoading: x } = e,
         p = r.createRef(),
         f = r.useRef(null),
-        [C, I] = r.useState(!1);
+        [C, v] = r.useState(!1);
     r.useEffect(() => {
         C && _();
     }, [C]);
     let _ = () => {
             null !== f.current && ((0, l.closeModal)(f.current), (f.current = null));
         },
-        N = async (e) => {
-            null == x || x(!0), await u(e, t), I(!0), null == x || x(!1);
+        I = async (e) => {
+            null == x || x(!0), await u(e, t), v(!0), null == x || x(!1);
         },
-        v = async (e) => {
+        N = async (e) => {
             var t, r, s;
             if ((e.stopPropagation(), e.preventDefault(), (null === (t = e.currentTarget) || void 0 === t ? void 0 : t.files) == null || (null === (s = e.currentTarget) || void 0 === s ? void 0 : null === (r = s.files) || void 0 === r ? void 0 : r.length) === 0)) return;
             let a = e.currentTarget.files;
@@ -93,13 +93,13 @@ t.Z = (e) => {
                 let { default: e } = await n.e('16169').then(n.bind(n, 935333));
                 return (t) =>
                     (0, i.jsx)(e, {
-                        processFiles: () => N(a),
+                        processFiles: () => I(a),
                         ...t
                     });
             });
         };
     return (0, i.jsx)(s.Z, {
-        onChange: v,
+        onChange: N,
         filters: null != g ? g : (0, a.Zj)(),
         multiple: o,
         disabled: c,

@@ -17,30 +17,30 @@ var i = n(200651),
     g = n(739864);
 function x(e) {
     var t, n, x, p, f, C;
-    let { rule: I, onChangeRule: _ } = e,
-        N = r.useCallback(
+    let { rule: v, onChangeRule: _ } = e,
+        I = r.useCallback(
             (e) => {
                 _({
-                    ...I,
+                    ...v,
                     triggerMetadata: {
-                        ...I.triggerMetadata,
+                        ...v.triggerMetadata,
                         keywordFilter: e
                     }
                 });
             },
-            [_, I]
+            [_, v]
         ),
-        v = r.useCallback(
+        N = r.useCallback(
             (e) => {
                 _({
-                    ...I,
+                    ...v,
                     triggerMetadata: {
-                        ...I.triggerMetadata,
+                        ...v.triggerMetadata,
                         allowList: e
                     }
                 });
             },
-            [_, I]
+            [_, v]
         );
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsxs)('div', {
@@ -51,20 +51,20 @@ function x(e) {
                     header: h.intl.string(h.t['ue+tnZ']),
                     children: [
                         (0, i.jsx)(o.Z, {
-                            onChangeText: N,
+                            onChangeText: I,
                             maxWordCount: m.RH,
-                            initialValue: null === (t = I.triggerMetadata) || void 0 === t ? void 0 : t.keywordFilter
+                            initialValue: null === (t = v.triggerMetadata) || void 0 === t ? void 0 : t.keywordFilter
                         }),
                         (0, i.jsx)(a.Z, {
-                            rule: I,
+                            rule: v,
                             onChangeRule: _,
-                            collapsed: (null == I ? void 0 : null === (n = I.triggerMetadata) || void 0 === n ? void 0 : n.regexPatterns) == null || (null == I ? void 0 : null === (x = I.triggerMetadata) || void 0 === x ? void 0 : x.regexPatterns.length) === 0
+                            collapsed: (null == v ? void 0 : null === (n = v.triggerMetadata) || void 0 === n ? void 0 : n.regexPatterns) == null || (null == v ? void 0 : null === (x = v.triggerMetadata) || void 0 === x ? void 0 : x.regexPatterns.length) === 0
                         }),
                         (0, i.jsx)(l.Z, {
-                            onChange: v,
-                            initialValue: null === (p = I.triggerMetadata) || void 0 === p ? void 0 : p.allowList,
+                            onChange: N,
+                            initialValue: null === (p = v.triggerMetadata) || void 0 === p ? void 0 : p.allowList,
                             maxWordCount: m.n4,
-                            collapsed: (null === (f = I.triggerMetadata) || void 0 === f ? void 0 : f.allowList) == null || (null === (C = I.triggerMetadata) || void 0 === C ? void 0 : C.allowList.length) === 0
+                            collapsed: (null === (f = v.triggerMetadata) || void 0 === f ? void 0 : f.allowList) == null || (null === (C = v.triggerMetadata) || void 0 === C ? void 0 : C.allowList.length) === 0
                         })
                     ]
                 }),
@@ -73,7 +73,7 @@ function x(e) {
                     step: 2,
                     header: h.intl.string(h.t['18TOiY']),
                     children: (0, i.jsx)(s.Z, {
-                        rule: I,
+                        rule: v,
                         onChangeRule: _
                     })
                 }),
@@ -82,7 +82,7 @@ function x(e) {
                     step: 3,
                     header: h.intl.string(h.t.u5xPPT),
                     children: (0, i.jsx)(c.Z, {
-                        rule: I,
+                        rule: v,
                         onChangeRule: _,
                         onlyRoles: !0
                     })

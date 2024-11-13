@@ -21,16 +21,16 @@ var i = n(200651),
     S = n(605236),
     N = n(243778),
     T = n(984370),
-    x = n(797614),
-    A = n(359110),
-    b = n(6025),
+    A = n(797614),
+    b = n(359110),
+    x = n(6025),
     Z = n(897473),
-    y = n(108427),
-    L = n(970731),
+    L = n(108427),
+    y = n(970731),
     R = n(187819),
     O = n(210887),
-    j = n(433355),
-    P = n(592125),
+    P = n(433355),
+    j = n(592125),
     D = n(819640),
     M = n(626135),
     w = n(647090),
@@ -38,8 +38,8 @@ var i = n(200651),
     U = n(610697),
     G = n(26373),
     B = n(486622),
-    H = n(922409),
-    V = n(899740),
+    V = n(922409),
+    H = n(899740),
     F = n(177033),
     z = n(355350),
     Y = n(307947),
@@ -54,7 +54,7 @@ var i = n(200651),
     et = n(784237);
 function en() {
     let e = r.useRef(null),
-        t = (0, V.q)(),
+        t = (0, H.q)(),
         n = (0, F.Z)(),
         l = (0, G.K)(),
         c = (0, g.N)(),
@@ -63,7 +63,7 @@ function en() {
         }, []),
         { rejectAll: h } = (0, B.m)({ onError: d }),
         m = (0, _.Z)('message-requests-list'),
-        { channelId: p } = (0, H._)(),
+        { channelId: p } = (0, V._)(),
         f = r.useCallback(() => {
             h(n.map((e) => e.channel.id));
         }, [n, h]),
@@ -127,7 +127,7 @@ function en() {
                 ),
             [t, f, c]
         );
-    return (n.length !== t && x.Z.increment({ name: o.V.MESSAGE_REQUEST_COUNT_DRIFT }), 0 === n.length)
+    return (n.length !== t && A.Z.increment({ name: o.V.MESSAGE_REQUEST_COUNT_DRIFT }), 0 === n.length)
         ? (0, i.jsx)(Y.Z, { section: q.pS.REQUESTS })
         : (0, i.jsx)(s.bG, {
               navigator: m,
@@ -163,8 +163,8 @@ function en() {
 }
 function ei(e) {
     let { pageWidth: t, onSidebarResize: n } = e,
-        r = (0, c.e7)([j.ZP], () => j.ZP.getSidebarState(j.uZ)),
-        l = (0, c.e7)([P.Z], () => P.Z.getChannel(null == r ? void 0 : r.channelId));
+        r = (0, c.e7)([P.ZP], () => P.ZP.getSidebarState(P.uZ)),
+        l = (0, c.e7)([j.Z], () => j.Z.getChannel(null == r ? void 0 : r.channelId));
     if (null == r || r.type !== Z.tI.VIEW_MESSAGE_REQUEST || null == l || !l.isPrivate()) return null;
     let a = t - X.R7I;
     return (0, i.jsx)(E.Z, {
@@ -173,20 +173,20 @@ function ei(e) {
         onWidthChange: n,
         children: (0, i.jsx)(I.Z, {
             channel: l,
-            baseChannelId: j.uZ
+            baseChannelId: P.uZ
         })
     });
 }
 let er = function (e) {
         let { markAsDismissed: t } = e;
-        return (0, i.jsx)(L.ZP, {
+        return (0, i.jsx)(y.ZP, {
             header: $.intl.string($.t.hRT8tb),
             content: $.intl.string($.t.apPgJC),
             buttonCTA: $.intl.string($.t.LNoAQU),
             className: ee.messageRequestCoachmark,
             onClick: () => t(Q.L.UNKNOWN),
             markAsDismissed: t,
-            caretPosition: L.DF.TOP_CENTER,
+            caretPosition: y.DF.TOP_CENTER,
             headerClassName: ee.__invalid_header
         });
     },
@@ -208,7 +208,7 @@ let er = function (e) {
                             renderPopout: () =>
                                 t
                                     ? (0, i.jsx)(er, { markAsDismissed: o })
-                                    : (0, i.jsx)(L.ZP, {
+                                    : (0, i.jsx)(y.ZP, {
                                           header: $.intl.string($.t.hRT8tb),
                                           content: $.intl.string($.t['8JWodn']),
                                           buttonCTA: $.intl.string($.t.JN6EOD),
@@ -218,7 +218,7 @@ let er = function (e) {
                                               e.stopPropagation(), a ? m.Z.open(X.oAB.CONTENT_AND_SOCIAL, null, { scrollPosition: J.to.MESSAGE_REQUESTS_V2 }) : m.Z.open(X.oAB.PRIVACY_AND_SAFETY, null, { scrollPosition: J.to.MESSAGE_REQUESTS });
                                           },
                                           markAsDismissed: o,
-                                          caretPosition: L.DF.TOP_CENTER,
+                                          caretPosition: y.DF.TOP_CENTER,
                                           headerClassName: ee.__invalid_header
                                       }),
                             position: 'bottom',
@@ -239,15 +239,15 @@ function ea(e) {
 }
 let es = (0, p.Z)(function (e) {
     let { width: t } = e,
-        n = (0, V.q)();
+        n = (0, H.q)();
     r.useEffect(() => {
-        h.Y(X.Z5c.MESSAGE_REQUESTS), (0, y.e)('message-requests'), M.default.track(X.rMx.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }), x.Z.increment({ name: o.V.MESSAGE_REQUEST_VIEW });
+        h.Y(X.Z5c.MESSAGE_REQUESTS), (0, L.e)('message-requests'), M.default.track(X.rMx.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }), A.Z.increment({ name: o.V.MESSAGE_REQUEST_VIEW });
     }, []);
     let l = (0, c.e7)([O.Z], () => O.Z.theme),
         s = (0, z.w)(),
         [d, m] = r.useState(!1),
-        p = (0, c.e7)([j.ZP], () => {
-            let e = j.ZP.getSidebarState(j.uZ);
+        p = (0, c.e7)([P.ZP], () => {
+            let e = P.ZP.getSidebarState(P.uZ);
             return null != e && e.type === Z.tI.VIEW_MESSAGE_REQUEST ? e : null;
         }),
         g = null == p ? void 0 : p.channelId,
@@ -255,7 +255,7 @@ let es = (0, p.Z)(function (e) {
         _ = (0, k.T)(g),
         E = (0, w.J)(g);
     r.useEffect(() => {
-        null != g && !_ && E && f && ((0, A.Kh)(g), b.Z.closeChannelSidebar(j.uZ));
+        null != g && !_ && E && f && ((0, b.Kh)(g), x.Z.closeChannelSidebar(P.uZ));
     }, [g, E, f, _]);
     let [I, C] = r.useState(q.pS.REQUESTS),
         S = (e) => {

@@ -10,8 +10,8 @@ var i = n(200651),
     d = n(430824),
     h = n(823379),
     p = n(179809),
-    f = n(652376),
-    m = n(981631);
+    m = n(652376),
+    f = n(981631);
 t.Z = l.memo(function (e) {
     let { folderNode: t, ...g } = e,
         { id: C, name: _, color: v, children: x } = t,
@@ -26,20 +26,20 @@ t.Z = l.memo(function (e) {
                         return null != n ? n.name : null;
                     })
                     .filter(h.lm),
-                n = 2 * m.dYL,
+                n = 2 * f.dYL,
                 i = [];
             for (let e of t) (e.length < n || 0 === i.length) && (i.push(e), (n -= e.length));
             return ''.concat(i.join(', ')).concat(i.length < t.length ? ', ...' : '');
         })(t),
-        Z = (0, f.Z)(t),
-        { mentionCount: N, unread: y } = (0, r.cj)([u.default], () => ({
+        N = (0, m.Z)(t),
+        { mentionCount: Z, unread: y } = (0, r.cj)([u.default], () => ({
             mentionCount: I.map((e) => u.default.getMentionCount(e)).reduce((e, t) => e + t, 0),
             unread: I.some((e) => u.default.hasUnread(e))
         })),
         T = l.useCallback(() => {
             o.Z.toggleGuildFolderExpand(C);
         }, [C]),
-        j = l.useCallback(
+        A = l.useCallback(
             (e) => {
                 (0, a.jW)(e, async () => {
                     let { default: e } = await n.e('52590').then(n.bind(n, 205784));
@@ -49,22 +49,22 @@ t.Z = l.memo(function (e) {
                             folderId: C,
                             folderName: _,
                             folderColor: v,
-                            unread: y || N > 0
+                            unread: y || Z > 0
                         });
                 });
             },
-            [C, _, v, y, N]
+            [C, _, v, y, Z]
         );
     return (0, i.jsx)(p.Z, {
         ...g,
         folderNode: t,
         expanded: S,
         selected: null != b && I.includes(b),
-        mentionCount: N,
+        mentionCount: Z,
         unread: y,
-        mediaState: Z,
+        mediaState: N,
         defaultFolderName: E,
         onExpandCollapse: T,
-        onContextMenu: j
+        onContextMenu: A
     });
 });

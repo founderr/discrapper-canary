@@ -21,7 +21,7 @@ var i = n(200651),
     S = n(65154),
     N = n(388032),
     T = n(642915);
-function x(e, t, n) {
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,7 +34,7 @@ function x(e, t, n) {
         e
     );
 }
-function A(e) {
+function b(e) {
     let { user: t, onSelect: n } = e,
         r = () => {
             u.Z.removeFriend(t.id, { location: 'Friends' });
@@ -87,7 +87,7 @@ function A(e) {
         ]
     });
 }
-class b extends r.PureComponent {
+class x extends r.PureComponent {
     componentWillLeave(e) {
         null != this.peopleListItemRef.current && this.peopleListItemRef.current.componentWillLeave(e);
     }
@@ -152,20 +152,20 @@ class b extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            x(this, 'peopleListItemRef', r.createRef()),
-            x(this, 'state', { isActiveRow: !1 }),
-            x(this, 'handleOpenPrivateChannel', (e) => {
+            A(this, 'peopleListItemRef', r.createRef()),
+            A(this, 'state', { isActiveRow: !1 }),
+            A(this, 'handleOpenPrivateChannel', (e) => {
                 let { user: t } = this.props;
                 e.stopPropagation();
                 let n = a().find(p.Z.getMutablePrivateChannels(), (e) => e.type === v.d4z.DM && e.getRecipientId() === t.id);
                 null != n ? (0, m.uL)(v.Z5c.CHANNEL(v.ME, n.id)) : c.Z.openPrivateChannel(t.id);
             }),
-            x(this, 'handleOpenActionsMenu', (e) => {
+            A(this, 'handleOpenActionsMenu', (e) => {
                 let { user: t } = this.props;
                 (0, d.vq)(
                     e,
                     (e) =>
-                        (0, i.jsx)(A, {
+                        (0, i.jsx)(b, {
                             ...e,
                             user: t
                         }),
@@ -179,4 +179,4 @@ class b extends r.PureComponent {
             });
     }
 }
-t.Z = b;
+t.Z = x;

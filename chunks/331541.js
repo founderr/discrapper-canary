@@ -25,16 +25,16 @@ var i = n(200651),
     S = n(785717),
     N = n(221292),
     T = n(481046),
-    x = n(816988),
-    A = n(687158),
-    b = n(899007),
+    A = n(816988),
+    b = n(687158),
+    x = n(899007),
     Z = n(648052),
-    y = n(867176),
-    L = n(438163),
+    L = n(867176),
+    y = n(438163),
     R = n(537006),
     O = n(483424),
-    j = n(681837),
-    P = n(502762),
+    P = n(681837),
+    j = n(502762),
     D = n(530),
     M = n(544989),
     w = n(309494),
@@ -42,8 +42,8 @@ var i = n(200651),
     U = n(171368),
     G = n(420654),
     B = n(695346),
-    H = n(158776),
-    V = n(246946),
+    V = n(158776),
+    H = n(246946),
     F = n(572004),
     z = n(70956),
     Y = n(5192),
@@ -168,7 +168,7 @@ function es(e) {
     var t;
     let { currentUser: z, onClose: q, setPopoutRef: es } = e,
         eo = __OVERLAY__,
-        ec = (0, A.ZP)(z.id),
+        ec = (0, b.ZP)(z.id),
         ed = (0, u.O)(),
         { analyticsLocations: eu } = (0, g.ZP)(p.Z.ACCOUNT_PROFILE_POPOUT),
         eh = (0, S.ZB)({
@@ -180,8 +180,8 @@ function es(e) {
     r.useEffect(() => {
         null == es || es(em.current);
     }, [em, es]);
-    let eg = (0, o.e7)([H.Z], () => H.Z.getStatus(z.id)),
-        ef = (0, o.e7)([V.Z], () => V.Z.hidePersonalInformation),
+    let eg = (0, o.e7)([V.Z], () => V.Z.getStatus(z.id)),
+        ef = (0, o.e7)([H.Z], () => H.Z.hidePersonalInformation),
         e_ = (0, E.p)(),
         eE = B.Sb.useSetting(),
         eI = (0, f.a)(),
@@ -301,9 +301,9 @@ function es(e) {
         ev = (0, X.g)(q),
         eS = (0, C.Z)({ analyticsLocations: eu }),
         { customStatusBubbleEditEnabled: eN } = (0, T.K)({ location: 'AccountProfilePopout' }),
-        { dimissibleUpsellsEnabled: eT } = (0, x.u)({ location: 'AccountProfilePopout' }),
-        ex = (0, W.I5)(z),
-        eA = (e) => {
+        { dimissibleUpsellsEnabled: eT } = (0, A.u)({ location: 'AccountProfilePopout' }),
+        eA = (0, W.I5)(z),
+        eb = (e) => {
             null == q || q(),
                 (0, U.openUserProfileModal)({
                     sourceAnalyticsLocations: eu,
@@ -311,7 +311,7 @@ function es(e) {
                     ...e
                 });
         },
-        eb = () => {
+        ex = () => {
             (0, c.openModalLazy)(async () => {
                 let { default: e } = await n.e('51714').then(n.bind(n, 211065));
                 return (t) =>
@@ -329,7 +329,7 @@ function es(e) {
             children: (0, i.jsx)(c.Dialog, {
                 ref: em,
                 'aria-label': z.username,
-                children: (0, i.jsxs)(P.Z, {
+                children: (0, i.jsxs)(j.Z, {
                     className: en.themeContainer,
                     user: z,
                     displayProfile: ec,
@@ -346,18 +346,18 @@ function es(e) {
                         (0, i.jsxs)('header', {
                             className: ei.header,
                             children: [
-                                (0, i.jsx)(y.Z, {
+                                (0, i.jsx)(L.Z, {
                                     user: z,
                                     displayProfile: ec,
                                     profileType: ee.y0.BITE_SIZE
                                 }),
-                                (0, i.jsx)(b.Z, {
+                                (0, i.jsx)(x.Z, {
                                     user: z,
                                     displayProfile: ec,
                                     profileType: ee.y0.BITE_SIZE,
-                                    onOpenProfile: eo ? void 0 : eA
+                                    onOpenProfile: eo ? void 0 : eb
                                 }),
-                                (0, i.jsx)(L.Z, {
+                                (0, i.jsx)(y.Z, {
                                     user: z,
                                     profileType: ee.y0.BITE_SIZE,
                                     onCloseProfile: q
@@ -377,7 +377,7 @@ function es(e) {
                                     className: en.username,
                                     profileType: ee.y0.BITE_SIZE,
                                     nickname: Y.ZP.getName(null, null, z),
-                                    onOpenProfile: eo ? void 0 : eA,
+                                    onOpenProfile: eo ? void 0 : eb,
                                     pronouns: null == ec ? void 0 : ec.pronouns,
                                     tags: (0, i.jsx)(Z.Z, {
                                         displayProfile: ec,
@@ -386,7 +386,7 @@ function es(e) {
                                     }),
                                     nicknameIcons: (0, i.jsxs)(i.Fragment, {
                                         children: [
-                                            (0, i.jsx)(j.Z, { userId: z.id }),
+                                            (0, i.jsx)(P.Z, { userId: z.id }),
                                             (0, i.jsx)(w.Z, {
                                                 user: z,
                                                 isHovering: ep
@@ -402,7 +402,7 @@ function es(e) {
                                 }),
                                 eT &&
                                     (0, i.jsx)(R.Z, {
-                                        isPremiumUser: ex,
+                                        isPremiumUser: eA,
                                         onInteraction: q
                                     }),
                                 (0, i.jsx)(O.Z, {
@@ -413,7 +413,7 @@ function es(e) {
                                 (0, i.jsxs)('div', {
                                     className: en.menus,
                                     children: [
-                                        (0, i.jsx)(P.Z.Overlay, {
+                                        (0, i.jsx)(j.Z.Overlay, {
                                             className: en.menuOverlay,
                                             children: (0, i.jsxs)(Q.PB, {
                                                 id: 'profile-'.concat(z.id),
@@ -496,7 +496,7 @@ function es(e) {
                                                                           label: et.intl.string(et.t.ezAcPz),
                                                                           icon: () => (0, i.jsx)('div', { className: en.customEmojiPlaceholder }),
                                                                           onClick: () => {
-                                                                              q(), eb();
+                                                                              q(), ex();
                                                                           }
                                                                       })
                                                                     : (0, i.jsx)(Q.Mv, {
@@ -528,7 +528,7 @@ function es(e) {
                                                                               })
                                                                           }),
                                                                           onClick: () => {
-                                                                              q(), eb();
+                                                                              q(), ex();
                                                                           }
                                                                       })
                                                             ]
@@ -536,7 +536,7 @@ function es(e) {
                                                 ]
                                             })
                                         }),
-                                        (0, i.jsx)(P.Z.Overlay, {
+                                        (0, i.jsx)(j.Z.Overlay, {
                                             className: en.menuOverlay,
                                             children: (0, i.jsxs)(Q.PB, {
                                                 id: 'account-'.concat(z.id),

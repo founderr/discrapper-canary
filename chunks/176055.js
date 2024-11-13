@@ -21,7 +21,7 @@ var i = n(200651),
     S = n(981631),
     N = n(388032),
     T = n(144902);
-function x(e, t, n) {
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,7 +34,7 @@ function x(e, t, n) {
         e
     );
 }
-class A extends r.PureComponent {
+class b extends r.PureComponent {
     renderMemberInfo() {
         let { approximateMemberCount: e, approximatePresenceCount: t } = this.props.guild;
         return null == e || null == t
@@ -127,7 +127,7 @@ class A extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            x(this, 'handleJoinOrView', async () => {
+            A(this, 'handleJoinOrView', async () => {
                 let { guild: e, skuId: t, isInGuild: n, isLurking: i } = this.props,
                     r = () => (0, E.X)(e.id);
                 if (i) (0, u.Oj)(t).then(r);
@@ -141,7 +141,7 @@ class A extends r.PureComponent {
                             r();
                     } catch {}
             }),
-            x(this, 'handleLogin', () => {
+            A(this, 'handleLogin', () => {
                 let e = { redirect_to: S.Z5c.APPLICATION_STORE_LISTING_SKU(this.props.skuId) };
                 (0, _.uL)(S.Z5c.LOGIN, { search: (0, s.stringify)(e) });
             });
@@ -155,5 +155,5 @@ t.Z = (0, h.Z)(
             isInGuild: null != C.Z.getGuild(t.id) && !n,
             isLurking: n
         };
-    })(A)
+    })(b)
 );

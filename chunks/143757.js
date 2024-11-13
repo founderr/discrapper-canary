@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return j;
+        return P;
     }
 }),
     n(47120);
@@ -26,18 +26,18 @@ var i = n(200651),
     S = n(823379),
     N = n(404295),
     T = n(728345),
-    x = n(812206),
-    A = n(981631),
-    b = n(388032),
+    A = n(812206),
+    b = n(981631),
+    x = n(388032),
     Z = n(508042),
-    y = n(156762);
-async function L(e, t, n) {
+    L = n(156762);
+async function y(e, t, n) {
     t(e.id);
     let i = e.bot;
     if (null == i)
         try {
             var r, l, a;
-            i = null !== (a = null === (r = x.Z.getApplication(e.id)) || void 0 === r ? void 0 : r.bot) && void 0 !== a ? a : null === (l = I.Z.createFromServer(await (0, T.UM)(e.id))) || void 0 === l ? void 0 : l.bot;
+            i = null !== (a = null === (r = A.Z.getApplication(e.id)) || void 0 === r ? void 0 : r.bot) && void 0 !== a ? a : null === (l = I.Z.createFromServer(await (0, T.UM)(e.id))) || void 0 === l ? void 0 : l.bot;
         } catch (e) {
             t(void 0);
             return;
@@ -51,7 +51,7 @@ async function L(e, t, n) {
             t(void 0);
         }
         if (
-            (v.default.track(A.rMx.APP_DMS_QUICK_LAUNCHER_CLICKED, {
+            (v.default.track(b.rMx.APP_DMS_QUICK_LAUNCHER_CLICKED, {
                 application_id: e.id,
                 is_new_dm: l,
                 channel_id: r
@@ -89,8 +89,8 @@ function R(e) {
         f = null != n;
     return (0, i.jsx)(o.Clickable, {
         className: a()(Z.clickable, { [Z.disabledClickable]: f }),
-        onClick: () => (m || f ? null : L(t, r, c)),
-        'aria-label': b.intl.formatToPlainString(b.t['zLhr9/'], {
+        onClick: () => (m || f ? null : y(t, r, c)),
+        'aria-label': x.intl.formatToPlainString(x.t['zLhr9/'], {
             applicationName: t.name,
             applicationDescription: t.description
         }),
@@ -142,7 +142,7 @@ function O(e) {
         })
     });
 }
-function j() {
+function P() {
     let e = (0, N.en)(h.Z.APP_DMS_QUICK_LAUNCHER),
         { frecentApps: t } = (0, p.f)({
             channel: void 0,
@@ -164,19 +164,19 @@ function j() {
         );
     return (r.useLayoutEffect(() => {
         var e;
-        if (!c && !!o) d(!0), v.default.track(A.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION, { apps_dm_quick_launcher_application_ids: null !== (e = u.map((e) => Number(e.id))) && void 0 !== e ? e : [] });
+        if (!c && !!o) d(!0), v.default.track(b.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION, { apps_dm_quick_launcher_application_ids: null !== (e = u.map((e) => Number(e.id))) && void 0 !== e ? e : [] });
     }, [o, u, c]),
     o)
         ? (0, i.jsx)(E.Z, {
-              className: a()(Z.headerContainer, y.privateChannelsHeaderContainer),
+              className: a()(Z.headerContainer, L.privateChannelsHeaderContainer),
               children: (0, i.jsxs)('div', {
                   className: Z.container,
                   children: [
                       (0, i.jsx)('div', {
                           className: Z.textContainer,
                           children: (0, i.jsx)('span', {
-                              className: y.headerText,
-                              children: b.intl.string(b.t.SCViVl)
+                              className: L.headerText,
+                              children: x.intl.string(x.t.SCViVl)
                           })
                       }),
                       (0, i.jsx)(O, {

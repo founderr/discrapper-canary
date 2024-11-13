@@ -21,25 +21,25 @@ var i = n(200651),
     p = n(296386),
     f = n(150192),
     C = n(816817),
-    I = n(339085),
+    v = n(339085),
     _ = n(231053),
-    N = n(285888),
-    v = n(134432),
+    I = n(285888),
+    N = n(134432),
     T = n(813197),
     j = n(208567),
-    S = n(183023),
-    b = n(984933),
+    b = n(183023),
+    S = n(984933),
     E = n(496675),
     R = n(699516),
     Z = n(594174),
-    A = n(768581),
-    L = n(900849),
-    y = n(434404),
+    y = n(768581),
+    A = n(900849),
+    L = n(434404),
     D = n(999382),
     O = n(450474),
-    M = n(354051),
-    P = n(347604),
-    k = n(203377),
+    k = n(354051),
+    M = n(347604),
+    P = n(203377),
     w = n(981631),
     B = n(731455),
     U = n(388032),
@@ -63,12 +63,12 @@ let H = s.ZP.connectStores([D.Z], () => {
         guild: e,
         submitting: n,
         onReset() {
-            if (null != e) y.Z.init(e.id);
+            if (null != e) L.Z.init(e.id);
         },
         onSave() {
             if (null != e)
                 (0, g.UA)(e, t),
-                    y.Z.saveGuild(e.id, {
+                    L.Z.saveGuild(e.id, {
                         features: e.features,
                         discoverySplash: e.discoverySplash,
                         description: e.description,
@@ -100,7 +100,7 @@ class z extends r.PureComponent {
             }),
                 p.le(),
                 p.aC(e.id);
-            let t = await (0, L.Eg)(e.id);
+            let t = await (0, A.Eg)(e.id);
             null != t && this.setState({ discoverableGuild: t }),
                 this.checkForLowerMemberCountReqEnabled(e) &&
                     x.t.trackExposure({
@@ -191,10 +191,10 @@ class z extends r.PureComponent {
                                 children: (0, i.jsx)(j.Z, {
                                     image: e.discoverySplash,
                                     makeURL: (t) =>
-                                        A.ZP.getGuildDiscoverySplashURL({
+                                        y.ZP.getGuildDiscoverySplashURL({
                                             id: e.id,
                                             splash: t,
-                                            size: 512 * (0, v.x_)()
+                                            size: 512 * (0, N.x_)()
                                         }),
                                     disabled: !n,
                                     onChange: this.handleSplashChange,
@@ -222,7 +222,7 @@ class z extends r.PureComponent {
             { emojiDiscoverabilityEnabled: o } = n,
             c = s;
         if (null == c && null != r) {
-            let e = I.ZP.getGuildEmoji(r.id);
+            let e = v.ZP.getGuildEmoji(r.id);
             c = {
                 ...r,
                 premiumSubscriptionCount: null == r ? void 0 : r.premiumSubscriberCount,
@@ -269,7 +269,7 @@ class z extends r.PureComponent {
                 }),
                 null != d &&
                     d.isDiscoverable() &&
-                    (0, i.jsx)(S.UA, {
+                    (0, i.jsx)(b.UA, {
                         sourceType: _.w6.GUILD,
                         expressionSourceApplication: null,
                         expressionSourceGuild: d,
@@ -330,7 +330,7 @@ class z extends r.PureComponent {
                             })
                         ]
                     }),
-                    (0, i.jsx)(N.Z, {
+                    (0, i.jsx)(I.Z, {
                         value: t.primaryCategoryId === B.o3 ? null : t.primaryCategoryId,
                         placeholder: U.intl.string(U.t.XqMe3N),
                         options: n,
@@ -380,8 +380,8 @@ class z extends r.PureComponent {
                     tags: t.keywords,
                     onRemoveTag: this.handleRemoveKeyword,
                     onAddTag: this.handleAddKeyword,
-                    maxTags: k.G7,
-                    maxTaxLength: k._0,
+                    maxTags: P.G7,
+                    maxTaxLength: P._0,
                     disabled: !e
                 }),
                 (null == n ? void 0 : n.keywords) != null
@@ -400,13 +400,13 @@ class z extends r.PureComponent {
         if (null == e || null == t) return null;
         switch ((0, g.TJ)(e, t)) {
             case g.d5.INTRO:
-                return (0, i.jsx)(P.Z, {
+                return (0, i.jsx)(M.Z, {
                     guild: e,
                     onEnableDiscovery: this.handleEnableDiscovery,
                     isGuildAdmin: n
                 });
             case g.d5.DISQUALIFIED:
-                return (0, i.jsx)(M.Z, { guild: e });
+                return (0, i.jsx)(k.Z, { guild: e });
             case g.d5.SETTINGS:
                 return (0, i.jsxs)(a.FormSection, {
                     className: G.__invalid_discoverySettings,
@@ -440,7 +440,7 @@ class z extends r.PureComponent {
                 let { guild: e } = this.props;
                 if (null == e) return;
                 let t = new Set(e.features);
-                e.hasFeature(w.oNc.DISCOVERABLE) ? t.delete(w.oNc.DISCOVERABLE) : t.add(w.oNc.DISCOVERABLE), y.Z.updateGuild({ features: t });
+                e.hasFeature(w.oNc.DISCOVERABLE) ? t.delete(w.oNc.DISCOVERABLE) : t.add(w.oNc.DISCOVERABLE), L.Z.updateGuild({ features: t });
             }),
             F(this, 'handleEnableDiscovery', async () => {
                 let e = await (0, a.openModalLazy)(
@@ -459,10 +459,10 @@ class z extends r.PureComponent {
                 );
             }),
             F(this, 'handleSplashChange', (e) => {
-                y.Z.updateGuild({ discoverySplash: e });
+                L.Z.updateGuild({ discoverySplash: e });
             }),
             F(this, 'handleLocaleChange', (e) => {
-                y.Z.updateGuild({ preferredLocale: e });
+                L.Z.updateGuild({ preferredLocale: e });
             }),
             F(this, 'handlePrimaryCategoryChange', (e) => {
                 var t;
@@ -478,7 +478,7 @@ class z extends r.PureComponent {
             F(this, 'handleAddKeyword', (e) => {
                 let { guild: t, guildMetadata: n } = this.props,
                     { keywords: i } = n;
-                if ((null == t ? void 0 : t.id) != null) !(i.length >= k.G7) && p.zH(t.id, [...i, e]);
+                if ((null == t ? void 0 : t.id) != null) !(i.length >= P.G7) && p.zH(t.id, [...i, e]);
             }),
             F(this, 'handleToggleEmojiDiscoverability', () => {
                 let { guild: e, guildMetadata: t } = this.props,
@@ -487,15 +487,15 @@ class z extends r.PureComponent {
             });
     }
 }
-t.Z = s.ZP.connectStores([D.Z, E.Z, h.ZP, b.ZP, f.Z, Z.default, R.Z], () => {
+t.Z = s.ZP.connectStores([D.Z, E.Z, h.ZP, S.ZP, f.Z, Z.default, R.Z], () => {
     let { guild: e, errors: t, submitting: n, guildMetadata: i } = D.Z.getProps(),
         r = E.Z.can(w.Plq.MANAGE_GUILD, e),
         l = E.Z.can(w.Plq.ADMINISTRATOR, e),
         s = null != e ? h.ZP.getDiscoveryChecklist(e.id) : null,
-        a = null != e ? b.ZP.getChannels(e.id) : null,
+        a = null != e ? S.ZP.getChannels(e.id) : null,
         o = [];
     null != a &&
-        a[b.sH].forEach((e) => {
+        a[S.sH].forEach((e) => {
             let { channel: t } = e;
             t.type === w.d4z.GUILD_TEXT &&
                 o.push({

@@ -1,15 +1,15 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
-        return h;
+        return g;
     }
 });
-var r = t(200651);
-t(192379);
-var a = t(249849),
-    i = t(907561),
-    o = t(388032),
-    s = t(12008);
-let l = ['#01007f', '#0000b0', '#0000e1', '#2d3dee', '#5470e9', '#a091eb', '#cc99ff'],
+var i = n(200651);
+n(192379);
+var r = n(249849),
+    l = n(907561),
+    s = n(388032),
+    a = n(12008);
+let o = ['#01007f', '#0000b0', '#0000e1', '#2d3dee', '#5470e9', '#a091eb', '#cc99ff'],
     c = ['#a7e4e4', '#ffffff'],
     d = [0.01, 0.03, 0.055, 0.1, 0.19, 0.25, 0.35],
     u = [
@@ -43,7 +43,7 @@ let l = ['#01007f', '#0000b0', '#0000e1', '#2d3dee', '#5470e9', '#a091eb', '#cc9
         }
     ],
     m = [0.55, 1],
-    f = [
+    h = [
         {
             base: 8,
             tint: 1
@@ -53,30 +53,30 @@ let l = ['#01007f', '#0000b0', '#0000e1', '#2d3dee', '#5470e9', '#a091eb', '#cc9
             tint: 1
         }
     ];
-function h(e) {
-    let { width: n, height: t, primaryTintColor: h, secondaryTintColor: x, ...p } = e,
-        { primaryColorsTransformed: g, secondaryColorsTransformed: C } = (0, a.s)({
-            primaryBaseColors: l,
-            primaryTintColor: h,
+function g(e) {
+    let { width: t, height: n, primaryTintColor: g, secondaryTintColor: x, ...p } = e,
+        { primaryColorsTransformed: f, secondaryColorsTransformed: C } = (0, r.s)({
+            primaryBaseColors: o,
+            primaryTintColor: g,
             primaryTintLuminances: d,
             primaryLuminanceWeights: u,
             secondaryBaseColors: c,
             secondaryTintColor: x,
             secondaryTintLuminances: m,
-            secondaryLuminanceWeights: f
+            secondaryLuminanceWeights: h
         }),
-        { styleContent: b, containerId: v } = (0, i.bC)(g, C);
-    return (0, r.jsxs)('svg', {
+        { styleContent: v, containerId: _ } = (0, l.bC)(f, C);
+    return (0, i.jsxs)('svg', {
         ...p,
-        'aria-label': o.intl.string(o.t.nH6S2d),
-        width: n,
-        height: t,
-        viewBox: '0 0 '.concat(i.Km, ' ').concat(i.md),
+        'aria-label': s.intl.string(s.t.nH6S2d),
+        width: t,
+        height: n,
+        viewBox: '0 0 '.concat(l.Km, ' ').concat(l.md),
         children: [
-            (0, r.jsx)('defs', { children: (0, r.jsx)('style', { children: b }) }),
-            (0, r.jsx)('use', {
-                href: ''.concat(s, '#wrapper-layer'),
-                id: v
+            (0, i.jsx)('defs', { children: (0, i.jsx)('style', { children: v }) }),
+            (0, i.jsx)('use', {
+                href: ''.concat(a, '#wrapper-layer'),
+                id: _
             })
         ]
     });

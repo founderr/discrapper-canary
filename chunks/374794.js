@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return c;
+        return s;
     }
 });
 var r = n(200651);
@@ -9,8 +9,8 @@ var a = n(120356),
     l = n.n(a),
     i = n(481060),
     o = n(53281);
-function c(e) {
-    let { children: t, className: n, innerClassName: a, onChange: c, 'aria-label': s, 'aria-describedby': d, filters: u, multiple: h = !1, disabled: m = !1, submitting: x = !1, ...f } = e;
+function s(e) {
+    let { children: t, className: n, innerClassName: a, onChange: s, 'aria-label': c, 'aria-describedby': d, filters: u, multiple: h = !1, disabled: m = !1, submitting: x = !1, ...f } = e;
     return (0, r.jsx)(i.FocusRing, {
         within: !0,
         children: (0, r.jsxs)('div', {
@@ -31,10 +31,10 @@ function c(e) {
                 }),
                 (0, r.jsx)(o.Z, {
                     tabIndex: 0,
-                    onChange: c,
+                    onChange: s,
                     filters: u,
                     multiple: h,
-                    'aria-label': s,
+                    'aria-label': c,
                     'aria-describedby': d,
                     disabled: m
                 })

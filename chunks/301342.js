@@ -1,12 +1,12 @@
 n.d(t, {
     P: function () {
-        return N;
+        return Z;
     },
     Qo: function () {
         return y;
     },
     kw: function () {
-        return j;
+        return A;
     },
     rj: function () {
         return T;
@@ -23,8 +23,8 @@ var i = n(200651),
     d = n(239091),
     h = n(146773),
     p = n(82295),
-    f = n(111028),
-    m = n(680089),
+    m = n(111028),
+    f = n(680089),
     g = n(430824),
     C = n(496675),
     _ = n(9156),
@@ -36,17 +36,17 @@ var i = n(200651),
 function E(e) {
     e.stopPropagation();
 }
-let Z = l.memo(function (e) {
+let N = l.memo(function (e) {
     let t,
-        { channel: r, connectChannelDragSource: h, connectChannelDropTarget: v, disableManageChannels: x, position: Z, sortingPosition: N, hideIcon: y, children: T } = e,
-        j = (0, s.e7)([_.ZP], () => _.ZP.isChannelMuted(r.getGuildId(), r.id)),
-        A = (0, s.e7)([m.Z], () => m.Z.isCollapsed(r.id)),
+        { channel: r, connectChannelDragSource: h, connectChannelDropTarget: v, disableManageChannels: x, position: N, sortingPosition: Z, hideIcon: y, children: T } = e,
+        A = (0, s.e7)([_.ZP], () => _.ZP.isChannelMuted(r.getGuildId(), r.id)),
+        j = (0, s.e7)([f.Z], () => f.Z.isCollapsed(r.id)),
         P = (0, s.e7)([C.Z], () => C.Z.can(I.Plq.MANAGE_CHANNELS, r));
-    t = null != N ? (Z > N ? S.containerDragAfter : S.containerDragBefore) : S.containerDefault;
-    let M = l.useCallback(() => {
-            A ? (0, u.mJ)(r.id) : (0, u.c4)(r.id);
-        }, [r.id, A]),
-        R = l.useCallback(
+    t = null != Z ? (N > Z ? S.containerDragAfter : S.containerDragBefore) : S.containerDefault;
+    let R = l.useCallback(() => {
+            j ? (0, u.mJ)(r.id) : (0, u.c4)(r.id);
+        }, [r.id, j]),
+        M = l.useCallback(
             (e) => {
                 if ('null' !== r.id) {
                     let t = g.Z.getGuild(r.getGuildId());
@@ -96,20 +96,20 @@ let Z = l.memo(function (e) {
                     children: (0, i.jsxs)('div', {
                         ref: G,
                         className: a()(S.iconVisibility, S.wrapper, {
-                            [S.collapsed]: A,
-                            [S.muted]: j,
+                            [S.collapsed]: j,
+                            [S.muted]: A,
                             [S.clickable]: !0
                         }),
-                        onContextMenu: R,
+                        onContextMenu: M,
                         children: [
                             (0, i.jsxs)(c.Clickable, {
                                 innerRef: k,
                                 className: S.mainContent,
                                 tabIndex: D,
                                 ...O,
-                                onClick: M,
+                                onClick: R,
                                 'aria-label': b.intl.formatToPlainString(b.t.y5l3Jy, { categoryName: r.name }),
-                                'aria-expanded': !A,
+                                'aria-expanded': !j,
                                 focusProps: { enabled: !1 },
                                 children: [
                                     y
@@ -121,7 +121,7 @@ let Z = l.memo(function (e) {
                                           }),
                                     (0, i.jsx)(p.Z, {
                                         className: S.name,
-                                        children: (0, i.jsx)(f.Z, { children: r.name })
+                                        children: (0, i.jsx)(m.Z, { children: r.name })
                                     })
                                 ]
                             }),
@@ -169,8 +169,8 @@ let Z = l.memo(function (e) {
         });
     return null != v && null != h ? v(h(U)) : U;
 });
-t.ZP = (0, h.B)(Z);
-let N = l.memo(function (e) {
+t.ZP = (0, h.B)(N);
+let Z = l.memo(function (e) {
         let { name: t, onDismiss: n, className: l } = e;
         return (0, i.jsx)('li', {
             className: a()(l, S.containerDefault),
@@ -181,7 +181,7 @@ let N = l.memo(function (e) {
                         className: S.mainContent,
                         children: (0, i.jsx)(p.Z, {
                             className: S.name,
-                            children: (0, i.jsx)(f.Z, { children: t })
+                            children: (0, i.jsx)(m.Z, { children: t })
                         })
                     }),
                     null != n
@@ -252,14 +252,14 @@ let N = l.memo(function (e) {
                           className: a()(S.iconVisibility, S.wrapperStatic),
                           children: (0, i.jsx)(p.Z, {
                               className: S.name,
-                              children: (0, i.jsx)(f.Z, { children: b.intl.string(b.t['V/u9Dw']) })
+                              children: (0, i.jsx)(m.Z, { children: b.intl.string(b.t['V/u9Dw']) })
                           })
                       })
                   })
                 : null
             : (0, i.jsx)('div', { style: { height: 16 } });
     }),
-    j = l.memo(function (e) {
+    A = l.memo(function (e) {
         let { channel: t } = e;
         return (0, i.jsx)('li', {
             className: a()(S.containerDefault),
@@ -267,7 +267,7 @@ let N = l.memo(function (e) {
                 className: a()(S.iconVisibility, S.wrapperStatic),
                 children: (0, i.jsx)(p.Z, {
                     className: S.name,
-                    children: (0, i.jsx)(f.Z, { children: t.name })
+                    children: (0, i.jsx)(m.Z, { children: t.name })
                 })
             })
         });

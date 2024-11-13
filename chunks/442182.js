@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: function () {
-        return M;
+        return k;
     }
 }),
     n(47120);
@@ -20,21 +20,21 @@ var i = n(200651),
     p = n(594174),
     f = n(626135),
     C = n(243730),
-    I = n(434404),
+    v = n(434404),
     _ = n(946724),
-    N = n(130341),
-    v = n(95242),
+    I = n(130341),
+    N = n(95242),
     T = n(420966),
     j = n(566476),
-    S = n(203377),
-    b = n(981631),
+    b = n(203377),
+    S = n(981631),
     E = n(388032),
     R = n(465848),
     Z = n(571621);
-async function A(e, t, n) {
+async function y(e, t, n) {
     let r = e.roles.filter((e) => e !== n);
     try {
-        await I.Z.updateMemberRoles(t, e.id, r, [], [n]);
+        await v.Z.updateMemberRoles(t, e.id, r, [], [n]);
     } catch (t) {
         let e = new d.Z(t);
         (0, o.openModal)((t) =>
@@ -52,13 +52,13 @@ async function A(e, t, n) {
         );
     }
 }
-function L(e) {
+function A(e) {
     let { member: t, guildId: l, roleId: a, locked: d } = e,
         m = r.useMemo(() => ({ [l]: [t.id] }), [l, t.id]);
     function h(e) {
         if ((e.stopPropagation(), !d)) {
             if (e.shiftKey) {
-                A(t, l, a);
+                y(t, l, a);
                 return;
             }
             !(function (e, t, n) {
@@ -69,7 +69,7 @@ function L(e) {
                         header: E.intl.string(E.t['7sFNfX']),
                         confirmText: E.intl.string(E.t.N86XcH),
                         cancelText: E.intl.string(E.t['ETE/oK']),
-                        onConfirm: () => A(e, t, n),
+                        onConfirm: () => y(e, t, n),
                         children: [
                             (0, i.jsx)(o.Text, {
                                 color: 'text-normal',
@@ -156,7 +156,7 @@ function L(e) {
         })
     );
 }
-function y(e) {
+function L(e) {
     let { handleAddClick: t, locked: n } = e;
     return (0, i.jsx)('div', {
         className: Z.contentWidth,
@@ -194,8 +194,8 @@ function D(e) {
     let { guildId: t, roleId: n, query: l, headerHeight: s, locked: a, onScroll: c, roleMembers: d, handleAddClick: u } = e,
         { analyticsLocations: g } = (0, h.ZP)(m.Z.MEMBER_LIST),
         x = r.useMemo(() => l.trim().toLowerCase(), [l]);
-    (0, N.rY)(t, x);
-    let p = r.useMemo(() => d.filter((e) => (0, N.eg)(x, e)), [d, x]),
+    (0, I.rY)(t, x);
+    let p = r.useMemo(() => d.filter((e) => (0, I.eg)(x, e)), [d, x]),
         f = r.useMemo(() => p.sort((e, t) => e.name.localeCompare(t.name)), [p]);
     return (0, i.jsx)(h.Gt, {
         value: g,
@@ -210,7 +210,7 @@ function D(e) {
                 let { row: r } = e;
                 if (0 === f.length)
                     return (0, i.jsx)(
-                        y,
+                        L,
                         {
                             handleAddClick: u,
                             locked: a
@@ -219,7 +219,7 @@ function D(e) {
                     );
                 let l = f[r];
                 return (0, i.jsx)(
-                    L,
+                    A,
                     {
                         member: l,
                         guildId: t,
@@ -256,20 +256,20 @@ function O(e) {
         ]
     });
 }
-function M(e) {
+function k(e) {
     let { guild: t, role: l, locked: c, setSelectedSection: d } = e,
         [u, m] = r.useState(''),
-        { headerHeight: h, headerRef: g } = (0, v.Z)(0),
+        { headerHeight: h, headerRef: g } = (0, N.Z)(0),
         { scrolledToTop: x, handleScroll: p } = (0, T.V)(),
-        I = l.managed || c,
-        _ = (0, N.e)(t.id, l.id),
+        v = l.managed || c,
+        _ = (0, I.e)(t.id, l.id),
         j =
             (0, a.e7)([C.Z], () => {
                 var e, n;
                 return null !== (n = null === (e = C.Z.getRoleMemberCount(t.id)) || void 0 === e ? void 0 : e[l.id]) && void 0 !== n ? n : 0;
             }) > _.length,
-        A = () => {
-            f.default.track(b.rMx.OPEN_MODAL, {
+        y = () => {
+            f.default.track(S.rMx.OPEN_MODAL, {
                 type: 'Add Role Members',
                 location_page: 'Role Settings',
                 location_section: 'Members'
@@ -298,14 +298,14 @@ function M(e) {
                             (0, i.jsx)(T.Z, {
                                 guild: t,
                                 role: l,
-                                selectedSection: S.ZI.MEMBERS,
+                                selectedSection: b.ZI.MEMBERS,
                                 setSelectedSection: d
                             }),
                             (0, i.jsx)(O, {
                                 query: u,
                                 setQuery: m,
-                                locked: I,
-                                handleAddClick: A
+                                locked: v,
+                                handleAddClick: y
                             }),
                             j
                                 ? (0, i.jsx)(o.HelpMessage, {
@@ -323,10 +323,10 @@ function M(e) {
                 query: u,
                 guildId: t.id,
                 roleId: l.id,
-                locked: I,
+                locked: v,
                 onScroll: p,
                 roleMembers: _,
-                handleAddClick: A
+                handleAddClick: y
             })
         ]
     });

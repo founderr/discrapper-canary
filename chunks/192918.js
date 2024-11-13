@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return c;
+        return s;
     }
 }),
     n(47120);
@@ -9,7 +9,7 @@ var r = n(192379),
     l = n(594174),
     i = n(823379);
 let o = [];
-function c(e) {
+function s(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3,
         n = (0, a.Wu)(
             [l.default],
@@ -21,14 +21,14 @@ function c(e) {
             },
             [e]
         ),
-        c = r.useMemo(() => n.slice(-t), [t, n]),
-        s = c[c.length - 1],
-        d = c[c.length - 2],
+        s = r.useMemo(() => n.slice(-t), [t, n]),
+        c = s[s.length - 1],
+        d = s[s.length - 2],
         u = Math.max(n.length - 1, 0);
     return {
         orderedParticipants: n,
-        displayParticipants: c,
-        participant1: s,
+        displayParticipants: s,
+        participant1: c,
         participant2: d,
         numOtherParticipants: u
     };

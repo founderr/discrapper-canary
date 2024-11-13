@@ -1,69 +1,69 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
         return c;
     }
 });
-var r = t(200651),
-    a = t(192379),
-    i = t(481060),
-    o = t(388032),
-    s = t(242047);
-function l(e) {
-    let { showSecondaryColor: n, palette: t, onPrimaryColorChange: l, onSecondaryColorChange: c } = e,
-        d = a.useRef(null);
+var i = n(200651),
+    r = n(192379),
+    l = n(481060),
+    s = n(388032),
+    a = n(242047);
+function o(e) {
+    let { showSecondaryColor: t, palette: n, onPrimaryColorChange: o, onSecondaryColorChange: c } = e,
+        d = r.useRef(null);
     return (
-        (0, i.useFocusLock)(d),
-        (0, r.jsxs)('div', {
-            className: s.popoutContainer,
+        (0, l.useFocusLock)(d),
+        (0, i.jsxs)('div', {
+            className: a.popoutContainer,
             children: [
-                (0, r.jsx)(i.Text, {
+                (0, i.jsx)(l.Text, {
                     variant: 'text-xs/semibold',
                     color: 'header-secondary',
-                    className: s.customColorsHeader,
-                    children: o.intl.string(o.t.lfYWW1)
+                    className: a.customColorsHeader,
+                    children: s.intl.string(s.t.lfYWW1)
                 }),
-                (0, r.jsxs)('div', {
+                (0, i.jsxs)('div', {
                     ref: d,
-                    className: s.colorPickersContainer,
+                    className: a.colorPickersContainer,
                     children: [
-                        (0, r.jsxs)('div', {
-                            className: s.colorColumn,
+                        (0, i.jsxs)('div', {
+                            className: a.colorColumn,
                             children: [
-                                (0, r.jsx)('div', {
-                                    className: s.colorSwatch,
-                                    style: { backgroundColor: t.primary }
+                                (0, i.jsx)('div', {
+                                    className: a.colorSwatch,
+                                    style: { backgroundColor: n.primary }
                                 }),
-                                (0, r.jsx)(i.Text, {
+                                (0, i.jsx)(l.Text, {
                                     variant: 'text-xs/medium',
                                     color: 'text-normal',
-                                    children: o.intl.string(o.t.C3KTQk)
+                                    children: s.intl.string(s.t.C3KTQk)
                                 }),
-                                (0, r.jsx)(i.CustomColorPicker, {
-                                    className: s.colorPicker,
-                                    value: t.primary,
+                                (0, i.jsx)(l.CustomColorPicker, {
+                                    className: a.colorPicker,
+                                    value: n.primary,
                                     eagerUpdate: !0,
                                     wrapperComponentType: 'div',
                                     showEyeDropper: !0,
-                                    onChange: l
+                                    onChange: o
                                 })
                             ]
                         }),
-                        n &&
-                            (0, r.jsxs)('div', {
-                                className: s.colorColumn,
+                        t &&
+                            (0, i.jsxs)('div', {
+                                className: a.colorColumn,
                                 children: [
-                                    (0, r.jsx)('div', {
-                                        className: s.colorSwatch,
-                                        style: { backgroundColor: t.secondary }
+                                    (0, i.jsx)('div', {
+                                        className: a.colorSwatch,
+                                        style: { backgroundColor: n.secondary }
                                     }),
-                                    (0, r.jsx)(i.Text, {
+                                    (0, i.jsx)(l.Text, {
                                         variant: 'text-xs/medium',
                                         color: 'text-normal',
-                                        children: o.intl.string(o.t['8elvy8'])
+                                        children: s.intl.string(s.t['8elvy8'])
                                     }),
-                                    (0, r.jsx)(i.CustomColorPicker, {
-                                        className: s.colorPicker,
-                                        value: t.secondary,
+                                    (0, i.jsx)(l.CustomColorPicker, {
+                                        className: a.colorPicker,
+                                        value: n.secondary,
                                         eagerUpdate: !0,
                                         wrapperComponentType: 'div',
                                         showEyeDropper: !0,
@@ -78,20 +78,20 @@ function l(e) {
     );
 }
 function c(e) {
-    let { shouldShow: n, showSecondaryColor: t, onRequestClose: a, children: o, palette: s, onPrimaryColorChange: c, onSecondaryColorChange: d } = e;
-    return (0, r.jsx)(i.Popout, {
+    let { shouldShow: t, showSecondaryColor: n, onRequestClose: r, children: s, palette: a, onPrimaryColorChange: c, onSecondaryColorChange: d } = e;
+    return (0, i.jsx)(l.Popout, {
         renderPopout: () =>
-            (0, r.jsx)(l, {
-                showSecondaryColor: t,
-                palette: s,
+            (0, i.jsx)(o, {
+                showSecondaryColor: n,
+                palette: a,
                 onPrimaryColorChange: c,
                 onSecondaryColorChange: d
             }),
         position: 'left',
-        shouldShow: n,
-        onRequestClose: a,
-        animation: i.Popout.Animation.TRANSLATE,
+        shouldShow: t,
+        onRequestClose: r,
+        animation: l.Popout.Animation.TRANSLATE,
         animationPosition: 'right',
-        children: o
+        children: s
     });
 }

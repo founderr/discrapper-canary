@@ -17,17 +17,17 @@ e.exports = function (e, t, r, _, o, i) {
     for (var N = E; ++l < s; ) {
         var T = e[(u = c[l])],
             d = t[u];
-        if (_) var f = E ? _(d, T, u, t, e, i) : _(T, d, u, e, t, i);
-        if (!(void 0 === f ? T === d || o(T, d, r, _, i) : f)) {
+        if (_) var L = E ? _(d, T, u, t, e, i) : _(T, d, u, e, t, i);
+        if (!(void 0 === L ? T === d || o(T, d, r, _, i) : L)) {
             A = !1;
             break;
         }
         N || (N = 'constructor' == u);
     }
     if (A && !N) {
-        var L = e.constructor,
+        var f = e.constructor,
             O = t.constructor;
-        L != O && 'constructor' in e && 'constructor' in t && !('function' == typeof L && L instanceof L && 'function' == typeof O && O instanceof O) && (A = !1);
+        f != O && 'constructor' in e && 'constructor' in t && !('function' == typeof f && f instanceof f && 'function' == typeof O && O instanceof O) && (A = !1);
     }
     return i.delete(e), i.delete(t), A;
 };

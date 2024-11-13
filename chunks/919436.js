@@ -10,8 +10,8 @@ var i,
     d = n(358221),
     h = n(43267),
     p = n(933557),
-    f = n(93687),
-    m = n(266076),
+    m = n(93687),
+    f = n(266076),
     g = n(199902),
     C = n(19780),
     _ = n(306680),
@@ -21,8 +21,8 @@ var i,
     b = n(276952),
     S = n(682662),
     E = n(662146),
-    Z = n(674552),
-    N = n(981631),
+    N = n(674552),
+    Z = n(981631),
     y = n(673193);
 function T(e, t, n) {
     return (
@@ -37,20 +37,20 @@ function T(e, t, n) {
         e
     );
 }
-let j = {
+let A = {
     friction: 28,
     tension: 600
 };
-function A(e) {
+function j(e) {
     switch (e) {
         case 'height':
         case 'opacity':
             return {
                 duration: 150,
-                ...j
+                ...A
             };
         case 'scale':
-            return { ...j };
+            return { ...A };
         default:
             throw Error('DirectMessage: getSpringConfigs() - Invalid spring '.concat(String(e)));
     }
@@ -65,7 +65,7 @@ class P extends (i = r.PureComponent) {
                     height: 1,
                     opacity: 1,
                     scale: 1,
-                    config: A
+                    config: j
                 })
                 .start()
                 .then(() => this.setState({ animating: !1 }));
@@ -77,7 +77,7 @@ class P extends (i = r.PureComponent) {
             scale: 1,
             opacity: 1,
             height: 1,
-            config: A
+            config: j
         })
             .start()
             .then(e);
@@ -91,7 +91,7 @@ class P extends (i = r.PureComponent) {
                     height: 0,
                     opacity: 0,
                     scale: 0,
-                    config: A
+                    config: j
                 })
                 .start()
                 .then(e)
@@ -111,19 +111,19 @@ class P extends (i = r.PureComponent) {
     }
     getChannelIcon() {
         let { channel: e } = this.props,
-            t = e.type === N.d4z.DM ? x.default.getUser(e.getRecipientId()) : null;
+            t = e.type === Z.d4z.DM ? x.default.getUser(e.getRecipientId()) : null;
         return null != t ? t.getAvatarURL(void 0, 48, !1) : (0, h.x)(e);
     }
     render() {
         let { channel: e, channelName: t, selected: n, badge: i, audio: r, video: s, stream: u, isCurrentUserInThisDMCall: d, unread: h, isGDMFacepileEnabled: p } = this.props,
-            { hovered: f, animating: g } = this.state,
+            { hovered: m, animating: g } = this.state,
             C = e.isMultiUserDM() && null == e.icon && p;
         return (0, l.jsx)(a.animated.div, {
             style: this.getAnimatedStyle(),
             children: (0, l.jsxs)(S.H, {
                 children: [
                     (0, l.jsx)(b.Z, {
-                        hovered: !g && f,
+                        hovered: !g && m,
                         selected: !g && n,
                         unread: !g && h,
                         className: y.pill
@@ -132,9 +132,9 @@ class P extends (i = r.PureComponent) {
                         text: null != t ? t : '',
                         selected: n,
                         children: (0, l.jsx)(c.BlobMask, {
-                            selected: n || f,
-                            lowerBadge: i > 0 ? (0, Z.Ne)(i) : null,
-                            upperBadge: (0, Z.Or)({
+                            selected: n || m,
+                            lowerBadge: i > 0 ? (0, N.Ne)(i) : null,
+                            upperBadge: (0, N.Or)({
                                 audio: r,
                                 video: s,
                                 screenshare: u,
@@ -145,16 +145,16 @@ class P extends (i = r.PureComponent) {
                                 id: e.id,
                                 children: (i) =>
                                     (0, l.jsx)(c.NavItem, {
-                                        to: N.Z5c.CHANNEL(N.ME, e.id),
+                                        to: Z.Z5c.CHANNEL(Z.ME, e.id),
                                         onMouseEnter: () => this.setState({ hovered: !0 }),
                                         onMouseLeave: () => this.setState({ hovered: !1 }),
-                                        selected: n || f,
+                                        selected: n || m,
                                         ariaLabel: null != t ? t : '',
                                         onContextMenu: this.handleContextMenu,
                                         icon: C ? void 0 : this.getChannelIcon(),
                                         backgroundStyle: C ? 'on-hover' : 'always',
                                         children: C
-                                            ? (0, l.jsx)(m.Z, {
+                                            ? (0, l.jsx)(f.Z, {
                                                   channel: e,
                                                   size: c.AvatarSizes.SIZE_48,
                                                   facepileSizeOverride: c.AvatarSizes.SIZE_32,
@@ -180,12 +180,12 @@ class P extends (i = r.PureComponent) {
                     scale: 0,
                     height: 0,
                     opacity: 0,
-                    config: A
+                    config: j
                 })
             }),
             T(this, 'handleContextMenu', (e) => {
                 let { channel: t } = this.props,
-                    i = t.type === N.d4z.DM ? x.default.getUser(t.getRecipientId()) : null;
+                    i = t.type === Z.d4z.DM ? x.default.getUser(t.getRecipientId()) : null;
                 null != i
                     ? (0, u.jW)(e, async () => {
                           let { default: e } = await Promise.all([n.e('79695'), n.e('92453'), n.e('56826'), n.e('29212')]).then(n.bind(n, 131404));
@@ -218,16 +218,16 @@ T(P, 'defaultProps', {
         let n = e.channel.id,
             i = (0, p.ZP)(e.channel),
             r = (0, s.e7)([C.Z], () => C.Z.getChannelId(), []),
-            a = (0, s.e7)([d.Z], () => (null != r ? d.Z.getMode(r) : N.WtW.VOICE), [r]),
+            a = (0, s.e7)([d.Z], () => (null != r ? d.Z.getMode(r) : Z.WtW.VOICE), [r]),
             o = (0, s.e7)([g.Z], () => g.Z.getAllApplicationStreamsForChannel(n).length > 0),
             c = (0, s.e7)([v.Z], () => v.Z.getChannelId(), []),
             u = (0, s.e7)([_.ZP], () => _.ZP.getMentionCount(n), [n]),
-            { isFacepileEnabled: h } = f.Z.useExperiment({ location: 'unread_direct_message' }, { autoTrackExposure: !1 }),
-            m = r === n,
+            { isFacepileEnabled: h } = m.Z.useExperiment({ location: 'unread_direct_message' }, { autoTrackExposure: !1 }),
+            f = r === n,
             x = !1,
             I = !1;
         return (
-            m && ((x = a === N.WtW.VOICE), (I = a === N.WtW.VIDEO)),
+            f && ((x = a === Z.WtW.VOICE), (I = a === Z.WtW.VIDEO)),
             (0, l.jsx)(P, {
                 ...e,
                 ref: t,
@@ -238,7 +238,7 @@ T(P, 'defaultProps', {
                 audio: x,
                 video: I,
                 stream: o,
-                isCurrentUserInThisDMCall: m,
+                isCurrentUserInThisDMCall: f,
                 isGDMFacepileEnabled: h
             })
         );

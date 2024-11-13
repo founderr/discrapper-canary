@@ -28,7 +28,7 @@ function _(e) {
                 (0, r.jsx)(c.Z, {
                     user: _,
                     rank: 1,
-                    withRankBadge: !1
+                    rankBadgeVisibility: 'hidden'
                 }),
                 (0, r.jsx)(a.Spacer, {
                     size: 8,

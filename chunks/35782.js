@@ -241,15 +241,15 @@ let { Themes: r } = n(15202).V,
             TEXT_LINK: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'BLUE_NEW_37',
+                        raw: 'BLUE_NEW_34',
                         opacity: 1
                     },
                     [r.LIGHT]: {
-                        raw: 'BLUE_NEW_55',
+                        raw: 'BLUE_NEW_56',
                         opacity: 1
                     },
                     [r.MIDNIGHT]: {
-                        raw: 'BLUE_NEW_44',
+                        raw: 'BLUE_NEW_43',
                         opacity: 1
                     },
                     [r.DARKER]: {
@@ -301,7 +301,7 @@ let { Themes: r } = n(15202).V,
             TEXT_POSITIVE: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'GREEN_NEW_35',
+                        raw: 'GREEN_NEW_32',
                         opacity: 1
                     },
                     [r.LIGHT]: {
@@ -309,11 +309,11 @@ let { Themes: r } = n(15202).V,
                         opacity: 1
                     },
                     [r.MIDNIGHT]: {
-                        raw: 'GREEN_NEW_42',
+                        raw: 'GREEN_NEW_40',
                         opacity: 1
                     },
                     [r.DARKER]: {
-                        raw: 'GREEN_NEW_43',
+                        raw: 'GREEN_NEW_42',
                         opacity: 1
                     }
                 }
@@ -361,7 +361,7 @@ let { Themes: r } = n(15202).V,
             TEXT_WARNING: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'YELLOW_NEW_37',
+                        raw: 'YELLOW_NEW_34',
                         opacity: 1
                     },
                     [r.LIGHT]: {
@@ -369,11 +369,11 @@ let { Themes: r } = n(15202).V,
                         opacity: 1
                     },
                     [r.MIDNIGHT]: {
-                        raw: 'YELLOW_NEW_44',
+                        raw: 'YELLOW_NEW_42',
                         opacity: 1
                     },
                     [r.DARKER]: {
-                        raw: 'YELLOW_NEW_45',
+                        raw: 'YELLOW_NEW_44',
                         opacity: 1
                     }
                 }

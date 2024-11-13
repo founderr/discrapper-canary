@@ -19,14 +19,14 @@ var i = n(200651),
     p = n(305473),
     f = n(113679),
     C = n(440857),
-    I = n(472596),
+    v = n(472596),
     _ = n(598948),
-    N = n(428936),
-    v = n(41586),
+    I = n(428936),
+    N = n(41586),
     T = n(918192),
     j = n(981631),
-    S = n(388032),
-    b = n(444383);
+    b = n(388032),
+    S = n(444383);
 function E(e) {
     let { guildId: t } = e,
         n = (0, a.e7)([h.Z], () => h.Z.getGuild(t)),
@@ -45,32 +45,32 @@ function E(e) {
             },
             [l]
         ),
-        A = r.useRef(null),
-        L = r.useCallback(() => {
+        y = r.useRef(null),
+        A = r.useCallback(() => {
             var e;
-            null === (e = A.current) || void 0 === e || e.resetSearchText();
+            null === (e = y.current) || void 0 === e || e.resetSearchText();
         }, []);
     if (null == n) return null;
-    let y = (0, I.xb)(!1, !1, R);
+    let L = (0, v.xb)(!1, !1, R);
     return (0, i.jsx)(d.Gt, {
         value: l,
         children: (0, i.jsx)('div', {
-            className: b.settingsColumn,
+            className: S.settingsColumn,
             children: (0, i.jsx)('div', {
-                className: b.settingsContainer,
+                className: S.settingsContainer,
                 children: (0, i.jsx)(o.ScrollerAuto, {
-                    className: b.settingsScroller,
+                    className: S.settingsScroller,
                     orientation: 'auto',
                     children: (0, i.jsxs)('main', {
-                        className: b.settingsContent,
+                        className: S.settingsContent,
                         children: [
                             (0, i.jsx)(
                                 o.FormSection,
                                 {
-                                    className: s()(b.header),
+                                    className: s()(S.header),
                                     children: (0, i.jsx)(o.FormTitle, {
                                         tag: o.FormTitleTags.H1,
-                                        children: S.intl.string(S.t['S40K6+'])
+                                        children: b.intl.string(b.t['S40K6+'])
                                     })
                                 },
                                 'header'
@@ -79,41 +79,41 @@ function E(e) {
                                 o.FormSection,
                                 {
                                     children: (0, i.jsxs)('div', {
-                                        className: s()(b.tableContainer),
+                                        className: s()(S.tableContainer),
                                         children: [
                                             (0, i.jsx)(f.Z, { guild: n }),
                                             (0, i.jsx)(p.Z, { guild: n }),
                                             E
                                                 ? (0, i.jsxs)('div', {
-                                                      className: s()(b.mainTableContainer),
+                                                      className: s()(S.mainTableContainer),
                                                       children: [
-                                                          (0, i.jsx)(v.Z, {
+                                                          (0, i.jsx)(N.Z, {
                                                               guild: n,
-                                                              ref: A
+                                                              ref: y
                                                           }),
                                                           (0, i.jsx)(_.Z, {
                                                               guild: n,
-                                                              searchState: y,
+                                                              searchState: L,
                                                               compact: !0,
                                                               onSelectRow: Z,
-                                                              onResetForNewMembers: L
+                                                              onResetForNewMembers: A
                                                           }),
-                                                          y !== I.po.SUCCESS_STILL_INDEXING && (0, i.jsx)(N.Z, { guildId: n.id })
+                                                          L !== v.po.SUCCESS_STILL_INDEXING && (0, i.jsx)(I.Z, { guildId: n.id })
                                                       ]
                                                   })
                                                 : (0, i.jsx)('div', {
-                                                      className: s()(b.movedTable),
+                                                      className: s()(S.movedTable),
                                                       children: (0, i.jsxs)('div', {
-                                                          className: s()(b.noResultsContainer),
+                                                          className: s()(S.noResultsContainer),
                                                           children: [
                                                               (0, i.jsx)('div', {
-                                                                  className: s()(b.__invalid_noResultsIconContainer),
+                                                                  className: s()(S.__invalid_noResultsIconContainer),
                                                                   children: (0, i.jsx)(T.Z, {})
                                                               }),
                                                               (0, i.jsx)(o.Text, {
                                                                   variant: 'text-md/normal',
                                                                   color: 'text-muted',
-                                                                  children: S.intl.format(S.t.Bf6yxM, {
+                                                                  children: b.intl.format(b.t.Bf6yxM, {
                                                                       onClick: (e) => {
                                                                           if (null != n) e.preventDefault(), u.Z.close(), (0, x._X)(n.id);
                                                                       }

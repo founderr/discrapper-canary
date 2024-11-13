@@ -52,19 +52,19 @@ let C = { offset: 2 },
     };
 function S(e) {
     var t, r;
-    let { channel: l, user: p, nick: S, mute: N, deaf: T, serverMute: x, serverDeaf: A } = e,
-        b = (0, s.e7)([g.Z], () => g.Z.isLocalMute(p.id)),
+    let { channel: l, user: p, nick: S, mute: N, deaf: T, serverMute: A, serverDeaf: b } = e,
+        x = (0, s.e7)([g.Z], () => g.Z.isLocalMute(p.id)),
         Z = (0, d.Z)({
             userId: p.id,
             checkSoundSharing: !0
         }),
-        y = null !== (t = l.getGuildId()) && void 0 !== t ? t : void 0,
-        L = p.getAvatarURL(l.guild_id, 24),
+        L = null !== (t = l.getGuildId()) && void 0 !== t ? t : void 0,
+        y = p.getAvatarURL(l.guild_id, 24),
         R = null != S ? S : f.ZP.getName(p),
         {
             icon: O,
-            colorize: j,
-            getStatus: P
+            colorize: P,
+            getStatus: j
         } = null !==
             (r = (function (e) {
                 let { serverDeaf: t, deaf: n, serverMute: i, mute: r, localMute: l } = e;
@@ -74,30 +74,30 @@ function S(e) {
                 else if (l) return v.localMute;
                 else if (r) return v.mute;
             })({
-                serverDeaf: A,
+                serverDeaf: b,
                 deaf: T,
-                serverMute: x,
+                serverMute: A,
                 mute: N,
-                localMute: b
+                localMute: x
             })) && void 0 !== r
             ? r
             : {},
         D =
-            null != P
+            null != j
                 ? E.intl.formatToPlainString(E.t['1+MVBA'], {
                       userName: R,
-                      status: P()
+                      status: j()
                   })
                 : R;
     function M(e) {
-        null != y
+        null != L
             ? (0, c.jW)(e, async () => {
                   let { default: e } = await Promise.all([n.e('79695'), n.e('92453'), n.e('13125'), n.e('91864')]).then(n.bind(n, 757387));
                   return (t) =>
                       (0, i.jsx)(e, {
                           ...t,
                           user: p,
-                          guildId: y,
+                          guildId: L,
                           channel: l,
                           showMediaItems: !0
                       });
@@ -114,15 +114,15 @@ function S(e) {
     }
     return (0, i.jsx)(o.Popout, {
         preload: () =>
-            (0, h.Z)(p.id, p.getAvatarURL(y, 80), {
-                guildId: y,
+            (0, h.Z)(p.id, p.getAvatarURL(L, 80), {
+                guildId: L,
                 channelId: l.id
             }),
         position: 'top',
         renderPopout: (e) =>
             (0, i.jsx)(m.Z, {
                 userId: p.id,
-                guildId: y,
+                guildId: L,
                 channelId: l.id,
                 ...e
             }),
@@ -141,11 +141,11 @@ function S(e) {
                             isShaking: Z,
                             children: (0, i.jsx)('div', {
                                 className: a()(I.avatar, { [I.speaking]: Z }),
-                                style: { backgroundImage: 'url('.concat(L, ')') },
+                                style: { backgroundImage: 'url('.concat(y, ')') },
                                 children:
                                     null != O
                                         ? (0, i.jsx)(O, {
-                                              className: a()(I.avatarIconOverlay, { [I.avatarIconRed]: j }),
+                                              className: a()(I.avatarIconOverlay, { [I.avatarIconRed]: P }),
                                               color: 'currentColor',
                                               size: 'xs'
                                           })

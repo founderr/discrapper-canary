@@ -9,10 +9,10 @@ n.d(t, {
         return P;
     },
     hR: function () {
-        return A;
+        return j;
     },
     jo: function () {
-        return j;
+        return A;
     }
 });
 var i,
@@ -26,8 +26,8 @@ var i,
     d = n(442837),
     h = n(481060),
     p = n(787014),
-    f = n(924301),
-    m = n(159300),
+    m = n(924301),
+    f = n(159300),
     g = n(152376),
     C = n(427679),
     _ = n(155409),
@@ -37,30 +37,30 @@ var i,
     b = n(496675),
     S = n(914010),
     E = n(281029),
-    Z = n(981631),
-    N = n(388032),
+    N = n(981631),
+    Z = n(388032),
     y = n(872356);
 function T(e, t, n) {
     return null != t && !!t && !(0, E.ig)(n, e.type);
 }
-function j(e, t) {
+function A(e, t) {
     return null == t ? y.containerDefault : e > t ? y.containerDragAfter : y.containerDragBefore;
 }
-function A(e) {
+function j(e) {
     let { channel: t, disableManageChannels: n, tabIndex: i, forceShowButtons: l, hasChannelInfo: r = !1 } = e;
-    if ((0, d.e7)([b.Z, S.Z], () => n || S.Z.getGuildId() === Z.I_8 || (!b.Z.can(Z.Plq.MANAGE_CHANNELS, t) && !b.Z.can(Z.Plq.MANAGE_ROLES, t) && !b.Z.can(Z.Plq.MANAGE_WEBHOOKS, t)) || ((0, v.r8)(t.type) && !b.Z.can(Z.Plq.VIEW_CHANNEL, t)) || (t.isGuildVocal() && !b.Z.can(Z.Plq.CONNECT, t)) || !v.dF.has(t.type))) return null;
+    if ((0, d.e7)([b.Z, S.Z], () => n || S.Z.getGuildId() === N.I_8 || (!b.Z.can(N.Plq.MANAGE_CHANNELS, t) && !b.Z.can(N.Plq.MANAGE_ROLES, t) && !b.Z.can(N.Plq.MANAGE_WEBHOOKS, t)) || ((0, v.r8)(t.type) && !b.Z.can(N.Plq.VIEW_CHANNEL, t)) || (t.isGuildVocal() && !b.Z.can(N.Plq.CONNECT, t)) || !v.dF.has(t.type))) return null;
     function a() {
         p.ZP.open(t.id);
     }
     return (0, o.jsx)(h.Tooltip, {
-        text: N.intl.string(N.t['3gUsJS']),
+        text: Z.intl.string(Z.t['3gUsJS']),
         children: (e) => {
             let { onMouseEnter: t, onMouseLeave: n, onFocus: s, onBlur: c } = e;
             return (0, o.jsx)(h.Clickable, {
                 className: u()(y.iconItem, l ? y.alwaysShown : void 0, r ? y.iconWithChannelInfo : y.iconNoChannelInfo),
                 onClick: a,
                 tabIndex: i,
-                'aria-label': N.intl.string(N.t['3gUsJS']),
+                'aria-label': Z.intl.string(Z.t['3gUsJS']),
                 onMouseEnter: t,
                 onMouseLeave: n,
                 onFocus: s,
@@ -78,13 +78,13 @@ function P(e) {
     let { channel: t, isDefaultChannel: i = !1, locked: l, tabIndex: r, forceShowButtons: a, hasChannelInfo: s = !1 } = e,
         c = (0, d.e7)([I.Z], () => I.Z.getGuild(t.getGuildId())),
         p = (0, d.e7)([C.Z], () => C.Z.getStageInstanceByChannel(t.id), [t.id]),
-        g = (0, d.e7)([f.ZP], () => f.ZP.getActiveEventByChannel(t.id), [t.id]),
-        v = (0, d.e7)([b.Z], () => (0, m.b)(b.Z, c, t, p)),
-        S = (0, d.e7)([b.Z], () => (b.Z.can(Z.Plq.CREATE_INSTANT_INVITE, t) ? N.intl.string(N.t.zJrgTE) : N.intl.string(N.t.Sd8Ix8)));
+        g = (0, d.e7)([m.ZP], () => m.ZP.getActiveEventByChannel(t.id), [t.id]),
+        v = (0, d.e7)([b.Z], () => (0, f.b)(b.Z, c, t, p)),
+        S = (0, d.e7)([b.Z], () => (b.Z.can(N.Plq.CREATE_INSTANT_INVITE, t) ? Z.intl.string(Z.t.zJrgTE) : Z.intl.string(Z.t.Sd8Ix8)));
     if (l || !v) return null;
     function E() {
         if (null != c) {
-            let e = x.Z.getAllActiveStreams().filter((e) => e.state !== Z.jm8.ENDED && e.channelId === t.id);
+            let e = x.Z.getAllActiveStreams().filter((e) => e.state !== N.jm8.ENDED && e.channelId === t.id);
             (0, h.openModalLazy)(async () => {
                 let { default: i } = await Promise.all([n.e('7654'), n.e('85683')]).then(n.bind(n, 560114));
                 return (n) =>
@@ -93,7 +93,7 @@ function P(e) {
                         guild: c,
                         channel: t,
                         streamUserId: 1 === e.length ? e[0].ownerId : null,
-                        source: Z.t4x.GUILD_CHANNELS,
+                        source: N.t4x.GUILD_CHANNELS,
                         guildScheduledEvent: g
                     });
             });
@@ -125,19 +125,19 @@ function P(e) {
         })
     );
 }
-function M(e) {
+function R(e) {
     let { channel: t } = e,
         n = () => {
             (0, g._U)(t.guild_id, t.id);
         };
     return (0, o.jsx)(h.Tooltip, {
-        text: N.intl.string(N.t.ROh4T0),
+        text: Z.intl.string(Z.t.ROh4T0),
         children: (e) =>
             (0, o.jsx)(h.Clickable, {
                 className: y.iconItem,
                 ...e,
                 onClick: n,
-                'aria-label': N.intl.string(N.t.ROh4T0),
+                'aria-label': Z.intl.string(Z.t.ROh4T0),
                 children: (0, o.jsx)(h.XSmallIcon, {
                     size: 'xs',
                     color: 'currentColor',
@@ -146,19 +146,19 @@ function M(e) {
             })
     });
 }
-function R(e) {
+function M(e) {
     let { channel: t } = e,
         n = () => {
-            (0, g.dM)(t.guild_id, t.id, !0, { section: Z.jXE.CHANNEL_LIST });
+            (0, g.dM)(t.guild_id, t.id, !0, { section: N.jXE.CHANNEL_LIST });
         };
     return (0, o.jsx)(h.Tooltip, {
-        text: N.intl.string(N.t['N2c/Ul']),
+        text: Z.intl.string(Z.t['N2c/Ul']),
         children: (e) =>
             (0, o.jsx)(h.Clickable, {
                 className: y.iconItem,
                 ...e,
                 onClick: n,
-                'aria-label': N.intl.string(N.t['N2c/Ul']),
+                'aria-label': Z.intl.string(Z.t['N2c/Ul']),
                 children: (0, o.jsx)(h.CheckmarkLargeIcon, {
                     size: 'xs',
                     color: 'currentColor',
@@ -169,20 +169,20 @@ function R(e) {
 }
 class L extends (a = s.PureComponent) {
     renderEditButton() {
-        return (0, o.jsx)(A, { ...this.props });
+        return (0, o.jsx)(j, { ...this.props });
     }
     renderInviteButton() {
         return (0, o.jsx)(P, { ...this.props });
     }
     renderRemoveSuggestionButton() {
-        return (0, o.jsx)(M, { ...this.props });
+        return (0, o.jsx)(R, { ...this.props });
     }
     renderAcceptSuggestionButton() {
-        return (0, o.jsx)(R, { ...this.props });
+        return (0, o.jsx)(M, { ...this.props });
     }
     getClassName() {
         let { position: e, sortingPosition: t } = this.props;
-        return j(e, t);
+        return A(e, t);
     }
     isDisabled() {
         let { channel: e, sorting: t, sortingType: n } = this.props;

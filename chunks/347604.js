@@ -15,18 +15,18 @@ var i = n(200651),
     p = n(650774),
     f = n(845377),
     C = n(981631),
-    I = n(388032),
+    v = n(388032),
     _ = n(445314),
-    N = n(716455);
-let v = ['322850917248663552', '172018499005317120', '414234792121597953', '228406572756369408'],
+    I = n(716455);
+let N = ['322850917248663552', '172018499005317120', '414234792121597953', '228406572756369408'],
     T = ['620723483965653003', '662246299369734154', '181970867549503489', '102860784329052160'];
 t.Z = (e) => {
     let { guild: t, onEnableDiscovery: n, isGuildAdmin: l } = e,
-        [j, S] = (0, a.Z)(() => [s().sample(v), s().sample(T)], []);
+        [j, b] = (0, a.Z)(() => [s().sample(N), s().sample(T)], []);
     r.useEffect(() => {
-        m.z([j, S]);
-    }, [j, S]);
-    let [b, E] = (0, o.Wu)([h.Z], () => [h.Z.getGuild(j), h.Z.getGuild(S)], [j, S]),
+        m.z([j, b]);
+    }, [j, b]);
+    let [S, E] = (0, o.Wu)([h.Z], () => [h.Z.getGuild(j), h.Z.getGuild(b)], [j, b]),
         { canEnableDiscovery: R, isPendingSuccess: Z } = (0, o.cj)(
             [d.ZP],
             () => ({
@@ -35,19 +35,19 @@ t.Z = (e) => {
             }),
             [t.id]
         ),
-        [A, L] = (0, o.Wu)([p.Z], () => [null, p.Z.getMemberCount(t.id)], [t.id]),
-        y = r.useCallback(() => {
+        [y, A] = (0, o.Wu)([p.Z], () => [null, p.Z.getMemberCount(t.id)], [t.id]),
+        L = r.useCallback(() => {
             null != n && n();
         }, [n]),
         D = null;
     return (
-        l ? (Z ? (D = I.intl.string(I.t.zP8DFx)) : !R && (D = I.intl.string(I.t.ABFu19))) : (D = I.intl.string(I.t['5VbUBw'])),
+        l ? (Z ? (D = v.intl.string(v.t.zP8DFx)) : !R && (D = v.intl.string(v.t.ABFu19))) : (D = v.intl.string(v.t['5VbUBw'])),
         (0, i.jsxs)('div', {
             className: _.container,
             children: [
                 (0, i.jsx)('img', {
                     alt: '',
-                    src: N,
+                    src: I,
                     className: _.sparkles
                 }),
                 (0, i.jsxs)('div', {
@@ -57,15 +57,15 @@ t.Z = (e) => {
                             className: _.placeholderCard,
                             disabled: !0,
                             small: !0,
-                            loading: null == b,
-                            guild: b
+                            loading: null == S,
+                            guild: S
                         }),
                         (0, i.jsx)(g.Z, {
                             className: _.previewCard,
                             guild: t,
-                            description: I.intl.string(I.t['0k7fyM']),
-                            presenceCount: A,
-                            memberCount: L
+                            description: v.intl.string(v.t['0k7fyM']),
+                            presenceCount: y,
+                            memberCount: A
                         }),
                         (0, i.jsx)(g.Z, {
                             className: _.placeholderCard,
@@ -79,13 +79,13 @@ t.Z = (e) => {
                 (0, i.jsx)(c.Heading, {
                     className: _.header,
                     variant: 'heading-xl/semibold',
-                    children: I.intl.string(I.t.UwPrKS)
+                    children: v.intl.string(v.t.UwPrKS)
                 }),
                 (0, i.jsx)(c.Text, {
                     variant: 'text-md/normal',
                     className: _.valueProp,
                     color: 'header-secondary',
-                    children: I.intl.format(I.t.BhkgBg, {
+                    children: v.intl.format(v.t.BhkgBg, {
                         onLinkClick: () =>
                             (0, x.lW)({
                                 articleId: C.BhN.SERVER_DISCOVERY,
@@ -98,7 +98,7 @@ t.Z = (e) => {
                     variant: 'text-md/normal',
                     className: _.byline,
                     color: 'header-secondary',
-                    children: I.intl.format(I.t.ALSi8v, {
+                    children: v.intl.format(v.t.ALSi8v, {
                         onGuidelinesClick: () =>
                             (0, x.lW)({
                                 articleId: C.BhN.SERVER_DISCOVERY_GUIDELINES,
@@ -116,8 +116,8 @@ t.Z = (e) => {
                             color: c.Button.Colors.BRAND,
                             size: c.Button.Sizes.LARGE,
                             disabled: !R || !l,
-                            onClick: y,
-                            children: I.intl.string(I.t.oBIZwc)
+                            onClick: L,
+                            children: v.intl.string(v.t.oBIZwc)
                         })
                 }),
                 (0, i.jsx)(f.Z, {

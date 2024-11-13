@@ -17,10 +17,10 @@ t.Z = () => {
         C = (null == I ? void 0 : I.dismissibleContent) === s.z.COLLECTIBLES_SHOP_ENTRY_MARKETING,
         v = i.useMemo(() => ((0, d.Fc)(E) && null != I && !C ? [I.dismissibleContent] : []), [E, I, C]),
         [S, N] = (0, o.US)(v, void 0, !0),
-        [T, x] = (0, o.XR)(C && (null == I ? void 0 : I.type) === l.Z.COACHTIP ? s.z.COLLECTIBLES_SHOP_ENTRY_MARKETING : null, null !== (e = null == I ? void 0 : I.version) && void 0 !== e ? e : 0, void 0, !0),
-        A = null;
+        [T, A] = (0, o.XR)(C && (null == I ? void 0 : I.type) === l.Z.COACHTIP ? s.z.COLLECTIBLES_SHOP_ENTRY_MARKETING : null, null !== (e = null == I ? void 0 : I.version) && void 0 !== e ? e : 0, void 0, !0),
+        b = null;
     if ((null != S || null != T) && null != I && I.type === l.Z.COACHTIP) {
-        A = {
+        b = {
             type: h.k2.COACHTIP,
             title: () => I.title,
             body: () => I.body,
@@ -30,7 +30,7 @@ t.Z = () => {
         };
         let e = null === (n = I.refTargetBackground) || void 0 === n ? void 0 : n.asset;
         null != e &&
-            (A.entryPointBackgroundAssets = {
+            (b.entryPointBackgroundAssets = {
                 srcDark: null === (p = e.resting) || void 0 === p ? void 0 : p.dark,
                 srcLight: null === (g = e.resting) || void 0 === g ? void 0 : g.light,
                 srcDarkHovered: null === (f = e.hovered) || void 0 === f ? void 0 : f.dark,
@@ -38,10 +38,10 @@ t.Z = () => {
             });
     }
     return {
-        collectiblesShopTabNewBadgeDisplayOptions: A,
+        collectiblesShopTabNewBadgeDisplayOptions: b,
         dismissCollectiblesShopTabNewBadge: () => {
-            let e = C ? x : N;
-            null != A && e(m.L.AUTO);
+            let e = C ? A : N;
+            null != b && e(m.L.AUTO);
         }
     };
 };

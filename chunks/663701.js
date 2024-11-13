@@ -26,16 +26,16 @@ var i = n(200651),
     S = n(243778),
     N = n(922409),
     T = n(899740),
-    x = n(28476),
-    A = n(880257),
-    b = n(631885),
+    A = n(28476),
+    b = n(880257),
+    x = n(631885),
     Z = n(522558),
-    y = n(795448),
-    L = n(441623),
+    L = n(795448),
+    y = n(441623),
     R = n(457396),
     O = n(108989),
-    j = n(51596),
-    P = n(905423),
+    P = n(51596),
+    j = n(905423),
     D = n(155409),
     M = n(210887),
     w = n(695346),
@@ -43,8 +43,8 @@ var i = n(200651),
     U = n(699516),
     G = n(923834),
     B = n(55563),
-    H = n(774343),
-    V = n(626135),
+    V = n(774343),
+    H = n(626135),
     F = n(814225),
     z = n(515753),
     Y = n(831218),
@@ -58,7 +58,7 @@ let $ = (e) => {
         let { selected: t, ...n } = e,
             l = (0, c.JA)('friends'),
             a = (0, u.e7)([U.Z], () => U.Z.getPendingCount()),
-            s = (0, u.e7)([L.Z], () => L.Z.canShowFriendsTabBadge()),
+            s = (0, u.e7)([y.Z], () => y.Z.canShowFriendsTabBadge()),
             d = (0, u.e7)([_.Z], () => _.Z.useReducedMotion),
             { enabled: h } = Z.w.useExperiment({ location: 'Friends Tab' }, { autoTrackExposure: !1 }),
             m = s && h;
@@ -76,7 +76,7 @@ let $ = (e) => {
             children: [
                 (0, i.jsx)(z.Qj, {
                     onClick: () => {
-                        m && (V.default.track(K.rMx.GIFT_INTENT_BADGE_CLICKED, { gift_intent_type: X.hX.FRIEND_ANNIVERSARY }), f.Z.setSection(K.pJs.ALL), (0, y.Gk)());
+                        m && (H.default.track(K.rMx.GIFT_INTENT_BADGE_CLICKED, { gift_intent_type: X.hX.FRIEND_ANNIVERSARY }), f.Z.setSection(K.pJs.ALL), (0, L.Gk)());
                     },
                     interactiveClassName: m ? J.friendsBadge : void 0,
                     selected: t,
@@ -139,7 +139,7 @@ let $ = (e) => {
         let { selected: t } = e,
             n = (0, c.JA)('messageRequests'),
             { channelId: r } = (0, N._)();
-        if (!(0, x.a)()) return null;
+        if (!(0, A.a)()) return null;
         let l = null == r ? void 0 : () => g.Z.preload(K.ME, r);
         return (0, i.jsx)(z.Qj, {
             selected: t,
@@ -156,7 +156,7 @@ let $ = (e) => {
             n = Q.intl.string(Q.t.Rkdixs),
             l = (0, c.JA)('family-center'),
             a = w.Ex.useSetting(),
-            s = (0, A.Z)(),
+            s = (0, b.Z)(),
             [o, d] = r.useState(!0);
         return a && s
             ? (0, i.jsx)(z.Qj, {
@@ -178,7 +178,7 @@ let $ = (e) => {
     },
     er = (e) => {
         let { isParentHovered: t } = e,
-            r = (0, b.gU)();
+            r = (0, x.gU)();
         return t
             ? (0, i.jsx)(z.PZ, {
                   onClick: () => {
@@ -207,7 +207,7 @@ let $ = (e) => {
                     }
                 });
     },
-    el = () => (0, j.$Z)('DM_SEARCH');
+    el = () => (0, P.$Z)('DM_SEARCH');
 function ea(e) {
     switch (e) {
         case K.Z5c.APPLICATION_LIBRARY:
@@ -222,7 +222,7 @@ function ea(e) {
 }
 let es = (e) => {
     let { showLibrary: t, hasLibraryApplication: n, homeLink: r, premiumTabSelected: l } = e,
-        [o, c] = (0, P.Z)((e) => {
+        [o, c] = (0, j.Z)((e) => {
             let { channelId: t, path: n } = e;
             return [t, n];
         }, s.X);
@@ -299,7 +299,7 @@ let es = (e) => {
     });
 };
 function eo() {
-    let e = (0, u.e7)([H.Z], () => H.Z.getHomeLink()),
+    let e = (0, u.e7)([V.Z], () => V.Z.getHomeLink()),
         t = (0, u.e7)(
             [B.Z],
             () => {

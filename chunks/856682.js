@@ -1,26 +1,26 @@
 l.d(t, {
     Z: function () {
-        return f;
+        return v;
     }
 }),
     l(47120);
 var n = l(200651),
     i = l(192379),
     a = l(120356),
-    r = l.n(a),
-    s = l(100621),
+    s = l.n(a),
+    r = l(100621),
     o = l(481060),
-    d = l(393238),
-    c = l(410030),
+    c = l(393238),
+    d = l(410030),
     u = l(231338),
     x = l(794459);
-let m = {
+let h = {
         mass: 1,
         tension: 400,
         friction: 60,
         clamp: !0
     },
-    h = {
+    m = {
         mass: 1,
         tension: 600,
         friction: 60,
@@ -98,10 +98,10 @@ function g(e) {
         ]
     });
 }
-function v(e) {
+function f(e) {
     let { paperColor: t, paperColorAlt: l, className: i } = e;
     return (0, n.jsxs)('svg', {
-        className: r()(x.bottom, i),
+        className: s()(x.bottom, i),
         width: '365',
         height: '101',
         viewBox: '0 0 365 101',
@@ -159,33 +159,33 @@ function v(e) {
         ]
     });
 }
-function f(e) {
+function v(e) {
     let { children: t, fullHeight: l = !1 } = e,
-        [a, f] = i.useState(!1),
-        { height: C, ref: j } = (0, d.Z)(),
-        { height: p, ref: N } = (0, d.Z)(),
-        Z = l ? p : 59 + (null != C ? C : 100) + 101,
+        [a, v] = i.useState(!1),
+        { height: C, ref: p } = (0, c.Z)(),
+        { height: j, ref: N } = (0, c.Z)(),
+        Z = l ? j : 59 + (null != C ? C : 100) + 101,
         T = (0, o.useSpring)({
             from: { height: 0 },
             to: { height: Z },
-            config: m,
+            config: h,
             delay: a ? 0 : 800,
-            onRest: () => f(!0)
+            onRest: () => v(!0)
         }),
         S = (0, o.useSpring)({
             from: { opacity: 0 },
             to: { opacity: 1 },
-            config: h,
+            config: m,
             delay: 1000
         }),
-        y = (0, c.Fg)(),
-        w = y === u.BR.LIGHT ? '#FFFFFF' : '#1C1D23',
-        H = y === u.BR.LIGHT ? '#EBEDEF' : '#26272F',
-        M = y === u.BR.LIGHT ? '#CCCCCC' : '#1A1A1E';
+        y = (0, d.Fg)(),
+        H = y === u.BR.LIGHT ? '#FFFFFF' : '#1C1D23',
+        w = y === u.BR.LIGHT ? '#EBEDEF' : '#26272F',
+        b = y === u.BR.LIGHT ? '#CCCCCC' : '#1A1A1E';
     return (0, n.jsx)('div', {
         className: x.container,
         ref: N,
-        children: (0, n.jsxs)(s.animated.div, {
+        children: (0, n.jsxs)(r.animated.div, {
             className: x.heightContainer,
             style: {
                 ...T,
@@ -194,27 +194,27 @@ function f(e) {
             children: [
                 (0, n.jsx)(g, {
                     className: x.scrollSvg,
-                    paperColor: w,
-                    paperColorAlt: H,
-                    axleColor: M
+                    paperColor: H,
+                    paperColorAlt: w,
+                    axleColor: b
                 }),
                 (0, n.jsx)('div', {
-                    className: r()(x.content, l && x.fullHeight),
-                    ref: j,
+                    className: s()(x.content, l && x.fullHeight),
+                    ref: p,
                     children: (0, n.jsx)('div', {
-                        className: r()(x.innerContent, l && x.fullHeight),
-                        style: { backgroundColor: w },
-                        children: (0, n.jsx)(s.animated.div, {
-                            className: r()(x.contentAnimContainer, l && x.fullHeight),
+                        className: s()(x.innerContent, l && x.fullHeight),
+                        style: { backgroundColor: H },
+                        children: (0, n.jsx)(r.animated.div, {
+                            className: s()(x.contentAnimContainer, l && x.fullHeight),
                             style: S,
                             children: t
                         })
                     })
                 }),
-                (0, n.jsx)(v, {
+                (0, n.jsx)(f, {
                     className: x.scrollSvg,
-                    paperColor: w,
-                    paperColorAlt: H
+                    paperColor: H,
+                    paperColorAlt: w
                 })
             ]
         })
