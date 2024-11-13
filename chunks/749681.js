@@ -1,9 +1,8 @@
-n.r(t),
-    n.d(t, {
-        transitionToGlobalDiscovery: function () {
-            return d;
-        }
-    }),
+n.d(t, {
+    u: function () {
+        return d;
+    }
+}),
     n(610138),
     n(216116),
     n(78328),

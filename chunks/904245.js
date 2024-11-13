@@ -891,7 +891,6 @@ let eg = {
                                                         event: el.rMx.QUEST_LINK_SHARED,
                                                         trackGuildAndChannelMetadata: !0
                                                     });
-                                                else if (t === m.g.DISCOVERY_GAME);
                                                 else if (t === m.g.APP_OAUTH2_LINK) u.ZP.trackWithMetadata(el.rMx.APP_OAUTH2_LINK_EMBED_URL_SENT, { application_id: o });
                                                 else throw Error('Unknown coded link type: '.concat(t));
                                             });
