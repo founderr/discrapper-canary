@@ -97,6 +97,9 @@ class _ extends a.Z {
     get hasPremiumNitroMonthly() {
         return null != this.items.find((e) => e.planId === c.Xh.PREMIUM_MONTH_TIER_2);
     }
+    get isBoostOnly() {
+        return this.items.every((e) => [c.Xh.PREMIUM_MONTH_GUILD, c.Xh.PREMIUM_YEAR_GUILD].includes(e.planId));
+    }
     get isPausedOrPausePending() {
         return u.JwP.ALL_PAUSE.has(this.status);
     }

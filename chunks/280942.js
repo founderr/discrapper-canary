@@ -37,8 +37,9 @@ function m(e) {
             break;
         case o.O0b.PAUSE_PENDING:
         case o.O0b.PAUSED:
-            x === c.a$.FP_SUB ? (S.cancel.subtext = d.intl.string(d.t['07lzz8'])) : ((S.transfer.disabled = !0), (S.transfer.subtext = d.intl.string(d.t.LiLRRU)), (S.cancel.subtext = d.intl.string(d.t['1ywaWF']))), (S.cancel.disabled = !0), (S.uncancel.disabled = !0);
+            (S.transfer.disabled = !0), (S.transfer.subtext = d.intl.string(d.t.LiLRRU)), (S.cancel.subtext = d.intl.string(d.t['1ywaWF'])), (S.cancel.disabled = !0), (S.uncancel.disabled = !0);
     }
+    x !== c.a$.NONE && ((S.cancel.subtext = d.intl.string(d.t['07lzz8'])), (S.cancel.disabled = !0), (S.uncancel.disabled = !0));
     let T = s.useMemo(
         () =>
             g.isPausedOrPausePending && x === c.a$.NONE

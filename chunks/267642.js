@@ -349,7 +349,8 @@ function M(e) {
     let r = w(c.Z.boostSlots),
         i = null == n ? void 0 : n.isPausedOrPausePending,
         a = r.length > 0,
-        s = (0, o.EQ)({
+        s = E.intl.format(E.t.kJ1AZG, { helpCenterLink: p.Z.getArticleURL(m.BhN.FRACTIONAL_PREMIUM_ABOUT) }),
+        l = (0, o.EQ)({
             isPausedOrPausePending: i,
             fractionalState: t,
             canApplyBoosts: a
@@ -357,17 +358,24 @@ function M(e) {
             .with(
                 {
                     isPausedOrPausePending: !0,
-                    fractionalState: g.a$.FP_SUB,
+                    fractionalState: g.a$.FP_SUB_PAUSED,
                     canApplyBoosts: !1
                 },
-                () => E.intl.format(E.t.kJ1AZG, { helpCenterLink: p.Z.getArticleURL(m.BhN.FRACTIONAL_PREMIUM_ABOUT) })
+                () => s
             )
             .with(
                 {
                     isPausedOrPausePending: void 0,
                     fractionalState: g.a$.FP_ONLY
                 },
-                () => E.intl.format(E.t.kJ1AZG, { helpCenterLink: p.Z.getArticleURL(m.BhN.FRACTIONAL_PREMIUM_ABOUT) })
+                () => s
+            )
+            .with(
+                {
+                    isPausedOrPausePending: !1,
+                    fractionalState: g.a$.FP_ONLY
+                },
+                () => s
             )
             .with(
                 {
@@ -377,18 +385,18 @@ function M(e) {
                 () => E.intl.string(E.t.mOWsFx)
             )
             .otherwise(() => null);
-    if (null != s) return s;
-    let { numAvailableGuildBoostSlots: l, numCanceledGuildBoostSlots: f } = Object.values(c.Z.boostSlots).reduce((e, t) => (j(t) && e.numCanceledGuildBoostSlots++, t.isAvailable() && e.numAvailableGuildBoostSlots++, e), {
+    if (null != l) return l;
+    let { numAvailableGuildBoostSlots: f, numCanceledGuildBoostSlots: _ } = Object.values(c.Z.boostSlots).reduce((e, t) => (j(t) && e.numCanceledGuildBoostSlots++, t.isAvailable() && e.numAvailableGuildBoostSlots++, e), {
         numAvailableGuildBoostSlots: 0,
         numCanceledGuildBoostSlots: 0
     });
-    if (null == n || l > 0) return null;
+    if (null == n || f > 0) return null;
     if (n.status === m.O0b.PAST_DUE) return E.intl.string(E.t.De4Vm5);
     if (n.status === m.O0b.ACCOUNT_HOLD) return E.intl.string(E.t.JakNQ0);
-    if (f > 0) return E.intl.string(E.t.x25mZW);
+    if (_ > 0) return E.intl.string(E.t.x25mZW);
     if (null == n.renewalMutations) return null;
-    let _ = h.uV(n.renewalMutations.additionalPlans);
-    return h.uV(n.additionalPlans) > _ ? E.intl.string(E.t.x25mZW) : E.intl.string(E.t['W/bb8f']);
+    let v = h.uV(n.renewalMutations.additionalPlans);
+    return h.uV(n.additionalPlans) > v ? E.intl.string(E.t.x25mZW) : E.intl.string(E.t['W/bb8f']);
 }
 function P(e, t) {
     return k(e, t) > 0;
