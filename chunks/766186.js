@@ -1,13 +1,14 @@
 n.d(t, {
     s: function () {
-        return a;
+        return s;
     }
 });
 var r = n(280551),
-    i = n(689938);
-function a(e) {
+    i = n(706454),
+    a = n(689938);
+function s(e) {
     let t;
-    let n = i.Z.getLocale();
+    let n = i.default.locale;
     try {
         t = Intl.DateTimeFormat(n, e).format;
     } catch (n) {
@@ -15,11 +16,11 @@ function a(e) {
     }
     if ((null == e ? void 0 : e.hourCycle) == null)
         try {
-            let a = null === r.s || void 0 === r.s ? void 0 : (0, r.s)(n !== i.Z.getDefaultLocale() ? n : void 0, e);
-            if (null != a)
+            let i = null === r.s || void 0 === r.s ? void 0 : (0, r.s)(n !== a.Z.getDefaultLocale() ? n : void 0, e);
+            if (null != i)
                 return function (e) {
                     try {
-                        return a(e);
+                        return i(e);
                     } catch (e) {}
                     return t(e);
                 };
