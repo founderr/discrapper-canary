@@ -23,8 +23,8 @@ var s = n(990547),
     C = n(574755),
     E = n(377171),
     _ = n(621628),
-    f = n(18438),
-    I = n(778825),
+    I = n(18438),
+    f = n(778825),
     N = n(665166),
     A = n(351780),
     b = n(231765),
@@ -77,8 +77,8 @@ var s = n(990547),
     eC = n(595242),
     eE = n(301121),
     e_ = n(463153),
-    ef = n(36192),
-    eI = n(889029),
+    eI = n(36192),
+    ef = n(889029),
     eN = n(400287),
     eA = n(554042),
     eb = n(936982),
@@ -240,12 +240,12 @@ let ek = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 element: O.Z,
                 newIndicator: (0, i.jsx)(a.PremiumBadge, { text: eF.intl.string(eF.t.y2b7CA) }),
                 notice: {
-                    stores: [F.Z, I.Z],
+                    stores: [F.Z, f.Z],
                     element: j.Z
                 },
                 onSettingsClose: () => {
                     o.Z.wait(() => {
-                        (0, f.It)(), (0, u.P6)(), m.Z.clearSubsection(eB.oAB.PROFILE_CUSTOMIZATION);
+                        (0, I.It)(), (0, u.P6)(), m.Z.clearSubsection(eB.oAB.PROFILE_CUSTOMIZATION);
                     });
                 }
             },
@@ -587,7 +587,7 @@ let ek = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eF.intl.string(eF.t['+1h0k5'])],
                 label: eF.intl.string(eF.t['+1h0k5']),
                 ariaLabel: eF.intl.string(eF.t['+1h0k5']),
-                element: ef.Z,
+                element: eI.Z,
                 newIndicatorDismissibleContentTypes: [r.z.AUTH_SESSIONS_NEW],
                 predicate: () => G.Z.getCurrentConfig({ location: '9f7d84_1' }, { autoTrackExposure: !1 }).showSettings
             },
@@ -1353,7 +1353,7 @@ let ek = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eF.intl.string(eF.t.S5GfOT)],
                 label: eF.intl.string(eF.t.S5GfOT),
                 ariaLabel: eF.intl.string(eF.t.S5GfOT),
-                element: eI.Z
+                element: ef.Z
             },
             [ey.s6.STREAMER_MODE_INTEGRATIONS]: {
                 section: eB.oAB.STREAMER_MODE,
@@ -1692,6 +1692,20 @@ let ek = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eB.oAB.DESIGN_SYSTEMS,
                 searchableTitles: ['Design Systems'],
                 label: 'Design Systems',
+                element: eo.Z,
+                predicate: () => B.Z.isDeveloper
+            },
+            [ey.s6.DESIGN_SYSTEMS_COLORS]: {
+                section: eB.oAB.DESIGN_SYSTEMS,
+                searchableTitles: ['Colors'],
+                label: 'Colors',
+                element: eo.Z,
+                predicate: () => B.Z.isDeveloper
+            },
+            [ey.s6.DESIGN_SYSTEMS_COMPONENTS]: {
+                section: eB.oAB.DESIGN_SYSTEMS,
+                searchableTitles: ['Components'],
+                label: 'Components',
                 element: eo.Z,
                 predicate: () => B.Z.isDeveloper
             },

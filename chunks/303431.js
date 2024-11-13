@@ -6,5 +6,8 @@ e.exports = {
     shinyButtonExamples: 'shinyButtonExamples_ad57ee',
     searchableSelectExamples: 'searchableSelectExamples_ad57ee',
     slider: 'slider_ad57ee',
-    tabBar: 'tabBar_ad57ee'
+    tabBar: 'tabBar_ad57ee',
+    palette: 'palette_ad57ee',
+    colors: 'colors_ad57ee',
+    color: 'color_ad57ee'
 };

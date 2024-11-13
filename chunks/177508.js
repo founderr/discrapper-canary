@@ -1,8 +1,9 @@
 n.d(t, {
     Z: function () {
-        return x;
+        return I;
     }
 }),
+    n(757143),
     n(47120),
     n(390547);
 var i = n(200651),
@@ -13,20 +14,81 @@ var i = n(200651),
     o = n(442837),
     c = n(481060),
     d = n(514361),
-    u = n(231338),
-    m = n(303431);
-let h = Object.keys(c.Button.Colors).filter((e) => 'CUSTOM' !== e),
-    g = Object.keys(c.Button.Looks).filter((e) => 'BLANK' !== e),
-    p = Object.keys(c.Button.Sizes).filter((e) => 'NONE' !== e);
-function x() {
+    u = n(526156),
+    m = n(726985),
+    h = n(981631),
+    g = n(231338),
+    p = n(303431);
+let x = Object.keys(c.Button.Colors).filter((e) => 'CUSTOM' !== e),
+    S = Object.keys(c.Button.Looks).filter((e) => 'BLANK' !== e),
+    T = Object.keys(c.Button.Sizes).filter((e) => 'NONE' !== e);
+function C() {
     return (0, i.jsxs)('div', {
-        children: [(0, i.jsx)(S, {}), (0, i.jsx)(I, {}), (0, i.jsx)(N, {}), (0, i.jsx)(_, {}), (0, i.jsx)(E, {}), (0, i.jsx)(C, {}), (0, i.jsx)(T, {}), (0, i.jsx)(A, {})]
+        children: [(0, i.jsx)(f, {}), (0, i.jsx)(O, {}), (0, i.jsx)(R, {}), (0, i.jsx)(v, {}), (0, i.jsx)(b, {}), (0, i.jsx)(A, {}), (0, i.jsx)(N, {}), (0, i.jsx)(P, {})]
     });
 }
-function S() {
+let E = ['neutral', 'blue_new', 'blurple', 'green_new', 'red_new', 'teal_new', 'yellow_new', 'orange_new'];
+function _() {
+    return E.map((e) =>
+        (0, i.jsxs)(
+            'div',
+            {
+                className: p.palette,
+                children: [
+                    (0, i.jsx)(c.Text, {
+                        variant: 'text-lg/semibold',
+                        children: e
+                    }),
+                    (0, i.jsx)('div', {
+                        className: p.colors,
+                        children: Array.from({ length: 100 }, (t, n) =>
+                            (0, i.jsx)(
+                                'div',
+                                {
+                                    className: p.color,
+                                    style: { background: 'var(--'.concat(e.replace('_', '-'), '-').concat(n + 1, ')') },
+                                    children: (0, i.jsx)(c.ThemeProvider, {
+                                        theme: n < 50 ? 'light' : 'dark',
+                                        children: (t) =>
+                                            (0, i.jsxs)(c.Text, {
+                                                className: t,
+                                                variant: 'text-xs/medium',
+                                                children: [e, '.', n + 1]
+                                            })
+                                    })
+                                },
+                                n
+                            )
+                        )
+                    })
+                ]
+            },
+            e
+        )
+    );
+}
+function I() {
+    return (0, i.jsx)(u.Z, {
+        parentSetting: m.s6.DESIGN_SYSTEMS,
+        settingsSection: h.oAB.DESIGN_SYSTEMS,
+        tabs: [
+            {
+                title: 'Components',
+                component: () => (0, i.jsx)(C, {}),
+                setting: m.s6.DESIGN_SYSTEMS_COMPONENTS
+            },
+            {
+                title: 'Colors',
+                component: () => (0, i.jsx)(_, {}),
+                setting: m.s6.DESIGN_SYSTEMS_COLORS
+            }
+        ]
+    });
+}
+function f() {
     let [e, t] = s.useState(!1),
-        n = h.flatMap((e) => [
-            ...g.map((t) =>
+        n = x.flatMap((e) => [
+            ...S.map((t) =>
                 (0, i.jsxs)(
                     c.Button,
                     {
@@ -39,9 +101,9 @@ function S() {
                     e + t
                 )
             ),
-            (0, i.jsx)('hr', { className: m.sectionDivider }, e + 'divider')
+            (0, i.jsx)('hr', { className: p.sectionDivider }, e + 'divider')
         ]),
-        r = p.flatMap((e) =>
+        r = T.flatMap((e) =>
             (0, i.jsx)(c.Button, {
                 color: c.Button.Colors.BRAND,
                 look: c.Button.Looks.FILLED,
@@ -52,7 +114,7 @@ function S() {
             })
         );
     return (0, i.jsxs)('div', {
-        className: m.section,
+        className: p.section,
         children: [
             (0, i.jsx)(c.Heading, {
                 variant: 'heading-xl/semibold',
@@ -68,29 +130,29 @@ function S() {
             }),
             e
                 ? (0, i.jsxs)('div', {
-                      className: m.buttons,
+                      className: p.buttons,
                       children: [
                           (0, i.jsx)(c.ThemeProvider, {
-                              theme: u.BR.DARKER,
+                              theme: g.BR.DARKER,
                               children: (e) =>
                                   (0, i.jsx)('div', {
-                                      className: l()(e, m.section),
+                                      className: l()(e, p.section),
                                       children: n
                                   })
                           }),
                           (0, i.jsx)(c.ThemeProvider, {
-                              theme: u.BR.LIGHT,
+                              theme: g.BR.LIGHT,
                               children: (e) =>
                                   (0, i.jsx)('div', {
-                                      className: l()(e, m.section),
+                                      className: l()(e, p.section),
                                       children: n
                                   })
                           }),
                           (0, i.jsx)(c.ThemeProvider, {
-                              theme: u.BR.DARKER,
+                              theme: g.BR.DARKER,
                               children: (e) =>
                                   (0, i.jsxs)('div', {
-                                      className: l()(e, m.section),
+                                      className: l()(e, p.section),
                                       children: [
                                           (0, i.jsx)(c.Button, {
                                               color: c.Button.Colors.BRAND,
@@ -103,10 +165,10 @@ function S() {
                                   })
                           }),
                           (0, i.jsx)(c.ThemeProvider, {
-                              theme: u.BR.LIGHT,
+                              theme: g.BR.LIGHT,
                               children: (e) =>
                                   (0, i.jsxs)('div', {
-                                      className: l()(e, m.section),
+                                      className: l()(e, p.section),
                                       children: [
                                           (0, i.jsx)(c.Button, {
                                               color: c.Button.Colors.BRAND,
@@ -157,14 +219,14 @@ function S() {
                     children: 'Large'
                 })
             }),
-            (0, i.jsx)(f, {})
+            (0, i.jsx)(j, {})
         ]
     });
 }
-function T() {
+function N() {
     let [e, t] = s.useState('1');
     return (0, i.jsxs)('div', {
-        className: m.section,
+        className: p.section,
         children: [
             (0, i.jsx)(c.Heading, {
                 variant: 'heading-xl/semibold',
@@ -175,7 +237,7 @@ function T() {
                 look: 'brand',
                 selectedItem: e,
                 onItemSelect: (e) => t(e),
-                className: m.tabBar,
+                className: p.tabBar,
                 children: [
                     (0, i.jsx)(c.TabBar.Item, {
                         id: '1',
@@ -198,13 +260,13 @@ function T() {
         ]
     });
 }
-function C() {
+function A() {
     let [e, t] = s.useState(1),
         [n, r] = s.useState(!1),
         [l, a] = s.useState(5),
         [o, d] = s.useState(!1);
     return (0, i.jsxs)('div', {
-        className: m.section,
+        className: p.section,
         children: [
             (0, i.jsx)(c.Heading, {
                 variant: 'heading-xl/semibold',
@@ -316,9 +378,9 @@ function C() {
         ]
     });
 }
-function E() {
+function b() {
     return (0, i.jsxs)('div', {
-        className: m.section,
+        className: p.section,
         children: [
             (0, i.jsx)(c.Heading, {
                 variant: 'heading-xl/semibold',
@@ -373,14 +435,14 @@ function E() {
         ]
     });
 }
-function _() {
+function v() {
     let [e, t] = s.useState(!1),
         [n, r] = s.useState(!1),
         [l, a] = s.useState('auto');
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)('div', {
-                className: m.section,
+                className: p.section,
                 children: [
                     (0, i.jsx)(c.Heading, {
                         variant: 'heading-xl/semibold',
@@ -424,7 +486,7 @@ function _() {
                 ]
             }),
             (0, i.jsxs)('div', {
-                className: m.section,
+                className: p.section,
                 children: [
                     (0, i.jsx)(c.Heading, {
                         variant: 'heading-xl/semibold',
@@ -439,7 +501,7 @@ function _() {
                 ]
             }),
             (0, i.jsxs)('div', {
-                className: m.section,
+                className: p.section,
                 children: [
                     (0, i.jsx)(c.Heading, {
                         variant: 'heading-xl/semibold',
@@ -471,14 +533,14 @@ function _() {
                 ]
             }),
             (0, i.jsxs)('div', {
-                className: m.section,
+                className: p.section,
                 children: [
                     (0, i.jsx)(c.Heading, {
                         variant: 'heading-xl/semibold',
                         children: 'Slider'
                     }),
                     (0, i.jsxs)('div', {
-                        className: m.slider,
+                        className: p.slider,
                         children: [
                             (0, i.jsx)(c.Text, {
                                 variant: 'text-md/medium',
@@ -494,7 +556,7 @@ function _() {
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: m.slider,
+                        className: p.slider,
                         children: [
                             (0, i.jsx)(c.Text, {
                                 variant: 'text-md/medium',
@@ -510,7 +572,7 @@ function _() {
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: m.slider,
+                        className: p.slider,
                         children: [
                             (0, i.jsx)(c.Text, {
                                 variant: 'text-md/medium',
@@ -526,7 +588,7 @@ function _() {
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: m.slider,
+                        className: p.slider,
                         children: [
                             (0, i.jsx)(c.Text, {
                                 variant: 'text-md/medium',
@@ -542,7 +604,7 @@ function _() {
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: m.slider,
+                        className: p.slider,
                         children: [
                             (0, i.jsx)(c.Text, {
                                 variant: 'text-md/medium',
@@ -556,7 +618,7 @@ function _() {
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: m.slider,
+                        className: p.slider,
                         children: [
                             (0, i.jsx)(c.Text, {
                                 variant: 'text-md/medium',
@@ -575,9 +637,9 @@ function _() {
         ]
     });
 }
-function f() {
+function j() {
     return (0, i.jsxs)('div', {
-        className: m.shinyButtonExamples,
+        className: p.shinyButtonExamples,
         children: [
             (0, i.jsx)(c.ShinyButton, {
                 size: c.Button.Sizes.MEDIUM,
@@ -595,14 +657,14 @@ function f() {
         ]
     });
 }
-function I() {
+function O() {
     let [e, t] = s.useState(null),
         [n, r] = s.useState(null),
         [l, o] = s.useState([]),
         [d, u] = s.useState([]),
-        [h, g] = s.useState([]);
+        [m, h] = s.useState([]);
     return (0, i.jsxs)('div', {
-        className: m.searchableSelectExamples,
+        className: p.searchableSelectExamples,
         children: [
             (0, i.jsx)(c.Heading, {
                 variant: 'heading-xl/semibold',
@@ -632,8 +694,8 @@ function I() {
                 placeholder: 'Multi select (clearable)',
                 multi: !0,
                 clearable: !0,
-                value: h,
-                onChange: (e) => g(e),
+                value: m,
+                onChange: (e) => h(e),
                 options: a.G
             }),
             (0, i.jsx)(c.SearchableSelect, {
@@ -643,7 +705,7 @@ function I() {
                 onChange: (e) => u(e),
                 options: a.G,
                 hidePills: !0,
-                customPillContainerClassName: m.customPillContainer,
+                customPillContainerClassName: p.customPillContainer,
                 renderCustomPill: (e) =>
                     (0, i.jsx)('div', {
                         style: {
@@ -660,12 +722,12 @@ function I() {
         ]
     });
 }
-function N() {
+function R() {
     let [e, t] = s.useState(''),
         [n, r] = s.useState(''),
         [l, a] = s.useState('');
     return (0, i.jsxs)('div', {
-        className: m.section,
+        className: p.section,
         children: [
             (0, i.jsx)(c.Heading, {
                 variant: 'heading-xl/semibold',
@@ -729,14 +791,14 @@ function N() {
         ]
     });
 }
-function A() {
+function P() {
     let e = (0, o.e7)([d.Z], () => d.Z.gradientPreset);
     return (0, i.jsx)(c.ThemeProvider, {
-        theme: u.BR.DARKER,
+        theme: g.BR.DARKER,
         disableColorMixing: !0,
         children: (t) =>
             (0, i.jsxs)('div', {
-                className: l()(t, m.section),
+                className: l()(t, p.section),
                 children: [
                     (0, i.jsx)(c.Button, {
                         color: c.Button.Colors.PRIMARY,
@@ -745,10 +807,10 @@ function A() {
                         children: 'Button'
                     }),
                     (0, i.jsx)(c.ThemeProvider, {
-                        theme: u.BR.LIGHT,
+                        theme: g.BR.LIGHT,
                         children: (t) =>
                             (0, i.jsxs)('div', {
-                                className: l()(t, m.section),
+                                className: l()(t, p.section),
                                 children: [
                                     (0, i.jsx)(c.Button, {
                                         color: c.Button.Colors.PRIMARY,
@@ -757,10 +819,10 @@ function A() {
                                         children: 'Button'
                                     }),
                                     (0, i.jsx)(c.ThemeProvider, {
-                                        theme: u.BR.DARKER,
+                                        theme: g.BR.DARKER,
                                         children: (e) =>
                                             (0, i.jsx)('div', {
-                                                className: l()(e, m.section),
+                                                className: l()(e, p.section),
                                                 children: (0, i.jsx)(c.Button, {
                                                     color: c.Button.Colors.PRIMARY,
                                                     look: c.Button.Looks.FILLED,
@@ -773,7 +835,7 @@ function A() {
                                         gradient: e,
                                         children: (e) =>
                                             (0, i.jsx)('div', {
-                                                className: l()(e, m.section),
+                                                className: l()(e, p.section),
                                                 children: (0, i.jsx)(c.Button, {
                                                     color: c.Button.Colors.PRIMARY,
                                                     look: c.Button.Looks.FILLED,
