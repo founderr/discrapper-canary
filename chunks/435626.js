@@ -33,7 +33,7 @@ function w(e) {
     return (
         a.useEffect(() => {
             b.default.track(C.rMx.GIFT_CATEGORY_SELECT_MODAL_OPENED, {
-                ...s,
+                location: s,
                 location_stack: t
             });
         }, []),

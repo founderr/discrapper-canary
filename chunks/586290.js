@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return j;
     }
 }),
     n(724458),
@@ -20,12 +20,12 @@ var l = n(200651),
     x = n(388032),
     g = n(836471),
     p = n(410894),
-    j = n(113207);
-function v(e) {
+    v = n(113207);
+function j(e) {
     let { selectedSource: t, onChangeVideoDeviceSource: n, onChangeAudioDevice: r } = e;
     s()(null != t, 'Camera capture device cannot be null');
     let a = (0, m.Z)(),
-        v = (0, d.e7)([f.Z], () => f.Z.getInputDevices()),
+        j = (0, d.e7)([f.Z], () => f.Z.getInputDevices()),
         [C, S] = i.useState(
             (function (e, t, n) {
                 if (null != t && null != n) {
@@ -34,7 +34,7 @@ function v(e) {
                     let i = o().reduce(n, (e, t) => ((0, c.stringSimilarity)(l.name, t.name) > (0, c.stringSimilarity)(l.name, e.name) ? t : e));
                     if (null != i) return i.id;
                 }
-            })(t.id, a, v)
+            })(t.id, a, j)
         );
     return (
         null != C && r(C),
@@ -44,7 +44,7 @@ function v(e) {
                 className: p.modalContent,
                 children: [
                     (0, l.jsx)(u.FormItem, {
-                        className: j.marginTop8,
+                        className: v.marginTop8,
                         children: (0, l.jsxs)(h.Z, {
                             children: [
                                 (0, l.jsx)('span', {
@@ -62,15 +62,15 @@ function v(e) {
                         })
                     }),
                     (0, l.jsx)(u.FormItem, {
-                        className: j.marginTop8,
+                        className: v.marginTop8,
                         title: x.intl.string(x.t.y4ooen),
                         children: (0, l.jsx)(u.SingleSelect, {
                             value: C,
-                            className: j.__invalid_marginaTop8,
+                            className: v.__invalid_marginaTop8,
                             onChange: (e) => {
                                 S(e), r(e);
                             },
-                            options: o().map(v, (e) => {
+                            options: o().map(j, (e) => {
                                 let { id: t, name: n } = e;
                                 return {
                                     value: t,

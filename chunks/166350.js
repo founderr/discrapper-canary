@@ -1,12 +1,12 @@
 n.d(t, {
     NR: function () {
-        return s;
+        return i;
     },
     Ob: function () {
         return o;
     },
     ZI: function () {
-        return i;
+        return s;
     },
     m1: function () {
         return c;
@@ -17,7 +17,7 @@ n.d(t, {
 });
 var r = n(987170),
     a = n(987338);
-let s = (0, r.Z)({
+let i = (0, r.Z)({
         kind: 'user',
         id: '2024-07_ctp_collectibles_shop_open_vanilla',
         label: 'CTP collectibles shop open - A/A test - Vanilla',
@@ -31,7 +31,7 @@ let s = (0, r.Z)({
             }
         ]
     }),
-    i = (0, r.Z)({
+    s = (0, r.Z)({
         kind: 'user',
         id: '2024-07_ctp_collectibles_shop_open_filters',
         label: 'CTP collectibles shop open - A/A test - Filters',

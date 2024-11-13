@@ -5,9 +5,9 @@ n.d(t, {
 });
 var r = n(512722),
     a = n.n(r),
-    s = n(442837),
-    i = n(594174);
+    i = n(442837),
+    s = n(594174);
 let l = () => {
-    let e = (0, s.e7)([i.default], () => i.default.getCurrentUser());
+    let e = (0, i.e7)([s.default], () => s.default.getCurrentUser());
     return a()(null != e, 'user has signed in before accessing shop'), e;
 };

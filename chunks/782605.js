@@ -3,32 +3,32 @@ n.d(t, {
         return c;
     },
     l: function () {
-        return s;
+        return o;
     }
 });
 var i = n(594174),
     r = n(63063),
-    l = n(74538),
+    s = n(74538),
     a = n(981631),
-    o = n(388032);
-function s(e) {
+    l = n(388032);
+function o(e) {
     switch (e) {
         case a.evJ.TOO_MANY_USER_GUILDS:
             let t = i.default.getCurrentUser(),
-                n = l.ZP.canUseIncreasedGuildCap(t) || (null == t ? void 0 : t.isStaff()) ? a.tHP : a.DZw;
+                n = s.ZP.canUseIncreasedGuildCap(t) || (null == t ? void 0 : t.isStaff()) ? a.tHP : a.DZw;
             return {
-                title: o.intl.formatToPlainString(o.t['ttJ/ho'], { quantity: n }),
-                description: o.intl.string(o.t.iLyuDA)
+                title: l.intl.formatToPlainString(l.t['ttJ/ho'], { quantity: n }),
+                description: l.intl.string(l.t.iLyuDA)
             };
         case a.evJ.GUILD_AT_CAPACITY:
             return {
-                title: o.intl.string(o.t.ZZlox8),
-                description: o.intl.string(o.t.ZUEGFh)
+                title: l.intl.string(l.t.ZZlox8),
+                description: l.intl.string(l.t.ZUEGFh)
             };
         case a.evJ.GUILD_JOIN_INVITE_LIMITED_ACCESS:
             return {
-                title: o.intl.string(o.t.kJwpBQ),
-                description: o.intl.string(o.t.ZUEGFh)
+                title: l.intl.string(l.t.kJwpBQ),
+                description: l.intl.string(l.t.ZUEGFh)
             };
         default:
             return null;
@@ -37,16 +37,16 @@ function s(e) {
 function c(e) {
     switch (e) {
         case a.evJ.TOO_MANY_USER_GUILDS:
-            return o.intl.string(o.t.iLyuDA);
+            return l.intl.string(l.t.iLyuDA);
         case a.evJ.GUILD_AT_CAPACITY:
-            return o.intl.string(o.t.M6unND);
+            return l.intl.string(l.t.M6unND);
         case a.evJ.INVALID_COUNTRY_CODE:
-            return o.intl.string(o.t.sRJGR0);
+            return l.intl.string(l.t.sRJGR0);
         case a.evJ.INVALID_CANNOT_FRIEND_SELF:
-            return o.intl.string(o.t['mY2R+P']);
+            return l.intl.string(l.t['mY2R+P']);
         case a.evJ.INVITES_DISABLED:
-            return o.intl.format(o.t.RXSeLi, { articleLink: r.Z.getArticleURL(a.BhN.INVITE_DISABLED) });
+            return l.intl.format(l.t.RXSeLi, { articleLink: r.Z.getArticleURL(a.BhN.INVITE_DISABLED) });
         default:
-            return o.intl.string(o.t.dDZRd3);
+            return l.intl.string(l.t.dDZRd3);
     }
 }

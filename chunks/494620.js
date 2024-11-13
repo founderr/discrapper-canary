@@ -15,19 +15,19 @@ var a = n(120356),
     s = n(481060),
     c = n(179840);
 ((r = i || (i = {})).INFO = 'info'), (r.WARNING = 'warning');
-let d = {
+let u = {
         info: c.info,
         warning: c.warning
     },
-    u = {
+    d = {
         info: s.CircleInformationIcon,
         warning: s.CircleWarningIcon
     };
 function f(e) {
     let { children: t, className: n, look: r = 'info' } = e,
-        i = u[r];
+        i = d[r];
     return (0, o.jsxs)('div', {
-        className: l()(c.root, n, d[r]),
+        className: l()(c.root, n, u[r]),
         children: [
             (0, o.jsx)(i, {
                 className: c.icon,

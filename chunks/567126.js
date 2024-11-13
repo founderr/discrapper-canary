@@ -39,8 +39,8 @@ var l = n(200651),
     x = n(224706),
     g = n(579806),
     p = n(600164),
-    j = n(152708),
-    v = n(594190),
+    v = n(152708),
+    j = n(594190),
     C = n(569984),
     S = n(918701),
     _ = n(977156),
@@ -55,10 +55,10 @@ var l = n(200651),
     R = n(989941),
     M = n(958707),
     k = n(152165),
-    P = n(133179),
-    A = n(70722),
-    L = n(46140),
-    B = n(65154),
+    A = n(133179),
+    P = n(70722),
+    B = n(46140),
+    L = n(65154),
     G = n(388032),
     D = n(24548);
 async function O() {
@@ -120,7 +120,7 @@ async function O() {
     };
 }
 async function U() {
-    let e = v.ZP.getRunningGames();
+    let e = j.ZP.getRunningGames();
     return (
         await Promise.all(
             e.map(async (e) => {
@@ -146,25 +146,25 @@ async function U() {
     ).filter((e) => null !== e);
 }
 function F(e) {
-    let t = (0, N.isWindows)() ? (0, R.Z)(v.ZP, T.Z) : null,
-        n = v.ZP.getRunningGames();
+    let t = (0, N.isWindows)() ? (0, R.Z)(j.ZP, T.Z) : null,
+        n = j.ZP.getRunningGames();
     return null != t && (0, w.Z)(e.id, t.windowHandle) ? 2 : null != n.find((t) => (0, w.Z)(e.id, t.windowHandle)) ? 1 : 0;
 }
 function H(e) {
     let { selectedSource: t, onChangeSelectedSource: n } = e,
         { enableGoLiveCaptureCard: r } = b.Z.useExperiment({ location: 'GoLive_Source_Select' }),
-        a = I.Z.supports(B.AN.GO_LIVE_HARDWARE),
+        a = I.Z.supports(L.AN.GO_LIVE_HARDWARE),
         [o, c] = i.useState(null),
         [f, x] = i.useState(null),
         [g, T] = i.useState(null),
         N = null != g && g.length > 0,
         [y, E] = i.useState(d.vA.WINDOW),
         [R, k] = i.useState(!1),
-        A = i.useRef(null),
+        P = i.useRef(null),
         U = i.useRef(new h.Xp()),
-        H = (0, u.e7)([v.ZP], () => v.ZP.getRunningGames()),
+        H = (0, u.e7)([j.ZP], () => j.ZP.getRunningGames()),
         W = (function (e, t, n) {
-            let l = (0, _.Zy)({ location: L.dr.STREAM_SOURCE_SELECT });
+            let l = (0, _.Zy)({ location: B.dr.STREAM_SOURCE_SELECT });
             return i.useMemo(() => {
                 if (null == n || !l) return null;
                 for (let l of n) {
@@ -203,7 +203,7 @@ function H(e) {
         );
     }, []);
     let z = i.useCallback((e) => {
-            null !== e && ((A.current = e), k(!e.isScrolledToTop()));
+            null !== e && ((P.current = e), k(!e.isScrolledToTop()));
         }, []),
         K = (function (e) {
             switch (e) {
@@ -231,7 +231,7 @@ function H(e) {
                 className: s()(D.tile, { [D.selected]: r }),
                 onClick: () => n(e, null),
                 children: (0, l.jsx)(
-                    P.Z,
+                    A.Z,
                     {
                         source: e,
                         selectedSource: t
@@ -243,7 +243,7 @@ function H(e) {
         );
     });
     function X() {
-        let e = A.current;
+        let e = P.current;
         null != e && k(!e.isScrolledToTop());
     }
     return (0, l.jsxs)(i.Fragment, {
@@ -292,8 +292,8 @@ function H(e) {
                           ref: z,
                           className: D.sourceScroller,
                           onScroll: X,
-                          children: (0, l.jsx)(j.Z, {
-                              layout: j.Z.Layout.WRAP,
+                          children: (0, l.jsx)(v.Z, {
+                              layout: v.Z.Layout.WRAP,
                               columns: 2,
                               className: D.sourceContainer,
                               children: Y
@@ -306,8 +306,8 @@ function H(e) {
                       onScroll: X,
                       children: [
                           y === d.vA.WINDOW && null != W && (0, l.jsx)(Z.Z, { quest: W.quest }),
-                          (0, l.jsx)(j.Z, {
-                              layout: j.Z.Layout.WRAP,
+                          (0, l.jsx)(v.Z, {
+                              layout: v.Z.Layout.WRAP,
                               columns: 2,
                               className: D.sourceContainer,
                               children: Y
@@ -416,11 +416,11 @@ function z(e) {
             },
             [t, a]
         ),
-        f = (0, N.isMac)() && o().satisfies(null === g.Z || void 0 === g.Z ? void 0 : g.Z.os.release, A.jR),
+        f = (0, N.isMac)() && o().satisfies(null === g.Z || void 0 === g.Z ? void 0 : g.Z.os.release, P.jR),
         x = (0, N.isMac)(),
-        [p, j] = i.useState(!1),
-        v = i.useCallback(() => {
-            j(!p);
+        [p, v] = i.useState(!1),
+        j = i.useCallback(() => {
+            v(!p);
         }, [p]),
         C = f
             ? (0, l.jsx)(W, { onSelect: t })
@@ -468,7 +468,7 @@ function z(e) {
                       className: s()(D.nativePickerCaptureSection, p ? null : D.nativePickerCollapsed),
                       children: [
                           (0, l.jsxs)(m.Clickable, {
-                              onClick: v,
+                              onClick: j,
                               className: s()(D.nativePickerLabel),
                               children: [
                                   (0, l.jsx)(m.Text, {

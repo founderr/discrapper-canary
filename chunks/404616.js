@@ -43,8 +43,8 @@ var i = n(200651),
     _ = n(406432),
     S = n(169525),
     C = n(566006),
-    I = n(255269),
-    E = n(937889),
+    E = n(255269),
+    I = n(937889),
     j = n(443877),
     R = n(524444),
     N = n(287151),
@@ -56,8 +56,8 @@ var i = n(200651),
     w = n(699516),
     P = n(451478),
     L = n(55935),
-    k = n(109434),
-    U = n(456269),
+    U = n(109434),
+    k = n(456269),
     B = n(109590),
     D = n(660189),
     F = n(208970),
@@ -90,8 +90,8 @@ t.ZP = o.memo(function (e) {
             r()(null != i, 'the thread should not be null here, a store must have missed an update');
             let o = (0, h.e7)([A.ZP], () => A.ZP.getCurrentSidebarChannelId(i.parent_id) === i.id),
                 { firstMessage: a } = (0, B.cl)(i),
-                { content: s, firstMedia: l } = (0, U.mX)({ firstMessage: a }),
-                { messageCountText: c } = (0, U.nP)(i);
+                { content: s, firstMedia: l } = (0, k.mX)({ firstMessage: a }),
+                { messageCountText: c } = (0, k.nP)(i);
             return {
                 channel: i,
                 isOpen: o,
@@ -112,9 +112,9 @@ t.ZP = o.memo(function (e) {
         o.useEffect(() => {
             null == a || a(_.current, t);
         }, [_, a, t]);
-    let I = o.useRef(null),
-        { handleLeftClick: E, handleRightClick: j } = (0, K.Z)({
-            facepileRef: I,
+    let E = o.useRef(null),
+        { handleLeftClick: I, handleRightClick: j } = (0, K.Z)({
+            facepileRef: E,
             goToThread: n,
             channel: m
         }),
@@ -123,12 +123,12 @@ t.ZP = o.memo(function (e) {
     return (0, i.jsxs)('div', {
         ref: _,
         'data-item-id': t,
-        onClick: E,
+        onClick: I,
         onContextMenu: j,
         className: s()($.container, c, { [$.isOpen]: f }),
         children: [
             (0, i.jsx)(p.Clickable, {
-                onClick: E,
+                onClick: I,
                 focusProps: { ringTarget: _ },
                 onContextMenu: j,
                 'aria-label': q.intl.formatToPlainString(q.t.pgYN6e, {
@@ -157,7 +157,7 @@ t.ZP = o.memo(function (e) {
                         children: (0, i.jsx)(ea, {
                             channel: m,
                             firstMessage: b,
-                            facepileRef: I
+                            facepileRef: E
                         })
                     })
                 ]
@@ -173,7 +173,7 @@ t.ZP = o.memo(function (e) {
 });
 function en(e) {
     let { channel: t, firstMessage: n, content: o, hasMediaAttachment: a, containerWidth: l } = e,
-        { isNew: r, hasUnreads: c } = (0, U.J$)(t),
+        { isNew: r, hasUnreads: c } = (0, k.J$)(t),
         d = ei(t),
         { postTitleRef: u, isNewBadgeOverflow: h } = (0, J.x)(r, 24, l);
     return (0, i.jsxs)('div', {
@@ -235,7 +235,7 @@ function ei(e) {
         i = o.useMemo(() => (0, v.nC)(t && null != n ? n : ''), [t, n]);
     return o.useMemo(
         () =>
-            (0, E.ZP)(
+            (0, I.ZP)(
                 {
                     content: e.name,
                     embeds: []
@@ -289,7 +289,7 @@ let eo = o.memo(function (e) {
                     });
     }
     return (0, i.jsxs)(x.a.Provider, {
-        value: (0, I.Z)(u, d),
+        value: (0, E.Z)(u, d),
         children: [
             !r &&
                 (0, i.jsx)(G.Z, {
@@ -307,7 +307,7 @@ let eo = o.memo(function (e) {
 });
 function ea(e) {
     let { channel: t, facepileRef: n, firstMessage: o } = e,
-        a = (0, U.Q)(t),
+        a = (0, k.Q)(t),
         s = (null == o ? void 0 : o.reactions) != null && o.reactions.length > 0;
     return (0, i.jsxs)('div', {
         className: $.footer,
@@ -361,7 +361,7 @@ function ea(e) {
 }
 function es(e) {
     let { channel: t, iconSize: n, showReadState: o = !1 } = e,
-        { messageCountText: a, unreadCount: l } = (0, U.nP)(t);
+        { messageCountText: a, unreadCount: l } = (0, k.nP)(t);
     return (0, i.jsxs)('div', {
         className: s()($.messageCountBox, { [$.hasRead]: o && null == l }),
         children: [
@@ -398,7 +398,7 @@ function es(e) {
 function el(e) {
     let { firstMessage: t, channel: n } = e,
         o = (0, h.e7)([O.Z], () => O.Z.getChannel(n.parent_id)),
-        a = (0, U.Bs)(o),
+        a = (0, k.Bs)(o),
         { disableReactionCreates: s, isLurking: l, isPendingMember: r } = (0, j.Z)(n);
     return null == a || s
         ? null
@@ -423,7 +423,7 @@ function el(e) {
 function er(e) {
     var t;
     let { firstMessage: n, channel: o } = e,
-        a = (0, U.IN)(n),
+        a = (0, k.IN)(n),
         { disableReactionUpdates: s, isLurking: l, isPendingMember: r } = (0, j.Z)(o);
     return null == a
         ? null
@@ -447,8 +447,8 @@ function er(e) {
 function ec(e) {
     var t;
     let { channel: n } = e,
-        { sortOrder: o } = (0, k.H)(n.parent_id),
-        a = (0, U.xw)(n, o),
+        { sortOrder: o } = (0, U.H)(n.parent_id),
+        a = (0, k.xw)(n, o),
         s = null === (t = n.threadMetadata) || void 0 === t ? void 0 : t.createTimestamp,
         l = null == s ? null : q.intl.formatToPlainString(q.t['13euCQ'], { timestamp: (0, L.vc)(d()(s), 'LLLL') });
     return (0, i.jsx)(p.Tooltip, {
@@ -466,7 +466,7 @@ function ec(e) {
 }
 function ed(e) {
     let { channel: t, userIds: n, facepileRef: o } = e,
-        a = (0, U.iM)(t, n);
+        a = (0, k.iM)(t, n);
     return (0, i.jsx)('div', {
         ref: o,
         children: (0, i.jsx)(b.Z, {

@@ -7,8 +7,8 @@ n.d(t, {
 var r = n(200651);
 n(192379);
 var a = n(120356),
-    s = n.n(a),
-    i = n(481060),
+    i = n.n(a),
+    s = n(481060),
     l = n(937615),
     o = n(884697),
     c = n(747157);
@@ -29,7 +29,7 @@ let d = (e) => (e.length > 5 ? e.replace(/\.00$/, '') : e),
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
                               g,
-                              (0, r.jsx)(i.Heading, {
+                              (0, r.jsx)(s.Heading, {
                                   variant: f,
                                   color: 'text-positive',
                                   className: c.discount,
@@ -39,9 +39,9 @@ let d = (e) => (e.length > 5 ? e.replace(/\.00$/, '') : e),
                       })
                     : g;
         return (0, r.jsx)(r.Fragment, {
-            children: (0, r.jsxs)(i.Heading, {
+            children: (0, r.jsxs)(s.Heading, {
                 variant: f,
-                className: s()(c.container, h),
+                className: i()(c.container, h),
                 children: [m, null !== (t = null == u ? void 0 : u(C)) && void 0 !== t ? t : C]
             })
         });

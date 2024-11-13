@@ -18,8 +18,8 @@ var l = n(200651),
     x = n(565138),
     g = n(977059),
     p = n(695346),
-    j = n(494620),
-    v = n(592125),
+    v = n(494620),
+    j = n(592125),
     C = n(650774),
     S = n(430824),
     _ = n(131951),
@@ -34,10 +34,10 @@ var l = n(200651),
     R = n(989941),
     M = n(618407),
     k = n(586290),
-    P = n(233037),
-    A = n(810013),
-    L = n(537135),
-    B = n(641115),
+    A = n(233037),
+    P = n(810013),
+    B = n(537135),
+    L = n(641115),
     G = n(143135),
     D = n(70722),
     O = n(981631),
@@ -60,12 +60,12 @@ function V(e) {
                   return t === (null == g ? void 0 : g.id);
               })
             : c,
-        j = null != t && t.id.startsWith('screen') ? o.ScreenIcon : o.BrowserIcon;
+        v = null != t && t.id.startsWith('screen') ? o.ScreenIcon : o.BrowserIcon;
     return (0, l.jsx)(o.FormItem, {
         title: F.intl.string(F.t.TC7Ev7),
         className: W.modalContent,
         titleClassName: W.formItemTitleVerySlim,
-        children: (0, l.jsxs)(L.Z, {
+        children: (0, l.jsxs)(B.Z, {
             children: [
                 null != p
                     ? (0, l.jsx)(m.Z, {
@@ -73,7 +73,7 @@ function V(e) {
                           size: m.Z.Sizes.XSMALL,
                           className: H.selectedIcon
                       })
-                    : (0, l.jsx)(j, { className: H.selectedIcon }),
+                    : (0, l.jsx)(v, { className: H.selectedIcon }),
                 (0, l.jsx)('span', {
                     className: H.ellipsisText,
                     children: x
@@ -100,7 +100,7 @@ function z(e) {
               title: F.intl.string(F.t.WC3u3t),
               className: W.modalContent,
               titleClassName: W.formItemTitle,
-              children: (0, l.jsxs)(L.Z, {
+              children: (0, l.jsxs)(B.Z, {
                   children: [
                       (0, l.jsx)(x.Z, {
                           guild: i,
@@ -211,8 +211,8 @@ function J(e) {
     });
 }
 function q(e) {
-    let { selectedSource: t, selectedFPS: n, selectedChannelId: r, selectedPreset: s, selectedResolution: o, sourceChanged: d, selectedGuildId: f, targetGuildPremiumTier: h, selectSource: m, selectGuild: x, sound: p, previewDisabled: C, onClose: S, onChangeSelectedFPS: T, onChangeSelectedResolution: N, onChangeSelectedPreset: b, onChangeSelectedChannelId: y, onChangeSource: R, onChangeAudioDevice: L, onChangeGuild: G, onChangeSound: D, onChangePreviewDisabled: W } = e,
-        q = (0, a.e7)([Z.Z, v.Z], () => v.Z.getChannel(Z.Z.getVoiceChannelId())),
+    let { selectedSource: t, selectedFPS: n, selectedChannelId: r, selectedPreset: s, selectedResolution: o, sourceChanged: d, selectedGuildId: f, targetGuildPremiumTier: h, selectSource: m, selectGuild: x, sound: p, previewDisabled: C, onClose: S, onChangeSelectedFPS: T, onChangeSelectedResolution: N, onChangeSelectedPreset: b, onChangeSelectedChannelId: y, onChangeSource: R, onChangeAudioDevice: B, onChangeGuild: G, onChangeSound: D, onChangePreviewDisabled: W } = e,
+        q = (0, a.e7)([Z.Z, j.Z], () => j.Z.getChannel(Z.Z.getVoiceChannelId())),
         Q = (0, a.e7)([E.Z], () => E.Z.GPUDriversOutdated),
         $ = (0, a.e7)([E.Z], () => E.Z.problematicGPUDriver),
         ee = (0, a.e7)([I.default], () => I.default.getCurrentUser()),
@@ -229,7 +229,7 @@ function q(e) {
                 ? (0, l.jsx)(k.Z, {
                       selectedSource: t,
                       onChangeVideoDeviceSource: R,
-                      onChangeAudioDevice: L
+                      onChangeAudioDevice: B
                   })
                 : (0, l.jsxs)('div', {
                       children: [
@@ -256,8 +256,8 @@ function q(e) {
                   })
                 : null,
             null != q
-                ? (0, l.jsx)(A.Z, { channel: q })
-                : (0, l.jsx)(P.Z, {
+                ? (0, l.jsx)(P.Z, { channel: q })
+                : (0, l.jsx)(A.Z, {
                       guildId: f,
                       selectedChannelId: r,
                       onChangeSelectedChannelId: y
@@ -266,8 +266,8 @@ function q(e) {
             Q ? (0, l.jsx)(K, { text: F.intl.string(F.t.q65tS0) }) : null,
             $ ? (0, l.jsx)(K, { text: F.intl.format(F.t.RrLvub, { helpCenterLink: w.Z.getArticleURL(O.BhN.NVIDIA_DRIVER_ISSUES) }) }) : null,
             er &&
-                (0, l.jsx)(j.Z, {
-                    look: j.z.WARNING,
+                (0, l.jsx)(v.Z, {
+                    look: v.z.WARNING,
                     className: H.hardwareWarning,
                     children: F.intl.format(F.t.zCLXws, {
                         onClick: () => {
@@ -275,7 +275,7 @@ function q(e) {
                         }
                     })
                 }),
-            (0, l.jsx)(B.Z, {
+            (0, l.jsx)(L.Z, {
                 selectedPreset: s,
                 selectedFPS: n,
                 selectedResolution: o,

@@ -26,8 +26,8 @@ var i = n(200651),
     _ = n(843693),
     S = n(246642),
     C = n(921227),
-    I = n(314897),
-    E = n(430824),
+    E = n(314897),
+    I = n(430824),
     j = n(496675),
     R = n(699516),
     N = n(885110),
@@ -39,8 +39,8 @@ var i = n(200651),
     w = n(585483),
     P = n(70956),
     L = n(823379),
-    k = n(5192),
-    U = n(981631),
+    U = n(5192),
+    k = n(981631),
     B = n(388032),
     D = n(443236);
 function F(e, t, n) {
@@ -70,7 +70,7 @@ class H extends o.PureComponent {
         let e = this.props.activity.application_id;
         null != e &&
             -1 === V.indexOf(e) &&
-            (M.default.track(U.rMx.SHOW_TUTORIAL, {
+            (M.default.track(k.rMx.SHOW_TUTORIAL, {
                 tutorial: 'activity-invite-nux-inline',
                 application_id: e
             }),
@@ -116,10 +116,10 @@ function G(e) {
 }
 class W extends o.PureComponent {
     componentDidMount() {
-        w.S.subscribe(U.CkL.EMPHASIZE_SLOWMODE_COOLDOWN, this.emphasizeSlowmodeCooldown);
+        w.S.subscribe(k.CkL.EMPHASIZE_SLOWMODE_COOLDOWN, this.emphasizeSlowmodeCooldown);
     }
     componentWillUnmount() {
-        w.S.unsubscribe(U.CkL.EMPHASIZE_SLOWMODE_COOLDOWN, this.emphasizeSlowmodeCooldown);
+        w.S.unsubscribe(k.CkL.EMPHASIZE_SLOWMODE_COOLDOWN, this.emphasizeSlowmodeCooldown);
     }
     getCooldownTextStyle() {
         let { color: e } = this.state,
@@ -135,18 +135,18 @@ class W extends o.PureComponent {
         let e, t;
         let { guildId: n, activity: o, showInviteEducation: a, isFocused: l, typingUsers: c, className: h, slowmodeCooldownGuess: m, isBypassSlowmode: p, channel: g, isThreadCreation: v, renderDots: b, poggermodeEnabled: x, isComboing: _ } = this.props,
             { rateLimitPerUser: C } = g,
-            I = A.default.getCurrentUser(),
-            j = E.Z.getGuild(n),
+            E = A.default.getCurrentUser(),
+            j = I.Z.getGuild(n),
             N = C > 0,
             Z = v
                 ? []
                 : r()(c)
                       .keys()
-                      .filter((e) => e !== (null == I ? void 0 : I.id))
+                      .filter((e) => e !== (null == E ? void 0 : E.id))
                       .reject((e) => R.Z.isBlockedOrIgnored(e))
                       .map((e) => A.default.getUser(e))
                       .filter(L.lm)
-                      .map((e) => k.ZP.getName(n, this.props.channel.id, e))
+                      .map((e) => U.ZP.getName(n, this.props.channel.id, e))
                       .value();
         if (0 === Z.length && !N && !_)
             return a && null != o
@@ -181,7 +181,7 @@ class W extends o.PureComponent {
                 }
             } else 0 === Z.length && (e = p ? B.intl.string(B.t.SSzXvb) : B.intl.string(B.t.Icu3bW));
         }
-        let [M, w, U] = Z;
+        let [M, w, k] = Z;
         return (
             (t =
                 0 === Z.length
@@ -197,7 +197,7 @@ class W extends o.PureComponent {
                           ? B.intl.format(B.t.StKTho, {
                                 a: M,
                                 b: w,
-                                c: U
+                                c: k
                             })
                           : B.intl.string(B.t.uVDhqa)),
             (0, i.jsxs)('div', {
@@ -268,10 +268,10 @@ class W extends o.PureComponent {
 function z(e) {
     let { channel: t, isThreadCreation: n = !1, ...o } = e,
         a = (0, m.e7)([N.Z], () => N.Z.findActivity((e) => null != e.application_id)),
-        s = (0, m.e7)([_.ZP, I.default], () => _.ZP.getUserCombo(I.default.getId(), t.id)),
+        s = (0, m.e7)([_.ZP, E.default], () => _.ZP.getUserCombo(E.default.getId(), t.id)),
         l = (0, m.e7)([C.Z, b.Z], () => (0, v.Z)(t, a, C.Z, b.Z)),
         r = (0, m.e7)([Z.Z], () => Z.Z.getSlowmodeCooldownGuess(t.id, n ? Z.S.CreateThread : Z.S.SendMessage)),
-        c = (0, m.e7)([j.Z], () => (n ? j.Z.can(U.Plq.MANAGE_THREADS, t) : j.Z.can(U.Plq.MANAGE_CHANNELS, t) || j.Z.can(U.Plq.MANAGE_MESSAGES, t))),
+        c = (0, m.e7)([j.Z], () => (n ? j.Z.can(k.Plq.MANAGE_THREADS, t) : j.Z.can(k.Plq.MANAGE_CHANNELS, t) || j.Z.can(k.Plq.MANAGE_MESSAGES, t))),
         d = {
             ...o,
             baseTextColor: (0, f.useToken)(p.Z.colors.INTERACTIVE_NORMAL).hex(),

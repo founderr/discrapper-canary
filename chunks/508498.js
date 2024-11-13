@@ -10,18 +10,18 @@ n.d(t, {
     n(47120);
 var r,
     a,
-    s = n(192379),
-    i = n(512969),
+    i = n(192379),
+    s = n(512969),
     l = n(37234),
     o = n(703656),
     c = n(981631);
 function d() {
-    let { search: e } = (0, i.TH)(),
-        t = (0, i.UO)(),
-        n = s.useMemo(() => new URLSearchParams(e), [e]).get('source'),
+    let { search: e } = (0, s.TH)(),
+        t = (0, s.UO)(),
+        n = i.useMemo(() => new URLSearchParams(e), [e]).get('source'),
         r = null != n ? parseInt(n, 10) : null;
     return {
-        onClose: s.useCallback(() => {
+        onClose: i.useCallback(() => {
             if (0 === r) {
                 (0, o.op)(), (0, l.jN)(c.S9g.USER_SETTINGS);
                 return;

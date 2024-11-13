@@ -1,32 +1,32 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
-var i = n(200651);
-n(192379);
-var r = n(481060),
-    l = n(422034),
-    a = n(938475),
-    o = n(858836);
-function s(e) {
-    let { channel: t } = e;
-    if (null == t) return null;
-    let n = a.ZP.getVoiceStatesForChannel(t).slice(0, 6),
-        s = n.map((e, t) => {
-            let { user: a } = e;
-            return (0, i.jsx)(
-                l.O,
+var l = t(200651);
+t(192379);
+var i = t(481060),
+    r = t(422034),
+    s = t(938475),
+    a = t(858836);
+function o(e) {
+    let { channel: n } = e;
+    if (null == n) return null;
+    let t = s.ZP.getVoiceStatesForChannel(n).slice(0, 6),
+        o = t.map((e, n) => {
+            let { user: s } = e;
+            return (0, l.jsx)(
+                r.O,
                 {
-                    affinity: a,
-                    applyMask: t !== n.length - 1,
-                    size: r.AvatarSizes.SIZE_20
+                    affinity: s,
+                    applyMask: n !== t.length - 1,
+                    size: i.AvatarSizes.SIZE_20
                 },
-                a.id
+                s.id
             );
         });
-    return (0, i.jsx)('div', {
-        className: o.avatars,
-        children: s
+    return (0, l.jsx)('div', {
+        className: a.avatars,
+        children: o
     });
 }

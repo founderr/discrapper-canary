@@ -1,9 +1,9 @@
-n.d(t, {
+t.d(n, {
     j: function () {
-        return r;
+        return i;
     }
 });
-let i = (0, n(818083).B)({
+let l = (0, t(818083).B)({
         kind: 'user',
         id: '2024-10_consumables_hd_streaming',
         label: 'Consumable HD Streaming Experiment',
@@ -21,4 +21,4 @@ let i = (0, n(818083).B)({
             }
         ]
     }),
-    r = (e) => i.useExperiment({ location: e }).enabled;
+    i = (e) => l.useExperiment({ location: e }).enabled;

@@ -1,6 +1,6 @@
 n.d(t, {
     T: function () {
-        return i;
+        return s;
     },
     v: function () {
         return l;
@@ -9,9 +9,9 @@ n.d(t, {
 var r = n(200651);
 n(192379);
 var a = n(481060);
-let s = 'collectibles shop product details modal',
-    i = (e) => {
-        let { product: t, category: i, analyticsSource: l, analyticsLocations: o, returnRef: c } = e;
+let i = 'collectibles shop product details modal',
+    s = (e) => {
+        let { product: t, category: s, analyticsSource: l, analyticsLocations: o, returnRef: c } = e;
         (0, a.openModalLazy)(
             async () => {
                 let { default: e } = await n.e('2026').then(n.bind(n, 702370));
@@ -19,15 +19,15 @@ let s = 'collectibles shop product details modal',
                     (0, r.jsx)(e, {
                         ...n,
                         product: t,
-                        category: i,
+                        category: s,
                         analyticsSource: l,
                         analyticsLocations: o,
                         returnRef: c
                     });
             },
-            { modalKey: s }
+            { modalKey: i }
         );
     },
     l = () => {
-        (0, a.closeModal)(s);
+        (0, a.closeModal)(i);
     };

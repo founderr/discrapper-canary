@@ -23,9 +23,9 @@ function b(e) {
     let { messageId: t, emoji: n, startPosition: b, targetPosition: T } = e,
         [x, _] = o.useState(0),
         [S, C] = o.useState(0),
-        [I, E] = o.useState(null),
+        [E, I] = o.useState(null),
         { confettiCanvas: j } = o.useContext(d.h),
-        R = (0, a.uR)(j, I),
+        R = (0, a.uR)(j, E),
         N = o.useMemo(
             () => [
                 {
@@ -97,7 +97,7 @@ function b(e) {
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(a.Ji, {
-                    ref: E,
+                    ref: I,
                     sprites: N,
                     colors: v,
                     spriteWidth: f.Ko,

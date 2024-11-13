@@ -5,8 +5,8 @@ n.d(t, {
 });
 var r = n(200651),
     a = n(192379),
-    s = n(120356),
-    i = n.n(s),
+    i = n(120356),
+    s = n.n(i),
     l = n(442837),
     o = n(780384),
     c = n(481060),
@@ -19,7 +19,7 @@ var r = n(200651),
     g = n(388032),
     C = n(454801);
 function b(e) {
-    let { isFullScreen: t, isLayer: n, onClose: s, isCatalogView: b, handleTransition: x, transparent: v } = e,
+    let { isFullScreen: t, isLayer: n, onClose: i, isCatalogView: b, handleTransition: x, transparent: v } = e,
         _ = (0, u.ZP)(),
         k = (0, l.e7)([h.default], () => h.default.getCurrentUser()),
         j = (null == k ? void 0 : k.isStaff()) || (null == k ? void 0 : k.isStaffPersonal()) || !1;
@@ -27,7 +27,7 @@ function b(e) {
         theme: _,
         children: (e) =>
             (0, r.jsxs)(m.Z, {
-                className: i()(e, C.headerBar, {
+                className: s()(e, C.headerBar, {
                     [C.fullscreenHeaderBar]: t,
                     [C.headerBarRegularBackground]: !v,
                     [C.headerBarTransparentLightBackground]: v && !(0, o.wj)(_),
@@ -61,7 +61,7 @@ function b(e) {
                     t &&
                         (0, r.jsx)(d.Z, {
                             className: C.closeIcon,
-                            closeAction: n ? f.DR : s,
+                            closeAction: n ? f.DR : i,
                             keybind: 'ESC'
                         })
                 ]

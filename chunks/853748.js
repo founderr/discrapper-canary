@@ -6,8 +6,8 @@ n.d(t, {
     n(653041);
 var r = n(200651),
     a = n(192379),
-    s = n(120356),
-    i = n.n(s),
+    i = n(120356),
+    s = n.n(i),
     l = n(100621),
     o = n(873546),
     c = n(481060),
@@ -18,12 +18,12 @@ var r = n(200651),
     p = n(585616);
 function f(e) {
     let { endDate: t } = e,
-        { days: n, hours: a, minutes: s, seconds: i } = (0, d.Z)(t),
+        { days: n, hours: a, minutes: i, seconds: s } = (0, d.Z)(t),
         l = (function (e, t, n, r) {
             let a = (e, t) => ''.concat(e.toString().padStart(2, '0')).concat(t),
-                s = [];
-            return e > 0 && s.push(a(e, u.intl.string(u.t.QJyuxc))), (t > 0 || s.length > 0) && s.push(a(t, u.intl.string(u.t['1LyF1t']))), (n > 0 || s.length > 0) && s.push(a(n, u.intl.string(u.t.n7dksL))), s.push(a(r, u.intl.string(u.t['6m/6nJ']))), s.join(':');
-        })(n, a, s, i);
+                i = [];
+            return e > 0 && i.push(a(e, u.intl.string(u.t.QJyuxc))), (t > 0 || i.length > 0) && i.push(a(t, u.intl.string(u.t['1LyF1t']))), (n > 0 || i.length > 0) && i.push(a(n, u.intl.string(u.t.n7dksL))), i.push(a(r, u.intl.string(u.t['6m/6nJ']))), i.join(':');
+        })(n, a, i, s);
     return (0, r.jsx)(c.Text, {
         variant: 'heading-md/medium',
         className: m.countdown,
@@ -36,7 +36,7 @@ function f(e) {
     });
 }
 let g = a.memo(function (e) {
-    let { unpublishedAt: t, isVisible: n, displayOptions: a, isFullScreen: s } = e,
+    let { unpublishedAt: t, isVisible: n, displayOptions: a, isFullScreen: i } = e,
         d = (0, c.useSpring)({
             transform: 'translateX(-50%) '.concat(n ? 'translateY(-75%)' : 'translateY(0%)'),
             opacity: n ? 1 : 0,
@@ -46,7 +46,7 @@ let g = a.memo(function (e) {
             }
         });
     return (0, r.jsxs)(l.animated.div, {
-        className: i()([m.countDownWrapper, s && m.fullScreenWrapper, o.tq && m.mobileWrapper]),
+        className: s()([m.countDownWrapper, i && m.fullScreenWrapper, o.tq && m.mobileWrapper]),
         role: 'status',
         style: {
             ...a.style,
@@ -68,13 +68,13 @@ let g = a.memo(function (e) {
             (0, r.jsx)(f, { endDate: t }),
             (0, r.jsx)('img', {
                 src: h.Z,
-                className: i()(m.sparkles, m.left),
+                className: s()(m.sparkles, m.left),
                 alt: '',
                 'aria-hidden': !0
             }),
             (0, r.jsx)('img', {
                 src: p.Z,
-                className: i()(m.sparkles, m.right),
+                className: s()(m.sparkles, m.right),
                 alt: '',
                 'aria-hidden': !0
             })

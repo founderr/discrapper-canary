@@ -1,7 +1,7 @@
 var r = n(200651),
     a = n(192379),
-    s = n(481060),
-    i = n(727637),
+    i = n(481060),
+    s = n(727637),
     l = n(906732),
     o = n(241553),
     c = n(333867),
@@ -76,21 +76,21 @@ t.Z = (e) => {
     let { product: t, returnRef: n, onSuccess: g, tooltipDelay: C, isGiftEasterEggEnabled: b, disableCustomColor: x = !1 } = e,
         { analyticsLocations: v } = (0, l.ZP)(),
         _ = a.useRef(null),
-        k = (0, i.Z)(_),
+        k = (0, s.Z)(_),
         j = x ? m.BR.DARK : m.BR.LIGHT;
     return (0, d.x6)(t)
         ? null
-        : (0, r.jsx)(s.Tooltip, {
+        : (0, r.jsx)(i.Tooltip, {
               text: h.intl.string(h.t['JCFN//']),
               delay: C,
               children: (e) =>
-                  (0, r.jsx)(s.Button, {
+                  (0, r.jsx)(i.Button, {
                       ...e,
                       buttonRef: _,
                       className: p.giftButton,
-                      color: x ? s.ButtonColors.BRAND : s.ButtonColors.CUSTOM,
-                      look: s.Button.Looks.FILLED,
-                      size: s.ButtonSizes.ICON,
+                      color: x ? i.ButtonColors.BRAND : i.ButtonColors.CUSTOM,
+                      look: i.Button.Looks.FILLED,
+                      size: i.ButtonSizes.ICON,
                       innerClassName: p.giftButtonInner,
                       'aria-label': h.intl.string(h.t.PEjaCw),
                       onClick: (e) => {
@@ -116,7 +116,7 @@ t.Z = (e) => {
                                 themeOverride: j,
                                 boxColors: f
                             })
-                          : (0, r.jsx)(s.GiftIcon, {
+                          : (0, r.jsx)(i.GiftIcon, {
                                 size: 'md',
                                 color: 'currentColor'
                             })

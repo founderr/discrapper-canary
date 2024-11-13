@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(200651);
 n(192379);
 var a = n(120356),
-    s = n.n(a),
-    i = n(481060),
+    i = n.n(a),
+    s = n(481060),
     l = n(884697),
     o = n(409116),
     c = n(200615),
@@ -20,7 +20,7 @@ function h(e) {
     if (null == f) return null;
     if (f.amount <= 0)
         return (0, r.jsx)('div', {
-            className: s()(m.priceTagsContainer, h),
+            className: i()(m.priceTagsContainer, h),
             children: (0, r.jsx)(o.F, { price: f })
         });
     let g = (0, l.ql)(t, d.tuJ.PREMIUM_TIER_2),
@@ -33,12 +33,12 @@ function h(e) {
                   }
                 : f;
     return (0, r.jsxs)('div', {
-        className: s()(m.priceTagsContainer, h),
+        className: i()(m.priceTagsContainer, h),
         children: [
             (0, r.jsx)(o.F, {
                 price: b,
                 discount: n ? l.f_ : a,
-                className: s()(m.price, {
+                className: i()(m.price, {
                     [m.striked]: n,
                     [m.dimmed]: n,
                     [m.fullPrice]: C
@@ -50,7 +50,7 @@ function h(e) {
                     discount: n ? a : l.f_,
                     renderPrice: p
                         ? (e) =>
-                              (0, r.jsx)(i.Text, {
+                              (0, r.jsx)(s.Text, {
                                   variant: 'text-xs/medium',
                                   children: u.intl.format(u.t.Sv8iiY, {
                                       price: e,
@@ -60,21 +60,21 @@ function h(e) {
                         : C
                           ? (e) => u.intl.formatToPlainString(u.t.W3gIWF, { price: e })
                           : void 0,
-                    className: s()(m.price, {
+                    className: i()(m.price, {
                         [m.dimmed]: !n,
                         [m.fullPrice]: C
                     }),
                     variant: n ? void 0 : 'text-xs/semibold',
-                    icon: (0, r.jsx)(i.Tooltip, {
+                    icon: (0, r.jsx)(s.Tooltip, {
                         text: u.intl.string(u.t.MPFyJy),
                         'aria-label': u.intl.string(u.t.X3Ekj4),
                         children: (e) => {
                             let { ...t } = e;
-                            return (0, r.jsx)(i.NitroWheelIcon, {
+                            return (0, r.jsx)(s.NitroWheelIcon, {
                                 size: 'md',
                                 color: 'currentColor',
                                 ...t,
-                                className: s()(m.premiumIcon, { [m.fullPrice]: C })
+                                className: i()(m.premiumIcon, { [m.fullPrice]: C })
                             });
                         }
                     })

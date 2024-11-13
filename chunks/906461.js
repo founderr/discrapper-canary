@@ -41,7 +41,7 @@ t.Z = function (e) {
                             (0, i.jsx)(s.Heading, {
                                 variant: 'display-sm',
                                 color: 'always-white',
-                                children: p.intl.string(p.t.Kkcmj4)
+                                children: p.intl.string(p.t.krjl8v)
                             }),
                             (0, i.jsx)(s.Text, {
                                 className: _.countdown,

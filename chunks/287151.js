@@ -34,8 +34,8 @@ var i,
     _ = n(339085),
     S = n(906411),
     C = n(56314),
-    I = n(231053),
-    E = n(944386),
+    E = n(231053),
+    I = n(944386),
     j = n(305325),
     R = n(33154),
     N = n(692147),
@@ -47,8 +47,8 @@ var i,
     w = n(592125),
     P = n(430824),
     L = n(542578),
-    k = n(914010),
-    U = n(594174),
+    U = n(914010),
+    k = n(594174),
     B = n(451478),
     D = n(626135),
     F = n(74538),
@@ -123,7 +123,7 @@ class el extends (i = a.PureComponent) {
     }
     render() {
         let e, t;
-        let { count: n, burst_count: i, colors: a, isBurstReaction: s, hideCount: r, emoji: u, readOnly: h, isLurking: f, isGuest: g, isPendingMember: b, className: T, useChatFontScaling: _, message: S, hideEmoji: C, animationStartPosition: I, emojiSize: E } = this.props,
+        let { count: n, burst_count: i, colors: a, isBurstReaction: s, hideCount: r, emoji: u, readOnly: h, isLurking: f, isGuest: g, isPendingMember: b, className: T, useChatFontScaling: _, message: S, hideEmoji: C, animationStartPosition: E, emojiSize: I } = this.props,
             { shouldShowTooltip: j, tooltipTextAria: R, reactionRef: Z, tooltipPositionKey: y } = this.state,
             A = _ ? et : ee,
             M = {
@@ -138,8 +138,8 @@ class el extends (i = a.PureComponent) {
             this.isMe() && (M.borderColor = i), (M.background = s), (e = n), (t = n);
         }
         let L = null == Z ? void 0 : Z.getBoundingClientRect(),
-            k = null != I && null != L,
-            U = null == I;
+            U = null != E && null != L,
+            k = null == E;
         return (0, o.jsx)(o.Fragment, {
             children: (0, o.jsx)(m.Popout, {
                 shouldShow: j,
@@ -158,7 +158,7 @@ class el extends (i = a.PureComponent) {
                             className: l()(A.reaction, T, {
                                 [A.reactionMe]: this.isMe(),
                                 [A.reactionReadOnly]: h && !f && !b && !g,
-                                [A.shakeReaction]: C && null == I
+                                [A.shakeReaction]: C && null == E
                             }),
                             style: M,
                             children: (0, o.jsx)(m.Popout, {
@@ -182,14 +182,14 @@ class el extends (i = a.PureComponent) {
                                                     s
                                                         ? (0, o.jsxs)(o.Fragment, {
                                                               children: [
-                                                                  k &&
+                                                                  U &&
                                                                       (0, o.jsx)(x.Z, {
                                                                           messageId: S.id,
                                                                           emoji: u,
-                                                                          startPosition: I,
+                                                                          startPosition: E,
                                                                           targetPosition: L
                                                                       }),
-                                                                  U &&
+                                                                  k &&
                                                                       (0, o.jsx)(X.Z, {
                                                                           count: i,
                                                                           emoji: u,
@@ -197,7 +197,7 @@ class el extends (i = a.PureComponent) {
                                                                           messageId: S.id,
                                                                           useChatFontScaling: _,
                                                                           color: t,
-                                                                          emojiSize: 'reactionLarge' === E ? K.M.NORMAL_NEW : K.M.NORMAL
+                                                                          emojiSize: 'reactionLarge' === I ? K.M.NORMAL_NEW : K.M.NORMAL
                                                                       })
                                                               ]
                                                           })
@@ -206,7 +206,7 @@ class el extends (i = a.PureComponent) {
                                                         className: l()({ [A.hideEmoji]: C }),
                                                         emojiId: u.id,
                                                         emojiName: u.name,
-                                                        size: E,
+                                                        size: I,
                                                         animated: u.animated
                                                     })
                                                 ]
@@ -409,7 +409,7 @@ class el extends (i = a.PureComponent) {
                                   })
                               }),
                               (() => {
-                                  let e = U.default.getCurrentUser();
+                                  let e = k.default.getCurrentUser();
                                   if (i)
                                       return (0, o.jsxs)('div', {
                                           className: l()(en.burstReactionTooltipPrompt, en.burstReactionTooltipSpacer),
@@ -512,7 +512,7 @@ class el extends (i = a.PureComponent) {
             }),
             ei(this, 'trackReactionTooltipViewed', () => {
                 let { emoji: e, message: t, type: n } = this.props,
-                    i = U.default.getCurrentUser(),
+                    i = k.default.getCurrentUser(),
                     o = w.Z.getChannel(t.getChannelId()),
                     a = n === H.O.BURST,
                     s = (0, F.I5)(i),
@@ -549,7 +549,7 @@ let er = a.memo((e) => {
             r = (0, u.e7)([V.Z], () => void 0 !== V.Z.getEffectForEmojiId(i.getChannelId(), i.id, a)),
             c = (0, u.e7)([g.Z], () => g.Z.useReducedMotion),
             d = M.Yk.useSetting(),
-            h = U.default.getCurrentUser(),
+            h = k.default.getCurrentUser(),
             m = (0, F.I5)(h),
             p = (0, u.e7)([V.Z], () => V.Z.getReactionPickerAnimation(i.id, a.name, a.id)),
             f = s && (r || null != p);
@@ -567,7 +567,7 @@ let er = a.memo((e) => {
     ec = (e) => {
         var t, n, i;
         let { emojiId: a, expressionSourceGuild: s, hasJoinedExpressionSourceGuild: l, onClose: r, popoutData: c, currentGuildId: d, nonce: u } = e;
-        (0, E.u)({
+        (0, I.u)({
             emojiId: a,
             currentGuildId: d,
             popoutData: c,
@@ -621,12 +621,12 @@ let er = a.memo((e) => {
             [g, v] = a.useState(null),
             [b, T] = a.useState(!1),
             [x, C] = a.useState(!1),
-            [E, j] = a.useState(!1),
+            [I, j] = a.useState(!1),
             R = null != c,
             N = null !== (t = null == d ? void 0 : d.isDiscoverable()) && void 0 !== t && t,
-            Z = k.Z.getGuildId(),
+            Z = U.Z.getGuildId(),
             y = null != Z && (Z === (null == d ? void 0 : d.id) || Z === (null == c ? void 0 : c.id)),
-            A = U.default.getCurrentUser(),
+            A = k.default.getCurrentUser(),
             O = (0, G.a)({
                 sourceType: g,
                 expressionSourceApplication: null != p ? p : null,
@@ -640,22 +640,22 @@ let er = a.memo((e) => {
                 shouldHideRoleSubscriptionCTA: !1
             });
         a.useEffect(() => {
-            if (!!b && !E)
+            if (!!b && !I)
                 (async () => {
                     i(), C(!0);
-                    let e = null != n ? await (0, I.Fi)(n) : null;
+                    let e = null != n ? await (0, E.Fi)(n) : null;
                     if (null != e)
                         switch ((v(e.type), e.type)) {
-                            case I.w6.APPLICATION:
+                            case E.w6.APPLICATION:
                                 f(e.application);
                                 break;
-                            case I.w6.GUILD:
+                            case E.w6.GUILD:
                                 h(e.guild);
                         }
                     else h(null);
                     C(!1), j(!0), i();
                 })();
-        }, [n, b, E, i]);
+        }, [n, b, I, i]);
         if (R) return null;
         let M = () => {
                 T(!b);

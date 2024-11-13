@@ -20,15 +20,15 @@ var i = n(442837),
 function g(e) {
     let { selectedChannelId: t, guildId: n, onChangeSelectedChannelId: g } = e,
         p = (0, i.e7)([c.default], () => c.default.getCurrentUser()),
-        j = (0, i.e7)([a.Z, s.ZP, o.Z], () => (0, u.h_)(s.ZP.getChannels(n), a.Z, o.Z)),
-        v = (0, i.e7)([d.ZP], () => d.ZP.getVoiceStates(n)),
-        C = j.map((e) => {
+        v = (0, i.e7)([a.Z, s.ZP, o.Z], () => (0, u.h_)(s.ZP.getChannels(n), a.Z, o.Z)),
+        j = (0, i.e7)([d.ZP], () => d.ZP.getVoiceStates(n)),
+        C = v.map((e) => {
             var n;
             return {
                 name: (0, l.jsx)(f.Z, {
                     channel: e,
                     users:
-                        null === (n = v[e.id]) || void 0 === n
+                        null === (n = j[e.id]) || void 0 === n
                             ? void 0
                             : n
                                   .filter((e) => {

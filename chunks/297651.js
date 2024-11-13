@@ -6,16 +6,16 @@ n.d(t, {
     n(47120);
 var r = n(192379),
     a = n(626135),
-    s = n(74538),
-    i = n(381585),
+    i = n(74538),
+    s = n(381585),
     l = n(884697),
     o = n(819490),
     c = n(82892),
     d = n(981631);
 function u(e, t) {
-    let n = (0, i.sp)(),
+    let n = (0, s.sp)(),
         u = (0, c.x)(),
-        m = s.ZP.canUseCollectibles(u),
+        m = i.ZP.canUseCollectibles(u),
         h = r.useRef(null),
         [p, f] = r.useState(!1),
         [g, C] = r.useState(!1),
@@ -37,13 +37,13 @@ function u(e, t) {
         r.useEffect(() => {
             if (g && b) {
                 let r = (0, l.Vw)(e, m, !1),
-                    s = (0, l.eu)(e, m, !1);
+                    i = (0, l.eu)(e, m, !1);
                 a.default.track(d.rMx.COLLECTIBLES_TILE_IMPRESSION, {
                     collectibles_shop_session_id: null == n ? void 0 : n.sessionId,
                     sku_id: e.skuId,
                     display_price: null == r ? void 0 : r.amount,
                     display_price_currency: null == r ? void 0 : r.currency.toString(),
-                    display_price_strikethrough: s,
+                    display_price_strikethrough: i,
                     position: null == n ? void 0 : n.tilePosition,
                     page_type: t,
                     page_category: null == n ? void 0 : n.pageCategory,

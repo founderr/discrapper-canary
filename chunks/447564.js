@@ -1,191 +1,191 @@
-n.r(t),
-    n.d(t, {
+t.r(n),
+    t.d(n, {
         HD_STREAMING_POTION_MODAL_KEY: function () {
-            return T;
+            return N;
         },
         default: function () {
-            return N;
+            return E;
         }
     }),
-    n(47120);
-var i = n(200651),
-    r = n(192379),
-    l = n(442837),
-    a = n(692547),
-    o = n(481060),
-    s = n(100527),
-    c = n(906732),
-    d = n(335131),
-    u = n(120619),
-    m = n(955843),
-    h = n(688465),
-    f = n(690221),
-    p = n(333867),
-    _ = n(937615),
-    g = n(82950),
-    E = n(981631),
-    C = n(215023),
-    I = n(388032),
-    x = n(912568),
-    v = n(99713);
-function N(e) {
-    let { transitionState: t, channel: n } = e;
-    return (0, i.jsx)(o.ModalRoot, {
-        size: o.ModalSize.DYNAMIC,
-        transitionState: t,
-        children: (0, i.jsx)(S, { channel: n })
+    t(47120);
+var l = t(200651),
+    i = t(192379),
+    r = t(442837),
+    s = t(692547),
+    a = t(481060),
+    o = t(100527),
+    c = t(906732),
+    d = t(335131),
+    u = t(120619),
+    m = t(955843),
+    f = t(688465),
+    h = t(690221),
+    x = t(333867),
+    g = t(937615),
+    v = t(82950),
+    j = t(981631),
+    p = t(215023),
+    Z = t(388032),
+    b = t(912568),
+    C = t(99713);
+function E(e) {
+    let { transitionState: n, channel: t } = e;
+    return (0, l.jsx)(a.ModalRoot, {
+        size: a.ModalSize.DYNAMIC,
+        transitionState: n,
+        children: (0, l.jsx)(T, { channel: t })
     });
 }
-let T = 'HD_STREAMING_POTION_MODAL_KEY';
-function S(e) {
-    let { channel: t } = e,
-        n = (0, m.T)(t),
-        [N, S, A, b, j, Z] = (0, l.Wu)([u.Z], () => [u.Z.isFetchingPrice(C.FX), u.Z.isEntitlementFetched(C.FX), u.Z.isEntitlementFetching(C.FX), u.Z.getPrice(C.FX), u.Z.getErrored(C.FX), u.Z.getEntitlement(C.FX)]),
-        { analyticsLocations: R } = (0, c.ZP)([s.Z.HD_STREAMING_POTION_MODAL]),
-        L = null != Z && !Z.consumed && Z.type === E.qc2.DEVELOPER_GIFT;
-    r.useEffect(() => {
-        null != Z && !1 === Z.consumed && Z.type !== E.qc2.DEVELOPER_GIFT && (0, d.Zu)(t.id);
-    }, [Z, t]),
-        r.useEffect(
+let N = 'HD_STREAMING_POTION_MODAL_KEY';
+function T(e) {
+    let { channel: n } = e,
+        t = (0, m.T)(n),
+        [E, T, I, A, S, M] = (0, r.Wu)([u.Z], () => [u.Z.isFetchingPrice(p.FX), u.Z.isEntitlementFetched(p.FX), u.Z.isEntitlementFetching(p.FX), u.Z.getPrice(p.FX), u.Z.getErrored(p.FX), u.Z.getEntitlement(p.FX)]),
+        { analyticsLocations: _ } = (0, c.ZP)([o.Z.HD_STREAMING_POTION_MODAL]),
+        F = null != M && !M.consumed && M.type === j.qc2.DEVELOPER_GIFT;
+    i.useEffect(() => {
+        null != M && !1 === M.consumed && M.type !== j.qc2.DEVELOPER_GIFT && (0, d.Zu)(n.id);
+    }, [M, n]),
+        i.useEffect(
             () => () => {
-                (0, d.SN)(C.FX);
+                (0, d.SN)(p.FX);
             },
             []
         ),
-        r.useEffect(() => {
-            !N && null == b && !j && (0, d.Gq)(C.FX);
-        }, [N, b, j]),
-        r.useEffect(() => {
-            !S && !A && (0, d.gA)(C.FX);
-        }, [S, A]);
-    let P = () => (0, o.closeAllModals)();
-    return j
-        ? (0, i.jsx)('div', {
-              className: x.anomaly,
-              children: (0, i.jsxs)('div', {
-                  className: x.error,
+        i.useEffect(() => {
+            !E && null == A && !S && (0, d.Gq)(p.FX);
+        }, [E, A, S]),
+        i.useEffect(() => {
+            !T && !I && (0, d.gA)(p.FX);
+        }, [T, I]);
+    let P = () => (0, a.closeAllModals)();
+    return S
+        ? (0, l.jsx)('div', {
+              className: b.anomaly,
+              children: (0, l.jsxs)('div', {
+                  className: b.error,
                   children: [
-                      (0, i.jsx)(o.Image, {
-                          src: v,
+                      (0, l.jsx)(a.Image, {
+                          src: C,
                           width: 178,
                           height: 190
                       }),
-                      (0, i.jsx)(o.Text, {
+                      (0, l.jsx)(a.Text, {
                           variant: 'text-md/normal',
-                          children: I.intl.string(I.t.sIA0OD)
+                          children: Z.intl.string(Z.t.sIA0OD)
                       })
                   ]
               })
           })
-        : null == b
-          ? (0, i.jsx)('div', {
-                className: x.anomaly,
-                children: (0, i.jsx)('div', {
-                    className: x.spinner,
-                    children: (0, i.jsx)(o.Spinner, {})
+        : null == A
+          ? (0, l.jsx)('div', {
+                className: b.anomaly,
+                children: (0, l.jsx)('div', {
+                    className: b.spinner,
+                    children: (0, l.jsx)(a.Spinner, {})
                 })
             })
-          : (0, i.jsxs)(i.Fragment, {
+          : (0, l.jsxs)(l.Fragment, {
                 children: [
-                    (0, i.jsxs)('div', {
-                        className: x.modal,
+                    (0, l.jsxs)('div', {
+                        className: b.modal,
                         children: [
-                            (0, i.jsx)('img', {
-                                className: x.image,
+                            (0, l.jsx)('img', {
+                                className: b.image,
                                 src: 'https://cdn.discordapp.com/assets/content/f7cb08dc1c9ca86a0c705f26d6e9af2ba2cc1acd4fd51e039417b2936069bc5b.png',
-                                alt: I.intl.string(I.t.DdigcX)
+                                alt: Z.intl.string(Z.t.DdigcX)
                             }),
-                            (0, i.jsxs)('div', {
-                                className: x.body,
+                            (0, l.jsxs)('div', {
+                                className: b.body,
                                 children: [
-                                    (0, i.jsxs)('div', {
-                                        className: x.heading,
+                                    (0, l.jsxs)('div', {
+                                        className: b.heading,
                                         children: [
-                                            (0, i.jsx)(o.Heading, {
+                                            (0, l.jsx)(a.Heading, {
                                                 variant: 'heading-lg/bold',
-                                                children: I.intl.string(I.t.K04rOD)
+                                                children: Z.intl.string(Z.t.K04rOD)
                                             }),
-                                            (0, i.jsx)(h.Z, {})
+                                            (0, l.jsx)(f.Z, {})
                                         ]
                                     }),
-                                    (0, i.jsx)(o.Text, {
+                                    (0, l.jsx)(a.Text, {
                                         variant: 'text-sm/normal',
-                                        children: I.intl.string(I.t.lq40Pz)
+                                        children: Z.intl.string(Z.t.lq40Pz)
                                     }),
-                                    (0, i.jsx)(f.Z, {
+                                    (0, l.jsx)(h.Z, {
                                         onClick: () => {},
-                                        children: (0, i.jsx)(o.Text, {
+                                        children: (0, l.jsx)(a.Text, {
                                             color: 'text-link',
                                             variant: 'text-sm/normal',
-                                            children: I.intl.string(I.t['1wV4qq'])
+                                            children: Z.intl.string(Z.t['1wV4qq'])
                                         })
                                     }),
-                                    (0, i.jsx)(o.Text, {
+                                    (0, l.jsx)(a.Text, {
                                         color: 'text-muted',
                                         variant: 'text-xs/medium',
-                                        children: I.intl.string(I.t.qk07Mj)
+                                        children: Z.intl.string(Z.t.qk07Mj)
                                     })
                                 ]
                             }),
-                            (0, i.jsx)('div', { className: x.divider }),
-                            (0, i.jsxs)('div', {
-                                className: x.applyingTo,
+                            (0, l.jsx)('div', { className: b.divider }),
+                            (0, l.jsxs)('div', {
+                                className: b.applyingTo,
                                 children: [
-                                    (0, i.jsx)(o.Text, {
+                                    (0, l.jsx)(a.Text, {
                                         variant: 'eyebrow',
-                                        children: I.intl.string(I.t.tZyXg4)
+                                        children: Z.intl.string(Z.t.tZyXg4)
                                     }),
-                                    (0, i.jsx)(g.Z, { channel: t })
+                                    (0, l.jsx)(v.Z, { channel: n })
                                 ]
                             })
                         ]
                     }),
-                    (0, i.jsxs)('div', {
-                        className: x.footer,
+                    (0, l.jsxs)('div', {
+                        className: b.footer,
                         children: [
-                            (0, i.jsx)(o.Button, {
+                            (0, l.jsx)(a.Button, {
                                 onClick: () => {
-                                    (0, o.closeModal)(T);
+                                    (0, a.closeModal)(N);
                                 },
-                                color: o.Button.Colors.PRIMARY,
-                                children: I.intl.string(I.t.Avt5KS)
+                                color: a.Button.Colors.PRIMARY,
+                                children: Z.intl.string(Z.t.Avt5KS)
                             }),
-                            n
-                                ? (0, i.jsx)(o.Button, {
+                            t
+                                ? (0, l.jsx)(a.Button, {
                                       onClick: () => {
-                                          if (L) {
-                                              (0, d.Zu)(t.id), (0, o.closeAllModals)();
+                                          if (F) {
+                                              (0, d.Zu)(n.id), (0, a.closeAllModals)();
                                               return;
                                           }
-                                          (0, p.Z)({
-                                              skuId: C.FX,
-                                              analyticsLocations: R,
+                                          (0, x.Z)({
+                                              skuId: p.FX,
+                                              analyticsLocations: _,
                                               onComplete: P
                                           });
                                       },
-                                      disabled: !n,
-                                      children: (0, i.jsxs)('div', {
-                                          className: x.buttonCopy,
+                                      disabled: !t,
+                                      children: (0, l.jsxs)('div', {
+                                          className: b.buttonCopy,
                                           children: [
-                                              (0, i.jsx)(o.PotionIcon, {
-                                                  color: a.Z.colors.INTERACTIVE_ACTIVE,
+                                              (0, l.jsx)(a.PotionIcon, {
+                                                  color: s.Z.colors.INTERACTIVE_ACTIVE,
                                                   size: 'sm'
                                               }),
-                                              L ? I.intl.string(I.t.sl6Tcn) : I.intl.formatToPlainString(I.t.S9LAdX, { price: (0, _.T4)(b.amount, b.currency) })
+                                              F ? Z.intl.string(Z.t.sl6Tcn) : Z.intl.formatToPlainString(Z.t.S9LAdX, { price: (0, g.T4)(A.amount, A.currency) })
                                           ]
                                       })
                                   })
-                                : (0, i.jsx)(o.Tooltip, {
-                                      text: I.intl.string(I.t.Qrh2BQ),
+                                : (0, l.jsx)(a.Tooltip, {
+                                      text: Z.intl.string(Z.t.Qrh2BQ),
                                       children: (e) => {
-                                          let { onClick: t, onMouseEnter: n, onMouseLeave: r, ...l } = e;
-                                          return (0, i.jsx)(o.Button, {
-                                              ...l,
+                                          let { onClick: n, onMouseEnter: t, onMouseLeave: i, ...r } = e;
+                                          return (0, l.jsx)(a.Button, {
+                                              ...r,
                                               disabled: !0,
-                                              onClick: t,
-                                              onMouseEnter: n,
-                                              onMouseLeave: r,
-                                              children: I.intl.formatToPlainString(I.t.S9LAdX, { price: (0, _.T4)(b.amount, b.currency) })
+                                              onClick: n,
+                                              onMouseEnter: t,
+                                              onMouseLeave: i,
+                                              children: Z.intl.formatToPlainString(Z.t.S9LAdX, { price: (0, g.T4)(A.amount, A.currency) })
                                           });
                                       }
                                   })

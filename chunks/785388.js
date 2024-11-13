@@ -29,8 +29,8 @@ var i = n(200651),
     _ = n(372900),
     S = n(566006),
     C = n(620652),
-    I = n(815605),
-    E = n(222677),
+    E = n(815605),
+    I = n(222677),
     j = n(995774),
     R = n(665906),
     N = n(210887),
@@ -42,8 +42,8 @@ var i = n(200651),
     w = n(496675),
     P = n(699516),
     L = n(594174),
-    k = n(768581),
-    U = n(176354),
+    U = n(768581),
+    k = n(176354),
     B = n(5192),
     D = n(709054),
     F = n(91047),
@@ -73,7 +73,7 @@ let K = (e) => {
         [c, d] = o.useState([]),
         u = o.useMemo(() => {
             if (null == c || c.length < 1) return;
-            let e = (0, I.Zn)(t, c[0], n, {
+            let e = (0, E.Zn)(t, c[0], n, {
                 emojiSize: C.M.LARGE,
                 messageId: a
             });
@@ -90,7 +90,7 @@ let K = (e) => {
             return (
                 r(!0),
                 !(async function () {
-                    let n = await (0, U.B6)(t);
+                    let n = await (0, k.B6)(t);
                     Array.isArray(n) && n.length > 0 && !e && d(n);
                 })(),
                 () => {
@@ -124,8 +124,8 @@ class X extends o.PureComponent {
             d = (function (e, t, n, o) {
                 let a =
                     null == e.id
-                        ? U.ZP.getURL(e.name)
-                        : k.ZP.getEmojiURL({
+                        ? k.ZP.getURL(e.name)
+                        : U.ZP.getEmojiURL({
                               id: e.id,
                               animated: e.animated,
                               size: 24
@@ -236,11 +236,11 @@ function Y(e) {
                 b &&
                 (0, i.jsx)(h.Clickable, {
                     onClick: function () {
-                        E.WO({
+                        I.WO({
                             channelId: a.id,
                             messageId: o.id,
                             emoji: t,
-                            location: E.TW.MESSAGE,
+                            location: I.TW.MESSAGE,
                             userId: n.id,
                             options: { burst: l === S.O.BURST }
                         }),
@@ -273,7 +273,7 @@ class q extends o.PureComponent {
         let { message: e, reaction: t, reactionType: n } = this.props,
             { lastId: i } = this.state;
         this.setState({ loadingMore: !0 }),
-            E.U0({
+            I.U0({
                 channelId: e.getChannelId(),
                 messageId: e.id,
                 emoji: t.emoji,
@@ -421,7 +421,7 @@ function Q(e) {
                 );
             }, [t])),
         C = b[0],
-        [I, E] = (function (e, t, n) {
+        [E, I] = (function (e, t, n) {
             let [i, a] = o.useState(null != e ? e : t);
             return (
                 o.useEffect(() => {
@@ -447,15 +447,15 @@ function Q(e) {
         ),
         R = o.useMemo(() => {
             var e;
-            return null == I ? null : null !== (e = v.find((e) => (0, j.ir)(e.emoji, I.emoji))) && void 0 !== e ? e : null;
-        }, [v, I]),
+            return null == E ? null : null !== (e = v.find((e) => (0, j.ir)(e.emoji, E.emoji))) && void 0 !== e ? e : null;
+        }, [v, E]),
         Z = (0, d.e7)([g.Z], () => g.Z.saturation),
         A = (0, d.e7)([N.Z], () => (0, u.wj)(N.Z.theme));
     if (
         (o.useEffect(() => {
-            (0 === v.length || (null == I && null == R)) && setImmediate(r);
-        }, [r, v.length, R, I]),
-        null == I || null == R)
+            (0 === v.length || (null == E && null == R)) && setImmediate(r);
+        }, [r, v.length, R, E]),
+        null == E || null == R)
     )
         return (0, i.jsx)(h.Spinner, {});
     if (null == p) throw Error('MessageReactions.render: Message does not have a channelId');
@@ -478,8 +478,8 @@ function Q(e) {
                               return (0, i.jsx)(
                                   X,
                                   {
-                                      isSelected: ee(I, e, n ? S.O.BURST : S.O.NORMAL),
-                                      setSelected: E,
+                                      isSelected: ee(E, e, n ? S.O.BURST : S.O.NORMAL),
+                                      setSelected: I,
                                       reactionType: n ? S.O.BURST : S.O.NORMAL,
                                       emoji: e.emoji,
                                       count: n ? e.burst_count : e.count,
@@ -497,7 +497,7 @@ function Q(e) {
                     reaction: R,
                     guildId: f,
                     channel: p,
-                    reactionType: I.reactionType,
+                    reactionType: E.reactionType,
                     disableManage: s
                 })
             ]
