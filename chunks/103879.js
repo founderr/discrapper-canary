@@ -1,4 +1,4 @@
-i.d(t, {
+e.d(t, {
     NA: function () {
         return r;
     },
@@ -9,41 +9,42 @@ i.d(t, {
         return u;
     }
 });
-var e = i(544891),
-    a = i(570140),
-    o = i(406432),
-    l = i(314897),
-    s = i(788080),
-    c = i(981631);
+var i = e(544891),
+    a = e(570140),
+    l = e(406432),
+    o = e(314897),
+    s = e(788080),
+    c = e(981631);
 async function u() {
     a.Z.dispatch({ type: 'SAFETY_HUB_FETCH_START' });
-    let n = l.default.getSuspendedUserToken(),
+    let n = o.default.getSuspendedUserToken(),
         t = null != n ? c.ANM.SAFETY_HUB_SUSPENDED : c.ANM.SAFETY_HUB,
-        i =
+        e =
             null != n
-                ? e.tn.post({
+                ? i.tn.post({
                       url: t,
                       body: { token: n }
                   })
-                : e.tn.get({ url: t });
-    await i
+                : i.tn.get({ url: t });
+    await e
         .then((n) => {
             let { body: t } = n,
-                { classifications: i, guild_classifications: e, account_standing: o, is_dsa_eligible: l, username: s } = t,
-                c = i.map((n) => (_(n), n));
+                { classifications: e, guild_classifications: i, account_standing: l, is_dsa_eligible: o, username: s, is_appeal_eligible: c } = t,
+                u = e.map((n) => (_(n), n));
             a.Z.dispatch({
                 type: 'SAFETY_HUB_FETCH_SUCCESS',
-                classifications: c.concat(null != e ? e : []),
-                accountStanding: o,
-                isDsaEligible: l,
-                username: s
+                classifications: u.concat(null != i ? i : []),
+                accountStanding: l,
+                isDsaEligible: o,
+                username: s,
+                isAppealEligible: c
             });
         })
         .catch((n) => {
-            var t, i;
+            var t, e;
             a.Z.dispatch({
                 type: 'SAFETY_HUB_FETCH_FAILURE',
-                error: null !== (i = null == n ? void 0 : null === (t = n.body) || void 0 === t ? void 0 : t.message) && void 0 !== i ? i : 'Unknown error'
+                error: null !== (e = null == n ? void 0 : null === (t = n.body) || void 0 === t ? void 0 : t.message) && void 0 !== e ? e : 'Unknown error'
             });
         });
 }
@@ -52,28 +53,29 @@ async function r(n) {
         type: 'SAFETY_HUB_FETCH_CLASSIFICATION_START',
         classificationId: n
     });
-    let t = l.default.getSuspendedUserToken(),
-        i = null != t ? c.ANM.SAFETY_HUB_SUSPENDED : c.ANM.SAFETY_HUB,
-        o =
+    let t = o.default.getSuspendedUserToken(),
+        e = null != t ? c.ANM.SAFETY_HUB_SUSPENDED : c.ANM.SAFETY_HUB,
+        l =
             null != t
-                ? e.tn.post({
-                      url: i,
+                ? i.tn.post({
+                      url: e,
                       body: { token: t }
                   })
-                : e.tn.get({ url: i });
-    await o
+                : i.tn.get({ url: e });
+    await l
         .then((t) => {
-            let { body: i } = t,
-                { classifications: e, account_standing: o, is_dsa_eligible: l, username: s } = i,
-                c = e.find((t) => t.id === n);
-            null != c
-                ? (_(c),
+            let { body: e } = t,
+                { classifications: i, account_standing: l, is_dsa_eligible: o, username: s, is_appeal_eligible: c } = e,
+                u = i.find((t) => t.id === n);
+            null != u
+                ? (_(u),
                   a.Z.dispatch({
                       type: 'SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS',
-                      classification: c,
-                      accountStanding: o,
-                      isDsaEligible: l,
-                      username: s
+                      classification: u,
+                      accountStanding: l,
+                      isDsaEligible: o,
+                      username: s,
+                      isAppealEligible: c
                   }))
                 : a.Z.dispatch({
                       type: 'SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE',
@@ -82,10 +84,10 @@ async function r(n) {
                   });
         })
         .catch((t) => {
-            var i, e;
+            var e, i;
             a.Z.dispatch({
                 type: 'SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE',
-                error: null !== (e = null == t ? void 0 : null === (i = t.body) || void 0 === i ? void 0 : i.message) && void 0 !== e ? e : 'Unknown error',
+                error: null !== (i = null == t ? void 0 : null === (e = t.body) || void 0 === e ? void 0 : e.message) && void 0 !== i ? i : 'Unknown error',
                 classificationId: n
             });
         });
@@ -95,29 +97,29 @@ function _(n) {
         let t = n.flagged_content[0];
         (t.attachments = t.attachments.filter((n) => {
             let { filename: t } = n;
-            return (0, o.CO)(t) || (0, o.NU)(t);
+            return (0, l.CO)(t) || (0, l.NU)(t);
         })),
             (n.flagged_content = (0, s.Vt)(t) ? [] : [t]);
     }
 }
-async function d(n, t, i) {
-    let o = l.default.getSuspendedUserToken(),
-        s = null != o ? c.ANM.SAFETY_HUB_REQUEST_SUSPENDED_USER_REVIEW(n) : c.ANM.SAFETY_HUB_REQUEST_REVIEW(n),
+async function d(n, t, e) {
+    let l = o.default.getSuspendedUserToken(),
+        s = null != l ? c.ANM.SAFETY_HUB_REQUEST_SUSPENDED_USER_REVIEW(n) : c.ANM.SAFETY_HUB_REQUEST_REVIEW(n),
         u =
-            null != o
-                ? e.tn.put({
+            null != l
+                ? i.tn.put({
                       url: s,
                       body: {
                           signal: t,
-                          user_input: i,
-                          token: o
+                          user_input: e,
+                          token: l
                       }
                   })
-                : e.tn.put({
+                : i.tn.put({
                       url: s,
                       body: {
                           signal: t,
-                          user_input: i
+                          user_input: e
                       }
                   });
     a.Z.dispatch({ type: 'SAFETY_HUB_REQUEST_REVIEW_START' }),
@@ -129,11 +131,11 @@ async function d(n, t, i) {
                 });
             })
             .catch((n) => {
-                var t, i;
+                var t, e;
                 throw (
                     (a.Z.dispatch({
                         type: 'SAFETY_HUB_REQUEST_REVIEW_FAILURE',
-                        error: null !== (i = null == n ? void 0 : null === (t = n.body) || void 0 === t ? void 0 : t.message) && void 0 !== i ? i : 'Unknown error'
+                        error: null !== (e = null == n ? void 0 : null === (t = n.body) || void 0 === t ? void 0 : t.message) && void 0 !== e ? e : 'Unknown error'
                     }),
                     n)
                 );
