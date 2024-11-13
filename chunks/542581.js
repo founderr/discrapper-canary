@@ -4,84 +4,85 @@ var a = n(200651),
     r = n(120356),
     l = n.n(r),
     s = n(100621),
-    o = n(481060),
-    c = n(787014),
-    d = n(454585),
-    u = n(456269),
-    m = n(470623),
-    h = n(981631),
-    g = n(388032),
-    x = n(820634),
-    f = n(554034);
+    o = n(976649),
+    c = n(481060),
+    d = n(787014),
+    u = n(454585),
+    m = n(456269),
+    h = n(470623),
+    g = n(981631),
+    x = n(388032),
+    f = n(820634),
+    p = n(554034);
 t.Z = i.memo(function (e) {
     let { channel: t, onChange: r } = e,
-        p = (0, m.AF)(),
-        { guidelinesOpen: C } = (0, m.xH)((e) => {
+        C = (0, h.AF)(),
+        { guidelinesOpen: v } = (0, h.xH)((e) => {
             let { guidelinesOpen: t } = e;
             return { guidelinesOpen: t };
-        }),
-        v = (0, u.r_)(t),
-        [b, j] = i.useState(!1),
-        _ = i.useCallback(
+        }, o.X),
+        b = (0, m.r_)(t),
+        [j, _] = i.useState(!1),
+        I = i.useCallback(
             (e) => {
                 if (null == e) return;
                 let t = e.clientHeight >= 220;
-                t !== b && j(t);
+                t !== j && _(t);
             },
-            [b]
+            [j]
         );
     i.useLayoutEffect(() => {
         setTimeout(r, 350);
-    }, [C, r]);
-    let [I, T] = i.useState(!C),
-        N = (0, o.useSpring)({
-            opacity: C ? 1 : 0,
-            maxHeight: C ? 500 : 0,
+    }, [v, r]);
+    let [T, N] = i.useState(!v),
+        S = (0, c.useSpring)({
+            opacity: v ? 1 : 0,
+            maxHeight: v ? 500 : 0,
             config: { duration: 300 },
-            onRest: () => T(!C)
+            onRest: () => N(!v)
         });
     return null != t.topic && t.topic.length > 0
         ? (0, a.jsx)(s.animated.div, {
-              style: N,
-              className: I ? x.hiddenVisually : void 0,
+              style: S,
+              className: T ? f.hiddenVisually : void 0,
               children: (0, a.jsxs)('div', {
-                  className: x.container,
+                  className: f.container,
                   children: [
                       (0, a.jsxs)('div', {
-                          className: x.headerContainer,
+                          className: f.headerContainer,
                           children: [
-                              (0, a.jsxs)(o.Heading, {
+                              (0, a.jsxs)(c.Heading, {
                                   variant: 'heading-lg/semibold',
-                                  className: x.guidelinesHeader,
+                                  className: f.guidelinesHeader,
                                   children: [
-                                      (0, a.jsx)(o.BookCheckIcon, {
+                                      (0, a.jsx)(c.BookCheckIcon, {
                                           size: 'custom',
                                           color: 'currentColor',
                                           width: 20,
                                           height: 20
                                       }),
-                                      g.intl.string(g.t['4d4T4u']),
-                                      v &&
-                                          (0, a.jsx)(o.Clickable, {
+                                      x.intl.string(x.t['4d4T4u']),
+                                      b &&
+                                          (0, a.jsx)(c.Clickable, {
                                               onClick: () => {
-                                                  c.ZP.open(t.id, void 0, h.ZfP.TOPIC);
+                                                  d.ZP.open(t.id, void 0, g.ZfP.TOPIC);
                                               },
                                               tag: 'span',
-                                              className: x.clickable,
-                                              children: (0, a.jsx)(o.PencilIcon, {
+                                              className: f.clickable,
+                                              children: (0, a.jsx)(c.PencilIcon, {
                                                   size: 'xs',
                                                   color: 'currentColor'
                                               })
                                           })
                                   ]
                               }),
-                              (0, a.jsx)(o.Clickable, {
-                                  'aria-label': g.intl.string(g.t.cpT0Cg),
-                                  className: x.clickable,
+                              (0, a.jsx)(c.Clickable, {
+                                  'aria-label': x.intl.string(x.t.cpT0Cg),
+                                  className: f.clickable,
                                   onClick: () => {
-                                      p.getState().setGuidelinesOpen(!1);
+                                      C.getState().setGuidelinesOpen(!1);
                                   },
-                                  children: (0, a.jsx)(o.XSmallIcon, {
+                                  children: (0, a.jsx)(c.XSmallIcon, {
                                       size: 'xs',
                                       color: 'currentColor'
                                   })
@@ -89,34 +90,34 @@ t.Z = i.memo(function (e) {
                           ]
                       }),
                       (0, a.jsxs)('div', {
-                          className: x.descriptionContainer,
+                          className: f.descriptionContainer,
                           children: [
-                              (0, a.jsx)(o.Text, {
+                              (0, a.jsx)(c.Text, {
                                   selectable: !0,
                                   variant: 'text-sm/normal',
                                   color: 'header-secondary',
                                   style: { maxHeight: 220 },
-                                  className: l()(x.guidelines, f.markup),
+                                  className: l()(f.guidelines, p.markup),
                                   children: (0, a.jsx)('div', {
-                                      ref: _,
-                                      children: d.Z.parseForumPostGuidelines(t.topic, !0, {
+                                      ref: I,
+                                      children: u.Z.parseForumPostGuidelines(t.topic, !0, {
                                           channelId: t.id,
                                           allowHeading: !0,
                                           allowList: !0
                                       })
                                   })
                               }),
-                              b &&
+                              j &&
                                   (0, a.jsxs)('div', {
-                                      className: x.showMore,
+                                      className: f.showMore,
                                       children: [
-                                          (0, a.jsx)('div', { className: x.gradient }),
+                                          (0, a.jsx)('div', { className: f.gradient }),
                                           (0, a.jsx)('div', {
-                                              className: x.linkContainer,
-                                              children: (0, a.jsx)(o.Clickable, {
-                                                  className: x.showMoreLink,
+                                              className: f.linkContainer,
+                                              children: (0, a.jsx)(c.Clickable, {
+                                                  className: f.showMoreLink,
                                                   onClick: () => {
-                                                      (0, o.openModalLazy)(async () => {
+                                                      (0, c.openModalLazy)(async () => {
                                                           let { default: e } = await n.e('78712').then(n.bind(n, 223164));
                                                           return (n) =>
                                                               (0, a.jsx)(e, {
@@ -125,16 +126,16 @@ t.Z = i.memo(function (e) {
                                                               });
                                                       });
                                                   },
-                                                  children: (0, a.jsxs)(o.Text, {
+                                                  children: (0, a.jsxs)(c.Text, {
                                                       variant: 'text-sm/semibold',
                                                       color: 'text-brand',
-                                                      className: x.showMoreText,
+                                                      className: f.showMoreText,
                                                       children: [
-                                                          g.intl.string(g.t.Vu7odH),
-                                                          (0, a.jsx)(o.MaximizeIcon, {
+                                                          x.intl.string(x.t.Vu7odH),
+                                                          (0, a.jsx)(c.MaximizeIcon, {
                                                               size: 'xs',
                                                               color: 'currentColor',
-                                                              className: x.showMoreIcon
+                                                              className: f.showMoreIcon
                                                           })
                                                       ]
                                                   })

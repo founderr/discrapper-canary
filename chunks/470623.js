@@ -1,28 +1,28 @@
 n.d(t, {
     AF: function () {
-        return g;
-    },
-    NU: function () {
-        return v;
+        return x;
     },
     oL: function () {
-        return p;
+        return b;
     },
     xH: function () {
-        return f;
+        return T;
     }
 }),
     n(47120);
-var i = n(588744),
-    o = n(454000),
-    a = n(731965),
-    s = n(430742),
-    l = n(752305),
-    r = n(592125),
-    c = n(703558),
-    d = n(883429),
-    u = n(228392);
-function h(e, t, n) {
+var i = n(200651),
+    o = n(192379),
+    s = n(512722),
+    a = n.n(s),
+    l = n(454000),
+    r = n(731965),
+    c = n(430742),
+    d = n(752305),
+    u = n(592125),
+    h = n(703558),
+    m = n(883429),
+    p = n(228392);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,50 +35,50 @@ function h(e, t, n) {
         e
     );
 }
-class m {
+class g {
     constructor(e, t, n) {
-        var i, o, m;
-        h(this, 'channelId', void 0),
-            h(this, '_set', void 0),
-            h(this, 'get', void 0),
-            h(this, 'editorHeight', void 0),
-            h(this, 'editorAdditionRowHeight', void 0),
-            h(this, 'listViewCardHeights', void 0),
-            h(this, 'cardHeightVersion', void 0),
-            h(this, 'nameError', void 0),
-            h(this, 'messageError', void 0),
-            h(this, 'appliedTags', void 0),
-            h(this, 'popoutOpen', void 0),
-            h(this, 'guidelinesOpen', void 0),
-            h(this, 'previewing', void 0),
-            h(this, 'onboardingExpanded', void 0),
-            h(this, 'submitting', void 0),
-            h(this, 'formOpen', void 0),
-            h(this, 'name', void 0),
-            h(this, 'textAreaState', void 0),
-            h(this, 'hasClickedForm', void 0),
-            h(this, 'titleFocused', void 0),
-            h(this, 'bodyFocused', void 0),
-            h(this, 'set', void 0),
-            h(this, 'setEditorHeight', void 0),
-            h(this, 'setEditorAdditionRowHeight', void 0),
-            h(this, 'setCardHeight', void 0),
-            h(this, 'setNameError', void 0),
-            h(this, 'setMessageError', void 0),
-            h(this, 'toggleAppliedTag', void 0),
-            h(this, 'setPopoutOpen', void 0),
-            h(this, 'setGuidelinesOpen', void 0),
-            h(this, 'setPreviewing', void 0),
-            h(this, 'setSubmitting', void 0),
-            h(this, 'setFormOpen', void 0),
-            h(this, 'setOnboardingExpanded', void 0),
-            h(this, 'setTitleFocused', void 0),
-            h(this, 'setBodyFocused', void 0),
-            h(this, 'setName', void 0),
-            h(this, 'setTextAreaState', void 0),
-            h(this, 'setHasClickedForm', void 0),
-            h(this, 'resetFormState', void 0),
-            h(this, 'setFormOpenFromUserAction', void 0),
+        var i, o, s;
+        f(this, 'channelId', void 0),
+            f(this, '_set', void 0),
+            f(this, 'get', void 0),
+            f(this, 'editorHeight', void 0),
+            f(this, 'editorAdditionRowHeight', void 0),
+            f(this, 'listViewCardHeights', void 0),
+            f(this, 'cardHeightVersion', void 0),
+            f(this, 'nameError', void 0),
+            f(this, 'messageError', void 0),
+            f(this, 'appliedTags', void 0),
+            f(this, 'popoutOpen', void 0),
+            f(this, 'guidelinesOpen', void 0),
+            f(this, 'previewing', void 0),
+            f(this, 'onboardingExpanded', void 0),
+            f(this, 'submitting', void 0),
+            f(this, 'formOpen', void 0),
+            f(this, 'name', void 0),
+            f(this, 'textAreaState', void 0),
+            f(this, 'hasClickedForm', void 0),
+            f(this, 'titleFocused', void 0),
+            f(this, 'bodyFocused', void 0),
+            f(this, 'set', void 0),
+            f(this, 'setEditorHeight', void 0),
+            f(this, 'setEditorAdditionRowHeight', void 0),
+            f(this, 'setCardHeight', void 0),
+            f(this, 'setNameError', void 0),
+            f(this, 'setMessageError', void 0),
+            f(this, 'toggleAppliedTag', void 0),
+            f(this, 'setPopoutOpen', void 0),
+            f(this, 'setGuidelinesOpen', void 0),
+            f(this, 'setPreviewing', void 0),
+            f(this, 'setSubmitting', void 0),
+            f(this, 'setFormOpen', void 0),
+            f(this, 'setOnboardingExpanded', void 0),
+            f(this, 'setTitleFocused', void 0),
+            f(this, 'setBodyFocused', void 0),
+            f(this, 'setName', void 0),
+            f(this, 'setTextAreaState', void 0),
+            f(this, 'setHasClickedForm', void 0),
+            f(this, 'resetFormState', void 0),
+            f(this, 'setFormOpenFromUserAction', void 0),
             (this.channelId = e),
             (this._set = t),
             (this.get = n),
@@ -96,12 +96,12 @@ class m {
             (this.submitting = !1),
             (this.formOpen = !1),
             (this.name = ''),
-            (this.textAreaState = (0, l.eK)('')),
+            (this.textAreaState = (0, d.eK)('')),
             (this.hasClickedForm = !1),
             (this.titleFocused = !1),
             (this.bodyFocused = !1),
             (this.set = (e) => {
-                (0, a.j)(() => this._set(e));
+                (0, r.j)(() => this._set(e));
             }),
             (this.setEditorHeight = (e) => {
                 this.set({ editorHeight: e });
@@ -121,7 +121,7 @@ class m {
             }),
             (this.toggleAppliedTag = (e) => {
                 let { appliedTags: t } = this.get();
-                (t = new Set(t)).has(e) ? t.delete(e) : t.add(e), this.set({ appliedTags: t }), s.Z.changeThreadSettings(this.channelId, { appliedTags: t });
+                (t = new Set(t)).has(e) ? t.delete(e) : t.add(e), this.set({ appliedTags: t }), c.Z.changeThreadSettings(this.channelId, { appliedTags: t });
             }),
             (this.setPopoutOpen = (e) => {
                 this.set({ popoutOpen: e });
@@ -136,7 +136,7 @@ class m {
                 this.set({ submitting: e });
             }),
             (this.setFormOpen = (e) => {
-                this.set({ formOpen: e }), d.Z.clearForumSearch(this.channelId);
+                this.set({ formOpen: e }), m.Z.clearForumSearch(this.channelId);
             }),
             (this.setOnboardingExpanded = (e) => {
                 this.set({ onboardingExpanded: e });
@@ -148,30 +148,30 @@ class m {
                 this.set({ bodyFocused: e });
             }),
             (this.setName = (e) => {
-                this.set({ name: e }), s.Z.changeThreadSettings(this.channelId, { name: e });
+                this.set({ name: e }), c.Z.changeThreadSettings(this.channelId, { name: e });
             }),
             (this.setTextAreaState = (e) => {
-                this.set({ textAreaState: e }), s.Z.saveDraft(this.channelId, e.textValue, c.d.FirstThreadMessage);
+                this.set({ textAreaState: e }), c.Z.saveDraft(this.channelId, e.textValue, h.d.FirstThreadMessage);
             }),
             (this.setHasClickedForm = (e) => {
                 this.set({ hasClickedForm: e });
             }),
             (this.resetFormState = () => {
-                let e = r.Z.getChannel(this.channelId),
+                let e = u.Z.getChannel(this.channelId),
                     t = null == e ? '' : null == e.template ? '' : e.template.trim();
                 this.set({
                     name: '',
-                    textAreaState: (0, l.eK)(t),
+                    textAreaState: (0, d.eK)(t),
                     appliedTags: new Set(),
                     hasClickedForm: !1
                 }),
-                    d.Z.clearForumSearch(this.channelId);
+                    m.Z.clearForumSearch(this.channelId);
             }),
             (this.setFormOpenFromUserAction = () => {
                 if (this.hasClickedForm) return;
-                let e = r.Z.getChannel(this.channelId);
+                let e = u.Z.getChannel(this.channelId);
                 null != e &&
-                    (0, u.HR)({
+                    (0, p.HR)({
                         guildId: e.guild_id,
                         channelId: this.channelId
                     }),
@@ -179,18 +179,34 @@ class m {
                         hasClickedForm: !0,
                         formOpen: !0
                     }),
-                    d.Z.clearForumSearch(this.channelId);
+                    m.Z.clearForumSearch(this.channelId);
             });
-        let p = r.Z.getChannel(e);
-        if (null == p) return;
-        let f = null !== (i = c.Z.getThreadSettings(p.id)) && void 0 !== i ? i : {},
-            g = null == p.template ? '' : p.template.trim(),
-            v = c.Z.getDraft(p.id, c.d.FirstThreadMessage),
-            b = (0, l.eK)(null != v && '' !== v.trim() ? v : g);
-        (this.name = null !== (o = f.name) && void 0 !== o ? o : ''), (m = new Set(f.appliedTags)), (this.appliedTags = void 0 !== m ? m : new Set()), (this.formOpen = this.name.length > 0), (this.textAreaState = b);
+        let a = u.Z.getChannel(e);
+        if (null == a) return;
+        let l = null !== (i = h.Z.getThreadSettings(a.id)) && void 0 !== i ? i : {},
+            g = null == a.template ? '' : a.template.trim(),
+            v = h.Z.getDraft(a.id, h.d.FirstThreadMessage),
+            b = (0, d.eK)(null != v && '' !== v.trim() ? v : g);
+        (this.name = null !== (o = l.name) && void 0 !== o ? o : ''), (s = new Set(l.appliedTags)), (this.appliedTags = void 0 !== s ? s : new Set()), (this.formOpen = this.name.length > 0), (this.textAreaState = b);
     }
 }
-let { Provider: p, useStore: f, useStoreApi: g } = (0, i.Z)();
-function v(e) {
-    return (0, o.F)((t, n) => new m(e.id, t, n));
+let v = o.createContext(null);
+function b(e) {
+    let { children: t, channel: n } = e,
+        s = o.useMemo(() => {
+            var e;
+            return (e = n), (0, l.F)((t, n) => new g(e.id, t, n));
+        }, [n]);
+    return (0, i.jsx)(v.Provider, {
+        value: s,
+        children: t
+    });
+}
+function T(e, t) {
+    let n = o.useContext(v);
+    return a()(null != n, '[useForumPostComposerStore] Context should not be null'), n(e, t);
+}
+function x() {
+    let e = o.useContext(v);
+    return a()(null != e, '[useForumPostComposerStore] Context should not be null'), e;
 }
