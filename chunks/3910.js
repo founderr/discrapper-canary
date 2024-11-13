@@ -17,6 +17,7 @@ e.exports = {
     contextMenuNub: 'contextMenuNub_ef18ee colorable_ef18ee',
     contextMenuCaret: 'contextMenuCaret_ef18ee',
     open: 'open_ef18ee',
+    buttonMask: 'buttonMask_ef18ee',
     glow: 'glow_ef18ee',
     glowVideo: 'glowVideo_ef18ee'
 };
