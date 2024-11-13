@@ -28,7 +28,7 @@ function g(n) {
         f = null == s || s === c.HO.Loading,
         v = (0, c.FC)(s, null != d ? d : '');
     return f
-        ? (0, l.jsx)(b, {
+        ? (0, l.jsx)(Z, {
               appId: t,
               skuId: u,
               onClick: (n) => {
@@ -41,7 +41,7 @@ function g(n) {
                   children: [o, null != d ? h.intl.formatToPlainString(h.t.i4T8v7, { rate: d }) : h.intl.string(h.t.uuzaAA)]
               })
           })
-        : (0, l.jsx)(Z, {
+        : (0, l.jsx)(b, {
               className: e,
               children: v
           });
@@ -62,11 +62,11 @@ function I(n) {
     return null == x
         ? null
         : I
-          ? (0, l.jsx)(Z, {
+          ? (0, l.jsx)(b, {
                 className: e,
                 children: h.intl.string(h.t['/bUsx8'])
             })
-          : (0, l.jsx)(b, {
+          : (0, l.jsx)(Z, {
                 appId: t,
                 skuId: o.id,
                 onClick: (n) => {
@@ -79,7 +79,7 @@ function I(n) {
                 })
             });
 }
-function b(n) {
+function Z(n) {
     let { appId: t, skuId: e, onClick: u, ...a } = n,
         s = (0, o.Z)();
     return (0, l.jsx)(r.Button, {
@@ -102,7 +102,7 @@ function b(n) {
         }
     });
 }
-function Z(n) {
+function b(n) {
     let { className: t, children: e } = n;
     return (0, l.jsx)(r.Button, {
         disabled: !0,

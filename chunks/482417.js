@@ -16,11 +16,11 @@ function s(e) {
         u = c.artists[0],
         { title: d, provider: m, image_url: f } = c,
         p = u.name,
-        x = {
+        h = {
             onClick: () => (0, i.o)(a.Hw.TRACK, c.external_id),
             ariaDescription: o.intl.formatToPlainString(o.t.xTsar6, { itemName: d })
         },
-        h = {
+        x = {
             onClick: () => (0, i.o)(a.Hw.ARTIST, u.external_id),
             ariaDescription: o.intl.formatToPlainString(o.t.xTsar6, { itemName: p })
         };
@@ -31,9 +31,9 @@ function s(e) {
             title: d,
             subtitle: p,
             thumbnailUrl: f,
-            titleClickable: x,
-            subtitleClickable: h,
-            thumbnailClickable: x,
+            titleClickable: h,
+            subtitleClickable: x,
+            thumbnailClickable: h,
             userDescription: o.t.CcVI1d,
             providerIconProps: n
         }

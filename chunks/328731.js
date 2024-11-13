@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return x;
+        return h;
     }
 });
 var l = t(200651),
@@ -15,14 +15,14 @@ var l = t(200651),
     m = t(866040),
     f = t(388032),
     p = t(756988);
-function x(e) {
+function h(e) {
     let { entry: n, channel: t, className: i } = e,
-        { displayParticipants: x, participant1: h, participant2: v, numOtherParticipants: C, orderedParticipants: _ } = (0, c.Z)(n),
-        g = [h, v];
+        { displayParticipants: h, participant1: x, participant2: v, numOtherParticipants: C, orderedParticipants: _ } = (0, c.Z)(n),
+        g = [x, v];
     return (0, l.jsxs)('div', {
         className: r()(p.container, i),
         children: [
-            x.length > 0
+            h.length > 0
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsx)(m.Z, {
@@ -34,7 +34,7 @@ function x(e) {
                                       ...e,
                                       children: (0, l.jsx)(o.Z, {
                                           maxUsers: 3,
-                                          users: x,
+                                          users: h,
                                           size: a.AvatarSizes.SIZE_20,
                                           avatarClassName: p.stackedAvatar,
                                           hideOverflowCount: !0,

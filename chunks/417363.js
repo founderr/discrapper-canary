@@ -41,7 +41,7 @@ function k(e) {
 function U(e) {
     return e.type === T.vxO.INSTALLING || e.type === T.vxO.UPDATING || e.type === T.vxO.REPAIRING ? e.readerProgress : null;
 }
-let B = u().throttle(function (e) {
+let G = u().throttle(function (e) {
         x = (x = [
             {
                 bytes: e,
@@ -50,7 +50,7 @@ let B = u().throttle(function (e) {
             ...x
         ]).slice(0, 200);
     }, 200),
-    G = u().throttle(function (e) {
+    B = u().throttle(function (e) {
         let t = Date.now(),
             n = t - y;
         L = (L = [
@@ -254,11 +254,11 @@ class V extends (i = c.ZP.Store) {
                         null != A[s])
                     ) {
                         let e = F(n, s, P);
-                        e > 0 && B((R += e));
+                        e > 0 && G((R += e));
                         let r = F(n, s, k);
                         r > 0 && Z((O += r));
                         let o = F(n, s, U);
-                        if ((o > 0 && G((D += o)), i === t)) {
+                        if ((o > 0 && B((D += o)), i === t)) {
                             let e = n[s];
                             if (!0 !== e.paused && (e.type === T.vxO.UNINSTALLING || e.type === T.vxO.INSTALLING || e.type === T.vxO.UPDATING))
                                 switch (e.stage) {

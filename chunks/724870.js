@@ -19,13 +19,13 @@ var i = e(512722),
     d = e(987209),
     f = e(981631);
 function p(n) {
-    let { initialPlanId: t, activeSubscription: i, analyticsObject: r, analyticsLocation: a, analyticsLocations: o, analyticsSubscriptionType: s, renderHeader: c, planGroup: p, skuId: v, guildId: m, reviewWarningMessage: h, applicationId: S, showBenefitsFirst: g, onComplete: I, forcesTransitionToGuild: b } = n;
+    let { initialPlanId: t, activeSubscription: i, analyticsObject: r, analyticsLocation: a, analyticsLocations: o, analyticsSubscriptionType: s, renderHeader: c, planGroup: p, skuId: v, guildId: m, reviewWarningMessage: h, applicationId: S, showBenefitsFirst: g, onComplete: I, forcesTransitionToGuild: Z } = n;
     (0, u.openModalLazy)(
         async () => {
             let { PaymentContextProvider: n } = await Promise.resolve().then(e.bind(e, 563132)),
                 u = (await Promise.all([e.e('52249'), e.e('26182'), e.e('32776'), e.e('8573')]).then(e.bind(e, 405083))).default,
                 { getApplicationPaymentSteps: f } = await Promise.all([e.e('63288'), e.e('77298'), e.e('23357'), e.e('12013'), e.e('99783'), e.e('26182'), e.e('95900'), e.e('4674')]).then(e.bind(e, 759386)),
-                Z = f({
+                b = f({
                     guildId: m,
                     showBenefitsFirst: g
                 });
@@ -33,7 +33,7 @@ function p(n) {
                 (0, l.jsx)(n, {
                     applicationId: S,
                     activeSubscription: i,
-                    stepConfigs: Z,
+                    stepConfigs: b,
                     skuIDs: [v],
                     children: (0, l.jsx)(d.KB, {
                         children: (0, l.jsx)(u, {
@@ -50,7 +50,7 @@ function p(n) {
                             applicationId: S,
                             guildId: null != m ? m : void 0,
                             onComplete: I,
-                            forcesTransitionToGuild: b
+                            forcesTransitionToGuild: Z
                         })
                     })
                 });

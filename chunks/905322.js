@@ -1,23 +1,23 @@
 e.d(i, {
     j: function () {
-        return a;
+        return o;
     }
 });
 var l = e(200651),
     t = e(192379),
     r = e(777207),
     s = e(529079);
-function a(n) {
-    let { title: i, subtitle: e, iconSrc: a, backgroundSrc: o, animatedBackgroundSrc: d, prefersReducedMotion: u = !0 } = n,
+function o(n) {
+    let { title: i, subtitle: e, iconSrc: o, backgroundSrc: a, animatedBackgroundSrc: d, prefersReducedMotion: u = !0 } = n,
         c = t.useMemo(() => {
-            let n = null != o ? o : a;
+            let n = null != a ? a : o;
             if (null != n) return { '--custom-background-url': 'url('.concat(n.toString(), ')') };
-        }, [o, a]),
+        }, [a, o]),
         m = t.useMemo(() => {
-            if (null == o) return;
-            let n = { '--custom-background-static': 'url('.concat(o.toString()) };
+            if (null == a) return;
+            let n = { '--custom-background-static': 'url('.concat(a.toString()) };
             return !u && null != d && (n['--custom-background-animated'] = 'url('.concat(d.toString(), ')')), n;
-        }, [d, o, u]);
+        }, [d, a, u]);
     return (0, l.jsxs)('div', {
         className: s.wrapper,
         children: [
@@ -28,11 +28,11 @@ function a(n) {
             (0, l.jsxs)('div', {
                 className: s.content,
                 children: [
-                    null != a &&
+                    null != o &&
                         (0, l.jsx)('div', {
                             className: s.icon,
                             children: (0, l.jsx)('img', {
-                                src: a.toString(),
+                                src: o.toString(),
                                 alt: ''
                             })
                         }),
@@ -52,7 +52,7 @@ function a(n) {
                     })
                 ]
             }),
-            null != o
+            null != a
                 ? (0, l.jsx)('div', {
                       className: s.image,
                       style: m

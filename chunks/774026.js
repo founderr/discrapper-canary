@@ -49,7 +49,7 @@ function h(e) {
                             actorName: null !== (t = i.globalName) && void 0 !== t ? t : i.username,
                             actorHook: x,
                             num: g,
-                            helpCenterLink: c.Z.getArticleURL(d.BhN.NVIDIA_DRIVER_ISSUES)
+                            helpCenterLink: c.Z.getArticleURL(d.BhN.HD_STREAMING_POTION)
                         })
                     })
                 ]

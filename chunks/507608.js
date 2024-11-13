@@ -14,8 +14,8 @@ var l = e(200651),
     t = e(192379),
     r = e(905322),
     s = e(200207),
-    a = e(269210),
-    o = e(442837),
+    o = e(269210),
+    a = e(442837),
     d = e(481060),
     u = e(607070),
     c = e(100527),
@@ -46,7 +46,7 @@ let A = new Intl.DateTimeFormat(_.intl.currentLocale, {
     day: 'numeric'
 });
 function L(n) {
-    let { app: i, guildId: e, subscriptions: s, otps: a } = n,
+    let { app: i, guildId: e, subscriptions: s, otps: o } = n,
         d = t.useMemo(() => (0, y.y)(i, 100), [i]),
         { bot: p } = i,
         v = t.useMemo(() => {
@@ -71,8 +71,8 @@ function L(n) {
             });
             return null != i && null !== (n = N.Z.toURLSafe(i)) && void 0 !== n ? n : void 0;
         }, [p]),
-        h = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
-        g = t.useMemo(() => [...s.map((n) => n.skuId), ...a.map((n) => n.skuId)], [s, a]),
+        h = (0, a.e7)([u.Z], () => u.Z.useReducedMotion),
+        g = t.useMemo(() => [...s.map((n) => n.skuId), ...o.map((n) => n.skuId)], [s, o]),
         { analyticsLocations: I } = (0, m.ZP)(c.Z.APP_STOREFRONT);
     return (
         t.useEffect(() => {
@@ -96,7 +96,7 @@ function L(n) {
                 (0, l.jsx)(U, {
                     appId: i.id,
                     subscriptions: s,
-                    otps: a,
+                    otps: o,
                     guildId: e
                 })
             ]
@@ -160,7 +160,7 @@ function C(n) {
         { appId: u, guildId: c, listing: m, subscriptionType: v, onDetails: h } = n,
         { data: j } = (0, x.H)(m.skuId),
         k = null == j ? void 0 : j[0],
-        f = (0, o.e7)([b.Z], () => b.Z.getParentSKU(m.skuId), [m.skuId]),
+        f = (0, a.e7)([b.Z], () => b.Z.getParentSKU(m.skuId), [m.skuId]),
         P = (0, p.Ev)(f, c),
         S = (0, p.cr)(f, c),
         N = null != S && (null == P ? void 0 : null === (i = P.subscriptionPlan) || void 0 === i ? void 0 : i.id) !== (null == S ? void 0 : S.subscriptionPlan.id),
@@ -207,7 +207,7 @@ function C(n) {
                   children: s
               })
             : void 0;
-    return (0, l.jsx)(a.U, {
+    return (0, l.jsx)(o.U, {
         title: m.summary,
         description: null !== (r = m.description) && void 0 !== r ? r : void 0,
         imgSrc: U,
@@ -217,9 +217,9 @@ function C(n) {
             null != L
                 ? L.map((n) =>
                       (0, l.jsx)(
-                          a.G,
+                          o.G,
                           {
-                              name: n.title,
+                              description: n.title,
                               icon: n.icon
                           },
                           n.id
@@ -248,16 +248,16 @@ function C(n) {
     });
 }
 function F(n) {
-    var i, t, r, a;
+    var i, t, r, o;
     let { skuId: u, appId: p, onDetails: v } = n,
         { analyticsLocations: x } = (0, m.ZP)(c.Z.APP_STOREFRONT),
-        g = (0, o.e7)([j.Z], () => j.Z.getForSKU(u), [u]),
-        I = (0, o.e7)([b.Z], () => b.Z.get(u), [u]),
+        g = (0, a.e7)([j.Z], () => j.Z.getForSKU(u), [u]),
+        I = (0, a.e7)([b.Z], () => b.Z.get(u), [u]),
         k = (0, T.M)(u);
     if (null == I) return null;
     let f = null !== (t = I.name) && void 0 !== t ? t : '',
         y = null !== (r = null == g ? void 0 : null === (i = g.description) || void 0 === i ? void 0 : i.trim()) && void 0 !== r ? r : void 0,
-        R = (null == g ? void 0 : g.headerBackground) != null && null !== (a = N.Z.toURLSafe((0, P._W)(p, g.headerBackground, 256))) && void 0 !== a ? a : void 0,
+        R = (null == g ? void 0 : g.headerBackground) != null && null !== (o = N.Z.toURLSafe((0, P._W)(p, g.headerBackground, 256))) && void 0 !== o ? o : void 0,
         M = I.type === Z.epS.DURABLE && k,
         w = I.type === Z.epS.DURABLE ? (M ? _.intl.string(_.t.bm82mp) : _.intl.string(_.t['6gprwc'])) : void 0,
         { price: A } = I;

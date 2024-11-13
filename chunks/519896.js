@@ -67,7 +67,7 @@ function v(e) {
                                 (0, o.jsx)(
                                     i.G,
                                     {
-                                        name: e.title,
+                                        header: e.title,
                                         icon: e.icon,
                                         description: e.description
                                     },

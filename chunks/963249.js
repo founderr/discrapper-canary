@@ -20,7 +20,7 @@ var i = n(97613),
     m = n(981631),
     g = n(474936);
 function E(e) {
-    let { initialPlanId: t, followupSKUInfo: i, onClose: E, onComplete: v, onSubscriptionConfirmation: I, analyticsLocations: b, analyticsObject: S, analyticsLocation: T, analyticsSourceLocation: y, isGift: A = !1, giftMessage: N, giftStyle: C, giftingOrigin: R, subscriptionTier: O, trialId: D, postSuccessGuild: L, openInvoiceId: x, applicationId: w, referralTrialOfferId: M, giftRecipient: P, returnRef: k, subscription: U, skipConfirm: B, repeatPurchase: G } = null != e ? e : {},
+    let { initialPlanId: t, followupSKUInfo: i, onClose: E, onComplete: v, onSubscriptionConfirmation: I, analyticsLocations: b, analyticsObject: S, analyticsLocation: T, analyticsSourceLocation: y, isGift: A = !1, giftMessage: N, giftStyle: C, giftingOrigin: R, subscriptionTier: O, trialId: D, postSuccessGuild: L, openInvoiceId: x, applicationId: w, referralTrialOfferId: M, giftRecipient: P, returnRef: k, subscription: U, skipConfirm: G, repeatPurchase: B } = null != e ? e : {},
         Z = !1,
         F = (0, s.Z)(),
         V = f.default.getCurrentUser(),
@@ -68,8 +68,8 @@ function E(e) {
                     referralTrialOfferId: M,
                     returnRef: k,
                     subscription: U,
-                    skipConfirm: !!B,
-                    repeatPurchase: G
+                    skipConfirm: !!G,
+                    repeatPurchase: B
                 });
             };
         },

@@ -39,10 +39,10 @@ function N(e) {
         P = i.useRef(null),
         k = i.useRef(null),
         U = i.useRef(null),
-        { emoji: B, state: G } = null != a ? a : {},
-        Z = null != G && '' !== G ? G : null,
+        { emoji: G, state: B } = null != a ? a : {},
+        Z = null != B && '' !== B ? B : null,
         F = null != Z && Z.length > 0,
-        V = null != B,
+        V = null != G,
         j = V && !F,
         H = V ? 1.25 : 0,
         Y = 18 + H,
@@ -106,7 +106,7 @@ function N(e) {
             V
                 ? (0, r.jsx)(d.Iv, {
                       className: F ? S.statusEmojiInline : S.statusEmojiOnly,
-                      emoji: B,
+                      emoji: G,
                       animate: N,
                       hideTooltip: !1,
                       tooltipDelay: I.vB
@@ -222,8 +222,8 @@ function N(e) {
                                   className: s()(S.visibleContainer, e_, ep),
                                   role: 'tooltip',
                                   'aria-label': b.intl.formatToPlainString(b.t.UpF5QU, {
-                                      emoji: null !== (t = null == B ? void 0 : B.name) && void 0 !== t ? t : '',
-                                      status: G
+                                      emoji: null !== (t = null == G ? void 0 : G.name) && void 0 !== t ? t : '',
+                                      status: B
                                   }),
                                   tabIndex: 0,
                                   onFocus: () => {

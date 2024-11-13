@@ -78,7 +78,7 @@ function S(e) {
                               return (0, i.jsx)(
                                   o.G,
                                   {
-                                      name: n,
+                                      header: n,
                                       icon: (0, u.n)(S, r),
                                       description: s
                                   },

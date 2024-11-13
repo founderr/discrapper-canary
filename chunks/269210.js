@@ -116,7 +116,7 @@ function p(n) {
     });
 }
 function v(n) {
-    let { icon: t, name: e, description: i } = n;
+    let { icon: t, header: e, description: i } = n;
     return (0, l.jsxs)('div', {
         className: d.cardBenefit,
         children: [
@@ -126,16 +126,16 @@ function v(n) {
             }),
             (0, l.jsxs)('div', {
                 children: [
-                    (0, l.jsx)(o.x, {
-                        variant: 'text-sm/semibold',
-                        children: e
-                    }),
-                    null != i &&
+                    null != e &&
                         (0, l.jsx)(o.x, {
-                            variant: 'text-sm/normal',
-                            color: 'text-muted',
-                            children: i
-                        })
+                            variant: 'text-md/normal',
+                            color: 'header-primary',
+                            children: e
+                        }),
+                    (0, l.jsx)(o.x, {
+                        variant: 'text-sm/normal',
+                        children: i
+                    })
                 ]
             })
         ]

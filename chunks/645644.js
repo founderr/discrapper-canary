@@ -465,10 +465,10 @@ function U(e) {
             ++n.overlayMessageCreateCount;
     }
 }
-function B(e) {
+function G(e) {
     A.verbose('MESSAGE_ACKED', e), D.desktopMessageEvent('ack');
 }
-function G(e) {
+function B(e) {
     e.message.state === S.yb.SENDING && D.desktopMessageEvent('created');
 }
 function Z(e) {
@@ -566,8 +566,8 @@ class Y extends u.Z {
                           OVERLAY_MESSAGE_EVENT_ACTION: U,
                           RUNNING_GAMES_CHANGE: L,
                           SOUNDBOARD_SET_OVERLAY_ENABLED: k,
-                          MESSAGE_ACKED: B,
-                          MESSAGE_CREATE: G,
+                          MESSAGE_ACKED: G,
+                          MESSAGE_CREATE: B,
                           WINDOW_FOCUS: F,
                           RTC_CONNECTION_STATE: j.handleRTCConnectionState,
                           AUDIO_TOGGLE_SELF_MUTE: Z,

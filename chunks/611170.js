@@ -1,9 +1,9 @@
 t.d(n, {
     aB: function () {
-        return x;
+        return h;
     },
     rJ: function () {
-        return h;
+        return x;
     },
     yF: function () {
         return p;
@@ -53,7 +53,7 @@ function p(e) {
         zoomable: !1
     });
 }
-function x(e) {
+function h(e) {
     let n = e.item.originalItem.media;
     return (0, u.Yi)({
         ...e,
@@ -65,7 +65,7 @@ function x(e) {
         sourceMetadata: { message: e.message }
     });
 }
-function h(e) {
+function x(e) {
     let n = e.item.originalItem.media,
         t = c.Z.toURLSafe(n.proxyUrl);
     return null == t

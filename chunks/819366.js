@@ -64,7 +64,7 @@ function C(e) {
                 : (e) => {
                       null != x &&
                           (0, c.jW)(e, async () => {
-                              let { default: e } = await Promise.all([n.e('50506'), n.e('79695'), n.e('51269'), n.e('13351'), n.e('33862'), n.e('92453'), n.e('13125'), n.e('13441')]).then(n.bind(n, 757387));
+                              let { default: e } = await Promise.all([n.e('50506'), n.e('79695'), n.e('51269'), n.e('13351'), n.e('50050'), n.e('92453'), n.e('13125'), n.e('13441')]).then(n.bind(n, 757387));
                               return (t) =>
                                   (0, r.jsx)(e, {
                                       ...t,
@@ -78,25 +78,25 @@ function C(e) {
         P = y.ZP.useName(L),
         k = (0, l.e7)([E.Z, v.ZP, b.Z], () => T.ZP.getNickname(w, a, L)),
         U = I.Z.getGuild(w),
-        B = (0, _.Ib)(U, x) && i === A.fL ? A.jM : null;
+        G = (0, _.Ib)(U, x) && i === A.fL ? A.jM : null;
     if (null == L)
         return (0, r.jsx)(N, {
             userId: p,
             className: t,
             children: C
         });
-    let G = (e) =>
+    let B = (e) =>
         (0, r.jsx)(h.Z, {
             className: t,
             onContextMenu: M,
-            color: B,
+            color: G,
             ...e,
             children: '@'.concat(null != k ? k : P)
         });
     return R
         ? (0, r.jsx)(f.Gt, {
               value: D,
-              children: G()
+              children: B()
           })
         : (0, r.jsx)(f.Gt, {
               value: D,
@@ -119,7 +119,7 @@ function C(e) {
                       })
                   ),
                   position: o.tq ? 'top' : 'right',
-                  children: (e) => G(e)
+                  children: (e) => B(e)
               })
           });
 }

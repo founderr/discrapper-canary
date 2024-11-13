@@ -1,6 +1,6 @@
 n.d(t, {
     A5: function () {
-        return B;
+        return G;
     },
     Bg: function () {
         return g;
@@ -126,4 +126,4 @@ let _ = 'alt+c',
     P = 14 * f.Z.Millis.DAY,
     k = 5,
     U = 5,
-    B = 1;
+    G = 1;

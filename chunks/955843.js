@@ -13,8 +13,8 @@ var l = t(192379),
     s = t(569545),
     a = t(199902),
     o = t(430824),
-    c = t(158776),
-    d = t(959457),
+    d = t(158776),
+    c = t(959457),
     u = t(594174),
     m = t(215339);
 let f = new i.Yd('HDStreamingConsumableModal'),
@@ -27,18 +27,18 @@ let f = new i.Yd('HDStreamingConsumableModal'),
             i = (0, r.e7)([a.Z], () => a.Z.getAllActiveStreamsForChannel(e.id).filter((e) => e.ownerId !== t)),
             m = i.some((e) => {
                 let n = u.default.getUser(e.ownerId);
-                return null != n && c.Z.isMobileOnline(n.id);
+                return null != n && d.Z.isMobileOnline(n.id);
             }),
             [h, x] = l.useState(null),
             [g, v] = l.useState([]);
         (0, r.e7)(
-            [d.Z],
+            [c.Z],
             () => {
                 if (null == h || Date.now() - h > 10000) {
                     let e = i.map((e) => {
                         var n;
                         let t = (0, s.V9)(e),
-                            l = d.Z.getRTCConnection(t);
+                            l = c.Z.getRTCConnection(t);
                         return null == l ? void 0 : null === (n = l.getVideoStats()) || void 0 === n ? void 0 : n.inbound_bitrate_estimate_percentile99;
                     });
                     f.info('Setting bitrates', e), v(e), x(Date.now());

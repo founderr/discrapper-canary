@@ -34,8 +34,8 @@ var r = n(200651),
     P = n(482215),
     k = n(947519),
     U = n(243778),
-    B = n(314910),
-    G = n(84615),
+    G = n(314910),
+    B = n(84615),
     Z = n(429142),
     F = n(813744),
     V = n(311476),
@@ -144,7 +144,7 @@ t.Z = function (e) {
                                         (0, r.jsx)(I.Wu, {
                                             appContext: er.IlC.APP,
                                             renderWindow: window,
-                                            children: (0, r.jsxs)(B.yP, {
+                                            children: (0, r.jsxs)(G.yP, {
                                                 children: [
                                                     null != f
                                                         ? (0, r.jsx)(eo, {
@@ -182,8 +182,8 @@ t.Z = function (e) {
                                                                                     (0, r.jsx)(m.Z, {}),
                                                                                     (0, r.jsx)(_.Modals, {}),
                                                                                     (0, r.jsx)(g.Z, {}),
-                                                                                    (0, r.jsx)(G.Ox, {}),
-                                                                                    (0, r.jsx)(B.Un, {}),
+                                                                                    (0, r.jsx)(B.Ox, {}),
+                                                                                    (0, r.jsx)(G.Un, {}),
                                                                                     (0, r.jsx)(Z.ot, {}),
                                                                                     (0, r.jsx)(_.ToastContainer, {}),
                                                                                     (0, r.jsx)(A.Z, {}),

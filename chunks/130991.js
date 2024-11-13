@@ -395,7 +395,7 @@ function k(e) {
                               return (0, r.jsx)(
                                   o.G,
                                   {
-                                      name: i,
+                                      header: i,
                                       icon: (0, j.n)(t, l),
                                       description: s
                                   },

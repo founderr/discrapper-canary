@@ -16,8 +16,8 @@ var i = t(120356),
     m = t(313201),
     f = t(231338),
     p = t(388032),
-    x = t(790246),
-    h = t(615934);
+    h = t(790246),
+    x = t(615934);
 function v(e) {
     let { className: n, clickableClassName: t, clickable: i, children: o } = e,
         s = (0, m.Dt)();
@@ -65,11 +65,11 @@ function C(e) {
             ...n,
             ariaDescription: ''
         },
-        clickableClassName: h.clickable
+        clickableClassName: x.clickable
     });
 }
 function _(e) {
-    let { entry: n, channel: t, title: i, subtitle: h, thumbnailUrl: _, titleClickable: g, subtitleClickable: I, thumbnailClickable: b, providerIconProps: j, style: S = {} } = e,
+    let { entry: n, channel: t, title: i, subtitle: x, thumbnailUrl: _, titleClickable: g, subtitleClickable: I, thumbnailClickable: b, providerIconProps: j, style: S = {} } = e,
         N = (0, m.Dt)(),
         { primaryColor: E, secondaryColor: T } = (0, u.Z)(_);
     return (
@@ -81,12 +81,12 @@ function _(e) {
                     'aria-roledescription': p.intl.string(p.t.zFfUhI),
                     'aria-labelledby': N,
                     'data-disable-adaptive-theme': !0,
-                    className: r()(x.container, e),
+                    className: r()(h.container, e),
                     style: S,
                     children: [
                         (0, l.jsx)(v, {
-                            className: x.thumbnailContainer,
-                            clickableClassName: x.clickable,
+                            className: h.thumbnailContainer,
+                            clickableClassName: h.clickable,
                             clickable: b,
                             children: (0, l.jsx)(s.f, {
                                 src: _,
@@ -96,53 +96,53 @@ function _(e) {
                             })
                         }),
                         (0, l.jsxs)('div', {
-                            className: x.infoContainer,
+                            className: h.infoContainer,
                             children: [
                                 (0, l.jsx)(o.Z, {
                                     channel: t,
                                     entry: n,
-                                    className: x.users
+                                    className: h.users
                                 }),
                                 (0, l.jsx)(a.Spacer, { size: 2 }),
                                 (0, l.jsx)(C, {
                                     clickable: g,
-                                    className: x.clickableText,
+                                    className: h.clickableText,
                                     children: (0, l.jsx)(a.Heading, {
                                         id: N,
                                         variant: 'heading-md/medium',
                                         lineClamp: 1,
-                                        className: r()(x.textPrimary, x.truncatedText),
+                                        className: r()(h.textPrimary, h.truncatedText),
                                         scaleFontToUserSetting: !0,
                                         children: i
                                     })
                                 }),
-                                null != h
+                                null != x
                                     ? (0, l.jsxs)(l.Fragment, {
                                           children: [
                                               (0, l.jsx)(a.Spacer, { size: 2 }),
                                               (0, l.jsx)(C, {
                                                   clickable: I,
-                                                  className: x.clickableText,
+                                                  className: h.clickableText,
                                                   children: (0, l.jsx)(a.Text, {
                                                       variant: 'text-sm/normal',
-                                                      className: r()(x.textSecondary, x.truncatedText),
+                                                      className: r()(h.textSecondary, h.truncatedText),
                                                       lineClamp: 1,
                                                       scaleFontToUserSetting: !0,
-                                                      children: h
+                                                      children: x
                                                   })
                                               })
                                           ]
                                       })
                                     : null,
                                 (0, l.jsx)(d.PZ, {
-                                    className: x.badges,
+                                    className: h.badges,
                                     entry: n,
                                     location: d.Gt.EMBED
                                 })
                             ]
                         }),
                         (0, l.jsx)('div', {
-                            className: x.headerIcons,
+                            className: h.headerIcons,
                             children: null != j ? (0, l.jsx)(c.Z, { ...j }) : null
                         })
                     ]

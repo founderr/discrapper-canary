@@ -16,8 +16,8 @@ var i = t(120356),
     m = t(572004),
     f = t(49012),
     p = t(970184),
-    x = t(280501),
-    h = t(388032),
+    h = t(280501),
+    x = t(388032),
     v = t(948489);
 function C(e) {
     let { url: n, onSelect: t } = e;
@@ -25,12 +25,12 @@ function C(e) {
         ? (0, l.jsx)(o.Menu, {
               navId: 'component-button',
               onClose: s.Zy,
-              'aria-label': h.intl.string(h.t.tvTXy8),
+              'aria-label': x.intl.string(x.t.tvTXy8),
               onSelect: t,
               children: (0, l.jsx)(o.MenuGroup, {
                   children: (0, l.jsx)(o.MenuItem, {
                       id: 'copy',
-                      label: h.intl.string(h.t.uHhnfX),
+                      label: x.intl.string(x.t.uHhnfX),
                       action: () => (0, m.JG)(n)
                   })
               })
@@ -39,16 +39,16 @@ function C(e) {
 }
 function _(e) {
     let n;
-    let { label: t, style: i, disabled: m, emoji: h, url: _, skuId: g } = e,
+    let { label: t, style: i, disabled: m, emoji: x, url: _, skuId: g } = e,
         { executeStateUpdate: I, visualState: b, isDisabled: j } = (0, p.Ee)(e),
         S = (0, d.s)(g),
         N = null != g && i === u.ZJ.PREMIUM,
         E = N && (null == S ? void 0 : S.disabled),
         T = N ? (null == S ? void 0 : S.label) : t,
-        y = null != h,
+        y = null != x,
         Z = null != T && T.length > 0,
         k = i === u.ZJ.LINK && null != _ && _.length > 0,
-        L = b === x.gH.LOADING || (N && null == S);
+        L = b === h.gH.LOADING || (N && null == S);
     return (
         (n = k
             ? () => {
@@ -77,7 +77,7 @@ function _(e) {
                 }
             })(i),
             size: o.Button.Sizes.SMALL,
-            disabled: m || b === x.gH.DISABLED || j || E,
+            disabled: m || b === h.gH.DISABLED || j || E,
             onClick: n,
             onContextMenu: (e) => {
                 k &&
@@ -109,10 +109,10 @@ function _(e) {
                         y
                             ? (0, l.jsx)(c.Z, {
                                   className: r()({ [v.textEmoji]: Z }),
-                                  src: h.src,
-                                  emojiId: h.id,
-                                  emojiName: h.name,
-                                  animated: h.animated
+                                  src: x.src,
+                                  emojiId: x.id,
+                                  emojiName: x.name,
+                                  animated: x.animated
                               })
                             : null,
                         Z

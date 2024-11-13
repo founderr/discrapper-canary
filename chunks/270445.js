@@ -92,8 +92,8 @@ var v = new WeakMap(),
     P = new WeakMap(),
     k = new WeakMap(),
     U = new WeakMap(),
-    B = new WeakMap(),
     G = new WeakMap(),
+    B = new WeakMap(),
     Z = Symbol('placeholder'),
     F = Symbol('mark-placeholder'),
     V = globalThis.Text,
@@ -579,13 +579,13 @@ var v = new WeakMap(),
                     else if (e) {
                         var t = window.ResizeObserver || f.do;
                         (d.current = new t(() => {
-                            var e = G.get(c);
+                            var e = B.get(c);
                             null == e || e();
                         })),
                             d.current.observe(e);
                     }
                     if (!e && o.current) {
-                        var n = G.get(c);
+                        var n = B.get(c);
                         null == n || n();
                     }
                     return (
@@ -739,12 +739,12 @@ var v = new WeakMap(),
             i = ex().isInline(r) ? 'span' : 'div';
         return u.createElement(i, Object.assign({}, t, { style: { position: 'relative' } }), n);
     },
-    eB = (0, u.createContext)(() => []),
-    eG = () => (0, u.useContext)(eB),
+    eG = (0, u.createContext)(() => []),
+    eB = () => (0, u.useContext)(eG),
     eZ = (0, u.createContext)(!1),
     eF = () => (0, u.useContext)(eZ),
     eV = (e) => {
-        for (var { decorations: t, node: n, renderElement: r, renderPlaceholder: i, renderLeaf: a, selection: s } = e, o = eG(), l = ex(), c = ev.findPath(l, n), f = [], _ = d.W_.isElement(n) && !l.isInline(n) && d.ML.hasInlines(l, n), p = 0; p < n.children.length; p++) {
+        for (var { decorations: t, node: n, renderElement: r, renderPlaceholder: i, renderLeaf: a, selection: s } = e, o = eB(), l = ex(), c = ev.findPath(l, n), f = [], _ = d.W_.isElement(n) && !l.isInline(n) && d.ML.hasInlines(l, n), p = 0; p < n.children.length; p++) {
             var h = c.concat(p),
                 m = n.children[p],
                 g = ev.findKey(l, m),
@@ -1174,7 +1174,7 @@ var tu = (e) => u.createElement(u.Fragment, null, eV(e)),
                     onUserInput: a
                 }),
             [, es] = (0, u.useReducer)((e) => e + 1, 0);
-        G.set(X, es), R.set(X, v);
+        B.set(X, es), R.set(X, v);
         var ec = (0, u.useMemo)(
             () => ({
                 isDraggingInternally: !1,
@@ -1245,8 +1245,8 @@ var tu = (e) => u.createElement(u.Fragment, null, eV(e)),
                                 l = 0,
                                 u = !1,
                                 c = () => {
-                                    var e = B.get(t);
-                                    if ((B.delete(t), e)) {
+                                    var e = G.get(t);
+                                    if ((G.delete(t), e)) {
                                         var { selection: n } = t,
                                             r = e6(t, e);
                                         r && (!n || !d.e6.equals(r, n)) && d.YR.select(t, r);
@@ -1312,10 +1312,10 @@ var tu = (e) => u.createElement(u.Fragment, null, eV(e)),
                                                 if (!d.ML.hasPath(e, a)) return !1;
                                                 var s = d.NB.get(e, a);
                                                 return d.xv.isText(s) && s.text.startsWith(r.text);
-                                            })(t, l) && ((a = !1), U.delete(t), P.delete(t), (i = 'action'), B.delete(t), n.cancel(), r.cancel(), null == e || e.unref());
+                                            })(t, l) && ((a = !1), U.delete(t), P.delete(t), (i = 'action'), G.delete(t), n.cancel(), r.cancel(), null == e || e.unref());
                                     }
                                     var v = null == e ? void 0 : e.unref();
-                                    if ((v && !B.get(t) && (!t.selection || !d.e6.equals(v, t.selection)) && d.YR.select(t, v), g())) {
+                                    if ((v && !G.get(t) && (!t.selection || !d.e6.equals(v, t.selection)) && d.YR.select(t, v), g())) {
                                         f();
                                         return;
                                     }
@@ -1381,7 +1381,7 @@ var tu = (e) => u.createElement(u.Fragment, null, eV(e)),
                                 m = function (e) {
                                     var { at: i } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
                                     (u = !1),
-                                        B.delete(t),
+                                        G.delete(t),
                                         n.cancel(),
                                         r.cancel(),
                                         g() && _(),
@@ -1397,7 +1397,7 @@ var tu = (e) => u.createElement(u.Fragment, null, eV(e)),
                                     return !!(null !== (e = k.get(t)) && void 0 !== e && e.length);
                                 },
                                 v = (e) => {
-                                    B.set(t, e), s && (clearTimeout(s), (s = null));
+                                    G.set(t, e), s && (clearTimeout(s), (s = null));
                                     var { selection: n } = t;
                                     if (!!e) {
                                         var r = !n || !d.y$.equals(n.anchor.path, e.anchor.path),
@@ -1568,18 +1568,18 @@ var tu = (e) => u.createElement(u.Fragment, null, eV(e)),
                                                         { at: r }
                                                     );
                                                 if (d.y$.equals(r.anchor.path, r.focus.path)) {
-                                                    var [U, B] = d.e6.edges(r),
-                                                        G = {
+                                                    var [U, G] = d.e6.edges(r),
+                                                        B = {
                                                             start: U.offset,
-                                                            end: B.offset,
+                                                            end: G.offset,
                                                             text: P
                                                         };
                                                     if (P && u && 'insertCompositionText' === n) {
                                                         var Z = u.start + u.text.search(/\S|$/);
-                                                        G.start + G.text.search(/\S|$/) === Z + 1 && G.end === u.start + u.text.length ? ((G.start -= 1), (u = null), I()) : (u = !1);
-                                                    } else u = 'insertText' === n && (null === u ? G : !!(u && d.e6.isCollapsed(r)) && u.end + u.text.length === U.offset && e9(e9({}, u), {}, { text: u.text + P }));
+                                                        B.start + B.text.search(/\S|$/) === Z + 1 && B.end === u.start + u.text.length ? ((B.start -= 1), (u = null), I()) : (u = !1);
+                                                    } else u = 'insertText' === n && (null === u ? B : !!(u && d.e6.isCollapsed(r)) && u.end + u.text.length === U.offset && e9(e9({}, u), {}, { text: u.text + P }));
                                                     if (l) {
-                                                        h(U.path, G);
+                                                        h(U.path, B);
                                                         return;
                                                     }
                                                 }
@@ -1594,7 +1594,7 @@ var tu = (e) => u.createElement(u.Fragment, null, eV(e)),
                                     if (!(E() || g())) {
                                         if (e.some((n) => er(t, n, e))) {
                                             var n;
-                                            null === (n = G.get(t)) || void 0 === n || n();
+                                            null === (n = B.get(t)) || void 0 === n || n();
                                         }
                                     }
                                 },
@@ -1874,7 +1874,7 @@ var tu = (e) => u.createElement(u.Fragment, null, eV(e)),
             ej.Provider,
             { value: v },
             u.createElement(
-                eB.Provider,
+                eG.Provider,
                 { value: p },
                 u.createElement(
                     e1,
@@ -2571,8 +2571,8 @@ var tN = function (e) {
                         .filter(Boolean);
                     k.set(e, s);
                 }
-                var o = B.get(e);
-                o && B.set(e, e7(e, o, t));
+                var o = G.get(e);
+                o && G.set(e, e7(e, o, t));
                 var l = U.get(e);
                 if (null != l && l.at) {
                     var u = d.E9.isPoint(null == l ? void 0 : l.at) ? e5(e, l.at, t) : e7(e, l.at, t);

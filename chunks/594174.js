@@ -234,14 +234,14 @@ function U(e) {
         null != t && A(t, !0), null != n && A(n, !0), null != r && null != r.user && T(r.user, !0);
     });
 }
-function B(e) {
+function G(e) {
     let { supplementalData: t } = e;
     Object.values(t).forEach((e) => {
         let { message_preview: t } = e;
         null != t && A(t, !0);
     });
 }
-function G(e) {
+function B(e) {
     let { guildScheduledEventUsers: t, guildId: n } = e;
     t.forEach((e) => {
         let { user: t, member: r } = e;
@@ -573,10 +573,10 @@ class eb extends d.Z {
             LOAD_THREADS_SUCCESS: k,
             LOAD_ARCHIVED_THREADS_SUCCESS: k,
             LOAD_FORUM_POSTS: U,
-            GUILD_SCHEDULED_EVENT_USERS_FETCH_SUCCESS: G,
+            GUILD_SCHEDULED_EVENT_USERS_FETCH_SUCCESS: B,
             LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: Z,
             NOTIFICATION_CENTER_ITEM_CREATE: F,
-            LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS: B,
+            LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS: G,
             PASSIVE_UPDATE_V2: ee,
             LOCAL_MESSAGES_LOADED: et,
             FAMILY_CENTER_INITIAL_LOAD: e_,

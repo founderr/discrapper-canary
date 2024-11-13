@@ -8,8 +8,8 @@ e(192379);
 var t = e(481060),
     r = e(630388),
     s = e(981631),
-    a = e(388032),
-    o = e(132313);
+    o = e(388032),
+    a = e(132313);
 let d = {
     size: 'md',
     color: t.tokens.colors.INTERACTIVE_NORMAL
@@ -20,7 +20,7 @@ function u(n) {
     return (0, l.jsx)(t.Heading, {
         variant: 'heading-lg/semibold',
         color: e,
-        className: o.heading,
+        className: a.heading,
         children: u
             ? (0, l.jsxs)(l.Fragment, {
                   children: [
@@ -28,7 +28,7 @@ function u(n) {
                           ...d,
                           color: 'currentColor'
                       }),
-                      a.intl.string(a.t.XIhSoq)
+                      o.intl.string(o.t.XIhSoq)
                   ]
               })
             : (0, l.jsxs)(l.Fragment, {
@@ -37,7 +37,7 @@ function u(n) {
                           ...d,
                           color: 'currentColor'
                       }),
-                      a.intl.string(a.t.dxfZpq)
+                      o.intl.string(o.t.dxfZpq)
                   ]
               })
     });

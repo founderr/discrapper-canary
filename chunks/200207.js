@@ -8,8 +8,8 @@ e(192379);
 var t = e(557533),
     r = e.n(t),
     s = e(489948),
-    a = e(790472),
-    o = e(777207),
+    o = e(790472),
+    a = e(777207),
     d = e(147333),
     u = e(103077);
 function c(n) {
@@ -27,7 +27,7 @@ function c(n) {
                     style: null != t ? { backgroundImage: null != t ? 'url('.concat(t.toString(), ')') : void 0 } : void 0,
                     children:
                         null == t &&
-                        (0, l.jsx)(a.P, {
+                        (0, l.jsx)(o.P, {
                             color: 'white',
                             size: 'custom',
                             height: 80,
@@ -37,13 +37,13 @@ function c(n) {
                 (0, l.jsxs)('div', {
                     className: d.details,
                     children: [
-                        (0, l.jsx)(o.x, {
+                        (0, l.jsx)(a.x, {
                             color: 'header-primary',
                             variant: 'text-md/semibold',
                             children: i
                         }),
                         null != e &&
-                            (0, l.jsx)(o.x, {
+                            (0, l.jsx)(a.x, {
                                 className: d.description,
                                 color: 'text-muted',
                                 variant: 'text-sm/normal',
@@ -55,7 +55,7 @@ function c(n) {
                     (0, l.jsxs)('div', {
                         className: d.footer,
                         children: [
-                            (0, l.jsx)(o.x, {
+                            (0, l.jsx)(a.x, {
                                 color: 'interactive-normal',
                                 variant: 'text-sm/normal',
                                 children: v

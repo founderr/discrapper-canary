@@ -16,7 +16,7 @@ var l = t(200651),
     m = t(280501),
     f = t(388032),
     p = t(601648);
-function x(e) {
+function h(e) {
     let { emoji: n, label: t, description: i, isDisabled: r, isOffset: o } = e,
         c = a()(p.labelContainer, {
             [p.disabled]: r,
@@ -51,7 +51,7 @@ function x(e) {
         ]
     });
 }
-function h(e) {
+function x(e) {
     let { emoji: n, label: t } = e;
     return (0, l.jsx)('div', {
         className: p.option,
@@ -176,12 +176,12 @@ function C(e) {
                         closeOnSelect: !E,
                         optionClassName: p.selectOption,
                         renderOptionLabel: (e) =>
-                            (0, l.jsx)(x, {
+                            (0, l.jsx)(h, {
                                 ...e,
                                 isDisabled: E && !k.has(e.value) && k.size === s,
                                 isOffset: M
                             }),
-                        renderOptionValue: (e) => (E ? (0, l.jsx)(v, { options: e }) : (0, l.jsx)(h, { ...e[0] })),
+                        renderOptionValue: (e) => (E ? (0, l.jsx)(v, { options: e }) : (0, l.jsx)(x, { ...e[0] })),
                         ...B
                     }),
                     T

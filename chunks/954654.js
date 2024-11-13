@@ -19,8 +19,8 @@ var i = t(120356),
     m = t(413991),
     f = t(12067),
     p = t(676149),
-    x = t(861529),
-    h = t(770009),
+    h = t(861529),
+    x = t(770009),
     v = t(889515),
     C = t(915689);
 function _(e) {
@@ -49,13 +49,13 @@ function _(e) {
                 case a.re.INPUT_TEXT:
                     return (0, l.jsx)(m.Z, { ...e }, n);
                 case a.re.TEXT:
-                    return (0, l.jsx)(x.Z, { ...e }, n);
+                    return (0, l.jsx)(h.Z, { ...e }, n);
                 case a.re.MEDIA_GALLERY:
                     return (0, l.jsx)(f.Z, { ...e }, n);
                 case a.re.SEPARATOR:
                     return (0, l.jsx)(p.Z, { ...e }, n);
                 case a.re.CONTENT_INVENTORY_ENTRY:
-                    return (0, l.jsx)(h.Z, { ...e }, n);
+                    return (0, l.jsx)(x.Z, { ...e }, n);
             }
         })(e, n.toString())
     );

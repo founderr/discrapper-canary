@@ -68,7 +68,7 @@ function N(e) {
                       : !0 === S
                         ? E.intl.format(E.t.JkWoqK, {
                               username: j.username,
-                              helpCenterLink: C.Z.getArticleURL(_.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
+                              helpCenterLink: C.Z.getArticleURL(_.BhN.HD_STREAMING_POTION)
                           })
                         : E.intl.formatToPlainString(E.t.vNbVXF, { username: j.username }),
             [j, A, S]

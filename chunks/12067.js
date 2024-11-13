@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return h;
+        return x;
     }
 });
 var l = t(200651);
@@ -16,11 +16,11 @@ var i = t(442837),
     m = t(592125),
     f = t(52824),
     p = t(970184),
-    x = t(981631);
-function h(e) {
+    h = t(981631);
+function x(e) {
     let { message: n } = (0, p.CJ)(),
         t = (0, i.e7)([m.Z], () => m.Z.getChannel(null == n ? void 0 : n.channel_id)),
-        { shouldHideMediaOptions: h, shouldRedactExplicitContent: v, gifAutoPlay: C, getGifFavButton: _, getOnMediaItemContextMenu: g } = (0, c.c)();
+        { shouldHideMediaOptions: x, shouldRedactExplicitContent: v, gifAutoPlay: C, getGifFavButton: _, getOnMediaItemContextMenu: g } = (0, c.c)();
     if (null == n || null == t) return null;
     let I = e.items
             .map((e) => ({
@@ -40,7 +40,7 @@ function h(e) {
                 ? (0, d._)(
                       I,
                       {
-                          shouldHideMediaOptions: h,
+                          shouldHideMediaOptions: x,
                           shouldRedactExplicitContent: v
                       },
                       b
@@ -72,14 +72,14 @@ function h(e) {
                 renderImageComponent: s.aB,
                 renderVideoComponent: s.rJ,
                 renderVisualPlaceholderComponent: s.yF,
-                renderAudioComponent: x.dG4,
-                renderPlaintextFilePreview: x.dG4,
-                renderGenericFileComponent: x.dG4,
-                renderMosaicItemFooter: x.dG4,
+                renderAudioComponent: h.dG4,
+                renderPlaintextFilePreview: h.dG4,
+                renderGenericFileComponent: h.dG4,
+                renderMosaicItemFooter: h.dG4,
                 gifFavoriteButton: _(l),
                 onPlay: (e, n, t) => {},
                 canRemoveItem: !1,
-                onRemoveItem: x.dG4
+                onRemoveItem: h.dG4
             },
             a = (0, f.q)({
                 proxyURL: l.proxyUrl,

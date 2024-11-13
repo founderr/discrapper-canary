@@ -1,6 +1,6 @@
 n.d(t, {
     e: function () {
-        return G;
+        return B;
     }
 }),
     n(47120),
@@ -98,8 +98,8 @@ let x = [
     P = S.Z.Millis.DAYS_30,
     k = (0, a.animated)(I.Z),
     U = (0, a.animated)(b.Z),
-    B = (0, a.animated)(u.GiftIcon);
-function G(e) {
+    G = (0, a.animated)(u.GiftIcon);
+function B(e) {
     let {
             themeOverride: t,
             hovered: n,
@@ -140,7 +140,7 @@ function G(e) {
         p = a ? f : 0,
         h = (0, l.wj)(null != t ? t : o) ? s.dark[p] : s.light[p];
     return !n && a
-        ? (0, r.jsx)(B, {})
+        ? (0, r.jsx)(G, {})
         : a && c
           ? (0, r.jsx)(U, {
                 isDark: (0, l.wj)(o),
@@ -164,7 +164,7 @@ t.Z = i.memo(function (e) {
         M = [];
     w && x && M.push(o.z.SEASONAL_GIFTING_COACHMARK_2023);
     let [k, U] = (0, h.US)(M),
-        B = null != k,
+        G = null != k,
         Z = (0, y.Ft)(n),
         F = null != Z;
     if (t) return null;
@@ -192,7 +192,7 @@ t.Z = i.memo(function (e) {
                 d(!1);
             },
             children: [
-                B &&
+                G &&
                     (0, r.jsx)(c.Z, {
                         onComplete: () => d(!1),
                         onDMCheckItOutClick: V,
@@ -208,15 +208,15 @@ t.Z = i.memo(function (e) {
                     },
                     children: (0, r.jsx)('div', {
                         className: D.noPointerEvents,
-                        children: (0, r.jsx)(G, {
+                        children: (0, r.jsx)(B, {
                             hovered: l,
-                            isContentDismissed: !B
+                            isContentDismissed: !G
                         })
                     })
                 })
             ]
         });
-    return B
+    return G
         ? j
         : (0, r.jsx)(u.TooltipContainer, {
               className: D.container,

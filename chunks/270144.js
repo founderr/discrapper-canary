@@ -6,13 +6,13 @@ e.d(t, {
         return C;
     },
     LM: function () {
-        return b;
+        return Z;
     },
     cr: function () {
         return O;
     },
     h6: function () {
-        return Z;
+        return b;
     },
     jd: function () {
         return l;
@@ -46,7 +46,7 @@ var l,
     g = e(981631);
 let I = 12633 == e.j ? 2592000000 : null;
 ((i = l || (l = {}))[(i.NOT_LOADED = 0)] = 'NOT_LOADED'), (i[(i.LOADING = 1)] = 'LOADING'), (i[(i.LOADED = 2)] = 'LOADED'), (i[(i.ERROR = 3)] = 'ERROR');
-let b = (n) => {
+let Z = (n) => {
     let { guildId: t, canFetch: e = !0, forceRefetch: l = !1 } = n,
         i = (0, u.e7)([h.Z], () => (null != t ? h.Z.getEntitlementsForGuildFetchState(t) : null), [t]);
     return (
@@ -58,10 +58,10 @@ let b = (n) => {
         { entitlementsLoaded: i === h.M.FETCHED }
     );
 };
-function Z(n) {
+function b(n) {
     var t;
     let e = null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : g.lds,
-        { entitlementsLoaded: l } = b({
+        { entitlementsLoaded: l } = Z({
             guildId: e,
             canFetch: (0, u.e7)([s.Z], () => s.Z.can(g.Plq.ADMINISTRATOR, n))
         }),

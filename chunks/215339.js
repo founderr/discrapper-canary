@@ -5,7 +5,7 @@ t.d(n, {
 });
 let l = (0, t(818083).B)({
         kind: 'user',
-        id: '2024-10_consumables_hd_streaming',
+        id: '2024-09_hd_streaming_potion',
         label: 'Consumable HD Streaming Experiment',
         defaultConfig: { enabled: !1 },
         treatments: [

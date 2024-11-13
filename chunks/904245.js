@@ -34,8 +34,8 @@ var r = n(278074),
     P = n(64078),
     k = n(351780),
     U = n(79390),
-    B = n(643266),
-    G = n(617136);
+    G = n(643266),
+    B = n(617136);
 n(807092);
 var Z = n(869765),
     F = n(926491),
@@ -593,7 +593,7 @@ let eg = {
             let r = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
                 i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
             if (t.reaction) return Promise.resolve();
-            let a = await (0, B.Z)(e);
+            let a = await (0, G.Z)(e);
             if (null != a) return eE.sendMessage(a, t, r, i);
             let s = C.ZP.backgroundify(() => eE._sendMessage(e, t, i), void 0),
                 o = null !== (n = i.nonce) && void 0 !== n ? n : (0, x.r)();
@@ -732,7 +732,7 @@ let eg = {
         },
         _sendMessage(e, t, n) {
             var r, i, a;
-            let o = (0, B.Z)(e);
+            let o = (0, G.Z)(e);
             if (null != o)
                 return (
                     e_.info('Converting channel to a private channel'),
@@ -886,7 +886,7 @@ let eg = {
                                                 else if (t === m.g.GUILD_PRODUCT);
                                                 else if (t === m.g.SERVER_SHOP);
                                                 else if (t === m.g.QUESTS_EMBED)
-                                                    (0, G.dA)({
+                                                    (0, B.dA)({
                                                         questId: o,
                                                         event: el.rMx.QUEST_LINK_SHARED,
                                                         trackGuildAndChannelMetadata: !0

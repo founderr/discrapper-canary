@@ -14,7 +14,7 @@ var s = n(120356),
 function p(e) {
     let { showChargingUpState: t, rowValueText: n, endsAt: s, fractionalState: a, activationDate: o } = e,
         c = t ? h.intl.string(h.t['hT6i//']) : h.intl.string(h.t['3G0CTE']),
-        d = t ? (void 0 === o ? h.intl.formatToPlainString(h.t['0Vwb/v'], { activateDate: o }) : '') : a === m.a$.FP_SUB ? h.intl.formatToPlainString(h.t.MMvaIC, { resumeDate: s.toDate() }) : '',
+        d = t ? (void 0 === o ? '' : h.intl.formatToPlainString(h.t['0Vwb/v'], { activateDate: o })) : a === m.a$.FP_SUB ? h.intl.formatToPlainString(h.t.MMvaIC, { resumeDate: s.toDate() }) : '',
         u = r()({
             [g.fractionalUnactivatedPill]: t,
             [g.fractionalTimeRemainingPill]: !t

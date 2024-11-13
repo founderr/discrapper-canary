@@ -105,7 +105,7 @@ n.d(t, {
         return M;
     },
     nJ: function () {
-        return B;
+        return G;
     },
     nt: function () {
         return L;
@@ -120,7 +120,7 @@ n.d(t, {
         return D;
     },
     xn: function () {
-        return G;
+        return B;
     },
     yi: function () {
         return et;
@@ -216,8 +216,8 @@ let k = Number(Object.values(r).pop()),
     U = Number(Object.values(i).pop());
 if (isNaN(k) || isNaN(U)) throw Error('Failed to get the last step in the ClanSetupSteps enum');
 if (k > U) throw Error('Early Signup last step mismatch.');
-let B = '700136079562375258',
-    G = '762434991303950386',
+let G = '700136079562375258',
+    B = '762434991303950386',
     Z = ['Server: NA', 'Server: EU', 'Server: LATAM', 'Server: KR', 'Server: AP', 'Voice ON', 'Voice OFF', 'Unrated', 'All Ranks', 'Bronze+', 'Silver+', 'Gold+', 'Platinum+', 'Diamond+'],
     F = new Set([...Z, 'Server: NA', 'Server: EU', 'Server: Asia', 'Server: TW/HK/MO', 'Mondstadt', 'Liyue', 'Inazuma', 'Sumeru', 'Fontaine', 'F2P', 'Spenders', 'Co-op', 'Support']),
     V = ['20+', '30+', '40+', 'All Ages'],

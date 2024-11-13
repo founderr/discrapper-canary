@@ -68,7 +68,7 @@ function O(e) {
         { resetInteraction: w, setInteractionToast: M } = (0, v.Xo)(),
         { primaryColor: P } = (0, b.z)(),
         [k, U] = i.useState(''),
-        [B, G] = i.useState((0, c.JM)(k)),
+        [G, B] = i.useState((0, c.JM)(k)),
         Z = i.useRef(!1),
         F = i.useRef(null),
         V = i.useCallback(
@@ -125,9 +125,9 @@ function O(e) {
                 placeholder: y.intl.formatToPlainString(R(f), { username: p.ZP.getName(n, a, t) }),
                 channel: N,
                 textValue: k,
-                richValue: B,
+                richValue: G,
                 onChange: (e, t, n) => {
-                    if (t !== k) U(t), G(n);
+                    if (t !== k) U(t), B(n);
                 },
                 focused: Z.current,
                 onFocus: () => {
