@@ -277,8 +277,9 @@ function er(e) {
             eZ && (0, W.t)(), eE(2);
         }, [eZ]),
         te = (0, S.j)('GoLiveModal'),
-        tt = (null == ex ? void 0 : ex.type) === $.d4z.GUILD_VOICE && te,
-        tn = (function (e, t, n, l) {
+        tt = (0, f.e7)([k.Z], () => k.Z.getGuild(ea)),
+        tn = (null == ex ? void 0 : ex.type) === $.d4z.GUILD_VOICE && te && null != tt && tt.premiumTier === $.Eu4.NONE,
+        tl = (function (e, t, n, l) {
             switch (e) {
                 case 2:
                     return t ? 0 : null;
@@ -292,11 +293,11 @@ function er(e) {
                     return null;
             }
         })(ey, er, es, eR),
-        tl = 1 !== ey && (3 !== ey || (null == eP && null == eg) || null == eq),
-        ti = s.useCallback(() => {
-            null != tn && eE(tn);
-        }, [tn]),
-        tr = (0, r.jsxs)(r.Fragment, {
+        ti = 1 !== ey && (3 !== ey || (null == eP && null == eg) || null == eq),
+        tr = s.useCallback(() => {
+            null != tl && eE(tl);
+        }, [tl]),
+        ts = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)(m.Slides, {
                     springConfig: {
@@ -362,28 +363,28 @@ function er(e) {
                                 className: el.modalSize,
                                 children: (0, r.jsx)(X.Hu, {
                                     onSourceSelect: eQ,
-                                    onCancel: ti,
+                                    onCancel: tr,
                                     pickerType: e1
                                 })
                             })
                         })
                     ]
                 }),
-                tt && (0, r.jsx)(E.Z, { channel: ex })
+                tn && (0, r.jsx)(E.Z, { channel: ex })
             ]
         }),
-        ts = 1 === ey || (eI && 3 === ey) ? en.intl.string(en.t.FiBjwc) : eZ && (3 !== ey || null != e1) ? en.intl.string(en.t.PDTjLC) : en.intl.string(en.t['UE/rPz']),
-        ta = (0, r.jsxs)(m.ModalFooter, {
-            justify: null == tn ? _.Z.Justify.START : _.Z.Justify.BETWEEN,
+        ta = 1 === ey || (eI && 3 === ey) ? en.intl.string(en.t.FiBjwc) : eZ && (3 !== ey || null != e1) ? en.intl.string(en.t.PDTjLC) : en.intl.string(en.t['UE/rPz']),
+        to = (0, r.jsxs)(m.ModalFooter, {
+            justify: null == tl ? _.Z.Justify.START : _.Z.Justify.BETWEEN,
             children: [
                 (0, r.jsx)(m.Button, {
                     type: 'submit',
                     size: m.Button.Sizes.SMALL,
-                    disabled: tl,
+                    disabled: ti,
                     autoFocus: !0,
-                    children: ts
+                    children: ta
                 }),
-                null == tn
+                null == tl
                     ? (0, r.jsx)(m.Button, {
                           className: el.cancelButton,
                           look: m.Button.Looks.LINK,
@@ -395,7 +396,7 @@ function er(e) {
                     : (0, r.jsx)(m.Button, {
                           size: m.Button.Sizes.SMALL,
                           color: m.ButtonColors.PRIMARY,
-                          onClick: ti,
+                          onClick: tr,
                           children: en.intl.string(en.t['13/7kZ'])
                       })
             ]
@@ -426,7 +427,7 @@ function er(e) {
                     children: () =>
                         (0, r.jsxs)('form', {
                             onSubmit: e5,
-                            children: [e8, tr, ta]
+                            children: [e8, ts, to]
                         })
                 })
             ]

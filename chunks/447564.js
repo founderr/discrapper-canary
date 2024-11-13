@@ -1,10 +1,10 @@
 t.r(n),
     t.d(n, {
         HD_STREAMING_POTION_MODAL_KEY: function () {
-            return N;
+            return T;
         },
         default: function () {
-            return E;
+            return N;
         }
     }),
     t(47120);
@@ -14,8 +14,8 @@ var l = t(200651),
     s = t(692547),
     a = t(481060),
     o = t(100527),
-    c = t(906732),
-    d = t(335131),
+    d = t(906732),
+    c = t(335131),
     u = t(120619),
     m = t(955843),
     f = t(688465),
@@ -28,38 +28,39 @@ var l = t(200651),
     Z = t(388032),
     b = t(912568),
     C = t(99713);
-function E(e) {
+function N(e) {
     let { transitionState: n, channel: t } = e;
     return (0, l.jsx)(a.ModalRoot, {
         size: a.ModalSize.DYNAMIC,
         transitionState: n,
-        children: (0, l.jsx)(T, { channel: t })
+        children: (0, l.jsx)(I, { channel: t })
     });
 }
-let N = 'HD_STREAMING_POTION_MODAL_KEY';
-function T(e) {
+let T = 'HD_STREAMING_POTION_MODAL_KEY';
+function I(e) {
     let { channel: n } = e,
         t = (0, m.T)(n),
-        [E, T, I, A, S, M] = (0, r.Wu)([u.Z], () => [u.Z.isFetchingPrice(p.FX), u.Z.isEntitlementFetched(p.FX), u.Z.isEntitlementFetching(p.FX), u.Z.getPrice(p.FX), u.Z.getErrored(p.FX), u.Z.getEntitlement(p.FX)]),
-        { analyticsLocations: _ } = (0, c.ZP)([o.Z.HD_STREAMING_POTION_MODAL]),
-        F = null != M && !M.consumed && M.type === j.qc2.DEVELOPER_GIFT;
+        [N, I] = i.useState(!1),
+        [E, S, A, M, _, k] = (0, r.Wu)([u.Z], () => [u.Z.isFetchingPrice(p.FX), u.Z.isEntitlementFetched(p.FX), u.Z.isEntitlementFetching(p.FX), u.Z.getPrice(p.FX), u.Z.getErrored(p.FX), u.Z.getEntitlement(p.FX)]),
+        { analyticsLocations: F } = (0, d.ZP)([o.Z.HD_STREAMING_POTION_MODAL]),
+        P = null != k && !k.consumed;
     i.useEffect(() => {
-        null != M && !1 === M.consumed && M.type !== j.qc2.DEVELOPER_GIFT && (0, d.Zu)(n.id);
-    }, [M, n]),
+        null != k && !1 === k.consumed && k.type !== j.qc2.DEVELOPER_GIFT && N && (0, c.Zu)(n.id);
+    }, [k, n, N]),
         i.useEffect(
             () => () => {
-                (0, d.SN)(p.FX);
+                (0, c.SN)(p.FX);
             },
             []
         ),
         i.useEffect(() => {
-            !E && null == A && !S && (0, d.Gq)(p.FX);
-        }, [E, A, S]),
+            !E && null == M && !_ && (0, c.Gq)(p.FX);
+        }, [E, M, _]),
         i.useEffect(() => {
-            !T && !I && (0, d.gA)(p.FX);
-        }, [T, I]);
-    let P = () => (0, a.closeAllModals)();
-    return S
+            !S && !A && (0, c.gA)(p.FX);
+        }, [S, A]);
+    let D = () => (0, a.closeAllModals)();
+    return _
         ? (0, l.jsx)('div', {
               className: b.anomaly,
               children: (0, l.jsxs)('div', {
@@ -77,7 +78,7 @@ function T(e) {
                   ]
               })
           })
-        : null == A
+        : null == M
           ? (0, l.jsx)('div', {
                 className: b.anomaly,
                 children: (0, l.jsx)('div', {
@@ -145,7 +146,7 @@ function T(e) {
                         children: [
                             (0, l.jsx)(a.Button, {
                                 onClick: () => {
-                                    (0, a.closeModal)(N);
+                                    (0, a.closeModal)(T);
                                 },
                                 color: a.Button.Colors.PRIMARY,
                                 children: Z.intl.string(Z.t.Avt5KS)
@@ -153,14 +154,14 @@ function T(e) {
                             t
                                 ? (0, l.jsx)(a.Button, {
                                       onClick: () => {
-                                          if (F) {
-                                              (0, d.Zu)(n.id), (0, a.closeAllModals)();
+                                          if ((I(!0), P)) {
+                                              (0, c.Zu)(n.id), (0, a.closeAllModals)();
                                               return;
                                           }
                                           (0, x.Z)({
                                               skuId: p.FX,
-                                              analyticsLocations: _,
-                                              onComplete: P
+                                              analyticsLocations: F,
+                                              onComplete: D
                                           });
                                       },
                                       disabled: !t,
@@ -171,7 +172,7 @@ function T(e) {
                                                   color: s.Z.colors.INTERACTIVE_ACTIVE,
                                                   size: 'sm'
                                               }),
-                                              F ? Z.intl.string(Z.t.sl6Tcn) : Z.intl.formatToPlainString(Z.t.S9LAdX, { price: (0, g.T4)(A.amount, A.currency) })
+                                              P ? Z.intl.string(Z.t.sl6Tcn) : Z.intl.formatToPlainString(Z.t.S9LAdX, { price: (0, g.T4)(M.amount, M.currency) })
                                           ]
                                       })
                                   })
@@ -185,7 +186,7 @@ function T(e) {
                                               onClick: n,
                                               onMouseEnter: t,
                                               onMouseLeave: i,
-                                              children: Z.intl.formatToPlainString(Z.t.S9LAdX, { price: (0, g.T4)(A.amount, A.currency) })
+                                              children: Z.intl.formatToPlainString(Z.t.S9LAdX, { price: (0, g.T4)(M.amount, M.currency) })
                                           });
                                       }
                                   })

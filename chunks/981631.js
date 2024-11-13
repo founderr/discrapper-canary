@@ -5527,6 +5527,7 @@ let oi = Object.freeze({
     (nx.SOCIAL_LAYER_CONNECTIONS = '26575242994583'),
     (nx.GUILD_LEADERBOARD = '26575242994583'),
     (nx.FRACTIONAL_PREMIUM_ABOUT = '26362805097623'),
+    (nx.HD_STREAMING_POTION = '27343254089623'),
     ((tr || (tr = {})).INVALID_BILLING_ADDRESS = '#docs-internal-guid-1731ba7c-7fff-87a1-c976-f62cc1cd2618'),
     ((nK = tn || (tn = {}))[(nK.HIDDEN = 1)] = 'HIDDEN'),
     (nK[(nK.PRIVATE = 2)] = 'PRIVATE'),
