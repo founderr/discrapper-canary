@@ -10,7 +10,7 @@ var i = n(120356),
     s = n(481060),
     o = n(266711);
 function l(e) {
-    let { rank: t } = e;
+    let { rank: t, hideInnerBorder: n = !1 } = e;
     return (0, r.jsx)('div', {
         className: a()(o.rankContainer, {
             [o.goldBorder]: 1 === t,
@@ -22,9 +22,11 @@ function l(e) {
             tabularNumbers: !0,
             variant: t <= 3 ? 'text-xs/semibold' : 'text-xs/medium',
             className: a()(o.rank, {
+                [o.rankWithBorder]: !n,
                 [o.goldText]: 1 === t,
                 [o.silverText]: 2 === t,
-                [o.bronzeText]: 3 === t
+                [o.bronzeText]: 3 === t,
+                [o.rankNoBorder]: n
             }),
             children: t
         })

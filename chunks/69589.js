@@ -13,7 +13,7 @@ var r = n(200651),
     c = n(49274),
     d = n(904141);
 function f(e) {
-    let { user: t, rank: n, withRankBadge: f = !0 } = e;
+    let { user: t, rank: n, rankBadgeVisibility: f = 'visible', avatarClassName: _ } = e;
     return (0, r.jsxs)('div', {
         className: o.container,
         children: [
@@ -23,13 +23,17 @@ function f(e) {
                 alt: ''
             }),
             (0, r.jsx)(a.Z, {
+                className: _,
                 user: t,
                 size: i.AvatarSizes.SIZE_40
             }),
-            f &&
+            'hidden' !== f &&
                 (0, r.jsx)('div', {
                     className: o.rankBadge,
-                    children: (0, r.jsx)(s._, { rank: n })
+                    children: (0, r.jsx)(s._, {
+                        rank: n,
+                        hideInnerBorder: 'visibleWithoutBorder' === f
+                    })
                 })
         ]
     });

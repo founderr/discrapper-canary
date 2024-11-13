@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return m;
     }
 });
 var r = n(200651),
@@ -13,48 +13,49 @@ var r = n(200651),
     c = n(594174),
     d = n(5192),
     f = n(709737),
-    _ = n(388032),
-    p = n(553928);
-function h(e) {
+    _ = n(69589),
+    p = n(388032),
+    h = n(553928);
+function m(e) {
     var t, n;
-    let { generateImageRef: a, leaderboard: h, userId: m, guildId: g } = e,
-        E = (0, o.e7)([c.default], () => c.default.getUser(m)),
-        v = h.guild_settings.sort_by_statistic_id,
-        I = i.useMemo(() => h.users.findIndex((e) => e.user_id === m) + 1, [h, m]),
-        b = i.useMemo(() => h.users.find((e) => e.user_id === m), [h, m]);
-    s()(null != b, 'User row should not be null');
-    let S = d.ZP.getName(g, void 0, E),
-        T = null !== (n = null === (t = b.statistics[v]) || void 0 === t ? void 0 : t.value) && void 0 !== n ? n : 0;
+    let { generateImageRef: a, leaderboard: m, userId: g, guildId: E } = e,
+        v = (0, o.e7)([c.default], () => c.default.getUser(g)),
+        I = m.guild_settings.sort_by_statistic_id,
+        b = i.useMemo(() => m.users.findIndex((e) => e.user_id === g) + 1, [m, g]),
+        S = i.useMemo(() => m.users.find((e) => e.user_id === g), [m, g]);
+    s()(null != S, 'User row should not be null'), s()(null != v, 'User must exist');
+    let T = d.ZP.getName(E, void 0, v),
+        y = null !== (n = null === (t = S.statistics[I]) || void 0 === t ? void 0 : t.value) && void 0 !== n ? n : 0;
     return (0, r.jsxs)('div', {
         ref: a,
-        className: p.container,
+        className: h.container,
         children: [
-            (0, r.jsx)(l.Avatar, {
-                src: null == E ? void 0 : E.getAvatarURL(g, 256),
-                size: l.AvatarSizes.SIZE_48,
-                'aria-label': 'avatar',
-                className: p.avatar
+            (0, r.jsx)(_.Z, {
+                user: v,
+                rank: b,
+                avatarClassName: h.avatar,
+                rankBadgeVisibility: 'visibleWithoutBorder'
             }),
             (0, r.jsxs)('div', {
                 children: [
                     (0, r.jsxs)('div', {
-                        className: p.gameTitleContainer,
+                        className: h.gameTitleContainer,
                         children: [
                             (0, r.jsx)(l.LeagueOfLegendsBrandIcon, { size: 'xs' }),
                             (0, r.jsx)(l.Text, {
                                 variant: 'text-sm/medium',
-                                className: p.gameTitle,
+                                className: h.gameTitle,
                                 children: 'League of Legends'
                             })
                         ]
                     }),
                     (0, r.jsx)(l.Spacer, { size: 4 }),
                     (0, r.jsx)(l.Text, {
-                        className: p.title,
+                        className: h.title,
                         variant: 'text-md/semibold',
-                        children: _.intl.format(_.t.tluICw, {
-                            username: S,
-                            rank: I
+                        children: p.intl.format(p.t.tluICw, {
+                            username: T,
+                            rank: b
                         })
                     }),
                     (0, r.jsx)(l.Spacer, { size: 2 }),
@@ -62,12 +63,12 @@ function h(e) {
                         location: u.Gt.EMBED,
                         children: [
                             (0, r.jsx)(f.DC, {
-                                value: T,
-                                statisticId: v
+                                value: y,
+                                statisticId: I
                             }),
                             (0, r.jsx)(f.Js, {
-                                intervalStart: h.interval_start,
-                                intervalEnd: h.interval_end
+                                intervalStart: m.interval_start,
+                                intervalEnd: m.interval_end
                             })
                         ]
                     })
