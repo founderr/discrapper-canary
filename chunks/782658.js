@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return L;
+        return P;
     }
 });
 var i = n(200651),
@@ -10,8 +10,8 @@ var i = n(200651),
     o = n(410575),
     s = n(758119),
     c = n(622822),
-    d = n(906732),
-    u = n(924301),
+    u = n(906732),
+    d = n(924301),
     m = n(11868),
     h = n(413605),
     f = n(451603),
@@ -22,8 +22,8 @@ var i = n(200651),
     C = n(411198),
     I = n(610699),
     x = n(313876),
-    v = n(778333),
-    N = n(949981),
+    N = n(778333),
+    v = n(949981),
     T = n(680668),
     S = n(143708),
     A = n(358595),
@@ -31,9 +31,9 @@ var i = n(200651),
     j = n(135845),
     Z = n(981631),
     R = n(723359);
-function L(e) {
-    let { code: t, author: n, getAcceptInviteContext: L } = e,
-        { invite: P, inviteError: y } = (0, l.cj)(
+function P(e) {
+    let { code: t, author: n, getAcceptInviteContext: P } = e,
+        { invite: L, inviteError: y } = (0, l.cj)(
             [E.Z],
             () => ({
                 invite: E.Z.getInvite(t),
@@ -42,23 +42,23 @@ function L(e) {
             [t]
         );
     r.useEffect(() => {
-        null == P && a.Z.resolveInvite(t);
+        null == L && a.Z.resolveInvite(t);
     }, [t]);
     let O =
-            null != P
-                ? P
+            null != L
+                ? L
                 : {
                       state: Z.r2o.RESOLVING,
                       code: ''
                   },
-        { analyticsLocations: M } = (0, d.ZP)(),
-        k = (0, l.e7)([g.Z], () => ((null == P ? void 0 : P.guild) != null ? g.Z.getGuild(P.guild.id) : null), [P]),
+        { analyticsLocations: M } = (0, u.ZP)(),
+        k = (0, l.e7)([g.Z], () => ((null == L ? void 0 : L.guild) != null ? g.Z.getGuild(L.guild.id) : null), [L]),
         D = (0, l.e7)([_.default], () => _.default.getId()),
         B = (0, l.e7)(
-            [u.ZP],
+            [d.ZP],
             () => {
                 var e;
-                return u.ZP.getGuildScheduledEvent(null === (e = O.guild_scheduled_event) || void 0 === e ? void 0 : e.id);
+                return d.ZP.getGuildScheduledEvent(null === (e = O.guild_scheduled_event) || void 0 === e ? void 0 : e.id);
             },
             [O]
         ),
@@ -66,8 +66,8 @@ function L(e) {
             null != O.channel && a.Z.transitionToInviteSync(O);
         },
         w = () => {
-            if (null == k && (null == P ? void 0 : P.guild) != null) {
-                let e = C.Qs(P.guild);
+            if (null == k && (null == L ? void 0 : L.guild) != null) {
+                let e = C.Qs(L.guild);
                 if ((0, c.b)() && (0, c.Y)(e)) {
                     (0, s.mN)(R.L0.NSFW_SERVER_INVITE_EMBED);
                     return;
@@ -84,7 +84,7 @@ function L(e) {
                   })
                 : a.Z.acceptInviteAndTransitionToInviteChannel({
                       inviteKey: t,
-                      context: L('Invite Button Embed')
+                      context: P('Invite Button Embed')
                   });
         },
         F = (0, i.jsx)(T.Z, {
@@ -115,7 +115,7 @@ function L(e) {
         default:
             switch ((0, h.VR)(O)) {
                 case h.wx.GROUP_DM:
-                    F = (0, i.jsx)(N.Z, {
+                    F = (0, i.jsx)(v.Z, {
                         onTransitionToInviteChannel: U,
                         onAcceptInstantInvite: w,
                         currentUserId: D,
@@ -124,10 +124,10 @@ function L(e) {
                     });
                     break;
                 case h.wx.FRIEND:
-                    F = (0, i.jsx)(v.Z, {
+                    F = (0, i.jsx)(N.Z, {
                         invite: O,
                         author: n,
-                        getAcceptInviteContext: L
+                        getAcceptInviteContext: P
                     });
                     break;
                 default:
@@ -165,7 +165,7 @@ function L(e) {
                     (0, h.P1)(O) &&
                         (F = (0, i.jsx)(I.Z, {
                             invite: O,
-                            getAcceptInviteContext: L
+                            getAcceptInviteContext: P
                         }));
             }
     }

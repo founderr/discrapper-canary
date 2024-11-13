@@ -7,11 +7,11 @@ l.d(t, {
 var n = l(200651),
     i = l(192379),
     a = l(120356),
-    s = l.n(a),
-    r = l(100621),
+    r = l.n(a),
+    s = l(100621),
     o = l(481060),
-    c = l(393238),
-    d = l(410030),
+    d = l(393238),
+    c = l(410030),
     u = l(231338),
     x = l(794459);
 let m = {
@@ -101,7 +101,7 @@ function g(e) {
 function v(e) {
     let { paperColor: t, paperColorAlt: l, className: i } = e;
     return (0, n.jsxs)('svg', {
-        className: s()(x.bottom, i),
+        className: r()(x.bottom, i),
         width: '365',
         height: '101',
         viewBox: '0 0 365 101',
@@ -162,8 +162,8 @@ function v(e) {
 function f(e) {
     let { children: t, fullHeight: l = !1 } = e,
         [a, f] = i.useState(!1),
-        { height: C, ref: j } = (0, c.Z)(),
-        { height: p, ref: N } = (0, c.Z)(),
+        { height: C, ref: j } = (0, d.Z)(),
+        { height: p, ref: N } = (0, d.Z)(),
         Z = l ? p : 59 + (null != C ? C : 100) + 101,
         T = (0, o.useSpring)({
             from: { height: 0 },
@@ -178,14 +178,14 @@ function f(e) {
             config: h,
             delay: 1000
         }),
-        y = (0, d.Fg)(),
+        y = (0, c.Fg)(),
         w = y === u.BR.LIGHT ? '#FFFFFF' : '#1C1D23',
         H = y === u.BR.LIGHT ? '#EBEDEF' : '#26272F',
-        b = y === u.BR.LIGHT ? '#CCCCCC' : '#1A1A1E';
+        M = y === u.BR.LIGHT ? '#CCCCCC' : '#1A1A1E';
     return (0, n.jsx)('div', {
         className: x.container,
         ref: N,
-        children: (0, n.jsxs)(r.animated.div, {
+        children: (0, n.jsxs)(s.animated.div, {
             className: x.heightContainer,
             style: {
                 ...T,
@@ -196,16 +196,16 @@ function f(e) {
                     className: x.scrollSvg,
                     paperColor: w,
                     paperColorAlt: H,
-                    axleColor: b
+                    axleColor: M
                 }),
                 (0, n.jsx)('div', {
-                    className: s()(x.content, l && x.fullHeight),
+                    className: r()(x.content, l && x.fullHeight),
                     ref: j,
                     children: (0, n.jsx)('div', {
-                        className: s()(x.innerContent, l && x.fullHeight),
+                        className: r()(x.innerContent, l && x.fullHeight),
                         style: { backgroundColor: w },
-                        children: (0, n.jsx)(r.animated.div, {
-                            className: s()(x.contentAnimContainer, l && x.fullHeight),
+                        children: (0, n.jsx)(s.animated.div, {
+                            className: r()(x.contentAnimContainer, l && x.fullHeight),
                             style: S,
                             children: t
                         })

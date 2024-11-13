@@ -9,16 +9,16 @@ n.d(t, {
         return S;
     },
     I5: function () {
-        return v;
+        return N;
     },
     JQ: function () {
         return b;
     },
     RY: function () {
-        return N;
+        return v;
     },
     SU: function () {
-        return d;
+        return u;
     },
     Sv: function () {
         return T;
@@ -42,7 +42,7 @@ n.d(t, {
         return I;
     },
     wo: function () {
-        return u;
+        return d;
     }
 });
 var i,
@@ -52,8 +52,8 @@ var i,
     o,
     s,
     c,
-    d,
     u,
+    d,
     m,
     h,
     f,
@@ -74,21 +74,21 @@ function C(e, t, n) {
         e
     );
 }
-((i = d || (d = {})).SETTINGS = 'SETTINGS'), (i.ACCOUNT_STANDING = 'ACCOUNT_STANDING'), (i.GUILD_SETTINGS = 'GUILD_SETTINGS'), (i.ENCRYPTION = 'ENCRYPTION'), (i.CONTENT_AND_SOCIAL = 'CONTENT_AND_SOCIAL'), (i.DATA_PRIVACY = 'DATA_PRIVACY');
+((i = u || (u = {})).SETTINGS = 'SETTINGS'), (i.ACCOUNT_STANDING = 'ACCOUNT_STANDING'), (i.GUILD_SETTINGS = 'GUILD_SETTINGS'), (i.ENCRYPTION = 'ENCRYPTION'), (i.CONTENT_AND_SOCIAL = 'CONTENT_AND_SOCIAL'), (i.DATA_PRIVACY = 'DATA_PRIVACY');
 class I {}
 C(I, 'TOS_LINK', 'https://discord.com/terms'), C(I, 'COMMUNITY_GUIDELINES', 'https://discord.com/guidelines'), C(I, 'APPEALS_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731'), C(I, 'WARNING_SYSTEM_HELPCENTER_LINK', 'https://support.discord.com/hc/articles/18210965981847'), C(I, 'AGE_VERIFICATION_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731'), C(I, 'SPAM_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731&tf_360055270593=__dc.ticket_form-tnsv1_appeals_other_questions__');
 class x {}
-C(x, 'CLASSIFICATION_ID', 'classification_id'), C(x, 'INCIDENT_TIMESTAMP', 'incident_time'), ((r = u || (u = {})).POLICY_VIOLATION_DETAIL = 'policy_violation_detail'), (r.LEARN_MORE_LINK = 'learn_more_link');
-class v {}
-C(v, 'ICON_TYPE', 'icon_type'),
-    C(v, 'HEADER', 'header'),
-    C(v, 'BODY', 'body'),
-    C(v, 'CTAS', 'ctas'),
-    C(v, 'TIMESTAMP', 'timestamp'),
-    C(v, 'THEME', 'theme'),
-    C(v, 'CLIENT_VERSION_MESSAGE', 'client_version_message'),
-    C(v, 'LEARN_MORE_LINK', 'learn_more_link'),
-    C(v, 'CLASSIFICATION_ID', 'classification_id'),
+C(x, 'CLASSIFICATION_ID', 'classification_id'), C(x, 'INCIDENT_TIMESTAMP', 'incident_time'), ((r = d || (d = {})).POLICY_VIOLATION_DETAIL = 'policy_violation_detail'), (r.LEARN_MORE_LINK = 'learn_more_link');
+class N {}
+C(N, 'ICON_TYPE', 'icon_type'),
+    C(N, 'HEADER', 'header'),
+    C(N, 'BODY', 'body'),
+    C(N, 'CTAS', 'ctas'),
+    C(N, 'TIMESTAMP', 'timestamp'),
+    C(N, 'THEME', 'theme'),
+    C(N, 'CLIENT_VERSION_MESSAGE', 'client_version_message'),
+    C(N, 'LEARN_MORE_LINK', 'learn_more_link'),
+    C(N, 'CLASSIFICATION_ID', 'classification_id'),
     ((l = m || (m = {}))[(l.ViewViolationDetail = 0)] = 'ViewViolationDetail'),
     (l[(l.ViewViolationsDropdown = 1)] = 'ViewViolationsDropdown'),
     (l[(l.ClickLetUsKnow = 2)] = 'ClickLetUsKnow'),
@@ -112,7 +112,7 @@ C(v, 'ICON_TYPE', 'icon_type'),
     (o[(o.TOO_STRICT_UNFAIR = 1)] = 'TOO_STRICT_UNFAIR'),
     (o[(o.DONT_AGREE_PENALTY = 2)] = 'DONT_AGREE_PENALTY'),
     (o[(o.SOMETHING_ELSE = 3)] = 'SOMETHING_ELSE');
-let N = [0, 1, 2, 3],
+let v = [0, 1, 2, 3],
     T = 372,
     S = 279,
     A = { impression_group: g.ImpressionGroups.APPEAL_INGESTION };

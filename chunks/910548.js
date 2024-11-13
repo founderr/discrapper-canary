@@ -11,8 +11,8 @@ var i,
     o = n(200651),
     s = n(192379),
     c = n(120356),
-    d = n.n(c),
-    u = n(703533),
+    u = n.n(c),
+    d = n(703533),
     m = n(772848),
     h = n(468194),
     f = n(477690),
@@ -23,8 +23,8 @@ var i,
     C = n(64078),
     I = n(29270),
     x = n(709586),
-    v = n(267642),
-    N = n(739566),
+    N = n(267642),
+    v = n(739566),
     T = n(834129),
     S = n(981631),
     A = n(388032),
@@ -55,14 +55,14 @@ let j = {
 ((a = r || (r = {})).TOP_LEFT = 'TOP_LEFT'), (a.TOP_RIGHT = 'TOP_RIGHT'), (a.BOTTOM_LEFT = 'BOTTOM_LEFT'), (a.BOTTOM_RIGHT = 'BOTTOM_RIGHT');
 let Z = ['TOP_LEFT', 'TOP_RIGHT'],
     R = (0, h.Mg)(f.Z.USER_PREMIUM_GUILD_SUBSCRIPTION_EASTER_EGG_SIZE),
-    L = {
+    P = {
         leafPosition: {
             x: 85,
             y: 125
         },
         leafRotationDirection: 1
     },
-    P = Object.freeze({
+    L = Object.freeze({
         TOP_LEFT: {
             getConfettiPosition: (e) => ({
                 x: e - 11,
@@ -94,7 +94,7 @@ let Z = ['TOP_LEFT', 'TOP_RIGHT'],
             leafRotationDirection: -1
         },
         BOTTOM_LEFT: {
-            ...L,
+            ...P,
             getConfettiPosition: (e) => ({
                 x: e - 11,
                 y: 125
@@ -105,7 +105,7 @@ let Z = ['TOP_LEFT', 'TOP_RIGHT'],
             }
         },
         BOTTOM_RIGHT: {
-            ...L,
+            ...P,
             getConfettiPosition: (e) => ({
                 x: 11,
                 y: 125
@@ -152,8 +152,8 @@ function U(e) {
         ),
         { createMultipleConfettiAt: _, confettiCanvas: E } = s.useContext(g.h),
         [C, I] = s.useState(null),
-        x = (0, u.uR)(E, C),
-        v = (function (e, t) {
+        x = (0, d.uR)(E, C),
+        N = (function (e, t) {
             if (null == e) return 'enter';
             switch (e) {
                 case 'enter':
@@ -169,21 +169,21 @@ function U(e) {
                     return 'enter';
             }
         })(c, f),
-        N = Z.includes(f),
-        T = N && 'exit' === c,
+        v = Z.includes(f),
+        T = v && 'exit' === c,
         S = s.useCallback((e) => {
             h(e);
         }, []),
         A = s.useCallback(() => {
             'exit' === c && (null == t || t());
         }, [t, c]),
-        L = s.useCallback((e) => {
+        P = s.useCallback((e) => {
             a.current = e;
         }, []);
     return (
         s.useEffect(() => {
             if ('confetti' === c) {
-                let { confettiVelocityDirection: e } = P[f],
+                let { confettiVelocityDirection: e } = L[f],
                     t = (function (e, t) {
                         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : R,
                             i = null == e ? void 0 : e.getBoundingClientRect();
@@ -192,7 +192,7 @@ function U(e) {
                                 x: 0,
                                 y: 0
                             };
-                        let r = P[t].getConfettiPosition(n);
+                        let r = L[t].getConfettiPosition(n);
                         return {
                             x: i.left + r.x,
                             y: i.top + r.y
@@ -214,8 +214,8 @@ function U(e) {
             }
         }, [_, f, c, l]),
         s.useEffect(() => {
-            if (N && 'leaf_fall' === c) {
-                let e = P[f].leafRotationDirection;
+            if (v && 'leaf_fall' === c) {
+                let e = L[f].leafRotationDirection;
                 x.createConfetti(
                     {
                         id: ''.concat(y, '-').concat((0, m.Z)()),
@@ -228,7 +228,7 @@ function U(e) {
                                         x: 0,
                                         y: 0
                                     };
-                                let i = P[t];
+                                let i = L[t];
                                 return {
                                     x: n.left + i.leafPosition.x,
                                     y: n.top + i.leafPosition.y
@@ -266,10 +266,10 @@ function U(e) {
                     { sprite: 'TOP_LEFT' === f ? M : k }
                 );
             }
-        }, [N, x, f, c]),
+        }, [v, x, f, c]),
         (0, o.jsxs)(o.Fragment, {
             children: [
-                (0, o.jsx)(u.Ji, {
+                (0, o.jsx)(d.Ji, {
                     ref: I,
                     sprites: D,
                     colors: O,
@@ -278,16 +278,16 @@ function U(e) {
                 }),
                 (0, o.jsx)(p.Clickable, {
                     onClick: n,
-                    className: d()(b.easterEggAnimationClickTarget, {
+                    className: u()(b.easterEggAnimationClickTarget, {
                         [b.easterEggAnimationClickTargetTopLeft]: 'TOP_LEFT' === f,
                         [b.easterEggAnimationClickTargetTopRight]: 'TOP_RIGHT' === f,
                         [b.easterEggAnimationClickTargetBottomLeft]: 'BOTTOM_LEFT' === f,
                         [b.easterEggAnimationClickTargetBottomRight]: 'BOTTOM_RIGHT' === f
                     }),
                     children: (0, o.jsx)(p.SequencedLottieAnimation, {
-                        animationRef: L,
-                        className: d()(b.easterEggAnimation, { [b.easterEggAnimationHideLeaf]: T }),
-                        nextScene: v,
+                        animationRef: P,
+                        className: u()(b.easterEggAnimation, { [b.easterEggAnimationHideLeaf]: T }),
+                        nextScene: N,
                         sceneSegments: j,
                         onScenePlay: S,
                         onSceneComplete: A,
@@ -313,39 +313,39 @@ function w(e) {
             }
             return null;
         })(n),
-        d = (0, I.Z)(n),
-        { createMultipleConfettiAt: u, addClickListener: m } = s.useContext(g.h),
+        u = (0, I.Z)(n),
+        { createMultipleConfettiAt: d, addClickListener: m } = s.useContext(g.h),
         [h, f] = s.useState(!1),
         j = s.useRef(null),
         { reducedMotion: Z } = s.useContext(p.AccessibilityPreferencesContext),
-        R = (0, N.ZH)(n),
-        L = R.nick,
-        P = l(R);
+        R = (0, v.ZH)(n),
+        P = R.nick,
+        L = l(R);
     t =
         null == c || null == r
-            ? d > 1
+            ? u > 1
                 ? A.intl.format(A.t.yfC9dn, {
-                      username: L,
-                      usernameHook: P,
-                      numSubscriptions: d
+                      username: P,
+                      usernameHook: L,
+                      numSubscriptions: u
                   })
                 : A.intl.format(A.t['57St//'], {
-                      username: L,
-                      usernameHook: P
+                      username: P,
+                      usernameHook: L
                   })
-            : d > 1
+            : u > 1
               ? A.intl.format(A.t.PO9uJC, {
-                    username: L,
-                    usernameHook: P,
-                    numSubscriptions: d,
+                    username: P,
+                    usernameHook: L,
+                    numSubscriptions: u,
                     guildName: r.name,
-                    newTierName: (0, v.nW)(c)
+                    newTierName: (0, N.nW)(c)
                 })
               : A.intl.format(A.t.cUfTTE, {
-                    username: L,
-                    usernameHook: P,
+                    username: P,
+                    usernameHook: L,
                     guildName: r.name,
-                    newTierName: (0, v.nW)(c)
+                    newTierName: (0, N.nW)(c)
                 });
     let O = s.useCallback(() => {
             if (!Z.enabled)
@@ -353,9 +353,9 @@ function w(e) {
                     var e;
                     let t = null === (e = j.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
                     if (null == t) return;
-                    u(t.left + t.width / 2, t.top + t.height / 2);
+                    d(t.left + t.width / 2, t.top + t.height / 2);
                 } else f(!0);
-        }, [u, Z, h]),
+        }, [d, Z, h]),
         M = s.useCallback(() => {
             f(!1);
         }, []),

@@ -1,9 +1,9 @@
-l.d(n, {
+t.d(n, {
     u: function () {
-        return t;
+        return l;
     }
 });
-let t = {
+let l = {
     allowList: !0,
     allowHeading: !0,
     allowLinks: !0,

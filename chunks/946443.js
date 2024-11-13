@@ -14,8 +14,8 @@ var i = n(200651),
     o = n(525654),
     s = n.n(o),
     c = n(91192),
-    d = n(442837),
-    u = n(524437),
+    u = n(442837),
+    d = n(524437),
     m = n(481060),
     h = n(570140),
     f = n(607070),
@@ -26,17 +26,17 @@ var i = n(200651),
     C = n(143316),
     I = n(240126),
     x = n(791914),
-    v = n(147522),
-    N = n(809780),
+    N = n(147522),
+    v = n(809780),
     T = n(981631),
     S = n(388032),
     A = n(129640);
 function b(e) {
     let { setTab: t, onJump: n, showTutorial: l, setSeenTutorial: o, closePopout: b, badgeState: Z } = e,
         R = r.useRef(null),
-        [L, P] = (0, N.ZP)(R),
-        { loadState: y, channels: O } = L,
-        { maybeLoadMore: M, markAllRead: k } = P;
+        [P, L] = (0, v.ZP)(R),
+        { loadState: y, channels: O } = P,
+        { maybeLoadMore: M, markAllRead: k } = L;
     (function (e, t, n) {
         r.useLayoutEffect(() => {
             var i;
@@ -51,7 +51,7 @@ function b(e) {
             let { scrollTop: s, offsetHeight: c } = l.getScrollerState();
             (o.offsetTop < s || o.offsetTop > s + c) && l.scrollTo({ to: o.offsetTop });
         });
-    })(R, L, P),
+    })(R, P, L),
         (function (e, t) {
             r.useEffect(() => {
                 let n = () => {
@@ -65,7 +65,7 @@ function b(e) {
                     }
                 );
             }, [t, e.channels]);
-        })(L, P),
+        })(P, L),
         (function (e) {
             r.useEffect(() => {
                 let t = (t) => {
@@ -78,7 +78,7 @@ function b(e) {
                     }
                 );
             }, [e]);
-        })(P),
+        })(L),
         r.useEffect(() => {
             _.default.track(T.rMx.OPEN_POPOUT, { type: 'Inbox' });
         }, []),
@@ -91,7 +91,7 @@ function b(e) {
             ),
             [b]
         );
-    let D = (0, d.e7)([f.Z], () => f.Z.messageGroupSpacing),
+    let D = (0, u.e7)([f.Z], () => f.Z.messageGroupSpacing),
         B = (0, p.Z)('unreads', R);
     if (0 === O.length) {
         var U;
@@ -99,7 +99,7 @@ function b(e) {
             className: A.container,
             children: [
                 (0, i.jsx)(x.Z, {
-                    tab: u.X.UNREADS,
+                    tab: d.X.UNREADS,
                     setTab: t,
                     badgeState: Z,
                     closePopout: b
@@ -117,7 +117,7 @@ function b(e) {
         'aria-label': S.intl.string(S.t.sRUdBw),
         children: [
             (0, i.jsx)(x.Z, {
-                tab: u.X.UNREADS,
+                tab: d.X.UNREADS,
                 setTab: t,
                 badgeState: Z,
                 closePopout: b,
@@ -137,9 +137,9 @@ function b(e) {
                                 (R.current = e), (t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null);
                             },
                             ...r,
-                            onScroll: y === N.jd.Done ? void 0 : M,
+                            onScroll: y === v.jd.Done ? void 0 : M,
                             className: A.scroller,
-                            children: [l ? (0, i.jsx)(j, { setSeenTutorial: o }) : null, (0, v.Z)(O, P, n), y === N.jd.Done ? null : (0, i.jsx)(m.Spinner, { className: A.spinner })]
+                            children: [l ? (0, i.jsx)(j, { setSeenTutorial: o }) : null, (0, N.Z)(O, L, n), y === v.jd.Done ? null : (0, i.jsx)(m.Spinner, { className: A.spinner })]
                         });
                     }
                 })
@@ -188,7 +188,7 @@ function Z(e) {
         className: A.container,
         children: [
             (0, i.jsx)(x.Z, {
-                tab: u.X.UNREADS,
+                tab: d.X.UNREADS,
                 setTab: t,
                 badgeState: n,
                 closePopout: r

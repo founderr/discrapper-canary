@@ -26,8 +26,8 @@ var i = n(200651),
     b = n(55543),
     S = n(626135),
     E = n(768581),
-    N = n(358085),
-    Z = n(998502),
+    Z = n(358085),
+    N = n(998502),
     y = n(379164),
     T = n(590965),
     j = n(981631),
@@ -137,7 +137,7 @@ function O(e) {
     });
     let { invite: m, error: _, submitting: I } = (0, o.cj)([T.Z], () => T.Z.getProps());
     l.useEffect(() => {
-        !__OVERLAY__ && N.isPlatformEmbedded && ((0, N.isWindows)() ? Z.ZP.minimize() : Z.ZP.restore(), Z.ZP.focus());
+        !__OVERLAY__ && Z.isPlatformEmbedded && ((0, Z.isWindows)() ? N.ZP.minimize() : N.ZP.restore(), N.ZP.focus());
     }, []);
     let b = (0, g.Dt)(),
         { analyticsLocations: S } = (0, d.ZP)(u.Z.INVITE_MODAL);
@@ -147,11 +147,11 @@ function O(e) {
     function A() {
         null != m && y.Z.acceptInvite(m);
     }
-    let { guild: w, channel: O, inviter: k, target_application: U } = m,
-        G = null != w,
+    let { guild: w, channel: O, inviter: k, target_application: G } = m,
+        U = null != w,
         B = null != m.stage_instance,
         H = null == m.guild && null == m.channel && null != m.inviter;
-    if (null != U) (t = null == w ? void 0 : w.name), (n = v.Z.createFromServer(U).getCoverImageURL(1024));
+    if (null != G) (t = null == w ? void 0 : w.name), (n = v.Z.createFromServer(G).getCoverImageURL(1024));
     else if (null != w)
         (t = w.name),
             (n = E.ZP.getGuildSplashURL({
@@ -185,7 +185,7 @@ function O(e) {
                                         className: R.marginBottom20,
                                         children: (0, i.jsx)(c.Z, {
                                             invite: m,
-                                            disableUser: G,
+                                            disableUser: U,
                                             error: _
                                         })
                                     }),
@@ -202,7 +202,7 @@ function O(e) {
                                     (0, i.jsxs)('div', {
                                         children: [
                                             V ? (0, i.jsx)(L, {}) : null,
-                                            null == U
+                                            null == G
                                                 ? (0, i.jsx)(s.Tooltip, {
                                                       text: V ? P.intl.string(P.t.iLyuDA) : null,
                                                       position: 'bottom',

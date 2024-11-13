@@ -28,8 +28,8 @@ var l = n(120356),
     b = n(427679),
     S = n(368442),
     E = n(201469),
-    N = n(680089),
-    Z = n(592125),
+    Z = n(680089),
+    N = n(592125),
     y = n(430824),
     T = n(607744),
     j = n(496675),
@@ -42,8 +42,8 @@ var l = n(120356),
     D = n(473403),
     O = n(207055),
     k = n(981631),
-    U = n(647086),
-    G = n(388032),
+    G = n(647086),
+    U = n(388032),
     B = n(872356),
     H = n(411740);
 function V(e, t, n) {
@@ -190,7 +190,7 @@ class F extends L.ZP {
                 let { channel: e, locked: t, forceShowButtons: n } = this.props;
                 if (!t)
                     return (0, i.jsx)(o.Tooltip, {
-                        text: G.intl.string(G.t.ZXxLQk),
+                        text: U.intl.string(U.t.ZXxLQk),
                         children: (t) => {
                             let { onMouseEnter: l, onMouseLeave: a, onFocus: c, onBlur: u } = t;
                             return (0, i.jsx)(o.Clickable, {
@@ -198,7 +198,7 @@ class F extends L.ZP {
                                 onClick: () => {
                                     s.Z.updateChatOpen(e.id, !0), this.handleClickChat();
                                 },
-                                'aria-label': G.intl.string(G.t.ZXxLQk),
+                                'aria-label': U.intl.string(U.t.ZXxLQk),
                                 onMouseEnter: l,
                                 onMouseLeave: a,
                                 onFocus: c,
@@ -214,7 +214,7 @@ class F extends L.ZP {
             }),
             V(this, 'getTooltipText', () => {
                 let { connected: e } = this.props;
-                return this.isFull() && !e ? G.intl.string(G.t.rZfiNj) : null;
+                return this.isFull() && !e ? U.intl.string(U.t.rZfiNj) : null;
             }),
             V(this, 'renderSubtitle', () => {
                 var e;
@@ -231,19 +231,19 @@ function z(e) {
             mentionCount: A.ZP.getMentionCount(n.id)
         })),
         u = (0, a.e7)([P.ZP], () => P.ZP.resolveUnreadSetting(n)),
-        d = (0, a.cj)([Z.Z, T.Z, j.Z], () => {
-            let e = Z.Z.getChannel(n.parent_id),
+        d = (0, a.cj)([N.Z, T.Z, j.Z], () => {
+            let e = N.Z.getChannel(n.parent_id),
                 i = T.Z.getCheck(n.guild_id);
             return {
                 canManageChannel: null != t && j.Z.can(k.Plq.MANAGE_CHANNELS, n),
-                canReorderChannel: !0 !== l && (t.id === U._ || (null != e ? j.Z.can(k.Plq.MANAGE_CHANNELS, e) : j.Z.can(k.Plq.MANAGE_CHANNELS, t))),
+                canReorderChannel: !0 !== l && (t.id === G._ || (null != e ? j.Z.can(k.Plq.MANAGE_CHANNELS, e) : j.Z.can(k.Plq.MANAGE_CHANNELS, t))),
                 canMoveMembers: j.Z.can(k.Plq.MOVE_MEMBERS, n),
                 locked: !j.Z.can(k.Plq.CONNECT, n),
                 bypassLimit: j.Z.can(k.Plq.MOVE_MEMBERS, n),
                 unverifiedAccount: !i.canChat
             };
         }),
-        h = (0, a.e7)([N.Z], () => N.Z.isCollapsed(n.parent_id)),
+        h = (0, a.e7)([Z.Z], () => Z.Z.isCollapsed(n.parent_id)),
         p = (0, E.ZP)(n.id),
         f = (0, a.e7)([b.Z], () => b.Z.getStageInstanceByChannel(n.id), [n.id]),
         m = (0, x.Rk)(n.id, I.pV.AUDIENCE),

@@ -26,8 +26,8 @@ var i = n(200651),
     S = n(718317);
 function E(e) {
     let { guild: t, selected: E } = e,
-        N = (0, h.Z)(t),
-        Z = (0, u.wE)(a.z.CHANNEL_BROWSER_NEW_BADGE_NUX),
+        Z = (0, h.Z)(t),
+        N = (0, u.wE)(a.z.CHANNEL_BROWSER_NEW_BADGE_NUX),
         y = (0, r.Wu)([p.Z], () => Array.from(p.Z.getNewChannelIds(t.id)).filter((e) => p.Z.shouldIndicateNewChannel(t.id, e))),
         T = (0, r.e7)([m.ZP], () => m.ZP.hasUnread(t.id, I.W.GUILD_ONBOARDING_QUESTION)),
         j = y.length > C.Cb,
@@ -39,8 +39,8 @@ function E(e) {
             return null != e && e > i;
         }),
         P = l.useCallback(() => {
-            (0, f.uL)(v.Z5c.CHANNEL(t.id, N ? x.oC.CUSTOMIZE_COMMUNITY : x.oC.CHANNEL_BROWSER));
-        }, [t.id, N]),
+            (0, f.uL)(v.Z5c.CHANNEL(t.id, Z ? x.oC.CUSTOMIZE_COMMUNITY : x.oC.CHANNEL_BROWSER));
+        }, [t.id, Z]),
         M = l.useCallback(
             (e) => {
                 (0, c.jW)(e, async () => {
@@ -56,7 +56,7 @@ function E(e) {
         ),
         R = null;
     return (
-        (!Z || T || j) &&
+        (!N || T || j) &&
             !E &&
             !A &&
             (R = (0, i.jsx)(s.TextBadge, {
@@ -72,7 +72,7 @@ function E(e) {
                     color: 'currentColor',
                     className: e
                 }),
-            text: N ? b.intl.string(b.t.h9mGOD) : b.intl.string(b.t.et6wam),
+            text: Z ? b.intl.string(b.t.h9mGOD) : b.intl.string(b.t.et6wam),
             selected: E,
             onClick: P,
             onContextMenu: M,

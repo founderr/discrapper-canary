@@ -21,8 +21,8 @@ var i = n(200651),
     b = n(706590),
     S = n(940777),
     E = n(41776),
-    N = n(905423),
-    Z = n(802718),
+    Z = n(905423),
+    N = n(802718),
     y = n(796974),
     T = n(271383),
     j = n(430824),
@@ -35,8 +35,8 @@ var i = n(200651),
     D = n(741616),
     O = n(187835),
     k = n(118122),
-    U = n(193154),
-    G = n(602147),
+    G = n(193154),
+    U = n(602147),
     B = n(773182),
     H = n(222059),
     V = n(751277),
@@ -47,8 +47,8 @@ var i = n(200651),
     K = n(836697),
     q = n(921230),
     Q = n(981631),
-    J = n(388032),
-    X = n(355161);
+    X = n(388032),
+    J = n(355161);
 function $(e, t, n) {
     return (
         t in e
@@ -225,10 +225,10 @@ function er(e) {
     }, []),
         l.useEffect(() => {
             if ((e_.setGuildsTree(s), ea.current || 0 === s.size)) return;
-            let e = N.Z.getState().guildId;
+            let e = Z.Z.getState().guildId;
             e_.scrollToGuild(e, !1);
             let t = null;
-            return N.Z.subscribe((e) => {
+            return Z.Z.subscribe((e) => {
                 let { guildId: n } = e;
                 n !== t && ((t = n), e_.scrollToGuild(t, !1));
             });
@@ -273,16 +273,16 @@ function er(e) {
         }
     }
     (0, L.Z)(e_.scrollToGuild);
-    let eN = s.getRoots(),
-        eZ = (0, b.Z)(),
-        ey = (0, Z.U)(),
+    let eZ = s.getRoots(),
+        eN = (0, b.Z)(),
+        ey = (0, N.U)(),
         eT = l.useCallback(
             (e) => {
                 let { onClick: t } = e;
-                return (0, i.jsx)(G.Z, {
+                return (0, i.jsx)(U.Z, {
                     ref: e_.guildDiscoveryRef,
                     selected: eI,
-                    className: X.fixedDiscoveryIcon,
+                    className: J.fixedDiscoveryIcon,
                     onClick: t
                 });
             },
@@ -290,7 +290,7 @@ function er(e) {
         ),
         ej = ee.map((e) =>
             (0, i.jsx)(
-                U.Z,
+                G.Z,
                 {
                     id: e.id,
                     name: e.name,
@@ -305,32 +305,32 @@ function er(e) {
             theme: o,
             children: (e) =>
                 (0, i.jsx)('nav', {
-                    className: a()(X.wrapper, r, e, { [X.hidden]: $ }),
-                    'aria-label': J.intl.string(J.t.PjnF2t),
+                    className: a()(J.wrapper, r, e, { [J.hidden]: $ }),
+                    'aria-label': X.intl.string(X.t.PjnF2t),
                     children: (0, i.jsxs)('ul', {
                         ref: ep,
                         ...ef,
                         ...em,
                         role: 'tree',
-                        className: X.tree,
+                        className: J.tree,
                         children: [
                             (0, i.jsx)(w.Z, {
                                 ref: es,
                                 isVisible: e_.isItemVisible,
                                 onJumpTo: e_.handleJumpToGuild,
-                                className: X.unreadMentionsIndicatorTop,
-                                barClassName: X.unreadMentionsBar
+                                className: J.unreadMentionsIndicatorTop,
+                                barClassName: J.unreadMentionsBar
                             }),
                             (0, i.jsxs)(m.AdvancedScrollerNone, {
                                 className: a()({
-                                    [X.scroller]: !0,
-                                    [X.scrolling]: eg
+                                    [J.scroller]: !0,
+                                    [J.scrolling]: eg
                                 }),
                                 ref: e_.scrollerRef,
                                 onScroll: e_.handleScroll,
                                 children: [
                                     (0, i.jsx)(H.u, {}),
-                                    eZ ? (0, i.jsx)(S.Z, {}) : null,
+                                    eN ? (0, i.jsx)(S.Z, {}) : null,
                                     (0, i.jsx)(V.Z, { isOnHubVerificationRoute: eb }),
                                     (0, i.jsx)(D.Z, {}),
                                     ey,
@@ -338,15 +338,15 @@ function er(e) {
                                     (0, i.jsx)(K.Z, { onActivate: eS }),
                                     (0, i.jsx)(F.Z, {}),
                                     (0, i.jsx)('div', {
-                                        'aria-label': J.intl.string(J.t['7hB4kp']),
-                                        children: eN.map(eE)
+                                        'aria-label': X.intl.string(X.t['7hB4kp']),
+                                        children: eZ.map(eE)
                                     }),
                                     ej,
                                     n
                                         ? null
                                         : (0, i.jsx)(k.Z, {
                                               disableTooltip: p.length > 0,
-                                              lastTargetNode: eN[eN.length - 1]
+                                              lastTargetNode: eZ[eZ.length - 1]
                                           }),
                                     (0, i.jsx)(W.Z, {}),
                                     t
@@ -372,8 +372,8 @@ function er(e) {
                                 ref: ec,
                                 isVisible: e_.isItemVisible,
                                 onJumpTo: e_.handleJumpToGuild,
-                                className: a()(X.unreadMentionsIndicatorBottom, { [X.unreadMentionsFixedFooter]: !n }),
-                                barClassName: X.unreadMentionsBar
+                                className: a()(J.unreadMentionsIndicatorBottom, { [J.unreadMentionsFixedFooter]: !n }),
+                                barClassName: J.unreadMentionsBar
                             })
                         ]
                     })

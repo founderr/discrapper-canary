@@ -26,12 +26,12 @@ var i = n(200651),
     b = n(388032),
     S = n(115376),
     E = n(767573);
-let N = (0, f.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
-    Z = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE),
+let Z = (0, f.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
+    N = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE),
     y = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_MARGIN);
 function T(e) {
-    let { folderNode: t, setNodeRef: n, selected: r, expanded: u, mediaState: f, mentionCount: T = 0, unread: j = !1, defaultFolderName: A, useCircleMask: P = !1, draggable: M = !1, sorting: R = !1, onDragStart: L, onDragEnd: w, onExpandCollapse: D, onContextMenu: O, renderChildNode: k, folderIconContent: U } = e,
-        { id: G, name: B, children: H } = t,
+    let { folderNode: t, setNodeRef: n, selected: r, expanded: u, mediaState: f, mentionCount: T = 0, unread: j = !1, defaultFolderName: A, useCircleMask: P = !1, draggable: M = !1, sorting: R = !1, onDragStart: L, onDragEnd: w, onExpandCollapse: D, onContextMenu: O, renderChildNode: k, folderIconContent: G } = e,
+        { id: U, name: B, children: H } = t,
         [V, F] = l.useState(!1),
         [W, z] = l.useState(!1),
         Y = V || W;
@@ -55,23 +55,23 @@ function T(e) {
         Q = l.useCallback((e) => {
             z(e);
         }, []),
-        J = l.useCallback(
+        X = l.useCallback(
             (e) => {
                 (('ArrowRight' === e.key && !u) || ('ArrowLeft' === e.key && u)) && D();
             },
             [D, u]
         ),
-        X = null != B && '' !== B ? B : null != A && '' !== A ? A : b.intl.string(b.t.xV9hVl),
-        $ = (0, c.Ie)(''.concat(G)),
-        ee = 'folder-items-'.concat(G),
-        et = H.length * (Z + y),
+        J = null != B && '' !== B ? B : null != A && '' !== A ? A : b.intl.string(b.t.xV9hVl),
+        $ = (0, c.Ie)(''.concat(U)),
+        ee = 'folder-items-'.concat(U),
+        et = H.length * (N + y),
         en = (0, d.useTransition)(!K && u, {
             from: { height: 0 },
             enter: { height: 1 },
             leave: { height: 0 },
-            config: { duration: N }
+            config: { duration: Z }
         }),
-        ei = l.useCallback((e) => (null == n ? void 0 : n(G, e)), [n, G]),
+        ei = l.useCallback((e) => (null == n ? void 0 : n(U, e)), [n, U]),
         el = (0, i.jsxs)(x.H, {
             children: [
                 (0, i.jsx)(g.Z, {
@@ -82,14 +82,14 @@ function T(e) {
                     className: E.pill
                 }),
                 (0, i.jsx)(I.Z, {
-                    text: X,
+                    text: J,
                     disabled: R,
                     selected: r,
                     disableWrapper: !0,
                     children: (0, i.jsx)('div', {
                         ref: M ? q : void 0,
                         className: a()({ [E.wobble]: !K && W && !u }),
-                        'data-dnd-name': X,
+                        'data-dnd-name': J,
                         children: K
                             ? (0, i.jsx)(v.Z, {})
                             : (0, i.jsx)(C.Z, {
@@ -99,20 +99,20 @@ function T(e) {
                                   sorting: R,
                                   mediaState: f,
                                   mentionCount: T,
-                                  tooltipName: X,
+                                  tooltipName: J,
                                   folderGroupId: ee,
                                   onClick: D,
                                   onContextMenu: O,
                                   onHoverChange: F,
-                                  onKeyDown: J,
+                                  onKeyDown: X,
                                   treeItemProps: $,
-                                  folderIconContent: U
+                                  folderIconContent: G
                               })
                     })
                 }),
                 M
                     ? (0, i.jsx)(_.ZP, {
-                          name: X,
+                          name: J,
                           targetNode: t,
                           onDragOverChanged: Q
                       })
@@ -150,7 +150,7 @@ function T(e) {
             }),
             M && u
                 ? (0, i.jsx)(_.Zu, {
-                      name: X,
+                      name: J,
                       targetNode: t
                   })
                 : null

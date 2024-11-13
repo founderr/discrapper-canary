@@ -21,10 +21,10 @@ var l = n(200651),
     p = n(388032),
     E = n(463061);
 function I(e) {
-    let { message: t, forwardOptions: n, sendLabel: I, canSend: S, selectedDestinations: A, isSending: C, onSend: v, showPreview: b } = e,
-        x = (0, d.Z)(),
-        L = (0, f.nm)(A),
-        N = (0, f.y)(A),
+    let { message: t, forwardOptions: n, sendLabel: I, canSend: A, selectedDestinations: S, isSending: C, onSend: v, showPreview: b } = e,
+        L = (0, d.Z)(),
+        x = (0, f.nm)(S),
+        N = (0, f.y)(S),
         T = (0, _.Ad)(),
         P = (0, a.e7)([h.Z], () => h.Z.getDraft(t.channel_id, h.d.ForwardContextMessage)),
         [y, Z] = i.useState(() => (0, c.eK)(P)),
@@ -46,9 +46,9 @@ function I(e) {
         F = i.useCallback(() => {
             s.Z.clearDraft(t.channel_id, h.d.ForwardContextMessage), v(w);
         }, [t.channel_id, v, w]),
-        G = i.useCallback(
+        U = i.useCallback(
             () =>
-                !S || w.length > x
+                !A || w.length > L
                     ? Promise.resolve({
                           shouldClear: !1,
                           shouldRefocus: !0
@@ -58,7 +58,7 @@ function I(e) {
                           shouldClear: !1,
                           shouldRefocus: !0
                       })),
-            [F, w, x, S]
+            [F, w, L, A]
         );
     return (0, l.jsxs)(r.ModalFooter, {
         className: E.footerWithMessage,
@@ -69,7 +69,7 @@ function I(e) {
                     children: (0, l.jsx)(m.O, {
                         message: t,
                         forwardOptions: n,
-                        channel: L
+                        channel: x
                     })
                 }),
             (0, l.jsxs)('div', {
@@ -82,14 +82,14 @@ function I(e) {
                                 innerClassName: E.messageInput,
                                 onChange: k,
                                 placeholder: p.intl.string(p.t.ZroO3N),
-                                channel: L,
+                                channel: x,
                                 textValue: w,
                                 richValue: R,
                                 type: o.I.FORWARD_MESSAGE_INPUT,
                                 onBlur: M,
                                 onFocus: j,
                                 focused: O,
-                                onSubmit: G,
+                                onSubmit: U,
                                 parentModalKey: g.so,
                                 autoCompletePosition: 'bottom',
                                 emojiPickerCloseOnModalOuterClick: !0,
@@ -98,7 +98,7 @@ function I(e) {
                             (0, l.jsx)(r.Button, {
                                 className: E.sendWithMessage,
                                 submitting: C,
-                                disabled: !S || w.length > x,
+                                disabled: !A || w.length > L,
                                 onClick: F,
                                 children: I
                             })

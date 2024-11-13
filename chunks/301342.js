@@ -1,6 +1,6 @@
 n.d(t, {
     P: function () {
-        return Z;
+        return N;
     },
     Qo: function () {
         return y;
@@ -36,13 +36,13 @@ var i = n(200651),
 function E(e) {
     e.stopPropagation();
 }
-let N = l.memo(function (e) {
+let Z = l.memo(function (e) {
     let t,
-        { channel: r, connectChannelDragSource: h, connectChannelDropTarget: v, disableManageChannels: x, position: N, sortingPosition: Z, hideIcon: y, children: T } = e,
+        { channel: r, connectChannelDragSource: h, connectChannelDropTarget: v, disableManageChannels: x, position: Z, sortingPosition: N, hideIcon: y, children: T } = e,
         j = (0, s.e7)([_.ZP], () => _.ZP.isChannelMuted(r.getGuildId(), r.id)),
         A = (0, s.e7)([m.Z], () => m.Z.isCollapsed(r.id)),
         P = (0, s.e7)([C.Z], () => C.Z.can(I.Plq.MANAGE_CHANNELS, r));
-    t = null != Z ? (N > Z ? S.containerDragAfter : S.containerDragBefore) : S.containerDefault;
+    t = null != N ? (Z > N ? S.containerDragAfter : S.containerDragBefore) : S.containerDefault;
     let M = l.useCallback(() => {
             A ? (0, u.mJ)(r.id) : (0, u.c4)(r.id);
         }, [r.id, A]),
@@ -81,20 +81,20 @@ let N = l.memo(function (e) {
         }, [r]),
         { role: w, tabIndex: D, ...O } = (0, o.JA)(r.id),
         k = l.useRef(null),
-        U = l.useRef(null),
-        G = (0, i.jsxs)('li', {
+        G = l.useRef(null),
+        U = (0, i.jsxs)('li', {
             className: t,
             'data-dnd-name': r.name,
             children: [
                 (0, i.jsx)(c.FocusRing, {
                     focusTarget: k,
-                    ringTarget: U,
+                    ringTarget: G,
                     offset: {
                         left: 4,
                         right: 4
                     },
                     children: (0, i.jsxs)('div', {
-                        ref: U,
+                        ref: G,
                         className: a()(S.iconVisibility, S.wrapper, {
                             [S.collapsed]: A,
                             [S.muted]: j,
@@ -167,10 +167,10 @@ let N = l.memo(function (e) {
                 T
             ]
         });
-    return null != v && null != h ? v(h(G)) : G;
+    return null != v && null != h ? v(h(U)) : U;
 });
-t.ZP = (0, h.B)(N);
-let Z = l.memo(function (e) {
+t.ZP = (0, h.B)(Z);
+let N = l.memo(function (e) {
         let { name: t, onDismiss: n, className: l } = e;
         return (0, i.jsx)('li', {
             className: a()(l, S.containerDefault),

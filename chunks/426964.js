@@ -71,7 +71,7 @@ t.Z = i.memo(function (e) {
     let el = i.useCallback(() => {
             (0, a.closeAllModals)(),
                 (0, I.hM)(F, I.UE.DISCOVERY),
-                (0, u.transitionToGlobalDiscovery)({
+                (0, u.u)({
                     tab: L.F$.SERVERS,
                     selectedServersTab: x.vf.GUILDS,
                     entrypoint: x.Qq.PROFILE

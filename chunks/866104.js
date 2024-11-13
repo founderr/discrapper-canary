@@ -14,8 +14,8 @@ var i = n(200651),
     o = n(442837),
     s = n(481060),
     c = n(131388),
-    d = n(357352),
-    u = n(70097),
+    u = n(357352),
+    d = n(70097),
     m = n(565138),
     h = n(353254),
     f = n(695346),
@@ -26,8 +26,8 @@ var i = n(200651),
     C = n(506071),
     I = n(696014),
     x = n(847033),
-    v = n(544978),
-    N = n(893182),
+    N = n(544978),
+    v = n(893182),
     T = n(388032),
     S = n(687006);
 function A(e) {
@@ -58,16 +58,16 @@ function b(e) {
         l = (0, C.n)() && r,
         [a, o] = (0, h.Z)(t, l),
         s = l
-            ? (0, i.jsx)(u.Z, {
+            ? (0, i.jsx)(d.Z, {
                   autoPlay: !0,
                   loop: !0,
                   className: S.coverImage,
                   width: 655,
-                  poster: (0, d.b)('server_products/storefront/default-header.png'),
-                  src: (0, d.b)('server_products/storefront/default-header.mov')
+                  poster: (0, u.b)('server_products/storefront/default-header.png'),
+                  src: (0, u.b)('server_products/storefront/default-header.mov')
               })
             : (0, i.jsx)('img', {
-                  src: (0, d.b)('server_products/storefront/default-header.png'),
+                  src: (0, u.b)('server_products/storefront/default-header.png'),
                   alt: '',
                   className: S.coverImage
               });
@@ -86,8 +86,8 @@ function b(e) {
 }
 function j(e) {
     var t, n, l;
-    let { guild: u, subscriptionsSettings: h } = e,
-        f = u.id;
+    let { guild: d, subscriptionsSettings: h } = e,
+        f = d.id;
     let { nickname: g, nickcolor: C } =
             ((l = f),
             (0, o.cj)(
@@ -106,15 +106,15 @@ function j(e) {
             )),
         { isTruncated: j, ExpandableTextContainer: Z } = (0, I.s)(),
         R = (null !== (n = null == h ? void 0 : null === (t = h.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0,
-        [L, P] = r.useState(1),
+        [P, L] = r.useState(1),
         y = (0, c.Z)('(max-width: 1439px)'),
         { selectedTab: O, isPhantomPreview: M } = (0, x.m)(),
-        k = O === v.y.GUILD_PRODUCTS_PREVIEW ? T.intl.string(T.t['LvXy/P']) : T.intl.string(T.t.XyqKh4),
+        k = O === N.y.GUILD_PRODUCTS_PREVIEW ? T.intl.string(T.t['LvXy/P']) : T.intl.string(T.t.XyqKh4),
         D = R
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
                       (0, i.jsx)(Z, {
-                          lineClamp: y || 2 === L ? 2 : 3,
+                          lineClamp: y || 2 === P ? 2 : 3,
                           children: (0, i.jsx)(s.Text, {
                               variant: 'text-sm/normal',
                               color: 'text-normal',
@@ -123,7 +123,7 @@ function j(e) {
                       }),
                       j &&
                           (0, i.jsxs)(i.Fragment, {
-                              children: [(0, i.jsx)(s.Spacer, { size: 4 }), (0, i.jsx)(A, { onClick: () => (0, N.Z)({ guildId: f }) })]
+                              children: [(0, i.jsx)(s.Spacer, { size: 4 }), (0, i.jsx)(A, { onClick: () => (0, v.Z)({ guildId: f }) })]
                           })
                   ]
               })
@@ -140,9 +140,9 @@ function j(e) {
                 children: [
                     (0, i.jsx)('div', {
                         children: (0, i.jsx)(m.Z, {
-                            guild: u,
+                            guild: d,
                             size: m.Z.Sizes.LARGER,
-                            iconSrc: null == u.icon || M ? (0, d.b)('server_products/storefront/default-guild-icon.jpg') : void 0
+                            iconSrc: null == d.icon || M ? (0, u.b)('server_products/storefront/default-guild-icon.jpg') : void 0
                         })
                     }),
                     (0, i.jsx)(s.Spacer, {
@@ -153,13 +153,13 @@ function j(e) {
                         children: [
                             (0, i.jsx)('div', {
                                 ref: (e) => {
-                                    null != e && e.clientHeight > 30 && P(2);
+                                    null != e && e.clientHeight > 30 && L(2);
                                 },
                                 children: (0, i.jsx)(s.Heading, {
                                     variant: 'heading-xl/semibold',
                                     color: 'header-primary',
                                     lineClamp: 2,
-                                    children: M ? T.intl.string(T.t.rtgp7u) : T.intl.formatToPlainString(T.t.NZeik5, { guildName: u.name })
+                                    children: M ? T.intl.string(T.t.rtgp7u) : T.intl.formatToPlainString(T.t.NZeik5, { guildName: d.name })
                                 })
                             }),
                             (0, i.jsxs)(i.Fragment, {

@@ -33,12 +33,12 @@ function _(e) {
         g = n === t,
         _ = r.useCallback(() => {
             if (t === m.F$.QUESTS)
-                return (0, h.transitionToGlobalDiscovery)({
+                return (0, h.u)({
                     tab: m.F$.QUESTS,
                     location: p.dr.DISCOVERY_SIDEBAR,
                     questContent: s.j.DISCOVERY_SIDEBAR
                 });
-            return (0, h.transitionToGlobalDiscovery)({ tab: t });
+            return (0, h.u)({ tab: t });
         }, [t]);
     return (0, i.jsxs)(o.Clickable, {
         onClick: _,

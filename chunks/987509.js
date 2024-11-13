@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: function () {
-        return A;
+        return S;
     },
     dL: function () {
         return _;
@@ -87,21 +87,21 @@ function I(e, t) {
     }
     return i;
 }
-function S(e, t) {
+function A(e, t) {
     return e.filter((e) => {
         var n, l;
         return (0, d.lm)(e) && (e.type === a.h8.HEADER || ((0, h.o)(e) && ((n = e), (l = t), n.type === a.h8.USER ? l || null != o.Z.getDMChannelFromUserId(n.record.id) : n.type === a.h8.GROUP_DM || (n.record.type !== f.d4z.GUILD_FORUM && n.record.type !== f.d4z.GUILD_MEDIA && c.Z.can(f.Plq.VIEW_CHANNEL, n.record) && c.Z.can(f.Plq.SEND_MESSAGES, n.record)))));
     });
 }
-function A(e) {
+function S(e) {
     let { results: t, hasQuery: n, queryMode: i, frequentChannels: a, targetDestination: o, selectedDestinations: c, pinnedDestinations: u, originDestination: d, includeMissingDMs: h } = e;
-    if (n) return I(S(t, h));
+    if (n) return I(A(t, h));
     let f = null != u && u.length > 0 ? u.map((e) => E(e)) : [],
         _ = s.Z.getChannelHistory(),
         g = _.length > 0 ? _.map((e) => (0, r.Z)(e)) : [],
         m = a.length > 0 ? a.map((e) => (0, r.Z)(e.id)) : [],
-        p = S([...f, null != o ? E(o) : null, ...g, ...m], h),
-        A = (null == c ? void 0 : c.find((e) => (0, l.isEqual)(e, d))) != null,
-        C = null == d || A ? [] : [d.id];
+        p = A([...f, null != o ? E(o) : null, ...g, ...m], h),
+        S = (null == c ? void 0 : c.find((e) => (0, l.isEqual)(e, d))) != null,
+        C = null == d || S ? [] : [d.id];
     return null != i ? I(p.filter((e) => e.type === i)) : I(p, C).slice(0, 15);
 }

@@ -1,36 +1,36 @@
-l.d(n, {
+t.d(n, {
     Z: function () {
-        return o;
+        return s;
     }
 });
-var t = l(423875),
-    i = l(740605),
-    r = l(206583),
-    a = l(616922),
-    s = l(388032);
-function o(e) {
+var l = t(423875),
+    i = t(740605),
+    r = t(206583),
+    a = t(616922),
+    o = t(388032);
+function s(e) {
     let n,
-        { entry: l, baseEntryData: o } = e,
-        { provider: u, image_url: c } = l.extra.media,
-        d = l.extra.artist.name,
+        { entry: t, baseEntryData: s } = e,
+        { provider: c, image_url: u } = t.extra.media,
+        d = t.extra.artist.name,
         m = {
-            onClick: () => (0, i.o)(a.Hw.ALBUM, l.extra.media.external_parent_id),
-            ariaDescription: s.intl.formatToPlainString(s.t.xTsar6, { itemName: l.extra.media.parent_title })
+            onClick: () => (0, i.o)(a.Hw.ALBUM, t.extra.media.external_parent_id),
+            ariaDescription: o.intl.formatToPlainString(o.t.xTsar6, { itemName: t.extra.media.parent_title })
         },
-        p = {
-            onClick: () => (0, i.o)(a.Hw.ARTIST, l.extra.artist.external_id),
-            ariaDescription: s.intl.formatToPlainString(s.t.xTsar6, { itemName: d })
+        f = {
+            onClick: () => (0, i.o)(a.Hw.ARTIST, t.extra.artist.external_id),
+            ariaDescription: o.intl.formatToPlainString(o.t.xTsar6, { itemName: d })
         };
     return (
-        u === t.p.SPOTIFY && (n = { type: r.kG.SPOTIFY }),
+        c === l.p.SPOTIFY && (n = { type: r.kG.SPOTIFY }),
         {
-            ...o,
+            ...s,
             title: d,
-            thumbnailUrl: c,
-            titleClickable: p,
+            thumbnailUrl: u,
+            titleClickable: f,
             subtitleClickable: m,
             thumbnailClickable: m,
-            userDescription: s.t.CcVI1d,
+            userDescription: o.t.CcVI1d,
             providerIconProps: n
         }
     );

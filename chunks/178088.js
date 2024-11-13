@@ -11,8 +11,8 @@ var i = n(200651),
     o = n(524437),
     s = n(481060),
     c = n(100527),
-    d = n(906732),
-    u = n(602478),
+    u = n(906732),
+    d = n(602478),
     m = n(2818),
     h = n(768943),
     f = n(742989),
@@ -23,14 +23,14 @@ var i = n(200651),
     C = n(153209),
     I = n(956961),
     x = n(903672),
-    v = n(946443),
-    N = n(264233),
+    N = n(946443),
+    v = n(264233),
     T = n(981631),
     S = n(388032);
 function A(e) {
     let { onOpen: t, onClose: n, children: A, badgeState: b, popoutPosition: j, popoutAlign: Z } = e,
-        { analyticsLocations: R } = (0, d.ZP)(c.Z.NOTIFICATION_CENTER),
-        [L, P] = r.useState(!1),
+        { analyticsLocations: R } = (0, u.ZP)(c.Z.NOTIFICATION_CENTER),
+        [P, L] = r.useState(!1),
         [y, O] = (function () {
             let e = (0, a.e7)([_.Z], () => {
                 var e, t;
@@ -70,16 +70,16 @@ function A(e) {
             };
         })(y),
         D = r.useCallback(() => {
-            P(!1), L && (null == n || n());
-        }, [n, L]),
+            L(!1), P && (null == n || n());
+        }, [n, P]),
         B = r.useCallback(() => {
-            P(!L), L ? null == n || n() : null == t || t();
-        }, [n, t, L]);
+            L(!P), P ? null == n || n() : null == t || t();
+        }, [n, t, P]);
     r.useEffect(() => (g.S.subscribe(T.CkL.TOGGLE_INBOX, B), () => void g.S.unsubscribe(T.CkL.TOGGLE_INBOX, B)), [B]);
     let { showReminders: U } = f.Z.useExperiment({ location: 'RecentsPopout' }),
         { enabled: w, inInbox: F } = m.Z.useExperiment({ location: 'RecentsPopout' }),
         G = (0, a.e7)([h.Z], () => h.Z.hasOverdueReminder(), []) && w && F,
-        { enabled: V } = u.Z.useExperiment({ location: 'RecentsPopout' });
+        { enabled: V } = d.Z.useExperiment({ location: 'RecentsPopout' });
     r.useEffect(() => {
         (((!U || (w && F)) && y === o.X.TODOS) || (y === o.X.BOOKMARKS && !(w || F))) && O(o.X.MENTIONS);
     });
@@ -89,14 +89,14 @@ function A(e) {
         },
         [D]
     );
-    return (0, i.jsx)(d.Gt, {
+    return (0, i.jsx)(u.Gt, {
         value: R,
         children: (0, i.jsx)(s.Popout, {
             animation: s.Popout.Animation.NONE,
             position: j,
             align: Z,
             autoInvert: !1,
-            shouldShow: L,
+            shouldShow: P,
             onRequestClose: D,
             renderPopout: function () {
                 return (0, i.jsx)(s.Dialog, {
@@ -116,7 +116,7 @@ function A(e) {
                                     closePopout: D
                                 })
                               : V && y === o.X.GAME_INVITES
-                                ? (0, i.jsx)(N.Z, {
+                                ? (0, i.jsx)(v.Z, {
                                       setTab: O,
                                       badgeState: b,
                                       closePopout: D
@@ -134,12 +134,12 @@ function A(e) {
                                           closePopout: D
                                       })
                                     : (0, i.jsx)(l.SV, {
-                                          fallback: (0, i.jsx)(v.h, {
+                                          fallback: (0, i.jsx)(N.h, {
                                               setTab: O,
                                               closePopout: D,
                                               badgeState: b
                                           }),
-                                          children: (0, i.jsx)(v.Z, {
+                                          children: (0, i.jsx)(N.Z, {
                                               setTab: O,
                                               onJump: H,
                                               showTutorial: M,

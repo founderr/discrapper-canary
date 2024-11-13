@@ -6,7 +6,7 @@ n.d(t, {
         return E;
     },
     Zg: function () {
-        return N;
+        return Z;
     }
 }),
     n(411104);
@@ -68,7 +68,7 @@ let S = {
         [x.EkH.QUICKSWITCHER_SHOW]: c.$
     },
     E = { [x.EkH.QUICKSWITCHER_SHOW]: c.$ };
-function N() {
+function Z() {
     return [
         {
             description: I.intl.string(I.t.bx4Uy8),

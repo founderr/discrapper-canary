@@ -32,8 +32,8 @@ var i = n(200651),
     b = n(863249),
     S = n(937111),
     E = n(667105),
-    N = n(451478),
-    Z = n(602147),
+    Z = n(451478),
+    N = n(602147),
     y = n(981631),
     T = n(308083),
     j = n(921944),
@@ -107,13 +107,13 @@ let D = l.memo(function (e) {
         [S, D] = (0, v.US)([u.z.RAPIDASH_MORE_GUILDS_UPSELL], j.R.SIDEBAR, !0),
         O = (0, E.Ws)({ location: M.dr.CONFLICT_CHECKS }),
         k = S !== u.z.RAPIDASH_MORE_GUILDS_UPSELL,
-        U = (0, h.Z)(),
-        G = n.pathname === y.Z5c.GUILD_DISCOVERY || n.pathname.startsWith(y.Z5c.GLOBAL_DISCOVERY),
-        B = O && !U && !k && !G,
+        G = (0, h.Z)(),
+        U = n.pathname === y.Z5c.GUILD_DISCOVERY || n.pathname.startsWith(y.Z5c.GLOBAL_DISCOVERY),
+        B = O && !G && !k && !U,
         [H, V] = l.useState(0),
         F = (0, f.ZP)(),
         W = l.useMemo(() => r.map((e) => e.id), [r]),
-        z = (0, c.e7)([N.Z], () => N.Z.isFocused());
+        z = (0, c.e7)([Z.Z], () => Z.Z.isFocused());
     l.useEffect(() => {
         B &&
             (0, g.tv)({
@@ -139,14 +139,14 @@ let D = l.memo(function (e) {
                 }),
                 B)
             )
-                (0, I.transitionToGlobalDiscovery)({
+                (0, I.u)({
                     tab: A.F$.SERVERS,
                     selectedServersTab: P.vf.GUILDS,
                     entrypoint: P.Qq.GUILDS_BAR
                 });
             else {
                 let e = x.Z.getField('selectedTab');
-                (0, Z.o)(e);
+                (0, N.o)(e);
             }
         }, [O, p, W, B, D]),
         K = l.useCallback(
@@ -163,7 +163,7 @@ let D = l.memo(function (e) {
             exitBeforeEnter: !0
         }),
         Q = l.useCallback((e) => (null != e ? { backgroundImage: 'url('.concat(e, ')') } : {}), []),
-        J = l.useMemo(() => t({ onClick: Y }), [t, Y]);
+        X = l.useMemo(() => t({ onClick: Y }), [t, Y]);
     return p !== T.O7.GAME_SPECIFIC || b
         ? (0, i.jsxs)('div', {
               className: L.container,
@@ -231,10 +231,10 @@ let D = l.memo(function (e) {
                               className: L.popoutAnchor
                           })
                   }),
-                  J
+                  X
               ]
           })
-        : (0, i.jsx)(i.Fragment, { children: J });
+        : (0, i.jsx)(i.Fragment, { children: X });
 });
 function O(e) {
     let { onActivate: t, children: n } = e,

@@ -13,8 +13,8 @@ var r = n(568611),
     o = n(481060),
     s = n(668781),
     c = n(2052),
-    d = n(100527),
-    u = n(906732),
+    u = n(100527),
+    d = n(906732),
     m = n(895924),
     h = n(835473),
     f = n(522474),
@@ -25,8 +25,8 @@ var r = n(568611),
     C = n(823379),
     I = n(624138),
     x = n(317381),
-    v = n(638880),
-    N = n(122613),
+    N = n(638880),
+    v = n(122613),
     T = n(147865),
     S = n(778569),
     A = n(884338),
@@ -34,12 +34,12 @@ var r = n(568611),
     j = n(701488),
     Z = n(981631),
     R = n(388032),
-    L = n(896219);
-let P = (0, I.Mg)(a.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
+    P = n(896219);
+let L = (0, I.Mg)(a.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
 function y(e) {
     var t, n, a, I;
     let { applicationId: y, message: O } = e,
-        { analyticsLocations: M } = (0, u.ZP)(d.Z.ACTIVITY_BOOKMARK),
+        { analyticsLocations: M } = (0, d.ZP)(u.Z.ACTIVITY_BOOKMARK),
         k = (0, c.O)(),
         D = O.channel_id,
         B = (0, l.e7)([_.Z], () => _.Z.getChannel(D), [D]),
@@ -54,7 +54,7 @@ function y(e) {
         K = (0, l.Wu)([g.default], () => W.map((e) => g.default.getUser(e)).filter(C.lm), [W]),
         Y = (0, S.Z)({
             applicationId: y,
-            size: P,
+            size: L,
             names: ['embedded_cover']
         }),
         X = f.Z.getWindowOpen(Z.KJ3.CHANNEL_CALL_POPOUT),
@@ -62,7 +62,7 @@ function y(e) {
         q = async () => {
             if (w) {
                 if (null != z && K.length > 0)
-                    await (0, v.Z)({
+                    await (0, N.Z)({
                         applicationId: z.applicationId,
                         activityChannelId: D,
                         locationObject: k.location,
@@ -71,7 +71,7 @@ function y(e) {
                 else {
                     let e = B.isPrivate() && !p.Z.isCallActive(D),
                         t = async () =>
-                            await (0, N.Z)({
+                            await (0, v.Z)({
                                 targetApplicationId: y,
                                 channelId: D,
                                 analyticsLocations: M,
@@ -98,34 +98,34 @@ function y(e) {
                 });
         };
     return null != V && (0, E.yE)(V.flags, Z.udG.EMBEDDED)
-        ? (0, i.jsx)(u.Gt, {
+        ? (0, i.jsx)(d.Gt, {
               value: M,
               children: (0, i.jsxs)('div', {
-                  className: L.container,
+                  className: P.container,
                   children: [
                       (0, i.jsx)('div', {
-                          className: L.imgContainer,
+                          className: P.imgContainer,
                           children: (0, i.jsx)('img', {
-                              className: L.img,
+                              className: P.img,
                               alt: V.name,
                               src: Y.url
                           })
                       }),
                       (0, i.jsxs)('div', {
-                          className: L.content,
+                          className: P.content,
                           children: [
                               (0, i.jsx)(o.Heading, {
-                                  className: L.heading,
+                                  className: P.heading,
                                   variant: 'heading-xl/semibold',
                                   children: V.name
                               }),
                               (0, i.jsx)(o.Heading, {
-                                  className: L.description,
+                                  className: P.description,
                                   variant: 'heading-sm/medium',
                                   children: null === (t = V.description) || void 0 === t ? void 0 : t.trim()
                               }),
                               (0, i.jsx)(o.Heading, {
-                                  className: L.learnMore,
+                                  className: P.learnMore,
                                   variant: 'heading-sm/medium',
                                   children: (0, i.jsx)(r.rU, {
                                       to: Z.Z5c.ACTIVITY_DETAILS(y),
@@ -133,11 +133,11 @@ function y(e) {
                                   })
                               }),
                               (0, i.jsxs)('div', {
-                                  className: L.cta,
+                                  className: P.cta,
                                   children: [
                                       K.length > 0
                                           ? (0, i.jsx)('div', {
-                                                className: L.avatars,
+                                                className: P.avatars,
                                                 children: (0, i.jsx)(A.Z, {
                                                     guildId: U,
                                                     users: K,
@@ -145,12 +145,12 @@ function y(e) {
                                                 })
                                             })
                                           : (0, i.jsxs)('div', {
-                                                className: L.maxParticipants,
+                                                className: P.maxParticipants,
                                                 children: [
                                                     (0, i.jsx)(o.GroupIcon, {
                                                         size: 'md',
                                                         color: 'currentColor',
-                                                        className: L.peopleIcon
+                                                        className: P.peopleIcon
                                                     }),
                                                     (0, i.jsx)(o.Text, {
                                                         variant: 'text-xs/semibold',
@@ -159,10 +159,10 @@ function y(e) {
                                                 ]
                                             }),
                                       (0, i.jsx)('div', {
-                                          className: L.buttonWrapper,
+                                          className: P.buttonWrapper,
                                           children: (0, i.jsx)(o.Button, {
                                               onClick: q,
-                                              className: L.button,
+                                              className: P.button,
                                               color: o.ButtonColors.GREEN,
                                               disabled: G,
                                               children: Q

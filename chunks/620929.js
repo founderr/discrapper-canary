@@ -6,11 +6,11 @@ l.d(t, {
 var n = l(200651),
     i = l(192379),
     a = l(120356),
-    s = l.n(a),
-    r = l(913527),
-    o = l.n(r),
-    c = l(442837),
-    d = l(481060),
+    r = l.n(a),
+    s = l(913527),
+    o = l.n(s),
+    d = l(442837),
+    c = l(481060),
     u = l(430824),
     x = l(650461),
     m = l(353093),
@@ -24,7 +24,7 @@ var n = l(200651),
     N = l(388032),
     Z = l(691994);
 function T(e) {
-    let { guildId: t, tag: l, badge: i, primaryColor: a, secondaryColor: s } = e;
+    let { guildId: t, tag: l, badge: i, primaryColor: a, secondaryColor: r } = e;
     return null == l || 0 === l.length
         ? (0, n.jsx)('div', {
               className: Z.placeholderIcon,
@@ -46,15 +46,15 @@ function T(e) {
                   width: p.NC.SIZE_24,
                   height: p.NC.SIZE_24,
                   primaryTintColor: a,
-                  secondaryTintColor: s
+                  secondaryTintColor: r
               })
           });
 }
 function S(e) {
     let { applicationIds: t, playstyle: l, className: a } = e,
-        r = i.useMemo(() => Array.from(t), [t]),
-        o = (0, h.i)(r),
-        c = i.useMemo(() => {
+        s = i.useMemo(() => Array.from(t), [t]),
+        o = (0, h.i)(s),
+        d = i.useMemo(() => {
             if (null == o) return null;
             let e = (0, p.mv)(l);
             return null == e
@@ -64,11 +64,11 @@ function S(e) {
                       games: o
                   });
         }, [o, l]);
-    return (0, n.jsx)(d.Text, {
+    return (0, n.jsx)(c.Text, {
         variant: 'text-sm/normal',
         color: 'text-muted',
-        className: s()(Z.overviewText, a),
-        children: null == c ? N.intl.string(N.t.AIp7Hx) : c
+        className: r()(Z.overviewText, a),
+        children: null == d ? N.intl.string(N.t.AIp7Hx) : d
     });
 }
 t.Z =
@@ -76,19 +76,19 @@ t.Z =
         ? (e) => {
               let { guildId: t } = e,
                   l = (0, x.Wg)(),
-                  a = (0, c.e7)([u.Z], () => {
+                  a = (0, d.e7)([u.Z], () => {
                       var e, l;
                       return null !== (l = null === (e = u.Z.getGuild(t)) || void 0 === e ? void 0 : e.name) && void 0 !== l ? l : '';
                   }),
                   {
-                      gameApplicationIds: s,
-                      playstyle: r,
+                      gameApplicationIds: r,
+                      playstyle: s,
                       interests: h,
                       tag: v,
                       badgeKind: f,
                       badgePrimaryColor: C,
                       badgeSecondaryColor: y
-                  } = (0, c.cj)([x.ZP], () => {
+                  } = (0, d.cj)([x.ZP], () => {
                       var e;
                       return null !== (e = x.ZP.getStateForGuild(t).progress) && void 0 !== e ? e : l;
                   }),
@@ -103,37 +103,37 @@ t.Z =
                           primaryColor: null != C ? C : j.Nh,
                           secondaryColor: null != y ? y : j.vY
                       }),
-                      (0, n.jsx)(d.Heading, {
+                      (0, n.jsx)(c.Heading, {
                           variant: 'heading-xl/normal',
                           color: 'text-muted',
                           className: Z.overviewHeaderPrelude,
                           children: N.intl.string(N.t['85S0//'])
                       }),
-                      (0, n.jsx)(d.Heading, {
+                      (0, n.jsx)(c.Heading, {
                           variant: 'heading-xl/bold',
                           color: 'interactive-active',
                           className: Z.overviewGuildName,
                           children: a
                       }),
-                      (0, n.jsx)(d.Text, {
+                      (0, n.jsx)(c.Text, {
                           variant: 'text-sm/normal',
                           color: 'text-muted',
                           className: Z.overviewText,
                           children: N.intl.format(N.t['7RpSYW'], { date: o()().format('MMMM YYYY') })
                       }),
                       (0, n.jsx)(S, {
-                          applicationIds: s,
-                          playstyle: r
+                          applicationIds: r,
+                          playstyle: s
                       }),
                       null != w
-                          ? (0, n.jsx)(d.Text, {
+                          ? (0, n.jsx)(c.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-muted',
                                 className: Z.overviewText,
                                 children: N.intl.format(N.t.VKgkfH, { traits: w })
                             })
                           : null,
-                      (0, n.jsx)(d.Text, {
+                      (0, n.jsx)(c.Text, {
                           variant: 'text-sm/normal',
                           color: 'text-muted',
                           className: Z.overviewText,

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return Z;
     }
 }),
     n(47120),
@@ -27,7 +27,7 @@ var i = n(200651),
     b = n(981631),
     S = n(388032),
     E = n(289223);
-function N(e) {
+function Z(e) {
     var t, d;
     let { channel: h, guild: p, onAction: m, voiceStates: C, isChannelSelected: v, shouldShowSettingNudge: x } = e;
     !(function (e, t) {
@@ -49,7 +49,7 @@ function N(e) {
         (0, o.$)(n);
     })(h, C);
     let I = (0, s.ZP)(h),
-        N = Array.from((0, s.uF)(I).values()),
+        Z = Array.from((0, s.uF)(I).values()),
         y = null !== (t = null == C ? void 0 : C.filter(g.lm)) && void 0 !== t ? t : [],
         T = (e) => (t) => ([b.IIU.PLAYING, b.IIU.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId)) || t.type === b.IIU.LISTENING,
         j = (0, r.e7)(
@@ -78,18 +78,18 @@ function N(e) {
             [y],
             r.pF
         );
-    return j.length + N.length === 0
+    return j.length + Z.length === 0
         ? null
         : (0, i.jsxs)(a.Scroller, {
               className: E.container,
               children: [
-                  (0, i.jsx)(Z, {
+                  (0, i.jsx)(N, {
                       channel: h,
                       isChannelSelected: v,
                       voiceStatesCount: null !== (d = null == C ? void 0 : C.length) && void 0 !== d ? d : 0
                   }),
                   (0, i.jsx)('div', { className: E.headerDivider }),
-                  N.map((e, t) => {
+                  Z.map((e, t) => {
                       var n;
                       return (0, i.jsx)(
                           _.Z,
@@ -143,7 +143,7 @@ function N(e) {
               ]
           });
 }
-function Z(e) {
+function N(e) {
     let { channel: t, isChannelSelected: n, voiceStatesCount: l } = e,
         a = (0, r.e7)([p.Z], () => !p.Z.can(b.Plq.CONNECT, t)),
         o = (0, r.e7)([m.Z], () => m.Z.hasVideo(t.id)),

@@ -1,89 +1,89 @@
-t.r(n),
-    t.d(n, {
+n.r(t),
+    n.d(t, {
         default: function () {
             return _;
         },
         openInteractionModal: function () {
-            return f;
+            return p;
         }
     });
-var o = t(200651);
-t(192379);
-var i = t(481060),
-    a = t(118012),
-    r = t(970184),
-    c = t(471073),
-    d = t(293979),
-    l = t(954654),
-    s = t(388032),
-    u = t(251686);
+var i = n(200651);
+n(192379);
+var o = n(481060),
+    r = n(118012),
+    a = n(970184),
+    l = n(471073),
+    s = n(293979),
+    c = n(954654),
+    u = n(388032),
+    d = n(251686);
 function _(e) {
-    let { title: n, onClose: t, transitionState: _ } = e,
-        { components: f, applicationIconURL: p, applicationName: I, submissionState: m, error: S, validators: C, onSubmit: b } = (0, d.X9)(e, t);
-    return (0, o.jsx)('form', {
+    let { title: t, onClose: n, transitionState: _ } = e,
+        { components: p, applicationIconURL: I, applicationName: S, submissionState: f, error: C, validators: T, onSubmit: m } = (0, s.X9)(e, n);
+    return (0, i.jsx)('form', {
         onSubmit: (e) => {
-            e.preventDefault(), b();
+            e.preventDefault(), m();
         },
-        children: (0, o.jsxs)(i.ModalRoot, {
+        children: (0, i.jsxs)(o.ModalRoot, {
             transitionState: _,
             children: [
-                (0, o.jsxs)(i.ModalHeader, {
+                (0, i.jsxs)(o.ModalHeader, {
                     separator: !1,
                     children: [
-                        (0, o.jsx)(i.Avatar, {
-                            src: p,
-                            size: i.AvatarSizes.SIZE_24,
-                            'aria-label': I,
-                            className: u.applicationIcon
+                        (0, i.jsx)(o.Avatar, {
+                            src: I,
+                            size: o.AvatarSizes.SIZE_24,
+                            'aria-label': S,
+                            className: d.applicationIcon
                         }),
-                        (0, o.jsx)(a.Z, {
-                            color: a.Z.Colors.HEADER_PRIMARY,
-                            size: a.Z.Sizes.SIZE_24,
-                            children: n
+                        (0, i.jsx)(r.Z, {
+                            color: r.Z.Colors.HEADER_PRIMARY,
+                            size: r.Z.Sizes.SIZE_24,
+                            children: t
                         }),
-                        (0, o.jsx)(i.ModalCloseButton, {
-                            onClick: t,
-                            className: u.closeButton
+                        (0, i.jsx)(o.ModalCloseButton, {
+                            onClick: n,
+                            className: d.closeButton
                         })
                     ]
                 }),
-                (0, o.jsxs)(i.ModalContent, {
+                (0, i.jsxs)(o.ModalContent, {
                     children: [
-                        null != S && '' !== S
-                            ? (0, o.jsx)(i.HelpMessage, {
-                                  messageType: i.HelpMessageTypes.ERROR,
-                                  className: u.submissionWarning,
-                                  children: S
+                        null != C && '' !== C
+                            ? (0, i.jsx)(o.HelpMessage, {
+                                  messageType: o.HelpMessageTypes.ERROR,
+                                  className: d.submissionWarning,
+                                  children: C
                               })
                             : null,
-                        (0, o.jsx)(i.HelpMessage, {
-                            messageType: i.HelpMessageTypes.WARNING,
-                            className: u.submissionWarning,
-                            children: s.intl.format(s.t['dSTy//'], { applicationName: I })
+                        (0, i.jsx)(o.HelpMessage, {
+                            messageType: o.HelpMessageTypes.WARNING,
+                            className: d.submissionWarning,
+                            children: u.intl.format(u.t['dSTy//'], { applicationName: S })
                         }),
-                        (0, o.jsx)(i.FormSection, {
-                            children: (0, o.jsx)(r.Il, {
+                        (0, i.jsx)(o.FormSection, {
+                            children: (0, i.jsx)(a.Il, {
                                 modal: e,
-                                validators: C,
-                                children: (0, l.xX)(f)
+                                validators: T,
+                                children: (0, c.xX)(p)
                             })
                         })
                     ]
                 }),
-                (0, o.jsxs)(i.ModalFooter, {
+                (0, i.jsxs)(o.ModalFooter, {
                     children: [
-                        (0, o.jsx)(i.Button, {
+                        (0, i.jsx)(o.Button, {
                             type: 'submit',
-                            color: i.Button.Colors.BRAND,
-                            size: i.Button.Sizes.MEDIUM,
-                            submitting: m === c.i.IN_FLIGHT,
-                            children: s.intl.string(s.t.geKm7u)
+                            color: o.Button.Colors.BRAND,
+                            size: o.Button.Sizes.MEDIUM,
+                            submitting: f === l.i.IN_FLIGHT,
+                            children: u.intl.string(u.t.geKm7u)
                         }),
-                        (0, o.jsx)(i.Button, {
-                            look: i.Button.Looks.LINK,
-                            color: i.Button.Colors.PRIMARY,
-                            onClick: t,
-                            children: s.intl.string(s.t['ETE/oK'])
+                        (0, i.jsx)(o.Button, {
+                            look: o.Button.Looks.LINK,
+                            color: o.Button.Colors.PRIMARY,
+                            onClick: n,
+                            children: u.intl.string(u.t['ETE/oK'])
                         })
                     ]
                 })
@@ -91,10 +91,10 @@ function _(e) {
         })
     });
 }
-function f(e) {
-    (0, i.openModal)((n) =>
-        (0, o.jsx)(_, {
-            ...n,
+function p(e) {
+    (0, o.openModal)((t) =>
+        (0, i.jsx)(_, {
+            ...t,
             ...e
         })
     );

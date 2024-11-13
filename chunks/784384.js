@@ -1,12 +1,12 @@
 n.d(t, {
     HY: function () {
-        return S;
+        return A;
     },
     nm: function () {
         return I;
     },
     pU: function () {
-        return A;
+        return S;
     },
     y: function () {
         return C;
@@ -44,7 +44,7 @@ function I(e) {
         [n]
     );
 }
-function S(e, t, n) {
+function A(e, t, n) {
     let l = n instanceof u.Sf;
     if (t.isNSFW() && !(l && n.isNSFW())) return { label: E.intl.string(E.t.KgPx1N) };
     if (l && (0, u.Km)(n.type)) {
@@ -71,7 +71,7 @@ function S(e, t, n) {
         if ((e.hasFlag(p.iLy.IS_VOICE_MESSAGE) || e.messageSnapshots.some((e) => e.message.hasFlag(p.iLy.IS_VOICE_MESSAGE))) && !h.Z.can(p.Plq.SEND_VOICE_MESSAGES, n)) return { label: E.intl.string(E.t.quj4DQ) };
     }
 }
-function A(e, t) {
+function S(e, t) {
     return null != e.rateLimitPerUser && !!(e.rateLimitPerUser > 0) && !(t.can(p.Plq.MANAGE_CHANNELS, e) || t.can(p.Plq.MANAGE_MESSAGES, e));
 }
 function C(e) {
@@ -84,7 +84,7 @@ function C(e) {
                     return 'channel' === t ? d.Z.getChannel(n) : null;
                 })
                 .filter(m.lm)
-                .filter((e) => A(e, h.Z)),
+                .filter((e) => S(e, h.Z)),
         [e]
     );
     return (0, a.Wu)([_.default, f.Z], () => t.map((e) => (0, r.F6)(e, _.default, f.Z, !0)), [t]);

@@ -7,11 +7,11 @@ l.d(t, {
 var n,
     i,
     a = l(200651),
-    s = l(192379),
-    r = l(120356),
-    o = l.n(r),
-    c = l(100621),
-    d = l(442837),
+    r = l(192379),
+    s = l(120356),
+    o = l.n(s),
+    d = l(100621),
+    c = l(442837),
     u = l(481060),
     x = l(393238),
     m = l(434650),
@@ -24,43 +24,43 @@ var n,
     p = l(388032),
     N = l(906326);
 ((i = n || (n = {})).LEFT = 'left'), (i.RIGHT = 'right');
-t.Z = s.memo(function (e) {
-    let { guildId: t, primaryColor: l, children: n, canSignCharter: i = !0, signed: r, onSignCharter: Z, animationDelayMs: T = 1000, signHintButtonText: S, signHintHelperText: y, signHintPosition: w = 'left', className: H, fullHeight: b, showDisclaimer: M } = e,
-        _ = s.useRef(null),
-        A = s.useCallback(
+t.Z = r.memo(function (e) {
+    let { guildId: t, primaryColor: l, children: n, canSignCharter: i = !0, signed: s, onSignCharter: Z, animationDelayMs: T = 1000, signHintButtonText: S, signHintHelperText: y, signHintPosition: w = 'left', className: H, fullHeight: M, showDisclaimer: b } = e,
+        L = r.useRef(null),
+        _ = r.useCallback(
             (e) => {
-                e.preventDefault(), e.stopPropagation(), null == Z || Z(!r);
+                e.preventDefault(), e.stopPropagation(), null == Z || Z(!s);
             },
-            [Z, r]
+            [Z, s]
         ),
-        [B, I] = s.useState(!1),
-        [k, R] = s.useState(!1),
-        E = s.useRef(null),
-        D = s.useCallback(
+        [B, A] = r.useState(!1),
+        [I, R] = r.useState(!1),
+        k = r.useRef(null),
+        E = r.useCallback(
             (e) => {
                 e &&
-                    (E.current = setTimeout(() => {
+                    (k.current = setTimeout(() => {
                         R(!0);
                     }, T));
             },
             [T]
         ),
-        G = (0, m.O)(D),
-        P = (0, d.e7)([h.Z], () => h.Z.useReducedMotion),
-        Y = (0, d.e7)([g.default], () => g.default.getCurrentUser()),
-        [V, L] = (0, u.useSpring)(() => {
+        D = (0, m.O)(E),
+        G = (0, c.e7)([h.Z], () => h.Z.useReducedMotion),
+        P = (0, c.e7)([g.default], () => g.default.getCurrentUser()),
+        [Y, V] = (0, u.useSpring)(() => {
             var e, t;
             return (
                 (e = w),
-                (t = P),
+                (t = G),
                 'left' === e
                     ? {
                           right: t ? 68 : 0,
-                          config: c.config.stiff
+                          config: d.config.stiff
                       }
                     : {
                           left: t ? 68 : 0,
-                          config: c.config.stiff
+                          config: d.config.stiff
                       }
             );
         }),
@@ -68,36 +68,36 @@ t.Z = s.memo(function (e) {
             opacity: 0,
             top: -24,
             onRest: () => {
-                r && I(!0);
+                s && A(!0);
             }
         }));
-    s.useEffect(() => {
-        if (k)
-            L({
+    r.useEffect(() => {
+        if (I)
+            V({
                 ...('left' === w
                     ? {
                           right: 68,
-                          config: c.config.stiff
+                          config: d.config.stiff
                       }
                     : {
                           left: 280,
-                          config: c.config.stiff
+                          config: d.config.stiff
                       })
             }),
                 z({
                     opacity: 1,
                     top: -24
                 });
-        k &&
-            r &&
+        I &&
+            s &&
             z({
                 opacity: 0,
                 top: 0
             });
-    }, [k, r, w]),
-        s.useEffect(
+    }, [I, s, w]),
+        r.useEffect(
             () => () => {
-                null != E.current && clearTimeout(E.current);
+                null != k.current && clearTimeout(k.current);
             },
             []
         );
@@ -116,15 +116,15 @@ t.Z = s.memo(function (e) {
                 opacity: 1,
                 translateY: 0
             },
-            config: c.config.stiff
+            config: d.config.stiff
         });
     return (0, a.jsx)('div', {
         className: o()(N.container, H),
-        ref: G,
+        ref: D,
         children: (0, a.jsx)(C.Z, {
-            fullHeight: b,
+            fullHeight: M,
             children: (0, a.jsxs)('div', {
-                className: o()(N.overviewSidebarWrapper, b && N.fullHeight),
+                className: o()(N.overviewSidebarWrapper, M && N.fullHeight),
                 children: [
                     (0, a.jsx)(u.ScrollerNone, {
                         fade: !0,
@@ -137,7 +137,7 @@ t.Z = s.memo(function (e) {
                     $(
                         (e, l) =>
                             l &&
-                            (0, a.jsx)(c.animated.div, {
+                            (0, a.jsx)(d.animated.div, {
                                 className: N.signatureBlockContainer,
                                 style: e,
                                 children: (0, a.jsx)('div', {
@@ -146,12 +146,12 @@ t.Z = s.memo(function (e) {
                                         className: N.signatureBlock,
                                         children: [
                                             (0, a.jsx)('div', {
-                                                ref: _,
+                                                ref: L,
                                                 className: N.signHintContainer,
-                                                children: (0, a.jsxs)(c.animated.div, {
+                                                children: (0, a.jsxs)(d.animated.div, {
                                                     className: U,
                                                     style: {
-                                                        ...V,
+                                                        ...Y,
                                                         ...F
                                                     },
                                                     children: [
@@ -163,7 +163,7 @@ t.Z = s.memo(function (e) {
                                                                 size: u.Button.Sizes.SMALL,
                                                                 onClick: (e) => {
                                                                     var t;
-                                                                    null === (t = _.current) || void 0 === t || t.scrollIntoView({ behavior: 'smooth' }), A(e);
+                                                                    null === (t = L.current) || void 0 === t || t.scrollIntoView({ behavior: 'smooth' }), _(e);
                                                                 },
                                                                 children: [
                                                                     (0, a.jsx)('div', {
@@ -180,7 +180,7 @@ t.Z = s.memo(function (e) {
                                                             className: N.signHintHelperText,
                                                             children: null != y ? S : p.intl.string(p.t.Pwzyy8)
                                                         }),
-                                                        M &&
+                                                        b &&
                                                             (0, a.jsx)(u.Text, {
                                                                 variant: 'text-xs/normal',
                                                                 color: 'text-muted',
@@ -191,7 +191,7 @@ t.Z = s.memo(function (e) {
                                                 })
                                             }),
                                             (0, a.jsxs)(u.Clickable, {
-                                                onClick: A,
+                                                onClick: _,
                                                 className: o()(N.signatureContainer, { [N.clickable]: null != Z }),
                                                 children: [
                                                     (0, a.jsx)(u.Text, {
@@ -199,12 +199,12 @@ t.Z = s.memo(function (e) {
                                                         color: 'none',
                                                         children: 'x'
                                                     }),
-                                                    r
+                                                    s
                                                         ? (0, a.jsx)(u.Text, {
                                                               variant: 'text-lg/normal',
                                                               color: 'header-primary',
                                                               className: N.signatureText,
-                                                              children: v.ZP.getName(t, null, Y)
+                                                              children: v.ZP.getName(t, null, P)
                                                           })
                                                         : (0, a.jsx)(u.Text, {
                                                               variant: 'text-lg/normal',

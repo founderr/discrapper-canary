@@ -10,13 +10,13 @@ var i = n(200651),
     o = n(905405),
     s = n(937889),
     c = n(267128),
-    d = n(123145),
-    u = n(699516),
+    u = n(123145),
+    d = n(699516),
     m = n(217702),
     h = n(825193);
 function f(e) {
     let { message: t, channel: n } = e,
-        f = (0, l.e7)([u.Z], () => u.Z.isBlockedForMessage(t)),
+        f = (0, l.e7)([d.Z], () => d.Z.isBlockedForMessage(t)),
         p = (0, o.p)(),
         _ = r.useMemo(() => ({ [n.guild_id]: [t.author.id] }), [n.guild_id, t.author.id]);
     (0, a.$)(_);
@@ -38,7 +38,7 @@ function f(e) {
                 src: t.author.getAvatarURL(n.guild_id, 16),
                 className: h.threadMessageAccessoryAvatar
             }),
-            (0, i.jsx)(d.Z, {
+            (0, i.jsx)(u.Z, {
                 message: t,
                 channel: n,
                 compact: !0

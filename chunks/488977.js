@@ -39,7 +39,7 @@ function b(e) {
             id: n.id,
             label: g.intl.string(g.t['+NP/b2'])
         }),
-        y = (0, x.P)({ application: n });
+        P = (0, x.P)({ application: n });
     return (0, i.jsxs)('div', {
         className: A.container,
         children: [
@@ -101,7 +101,7 @@ function b(e) {
                                         : null
                                 ]
                             }),
-                            null != y && (0, i.jsxs)(o.MenuGroup, { children: [...y] }),
+                            null != P && (0, i.jsxs)(o.MenuGroup, { children: [...P] }),
                             (0, i.jsx)(o.MenuGroup, { children: S })
                         ]
                     });

@@ -1,53 +1,53 @@
-l.d(n, {
+t.d(n, {
     Z: function () {
         return x;
     }
 });
-var t = l(876215),
-    i = l(758713),
-    r = l(835473),
-    a = l(810568),
-    s = l(168524),
-    o = l(561308),
-    u = l(206583),
-    c = l(96513),
-    d = l(701488),
-    m = l(388032);
-let p = {
-        [i.z.XBOX]: u.kG.XBOX,
-        [i.z.PLAYSTATION]: u.kG.PLAYSTATION
+var l = t(876215),
+    i = t(758713),
+    r = t(835473),
+    a = t(810568),
+    o = t(168524),
+    s = t(561308),
+    c = t(206583),
+    u = t(96513),
+    d = t(701488),
+    m = t(388032);
+let f = {
+        [i.z.XBOX]: c.kG.XBOX,
+        [i.z.PLAYSTATION]: c.kG.PLAYSTATION
     },
-    f = { [c._.EMBED]: a.m1.Embed };
+    p = { [u._.EMBED]: a.m1.Embed };
 function x(e) {
     let n,
-        l,
-        { entry: i, location: a, baseEntryData: u } = e,
-        c = (0, r.q)(i.extra.application_id),
-        x = null == c ? void 0 : c.getIconURL(d.Si.LARGE),
-        v = i.extra.game_name;
+        t,
+        { entry: i, location: a, baseEntryData: c } = e,
+        u = (0, r.q)(i.extra.application_id),
+        x = null == u ? void 0 : u.getIconURL(d.Si.LARGE),
+        h = i.extra.game_name;
     if (null != i.extra.platform) {
-        let e = p[i.extra.platform];
+        let e = f[i.extra.platform];
         null != e && (n = { type: e });
     }
-    l = i.content_type === t.s.PLAYED_GAME ? ((0, o.kr)(i) && !(0, o.n2)(i) ? m.t.vPg1JS : m.t.rPqqtr) : m.t.rPqqtr;
-    let h = f[a],
+    t = i.content_type === l.s.PLAYED_GAME ? ((0, s.kr)(i) && !(0, s.n2)(i) ? m.t.vPg1JS : m.t.rPqqtr) : m.t.rPqqtr;
+    let v = p[a],
         C = {
-            onClick: (0, s.Z)({
-                location: h,
+            onClick: (0, o.Z)({
+                location: v,
                 applicationId: i.extra.application_id,
-                source: h,
+                source: v,
                 trackEntryPointImpression: !0,
                 sourceUserId: i.author_id
             }),
-            ariaDescription: m.intl.formatToPlainString(m.t['9sZWVl'], { gameName: v })
+            ariaDescription: m.intl.formatToPlainString(m.t['9sZWVl'], { gameName: h })
         };
     return {
-        ...u,
+        ...c,
         thumbnailUrl: x,
-        title: v,
+        title: h,
         titleClickable: C,
         thumbnailClickable: C,
-        userDescription: l,
+        userDescription: t,
         providerIconProps: n
     };
 }

@@ -10,8 +10,8 @@ var i = n(200651),
     o = n(913527),
     s = n.n(o),
     c = n(91192),
-    d = n(722770),
-    u = n(442837),
+    u = n(722770),
+    d = n(442837),
     m = n(481060),
     h = n(287734),
     f = n(607070),
@@ -22,8 +22,8 @@ var i = n(200651),
     C = n(36459),
     I = n(336197),
     x = n(359110),
-    v = n(347475),
-    N = n(496675),
+    N = n(347475),
+    v = n(496675),
     T = n(594174),
     S = n(5192),
     A = n(51144),
@@ -31,8 +31,8 @@ var i = n(200651),
     j = n(739566),
     Z = n(779125),
     R = n(890410),
-    L = n(464891),
-    P = n(507418),
+    P = n(464891),
+    L = n(507418),
     y = n(348238),
     O = n(38267),
     M = n(83561),
@@ -48,14 +48,14 @@ function V(e, t) {
         { usernameProfile: a, avatarProfile: o } = n,
         s = (0, y.wq)(e.author.id, t.id),
         c = (0, y.RN)(e.author.id, t.id, e.id),
-        d = (0, y.XO)(e, t, a, l),
-        u = (0, y.R9)(o, l);
+        u = (0, y.XO)(e, t, a, l),
+        d = (0, y.R9)(o, l);
     return {
         selected: i,
         onContextMenu: s,
         onContextMenuModerateUser: c,
-        onClickUsername: d,
-        onClickAvatar: u,
+        onClickUsername: u,
+        onClickAvatar: d,
         onPopoutRequestClose: r.useCallback(
             () =>
                 l({
@@ -65,7 +65,7 @@ function V(e, t) {
                 }),
             [l]
         ),
-        renderPopout: P.Z,
+        renderPopout: L.Z,
         showAvatarPopout: o,
         showUsernamePopout: a
     };
@@ -74,7 +74,7 @@ function H(e, t) {
     return r.useMemo(() => {
         if (null != t)
             return (n) =>
-                (0, i.jsx)(v.Z, {
+                (0, i.jsx)(N.Z, {
                     ...n,
                     userId: t.id,
                     user: t,
@@ -126,7 +126,7 @@ function K(e, t) {
 }
 function Y(e) {
     let { alertAction: t, guildId: n } = e,
-        r = (0, u.e7)([T.default], () => T.default.getUser(t.actor), [t.actor]);
+        r = (0, d.e7)([T.default], () => T.default.getUser(t.actor), [t.actor]);
     try {
         let e = parseInt(t.actionType);
         if (null == r) return K(e, {});
@@ -189,12 +189,12 @@ let Q = r.memo(function (e) {
         { message: n, channel: r, embedChannel: l, compact: a, interactionUserId: o } = e,
         s = V(n, r),
         c = H(r, n.author),
-        d = (0, j.ZP)(n),
-        u = (0, L.CF)(
+        u = (0, j.ZP)(n),
+        d = (0, P.CF)(
             {
                 message: n,
                 channel: r,
-                author: d,
+                author: u,
                 guildId: null == r ? void 0 : r.guild_id,
                 compact: a,
                 ...s
@@ -206,7 +206,7 @@ let Q = r.memo(function (e) {
         p = H(r, h);
     if (null != h) {
         let e = (0, j.ij)(h, r),
-            i = (0, L.CF)(
+            i = (0, P.CF)(
                 {
                     message: n,
                     channel: r,
@@ -236,7 +236,7 @@ let Q = r.memo(function (e) {
                         openChatWithoutConnecting: !0
                     })
                 }),
-            () => u,
+            () => d,
             t
         )
     });
@@ -245,20 +245,20 @@ function q(e) {
     var t;
     let { id: n, compact: l, message: o, channel: s } = e,
         {
-            avatarSrc: v,
+            avatarSrc: N,
             eventHandlers: { onMouseEnter: T, onMouseLeave: S }
         } = (0, M.m)(!0),
         { onFocus: A, ...j } = (0, c.JA)(null != n ? n : ''),
-        { isFocused: Z, handleFocus: P, handleBlur: O } = (0, y.bb)(A),
-        D = (0, u.e7)([f.Z], () => f.Z.keyboardModeEnabled),
-        H = (0, u.e7)([N.Z], () => N.Z.can(B.Plq.MANAGE_MESSAGES, s), [s]),
+        { isFocused: Z, handleFocus: L, handleBlur: O } = (0, y.bb)(A),
+        D = (0, d.e7)([f.Z], () => f.Z.keyboardModeEnabled),
+        H = (0, d.e7)([v.Z], () => v.Z.can(B.Plq.MANAGE_MESSAGES, s), [s]),
         { ruleName: K, embedChannel: Y, decisionId: q, keywordMatchedContent: J, keyword: $, content: ee, flaggedMessageId: et, timeoutDuration: en, decisionReason: ei, alertActionsExecution: er, quarantineType: el, interactionUserId: ea } = (0, g.ZP)(o),
         eo = r.useMemo(() => (0, b.k$)(ee, J, s.id), [ee, J, s]),
         { selected: es, ...ec } = V(o, s),
-        ed = r.useCallback(() => {
+        eu = r.useCallback(() => {
             (0, E._s)(o.id, ee, q, s);
         }, [o.id, ee, q, s]),
-        eu = r.useCallback(
+        ed = r.useCallback(
             (e) => {
                 if (null != et && null != Y) e.stopPropagation(), e.preventDefault(), (0, I.Z)(B.Z5c.CHANNEL(null == Y ? void 0 : Y.guild_id, null == Y ? void 0 : Y.id, et));
             },
@@ -289,13 +289,13 @@ function q(e) {
         onMouseLeave: S,
         children: (0, i.jsx)(k.Z, {
             className: a()(G.mainContainer, { [G.compact]: l }),
-            iconNode: l ? null : (0, i.jsx)(M.S, { src: v }),
+            iconNode: l ? null : (0, i.jsx)(M.S, { src: N }),
             iconContainerClassName: G.iconContainer,
             compact: l,
             children: (0, i.jsxs)('div', {
                 className: a()(G.content, { [G.compact]: l }),
                 children: [
-                    (0, i.jsx)(L.nD, {
+                    (0, i.jsx)(P.nD, {
                         message: o,
                         messageClassname: G.spanCorrection,
                         className: a()(G.usernameContainer, G.spanCorrection, { [G.compact]: l }),
@@ -406,9 +406,9 @@ function q(e) {
                             }),
                             popoutProps: ec,
                             zalgo: !0,
-                            onFocus: P,
+                            onFocus: L,
                             onBlur: O,
-                            onClick: eu
+                            onClick: ed
                         })
                     }),
                     (0, i.jsx)(z, {
@@ -430,7 +430,7 @@ function q(e) {
                                         children: [
                                             (0, i.jsx)(m.ShieldIcon, {
                                                 size: 'xs',
-                                                color: d.Z.BLUE_345,
+                                                color: u.Z.BLUE_345,
                                                 className: G.footerIcon
                                             }),
                                             (0, i.jsx)(m.Text, {
@@ -465,7 +465,7 @@ function q(e) {
                                     : null,
                                 (0, i.jsx)('div', { className: G.dot }),
                                 (0, i.jsx)(m.Button, {
-                                    onClick: ed,
+                                    onClick: eu,
                                     color: m.Button.Colors.LINK,
                                     look: m.Button.Looks.LINK,
                                     size: m.Button.Sizes.SMALL,

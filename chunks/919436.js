@@ -21,8 +21,8 @@ var i,
     b = n(276952),
     S = n(682662),
     E = n(662146),
-    N = n(674552),
-    Z = n(981631),
+    Z = n(674552),
+    N = n(981631),
     y = n(673193);
 function T(e, t, n) {
     return (
@@ -111,7 +111,7 @@ class P extends (i = r.PureComponent) {
     }
     getChannelIcon() {
         let { channel: e } = this.props,
-            t = e.type === Z.d4z.DM ? x.default.getUser(e.getRecipientId()) : null;
+            t = e.type === N.d4z.DM ? x.default.getUser(e.getRecipientId()) : null;
         return null != t ? t.getAvatarURL(void 0, 48, !1) : (0, h.x)(e);
     }
     render() {
@@ -133,8 +133,8 @@ class P extends (i = r.PureComponent) {
                         selected: n,
                         children: (0, l.jsx)(c.BlobMask, {
                             selected: n || f,
-                            lowerBadge: i > 0 ? (0, N.Ne)(i) : null,
-                            upperBadge: (0, N.Or)({
+                            lowerBadge: i > 0 ? (0, Z.Ne)(i) : null,
+                            upperBadge: (0, Z.Or)({
                                 audio: r,
                                 video: s,
                                 screenshare: u,
@@ -145,7 +145,7 @@ class P extends (i = r.PureComponent) {
                                 id: e.id,
                                 children: (i) =>
                                     (0, l.jsx)(c.NavItem, {
-                                        to: Z.Z5c.CHANNEL(Z.ME, e.id),
+                                        to: N.Z5c.CHANNEL(N.ME, e.id),
                                         onMouseEnter: () => this.setState({ hovered: !0 }),
                                         onMouseLeave: () => this.setState({ hovered: !1 }),
                                         selected: n || f,
@@ -185,7 +185,7 @@ class P extends (i = r.PureComponent) {
             }),
             T(this, 'handleContextMenu', (e) => {
                 let { channel: t } = this.props,
-                    i = t.type === Z.d4z.DM ? x.default.getUser(t.getRecipientId()) : null;
+                    i = t.type === N.d4z.DM ? x.default.getUser(t.getRecipientId()) : null;
                 null != i
                     ? (0, u.jW)(e, async () => {
                           let { default: e } = await Promise.all([n.e('79695'), n.e('92453'), n.e('56826'), n.e('29212')]).then(n.bind(n, 131404));
@@ -218,7 +218,7 @@ T(P, 'defaultProps', {
         let n = e.channel.id,
             i = (0, p.ZP)(e.channel),
             r = (0, s.e7)([C.Z], () => C.Z.getChannelId(), []),
-            a = (0, s.e7)([d.Z], () => (null != r ? d.Z.getMode(r) : Z.WtW.VOICE), [r]),
+            a = (0, s.e7)([d.Z], () => (null != r ? d.Z.getMode(r) : N.WtW.VOICE), [r]),
             o = (0, s.e7)([g.Z], () => g.Z.getAllApplicationStreamsForChannel(n).length > 0),
             c = (0, s.e7)([v.Z], () => v.Z.getChannelId(), []),
             u = (0, s.e7)([_.ZP], () => _.ZP.getMentionCount(n), [n]),
@@ -227,7 +227,7 @@ T(P, 'defaultProps', {
             x = !1,
             I = !1;
         return (
-            m && ((x = a === Z.WtW.VOICE), (I = a === Z.WtW.VIDEO)),
+            m && ((x = a === N.WtW.VOICE), (I = a === N.WtW.VIDEO)),
             (0, l.jsx)(P, {
                 ...e,
                 ref: t,

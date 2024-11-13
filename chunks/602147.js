@@ -25,18 +25,18 @@ var i = n(200651),
 function I(e) {
     switch (e) {
         case g.F$.QUESTS:
-            return (0, h.transitionToGlobalDiscovery)({
+            return (0, h.u)({
                 tab: g.F$.QUESTS,
                 location: _.dr.DISCOVERY_COMPASS,
                 questContent: r.j.DISCOVERY_COMPASS
             });
         case g.F$.SERVERS:
-            return (0, h.transitionToGlobalDiscovery)({
+            return (0, h.u)({
                 tab: g.F$.SERVERS,
                 entrypoint: C.Qq.GUILDS_BAR
             });
         default:
-            return (0, h.transitionToGlobalDiscovery)({ tab: e });
+            return (0, h.u)({ tab: e });
     }
 }
 let b = l.forwardRef(function (e, t) {
@@ -44,25 +44,25 @@ let b = l.forwardRef(function (e, t) {
         C = (0, s.Z)('discovery_button'),
         b = (0, p.Ws)({ location: _.dr.CONFLICT_CHECKS }),
         [S, E] = (0, c.US)(C && b ? [a.z.RAPIDASH_MORE_GUILDS_UPSELL] : [], m.R.SIDEBAR, !0),
-        N = S === a.z.RAPIDASH_MORE_GUILDS_UPSELL,
-        Z = l.useCallback(() => {
-            null == h || h(), (0, u.k5)({ source: g.JU.GUILDS_BAR_ICON }), I(d.Z.getField('selectedTab')), N && E(m.L.DISMISS);
-        }, [h, E, N]),
+        Z = S === a.z.RAPIDASH_MORE_GUILDS_UPSELL,
+        N = l.useCallback(() => {
+            null == h || h(), (0, u.k5)({ source: g.JU.GUILDS_BAR_ICON }), I(d.Z.getField('selectedTab')), Z && E(m.L.DISMISS);
+        }, [h, E, Z]),
         y = l.useMemo(
             () => ({
                 lowerBadgeSize: {
                     width: 12,
                     height: 12
                 },
-                lowerBadge: N ? (0, i.jsx)('div', { className: x.guildNotif }) : void 0
+                lowerBadge: Z ? (0, i.jsx)('div', { className: x.guildNotif }) : void 0
             }),
-            [N]
+            [Z]
         );
     return (0, i.jsx)(f.Z, {
         id: 'guild-discover-button',
         ref: t,
         className: r,
-        onClick: Z,
+        onClick: N,
         selected: n,
         tooltip: v.intl.string(v.t['4nEZLi']),
         icon: o.CompassIcon,

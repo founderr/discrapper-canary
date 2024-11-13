@@ -36,9 +36,9 @@ function x(e) {
             applicationId: t.id,
             channelId: n.id
         }),
-        y = l.useMemo(() => (0, m.XZ)(_.displayName), [_.displayName]),
+        P = l.useMemo(() => (0, m.XZ)(_.displayName), [_.displayName]),
         {
-            onActivityItemSelected: P,
+            onActivityItemSelected: y,
             buttonColor: T,
             buttonText: L
         } = (0, h.P7)({
@@ -46,7 +46,7 @@ function x(e) {
             application: t,
             location: r.Vh.APP_LAUNCHER_APPLICATION_VIEW,
             sectionName: x,
-            commandName: y,
+            commandName: P,
             autoDismissOnClick: S === o.JS.LEAVE,
             launchingComponentId: g,
             submitting: null != E ? E : b
@@ -71,7 +71,7 @@ function x(e) {
                 submitting: I,
                 onClick: () => {
                     j(!0),
-                        P(),
+                        y(),
                         null == n || n(),
                         s.default.track(f.rMx.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
                             application_id: t.id,

@@ -10,9 +10,9 @@ var i,
     o = n(120356),
     s = n.n(o),
     c = n(512722),
-    d = n.n(c),
-    u = n(913527),
-    m = n.n(u),
+    u = n.n(c),
+    d = n(913527),
+    m = n.n(d),
     h = n(481060),
     f = n(911969),
     p = n(595519),
@@ -22,8 +22,8 @@ var i,
     C = n(906732),
     I = n(783097),
     x = n(581364),
-    v = n(592180),
-    N = n(347475),
+    N = n(592180),
+    v = n(347475),
     T = n(598077),
     S = n(768581),
     A = n(585483),
@@ -31,8 +31,8 @@ var i,
     j = n(739566),
     Z = n(421399),
     R = n(310423),
-    L = n(223021),
-    P = n(981631),
+    P = n(223021),
+    L = n(981631),
     y = n(388032),
     O = n(825193);
 function M(e) {
@@ -54,14 +54,14 @@ function M(e) {
 ((i = r || (r = {}))[(i.InteractionUser = 0)] = 'InteractionUser'), (i[(i.InteractionTarget = 1)] = 'InteractionTarget');
 function k(e, t, n, i, r) {
     var a, o, c;
-    let { message: d, compact: u, channel: m, isInteractionUserBlocked: f, showAvatarPopout: p, showTargetAvatarPopout: _, onClickAvatar: g, onUserContextMenu: E, onClickTargetAvatar: C, onTargetUserContextMenu: I, onPopoutRequestClose: x } = e;
-    if (u && 1 === n) return null;
-    if ((u && null == d.activityInstance) || f)
+    let { message: u, compact: d, channel: m, isInteractionUserBlocked: f, showAvatarPopout: p, showTargetAvatarPopout: _, onClickAvatar: g, onUserContextMenu: E, onClickTargetAvatar: C, onTargetUserContextMenu: I, onPopoutRequestClose: x } = e;
+    if (d && 1 === n) return null;
+    if ((d && null == u.activityInstance) || f)
         return (0, l.jsx)('div', {
             className: O.replyBadge,
             children: (0, l.jsx)(M, { className: O.commandIcon })
         });
-    let v =
+    let N =
             null !==
                 (c = S.ZP.getGuildMemberAvatarURL({
                     avatar: null !== (a = i.guildMemberAvatar) && void 0 !== a ? a : void 0,
@@ -70,7 +70,7 @@ function k(e, t, n, i, r) {
                 })) && void 0 !== c
                 ? c
                 : void 0,
-        N = () =>
+        v = () =>
             (function (e) {
                 let { user: t, guildId: n, guildAvatar: i, onClick: r, onContextMenu: a, onMouseDown: o } = e;
                 return (0, l.jsx)('img', {
@@ -87,7 +87,7 @@ function k(e, t, n, i, r) {
             })({
                 user: t,
                 guildId: m.guild_id,
-                guildAvatar: v,
+                guildAvatar: N,
                 onClick: 1 === n ? C : g,
                 onContextMenu: 1 === n ? I : E
             }),
@@ -98,12 +98,12 @@ function k(e, t, n, i, r) {
               shouldShow: T,
               position: 'right',
               onRequestClose: x,
-              children: N
+              children: v
           })
-        : N();
+        : v();
 }
 function D(e, t, n, i, r) {
-    let { message: a, channel: o, showUsernamePopout: s, showTargetUsernamePopout: c, onClickUsername: d, onUserContextMenu: u, onClickTargetUsername: m, onTargetUserContextMenu: h, onPopoutRequestClose: f } = e;
+    let { message: a, channel: o, showUsernamePopout: s, showTargetUsernamePopout: c, onClickUsername: u, onUserContextMenu: d, onClickTargetUsername: m, onTargetUserContextMenu: h, onPopoutRequestClose: f } = e;
     return (0, l.jsx)(Z.Z, {
         className: 1 === n ? O.targetUsername : '',
         compact: !0,
@@ -113,8 +113,8 @@ function D(e, t, n, i, r) {
         userOverride: t,
         showPopout: 1 === n ? c : s,
         renderPopout: r,
-        onClick: 1 === n ? m : d,
-        onContextMenu: 1 === n ? h : u,
+        onClick: 1 === n ? m : u,
+        onContextMenu: 1 === n ? h : d,
         onPopoutRequestClose: f
     });
 }
@@ -131,8 +131,8 @@ function U(e) {
         { analyticsLocations: o } = (0, C.ZP)(E.Z.EXECUTED_COMMAND),
         c = a.useMemo(
             () => (e, t, n) => (
-                d()(null != r && null != t, 'ExecuteCommand: user and channel cannot be undefined'),
-                (0, l.jsx)(N.Z, {
+                u()(null != r && null != t, 'ExecuteCommand: user and channel cannot be undefined'),
+                (0, l.jsx)(v.Z, {
                     ...e,
                     channelId: r.id,
                     messageId: i.id,
@@ -143,9 +143,9 @@ function U(e) {
             ),
             [r, i.id]
         ),
-        u = a.useMemo(
+        d = a.useMemo(
             () => (e) => (
-                d()(null != r, 'ExecutedCommand: channel cannot be null'),
+                u()(null != r, 'ExecutedCommand: channel cannot be null'),
                 (0, l.jsx)(R.Z, {
                     ...e,
                     channel: r,
@@ -160,7 +160,7 @@ function U(e) {
         M = (null == S ? void 0 : S.type) === f.B8.APPLICATION_COMMAND && null != i.messageReference && null != e.renderTargetMessage,
         U = (0, j.Sw)(null === (t = i.interaction) || void 0 === t ? void 0 : t.user, r),
         w = (0, j.Sw)(Z, r),
-        F = a.useMemo(() => (e.compact ? (0, L.Z)((0, b.vc)(m()(), 'LT')) : null), [e.compact]),
+        F = a.useMemo(() => (e.compact ? (0, P.Z)((0, b.vc)(m()(), 'LT')) : null), [e.compact]),
         G = (0, p.NX)(r.id),
         V = i.interaction;
     if (null == V || null == U) return null;
@@ -175,7 +175,7 @@ function U(e) {
             'user'
         );
     };
-    if ((null == i ? void 0 : i.activityInstance) === null || (0, v.g)(i))
+    if ((null == i ? void 0 : i.activityInstance) === null || (0, N.g)(i))
         (n = y.intl.format(y.t['rg7U+P'], {
             userHook: H,
             commandHook: () => {
@@ -192,7 +192,7 @@ function U(e) {
                         positionKey: null != i.interactionData ? 'ready' : 'loading',
                         children: (e) => {
                             let { onClick: t, ...n } = e;
-                            if (i.type === P.uaV.CHAT_INPUT_COMMAND || i.type === P.uaV.INTERACTION_PREMIUM_UPSELL)
+                            if (i.type === L.uaV.CHAT_INPUT_COMMAND || i.type === L.uaV.INTERACTION_PREMIUM_UPSELL)
                                 return (0, l.jsx)(h.Clickable, {
                                     ...n,
                                     tag: 'span',
@@ -211,7 +211,7 @@ function U(e) {
                                         ]
                                     })
                                 });
-                            if (!(0, v.g)(i))
+                            if (!(0, N.g)(i))
                                 return (0, l.jsx)('div', {
                                     className: O.commandName,
                                     children: o
@@ -222,7 +222,7 @@ function U(e) {
                                     ...n,
                                     tag: 'span',
                                     onClick: () => {
-                                        A.S.dispatchToLastSubscribed(P.CkL.OPEN_APP_LAUNCHER, { applicationId: i.applicationId });
+                                        A.S.dispatchToLastSubscribed(L.CkL.OPEN_APP_LAUNCHER, { applicationId: i.applicationId });
                                     },
                                     children: (0, l.jsxs)('div', {
                                         className: s()(O.appLauncherOnboardingCommandName, O.clickable),
@@ -241,7 +241,7 @@ function U(e) {
                             }
                         }
                     });
-                })(e, u);
+                })(e, d);
                 return (0, l.jsx)(a.Fragment, { children: t }, 'command');
             }
         })),
@@ -274,10 +274,10 @@ function U(e) {
                 channel: r,
                 guildId: r.guild_id,
                 locationObject: {
-                    page: r.isPrivate() ? P.ZY5.DM_CHANNEL : P.ZY5.GUILD_CHANNEL,
-                    section: P.jXE.CHANNEL_TEXT_AREA,
-                    object: P.qAy.APP_COMMAND,
-                    objectType: P.Qqv.ACTIVITY
+                    page: r.isPrivate() ? L.ZY5.DM_CHANNEL : L.ZY5.GUILD_CHANNEL,
+                    section: L.jXE.CHANNEL_TEXT_AREA,
+                    object: L.qAy.APP_COMMAND,
+                    objectType: L.Qqv.ACTIVITY
                 },
                 openInPopout: !1,
                 enableSelectedTextChannelInvite: !0,

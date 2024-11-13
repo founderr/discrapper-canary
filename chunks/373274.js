@@ -30,8 +30,8 @@ var i,
     b = n(258871),
     S = n(216306),
     E = n(398758),
-    N = n(220444),
-    Z = n(31022),
+    Z = n(220444),
+    N = n(31022),
     y = n(10401),
     T = n(131704),
     j = n(592125),
@@ -44,8 +44,8 @@ var i,
     D = n(761091),
     O = n(301342),
     k = n(906817),
-    U = n(429122),
-    G = n(285573),
+    G = n(429122),
+    U = n(285573),
     B = n(995993),
     H = n(910595),
     V = n(466935),
@@ -56,8 +56,8 @@ var i,
     K = n(424785),
     q = n(770202),
     Q = n(79556),
-    J = n(428127),
-    X = n(950969),
+    X = n(428127),
+    J = n(950969),
     $ = n(233657),
     ee = n(831700),
     et = n(443063),
@@ -144,7 +144,7 @@ class es extends (i = r.PureComponent) {
                 let r = e.getChannelFromSectionRow(i, l);
                 if (null == r) return !1;
                 let { channel: a, category: o } = r;
-                return !!(0, T.vc)(a.record.type) && (!o.isCollapsed || !o.isMuted) && !a.isMuted && !!t.isItemVisible(i, l, !0) && (0, N.d)(a.record);
+                return !!(0, T.vc)(a.record.type) && (!o.isCollapsed || !o.isMuted) && !a.isMuted && !!t.isItemVisible(i, l, !0) && (0, Z.d)(a.record);
             })
         );
     }
@@ -153,7 +153,7 @@ class es extends (i = r.PureComponent) {
             { guildId: r, guildChannels: a, guildChannelsVersion: o } = this.props;
         return (0, l.jsx)('div', {
             className: ea.positionedContainer,
-            children: (0, l.jsx)(X.Z, {
+            children: (0, l.jsx)(J.Z, {
                 ref: this.unreadTopRef,
                 textUnread: er.intl.string(er.t.FCRiT0),
                 textMention: er.intl.string(er.t['8zH0LC']),
@@ -172,7 +172,7 @@ class es extends (i = r.PureComponent) {
     renderBottomUnread() {
         let { guildId: e, guildChannels: t, guildChannelsVersion: n } = this.props,
             { bottomMention: i, isUnreadVisible: r } = this.state;
-        return (0, l.jsx)(X.Z, {
+        return (0, l.jsx)(J.Z, {
             reverse: !0,
             ref: this.unreadBottomRef,
             textUnread: er.intl.string(er.t.FCRiT0),
@@ -243,7 +243,7 @@ class es extends (i = r.PureComponent) {
                                   children: [
                                       (0, l.jsx)('div', {
                                           className: ea.positionedContainer,
-                                          children: (0, l.jsx)(J.Z, {
+                                          children: (0, l.jsx)(X.Z, {
                                               position: 'top',
                                               guildChannels: e,
                                               guildChannelsVersion: t,
@@ -252,7 +252,7 @@ class es extends (i = r.PureComponent) {
                                           })
                                       }),
                                       this.renderList(),
-                                      (0, l.jsx)(J.Z, {
+                                      (0, l.jsx)(X.Z, {
                                           position: 'bottom',
                                           guildChannels: e,
                                           guildChannelsVersion: t,
@@ -384,7 +384,7 @@ class es extends (i = r.PureComponent) {
             }),
             eo(this, 'getSectionFooterHeight', (e) => {
                 let { guildChannels: t, voiceStates: n, selectedVoiceChannelId: i, selectedChannelId: l, optInEnabled: r, guildChannelsVersion: a } = this.props;
-                return (0, U.dt)({
+                return (0, G.dt)({
                     sectionIndex: e,
                     guildChannels: t,
                     guildChannelsVersion: a,
@@ -542,7 +542,7 @@ class es extends (i = r.PureComponent) {
                             );
                         case et.z.GUILD_DIRECTORY:
                             return (0, l.jsx)(
-                                G.Z,
+                                U.Z,
                                 {
                                     guild: i,
                                     selectedChannelId: o,
@@ -570,7 +570,7 @@ class es extends (i = r.PureComponent) {
                 let { category: _, channel: v } = C,
                     S = _ instanceof R.VR,
                     E = v.record,
-                    N = ''.concat(t).concat(v.id);
+                    Z = ''.concat(t).concat(v.id);
                 switch (E.type) {
                     case ei.d4z.GUILD_ANNOUNCEMENT:
                     case ei.d4z.GUILD_TEXT:
@@ -605,10 +605,10 @@ class es extends (i = r.PureComponent) {
                                         : null
                                 ]
                             },
-                            N
+                            Z
                         );
                     case ei.d4z.GUILD_STAGE_VOICE:
-                        var Z, y;
+                        var N, y;
                         return (0, l.jsx)(
                             K.Z,
                             {
@@ -618,12 +618,12 @@ class es extends (i = r.PureComponent) {
                                 selected: o === v.id,
                                 connected: c === v.id,
                                 collapsed: v.isCollapsed || _.isCollapsed,
-                                voiceStates: null !== (Z = d[v.id]) && void 0 !== Z ? Z : [],
+                                voiceStates: null !== (N = d[v.id]) && void 0 !== N ? N : [],
                                 speakerVoiceStates: null !== (y = p[v.id]) && void 0 !== y ? y : [],
                                 disableManageChannels: h,
                                 isFavoriteCategory: S
                             },
-                            N
+                            Z
                         );
                     case ei.d4z.GUILD_VOICE:
                         return (0, l.jsx)(
@@ -642,7 +642,7 @@ class es extends (i = r.PureComponent) {
                                 isFavoriteCategory: S,
                                 withGuildIcon: m
                             },
-                            N
+                            Z
                         );
                     case ei.d4z.GUILD_STORE:
                         return (0, l.jsx)(
@@ -653,7 +653,7 @@ class es extends (i = r.PureComponent) {
                                 position: v.position,
                                 selected: o === v.id
                             },
-                            N
+                            Z
                         );
                     case ei.d4z.GUILD_CATEGORY:
                         if (t !== u.voiceChannelsSectionNumber) return null;
@@ -674,7 +674,7 @@ class es extends (i = r.PureComponent) {
                                 isFavoriteCategory: !1,
                                 forceTopLevelThread: !0
                             },
-                            N
+                            Z
                         );
                     default:
                         return null;
@@ -684,7 +684,7 @@ class es extends (i = r.PureComponent) {
                 let { section: t } = e,
                     { guildChannels: n, guildChannelsVersion: i, voiceStates: r, selectedChannelId: a, selectedVoiceChannelId: o, optInEnabled: s, guildId: c } = this.props;
                 return (0, l.jsx)(
-                    U.ZP,
+                    G.ZP,
                     {
                         guildId: c,
                         guildChannels: n,
@@ -695,7 +695,7 @@ class es extends (i = r.PureComponent) {
                         selectedVoiceChannelId: o,
                         optInEnabled: s
                     },
-                    (0, U.eo)(t, n, s)
+                    (0, G.eo)(t, n, s)
                 );
             }),
             eo(this, 'getAnchorId', (e, t) => {
@@ -771,11 +771,11 @@ let ec = (e) => {
             scrollToStart: I,
             scrollToEnd: b
         }),
-        N = S.setFocus;
+        Z = S.setFocus;
     r.useEffect(() => {
-        null != n && N(n);
-    }, [n, N]);
-    let y = (0, Z.Z)(t);
+        null != n && Z(n);
+    }, [n, Z]);
+    let y = (0, N.Z)(t);
     return (0, l.jsx)(C.Gt, {
         value: o,
         children: (0, l.jsx)(f.Z, {

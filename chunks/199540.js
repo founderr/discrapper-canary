@@ -48,7 +48,7 @@ function b(e) {
         [m, C] = l.useState(!1),
         [b, S] = l.useState(c),
         E = c ? 0 : -x,
-        N = (0, d.useSpring)(
+        Z = (0, d.useSpring)(
             {
                 transform: 'translate3d(0, '.concat(E, 'px, 0)'),
                 config: { duration: v },
@@ -61,11 +61,11 @@ function b(e) {
             },
             'animate-always'
         ),
-        Z = m ? N : void 0;
+        N = m ? Z : void 0;
     return (
         (m || b) &&
             (t = (0, i.jsx)(o.animated.div, {
-                style: Z,
+                style: N,
                 className: _.expandedFolderIconWrapper,
                 children: (0, i.jsx)(d.FolderIcon, {
                     size: 'md',
@@ -75,7 +75,7 @@ function b(e) {
             })),
         (m || !b) &&
             (n = (0, i.jsx)(o.animated.div, {
-                style: Z,
+                style: N,
                 className: _.closedFolderIconWrapper,
                 children: f.slice(0, 4).map((e) =>
                     (0, i.jsx)(
@@ -113,12 +113,12 @@ function S(e) {
             onKeyDown: x,
             treeItemProps: { onFocus: I, ...S }
         } = e,
-        [E, N] = l.useState(!1),
-        Z = l.useCallback(() => {
-            o || N(!0), null == v || v(!0);
+        [E, Z] = l.useState(!1),
+        N = l.useCallback(() => {
+            o || Z(!0), null == v || v(!0);
         }, [o, v]),
         y = l.useCallback(() => {
-            o || N(!1), null == v || v(!1);
+            o || Z(!1), null == v || v(!1);
         }, [o, v]),
         T = r || null == s ? null : (0, m.Or)(s),
         j = !r && c > 0 ? (0, m.Ne)(c) : null;
@@ -131,7 +131,7 @@ function S(e) {
             className: a()(_.folder, { [_.hover]: E }),
             onClick: f,
             onContextMenu: g,
-            onMouseEnter: Z,
+            onMouseEnter: N,
             onMouseLeave: y,
             onKeyDown: x,
             onFocus: I,

@@ -11,8 +11,8 @@ var i = n(200651),
     o = n(281956),
     s = n(922482),
     c = n(592125),
-    d = n(271383),
-    u = n(430824),
+    u = n(271383),
+    d = n(430824),
     m = n(594174),
     h = n(897285),
     f = n(924301),
@@ -25,20 +25,20 @@ function E(e) {
         {
             guildScheduledEvent: I,
             guild: x,
-            channel: v,
-            isMember: N
+            channel: N,
+            isMember: v
         } = (0, l.cj)(
-            [f.ZP, u.Z, c.Z, d.ZP, m.default],
+            [f.ZP, d.Z, c.Z, u.ZP, m.default],
             () => {
                 var e, t;
                 let i = null !== (t = f.ZP.getGuildScheduledEvent(E)) && void 0 !== t ? t : void 0,
-                    r = u.Z.getGuild(n),
+                    r = d.Z.getGuild(n),
                     l = c.Z.getChannel(null == i ? void 0 : i.channel_id);
                 return {
                     guildScheduledEvent: i,
                     guild: r,
                     channel: l,
-                    isMember: d.ZP.isMember(n, null === (e = m.default.getCurrentUser()) || void 0 === e ? void 0 : e.id)
+                    isMember: u.ZP.isMember(n, null === (e = m.default.getCurrentUser()) || void 0 === e ? void 0 : e.id)
                 };
             },
             [n, E]
@@ -49,16 +49,16 @@ function E(e) {
         }, [E, n, null == I ? void 0 : I.id, C]),
         (0, i.jsx)(_.ZP, {
             guild: x,
-            channel: v,
+            channel: N,
             guildScheduledEvent: I,
-            isMember: N,
+            isMember: v,
             onAcceptInstantInvite: g.dG,
             onTransitionToInviteChannel: function () {
                 if ((0, o.n)(n)) {
                     (0, a.hk)(n);
                     return;
                 }
-                (null == v ? void 0 : v.isGuildStageVoice()) ? (0, s.Cq)(v) : (null == v ? void 0 : v.isGuildVoice()) && p.Z.joinVoiceEvent(v.guild_id, v.id);
+                (null == N ? void 0 : N.isGuildStageVoice()) ? (0, s.Cq)(N) : (null == N ? void 0 : N.isGuildVoice()) && p.Z.joinVoiceEvent(N.guild_id, N.id);
             },
             recurrenceId: C
         })

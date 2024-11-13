@@ -23,13 +23,13 @@ function p(e) {
             attachments: p,
             embeds: E,
             hasContent: I,
-            contentMessage: S
+            contentMessage: A
         } = (0, _.c)({
             message: t,
             channel: a,
             forwardOptions: n
         }),
-        A = i.useMemo(
+        S = i.useMemo(
             () =>
                 I
                     ? (0, h.ZP)(t, {
@@ -38,17 +38,17 @@ function p(e) {
                           allowHeading: !0,
                           allowList: !0,
                           hideSimpleEmbedContent: !1,
-                          contentMessage: S
+                          contentMessage: A
                       }).content
                     : null,
-            [S, I, t]
+            [A, I, t]
         ),
         C = p.length,
         v = null,
         b = null,
-        x = null;
+        L = null;
     if (C > 0 || E.length > 0) {
-        var L, N, T, P;
+        var x, N, T, P;
         let e = (0, s.countBy)(p, (e) => (0, d.aw)(e, !0)),
             t = null !== (T = e.IMAGE) && void 0 !== T ? T : 0,
             n = null !== (P = e.VIDEO) && void 0 !== P ? P : 0;
@@ -64,7 +64,7 @@ function p(e) {
                 ? ((v = g.intl.formatToPlainString(g.t.h4pFfX, { count: t })), (b = 1 === t ? o.ImageIcon : o.ImagesIcon))
                 : ((v = g.intl.formatToPlainString(g.t['89ihS0'], { count: C })), (b = o.AttachmentIcon)),
             n > 0 && C === n
-                ? (x = (0, l.jsxs)('div', {
+                ? (L = (0, l.jsxs)('div', {
                       className: r()(m.attachmentPreview, m.attachmentPreviewVideo),
                       children: [
                           (0, l.jsx)(u.ZP, {
@@ -81,7 +81,7 @@ function p(e) {
                       ]
                   }))
                 : C > 0
-                  ? (x = (0, l.jsx)('div', {
+                  ? (L = (0, l.jsx)('div', {
                         className: m.attachmentPreview,
                         children: (0, l.jsx)(u.ZP, {
                             src: p[0].proxy_url,
@@ -89,8 +89,8 @@ function p(e) {
                             height: 56
                         })
                     }))
-                  : (null === (N = E[0]) || void 0 === N ? void 0 : null === (L = N.thumbnail) || void 0 === L ? void 0 : L.proxyURL) != null &&
-                    (x = (0, l.jsx)('div', {
+                  : (null === (N = E[0]) || void 0 === N ? void 0 : null === (x = N.thumbnail) || void 0 === x ? void 0 : x.proxyURL) != null &&
+                    (L = (0, l.jsx)('div', {
                         className: m.attachmentPreview,
                         children: (0, l.jsx)(u.ZP, {
                             src: E[0].thumbnail.proxyURL,
@@ -101,15 +101,15 @@ function p(e) {
     }
     return (
         C > 1 &&
-            null != x &&
-            (x = (0, l.jsxs)('div', {
+            null != L &&
+            (L = (0, l.jsxs)('div', {
                 className: m.attachmentPreviewOverflow,
                 children: [
                     (0, l.jsx)(c.ZP, {
                         mask: c.ZP.Masks.FORWARD_ATTACHMENT_PILE_OVERFLOW,
                         width: 56,
                         height: 56,
-                        children: x
+                        children: L
                     }),
                     (0, l.jsxs)(o.Text, {
                         className: m.overflowCount,
@@ -130,7 +130,7 @@ function p(e) {
                             (0, l.jsx)(f.ZP, {
                                 className: r()(m.forwardPreviewMessage, C > 0 && m.hasAttachments),
                                 message: t,
-                                content: A
+                                content: S
                             }),
                         C > 0 &&
                             (0, l.jsxs)('div', {
@@ -152,7 +152,7 @@ function p(e) {
                             })
                     ]
                 }),
-                x
+                L
             ]
         })
     );

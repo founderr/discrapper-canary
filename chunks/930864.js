@@ -22,20 +22,20 @@ var l = n(200651),
     p = n(859155),
     E = n(822869),
     I = n(346610),
-    S = n(895442),
-    A = n(757853),
+    A = n(895442),
+    S = n(757853),
     C = n(388275),
     v = n(912332),
     b = n(646746),
-    x = n(819727),
-    L = n(388032),
+    L = n(819727),
+    x = n(388032),
     N = n(463061),
     T = n(621054);
 function P(e) {
     let { channelId: t, messageId: P, message: y, initialSelectedDestinations: Z, forwardOptions: w, onClose: R, onRequestSent: O, ...D } = e,
         { hasOneTapSendButton: j, hasMessageInput: M, hasPreview: k } = (0, I.yk)({ location: 'ForwardModal' }),
         F = i.useMemo(() => (0, u.dL)(t), [t]),
-        [G, U] = i.useState(!1),
+        [U, G] = i.useState(!1),
         W = (0, r.e7)(
             [f.Z],
             () => {
@@ -45,19 +45,19 @@ function P(e) {
             [t, P, y]
         ),
         z = (0, r.e7)([h.Z], () => h.Z.getChannel(t), [t]),
-        Q = (0, E.ZF)(),
-        B = (0, E.mh)(),
-        H = i.useRef(0),
+        H = (0, E.ZF)(),
+        Q = (0, E.mh)(),
+        B = i.useRef(0),
         V = i.useRef(0),
         [q, K] = i.useState(Z),
         Y = q.length,
-        X = Y >= x.G,
+        X = Y >= L.G,
         [J, $] = i.useState(''),
         ee = i.useCallback(
             (e) => {
-                $(e), (V.current += 1), '' !== e && B(t, P);
+                $(e), (V.current += 1), '' !== e && Q(t, P);
             },
-            [t, P, B]
+            [t, P, Q]
         ),
         et = (0, d.s)({
             searchText: J,
@@ -69,7 +69,7 @@ function P(e) {
             (0, E.sF)({
                 channelId: t,
                 messageId: P,
-                numDestinationChanges: H.current,
+                numDestinationChanges: B.current,
                 numQueryChanges: V.current
             }),
                 R();
@@ -78,7 +78,7 @@ function P(e) {
             var e;
             let n = null === (e = h.Z.getChannel(t)) || void 0 === e ? void 0 : e.guild_id,
                 l = (0, _.wR)(n, t, P);
-            (0, s.showToast)((0, s.createToast)(L.intl.string(L.t['L/PwZW']), s.ToastType.LINK)), (0, g.JG)(l), (0, E.xp)(t, P);
+            (0, s.showToast)((0, s.createToast)(x.intl.string(x.t['L/PwZW']), s.ToastType.LINK)), (0, g.JG)(l), (0, E.xp)(t, P);
         }, [t, P]),
         ei = i.useCallback(() => {
             $('');
@@ -94,7 +94,7 @@ function P(e) {
             () =>
                 (0, a.throttle)(
                     () => {
-                        (0, s.showToast)((0, s.createToast)(L.intl.string(L.t.kwmYkp), s.ToastType.FORWARD));
+                        (0, s.showToast)((0, s.createToast)(x.intl.string(x.t.kwmYkp), s.ToastType.FORWARD));
                     },
                     3000,
                     {
@@ -106,18 +106,18 @@ function P(e) {
         ),
         es = i.useCallback(
             (e) => {
-                Q(t, P, '' !== J),
+                H(t, P, '' !== J),
                     K((t) => {
                         let n = t.findIndex((t) => {
                             let { type: n, id: l } = t;
                             return n === e.type && l === e.id;
                         });
-                        if (-1 === n) return X ? t : ($(''), (H.current += 1), [e, ...t]);
+                        if (-1 === n) return X ? t : ($(''), (B.current += 1), [e, ...t]);
                         let l = [...t];
-                        return l.splice(n, 1), (H.current += 1), l;
+                        return l.splice(n, 1), (B.current += 1), l;
                     });
             },
-            [t, X, P, J, Q]
+            [t, X, P, J, H]
         ),
         eo = i.useCallback(
             async function (e) {
@@ -125,13 +125,13 @@ function P(e) {
                 let { withMessage: a, transitionToDestination: r, closeAfterSend: d } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                     _ = null !== (i = f.Z.getMessage(t, P)) && void 0 !== i ? i : y;
                 if (null == _) {
-                    (0, s.showToast)((0, s.createToast)(L.intl.string(L.t.R0RpRU), s.ToastType.FAILURE));
+                    (0, s.showToast)((0, s.createToast)(x.intl.string(x.t.R0RpRU), s.ToastType.FAILURE));
                     return;
                 }
-                U(!0);
+                G(!0);
                 let g = (await Promise.all(e.map(u.qx))).filter(m.lm);
                 if (
-                    (0, S.Z)(_, g) &&
+                    (0, A.Z)(_, g) &&
                     !(await new Promise((e) => {
                         (0, s.openModalLazy)(async () => {
                             let { default: t } = await n.e('88643').then(n.bind(n, 466080));
@@ -144,7 +144,7 @@ function P(e) {
                         });
                     }))
                 ) {
-                    U(!1);
+                    G(!1);
                     return;
                 }
                 d && (0, v.mc)(), null == O || O(), r && (await o.Z.fetchMessages({ channelId: g[0] }), (0, c.Kh)(g[0]));
@@ -152,7 +152,7 @@ function P(e) {
                         ...w,
                         withMessage: a
                     }),
-                    A = g.some((e) => {
+                    S = g.some((e) => {
                         let t = h.Z.getChannel(e);
                         return null != t && t.rateLimitPerUser > 0;
                     });
@@ -168,9 +168,9 @@ function P(e) {
                         hasError: !1,
                         hasContextMessage: null != a && '' !== a,
                         numDestinations: g.length,
-                        numDestinationChanges: H.current,
+                        numDestinationChanges: B.current,
                         numQueryChanges: V.current,
-                        anyDestinationHasSlowmode: A
+                        anyDestinationHasSlowmode: S
                     }),
                         er();
                     return;
@@ -181,9 +181,9 @@ function P(e) {
                     hasError: !0,
                     hasContextMessage: null != a && '' !== a,
                     numDestinations: g.length,
-                    numDestinationChanges: H.current,
+                    numDestinationChanges: B.current,
                     numQueryChanges: V.current,
-                    anyDestinationHasSlowmode: A
+                    anyDestinationHasSlowmode: S
                 });
                 let C = e.filter((e, t) => 'rejected' === I[t].status);
                 (0, v.Np)({
@@ -220,11 +220,11 @@ function P(e) {
     if (null == W || null == z) return null;
     let eh =
             et.length > 0
-                ? (0, l.jsx)(A.F, {
+                ? (0, l.jsx)(S.F, {
                       paddingBottom: 16,
                       paddingTop: 16,
                       rowData: et,
-                      rowMode: j ? A.G.SEND : A.G.TOGGLE,
+                      rowMode: j ? S.G.SEND : S.G.TOGGLE,
                       message: W,
                       originChannel: z,
                       handleToggleDestination: j ? ed : es,
@@ -242,14 +242,14 @@ function P(e) {
                           (0, l.jsx)(s.Text, {
                               variant: 'text-md/normal',
                               color: 'text-muted',
-                              children: L.intl.string(L.t.V6nAfH)
+                              children: x.intl.string(x.t.V6nAfH)
                           })
                       ]
                   }),
-        ef = Y <= 1 ? L.intl.string(L.t.TXNS7e) : L.intl.formatToPlainString(L.t.jWtYUl, { count: Y });
+        ef = Y <= 1 ? x.intl.string(x.t.TXNS7e) : x.intl.formatToPlainString(x.t.jWtYUl, { count: Y });
     return (0, l.jsxs)(s.ModalRoot, {
         className: N.modal,
-        'aria-label': L.intl.string(L.t['+SkRRk']),
+        'aria-label': x.intl.string(x.t['+SkRRk']),
         ...D,
         children: [
             (0, l.jsxs)(s.ModalHeader, {
@@ -263,19 +263,19 @@ function P(e) {
                                 children: (0, l.jsx)(s.HeadingLevel, {
                                     component: (0, l.jsx)(s.Heading, {
                                         variant: 'heading-lg/semibold',
-                                        children: L.intl.string(L.t['+SkRRk'])
+                                        children: x.intl.string(x.t['+SkRRk'])
                                     }),
                                     children: X
                                         ? (0, l.jsx)(s.Text, {
                                               variant: 'text-sm/normal',
                                               color: 'text-warning',
-                                              children: L.intl.format(L.t['3Fbkio'], { count: x.G })
+                                              children: x.intl.format(x.t['3Fbkio'], { count: L.G })
                                           })
                                         : (j || M) &&
                                           (0, l.jsx)(s.Heading, {
                                               variant: 'heading-sm/normal',
                                               color: 'header-muted',
-                                              children: L.intl.string(L.t['VA+btL'])
+                                              children: x.intl.string(x.t['VA+btL'])
                                           })
                                 })
                             }),
@@ -300,8 +300,8 @@ function P(e) {
                         query: J,
                         onChange: ee,
                         onClear: ei,
-                        placeholder: L.intl.string(L.t['5h0QOD']),
-                        'aria-label': L.intl.string(L.t['5h0QOD']),
+                        placeholder: x.intl.string(x.t['5h0QOD']),
+                        'aria-label': x.intl.string(x.t['5h0QOD']),
                         autoFocus: !0
                     })
                 ]
@@ -315,7 +315,7 @@ function P(e) {
                           sendLabel: ef,
                           canSend: Y > 0,
                           selectedDestinations: q,
-                          isSending: G,
+                          isSending: U,
                           onSend: ec,
                           showPreview: k
                       })
@@ -323,7 +323,7 @@ function P(e) {
                           className: N.footer,
                           children: [
                               (0, l.jsx)(s.Button, {
-                                  submitting: G,
+                                  submitting: U,
                                   disabled: 0 === Y,
                                   onClick: eu,
                                   children: ef
@@ -332,7 +332,7 @@ function P(e) {
                                   onClick: el,
                                   look: s.Button.Looks.OUTLINED,
                                   color: s.Button.Colors.PRIMARY,
-                                  children: L.intl.string(L.t.WqhZsr)
+                                  children: x.intl.string(x.t.WqhZsr)
                               })
                           ]
                       }))

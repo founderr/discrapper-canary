@@ -13,8 +13,8 @@ var i,
     o = n(120356),
     s = n.n(o),
     c = n(990547),
-    d = n(442837),
-    u = n(692547),
+    u = n(442837),
+    d = n(692547),
     m = n(481060),
     h = n(493683),
     f = n(529103),
@@ -25,8 +25,8 @@ var i,
     C = n(28546),
     I = n(963249),
     x = n(703656),
-    v = n(594174),
-    N = n(626135),
+    N = n(594174),
+    v = n(626135),
     T = n(51144),
     S = n(479446),
     A = n(795448),
@@ -34,15 +34,15 @@ var i,
     j = n(317271),
     Z = n(474936),
     R = n(981631),
-    L = n(182294),
-    P = n(957825),
+    P = n(182294),
+    L = n(957825),
     y = n(388032),
     O = n(17500);
 function M(e) {
     let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: i, onMouseEnter: r, onMouseLeave: o, popoutPosition: M, analyticsPage: k, analyticsSection: D, glow: B, giftIntentSecondaryAction: U } = e,
-        w = (0, d.e7)([v.default], () => v.default.getCurrentUser()),
+        w = (0, u.e7)([N.default], () => N.default.getCurrentUser()),
         { analyticsLocations: F } = (0, _.ZP)(),
-        G = (0, d.e7)([b.Z], () => b.Z.getFriendAnniversaryYears(i.id));
+        G = (0, u.e7)([b.Z], () => b.Z.getFriendAnniversaryYears(i.id));
     a.useEffect(() => {
         (0, g.h)({
             name: c.ImpressionNames.GIFT_INTENT_CARD,
@@ -64,7 +64,7 @@ function M(e) {
         K = H ? O.currentUserAvatarCoachmark : O.currentUserAvatar,
         Y = H ? O.subHeaderTextCoachmark : O.subHeaderText,
         X = H ? m.Button.Colors.BRAND : m.Button.Colors.WHITE,
-        Q = H ? u.Z.colors.WHITE : u.Z.colors.BG_BRAND,
+        Q = H ? d.Z.colors.WHITE : d.Z.colors.BG_BRAND,
         q = H ? O.buttonTextPrimaryCoachmark : O.buttonTextPrimary,
         J = H ? O.buttonSecondaryCoachmark : O.buttonSecondary,
         $ = H ? O.buttonTextSecondaryCoachmark : O.buttonTextSecondary;
@@ -88,14 +88,14 @@ function M(e) {
                                     className: W,
                                     user: i,
                                     'aria-label': i.username,
-                                    size: L.EF.SIZE_56
+                                    size: P.EF.SIZE_56
                                 }),
                                 null != w &&
                                     (0, l.jsx)(p.Z, {
                                         className: K,
                                         user: w,
                                         'aria-label': i.username,
-                                        size: L.EF.SIZE_24
+                                        size: P.EF.SIZE_24
                                     })
                             ]
                         }),
@@ -131,7 +131,7 @@ function M(e) {
                                 className: s()(O.button, J),
                                 onClick: (e) => {
                                     e.stopPropagation(),
-                                        N.default.track(R.rMx.GIFT_INTENT_CARD_SECONDARY_CTA_CLICKED, {
+                                        v.default.track(R.rMx.GIFT_INTENT_CARD_SECONDARY_CTA_CLICKED, {
                                             gift_intent_type: t,
                                             cta_type: U
                                         }),
@@ -141,7 +141,7 @@ function M(e) {
                                               ((0, A.PV)(i.id),
                                               h.Z.openPrivateChannel(i.id).then(() => {
                                                   setTimeout(() => {
-                                                      (0, C.PG)(P.X1.GIF, E.I.NORMAL),
+                                                      (0, C.PG)(L.X1.GIF, E.I.NORMAL),
                                                           setTimeout(() => {
                                                               (0, C.ql)(y.intl.string(y.t.jrtJi4), !0);
                                                           }, 50);

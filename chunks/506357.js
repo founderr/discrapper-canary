@@ -10,8 +10,8 @@ var i = n(200651),
     o = n(565138),
     s = n(241559),
     c = n(527379),
-    d = n(430824),
-    u = n(944486),
+    u = n(430824),
+    d = n(944486),
     m = n(914010),
     h = n(626135),
     f = n(528011),
@@ -23,17 +23,17 @@ var i = n(200651),
     I = n(900547);
 function x(e) {
     var t, x;
-    let { onDismiss: v } = e,
-        N = (0, l.e7)([m.Z], () => m.Z.getGuildId()),
-        T = (0, l.e7)([u.Z], () => (null != N ? u.Z.getChannelId(N) : null), [N]),
-        S = null != N ? N : null,
-        A = (0, l.e7)([d.Z], () => (null != S ? d.Z.getGuild(S) : null), [S]),
+    let { onDismiss: N } = e,
+        v = (0, l.e7)([m.Z], () => m.Z.getGuildId()),
+        T = (0, l.e7)([d.Z], () => (null != v ? d.Z.getChannelId(v) : null), [v]),
+        S = null != v ? v : null,
+        A = (0, l.e7)([u.Z], () => (null != S ? u.Z.getGuild(S) : null), [S]),
         { shouldShowIncidentActions: b, incidentData: j, isUnderLockdown: Z } = (0, f.mI)(S),
         R = (0, s.n2)(null !== (t = null == A ? void 0 : A.id) && void 0 !== t ? t : g.lds),
-        L = r.useCallback(() => null != A && (0, c._X)(A.id), [A]);
+        P = r.useCallback(() => null != A && (0, c._X)(A.id), [A]);
     if (null == A || null == j || !b) return null;
-    let P = (e) => {
-            if (e && R && T !== E.oC.MEMBER_SAFETY && L()) {
+    let L = (e) => {
+            if (e && R && T !== E.oC.MEMBER_SAFETY && P()) {
                 h.default.track(g.rMx.APP_NOTICE_PRIMARY_CTA_OPENED, {
                     notice_type: g.kVF.GUILD_RAID_NOTIFICATION,
                     guild_id: A.id
@@ -66,14 +66,14 @@ function x(e) {
             color: a.NoticeColors.NEUTRAL,
             children: [
                 (0, i.jsx)(a.NoticeCloseButton, {
-                    onClick: v,
+                    onClick: N,
                     noticeType: g.kVF.GUILD_RAID_NOTIFICATION
                 }),
                 y,
                 O,
                 (0, i.jsx)(a.NoticeButton, {
                     className: I.actionButton,
-                    onClick: () => P(!1),
+                    onClick: () => L(!1),
                     children: (0, i.jsxs)('div', {
                         className: I.actionButtonInner,
                         children: [
@@ -94,7 +94,7 @@ function x(e) {
         color: a.NoticeColors.WARNING,
         children: [
             (0, i.jsx)(a.NoticeCloseButton, {
-                onClick: v,
+                onClick: N,
                 noticeType: g.kVF.GUILD_RAID_NOTIFICATION
             }),
             y,
@@ -102,7 +102,7 @@ function x(e) {
             !k &&
                 (0, i.jsx)(a.NoticeButton, {
                     className: I.actionButton,
-                    onClick: () => P(!0),
+                    onClick: () => L(!0),
                     children: (0, i.jsx)('div', {
                         className: I.actionButtonInner,
                         children: (0, i.jsx)('span', { children: C.intl.string(C.t.zDJDho) })

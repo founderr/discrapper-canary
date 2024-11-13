@@ -10,8 +10,8 @@ var i = n(200651),
     o = n(665149),
     s = n(618158),
     c = n(819640),
-    d = n(131951),
-    u = n(924557),
+    u = n(131951),
+    d = n(924557),
     m = n(435064),
     h = n(779618),
     f = n(175470),
@@ -20,12 +20,12 @@ var i = n(200651),
     g = n(388032);
 function E(e) {
     let { canShowReminder: t = !1, className: E } = e,
-        C = (0, h.Z)(d.Z),
-        { showClipsHeaderEntrypoint: I } = u.NV.useExperiment({ location: 'ClipsButton' }, { autoTrackExposure: !1 }),
+        C = (0, h.Z)(u.Z),
+        { showClipsHeaderEntrypoint: I } = d.NV.useExperiment({ location: 'ClipsButton' }, { autoTrackExposure: !1 }),
         {
             hasClips: x,
-            hasNewClips: v,
-            lastClipsSession: N,
+            hasNewClips: N,
+            lastClipsSession: v,
             remindersEnabled: T,
             hasAnyClipAnimations: S
         } = (0, l.cj)([m.Z], () => ({
@@ -35,12 +35,12 @@ function E(e) {
             remindersEnabled: m.Z.getSettings().remindersEnabled,
             hasAnyClipAnimations: m.Z.hasAnyClipAnimations()
         })),
-        A = null != N && N.newClipIds.length > 0,
+        A = null != v && v.newClipIds.length > 0,
         b = (0, f.n)((e) => e.clipsButtonRef),
         j = (0, f.n)((e) => e.setClipsButtonRef),
         Z = (0, l.e7)([c.Z], () => c.Z.hasLayers()),
-        { preventIdle: R, allowIdle: L } = (0, s.Y)('animation');
-    function P() {
+        { preventIdle: R, allowIdle: P } = (0, s.Y)('animation');
+    function L() {
         (0, a.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([n.e('2668'), n.e('32304')]).then(n.bind(n, 542055));
@@ -49,7 +49,7 @@ function E(e) {
             { modalKey: _.Qr }
         );
     }
-    return (r.useEffect(() => (S ? R() : L(), () => L()), [S, R, L]), I && C && x)
+    return (r.useEffect(() => (S ? R() : P(), () => P()), [S, R, P]), I && C && x)
         ? (0, i.jsxs)(i.Fragment, {
               children: [
                   null != b &&
@@ -60,17 +60,17 @@ function E(e) {
                       !Z &&
                       (0, i.jsx)(p.Z, {
                           clipIconRef: b,
-                          lastClipsSession: N,
-                          onOpenClipsGallery: P
+                          lastClipsSession: v,
+                          onOpenClipsGallery: L
                       }),
                   (0, i.jsx)('div', {
                       ref: j,
                       children: (0, i.jsx)(o.JO, {
                           className: E,
                           icon: a.ClipsIcon,
-                          showBadge: v,
+                          showBadge: N,
                           tooltip: g.intl.string(g.t.MXaLEB),
-                          onClick: P
+                          onClick: L
                       })
                   })
               ]

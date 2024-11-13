@@ -29,8 +29,8 @@ var i = n(200651),
     b = n(870569),
     S = n(981631),
     E = n(921944),
-    N = n(49898),
-    Z = n(128449),
+    Z = n(49898),
+    N = n(128449),
     y = n(388032),
     T = n(900087);
 function j(e, t, n) {
@@ -66,8 +66,8 @@ let P = l.memo(function (e) {
         r,
         u,
         h,
-        { stream: f, canGoLive: P, guildId: M, isStreaming: R, channel: L, canStream: w, runningGame: D, embeddedActivity: O, activity: k, application: U, analyticsContext: G } = e,
-        B = j(U, k, O),
+        { stream: f, canGoLive: P, guildId: M, isStreaming: R, channel: L, canStream: w, runningGame: D, embeddedActivity: O, activity: k, application: G, analyticsContext: U } = e,
+        B = j(G, k, O),
         { enabled: H } = (0, _.I7)(),
         [V, F] = (0, g.US)(H ? [o.z.RAPIDASH_RTC_BROWSE_GUILDS] : [], void 0, !0),
         W = V === o.z.RAPIDASH_RTC_BROWSE_GUILDS,
@@ -76,10 +76,10 @@ let P = l.memo(function (e) {
                 I.default.track(S.rMx.OPEN_MODAL, {
                     type: 'Send Join Invite',
                     application_id: k.application_id,
-                    location: G.location
+                    location: U.location
                 }),
                 (0, c.h7)(k, !1);
-        }, [k, G]),
+        }, [k, U]),
         Y = l.useCallback(
             (e, t) => () => {
                 d.Z.leaveActivity({
@@ -110,13 +110,13 @@ let P = l.memo(function (e) {
         Q = l.useCallback(() => {
             (null == D ? void 0 : D.id) != null && m.GN.getState().setSelectedGames([D.id]),
                 F(E.L.PRIMARY),
-                (0, C.transitionToGlobalDiscovery)({
-                    tab: N.F$.SERVERS,
-                    selectedServersTab: Z.vf.GUILDS,
-                    entrypoint: Z.Qq.RTC_PANEL
+                (0, C.u)({
+                    tab: Z.F$.SERVERS,
+                    selectedServersTab: N.vf.GUILDS,
+                    entrypoint: N.Qq.RTC_PANEL
                 });
         }, [D, F]);
-    let J =
+    let X =
             (null != D || null == O) && (R || (P && null != D))
                 ? (R ? ((t = !1), (r = K), (u = s.ScreenXIcon), (h = y.intl.string(y.t.S5anIS))) : w ? ((t = !1), (r = q), (u = s.ScreenArrowIcon), (h = null != D ? y.intl.formatToPlainString(y.t.AB5gT0, { game: D.name }) : y.intl.string(y.t.FeUKeH))) : ((t = !0), (r = null), (u = s.ScreenArrowIcon), (h = null != L && (0, x.vd)(L.type) ? y.intl.string(y.t.uQn9Bw) : null != M ? y.intl.string(y.t.fBXEoK) : y.intl.string(y.t.n3feND))),
                   (0, i.jsx)('div', {
@@ -129,7 +129,7 @@ let P = l.memo(function (e) {
                       })
                   }))
                 : null,
-        X =
+        J =
             B && null == O
                 ? (0, i.jsx)(b.Z, {
                       tooltipText: y.intl.string(y.t['hC/Ze3']),
@@ -147,7 +147,7 @@ let P = l.memo(function (e) {
                   }),
         ee = null == f ? null : (0, i.jsx)(p.Z, {}),
         et = H && !R && null == O && null != D;
-    return null == J && null == X && null == $
+    return null == X && null == J && null == $
         ? null
         : (0, i.jsxs)('div', {
               className: T.actions,
@@ -161,9 +161,9 @@ let P = l.memo(function (e) {
                             icon: (0, i.jsx)(A, { badged: W })
                         })
                       : null,
-                  J,
                   X,
-                  null == J ? $ : ee
+                  J,
+                  null == X ? $ : ee
               ]
           });
 });

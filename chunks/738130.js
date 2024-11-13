@@ -24,15 +24,15 @@ var i = n(200651),
     Z = n(63063),
     x = n(674588),
     m = n(463571),
-    j = n(887706),
-    S = n(132871),
-    _ = n(147890),
+    S = n(887706),
+    j = n(132871),
+    P = n(147890),
     T = n(981631),
-    P = n(420212),
+    _ = n(420212),
     L = n(388032),
     N = n(433027);
-let O = Z.Z.getAppsSupportURL(T.BhN.APP_DIRECTORY_HEADER_LEARN_MORE);
-function k(e) {
+let k = Z.Z.getAppsSupportURL(T.BhN.APPS_LEARN_MORE);
+function O(e) {
     let { onClose: t } = e,
         n = r.useRef(null);
     return (0, i.jsx)('div', {
@@ -51,7 +51,7 @@ function k(e) {
         })
     });
 }
-function R(e) {
+function I(e) {
     let { onTitleClick: t, showsLearnMoreCta: n, guildId: l, children: s } = e,
         o = (0, i.jsxs)(r.Fragment, {
             children: [
@@ -61,10 +61,10 @@ function R(e) {
                         onClick: function () {
                             g.default.track(T.rMx.APP_DIRECTORY_CTA_CLICKED, {
                                 cta: 'directory-help-center',
-                                current_page: S.ApplicationDirectoryViews.HOME,
+                                current_page: j.ApplicationDirectoryViews.HOME,
                                 guild_id: l
                             }),
-                                (0, h.Z)(O);
+                                (0, h.Z)(k);
                         },
                         children: L.intl.string(L.t.hvVgAQ)
                     })
@@ -90,18 +90,18 @@ function R(e) {
         ]
     });
 }
-function I(e) {
+function R(e) {
     let t,
         { view: n, onClick: r } = e;
     if (null == n) return null;
     switch (n.type) {
-        case S.ApplicationDirectoryViews.HOME:
+        case j.ApplicationDirectoryViews.HOME:
             t = L.intl.string(L.t.Ym2Ri4);
             break;
-        case S.ApplicationDirectoryViews.SEARCH:
+        case j.ApplicationDirectoryViews.SEARCH:
             t = L.intl.string(L.t['5h0QOD']);
             break;
-        case S.ApplicationDirectoryViews.APPLICATION:
+        case j.ApplicationDirectoryViews.APPLICATION:
             var l;
             t = null !== (l = null == n ? void 0 : n.applicationName) && void 0 !== l ? l : L.intl.string(L.t['13/7kZ']);
             break;
@@ -137,19 +137,19 @@ let D = (0, s.debounce)((e) => {
 function H(e) {
     let { children: t } = e,
         n = r.useRef(null),
-        l = (0, j.Z)(),
-        s = (0, S.useApplicationDirectoryHistory)((e) => e.guildId),
-        d = (0, S.useApplicationDirectoryHistory)((e) => e.entrypoint),
-        h = (0, S.useApplicationDirectoryHistory)((e) => e.trackedOpenedFromExternalEntrypoint),
-        E = (0, S.getCurrentView)(),
-        y = (0, S.getPreviousView)(),
+        l = (0, S.Z)(),
+        s = (0, j.useApplicationDirectoryHistory)((e) => e.guildId),
+        d = (0, j.useApplicationDirectoryHistory)((e) => e.entrypoint),
+        h = (0, j.useApplicationDirectoryHistory)((e) => e.trackedOpenedFromExternalEntrypoint),
+        E = (0, j.getCurrentView)(),
+        y = (0, j.getPreviousView)(),
         Z = r.useRef(),
-        m = (null == E ? void 0 : E.type) !== S.ApplicationDirectoryViews.HOME,
-        O = (null == E ? void 0 : E.type) === S.ApplicationDirectoryViews.APPLICATION ? (null == E ? void 0 : E.applicationId) : void 0;
+        m = (null == E ? void 0 : E.type) !== j.ApplicationDirectoryViews.HOME,
+        k = (null == E ? void 0 : E.type) === j.ApplicationDirectoryViews.APPLICATION ? (null == E ? void 0 : E.applicationId) : void 0;
     (0, A.Tt)({ location: L.intl.string(L.t.AKcFUl) });
-    let H = (null == E ? void 0 : E.type) !== S.ApplicationDirectoryViews.HOME && null != y;
+    let H = (null == E ? void 0 : E.type) !== j.ApplicationDirectoryViews.HOME && null != y;
     r.useEffect(() => {
-        !h && null == d && (g.default.track(T.rMx.APP_DIRECTORY_OPENED, { source: S.ApplicationDirectoryEntrypointNames.EXTERNAL }), (0, S.setTrackedOpenedFromExternalEntrypoint)(!0));
+        !h && null == d && (g.default.track(T.rMx.APP_DIRECTORY_OPENED, { source: j.ApplicationDirectoryEntrypointNames.EXTERNAL }), (0, j.setTrackedOpenedFromExternalEntrypoint)(!0));
     }, [d, h]),
         r.useEffect(() => {
             if (l) return p.Z.setLayout(u.ZP), p.Z.enable(), () => p.Z.disable();
@@ -162,15 +162,15 @@ function H(e) {
         }, [l]),
         r.useEffect(() => {
             Z.current = (0, o.Z)();
-        }, [null == E ? void 0 : E.type, O]);
+        }, [null == E ? void 0 : E.type, k]);
     let M = r.useCallback(() => {
         var e, t;
-        (0, v.uL)(null !== (e = null == d ? void 0 : d.pathname) && void 0 !== e ? e : ''), null != d && d.name === S.ApplicationDirectoryEntrypointNames.GUILD_SETTINGS && null != s && f.Z.open(s, null !== (t = d.guildSettingsSection) && void 0 !== t ? t : void 0);
+        (0, v.uL)(null !== (e = null == d ? void 0 : d.pathname) && void 0 !== e ? e : ''), null != d && d.name === j.ApplicationDirectoryEntrypointNames.GUILD_SETTINGS && null != s && f.Z.open(s, null !== (t = d.guildSettingsSection) && void 0 !== t ? t : void 0);
     }, [d, s]);
     return (
         r.useEffect(() => {
             let e = (e) => {
-                e.key === P.vn.ESCAPE && (e.stopPropagation(), M());
+                e.key === _.vn.ESCAPE && (e.stopPropagation(), M());
             };
             return (
                 document.addEventListener('keydown', e),
@@ -200,14 +200,14 @@ function H(e) {
                 children: (0, i.jsxs)('div', {
                     className: N.content,
                     children: [
-                        (0, i.jsx)(R, {
-                            onTitleClick: m ? _.goHome : void 0,
-                            showsLearnMoreCta: (null == E ? void 0 : E.type) === S.ApplicationDirectoryViews.HOME,
+                        (0, i.jsx)(I, {
+                            onTitleClick: m ? P.goHome : void 0,
+                            showsLearnMoreCta: (null == E ? void 0 : E.type) === j.ApplicationDirectoryViews.HOME,
                             guildId: s,
-                            children: l ? (0, i.jsx)(k, { onClose: M }) : null
+                            children: l ? (0, i.jsx)(O, { onClose: M }) : null
                         }),
                         H &&
-                            (0, i.jsx)(I, {
+                            (0, i.jsx)(R, {
                                 view: y,
                                 onClick: () => {
                                     (0, v.op)();

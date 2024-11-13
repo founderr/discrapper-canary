@@ -24,13 +24,13 @@ var l,
     p = n(212819),
     E = n(933557),
     I = n(266076),
-    S = n(810123),
-    A = n(448486),
+    A = n(810123),
+    S = n(448486),
     C = n(987509),
     v = n(592125),
     b = n(430824),
-    x = n(158776),
-    L = n(306680),
+    L = n(158776),
+    x = n(306680),
     N = n(699516),
     T = n(594174),
     P = n(626135),
@@ -45,11 +45,11 @@ var l,
 function k(e) {
     let { message: t, destination: n, rowMode: l, icon: i, label: s, subLabel: c, selected: u, disabled: h, onPressDestination: _, 'aria-setsize': m, 'aria-posinset': p } = e,
         E = (0, d.JA)(n.id),
-        [I, S] = r.useState(!1),
-        A = r.useRef(!1),
+        [I, A] = r.useState(!1),
+        S = r.useRef(!1),
         C = r.useCallback(() => {
             if ('send' === l) {
-                S(!0), (A.current = !0);
+                A(!0), (S.current = !0);
                 return;
             }
             null == _ || _(n);
@@ -59,7 +59,7 @@ function k(e) {
                 channel_id: t.channel_id,
                 message_id: t.id
             }),
-                (A.current = !1),
+                (S.current = !1),
                 null == _ ||
                     _(n, {
                         transitionToDestination: !0,
@@ -67,8 +67,8 @@ function k(e) {
                     });
         }, [t.channel_id, t.id, _, n]),
         b = r.useCallback(() => {
-            S(!1),
-                (A.current = !1),
+            A(!1),
+                (S.current = !1),
                 P.default.track(O.rMx.FORWARD_ONE_TAP_UNDO, {
                     channel_id: t.channel_id,
                     message_id: t.id
@@ -76,8 +76,8 @@ function k(e) {
         }, [t]);
     return (
         (0, g.Z)(() => {
-            A.current &&
-                ((A.current = !1),
+            S.current &&
+                ((S.current = !1),
                 null == _ ||
                     _(n, {
                         transitionToDestination: !1,
@@ -170,7 +170,7 @@ function F(e) {
         i = w.ZP.useName(t),
         r = w.ZP.useUserTag(t, { decoration: 'never' }),
         s = (0, h.e7)([N.Z], () => N.Z.getNickname(t.id)),
-        o = (0, h.e7)([x.Z], () => x.Z.getStatus(t.id));
+        o = (0, h.e7)([L.Z], () => L.Z.getStatus(t.id));
     return (0, a.jsx)(k, {
         ...l,
         icon: (0, a.jsx)(_.Z, {
@@ -183,10 +183,10 @@ function F(e) {
         subLabel: null != n ? n : r
     });
 }
-function G(e) {
+function U(e) {
     let { channel: t, subLabel: n, ...l } = e,
         i = (0, E.ZP)(t),
-        r = (0, A._)(t);
+        r = (0, S._)(t);
     return (0, a.jsx)(k, {
         ...l,
         icon: (0, a.jsx)(I.Z, {
@@ -199,7 +199,7 @@ function G(e) {
         subLabel: null != n ? n : r
     });
 }
-function U(e) {
+function G(e) {
     let { channel: t, subLabel: n, ...l } = e,
         i = (0, h.e7)([b.Z], () => b.Z.getGuild(null == t ? void 0 : t.guild_id)),
         r = (0, E.ZP)(t),
@@ -207,7 +207,7 @@ function U(e) {
             let e = v.Z.getChannel(t.parent_id);
             return null == e ? null : (0, E.F6)(e, T.default, N.Z, !1);
         }),
-        o = (0, h.e7)([L.ZP], () => L.ZP.lastMessageTimestamp(t.id, D.W.CHANNEL)),
+        o = (0, h.e7)([x.ZP], () => x.ZP.lastMessageTimestamp(t.id, D.W.CHANNEL)),
         c = null == i ? void 0 : i.name;
     if (t.isThread() || t.isForumPost()) {
         let e = t.isForumPost() ? f.ForumIcon : f.TextIcon;
@@ -246,8 +246,8 @@ function U(e) {
     }
     return (0, a.jsx)(k, {
         ...l,
-        icon: (0, a.jsx)(S.Z, {
-            size: S.E.SMALL_32,
+        icon: (0, a.jsx)(A.Z, {
+            size: A.E.SMALL_32,
             guild: i,
             channel: t
         }),
@@ -300,12 +300,12 @@ function W(e) {
                         ...E
                     });
                 if (u === p.h8.GROUP_DM)
-                    return (0, a.jsx)(G, {
+                    return (0, a.jsx)(U, {
                         channel: d,
                         ...E
                     });
                 if (u === p.h8.TEXT_CHANNEL || u === p.h8.VOICE_CHANNEL)
-                    return (0, a.jsx)(U, {
+                    return (0, a.jsx)(G, {
                         channel: d,
                         ...E
                     });
@@ -314,9 +314,9 @@ function W(e) {
             [c, o, l, i, t, n, g]
         ),
         I = r.useRef(null),
-        S = (0, m.Z)('forward-modal', I);
+        A = (0, m.Z)('forward-modal', I);
     return (0, a.jsx)(d.bG, {
-        navigator: S,
+        navigator: A,
         children: (0, a.jsx)(d.SJ, {
             children: (e) => {
                 let { ref: t, ...n } = e;

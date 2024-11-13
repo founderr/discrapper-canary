@@ -1,75 +1,75 @@
-l.d(n, {
+t.d(n, {
     ZP: function () {
-        return j;
+        return g;
     },
     xX: function () {
-        return g;
+        return _;
     }
 });
-var t = l(200651);
-l(192379);
-var i = l(120356),
-    r = l.n(i),
-    a = l(911969),
-    s = l(970184),
-    o = l(987106),
-    u = l(927057),
-    c = l(574597),
-    d = l(378975),
-    m = l(413991),
-    p = l(12067),
-    f = l(676149),
-    x = l(861529),
-    v = l(770009),
-    h = l(889515),
-    C = l(915689);
-function g(e) {
+var l = t(200651);
+t(192379);
+var i = t(120356),
+    r = t.n(i),
+    a = t(911969),
+    o = t(970184),
+    s = t(987106),
+    c = t(927057),
+    u = t(574597),
+    d = t(378975),
+    m = t(413991),
+    f = t(12067),
+    p = t(676149),
+    x = t(861529),
+    h = t(770009),
+    v = t(889515),
+    C = t(915689);
+function _(e) {
     return e.map((e, n) =>
         (function (e, n) {
             switch (e.type) {
                 case a.re.ACTION_ROW:
-                    return (0, t.jsx)(
-                        h.Z,
+                    return (0, l.jsx)(
+                        v.Z,
                         {
                             ...e,
-                            renderComponents: g
+                            renderComponents: _
                         },
                         n
                     );
                 case a.re.BUTTON:
-                    return (0, t.jsx)(o.Z, { ...e }, n);
+                    return (0, l.jsx)(s.Z, { ...e }, n);
                 case a.re.STRING_SELECT:
-                    return (0, t.jsx)(d.Z, { ...e }, n);
+                    return (0, l.jsx)(d.Z, { ...e }, n);
                 case a.re.CHANNEL_SELECT:
-                    return (0, t.jsx)(u.Z, { ...e }, n);
+                    return (0, l.jsx)(c.Z, { ...e }, n);
                 case a.re.USER_SELECT:
                 case a.re.ROLE_SELECT:
                 case a.re.MENTIONABLE_SELECT:
-                    return (0, t.jsx)(c.Z, { ...e }, n);
+                    return (0, l.jsx)(u.Z, { ...e }, n);
                 case a.re.INPUT_TEXT:
-                    return (0, t.jsx)(m.Z, { ...e }, n);
+                    return (0, l.jsx)(m.Z, { ...e }, n);
                 case a.re.TEXT:
-                    return (0, t.jsx)(x.Z, { ...e }, n);
+                    return (0, l.jsx)(x.Z, { ...e }, n);
                 case a.re.MEDIA_GALLERY:
-                    return (0, t.jsx)(p.Z, { ...e }, n);
+                    return (0, l.jsx)(f.Z, { ...e }, n);
                 case a.re.SEPARATOR:
-                    return (0, t.jsx)(f.Z, { ...e }, n);
+                    return (0, l.jsx)(p.Z, { ...e }, n);
                 case a.re.CONTENT_INVENTORY_ENTRY:
-                    return (0, t.jsx)(v.Z, { ...e }, n);
+                    return (0, l.jsx)(h.Z, { ...e }, n);
             }
         })(e, n.toString())
     );
 }
-function j(e) {
+function g(e) {
     let { message: n } = e,
-        { components: l } = n;
-    return 0 === l.length
+        { components: t } = n;
+    return 0 === t.length
         ? null
-        : (0, t.jsx)('div', {
+        : (0, l.jsx)('div', {
               className: r()([C.container, { [C.containerUikit]: n.isUIKitComponents() }]),
-              children: (0, t.jsx)(s.Il, {
+              children: (0, l.jsx)(o.Il, {
                   message: n,
-                  children: g(l)
+                  children: _(t)
               })
           });
 }

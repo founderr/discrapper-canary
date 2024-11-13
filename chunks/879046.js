@@ -1,32 +1,32 @@
-l.d(n, {
+t.d(n, {
     Z: function () {
-        return c;
+        return u;
     }
 });
-var t = l(499254),
-    i = l(827498),
-    r = l(835473),
-    a = l(541716),
-    s = l(561308),
-    o = l(701488),
-    u = l(388032);
-function c(e) {
+var l = t(499254),
+    i = t(827498),
+    r = t(835473),
+    a = t(541716),
+    o = t(561308),
+    s = t(701488),
+    c = t(388032);
+function u(e) {
     let { entry: n } = e,
-        l = (0, r.q)(n.extra.application_id),
-        c = null == l ? void 0 : l.getIconURL(o.Si.LARGE),
+        t = (0, r.q)(n.extra.application_id),
+        u = null == t ? void 0 : t.getIconURL(s.Si.LARGE),
         d = n.extra.activity_name,
-        m = (0, s.Jg)(n) ? u.t.vPg1JS : u.t.rPqqtr,
-        p = {
+        m = (0, o.Jg)(n) ? c.t.vPg1JS : c.t.rPqqtr,
+        f = {
             onClick: () => {
-                t.__(i._b.TEXT, a.I.NORMAL, { applicationId: n.extra.application_id });
+                l.__(i._b.TEXT, a.I.NORMAL, { applicationId: n.extra.application_id });
             },
-            ariaDescription: u.intl.formatToPlainString(u.t.NTHttL, { title: d })
+            ariaDescription: c.intl.formatToPlainString(c.t.NTHttL, { title: d })
         };
     return {
-        thumbnailUrl: c,
+        thumbnailUrl: u,
         title: d,
-        titleClickable: p,
-        thumbnailClickable: p,
+        titleClickable: f,
+        thumbnailClickable: f,
         userDescription: m
     };
 }

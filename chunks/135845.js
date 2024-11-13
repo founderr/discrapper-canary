@@ -11,8 +11,8 @@ var r = n(512722),
     o = n(955415),
     s = n(131704),
     c = n(601964),
-    d = n(199902),
-    u = n(914010),
+    u = n(199902),
+    d = n(914010),
     m = n(358595),
     h = n(981631),
     f = n(245335),
@@ -23,26 +23,26 @@ function g(e) {
         n,
         r,
         { invite: g, currentUserId: E, guild: C, onTransitionToInviteChannel: I, onAcceptInstantInvite: x } = e,
-        v = null == C ? void 0 : C.id,
-        N = (0, a.e7)([u.Z], () => u.Z.getGuildId()),
-        T = (0, a.e7)([d.Z], () => (null != g && null != g.target_user ? d.Z.getActiveStreamForUser(g.target_user.id, v) : null), [g, v]),
-        S = (0, a.e7)([d.Z], () => (null != g && null != g.target_user ? d.Z.getStreamForUser(g.target_user.id, v) : null), [g, v]),
+        N = null == C ? void 0 : C.id,
+        v = (0, a.e7)([d.Z], () => d.Z.getGuildId()),
+        T = (0, a.e7)([u.Z], () => (null != g && null != g.target_user ? u.Z.getActiveStreamForUser(g.target_user.id, N) : null), [g, N]),
+        S = (0, a.e7)([u.Z], () => (null != g && null != g.target_user ? u.Z.getStreamForUser(g.target_user.id, N) : null), [g, N]),
         A = null != g && g.target_type === f.Iq.STREAM && null != g.target_user && null != T,
         b = null != g && null != S && null != g.channel && null != g.guild && S.channelId === g.channel.id && S.guildId === g.guild.id;
     l()(null != g, 'Invite cannot be null');
     let { target_type: j, target_user: Z } = g;
     l()(j === f.Iq.STREAM && null != Z, 'invalid streaming invite');
     let R = E === Z.id,
-        L = g.state === h.r2o.ACCEPTING,
-        P = null != C;
+        P = g.state === h.r2o.ACCEPTING,
+        L = null != C;
     if (null == C) {
         if (null == g.guild) return (0, i.jsx)(m.Z, {});
         C = new c.ZP(g.guild);
     }
     let y = null != g.channel ? (0, s.jD)(g.channel) : null,
         O = A ? I : x;
-    P && !b ? (r = R ? p.intl.string(p.t.oBLoZG) : p.intl.formatToPlainString(p.t['0QJmAw'], { name: Z.username })) : ((t = p.intl.string(p.t['I6JG4+'])), (n = o.Z.Button.Colors.GREEN), A && ((t = p.intl.string(p.t['Q1W99/'])), (n = o.Z.Button.Colors.PRIMARY)), (r = R ? p.intl.string(p.t['4hyaHh']) : p.intl.formatToPlainString(p.t.QmlLEh, { name: Z.username })));
-    let M = N === C.id && null != y ? (0, i.jsx)(o.Z.Channel, { channel: y }) : p.intl.formatToPlainString(p.t.u0vaDA, { guildName: C.name });
+    L && !b ? (r = R ? p.intl.string(p.t.oBLoZG) : p.intl.formatToPlainString(p.t['0QJmAw'], { name: Z.username })) : ((t = p.intl.string(p.t['I6JG4+'])), (n = o.Z.Button.Colors.GREEN), A && ((t = p.intl.string(p.t['Q1W99/'])), (n = o.Z.Button.Colors.PRIMARY)), (r = R ? p.intl.string(p.t['4hyaHh']) : p.intl.formatToPlainString(p.t.QmlLEh, { name: Z.username })));
+    let M = v === C.id && null != y ? (0, i.jsx)(o.Z.Channel, { channel: y }) : p.intl.formatToPlainString(p.t.u0vaDA, { guildName: C.name });
     return (0, i.jsxs)(o.Z, {
         children: [
             (0, i.jsx)(o.Z.Header, { text: p.intl.string(p.t['wS+5WV']) }),
@@ -53,20 +53,20 @@ function g(e) {
                         children: [
                             (0, i.jsx)(o.Z.Icon, {
                                 guild: C,
-                                onClick: P && b ? O : void 0
+                                onClick: L && b ? O : void 0
                             }),
                             (0, i.jsx)(o.Z.Info, {
                                 title: r,
-                                onClick: P && b ? O : void 0,
+                                onClick: L && b ? O : void 0,
                                 children: M
                             })
                         ]
                     }),
                     b
                         ? (0, i.jsx)(o.Z.Button, {
-                              disabled: P && !b,
+                              disabled: L && !b,
                               onClick: O,
-                              submitting: L,
+                              submitting: P,
                               isDisabled: A && b,
                               color: n,
                               children: t

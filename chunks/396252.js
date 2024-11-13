@@ -11,8 +11,8 @@ var r = n(120356),
     o = n(481060),
     s = n(385499),
     c = n(430824),
-    d = n(739566),
-    u = n(464891),
+    u = n(739566),
+    d = n(464891),
     m = n(83561),
     h = n(834129),
     f = n(674563),
@@ -22,24 +22,24 @@ function g(e) {
     var t;
     let { message: n, compact: r, usernameHook: g, channel: E } = e,
         C = (0, a.e7)([c.Z], () => c.Z.getGuild(E.guild_id)),
-        I = (0, d.ZP)(n),
+        I = (0, u.ZP)(n),
         x = g(I),
         {
-            avatarSrc: v,
-            eventHandlers: { onMouseEnter: N, onMouseLeave: T }
+            avatarSrc: N,
+            eventHandlers: { onMouseEnter: v, onMouseLeave: T }
         } = (0, m.m)(!0);
     return (0, i.jsx)('div', {
-        onMouseEnter: N,
+        onMouseEnter: v,
         onMouseLeave: T,
         children: (0, i.jsx)(h.Z, {
             className: l()(_.mainContainer, { [_.compact]: r }),
-            iconNode: r ? null : (0, i.jsx)(m.S, { src: v }),
+            iconNode: r ? null : (0, i.jsx)(m.S, { src: N }),
             iconContainerClassName: _.iconContainer,
             compact: r,
             children: (0, i.jsxs)('div', {
                 className: l()(_.content, { [_.compact]: r }),
                 children: [
-                    (0, i.jsx)(u.nD, {
+                    (0, i.jsx)(d.nD, {
                         message: n,
                         messageClassname: _.spanCorrection,
                         className: l()(_.usernameContainer, _.spanCorrection, { [_.compact]: r }),
