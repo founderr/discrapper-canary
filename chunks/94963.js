@@ -104,7 +104,7 @@ n.Z = (e) => {
             for (let e = 0; e < v.ym.length; e++) if (v.ym[e].primary === i.brandPrimaryColor && v.ym[e].secondary === i.brandSecondaryColor) return 2 + e;
             return 0;
         }, [S, E, k, A, i.brandPrimaryColor, i.brandSecondaryColor]),
-        [Z, L] = a.useState(!1),
+        [L, Z] = a.useState(!1),
         P = 0 === D,
         O = 1 === D,
         F = a.useMemo(() => {
@@ -213,13 +213,13 @@ n.Z = (e) => {
                                                     onSecondaryColorChange: (e) => {
                                                         t({ brandSecondaryColor: (0, d.Rf)(e) });
                                                     },
-                                                    shouldShow: Z,
-                                                    onRequestClose: () => L(!1),
+                                                    shouldShow: L,
+                                                    onRequestClose: () => Z(!1),
                                                     children: (e) =>
                                                         (0, r.jsx)(m.Clickable, {
                                                             ...e,
                                                             onClick: () => {
-                                                                L((e) => !e);
+                                                                Z((e) => !e);
                                                             },
                                                             className: l()(y.brandItemContainer, { [y.brandItemContainerSelected]: 0 === D }),
                                                             children: (0, r.jsx)(j, {

@@ -58,9 +58,9 @@ let v = /^\/([a-zA-Z0-9-]+)$/,
     P = F('//canary.'.concat(E.$R1)),
     k = F('//ptb.'.concat(E.$R1)),
     U = F('discordapp.com'),
-    G = F('discord.com'),
-    B = [h.Z.escape(null !== (i = x.host) && void 0 !== i ? i : ''), h.Z.escape(null !== (a = w.host) && void 0 !== a ? a : ''), h.Z.escape(null !== (s = M.host) && void 0 !== s ? s : ''), h.Z.escape(null !== (o = U.host) && void 0 !== o ? o : ''), h.Z.escape(null !== (l = G.host) && void 0 !== l ? l : '')].filter(Boolean),
-    Z = RegExp('((https?://[^ ]*)|^|[^/][^/.])('.concat(B.join('|'), ')'), 'g');
+    B = F('discord.com'),
+    G = [h.Z.escape(null !== (i = x.host) && void 0 !== i ? i : ''), h.Z.escape(null !== (a = w.host) && void 0 !== a ? a : ''), h.Z.escape(null !== (s = M.host) && void 0 !== s ? s : ''), h.Z.escape(null !== (o = U.host) && void 0 !== o ? o : ''), h.Z.escape(null !== (l = B.host) && void 0 !== l ? l : '')].filter(Boolean),
+    Z = RegExp('((https?://[^ ]*)|^|[^/][^/.])('.concat(G.join('|'), ')'), 'g');
 function F(e) {
     if (null == e)
         return {
@@ -90,7 +90,7 @@ function V(e, t) {
 }
 function j(e) {
     var t, n, r, i;
-    return null !== (i = null !== (r = null !== (n = null !== (t = V(M, e)) && void 0 !== t ? t : V(P, e)) && void 0 !== n ? n : V(k, e)) && void 0 !== r ? r : V(U, e)) && void 0 !== i ? i : V(G, e);
+    return null !== (i = null !== (r = null !== (n = null !== (t = V(M, e)) && void 0 !== t ? t : V(P, e)) && void 0 !== n ? n : V(k, e)) && void 0 !== r ? r : V(U, e)) && void 0 !== i ? i : V(B, e);
 }
 function H(e) {
     var t, n, r, i;
@@ -104,7 +104,7 @@ function H(e) {
         };
     let s = V(x, a),
         o = V(w, a),
-        l = null !== (i = null !== (r = null !== (n = null !== (t = V(M, a)) && void 0 !== t ? t : V(P, a)) && void 0 !== n ? n : V(k, a)) && void 0 !== r ? r : V(U, a)) && void 0 !== i ? i : V(G, a);
+        l = null !== (i = null !== (r = null !== (n = null !== (t = V(M, a)) && void 0 !== t ? t : V(P, a)) && void 0 !== n ? n : V(k, a)) && void 0 !== r ? r : V(U, a)) && void 0 !== i ? i : V(B, a);
     return {
         url: a,
         inviteHostRemainingPath: s,

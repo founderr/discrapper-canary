@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     o = n(192379),
-    a = n(442837),
-    s = n(570140),
+    s = n(442837),
+    a = n(570140),
     l = n(607070),
     r = n(222677),
     c = n(695346),
@@ -14,7 +14,7 @@ var i = n(200651),
     f = n(403969);
 t.Z = o.memo(function (e) {
     let { channelId: t, messageId: n, emoji: g, useChatFontScaling: v, color: b, count: T, emojiSize: x } = e,
-        _ = (0, a.e7)([d.Z], () => d.Z.getEffectForEmojiId(t, n, g)),
+        _ = (0, s.e7)([d.Z], () => d.Z.getEffectForEmojiId(t, n, g)),
         S = v ? f : p,
         C = o.useMemo(
             () =>
@@ -25,10 +25,10 @@ t.Z = o.memo(function (e) {
             [b, _, g, t, n]
         ),
         [E, I] = o.useState(!1),
-        j = (0, a.e7)([l.Z], () => l.Z.useReducedMotion),
+        j = (0, s.e7)([l.Z], () => l.Z.useReducedMotion),
         R = c.Yk.useSetting(),
         N = o.useCallback(() => {
-            s.Z.dispatch({
+            a.Z.dispatch({
                 type: 'BURST_REACTION_EFFECT_CLEAR',
                 channelId: t,
                 messageId: n,

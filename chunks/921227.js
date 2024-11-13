@@ -1,7 +1,7 @@
 var i,
     o = n(442837),
-    a = n(570140);
-function s(e, t, n) {
+    s = n(570140);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,9 +26,9 @@ class r extends (i = o.ZP.PersistedStore) {
         return !0 !== l[e];
     }
 }
-s(r, 'displayName', 'ActivityInviteEducationStore'),
-    s(r, 'persistKey', 'ActivityInviteEducationExperimentStore'),
-    (t.Z = new r(a.Z, {
+a(r, 'displayName', 'ActivityInviteEducationStore'),
+    a(r, 'persistKey', 'ActivityInviteEducationExperimentStore'),
+    (t.Z = new r(s.Z, {
         ACTIVITY_INVITE_EDUCATION_DISMISS: function (e) {
             return (l[e.key] = e.value), !0;
         }

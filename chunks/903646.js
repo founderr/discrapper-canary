@@ -344,7 +344,7 @@ function x(e, t) {
                       var n;
                       let r;
                       (e.hour += t.hours || 0), (e.minute += t.minutes || 0), (e.second += t.seconds || 0), (e.millisecond += t.milliseconds || 0);
-                      return (n = e), (n.second += Math.floor(n.millisecond / 1000)), (n.millisecond = B(n.millisecond, 1000)), (n.minute += Math.floor(n.second / 60)), (n.second = B(n.second, 60)), (n.hour += Math.floor(n.minute / 60)), (n.minute = B(n.minute, 60)), (r = Math.floor(n.hour / 24)), (n.hour = B(n.hour, 24)), r;
+                      return (n = e), (n.second += Math.floor(n.millisecond / 1000)), (n.millisecond = G(n.millisecond, 1000)), (n.minute += Math.floor(n.second / 60)), (n.second = G(n.second, 60)), (n.hour += Math.floor(n.minute / 60)), (n.minute = G(n.minute, 60)), (r = Math.floor(n.hour / 24)), (n.hour = G(n.hour, 24)), r;
                   })(n, t)
                 : 0;
     w(n, t.years || 0),
@@ -396,11 +396,11 @@ function U(e, t) {
         })(t)
     );
 }
-function G(e, t) {
+function B(e, t) {
     let n = e.copy();
     return null != t.era && (n.era = t.era), null != t.year && (n.year = t.year), null != t.month && (n.month = t.month), null != t.day && (n.day = t.day), k(n), n;
 }
-function B(e, t) {
+function G(e, t) {
     let n = e % t;
     return n < 0 && (n += t), n;
 }
@@ -463,7 +463,7 @@ class Y {
         return U(this, e);
     }
     set(e) {
-        return G(this, e);
+        return B(this, e);
     }
     cycle(e, t, n) {
         return Z(this, e, t, n);
@@ -500,7 +500,7 @@ class K {
     set(e) {
         var t, n;
         let r;
-        return G(
+        return B(
             ((t = this),
             (n = e),
             (r = t.copy()),

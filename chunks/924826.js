@@ -142,7 +142,7 @@ function c(e) {
                 t = null == e ? void 0 : e.getAttribute(l.ie);
             null != t ? D(t) : null == e && null != _ && _();
         }, [L, P, _, D]),
-        G = r.useCallback(
+        B = r.useCallback(
             (e) => {
                 if (!A.current || (!E && !M.current)) return;
                 let n = I === o.hy.HORIZONTAL ? o.R8.RIGHT : o.R8.DOWN,
@@ -189,7 +189,7 @@ function c(e) {
             },
             [k, U, t, I, f, d, D, E]
         ),
-        B = r.useCallback(
+        G = r.useCallback(
             (e) => {
                 let n = null != e ? (0, l.jb)(t, e) : null;
                 (S.current = n), (0, a.h)(t, e, g);
@@ -200,12 +200,12 @@ function c(e) {
         () => ({
             id: t,
             containerProps: {
-                onKeyDown: G,
+                onKeyDown: B,
                 ref: y,
                 tabIndex: x && g ? -1 : 0
             },
             orientation: I,
-            setFocus: B,
+            setFocus: G,
             async focusLastVisibleItem() {
                 var e;
                 let n = await (0, s.jo)(null !== (e = y.current) && void 0 !== e ? e : document.body, u(t, y));
@@ -223,6 +223,6 @@ function c(e) {
                 return e ? (0, l.x3)(e) : null;
             }
         }),
-        [t, G, I, x, g, B, U, k, D]
+        [t, B, I, x, g, G, U, k, D]
     );
 }

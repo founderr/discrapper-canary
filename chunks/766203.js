@@ -304,24 +304,24 @@ function _(e) {
                   'mouse' === O.current && (e.stopPropagation(), e.preventDefault(), w(e));
               }
             : void 0,
-        { longPressProps: G } = (0, o.TA)({
+        { longPressProps: B } = (0, o.TA)({
             isDisabled: !D,
             onLongPress(e) {
                 'touch' === e.pointerType && (I(e), t.setSelectionBehavior('toggle'));
             }
         }),
-        B = t.isLink(n)
+        G = t.isLink(n)
             ? (e) => {
                   !s.nG.isOpening && e.preventDefault();
               }
             : void 0;
     return {
-        itemProps: (0, s.dG)(b, y || N ? P : {}, D ? G : {}, {
+        itemProps: (0, s.dG)(b, y || N ? P : {}, D ? B : {}, {
             onDoubleClick: U,
             onDragStartCapture: (e) => {
                 'touch' === O.current && L.current && e.preventDefault();
             },
-            onClick: B
+            onClick: G
         }),
         isPressed: k,
         isSelected: t.isSelected(n),

@@ -475,7 +475,7 @@ function es(e) {
         { guidelinesOpen: n } = (0, X.xH)((e) => {
             let { guidelinesOpen: t } = e;
             return { guidelinesOpen: t };
-        }),
+        }, c.X),
         i = (0, X.AF)(),
         r = null != t.topic && 0 !== t.topic.length,
         s = () => {
@@ -644,7 +644,7 @@ function eu() {
     let { previewing: e } = (0, X.xH)((e) => {
             let { previewing: t } = e;
             return { previewing: t };
-        }),
+        }, c.X),
         t = (0, X.AF)(),
         n = i.useCallback(() => {
             t.getState().setPreviewing(!e), (0, G.nE)();
@@ -683,21 +683,21 @@ let em = i.memo(function (e) {
                 appliedTags: n,
                 name: a
             };
-        }),
-        { rateLimitPerUser: c } = t,
-        d = c > 0,
-        u = (0, h.e7)([A.Z], () => A.Z.getSlowmodeCooldownGuess(t.id, A.S.CreateThread)),
-        m = (0, h.e7)([Z.Z], () => Z.Z.can($.Plq.MANAGE_THREADS, t) || Z.Z.can($.Plq.MANAGE_CHANNELS, t)),
-        x = t.hasFlag(ee.zZ.REQUIRE_TAG) && 0 === s.size && o.length > 0 && l.textValue.length > 0,
-        f = (0, X.AF)(),
-        p = i.useCallback(() => {
-            f.getState().setBodyFocused(!1);
-        }, [f]),
-        v = i.useMemo(() => '' !== o.trim() && '' !== l.textValue.trim(), [o, l.textValue]);
+        }, c.X),
+        { rateLimitPerUser: d } = t,
+        u = d > 0,
+        m = (0, h.e7)([A.Z], () => A.Z.getSlowmodeCooldownGuess(t.id, A.S.CreateThread)),
+        x = (0, h.e7)([Z.Z], () => Z.Z.can($.Plq.MANAGE_THREADS, t) || Z.Z.can($.Plq.MANAGE_CHANNELS, t)),
+        f = t.hasFlag(ee.zZ.REQUIRE_TAG) && 0 === s.size && o.length > 0 && l.textValue.length > 0,
+        p = (0, X.AF)(),
+        v = i.useCallback(() => {
+            p.getState().setBodyFocused(!1);
+        }, [p]),
+        j = i.useMemo(() => '' !== o.trim() && '' !== l.textValue.trim(), [o, l.textValue]);
     return (
         i.useEffect(() => {
-            !v && f.getState().setPreviewing(!1);
-        }, [v, f]),
+            !j && p.getState().setPreviewing(!1);
+        }, [j, p]),
         (0, a.jsxs)('div', {
             className: r,
             children: [
@@ -712,7 +712,7 @@ let em = i.memo(function (e) {
                                 (0, a.jsxs)('div', {
                                     className: en.wrappedControls,
                                     children: [
-                                        x &&
+                                        f &&
                                             (0, a.jsx)(g.Text, {
                                                 variant: 'text-sm/normal',
                                                 color: 'text-danger',
@@ -723,22 +723,22 @@ let em = i.memo(function (e) {
                                             textValue: l.textValue,
                                             className: en.characterCount
                                         }),
-                                        d &&
+                                        u &&
                                             (0, a.jsx)(J.Z, {
-                                                rateLimitPerUser: c,
-                                                slowmodeCooldownGuess: u,
-                                                isBypassSlowmode: m,
+                                                rateLimitPerUser: d,
+                                                slowmodeCooldownGuess: m,
+                                                isBypassSlowmode: x,
                                                 leadingIcon: !0
                                             })
                                     ]
                                 }),
                                 (0, a.jsx)(es, { parentChannel: t }),
-                                v && (0, a.jsx)(eu, {}),
+                                j && (0, a.jsx)(eu, {}),
                                 (0, a.jsx)(eh, {
                                     parentChannel: t,
                                     disableIfInvalid: !0,
                                     canCreatePost: n,
-                                    disabled: d && !m && u > 0
+                                    disabled: u && !x && m > 0
                                 })
                             ]
                         }),
@@ -747,7 +747,7 @@ let em = i.memo(function (e) {
                             {
                                 type: ea,
                                 className: en.expressionPicker,
-                                onClick: p
+                                onClick: v
                             },
                             'expression'
                         )
@@ -763,8 +763,8 @@ function eh(e) {
             submitting: l,
             textAreaState: s,
             name: o,
-            appliedTags: c,
-            formOpen: d
+            appliedTags: d,
+            formOpen: u
         } = (0, X.xH)((e) => {
             let { submitting: t, textAreaState: n, name: a, appliedTags: i, formOpen: r } = e;
             return {
@@ -774,13 +774,13 @@ function eh(e) {
                 appliedTags: i,
                 formOpen: r
             };
-        }),
-        u = t.hasFlag(ee.zZ.REQUIRE_TAG) && 0 === c.size && o.length > 0 && s.textValue.length > 0,
-        m = (0, h.Wu)([L.Z], () => L.Z.getUploads(t.id, k.d.FirstThreadMessage)),
-        x = s.textValue.trim().length > 0 || m.length > 0,
-        f = !u && x && o.trim().length > 0;
+        }, c.X),
+        m = t.hasFlag(ee.zZ.REQUIRE_TAG) && 0 === d.size && o.length > 0 && s.textValue.length > 0,
+        x = (0, h.Wu)([L.Z], () => L.Z.getUploads(t.id, k.d.FirstThreadMessage)),
+        f = s.textValue.trim().length > 0 || x.length > 0,
+        p = !m && f && o.trim().length > 0;
     if (__OVERLAY__) return null;
-    let p = function () {
+    let C = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
         return (0, a.jsxs)(g.Button, {
             ...e,
@@ -789,7 +789,7 @@ function eh(e) {
             innerClassName: en.submitButtonInner,
             type: 'submit',
             submitting: l,
-            disabled: (r && !f) || i || !n,
+            disabled: (r && !p) || i || !n,
             children: [
                 (0, a.jsx)(g.ChatIcon, {
                     size: 'xs',
@@ -799,16 +799,16 @@ function eh(e) {
                 (0, a.jsx)(g.Text, {
                     variant: 'text-md/semibold',
                     color: 'none',
-                    children: d ? et.intl.string(et.t.pIuQIy) : et.intl.string(et.t.TyAuoa)
+                    children: u ? et.intl.string(et.t.pIuQIy) : et.intl.string(et.t.TyAuoa)
                 })
             ]
         });
     };
     return n
-        ? p()
+        ? C()
         : (0, a.jsx)(g.Tooltip, {
               text: et.intl.string(et.t.iyzwnJ),
-              children: (e) => p(e)
+              children: (e) => C(e)
           });
 }
 function eg() {

@@ -72,7 +72,7 @@ function eu(e) {
     return (0, a.jsx)(
         Y.oL,
         {
-            createStore: () => (0, Y.NU)(t),
+            channel: t,
             children: (0, a.jsx)(ev, {
                 channel: t,
                 guild: n,

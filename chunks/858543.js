@@ -9,8 +9,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var o = n(120356),
-    a = n.n(o),
-    s = n(692547),
+    s = n.n(o),
+    a = n(692547),
     l = n(481060),
     r = n(109434),
     c = n(456269),
@@ -23,14 +23,14 @@ function f(e) {
     let { channel: t, isNew: n } = e,
         i = (0, c.eV)(t),
         o = i.slice(void 0, 3),
-        a = i.slice(3),
-        s = i.length > 3 ? i.length - 3 : 0,
+        s = i.slice(3),
+        a = i.length > 3 ? i.length - 3 : 0,
         l = t.hasFlag(u.zZ.PINNED),
         r = o.length > 0 || l || n;
     return {
         shownTags: o,
-        remainingTags: a,
-        moreTagsCount: s,
+        remainingTags: s,
+        moreTagsCount: a,
         isPinned: l,
         shouldRenderTagsRow: r,
         forumPostContainsTags: i.length > 0
@@ -51,12 +51,12 @@ function g(e) {
         { tagFilter: x } = (0, r.H)(t.id);
     return T
         ? (0, i.jsxs)('div', {
-              className: a()(p.tags, c),
+              className: s()(p.tags, c),
               children: [
                   n
                       ? (0, i.jsx)(l.TextBadge, {
-                            className: a()(m.newBadge, m.inTagsRow),
-                            color: s.Z.unsafe_rawColors.BRAND_260.css,
+                            className: s()(m.newBadge, m.inTagsRow),
+                            color: a.Z.unsafe_rawColors.BRAND_260.css,
                             text: h.intl.string(h.t.y2b7CA)
                         })
                       : null,
@@ -81,7 +81,7 @@ function g(e) {
                           {
                               tag: e,
                               size: d.Z.Sizes.SMALL,
-                              className: a()(o, { [p.tagFiltered]: x.has(e.id) })
+                              className: s()(o, { [p.tagFiltered]: x.has(e.id) })
                           },
                           e.id
                       )

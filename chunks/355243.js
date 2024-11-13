@@ -22,30 +22,30 @@ function p(e, t, n) {
 function f(e) {
     let { percent: t, animate: n, interactionEnabled: i, backgroundColor: f, preloadedBuffers: v, duration: C, maxSeekableTime: g, onClick: x, onScrubBack: h, onScrubForward: E } = e,
         [S, _] = o.useState(null),
-        [N, j] = o.useState(null),
-        [I, T] = o.useState(null),
+        [T, N] = o.useState(null),
+        [j, I] = o.useState(null),
         [b, D] = o.useState(!1),
         y = o.useRef(null),
-        A = (e) => {
+        B = (e) => {
             (y.current = e), _(e);
         };
     o.useEffect(() => {
-        null != S && (null == g ? T(null) : T(p(g, C, S)));
+        null != S && (null == g ? I(null) : I(p(g, C, S)));
     }, [S, g, C]);
-    let B = (0, s.y)(() => {
-        if (null != B.current) A(B.current.getBoundingClientRect());
+    let A = (0, s.y)(() => {
+        if (null != A.current) B(A.current.getBoundingClientRect());
     });
     o.useLayoutEffect(() => {
-        null != B.current && A(B.current.getBoundingClientRect());
-    }, [B]),
+        null != A.current && B(A.current.getBoundingClientRect());
+    }, [A]),
         o.useEffect(() => {
             let e = () => {
-                null != B.current && A(B.current.getBoundingClientRect());
+                null != A.current && B(A.current.getBoundingClientRect());
             };
             return window.addEventListener('resize', e), () => window.removeEventListener('resize', e);
-        }, [B]);
+        }, [A]);
     let k = (e) => {
-            j(e.clientX);
+            N(e.clientX);
         },
         L = o.useCallback(
             (e) => {
@@ -54,14 +54,14 @@ function f(e) {
             },
             [h, E]
         ),
-        M = null != N && null != S ? m(N, S, C) : 0,
-        O = (0, c.yv)(M),
-        P = null != S ? S.right - p((t / 100) * C, C, S) : null,
-        R = null != N && null != S ? S.right - N : null,
-        w = null != I && null != S ? S.right - I : null;
+        P = null != T && null != S ? m(T, S, C) : 0,
+        M = (0, c.yv)(P),
+        O = null != S ? S.right - p((t / 100) * C, C, S) : null,
+        R = null != T && null != S ? S.right - T : null,
+        w = null != j && null != S ? S.right - j : null;
     return (0, r.jsxs)('div', {
         className: d.cont,
-        ref: B,
+        ref: A,
         children: [
             (0, r.jsxs)(a.Clickable, {
                 className: l()(d.hitboxArea, { [d.interactionEnabled]: i }),
@@ -70,10 +70,10 @@ function f(e) {
                     if (!!i && null != x) x(m(e.clientX, e.currentTarget.getBoundingClientRect(), C));
                 },
                 onMouseEnter: (e) => {
-                    if (!!i) null != B.current && A(B.current.getBoundingClientRect()), D(!0), k(e);
+                    if (!!i) null != A.current && B(A.current.getBoundingClientRect()), D(!0), k(e);
                 },
                 onMouseLeave: (e) => {
-                    if (!!i) D(!1), j(null);
+                    if (!!i) D(!1), N(null);
                 },
                 onMouseMove: (e) => {
                     if (!!i) b && k(e);
@@ -121,7 +121,7 @@ function f(e) {
                         animate: n
                     }),
                     b &&
-                        null != O &&
+                        null != M &&
                         (0, r.jsx)(a.Text, {
                             className: d.timeDisplay,
                             variant: 'text-xs/normal',
@@ -129,14 +129,14 @@ function f(e) {
                                 right: null != R ? ''.concat(R - 10, 'px') : 'auto',
                                 color: '#FFFFFF'
                             },
-                            children: O
+                            children: M
                         }),
                     b &&
                         i &&
-                        null != P &&
+                        null != O &&
                         (0, r.jsx)('div', {
                             className: d.grabber,
-                            style: { right: ''.concat(P - 6, 'px') }
+                            style: { right: ''.concat(O - 6, 'px') }
                         })
                 ]
             }),

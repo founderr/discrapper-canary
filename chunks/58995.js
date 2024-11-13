@@ -68,13 +68,13 @@ t.Z = i.memo(function (e) {
     w && !t && I && x >= O && M.push(l.z.NITROWEEN_COACHMARKS);
     let [P, k] = (0, p.US)(M),
         U = null != P,
-        G = (0, S.Ft)(n),
-        { Component: B, events: Z, play: F } = (0, u.$)();
+        B = (0, S.Ft)(n),
+        { Component: G, events: Z, play: F } = (0, u.$)();
     if (t) return null;
     let V = () => {
         (0, h.Z)({
             isGift: !0,
-            giftRecipient: null == G ? void 0 : G,
+            giftRecipient: null == B ? void 0 : B,
             giftMessage: N.intl.string(N.t['rX/m/f']),
             initialPlanId: null,
             analyticsLocations: a,
@@ -110,7 +110,7 @@ t.Z = i.memo(function (e) {
                 },
                 ...Z,
                 children: (0, r.jsx)(D, {
-                    animatedIconComponent: B,
+                    animatedIconComponent: G,
                     hovered: s,
                     isCoachmarkDismissed: !U
                 })

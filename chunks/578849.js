@@ -354,7 +354,7 @@ function k(e, t) {
 function U(e, t) {
     void 0 === e.relevance && (e.relevance = 1);
 }
-let G = (e, t) => {
+let B = (e, t) => {
         if (!e.beforeMatch) return;
         if (e.starts) throw Error('beforeMatch cannot be used with starts');
         let n = Object.assign({}, e);
@@ -370,7 +370,7 @@ let G = (e, t) => {
             (e.relevance = 0),
             delete n.beforeMatch;
     },
-    B = ['of', 'and', 'for', 'in', 'not', 'or', 'if', 'then', 'parent', 'list', 'value'],
+    G = ['of', 'and', 'for', 'in', 'not', 'or', 'if', 'then', 'parent', 'list', 'value'],
     Z = {},
     F = (e) => {
         console.error(e);
@@ -639,7 +639,7 @@ var q = (function (e) {
                     (e.classNameAliases = a(e.classNameAliases || {})),
                     (function n(i, s) {
                         if (i.isCompiled) return i;
-                        [w, k, W, G].forEach((e) => e(i, s)), e.compilerExtensions.forEach((e) => e(i, s)), (i.__beforeBegin = null), [M, P, U].forEach((e) => e(i, s)), (i.isCompiled = !0);
+                        [w, k, W, B].forEach((e) => e(i, s)), e.compilerExtensions.forEach((e) => e(i, s)), (i.__beforeBegin = null), [M, P, U].forEach((e) => e(i, s)), (i.isCompiled = !0);
                         let o = null;
                         return (
                             'object' == typeof i.keywords && i.keywords.$pattern && ((i.keywords = Object.assign({}, i.keywords)), (o = i.keywords.$pattern), delete i.keywords.$pattern),
@@ -667,7 +667,7 @@ var q = (function (e) {
                                                         return t
                                                             ? Number(t)
                                                             : (function (e) {
-                                                                    return B.includes(e.toLowerCase());
+                                                                    return G.includes(e.toLowerCase());
                                                                 })(e)
                                                               ? 0
                                                               : 1;

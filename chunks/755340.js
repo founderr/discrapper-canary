@@ -26,8 +26,8 @@ n.Z = function (e) {
         M = a.useMemo(() => E.filter(c._C), [E]),
         R = M.length,
         D = a.useMemo(() => E.length === p.nx, [E]),
-        Z = a.useMemo(() => E.some(l.J), [E]),
-        L = a.useMemo(() => E.some((e) => !(0, l.J)(e)), [E]),
+        L = a.useMemo(() => E.some(l.J), [E]),
+        Z = a.useMemo(() => E.some((e) => !(0, l.J)(e)), [E]),
         P = R > 0,
         O = n.hasFeature(g.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL) || _,
         F = a.useCallback(() => {
@@ -99,7 +99,7 @@ n.Z = function (e) {
                     disable: !B
                 }),
                 B &&
-                    !Z &&
+                    !L &&
                     !D &&
                     (0, r.jsx)(m.Z, {
                         addFormField: H,
@@ -126,7 +126,7 @@ n.Z = function (e) {
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   !_ && V,
-                  !L &&
+                  !Z &&
                       (0, r.jsx)(d.Z, {
                           addFormField: H,
                           showManualApprovalWarning: !_ && !P,
@@ -148,7 +148,7 @@ n.Z = function (e) {
                           actionsLocation: z
                       })
                   ),
-                  L &&
+                  Z &&
                       !D &&
                       B &&
                       (0, r.jsx)(h.Z, {

@@ -1,8 +1,8 @@
 var i = n(200651);
 n(192379);
 var o = n(120356),
-    a = n.n(o),
-    s = n(481060),
+    s = n.n(o),
+    a = n(481060),
     l = n(942951),
     r = n(456269),
     c = n(388032),
@@ -20,9 +20,9 @@ t.Z = (e) => {
             stopPropagation: !0,
             ariaLabel: c.intl.formatToPlainString(c.t.CSIeU1, { name: g })
         })(null != f ? f : void 0)((0, i.jsx)(i.Fragment, { children: g }), u.id);
-    return (0, i.jsxs)(s.Text, {
+    return (0, i.jsxs)(a.Text, {
         tag: 'span',
-        className: a()(d.author, { [d.hasUnreads]: m }),
+        className: s()(d.author, { [d.hasUnreads]: m }),
         variant: 'text-sm/semibold',
         children: [v, !0 === h ? ': ' : null]
     });

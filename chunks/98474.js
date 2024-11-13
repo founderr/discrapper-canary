@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     o = n(192379),
-    a = n(703533),
-    s = n(100621),
+    s = n(703533),
+    a = n(100621),
     l = n(748780),
     r = n(481060),
     c = n(596454),
@@ -25,7 +25,7 @@ function b(e) {
         [S, C] = o.useState(0),
         [E, I] = o.useState(null),
         { confettiCanvas: j } = o.useContext(d.h),
-        R = (0, a.uR)(j, E),
+        R = (0, s.uR)(j, E),
         N = o.useMemo(
             () => [
                 {
@@ -96,7 +96,7 @@ function b(e) {
         }, [R, x, S]),
         (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(a.Ji, {
+                (0, i.jsx)(s.Ji, {
                     ref: I,
                     sprites: N,
                     colors: v,
@@ -104,10 +104,10 @@ function b(e) {
                     spriteHeight: f.Ko
                 }),
                 (0, i.jsx)(u.ZP, {
-                    children: (0, i.jsx)(s.animated.div, {
+                    children: (0, i.jsx)(a.animated.div, {
                         style: { ...A },
                         className: g.emojiContainer,
-                        children: (0, i.jsx)(s.animated.div, {
+                        children: (0, i.jsx)(a.animated.div, {
                             style: {
                                 ...O,
                                 opacity: O.opacity

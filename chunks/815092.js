@@ -50,8 +50,8 @@ var o = r(542038),
                         I = void 0;
                     T && ((M = T.component), (A = T.props), (I = T.editable));
                     var B = y || S.get(O),
-                        R = a.encode(O, 0, 0),
-                        L = {
+                        L = a.encode(O, 0, 0),
+                        R = {
                             contentState: v,
                             block: D,
                             blockProps: A,
@@ -61,7 +61,7 @@ var o = r(542038),
                             decorator: b,
                             direction: B,
                             forceSelection: _,
-                            offsetKey: R,
+                            offsetKey: L,
                             preventScroll: g,
                             selection: m,
                             tree: h.getBlockTree(O)
@@ -97,7 +97,7 @@ var o = r(542038),
                             className: j,
                             'data-block': !0,
                             'data-editor': d,
-                            'data-offset-key': R,
+                            'data-offset-key': L,
                             key: O
                         };
                     void 0 !== I &&
@@ -129,12 +129,12 @@ var o = r(542038),
                             contentEditable: I,
                             suppressContentEditableWarning: !0
                         }));
-                    var J = u.createElement(z, G, u.createElement(V, i({}, L, { key: O })));
+                    var J = u.createElement(z, G, u.createElement(V, i({}, R, { key: O })));
                     k.push({
                         block: J,
                         wrapperTemplate: F,
                         key: O,
-                        offsetKey: R
+                        offsetKey: L
                     }),
                         (x = F ? D.getDepth() : null),
                         (C = F);

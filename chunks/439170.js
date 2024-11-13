@@ -251,7 +251,7 @@ function U() {
     let e = m.default.getId();
     w.forEach(null, (t) => t.rebuildMember(e));
 }
-class G extends (i = d.ZP.Store) {
+class B extends (i = d.ZP.Store) {
     initialize() {
         this.waitFor(T.default, I.Z, g.Z, v.ZP, b.Z, S.Z, m.default, E.Z, h.Z, _.Z), this.syncWith([S.Z], U), this.syncWith([h.Z], k);
     }
@@ -268,8 +268,8 @@ class G extends (i = d.ZP.Store) {
         return w.get(e, L(t)).rows;
     }
 }
-N(G, 'displayName', 'ChannelMemberStore'),
-    (t.ZP = new G(f.Z, {
+N(B, 'displayName', 'ChannelMemberStore'),
+    (t.ZP = new B(f.Z, {
         CONNECTION_OPEN: M,
         OVERLAY_INITIALIZE: M,
         GUILD_MEMBER_LIST_UPDATE: function (e) {

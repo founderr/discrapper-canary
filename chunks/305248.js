@@ -60,7 +60,7 @@ function C(e) {
                 (0, i.jsx)(
                     u.oL,
                     {
-                        createStore: () => (0, u.NU)(n),
+                        channel: n,
                         children: (0, i.jsx)(d.ZP, {
                             className: E.forumPost,
                             threadId: e.id,

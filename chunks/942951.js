@@ -7,15 +7,15 @@ var n = l(200651),
     i = l(192379),
     a = l(481060),
     o = l(100527),
-    r = l(906732),
-    s = l(184301),
+    s = l(906732),
+    r = l(184301),
     d = l(347475),
     u = l(592125),
     c = l(91047);
 function m(e) {
     var t, l;
-    let { user: m, channelId: f, guildId: h, messageId: g, stopPropagation: p = !1, ariaLabel: x } = e,
-        { analyticsLocations: _ } = (0, r.ZP)(o.Z.USERNAME);
+    let { user: m, channelId: f, guildId: g, messageId: h, stopPropagation: p = !1, ariaLabel: x } = e,
+        { analyticsLocations: _ } = (0, s.ZP)(o.Z.USERNAME);
     let v =
         ((t = m),
         (l = f),
@@ -41,7 +41,7 @@ function m(e) {
                     p && t.stopPropagation(), e(t);
                 };
             return (0, n.jsx)(
-                r.Gt,
+                s.Gt,
                 {
                     value: _,
                     children:
@@ -49,17 +49,17 @@ function m(e) {
                             ? (0, n.jsx)(a.Popout, {
                                   position: 'right',
                                   preload: () =>
-                                      (0, s.Z)(m.id, m.getAvatarURL(h, 80), {
-                                          guildId: h,
+                                      (0, r.Z)(m.id, m.getAvatarURL(g, 80), {
+                                          guildId: g,
                                           channelId: f
                                       }),
                                   renderPopout: (t) =>
                                       (0, n.jsx)(d.Z, {
                                           ...t,
                                           userId: m.id,
-                                          guildId: h,
+                                          guildId: g,
                                           channelId: f,
-                                          messageId: g,
+                                          messageId: h,
                                           roleId: null == e ? void 0 : e.colorRoleId
                                       }),
                                   children: (e) => {
@@ -75,6 +75,6 @@ function m(e) {
                 l
             );
         },
-        [_, m, f, h, g, v, p, x]
+        [_, m, f, g, h, v, p, x]
     );
 }

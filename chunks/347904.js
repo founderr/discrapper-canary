@@ -1,6 +1,6 @@
 n.d(t, {
     s4: function () {
-        return s;
+        return a;
     },
     vJ: function () {
         return l;
@@ -9,10 +9,10 @@ n.d(t, {
     n(757143);
 var i,
     o = n(392711),
-    a = n(302221);
+    s = n(302221);
 (i || (i = {})).OUT_OF_BURSTS = 'out of burst reactions modal';
-let s = (e, t) => {
-        let n = (0, a.WY)([t.r, t.g, t.b], 2);
+let a = (e, t) => {
+        let n = (0, s.WY)([t.r, t.g, t.b], 2);
         return (e = (e = e.replace(
             /(\[1,0,0,)/g,
             '['

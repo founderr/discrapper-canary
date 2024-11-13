@@ -57,8 +57,8 @@ var o,
     A = ['light', 'lighter', 'normal', '100', '200', '300', '400'],
     I = ['className', 'href', 'rel', 'target', 'title'],
     B = ['alt', 'className', 'height', 'src', 'width'],
-    R = (i((o = {}), p('public/DraftStyleDefault/depth0'), 0), i(o, p('public/DraftStyleDefault/depth1'), 1), i(o, p('public/DraftStyleDefault/depth2'), 2), i(o, p('public/DraftStyleDefault/depth3'), 3), i(o, p('public/DraftStyleDefault/depth4'), 4), o),
-    L = m({
+    L = (i((o = {}), p('public/DraftStyleDefault/depth0'), 0), i(o, p('public/DraftStyleDefault/depth1'), 1), i(o, p('public/DraftStyleDefault/depth2'), 2), i(o, p('public/DraftStyleDefault/depth3'), 3), i(o, p('public/DraftStyleDefault/depth4'), 4), o),
+    R = m({
         b: 'BOLD',
         code: 'CODE',
         del: 'STRIKETHROUGH',
@@ -86,8 +86,8 @@ var o,
     F = function (t) {
         var e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
         return (
-            Object.keys(R).some(function (r) {
-                t.classList.contains(r) && (e = R[r]);
+            Object.keys(L).some(function (r) {
+                t.classList.contains(r) && (e = L[r]);
             }),
             e
         );
@@ -195,7 +195,7 @@ var o,
                         continue;
                     }
                     var y = e;
-                    L.has(u) && (y = y.add(L.get(u))), (y = z(a, y)), r.push.apply(r, this._toBlockConfigs(Array.from(a.childNodes), y));
+                    R.has(u) && (y = y.add(R.get(u))), (y = z(a, y)), r.push.apply(r, this._toBlockConfigs(Array.from(a.childNodes), y));
                 }
                 return r;
             }),
