@@ -1,15 +1,20 @@
 n.d(t, {
     Kc: function () {
-        return i;
+        return s;
     },
-    cS: function () {
+    Yu: function () {
         return a;
     },
+    cS: function () {
+        return o;
+    },
     dP: function () {
-        return s;
+        return l;
     }
 });
-let r = (0, n(818083).B)({
+var r = n(818083),
+    i = n(987338);
+let a = (0, r.B)({
     kind: 'user',
     id: '2024-10_improved_media_viewer',
     label: 'Improved Desktop Media Viewer',
@@ -17,6 +22,7 @@ let r = (0, n(818083).B)({
         improvedDesktopMediaViewerEnabled: !1,
         mediaViewerAffordanceEnabled: !1
     },
+    commonTriggerPoint: i.$P.CONNECTION_OPEN,
     treatments: [
         {
             id: 1,
@@ -36,17 +42,14 @@ let r = (0, n(818083).B)({
         }
     ]
 });
-function i(e) {
-    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        { improvedDesktopMediaViewerEnabled: n } = r.getCurrentConfig({ location: e }, { autoTrackExposure: t });
-    return n;
-}
-function a(e) {
-    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        { mediaViewerAffordanceEnabled: n } = r.getCurrentConfig({ location: e }, { autoTrackExposure: t });
-    return n;
-}
 function s(e) {
-    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return r.useExperiment({ location: e }, { autoTrackExposure: t });
+    let { improvedDesktopMediaViewerEnabled: t } = a.getCurrentConfig({ location: e }, { autoTrackExposure: !1 });
+    return t;
+}
+function o(e) {
+    let { mediaViewerAffordanceEnabled: t } = a.getCurrentConfig({ location: e }, { autoTrackExposure: !1 });
+    return t;
+}
+function l(e) {
+    return a.useExperiment({ location: e }, { autoTrackExposure: !1 });
 }
