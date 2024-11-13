@@ -1,79 +1,74 @@
 t.d(n, {
     J9: function () {
-        return h;
+        return f;
     },
     K0: function () {
-        return _;
-    },
-    Kq: function () {
         return v;
     },
-    P$: function () {
-        return g;
-    },
-    TA: function () {
-        return m;
-    },
-    Vv: function () {
+    Kq: function () {
         return b;
     },
-    W1: function () {
-        return x;
-    },
-    aC: function () {
-        return d;
-    },
-    i3: function () {
-        return u;
-    },
-    le: function () {
-        return c;
-    },
-    mA: function () {
+    P$: function () {
         return p;
     },
-    t$: function () {
+    TA: function () {
+        return u;
+    },
+    Vv: function () {
         return C;
     },
+    W1: function () {
+        return h;
+    },
+    aC: function () {
+        return c;
+    },
+    i3: function () {
+        return d;
+    },
+    le: function () {
+        return l;
+    },
+    mA: function () {
+        return x;
+    },
+    t$: function () {
+        return g;
+    },
     zH: function () {
-        return f;
+        return m;
     }
 });
 var r = t(544891),
     a = t(570140),
     i = t(706454),
-    o = t(683301),
-    s = t(150192),
-    l = t(981631);
-async function c() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-        n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        t = i.default.locale,
-        c = n && !o.ZP.getIsReady();
-    if (t === s.Z.getFetchedLocale() && !c) return;
-    let d = await r.tn.get({
-        url: l.ANM.GUILD_DISCOVERY_CATEGORIES,
+    o = t(150192),
+    s = t(981631);
+async function l() {
+    let e = i.default.locale;
+    if (e === o.Z.getFetchedLocale()) return;
+    let n = await r.tn.get({
+        url: s.ANM.GUILD_DISCOVERY_CATEGORIES,
         query: {
-            locale: t,
-            primary_only: e
+            locale: e,
+            primary_only: !1
         },
         oldFormErrors: !0
     });
     a.Z.dispatch({
         type: 'GUILD_DISCOVERY_CATEGORY_FETCH_SUCCESS',
-        categories: d.body,
-        locale: t,
-        forClanDiscovery: n
+        categories: n.body,
+        locale: e
     });
 }
-async function d(e) {
+async function c(e) {
     try {
         let {
                 primary_category_id: n,
                 category_ids: t,
                 keywords: i,
                 emoji_discoverability_enabled: o,
-                partner_actioned_timestamp: s,
+                partner_actioned_timestamp: l,
                 partner_application_timestamp: c,
                 is_published: d,
                 reasons_to_join: u,
@@ -81,7 +76,7 @@ async function d(e) {
                 about: f
             } = (
                 await r.tn.get({
-                    url: l.ANM.GUILD_DISCOVERY_METADATA(e),
+                    url: s.ANM.GUILD_DISCOVERY_METADATA(e),
                     oldFormErrors: !0
                 })
             ).body,
@@ -90,7 +85,7 @@ async function d(e) {
                 secondaryCategoryIds: t,
                 keywords: i,
                 emojiDiscoverabilityEnabled: o,
-                partnerActionedTimestamp: s,
+                partnerActionedTimestamp: l,
                 partnerApplicationTimestamp: c,
                 isPublished: d,
                 reasonsToJoin: u,
@@ -109,9 +104,9 @@ async function d(e) {
         a.Z.dispatch({ type: 'GUILD_DISCOVERY_METADATA_FETCH_FAIL' });
     }
 }
-async function u(e) {
+async function d(e) {
     try {
-        let n = (await r.tn.get({ url: l.ANM.GUILD_DISCOVERY_SLUG(e) })).body.slug;
+        let n = (await r.tn.get({ url: s.ANM.GUILD_DISCOVERY_SLUG(e) })).body.slug;
         a.Z.dispatch({
             type: 'GUILD_DISCOVERY_SLUG_FETCH_SUCCESS',
             slug: n
@@ -123,57 +118,57 @@ async function u(e) {
         });
     }
 }
-function m(e, n) {
+function u(e, n) {
     a.Z.dispatch({
         type: 'GUILD_UPDATE_DISCOVERY_METADATA',
         guildId: e,
         primaryCategoryId: n
     });
 }
-function f(e, n) {
+function m(e, n) {
     a.Z.dispatch({
         type: 'GUILD_UPDATE_DISCOVERY_METADATA',
         guildId: e,
         keywords: n
     });
 }
-function h(e, n) {
+function f(e, n) {
     a.Z.dispatch({
         type: 'GUILD_UPDATE_DISCOVERY_METADATA',
         guildId: e,
         emojiDiscoverabilityEnabled: n
     });
 }
-function x(e, n) {
+function h(e, n) {
     a.Z.dispatch({
         type: 'GUILD_UPDATE_DISCOVERY_METADATA',
         guildId: e,
         isPublished: n
     });
 }
-function p(e, n) {
+function x(e, n) {
     a.Z.dispatch({
         type: 'GUILD_UPDATE_DISCOVERY_METADATA',
         guildId: e,
         about: n
     });
 }
-function g(e, n) {
+function p(e, n) {
     a.Z.dispatch({
         type: 'GUILD_UPDATE_DISCOVERY_METADATA',
         guildId: e,
         reasonsToJoin: n
     });
 }
-function C(e, n) {
+function g(e, n) {
     a.Z.dispatch({
         type: 'GUILD_UPDATE_DISCOVERY_METADATA',
         guildId: e,
         socialLinks: n
     });
 }
-async function b(e) {
-    let { guildId: n, primaryCategoryId: t, keywords: i, emojiDiscoverabilityEnabled: o, partnerActionedTimestamp: s, partnerApplicationTimestamp: c, isPublished: d, reasonsToJoin: u, socialLinks: m, about: f } = e;
+async function C(e) {
+    let { guildId: n, primaryCategoryId: t, keywords: i, emojiDiscoverabilityEnabled: o, partnerActionedTimestamp: l, partnerApplicationTimestamp: c, isPublished: d, reasonsToJoin: u, socialLinks: m, about: f } = e;
     try {
         let {
             primary_category_id: e,
@@ -188,11 +183,11 @@ async function b(e) {
             about: y
         } = (
             await r.tn.patch({
-                url: l.ANM.GUILD_DISCOVERY_METADATA(n),
+                url: s.ANM.GUILD_DISCOVERY_METADATA(n),
                 body: {
                     primary_category_id: t,
                     emoji_discoverability_enabled: o,
-                    partner_actioned_timestamp: s,
+                    partner_actioned_timestamp: l,
                     partner_application_timestamp: c,
                     keywords: i,
                     is_published: d,
@@ -230,10 +225,10 @@ async function b(e) {
         );
     }
 }
-function v(e, n) {
+function b(e, n) {
     r.tn
         .put({
-            url: l.ANM.GUILD_DISCOVERY_UPDATE_CATEGORY(e, n),
+            url: s.ANM.GUILD_DISCOVERY_UPDATE_CATEGORY(e, n),
             oldFormErrors: !0
         })
         .then(() => {
@@ -251,10 +246,10 @@ function v(e, n) {
             });
         });
 }
-function _(e, n) {
+function v(e, n) {
     r.tn
         .del({
-            url: l.ANM.GUILD_DISCOVERY_UPDATE_CATEGORY(e, n),
+            url: s.ANM.GUILD_DISCOVERY_UPDATE_CATEGORY(e, n),
             oldFormErrors: !0
         })
         .then(() => {

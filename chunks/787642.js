@@ -1,73 +1,72 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return f;
     }
 });
 var i = n(200651),
     r = n(192379),
     l = n(481060),
-    a = n(212093),
-    s = n(703656),
-    o = n(769654),
-    c = n(430824),
-    d = n(626135),
-    u = n(768581),
-    h = n(125631),
-    m = n(981631),
-    p = n(388032),
-    g = n(917595);
-function f(e, t, n) {
+    a = n(703656),
+    s = n(769654),
+    o = n(430824),
+    c = n(626135),
+    d = n(768581),
+    u = n(125631),
+    h = n(981631),
+    m = n(388032),
+    p = n(917595);
+function g(e, t, n) {
     return (0, i.jsxs)(
         'button',
         {
-            className: g.container,
+            className: p.container,
             onClick: n,
             children: [
                 'function' == typeof e
                     ? (0, i.jsx)('div', {
-                          className: g.icon,
+                          className: p.icon,
                           children: (0, i.jsx)(e, {
-                              className: g.__invalid_iconInner,
+                              className: p.__invalid_iconInner,
                               color: l.tokens.colors.WHITE.css
                           })
                       })
                     : (0, i.jsx)('img', {
-                          className: g.icon,
+                          className: p.icon,
                           alt: '',
                           src: e
                       }),
                 (0, i.jsx)(l.Text, {
-                    className: g.text,
+                    className: p.text,
                     variant: 'text-md/medium',
                     children: t
                 }),
-                (0, i.jsx)(h.Z, { className: g.arrow })
+                (0, i.jsx)(u.Z, { className: p.arrow })
             ]
         },
         t
     );
 }
-function _() {
-    let e = Object.values(c.Z.getGuilds()).filter((e) => e.hasFeature(m.oNc.HUB)),
+function f() {
+    let e = Object.values(o.Z.getGuilds()).filter((e) => e.hasFeature(h.oNc.HUB)),
         t = (e) => {
-            d.default.track(m.rMx.ADD_FRIEND_OTHER_PLACES_HUB_CLICKED, { guild_id: e }), (0, o.X)(e);
+            c.default.track(h.rMx.ADD_FRIEND_OTHER_PLACES_HUB_CLICKED, { guild_id: e }), (0, s.X)(e);
         };
     return (0, i.jsxs)(r.Fragment, {
         children: [
             (0, i.jsx)('header', {
-                className: g.header,
+                className: p.header,
                 children: (0, i.jsx)(l.FormTitle, {
                     tag: 'h2',
-                    className: g.title,
-                    children: p.intl.string(p.t['qj7o//'])
+                    className: p.title,
+                    children: m.intl.string(m.t['qj7o//'])
                 })
             }),
             (0, i.jsxs)('div', {
-                className: g.grid,
+                className: p.grid,
                 children: [
                     e.map((e) =>
-                        f(
-                            u.ZP.getGuildIconURL({
+                        g(
+                            d.ZP.getGuildIconURL({
                                 id: e.id,
                                 icon: e.icon,
                                 size: 240
@@ -78,8 +77,8 @@ function _() {
                             }
                         )
                     ),
-                    f(l.CompassIcon, p.intl.string(p.t.AhKnz8), () => {
-                        (0, a.AQ)(), d.default.track(m.rMx.ADD_FRIEND_OTHER_PLACES_DISCOVERY_CLICKED), (0, s.uL)(m.Z5c.GUILD_DISCOVERY);
+                    g(l.CompassIcon, m.intl.string(m.t.AhKnz8), () => {
+                        c.default.track(h.rMx.ADD_FRIEND_OTHER_PLACES_DISCOVERY_CLICKED), (0, a.uL)(h.Z5c.GUILD_DISCOVERY);
                     })
                 ]
             })

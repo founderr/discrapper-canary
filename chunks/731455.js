@@ -1,6 +1,6 @@
 n.d(t, {
     Cf: function () {
-        return T;
+        return S;
     },
     Gj: function () {
         return o;
@@ -9,16 +9,16 @@ n.d(t, {
         return h;
     },
     L3: function () {
-        return v;
+        return E;
     },
     U2: function () {
-        return I;
+        return v;
     },
     Vb: function () {
         return p;
     },
     b0: function () {
-        return y;
+        return T;
     },
     dc: function () {
         return _;
@@ -27,22 +27,19 @@ n.d(t, {
         return m;
     },
     jb: function () {
-        return S;
-    },
-    lA: function () {
-        return E;
+        return b;
     },
     mE: function () {
         return g;
     },
     md: function () {
-        return A;
+        return y;
     },
     o3: function () {
         return f;
     },
     zo: function () {
-        return N;
+        return A;
     }
 });
 var r,
@@ -61,10 +58,9 @@ let f = 0,
     m = -2,
     g = -3;
 ((r = o || (o = {}))[(r.Quests = -4)] = 'Quests'), (r[(r.Clans = g)] = 'Clans'), (r[(r.Hub = m)] = 'Hub'), (r[(r.Communities = h)] = 'Communities'), (r[(r.Activity = 1)] = 'Activity'), (r[(r.Music = 2)] = 'Music'), (r[(r.Television = 3)] = 'Television'), (r[(r.Science = 5)] = 'Science'), (r[(r.Education = 6)] = 'Education');
-let E = 1000,
-    v = [1, 2, 3, 5, 6];
+let E = [1, 2, 3, 5, 6];
 ((i = l || (l = {}))[(i.GENERAL_CHATTING = 14)] = 'GENERAL_CHATTING'), (i[(i.GAMING = 1)] = 'GAMING'), (i[(i.MUSIC = 2)] = 'MUSIC'), (i[(i.ENTERTAINMENT = 3)] = 'ENTERTAINMENT'), (i[(i.CREATIVE_ARTS = 4)] = 'CREATIVE_ARTS'), (i[(i.SCIENCE_AND_TECH = 5)] = 'SCIENCE_AND_TECH'), (i[(i.EDUCATION = 6)] = 'EDUCATION'), (i[(i.SPORTS = 7)] = 'SPORTS'), (i[(i.FASHION_AND_BEAUTY = 8)] = 'FASHION_AND_BEAUTY'), (i[(i.RELATIONSHIPS_AND_IDENTITY = 9)] = 'RELATIONSHIPS_AND_IDENTITY'), (i[(i.TRAVEL_AND_FOOD = 10)] = 'TRAVEL_AND_FOOD'), (i[(i.FITNESS_AND_HEALTH = 11)] = 'FITNESS_AND_HEALTH'), (i[(i.FINANCE = 12)] = 'FINANCE'), (i[(i.OTHER = 13)] = 'OTHER'), (i[(i.EMOJI = 43)] = 'EMOJI'), (i[(i.BOTS = 49)] = 'BOTS');
-let I = {
+let v = {
         14: [() => d.intl.string(d.t.D7iWEx), () => d.intl.string(d.t['/L7rGx']), () => d.intl.string(d.t.cGIWjY), () => d.intl.string(d.t.pQ3bLi), () => d.intl.string(d.t.GIaXW1), () => d.intl.string(d.t.BXJCGh), () => d.intl.string(d.t.vuVkq6), () => d.intl.string(d.t.bhfaCQ), () => d.intl.string(d.t.XuOAEB), () => d.intl.string(d.t.i2qs5u)],
         1: [() => d.intl.string(d.t.GIaXW1), () => d.intl.string(d.t['/L7rGx']), () => d.intl.string(d.t.pQ3bLi), () => d.intl.string(d.t.cGIWjY), () => d.intl.string(d.t.bhfaCQ), () => d.intl.string(d.t.XFmNp6), () => d.intl.string(d.t.i2qs5u), () => d.intl.string(d.t['X/WT19']), () => d.intl.string(d.t.GXGNi4), () => d.intl.string(d.t.Kma1j4)],
         2: [() => d.intl.string(d.t.bt4I09), () => d.intl.string(d.t.kPJLKi), () => d.intl.string(d.t['AIm/r6']), () => d.intl.string(d.t.cGIWjY), () => d.intl.string(d.t['ge/d+f']), () => d.intl.string(d.t['6IjJBA']), () => d.intl.string(d.t['9o6KiI']), () => d.intl.string(d.t.D7iWEx), () => d.intl.string(d.t['7ztK/P']), () => d.intl.string(d.t['rD/ntb'])],
@@ -82,8 +78,8 @@ let I = {
         43: [() => d.intl.string(d.t.dl70Ji), () => d.intl.string(d.t.R58PcH), () => d.intl.string(d.t.hDjtaG), () => d.intl.string(d.t.XuOAEB), () => d.intl.string(d.t['/Fgjen']), () => d.intl.string(d.t['FM0+HR']), () => d.intl.string(d.t['OGdz4+']), () => d.intl.string(d.t.ZtggfH), () => d.intl.string(d.t.QiafXV)],
         49: [() => d.intl.string(d.t.QYvZFh), () => d.intl.string(d.t.C2TrLi), () => d.intl.string(d.t['9AEkCw']), () => d.intl.string(d.t['FM0+HR']), () => d.intl.string(d.t['vwjf//']), () => d.intl.string(d.t['Exwe4+']), () => d.intl.string(d.t.QiafXV)]
     },
-    b = ['en-GB'];
-function S() {
+    I = ['en-GB'];
+function b() {
     return (0, d.getAvailableLocales)()
         .map((e) => {
             let t;
@@ -105,11 +101,11 @@ function S() {
                       image: t
                   };
         })
-        .filter((e) => !b.includes(e.value));
+        .filter((e) => !I.includes(e.value));
 }
-function T() {
+function S() {
     return (0, d.getLanguages)()
-        .filter((e) => !b.includes(e.code))
+        .filter((e) => !I.includes(e.code))
         .map((e) =>
             'en-US' === e.code
                 ? {
@@ -119,10 +115,10 @@ function T() {
                 : e
         );
 }
-let y = 40,
-    A = 20;
+let T = 40,
+    y = 20;
 ((a = u || (u = {})).GAME_RECOMMENDATIONS = 'Game Recommendations'), (a.SERVER_RECOMMENDATIONS = 'Server Recommendations'), ((s = c || (c = {}))[(s.Activity = 0)] = 'Activity'), (s[(s.Discover = 1)] = 'Discover'), (s[(s.Education = 2)] = 'Education'), (s[(s.Music = 3)] = 'Music'), (s[(s.Science = 4)] = 'Science'), (s[(s.Stage = 5)] = 'Stage'), (s[(s.Television = 6)] = 'Television'), (s[(s.Server = 7)] = 'Server'), (s[(s.Quest = 8)] = 'Quest');
-let N = {
+let A = {
     facebook: {
         presentation: 'Facebook',
         baseUrl: 'https://facebook.com'
