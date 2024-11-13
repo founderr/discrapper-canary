@@ -126,6 +126,7 @@ var n, r;
     (r.BITE_SIZE_PROFILE_POPOUT = 'bite size profile popout'),
     (r.BLOCKED_PROFILE_POPOUT = 'blocked profile popout'),
     (r.BLOCKED_PROFILE_ACTION_SHEET = 'blocked profile action sheet'),
+    (r.IGNORED_PROFILE_ACTION_SHEET = 'ignored profile action sheet'),
     (r.IGNORE_CONFIRMATION_ACTION_SHEET = 'ignore confirmation action sheet'),
     (r.BLOCK_CONFIRMATION_ACTION_SHEET = 'block confirmation action sheet'),
     (r.PROFILE_PANEL = 'profile panel'),
