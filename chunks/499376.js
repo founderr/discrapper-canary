@@ -18,8 +18,8 @@ var i = t(630388),
     o = t(828061),
     s = t(981631);
 let a = /\.(mp3|m4a|ogg|opus|wav|flac)$/i,
-    r = (e) => 'IMAGE' === e || 'VIDEO' === e || 'CLIP' === e,
-    u = (e) => 'IMAGE' === e || 'VIDEO' === e;
+    r = (e) => 'IMAGE' === e || 'VIDEO' === e || 'CLIP' === e || 'VISUAL_PLACEHOLDER' === e,
+    u = (e) => 'IMAGE' === e || 'VIDEO' === e || 'VISUAL_PLACEHOLDER' === e;
 function d(e, n) {
     let { filename: t, width: r, height: u } = e;
     if (n && null != r && r > 0 && null != u && u > 0) {
@@ -34,8 +34,11 @@ function d(e, n) {
     if (null != e.url && (0, o.O)(t)) return 'PLAINTEXT_PREVIEW';
     return 'OTHER';
 }
-function m(e, n) {
-    let { contentType: t, width: i, height: o } = e;
-    if (n && i > 0 && o > 0) return (0, l.tw)(t) ? 'IMAGE' : (0, l.X2)(t) ? 'VIDEO' : 'INVALID';
-    return 'OTHER';
+function m(e) {
+    let { contentType: n, width: t, height: i } = e;
+    if (t > 0 && i > 0) {
+        if ((0, l.tw)(n)) return 'IMAGE';
+        if ((0, l.X2)(n)) return 'VIDEO';
+    }
+    return 'VISUAL_PLACEHOLDER';
 }

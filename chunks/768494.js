@@ -3,30 +3,31 @@ n.d(t, {
         return r;
     },
     Hv: function () {
-        return _;
+        return p;
     },
     JD: function () {
-        return d;
-    },
-    VY: function () {
-        return c;
-    },
-    y_: function () {
         return f;
     },
+    VY: function () {
+        return d;
+    },
+    y_: function () {
+        return _;
+    },
     ym: function () {
-        return u;
+        return c;
     }
 }),
     n(789020);
 var r,
     i,
-    a = n(406432),
-    s = n(630388),
-    o = n(591759),
-    l = n(981631);
+    a = n(911969),
+    s = n(406432),
+    o = n(630388),
+    l = n(591759),
+    u = n(981631);
 (i = r || (r = {}))[(i.EXPLICIT = 1)] = 'EXPLICIT';
-function u(e) {
+function c(e) {
     var t, n;
     return {
         url: e.url,
@@ -36,6 +37,7 @@ function u(e) {
         placeholder: e.placeholder,
         placeholderVersion: e.placeholder_version,
         contentType: e.content_type,
+        loadingState: e.loading_state,
         contentScanMetadata:
             null != e.content_scan_metadata
                 ? {
@@ -43,14 +45,14 @@ function u(e) {
                       flags: n.flags
                   }
                 : void 0,
-        srcIsAnimated: (0, s.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, l.J0y.IS_ANIMATED)
+        srcIsAnimated: (0, o.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, u.J0y.IS_ANIMATED)
     };
 }
-function c(e) {
-    var t, n, r, i, a;
-    let o = 0;
+function d(e) {
+    var t, n, r, i, s;
+    let l = 0;
     return (
-        (0, s.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, l.J0y.CONTAINS_EXPLICIT_MEDIA) && (o += 1),
+        (0, o.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, u.J0y.CONTAINS_EXPLICIT_MEDIA) && (l += 1),
         {
             url: e.url,
             proxyUrl: e.proxy_url,
@@ -59,22 +61,23 @@ function c(e) {
             contentType: null !== (i = e.content_type) && void 0 !== i ? i : 'unknown/unknown',
             placeholder: e.placeholder,
             placeholderVersion: e.placeholder_version,
+            loadingState: a.f.LOADED_SUCCESS,
             contentScanMetadata:
                 null == e.content_scan_version
                     ? void 0
                     : {
                           version: e.content_scan_version,
-                          flags: o
+                          flags: l
                       },
-            srcIsAnimated: (0, s.yE)(null !== (a = e.flags) && void 0 !== a ? a : 0, l.J0y.IS_ANIMATED)
+            srcIsAnimated: (0, o.yE)(null !== (s = e.flags) && void 0 !== s ? s : 0, u.J0y.IS_ANIMATED)
         }
     );
 }
-function d(e, t) {
+function f(e, t) {
     var n;
     return {
-        ...c(e),
-        type: ((n = e), (0, a.CO)(n.filename) ? 'IMAGE' : (0, a.NU)(n.filename) ? 'VIDEO' : 'INVALID'),
+        ...d(e),
+        type: ((n = e), (0, s.CO)(n.filename) ? 'IMAGE' : (0, s.NU)(n.filename) ? 'VIDEO' : 'INVALID'),
         sourceMetadata: {
             message: t,
             identifier: {
@@ -84,14 +87,14 @@ function d(e, t) {
         }
     };
 }
-function f(e) {
+function _(e) {
     var t;
     return {
         ...e,
-        type: ((t = e), (0, a.tw)(t.contentType) ? 'IMAGE' : (0, a.X2)(t.contentType) && null != t.proxyUrl && null != o.Z.toURLSafe(t.proxyUrl) ? 'VIDEO' : 'INVALID')
+        type: ((t = e), (0, s.tw)(t.contentType) ? 'IMAGE' : (0, s.X2)(t.contentType) && null != t.proxyUrl && null != l.Z.toURLSafe(t.proxyUrl) ? 'VIDEO' : 'INVALID')
     };
 }
-function _(e, t, n) {
+function p(e, t, n) {
     return {
         type: n,
         url: e.url,

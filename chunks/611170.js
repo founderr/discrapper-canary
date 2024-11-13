@@ -1,16 +1,61 @@
-l.d(n, {
-    a: function () {
-        return r;
+t.d(n, {
+    aB: function () {
+        return x;
     },
-    r: function () {
-        return a;
+    rJ: function () {
+        return h;
+    },
+    yF: function () {
+        return p;
     }
 });
-var t = l(591759),
-    i = l(524444);
-function r(e) {
+var l = t(200651),
+    i = t(192379),
+    r = t(916616),
+    a = t(981729),
+    o = t(911969),
+    s = t(558522),
+    c = t(591759),
+    u = t(524444),
+    d = t(981631),
+    m = t(388032),
+    f = t(773907);
+function p(e) {
+    let n = i.useRef(null),
+        t = e.item.originalItem.media;
+    if (t.loadingState === o.f.LOADED_NOT_FOUND)
+        return (0, l.jsx)(a.u, {
+            text: m.intl.string(m.t.UvDfMz),
+            position: 'bottom',
+            align: 'center',
+            targetElementRef: n,
+            children: (e) =>
+                (0, l.jsx)('div', {
+                    ...e,
+                    className: f.notFoundPlaceholder,
+                    role: 'img',
+                    children: (0, l.jsx)(s.Z, {
+                        ref: n,
+                        className: f.brokenImageIcon
+                    })
+                })
+        });
+    let c = t.loadingState === o.f.LOADING ? d.zo9.LOADING : d.zo9.ERROR;
+    return (0, l.jsx)(r.E, {
+        readyState: c,
+        src: '',
+        width: 350,
+        height: 350,
+        maxWidth: e.maxWidth,
+        maxHeight: e.maxHeight,
+        mediaLayoutType: e.mediaLayoutType,
+        useFullWidth: e.useFullWidth,
+        zoomable: !1
+    });
+}
+function x(e) {
     let n = e.item.originalItem.media;
-    return (0, i.Yi)({
+    return (0, u.Yi)({
         ...e,
         alt: e.item.originalItem.description,
         src: n.proxyUrl,
@@ -20,15 +65,15 @@ function r(e) {
         sourceMetadata: { message: e.message }
     });
 }
-function a(e) {
+function h(e) {
     let n = e.item.originalItem.media,
-        l = t.Z.toURLSafe(n.proxyUrl);
-    return null == l
+        t = c.Z.toURLSafe(n.proxyUrl);
+    return null == t
         ? null
-        : (l.searchParams.append('format', 'webp'),
-          (0, i.lV)({
+        : (t.searchParams.append('format', 'webp'),
+          (0, u.lV)({
               ...e,
-              poster: l.toString(),
+              poster: t.toString(),
               alt: e.item.originalItem.description,
               src: n.proxyUrl,
               placeholder: n.placeholder,

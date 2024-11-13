@@ -157,8 +157,10 @@ class D extends (i = o.Component) {
         n !== this.shouldShowTooltip(e, t) && (n ? this.setDomElement() : (this.hasDomElement = !1));
     }
     setDomElement() {
-        let e = c.findDOMNode(this);
-        if (!(0, _.k)(e)) throw Error('Tooltip cannot find DOM node');
+        let e;
+        if (null != this.props.targetElementRef) {
+            if (null == (e = this.props.targetElementRef.current)) return;
+        } else if (((e = c.findDOMNode(this)), !(0, _.k)(e))) throw Error('Tooltip cannot find DOM node');
         (this.domElementRef.current = e), (this.hasDomElement = !0), this.forceUpdate();
     }
     componentWillUnmount() {
@@ -185,7 +187,8 @@ class D extends (i = o.Component) {
         );
     }
     shouldShowTooltip(e, t) {
-        return e.shouldShow && (t.shouldShowTooltip || e.forceOpen);
+        let n = null == e.targetElementRef || null != e.targetElementRef.current;
+        return e.shouldShow && (t.shouldShowTooltip || e.forceOpen) && n;
     }
     renderTooltip() {
         let { text: e, align: t, position: n, color: r, spacing: i, tooltipClassName: a, tooltipStyle: o, tooltipContentClassName: l, disableTooltipPointerEvents: u, onAnimationRest: c, allowOverflow: d, clickableOnMobile: _, hideOnClick: p, tooltipPointerClassName: h } = this.props,
