@@ -1,61 +1,66 @@
-n.d(t, {
+t.d(n, {
     T: function () {
         return h;
     },
     Z: function () {
-        return f;
+        return x;
     }
 }),
-    n(47120);
-var i = n(192379),
-    r = n(259443),
-    l = n(442837),
-    a = n(569545),
-    o = n(199902),
-    s = n(430824),
-    c = n(959457),
-    d = n(594174),
-    u = n(215339);
-let m = new r.Yd('HDStreamingConsumableModal'),
+    t(47120);
+var l = t(192379),
+    i = t(259443),
+    r = t(442837),
+    s = t(569545),
+    a = t(199902),
+    o = t(430824),
+    c = t(158776),
+    d = t(959457),
+    u = t(594174),
+    m = t(215339);
+let f = new i.Yd('HDStreamingConsumableModal'),
     h = (e) => {
-        let t = (0, l.e7)([s.Z], () => s.Z.getGuild(e.guild_id)),
-            n = (0, l.e7)([d.default], () => {
+        let n = (0, r.e7)([o.Z], () => o.Z.getGuild(e.guild_id)),
+            t = (0, r.e7)([u.default], () => {
                 var e;
-                return null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.id;
+                return null === (e = u.default.getCurrentUser()) || void 0 === e ? void 0 : e.id;
             }),
-            r = (0, l.e7)([o.Z], () => o.Z.getAllActiveStreamsForChannel(e.id).filter((e) => e.ownerId !== n)),
-            [u, h] = i.useState(null),
-            [f, p] = i.useState([]);
-        (0, l.e7)(
-            [c.Z],
+            i = (0, r.e7)([a.Z], () => a.Z.getAllActiveStreamsForChannel(e.id).filter((e) => e.ownerId !== t)),
+            m = i.some((e) => {
+                let n = u.default.getUser(e.ownerId);
+                return null != n && c.Z.isMobileOnline(n.id);
+            }),
+            [h, x] = l.useState(null),
+            [g, v] = l.useState([]);
+        (0, r.e7)(
+            [d.Z],
             () => {
-                if (null == u || Date.now() - u > 10000) {
-                    let e = r.map((e) => {
-                        var t;
-                        let n = (0, a.V9)(e),
-                            i = c.Z.getRTCConnection(n);
-                        return null == i ? void 0 : null === (t = i.getVideoStats()) || void 0 === t ? void 0 : t.inbound_bitrate_estimate_percentile99;
+                if (null == h || Date.now() - h > 10000) {
+                    let e = i.map((e) => {
+                        var n;
+                        let t = (0, s.V9)(e),
+                            l = d.Z.getRTCConnection(t);
+                        return null == l ? void 0 : null === (n = l.getVideoStats()) || void 0 === n ? void 0 : n.inbound_bitrate_estimate_percentile99;
                     });
-                    m.info('Setting bitrates', e), p(e), h(Date.now());
+                    f.info('Setting bitrates', e), v(e), x(Date.now());
                 }
             },
-            [u, r]
+            [h, i]
         );
-        let _ = i.useMemo(() => {
-            if (0 === f.length) return !0;
-            if (f.some((e) => null == e)) return !1;
-            for (let e of f) if (null == e || e < 3500000) return !1;
+        let j = l.useMemo(() => {
+            if (0 === g.length) return !0;
+            if (g.some((e) => null == e)) return !1;
+            for (let e of g) if (null == e || e < 3500000) return !1;
             return !0;
-        }, [f]);
-        return null != t && 0 === t.premiumTier && _;
+        }, [g]);
+        return null != n && 0 === n.premiumTier && j && !m;
     },
-    f = (e, t) => {
-        let n = (0, l.e7)([d.default], () => {
+    x = (e, n) => {
+        let t = (0, r.e7)([u.default], () => {
                 var e;
-                return null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.id;
+                return null === (e = u.default.getCurrentUser()) || void 0 === e ? void 0 : e.id;
             }),
-            i = (0, l.e7)([o.Z], () => o.Z.getAllActiveStreamsForChannel(e.id).filter((e) => e.ownerId !== n)),
-            r = (0, u.j)(t),
-            a = h(e);
-        return r && a && i.length > 0;
+            l = (0, r.e7)([a.Z], () => a.Z.getAllActiveStreamsForChannel(e.id).filter((e) => e.ownerId !== t)),
+            i = (0, m.j)(n),
+            s = h(e);
+        return i && s && l.length > 0;
     };
