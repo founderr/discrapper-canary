@@ -37,8 +37,8 @@ var i,
     y = n(335131),
     P = n(120619),
     M = n(578976),
-    L = n(955843),
-    R = n(868554),
+    R = n(955843),
+    L = n(868554),
     k = n(464792),
     O = n(605236),
     D = n(243778),
@@ -140,7 +140,7 @@ function eP(e) {
             (0, eb.Z)(U, t.id, eN.ZY5.GUILD_CHANNEL);
         }, [U, t.id, s, l]),
         F = (0, K.x8)('GoLiveButton'),
-        V = (0, L.Z)(t, 'GoLiveButton'),
+        V = (0, R.Z)(t, 'GoLiveButton'),
         z = (0, O.wE)(m.z.CONSUMABLE_HD_POTION_UPSELL),
         ee = (V && !z) || (null != t.hdStreamingUntil && new Date(t.hdStreamingUntil) > new Date()),
         et = () => {
@@ -208,7 +208,7 @@ function eP(e) {
                       }
                   })
                 : I
-                  ? (0, a.jsx)(R.Z, {
+                  ? (0, a.jsx)(L.Z, {
                         channel: t,
                         buttonRef: B,
                         userId: t.hdStreamingBuyerId,
@@ -217,32 +217,50 @@ function eP(e) {
                             E(!1);
                         }
                     })
-                  : F && 0 === S.length
+                  : null != t.hdStreamingUntil && new Date(t.hdStreamingUntil) > new Date()
                     ? (0, a.jsx)(D.ZP, {
-                          contentTypes: [m.z.TRIAL_FOR_ALL_STREAM_POPOUT],
+                          contentTypes: [m.z.HD_STREAMING_POTION_BANNER],
                           bypassAutoDismiss: !0,
                           children: (e) => {
-                              let { visibleContent: t, markAsDismissed: n } = e;
-                              if (t === m.z.TRIAL_FOR_ALL_STREAM_POPOUT)
-                                  return (0, a.jsx)(J.h, {
+                              let { visibleContent: n, markAsDismissed: i } = e;
+                              if (n === m.z.HD_STREAMING_POTION_BANNER)
+                                  return (0, a.jsx)(L.Z, {
+                                      channel: t,
                                       buttonRef: B,
-                                      dismissed: !1,
-                                      onDismiss: () => n(eT.L.USER_DISMISS)
+                                      userId: t.hdStreamingBuyerId,
+                                      onClose: () => {
+                                          i(eT.L.USER_DISMISS);
+                                      },
+                                      dismissibleContent: !0
                                   });
                           }
                       })
-                    : w && A.hqStreamingIsEnabled
-                      ? (0, a.jsx)(X.$, {
-                            buttonRef: B,
-                            dismissed: A.hqStreamingPopoutDismissed,
-                            onDismiss: ei
+                    : F && 0 === S.length
+                      ? (0, a.jsx)(D.ZP, {
+                            contentTypes: [m.z.TRIAL_FOR_ALL_STREAM_POPOUT],
+                            bypassAutoDismiss: !0,
+                            children: (e) => {
+                                let { visibleContent: t, markAsDismissed: n } = e;
+                                if (t === m.z.TRIAL_FOR_ALL_STREAM_POPOUT)
+                                    return (0, a.jsx)(J.h, {
+                                        buttonRef: B,
+                                        dismissed: !1,
+                                        onDismiss: () => n(eT.L.USER_DISMISS)
+                                    });
+                            }
                         })
-                      : (0, a.jsx)(q.b, {
-                            channel: t,
-                            buttonRef: B,
-                            dismissed: A.hqStreamingOptInPopoutDismissed,
-                            onDismiss: el
-                        }),
+                      : w && A.hqStreamingIsEnabled
+                        ? (0, a.jsx)(X.$, {
+                              buttonRef: B,
+                              dismissed: A.hqStreamingPopoutDismissed,
+                              onDismiss: ei
+                          })
+                        : (0, a.jsx)(q.b, {
+                              channel: t,
+                              buttonRef: B,
+                              dismissed: A.hqStreamingOptInPopoutDismissed,
+                              onDismiss: el
+                          }),
             (0, a.jsx)(Q.Z, {
                 children: (0, a.jsx)(f.Popout, {
                     renderPopout: (e) => {
@@ -285,7 +303,7 @@ function eM(e) {
         : null;
 }
 ((l = i || (i = {})).ACTIVITY = 'ACTIVITY'), (l.STREAM = 'STREAM'), (l.CALL = 'CALL'), (l.EVENT = 'EVENT');
-let eL = r.memo(function (e) {
+let eR = r.memo(function (e) {
     let { connectedActivityApplicationId: t, currentUser: n, onDisconnectCall: i, channel: l } = e,
         s = (0, p.e7)([N.Z], () => N.Z.getSelectedParticipant(l.id)),
         { reducedMotion: o } = r.useContext(f.AccessibilityPreferencesContext),
@@ -398,7 +416,7 @@ let eL = r.memo(function (e) {
         }
     });
 });
-function eR(e) {
+function eL(e) {
     let { channel: t, cameraUnavailable: n, hasCameraPermission: i, currentUser: l } = e,
         s = (0, _.bp)(),
         { reachedLimit: c, limit: d } = (0, ef.Z)(t),
@@ -464,16 +482,16 @@ t.ZP = function (e) {
             return (null !== (e = null == E ? void 0 : E.channelId) && void 0 !== e ? e : ed.Z.getVoiceChannelId()) === n.id;
         }),
         M = (0, S.Z)(n, !0),
-        L = (0, p.e7)([I.ZP], () => {
+        R = (0, p.e7)([I.ZP], () => {
             let e = I.ZP.getSelfEmbeddedActivityForChannel(n.id);
             return null != e ? e.applicationId : null;
         }),
-        { reachedLimit: R, limit: k } = (0, ef.Z)(n),
+        { reachedLimit: L, limit: k } = (0, ef.Z)(n),
         { analyticsLocations: O } = (0, Z.ZP)(b.Z.VOICE_CONTROL_TRAY);
     if (!P)
         return (0, a.jsx)(Z.Gt, {
             value: O,
-            children: (0, a.jsx)(eR, {
+            children: (0, a.jsx)(eL, {
                 channel: n,
                 cameraUnavailable: u,
                 hasCameraPermission: m,
@@ -520,7 +538,7 @@ t.ZP = function (e) {
                                         cameraUnavailable: u,
                                         onChange: ey,
                                         onCameraUnavailable: eI.Z,
-                                        channelLimitReached: R,
+                                        channelLimitReached: L,
                                         channelLimit: k,
                                         popoutOpen: i,
                                         onPopoutClick: n
@@ -577,8 +595,8 @@ t.ZP = function (e) {
                                   children: (0, a.jsx)(ev.Z, { channel: n })
                               })
                             : null,
-                        (0, a.jsx)(eL, {
-                            connectedActivityApplicationId: L,
+                        (0, a.jsx)(eR, {
+                            connectedActivityApplicationId: R,
                             currentUser: c,
                             channel: n,
                             onDisconnectCall: l

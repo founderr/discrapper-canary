@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return T;
     }
 }),
     n(47120);
@@ -8,42 +8,44 @@ var i = n(200651),
     l = n(192379),
     a = n(120356),
     r = n.n(a),
-    s = n(100621),
-    o = n(442837),
-    c = n(481060),
-    d = n(846027),
-    u = n(358221),
-    h = n(909820),
-    p = n(518950),
-    m = n(937995),
-    f = n(131951),
-    g = n(594174),
-    C = n(63063),
-    x = n(120619),
-    v = n(578976),
-    _ = n(981631),
-    I = n(37113),
-    E = n(388032),
-    b = n(277865),
-    Z = n(454120);
-function N(e) {
-    let { buttonRef: t, channel: a, userId: N, streaming: S, onClose: T } = e,
-        j = (0, o.e7)([g.default], () => g.default.getUser(N)),
-        A = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
-        y = (0, o.e7)([x.Z], () => x.Z.getPreviousGoLiveSettings()),
-        P = (0, o.e7)([u.Z], () => u.Z.getChatOpen(a.id)),
-        M = S && null != y && y.resolution !== I.LY.RESOLUTION_1440 && y.frameRate !== I.ws.FPS_60,
-        L = l.useContext(m.h9),
-        R = l.useRef(0),
-        [k, O] = l.useState('0');
+    s = n(913527),
+    o = n.n(s),
+    c = n(100621),
+    d = n(442837),
+    u = n(481060),
+    h = n(846027),
+    p = n(358221),
+    m = n(909820),
+    f = n(518950),
+    g = n(937995),
+    C = n(131951),
+    x = n(594174),
+    v = n(63063),
+    _ = n(120619),
+    I = n(578976),
+    E = n(981631),
+    b = n(37113),
+    Z = n(388032),
+    N = n(277865),
+    S = n(454120);
+function T(e) {
+    let { buttonRef: t, channel: a, userId: s, streaming: T, onClose: j, dismissibleContent: A } = e,
+        y = (0, d.e7)([x.default], () => x.default.getUser(s)),
+        P = (0, d.e7)([x.default], () => x.default.getCurrentUser()),
+        M = (0, d.e7)([_.Z], () => _.Z.getPreviousGoLiveSettings()),
+        R = (0, d.e7)([p.Z], () => p.Z.getChatOpen(a.id)),
+        L = T && null != M && M.resolution !== b.LY.RESOLUTION_1440 && M.frameRate !== b.ws.FPS_60,
+        k = l.useContext(g.h9),
+        O = l.useRef(0),
+        [D, w] = l.useState('0');
     l.useEffect(() => {
-        (R.current += 1), O(String(R.current));
-    }, [P]);
-    let D = l.useMemo(() => {
+        (O.current += 1), w(String(O.current));
+    }, [R]);
+    let B = l.useMemo(() => {
             let e = 30;
-            return L && (e = -30), (R.current += 1), O(String(R.current)), e;
-        }, [L]),
-        w = (0, c.useSpring)({
+            return k && (e = -30), (O.current += 1), w(String(O.current)), e;
+        }, [k]),
+        U = (0, u.useSpring)({
             from: {
                 opacity: 0,
                 transform: 'translateY(20px)'
@@ -54,45 +56,52 @@ function N(e) {
             },
             config: { duration: 500 }
         }),
-        { avatarSrc: B, eventHandlers: U } = (0, p.Z)({
-            user: j,
-            size: c.AvatarSizes.SIZE_48,
+        { avatarSrc: H, eventHandlers: G } = (0, f.Z)({
+            user: y,
+            size: u.AvatarSizes.SIZE_48,
             animateOnHover: !0
         }),
-        H = l.useMemo(
-            () =>
-                null == j || null == A
-                    ? ''
-                    : j.id === A.id
-                      ? E.intl.string(E.t.IjKvNT)
-                      : !0 === S
-                        ? E.intl.format(E.t.JkWoqK, {
-                              username: j.username,
-                              helpCenterLink: C.Z.getArticleURL(_.BhN.HD_STREAMING_POTION)
-                          })
-                        : E.intl.formatToPlainString(E.t.vNbVXF, { username: j.username }),
-            [j, A, S]
-        ),
-        G = S && !M,
-        F = l.useMemo(() => (M ? E.intl.string(E.t.o7NIjY) : G ? E.intl.string(E.t.r6xhBw) : E.intl.string(E.t.yKw8Dg)), [G, M]);
-    if (null == j || null == A) return null;
-    let V = () => {
-        if (M) {
-            let e = x.Z.getPreviousGoLiveSettings(),
-                t = f.Z.getGoLiveSource();
+        F = T && !L,
+        V = a.hdStreamingUntil;
+    if (null == V || null == y || null == P) return null;
+    let z = o()(V).diff(o()(), 'hours'),
+        W = (() => {
+            if (A) {
+                var e;
+                return Z.intl.format(Z.t['6LrV9f'], {
+                    username: null !== (e = y.globalName) && void 0 !== e ? e : y.username,
+                    num: z,
+                    helpCenterLink: v.Z.getArticleURL(E.BhN.HD_STREAMING_POTION)
+                });
+            }
+            return y.id === P.id
+                ? Z.intl.string(Z.t.IjKvNT)
+                : !0 === T
+                  ? Z.intl.format(Z.t.JkWoqK, {
+                        username: y.username,
+                        helpCenterLink: v.Z.getArticleURL(E.BhN.HD_STREAMING_POTION)
+                    })
+                  : Z.intl.formatToPlainString(Z.t.vNbVXF, { username: y.username });
+        })(),
+        K = L ? Z.intl.string(Z.t.o7NIjY) : F ? Z.intl.string(Z.t.r6xhBw) : Z.intl.string(Z.t.yKw8Dg);
+    if (null == y || null == P) return null;
+    let Y = () => {
+        if (L) {
+            let e = _.Z.getPreviousGoLiveSettings(),
+                t = C.Z.getGoLiveSource();
             if (null == e) {
-                T();
+                j();
                 return;
             }
-            let n = (0, v.s)(e.resolution, e.frameRate, t);
-            d.Z.setGoLiveSource(n), T();
+            let n = (0, I.s)(e.resolution, e.frameRate, t);
+            h.Z.setGoLiveSource(n), j();
             return;
         }
-        if (G) {
-            T();
+        if (F) {
+            j();
             return;
         }
-        (0, c.openModalLazy)(async () => {
+        (0, u.openModalLazy)(async () => {
             let { default: e } = await Promise.all([n.e('46746'), n.e('19942')]).then(n.bind(n, 60594));
             return (t) =>
                 (0, i.jsx)(e, {
@@ -100,53 +109,53 @@ function N(e) {
                     ...t
                 });
         }),
-            T();
+            j();
     };
-    return (0, i.jsx)(h.ZP, {
-        children: (0, i.jsx)(c.ReferencePositionLayer, {
+    return (0, i.jsx)(m.ZP, {
+        children: (0, i.jsx)(u.ReferencePositionLayer, {
             targetRef: t,
             position: 'top',
             align: 'center',
-            spacing: D,
+            spacing: B,
             nudgeAlignIntoViewport: !1,
-            positionKey: k,
+            positionKey: D,
             children: () =>
-                (0, i.jsxs)(s.animated.div, {
-                    style: w,
-                    className: b.banner,
+                (0, i.jsxs)(c.animated.div, {
+                    style: U,
+                    className: N.banner,
                     children: [
                         (0, i.jsxs)('div', {
                             children: [
-                                (0, i.jsx)(c.Avatar, {
-                                    src: B,
-                                    'aria-label': j.username,
-                                    size: c.AvatarSizes.SIZE_48,
-                                    ...U
+                                (0, i.jsx)(u.Avatar, {
+                                    src: H,
+                                    'aria-label': y.username,
+                                    size: u.AvatarSizes.SIZE_48,
+                                    ...G
                                 }),
                                 (0, i.jsx)('img', {
-                                    className: b.potion,
-                                    src: Z,
+                                    className: N.potion,
+                                    src: S,
                                     alt: ''
                                 })
                             ]
                         }),
-                        (0, i.jsx)(c.Heading, {
+                        (0, i.jsx)(u.Heading, {
                             variant: 'heading-sm/medium',
-                            children: H
+                            children: W
                         }),
                         (0, i.jsxs)('div', {
-                            className: b.subsection,
+                            className: N.subsection,
                             children: [
-                                (0, i.jsx)(c.Button, {
-                                    onClick: V,
-                                    className: r()({ [b.actionButton]: !0 !== S }),
-                                    children: F
+                                (0, i.jsx)(u.Button, {
+                                    onClick: Y,
+                                    className: r()({ [N.actionButton]: !0 !== T }),
+                                    children: K
                                 }),
-                                !G &&
-                                    (0, i.jsx)(c.Clickable, {
-                                        className: b.x,
-                                        onClick: T,
-                                        children: (0, i.jsx)(c.XSmallIcon, { name: 'close' })
+                                !F &&
+                                    (0, i.jsx)(u.Clickable, {
+                                        className: N.x,
+                                        onClick: j,
+                                        children: (0, i.jsx)(u.XSmallIcon, { name: 'close' })
                                     })
                             ]
                         })
