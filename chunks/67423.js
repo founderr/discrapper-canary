@@ -12,13 +12,16 @@ n.d(t, {
         return l;
     },
     Tk: function () {
-        return f;
+        return _;
     },
     cO: function () {
         return u;
     },
     cj: function () {
         return a;
+    },
+    qi: function () {
+        return f;
     },
     qu: function () {
         return d;
@@ -51,7 +54,15 @@ function c(e) {
 function d(e, t) {
     return e === t ? 0 : null == t ? 1 : null == e ? -1 : e.length > t.length ? 1 : e.length < t.length ? -1 : e > t ? 1 : -1;
 }
-class f {
+function f(e) {
+    if (null == e || !/^\d{17,19}$/.test(e)) return !1;
+    try {
+        return s(e) >= a;
+    } catch {
+        return !1;
+    }
+}
+class _ {
     next() {
         if (this.seq > 4095) throw Error('Snowflake sequence number overflow: '.concat(this.seq));
         return this.seq++;

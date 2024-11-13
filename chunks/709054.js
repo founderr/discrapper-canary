@@ -44,6 +44,9 @@ t.default = {
     entries: function (e) {
         return Object.entries(e);
     },
+    isProbablyAValidSnowflake: function (e) {
+        return a.qi(e);
+    },
     castChannelIdAsMessageId: function (e) {
         return e;
     },
