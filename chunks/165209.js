@@ -1,6 +1,6 @@
 i.d(t, {
     Z: function () {
-        return h;
+        return p;
     }
 });
 var n = i(200651);
@@ -8,48 +8,49 @@ i(192379);
 var a = i(481060),
     r = i(782568),
     o = i(626135),
-    l = i(132871),
-    s = i(981631),
-    c = i(388032),
-    d = i(432173),
-    u = i(820305);
-function h() {
-    let e = (0, l.useApplicationDirectoryHistory)((e) => e.guildId);
+    l = i(63063),
+    s = i(132871),
+    c = i(981631),
+    d = i(388032),
+    u = i(432173),
+    h = i(820305);
+function p() {
+    let e = (0, s.useApplicationDirectoryHistory)((e) => e.guildId);
     return (0, n.jsxs)('div', {
-        className: d.container,
+        className: u.container,
         role: 'contentinfo',
         children: [
             (0, n.jsx)('img', {
-                className: d.image,
-                src: u,
+                className: u.image,
+                src: h,
                 alt: ''
             }),
             (0, n.jsxs)('div', {
-                className: d.content,
+                className: u.content,
                 children: [
                     (0, n.jsx)(a.Heading, {
                         variant: 'heading-md/semibold',
-                        children: c.intl.string(c.t['mKC+Ii'])
+                        children: d.intl.string(d.t['kw8/ER'])
                     }),
                     (0, n.jsx)(a.Text, {
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
-                        children: c.intl.string(c.t.jDmham)
+                        children: d.intl.string(d.t.GZoV1N)
                     })
                 ]
             }),
             (0, n.jsx)(a.Button, {
                 size: a.Button.Sizes.SMALL,
                 onClick: function () {
-                    o.default.track(s.rMx.APP_DIRECTORY_CTA_CLICKED, {
+                    o.default.track(c.rMx.APP_DIRECTORY_CTA_CLICKED, {
                         cta: 'new_to_apps',
-                        current_page: l.ApplicationDirectoryViews.HOME,
+                        current_page: s.ApplicationDirectoryViews.HOME,
                         guild_id: e
                     }),
-                        (0, r.Z)('https://discord.com/blog/how-to-use-discord-apps');
+                        (0, r.Z)(l.Z.getAppsSupportURL(c.BhN.APPS_LEARN_MORE));
                 },
-                className: d.button,
-                children: c.intl.string(c.t['B90I9/'])
+                className: u.button,
+                children: d.intl.string(d.t['B90I9/'])
             })
         ]
     });

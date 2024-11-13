@@ -17,51 +17,56 @@ var i = t(200651),
     h = t(597397),
     f = t(983008),
     C = t(478408);
-function v() {
-    let e = (0, r.ZP)(),
-        n = (0, a.ap)(e) ? C : f,
-        t = l.useCallback(() => {
-            (0, s.Z)(c.Z.getArticleURL(m.BhN.LAUNCHING_APPS_WITH_SHAPES_BUTTON));
+function v(e) {
+    let { showImage: n = !0, padding: t = !1 } = e,
+        v = (0, r.ZP)(),
+        x = (0, a.ap)(v) ? C : f,
+        _ = l.useCallback(() => {
+            (0, s.Z)(c.Z.getAppsSupportURL(m.BhN.APPS_LEARN_MORE));
         }, []),
-        { trackSectionImpressionRef: v } = (0, u.Z)({
+        { trackSectionImpressionRef: N } = (0, u.Z)({
             sectionName: d.L3.NEW_TO_APPS,
             numItems: 1,
             numVisibleItems: 1
         });
-    return (0, i.jsxs)('div', {
-        ref: (e) => (v.current = e),
-        className: h.container,
-        children: [
-            (0, i.jsx)('img', {
-                className: h.image,
-                src: n,
-                alt: '',
-                'aria-hidden': !0
-            }),
-            (0, i.jsxs)('div', {
-                className: h.body,
-                children: [
-                    (0, i.jsx)(o.Heading, {
-                        variant: 'heading-lg/bold',
-                        color: 'header-primary',
-                        children: p.intl.string(p.t['kw8/ER'])
+    return (0, i.jsx)('div', {
+        className: t ? h.containerPadding : void 0,
+        children: (0, i.jsxs)('div', {
+            ref: (e) => (N.current = e),
+            className: h.container,
+            children: [
+                n &&
+                    (0, i.jsx)('img', {
+                        className: h.image,
+                        src: x,
+                        alt: '',
+                        'aria-hidden': !0
                     }),
-                    (0, i.jsx)(o.Text, {
-                        variant: 'text-xs/normal',
-                        color: 'text-normal',
-                        children: p.intl.string(p.t.GZoV1N)
-                    })
-                ]
-            }),
-            (0, i.jsx)(o.Button, {
-                size: o.Button.Sizes.MEDIUM,
-                'aria-label': p.intl.formatToPlainString(p.t.xx5Sur, {
-                    sectionTitle: p.intl.string(p.t['kw8/ER']),
-                    sectionBody: p.intl.string(p.t.GZoV1N)
+                (0, i.jsxs)('div', {
+                    className: h.body,
+                    children: [
+                        (0, i.jsx)(o.Heading, {
+                            variant: 'heading-lg/bold',
+                            color: 'header-primary',
+                            children: p.intl.string(p.t['kw8/ER'])
+                        }),
+                        (0, i.jsx)(o.Text, {
+                            variant: 'text-xs/normal',
+                            color: 'text-normal',
+                            children: p.intl.string(p.t.GZoV1N)
+                        })
+                    ]
                 }),
-                onClick: t,
-                children: p.intl.string(p.t.Ye51oa)
-            })
-        ]
+                (0, i.jsx)(o.Button, {
+                    size: o.Button.Sizes.MEDIUM,
+                    'aria-label': p.intl.formatToPlainString(p.t.xx5Sur, {
+                        sectionTitle: p.intl.string(p.t['kw8/ER']),
+                        sectionBody: p.intl.string(p.t.GZoV1N)
+                    }),
+                    onClick: _,
+                    children: p.intl.string(p.t.Ye51oa)
+                })
+            ]
+        })
     });
 }
