@@ -19,22 +19,23 @@ var l = n(200651),
     x = n(600164),
     g = n(436774),
     p = n(933843),
-    j = n(140465),
-    v = n(1163),
-    C = n(592125),
-    S = n(944486),
-    _ = n(594174),
-    Z = n(74538),
-    I = n(451467),
-    T = n(122186),
-    N = n(37113),
-    b = n(981631),
-    w = n(474936),
-    y = n(388032),
-    E = n(410894),
-    R = n(13458),
-    M = n(113207);
-function k(e) {
+    v = n(140465),
+    j = n(1163),
+    C = n(774026),
+    S = n(592125),
+    _ = n(944486),
+    Z = n(594174),
+    I = n(74538),
+    T = n(451467),
+    N = n(122186),
+    b = n(37113),
+    w = n(981631),
+    y = n(474936),
+    E = n(388032),
+    R = n(410894),
+    M = n(13458),
+    k = n(113207);
+function A(e) {
     let { analyticsLocation: t, onClose: i } = e;
     (0, u.openModalLazy)(async () => {
         let { default: e } = await n.e('28479').then(n.bind(n, 78865));
@@ -48,22 +49,22 @@ function k(e) {
 }
 function P() {
     return (0, l.jsxs)('div', {
-        className: R.toolTipTextContainer,
+        className: M.toolTipTextContainer,
         children: [
             (0, l.jsx)(u.NitroWheelIcon, {
                 size: 'md',
                 color: g.JX.PREMIUM_TIER_2,
-                className: s()(R.premiumIcon)
+                className: s()(M.premiumIcon)
             }),
             (0, l.jsx)(u.Text, {
-                className: R.upsellText,
+                className: M.upsellText,
                 variant: 'text-sm/medium',
-                children: y.intl.string(y.t.sEAnVF)
+                children: E.intl.string(E.t.sEAnVF)
             })
         ]
     });
 }
-function A(e) {
+function B(e) {
     let t,
         n,
         { type: i, selected: r, needsPremium: a, needsDemo: o, analyticsLocation: c, onClick: d, onClose: f, setIsHovering: h } = e,
@@ -71,142 +72,151 @@ function A(e) {
     return (
         a
             ? ((t = (0, l.jsx)(u.TooltipContainer, {
-                  tooltipClassName: R.tooltip,
+                  tooltipClassName: M.tooltip,
                   spacing: 6,
-                  'aria-label': y.intl.string(y.t.sEAnVF),
+                  'aria-label': E.intl.string(E.t.sEAnVF),
                   text: (0, l.jsx)(P, {}),
                   children: (0, l.jsx)('div', {
-                      className: R.textContainer,
+                      className: M.textContainer,
                       onMouseEnter: () => h(!0),
                       onMouseLeave: () => h(!1),
                       children: (0, l.jsx)(u.Text, {
                           variant: 'text-xs/bold',
-                          className: s()(R.selectorNitroText, R.enhancedSelectorNitroText),
+                          className: s()(M.selectorNitroText, M.enhancedSelectorNitroText),
                           children: x
                       })
                   })
               })),
               (n = () =>
-                  k({
+                  A({
                       analyticsLocation: c,
                       onClose: f
                   })))
             : ((t = (0, l.jsx)('div', {
-                  className: R.textContainer,
+                  className: M.textContainer,
                   children: (0, l.jsx)(u.Text, {
                       variant: 'text-xs/normal',
-                      className: s()(R.selectorText, { [R.enhancedSelectorNitroText]: o }),
+                      className: s()(M.selectorText, { [M.enhancedSelectorNitroText]: o }),
                       children: x
                   })
               })),
               (n = () => d(m))),
         {
             content: t,
-            className: s()(R.selectorButton, {
-                [R.selectorButtonSelected]: r,
-                [R.perksDemo]: o,
-                [R.premiumUpsell]: a
+            className: s()(M.selectorButton, {
+                [M.selectorButtonSelected]: r,
+                [M.perksDemo]: o,
+                [M.premiumUpsell]: a
             }),
             onClick: n
         }
     );
 }
 function L(e) {
-    let { onClose: t, selectedPreset: n, selectedResolution: r, selectedFPS: s, onResolutionChange: a, onFPSChange: g, onPresetChange: P, targetGuildPremiumTier: L, captureDeviceSelected: B } = e,
-        G = (0, d.e7)([_.default], () => {
-            let e = _.default.getCurrentUser();
+    let { onClose: t, selectedPreset: n, selectedResolution: r, selectedFPS: s, onResolutionChange: a, onFPSChange: g, onPresetChange: P, targetGuildPremiumTier: L, captureDeviceSelected: G } = e,
+        D = (0, d.e7)([Z.default], () => {
+            let e = Z.default.getCurrentUser();
             return o()(null != e, 'StreamSettings: user cannot be undefined'), e;
         }),
-        D = (0, d.e7)([S.Z, C.Z], () => C.Z.getChannel(S.Z.getVoiceChannelId())),
-        O = Z.ZP.canStreamQuality(Z.U2.MID, G),
-        { location: U } = (0, h.O)(),
-        F = (0, m.Zq)({ autoTrackExposure: !1 }),
-        H = (0, Z.I5)(G, w.p9.TIER_1);
-    v.Z.useExperiment(
+        O = (0, d.e7)([_.Z, S.Z], () => S.Z.getChannel(_.Z.getVoiceChannelId())),
+        U = I.ZP.canStreamQuality(I.U2.MID, D),
+        { location: F } = (0, h.O)(),
+        H = (0, m.Zq)({ autoTrackExposure: !1 }),
+        W = (0, I.I5)(D, y.p9.TIER_1);
+    j.Z.useExperiment(
         { location: 'Go Live Modal' },
         {
             autoTrackExposure: !0,
-            disable: H
+            disable: W
         }
     );
-    let W = (0, j.x8)('StreamSettings'),
-        V = (0, p.So)(c.q.STREAM_HIGH_QUALITY),
-        z = (!O && !F) || V,
-        [K, Y] = i.useState(!1),
-        X = B ? N.z8 : N.WC,
-        J = {
-            ...U,
-            section: b.jXE.STREAM_SETTINGS
+    let V = (0, v.x8)('StreamSettings'),
+        z = Z.default.getUser(null == O ? void 0 : O.hdStreamingBuyerId),
+        K = null != O && null != O.hdStreamingUntil && new Date(O.hdStreamingUntil) > new Date() && null != z,
+        Y = (0, p.So)(c.q.STREAM_HIGH_QUALITY),
+        X = (!U && !H) || Y,
+        [J, q] = i.useState(!1),
+        Q = G ? b.z8 : b.WC,
+        $ = {
+            ...F,
+            section: w.jXE.STREAM_SETTINGS
         },
-        q = (0, l.jsx)(u.ButtonGroup, {
-            buttons: X.map((e) =>
-                A({
+        ee = (0, l.jsx)(u.ButtonGroup, {
+            buttons: Q.map((e) =>
+                B({
                     type: e,
                     selected: e.value === r,
-                    needsPremium: !(0, I.Z)(n, e.value, s, G, L, D),
-                    needsDemo: (V || W) && e.value !== N.LY.RESOLUTION_720,
-                    analyticsLocation: J,
+                    needsPremium: !(0, T.Z)(n, e.value, s, D, L, O),
+                    needsDemo: (Y || V) && e.value !== b.LY.RESOLUTION_720,
+                    analyticsLocation: $,
                     onClick: () => a(e.value),
                     onClose: t,
-                    setIsHovering: Y
+                    setIsHovering: q
                 })
             )
         }),
-        Q = (0, l.jsx)(u.ButtonGroup, {
-            buttons: N.k0.map((e) =>
-                A({
+        et = (0, l.jsx)(u.ButtonGroup, {
+            buttons: b.k0.map((e) =>
+                B({
                     type: e,
                     selected: e.value === s,
-                    needsPremium: !(0, I.Z)(n, r, e.value, G, L, D),
-                    needsDemo: (V || W) && e.value === N.ws.FPS_60,
-                    analyticsLocation: J,
+                    needsPremium: !(0, T.Z)(n, r, e.value, D, L, O),
+                    needsDemo: (Y || V) && e.value === b.ws.FPS_60,
+                    analyticsLocation: $,
                     onClick: () => g(e.value),
                     onClose: t,
-                    setIsHovering: Y
+                    setIsHovering: q
                 })
             )
         }),
-        $ = [
+        en = [
             {
-                value: N.tI.PRESET_VIDEO,
-                label: y.intl.string(y.t.HcwHc3)
+                value: b.tI.PRESET_VIDEO,
+                label: E.intl.string(E.t.HcwHc3)
             },
-            ...(B
+            ...(G
                 ? []
                 : [
                       {
-                          value: N.tI.PRESET_DOCUMENTS,
-                          label: y.intl.string(y.t['/RfohI'])
+                          value: b.tI.PRESET_DOCUMENTS,
+                          label: E.intl.string(E.t['/RfohI'])
                       }
                   ]),
             {
-                value: N.tI.PRESET_CUSTOM,
-                label: y.intl.string(y.t['+eOtrK'])
+                value: b.tI.PRESET_CUSTOM,
+                label: E.intl.string(E.t['+eOtrK'])
             }
         ],
-        ee =
-            n === N.tI.PRESET_DOCUMENTS
+        el =
+            n === b.tI.PRESET_DOCUMENTS
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsx)(x.Z, {
                               children: (0, l.jsx)(u.FormItem, {
-                                  title: y.intl.string(y.t.rHyPXl),
-                                  titleClassName: E.formItemTitleSlim,
-                                  className: R.documentModeGroup,
+                                  title: E.intl.string(E.t.rHyPXl),
+                                  titleClassName: R.formItemTitleSlim,
+                                  className: M.documentModeGroup,
                                   children: (0, l.jsx)(u.Text, {
                                       variant: 'text-xs/normal',
-                                      children: y.intl.format(y.t['U+hmam'], { fps: s })
+                                      children: E.intl.format(E.t['U+hmam'], { fps: s })
                                   })
                               })
                           }),
-                          z
-                              ? (0, l.jsx)(T.Z, {
-                                    message: y.intl.string(y.t.deDogI),
+                          X
+                              ? (0, l.jsx)(N.Z, {
+                                    message: E.intl.string(E.t.deDogI),
                                     onClose: t,
-                                    openStreamUpsellModal: k
+                                    openStreamUpsellModal: A
                                 })
                               : null,
-                          W && (0, l.jsx)(T.c, {})
+                          V && (0, l.jsx)(N.c, {}),
+                          K &&
+                              null != O.hdStreamingUntil &&
+                              (0, l.jsx)(C.Z, {
+                                  streamingUntil: O.hdStreamingUntil,
+                                  user: z,
+                                  channel: O
+                              })
                       ]
                   })
                 : (0, l.jsxs)(l.Fragment, {
@@ -214,45 +224,52 @@ function L(e) {
                           (0, l.jsxs)(x.Z, {
                               children: [
                                   (0, l.jsx)(u.FormItem, {
-                                      title: y.intl.string(y.t.rHyPXl),
-                                      className: R.settingsGroup,
-                                      titleClassName: E.formItemTitleSlim,
-                                      children: q
+                                      title: E.intl.string(E.t.rHyPXl),
+                                      className: M.settingsGroup,
+                                      titleClassName: R.formItemTitleSlim,
+                                      children: ee
                                   }),
                                   (0, l.jsx)(u.FormItem, {
-                                      title: y.intl.string(y.t.SkkeIi),
-                                      className: R.settingsGroup,
-                                      titleClassName: E.formItemTitleSlim,
-                                      children: Q
+                                      title: E.intl.string(E.t.SkkeIi),
+                                      className: M.settingsGroup,
+                                      titleClassName: R.formItemTitleSlim,
+                                      children: et
                                   })
                               ]
                           }),
-                          z
-                              ? (0, l.jsx)(T.Z, {
+                          X
+                              ? (0, l.jsx)(N.Z, {
                                     onClose: t,
-                                    openStreamUpsellModal: k,
-                                    glow: K
+                                    openStreamUpsellModal: A,
+                                    glow: J
                                 })
                               : null,
-                          W && (0, l.jsx)(T.c, {})
+                          V && (0, l.jsx)(N.c, {}),
+                          K &&
+                              null != O.hdStreamingUntil &&
+                              (0, l.jsx)(C.Z, {
+                                  streamingUntil: null == O ? void 0 : O.hdStreamingUntil,
+                                  user: z,
+                                  channel: O
+                              })
                       ]
                   });
     return (0, l.jsx)(f.Z, {
-        ...J,
+        ...$,
         children: (0, l.jsx)(u.FormItem, {
-            title: y.intl.string(y.t.ax4FnZ),
-            titleClassName: E.formItemTitle,
-            className: E.modalContent,
+            title: E.intl.string(E.t.ax4FnZ),
+            titleClassName: R.formItemTitle,
+            className: R.modalContent,
             children: (0, l.jsxs)('div', {
-                className: R.qualitySettingsContainer,
+                className: M.qualitySettingsContainer,
                 children: [
                     (0, l.jsx)(u.SingleSelect, {
                         value: n,
-                        className: M.marginTop8,
-                        options: $,
+                        className: k.marginTop8,
+                        options: en,
                         onChange: (e) => P(e)
                     }),
-                    ee
+                    el
                 ]
             })
         })

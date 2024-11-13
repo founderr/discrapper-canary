@@ -1,6 +1,9 @@
 n.d(t, {
-    Sw: function () {
+    JZ: function () {
         return h;
+    },
+    Sw: function () {
+        return m;
     },
     Uj: function () {
         return _;
@@ -12,7 +15,7 @@ n.d(t, {
         return f;
     },
     ij: function () {
-        return m;
+        return g;
     }
 });
 var r = n(512722),
@@ -48,24 +51,28 @@ function _(e) {
             },
             [i]
         ),
-        E = (0, a.e7)([u.Z], () => (null != r && (null == n ? void 0 : n.isPrivate()) ? u.Z.getNickname(r) : null));
+        g = (0, a.e7)([u.Z], () => (null != r && (null == n ? void 0 : n.isPrivate()) ? u.Z.getNickname(r) : null));
     return null == e
         ? null
-        : g({
+        : E({
               user: e.author,
               channel: n,
               guild: h,
               guildRoles: m,
               userName: p,
               member: f,
-              friendNickname: E
+              friendNickname: g
           });
 }
 function p(e) {
     let t = s.Z.getChannel(e.channel_id);
-    return m(e.author, t);
+    return g(e.author, t);
 }
 function h(e, t) {
+    let n = m(e, t);
+    return i()(null != n, 'Result cannot be null because user and channel are not null'), n;
+}
+function m(e, t) {
     let n = null == e ? void 0 : e.id,
         r = null == t ? void 0 : t.guild_id,
         i = (0, a.e7)([o.ZP], () => (null == r || null == n ? null : o.ZP.getMember(r, n))),
@@ -83,7 +90,7 @@ function h(e, t) {
         ),
         f = (0, a.e7)([u.Z], () => (null != n && (null == t ? void 0 : t.isPrivate()) ? u.Z.getNickname(n) : null)),
         _ = d.ZP.useName(e);
-    return g({
+    return E({
         user: e,
         channel: t,
         guild: s,
@@ -93,14 +100,14 @@ function h(e, t) {
         friendNickname: f
     });
 }
-function m(e, t) {
+function g(e, t) {
     let n = null == e ? void 0 : e.id,
         r = null == t ? void 0 : t.guild_id,
         i = l.Z.getGuild(r),
         a = null != r ? l.Z.getRoles(r) : void 0,
         s = null == r || null == n ? null : o.ZP.getMember(r, n),
         c = null != n && null != t && t.isPrivate() ? u.Z.getNickname(n) : null;
-    return g({
+    return E({
         user: e,
         channel: t,
         guild: i,
@@ -109,7 +116,7 @@ function m(e, t) {
         friendNickname: c
     });
 }
-function g(e) {
+function E(e) {
     var t, n, r, i;
     let { user: a, channel: s, guild: o, guildRoles: l, member: u, userName: c, friendNickname: f } = e,
         _ = null == a ? '???' : null != c ? c : d.ZP.getName(a);
