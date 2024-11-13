@@ -4,6 +4,7 @@ e.exports = {
     headerText: 'headerText_f0135d',
     headerTextContainer: 'headerTextContainer_f0135d',
     appAvatar: 'appAvatar_f0135d',
+    reportButton: 'reportButton_f0135d',
     permission: 'permission_f0135d',
     permissionCheckmark: 'permissionCheckmark_f0135d',
     disclosureIcon: 'disclosureIcon_f0135d',
