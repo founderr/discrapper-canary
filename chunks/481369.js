@@ -15,7 +15,8 @@ let c = 'no_text_activity',
         [o.Ez.DISCONNECTED]: [s.E.NEW_MESSAGES, s.E.OPT_IN_CHANNEL, s.E.SUMMARIES],
         [o.Ez.LAUNCHING_WITH_ORIENTATION_CHANGE]: [s.E.NEW_MESSAGES, s.E.OPT_IN_CHANNEL, s.E.SUMMARIES],
         [o.Ez.PANEL]: [],
-        [o.Ez.PIP]: [s.E.NEW_MESSAGES, s.E.OPT_IN_CHANNEL, s.E.SUMMARIES]
+        [o.Ez.PIP]: [s.E.NEW_MESSAGES, s.E.OPT_IN_CHANNEL, s.E.SUMMARIES],
+        [o.Ez.ACTIVITY_POPOUT_WINDOW]: [s.E.NEW_MESSAGES, s.E.OPT_IN_CHANNEL, s.E.SUMMARIES]
     };
 function u() {
     let e = (0, i.e7)([l.ZP], () => l.ZP.getCurrentEmbeddedActivity()),

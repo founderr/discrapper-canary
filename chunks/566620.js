@@ -2,6 +2,9 @@ n.d(t, {
     $h: function () {
         return $;
     },
+    Hp: function () {
+        return eu;
+    },
     W5: function () {
         return es;
     },
@@ -78,8 +81,9 @@ var r = n(990547),
     Z = n(917107),
     F = n(89425),
     V = n(275920),
-    j = n(701488),
-    H = n(981631),
+    j = n(701488);
+n(918559);
+var H = n(981631),
     Y = n(674563),
     W = n(245335),
     K = n(388032);
@@ -525,5 +529,11 @@ function el(e) {
     a.Z.dispatch({
         type: 'EMBEDDED_ACTIVITY_SET_FOCUSED_LAYOUT',
         focusedActivityLayout: e
+    });
+}
+function eu(e) {
+    a.Z.dispatch({
+        type: 'EMBEDDED_ACTIVITY_UPDATE_POPOUT_WINDOW_LAYOUT',
+        layout: e
     });
 }

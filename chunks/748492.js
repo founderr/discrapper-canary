@@ -1,15 +1,15 @@
 n.d(t, {
     Ds: function () {
-        return M;
-    },
-    YB: function () {
-        return x;
-    },
-    of: function () {
         return P;
     },
-    q5: function () {
+    YB: function () {
         return w;
+    },
+    of: function () {
+        return k;
+    },
+    q5: function () {
+        return M;
     }
 });
 var r = n(200651);
@@ -34,51 +34,52 @@ var i = n(120356),
     b = n(157813),
     S = n(25827),
     T = n(131951),
-    y = n(884338),
-    A = n(349619),
-    N = n(981631),
-    C = n(231338),
-    R = n(388032),
-    O = n(761834),
-    D = n(497041);
-function L(e) {
+    y = n(316253),
+    A = n(884338),
+    N = n(349619),
+    C = n(981631),
+    R = n(231338),
+    O = n(388032),
+    D = n(761834),
+    L = n(497041);
+function x(e) {
     let { onClick: t, isExpanded: n } = e;
     return (0, r.jsx)(E.Z, {
-        iconClassName: a()(O.arrowIcon, { [O.arrowIconExpanded]: n }),
+        iconClassName: a()(D.arrowIcon, { [D.arrowIconExpanded]: n }),
         onClick: t,
         iconComponent: o.ChevronSmallDownIcon,
-        label: n ? R.intl.string(R.t['2TiKgY']) : R.intl.string(R.t.oN8bqa)
+        label: n ? O.intl.string(O.t['2TiKgY']) : O.intl.string(O.t.oN8bqa)
     });
 }
-function x(e) {
+function w(e) {
     var t, n;
-    let { channel: i, applicationId: a, onMouseDown: o, onMouseMove: E, onMouseLeave: b, onJumpToChannel: y, idle: R, selectedParticipant: L } = e,
-        x = (0, u.bp)() === N.IlC.POPOUT,
-        w = (0, s.e7)([T.Z], () => T.Z.isVideoEnabled()),
-        M = (0, s.e7)([T.Z], () => Object.values(T.Z.getVideoDevices())[0]),
-        P = !1 === (null === (t = null == M ? void 0 : M.disabled) || void 0 === t || t),
-        k = (0, c.Z)([a])[0],
-        U = (0, p.Z)(i),
-        G = (e) => {
+    let { channel: i, applicationId: a, onMouseDown: o, onMouseMove: E, onMouseLeave: b, onJumpToChannel: A, idle: O, selectedParticipant: x } = e,
+        w = (0, u.bp)() === C.IlC.POPOUT,
+        M = (0, s.e7)([T.Z], () => T.Z.isVideoEnabled()),
+        P = (0, s.e7)([T.Z], () => Object.values(T.Z.getVideoDevices())[0]),
+        k = !1 === (null === (t = null == P ? void 0 : P.disabled) || void 0 === t || t),
+        U = (0, c.Z)([a])[0],
+        G = (0, p.Z)(i),
+        B = (e) => {
             l.Z.setVideoEnabled(e);
         };
     return (0, r.jsxs)('div', {
-        className: D.videoControls,
+        className: L.videoControls,
         onMouseMove: E,
         onMouseDown: o,
         onMouseLeave: b,
         children: [
             (0, r.jsx)('div', {
-                className: D.topControls,
+                className: L.topControls,
                 children: (0, r.jsx)(g.r, {
-                    idle: R,
-                    title: null !== (n = null == k ? void 0 : k.name) && void 0 !== n ? n : i.name,
-                    onJumpToChannel: y,
+                    idle: O,
+                    title: null !== (n = null == U ? void 0 : U.name) && void 0 !== n ? n : i.name,
+                    onJumpToChannel: A,
                     preventIdleComponent: m.Z
                 })
             }),
             (0, r.jsxs)('div', {
-                className: D.bottomControls,
+                className: L.bottomControls,
                 children: [
                     (0, r.jsxs)(f.Z, {
                         grow: 0,
@@ -87,21 +88,21 @@ function x(e) {
                         align: f.Z.Align.CENTER,
                         children: [
                             (0, r.jsx)(S.C, {
-                                className: O.leftPipIcon,
-                                enabled: w,
-                                cameraUnavailable: !P,
-                                hasPermission: U,
-                                onChange: G,
+                                className: D.leftPipIcon,
+                                enabled: M,
+                                cameraUnavailable: !k,
+                                hasPermission: G,
+                                onChange: B,
                                 onCameraUnavailable: () => {
-                                    P ? G(!0) : (0, h.Z)();
+                                    k ? B(!0) : (0, h.Z)();
                                 }
                             }),
                             (0, r.jsx)(m.Z, {
                                 children: (0, r.jsx)(d.Z, {
                                     channelId: i.id,
                                     guildId: i.getGuildId(),
-                                    className: D.__invalid_leftTrayIcon,
-                                    participant: L,
+                                    className: L.__invalid_leftTrayIcon,
+                                    participant: x,
                                     compact: !0
                                 })
                             })
@@ -114,20 +115,20 @@ function x(e) {
                         basis: '50%',
                         align: f.Z.Align.CENTER,
                         children: [
-                            x
+                            w || (0, y.Z)()
                                 ? null
                                 : (0, r.jsx)(I.Z, {
-                                      className: O.rightPipIcon,
+                                      className: D.rightPipIcon,
                                       popoutOpen: !1,
                                       onOpenPopout: () => {
-                                          (0, A.Z)(() => _.hP(i));
+                                          (0, N.Z)(() => _.hP(i));
                                       },
-                                      onClosePopout: C.Vq
+                                      onClosePopout: R.Vq
                                   }),
                             (0, r.jsx)(v.Z, {
                                 applicationId: a,
                                 channelId: i.id,
-                                className: O.rightPipIcon
+                                className: D.rightPipIcon
                             })
                         ]
                     })
@@ -136,19 +137,19 @@ function x(e) {
         ]
     });
 }
-function w(e) {
+function M(e) {
     var t;
     let { channel: n, applicationId: i, onMouseDown: s, onMouseMove: l, onMouseLeave: u, onJumpToChannel: d, idle: f, users: _ } = e,
         p = (0, c.Z)([i])[0];
     return (0, r.jsxs)(o.Clickable, {
-        className: a()(D.videoControls, D.videoControlsTextActivity),
+        className: a()(L.videoControls, L.videoControlsTextActivity),
         onMouseMove: l,
         onMouseDown: s,
         onMouseLeave: u,
         onDoubleClick: d,
         children: [
             (0, r.jsx)('div', {
-                className: a()(D.topControls),
+                className: a()(L.topControls),
                 children: (0, r.jsx)(g.r, {
                     idle: f,
                     title: null !== (t = null == p ? void 0 : p.name) && void 0 !== t ? t : n.name,
@@ -157,19 +158,19 @@ function w(e) {
                 })
             }),
             (0, r.jsxs)('div', {
-                className: D.bottomControls,
+                className: L.bottomControls,
                 children: [
-                    (0, r.jsx)(y.Z, {
+                    (0, r.jsx)(A.Z, {
                         renderIcon: !1,
                         users: _,
                         size: 24,
                         max: 3,
-                        className: O.__invalid_userSummaryContainer
+                        className: D.__invalid_userSummaryContainer
                     }),
                     (0, r.jsx)(v.Z, {
                         applicationId: i,
                         channelId: n.id,
-                        iconClassName: O.leaveActivityIcon,
+                        iconClassName: D.leaveActivityIcon,
                         isActive: !0
                     })
                 ]
@@ -177,33 +178,33 @@ function w(e) {
         ]
     });
 }
-function M(e) {
+function P(e) {
     let { channelId: t, participantsOpen: n, showToggleParticipants: i } = e;
     return i
         ? (0, r.jsx)(b.Z, {
               channelId: t,
               isParticipantsOpen: n,
-              className: O.participantsButton
+              className: D.participantsButton
           })
         : null;
 }
-function P(e) {
+function k(e) {
     var t;
     let { onMouseDown: n, onMouseMove: i, onMouseLeave: s, showControls: l, applicationId: u, channel: d, onJumpToChannel: f, onToggleHeight: _, isExpanded: p, hideExpandedButton: h } = e,
         E = (0, c.Z)([u])[0];
     return (0, r.jsx)('div', {
-        className: O.pipHeader,
+        className: D.pipHeader,
         onMouseMove: i,
         onMouseDown: n,
         onMouseLeave: s,
         children: (0, r.jsxs)('div', {
-            className: a()(D.topControls, O.pipHeaderContent, { [O.pipHeaderContentOpen]: l }),
+            className: a()(L.topControls, D.pipHeaderContent, { [D.pipHeaderContentOpen]: l }),
             children: [
                 !l &&
                     (0, r.jsx)(o.MoreHorizontalIcon, {
                         size: 'xxs',
                         color: 'currentColor',
-                        className: O.menuIcon
+                        className: D.menuIcon
                     }),
                 l &&
                     (0, r.jsxs)(r.Fragment, {
@@ -215,18 +216,18 @@ function P(e) {
                                 preventIdleComponent: m.Z
                             }),
                             (0, r.jsxs)('div', {
-                                className: O.pipHeaderButtonsRight,
+                                className: D.pipHeaderButtonsRight,
                                 children: [
                                     h
                                         ? null
-                                        : (0, r.jsx)(L, {
+                                        : (0, r.jsx)(x, {
                                               isExpanded: p,
                                               onClick: _
                                           }),
                                     (0, r.jsx)(v.Z, {
                                         applicationId: u,
                                         channelId: d.id,
-                                        iconClassName: O.leaveActivityIcon
+                                        iconClassName: D.leaveActivityIcon
                                     })
                                 ]
                             })
