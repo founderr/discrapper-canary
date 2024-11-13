@@ -34,6 +34,11 @@ t.Z = {
     async fetchDehydrated() {
         let { isReloading: e, forceRefresh: t } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
         if (!(0, s.rK)('fetchDehydrated')) return;
+        e &&
+            r.Z.dispatch({
+                type: 'GRAVITY_SET_REFRESHING',
+                refreshing: !0
+            });
         let n = a.Z.negativeContentOnly();
         try {
             let l = Date.now(),
