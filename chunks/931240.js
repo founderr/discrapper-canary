@@ -1,33 +1,24 @@
 n.d(t, {
     Ii: function () {
-        return v;
+        return g;
     },
     LX: function () {
-        return p;
-    },
-    WJ: function () {
-        return f;
-    },
-    Zx: function () {
-        return b;
-    },
-    _9: function () {
-        return h;
-    },
-    aH: function () {
-        return E;
-    },
-    mf: function () {
-        return m;
-    },
-    nE: function () {
         return _;
     },
-    nr: function () {
-        return I;
-    },
-    sv: function () {
+    WJ: function () {
         return d;
+    },
+    aH: function () {
+        return m;
+    },
+    mf: function () {
+        return p;
+    },
+    nE: function () {
+        return f;
+    },
+    nr: function () {
+        return E;
     }
 }),
     n(47120);
@@ -39,51 +30,11 @@ var r = n(544891),
     l = n(970606),
     u = n(981631),
     c = n(976757);
-async function d(e, t) {
-    i.Z.dispatch({
-        type: 'CLAN_SETUP_SUBMIT',
-        guildId: e
-    });
-    try {
-        var n, s, o, l;
-        await r.tn.post({
-            url: u.ANM.GUILD_CONVERT_TO_CLAN(e),
-            body: {
-                tag: t.tag,
-                description: t.description,
-                play_style: t.playstyle,
-                search_terms: Array.from(null !== (s = t.interests) && void 0 !== s ? s : new Set()),
-                game_application_ids: Array.from(null !== (o = t.gameApplicationIds) && void 0 !== o ? o : new Set()),
-                verification_form: { form_fields: null !== (l = null === (n = t.verificationForm) || void 0 === n ? void 0 : n.formFields) && void 0 !== l ? l : [] },
-                badge: t.badgeKind,
-                badge_color_primary: t.badgePrimaryColor,
-                badge_color_secondary: t.badgeSecondaryColor,
-                banner: t.banner,
-                brand_color_primary: t.brandPrimaryColor,
-                brand_color_secondary: t.brandSecondaryColor,
-                wildcard_descriptors: t.wildcardDescriptors
-            }
-        }),
-            i.Z.dispatch({
-                type: 'CLAN_SETUP_SUCCESS',
-                guildId: e
-            });
-    } catch (t) {
-        throw (
-            (i.Z.dispatch({
-                type: 'CLAN_SETUP_ERROR',
-                guildId: e,
-                error: new a.Z(t)
-            }),
-            t)
-        );
-    }
-}
-async function f(e) {
+async function d(e) {
     let t = await r.tn.get({ url: u.ANM.GUILD_CLAN_DISCOVERY_INFO(e) });
     return (0, c.Gh)(t.body);
 }
-async function _(e, t, n) {
+async function f(e, t, n) {
     try {
         null != e &&
             !0 === t &&
@@ -110,24 +61,17 @@ async function _(e, t, n) {
         return;
     }
 }
-function p() {
+function _() {
     i.Z.dispatch({ type: 'CLAN_SETUP_RESET' });
 }
-function h(e, t) {
-    i.Z.dispatch({
-        type: 'CLAN_SETUP_UPDATE',
-        guildId: e,
-        updates: t
-    });
-}
-function m(e, t) {
+function p(e, t) {
     i.Z.dispatch({
         type: 'CLAN_SETTINGS_UPDATE',
         guildId: e,
         updates: t
     });
 }
-let g = (e) => {
+let h = (e) => {
     var t, n, r, i, a, s;
     return {
         tag: e.tag,
@@ -149,16 +93,16 @@ let g = (e) => {
         brandSecondaryColor: e.brand_color_secondary
     };
 };
-async function E(e) {
+async function m(e) {
     i.Z.dispatch({ type: 'CLAN_SETTINGS_FETCH_START' });
     let t = await r.tn.get({ url: u.ANM.CLAN_SETTINGS(e) });
     i.Z.dispatch({
         type: 'CLAN_SETTINGS_FETCH_SUCCESS',
         guildId: e,
-        settings: g(t.body)
+        settings: h(t.body)
     });
 }
-async function v(e, t) {
+async function g(e, t) {
     i.Z.dispatch({
         type: 'CLAN_SETTINGS_SUBMIT',
         guildId: e
@@ -194,16 +138,9 @@ async function v(e, t) {
         );
     }
 }
-async function I(e) {
+async function E(e) {
     try {
         await r.tn.post({ url: u.ANM.DISABLE_CLAN(e) });
-    } catch (e) {
-        throw e;
-    }
-}
-async function b(e) {
-    try {
-        await r.tn.post({ url: u.ANM.JOIN_WUMPUS_FEEDBACK_SQUAD(e) });
     } catch (e) {
         throw e;
     }

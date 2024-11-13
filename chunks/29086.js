@@ -1,48 +1,33 @@
 n.d(t, {
     Y: function () {
-        return c;
+        return s;
     }
-}),
-    n(733860);
+});
 var i = n(192379),
-    r = n(963202),
-    l = n(169559),
-    a = n(726115),
-    s = n(859921),
-    o = n(128449);
-function c() {
-    let e = (0, l.Z)('global_discovery'),
-        { enableClanCreation: t } = (0, r.C3)({
-            location: 'global_discovery',
-            includeConverted: !0,
-            autoTrackExposure: !0
-        }),
-        { signupEnabled: n } = (0, r.Pu)({
-            location: 'global_discovery',
-            autoTrackExposure: !0
-        }),
-        c = s.Z.useField('selectedTab'),
-        d = i.useMemo(() => {
-            let i = [o.vf.GAMING, o.vf.MUSIC, o.vf.ENTERTAINMENT, o.vf.TECH, o.vf.EDUCATION, o.vf.HUBS];
-            return (
-                e || t || n ? i.unshift(o.vf.GUILDS) : i.unshift(o.vf.FEATURED),
-                i.map((e) => ({
+    r = n(726115),
+    l = n(859921),
+    a = n(128449);
+function s() {
+    let e = l.Z.useField('selectedTab'),
+        t = i.useMemo(
+            () =>
+                [a.vf.FEATURED, a.vf.GAMING, a.vf.MUSIC, a.vf.ENTERTAINMENT, a.vf.TECH, a.vf.EDUCATION, a.vf.HUBS].map((e) => ({
                     id: e,
-                    label: (0, a.vb)(e)
-                }))
-            );
-        }, [t, e, n]),
-        u = i.useCallback((e) => {
-            s.Z.setState({ selectedTab: e });
+                    label: (0, r.vb)(e)
+                })),
+            []
+        ),
+        n = i.useCallback((e) => {
+            l.Z.setState({ selectedTab: e });
         }, []);
     return (
         i.useEffect(() => {
-            (null == c || !d.some((e) => e.id === c)) && u(d[0].id);
-        }, [c, d, u]),
+            (null == e || !t.some((t) => t.id === e)) && n(t[0].id);
+        }, [e, t, n]),
         {
-            tabs: d,
-            selectedTab: null != c ? c : d[0].id,
-            setSelectedTab: u
+            tabs: t,
+            selectedTab: null != e ? e : t[0].id,
+            setSelectedTab: n
         }
     );
 }

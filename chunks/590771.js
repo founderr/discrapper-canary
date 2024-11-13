@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return _;
     }
 });
 var i = n(200651),
@@ -12,26 +12,25 @@ var i = n(200651),
     c = n(356164),
     d = n(726115),
     u = n(962486),
-    h = n(62938),
-    m = n(149788),
-    p = n(128449),
-    g = n(731455);
-function f(e) {
+    h = n(149788),
+    m = n(128449),
+    p = n(731455);
+function g(e) {
     let { onScroll: t, onGuildCardSeen: n, onGuildCardClick: a } = e,
         s = (0, l.e7)([c.Z], () => {
             var e;
-            return null !== (e = c.Z.getGuildIds({ categoryId: g.Hk })) && void 0 !== e ? e : p.q5;
+            return null !== (e = c.Z.getGuildIds({ categoryId: p.Hk })) && void 0 !== e ? e : m.q5;
         }),
         d = (0, l.e7)([c.Z], () => {
             var e;
-            return null === (e = c.Z.getIsFetching({ categoryId: g.Hk })) || void 0 === e || e;
+            return null === (e = c.Z.getIsFetching({ categoryId: p.Hk })) || void 0 === e || e;
         });
     return (
         r.useEffect(() => {
             o.Z.fetchFeaturedGuilds();
         }, []),
         (0, i.jsx)(u.Z, {
-            tab: p.vf.FEATURED,
+            tab: m.vf.FEATURED,
             guildIds: s,
             loading: d,
             onScroll: t,
@@ -40,12 +39,12 @@ function f(e) {
         })
     );
 }
-function _(e) {
+function f(e) {
     let { tab: t, onScroll: n, onGuildCardSeen: a, onGuildCardClick: s } = e,
         h = (0, d.lg)(t),
-        m = (0, l.e7)([c.Z], () => {
+        p = (0, l.e7)([c.Z], () => {
             var e;
-            return null !== (e = c.Z.getGuildIds({ categoryId: h })) && void 0 !== e ? e : p.q5;
+            return null !== (e = c.Z.getGuildIds({ categoryId: h })) && void 0 !== e ? e : m.q5;
         }),
         g = (0, l.e7)([c.Z], () => {
             var e;
@@ -57,7 +56,7 @@ function _(e) {
         }, [h]),
         (0, i.jsx)(u.Z, {
             tab: t,
-            guildIds: m,
+            guildIds: p,
             loading: g,
             onScroll: n,
             onGuildCardSeen: a,
@@ -65,7 +64,7 @@ function _(e) {
         })
     );
 }
-function E(e) {
+function _(e) {
     let { selectedTab: t, onScroll: n, onGuildCardSeen: l, onGuildCardClick: o } = e;
     switch (
         (r.useEffect(() => {
@@ -74,20 +73,20 @@ function E(e) {
         }, [t]),
         t)
     ) {
-        case p.vf.FEATURED:
-            return (0, i.jsx)(f, {
+        case m.vf.FEATURED:
+            return (0, i.jsx)(g, {
                 tab: t,
                 onScroll: n,
                 onGuildCardClick: o,
                 onGuildCardSeen: l
             });
-        case p.vf.GAMING:
-        case p.vf.MUSIC:
-        case p.vf.ENTERTAINMENT:
-        case p.vf.TECH:
-        case p.vf.EDUCATION:
+        case m.vf.GAMING:
+        case m.vf.MUSIC:
+        case m.vf.ENTERTAINMENT:
+        case m.vf.TECH:
+        case m.vf.EDUCATION:
             return (0, i.jsx)(
-                _,
+                f,
                 {
                     tab: t,
                     onScroll: n,
@@ -96,9 +95,7 @@ function E(e) {
                 },
                 t
             );
-        case p.vf.HUBS:
-            return (0, i.jsx)(m.Z, { onScroll: n });
-        case p.vf.GUILDS:
+        case m.vf.HUBS:
             return (0, i.jsx)(h.Z, { onScroll: n });
         default:
             (0, s.vE)(t);

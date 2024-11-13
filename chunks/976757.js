@@ -5,9 +5,6 @@ n.d(t, {
     Gh: function () {
         return c;
     },
-    Pw: function () {
-        return d;
-    },
     qz: function () {
         return i;
     }
@@ -69,8 +66,5 @@ function c(e) {
             discoveryProfileFeatures: new Set(null !== (t = e.discovery_profile_features) && void 0 !== t ? t : [])
         }
     );
-}
-function d(e) {
-    return 'loaded' === e.status;
 }
 ((a = r || (r = {})).TOP_PICKS = 'TOP_PICKS'), (a.GLOBAL_DISCOVERY_TOP_PICKS = 'GLOBAL_DISCOVERY_TOP_PICKS'), ((s = i || (i = {})).SHOWN = 'SHOWN'), (s.HIT = 'HIT'), (s.UNKNOWN = 'UNKNOWN');

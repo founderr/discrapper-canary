@@ -1,6 +1,6 @@
 n.d(t, {
     CD: function () {
-        return A;
+        return b;
     },
     Ew: function () {
         return S;
@@ -9,7 +9,7 @@ n.d(t, {
         return E;
     },
     NL: function () {
-        return y;
+        return L;
     },
     QW: function () {
         return C;
@@ -27,10 +27,10 @@ n.d(t, {
         return v;
     },
     oT: function () {
-        return b;
+        return x;
     },
     vL: function () {
-        return L;
+        return y;
     },
     vb: function () {
         return _;
@@ -56,8 +56,6 @@ function _(e) {
     switch (e) {
         case m.vf.FEATURED:
             return f.intl.string(f.t['RU+DCQ']);
-        case m.vf.GUILDS:
-            return f.intl.string(f.t['B5tf+v']);
         case m.vf.GAMING:
             return f.intl.string(f.t['CD/USE']);
         case m.vf.MUSIC:
@@ -134,8 +132,6 @@ function v(e) {
     switch (e) {
         case m.vf.FEATURED:
             return g.Hk;
-        case m.vf.GUILDS:
-            return g.mE;
         case m.vf.GAMING:
             return g.Gj.Activity;
         case m.vf.MUSIC:
@@ -180,7 +176,7 @@ function T() {
         i = t.locale;
     return (null !== (e = n.find((e) => e.code === i)) && void 0 !== e ? e : n[0]).code;
 }
-function x(e) {
+function A(e) {
     let { loadId: t, categoryId: n, offset: i, query: r, languageCode: l } = e;
     '' !== r.trim() &&
         (o.tI(t, n),
@@ -192,7 +188,7 @@ function x(e) {
             filters: { approximate_member_count: o.sq }
         }));
 }
-function A(e) {
+function b(e) {
     let { loadId: t, categoryId: n, query: i, languageCode: r, offset: l } = e;
     if (
         !u.Z.getIsFetching({
@@ -206,7 +202,7 @@ function A(e) {
             categoryId: n,
             languageCode: r
         }) &&
-            x({
+            A({
                 loadId: t,
                 categoryId: n,
                 query: i,
@@ -214,7 +210,7 @@ function A(e) {
                 offset: l
             });
 }
-function b(e) {
+function x(e) {
     let { loadId: t, categoryId: n, query: i, languageCode: r } = e,
         l = u.Z.getIsFetching({
             query: i,
@@ -228,7 +224,7 @@ function b(e) {
         });
     !l &&
         !a &&
-        x({
+        A({
             loadId: t,
             categoryId: n,
             query: i,
@@ -248,7 +244,7 @@ async function Z(e) {
         ).body.valid
     );
 }
-async function y(e) {
+async function L(e) {
     let { loadId: t, categoryId: n, query: i, languageCode: r } = e;
     if ('' === i.trim()) return;
     let l = d.Z.getIsFetchingCounts(i),
@@ -271,7 +267,7 @@ async function y(e) {
                 h.Z.setState({ resultsQuery: i });
             }
         }),
-            b({
+            x({
                 loadId: t,
                 categoryId: n,
                 query: i,
@@ -279,7 +275,7 @@ async function y(e) {
             });
     }
 }
-async function L(e) {
+async function y(e) {
     let { loadId: t, guildId: n, index: i, categoryId: r, analyticsLocation: l, options: s } = e,
         c = {
             ...s,

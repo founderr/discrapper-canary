@@ -1,43 +1,37 @@
 n.d(t, {
     IE: function () {
-        return u;
-    },
-    Og: function () {
-        return d;
+        return s;
     },
     sm: function () {
-        return c;
+        return a;
     }
-});
-var i = n(963202),
-    r = n(703656),
-    l = n(823379),
-    a = n(49898),
-    s = n(981631),
-    o = n(388032);
-function c(e) {
+}),
+    n(963202),
+    n(703656);
+var i = n(823379),
+    r = n(49898);
+n(981631);
+var l = n(388032);
+function a(e) {
     switch (e) {
-        case a.F$.SERVERS:
-            return o.intl.string(o.t['+Anbp6']);
-        case a.F$.APPS:
-            return o.intl.string(o.t.bGwCoa);
-        case a.F$.QUESTS:
-            return o.intl.string(o.t.EcaD4e);
+        case r.F$.SERVERS:
+            return l.intl.string(l.t['+Anbp6']);
+        case r.F$.APPS:
+            return l.intl.string(l.t.bGwCoa);
+        case r.F$.QUESTS:
+            return l.intl.string(l.t.EcaD4e);
         default:
-            (0, l.vE)(e);
+            (0, i.vE)(e);
     }
 }
-function d() {
-    (0, i.rx)('discovery_history_util') && (0, r.uL)(s.Z5c.GLOBAL_DISCOVERY_SERVERS);
-}
-function u(e, t) {
-    if (e.startsWith('/discovery/applications') && t) return a.F$.APPS;
+function s(e, t) {
+    if (e.startsWith('/discovery/applications') && t) return r.F$.APPS;
     switch (e) {
         case '/discovery/quests':
-            return a.F$.QUESTS;
+            return r.F$.QUESTS;
         case '/discovery/servers':
-            return a.F$.SERVERS;
+            return r.F$.SERVERS;
         default:
-            return a.D7;
+            return r.D7;
     }
 }

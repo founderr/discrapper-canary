@@ -1,31 +1,25 @@
 var r, i;
-function a(e) {
-    return r[e];
-}
 n.d(t, {
     ME: function () {
-        return c;
+        return u;
     },
     Nh: function () {
-        return o;
-    },
-    VF: function () {
-        return a;
+        return s;
     },
     ZD: function () {
         return r;
     },
     lP: function () {
-        return d;
+        return c;
     },
     sg: function () {
-        return s;
+        return a;
     },
     vY: function () {
-        return l;
+        return o;
     },
     yf: function () {
-        return u;
+        return l;
     }
 }),
     ((i = r || (r = {}))[(i.SWORD = 0)] = 'SWORD'),
@@ -49,7 +43,7 @@ n.d(t, {
     (i[(i.SOUND = 18)] = 'SOUND'),
     (i[(i.SUN = 19)] = 'SUN'),
     (i[(i.WIND = 20)] = 'WIND');
-let s = [
+let a = [
         {
             primary: '#ff1c90',
             secondary: '#ff7fc0'
@@ -103,12 +97,12 @@ let s = [
             secondary: '#cccccc'
         }
     ],
-    o = s[0].primary,
-    l = s[0].secondary;
-function u() {
-    return s[Math.floor(Math.random() * s.length)];
+    s = a[0].primary,
+    o = a[0].secondary;
+function l() {
+    return a[Math.floor(Math.random() * a.length)];
 }
-let c = {
+let u = {
     0: 2,
     1: 1,
     2: 1,
@@ -131,7 +125,7 @@ let c = {
     19: 2,
     20: 2
 };
-function d() {
+function c() {
     let e = Object.keys(r).filter((e) => isNaN(Number(e)));
     return r[e[Math.floor(Math.random() * e.length)]];
 }

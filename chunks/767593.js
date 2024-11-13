@@ -299,8 +299,7 @@ t.default = function (e) {
                                 expanded: !0,
                                 isMember: Y,
                                 hasPendingJoinRequest: V,
-                                atMaxMemberCapacity: $,
-                                showFavoriteButton: !0
+                                atMaxMemberCapacity: $
                             }),
                             (0, o.jsxs)('div', {
                                 className: N.applyButtonContainer,

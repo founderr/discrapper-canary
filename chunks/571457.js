@@ -1,7 +1,4 @@
 n.d(t, {
-    $X: function () {
-        return u;
-    },
     HV: function () {
         return s;
     },
@@ -42,8 +39,4 @@ function s(e) {
 function c(e) {
     let { gameId: t } = e;
     i.default.track(l.rMx.GUILD_GAME_DISCOVERY_ENTRYPOINT_DEEP_LINK_TO_DESKTOP, { game_id: t });
-}
-function u(e) {
-    let { gameId: t } = e;
-    i.default.track(l.rMx.GLOBAL_DISCOVERY_WITH_GAME_VIEWED, { game_id: t });
 }

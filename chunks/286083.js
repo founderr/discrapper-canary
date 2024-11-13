@@ -1,36 +1,26 @@
-n.d(t, {
-    $: function () {
-        return l;
-    },
-    a: function () {
-        return d;
-    }
-}),
-    n(653041),
-    n(47120);
-var r = n(905837),
-    i = n(280836),
-    a = n(731965),
-    s = n(433517),
+n(653041), n(47120);
+var i = n(905837),
+    l = n(280836),
+    r = n(731965),
+    a = n(433517),
     o = n(229893);
-let l = 10;
-function u(e, t) {
+function s(e, t) {
     if (0 === t || e.length <= t) return [e];
     let n = [];
-    for (let r = 0; r < e.length; r += t) n.push(e.slice(r, r + t));
+    for (let i = 0; i < e.length; i += t) n.push(e.slice(i, i + t));
     return n;
 }
 function c(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 3 * l,
-        r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 2,
-        i = Math.min((t + r) * n, e.length);
-    return e.slice(t * n, i).filter((e) => o.Z.shouldFetchGuild(e));
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 30,
+        i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 2,
+        l = Math.min((t + i) * n, e.length);
+    return e.slice(t * n, l).filter((e) => o.Z.shouldFetchGuild(e));
 }
-let d = (0, r.Ue)()(
-    (0, i.tJ)(
+(0, i.Ue)()(
+    (0, l.tJ)(
         (e) => ({
             currentPage: 1,
-            pageSize: 3 * l,
+            pageSize: 30,
             currentColumnCount: 3,
             totalItems: 0,
             chunkedPages: [],
@@ -38,50 +28,50 @@ let d = (0, r.Ue)()(
             _rawItems: [],
             _removedItems: [],
             updatePage: (t) => {
-                (0, a.j)(() => {
+                (0, r.j)(() => {
                     e((e) => {
-                        let { _rawItems: n, pageSize: r } = e;
+                        let { _rawItems: n, pageSize: i } = e;
                         return {
                             currentPage: t,
-                            fetchableGuildIds: c(n, t - 1, r)
+                            fetchableGuildIds: c(n, t - 1, i)
                         };
                     });
                 });
             },
             updatePaginationSettings: function (t) {
-                let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l,
-                    { pageMemoryEnabled: r } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-                (0, a.j)(() => {
-                    let i = t * n;
+                let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10,
+                    { pageMemoryEnabled: i } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+                (0, r.j)(() => {
+                    let l = t * n;
                     e((e) => {
-                        let { currentPage: n, _rawItems: a } = e;
+                        let { currentPage: n, _rawItems: r } = e;
                         return {
                             currentColumnCount: t,
-                            pageSize: i,
-                            currentPage: r ? n : 1,
-                            chunkedPages: u(a, i),
-                            fetchableGuildIds: c(a, n - 1, i)
+                            pageSize: l,
+                            currentPage: i ? n : 1,
+                            chunkedPages: s(r, l),
+                            fetchableGuildIds: c(r, n - 1, l)
                         };
                     });
                 });
             },
             updatePaginationResults: (t) => {
-                (0, a.j)(() => {
+                (0, r.j)(() => {
                     e((e) => {
-                        let { _removedItems: n, pageSize: r, currentPage: i } = e,
-                            a = t.filter((e) => !n.includes(e));
+                        let { _removedItems: n, pageSize: i, currentPage: l } = e,
+                            r = t.filter((e) => !n.includes(e));
                         return {
-                            _rawItems: a,
-                            chunkedPages: u(a, r),
-                            totalItems: a.length,
-                            fetchableGuildIds: c(a, i - 1, r)
+                            _rawItems: r,
+                            chunkedPages: s(r, i),
+                            totalItems: r.length,
+                            fetchableGuildIds: c(r, l - 1, i)
                         };
                     });
                 });
             },
             resetPagination: function () {
                 let { pageMemoryEnabled: t } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-                (0, a.j)(() => {
+                (0, r.j)(() => {
                     e((e) => {
                         let { currentPage: n } = e;
                         return {
@@ -94,17 +84,17 @@ let d = (0, r.Ue)()(
                 });
             },
             removeGuilds: (t) => {
-                (0, a.j)(() => {
+                (0, r.j)(() => {
                     e((e) => {
-                        let { _rawItems: n, _removedItems: r, pageSize: i, currentPage: a } = e,
-                            s = n.filter((e) => !t.includes(e)),
-                            o = t.filter((e) => !r.includes(e));
+                        let { _rawItems: n, _removedItems: i, pageSize: l, currentPage: r } = e,
+                            a = n.filter((e) => !t.includes(e)),
+                            o = t.filter((e) => !i.includes(e));
                         return {
-                            _rawItems: s,
-                            _removedItems: [...r, ...o],
-                            chunkedPages: u(s, i),
-                            totalItems: s.length,
-                            fetchableGuildIds: c(s, a - 1, i)
+                            _rawItems: a,
+                            _removedItems: [...i, ...o],
+                            chunkedPages: s(a, l),
+                            totalItems: a.length,
+                            fetchableGuildIds: c(a, r - 1, l)
                         };
                     });
                 });
@@ -112,13 +102,13 @@ let d = (0, r.Ue)()(
         }),
         {
             name: 'clan-discovery-pagination',
-            storage: (0, i.FL)(() => ({
+            storage: (0, l.FL)(() => ({
                 getItem: (e) => {
                     var t;
-                    return null !== (t = s.K.get(e)) && void 0 !== t ? t : null;
+                    return null !== (t = a.K.get(e)) && void 0 !== t ? t : null;
                 },
-                setItem: (e, t) => s.K.set(e, t),
-                removeItem: (e) => s.K.remove(e)
+                setItem: (e, t) => a.K.set(e, t),
+                removeItem: (e) => a.K.remove(e)
             })),
             partialize: (e) => ({ currentPage: e.currentPage })
         }

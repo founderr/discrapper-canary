@@ -1,9 +1,4 @@
-n.d(t, {
-    P: function () {
-        return g;
-    }
-}),
-    n(47120);
+n(47120);
 var r = n(200651),
     i = n(192379),
     a = n(120356),
@@ -11,14 +6,14 @@ var r = n(200651),
     o = n(97028),
     l = n(481060),
     u = n(353093),
-    c = n(686546),
-    d = n(852786),
-    f = n(388032),
-    _ = n(845024);
-function p(e) {
+    c = n(686546);
+n(852786);
+var d = n(388032),
+    f = n(845024);
+function _(e) {
     let { games: t, gameActivity: n } = e;
     return (0, r.jsx)('div', {
-        className: _.tooltipGames,
+        className: f.tooltipGames,
         children: t.map((e) => {
             let t = e.getIconURL(24);
             if (null == t) return null;
@@ -27,7 +22,7 @@ function p(e) {
                 s = (0, r.jsxs)(l.Text, {
                     variant: 'text-xs/semibold',
                     color: 'interactive-active',
-                    className: _.tooltipGameName,
+                    className: f.tooltipGameName,
                     children: [
                         e.name,
                         a &&
@@ -35,21 +30,21 @@ function p(e) {
                                 tag: 'div',
                                 variant: 'text-xxs/normal',
                                 color: 'text-muted',
-                                children: f.intl.string(f.t.gTQrTU)
+                                children: d.intl.string(d.t.gTQrTU)
                             })
                     ]
                 });
             return (0, r.jsxs)(
                 'div',
                 {
-                    className: _.tooltipGame,
+                    className: f.tooltipGame,
                     children: [
                         (0, r.jsx)('div', {
-                            className: _.tooltipGameImageContainer,
+                            className: f.tooltipGameImageContainer,
                             children: (0, r.jsx)('img', {
                                 src: t,
                                 alt: e.name,
-                                className: _.tooltipGameImage
+                                className: f.tooltipGameImage
                             })
                         }),
                         s
@@ -60,24 +55,24 @@ function p(e) {
         })
     });
 }
-function h(e) {
+function p(e) {
     var t;
     let { game: n, gameActivity: i, highlighted: a = !1 } = e,
         u = n.getIconURL(24);
     if (null == u) return null;
-    let d = (null == i ? void 0 : null === (t = i[n.id]) || void 0 === t ? void 0 : t.level) === o.m.HIGH,
+    let _ = (null == i ? void 0 : null === (t = i[n.id]) || void 0 === t ? void 0 : t.level) === o.m.HIGH,
         p = (0, r.jsxs)(l.Text, {
             variant: 'text-sm/semibold',
             color: 'interactive-active',
-            className: _.tooltipText,
+            className: f.tooltipText,
             children: [
                 n.name,
-                d &&
+                _ &&
                     (0, r.jsx)(l.Text, {
                         tag: 'div',
                         variant: 'text-sm/normal',
                         color: 'text-muted',
-                        children: f.intl.string(f.t.gTQrTU)
+                        children: d.intl.string(d.t.gTQrTU)
                     })
             ]
         });
@@ -88,21 +83,21 @@ function h(e) {
         children: (e) =>
             (0, r.jsxs)('div', {
                 ...e,
-                className: s()(_.gameImageContainer, a && _.highlighted),
+                className: s()(f.gameImageContainer, a && f.highlighted),
                 children: [
                     (0, r.jsx)('img', {
                         src: u,
                         alt: n.name,
-                        className: _.gameImage
+                        className: f.gameImage
                     }),
-                    d &&
+                    _ &&
                         (0, r.jsx)(c.ZP, {
                             mask: c.QS.GAMEPLAY_HIGH_ACTIVITY_ICON,
                             width: 14,
                             height: 14,
-                            className: _.gameActivityLevel,
+                            className: f.gameActivityLevel,
                             children: (0, r.jsx)('div', {
-                                className: _.gameActivityLevelInner,
+                                className: f.gameActivityLevelInner,
                                 children: (0, r.jsx)(l.FireIcon, {
                                     color: l.tokens.unsafe_rawColors.ORANGE_330.css,
                                     width: 10,
@@ -115,30 +110,18 @@ function h(e) {
             })
     });
 }
-let m = (e) => (t, n) => {
+let h = (e) => (t, n) => {
     var r, i, a, s;
     let o = null !== (a = null == e ? void 0 : null === (r = e[t.id]) || void 0 === r ? void 0 : r.score) && void 0 !== a ? a : 0,
         l = null !== (s = null == e ? void 0 : null === (i = e[n.id]) || void 0 === i ? void 0 : i.score) && void 0 !== s ? s : 0;
     return o !== l ? l - o : 0;
 };
-function g(e) {
-    let { delayMs: t = 0 } = e;
-    return (0, r.jsx)('div', {
-        className: _.gameImageContainer,
-        children: (0, r.jsx)(d.Z, {
-            className: _.gameImage,
-            width: 24,
-            height: 24,
-            delayMs: t
-        })
-    });
-}
 t.Z = i.memo(function (e) {
     let { games: t, prioritizedGameIds: n = new Set(), gameActivity: a = {}, onInteraction: s } = e,
         o = i.useMemo(() => {
             let e = t.filter((e) => null != e && null != e.icon),
-                r = e.filter((e) => !n.has(e.id)).sort(m(a));
-            return [...e.filter((e) => n.has(e.id)).sort(m(a)), ...r];
+                r = e.filter((e) => !n.has(e.id)).sort(h(a));
+            return [...e.filter((e) => n.has(e.id)).sort(h(a)), ...r];
         }, [a, t, n]),
         c = o.slice(0, 3),
         d = i.useMemo(() => {
@@ -148,7 +131,7 @@ t.Z = i.memo(function (e) {
             let n = t.getIconURL(24);
             if (null == n) return null;
             if (o.length <= 4)
-                return (0, r.jsx)(h, {
+                return (0, r.jsx)(p, {
                     game: t,
                     gameActivity: a
                 });
@@ -156,7 +139,7 @@ t.Z = i.memo(function (e) {
             return (0, r.jsx)(l.Tooltip, {
                 'aria-label': null !== (e = (0, u.f6)(i.map((e) => e.name))) && void 0 !== e ? e : '',
                 onTooltipShow: () => (null == s ? void 0 : s()),
-                text: (0, r.jsx)(p, {
+                text: (0, r.jsx)(_, {
                     games: i,
                     gameActivity: a
                 }),
@@ -164,15 +147,15 @@ t.Z = i.memo(function (e) {
                 children: (e) =>
                     (0, r.jsxs)('div', {
                         ...e,
-                        className: _.gameImageContainer,
+                        className: f.gameImageContainer,
                         children: [
                             (0, r.jsx)('img', {
                                 src: n,
                                 alt: t.name,
-                                className: _.gameImage
+                                className: f.gameImage
                             }),
                             (0, r.jsx)('div', {
-                                className: _.extraGameCount,
+                                className: f.extraGameCount,
                                 children: (0, r.jsx)(l.Text, {
                                     variant: 'text-xs/medium',
                                     color: 'always-white',
@@ -187,7 +170,7 @@ t.Z = i.memo(function (e) {
         children: [
             c.map((e) =>
                 (0, r.jsx)(
-                    h,
+                    p,
                     {
                         game: e,
                         gameActivity: a,

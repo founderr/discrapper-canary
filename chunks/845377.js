@@ -15,10 +15,10 @@ var i = n(200651),
     p = n(63063),
     f = n(709054),
     C = n(434404),
-    I = n(981631),
+    v = n(981631),
     _ = n(388032),
-    N = n(23387);
-let v = (e) => {
+    I = n(23387);
+let N = (e) => {
     let { name: t, failingName: n, description: r, checked: l, pending: s, pendingDescription: a, failingDescription: o } = e,
         c = t,
         d = null,
@@ -50,14 +50,14 @@ let v = (e) => {
                 (c = null != n ? n : t),
                 (u = null != o ? o : r)),
         (0, i.jsxs)('div', {
-            className: N.checklistItem,
+            className: I.checklistItem,
             children: [
                 (0, i.jsx)('div', {
-                    className: N.checklistIcon,
+                    className: I.checklistIcon,
                     children: d
                 }),
                 (0, i.jsxs)('div', {
-                    className: N.checklistText,
+                    className: I.checklistText,
                     children: [
                         (0, i.jsx)(h.Heading, {
                             variant: 'heading-md/semibold',
@@ -93,9 +93,9 @@ function T(e, t) {
 t.Z = (e) => {
     let { guild: t, guildId: l, className: a, noHeader: o = !1, failedItemsOnly: c = !1 } = e,
         [m, j] = (0, u.Wu)([g.ZP], () => [g.ZP.getDiscoveryChecklist(l), g.ZP.isLoading()], [l]),
-        { nsfwProperties: S } = null != m ? m : {},
-        b = null == t ? void 0 : t.hasFeature(I.oNc.PARTNERED),
-        E = null == S ? void 0 : S.channels_banned_keywords,
+        { nsfwProperties: b } = null != m ? m : {},
+        S = null == t ? void 0 : t.hasFeature(v.oNc.PARTNERED),
+        E = null == b ? void 0 : b.channels_banned_keywords,
         R = (0, u.e7)(
             [x.ZP],
             () => {
@@ -130,26 +130,26 @@ t.Z = (e) => {
         );
     if (j || null == m)
         return (0, i.jsxs)('div', {
-            className: s()(N.container, N.loaderContainer, a),
+            className: s()(I.container, I.loaderContainer, a),
             children: [
                 (0, i.jsx)(h.Heading, {
-                    className: N.loadingText,
+                    className: I.loadingText,
                     variant: 'heading-md/semibold',
                     color: 'header-secondary',
                     children: _.intl.string(_.t.e1gm0d)
                 }),
-                (0, i.jsx)(h.Spinner, { className: N.__invalid_spinner })
+                (0, i.jsx)(h.Spinner, { className: I.__invalid_spinner })
             ]
         });
-    let Z = b ? _.t['WH+1Y2'] : _.t.a4MYDA,
-        A = [
+    let Z = S ? _.t['WH+1Y2'] : _.t.a4MYDA,
+        y = [
             {
                 name: _.intl.string(_.t.yvk9p6),
                 failingName: _.intl.string(_.t['IY/UT0']),
                 description: _.intl.string(_.t.hSLSMz),
                 failingDescription: _.intl.format(_.t.odsGg4, {
-                    termsURL: I.EYA.TERMS,
-                    guidelinesURL: p.Z.getArticleURL(I.BhN.PUBLIC_GUILD_GUILDLINES)
+                    termsURL: v.EYA.TERMS,
+                    guidelinesURL: p.Z.getArticleURL(v.BhN.PUBLIC_GUILD_GUILDLINES)
                 }),
                 checked: null == m ? void 0 : m.safeEnvironment
             },
@@ -178,7 +178,7 @@ t.Z = (e) => {
                     children: [
                         (0, i.jsx)(h.Text, {
                             color: 'text-muted',
-                            className: N.healthFailingDescription,
+                            className: I.healthFailingDescription,
                             variant: 'text-sm/normal',
                             children: _.intl.string(_.t.LjqS0N)
                         }),
@@ -203,7 +203,7 @@ t.Z = (e) => {
                             return (!e && null != l) || (!t && null != i && null != r);
                         })() &&
                             (0, i.jsx)(h.Button, {
-                                className: N.detailsButton,
+                                className: I.detailsButton,
                                 look: h.Button.Looks.LINK,
                                 size: h.Button.Sizes.NONE,
                                 color: h.Button.Colors.LINK,
@@ -226,7 +226,7 @@ t.Z = (e) => {
                               (0, i.jsx)(
                                   'strong',
                                   {
-                                      className: N.healthPending,
+                                      className: I.healthPending,
                                       children: e
                                   },
                                   t
@@ -242,7 +242,7 @@ t.Z = (e) => {
                 description: _.intl.string(_.t.Pbu9AQ),
                 failingDescription: (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (null == S ? void 0 : S.channels) != null
+                        (null == b ? void 0 : b.channels) != null
                             ? (0, i.jsx)(h.Text, {
                                   color: 'text-muted',
                                   variant: 'text-sm/normal',
@@ -251,7 +251,7 @@ t.Z = (e) => {
                                           (0, i.jsx)(
                                               'span',
                                               {
-                                                  className: N.doesNot,
+                                                  className: I.doesNot,
                                                   children: e
                                               },
                                               t
@@ -261,7 +261,7 @@ t.Z = (e) => {
                             : null,
                         R.length > 0
                             ? (0, i.jsx)('div', {
-                                  className: N.indent,
+                                  className: I.indent,
                                   children: R.map((e) => {
                                       let [t, n] = e;
                                       return null != t
@@ -278,7 +278,7 @@ t.Z = (e) => {
                                   })
                               })
                             : null,
-                        (null == S ? void 0 : S.name) != null
+                        (null == b ? void 0 : b.name) != null
                             ? (0, i.jsx)(h.Text, {
                                   color: 'text-muted',
                                   variant: 'text-sm/normal',
@@ -287,7 +287,7 @@ t.Z = (e) => {
                                           (0, i.jsx)(
                                               'span',
                                               {
-                                                  className: N.doesNot,
+                                                  className: I.doesNot,
                                                   children: e
                                               },
                                               t
@@ -295,7 +295,7 @@ t.Z = (e) => {
                                   })
                               })
                             : null,
-                        (null == S ? void 0 : S.description) != null
+                        (null == b ? void 0 : b.description) != null
                             ? (0, i.jsx)(h.Text, {
                                   color: 'text-muted',
                                   variant: 'text-sm/normal',
@@ -304,7 +304,7 @@ t.Z = (e) => {
                                           (0, i.jsx)(
                                               'span',
                                               {
-                                                  className: N.doesNot,
+                                                  className: I.doesNot,
                                                   children: e
                                               },
                                               t
@@ -314,18 +314,18 @@ t.Z = (e) => {
                             : null
                     ]
                 }),
-                checked: null == S || 0 === Object.keys(S).length
+                checked: null == b || 0 === Object.keys(b).length
             },
             {
                 name: _.intl.string(_.t.lSXnLy),
                 failingName: _.intl.string(_.t.awA3PT),
                 description: _.intl.string(_.t.QbBJ7e),
-                failingDescription: _.intl.format(_.t.kBXInZ, { onClick: () => C.Z.setSection(I.pNK.SAFETY, I.KsC.SAFETY_PERMISSIONS) }),
+                failingDescription: _.intl.format(_.t.kBXInZ, { onClick: () => C.Z.setSection(v.pNK.SAFETY, v.KsC.SAFETY_PERMISSIONS) }),
                 checked: null == m ? void 0 : m.protected
             }
         ];
     return (0, i.jsxs)('div', {
-        className: s()(N.container, a),
+        className: s()(I.container, a),
         children: [
             (() => {
                 let e = _.t['+6Hylp'],
@@ -333,12 +333,12 @@ t.Z = (e) => {
                 return o
                     ? null
                     : (0, i.jsxs)('div', {
-                          className: N.header,
+                          className: I.header,
                           children: [
                               (0, i.jsx)('img', {
                                   alt: '',
                                   src: t,
-                                  className: N.headerIcon,
+                                  className: I.headerIcon,
                                   width: 40
                               }),
                               (0, i.jsx)(h.Heading, {
@@ -350,7 +350,7 @@ t.Z = (e) => {
                                                 (0, i.jsx)(
                                                     'strong',
                                                     {
-                                                        className: N.doesNot,
+                                                        className: I.doesNot,
                                                         children: e
                                                     },
                                                     t
@@ -360,15 +360,17 @@ t.Z = (e) => {
                           ]
                       });
             })(),
-            A.filter((e) => !c || null == e.checked || !e.checked).map((e, t) =>
-                (0, i.jsxs)(
-                    r.Fragment,
-                    {
-                        children: [(0, i.jsx)(v, { ...e }), t < A.length - 1 ? (0, i.jsx)('hr', { className: N.separator }) : null]
-                    },
-                    ''.concat(e.name)
+            y
+                .filter((e) => !c || null == e.checked || !e.checked)
+                .map((e, t) =>
+                    (0, i.jsxs)(
+                        r.Fragment,
+                        {
+                            children: [(0, i.jsx)(N, { ...e }), t < y.length - 1 ? (0, i.jsx)('hr', { className: I.separator }) : null]
+                        },
+                        ''.concat(e.name)
+                    )
                 )
-            )
         ]
     });
 };
