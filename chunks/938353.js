@@ -374,22 +374,20 @@ class e2 extends (i = l.Component) {
                 channel_id: t.id,
                 channel_type: t.type
             },
-            p =
-                h.length > 1
-                    ? (0, J._)(
-                          h,
-                          {
-                              shouldRedactExplicitContent: s,
-                              shouldHideMediaOptions: c
-                          },
-                          f
-                      )
-                    : {},
-            _ = (0, eI.yE)(d, eH.iLy.IS_VOICE_MESSAGE);
-        function g(e, t) {
+            p = (0, J._)(
+                h,
+                {
+                    shouldRedactExplicitContent: s,
+                    shouldHideMediaOptions: c
+                },
+                f
+            ),
+            _ = h.length > 1,
+            g = (0, eI.yE)(d, eH.iLy.IS_VOICE_MESSAGE);
+        function E(e, t) {
             return (0, ev.dn)(e.originalItem, t);
         }
-        let E = m.map((n) => {
+        let C = m.map((n) => {
                 let r = (0, Y.VY)(n),
                     s = {
                         message: e,
@@ -398,14 +396,14 @@ class e2 extends (i = l.Component) {
                         canRemoveItem: l && (m.length > 1 || '' !== e.content),
                         onRemoveItem: this.handleRemoveAttachment,
                         className: eY.embedWrapper,
-                        getObscureReason: g,
+                        getObscureReason: E,
                         onContextMenu:
                             null != o
                                 ? (e) => {
                                       e.stopPropagation(), e.preventDefault(), o(e, r);
                                   }
                                 : void 0,
-                        renderAudioComponent: _ ? eO.jY : eO.q7,
+                        renderAudioComponent: g ? eO.jY : eO.q7,
                         renderImageComponent: eO.dS,
                         renderVideoComponent: eO.vZ,
                         renderPlaintextFilePreview: eO.d4,
@@ -429,9 +427,9 @@ class e2 extends (i = l.Component) {
                         proxyURL: n.proxy_url,
                         url: n.url
                     });
-                return c in p && (s.onClick = p[c]), s;
+                return c in p && (_ && (s.onClick = p[c]), (s.onViewItem = p[c])), s;
             }),
-            C = n
+            I = n
                 ? (0, r.jsx)(O.Z, {
                       className: eK.hideIfMessageNotFocused,
                       messageId: e.id,
@@ -440,8 +438,8 @@ class e2 extends (i = l.Component) {
                   })
                 : void 0;
         return (0, r.jsx)(ew.Z, {
-            items: E,
-            inlineForwardButton: C
+            items: C,
+            inlineForwardButton: I
         });
     }
     renderEmbeds(e) {
