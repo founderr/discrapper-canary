@@ -16,7 +16,7 @@ let R = !1,
     C = null,
     N = null;
 function s() {
-    (R = !1), (N = null);
+    (R = !1), (N = null), (C = null);
 }
 function M(t) {
     let { error: e } = t,
@@ -37,9 +37,10 @@ async function P(t) {
     }
 }
 function U(t) {
-    let { payment: e } = t;
-    if (!R || e.id !== C || ![I.PyE.COMPLETED, I.PyE.CANCELED].includes(e.status)) return !1;
-    (R = !1), (N = null), (C = null), o.Z.wait(l.fw), o.Z.wait(_.pB);
+    let { payment: e } = t,
+        n = [I.PyE.COMPLETED, I.PyE.FAILED, I.PyE.CANCELED];
+    if (!R || e.id !== C || !n.includes(e.status)) return !1;
+    (R = !1), (C = null), e.status === I.PyE.FAILED ? (N = new A.ZP(c.intl.string(c.t.khEaRE))) : ((N = null), o.Z.wait(l.fw), o.Z.wait(_.pB));
 }
 class d extends (r = S.ZP.Store) {
     get isAwaitingAuthentication() {
