@@ -22,15 +22,15 @@ var i = n(200651),
     N = n(661599),
     T = n(617899),
     x = n(8521),
-    b = n(760326),
-    A = n(785203),
+    A = n(760326),
+    b = n(785203),
     Z = n(652785),
     y = n(981631),
     L = n(921944);
 function R(e) {
     e.stopPropagation();
 }
-function j(e) {
+function O(e) {
     var t;
     let { guild: n } = e,
         [h, g] = r.useState(null !== (t = s.K.get(Z.Iv)) && void 0 !== t ? t : 0),
@@ -75,7 +75,7 @@ function j(e) {
                                 markAsDismissed: l
                             });
                         case a.z.CHANNEL_NOTICE_QUICKSWITCHER:
-                            return (0, i.jsx)(b.Z, {
+                            return (0, i.jsx)(A.Z, {
                                 guild: n,
                                 markAsDismissed: l
                             });
@@ -110,25 +110,25 @@ function j(e) {
 }
 t.Z = (e) => {
     let { guild: t } = e;
-    switch ((0, A.Z)(t)) {
-        case A.R.ENABLE_PUBLIC_GUILD:
+    switch ((0, b.Z)(t)) {
+        case b.R.ENABLE_PUBLIC_GUILD:
             return (0, i.jsx)(C.Z, { guild: t });
-        case A.R.APPLIED_GUILD_BOOST_GRACE_PERIOD:
+        case b.R.APPLIED_GUILD_BOOST_GRACE_PERIOD:
             return (0, i.jsx)(h.Z, { guild: t });
-        case A.R.MAX_MEMBER_COUNT:
+        case b.R.MAX_MEMBER_COUNT:
             return (0, i.jsx)(x.Z, { guild: t });
-        case A.R.GUILD_LIVE_CHANNEL:
+        case b.R.GUILD_LIVE_CHANNEL:
             return (0, i.jsx)(g.ZP, { guild: t });
-        case A.R.GUILD_MFA_WARNING:
+        case b.R.GUILD_MFA_WARNING:
             return (0, i.jsx)(N.Z, { guild: t });
-        case A.R.COMMANDS_MIGRATION:
+        case b.R.COMMANDS_MIGRATION:
             return (0, i.jsx)(E.Z, { guild: t });
-        case A.R.APPLICATION_SUBSCRIPTION_EXPIRATION:
+        case b.R.APPLICATION_SUBSCRIPTION_EXPIRATION:
             return (0, i.jsx)(I.Z, { guild: t });
-        case A.R.HUB_STUDY_ROOM:
+        case b.R.HUB_STUDY_ROOM:
             return (0, i.jsx)(_.Z, { guild: t });
-        case A.R.SIGNUP:
+        case b.R.SIGNUP:
             return (0, i.jsx)(v.Z, { guild: t });
     }
-    return S.s.isDisallowPopupsSet() ? null : (0, i.jsx)(j, { guild: e.guild });
+    return S.s.isDisallowPopupsSet() ? null : (0, i.jsx)(O, { guild: e.guild });
 };

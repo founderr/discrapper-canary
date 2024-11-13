@@ -64,8 +64,8 @@ let i = (0, r.B)({
     }),
     s = (0, r.B)({
         kind: 'user',
-        id: '2024-03_unreads_new_users',
-        label: 'Unreads Experiment (grey-dot mode) (new users)',
+        id: '2024-11_unreads_new_users2',
+        label: 'Unreads Experiment (grey-dot mode) (new users) 2',
         defaultConfig: {
             enabled: !1,
             logExposure: !1

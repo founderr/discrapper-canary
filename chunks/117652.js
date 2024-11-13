@@ -22,8 +22,8 @@ var i = t(200651),
     C = t(855775),
     j = t(626135),
     I = t(987209),
-    T = t(563132),
-    E = t(409813),
+    E = t(563132),
+    T = t(409813),
     N = t(614277),
     S = t(981631),
     Z = t(474936),
@@ -31,7 +31,7 @@ var i = t(200651),
     A = t(829294),
     P = t(522888);
 let _ = {
-    key: E.h8.GIFT_CUSTOMIZATION,
+    key: T.h8.GIFT_CUSTOMIZATION,
     renderStep: (e) => (0, i.jsx)(b, { ...e }),
     options: {
         isLargeModal: !0,
@@ -40,8 +40,8 @@ let _ = {
 };
 function O(e) {
     let { onStepChange: n, onBackClick: t, showBackButton: l = !1, disabled: r = !1, loading: s = !1 } = e,
-        { hasPaymentSources: o } = (0, T.usePaymentContext)(),
-        d = o ? E.h8.REVIEW : E.h8.ADD_PAYMENT_STEPS;
+        { hasPaymentSources: o } = (0, E.usePaymentContext)(),
+        d = o ? T.h8.REVIEW : T.h8.ADD_PAYMENT_STEPS;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(a.Button, {
@@ -56,20 +56,20 @@ function O(e) {
 }
 function b(e) {
     let { handleStepChange: n, handleClose: t } = e,
-        { customGiftMessage: s = '', setCustomGiftMessage: o, giftRecipientError: v, setGiftRecipientError: E, validatingGiftRecipient: _, giftRecipient: b, recommendedGiftSkuIds: M, giftingOrigin: w, setValidatingGiftRecipient: R } = (0, I.wD)(),
-        { selectedSkuId: D, setSelectedSkuId: B, selectedSkuPricePreview: L, paymentSourceId: F, skuPricePreviewsById: G } = (0, T.usePaymentContext)(),
+        { customGiftMessage: s = '', setCustomGiftMessage: o, giftRecipientError: v, setGiftRecipientError: T, validatingGiftRecipient: _, giftRecipient: b, recommendedGiftSkuIds: M, giftingOrigin: w, setValidatingGiftRecipient: R } = (0, I.wD)(),
+        { selectedSkuId: D, setSelectedSkuId: L, selectedSkuPricePreview: B, paymentSourceId: F, skuPricePreviewsById: G } = (0, E.usePaymentContext)(),
         U = (0, r.e7)([g.default], () => g.default.getCurrentUser()),
         { enabled: H, giftRecommendationAlgorithm: W } = m.G.useExperiment({ location: 'CollectiblesPaymentModalGiftCustomizationStep' }, { autoTrackExposure: !1 }),
         z = H && w === Z.Wt.DM_CHANNEL,
         V = W === m.u.POPULAR ? y.intl.string(y.t.Kwgrrq) : y.intl.string(y.t.r1huYW),
         Y = async (e, n) => {
-            R(!0), null != v && E(), !(await (0, d.B1)(e.id, n)) && E(y.intl.string(y.t['4kgVqa'])), R(!1);
+            R(!0), null != v && T(), !(await (0, d.B1)(e.id, n)) && T(y.intl.string(y.t['4kgVqa'])), R(!1);
         };
     l.useEffect(() => {
         null != D && null != b && (j.default.track(S.rMx.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: D }), Y(b, D));
     }, []);
     let K = (e) => {
-            j.default.track(S.rMx.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: e }), null != b && Y(b, e), B(e);
+            j.default.track(S.rMx.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: e }), null != b && Y(b, e), L(e);
         },
         q = (e) => {
             let n = G[e],
@@ -149,7 +149,7 @@ function b(e) {
                                       J(),
                                       (0, i.jsx)(c.Z, {
                                           skuId: D,
-                                          skuPricePreview: L,
+                                          skuPricePreview: B,
                                           className: A.giftPreview,
                                           isSelected: !0,
                                           shouldDisplayHeader: !0

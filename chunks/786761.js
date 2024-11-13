@@ -67,10 +67,10 @@ function S(e) {
         P = e.gifting_prompt,
         k = null != e.interaction ? u.Z.createFromServer(e.interaction) : null,
         U = e.type === v.uaV.THREAD_STARTER_MESSAGE ? (null === (r = e.referenced_message) || void 0 === r ? void 0 : null === (n = r.author) || void 0 === n ? void 0 : n.id) : void 0,
-        B = e.type === v.uaV.PREMIUM_REFERRAL ? e.content : void 0,
-        G = e.content;
+        G = e.type === v.uaV.PREMIUM_REFERRAL ? e.content : void 0,
+        B = e.content;
     return (
-        e.type === v.uaV.PREMIUM_REFERRAL && (G = ''),
+        e.type === v.uaV.PREMIUM_REFERRAL && (B = ''),
         (S = 0),
         new c.ZP({
             ...e,
@@ -92,8 +92,8 @@ function S(e) {
                 mentionRoles: D
             }),
             giftCodes: (0, m.Fp)(e) ? (0, m.Q_)(null == e ? void 0 : e.embeds[0].url) : (0, m.Q_)(e.content),
-            content: G,
-            referralTrialOfferId: B,
+            content: B,
+            referralTrialOfferId: G,
             call: N(e.call, A.timestamp),
             messageSnapshots: O(e),
             reactions: R(null != T ? T : e.reactions, e.poll),

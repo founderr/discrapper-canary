@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(442837),
     o = n(780384),
     c = n(481060),
@@ -19,21 +19,21 @@ var i = n(200651),
     f = n(546240),
     g = n(952009);
 function C(e) {
-    let { checked: t, labelText: n, tooltipText: r, canToggle: C, iconAltText: x, onChange: v, tooltipColor: _, className: I, id: E = 'fancybutton-toggle', collapseWhenChecked: b = !0, onClick: N, disabled: Z } = e,
+    let { checked: t, labelText: n, tooltipText: a, canToggle: C, iconAltText: x, onChange: v, tooltipColor: _, className: I, id: E = 'fancybutton-toggle', collapseWhenChecked: b = !0, onClick: Z, disabled: N } = e,
         S = (0, s.e7)([h.Z], () => h.Z.useReducedMotion),
         [T, j] = l.useState(!1),
         A = (0, u.ZP)(),
         y = (0, o.wj)(A) || t ? g : f,
         { width: P = 0, ref: M } = (0, d.Z)(),
-        { width: R = 0, ref: L } = (0, d.Z)();
+        { width: L = 0, ref: R } = (0, d.Z)();
     return (0, i.jsxs)(c.TooltipContainer, {
         text: (0, i.jsx)(p.X, {
             textColor: 'always-white',
-            tooltipText: r
+            tooltipText: a
         }),
         position: 'top',
-        color: null != _ ? _ : Z ? c.Tooltip.Colors.BLACK : c.Tooltip.Colors.BRAND,
-        'aria-label': r,
+        color: null != _ ? _ : N ? c.Tooltip.Colors.BLACK : c.Tooltip.Colors.BRAND,
+        'aria-label': a,
         tooltipClassName: m.tooltip,
         className: m.tooltipContainer,
         children: [
@@ -45,20 +45,20 @@ function C(e) {
                         let e = !t;
                         j(!0), null == v || v(e);
                     }
-                    'function' == typeof N && N();
+                    'function' == typeof Z && Z();
                 },
                 id: E,
                 type: 'checkbox',
-                disabled: Z
+                disabled: N
             }),
             (0, i.jsxs)('label', {
                 htmlFor: E,
-                className: a()(m.label, I, {
+                className: r()(m.label, I, {
                     [m.transition]: T,
                     [m.labelChecked]: t,
                     [m.labelUnchecked]: !t && !C
                 }),
-                style: b ? { width: t ? P : P + R } : void 0,
+                style: b ? { width: t ? P : P + L } : void 0,
                 children: [
                     t
                         ? (0, i.jsx)(c.Shine, {
@@ -72,9 +72,9 @@ function C(e) {
                         alt: x
                     }),
                     (0, i.jsx)('span', {
-                        ref: L,
+                        ref: R,
                         children: (0, i.jsx)(c.Text, {
-                            className: a()(m.burstText, {
+                            className: r()(m.burstText, {
                                 [m.visuallyHidden]: t && b,
                                 [m.burstTextChecked]: t
                             }),

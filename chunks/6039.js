@@ -23,12 +23,12 @@ var i = n(200651),
 t.Z = (e) => {
     var t;
     let n, T;
-    let { guildId: x, inviteCode: b } = e,
-        [A, Z] = r.useState(v.hO.INITIAL),
+    let { guildId: x, inviteCode: A } = e,
+        [b, Z] = r.useState(v.hO.INITIAL),
         y = (0, l.e7)([p.Z], () => p.Z.get(x)),
         L = (0, l.e7)([f.Z], () => f.Z.getRequest(x)),
         R = (0, l.e7)([c.Z], () => c.Z.getGuild(x)),
-        { hasFetchedRequestToJoinGuilds: j, guildPreviewDisabled: O } = (0, l.cj)([f.Z], () => ({
+        { hasFetchedRequestToJoinGuilds: O, guildPreviewDisabled: j } = (0, l.cj)([f.Z], () => ({
             hasFetchedRequestToJoinGuilds: f.Z.hasFetchedRequestToJoinGuilds,
             guildPreviewDisabled: f.Z.getJoinRequestGuild(x)
         }));
@@ -36,8 +36,8 @@ t.Z = (e) => {
         null != R && (0, o.uL)(C.Z5c.CHANNEL(x));
     }, [R, x]),
         r.useEffect(() => {
-            !j && h.Z.fetchRequestToJoinGuilds();
-        }, [j]);
+            !O && h.Z.fetchRequestToJoinGuilds();
+        }, [O]);
     let P = r.useCallback((e) => {
             Z((t) => Math.max(t, e));
         }, []),
@@ -48,9 +48,9 @@ t.Z = (e) => {
             h.Z.resetGuildJoinRequest(x);
         };
     let w =
-            ((n = S.intl.format(S.t['9ZezpK'], { name: null == O ? void 0 : O.toString() })),
+            ((n = S.intl.format(S.t['9ZezpK'], { name: null == j ? void 0 : j.toString() })),
             (T = () => {
-                Z(Math.max(A, v.hO.FILLING)), h.Z.removeGuildJoinRequest(x), (0, o.uL)(C.Z5c.ME);
+                Z(Math.max(b, v.hO.FILLING)), h.Z.removeGuildJoinRequest(x), (0, o.uL)(C.Z5c.ME);
             }),
             () => {
                 (0, a.openModal)((e) =>
@@ -81,7 +81,7 @@ t.Z = (e) => {
         children: (0, i.jsxs)(s.Z, {
             embedded: !0,
             splash: k,
-            waveState: A,
+            waveState: b,
             showLogo: !1,
             updateWaveState: P,
             children: [
@@ -93,7 +93,7 @@ t.Z = (e) => {
                             case g.wB.SUBMITTED:
                                 return (0, i.jsx)(E.Z, {
                                     onWithdrawApplication: w,
-                                    guild: O
+                                    guild: j
                                 });
                             case g.wB.REJECTED:
                                 return (0, i.jsx)(_.Z, {
@@ -102,12 +102,12 @@ t.Z = (e) => {
                                     confirmText: S.intl.string(S.t.mqtdmZ),
                                     onWithdrawApplication: w,
                                     rejectionReason: null == L ? void 0 : L.rejectionReason,
-                                    guild: O
+                                    guild: j
                                 });
                             default:
                                 return (0, i.jsx)(I.Z, {
                                     guildId: x,
-                                    inviteCode: b,
+                                    inviteCode: A,
                                     onComplete: D,
                                     disableVerification: !0
                                 });

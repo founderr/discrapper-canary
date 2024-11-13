@@ -27,10 +27,10 @@ var i = n(200651),
 function T() {
     let e = r.useRef((0, a.P)()),
         { onScroll: t, scrollPosition: n, resetScrollPosition: T } = (0, s.M)(),
-        { tabs: x, selectedTab: b, setSelectedTab: A } = (0, _.Y)(),
-        Z = (0, p.lg)(b),
-        y = !C.MU.has(b),
-        { searchQuery: L, onSearchTextChange: R, onClearSearch: j, onSearchSubmit: O, isSearchVisible: P } = (0, f.H)({ loadId: e.current }),
+        { tabs: x, selectedTab: A, setSelectedTab: b } = (0, _.Y)(),
+        Z = (0, p.lg)(A),
+        y = !C.MU.has(A),
+        { searchQuery: L, onSearchTextChange: R, onClearSearch: O, onSearchSubmit: j, isSearchVisible: P } = (0, f.H)({ loadId: e.current }),
         {
             searchBarState: D,
             onTabsAvailableWidthChange: M,
@@ -44,9 +44,9 @@ function T() {
         G = h.Z.useField('fetchedQuery'),
         B = r.useCallback(
             (e) => {
-                A(e), P && j();
+                b(e), P && O();
             },
-            [P, j, A]
+            [P, O, b]
         ),
         H = r.useMemo(
             () =>
@@ -69,7 +69,7 @@ function T() {
         }, [Z]),
         r.useEffect(() => {
             T();
-        }, [b, T]),
+        }, [A, T]),
         r.useEffect(() => {
             !P && h.Z.setState({ scrollPosition: null });
         }, [P]),
@@ -82,13 +82,13 @@ function T() {
                         !P && (0, i.jsx)(c.z6, { scrollPosition: n }),
                         (0, i.jsx)(c.aV, {
                             icon: P ? l.ArrowLargeLeftIcon : l.ServerIcon,
-                            onClick: P ? j : void 0
+                            onClick: P ? O : void 0
                         }),
                         !P &&
                             (0, i.jsx)(d.Z, {
                                 className: U,
                                 tabs: H,
-                                selectedTab: P ? null : b,
+                                selectedTab: P ? null : A,
                                 onTabSelect: B,
                                 onAvailableWidthChange: M
                             }),
@@ -104,8 +104,8 @@ function T() {
                                 query: L,
                                 placeholder: S.intl.string(S.t['5h0QOD']),
                                 onTextChange: R,
-                                onClear: j,
-                                onSubmit: O,
+                                onClear: O,
+                                onSubmit: j,
                                 onCollapsedClick: w,
                                 state: P ? v.WB.DEFAULT : D,
                                 onBlur: k
@@ -119,7 +119,7 @@ function T() {
                           onGuildCardSeen: F
                       })
                     : (0, i.jsx)(E.Z, {
-                          selectedTab: b,
+                          selectedTab: A,
                           onScroll: t,
                           onGuildCardClick: z,
                           onGuildCardSeen: F

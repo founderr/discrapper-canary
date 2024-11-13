@@ -19,7 +19,7 @@ function o(e) {
                 className: s.info,
                 children: (0, i.jsx)(l.Text, {
                     variant: 'text-sm/medium',
-                    children: r.intl.string(r.t.P6Y2Nz)
+                    children: r.intl.format(r.t.P6Y2Nz, {})
                 })
             }),
             (0, i.jsx)('div', {

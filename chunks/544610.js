@@ -1,8 +1,8 @@
 let i;
 n(47120), n(724458), n(653041);
 var l,
-    r,
     a,
+    r,
     s,
     o = n(392711),
     c = n.n(o),
@@ -20,23 +20,23 @@ var l,
     I = n(699516),
     E = n(594174),
     b = n(981631);
-let N = !1,
-    Z = '',
+let Z = !1,
+    N = '',
     S = 0,
     T = [],
     j = !1,
     A = new Set(),
     y = null;
 function P() {
-    (Z = ''), (S = 0), (T = []), (A = new Set()), (N = !1), (y = null);
+    (N = ''), (S = 0), (T = []), (A = new Set()), (Z = !1), (y = null);
 }
 function M(e) {
-    (Z = e), (S = 0), R();
+    (N = e), (S = 0), L();
 }
-function R() {
-    if (!N) return !1;
+function L() {
+    if (!Z) return !1;
     let e = x.Z.getChannel(y);
-    if (0 === Z.trim().length)
+    if (0 === N.trim().length)
         return (
             null != i && i.clearQuery(),
             (T = (function (e) {
@@ -57,7 +57,7 @@ function R() {
     return (
         null != i &&
             i.setQuery(
-                Z,
+                N,
                 {
                     friends: !0,
                     provisional: !1
@@ -76,9 +76,9 @@ function R() {
                         e.forEach((e) => {
                             let i = _.Z.getScoreWithoutFetchingLatest(e.id),
                                 l = e.getRecipientId(),
-                                r = I.Z.isFriend(l) ? 0.2 : 0,
-                                a = null != x.Z.getDMFromUserId(l) ? 0.1 : 0;
-                            n[l] = 1 + i / t + r + a;
+                                a = I.Z.isFriend(l) ? 0.2 : 0,
+                                r = null != x.Z.getDMFromUserId(l) ? 0.1 : 0;
+                            n[l] = 1 + i / t + a + r;
                         }),
                         n
                     );
@@ -87,23 +87,23 @@ function R() {
         !1
     );
 }
-function L() {
-    if (!N) return !1;
+function R() {
+    if (!Z) return !1;
     let e = j;
     return (j = c().some(I.Z.getRelationships(), (e) => e === b.OGo.FRIEND)) !== e;
 }
 function k(e, t) {
     if (v.Z.hasConsented(b.pjP.PERSONALIZATION)) {
-        var n, i, l, r;
-        let a = null !== (l = null === (n = m.Z.getUserAffinity(e.user.id)) || void 0 === n ? void 0 : n.communicationProbability) && void 0 !== l ? l : 0,
-            s = null !== (r = null === (i = m.Z.getUserAffinity(t.user.id)) || void 0 === i ? void 0 : i.communicationProbability) && void 0 !== r ? r : 0;
-        if (a !== s) return s - a;
+        var n, i, l, a;
+        let r = null !== (l = null === (n = m.Z.getUserAffinity(e.user.id)) || void 0 === n ? void 0 : n.communicationProbability) && void 0 !== l ? l : 0,
+            s = null !== (a = null === (i = m.Z.getUserAffinity(t.user.id)) || void 0 === i ? void 0 : i.communicationProbability) && void 0 !== a ? a : 0;
+        if (r !== s) return s - r;
     }
     return (0, g._I)(C.ZP.getName(e.user).toLocaleLowerCase()).localeCompare((0, g._I)(C.ZP.getName(t.user).toLocaleLowerCase()));
 }
 function O(e) {
     let { results: t } = e;
-    if (!!N && '' !== Z)
+    if (!!Z && '' !== N)
         (T = t
             .map((e) => {
                 let { id: t } = e;
@@ -117,7 +117,7 @@ function D() {
 }
 function w(e) {
     if (e.key !== b.vTt) return !1;
-    (N = !0), L(), (i = D()), (y = null), M('');
+    (Z = !0), R(), (i = D()), (y = null), M('');
 }
 function B(e) {
     if (e.key !== b.vTt) return !1;
@@ -128,7 +128,7 @@ function U() {
 }
 class H extends (l = d.ZP.Store) {
     initialize() {
-        this.waitFor(E.default, x.Z, I.Z, p.Z, v.Z), this.syncWith([E.default, x.Z], R), this.syncWith([I.Z], L);
+        this.waitFor(E.default, x.Z, I.Z, p.Z, v.Z), this.syncWith([E.default, x.Z], L), this.syncWith([I.Z], R);
     }
     getResults() {
         return T;
@@ -140,11 +140,11 @@ class H extends (l = d.ZP.Store) {
         return A;
     }
     getQuery() {
-        return Z;
+        return N;
     }
     getState() {
         return {
-            query: Z,
+            query: N,
             selectedRow: S,
             selectedUsers: A,
             results: T,
@@ -153,14 +153,14 @@ class H extends (l = d.ZP.Store) {
     }
 }
 (s = 'PrivateChannelRecipientsInviteStore'),
-    (a = 'displayName') in (r = H)
-        ? Object.defineProperty(r, a, {
+    (r = 'displayName') in (a = H)
+        ? Object.defineProperty(a, r, {
               value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (r[a] = s);
+        : (a[r] = s);
 let G = new H(u.Z, {
     CONNECTION_OPEN: function () {
         P();
@@ -168,13 +168,13 @@ let G = new H(u.Z, {
     CHANNEL_SELECT: function (e) {
         let { guildId: t, channelId: n } = e;
         if (null != t) return !1;
-        let i = N;
-        return P(), (N = i), (y = n), R();
+        let i = Z;
+        return P(), (Z = i), (y = n), L();
     },
     MODAL_PUSH: w,
     SHOW_ACTION_SHEET: w,
     PRIVATE_CHANNEL_RECIPIENTS_INVITE_OPEN: function (e) {
-        (N = !0), L(), (i = D()), (y = e.channelId), M('');
+        (Z = !0), R(), (i = D()), (y = e.channelId), M('');
     },
     MODAL_POP: B,
     HIDE_ACTION_SHEET: B,

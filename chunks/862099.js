@@ -33,14 +33,14 @@ var i,
     N = n(938475),
     T = n(626135),
     x = n(823379),
-    b = n(15274),
-    A = n(924301),
+    A = n(15274),
+    b = n(924301),
     Z = n(504160),
     y = n(151864),
     L = n(835184),
     R = n(725436),
-    j = n(497656),
-    O = n(79874),
+    O = n(497656),
+    j = n(79874),
     P = n(554747),
     D = n(230900),
     M = n(854698),
@@ -160,7 +160,7 @@ function V(e) {
 function F(e) {
     let { guildEvent: t, noticeType: n } = e,
         i = (0, M.DK)(t),
-        r = (0, c.e7)([A.ZP], () => A.ZP.isInterestedInEventRecurrence(t.id, i), [t.id, i]),
+        r = (0, c.e7)([b.ZP], () => b.ZP.isInterestedInEventRecurrence(t.id, i), [t.id, i]),
         a = (0, c.e7)([L.Z], () => L.Z.getUpcomingNoticeSeenTime(t.id), [t.id]);
     return (
         !r && null == a && (0, Z._6)(t.id),
@@ -206,7 +206,7 @@ function z(e) {
         s = null != r ? (0, R.m)(r, !0) : null,
         c = (0, D.nE)(n),
         u = (0, h.KS)(c),
-        { startTime: m, endTime: p } = (0, O.ZP)(n),
+        { startTime: m, endTime: p } = (0, j.ZP)(n),
         { startDateTimeString: g, upcomingEvent: f, diffMinutes: _ } = (0, M.ub)(m.toISOString(), null == p ? void 0 : p.toISOString()),
         E = f ? (_ > 0 ? G.intl.formatToPlainString(G.t.PQlCWl, { minutes: _ }) : G.intl.string(G.t.WINqKS)) : G.intl.formatToPlainString(G.t.DC6h3N, { date: g });
     return (
@@ -223,7 +223,7 @@ function z(e) {
                     className: B.textBlock,
                     children: [
                         (0, l.jsx)(d.Clickable, {
-                            onClick: () => (0, b.bO)({ eventId: n.id }),
+                            onClick: () => (0, A.bO)({ eventId: n.id }),
                             className: B.eventNameClickable,
                             children: (0, l.jsx)(d.Text, {
                                 color: 'header-primary',
@@ -322,7 +322,7 @@ function Y(e) {
 function W(e) {
     let { guildEvent: t } = e,
         n = a.useCallback(() => {
-            (0, b.bO)({ eventId: t.id });
+            (0, A.bO)({ eventId: t.id });
         }, [t]);
     return (0, l.jsx)(d.Button, {
         fullWidth: !0,
@@ -436,7 +436,7 @@ function X(e) {
     (t.ZP = a.memo(function (e) {
         let { guild: t } = e,
             { showRedesignedLiveChannelNotice: n } = (0, m.o)(!0),
-            i = (0, j.y)(t.id),
+            i = (0, O.y)(t.id),
             r = (0, P.k5)(t.id),
             a = (0, P.Vm)(t.id),
             s = (0, c.e7)([C.Z], () => C.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]),

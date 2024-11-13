@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(392711),
-    a = n.n(r),
+    a = n(392711),
+    r = n.n(a),
     s = n(374470),
     o = n(481060),
     c = n(239091),
@@ -30,8 +30,8 @@ function m(e, t, n) {
 }
 class f extends l.PureComponent {
     render() {
-        let { result: e, listItemProps: t, searchOffset: n, index: l, totalResults: r } = this.props,
-            s = a().find(e, (e) => e.isSearchHit);
+        let { result: e, listItemProps: t, searchOffset: n, index: l, totalResults: a } = this.props,
+            s = r().find(e, (e) => e.isSearchHit);
         if (null == s) return null;
         let c = u.Z.getChannel(s.channel_id);
         if (null == c) return null;
@@ -44,7 +44,7 @@ class f extends l.PureComponent {
                 className: p.container,
                 ...t,
                 'aria-posinset': 1 + n + l,
-                'aria-setsize': r,
+                'aria-setsize': a,
                 'aria-labelledby': m,
                 children: [
                     (0, i.jsx)(o.Clickable, {

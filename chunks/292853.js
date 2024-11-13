@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(481060),
     o = n(367907),
     c = n(626135),
@@ -25,7 +25,7 @@ function m(e) {
             });
         }, [t]),
         (0, i.jsxs)('div', {
-            className: a()(p.chatHeaderBar, { [p.narrow]: n }),
+            className: r()(p.chatHeaderBar, { [p.narrow]: n }),
             children: [
                 (0, i.jsx)(s.Text, {
                     className: p.chatHeaderBarText,

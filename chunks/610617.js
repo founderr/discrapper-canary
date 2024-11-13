@@ -35,21 +35,21 @@ function O(e) {
         O = (0, c.e7)([p.default], () => p.default.getCurrentUser()),
         { playSound: L, isPlaying: I, soundpackPlaying: M } = (0, j.Z)(),
         A = (0, N.OR)(t),
-        P = v.ZP.canUseCustomNotificationSounds(O),
-        R = P ? A : _.YC.CLASSIC,
+        R = v.ZP.canUseCustomNotificationSounds(O),
+        P = R ? A : _.YC.CLASSIC,
         G = s.useRef(0),
         U = s.useRef(-1),
-        [k, y] = s.useState(!1),
-        w = (0, _.LB)(),
+        [k, w] = s.useState(!1),
+        y = (0, _.LB)(),
         D = s.useCallback(() => {
             clearTimeout(U.current),
                 (G.current += 1),
-                G.current > 10 && (y(!0), h.K.set(_.CZ, !0)),
+                G.current > 10 && (w(!0), h.K.set(_.CZ, !0)),
                 (U.current = setTimeout(() => {
                     G.current = 0;
                 }, 1000));
         }, []),
-        [F, B] = o().partition(w, (e) => !e.requirePremium || (e.requirePremium && P)),
+        [F, B] = o().partition(y, (e) => !e.requirePremium || (e.requirePremium && R)),
         H = F.map((e) => {
             var t, n, i, s;
             return {
@@ -145,9 +145,9 @@ function O(e) {
                           children: [
                               (0, i.jsx)(m.RadioGroup, {
                                   className: r()({ [Z.options]: V }),
-                                  value: null != R ? R : _.YC.CLASSIC,
+                                  value: null != P ? P : _.YC.CLASSIC,
                                   onChange: (e) => {
-                                      L(e.value), P && (0, C.t)(t, R, e.value, 'notificationSettings');
+                                      L(e.value), R && (0, C.t)(t, P, e.value, 'notificationSettings');
                                   },
                                   options: H,
                                   radioItemClassName: Z.option

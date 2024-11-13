@@ -26,15 +26,15 @@ var i = n(200651),
     N = n(981631),
     T = n(388032),
     x = n(756),
-    b = n(886733);
-let A = {
+    A = n(886733);
+let b = {
     width: 14,
     height: 14
 };
 function Z(e) {
     let { recipientUser: t, giftIntentType: n, analyticsPage: l, shouldHighlight: Z } = e,
         { analyticsLocations: y } = (0, u.ZP)(),
-        { isHovered: L, setIsHovered: R, onMouseEnter: j, onMouseLeave: O } = (0, p.Z)(200, 300),
+        { isHovered: L, setIsHovered: R, onMouseEnter: O, onMouseLeave: j } = (0, p.Z)(200, 300),
         { enableEmojiCTA: P } = E.w.useExperiment({ location: 'GiftIntentActionButton' }, { autoTrackExposure: !1 });
     r.useEffect(() => {
         let e = g.Z.getUserAffinity(t.id);
@@ -49,9 +49,9 @@ function Z(e) {
     }, [t, n]);
     let D = r.useCallback(
             (e) => {
-                'focus' !== e.type && j();
+                'focus' !== e.type && O();
             },
-            [j]
+            [O]
         ),
         M = (e) => {
             e.stopPropagation();
@@ -88,12 +88,12 @@ function Z(e) {
                 ? (0, i.jsx)(d.Clickable, {
                       'aria-label': k(),
                       onClick: M,
-                      className: a()(b.actionButton, x.popoutButton, {
-                          [b.highlight]: Z,
-                          [b.actionButtonMobile]: c.tq
+                      className: a()(A.actionButton, x.popoutButton, {
+                          [A.highlight]: Z,
+                          [A.actionButtonMobile]: c.tq
                       }),
                       onMouseEnter: D,
-                      onMouseLeave: O,
+                      onMouseLeave: j,
                       children: (0, i.jsx)(s.animated.div, {
                           className: x.spriteContainer,
                           children: (0, i.jsx)('div', { className: x.sprite })
@@ -102,14 +102,14 @@ function Z(e) {
                 : (0, i.jsx)(d.Button, {
                       onClick: M,
                       onMouseEnter: D,
-                      onMouseLeave: O,
+                      onMouseLeave: j,
                       children: (0, i.jsxs)('div', {
                           className: x.pillContentContainer,
                           children: [
                               (0, i.jsx)(d.GiftIcon, {
                                   size: 'custom',
-                                  width: A.width,
-                                  height: A.height,
+                                  width: b.width,
+                                  height: b.height,
                                   color: 'currentColor'
                               }),
                               (0, i.jsx)(d.Text, {
@@ -137,8 +137,8 @@ function Z(e) {
                 giftIntentType: n,
                 premiumGiftIntentCardType: v.U.COACHMARK,
                 recipientUser: t,
-                onMouseEnter: j,
-                onMouseLeave: O,
+                onMouseEnter: O,
+                onMouseLeave: j,
                 popoutPosition: e.position,
                 analyticsPage: l,
                 analyticsSection: N.jXE.FRIENDS_LIST_FRIEND_ROW_GIFT_POPOUT,

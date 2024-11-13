@@ -1,12 +1,12 @@
 n.d(t, {
     V: function () {
-        return r;
+        return a;
     }
 }),
     n(47120);
 var i = n(442837),
     l = n(375954);
-function r(e, t) {
+function a(e, t) {
     return (0, i.e7)(
         [l.Z],
         () => {

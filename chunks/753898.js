@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(442837),
-    r = n(481060),
-    a = n(607070),
+    a = n(481060),
+    r = n(607070),
     s = n(43267),
     o = n(933557),
     c = n(266076),
@@ -16,7 +16,7 @@ var l = n(442837),
 function h(e) {
     var t;
     let { channel: n, children: h, user: p } = e,
-        m = (0, l.e7)([a.Z], () => a.Z.useReducedMotion),
+        m = (0, l.e7)([r.Z], () => r.Z.useReducedMotion),
         f = null !== (t = (0, o.ZP)(n)) && void 0 !== t ? t : '',
         {
             avatarDecorationSrc: g,
@@ -24,7 +24,7 @@ function h(e) {
             isAnimating: x
         } = (0, d.Z)({
             user: p,
-            size: r.AvatarSizes.SIZE_80,
+            size: a.AvatarSizes.SIZE_80,
             animateOnHover: !0
         });
     return (0, i.jsxs)(u.ZP, {
@@ -36,14 +36,14 @@ function h(e) {
                 return n.isMultiUserDM()
                     ? (0, i.jsx)(c.Z, {
                           channel: n,
-                          size: r.AvatarSizes.SIZE_80,
+                          size: a.AvatarSizes.SIZE_80,
                           experimentLocation: 'empty_messages',
                           animated: e,
                           'aria-label': f
                       })
-                    : (0, i.jsx)(r.Avatar, {
+                    : (0, i.jsx)(a.Avatar, {
                           'aria-label': f,
-                          size: r.AvatarSizes.SIZE_80,
+                          size: a.AvatarSizes.SIZE_80,
                           src: (0, s.x)(n, 80, e),
                           avatarDecoration: g
                       });

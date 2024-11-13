@@ -1,10 +1,10 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return B;
+            return G;
         },
         openCollectibleRewardModal: function () {
-            return G;
+            return B;
         }
     }),
     n(773603),
@@ -203,7 +203,7 @@ function U(e) {
         ]
     });
 }
-function B(e) {
+function G(e) {
     var t, n;
     let { quest: a, location: s, onClose: o, transitionState: u, preview: c } = e,
         f = i.useMemo(() => (0, N.xn)(a.config), [a]),
@@ -238,7 +238,7 @@ function B(e) {
                 preview: c
             });
 }
-function G(e, t, i) {
+function B(e, t, i) {
     (0, c.openModalLazy)(async () => {
         let { default: a } = await Promise.resolve().then(n.bind(n, 920916));
         return (n) =>

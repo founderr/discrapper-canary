@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return A;
     }
 }),
     n(789020),
@@ -38,7 +38,7 @@ async function T(e, t, n) {
         c,
         d,
         v,
-        { client_id: N, response_type: T = 'code', redirect_uri: x, code_challenge: b, code_challenge_method: A, state: Z, nonce: y, scope: L, permissions: R, guild_id: j, channel_id: O, prompt: P, disable_guild_select: D, integration_type: M, pid: w, signal: k } = e;
+        { client_id: N, response_type: T = 'code', redirect_uri: x, code_challenge: A, code_challenge_method: b, state: Z, nonce: y, scope: L, permissions: R, guild_id: O, channel_id: j, prompt: P, disable_guild_select: D, integration_type: M, pid: w, signal: k } = e;
     if (null == k ? void 0 : k.aborted) throw new C.Z({ errorCode: S.lTL.UNKNOWN_ERROR }, 'Request aborted');
     if (null == N) throw new C.Z({ errorCode: S.lTL.OAUTH2_ERROR }, 'No Client ID provided');
     if (null != x) throw new C.Z({ errorCode: S.lTL.OAUTH2_ERROR }, 'Redirect URI cannot be used in the RPC OAuth2 Authorization flow');
@@ -60,8 +60,8 @@ async function T(e, t, n) {
             scopes: U,
             responseType: T,
             redirectUri: x,
-            codeChallenge: b,
-            codeChallengeMethod: A,
+            codeChallenge: A,
+            codeChallengeMethod: b,
             state: Z,
             integrationType: o,
             signal: k
@@ -85,8 +85,8 @@ async function T(e, t, n) {
                     scopes: U,
                     responseType: T,
                     redirectUri: x,
-                    codeChallenge: b,
-                    codeChallengeMethod: A,
+                    codeChallenge: A,
+                    codeChallengeMethod: b,
                     state: Z,
                     nonce: y,
                     integrationType: o
@@ -96,7 +96,7 @@ async function T(e, t, n) {
             let { body: e } = t;
             throw new C.Z({ errorCode: S.lTL.OAUTH2_ERROR }, 'OAuth2 Authorize Error: '.concat((null == e ? void 0 : e.message) || 'Unknown Error'));
         }
-    null == n || n(c.application, O, w);
+    null == n || n(c.application, j, w);
     let H = I.Hn;
     try {
         H = a.vB(null != R ? R : 0);
@@ -110,11 +110,11 @@ async function T(e, t, n) {
             parsedPermissions: H,
             responseType: T,
             redirectUri: x,
-            codeChallenge: b,
-            codeChallengeMethod: A,
+            codeChallenge: A,
+            codeChallengeMethod: b,
             state: Z,
-            guildId: j,
-            channelId: O,
+            guildId: O,
+            channelId: j,
             prompt: P,
             disableGuildSelect: D,
             disclosures: d,
@@ -165,7 +165,7 @@ function x(e, t) {
             })
     );
 }
-function b(e, t) {
+function A(e, t) {
     return {
         [S.Etm.AUTHENTICATE]: (0, o.S)(S.Etm.AUTHENTICATE, {
             handler(n) {

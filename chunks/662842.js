@@ -27,14 +27,14 @@ var i,
     N = n(854698),
     T = n(703656),
     x = n(922482),
-    b = n(565799),
-    A = n(501655),
+    A = n(565799),
+    b = n(501655),
     Z = n(427679),
     y = n(448206),
     L = n(184301),
     R = n(347475),
-    j = n(496675),
-    O = n(594174),
+    O = n(496675),
+    j = n(594174),
     P = n(662868),
     D = n(981631),
     M = n(765305),
@@ -55,12 +55,12 @@ function U(e) {
             [s, r]
         ),
         B = null == i ? void 0 : i.id,
-        H = (0, c.Wu)([b.Z], () => [...new Set(b.Z.getMutableParticipants(B, A.pV.SPEAKER).map((e) => e.user))], [B]),
-        V = (0, c.e7)([b.Z], () => (null != B ? b.Z.getParticipantCount(B, A.pV.AUDIENCE) : 0), [B]),
-        F = (0, c.e7)([j.Z], () => j.Z.can(D.Plq.CONNECT, i)),
+        H = (0, c.Wu)([A.Z], () => [...new Set(A.Z.getMutableParticipants(B, b.pV.SPEAKER).map((e) => e.user))], [B]),
+        V = (0, c.e7)([A.Z], () => (null != B ? A.Z.getParticipantCount(B, b.pV.AUDIENCE) : 0), [B]),
+        F = (0, c.e7)([O.Z], () => O.Z.can(D.Plq.CONNECT, i)),
         z = (0, y.Z)(null == i ? void 0 : i.id),
         Y = null == r ? void 0 : r.creator_id,
-        W = (0, c.e7)([O.default], () => O.default.getUser(Y), [Y]);
+        W = (0, c.e7)([j.default], () => j.default.getUser(Y), [Y]);
     a.useEffect(() => {
         null != Y && (0, h.PR)(Y);
     }, [Y]);

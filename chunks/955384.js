@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(925975),
-    a = n(957730),
+    a = n(925975),
+    r = n(957730),
     s = n(981631),
     o = n(388032),
     c = n(507737);
@@ -29,7 +29,7 @@ function u(e) {
 }
 class h extends l.PureComponent {
     render() {
-        let { className: e, textValue: t, richValue: n, message: l, channel: r, onCancel: a, children: s } = this.props;
+        let { className: e, textValue: t, richValue: n, message: l, channel: a, onCancel: r, children: s } = this.props;
         return (0, i.jsxs)('div', {
             className: e,
             ref: this.node,
@@ -39,7 +39,7 @@ class h extends l.PureComponent {
                     textValue: t,
                     richValue: n,
                     message: l,
-                    channel: r,
+                    channel: a,
                     onChange: this.onChange,
                     onSubmit: this.onSubmit,
                     onKeyDown: this.onKeyDown
@@ -47,7 +47,7 @@ class h extends l.PureComponent {
                 (0, i.jsx)('div', {
                     className: c.operations,
                     children: o.intl.format(o.t.wDsPXl, {
-                        onCancel: () => a(r.id),
+                        onCancel: () => r(a.id),
                         onSave: this.onClickSave
                     })
                 })
@@ -80,12 +80,12 @@ class h extends l.PureComponent {
                                   shouldClear: !1,
                                   shouldRefocus: !1
                               });
-                          let o = (0, r.g)(e, {
+                          let o = (0, a.g)(e, {
                               channel: n,
                               isEdit: !0
                           });
                           (null == o ? void 0 : o.content) != null && (e = o.content);
-                          let c = a.ZP.parse(this.props.channel, e);
+                          let c = r.ZP.parse(this.props.channel, e);
                           return (
                               c.content !== this.props.message.content && s(this.props.channel.id, this.props.message.id, c),
                               l(n.id),

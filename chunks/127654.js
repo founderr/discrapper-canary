@@ -11,8 +11,8 @@ n.d(t, {
     n(411104);
 var i = n(475179),
     l = n(166459),
-    r = n(966390),
-    a = n(531643),
+    a = n(966390),
+    r = n(531643),
     s = n(476326),
     o = n(367907),
     c = n(358221),
@@ -30,24 +30,24 @@ function _(e, t) {
     let n = u.default.getCurrentUser(),
         i = e.getGuildId(),
         l = p.dg(i),
-        r = [],
+        a = [],
         s = 0,
         c = 0,
         d = 0,
         h = [];
-    for (let e of t) (d += 1), (s += e.size), r.push(e.size), e.size > c && (c = e.size), null != e.type ? h.push(e.type) : h.push('unknown');
+    for (let e of t) (d += 1), (s += e.size), a.push(e.size), e.size > c && (c = e.size), null != e.type ? h.push(e.type) : h.push('unknown');
     if (c > l) {
         (0, o.yw)(g.rMx.FILE_SIZE_LIMIT_EXCEEDED, {
             channel_id: e.id,
             guild_id: i,
             user_individual_file_size_limit: l,
-            pre_compression_file_sizes: r,
+            pre_compression_file_sizes: a,
             pre_compression_aggregate_file_size: s,
             num_attachments: d,
             error_type: C.xi.UPLOAD_ATTACHMENT_MAX_SIZE_ERROR,
             attachment_mimetypes: h
         }),
-            (0, a.openUploadError)({
+            (0, r.openUploadError)({
                 title: v.intl.string(v.t['/tGlcn']),
                 help: (0, f.BK)(n, i),
                 showPremiumUpsell: !(0, m.M5)(n, x.p9.TIER_2),
@@ -55,7 +55,7 @@ function _(e, t) {
             });
         return;
     }
-    (0, a.openUploadError)({
+    (0, r.openUploadError)({
         title: v.intl.string(v.t['/tGlcn']),
         help: v.intl.formatToPlainString(v.t.tUOJdH, { maxSize: p.Ng(p.OC()) })
     });
@@ -70,7 +70,7 @@ function I(e, t, n) {
         return;
     }
     if (d.Z.getUploadCount(t.id, n) + e.length > g.dN1) {
-        (0, a.openUploadError)({
+        (0, r.openUploadError)({
             title: v.intl.string(v.t.wOr6hI),
             help: v.intl.formatToPlainString(v.t['qqyp/f'], { limit: g.dN1 })
         }),
@@ -94,7 +94,7 @@ function I(e, t, n) {
             draftType: n
         });
     } else
-        r.Z.instantBatchUpload({
+        a.Z.instantBatchUpload({
             channelId: t.id,
             files: e,
             draftType: n,

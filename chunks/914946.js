@@ -79,8 +79,8 @@ var i,
     N = n(70956),
     T = n(5192),
     x = n(226951),
-    b = n(996106),
-    A = n(863141),
+    A = n(996106),
+    b = n(863141),
     Z = n(186901),
     y = n(981631);
 let L = null !== (i = r.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && void 0 !== i ? i : 'localhost',
@@ -91,8 +91,8 @@ let L = null !== (i = r.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && v
             n = t[t.length - 1];
         return /^\d+$/.test(n) ? e : t.slice(-2).join('.');
     })(),
-    j = new RegExp('^'.concat(x.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(x.Z.escape(R), '|discordapp.com|discord.com)$')),
-    O = 1 * N.Z.Millis.MINUTE,
+    O = new RegExp('^'.concat(x.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(x.Z.escape(R), '|discordapp.com|discord.com)$')),
+    j = 1 * N.Z.Millis.MINUTE,
     P = {};
 function D(e) {
     return 'customEmoji' === e.type && (e.type = 'emoji'), 'emoji' === e.type && e.src && (e.src = M(e.src)), Array.isArray(e.content) && (e.content = e.content.map(D)), e;
@@ -184,7 +184,7 @@ function G(e, t, n) {
             self_deaf: a,
             suppress: s
         },
-        user: (0, A.Z)(c)
+        user: (0, b.Z)(c)
     };
 }
 function B(e, t, n) {
@@ -192,7 +192,7 @@ function B(e, t, n) {
         a = v.default.getUser(t);
     return {
         type: e,
-        user: null != a ? (0, A.Z)(a) : null,
+        user: null != a ? (0, b.Z)(a) : null,
         presence: {
             status: C.Z.getStatus(t),
             activity: null != r ? C.Z.getApplicationActivity(t, r) : C.Z.getPrimaryActivity(t)
@@ -211,7 +211,7 @@ function H(e) {
     } catch (e) {
         return !1;
     }
-    return (window.location.hostname === t && 'localhost' === t) || (null == e.match('staging') && (!!(j.test(e) && j.test(n)) || !1));
+    return (window.location.hostname === t && 'localhost' === t) || (null == e.match('staging') && (!!(O.test(e) && O.test(n)) || !1));
 }
 function V(e, t, n) {
     let i = _.Z.getGuild(e.getGuildId());
@@ -252,8 +252,8 @@ function W(e, t, n) {
                 if ('string' == typeof n) {
                     if (e.transport === Z.He.POST_MESSAGE) {
                         let e = (0, d.Z)(t);
-                        if (null == e || !w(n, [e])) throw new b.Z({ closeCode: y.$VG.INVALID_ORIGIN }, 'Invalid Origin');
-                    } else if (!w(n, r)) throw new b.Z({ closeCode: y.$VG.INVALID_ORIGIN }, 'Invalid Origin');
+                        if (null == e || !w(n, [e])) throw new A.Z({ closeCode: y.$VG.INVALID_ORIGIN }, 'Invalid Origin');
+                    } else if (!w(n, r)) throw new A.Z({ closeCode: y.$VG.INVALID_ORIGIN }, 'Invalid Origin');
                 }
                 e.application = {
                     id: l,
@@ -264,13 +264,13 @@ function W(e, t, n) {
                 };
             },
             () => {
-                throw new b.Z({ closeCode: y.$VG.INVALID_CLIENTID }, 'Invalid Client ID');
+                throw new A.Z({ closeCode: y.$VG.INVALID_CLIENTID }, 'Invalid Client ID');
             }
         );
 }
 async function K(e, t) {
     let n = P[e];
-    null == n && ((n = new s.Z(t ? 2 : 60, O)), (P[e] = n)), await n.process();
+    null == n && ((n = new s.Z(t ? 2 : 60, j)), (P[e] = n)), await n.process();
 }
 function q(e, t) {
     null == t && (e.authorization.scopes = [Z.lH]);
@@ -327,9 +327,9 @@ function Q(e, t) {
     };
 }
 function J(e) {
-    if (e !== Z.He.POST_MESSAGE) throw new b.Z({ errorCode: y.lTL.INVALID_COMMAND }, 'command not available from "'.concat(e, ' transport'));
+    if (e !== Z.He.POST_MESSAGE) throw new A.Z({ errorCode: y.lTL.INVALID_COMMAND }, 'command not available from "'.concat(e, ' transport'));
 }
 function $(e) {
-    if (null == e.id) throw new b.Z({ errorCode: y.lTL.INVALID_COMMAND }, 'Invalid application');
+    if (null == e.id) throw new A.Z({ errorCode: y.lTL.INVALID_COMMAND }, 'Invalid application');
     return e.id;
 }

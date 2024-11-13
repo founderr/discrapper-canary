@@ -36,8 +36,8 @@ function x(e) {
         l = (0, g.Wg)(),
         {
             progress: x,
-            errors: b,
-            submitting: A
+            errors: A,
+            submitting: b
         } = (0, c.cj)([g.ZP], () => {
             var e, n, i, r;
             return {
@@ -46,26 +46,26 @@ function x(e) {
                 submitting: null === (i = g.ZP.getStateForGuild(t)) || void 0 === i ? void 0 : i.submitting
             };
         }),
-        Z = r.useMemo(() => (0, v.G)(b), [b]),
+        Z = r.useMemo(() => (0, v.G)(A), [A]),
         [y, L] = r.useState(!1),
-        [R, j] = r.useState(window.innerWidth),
-        [O, P] = r.useState(1),
+        [R, O] = r.useState(window.innerWidth),
+        [j, P] = r.useState(1),
         [D, M] = r.useState(!0),
         w = (0, f.f)(),
         k = (0, d.useSpring)({
-            opacity: O,
+            opacity: j,
             config: T,
             onStart: () => M(!0),
-            onRest: () => M(1 === O)
+            onRest: () => M(1 === j)
         }),
         U = (0, d.useSpring)(
             {
-                transform: 'translateX('.concat(1 === O ? 0 : (-1 * (R - 380)) / 2 + 47.5, 'px)'),
+                transform: 'translateX('.concat(1 === j ? 0 : (-1 * (R - 380)) / 2 + 47.5, 'px)'),
                 config: T
             },
             'respect-motion-settings'
         ),
-        G = (0, d.useTransition)(0 === O, {
+        G = (0, d.useTransition)(0 === j, {
             from: { opacity: 0 },
             enter: {
                 opacity: 1,
@@ -73,7 +73,7 @@ function x(e) {
             },
             config: T
         }),
-        B = (0, d.useTransition)(0 === O, {
+        B = (0, d.useTransition)(0 === j, {
             from: { opacity: 0 },
             enter: { opacity: 1 },
             leave: { opacity: 0 },
@@ -82,7 +82,7 @@ function x(e) {
         H = r.useCallback(
             (e) => {
                 if (e === Z.length) P(0), (0, p.Lp)(t, 'signature');
-                else if (0 === O) P(1);
+                else if (0 === j) P(1);
                 else {
                     var n;
                     m._9(t, {
@@ -91,17 +91,17 @@ function x(e) {
                     });
                 }
             },
-            [O, t, x.furthestStep, Z.length]
+            [j, t, x.furthestStep, Z.length]
         );
     r.useEffect(() => {
         (0, p.Lp)(t, (0, p.Qh)(x.currentStep));
     }, [t, x.currentStep]),
         r.useEffect(() => {
-            let e = (0, h.pP)((0, s.debounce)(() => j(window.innerWidth), 250));
+            let e = (0, h.pP)((0, s.debounce)(() => O(window.innerWidth), 250));
             return (0, h.YP)(e, document.body), () => (0, h.UC)(e, document.body);
-        }, [O, D]);
-    let V = r.useMemo(() => null != b && Object.values(b).some((e) => null != e), [b]),
-        F = r.useMemo(() => (null != b && Object.values(b).length > 0 ? (0, v.G)(b).find((e) => e.hasError) : null), [b]),
+        }, [j, D]);
+    let V = r.useMemo(() => null != A && Object.values(A).some((e) => null != e), [A]),
+        F = r.useMemo(() => (null != A && Object.values(A).length > 0 ? (0, v.G)(A).find((e) => e.hasError) : null), [A]),
         z = r.useCallback(() => {
             P(1), m._9(t, { currentStep: null == F ? void 0 : F.index });
         }, [null == F ? void 0 : F.index, t]),
@@ -234,7 +234,7 @@ function x(e) {
                                         ...e,
                                         themeColor: x.brandPrimaryColor,
                                         disabled: !y || V,
-                                        submitting: A,
+                                        submitting: b,
                                         look: d.Button.Looks.FILLED,
                                         size: d.Button.Sizes.MEDIUM,
                                         color: d.Button.Colors.BRAND,

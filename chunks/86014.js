@@ -22,8 +22,8 @@ var i = n(200651),
     N = n(702646),
     T = n(207796),
     x = n(782322),
-    b = n(895068),
-    A = n(308083),
+    A = n(895068),
+    b = n(308083),
     Z = n(388032),
     y = n(641388);
 function L(e) {
@@ -60,7 +60,7 @@ function L(e) {
                             guildId: a
                         });
                     },
-                    { layerKey: A.Pv }
+                    { layerKey: b.Pv }
                 );
         }, [a]),
         _ = r.useMemo(
@@ -127,44 +127,44 @@ function L(e) {
 }
 t.Z = r.memo(function (e) {
     let t,
-        { width: n, paddingVertical: o = 16, paddingHorizontal: c = 32, variant: u = b.Bj.DEFAULT, onScroll: h, withAdminContent: I = !1 } = e,
-        { enabled: A } = (0, E.I7)(),
+        { width: n, paddingVertical: o = 16, paddingHorizontal: c = 32, variant: u = A.Bj.DEFAULT, onScroll: h, withAdminContent: I = !1 } = e,
+        { enabled: b } = (0, E.I7)(),
         R = r.useRef(null),
-        j = r.useRef(null),
-        O = (0, T.GN)((e) => e.completedNux, l.X),
+        O = r.useRef(null),
+        j = (0, T.GN)((e) => e.completedNux, l.X),
         P = (0, T.GN)((e) => e.entrypointGameId, l.X),
         [D, M] = r.useState(null),
         { backgroundImageUrl: w, gameName: k } = (0, S.kN)(P),
         U = r.useCallback(() => {
             var e, t, n;
-            if (!A) return;
+            if (!b) return;
             let i = null === (e = R.current) || void 0 === e ? void 0 : e.getBoundingClientRect().top,
-                r = null !== (n = null === (t = j.current) || void 0 === t ? void 0 : t.getScrollerState().scrollTop) && void 0 !== n ? n : 0;
+                r = null !== (n = null === (t = O.current) || void 0 === t ? void 0 : t.getScrollerState().scrollTop) && void 0 !== n ? n : 0;
             null != i && D !== i && M(i + r);
-        }, [D, A]);
+        }, [D, b]);
     r.useEffect(() => {
-        if (!A) return;
+        if (!b) return;
         let e = (0, C.pP)(U);
         return (0, C.YP)(e, document.body), () => (0, C.UC)(e, document.body);
-    }, [A, U]);
+    }, [b, U]);
     let G = r.useCallback(() => {
             var e, t;
-            A && null != D
-                ? null === (e = j.current) ||
+            b && null != D
+                ? null === (e = O.current) ||
                   void 0 === e ||
                   e.scrollTo({
                       to: D - 64,
                       animate: !1
                   })
-                : null === (t = j.current) || void 0 === t || t.scrollToTop();
-        }, [D, A]),
+                : null === (t = O.current) || void 0 === t || t.scrollToTop();
+        }, [D, b]),
         B = r.useMemo(
             () =>
                 (0, i.jsx)(L, {
-                    showPickGameButton: !O,
+                    showPickGameButton: !j,
                     showAdminGuildPicker: I
                 }),
-            [O, I]
+            [j, I]
         ),
         H = (0, a.e7)([v.Z], () => v.Z.getSavedGuilds().length),
         V = r.useMemo(
@@ -216,16 +216,16 @@ t.Z = r.memo(function (e) {
                           (0, i.jsx)('div', { className: y.imageBackdrop })
                       ]
                   })
-                : A
+                : b
                   ? (0, i.jsx)(x.Z, {})
                   : (0, i.jsx)(p.Z, {
                         title: Z.intl.format(Z.t['l8D/Oz'], {}),
-                        description: O ? Z.intl.string(Z.t.JWBE0d) : Z.intl.string(Z.t['b+qgxc']),
+                        description: j ? Z.intl.string(Z.t.JWBE0d) : Z.intl.string(Z.t['b+qgxc']),
                         button: B,
                         children: (0, i.jsx)(m.Z, {})
                     })),
         (0, i.jsxs)(_.Z, {
-            ref: j,
+            ref: O,
             onScroll: h,
             children: [
                 t,
@@ -244,7 +244,7 @@ t.Z = r.memo(function (e) {
                                     F !== T.v0.SAVED_GUILDS && (0, i.jsx)(N.C, {})
                                 ]
                             }),
-                        (0, i.jsx)(b.ZP, {
+                        (0, i.jsx)(A.ZP, {
                             width: n,
                             onUpdatePage: G,
                             paddingHorizontal: c,

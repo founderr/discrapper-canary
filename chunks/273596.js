@@ -28,13 +28,13 @@ var i = n(200651),
     N = n(294330),
     T = n(981631),
     x = n(179596);
-let b = Object.freeze({
+let A = Object.freeze({
         top: 0,
         bottom: 0,
         left: 32,
         right: 202
     }),
-    A = Object.freeze({
+    b = Object.freeze({
         top: 0,
         bottom: 0,
         left: 32,
@@ -51,8 +51,8 @@ let b = Object.freeze({
     });
 function L(e) {
     let { loadId: t, onGuildCardSeen: n, onGuildCardClick: l } = e,
-        { guildIds: o, loading: g, searchResultsQuery: T, loadMore: L, searchCategoryId: R, isBlockedSearchQuery: j } = (0, E.f)({ loadId: t }),
-        O = 0 === o.length && !g,
+        { guildIds: o, loading: g, searchResultsQuery: T, loadMore: L, searchCategoryId: R, isBlockedSearchQuery: O } = (0, E.f)({ loadId: t }),
+        j = 0 === o.length && !g,
         P = r.useContext(m.AnalyticsContext),
         [D, M] = r.useState((0, u.P)()),
         [w, k] = r.useState(!0),
@@ -63,11 +63,11 @@ function L(e) {
         F = r.useCallback(
             (e) => {
                 var t;
-                if (j) return;
+                if (O) return;
                 let n = null === (t = V.current) || void 0 === t ? void 0 : t.getScrollerState();
                 null != n && null != e && n.scrollHeight < e.height && L();
             },
-            [j, L]
+            [O, L]
         ),
         z = (0, d.y)((e) => {
             let t = null == e ? void 0 : e.getBoundingClientRect();
@@ -96,7 +96,7 @@ function L(e) {
             });
         }, [P, o, t, R, D, T]);
     let Y = r.useCallback((e) => n(e, R), [n, R]),
-        W = r.useMemo(() => (g && !j ? [o.length, 0] : [o.length]), [o.length, j, g]),
+        W = r.useMemo(() => (g && !O ? [o.length, 0] : [o.length]), [o.length, O, g]),
         K = r.useCallback(
             (e, n, r) => {
                 switch (e) {
@@ -108,14 +108,14 @@ function L(e) {
                                     paddingLeft: n.left,
                                     width: n.width - 16
                                 },
-                                className: a()({ [x.heading]: !w || O }),
+                                className: a()({ [x.heading]: !w || j }),
                                 children: [
                                     !w &&
                                         (0, i.jsxs)('div', {
                                             className: x.headingFilters,
                                             children: [(0, i.jsx)(C.Z, { loadId: t }), (0, i.jsx)(S.Z, { loadId: t })]
                                         }),
-                                    (O || j) && (0, i.jsx)(v.Z, { loadId: t })
+                                    (j || O) && (0, i.jsx)(v.Z, { loadId: t })
                                 ]
                             },
                             r
@@ -124,21 +124,21 @@ function L(e) {
                         return (0, i.jsx)(c.Spinner, { className: a()(x.spinner, { [x.spinnerWithSidebar]: w }) }, r);
                 }
             },
-            [j, O, w, t]
+            [O, j, w, t]
         ),
         q = r.useCallback(
             (e) => {
                 switch (e) {
                     case 0:
                         let t = w ? 16 : 50;
-                        return O ? t + 448 : t;
+                        return j ? t + 448 : t;
                     case 1:
                         return 120;
                     default:
                         throw Error('[getSectionHeight] Failed for section: '.concat(e));
                 }
             },
-            [O, w]
+            [j, w]
         ),
         X = r.useCallback(
             (e, t) => {
@@ -218,7 +218,7 @@ function L(e) {
                 });
         }, []);
     let ee = r.useMemo(() => {
-            if (!j)
+            if (!O)
                 return (0, s.debounce)(
                     () => {
                         var e;
@@ -230,8 +230,8 @@ function L(e) {
                     100,
                     { leading: !0 }
                 );
-        }, [j, L]),
-        et = w ? b : A;
+        }, [O, L]),
+        et = w ? A : b;
     return (0, i.jsxs)('div', {
         className: x.container,
         ref: z,

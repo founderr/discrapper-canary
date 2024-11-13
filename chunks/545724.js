@@ -19,7 +19,7 @@ t.Z = function (e) {
         x = () => {
             v(!1);
         },
-        b = (e, t) => {
+        A = (e, t) => {
             if (null != t)
                 N(!0),
                     (0, d.jW)(
@@ -52,7 +52,7 @@ t.Z = function (e) {
                         [h.active]: _ || S,
                         [h.firstItem]: 0 === t
                     }),
-                    onContextMenu: (e) => b(e, m),
+                    onContextMenu: (e) => A(e, m),
                     onMouseEnter: T,
                     onMouseLeave: x,
                     onClick: null != g ? g : void 0,

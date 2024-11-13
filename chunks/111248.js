@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(442837),
     o = n(433517),
     c = n(519938),
@@ -24,7 +24,7 @@ function x(e, t) {
 }
 function v(e) {
     var t;
-    let { width: n, onContextMenuParticipant: r, height: x, channel: v, participants: _ } = e,
+    let { width: n, onContextMenuParticipant: a, height: x, channel: v, participants: _ } = e,
         [I, E] = (function () {
             let [e, t] = l.useState(() => o.K.get(C, p.VD2.BOTTOM_RIGHT));
             return [
@@ -35,10 +35,10 @@ function v(e) {
             ];
         })(),
         b = l.useRef(null),
-        N = null == v.getGuildId() ? 70 : 50,
-        Z = (0, s.e7)([u.Z], () => u.Z.pipWidth(m.cL.CAMERA_PREVIEW)),
+        Z = null == v.getGuildId() ? 70 : 50,
+        N = (0, s.e7)([u.Z], () => u.Z.pipWidth(m.cL.CAMERA_PREVIEW)),
         S = _.length;
-    let T = Z * (t = S) + 8 * (t - 1),
+    let T = N * (t = S) + 8 * (t - 1),
         j = l.useMemo(() => {
             var e, t, n, i;
             return {
@@ -75,7 +75,7 @@ function v(e) {
             onResize: A,
             maxX: n,
             maxY: x,
-            edgeOffsetTop: N,
+            edgeOffsetTop: Z,
             edgeOffsetBottom: 70,
             edgeOffsetLeft: 16,
             edgeOffsetRight: 16,
@@ -88,8 +88,8 @@ function v(e) {
                         {
                             participant: e,
                             channel: v,
-                            onContextMenu: r,
-                            className: a()(f.tile, g.elevationHigh),
+                            onContextMenu: a,
+                            className: r()(f.tile, g.elevationHigh),
                             fit: h.BP.COVER,
                             inCall: !0,
                             inPopout: !1,

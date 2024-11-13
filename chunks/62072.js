@@ -1,7 +1,7 @@
 var i = n(192379),
     l = n(904245),
-    r = n(346610),
-    a = n(868643),
+    a = n(346610),
+    r = n(868643),
     s = n(912332),
     o = n(41776),
     c = n(280845),
@@ -19,8 +19,8 @@ var i = n(192379),
     I = n(585483),
     E = n(358085),
     b = n(709054),
-    N = n(418476),
-    Z = n(901461),
+    Z = n(418476),
+    N = n(901461),
     S = n(432376),
     T = n(996861),
     j = n(981631);
@@ -33,7 +33,7 @@ t.Z = function (e, t, n) {
         (y.current = n),
         i.useCallback(
             (n) => {
-                var i, P, M, R, L;
+                var i, P, M, L, R;
                 if (!y.current || n.target !== n.currentTarget) return;
                 let k = !n.altKey && !n.ctrlKey && !n.metaKey && !n.shiftKey,
                     O = n.altKey && !(n.ctrlKey || n.metaKey || n.shiftKey),
@@ -53,12 +53,12 @@ t.Z = function (e, t, n) {
                         break;
                     case 'e':
                         if (k) {
-                            if (((i = G), (P = H), (M = U), !P.isSystemDM() && (0, N.Z)(M, i))) n.preventDefault(), (0, T.Hd)(H, U);
+                            if (((i = G), (P = H), (M = U), !P.isSystemDM() && (0, Z.Z)(M, i))) n.preventDefault(), (0, T.Hd)(H, U);
                         }
                         break;
                     case 'p':
                         if (k || B) {
-                            if (((R = H), (L = U), !R.isSystemDM() && !(0, Z.Z)(L) && (A(R) || R.isPrivate()))) n.preventDefault(), (0, T.rY)(H, U, n);
+                            if (((L = H), (R = U), !L.isSystemDM() && !(0, N.Z)(R) && (A(L) || L.isPrivate()))) n.preventDefault(), (0, T.rY)(H, U, n);
                         }
                         break;
                     case '+':
@@ -84,8 +84,8 @@ t.Z = function (e, t, n) {
                         break;
                     case 'f':
                         (k || B) &&
-                            (0, r.WT)({ location: 'keyboard-shortcut' }, { autoTrackExposure: !1 }).canForwardMessages &&
-                            (0, a.h)(U) &&
+                            (0, a.WT)({ location: 'keyboard-shortcut' }, { autoTrackExposure: !1 }).canForwardMessages &&
+                            (0, r.h)(U) &&
                             (n.preventDefault(),
                             (0, s.l8)({
                                 messageId: U.id,

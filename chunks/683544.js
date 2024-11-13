@@ -49,8 +49,8 @@ t.Z = function (e) {
             return null !== (e = u.Z.getSearchResults(S)) && void 0 !== e ? e : _;
         }),
         x = null !== (t = (0, o.Z)(T)) && void 0 !== t ? t : _,
-        { results: b, totalPages: A } = r.useMemo(() => (N === d.M.FETCHING ? x : T), [N, x, T]),
-        Z = r.useMemo(() => (null == b ? void 0 : b.filter((e) => !(e.type !== l.s.APPLICATION))), [b]),
+        { results: A, totalPages: b } = r.useMemo(() => (N === d.M.FETCHING ? x : T), [N, x, T]),
+        Z = r.useMemo(() => (null == A ? void 0 : A.filter((e) => !(e.type !== l.s.APPLICATION))), [A]),
         y = r.useCallback((e) => {
             let { page: t, activeCategoryId: n, onSuccessCallback: i, guildId: r, fetchCounts: l } = e;
             l &&
@@ -106,7 +106,7 @@ t.Z = function (e) {
                   }),
                   (0, i.jsx)(s.Paginator, {
                       className: f.paginationInput,
-                      totalCount: Math.min(A * g.IV, g.Et * g.IV),
+                      totalCount: Math.min(b * g.IV, g.Et * g.IV),
                       pageSize: g.IV,
                       disablePaginationGap: !0,
                       hideMaxPage: !0,

@@ -27,7 +27,7 @@ t.Z = (e) => {
     let P = (0, h.vx)(_.Z.boostSlots),
         k = null != S ? Math.max((0, h.KK)(a, S), 1) : 1,
         U = (0, h.aq)({ fractionalState: M }),
-        B = async () => {
+        G = async () => {
             w(!0),
                 await (0, m.u)({
                     analyticsLocations: D,
@@ -43,9 +43,9 @@ t.Z = (e) => {
                 }),
                 w(!1);
         },
-        G = p.ZP.getPremiumTypeSubscription(),
+        B = p.ZP.getPremiumTypeSubscription(),
         Z = (0, r.jsx)('span', { children: null != b ? b : v.intl.string(v.t.gKmQ1N) });
-    return ((null == G ? void 0 : G.isPausedOrPausePending) &&
+    return ((null == B ? void 0 : B.isPausedOrPausePending) &&
         (M === E.a$.NONE || 0 === P.length) &&
         ((Z = (0, r.jsxs)('div', {
             className: I.pausedButton,
@@ -78,7 +78,7 @@ t.Z = (e) => {
               ...O,
               className: s()(O.className, { [I.buttonHighlighted]: R }),
               submitting: x,
-              onClick: B,
+              onClick: G,
               pauseAnimation: A,
               children: Z
           });

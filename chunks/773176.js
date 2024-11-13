@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(954955),
     o = n.n(s),
     c = n(442837),
@@ -20,8 +20,8 @@ var i = n(200651),
     I = n(868643),
     E = n(245216),
     b = n(223606),
-    N = n(188597),
-    Z = n(41776),
+    Z = n(188597),
+    N = n(41776),
     S = n(222677),
     T = n(995774),
     j = n(931651),
@@ -29,8 +29,8 @@ var i = n(200651),
     y = n(2818),
     P = n(768943),
     M = n(665906),
-    R = n(695346),
-    L = n(314897),
+    L = n(695346),
+    R = n(314897),
     k = n(323873),
     O = n(271383),
     D = n(430824),
@@ -55,11 +55,11 @@ var i = n(200651),
     en = n(388032),
     ei = n(573908);
 let el = [x.ZP.getByName('100'), x.ZP.getByName('laughing'), x.ZP.getByName('sparkling_heart')].filter(F.lm);
-function er(e) {
+function ea(e) {
     e.stopPropagation();
 }
-function ea(e) {
-    let { message: t, channel: n, canReport: i, onClose: l, updatePosition: r } = e;
+function er(e) {
+    let { message: t, channel: n, canReport: i, onClose: l, updatePosition: a } = e;
     return (0, J.useMessageMenu)({
         message: t,
         channel: n,
@@ -72,7 +72,7 @@ function ea(e) {
         itemSafeSrc: void 0,
         itemTextContent: void 0,
         canReport: i,
-        onHeightUpdate: r,
+        onHeightUpdate: a,
         onClose: l,
         navId: 'message-actions',
         ariaLabel: en.intl.string(en.t.Lv7LxM)
@@ -89,15 +89,15 @@ let es = l.memo(function (e) {
                     guildId: t.guild_id
                 })
         ),
-        r = (l.length >= 3 ? l : [...(0, v.Z)(l.concat(el)).values()]).slice(0, 3),
-        a = n.reactions.filter((e) => e.me);
+        a = (l.length >= 3 ? l : [...(0, v.Z)(l.concat(el)).values()]).slice(0, 3),
+        r = n.reactions.filter((e) => e.me);
     return (0, i.jsx)(i.Fragment, {
-        children: r.map((e) => {
+        children: a.map((e) => {
             var l;
-            let r = a.find((t) => (0, T.ir)(t.emoji, (0, T.g1)(e))),
-                s = null != r ? en.intl.string(en.t.wunKKC) : en.intl.string(en.t.XVx5BA),
+            let a = r.find((t) => (0, T.ir)(t.emoji, (0, T.g1)(e))),
+                s = null != a ? en.intl.string(en.t.wunKKC) : en.intl.string(en.t.XVx5BA),
                 o = null == e.id ? e.uniqueName : e.name,
-                c = null != r ? en.intl.formatToPlainString(en.t.vjeruL, { emojiName: o }) : en.intl.formatToPlainString(en.t.L1JQwM, { emojiName: o });
+                c = null != a ? en.intl.formatToPlainString(en.t.vjeruL, { emojiName: o }) : en.intl.formatToPlainString(en.t.L1JQwM, { emojiName: o });
             return (0, i.jsx)(
                 Y.sF,
                 {
@@ -120,7 +120,7 @@ let es = l.memo(function (e) {
                     label: c,
                     onClick: () =>
                         ed({
-                            type: null != r ? 'remove' : 'add',
+                            type: null != a ? 'remove' : 'add',
                             emoji: e,
                             channel: t,
                             message: n,
@@ -145,8 +145,8 @@ function eo(e) {
     let {
             channel: t,
             message: n,
-            canCopy: r,
-            canPin: a,
+            canCopy: a,
+            canPin: r,
             canDelete: s,
             canReport: o,
             canEdit: h,
@@ -154,7 +154,7 @@ function eo(e) {
             canReact: x,
             canConfigureJoin: v,
             canReply: b,
-            canStartThread: N,
+            canStartThread: Z,
             canViewThread: S,
             canForward: T,
             isExpanded: j,
@@ -165,16 +165,16 @@ function eo(e) {
             setPopout: et,
             hasDeveloperMode: ei,
             isGuildInviteReminder: el,
-            isFocused: er
+            isFocused: ea
         } = (function (e) {
-            let { channel: t, message: n, showEmojiPicker: i, showEmojiBurstPicker: l, showMoreUtilities: r, setPopout: a, isFocused: s } = e,
+            let { channel: t, message: n, showEmojiPicker: i, showEmojiBurstPicker: l, showMoreUtilities: a, setPopout: r, isFocused: s } = e,
                 { author: o } = n,
                 d = (0, c.e7)([D.Z], () => D.Z.getGuild(t.guild_id), [t.guild_id]),
-                u = (0, c.e7)([L.default], () => L.default.getId()),
+                u = (0, c.e7)([R.default], () => R.default.getId()),
                 h = (0, M.$R)(t),
                 f = (0, M.Gu)(t),
-                g = R.nc.useSetting(),
-                C = R.Sb.useSetting(),
+                g = L.nc.useSetting(),
+                C = L.Sb.useSetting(),
                 x = (0, c.e7)([w.Z], () => null == t.guild_id || w.Z.canChatInGuild(t.guild_id), [t]),
                 { canManageMessages: v, canAddNewReactions: E } = (0, c.cj)(
                     [B.Z],
@@ -185,9 +185,9 @@ function eo(e) {
                     [t, x]
                 ),
                 b = (0, A.U)(t, n),
-                N = (0, M.NE)(t, n),
+                Z = (0, M.NE)(t, n),
                 S = (0, M.Ek)(n),
-                T = (0, c.e7)([Z.Z], () => null != t.guild_id && Z.Z.isLurking(t.guild_id), [t]),
+                T = (0, c.e7)([N.Z], () => null != t.guild_id && N.Z.isLurking(t.guild_id), [t]),
                 j = (0, c.e7)([O.ZP], () => null != t.guild_id && O.ZP.isCurrentUserGuest(t.guild_id), [t]),
                 k = o.id === u,
                 U = (v || n.canDeleteOwnMessage(u)) && h && !$.V$x.UNDELETABLE.has(n.type);
@@ -211,8 +211,8 @@ function eo(e) {
                 en = (0, I.a)(n),
                 { enabled: ei } = y.Z.useExperiment({ location: 'message_utilities' }),
                 el = (0, c.e7)([P.Z], () => null != P.Z.getSavedMessage(t.id, n.id)),
-                er = (0, Q.Z)(),
-                ea = (0, c.e7)([p.Z], () => p.Z.keyboardModeEnabled);
+                ea = (0, Q.Z)(),
+                er = (0, c.e7)([p.Z], () => p.Z.keyboardModeEnabled);
             return {
                 channel: t,
                 message: n,
@@ -221,7 +221,7 @@ function eo(e) {
                 canDelete: U,
                 canReport: G,
                 canReply: b,
-                canStartThread: N,
+                canStartThread: Z,
                 canViewThread: S,
                 canForward: et && en,
                 canCopy: H.wS,
@@ -229,13 +229,13 @@ function eo(e) {
                 canReact: !q && g,
                 canPublish: X,
                 canConfigureJoin: ee,
-                isExpanded: er && !ea && !i && !l && !r,
+                isExpanded: ea && !er && !i && !l && !a,
                 showEmojiPicker: i,
                 showEmojiBurstPicker: l,
-                showMoreUtilities: r,
+                showMoreUtilities: a,
                 showMessageBookmarksActions: ei,
                 isMessageBookmark: el,
-                setPopout: a,
+                setPopout: r,
                 isFocused: s,
                 isGuildInviteReminder: n.type === $.uaV.GUILD_INVITE_REMINDER
             };
@@ -276,7 +276,7 @@ function eo(e) {
                 j
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [
-                              r && ei
+                              a && ei
                                   ? (0, i.jsx)(
                                         Y.sF,
                                         {
@@ -287,7 +287,7 @@ function eo(e) {
                                         'copy-id'
                                     )
                                   : null,
-                              r && !el
+                              a && !el
                                   ? (0, i.jsx)(
                                         Y.sF,
                                         {
@@ -331,7 +331,7 @@ function eo(e) {
                                         'bookmark'
                                     )
                                   : null,
-                              a
+                              r
                                   ? (0, i.jsx)(
                                         Y.sF,
                                         {
@@ -342,7 +342,7 @@ function eo(e) {
                                         'pin'
                                     )
                                   : null,
-                              N && T
+                              Z && T
                                   ? (0, i.jsx)(
                                         Y.sF,
                                         {
@@ -385,7 +385,7 @@ function eo(e) {
                                   togglePopout: ec,
                                   renderEmojiPicker: eu,
                                   shouldShow: G,
-                                  isFocused: er,
+                                  isFocused: ea,
                                   channel: t,
                                   message: n
                               })
@@ -428,7 +428,7 @@ function eo(e) {
                           'forward'
                       )
                     : null,
-                N && !T
+                Z && !T
                     ? (0, i.jsx)(
                           Y.sF,
                           {
@@ -439,7 +439,7 @@ function eo(e) {
                           'thread'
                       )
                     : null,
-                !N && S
+                !Z && S
                     ? (0, i.jsx)(
                           Y.sF,
                           {
@@ -479,12 +479,12 @@ function eo(e) {
                     ? null
                     : (0, i.jsx)(u.Popout, {
                           renderPopout: (e) => {
-                              let { updatePosition: l, closePopout: r } = e;
-                              return (0, i.jsx)(ea, {
+                              let { updatePosition: l, closePopout: a } = e;
+                              return (0, i.jsx)(er, {
                                   channel: t,
                                   message: n,
                                   canReport: o,
-                                  onClose: r,
+                                  onClose: a,
                                   updatePosition: l
                               });
                           },
@@ -495,13 +495,13 @@ function eo(e) {
                           animation: u.Popout.Animation.NONE,
                           children: (e, t) => {
                               let { onClick: n, ...l } = e,
-                                  { isShown: r } = t;
+                                  { isShown: a } = t;
                               return (0, i.jsx)(
                                   Y.sF,
                                   {
                                       label: en.intl.string(en.t.UKOtz8),
                                       icon: u.MoreHorizontalIcon,
-                                      selected: r,
+                                      selected: a,
                                       onClick: eo,
                                       ...l
                                   },
@@ -516,11 +516,11 @@ function eo(e) {
 function ec(e) {
     let { channel: t, message: n } = e,
         l = (0, c.e7)([b.Z], () => null != b.Z.getMessage(n.id), [n.id]),
-        r = null == n.interaction || (null != n.interactionData && (0, N.$s)(n.interactionData));
+        a = null == n.interaction || (null != n.interactionData && (0, Z.$s)(n.interactionData));
     return (0, i.jsxs)(i.Fragment, {
         children: [
             !l &&
-                r &&
+                a &&
                 (0, i.jsx)(
                     Y.sF,
                     {
@@ -543,22 +543,22 @@ function ec(e) {
     });
 }
 function ed(e) {
-    let { type: t, emoji: n, channel: i, message: l, location: r, isBurst: a = !1 } = e;
+    let { type: t, emoji: n, channel: i, message: l, location: a, isBurst: r = !1 } = e;
     if (null == n) return;
     let s = (0, T.g1)(n);
     'add' === t
-        ? (0, S.rU)(i.id, l.id, s, r, { burst: a })
+        ? (0, S.rU)(i.id, l.id, s, a, { burst: r })
         : (0, S.WO)({
               channelId: i.id,
               messageId: l.id,
               emoji: s,
-              location: r,
-              options: { burst: a }
+              location: a,
+              options: { burst: r }
           });
 }
 function eu(e, t, n) {
     let l = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        r = {
+        a = {
             openPopoutType: 'message_reaction_emoji_picker',
             ...(l && {
                 openPopoutType: 'message_super_reaction_emoji_picker',
@@ -570,23 +570,23 @@ function eu(e, t, n) {
     return (0, i.jsx)(j.$, {
         channel: e,
         closePopout: n,
-        onSelectEmoji: (i, l, r) => {
+        onSelectEmoji: (i, l, a) => {
             ed({
                 type: 'add',
                 emoji: i,
                 channel: e,
                 message: t,
                 location: S.TW.MESSAGE_REACTION_PICKER,
-                isBurst: r
+                isBurst: a
             }),
-                l && (r ? o()(n, 150)() : n());
+                l && (a ? o()(n, 150)() : n());
         },
-        analyticsOverride: r,
+        analyticsOverride: a,
         messageId: t.id
     });
 }
 t.Z = l.memo(function (e) {
-    let { channel: t, message: n, isHeader: l, isReply: r } = e,
+    let { channel: t, message: n, isHeader: l, isReply: a } = e,
         s = (0, c.e7)([k.Z], () => k.Z.isEditing(t.id, n.id), [t.id, n.id]),
         o = (function (e) {
             let { channel: t, message: n } = e;
@@ -604,13 +604,13 @@ t.Z = l.memo(function (e) {
     return s || (null == o && null == d)
         ? null
         : (0, i.jsx)('div', {
-              className: a()(e.className, {
+              className: r()(e.className, {
                   [ei.container]: !0,
                   [ei.isHeader]: l,
-                  [ei.isReply]: r
+                  [ei.isReply]: a
               }),
-              onClick: er,
-              onContextMenu: er,
+              onClick: ea,
+              onContextMenu: ea,
               role: 'group',
               'aria-label': en.intl.string(en.t.Lv7LxM),
               children: (0, i.jsxs)(Y.ZP, {

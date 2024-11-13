@@ -1,7 +1,7 @@
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(442837),
     o = n(704215),
     c = n(749280),
@@ -19,19 +19,19 @@ var i = n(200651),
     I = n(605236),
     E = n(819640),
     b = n(291407),
-    N = n(61356),
-    Z = n(981631),
+    Z = n(61356),
+    N = n(981631),
     S = n(314734),
     T = n(921944),
     j = n(388032),
     A = n(786899),
     y = n(795361);
 let P = l.forwardRef(function (e, t) {
-    let { type: n, animateRef: r } = e,
+    let { type: n, animateRef: a } = e,
         p = (0, s.e7)([m.Z], () => m.Z.shouldShowPopup() && m.Z.activeViewType() === n),
         { Component: g, events: C, play: x } = (0, c.w)();
     l.useImperativeHandle(
-        r,
+        a,
         () => ({
             animate: () => {
                 C.onMouseEnter();
@@ -40,16 +40,16 @@ let P = l.forwardRef(function (e, t) {
         [C]
     );
     let v = l.useCallback(() => {
-        (0, u.yw)(Z.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), p ? h.yT(f.ti.DISMISSED) : ((0, I.EW)(o.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: T.L.TAKE_ACTION }), h.__(f._b.TEXT, n)), x();
+        (0, u.yw)(N.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), p ? h.yT(f.ti.DISMISSED) : ((0, I.EW)(o.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: T.L.TAKE_ACTION }), h.__(f._b.TEXT, n)), x();
     }, [p, n, x]);
     return (0, i.jsx)('div', {
-        className: a()(A.buttonContainer, S.t4),
+        className: r()(A.buttonContainer, S.t4),
         ref: t,
         children: (0, i.jsx)(d.Button, {
             look: d.Button.Looks.BLANK,
             size: d.Button.Sizes.NONE,
             tabIndex: 0,
-            className: a()(A.button, { [A.buttonActive]: p }),
+            className: r()(A.button, { [A.buttonActive]: p }),
             onClick: v,
             'aria-label': j.intl.string(j.t.erHFxM),
             focusProps: {
@@ -70,7 +70,7 @@ function M(e) {
     let { showAppLauncherPopup: t, children: n } = e,
         l = (0, s.e7)([E.Z], () => E.Z.hasLayers()),
         {
-            enabled: r,
+            enabled: a,
             shouldShow: o,
             applicationDetails: c,
             showsTooltip: u
@@ -78,14 +78,14 @@ function M(e) {
             obstructedFromView: l,
             disabled: t
         });
-    if (!r) return (0, i.jsx)(i.Fragment, { children: n });
+    if (!a) return (0, i.jsx)(i.Fragment, { children: n });
     let h =
         o && (null == c ? void 0 : c.iconURL) != null
             ? (0, i.jsxs)('div', {
                   className: A.channelAppLauncherButtonPopoutIconContainer,
                   children: [
                       (0, i.jsx)('img', {
-                          className: a()(A.buttonContainer, A.button, A.channelAppLauncherButtonPopoutIcon),
+                          className: r()(A.buttonContainer, A.button, A.channelAppLauncherButtonPopoutIcon),
                           alt: j.intl.string(j.t.X4IxWF),
                           src: null == c ? void 0 : c.iconURL,
                           'aria-hidden': !0,
@@ -94,7 +94,7 @@ function M(e) {
                       (0, i.jsx)('div', {
                           className: A.channelAppLauncherButtonPopoutIconShimmerContainer,
                           children: (0, i.jsx)('img', {
-                              className: a()(A.channelAppLauncherButtonPopoutIconShimmer),
+                              className: r()(A.channelAppLauncherButtonPopoutIconShimmer),
                               alt: j.intl.string(j.t.X4IxWF),
                               src: y,
                               'aria-hidden': !0,
@@ -119,7 +119,7 @@ function M(e) {
           });
 }
 t.Z = l.memo(function (e) {
-    let { channel: t, type: n, animateRef: r, entryPointCommandButtonRef: a } = e,
+    let { channel: t, type: n, animateRef: a, entryPointCommandButtonRef: r } = e,
         o = l.useRef(null),
         c = (0, v.g)(t),
         { activeCommand: d } = (0, s.cj)([x.Z], () => {
@@ -127,7 +127,7 @@ t.Z = l.memo(function (e) {
             return { activeCommand: (null === (e = n.commands) || void 0 === e ? void 0 : e.enabled) ? x.Z.getActiveCommand(t.id) : null };
         }),
         u = p.T.useExperiment({ location: 'chat_input' }, { autoTrackExposure: !0 }).enabled,
-        h = (0, N.Z)({ type: n }),
+        h = (0, Z.Z)({ type: n }),
         f = (0, _.h9)(t.id, 'ChannelAppLauncher'),
         g = (0, s.e7)([m.Z], () => m.Z.appDMChannelsWithFailedLoads().has(t.id));
     return u && null == d && c
@@ -144,13 +144,13 @@ t.Z = l.memo(function (e) {
                           children: (0, i.jsx)(P, {
                               type: n,
                               ref: o,
-                              animateRef: r
+                              animateRef: a
                           })
                       })
                   }),
                   h
                       ? (0, i.jsx)(C.Z, {
-                            positionTargetRef: f && !g ? a : o,
+                            positionTargetRef: f && !g ? r : o,
                             channel: t
                         })
                       : null

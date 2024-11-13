@@ -15,7 +15,7 @@ n.d(t, {
         return W;
     },
     YR: function () {
-        return eG;
+        return eB;
     },
     e6: function () {
         return eh;
@@ -110,7 +110,7 @@ var g = () => {
             for (var p of e.getDirtyPaths(t)) f(p);
             l.set(e, a),
                 u.set(e, s),
-                eG.transform(e, t),
+                eB.transform(e, t),
                 e.operations.push(t),
                 J.normalize(e, { operation: t }),
                 'set_selection' === t.type && (e.marks = null),
@@ -138,7 +138,7 @@ var g = () => {
                     }
                 }
                 if (s || o)
-                    eG.setNodes(
+                    eB.setNodes(
                         e,
                         { [t]: n },
                         {
@@ -157,42 +157,42 @@ var g = () => {
             var { selection: n } = e;
             n &&
                 eh.isCollapsed(n) &&
-                eG.delete(e, {
+                eB.delete(e, {
                     unit: t,
                     reverse: !0
                 });
         },
         deleteForward: (t) => {
             var { selection: n } = e;
-            n && eh.isCollapsed(n) && eG.delete(e, { unit: t });
+            n && eh.isCollapsed(n) && eB.delete(e, { unit: t });
         },
         deleteFragment: (t) => {
             var { selection: n } = e;
-            n && eh.isExpanded(n) && eG.delete(e, { reverse: 'backward' === t });
+            n && eh.isExpanded(n) && eB.delete(e, { reverse: 'backward' === t });
         },
         getFragment: () => {
             var { selection: t } = e;
             return t ? er.fragment(e, t) : [];
         },
         insertBreak: () => {
-            eG.splitNodes(e, { always: !0 });
+            eB.splitNodes(e, { always: !0 });
         },
         insertSoftBreak: () => {
-            eG.splitNodes(e, { always: !0 });
+            eB.splitNodes(e, { always: !0 });
         },
         insertFragment: (t) => {
-            eG.insertFragment(e, t);
+            eB.insertFragment(e, t);
         },
         insertNode: (t) => {
-            eG.insertNodes(e, t);
+            eB.insertNodes(e, t);
         },
         insertText: (t) => {
             var { selection: n, marks: r } = e;
             if (n) {
                 if (r) {
                     var i = m({ text: t }, r);
-                    eG.insertNodes(e, i);
-                } else eG.insertText(e, t);
+                    eB.insertNodes(e, i);
+                } else eB.insertText(e, t);
                 e.marks = null;
             }
         },
@@ -200,7 +200,7 @@ var g = () => {
             var [n, r] = t;
             if (!ey.isText(n)) {
                 if (W.isElement(n) && 0 === n.children.length) {
-                    eG.insertNodes(
+                    eB.insertNodes(
                         e,
                         { text: '' },
                         {
@@ -217,7 +217,7 @@ var g = () => {
                             u = o.children[a - 1],
                             c = s === n.children.length - 1;
                         if ((ey.isText(l) || (W.isElement(l) && e.isInline(l))) !== i)
-                            eG.removeNodes(e, {
+                            eB.removeNodes(e, {
                                 at: r.concat(a),
                                 voids: !0
                             }),
@@ -227,7 +227,7 @@ var g = () => {
                                 if (null != u && ey.isText(u)) {
                                     if (c) {
                                         var d = { text: '' };
-                                        eG.insertNodes(e, d, {
+                                        eB.insertNodes(e, d, {
                                             at: r.concat(a + 1),
                                             voids: !0
                                         }),
@@ -235,7 +235,7 @@ var g = () => {
                                     }
                                 } else {
                                     var f = { text: '' };
-                                    eG.insertNodes(e, f, {
+                                    eB.insertNodes(e, f, {
                                         at: r.concat(a),
                                         voids: !0
                                     }),
@@ -246,19 +246,19 @@ var g = () => {
                             null != u &&
                                 ey.isText(u) &&
                                 (ey.equals(l, u, { loose: !0 })
-                                    ? (eG.mergeNodes(e, {
+                                    ? (eB.mergeNodes(e, {
                                           at: r.concat(a),
                                           voids: !0
                                       }),
                                       a--)
                                     : '' === u.text
-                                      ? (eG.removeNodes(e, {
+                                      ? (eB.removeNodes(e, {
                                             at: r.concat(a - 1),
                                             voids: !0
                                         }),
                                         a--)
                                       : '' === l.text &&
-                                        (eG.removeNodes(e, {
+                                        (eB.removeNodes(e, {
                                             at: r.concat(a),
                                             voids: !0
                                         }),
@@ -285,7 +285,7 @@ var g = () => {
                     }
                 }
                 if (i || a)
-                    eG.unsetNodes(e, t, {
+                    eB.unsetNodes(e, t, {
                         match: r,
                         split: !0,
                         voids: !0
@@ -385,7 +385,7 @@ var v = function (e) {
         for (var c of r) {
             var d = c.codePointAt(0);
             if (!d) break;
-            var f = B(c, d);
+            var f = G(c, d);
             if (
                 (([a, s] = n ? [s, f] : [f, a]),
                 ((function (e, t) {
@@ -470,11 +470,11 @@ var O = /^(?:[\u0300-\u036F\u0483-\u0489\u0591-\u05BD\u05BF\u05C1\u05C2\u05C4\u0
     k =
         /^[\uAC01-\uAC1B\uAC1D-\uAC37\uAC39-\uAC53\uAC55-\uAC6F\uAC71-\uAC8B\uAC8D-\uACA7\uACA9-\uACC3\uACC5-\uACDF\uACE1-\uACFB\uACFD-\uAD17\uAD19-\uAD33\uAD35-\uAD4F\uAD51-\uAD6B\uAD6D-\uAD87\uAD89-\uADA3\uADA5-\uADBF\uADC1-\uADDB\uADDD-\uADF7\uADF9-\uAE13\uAE15-\uAE2F\uAE31-\uAE4B\uAE4D-\uAE67\uAE69-\uAE83\uAE85-\uAE9F\uAEA1-\uAEBB\uAEBD-\uAED7\uAED9-\uAEF3\uAEF5-\uAF0F\uAF11-\uAF2B\uAF2D-\uAF47\uAF49-\uAF63\uAF65-\uAF7F\uAF81-\uAF9B\uAF9D-\uAFB7\uAFB9-\uAFD3\uAFD5-\uAFEF\uAFF1-\uB00B\uB00D-\uB027\uB029-\uB043\uB045-\uB05F\uB061-\uB07B\uB07D-\uB097\uB099-\uB0B3\uB0B5-\uB0CF\uB0D1-\uB0EB\uB0ED-\uB107\uB109-\uB123\uB125-\uB13F\uB141-\uB15B\uB15D-\uB177\uB179-\uB193\uB195-\uB1AF\uB1B1-\uB1CB\uB1CD-\uB1E7\uB1E9-\uB203\uB205-\uB21F\uB221-\uB23B\uB23D-\uB257\uB259-\uB273\uB275-\uB28F\uB291-\uB2AB\uB2AD-\uB2C7\uB2C9-\uB2E3\uB2E5-\uB2FF\uB301-\uB31B\uB31D-\uB337\uB339-\uB353\uB355-\uB36F\uB371-\uB38B\uB38D-\uB3A7\uB3A9-\uB3C3\uB3C5-\uB3DF\uB3E1-\uB3FB\uB3FD-\uB417\uB419-\uB433\uB435-\uB44F\uB451-\uB46B\uB46D-\uB487\uB489-\uB4A3\uB4A5-\uB4BF\uB4C1-\uB4DB\uB4DD-\uB4F7\uB4F9-\uB513\uB515-\uB52F\uB531-\uB54B\uB54D-\uB567\uB569-\uB583\uB585-\uB59F\uB5A1-\uB5BB\uB5BD-\uB5D7\uB5D9-\uB5F3\uB5F5-\uB60F\uB611-\uB62B\uB62D-\uB647\uB649-\uB663\uB665-\uB67F\uB681-\uB69B\uB69D-\uB6B7\uB6B9-\uB6D3\uB6D5-\uB6EF\uB6F1-\uB70B\uB70D-\uB727\uB729-\uB743\uB745-\uB75F\uB761-\uB77B\uB77D-\uB797\uB799-\uB7B3\uB7B5-\uB7CF\uB7D1-\uB7EB\uB7ED-\uB807\uB809-\uB823\uB825-\uB83F\uB841-\uB85B\uB85D-\uB877\uB879-\uB893\uB895-\uB8AF\uB8B1-\uB8CB\uB8CD-\uB8E7\uB8E9-\uB903\uB905-\uB91F\uB921-\uB93B\uB93D-\uB957\uB959-\uB973\uB975-\uB98F\uB991-\uB9AB\uB9AD-\uB9C7\uB9C9-\uB9E3\uB9E5-\uB9FF\uBA01-\uBA1B\uBA1D-\uBA37\uBA39-\uBA53\uBA55-\uBA6F\uBA71-\uBA8B\uBA8D-\uBAA7\uBAA9-\uBAC3\uBAC5-\uBADF\uBAE1-\uBAFB\uBAFD-\uBB17\uBB19-\uBB33\uBB35-\uBB4F\uBB51-\uBB6B\uBB6D-\uBB87\uBB89-\uBBA3\uBBA5-\uBBBF\uBBC1-\uBBDB\uBBDD-\uBBF7\uBBF9-\uBC13\uBC15-\uBC2F\uBC31-\uBC4B\uBC4D-\uBC67\uBC69-\uBC83\uBC85-\uBC9F\uBCA1-\uBCBB\uBCBD-\uBCD7\uBCD9-\uBCF3\uBCF5-\uBD0F\uBD11-\uBD2B\uBD2D-\uBD47\uBD49-\uBD63\uBD65-\uBD7F\uBD81-\uBD9B\uBD9D-\uBDB7\uBDB9-\uBDD3\uBDD5-\uBDEF\uBDF1-\uBE0B\uBE0D-\uBE27\uBE29-\uBE43\uBE45-\uBE5F\uBE61-\uBE7B\uBE7D-\uBE97\uBE99-\uBEB3\uBEB5-\uBECF\uBED1-\uBEEB\uBEED-\uBF07\uBF09-\uBF23\uBF25-\uBF3F\uBF41-\uBF5B\uBF5D-\uBF77\uBF79-\uBF93\uBF95-\uBFAF\uBFB1-\uBFCB\uBFCD-\uBFE7\uBFE9-\uC003\uC005-\uC01F\uC021-\uC03B\uC03D-\uC057\uC059-\uC073\uC075-\uC08F\uC091-\uC0AB\uC0AD-\uC0C7\uC0C9-\uC0E3\uC0E5-\uC0FF\uC101-\uC11B\uC11D-\uC137\uC139-\uC153\uC155-\uC16F\uC171-\uC18B\uC18D-\uC1A7\uC1A9-\uC1C3\uC1C5-\uC1DF\uC1E1-\uC1FB\uC1FD-\uC217\uC219-\uC233\uC235-\uC24F\uC251-\uC26B\uC26D-\uC287\uC289-\uC2A3\uC2A5-\uC2BF\uC2C1-\uC2DB\uC2DD-\uC2F7\uC2F9-\uC313\uC315-\uC32F\uC331-\uC34B\uC34D-\uC367\uC369-\uC383\uC385-\uC39F\uC3A1-\uC3BB\uC3BD-\uC3D7\uC3D9-\uC3F3\uC3F5-\uC40F\uC411-\uC42B\uC42D-\uC447\uC449-\uC463\uC465-\uC47F\uC481-\uC49B\uC49D-\uC4B7\uC4B9-\uC4D3\uC4D5-\uC4EF\uC4F1-\uC50B\uC50D-\uC527\uC529-\uC543\uC545-\uC55F\uC561-\uC57B\uC57D-\uC597\uC599-\uC5B3\uC5B5-\uC5CF\uC5D1-\uC5EB\uC5ED-\uC607\uC609-\uC623\uC625-\uC63F\uC641-\uC65B\uC65D-\uC677\uC679-\uC693\uC695-\uC6AF\uC6B1-\uC6CB\uC6CD-\uC6E7\uC6E9-\uC703\uC705-\uC71F\uC721-\uC73B\uC73D-\uC757\uC759-\uC773\uC775-\uC78F\uC791-\uC7AB\uC7AD-\uC7C7\uC7C9-\uC7E3\uC7E5-\uC7FF\uC801-\uC81B\uC81D-\uC837\uC839-\uC853\uC855-\uC86F\uC871-\uC88B\uC88D-\uC8A7\uC8A9-\uC8C3\uC8C5-\uC8DF\uC8E1-\uC8FB\uC8FD-\uC917\uC919-\uC933\uC935-\uC94F\uC951-\uC96B\uC96D-\uC987\uC989-\uC9A3\uC9A5-\uC9BF\uC9C1-\uC9DB\uC9DD-\uC9F7\uC9F9-\uCA13\uCA15-\uCA2F\uCA31-\uCA4B\uCA4D-\uCA67\uCA69-\uCA83\uCA85-\uCA9F\uCAA1-\uCABB\uCABD-\uCAD7\uCAD9-\uCAF3\uCAF5-\uCB0F\uCB11-\uCB2B\uCB2D-\uCB47\uCB49-\uCB63\uCB65-\uCB7F\uCB81-\uCB9B\uCB9D-\uCBB7\uCBB9-\uCBD3\uCBD5-\uCBEF\uCBF1-\uCC0B\uCC0D-\uCC27\uCC29-\uCC43\uCC45-\uCC5F\uCC61-\uCC7B\uCC7D-\uCC97\uCC99-\uCCB3\uCCB5-\uCCCF\uCCD1-\uCCEB\uCCED-\uCD07\uCD09-\uCD23\uCD25-\uCD3F\uCD41-\uCD5B\uCD5D-\uCD77\uCD79-\uCD93\uCD95-\uCDAF\uCDB1-\uCDCB\uCDCD-\uCDE7\uCDE9-\uCE03\uCE05-\uCE1F\uCE21-\uCE3B\uCE3D-\uCE57\uCE59-\uCE73\uCE75-\uCE8F\uCE91-\uCEAB\uCEAD-\uCEC7\uCEC9-\uCEE3\uCEE5-\uCEFF\uCF01-\uCF1B\uCF1D-\uCF37\uCF39-\uCF53\uCF55-\uCF6F\uCF71-\uCF8B\uCF8D-\uCFA7\uCFA9-\uCFC3\uCFC5-\uCFDF\uCFE1-\uCFFB\uCFFD-\uD017\uD019-\uD033\uD035-\uD04F\uD051-\uD06B\uD06D-\uD087\uD089-\uD0A3\uD0A5-\uD0BF\uD0C1-\uD0DB\uD0DD-\uD0F7\uD0F9-\uD113\uD115-\uD12F\uD131-\uD14B\uD14D-\uD167\uD169-\uD183\uD185-\uD19F\uD1A1-\uD1BB\uD1BD-\uD1D7\uD1D9-\uD1F3\uD1F5-\uD20F\uD211-\uD22B\uD22D-\uD247\uD249-\uD263\uD265-\uD27F\uD281-\uD29B\uD29D-\uD2B7\uD2B9-\uD2D3\uD2D5-\uD2EF\uD2F1-\uD30B\uD30D-\uD327\uD329-\uD343\uD345-\uD35F\uD361-\uD37B\uD37D-\uD397\uD399-\uD3B3\uD3B5-\uD3CF\uD3D1-\uD3EB\uD3ED-\uD407\uD409-\uD423\uD425-\uD43F\uD441-\uD45B\uD45D-\uD477\uD479-\uD493\uD495-\uD4AF\uD4B1-\uD4CB\uD4CD-\uD4E7\uD4E9-\uD503\uD505-\uD51F\uD521-\uD53B\uD53D-\uD557\uD559-\uD573\uD575-\uD58F\uD591-\uD5AB\uD5AD-\uD5C7\uD5C9-\uD5E3\uD5E5-\uD5FF\uD601-\uD61B\uD61D-\uD637\uD639-\uD653\uD655-\uD66F\uD671-\uD68B\uD68D-\uD6A7\uD6A9-\uD6C3\uD6C5-\uD6DF\uD6E1-\uD6FB\uD6FD-\uD717\uD719-\uD733\uD735-\uD74F\uD751-\uD76B\uD76D-\uD787\uD789-\uD7A3]$/,
     U = /^(?:[\xA9\xAE\u203C\u2049\u2122\u2139\u2194-\u2199\u21A9\u21AA\u231A\u231B\u2328\u2388\u23CF\u23E9-\u23F3\u23F8-\u23FA\u24C2\u25AA\u25AB\u25B6\u25C0\u25FB-\u25FE\u2600-\u2605\u2607-\u2612\u2614-\u2685\u2690-\u2705\u2708-\u2712\u2714\u2716\u271D\u2721\u2728\u2733\u2734\u2744\u2747\u274C\u274E\u2753-\u2755\u2757\u2763-\u2767\u2795-\u2797\u27A1\u27B0\u27BF\u2934\u2935\u2B05-\u2B07\u2B1B\u2B1C\u2B50\u2B55\u3030\u303D\u3297\u3299]|\uD83C[\uDC00-\uDCFF\uDD0D-\uDD0F\uDD2F\uDD6C-\uDD71\uDD7E\uDD7F\uDD8E\uDD91-\uDD9A\uDDAD-\uDDE5\uDE01-\uDE0F\uDE1A\uDE2F\uDE32-\uDE3A\uDE3C-\uDE3F\uDE49-\uDFFA]|\uD83D[\uDC00-\uDD3D\uDD46-\uDE4F\uDE80-\uDEFF\uDF74-\uDF7F\uDFD5-\uDFFF]|\uD83E[\uDC0C-\uDC0F\uDC48-\uDC4F\uDC5A-\uDC5F\uDC88-\uDC8F\uDCAE-\uDCFF\uDD0C-\uDD3A\uDD3C-\uDD45\uDD47-\uDEFF]|\uD83F[\uDC00-\uDFFD])$/,
-    B = (e, t) => {
+    G = (e, t) => {
         var n = i.Any;
         return -1 !== e.search(O) && (n |= i.Extend), 8205 === t && (n |= i.ZWJ), t >= 127462 && t <= 127487 && (n |= i.RI), -1 !== e.search(D) && (n |= i.Prepend), -1 !== e.search(L) && (n |= i.SpacingMark), -1 !== e.search(x) && (n |= i.L), -1 !== e.search(w) && (n |= i.V), -1 !== e.search(M) && (n |= i.T), -1 !== e.search(P) && (n |= i.LV), -1 !== e.search(k) && (n |= i.LVT), -1 !== e.search(U) && (n |= i.ExtPict), n;
     };
-function G(e, t) {
+function B(e, t) {
     return (e & t) != 0;
 }
 var Z = [
@@ -1971,9 +1971,9 @@ var eC = (e, t, n) => {
                 var { path: P } = n,
                     k = P[P.length - 1];
                 if ((er.parent(e, P).children.splice(k, 1), t))
-                    for (var [U, B] of eh.points(t)) {
-                        var G = ed.transform(U, n);
-                        if (null != t && null != G) t[B] = G;
+                    for (var [U, G] of eh.points(t)) {
+                        var B = ed.transform(U, n);
+                        if (null != t && null != B) t[G] = B;
                         else {
                             var Z = void 0,
                                 F = void 0;
@@ -2082,7 +2082,7 @@ var ex = (e, t) => {
         if (eh.isCollapsed(t)) return t.anchor;
         var [, n] = eh.edges(t),
             r = J.pointRef(e, n);
-        return eG.delete(e, { at: t }), r.unref();
+        return eB.delete(e, { at: t }), r.unref();
     },
     eM = (e, t) => {
         var [n] = J.node(e, t);
@@ -2127,7 +2127,7 @@ function eU(e, t) {
     }
     return n;
 }
-function eB(e) {
+function eG(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {};
         t % 2
@@ -2142,10 +2142,10 @@ function eB(e) {
     }
     return e;
 }
-var eG = eB(
-    eB(
-        eB(
-            eB(
+var eB = eG(
+    eG(
+        eG(
+            eG(
                 {},
                 {
                     transform(e, t) {
@@ -2172,7 +2172,7 @@ var eG = eB(
                             else {
                                 var [, c] = eh.edges(s),
                                     d = J.pointRef(e, c);
-                                eG.delete(e, { at: s }), (s = d.unref());
+                                eB.delete(e, { at: s }), (s = d.unref());
                             }
                         }
                         if (ed.isPoint(s)) {
@@ -2187,7 +2187,7 @@ var eG = eB(
                             var [, _] = f,
                                 p = J.pathRef(e, _),
                                 h = J.isEnd(e, s, _);
-                            eG.splitNodes(e, {
+                            eB.splitNodes(e, {
                                 at: s,
                                 match: o,
                                 mode: a,
@@ -2211,7 +2211,7 @@ var eG = eB(
                             }
                             if (((s = eo.previous(s)), l)) {
                                 var b = J.end(e, s);
-                                b && eG.select(e, b);
+                                b && eB.select(e, b);
                             }
                         }
                     });
@@ -2241,24 +2241,24 @@ var eG = eB(
                                     { length: d } = l.children;
                                 if (1 === d) {
                                     var f = eo.next(u);
-                                    eG.moveNodes(e, {
+                                    eB.moveNodes(e, {
                                         at: o,
                                         to: f,
                                         voids: i
                                     }),
-                                        eG.removeNodes(e, {
+                                        eB.removeNodes(e, {
                                             at: u,
                                             voids: i
                                         });
                                 } else if (0 === c)
-                                    eG.moveNodes(e, {
+                                    eB.moveNodes(e, {
                                         at: o,
                                         to: u,
                                         voids: i
                                     });
                                 else if (c === d - 1) {
                                     var _ = eo.next(u);
-                                    eG.moveNodes(e, {
+                                    eB.moveNodes(e, {
                                         at: o,
                                         to: _,
                                         voids: i
@@ -2266,11 +2266,11 @@ var eG = eB(
                                 } else {
                                     var p = eo.next(o),
                                         h = eo.next(u);
-                                    eG.splitNodes(e, {
+                                    eB.splitNodes(e, {
                                         at: p,
                                         voids: i
                                     }),
-                                        eG.moveNodes(e, {
+                                        eB.moveNodes(e, {
                                             at: o,
                                             to: h,
                                             voids: i
@@ -2298,7 +2298,7 @@ var eG = eB(
                             else {
                                 var [, c] = eh.edges(a),
                                     d = J.pointRef(e, c);
-                                eG.delete(e, { at: a }), (a = d.unref()), null == t.at && eG.select(e, a);
+                                eB.delete(e, { at: a }), (a = d.unref()), null == t.at && eB.select(e, a);
                             }
                         }
                         var [f] = J.nodes(e, {
@@ -2340,18 +2340,18 @@ var eG = eB(
                                 (r = m.children.length), (n = A);
                             } else throw Error('Cannot merge the node at path ['.concat(h, '] with the previous sibling because it is not the same kind: ').concat(eE.stringify(p), ' ').concat(eE.stringify(m)));
                             !b &&
-                                eG.moveNodes(e, {
+                                eB.moveNodes(e, {
                                     at: h,
                                     to: v,
                                     voids: o
                                 }),
                                 y &&
-                                    eG.removeNodes(e, {
+                                    eB.removeNodes(e, {
                                         at: y.current,
                                         voids: o
                                     }),
                                 (W.isElement(m) && J.isEmpty(e, m)) || (ey.isText(m) && '' === m.text && 0 !== g[g.length - 1])
-                                    ? eG.removeNodes(e, {
+                                    ? eB.removeNodes(e, {
                                           at: g,
                                           voids: o
                                       })
@@ -2442,7 +2442,7 @@ var eG = eB(
                                     [f, _] = eh.edges(i),
                                     p = 'lowest' === l ? 'lowest' : 'highest',
                                     h = J.isEnd(e, _, _.path);
-                                eG.splitNodes(e, {
+                                eB.splitNodes(e, {
                                     at: _,
                                     match: r,
                                     mode: p,
@@ -2450,7 +2450,7 @@ var eG = eB(
                                     always: !h
                                 });
                                 var m = J.isStart(e, f, f.path);
-                                eG.splitNodes(e, {
+                                eB.splitNodes(e, {
                                     at: f,
                                     match: r,
                                     mode: p,
@@ -2458,7 +2458,7 @@ var eG = eB(
                                     always: !m
                                 }),
                                     (i = d.unref()),
-                                    null == n.at && eG.select(e, i);
+                                    null == n.at && eB.select(e, i);
                             }
                             for (var [g, E] of (!a && (a = (e, t) => e !== t),
                             J.nodes(e, {
@@ -2519,7 +2519,7 @@ var eG = eB(
                                         var E = J.after(e, g);
                                         if (!E) {
                                             var v = eo.next(g);
-                                            eG.insertNodes(
+                                            eB.insertNodes(
                                                 e,
                                                 { text: '' },
                                                 {
@@ -2561,7 +2561,7 @@ var eG = eB(
                                 }
                                 if (null == t.at) {
                                     var D = n.current || J.end(e, []);
-                                    eG.select(e, D);
+                                    eB.select(e, D);
                                 }
                             } finally {
                                 _.unref(), null === (r = n) || void 0 === r || r.unref();
@@ -2574,7 +2574,7 @@ var eG = eB(
                     !Array.isArray(t) && (t = [t]);
                     var r = {};
                     for (var i of t) r[i] = null;
-                    eG.setNodes(e, r, n);
+                    eB.setNodes(e, r, n);
                 },
                 unwrapNodes(e) {
                     var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
@@ -2602,7 +2602,7 @@ var eG = eB(
                                         [a] = J.node(e, n),
                                         s = J.range(e, n);
                                     r && o && (s = eh.intersection(o.current, s)),
-                                        eG.liftNodes(e, {
+                                        eB.liftNodes(e, {
                                             at: s,
                                             match: (e) => W.isAncestor(a) && a.children.includes(e),
                                             voids: i
@@ -2621,18 +2621,18 @@ var eG = eB(
                             if ((null == s && (s = eo.isPath(o) ? eM(e, o) : e.isInline(t) ? (t) => (W.isElement(t) && J.isInline(e, t)) || ey.isText(t) : (t) => W.isElement(t) && J.isBlock(e, t)), i && eh.isRange(o))) {
                                 var [l, u] = eh.edges(o),
                                     c = J.rangeRef(e, o, { affinity: 'inward' });
-                                eG.splitNodes(e, {
+                                eB.splitNodes(e, {
                                     at: u,
                                     match: s,
                                     voids: a
                                 }),
-                                    eG.splitNodes(e, {
+                                    eB.splitNodes(e, {
                                         at: l,
                                         match: s,
                                         voids: a
                                     }),
                                     (o = c.unref()),
-                                    null == n.at && eG.select(e, o);
+                                    null == n.at && eB.select(e, o);
                             }
                             for (var [, d] of Array.from(
                                 J.nodes(e, {
@@ -2667,11 +2667,11 @@ var eG = eB(
                                                     c = o.length + 1,
                                                     d = eo.next(s.slice(0, c)),
                                                     f = eL(eL({}, t), {}, { children: [] });
-                                                eG.insertNodes(e, f, {
+                                                eB.insertNodes(e, f, {
                                                     at: d,
                                                     voids: a
                                                 }),
-                                                    eG.moveNodes(e, {
+                                                    eB.moveNodes(e, {
                                                         at: l,
                                                         match: (e) => W.isAncestor(u) && u.children.includes(e),
                                                         to: d.concat(0),
@@ -2693,14 +2693,14 @@ var eG = eB(
                     { edge: n = 'anchor' } = t,
                     { selection: r } = e;
                 if (!!r) {
-                    if ('anchor' === n) eG.select(e, r.anchor);
-                    else if ('focus' === n) eG.select(e, r.focus);
+                    if ('anchor' === n) eB.select(e, r.anchor);
+                    else if ('focus' === n) eB.select(e, r.focus);
                     else if ('start' === n) {
                         var [i] = eh.edges(r);
-                        eG.select(e, i);
+                        eB.select(e, i);
                     } else if ('end' === n) {
                         var [, a] = eh.edges(r);
-                        eG.select(e, a);
+                        eB.select(e, a);
                     }
                 }
             },
@@ -2734,13 +2734,13 @@ var eG = eB(
                         var f = a ? J.before(e, l, u) : J.after(e, l, u);
                         f && (c.focus = f);
                     }
-                    eG.setSelection(e, c);
+                    eB.setSelection(e, c);
                 }
             },
             select(e, t) {
                 var { selection: n } = e;
                 if (((t = J.range(e, t)), n)) {
-                    eG.setSelection(e, t);
+                    eB.setSelection(e, t);
                     return;
                 }
                 if (!eh.isRange(t)) throw Error('When setting the selection and the current selection is `null` you must provide at least an `anchor` and `focus`, but you passed: '.concat(eE.stringify(t)));
@@ -2758,7 +2758,7 @@ var eG = eB(
                     'start' === i && (i = eh.isBackward(r) ? 'focus' : 'anchor'), 'end' === i && (i = eh.isBackward(r) ? 'anchor' : 'focus');
                     var { anchor: a, focus: s } = r,
                         o = 'anchor' === i ? a : s;
-                    eG.setSelection(e, { ['anchor' === i ? 'anchor' : 'focus']: ek(ek({}, o), t) });
+                    eB.setSelection(e, { ['anchor' === i ? 'anchor' : 'focus']: ek(ek({}, o), t) });
                 }
             },
             setSelection(e, t) {
@@ -2808,7 +2808,7 @@ var eG = eB(
                     }
                 }
                 if (eo.isPath(o)) {
-                    eG.removeNodes(e, {
+                    eB.removeNodes(e, {
                         at: o,
                         voids: s
                     });
@@ -2873,31 +2873,31 @@ var eG = eB(
                             [P] = J.leaf(e, M),
                             { path: k } = M,
                             { offset: U } = m,
-                            B = P.text.slice(U);
-                        B.length > 0 &&
+                            G = P.text.slice(U);
+                        G.length > 0 &&
                             (e.apply({
                                 type: 'remove_text',
                                 path: k,
                                 offset: U,
-                                text: B
+                                text: G
                             }),
-                            (w = B));
+                            (w = G));
                     }
                     if (
                         (D.reverse()
                             .map((e) => e.unref())
                             .filter((e) => null !== e)
                             .forEach((t) =>
-                                eG.removeNodes(e, {
+                                eB.removeNodes(e, {
                                     at: t,
                                     voids: s
                                 })
                             ),
                         !T)
                     ) {
-                        var G = x.current,
-                            [Z] = J.leaf(e, G),
-                            { path: F } = G,
+                        var B = x.current,
+                            [Z] = J.leaf(e, B),
+                            { path: F } = B,
                             V = b ? m.offset : 0,
                             j = Z.text.slice(V, g.offset);
                         j.length > 0 &&
@@ -2913,16 +2913,16 @@ var eG = eB(
                         I &&
                         x.current &&
                         L.current &&
-                        eG.mergeNodes(e, {
+                        eB.mergeNodes(e, {
                             at: x.current,
                             hanging: !0,
                             voids: s
                         }),
-                        u && r && 'character' === i && w.length > 1 && w.match(/[\u0E00-\u0E7F]+/) && eG.insertText(e, w.slice(0, w.length - a));
+                        u && r && 'character' === i && w.length > 1 && w.match(/[\u0E00-\u0E7F]+/) && eB.insertText(e, w.slice(0, w.length - a));
                     var H = L.unref(),
                         Y = x.unref(),
                         K = r ? H || Y : Y || H;
-                    null == t.at && K && eG.select(e, K);
+                    null == t.at && K && eB.select(e, K);
                 }
             });
         },
@@ -2940,7 +2940,7 @@ var eG = eB(
                         var [, o] = eh.edges(s);
                         if (!a && J.void(e, { at: o })) return;
                         var l = J.pointRef(e, o);
-                        eG.delete(e, { at: s }), (s = l.unref());
+                        eB.delete(e, { at: s }), (s = l.unref());
                     }
                 } else eo.isPath(s) && (s = J.start(e, s));
                 if (!(!a && J.void(e, { at: s }))) {
@@ -2989,7 +2989,7 @@ var eG = eB(
                         L = J.isEnd(e, s, O),
                         x = J.pathRef(e, _ && !y.length ? eo.next(d) : d),
                         w = J.pathRef(e, L ? eo.next(O) : O);
-                    eG.splitNodes(e, {
+                    eB.splitNodes(e, {
                         at: s,
                         match: (t) => (N ? W.isElement(t) && J.isBlock(e, t) : ey.isText(t) || J.isInline(e, t)),
                         mode: N ? 'lowest' : 'highest',
@@ -2998,7 +2998,7 @@ var eG = eB(
                     });
                     var M = J.pathRef(e, !D || (D && L) ? eo.next(O) : O);
                     if (
-                        (eG.insertNodes(e, S, {
+                        (eB.insertNodes(e, S, {
                             at: M.current,
                             match: (t) => ey.isText(t) || J.isInline(e, t),
                             mode: 'highest',
@@ -3008,17 +3008,17 @@ var eG = eB(
                             !S.length &&
                             T.length &&
                             !y.length &&
-                            eG.delete(e, {
+                            eB.delete(e, {
                                 at: d,
                                 voids: a
                             }),
-                        eG.insertNodes(e, T, {
+                        eB.insertNodes(e, T, {
                             at: x.current,
                             match: (t) => W.isElement(t) && J.isBlock(e, t),
                             mode: 'lowest',
                             voids: a
                         }),
-                        eG.insertNodes(e, y, {
+                        eB.insertNodes(e, y, {
                             at: w.current,
                             match: (t) => ey.isText(t) || J.isInline(e, t),
                             mode: 'highest',
@@ -3027,7 +3027,7 @@ var eG = eB(
                         !n.at && (y.length > 0 && w.current ? (r = eo.previous(w.current)) : T.length > 0 && x.current ? (r = eo.previous(x.current)) : M.current && (r = eo.previous(M.current)), r))
                     ) {
                         var P = J.end(e, r);
-                        eG.select(e, P);
+                        eB.select(e, P);
                     }
                     M.unref(), x.unref(), w.unref();
                 }
@@ -3047,14 +3047,14 @@ var eG = eB(
                         var s = eh.start(i),
                             o = J.pointRef(e, s),
                             l = J.pointRef(e, a);
-                        eG.delete(e, {
+                        eB.delete(e, {
                             at: i,
                             voids: r
                         });
                         var u = o.unref(),
                             c = l.unref();
                         (i = u || c),
-                            eG.setSelection(e, {
+                            eB.setSelection(e, {
                                 anchor: i,
                                 focus: i
                             });

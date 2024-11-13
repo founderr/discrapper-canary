@@ -163,7 +163,7 @@ let T = {
             });
         }
     };
-function b(e) {
+function A(e) {
     let { item: t, state: n, cleanUp: l } = e,
         a = r.useMemo(() => {
             let e = x[t];
@@ -182,12 +182,12 @@ function b(e) {
         children: a
     });
 }
-function A(e) {
+function b(e) {
     return e;
 }
 function Z(e, t, n, r) {
     return (0, i.jsx)(
-        b,
+        A,
         {
             item: t,
             state: n,
@@ -202,6 +202,6 @@ t.Z = r.memo(function (e) {
     return (0, i.jsx)(u.TransitionGroup, {
         items: n,
         renderItem: Z,
-        getItemKey: A
+        getItemKey: b
     });
 });

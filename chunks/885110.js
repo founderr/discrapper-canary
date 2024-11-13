@@ -84,7 +84,7 @@ function k() {
 function U() {
     (L = !1), (C = y.Skl.UNKNOWN), k(), S.Z.setCurrentUserOnConnectionOpen(N, w);
 }
-class B extends (r = d.ZP.Store) {
+class G extends (r = d.ZP.Store) {
     initialize() {
         this.waitFor(v.Z, m.Z, b.Z, T.Z, I.Z, E.Z), this.syncWith([b.Z], k);
     }
@@ -117,7 +117,7 @@ class B extends (r = d.ZP.Store) {
     }
 }
 (s = 'SelfPresenceStore'),
-    (a = 'displayName') in (i = B)
+    (a = 'displayName') in (i = G)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -125,7 +125,7 @@ class B extends (r = d.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new B(f.Z, {
+    (t.Z = new G(f.Z, {
         START_SESSION: k,
         CONNECTION_OPEN: function () {
             U();

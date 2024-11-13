@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(442837),
-    a = n(481060),
+    a = n(442837),
+    r = n(481060),
     s = n(570140),
     o = n(45114),
     c = n(147754),
@@ -22,18 +22,18 @@ var i = n(200651),
     b = n(904151);
 t.Z = (e) => {
     var t;
-    let { channel: N, guild: Z } = e,
+    let { channel: Z, guild: N } = e,
         {
             currentCategoryId: S,
             directoryEntries: T,
             categoryCounts: j,
             allEntriesCount: A,
             isLoading: y
-        } = (0, r.cj)([f.Z], () => {
-            let e = f.Z.getCurrentCategoryId(N.id),
-                t = f.Z.getDirectoryEntries(N.id, e === I.AR.ALL ? null : e),
-                n = f.Z.getDirectoryCategoryCounts(N.id),
-                i = f.Z.getDirectoryAllEntriesCount(N.id);
+        } = (0, a.cj)([f.Z], () => {
+            let e = f.Z.getCurrentCategoryId(Z.id),
+                t = f.Z.getDirectoryEntries(Z.id, e === I.AR.ALL ? null : e),
+                n = f.Z.getDirectoryCategoryCounts(Z.id),
+                i = f.Z.getDirectoryAllEntriesCount(Z.id);
             return {
                 currentCategoryId: e,
                 directoryEntries: t,
@@ -44,56 +44,56 @@ t.Z = (e) => {
         });
     l.useEffect(
         () => () => {
-            let e = d.ZP.lastMessageId(N.id);
+            let e = d.ZP.lastMessageId(Z.id);
             if (null != e)
                 s.Z.wait(() => {
-                    (0, o.In)(N.id, !0, !0, e);
+                    (0, o.In)(Z.id, !0, !0, e);
                 });
         },
-        [N.id]
+        [Z.id]
     );
     let P = l.useMemo(() => (null != T ? (0, v.v)(Object.values(T), S) : null), [T, S]),
         {
             mostRecentQuery: M,
-            searchFetching: R,
-            searchResults: L
-        } = (0, r.cj)([m.Z], () => {
-            let { mostRecentQuery: e, fetching: t } = m.Z.getSearchState(N.id);
+            searchFetching: L,
+            searchResults: R
+        } = (0, a.cj)([m.Z], () => {
+            let { mostRecentQuery: e, fetching: t } = m.Z.getSearchState(Z.id);
             return {
                 mostRecentQuery: e,
                 searchFetching: t,
-                searchResults: m.Z.getSearchResults(N.id, e)
+                searchResults: m.Z.getSearchResults(Z.id, e)
             };
         }),
         [k, O] = l.useState(M),
         D = '' !== M,
         { showHubEventsList: w } = c.Z.useExperiment(
             {
-                guildId: null !== (t = Z.id) && void 0 !== t ? t : '',
+                guildId: null !== (t = N.id) && void 0 !== t ? t : '',
                 location: '6f7fb0_1'
             },
             { autoTrackExposure: !1 }
         );
     l.useEffect(() => {
-        p.c$(N.id), p.YZ(N.id), w && h.c(N.id), O(M);
-    }, [N.id]),
+        p.c$(Z.id), p.YZ(Z.id), w && h.c(Z.id), O(M);
+    }, [Z.id]),
         l.useEffect(() => {
             u.default.track(E.rMx.GUILD_DIRECTORY_CHANNEL_VIEWED, {
-                directory_channel_id: N.id,
-                directory_guild_id: Z.id,
+                directory_channel_id: Z.id,
+                directory_guild_id: N.id,
                 primary_category_id: S
             });
-        }, [N.id, Z.id, S]);
-    let B = (0, g.G)(N)
+        }, [Z.id, N.id, S]);
+    let B = (0, g.G)(Z)
             ? () => {
-                  (0, a.openModalLazy)(async () => {
+                  (0, r.openModalLazy)(async () => {
                       let { default: e } = await n.e('79764').then(n.bind(n, 533202));
                       return (t) =>
                           (0, i.jsx)(e, {
                               ...t,
-                              directoryGuildName: Z.name,
-                              directoryGuildId: Z.id,
-                              directoryChannelId: N.id,
+                              directoryGuildName: N.name,
+                              directoryGuildId: N.id,
+                              directoryChannelId: Z.id,
                               currentCategoryId: S === I.AR.ALL ? null : S
                           });
                   });
@@ -102,14 +102,14 @@ t.Z = (e) => {
         U = (e) => {
             0 !== k.trim().length &&
                 e.charCode === E.yXg.ENTER &&
-                (p.Rq(N.id, k),
+                (p.Rq(Z.id, k),
                 u.default.track(E.rMx.GUILD_DIRECTORY_SEARCH, {
-                    directory_channel_id: N.id,
-                    directory_guild_id: Z.id
+                    directory_channel_id: Z.id,
+                    directory_guild_id: N.id
                 }));
         },
         H = () => {
-            O(''), p.So(N.id);
+            O(''), p.So(Z.id);
         };
     return D
         ? (0, i.jsx)(_.Z, {
@@ -119,24 +119,24 @@ t.Z = (e) => {
               handleSearchKeyPress: U,
               handleClearSearch: H,
               handleCreateOrAddGuild: B,
-              searchResults: L,
-              searchFetching: R
+              searchResults: R,
+              searchFetching: L
           })
         : null == P && null == S
           ? (0, i.jsx)('div', {
                 className: b.pageContainer,
-                children: (0, i.jsx)(a.Spinner, { className: b.spinner })
+                children: (0, i.jsx)(r.Spinner, { className: b.spinner })
             })
           : (null == P ? void 0 : P.length) === 0 && null == S
             ? (0, i.jsx)('div', {
                   className: b.pageContainer,
                   children: (0, i.jsx)(C.Z, {
-                      guild: Z,
+                      guild: N,
                       onAddGuild: B
                   })
               })
             : (0, i.jsx)(x.Z, {
-                  channel: N,
+                  channel: Z,
                   searchQuery: k,
                   setSearchQuery: O,
                   handleSearchKeyPress: U,
@@ -144,7 +144,7 @@ t.Z = (e) => {
                   handleCreateOrAddGuild: B,
                   currentCategoryId: S,
                   handleSelectCategory: (e) => {
-                      p.Su(N.id, e);
+                      p.Su(Z.id, e);
                   },
                   directoryEntries: P,
                   categoryCounts: j,

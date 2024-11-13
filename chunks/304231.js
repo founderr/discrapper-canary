@@ -63,11 +63,11 @@ t.Z = r.memo(function (e) {
         u = r.useRef(null),
         p = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
         [N, T] = r.useState(0),
-        [x, b] = r.useState(0),
-        A = (0, g.GN)((e) => e.selectedPlaystyle, a.X),
+        [x, A] = r.useState(0),
+        b = (0, g.GN)((e) => e.selectedPlaystyle, a.X),
         Z = r.useCallback(
             (e) => {
-                T(e), x < e && b(e);
+                T(e), x < e && A(e);
             },
             [x]
         ),
@@ -77,8 +77,8 @@ t.Z = r.memo(function (e) {
         L = r.useCallback(() => {
             2 === N ? t() : Z(N + 1);
         }, [N, Z, t]),
-        R = r.useMemo(() => 1 === N && null == A, [A, N]),
-        j = r.useMemo(
+        R = r.useMemo(() => 1 === N && null == b, [b, N]),
+        O = r.useMemo(
             () => [
                 {
                     index: 0,
@@ -95,7 +95,7 @@ t.Z = r.memo(function (e) {
             ],
             []
         ),
-        O = (0, o.useSpring)(
+        j = (0, o.useSpring)(
             {
                 ref: n,
                 from: { opacity: 0 },
@@ -148,7 +148,7 @@ t.Z = r.memo(function (e) {
         }, []);
     return (0, i.jsxs)(l.animated.div, {
         className: _.container,
-        style: O,
+        style: j,
         children: [
             (0, i.jsx)(l.animated.div, {
                 className: _.sequencer,
@@ -166,7 +166,7 @@ t.Z = r.memo(function (e) {
                 children: [
                     (0, i.jsx)(h.T, {
                         currentStepIndex: N,
-                        steps: j,
+                        steps: O,
                         furthestStepIndex: x,
                         onStepClick: Z
                     }),

@@ -709,13 +709,13 @@ n.r(t),
             return U.$;
         },
         FormErrorBlock: function () {
-            return B.k;
+            return G.k;
         },
         FormErrorBlockColors: function () {
-            return B.m;
+            return G.m;
         },
         FormItem: function () {
-            return G.x;
+            return B.x;
         },
         FormLabel: function () {
             return Z.l;
@@ -1510,7 +1510,7 @@ n.r(t),
             return eP.Ph;
         },
         SelectLooks: function () {
-            return eB.q;
+            return eG.q;
         },
         SendMessageIcon: function () {
             return tN.Uuj;
@@ -1519,7 +1519,7 @@ n.r(t),
             return tT.k;
         },
         Sequencer: function () {
-            return eG.q;
+            return eB.q;
         },
         ServerGridIcon: function () {
             return tN.dRF;
@@ -2301,8 +2301,8 @@ var r = n(680732),
     P = n(347016),
     k = n(15127),
     U = n(770102),
-    B = n(434333),
-    G = n(540863),
+    G = n(434333),
+    B = n(540863),
     Z = n(722187),
     F = n(383838),
     V = n(789164),
@@ -2355,8 +2355,8 @@ var r = n(680732),
     eP = n(619307),
     ek = n(921349),
     eU = n(119757),
-    eB = n(748585),
-    eG = n(263953),
+    eG = n(748585),
+    eB = n(263953),
     eZ = n(503145),
     eF = n(936621),
     eV = n(718580),

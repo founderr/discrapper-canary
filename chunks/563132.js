@@ -1,7 +1,7 @@
 n.r(e),
     n.d(e, {
         PaymentContext: function () {
-            return m;
+            return h;
         },
         PaymentContextProvider: function () {
             return w;
@@ -10,7 +10,7 @@ n.r(e),
             return Y;
         },
         usePaymentContext: function () {
-            return h;
+            return m;
         }
     }),
     n(47120),
@@ -48,10 +48,10 @@ var r = n(200651),
     K = n(362755),
     H = n(981631),
     y = n(474936);
-let [m, h, Y] = (0, N.Z)();
+let [h, m, Y] = (0, N.Z)();
 function w(t) {
     var e, n, N;
-    let { loadId: h, activeSubscription: Y, stepConfigs: w, breadcrumbs: W = [], skuIDs: g, isGift: V = !1, children: v, defaultPlanId: b, purchaseType: k = H.GZQ.SUBSCRIPTION, applicationId: Q, referralCode: X, repeatPurchase: J = !1 } = t,
+    let { loadId: m, activeSubscription: Y, stepConfigs: w, breadcrumbs: W = [], skuIDs: g, isGift: V = !1, children: v, defaultPlanId: b, purchaseType: k = H.GZQ.SUBSCRIPTION, applicationId: Q, referralCode: X, repeatPurchase: J = !1 } = t,
         x = (0, F.Z)(),
         j = (0, T.Q)(),
         q = (0, f.Z)(),
@@ -94,7 +94,7 @@ function w(t) {
         { paymentError: ts, paymentAuthenticationState: tM } = (0, L.Z)(),
         { purchaseError: tP, purchaseErrorBlockRef: tU, setPurchaseError: td } = (0, p.Z)(),
         tf = (0, u.Z)(() => {
-            let t = null != h ? h : (0, S.Z)();
+            let t = null != m ? m : (0, S.Z)();
             return (
                 P.Z.addBreadcrumb({ message: 'Checkout session ID: '.concat(t) }),
                 {
@@ -107,8 +107,8 @@ function w(t) {
         [tG, tZ] = (0, o.Wu)([c.Z], () => [c.Z.purchaseTokenAuthState, c.Z.purchaseTokenHash]),
         [tB, tF] = (0, o.Wu)([K.Z], () => [K.Z.browserCheckoutState, K.Z.loadId]),
         [tK, tH] = E.useState(null),
-        [ty, tm] = E.useState(null),
-        [th, tY] = E.useState(null),
+        [ty, th] = E.useState(null),
+        [tm, tY] = E.useState(null),
         [tw, tW] = E.useState(null),
         [tg, tV] = E.useState(null),
         [tv, tb] = E.useState(void 0),
@@ -153,7 +153,7 @@ function w(t) {
         t3 = tx[null != tO ? tO : ''],
         [t6, et] = E.useState(null),
         ee = null !== (N = null == Y ? void 0 : Y.inReverseTrial) && void 0 !== N && N && !V;
-    return (0, r.jsx)(m.Provider, {
+    return (0, r.jsx)(h.Provider, {
         value: {
             stripe: x,
             contextMetadata: tf,
@@ -198,8 +198,8 @@ function w(t) {
             bodyNode: tK,
             setBodyNode: tH,
             footerNode: ty,
-            setFooterNode: tm,
-            modalOverlayNode: th,
+            setFooterNode: th,
+            modalOverlayNode: tm,
             setModalOverlayNode: tY,
             selectedSkuId: tO,
             selectedSku: t3,

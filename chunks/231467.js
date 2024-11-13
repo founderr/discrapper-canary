@@ -104,7 +104,7 @@ function U(e) {
                 })
             });
 }
-function B(e) {
+function G(e) {
     let { traits: t, traitsToHighlight: n, onInteraction: a } = e,
         o = i.useMemo(() => (null == n ? new Set() : new Set(n)), [n]),
         l = i.useCallback(
@@ -138,7 +138,7 @@ function B(e) {
         itemGapPx: 4
     });
 }
-function G(e) {
+function B(e) {
     let { hasPendingJoinRequest: t, atMaxMemberCapacity: n, isGuildMember: i } = e;
     if (t)
         return (0, r.jsxs)('div', {
@@ -258,7 +258,7 @@ function Z(e) {
                 style: el,
                 children: [
                     eu,
-                    (0, r.jsx)(G, {
+                    (0, r.jsx)(B, {
                         hasPendingJoinRequest: C,
                         atMaxMemberCapacity: L,
                         isGuildMember: c
@@ -389,7 +389,7 @@ function Z(e) {
                         description: n.description,
                         expanded: u
                     }),
-                    (0, r.jsx)(B, {
+                    (0, r.jsx)(G, {
                         traits: ec,
                         traitsToHighlight: p,
                         onInteraction: ed('traits')
@@ -443,8 +443,8 @@ t.ZP = function (e) {
         L = (0, S.I7)().enabled,
         k = m.memberCount >= w.Du,
         U = i.useRef(-1),
-        B = i.useCallback((e) => d(e, U), [d]),
-        G = (0, c.O)(B, 1);
+        G = i.useCallback((e) => d(e, U), [d]),
+        B = (0, c.O)(G, 1);
     i.useEffect(
         () => () => {
             null == d || d(!1, U);
@@ -497,7 +497,7 @@ t.ZP = function (e) {
             [m.id]
         );
     return (0, r.jsx)('div', {
-        ref: G,
+        ref: B,
         children: (0, r.jsx)(o.ClickableContainer, {
             onClick: F,
             className: s()(P.clickableCard, L && P.applyToJoinContainer),

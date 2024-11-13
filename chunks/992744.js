@@ -1,7 +1,7 @@
 var i = n(200651),
     l = n(192379),
-    r = n(780384),
-    a = n(481060),
+    a = n(780384),
+    r = n(481060),
     s = n(410030),
     o = n(367907),
     c = n(984370),
@@ -15,7 +15,7 @@ t.Z = () => {
     l.useEffect(() => {
         o.ZP.trackWithMetadata(d.rMx.GUILD_OUTAGE_VIEWED, {});
     }, []);
-    let t = (0, r.wj)(e) ? p : m;
+    let t = (0, a.wj)(e) ? p : m;
     return (0, i.jsxs)('div', {
         className: h.container,
         children: [
@@ -23,7 +23,7 @@ t.Z = () => {
                 toolbar: (0, i.jsx)(l.Fragment, {}),
                 children: [
                     (0, i.jsx)(c.Z.Icon, {
-                        icon: a.TextIcon,
+                        icon: r.TextIcon,
                         'aria-hidden': !0
                     }),
                     (0, i.jsx)(c.Z.Title, { children: u.intl.string(u.t['8LKcho']) })
@@ -37,12 +37,12 @@ t.Z = () => {
                         className: h.splashImage,
                         src: t
                     }),
-                    (0, i.jsx)(a.Heading, {
+                    (0, i.jsx)(r.Heading, {
                         className: h.splashHeader,
                         variant: 'heading-lg/medium',
                         children: u.intl.string(u.t.m9gRVF)
                     }),
-                    (0, i.jsx)(a.Text, {
+                    (0, i.jsx)(r.Text, {
                         className: h.splashText,
                         variant: 'text-md/normal',
                         children: u.intl.string(u.t['wC3j5+'])

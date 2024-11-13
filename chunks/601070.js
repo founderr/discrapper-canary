@@ -104,9 +104,9 @@ function U(e) {
     let t = f.Z.getChannel(e.id);
     return !!(null != t && g.Z.isActive(e.guildId, t.parent_id, e.id)) && P(t.guild_id, t.parent_id, t.id);
 }
-function B(e) {
+function G(e) {
     let t = f.Z.getChannel(e.channelId);
-    if (null == t) G();
+    if (null == t) B();
     else {
         let { guild_id: e, parent_id: r } = t;
         if (!d.Ec.has(t.type)) {
@@ -132,7 +132,7 @@ function B(e) {
         }
     }
 }
-function G() {
+function B() {
     for (let e in ((S = {}), (A = {}), b))
         for (let t in b[e])
             for (let n in b[e][t]) {
@@ -347,22 +347,22 @@ class $ extends (r = u.ZP.Store) {
         },
         THREAD_MEMBER_UPDATE: U,
         THREAD_MEMBERS_UPDATE: U,
-        LOAD_MESSAGES_SUCCESS: B,
-        MESSAGE_CREATE: B,
-        MESSAGE_DELETE: B,
-        MESSAGE_DELETE_BULK: B,
-        MESSAGE_ACK: B,
-        CHANNEL_ACK: B,
-        CHANNEL_LOCAL_ACK: B,
+        LOAD_MESSAGES_SUCCESS: G,
+        MESSAGE_CREATE: G,
+        MESSAGE_DELETE: G,
+        MESSAGE_DELETE_BULK: G,
+        MESSAGE_ACK: G,
+        CHANNEL_ACK: G,
+        CHANNEL_LOCAL_ACK: G,
         CHANNEL_SELECT: function (e) {
-            B(e), Z();
+            G(e), Z();
         },
         PASSIVE_UPDATE_V2: function (e) {
             if (e.channels.length > 0) return D(e.guildId);
         },
-        WINDOW_FOCUS: G,
-        UPDATE_CHANNEL_DIMENSIONS: G,
-        DRAWER_OPEN: G,
-        DRAWER_CLOSE: G,
-        BULK_ACK: G
+        WINDOW_FOCUS: B,
+        UPDATE_CHANNEL_DIMENSIONS: B,
+        DRAWER_OPEN: B,
+        DRAWER_CLOSE: B,
+        BULK_ACK: B
     }));

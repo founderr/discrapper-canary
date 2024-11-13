@@ -22,14 +22,14 @@ var i,
     N = n(812206),
     T = n(933557),
     x = n(194082),
-    b = n(264165),
-    A = n(630186),
+    A = n(264165),
+    b = n(630186),
     Z = n(925329),
     y = n(102172),
     L = n(871118),
     R = n(707409),
-    j = n(849171),
-    O = n(314897),
+    O = n(849171),
+    j = n(314897),
     P = n(592125),
     D = n(594174),
     M = n(395361),
@@ -219,7 +219,7 @@ $.Icon = J;
 let ee = (e) => {
     let { children: t, className: n, ...i } = e;
     return (0, l.jsx)(u.FocusRing, {
-        children: (0, l.jsx)(A.Z, {
+        children: (0, l.jsx)(b.Z, {
             className: o()(n, F.wrapper),
             padded: !0,
             ...i,
@@ -230,7 +230,7 @@ let ee = (e) => {
 (ee.Header = $),
     (ee.Body = (e) => {
         let { children: t } = e;
-        return (0, l.jsx)(A.Z, {
+        return (0, l.jsx)(b.Z, {
             inset: !0,
             padded: !1,
             className: F.body,
@@ -390,7 +390,7 @@ let ee = (e) => {
             { name: c, details: d, assets: h, application_id: m } = i;
         if (null != h && (0, C.Z)(i)) {
             var g;
-            t = (0, l.jsx)(b.Z, {
+            t = (0, l.jsx)(A.Z, {
                 className: F.twitchSectionPreviewWrapper,
                 aspectRatio: 16 / 9,
                 children: (0, l.jsxs)(u.Clickable, {
@@ -496,9 +496,9 @@ let ee = (e) => {
                     return o(t);
                 });
         }, [d]);
-        let h = (0, c.Wu)([D.default, O.default], () =>
+        let h = (0, c.Wu)([D.default, j.default], () =>
                 Array.from(r)
-                    .map((e) => (O.default.getId() === e ? null : D.default.getUser(e)))
+                    .map((e) => (j.default.getId() === e ? null : D.default.getUser(e)))
                     .filter(U.lm)
             ),
             p = (0, m.O)(),
@@ -550,7 +550,7 @@ let ee = (e) => {
                         (0, l.jsxs)('div', {
                             className: F.embeddedActivityImageOverlay,
                             children: [
-                                (0, l.jsx)(j.OV, {
+                                (0, l.jsx)(O.OV, {
                                     users: h,
                                     guildId: i,
                                     channelId: n.id

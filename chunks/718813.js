@@ -51,15 +51,15 @@ let N = (0, g.Un)({
         webpackId: 838819,
         name: 'CollectiblesShop'
     }),
-    b = (0, g.Un)({
+    A = (0, g.Un)({
         createPromise: () => Promise.all([n.e('33053'), n.e('15669'), n.e('7654'), n.e('44156'), n.e('44294'), n.e('85552'), n.e('58227'), n.e('28377')]).then(n.bind(n, 994763)),
         webpackId: 994763,
         name: 'GuildSettings'
     }),
-    A = {
+    b = {
         [C.S9g.USER_SETTINGS]: () => (0, r.jsx)(N, {}),
         [C.S9g.CHANNEL_SETTINGS]: () => (0, r.jsx)(T, {}),
-        [C.S9g.GUILD_SETTINGS]: () => (0, r.jsx)(b, {}),
+        [C.S9g.GUILD_SETTINGS]: () => (0, r.jsx)(A, {}),
         [C.S9g.COLLECTIBLES_SHOP]: () => (0, r.jsx)(x, {})
     },
     Z = 'SHOWN',
@@ -71,7 +71,7 @@ let N = (0, g.Un)({
 function R() {
     return l.useEffect(() => (p.Z.enable(), p.Z.enableTemp(m.u), () => p.Z.disableTemp()), []), null;
 }
-class j extends (i = l.PureComponent) {
+class O extends (i = l.PureComponent) {
     static getDerivedStateFromProps(e, t) {
         return e.mode !== t.mode
             ? {
@@ -184,8 +184,8 @@ class j extends (i = l.PureComponent) {
             });
     }
 }
-S(j, 'defaultProps', { baseLayer: !1 }), S(j, 'contextType', u.AccessibilityPreferencesContext);
-class O extends l.PureComponent {
+S(O, 'defaultProps', { baseLayer: !1 }), S(O, 'contextType', u.AccessibilityPreferencesContext);
+class j extends l.PureComponent {
     componentDidMount() {
         I.S.subscribe(C.CkL.LAYER_POP_ESCAPE_KEY, h.xf);
     }
@@ -199,7 +199,7 @@ class O extends l.PureComponent {
         return (
             l.push(
                 (0, r.jsx)(
-                    j,
+                    O,
                     {
                         mode: 0 !== i || n ? y : Z,
                         baseLayer: !0,
@@ -215,9 +215,9 @@ class O extends l.PureComponent {
     renderComponent(e, t, n) {
         let i;
         return (
-            (i = 'string' == typeof e ? A[e]() : (0, r.jsx)(e, {})),
+            (i = 'string' == typeof e ? b[e]() : (0, r.jsx)(e, {})),
             (0, r.jsxs)(
-                j,
+                O,
                 {
                     mode: t === n - 1 ? Z : y,
                     children: [(0, r.jsx)(R, {}), i]
@@ -249,7 +249,7 @@ function P(e) {
     let t = (0, c.e7)([_.Z], () => _.Z.darkSidebar) ? C.BRd.DARK : void 0,
         n = (0, c.e7)([E.Z], () => E.Z.getLayers()),
         i = (0, f.QP)((e) => e.fullScreenLayers.length > 0);
-    return (0, r.jsx)(O, {
+    return (0, r.jsx)(j, {
         ...e,
         sidebarTheme: t,
         layers: n,

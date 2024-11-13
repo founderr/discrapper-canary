@@ -15,7 +15,7 @@ function o(e) {
     i.useEffect(() => {
         o('');
     }, [e.id]);
-    let c = (0, l.e7)([], () => s.Z.getLastActionTime(e.id));
+    let c = (0, l.e7)([s.Z], () => s.Z.getLastActionTime(e.id));
     return (
         i.useEffect(() => {
             if (!!a.$N.has(e.type) && n !== e.id) t && s.Z.maybeAutoUpgradeChannel(e.id) && o(e.id);

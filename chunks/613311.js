@@ -22,14 +22,14 @@ var i = n(200651),
     N = n(606081),
     T = n(252618),
     x = n(100159),
-    b = n(646288),
-    A = n(984370),
+    A = n(646288),
+    b = n(984370),
     Z = n(706454),
     y = n(210887),
     L = n(430824),
     R = n(496675),
-    j = n(525395),
-    O = n(558314),
+    O = n(525395),
+    j = n(558314),
     P = n(580130),
     D = n(55563),
     M = n(551428),
@@ -134,24 +134,24 @@ class ec extends r.PureComponent {
     }
     renderHeader(e, t) {
         let { channel: n, isAuthenticated: l } = this.props;
-        return (0, i.jsx)(A.Z, {
+        return (0, i.jsx)(b.Z, {
             isAuthenticated: l,
             toolbar: this.renderHeaderToolbar(e, t),
             children:
                 null != n
                     ? (0, i.jsxs)(r.Fragment, {
                           children: [
-                              (0, i.jsx)(A.Z.Icon, {
+                              (0, i.jsx)(b.Z.Icon, {
                                   icon: d.TagIcon,
                                   'aria-label': ea.intl.string(ea.t['P1/Erq'])
                               }),
-                              (0, i.jsx)(A.Z.Title, { children: n.name })
+                              (0, i.jsx)(b.Z.Title, { children: n.name })
                           ]
                       })
                     : null != t && t.premium
                       ? (0, i.jsxs)(r.Fragment, {
                             children: [
-                                (0, i.jsx)(A.Z.Icon, {
+                                (0, i.jsx)(b.Z.Icon, {
                                     icon: d.NitroWheelIcon,
                                     'aria-label': ea.intl.string(ea.t.Ipxkoq)
                                 }),
@@ -161,11 +161,11 @@ class ec extends r.PureComponent {
                       : null != t
                         ? (0, i.jsxs)(r.Fragment, {
                               children: [
-                                  (0, i.jsx)(A.Z.Icon, {
+                                  (0, i.jsx)(b.Z.Icon, {
                                       icon: d.TagIcon,
                                       'aria-label': ea.intl.string(ea.t['P1/Erq'])
                                   }),
-                                  (0, i.jsx)(A.Z.Title, { children: t.name })
+                                  (0, i.jsx)(b.Z.Title, { children: t.name })
                               ]
                           })
                         : null
@@ -513,7 +513,7 @@ class ec extends r.PureComponent {
                             children: (0, i.jsxs)('div', {
                                 className: a()(es.headerPurchase, { [es.active]: o }),
                                 children: [
-                                    null != t ? (0, b.Z)(t) : null,
+                                    null != t ? (0, A.Z)(t) : null,
                                     null != e && null != t ? (0, i.jsx)('div', { children: 'deprecated!' }) : null,
                                     (0, i.jsx)(Q.Z, {
                                         messageStyle: Q.G.SHORT,
@@ -556,7 +556,7 @@ class ec extends r.PureComponent {
 }
 t.Z = (0, _.Z)(
     (0, E.Z)(
-        s.ZP.connectStores([O.Z, y.Z, Z.default, k.Z, M.Z, D.Z, w.Z, I.Z, C.Z, j.Z, L.Z, P.Z], (e) => {
+        s.ZP.connectStores([j.Z, y.Z, Z.default, k.Z, M.Z, D.Z, w.Z, I.Z, C.Z, O.Z, L.Z, P.Z], (e) => {
             let t,
                 n,
                 i,
@@ -575,7 +575,7 @@ t.Z = (0, _.Z)(
                 application: null != l ? C.Z.getApplication(l) : null,
                 isFetchingEntitlements: null != l && P.Z.applicationIdsFetching.has(l),
                 didFetchEntitlements: null != l && P.Z.applicationIdsFetched.has(l),
-                shouldFetchStatistics: s && null != l && j.Z.shouldFetchStatisticsForApplication(l),
+                shouldFetchStatistics: s && null != l && O.Z.shouldFetchStatisticsForApplication(l),
                 sku: n,
                 isFocused: k.Z.isFocused(),
                 storeListing: M.Z.getStoreListing({
@@ -585,7 +585,7 @@ t.Z = (0, _.Z)(
                     isTestMode: c
                 }),
                 isInTestMode: null != l && c,
-                matureAgree: O.Z.didMatureAgree,
+                matureAgree: j.Z.didMatureAgree,
                 theme: y.Z.theme,
                 locale: Z.default.locale,
                 guild: null != o ? L.Z.getGuild(o.getGuildId()) : null

@@ -22,14 +22,14 @@ var i = n(913527),
     N = n(594174),
     T = n(51144),
     x = n(196051),
-    b = n(441729),
-    A = n(653477),
+    A = n(441729),
+    b = n(653477),
     Z = n(981631),
     y = n(388032);
 let L = [],
     R = null,
-    j = null,
     O = null,
+    j = null,
     P = /\|\|([\s\S]+?)\|\|/g;
 function D(e, t, n, i) {
     let l = _.Z.getGuild(n),
@@ -71,16 +71,16 @@ function D(e, t, n, i) {
 function M() {
     if (!s.Zh) return !1;
     let e = u.default.locale;
-    if (null == O) {
+    if (null == j) {
         var t;
-        O = null === (t = window.speechSynthesis) || void 0 === t ? void 0 : t.getVoices();
+        j = null === (t = window.speechSynthesis) || void 0 === t ? void 0 : t.getVoices();
     }
-    let n = O.filter((t) => t.lang === e || t.lang.slice(0, e.length) === e || !1);
-    j = n.length > 0 ? n[0] : null;
+    let n = j.filter((t) => t.lang === e || t.lang.slice(0, e.length) === e || !1);
+    O = n.length > 0 ? n[0] : null;
 }
 async function w(e, t, n, i, r) {
     let l = s.e6(e, n);
-    null !== l && (null == j && M(), t ? await (0, x.NB)() : null == R || R.removeEventListener('end', x.NB), l.addEventListener('end', x.NB), null != i && l.addEventListener('start', i), null != r && l.addEventListener('end', r), (R = l), s.iq(l, j));
+    null !== l && (null == O && M(), t ? await (0, x.NB)() : null == R || R.removeEventListener('end', x.NB), l.addEventListener('end', x.NB), null != i && l.addEventListener('start', i), null != r && l.addEventListener('end', r), (R = l), s.iq(l, O));
 }
 function k(e, t, n, i, r) {
     w(e, t, r, () => {
@@ -114,8 +114,8 @@ function H(e) {
         _ = p.ZP.getCurrentSidebarChannelId(u),
         N = s === u || s === _,
         x = h.OW.getSetting() && o.tts && N,
-        b = I.Z.getTTSType(),
-        y = (null === (t = o.author) || void 0 === t ? void 0 : t.id) !== m.default.getId() && (b === Z.PrB.ALL_CHANNELS || (b === Z.PrB.SELECTED_CHANNEL && N));
+        A = I.Z.getTTSType(),
+        y = (null === (t = o.author) || void 0 === t ? void 0 : t.id) !== m.default.getId() && (A === Z.PrB.ALL_CHANNELS || (A === Z.PrB.SELECTED_CHANNEL && N));
     if ((x || y) && !C.Z.isBlockedOrIgnoredForMessage(o)) {
         if (L.indexOf(o.id) >= 0) return !1;
         L.unshift(o.id) > 10 && L.pop();
@@ -124,13 +124,13 @@ function H(e) {
         let t = null !== (l = null !== (r = f.ZP.getNick(e, null === (n = o.author) || void 0 === n ? void 0 : n.id)) && void 0 !== r ? r : T.ZP.getName(o.author)) && void 0 !== l ? l : '',
             c = o.type === Z.uaV.REPLY ? (null === (i = o.referenced_message) || void 0 === i ? void 0 : i.author) : null,
             u = null != c ? (null !== (a = f.ZP.getNick(e, null == c ? void 0 : c.id)) && void 0 !== a ? a : T.ZP.getName(c)) : null;
-        k(D(o.content, t, e, u), !1, d.id, o.id, A.f);
+        k(D(o.content, t, e, u), !1, d.id, o.id, b.f);
     }
     return !1;
 }
 function V(e) {
     let { id: t, channelId: n } = e,
-        i = b.Z.currentMessage;
+        i = A.Z.currentMessage;
     return null != i && t === i.messageId && n === i.channelId && ((0, x.NB)(), !0);
 }
 function F() {

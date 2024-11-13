@@ -1,6 +1,6 @@
 n.d(t, {
     CD: function () {
-        return b;
+        return A;
     },
     Ew: function () {
         return S;
@@ -27,7 +27,7 @@ n.d(t, {
         return v;
     },
     oT: function () {
-        return A;
+        return b;
     },
     vL: function () {
         return L;
@@ -192,7 +192,7 @@ function x(e) {
             filters: { approximate_member_count: o.sq }
         }));
 }
-function b(e) {
+function A(e) {
     let { loadId: t, categoryId: n, query: i, languageCode: r, offset: l } = e;
     if (
         !u.Z.getIsFetching({
@@ -214,7 +214,7 @@ function b(e) {
                 offset: l
             });
 }
-function A(e) {
+function b(e) {
     let { loadId: t, categoryId: n, query: i, languageCode: r } = e,
         l = u.Z.getIsFetching({
             query: i,
@@ -271,7 +271,7 @@ async function y(e) {
                 h.Z.setState({ resultsQuery: i });
             }
         }),
-            A({
+            b({
                 loadId: t,
                 categoryId: n,
                 query: i,

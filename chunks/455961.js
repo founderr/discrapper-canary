@@ -7,8 +7,8 @@ n.d(t, {
     n(773603);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(848246),
     o = n(793030),
     c = n(442837),
@@ -26,14 +26,14 @@ var i = n(200651),
     I = n(1163),
     E = n(738672),
     b = n(981631),
-    N = n(37113),
-    Z = n(388032),
+    Z = n(37113),
+    N = n(388032),
     S = n(351065);
 function T(e) {
     let { className: t, onDismiss: n } = e;
     return (0, i.jsx)(u.Button, {
         className: t,
-        'aria-label': Z.intl.string(Z.t.cpT0Cg),
+        'aria-label': N.intl.string(N.t.cpT0Cg),
         look: u.Button.Looks.BLANK,
         size: u.Button.Sizes.NONE,
         onClick: n,
@@ -44,16 +44,16 @@ function T(e) {
         })
     });
 }
-let j = N.LY.RESOLUTION_1440,
-    A = N.ws.FPS_60;
+let j = Z.LY.RESOLUTION_1440,
+    A = Z.ws.FPS_60;
 function y(e) {
     let { channel: t } = e,
         n = (0, c.e7)([p.Z], () => p.Z.useReducedMotion),
-        [r, a] = l.useState(!1),
+        [a, r] = l.useState(!1),
         { preset: o } = (0, c.cj)([m.Z], () => m.Z.getState()),
         x = (0, c.e7)([f.Z], () => f.Z.getGoLiveSource()),
         I = l.useCallback(() => {
-            a(!0),
+            r(!0),
                 (0, C.S)(s.q.STREAM_HIGH_QUALITY)
                     .then((e) => {
                         if (e) {
@@ -93,7 +93,7 @@ function y(e) {
                     })
                     .catch(() => {})
                     .finally(() => {
-                        a(!1);
+                        r(!1);
                     });
         }, [o, t, x]);
     return (0, i.jsx)(u.ShinyButton, {
@@ -103,15 +103,15 @@ function y(e) {
         size: u.Button.Sizes.SMALL,
         className: S.optInButton,
         onClick: I,
-        submitting: r,
-        children: Z.intl.string(Z.t['Rpn/09'])
+        submitting: a,
+        children: N.intl.string(N.t['Rpn/09'])
     });
 }
 function P(e) {
     let { channel: t, hidden: n, onDismiss: l } = e,
-        r = I.Z.useExperiment({ location: 'StreamButtonDemoOptInPopoutContent' }, { autoTrackExposure: !1 }).extendedDemoDuration;
+        a = I.Z.useExperiment({ location: 'StreamButtonDemoOptInPopoutContent' }, { autoTrackExposure: !1 }).extendedDemoDuration;
     return (0, i.jsxs)('div', {
-        className: a()(S.optInPopout, S.variant2OptInPopout, { [S.hidden]: n }),
+        className: r()(S.optInPopout, S.variant2OptInPopout, { [S.hidden]: n }),
         children: [
             (0, i.jsx)('img', {
                 className: S.image,
@@ -130,7 +130,7 @@ function P(e) {
                         (0, i.jsx)(o.xv, {
                             className: S.variant2Text,
                             variant: 'text-sm/medium',
-                            children: r ? Z.intl.string(Z.t.ZYQ2zc) : Z.intl.string(Z.t.kr8AEx)
+                            children: a ? N.intl.string(N.t.ZYQ2zc) : N.intl.string(N.t.kr8AEx)
                         }),
                         (0, i.jsx)(y, { channel: t })
                     ]
@@ -141,18 +141,18 @@ function P(e) {
 }
 function M(e) {
     let { channel: t, ...n } = e,
-        { shouldShowOptInPopout: r } = (0, x.k)(s.q.STREAM_HIGH_QUALITY),
-        { enabled: a } = I.Z.useExperiment(
+        { shouldShowOptInPopout: a } = (0, x.k)(s.q.STREAM_HIGH_QUALITY),
+        { enabled: r } = I.Z.useExperiment(
             { location: 'StreamButtonDemoOptInPopout' },
             {
                 autoTrackExposure: !1,
-                disable: !r
+                disable: !a
             }
         ),
         o = l.useRef(!1);
     return (l.useEffect(() => {
-        r &&
-            a &&
+        a &&
+            r &&
             !o.current &&
             ((o.current = !0),
             g.default.track(b.rMx.PERK_DEMO_OFFER_VIEWED, {
@@ -160,8 +160,8 @@ function M(e) {
                 channel_id: t.id,
                 perk_type: s.q.STREAM_HIGH_QUALITY
             }));
-    }, [r, a, t]),
-    r && a)
+    }, [a, r, t]),
+    a && r)
         ? (0, i.jsx)(E.h, {
               ...n,
               renderComponent: (e) =>

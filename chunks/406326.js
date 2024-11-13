@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(481060),
-    r = n(63063),
-    a = n(981631),
+    a = n(63063),
+    r = n(981631),
     s = n(388032),
     o = n(187281);
 function c(e) {
@@ -23,15 +23,15 @@ function c(e) {
                 onItemSelect: n,
                 children: [
                     (0, i.jsx)(l.TabBar.Item, {
-                        id: a.QIO.NEWEST,
+                        id: r.QIO.NEWEST,
                         children: s.intl.string(s.t.rLjqbW)
                     }),
                     (0, i.jsx)(l.TabBar.Item, {
-                        id: a.QIO.OLDEST,
+                        id: r.QIO.OLDEST,
                         children: s.intl.string(s.t.a1BaUl)
                     }),
                     (0, i.jsx)(l.TabBar.Item, {
-                        id: a.QIO.MOST_RELEVANT,
+                        id: r.QIO.MOST_RELEVANT,
                         children: s.intl.string(s.t.FtR97u)
                     })
                 ]
@@ -41,8 +41,8 @@ function c(e) {
 }
 function d(e) {
     let t;
-    let { isSearching: n, isIndexing: r, documentsIndexed: a } = e;
-    (r || n) &&
+    let { isSearching: n, isIndexing: a, documentsIndexed: r } = e;
+    (a || n) &&
         (t = (0, i.jsx)('div', {
             className: o.spinnerWrapper,
             children: (0, i.jsx)(l.Spinner, {
@@ -51,14 +51,14 @@ function d(e) {
                 itemClassName: o.spinnerPath
             })
         }));
-    let c = r && !n;
+    let c = a && !n;
     return (0, i.jsxs)('div', {
         className: o.totalResults,
         role: 'status',
         children: [
             c
                 ? (0, i.jsx)(l.Tooltip, {
-                      text: s.intl.formatToPlainString(s.t['4Y3O+P'], { count: a }),
+                      text: s.intl.formatToPlainString(s.t['4Y3O+P'], { count: r }),
                       children: (n) =>
                           (0, i.jsxs)('div', {
                               className: o.totalResultsWrapper,
@@ -84,7 +84,7 @@ function u(e) {
             variant: 'text-md/normal',
             children: (0, i.jsx)(l.Anchor, {
                 className: o.helpdeskLink,
-                href: r.Z.getArticleURL(a.BhN.SEARCH_INDEXING),
+                href: a.Z.getArticleURL(r.BhN.SEARCH_INDEXING),
                 children: s.intl.string(s.t['G3EA+/'])
             })
         });

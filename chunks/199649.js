@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(442837),
-    r = n(481060),
-    a = n(194359),
+    a = n(481060),
+    r = n(194359),
     s = n(631937),
     o = n(702321),
     c = n(377171),
@@ -31,7 +31,7 @@ function C(e) {
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
                       g.intl.string(g.t['+KSnWV']),
-                      (0, i.jsx)(r.WindowLaunchIcon, {
+                      (0, i.jsx)(a.WindowLaunchIcon, {
                           size: 'xs',
                           color: c.Z.HEADER_PRIMARY
                       })
@@ -58,7 +58,7 @@ function C(e) {
             ((E.message = g.intl.string(g.t['9T6N5+'])),
             (E.buttonText = g.intl.string(g.t.XyHpKC)),
             (E.onButtonClick = () => {
-                a.Z.unblockUser(t.getRecipientId());
+                r.Z.unblockUser(t.getRecipientId());
             }));
     return (0, i.jsx)(p.Z, {
         ...E,

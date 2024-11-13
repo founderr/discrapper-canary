@@ -1,6 +1,6 @@
 n.d(t, {
     Eo: function () {
-        return O;
+        return j;
     },
     VD: function () {
         return R;
@@ -30,8 +30,8 @@ var i = n(200651),
     N = n(768581),
     T = n(356164),
     x = n(981631),
-    b = n(388032),
-    A = n(534238),
+    A = n(388032),
+    b = n(534238),
     Z = n(129512),
     y = n(330065),
     L = n(755386);
@@ -39,7 +39,7 @@ function R(e) {
     let { guild: t, onClick: l, onView: s } = e,
         [E, I] = r.useState(!1),
         [T, R] = r.useState(!1),
-        [j, O] = r.useState(!1),
+        [O, j] = r.useState(!1),
         P = r.useCallback(async () => {
             R(!0);
             try {
@@ -48,8 +48,8 @@ function R(e) {
                 var e;
                 let t = new h.Hx(n);
                 d.Z.show({
-                    title: b.intl.string(b.t.R0RpRU),
-                    body: null !== (e = t.getAnyErrorMessage()) && void 0 !== e ? e : b.intl.string(b.t.eAn6z8)
+                    title: A.intl.string(A.t.R0RpRU),
+                    body: null !== (e = t.getAnyErrorMessage()) && void 0 !== e ? e : A.intl.string(A.t.eAn6z8)
                 });
             } finally {
                 R(!1);
@@ -104,14 +104,14 @@ function R(e) {
     g.N.trackExposure({ location: 'GlobalDiscoveryServersCard' });
     let H = S.Sb.getSetting();
     return (0, i.jsxs)('div', {
-        className: A.container,
+        className: b.container,
         children: [
             T &&
                 (0, i.jsx)('div', {
-                    className: A.spinnerContainer,
+                    className: b.spinnerContainer,
                     children: (0, i.jsx)(c.Spinner, {
                         type: c.Spinner.Type.PULSING_ELLIPSIS,
-                        className: A.spinner
+                        className: b.spinner
                     })
                 }),
             (0, i.jsx)(o.$, {
@@ -119,36 +119,36 @@ function R(e) {
                 active: !E,
                 threshold: 0.55,
                 children: (0, i.jsxs)(_.Z, {
-                    className: A.card,
+                    className: b.card,
                     onClick: P,
                     disabled: T,
                     onContextMenu: M,
                     children: [
                         (0, i.jsxs)('div', {
-                            className: A.header,
+                            className: b.header,
                             children: [
                                 (0, i.jsx)('div', {
-                                    className: a()(A.banner, { [A.loaded]: j }),
+                                    className: a()(b.banner, { [b.loaded]: O }),
                                     children: (0, i.jsx)('img', {
                                         src: U,
                                         alt: '',
-                                        className: A.bannerImage,
-                                        onLoad: () => O(!0)
+                                        className: b.bannerImage,
+                                        onLoad: () => j(!0)
                                     })
                                 }),
                                 (H || B) &&
                                     (0, i.jsx)(f.Z, {
                                         guild: t,
-                                        className: A.contextMenu
+                                        className: b.contextMenu
                                     }),
                                 (0, i.jsx)('div', {
-                                    className: A.icon,
+                                    className: b.icon,
                                     children: (0, i.jsx)(p.ZP, {
                                         mask: p.ZP.Masks.SQUIRCLE,
                                         width: 48,
                                         height: 48,
                                         children: (0, i.jsx)('div', {
-                                            className: A.iconMask,
+                                            className: b.iconMask,
                                             children: (0, i.jsx)(p.ZP, {
                                                 mask: p.ZP.Masks.SQUIRCLE,
                                                 width: 40,
@@ -156,7 +156,7 @@ function R(e) {
                                                 children: (0, i.jsx)('img', {
                                                     src: G,
                                                     alt: '',
-                                                    className: A.avatar
+                                                    className: b.avatar
                                                 })
                                             })
                                         })
@@ -165,55 +165,55 @@ function R(e) {
                             ]
                         }),
                         (0, i.jsxs)('div', {
-                            className: A.guildDetails,
+                            className: b.guildDetails,
                             children: [
                                 (0, i.jsxs)('div', {
-                                    className: A.title,
+                                    className: b.title,
                                     children: [
                                         (0, i.jsx)(C.Z, {
-                                            className: A.guildBadge,
+                                            className: b.guildBadge,
                                             guild: t,
                                             tooltipColor: c.Tooltip.Colors.PRIMARY
                                         }),
                                         (0, i.jsx)(c.Heading, {
                                             variant: 'heading-md/semibold',
-                                            className: A.guildName,
+                                            className: b.guildName,
                                             children: t.name
                                         })
                                     ]
                                 }),
                                 (0, i.jsx)(c.Text, {
-                                    className: A.description,
+                                    className: b.description,
                                     variant: 'text-sm/normal',
                                     color: 'header-secondary',
                                     children: t.description
                                 }),
                                 (0, i.jsxs)('div', {
-                                    className: A.memberDetails,
+                                    className: b.memberDetails,
                                     children: [
                                         null != t.presenceCount &&
                                             (0, i.jsxs)('div', {
-                                                className: A.memberDetailsCount,
+                                                className: b.memberDetailsCount,
                                                 children: [
-                                                    (0, i.jsx)('div', { className: A.presenceCountDot }),
+                                                    (0, i.jsx)('div', { className: b.presenceCountDot }),
                                                     (0, i.jsx)(c.Text, {
-                                                        className: A.memberDetailsText,
+                                                        className: b.memberDetailsText,
                                                         variant: 'text-xs/normal',
                                                         color: 'header-secondary',
-                                                        children: b.intl.format(b.t['LC+S+v'], { membersOnline: t.presenceCount })
+                                                        children: A.intl.format(A.t['LC+S+v'], { membersOnline: t.presenceCount })
                                                     })
                                                 ]
                                             }),
                                         null != t.memberCount &&
                                             (0, i.jsxs)('div', {
-                                                className: A.memberDetailsCount,
+                                                className: b.memberDetailsCount,
                                                 children: [
-                                                    (0, i.jsx)('div', { className: A.memberCountDot }),
+                                                    (0, i.jsx)('div', { className: b.memberCountDot }),
                                                     (0, i.jsx)(c.Text, {
-                                                        className: A.memberDetailsText,
+                                                        className: b.memberDetailsText,
                                                         variant: 'text-xs/normal',
                                                         color: 'header-secondary',
-                                                        children: b.intl.format(b.t.zRl6XV, { count: t.memberCount })
+                                                        children: A.intl.format(A.t.zRl6XV, { count: t.memberCount })
                                                     })
                                                 ]
                                             })
@@ -227,7 +227,7 @@ function R(e) {
         ]
     });
 }
-function j(e) {
+function O(e) {
     let { guildId: t, onClick: n, onView: r } = e,
         l = (0, s.e7)([T.Z], () => T.Z.getGuild(t));
     return null == l
@@ -238,7 +238,7 @@ function j(e) {
               onView: r
           });
 }
-function O(e) {
+function j(e) {
     let { guildId: t, index: n, onClick: l, onView: a } = e,
         s = r.useRef(null == t),
         o = r.useCallback(
@@ -249,7 +249,7 @@ function O(e) {
                           {
                               state: n,
                               cleanUp: r,
-                              children: (0, i.jsx)(E.Z, { className: A.placeholder })
+                              children: (0, i.jsx)(E.Z, { className: b.placeholder })
                           },
                           e
                       )
@@ -259,7 +259,7 @@ function O(e) {
                               state: n,
                               cleanUp: r,
                               animate: s.current,
-                              children: (0, i.jsx)(j, {
+                              children: (0, i.jsx)(O, {
                                   guildId: t.guildId,
                                   onClick: l,
                                   onView: a
@@ -283,7 +283,7 @@ function O(e) {
             [t, n]
         );
     return (0, i.jsx)('div', {
-        className: A.transitionGroup,
+        className: b.transitionGroup,
         children: (0, i.jsx)(c.TransitionGroup, {
             items: u,
             renderItem: o,
@@ -291,4 +291,4 @@ function O(e) {
         })
     });
 }
-t.ZP = r.memo(j);
+t.ZP = r.memo(O);

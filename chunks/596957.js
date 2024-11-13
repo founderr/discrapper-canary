@@ -22,15 +22,15 @@ var i = n(200651),
     N = n(696577),
     T = n(163417),
     x = n(492347),
-    b = n(42575),
-    A = n(617015),
+    A = n(42575),
+    b = n(617015),
     Z = n(981631),
     y = n(388032),
     L = n(522756);
 t.Z = function (e) {
     let { sectionFilter: t, titleId: l } = e,
         { analyticsLocations: R } = (0, p.ZP)(m.Z.FRIENDS_LIST),
-        { rows: j, section: O } = (0, s.cj)([E.ZP], () => E.ZP.getState()),
+        { rows: O, section: j } = (0, s.cj)([E.ZP], () => E.ZP.getState()),
         P = (0, s.e7)([I.Z], () => I.Z.isFocused()),
         D = (0, s.e7)([_.Z], () => _.Z.getRelationshipCount()),
         [M, w] = r.useState(() => {
@@ -59,8 +59,8 @@ t.Z = function (e) {
                 [t]: ''
             });
         }, [M, t]),
-        B = (0, f.A)({ location: 'people_list' }) && t === Z.pJs.PENDING && j.filter(Z.pJs.SPAM).length > 0,
-        H = j.filter(t, M[t]);
+        B = (0, f.A)({ location: 'people_list' }) && t === Z.pJs.PENDING && O.filter(Z.pJs.SPAM).length > 0,
+        H = O.filter(t, M[t]);
     if (
         (r.useEffect(() => {
             t === Z.pJs.ALL && (0, g.d$)();
@@ -81,13 +81,13 @@ t.Z = function (e) {
                             }
                           : void 0
                 },
-                O
+                j
             )
         });
     let V = [H],
         F = 0 === H.length && '' !== M[t],
         z = H.filter((e) => e.type === Z.OGo.PENDING_INCOMING).length,
-        Y = t === Z.pJs.PENDING && z > 0 && z >= A.yf;
+        Y = t === Z.pJs.PENDING && z > 0 && z >= b.yf;
     return (0, i.jsx)(p.Gt, {
         value: R,
         children: (0, i.jsxs)(u.Z, {
@@ -137,7 +137,7 @@ t.Z = function (e) {
                 F
                     ? (0, i.jsx)('div', {
                           className: L.emptyStateContainer,
-                          children: (0, i.jsx)(S.Z, { type: S.j.SECTION_NO_RESULTS }, O)
+                          children: (0, i.jsx)(S.Z, { type: S.j.SECTION_NO_RESULTS }, j)
                       })
                     : (0, i.jsx)(T.Z, {
                           relationshipCount: D,
@@ -155,7 +155,7 @@ t.Z = function (e) {
                                           isFocused: P
                                       });
                                   case Z.pJs.SUGGESTIONS:
-                                      return (0, i.jsx)(b.Z, {
+                                      return (0, i.jsx)(A.Z, {
                                           ...e,
                                           isFocused: P
                                       });

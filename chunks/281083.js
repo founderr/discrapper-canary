@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return l;
     }
 }),
     n(47120);
@@ -8,7 +8,7 @@ var r = n(553813),
     i = n.n(r),
     o = n(358085);
 let a = { [o.PlatformTypes.WINDOWS]: { nvidia: '<=537.58.0 || >=546.31' } };
-function s(e) {
+function l(e) {
     let t = a[(0, o.getPlatform)()];
     if (null == t) return !1;
     for (let n of Object.keys(e)) {

@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    r = n(442837),
-    a = n(481060),
+    a = n(442837),
+    r = n(481060),
     s = n(570140),
     o = n(384275),
     c = n(763762),
@@ -24,8 +24,8 @@ var i = n(200651),
     I = n(594174),
     E = n(51144),
     b = n(7782),
-    N = n(967128),
-    Z = n(320781),
+    Z = n(967128),
+    N = n(320781),
     S = n(269203),
     T = n(86863),
     j = n(558756),
@@ -33,8 +33,8 @@ var i = n(200651),
     y = n(734386),
     P = n(184279),
     M = n(438306),
-    R = n(544142),
-    L = n(128557),
+    L = n(544142),
+    R = n(128557),
     k = n(981631),
     O = n(176505),
     D = n(388032),
@@ -43,11 +43,11 @@ var i = n(200651),
 function U(e) {
     let { canManageRoles: t, channel: n } = e,
         l = t && (0, u.Yk)(n),
-        a = (0, r.e7)([v.ZP], () => null != n.guild_id && n === v.ZP.getDefaultChannel(n.guild_id), [n]);
+        r = (0, a.e7)([v.ZP], () => null != n.guild_id && n === v.ZP.getDefaultChannel(n.guild_id), [n]);
     if ((0, h.Z)(n.id)) return null;
-    if (n.isForumPost()) return (0, i.jsx)(Z.Z, { channel: n });
-    if (C.Ec.has(n.type)) return (0, i.jsx)(R.Z, { channel: n });
-    else if (a) return (0, i.jsx)(L.Z, { channel: n });
+    if (n.isForumPost()) return (0, i.jsx)(N.Z, { channel: n });
+    if (C.Ec.has(n.type)) return (0, i.jsx)(L.Z, { channel: n });
+    else if (r) return (0, i.jsx)(R.Z, { channel: n });
     else if (l) return (0, i.jsx)(y.Z, { channel: n });
     return (0, i.jsx)(M.Z, { channel: n });
 }
@@ -56,16 +56,16 @@ function H(e) {
     let { channel: u, showingBanner: h } = e,
         C = (0, d.ZP)(u),
         { type: v } = u,
-        Z = (0, r.e7)([I.default], () => (u.isPrivate() ? I.default.getUser(u.getRecipientId()) : null)),
-        y = E.ZP.useUserTag(Z),
-        { canManageRoles: M, canReadMessageHistory: R } = (0, r.cj)([_.Z], () => ({
+        N = (0, a.e7)([I.default], () => (u.isPrivate() ? I.default.getUser(u.getRecipientId()) : null)),
+        y = E.ZP.useUserTag(N),
+        { canManageRoles: M, canReadMessageHistory: L } = (0, a.cj)([_.Z], () => ({
             canManageRoles: _.Z.can(k.Plq.MANAGE_ROLES, u),
             canReadMessageHistory: _.Z.can(k.Plq.READ_MESSAGE_HISTORY, u)
         })),
-        L = (0, r.e7)([f.Z], () => (v === k.d4z.DM ? f.Z.getMutualGuilds(u.getRecipientId()) : null), [u, v]),
+        R = (0, a.e7)([f.Z], () => (v === k.d4z.DM ? f.Z.getMutualGuilds(u.getRecipientId()) : null), [u, v]),
         { systemDMRedesignEnabled: H } = m.Z.useExperiment({ location: 'bf1a4f_1' }, { autoTrackExposure: null !== (t = u.isSystemDM()) && void 0 !== t && t }),
-        G = (0, c.Z)(null !== (n = null == Z ? void 0 : Z.id) && void 0 !== n ? n : k.lds),
-        { authorizedAppToken: F, authorizedAppsFetchState: V } = (0, r.cj)([x.Z], () => {
+        G = (0, c.Z)(null !== (n = null == N ? void 0 : N.id) && void 0 !== n ? n : k.lds),
+        { authorizedAppToken: F, authorizedAppsFetchState: V } = (0, a.cj)([x.Z], () => {
             var e;
             return {
                 authorizedAppToken: null != G ? (null === (e = x.Z.getApps()) || void 0 === e ? void 0 : e.find((e) => e.application.id === G.id)) : void 0,
@@ -74,11 +74,11 @@ function H(e) {
         });
     if (
         (l.useEffect(() => {
-            v === k.d4z.DM && null == L && null != Z && s.Z.wait(() => (0, g.Z)(u.getRecipientId(), Z.getAvatarURL(null, 80), { withMutualGuilds: !0 }));
-        }, [L, v, u, Z]),
+            v === k.d4z.DM && null == R && null != N && s.Z.wait(() => (0, g.Z)(u.getRecipientId(), N.getAvatarURL(null, 80), { withMutualGuilds: !0 }));
+        }, [R, v, u, N]),
         l.useEffect(() => {
-            (null == Z ? void 0 : Z.bot) && V === x.M.NOT_FETCHED && o.Z.fetch();
-        }, [null == Z ? void 0 : Z.bot, V]),
+            (null == N ? void 0 : N.bot) && V === x.M.NOT_FETCHED && o.Z.fetch();
+        }, [null == N ? void 0 : N.bot, V]),
         u.isSystemDM())
     )
         return H
@@ -90,7 +90,7 @@ function H(e) {
     if (v === k.d4z.DM) {
         let e;
         return (
-            null != Z && null != G
+            null != N && null != G
                 ? null != F &&
                   (e = (0, i.jsxs)('div', {
                       className: w.buttonContainer,
@@ -98,10 +98,10 @@ function H(e) {
                           (0, i.jsx)(j.W, {
                               className: w.firstButton,
                               channel: u,
-                              user: Z
+                              user: N
                           }),
                           (0, i.jsx)(T.n, {
-                              user: Z,
+                              user: N,
                               application: G,
                               channel: u,
                               oauth2Token: F
@@ -115,16 +115,16 @@ function H(e) {
                   })),
             (0, i.jsxs)(A.Z, {
                 channel: u,
-                user: Z,
+                user: N,
                 children: [
-                    null != Z &&
-                        (0, i.jsx)(a.Heading, {
+                    null != N &&
+                        (0, i.jsx)(r.Heading, {
                             variant: 'heading-xl/medium',
                             className: B.marginBottom20,
                             children: y
                         }),
                     D.intl.format(D.t['Qvg+6+'], { username: C }),
-                    (null == Z ? void 0 : Z.isProvisional) && (0, i.jsx)(p.Z, { look: 'channel_header' }),
+                    (null == N ? void 0 : N.isProvisional) && (0, i.jsx)(p.Z, { look: 'channel_header' }),
                     e
                 ]
             })
@@ -132,9 +132,9 @@ function H(e) {
     }
     if (u.isMultiUserDM())
         return u.isManaged()
-            ? (0, i.jsxs)(N.ZP, {
+            ? (0, i.jsxs)(Z.ZP, {
                   channelId: u.id,
-                  children: [(0, i.jsx)(N.Ot, { children: D.intl.format(D.t.I3R7Vl, { channelName: C }) }), (0, i.jsx)(N.jz, { children: D.intl.string(D.t.M8Ao6O) })]
+                  children: [(0, i.jsx)(Z.Ot, { children: D.intl.format(D.t.I3R7Vl, { channelName: C }) }), (0, i.jsx)(Z.jz, { children: D.intl.string(D.t.M8Ao6O) })]
               })
             : u.hasFlag(O.zZ.IS_JOIN_REQUEST_INTERVIEW_CHANNEL)
               ? (0, i.jsx)(S.Z, { channel: u })
@@ -142,13 +142,13 @@ function H(e) {
                     channel: u,
                     children: D.intl.format(D.t.MFwcqK, { name: C })
                 });
-    return R
+    return L
         ? (0, i.jsx)(U, {
               channel: u,
               canManageRoles: M
           })
-        : (0, i.jsx)(N.ZP, {
+        : (0, i.jsx)(Z.ZP, {
               channelId: u.id,
-              children: (0, i.jsx)(N.jz, { children: D.intl.format(D.t.hPVEQE, { channelName: C }) })
+              children: (0, i.jsx)(Z.jz, { children: D.intl.format(D.t.hPVEQE, { channelName: C }) })
           });
 }

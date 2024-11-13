@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(410030),
-    r = n(906732),
-    a = n(769654),
+    a = n(906732),
+    r = n(769654),
     s = n(785717),
     o = n(697927),
     c = n(200634),
@@ -21,18 +21,18 @@ var l = n(410030),
     C = n(346799);
 function x(e) {
     let { user: t } = e,
-        { analyticsLocations: n } = (0, r.ZP)(),
+        { analyticsLocations: n } = (0, a.ZP)(),
         { context: x } = (0, s.KZ)(),
         v = (0, l.ZP)(),
         { mutualFriends: _, isFetching: I } = (0, o.Z)(t.id, !t.bot),
         { mutualGuilds: E, isFetching: b } = (0, c.Z)(t.id, !0),
-        N = !t.bot && null != _ && _.length > 0,
-        Z = null != E && E.length > 0;
-    return N || Z
+        Z = !t.bot && null != _ && _.length > 0,
+        N = null != E && E.length > 0;
+    return Z || N
         ? (0, i.jsxs)(u.Z.Overlay, {
               className: C.overlay,
               children: [
-                  Z &&
+                  N &&
                       (0, i.jsx)(f.Z, {
                           section: 'MUTUAL_GUILDS',
                           header: g.intl.string(g.t['4lTDZm']),
@@ -47,26 +47,26 @@ function x(e) {
                                       guild: n,
                                       nick: l,
                                       theme: v,
-                                      onSelect: () => (0, a.X)(n.id)
+                                      onSelect: () => (0, r.X)(n.id)
                                   },
                                   n.id
                               );
                           })
                       }),
-                  Z && N && (0, i.jsx)(d.Z, { className: C.divider }),
-                  N &&
+                  N && Z && (0, i.jsx)(d.Z, { className: C.divider }),
+                  Z &&
                       (0, i.jsx)(f.Z, {
                           section: 'MUTUAL_FRIENDS',
                           header: g.intl.string(g.t['0mTJ3t']),
                           isLoading: I,
                           listClassName: C.list,
                           items: _.map((e) => {
-                              let { key: t, user: l, status: r } = e;
+                              let { key: t, user: l, status: a } = e;
                               return (0, i.jsx)(
                                   p.T,
                                   {
                                       user: l,
-                                      status: r,
+                                      status: a,
                                       onSelect: () => {
                                           (0, h.openUserProfileModal)({
                                               ...x,

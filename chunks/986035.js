@@ -1,27 +1,27 @@
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(481060),
     o = n(600164),
     c = n(138894),
     d = n(113207);
 class u extends l.PureComponent {
     render() {
-        let { title: e, description: t, agreement: n, disagreement: l, onAgree: r, onDisagree: u, imageClassName: h } = this.props;
+        let { title: e, description: t, agreement: n, disagreement: l, onAgree: a, onDisagree: u, imageClassName: h } = this.props;
         return (0, i.jsxs)(o.Z, {
             className: c.gatedContent,
             justify: o.Z.Justify.CENTER,
             align: o.Z.Align.CENTER,
             direction: o.Z.Direction.VERTICAL,
             children: [
-                (0, i.jsx)('div', { className: a()(c.image, h) }),
+                (0, i.jsx)('div', { className: r()(c.image, h) }),
                 (0, i.jsx)('div', {
-                    className: a()(c.title, d.marginBottom8),
+                    className: r()(c.title, d.marginBottom8),
                     children: e
                 }),
                 (0, i.jsx)('div', {
-                    className: a()(c.description, d.marginBottom20),
+                    className: r()(c.description, d.marginBottom20),
                     children: t
                 }),
                 (0, i.jsxs)(o.Z, {
@@ -43,7 +43,7 @@ class u extends l.PureComponent {
                                   className: c.action,
                                   color: s.Button.Colors.RED,
                                   size: s.ButtonSizes.LARGE,
-                                  onClick: r,
+                                  onClick: a,
                                   children: n
                               })
                             : null

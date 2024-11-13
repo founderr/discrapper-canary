@@ -1,6 +1,6 @@
 n.d(t, {
     Af: function () {
-        return G;
+        return B;
     },
     Ap: function () {
         return ec;
@@ -75,7 +75,7 @@ n.d(t, {
         return eD;
     },
     _O: function () {
-        return eB;
+        return eG;
     },
     a5: function () {
         return eI;
@@ -132,7 +132,7 @@ n.d(t, {
         return eZ;
     },
     u0: function () {
-        return eG;
+        return eB;
     },
     uV: function () {
         return ei;
@@ -205,7 +205,7 @@ let P = {
         BILLING_HISTORY: 'https://play.google.com/store/account/orderhistory'
     },
     U = new _.Z('PremiumUtils.tsx'),
-    B = {
+    G = {
         [x.Xh.NONE_MONTH]: [x.Xh.NONE_YEAR, x.Xh.PREMIUM_YEAR_TIER_2, x.Xh.PREMIUM_MONTH_TIER_2, x.Xh.PREMIUM_YEAR_TIER_1, x.Xh.PREMIUM_MONTH_TIER_1],
         [x.Xh.NONE_YEAR]: [x.Xh.PREMIUM_YEAR_TIER_2, x.Xh.PREMIUM_MONTH_TIER_2, x.Xh.PREMIUM_YEAR_TIER_1, x.Xh.PREMIUM_MONTH_TIER_1],
         [x.Xh.PREMIUM_MONTH_TIER_0]: [x.Xh.PREMIUM_YEAR_TIER_2, x.Xh.PREMIUM_MONTH_TIER_2, x.Xh.PREMIUM_YEAR_TIER_1, x.Xh.PREMIUM_MONTH_TIER_1, x.Xh.PREMIUM_YEAR_TIER_0],
@@ -216,7 +216,7 @@ let P = {
         [x.Xh.PREMIUM_YEAR_TIER_2]: [],
         ALL: [x.Xh.NONE_MONTH, x.Xh.NONE_YEAR, x.Xh.PREMIUM_YEAR_TIER_2, x.Xh.PREMIUM_MONTH_TIER_2, x.Xh.PREMIUM_YEAR_TIER_1, x.Xh.PREMIUM_MONTH_TIER_1, x.Xh.PREMIUM_YEAR_TIER_0, x.Xh.PREMIUM_MONTH_TIER_0]
     };
-function G(e) {
+function B(e) {
     return e.items.find((e) => x.dJ.has(e.planId));
 }
 function Z(e) {
@@ -489,8 +489,8 @@ function J(e) {
         P = null === (a = null !== (i = null == T ? void 0 : T.taxInclusive) && void 0 !== i ? i : null === (r = m.latestInvoice) || void 0 === r ? void 0 : r.taxInclusive) || void 0 === a || a,
         k = x.cb + (I ? ei(m.additionalPlans) : 0),
         U = O ? (P ? M.intl.format(M.t['cd+hqK'], { price: v }) : M.intl.format(M.t.NUkcpK, { price: v })) : M.intl.string(M.t.zYx3Y2),
-        B = O ? (P ? M.intl.format(M.t.VsKcFB, { price: v }) : M.intl.format(M.t.hJ5xER, { price: v })) : M.intl.string(M.t['8rSipK']),
-        G = O
+        G = O ? (P ? M.intl.format(M.t.VsKcFB, { price: v }) : M.intl.format(M.t.hJ5xER, { price: v })) : M.intl.string(M.t['8rSipK']),
+        B = O
             ? P
                 ? M.intl.format(M.t['jRy6/P'], {
                       price: v,
@@ -550,7 +550,7 @@ function J(e) {
                           })
                         : M.intl.format(M.t.VlWufn, { pauseDate: m.currentPeriodEnd });
                 case D.O0b.PAUSED:
-                    if (A) return B;
+                    if (A) return G;
                     return M.intl.format(M.t['6RTdZG'], { resumeDate: null !== (o = m.pauseEndsAt) && void 0 !== o ? o : void 0 });
                 case D.O0b.PAST_DUE:
                     return M.intl.format(M.t['d+0vws'], {
@@ -560,7 +560,7 @@ function J(e) {
                         }
                     });
                 default:
-                    return B;
+                    return G;
             }
         case x.Xh.PREMIUM_MONTH_TIER_2:
         case x.Xh.PREMIUM_YEAR_TIER_2:
@@ -602,7 +602,7 @@ function J(e) {
                           })
                         : M.intl.format(M.t.VlWufn, { pauseDate: m.currentPeriodEnd });
                 case D.O0b.PAUSED:
-                    if (A) return G;
+                    if (A) return B;
                     return M.intl.format(M.t['6RTdZG'], { resumeDate: null !== (l = m.pauseEndsAt) && void 0 !== l ? l : void 0 });
                 case D.O0b.BILLING_RETRY:
                     return M.intl.format(M.t['IlJ/HR'], { endDate: c()(m.currentPeriodStart).add(x.A5, 'days').toDate() });
@@ -631,7 +631,7 @@ function J(e) {
                                     regularPrice: C,
                                     numMonths: null !== (h = null == S ? void 0 : S.duration) && void 0 !== h ? h : x.rt
                                 })
-                        : G;
+                        : B;
             }
         default:
             throw Error('Invalid planId '.concat(g));
@@ -734,7 +734,7 @@ function en(e) {
 }
 function er(e) {
     var t;
-    return null == e ? B.ALL : null !== (t = B[e]) && void 0 !== t ? t : [];
+    return null == e ? G.ALL : null !== (t = G[e]) && void 0 !== t ? t : [];
 }
 function ei(e) {
     let t = b.Z.getPlanIdsForSkus([eU(x.Si.GUILD)]);
@@ -1114,12 +1114,12 @@ function ew(e) {
     return null == e ? null : e.items.find((e) => x.Z1.has(e.planId));
 }
 function eM(e) {
-    let t = null != e ? G(e) : null;
+    let t = null != e ? B(e) : null;
     return null != t ? en(t.planId) : null;
 }
 function eP(e) {
     if (null != e) {
-        let t = G(e);
+        let t = B(e);
         if (null != t) return W(t.planId);
     }
 }
@@ -1131,10 +1131,10 @@ function ek(e, t) {
 function eU(e) {
     return e;
 }
-function eB(e) {
+function eG(e) {
     return 'isNitroLocked' in e;
 }
-function eG(e) {
+function eB(e) {
     return null != e && x.OT.includes(e) ? 1 : 2;
 }
 function eZ(e) {
@@ -1178,7 +1178,7 @@ t.ZP = Object.freeze({
     getDisplayPremiumType: Q,
     getPremiumPlanOptions: et,
     getUpgradeEligibilities: er,
-    getReverseTrialWeeks: eG,
+    getReverseTrialWeeks: eB,
     getPlanDescription: J,
     isPremiumSku: function (e) {
         return e === x.Si.TIER_0 || e === x.Si.TIER_1 || e === x.Si.TIER_2;
@@ -1363,16 +1363,16 @@ t.ZP = Object.freeze({
     },
     getBillingReviewSubheader: eE,
     getIntervalForInvoice: ev,
-    getPremiumPlanItem: G,
+    getPremiumPlanItem: B,
     getGuildBoostPlanItem: ew,
     isBoostOnlySubscription: function (e) {
-        return null != e && null == G(e) && null != ew(e);
+        return null != e && null == B(e) && null != ew(e);
     },
     getPremiumSkuIdForSubscription: eM,
     getPremiumTypeFromSubscription: eP,
     getPremiumTypeFromSubscriptionRenewalMutations: function (e) {
         if (null != e && null != e.renewalMutations) {
-            let t = G(e.renewalMutations);
+            let t = B(e.renewalMutations);
             if (null != t) return W(t.planId);
         }
     },

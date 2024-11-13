@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(693789),
-    r = n(493683),
-    a = n(596739),
+    a = n(493683),
+    r = n(596739),
     s = n(699516),
     o = n(626135),
     c = n(280006),
@@ -27,7 +27,7 @@ function m(e) {
                 color: l.zx.Colors.BRAND,
                 onclick: () => {
                     (0, d.O)(t.id),
-                        r.Z.closePrivateChannel(t.id, !0, !0),
+                        a.Z.closePrivateChannel(t.id, !0, !0),
                         o.default.track(h.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
                             action: u.q.CLICK_TO_LEAVE,
                             channel_id: t.id,
@@ -52,7 +52,7 @@ function m(e) {
                 size: l.zx.Sizes.MEDIUM
             }
         ];
-    return (0, i.jsx)(a.W, {
+    return (0, i.jsx)(r.W, {
         header: m,
         description: p.intl.string(p.t.BadOYm),
         buttons: f,

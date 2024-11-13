@@ -26,15 +26,15 @@ var i = n(200651),
     N = n(979651),
     T = n(938475),
     x = n(823379),
-    b = n(557177),
-    A = n(981631);
+    A = n(557177),
+    b = n(981631);
 function Z(e, t, n, i) {
     r.useEffect(() => {
         let r = t(),
             l = new s.Fh(e, () => {
                 let e = t(),
                     l = n(r, e);
-                null != l && !I.Z.isSoundDisabled(l) && (0, b.GN)(l, null != i ? i : 0.4), (r = e);
+                null != l && !I.Z.isSoundDisabled(l) && (0, A.GN)(l, null != i ? i : 0.4), (r = e);
             });
         return l.attach('useSound'), () => l.detach();
     });
@@ -80,8 +80,8 @@ function L() {
                 return {
                     channelType: t,
                     guildId: n,
-                    connected: r === A.hes.RTC_CONNECTED,
-                    connectHasStarted: (!i && r !== A.hes.DISCONNECTED) || r === A.hes.RTC_CONNECTED,
+                    connected: r === b.hes.RTC_CONNECTED,
+                    connectHasStarted: (!i && r !== b.hes.DISCONNECTED) || r === b.hes.RTC_CONNECTED,
                     awaitingRemote: null != c.Z.getAwaitingRemoteSessionInfo(),
                     connectedRemote: null != c.Z.getRemoteSessionId()
                 };
@@ -113,22 +113,7 @@ function R() {
             (e, t) => {
                 if (e !== t) {
                     let e = E.Z.isSelfMute();
-                    if (E.Z.getMode() === A.pM4.PUSH_TO_TALK && !e) return t ? 'ptt_start' : 'ptt_stop';
-                }
-            }
-        ),
-        null
-    );
-}
-function j() {
-    return (
-        Z(
-            [E.Z],
-            () => E.Z.isSelfMutedTemporarily(),
-            (e, t) => {
-                if (e !== t) {
-                    let e = E.Z.isSelfMute();
-                    if (E.Z.getMode() === A.pM4.VOICE_ACTIVITY && !e) return t ? 'ptt_stop' : 'ptt_start';
+                    if (E.Z.getMode() === b.pM4.PUSH_TO_TALK && !e) return t ? 'ptt_start' : 'ptt_stop';
                 }
             }
         ),
@@ -136,6 +121,21 @@ function j() {
     );
 }
 function O() {
+    return (
+        Z(
+            [E.Z],
+            () => E.Z.isSelfMutedTemporarily(),
+            (e, t) => {
+                if (e !== t) {
+                    let e = E.Z.isSelfMute();
+                    if (E.Z.getMode() === b.pM4.VOICE_ACTIVITY && !e) return t ? 'ptt_stop' : 'ptt_start';
+                }
+            }
+        ),
+        null
+    );
+}
+function j() {
     return (
         Z(
             [N.Z],
@@ -182,7 +182,7 @@ function D() {
                 }
                 let o = null;
                 return (
-                    (null == (o = 1 === s.length ? s[0] : p.Z.getCurrentUserActiveStream()) ? void 0 : o.state) === A.jm8.CONNECTING && (o = null),
+                    (null == (o = 1 === s.length ? s[0] : p.Z.getCurrentUserActiveStream()) ? void 0 : o.state) === b.jm8.CONNECTING && (o = null),
                     null != o && ((l = (0, d.V9)(o)), (a = p.Z.getViewerIds(l).filter((e) => e !== i).length)),
                     {
                         channelType: e,
@@ -289,6 +289,6 @@ function w() {
 }
 function k() {
     return (0, i.jsxs)(i.Fragment, {
-        children: [(0, i.jsx)(y, {}), (0, i.jsx)(L, {}), (0, i.jsx)(R, {}), (0, i.jsx)(j, {}), (0, i.jsx)(O, {}), (0, i.jsx)(D, {}), (0, i.jsx)(P, {}), (0, i.jsx)(M, {}), (0, i.jsx)(w, {})]
+        children: [(0, i.jsx)(y, {}), (0, i.jsx)(L, {}), (0, i.jsx)(R, {}), (0, i.jsx)(O, {}), (0, i.jsx)(j, {}), (0, i.jsx)(D, {}), (0, i.jsx)(P, {}), (0, i.jsx)(M, {}), (0, i.jsx)(w, {})]
     });
 }

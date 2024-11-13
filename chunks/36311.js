@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(442837),
     o = n(481060),
     c = n(749210),
@@ -56,7 +56,7 @@ class C extends l.PureComponent {
             ref: this.scroller,
             className: f.scroller,
             children: (0, i.jsx)('div', {
-                className: a()(this.props.className, f.wrapper),
+                className: r()(this.props.className, f.wrapper),
                 children: n
             })
         });

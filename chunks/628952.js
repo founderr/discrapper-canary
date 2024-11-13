@@ -32,7 +32,7 @@ let I = (e) => {
             className: C.avatarDecoration
         });
     },
-    T = (e) => {
+    E = (e) => {
         var n;
         let { profileEffect: t } = e,
             l = (0, m.V)(t.id),
@@ -56,11 +56,11 @@ let I = (e) => {
 n.Z = (e) => {
     let { skuId: n, skuPricePreview: t, isSelected: l, onSelect: d, shouldDisplayHeader: c = !1, className: m } = e,
         { product: j } = (0, p.T)(n),
-        { giftRecipient: E, giftRecipientError: N } = (0, u.wD)(),
+        { giftRecipient: T, giftRecipientError: N } = (0, u.wD)(),
         S = (0, s.e7)([x.default], () => x.default.getCurrentUser());
     if (null == j || null == t) return null;
     let [Z] = j.items,
-        y = null != E && E.id !== (null == S ? void 0 : S.id);
+        y = null != T && T.id !== (null == S ? void 0 : S.id);
     return (0, i.jsxs)('div', {
         className: m,
         children: [
@@ -76,12 +76,12 @@ n.Z = (e) => {
                             (0, i.jsx)(
                                 o.Popout,
                                 {
-                                    preload: () => (0, f.Z)(E.id, E.getAvatarURL(null, 80)),
+                                    preload: () => (0, f.Z)(T.id, T.getAvatarURL(null, 80)),
                                     renderPopout: (e) =>
                                         (0, i.jsx)(h.Z, {
                                             ...e,
-                                            user: E,
-                                            pendingAvatar: E.getAvatarURL(null, (0, o.getAvatarSize)(o.AvatarSizes.SIZE_80)),
+                                            user: T,
+                                            pendingAvatar: T.getAvatarURL(null, (0, o.getAvatarSize)(o.AvatarSizes.SIZE_80)),
                                             pendingAvatarDecoration: Z.type === a.Z.AVATAR_DECORATION ? Z : null,
                                             pendingProfileEffectId: Z.type === a.Z.PROFILE_EFFECT ? Z.id : null,
                                             canUsePremiumCustomization: !0,
@@ -100,7 +100,7 @@ n.Z = (e) => {
                                             })
                                         })
                                 },
-                                E.id
+                                T.id
                             )
                     ]
                 }),
@@ -118,7 +118,7 @@ n.Z = (e) => {
                         className: C.giftInfoContainer,
                         children: [
                             Z.type === a.Z.AVATAR_DECORATION && (0, i.jsx)(I, { avatarDecoration: Z }),
-                            Z.type === a.Z.PROFILE_EFFECT && (0, i.jsx)(T, { profileEffect: Z }),
+                            Z.type === a.Z.PROFILE_EFFECT && (0, i.jsx)(E, { profileEffect: Z }),
                             (0, i.jsxs)('div', {
                                 className: C.previewTextContainer,
                                 children: [

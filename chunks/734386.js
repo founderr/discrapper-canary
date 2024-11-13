@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return R;
+        return L;
     }
 }),
     n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(392711),
     o = n.n(s),
     c = n(149765),
@@ -25,8 +25,8 @@ var i = n(200651),
     I = n(454585),
     E = n(430824),
     b = n(496675),
-    N = n(594174),
-    Z = n(700785),
+    Z = n(594174),
+    N = n(700785),
     S = n(51144),
     T = n(396769),
     j = n(967128),
@@ -34,60 +34,60 @@ var i = n(200651),
     y = n(981631),
     P = n(388032),
     M = n(293081);
-function R(e) {
+function L(e) {
     let { channel: t } = e,
-        [n, r] = l.useState(!1),
+        [n, a] = l.useState(!1),
         s = (0, f.ZP)(t, !0),
-        R = t.guild_id,
-        L = (0, u.e7)([E.Z], () => (null != R ? E.Z.getRoles(R) : void 0)),
-        k = (0, u.e7)([N.default, E.Z], () => {
+        L = t.guild_id,
+        R = (0, u.e7)([E.Z], () => (null != L ? E.Z.getRoles(L) : void 0)),
+        k = (0, u.e7)([Z.default, E.Z], () => {
             var e;
-            return N.default.getUser(null === (e = E.Z.getGuild(R)) || void 0 === e ? void 0 : e.ownerId);
+            return Z.default.getUser(null === (e = E.Z.getGuild(L)) || void 0 === e ? void 0 : e.ownerId);
         }),
         O = l.useMemo(
             () =>
-                null != R
-                    ? o()(L)
+                null != L
+                    ? o()(R)
                           .sortBy((e) => -e.position)
-                          .filter((e) => !(0, g.pM)(R, e.id))
+                          .filter((e) => !(0, g.pM)(L, e.id))
                           .value()
                     : [],
-            [R, L]
+            [L, R]
         ),
         D = l.useMemo(
             () =>
                 o()(O)
                     .filter((e) => {
-                        if (null == R) return !1;
-                        let n = Z.I0({
+                        if (null == L) return !1;
+                        let n = N.I0({
                             forceRoles: { [e.id]: e },
                             context: t
                         });
                         return c.e$(n, y.Plq.ADMINISTRATOR) || c.e$(n, y.Plq.VIEW_CHANNEL);
                     })
                     .value(),
-            [t, R, O]
+            [t, L, O]
         ),
         w = (0, u.Wu)(
-            [N.default],
+            [Z.default],
             () => {
                 let e = {};
                 for (let n of (null != k && (e[k.id] = k), Object.values(t.permissionOverwrites))) {
                     if (n.type !== m.BN.MEMBER || null != e[n.id]) continue;
-                    let t = N.default.getUser(n.id);
+                    let t = Z.default.getUser(n.id);
                     null != t && (e[t.id] = t);
                 }
                 return o()(e)
                     .filter((e) => {
                         var n;
-                        let i = Z.BT({
+                        let i = N.BT({
                                 permission: y.Plq.ADMINISTRATOR,
                                 user: e,
                                 context: t
                             }),
-                            l = null !== (n = t.permissionOverwrites[e.id]) && void 0 !== n ? n : Z.Hn,
-                            r = c.e$(l.allow, y.Plq.VIEW_CHANNEL);
-                        return i || r;
+                            l = null !== (n = t.permissionOverwrites[e.id]) && void 0 !== n ? n : N.Hn,
+                            a = c.e$(l.allow, y.Plq.VIEW_CHANNEL);
+                        return i || a;
                     })
                     .value();
             },
@@ -97,7 +97,7 @@ function R(e) {
     function U() {
         p.ZP.open(t.id);
     }
-    let H = l.useCallback(() => r(!1), []);
+    let H = l.useCallback(() => a(!1), []);
     return (0, i.jsxs)(j.ZP, {
         channelId: t.id,
         children: [
@@ -118,7 +118,7 @@ function R(e) {
                       children: [
                           (0, i.jsx)(T.Z, {
                               label: P.intl.string(P.t.dMJ3Y2),
-                              onClick: () => r(!0),
+                              onClick: () => a(!0),
                               icon: (0, i.jsx)(h.GroupIcon, {
                                   size: 'xs',
                                   color: 'currentColor'
@@ -173,14 +173,14 @@ function R(e) {
                         });
                     })(),
                     D.map((e, n) => {
-                        var l, r;
-                        let s = null !== (r = e.colorString) && void 0 !== r ? r : (0, d.Rf)(y.p6O),
+                        var l, a;
+                        let s = null !== (a = e.colorString) && void 0 !== a ? a : (0, d.Rf)(y.p6O),
                             o = (null === (l = e.tags) || void 0 === l ? void 0 : l.guild_connections) !== void 0;
                         return B
                             ? (0, i.jsx)(
                                   x.Z,
                                   {
-                                      className: a()(M.role, { [M.last]: n === D.length - 1 }),
+                                      className: r()(M.role, { [M.last]: n === D.length - 1 }),
                                       roleName: e.name,
                                       roleColor: s,
                                       disabled: !B,
@@ -194,7 +194,7 @@ function R(e) {
                             : (0, i.jsx)(
                                   v.Z,
                                   {
-                                      className: a()(M.role, { [M.last]: n === D.length - 1 }),
+                                      className: r()(M.role, { [M.last]: n === D.length - 1 }),
                                       roleName: e.name,
                                       roleColor: s,
                                       verified: o
@@ -212,7 +212,7 @@ function R(e) {
                               onClose: () => (H(), e.onClose()),
                               channelId: t.id
                           }),
-                      onCloseRequest: () => r(!1)
+                      onCloseRequest: () => a(!1)
                   })
                 : null
         ]

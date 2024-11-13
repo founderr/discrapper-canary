@@ -1,8 +1,8 @@
 var i = n(200651);
 n(192379);
 var l = n(120356),
-    r = n.n(l),
-    a = n(442837),
+    a = n.n(l),
+    r = n(442837),
     s = n(692547),
     o = n(481060),
     c = n(358221),
@@ -17,7 +17,7 @@ t.Z = (e) => {
     let { className: t, channelId: n } = e,
         l = (0, h.Go)(),
         C = p.Z.isDecoupledGameClippingEnabled();
-    return (0, a.e7)([u.Z, c.Z, p.Z, d.ZP], () => {
+    return (0, r.e7)([u.Z, c.Z, p.Z, d.ZP], () => {
         var e;
         if (null == n) return !1;
         let t = u.Z.getCurrentUserActiveStream(),
@@ -27,7 +27,7 @@ t.Z = (e) => {
         ? (0, i.jsxs)(o.TooltipContainer, {
               text: f.intl.string(f.t.DJXW3N),
               color: o.TooltipColors.GREY,
-              className: r()(t, g.clipsEnabledIndicator),
+              className: a()(t, g.clipsEnabledIndicator),
               children: [
                   (0, i.jsx)(o.IconBadge, {
                       icon: o.ClipsIcon,

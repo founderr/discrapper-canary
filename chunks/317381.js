@@ -58,10 +58,10 @@ let S = {
     P = new Map();
 let k = v.Ez.DISCONNECTED,
     U = v.MI.RESIZABLE;
-function B(e) {
+function G(e) {
     return null != e ? e : '0';
 }
-function G(e) {
+function B(e) {
     var t, n, i, a;
     let { guildId: s, channelId: o, location: l, applicationId: p, launchId: g, compositeInstanceId: b, participants: S } = e,
         y = (0, h.Z)(p);
@@ -74,7 +74,7 @@ function G(e) {
         w = L.some((e) => e === x),
         M = null === (t = S.find((e) => e.userId === x)) || void 0 === t ? void 0 : t.sessionId,
         U = S.some((e) => (0, m.J)(e)),
-        G = A.get(p),
+        B = A.get(p),
         Z = {
             applicationId: p,
             channelId: o,
@@ -87,15 +87,15 @@ function G(e) {
             participants: S
         };
     w &&
-        null != G &&
-        A.set(G.applicationId, {
-            ...G,
+        null != B &&
+        A.set(B.applicationId, {
+            ...B,
             ...Z
         });
-    null != G && o === G.channelId && p === (null == G ? void 0 : G.applicationId) && ((!w && Array.from(G.userIds).some((e) => e === x)) || !U)
+    null != B && o === B.channelId && p === (null == B ? void 0 : B.applicationId) && ((!w && Array.from(B.userIds).some((e) => e === x)) || !U)
         ? (A.delete(p), _.S.dispatch(I.CkL.RELEASE_ACTIVITY_WEB_VIEW))
         : w &&
-          (null == G || G.applicationId !== p || G.channelId !== o) &&
+          (null == B || B.applicationId !== p || B.channelId !== o) &&
           M === u.default.getSessionId() &&
           (function (e) {
               var t, n;
@@ -142,7 +142,7 @@ function G(e) {
               isStart: null == D
           });
     let F = (null !== (i = C.get(o)) && void 0 !== i ? i : []).filter((e) => e.applicationId !== p),
-        V = B(s),
+        V = G(s),
         H = (null !== (a = N.get(V)) && void 0 !== a ? a : []).filter((e) => !(e.applicationId === p && e.channelId === o));
     L.length > 0 && (F.push(Z), H.push(Z)), C.set(o, F), N.set(V, H);
 }
@@ -151,7 +151,7 @@ function Z(e) {
     null == t ||
         t.forEach((t) => {
             let { location: n, application_id: r, launch_id: i, composite_instance_id: a, participants: s } = t;
-            G({
+            B({
                 guildId: e.id,
                 channelId: n.channel_id,
                 location: n,
@@ -222,16 +222,16 @@ class H extends (i = a.ZP.PersistedStore) {
     }
     getShelfActivities(e) {
         var t;
-        let n = B(e);
+        let n = G(e);
         return null !== (t = O.get(n)) && void 0 !== t ? t : y;
     }
     getShelfFetchStatus(e) {
-        let t = B(e);
+        let t = G(e);
         return D.get(t);
     }
     shouldFetchShelf(e) {
         var t, n;
-        let r = B(e),
+        let r = G(e),
             i = null !== (t = D.get(r)) && void 0 !== t ? t : { isFetching: !1 },
             a = Date.now() - (null !== (n = null == i ? void 0 : i.lastFetchTimestampMs) && void 0 !== n ? n : 0) > 21600000;
         return !(null == i ? void 0 : i.isFetching) && a;
@@ -331,7 +331,7 @@ let Y = new H(s.Z, {
         let n = t.guild_id;
         if (null != n) {
             var r;
-            let e = B(n),
+            let e = G(n),
                 i = (null !== (r = N.get(e)) && void 0 !== r ? r : []).filter((e) => e.channelId !== t.id);
             N.set(e, i);
         }
@@ -367,7 +367,7 @@ let Y = new H(s.Z, {
     EMBEDDED_ACTIVITY_UPDATE_V2: function (e) {
         let { applicationId: t, launchId: n, compositeInstanceId: r, location: i, participants: a } = e;
         null != c.Z.getChannel(i.channel_id) &&
-            G({
+            B({
                 guildId: i.guild_id,
                 channelId: i.channel_id,
                 location: i,
@@ -400,7 +400,7 @@ let Y = new H(s.Z, {
     },
     EMBEDDED_ACTIVITY_FETCH_SHELF: function (e) {
         let { guildId: t } = e,
-            n = B(t),
+            n = G(t),
             r = D.get(n);
         D.set(n, {
             isFetching: !0,
@@ -409,7 +409,7 @@ let Y = new H(s.Z, {
     },
     EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS: function (e) {
         let { guildId: t, activities: n } = e,
-            r = B(t);
+            r = G(t);
         O.set(r, n);
         let i = Date.now();
         !(function (e) {
@@ -440,7 +440,7 @@ let Y = new H(s.Z, {
     },
     EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL: function (e) {
         let { guildId: t } = e,
-            n = B(t),
+            n = G(t),
             r = D.get(n);
         D.set(n, {
             isFetching: !1,

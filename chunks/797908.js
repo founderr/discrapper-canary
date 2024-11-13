@@ -28,8 +28,8 @@ t.Z = function (e) {
                 }),
             [E]
         ),
-        b = (null !== (f = null === (n = E.directory_entry) || void 0 === n ? void 0 : n.guild_count) && void 0 !== f ? f : 0) > 0 || v.length > 0,
-        A = (0, i.jsx)(s.Z, {
+        A = (null !== (f = null === (n = E.directory_entry) || void 0 === n ? void 0 : n.guild_count) && void 0 !== f ? f : 0) > 0 || v.length > 0,
+        b = (0, i.jsx)(s.Z, {
             application: E,
             textVariant: 'text-xs/medium',
             mutualGuilds: v,
@@ -121,10 +121,10 @@ t.Z = function (e) {
                             lineClamp: Z || N ? 2 : 3,
                             children: null !== (_ = null === (g = E.directory_entry) || void 0 === g ? void 0 : g.short_description) && void 0 !== _ ? _ : E.description
                         }),
-                        b
+                        A
                             ? (0, i.jsx)('div', {
                                   className: m.memberDetails,
-                                  children: A
+                                  children: b
                               })
                             : null
                     ]

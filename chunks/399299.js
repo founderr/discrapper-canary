@@ -36,8 +36,8 @@ var l = n(200651),
     k = n(586290),
     P = n(233037),
     A = n(810013),
-    B = n(537135),
-    L = n(641115),
+    L = n(537135),
+    B = n(641115),
     G = n(143135),
     D = n(70722),
     O = n(981631),
@@ -65,7 +65,7 @@ function V(e) {
         title: F.intl.string(F.t.TC7Ev7),
         className: W.modalContent,
         titleClassName: W.formItemTitleVerySlim,
-        children: (0, l.jsxs)(B.Z, {
+        children: (0, l.jsxs)(L.Z, {
             children: [
                 null != p
                     ? (0, l.jsx)(m.Z, {
@@ -100,7 +100,7 @@ function z(e) {
               title: F.intl.string(F.t.WC3u3t),
               className: W.modalContent,
               titleClassName: W.formItemTitle,
-              children: (0, l.jsxs)(B.Z, {
+              children: (0, l.jsxs)(L.Z, {
                   children: [
                       (0, l.jsx)(x.Z, {
                           guild: i,
@@ -211,7 +211,7 @@ function J(e) {
     });
 }
 function q(e) {
-    let { selectedSource: t, selectedFPS: n, selectedChannelId: r, selectedPreset: s, selectedResolution: o, sourceChanged: d, selectedGuildId: f, targetGuildPremiumTier: h, selectSource: m, selectGuild: x, sound: p, previewDisabled: C, onClose: S, onChangeSelectedFPS: T, onChangeSelectedResolution: N, onChangeSelectedPreset: b, onChangeSelectedChannelId: y, onChangeSource: R, onChangeAudioDevice: B, onChangeGuild: G, onChangeSound: D, onChangePreviewDisabled: W } = e,
+    let { selectedSource: t, selectedFPS: n, selectedChannelId: r, selectedPreset: s, selectedResolution: o, sourceChanged: d, selectedGuildId: f, targetGuildPremiumTier: h, selectSource: m, selectGuild: x, sound: p, previewDisabled: C, onClose: S, onChangeSelectedFPS: T, onChangeSelectedResolution: N, onChangeSelectedPreset: b, onChangeSelectedChannelId: y, onChangeSource: R, onChangeAudioDevice: L, onChangeGuild: G, onChangeSound: D, onChangePreviewDisabled: W } = e,
         q = (0, a.e7)([Z.Z, v.Z], () => v.Z.getChannel(Z.Z.getVoiceChannelId())),
         Q = (0, a.e7)([E.Z], () => E.Z.GPUDriversOutdated),
         $ = (0, a.e7)([E.Z], () => E.Z.problematicGPUDriver),
@@ -229,7 +229,7 @@ function q(e) {
                 ? (0, l.jsx)(k.Z, {
                       selectedSource: t,
                       onChangeVideoDeviceSource: R,
-                      onChangeAudioDevice: B
+                      onChangeAudioDevice: L
                   })
                 : (0, l.jsxs)('div', {
                       children: [
@@ -275,7 +275,7 @@ function q(e) {
                         }
                     })
                 }),
-            (0, l.jsx)(L.Z, {
+            (0, l.jsx)(B.Z, {
                 selectedPreset: s,
                 selectedFPS: n,
                 selectedResolution: o,

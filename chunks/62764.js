@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return L;
+        return R;
     }
 }),
     n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(852229),
     o = n(442837),
     c = n(52826),
@@ -25,8 +25,8 @@ var i = n(200651),
     I = n(920888),
     E = n(287151),
     b = n(569471),
-    N = n(346479),
-    Z = n(592125),
+    Z = n(346479),
+    N = n(592125),
     S = n(934415),
     T = n(456269),
     j = n(109590),
@@ -34,18 +34,18 @@ var i = n(200651),
     y = n(981631),
     P = n(388032),
     M = n(314251),
-    R = n(96042);
-function L(e) {
-    let { postId: t, isFirstMessage: n, isLastItem: r = !1, parentChannelId: L } = e,
+    L = n(96042);
+function R(e) {
+    let { postId: t, isFirstMessage: n, isLastItem: a = !1, parentChannelId: R } = e,
         { ref: k, width: O } = (0, p.Z)(),
         [D, w] = l.useState(3),
         [B, U] = l.useState(!n),
         [H, G] = (0, m.Z)(!1, 2000),
-        F = (0, o.e7)([Z.Z], () => Z.Z.getChannel(t), [t]),
+        F = (0, o.e7)([N.Z], () => N.Z.getChannel(t), [t]),
         { firstMessage: V } = (0, j.cl)(F),
         z = (0, o.e7)([b.Z], () => b.Z.hasJoined(t)),
         { disableReactionUpdates: W, disableReactionCreates: K, isLurking: Y, isGuest: q, isPendingMember: X } = (0, x.Z)(F),
-        J = (0, o.e7)([Z.Z], () => Z.Z.getChannel(L)),
+        J = (0, o.e7)([N.Z], () => N.Z.getChannel(R)),
         Q = (0, T.Bs)(J),
         $ = (0, o.e7)([f.Z], () => f.Z.shouldDisplayPrompt(t) && !0 === n, [t, n]),
         ee = l.useCallback(
@@ -80,9 +80,9 @@ function L(e) {
         return null;
     let ei = V.reactions.length > 0,
         el = () => {
-            z ? N.Z.leaveThread(F, 'Forum Toolbar') : N.Z.joinThread(F, 'Forum Toolbar');
+            z ? Z.Z.leaveThread(F, 'Forum Toolbar') : Z.Z.joinThread(F, 'Forum Toolbar');
         },
-        er = () => {
+        ea = () => {
             (0, A.B)({
                 postId: F.id,
                 location: { section: y.jXE.CHANNEL_HEADER }
@@ -90,7 +90,7 @@ function L(e) {
                 (0, s.J)((0, S.EO)(F, J)),
                 G(!0);
         },
-        ea = () => {
+        er = () => {
             u.Z.jumpToMessage({
                 channelId: F.id,
                 messageId: F.id,
@@ -102,17 +102,17 @@ function L(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)('div', {
-                className: a()(M.container, { [M.header]: B }),
+                className: r()(M.container, { [M.header]: B }),
                 ref: k,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: a()(M.reactButtons, { [M.loading]: et }),
+                        className: r()(M.reactButtons, { [M.loading]: et }),
                         children: [
                             !ei &&
                                 !K &&
                                 null != Q &&
                                 (0, i.jsx)('div', {
-                                    className: R.reactions,
+                                    className: L.reactions,
                                     children: (0, i.jsx)(E.le, {
                                         message: V,
                                         readOnly: !1,
@@ -167,7 +167,7 @@ function L(e) {
                                         size: d.Button.Sizes.SMALL,
                                         onClick: el,
                                         className: M.button,
-                                        innerClassName: a()(M.buttonInner, { [M.active]: z }),
+                                        innerClassName: r()(M.buttonInner, { [M.active]: z }),
                                         children: [
                                             (0, i.jsx)(es, {
                                                 size: 'xs',
@@ -184,7 +184,7 @@ function L(e) {
                                         ...e,
                                         look: d.Button.Looks.BLANK,
                                         size: d.Button.Sizes.SMALL,
-                                        onClick: er,
+                                        onClick: ea,
                                         className: M.button,
                                         innerClassName: M.buttonInner,
                                         children: [
@@ -213,7 +213,7 @@ function L(e) {
                                             ...e,
                                             look: d.Button.Looks.BLANK,
                                             size: d.Button.Sizes.SMALL,
-                                            onClick: ea,
+                                            onClick: er,
                                             className: M.button,
                                             innerClassName: M.buttonInner,
                                             children: (0, i.jsx)(c.Z, {
@@ -231,7 +231,7 @@ function L(e) {
             $ && (0, i.jsx)(g.Z, { threadId: t }),
             (0, i.jsx)(_.Z, {
                 channel: F,
-                isLastItem: r
+                isLastItem: a
             })
         ]
     });

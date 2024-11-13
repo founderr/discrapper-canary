@@ -28,12 +28,12 @@ function N(e) {
         N = (0, E.ZP)(t),
         T = (0, h.K)(),
         x = (0, h.V)(),
-        b = (0, l.e7)([d.Z], () => d.Z.isMessageRequest(t.id)),
-        A = (0, l.e7)([u.Z], () => u.Z.isSpam(t.id)),
+        A = (0, l.e7)([d.Z], () => d.Z.isMessageRequest(t.id)),
+        b = (0, l.e7)([u.Z], () => u.Z.isSpam(t.id)),
         Z = (0, p.V)(t.id, t.getRecipientId()),
         y = r.useCallback(() => {
-            f.Z.closeChannelSidebar(_.uZ), b && T && (0, g.Kh)(t.id), A && x && (0, g.Kh)(t.id);
-        }, [t.id, A, x, b, T]),
+            f.Z.closeChannelSidebar(_.uZ), A && T && (0, g.Kh)(t.id), b && x && (0, g.Kh)(t.id);
+        }, [t.id, b, x, A, T]),
         L = r.useCallback(() => {
             (0, a.showToast)((0, a.createToast)(C.intl.string(C.t.pIQ3h4), a.ToastType.FAILURE));
         }, []),
@@ -42,7 +42,7 @@ function N(e) {
             onError: L
         });
     if (null == t || !t.isDM()) return null;
-    let j = [
+    let O = [
         (0, i.jsx)(
             o.ZP.Icon,
             {
@@ -56,7 +56,7 @@ function N(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(o.ZP, {
-                toolbar: j,
+                toolbar: O,
                 'aria-label': C.intl.string(C.t.BIYAqa),
                 children: (0, c.ud)({
                     channel: t,
@@ -64,7 +64,7 @@ function N(e) {
                     inSidebar: !0
                 })
             }),
-            A &&
+            b &&
                 (0, i.jsxs)('div', {
                     className: S.hamBanner,
                     children: [

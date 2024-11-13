@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return A;
     }
 }),
     n(47120),
@@ -71,11 +71,11 @@ let N = [],
             ]
         });
     };
-function b(e) {
-    let { className: t, renderModalProps: n, heroArt: l, heroArtClassName: T, modalDismissibleContent: b, modalTopExtra: A, header: Z, headerClassName: y, subHeader: L, subHeaderExtra: R, featureCards: j, changeLogId: O, button: P, body: D } = e,
+function A(e) {
+    let { className: t, renderModalProps: n, heroArt: l, heroArtClassName: T, modalDismissibleContent: A, modalTopExtra: b, header: Z, headerClassName: y, subHeader: L, subHeaderExtra: R, featureCards: O, changeLogId: j, button: P, body: D } = e,
         { onClose: M, transitionState: w } = n,
         k = (0, h.Dt)(),
-        U = j.length % 2 == 0,
+        U = O.length % 2 == 0,
         G = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
         [B, H] = r.useState(Date.now()),
         [V, F] = r.useState(0),
@@ -140,31 +140,31 @@ function b(e) {
                 if ('video' === l.type || 'embed' === l.type) {
                     let [e, t] = el();
                     f.default.track(I.rMx.CHANGE_LOG_VIDEO_PLAYED, {
-                        change_log_id: O,
+                        change_log_id: j,
                         seconds_played: Math.round(e / 1000)
                     }),
                         f.default.track(I.rMx.CHANGE_LOG_VIDEO_UNMUTE, {
-                            change_log_id: O,
+                            change_log_id: j,
                             seconds_unmuted: Math.round(t / 1000)
                         });
                 }
             },
-            [O, l.type]
+            [j, l.type]
         ),
         r.useEffect(() => {
-            null != b && (0, p.kk)(b);
+            null != A && (0, p.kk)(A);
             let e = Date.now();
             return (
-                f.default.track(I.rMx.CHANGE_LOG_OPENED, { change_log_id: O }),
+                f.default.track(I.rMx.CHANGE_LOG_OPENED, { change_log_id: j }),
                 () => {
                     f.default.track(I.rMx.CHANGE_LOG_CLOSED, {
-                        change_log_id: O,
+                        change_log_id: j,
                         seconds_open: Math.round((Date.now() - e) / 1000)
                     }),
-                        null != b && (0, p.EW)(b, { dismissAction: C.L.DISMISS });
+                        null != A && (0, p.EW)(A, { dismissAction: C.L.DISMISS });
                 }
             );
-        }, [b, O]),
+        }, [A, j]),
         (0, i.jsxs)(o.ModalRoot, {
             className: a()(S.root, t),
             transitionState: w,
@@ -175,7 +175,7 @@ function b(e) {
                     onClick: M
                 }),
                 (0, i.jsx)(E.Z, { className: S.splash }),
-                null == A ? void 0 : A(),
+                null == b ? void 0 : b(),
                 (0, i.jsxs)(o.ModalContent, {
                     className: S.content,
                     children: [
@@ -195,7 +195,7 @@ function b(e) {
                                   src: l.src,
                                   poster: l.poster,
                                   onPlay: (e) => {
-                                      f.default.track(I.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: O }), H(Date.now()), K(!0), X(e.currentTarget.muted);
+                                      f.default.track(I.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: j }), H(Date.now()), K(!0), X(e.currentTarget.muted);
                                   },
                                   onEnded: (e) => {
                                       el(), X(e.currentTarget.muted), K(!1);
@@ -241,7 +241,7 @@ function b(e) {
                                     renderImageComponent: g.Yi,
                                     renderLinkComponent: g.iT,
                                     onPlay: () => {
-                                        f.default.track(I.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: O });
+                                        f.default.track(I.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: j });
                                     }
                                 })
                               : 'image' === l.type
@@ -262,10 +262,10 @@ function b(e) {
                                 className: S.bodyText,
                                 children: D
                             }),
-                        j.length > 0 &&
+                        O.length > 0 &&
                             (0, i.jsx)('div', {
                                 className: a()(S.featureCardGroup, { [S.wideStyle]: U }),
-                                children: j.map((e, t) =>
+                                children: O.map((e, t) =>
                                     (0, i.jsx)(
                                         x,
                                         {

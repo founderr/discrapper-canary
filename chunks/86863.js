@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(442837),
-    r = n(481060),
-    a = n(384275),
+    a = n(481060),
+    r = n(384275),
     s = n(468026),
     o = n(317381),
     c = n(513202),
@@ -18,7 +18,7 @@ let p = (e) => {
         g = (0, l.e7)([o.ZP], () => o.ZP.getSelfEmbeddedActivities());
     if (!p.bot || null == m) return null;
     function C() {
-        a.Z.delete(f.id);
+        r.Z.delete(f.id);
         let e = g.get(m.id);
         null != e &&
             c.Z.leaveActivity({
@@ -26,14 +26,14 @@ let p = (e) => {
                 applicationId: m.id
             });
     }
-    return (0, i.jsx)(r.Button, {
+    return (0, i.jsx)(a.Button, {
         className: t,
-        size: r.ButtonSizes.SMALL,
-        color: r.Button.Colors.PRIMARY,
+        size: a.ButtonSizes.SMALL,
+        color: a.Button.Colors.PRIMARY,
         onClick: () =>
             (function (e, t, n) {
                 let l = h.intl.formatToPlainString(h.t.QWGvxM, { applicationName: e.name });
-                (0, r.openModal)((e) =>
+                (0, a.openModal)((e) =>
                     (0, i.jsx)(s.default, {
                         title: h.intl.string(h.t.DT39Aw),
                         body: l,

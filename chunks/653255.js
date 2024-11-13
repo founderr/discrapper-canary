@@ -2,8 +2,8 @@ var r,
     i,
     o,
     a,
-    s = n(442837),
-    l = n(570140),
+    l = n(442837),
+    s = n(570140),
     c = n(358085),
     d = n(998502),
     u = n(869614),
@@ -12,7 +12,7 @@ var r,
 let v = !1,
     h = !0,
     b = !1;
-class _ extends (a = s.ZP.Store) {
+class m extends (a = l.ZP.Store) {
     initialize() {
         !(!c.isPlatformEmbedded || __OVERLAY__) &&
             d.ZP.getGPUDriverVersions().then((e) => {
@@ -37,7 +37,7 @@ class _ extends (a = s.ZP.Store) {
     }
 }
 (o = 'StreamingCapabilitiesStore'),
-    (i = 'displayName') in (r = _)
+    (i = 'displayName') in (r = m)
         ? Object.defineProperty(r, i, {
               value: o,
               enumerable: !0,
@@ -45,7 +45,7 @@ class _ extends (a = s.ZP.Store) {
               writable: !0
           })
         : (r[i] = o),
-    (t.Z = new _(l.Z, {
+    (t.Z = new m(s.Z, {
         OVERLAY_INITIALIZE: function (e) {
             let { streamingCapabilitiesStoreState: t } = e;
             (v = t.GPUDriversOutdated), (h = t.canUseHardwareAcceleration);

@@ -19,15 +19,15 @@ function f(e) {
     let { handleStepChange: n, handleClose: t } = e,
         { blockedPayments: f, hasFetchedSkus: x, paymentSources: v, hasFetchedPaymentSources: p, application: g, skusById: C, selectedSkuId: j } = (0, d.usePaymentContext)(),
         { isGift: I } = (0, o.wD)(),
-        [T, E] = l.useState(!0),
+        [E, T] = l.useState(!0),
         [N, S] = (0, r.Wu)([s.Z], () => [s.Z.isFetchingCategories, s.Z.error]);
     if (
         (l.useEffect(() => {
             let e = null != g;
-            if (!!x && !!p && !!e) E(N);
+            if (!!x && !!p && !!e) T(N);
         }, [x, p, g, N]),
         l.useEffect(() => {
-            if (T || f || null == j) return;
+            if (E || f || null == j) return;
             let e = C[j];
             if (I && (null == e ? void 0 : e.productLine) === m.POd.COLLECTIBLES) {
                 n(c.h8.GIFT_CUSTOMIZATION);
@@ -38,8 +38,8 @@ function f(e) {
                 return;
             }
             n(c.h8.REVIEW);
-        }, [T, f, n, v, I, C, j]),
-        T)
+        }, [E, f, n, v, I, C, j]),
+        E)
     )
         return (0, i.jsx)(h.Z, {});
     if (f) return (0, i.jsx)(a.Vq, { onClose: t });

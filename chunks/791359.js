@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return j;
     }
 }),
     n(47120);
@@ -27,8 +27,8 @@ var i = n(200651),
     N = n(358924),
     T = n(292140),
     x = n(525296),
-    b = n(981631),
-    A = n(674563),
+    A = n(981631),
+    b = n(674563),
     Z = n(388032),
     y = n(888816);
 let L = 15 * I.Z.Millis.MINUTE,
@@ -52,10 +52,10 @@ let L = 15 * I.Z.Millis.MINUTE,
                 let e = m
                     .filter((e) => {
                         var t, n;
-                        return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === A.wW.GAME;
+                        return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === b.wW.GAME;
                     })
                     .map((e) => e.game.name);
-                E.default.track(b.rMx.NOW_PLAYING_CARD_HOVERED, {
+                E.default.track(A.rMx.NOW_PLAYING_CARD_HOVERED, {
                     num_users: g,
                     num_streams: f,
                     num_activities: _,
@@ -91,8 +91,8 @@ let L = 15 * I.Z.Millis.MINUTE,
               })
             : null;
     }),
-    j = a().throttle(() => p.W(!1), 300000);
-function O() {
+    O = a().throttle(() => p.W(!1), 300000);
+function j() {
     let {
             nowPlayingCards: e,
             loaded: t,
@@ -109,7 +109,7 @@ function O() {
         s = (0, c.e7)([h.Z], () => h.Z.quests);
     r.useEffect(() => (u.Z.wait(() => C.L()), () => u.Z.wait(() => C.v())), [null == a ? void 0 : a.id]),
         r.useEffect(() => {
-            n && !l && j();
+            n && !l && O();
         }, [n, l]);
     let o = r.useMemo(() => {
             let t = new Map(),

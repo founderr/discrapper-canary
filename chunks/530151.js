@@ -22,14 +22,14 @@ var i = n(200651),
     N = n(925329),
     T = n(707409),
     x = n(210887),
-    b = n(283595),
-    A = n(417363),
+    A = n(283595),
+    b = n(417363),
     Z = n(941128),
     y = n(451478),
     L = n(424218),
     R = n(780570),
-    j = n(353042),
-    O = n(86826),
+    O = n(353042),
+    j = n(86826),
     P = n(981631),
     D = n(388032),
     M = n(734744);
@@ -344,8 +344,8 @@ class K extends r.PureComponent {
         });
     }
     renderProgressPatching() {
-        return (0, i.jsx)(j.Z, {
-            getHistoricalTotalBytes: A.Z.getHistoricalTotalBytesWritten,
+        return (0, i.jsx)(O.Z, {
+            getHistoricalTotalBytes: b.Z.getHistoricalTotalBytesWritten,
             updateInterval: 5000,
             children: this.renderProgressPatchingBody
         });
@@ -528,17 +528,17 @@ class ee extends r.PureComponent {
                       (0, i.jsxs)('div', {
                           className: M.headerRow,
                           children: [
-                              (0, i.jsx)(O.Z, {
+                              (0, i.jsx)(j.Z, {
                                   className: a()(M.headerCell, M.networkProgress),
                                   title: D.intl.string(D.t.ytoXKi),
-                                  getHistoricalTotalBytes: A.Z.getHistoricalTotalBytesDownloaded,
+                                  getHistoricalTotalBytes: b.Z.getHistoricalTotalBytesDownloaded,
                                   color: P.Ilk.GREEN_360,
                                   animate: r
                               }),
-                              (0, i.jsx)(O.Z, {
+                              (0, i.jsx)(j.Z, {
                                   className: a()(M.headerCell, M.diskProgress),
                                   title: D.intl.string(D.t.SjohhI),
-                                  getHistoricalTotalBytes: A.Z.getHistoricalTotalBytesWritten,
+                                  getHistoricalTotalBytes: b.Z.getHistoricalTotalBytesWritten,
                                   color: P.Ilk.BLUE_345,
                                   animate: r
                               })
@@ -610,7 +610,7 @@ function et(e, t, n, i) {
                     branchId: s,
                     state: c,
                     application: o,
-                    libraryApplication: b.Z.getLibraryApplication(a, s),
+                    libraryApplication: A.Z.getLibraryApplication(a, s),
                     finished: t,
                     index: l
                 }),
@@ -619,10 +619,10 @@ function et(e, t, n, i) {
     }, []);
 }
 t.Z = (0, E.Z)(
-    c.ZP.connectStores([I.Z, A.Z, Z.Z, x.Z, y.Z], () => {
-        let e = et(Z.Z.activeItems, !1, I.Z, A.Z);
+    c.ZP.connectStores([I.Z, b.Z, Z.Z, x.Z, y.Z], () => {
+        let e = et(Z.Z.activeItems, !1, I.Z, b.Z);
         return {
-            applications: [...e, ...et(Z.Z.finishedItems, !0, I.Z, A.Z)],
+            applications: [...e, ...et(Z.Z.finishedItems, !0, I.Z, b.Z)],
             paused: Z.Z.paused,
             isFocused: y.Z.isFocused(),
             theme: x.Z.theme

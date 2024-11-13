@@ -1,31 +1,31 @@
-t.d(e, {
+t.d(n, {
     Z: function () {
-        return u;
+        return o;
     }
 }),
     t(47120);
-var i = t(192379),
-    l = t(974180),
-    r = t(557177);
-function u() {
-    let [n, e] = i.useState(),
-        t = i.useRef(-1);
+var a = t(192379),
+    c = t(974180),
+    i = t(557177);
+function o() {
+    let [e, n] = a.useState(),
+        t = a.useRef(-1);
     return {
-        playSound: i.useCallback((n) => {
-            e(n),
-                r.GN(
-                    l.Ay,
-                    l.yk,
+        playSound: a.useCallback((e) => {
+            n(e),
+                i.GN(
+                    c.Ay,
+                    c.yk,
                     () => {
                         clearTimeout(t.current),
                             (t.current = setTimeout(() => {
-                                e(void 0);
+                                n(void 0);
                             }, 500));
                     },
-                    n
+                    e
                 );
         }, []),
-        isPlaying: null != n,
-        soundpackPlaying: n
+        isPlaying: null != e,
+        soundpackPlaying: e
     };
 }

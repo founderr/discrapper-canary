@@ -36,7 +36,7 @@ function P(e) {
 }
 t.Z = i.memo(function (e) {
     var t, n;
-    let { clan: k, isLoading: U, onClose: B, profileViewedAnalytics: G, userId: Z } = e,
+    let { clan: k, isLoading: U, onClose: G, profileViewedAnalytics: B, userId: Z } = e,
         F = null == k ? void 0 : k.identityGuildId,
         V = (0, S.Cc)(null != F ? F : null),
         j = null == k ? void 0 : k.tag,
@@ -64,10 +64,10 @@ t.Z = i.memo(function (e) {
             (0, I.u0)({
                 guildId: F,
                 hasJoinRequest: es,
-                ...G,
+                ...B,
                 location: o.Z.CLAN_GUILD_PROFILE
             });
-    }, [F, es, G]);
+    }, [F, es, B]);
     let el = i.useCallback(() => {
             (0, a.closeAllModals)(),
                 (0, I.hM)(F, I.UE.DISCOVERY),
@@ -93,23 +93,23 @@ t.Z = i.memo(function (e) {
         }, [X, q]),
         ed = i.useCallback(
             (e) => {
-                if (null != F) e.stopPropagation(), e.preventDefault(), null == B || B(), (0, I.hM)(F, I.UE.TAG_ADOPTION), (0, T.SJ)(F);
+                if (null != F) e.stopPropagation(), e.preventDefault(), null == G || G(), (0, I.hM)(F, I.UE.TAG_ADOPTION), (0, T.SJ)(F);
             },
-            [F, B]
+            [F, G]
         ),
         ef = i.useCallback(
             (e) => {
                 if (null == V || null == F) return;
-                if ((e.stopPropagation(), e.preventDefault(), null == B || B(), !es))
+                if ((e.stopPropagation(), e.preventDefault(), null == G || G(), !es))
                     (0, I.hM)(F, I.UE.APPLY_FLOW),
                         (0, T.qF)(F, V, {
-                            source: null == G ? void 0 : G.source,
-                            messageId: null == G ? void 0 : G.messageId,
-                            tagUserId: null == G ? void 0 : G.tagUserId,
+                            source: null == B ? void 0 : B.source,
+                            messageId: null == B ? void 0 : B.messageId,
+                            tagUserId: null == B ? void 0 : B.tagUserId,
                             location: o.Z.CLAN_GUILD_PROFILE
                         });
             },
-            [V, F, es, B, G]
+            [V, F, es, G, B]
         ),
         e_ = i.useCallback(() => {
             if (null != F) (0, I.hM)(F, I.UE.APPLICATION), (0, p.uL)(D.Z5c.GUILD_MEMBER_VERIFICATION(F));

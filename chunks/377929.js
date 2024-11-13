@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return Z;
+        return N;
     }
 }),
     n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(392711),
-    a = n.n(r),
+    a = n(392711),
+    r = n.n(a),
     s = n(442837),
     o = n(481060),
     c = n(32750),
@@ -25,21 +25,21 @@ var i = n(200651),
     I = n(695346),
     E = n(979651),
     b = n(488131),
-    N = n(388032);
-function Z(e) {
+    Z = n(388032);
+function N(e) {
     let { channel: t } = e,
-        [n, r] = l.useState(!1);
-    function a() {
-        r((e) => !e);
+        [n, a] = l.useState(!1);
+    function r() {
+        a((e) => !e);
     }
-    let s = N.intl.string(N.t.UKOtz8);
+    let s = Z.intl.string(Z.t.UKOtz8);
     return (0, i.jsx)(o.Popout, {
         shouldShow: n,
         animation: o.Popout.Animation.NONE,
         position: 'bottom',
         align: 'right',
         autoInvert: !1,
-        onRequestClose: () => r(!1),
+        onRequestClose: () => a(!1),
         renderPopout: function (e) {
             return (0, i.jsx)(S, {
                 ...e,
@@ -50,7 +50,7 @@ function Z(e) {
             let { isShown: n } = t;
             return (0, i.jsx)(_.ZP.Icon, {
                 ...e,
-                onClick: a,
+                onClick: r,
                 tooltip: n ? null : s,
                 icon: o.MoreHorizontalIcon,
                 'aria-label': s,
@@ -61,26 +61,26 @@ function Z(e) {
 }
 function S(e) {
     let { channel: t, closePopout: n, onSelect: l } = e,
-        r = (0, c.Z)(t),
+        a = (0, c.Z)(t),
         _ = (0, m.Z)(t),
-        Z = (0, C.Z)(t.id),
+        N = (0, C.Z)(t.id),
         S = (0, g.Z)(t),
         T = (0, v.Z)({
             id: t.id,
-            label: N.intl.string(N.t.DQ797u)
+            label: Z.intl.string(Z.t.DQ797u)
         }),
         j = (0, d.Z)(t),
         A = (0, u.Z)(t),
         y = (0, h.Z)(t, 'Toolbar Overflow'),
         P = (0, f.Z)(t),
         M = (0, p.Z)(t),
-        R = (0, x.Z)(t),
-        L = I.vF.useSetting(),
-        k = (0, s.e7)([E.Z], () => !a().isEmpty(E.Z.getVoiceStatesForChannel(t.id)));
+        L = (0, x.Z)(t),
+        R = I.vF.useSetting(),
+        k = (0, s.e7)([E.Z], () => !r().isEmpty(E.Z.getVoiceStatesForChannel(t.id)));
     return (0, i.jsxs)(o.Menu, {
         navId: 'thread-context',
         onClose: n,
-        'aria-label': N.intl.string(N.t['1NBjqa']),
+        'aria-label': Z.intl.string(Z.t['1NBjqa']),
         onSelect: l,
         children: [
             (0, i.jsxs)(o.MenuGroup, {
@@ -90,11 +90,11 @@ function S(e) {
                 children: [
                     S,
                     P,
-                    Z,
-                    L && !k
+                    N,
+                    R && !k
                         ? (0, i.jsx)(o.MenuItem, {
                               id: 'open',
-                              label: N.intl.string(N.t.bX7EaG),
+                              label: Z.intl.string(Z.t.bX7EaG),
                               action: function () {
                                   (0, b.ok)(t);
                               }
@@ -103,7 +103,7 @@ function S(e) {
                 ]
             }),
             (0, i.jsxs)(o.MenuGroup, {
-                children: [R, r, _, A]
+                children: [L, a, _, A]
             }),
             (0, i.jsxs)(o.MenuGroup, {
                 children: [j, T]

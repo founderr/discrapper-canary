@@ -39,14 +39,14 @@ function T(e) {
             isGracePeriodVisible: E.Z.isVisible(n)
         })),
         x = (0, a.e7)([p.Z], () => p.Z.isVisible(e)),
-        b = (0, a.e7)([C.Z], () => C.Z.isVisible(e)),
-        A = (0, a.e7)([_.Z], () => _.Z.can(N.Plq.ADMINISTRATOR, e)),
+        A = (0, a.e7)([C.Z], () => C.Z.isVisible(e)),
+        b = (0, a.e7)([_.Z], () => _.Z.can(N.Plq.ADMINISTRATOR, e)),
         Z = null != r && Date.now() - r <= N.Dge,
         y = null != e ? e.premiumSubscriberCount : 0,
         L = (0, S.rF)(y, n) !== N.Eu4.NONE,
         R = null != i && Date.now() - i <= 43200000,
-        j = !R && !Z && A && L,
-        O = (0, c.m)(n),
+        O = !R && !Z && b && L,
+        j = (0, c.m)(n),
         P = (0, a.e7)([I.Z], () => I.Z.isVisible(e)),
         D = h.Z.useShouldShowChannelNotice(n),
         M = (0, m.h6)(e),
@@ -62,7 +62,7 @@ function T(e) {
         l.useEffect(() => {
             let e = -1;
             return (
-                j &&
+                O &&
                     (e = window.setTimeout(
                         () => {
                             null != n && (0, s.C0)(n);
@@ -73,13 +73,13 @@ function T(e) {
                     window.clearTimeout(e);
                 }
             );
-        }, [n, j]),
+        }, [n, O]),
         x)
     )
         return 0;
     if (T) return 1;
-    if (b) return 2;
-    else if (O || null != G) return 3;
+    if (A) return 2;
+    else if (j || null != G) return 3;
     else if (P) return 4;
     else if (D) return 5;
     else if (k) return 6;

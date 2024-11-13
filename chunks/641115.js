@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return B;
+        return L;
     }
 }),
     n(47120);
@@ -111,8 +111,8 @@ function A(e) {
         }
     );
 }
-function B(e) {
-    let { onClose: t, selectedPreset: n, selectedResolution: r, selectedFPS: s, onResolutionChange: a, onFPSChange: g, onPresetChange: P, targetGuildPremiumTier: B, captureDeviceSelected: L } = e,
+function L(e) {
+    let { onClose: t, selectedPreset: n, selectedResolution: r, selectedFPS: s, onResolutionChange: a, onFPSChange: g, onPresetChange: P, targetGuildPremiumTier: L, captureDeviceSelected: B } = e,
         G = (0, d.e7)([_.default], () => {
             let e = _.default.getCurrentUser();
             return o()(null != e, 'StreamSettings: user cannot be undefined'), e;
@@ -133,7 +133,7 @@ function B(e) {
         V = (0, p.So)(c.q.STREAM_HIGH_QUALITY),
         z = (!O && !F) || V,
         [K, Y] = i.useState(!1),
-        X = L ? N.z8 : N.WC,
+        X = B ? N.z8 : N.WC,
         J = {
             ...U,
             section: b.jXE.STREAM_SETTINGS
@@ -143,7 +143,7 @@ function B(e) {
                 A({
                     type: e,
                     selected: e.value === r,
-                    needsPremium: !(0, I.Z)(n, e.value, s, G, B, D),
+                    needsPremium: !(0, I.Z)(n, e.value, s, G, L, D),
                     needsDemo: (V || W) && e.value !== N.LY.RESOLUTION_720,
                     analyticsLocation: J,
                     onClick: () => a(e.value),
@@ -157,7 +157,7 @@ function B(e) {
                 A({
                     type: e,
                     selected: e.value === s,
-                    needsPremium: !(0, I.Z)(n, r, e.value, G, B, D),
+                    needsPremium: !(0, I.Z)(n, r, e.value, G, L, D),
                     needsDemo: (V || W) && e.value === N.ws.FPS_60,
                     analyticsLocation: J,
                     onClick: () => g(e.value),
@@ -171,7 +171,7 @@ function B(e) {
                 value: N.tI.PRESET_VIDEO,
                 label: y.intl.string(y.t.HcwHc3)
             },
-            ...(L
+            ...(B
                 ? []
                 : [
                       {

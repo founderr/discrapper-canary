@@ -1,8 +1,8 @@
 n(653041);
 var i,
     l,
-    r,
     a,
+    r,
     s = n(442837),
     o = n(570140),
     c = n(975984);
@@ -29,15 +29,15 @@ class p extends (i = s.ZP.Store) {
         return null == l || Date.now() - l > 120000;
     }
 }
-(a = 'GuildDirectorySearchStore'),
-    (r = 'displayName') in (l = p)
-        ? Object.defineProperty(l, r, {
-              value: a,
+(r = 'GuildDirectorySearchStore'),
+    (a = 'displayName') in (l = p)
+        ? Object.defineProperty(l, a, {
+              value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[r] = a),
+        : (l[a] = r),
     (t.Z = new p(o.Z, {
         GUILD_DIRECTORY_SEARCH_START: function (e) {
             let { channelId: t, query: n } = e;
@@ -91,14 +91,14 @@ class p extends (i = s.ZP.Store) {
             let { channelId: n, guildId: i } = e,
                 l = null === (t = u[n]) || void 0 === t ? void 0 : t.mostRecentQuery;
             if (null == l) return;
-            let r = h[n][l];
-            if (null == r) return;
-            let a = r.results.filter((e) => e.guildId !== i);
+            let a = h[n][l];
+            if (null == a) return;
+            let r = a.results.filter((e) => e.guildId !== i);
             h[n] = {
                 ...h[n],
                 [u[n].mostRecentQuery]: {
-                    ...r,
-                    results: a
+                    ...a,
+                    results: r
                 }
             };
         }

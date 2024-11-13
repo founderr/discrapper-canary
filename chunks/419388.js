@@ -1,14 +1,14 @@
 n.d(t, {
     ZP: function () {
-        return N;
+        return Z;
     }
 }),
     n(47120),
     n(653041);
 var i = n(192379),
     l = n(392711),
-    r = n.n(l),
-    a = n(374470),
+    a = n.n(l),
+    r = n(374470),
     s = n(925549),
     o = n(904245),
     c = n(45114),
@@ -44,15 +44,15 @@ function I(e) {
         let n = e.getByIndex(e.indexOf(i) + l);
         return null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : i;
     }
-    let r = [
+    let a = [
             i,
             ...e.map((e) => {
                 let { id: t } = e;
                 return t;
             })
         ].sort(f.default.compare),
-        a = r.indexOf(i),
-        s = null !== (n = r[a + (Math.abs(l) > 0 ? l : 1)]) && void 0 !== n ? n : r[a - 1];
+        r = a.indexOf(i),
+        s = null !== (n = a[r + (Math.abs(l) > 0 ? l : 1)]) && void 0 !== n ? n : a[r - 1];
     return null != s ? s : null;
 }
 let E = {
@@ -108,7 +108,7 @@ class b {
             n = this.props.focusId;
         this.props = { ...e };
         let { offsetHeight: i, scrollHeight: l } = this.getScrollerState(),
-            r = this.isHeightChange(i, l);
+            a = this.isHeightChange(i, l);
         if (((this.offsetHeightCache = i), (this.scrollHeightCache = l), (this.loading = e.messages.loadingMore), this.isInitialized() || this.isReady())) {
             if (!this.isInitialized()) {
                 this.restoreScroll();
@@ -137,9 +137,9 @@ class b {
             (this.jumping = !0), this.scrollTo(0), this.setScrollToBottom(!0);
             return;
         }
-        let a = e.messages.last(),
+        let r = e.messages.last(),
             s = t.last();
-        if (null != a && a.state === v.yb.SENDING && (null == s ? void 0 : s.id) !== a.id) {
+        if (null != r && r.state === v.yb.SENDING && (null == s ? void 0 : s.id) !== r.id) {
             this.setScrollToBottom();
             return;
         }
@@ -158,15 +158,15 @@ class b {
                 return;
             }
         }
-        r && this.fixScrollPosition(i, l);
+        a && this.fixScrollPosition(i, l);
     }
     getAnchorData(e, t, n) {
         var i;
         let l = this.getElementFromMessageId(e),
-            r = null === (i = this.ref.current) || void 0 === i ? void 0 : i.getScrollerNode();
-        if (!(0, a.k)(l) || null == r) return null;
+            a = null === (i = this.ref.current) || void 0 === i ? void 0 : i.getScrollerNode();
+        if (!(0, r.k)(l) || null == a) return null;
         let { offsetHeight: s } = l,
-            o = (0, C.Z)(l, r),
+            o = (0, C.Z)(l, a),
             c = o - t;
         return (
             null != n && (c = Math.max(-s, Math.min(n, c))),
@@ -189,8 +189,8 @@ class b {
         let { messages: e, hasUnreads: t, channel: n } = this.props,
             i = this.getScrollerState(),
             { scrollTop: l } = i,
-            r = t && l >= this.newMessageBarBuffer() ? this.newMessageBarBuffer() : 0,
-            a = null,
+            a = t && l >= this.newMessageBarBuffer() ? this.newMessageBarBuffer() : 0,
+            r = null,
             s = (t) => {
                 var i;
                 return -1 === t ? f.default.castChannelIdAsMessageId(n.id) : null === (i = e._array[t]) || void 0 === i ? void 0 : i.id;
@@ -201,23 +201,23 @@ class b {
             let t = s(o);
             if (null == t) break;
             let n = this.getAnchorData(t, l);
-            if (((this._bottomAnchor = n), c && null != n && n.offsetTop > l + r + i.offsetHeight)) break;
+            if (((this._bottomAnchor = n), c && null != n && n.offsetTop > l + a + i.offsetHeight)) break;
             if (c) {
                 o++;
                 continue;
             }
-            null != n && (n.offsetTop >= l + r || o === e.length - 1) && ((a = n), (c = !0)), o++;
+            null != n && (n.offsetTop >= l + a || o === e.length - 1) && ((r = n), (c = !0)), o++;
         }
-        return a;
+        return r;
     }
     findFetchAnchor(e) {
         let { messages: t } = this.props,
             { scrollTop: n } = this.getScrollerState(),
             i = e ? -1 : 1,
             l = null,
-            r = t._array.length - 1;
-        for (let a = e ? r : 0; null != t._array[a]; a += i) {
-            let e = t._array[a],
+            a = t._array.length - 1;
+        for (let r = e ? a : 0; null != t._array[r]; r += i) {
+            let e = t._array[r],
                 i = this.getAnchorData(e.id, n);
             if (null != i) {
                 l = i;
@@ -230,7 +230,7 @@ class b {
         for (let e of [this.focusAnchor, this.isLoading() ? null : this.messageFetchAnchor, this.automaticAnchor]) {
             if (null == e) continue;
             let t = this.getElementFromMessageId(e.id);
-            if (!(0, a.k)(t)) continue;
+            if (!(0, r.k)(t)) continue;
             let n = e === this.messageFetchAnchor ? e.offsetHeight - t.offsetHeight : 0;
             return {
                 node: t,
@@ -308,8 +308,8 @@ class b {
     }
     isInPlaceholderRegion(e) {
         let { scrollTop: t, offsetHeight: n, scrollHeight: i } = e,
-            { messages: l, placeholderHeight: r } = this.props;
-        return l.hasMoreBefore && t < r && i > n ? 1 : l.hasMoreAfter && t >= i - n - r ? 2 : 0;
+            { messages: l, placeholderHeight: a } = this.props;
+        return l.hasMoreBefore && t < a && i > n ? 1 : l.hasMoreAfter && t >= i - n - a ? 2 : 0;
     }
     isInScrollTriggerLoadingRegion(e) {
         let { scrollTop: t, offsetHeight: n, scrollHeight: i } = e,
@@ -321,12 +321,12 @@ class b {
         let { scrollTop: t, offsetHeight: n, scrollHeight: i } = e,
             {
                 prevScrollTop: l,
-                props: { placeholderHeight: r }
+                props: { placeholderHeight: a }
             } = this;
         if (((this.prevScrollTop = t), null == l)) return;
-        let a = this.isInPlaceholderRegion(e),
+        let r = this.isInPlaceholderRegion(e),
             s = t - l;
-        0 !== a && (1 === a && t + s <= 0 ? (this.mergeTo(r - n), (this.prevScrollTop = r - n)) : 2 === a && t + s >= i - n && (this.mergeTo(i - r), (this.prevScrollTop = i - r)));
+        0 !== r && (1 === r && t + s <= 0 ? (this.mergeTo(a - n), (this.prevScrollTop = a - n)) : 2 === r && t + s >= i - n && (this.mergeTo(i - a), (this.prevScrollTop = i - a)));
     }
     enableAutomaticAck() {
         this.isInitialized() &&
@@ -346,7 +346,7 @@ class b {
             let n = I(e);
             if (null == n) return;
             let i = this.getElementFromMessageId(n);
-            (0, a.k)(i) ? this.scrollTo(this.getOffsetOrientationFromNode(i, 'middle', t ? this.newMessageBarBuffer() : x.kQ), !0) : this.scrollToNewMessages(!0, 'middle');
+            (0, r.k)(i) ? this.scrollTo(this.getOffsetOrientationFromNode(i, 'middle', t ? this.newMessageBarBuffer() : x.kQ), !0) : this.scrollToNewMessages(!0, 'middle');
         } else this.scrollTo(Number.MAX_SAFE_INTEGER, !0);
     }
     scrollToNewMessages() {
@@ -355,19 +355,19 @@ class b {
             n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'top',
             i = arguments.length > 2 ? arguments[2] : void 0,
             l = null === (e = this.getDocument()) || void 0 === e ? void 0 : e.getElementById(x.j1),
-            r = () => {
+            a = () => {
                 (this.jumping = !1), this.setAutomaticAnchor(this.findAnchor()), null != i && i(), this.handleScroll();
             };
-        (this.pinned = !1), (this.jumping = t), null != l ? this.scrollTo(this.getOffsetOrientationFromNode(l, n, this.newMessageBarBuffer()), t, r) : this.scrollTo(this.getOffsetToPreventLoading('top'), t, r);
+        (this.pinned = !1), (this.jumping = t), null != l ? this.scrollTo(this.getOffsetOrientationFromNode(l, n, this.newMessageBarBuffer()), t, a) : this.scrollTo(this.getOffsetToPreventLoading('top'), t, a);
     }
     getOffsetOrientationFromNode(e, t) {
         var n;
         let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
             l = null === (n = this.ref.current) || void 0 === n ? void 0 : n.getScrollerNode();
         if (null == l) return 0;
-        let r = this.getScrollerState(),
-            a = (0, C.Z)(e, l);
-        return 'middle' === t ? Math.min(a - 0.5 * r.offsetHeight + 0.5 * e.offsetHeight + -8, a - i) : a - i;
+        let a = this.getScrollerState(),
+            r = (0, C.Z)(e, l);
+        return 'middle' === t ? Math.min(r - 0.5 * a.offsetHeight + 0.5 * e.offsetHeight + -8, r - i) : r - i;
     }
     restoreScroll() {
         if (this.isInitialized()) return;
@@ -416,8 +416,8 @@ class b {
         if (this.isPinned()) s.Z.updateChannelDimensions(t.id, 1, 1, 0, e);
         else {
             let { placeholderHeight: n } = this.props,
-                { scrollTop: i, scrollHeight: l, offsetHeight: r } = this.getScrollerState();
-            s.Z.updateChannelDimensions(t.id, i - n, l - n, r, e);
+                { scrollTop: i, scrollHeight: l, offsetHeight: a } = this.getScrollerState();
+            s.Z.updateChannelDimensions(t.id, i - n, l - n, a, e);
         }
     }
     scrollIntoViewRect() {}
@@ -442,15 +442,15 @@ class b {
         let i = this.getElementFromMessageId(e);
         !this.isJumping() && t && null != n && !u.Z.useReducedMotion && (f.default.extractTimestamp(e) > n ? this.scrollTo(0) : this.scrollTo(Number.MAX_SAFE_INTEGER)), (this.pinned = !1), (this.jumping = !0);
         let l = () => {
-            (this.jumping = !1), (0, a.k)(i) && u.Z.keyboardModeEnabled && i.focus({ preventScroll: !0 }), (this.scrollCounter = 0), this.handleScroll(), this._scrollCompleteCallbacks.forEach((e) => e());
+            (this.jumping = !1), (0, r.k)(i) && u.Z.keyboardModeEnabled && i.focus({ preventScroll: !0 }), (this.scrollCounter = 0), this.handleScroll(), this._scrollCompleteCallbacks.forEach((e) => e());
         };
-        (0, a.k)(i) ? this.scrollTo(this.getOffsetOrientationFromNode(i, 'middle', this.props.hasUnreads ? this.newMessageBarBuffer() : x.kQ), t, l) : this.scrollToNewMessages(t, 'middle', l);
+        (0, r.k)(i) ? this.scrollTo(this.getOffsetOrientationFromNode(i, 'middle', this.props.hasUnreads ? this.newMessageBarBuffer() : x.kQ), t, l) : this.scrollToNewMessages(t, 'middle', l);
     }
     getOffsetToTriggerLoading(e, t) {
         let { scrollHeight: n, offsetHeight: i } = t,
-            { messages: l, hasUnreads: r, placeholderHeight: a } = this.props;
-        if ('top' === e) return l.hasMoreBefore ? (r ? a - x.D4 - 2 : a + 500) : 0;
-        return l.hasMoreAfter ? n - i - a - 500 : n - i;
+            { messages: l, hasUnreads: a, placeholderHeight: r } = this.props;
+        if ('top' === e) return l.hasMoreBefore ? (a ? r - x.D4 - 2 : r + 500) : 0;
+        return l.hasMoreAfter ? n - i - r - 500 : n - i;
     }
     getOffsetToPreventLoading(e) {
         let { messages: t } = this.props,
@@ -465,16 +465,16 @@ class b {
     }
     addAutomaticAnchorCallback(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-        this._automaticAnchorCallbacks.push(e), (this._automaticAnchorCallbacks = r().uniq(this._automaticAnchorCallbacks)), !0 === t && this.setAutomaticAnchor(this.findAnchor());
+        this._automaticAnchorCallbacks.push(e), (this._automaticAnchorCallbacks = a().uniq(this._automaticAnchorCallbacks)), !0 === t && this.setAutomaticAnchor(this.findAnchor());
     }
     removeAutomaticAnchorCallback(e) {
-        this._automaticAnchorCallbacks = r().without(this._automaticAnchorCallbacks, e);
+        this._automaticAnchorCallbacks = a().without(this._automaticAnchorCallbacks, e);
     }
     addScrollCompleteCallback(e) {
-        this._scrollCompleteCallbacks.push(e), (this._scrollCompleteCallbacks = r().uniq(this._scrollCompleteCallbacks));
+        this._scrollCompleteCallbacks.push(e), (this._scrollCompleteCallbacks = a().uniq(this._scrollCompleteCallbacks));
     }
     removeScrollCompleteCallback(e) {
-        this._scrollCompleteCallbacks = r().without(this._scrollCompleteCallbacks, e);
+        this._scrollCompleteCallbacks = a().without(this._scrollCompleteCallbacks, e);
     }
     cleanup() {
         (this.acking = !1), this.updateStoreDimensionsDebounced.cancel(), this._automaticAnchorCallbacks.forEach((e) => this.removeAutomaticAnchorCallback(e)), (0, c.jT)(this.props.channel.id, this.props.windowId);
@@ -505,7 +505,7 @@ class b {
             _(this, '_bottomAnchor', null),
             _(this, '_automaticAnchorCallbacks', []),
             _(this, '_scrollCompleteCallbacks', []),
-            _(this, 'updateVisibleMessagesDebounced', r().debounce(p.JR, 300)),
+            _(this, 'updateVisibleMessagesDebounced', a().debounce(p.JR, 300)),
             _(this, 'handleScroll', (e) => {
                 var t;
                 if (!this.isInitialized()) return;
@@ -562,7 +562,7 @@ class b {
                         truncate: !0
                     });
             }),
-            _(this, 'updateStoreDimensionsDebounced', r().debounce(this.updateStoreDimensions, 200)),
+            _(this, 'updateStoreDimensionsDebounced', a().debounce(this.updateStoreDimensions, 200)),
             (this.props = e),
             (this.loading = e.messages.loadingMore),
             null != e.messages.jumpTargetId)
@@ -574,8 +574,8 @@ class b {
         }
     }
 }
-function N(e) {
-    let { messages: t, channel: n, compact: l, hasUnreads: r, focusId: a, placeholderHeight: s, canLoadMore: o = !0, handleScrollToBottom: c, handleScrollFromBottom: u } = e,
+function Z(e) {
+    let { messages: t, channel: n, compact: l, hasUnreads: a, focusId: r, placeholderHeight: s, canLoadMore: o = !0, handleScrollToBottom: c, handleScrollFromBottom: u } = e,
         { windowId: h } = i.useContext(d.ZP),
         [p] = i.useState(
             () =>
@@ -583,8 +583,8 @@ function N(e) {
                     messages: t,
                     channel: n,
                     compact: l,
-                    hasUnreads: r,
-                    focusId: a,
+                    hasUnreads: a,
+                    focusId: r,
                     placeholderHeight: s,
                     canLoadMore: o,
                     windowId: h,
@@ -593,14 +593,14 @@ function N(e) {
                 })
         );
     return (
-        p.getSnapshotBeforeUpdate(a),
+        p.getSnapshotBeforeUpdate(r),
         i.useLayoutEffect(() =>
             p.mergePropsAndUpdate({
                 messages: t,
                 channel: n,
                 compact: l,
-                hasUnreads: r,
-                focusId: a,
+                hasUnreads: a,
+                focusId: r,
                 placeholderHeight: s,
                 canLoadMore: o,
                 windowId: h,

@@ -20,7 +20,7 @@ class _ extends o.Z {
         if (!a.K.get('turnedOffNewNotifications')) {
             if (l.Z.hasConsented(f.pjP.PERSONALIZATION)) {
                 if (!c.xT.getCurrentConfig({ location: 'NotificationMigrationManager' }, { autoTrackExposure: !1 }).enabled || u.ZP.useNewNotifications) return;
-                this.checkOldUserExperiment(), this.checkNewUserExperiment();
+                0 > Date.now() && this.checkOldUserExperiment(), this.checkNewUserExperiment();
             }
         }
     }

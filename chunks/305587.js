@@ -1,6 +1,6 @@
 e.d(t, {
     Xs: function () {
-        return r;
+        return a;
     }
 });
 let i = (0, e(818083).B)({
@@ -16,7 +16,7 @@ let i = (0, e(818083).B)({
         }
     ]
 });
-function r(n) {
+function a(n) {
     let { enabled: t } = i.getCurrentConfig({ location: n }, { autoTrackExposure: !0 });
     return t;
 }

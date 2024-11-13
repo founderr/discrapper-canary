@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return A;
     }
 }),
     n(47120);
@@ -32,12 +32,12 @@ let x = {
     friction: 60,
     clamp: !0
 };
-function b(e) {
+function A(e) {
     let { guildId: t, onClose: n } = e,
         l = (0, g.Wg)(),
         {
-            progress: b,
-            errors: A,
+            progress: A,
+            errors: b,
             submitting: Z
         } = (0, c.cj)([g.ZP], () => {
             var e, n, i, r;
@@ -47,19 +47,19 @@ function b(e) {
                 submitting: null === (i = g.ZP.getStateForGuild(t)) || void 0 === i ? void 0 : i.submitting
             };
         }),
-        y = r.useMemo(() => (0, f.D)(A), [A]),
+        y = r.useMemo(() => (0, f.D)(b), [b]),
         [L, R] = r.useState(window.innerWidth),
-        j = Number(b.currentStep) >= S.IS.THANK_YOU_END,
-        [O, P] = r.useState(j ? 0 : 1),
+        O = Number(A.currentStep) >= S.IS.THANK_YOU_END,
+        [j, P] = r.useState(O ? 0 : 1),
         D = (0, _.f)(),
         M = (0, d.useSpring)(
             {
-                opacity: O,
+                opacity: j,
                 config: x
             },
             'respect-motion-settings'
         ),
-        w = (0, d.useTransition)(j, {
+        w = (0, d.useTransition)(O, {
             from: { opacity: 0 },
             enter: { opacity: 1 },
             leave: { opacity: 0 },
@@ -68,27 +68,27 @@ function b(e) {
         k = r.useCallback(
             (e) => {
                 var n;
-                e === y.length - 1 ? (P(0), (0, p.Lp)(t, 'fake_door_end')) : 0 === O && P(1),
+                e === y.length - 1 ? (P(0), (0, p.Lp)(t, 'fake_door_end')) : 0 === j && P(1),
                     m._9(t, {
                         currentStep: e,
-                        furthestStep: Math.max(null !== (n = b.furthestStep) && void 0 !== n ? n : 0, e)
+                        furthestStep: Math.max(null !== (n = A.furthestStep) && void 0 !== n ? n : 0, e)
                     });
             },
-            [O, t, b.furthestStep, y]
+            [j, t, A.furthestStep, y]
         );
     r.useEffect(() => {
         (0, p.Gx)({
             guildId: t,
-            signupPage: (0, f.F)(b.currentStep),
+            signupPage: (0, f.F)(A.currentStep),
             actionType: p.eI.NAVIGATE_STEP
         });
-    }, [t, b.currentStep]),
+    }, [t, A.currentStep]),
         r.useEffect(() => {
             let e = (0, h.pP)((0, s.debounce)(() => R(window.innerWidth), 250));
             return (0, h.YP)(e, document.body), () => (0, h.UC)(e, document.body);
-        }, [O, j]);
-    let U = r.useMemo(() => null != A && Object.values(A).some((e) => null != e), [A]),
-        G = r.useMemo(() => (null != A && Object.values(A).length > 0 ? (0, f.D)(A).find((e) => e.hasError) : null), [A]),
+        }, [j, O]);
+    let U = r.useMemo(() => null != b && Object.values(b).some((e) => null != e), [b]),
+        G = r.useMemo(() => (null != b && Object.values(b).length > 0 ? (0, f.D)(b).find((e) => e.hasError) : null), [b]),
         B = r.useCallback(() => {
             P(1), m._9(t, { currentStep: null == G ? void 0 : G.index });
         }, [null == G ? void 0 : G.index, t]),
@@ -99,8 +99,8 @@ function b(e) {
             H(), n();
         }, [H, n]),
         F = r.useCallback(() => {
-            j && H(), n();
-        }, [j, n, H]),
+            O && H(), n();
+        }, [O, n, H]),
         z = r.useRef(null),
         Y =
             null != G
@@ -169,9 +169,9 @@ function b(e) {
                                     className: a()(T.navigationContainer, T.elevatedNavigationContainer),
                                     children: (0, i.jsx)(I.Z, {
                                         guildId: t,
-                                        progress: b,
+                                        progress: A,
                                         updateCurrentStep: k,
-                                        animationClassName: a()({ [T.hidden]: j }),
+                                        animationClassName: a()({ [T.hidden]: O }),
                                         inSettings: !1
                                     })
                                 })
@@ -179,23 +179,23 @@ function b(e) {
                         }),
                         (0, i.jsx)(o.animated.div, {
                             className: a()(T.divider, {
-                                [T.hidden]: j,
-                                [T.dividerResponsive]: !j
+                                [T.hidden]: O,
+                                [T.dividerResponsive]: !O
                             })
                         }),
                         (0, i.jsx)(o.animated.div, {
                             style: M,
                             className: a()(T.sidebar, {
-                                [T.sidebarResponsive]: !j,
-                                [T.sidebarHidden]: j
+                                [T.sidebarResponsive]: !O,
+                                [T.sidebarHidden]: O
                             }),
                             children: (0, i.jsx)(v.Z, {
                                 guildId: t,
                                 signed: !1,
                                 setSigned: void 0,
-                                sidebarWidth: j ? 0 : 380,
+                                sidebarWidth: O ? 0 : 380,
                                 windowWidth: L,
-                                brandPrimaryColor: b.brandPrimaryColor
+                                brandPrimaryColor: A.brandPrimaryColor
                             })
                         })
                     ]
@@ -216,8 +216,8 @@ function b(e) {
                                 children: (e) =>
                                     (0, i.jsx)(E.Z, {
                                         ...e,
-                                        themeColor: b.brandPrimaryColor,
-                                        disabled: !j || U,
+                                        themeColor: A.brandPrimaryColor,
+                                        disabled: !O || U,
                                         submitting: Z,
                                         look: d.Button.Looks.FILLED,
                                         size: d.Button.Sizes.MEDIUM,

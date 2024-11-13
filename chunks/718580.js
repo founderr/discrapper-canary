@@ -94,8 +94,8 @@ function E(e) {
             },
             null == N ? 'animate-never' : 'respect-motion-settings'
         ),
-        B = (0, p.Z)(C),
-        { width: G, centered: Z = !0 } = S,
+        G = (0, p.Z)(C),
+        { width: B, centered: Z = !0 } = S,
         F = o.tq ? '100%' : k.width.to((e) => Math.round(e)),
         V = o.tq ? '100%' : k.height.to((e) => Math.round(e)),
         j = o.tq
@@ -126,13 +126,13 @@ function E(e) {
                         display: I,
                         flexDirection: 'column',
                         backfaceVisibility: 'hidden',
-                        width: o.tq ? '100%' : G,
+                        width: o.tq ? '100%' : B,
                         ...j,
                         ...(R.enabled
                             ? s
                             : {
-                                  left: e.value.to(m('left', B)),
-                                  right: e.value.to(m('right', B)),
+                                  left: e.value.to(m('left', G)),
+                                  right: e.value.to(m('right', G)),
                                   ...(b && s)
                               })
                     },

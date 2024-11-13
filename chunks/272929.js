@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(100621),
-    r = n(481060),
-    a = n(871499),
+    a = n(481060),
+    r = n(871499),
     s = n(388032),
     o = n(305705);
 let c = (0, l.animated)((e) => {
@@ -33,7 +33,7 @@ let c = (0, l.animated)((e) => {
 function d(e) {
     let { totalCooldownSeconds: t, remainingCooldownSeconds: n, onClick: d, onKeyDown: u, onMouseEnter: h, onMouseLeave: p, isActive: m = !1, isCenterButton: f = !1, ...g } = e,
         C = n > 0,
-        x = (0, r.useSpring)(
+        x = (0, a.useSpring)(
             {
                 percentComplete: 0 !== n ? (t - n) / t : 0,
                 config: {
@@ -44,7 +44,7 @@ function d(e) {
             'animate-always'
         ),
         v = C ? s.intl.formatToPlainString(s.t.D8Drx8, { seconds: n }) : void 0,
-        _ = f ? a.d : a.Z;
+        _ = f ? r.d : r.Z;
     return (0, i.jsxs)('div', {
         className: o.container,
         children: [
@@ -53,7 +53,7 @@ function d(e) {
                 ...g,
                 disabled: C,
                 label: v,
-                iconComponent: r.ReactionIcon,
+                iconComponent: a.ReactionIcon,
                 onClick: d,
                 onKeyDown: u,
                 onMouseEnter: h,

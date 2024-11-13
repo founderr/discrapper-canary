@@ -50,7 +50,7 @@ function L(e) {
         P = (0, u.e7)([_.Z], () => _.Z.roleStyle),
         k = null != t && 0 !== t && !w,
         U = k && 'dot' === P,
-        B = (e) =>
+        G = (e) =>
             (0, r.jsxs)(I.Z, {
                 className: a()(R.roleMention),
                 color: 'username' === P && k ? t : null,
@@ -66,11 +66,11 @@ function L(e) {
                     x
                 ]
             }),
-        { enabled: G } = D.getCurrentConfig({ location: '2ec235_1' }, { autoTrackExposure: !1 });
-    return !G || w || null == s || null == L || (null == i && '@everyone' !== E)
+        { enabled: B } = D.getCurrentConfig({ location: '2ec235_1' }, { autoTrackExposure: !1 });
+    return !B || w || null == s || null == L || (null == i && '@everyone' !== E)
         ? (0, r.jsx)(h.Gt, {
               value: M,
-              children: B()
+              children: G()
           })
         : (0, r.jsx)(h.Gt, {
               value: M,
@@ -169,7 +169,7 @@ function L(e) {
                       });
                   },
                   position: 'right',
-                  children: B
+                  children: G
               })
           });
 }

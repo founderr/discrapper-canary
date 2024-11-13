@@ -1,7 +1,7 @@
 var i = n(200651),
     l = n(192379),
-    r = n(442837),
-    a = n(481060),
+    a = n(442837),
+    r = n(481060),
     s = n(287734),
     o = n(358221),
     c = n(305325),
@@ -22,14 +22,14 @@ t.Z = function (e) {
         }, [x.id, x.guild_id, _]),
         E = p.filter((e) => e.type === m.Ui.VOICE),
         b = 4 === E.length ? 2 : 3,
-        N = (0, r.Wu)([o.Z], () => E.map((e) => o.Z.getParticipant(x.id, e.id)).filter(h.lm), [x.id, E]);
+        Z = (0, a.Wu)([o.Z], () => E.map((e) => o.Z.getParticipant(x.id, e.id)).filter(h.lm), [x.id, E]);
     return (0, i.jsxs)('div', {
         className: g.container,
         children: [
             (0, i.jsx)('div', {
                 className: g.tiles,
                 style: { maxWidth: 168 * b },
-                children: N.slice(0, 5).map((e) =>
+                children: Z.slice(0, 5).map((e) =>
                     (0, i.jsx)(
                         u.ZP,
                         {
@@ -46,14 +46,14 @@ t.Z = function (e) {
                     )
                 )
             }),
-            (0, i.jsx)(a.Heading, {
+            (0, i.jsx)(r.Heading, {
                 className: g.channelName,
                 variant: 'heading-xxl/semibold',
                 children: x.name
             }),
             (0, i.jsx)('div', {
                 className: g.participantsRow,
-                children: (0, i.jsx)(a.Text, {
+                children: (0, i.jsx)(r.Text, {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',
                     children:
@@ -76,12 +76,12 @@ t.Z = function (e) {
                                   : void 0)
                 })
             }),
-            (0, i.jsx)(a.Button, {
+            (0, i.jsx)(r.Button, {
                 disabled: !v,
                 className: g.joinButton,
-                color: v ? a.Button.Colors.GREEN : a.Button.Colors.PRIMARY,
+                color: v ? r.Button.Colors.GREEN : r.Button.Colors.PRIMARY,
                 onClick: I,
-                size: a.Button.Sizes.MEDIUM,
+                size: r.Button.Sizes.MEDIUM,
                 children: v ? f.intl.string(f.t['7vb2cX']) : f.intl.string(f.t.TVBCKS)
             })
         ]

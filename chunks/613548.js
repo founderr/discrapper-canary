@@ -6,8 +6,8 @@ n.d(t, {
     n(653041);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(392711),
     o = n.n(s),
     c = n(848246),
@@ -25,8 +25,8 @@ var i = n(200651),
     I = n(933843),
     E = n(141321),
     b = n(2818),
-    N = n(954551),
-    Z = n(44136),
+    Z = n(954551),
+    N = n(44136),
     S = n(651183),
     T = n(618158),
     j = n(390322),
@@ -34,8 +34,8 @@ var i = n(200651),
     y = n(961048),
     P = n(179424),
     M = n(786915),
-    R = n(975146),
-    L = n(991617),
+    L = n(975146),
+    R = n(991617),
     k = n(597998),
     O = n(606304),
     D = n(594174),
@@ -53,7 +53,7 @@ function W(e) {
             let e = Date.now();
             return o()(O.Z.getSpeakers())
                 .map((e) => w.Z.getParticipant(t, e))
-                .filter((e) => null != e && e.type === G.fO.USER && e.speaking && !(0, Z.ZP)(e))
+                .filter((e) => null != e && e.type === G.fO.USER && e.speaking && !(0, N.ZP)(e))
                 .sortBy((t) => -O.Z.getSpeakingDuration(t.user.id, e))
                 .slice(0, 3)
                 .value();
@@ -68,10 +68,10 @@ function W(e) {
                           position: 'bottom',
                           color: u.Tooltip.Colors.GREY,
                           text: V.intl.formatToPlainString(V.t.JjdizM, { username: e.user.username }),
-                          children: (r) =>
+                          children: (a) =>
                               (0, i.jsx)(k.ZP, {
-                                  ...r,
-                                  className: a()(z.speaker, { [z.last]: t === l.length - 1 }),
+                                  ...a,
+                                  className: r()(z.speaker, { [z.last]: t === l.length - 1 }),
                                   user: e.user,
                                   speaking: !0,
                                   collapsed: !0,
@@ -84,8 +84,8 @@ function W(e) {
           });
 }
 function K(e) {
-    let { inPopout: t, channel: n, appContext: r, inCall: a, isChatOpen: s, exitFullScreen: o } = e,
-        Z = n.id,
+    let { inPopout: t, channel: n, appContext: a, inCall: r, isChatOpen: s, exitFullScreen: o } = e,
+        N = n.id,
         {
             voiceParticipantsHidden: k,
             selectedParticipant: O,
@@ -93,11 +93,11 @@ function K(e) {
         } = (0, d.cj)(
             [w.Z],
             () => ({
-                selectedParticipant: w.Z.getSelectedParticipant(Z),
-                voiceParticipantsHidden: w.Z.getVoiceParticipantsHidden(Z),
-                userParticipantCount: w.Z.getUserParticipantCount(Z)
+                selectedParticipant: w.Z.getSelectedParticipant(N),
+                voiceParticipantsHidden: w.Z.getVoiceParticipantsHidden(N),
+                userParticipantCount: w.Z.getUserParticipantCount(N)
             }),
-            [Z]
+            [N]
         ),
         K = (0, d.e7)([D.default], () => D.default.getCurrentUser()),
         Y = (0, B.Z)(n),
@@ -132,7 +132,7 @@ function K(e) {
                 (0, i.jsx)(
                     W,
                     {
-                        channelId: Z,
+                        channelId: N,
                         guildId: n.guild_id
                     },
                     'current-speaker'
@@ -143,7 +143,7 @@ function K(e) {
                 m.Z,
                 {
                     className: z.button,
-                    channelId: Z
+                    channelId: N
                 },
                 'clips-enabled-indicator'
             )
@@ -181,7 +181,7 @@ function K(e) {
                         renderPopout: () => (0, i.jsx)(j.Z, { children: (0, i.jsx)(H.Z, { channel: n }) }),
                         children: (e, t) => {
                             let { isShown: n } = t;
-                            return (0, l.createElement)(R.Z, {
+                            return (0, l.createElement)(L.Z, {
                                 ...e,
                                 isActive: n,
                                 count: V,
@@ -193,22 +193,22 @@ function K(e) {
                     'call-members-popout'
                 )
             ),
-        a &&
+        r &&
             ei.push(
                 null != O
                     ? (0, i.jsx)(
                           P.Z,
                           {
                               className: z.button,
-                              channelId: Z
+                              channelId: N
                           },
                           'deselect-participant'
                       )
                     : (0, i.jsx)(
-                          L.Z,
+                          R.Z,
                           {
                               className: z.button,
-                              channelId: Z,
+                              channelId: N,
                               isHorizontal: !0
                           },
                           'select-participant'
@@ -227,7 +227,7 @@ function K(e) {
                     'recents'
                 )
             ),
-        Q && !$ && ei.push((0, i.jsx)(N.Z, { className: z.button }, 'for-later')),
+        Q && !$ && ei.push((0, i.jsx)(Z.Z, { className: z.button }, 'for-later')),
         ei.push(
             (0, i.jsx)(
                 u.Popout,
@@ -237,9 +237,9 @@ function K(e) {
                         let { closePopout: t } = e;
                         return (0, i.jsx)(j.Z, {
                             children: (0, i.jsx)(U.Z, {
-                                channelId: Z,
+                                channelId: N,
                                 onClose: t,
-                                appContext: r,
+                                appContext: a,
                                 exitFullScreen: o
                             })
                         });

@@ -74,7 +74,7 @@ function c(e) {
     return U && e instanceof Map;
 }
 function d(e) {
-    return B && e instanceof Set;
+    return G && e instanceof Set;
 }
 function f(e) {
     return e.o || e.t;
@@ -273,8 +273,8 @@ var M,
     P,
     k = 'undefined' != typeof Symbol && 'symbol' == typeof Symbol('x'),
     U = 'undefined' != typeof Map,
-    B = 'undefined' != typeof Set,
-    G = 'undefined' != typeof Proxy && void 0 !== Proxy.revocable && 'undefined' != typeof Reflect,
+    G = 'undefined' != typeof Set,
+    B = 'undefined' != typeof Proxy && void 0 !== Proxy.revocable && 'undefined' != typeof Reflect,
     Z = k ? Symbol.for('immer-nothing') : (((M = {})['immer-nothing'] = !0), M),
     F = k ? Symbol.for('immer-draftable') : '__$immer_draftable',
     V = k ? Symbol.for('immer-state') : '__$immer_state',
@@ -372,7 +372,7 @@ s(K, function (e, t) {
 var q = new ((function () {
         function e(e) {
             var t = this;
-            (this.O = G),
+            (this.O = B),
                 (this.D = !0),
                 (this.produce = function (e, n, i) {
                     if ('function' == typeof e && 'function' != typeof n) {
@@ -479,7 +479,7 @@ var q = new ((function () {
                 this.D = e;
             }),
             (t.setUseProxies = function (e) {
-                e && !G && r(20), (this.O = e);
+                e && !B && r(20), (this.O = e);
             }),
             (t.applyPatches = function (e, t) {
                 for (n = t.length - 1; n >= 0; n--) {

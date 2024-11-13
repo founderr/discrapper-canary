@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(442837),
-    r = n(189156),
-    a = n(699516),
+    a = n(189156),
+    r = n(699516),
     s = n(246946),
     o = n(5192),
     c = n(621853),
@@ -25,15 +25,15 @@ var l = n(442837),
     I = n(530),
     E = n(827313),
     b = n(101638),
-    N = n(228168),
-    Z = n(981631),
+    Z = n(228168),
+    N = n(981631),
     S = n(388032),
     T = n(299336);
 function j(e) {
     let { user: t, currentUser: n, displayProfile: j, channel: A, isHovering: y, onOpenProfile: P } = e,
-        M = (0, l.e7)([a.Z], () => a.Z.getRelationshipType(t.id)),
-        R = (0, l.e7)([s.Z], () => s.Z.hidePersonalInformation),
-        L = (0, l.e7)([c.Z], () => {
+        M = (0, l.e7)([r.Z], () => r.Z.getRelationshipType(t.id)),
+        L = (0, l.e7)([s.Z], () => s.Z.hidePersonalInformation),
+        R = (0, l.e7)([c.Z], () => {
             var e;
             return null === (e = c.Z.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application;
         }),
@@ -44,18 +44,18 @@ function j(e) {
         children: [
             (0, i.jsx)(I.Z, {
                 user: t,
-                profileType: N.y0.PANEL,
+                profileType: Z.y0.PANEL,
                 nickname: o.ZP.getName(null, A.id, t),
                 pronouns: null == j ? void 0 : j.pronouns,
                 onOpenProfile: P,
                 tags: (0, i.jsx)(p.Z, {
                     displayProfile: j,
-                    profileType: N.y0.PANEL
+                    profileType: Z.y0.PANEL
                 }),
                 nicknameIcons: (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(g.Z, { userId: t.id }),
-                        !R &&
+                        !L &&
                             (0, i.jsx)(E.Z, {
                                 userId: t.id,
                                 isHovering: y,
@@ -64,14 +64,14 @@ function j(e) {
                     ]
                 })
             }),
-            M === Z.OGo.PENDING_INCOMING &&
+            M === N.OGo.PENDING_INCOMING &&
                 (0, i.jsx)(_.Z.Overlay, {
                     children: (0, i.jsx)(C.Z, {
                         user: t,
                         channelId: A.id
                     })
                 }),
-            t.isProvisional && (0, i.jsx)(r.Z, { look: 'profile' }),
+            t.isProvisional && (0, i.jsx)(a.Z, { look: 'profile' }),
             !k &&
                 !O &&
                 (0, i.jsx)(f.Z, {
@@ -82,7 +82,7 @@ function j(e) {
             (0, i.jsxs)(_.Z.Overlay, {
                 className: T.overlay,
                 children: [
-                    !R &&
+                    !L &&
                         (null == j ? void 0 : j.bio) != null &&
                         (null == j ? void 0 : j.bio) !== '' &&
                         (0, i.jsx)(v.Z, {
@@ -95,10 +95,10 @@ function j(e) {
                                 userId: t.id
                             })
                         }),
-                    (null == L ? void 0 : L.popularApplicationCommandIds) != null &&
+                    (null == R ? void 0 : R.popularApplicationCommandIds) != null &&
                         (0, i.jsx)(h.Z, {
-                            applicationId: L.id,
-                            commandIds: L.popularApplicationCommandIds,
+                            applicationId: R.id,
+                            commandIds: R.popularApplicationCommandIds,
                             channel: A
                         }),
                     (0, i.jsx)(v.Z, {

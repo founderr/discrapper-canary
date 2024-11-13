@@ -67,7 +67,7 @@ function g(e, t, n, r) {
             P,
             k = 0,
             U = new a.Buf8(4),
-            B = [16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15];
+            G = [16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15];
         if (!e || !e.state || !e.output || (!e.input && 0 !== e.avail_in)) return -2;
         12 === (n = e.state).mode && (n.mode = 13), (p = e.next_out), (f = e.output), (E = e.avail_out), (_ = e.next_in), (d = e.input), (h = e.avail_in), (v = n.hold), (I = n.bits), (b = h), (S = E), (w = 0);
         r: for (;;)
@@ -259,9 +259,9 @@ function g(e, t, n, r) {
                             if (0 === h) break r;
                             h--, (v += d[_++] << I), (I += 8);
                         }
-                        (n.lens[B[n.have++]] = 7 & v), (v >>>= 3), (I -= 3);
+                        (n.lens[G[n.have++]] = 7 & v), (v >>>= 3), (I -= 3);
                     }
-                    for (; n.have < 19; ) n.lens[B[n.have++]] = 0;
+                    for (; n.have < 19; ) n.lens[G[n.have++]] = 0;
                     if (((n.lencode = n.lendyn), (n.lenbits = 7), (M = { bits: n.lenbits }), (w = u(0, n.lens, 0, 19, n.lencode, 0, n.work, M)), (n.lenbits = M.bits), w)) {
                         (e.msg = 'invalid code lengths set'), (n.mode = 30);
                         break;

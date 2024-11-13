@@ -22,8 +22,8 @@ var i = n(200651),
     N = n(667105),
     T = n(860151),
     x = n(341907),
-    b = n(46140),
-    A = n(981631),
+    A = n(46140),
+    b = n(981631),
     Z = n(388032),
     y = n(233342);
 function L(e) {
@@ -32,7 +32,7 @@ function L(e) {
         r = (0, m.B6)(n.config.expiresAt),
         l = (0, m.B6)(I.r.build(n.config).rewardsExpireAt),
         a = (0, s.e7)([d.Z], () => d.Z.getState().theme),
-        u = (0, o.wj)(a) ? A.BRd.DARK : A.BRd.LIGHT,
+        u = (0, o.wj)(a) ? b.BRd.DARK : b.BRd.LIGHT,
         h = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
     return (0, i.jsxs)('div', {
         className: y.heading,
@@ -65,12 +65,12 @@ t.Z = function (e) {
     let { quest: o } = e,
         d = (0, s.e7)([p.Z], () => p.Z.isEnrolling(o.id), [o]),
         [E, I] = r.useState(!1),
-        A = r.useCallback(() => I(!0), []),
+        b = r.useCallback(() => I(!0), []),
         R = r.useCallback(() => I(!1), []),
-        j = r.useCallback((e) => {
+        O = r.useCallback((e) => {
             e.stopPropagation();
         }, []),
-        O = r.useCallback(() => {
+        j = r.useCallback(() => {
             (0, h.AH)(o.id, {
                 questContent: g.jn.ACTIVITY_PANEL,
                 questContentCTA: u.jZ.ACCEPT_QUEST
@@ -83,7 +83,7 @@ t.Z = function (e) {
                     questContent: g.jn.ACTIVITY_PANEL,
                     questContentCTA: u.jZ.TRACK_PROGRESS
                 }),
-                (0, x.navigateToQuestHome)(b.dr.ACTIVITY_PANEL, g.jn.ACTIVITY_PANEL, o.id));
+                (0, x.navigateToQuestHome)(A.dr.ACTIVITY_PANEL, g.jn.ACTIVITY_PANEL, o.id));
         }, [o]),
         D = r.useCallback(() => {
             (0, u._3)({
@@ -91,7 +91,7 @@ t.Z = function (e) {
                 questContent: g.jn.ACTIVITY_PANEL,
                 questContentCTA: u.jZ.LEARN_MORE
             }),
-                (0, x.navigateToQuestHome)(b.dr.ACTIVITY_PANEL, g.jn.ACTIVITY_PANEL, o.id);
+                (0, x.navigateToQuestHome)(A.dr.ACTIVITY_PANEL, g.jn.ACTIVITY_PANEL, o.id);
         }, [o]),
         M = (0, N.hf)({
             quest: o,
@@ -106,7 +106,7 @@ t.Z = function (e) {
         V = (0, _.D)({
             quest: o,
             taskDetails: H,
-            location: b.dr.ACTIVITY_PANEL,
+            location: A.dr.ACTIVITY_PANEL,
             questContent: g.jn.ACTIVITY_PANEL
         });
     return B || w || G
@@ -121,10 +121,10 @@ t.Z = function (e) {
                           e.current = t;
                       },
                       className: a()(y.wrapper, { [y.wrapperQuestAccepted]: k }),
-                      onClick: j,
-                      onKeyPress: j,
-                      onFocus: A,
-                      onMouseEnter: A,
+                      onClick: O,
+                      onKeyPress: O,
+                      onFocus: b,
+                      onMouseEnter: b,
                       onBlur: R,
                       onMouseLeave: R,
                       children: [
@@ -169,7 +169,7 @@ t.Z = function (e) {
                                   className: y.rewardTileWithInstructions,
                                   quest: o,
                                   questContent: g.jn.ACTIVITY_PANEL,
-                                  location: b.dr.ACTIVITY_PANEL,
+                                  location: A.dr.ACTIVITY_PANEL,
                                   taskDetails: H
                               }),
                           (0, i.jsxs)('div', {
@@ -190,7 +190,7 @@ t.Z = function (e) {
                                                   className: y.cta,
                                                   color: c.Button.Colors.BRAND,
                                                   fullWidth: !0,
-                                                  onClick: O,
+                                                  onClick: j,
                                                   size: c.Button.Sizes.SMALL,
                                                   submitting: d,
                                                   children: Z.intl.string(Z.t.l7E81t)

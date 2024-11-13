@@ -37,7 +37,7 @@ t.Z = (e) => {
             },
             [f, v]
         ),
-        b = (0, l.e7)([s.Z], () => s.Z.getGuild(f), [f]);
+        A = (0, l.e7)([s.Z], () => s.Z.getGuild(f), [f]);
     return (0, i.jsxs)('div', {
         className: g.slideContent,
         children: [
@@ -98,7 +98,7 @@ t.Z = (e) => {
                                                 (0, i.jsx)(a.Text, {
                                                     variant: 'text-xs/medium',
                                                     color: 'text-muted',
-                                                    children: m.intl.format(m.t['g/mtUF'], { guildName: null !== (t = null == b ? void 0 : b.name) && void 0 !== t ? t : '' })
+                                                    children: m.intl.format(m.t['g/mtUF'], { guildName: null !== (t = null == A ? void 0 : A.name) && void 0 !== t ? t : '' })
                                                 })
                                             ]
                                         })
@@ -138,7 +138,7 @@ t.Z = (e) => {
                                                 (0, i.jsx)(a.Text, {
                                                     variant: 'text-xs/medium',
                                                     color: 'text-muted',
-                                                    children: m.intl.format(m.t['5uK+gY'], { guildName: null !== (n = null == b ? void 0 : b.name) && void 0 !== n ? n : '' })
+                                                    children: m.intl.format(m.t['5uK+gY'], { guildName: null !== (n = null == A ? void 0 : A.name) && void 0 !== n ? n : '' })
                                                 })
                                             ]
                                         }),

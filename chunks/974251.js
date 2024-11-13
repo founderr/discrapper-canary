@@ -1,8 +1,8 @@
 n(47120), n(411104);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(442837),
     o = n(704215),
     c = n(481060),
@@ -20,8 +20,8 @@ var i = n(200651),
     I = n(79390),
     E = n(665906),
     b = n(706454),
-    N = n(695346),
-    Z = n(433355),
+    Z = n(695346),
+    N = n(433355),
     S = n(819640),
     T = n(375954),
     j = n(496675),
@@ -29,8 +29,8 @@ var i = n(200651),
     y = n(627553),
     P = n(38761),
     M = n(585483),
-    R = n(358085),
-    L = n(127654),
+    L = n(358085),
+    R = n(127654),
     k = n(316595),
     O = n(193910),
     D = n(951211),
@@ -40,7 +40,7 @@ var i = n(200651),
     H = n(388032),
     G = n(687689);
 t.Z = l.memo(function (e) {
-    var t, r;
+    var t, a;
     let F,
         { className: V, channel: z, draftType: W, editorTextContent: K, setValue: Y, canOnlyUseTextCommands: q } = e,
         X = (0, h.bp)(),
@@ -49,11 +49,11 @@ t.Z = l.memo(function (e) {
         $ = (0, s.e7)([C.Z], () => C.Z.getSettings().clipsEnabled),
         ee = (0, s.e7)([C.Z], () => C.Z.getLastClipsSession()),
         et = (0, s.Wu)([C.Z], () => C.Z.getNewClipIds()),
-        en = (0, s.e7)([Z.ZP], () => null == Z.ZP.getCurrentSidebarChannelId(z.id)),
+        en = (0, s.e7)([N.ZP], () => null == N.ZP.getCurrentSidebarChannelId(z.id)),
         { showClipsHeaderEntrypoint: ei } = g.NV.useExperiment({ location: 'ChannelAttachButton' }, { autoTrackExposure: !1 }),
         { enabled: el } = f.T.useExperiment({ location: 'ChannelAttachButton' }, { autoTrackExposure: !1 }),
-        er = (0, s.e7)([_.qc], () => _.qc.hasHotspot(_.v6.CLIPS_CHANNEL_ATTACH_REMINDER)),
-        ea = (0, c.useModalsStore)((e) => (0, c.hasModalOpenSelector)(e, B.Qr)),
+        ea = (0, s.e7)([_.qc], () => _.qc.hasHotspot(_.v6.CLIPS_CHANNEL_ATTACH_REMINDER)),
+        er = (0, c.useModalsStore)((e) => (0, c.hasModalOpenSelector)(e, B.Qr)),
         es = (0, s.e7)([S.Z], () => S.Z.hasLayers()),
         eo = (0, s.e7)([C.Z], () => C.Z.hasClips()),
         [ec, ed] = l.useState(null),
@@ -63,11 +63,11 @@ t.Z = l.memo(function (e) {
         em = (0, s.e7)([b.default], () => b.default.locale),
         ef = ['en-US', 'en-GB'].includes(em) ? H.intl.string(H.t.d56gCQ) : H.intl.string(H.t.PdRCRk),
         eg = (0, u.Z)(ee);
-    (null == eg ? void 0 : eg.newClipIds.length) !== (null == ee ? void 0 : ee.newClipIds.length) && (null !== (t = null == ee ? void 0 : ee.newClipIds.length) && void 0 !== t ? t : 0) > 0 && null == ec && er && en && !ea && !ei && !es && ed('recentClips');
+    (null == eg ? void 0 : eg.newClipIds.length) !== (null == ee ? void 0 : ee.newClipIds.length) && (null !== (t = null == ee ? void 0 : ee.newClipIds.length) && void 0 !== t ? t : 0) > 0 && null == ec && ea && en && !er && !ei && !es && ed('recentClips');
     let eC = (e, t, n) => {
             null != t && 'ETOOLARGE' === t.code
-                ? (0, L.G)(z, [])
-                : (0, L.d)(e, z, W, {
+                ? (0, R.G)(z, [])
+                : (0, R.d)(e, z, W, {
                       requireConfirm: !0,
                       showLargeMessageDialog: n
                   }),
@@ -102,11 +102,11 @@ t.Z = l.memo(function (e) {
     });
     let e_ = (0, E.NE)(z),
         eI = (0, E.Xu)(z),
-        eE = !N.dN.useSetting() && !(0, R.isAndroidWeb)() && null != window.ResizeObserver,
+        eE = !Z.dN.useSetting() && !(0, L.isAndroidWeb)() && null != window.ResizeObserver,
         eb = (0, I.UI)(null != z ? z : void 0),
-        eN = (0, c.useRedesignIconContext)().enabled,
-        eZ = (0, p.qB)(z.id, 'ChannelAttachButton'),
-        eS = null !== (r = null == et ? void 0 : et.length) && void 0 !== r ? r : 0,
+        eZ = (0, c.useRedesignIconContext)().enabled,
+        eN = (0, p.qB)(z.id, 'ChannelAttachButton'),
+        eS = null !== (a = null == et ? void 0 : et.length) && void 0 !== a ? a : 0,
         eT = (0, D.Z)({
             canAttachFiles: ep,
             canStartThreads: e_ || eI,
@@ -117,13 +117,13 @@ t.Z = l.memo(function (e) {
             activities: Q,
             newClipsCount: eS,
             canPostPolls: eb,
-            canLaunchActivities: eZ,
+            canLaunchActivities: eN,
             appContext: X
         });
     if (0 === eT.length) return null;
     let ej = Q.some((e) => (0, m.Z)(e, w.xjy.SYNC)),
         eA = Q.some((e) => (0, m.Z)(e, w.xjy.JOIN) && !(0, m.Z)(e, w.xjy.EMBEDDED)) || ej;
-    F = eN
+    F = eZ
         ? (0, i.jsx)(c.CirclePlusIcon, {
               className: G.__invalid_attachButtonIcon,
               colorClass: G.attachButtonPlus
@@ -193,7 +193,7 @@ t.Z = l.memo(function (e) {
             (0, i.jsx)(c.Button, {
                 look: c.Button.Looks.BLANK,
                 size: c.Button.Sizes.NONE,
-                className: a()(G.attachButton, V),
+                className: r()(G.attachButton, V),
                 innerClassName: G.attachButtonInner,
                 'aria-label': ef,
                 onDoubleClick: ep
@@ -226,7 +226,7 @@ t.Z = l.memo(function (e) {
                     channel: z,
                     isOmniMenuOpen: 'attachMenu' === ec,
                     openOmniMenu: () => ed('attachMenu'),
-                    enabled: eZ,
+                    enabled: eN,
                     animationContainerClassName: G.buttonAnimation,
                     glowClassName: G.buttonAnimationGlow,
                     trinketsClassName: G.buttonAnimationTrinkets,

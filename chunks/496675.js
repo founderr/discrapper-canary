@@ -76,10 +76,10 @@ function U() {
     for (let e in ((O = {}), (D = {}), L)) L[e] += 1;
     x += 1;
 }
-function B() {
+function G() {
     U();
 }
-function G() {
+function B() {
     U();
 }
 function Z(e) {
@@ -244,17 +244,17 @@ function z() {
           })
         : (i[a] = s),
     (t.Z = new K(d.Z, {
-        BACKGROUND_SYNC: B,
-        CONNECTION_OPEN: B,
-        OVERLAY_INITIALIZE: B,
-        CACHE_LOADED: B,
-        CACHE_LOADED_LAZY: B,
+        BACKGROUND_SYNC: G,
+        CONNECTION_OPEN: G,
+        OVERLAY_INITIALIZE: G,
+        CACHE_LOADED: G,
+        CACHE_LOADED_LAZY: G,
         CONNECTION_CLOSED: function () {
             z();
         },
-        GUILD_CREATE: G,
-        GUILD_UPDATE: G,
-        GUILD_DELETE: G,
+        GUILD_CREATE: B,
+        GUILD_UPDATE: B,
+        GUILD_DELETE: B,
         GUILD_MEMBER_ADD: Z,
         GUILD_MEMBER_UPDATE: Z,
         CURRENT_USER_UPDATE: Z,

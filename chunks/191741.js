@@ -40,12 +40,12 @@ function x() {
     r.useLayoutEffect(() => {
         I.ZP.setMinimumSize(v.J, v.N);
     }, []);
-    let A = r.useCallback(() => {
+    let b = r.useCallback(() => {
         (0, E.isMac)() && I.ZP.maximize();
     }, []);
     return (0, i.jsxs)('div', {
         className: S.bar,
-        onDoubleClick: A,
+        onDoubleClick: b,
         children: [
             (0, i.jsx)('div', {
                 className: S.left,
@@ -59,7 +59,7 @@ function x() {
                                 onClick: () => {
                                     N.setState({ isOpen: !N.getState().isOpen });
                                 },
-                                children: (0, i.jsx)(b, {})
+                                children: (0, i.jsx)(A, {})
                             }),
                             (0, i.jsx)(s.Clickable, {
                                 onClick: () => {
@@ -98,7 +98,7 @@ function x() {
         ]
     });
 }
-function b() {
+function A() {
     return (0, i.jsxs)('svg', {
         xmlns: 'http://www.w3.org/2000/svg',
         className: S.icon,

@@ -24,26 +24,26 @@ var i = n(200651),
     C = n(463051);
 function v(e) {
     var t;
-    let { query: n, initialCategoryId: v, onSelectApplication: S } = e,
-        [N, T] = r.useState(v),
-        [x, b] = r.useState(1),
-        { fetchState: A, searchResults: Z } = (0, s.cj)([h.Z], () => ({
+    let { query: n, onSelectApplication: v } = e,
+        [S, N] = r.useState(),
+        [T, x] = r.useState(1),
+        { fetchState: A, searchResults: b } = (0, s.cj)([h.Z], () => ({
             fetchState: h.Z.getFetchState({
                 query: n,
-                categoryId: N,
-                page: x,
+                categoryId: S,
+                page: T,
                 pageSize: I.IV,
                 source: a.F.APP_DIRECTORY
             }),
             searchResults: h.Z.getSearchResults({
                 query: n,
-                categoryId: N,
-                page: x,
+                categoryId: S,
+                page: T,
                 pageSize: I.IV,
                 source: a.F.APP_DIRECTORY
             })
         })),
-        y = (0, s.cj)([h.Z], () => {
+        Z = (0, s.cj)([h.Z], () => {
             let e = h.Z.getSearchResults({
                 query: n,
                 page: 1,
@@ -57,12 +57,12 @@ function v(e) {
                   }
                 : {};
         }),
-        L = (0, c.Z)(Z),
-        R = r.useMemo(() => (A === u.M.FETCHING ? L : Z), [A, L, Z]);
+        y = (0, c.Z)(b),
+        L = r.useMemo(() => (A === u.M.FETCHING ? y : b), [A, y, b]);
     r.useEffect(() => {
-        b(1);
+        x(1);
     }, [n]);
-    let j = r.useCallback(
+    let R = r.useCallback(
             (e) => {
                 d.yC({
                     query: n,
@@ -70,17 +70,17 @@ function v(e) {
                         page: e,
                         pageSize: I.IV,
                         source: a.F.APP_DIRECTORY,
-                        categoryId: N
+                        categoryId: S
                     }
                 }),
-                    b(e);
+                    x(e);
             },
-            [n, N]
+            [n, S]
         ),
         O = r.useCallback(
             (e) => {
-                b(1),
-                    T(e),
+                x(1),
+                    N(e),
                     d.yC({
                         query: n,
                         options: {
@@ -103,8 +103,8 @@ function v(e) {
                             (0, i.jsx)('div', {
                                 className: C.topFilterContainer,
                                 children: (0, i.jsx)(E.V, {
-                                    countsByCategory: y,
-                                    selectedCategoryId: null != N ? N : m.MU,
+                                    countsByCategory: Z,
+                                    selectedCategoryId: null != S ? S : m.MU,
                                     onSelectCategory: O
                                 })
                             }),
@@ -113,16 +113,16 @@ function v(e) {
                                 children: (0, i.jsx)('div', {
                                     className: C.content,
                                     children:
-                                        null == R
+                                        null == L
                                             ? void 0
-                                            : R.results.map((e) => {
+                                            : L.results.map((e) => {
                                                   if (e.type === l.s.APPLICATION) {
                                                       let t = e.data;
                                                       return (0, i.jsx)(
                                                           _.Z,
                                                           {
                                                               application: t,
-                                                              onSelectApplication: S,
+                                                              onSelectApplication: v,
                                                               showCategory: !0
                                                           },
                                                           t.id
@@ -134,12 +134,12 @@ function v(e) {
                             }),
                             (0, i.jsx)(o.Paginator, {
                                 className: C.paginationInput,
-                                totalCount: Math.min((null !== (t = null == R ? void 0 : R.totalPages) && void 0 !== t ? t : 0) * I.IV, I.Et * I.IV),
+                                totalCount: Math.min((null !== (t = null == L ? void 0 : L.totalPages) && void 0 !== t ? t : 0) * I.IV, I.Et * I.IV),
                                 pageSize: I.IV,
                                 disablePaginationGap: !0,
                                 hideMaxPage: !0,
-                                currentPage: x,
-                                onPageChange: j
+                                currentPage: T,
+                                onPageChange: R
                             })
                         ]
                     })
@@ -150,8 +150,8 @@ function v(e) {
                 children: (0, i.jsx)('div', {
                     className: C.sideFilterContent,
                     children: (0, i.jsx)(E.Z, {
-                        countsByCategory: y,
-                        selectedCategoryId: null != N ? N : m.MU,
+                        countsByCategory: Z,
+                        selectedCategoryId: null != S ? S : m.MU,
                         onSelectCategory: O
                     })
                 })

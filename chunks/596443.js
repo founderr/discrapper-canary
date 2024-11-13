@@ -7,8 +7,8 @@ n.d(t, {
     n(653041);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(954955),
     o = n.n(s),
     c = n(399606),
@@ -26,28 +26,28 @@ var i = n(200651),
     I = n(370595),
     E = n(351127),
     b = n(981631),
-    N = n(388032),
-    Z = n(194898),
+    Z = n(388032),
+    N = n(194898),
     S = n(650464);
 function T(e) {
-    var t, n, r, s;
-    let { permission: o, roleIds: g, guild: v, specMap: _, categoryTitle: I, userId: Z } = e,
+    var t, n, a, s;
+    let { permission: o, roleIds: g, guild: v, specMap: _, categoryTitle: I, userId: N } = e,
         T = (0, c.e7)([C.Z], () => C.Z.getRoles(v.id)),
         j = b.Plq[o],
-        A = null !== (r = null === (t = _[j.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== r ? r : (0, f.wt)(j),
+        A = null !== (a = null === (t = _[j.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== a ? a : (0, f.wt)(j),
         y = null !== (s = null === (n = _[j.toString()]) || void 0 === n ? void 0 : n.description) && void 0 !== s ? s : '',
         P = E._o.has(j),
         M = E.Qn.includes(o),
-        R = g.length,
-        L = (0, c.e7)([x.Z], () => x.Z.can(b.Plq.MANAGE_ROLES, v), [v]),
+        L = g.length,
+        R = (0, c.e7)([x.Z], () => x.Z.can(b.Plq.MANAGE_ROLES, v), [v]),
         k = l.useCallback(
             async (e) => {
-                if (!!L) await m.Z.open(v.id, b.pNK.ROLES), await m.Z.selectRole(e);
+                if (!!R) await m.Z.open(v.id, b.pNK.ROLES), await m.Z.selectRole(e);
             },
-            [L, v.id]
+            [R, v.id]
         );
     return (0, i.jsxs)('div', {
-        className: a()(S.permissionItemContainer, { [S.elevatedPermission]: P }),
+        className: r()(S.permissionItemContainer, { [S.elevatedPermission]: P }),
         children: [
             (0, i.jsxs)('div', {
                 className: S.permissionItemHeader,
@@ -79,7 +79,7 @@ function T(e) {
                                                         color: d.tokens.colors.INTERACTIVE_MUTED.css
                                                     }),
                                                     (0, i.jsx)(d.Tooltip, {
-                                                        text: N.intl.string(N.t.GZvXuL),
+                                                        text: Z.intl.string(Z.t.GZvXuL),
                                                         children: (e) =>
                                                             (0, i.jsxs)(d.Clickable, {
                                                                 className: S.elevatedPermissionContainer,
@@ -94,7 +94,7 @@ function T(e) {
                                                                     (0, i.jsx)(d.Text, {
                                                                         variant: 'text-xs/normal',
                                                                         color: 'text-brand',
-                                                                        children: N.intl.string(N.t.k7Kqj4)
+                                                                        children: Z.intl.string(Z.t.k7Kqj4)
                                                                     })
                                                                 ]
                                                             })
@@ -116,7 +116,7 @@ function T(e) {
                                                         children: (0, i.jsx)(d.Text, {
                                                             variant: 'text-xs/normal',
                                                             color: 'header-muted',
-                                                            children: N.intl.string(N.t.IfqUEB)
+                                                            children: Z.intl.string(Z.t.IfqUEB)
                                                         })
                                                     })
                                                 ]
@@ -128,7 +128,7 @@ function T(e) {
                     (0, i.jsx)(d.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-normal',
-                        children: N.intl.format(N.t.KmJI4O, { roleCount: R })
+                        children: Z.intl.format(Z.t.KmJI4O, { roleCount: L })
                     })
                 ]
             }),
@@ -144,7 +144,7 @@ function T(e) {
             (0, i.jsx)('div', {
                 className: S.permissionItemRoleContainer,
                 children: g.map((e) =>
-                    (0, E.Ov)(e, Z)
+                    (0, E.Ov)(e, N)
                         ? (0, i.jsx)(
                               'div',
                               {
@@ -154,7 +154,7 @@ function T(e) {
                                       children: (0, i.jsx)(d.Text, {
                                           variant: 'text-xs/medium',
                                           color: 'text-normal',
-                                          children: N.intl.string(N.t.pclUFB)
+                                          children: Z.intl.string(Z.t.pclUFB)
                                       })
                                   })
                               },
@@ -163,7 +163,7 @@ function T(e) {
                         : (0, i.jsx)(
                               d.Clickable,
                               {
-                                  className: a()(S.roleTooltipItem, { [S.editable]: L && !(0, u.pM)(v.id, e) }),
+                                  className: r()(S.roleTooltipItem, { [S.editable]: R && !(0, u.pM)(v.id, e) }),
                                   onClick: () => k(e),
                                   children: (0, i.jsx)(p.Z, {
                                       role: T[e],
@@ -182,7 +182,7 @@ function j(e, t) {
     return t.toLowerCase().includes(e.toLowerCase());
 }
 function A(e) {
-    let { userId: t, guildId: n, location: r, className: s, onNavigate: u } = e,
+    let { userId: t, guildId: n, location: a, className: s, onNavigate: u } = e,
         h = (0, c.e7)([v.default], () => v.default.getUser(t), [t]),
         p = (0, c.e7)([C.Z], () => C.Z.getGuild(n), [n]),
         m = (0, c.e7)([g.ZP], () => g.ZP.getMember(n, t), [n, t]),
@@ -190,61 +190,61 @@ function A(e) {
         A = Object.keys(x).length,
         y = l.useMemo(() => (null != p ? _.Z.getGuildPermissionSpecMap(p) : null), [p]),
         P = l.useMemo(() => (null != p ? _.Z.generateGuildPermissionSpec(p) : null), [p]),
-        [M, R] = l.useState(''),
-        [L, k] = l.useState(''),
+        [M, L] = l.useState(''),
+        [R, k] = l.useState(''),
         O = l.useCallback(o()(k, 300), []),
         D = l.useCallback(
             (e) => {
-                R(e), O(e);
+                L(e), O(e);
             },
             [O]
         ),
         w = l.useCallback(() => {
-            R(''), k('');
+            L(''), k('');
         }, []),
         B = l.useMemo(() => {
             if (null == p || null == y || null == m) return null;
             if (0 === A)
                 return (0, i.jsx)(d.Text, {
                     variant: 'text-sm/normal',
-                    children: N.intl.string(N.t.DEBGqK)
+                    children: Z.intl.string(Z.t.DEBGqK)
                 });
             let e = [];
             return (
                 null == P ||
                     P.forEach((n) => {
                         n.permissions.forEach((l) => {
-                            let r = l.flag,
-                                a = E.pd.find((e) => b.Plq[e] === r);
-                            if (null == a) return;
-                            let s = x[a];
+                            let a = l.flag,
+                                r = E.pd.find((e) => b.Plq[e] === a);
+                            if (null == r) return;
+                            let s = x[r];
                             if (null != s) {
-                                if (L.length > 0) {
+                                if (R.length > 0) {
                                     var o, c, d, u, h;
-                                    let e = null !== (u = null === (o = y[r.toString()]) || void 0 === o ? void 0 : o.title) && void 0 !== u ? u : (0, f.wt)(r),
-                                        t = null !== (h = null === (d = y[r.toString()]) || void 0 === d ? void 0 : null === (c = d.description) || void 0 === c ? void 0 : c.toString()) && void 0 !== h ? h : '',
+                                    let e = null !== (u = null === (o = y[a.toString()]) || void 0 === o ? void 0 : o.title) && void 0 !== u ? u : (0, f.wt)(a),
+                                        t = null !== (h = null === (d = y[a.toString()]) || void 0 === d ? void 0 : null === (c = d.description) || void 0 === c ? void 0 : c.toString()) && void 0 !== h ? h : '',
                                         i = n.title,
-                                        l = E._o.has(r),
-                                        s = E.Qn.includes(a),
-                                        p = l ? N.intl.string(N.t.k7Kqj4) : s ? N.intl.string(N.t.IfqUEB) : null,
-                                        m = j(L, e),
-                                        g = j(L, t),
-                                        C = j(L, i),
-                                        x = null != p && j(L, p);
+                                        l = E._o.has(a),
+                                        s = E.Qn.includes(r),
+                                        p = l ? Z.intl.string(Z.t.k7Kqj4) : s ? Z.intl.string(Z.t.IfqUEB) : null,
+                                        m = j(R, e),
+                                        g = j(R, t),
+                                        C = j(R, i),
+                                        x = null != p && j(R, p);
                                     if (!m && !g && !C && !x) return;
                                 }
                                 e.push(
                                     (0, i.jsx)(
                                         T,
                                         {
-                                            permission: a,
+                                            permission: r,
                                             roleIds: s,
                                             guild: p,
                                             specMap: y,
                                             categoryTitle: n.title,
                                             userId: t
                                         },
-                                        a
+                                        r
                                     )
                                 );
                             }
@@ -252,11 +252,11 @@ function A(e) {
                     }),
                 e
             );
-        }, [p, y, m, A, P, x, L, t]);
+        }, [p, y, m, A, P, x, R, t]);
     return null == h || null == m
         ? null
         : (0, i.jsxs)('div', {
-              className: a()(Z.container, s),
+              className: r()(N.container, s),
               children: [
                   (0, i.jsx)(I.Z, {
                       guildId: n,
@@ -266,14 +266,14 @@ function A(e) {
                   (0, i.jsx)(d.Scroller, {
                       className: S.permissionsGroupContainer,
                       children: (0, i.jsx)(d.FormItem, {
-                          title: N.intl.string(N.t.BBWnpq),
+                          title: Z.intl.string(Z.t.BBWnpq),
                           children: (0, i.jsxs)('div', {
                               className: S.permissionsItemContainer,
                               children: [
                                   (0, i.jsx)(d.SearchBar, {
                                       className: S.searchBar,
                                       query: M,
-                                      placeholder: N.intl.string(N.t['yD9+dH']),
+                                      placeholder: Z.intl.string(Z.t['yD9+dH']),
                                       onChange: D,
                                       onClear: w,
                                       autoComplete: 'off',

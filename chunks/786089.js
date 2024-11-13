@@ -22,23 +22,23 @@ var i = n(200651),
     N = n(388032),
     T = n(874976);
 t.Z = (0, r.memo)(function (e) {
-    var t, n, l, x, b;
-    let { quest: A } = e,
+    var t, n, l, x, A;
+    let { quest: b } = e,
         [Z, y] = (0, r.useState)(!1),
         [L, R] = (0, r.useState)(24),
-        [j, O] = (0, r.useState)(!1),
+        [O, j] = (0, r.useState)(!1),
         P = (0, r.useRef)(null),
         D = (0, r.useRef)(null),
         M = (0, r.useRef)(null),
         w = (0, o.e7)([f.default], () => f.default.getCurrentUser()),
         { ref: k, height: U = 0 } = (0, u.Z)(),
         G = (0, h.ZP)(),
-        B = (0, I.B6)(null === (t = A.userStatus) || void 0 === t ? void 0 : t.claimedAt, {
+        B = (0, I.B6)(null === (t = b.userStatus) || void 0 === t ? void 0 : t.claimedAt, {
             month: 'numeric',
             day: 'numeric'
         }),
-        H = null !== (x = null === (n = A.userStatus) || void 0 === n ? void 0 : n.claimedTier) && void 0 !== x ? x : 0,
-        V = A.config.rewards[H],
+        H = null !== (x = null === (n = b.userStatus) || void 0 === n ? void 0 : n.claimedTier) && void 0 !== x ? x : 0,
+        V = b.config.rewards[H],
         F = (null == V ? void 0 : V.type) === s.w.COLLECTIBLE,
         { product: z } = (0, p.T)(F && null != V ? V.skuId : null),
         Y = null == z ? void 0 : null === (l = z.items) || void 0 === l ? void 0 : l[0];
@@ -51,26 +51,26 @@ t.Z = (0, r.memo)(function (e) {
         R((i.top - n.top - r.height) / 2);
     });
     let W = (0, c.wj)(G),
-        K = (0, r.useMemo)(() => (0, v.fh)(A, v.eC.LOGO_TYPE, 'dark'), [A]),
-        q = (0, r.useMemo)(() => (0, v.fh)(A, v.eC.REWARD), [A]),
+        K = (0, r.useMemo)(() => (0, v.fh)(b, v.eC.LOGO_TYPE, 'dark'), [b]),
+        q = (0, r.useMemo)(() => (0, v.fh)(b, v.eC.REWARD), [b]),
         X = Z ? U + 8 : 0,
         Q = () => {
             y(!0),
                 _.default.track(S.rMx.QUEST_HOVER, {
-                    quest_id: A.id,
+                    quest_id: b.id,
                     ...(0, E.mH)(C.jn.TROPHY_CASE_CARD)
                 });
         },
         J = () => y(!1),
         $ = (e) => {
-            O(!0),
+            j(!0),
                 _.default.track(S.rMx.QUEST_ASSET_LOADING_FAILURE, {
                     source: e,
                     asset_id: e,
-                    quest_id: A.id
+                    quest_id: b.id
                 });
         };
-    return null == V || j
+    return null == V || O
         ? null
         : (0, i.jsx)(d.FocusRing, {
               children: (0, i.jsxs)('div', {
@@ -101,7 +101,7 @@ t.Z = (0, r.memo)(function (e) {
                                     autoPlay: !1,
                                     children: (0, i.jsx)('source', {
                                         src: q.url,
-                                        type: null !== (b = q.mimetype) && void 0 !== b ? b : void 0,
+                                        type: null !== (A = q.mimetype) && void 0 !== A ? A : void 0,
                                         onError: () => $(q.url)
                                     })
                                 })
@@ -109,7 +109,7 @@ t.Z = (0, r.memo)(function (e) {
                           : (0, i.jsx)('img', {
                                 className: T.image,
                                 src: q.url,
-                                alt: A.config.messages.questName,
+                                alt: b.config.messages.questName,
                                 onError: () => $(q.url)
                             }),
                       (0, i.jsx)('div', {
@@ -125,7 +125,7 @@ t.Z = (0, r.memo)(function (e) {
                           children: (0, i.jsx)('img', {
                               className: T.logo,
                               src: K.url,
-                              alt: A.config.messages.gameTitle
+                              alt: b.config.messages.gameTitle
                           })
                       }),
                       (0, i.jsxs)('div', {
@@ -136,7 +136,7 @@ t.Z = (0, r.memo)(function (e) {
                                   className: T.title,
                                   variant: 'heading-md/semibold',
                                   color: 'always-white',
-                                  children: N.intl.format(N.t.EAYZAg, { questName: A.config.messages.questName })
+                                  children: N.intl.format(N.t.EAYZAg, { questName: b.config.messages.questName })
                               }),
                               (0, i.jsx)(d.Text, {
                                   variant: 'text-sm/medium',

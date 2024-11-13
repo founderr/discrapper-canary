@@ -22,14 +22,14 @@ var i = n(200651),
     N = n(243778),
     T = n(984370),
     x = n(797614),
-    b = n(359110),
-    A = n(6025),
+    A = n(359110),
+    b = n(6025),
     Z = n(897473),
     y = n(108427),
     L = n(970731),
     R = n(187819),
-    j = n(210887),
-    O = n(433355),
+    O = n(210887),
+    j = n(433355),
     P = n(592125),
     D = n(819640),
     M = n(626135),
@@ -163,7 +163,7 @@ function en() {
 }
 function ei(e) {
     let { pageWidth: t, onSidebarResize: n } = e,
-        r = (0, c.e7)([O.ZP], () => O.ZP.getSidebarState(O.uZ)),
+        r = (0, c.e7)([j.ZP], () => j.ZP.getSidebarState(j.uZ)),
         l = (0, c.e7)([P.Z], () => P.Z.getChannel(null == r ? void 0 : r.channelId));
     if (null == r || r.type !== Z.tI.VIEW_MESSAGE_REQUEST || null == l || !l.isPrivate()) return null;
     let a = t - X.R7I;
@@ -173,7 +173,7 @@ function ei(e) {
         onWidthChange: n,
         children: (0, i.jsx)(I.Z, {
             channel: l,
-            baseChannelId: O.uZ
+            baseChannelId: j.uZ
         })
     });
 }
@@ -243,11 +243,11 @@ let es = (0, p.Z)(function (e) {
     r.useEffect(() => {
         h.Y(X.Z5c.MESSAGE_REQUESTS), (0, y.e)('message-requests'), M.default.track(X.rMx.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }), x.Z.increment({ name: o.V.MESSAGE_REQUEST_VIEW });
     }, []);
-    let l = (0, c.e7)([j.Z], () => j.Z.theme),
+    let l = (0, c.e7)([O.Z], () => O.Z.theme),
         s = (0, z.w)(),
         [d, m] = r.useState(!1),
-        p = (0, c.e7)([O.ZP], () => {
-            let e = O.ZP.getSidebarState(O.uZ);
+        p = (0, c.e7)([j.ZP], () => {
+            let e = j.ZP.getSidebarState(j.uZ);
             return null != e && e.type === Z.tI.VIEW_MESSAGE_REQUEST ? e : null;
         }),
         g = null == p ? void 0 : p.channelId,
@@ -255,7 +255,7 @@ let es = (0, p.Z)(function (e) {
         _ = (0, k.T)(g),
         E = (0, w.J)(g);
     r.useEffect(() => {
-        null != g && !_ && E && f && ((0, b.Kh)(g), A.Z.closeChannelSidebar(O.uZ));
+        null != g && !_ && E && f && ((0, A.Kh)(g), b.Z.closeChannelSidebar(j.uZ));
     }, [g, E, f, _]);
     let [I, C] = r.useState(q.pS.REQUESTS),
         S = (e) => {

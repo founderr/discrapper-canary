@@ -52,8 +52,8 @@ let C = { offset: 2 },
     };
 function S(e) {
     var t, r;
-    let { channel: l, user: p, nick: S, mute: N, deaf: T, serverMute: x, serverDeaf: b } = e,
-        A = (0, s.e7)([g.Z], () => g.Z.isLocalMute(p.id)),
+    let { channel: l, user: p, nick: S, mute: N, deaf: T, serverMute: x, serverDeaf: A } = e,
+        b = (0, s.e7)([g.Z], () => g.Z.isLocalMute(p.id)),
         Z = (0, d.Z)({
             userId: p.id,
             checkSoundSharing: !0
@@ -62,8 +62,8 @@ function S(e) {
         L = p.getAvatarURL(l.guild_id, 24),
         R = null != S ? S : f.ZP.getName(p),
         {
-            icon: j,
-            colorize: O,
+            icon: O,
+            colorize: j,
             getStatus: P
         } = null !==
             (r = (function (e) {
@@ -74,11 +74,11 @@ function S(e) {
                 else if (l) return v.localMute;
                 else if (r) return v.mute;
             })({
-                serverDeaf: b,
+                serverDeaf: A,
                 deaf: T,
                 serverMute: x,
                 mute: N,
-                localMute: A
+                localMute: b
             })) && void 0 !== r
             ? r
             : {},
@@ -143,9 +143,9 @@ function S(e) {
                                 className: a()(I.avatar, { [I.speaking]: Z }),
                                 style: { backgroundImage: 'url('.concat(L, ')') },
                                 children:
-                                    null != j
-                                        ? (0, i.jsx)(j, {
-                                              className: a()(I.avatarIconOverlay, { [I.avatarIconRed]: O }),
+                                    null != O
+                                        ? (0, i.jsx)(O, {
+                                              className: a()(I.avatarIconOverlay, { [I.avatarIconRed]: j }),
                                               color: 'currentColor',
                                               size: 'xs'
                                           })

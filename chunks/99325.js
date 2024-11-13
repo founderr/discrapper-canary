@@ -29,8 +29,8 @@ n.d(t, {
 });
 var i = n(954955),
     l = n.n(i),
-    r = n(990547),
-    a = n(544891),
+    a = n(990547),
+    r = n(544891),
     s = n(570140),
     o = n(573261),
     c = n(866112),
@@ -39,7 +39,7 @@ var i = n(954955),
 let h = l()(async (e, t) => {
         try {
             s.Z.dispatch({ type: 'GUILD_DIRECTORY_FETCH_START' });
-            let n = await a.tn.get({
+            let n = await r.tn.get({
                 url: u.ANM.DIRECTORY_CHANNEL_ENTRIES(e),
                 query: { category_id: t }
             });
@@ -54,7 +54,7 @@ let h = l()(async (e, t) => {
     }, 200),
     p = l()(async (e) => {
         try {
-            let t = await a.tn.get({ url: u.ANM.DIRECTORY_CHANNEL_CATEGORY_COUNTS(e) });
+            let t = await r.tn.get({ url: u.ANM.DIRECTORY_CHANNEL_CATEGORY_COUNTS(e) });
             s.Z.dispatch({
                 type: 'GUILD_DIRECTORY_COUNTS_FETCH_SUCCESS',
                 channelId: e,
@@ -71,7 +71,7 @@ async function m(e, t, n) {
                 primary_category_id: i
             },
             trackedActionData: {
-                event: r.NetworkActionNames.DIRECTORY_GUILD_ENTRY_CREATE,
+                event: a.NetworkActionNames.DIRECTORY_GUILD_ENTRY_CREATE,
                 properties: {
                     directory_channel_id: e,
                     guild_id: t,
@@ -89,7 +89,7 @@ function f(e, t) {
     o.Z.delete({
         url: u.ANM.DIRECTORY_CHANNEL_ENTRY(e, t),
         trackedActionData: {
-            event: r.NetworkActionNames.DIRECTORY_GUILD_ENTRY_DELETE,
+            event: a.NetworkActionNames.DIRECTORY_GUILD_ENTRY_DELETE,
             properties: {
                 directory_channel_id: e,
                 guild_id: t
@@ -117,7 +117,7 @@ let g = l()(async (e, t) => {
                 channelId: e,
                 query: t
             });
-            let n = await a.tn.get({
+            let n = await r.tn.get({
                 url: u.ANM.DIRECTORY_ENTRIES_SEARCH(e),
                 query: { query: t }
             });
@@ -139,7 +139,7 @@ let g = l()(async (e, t) => {
     },
     x = async function (e, t, n) {
         let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : d.AR.UNCATEGORIZED,
-            l = await a.tn.patch({
+            l = await r.tn.patch({
                 url: u.ANM.DIRECTORY_CHANNEL_ENTRY(e, t),
                 body: {
                     description: n,
@@ -161,7 +161,7 @@ let g = l()(async (e, t) => {
     },
     _ = async (e, t) => {
         try {
-            let n = await a.tn.get({
+            let n = await r.tn.get({
                 url: u.ANM.DIRECTORY_CHANNEL_LIST_BY_ID(e),
                 query: { entity_ids: t }
             });

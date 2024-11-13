@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    r = n(597312),
-    a = n(481060),
+    a = n(597312),
+    r = n(481060),
     s = n(410030),
     o = n(100527),
     c = n(906732),
@@ -25,23 +25,23 @@ function _(e) {
         I = (0, h.ZP)(t.id),
         E = (0, s.ZP)(),
         { analyticsLocations: b } = (0, c.ZP)(o.Z.BLOCKED_PROFILE_PANEL),
-        N = (0, d.ZB)({
+        Z = (0, d.ZB)({
             layout: 'BLOCKED_PROFILE_PANEL',
             userId: t.id,
             channelId: n.id
         }),
-        Z = l.useRef(null);
+        N = l.useRef(null);
     return (0, i.jsx)(c.Gt, {
         value: b,
         children: (0, i.jsx)(d.Mt, {
-            value: N,
+            value: Z,
             children: (0, i.jsx)(m.Z, {
-                ref: Z,
+                ref: N,
                 user: t,
                 displayProfile: I,
                 profileType: g.y0.PANEL,
                 themeOverride: E,
-                children: (0, i.jsx)(r.u2, {
+                children: (0, i.jsx)(a.u2, {
                     children: (0, i.jsxs)('div', {
                         className: x.container,
                         children: [
@@ -58,16 +58,16 @@ function _(e) {
                                         user: t,
                                         guildId: null
                                     }),
-                                    (0, i.jsx)(a.Heading, {
+                                    (0, i.jsx)(r.Heading, {
                                         variant: 'heading-lg/bold',
                                         className: x.header,
                                         children: C.intl.string(C.t.VNJ7UF)
                                     }),
-                                    (0, i.jsx)(a.Text, {
+                                    (0, i.jsx)(r.Text, {
                                         variant: 'text-sm/medium',
                                         children: C.intl.format(C.t.LXbngo, { username: t.username })
                                     }),
-                                    (0, i.jsx)(a.Text, {
+                                    (0, i.jsx)(r.Text, {
                                         variant: 'text-sm/medium',
                                         children: C.intl.string(C.t['20WzZ2'])
                                     }),
@@ -82,7 +82,7 @@ function _(e) {
                                                 (0, u.pQ)({
                                                     action: 'VIEW_BLOCKED_PROFILE',
                                                     analyticsLocations: b,
-                                                    ...N
+                                                    ...Z
                                                 });
                                         }
                                     })
