@@ -1,4 +1,18 @@
 e.exports = {
     sliderContainer: 'sliderContainer_dd5a70',
-    slider: 'slider_dd5a70'
+    slider: 'slider_dd5a70',
+    infoContainer: 'infoContainer_dd5a70',
+    infoNitroContainer: 'infoNitroContainer_dd5a70',
+    infoNitroBackground: 'infoNitroBackground_dd5a70',
+    infoNitroTextContainer: 'infoNitroTextContainer_dd5a70',
+    infoNitroIcon: 'infoNitroIcon_dd5a70',
+    infoNitroText: 'infoNitroText_dd5a70',
+    infoNitroBadge: 'infoNitroBadge_dd5a70',
+    infoSoundContainer: 'infoSoundContainer_dd5a70',
+    infoSoundInnerContainer: 'infoSoundInnerContainer_dd5a70',
+    infoSoundIcon: 'infoSoundIcon_dd5a70',
+    infoExpandedSoundContainer: 'infoExpandedSoundContainer_dd5a70',
+    infoExpandedGuildContainer: 'infoExpandedGuildContainer_dd5a70',
+    infoExpandedGuildTitle: 'infoExpandedGuildTitle_dd5a70',
+    infoExpandedGuildInfoContainer: 'infoExpandedGuildInfoContainer_dd5a70'
 };
