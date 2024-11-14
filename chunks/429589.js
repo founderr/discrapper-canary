@@ -154,8 +154,11 @@ function _(t) {
             }
             if (!t) {
                 let t;
-                tl && (null == G || G(), th(B, _)),
-                    Q(!0),
+                if (tl) {
+                    null == G || G(), th(B, _);
+                    return;
+                }
+                Q(!0),
                     null != _ &&
                         (t = await a.Z.sendActivityInviteUser({
                             type: N.mFx.JOIN_REQUEST,
