@@ -18498,6 +18498,12 @@ span.clanTag_a31c43 {
     stroke: var(--interactive-normal)
 }
 
+.tooltip_cf8a7d {
+    display: flex;
+    align-items: center;
+    gap: 4px
+}
+
 .popout_b245a4 {
     background-color: var(--bg-surface-overlay);
     border-radius: 8px;

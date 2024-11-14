@@ -1,5 +1,5 @@
 n.d(t, {
-    YM: function () {
+    SE: function () {
         return c;
     }
 });
@@ -25,5 +25,6 @@ async function u(e, t = {}) {
     return (s.width = d * c), (s.height = f * c), !t.skipAutoScale && (0, o.Nv)(s), (s.style.width = `${d}`), (s.style.height = `${f}`), t.backgroundColor && ((u.fillStyle = t.backgroundColor), u.fillRect(0, 0, s.width, s.height)), u.drawImage(a, 0, 0, s.width, s.height), s;
 }
 async function c(e, t = {}) {
-    return (await u(e, t)).toDataURL();
+    let n = await u(e, t);
+    return await (0, o._c)(n);
 }

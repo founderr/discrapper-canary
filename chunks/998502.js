@@ -256,6 +256,10 @@ function w(e) {
             let t = await L(e);
             T.clipboard.copyImage(S.from(t), e);
         },
+        async copyImageBlob(e, t) {
+            let n = await e.arrayBuffer();
+            T.clipboard.copyImage(S.from(n), t);
+        },
         async saveImage(e) {
             var t;
             f()(v.isPlatformEmbedded, 'Save image method called outside native app');

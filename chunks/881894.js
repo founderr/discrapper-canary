@@ -21,5 +21,6 @@ e.exports = {
     emptyCrownIcon: 'emptyCrownIcon_cf8a7d',
     copySpinner: 'copySpinner_cf8a7d',
     copyLink: 'copyLink_cf8a7d',
-    badgesContainer: 'badgesContainer_cf8a7d'
+    badgesContainer: 'badgesContainer_cf8a7d',
+    tooltip: 'tooltip_cf8a7d'
 };
