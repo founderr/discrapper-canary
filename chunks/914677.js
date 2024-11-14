@@ -8,18 +8,20 @@ var n = s(200651),
 let c = 'url(#gradient)',
     d = (e, t) => {
         switch (e) {
-            case a.Q.NITRO_LOGO:
+            case a.Qo.NITRO_LOGO:
                 return t ? '0.3' : '0.2';
-            case a.Q.NITRO_GEM:
+            case a.Qo.NITRO_GEM:
+            case a.Qo.AVATAR_DECO:
             default:
                 return;
         }
     },
     u = (e) => {
         switch (e) {
-            case a.Q.NITRO_GEM:
+            case a.Qo.NITRO_GEM:
+            case a.Qo.AVATAR_DECO:
                 return 'var(--background-primary)';
-            case a.Q.NITRO_LOGO:
+            case a.Qo.NITRO_LOGO:
                 return 'var(--premium-tier-2-purple)';
             default:
                 return;
@@ -27,9 +29,10 @@ let c = 'url(#gradient)',
     },
     p = (e, t) => {
         switch (t) {
-            case a.Q.NITRO_GEM:
+            case a.Qo.NITRO_GEM:
+            case a.Qo.AVATAR_DECO:
                 return c;
-            case a.Q.NITRO_LOGO:
+            case a.Qo.NITRO_LOGO:
                 return e ? 'url(#gradient_nitro_logo)' : c;
             default:
                 return;
@@ -48,8 +51,8 @@ t.Z = (e) => {
     }, [t]);
     let v = (0, o.ZP)(),
         j = (0, i.ap)(v),
-        E = u(C),
-        A = d(C, j),
+        A = u(C),
+        E = d(C, j),
         O = null != g ? g : p(j, C);
     return (0, n.jsxs)('div', {
         className: l.circleContainer,
@@ -59,14 +62,14 @@ t.Z = (e) => {
                 className: l.circleSVG,
                 children: [
                     (0, n.jsx)('circle', {
-                        className: C === a.Q.NITRO_GEM ? l.baseProgressCircle : void 0,
+                        className: C === a.Qo.NITRO_GEM || C === a.Qo.AVATAR_DECO ? l.baseProgressCircle : void 0,
                         fill: 'transparent',
                         strokeWidth: x,
                         r: ''.concat(_),
                         cx: '50%',
                         cy: '50%',
-                        stroke: E,
-                        strokeOpacity: A
+                        stroke: A,
+                        strokeOpacity: E
                     }),
                     (0, n.jsx)('circle', {
                         stroke: O,
