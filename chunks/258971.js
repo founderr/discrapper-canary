@@ -1,9 +1,9 @@
 n.d(t, {
     Uc: function () {
-        return c;
+        return d;
     },
     Xh: function () {
-        return d;
+        return u;
     },
     m_: function () {
         return r;
@@ -14,14 +14,15 @@ var i,
     l = n(512969),
     a = n(264043),
     s = n(703656),
-    o = n(981631);
-function c() {
+    o = n(979007),
+    c = n(981631);
+function d() {
     let {
         location: { state: e }
     } = (0, s.s1)();
     return null == e ? void 0 : e.previousView;
 }
-function d() {
+function u() {
     var e, t, n;
     let {
         location: { pathname: i }
@@ -29,7 +30,7 @@ function d() {
     if (
         null !=
         (0, l.LX)(i, {
-            path: o.Z5c.GLOBAL_DISCOVERY_APPS,
+            path: c.Z5c.GLOBAL_DISCOVERY_APPS,
             exact: !0
         })
     )
@@ -37,33 +38,34 @@ function d() {
     if (
         null !=
         (0, l.LX)(i, {
-            path: o.Z5c.GLOBAL_DISCOVERY_APPS_SEARCH,
+            path: c.Z5c.GLOBAL_DISCOVERY_APPS_SEARCH,
             exact: !0
         })
     )
         return { type: 'search' };
     let r = (0, l.LX)(i, {
-            path: [o.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(':applicationId')],
+            path: [c.Z5c.GLOBAL_DISCOVERY_APPS_CATEGORY(':categoryId')],
             exact: !0
         }),
-        { applicationId: c } = null !== (e = null == r ? void 0 : r.params) && void 0 !== e ? e : {};
-    if (null != r && null != c) {
-        let e = null === (t = a.Z.getApplication(c)) || void 0 === t ? void 0 : t.name;
-        return {
-            type: 'application',
-            applicationId: c,
-            applicationName: e
-        };
-    }
-    let d = (0, l.LX)(i, {
-            path: [o.Z5c.GLOBAL_DISCOVERY_APPS_CATEGORY(':categoryId')],
-            exact: !0
-        }),
-        { categoryId: u } = null !== (n = null == d ? void 0 : d.params) && void 0 !== n ? n : {};
-    if (null != d && null != u)
+        { categoryId: d } = null !== (e = null == r ? void 0 : r.params) && void 0 !== e ? e : {};
+    if (null != r && null != d)
         return {
             type: 'category',
-            categoryId: u
+            categoryId: d
         };
+    let u = (0, l.LX)(i, {
+            path: [c.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(':applicationId'), c.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(':applicationId', ':section'), c.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(':applicationId', ':skuId')],
+            exact: !0
+        }),
+        { applicationId: h, section: m, skuId: p } = null !== (t = null == u ? void 0 : u.params) && void 0 !== t ? t : {};
+    if (null != u && null != h) {
+        let e = null === (n = a.Z.getApplication(h)) || void 0 === n ? void 0 : n.name;
+        return {
+            type: 'application',
+            applicationId: h,
+            applicationName: e,
+            section: null != m ? m : null != p ? o.Wc.STORE : o.Wc.ABOUT
+        };
+    }
 }
 ((i = r || (r = {})).HOME = 'home'), (i.SEARCH = 'search'), (i.APPLICATION = 'application'), (i.CATEGORY = 'category');

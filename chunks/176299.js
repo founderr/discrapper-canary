@@ -32,8 +32,8 @@ var i = n(200651),
     Z = n(135864),
     L = n(372900),
     y = n(6039),
-    R = n(637853),
-    O = n(326145),
+    O = n(637853),
+    R = n(326145),
     P = n(269675),
     j = n(242601),
     D = n(416568),
@@ -175,8 +175,8 @@ let eg = 'resizable-sidebar-width',
                 default:
                     (0, et.vE)(l);
             }
-        if ((0, R.p3)(s, o))
-            return (0, i.jsx)(O.Z, {
+        if ((0, O.p3)(s, o))
+            return (0, i.jsx)(R.Z, {
                 guildId: r,
                 channelId: l
             });
@@ -235,8 +235,8 @@ let eg = 'resizable-sidebar-width',
             : null;
     },
     ey = () => (0, i.jsx)(ec.Z, {}),
-    eR = () => (0, i.jsx)(ed.Z, {}),
-    eO = function () {
+    eO = () => (0, i.jsx)(ed.Z, {}),
+    eR = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         return function (t) {
             return (0, i.jsx)(N.Z, {
@@ -489,23 +489,23 @@ function eG() {
                                                 }),
                                                 (0, i.jsx)(I.Z, {
                                                     path: eu.Z5c.APPLICATION_STORE,
-                                                    render: eR,
+                                                    render: eO,
                                                     impressionName: o.ImpressionNames.APPLICATION_STORE,
                                                     disableTrack: !0
                                                 }),
                                                 (0, i.jsx)(I.Z, {
                                                     path: eu.Z5c.COLLECTIBLES_SHOP_FULLSCREEN,
-                                                    render: eO(!0),
+                                                    render: eR(!0),
                                                     disableTrack: !0
                                                 }),
                                                 (0, i.jsx)(I.Z, {
                                                     path: eu.Z5c.COLLECTIBLES_SHOP,
-                                                    render: eO(!1),
+                                                    render: eR(!1),
                                                     disableTrack: !0
                                                 }),
                                                 (0, i.jsx)(I.Z, {
                                                     path: eu.Z5c.COLLECTIBLES_SHOP_PRODUCT_DETAIL(':skuId'),
-                                                    render: eO(!1),
+                                                    render: eR(!1),
                                                     disableTrack: !0
                                                 }),
                                                 (0, i.jsx)(I.Z, {
@@ -546,24 +546,6 @@ function eG() {
                                                 }),
                                                 (0, i.jsx)(I.Z, {
                                                     path: eu.Z5c.GLOBAL_DISCOVERY_APPS,
-                                                    render: ex,
-                                                    impressionName: o.ImpressionNames.GLOBAL_DISCOVERY_APPS,
-                                                    disableTrack: !0
-                                                }),
-                                                (0, i.jsx)(I.Z, {
-                                                    path: eu.Z5c.GLOBAL_DISCOVERY_APPS_CATEGORY(':categoryId'),
-                                                    render: ex,
-                                                    impressionName: o.ImpressionNames.GLOBAL_DISCOVERY_APPS,
-                                                    disableTrack: !0
-                                                }),
-                                                (0, i.jsx)(I.Z, {
-                                                    path: eu.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(':applicationId'),
-                                                    render: ex,
-                                                    impressionName: o.ImpressionNames.GLOBAL_DISCOVERY_APPS,
-                                                    disableTrack: !0
-                                                }),
-                                                (0, i.jsx)(I.Z, {
-                                                    path: eu.Z5c.GLOBAL_DISCOVERY_APPS_SEARCH,
                                                     render: ex,
                                                     impressionName: o.ImpressionNames.GLOBAL_DISCOVERY_APPS,
                                                     disableTrack: !0

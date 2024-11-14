@@ -1,18 +1,8 @@
-n.d(t, {
-    Et: function () {
-        return l;
-    },
-    IV: function () {
-        return a;
-    },
-    Mm: function () {
-        return r;
-    },
-    kK: function () {
-        return i;
+var n, a;
+r.d(t, {
+    Wc: function () {
+        return n;
     }
-});
-let i = 'featured',
-    r = '',
-    l = 100,
-    a = 48;
+}),
+    ((a = n || (n = {})).ABOUT = 'about'),
+    (a.STORE = 'store');

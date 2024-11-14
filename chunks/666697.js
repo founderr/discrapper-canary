@@ -1,117 +1,122 @@
 n(47120);
-var i,
-    r,
-    l = n(200651),
-    a = n(192379),
-    s = n(442837),
-    o = n(674588),
-    c = n(264043),
-    d = n(125909),
-    u = n(283836),
-    h = n(374939),
-    m = n(233374),
-    p = n(283293),
-    g = n(292191),
-    f = n(133743),
-    _ = n(680474),
-    E = n(571737),
-    I = n(101400),
-    C = n(946542),
-    v = n(213746),
+var i = n(200651),
+    r = n(192379),
+    l = n(442837),
+    a = n(674588),
+    s = n(264043),
+    o = n(125909),
+    c = n(283836),
+    d = n(374939),
+    u = n(233374),
+    h = n(283293),
+    m = n(292191),
+    p = n(133743),
+    g = n(680474),
+    f = n(571737),
+    _ = n(101400),
+    E = n(946542),
+    I = n(213746),
+    C = n(979007),
+    v = n(981631),
     S = n(388032),
     N = n(850258);
-((r = i || (i = {})).ABOUT = 'about'), (r.STORE = 'store');
 t.Z = function (e) {
-    let { applicationId: t, onSelectApplication: n, onScroll: i } = e,
-        r = a.useRef(null),
-        T = (0, s.e7)([c.Z], () => c.Z.getApplication(t)),
-        A = (0, s.e7)([c.Z], () => c.Z.getApplicationFetchState(t));
-    a.useEffect(() => {
-        null != t && null == T && o.i6(t);
-    }, [t, T]);
-    let b = null == T ? void 0 : T.storefront_available,
-        [x, Z] = a.useState('about'),
-        L = a.useCallback(
+    let { applicationId: t, onSelectApplication: n, onScroll: T, initialTab: A } = e,
+        b = r.useRef(null),
+        x = (0, l.e7)([s.Z], () => s.Z.getApplication(t)),
+        Z = (0, l.e7)([s.Z], () => s.Z.getApplicationFetchState(t));
+    r.useEffect(() => {
+        null != t && null == x && a.i6(t);
+    }, [t, x]);
+    let L = null == x ? void 0 : x.storefront_available,
+        [y, O] = r.useState(null != A ? A : C.Wc.ABOUT),
+        R = r.useCallback(
             (e) => {
                 var t;
-                null === (t = r.current) || void 0 === t || t.scrollTo({ to: 0 }), Z('about'), n(e);
+                null === (t = b.current) || void 0 === t || t.scrollTo({ to: 0 }), O(C.Wc.ABOUT), n(e);
             },
             [n]
         );
-    a.useEffect(() => {
-        (null == T ? void 0 : T.storefront_available) && null != t && (0, u.Z)(t);
-    }, [null == T ? void 0 : T.storefront_available, t]);
-    let y = a.useMemo(
+    r.useEffect(() => {
+        (null == x ? void 0 : x.storefront_available) && null != t && (0, c.Z)(t);
+    }, [null == x ? void 0 : x.storefront_available, t]);
+    let P = r.useMemo(
             () => [
                 {
-                    id: 'about',
+                    id: C.Wc.ABOUT,
                     label: S.intl.string(S.t.JkjJBQ)
                 },
                 {
-                    id: 'store',
+                    id: C.Wc.STORE,
                     label: S.intl.string(S.t.NfuihY)
                 }
             ],
             []
         ),
-        R = a.useMemo(() => {
-            if (null == T) return null;
-            switch (x) {
-                case 'about':
-                    return (0, l.jsx)(_.Z, { application: T });
-                case 'store':
-                    return (0, l.jsx)(v.Z, { application: T });
+        j = r.useMemo(() => {
+            if (null == x) return null;
+            switch (y) {
+                case C.Wc.ABOUT:
+                    return (0, i.jsx)(g.Z, { application: x });
+                case C.Wc.STORE:
+                    return (0, i.jsx)(I.Z, { application: x });
             }
-        }, [x, T]),
-        O = a.useCallback((e) => {
-            (0, f.O4)({ categoryId: e.toString() });
+        }, [y, x]),
+        D = r.useCallback(
+            (e) => {
+                O(e), e === C.Wc.ABOUT ? (0, p.Gp)(v.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(t)) : (0, p.Gp)(v.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t, e));
+            },
+            [t]
+        ),
+        M = r.useCallback((e) => {
+            (0, p.O4)({ categoryId: e.toString() });
         }, []);
-    if (null == T)
-        return A === c.M.FETCHING
-            ? (0, l.jsx)('div', {
+    if (null == x)
+        return Z === s.M.FETCHING
+            ? (0, i.jsx)('div', {
                   className: N.centerContainer,
-                  children: (0, l.jsx)(d.Z, { loading: !0 })
+                  children: (0, i.jsx)(o.Z, { loading: !0 })
               })
-            : (0, l.jsx)('div', {
+            : (0, i.jsx)('div', {
                   className: N.centerContainer,
-                  children: (0, l.jsx)(g.Z, { className: N.error })
+                  children: (0, i.jsx)(m.Z, { className: N.error })
               });
-    let P = 'about' === x;
-    return (0, l.jsx)(p.Z, {
-        onScroll: i,
-        ref: r,
-        children: (0, l.jsx)(h.Z, {
-            children: (0, l.jsxs)('div', {
+    let w = y === C.Wc.ABOUT;
+    return (0, i.jsx)(h.Z, {
+        onScroll: T,
+        ref: b,
+        children: (0, i.jsx)(d.Z, {
+            children: (0, i.jsxs)('div', {
                 className: N.detailContainer,
                 children: [
-                    (0, l.jsx)(E.Z, { application: T }),
-                    (0, l.jsxs)('div', {
+                    (0, i.jsx)(f.Z, { application: x }),
+                    (0, i.jsxs)('div', {
                         className: N.contentContainer,
                         children: [
-                            (0, l.jsxs)('div', {
+                            (0, i.jsxs)('div', {
                                 className: N.contentTabsContainer,
                                 children: [
-                                    b &&
-                                        (0, l.jsx)('div', {
+                                    L &&
+                                        (0, i.jsx)('div', {
                                             className: N.contentTabs,
-                                            children: (0, l.jsx)(m.Z, {
-                                                tabs: y,
-                                                onTabSelect: Z,
-                                                selectedTab: x
+                                            children: (0, i.jsx)(u.Z, {
+                                                tabs: P,
+                                                onTabSelect: D,
+                                                selectedTab: y
                                             })
                                         }),
-                                    R,
-                                    (0, l.jsx)(C.Z, {
-                                        application: T,
-                                        onSelectApplication: L
+                                    j,
+                                    (0, i.jsx)(E.Z, {
+                                        application: x,
+                                        onSelectApplication: R
                                     })
                                 ]
                             }),
-                            P &&
-                                (0, l.jsx)(I.Z, {
+                            w &&
+                                (0, i.jsx)(_.Z, {
                                     className: N.sidebar,
-                                    application: T,
-                                    onSelectCategory: O
+                                    application: x,
+                                    onSelectCategory: M
                                 })
                         ]
                     })
