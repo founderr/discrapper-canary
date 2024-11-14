@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return m;
+            return f;
         }
     });
 var l = n(200651),
@@ -14,9 +14,9 @@ var l = n(200651),
     u = n(987562),
     d = n(981631),
     b = n(388032);
-function m(e) {
-    let { onClose: t, transitionState: m } = e,
-        f = (0, i.Z)(u.CE);
+function f(e) {
+    let { onClose: t, transitionState: f } = e,
+        m = (0, i.Z)(u.CE);
     a.useEffect(() => {
         s.default.track(d.rMx.OPEN_MODAL, { type: 'Block User Feedback' });
     }, []);
@@ -39,11 +39,11 @@ function m(e) {
         header: b.intl.string(b.t['+2qQAQ']),
         body: b.intl.string(b.t['+0Rsvb']),
         problemTitle: b.intl.string(b.t.TXomWV),
-        problems: f,
+        problems: m,
         feedbackProblems: [u.F5.SOMETHING_ELSE],
         onSubmit: _,
         onClose: t,
-        transitionState: m,
+        transitionState: f,
         otherKey: u.F5.SOMETHING_ELSE,
         hideHelpDeskLink: !0,
         hideDontShowCheckbox: !0

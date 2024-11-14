@@ -22,9 +22,9 @@ function S(e) {
     let { children: t } = e;
     return (0, r.jsx)(s.ThemeProvider, {
         theme: v.BR.DARK,
+        disableAdaptiveTheme: !0,
         children: (e) =>
             (0, r.jsx)('div', {
-                'data-disable-adaptive-theme': !0,
                 className: e,
                 children: t
             })

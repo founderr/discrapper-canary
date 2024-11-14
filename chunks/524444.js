@@ -246,13 +246,13 @@ function ee(e) {
 }
 ((i = r || (r = {}))[(i.OLD_MESSAGES = 0)] = 'OLD_MESSAGES'), (i[(i.REPLY = 1)] = 'REPLY');
 let et = (e) => {
-        let { type: t = 0, onClick: n } = e;
+        let { type: t = 0, onClick: n, className: r } = e;
         return (0, a.jsx)(b.G.Consumer, {
             children: (e) =>
                 e.disableInteractions
                     ? null
                     : (0, a.jsxs)('div', {
-                          className: H.jumpToPresentBar,
+                          className: l()(H.jumpToPresentBar, r),
                           children: [
                               (0, a.jsx)(_.FocusRing, {
                                   offset: 4,
@@ -304,13 +304,13 @@ let et = (e) => {
         });
     },
     en = (e) => {
-        let { onClick: t, loading: n } = e;
+        let { onClick: t, loading: n, className: r } = e;
         return (0, a.jsx)(b.G.Consumer, {
             children: (e) =>
                 e.disableInteractions
                     ? null
                     : (0, a.jsxs)(_.Clickable, {
-                          className: H.messagesErrorBar,
+                          className: l()(H.messagesErrorBar, r),
                           onClick: t,
                           focusProps: {
                               offset: {

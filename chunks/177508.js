@@ -795,7 +795,7 @@ function P() {
     let e = (0, o.e7)([d.Z], () => d.Z.gradientPreset);
     return (0, i.jsx)(c.ThemeProvider, {
         theme: g.BR.DARKER,
-        disableColorMixing: !0,
+        disableAdaptiveTheme: !0,
         children: (t) =>
             (0, i.jsxs)('div', {
                 className: l()(t, p.section),
