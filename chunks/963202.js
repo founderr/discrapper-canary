@@ -11,9 +11,6 @@ n.d(t, {
     iN: function () {
         return f;
     },
-    io: function () {
-        return N;
-    },
     nk: function () {
         return I;
     },
@@ -173,7 +170,7 @@ function m(e) {
                             },
                             { autoTrackExposure: a }
                         ),
-                        i = C.getCurrentConfig(
+                        i = A.getCurrentConfig(
                             {
                                 guildId: n.id,
                                 location: t
@@ -322,24 +319,21 @@ function y(e) {
             config: { canAdminsBrowse: !0 }
         }
     ]
-});
+}),
+    (0, a.B)({
+        kind: 'user',
+        id: '2024-10_rapidash_discovery_entrypoint',
+        label: 'Rapidash Discovery Entrypoint',
+        defaultConfig: { showDiscovery: !1 },
+        treatments: [
+            {
+                id: 1,
+                label: 'Enable',
+                config: { showDiscovery: !0 }
+            }
+        ]
+    });
 let A = (0, a.B)({
-    kind: 'user',
-    id: '2024-10_rapidash_discovery_entrypoint',
-    label: 'Rapidash Discovery Entrypoint',
-    defaultConfig: { showDiscovery: !1 },
-    treatments: [
-        {
-            id: 1,
-            label: 'Enable',
-            config: { showDiscovery: !0 }
-        }
-    ]
-});
-function N(e) {
-    return A.useExperiment({ location: e }).showDiscovery;
-}
-let C = (0, a.B)({
     kind: 'guild',
     id: '2024-10_rapidash_discovery_sign_up',
     label: 'Rapidash Discovery Early Sign Up',
