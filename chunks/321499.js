@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return f;
     }
 });
 var i = n(200651),
@@ -22,7 +22,7 @@ var i = n(200651),
     C = n(113207);
 let _ = n(651714),
     E = n(297166);
-function f() {
+function I() {
     let { experimentalEncoders: e } = (0, a.cj)([h.Z], () => ({ experimentalEncoders: h.Z.getExperimentalEncoders() }));
     return (0, i.jsx)(m.F, {
         setting: S.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_EXPERIMENTAL_ENCODERS,
@@ -35,7 +35,7 @@ function f() {
         })
     });
 }
-function I() {
+function f() {
     let e = (0, a.e7)([g.Z], () => g.Z.theme),
         { openH264: t, hardwareEncoding: n } = (0, a.cj)([h.Z], () => ({
             openH264: h.Z.getOpenH264(),
@@ -94,7 +94,7 @@ function I() {
                                     children: T.intl.string(T.t.Sln58f)
                                 })
                             }),
-                            (0, i.jsx)(f, {})
+                            (0, i.jsx)(I, {})
                         ]
                     })
                 })

@@ -1,6 +1,6 @@
 t.d(n, {
     ZP: function () {
-        return C;
+        return _;
     },
     tE: function () {
         return l;
@@ -32,9 +32,9 @@ function v(e) {
         children: n
     });
 }
-function C(e) {
+function _(e) {
     let { selectActionComponent: n, queryOptions: t, renderIcon: l, renderOptionLabel: i, defaultValues: o } = e,
-        { type: C, placeholder: _, maxValues: g, disabled: I } = n,
+        { type: _, placeholder: C, maxValues: g, disabled: I } = n,
         [b, j] = a.useState(!1),
         [S, N] = a.useState(!1),
         [E, T] = a.useState(new Map(null == o ? void 0 : o.map((e) => [e.value, e]))),
@@ -55,7 +55,7 @@ function C(e) {
             isDisabled: B,
             error: w
         } = (0, m.Ee)(n, {
-            type: C,
+            type: _,
             selectedOptions: Array.from(E.values())
         }),
         U = A === f.gH.LOADING;
@@ -67,10 +67,10 @@ function C(e) {
     }, [M]);
     let G = a.useCallback(() => {
         P({
-            type: C,
+            type: _,
             selectedOptions: Array.from(E.values())
         }) && Z(new Set(E.keys()));
-    }, [P, C, E]);
+    }, [P, _, E]);
     a.useEffect(() => {
         if (!(b || S || (E.size === y.size && Array.from(E.keys()).every((e) => y.has(e))))) G();
     }, [b, S, y, E, G]);
@@ -82,7 +82,7 @@ function C(e) {
                 new Promise((n) => {
                     n(t(e));
                 }),
-            placeholder: D ? (null != _ ? _ : p.intl.string(p.t.Otr6W1)) : void 0,
+            placeholder: D ? (null != C ? C : p.intl.string(p.t.Otr6W1)) : void 0,
             onClose: () => j(!1),
             onOpen: () => j(!0),
             onBlur: () => N(!1),

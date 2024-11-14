@@ -22,8 +22,8 @@ var i = n(200651),
     C = n(63063),
     _ = n(74538),
     E = n(18438),
-    f = n(778825),
-    I = n(856607),
+    I = n(778825),
+    f = n(856607),
     N = n(594496),
     A = n(856768),
     b = n(981631),
@@ -50,9 +50,9 @@ function O(e) {
         }),
         O = (0, a.e7)([x.Z], () => !x.Z.isFetchingProfile(r.id, null == t ? void 0 : t.id)),
         R = (0, a.e7)([S.Z], () => S.Z.hidePersonalInformation),
-        { source: P, ...D } = (0, a.cj)([f.Z], () => ({
-            ...f.Z.getAllPending(),
-            source: f.Z.getSource()
+        { source: P, ...D } = (0, a.cj)([I.Z], () => ({
+            ...I.Z.getAllPending(),
+            source: I.Z.getSource()
         }));
     return (s.useEffect(() => () => c.Z.wait(E.W3), []),
     s.useEffect(() => {
@@ -95,7 +95,7 @@ function O(e) {
                                   })
                               ]
                           })
-                        : (0, i.jsx)(I.Z, {})
+                        : (0, i.jsx)(f.Z, {})
                 ]
             })
           : (0, i.jsx)(o.Spinner, {});

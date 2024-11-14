@@ -18,8 +18,8 @@ var i = n(200651),
     C = n(594174),
     _ = n(78839),
     E = n(267642),
-    f = n(63063),
-    I = n(74538),
+    I = n(63063),
+    f = n(74538),
     N = n(283029),
     A = n(357956),
     b = n(275909),
@@ -170,7 +170,7 @@ t.Z = function (e) {
         J = s.useMemo(() => U.find((e) => e.isAvailable()), [U]);
     if (0 === U.length) return null;
     let $ = U.length;
-    if (((t = K ? (1 === $ && X ? R.intl.string(R.t['65r43N']) : R.intl.formatToPlainString(Y ? R.t['3DW6DQ'] : R.t['/u15QU'], { numUnappliedGuildBoostSlots: $ })) : R.intl.formatToPlainString(Y ? R.t['3DW6DQ'] : R.t.BPadnJ, { numUnappliedGuildBoostSlots: $ })), I.ZP.isPremium(L))) {
+    if (((t = K ? (1 === $ && X ? R.intl.string(R.t['65r43N']) : R.intl.formatToPlainString(Y ? R.t['3DW6DQ'] : R.t['/u15QU'], { numUnappliedGuildBoostSlots: $ })) : R.intl.formatToPlainString(Y ? R.t['3DW6DQ'] : R.t.BPadnJ, { numUnappliedGuildBoostSlots: $ })), f.ZP.isPremium(L))) {
         if (K && 1 === $ && X) n = Z.skuId === O.Ft.FREE_GUILD_BOOST_1_MONTH ? R.intl.string(R.t.dm8r0t) : R.intl.string(R.t.VGJ9IC);
         else {
             let e = (e, t) =>
@@ -203,7 +203,7 @@ t.Z = function (e) {
                 subscriptionIsPausedOrPausePending: !0,
                 hasFractionPremium: !0
             },
-            () => R.intl.format(R.t['4RgA6O'], { helpCenterLink: f.Z.getArticleURL(v.BhN.FRACTIONAL_PREMIUM_ABOUT) })
+            () => R.intl.format(R.t['4RgA6O'], { helpCenterLink: I.Z.getArticleURL(v.BhN.FRACTIONAL_PREMIUM_ABOUT) })
         )
         .with(
             {

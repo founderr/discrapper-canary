@@ -23,8 +23,8 @@ var i = n(200651),
     C = n(639119),
     _ = n(211712),
     E = n(31590),
-    f = n(81245),
-    I = n(629654),
+    I = n(81245),
+    f = n(629654),
     N = n(53691),
     A = n(165583),
     b = n(197115),
@@ -103,7 +103,7 @@ function z(e) {
             location: em + ' auto off',
             autoTrackExposure: !1
         });
-    let eh = (0, f.Mu)('TryOutPremiumSection'),
+    let eh = (0, I.Mu)('TryOutPremiumSection'),
         { enabled: eg } = E.Z.useExperiment({ location: 'UserSettingsProfileCustomization' }, { autoTrackExposure: !1 });
     return W
         ? (0, i.jsx)(m.Gt, {
@@ -130,7 +130,7 @@ function z(e) {
                           profilePreview: (0, i.jsxs)(i.Fragment, {
                               children: [
                                   eg &&
-                                      (0, i.jsx)(I.Z, {
+                                      (0, i.jsx)(f.Z, {
                                           selectedIndex: el,
                                           setSelectedIndex: ea
                                       }),

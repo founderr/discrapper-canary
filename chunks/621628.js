@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return f;
     }
 }),
     n(47120),
@@ -51,7 +51,7 @@ function E(e) {
         })
     });
 }
-function f(e) {
+function I(e) {
     let { items: t, dismissedContents: n, handleChange: s } = e;
     return (0, i.jsx)(i.Fragment, {
         children: t
@@ -69,7 +69,7 @@ function f(e) {
             )
     });
 }
-function I() {
+function f() {
     var e;
     let t = (0, S.ZP)((e) => e.recentlyShown),
         { dailyCapReached: n, dailyCapOverridden: r } = (0, a.cj)([x.Z], () => ({
@@ -85,7 +85,7 @@ function I() {
                 })) && void 0 !== e
                 ? e
                 : new Uint8Array(),
-        [I, N] = (function (e, t) {
+        [f, N] = (function (e, t) {
             let [n, i] = s.useState(() => {
                 let n = c.K.get(e);
                 return null != n ? n : t;
@@ -106,10 +106,10 @@ function I() {
             });
         },
         b = t.map((e) => o.z[e]),
-        v = I.filter((e) => e.toLowerCase().includes(m.toLowerCase())).filter((e) => !b.includes(e)),
+        v = f.filter((e) => e.toLowerCase().includes(m.toLowerCase())).filter((e) => !b.includes(e)),
         j = Object.keys(o.z)
             .filter((e) => !b.includes(e))
-            .filter((e) => !I.includes(e))
+            .filter((e) => !f.includes(e))
             .filter((e) => e.toLowerCase().includes(m.toLowerCase()))
             .sort((e, t) => e.localeCompare(t));
     return (0, i.jsxs)(i.Fragment, {
@@ -176,7 +176,7 @@ function I() {
                                       className: _.marginBottom20,
                                       children: (0, i.jsx)(d.FormTitle, { children: 'Recently Shown' })
                                   }),
-                                  (0, i.jsx)(f, {
+                                  (0, i.jsx)(I, {
                                       items: b,
                                       dismissedContents: E,
                                       handleChange: A
@@ -191,7 +191,7 @@ function I() {
                                       className: _.marginBottom20,
                                       children: (0, i.jsx)(d.FormTitle, { children: 'Recent Overrides' })
                                   }),
-                                  (0, i.jsx)(f, {
+                                  (0, i.jsx)(I, {
                                       items: v,
                                       dismissedContents: E,
                                       handleChange: A
@@ -203,7 +203,7 @@ function I() {
                         className: l()(_.marginBottom20, _.marginTop20),
                         children: (0, i.jsx)(d.FormTitle, { children: 'Available Dismissible Contents' })
                     }),
-                    (0, i.jsx)(f, {
+                    (0, i.jsx)(I, {
                         items: j,
                         dismissedContents: E,
                         handleChange: A

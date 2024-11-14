@@ -77,7 +77,7 @@ t.Z = function (e) {
               )
             : '',
         E = (0, a.Z)(n.endsAt, a.a.SHORT_TIME),
-        f = T ? _ : E;
+        I = T ? _ : E;
     return (0, i.jsx)('div', {
         children: (0, i.jsxs)('div', {
             className: r()(s, h.fractionalPremiumAccountCredit),
@@ -110,7 +110,7 @@ t.Z = function (e) {
                 })),
                 (0, i.jsx)(g, {
                     showChargingUpState: T,
-                    rowValueText: f,
+                    rowValueText: I,
                     endsAt: n.endsAt,
                     fractionalState: n.fractionalState,
                     activationDate: x

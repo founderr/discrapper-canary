@@ -31,8 +31,8 @@ var r = n(200651),
     j = n(281055),
     b = n(46140),
     D = n(981631),
-    y = n(388032),
-    A = n(417575);
+    A = n(388032),
+    y = n(417575);
 function k(e) {
     var t;
     let { transitionState: n, onClose: i, quest: f, autoplay: k } = e,
@@ -43,8 +43,8 @@ function k(e) {
         [O, R] = o.useState(B.progressSeconds),
         [w, F] = o.useState(!1),
         { completedRatio: Z, completedRatioDisplay: U } = (0, p.I)(f),
-        [G, V] = (0, T.G6)(y.intl.string(y.t.RDE0SU), y.intl.string(y.t['+5kSoa']), 1700),
-        q = (null === (t = f.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null ? y.intl.string(y.t.vTgCW1) : y.intl.string(y.t.cfY4PD),
+        [G, V] = (0, T.G6)(A.intl.string(A.t.RDE0SU), A.intl.string(A.t['+5kSoa']), 1700),
+        q = (null === (t = f.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null ? A.intl.string(A.t.vTgCW1) : A.intl.string(A.t.cfY4PD),
         H = o.useCallback(() => {
             (0, C.f2)(f.id, {
                 content: v.jn.VIDEO_MODAL,
@@ -65,11 +65,11 @@ function k(e) {
             F(!1);
         },
         Q = o.useMemo(() => x.r.build(f.config).defaultReward.messages.name, [f]),
-        K = y.intl.formatToPlainString(y.t['12IWPz'], { rewardName: Q });
+        K = A.intl.formatToPlainString(A.t['12IWPz'], { rewardName: Q });
     return (0, r.jsx)(c.ModalRoot, {
         transitionState: n,
         size: c.ModalSize.DYNAMIC,
-        className: A.modalRoot,
+        className: y.modalRoot,
         children: (0, r.jsx)(h.A, {
             questOrQuests: f,
             questContent: v.jn.VIDEO_MODAL,
@@ -81,32 +81,32 @@ function k(e) {
                     ref: (t) => {
                         e.current = t;
                     },
-                    className: A.modalBg,
+                    className: y.modalBg,
                     children: (0, r.jsx)('div', {
-                        className: A.modalBody,
+                        className: y.modalBody,
                         children: (0, r.jsxs)('div', {
-                            className: A.modalContent,
+                            className: y.modalContent,
                             children: [
                                 (0, r.jsxs)('div', {
-                                    className: A.contentHeader,
+                                    className: y.contentHeader,
                                     children: [
                                         (0, r.jsxs)(c.Clickable, {
-                                            className: A.contentHeaderGameInfo,
+                                            className: y.contentHeaderGameInfo,
                                             onClick: z,
                                             children: [
                                                 (0, r.jsx)('img', {
                                                     alt: f.config.messages.gameTitle,
-                                                    className: l()(A.contentHeaderLogotype, A.accentOnHover),
+                                                    className: l()(y.contentHeaderLogotype, y.accentOnHover),
                                                     src: (0, g.fh)(f, g.eC.LOGO_TYPE, M).url
                                                 }),
                                                 (0, r.jsx)(I.Z, {}),
                                                 (0, r.jsxs)('div', {
-                                                    className: A.questHeading,
+                                                    className: y.questHeading,
                                                     children: [
                                                         (0, r.jsx)(c.Heading, {
                                                             variant: 'heading-md/semibold',
                                                             color: 'header-primary',
-                                                            children: y.intl.format(y.t.EQa7oq, { questName: f.config.messages.questName })
+                                                            children: A.intl.format(A.t.EQa7oq, { questName: f.config.messages.questName })
                                                         }),
                                                         (0, r.jsx)(c.Text, {
                                                             variant: 'text-sm/medium',
@@ -124,7 +124,7 @@ function k(e) {
                                             onTooltipHide: W,
                                             children: (e) =>
                                                 (0, r.jsx)(c.Clickable, {
-                                                    className: A.progressCont,
+                                                    className: y.progressCont,
                                                     ...e,
                                                     children: (0, r.jsx)(E.Z, {
                                                         quest: f,
@@ -133,7 +133,7 @@ function k(e) {
                                                         percentCompleteText: w ? U : void 0,
                                                         percentCompleteTextVariant: 'text-sm/medium',
                                                         children: (0, r.jsx)(_.Z, {
-                                                            className: A.questProgressRewardTile,
+                                                            className: y.questProgressRewardTile,
                                                             quest: f,
                                                             questContent: v.jn.VIDEO_MODAL,
                                                             autoplay: !1,
@@ -151,26 +151,26 @@ function k(e) {
                                     autoplay: k
                                 }),
                                 (0, r.jsxs)('div', {
-                                    className: A.contentFooter,
+                                    className: y.contentFooter,
                                     children: [
                                         (0, r.jsx)(c.Button, {
                                             onClick: i,
                                             color: c.Button.Colors.PRIMARY,
                                             size: c.Button.Sizes.MEDIUM,
-                                            children: y.intl.string(y.t.cpT0Cg)
+                                            children: A.intl.string(A.t.cpT0Cg)
                                         }),
                                         (0, r.jsxs)('div', {
-                                            className: A.contentFooterButtonCont,
+                                            className: y.contentFooterButtonCont,
                                             children: [
                                                 (0, r.jsx)(c.Button, {
                                                     color: c.Button.Colors.PRIMARY,
                                                     onClick: H,
                                                     size: c.Button.Sizes.MEDIUM,
-                                                    className: A.copyLinkBtn,
+                                                    className: y.copyLinkBtn,
                                                     children: G
                                                 }),
                                                 (0, r.jsx)(S.i0, {
-                                                    className: A.claimBtn,
+                                                    className: y.claimBtn,
                                                     size: c.Button.Sizes.MEDIUM,
                                                     quest: f,
                                                     useReducedMotion: P,

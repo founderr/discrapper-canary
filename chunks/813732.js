@@ -17,8 +17,8 @@ var i = n(200651),
     C = n(600164),
     _ = n(925329),
     E = n(406174),
-    f = n(810762),
-    I = n(681833),
+    I = n(810762),
+    f = n(681833),
     N = n(856888),
     A = n(921801),
     b = n(246946),
@@ -136,7 +136,7 @@ t.Z = function () {
             className: l()(Y.container, Y.loading),
             children: (0, i.jsx)(o.Spinner, {})
         });
-    if (H === U.cP) return (0, i.jsx)(f.Z, { onGoBack: () => g.Z.clearSubsection() });
+    if (H === U.cP) return (0, i.jsx)(I.Z, { onGoBack: () => g.Z.clearSubsection() });
     if (H === U.XZ) return (0, i.jsx)(N.Z, { onGoBack: () => g.Z.clearSubsection() });
     return (0, i.jsx)('div', {
         className: Y.container,
@@ -194,7 +194,7 @@ t.Z = function () {
                     (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsx)(W, {}),
-                            (0, i.jsx)(I.Z, {
+                            (0, i.jsx)(f.Z, {
                                 count: K,
                                 onClickManageSubscription: () => {
                                     g.Z.setSection(w.oAB.SUBSCRIPTIONS, U.XZ), D.default.track(w.rMx.PREMIUM_APPLICATION_SUBSCRIPTION_MANAGE_CTA_CLICKED);

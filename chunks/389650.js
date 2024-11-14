@@ -24,8 +24,8 @@ var i = n(200651),
     C = n(600164),
     _ = n(74299),
     E = n(131951),
-    f = n(556296),
-    I = n(808506),
+    I = n(556296),
+    f = n(808506),
     N = n(63063),
     A = n(358085),
     b = n(13140),
@@ -469,9 +469,9 @@ class w extends s.PureComponent {
     }
 }
 function U() {
-    let e = (0, c.e7)([f.Z], () => f.Z.getState()),
+    let e = (0, c.e7)([I.Z], () => I.Z.getState()),
         t = (0, c.e7)([E.Z], () => (0, _.Z)(E.Z)),
-        n = (0, c.e7)([I.Z], () => I.Z.isSupported()),
+        n = (0, c.e7)([f.Z], () => f.Z.isSupported()),
         s = (0, T.Go)();
     return (0, i.jsx)(w, {
         keybinds: e,

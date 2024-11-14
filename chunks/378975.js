@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return C;
+        return _;
     }
 }),
     t(47120);
@@ -112,8 +112,8 @@ function v(e) {
         })
     });
 }
-function C(e) {
-    let { type: n, options: t, id: r, placeholder: a, maxValues: s, minValues: C, disabled: _ } = e,
+function _(e) {
+    let { type: n, options: t, id: r, placeholder: a, maxValues: s, minValues: _, disabled: C } = e,
         g = i.useMemo(() => t.filter((e) => e.default).map((e) => e.value), [t]),
         {
             state: I,
@@ -151,7 +151,7 @@ function C(e) {
         if (!(y || (k.size === R.size && Array.from(R).every((e) => k.has(e))))) P();
     }, [y, k, R, P]);
     let A = o.singleSelect;
-    E ? (A = o.multiSelect) : 0 === C && (A = o.toggleSelect);
+    E ? (A = o.multiSelect) : 0 === _ && (A = o.toggleSelect);
     let B = (0, o.useVariableSelect)({
         value: k,
         onChange: (e) => L(e),
@@ -163,7 +163,7 @@ function C(e) {
                 className: p.container,
                 children: [
                     (0, l.jsx)(o.Select, {
-                        isDisabled: _ || S,
+                        isDisabled: C || S,
                         className: p.select,
                         options: t.map((e) => ({
                             ...e,

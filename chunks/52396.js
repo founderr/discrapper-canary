@@ -3,7 +3,7 @@ t.d(n, {
         return x;
     },
     r: function () {
-        return C;
+        return _;
     }
 }),
     t(411104);
@@ -60,7 +60,7 @@ function v(e) {
                 ...i
             });
         case o.s.LAUNCHED_ACTIVITY:
-            return (0, l.jsx)(_, {
+            return (0, l.jsx)(C, {
                 entry: n,
                 ...i
             });
@@ -68,14 +68,14 @@ function v(e) {
             throw Error('Unsupported content type: '.concat(n.content_type));
     }
 }
-function C(e) {
+function _(e) {
     let { errorFallback: n, ...t } = e;
     return (0, l.jsx)(s.S, {
         fallback: n,
         children: (0, l.jsx)(v, { ...t })
     });
 }
-function _(e) {
+function C(e) {
     let { entry: n, children: t, ...i } = e,
         r = (0, c.Z)({
             entry: n,

@@ -18,8 +18,8 @@ var i = n(200651),
     C = n(122021),
     _ = n(275759),
     E = n(231757),
-    f = n(888496),
-    I = n(605236),
+    I = n(888496),
+    f = n(605236),
     N = n(565138),
     A = n(297700),
     b = n(553795),
@@ -116,7 +116,7 @@ function Y(e) {
         a,
         o,
         { onDisconnect: m, account: g, theme: p, locale: S } = e,
-        [I, N] = s.useState(g.friendSync),
+        [f, N] = s.useState(g.friendSync),
         [b, v] = s.useState(g.visibility),
         [j, O] = s.useState(g.metadataVisibility),
         [R, D] = s.useState(g.showActivity),
@@ -292,22 +292,22 @@ function Y(e) {
                     r = (0, _.FI)(n[M.PC.CREATED_AT], S);
                 switch (e.type) {
                     case F.ABu.REDDIT:
-                        s = (0, f.oP)(n, U.metadataItem);
+                        s = (0, I.oP)(n, U.metadataItem);
                         break;
                     case F.ABu.STEAM:
-                        s = (0, f.Dq)(n, U.metadataItem);
+                        s = (0, I.Dq)(n, U.metadataItem);
                         break;
                     case F.ABu.TWITTER:
-                        s = (0, f.rJ)(n, U.metadataItem);
+                        s = (0, I.rJ)(n, U.metadataItem);
                         break;
                     case F.ABu.EBAY:
-                        s = (0, f.ul)(n, U.metadataItem);
+                        s = (0, I.ul)(n, U.metadataItem);
                         break;
                     case F.ABu.PAYPAL:
-                        s = (0, f.li)(n, U.metadataItem);
+                        s = (0, I.li)(n, U.metadataItem);
                         break;
                     case F.ABu.TIKTOK:
-                        s = (0, f.hf)(n, U.metadataItem);
+                        s = (0, I.hf)(n, U.metadataItem);
                 }
                 null !== r &&
                     (null == s && (s = []),
@@ -387,7 +387,7 @@ function Y(e) {
                 (l = (0, i.jsx)(u.FormSwitch, {
                     className: U.connectionOptionSwitch,
                     hideBorder: !0,
-                    value: I,
+                    value: f,
                     onChange: en,
                     children: (0, i.jsx)(u.Text, {
                         variant: 'text-sm/semibold',
@@ -471,7 +471,7 @@ function H() {
     return (
         s.useEffect(
             () => () => {
-                (0, I.EW)(o.z.NEW_CRUNCHYROLL_CONNECTION, { dismissAction: k.L.AUTO });
+                (0, f.EW)(o.z.NEW_CRUNCHYROLL_CONNECTION, { dismissAction: k.L.AUTO });
             },
             []
         ),

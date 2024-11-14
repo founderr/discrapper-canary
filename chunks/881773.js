@@ -115,7 +115,7 @@ function b(e) {
 }
 function D(e) {
     var t, n;
-    let { videoRef: i, quest: p, playerState: S, animSpring: E, visible: T, seekForwardEnabled: D, hideCaptionBtn: y, handlePlaybackBtnClick: A, handleTranscriptBtnClick: k, handleCaptionBtnClick: B, handleFullScreenBtnClick: L, handleSeekBackBtnClick: M, handleSeekForwardBtnClick: P, handleControlBarPendingInteraction: O } = e,
+    let { videoRef: i, quest: p, playerState: S, animSpring: E, visible: T, seekForwardEnabled: D, hideCaptionBtn: A, handlePlaybackBtnClick: y, handleTranscriptBtnClick: k, handleCaptionBtnClick: B, handleFullScreenBtnClick: L, handleSeekBackBtnClick: M, handleSeekForwardBtnClick: P, handleControlBarPendingInteraction: O } = e,
         R = (0, f.km)((e) => e.volume),
         w = (0, f.km)((e) => e.setVolume),
         F = (0, f.km)((e) => e.muted),
@@ -169,7 +169,7 @@ function D(e) {
                         visible: T,
                         ariaLabel: eo,
                         tooltipLabel: eo,
-                        onClick: A
+                        onClick: y
                     }),
                     (0, r.jsx)(b, {
                         iconComponent: C.d,
@@ -291,7 +291,7 @@ function D(e) {
                         ariaLabel: h.intl.string(h.t.KCzjTk),
                         tooltipLabel: h.intl.string(h.t.KCzjTk)
                     }),
-                    !y &&
+                    !A &&
                         (0, r.jsx)(b, {
                             iconComponent: v.c,
                             animationTime: E,

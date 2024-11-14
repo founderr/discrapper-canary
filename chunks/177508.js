@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return I;
     }
 }),
     n(757143),
@@ -24,7 +24,7 @@ let x = Object.keys(c.Button.Colors).filter((e) => 'CUSTOM' !== e),
     T = Object.keys(c.Button.Sizes).filter((e) => 'NONE' !== e);
 function C() {
     return (0, i.jsxs)('div', {
-        children: [(0, i.jsx)(I, {}), (0, i.jsx)(O, {}), (0, i.jsx)(R, {}), (0, i.jsx)(v, {}), (0, i.jsx)(b, {}), (0, i.jsx)(A, {}), (0, i.jsx)(N, {}), (0, i.jsx)(P, {})]
+        children: [(0, i.jsx)(f, {}), (0, i.jsx)(O, {}), (0, i.jsx)(R, {}), (0, i.jsx)(v, {}), (0, i.jsx)(b, {}), (0, i.jsx)(A, {}), (0, i.jsx)(N, {}), (0, i.jsx)(P, {})]
     });
 }
 let _ = ['neutral', 'blue_new', 'blurple', 'green_new', 'red_new', 'teal_new', 'yellow_new', 'orange_new'];
@@ -67,7 +67,7 @@ function E() {
         )
     );
 }
-function f() {
+function I() {
     return (0, i.jsx)(u.Z, {
         parentSetting: m.s6.DESIGN_SYSTEMS,
         settingsSection: h.oAB.DESIGN_SYSTEMS,
@@ -85,7 +85,7 @@ function f() {
         ]
     });
 }
-function I() {
+function f() {
     let [e, t] = s.useState(!1),
         n = x.flatMap((e) => [
             ...S.map((t) =>

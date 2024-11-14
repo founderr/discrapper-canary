@@ -24,8 +24,8 @@ var i = n(200651),
     C = n(197344),
     _ = n(476756),
     E = n(734934),
-    f = n(223683),
-    I = n(312400),
+    I = n(223683),
+    f = n(312400),
     N = n(115345),
     A = n(392888),
     b = n(106371),
@@ -518,8 +518,8 @@ function Q() {
         : null;
 }
 function X() {
-    let e = I.xT.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }).enabled,
-        { manuallyOpen: t } = I.fs.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }),
+    let e = f.xT.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }).enabled,
+        { manuallyOpen: t } = f.fs.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }),
         n = (0, c.e7)([R.ZP], () => R.ZP.useNewNotifications),
         [r, a] = s.useState(!1);
     return e && (n || t)
@@ -565,7 +565,7 @@ function X() {
                                       (0, i.jsx)(j.F, {
                                           setting: M.s6.NOTIFICATIONS_RESTORE_MOST_RECENT_SNAPSHOT,
                                           children: (0, i.jsx)(u.Button, {
-                                              onClick: f.KP,
+                                              onClick: I.KP,
                                               children: 'Restore most recent snapshot'
                                           })
                                       }),
@@ -601,7 +601,7 @@ function X() {
 }
 async function J(e) {
     e(!0);
-    let t = await (0, f.Tn)();
+    let t = await (0, I.Tn)();
     0 === t.length
         ? await (0, N.oL)()
         : m.Z.show({

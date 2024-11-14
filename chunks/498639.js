@@ -18,8 +18,8 @@ var i = n(200651),
     C = n(333867),
     _ = n(963249),
     E = n(87484),
-    f = n(197115),
-    I = n(911367),
+    I = n(197115),
+    f = n(911367),
     N = n(430824),
     A = n(78839),
     b = n(981631),
@@ -53,7 +53,7 @@ t.Z = function () {
         [n, S] = s.useState(null),
         [T] = (0, l.Wu)([N.Z], () => [N.Z.getGuilds()]),
         [R] = (0, l.Wu)([A.ZP], () => [A.ZP.getPremiumSubscription()]);
-    (0, I.t)();
+    (0, f.t)();
     let P = Object.values(T).map((e) => ({
             value: e,
             label: e.name
@@ -106,7 +106,7 @@ t.Z = function () {
                             ],
                             onChange: (e) => t(e)
                         }),
-                        (0, i.jsx)(f.Z, {
+                        (0, i.jsx)(I.Z, {
                             subscriptionTier: e,
                             isGift: !0,
                             premiumModalAnalyticsLocation: {}

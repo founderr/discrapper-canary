@@ -27,8 +27,8 @@ function E() {
         t = (0, m.c_)(),
         n = u.iG.useSetting(),
         E = u.h2.useSetting().includes(e),
-        f = u.mX.useSetting(),
-        I = u.zA.useSetting().includes(e),
+        I = u.mX.useSetting(),
+        f = u.zA.useSetting().includes(e),
         N = s.useCallback(
             (t) => {
                 let n = new Set((0, d.gl)());
@@ -49,11 +49,11 @@ function E() {
             e === T.T
                 ? (0, i.jsx)(g.Z, {
                       title: _.intl.string(_.t['3o2ojo']),
-                      value: !n && !f,
+                      value: !n && !I,
                       onChange: () => {
                           var e;
                           return (
-                              (e = !f),
+                              (e = !I),
                               void (0, p.V)({
                                   header: _.intl.string(_.t.yAfu1t),
                                   body: _.intl.string(_.t['Ry2z7+']),
@@ -74,7 +74,7 @@ function E() {
                   })
                 : (0, i.jsx)(g.Z, {
                       title: _.intl.string(_.t['3o2ojo']),
-                      value: !I,
+                      value: !f,
                       onChange: N,
                       disabled: E,
                       note: t ? _.intl.format(_.t.WpnWLS, { helpdeskArticle: o.Z.getArticleURL(C.BhN.MESSAGE_REQUESTS) }) : _.intl.format(_.t.wkm9a2, { helpdeskArticle: o.Z.getArticleURL(C.BhN.MESSAGE_REQUESTS) })

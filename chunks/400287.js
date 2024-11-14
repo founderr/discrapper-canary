@@ -28,8 +28,8 @@ function S() {
         C = m.ev.useSetting(),
         _ = m.x4.useSetting(),
         E = m.RS.useSetting(),
-        f = m.NA.useSetting(),
-        I = m.nc.useSetting(),
+        I = m.NA.useSetting(),
+        f = m.nc.useSetting(),
         { analyticsLocations: N } = (0, o.ZP)(a.Z.TEXT_AND_IMAGES);
     return (0, i.jsxs)(l.FormSection, {
         tag: l.FormTitleTags.H1,
@@ -84,7 +84,7 @@ function S() {
                         setting: h.s6.CHAT_EMBEDS_LINK_PREVIEWS,
                         children: (0, i.jsx)(l.FormSwitch, {
                             className: r()(x.marginTop8, x.marginBottom40),
-                            value: f,
+                            value: I,
                             onChange: m.NA.updateSetting,
                             children: p.intl.string(p.t.xX0ZTE)
                         })
@@ -102,7 +102,7 @@ function S() {
                         setting: h.s6.CHAT_EMOJI_REACTIONS,
                         children: (0, i.jsx)(l.FormSwitch, {
                             className: r()(x.marginTop8, x.marginBottom20),
-                            value: I,
+                            value: f,
                             onChange: m.nc.updateSetting,
                             children: p.intl.string(p.t.Iv24sr)
                         })

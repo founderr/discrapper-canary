@@ -40,8 +40,8 @@ function E() {
         })),
         [r, E] = s.useState(!1);
     if (null == e) return null;
-    let f = (0, m.$6)(t, e) || n,
-        I = f && null != t,
+    let I = (0, m.$6)(t, e) || n,
+        f = I && null != t,
         N = () => {
             _({
                 header: T.intl.string(T.t.jxXMEx),
@@ -78,7 +78,7 @@ function E() {
                 header: T.intl.string(T.t.XAHCgI),
                 description: T.intl.format(T.t.P3kNfn, { helpdeskArticle: u.Z.getArticleURL(S.BhN.GDPR_REQUEST_DATA) })
             }),
-            I
+            f
                 ? (0, i.jsx)(o.Card, {
                       className: C.card,
                       children: (0, i.jsx)(o.Text, {
@@ -93,7 +93,7 @@ function E() {
                           children: (e) => {
                               let { onMouseEnter: t, onMouseLeave: s } = e;
                               return (0, i.jsx)(o.Button, {
-                                  disabled: f,
+                                  disabled: I,
                                   onClick: N,
                                   onMouseEnter: t,
                                   onMouseLeave: s,

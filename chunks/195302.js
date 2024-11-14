@@ -46,7 +46,7 @@ function c(e) {
                 u(!0);
                 let s = async (t) => {
                     try {
-                        let r = await (0, a.YM)(t, n);
+                        let r = await (0, a.SE)(t, n);
                         o()(null != r, 'Unable to generate image'), e(r);
                     } catch (e) {
                         i(e);

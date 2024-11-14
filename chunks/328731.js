@@ -17,7 +17,7 @@ var l = t(200651),
     p = t(756988);
 function h(e) {
     let { entry: n, channel: t, className: i } = e,
-        { displayParticipants: h, participant1: x, participant2: v, numOtherParticipants: C, orderedParticipants: _ } = (0, c.Z)(n),
+        { displayParticipants: h, participant1: x, participant2: v, numOtherParticipants: _, orderedParticipants: C } = (0, c.Z)(n),
         g = [x, v];
     return (0, l.jsxs)('div', {
         className: r()(p.container, i),
@@ -26,7 +26,7 @@ function h(e) {
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsx)(m.Z, {
-                              participants: _,
+                              participants: C,
                               channel: t,
                               children: (e) =>
                                   (0, l.jsx)(a.Clickable, {
@@ -57,7 +57,7 @@ function h(e) {
                 children: f.intl.format(f.t.rH95Gh, {
                     user0: s.ZP.getName(t.guild_id, t.id, g[0]),
                     user1: s.ZP.getName(t.guild_id, t.id, g[1]),
-                    countOthers: C,
+                    countOthers: _,
                     name0Hook: (e, n) =>
                         (0, l.jsx)(
                             d.Z,
@@ -82,7 +82,7 @@ function h(e) {
                         (0, l.jsx)(
                             m.Z,
                             {
-                                participants: _,
+                                participants: C,
                                 channel: t,
                                 children: (n) =>
                                     (0, l.jsx)(u.Z, {

@@ -18,7 +18,7 @@ var i,
     C = n(244526),
     _ = n(388032),
     E = n(635994);
-function f(e, t, n) {
+function I(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +31,7 @@ function f(e, t, n) {
         e
     );
 }
-let I = 'isDefault';
+let f = 'isDefault';
 class N extends (i = r.PureComponent) {
     componentWillUnmount() {
         u.Z.wait(() => {
@@ -192,9 +192,9 @@ class N extends (i = r.PureComponent) {
                     this.renderCardExpirationSection(),
                     this.renderBillingAddressSection(),
                     (0, s.jsx)(d.Checkbox, {
-                        name: I,
+                        name: f,
                         value: l,
-                        onChange: (e, t) => this.handleFieldChange(t, I),
+                        onChange: (e, t) => this.handleFieldChange(t, f),
                         type: d.Checkbox.Types.INVERTED,
                         className: E.defaultSection,
                         children: (0, s.jsx)(d.Text, {
@@ -212,7 +212,7 @@ class N extends (i = r.PureComponent) {
     constructor(e) {
         var t, n, i, s, r, l, a;
         super(e),
-            f(this, 'handleSubmit', (e) => {
+            I(this, 'handleSubmit', (e) => {
                 if ((e.preventDefault(), e.stopPropagation(), 0 === Object.values(this.state.dirtyFields).filter(x.lm).length)) this.props.onCancel();
                 else {
                     let { billingAddress: e, isDefault: t, expiresMonth: n, expiresYear: i } = this.state;
@@ -224,14 +224,14 @@ class N extends (i = r.PureComponent) {
                     });
                 }
             }),
-            f(this, 'handleCancel', () => {
+            I(this, 'handleCancel', () => {
                 this.props.onCancel();
             }),
-            f(this, 'handleDelete', () => {
+            I(this, 'handleDelete', () => {
                 let { onDelete: e, paymentSource: t } = this.props;
                 e(t.id);
             }),
-            f(this, 'handleAddressUpdate', (e, t, n) => {
+            I(this, 'handleAddressUpdate', (e, t, n) => {
                 this.setState({
                     billingAddress: e,
                     billingAddressValid: t,
@@ -241,13 +241,13 @@ class N extends (i = r.PureComponent) {
                     }
                 });
             }),
-            f(this, 'handleExpirationDateUpdate', (e, t) => {
+            I(this, 'handleExpirationDateUpdate', (e, t) => {
                 let { expirationDate: n } = e;
                 if ((this.setState({ expirationValid: t }), null == n || '' === n)) return;
                 let [i, s] = n.split('/');
                 this.handleFieldChange(Number(i), 'expiresMonth'), this.handleFieldChange(Number(''.concat(new Date().getFullYear().toString().slice(0, 2)).concat(s)), 'expiresYear');
             }),
-            f(this, 'handleFieldChange', (e, t) => {
+            I(this, 'handleFieldChange', (e, t) => {
                 null != t &&
                     this.setState({
                         [t]: e,
@@ -278,7 +278,7 @@ class N extends (i = r.PureComponent) {
         };
     }
 }
-f(N, 'defaultProps', {
+I(N, 'defaultProps', {
     onDelete: () => {},
     onSubmit: () => {},
     onCancel: () => {}

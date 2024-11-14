@@ -15,21 +15,21 @@ var s = i(200651),
     g = i(728345),
     Z = i(812206),
     S = i(884697),
-    v = i(583434),
-    x = i(551425),
-    y = i(832149),
-    C = i(745510),
-    I = i(313201),
-    T = i(925329),
-    A = i(703656),
-    R = i(763296),
+    x = i(583434),
+    v = i(551425),
+    C = i(832149),
+    I = i(745510),
+    T = i(313201),
+    A = i(925329),
+    R = i(703656),
+    y = i(763296),
     b = i(82142),
     j = i(283595),
     P = i(594174),
     O = i(509545),
     E = i(55563),
-    w = i(626135),
-    N = i(176354),
+    N = i(626135),
+    w = i(176354),
     _ = i(669079),
     k = i(296848),
     L = i(51144),
@@ -58,7 +58,7 @@ function Y(t, e, i) {
 }
 let q = (t) => {
         let { openedGift: e } = t,
-            { createMultipleConfettiAt: i } = n.useContext(C.h);
+            { createMultipleConfettiAt: i } = n.useContext(I.h);
         return (
             n.useEffect(() => {
                 e && i(window.innerWidth / 2, window.innerHeight / 4);
@@ -72,7 +72,7 @@ let q = (t) => {
             n.useEffect(() => {
                 var t;
                 if (e !== H.wZ8.CONFIRM) return;
-                let s = R.Z.getSoundById(i);
+                let s = y.Z.getSoundById(i);
                 (0, G.playGiftSound)(i, null !== (t = null == s ? void 0 : s.volume) && void 0 !== t ? t : 1);
             }, [e, i]),
             null
@@ -84,7 +84,7 @@ class K extends n.Component {
         null == t && null != e && g.ZP.fetchApplication(e.applicationId);
         let l = null != i || null != s.giftStyle,
             a = (0, S.mO)(s),
-            r = null != n ? N.ZP.getURL(n) : void 0;
+            r = null != n ? w.ZP.getURL(n) : void 0;
         this.setState({
             isCustomGift: l,
             isCollectiblesGift: a,
@@ -167,7 +167,7 @@ class K extends n.Component {
     trackStepAnalytics() {
         let { giftCode: t, customGiftMessage: e, emojiName: i, soundId: s } = this.props,
             { isCustomGift: n } = this.state;
-        w.default.track(H.rMx.GIFT_ACCEPT_STEP, {
+        N.default.track(H.rMx.GIFT_ACCEPT_STEP, {
             to_step: this.step,
             has_custom_message: n,
             is_custom_message_edited: n && e !== z.intl.string(z.t.ZkOo1d),
@@ -180,10 +180,10 @@ class K extends n.Component {
     render() {
         let { application: t, accepting: e, onClose: i, giftCode: n, headerId: l, transitionState: r, useReducedMotion: o, onComplete: d, customGiftMessage: c, emojiName: h, soundId: p, isThemeDark: f } = this.props,
             m = P.default.getUser(n.userId),
-            { isCustomGift: g, isCollectiblesGift: Z, accepted: S, opened: v, emojiURL: y } = this.state,
-            C = P.default.getCurrentUser(),
-            I = this.step === H.wZ8.ERROR,
-            A = (null == n ? void 0 : n.userId) != null && null != C && (null == C ? void 0 : C.id) != null && n.userId === C.id;
+            { isCustomGift: g, isCollectiblesGift: Z, accepted: S, opened: x, emojiURL: C } = this.state,
+            I = P.default.getCurrentUser(),
+            T = this.step === H.wZ8.ERROR,
+            R = (null == n ? void 0 : n.userId) != null && null != I && (null == I ? void 0 : I.id) != null && n.userId === I.id;
         switch (this.step) {
             case H.wZ8.ERROR:
                 null == d || d(n, !1);
@@ -223,12 +223,12 @@ class K extends n.Component {
                                     }),
                                 !Z &&
                                     (null == n.giftStyle || (g && S)) &&
-                                    (0, s.jsx)(T.Z, {
-                                        size: T.Z.Sizes.LARGE,
+                                    (0, s.jsx)(A.Z, {
+                                        size: A.Z.Sizes.LARGE,
                                         game: t,
                                         skuId: n.skuId
                                     }),
-                                I &&
+                                T &&
                                     (0, s.jsx)('img', {
                                         alt: '',
                                         src: f ? V : W
@@ -264,8 +264,8 @@ class K extends n.Component {
                                         className: B.giftAnimation,
                                         giftStyle: n.giftStyle
                                     }),
-                                this.state.opened && !I && (0, s.jsx)(x.Z, { giftCode: n }),
-                                I &&
+                                this.state.opened && !T && (0, s.jsx)(v.Z, { giftCode: n }),
+                                T &&
                                     (0, s.jsx)(u.Text, {
                                         className: B.body,
                                         variant: 'text-md/normal',
@@ -274,10 +274,10 @@ class K extends n.Component {
                                 g &&
                                     this.state.opened &&
                                     !this.state.accepted &&
-                                    !I &&
+                                    !T &&
                                     null != c &&
                                     '' !== c &&
-                                    !A &&
+                                    !R &&
                                     (0, s.jsxs)(s.Fragment, {
                                         children: [
                                             (0, s.jsx)(u.FormTitle, { children: z.intl.format(z.t.DDO4W1, { sender: L.ZP.getName(m) }) }),
@@ -307,17 +307,17 @@ class K extends n.Component {
                         children:
                             !S &&
                             !e &&
-                            v &&
-                            (null == h || null == y
-                                ? (0, s.jsx)(q, { openedGift: v && !S && !e })
+                            x &&
+                            (null == h || null == C
+                                ? (0, s.jsx)(q, { openedGift: x && !S && !e })
                                 : (0, s.jsx)(M.Z, {
                                       confettiTarget: this.modalRef.current,
-                                      emojiURL: y
+                                      emojiURL: C
                                   }))
                     }),
                 !S &&
                     !e &&
-                    v &&
+                    x &&
                     null != p &&
                     (0, s.jsx)(J, {
                         soundId: p,
@@ -357,7 +357,7 @@ class K extends n.Component {
             }),
             Y(this, 'handleGoToLibrary', () => {
                 let { onClose: t, libraryApplication: e } = this.props;
-                (0, A.uL)(H.Z5c.APPLICATION_LIBRARY, { state: { applicationId: null != e ? e.id : void 0 } }), t();
+                (0, R.uL)(H.Z5c.APPLICATION_LIBRARY, { state: { applicationId: null != e ? e.id : void 0 } }), t();
             }),
             Y(this, 'getDefaultAnimationStatus', () => {
                 if (this.step === H.wZ8.OPEN) return D.SR.IDLE;
@@ -385,11 +385,11 @@ let Q = o.ZP.connectStores([j.Z, E.Z, Z.Z, b.Z, O.Z, p.Z], (t) => {
 e.default = (t) => {
     var e;
     let { channelContext: i, code: n, customGiftMessage: l, emojiName: a, soundId: r, onClose: u, ...c } = t,
-        p = (0, I.Dt)(),
+        p = (0, T.Dt)(),
         g = (0, o.e7)([b.Z], () => b.Z.get(n)),
         Z = (0, h.ZP)(),
         { analyticsLocations: S } = (0, m.ZP)(f.Z.GIFT_CODE_MODAL),
-        { product: x } = (0, v.T)(null == g ? void 0 : g.skuId);
+        { product: v } = (0, x.T)(null == g ? void 0 : g.skuId);
     return null == g
         ? null
         : (0, s.jsx)(Q, {
@@ -403,13 +403,13 @@ e.default = (t) => {
               analyticsLocations: S,
               isThemeDark: (0, d.wj)(Z),
               onClose: u,
-              collectiblesItemType: null == x ? void 0 : null === (e = x.items[0]) || void 0 === e ? void 0 : e.type,
+              collectiblesItemType: null == v ? void 0 : null === (e = v.items[0]) || void 0 === e ? void 0 : e.type,
               onAccept:
-                  null != x
+                  null != v
                       ? () => {
                             u(),
-                                (0, y.Z)({
-                                    product: x,
+                                (0, C.Z)({
+                                    product: v,
                                     analyticsLocations: S
                                 });
                         }

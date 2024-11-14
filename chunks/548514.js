@@ -33,7 +33,7 @@ t.Z = function (e) {
                 }),
             [n]
         ),
-        E = (e) => ''.concat(location.protocol, '//').concat(location.host).concat(m.Z5c.APPLICATION_DIRECTORY_PROFILE(e)),
+        E = (e) => ''.concat(location.protocol, '//').concat(location.host).concat(m.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(e)),
         I = r.useCallback(() => {
             (0, u.JG)(E(n.id)), (0, a.showToast)((0, a.createToast)(p.intl.string(p.t['L/PwZW']), a.ToastType.SUCCESS));
         }, [n.id]),

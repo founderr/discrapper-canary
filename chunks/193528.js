@@ -19,8 +19,8 @@ var i = n(200651),
     p = n(388032),
     x = n(109469);
 function S(e) {
-    let { onChange: t, onClose: n, color: r, suggestedColors: S, disabled: T, label: C, colorPickerMiddle: _, colorPickerFooter: E, showEyeDropper: f } = e,
-        I = s.useRef(null),
+    let { onChange: t, onClose: n, color: r, suggestedColors: S, disabled: T, label: C, colorPickerMiddle: _, colorPickerFooter: E, showEyeDropper: I } = e,
+        f = s.useRef(null),
         N = (0, d.useToken)(c.Z.colors.BACKGROUND_PRIMARY).hex(),
         A = c.Z.colors.BACKGROUND_ACCENT.css,
         b = (0, h.DP)(r),
@@ -44,13 +44,13 @@ function S(e) {
                     suggestedColors: S,
                     middle: _,
                     footer: E,
-                    showEyeDropper: f
+                    showEyeDropper: I
                 }),
             onRequestClose: n,
             children: (e) => {
                 let { onClick: t, ...n } = e;
                 return (0, i.jsxs)('div', {
-                    ref: I,
+                    ref: f,
                     className: l()(x.colorSwatch, { [x.disabled]: T }),
                     children: [
                         (0, i.jsx)(d.Clickable, {
@@ -63,7 +63,7 @@ function S(e) {
                             },
                             className: x.swatch,
                             'aria-label': p.intl.string(p.t.Qp04hI),
-                            focusProps: { ringTarget: I },
+                            focusProps: { ringTarget: f },
                             children: (0, i.jsx)(d.PencilIcon, {
                                 size: 'custom',
                                 className: x.editPencilIcon,

@@ -18,8 +18,8 @@ var i = n(200651),
     C = n(386506),
     _ = n(865427),
     E = n(802098),
-    f = n(663993),
-    I = n(600164),
+    I = n(663993),
+    f = n(600164),
     N = n(118012),
     A = n(482215),
     b = n(38618),
@@ -69,18 +69,18 @@ function z(e) {
 class W extends s.Component {
     render() {
         let { project: e, overrideType: t, overrideId: n, disabled: s, error: r } = this.props;
-        return (0, i.jsxs)(I.Z, {
-            direction: I.Z.Direction.VERTICAL,
+        return (0, i.jsxs)(f.Z, {
+            direction: f.Z.Direction.VERTICAL,
             className: l()(k.buildOverrideGroup, U.marginBottom20, w.card, k.row),
             children: [
                 (0, i.jsx)(S.Z, {
                     className: l()(k.removeBuildOverride, { [k.removeBuildOverrideDisabled]: s }),
                     onClick: s ? void 0 : this.handleRemoveBuildOverride
                 }),
-                (0, i.jsxs)(I.Z, {
+                (0, i.jsxs)(f.Z, {
                     className: U.marginBottom8,
                     children: [
-                        (0, i.jsx)(I.Z.Child, {
+                        (0, i.jsx)(f.Z.Child, {
                             basis: '50%',
                             children: (0, i.jsx)(m.FormItem, {
                                 title: 'Override Type',
@@ -93,7 +93,7 @@ class W extends s.Component {
                                 })
                             })
                         }),
-                        (0, i.jsx)(I.Z.Child, {
+                        (0, i.jsx)(f.Z.Child, {
                             basis: '50%',
                             children: (0, i.jsx)(m.FormItem, {
                                 title: 'branch' === t ? 'Branch Name' : 'Build ID',
@@ -107,7 +107,7 @@ class W extends s.Component {
                         })
                     ]
                 }),
-                (0, i.jsxs)(I.Z.Child, {
+                (0, i.jsxs)(f.Z.Child, {
                     children: [
                         null != r &&
                             '' !== r &&
@@ -205,10 +205,10 @@ class K extends s.Component {
     renderRefreshButton() {
         return !this.state.didSave || this.isDirty()
             ? null
-            : (0, i.jsx)(I.Z, {
+            : (0, i.jsx)(f.Z, {
                   grow: 0,
-                  direction: I.Z.Direction.HORIZONTAL_REVERSE,
-                  children: (0, i.jsx)(I.Z.Child, {
+                  direction: f.Z.Direction.HORIZONTAL_REVERSE,
+                  children: (0, i.jsx)(f.Z.Child, {
                       grow: 0,
                       children: (0, i.jsx)(m.Button, {
                           onClick: () => location.reload(),
@@ -222,10 +222,10 @@ class K extends s.Component {
         let { buildOverrides: e } = this.state;
         return null == e || 0 === Object.keys(e).length
             ? null
-            : (0, i.jsx)(I.Z, {
+            : (0, i.jsx)(f.Z, {
                   grow: 0,
-                  direction: I.Z.Direction.HORIZONTAL_REVERSE,
-                  children: (0, i.jsx)(I.Z.Child, {
+                  direction: f.Z.Direction.HORIZONTAL_REVERSE,
+                  children: (0, i.jsx)(f.Z.Child, {
                       grow: 0,
                       children: (0, i.jsx)(m.Button, {
                           onClick: this.handleLinkGeneration,
@@ -238,11 +238,11 @@ class K extends s.Component {
     renderSaveButton() {
         if (!this.isDirty()) return null;
         let { saving: e, buildOverrides: t } = this.state;
-        return (0, i.jsxs)(I.Z, {
+        return (0, i.jsxs)(f.Z, {
             grow: 0,
-            direction: I.Z.Direction.HORIZONTAL_REVERSE,
+            direction: f.Z.Direction.HORIZONTAL_REVERSE,
             children: [
-                (0, i.jsx)(I.Z.Child, {
+                (0, i.jsx)(f.Z.Child, {
                     grow: 0,
                     children: (0, i.jsx)(m.Button, {
                         disabled: z(null != t ? t : {}),
@@ -252,7 +252,7 @@ class K extends s.Component {
                         children: 'Save Build Overrides'
                     })
                 }),
-                (0, i.jsx)(I.Z.Child, {
+                (0, i.jsx)(f.Z.Child, {
                     grow: 0,
                     children: (0, i.jsx)(m.Button, {
                         onClick: this.handleDiscardChanges,
@@ -282,16 +282,16 @@ class K extends s.Component {
             children: (0, i.jsxs)(m.FormSection, {
                 className: U.marginTop60,
                 children: [
-                    (0, i.jsxs)(I.Z, {
+                    (0, i.jsxs)(f.Z, {
                         className: U.marginBottom20,
                         children: [
-                            (0, i.jsx)(I.Z.Child, {
+                            (0, i.jsx)(f.Z.Child, {
                                 children: (0, i.jsx)(m.FormTitle, {
                                     tag: m.FormTitleTags.H1,
                                     children: 'Build Overrides'
                                 })
                             }),
-                            (0, i.jsx)(I.Z.Child, {
+                            (0, i.jsx)(f.Z.Child, {
                                 grow: 0,
                                 children: (0, i.jsx)(m.Button, {
                                     size: m.ButtonSizes.SMALL,
@@ -303,14 +303,14 @@ class K extends s.Component {
                         ]
                     }),
                     (0, i.jsx)(m.FormDivider, {}),
-                    (0, i.jsxs)(I.Z, {
-                        direction: I.Z.Direction.VERTICAL,
+                    (0, i.jsxs)(f.Z, {
+                        direction: f.Z.Direction.VERTICAL,
                         children: [
                             l,
                             e,
-                            (0, i.jsxs)(I.Z, {
+                            (0, i.jsxs)(f.Z, {
                                 grow: 0,
-                                direction: I.Z.Direction.HORIZONTAL_REVERSE,
+                                direction: f.Z.Direction.HORIZONTAL_REVERSE,
                                 children: [this.renderRefreshButton(), this.renderSaveButton(), this.renderLinkButton()]
                             })
                         ]
@@ -460,7 +460,7 @@ class q extends s.Component {
                 label: e,
                 value: e
             }));
-        return (0, i.jsxs)(I.Z.Child, {
+        return (0, i.jsxs)(f.Z.Child, {
             basis: '70%',
             children: [
                 (0, i.jsx)(m.FormItem, {
@@ -489,10 +489,10 @@ class q extends s.Component {
                               (0, i.jsx)(m.FormItem, {
                                   title: 'Add allowed app version (required)',
                                   className: U.marginBottom20,
-                                  children: (0, i.jsxs)(I.Z, {
-                                      direction: I.Z.Direction.HORIZONTAL,
+                                  children: (0, i.jsxs)(f.Z, {
+                                      direction: f.Z.Direction.HORIZONTAL,
                                       children: [
-                                          (0, i.jsx)(I.Z.Child, {
+                                          (0, i.jsx)(f.Z.Child, {
                                               wrap: !0,
                                               basis: '90%',
                                               children: (0, i.jsx)(m.TextInput, {
@@ -531,9 +531,9 @@ class q extends s.Component {
                               title: 'Limit to User IDs (optional)',
                               className: U.marginBottom20,
                               children: [
-                                  (0, i.jsx)(I.Z, {
-                                      direction: I.Z.Direction.HORIZONTAL,
-                                      children: (0, i.jsx)(I.Z.Child, {
+                                  (0, i.jsx)(f.Z, {
+                                      direction: f.Z.Direction.HORIZONTAL,
+                                      children: (0, i.jsx)(f.Z.Child, {
                                           wrap: !0,
                                           basis: '90%',
                                           children: (0, i.jsx)(m.TextArea, {
@@ -557,9 +557,9 @@ class q extends s.Component {
                     title: 'Client Experiment Override',
                     className: U.marginBottom20,
                     children: [
-                        (0, i.jsx)(I.Z, {
-                            direction: I.Z.Direction.HORIZONTAL,
-                            children: (0, i.jsx)(I.Z.Child, {
+                        (0, i.jsx)(f.Z, {
+                            direction: f.Z.Direction.HORIZONTAL,
+                            children: (0, i.jsx)(f.Z.Child, {
                                 wrap: !0,
                                 basis: '90%',
                                 children: (0, i.jsx)(m.TextArea, {
@@ -589,7 +589,7 @@ class q extends s.Component {
     renderPayloadBlock() {
         let e = JSON.stringify(this.generatePayload(), null, 2),
             t = () => e,
-            s = (0, i.jsx)(f.GI, {
+            s = (0, i.jsx)(I.GI, {
                 createPromise: () => Promise.resolve().then(n.bind(n, 364964)),
                 webpackId: 364964,
                 renderFallback: t,
@@ -603,7 +603,7 @@ class q extends s.Component {
                           });
                 }
             });
-        return (0, i.jsx)(I.Z.Child, { children: (0, i.jsx)(m.Card, { children: (0, i.jsx)('pre', { children: s }) }) });
+        return (0, i.jsx)(f.Z.Child, { children: (0, i.jsx)(m.Card, { children: (0, i.jsx)('pre', { children: s }) }) });
     }
     renderLinkForm() {
         let { statusTextColor: e, statusText: t, publicLink: n } = this.state;
@@ -611,9 +611,9 @@ class q extends s.Component {
             children: [
                 (0, i.jsx)(m.FormItem, {
                     title: 'Signed Link',
-                    children: (0, i.jsxs)(I.Z, {
+                    children: (0, i.jsxs)(f.Z, {
                         children: [
-                            (0, i.jsx)(I.Z.Child, {
+                            (0, i.jsx)(f.Z.Child, {
                                 wrap: !0,
                                 basis: '75%',
                                 children: (0, i.jsx)(T.Z, { value: n })
@@ -641,7 +641,7 @@ class q extends s.Component {
             'aria-label': 'Generate Public Build Override Link',
             children: [
                 (0, i.jsxs)(m.ModalHeader, {
-                    justify: I.Z.Justify.BETWEEN,
+                    justify: f.Z.Justify.BETWEEN,
                     separator: !1,
                     children: [
                         (0, i.jsx)(m.Heading, {
@@ -653,7 +653,7 @@ class q extends s.Component {
                 }),
                 (0, i.jsxs)(m.ModalContent, {
                     children: [
-                        (0, i.jsxs)(I.Z, {
+                        (0, i.jsxs)(f.Z, {
                             children: [this.renderSettingsForm(), this.renderPayloadBlock()]
                         }),
                         this.renderLinkForm()

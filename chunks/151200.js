@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return _;
+        return C;
     }
 });
 var l = t(200651);
@@ -57,7 +57,7 @@ function v(e) {
         ]
     });
 }
-function C(e) {
+function _(e) {
     let { clickable: n, ...t } = e;
     return (0, l.jsx)(v, {
         ...t,
@@ -68,12 +68,12 @@ function C(e) {
         clickableClassName: x.clickable
     });
 }
-function _(e) {
-    let { entry: n, channel: t, title: i, subtitle: x, thumbnailUrl: _, titleClickable: g, subtitleClickable: I, thumbnailClickable: b, providerIconProps: j, style: S = {} } = e,
+function C(e) {
+    let { entry: n, channel: t, title: i, subtitle: x, thumbnailUrl: C, titleClickable: g, subtitleClickable: I, thumbnailClickable: b, providerIconProps: j, style: S = {} } = e,
         N = (0, m.Dt)(),
-        { primaryColor: E, secondaryColor: T } = (0, u.Z)(_);
+        { primaryColor: E, secondaryColor: T } = (0, u.Z)(C);
     return (
-        null != _ && (S.background = 'linear-gradient(45deg, '.concat(E, ', ').concat(T, ')')),
+        null != C && (S.background = 'linear-gradient(45deg, '.concat(E, ', ').concat(T, ')')),
         (0, l.jsx)(a.ThemeProvider, {
             theme: f.BR.DARK,
             children: (e) =>
@@ -89,7 +89,7 @@ function _(e) {
                             clickableClassName: h.clickable,
                             clickable: b,
                             children: (0, l.jsx)(s.f, {
-                                src: _,
+                                src: C,
                                 constrain: 'width',
                                 size: 64,
                                 'aria-hidden': !0
@@ -104,7 +104,7 @@ function _(e) {
                                     className: h.users
                                 }),
                                 (0, l.jsx)(a.Spacer, { size: 2 }),
-                                (0, l.jsx)(C, {
+                                (0, l.jsx)(_, {
                                     clickable: g,
                                     className: h.clickableText,
                                     children: (0, l.jsx)(a.Heading, {
@@ -120,7 +120,7 @@ function _(e) {
                                     ? (0, l.jsxs)(l.Fragment, {
                                           children: [
                                               (0, l.jsx)(a.Spacer, { size: 2 }),
-                                              (0, l.jsx)(C, {
+                                              (0, l.jsx)(_, {
                                                   clickable: I,
                                                   className: h.clickableText,
                                                   children: (0, l.jsx)(a.Text, {

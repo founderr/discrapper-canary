@@ -6,8 +6,8 @@ t.r(n),
     });
 var o = t(200651),
     l = t(192379),
-    i = t(269210),
-    r = t(752843),
+    r = t(269210),
+    i = t(752843),
     s = t(481060),
     a = t(757746),
     c = t(930155),
@@ -15,21 +15,21 @@ var o = t(200651),
     u = t(696906),
     m = t(73346),
     x = t(591759),
-    h = t(886253),
-    f = t(680005),
-    p = t(938337);
+    f = t(886253),
+    p = t(680005),
+    h = t(938337);
 function v(e) {
     var n, t;
-    let { appId: v, subscriptionType: _, onClose: j, skuId: I, guildId: N, transitionState: k, onHeaderTitleClick: g } = e,
+    let { appId: v, subscriptionType: _, onClose: j, skuId: I, guildId: g, transitionState: k, onHeaderTitleClick: N } = e,
         { data: C } = (0, c.H)(I),
         S = C[0],
-        { data: T } = (0, a.Z)(I),
-        R = l.useMemo(() => {
+        { data: b } = (0, a.Z)(I),
+        T = l.useMemo(() => {
             var e;
-            return (null == T ? void 0 : T.thumbnail) != null && null !== (e = x.Z.toURLSafe((0, m._W)(v, T.thumbnail, 256))) && void 0 !== e ? e : void 0;
-        }, [v, null == T ? void 0 : T.thumbnail]),
-        b = l.useMemo(() => {
-            let e = null == T ? void 0 : T.benefits;
+            return (null == b ? void 0 : b.thumbnail) != null && null !== (e = x.Z.toURLSafe((0, m._W)(v, b.thumbnail, 256))) && void 0 !== e ? e : void 0;
+        }, [v, null == b ? void 0 : b.thumbnail]),
+        E = l.useMemo(() => {
+            let e = null == b ? void 0 : b.benefits;
             if (null != e && 0 !== e.length)
                 return e.map((e) => ({
                     id: e.id,
@@ -37,35 +37,35 @@ function v(e) {
                     description: e.description,
                     icon: (0, d.n)(v, e.icon)
                 }));
-        }, [v, null == T ? void 0 : T.benefits]),
-        { openModal: E, cannotOpenReason: Z } = (0, u.ZP)({
+        }, [v, null == b ? void 0 : b.benefits]),
+        { openModal: R, cannotOpenReason: B } = (0, u.ZP)({
             skuId: I,
-            subscribeForGuild: null != N ? N : void 0
+            subscribeForGuild: null != g ? g : void 0
         });
-    return null == T
+    return null == b
         ? null
-        : (0, o.jsx)(h.A, {
+        : (0, o.jsx)(f.A, {
               appId: v,
               skuId: I,
               transitionState: k,
-              onHeaderTitleClick: null != g ? g : j,
+              onHeaderTitleClick: null != N ? N : j,
               onClose: j,
-              footer: (0, o.jsx)(f.p, {
-                  onClick: E,
+              footer: (0, o.jsx)(p.p, {
+                  onClick: R,
                   appId: v,
                   subscriptionType: _,
                   skuId: I,
                   subscriptionPlan: S,
-                  cannotOpenReason: Z
+                  cannotOpenReason: B
               }),
-              children: (0, o.jsx)(p.i, {
+              children: (0, o.jsx)(h.i, {
                   appId: v,
                   skuId: I,
                   benefits:
-                      null != b
-                          ? b.map((e) =>
+                      null != E
+                          ? E.map((e) =>
                                 (0, o.jsx)(
-                                    i.G,
+                                    r.G,
                                     {
                                         header: e.title,
                                         icon: e.icon,
@@ -75,10 +75,10 @@ function v(e) {
                                 )
                             )
                           : void 0,
-                  description: null !== (n = T.description) && void 0 !== n ? n : void 0,
-                  imgSrc: R,
-                  title: null !== (t = null == S ? void 0 : S.name) && void 0 !== t ? t : T.summary,
-                  tag: (0, o.jsx)(r.Z, { type: _ }),
+                  description: null !== (n = b.description) && void 0 !== n ? n : void 0,
+                  imgSrc: T,
+                  title: null !== (t = null == S ? void 0 : S.name) && void 0 !== t ? t : b.summary,
+                  tag: (0, o.jsx)(i.Z, { type: _ }),
                   FallbackIcon: s.BadgeIcon
               })
           });

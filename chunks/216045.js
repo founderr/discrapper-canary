@@ -23,8 +23,8 @@ var i,
     C = n(100527),
     _ = n(906732),
     E = n(475977),
-    f = n(957730),
-    I = n(31590),
+    I = n(957730),
+    f = n(31590),
     N = n(53691),
     A = n(267717),
     b = n(296810),
@@ -52,7 +52,7 @@ function w() {
     let t = (0, u.e7)([O.Z], () => O.Z.hidePersonalInformation),
         { pendingBio: n, ...i } = (0, u.cj)([R.Z], () => R.Z.getAllPending()),
         s = (0, u.e7)([R.Z], () => R.Z.showNotice()),
-        a = B.dN.useSetting() && null != n ? f.ZP.parse(void 0, n).content : n,
+        a = B.dN.useSetting() && null != n ? I.ZP.parse(void 0, n).content : n,
         c = y.ZP.canUsePremiumProfileCustomization(e),
         { analyticsLocations: w } = (0, _.ZP)(C.Z.PROFILE);
     l.useEffect(() => () => g.Z.wait(x.W3), []);
@@ -69,7 +69,7 @@ function w() {
             enabled: V,
             showSegmentedControl: G,
             showFloatingUpsell: Y
-        } = I.Z.useExperiment(
+        } = f.Z.useExperiment(
             { location: 'UserSettingsProfileCustomization' },
             {
                 autoTrackExposure: !c,

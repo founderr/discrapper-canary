@@ -3,7 +3,7 @@ t.d(n, {
         return g;
     },
     xX: function () {
-        return _;
+        return C;
     }
 });
 var l = t(200651);
@@ -22,8 +22,8 @@ var i = t(120356),
     h = t(861529),
     x = t(770009),
     v = t(889515),
-    C = t(915689);
-function _(e) {
+    _ = t(915689);
+function C(e) {
     return e.map((e, n) =>
         (function (e, n) {
             switch (e.type) {
@@ -32,7 +32,7 @@ function _(e) {
                         v.Z,
                         {
                             ...e,
-                            renderComponents: _
+                            renderComponents: C
                         },
                         n
                     );
@@ -66,10 +66,10 @@ function g(e) {
     return 0 === t.length
         ? null
         : (0, l.jsx)('div', {
-              className: r()([C.container, { [C.containerUikit]: n.isUIKitComponents() }]),
+              className: r()([_.container, { [_.containerUikit]: n.isUIKitComponents() }]),
               children: (0, l.jsx)(o.Il, {
                   message: n,
-                  children: _(t)
+                  children: C(t)
               })
           });
 }
