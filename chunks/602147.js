@@ -44,25 +44,25 @@ let b = l.forwardRef(function (e, t) {
         C = (0, s.Z)('discovery_button'),
         b = (0, p.Ws)({ location: _.dr.CONFLICT_CHECKS }),
         [E, S] = (0, c.US)(C && b ? [a.z.RAPIDASH_MORE_GUILDS_UPSELL] : [], m.R.SIDEBAR, !0),
-        N = E === a.z.RAPIDASH_MORE_GUILDS_UPSELL,
-        Z = l.useCallback(() => {
-            null == h || h(), (0, u.k5)({ source: g.JU.GUILDS_BAR_ICON }), I(d.Z.getField('selectedTab')), N && S(m.L.DISMISS);
-        }, [h, S, N]),
+        Z = E === a.z.RAPIDASH_MORE_GUILDS_UPSELL,
+        N = l.useCallback(() => {
+            null == h || h(), (0, u.k5)({ source: g.JU.GUILDS_BAR_ICON }), I(d.Z.getField('selectedTab')), Z && S(m.L.DISMISS);
+        }, [h, S, Z]),
         y = l.useMemo(
             () => ({
                 lowerBadgeSize: {
                     width: 12,
                     height: 12
                 },
-                lowerBadge: N ? (0, i.jsx)('div', { className: x.guildNotif }) : void 0
+                lowerBadge: Z ? (0, i.jsx)('div', { className: x.guildNotif }) : void 0
             }),
-            [N]
+            [Z]
         );
     return (0, i.jsx)(f.Z, {
         id: 'guild-discover-button',
         ref: t,
         className: r,
-        onClick: Z,
+        onClick: N,
         selected: n,
         tooltip: v.intl.string(v.t['4nEZLi']),
         icon: o.CompassIcon,

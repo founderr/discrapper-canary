@@ -29,8 +29,8 @@ var i = n(200651),
     b = n(933557),
     E = n(979264),
     S = n(322614),
-    N = n(961556),
-    Z = n(163889),
+    Z = n(961556),
+    N = n(163889),
     y = n(111028),
     T = n(853856),
     j = n(93687),
@@ -43,8 +43,8 @@ var i = n(200651),
     D = n(306680),
     O = n(111583),
     k = n(9156),
-    G = n(594174),
-    U = n(709054),
+    U = n(594174),
+    G = n(709054),
     B = n(998502),
     H = n(788307),
     V = n(981631),
@@ -85,7 +85,7 @@ let z = B.ZP.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar,
 class Q extends l.Component {
     render() {
         let { route: e, selected: t, icon: n, iconClassName: l, avatarWithTextClassName: r, interactiveClassName: o, text: s, children: u, locationState: h, onClick: f, className: m, role: g, 'aria-posinset': C, 'aria-setsize': v, ...x } = this.props;
-        return (0, i.jsx)(Z.Z, {
+        return (0, i.jsx)(N.Z, {
             className: a()(W.channel, { [W.fullWidth]: d.tq }, m),
             onClick: f,
             role: g,
@@ -125,7 +125,7 @@ class Q extends l.Component {
     }
 }
 function J(e) {
-    let { channel: t, isGDMFacepileEnabled: r, selected: o = !1, user: d, activities: S, applicationStream: j, entry: M, isTyping: L, status: w, isMobile: O, 'aria-posinset': G, 'aria-setsize': U } = e,
+    let { channel: t, isGDMFacepileEnabled: r, selected: o = !1, user: d, activities: S, applicationStream: j, entry: M, isTyping: L, status: w, isMobile: O, 'aria-posinset': U, 'aria-setsize': G } = e,
         [B, Q] = l.useState(!1),
         J = l.useRef(null),
         X = l.useRef(null),
@@ -232,7 +232,7 @@ function J(e) {
                           user: d
                       })
                     : null != M
-                      ? (0, i.jsx)(N.Z, {
+                      ? (0, i.jsx)(Z.Z, {
                             ...e,
                             entry: M
                         })
@@ -296,7 +296,7 @@ function J(e) {
         id: t.id,
         children: (e) => {
             let { role: n, ...l } = e;
-            return (0, i.jsx)(Z.Z, {
+            return (0, i.jsx)(N.Z, {
                 className: W.channel,
                 role: n,
                 focusProps: {
@@ -309,8 +309,8 @@ function J(e) {
                 onMouseLeave: eo,
                 onMouseDown: ec,
                 onContextMenu: eh,
-                'aria-setsize': U,
-                'aria-posinset': G,
+                'aria-setsize': G,
+                'aria-posinset': U,
                 children: (0, i.jsxs)(p.Interactive, {
                     className: a()(W.interactive, {
                         [W.interactiveSystemDM]: e_ && eC,
@@ -363,7 +363,7 @@ function J(e) {
 }
 t.ZP = (e) => {
     let { channel: t, selected: n, ...l } = e,
-        r = (0, h.e7)([G.default], () => G.default.getUser(t.getRecipientId())),
+        r = (0, h.e7)([U.default], () => U.default.getUser(t.getRecipientId())),
         { isStatusIndicatorEnabled: a, isTypingIndicatorEnabled: o, isFacepileEnabled: s } = j.Z.useExperiment({ location: 'private_channel' }, { autoTrackExposure: !0 }),
         c = null == r ? void 0 : r.id,
         u = (0, h.cj)(
@@ -386,14 +386,14 @@ t.ZP = (e) => {
             [t, c, a]
         ),
         d = (0, h.e7)(
-            [G.default, O.Z],
+            [U.default, O.Z],
             () => {
                 if (t.isMultiUserDM())
                     return (
                         !!o &&
-                        U.default.keys(O.Z.getTypingUsers(t.id)).some((e) => {
+                        G.default.keys(O.Z.getTypingUsers(t.id)).some((e) => {
                             var t;
-                            return e !== (null === (t = G.default.getCurrentUser()) || void 0 === t ? void 0 : t.id);
+                            return e !== (null === (t = U.default.getCurrentUser()) || void 0 === t ? void 0 : t.id);
                         })
                     );
                 if (null != r) return O.Z.isTyping(t.id, t.getRecipientId());

@@ -26,15 +26,15 @@ var l = n(120356),
     b = n(434479),
     E = n(981631),
     S = n(176505),
-    N = n(629481),
-    Z = n(388032),
+    Z = n(629481),
+    N = n(388032),
     y = n(316512);
 function T(e) {
     let { guildId: t, selected: n, handleClick: l } = e,
         u = (0, f.RF)(t, 'guild_shop_channel_row'),
         m = (0, a.e7)([x.Z], () => x.Z.getGuild(t)),
         S = (null == m ? void 0 : m.hasFeature(E.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0,
-        T = 'false' === s.K.get(N.tM, 'false'),
+        T = 'false' === s.K.get(Z.tM, 'false'),
         j = (0, a.e7)([d.Z], () => d.Z.useReducedMotion);
     return (0, i.jsx)(b.m, {
         id: 'shop-'.concat(t),
@@ -49,7 +49,7 @@ function T(e) {
                 height: 20,
                 className: r()([e, y.shopIcon])
             }),
-        text: Z.intl.string(Z.t.al5EXF),
+        text: N.intl.string(N.t.al5EXF),
         selected: n,
         onClick: l,
         trailing: (0, i.jsxs)('div', {
@@ -58,7 +58,7 @@ function T(e) {
                 j
                     ? (0, i.jsx)(c.TextBadge, {
                           color: c.tokens.unsafe_rawColors.BRAND_260.css,
-                          text: Z.intl.string(Z.t.y2b7CA),
+                          text: N.intl.string(N.t.y2b7CA),
                           className: y.newBadge
                       })
                     : (0, i.jsx)('img', {
@@ -75,7 +75,7 @@ function T(e) {
                                 (0, C.EW)(o.z.SERVER_SHOP_PHANTOM_PREVIEW),
                                 I.default.track(E.rMx.GUILD_SHOP_PREVIEW_CLICK, {
                                     ...(0, h.hH)(t),
-                                    action_taken: N.mz.DISMISS_CHANNEL_ROW
+                                    action_taken: Z.mz.DISMISS_CHANNEL_ROW
                                 }),
                                 !u || !S)
                             ) {
@@ -83,7 +83,7 @@ function T(e) {
                                 (0, _.dL)(E.Z5c.CHANNEL(t, null === (n = v.ZP.getDefaultChannel(t)) || void 0 === n ? void 0 : n.id));
                             }
                         },
-                        'aria-label': Z.intl.string(Z.t.cpT0Cg),
+                        'aria-label': N.intl.string(N.t.cpT0Cg),
                         children: (0, i.jsx)(c.CircleXIcon, {
                             size: 'xs',
                             color: 'currentColor'
@@ -97,7 +97,7 @@ function j(e) {
     let { guild: t, selected: l } = e,
         r = (0, m.g)(t, 'guild_shop_channel_row'),
         a = () => {
-            s.K.set(N.tM, 'true'), (0, _.uL)(E.Z5c.CHANNEL(t.id, S.oC.GUILD_SHOP));
+            s.K.set(Z.tM, 'true'), (0, _.uL)(E.Z5c.CHANNEL(t.id, S.oC.GUILD_SHOP));
         };
     return r
         ? (0, i.jsx)(T, {
@@ -113,7 +113,7 @@ function j(e) {
                       height: 20,
                       className: e
                   }),
-              text: Z.intl.string(Z.t.al5EXF),
+              text: N.intl.string(N.t.al5EXF),
               selected: l,
               onClick: a,
               onContextMenu: (e) => {

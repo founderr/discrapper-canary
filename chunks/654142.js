@@ -31,8 +31,8 @@ t.Z = l.memo(function (e) {
             for (let e of t) (e.length < n || 0 === i.length) && (i.push(e), (n -= e.length));
             return ''.concat(i.join(', ')).concat(i.length < t.length ? ', ...' : '');
         })(t),
-        N = (0, f.Z)(t),
-        { mentionCount: Z, unread: y } = (0, r.cj)([u.default], () => ({
+        Z = (0, f.Z)(t),
+        { mentionCount: N, unread: y } = (0, r.cj)([u.default], () => ({
             mentionCount: I.map((e) => u.default.getMentionCount(e)).reduce((e, t) => e + t, 0),
             unread: I.some((e) => u.default.hasUnread(e))
         })),
@@ -49,20 +49,20 @@ t.Z = l.memo(function (e) {
                             folderId: C,
                             folderName: _,
                             folderColor: v,
-                            unread: y || Z > 0
+                            unread: y || N > 0
                         });
                 });
             },
-            [C, _, v, y, Z]
+            [C, _, v, y, N]
         );
     return (0, i.jsx)(p.Z, {
         ...g,
         folderNode: t,
         expanded: E,
         selected: null != b && I.includes(b),
-        mentionCount: Z,
+        mentionCount: N,
         unread: y,
-        mediaState: N,
+        mediaState: Z,
         defaultFolderName: S,
         onExpandCollapse: T,
         onContextMenu: j

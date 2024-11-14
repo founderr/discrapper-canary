@@ -95,7 +95,7 @@ let S = {
             })
     }
 };
-class N extends r.PureComponent {
+class Z extends r.PureComponent {
     renderText() {
         let { state: e, isPaused: t } = this.props;
         if (e.type === x.vxO.UPDATING || e.type === x.vxO.REPAIRING || e.type === x.vxO.INSTALLING) {
@@ -132,7 +132,7 @@ class N extends r.PureComponent {
             });
     }
 }
-class Z extends (i = r.PureComponent) {
+class N extends (i = r.PureComponent) {
     componentWillAppear(e) {
         this.state.animationScale.setValue(1), e();
     }
@@ -152,7 +152,7 @@ class Z extends (i = r.PureComponent) {
         let { firstApplication: e, firstState: t, isPaused: n } = this.props;
         return null == e || null == t
             ? I.intl.string(I.t.cw57am)
-            : (0, l.jsx)(N, {
+            : (0, l.jsx)(Z, {
                   application: e,
                   state: t,
                   isPaused: n
@@ -193,7 +193,7 @@ class Z extends (i = r.PureComponent) {
             });
     }
 }
-E(Z, 'defaultProps', { strokeSize: h.ProgressCircle.StrokeSizes.MEDIUM });
+E(N, 'defaultProps', { strokeSize: h.ProgressCircle.StrokeSizes.MEDIUM });
 function y(e, t) {
     return e.reduce((e, n) => {
         let { applicationId: i, branchId: l } = n,
@@ -216,7 +216,7 @@ t.Z = c.ZP.connectStores([C.Z, g.Z, p.Z], () => {
     return t
         ? (0, l.jsx)(d.W, {
               component: r.Fragment,
-              children: n.percent > 0 && n.percent < 100 ? (0, l.jsx)(Z, { ...n }) : null
+              children: n.percent > 0 && n.percent < 100 ? (0, l.jsx)(N, { ...n }) : null
           })
-        : (0, l.jsx)(Z, { ...n });
+        : (0, l.jsx)(N, { ...n });
 });

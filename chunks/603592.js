@@ -10,7 +10,7 @@ var i = n(200651),
     d = n(662146),
     h = n(322459);
 let p = l.forwardRef(function (e, t) {
-    let { id: n, onClick: r, onContextMenu: p, icon: f, selected: m, tooltip: g, upperBadge: C, lowerBadge: _, lowerBadgeSize: v, showPill: x = !0, className: I, 'aria-label': b, children: E, onMouseEnter: S, onMouseLeave: N, onMouseDown: Z } = e,
+    let { id: n, onClick: r, onContextMenu: p, icon: f, selected: m, tooltip: g, upperBadge: C, lowerBadge: _, lowerBadgeSize: v, showPill: x = !0, className: I, 'aria-label': b, children: E, onMouseEnter: S, onMouseLeave: Z, onMouseDown: N } = e,
         y = (0, o.Ie)(n),
         [T, j] = l.useState(!1),
         A = 'string' == typeof g && null == b ? g : b;
@@ -40,9 +40,9 @@ let p = l.forwardRef(function (e, t) {
                             null == S || S(), j(!0);
                         },
                         onMouseLeave: () => {
-                            null == N || N(), j(!1);
+                            null == Z || Z(), j(!1);
                         },
-                        onMouseDown: Z,
+                        onMouseDown: N,
                         className: a()(h.circleIconButton, I, { [h.selected]: m || T }),
                         onClick: r,
                         'aria-label': A,

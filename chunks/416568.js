@@ -21,8 +21,8 @@ var i = n(200651),
     b = n(706590),
     E = n(940777),
     S = n(41776),
-    N = n(905423),
-    Z = n(802718),
+    Z = n(905423),
+    N = n(802718),
     y = n(796974),
     T = n(271383),
     j = n(430824),
@@ -35,8 +35,8 @@ var i = n(200651),
     D = n(741616),
     O = n(187835),
     k = n(118122),
-    G = n(193154),
-    U = n(602147),
+    U = n(193154),
+    G = n(602147),
     B = n(773182),
     H = n(222059),
     V = n(751277),
@@ -225,10 +225,10 @@ function er(e) {
     }, []),
         l.useEffect(() => {
             if ((e_.setGuildsTree(s), ea.current || 0 === s.size)) return;
-            let e = N.Z.getState().guildId;
+            let e = Z.Z.getState().guildId;
             e_.scrollToGuild(e, !1);
             let t = null;
-            return N.Z.subscribe((e) => {
+            return Z.Z.subscribe((e) => {
                 let { guildId: n } = e;
                 n !== t && ((t = n), e_.scrollToGuild(t, !1));
             });
@@ -273,13 +273,13 @@ function er(e) {
         }
     }
     (0, L.Z)(e_.scrollToGuild);
-    let eN = s.getRoots(),
-        eZ = (0, b.Z)(),
-        ey = (0, Z.U)(),
+    let eZ = s.getRoots(),
+        eN = (0, b.Z)(),
+        ey = (0, N.U)(),
         eT = l.useCallback(
             (e) => {
                 let { onClick: t } = e;
-                return (0, i.jsx)(U.Z, {
+                return (0, i.jsx)(G.Z, {
                     ref: e_.guildDiscoveryRef,
                     selected: eI,
                     className: X.fixedDiscoveryIcon,
@@ -290,7 +290,7 @@ function er(e) {
         ),
         ej = ee.map((e) =>
             (0, i.jsx)(
-                G.Z,
+                U.Z,
                 {
                     id: e.id,
                     name: e.name,
@@ -330,7 +330,7 @@ function er(e) {
                                 onScroll: e_.handleScroll,
                                 children: [
                                     (0, i.jsx)(H.u, {}),
-                                    eZ ? (0, i.jsx)(E.Z, {}) : null,
+                                    eN ? (0, i.jsx)(E.Z, {}) : null,
                                     (0, i.jsx)(V.Z, { isOnHubVerificationRoute: eb }),
                                     (0, i.jsx)(D.Z, {}),
                                     ey,
@@ -339,14 +339,14 @@ function er(e) {
                                     (0, i.jsx)(F.Z, {}),
                                     (0, i.jsx)('div', {
                                         'aria-label': J.intl.string(J.t['7hB4kp']),
-                                        children: eN.map(eS)
+                                        children: eZ.map(eS)
                                     }),
                                     ej,
                                     n
                                         ? null
                                         : (0, i.jsx)(k.Z, {
                                               disableTooltip: p.length > 0,
-                                              lastTargetNode: eN[eN.length - 1]
+                                              lastTargetNode: eZ[eZ.length - 1]
                                           }),
                                     (0, i.jsx)(W.Z, {}),
                                     t

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return Z;
+        return N;
     }
 }),
     n(47120);
@@ -138,7 +138,7 @@ function S(e) {
               children: n
           });
 }
-function N(e) {
+function Z(e) {
     let { activity: t } = e;
     if (null == t || !(0, c.Z)(t)) return null;
     let { timestamps: n } = t;
@@ -152,11 +152,11 @@ function N(e) {
         singleLine: !0
     });
 }
-function Z(e) {
+function N(e) {
     let { activity: t, embeddedApp: n, user: r, channel: a, sortedVoiceStates: u, onOpenSpotifyTrack: h, onOpenSpotifyArtist: p, onOpenSpotifyAlbum: m } = e,
         g = [];
     null != n ? (g = Array.from(n.embeddedActivity.userIds)) : (0, c.Z)(t) && null != u && (g = u.map((e) => e.user.id));
-    let Z = (0, o.Wu)([f.default], () => g.map((e) => f.default.getUser(e)).filter(C.lm)),
+    let N = (0, o.Wu)([f.default], () => g.map((e) => f.default.getUser(e)).filter(C.lm)),
         y = null != n || (0, c.Z)(t),
         T = l.useMemo(() => {
             let e = new Map();
@@ -201,7 +201,7 @@ function Z(e) {
                                       (0, i.jsx)(d.Z, {
                                           className: v.usersSummary,
                                           guildId: a.guild_id,
-                                          users: Z,
+                                          users: N,
                                           size: x,
                                           max: 7,
                                           renderUser: (e) => {
@@ -232,7 +232,7 @@ function Z(e) {
                           })
                       ]
                   }),
-                  (0, i.jsx)(N, { activity: t })
+                  (0, i.jsx)(Z, { activity: t })
               ]
           })
         : null;

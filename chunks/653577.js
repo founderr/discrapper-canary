@@ -23,8 +23,8 @@ function _(e) {
         b = (0, o.e7)([u.Z], () => u.Z.getChannelStatus(t)),
         E = null != b && b.length > 0,
         S = (0, c.ZP)(t, !0),
-        N = (!x || !!I) && S,
-        Z = null != _ && _.length > 0;
+        Z = (!x || !!I) && S,
+        N = null != _ && _.length > 0;
     l.useEffect(() => {
         E &&
             p.default.track(f.rMx.VOICE_CHANNEL_TOPIC_VIEWED, {
@@ -34,18 +34,18 @@ function _(e) {
     }, [t.id, E, t.guild_id]);
     let y = (0, s.useRedesignIconContext)().enabled ? 12 : 14;
     if (null == t.guild_id) return null;
-    let T = a()(g.statusDiv, n && N ? g.hoverable : null);
+    let T = a()(g.statusDiv, n && Z ? g.hoverable : null);
     if (E)
         return (0, i.jsx)(s.Clickable, {
             className: T,
-            onClick: N ? v : void 0,
+            onClick: Z ? v : void 0,
             children: (0, i.jsx)(s.Text, {
                 variant: 'text-xs/medium',
                 className: a()(g.statusText, C.markup),
                 children: (0, i.jsx)(d.Z, { children: h.Z.parseVoiceChannelStatus(b, !0, { channelId: t.id }) })
             })
         });
-    if (n && N && (!Z || r))
+    if (n && Z && (!N || r))
         return (0, i.jsxs)(s.Clickable, {
             className: T,
             onClick: v,
@@ -64,6 +64,6 @@ function _(e) {
                 })
             ]
         });
-    if (Z) return (0, i.jsx)(d.Z, { children: _ });
+    if (N) return (0, i.jsx)(d.Z, { children: _ });
     return null;
 }

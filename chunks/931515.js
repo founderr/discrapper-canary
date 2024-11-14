@@ -37,19 +37,19 @@ function v() {
         b = (0, l.e7)([s.Z], () => s.Z.hasInitialized),
         E = (0, l.e7)([h.Z], () => h.Z.hasConsented(g.pjP.PERSONALIZATION)),
         S = null == I && b,
-        N = i.useMemo(() => (E ? x.reduce((t, n) => (t.length >= e || 'played_game_extra' !== n.extra.type || null == C.gQ.get(n.extra.application_id) ? t : t.concat(n.extra.application_id)), []) : []), [E, x, e]),
-        Z = i.useMemo(() => {
-            let n = N.length > 0 ? N : C.Id;
+        Z = i.useMemo(() => (E ? x.reduce((t, n) => (t.length >= e || 'played_game_extra' !== n.extra.type || null == C.gQ.get(n.extra.application_id) ? t : t.concat(n.extra.application_id)), []) : []), [E, x, e]),
+        N = i.useMemo(() => {
+            let n = Z.length > 0 ? Z : C.Id;
             return t && n.length < e && n.push(...C.Id, ...C.J6.slice(0, e)), Array.from(new Set(n)).slice(0, e);
-        }, [N, t, e]);
+        }, [Z, t, e]);
     i.useEffect(() => {
         S && E && (0, o.JX)(n);
     }, [n, S, E]),
         i.useEffect(() => {
-            r.Z.getDetectableGamesSupplemental(Z);
-        }, [Z]);
-    let y = (0, l.Wu)([c.Z], () => c.Z.getGames(Z), [Z]),
-        T = (0, l.e7)([c.Z], () => Z.some((e) => c.Z.isFetching(e)), [Z]),
+            r.Z.getDetectableGamesSupplemental(N);
+        }, [N]);
+    let y = (0, l.Wu)([c.Z], () => c.Z.getGames(N), [N]),
+        T = (0, l.e7)([c.Z], () => N.some((e) => c.Z.isFetching(e)), [N]),
         j = i.useMemo(() => {
             let e = {};
             for (let t of y) {
@@ -117,7 +117,7 @@ function v() {
         {
             games: i.useMemo(
                 () =>
-                    Z.map((e) => {
+                    N.map((e) => {
                         var t, n, i;
                         let l = j[e],
                             r = null !== (n = A[e]) && void 0 !== n ? n : _,
@@ -129,9 +129,9 @@ function v() {
                             primaryColor: r
                         };
                     }),
-                [Z, y, j, A]
+                [N, y, j, A]
             ),
-            treatment: N.length > 0 && E ? C.O7.GAME_SPECIFIC : C.O7.GENERIC,
+            treatment: Z.length > 0 && E ? C.O7.GAME_SPECIFIC : C.O7.GENERIC,
             hasFetchedGames: !S && !T
         }
     );

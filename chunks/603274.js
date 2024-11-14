@@ -29,7 +29,7 @@ var l = n(120356),
     b = n(388032),
     E = n(516126),
     S = n(64056);
-function N(e, t) {
+function Z(e, t) {
     return 0 === t.length
         ? null
         : (0, i.jsxs)('div', {
@@ -47,7 +47,7 @@ function N(e, t) {
               ]
           });
 }
-function Z() {
+function N() {
     var e, t;
     let n = (0, s.Wu)([x.Z, m.Z], () =>
             v.default
@@ -79,7 +79,7 @@ function Z() {
                     })
             )
         ),
-        Z = (0, s.e7)([h.Z], () => {
+        N = (0, s.e7)([h.Z], () => {
             let e = 0;
             for (let t of a) e += h.Z.getParticipantCount(t, p.pV.AUDIENCE);
             return e;
@@ -107,13 +107,13 @@ function Z() {
         ),
         j = (0, s.Wu)([g.default], () => T.map((e) => g.default.getUser(e)), [T]),
         A = (0, s.Wu)([g.default], () => y.map((e) => g.default.getUser(e)), [y]),
-        P = N(
+        P = Z(
             c.VoiceNormalIcon,
             b.filter((e) => !y.includes(e.id) && !T.includes(e.id))
         );
     let M =
             ((e = S),
-            (t = Z),
+            (t = N),
             0 === e.length
                 ? null
                 : (0, i.jsxs)('div', {
@@ -146,11 +146,11 @@ function Z() {
                           })
                       ]
                   })),
-        R = N(
+        R = Z(
             c.ScreenArrowIcon,
             A.filter((e) => null != e && !T.includes(e.id))
         ),
-        L = N(c.ActivitiesIcon, j);
+        L = Z(c.ActivitiesIcon, j);
     return (0, i.jsxs)(i.Fragment, {
         children: [M, P, R, L]
     });
@@ -165,7 +165,7 @@ function y() {
                     children: b.intl.string(b.t.wMWycn)
                 })
             }),
-            (0, i.jsx)(Z, {})
+            (0, i.jsx)(N, {})
         ]
     });
 }

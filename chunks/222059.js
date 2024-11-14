@@ -26,8 +26,8 @@ var i = n(200651),
     b = n(557177),
     E = n(278464),
     S = n(276952),
-    N = n(682662),
-    Z = n(662146),
+    Z = n(682662),
+    N = n(662146),
     y = n(674552),
     T = n(981631),
     j = n(474936),
@@ -67,9 +67,9 @@ function L(e) {
             className: M.downloadProgress,
             determineOwnVisibility: !1
         }));
-    let G = t || C || g,
-        U = (0, i.jsx)(s.BlobMask, {
-            selected: G,
+    let U = t || C || g,
+        G = (0, i.jsx)(s.BlobMask, {
+            selected: U,
             lowerBadge: h > 0 ? (0, y.Ne)(h) : null,
             upperBadge: k,
             lowerBadgeSize: { width: (0, s.getBadgeWidthForValue)(h) },
@@ -89,7 +89,7 @@ function L(e) {
                             }, 1000);
                     }
                 },
-                selected: G,
+                selected: U,
                 ariaLabel: P.intl.string(P.t.YUU0RE),
                 ...w,
                 to: {
@@ -111,19 +111,19 @@ function L(e) {
             inlineSpecs: R,
             tutorialId: 'friends-list',
             position: 'right',
-            children: (0, i.jsxs)(N.H, {
+            children: (0, i.jsxs)(Z.H, {
                 children: [
                     (0, i.jsx)(S.Z, {
                         selected: t,
                         hovered: C,
                         className: M.pill
                     }),
-                    (0, i.jsx)(Z.Z, {
+                    (0, i.jsx)(N.Z, {
                         color: s.Tooltip.Colors.PRIMARY,
                         hideOnClick: !0,
                         text: O,
                         selected: t,
-                        children: U
+                        children: G
                     })
                 ]
             })

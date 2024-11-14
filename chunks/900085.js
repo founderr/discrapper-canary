@@ -27,8 +27,8 @@ var i,
     b = n(944486),
     E = n(938475),
     S = n(585483),
-    N = n(63063),
-    Z = n(51596),
+    Z = n(63063),
+    N = n(51596),
     y = n(823385),
     T = n(415795),
     j = n(670512),
@@ -60,7 +60,7 @@ let L = 10,
                 (0, l.jsx)('div', {
                     className: M.emptyStateCTA,
                     children: (0, l.jsx)(u.Anchor, {
-                        href: N.Z.getArticleURL(A.BhN.QUICK_SWITCHER_TUTORIAL),
+                        href: Z.Z.getArticleURL(A.BhN.QUICK_SWITCHER_TUTORIAL),
                         children: P.intl.string(P.t['4iPfEB'])
                     })
                 })
@@ -92,11 +92,11 @@ let O = c.ZP.connectStores([I.ZP, _.Z], (e) => {
         if (null == t.guild_id) throw Error('ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...');
         return { voiceStates: E.ZP.getVoiceStates(t.guild_id)[t.id] };
     })(D),
-    G = c.ZP.connectStores([v.default], (e) => {
+    U = c.ZP.connectStores([v.default], (e) => {
         let { guild: t } = e;
         return { unread: v.default.hasUnread(t.id) };
     })(T.ic),
-    U = c.ZP.connectStores([I.ZP], (e) => {
+    G = c.ZP.connectStores([I.ZP], (e) => {
         let { channel: t } = e;
         return { mentions: I.ZP.getMentionCount(t.id) };
     })(T.PZ),
@@ -143,10 +143,10 @@ class V extends r.PureComponent {
                   });
     }
     close() {
-        (0, Z.Cp)();
+        (0, N.Cp)();
     }
     search(e) {
-        this.setState({ query: e }), (0, Z.yC)(e);
+        this.setState({ query: e }), (0, N.yC)(e);
     }
     renderInput() {
         let { selectedIndex: e, results: t } = this.props,
@@ -211,7 +211,7 @@ class V extends r.PureComponent {
                 textChannelSymbolHook: (e, t) => H(t, f.xQ.TEXT_CHANNEL, P.intl.string(P.t.wrwhub)),
                 voiceChannelSymbolHook: (e, t) => H(t, f.xQ.VOICE_CHANNEL, P.intl.string(P.t['jz+hJi'])),
                 guildSymbolHook: (e, t) => H(t, f.xQ.GUILD, P.intl.string(P.t.WuwCWl)),
-                helpdeskArticle: N.Z.getArticleURL(A.BhN.QUICK_SWITCHER_TUTORIAL)
+                helpdeskArticle: Z.Z.getArticleURL(A.BhN.QUICK_SWITCHER_TUTORIAL)
             })
         });
     }
@@ -252,10 +252,10 @@ class V extends r.PureComponent {
                 if (!1 !== e) this.setState({ mouseFocusDisabled: !1 });
             }),
             R(this, 'focusResult', (e) => {
-                if (!this.state.mouseFocusDisabled) (0, Z.tF)(this.props.results.indexOf(e));
+                if (!this.state.mouseFocusDisabled) (0, N.tF)(this.props.results.indexOf(e));
             }),
             R(this, 'selectResult', (e) => {
-                (0, Z.Se)(e, this.props.queryMode === f.h8.TEXT_CHANNEL);
+                (0, N.Se)(e, this.props.queryMode === f.h8.TEXT_CHANNEL);
             }),
             R(this, 'handleContextMenu', (e) => {
                 let t = this.props.results[this.props.selectedIndex];
@@ -267,7 +267,7 @@ class V extends r.PureComponent {
                                 (0, l.jsx)(e, {
                                     ...n,
                                     guild: t.record,
-                                    onSelect: Z.Cp,
+                                    onSelect: N.Cp,
                                     hideSettings: !0
                                 });
                         });
@@ -288,7 +288,7 @@ class V extends r.PureComponent {
                                             ...t,
                                             channel: i,
                                             guild: r,
-                                            onSelect: Z.Cp
+                                            onSelect: N.Cp
                                         });
                                 });
                             case A.d4z.GUILD_VOICE:
@@ -300,7 +300,7 @@ class V extends r.PureComponent {
                                             ...t,
                                             channel: i,
                                             guild: r,
-                                            onSelect: Z.Cp
+                                            onSelect: N.Cp
                                         });
                                 });
                             case A.d4z.ANNOUNCEMENT_THREAD:
@@ -312,7 +312,7 @@ class V extends r.PureComponent {
                                         (0, l.jsx)(e, {
                                             ...t,
                                             channel: i,
-                                            onSelect: Z.Cp
+                                            onSelect: N.Cp
                                         });
                                 });
                             case A.d4z.GUILD_STORE:
@@ -323,7 +323,7 @@ class V extends r.PureComponent {
                                             ...t,
                                             channel: i,
                                             guild: r,
-                                            onSelect: Z.Cp
+                                            onSelect: N.Cp
                                         });
                                 });
                             case A.d4z.GUILD_DIRECTORY:
@@ -345,7 +345,7 @@ class V extends r.PureComponent {
                                     ...n,
                                     channel: t.record,
                                     selected: b.Z.getChannelId() === t.record.id,
-                                    onSelect: Z.Cp
+                                    onSelect: N.Cp
                                 });
                         });
                     case f.h8.USER:
@@ -355,7 +355,7 @@ class V extends r.PureComponent {
                                 (0, l.jsx)(e, {
                                     ...n,
                                     user: t.record,
-                                    onSelect: Z.Cp
+                                    onSelect: N.Cp
                                 });
                         });
                 }
@@ -368,10 +368,10 @@ class V extends r.PureComponent {
                     { selectedIndex: r } = this.props;
                 switch (l) {
                     case 'escape':
-                        e.preventDefault(), e.stopPropagation(), n.length > 0 ? this.search('') : (0, Z.Cp)();
+                        e.preventDefault(), e.stopPropagation(), n.length > 0 ? this.search('') : (0, N.Cp)();
                         return;
                     case 'k':
-                        (!0 === e.ctrlKey || !0 === e.metaKey) && (e.preventDefault(), e.stopPropagation(), (0, Z.Cp)());
+                        (!0 === e.ctrlKey || !0 === e.metaKey) && (e.preventDefault(), e.stopPropagation(), (0, N.Cp)());
                         return;
                     case 'enter': {
                         if (-1 === r) return;
@@ -397,7 +397,7 @@ class V extends r.PureComponent {
                     default:
                         return;
                 }
-                e.preventDefault(), (0, Z.tF)(r);
+                e.preventDefault(), (0, N.tF)(r);
             }),
             R(this, 'renderRow', (e) => {
                 let { row: t } = e,
@@ -439,7 +439,7 @@ class V extends r.PureComponent {
                         );
                     case f.h8.GUILD:
                         return (0, l.jsx)(
-                            G,
+                            U,
                             {
                                 id: this.getRowId(t),
                                 focused: i >= 0 && t === i,
@@ -470,7 +470,7 @@ class V extends r.PureComponent {
                         );
                     case f.h8.GROUP_DM:
                         return (0, l.jsx)(
-                            U,
+                            G,
                             {
                                 id: this.getRowId(t),
                                 focused: i >= 0 && t === i,

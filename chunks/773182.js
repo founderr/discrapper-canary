@@ -32,8 +32,8 @@ var i = n(200651),
     b = n(863249),
     E = n(937111),
     S = n(667105),
-    N = n(451478),
-    Z = n(602147),
+    Z = n(451478),
+    N = n(602147),
     y = n(981631),
     T = n(308083),
     j = n(921944),
@@ -107,13 +107,13 @@ let D = l.memo(function (e) {
         [E, D] = (0, v.US)([u.z.RAPIDASH_MORE_GUILDS_UPSELL], j.R.SIDEBAR, !0),
         O = (0, S.Ws)({ location: M.dr.CONFLICT_CHECKS }),
         k = E !== u.z.RAPIDASH_MORE_GUILDS_UPSELL,
-        G = (0, h.Z)(),
-        U = n.pathname === y.Z5c.GUILD_DISCOVERY || n.pathname.startsWith(y.Z5c.GLOBAL_DISCOVERY),
-        B = O && !G && !k && !U,
+        U = (0, h.Z)(),
+        G = n.pathname === y.Z5c.GUILD_DISCOVERY || n.pathname.startsWith(y.Z5c.GLOBAL_DISCOVERY),
+        B = O && !U && !k && !G,
         [H, V] = l.useState(0),
         F = (0, f.ZP)(),
         W = l.useMemo(() => r.map((e) => e.id), [r]),
-        z = (0, c.e7)([N.Z], () => N.Z.isFocused());
+        z = (0, c.e7)([Z.Z], () => Z.Z.isFocused());
     l.useEffect(() => {
         B &&
             (0, g.tv)({
@@ -146,7 +146,7 @@ let D = l.memo(function (e) {
                 });
             else {
                 let e = x.Z.getField('selectedTab');
-                (0, Z.o)(e);
+                (0, N.o)(e);
             }
         }, [O, p, W, B, D]),
         K = l.useCallback(

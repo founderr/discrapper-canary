@@ -21,8 +21,8 @@ var l,
 let b = x.IlC.APP,
     E = !1,
     S = !1,
-    N = [];
-function Z() {
+    Z = [];
+function N() {
     E = !0;
 }
 class y extends (l = s.ZP.Store) {
@@ -31,11 +31,11 @@ class y extends (l = s.ZP.Store) {
     }
     isOpen() {
         let e = __OVERLAY__ ? x.IlC.OVERLAY : x.IlC.APP;
-        return !!(E && N.length > 0 && b === e);
+        return !!(E && Z.length > 0 && b === e);
     }
     getProps() {
         return {
-            invite: N.length > 0 ? N[0][0] : null,
+            invite: Z.length > 0 ? Z[0][0] : null,
             error: null != i && '' !== i ? i : null,
             submitting: S
         };
@@ -51,8 +51,8 @@ class y extends (l = s.ZP.Store) {
           })
         : (r[a] = o),
     (t.Z = new y(c.Z, {
-        OVERLAY_INITIALIZE: Z,
-        CONNECTION_OPEN: Z,
+        OVERLAY_INITIALIZE: N,
+        CONNECTION_OPEN: N,
         CONNECTION_CLOSED: function () {
             E = !1;
         },
@@ -81,7 +81,7 @@ class y extends (l = s.ZP.Store) {
                 }
             }
             if (
-                N.some((e) => {
+                Z.some((e) => {
                     let [n] = e;
                     return n.code === t.code;
                 })
@@ -103,11 +103,11 @@ class y extends (l = s.ZP.Store) {
                     };
                 return null != u && (h.channel = { ...u }), null != d && (h.guild = new p.ZP(d)), null != e.inviter && (h.inviter = { ...e.inviter }), h;
             })(t);
-            N.push([n, e.resolve]);
+            Z.push([n, e.resolve]);
         },
         INVITE_MODAL_CLOSE: function () {
-            if (((i = null), (S = !1), N.length > 0)) {
-                let [, e] = N.shift();
+            if (((i = null), (S = !1), Z.length > 0)) {
+                let [, e] = Z.shift();
                 null != e && e();
             }
         },

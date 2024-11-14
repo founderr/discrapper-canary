@@ -22,8 +22,8 @@ var l = n(392711),
     b = n(970645),
     E = n(30684),
     S = n(514701),
-    N = n(6242),
-    Z = n(467721),
+    Z = n(6242),
+    N = n(467721),
     y = n(757692),
     T = n(114064),
     j = n(933843),
@@ -36,8 +36,8 @@ var l = n(392711),
     D = n(522558),
     O = n(879463),
     k = n(822070),
-    G = n(520540),
-    U = n(11352),
+    U = n(520540),
+    G = n(11352),
     B = n(474936),
     H = n(981631),
     V = n(354459),
@@ -80,7 +80,7 @@ class Y extends c.Z {
         if (P.Z.getIsFetchingReferralIncentiveEligibility() || !(0, x.I5)(e)) return;
         let t = { location: 'PremiumManager' },
             n = { autoTrackExposure: !1 };
-        if (!!G.g.getCurrentConfig(t, n).enabled && !O.eP.getCurrentConfig(t, n).enabled) k.$.getCurrentConfig(t, n).enabled && (0, A.bq)();
+        if (!!U.g.getCurrentConfig(t, n).enabled && !O.eP.getCurrentConfig(t, n).enabled) k.$.getCurrentConfig(t, n).enabled && (0, A.bq)();
     }
     openPremiumPaymentModalInApp(e) {
         if (__OVERLAY__) throw Error('Should not use this function from the overlay, use ModalAPI.openModal instead');
@@ -147,7 +147,7 @@ class Y extends c.Z {
                 e && (0, p.W)();
             }),
             z(this, '_trackCustomNotificationSoundsExposure', () => {
-                U.Y.trackExposure({ location: 'PremiumManager' });
+                G.Y.trackExposure({ location: 'PremiumManager' });
             }),
             z(this, '_trackSkyLoadExposure', () => {
                 M.Z.trackExposure({ location: 'PremiumManager' });
@@ -179,9 +179,9 @@ class Y extends c.Z {
                     var i, l;
                     let r = d.Z.getSelectedParticipant(e),
                         a = (0, y.o)(r, n),
-                        { sendNitroMessage: o } = (0, N.TD)(a),
+                        { sendNitroMessage: o } = (0, Z.TD)(a),
                         c = null !== (l = null === (i = g.Z.getGuild(t)) || void 0 === i ? void 0 : i.premiumTier) && void 0 !== l ? l : H.Eu4.NONE;
-                    if (Z.Z.cooldownIsActive() || !o || c >= H.Eu4.TIER_2 || (null == r ? void 0 : r.type) !== V.fO.STREAM || (null == r ? void 0 : r.id) === (null == n ? void 0 : n.id) || null == r.maxResolution || null == r.maxFrameRate) return;
+                    if (N.Z.cooldownIsActive() || !o || c >= H.Eu4.TIER_2 || (null == r ? void 0 : r.type) !== V.fO.STREAM || (null == r ? void 0 : r.id) === (null == n ? void 0 : n.id) || null == r.maxResolution || null == r.maxFrameRate) return;
                     S.I();
                     let u = W.intl.formatToPlainString(W.t.AbyeZG, {
                         nickname: r.userNick,

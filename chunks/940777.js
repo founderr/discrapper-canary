@@ -28,8 +28,8 @@ var i = n(200651),
     b = n(709054),
     E = n(853856),
     S = n(593214),
-    N = n(919755),
-    Z = n(110977),
+    Z = n(919755),
+    N = n(110977),
     y = n(603274),
     T = n(981631),
     j = n(388032),
@@ -52,7 +52,7 @@ function M() {
         D = (0, s.e7)([x.Z], () => x.Z.getChannelId(T.I_8)),
         O = (0, s.e7)([v.Z], () => v.Z.getChannel(D)),
         k = (0, C.Z)((e) => e.guildId) === T.I_8,
-        { badge: G, unread: U } = (0, N.Z)(w),
+        { badge: U, unread: G } = (0, Z.Z)(w),
         B = (function (e) {
             let t = (0, s.e7)([x.Z], () => x.Z.getVoiceChannelId()),
                 n = null != t && null != e[t],
@@ -87,7 +87,7 @@ function M() {
                 })
             );
         })(w),
-        H = G > 0 ? (0, g.N)(G) : null,
+        H = U > 0 ? (0, g.N)(U) : null,
         V = l.useCallback(() => {
             r();
         }, [r]);
@@ -96,12 +96,12 @@ function M() {
             (0, i.jsx)(p.Z, {
                 selected: k,
                 hovered: M,
-                unread: U && !L,
+                unread: G && !L,
                 className: A.pill
             }),
             (0, i.jsx)(y.Z, {
                 onShow: V,
-                children: (0, i.jsx)(Z.S, {
+                children: (0, i.jsx)(N.S, {
                     children: (0, i.jsx)(c.BlobMask, {
                         selected: k || M,
                         upperBadge: B,
@@ -110,7 +110,7 @@ function M() {
                             ...e,
                             ariaLabel: j.intl.formatToPlainString(j.t['/uzRsr'], {
                                 guildName: j.intl.string(j.t.wMWycn),
-                                mentions: G
+                                mentions: U
                             }),
                             to: {
                                 pathname: T.Z5c.CHANNEL(T.I_8, D),

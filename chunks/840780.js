@@ -21,8 +21,8 @@ var i = n(200651),
     b = n(594190),
     E = n(925329),
     S = n(102172),
-    N = n(74299),
-    Z = n(914923),
+    Z = n(74299),
+    N = n(914923),
     y = n(165393),
     T = n(989941),
     j = n(690221),
@@ -35,8 +35,8 @@ var i = n(200651),
     D = n(984933),
     O = n(430824),
     k = n(131951),
-    G = n(496675),
-    U = n(158776),
+    U = n(496675),
+    G = n(158776),
     B = n(699516),
     H = n(944486),
     V = n(594174),
@@ -82,7 +82,7 @@ class ee extends l.PureComponent {
     }
     renderScreenshare() {
         let { isStreaming: e, streamMetadata: t, streamQualityIndicator: n } = this.props,
-            { title: l, sanitizedTitle: r } = (0, Z.Z)(t);
+            { title: l, sanitizedTitle: r } = (0, N.Z)(t);
         return (0, i.jsxs)('div', {
             className: X.gameWrapper,
             children: [
@@ -201,7 +201,7 @@ t.Z = (0, f.Z)(function (e) {
         [h, p] = (0, c.Wu)([R.Z], () => [R.Z.getCurrentUserActiveStream(), R.Z.getStreamerActiveStreamMetadata()]),
         f = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
         g = (0, c.e7)([C.ZP], () => (null != u ? C.ZP.getSelfEmbeddedActivityForChannel(u.id) : null)),
-        x = (0, c.e7)([O.Z, G.Z, D.ZP], () => (null != o ? S.JL(o, O.Z, G.Z, !1) : null != n && S.h_(D.ZP.getChannels(n), O.Z, G.Z).length > 0)),
+        x = (0, c.e7)([O.Z, U.Z, D.ZP], () => (null != o ? S.JL(o, O.Z, U.Z, !1) : null != n && S.h_(D.ZP.getChannels(n), O.Z, U.Z).length > 0)),
         [I] = (0, _.Z)([
             null !==
                 (t = (function () {
@@ -212,8 +212,8 @@ t.Z = (0, f.Z)(function (e) {
                 ? t
                 : ''
         ]),
-        E = (0, c.e7)([k.Z], () => (0, N.Z)(k.Z) && (0, W.isWindows)()),
-        Z = (0, c.e7)([U.Z], () => (null != r ? U.Z.findActivity(r, (e) => e.type === Q.IIU.PLAYING) : null)),
+        E = (0, c.e7)([k.Z], () => (0, Z.Z)(k.Z) && (0, W.isWindows)()),
+        N = (0, c.e7)([G.Z], () => (null != r ? G.Z.findActivity(r, (e) => e.type === Q.IIU.PLAYING) : null)),
         y = null != h && h.ownerId === r && h.state !== Q.jm8.ENDED,
         j = (0, c.e7)([V.default, B.Z], () => (null != u ? (0, v.F6)(u, V.default, B.Z) : void 0)),
         P = (0, A.Z)();
@@ -221,7 +221,7 @@ t.Z = (0, f.Z)(function (e) {
         ...l,
         guildId: n,
         canGoLive: E,
-        activity: Z,
+        activity: N,
         embeddedActivity: g,
         userId: r,
         runningGame: a,

@@ -44,8 +44,8 @@ function E(e) {
         o = (0, r.e7)([p.Z], () => p.Z.getGuilds()),
         E = l.useMemo(() => Object.values(o), [o]),
         S = (0, r.e7)([f.default], () => f.default.getCurrentUser()),
-        N = l.useMemo(() => E.some((e) => e.isOwner(S)), [E, S]),
-        Z = (0, a.useModalsStore)((e) => (0, a.hasModalOpenSelector)(e, _.PU)),
+        Z = l.useMemo(() => E.some((e) => e.isOwner(S)), [E, S]),
+        N = (0, a.useModalsStore)((e) => (0, a.hasModalOpenSelector)(e, _.PU)),
         { analyticsLocations: y } = (0, s.ZP)(),
         T = (0, a.useRedesignIconContext)().enabled,
         j = (0, i.jsx)(g.Z, {
@@ -63,7 +63,7 @@ function E(e) {
                       })
                     : c.Z.openCreateGuildModal({ location: 'Guild List' });
             },
-            selected: Z,
+            selected: N,
             onContextMenu: b,
             tooltip: v.intl.string(v.t.l5WIbW),
             icon: T ? a.PlusMediumIcon : a.PlusSmallIcon
@@ -73,7 +73,7 @@ function E(e) {
         : (0, i.jsx)('div', {
               className: x.tutorialContainer,
               children: (0, i.jsxs)(h.Z, {
-                  tutorialId: N ? 'create-more-servers' : 'create-first-server',
+                  tutorialId: Z ? 'create-more-servers' : 'create-first-server',
                   inlineSpecs: I,
                   position: 'right',
                   children: [
