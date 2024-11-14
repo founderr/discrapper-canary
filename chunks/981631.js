@@ -4233,6 +4233,7 @@ let ot = Object.freeze({
     (nO.QUEST_VIDEO_APP_FOCUSED = 'quest_video_app_focused'),
     (nO.QUEST_VIDEO_APP_UNFOCUSED = 'quest_video_app_unfocused'),
     (nO.QUEST_VIDEO_PROGRESSED = 'quest_video_progressed'),
+    (nO.QUEST_VIDEO_SEGMENT_WATCHED = 'quest_video_segment_watched'),
     (nO.USER_SETTINGS_KEYBIND_UPDATED = 'user_settings_keybind_updated'),
     (nO.USER_ATTRIBUTION_RECEIVED = 'user_attribution_received'),
     (nO.USER_AVATAR_UPDATED = 'user_avatar_updated'),
