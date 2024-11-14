@@ -3,19 +3,22 @@ n.d(e, {
         return A;
     },
     ZZ: function () {
+        return M;
+    },
+    df: function () {
         return N;
     },
     pB: function () {
-        return I;
+        return f;
     },
     uE: function () {
-        return h;
-    },
-    x2: function () {
         return R;
     },
+    x2: function () {
+        return h;
+    },
     xA: function () {
-        return C;
+        return I;
     }
 }),
     n(411104);
@@ -23,8 +26,8 @@ var i = n(544891),
     r = n(570140),
     o = n(881052),
     a = n(128069),
-    l = n(34756),
-    d = n(115130),
+    d = n(34756),
+    l = n(115130),
     c = n(55563),
     _ = n(695103),
     s = n(122289),
@@ -40,7 +43,7 @@ async function A(t, e) {
             skuId: e
         });
         try {
-            let n = _.Z.inTestModeForApplication(t) || d.Z.inDevModeForApplication(t),
+            let n = _.Z.inTestModeForApplication(t) || l.Z.inDevModeForApplication(t),
                 i = await (0, p.Kb)(n ? S.ANM.STORE_SKU(e) : S.ANM.STORE_PUBLISHED_LISTINGS_SKU(e));
             r.Z.dispatch({
                 type: 'SKU_FETCH_SUCCESS',
@@ -57,14 +60,14 @@ async function A(t, e) {
                     type: 'SKU_FETCH_FAIL',
                     skuId: e
                 }),
-                new l.Z('Failed to fetch SKU '.concat(e)))
+                new d.Z('Failed to fetch SKU '.concat(e)))
             );
         }
     }
 }
-async function h(t) {
+async function R(t) {
     let e = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    if (!(_.Z.inTestModeForApplication(t) || d.Z.inDevModeForApplication(t)) && e) throw Error('this should only be used in test mode');
+    if (!(_.Z.inTestModeForApplication(t) || l.Z.inDevModeForApplication(t)) && e) throw Error('this should only be used in test mode');
     let n = (await (0, p.Kb)(S.ANM.APPLICATION_SKUS(t))).body;
     return (
         r.Z.dispatch({
@@ -74,19 +77,19 @@ async function h(t) {
         n
     );
 }
-async function R(t, e, n, i) {
-    let l;
+async function h(t, e, n, i) {
+    let d;
     let c = {
         payment_source_id: n,
         gift: null == i ? void 0 : i.isGift
     };
-    (_.Z.inTestModeForApplication(t) || d.Z.inDevModeForApplication(t)) && (c.test_mode = !0),
+    (_.Z.inTestModeForApplication(t) || l.Z.inDevModeForApplication(t)) && (c.test_mode = !0),
         r.Z.dispatch({
             type: 'SKU_PURCHASE_PREVIEW_FETCH',
             skuId: e
         });
     try {
-        (l = await (0, p.Kb)({
+        (d = await (0, p.Kb)({
             url: S.ANM.STORE_SKU_PURCHASE(e),
             query: c,
             oldFormErrors: !0
@@ -95,7 +98,7 @@ async function R(t, e, n, i) {
                 type: 'SKU_PURCHASE_PREVIEW_FETCH_SUCCESS',
                 skuId: e,
                 paymentSourceId: n,
-                price: l.body
+                price: d.body
             });
     } catch (n) {
         r.Z.dispatch({
@@ -105,22 +108,22 @@ async function R(t, e, n, i) {
         let t = n instanceof o.HF ? n : new o.HF(n);
         if (t.code === a.SM.BILLING_BUNDLE_ALREADY_PURCHASED || t.code === a.SM.BILLING_BUNDLE_PARTIALLY_OWNED) throw t;
     }
-    return l;
+    return d;
 }
-let M = { isGift: !1 };
-async function N(t, e, n) {
+let C = { isGift: !1 };
+async function M(t, e, n) {
     let {
-        paymentSource: l,
+        paymentSource: d,
         expectedAmount: c,
         expectedCurrency: p,
         analyticsLoadId: A,
-        isGift: h,
-        giftInfoOptions: R,
-        subscriptionPlanId: N,
-        loadId: C,
+        isGift: R,
+        giftInfoOptions: h,
+        subscriptionPlanId: M,
+        loadId: N,
         countryCode: I
     } = {
-        ...M,
+        ...C,
         ...n
     };
     r.Z.wait(() => {
@@ -130,21 +133,21 @@ async function N(t, e, n) {
             skuId: e
         });
     });
-    let f = _.Z.inTestModeForApplication(t) || d.Z.inDevModeForApplication(t);
+    let f = _.Z.inTestModeForApplication(t) || l.Z.inDevModeForApplication(t);
     try {
         let t = {
-            gift: h,
-            sku_subscription_plan_id: N,
-            gateway_checkout_context: await (0, s.cn)(l),
-            load_id: C
+            gift: R,
+            sku_subscription_plan_id: M,
+            gateway_checkout_context: await (0, s.cn)(d),
+            load_id: N
         };
         if (f) t.test_mode = !0;
         else {
-            if (null != l && ((t.payment_source_id = l.id), (t.payment_source_token = await (0, b.Zv)(l)), S.QL.has(l.type))) {
-                let e = await (0, b.EH)(l.type);
-                t.return_url = (0, i.K0)() + S.ANM.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(l.type, null != e ? e : '', 'success');
+            if (null != d && ((t.payment_source_id = d.id), (t.payment_source_token = await (0, b.Zv)(d)), S.QL.has(d.type))) {
+                let e = await (0, b.EH)(d.type);
+                t.return_url = (0, i.K0)() + S.ANM.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(d.type, null != e ? e : '', 'success');
             }
-            null != c && (t.expected_amount = c), null != p && (t.expected_currency = p), (t.gift_info_options = R), null != I && (t.country_code = I), (t.purchase_token = (0, E.d)());
+            null != c && (t.expected_amount = c), null != p && (t.expected_currency = p), (t.gift_info_options = h), null != I && (t.country_code = I), (t.purchase_token = (0, E.d)());
         }
         let n = await i.tn.post({
             url: S.ANM.STORE_SKU_PURCHASE(e),
@@ -172,7 +175,7 @@ async function N(t, e, n) {
                 r.Z.dispatch({
                     type: 'SKU_PURCHASE_AWAIT_CONFIRMATION',
                     skuId: e,
-                    isGift: h
+                    isGift: R
                 }),
             r.Z.dispatch({
                 type: 'SKU_PURCHASE_FAIL',
@@ -184,10 +187,36 @@ async function N(t, e, n) {
         )
             throw n;
         if (!i.body.payment_id) throw (0, b.SQ)('payment id cannot be null on redirected confirmations.');
-        return (0, b.sk)(i.body, l);
+        return (0, b.sk)(i.body, d);
     }
 }
-async function C() {
+async function N(t) {
+    r.Z.wait(() => {
+        r.Z.dispatch({
+            type: 'VIRTUAL_CURRENCY_REDEEM_START',
+            skuId: t
+        });
+    });
+    try {
+        let e = (await i.tn.post({ url: S.ANM.USER_REDEEM_VIRTUAL_CURRENCY(t) })).body;
+        return (
+            r.Z.dispatch({
+                type: 'VIRTUAL_CURRENCY_REDEEM_SUCCESS',
+                skuId: t,
+                entitlements: e
+            }),
+            e
+        );
+    } catch (n) {
+        let e = n instanceof o.HF ? n : new o.HF(n);
+        r.Z.dispatch({
+            type: 'VIRTUAL_CURRENCY_REDEEM_FAIL',
+            skuId: t,
+            error: e
+        });
+    }
+}
+async function I() {
     try {
         let t = { purchase_token: (0, E.d)() };
         return {
@@ -203,6 +232,6 @@ async function C() {
         throw t instanceof o.HF ? t : new o.HF(t);
     }
 }
-function I() {
+function f() {
     r.Z.dispatch({ type: 'SKU_PURCHASE_CLEAR_ERROR' });
 }

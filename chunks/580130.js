@@ -30,9 +30,13 @@ function R(e) {
     v[e.id] = f.Z.createFromServer(e);
 }
 function O(e) {
+    let { entitlements: t } = e;
+    for (let e of t) C(e);
+}
+function D(e) {
     return C(e.entitlement);
 }
-class D extends (r = c.yh) {
+class L extends (r = c.yh) {
     initialize() {
         this.syncWith([_.Z], () => !0);
     }
@@ -122,7 +126,7 @@ class D extends (r = c.yh) {
     }
 }
 (s = 'EntitlementStore'),
-    (a = 'displayName') in (i = D)
+    (a = 'displayName') in (i = L)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -130,7 +134,7 @@ class D extends (r = c.yh) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new D(d.Z, {
+    (t.Z = new L(d.Z, {
         ENTITLEMENT_FETCH_APPLICATION_START: function (e) {
             let { applicationId: t } = e;
             y.add(t);
@@ -144,16 +148,14 @@ class D extends (r = c.yh) {
             let { entitlements: t } = e;
             (v = {}), t.forEach(R);
         },
-        SKU_PURCHASE_SUCCESS: function (e) {
-            let { entitlements: t } = e;
-            for (let e of t) C(e);
-        },
+        SKU_PURCHASE_SUCCESS: O,
+        VIRTUAL_CURRENCY_REDEEM_SUCCESS: O,
         LIBRARY_FETCH_SUCCESS: function (e) {
             let { libraryApplications: t } = e;
             for (let e of t) if (null != e.entitlements) for (let t of e.entitlements) C(t);
         },
-        ENTITLEMENT_CREATE: O,
-        ENTITLEMENT_UPDATE: O,
+        ENTITLEMENT_CREATE: D,
+        ENTITLEMENT_UPDATE: D,
         ENTITLEMENT_DELETE: function (e) {
             return (function (e) {
                 delete E[e.id];
