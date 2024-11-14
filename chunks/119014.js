@@ -26,7 +26,7 @@ function c(e) {
             [t]
         ),
         c = i.useCallback((e) => {
-            (0, a.O)({ categoryId: e });
+            (0, a.O4)({ categoryId: e });
         }, []),
         d = null != e && n.some((t) => t.id === e) ? e : n[0].id;
     return {

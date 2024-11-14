@@ -1,7 +1,7 @@
 n.r(t);
 var i = n(200651),
-    r = n(192379),
-    s = n(442837),
+    s = n(192379),
+    r = n(442837),
     a = n(481060),
     l = n(490173),
     o = n(735246),
@@ -11,26 +11,26 @@ var i = n(200651),
     h = n(436774),
     p = n(686546),
     f = n(314910),
-    g = n(367207),
-    m = n(241890),
+    m = n(367207),
+    g = n(241890),
     v = n(649561),
     _ = n(631553),
     E = n(981631);
-n(635324), n(167666), n(308765), n(913487), s.ZP.initialize();
+n(635324), n(167666), n(308765), n(913487), r.ZP.initialize();
 t.default = function () {
     return (
-        r.useEffect(
+        s.useEffect(
             () => (
-                g.Z.initialize(),
+                m.Z.initialize(),
                 d.Z.initialize(),
-                m.Z.init(),
+                g.Z.init(),
                 () => {
-                    g.Z.terminate(), d.Z.terminate();
+                    m.Z.terminate(), d.Z.terminate();
                 }
             ),
             []
         ),
-        (0, i.jsxs)(r.Fragment, {
+        (0, i.jsxs)(s.Fragment, {
             children: [
                 (0, i.jsx)(u.Z, {}),
                 (0, i.jsx)(o.T, {

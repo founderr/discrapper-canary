@@ -18,17 +18,17 @@ function h() {
     let [e, t, n] = (0, l.Wu)([a.default, s.Z], () => [s.Z.getCurrentDesktopIcon(), s.Z.isEditorOpen, o.ZP.isPremium(a.default.getCurrentUser())]),
         h = (0, d.aW)(e),
         p = e !== c.aH.DEFAULT && (n || t),
-        m = (0, r.useRedesignIconContext)().enabled,
-        f = (0, i.jsx)(r.ClydeIcon, {
+        f = (0, r.useRedesignIconContext)().enabled,
+        m = (0, i.jsx)(r.ClydeIcon, {
             size: 'custom',
             color: 'currentColor',
             width: 30,
-            height: m ? 30 : 22
+            height: f ? 30 : 22
         });
     return null != h && p
         ? (0, i.jsx)(u.Z, {
               id: e,
               width: 48
           })
-        : f;
+        : m;
 }

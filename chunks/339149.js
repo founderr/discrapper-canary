@@ -17,8 +17,8 @@ var i,
     d = n(215569),
     h = n(481060),
     p = n(812206),
-    m = n(707409),
-    f = n(703656),
+    f = n(707409),
+    m = n(703656),
     g = n(417363),
     C = n(941128),
     _ = n(780570),
@@ -26,7 +26,7 @@ var i,
     x = n(981631),
     I = n(388032),
     b = n(213169);
-function S(e, t, n) {
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -39,56 +39,56 @@ function S(e, t, n) {
         e
     );
 }
-let E = {
+let S = {
     [x.vxO.INSTALLING]: {
-        [m.J6.NONE]: (e, t) => I.intl.formatToPlainString(I.t['p+2sEx'], { name: e }),
-        [m.J6.SECONDS]: (e, t) =>
+        [f.J6.NONE]: (e, t) => I.intl.formatToPlainString(I.t['p+2sEx'], { name: e }),
+        [f.J6.SECONDS]: (e, t) =>
             I.intl.formatToPlainString(I.t['/0NgPD'], {
                 name: e,
                 timeRemaining: t
             }),
-        [m.J6.MINUTES]: (e, t) =>
+        [f.J6.MINUTES]: (e, t) =>
             I.intl.formatToPlainString(I.t.ZIwMzs, {
                 name: e,
                 timeRemaining: t
             }),
-        [m.J6.HOURS]: (e, t) =>
+        [f.J6.HOURS]: (e, t) =>
             I.intl.formatToPlainString(I.t['3IQDUl'], {
                 name: e,
                 timeRemaining: t
             })
     },
     [x.vxO.UPDATING]: {
-        [m.J6.NONE]: (e, t) => I.intl.formatToPlainString(I.t['6F9QzM'], { name: e }),
-        [m.J6.SECONDS]: (e, t) =>
+        [f.J6.NONE]: (e, t) => I.intl.formatToPlainString(I.t['6F9QzM'], { name: e }),
+        [f.J6.SECONDS]: (e, t) =>
             I.intl.formatToPlainString(I.t['2OVgVl'], {
                 name: e,
                 timeRemaining: t
             }),
-        [m.J6.MINUTES]: (e, t) =>
+        [f.J6.MINUTES]: (e, t) =>
             I.intl.formatToPlainString(I.t.mgQg1N, {
                 name: e,
                 timeRemaining: t
             }),
-        [m.J6.HOURS]: (e, t) =>
+        [f.J6.HOURS]: (e, t) =>
             I.intl.formatToPlainString(I.t['aTdq4+'], {
                 name: e,
                 timeRemaining: t
             })
     },
     [x.vxO.REPAIRING]: {
-        [m.J6.NONE]: (e, t) => I.intl.formatToPlainString(I.t['p+2sEx'], { name: e }),
-        [m.J6.SECONDS]: (e, t) =>
+        [f.J6.NONE]: (e, t) => I.intl.formatToPlainString(I.t['p+2sEx'], { name: e }),
+        [f.J6.SECONDS]: (e, t) =>
             I.intl.formatToPlainString(I.t['/0NgPD'], {
                 name: e,
                 timeRemaining: t
             }),
-        [m.J6.MINUTES]: (e, t) =>
+        [f.J6.MINUTES]: (e, t) =>
             I.intl.formatToPlainString(I.t.ZIwMzs, {
                 name: e,
                 timeRemaining: t
             }),
-        [m.J6.HOURS]: (e, t) =>
+        [f.J6.HOURS]: (e, t) =>
             I.intl.formatToPlainString(I.t['3IQDUl'], {
                 name: e,
                 timeRemaining: t
@@ -115,15 +115,15 @@ class N extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            S(this, 'renderProgressBody', (e, t) => {
+            E(this, 'renderProgressBody', (e, t) => {
                 let { state: n, application: i } = this.props,
                     { stage: l, progress: r, total: a, type: o } = n;
                 if (null == r || null == a || null == l) return null;
                 let s = (e[e.length - 1] / t) * 1000,
                     c = 0 !== s ? Math.max(1, (a - r) / s) : null,
-                    u = E[o],
+                    u = S[o],
                     d = null != u ? Object.keys(u) : [],
-                    { unit: h, time: p } = (0, m.CI)(null != c ? c / 60 : null, d);
+                    { unit: h, time: p } = (0, f.CI)(null != c ? c / 60 : null, d);
                 if (null != u && null != h) {
                     let e = u[h];
                     return null != e ? e(i.name, p) : null;
@@ -186,14 +186,14 @@ class Z extends (i = r.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            S(this, 'state', { animationScale: new s.Z.Value(0) }),
-            S(this, 'handleOnClick', (e) => {
+            E(this, 'state', { animationScale: new s.Z.Value(0) }),
+            E(this, 'handleOnClick', (e) => {
                 let { onClick: t } = this.props;
-                e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, f.uL)(x.Z5c.APPLICATION_LIBRARY);
+                e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, m.uL)(x.Z5c.APPLICATION_LIBRARY);
             });
     }
 }
-S(Z, 'defaultProps', { strokeSize: h.ProgressCircle.StrokeSizes.MEDIUM });
+E(Z, 'defaultProps', { strokeSize: h.ProgressCircle.StrokeSizes.MEDIUM });
 function y(e, t) {
     return e.reduce((e, n) => {
         let { applicationId: i, branchId: l } = n,

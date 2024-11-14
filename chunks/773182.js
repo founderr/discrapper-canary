@@ -21,8 +21,8 @@ var i = n(200651),
     d = n(481060),
     h = n(350810),
     p = n(110924),
-    m = n(410030),
-    f = n(100527),
+    f = n(410030),
+    m = n(100527),
     g = n(970606),
     C = n(824991),
     _ = n(931515),
@@ -30,17 +30,17 @@ var i = n(200651),
     x = n(836768),
     I = n(749681),
     b = n(863249),
-    S = n(937111),
-    E = n(667105),
+    E = n(937111),
+    S = n(667105),
     N = n(451478),
     Z = n(602147),
     y = n(981631),
     T = n(308083),
-    A = n(921944),
-    j = n(49898),
+    j = n(921944),
+    A = n(49898),
     P = n(128449),
-    R = n(46140),
-    M = n(388032),
+    M = n(46140),
+    R = n(388032),
     L = n(877861);
 function w(e) {
     let { color: t } = e;
@@ -104,20 +104,20 @@ let D = l.memo(function (e) {
     let { children: t } = e,
         n = (0, o.TH)(),
         { games: r, treatment: p, hasFetchedGames: b } = (0, _.I9)(),
-        [S, D] = (0, v.US)([u.z.RAPIDASH_MORE_GUILDS_UPSELL], A.R.SIDEBAR, !0),
-        O = (0, E.Ws)({ location: R.dr.CONFLICT_CHECKS }),
-        k = S !== u.z.RAPIDASH_MORE_GUILDS_UPSELL,
+        [E, D] = (0, v.US)([u.z.RAPIDASH_MORE_GUILDS_UPSELL], j.R.SIDEBAR, !0),
+        O = (0, S.Ws)({ location: M.dr.CONFLICT_CHECKS }),
+        k = E !== u.z.RAPIDASH_MORE_GUILDS_UPSELL,
         G = (0, h.Z)(),
         U = n.pathname === y.Z5c.GUILD_DISCOVERY || n.pathname.startsWith(y.Z5c.GLOBAL_DISCOVERY),
         B = O && !G && !k && !U,
         [H, V] = l.useState(0),
-        F = (0, m.ZP)(),
+        F = (0, f.ZP)(),
         W = l.useMemo(() => r.map((e) => e.id), [r]),
         z = (0, c.e7)([N.Z], () => N.Z.isFocused());
     l.useEffect(() => {
         B &&
             (0, g.tv)({
-                location: f.Z.GUILDS_LIST,
+                location: m.Z.GUILDS_LIST,
                 treatment: p,
                 gameApplicationIds: W
             });
@@ -131,16 +131,16 @@ let D = l.memo(function (e) {
         }, [V, W, B, z]);
     let Y = l.useCallback(() => {
             if (
-                (O && D(A.L.TAKE_ACTION),
+                (O && D(j.L.TAKE_ACTION),
                 (0, g.GS)({
-                    location: f.Z.GUILDS_LIST,
+                    location: m.Z.GUILDS_LIST,
                     treatment: p,
                     gameApplicationIds: W
                 }),
                 B)
             )
                 (0, I.u)({
-                    tab: j.F$.SERVERS,
+                    tab: A.F$.SERVERS,
                     selectedServersTab: P.vf.FEATURED,
                     entrypoint: P.Qq.GUILDS_BAR
                 });
@@ -151,7 +151,7 @@ let D = l.memo(function (e) {
         }, [O, p, W, B, D]),
         K = l.useCallback(
             (e) => {
-                e(), D(A.L.USER_DISMISS);
+                e(), D(j.L.USER_DISMISS);
             },
             [D]
         ),
@@ -215,7 +215,7 @@ let D = l.memo(function (e) {
                                   }),
                                   (0, i.jsxs)('div', {
                                       className: a()(L.popoutContent),
-                                      children: [(0, i.jsx)(C.aF, { title: M.intl.string(M.t.B2wKJi) }), (0, i.jsx)(C.To, { message: M.intl.string(M.t.Cs2Bio) }), (0, i.jsx)(C.Xu, { onClick: Y })]
+                                      children: [(0, i.jsx)(C.aF, { title: R.intl.string(R.t.B2wKJi) }), (0, i.jsx)(C.To, { message: R.intl.string(R.t.Cs2Bio) }), (0, i.jsx)(C.Xu, { onClick: Y })]
                                   }),
                                   (0, i.jsx)('div', { className: L.popoutCaret })
                               ]
@@ -238,7 +238,7 @@ let D = l.memo(function (e) {
 });
 function O(e) {
     let { onActivate: t, children: n } = e,
-        r = (0, c.e7)([S.Z], () => S.Z.hasJoinRequestCoackmark()),
+        r = (0, c.e7)([E.Z], () => E.Z.hasJoinRequestCoackmark()),
         a = l.useCallback(() => {
             b.ZP.clearCoachmark();
         }, []),
@@ -269,12 +269,12 @@ function O(e) {
                                             children: [
                                                 (0, i.jsx)(d.Heading, {
                                                     variant: 'heading-md/medium',
-                                                    children: M.intl.string(M.t.fRUGzs)
+                                                    children: R.intl.string(R.t.fRUGzs)
                                                 }),
                                                 (0, i.jsx)(d.Text, {
                                                     variant: 'text-xs/normal',
                                                     color: 'text-muted',
-                                                    children: M.intl.string(M.t.ja0Tg4)
+                                                    children: R.intl.string(R.t.ja0Tg4)
                                                 })
                                             ]
                                         }),
@@ -283,7 +283,7 @@ function O(e) {
                                             size: d.ButtonSizes.SMALL,
                                             color: d.ButtonColors.BRAND,
                                             onClick: a,
-                                            children: M.intl.string(M.t.E0MgHh)
+                                            children: R.intl.string(R.t.E0MgHh)
                                         })
                                     ]
                                 }),

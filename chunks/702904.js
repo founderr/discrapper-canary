@@ -158,13 +158,13 @@ function g(e) {
                     marginRight: 5,
                     height: 25
                 },
-                src: C(t.country)
+                src: j(t.country)
             })
         ]
     });
 }
 let v = ['AN', 'MI', 'TP'],
-    C = (e) => {
+    j = (e) => {
         if (null == e) return '';
         if (v.includes(e)) return 'https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f30e.svg';
         let t = e

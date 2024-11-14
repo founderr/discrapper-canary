@@ -1,16 +1,16 @@
 n.d(t, {
     O: function () {
-        return i;
+        return o;
     }
 });
 var r = n(972959);
-let a = Object.freeze({
+let i = Object.freeze({
         selectedTab: null,
         isSearchVisible: !1,
         entrypoint: null
     }),
-    l = (0, r.H)(() => a);
-function i() {
-    l.setState(a);
+    l = (0, r.H)(() => i);
+function o() {
+    l.setState(i);
 }
-t.Z = 12633 == n.j ? l : null;
+t.Z = l;

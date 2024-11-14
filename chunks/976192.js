@@ -1,24 +1,24 @@
-i.d(n, {
+t.d(n, {
     Z: function () {
         return I;
     }
 });
-var t = i(200651),
-    a = i(192379),
-    l = i(442837),
-    r = i(481060),
-    o = i(616780),
-    d = i(40851),
-    u = i(300284),
-    s = i(484459),
-    c = i(314897),
-    p = i(271383),
-    f = i(430824),
-    v = i(496675),
-    _ = i(594174),
-    g = i(981631),
-    h = i(388032),
-    A = i(745974);
+var i = t(200651),
+    a = t(192379),
+    l = t(442837),
+    r = t(481060),
+    o = t(616780),
+    d = t(40851),
+    u = t(300284),
+    s = t(484459),
+    c = t(314897),
+    p = t(271383),
+    f = t(430824),
+    v = t(496675),
+    _ = t(594174),
+    g = t(981631),
+    h = t(388032),
+    A = t(745974);
 function I(e) {
     let { guildId: n, userId: I, analyticsLocation: x, analyticsLocations: b, context: P, icon: m } = e,
         C = f.Z.getGuild(n),
@@ -41,11 +41,11 @@ function I(e) {
     if (!(O || G || W) || null == y || k) return null;
     let T = C.hasFeature(g.oNc.HUB) ? h.intl.string(h.t['+MWrWl']) : h.intl.string(h.t['PKQB/P']),
         E = W ? T : h.intl.string(h.t.dilOFx);
-    return (0, t.jsx)(r.MenuItem, {
+    return (0, i.jsx)(r.MenuItem, {
         id: 'change-nickname',
-        label: (0, t.jsx)('div', {
+        label: (0, i.jsx)('div', {
             className: A.labelWrapper,
-            children: (0, t.jsx)('span', {
+            children: (0, i.jsx)('span', {
                 className: A.label,
                 children: E
             })
@@ -55,10 +55,10 @@ function I(e) {
             W
                 ? ((0, s.Z)(y.id, y.getAvatarURL(n, 80), { guildId: n }), L(), w.dispatch(g.CkL.POPOUT_CLOSE), (0, r.closeAllModals)())
                 : (0, r.openModalLazy)(async () => {
-                      let { default: e } = await i.e('17712').then(i.bind(i, 620021));
-                      return (i) =>
-                          (0, t.jsx)(e, {
-                              ...i,
+                      let { default: e } = await t.e('17712').then(t.bind(t, 620021));
+                      return (t) =>
+                          (0, i.jsx)(e, {
+                              ...t,
                               guildId: n,
                               user: y,
                               analyticsSource: x,

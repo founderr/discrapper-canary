@@ -15,8 +15,8 @@ var i = n(200651),
     d = n(481060),
     h = n(153867),
     p = n(771845),
-    m = n(624138),
-    f = n(727258),
+    f = n(624138),
+    m = n(727258),
     g = n(276952),
     C = n(199540),
     _ = n(40153),
@@ -24,26 +24,26 @@ var i = n(200651),
     x = n(682662),
     I = n(662146),
     b = n(388032),
-    S = n(115376),
-    E = n(767573);
-let N = (0, m.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
-    Z = (0, m.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE),
-    y = (0, m.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_MARGIN);
+    E = n(115376),
+    S = n(767573);
+let N = (0, f.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
+    Z = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE),
+    y = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_MARGIN);
 function T(e) {
-    let { folderNode: t, setNodeRef: n, selected: r, expanded: u, mediaState: m, mentionCount: T = 0, unread: A = !1, defaultFolderName: j, useCircleMask: P = !1, draggable: R = !1, sorting: M = !1, onDragStart: L, onDragEnd: w, onExpandCollapse: D, onContextMenu: O, renderChildNode: k, folderIconContent: G } = e,
+    let { folderNode: t, setNodeRef: n, selected: r, expanded: u, mediaState: f, mentionCount: T = 0, unread: j = !1, defaultFolderName: A, useCircleMask: P = !1, draggable: M = !1, sorting: R = !1, onDragStart: L, onDragEnd: w, onExpandCollapse: D, onContextMenu: O, renderChildNode: k, folderIconContent: G } = e,
         { id: U, name: B, children: H } = t,
         [V, F] = l.useState(!1),
         [W, z] = l.useState(!1),
         Y = V || W;
     l.useEffect(() => {
-        M && F(!1);
-    }, [M]);
+        R && F(!1);
+    }, [R]);
     let [{ dragging: K }, q] = (0, o.c)({
-            type: f.eD.FOLDER,
+            type: m.eD.FOLDER,
             item: () => (
                 null == L || L(),
                 {
-                    type: f.eD.FOLDER,
+                    type: m.eD.FOLDER,
                     nodeId: t.id
                 }
             ),
@@ -61,7 +61,7 @@ function T(e) {
             },
             [D, u]
         ),
-        X = null != B && '' !== B ? B : null != j && '' !== j ? j : b.intl.string(b.t.xV9hVl),
+        X = null != B && '' !== B ? B : null != A && '' !== A ? A : b.intl.string(b.t.xV9hVl),
         $ = (0, c.Ie)(''.concat(U)),
         ee = 'folder-items-'.concat(U),
         et = H.length * (Z + y),
@@ -78,17 +78,17 @@ function T(e) {
                     disabled: K || u,
                     hovered: V,
                     selected: r,
-                    unread: A,
-                    className: E.pill
+                    unread: j,
+                    className: S.pill
                 }),
                 (0, i.jsx)(I.Z, {
                     text: X,
-                    disabled: M,
+                    disabled: R,
                     selected: r,
                     disableWrapper: !0,
                     children: (0, i.jsx)('div', {
-                        ref: R ? q : void 0,
-                        className: a()({ [E.wobble]: !K && W && !u }),
+                        ref: M ? q : void 0,
+                        className: a()({ [S.wobble]: !K && W && !u }),
                         'data-dnd-name': X,
                         children: K
                             ? (0, i.jsx)(v.Z, {})
@@ -96,8 +96,8 @@ function T(e) {
                                   folderNode: t,
                                   expanded: u,
                                   forceCircular: P,
-                                  sorting: M,
-                                  mediaState: m,
+                                  sorting: R,
+                                  mediaState: f,
                                   mentionCount: T,
                                   tooltipName: X,
                                   folderGroupId: ee,
@@ -110,7 +110,7 @@ function T(e) {
                               })
                     })
                 }),
-                R
+                M
                     ? (0, i.jsx)(_.ZP, {
                           name: X,
                           targetNode: t,
@@ -121,13 +121,13 @@ function T(e) {
         });
     return (0, i.jsxs)('div', {
         ref: ei,
-        className: S.wrapper,
+        className: E.wrapper,
         children: [
             !K &&
                 (0, i.jsx)('span', {
-                    className: a()(S.expandedFolderBackground, {
-                        [S.collapsed]: !u,
-                        [S.hover]: Y
+                    className: a()(E.expandedFolderBackground, {
+                        [E.collapsed]: !u,
+                        [E.hover]: Y
                     })
                 }),
             el,
@@ -140,7 +140,7 @@ function T(e) {
                         {
                             id: ee,
                             style: { height: e.height.to((e) => e * et) },
-                            className: S.__invalid_expandedGuilds,
+                            className: E.__invalid_expandedGuilds,
                             role: 'group',
                             children: H.map(k)
                         },
@@ -148,7 +148,7 @@ function T(e) {
                     )
                 );
             }),
-            R && u
+            M && u
                 ? (0, i.jsx)(_.Zu, {
                       name: X,
                       targetNode: t

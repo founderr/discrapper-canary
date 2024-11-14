@@ -14,8 +14,8 @@ var i = n(200651),
     d = n(703656),
     h = n(259580),
     p = n(981631),
-    m = n(176505),
-    f = n(388032),
+    f = n(176505),
+    m = n(388032),
     g = n(813397);
 function C(e, t) {
     return (0, i.jsx)(
@@ -52,7 +52,7 @@ let _ = l.memo(function (e) {
                 focusProps: { offset: { right: 4 } },
                 className: g.progressBarContainer,
                 onClick: function () {
-                    (0, d.uL)(p.Z5c.CHANNEL(t.id, m.oC.GUILD_HOME));
+                    (0, d.uL)(p.Z5c.CHANNEL(t.id, f.oC.GUILD_HOME));
                 },
                 children: [
                     (0, i.jsxs)('div', {
@@ -60,7 +60,7 @@ let _ = l.memo(function (e) {
                         children: [
                             (0, i.jsx)(o.Heading, {
                                 variant: 'heading-sm/bold',
-                                children: f.intl.string(f.t.SnrR39)
+                                children: m.intl.string(m.t.SnrR39)
                             }),
                             (0, i.jsxs)('div', {
                                 className: g.rightContainer,
@@ -69,7 +69,7 @@ let _ = l.memo(function (e) {
                                         variant: 'text-xs/medium',
                                         color: 'text-muted',
                                         className: g.rightText,
-                                        children: f.intl.format(f.t.eqZ1lZ, {
+                                        children: m.intl.format(m.t.eqZ1lZ, {
                                             numberHook: C,
                                             total: x.toString(),
                                             completed: v.toString()

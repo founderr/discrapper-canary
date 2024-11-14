@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return C;
     }
 }),
     n(47120);
 var i,
-    r = n(192379),
-    s = n(392711),
-    a = n.n(s),
+    s = n(192379),
+    r = n(392711),
+    a = n.n(r),
     l = n(995295),
     o = n(374470),
     c = n(902704),
@@ -16,8 +16,8 @@ var i,
     h = n(671999),
     p = n(358085),
     f = n(998502),
-    g = n(145597);
-function m(e, t, n) {
+    m = n(145597);
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -48,7 +48,7 @@ function Z(e, t) {
         0 === x.size && window.addEventListener('mousemove', E), x.set(e, t);
     }
     p.isPlatformEmbedded &&
-        ((0, g.W2)()
+        ((0, m.W2)()
             ? u.Z.setClickZones(
                   Array.from(x.values()).map((e) => {
                       let { zone: t } = e;
@@ -69,16 +69,16 @@ function Z(e, t) {
                   })
               }),
               (function () {
-                  if (!I)
+                  if (!S)
                       f.ZP.requireModule('discord_overlay2').setClickZoneCallback((e, t, n) => {
                           let i = x.get(e);
                           null != i && (!_ && ((v.x = t), (v.y = n)), i.instance.click());
                       }),
-                          (I = !0);
+                          (S = !0);
               })()));
 }
-let I = !1;
-class S extends (i = r.PureComponent) {
+let S = !1;
+class C extends (i = s.PureComponent) {
     componentDidMount() {
         this.props.observe ? this.observeZone() : this.updateZone();
     }
@@ -90,7 +90,7 @@ class S extends (i = r.PureComponent) {
         t !== e.observe && (t ? this.observeZone() : this.interval.stop());
     }
     render() {
-        return r.Children.only(this.props.children);
+        return s.Children.only(this.props.children);
     }
     observeZone() {
         this.updateZone(), this.interval.start(this.props.observeInterval, this.updateZone);
@@ -101,12 +101,12 @@ class S extends (i = r.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            m(this, 'zone', a().uniqueId('ClickArea')),
-            m(this, 'interval', new d.Xp()),
-            m(this, 'updateZone', () => {
+            g(this, 'zone', a().uniqueId('ClickArea')),
+            g(this, 'interval', new d.Xp()),
+            g(this, 'updateZone', () => {
                 let e = (0, l.findDOMNode)(this);
                 if ((0, o.k)(e)) {
-                    let { left: t, top: n, right: i, bottom: r } = e.getBoundingClientRect();
+                    let { left: t, top: n, right: i, bottom: s } = e.getBoundingClientRect();
                     Z(this.zone, {
                         instance: this,
                         zone: {
@@ -114,14 +114,14 @@ class S extends (i = r.PureComponent) {
                             left: Math.ceil(t),
                             top: Math.ceil(n),
                             right: Math.ceil(i),
-                            bottom: Math.ceil(r)
+                            bottom: Math.ceil(s)
                         }
                     });
                 }
             });
     }
 }
-m(S, 'defaultProps', {
+g(C, 'defaultProps', {
     observe: !0,
     observeInterval: 1000
 });

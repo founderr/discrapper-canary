@@ -79,7 +79,7 @@ function g() {
             }),
                 await c();
         },
-        C = async () => {
+        j = async () => {
             await o.tn.del('/debug/subscription'), await c();
         };
     return (0, r.jsx)(s.ScrollerThin, {
@@ -118,7 +118,7 @@ function g() {
                             }),
                         (0, r.jsx)(s.Button, {
                             size: s.Button.Sizes.SMALL,
-                            onClick: C,
+                            onClick: j,
                             children: 'Delete Subscription'
                         })
                     ]

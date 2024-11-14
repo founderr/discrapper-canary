@@ -1,9 +1,9 @@
 n.d(t, {
     Sr: function () {
-        return S;
+        return E;
     },
     Xq: function () {
-        return E;
+        return S;
     },
     Zg: function () {
         return N;
@@ -21,8 +21,8 @@ var i = n(186070),
     d = n(337482),
     h = n(679080),
     p = n(510761),
-    m = n(189509),
-    f = n(673553),
+    f = n(189509),
+    m = n(673553),
     g = n(280492),
     C = n(746887),
     _ = n(721383),
@@ -32,12 +32,12 @@ var i = n(186070),
 function b() {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     return t.map((e) => {
-        let t = S[e];
+        let t = E[e];
         if (null == t) throw Error('getBindsFor(...): No bind for '.concat(t));
         return t.binds[0];
     });
 }
-let S = {
+let E = {
         [x.EkH.SERVER_NEXT]: p.nq,
         [x.EkH.SERVER_PREV]: p.X3,
         [x.EkH.CHANNEL_NEXT]: l.tQ,
@@ -50,8 +50,8 @@ let S = {
         [x.EkH.MENTION_CHANNEL_PREV]: v.uX,
         [x.EkH.TOGGLE_PREVIOUS_GUILD]: l.$c,
         [x.EkH.JUMP_TO_GUILD]: r.u,
-        [x.EkH.SUBMIT]: m.z,
-        [x.EkH.TEXTAREA_FOCUS]: f.U,
+        [x.EkH.SUBMIT]: f.z,
+        [x.EkH.TEXTAREA_FOCUS]: m.U,
         [x.EkH.MARK_CHANNEL_READ]: a.f,
         [x.EkH.MARK_SERVER_READ]: o.l,
         [x.EkH.TOGGLE_MUTE]: g.iN,
@@ -67,7 +67,7 @@ let S = {
         [x.EkH.CALL_START]: i.FI,
         [x.EkH.QUICKSWITCHER_SHOW]: c.$
     },
-    E = { [x.EkH.QUICKSWITCHER_SHOW]: c.$ };
+    S = { [x.EkH.QUICKSWITCHER_SHOW]: c.$ };
 function N() {
     return [
         {

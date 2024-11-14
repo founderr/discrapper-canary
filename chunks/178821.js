@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return j;
     }
 }),
     n(47120);
@@ -80,7 +80,7 @@ function p(e) {
                 onResetFrameData: u
             };
         })(n, l),
-        [C, _, j] = (function (e) {
+        [j, C, _] = (function (e) {
             let t = a.useRef(Array(f).fill(0)),
                 n = a.useRef(performance.now()),
                 r = a.useRef(0),
@@ -132,9 +132,9 @@ function p(e) {
                 }, [i, o]),
                 i
             ];
-        })(C, v),
-        y = performance.now() - i.current < 5000,
-        N = _(c, g.current);
+        })(j, v),
+        N = performance.now() - i.current < 5000,
+        y = C(c, g.current);
     a.useEffect(
         () => (
             T(),
@@ -144,9 +144,9 @@ function p(e) {
         ),
         []
     );
-    let I = a.useCallback(() => {
-        m(), j(), T();
-    }, [m, j, T]);
+    let k = a.useCallback(() => {
+        m(), _(), T();
+    }, [m, _, T]);
     return (0, r.jsxs)('div', {
         className: d.panelGroup,
         children: [
@@ -183,7 +183,7 @@ function p(e) {
                         className: d.secondaryInfoText,
                         children: ['(Dropped: ', ((p.current / b.current) * 100).toFixed(4), '%)']
                     }),
-                    y &&
+                    N &&
                         (0, r.jsx)(s.Tooltip, {
                             position: 'left',
                             text: "We don't track frames while the app is in the background, because requestAnimationFrame doesn't fire in the background",
@@ -244,10 +244,10 @@ function p(e) {
                                 (0, r.jsxs)(s.Text, {
                                     tag: 'span',
                                     variant: 'text-md/semibold',
-                                    color: N > 1 ? 'text-danger' : 'text-secondary',
-                                    children: [N.toFixed(2), 'ms']
+                                    color: y > 1 ? 'text-danger' : 'text-secondary',
+                                    children: [y.toFixed(2), 'ms']
                                 }),
-                                y &&
+                                N &&
                                     (0, r.jsx)(s.Tooltip, {
                                         position: 'left',
                                         text: "We don't track frames while the app is in the background, because requestAnimationFrame doesn't fire in the background",
@@ -271,7 +271,7 @@ function p(e) {
                 className: d.bottomPanelButton,
                 children: (0, r.jsx)(s.Button, {
                     size: s.Button.Sizes.SMALL,
-                    onClick: I,
+                    onClick: k,
                     children: 'Reset Frame Data'
                 })
             })
@@ -508,7 +508,7 @@ function v(e) {
         ]
     });
 }
-function C() {
+function j() {
     let e = (0, o.e7)([c.Z], () => c.Z.getSocket()),
         [t, n] = a.useState(!1);
     return (

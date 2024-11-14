@@ -1,7 +1,7 @@
 n(47120);
 var i = n(200651),
-    r = n(192379),
-    s = n(13245),
+    s = n(192379),
+    r = n(13245),
     a = n(593481),
     l = n(692546),
     o = n(981631),
@@ -19,13 +19,13 @@ function d(e, t, n) {
         e
     );
 }
-class u extends r.Component {
+class u extends s.Component {
     getStyle() {
         let e, t, n, i;
         let {
-            props: { position: r, zIndex: s }
+            props: { position: s, zIndex: r }
         } = this;
-        switch (r) {
+        switch (s) {
             case o._vf.TOP_LEFT:
             case o._vf.BOTTOM_LEFT:
                 e = 0;
@@ -33,7 +33,7 @@ class u extends r.Component {
             default:
                 t = 0;
         }
-        switch (r) {
+        switch (s) {
             case o._vf.BOTTOM_LEFT:
             case o._vf.BOTTOM_RIGHT:
                 n = 0;
@@ -46,7 +46,7 @@ class u extends r.Component {
             right: t,
             bottom: n,
             top: i,
-            zIndex: s
+            zIndex: r
         };
     }
     render() {
@@ -55,7 +55,7 @@ class u extends r.Component {
                     locked: e,
                     index: t,
                     notification: {
-                        props: { renderFooter: n, onNotificationShow: r, onDismissClick: s, onNotificationClick: o, onConfirmClick: d, onCancelClick: u, ...h }
+                        props: { renderFooter: n, onNotificationShow: s, onDismissClick: r, onNotificationClick: o, onConfirmClick: d, onCancelClick: u, ...h }
                     }
                 }
             } = this,
@@ -94,7 +94,7 @@ class u extends r.Component {
                     id: t,
                     props: { onDismissClick: n }
                 } = this.props.notification;
-                s.Z.updateNotificationStatus(t), null != n && n(e, t);
+                r.Z.updateNotificationStatus(t), null != n && n(e, t);
             }),
             d(this, 'handleNotificationClick', (e) => {
                 let {

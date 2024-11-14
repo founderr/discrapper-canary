@@ -3,7 +3,7 @@ n(653041);
 var r,
     l = n(442837),
     c = n(570140);
-function s(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,13 +16,13 @@ function s(e, t, n) {
         e
     );
 }
-let o = {
+let s = {
     hasAcceptedStoreTerms: !1,
     hasAcceptedEulaIds: []
 };
 class a extends (r = l.ZP.PersistedStore) {
     initialize(e) {
-        i = null != e ? e : o;
+        i = null != e ? e : s;
     }
     getState() {
         return i;
@@ -34,9 +34,9 @@ class a extends (r = l.ZP.PersistedStore) {
         return i.hasAcceptedEulaIds.includes(e);
     }
 }
-s(a, 'displayName', 'ApplicationStoreUserSettingsStore'),
-    s(a, 'persistKey', 'ApplicationStoreUserSettingsStore'),
-    s(a, 'migrations', [
+o(a, 'displayName', 'ApplicationStoreUserSettingsStore'),
+    o(a, 'persistKey', 'ApplicationStoreUserSettingsStore'),
+    o(a, 'migrations', [
         (e) =>
             null == e.hasAcceptedEulaIds
                 ? {

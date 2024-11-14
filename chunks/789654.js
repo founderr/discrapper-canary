@@ -43,11 +43,11 @@ var r = n(200651),
     b = n(246992),
     g = n(500949),
     v = n(806714);
-let { SemanticColors: C } = d.V;
-function _(e) {
+let { SemanticColors: j } = d.V;
+function C(e) {
     return e.replaceAll(/_|\./g, '-').toLowerCase();
 }
-function j(e) {
+function _(e) {
     return e.replaceAll(/_|-/g, '.').toLowerCase();
 }
 function T(e, t) {
@@ -65,22 +65,22 @@ function T(e, t) {
 function S() {
     let e = (0, m.Fg)(),
         [t, n, l, o, d, u] = (0, g.zn)(),
-        { semanticColorOverrides: b, rawColorOverrides: C, tab: j, scales: S } = t,
-        N = a.useMemo(() => {
+        { semanticColorOverrides: b, rawColorOverrides: j, tab: _, scales: S } = t,
+        y = a.useMemo(() => {
             let t = Object.entries(b).map((t) => {
                     let [n, r] = t,
                         { colors: a, highlight: l } = r,
                         i = a[e];
                     if (null == i) return '';
-                    let o = _(n);
+                    let o = C(n);
                     if (l) return '--'.concat(o, ': magenta !important;');
-                    let s = _(i.color),
+                    let s = C(i.color),
                         c = i.opacity,
                         d = c < 1 ? 'hsl(var(--'.concat(s, '-hsl) / ').concat(c, ')') : 'var(--'.concat(s, ')');
                     return '--'.concat(o, ': color-mix(\n        in oklab,\n        ').concat(d, ' 100%,\n        var(--theme-base-color, black) var(--theme-base-color-amount, 0%)\n      );');
                 }),
-                n = Object.keys(C).flatMap((e) => {
-                    let t = C[e],
+                n = Object.keys(j).flatMap((e) => {
+                    let t = j[e],
                         {
                             h: n,
                             s: r,
@@ -113,7 +113,7 @@ function S() {
                     );
                 }, '');
             return '\n      :root {\n        '.concat(r, '\n      }\n\n      .theme-').concat(e, ' {\n        ').concat(t.join('\n'), '\n      }\n\n      html {\n        ').concat(n.join('\n'), '\n      }\n    ');
-        }, [C, S, b, e]);
+        }, [j, S, b, e]);
     return (0, r.jsxs)('div', {
         className: v.panel,
         children: [
@@ -128,7 +128,7 @@ function S() {
                         className: v.tabBar,
                         type: 'top',
                         look: 'brand',
-                        selectedItem: j,
+                        selectedItem: _,
                         onItemSelect: (e) => {
                             n((t) => ({
                                 ...t,
@@ -216,15 +216,15 @@ function S() {
             }),
             (0, r.jsx)('div', {
                 className: v.tab,
-                hidden: j !== g.H8.TOKENS,
-                children: (0, r.jsx)(y, {
+                hidden: _ !== g.H8.TOKENS,
+                children: (0, r.jsx)(N, {
                     state: t,
                     setState: n
                 })
             }),
             (0, r.jsx)('div', {
                 className: v.tab,
-                hidden: j !== g.H8.PALETTES,
+                hidden: _ !== g.H8.PALETTES,
                 children: (0, r.jsx)(p.P, {
                     state: t,
                     setState: n
@@ -233,13 +233,13 @@ function S() {
             (0, r.jsx)(c.ql, {
                 children: (0, r.jsx)('style', {
                     id: 'devtools-color-overrides',
-                    children: N
+                    children: y
                 })
             })
         ]
     });
 }
-function y(e) {
+function N(e) {
     let { state: t, setState: n } = e,
         l = (0, m.Fg)(),
         { semanticColorOverrides: i, rawColorOverrides: o } = t,
@@ -328,9 +328,9 @@ function y(e) {
             },
             [n]
         ),
-        p = Object.keys(C).map((e) => ({
+        p = Object.keys(j).map((e) => ({
             value: e,
-            label: _(e)
+            label: C(e)
         })),
         T = Object.keys(u.b).map((e) => ({
             value: e,
@@ -363,14 +363,14 @@ function y(e) {
                     let [t, a] = e,
                         i = a.colors[l];
                     if (null == i) return null;
-                    let o = j(i.color),
+                    let o = _(i.color),
                         c = i.opacity,
                         d = g.jC[t][l];
                     return (0, r.jsx)(
-                        N,
+                        y,
                         {
-                            title: _(t),
-                            subtitle: 1 === d.opacity ? j(d.raw) : ''.concat(j(d.raw), ' @ ').concat(100 * d.opacity, '%'),
+                            title: C(t),
+                            subtitle: 1 === d.opacity ? _(d.raw) : ''.concat(_(d.raw), ' @ ').concat(100 * d.opacity, '%'),
                             highlight: a.highlight,
                             onReset: () => {
                                 n((e) => {
@@ -482,7 +482,7 @@ function y(e) {
                 children: Object.entries(o).map((e) => {
                     let [t, a] = e;
                     return (0, r.jsxs)(
-                        N,
+                        y,
                         {
                             title: t,
                             subtitle: u.b[t].hex,
@@ -570,7 +570,7 @@ function y(e) {
         ]
     });
 }
-function N(e) {
+function y(e) {
     let { title: t, subtitle: n, highlight: a, onReset: l, onRemove: i, onHighlightToggle: o, children: s } = e;
     return (0, r.jsxs)('li', {
         className: v.override,

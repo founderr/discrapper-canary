@@ -15,8 +15,8 @@ var i,
     d = n(442837),
     h = n(570140),
     p = n(220444),
-    m = n(565799),
-    f = n(501655),
+    f = n(565799),
+    m = n(501655),
     g = n(569471),
     C = n(592125),
     _ = n(430824),
@@ -24,8 +24,8 @@ var i,
     x = n(914010),
     I = n(9156),
     b = n(938475),
-    S = n(823379),
-    E = n(734307),
+    E = n(823379),
+    S = n(734307),
     N = n(981631);
 ((r = i || (i = {})).HIDDEN = 'hidden'), (r.UNREAD = 'unread'), (r.MENTIONS = 'mentions'), (r.VOICE_CHANNELS = 'voice-channels');
 let Z = {
@@ -38,8 +38,8 @@ let Z = {
         bottomBar: Z
     },
     T = {},
-    A = {};
-function j(e) {
+    j = {};
+function A(e) {
     let t = C.Z.getChannel(e);
     return !(null == t || null == t.getGuildId() || t.isGuildVocal()) && !(t.isThread() ? g.Z.isMuted(t.id) : I.ZP.isChannelMuted(t.getGuildId(), t.id)) && (0, p.d)(t);
 }
@@ -52,13 +52,13 @@ function P(e) {
         l = I.ZP.isChannelMuted(n, t.id);
     return (!i || !l) && v.ZP.getMentionCount(e) > 0;
 }
-function R(e) {
-    return !I.ZP.isChannelMuted(e.guild_id, e.id) && (e.isGuildStageVoice() ? m.Z.getMutableParticipants(e.id, f.pV.SPEAKER).length > 0 : b.ZP.getVoiceStatesForChannel(e).length > 0);
-}
 function M(e) {
+    return !I.ZP.isChannelMuted(e.guild_id, e.id) && (e.isGuildStageVoice() ? f.Z.getMutableParticipants(e.id, m.pV.SPEAKER).length > 0 : b.ZP.getVoiceStatesForChannel(e).length > 0);
+}
+function R(e) {
     var t, n, i;
-    let { guildChannels: l } = E.Z.getGuildWithoutChangingGuildActionRows(e),
-        r = l.getChannels(null !== (t = A[e]) && void 0 !== t ? t : []);
+    let { guildChannels: l } = S.Z.getGuildWithoutChangingGuildActionRows(e),
+        r = l.getChannels(null !== (t = j[e]) && void 0 !== t ? t : []);
     if (null == r || 0 === r.length) return !1;
     let a = null,
         o = null,
@@ -67,45 +67,45 @@ function M(e) {
         d = !0,
         h = !0,
         p = !1,
-        m = l.getCategoryFromSection(l.voiceChannelsSectionNumber),
-        f = null !== (n = null == m ? void 0 : m.getShownChannelIds()) && void 0 !== n ? n : [],
+        f = l.getCategoryFromSection(l.voiceChannelsSectionNumber),
+        m = null !== (n = null == f ? void 0 : f.getShownChannelIds()) && void 0 !== n ? n : [],
         [g, C, _] = l.getSlicedChannels(r);
     for (let e = 0; e < C.length; e++) {
         let t = C[e];
-        if (((j(t.id) || u().some(t.threadIds, j)) && (h = !1), (P(t.id) || u().some(t.threadIds, P)) && (d = !1), f.includes(t.id) && (p = !0), !h && !d && p)) break;
+        if (((A(t.id) || u().some(t.threadIds, A)) && (h = !1), (P(t.id) || u().some(t.threadIds, P)) && (d = !1), m.includes(t.id) && (p = !0), !h && !d && p)) break;
     }
     let x = 0,
         I = !1,
         b = 0,
-        S = !1;
+        E = !1;
     if (h || d)
         for (let e = g.length - 1; e >= 0; e--) {
             let t = g[e];
-            (j(t.id) || u().some(t.threadIds, j)) && (null == o && (o = t.id), (I = !0)), (P(t.id) || u().some(t.threadIds, P)) && (null == a && (a = t.id), (x += v.ZP.getMentionCount(t.id) + u().sumBy(t.threadIds, v.ZP.getMentionCount)));
+            (A(t.id) || u().some(t.threadIds, A)) && (null == o && (o = t.id), (I = !0)), (P(t.id) || u().some(t.threadIds, P)) && (null == a && (a = t.id), (x += v.ZP.getMentionCount(t.id) + u().sumBy(t.threadIds, v.ZP.getMentionCount)));
         }
     if (h || d)
         for (let e = 0; e < _.length; e++) {
             let t = _[e];
             if (!h && !d) break;
-            (j(t.id) || u().some(t.threadIds, j)) && (null == c && (c = t.id), (S = !0)), (P(t.id) || u().some(t.threadIds, P)) && (null == s && (s = t.id), (b += v.ZP.getMentionCount(t.id) + u().sumBy(t.threadIds, v.ZP.getMentionCount)));
+            (A(t.id) || u().some(t.threadIds, A)) && (null == c && (c = t.id), (E = !0)), (P(t.id) || u().some(t.threadIds, P)) && (null == s && (s = t.id), (b += v.ZP.getMentionCount(t.id) + u().sumBy(t.threadIds, v.ZP.getMentionCount)));
         }
     let N = null,
         y = null,
-        M = null !== (i = null == m ? void 0 : m.getChannelRecords()) && void 0 !== i ? i : [];
+        R = null !== (i = null == f ? void 0 : f.getChannelRecords()) && void 0 !== i ? i : [];
     d && b > 0
         ? (N = {
               mode: 'mentions',
               mentionCount: b,
               targetChannelId: s
           })
-        : !p && u().some(M, R)
+        : !p && u().some(R, M)
           ? (N = {
                 mode: 'voice-channels',
                 mentionCount: 0,
                 targetChannelId: null
             })
           : h &&
-            S &&
+            E &&
             (N = {
                 mode: 'unread',
                 mentionCount: 0,
@@ -134,7 +134,7 @@ function M(e) {
         !0
     );
 }
-let L = u().throttle(M, 200);
+let L = u().throttle(R, 200);
 function w(e) {
     let { guildId: t } = e,
         n = _.Z.getGuild(t);
@@ -167,7 +167,7 @@ function G(e) {
 }
 class U extends (l = d.ZP.Store) {
     initialize() {
-        this.waitFor(E.Z, v.ZP, I.ZP, g.Z, b.ZP, x.Z, _.Z);
+        this.waitFor(S.Z, v.ZP, I.ZP, g.Z, b.ZP, x.Z, _.Z);
     }
     getUnreadStateForGuildId(e) {
         var t;
@@ -187,7 +187,7 @@ class U extends (l = d.ZP.Store) {
         UPDATE_CHANNEL_LIST_DIMENSIONS: function (e) {
             let { guildId: t, channelIds: n } = e,
                 i = _.Z.getGuild(t);
-            return !!(null != i && i.hasFeature(N.oNc.COMMUNITY)) && null != n && !u().isEqual(A[t], n) && ((A[t] = n), M(t));
+            return !!(null != i && i.hasFeature(N.oNc.COMMUNITY)) && null != n && !u().isEqual(j[t], n) && ((j[t] = n), R(t));
         },
         BULK_ACK: function (e) {
             let { channels: t } = e,
@@ -199,7 +199,7 @@ class U extends (l = d.ZP.Store) {
                         let { channelId: n } = e;
                         return null === (t = C.Z.getChannel(n)) || void 0 === t ? void 0 : t.guild_id;
                     })
-                    .filter(S.lm)
+                    .filter(E.lm)
                     .uniq()
                     .forEach((e) => {
                         let t = _.Z.getGuild(e);

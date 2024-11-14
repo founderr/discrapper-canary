@@ -1,22 +1,22 @@
-i.d(n, {
+t.d(n, {
     Z: function () {
         return g;
     }
 }),
-    i(653041);
-var t = i(200651),
-    a = i(192379),
-    l = i(442837),
-    r = i(481060),
-    o = i(139387),
-    d = i(230711),
-    u = i(213459),
-    s = i(434404),
-    c = i(795594),
-    p = i(430824),
-    f = i(496675),
-    v = i(981631),
-    _ = i(388032);
+    t(653041);
+var i = t(200651),
+    a = t(192379),
+    l = t(442837),
+    r = t(481060),
+    o = t(139387),
+    d = t(230711),
+    u = t(213459),
+    s = t(434404),
+    c = t(795594),
+    p = t(430824),
+    f = t(496675),
+    v = t(981631),
+    _ = t(388032);
 function g(e) {
     var n;
     let { user: g, application: h, guildId: A, context: I, onItemClick: x } = e,
@@ -26,14 +26,14 @@ function g(e) {
         C = (0, u.LD)(A, !0),
         Z = (0, u.PL)(!0, !0),
         { isUserApp: y, isGuildApp: k } = a.useMemo(() => {
-            var e, n, i, t;
+            var e, n, t, i;
             if (null == b)
                 return {
                     isGuildApp: !1,
                     isUserApp: !1
                 };
-            let a = Object.values(null !== (i = null === (e = C.result) || void 0 === e ? void 0 : e.sections) && void 0 !== i ? i : {}),
-                l = Object.values(null !== (t = null === (n = Z.result) || void 0 === n ? void 0 : n.sections) && void 0 !== t ? t : {});
+            let a = Object.values(null !== (t = null === (e = C.result) || void 0 === e ? void 0 : e.sections) && void 0 !== t ? t : {}),
+                l = Object.values(null !== (i = null === (n = Z.result) || void 0 === n ? void 0 : n.sections) && void 0 !== i ? i : {});
             return {
                 isGuildApp: a.some((e) => {
                     var n;
@@ -46,7 +46,7 @@ function g(e) {
             };
         }, [C, Z, b]);
     a.useEffect(() => {
-        i(360606);
+        t(360606);
     }, []);
     let M = a.useCallback(() => {
             if ((null == P ? void 0 : P.id) != null) s.Z.open(P.id, v.pNK.INTEGRATIONS), o.Z.setSection(v.b4C.APPLICATION, b), null == x || x();
@@ -62,7 +62,7 @@ function g(e) {
         k &&
             m &&
             L.push(
-                (0, t.jsx)(
+                (0, i.jsx)(
                     r.MenuItem,
                     {
                         id: 'manage-server-integration',
@@ -74,7 +74,7 @@ function g(e) {
             ),
         y &&
             L.push(
-                (0, t.jsx)(
+                (0, i.jsx)(
                     r.MenuItem,
                     {
                         id: 'manage-authorized-app',

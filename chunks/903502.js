@@ -39,8 +39,8 @@ function b() {
     let [e, t] = a.useState(null),
         [n, b] = a.useState(0),
         [g, v] = a.useState(1000),
-        [C, _] = a.useState(0),
-        j = (0, l.e7)([c.Z], () => {
+        [j, C] = a.useState(0),
+        _ = (0, l.e7)([c.Z], () => {
             var t;
             return null === e ? null : null !== (t = c.Z.getFeedbackConfig(e)) && void 0 !== t ? t : s.R[e];
         }),
@@ -48,7 +48,7 @@ function b() {
             label: e,
             value: e
         })),
-        S = a.useMemo(() => null != e && C >= 0 && C <= 100 && n >= 0, [e, C, n]);
+        S = a.useMemo(() => null != e && j >= 0 && j <= 100 && n >= 0, [e, j, n]);
     return (0, r.jsxs)('div', {
         className: h.container,
         children: [
@@ -71,7 +71,7 @@ function b() {
                 className: h.formElement,
                 tag: i.FormTitleTags.H3,
                 children: [
-                    null != j &&
+                    null != _ &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)(d.Z, {
@@ -83,19 +83,19 @@ function b() {
                                 }),
                                 (0, r.jsx)(i.Text, {
                                     variant: 'text-sm/normal',
-                                    children: ''.concat(j.cooldown / 1000, ' second(s) or')
+                                    children: ''.concat(_.cooldown / 1000, ' second(s) or')
                                 }),
                                 (0, r.jsx)(i.Text, {
                                     variant: 'text-sm/normal',
-                                    children: ''.concat(j.cooldown / m, ' minute(s) or')
+                                    children: ''.concat(_.cooldown / m, ' minute(s) or')
                                 }),
                                 (0, r.jsx)(i.Text, {
                                     variant: 'text-sm/normal',
-                                    children: ''.concat(j.cooldown / x, ' hour(s) or')
+                                    children: ''.concat(_.cooldown / x, ' hour(s) or')
                                 }),
                                 (0, r.jsx)(i.Text, {
                                     variant: 'text-sm/normal',
-                                    children: ''.concat(j.cooldown / f, ' day(s)')
+                                    children: ''.concat(_.cooldown / f, ' day(s)')
                                 })
                             ]
                         }),
@@ -133,7 +133,7 @@ function b() {
                 className: h.formElement,
                 tag: i.FormTitleTags.H3,
                 children: [
-                    null != j &&
+                    null != _ &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)(d.Z, {
@@ -145,7 +145,7 @@ function b() {
                                 }),
                                 (0, r.jsx)(i.Text, {
                                     variant: 'text-sm/normal',
-                                    children: ''.concat(100 * j.chance, '%')
+                                    children: ''.concat(100 * _.chance, '%')
                                 })
                             ]
                         }),
@@ -162,9 +162,9 @@ function b() {
                             (0, r.jsx)(i.TextInput, {
                                 min: 0,
                                 max: 100,
-                                value: C.toString(),
+                                value: j.toString(),
                                 type: 'number',
-                                onChange: (e) => _(parseFloat(e))
+                                onChange: (e) => C(parseFloat(e))
                             }),
                             (0, r.jsx)(i.Text, {
                                 variant: 'text-md/normal',
@@ -183,7 +183,7 @@ function b() {
                                 type: 'FEEDBACK_OVERRIDE_SET',
                                 feedbackType: e,
                                 cooldown: n * g,
-                                chance: C / 100
+                                chance: j / 100
                             }),
                         disabled: !S,
                         children: 'Update'
@@ -211,7 +211,7 @@ function b() {
                     color: 'text-danger',
                     children: 'Error: cooldown needs to be a number greater than 0'
                 }),
-            !(C >= 0 && C <= 100) &&
+            !(j >= 0 && j <= 100) &&
                 (0, r.jsx)(i.Text, {
                     variant: 'text-sm/normal',
                     color: 'text-danger',

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return f;
     }
 });
 var i = n(200651);
@@ -15,7 +15,7 @@ var l = n(442837),
     d = n(981631),
     h = n(388032),
     p = n(355123);
-function m() {
+function f() {
     let e = (0, l.e7)([o.Z, s.Z], () => o.Z.unavailableGuilds.filter((e) => null == s.Z.getGuild(e)).length);
     return e <= 0
         ? null

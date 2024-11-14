@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var r = n(481060),
-    s = n(13245),
+var s = n(481060),
+    r = n(13245),
     a = n(312839),
     l = n(981631),
     o = n(987650),
@@ -15,9 +15,9 @@ var r = n(481060),
 function u() {
     return (0, i.jsx)('div', {
         className: d.footer,
-        children: (0, i.jsx)(r.Button, {
-            color: r.Button.Colors.GREEN,
-            size: r.Button.Sizes.SMALL,
+        children: (0, i.jsx)(s.Button, {
+            color: s.Button.Colors.GREEN,
+            size: s.Button.Sizes.SMALL,
             className: d.ctaButton,
             children: c.intl.string(c.t.U76Ft7)
         })
@@ -42,9 +42,9 @@ function h(e) {
                 },
                 onNotificationClick: (e, t) => {
                     p('unlock'),
-                        s.Z.updateNotificationStatus(t),
-                        s.Z.setInstanceLocked(!1),
-                        (0, r.openModalLazy)(async () => {
+                        r.Z.updateNotificationStatus(t),
+                        r.Z.setInstanceLocked(!1),
+                        (0, s.openModalLazy)(async () => {
                             let { default: e } = await Promise.all([n.e('46746'), n.e('33641')]).then(n.bind(n, 60594));
                             return (t) =>
                                 (0, i.jsx)(e, {
@@ -74,9 +74,9 @@ function h(e) {
                 },
                 onNotificationClick: (e, t) => {
                     h('unlock'),
-                        s.Z.updateNotificationStatus(t),
-                        s.Z.setInstanceLocked(!1),
-                        (0, r.openModalLazy)(async () => {
+                        r.Z.updateNotificationStatus(t),
+                        r.Z.setInstanceLocked(!1),
+                        (0, s.openModalLazy)(async () => {
                             let { default: e } = await Promise.all([n.e('46746'), n.e('33641')]).then(n.bind(n, 60594));
                             return (t) =>
                                 (0, i.jsx)(e, {

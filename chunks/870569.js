@@ -11,8 +11,8 @@ var l = n(120356),
     o = n(686546),
     s = n(904297);
 function c(e) {
-    let { tooltipText: t, children: n, onContextMenu: l, onClick: c, disabled: u, icon: d, iconForeground: h, innerClassName: p, tooltipClassName: m, onMouseEnter: f, onMouseLeave: g, 'aria-label': C, 'aria-checked': _, role: v, tooltipColor: x, tooltipForceOpen: I, tooltipContentClassName: b } = e,
-        S =
+    let { tooltipText: t, children: n, onContextMenu: l, onClick: c, disabled: u, icon: d, iconForeground: h, innerClassName: p, tooltipClassName: f, onMouseEnter: m, onMouseLeave: g, 'aria-label': C, 'aria-checked': _, role: v, tooltipColor: x, tooltipForceOpen: I, tooltipContentClassName: b } = e,
+        E =
             'function' == typeof d
                 ? (0, i.jsx)(d, {
                       width: 20,
@@ -23,16 +23,16 @@ function c(e) {
                   })
                 : d;
     return (0, i.jsx)(a.Tooltip, {
-        tooltipClassName: m,
+        tooltipClassName: f,
         text: t,
         'aria-label': C,
         color: x,
         tooltipContentClassName: b,
         forceOpen: I,
         children: (e) => {
-            let { onClick: t, onMouseEnter: d, onMouseLeave: h, ...m } = e;
+            let { onClick: t, onMouseEnter: d, onMouseLeave: h, ...f } = e;
             return (0, i.jsxs)(a.Button, {
-                ...m,
+                ...f,
                 look: a.Button.Looks.BLANK,
                 size: a.Button.Sizes.NONE,
                 disabled: u,
@@ -46,7 +46,7 @@ function c(e) {
                     null != t && t(), null != c && c(e);
                 },
                 onMouseEnter: () => {
-                    null == d || d(), null == f || f();
+                    null == d || d(), null == m || m();
                 },
                 onMouseLeave: () => {
                     null == h || h(), null == g || g();
@@ -60,9 +60,9 @@ function c(e) {
                               width: 20,
                               height: 20,
                               mask: o.ZP.Masks.PANEL_BUTTON,
-                              children: S
+                              children: E
                           })
-                        : S,
+                        : E,
                     n
                 ]
             });

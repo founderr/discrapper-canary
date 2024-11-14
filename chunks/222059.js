@@ -15,8 +15,8 @@ var i = n(200651),
     d = n(864682),
     h = n(899740),
     p = n(155409),
-    m = n(699516),
-    f = n(944486),
+    f = n(699516),
+    m = n(944486),
     g = n(594174),
     C = n(431),
     _ = n(774343),
@@ -24,17 +24,17 @@ var i = n(200651),
     x = n(941128),
     I = n(780570),
     b = n(557177),
-    S = n(278464),
-    E = n(276952),
+    E = n(278464),
+    S = n(276952),
     N = n(682662),
     Z = n(662146),
     y = n(674552),
     T = n(981631),
-    A = n(474936),
-    j = n(871465),
+    j = n(474936),
+    A = n(871465),
     P = n(388032),
-    R = n(342824);
-let M = {
+    M = n(342824);
+let R = {
     origin: {
         x: -16,
         y: 0
@@ -47,24 +47,24 @@ let M = {
     }
 };
 function L(e) {
-    let { selected: t, user: n, badge: h, link: m, showProgressBadge: f } = e,
+    let { selected: t, user: n, badge: h, link: f, showProgressBadge: m } = e,
         g = (0, a.e7)([u.Z], () => u.Z.isEditorOpen),
         [C, _] = l.useState(!1),
         [v, x] = l.useState(!1),
-        [I, S] = l.useState(null),
-        [A, L] = l.useState(0),
+        [I, E] = l.useState(null),
+        [j, L] = l.useState(0),
         w = (0, r.Ie)('home'),
         D = () => {
-            S(null), L(0), clearTimeout(I);
+            E(null), L(0), clearTimeout(I);
         };
     if (null == n) return null;
     let O = P.intl.string(P.t.YUU0RE);
     v && (O = o.K.get(T.wli) ? P.intl.string(P.t.nkq1l5) : P.intl.string(P.t.Be8Q5O));
     let k = null;
     !t &&
-        f &&
+        m &&
         (k = (0, i.jsx)(c.Z, {
-            className: R.downloadProgress,
+            className: M.downloadProgress,
             determineOwnVisibility: !1
         }));
     let G = t || C || g,
@@ -77,11 +77,11 @@ function L(e) {
                 onMouseEnter: () => _(!0),
                 onMouseLeave: () => _(!1),
                 onClick: () => {
-                    if (!__OVERLAY__ && (null != I && clearTimeout(I), S(setTimeout(D, 500)), L(A + 1), 15 === A)) {
+                    if (!__OVERLAY__ && (null != I && clearTimeout(I), E(setTimeout(D, 500)), L(j + 1), 15 === j)) {
                         D();
                         let e = !o.K.get(T.wli);
                         o.K.set(T.wli, e),
-                            e && o.K.set(j.O5, !0),
+                            e && o.K.set(A.O5, !0),
                             e ? (0, b.GN)('discodo') : (0, b.GN)('user_leave'),
                             x(!0),
                             setTimeout(() => {
@@ -93,7 +93,7 @@ function L(e) {
                 ariaLabel: P.intl.string(P.t.YUU0RE),
                 ...w,
                 to: {
-                    pathname: m,
+                    pathname: f,
                     state: {
                         analyticsSource: {
                             page: T.ZY5.GUILD_CHANNEL,
@@ -106,17 +106,17 @@ function L(e) {
             })
         });
     return (0, i.jsx)('div', {
-        className: R.tutorialContainer,
+        className: M.tutorialContainer,
         children: (0, i.jsx)(p.Z, {
-            inlineSpecs: M,
+            inlineSpecs: R,
             tutorialId: 'friends-list',
             position: 'right',
             children: (0, i.jsxs)(N.H, {
                 children: [
-                    (0, i.jsx)(E.Z, {
+                    (0, i.jsx)(S.Z, {
                         selected: t,
                         hovered: C,
-                        className: R.pill
+                        className: M.pill
                     }),
                     (0, i.jsx)(Z.Z, {
                         color: s.Tooltip.Colors.PRIMARY,
@@ -131,15 +131,15 @@ function L(e) {
     });
 }
 function w() {
-    let e = (0, S.n)(),
+    let e = (0, E.n)(),
         t = (0, a.e7)([x.Z, v.Z], () => {
             let e = (0, c.E)(x.Z.activeItems, v.Z),
                 { total: t, progress: n } = I.lK(e),
                 i = I.xI(n, t);
             return i > 0 && i < 100;
         }),
-        n = (0, a.e7)([m.Z], () => m.Z.getPendingCount()),
-        l = Object.keys(A.nG),
+        n = (0, a.e7)([f.Z], () => f.Z.getPendingCount()),
+        l = Object.keys(j.nG),
         { unviewedTrialCount: r, unviewedDiscountCount: o } = (0, a.cj)([C.Z], () => ({
             unviewedTrialCount: C.Z.getUnacknowledgedOffers(l).length,
             unviewedDiscountCount: C.Z.getUnacknowledgedDiscountOffers().length
@@ -149,15 +149,15 @@ function w() {
         d = (0, h.q)(),
         p = n + s + d,
         b = p === s && s > 0 && n + d === 0,
-        E = _.Z.getHomeLink();
+        S = _.Z.getHomeLink();
     return (
-        b && (E = T.Z5c.APPLICATION_STORE),
+        b && (S = T.Z5c.APPLICATION_STORE),
         (0, i.jsx)(L, {
             selected: e,
             user: u,
-            selectedChannelId: f.Z.getChannelId(T.ME),
+            selectedChannelId: m.Z.getChannelId(T.ME),
             badge: p,
-            link: E,
+            link: S,
             showProgressBadge: t
         })
     );

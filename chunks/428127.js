@@ -14,8 +14,8 @@ var i = n(200651),
     d = n(492162),
     h = n(237583),
     p = n(451478),
-    m = n(934415),
-    f = n(968847),
+    f = n(934415),
+    m = n(968847),
     g = n(388032),
     C = n(624113);
 let _ = {
@@ -33,9 +33,9 @@ function v(e) {
             },
             [r]
         ),
-        f = null !== (t = null == o ? void 0 : o.getChannelRecords()) && void 0 !== t ? t : [],
-        _ = (0, m.c4)({
-            channels: f,
+        m = null !== (t = null == o ? void 0 : o.getChannelRecords()) && void 0 !== t ? t : [],
+        _ = (0, f.c4)({
+            channels: m,
             selectedChannelId: null,
             selectedVoiceChannelId: null,
             voiceStates: s
@@ -70,22 +70,22 @@ function v(e) {
 }
 function x(e) {
     let { position: t, guildChannels: n, guildChannelsVersion: r, jumpToVoiceChannels: c, jumpToChannel: d } = e,
-        { bottomBar: h, topBar: m } = (0, s.cj)([f.Z], () => f.Z.getUnreadStateForGuildId(n.id)),
+        { bottomBar: h, topBar: f } = (0, s.cj)([m.Z], () => m.Z.getUnreadStateForGuildId(n.id)),
         x = (0, s.e7)([p.Z], () => p.Z.isFocused()),
-        { mode: I, mentionCount: b, targetChannelId: S } = 'bottom' === t ? h : m,
-        E = I === f.x.HIDDEN,
+        { mode: I, mentionCount: b, targetChannelId: E } = 'bottom' === t ? h : f,
+        S = I === m.x.HIDDEN,
         N = (0, u.useSpring)(
             {
-                to: { transform: E ? ('bottom' === t ? 'translateY(180%)' : 'translateY(-180%)') : 'translateY(0%)' },
+                to: { transform: S ? ('bottom' === t ? 'translateY(180%)' : 'translateY(-180%)') : 'translateY(0%)' },
                 config: _
             },
             x ? 'respect-motion-settings' : 'animate-never'
         ),
         Z = l.useCallback(
             (e) => {
-                e.preventDefault(), e.stopPropagation(), null != S && d(S);
+                e.preventDefault(), e.stopPropagation(), null != E && d(E);
             },
-            [d, S]
+            [d, E]
         );
     return (0, i.jsx)('div', {
         className: a()(C.container, {
@@ -95,11 +95,11 @@ function x(e) {
         children: (0, i.jsx)(o.animated.div, {
             className: C.containerPadding,
             style: N,
-            'aria-hidden': E,
+            'aria-hidden': S,
             children:
-                I === f.x.HIDDEN
+                I === m.x.HIDDEN
                     ? (0, i.jsx)('div', { className: a()(C.bar, C.emptyBar) })
-                    : I === f.x.UNREAD
+                    : I === m.x.UNREAD
                       ? (0, i.jsxs)(u.Clickable, {
                             className: C.bar,
                             onClick: Z,
@@ -127,7 +127,7 @@ function x(e) {
                                 })
                             ]
                         })
-                      : I === f.x.MENTIONS
+                      : I === m.x.MENTIONS
                         ? (0, i.jsx)(u.Clickable, {
                               className: a()(C.bar, C.mentionsBar),
                               onClick: Z,
@@ -138,7 +138,7 @@ function x(e) {
                                   children: g.intl.format(g.t.EQcLys, { count: b })
                               })
                           })
-                        : I === f.x.VOICE_CHANNELS
+                        : I === m.x.VOICE_CHANNELS
                           ? (0, i.jsx)(v, {
                                 jumpToVoiceChannels: c,
                                 guildChannels: n,

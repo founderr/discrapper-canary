@@ -9,10 +9,10 @@ n.d(t, {
         return P;
     },
     hR: function () {
-        return j;
+        return A;
     },
     jo: function () {
-        return A;
+        return j;
     }
 });
 var i,
@@ -26,8 +26,8 @@ var i,
     d = n(442837),
     h = n(481060),
     p = n(787014),
-    m = n(924301),
-    f = n(159300),
+    f = n(924301),
+    m = n(159300),
     g = n(152376),
     C = n(427679),
     _ = n(155409),
@@ -35,20 +35,20 @@ var i,
     x = n(199902),
     I = n(430824),
     b = n(496675),
-    S = n(914010),
-    E = n(281029),
+    E = n(914010),
+    S = n(281029),
     N = n(981631),
     Z = n(388032),
     y = n(872356);
 function T(e, t, n) {
-    return null != t && !!t && !(0, E.ig)(n, e.type);
+    return null != t && !!t && !(0, S.ig)(n, e.type);
 }
-function A(e, t) {
+function j(e, t) {
     return null == t ? y.containerDefault : e > t ? y.containerDragAfter : y.containerDragBefore;
 }
-function j(e) {
+function A(e) {
     let { channel: t, disableManageChannels: n, tabIndex: i, forceShowButtons: l, hasChannelInfo: r = !1 } = e;
-    if ((0, d.e7)([b.Z, S.Z], () => n || S.Z.getGuildId() === N.I_8 || (!b.Z.can(N.Plq.MANAGE_CHANNELS, t) && !b.Z.can(N.Plq.MANAGE_ROLES, t) && !b.Z.can(N.Plq.MANAGE_WEBHOOKS, t)) || ((0, v.r8)(t.type) && !b.Z.can(N.Plq.VIEW_CHANNEL, t)) || (t.isGuildVocal() && !b.Z.can(N.Plq.CONNECT, t)) || !v.dF.has(t.type))) return null;
+    if ((0, d.e7)([b.Z, E.Z], () => n || E.Z.getGuildId() === N.I_8 || (!b.Z.can(N.Plq.MANAGE_CHANNELS, t) && !b.Z.can(N.Plq.MANAGE_ROLES, t) && !b.Z.can(N.Plq.MANAGE_WEBHOOKS, t)) || ((0, v.r8)(t.type) && !b.Z.can(N.Plq.VIEW_CHANNEL, t)) || (t.isGuildVocal() && !b.Z.can(N.Plq.CONNECT, t)) || !v.dF.has(t.type))) return null;
     function a() {
         p.ZP.open(t.id);
     }
@@ -78,11 +78,11 @@ function P(e) {
     let { channel: t, isDefaultChannel: i = !1, locked: l, tabIndex: r, forceShowButtons: a, hasChannelInfo: s = !1 } = e,
         c = (0, d.e7)([I.Z], () => I.Z.getGuild(t.getGuildId())),
         p = (0, d.e7)([C.Z], () => C.Z.getStageInstanceByChannel(t.id), [t.id]),
-        g = (0, d.e7)([m.ZP], () => m.ZP.getActiveEventByChannel(t.id), [t.id]),
-        v = (0, d.e7)([b.Z], () => (0, f.b)(b.Z, c, t, p)),
-        S = (0, d.e7)([b.Z], () => (b.Z.can(N.Plq.CREATE_INSTANT_INVITE, t) ? Z.intl.string(Z.t.zJrgTE) : Z.intl.string(Z.t.Sd8Ix8)));
+        g = (0, d.e7)([f.ZP], () => f.ZP.getActiveEventByChannel(t.id), [t.id]),
+        v = (0, d.e7)([b.Z], () => (0, m.b)(b.Z, c, t, p)),
+        E = (0, d.e7)([b.Z], () => (b.Z.can(N.Plq.CREATE_INSTANT_INVITE, t) ? Z.intl.string(Z.t.zJrgTE) : Z.intl.string(Z.t.Sd8Ix8)));
     if (l || !v) return null;
-    function E() {
+    function S() {
         if (null != c) {
             let e = x.Z.getAllActiveStreams().filter((e) => e.state !== N.jm8.ENDED && e.channelId === t.id);
             (0, h.openModalLazy)(async () => {
@@ -112,20 +112,20 @@ function P(e) {
                 children: (0, o.jsx)('div', { children: T })
             })),
         (0, o.jsx)(h.Tooltip, {
-            text: S,
+            text: E,
             children: (e) =>
                 (0, o.jsx)(h.Clickable, {
                     className: u()(y.iconItem, a ? y.alwaysShown : void 0, s ? y.iconWithChannelInfo : y.iconNoChannelInfo),
                     ...e,
-                    onClick: E,
+                    onClick: S,
                     tabIndex: r,
-                    'aria-label': S,
+                    'aria-label': E,
                     children: T
                 })
         })
     );
 }
-function R(e) {
+function M(e) {
     let { channel: t } = e,
         n = () => {
             (0, g._U)(t.guild_id, t.id);
@@ -146,7 +146,7 @@ function R(e) {
             })
     });
 }
-function M(e) {
+function R(e) {
     let { channel: t } = e,
         n = () => {
             (0, g.dM)(t.guild_id, t.id, !0, { section: N.jXE.CHANNEL_LIST });
@@ -169,20 +169,20 @@ function M(e) {
 }
 class L extends (a = s.PureComponent) {
     renderEditButton() {
-        return (0, o.jsx)(j, { ...this.props });
+        return (0, o.jsx)(A, { ...this.props });
     }
     renderInviteButton() {
         return (0, o.jsx)(P, { ...this.props });
     }
     renderRemoveSuggestionButton() {
-        return (0, o.jsx)(R, { ...this.props });
+        return (0, o.jsx)(M, { ...this.props });
     }
     renderAcceptSuggestionButton() {
-        return (0, o.jsx)(M, { ...this.props });
+        return (0, o.jsx)(R, { ...this.props });
     }
     getClassName() {
         let { position: e, sortingPosition: t } = this.props;
-        return A(e, t);
+        return j(e, t);
     }
     isDisabled() {
         let { channel: e, sorting: t, sortingType: n } = this.props;

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return j;
     }
 });
 var r = n(200651);
@@ -41,19 +41,19 @@ function v(e) {
         ]
     });
 }
-function C() {
+function j() {
     let e = (0, o.e7)([m.Z], () => m.Z.getChannelId()),
         t = (0, o.e7)([x.Z], () => x.Z.getGuildId()),
         n = (0, o.e7)([d.Z], () => d.Z.getChannel(e)),
         a = (0, o.e7)([u.Z], () => u.Z.getGuild(t)),
-        C = (0, o.e7)([h.Z], () => h.Z.computePermissions(n)),
-        _ = (0, o.e7)([h.Z], () => h.Z.computePermissions(a)),
-        j = (0, c.ZP)(n, !0),
+        j = (0, o.e7)([h.Z], () => h.Z.computePermissions(n)),
+        C = (0, o.e7)([h.Z], () => h.Z.computePermissions(a)),
+        _ = (0, c.ZP)(n, !0),
         T = null != n ? (0, p.IG)(n, !1, !0) : null,
         S = null != a ? f.Z.getGuildPermissionSpecMap(a) : null,
-        y = Object.values(null != T ? T : {}).map((e) => {
+        N = Object.values(null != T ? T : {}).map((e) => {
             let { title: t, flag: n } = e,
-                a = i.e$(C, n);
+                a = i.e$(j, n);
             return (0, r.jsx)(
                 v,
                 {
@@ -63,9 +63,9 @@ function C() {
                 t
             );
         }),
-        N = Object.values(null != S ? S : {}).map((e) => {
+        y = Object.values(null != S ? S : {}).map((e) => {
             let { title: t, flag: n } = e,
-                a = i.e$(_, n);
+                a = i.e$(C, n);
             return (0, r.jsx)(
                 v,
                 {
@@ -85,9 +85,9 @@ function C() {
                     children: [
                         (0, r.jsx)(s.Heading, {
                             variant: 'heading-md/semibold',
-                            children: null != j ? 'Permissions in '.concat(j) : 'No channel selected'
+                            children: null != _ ? 'Permissions in '.concat(_) : 'No channel selected'
                         }),
-                        y
+                        N
                     ]
                 }),
                 (0, r.jsxs)('section', {
@@ -97,7 +97,7 @@ function C() {
                             variant: 'heading-md/semibold',
                             children: null != a ? 'Permissions in '.concat(a.name) : 'No guild selected'
                         }),
-                        N
+                        y
                     ]
                 })
             ]

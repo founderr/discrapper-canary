@@ -10,8 +10,8 @@ var i,
     d = n(924826),
     h = n(442837),
     p = n(902704),
-    m = n(481060),
-    f = n(925549),
+    f = n(481060),
+    m = n(925549),
     g = n(607070),
     C = n(367907),
     _ = n(453542),
@@ -19,17 +19,17 @@ var i,
     x = n(485267),
     I = n(82295),
     b = n(313201),
-    S = n(860144),
-    E = n(214852),
+    E = n(860144),
+    S = n(214852),
     N = n(518311),
     Z = n(355298),
     y = n(869404),
     T = n(333984),
-    A = n(249978),
-    j = n(210887),
+    j = n(249978),
+    A = n(210887),
     P = n(592125),
-    R = n(158776),
-    M = n(55589),
+    M = n(158776),
+    R = n(55589),
     L = n(515753),
     w = n(981631),
     D = n(388032),
@@ -246,9 +246,9 @@ class U extends (l = o.Component) {
         return (0, a.jsx)(u.SJ, {
             children: (i) => {
                 let { ref: l, role: r, ...o } = i;
-                return (0, a.jsx)(m.FocusJumpSection, {
+                return (0, a.jsx)(f.FocusJumpSection, {
                     children: (i) =>
-                        (0, a.jsx)(m.List, {
+                        (0, a.jsx)(f.List, {
                             fade: !0,
                             innerRole: r,
                             innerAriaLabel: D.intl.string(D.t.YUU0RE),
@@ -298,7 +298,7 @@ class U extends (l = o.Component) {
                     c = n.some((e) => (0, v.Z)(e)),
                     u = {
                         num_users_visible: a.length,
-                        num_users_visible_with_mobile_indicator: s.filter((e) => null != e && R.Z.isMobileOnline(e)).length
+                        num_users_visible_with_mobile_indicator: s.filter((e) => null != e && M.Z.isMobileOnline(e)).length
                     };
                 (this.hasReportedAnalytics = !0),
                     C.ZP.trackWithMetadata(w.rMx.DM_LIST_VIEWED, {
@@ -318,7 +318,7 @@ class U extends (l = o.Component) {
                 c()(() => {
                     if (null != this._list) {
                         let e = this._list.getScrollerNode();
-                        null != e && f.Z.updateChannelListScroll(w.ME, e.scrollTop);
+                        null != e && m.Z.updateChannelListScroll(w.ME, e.scrollTop);
                     }
                 }, 100)
             ),
@@ -372,7 +372,7 @@ class U extends (l = o.Component) {
                                       tooltipPosition: 'top',
                                       popoutAlign: 'left',
                                       iconClassName: O.privateChannelRecipientsInviteButtonIcon,
-                                      icon: m.PlusSmallIcon,
+                                      icon: f.PlusSmallIcon,
                                       subscribeToGlobalHotkey: !0
                                   })
                               ]
@@ -394,20 +394,20 @@ t.Z = (e) => {
         s = P.Z.getMutablePrivateChannels(),
         c = (0, y.k1)(s),
         p = (0, h.Wu)(
-            [M.Z, Z.Z, T.Z],
+            [R.Z, Z.Z, T.Z],
             () => {
-                let e = M.Z.getPrivateChannelIds();
+                let e = R.Z.getPrivateChannelIds();
                 return (0, y.tU)(e, [Z.Z, T.Z]);
             },
             []
         );
-    (0, E.z)(S.R);
-    let { recentActivityStatusEnabled: m } = (0, A.U)({ location: 'PrivateChannelsList' });
+    (0, S.z)(E.R);
+    let { recentActivityStatusEnabled: f } = (0, j.U)({ location: 'PrivateChannelsList' });
     o.useEffect(() => {
-        m && (0, x.Jn)();
-    }, [m]);
-    let f = (0, h.cj)([g.Z, j.Z, P.Z], () => ({
-            theme: j.Z.darkSidebar ? w.BRd.DARK : n,
+        f && (0, x.Jn)();
+    }, [f]);
+    let m = (0, h.cj)([g.Z, A.Z, P.Z], () => ({
+            theme: A.Z.darkSidebar ? w.BRd.DARK : n,
             keyboardModeEnabled: g.Z.keyboardModeEnabled,
             version: null != t ? ''.concat(t, ':').concat(P.Z.getPrivateChannelsVersion()) : P.Z.getPrivateChannelsVersion()
         })),
@@ -450,16 +450,16 @@ t.Z = (e) => {
             []
         ),
         N = (0, b.Dt)(),
-        R = (0, d.ZP)({
+        M = (0, d.ZP)({
             id: 'private-channels-'.concat(N),
-            isEnabled: f.keyboardModeEnabled,
+            isEnabled: m.keyboardModeEnabled,
             scrollToStart: v,
             scrollToEnd: I,
             defaultFocused: (r + (l ? 1 : 0)).toString(),
             setFocus: _
         });
     return (0, a.jsx)(u.bG, {
-        navigator: R,
+        navigator: M,
         children: (0, a.jsx)(U, {
             channels: c,
             privateChannelIds: p,
@@ -468,7 +468,7 @@ t.Z = (e) => {
             version: t,
             ...e,
             children: i,
-            ...f
+            ...m
         })
     });
 };

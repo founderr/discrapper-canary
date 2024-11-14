@@ -1,6 +1,6 @@
 n.d(t, {
     PD: function () {
-        return j;
+        return A;
     },
     aR: function () {
         return P;
@@ -18,8 +18,8 @@ var i = n(200651),
     d = n(481060),
     h = n(239091),
     p = n(100527),
-    m = n(367907),
-    f = n(906732),
+    f = n(367907),
+    m = n(906732),
     g = n(434404),
     C = n(496675),
     _ = n(259580),
@@ -27,13 +27,13 @@ var i = n(200651),
     x = n(624138),
     I = n(667815),
     b = n(531572),
-    S = n(26323),
-    E = n(30513),
+    E = n(26323),
+    S = n(30513),
     N = n(981631),
     Z = n(388032),
     y = n(402723);
 let T = (0, x.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
-    A = (e) => {
+    j = (e) => {
         let { guild: t, onSelect: n } = e,
             [r, a] = l.useState(t.premiumProgressBarEnabled),
             [o, s] = l.useState(!1),
@@ -55,43 +55,43 @@ let T = (0, x.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
             })
         });
     },
-    j = 57,
+    A = 57,
     P = 57 + T,
-    R = {
+    M = {
         tension: 180,
         friction: 80
     };
 t.ZP = (e) => {
     let { guild: t, withMargin: n } = e,
-        { analyticsLocations: r } = (0, f.ZP)(p.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY),
+        { analyticsLocations: r } = (0, m.ZP)(p.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY),
         { premiumSubscriberCount: u, id: g } = t,
         x = (0, v.rF)(u, g),
         T = (0, v.FZ)(x, t.id),
-        j = null == T,
+        A = null == T,
         P = null != T ? T : x,
-        M = (0, c.e7)([b.Z], () => {
+        R = (0, c.e7)([b.Z], () => {
             var e;
             return null !== (e = b.Z.getCountForGuild(g)) && void 0 !== e ? e : 0;
         }),
         L = (0, c.e7)([C.Z], () => C.Z.can(N.Plq.MANAGE_GUILD, t));
     l.useEffect(() => {
-        M !== u && (0, I.v)(g, u);
-    }, [g, M, u]);
+        R !== u && (0, I.v)(g, u);
+    }, [g, R, u]);
     let w = ''.concat(Math.min(100, (u / (0, v.vn)(t.id)[P]) * 100), '%'),
         { current: D } = l.useRef(w),
         O = {
-            from: { width: M === u ? D : '0%' },
+            from: { width: R === u ? D : '0%' },
             to: { width: w },
-            config: R
+            config: M
         },
         [k, G] = (0, d.useSpring)(() => O),
         U = () => {
-            (0, m.yw)(N.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
+            (0, f.yw)(N.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                 location: { section: N.jXE.PREMIUM_GUILD_PROGRESS_BAR },
                 guild_id: g,
                 location_stack: r
             }),
-                (0, S.Z)({
+                (0, E.Z)({
                     analyticsLocations: r,
                     analyticsSourceLocation: {
                         page: N.ZY5.GUILD_CHANNEL,
@@ -99,7 +99,7 @@ t.ZP = (e) => {
                         object: N.qAy.TOOLTIP
                     },
                     guild: t,
-                    perks: (0, E.VF)(),
+                    perks: (0, S.VF)(),
                     perkIntro: Z.intl.string(Z.t.ZhvSn5)
                 });
         },
@@ -108,11 +108,11 @@ t.ZP = (e) => {
             numBoosts: u,
             numTotal: (0, v.vn)(t.id)[P]
         });
-    j && ((B = (0, v.e9)(P)), (H = Z.intl.format(Z.t.B2byER, { numBoosts: u })));
+    A && ((B = (0, v.e9)(P)), (H = Z.intl.format(Z.t.B2byER, { numBoosts: u })));
     let V = (0, s.JA)('boosts-'.concat(t.id));
     return (0, i.jsx)('li', {
         children: (0, i.jsx)(d.Tooltip, {
-            text: j ? Z.intl.string(Z.t['Y+V9go']) : Z.intl.formatToPlainString(Z.t.UyDKl5, { levelName: (0, v.nW)(P) }),
+            text: A ? Z.intl.string(Z.t['Y+V9go']) : Z.intl.formatToPlainString(Z.t.UyDKl5, { levelName: (0, v.nW)(P) }),
             color: d.Tooltip.Colors.BLACK,
             position: 'top',
             delay: 200,
@@ -138,7 +138,7 @@ t.ZP = (e) => {
                     onContextMenu: (e) => {
                         L &&
                             (0, h.vq)(e, (e) =>
-                                (0, i.jsx)(A, {
+                                (0, i.jsx)(j, {
                                     ...e,
                                     guild: t
                                 })
@@ -177,13 +177,13 @@ t.ZP = (e) => {
                             ]
                         }),
                         (0, i.jsxs)('div', {
-                            className: a()(y.progressBarContainer, { [y.progressBarContainerComplete]: j }),
+                            className: a()(y.progressBarContainer, { [y.progressBarContainerComplete]: A }),
                             children: [
                                 (0, i.jsx)(o.animated.div, {
                                     className: y.progressBar,
                                     style: k
                                 }),
-                                j
+                                A
                                     ? (0, i.jsx)('span', {
                                           'aria-label': Z.intl.string(Z.t['7iL1q6']),
                                           role: 'img',

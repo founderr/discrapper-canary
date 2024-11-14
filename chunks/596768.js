@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return k;
     }
 }),
     n(47120);
@@ -21,12 +21,12 @@ var r = n(200651),
     b = n(31336),
     g = n(257785),
     v = n(484036),
-    C = n(681619),
-    _ = n(621060),
-    j = n(388032),
+    j = n(681619),
+    C = n(621060),
+    _ = n(388032),
     T = n(574001),
     S = n(219299);
-let y = [
+let N = [
         {
             key: 'id',
             cellClassName: T.eventColumn,
@@ -52,7 +52,7 @@ let y = [
             }
         }
     ],
-    N = [
+    y = [
         {
             id: 'details',
             name: 'Details',
@@ -124,16 +124,16 @@ let y = [
             }
         }
     ];
-function I() {
+function k() {
     let [e, t] = a.useState(''),
         n = a.useRef(null),
         l = (0, u.Wu)([p.Z], () => p.Z.loggedTriggers),
         o = a.useMemo(() => l.filter((t) => 0 === e.length || s()(e, t.experimentId)).sort((e, t) => t.timestamp.getTime() - e.timestamp.getTime()), [l, e]),
         [c, d] = a.useState(void 0),
         x = o.find((e) => e.key === c),
-        { TabBar: f, renderSelectedTab: g } = (0, _.Z)({ tabs: N }, []),
-        I = (0, u.e7)([p.Z], () => p.Z.trackTriggers),
-        k = a.useCallback((e) => {
+        { TabBar: f, renderSelectedTab: g } = (0, C.Z)({ tabs: y }, []),
+        k = (0, u.e7)([p.Z], () => p.Z.trackTriggers),
+        I = a.useCallback((e) => {
             m.Z.dispatch({
                 type: 'SET_TRACK_TRIGGERS',
                 enabled: e
@@ -150,8 +150,8 @@ function I() {
                         title: 'Enables tracking of all triggers',
                         className: T.triggersEnable,
                         children: (0, r.jsx)(h.Switch, {
-                            checked: I,
-                            onChange: k,
+                            checked: k,
+                            onChange: I,
                             className: T.__invalid_toolbarSwitch
                         })
                     }),
@@ -161,11 +161,11 @@ function I() {
                         size: h.Button.Sizes.ICON,
                         onClick: b.Zw,
                         children: (0, r.jsx)('span', {
-                            title: j.intl.string(j.t.VkKicX),
+                            title: _.intl.string(_.t.VkKicX),
                             children: (0, r.jsx)(h.TrashIcon, {
                                 size: 'md',
                                 color: 'currentColor',
-                                'aria-label': j.intl.string(j.t.VkKicX)
+                                'aria-label': _.intl.string(_.t.VkKicX)
                             })
                         })
                     }),
@@ -178,8 +178,8 @@ function I() {
                     })
                 ]
             }),
-            (0, r.jsx)(C.Z, {
-                columns: y,
+            (0, r.jsx)(j.Z, {
+                columns: N,
                 data: o,
                 selectedRowKey: c,
                 onClickRow: (e) => d(e.key)

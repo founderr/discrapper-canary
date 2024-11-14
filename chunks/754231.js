@@ -15,8 +15,8 @@ var i = n(200651),
     d = n(884338),
     h = n(528144),
     p = n(424678),
-    m = n(594174),
-    f = n(81063),
+    f = n(594174),
+    m = n(81063),
     g = n(768581),
     C = n(823379),
     _ = n(51144),
@@ -48,17 +48,17 @@ function I(e) {
               })(o)
             : null;
     let p = null !== (t = d.large_image) && void 0 !== t ? t : d.small_image,
-        m = (0, c.Z)(r),
-        C = m ? v.spotifyLargeImage : v.applicationLargeImage,
+        f = (0, c.Z)(r),
+        C = f ? v.spotifyLargeImage : v.applicationLargeImage,
         _ =
             null != p
                 ? (0, i.jsx)('img', {
                       alt: null !== (n = d.large_text) && void 0 !== n ? n : '',
-                      src: (0, f.getAssetImage)(h, p, [128, 128]),
+                      src: (0, m.getAssetImage)(h, p, [128, 128]),
                       className: C
                   })
                 : null;
-    return m && null != u
+    return f && null != u
         ? ((_ = (0, i.jsx)(s.Clickable, {
               className: v.clickable,
               onClick: () => {
@@ -99,7 +99,7 @@ function b(e) {
         children: o
     });
 }
-function S(e) {
+function E(e) {
     let { activity: t, user: n, onOpenSpotifyArtist: l } = e,
         r = null == t ? void 0 : t.details,
         o = null == t ? void 0 : t.state,
@@ -128,7 +128,7 @@ function S(e) {
               children: s
           });
 }
-function E(e) {
+function S(e) {
     let { activity: t } = e,
         n = null == t ? void 0 : t.state;
     return null == n || '' === n || (0, c.Z)(t)
@@ -153,10 +153,10 @@ function N(e) {
     });
 }
 function Z(e) {
-    let { activity: t, embeddedApp: n, user: r, channel: a, sortedVoiceStates: u, onOpenSpotifyTrack: h, onOpenSpotifyArtist: p, onOpenSpotifyAlbum: f } = e,
+    let { activity: t, embeddedApp: n, user: r, channel: a, sortedVoiceStates: u, onOpenSpotifyTrack: h, onOpenSpotifyArtist: p, onOpenSpotifyAlbum: m } = e,
         g = [];
     null != n ? (g = Array.from(n.embeddedActivity.userIds)) : (0, c.Z)(t) && null != u && (g = u.map((e) => e.user.id));
-    let Z = (0, o.Wu)([m.default], () => g.map((e) => m.default.getUser(e)).filter(C.lm)),
+    let Z = (0, o.Wu)([f.default], () => g.map((e) => f.default.getUser(e)).filter(C.lm)),
         y = null != n || (0, c.Z)(t),
         T = l.useMemo(() => {
             let e = new Map();
@@ -181,7 +181,7 @@ function Z(e) {
                               activity: t,
                               user: r,
                               embeddedApp: n,
-                              onOpenSpotifyAlbum: f
+                              onOpenSpotifyAlbum: m
                           }),
                           (0, i.jsxs)('div', {
                               className: v.detailsAndAvatarsContainer,
@@ -191,12 +191,12 @@ function Z(e) {
                                       embeddedApp: n,
                                       onOpenSpotifyTrack: h
                                   }),
-                                  (0, i.jsx)(S, {
+                                  (0, i.jsx)(E, {
                                       activity: t,
                                       user: r,
                                       onOpenSpotifyArtist: p
                                   }),
-                                  (0, i.jsx)(E, { activity: t }),
+                                  (0, i.jsx)(S, { activity: t }),
                                   g.length > 0 &&
                                       (0, i.jsx)(d.Z, {
                                           className: v.usersSummary,

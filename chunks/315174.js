@@ -10,8 +10,8 @@ var i = n(200651),
     d = n(695346),
     h = n(768581),
     p = n(358555),
-    m = n(981631),
-    f = n(647086),
+    f = n(981631),
+    m = n(647086),
     g = n(388032),
     C = n(501223);
 function _(e) {
@@ -50,7 +50,7 @@ function _(e) {
 function v(e) {
     let { guild: t, controller: n, hasBanner: l, hasSubheader: r } = e,
         { value: s } = n.springs,
-        u = t.hasFeature(m.oNc.DISCOVERABLE),
+        u = t.hasFeature(f.oNc.DISCOVERABLE),
         d = (0, i.jsx)('div', {
             className: C.communityInfo,
             children:
@@ -100,12 +100,12 @@ function x() {
     });
 }
 t.ZP = l.memo(function (e) {
-    let { bannerVisible: t, controller: n, className: r, onClick: o, onContextMenu: I, onMouseDown: b, disableBannerAnimation: S, 'aria-expanded': E, 'aria-controls': N, guild: Z, guildBanner: y, animationOverlayHeight: T, children: A, headerClassName: j, communityInfoVisible: P, hasSubheader: R } = e,
-        M = Z.hasFeature(m.oNc.ANIMATED_BANNER),
+    let { bannerVisible: t, controller: n, className: r, onClick: o, onContextMenu: I, onMouseDown: b, disableBannerAnimation: E, 'aria-expanded': S, 'aria-controls': N, guild: Z, guildBanner: y, animationOverlayHeight: T, children: j, headerClassName: A, communityInfoVisible: P, hasSubheader: M } = e,
+        R = Z.hasFeature(f.oNc.ANIMATED_BANNER),
         L = (0, u.Z)(Z),
         w = !L && Z.hasCommunityInfoSubheader(),
         D = !L && P,
-        O = (0, h.xR)(y) && M && !S,
+        O = (0, h.xR)(y) && R && !E,
         [k, G] = l.useState(!1),
         U = l.useRef(),
         B = l.useRef(null),
@@ -131,7 +131,7 @@ t.ZP = l.memo(function (e) {
         return null != n && !t;
     };
     return (0, i.jsx)(c.ThemeProvider, {
-        theme: t ? m.BRd.DARK : void 0,
+        theme: t ? f.BRd.DARK : void 0,
         children: (e) => {
             var l;
             return (0, i.jsxs)(i.Fragment, {
@@ -141,18 +141,18 @@ t.ZP = l.memo(function (e) {
                         className: a()(r, {
                             [C.container]: !0,
                             [C.clickable]: null != o,
-                            [C.selected]: null != o && E,
+                            [C.selected]: null != o && S,
                             [C.hasBanner]: F(),
                             [C.bannerVisible]: t,
                             [e]: t,
-                            [C.communityInfoVisible]: D || (R && w)
+                            [C.communityInfoVisible]: D || (M && w)
                         }),
                         onMouseDown: b,
                         onContextMenu: I,
                         onClick: o,
                         children: [
                             (0, i.jsxs)('header', {
-                                className: a()(C.header, j, { [C.themedHeaderMobile]: s.tq }),
+                                className: a()(C.header, A, { [C.themedHeaderMobile]: s.tq }),
                                 children: [
                                     (0, i.jsxs)('div', {
                                         className: a()(C.headerContent, C.primaryInfo),
@@ -161,7 +161,7 @@ t.ZP = l.memo(function (e) {
                                                 guild: Z,
                                                 isBannerVisible: t
                                             }),
-                                            Z.id === f._ && (0, i.jsx)(x, {}),
+                                            Z.id === m._ && (0, i.jsx)(x, {}),
                                             (0, i.jsx)(c.Heading, {
                                                 variant: 'text-md/semibold',
                                                 lineClamp: 1,
@@ -172,7 +172,7 @@ t.ZP = l.memo(function (e) {
                                                 (0, i.jsx)(c.Clickable, {
                                                     className: C.headerButton,
                                                     'aria-controls': N,
-                                                    'aria-expanded': E,
+                                                    'aria-expanded': S,
                                                     focusProps: {
                                                         ringTarget: B,
                                                         offset: 4
@@ -183,7 +183,7 @@ t.ZP = l.memo(function (e) {
                                                 }),
                                             (0, i.jsx)('div', {
                                                 className: C.headerChildren,
-                                                children: A
+                                                children: j
                                             })
                                         ]
                                     }),
@@ -192,7 +192,7 @@ t.ZP = l.memo(function (e) {
                                             guild: Z,
                                             controller: n,
                                             hasBanner: null != y,
-                                            hasSubheader: null != R && R
+                                            hasSubheader: null != M && M
                                         })
                                 ]
                             }),

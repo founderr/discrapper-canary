@@ -10,8 +10,8 @@ var i = n(200651),
     d = n(374470),
     h = n(442837),
     p = n(902704),
-    m = n(846519),
-    f = n(481060),
+    f = n(846519),
+    m = n(481060),
     g = n(925549),
     C = n(209613),
     _ = n(100527),
@@ -19,17 +19,17 @@ var i = n(200651),
     x = n(358221),
     I = n(963202),
     b = n(706590),
-    S = n(940777),
-    E = n(41776),
+    E = n(940777),
+    S = n(41776),
     N = n(905423),
     Z = n(802718),
     y = n(796974),
     T = n(271383),
-    A = n(430824),
-    j = n(771845),
+    j = n(430824),
+    A = n(771845),
     P = n(358085),
-    R = n(709054),
-    M = n(727258),
+    M = n(709054),
+    R = n(727258),
     L = n(605951),
     w = n(474109),
     D = n(741616),
@@ -96,7 +96,7 @@ class el {
             (this.scrollerRef = l.createRef()),
             (this.guildDiscoveryRef = l.createRef()),
             (this.nodeRefs = {}),
-            (this.timeout = new m.V7()),
+            (this.timeout = new f.V7()),
             (this.isScrolling = !1),
             (this.isNearBottom = !1),
             (this.scrollToGuild = (e, t) => {
@@ -166,27 +166,27 @@ class el {
 }
 function er(e) {
     let { disableAppDownload: t = P.isPlatformEmbedded, isOverlay: n = !1, className: r, themeOverride: o } = e,
-        [s] = (0, h.Wu)([j.ZP], () => {
-            let e = j.ZP.getGuildsTree();
+        [s] = (0, h.Wu)([A.ZP], () => {
+            let e = A.ZP.getGuildsTree();
             return [e, e.version];
         }),
-        d = (0, h.e7)([E.Z], () => E.Z.lurkingGuildIds()),
+        d = (0, h.e7)([S.Z], () => S.Z.lurkingGuildIds()),
         p = l.useMemo(() => (n ? [] : d), [d, n]),
-        g = (0, h.Wu)([A.Z, T.ZP], () => R.default.keys(A.Z.getGuilds()).filter((e) => T.ZP.isCurrentUserGuest(e))),
+        g = (0, h.Wu)([j.Z, T.ZP], () => M.default.keys(j.Z.getGuilds()).filter((e) => T.ZP.isCurrentUserGuest(e))),
         C = p.concat(g),
         $ = (0, h.e7)([x.Z], () => x.Z.isFullscreenInContext()),
-        ee = (0, h.e7)([A.Z], () => A.Z.getGeoRestrictedGuilds()),
+        ee = (0, h.e7)([j.Z], () => j.Z.getGeoRestrictedGuilds()),
         [et, en] = l.useState(!1),
         ei = l.useCallback(() => en(!0), []),
         er = l.useCallback(() => en(!1), []),
         ea = l.useRef(!1),
-        [eo] = l.useState(() => new m.V7()),
+        [eo] = l.useState(() => new f.V7()),
         es = l.useRef(null),
         ec = l.useRef(null),
         [eu, ed] = l.useState(!1),
         { clanDiscoveryEnabled: eh } = (0, I.nk)('guilds_bar'),
-        { ref: ep, ...em } = (0, u.OP)(),
-        ef = (0, f.useFocusJumpSection)(),
+        { ref: ep, ...ef } = (0, u.OP)(),
+        em = (0, m.useFocusJumpSection)(),
         [eg, eC] = l.useState(!1),
         e_ = l.useMemo(
             () =>
@@ -233,15 +233,15 @@ function er(e) {
                 n !== t && ((t = n), e_.scrollToGuild(t, !1));
             });
         }, [s, e_]);
-    let eS = l.useCallback(() => {
+    let eE = l.useCallback(() => {
         e_.scrollTo({
             to: 0,
             animate: !1
         });
     }, [e_]);
-    function eE(e) {
+    function eS(e) {
         switch (e.type) {
-            case M.eD.FOLDER:
+            case R.eD.FOLDER:
                 return (0, i.jsx)(
                     z.Z,
                     {
@@ -251,11 +251,11 @@ function er(e) {
                         sorting: et,
                         onDragStart: ei,
                         onDragEnd: er,
-                        renderChildNode: eE
+                        renderChildNode: eS
                     },
                     e.id
                 );
-            case M.eD.GUILD:
+            case R.eD.GUILD:
                 return (0, i.jsx)(
                     Y.Z,
                     {
@@ -288,7 +288,7 @@ function er(e) {
             },
             [eI, e_.guildDiscoveryRef]
         ),
-        eA = ee.map((e) =>
+        ej = ee.map((e) =>
             (0, i.jsx)(
                 G.Z,
                 {
@@ -301,7 +301,7 @@ function er(e) {
         );
     return (0, i.jsx)(v.Gt, {
         value: ev,
-        children: (0, i.jsx)(f.ThemeProvider, {
+        children: (0, i.jsx)(m.ThemeProvider, {
             theme: o,
             children: (e) =>
                 (0, i.jsx)('nav', {
@@ -309,8 +309,8 @@ function er(e) {
                     'aria-label': J.intl.string(J.t.PjnF2t),
                     children: (0, i.jsxs)('ul', {
                         ref: ep,
-                        ...em,
                         ...ef,
+                        ...em,
                         role: 'tree',
                         className: X.tree,
                         children: [
@@ -321,7 +321,7 @@ function er(e) {
                                 className: X.unreadMentionsIndicatorTop,
                                 barClassName: X.unreadMentionsBar
                             }),
-                            (0, i.jsxs)(f.AdvancedScrollerNone, {
+                            (0, i.jsxs)(m.AdvancedScrollerNone, {
                                 className: a()({
                                     [X.scroller]: !0,
                                     [X.scrolling]: eg
@@ -330,18 +330,18 @@ function er(e) {
                                 onScroll: e_.handleScroll,
                                 children: [
                                     (0, i.jsx)(H.u, {}),
-                                    eZ ? (0, i.jsx)(S.Z, {}) : null,
+                                    eZ ? (0, i.jsx)(E.Z, {}) : null,
                                     (0, i.jsx)(V.Z, { isOnHubVerificationRoute: eb }),
                                     (0, i.jsx)(D.Z, {}),
                                     ey,
                                     C.map((e) => (0, i.jsx)(q.Z, { guildId: e }, e)),
-                                    (0, i.jsx)(K.Z, { onActivate: eS }),
+                                    (0, i.jsx)(K.Z, { onActivate: eE }),
                                     (0, i.jsx)(F.Z, {}),
                                     (0, i.jsx)('div', {
                                         'aria-label': J.intl.string(J.t['7hB4kp']),
-                                        children: eN.map(eE)
+                                        children: eN.map(eS)
                                     }),
-                                    eA,
+                                    ej,
                                     n
                                         ? null
                                         : (0, i.jsx)(k.Z, {

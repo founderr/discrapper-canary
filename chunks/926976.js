@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return Z;
+        return E;
     }
 }),
     n(47120);
@@ -21,13 +21,13 @@ var r = n(200651),
     b = n(120816),
     g = n(31336),
     v = n(257785),
-    C = n(484036),
-    _ = n(681619),
-    j = n(621060),
+    j = n(484036),
+    C = n(681619),
+    _ = n(621060),
     T = n(388032),
     S = n(574001),
-    y = n(219299);
-let N = [
+    N = n(219299);
+let y = [
     {
         key: 'event',
         cellClassName: S.eventColumn,
@@ -45,14 +45,14 @@ let N = [
         }
     }
 ];
-function I(e) {
+function k(e) {
     let { children: t } = e;
     return (0, r.jsx)(u.ScrollerThin, {
         className: S.customPropertiesContainer,
         children: (0, r.jsx)('dl', { children: t })
     });
 }
-function k(e) {
+function I(e) {
     let { name: t, children: n } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -81,14 +81,14 @@ let w = [
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsxs)(m.ZP, {
-                            className: i()(y.headerBar, S.subPanelHeaderBar),
+                            className: i()(N.headerBar, S.subPanelHeaderBar),
                             children: [
                                 (0, r.jsx)(m.ZP.Icon, {
                                     icon: u.AnalyticsIcon,
                                     tooltip: t
                                 }),
                                 (0, r.jsx)(m.ZP.Title, {
-                                    wrapperClassName: y.headerTitle,
+                                    wrapperClassName: N.headerTitle,
                                     children: t
                                 }),
                                 (0, r.jsx)(m.ZP.Icon, {
@@ -120,11 +120,11 @@ let w = [
                                 })
                             ]
                         }),
-                        (0, r.jsx)(I, {
+                        (0, r.jsx)(k, {
                             children: Object.entries(n).map((e) => {
                                 let [t, n] = e;
                                 return (0, r.jsx)(
-                                    k,
+                                    I,
                                     {
                                         name: ''.concat(t, ':'),
                                         children:
@@ -144,11 +144,11 @@ let w = [
             }
         }
     ],
-    E = {
+    Z = {
         events: {
             label: 'Events',
             filter: (e) =>
-                Object.entries(E)
+                Object.entries(Z)
                     .filter((e) => {
                         let [t] = e;
                         return 'events' !== t;
@@ -172,11 +172,11 @@ let w = [
             filter: (e) => e.event.startsWith('network_action')
         }
     };
-function Z() {
+function E() {
     let e = a.useRef(null),
         [t, n] = a.useState(''),
         l = (0, d.e7)([b.Z], () => b.Z.loggedEvents),
-        [s, c] = a.useState(Object.keys(E)),
+        [s, c] = a.useState(Object.keys(Z)),
         [h, m] = a.useState(l),
         f = a.useRef(null),
         p = a.useCallback(
@@ -206,7 +206,7 @@ function Z() {
         v = a.useMemo(
             () =>
                 h.filter((e) => {
-                    for (let t of s) if (E[t].filter(e)) return !0;
+                    for (let t of s) if (Z[t].filter(e)) return !0;
                     return !1;
                 }),
             [h, s]
@@ -214,12 +214,12 @@ function Z() {
     a.useEffect(() => {
         p(t, l);
     }, [t, p, l]);
-    let [I, k] = a.useState(void 0),
-        Z = v.find((e) => e.key === I),
-        { TabBar: R, renderSelectedTab: O } = (0, j.Z)({ tabs: w }, []);
+    let [k, I] = a.useState(void 0),
+        E = v.find((e) => e.key === k),
+        { TabBar: R, renderSelectedTab: B } = (0, _.Z)({ tabs: w }, []);
     return (0, r.jsxs)('div', {
         ref: e,
-        className: i()(y.panel, S.panel),
+        className: i()(N.panel, S.panel),
         children: [
             (0, r.jsxs)('div', {
                 className: S.toolbar,
@@ -241,7 +241,7 @@ function Z() {
                     (0, r.jsx)('div', { className: S.toolbarDivider }),
                     (0, r.jsx)('div', {
                         className: S.filters,
-                        children: Object.entries(E).map((e) => {
+                        children: Object.entries(Z).map((e) => {
                             let [t, n] = e;
                             return (0, r.jsx)(
                                 u.Clickable,
@@ -269,22 +269,22 @@ function Z() {
                     placeholder: 'Search by event name'
                 })
             }),
-            (0, r.jsx)(_.Z, {
-                columns: N,
+            (0, r.jsx)(C.Z, {
+                columns: y,
                 data: v,
-                selectedRowKey: I,
-                onClickRow: (e) => k(e.key)
+                selectedRowKey: k,
+                onClickRow: (e) => I(e.key)
             }),
-            null != Z &&
-                (0, r.jsxs)(C.Z, {
+            null != E &&
+                (0, r.jsxs)(j.Z, {
                     className: S.subPanel,
                     minHeight: 100,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,
                     children: [
                         (0, r.jsx)(R, {}),
-                        O({
-                            loggedEvent: Z,
-                            onClose: () => k(void 0)
+                        B({
+                            loggedEvent: E,
+                            onClose: () => I(void 0)
                         })
                     ]
                 })

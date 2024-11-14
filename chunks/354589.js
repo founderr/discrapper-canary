@@ -14,8 +14,8 @@ var r = t(481060),
     p = t(607783),
     g = t(299206),
     h = t(819403),
-    v = t(777658),
-    _ = t(858488),
+    _ = t(777658),
+    v = t(858488),
     E = t(185457),
     Z = t(570870),
     x = t(389052),
@@ -38,8 +38,8 @@ e.default = (0, d.Z)(
     (0, a.Z)(
         function (n) {
             var e;
-            let { user: t, channel: a, context: d, showChatItems: s = !0, showMediaItems: k = !1, showChannelCallItems: R = !1, showModalItems: D = !0, onSelect: G, onHeightUpdate: V } = n,
-                B = (0, O.Z)({
+            let { user: t, channel: a, context: d, showChatItems: s = !0, showMediaItems: k = !1, showChannelCallItems: R = !1, showModalItems: D = !0, onSelect: G, onHeightUpdate: B } = n,
+                V = (0, O.Z)({
                     userId: t.id,
                     guildId: null
                 }),
@@ -55,7 +55,7 @@ e.default = (0, d.Z)(
                     channelId: a.id,
                     context: d
                 }),
-                q = (0, _.Z)({ user: t }),
+                q = (0, v.Z)({ user: t }),
                 F = (0, P.Z)(t.id),
                 Y = (0, j.Z)(t.id, a.id),
                 J = (0, N.Z)(t.id),
@@ -68,7 +68,7 @@ e.default = (0, d.Z)(
                 X = (0, b.Z)(t.id, a.id),
                 $ = (0, M.Z)({ user: t }),
                 nn = (0, u.Z)(null, t),
-                ne = (0, v.Z)(t),
+                ne = (0, _.Z)(t),
                 nt = (0, x.Z)({ user: t }),
                 ni = (0, A.Z)({ user: t }),
                 nr = (0, g.Z)({
@@ -85,7 +85,7 @@ e.default = (0, d.Z)(
                     commandTargetId: t.id,
                     channel: a,
                     guildId: void 0,
-                    onHeightUpdate: V
+                    onHeightUpdate: B
                 }),
                 nc = (0, T.Z)(t, a),
                 nf = t.isNonUserBot(),
@@ -102,7 +102,7 @@ e.default = (0, d.Z)(
                             children: [
                                 (0, i.jsx)(r.MenuGroup, { children: no }),
                                 (0, i.jsxs)(r.MenuGroup, {
-                                    children: [D && B, s && L, H, K, !nm && W, D && z, D && q, nl]
+                                    children: [D && V, s && L, H, K, !nm && W, D && z, D && q, nl]
                                 }),
                                 k && (0, i.jsx)(r.MenuGroup, { children: F }),
                                 np &&

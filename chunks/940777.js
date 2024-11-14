@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return R;
+        return M;
     }
 }),
     n(47120),
@@ -17,8 +17,8 @@ var i = n(200651),
     d = n(239091),
     h = n(317381),
     p = n(276952),
-    m = n(682662),
-    f = n(674552),
+    f = n(682662),
+    m = n(674552),
     g = n(593364),
     C = n(905423),
     _ = n(199902),
@@ -26,14 +26,14 @@ var i = n(200651),
     x = n(944486),
     I = n(979651),
     b = n(709054),
-    S = n(853856),
-    E = n(593214),
+    E = n(853856),
+    S = n(593214),
     N = n(919755),
     Z = n(110977),
     y = n(603274),
     T = n(981631),
-    A = n(388032),
-    j = n(599576);
+    j = n(388032),
+    A = n(599576);
 let P = {
     analyticsSource: {
         page: T.ZY5.GUILD_CHANNEL,
@@ -41,13 +41,13 @@ let P = {
         object: T.qAy.CHANNEL
     }
 };
-function R() {
+function M() {
     let e = (0, o.Ie)('favorites'),
-        { favoriteAdded: t, clearFavoriteAdded: r } = (0, E.up)(),
-        [R, M] = l.useState(!1),
-        { favoriteServerMuted: L, favoriteChannels: w } = (0, s.cj)([S.Z], () => ({
-            favoriteChannels: S.Z.getFavoriteChannels(),
-            favoriteServerMuted: S.Z.favoriteServerMuted
+        { favoriteAdded: t, clearFavoriteAdded: r } = (0, S.up)(),
+        [M, R] = l.useState(!1),
+        { favoriteServerMuted: L, favoriteChannels: w } = (0, s.cj)([E.Z], () => ({
+            favoriteChannels: E.Z.getFavoriteChannels(),
+            favoriteServerMuted: E.Z.favoriteServerMuted
         })),
         D = (0, s.e7)([x.Z], () => x.Z.getChannelId(T.I_8)),
         O = (0, s.e7)([v.Z], () => v.Z.getChannel(D)),
@@ -74,16 +74,16 @@ function R() {
                 u = !1,
                 d = !1,
                 p = !1,
-                m = !1;
+                f = !1;
             return (
-                n ? ((u = !r), (d = r), (p = i), (m = o)) : ((p = l), (m = c)),
-                (0, f.Or)({
+                n ? ((u = !r), (d = r), (p = i), (f = o)) : ((p = l), (f = c)),
+                (0, m.Or)({
                     audio: u,
                     video: d,
                     screenshare: p,
                     liveStage: !1,
                     isCurrentUserConnected: n,
-                    activity: m
+                    activity: f
                 })
             );
         })(w),
@@ -91,34 +91,34 @@ function R() {
         V = l.useCallback(() => {
             r();
         }, [r]);
-    return (0, i.jsxs)(m.H, {
+    return (0, i.jsxs)(f.H, {
         children: [
             (0, i.jsx)(p.Z, {
                 selected: k,
-                hovered: R,
+                hovered: M,
                 unread: U && !L,
-                className: j.pill
+                className: A.pill
             }),
             (0, i.jsx)(y.Z, {
                 onShow: V,
                 children: (0, i.jsx)(Z.S, {
                     children: (0, i.jsx)(c.BlobMask, {
-                        selected: k || R,
+                        selected: k || M,
                         upperBadge: B,
                         lowerBadge: H,
                         children: (0, i.jsx)(c.NavItem, {
                             ...e,
-                            ariaLabel: A.intl.formatToPlainString(A.t['/uzRsr'], {
-                                guildName: A.intl.string(A.t.wMWycn),
+                            ariaLabel: j.intl.formatToPlainString(j.t['/uzRsr'], {
+                                guildName: j.intl.string(j.t.wMWycn),
                                 mentions: G
                             }),
                             to: {
                                 pathname: T.Z5c.CHANNEL(T.I_8, D),
                                 state: P
                             },
-                            selected: k || R,
-                            onMouseEnter: () => M(!0),
-                            onMouseLeave: () => M(!1),
+                            selected: k || M,
+                            onMouseEnter: () => R(!0),
+                            onMouseLeave: () => R(!1),
                             onMouseDown: function () {
                                 if (null != O) u.Z.preload(O.guild_id, O.id);
                             },
@@ -129,11 +129,11 @@ function R() {
                                 });
                             },
                             children: (0, i.jsx)('div', {
-                                className: a()(j.ring, { [j.ringActive]: t }),
+                                className: a()(A.ring, { [A.ringActive]: t }),
                                 children: (0, i.jsx)(c.StarIcon, {
                                     size: 'custom',
                                     color: 'currentColor',
-                                    className: j.favoriteIcon,
+                                    className: A.favoriteIcon,
                                     width: 20,
                                     height: 20
                                 })

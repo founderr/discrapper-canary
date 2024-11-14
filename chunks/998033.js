@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var r = n(13245),
-    s = n(703656),
+var s = n(13245),
+    r = n(703656),
     a = n(974180),
     l = n(237997),
     o = n(150097),
@@ -16,11 +16,11 @@ var r = n(13245),
     h = n(987650),
     p = n(388032);
 function f(e, t, n, f) {
-    var g;
-    let { icon: m, title: v, body: _ } = (0, o.Xi)(e, t, n),
+    var m;
+    let { icon: g, title: v, body: _ } = (0, o.Xi)(e, t, n),
         { trackView: E, trackClick: x } = (0, d.R)(h.n0.TextChat, {
             notif_type: h.n0.TextChat,
-            notif_user_id: null === (g = t.author) || void 0 === g ? void 0 : g.id,
+            notif_user_id: null === (m = t.author) || void 0 === m ? void 0 : m.id,
             message_id: t.id,
             message_type: t.type,
             guild_id: e.guild_id,
@@ -28,7 +28,7 @@ function f(e, t, n, f) {
             channel_type: e.type
         });
     return {
-        icon: m,
+        icon: g,
         title: v,
         body: _,
         renderFooter: (e) =>
@@ -43,7 +43,7 @@ function f(e, t, n, f) {
             f && (0, c.GN)(a.Ay, a.yk), E();
         },
         onNotificationClick: () => {
-            (0, s.uL)(u.Z5c.CHANNEL(e.guild_id, e.id)), x('jump'), l.Z.isInstanceLocked() && r.Z.setInstanceLocked(!1);
+            (0, r.uL)(u.Z5c.CHANNEL(e.guild_id, e.id)), x('jump'), l.Z.isInstanceLocked() && s.Z.setInstanceLocked(!1);
         },
         onDismissClick: () => {
             x('dismiss');

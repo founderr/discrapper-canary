@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var r = n(13245),
-    s = n(593481),
+var s = n(13245),
+    r = n(593481),
     a = n(237997),
     l = n(312839),
     o = n(987650),
@@ -18,32 +18,32 @@ let d = () => ({
         hint: u,
         notifType: o.n0.WelcomeNudge
     }),
-    u = (e) => (0, s.QR)(e, (0, l.P)(), c.t['z8/sgI']);
+    u = (e) => (0, r.QR)(e, (0, l.P)(), c.t['z8/sgI']);
 function h(e) {
     let { type: t } = e,
         {
             icon: n,
-            title: s,
+            title: r,
             body: u,
             hint: h,
             notifType: p
         } = (function (e, t) {
             if (t.type === o.nc.NEWS) {
-                var n, i, r, s, a, l, c, d;
+                var n, i, s, r, a, l, c, d;
                 return {
                     icon: null !== (a = null === (n = t.news) || void 0 === n ? void 0 : n.icon) && void 0 !== a ? a : e.icon,
                     title: null !== (l = null === (i = t.news) || void 0 === i ? void 0 : i.title) && void 0 !== l ? l : e.title,
-                    body: null !== (c = null === (r = t.news) || void 0 === r ? void 0 : r.body) && void 0 !== c ? c : e.body,
-                    hint: null !== (d = null === (s = t.news) || void 0 === s ? void 0 : s.hint) && void 0 !== d ? d : e.hint,
+                    body: null !== (c = null === (s = t.news) || void 0 === s ? void 0 : s.body) && void 0 !== c ? c : e.body,
+                    hint: null !== (d = null === (r = t.news) || void 0 === r ? void 0 : r.hint) && void 0 !== d ? d : e.hint,
                     notifType: null != t.news ? o.n0.NewsNudge : e.notifType
                 };
             }
             return e;
         })(d(), e),
-        { trackView: f, trackClick: g } = (0, l.R)(p, { notif_type: p });
+        { trackView: f, trackClick: m } = (0, l.R)(p, { notif_type: p });
     return {
         icon: n,
-        title: s,
+        title: r,
         body: u,
         hint: h,
         renderFooter: () =>
@@ -58,10 +58,10 @@ function h(e) {
             f();
         },
         onNotificationClick: (e, n) => {
-            g('unlock'), t === o.nc.NEWS && r.Z.updateNotificationStatus(n), a.Z.isInstanceLocked() && r.Z.setInstanceLocked(!1);
+            m('unlock'), t === o.nc.NEWS && s.Z.updateNotificationStatus(n), a.Z.isInstanceLocked() && s.Z.setInstanceLocked(!1);
         },
         onDismissClick: () => {
-            g('dismiss');
+            m('dismiss');
         }
     };
 }

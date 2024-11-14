@@ -14,28 +14,28 @@ var i = n(200651),
     d = n(111028),
     h = n(454585),
     p = n(626135),
-    m = n(981631),
-    f = n(388032),
+    f = n(981631),
+    m = n(388032),
     g = n(447871),
     C = n(554034);
 function _(e) {
     let { channel: t, connected: n, hovered: r, subtitle: _, onClick: v, enableHangStatus: x, allowChannelTopic: I } = e,
         b = (0, o.e7)([u.Z], () => u.Z.getChannelStatus(t)),
-        S = null != b && b.length > 0,
-        E = (0, c.ZP)(t, !0),
-        N = (!x || !!I) && E,
+        E = null != b && b.length > 0,
+        S = (0, c.ZP)(t, !0),
+        N = (!x || !!I) && S,
         Z = null != _ && _.length > 0;
     l.useEffect(() => {
-        S &&
-            p.default.track(m.rMx.VOICE_CHANNEL_TOPIC_VIEWED, {
+        E &&
+            p.default.track(f.rMx.VOICE_CHANNEL_TOPIC_VIEWED, {
                 guild_id: t.guild_id,
                 channel_id: t.id
             });
-    }, [t.id, S, t.guild_id]);
+    }, [t.id, E, t.guild_id]);
     let y = (0, s.useRedesignIconContext)().enabled ? 12 : 14;
     if (null == t.guild_id) return null;
     let T = a()(g.statusDiv, n && N ? g.hoverable : null);
-    if (S)
+    if (E)
         return (0, i.jsx)(s.Clickable, {
             className: T,
             onClick: N ? v : void 0,
@@ -53,7 +53,7 @@ function _(e) {
                 (0, i.jsx)(s.Text, {
                     variant: 'text-xs/medium',
                     className: g.statusText,
-                    children: f.intl.string(f.t.Mgpxi4)
+                    children: m.intl.string(m.t.Mgpxi4)
                 }),
                 (0, i.jsx)(s.PencilIcon, {
                     size: 'custom',

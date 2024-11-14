@@ -1,13 +1,13 @@
 var i = n(200651),
-    r = n(192379),
-    s = n(512969),
+    s = n(192379),
+    r = n(512969),
     a = n(749210),
     l = n(287734),
     o = n(765717),
     c = n(893607),
     d = n(703656),
     u = n(981631);
-class h extends r.Component {
+class h extends s.Component {
     componentDidUpdate(e) {
         let { location: t } = this.props;
         t.pathname + t.search !== e.location.pathname + e.location.search && this.checkGuildAndChannel();
@@ -41,7 +41,7 @@ class h extends r.Component {
     }
 }
 t.Z = () =>
-    (0, i.jsxs)(s.rs, {
+    (0, i.jsxs)(r.rs, {
         children: [
             (0, i.jsx)(o.Z, {
                 path: u.Z5c.CHANNEL(c.Hw.guildId(), c.Hw.channelId({ optional: !0 }), ':messageId?'),

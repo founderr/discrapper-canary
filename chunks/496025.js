@@ -21,9 +21,9 @@ var r = n(200651),
     b = n(630388),
     g = n(98357),
     v = n(432877),
-    C = n(246992),
-    _ = n(128374),
-    j = n(219299);
+    j = n(246992),
+    C = n(128374),
+    _ = n(219299);
 function T() {
     var e;
     let t = (0, s.Wu)([p.Z], () => p.Z.getSortedChannels()[1]),
@@ -44,7 +44,7 @@ function T() {
             let t = (0, b.x9)(null !== (e = i.recipientFlags) && void 0 !== e ? e : 0, o.V.DISMISSED_IN_GAME_MESSAGE_NUX);
             h.Z.updatePrivateChannelRecipientFlags(i.id, t);
         }, [i]),
-        j = null != i && !!i.isPrivate() && (0, b.yE)(null !== (e = i.recipientFlags) && void 0 !== e ? e : 0, o.V.DISMISSED_IN_GAME_MESSAGE_NUX);
+        _ = null != i && !!i.isPrivate() && (0, b.yE)(null !== (e = i.recipientFlags) && void 0 !== e ? e : 0, o.V.DISMISSED_IN_GAME_MESSAGE_NUX);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(c.Text, {
@@ -52,10 +52,10 @@ function T() {
                 children: 'In-Game NUX Message for DMs'
             }),
             (0, r.jsxs)('div', {
-                className: _.inGameNuxContainer,
+                className: C.inGameNuxContainer,
                 children: [
                     (0, r.jsx)(c.SearchableSelect, {
-                        wrapperClassName: _.search,
+                        wrapperClassName: C.search,
                         options: g,
                         placeholder: 'Select DM',
                         value: n,
@@ -71,13 +71,13 @@ function T() {
                                       size: c.AvatarSizes.SIZE_16
                                   });
                         },
-                        popoutLayerContext: C.O$
+                        popoutLayerContext: j.O$
                     }),
                     (0, r.jsx)(c.Button, {
                         size: c.Button.Sizes.SMALL,
                         onClick: v,
                         disabled: null == n,
-                        children: j ? 'Clear NUX Flag' : 'Set NUX Flag'
+                        children: _ ? 'Clear NUX Flag' : 'Set NUX Flag'
                     })
                 ]
             })
@@ -93,14 +93,14 @@ function S() {
                 value: n,
                 onChange: (e) => (0, g.Z)(t, e),
                 hideBorder: !0,
-                className: _.switch,
+                className: C.switch,
                 children: a
             },
             t
         );
     });
     return (0, r.jsxs)('div', {
-        className: i()(j.panel, _.panel),
-        children: [e, (0, r.jsx)('div', { className: _.divider }), (0, r.jsx)(T, {})]
+        className: i()(_.panel, C.panel),
+        children: [e, (0, r.jsx)('div', { className: C.divider }), (0, r.jsx)(T, {})]
     });
 }

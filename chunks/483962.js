@@ -1,6 +1,6 @@
 var i = n(200651),
-    r = n(192379),
-    s = n(442837),
+    s = n(192379),
+    r = n(442837),
     a = n(831218),
     l = n(840780),
     o = n(51596),
@@ -10,9 +10,9 @@ var i = n(200651),
     h = n(981631),
     p = n(388032),
     f = n(53800);
-let g = () => (0, o.$Z)('DM_SEARCH');
-t.Z = r.memo(function () {
-    let e = (0, s.e7)([d.Z], () => (d.Z.isLocked((0, u.QF)()) ? 'true' : 'false')),
+let m = () => (0, o.$Z)('DM_SEARCH');
+t.Z = s.memo(function () {
+    let e = (0, r.e7)([d.Z], () => (d.Z.isLocked((0, u.QF)()) ? 'true' : 'false')),
         t = (0, c.Z)((e) => {
             let { channelId: t } = e;
             return t;
@@ -25,7 +25,7 @@ t.Z = r.memo(function () {
                 children: (0, i.jsx)('button', {
                     type: 'button',
                     className: f.searchBarComponent,
-                    onClick: g,
+                    onClick: m,
                     children: p.intl.string(p.t.LzcpeX)
                 })
             }),

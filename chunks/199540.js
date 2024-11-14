@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return E;
     }
 }),
     n(47120);
@@ -15,13 +15,13 @@ var i = n(200651),
     d = n(481060),
     h = n(565138),
     p = n(430824),
-    m = n(624138),
-    f = n(674552),
+    f = n(624138),
+    m = n(674552),
     g = n(981631),
     C = n(388032),
     _ = n(115376);
-let v = (0, m.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
-    x = (0, m.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE);
+let v = (0, f.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
+    x = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE);
 function I(e) {
     let { guildId: t, animate: n } = e,
         l = (0, c.e7)([p.Z], () => p.Z.getGuild(t), [t]);
@@ -44,26 +44,26 @@ function b(e) {
         { folderNode: r, hovered: a, expanded: c } = e,
         { color: u, children: h } = r,
         p = null != u ? u : g.Wyy,
-        m = h.map((e) => e.id),
-        [f, C] = l.useState(!1),
-        [b, S] = l.useState(c),
-        E = c ? 0 : -x,
+        f = h.map((e) => e.id),
+        [m, C] = l.useState(!1),
+        [b, E] = l.useState(c),
+        S = c ? 0 : -x,
         N = (0, d.useSpring)(
             {
-                transform: 'translate3d(0, '.concat(E, 'px, 0)'),
+                transform: 'translate3d(0, '.concat(S, 'px, 0)'),
                 config: { duration: v },
                 onStart() {
-                    C(!0), S(c);
+                    C(!0), E(c);
                 },
                 onRest() {
-                    C(!1), S(c);
+                    C(!1), E(c);
                 }
             },
             'animate-always'
         ),
-        Z = f ? N : void 0;
+        Z = m ? N : void 0;
     return (
-        (f || b) &&
+        (m || b) &&
             (t = (0, i.jsx)(o.animated.div, {
                 style: Z,
                 className: _.expandedFolderIconWrapper,
@@ -73,11 +73,11 @@ function b(e) {
                     style: { color: (0, s.Rf)(p) }
                 })
             })),
-        (f || !b) &&
+        (m || !b) &&
             (n = (0, i.jsx)(o.animated.div, {
                 style: Z,
                 className: _.closedFolderIconWrapper,
-                children: m.slice(0, 4).map((e) =>
+                children: f.slice(0, 4).map((e) =>
                     (0, i.jsx)(
                         I,
                         {
@@ -96,7 +96,7 @@ function b(e) {
         })
     );
 }
-function S(e) {
+function E(e) {
     let {
             folderNode: t,
             forceCircular: n,
@@ -107,29 +107,29 @@ function S(e) {
             tooltipName: u,
             folderGroupId: h,
             folderIconContent: p,
-            onClick: m,
+            onClick: f,
             onContextMenu: g,
             onHoverChange: v,
             onKeyDown: x,
-            treeItemProps: { onFocus: I, ...S }
+            treeItemProps: { onFocus: I, ...E }
         } = e,
-        [E, N] = l.useState(!1),
+        [S, N] = l.useState(!1),
         Z = l.useCallback(() => {
             o || N(!0), null == v || v(!0);
         }, [o, v]),
         y = l.useCallback(() => {
             o || N(!1), null == v || v(!1);
         }, [o, v]),
-        T = r || null == s ? null : (0, f.Or)(s),
-        A = !r && c > 0 ? (0, f.Ne)(c) : null;
+        T = r || null == s ? null : (0, m.Or)(s),
+        j = !r && c > 0 ? (0, m.Ne)(c) : null;
     return (0, i.jsx)(d.BlobMask, {
         selected: !n,
         upperBadge: T,
-        lowerBadge: A,
+        lowerBadge: j,
         lowerBadgeSize: { width: (0, d.getBadgeWidthForValue)(c) },
         children: (0, i.jsx)(d.Clickable, {
-            className: a()(_.folder, { [_.hover]: E }),
-            onClick: m,
+            className: a()(_.folder, { [_.hover]: S }),
+            onClick: f,
             onContextMenu: g,
             onMouseEnter: Z,
             onMouseLeave: y,
@@ -142,7 +142,7 @@ function S(e) {
             'aria-expanded': r,
             'aria-owns': h,
             focusProps: { enabled: !1 },
-            ...S,
+            ...E,
             role: 'treeitem',
             children:
                 null != p
@@ -152,7 +152,7 @@ function S(e) {
                       })
                     : (0, i.jsx)(b, {
                           folderNode: t,
-                          hovered: E,
+                          hovered: S,
                           expanded: r
                       })
         })

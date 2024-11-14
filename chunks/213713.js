@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return Z;
     }
 }),
     n(47120);
@@ -21,18 +21,18 @@ var r = n(200651),
     b = n(810568),
     g = n(168524),
     v = n(77498),
-    C = n(823379),
-    _ = n(71585),
-    j = n(146282),
+    j = n(823379),
+    C = n(71585),
+    _ = n(146282),
     T = n(650613),
     S = n(789086),
-    y = n(206583),
-    N = n(768452),
-    I = n(219299);
-let k = [
+    N = n(206583),
+    y = n(768452),
+    k = n(219299);
+let I = [
     {
         key: 'type',
-        cellClassName: i()(N.cell, N.cellType),
+        cellClassName: i()(y.cell, y.cellType),
         render(e) {
             let { type: t } = e;
             return (0, r.jsx)(h.Text, {
@@ -43,7 +43,7 @@ let k = [
     },
     {
         key: 'count',
-        cellClassName: i()(N.cell, N.cellCount),
+        cellClassName: i()(y.cell, y.cellCount),
         render(e) {
             let { entries: t } = e;
             return (0, r.jsx)('div', {
@@ -56,7 +56,7 @@ let k = [
     },
     {
         key: 'only?',
-        cellClassName: N.cell,
+        cellClassName: y.cell,
         render(e) {
             let { type: t } = e;
             return (0, r.jsx)(w, { type: t });
@@ -66,7 +66,7 @@ let k = [
 function w(e) {
     var t, n;
     let { type: a } = e,
-        l = (0, d.e7)([j.Z], () => j.Z.getFilters()),
+        l = (0, d.e7)([_.Z], () => _.Z.getFilters()),
         i = null !== (n = null == l ? void 0 : null === (t = l.types) || void 0 === t ? void 0 : t.has(a)) && void 0 !== n && n;
     return (0, r.jsx)(h.Checkbox, {
         value: i,
@@ -83,11 +83,11 @@ function w(e) {
         }
     });
 }
-function E() {
+function Z() {
     var e, t;
-    let n = (0, d.e7)([j.Z], () => j.Z.getFeed(y.YN.GLOBAL_FEED)),
-        l = (0, d.e7)([j.Z], () => j.Z.getDebugImpressionCappingDisabled()),
-        o = (0, d.e7)([_.Z], () => _.Z.getDebugFastImpressionCappingEnabled()),
+    let n = (0, d.e7)([_.Z], () => _.Z.getFeed(N.YN.GLOBAL_FEED)),
+        l = (0, d.e7)([_.Z], () => _.Z.getDebugImpressionCappingDisabled()),
+        o = (0, d.e7)([C.Z], () => C.Z.getDebugFastImpressionCappingEnabled()),
         c = (function (e) {
             let t = s().groupBy(e, (e) => e.content_type);
             return Object.keys(t).map((e) => {
@@ -99,25 +99,25 @@ function E() {
                 };
             });
         })(null == n ? void 0 : null === (e = n.entries) || void 0 === e ? void 0 : e.map((e) => e.content)),
-        w = (0, d.e7)([j.Z], () => {
+        w = (0, d.e7)([_.Z], () => {
             var e;
-            return (null === (e = j.Z.getFeedState(y.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.loading) === !0;
+            return (null === (e = _.Z.getFeedState(N.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.loading) === !0;
         }),
-        [E, R] = a.useState(''),
-        O = (0, d.e7)(
+        [Z, R] = a.useState(''),
+        B = (0, d.e7)(
             [v.Z, x.Z],
             () => {
                 var e, t, n;
-                return parseInt(E) > 0 ? E : null !== (n = null === (e = v.Z.getGameByName(E)) || void 0 === e ? void 0 : e.id) && void 0 !== n ? n : null === (t = x.Z.getApplicationByName(E)) || void 0 === t ? void 0 : t.id;
+                return parseInt(Z) > 0 ? Z : null !== (n = null === (e = v.Z.getGameByName(Z)) || void 0 === e ? void 0 : e.id) && void 0 !== n ? n : null === (t = x.Z.getApplicationByName(Z)) || void 0 === t ? void 0 : t.id;
             },
-            [E]
+            [Z]
         ),
-        A = (0, g.Z)({
-            applicationId: O,
+        O = (0, g.Z)({
+            applicationId: B,
             location: 'DevToolsContentInventory',
             source: b.m1.DevTools
         }),
-        P = Object.entries(null !== (t = u.K.get('GameProfileModal')) && void 0 !== t ? t : {})
+        A = Object.entries(null !== (t = u.K.get('GameProfileModal')) && void 0 !== t ? t : {})
             .filter((e) => {
                 let [t, n] = e;
                 return n;
@@ -126,18 +126,18 @@ function E() {
                 let [t] = e;
                 return t;
             }),
-        B = (0, f.Z)(P).filter(C.lm);
+        P = (0, f.Z)(A).filter(j.lm);
     return (0, r.jsx)('div', {
-        className: i()(I.panel),
+        className: i()(k.panel),
         children: (0, r.jsxs)(h.ScrollerThin, {
-            className: N.content,
+            className: y.content,
             children: [
                 (0, r.jsxs)(h.FormSection, {
                     children: [
                         (0, r.jsx)(h.FormTitle, { children: 'Inventory' }),
                         c.length > 0 &&
                             (0, r.jsx)(p.Z, {
-                                columns: k,
+                                columns: I,
                                 data: c
                             }),
                         (0, r.jsx)(h.Spacer, { size: 8 }),
@@ -147,7 +147,7 @@ function E() {
                             onClick: function () {
                                 m.Z.dispatch({
                                     type: 'CONTENT_INVENTORY_MANUAL_REFRESH',
-                                    feedId: y.YN.GLOBAL_FEED
+                                    feedId: N.YN.GLOBAL_FEED
                                 });
                             },
                             submitting: w,
@@ -200,19 +200,19 @@ function E() {
                             placeholder: 'App ID or full name',
                             onChange: (e) => (0 === e.length || e.length >= 18) && R(e),
                             onKeyDown: (e) => {
-                                'Enter' === e.key && (E === e.currentTarget.value ? null == A || A(e) : R(e.currentTarget.value));
+                                'Enter' === e.key && (Z === e.currentTarget.value ? null == O || O(e) : R(e.currentTarget.value));
                             },
-                            error: E.length > 0 && null == A ? 'No game profile for '.concat(null != O ? O : E + ' - try by id', '.') : void 0,
-                            style: null != A ? { border: '1px solid green' } : {}
+                            error: Z.length > 0 && null == O ? 'No game profile for '.concat(null != B ? B : Z + ' - try by id', '.') : void 0,
+                            style: null != O ? { border: '1px solid green' } : {}
                         }),
-                        (0, r.jsx)('ul', { children: B.map((e) => (0, r.jsx)('li', { children: (0, r.jsx)(Z, { application: e }) }, 'follow-game-'.concat(e.id))) })
+                        (0, r.jsx)('ul', { children: P.map((e) => (0, r.jsx)('li', { children: (0, r.jsx)(E, { application: e }) }, 'follow-game-'.concat(e.id))) })
                     ]
                 })
             ]
         })
     });
 }
-let Z = (e) => {
+let E = (e) => {
     let { application: t } = e,
         n = (0, g.Z)({
             applicationId: t.id,

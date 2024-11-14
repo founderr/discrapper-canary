@@ -15,8 +15,8 @@ var i = n(200651),
     d = n(836768),
     h = n(749681),
     p = n(667105),
-    m = n(603592),
-    f = n(921944),
+    f = n(603592),
+    m = n(921944),
     g = n(49898),
     C = n(128449),
     _ = n(46140),
@@ -43,11 +43,11 @@ let b = l.forwardRef(function (e, t) {
     let { selected: n, className: r, onClick: h } = e,
         C = (0, s.Z)('discovery_button'),
         b = (0, p.Ws)({ location: _.dr.CONFLICT_CHECKS }),
-        [S, E] = (0, c.US)(C && b ? [a.z.RAPIDASH_MORE_GUILDS_UPSELL] : [], f.R.SIDEBAR, !0),
-        N = S === a.z.RAPIDASH_MORE_GUILDS_UPSELL,
+        [E, S] = (0, c.US)(C && b ? [a.z.RAPIDASH_MORE_GUILDS_UPSELL] : [], m.R.SIDEBAR, !0),
+        N = E === a.z.RAPIDASH_MORE_GUILDS_UPSELL,
         Z = l.useCallback(() => {
-            null == h || h(), (0, u.k5)({ source: g.JU.GUILDS_BAR_ICON }), I(d.Z.getField('selectedTab')), N && E(f.L.DISMISS);
-        }, [h, E, N]),
+            null == h || h(), (0, u.k5)({ source: g.JU.GUILDS_BAR_ICON }), I(d.Z.getField('selectedTab')), N && S(m.L.DISMISS);
+        }, [h, S, N]),
         y = l.useMemo(
             () => ({
                 lowerBadgeSize: {
@@ -58,7 +58,7 @@ let b = l.forwardRef(function (e, t) {
             }),
             [N]
         );
-    return (0, i.jsx)(m.Z, {
+    return (0, i.jsx)(f.Z, {
         id: 'guild-discover-button',
         ref: t,
         className: r,

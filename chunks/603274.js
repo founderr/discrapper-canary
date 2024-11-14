@@ -18,8 +18,8 @@ var l = n(120356),
     d = n(884338),
     h = n(565799),
     p = n(501655),
-    m = n(199902),
-    f = n(592125),
+    f = n(199902),
+    m = n(592125),
     g = n(594174),
     C = n(938475),
     _ = n(823379),
@@ -27,16 +27,16 @@ var l = n(120356),
     x = n(853856),
     I = n(981631),
     b = n(388032),
-    S = n(516126),
-    E = n(64056);
+    E = n(516126),
+    S = n(64056);
 function N(e, t) {
     return 0 === t.length
         ? null
         : (0, i.jsxs)('div', {
-              className: S.row,
+              className: E.row,
               children: [
                   (0, i.jsx)(e, {
-                      className: S.activityIcon,
+                      className: E.activityIcon,
                       color: 'currentColor'
                   }),
                   (0, i.jsx)(d.Z, {
@@ -49,10 +49,10 @@ function N(e, t) {
 }
 function Z() {
     var e, t;
-    let n = (0, s.Wu)([x.Z, f.Z], () =>
+    let n = (0, s.Wu)([x.Z, m.Z], () =>
             v.default
                 .keys(x.Z.getFavoriteChannels())
-                .map((e) => f.Z.getChannel(e))
+                .map((e) => m.Z.getChannel(e))
                 .filter(_.lm)
         ),
         l = n.map((e) => e.id),
@@ -69,7 +69,7 @@ function Z() {
                 ),
             [r]
         ),
-        E = (0, s.Wu)([h.Z], () =>
+        S = (0, s.Wu)([h.Z], () =>
             o().flatMap(a, (e) =>
                 h.Z.getMutableParticipants(e, p.pV.SPEAKER)
                     .filter((e) => e.type === p.Ui.VOICE)
@@ -85,9 +85,9 @@ function Z() {
             return e;
         }),
         y = (0, s.Wu)(
-            [m.Z],
+            [f.Z],
             () =>
-                m.Z.getAllApplicationStreams()
+                f.Z.getAllApplicationStreams()
                     .filter((e) => l.includes(e.channelId))
                     .map((e) => e.ownerId),
             [l]
@@ -105,24 +105,24 @@ function Z() {
             },
             [l]
         ),
-        A = (0, s.Wu)([g.default], () => T.map((e) => g.default.getUser(e)), [T]),
-        j = (0, s.Wu)([g.default], () => y.map((e) => g.default.getUser(e)), [y]),
+        j = (0, s.Wu)([g.default], () => T.map((e) => g.default.getUser(e)), [T]),
+        A = (0, s.Wu)([g.default], () => y.map((e) => g.default.getUser(e)), [y]),
         P = N(
             c.VoiceNormalIcon,
             b.filter((e) => !y.includes(e.id) && !T.includes(e.id))
         );
-    let R =
-            ((e = E),
+    let M =
+            ((e = S),
             (t = Z),
             0 === e.length
                 ? null
                 : (0, i.jsxs)('div', {
-                      className: S.row,
+                      className: E.row,
                       children: [
                           (0, i.jsx)(c.StageIcon, {
                               size: 'lg',
                               color: 'currentColor',
-                              className: S.activityIcon
+                              className: E.activityIcon
                           }),
                           (0, i.jsx)(d.Z, {
                               guildId: void 0,
@@ -130,14 +130,14 @@ function Z() {
                               max: 3
                           }),
                           (0, i.jsxs)('div', {
-                              className: S.stageListenerPill,
+                              className: E.stageListenerPill,
                               children: [
                                   (0, i.jsx)(c.HeadphonesIcon, {
                                       size: 'xs',
                                       color: 'currentColor'
                                   }),
                                   (0, i.jsx)(c.Text, {
-                                      className: S.stageListenerCount,
+                                      className: E.stageListenerCount,
                                       color: 'text-normal',
                                       variant: 'text-xs/medium',
                                       children: t
@@ -146,22 +146,22 @@ function Z() {
                           })
                       ]
                   })),
-        M = N(
+        R = N(
             c.ScreenArrowIcon,
-            j.filter((e) => null != e && !T.includes(e.id))
+            A.filter((e) => null != e && !T.includes(e.id))
         ),
-        L = N(c.ActivitiesIcon, A);
+        L = N(c.ActivitiesIcon, j);
     return (0, i.jsxs)(i.Fragment, {
-        children: [R, P, M, L]
+        children: [M, P, R, L]
     });
 }
 function y() {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', {
-                className: r()(S.row, S.rowGuildName),
+                className: r()(E.row, E.rowGuildName),
                 children: (0, i.jsx)('span', {
-                    className: r()(S.guildNameText, S.guildNameTextLimitedSize),
+                    className: r()(E.guildNameText, E.guildNameTextLimitedSize),
                     children: b.intl.string(b.t.wMWycn)
                 })
             }),
@@ -177,7 +177,7 @@ function T(e) {
         position: 'right',
         text: (0, i.jsx)(y, {}),
         'aria-label': t,
-        tooltipClassName: E.listItemTooltip,
+        tooltipClassName: S.listItemTooltip,
         onTooltipShow: n,
         children: (e) =>
             (0, i.jsx)('div', {

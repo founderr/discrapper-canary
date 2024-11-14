@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return E;
     }
 }),
     n(47120);
@@ -15,8 +15,8 @@ var i = n(200651),
     d = n(601070),
     h = n(91159),
     p = n(488131),
-    m = n(496675),
-    f = n(306680),
+    f = n(496675),
+    m = n(306680),
     g = n(594174),
     C = n(768581),
     _ = n(709054),
@@ -24,18 +24,18 @@ var i = n(200651),
     x = n(124368),
     I = n(388032),
     b = n(462397);
-function S(e) {
+function E(e) {
     let { channel: t } = e,
-        r = (0, o.Wu)([d.Z, f.ZP, m.Z], () => {
+        r = (0, o.Wu)([d.Z, m.ZP, f.Z], () => {
             let e = d.Z.getActiveJoinedRelevantThreadsForParent(t.guild_id, t.id);
             return a()(d.Z.getActiveJoinedThreadsForParent(t.guild_id, t.id))
                 .values()
                 .map((e) => e.channel)
                 .concat(a().values(d.Z.getActiveUnjoinedThreadsForParent(t.guild_id, t.id)))
-                .filter((t) => !(t.id in e) && m.Z.can(v.Plq.VIEW_CHANNEL, t))
+                .filter((t) => !(t.id in e) && f.Z.can(v.Plq.VIEW_CHANNEL, t))
                 .sort((e, t) => {
-                    let n = f.ZP.lastMessageId(e.id),
-                        i = f.ZP.lastMessageId(t.id);
+                    let n = m.ZP.lastMessageId(e.id),
+                        i = m.ZP.lastMessageId(t.id);
                     return _.default.compare(n, i);
                 })
                 .reverse()
@@ -57,7 +57,7 @@ function S(e) {
                 }),
                 r
                     .slice(0, t.isForumLikeChannel() ? r.length : c)
-                    .map((e) => (0, i.jsx)(E, { thread: e }, e.id))
+                    .map((e) => (0, i.jsx)(S, { thread: e }, e.id))
                     .filter((e) => l.isValidElement(e))
                     .slice(0, c),
                 (0, i.jsx)(s.Clickable, {
@@ -84,7 +84,7 @@ function S(e) {
         })
     );
 }
-function E(e) {
+function S(e) {
     let { thread: t } = e,
         n = (0, o.e7)([g.default], () => g.default.getUser(t.ownerId)),
         l = (0, h.Ok)(t);

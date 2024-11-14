@@ -10,8 +10,8 @@ var i,
     d = n(358221),
     h = n(43267),
     p = n(933557),
-    m = n(93687),
-    f = n(266076),
+    f = n(93687),
+    m = n(266076),
     g = n(199902),
     C = n(19780),
     _ = n(306680),
@@ -19,8 +19,8 @@ var i,
     x = n(594174),
     I = n(451478),
     b = n(276952),
-    S = n(682662),
-    E = n(662146),
+    E = n(682662),
+    S = n(662146),
     N = n(674552),
     Z = n(981631),
     y = n(673193);
@@ -37,20 +37,20 @@ function T(e, t, n) {
         e
     );
 }
-let A = {
+let j = {
     friction: 28,
     tension: 600
 };
-function j(e) {
+function A(e) {
     switch (e) {
         case 'height':
         case 'opacity':
             return {
                 duration: 150,
-                ...A
+                ...j
             };
         case 'scale':
-            return { ...A };
+            return { ...j };
         default:
             throw Error('DirectMessage: getSpringConfigs() - Invalid spring '.concat(String(e)));
     }
@@ -65,7 +65,7 @@ class P extends (i = r.PureComponent) {
                     height: 1,
                     opacity: 1,
                     scale: 1,
-                    config: j
+                    config: A
                 })
                 .start()
                 .then(() => this.setState({ animating: !1 }));
@@ -77,7 +77,7 @@ class P extends (i = r.PureComponent) {
             scale: 1,
             opacity: 1,
             height: 1,
-            config: j
+            config: A
         })
             .start()
             .then(e);
@@ -91,7 +91,7 @@ class P extends (i = r.PureComponent) {
                     height: 0,
                     opacity: 0,
                     scale: 0,
-                    config: j
+                    config: A
                 })
                 .start()
                 .then(e)
@@ -116,23 +116,23 @@ class P extends (i = r.PureComponent) {
     }
     render() {
         let { channel: e, channelName: t, selected: n, badge: i, audio: r, video: s, stream: u, isCurrentUserInThisDMCall: d, unread: h, isGDMFacepileEnabled: p } = this.props,
-            { hovered: m, animating: g } = this.state,
+            { hovered: f, animating: g } = this.state,
             C = e.isMultiUserDM() && null == e.icon && p;
         return (0, l.jsx)(a.animated.div, {
             style: this.getAnimatedStyle(),
-            children: (0, l.jsxs)(S.H, {
+            children: (0, l.jsxs)(E.H, {
                 children: [
                     (0, l.jsx)(b.Z, {
-                        hovered: !g && m,
+                        hovered: !g && f,
                         selected: !g && n,
                         unread: !g && h,
                         className: y.pill
                     }),
-                    (0, l.jsx)(E.Z, {
+                    (0, l.jsx)(S.Z, {
                         text: null != t ? t : '',
                         selected: n,
                         children: (0, l.jsx)(c.BlobMask, {
-                            selected: n || m,
+                            selected: n || f,
                             lowerBadge: i > 0 ? (0, N.Ne)(i) : null,
                             upperBadge: (0, N.Or)({
                                 audio: r,
@@ -148,13 +148,13 @@ class P extends (i = r.PureComponent) {
                                         to: Z.Z5c.CHANNEL(Z.ME, e.id),
                                         onMouseEnter: () => this.setState({ hovered: !0 }),
                                         onMouseLeave: () => this.setState({ hovered: !1 }),
-                                        selected: n || m,
+                                        selected: n || f,
                                         ariaLabel: null != t ? t : '',
                                         onContextMenu: this.handleContextMenu,
                                         icon: C ? void 0 : this.getChannelIcon(),
                                         backgroundStyle: C ? 'on-hover' : 'always',
                                         children: C
-                                            ? (0, l.jsx)(f.Z, {
+                                            ? (0, l.jsx)(m.Z, {
                                                   channel: e,
                                                   size: c.AvatarSizes.SIZE_48,
                                                   facepileSizeOverride: c.AvatarSizes.SIZE_32,
@@ -180,7 +180,7 @@ class P extends (i = r.PureComponent) {
                     scale: 0,
                     height: 0,
                     opacity: 0,
-                    config: j
+                    config: A
                 })
             }),
             T(this, 'handleContextMenu', (e) => {
@@ -222,12 +222,12 @@ T(P, 'defaultProps', {
             o = (0, s.e7)([g.Z], () => g.Z.getAllApplicationStreamsForChannel(n).length > 0),
             c = (0, s.e7)([v.Z], () => v.Z.getChannelId(), []),
             u = (0, s.e7)([_.ZP], () => _.ZP.getMentionCount(n), [n]),
-            { isFacepileEnabled: h } = m.Z.useExperiment({ location: 'unread_direct_message' }, { autoTrackExposure: !1 }),
-            f = r === n,
+            { isFacepileEnabled: h } = f.Z.useExperiment({ location: 'unread_direct_message' }, { autoTrackExposure: !1 }),
+            m = r === n,
             x = !1,
             I = !1;
         return (
-            f && ((x = a === Z.WtW.VOICE), (I = a === Z.WtW.VIDEO)),
+            m && ((x = a === Z.WtW.VOICE), (I = a === Z.WtW.VIDEO)),
             (0, l.jsx)(P, {
                 ...e,
                 ref: t,
@@ -238,7 +238,7 @@ T(P, 'defaultProps', {
                 audio: x,
                 video: I,
                 stream: o,
-                isCurrentUserInThisDMCall: f,
+                isCurrentUserInThisDMCall: m,
                 isGDMFacepileEnabled: h
             })
         );

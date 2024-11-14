@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(47120);
 var i,
-    r,
-    s = n(200651),
+    s,
+    r = n(200651),
     a = n(192379),
     l = n(442837),
     o = n(481060),
@@ -16,14 +16,14 @@ var i,
     h = n(906467),
     p = n(556296),
     f = n(237997),
-    g = n(998502),
-    m = n(13140),
+    m = n(998502),
+    g = n(13140),
     v = n(658785),
     _ = n(981631),
     E = n(388032),
     x = n(635958),
     Z = n(113207);
-function I(e, t, n) {
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,8 +36,8 @@ function I(e, t, n) {
         e
     );
 }
-((r = i || (i = {})).GENERAL = 'GENERAL'), (r.VOICE = 'VOICE'), (r.DEVELOPER = 'DEVELOPER');
-let S = () => [
+((s = i || (i = {})).GENERAL = 'GENERAL'), (s.VOICE = 'VOICE'), (s.DEVELOPER = 'DEVELOPER');
+let C = () => [
         {
             value: _.ipw.LARGE,
             name: E.intl.string(E.t.YcOxtr)
@@ -47,7 +47,7 @@ let S = () => [
             name: E.intl.string(E.t.BKIKq6)
         }
     ],
-    C = () => [
+    I = () => [
         {
             value: _.wC$.ALWAYS,
             name: E.intl.string(E.t.nBmDra)
@@ -82,8 +82,8 @@ function N() {
         notifications_position: t ? e : null,
         text_notifications_mode: f.Z.getTextChatNotificationMode(),
         text_opacity_slider: f.Z.getTextWidgetOpacity(),
-        hotkey: null != n ? (0, m.BB)(n.shortcut) : null,
-        text_activation_hotkey: null != i ? (0, m.BB)(i.shortcut) : null
+        hotkey: null != n ? (0, g.BB)(n.shortcut) : null,
+        text_activation_hotkey: null != i ? (0, g.BB)(i.shortcut) : null
     });
 }
 class T extends a.PureComponent {
@@ -110,20 +110,20 @@ class T extends a.PureComponent {
         c.Z.setDisplayUserMode(t);
     }
     renderHeader() {
-        return (0, s.jsxs)(d.Z, {
+        return (0, r.jsxs)(d.Z, {
             direction: d.Z.Direction.VERTICAL,
             grow: 0,
             shrink: 0,
             className: x.header,
             children: [
-                (0, s.jsxs)(d.Z, {
+                (0, r.jsxs)(d.Z, {
                     children: [
-                        (0, s.jsx)(o.FormTitle, {
+                        (0, r.jsx)(o.FormTitle, {
                             className: x.headerTitle,
                             tag: 'h1',
                             children: E.intl.string(E.t['35G2Mj'])
                         }),
-                        (0, s.jsx)(o.ModalCloseButton, {
+                        (0, r.jsx)(o.ModalCloseButton, {
                             className: x.headerClose,
                             onClick: this.props.onClose
                         })
@@ -136,24 +136,24 @@ class T extends a.PureComponent {
     renderTabBar() {
         let { selectedSection: e } = this.state,
             t = h.Z.isDeveloper
-                ? (0, s.jsx)(o.TabBar.Item, {
+                ? (0, r.jsx)(o.TabBar.Item, {
                       id: 'DEVELOPER',
                       className: x.tabBarItem,
                       children: 'Developer'
                   })
                 : null;
-        return (0, s.jsxs)(o.TabBar, {
+        return (0, r.jsxs)(o.TabBar, {
             selectedItem: e,
             type: 'top',
             className: x.__invalid_tabBar,
             onItemSelect: this.handleSelectSection,
             children: [
-                (0, s.jsx)(o.TabBar.Item, {
+                (0, r.jsx)(o.TabBar.Item, {
                     id: 'GENERAL',
                     className: x.tabBarItem,
                     children: E.intl.string(E.t['0FYxx8'])
                 }),
-                (0, s.jsx)(o.TabBar.Item, {
+                (0, r.jsx)(o.TabBar.Item, {
                     id: 'VOICE',
                     className: x.tabBarItem,
                     children: E.intl.string(E.t['3WeSiI'])
@@ -175,7 +175,7 @@ class T extends a.PureComponent {
             default:
                 e = this.renderGeneralSettings();
         }
-        return (0, s.jsx)(
+        return (0, r.jsx)(
             o.ModalContent,
             {
                 className: x.content,
@@ -186,26 +186,26 @@ class T extends a.PureComponent {
     }
     renderGeneralSettings() {
         let { textChatNotificationMode: e, notificationPositionMode: t, shouldShowKeybindIndicators: n, showKeybindIndicators: i } = this.props,
-            r = t !== _._vf.DISABLED;
-        return (0, s.jsxs)(a.Fragment, {
+            s = t !== _._vf.DISABLED;
+        return (0, r.jsxs)(a.Fragment, {
             children: [
-                (0, s.jsx)(o.FormItem, {
+                (0, r.jsx)(o.FormItem, {
                     title: E.intl.string(E.t.IQv8Eh),
                     className: Z.marginBottom20,
-                    children: (0, s.jsx)(u.Z, {
+                    children: (0, r.jsx)(u.Z, {
                         position: t,
                         onChange: this.handleChangeNotificationPositionMode
                     })
                 }),
-                (0, s.jsx)(o.FormSwitch, {
-                    value: r && e === _.Ypu.ENABLED,
+                (0, r.jsx)(o.FormSwitch, {
+                    value: s && e === _.Ypu.ENABLED,
                     onChange: this.handleToggleTextChatNotifications,
-                    disabled: !r,
+                    disabled: !s,
                     hideBorder: !0,
                     children: E.intl.string(E.t.Fy5kPj)
                 }),
                 i &&
-                    (0, s.jsx)(o.FormSwitch, {
+                    (0, r.jsx)(o.FormSwitch, {
                         value: n,
                         onChange: (e) => c.Z.setShowKeybindIndicators(e),
                         hideBorder: !0,
@@ -216,32 +216,32 @@ class T extends a.PureComponent {
     }
     renderVoiceSettings() {
         let { avatarSizeMode: e, displayNameMode: t, displayUserMode: n } = this.props;
-        return (0, s.jsxs)(a.Fragment, {
+        return (0, r.jsxs)(a.Fragment, {
             children: [
-                (0, s.jsx)(o.FormItem, {
+                (0, r.jsx)(o.FormItem, {
                     title: E.intl.string(E.t.dnvZSk),
                     className: Z.marginBottom20,
-                    children: (0, s.jsx)(o.RadioGroup, {
+                    children: (0, r.jsx)(o.RadioGroup, {
                         onChange: this.handleChangeAvatarSizeMode,
-                        options: S(),
+                        options: C(),
                         value: e,
                         size: o.RadioGroup.Sizes.SMALL
                     })
                 }),
-                (0, s.jsx)(o.FormItem, {
+                (0, r.jsx)(o.FormItem, {
                     title: E.intl.string(E.t.J0dpcH),
                     className: Z.marginBottom20,
-                    children: (0, s.jsx)(o.RadioGroup, {
+                    children: (0, r.jsx)(o.RadioGroup, {
                         onChange: this.handleChangeDisplayNameMode,
-                        options: C(),
+                        options: I(),
                         value: t,
                         size: o.RadioGroup.Sizes.SMALL
                     })
                 }),
-                (0, s.jsx)(o.FormItem, {
+                (0, r.jsx)(o.FormItem, {
                     title: E.intl.string(E.t.swsWWF),
                     className: Z.marginBottom20,
-                    children: (0, s.jsx)(o.RadioGroup, {
+                    children: (0, r.jsx)(o.RadioGroup, {
                         onChange: this.handleChangeDisplayUserMode,
                         options: y(),
                         value: n,
@@ -252,11 +252,11 @@ class T extends a.PureComponent {
         });
     }
     renderDeveloperSettings() {
-        return (0, s.jsx)(a.Fragment, {
-            children: (0, s.jsx)(o.FormItem, {
+        return (0, r.jsx)(a.Fragment, {
+            children: (0, r.jsx)(o.FormItem, {
                 title: 'Crashes',
                 className: Z.marginBottom20,
-                children: (0, s.jsx)(o.SingleSelect, {
+                children: (0, r.jsx)(o.SingleSelect, {
                     value: void 0,
                     options: [
                         {
@@ -284,13 +284,13 @@ class T extends a.PureComponent {
                             label: 'Out of Memory'
                         }
                     ],
-                    onChange: (e) => null != e && g.ZP.crash(e)
+                    onChange: (e) => null != e && m.ZP.crash(e)
                 })
             })
         });
     }
     render() {
-        return (0, s.jsxs)(o.ModalRoot, {
+        return (0, r.jsxs)(o.ModalRoot, {
             'aria-label': E.intl.string(E.t['35G2Mj']),
             transitionState: o.ModalTransitionState.ENTERED,
             children: [this.renderHeader(), this.renderBody()]
@@ -298,11 +298,11 @@ class T extends a.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            I(this, 'state', { selectedSection: 'GENERAL' }),
-            I(this, 'handleSelectSection', (e) => {
+            S(this, 'state', { selectedSection: 'GENERAL' }),
+            S(this, 'handleSelectSection', (e) => {
                 this.setState({ selectedSection: e });
             }),
-            I(this, 'handleToggleTextChatNotifications', () => {
+            S(this, 'handleToggleTextChatNotifications', () => {
                 let { ENABLED: e, DISABLED: t } = _.Ypu,
                     n = this.props.textChatNotificationMode === e ? t : e;
                 c.Z.setTextChatNotificationMode(n), N();
@@ -314,7 +314,7 @@ function b(e) {
         {
             avatarSizeMode: n,
             displayNameMode: i,
-            displayUserMode: r,
+            displayUserMode: s,
             notificationPositionMode: a,
             textChatNotificationMode: o,
             shouldShowKeybindIndicators: c
@@ -327,11 +327,11 @@ function b(e) {
             shouldShowKeybindIndicators: f.Z.showKeybindIndicators
         })),
         { showKeybindIndicators: d } = v.Z.useExperiment({ location: 'Overlay Settings' });
-    return (0, s.jsx)(T, {
+    return (0, r.jsx)(T, {
         onClose: t,
         avatarSizeMode: n,
         displayNameMode: i,
-        displayUserMode: r,
+        displayUserMode: s,
         notificationPositionMode: a,
         textChatNotificationMode: o,
         shouldShowKeybindIndicators: c,

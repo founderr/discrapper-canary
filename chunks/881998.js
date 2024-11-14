@@ -13,19 +13,19 @@ var r,
     u = t(570140),
     d = t(592125),
     m = t(757266),
-    x = t(375954);
+    p = t(375954);
 ((r = a || (a = {})).NOT_FETCHED = 'NOT_FETCHED'), (r.FETCHING = 'FETCHING'), (r.FETCHED = 'FETCHED');
-let h = null,
-    p = 'NOT_FETCHED';
+let x = null,
+    h = 'NOT_FETCHED';
 class f extends (o = c.ZP.Store) {
     initialize() {
-        this.waitFor(d.Z, m.Z, x.Z);
+        this.waitFor(d.Z, m.Z, p.Z);
     }
     getApps() {
-        return h;
+        return x;
     }
     getFetchState() {
-        return p;
+        return h;
     }
 }
 (s = 'AuthorizedAppsStore'),
@@ -39,9 +39,9 @@ class f extends (o = c.ZP.Store) {
         : (i[l] = s),
     (n.Z = new f(u.Z, {
         USER_AUTHORIZED_APPS_REQUEST: function () {
-            p = 'FETCHING';
+            h = 'FETCHING';
         },
         USER_AUTHORIZED_APPS_UPDATE: function (e) {
-            (p = 'FETCHED'), (h = e.apps);
+            (h = 'FETCHED'), (x = e.apps);
         }
     }));

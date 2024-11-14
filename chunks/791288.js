@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return w;
+        return R;
     }
 }),
     n(47120);
 var i = n(200651),
-    r = n(192379),
-    s = n(512722),
-    a = n.n(s),
+    s = n(192379),
+    r = n(512722),
+    a = n.n(r),
     l = n(442837),
     o = n(481060),
     c = n(493683),
@@ -16,16 +16,16 @@ var i = n(200651),
     h = n(835473),
     p = n(194082),
     f = n(442550),
-    g = n(297781),
-    m = n(371991),
+    m = n(297781),
+    g = n(371991),
     v = n(656709),
     _ = n(561308),
     E = n(593481),
     x = n(703656),
     Z = n(199902),
-    I = n(592125),
-    S = n(158776),
-    C = n(594174),
+    S = n(592125),
+    C = n(158776),
+    I = n(594174),
     y = n(5192),
     N = n(312839),
     T = n(981631),
@@ -33,17 +33,17 @@ var i = n(200651),
     O = n(987650),
     j = n(388032),
     A = n(810489);
-function P(e) {
+function M(e) {
     let { game: t } = e,
         n = (0, h.q)(t.id);
     if (null == n) return null;
-    let r = n.getIconURL(b.Si.LARGE);
+    let s = n.getIconURL(b.Si.LARGE);
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsxs)('div', {
             className: A.header,
             children: [
                 (0, i.jsx)(f.f, {
-                    src: r,
+                    src: s,
                     size: 32
                 }),
                 (0, i.jsx)(o.Text, {
@@ -56,52 +56,52 @@ function P(e) {
         })
     });
 }
-function R(e) {
+function P(e) {
     let { entry: t, idx: n } = e,
-        s = (0, l.e7)([C.default], () => C.default.getUser(t.author_id)),
+        r = (0, l.e7)([I.default], () => I.default.getUser(t.author_id)),
         h = (0, _.kr)(t),
         f = h ? o.tokens.colors.TEXT_POSITIVE : o.tokens.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY,
-        [E, N] = r.useState('unsent'),
-        [b, O] = r.useState(!1),
-        P = (0, l.e7)([Z.Z], () => (null != s ? Z.Z.getAnyStreamForUser(s.id) : null), [s]),
-        { isMobileOnline: R, status: L } = (0, l.cj)(
-            [S.Z],
+        [E, N] = s.useState('unsent'),
+        [b, O] = s.useState(!1),
+        M = (0, l.e7)([Z.Z], () => (null != r ? Z.Z.getAnyStreamForUser(r.id) : null), [r]),
+        { isMobileOnline: P, status: L } = (0, l.cj)(
+            [C.Z],
             () =>
-                null == s
+                null == r
                     ? {
                           isMobileOnline: void 0,
                           status: void 0
                       }
                     : {
-                          isMobileOnline: S.Z.isMobileOnline(s.id),
-                          status: S.Z.getStatus(s.id)
+                          isMobileOnline: C.Z.isMobileOnline(r.id),
+                          status: C.Z.getStatus(r.id)
                       },
-            [s]
+            [r]
         );
-    r.useEffect(() => {
+    s.useEffect(() => {
         if ('sent' === E) {
             let e = setTimeout(() => O(!0), 2000);
             return () => clearTimeout(e);
         }
     }, [E]);
-    let w = async (e) => {
-            if (null != s && 'unsent' === E) {
+    let R = async (e) => {
+            if (null != r && 'unsent' === E) {
                 e.stopPropagation();
                 try {
                     var i;
                     N('sending');
-                    let e = await c.Z.getOrEnsurePrivateChannel(s.id),
-                        r = null !== (i = I.Z.getChannel(e)) && void 0 !== i ? i : null;
-                    a()(null != r, 'Send channel must be defined'),
-                        (0, x.uL)(T.Z5c.CHANNEL(r.guild_id, r.id)),
+                    let e = await c.Z.getOrEnsurePrivateChannel(r.id),
+                        s = null !== (i = S.Z.getChannel(e)) && void 0 !== i ? i : null;
+                    a()(null != s, 'Send channel must be defined'),
+                        (0, x.uL)(T.Z5c.CHANNEL(s.guild_id, s.id)),
                         await (0, v.p)({
-                            channel: r,
+                            channel: s,
                             content: j.intl.string(j.t.DwAcMz),
                             entry: t,
                             whenReady: !0
                         }),
                         d.Z.track(T.rMx.OVERLAY_GAME_INVITE_SENT, {
-                            target_user_id: s.id,
+                            target_user_id: r.id,
                             target_content_entry_id: t.id,
                             target_index: n
                         }),
@@ -111,22 +111,22 @@ function R(e) {
                 }
             }
         },
-        M = async () => {
+        w = async () => {
             var e;
-            if (null == s) return;
-            let t = await c.Z.getOrEnsurePrivateChannel(s.id),
-                n = null !== (e = I.Z.getChannel(t)) && void 0 !== e ? e : null;
+            if (null == r) return;
+            let t = await c.Z.getOrEnsurePrivateChannel(r.id),
+                n = null !== (e = S.Z.getChannel(t)) && void 0 !== e ? e : null;
             a()(null != n, 'Send channel must be defined'), (0, x.uL)(T.Z5c.CHANNEL(n.guild_id, n.id));
         };
-    return null == s
+    return null == r
         ? null
         : (0, i.jsxs)('div', {
               className: A.userRow,
               children: [
                   (0, i.jsx)(u.Z, {
                       className: A.avatarContainer,
-                      user: s,
-                      isMobile: R,
+                      user: r,
+                      isMobile: P,
                       status: L
                   }),
                   (0, i.jsxs)('div', {
@@ -139,18 +139,18 @@ function R(e) {
                                       className: A.username,
                                       variant: 'text-md/medium',
                                       color: 'header-primary',
-                                      children: y.ZP.getName(void 0, void 0, s)
+                                      children: y.ZP.getName(void 0, void 0, r)
                                   }),
-                                  null != P && (0, i.jsx)(p.ZP, {})
+                                  null != M && (0, i.jsx)(p.ZP, {})
                               ]
                           }),
-                          (0, i.jsxs)(g.m7, {
+                          (0, i.jsxs)(m.m7, {
                               children: [
                                   (0, i.jsx)(o.GameControllerIcon, {
                                       size: 'xxs',
                                       color: f
                                   }),
-                                  (0, i.jsx)(m.ZP, {
+                                  (0, i.jsx)(g.ZP, {
                                       entry: t,
                                       textColor: h ? 'text-positive' : 'content-inventory-overlay-text-secondary',
                                       bold: !0
@@ -163,7 +163,7 @@ function R(e) {
                       className: A.inviteButtonWrapper,
                       children: (0, i.jsx)(o.Button, {
                           submitting: 'sending' === E,
-                          onClick: b ? M : w,
+                          onClick: b ? w : R,
                           className: A.inviteButton,
                           color: o.ButtonColors.PRIMARY,
                           look: 'sent' === E ? o.ButtonLooks.OUTLINED : o.ButtonLooks.FILLED,
@@ -196,7 +196,7 @@ function L(e) {
             }),
             n.map((e, t) =>
                 (0, i.jsx)(
-                    R,
+                    P,
                     {
                         idx: t,
                         entry: e
@@ -207,13 +207,13 @@ function L(e) {
         ]
     });
 }
-function w(e, t) {
-    let { trackView: n, trackClick: r } = (0, N.R)(O.n0.SendGameInvitesNotification, { notif_type: O.n0.SendGameInvitesNotification });
+function R(e, t) {
+    let { trackView: n, trackClick: s } = (0, N.R)(O.n0.SendGameInvitesNotification, { notif_type: O.n0.SendGameInvitesNotification });
     return (
         a()(t.length > 0, 'Some entries must be present'),
         {
             icon: null,
-            title: (0, i.jsx)(P, { game: e }),
+            title: (0, i.jsx)(M, { game: e }),
             body: (0, i.jsx)(L, { entries: t }),
             onNotificationShow: () => {
                 n(),
@@ -223,10 +223,10 @@ function w(e, t) {
                     });
             },
             onNotificationClick: (e, t) => {
-                r('unlock'), d.Z.setInstanceLocked(!1);
+                s('unlock'), d.Z.setInstanceLocked(!1);
             },
             onDismissClick: () => {
-                r('dismiss');
+                s('dismiss');
             }
         }
     );

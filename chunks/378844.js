@@ -15,19 +15,19 @@ var a = n(442837),
     d = n(144114),
     h = n(607744),
     p = n(594174),
-    m = n(981631),
-    f = n(815660),
+    f = n(981631),
+    m = n(815660),
     g = n(388032),
     C = n(816614);
 (i = l || (l = {}))[(i.VOICE = 0)] = 'VOICE';
 t.Z = (e) => {
     let { type: t, guildId: i, closePopout: l } = e,
         _ = (0, u.Dt)(),
-        { notClaimed: v, notEmailVerified: x, notPhoneVerified: I, newAccount: b, newMember: S } = (0, a.e7)([h.Z], () => h.Z.getCheck(i), [i]),
-        E = 0 === t ? g.intl.string(g.t['6zY8BA']) : null,
+        { notClaimed: v, notEmailVerified: x, notPhoneVerified: I, newAccount: b, newMember: E } = (0, a.e7)([h.Z], () => h.Z.getCheck(i), [i]),
+        S = 0 === t ? g.intl.string(g.t['6zY8BA']) : null,
         N = null,
         Z = null;
-    return (0 === t && (v ? ((N = g.intl.string(g.t.IRxUlJ)), (Z = g.intl.string(g.t.fiNVio))) : I ? ((N = g.intl.string(g.t.vW8iUF)), (Z = g.intl.string(g.t['50gfOj']))) : x ? ((N = g.intl.string(g.t.vdSOp6)), (Z = g.intl.string(g.t.lm1UKi))) : S ? ((N = g.intl.formatToPlainString(g.t.v1ktYW, { min: m.YeM.MEMBER_AGE })), (Z = g.intl.string(g.t.BddRzc))) : b && ((N = g.intl.formatToPlainString(g.t['sncw4+'], { min: m.YeM.ACCOUNT_AGE })), (Z = g.intl.string(g.t.BddRzc)))), null == E || null == N)
+    return (0 === t && (v ? ((N = g.intl.string(g.t.IRxUlJ)), (Z = g.intl.string(g.t.fiNVio))) : I ? ((N = g.intl.string(g.t.vW8iUF)), (Z = g.intl.string(g.t['50gfOj']))) : x ? ((N = g.intl.string(g.t.vdSOp6)), (Z = g.intl.string(g.t.lm1UKi))) : E ? ((N = g.intl.formatToPlainString(g.t.v1ktYW, { min: f.YeM.MEMBER_AGE })), (Z = g.intl.string(g.t.BddRzc))) : b && ((N = g.intl.formatToPlainString(g.t['sncw4+'], { min: f.YeM.ACCOUNT_AGE })), (Z = g.intl.string(g.t.BddRzc)))), null == S || null == N)
         ? null
         : (0, r.jsxs)(o.Dialog, {
               className: C.container,
@@ -44,7 +44,7 @@ t.Z = (e) => {
                           (0, r.jsx)(o.Heading, {
                               variant: 'heading-md/semibold',
                               id: _,
-                              children: E
+                              children: S
                           }),
                           (0, r.jsx)(o.Text, {
                               color: 'header-secondary',
@@ -69,7 +69,7 @@ t.Z = (e) => {
                                                                         ...t
                                                                     });
                                                             },
-                                                            { modalKey: f.M }
+                                                            { modalKey: m.M }
                                                         )
                                                       : x &&
                                                         (s.Z.verifyResend(),

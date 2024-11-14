@@ -1,49 +1,49 @@
 n.d(t, {
     Z: function () {
-        return H;
+        return k;
     }
 });
 var i = n(200651),
     r = n(192379),
     l = n(120356),
     c = n.n(l),
-    s = n(392711),
-    o = n(772848),
+    o = n(392711),
+    s = n(772848),
     a = n(873546),
-    C = n(481060),
+    u = n(481060),
     d = n(425493),
-    u = n(612226),
+    C = n(612226),
     p = n(714338),
     h = n(782568),
-    A = n(252618),
-    f = n(434404),
+    f = n(252618),
+    m = n(434404),
     E = n(677726),
-    v = n(703656),
-    y = n(671533),
+    A = n(703656),
+    v = n(671533),
     g = n(626135),
-    Z = n(63063),
-    x = n(674588),
-    m = n(463571),
-    S = n(887706),
-    j = n(132871),
-    P = n(147890),
+    x = n(63063),
+    L = n(674588),
+    Z = n(463571),
+    N = n(887706),
+    S = n(132871),
+    j = n(147890),
     T = n(981631),
-    _ = n(420212),
-    L = n(388032),
-    N = n(433027);
-let k = Z.Z.getAppsSupportURL(T.BhN.APPS_LEARN_MORE);
-function O(e) {
+    y = n(420212),
+    _ = n(388032),
+    I = n(433027);
+let P = x.Z.getAppsSupportURL(T.BhN.APPS_LEARN_MORE);
+function R(e) {
     let { onClose: t } = e,
         n = r.useRef(null);
     return (0, i.jsx)('div', {
         ref: n,
-        className: N.closeWrapper,
-        children: (0, i.jsx)(C.FocusRingScope, {
+        className: I.closeWrapper,
+        children: (0, i.jsx)(u.FocusRingScope, {
             containerRef: n,
             children: (0, i.jsx)('div', {
-                className: N.closeContent,
+                className: I.closeContent,
                 children: (0, i.jsx)(d.Z, {
-                    className: N.closeIcon,
+                    className: I.closeIcon,
                     closeAction: t,
                     keybind: 'ESC'
                 })
@@ -51,80 +51,80 @@ function O(e) {
         })
     });
 }
-function I(e) {
-    let { onTitleClick: t, showsLearnMoreCta: n, guildId: l, children: s } = e,
-        o = (0, i.jsxs)(r.Fragment, {
+function M(e) {
+    let { onTitleClick: t, showsLearnMoreCta: n, guildId: l, children: o } = e,
+        s = (0, i.jsxs)(r.Fragment, {
             children: [
-                (0, i.jsx)(E.Z, { title: L.intl.string(L.t.AKcFUl) }),
+                (0, i.jsx)(E.Z, { title: _.intl.string(_.t.AKcFUl) }),
                 n &&
-                    (0, i.jsx)(C.Anchor, {
+                    (0, i.jsx)(u.Anchor, {
                         onClick: function () {
                             g.default.track(T.rMx.APP_DIRECTORY_CTA_CLICKED, {
                                 cta: 'directory-help-center',
-                                current_page: j.ApplicationDirectoryViews.HOME,
+                                current_page: S.ApplicationDirectoryViews.HOME,
                                 guild_id: l
                             }),
-                                (0, h.Z)(k);
+                                (0, h.Z)(P);
                         },
-                        children: L.intl.string(L.t.hvVgAQ)
+                        children: _.intl.string(_.t.hvVgAQ)
                     })
             ]
         });
     return (0, i.jsxs)('div', {
-        className: N.header,
+        className: I.header,
         children: [
             null != t
-                ? (0, i.jsx)(m.Z, {
+                ? (0, i.jsx)(Z.Z, {
                       href: T.Z5c.APPLICATION_DIRECTORY,
-                      children: (0, i.jsx)(C.Clickable, {
+                      children: (0, i.jsx)(u.Clickable, {
                           onClick: t,
-                          className: c()(N.titleContainer, N.clickable),
-                          children: o
+                          className: c()(I.titleContainer, I.clickable),
+                          children: s
                       })
                   })
                 : (0, i.jsx)('div', {
-                      className: N.titleContainer,
-                      children: o
+                      className: I.titleContainer,
+                      children: s
                   }),
-            s
+            o
         ]
     });
 }
-function R(e) {
+function O(e) {
     let t,
         { view: n, onClick: r } = e;
     if (null == n) return null;
     switch (n.type) {
-        case j.ApplicationDirectoryViews.HOME:
-            t = L.intl.string(L.t.Ym2Ri4);
+        case S.ApplicationDirectoryViews.HOME:
+            t = _.intl.string(_.t.Ym2Ri4);
             break;
-        case j.ApplicationDirectoryViews.SEARCH:
-            t = L.intl.string(L.t['5h0QOD']);
+        case S.ApplicationDirectoryViews.SEARCH:
+            t = _.intl.string(_.t['5h0QOD']);
             break;
-        case j.ApplicationDirectoryViews.APPLICATION:
+        case S.ApplicationDirectoryViews.APPLICATION:
             var l;
-            t = null !== (l = null == n ? void 0 : n.applicationName) && void 0 !== l ? l : L.intl.string(L.t['13/7kZ']);
+            t = null !== (l = null == n ? void 0 : n.applicationName) && void 0 !== l ? l : _.intl.string(_.t['13/7kZ']);
             break;
         default:
-            t = L.intl.string(L.t['13/7kZ']);
+            t = _.intl.string(_.t['13/7kZ']);
     }
-    return (0, i.jsxs)(C.Clickable, {
-        className: N.back,
+    return (0, i.jsxs)(u.Clickable, {
+        className: I.back,
         onClick: r,
         children: [
-            (0, i.jsx)(y.Z, {
-                direction: y.Z.Directions.LEFT,
-                className: N.backIcon
+            (0, i.jsx)(v.Z, {
+                direction: v.Z.Directions.LEFT,
+                className: I.backIcon
             }),
-            (0, i.jsx)(C.Heading, {
-                className: N.backHeader,
+            (0, i.jsx)(u.Heading, {
+                className: I.backHeader,
                 variant: 'heading-sm/semibold',
                 children: t
             })
         ]
     });
 }
-let D = (0, s.debounce)((e) => {
+let D = (0, o.debounce)((e) => {
     let { scrollTop: t, scrollOffset: n, scrollHeight: i, location: r, guildId: l, sessionId: c } = e;
     t > 0 &&
         g.default.track(T.rMx.APP_DIRECTORY_PAGE_SCROLLED, {
@@ -134,43 +134,43 @@ let D = (0, s.debounce)((e) => {
             directory_session_id: c
         });
 }, 200);
-function H(e) {
+function k(e) {
     let { children: t } = e,
         n = r.useRef(null),
-        l = (0, S.Z)(),
-        s = (0, j.useApplicationDirectoryHistory)((e) => e.guildId),
-        d = (0, j.useApplicationDirectoryHistory)((e) => e.entrypoint),
-        h = (0, j.useApplicationDirectoryHistory)((e) => e.trackedOpenedFromExternalEntrypoint),
-        E = (0, j.getCurrentView)(),
-        y = (0, j.getPreviousView)(),
-        Z = r.useRef(),
-        m = (null == E ? void 0 : E.type) !== j.ApplicationDirectoryViews.HOME,
-        k = (null == E ? void 0 : E.type) === j.ApplicationDirectoryViews.APPLICATION ? (null == E ? void 0 : E.applicationId) : void 0;
-    (0, A.Tt)({ location: L.intl.string(L.t.AKcFUl) });
-    let H = (null == E ? void 0 : E.type) !== j.ApplicationDirectoryViews.HOME && null != y;
+        l = (0, N.Z)(),
+        o = (0, S.useApplicationDirectoryHistory)((e) => e.guildId),
+        d = (0, S.useApplicationDirectoryHistory)((e) => e.entrypoint),
+        h = (0, S.useApplicationDirectoryHistory)((e) => e.trackedOpenedFromExternalEntrypoint),
+        E = (0, S.getCurrentView)(),
+        v = (0, S.getPreviousView)(),
+        x = r.useRef(),
+        Z = (null == E ? void 0 : E.type) !== S.ApplicationDirectoryViews.HOME,
+        P = (null == E ? void 0 : E.type) === S.ApplicationDirectoryViews.APPLICATION ? (null == E ? void 0 : E.applicationId) : void 0;
+    (0, f.Tt)({ location: _.intl.string(_.t.AKcFUl) });
+    let k = (null == E ? void 0 : E.type) !== S.ApplicationDirectoryViews.HOME && null != v;
     r.useEffect(() => {
-        !h && null == d && (g.default.track(T.rMx.APP_DIRECTORY_OPENED, { source: j.ApplicationDirectoryEntrypointNames.EXTERNAL }), (0, j.setTrackedOpenedFromExternalEntrypoint)(!0));
+        !h && null == d && (g.default.track(T.rMx.APP_DIRECTORY_OPENED, { source: S.ApplicationDirectoryEntrypointNames.EXTERNAL }), (0, S.setTrackedOpenedFromExternalEntrypoint)(!0));
     }, [d, h]),
         r.useEffect(() => {
-            if (l) return p.Z.setLayout(u.ZP), p.Z.enable(), () => p.Z.disable();
+            if (l) return p.Z.setLayout(C.ZP), p.Z.enable(), () => p.Z.disable();
         }, [l]),
         r.useEffect(() => {
-            x.CP();
+            L.CP();
         }, []),
         r.useEffect(() => {
-            l && x.g5();
+            l && L.g5();
         }, [l]),
         r.useEffect(() => {
-            Z.current = (0, o.Z)();
-        }, [null == E ? void 0 : E.type, k]);
-    let M = r.useCallback(() => {
+            x.current = (0, s.Z)();
+        }, [null == E ? void 0 : E.type, P]);
+    let w = r.useCallback(() => {
         var e, t;
-        (0, v.uL)(null !== (e = null == d ? void 0 : d.pathname) && void 0 !== e ? e : ''), null != d && d.name === j.ApplicationDirectoryEntrypointNames.GUILD_SETTINGS && null != s && f.Z.open(s, null !== (t = d.guildSettingsSection) && void 0 !== t ? t : void 0);
-    }, [d, s]);
+        (0, A.uL)(null !== (e = null == d ? void 0 : d.pathname) && void 0 !== e ? e : ''), null != d && d.name === S.ApplicationDirectoryEntrypointNames.GUILD_SETTINGS && null != o && m.Z.open(o, null !== (t = d.guildSettingsSection) && void 0 !== t ? t : void 0);
+    }, [d, o]);
     return (
         r.useEffect(() => {
             let e = (e) => {
-                e.key === _.vn.ESCAPE && (e.stopPropagation(), M());
+                e.key === y.vn.ESCAPE && (e.stopPropagation(), w());
             };
             return (
                 document.addEventListener('keydown', e),
@@ -178,12 +178,12 @@ function H(e) {
                     document.removeEventListener('keydown', e);
                 }
             );
-        }, [M]),
+        }, [w]),
         (0, i.jsx)(i.Fragment, {
-            children: (0, i.jsx)(C.AdvancedScroller, {
-                className: c()(N.directoryContainer, {
-                    [N.directoryContainerMobile]: a.tq,
-                    [N.directoryContainerTablet]: a.Em
+            children: (0, i.jsx)(u.AdvancedScroller, {
+                className: c()(I.directoryContainer, {
+                    [I.directoryContainerMobile]: a.tq,
+                    [I.directoryContainerTablet]: a.Em
                 }),
                 ref: n,
                 onScroll: () => {
@@ -193,24 +193,24 @@ function H(e) {
                         scrollOffset: null === (t = n.current) || void 0 === t ? void 0 : t.getScrollerState().offsetHeight,
                         scrollHeight: null === (i = n.current) || void 0 === i ? void 0 : i.getScrollerState().scrollHeight,
                         location: null == E ? void 0 : E.type,
-                        guildId: s,
-                        sessionId: Z.current
+                        guildId: o,
+                        sessionId: x.current
                     });
                 },
                 children: (0, i.jsxs)('div', {
-                    className: N.content,
+                    className: I.content,
                     children: [
-                        (0, i.jsx)(I, {
-                            onTitleClick: m ? P.goHome : void 0,
-                            showsLearnMoreCta: (null == E ? void 0 : E.type) === j.ApplicationDirectoryViews.HOME,
-                            guildId: s,
-                            children: l ? (0, i.jsx)(O, { onClose: M }) : null
+                        (0, i.jsx)(M, {
+                            onTitleClick: Z ? j.goHome : void 0,
+                            showsLearnMoreCta: (null == E ? void 0 : E.type) === S.ApplicationDirectoryViews.HOME,
+                            guildId: o,
+                            children: l ? (0, i.jsx)(R, { onClose: w }) : null
                         }),
-                        H &&
-                            (0, i.jsx)(R, {
-                                view: y,
+                        k &&
+                            (0, i.jsx)(O, {
+                                view: v,
                                 onClick: () => {
-                                    (0, v.op)();
+                                    (0, A.op)();
                                 }
                             }),
                         t

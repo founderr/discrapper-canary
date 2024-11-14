@@ -1,7 +1,7 @@
 n(47120);
 var i,
-    r = n(200651),
-    s = n(192379),
+    s = n(200651),
+    r = n(192379),
     a = n(120356),
     l = n.n(a),
     o = n(442837),
@@ -11,8 +11,8 @@ var i,
     h = n(518084),
     p = n(178528),
     f = n(669083),
-    g = n(483962),
-    m = n(711553),
+    m = n(483962),
+    g = n(711553),
     v = n(388032),
     _ = n(925790);
 function E(e, t, n) {
@@ -30,14 +30,14 @@ function E(e, t, n) {
 }
 function x(e) {
     let { closePopout: t } = e;
-    return (0, r.jsx)(f.Z, { onClose: t });
+    return (0, s.jsx)(f.Z, { onClose: t });
 }
-class Z extends (i = s.PureComponent) {
+class Z extends (i = r.PureComponent) {
     render() {
         let { selectedGuildId: e, locked: t, contained: n } = this.props,
             i =
                 null != e
-                    ? (0, r.jsx)(
+                    ? (0, s.jsx)(
                           p.Z,
                           {
                               guildId: e,
@@ -45,17 +45,17 @@ class Z extends (i = s.PureComponent) {
                           },
                           e
                       )
-                    : (0, r.jsx)(m.Z, {
+                    : (0, s.jsx)(g.Z, {
                           title: v.intl.string(v.t.YUU0RE),
                           renderSettings: x,
                           onDragStart: this.onDragStart,
-                          children: (0, r.jsx)(g.Z, {})
+                          children: (0, s.jsx)(m.Z, {})
                       }),
-            s = n ? 'div' : h.ZP;
-        return (0, r.jsxs)(s, {
+            r = n ? 'div' : h.ZP;
+        return (0, s.jsxs)(r, {
             className: l()(_.base, { [_.widget]: !n }),
             children: [
-                (0, r.jsx)(d.Z, {
+                (0, s.jsx)(d.Z, {
                     isOverlay: !0,
                     disableAppDownload: !0,
                     isVisible: !t

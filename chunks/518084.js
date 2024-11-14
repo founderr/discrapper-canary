@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(411104);
 var i,
-    r,
     s,
+    r,
     a,
     l = n(200651),
     o = n(192379),
@@ -16,8 +16,8 @@ var i,
     h = n.n(u),
     p = n(481060),
     f = n(981631),
-    g = n(344037),
-    m = n(739017);
+    m = n(344037),
+    g = n(739017);
 let v = f.t_t.DEFAULT,
     _ = 1,
     E = o.createContext({
@@ -29,11 +29,11 @@ let v = f.t_t.DEFAULT,
         let { children: t, className: n, ...i } = e;
         return (0, l.jsx)(E.Consumer, {
             children: (e) => {
-                let { type: r } = e;
+                let { type: s } = e;
                 return (0, l.jsx)(x.Consumer, {
                     children: (e) =>
                         (0, l.jsx)('div', {
-                            className: d()(g.bar, g[h()(r)], n),
+                            className: d()(m.bar, m[h()(s)], n),
                             style: e,
                             ...i,
                             children: t
@@ -42,23 +42,23 @@ let v = f.t_t.DEFAULT,
             }
         });
     };
-class I extends (i = o.PureComponent) {
+class S extends (i = o.PureComponent) {
     render() {
         let { disableScroll: e, children: t, className: n } = this.props;
         return (0, l.jsx)(x.Consumer, {
             children: (i) =>
                 (0, l.jsx)(E.Consumer, {
-                    children: (r) => {
-                        let s = d()(g.body, g[h()(r.type)], n);
+                    children: (s) => {
+                        let r = d()(m.body, m[h()(s.type)], n);
                         return e
                             ? (0, l.jsx)('div', {
-                                  className: s,
+                                  className: r,
                                   style: i,
                                   children: t
                               })
                             : (0, l.jsx)(p.Scroller, {
                                   fade: !0,
-                                  className: s,
+                                  className: r,
                                   children: t
                               });
                     }
@@ -67,55 +67,55 @@ class I extends (i = o.PureComponent) {
     }
 }
 (a = { disableScroll: !1 }),
-    (s = 'defaultProps') in (r = I)
-        ? Object.defineProperty(r, s, {
+    (r = 'defaultProps') in (s = S)
+        ? Object.defineProperty(s, r, {
               value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (r[s] = a);
-let S = (e) => {
-        let { type: t = v, width: n, height: i, children: r, className: s, opacity: a = _, onClick: o } = e;
+        : (s[r] = a);
+let C = (e) => {
+        let { type: t = v, width: n, height: i, children: s, className: r, opacity: a = _, onClick: o } = e;
         return (0, l.jsx)(E.Provider, {
             value: {
                 type: t,
                 opacity: a
             },
             children: (0, l.jsx)('div', {
-                className: d()(g.widget, g[h()(t)], s),
+                className: d()(m.widget, m[h()(t)], r),
                 style: {
                     width: n,
                     height: i
                 },
                 onClick: o,
-                children: r
+                children: s
             })
         });
     },
-    C = (e) => {
+    I = (e) => {
         let { children: t, className: n, dynamicSize: i = !1 } = e;
         return (0, l.jsx)(x.Consumer, {
             children: (e) =>
                 (0, l.jsx)('div', {
-                    className: d()(g.content, { [g.staticSize]: !i }, n),
+                    className: d()(m.content, { [m.staticSize]: !i }, n),
                     style: e,
                     children: t
                 })
         });
     };
-(S.Background = (e) => {
+(C.Background = (e) => {
     let { children: t, opacityOverride: n } = e;
     if (null == t) return null;
-    let i = [Z, I, C];
+    let i = [Z, S, I];
     return (0, l.jsx)(E.Consumer, {
         children: (e) => {
-            let { opacity: r } = e,
-                s = { backgroundColor: 'rgba(54, 57, 63, '.concat('' + (null != n ? n : r), ')') };
-            if ('string' == typeof t.type) return o.cloneElement(t, { style: s });
+            let { opacity: s } = e,
+                r = { backgroundColor: 'rgba(54, 57, 63, '.concat('' + (null != n ? n : s), ')') };
+            if ('string' == typeof t.type) return o.cloneElement(t, { style: r });
             if (i.includes(t.type))
                 return (0, l.jsx)(x.Provider, {
-                    value: s,
+                    value: r,
                     children: t
                 });
             {
@@ -125,31 +125,31 @@ let S = (e) => {
         }
     });
 }),
-    (S.Body = I),
-    (S.Content = C),
-    (S.Icon = (e) => {
-        let { icon: t, label: n, onClick: i, isActive: r, tooltipPosition: s = 'top', size: a = 20, isTutorial: o = !1 } = e;
+    (C.Body = S),
+    (C.Content = I),
+    (C.Icon = (e) => {
+        let { icon: t, label: n, onClick: i, isActive: s, tooltipPosition: r = 'top', size: a = 20, isTutorial: o = !1 } = e;
         return (0, l.jsx)(p.Tooltip, {
             text: o
                 ? (0, l.jsx)('div', {
-                      className: g.tutorialTip,
+                      className: m.tutorialTip,
                       children: n
                   })
                 : n,
             'aria-label': n,
-            position: s,
+            position: r,
             forceOpen: o,
             color: o ? p.Tooltip.Colors.BRAND : p.Tooltip.Colors.BLACK,
             children: (e) => {
-                let { onMouseEnter: s, onMouseLeave: o } = e;
+                let { onMouseEnter: r, onMouseLeave: o } = e;
                 return (0, l.jsx)(p.Button, {
                     look: p.Button.Looks.BLANK,
                     size: p.Button.Sizes.NONE,
                     onClick: i,
-                    onMouseEnter: s,
+                    onMouseEnter: r,
                     onMouseLeave: o,
-                    className: d()(g.icon, { [g.toggledIconOn]: r }),
-                    innerClassName: m.flexCenter,
+                    className: d()(m.icon, { [m.toggledIconOn]: s }),
+                    innerClassName: g.flexCenter,
                     'aria-label': n,
                     children: (0, l.jsx)(t, {
                         color: 'currentColor',
@@ -162,5 +162,5 @@ let S = (e) => {
             }
         });
     }),
-    (S.Bar = Z),
-    (t.ZP = S);
+    (C.Bar = Z),
+    (t.ZP = C);

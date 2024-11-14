@@ -1,7 +1,7 @@
 n(47120);
 var i = n(200651),
-    r = n(149765),
-    s = n(481060),
+    s = n(149765),
+    r = n(481060),
     a = n(570140),
     l = n(700785);
 __OVERLAY__ &&
@@ -21,9 +21,9 @@ __OVERLAY__ &&
         }
         let p = l.Hn;
         try {
-            p = r.vB(null != c ? c : 0);
+            p = s.vB(null != c ? c : 0);
         } catch (e) {}
-        (0, s.openModalLazy)(
+        (0, r.openModalLazy)(
             async () => {
                 let { OAuth2AuthorizeModal: e } = await Promise.resolve().then(n.bind(n, 69580));
                 return (t) =>
@@ -38,7 +38,7 @@ __OVERLAY__ &&
             {
                 modalKey: u,
                 onCloseRequest: () => {
-                    (0, s.closeModal)(u), h({});
+                    (0, r.closeModal)(u), h({});
                 }
             }
         );
