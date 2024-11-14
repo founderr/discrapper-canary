@@ -31,7 +31,7 @@ function I() {
     S();
     let t = u.Z.getForApplication(h.CL),
         n = (0, p.kG)(t),
-        r = (0, p.MR)([m.Ft.FREE_GUILD_BOOST_1_MONTH, m.Ft.FREE_GUILD_BOOST_3_MONTHS], t),
+        r = (0, p.MR)(Array.from(m.uv), t),
         s = l.default.getCurrentUser();
     if (!(0, c.M5)(s, h.p9.TIER_2) && null == n) {
         null != s && a.Z.dispatch({ type: 'USER_TENURE_REWARD_STATUS_RESET' });
@@ -42,7 +42,7 @@ function I() {
             (!0 === e ||
                 (function (e) {
                     if (_.Z.getFetchState() !== _.M.FETCHED) return !0;
-                    let t = (0, p.LA)();
+                    let t = (0, p.GT)();
                     return (
                         (null != t && null != e && e.id !== t.user_id) ||
                         (function () {
@@ -50,9 +50,8 @@ function I() {
                             return null != e.lastFetchTimeMs && Date.now() - e.lastFetchTimeMs > 1209600000;
                         })() ||
                         (function () {
-                            var e;
-                            let t = null !== (e = _.Z.getTenureRewardStatusForRewardId(m.Ft.FREE_GUILD_BOOST_1_MONTH)) && void 0 !== e ? e : _.Z.getTenureRewardStatusForRewardId(m.Ft.FREE_GUILD_BOOST_3_MONTHS);
-                            return null != t && null != t.redeemable_at && 0 >= i()(t.redeemable_at).diff(i().utc(), 'seconds');
+                            let e = (0, p.GT)();
+                            return null != e && null != e.redeemable_at && 0 >= i()(e.redeemable_at).diff(i().utc(), 'seconds');
                         })()
                     );
                 })(s)) &&
@@ -79,12 +78,11 @@ async function b() {
             (E = !1),
             a.Z.wait(() =>
                 (function () {
-                    var e;
                     if ((S(), _.Z.getFetchState() !== _.M.FETCHED || E)) return;
-                    let t = null !== (e = _.Z.getTenureRewardStatusForRewardId(m.Ft.FREE_GUILD_BOOST_1_MONTH)) && void 0 !== e ? e : _.Z.getTenureRewardStatusForRewardId(m.Ft.FREE_GUILD_BOOST_3_MONTHS);
-                    if ((null == t ? void 0 : t.redeemable_at) == null) return;
-                    let n = (null == t ? void 0 : t.redeemable_at) != null ? new Date(t.redeemable_at).getTime() - Date.now() : null;
-                    null != n && n > 0 && (g = setTimeout(I, n));
+                    let e = (0, p.GT)();
+                    if ((null == e ? void 0 : e.redeemable_at) == null) return;
+                    let t = (null == e ? void 0 : e.redeemable_at) != null ? new Date(e.redeemable_at).getTime() - Date.now() : null;
+                    null != t && t > 0 && (g = setTimeout(I, t));
                 })()
             );
 }

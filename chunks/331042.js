@@ -177,62 +177,62 @@ let F = (t) => {
     },
     V = (t) => {
         var e;
-        let { product: n, onClose: i, confettiTarget: s, confettiCanvas: l, hideConfetti: m = !1, analyticsLocations: T } = t,
-            x = (0, E.o0)(n),
-            _ = (0, k.W)(n, x),
-            { confettiColors: j } = (0, N.Z)(_.styles),
-            H = (0, u.e7)([p.Z], () => p.Z.useReducedMotion),
-            F = (0, A.m)('CollectiblesCollectedModal'),
-            U = (0, R.k)(_),
-            [V] = _.items,
-            Y = a.useRef(null),
-            { analyticsLocations: G } = (0, h.ZP)([...T, v.Z.COLLECTIBLES_COLLECTED_MODAL]),
-            W = (0, S.Z)({ analyticsLocations: G }),
-            X = a.useCallback(() => {
-                if ((i(), (0, g.xf)(), W(), _.type === d.Z.AVATAR_DECORATION)) {
-                    o()(V.type === d.Z.AVATAR_DECORATION, 'product type and item type are the same'),
+        let { product: n, onClose: i, confettiTarget: s, confettiCanvas: l, hideConfetti: m = !1, analyticsLocations: T, title: x, description: _ } = t,
+            j = (0, E.o0)(n),
+            H = (0, k.W)(n, j),
+            { confettiColors: F } = (0, N.Z)(H.styles),
+            U = (0, u.e7)([p.Z], () => p.Z.useReducedMotion),
+            V = (0, A.m)('CollectiblesCollectedModal'),
+            Y = (0, R.k)(H),
+            [G] = H.items,
+            W = a.useRef(null),
+            { analyticsLocations: X } = (0, h.ZP)([...T, v.Z.COLLECTIBLES_COLLECTED_MODAL]),
+            Q = (0, S.Z)({ analyticsLocations: X }),
+            K = a.useCallback(() => {
+                if ((i(), (0, g.xf)(), Q(), H.type === d.Z.AVATAR_DECORATION)) {
+                    o()(G.type === d.Z.AVATAR_DECORATION, 'product type and item type are the same'),
                         (0, b.ps)({
-                            initialSelectedDecoration: V,
-                            analyticsLocations: G
+                            initialSelectedDecoration: G,
+                            analyticsLocations: X
                         });
                     return;
                 }
-                _.type === d.Z.PROFILE_EFFECT &&
+                H.type === d.Z.PROFILE_EFFECT &&
                     (0, C.H)({
-                        initialSelectedEffectId: V.id,
-                        analyticsLocations: G
+                        initialSelectedEffectId: G.id,
+                        analyticsLocations: X
                     });
-            }, [i, W, _.type, V, G]),
-            { handleUseNow: Q, isApplying: K } = (0, I.W)({
-                product: _,
+            }, [i, Q, H.type, G, X]),
+            { handleUseNow: q, isApplying: J } = (0, I.W)({
+                product: H,
                 onSuccess: i,
                 onError: i
             }),
-            { firstAvatarDecoration: q, firstProfileEffect: J } = (0, w.R)(_),
-            $ = (0, y.x6)(_) ? null != q && null != J : null != q || null != J,
-            tt = (0, y.x6)(_) || F,
-            { category: te, isFetching: tn } = (0, O.l)(_.skuId),
-            tr = null !== (e = null == te ? void 0 : te.successModalBg) && void 0 !== e ? e : _.banner;
+            { firstAvatarDecoration: $, firstProfileEffect: tt } = (0, w.R)(H),
+            te = (0, y.x6)(H) ? null != $ && null != tt : null != $ || null != tt,
+            tn = (0, y.x6)(H) || V,
+            { category: tr, isFetching: ta } = (0, O.l)(H.skuId),
+            ti = null !== (e = null == tr ? void 0 : tr.successModalBg) && void 0 !== e ? e : H.banner;
         return (0, r.jsxs)(h.Gt, {
-            value: G,
+            value: X,
             children: [
                 (0, r.jsxs)('div', {
                     className: B.modalInner,
-                    ref: Y,
+                    ref: W,
                     children: [
                         (0, r.jsxs)('div', {
                             className: B.bannerContainer,
                             children: [
                                 (0, r.jsx)(L.Z, {
-                                    asset: tn ? void 0 : tr,
+                                    asset: ta ? void 0 : ti,
                                     size: (0, M.ML)(880),
                                     className: B.decorationBanner,
-                                    categoryBannerOverride: (0, P.ZS)(_.categorySkuId)
+                                    categoryBannerOverride: (0, P.ZS)(H.categorySkuId)
                                 }),
                                 (0, r.jsx)(z, {
-                                    product: _,
-                                    item: V,
-                                    reducedMotion: H
+                                    product: H,
+                                    item: G,
+                                    reducedMotion: U
                                 })
                             ]
                         }),
@@ -244,37 +244,40 @@ let F = (t) => {
                                     children: [
                                         (0, r.jsx)(f.Heading, {
                                             variant: 'heading-lg/bold',
-                                            children: D.intl.format(D.t.YNaxMj, { itemName: U })
+                                            children: null != x ? x : D.intl.format(D.t.YNaxMj, { itemName: Y })
                                         }),
                                         (0, r.jsx)(f.Text, {
                                             variant: 'text-sm/normal',
-                                            children: (0, c.EQ)(null == _ ? void 0 : _.type)
-                                                .with(d.Z.BUNDLE, () => D.intl.string(D.t.zJPoLy))
-                                                .with(d.Z.PROFILE_EFFECT, () => D.intl.string(D.t.f9M1YG))
-                                                .otherwise(() => D.intl.string(D.t['44b50t']))
+                                            children:
+                                                null != _
+                                                    ? _
+                                                    : (0, c.EQ)(null == H ? void 0 : H.type)
+                                                          .with(d.Z.BUNDLE, () => D.intl.string(D.t.zJPoLy))
+                                                          .with(d.Z.PROFILE_EFFECT, () => D.intl.string(D.t.f9M1YG))
+                                                          .otherwise(() => D.intl.string(D.t['44b50t']))
                                         })
                                     ]
                                 }),
-                                tt
+                                tn
                                     ? (0, r.jsxs)('div', {
                                           className: B.buttons,
                                           children: [
                                               (0, r.jsx)(f.Button, {
-                                                  color: $ ? f.ButtonColors.PRIMARY : f.ButtonColors.BRAND,
-                                                  onClick: X,
+                                                  color: te ? f.ButtonColors.PRIMARY : f.ButtonColors.BRAND,
+                                                  onClick: K,
                                                   children: D.intl.string(D.t['2p2aY2'])
                                               }),
-                                              $
+                                              te
                                                   ? (0, r.jsx)(f.Button, {
-                                                        onClick: Q,
-                                                        submitting: K,
+                                                        onClick: q,
+                                                        submitting: J,
                                                         children: D.intl.string(D.t.MAS7uL)
                                                     })
                                                   : null
                                           ]
                                       })
                                     : (0, r.jsx)(f.Button, {
-                                          onClick: X,
+                                          onClick: K,
                                           children: D.intl.string(D.t.MAS7uL)
                                       })
                             ]
@@ -287,29 +290,29 @@ let F = (t) => {
                     ]
                 }),
                 !m &&
-                    !H &&
+                    !U &&
                     (0, r.jsx)(Z.Z, {
-                        confettiTarget: null != s ? s : Y.current,
+                        confettiTarget: null != s ? s : W.current,
                         confettiCanvas: l,
-                        sprites: (0, M.vK)(_.categorySkuId),
-                        colors: null == j ? void 0 : j.map((t) => t.toHexString())
+                        sprites: (0, M.vK)(H.categorySkuId),
+                        colors: null == F ? void 0 : F.map((t) => t.toHexString())
                     })
             ]
         });
     };
 e.default = (t) => {
-    let { transitionState: e, product: n, onClose: s, analyticsLocations: o } = t,
-        l = (0, E.o0)(n),
-        c = (0, k.W)(n, l),
-        d = a.useRef(new i.qA()),
-        [u, g] = a.useState(null),
-        p = (0, j.UY)(c.skuId);
+    let { transitionState: e, product: n, onClose: s, analyticsLocations: o, title: l, description: c } = t,
+        d = (0, E.o0)(n),
+        u = (0, k.W)(n, d),
+        g = a.useRef(new i.qA()),
+        [p, v] = a.useState(null),
+        h = (0, j.UY)(u.skuId);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(i.O_, {
-                ref: g,
+                ref: v,
                 className: B.confettiCanvas,
-                environment: d.current
+                environment: g.current
             }),
             (0, r.jsxs)(f.ModalRoot, {
                 hideShadow: !0,
@@ -317,22 +320,24 @@ e.default = (t) => {
                 size: f.ModalSize.DYNAMIC,
                 className: B.modalRoot,
                 children: [
-                    null != p &&
+                    null != h &&
                         (0, r.jsx)('img', {
-                            src: p.imageSrc,
+                            src: h.imageSrc,
                             className: B.customConfetti,
-                            style: p.style,
+                            style: h.style,
                             alt: '',
                             'aria-hidden': 'true'
                         }),
                     (0, r.jsx)(f.ModalContent, {
                         className: B.modalContent,
                         children: (0, r.jsx)(V, {
-                            product: c,
+                            product: u,
                             onClose: s,
-                            confettiCanvas: u,
-                            hideConfetti: null != p,
-                            analyticsLocations: o
+                            confettiCanvas: p,
+                            hideConfetti: null != h,
+                            analyticsLocations: o,
+                            title: l,
+                            description: c
                         })
                     })
                 ]
