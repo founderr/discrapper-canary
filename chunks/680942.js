@@ -6,11 +6,12 @@ var r = n(200651),
     o = n(241553),
     c = n(333867),
     d = n(884697),
-    u = n(474936),
-    m = n(231338),
+    u = n(67409),
+    m = n(474936),
+    p = n(231338),
     h = n(388032),
-    p = n(65297);
-let f = {
+    f = n(65297);
+let g = {
     dark: [
         {
             box: '#FFF19E',
@@ -73,48 +74,51 @@ let f = {
     ]
 };
 t.Z = (e) => {
-    let { product: t, returnRef: n, onSuccess: g, tooltipDelay: C, isGiftEasterEggEnabled: b, disableCustomColor: x = !1 } = e,
-        { analyticsLocations: v } = (0, l.ZP)(),
-        _ = a.useRef(null),
-        k = (0, s.Z)(_),
-        j = x ? m.BR.DARK : m.BR.LIGHT;
+    let { product: t, selectedVariantIndex: n, returnRef: C, onSuccess: b, tooltipDelay: x, isGiftEasterEggEnabled: v, disableCustomColor: _ = !1 } = e,
+        { analyticsLocations: k } = (0, l.ZP)(),
+        j = a.useRef(null),
+        E = (0, s.Z)(j),
+        I = _ ? p.BR.DARK : p.BR.LIGHT;
     return (0, d.x6)(t)
         ? null
         : (0, r.jsx)(i.Tooltip, {
               text: h.intl.string(h.t['JCFN//']),
-              delay: C,
+              delay: x,
               children: (e) =>
                   (0, r.jsx)(i.Button, {
                       ...e,
-                      buttonRef: _,
-                      className: p.giftButton,
-                      color: x ? i.ButtonColors.BRAND : i.ButtonColors.CUSTOM,
+                      buttonRef: j,
+                      className: f.giftButton,
+                      color: _ ? i.ButtonColors.BRAND : i.ButtonColors.CUSTOM,
                       look: i.Button.Looks.FILLED,
                       size: i.ButtonSizes.ICON,
-                      innerClassName: p.giftButtonInner,
+                      innerClassName: f.giftButtonInner,
                       'aria-label': h.intl.string(h.t.PEjaCw),
                       onClick: (e) => {
                           e.stopPropagation(),
                               (0, c.Z)({
-                                  skuId: t.skuId,
+                                  skuId: (0, u.S)({
+                                      product: t,
+                                      selectedVariantIndex: n
+                                  }),
                                   isGift: !0,
-                                  giftingOrigin: u.Wt.SHOP_PAGE,
-                                  analyticsLocations: v,
-                                  returnRef: n,
+                                  giftingOrigin: m.Wt.SHOP_PAGE,
+                                  analyticsLocations: k,
+                                  returnRef: C,
                                   onClose:
-                                      null != g
+                                      null != b
                                           ? (e) => {
-                                                e && g();
+                                                e && b();
                                             }
                                           : void 0
                               });
                       },
-                      children: b
+                      children: v
                           ? (0, r.jsx)(o.e, {
-                                hovered: k,
+                                hovered: E,
                                 isContentDismissed: !0,
-                                themeOverride: j,
-                                boxColors: f
+                                themeOverride: I,
+                                boxColors: g
                             })
                           : (0, r.jsx)(i.GiftIcon, {
                                 size: 'md',

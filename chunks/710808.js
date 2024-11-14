@@ -25,9 +25,8 @@ var i = n(200651),
     _ = n(388032),
     f = n(113207);
 async function I() {
-    let e = await d.Z.fileManager.getModulePath(),
-        t = d.Z.fileManager.join(e, 'discord_voice');
-    d.Z.fileManager.showItemInFolder(t);
+    let e = await d.Z.fileManager.getLogPath();
+    d.Z.fileManager.showItemInFolder(e);
 }
 function N(e) {
     (0, l.openModal)((t) =>

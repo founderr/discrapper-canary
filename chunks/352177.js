@@ -33,11 +33,5 @@ e.exports = {
     productName: 'productName_c23530',
     newBadge: 'newBadge_c23530',
     partiallyOwned: 'partiallyOwned_c23530',
-    preview: 'preview_c23530',
-    variantsPanel: 'variantsPanel_c23530',
-    variantLabel: 'variantLabel_c23530',
-    variantsList: 'variantsList_c23530',
-    colorVariant: 'colorVariant_c23530',
-    selectedVariant: 'selectedVariant_c23530',
-    colorSwatch: 'colorSwatch_c23530'
+    preview: 'preview_c23530'
 };

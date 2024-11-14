@@ -31,5 +31,6 @@ e.exports = {
     priceTagContainer: 'priceTagContainer_c5828f',
     headingWithItemTypePill: 'headingWithItemTypePill_c5828f',
     buttonsContainer: 'buttonsContainer_c5828f',
-    primaryButtons: 'primaryButtons_c5828f'
+    primaryButtons: 'primaryButtons_c5828f',
+    variantsSwitch: 'variantsSwitch_c5828f'
 };
