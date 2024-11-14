@@ -38,9 +38,9 @@ var i = n(200651),
 let B = l.memo(
     function (e) {
         var t, n;
-        let { className: a, messageGroupSpacing: u, scrollerClassName: p, channel: m, messages: f, unreadCount: g, showNewMessagesBar: x, messageDisplayCompact: v, channelStream: _, uploads: I, hasUnreads: E, editingMessageId: b, fontSize: N, keyboardModeEnabled: S, filterAfterTimestamp: T, showingQuarantineBanner: A, hideSummaries: y = !1 } = e,
-            [M, B] = l.useState(!1),
-            U = l.useMemo(
+        let { className: a, messageGroupSpacing: u, scrollerClassName: p, channel: m, messages: f, unreadCount: g, showNewMessagesBar: x, messageDisplayCompact: v, channelStream: _, uploads: I, hasUnreads: E, editingMessageId: b, fontSize: N, keyboardModeEnabled: S, filterAfterTimestamp: T, showingQuarantineBanner: A, hideSummaries: y = !1, jumpBarClassName: M } = e,
+            [B, U] = l.useState(!1),
+            H = l.useMemo(
                 () =>
                     v
                         ? (0, P.aJ)({
@@ -61,30 +61,30 @@ let B = l.memo(
                           }),
                 [v, N, u]
             ),
-            H = (0, L.ZP)({
+            G = (0, L.ZP)({
                 messages: f,
                 channel: m,
                 compact: v,
                 hasUnreads: E,
                 focusId: b,
-                placeholderHeight: U.totalHeight,
+                placeholderHeight: H.totalHeight,
                 canLoadMore: null == T,
-                handleScrollToBottom: l.useCallback(() => B(!0), [B]),
-                handleScrollFromBottom: l.useCallback(() => B(!1), [B])
+                handleScrollToBottom: l.useCallback(() => U(!0), [U]),
+                handleScrollFromBottom: l.useCallback(() => U(!1), [U])
             }),
-            G = (0, R.Z)({
-                scrollerRef: H.ref,
+            F = (0, R.Z)({
+                scrollerRef: G.ref,
                 isEditing: null != b,
                 keyboardModeEnabled: S,
                 hasMoreAfter: f.hasMoreAfter
             });
-        let F = ((n = m), (0, o.e7)([C.Z], () => (Z.Z.can(O.Plq.READ_MESSAGE_HISTORY, n) ? null : C.Z.getViewingRolesTimestamp(n.getGuildId())))),
+        let V = ((n = m), (0, o.e7)([C.Z], () => (Z.Z.can(O.Plq.READ_MESSAGE_HISTORY, n) ? null : C.Z.getViewingRolesTimestamp(n.getGuildId())))),
             {
-                channelStreamMarkup: V,
-                newMessagesBar: z,
-                jumpToPresentBar: W,
-                forumPostActionBar: K,
-                safetyWarningBanner: Y
+                channelStreamMarkup: z,
+                newMessagesBar: W,
+                jumpToPresentBar: K,
+                forumPostActionBar: Y,
+                safetyWarningBanner: q
             } = (0, k.Z)({
                 channel: m,
                 messages: f,
@@ -93,19 +93,20 @@ let B = l.memo(
                 messageDisplayCompact: v,
                 channelStream: _,
                 uploads: I,
-                loadMore: H.loadMore,
-                scrollManager: H,
-                specs: U,
-                filterAfterTimestamp: null != T ? T : F,
+                loadMore: G.loadMore,
+                scrollManager: G,
+                specs: H,
+                filterAfterTimestamp: null != T ? T : V,
                 showingQuarantineBanner: A,
                 hideSummaries: y,
-                isAtBottom: M,
+                isAtBottom: B,
                 jumpToPresent: () => {
                     if (f.hasPresent()) {
                         var e;
-                        null === (e = H.ref.current) || void 0 === e || e.scrollToBottom({ animate: !h.Z.useReducedMotion });
+                        null === (e = G.ref.current) || void 0 === e || e.scrollToBottom({ animate: !h.Z.useReducedMotion });
                     } else d.Z.jumpToPresent(m.id, O.AQB);
-                }
+                },
+                jumpBarClassName: M
             });
         !(function (e) {
             let t = l.useCallback(() => {
@@ -132,39 +133,39 @@ let B = l.memo(
                     event: O.CkL.SCROLL_PAGE_DOWN,
                     handler: i
                 });
-        })(H.ref);
-        let q = (0, c.useFocusJumpSection)(),
-            { ref: X, ...J } = (0, s.l2)(G),
-            Q = l.useCallback((e) => {
+        })(G.ref);
+        let X = (0, c.useFocusJumpSection)(),
+            { ref: J, ...Q } = (0, s.l2)(F),
+            $ = l.useCallback((e) => {
                 var t;
-                (H.ref.current = e), (X.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null);
+                (G.ref.current = e), (J.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null);
             }, []);
         return (0, i.jsxs)(s.bG, {
-            navigator: G,
+            navigator: F,
             children: [
-                null != Y && Y,
+                null != q && q,
                 (0, i.jsxs)('div', {
                     className: r()(w.messagesWrapper, a, 'group-spacing-'.concat(u)),
                     children: [
-                        null == Y && z,
+                        null == q && W,
                         (0, i.jsxs)(c.PinToBottomScrollerAuto, {
-                            ref: Q,
+                            ref: $,
                             customTheme: !0,
                             className: r()(p, w.scroller),
                             contentClassName: w.scrollerContent,
-                            onResize: H.handleResize,
-                            onScroll: H.handleScroll,
-                            onMouseDown: H.handleMouseDown,
-                            onMouseUp: H.handleMouseUp,
-                            ...q,
+                            onResize: G.handleResize,
+                            onScroll: G.handleScroll,
+                            onMouseDown: G.handleMouseDown,
+                            onMouseUp: G.handleMouseUp,
+                            ...X,
                             tabIndex: -1,
                             role: 'group',
                             children: [
-                                K,
+                                Y,
                                 (0, i.jsxs)('ol', {
                                     className: w.scrollerInner,
                                     'aria-label': D.intl.formatToPlainString(D.t.XarRiI, { channelName: m.name }),
-                                    ...J,
+                                    ...Q,
                                     children: [
                                         (0, i.jsx)('span', {
                                             className: w.navigationDescription,
@@ -172,7 +173,7 @@ let B = l.memo(
                                             'aria-hidden': !0,
                                             children: D.intl.string(D.t.Spb3s7)
                                         }),
-                                        V,
+                                        z,
                                         (0, i.jsx)('div', {
                                             className: r()({
                                                 [w.scrollerSpacer]: !A,
@@ -184,7 +185,7 @@ let B = l.memo(
                                 })
                             ]
                         }),
-                        W
+                        K
                     ]
                 })
             ]

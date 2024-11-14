@@ -88,17 +88,17 @@ function et(e) {
     var t;
     let n,
         l,
-        { channel: s, messages: u, unreadCount: U, showNewMessagesBar: et, messageDisplayCompact: en, channelStream: ei, uploads: el, scrollManager: ea, specs: er, filterAfterTimestamp: es, showingQuarantineBanner: eo, hideSummaries: ec } = e,
-        ed = P.default.getCurrentUser(),
-        eu = () => ea.isInitialized() || u.ready,
-        eh = (0, B.$)(s),
-        ep = u.length > 0 && (null === (t = u.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(s)),
-        em = (0, o.ts)(s),
-        ef = (0, a.e7)([Z.Z], () => Z.Z.shouldShowTopicsBar() && !ec),
-        eg = (0, _.P)(s.id),
-        eC = (0, x.z)(s.id, J.zr),
-        ex = (0, w.Z)(),
-        ev = (function (e, t) {
+        { channel: s, messages: u, unreadCount: U, showNewMessagesBar: et, messageDisplayCompact: en, channelStream: ei, uploads: el, scrollManager: ea, specs: er, filterAfterTimestamp: es, showingQuarantineBanner: eo, hideSummaries: ec, jumpBarClassName: ed } = e,
+        eu = P.default.getCurrentUser(),
+        eh = () => ea.isInitialized() || u.ready,
+        ep = (0, B.$)(s),
+        em = u.length > 0 && (null === (t = u.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(s)),
+        ef = (0, o.ts)(s),
+        eg = (0, a.e7)([Z.Z], () => Z.Z.shouldShowTopicsBar() && !ec),
+        eC = (0, _.P)(s.id),
+        ex = (0, x.z)(s.id, J.zr),
+        ev = (0, w.Z)(),
+        e_ = (function (e, t) {
             return e.isDM() && null != t
                 ? t.type === C.pj.STRANGER_DANGER
                     ? (0, i.jsx)(I.M, {
@@ -114,13 +114,13 @@ function et(e) {
                 : e.isGroupDM() && (0, E.f)({ location: 'blocked_user_banner' })
                   ? (0, i.jsx)(b.e, { channel: e })
                   : null;
-        })(s, null != eg ? eg : eC),
-        e_ = s.isForumPost() && !ep ? (0, i.jsx)(p.Z, { postId: s.id }) : null,
-        eI = (0, f.Z)(s.id);
+        })(s, null != eC ? eC : ex),
+        eI = s.isForumPost() && !em ? (0, i.jsx)(p.Z, { postId: s.id }) : null,
+        eE = (0, f.Z)(s.id);
     (0, K.Z)();
-    let eE = null,
-        eb = [],
-        eZ = ei.map((e, t) => {
+    let eb = null,
+        eZ = [],
+        eN = ei.map((e, t) => {
             if (e.type === X.ys_.DIVIDER) {
                 var n, l;
                 let a = null != e.unreadId;
@@ -175,8 +175,8 @@ function et(e) {
             if (null != es && es > e.content.timestamp.getTime() * R.Z.Millis.SECOND) return;
             let a = j.Z.can(X.Plq.CREATE_INSTANT_INVITE, s);
             if ((0, O.Z)(e.content, a)) return;
-            e.type === X.ys_.MESSAGE && null == eE && (eE = e);
-            let r = e.groupId === (null == eE ? void 0 : eE.groupId) ? eE.content.id : e.groupId,
+            e.type === X.ys_.MESSAGE && null == eb && (eb = e);
+            let r = e.groupId === (null == eb ? void 0 : eb.groupId) ? eb.content.id : e.groupId,
                 o = e.type === X.ys_.THREAD_STARTER_MESSAGE ? H.Ru : H.ZP;
             return (0, i.jsx)(
                 o,
@@ -188,33 +188,33 @@ function et(e) {
                     flashKey: e.flashKey,
                     id: (0, k.p)(s.id, e.content.id),
                     isLastItem: t >= ei.length - 1,
-                    renderContentOnly: eI
+                    renderContentOnly: eE
                 },
                 e.content.id
             );
         });
-    eb.push(...eZ);
-    let eN = ei[ei.length - 1];
+    eZ.push(...eN);
+    let eS = ei[ei.length - 1];
     if (
-        (null != ed &&
+        (null != eu &&
             el.forEach((e, t) => {
                 let n =
                     0 === t &&
                     (0, D.J)(
                         s,
-                        eN,
+                        eS,
                         new T.ZP({
                             type: X.uaV.DEFAULT,
-                            author: ed
+                            author: eu
                         })
                     );
-                eb.push(
+                eZ.push(
                     (0, i.jsx)(
                         ee,
                         {
                             file: e,
                             channel: s,
-                            user: ed,
+                            user: eu,
                             isGroupStart: n
                         },
                         'upload-'.concat(e.id)
@@ -224,7 +224,7 @@ function et(e) {
         u.hasMoreBefore && null == es)
     ) {
         u.length > 0 &&
-            eb.unshift(
+            eZ.unshift(
                 (0, i.jsx)(
                     'div',
                     {
@@ -237,8 +237,8 @@ function et(e) {
                 )
             );
         let { useReducedMotion: e } = c.Z;
-        ((e && eu()) || !e) &&
-            eb.unshift(
+        ((e && eh()) || !e) &&
+            eZ.unshift(
                 (0, i.jsx)(
                     z.ZP,
                     {
@@ -251,7 +251,7 @@ function et(e) {
     }
     if (
         ((!u.hasMoreBefore || null != es) &&
-            eb.unshift(
+            eZ.unshift(
                 (0, i.jsx)(
                     h.Z,
                     {
@@ -262,7 +262,7 @@ function et(e) {
                 )
             ),
         u.hasMoreAfter &&
-            eb.push(
+            eZ.push(
                 (0, i.jsx)(
                     z.ZP,
                     {
@@ -272,14 +272,14 @@ function et(e) {
                     'has-more-after'
                 )
             ),
-        !eo && eh && eu() && eb.push((0, i.jsx)(W.Z, { channel: s })),
-        U > 0 && et && eu())
+        !eo && ep && eh() && eZ.push((0, i.jsx)(W.Z, { channel: s })),
+        U > 0 && et && eh())
     ) {
         let e, t;
         let l = A.ZP.getOldestUnreadTimestamp(s.id),
             a = 0 !== l ? l : L.default.extractTimestamp(s.id),
             r = (0, M.KC)(new Date(), new Date(a));
-        if ((A.ZP.isEstimated(s.id) ? ((e = r ? Q.t.wvtbbG : Q.t.tHqbtr), (t = Q.t.vaPWFR)) : ((e = r ? Q.t.BctFHx : Q.t['3wXb9P']), (t = Q.t['4H8ldH'])), em && (0, o.tW)(s) && ex.includes(Y.E.SUMMARIES))) {
+        if ((A.ZP.isEstimated(s.id) ? ((e = r ? Q.t.wvtbbG : Q.t.tHqbtr), (t = Q.t.vaPWFR)) : ((e = r ? Q.t.BctFHx : Q.t['3wXb9P']), (t = Q.t['4H8ldH'])), ef && (0, o.tW)(s) && ev.includes(Y.E.SUMMARIES))) {
             let l = A.ZP.ackMessageId(s.id),
                 r = (0, N.q)(s.id, A.ZP.getOldestUnreadMessageId(s.id));
             if (
@@ -287,18 +287,18 @@ function et(e) {
                     num_unread_summaries: r,
                     num_unread_messages: U,
                     last_ack_message_id: l,
-                    summaries_enabled_by_user: ef,
+                    summaries_enabled_by_user: eg,
                     summaries_enabled_for_channel: (0, o.Lp)(s)
                 }),
                 (0, o.Lp)(s))
             ) {
-                let l = ef
+                let l = eg
                     ? Q.intl.format(t, { count: U })
                     : Q.intl.format(e, {
                           count: U,
                           timestamp: a
                       });
-                if (ef) {
+                if (eg) {
                     let e =
                         r > 0
                             ? (0, i.jsxs)('div', {
@@ -369,7 +369,7 @@ function et(e) {
                 }
             }
         } else
-            ex.includes(Y.E.NEW_MESSAGES) &&
+            ev.includes(Y.E.NEW_MESSAGES) &&
                 (n = (0, i.jsx)(V.LE, {
                     content: Q.intl.format(e, {
                         count: U,
@@ -381,8 +381,8 @@ function et(e) {
     if (
         (null == n &&
             (0, o.Lp)(s) &&
-            ef &&
-            ex.includes(Y.E.SUMMARIES) &&
+            eg &&
+            ev.includes(Y.E.SUMMARIES) &&
             (n = (0, i.jsx)(V.BO, {
                 channel: s,
                 scrollManager: ea
@@ -401,13 +401,14 @@ function et(e) {
                         truncate: !0
                     })
                 );
-            }
+            },
+            className: ed
         });
-    else if (u.hasMoreAfter && eu()) {
+    else if (u.hasMoreAfter && eh()) {
         let { jumpReturnTargetId: e } = u;
         l =
             u.loadingMore && u.jumpedToPresent
-                ? (0, i.jsx)(V.DR, {})
+                ? (0, i.jsx)(V.DR, { className: ed })
                 : null != e
                   ? (0, i.jsx)(V.DR, {
                         type: V.A7.REPLY,
@@ -422,7 +423,8 @@ function et(e) {
                                     flash: !0
                                 })
                             );
-                        }
+                        },
+                        className: ed
                     })
                   : (0, i.jsx)(V.DR, {
                         onClick: () =>
@@ -430,14 +432,15 @@ function et(e) {
                                 r.Z.jumpToPresent(e.id, X.AQB);
                                 let t = y.Z.getChannelId();
                                 e.id === t && (0, g.Kh)(e.id);
-                            })(s)
+                            })(s),
+                        className: ed
                     });
     }
     return {
-        channelStreamMarkup: eb,
+        channelStreamMarkup: eZ,
         newMessagesBar: n,
         jumpToPresentBar: l,
-        forumPostActionBar: e_,
-        safetyWarningBanner: ev
+        forumPostActionBar: eI,
+        safetyWarningBanner: e_
     };
 }

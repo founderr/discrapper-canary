@@ -1,5 +1,7 @@
 e.exports = {
     barButtonIcon: 'barButtonIcon_cf58b5',
+    barWithAppLauncherButton: 'barWithAppLauncherButton_cf58b5',
+    barWithAppsDMsUI: 'barWithAppsDMsUI_cf58b5',
     jumpToPresentBar: 'jumpToPresentBar_cf58b5 barBase_cf58b5',
     spinner: 'spinner_cf58b5',
     spinnerItem: 'spinnerItem_cf58b5',
