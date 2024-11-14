@@ -13,6 +13,5 @@ e.exports = {
     infoSoundIcon: 'infoSoundIcon_dd5a70',
     infoExpandedSoundContainer: 'infoExpandedSoundContainer_dd5a70',
     infoExpandedGuildContainer: 'infoExpandedGuildContainer_dd5a70',
-    infoExpandedGuildTitle: 'infoExpandedGuildTitle_dd5a70',
-    infoExpandedGuildInfoContainer: 'infoExpandedGuildInfoContainer_dd5a70'
+    infoExpandedGuildTitle: 'infoExpandedGuildTitle_dd5a70'
 };
