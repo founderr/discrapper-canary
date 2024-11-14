@@ -1,6 +1,9 @@
 n.d(t, {
-    Xh: function () {
+    Uc: function () {
         return c;
+    },
+    Xh: function () {
+        return d;
     },
     m_: function () {
         return r;
@@ -13,6 +16,12 @@ var i,
     s = n(703656),
     o = n(981631);
 function c() {
+    let {
+        location: { state: e }
+    } = (0, s.s1)();
+    return null == e ? void 0 : e.previousView;
+}
+function d() {
     var e, t, n;
     let {
         location: { pathname: i }
