@@ -9,8 +9,8 @@ var r = n(200651),
     d = n(704215),
     u = n(952265),
     m = n(481060),
-    h = n(150063),
-    p = n(434650),
+    p = n(150063),
+    h = n(434650),
     f = n(100527),
     g = n(906732),
     C = n(702486),
@@ -28,10 +28,10 @@ var r = n(200651),
     B = n(381585),
     y = n(597688),
     L = n(328347),
-    Z = n(307043),
-    P = n(223143),
-    w = n(298228),
-    O = n(937510),
+    P = n(307043),
+    Z = n(223143),
+    O = n(298228),
+    w = n(937510),
     A = n(309956),
     R = n(853748),
     H = n(426171),
@@ -101,7 +101,7 @@ function ea(e) {
 }
 function ei(e) {
     let { category: t, initialItemCardRef: n, ...i } = e,
-        s = (0, O.l)(t.products),
+        s = (0, w.l)(t.products),
         o = (0, c.e7)([L.Z], () => L.Z.initialProductSkuId),
         d = a.useCallback(
             (e) => (t) => {
@@ -122,9 +122,9 @@ function ei(e) {
 function es(e) {
     let { category: t, isPremiumUser: n, initialItemCardRef: i, isGiftEasterEggEnabled: l, setIsGiftEasterEggEnabled: o, showEasterEggToggle: c, isFullScreen: d } = e,
         u = a.useRef(10 + 70 * Math.random()),
-        [h, f] = a.useState(!1),
+        [p, f] = a.useState(!1),
         g = (0, q.M7)(t.skuId),
-        C = (0, p.O)(
+        C = (0, h.O)(
             (e) => {
                 f(e && null != g);
             },
@@ -158,7 +158,7 @@ function es(e) {
                 null != t.unpublishedAt &&
                 (0, r.jsx)(R.$, {
                     unpublishedAt: t.unpublishedAt,
-                    isVisible: h,
+                    isVisible: p,
                     displayOptions: g,
                     isFullScreen: d
                 })
@@ -169,24 +169,24 @@ t.default = function (e) {
     var t;
     let { isFullScreen: n = !0 } = e;
     (0, v.z)(x.f);
-    let i = (0, Z.u)('CollectiblesShop'),
-        { analyticsSource: l, analyticsLocations: p } = (0, c.cj)([L.Z], () => L.Z.getAnalytics()),
-        { analyticsLocations: _ } = (0, g.ZP)([...p, f.Z.COLLECTIBLES_SHOP]),
-        { sessionId: k, scrollerRef: O, scrollHandler: R } = (0, C._)(X.rMx.COLLECTIBLES_SHOP_SCROLLED, l),
-        { feedState: F, catalogState: U, transitionToCatalog: G, transitionToFeed: K } = (0, A.B)(i, O),
+    let i = (0, P.u)('CollectiblesShop'),
+        { analyticsSource: l, analyticsLocations: h } = (0, c.cj)([L.Z], () => L.Z.getAnalytics()),
+        { analyticsLocations: _ } = (0, g.ZP)([...h, f.Z.COLLECTIBLES_SHOP]),
+        { sessionId: k, scrollerRef: w, scrollHandler: R } = (0, C._)(X.rMx.COLLECTIBLES_SHOP_SCROLLED, l),
+        { feedState: F, catalogState: U, transitionToCatalog: G, transitionToFeed: K } = (0, A.B)(i, w),
         [q, ea] = a.useState(!1),
         [ei, el] = a.useState(Q.IV),
         [eo, ec] = a.useState(),
         [ed, eu] = a.useState(),
         em = (0, c.e7)([E.Z], () => E.Z.getLayers().includes(X.S9g.COLLECTIBLES_SHOP)),
-        eh = (0, u.f9)(),
-        { onClose: ep } = (0, M.Db)(),
+        ep = (0, u.f9)(),
+        { onClose: eh } = (0, M.Db)(),
         ef = (0, c.e7)([I.default], () => I.default.getCurrentUser()),
         eg = T.ZP.canUseCollectibles(ef),
-        { categories: eC, isFetchingCategories: eb, fetchCategoriesError: ex, fetchPurchasesError: ev, claimError: e_, refreshCategories: ek } = (0, P.Z)(),
+        { categories: eC, isFetchingCategories: eb, fetchCategoriesError: ex, fetchPurchasesError: ev, claimError: e_, refreshCategories: ek } = (0, Z.Z)(),
         ej = null !== (t = null != ex ? ex : ev) && void 0 !== t ? t : e_;
     (0, j.P)();
-    let eE = (0, w.O)(eC),
+    let eE = (0, O.O)(eC),
         eI = a.useRef(null),
         [eS, eT] = a.useState(!1);
     (0, H.Kp)({
@@ -223,7 +223,7 @@ t.default = function (e) {
             });
     }, [eN]),
         a.useEffect(() => {
-            !n && (0, h.Y)(X.Z5c.COLLECTIBLES_SHOP);
+            !n && (0, p.Y)(X.Z5c.COLLECTIBLES_SHOP);
         }, [n]),
         a.useEffect(
             () => () => {
@@ -235,32 +235,32 @@ t.default = function (e) {
             [eC]
         ),
         a.useEffect(() => {
-            if (!n || em || eh) return;
+            if (!n || em || ep) return;
             let e = (e) => {
-                if (e.key === et.mR.Escape) ep();
+                if (e.key === et.mR.Escape) eh();
             };
             return window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e);
-        }, [n, em, eh, ep]);
+        }, [n, em, ep, eh]);
     let eB = a.useCallback(() => {
             ek();
         }, [ek]),
-        { setCategoryRef: ey, handleScrollToCategory: eL } = (0, H.xV)(O.current),
-        { reducedMotion: eZ } = a.useContext(m.AccessibilityPreferencesContext),
-        eP = a.useRef(null),
-        ew = a.useRef(null);
-    (0, m.useFocusLock)(eP),
+        { setCategoryRef: ey, handleScrollToCategory: eL } = (0, H.xV)(w.current),
+        { reducedMotion: eP } = a.useContext(m.AccessibilityPreferencesContext),
+        eZ = a.useRef(null),
+        eO = a.useRef(null);
+    (0, m.useFocusLock)(eZ),
         a.useEffect(() => {
             if (!n) {
                 var e;
-                null === (e = ew.current) || void 0 === e || e.focus();
+                null === (e = eO.current) || void 0 === e || e.focus();
             }
         }, [n]);
-    let eO = a.useCallback(
+    let ew = a.useCallback(
             async (e, t, r) => {
-                let a = r && !n && !eZ.enabled;
+                let a = r && !n && !eP.enabled;
                 eu(e), ec(t), await G(a), t && eL(t);
             },
-            [G, eL, n, eZ]
+            [G, eL, n, eP]
         ),
         eA = (0, c.e7)([y.Z], () => {
             var e;
@@ -276,14 +276,14 @@ t.default = function (e) {
             children: [
                 (0, r.jsx)('div', {
                     className: er.shop,
-                    ref: n ? eP : ew,
+                    ref: n ? eZ : eO,
                     tabIndex: -1,
                     children: (0, r.jsxs)(m.AdvancedScroller, {
                         className: er.shopScroll,
-                        ref: O,
+                        ref: w,
                         onScroll: () => {
-                            if ((R(), null != O.current)) {
-                                let e = O.current.getDistanceFromBottom();
+                            if ((R(), null != w.current)) {
+                                let e = w.current.getDistanceFromBottom();
                                 ei >= Q.iA ? ea(e < 20) : e <= 200 && el(ei + Q.IV);
                             }
                         },
@@ -299,12 +299,12 @@ t.default = function (e) {
                                         (0, r.jsx)(V.I, {
                                             isFullScreen: n,
                                             isLayer: em,
-                                            onClose: ep,
+                                            onClose: eh,
                                             isCatalogView: !1,
                                             transparent: !0
                                         }),
                                         (0, r.jsx)(J.Z, {
-                                            handleTransition: eO,
+                                            handleTransition: ew,
                                             numVisibleItems: ei
                                         })
                                     ]
@@ -320,7 +320,7 @@ t.default = function (e) {
                                         (0, r.jsx)(V.I, {
                                             isFullScreen: n,
                                             isLayer: em,
-                                            onClose: ep,
+                                            onClose: eh,
                                             isCatalogView: i,
                                             transparent: i,
                                             handleTransition: K

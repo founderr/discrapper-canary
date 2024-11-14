@@ -115,7 +115,7 @@ function b(e) {
 }
 function D(e) {
     var t, n;
-    let { videoRef: i, quest: p, playerState: S, animSpring: E, visible: T, seekForwardEnabled: D, hideCaptionBtn: y, handlePlaybackBtnClick: A, handleTranscriptBtnClick: k, handleCaptionBtnClick: B, handleFullScreenBtnClick: L, handleSeekBackBtnClick: P, handleSeekForwardBtnClick: M, handleControlBarPendingInteraction: O } = e,
+    let { videoRef: i, quest: p, playerState: S, animSpring: E, visible: T, seekForwardEnabled: D, hideCaptionBtn: y, handlePlaybackBtnClick: A, handleTranscriptBtnClick: k, handleCaptionBtnClick: B, handleFullScreenBtnClick: L, handleSeekBackBtnClick: M, handleSeekForwardBtnClick: P, handleControlBarPendingInteraction: O } = e,
         R = (0, f.km)((e) => e.volume),
         w = (0, f.km)((e) => e.setVolume),
         F = (0, f.km)((e) => e.muted),
@@ -175,7 +175,7 @@ function D(e) {
                         iconComponent: C.d,
                         animationTime: E,
                         visible: T,
-                        onClick: P,
+                        onClick: M,
                         ariaLabel: h.intl.string(h.t.r9s3Ul),
                         tooltipLabel: h.intl.string(h.t.r9s3Ul)
                     }),
@@ -183,7 +183,7 @@ function D(e) {
                         iconComponent: g.o,
                         animationTime: E,
                         visible: T,
-                        onClick: M,
+                        onClick: P,
                         disabled: !D,
                         ariaLabel: D ? h.intl.string(h.t.zWDcND) : h.intl.string(h.t.xXh3y8),
                         tooltipLabel: D ? h.intl.string(h.t.zWDcND) : h.intl.string(h.t.xXh3y8),

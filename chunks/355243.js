@@ -54,8 +54,8 @@ function f(e) {
             },
             [S, E]
         ),
-        P = null != T && null != h ? m(T, h, C) : 0,
-        M = (0, c.yv)(P),
+        M = null != T && null != h ? m(T, h, C) : 0,
+        P = (0, c.yv)(M),
         O = null != h ? h.right - p((t / 100) * C, C, h) : null,
         R = null != T && null != h ? h.right - T : null,
         w = null != N && null != h ? h.right - N : null;
@@ -121,7 +121,7 @@ function f(e) {
                         animate: n
                     }),
                     b &&
-                        null != M &&
+                        null != P &&
                         (0, r.jsx)(a.Text, {
                             className: d.timeDisplay,
                             variant: 'text-xs/normal',
@@ -129,7 +129,7 @@ function f(e) {
                                 right: null != R ? ''.concat(R - 10, 'px') : 'auto',
                                 color: '#FFFFFF'
                             },
-                            children: M
+                            children: P
                         }),
                     b &&
                         i &&

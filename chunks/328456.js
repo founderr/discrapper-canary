@@ -1,6 +1,6 @@
 n.d(e, {
     R: function () {
-        return o;
+        return s;
     },
     b: function () {
         return i;
@@ -44,7 +44,7 @@ class i {
             (this.itemsByTypes = this.sortByTypes(t));
     }
 }
-let o = (t) => {
+let s = (t) => {
     let { firstProfileEffect: e, firstAvatarDecoration: n } = r.useMemo(() => new i(t.items), [t]);
     return {
         firstProfileEffect: e,

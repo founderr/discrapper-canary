@@ -32,7 +32,7 @@ var i = t(200651),
     P = t(522888);
 let _ = {
     key: T.h8.GIFT_CUSTOMIZATION,
-    renderStep: (e) => (0, i.jsx)(b, { ...e }),
+    renderStep: (e) => (0, i.jsx)(k, { ...e }),
     options: {
         isLargeModal: !0,
         useBreadcrumbLabel: () => y.intl.string(y.t['W685+f'])
@@ -54,9 +54,9 @@ function O(e) {
         ]
     });
 }
-function b(e) {
+function k(e) {
     let { handleStepChange: n, handleClose: t } = e,
-        { customGiftMessage: s = '', setCustomGiftMessage: o, giftRecipientError: v, setGiftRecipientError: T, validatingGiftRecipient: _, giftRecipient: b, recommendedGiftSkuIds: M, giftingOrigin: w, setValidatingGiftRecipient: R } = (0, I.wD)(),
+        { customGiftMessage: s = '', setCustomGiftMessage: o, giftRecipientError: v, setGiftRecipientError: T, validatingGiftRecipient: _, giftRecipient: k, recommendedGiftSkuIds: M, giftingOrigin: w, setValidatingGiftRecipient: R } = (0, I.wD)(),
         { selectedSkuId: D, setSelectedSkuId: L, selectedSkuPricePreview: B, paymentSourceId: F, skuPricePreviewsById: G } = (0, E.usePaymentContext)(),
         U = (0, r.e7)([g.default], () => g.default.getCurrentUser()),
         { enabled: H, giftRecommendationAlgorithm: W } = m.G.useExperiment({ location: 'CollectiblesPaymentModalGiftCustomizationStep' }, { autoTrackExposure: !1 }),
@@ -66,10 +66,10 @@ function b(e) {
             R(!0), null != v && T(), !(await (0, d.B1)(e.id, n)) && T(y.intl.string(y.t['4kgVqa'])), R(!1);
         };
     l.useEffect(() => {
-        null != D && null != b && (j.default.track(S.rMx.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: D }), Y(b, D));
+        null != D && null != k && (j.default.track(S.rMx.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: D }), Y(k, D));
     }, []);
     let K = (e) => {
-            j.default.track(S.rMx.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: e }), null != b && Y(b, e), L(e);
+            j.default.track(S.rMx.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: e }), null != k && Y(k, e), L(e);
         },
         q = (e) => {
             let n = G[e],
@@ -118,7 +118,7 @@ function b(e) {
                                           children: V.toLocaleUpperCase()
                                       }),
                                       M.map((e) => q(e)),
-                                      (0, i.jsx)(k, { handleClose: t })
+                                      (0, i.jsx)(b, { handleClose: t })
                                   ]
                               })
                             : (0, i.jsx)('div', {
@@ -129,7 +129,7 @@ function b(e) {
                             ? (0, i.jsxs)('div', {
                                   className: A.bodyColumnRight,
                                   children: [
-                                      (0, i.jsx)(p.s, { giftRecipient: b }),
+                                      (0, i.jsx)(p.s, { giftRecipient: k }),
                                       (0, i.jsx)(x.q, {
                                           isShopGift: !0,
                                           className: P.adjustedGiftMainAnimation,
@@ -166,7 +166,7 @@ function b(e) {
                     children: (0, i.jsx)(O, {
                         onStepChange: n,
                         onBackClick: t,
-                        disabled: null != v || null == b || b.id === (null == U ? void 0 : U.id) || s.length > Z.$n,
+                        disabled: null != v || null == k || k.id === (null == U ? void 0 : U.id) || s.length > Z.$n,
                         loading: _
                     })
                 })
@@ -174,7 +174,7 @@ function b(e) {
         ]
     });
 }
-function k(e) {
+function b(e) {
     let { handleClose: n } = e,
         { analyticsLocations: t } = (0, o.ZP)(s.Z.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL);
     return (0, i.jsx)(a.Clickable, {

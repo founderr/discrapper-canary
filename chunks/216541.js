@@ -1,14 +1,14 @@
 n.d(e, {
     d: function () {
-        return h;
+        return v;
     }
 });
 var r = n(200651);
 n(192379);
 var a = n(120356),
     i = n.n(a),
-    o = n(780384),
-    s = n(481060),
+    s = n(780384),
+    o = n(481060),
     l = n(410030),
     c = n(876917),
     d = n(328456),
@@ -16,36 +16,36 @@ var a = n(120356),
     f = n(746443),
     g = n(63243),
     p = n(244488);
-let h = (t) => {
-    let { product: e, isPurchased: n, isHighlighted: a, user: h, forCollectedModal: b, profileEffectClassName: m } = t,
-        { firstProfileEffect: v, firstAvatarDecoration: C } = (0, d.R)(e),
-        x = (0, l.ZP)(),
-        T = (0, o.ap)(x);
+let v = (t) => {
+    let { product: e, isPurchased: n, isHighlighted: a, user: v, forCollectedModal: h, profileEffectClassName: b } = t,
+        { firstProfileEffect: m, firstAvatarDecoration: S } = (0, d.R)(e),
+        T = (0, l.ZP)(),
+        C = (0, s.ap)(T);
     return (0, r.jsxs)('div', {
         className: f.container,
         children: [
-            null != v
+            null != m
                 ? (0, r.jsx)('div', {
-                      className: i()(f.profileEffectShopPreview, m),
+                      className: i()(f.profileEffectShopPreview, b),
                       children: (0, r.jsx)(c.Z, {
                           isHovering: a,
-                          profileEffectId: v.id,
+                          profileEffectId: m.id,
                           isPurchased: n,
-                          forCollectedModal: b,
+                          forCollectedModal: h,
                           removeSetHeight: !0
                       })
                   })
                 : null,
-            null != C
+            null != S
                 ? (0, r.jsx)('div', {
                       className: f.avatarDecorationPreview,
                       children: (0, r.jsx)(u.R, {
-                          item: C,
-                          user: h,
-                          avatarSize: s.AvatarSizes.SIZE_120,
+                          item: S,
+                          user: v,
+                          avatarSize: o.AvatarSizes.SIZE_120,
                           isPurchased: n,
                           isHighlighted: a,
-                          avatarPlaceholderSrc: T ? p : g
+                          avatarPlaceholderSrc: C ? p : g
                       })
                   })
                 : null

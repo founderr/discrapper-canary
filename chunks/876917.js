@@ -2,20 +2,20 @@ n(47120);
 var r = n(200651),
     a = n(192379),
     i = n(120356),
-    o = n.n(i),
-    s = n(802433),
+    s = n.n(i),
+    o = n(802433),
     l = n(680295),
     c = n(296140),
     d = n(241822);
 e.Z = (t) => {
     let { profileEffectId: e, isHovering: n, forCollectedModal: i = !1, isPurchased: u, removeSetHeight: f = !1 } = t,
         g = i ? 250 : 0.1,
-        [p, h] = a.useState(!0);
+        [p, v] = a.useState(!0);
     return (a.useEffect(() => {
-        if (!0 !== i) h(!1);
+        if (!0 !== i) v(!1);
         else {
             let t = setTimeout(() => {
-                h(!1);
+                v(!1);
             }, g);
             return () => {
                 clearTimeout(t);
@@ -24,7 +24,7 @@ e.Z = (t) => {
     }, [g, i]),
     null != e)
         ? (0, r.jsxs)('div', {
-              className: o()(c.previewContainer, {
+              className: s()(c.previewContainer, {
                   [c.previewContainerAnimation]: i,
                   [c.previewContainerSetHeight]: !f
               }),
@@ -42,7 +42,7 @@ e.Z = (t) => {
                               profileEffectId: e,
                               useThumbnail: !0,
                               autoPlay: i,
-                              restartMethod: s.j.FromStart,
+                              restartMethod: o.j.FromStart,
                               resetOnHover: !0,
                               isHovering: n,
                               introDelay: g,

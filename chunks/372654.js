@@ -1,9 +1,9 @@
 n.d(e, {
     ML: function () {
-        return o;
+        return s;
     },
     nH: function () {
-        return s;
+        return o;
     },
     vK: function () {
         return d;
@@ -15,8 +15,8 @@ n.d(e, {
 var r = n(180650),
     a = n(921948);
 let i = 1060,
-    o = (t) => t * (0, a.Z)(),
-    s = function (t) {
+    s = (t) => t * (0, a.Z)(),
+    o = function (t) {
         let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 180,
             { primary: n, secondary: r } = t;
         return 'linear-gradient('.concat(e, 'deg, ').concat(n.toHslString(), ', ').concat(r.toHslString(), ')');

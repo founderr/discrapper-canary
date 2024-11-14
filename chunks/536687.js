@@ -38,8 +38,8 @@ function k(e) {
     let { transitionState: n, onClose: i, quest: f, autoplay: k } = e,
         B = (0, C.il)(f),
         L = (0, a.e7)([d.Z], () => d.Z.getState().theme),
-        P = (0, s.wj)(L) ? D.BRd.DARK : D.BRd.LIGHT,
-        M = (0, a.e7)([u.Z], () => u.Z.useReducedMotion),
+        M = (0, s.wj)(L) ? D.BRd.DARK : D.BRd.LIGHT,
+        P = (0, a.e7)([u.Z], () => u.Z.useReducedMotion),
         [O, R] = o.useState(B.progressSeconds),
         [w, F] = o.useState(!1),
         { completedRatio: Z, completedRatioDisplay: U } = (0, p.I)(f),
@@ -97,7 +97,7 @@ function k(e) {
                                                 (0, r.jsx)('img', {
                                                     alt: f.config.messages.gameTitle,
                                                     className: l()(A.contentHeaderLogotype, A.accentOnHover),
-                                                    src: (0, g.fh)(f, g.eC.LOGO_TYPE, P).url
+                                                    src: (0, g.fh)(f, g.eC.LOGO_TYPE, M).url
                                                 }),
                                                 (0, r.jsx)(I.Z, {}),
                                                 (0, r.jsxs)('div', {
@@ -173,7 +173,7 @@ function k(e) {
                                                     className: A.claimBtn,
                                                     size: c.Button.Sizes.MEDIUM,
                                                     quest: f,
-                                                    useReducedMotion: M,
+                                                    useReducedMotion: P,
                                                     isExpanded: (null === (t = f.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
                                                     disabled: (null === (o = f.userStatus) || void 0 === o ? void 0 : o.completedAt) == null,
                                                     ctaLabel: q

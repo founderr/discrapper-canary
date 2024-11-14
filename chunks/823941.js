@@ -17,8 +17,8 @@ var r = n(200651),
     d = n(481060),
     u = n(607070),
     m = n(906732),
-    h = n(963249),
-    p = n(594174),
+    p = n(963249),
+    h = n(594174),
     f = n(754347),
     g = n(74538),
     C = n(884697),
@@ -37,7 +37,7 @@ let N = (0, C.IC)(96),
         let { category: t } = e,
             { analyticsLocations: n } = (0, m.ZP)(),
             i = a.useRef(null),
-            s = (0, c.e7)([p.default], () => p.default.getCurrentUser());
+            s = (0, c.e7)([h.default], () => h.default.getCurrentUser());
         return g.ZP.canUseCollectibles(s)
             ? (0, r.jsx)(r.Fragment, { children: t.summary })
             : (0, r.jsx)(r.Fragment, {
@@ -47,7 +47,7 @@ let N = (0, C.IC)(96),
                               innerRef: i,
                               className: S.getPremiumHook,
                               onClick: () => {
-                                  (0, h.Z)({
+                                  (0, p.Z)({
                                       subscriptionTier: E.Si.TIER_2,
                                       analyticsLocations: n,
                                       returnRef: i
@@ -66,7 +66,7 @@ let N = (0, C.IC)(96),
     };
 function y(e) {
     var t, n, a, i;
-    let { category: m, className: h, hideLimitedTimeBadge: p = !1 } = e,
+    let { category: m, className: p, hideLimitedTimeBadge: h = !1 } = e,
         { backgroundColors: g } = (0, b.Z)(m.styles),
         E = !!(null === (t = j.Ve[m.skuId]) || void 0 === t ? void 0 : t.showDarkBannerText),
         I = (0, c.e7)([u.Z], () => u.Z.useReducedMotion);
@@ -77,7 +77,7 @@ function y(e) {
         .otherwise(() => void 0);
     return (0, r.jsxs)(x.Z, {
         asset: m.banner,
-        className: s()(S.shopBanner, h),
+        className: s()(S.shopBanner, p),
         style:
             null != g
                 ? {
@@ -121,7 +121,7 @@ function y(e) {
                 variant: 'text-md/normal',
                 children: m.skuId === o.T.DISXCORE ? (0, r.jsx)(B, { category: m }) : m.summary
             }),
-            !p &&
+            !h &&
                 (0, r.jsx)(v.Z, {
                     category: m,
                     className: S.limitedTimeBadge,

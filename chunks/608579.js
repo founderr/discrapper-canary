@@ -31,7 +31,7 @@ var i = t(200651),
     y = t(556709);
 function A(e) {
     var n;
-    let { onClose: t, onComplete: r, onStepChange: A, transitionState: P, loadId: _, skuId: O, isGift: b = !1, giftRecipient: k, giftMessage: M, giftingOrigin: w, analyticsLocations: R, returnRef: D } = e,
+    let { onClose: t, onComplete: r, onStepChange: A, transitionState: P, loadId: _, skuId: O, isGift: k = !1, giftRecipient: b, giftMessage: M, giftingOrigin: w, analyticsLocations: R, returnRef: D } = e,
         { analyticsLocations: L } = (0, u.ZP)([...R, c.Z.COLLECTIBLES_PAYMENT_MODAL]),
         B = l.useRef(new s.qA()),
         [F, G] = l.useState(null),
@@ -100,12 +100,12 @@ function A(e) {
                 stepConfigs: Q,
                 applicationId: T.XAJ,
                 skuIDs: V,
-                isGift: b,
+                isGift: k,
                 activeSubscription: null,
                 purchaseType: Z.GZ.ONE_TIME,
                 children: (0, i.jsx)(m.KB, {
-                    isGift: b,
-                    giftRecipient: k,
+                    isGift: k,
+                    giftRecipient: b,
                     giftMessage: M,
                     giftingOrigin: w,
                     children: (0, i.jsx)(v.PaymentModal, {
@@ -117,7 +117,7 @@ function A(e) {
                         analyticsLocations: L,
                         transitionState: P,
                         renderHeader: (e, n, t) =>
-                            b
+                            k
                                 ? (0, i.jsx)(g.Z, {
                                       step: t,
                                       onClose: () => n(!1),
