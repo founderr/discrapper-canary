@@ -31,8 +31,8 @@ var r = n(200651),
     j = n(223418),
     b = n(604162),
     D = n(747717),
-    y = n(281055),
-    A = n(920393),
+    A = n(281055),
+    y = n(920393),
     k = n(981631),
     B = n(217702),
     L = n(388032),
@@ -127,8 +127,8 @@ function Z(e) {
         X = (0, E.km)((e) => e.setCaptionEnabled),
         J = (0, E.km)((e) => e.fullScreenEnabled),
         $ = (0, E.km)((e) => e.setFullScreenEnabled),
-        { focused: ee, focusedChanged: et } = (0, y.xU)(),
-        { visible: en, visibleChanged: er, targetRef: eo } = (0, y.Yy)(),
+        { focused: ee, focusedChanged: et } = (0, A.xU)(),
+        { visible: en, visibleChanged: er, targetRef: eo } = (0, A.Yy)(),
         [ei, el] = o.useState(!0 === z ? j.r.PLAYING : j.r.PAUSED),
         [ea, es] = o.useState(!1),
         ec = (0, S.il)(q),
@@ -141,8 +141,8 @@ function Z(e) {
         [e_, eT] = o.useState(0),
         [eI, eN] = o.useState(0),
         [ej, eb] = o.useState(!1),
-        [eD, ey] = o.useState(!1),
-        eA = (0, E.km)((e) => {
+        [eD, eA] = o.useState(!1),
+        ey = (0, E.km)((e) => {
             var t;
             return null !== (t = e.videoProgress[q.id]) && void 0 !== t
                 ? t
@@ -164,7 +164,7 @@ function Z(e) {
         [eG, eV] = o.useState(!1),
         [eq, eH] = o.useState(!1),
         [ez, eY] = o.useState(null),
-        eW = ew ? (null !== (D = null === (n = eP.current) || void 0 === n ? void 0 : n.duration) && void 0 !== D ? D : 0) : Math.max(eA.maxTimestampSec, ec.progressSeconds),
+        eW = ew ? (null !== (D = null === (n = eP.current) || void 0 === n ? void 0 : n.duration) && void 0 !== D ? D : 0) : Math.max(ey.maxTimestampSec, ec.progressSeconds),
         eQ = o.useMemo(() => (P.has(eE) ? h.i.VIDEO_PLAYER_VIDEO : h.i.VIDEO_PLAYER_VIDEO_LOW_RES), [eE]),
         eK = o.useMemo(() => (null != eQ ? (0, h.z)(eQ, q) : null), [eQ, q]),
         eX = o.useCallback(
@@ -184,7 +184,7 @@ function Z(e) {
             },
             [q.id, eQ, ew, eu]
         ),
-        { forceSendCurrentSegment: eJ } = (0, A.Z)({
+        { forceSendCurrentSegment: eJ } = (0, y.Z)({
             videoRef: eP,
             isPlaying: ei === j.r.PLAYING,
             isMetadataLoaded: eG,
@@ -210,7 +210,7 @@ function Z(e) {
             [eP, el, eU, Q, eJ]
         );
     o.useLayoutEffect(() => {
-        eR.current && ((eR.current = !1), eh(f.Z.getEffectiveConnectionSpeed()), ew && eA.timestampSec >= eA.duration && ek(q.id, 0, eA.duration));
+        eR.current && ((eR.current = !1), eh(f.Z.getEffectiveConnectionSpeed()), ew && ey.timestampSec >= ey.duration && ek(q.id, 0, ey.duration));
     }, []),
         o.useEffect(() => {
             null != eP.current &&
@@ -238,18 +238,20 @@ function Z(e) {
         }, [ee, et, ei, q.id]);
     let e0 = o.useCallback(
         (e) => {
-            !ew && (0, g.FI)(q.id, e),
-                null != eP.current &&
-                    (0, C.dA)({
-                        questId: q.id,
-                        event: k.rMx.QUEST_VIDEO_PROGRESSED,
-                        properties: {
-                            progress: eu / 100,
-                            video_timestamp_seconds: eP.current.currentTime
-                        }
-                    });
+            var t;
+            if ((null === (t = q.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null)
+                !ew && (0, g.FI)(q.id, e),
+                    null != eP.current &&
+                        (0, C.dA)({
+                            questId: q.id,
+                            event: k.rMx.QUEST_VIDEO_PROGRESSED,
+                            properties: {
+                                progress: eu / 100,
+                                video_timestamp_seconds: eP.current.currentTime
+                            }
+                        });
         },
-        [q.id, eu, ew, eP]
+        [q, eu, ew, eP]
     );
     o.useEffect(() => {
         (Y === u.ModalTransitionState.HIDDEN || Y === u.ModalTransitionState.EXITING || Y === u.ModalTransitionState.EXITED || (null != Y && er && !en && !ew) || (et && !ee && !ew)) && (null != eP.current && (Y === u.ModalTransitionState.EXITING || Y === u.ModalTransitionState.EXITED) && e0(eP.current.currentTime), null != eP.current && ei === j.r.PLAYING && (e$(j.r.PAUSED), !ew && eU(j.y.LOST_FOCUS)));
@@ -359,10 +361,10 @@ function Z(e) {
             from: { controlBarAnimSpring: 0 },
             config: O,
             onStart: () => {
-                ey(!1);
+                eA(!1);
             },
             onRest: (e) => {
-                1 === e.value && ey(!0);
+                1 === e.value && eA(!0);
             }
         })),
         ti = (0, o.useRef)(null),
@@ -397,7 +399,7 @@ function Z(e) {
     let ts = ei === j.r.ENDED,
         tc = o.useMemo(() => (0, h.z)(h.i.VIDEO_PLAYER_THUMBNAIL, q), [q]),
         tu = o.useMemo(() => (0, h.z)(h.i.VIDEO_PLAYER_CAPTION, q), [q]),
-        td = ew || eA.maxTimestampSec >= (null !== (Z = null === (i = eP.current) || void 0 === i ? void 0 : i.currentTime) && void 0 !== Z ? Z : 0) + 1;
+        td = ew || ey.maxTimestampSec >= (null !== (Z = null === (i = eP.current) || void 0 === i ? void 0 : i.currentTime) && void 0 !== Z ? Z : 0) + 1;
     return (0, r.jsx)(r.Fragment, {
         children: (0, r.jsx)(u.Clickable, {
             className: M.videoCont,
@@ -439,7 +441,7 @@ function Z(e) {
                             ef && ev(!1);
                         },
                         onLoadedMetadata: (e) => {
-                            if (null != eP.current) eV(!0), e4(ew ? eA.timestampSec : Math.max(eA.timestampSec, ec.progressSeconds)), eB ? (eP.current.volume = 0) : (eP.current.volume = eL);
+                            if (null != eP.current) eV(!0), e4(ew ? ey.timestampSec : Math.max(ey.timestampSec, ec.progressSeconds)), eB ? (eP.current.volume = 0) : (eP.current.volume = eL);
                         },
                         onWaiting: (e) => {
                             eg(!0);
