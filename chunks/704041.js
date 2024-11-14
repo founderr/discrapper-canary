@@ -100,6 +100,11 @@ t.Z = (e) => {
             guildId: t,
             leaderboardId: g._,
             intervalOffset: 0
+        }),
+        p = (0, _.Z)({
+            guildId: t,
+            leaderboardId: g._,
+            intervalOffset: -1
         });
     return ((0, s.useFocusLock)(d),
     !(function (e) {
@@ -165,12 +170,12 @@ t.Z = (e) => {
                                   ? null
                                   : (0, r.jsxs)(r.Fragment, {
                                         children: [
-                                            (0, r.jsx)(h.Z, {
-                                                className: b.previousChampion,
-                                                guildId: t,
-                                                leaderboardId: o,
-                                                intervalOffset: -1
-                                            }),
+                                            null != p &&
+                                                (0, r.jsx)(h.Z, {
+                                                    className: b.previousChampion,
+                                                    guildId: t,
+                                                    leaderboard: p
+                                                }),
                                             (0, r.jsx)(y, {
                                                 guildId: t,
                                                 leaderboardId: o
