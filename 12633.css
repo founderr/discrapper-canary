@@ -18386,7 +18386,7 @@ span.clanTag_a31c43 {
 }
 
 .userRow_cf8a7d:hover {
-    background: var(--bg-overlay-5, var(--background-modifier-hover))
+    background: var(--background-modifier-hover)
 }
 
 .userRow_cf8a7d:hover .copyLinkContainer_cf8a7d {
