@@ -3,13 +3,10 @@ n.d(t, {
         return u;
     },
     nP: function () {
-        return _;
+        return d;
     },
     sA: function () {
         return s;
-    },
-    wh: function () {
-        return d;
     },
     wm: function () {
         return o;
@@ -66,23 +63,6 @@ function u(e) {
 }
 let c = (0, r.B)({
     kind: 'user',
-    id: '2024-05_content_inventory_games_rich_presence',
-    label: 'Content Inventory: Rich Presence for Games',
-    defaultConfig: { enabled: !1 },
-    treatments: [
-        {
-            id: 1,
-            label: 'Enabled',
-            config: { enabled: !0 }
-        }
-    ]
-});
-function d(e) {
-    let { enabled: t } = c.useExperiment({ location: e }, { autoTrackExposure: !0 });
-    return t;
-}
-let f = (0, r.B)({
-    kind: 'user',
     id: '2024-08_content_inventory_analytics_sampling',
     label: 'Content Inventory Analytics Sampling',
     defaultConfig: { trackingEnabled: !0 },
@@ -94,6 +74,6 @@ let f = (0, r.B)({
         }
     ]
 });
-function _(e) {
-    return f.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
+function d(e) {
+    return c.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
 }

@@ -164,10 +164,9 @@ function M(e) {
 function P(e) {
     let { entry: t } = e,
         { defaultTextColor: n, defaultIconColor: r } = D(),
-        { state: i, party: s, inExperiment: o } = (0, T.n)(t);
-    if (!o) return null;
-    let l = (0, S.bT)(i, s);
-    return null == l
+        { state: i, party: s } = (0, T.n)(t),
+        o = (0, S.bT)(i, s);
+    return null == o
         ? null
         : (0, a.jsxs)(L, {
               children: [
@@ -179,7 +178,7 @@ function P(e) {
                       variant: 'text-xs/normal',
                       color: n,
                       lineClamp: 1,
-                      children: l
+                      children: o
                   })
               ]
           });

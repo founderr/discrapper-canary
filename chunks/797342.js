@@ -1,45 +1,41 @@
 n.d(t, {
     n: function () {
-        return l;
+        return o;
     }
 });
 var r = n(442837),
     i = n(594174),
-    a = n(162461),
-    s = n(26033),
-    o = n(561308);
-function l(e) {
-    var t, n, l, u, c;
-    let d = (0, r.e7)([i.default], () => i.default.getUser(e.author_id)),
-        { activity: f, embeddedActivity: _ } = (0, o.qy)(e),
-        p = (0, a.wh)('useRichActivityDataForEntry');
-    if (!p || null == f)
+    a = n(26033),
+    s = n(561308);
+function o(e) {
+    var t, n, o, l, u;
+    let c = (0, r.e7)([i.default], () => i.default.getUser(e.author_id)),
+        { activity: d, embeddedActivity: f } = (0, s.qy)(e);
+    if (null == d)
         return {
             isRich: !1,
-            appName: (0, s.dX)(e) ? e.extra.game_name : void 0,
-            user: d,
-            inExperiment: p,
+            appName: (0, a.dX)(e) ? e.extra.game_name : void 0,
+            user: c,
             activity: void 0,
             embeddedActivity: void 0,
             state: void 0,
             details: void 0,
             party: void 0
         };
-    let h = (null === (t = f.assets) || void 0 === t ? void 0 : t.large_image) != null || (null === (n = f.assets) || void 0 === n ? void 0 : n.small_image) != null,
-        m = (null === (l = f.assets) || void 0 === l ? void 0 : l.large_text) != null || (null === (u = f.assets) || void 0 === u ? void 0 : u.small_text) != null,
-        g = null !== (c = f.name) && void 0 !== c ? c : 'game_name' in e.extra ? e.extra.game_name : void 0,
-        E = f.details,
-        v = f.state,
-        I = f.party;
+    let _ = (null === (t = d.assets) || void 0 === t ? void 0 : t.large_image) != null || (null === (n = d.assets) || void 0 === n ? void 0 : n.small_image) != null,
+        p = (null === (o = d.assets) || void 0 === o ? void 0 : o.large_text) != null || (null === (l = d.assets) || void 0 === l ? void 0 : l.small_text) != null,
+        h = null !== (u = d.name) && void 0 !== u ? u : 'game_name' in e.extra ? e.extra.game_name : void 0,
+        m = d.details,
+        g = d.state,
+        E = d.party;
     return {
-        isRich: h || m || null != E || null != v || null != I,
-        user: d,
-        activity: f,
-        state: v,
-        details: E,
-        party: I,
-        appName: g,
-        inExperiment: p,
-        embeddedActivity: _
+        isRich: _ || p || null != m || null != g || null != E,
+        user: c,
+        activity: d,
+        state: g,
+        details: m,
+        party: E,
+        appName: h,
+        embeddedActivity: f
     };
 }
