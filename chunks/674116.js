@@ -21,8 +21,8 @@ var i = n(200651),
     S = n(63063),
     T = n(358085),
     C = n(740492),
-    E = n(894939),
-    _ = n(321499),
+    _ = n(894939),
+    E = n(321499),
     f = n(710808),
     I = n(625205),
     N = n(325808),
@@ -135,7 +135,7 @@ function U() {
             }),
             (0, i.jsx)(g.F, {
                 setting: y.s6.VOICE_AND_VIDEO_SOUNDS,
-                children: (0, i.jsx)(E.Z, {})
+                children: (0, i.jsx)(_.Z, {})
             }),
             (0, i.jsx)(g.F, {
                 setting: y.s6.VOICE_AND_VIDEO_VIDEO,
@@ -150,7 +150,7 @@ function U() {
                         children: Z.intl.string(Z.t['8/udY2'])
                     }),
                     children: [
-                        (0, i.jsx)(_.Z, {}),
+                        (0, i.jsx)(E.Z, {}),
                         (0, i.jsx)(g.F, {
                             setting: y.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
                             children: (0, i.jsx)(O.Z, {})

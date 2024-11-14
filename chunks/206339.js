@@ -16,8 +16,8 @@ var i = n(200651),
     S = n(163684),
     T = n(178100),
     C = n(518638),
-    E = n(725727),
-    _ = n(454982),
+    _ = n(725727),
+    E = n(454982),
     f = n(197115),
     I = n(504983),
     N = n(703656),
@@ -37,7 +37,7 @@ function B(e) {
         [m, h] = s.useState(!1),
         g = () => u((e) => !e),
         S = (0, p.ZP)(),
-        E = (0, C.Pz)(n.id, S),
+        _ = (0, C.Pz)(n.id, S),
         f = null != r,
         I = (0, T.Z)(n, f);
     f && c
@@ -79,7 +79,7 @@ function B(e) {
                                         className: y.promotionIcon,
                                         children: (0, i.jsx)('img', {
                                             alt: '',
-                                            src: E,
+                                            src: _,
                                             className: y.promotionIconImage
                                         })
                                     }),
@@ -121,7 +121,7 @@ function B(e) {
             m &&
                 (0, i.jsx)(d.Modal, {
                     renderModal: (e) =>
-                        (0, i.jsx)(_.Z, {
+                        (0, i.jsx)(E.Z, {
                             ...e,
                             onClose: A,
                             onClaim: a,
@@ -147,8 +147,8 @@ t.Z = function () {
             (0, m.Qv)().then(() => x(!0));
         });
     }, []);
-    let { promotionsLoaded: T, activeOutboundPromotions: C, claimedEndedOutboundPromotions: _, claimedOutboundPromotionCodeMap: L, addClaimedOutboundPromotionCode: Z } = (0, E.lG)(),
-        F = C.length + _.length > 0,
+    let { promotionsLoaded: T, activeOutboundPromotions: C, claimedEndedOutboundPromotions: E, claimedOutboundPromotionCodeMap: L, addClaimedOutboundPromotionCode: Z } = (0, _.lG)(),
+        F = C.length + E.length > 0,
         M =
             S.g.useExperiment(
                 { location: 'EntitlementGifts' },
@@ -214,7 +214,7 @@ t.Z = function () {
                               children: [
                                   u,
                                   F ? (0, i.jsx)(d.FormDivider, { className: y.divider }) : null,
-                                  _.map((e) => {
+                                  E.map((e) => {
                                       let { code: t, promotion: n } = e;
                                       return (0, i.jsx)(
                                           B,

@@ -23,7 +23,7 @@ var i = n(200651),
     S = n(388032),
     T = n(8007),
     C = n(113207);
-function E(e) {
+function _(e) {
     let { userId: t, count: n } = e,
         c = (0, r.e7)([p.default], () => p.default.getUser(t)),
         d = x.ZP.getFormattedName(c),
@@ -72,7 +72,7 @@ function E(e) {
         })
     );
 }
-function _(e) {
+function E(e) {
     let { className: t, userId: n, verification: r, index: a } = e,
         o = (0, u.bo)(r.timestamp),
         c = s.useCallback(() => {
@@ -112,7 +112,7 @@ function f(e) {
         n = (0, m._)(t);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(E, {
+            (0, i.jsx)(_, {
                 userId: t,
                 count: n.length
             }),
@@ -121,7 +121,7 @@ function f(e) {
                     s.Fragment,
                     {
                         children: [
-                            (0, i.jsx)(_, {
+                            (0, i.jsx)(E, {
                                 className: T.row,
                                 userId: t,
                                 index: r,

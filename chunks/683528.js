@@ -13,8 +13,8 @@ var r = t(200651),
     c = t(52824),
     d = t(549635),
     m = t(388032),
-    h = t(244190);
-function f(e) {
+    f = t(244190);
+function h(e) {
     return 'media-view-scroll-thumbnail-'.concat(e);
 }
 let p = i.memo(function (e) {
@@ -45,7 +45,7 @@ function g(e) {
         u = i.useRef(null);
     return (
         i.useLayoutEffect(() => {
-            let e = document.getElementById(f(t));
+            let e = document.getElementById(h(t));
             null != u.current &&
                 null != e &&
                 u.current.scrollIntoViewNode({
@@ -55,10 +55,10 @@ function g(e) {
                 });
         }, [t]),
         (0, r.jsx)('div', {
-            className: h.galleryContainer,
+            className: f.galleryContainer,
             children: (0, r.jsx)(o.AdvancedScrollerThin, {
                 orientation: 'horizontal',
-                className: h.gallery,
+                className: f.gallery,
                 ref: u,
                 children: n.map((e, i) => {
                     let s = i === t,
@@ -66,14 +66,14 @@ function g(e) {
                     return (0, r.jsxs)(
                         o.Clickable,
                         {
-                            id: f(i),
-                            className: h.galleryItem,
+                            id: h(i),
+                            className: f.galleryItem,
                             'aria-label': m.intl.formatToPlainString(u, {
                                 pageNumber: i + 1,
                                 totalPages: n.length
                             }),
                             onClick: () => a(i),
-                            children: [(0, r.jsx)('div', { className: l()(h.galleryItemOverlay, { [h.selected]: s }) }), (0, r.jsx)(p, { item: e })]
+                            children: [(0, r.jsx)('div', { className: l()(f.galleryItemOverlay, { [f.selected]: s }) }), (0, r.jsx)(p, { item: e })]
                         },
                         i
                     );

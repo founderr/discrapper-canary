@@ -22,18 +22,18 @@ var i = n(200651),
     S = n(179447);
 function T() {}
 let C = [p.h8.VOICE_CHANNEL];
-function E(e) {
+function _(e) {
     e.setOptions({ voiceChannelGuildFilter: null }), e.setLimit(1 / 0);
 }
-function _(e) {
+function E(e) {
     let { height: t } = e;
     return (0, i.jsx)('div', { style: { height: t } });
 }
 function f() {
-    return (0, i.jsx)(_, { height: 16 }, 'footer');
+    return (0, i.jsx)(E, { height: 16 }, 'footer');
 }
 function I() {
-    return (0, i.jsx)(_, { height: 8 }, 'header');
+    return (0, i.jsx)(E, { height: 8 }, 'header');
 }
 function N() {
     return (0, i.jsx)('div', {
@@ -94,7 +94,7 @@ function b(e) {
         c = s.useId(),
         T = s.useRef(null),
         {
-            mouseFocusEnabled: _,
+            mouseFocusEnabled: E,
             enableMouseFocus: A,
             disableMouseFocus: b
         } = (function () {
@@ -118,7 +118,7 @@ function b(e) {
         } = (0, o.Z)({
             visible: !0,
             autocompleterResultTypes: C,
-            autocompleterBeforeCreateSearchContext: E
+            autocompleterBeforeCreateSearchContext: _
         }),
         R = (function (e) {
             let t = '' !== e,
@@ -238,7 +238,7 @@ function b(e) {
                                     channel: s,
                                     category: r,
                                     focused: P === t,
-                                    onMouseEnter: () => _.current && D(t),
+                                    onMouseEnter: () => E.current && D(t),
                                     onClick: () => {
                                         a(s.id), n();
                                     },

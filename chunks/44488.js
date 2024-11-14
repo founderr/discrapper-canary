@@ -10,8 +10,8 @@ t.d(n, {
 var a,
     r = t(200651),
     i = t(192379),
-    l = t(120356),
-    o = t.n(l),
+    o = t(120356),
+    l = t.n(o),
     s = t(481060),
     u = t(768762),
     c = t(446174);
@@ -38,11 +38,11 @@ class h extends (a = i.PureComponent) {
         e.selectedIndex !== n && this.handleSelectedIndexChange(n);
     }
     render() {
-        let { renderItem: e, items: n, vertical: t, paginationContainerClass: a, align: l } = this.props,
+        let { renderItem: e, items: n, vertical: t, paginationContainerClass: a, align: o } = this.props,
             u = t ? c.verticalPaginationItemContainer : c.horizontalPaginationItemContainer;
         return (0, r.jsx)(s.AdvancedScrollerAuto, {
             orientation: t ? 'vertical' : 'horizontal',
-            className: o()(u, a, l),
+            className: l()(u, a, o),
             ref: this.handleSetScrollerRef,
             children: n.map((n, t) =>
                 i.cloneElement(e(n, t), {
@@ -95,7 +95,7 @@ class _ extends i.PureComponent {
         return (0, r.jsx)(s.Button, {
             look: s.Button.Looks.BLANK,
             size: s.Button.Sizes.NONE,
-            className: o()(c.prevButtonContainer, e),
+            className: l()(c.prevButtonContainer, e),
             onClick: this.handlePrevClick,
             children: (0, r.jsx)(u.Z, {
                 className: c.arrow,
@@ -118,7 +118,7 @@ class p extends i.PureComponent {
         return (0, r.jsx)(s.Button, {
             look: s.Button.Looks.BLANK,
             size: s.Button.Sizes.NONE,
-            className: o()(c.nextButtonContainer, e),
+            className: l()(c.nextButtonContainer, e),
             onClick: this.handleNextClick,
             children: (0, r.jsx)(u.Z, {
                 className: c.arrow,

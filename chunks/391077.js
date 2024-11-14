@@ -65,7 +65,7 @@ t.Z = function (e) {
             hours: m.t['C3RO+v'],
             minutes: m.t.r77oHR
         },
-        E = T
+        _ = T
             ? (0, c.QX)(
                   {
                       days: 0,
@@ -76,13 +76,13 @@ t.Z = function (e) {
                   C
               )
             : '',
-        _ = (0, a.Z)(n.endsAt, a.a.SHORT_TIME),
-        f = T ? E : _;
+        E = (0, a.Z)(n.endsAt, a.a.SHORT_TIME),
+        f = T ? _ : E;
     return (0, i.jsx)('div', {
         children: (0, i.jsxs)('div', {
             className: r()(s, h.fractionalPremiumAccountCredit),
             children: [
-                ((t = E),
+                ((t = _),
                 (0, i.jsxs)('div', {
                     className: h.accountCreditRow,
                     children: [

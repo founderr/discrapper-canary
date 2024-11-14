@@ -1,6 +1,6 @@
 t.d(n, {
     D: function () {
-        return h;
+        return f;
     }
 });
 var r = t(200651),
@@ -13,35 +13,35 @@ var r = t(200651),
     c = t(589530),
     d = t(591759),
     m = t(718263);
-function h(e) {
+function f(e) {
     let n = d.Z.toURLSafe(e);
     return null == n ? null : (n.searchParams.append('format', 'webp'), n.toString());
 }
 n.Z = i.memo(function (e) {
     let { media: n, obscured: t = !1, onContextMenu: i } = e,
-        { width: d, height: f, url: p, proxyUrl: g, alt: _, type: x, maxWidth: C, maxHeight: v, ...S } = n,
-        { width: E, height: y } = (0, u.zp)(null != d ? d : 0, null != f ? f : 0),
+        { width: d, height: h, url: p, proxyUrl: g, alt: _, type: x, maxWidth: S, maxHeight: C, ...v } = n,
+        { width: E, height: y } = (0, u.zp)(null != d ? d : 0, null != h ? h : 0),
         L = (0, s.q)({
             proxyURL: g,
             url: p
         }),
-        I = !(null == d || 0 === d || null == f || 0 === f);
+        I = !(null == d || 0 === d || null == h || 0 === h);
     if ('VIDEO' === x && I && null != g) {
         var A;
-        let e = h(g);
+        let e = f(g);
         if (null == e) return null;
         let a = null !== (A = n.renderLinkComponent) && void 0 !== A ? A : o.iT;
         return (0, r.jsx)(l.Z, {
-            ...S,
+            ...v,
             src: L,
             width: d,
-            height: f,
+            height: h,
             maxWidth: E,
             maxHeight: y,
             responsive: !0,
             poster: e,
             naturalWidth: d,
-            naturalHeight: f,
+            naturalHeight: h,
             volume: c.FC,
             autoMute: c.rs,
             onVolumeChange: c.jA,
@@ -55,10 +55,10 @@ n.Z = i.memo(function (e) {
     if ('IMAGE' === x)
         return I
             ? (0, r.jsx)(a.ZP, {
-                  ...S,
+                  ...v,
                   src: L,
                   width: d,
-                  height: f,
+                  height: h,
                   shouldLink: !1,
                   maxWidth: E,
                   maxHeight: y,

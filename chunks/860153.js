@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return f;
+        return h;
     }
 });
 var r = t(200651),
@@ -13,7 +13,7 @@ var r = t(200651),
     c = t(123145),
     d = t(592125),
     m = t(182763);
-let h = i.memo(function (e) {
+let f = i.memo(function (e) {
     let { message: n } = e,
         t = (0, a.e7)([d.Z], () => d.Z.getChannel(n.channel_id));
     return null == t
@@ -38,7 +38,7 @@ let h = i.memo(function (e) {
               })
           });
 });
-function f(e) {
+function h(e) {
     var n;
     let { item: t, onClose: i } = e,
         a = null === (n = t.sourceMetadata) || void 0 === n ? void 0 : n.message;
@@ -53,7 +53,7 @@ function f(e) {
                 onClick: i,
                 children: (0, r.jsx)(l.XLargeIcon, {})
             }),
-            null != a && (0, r.jsx)(h, { message: a })
+            null != a && (0, r.jsx)(f, { message: a })
         ]
     });
 }

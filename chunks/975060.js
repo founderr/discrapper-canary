@@ -30,10 +30,10 @@ function G() {
 function Z(t) {
     (C = t.name), (R = t.country), (s = t.line1), (M = t.line2), (P = t.city), (U = t.postalCode), (d = t.state), (N = t.email);
 }
-function B() {
+function F() {
     O = null;
 }
-function F(t) {
+function B(t) {
     let { error: e } = t;
     O = e;
 }
@@ -133,11 +133,11 @@ class K extends (u = S.ZP.Store) {
             let { data: e } = t;
             c = e;
         },
-        BILLING_PAYMENT_SOURCE_CREATE_START: B,
-        MODAL_POP: B,
-        NEW_PAYMENT_SOURCE_CLEAR_ERROR: B,
-        BILLING_PAYMENT_SOURCE_CREATE_FAIL: F,
-        STRIPE_TOKEN_FAILURE: F,
+        BILLING_PAYMENT_SOURCE_CREATE_START: F,
+        MODAL_POP: F,
+        NEW_PAYMENT_SOURCE_CLEAR_ERROR: F,
+        BILLING_PAYMENT_SOURCE_CREATE_FAIL: B,
+        STRIPE_TOKEN_FAILURE: B,
         BILLING_PAYMENT_SOURCE_CREATE_SUCCESS: G,
         LOGOUT: G,
         BILLING_POPUP_BRIDGE_CALLBACK: function (t) {

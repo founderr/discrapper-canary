@@ -21,8 +21,8 @@ var i,
     S = n(497321),
     T = n(634894),
     C = n(100527),
-    E = n(906732),
-    _ = n(475977),
+    _ = n(906732),
+    E = n(475977),
     f = n(957730),
     I = n(31590),
     N = n(53691),
@@ -54,7 +54,7 @@ function w() {
         s = (0, u.e7)([R.Z], () => R.Z.showNotice()),
         a = B.dN.useSetting() && null != n ? f.ZP.parse(void 0, n).content : n,
         c = y.ZP.canUsePremiumProfileCustomization(e),
-        { analyticsLocations: w } = (0, E.ZP)(C.Z.PROFILE);
+        { analyticsLocations: w } = (0, _.ZP)(C.Z.PROFILE);
     l.useEffect(() => () => g.Z.wait(x.W3), []);
     let U = 'UserSettingsProfileCustomization';
     (0, T.j)({
@@ -102,10 +102,10 @@ function w() {
         }, []);
     return t
         ? (0, r.jsx)(S.Z, {})
-        : (0, r.jsxs)(E.Gt, {
+        : (0, r.jsxs)(_.Gt, {
               value: w,
               children: [
-                  (0, r.jsx)(_.Z, {}),
+                  (0, r.jsx)(E.Z, {}),
                   G &&
                       !c &&
                       (0, r.jsx)(h.SegmentedControl, {

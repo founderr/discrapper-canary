@@ -23,8 +23,8 @@ var i = n(200651),
     S = n(311476),
     T = n(165583),
     C = n(197115),
-    E = n(504983),
-    _ = n(626135),
+    _ = n(504983),
+    E = n(626135),
     f = n(981631),
     I = n(921944),
     N = n(474936),
@@ -76,7 +76,7 @@ let j = () => {
         return (
             s.useEffect(() => {
                 l &&
-                    _.default.track(f.rMx.PREMIUM_UPSELL_VIEWED, {
+                    E.default.track(f.rMx.PREMIUM_UPSELL_VIEWED, {
                         type: N.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                         location_stack: n
                     });
@@ -93,10 +93,10 @@ let j = () => {
                             : (0, i.jsxs)(i.Fragment, {
                                   children: [
                                       (0, i.jsx)(h.ZP.Basic, { className: b.basicThemeSelectors }),
-                                      (0, i.jsxs)(E.Z, {
+                                      (0, i.jsxs)(_.Z, {
                                           className: b.featureBorder,
                                           isShown: l,
-                                          type: E.Y.PREMIUM,
+                                          type: _.Y.PREMIUM,
                                           children: [
                                               (0, i.jsx)(h.ZP.Gradient, {
                                                   disabled: l,

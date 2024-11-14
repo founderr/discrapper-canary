@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         ConnectedPrivacySettings: function () {
-            return E;
+            return _;
         },
         PrivacySettingSurfaces: function () {
             return i;
@@ -126,7 +126,7 @@ function C(e) {
             }),
             (0, r.jsx)(a.ModalContent, {
                 className: S.content,
-                children: (0, r.jsx)(E, {
+                children: (0, r.jsx)(_, {
                     guild: t,
                     ingress: 'server_privacy_modal'
                 })
@@ -140,7 +140,7 @@ function C(e) {
         ]
     });
 }
-function E(e) {
+function _(e) {
     let { guild: t, ingress: n = 'server_privacy_modal' } = e,
         i = t.id,
         s = c.h2.useSetting().includes(i),

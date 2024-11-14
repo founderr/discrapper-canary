@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return _;
     }
 }),
     n(47120);
@@ -81,7 +81,7 @@ function C(e) {
         })
     });
 }
-function E(e) {
+function _(e) {
     let { sound: t, isGlobal: n, onSelect: s } = e,
         r = null != t,
         c = null == t ? void 0 : t.emojiId,

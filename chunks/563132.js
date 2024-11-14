@@ -43,8 +43,8 @@ var r = n(200651),
     D = n(994427),
     G = n(814076),
     Z = n(712297),
-    B = n(585686),
-    F = n(771206),
+    F = n(585686),
+    B = n(771206),
     K = n(362755),
     H = n(981631),
     y = n(474936);
@@ -52,7 +52,7 @@ let [h, m, Y] = (0, N.Z)();
 function w(t) {
     var e, n, N;
     let { loadId: m, activeSubscription: Y, stepConfigs: w, breadcrumbs: W = [], skuIDs: g, isGift: V = !1, children: v, defaultPlanId: b, purchaseType: k = H.GZQ.SUBSCRIPTION, applicationId: Q, referralCode: X, repeatPurchase: J = !1 } = t,
-        x = (0, F.Z)(),
+        x = (0, B.Z)(),
         j = (0, T.Q)(),
         q = (0, f.Z)(),
         {
@@ -86,7 +86,7 @@ function w(t) {
             steps: tI,
             breadcrumbsData: tc,
             previousStepRef: tR
-        } = (0, B.Z)({
+        } = (0, F.Z)({
             stepConfigs: w,
             breadcrumbs: W
         }),
@@ -105,7 +105,7 @@ function w(t) {
         }),
         { selectedSkuId: tO, selectedPlan: tL, setSelectedSkuId: tp, setSelectedPlanId: tD } = (0, U.Z)(),
         [tG, tZ] = (0, o.Wu)([c.Z], () => [c.Z.purchaseTokenAuthState, c.Z.purchaseTokenHash]),
-        [tB, tF] = (0, o.Wu)([K.Z], () => [K.Z.browserCheckoutState, K.Z.loadId]),
+        [tF, tB] = (0, o.Wu)([K.Z], () => [K.Z.browserCheckoutState, K.Z.loadId]),
         [tK, tH] = E.useState(null),
         [ty, th] = E.useState(null),
         [tm, tY] = E.useState(null),
@@ -193,8 +193,8 @@ function w(t) {
             purchaseErrorBlockRef: tU,
             purchaseTokenAuthState: tG,
             purchaseTokenHash: tZ,
-            browserCheckoutState: tB,
-            browserCheckoutStateLoadId: tF,
+            browserCheckoutState: tF,
+            browserCheckoutStateLoadId: tB,
             bodyNode: tK,
             setBodyNode: tH,
             footerNode: ty,

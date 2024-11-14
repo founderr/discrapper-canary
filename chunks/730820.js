@@ -21,8 +21,8 @@ var i = n(200651),
     S = n(607018),
     T = n(778764),
     C = n(314897),
-    E = n(325067),
-    _ = n(594174),
+    _ = n(325067),
+    E = n(594174),
     f = n(572004),
     I = n(287880),
     N = n(714565),
@@ -338,7 +338,7 @@ class B extends s.PureComponent {
                 });
             }),
             D(this, 'generateBackupCodes', async () => {
-                let e = E.Z.getVerificationKey();
+                let e = _.Z.getVerificationKey();
                 await c.Z.confirmViewBackupCodes(e, !0);
             }),
             D(this, 'sendMFABackupCodesVerificationKeyEmail', () => {
@@ -413,10 +413,10 @@ class B extends s.PureComponent {
     }
 }
 function L(e) {
-    let t = (0, a.e7)([_.default], () => _.default.getCurrentUser());
+    let t = (0, a.e7)([E.default], () => E.default.getCurrentUser());
     l()(null != t, 'TwoFactorAuth: currentUser cannot be undefined');
-    let n = (0, a.cj)([E.Z, C.default], () => ({
-        togglingSMS: E.Z.togglingSMS,
+    let n = (0, a.cj)([_.Z, C.default], () => ({
+        togglingSMS: _.Z.togglingSMS,
         hasTOTPEnabled: C.default.hasTOTPEnabled()
     }));
     return (0, i.jsx)(B, {

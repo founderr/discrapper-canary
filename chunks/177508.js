@@ -27,9 +27,9 @@ function C() {
         children: [(0, i.jsx)(I, {}), (0, i.jsx)(O, {}), (0, i.jsx)(R, {}), (0, i.jsx)(v, {}), (0, i.jsx)(b, {}), (0, i.jsx)(A, {}), (0, i.jsx)(N, {}), (0, i.jsx)(P, {})]
     });
 }
-let E = ['neutral', 'blue_new', 'blurple', 'green_new', 'red_new', 'teal_new', 'yellow_new', 'orange_new'];
-function _() {
-    return E.map((e) =>
+let _ = ['neutral', 'blue_new', 'blurple', 'green_new', 'red_new', 'teal_new', 'yellow_new', 'orange_new'];
+function E() {
+    return _.map((e) =>
         (0, i.jsxs)(
             'div',
             {
@@ -79,7 +79,7 @@ function f() {
             },
             {
                 title: 'Colors',
-                component: () => (0, i.jsx)(_, {}),
+                component: () => (0, i.jsx)(E, {}),
                 setting: m.s6.DESIGN_SYSTEMS_COLORS
             }
         ]

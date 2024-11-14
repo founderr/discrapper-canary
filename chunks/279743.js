@@ -23,10 +23,10 @@ function g(e) {
         S = (0, c.useToken)(g).spring({ opacity: 0.1 }),
         T = (0, c.useToken)(g).spring({ opacity: 0 }),
         C = (0, c.useToken)(g).spring({ opacity: 1 }),
-        E = (e) => {
+        _ = (e) => {
             e.finished && (null == r || r());
         },
-        [_, f] = (0, c.useSpring)(
+        [E, f] = (0, c.useSpring)(
             () => ({
                 from: {
                     backgroundColor: x,
@@ -78,11 +78,11 @@ function g(e) {
                         duration: N,
                         easing: o.Z.Easing.ease
                     },
-                    onRest: E
+                    onRest: _
                 });
         }, [f]),
         (0, i.jsx)(a.animated.div, {
-            style: _,
+            style: E,
             className: l()(h.settingsItemHighlight, n),
             children: t
         })

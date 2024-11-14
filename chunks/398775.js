@@ -1,9 +1,9 @@
 n.d(t, {
     Sz: function () {
-        return _;
+        return E;
     },
     of: function () {
-        return E;
+        return _;
     }
 }),
     n(653041),
@@ -32,7 +32,7 @@ async function C(e) {
         s(!0), r(!1);
     }
 }
-function E(e) {
+function _(e) {
     let { premiumType: t, onClose: n, pauseDuration: r, setPauseDuration: l, footer: o, premiumSubscription: d } = e,
         u = s.useCallback(
             (e) => {
@@ -109,10 +109,10 @@ function E(e) {
         })
     );
 }
-function _(e) {
+function E(e) {
     let { premiumSubscription: t, premiumType: n, onClose: r, pauseDuration: a, analyticsLocation: d } = e,
-        [g, E] = s.useState(!1),
-        { analyticsLocations: _ } = (0, m.ZP)(),
+        [g, _] = s.useState(!1),
+        { analyticsLocations: E } = (0, m.ZP)(),
         [f, I] = s.useState(!1),
         N = (0, u.ZP)(),
         A = null,
@@ -183,9 +183,9 @@ function _(e) {
                                         premiumSubscription: t,
                                         pauseDuration: a,
                                         setIsCancelling: I,
-                                        setHasError: E,
+                                        setHasError: _,
                                         onClose: r,
-                                        analyticsLocations: _,
+                                        analyticsLocations: E,
                                         analyticsLocation: d
                                     });
                                 },

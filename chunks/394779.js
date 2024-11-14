@@ -6,8 +6,8 @@ t.d(n, {
 var a = t(200651),
     r = t(192379),
     i = t(120356),
-    l = t.n(i),
-    o = t(481060),
+    o = t.n(i),
+    l = t(481060),
     s = t(346610),
     u = t(868643),
     c = t(912332),
@@ -15,7 +15,7 @@ var a = t(200651),
     f = t(388032),
     h = t(760997);
 function _() {
-    (0, o.closeModal)(d.U);
+    (0, l.closeModal)(d.U);
 }
 function p(e) {
     let { className: n, message: t, target: i } = e,
@@ -40,10 +40,10 @@ function p(e) {
                 onRequestSent: _
             });
         }, [t, i]);
-    return (0, a.jsx)(o.Clickable, {
-        className: l()(h.container, n),
+    return (0, a.jsx)(l.Clickable, {
+        className: o()(h.container, n),
         onClick: s,
-        children: (0, a.jsx)(o.Text, {
+        children: (0, a.jsx)(l.Text, {
             className: h.text,
             variant: 'text-sm/medium',
             color: 'always-white',

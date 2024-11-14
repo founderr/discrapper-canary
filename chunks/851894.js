@@ -20,8 +20,8 @@ var i = n(200651),
     S = n(246946),
     T = n(594174),
     C = n(63063),
-    E = n(74538),
-    _ = n(18438),
+    _ = n(74538),
+    E = n(18438),
     f = n(778825),
     I = n(856607),
     N = n(594496),
@@ -54,7 +54,7 @@ function O(e) {
             ...f.Z.getAllPending(),
             source: f.Z.getSource()
         }));
-    return (s.useEffect(() => () => c.Z.wait(_.W3), []),
+    return (s.useEffect(() => () => c.Z.wait(E.W3), []),
     s.useEffect(() => {
         null != P &&
             m.ZP.trackWithMetadata(b.rMx.SETTINGS_PANE_VIEWED, {
@@ -79,7 +79,7 @@ function O(e) {
                                   (0, i.jsx)(A.Z, {
                                       guildId: t.id,
                                       onChange: (e) => {
-                                          null != e && (0, _.HP)(e);
+                                          null != e && (0, E.HP)(e);
                                       }
                                   }),
                                   (0, i.jsx)(g.Z, {
@@ -87,7 +87,7 @@ function O(e) {
                                       profilePreview: (0, i.jsx)(p.Z, {
                                           user: r,
                                           guild: t,
-                                          canUsePremiumCustomization: E.ZP.canUsePremiumProfileCustomization(r),
+                                          canUsePremiumCustomization: _.ZP.canUsePremiumProfileCustomization(r),
                                           onUpsellClick: j,
                                           ...D
                                       }),

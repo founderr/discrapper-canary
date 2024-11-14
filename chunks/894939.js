@@ -21,8 +21,8 @@ var i = n(200651),
     S = n(63063),
     T = n(581883),
     C = n(918257),
-    E = n(726985),
-    _ = n(981631),
+    _ = n(726985),
+    E = n(981631),
     f = n(710111),
     I = n(388032),
     N = n(919929),
@@ -59,11 +59,11 @@ function v() {
         title: I.intl.string(I.t.ABjMWF),
         children: [
             (0, i.jsx)(u.F, {
-                setting: E.s6.VOICE_AND_VIDEO_SOUNDBOARD,
+                setting: _.s6.VOICE_AND_VIDEO_SOUNDBOARD,
                 children: (0, i.jsx)(C.Z, {})
             }),
             (0, i.jsxs)(u.F, {
-                setting: E.s6.VOICE_AND_VIDEO_ENTRANCE_SOUNDS,
+                setting: _.s6.VOICE_AND_VIDEO_ENTRANCE_SOUNDS,
                 children: [
                     (0, i.jsx)(l.FormDivider, { className: N.callSoundsDivider }),
                     (0, i.jsx)(l.Heading, {
@@ -75,7 +75,7 @@ function v() {
                     (0, i.jsx)(l.Text, {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
-                        children: I.intl.format(I.t.u9RWmp, { helpdeskArticle: S.Z.getArticleURL(_.BhN.SOUNDBOARD) })
+                        children: I.intl.format(I.t.u9RWmp, { helpdeskArticle: S.Z.getArticleURL(E.BhN.SOUNDBOARD) })
                     }),
                     (0, i.jsx)(c.Z, {
                         guildId: t,
