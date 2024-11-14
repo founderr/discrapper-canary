@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return j;
+        return A;
     }
 }),
     t(477488),
@@ -14,47 +14,45 @@ var r = t(200651),
     u = t(100621),
     c = t(484957),
     d = t(481060),
-    m = t(376641),
-    h = t(714338),
-    f = t(95398),
-    p = t(247206),
-    g = t(134432),
-    _ = t(169525),
-    x = t(585483),
-    C = t(212459),
-    v = t(683528),
+    m = t(95398),
+    f = t(247206),
+    h = t(134432),
+    p = t(169525),
+    g = t(585483),
+    _ = t(212459),
+    x = t(683528),
     S = t(549635),
-    E = t(981631),
-    y = t(388032),
-    L = t(193889);
-function I(e, n) {
+    C = t(981631),
+    v = t(388032),
+    E = t(193889);
+function y(e, n) {
     return ((e % n) + n) % n;
 }
-function A(e) {
+function L(e) {
     let { width: n, height: t } = e;
     return null == n || 0 === n || null == t || 0 === t;
 }
-function R(e) {
+function I(e) {
     let { children: n, isObscured: t, src: a } = e,
         [o, s] = i.useState(!1),
         u = i.useCallback(() => {
             s((e) => !e);
         }, []);
     return t
-        ? (0, r.jsx)(f.a.Provider, {
+        ? (0, r.jsx)(m.a.Provider, {
               value: o,
               children: (0, r.jsx)(
-                  f.Z,
+                  m.Z,
                   {
-                      type: f.Z.Types.ATTACHMENT,
-                      reason: _.wk.EXPLICIT_CONTENT,
+                      type: m.Z.Types.ATTACHMENT,
+                      reason: p.wk.EXPLICIT_CONTENT,
                       obscured: !0,
                       isSingleMosaicItem: !0,
                       onToggleObscurity: u,
                       children: (e) =>
                           (0, r.jsx)(r.Fragment, {
                               children: (0, r.jsx)('div', {
-                                  className: l()(L.obscureWrapper, { [L.obscure]: e }),
+                                  className: l()(E.obscureWrapper, { [E.obscure]: e }),
                                   children: n(e)
                               })
                           })
@@ -64,75 +62,65 @@ function R(e) {
           })
         : (0, r.jsx)(r.Fragment, { children: n(!1) });
 }
-function j(e) {
+function A(e) {
     var n;
-    let { items: t, onIndexChange: a, startIndex: l = 0, shouldRedactExplicitContent: o = !1, shouldHideMediaOptions: f = !1 } = e,
-        [_, I] = i.useState(l),
-        j = i.useRef(l),
-        [M, O] = i.useState([]),
-        { zoomed: b, setZoomed: T } = (0, C.Y)();
-    i.useEffect(
-        () => (
-            h.Z.disable(),
-            h.Z.enableTemp(m.P),
-            () => {
-                h.Z.disableTemp();
-            }
-        ),
-        []
-    ),
-        i.useEffect(() => {
-            var e, n;
-            let r = (((_ + 1) % (e = t.length)) + e) % e;
-            let i = (((_ - 1) % (n = t.length)) + n) % n;
-            A(t[r]) && (0, g.po)(t[r].url), A(t[i]) && (0, g.po)(t[i].url);
-        }, [_, t]);
-    let P = i.useCallback(
+    let { items: t, onIndexChange: a, startIndex: l = 0, shouldRedactExplicitContent: o = !1, shouldHideMediaOptions: m = !1 } = e,
+        [p, y] = i.useState(l),
+        A = i.useRef(l),
+        [R, M] = i.useState([]),
+        { zoomed: O, setZoomed: b } = (0, _.Y)();
+    i.useEffect(() => {
+        var e, n;
+        let r = (((p + 1) % (e = t.length)) + e) % e;
+        let i = (((p - 1) % (n = t.length)) + n) % n;
+        L(t[r]) && (0, h.po)(t[r].url), L(t[i]) && (0, h.po)(t[i].url);
+    }, [p, t]);
+    let j = i.useCallback(
         (e) => {
             var n;
-            let r = e - j.current;
-            I((e = ((e % (n = t.length)) + n) % n)), (j.current = e), O((e) => [...e, r]), null == a || a(e), T(!1);
+            let r = e - A.current;
+            y((e = ((e % (n = t.length)) + n) % n)), (A.current = e), M((e) => [...e, r]), null == a || a(e), b(!1);
         },
-        [a, t, T]
+        [a, t, b]
     );
     i.useEffect(() => {
         let e = s()(() => {
-                P(j.current + 1);
+                j(A.current + 1);
             }, 300),
             n = s()(() => {
-                P(j.current - 1);
+                j(A.current - 1);
             }, 300);
         return (
-            x.S.subscribe(E.CkL.MODAL_CAROUSEL_NEXT, e),
-            x.S.subscribe(E.CkL.MODAL_CAROUSEL_PREV, n),
+            g.S.subscribe(C.CkL.MODAL_CAROUSEL_NEXT, e),
+            g.S.subscribe(C.CkL.MODAL_CAROUSEL_PREV, n),
             () => {
-                x.S.unsubscribe(E.CkL.MODAL_CAROUSEL_NEXT, e), x.S.unsubscribe(E.CkL.MODAL_CAROUSEL_PREV, n);
+                g.S.unsubscribe(C.CkL.MODAL_CAROUSEL_NEXT, e), g.S.unsubscribe(C.CkL.MODAL_CAROUSEL_PREV, n);
             }
         );
-    }, [P, T]);
-    let k = t[_],
-        D = (0, p.KP)(
+    }, [j, b]);
+    let T = t[p],
+        D = (0, f.KP)(
             {
-                type: p.lJ.GenericMedia,
-                media: k
+                type: f.lJ.GenericMedia,
+                media: T
             },
             o
         ),
-        N = f
+        P = m
             ? (e) => {
                   e.stopPropagation(), e.preventDefault();
               }
             : void 0,
-        Z = (function (e) {
+        k = (function (e) {
             if (0 === e) return ['translateX(0)'];
             let n = ['translateX(100px)', 'translateX(-100px)'];
             return e > 0 ? n : n.toReversed();
-        })(null !== (n = M[M.length - 1]) && void 0 !== n ? n : 0),
-        w = (0, d.useTransition)(k, {
-            key: k.url,
+        })(null !== (n = R[R.length - 1]) && void 0 !== n ? n : 0),
+        N = (0, d.useTransition)(T, {
+            key: T.url,
             from: {
                 opacity: 0,
-                transform: Z[0]
+                transform: k[0]
             },
             enter: {
                 opacity: 1,
@@ -140,46 +128,46 @@ function j(e) {
             },
             leave: {
                 opacity: 0,
-                transform: Z[Z.length - 1]
+                transform: k[k.length - 1]
             },
             config: {
                 friction: 20,
                 tension: 250
             }
         }),
-        U = t.length > 1;
+        Z = t.length > 1;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {
-                className: L.wrapper,
+                className: E.wrapper,
                 children: [
-                    U
+                    Z
                         ? (0, r.jsx)(d.CircleIconButton, {
-                              className: L.navPrev,
+                              className: E.navPrev,
                               size: d.CircleIconButtonSizes.SIZE_36,
-                              onClick: () => x.S.dispatch(E.CkL.MODAL_CAROUSEL_PREV),
+                              onClick: () => g.S.dispatch(C.CkL.MODAL_CAROUSEL_PREV),
                               icon: (0, r.jsx)(c.j, {}),
-                              tooltip: y.intl.string(y.t.vgfxaG),
+                              tooltip: v.intl.string(v.t.vgfxaG),
                               color: d.CircleIconButtonColors.PRIMARY
                           })
                         : null,
                     (0, r.jsx)('div', {
-                        className: L.mediaContainer,
-                        children: w((e, n) =>
+                        className: E.mediaContainer,
+                        children: N((e, n) =>
                             (0, r.jsx)(r.Fragment, {
                                 children: (0, r.jsx)(
                                     u.animated.div,
                                     {
                                         style: e,
-                                        className: L.mediaWrapper,
-                                        children: (0, r.jsx)(R, {
-                                            isObscured: !b && D,
+                                        className: E.mediaWrapper,
+                                        children: (0, r.jsx)(I, {
+                                            isObscured: !O && D,
                                             src: n.url,
                                             children: (e) =>
                                                 (0, r.jsx)(S.Z, {
                                                     media: n,
                                                     obscured: e,
-                                                    onContextMenu: N
+                                                    onContextMenu: P
                                                 })
                                         })
                                     },
@@ -188,23 +176,23 @@ function j(e) {
                             })
                         )
                     }),
-                    U
+                    Z
                         ? (0, r.jsx)(d.CircleIconButton, {
-                              className: L.navNext,
+                              className: E.navNext,
                               size: d.CircleIconButtonSizes.SIZE_36,
-                              onClick: () => x.S.dispatch(E.CkL.MODAL_CAROUSEL_NEXT),
+                              onClick: () => g.S.dispatch(C.CkL.MODAL_CAROUSEL_NEXT),
                               icon: (0, r.jsx)(d.ArrowLargeRightIcon, {}),
-                              tooltip: y.intl.string(y.t.XiOHRU),
+                              tooltip: v.intl.string(v.t.XiOHRU),
                               color: d.CircleIconButtonColors.PRIMARY
                           })
                         : null
                 ]
             }),
-            U &&
-                (0, r.jsx)(v.Z, {
+            Z &&
+                (0, r.jsx)(x.Z, {
                     items: t,
-                    currentIndex: _,
-                    onGalleryItemClick: P
+                    currentIndex: p,
+                    onGalleryItemClick: j
                 })
         ]
     });

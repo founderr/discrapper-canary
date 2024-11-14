@@ -1,7 +1,7 @@
 t.r(n),
     t.d(n, {
         default: function () {
-            return g;
+            return x;
         }
     }),
     t(47120);
@@ -10,70 +10,83 @@ var r = t(200651),
     a = t(120356),
     l = t.n(a),
     o = t(481060),
-    s = t(585483),
-    u = t(212459),
-    c = t(73249),
-    d = t(730606),
-    m = t(860153),
-    h = t(981631),
-    f = t(388032),
-    p = t(619377);
-function g(e) {
-    let { onClose: n, items: t, startingIndex: a, onIndexChange: g, shouldRedactExplicitContent: _, shouldHideMediaOptions: x = !1, className: C, ...v } = e,
-        [S, E] = i.useState(null != a ? a : 0),
-        [y, L] = i.useState(!1);
+    s = t(376641),
+    u = t(714338),
+    c = t(585483),
+    d = t(212459),
+    m = t(73249),
+    f = t(730606),
+    h = t(860153),
+    p = t(981631),
+    g = t(388032),
+    _ = t(619377);
+function x(e) {
+    let { onClose: n, items: t, startingIndex: a, onIndexChange: x, shouldRedactExplicitContent: S, shouldHideMediaOptions: C = !1, className: v, transitionState: E, ...y } = e,
+        [L, I] = i.useState(null != a ? a : 0),
+        [A, R] = i.useState(!1);
     i.useEffect(() => {
         if (null != n)
             return (
-                s.S.subscribe(h.CkL.MEDIA_MODAL_CLOSE, n),
+                c.S.subscribe(p.CkL.MEDIA_MODAL_CLOSE, n),
                 () => {
-                    s.S.unsubscribe(h.CkL.MEDIA_MODAL_CLOSE, n);
+                    c.S.unsubscribe(p.CkL.MEDIA_MODAL_CLOSE, n);
                 }
             );
-    }, [n]);
-    let I = i.useCallback(
+    }, [n]),
+        i.useEffect(
+            () => (
+                E === o.ModalTransitionState.ENTERED && (u.Z.disable(), u.Z.enableTemp(s.P)),
+                E === o.ModalTransitionState.HIDDEN && (u.Z.disable(), u.Z.enableTemp(s.v)),
+                () => {
+                    u.Z.disableTemp();
+                }
+            ),
+            [E]
+        );
+    let M = i.useCallback(
             (e) => {
-                E(e), null == g || g(e);
+                I(e), null == x || x(e);
             },
-            [g]
+            [x]
         ),
-        A = i.useMemo(
+        O = i.useMemo(
             () => ({
-                zoomed: y,
-                setZoomed: L
+                zoomed: A,
+                setZoomed: R
             }),
-            [y]
+            [A]
         ),
-        R = t[S];
+        b = t[L];
     return (0, r.jsx)(o.ThemeProvider, {
-        theme: h.BRd.DARK,
+        theme: p.BRd.DARK,
         children: (e) =>
             (0, r.jsx)(o.ModalRoot, {
                 hideShadow: !0,
-                className: l()(p.carouselModal, e),
-                ...v,
+                className: l()(_.carouselModal, e),
+                transitionState: E,
+                ...y,
                 size: o.ModalSize.DYNAMIC,
                 fullscreenOnMobile: !1,
-                'aria-label': f.intl.string(f.t.AMTX3t),
-                children: (0, r.jsxs)(u.z.Provider, {
-                    value: A,
+                'aria-label': g.intl.string(g.t.AMTX3t),
+                children: (0, r.jsxs)(d.z.Provider, {
+                    value: O,
                     children: [
-                        (0, r.jsx)(m.Z, {
-                            item: R,
+                        (0, r.jsx)(h.Z, {
+                            item: b,
                             onClose: n
                         }),
-                        (0, r.jsx)(d.Z, {
+                        (0, r.jsx)(f.Z, {
                             items: t,
-                            startIndex: S,
-                            onIndexChange: I,
-                            shouldRedactExplicitContent: _,
-                            shouldHideMediaOptions: x
+                            startIndex: L,
+                            onIndexChange: M,
+                            shouldRedactExplicitContent: S,
+                            shouldHideMediaOptions: C
                         }),
                         (0, r.jsx)('div', {
-                            className: p.actionButtonContainer,
-                            children: (0, r.jsx)(c.Z, {
-                                item: R,
-                                hideMediaOptions: ('IMAGE' === R.type && null == R.original) || x
+                            className: _.actionButtonContainer,
+                            children: (0, r.jsx)(m.Z, {
+                                item: b,
+                                hideMediaOptions: ('IMAGE' === b.type && null == b.original) || C
                             })
                         })
                     ]
