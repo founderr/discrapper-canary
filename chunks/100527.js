@@ -28,6 +28,7 @@ var n, r;
     (r.FRIEND_REQUESTS = 'friend requests'),
     (r.SUGGESTED_FRIENDS = 'suggested friends'),
     (r.BLOCKED_USERS = 'blocked users'),
+    (r.IGNORED_USERS = 'ignored users'),
     (r.PREMIUM_MARKETING = 'premium marketing'),
     (r.PREMIUM_MARKETING_PLAN_COMPARISON = 'premium marketing plan comparison'),
     (r.PREMIUM_PAYMENT_MODAL = 'premium payment modal'),
