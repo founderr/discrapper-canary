@@ -39,8 +39,8 @@ function y(e, t, n) {
         e
     );
 }
-let R = 1 * N.Z.Millis.DAY,
-    O = 3 * N.Z.Millis.DAY,
+let O = 1 * N.Z.Millis.DAY,
+    R = 3 * N.Z.Millis.DAY,
     P = [],
     j = null,
     D = 0,
@@ -174,7 +174,7 @@ function ec() {
     let e = 'recommendedGuilds',
         t = Object.values(_.Z.getGuilds()).filter((e) => e.isCommunity()).length >= 5,
         n = b.Z.getReadTimestamp(e);
-    if (t && null != n && Date.now() - ei > R && Date.now() - n < O) return;
+    if (t && null != n && Date.now() - ei > O && Date.now() - n < R) return;
     let i = {
         id: e,
         type: A.Rr.RECOMMENDED_GUILDS,

@@ -9,7 +9,7 @@ s.d(t, {
         return T;
     },
     Kn: function () {
-        return A;
+        return E;
     },
     Nq: function () {
         return p;
@@ -33,7 +33,7 @@ s.d(t, {
         return m;
     },
     wG: function () {
-        return E;
+        return A;
     }
 });
 var n = s(442837),
@@ -102,12 +102,12 @@ let p = '40%',
         let t = v(e);
         return t === d.g2L.COOLDOWN || t === d.g2L.UNAPPLIED || t === d.g2L.QUALIFIED;
     },
-    E = (e) => {
+    A = (e) => {
         let t = j(e),
             s = (0, i.wE)(r.z.REFERRAL_INCENTIVE_AWARDED_INFO);
         return t && !s;
     },
-    A = (e) => {
+    E = (e) => {
         let t = _(e),
             s = g(e),
             n = (0, i.wE)(r.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE);

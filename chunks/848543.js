@@ -30,10 +30,10 @@ function A(e) {
     let { channel: t, iconClassName: l, className: A, innerClassName: b, ...x } = e,
         { mute: Z, suppress: L } = (0, g.Z)(t),
         y = (0, s.e7)([f.Z], () => f.Z.isDeaf()),
-        R = Z || L || y,
-        [O, P] = r.useState(!1),
+        O = Z || L || y,
+        [R, P] = r.useState(!1),
         j = t.getGuildId(),
-        D = (0, E.sR)({ isSoundboardButtonDisabled: R }),
+        D = (0, E.sR)({ isSoundboardButtonDisabled: O }),
         [M, w] = (0, p.cv)(D),
         { analyticsLocations: k } = (0, m.ZP)(h.Z.SOUNDBOARD_BUTTON);
     function U(e) {
@@ -55,7 +55,7 @@ function A(e) {
         F = (e) =>
             (0, i.jsx)(d.Popout, {
                 animation: d.Popout.Animation.FADE,
-                shouldShow: O,
+                shouldShow: R,
                 position: 'top',
                 onRequestClose: () => P(!1),
                 renderPopout: (e) => {
@@ -79,15 +79,15 @@ function A(e) {
                             ...e,
                             ...t,
                             className: a()(A, {
-                                [T.buttonActive]: O,
-                                [T.disabled]: R
+                                [T.buttonActive]: R,
+                                [T.disabled]: O
                             }),
                             wrapperClassName: A,
                             innerClassName: b,
-                            disabled: R,
+                            disabled: O,
                             onClick: () => {
                                 var t, n;
-                                null != M && M !== o.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && w(S.L.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), P(!O), B();
+                                null != M && M !== o.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && w(S.L.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), P(!R), B();
                             },
                             onMouseEnter: (t) => {
                                 var n, i;
@@ -104,14 +104,14 @@ function A(e) {
                             children: (0, i.jsx)(G, {
                                 className: l,
                                 size: 'sm',
-                                color: O ? 'white' : d.tokens.colors.INTERACTIVE_ACTIVE
+                                color: R ? 'white' : d.tokens.colors.INTERACTIVE_ACTIVE
                             })
                         })
                     })
             }),
         z = r.useCallback(() => {
-            !R && P(!O);
-        }, [R, O]);
+            !O && P(!R);
+        }, [O, R]);
     return (
         (0, _.yp)({
             event: v.CkL.TOGGLE_SOUNDBOARD,

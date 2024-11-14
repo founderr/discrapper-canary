@@ -29,8 +29,8 @@ var i = n(200651),
     y = n(522756);
 t.Z = function (e) {
     let { sectionFilter: t, titleId: l } = e,
-        { analyticsLocations: R } = (0, p.ZP)(m.Z.FRIENDS_LIST),
-        { rows: O, section: P } = (0, s.cj)([E.ZP], () => E.ZP.getState()),
+        { analyticsLocations: O } = (0, p.ZP)(m.Z.FRIENDS_LIST),
+        { rows: R, section: P } = (0, s.cj)([E.ZP], () => E.ZP.getState()),
         j = (0, s.e7)([I.Z], () => I.Z.isFocused()),
         D = (0, s.e7)([_.Z], () => _.Z.getRelationshipCount()),
         [M, w] = r.useState(() => {
@@ -59,8 +59,8 @@ t.Z = function (e) {
                 [t]: ''
             });
         }, [M, t]),
-        B = (0, f.A)({ location: 'people_list' }) && t === Z.pJs.PENDING && O.filter(Z.pJs.SPAM).length > 0,
-        V = O.filter(t, M[t]);
+        B = (0, f.A)({ location: 'people_list' }) && t === Z.pJs.PENDING && R.filter(Z.pJs.SPAM).length > 0,
+        V = R.filter(t, M[t]);
     if (
         (r.useEffect(() => {
             t === Z.pJs.ALL && (0, g.d$)();
@@ -89,7 +89,7 @@ t.Z = function (e) {
         z = V.filter((e) => e.type === Z.OGo.PENDING_INCOMING).length,
         Y = t === Z.pJs.PENDING && z > 0 && z >= x.yf;
     return (0, i.jsx)(p.Gt, {
-        value: R,
+        value: O,
         children: (0, i.jsxs)(u.Z, {
             section: Z.jXE.FRIENDS_LIST,
             children: [

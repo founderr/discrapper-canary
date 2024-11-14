@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return k;
+            return B;
         }
     }),
     n(47120);
@@ -21,26 +21,26 @@ var r = n(200651),
     C = n(918701),
     g = n(475595),
     x = n(566078),
-    h = n(164495),
+    S = n(164495),
     E = n(472144),
-    S = n(602667),
+    h = n(602667),
     _ = n(644646),
     T = n(604162),
-    N = n(747717),
-    j = n(963123),
-    I = n(281055),
+    I = n(747717),
+    N = n(963123),
+    j = n(281055),
     b = n(46140),
     D = n(981631),
     y = n(388032),
-    B = n(417575);
-function A(e) {
+    A = n(417575);
+function k(e) {
     var t;
-    let { transitionState: n, onClose: i, quest: f, autoplay: A } = e,
-        k = (0, C.il)(f),
+    let { transitionState: n, onClose: i, quest: f, autoplay: k } = e,
+        B = (0, C.il)(f),
         L = (0, a.e7)([d.Z], () => d.Z.getState().theme),
         P = (0, s.wj)(L) ? D.BRd.DARK : D.BRd.LIGHT,
         M = (0, a.e7)([u.Z], () => u.Z.useReducedMotion),
-        [O, R] = o.useState(k.progressSeconds),
+        [O, R] = o.useState(B.progressSeconds),
         [w, F] = o.useState(!1),
         { completedRatio: Z, completedRatioDisplay: U } = (0, p.I)(f),
         [G, V] = (0, T.G6)(y.intl.string(y.t.RDE0SU), y.intl.string(y.t['+5kSoa']), 1700),
@@ -69,11 +69,11 @@ function A(e) {
     return (0, r.jsx)(c.ModalRoot, {
         transitionState: n,
         size: c.ModalSize.DYNAMIC,
-        className: B.modalRoot,
-        children: (0, r.jsx)(S.A, {
+        className: A.modalRoot,
+        children: (0, r.jsx)(h.A, {
             questOrQuests: f,
             questContent: v.jn.VIDEO_MODAL,
-            minViewTimeSeconds: I.zw,
+            minViewTimeSeconds: j.zw,
             trackGuildAndChannelMetadata: !0,
             children: (e) => {
                 var t, o;
@@ -81,27 +81,27 @@ function A(e) {
                     ref: (t) => {
                         e.current = t;
                     },
-                    className: B.modalBg,
+                    className: A.modalBg,
                     children: (0, r.jsx)('div', {
-                        className: B.modalBody,
+                        className: A.modalBody,
                         children: (0, r.jsxs)('div', {
-                            className: B.modalContent,
+                            className: A.modalContent,
                             children: [
                                 (0, r.jsxs)('div', {
-                                    className: B.contentHeader,
+                                    className: A.contentHeader,
                                     children: [
                                         (0, r.jsxs)(c.Clickable, {
-                                            className: B.contentHeaderGameInfo,
+                                            className: A.contentHeaderGameInfo,
                                             onClick: z,
                                             children: [
                                                 (0, r.jsx)('img', {
                                                     alt: f.config.messages.gameTitle,
-                                                    className: l()(B.contentHeaderLogotype, B.accentOnHover),
+                                                    className: l()(A.contentHeaderLogotype, A.accentOnHover),
                                                     src: (0, g.fh)(f, g.eC.LOGO_TYPE, P).url
                                                 }),
-                                                (0, r.jsx)(N.Z, {}),
+                                                (0, r.jsx)(I.Z, {}),
                                                 (0, r.jsxs)('div', {
-                                                    className: B.questHeading,
+                                                    className: A.questHeading,
                                                     children: [
                                                         (0, r.jsx)(c.Heading, {
                                                             variant: 'heading-md/semibold',
@@ -124,7 +124,7 @@ function A(e) {
                                             onTooltipHide: W,
                                             children: (e) =>
                                                 (0, r.jsx)(c.Clickable, {
-                                                    className: B.progressCont,
+                                                    className: A.progressCont,
                                                     ...e,
                                                     children: (0, r.jsx)(E.Z, {
                                                         quest: f,
@@ -133,7 +133,7 @@ function A(e) {
                                                         percentCompleteText: w ? U : void 0,
                                                         percentCompleteTextVariant: 'text-sm/medium',
                                                         children: (0, r.jsx)(_.Z, {
-                                                            className: B.questProgressRewardTile,
+                                                            className: A.questProgressRewardTile,
                                                             quest: f,
                                                             questContent: v.jn.VIDEO_MODAL,
                                                             autoplay: !1,
@@ -144,14 +144,14 @@ function A(e) {
                                         })
                                     ]
                                 }),
-                                (0, r.jsx)(j.Z, {
+                                (0, r.jsx)(N.Z, {
                                     quest: f,
                                     parentTransitionState: n,
                                     onOptimisticProgressUpdate: R,
-                                    autoplay: A
+                                    autoplay: k
                                 }),
                                 (0, r.jsxs)('div', {
-                                    className: B.contentFooter,
+                                    className: A.contentFooter,
                                     children: [
                                         (0, r.jsx)(c.Button, {
                                             onClick: i,
@@ -160,17 +160,17 @@ function A(e) {
                                             children: y.intl.string(y.t.cpT0Cg)
                                         }),
                                         (0, r.jsxs)('div', {
-                                            className: B.contentFooterButtonCont,
+                                            className: A.contentFooterButtonCont,
                                             children: [
                                                 (0, r.jsx)(c.Button, {
                                                     color: c.Button.Colors.PRIMARY,
                                                     onClick: H,
                                                     size: c.Button.Sizes.MEDIUM,
-                                                    className: B.copyLinkBtn,
+                                                    className: A.copyLinkBtn,
                                                     children: G
                                                 }),
-                                                (0, r.jsx)(h.i0, {
-                                                    className: B.claimBtn,
+                                                (0, r.jsx)(S.i0, {
+                                                    className: A.claimBtn,
                                                     size: c.Button.Sizes.MEDIUM,
                                                     quest: f,
                                                     useReducedMotion: M,
@@ -190,11 +190,11 @@ function A(e) {
         })
     });
 }
-function k(e) {
+function B(e) {
     let { questId: t, autoplay: n, ...o } = e,
         i = (0, a.e7)([f.Z], () => f.Z.getQuest(t));
     return null != i
-        ? (0, r.jsx)(A, {
+        ? (0, r.jsx)(k, {
               ...o,
               quest: i,
               autoplay: n

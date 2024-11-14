@@ -38,13 +38,13 @@ function b() {
             (0, c.showToast)((0, c.createToast)(T.intl.string(T.t.EDYbS0), c.ToastType.FAILURE));
         }, []),
         { rejectAll: y } = (0, f.m)({ onError: L }),
-        R = r.useCallback(() => {
+        O = r.useCallback(() => {
             y(t.map((e) => e.channel.id));
         }, [t, y]);
     r.useEffect(() => {
         p.default.track(N.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }), m.Z.increment({ name: o.V.SPAM_MESSAGE_REQUEST_VIEW });
     }, []);
-    let O = r.useCallback(
+    let R = r.useCallback(
             (e) => {
                 var n, r;
                 let { row: s } = e,
@@ -87,7 +87,7 @@ function b() {
                                               children: '\u2022'
                                           }),
                                           (0, i.jsx)(c.Button, {
-                                              onClick: R,
+                                              onClick: O,
                                               look: c.ButtonLooks.LINK,
                                               color: c.ButtonColors.LINK,
                                               size: c.ButtonSizes.SMALL,
@@ -102,7 +102,7 @@ function b() {
                     },
                     'message-requests-spam-title'
                 ),
-            [n, R, b]
+            [n, O, b]
         );
     return 0 === t.length
         ? (0, i.jsx)(C.Z, { section: S.pS.SPAM })
@@ -126,7 +126,7 @@ function b() {
                               sectionHeight: S.oi,
                               rowHeight: S.WN,
                               renderSection: P,
-                              renderRow: O,
+                              renderRow: R,
                               sections: [t.length],
                               chunkSize: 30,
                               fade: !0,

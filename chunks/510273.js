@@ -70,7 +70,7 @@ let g = (e) => {
 };
 function m(e) {
     let { achievement: t, unlocked: n } = e,
-        { name: a, description: m, rarity: f, hideDescriptionUntilUnlock: p, onAction: _ } = t,
+        { name: a, description: m, rarity: f, hideDescriptionUntilUnlock: _, onAction: p } = t,
         { color: h } = (0, o.F7)(f);
     r.useEffect(() => {
         let e = setTimeout(() => {
@@ -80,12 +80,12 @@ function m(e) {
             clearTimeout(e);
         };
     }, []);
-    let E = null != _ && n,
+    let E = null != p && n,
         b = E ? l.Clickable : 'div';
     return (0, i.jsxs)(b, {
         className: s()(u.container, E && u.actionable),
         onClick: () => {
-            E && _();
+            E && p();
         },
         children: [
             (0, i.jsx)('div', {
@@ -107,7 +107,7 @@ function m(e) {
                     (0, i.jsx)(l.Text, {
                         variant: 'text-xs/medium',
                         color: 'header-secondary',
-                        children: p && !n ? '?????' : m()
+                        children: _ && !n ? '?????' : m()
                     })
                 ]
             }),

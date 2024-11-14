@@ -18,8 +18,8 @@ var i = n(200651),
     g = n(150063),
     m = n(758119),
     f = n(100527),
-    p = n(906732),
-    _ = n(252618),
+    _ = n(906732),
+    p = n(252618),
     h = n(313201),
     E = n(605236),
     b = n(984370),
@@ -35,8 +35,8 @@ var i = n(200651),
     j = n(652262),
     P = n(880257),
     Z = n(631885),
-    M = n(830746),
-    O = n(731934),
+    O = n(830746),
+    M = n(731934),
     B = n(521450),
     w = n(292352),
     y = n(981631),
@@ -45,13 +45,13 @@ var i = n(200651),
     U = n(388032),
     D = n(379493);
 let G = {
-        [w.dG.REQUESTS]: () => (0, i.jsx)(O.Z, {}),
-        [w.dG.ACTIVITY]: () => (0, i.jsx)(M.Z, {}),
+        [w.dG.REQUESTS]: () => (0, i.jsx)(M.Z, {}),
+        [w.dG.ACTIVITY]: () => (0, i.jsx)(O.Z, {}),
         [w.dG.SETTINGS]: () => (0, i.jsx)(B.Z, {})
     },
     H = {
-        [w.dG.REQUESTS]: () => (0, i.jsx)(O.Z, {}),
-        [w.dG.ACTIVITY]: () => (0, i.jsx)(M.Z, {})
+        [w.dG.REQUESTS]: () => (0, i.jsx)(M.Z, {}),
+        [w.dG.ACTIVITY]: () => (0, i.jsx)(O.Z, {})
     };
 function V(e) {
     let { section: t, handleItemSelect: n } = e,
@@ -156,7 +156,7 @@ function W() {
         a = (0, c.e7)([R.Z], () => R.Z.getIsInitialized()),
         l = (0, j.M)(),
         { selectedTab: g, handleTabChange: f } = (0, A.Z)(),
-        p = (0, h.Dt)(),
+        _ = (0, h.Dt)(),
         b = N.default.getCurrentUser(),
         v = null != e,
         T = a && null != b && !v;
@@ -190,7 +190,7 @@ function W() {
               className: s()(D.container),
               'aria-label': U.intl.string(U.t.RZqaJi),
               children: [
-                  (0, i.jsx)(_.yY, { location: U.intl.string(U.t.RZqaJi) }),
+                  (0, i.jsx)(p.yY, { location: U.intl.string(U.t.RZqaJi) }),
                   (0, i.jsx)(V, {
                       section: g,
                       handleItemSelect: (e) => {
@@ -199,7 +199,7 @@ function W() {
                   }),
                   (0, i.jsx)(u.TabBar.Panel, {
                       id: g,
-                      'aria-labelledby': p,
+                      'aria-labelledby': _,
                       className: D.contentPanel,
                       children: (0, i.jsx)('div', { children: G[g]() })
                   })
@@ -207,14 +207,14 @@ function W() {
           });
 }
 function z() {
-    let { analyticsLocations: e } = (0, p.ZP)(f.Z.FAMILY_CENTER),
+    let { analyticsLocations: e } = (0, _.ZP)(f.Z.FAMILY_CENTER),
         t = (0, P.Z)(),
         n = (0, Z.M8)(),
         a = (0, E.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
         l = (0, c.e7)([R.Z], () => R.Z.getIsInitialized()),
         b = (0, j.M)(),
-        M = (0, c.e7)([v.Z], () => v.Z.theme),
-        { selectedTab: O, handleTabChange: B } = (0, A.Z)(),
+        O = (0, c.e7)([v.Z], () => v.Z.theme),
+        { selectedTab: M, handleTabChange: B } = (0, A.Z)(),
         G = (0, h.Dt)(),
         V = N.default.getCurrentUser(),
         W = null != t,
@@ -236,7 +236,7 @@ function z() {
                     is_considered_adult: t,
                     num_of_accepted_links: n,
                     selected_teen_id: b,
-                    initial_page: w.QH[O],
+                    initial_page: w.QH[M],
                     source: w._6[w.Mu.SIDENAV]
                 }),
                 x.Z.increment({ name: o.V.FAMILY_CENTER_VIEW }));
@@ -249,17 +249,17 @@ function z() {
             z && (0, m.mN)(k.L0.FAMILY_CENTER);
         }, [z]);
     if (z) return null;
-    let Y = O !== w.dG.SETTINGS ? O : w.dG.ACTIVITY,
+    let Y = M !== w.dG.SETTINGS ? M : w.dG.ACTIVITY,
         K = H[Y];
-    return (0, i.jsx)(p.Gt, {
+    return (0, i.jsx)(_.Gt, {
         value: e,
         children: (0, i.jsxs)('main', {
             className: s()(D.container, D.containerSidenav),
             'aria-label': U.intl.string(U.t.RZqaJi),
             children: [
-                (0, i.jsx)(_.yY, { location: U.intl.string(U.t.RZqaJi) }),
+                (0, i.jsx)(p.yY, { location: U.intl.string(U.t.RZqaJi) }),
                 (0, i.jsx)(F, {
-                    theme: M,
+                    theme: O,
                     section: Y,
                     handleItemSelect: (e) => {
                         B(e);

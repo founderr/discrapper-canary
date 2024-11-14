@@ -27,17 +27,17 @@ t.Z = (e) => {
         [x, Z] = r.useState(v.hO.INITIAL),
         L = (0, l.e7)([p.Z], () => p.Z.get(A)),
         y = (0, l.e7)([f.Z], () => f.Z.getRequest(A)),
-        R = (0, l.e7)([c.Z], () => c.Z.getGuild(A)),
-        { hasFetchedRequestToJoinGuilds: O, guildPreviewDisabled: P } = (0, l.cj)([f.Z], () => ({
+        O = (0, l.e7)([c.Z], () => c.Z.getGuild(A)),
+        { hasFetchedRequestToJoinGuilds: R, guildPreviewDisabled: P } = (0, l.cj)([f.Z], () => ({
             hasFetchedRequestToJoinGuilds: f.Z.hasFetchedRequestToJoinGuilds,
             guildPreviewDisabled: f.Z.getJoinRequestGuild(A)
         }));
     r.useEffect(() => {
-        null != R && (0, o.uL)(C.Z5c.CHANNEL(A));
-    }, [R, A]),
+        null != O && (0, o.uL)(C.Z5c.CHANNEL(A));
+    }, [O, A]),
         r.useEffect(() => {
-            !O && h.Z.fetchRequestToJoinGuilds();
-        }, [O]);
+            !R && h.Z.fetchRequestToJoinGuilds();
+        }, [R]);
     let j = r.useCallback((e) => {
             Z((t) => Math.max(t, e));
         }, []),

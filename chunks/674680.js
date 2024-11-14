@@ -26,13 +26,13 @@ let g = {
 function f(e) {
     var t;
     let { achievementId: n, unlocked: d, size: f = a.AvatarSizes.SIZE_40 } = e,
-        p = (0, s.ZP)(),
-        _ = (0, c.oX)(n);
-    if (null == _) return null;
+        _ = (0, s.ZP)(),
+        p = (0, c.oX)(n);
+    if (null == p) return null;
     let h = (0, a.getAvatarSpecs)(f),
-        { name: E, rarity: b } = _,
+        { name: E, rarity: b } = p,
         { color: x } = (0, c.F7)(b),
-        C = (0, r.wj)(p) ? g : m,
+        C = (0, r.wj)(_) ? g : m,
         v = (h.size - h.offset - 2 * h.stroke) * 0.8,
         T = h.size - h.stroke,
         N = {

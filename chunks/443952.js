@@ -28,8 +28,8 @@ var r = n(243814),
     Z = n(452426),
     L = n(561205),
     y = n(600027),
-    R = n(852926),
-    O = n(186901),
+    O = n(852926),
+    R = n(186901),
     P = n(981631);
 async function j(e, t, n, i) {
     let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : '',
@@ -37,7 +37,7 @@ async function j(e, t, n, i) {
     if (null == l || null == l.secrets || !(0, x.t9)(i, l.party, l.secrets)) throw new b.Z({ errorCode: P.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure an activity includes a party and appropriate secret.');
     let a = (0, p.Z)(l, C.Z);
     if (a) {
-        let { lock: t } = (0, R.jU)(e);
+        let { lock: t } = (0, O.jU)(e);
         return (0, o.h7)(l, a).then(() => {
             throw (t(), new b.Z({ errorCode: P.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure user does have have privacy enabled.'));
         });
@@ -53,7 +53,7 @@ async function j(e, t, n, i) {
 t.Z = {
     [P.Etm.SEND_ACTIVITY_JOIN_INVITE]: {
         scope: {
-            [O.Gp.ANY]: [r.x.RPC, O.lH]
+            [R.Gp.ANY]: [r.x.RPC, R.lH]
         },
         handler(e) {
             let {
@@ -67,7 +67,7 @@ t.Z = {
     },
     [P.Etm.CLOSE_ACTIVITY_JOIN_REQUEST]: {
         scope: {
-            [O.Gp.ANY]: [r.x.RPC, O.lH]
+            [R.Gp.ANY]: [r.x.RPC, R.lH]
         },
         handler(e) {
             let {
@@ -79,7 +79,7 @@ t.Z = {
     },
     [P.Etm.ACTIVITY_INVITE_USER]: {
         scope: {
-            [O.Gp.ANY]: [r.x.RPC, O.lH]
+            [R.Gp.ANY]: [r.x.RPC, R.lH]
         },
         validation: (e) =>
             (0, Z.Z)(e)
@@ -102,7 +102,7 @@ t.Z = {
     },
     [P.Etm.ACCEPT_ACTIVITY_INVITE]: {
         scope: {
-            [O.Gp.ANY]: [r.x.RPC, O.lH]
+            [R.Gp.ANY]: [r.x.RPC, R.lH]
         },
         validation: (e) =>
             (0, Z.Z)(e)
@@ -137,7 +137,7 @@ t.Z = {
     },
     [P.Etm.OPEN_INVITE_DIALOG]: {
         scope: {
-            [O.Gp.ANY]: [r.x.RPC, O.lH, O.wE]
+            [R.Gp.ANY]: [r.x.RPC, R.lH, R.wE]
         },
         handler(e) {
             let { socket: t } = e,
@@ -169,7 +169,7 @@ t.Z = {
     },
     [P.Etm.INITIATE_IMAGE_UPLOAD]: (0, l.S)(P.Etm.INITIATE_IMAGE_UPLOAD, {
         scope: {
-            [O.Gp.ANY]: [r.x.RPC, O.lH, O.wE]
+            [R.Gp.ANY]: [r.x.RPC, R.lH, R.wE]
         },
         handler(e) {
             var t;
@@ -216,7 +216,7 @@ t.Z = {
         }
     }),
     [P.Etm.OPEN_SHARE_MOMENT_DIALOG]: (0, l.S)(P.Etm.OPEN_SHARE_MOMENT_DIALOG, {
-        scope: { [O.Gp.ANY]: [O.wE] },
+        scope: { [R.Gp.ANY]: [R.wE] },
         handler(e) {
             var t;
             let {

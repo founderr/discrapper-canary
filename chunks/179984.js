@@ -11,8 +11,8 @@ var i = n(200651),
     g = n(100527),
     m = n(906732),
     f = n(15640),
-    p = n(594174),
-    _ = n(78839),
+    _ = n(594174),
+    p = n(78839),
     h = n(74538),
     E = n(775412),
     b = n(104494),
@@ -28,8 +28,8 @@ var i = n(200651),
     j = n(515846),
     P = n(102655),
     Z = n(768236),
-    M = n(314907),
-    O = n(826701);
+    O = n(314907),
+    M = n(826701);
 let B = () => {
         let e = (0, v.W1)();
         return (0, i.jsx)(T.Cy, {
@@ -51,7 +51,7 @@ let B = () => {
         let t,
             { premiumType: n } = e,
             r = (0, u.ZP)();
-        t = n === R.p9.TIER_0 ? ((0, o.wj)(r) ? P : Z) : (0, o.wj)(r) ? M : O;
+        t = n === R.p9.TIER_0 ? ((0, o.wj)(r) ? P : Z) : (0, o.wj)(r) ? O : M;
         let a = (0, h.Px)(n);
         return (0, i.jsx)('img', {
             src: t,
@@ -116,9 +116,9 @@ let B = () => {
 t.Z = (e) => {
     var t;
     let n,
-        { className: a, hideCTAs: P = !1, headingOverride: Z, hidePill: M = !1, selectedPlanColumnClassName: O, selectedPlanTier: U = R.p9.TIER_2 } = e,
+        { className: a, hideCTAs: P = !1, headingOverride: Z, hidePill: O = !1, selectedPlanColumnClassName: M, selectedPlanTier: U = R.p9.TIER_2 } = e,
         { analyticsLocations: D } = (0, m.ZP)(g.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
-        G = (0, l.e7)([_.ZP], () => _.ZP.hasFetchedSubscriptions()),
+        G = (0, l.e7)([p.ZP], () => p.ZP.hasFetchedSubscriptions()),
         H = (0, f.V)(),
         V = 'PlanComparisonTable';
     (0, d.j)({
@@ -131,7 +131,7 @@ t.Z = (e) => {
         });
     let F = (0, u.ZP)(),
         W = (0, o.ap)(F),
-        z = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
+        z = (0, l.e7)([_.default], () => _.default.getCurrentUser()),
         Y = (0, h.M5)(z, R.p9.TIER_2),
         K = (0, x.N)(),
         Q = null == K ? void 0 : null === (t = K.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
@@ -219,7 +219,7 @@ t.Z = (e) => {
               withBottomBorderRadius: !0,
               buttonsRow: null == Q
           }),
-        (n = M
+        (n = O
             ? null
             : null != Q || null != J
               ? (0, i.jsx)(T.Cy, {
@@ -246,7 +246,7 @@ t.Z = (e) => {
                     className: j.tableWrapper,
                     children: [
                         (0, i.jsx)('div', {
-                            className: s()(O, {
+                            className: s()(M, {
                                 [j.tier0ColumnOuter]: es,
                                 [j.tier2ColumnOuter]: !es
                             }),

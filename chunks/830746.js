@@ -11,16 +11,16 @@ var r = n(399606),
     g = n(302289),
     m = n(946690),
     f = n(456771),
-    p = n(292352),
-    _ = n(388032),
+    _ = n(292352),
+    p = n(388032),
     h = n(82484);
 t.Z = () => {
-    let e = (0, c.mq)(p.ne.ACTIVE),
+    let e = (0, c.mq)(_.ne.ACTIVE),
         t = (0, o.c)(),
         n = (0, r.e7)([s.default], () => s.default.getCurrentUser()),
-        E = (0, l.o)(_.intl.string(_.t['5RZ8Tk']), _.intl.string(_.t.bmhCnJ)),
-        b = (0, l.o)(_.intl.string(_.t.XKnFFh), _.intl.string(_.t['68zfxM'])),
-        x = (0, l.o)(_.intl.string(_.t['Rm/6a2']), _.intl.string(_.t['1xPTwM'])),
+        E = (0, l.o)(p.intl.string(p.t['5RZ8Tk']), p.intl.string(p.t.bmhCnJ)),
+        b = (0, l.o)(p.intl.string(p.t.XKnFFh), p.intl.string(p.t['68zfxM'])),
+        x = (0, l.o)(p.intl.string(p.t['Rm/6a2']), p.intl.string(p.t['1xPTwM'])),
         C = (0, a.useRedesignIconContext)().enabled;
     return void 0 === n
         ? null
@@ -37,17 +37,17 @@ t.Z = () => {
                           (0, i.jsx)(m.Z, {
                               iconClassName: h.chatCheckIcon,
                               icon: a.ChatCheckIcon,
-                              header: _.intl.string(_.t['001l3t']),
+                              header: p.intl.string(p.t['001l3t']),
                               description: E
                           }),
                           (0, i.jsx)(m.Z, {
                               icon: a.EyeIcon,
-                              header: _.intl.string(_.t.yipAeH),
+                              header: p.intl.string(p.t.yipAeH),
                               description: b
                           }),
                           (0, i.jsx)(m.Z, {
                               icon: C ? a.QrCodeIcon : (0, a.makeIconCompat)(f.Z),
-                              header: _.intl.string(_.t.hhOuMT),
+                              header: p.intl.string(p.t.hhOuMT),
                               description: x
                           })
                       ]

@@ -30,7 +30,7 @@ function T() {
         { tabs: A, selectedTab: b, setSelectedTab: x } = (0, _.Y)(),
         Z = (0, p.lg)(b),
         L = !C.MU.has(b),
-        { searchQuery: y, onSearchTextChange: R, onClearSearch: O, onSearchSubmit: P, isSearchVisible: j } = (0, f.H)({ loadId: e.current }),
+        { searchQuery: y, onSearchTextChange: O, onClearSearch: R, onSearchSubmit: P, isSearchVisible: j } = (0, f.H)({ loadId: e.current }),
         {
             searchBarState: D,
             onTabsAvailableWidthChange: M,
@@ -44,9 +44,9 @@ function T() {
         G = h.Z.useField('fetchedQuery'),
         B = r.useCallback(
             (e) => {
-                x(e), j && O();
+                x(e), j && R();
             },
-            [j, O, x]
+            [j, R, x]
         ),
         V = r.useMemo(
             () =>
@@ -82,7 +82,7 @@ function T() {
                         !j && (0, i.jsx)(c.z6, { scrollPosition: n }),
                         (0, i.jsx)(c.aV, {
                             icon: j ? l.ArrowLargeLeftIcon : l.ServerIcon,
-                            onClick: j ? O : void 0
+                            onClick: j ? R : void 0
                         }),
                         !j &&
                             (0, i.jsx)(d.Z, {
@@ -103,8 +103,8 @@ function T() {
                             (0, i.jsx)(u.Z, {
                                 query: y,
                                 placeholder: S.intl.string(S.t['5h0QOD']),
-                                onTextChange: R,
-                                onClear: O,
+                                onTextChange: O,
+                                onClear: R,
                                 onSubmit: P,
                                 onCollapsedClick: w,
                                 state: j ? v.WB.DEFAULT : D,

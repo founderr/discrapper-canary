@@ -1,6 +1,6 @@
 s.d(t, {
     A7: function () {
-        return S;
+        return y;
     },
     CI: function () {
         return N;
@@ -35,8 +35,8 @@ var n,
     L = s(227140),
     v = s(981631),
     j = s(921944),
-    E = s(388032),
-    A = s(938923);
+    A = s(388032),
+    E = s(938923);
 let O = 'url(#dark-purple-gradient)';
 function T(e) {
     return e.toLocaleString(C.default.locale, {
@@ -47,15 +47,15 @@ function T(e) {
 ((n = r || (r = {})).REFERRAL_PROGRAM = 'referral_program'), (n.TRIAL_FOR_ALL = 'trial_for_all');
 let I = () =>
         (0, i.jsxs)('div', {
-            className: A.coachtipContent,
+            className: E.coachtipContent,
             children: [
                 (0, i.jsx)(c.Heading, {
                     variant: 'heading-sm/bold',
-                    children: E.intl.string(E.t.USo4s7)
+                    children: A.intl.string(A.t.USo4s7)
                 }),
                 (0, i.jsx)(c.Text, {
                     variant: 'text-xs/normal',
-                    children: E.intl.format(E.t.AGKQq6, { numReferrals: 3 })
+                    children: A.intl.format(A.t.AGKQq6, { numReferrals: 3 })
                 })
             ]
         }),
@@ -71,29 +71,29 @@ let I = () =>
                 fill: 'white'
             })
         }),
-    y = () => (0, p.EW)(l.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: j.L.TAKE_ACTION }),
-    S = (e) => {
+    S = () => (0, p.EW)(l.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: j.L.TAKE_ACTION }),
+    y = (e) => {
         let { children: t } = e;
         return (0, i.jsx)(c.Popout, {
             shouldShow: !0,
             renderPopout: () =>
                 (0, i.jsx)(f.Z, {
-                    artClassName: A.coachmarkArt,
-                    dismissIconClassName: A.exitIcon,
-                    onDismissIconClick: y,
+                    artClassName: E.coachmarkArt,
+                    dismissIconClassName: E.exitIcon,
+                    onDismissIconClick: S,
                     dismissIcon: (0, i.jsx)(b, {}),
-                    headerClassName: A.incentiveCoachtipContent,
-                    contentClassName: A.incentiveCoachtipContainer,
-                    pointerClassName: A.incentiveTooltipPointer,
+                    headerClassName: E.incentiveCoachtipContent,
+                    contentClassName: E.incentiveCoachtipContainer,
+                    pointerClassName: E.incentiveTooltipPointer,
                     onTryFeature: () => {
-                        (0, x.uL)(v.Z5c.NITRO_HOME), y();
+                        (0, x.uL)(v.Z5c.NITRO_HOME), S();
                     },
                     art: (0, i.jsx)(i.Fragment, {
-                        children: (0, i.jsx)(h.Z, {
+                        children: (0, i.jsx)(h.ZP, {
                             staticPercentage: 100,
-                            iconClassName: A.incentiveIcon,
+                            iconClassName: E.incentiveIcon,
                             showAnimations: !1,
-                            progressCircleVariation: h.Q.NITRO_LOGO,
+                            progressCircleVariation: h.Qo.NITRO_LOGO,
                             ellipseOpacity: 1,
                             circleColor: O,
                             circleStroke: O,
@@ -102,10 +102,10 @@ let I = () =>
                     }),
                     position: 'right',
                     align: 'top',
-                    tryItText: E.intl.string(E.t.RzWDqa),
-                    header: E.intl.formatToPlainString(E.t.md2GU1, { discountRate: m.Nq }),
+                    tryItText: A.intl.string(A.t.RzWDqa),
+                    header: A.intl.formatToPlainString(A.t.md2GU1, { discountRate: m.Nq }),
                     hideDismissButton: !0,
-                    body: E.intl.formatToPlainString(E.t.mxPPxc, { discountRate: m.Nq }),
+                    body: A.intl.formatToPlainString(A.t.mxPPxc, { discountRate: m.Nq }),
                     dismissibleContent: l.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR,
                     maxWidth: 320
                 }),
@@ -127,17 +127,17 @@ let I = () =>
             ),
             (t = l
                 ? (0, i.jsxs)('div', {
-                      className: A.coachTipContainer,
+                      className: E.coachTipContainer,
                       children: [
                           (0, i.jsx)('div', {
-                              className: A.iconContainer,
-                              children: (0, i.jsx)(h.Z, {
+                              className: E.iconContainer,
+                              children: (0, i.jsx)(h.ZP, {
                                   staticPercentage: 100,
-                                  iconClassName: A.icon,
+                                  iconClassName: E.icon,
                                   showAnimations: !0,
-                                  progressCircleVariation: h.Q.NITRO_LOGO,
+                                  progressCircleVariation: h.Qo.NITRO_LOGO,
                                   ellipseOpacity: 1,
-                                  customAnimationClassName: A.customCircleAnimation,
+                                  customAnimationClassName: E.customCircleAnimation,
                                   circleColor: 'url(#purple-gradient)'
                               })
                           }),
@@ -145,22 +145,22 @@ let I = () =>
                       ]
                   })
                 : (0, i.jsxs)('div', {
-                      className: A.t4ACoachTipContainer,
+                      className: E.t4ACoachTipContainer,
                       children: [
                           (0, i.jsx)('div', {
-                              className: A.t4ACoachtipArtOuterContainer,
-                              children: (0, i.jsx)(B, {})
+                              className: E.t4ACoachtipArtOuterContainer,
+                              children: (0, i.jsx)(R, {})
                           }),
-                          (0, i.jsx)(R, { trialExpiration: (null == r ? void 0 : r.expires_at) != null ? Date.parse(r.expires_at) : void 0 })
+                          (0, i.jsx)(B, { trialExpiration: (null == r ? void 0 : r.expires_at) != null ? Date.parse(r.expires_at) : void 0 })
                       ]
                   })),
             (0, i.jsx)(c.Tooltip, {
                 text: t,
                 position: 'right',
-                'aria-label': l ? E.intl.string(E.t.USo4s7) : E.intl.string(E.t.Kkcmj4),
-                tooltipClassName: l ? A.marketingBadgeTooltip : A.t4AMarketingBadgeTooltip,
+                'aria-label': l ? A.intl.string(A.t.USo4s7) : A.intl.string(A.t.Kkcmj4),
+                tooltipClassName: l ? E.marketingBadgeTooltip : E.t4AMarketingBadgeTooltip,
                 allowOverflow: !0,
-                tooltipContentClassName: A.tooltipContent,
+                tooltipContentClassName: E.tooltipContent,
                 children: (e) =>
                     (0, i.jsx)('div', {
                         ...e,
@@ -175,33 +175,33 @@ let I = () =>
             o.useEffect(() => {
                 t && s();
             }, [t, s]),
-            (0, i.jsx)(L.Z, { copy: E.intl.string(E.t.y2b7CA) })
+            (0, i.jsx)(L.Z, { copy: A.intl.string(A.t.y2b7CA) })
         );
     },
-    B = () =>
+    R = () =>
         (0, i.jsx)('div', {
-            className: A.t4ACoachtipArtInnerContainer,
+            className: E.t4ACoachtipArtInnerContainer,
             children: (0, i.jsx)('img', {
                 src: 'https://cdn.discordapp.com/assets/content/49060ae409d6cf2fa9b58ad200d60c7f3f68b0927ef57df90b5b9c06c8d1bbe7.png',
                 alt: ''
             })
         }),
-    R = (e) => {
+    B = (e) => {
         let { trialExpiration: t } = e,
             s = (0, d.Z)(null != t ? t : Date.parse('2024-11-22T08:00:00Z'), 1000);
         return (0, i.jsxs)('div', {
-            className: A.t4aCoachtipContent,
+            className: E.t4aCoachtipContent,
             children: [
                 (0, i.jsx)(c.Heading, {
                     variant: 'heading-sm/bold',
-                    children: E.intl.string(E.t.Kkcmj4)
+                    children: A.intl.string(A.t.Kkcmj4)
                 }),
                 (0, i.jsx)(c.Text, {
                     variant: 'text-xs/normal',
                     children:
                         s.days > 0
-                            ? E.intl.formatToPlainString(E.t.G1Ldn5, { days: s.days })
-                            : E.intl.formatToPlainString(E.t.h982oq, {
+                            ? A.intl.formatToPlainString(A.t.G1Ldn5, { days: s.days })
+                            : A.intl.formatToPlainString(A.t.h982oq, {
                                   hours: T(s.hours),
                                   minutes: T(s.minutes),
                                   seconds: T(s.seconds)
@@ -223,10 +223,10 @@ let I = () =>
                 n && !c && (0, p.EW)(l.z.TRIAL_FOR_ALL_MARKETING_PAGE_BADGE, { dismissAction: j.L.TAKE_ACTION });
             }, [n, c]),
             (0, i.jsx)(_._y, {
-                ackedClassName: A.trialAckedBadge,
-                className: A.trialBadgeBackground,
+                ackedClassName: E.trialAckedBadge,
+                className: E.trialBadgeBackground,
                 isTabSelected: n,
-                badgeCopy: a ? E.intl.string(E.t.OS9KPj) : d,
+                badgeCopy: a ? A.intl.string(A.t.OS9KPj) : d,
                 offerExpiresAt: c ? r.expires_at : void 0
             })
         );

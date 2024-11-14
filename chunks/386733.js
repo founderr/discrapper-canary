@@ -10,8 +10,8 @@ var i = n(200651),
     g = n(518950),
     m = n(598077),
     f = n(594174),
-    p = n(626135),
-    _ = n(63063),
+    _ = n(626135),
+    p = n(63063),
     h = n(281494),
     E = n(276444),
     b = n(520540),
@@ -123,8 +123,8 @@ t.Z = (e) => {
         A = (0, l.e7)([E.Z], () => E.Z.getRecipientStatus()),
         P = (0, v.uv)('ReferralProgramProgressBar'),
         Z = (0, v.TW)('ReferralProgramProgressBar'),
-        M = (0, l.Wu)([f.default], () => R.map((e) => f.default.getUser(e)).filter((e) => null != e)),
-        O = r.useMemo(() => M.map((e) => new m.Z(e)), [M]),
+        O = (0, l.Wu)([f.default], () => R.map((e) => f.default.getUser(e)).filter((e) => null != e)),
+        M = r.useMemo(() => O.map((e) => new m.Z(e)), [O]),
         B = (0, l.e7)([E.Z], () => E.Z.getRefreshAt()),
         { subscriberHomeVariant: w } = b.g.useExperiment({ location: 'ReferralProgramProgressBar' }, { autoTrackExposure: !1 }),
         y = P === T.g2L.UNAPPLIED || P === T.g2L.QUALIFIED,
@@ -143,7 +143,7 @@ t.Z = (e) => {
         e === h.Fe.REDEEMED && L.redeemed++, e === h.Fe.CONVERTED && (L.redeemed++, L.converted++);
     });
     let U = L.sent === v.Q_,
-        D = _.Z.getArticleURL(T.BhN.REFERRAL_PROGRAM),
+        D = p.Z.getArticleURL(T.BhN.REFERRAL_PROGRAM),
         { analyticsLocations: G } = (0, u.ZP)(d.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
         H = r.useRef(null),
         V = (L.sent / v.Q_) * 100,
@@ -153,9 +153,9 @@ t.Z = (e) => {
         z = (0, i.jsxs)('div', {
             className: I.referralInfoContent,
             children: [
-                (0, i.jsx)(C.Z, {
+                (0, i.jsx)(C.ZP, {
                     percentage: W ? 0 : V,
-                    progressCircleVariation: C.Q.NITRO_LOGO,
+                    progressCircleVariation: C.Qo.NITRO_LOGO,
                     iconClassName: s()({
                         [I.referralProgressBarIcon]: !g,
                         [I.referralProgressBarIconSettings]: g
@@ -191,7 +191,7 @@ t.Z = (e) => {
                                   ]
                               })
                             : (0, i.jsx)(j, {
-                                  userRecords: O,
+                                  userRecords: M,
                                   recipientStatus: A
                               }),
                         (0, i.jsx)(o.Text, {
@@ -220,7 +220,7 @@ t.Z = (e) => {
                                         className: I.expandedProgressBarSelectFriendsCTA,
                                         color: o.ButtonColors.CUSTOM,
                                         onClick: () => {
-                                            p.default.track(T.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: G }),
+                                            _.default.track(T.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: G }),
                                                 (0, o.openModalLazy)(async () => {
                                                     let { default: e } = await n.e('47435').then(n.bind(n, 204387));
                                                     return (t) =>

@@ -25,8 +25,8 @@ t.Z = (0, r.memo)(function (e) {
     var t, n, l, A, b;
     let { quest: x } = e,
         [Z, L] = (0, r.useState)(!1),
-        [y, R] = (0, r.useState)(24),
-        [O, P] = (0, r.useState)(!1),
+        [y, O] = (0, r.useState)(24),
+        [R, P] = (0, r.useState)(!1),
         j = (0, r.useRef)(null),
         D = (0, r.useRef)(null),
         M = (0, r.useRef)(null),
@@ -48,7 +48,7 @@ t.Z = (0, r.memo)(function (e) {
         let n = j.current.getBoundingClientRect(),
             i = D.current.getBoundingClientRect(),
             r = M.current.getBoundingClientRect();
-        R((i.top - n.top - r.height) / 2);
+        O((i.top - n.top - r.height) / 2);
     });
     let W = (0, c.wj)(G),
         K = (0, r.useMemo)(() => (0, v.fh)(x, v.eC.LOGO_TYPE, 'dark'), [x]),
@@ -70,7 +70,7 @@ t.Z = (0, r.memo)(function (e) {
                     quest_id: x.id
                 });
         };
-    return null == H || O
+    return null == H || R
         ? null
         : (0, i.jsx)(d.FocusRing, {
               children: (0, i.jsxs)('div', {

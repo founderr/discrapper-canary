@@ -62,7 +62,7 @@ function v(e) {
     r.useEffect(() => {
         A(1);
     }, [n]);
-    let R = r.useCallback(
+    let O = r.useCallback(
             (e) => {
                 d.yC({
                     query: n,
@@ -77,7 +77,7 @@ function v(e) {
             },
             [n, S]
         ),
-        O = r.useCallback(
+        R = r.useCallback(
             (e) => {
                 A(1),
                     N(e),
@@ -105,7 +105,7 @@ function v(e) {
                                 children: (0, i.jsx)(E.V, {
                                     countsByCategory: Z,
                                     selectedCategoryId: null != S ? S : m.MU,
-                                    onSelectCategory: O
+                                    onSelectCategory: R
                                 })
                             }),
                             (0, i.jsx)(p.Z, {
@@ -139,7 +139,7 @@ function v(e) {
                                 disablePaginationGap: !0,
                                 hideMaxPage: !0,
                                 currentPage: T,
-                                onPageChange: R
+                                onPageChange: O
                             })
                         ]
                     })
@@ -152,7 +152,7 @@ function v(e) {
                     children: (0, i.jsx)(E.Z, {
                         countsByCategory: Z,
                         selectedCategoryId: null != S ? S : m.MU,
-                        onSelectCategory: O
+                        onSelectCategory: R
                     })
                 })
             })

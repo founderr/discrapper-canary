@@ -11,8 +11,8 @@ var i = n(200651),
     g = n(906732),
     m = n(433811),
     f = n(214852),
-    p = n(78839),
-    _ = n(626135),
+    _ = n(78839),
+    p = n(626135),
     h = n(74538),
     E = n(140465),
     b = n(184508),
@@ -28,8 +28,8 @@ var i = n(200651),
     j = n(605289),
     P = n(346497),
     Z = n(218390),
-    M = n(823188),
-    O = n(241158),
+    O = n(823188),
+    M = n(241158),
     B = n(135785),
     w = n(498765),
     y = n(635921),
@@ -59,27 +59,27 @@ let $ = (e) => {
     },
     et = (e) => {
         let { isFullscreen: t, inOfferExperience: n, setIsAllPerksVisible: a, whatsNewV2Enabled: l, BestOfNitroV2Enabled: c, setIsWhatsNewBoxVisible: d, setIsBestOfNitroVisible: u, isWhatsNewBoxVisible: g, isBestOfNitroVisible: m, hasRenderedOnce: f } = e,
-            p = r.useRef(0),
+            _ = r.useRef(0),
             h = r.useRef(0),
             E = r.useRef(0),
             b = r.useRef(0);
         return (r.useEffect(() => {
-            g ? (p.current = Date.now()) : 0 !== p.current && ((h.current = h.current + Date.now() - p.current), (p.current = 0));
+            g ? (_.current = Date.now()) : 0 !== _.current && ((h.current = h.current + Date.now() - _.current), (_.current = 0));
         }, [g]),
         r.useEffect(() => {
             m ? (E.current = Date.now()) : 0 !== E.current && ((b.current = b.current + Date.now() - E.current), (E.current = 0));
         }, [m]),
         r.useEffect(
             () => () => {
-                0 !== p.current && (h.current = h.current + (Date.now() - p.current)),
+                0 !== _.current && (h.current = h.current + (Date.now() - _.current)),
                     0 !== E.current && (b.current = b.current + (Date.now() - E.current)),
                     0 !== h.current &&
-                        _.default.track(Y.rMx.PREMIUM_WHATS_NEW_VIEW_TIME, {
+                        p.default.track(Y.rMx.PREMIUM_WHATS_NEW_VIEW_TIME, {
                             view_time: h.current,
                             is_v2: l
                         }),
                     0 !== b.current &&
-                        _.default.track(Y.rMx.PREMIUM_BEST_OF_VIEW_TIME, {
+                        p.default.track(Y.rMx.PREMIUM_BEST_OF_VIEW_TIME, {
                             view_time: b.current,
                             is_v2: l
                         });
@@ -103,14 +103,14 @@ let $ = (e) => {
                               onChange: (e) => d(e),
                               threshold: 0,
                               active: !0,
-                              children: (0, i.jsx)(O.Z, { shouldLoadVideo: f })
+                              children: (0, i.jsx)(M.Z, { shouldLoadVideo: f })
                           }),
                       c &&
                           (0, i.jsx)(o.$, {
                               onChange: (e) => u(e),
                               threshold: 0,
                               active: !0,
-                              children: (0, i.jsx)(O.Z, {
+                              children: (0, i.jsx)(M.Z, {
                                   isBestOfNitro: !0,
                                   shouldLoadVideo: f
                               })
@@ -145,7 +145,7 @@ t.Z = (e) => {
     var t;
     let { isFullscreen: n, entrypoint: a } = e;
     (0, f.z)(m.X);
-    let O = (0, v.z7)('PremiumMarketingHome'),
+    let M = (0, v.z7)('PremiumMarketingHome'),
         w = (0, x.g)('PremiumMarketingHome'),
         k = (0, b.tY)('PremiumMarketingHome'),
         L = r.useRef(null),
@@ -155,12 +155,12 @@ t.Z = (e) => {
         [es, el] = r.useState(!1),
         [eo, ec] = r.useState(!1),
         [ed, eu] = r.useState(!1),
-        eg = (0, l.e7)([p.ZP], () => p.ZP.getPremiumTypeSubscription()),
+        eg = (0, l.e7)([_.ZP], () => _.ZP.getPremiumTypeSubscription()),
         em = null != eg ? (0, h.Af)(eg) : null,
         ef = null != em ? h.ZP.getSkuIdForPlan(em.planId) : null,
-        ep = null !== ef && ef !== z.Si.TIER_2 ? z.Si.TIER_2 : null,
-        e_ = (0, T.n)(),
-        eh = null != e_,
+        e_ = null !== ef && ef !== z.Si.TIER_2 ? z.Si.TIER_2 : null,
+        ep = (0, T.n)(),
+        eh = null != ep,
         [eE, eb] = r.useState(!1),
         ex = (0, N.Ng)(),
         eC = (0, I.N)(),
@@ -190,8 +190,8 @@ t.Z = (e) => {
                 onChange: (e) => ei(e),
                 threshold: 0.1,
                 active: !0,
-                children: (0, i.jsx)(M.ZP, {
-                    variant: k ? (n ? M.NN.TAGLINE_XP_COPY_HOME : M.NN.TAGLINE_XP_COPY_SETTINGS) : M.NN.DEFAULT,
+                children: (0, i.jsx)(O.ZP, {
+                    variant: k ? (n ? O.NN.TAGLINE_XP_COPY_HOME : O.NN.TAGLINE_XP_COPY_SETTINGS) : O.NN.DEFAULT,
                     showWumpus: !k,
                     tier0CTAButton:
                         ev === z.Si.TIER_2 || eN || null != ex
@@ -249,7 +249,7 @@ t.Z = (e) => {
                 }),
                 !n && eh
                     ? (0, i.jsx)(j.Z, {
-                          localizedPricingPromo: e_,
+                          localizedPricingPromo: ep,
                           smallGap: !0
                       })
                     : (0, i.jsx)(o.$, {
@@ -257,7 +257,7 @@ t.Z = (e) => {
                           threshold: 0,
                           active: !0,
                           children: (0, i.jsx)(y.Z, {
-                              subscriptionTier: ep,
+                              subscriptionTier: e_,
                               isFullscreen: n || eT,
                               className: s()({
                                   [Q.fullscreenHero]: n,
@@ -272,7 +272,7 @@ t.Z = (e) => {
                       }),
                 (0, i.jsxs)('div', {
                     className: Q.promoBannerContainer,
-                    children: [(0, i.jsx)(R.Z, { isFullScreen: n }), (0, i.jsx)(S.Z, { isFullScreen: n }), n && eh && (0, i.jsx)(A.Z, { localizedPricingPromo: e_ })]
+                    children: [(0, i.jsx)(R.Z, { isFullScreen: n }), (0, i.jsx)(S.Z, { isFullScreen: n }), n && eh && (0, i.jsx)(A.Z, { localizedPricingPromo: ep })]
                 }),
                 eA,
                 ej && (0, i.jsx)(Z.d, { className: Q.nitroweenGiftCard }),
@@ -280,7 +280,7 @@ t.Z = (e) => {
                     isFullscreen: n,
                     inOfferExperience: eT,
                     setIsAllPerksVisible: eb,
-                    whatsNewV2Enabled: O,
+                    whatsNewV2Enabled: M,
                     BestOfNitroV2Enabled: w,
                     setIsWhatsNewBoxVisible: ea,
                     setIsBestOfNitroVisible: el,
@@ -288,7 +288,7 @@ t.Z = (e) => {
                     isBestOfNitroVisible: es,
                     hasRenderedOnce: ed
                 }),
-                !O && !w && (0, i.jsx)($, { isFullscreen: n }),
+                !M && !w && (0, i.jsx)($, { isFullscreen: n }),
                 (0, i.jsxs)('div', {
                     className: Q.planComparisonTableContainer,
                     children: [
@@ -322,11 +322,11 @@ t.Z = (e) => {
                 (0, i.jsx)(D.Z, {
                     isVisible: !U && !en && !er && !es && ed,
                     isFullscreen: n,
-                    subscriptionTier: ep
+                    subscriptionTier: e_
                 }),
                 (0, i.jsx)(o.$, {
                     onChange: (e) => {
-                        e && !eo && (_.default.track(Y.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: eI }), ec(!0));
+                        e && !eo && (p.default.track(Y.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: eI }), ec(!0));
                     },
                     children: (0, i.jsx)('div', { className: Q.bottomOfPageVisibilitySensor })
                 }),

@@ -11,15 +11,15 @@ var i = n(570140),
     g = n(843693),
     m = n(981631);
 let f = (0, d.uk)('poggermode_applause', a.Z.getSoundpack()),
-    p = !1,
     _ = !1,
+    p = !1,
     h = [],
     E = null,
     b = () => {
-        if (!p) f.loop(), (p = !0);
+        if (!_) f.loop(), (_ = !0);
     },
     x = () => {
-        f.stop(), (p = !1);
+        f.stop(), (_ = !1);
     },
     C = () => {
         let e = u.Z.isEnabled(),
@@ -27,13 +27,13 @@ let f = (0, d.uk)('poggermode_applause', a.Z.getSoundpack()),
         return (!!e && !!t && null != o.Z.getChannelId()) || !1;
     },
     v = () => {
-        if (0 === h.length || !C() || _) return;
-        _ = !0;
+        if (0 === h.length || !C() || p) return;
+        p = !0;
         let [e, t] = h[h.length - 1];
         (0, d.GN)(e, t), (E = setTimeout(T, 1000));
     },
     T = () => {
-        h.pop(), (_ = !1), v();
+        h.pop(), (p = !1), v();
     },
     N = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,

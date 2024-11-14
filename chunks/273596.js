@@ -51,7 +51,7 @@ let b = Object.freeze({
     });
 function y(e) {
     let { loadId: t, onGuildCardSeen: n, onGuildCardClick: l } = e,
-        { guildIds: o, loading: g, searchResultsQuery: T, loadMore: y, searchCategoryId: R, isBlockedSearchQuery: O } = (0, E.f)({ loadId: t }),
+        { guildIds: o, loading: g, searchResultsQuery: T, loadMore: y, searchCategoryId: O, isBlockedSearchQuery: R } = (0, E.f)({ loadId: t }),
         P = 0 === o.length && !g,
         j = r.useContext(m.AnalyticsContext),
         [D, M] = r.useState((0, u.P)()),
@@ -63,11 +63,11 @@ function y(e) {
         F = r.useCallback(
             (e) => {
                 var t;
-                if (O) return;
+                if (R) return;
                 let n = null === (t = H.current) || void 0 === t ? void 0 : t.getScrollerState();
                 null != n && null != e && n.scrollHeight < e.height && y();
             },
-            [O, y]
+            [R, y]
         ),
         z = (0, d.y)((e) => {
             let t = null == e ? void 0 : e.getBoundingClientRect();
@@ -92,11 +92,11 @@ function y(e) {
                 query: T,
                 guildResults: o.map(f.Z.getGuild).filter(p.lm),
                 analyticsContext: j,
-                categoryId: R
+                categoryId: O
             });
-        }, [j, o, t, R, D, T]);
-    let Y = r.useCallback((e) => n(e, R), [n, R]),
-        W = r.useMemo(() => (g && !O ? [o.length, 0] : [o.length]), [o.length, O, g]),
+        }, [j, o, t, O, D, T]);
+    let Y = r.useCallback((e) => n(e, O), [n, O]),
+        W = r.useMemo(() => (g && !R ? [o.length, 0] : [o.length]), [o.length, R, g]),
         K = r.useCallback(
             (e, n, r) => {
                 switch (e) {
@@ -115,7 +115,7 @@ function y(e) {
                                             className: A.headingFilters,
                                             children: [(0, i.jsx)(C.Z, { loadId: t }), (0, i.jsx)(S.Z, { loadId: t })]
                                         }),
-                                    (P || O) && (0, i.jsx)(v.Z, { loadId: t })
+                                    (P || R) && (0, i.jsx)(v.Z, { loadId: t })
                                 ]
                             },
                             r
@@ -124,7 +124,7 @@ function y(e) {
                         return (0, i.jsx)(c.Spinner, { className: a()(A.spinner, { [A.spinnerWithSidebar]: w }) }, r);
                 }
             },
-            [O, P, w, t]
+            [R, P, w, t]
         ),
         q = r.useCallback(
             (e) => {
@@ -182,7 +182,7 @@ function y(e) {
                             style: n,
                             children: (0, i.jsx)(N.ZP, {
                                 guildId: e,
-                                onClick: async (e) => await J(e, t, R, Z),
+                                onClick: async (e) => await J(e, t, O, Z),
                                 onView: (e) => Y(e)
                             })
                         },
@@ -191,7 +191,7 @@ function y(e) {
                 }
                 return null;
             },
-            [o, J, Y, R]
+            [o, J, Y, O]
         );
     r.useEffect(() => {
         let e = H.current;
@@ -218,7 +218,7 @@ function y(e) {
                 });
         }, []);
     let ee = r.useMemo(() => {
-            if (!O)
+            if (!R)
                 return (0, s.debounce)(
                     () => {
                         var e;
@@ -230,7 +230,7 @@ function y(e) {
                     100,
                     { leading: !0 }
                 );
-        }, [O, y]),
+        }, [R, y]),
         et = w ? b : x;
     return (0, i.jsxs)('div', {
         className: A.container,

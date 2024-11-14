@@ -18,8 +18,8 @@ var i,
     g = n(388032),
     m = n(509614),
     f = n(880511),
-    p = n(985443),
-    _ = n(612253),
+    _ = n(985443),
+    p = n(612253),
     h = n(832287),
     E = n(860528),
     b = n(872532),
@@ -35,8 +35,8 @@ var i,
     j = n(220046),
     P = n(385874),
     Z = n(371000),
-    M = n(377679),
-    O = n(825087);
+    O = n(377679),
+    M = n(825087);
 ((i = r || (r = {})).NEW_APP_STYLES = 'newAppStyles'), (i.REFERRAL_PROGRAM = 'referralProgram'), (i.SERVER_PROFILES = 'serverProfiles'), (i.SHOW_YOUR_STYLE = 'showYourStyle'), (i.YOUR_SPACE = 'yourSpace'), (i.EMOJIS = 'emojis'), (i.NO_LIMITS = 'noLimits');
 let B = () => {
     let e = (0, c.rO)();
@@ -98,7 +98,7 @@ t.ZP = (e) => {
                 title: g.intl.string(g.t.Ij3Zmp),
                 description: g.intl.string(g.t.UsOUxc),
                 descriptionCta: g.intl.string(g.t.jVcuVV),
-                previewImage: _,
+                previewImage: p,
                 onClick: n,
                 videoUrl: i ? P.Z : Z.Z
             },
@@ -107,14 +107,14 @@ t.ZP = (e) => {
                 title: g.intl.string(g.t.Wme3nZ),
                 description: g.intl.string(g.t['/aAIqa']),
                 descriptionCta: g.intl.string(g.t.jVcuVV),
-                previewImage: p,
+                previewImage: _,
                 onClick: () => {
                     a.Z.open(d.oAB.APPEARANCE, null, {
                         openWithoutBackstack: !0,
                         analyticsLocations: t
                     });
                 },
-                videoUrl: i ? M.Z : O.Z
+                videoUrl: i ? O.Z : M.Z
             }
         };
     return e ? m : r;

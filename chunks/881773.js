@@ -20,36 +20,36 @@ var r = n(200651),
     C = n(957099),
     g = n(312729),
     x = n(223418),
-    h = n(604162),
+    S = n(604162),
     E = n(981631),
-    S = n(388032),
+    h = n(388032),
     _ = n(417575);
 let T = '-:--',
-    N = {
+    I = {
         [x.r.PLAYING]: {
             icon: d.PauseIcon,
-            label: S.intl.string(S.t.ZcgDJS)
+            label: h.intl.string(h.t.ZcgDJS)
         },
         [x.r.PAUSED]: {
             icon: d.PlayIcon,
-            label: S.intl.string(S.t.RscU7O)
+            label: h.intl.string(h.t.RscU7O)
         },
         [x.r.ENDED]: {
             icon: d.RetryIcon,
-            label: S.intl.string(S.t.hsvh0t)
+            label: h.intl.string(h.t.hsvh0t)
         }
     },
-    j = (e, t) => {
+    N = (e, t) => {
         (0, p.dA)({
             questId: e,
             event: E.rMx.QUEST_VIDEO_VOLUME_CHANGED,
             properties: { volume_threshold: t > 0 && t < 1 ? 0.5 : t }
         });
     };
-function I(e) {
+function j(e) {
     let { current: t, duration: n } = e,
-        o = null != t ? (0, h.yv)(t) : T,
-        i = null != n ? (0, h.yv)(n) : T;
+        o = null != t ? (0, S.yv)(t) : T,
+        i = null != n ? (0, S.yv)(n) : T;
     return (
         (o = o.padStart(i.length, '0')),
         (0, r.jsxs)('div', {
@@ -115,7 +115,7 @@ function b(e) {
 }
 function D(e) {
     var t, n;
-    let { videoRef: i, quest: p, playerState: h, animSpring: E, visible: T, seekForwardEnabled: D, hideCaptionBtn: y, handlePlaybackBtnClick: B, handleTranscriptBtnClick: A, handleCaptionBtnClick: k, handleFullScreenBtnClick: L, handleSeekBackBtnClick: P, handleSeekForwardBtnClick: M, handleControlBarPendingInteraction: O } = e,
+    let { videoRef: i, quest: p, playerState: S, animSpring: E, visible: T, seekForwardEnabled: D, hideCaptionBtn: y, handlePlaybackBtnClick: A, handleTranscriptBtnClick: k, handleCaptionBtnClick: B, handleFullScreenBtnClick: L, handleSeekBackBtnClick: P, handleSeekForwardBtnClick: M, handleControlBarPendingInteraction: O } = e,
         R = (0, f.km)((e) => e.volume),
         w = (0, f.km)((e) => e.setVolume),
         F = (0, f.km)((e) => e.muted),
@@ -157,7 +157,7 @@ function D(e) {
         [Q, Y, J, q, X]
     );
     let en = 0 === H ? d.VoiceXIcon : H < 0.5 ? d.VoiceLowIcon : d.VoiceNormalIcon,
-        { icon: er, label: eo } = N[h];
+        { icon: er, label: eo } = I[S];
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {
@@ -169,15 +169,15 @@ function D(e) {
                         visible: T,
                         ariaLabel: eo,
                         tooltipLabel: eo,
-                        onClick: B
+                        onClick: A
                     }),
                     (0, r.jsx)(b, {
                         iconComponent: C.d,
                         animationTime: E,
                         visible: T,
                         onClick: P,
-                        ariaLabel: S.intl.string(S.t.r9s3Ul),
-                        tooltipLabel: S.intl.string(S.t.r9s3Ul)
+                        ariaLabel: h.intl.string(h.t.r9s3Ul),
+                        tooltipLabel: h.intl.string(h.t.r9s3Ul)
                     }),
                     (0, r.jsx)(b, {
                         iconComponent: g.o,
@@ -185,8 +185,8 @@ function D(e) {
                         visible: T,
                         onClick: M,
                         disabled: !D,
-                        ariaLabel: D ? S.intl.string(S.t.zWDcND) : S.intl.string(S.t.xXh3y8),
-                        tooltipLabel: D ? S.intl.string(S.t.zWDcND) : S.intl.string(S.t.xXh3y8),
+                        ariaLabel: D ? h.intl.string(h.t.zWDcND) : h.intl.string(h.t.xXh3y8),
+                        tooltipLabel: D ? h.intl.string(h.t.zWDcND) : h.intl.string(h.t.xXh3y8),
                         tooltipDelayMs: D ? 1500 : 0
                     })
                 ]
@@ -217,10 +217,10 @@ function D(e) {
                                 animationTime: E,
                                 visible: T,
                                 onClick: () => {
-                                    if (null != i.current) 0 === H ? ($(R), Z(!1), j(p.id, R)) : (w(H), $(0), Z(!0), j(p.id, 0));
+                                    if (null != i.current) 0 === H ? ($(R), Z(!1), N(p.id, R)) : (w(H), $(0), Z(!0), N(p.id, 0));
                                 },
-                                ariaLabel: S.intl.string(S.t['eIl+AA']),
-                                tooltipLabel: S.intl.string(S.t['eIl+AA'])
+                                ariaLabel: h.intl.string(h.t['eIl+AA']),
+                                tooltipLabel: h.intl.string(h.t['eIl+AA'])
                             }),
                             (0, r.jsx)(a.animated.div, {
                                 className: _.volumeSlider,
@@ -260,19 +260,19 @@ function D(e) {
                                     minValue: 0,
                                     maxValue: 1,
                                     onValueChange: (e) => {
-                                        $(e), w(e), j(p.id, e), Q && (K(!1), O(!1)), F && e > 0 && Z(!1);
+                                        $(e), w(e), N(p.id, e), Q && (K(!1), O(!1)), F && e > 0 && Z(!1);
                                     },
                                     asValueChanges: (e) => {
                                         $(e), !Q && (K(!0), O(!0));
                                     },
                                     fillStyles: { backgroundColor: c.Z.colors.WHITE.css },
                                     orientation: 'horizontal',
-                                    'aria-label': S.intl.string(S.t['eIl+AA'])
+                                    'aria-label': h.intl.string(h.t['eIl+AA'])
                                 })
                             })
                         ]
                     }),
-                    (0, r.jsx)(I, {
+                    (0, r.jsx)(j, {
                         current: null == i ? void 0 : null === (t = i.current) || void 0 === t ? void 0 : t.currentTime,
                         duration: null == i ? void 0 : null === (n = i.current) || void 0 === n ? void 0 : n.duration
                     })
@@ -285,11 +285,11 @@ function D(e) {
                         iconComponent: d.PaperIcon,
                         animationTime: E,
                         visible: T,
-                        onClick: A,
-                        active: U && h !== x.r.ENDED,
-                        disabled: h === x.r.ENDED,
-                        ariaLabel: S.intl.string(S.t.KCzjTk),
-                        tooltipLabel: S.intl.string(S.t.KCzjTk)
+                        onClick: k,
+                        active: U && S !== x.r.ENDED,
+                        disabled: S === x.r.ENDED,
+                        ariaLabel: h.intl.string(h.t.KCzjTk),
+                        tooltipLabel: h.intl.string(h.t.KCzjTk)
                     }),
                     !y &&
                         (0, r.jsx)(b, {
@@ -297,17 +297,17 @@ function D(e) {
                             animationTime: E,
                             visible: T,
                             active: G,
-                            onClick: k,
-                            ariaLabel: S.intl.string(S.t.bDSZOz),
-                            tooltipLabel: S.intl.string(S.t.bDSZOz)
+                            onClick: B,
+                            ariaLabel: h.intl.string(h.t.bDSZOz),
+                            tooltipLabel: h.intl.string(h.t.bDSZOz)
                         }),
                     (0, r.jsx)(b, {
                         iconComponent: V ? d.FullscreenExitIcon : d.FullscreenEnterIcon,
                         animationTime: E,
                         visible: T,
                         onClick: L,
-                        ariaLabel: S.intl.string(S.t.vKZT5u),
-                        tooltipLabel: S.intl.string(S.t.vKZT5u)
+                        ariaLabel: h.intl.string(h.t.vKZT5u),
+                        tooltipLabel: h.intl.string(h.t.vKZT5u)
                     })
                 ]
             })

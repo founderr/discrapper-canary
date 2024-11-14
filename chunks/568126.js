@@ -15,7 +15,7 @@ t.Z = function (e) {
         m = (0, r.e7)([s.default], () => s.default.locale);
     (0, c.U)(u.jXE.SETTINGS_PREMIUM_BANNER, n);
     let f = (0, r.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription()),
-        { localizedPricingBannerBody: p } = (0, o.vB)({
+        { localizedPricingBannerBody: _ } = (0, o.vB)({
             localizedPricingPromo: t,
             subscription: f,
             forceSingleLine: !0,
@@ -34,7 +34,7 @@ t.Z = function (e) {
                     color: 'none',
                     variant: 'text-md/normal',
                     className: g.bannerBody,
-                    children: p
+                    children: _
                 })
             })
         ]

@@ -11,8 +11,8 @@ var i = n(200651),
     g = n(314684),
     m = n(565626),
     f = n(32173),
-    p = n(976465),
-    _ = n(391110),
+    _ = n(976465),
+    p = n(391110),
     h = n(75077),
     E = n(320319),
     b = n(821912);
@@ -48,30 +48,30 @@ let x = (e) => {
 };
 t.Z = (e) => {
     var t, n;
-    let { className: a, variant: C = _.R0.PERKS_DISCOVERABILITY, noBackground: v = !1, leftAlignHeaders: T = !1, showAllPerksButton: N, headerClassname: I, isFullScreen: S = !0 } = e,
+    let { className: a, variant: C = p.R0.PERKS_DISCOVERABILITY, noBackground: v = !1, leftAlignHeaders: T = !1, showAllPerksButton: N, headerClassname: I, isFullScreen: S = !0 } = e,
         R = r.useRef(null),
         A = (0, g.yQ)(),
         j = (0, m.Ag)(A),
         P = (0, d.ZP)('perks-discoverability');
     (0, m.I2)();
-    let Z = (0, u.HI)({ location: _.R0.PERKS_DISCOVERABILITY }),
-        M = C === _.R0.WHATS_NEW,
-        O = (0, g.IY)(),
-        B = (0, p.x$)();
+    let Z = (0, u.HI)({ location: p.R0.PERKS_DISCOVERABILITY }),
+        O = C === p.R0.WHATS_NEW,
+        M = (0, g.IY)(),
+        B = (0, _.x$)();
     r.useEffect(() => {
-        M && !j && (O(), B());
-    }, [O, B, M, j]),
+        O && !j && (M(), B());
+    }, [M, B, O, j]),
         r.useEffect(() => {
             let e = R.current;
-            if (null == e || !j || !M) return;
+            if (null == e || !j || !O) return;
             let t = requestAnimationFrame(() => {
-                e.scrollIntoView({ behavior: 'smooth' }), M && O();
+                e.scrollIntoView({ behavior: 'smooth' }), O && M();
             });
             return () => {
-                cancelAnimationFrame(t), M && O();
+                cancelAnimationFrame(t), O && M();
             };
-        }, [R, j, M, O]);
-    let w = (0, h.Op)(M),
+        }, [R, j, O, M]);
+    let w = (0, h.Op)(O),
         y = (0, f.Z)(),
         k = (0, h.mN)(),
         { fractionalState: L } = (0, c.Z)(),
@@ -119,7 +119,7 @@ t.Z = (e) => {
                         className: s()(b.subtitle, {
                             [b.subtitle]: null == N || T,
                             [b.subtitleWithButton]: null != N && !T,
-                            [b.fullWidth]: M || T,
+                            [b.fullWidth]: O || T,
                             [b.moreSubtitleMargin]: D,
                             [b.leftAlignSubtitle]: T,
                             [b.centerAlignSubtitle]: !T

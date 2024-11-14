@@ -14,8 +14,8 @@ function o(e) {
         [o, c] = i.useState(!1),
         [d, u] = i.useState(!1),
         [g, m] = i.useState(!1),
-        [f, p] = i.useState(!1),
-        [_, h] = i.useState(!1),
+        [f, _] = i.useState(!1),
+        [p, h] = i.useState(!1),
         [E, b] = i.useState(!1),
         [x, C] = i.useState(!1),
         [v, T] = i.useState(!1),
@@ -71,21 +71,21 @@ function o(e) {
         A = i.useCallback(
             async (e) => {
                 if (!N) {
-                    p(!0);
+                    _(!0);
                     try {
                         await (0, a.fc)(e.id), null == n || n();
                     } catch (n) {
                         let e = new r.Hx(n);
                         null == t || t(e);
                     } finally {
-                        p(!1);
+                        _(!1);
                     }
                 }
             },
             [N, t, n]
         ),
         j = i.useCallback(async () => {
-            if (!_) {
+            if (!p) {
                 h(!0);
                 try {
                     await (0, a.qd)(), null == n || n();
@@ -96,7 +96,7 @@ function o(e) {
                     h(!1);
                 }
             }
-        }, [_, t, n]),
+        }, [p, t, n]),
         P = i.useCallback(
             async (e) => {
                 if (!x) {
@@ -161,7 +161,7 @@ function o(e) {
         isDeclineLoading: d,
         isDisconnectLoading: g,
         isCancelLoading: f,
-        isGetLinkCodeLoading: _,
+        isGetLinkCodeLoading: p,
         isSelectTeenUserLoading: x,
         isRequestingLink: E,
         isMoreLoading: v

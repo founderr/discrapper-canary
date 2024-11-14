@@ -11,11 +11,11 @@ var i = n(200651),
     g = n(409100),
     m = n(831964),
     f = n(981631),
-    p = n(869783),
-    _ = n(388032),
+    _ = n(869783),
+    p = n(388032),
     h = n(916548);
 let E = (e) => {
-    let { name: t, title: n, description: a, descriptionCta: _, previewImage: E, videoUrl: b, shouldLoadVideo: x, isCompact: C, onClick: v, index: T } = e,
+    let { name: t, title: n, description: a, descriptionCta: p, previewImage: E, videoUrl: b, shouldLoadVideo: x, isCompact: C, onClick: v, index: T } = e,
         N = (0, u.rO)(),
         I = r.useRef(null),
         [S, R] = r.useState(0),
@@ -54,7 +54,7 @@ let E = (e) => {
         Z = () => {
             null != I.current && (R(I.current.currentTime), I.current.pause());
         },
-        M = () =>
+        O = () =>
             (0, i.jsxs)('div', {
                 className: s()({
                     [h.whatsNewTextBoxOuter]: !C,
@@ -76,26 +76,26 @@ let E = (e) => {
                         className: h.whatsNewBoxDescription,
                         children: a
                     }),
-                    null != _ &&
+                    null != p &&
                         (null != v
                             ? (0, i.jsx)(o.Button, {
                                   className: h.whatsNewBoxButton,
                                   onClick: () => {
                                       j(), v();
                                   },
-                                  children: _
+                                  children: p
                               })
                             : (0, i.jsx)(g.Z, {
                                   className: h.whatsNewBoxButton,
                                   onClick: j,
-                                  buttonText: _,
+                                  buttonText: p,
                                   color: o.Button.Colors.BRAND,
                                   look: o.Button.Looks.FILLED,
                                   showIcon: !1
                               }))
                 ]
             }),
-        O = (e) => {
+        M = (e) => {
             let { isLeft: t } = e;
             return (0, i.jsx)('div', {
                 className: s()({
@@ -116,7 +116,7 @@ let E = (e) => {
                     ref: I,
                     children: (0, i.jsx)('source', {
                         src: b,
-                        type: N ? p.m.MP4 : p.m.WEBM
+                        type: N ? _.m.MP4 : _.m.WEBM
                     })
                 })
             });
@@ -131,7 +131,7 @@ let E = (e) => {
               onFocus: P,
               onBlur: Z,
               onMouseLeave: Z,
-              children: [(0, i.jsx)(M, {}), (0, i.jsx)(O, { isLeft: !1 })]
+              children: [(0, i.jsx)(O, {}), (0, i.jsx)(M, { isLeft: !1 })]
           })
         : (0, i.jsxs)('div', {
               className: s()(A, {
@@ -143,7 +143,7 @@ let E = (e) => {
               onFocus: P,
               onBlur: Z,
               onMouseLeave: Z,
-              children: [(0, i.jsx)(O, { isLeft: !0 }), (0, i.jsx)(M, {})]
+              children: [(0, i.jsx)(M, { isLeft: !0 }), (0, i.jsx)(O, {})]
           });
 };
 t.Z = r.memo(function (e) {
@@ -157,7 +157,7 @@ t.Z = r.memo(function (e) {
                 (0, i.jsx)(o.Heading, {
                     className: h.whatsNewHeader,
                     variant: 'heading-xxl/extrabold',
-                    children: r ? _.intl.string(_.t.EnzW2N) : _.intl.string(_.t.LRmNAg)
+                    children: r ? p.intl.string(p.t.EnzW2N) : p.intl.string(p.t.LRmNAg)
                 }),
                 a.map((e, t) =>
                     (0, i.jsx)(

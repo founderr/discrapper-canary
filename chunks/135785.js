@@ -14,7 +14,7 @@ var r = n(120356),
 t.Z = (e) => {
     let t,
         n,
-        { premiumSubscription: r, className: p, isFullscreen: _ = !1, textColor: h } = e,
+        { premiumSubscription: r, className: _, isFullscreen: p = !1, textColor: h } = e,
         E = (0, d.Nx)();
     if (null == r) return null;
     let b = null != r ? c.ZP.getPremiumPlanItem(r) : null;
@@ -22,10 +22,10 @@ t.Z = (e) => {
     let x = () => l.Z.open(g.oAB.SUBSCRIPTIONS),
         C = (null != b ? c.ZP.getSkuIdForPlan(b.planId) : null) === u.Si.TIER_1;
     return (
-        (n = null != h ? h : E || _ ? 'always-white' : 'text-normal'),
+        (n = null != h ? h : E || p ? 'always-white' : 'text-normal'),
         (0, i.jsxs)(s.Card, {
-            className: a()(f.container, p, {
-                [f.lightTextLink]: _,
+            className: a()(f.container, _, {
+                [f.lightTextLink]: p,
                 [f.centerText]: E
             }),
             type: s.Card.Types.CUSTOM,
@@ -35,7 +35,7 @@ t.Z = (e) => {
                     width: 20,
                     height: 20,
                     color: 'currentColor',
-                    className: a()(f.icon, { [f.lightThemeColorOnly]: E || _ })
+                    className: a()(f.icon, { [f.lightThemeColorOnly]: E || p })
                 }),
                 (0, i.jsx)(s.Text, {
                     variant: 'text-sm/medium',

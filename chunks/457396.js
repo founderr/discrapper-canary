@@ -32,8 +32,8 @@ var i,
     Z = n(502087),
     L = n(657041),
     y = n(769415),
-    R = n(650032),
-    O = n(767870),
+    O = n(650032),
+    R = n(767870),
     P = n(104494),
     j = n(639119),
     D = n(655525),
@@ -89,21 +89,21 @@ let en = (e) => {
         { fractionalState: ex, endsAt: eZ } = (0, I.Z)({ forceFetch: !0 }),
         eL = null != eA ? eA : null == el ? void 0 : el.createdAt,
         ey = s || null != em || null != ep || eE || eN || eT || null != eC || null != ev || eu,
-        { enabled: eR } = R._.useExperiment({ location: ee }, { autoTrackExposure: !1 }),
-        { enabled: eO } = y.Z.useExperiment(
+        { enabled: eO } = O._.useExperiment({ location: ee }, { autoTrackExposure: !1 }),
+        { enabled: eR } = y.Z.useExperiment(
             { location: ee },
             {
                 autoTrackExposure: ef,
                 disable: !ef
             }
         ),
-        eP = eR && (null == em ? void 0 : em.trial_id) === z.a7,
+        eP = eO && (null == em ? void 0 : em.trial_id) === z.a7,
         [ej, eD] = (0, v.US)(eg ? [u.z.REVERSE_TRIAL_NITRO_TAB_BADGE] : [], void 0, !0);
     if (!(ey = ey || (null != el && null != eL && Date.now() - eL.getTime() > et))) return null;
     if (
         (ex !== z.a$.NONE &&
             ((r = 9),
-            (i = (0, l.jsx)(O.Z, {
+            (i = (0, l.jsx)(R.Z, {
                 className: '',
                 endsAt: eZ,
                 messageStyle: E.a.SHORT_TIME,
@@ -119,9 +119,9 @@ let en = (e) => {
                     (0, l.jsx)(G.dX, {
                         isSelected: s,
                         trialOffer: em,
-                        q4MarketingEnabled: eO
+                        q4MarketingEnabled: eR
                     }),
-                    eO &&
+                    eR &&
                         (0, l.jsx)('div', {
                             className: q.tabBackground,
                             children: (0, l.jsx)('img', {
@@ -194,7 +194,7 @@ let en = (e) => {
         avatarWithTextClassName: n,
         children: i
     });
-    return ef && eO
+    return ef && eR
         ? (0, l.jsx)(G.CI, {
               variant: G.j$.TRIAL_FOR_ALL,
               trialOffer: em,

@@ -15,8 +15,8 @@ var i = n(399606),
     g = n(526761),
     m = n(388032),
     f = n(323780),
-    p = n(101732),
-    _ = n(450598),
+    _ = n(101732),
+    p = n(450598),
     h = n(633030),
     E = n(97942),
     b = n(269987),
@@ -32,8 +32,8 @@ var i = n(399606),
     j = n(405991),
     P = n(24615),
     Z = n(193943),
-    M = n(334347),
-    O = n(943734),
+    O = n(334347),
+    M = n(943734),
     B = n(603076),
     w = n(472656),
     y = n(912429),
@@ -52,13 +52,13 @@ let U = (e, t, n) => ((0, r.wj)(e) ? t : n),
             badge: {
                 title: m.intl.string(m.t.SS87ra),
                 description: m.intl.string(m.t.oD6CRk),
-                imageSource: _,
+                imageSource: p,
                 imageClassName: t.badgeImage
             },
             badgeAlt: {
                 title: m.intl.string(m.t['5cYMu7']),
                 description: m.intl.string(m.t.vxk9vb),
-                imageSource: U(n, f, p),
+                imageSource: U(n, f, _),
                 imageClassName: t.badgeNewImage
             },
             clientThemes: {
@@ -77,7 +77,7 @@ let U = (e, t, n) => ((0, r.wj)(e) ? t : n),
             emoji: {
                 title: m.intl.string(m.t['R2IV/f']),
                 description: m.intl.string(m.t.R5Xag4),
-                imageSource: M,
+                imageSource: O,
                 imageClassName: t.emojiImage
             },
             guildProfile: {
@@ -97,7 +97,7 @@ let U = (e, t, n) => ((0, r.wj)(e) ? t : n),
             longerMessages: {
                 title: m.intl.string(m.t.BUSciY),
                 description: m.intl.string(m.t.vN6Xpa),
-                imageSource: U(n, O, B),
+                imageSource: U(n, M, B),
                 imageClassName: t.longerMessagesImage
             },
             moreGuilds: {

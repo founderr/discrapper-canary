@@ -412,7 +412,7 @@ function Q(e) {
                     N &&
                     (0, r.jsx)('div', {
                         className: G.subtitleIcon,
-                        children: (0, r.jsx)(k.Z, {
+                        children: (0, r.jsx)(k.ZP, {
                             staticPercentage: 100,
                             iconClassName: G.iconClassName,
                             showAnimations: !1,

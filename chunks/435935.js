@@ -41,13 +41,13 @@ let g = {
         WRAP: c.flexWrap,
         WRAP_REVERSE: c.flexWrapReverse
     },
-    p = {
+    _ = {
         START: c.flexAlignStart,
         END: c.flexAlignEnd,
         CENTER: c.flexAlignCenter,
         STRETCH: c.flexAlignStretch
     },
-    _ = {
+    p = {
         SMALL: d.flexGutterSmall,
         LARGE: d.flexGutterLarge
     };
@@ -89,14 +89,14 @@ u(h, 'defaultProps', {
 class E extends (r = s.PureComponent) {
     render() {
         let { children: e, className: t, direction: n, justify: i, align: r, wrap: s, shrink: l, grow: c, basis: u, style: g, gutter: m, ...f } = this.props,
-            p = {
+            _ = {
                 flexShrink: l,
                 flexGrow: c,
                 flexBasis: u,
                 ...g
             };
         return (0, a.jsx)('div', {
-            style: p,
+            style: _,
             className: o()(d.flex, n, i, r, s, m, t),
             ...f,
             children: e
@@ -105,14 +105,14 @@ class E extends (r = s.PureComponent) {
 }
 u(E, 'Child', h),
     u(E, 'Direction', g),
-    u(E, 'Align', p),
+    u(E, 'Align', _),
     u(E, 'Justify', m),
     u(E, 'Wrap', f),
-    u(E, 'Gutter', _),
+    u(E, 'Gutter', p),
     u(E, 'defaultProps', {
         direction: g.HORIZONTAL,
         justify: m.START,
-        align: p.STRETCH,
+        align: _.STRETCH,
         wrap: f.WRAP,
         shrink: 1,
         grow: 1,

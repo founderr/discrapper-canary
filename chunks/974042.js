@@ -164,23 +164,23 @@ let x = !0,
     Z = !1,
     L = I.pJs.ONLINE,
     y = new b(),
-    R = !0,
-    O = !1;
+    O = !0,
+    R = !1;
 function P() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     x && (e || (L !== I.pJs.ONLINE && L !== I.pJs.ADD_FRIEND)) && !Z && ((x = !1), (Z = !0), o.Z.fetchRelationships());
 }
 function j() {
-    if (((x = !0), R ? (Z = !1) : P(), (y = y.reset()), O)) return;
+    if (((x = !0), O ? (Z = !1) : P(), (y = y.reset()), R)) return;
     let e = y.getRelationshipCounts();
     L = 0 === e[I.OGo.FRIEND] ? (0 !== e[I.OGo.PENDING_INCOMING] ? I.pJs.PENDING : I.pJs.ADD_FRIEND) : I.pJs.ONLINE;
 }
 function D() {
-    y = R ? new b() : y.reset();
+    y = O ? new b() : y.reset();
 }
 function M(e) {
     return function () {
-        return !R && !!y.update(e) && ((y = y.clone()), !0);
+        return !O && !!y.update(e) && ((y = y.clone()), !0);
     };
 }
 class w extends (i = a.ZP.Store) {
@@ -206,7 +206,7 @@ v(w, 'displayName', 'FriendsStore'),
         },
         CHANNEL_SELECT: function (e) {
             let { channelId: t } = e;
-            return (R = null != t), D(), !R;
+            return (O = null != t), D(), !O;
         },
         LOAD_RELATIONSHIPS_SUCCESS: function () {
             Z = !1;
@@ -216,9 +216,9 @@ v(w, 'displayName', 'FriendsStore'),
         },
         DRAWER_SELECT_TAB: function (e) {
             let { tab: t } = e;
-            return (R = t !== I.cII.FRIENDS), D(), !R;
+            return (O = t !== I.cII.FRIENDS), D(), !O;
         },
         FRIENDS_SET_INITIAL_SECTION: function (e) {
-            (L = e.section), (O = !0);
+            (L = e.section), (R = !0);
         }
     }));

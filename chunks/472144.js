@@ -11,19 +11,19 @@ t.Z = o.forwardRef((e, t) => {
     let { quest: n, percentComplete: o, size: i = 42, strokeWidth: m = 3, glowBlur: p = 0.4, percentCompleteText: f, percentCompleteTextVariant: v = 'text-lg/medium', children: C } = e,
         g = (0, c.E)(n, o > 0),
         x = i / 2,
-        h = i / 2 - m / 2,
-        E = 2 * Math.PI * h,
-        S = E - o * E,
+        S = i / 2 - m / 2,
+        E = 2 * Math.PI * S,
+        h = E - o * E,
         _ = {
             strokeDasharray: ''.concat(E, ' ').concat(E),
-            strokeDashoffset: S
+            strokeDashoffset: h
         },
         T = {
             strokeDasharray: ''.concat(E, ' ').concat(E),
             strokeDashoffset: -o * E
         },
-        N = { boxShadow: '0 0 30px 0px '.concat(g.glow) },
-        { progressTextAnimation: j } = (0, s.useSpring)({
+        I = { boxShadow: '0 0 30px 0px '.concat(g.glow) },
+        { progressTextAnimation: N } = (0, s.useSpring)({
             progressTextAnimation: null != f && 1 !== o ? 1 : 0,
             config: u.Y
         });
@@ -33,11 +33,11 @@ t.Z = o.forwardRef((e, t) => {
         children: [
             (0, r.jsxs)('div', {
                 className: d.inner,
-                style: N,
+                style: I,
                 children: [
                     C,
                     (0, r.jsxs)(a.animated.div, {
-                        style: { opacity: j },
+                        style: { opacity: N },
                         className: l()(d.coverContent, d.progressTextWrapper),
                         children: [
                             (0, r.jsx)('div', { className: l()(d.coverContent, d.progressTextOverlay) }),
@@ -93,7 +93,7 @@ t.Z = o.forwardRef((e, t) => {
                         className: d.progress,
                         strokeWidth: m,
                         fill: 'transparent',
-                        r: h,
+                        r: S,
                         cx: x,
                         cy: x,
                         stroke: 'url(#linear)',
@@ -103,7 +103,7 @@ t.Z = o.forwardRef((e, t) => {
                         className: d.progress,
                         strokeWidth: m,
                         fill: 'transparent',
-                        r: h,
+                        r: S,
                         cx: x,
                         cy: x,
                         stroke: g.foreground,

@@ -11,15 +11,15 @@ var r = n(120356),
     g = n(74538),
     m = n(276800),
     f = n(346497),
-    p = n(409100),
-    _ = n(725727),
+    _ = n(409100),
+    p = n(725727),
     h = n(474936),
     E = n(981631),
     b = n(388032),
     x = n(44085);
 t.Z = function (e) {
     let { isFullScreen: t, buttonClassName: r } = e,
-        { promotion: C } = (0, _.mq)(),
+        { promotion: C } = (0, p.mq)(),
         v = (0, s.e7)([d.ZP], () => d.ZP.getPremiumTypeSubscription());
     if (!(0, f.Vi)()) return null;
     let T = new Date(C.endDate);
@@ -58,7 +58,7 @@ t.Z = function (e) {
                                 })
                             ]
                         }),
-                        (0, i.jsx)(p.Z, {
+                        (0, i.jsx)(_.Z, {
                             buttonText: b.intl.string(b.t.J61px8),
                             buttonTextClassName: x.subscribeButtonText,
                             subscriptionTier: h.Si.TIER_2,

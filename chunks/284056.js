@@ -16,8 +16,8 @@ var i = n(200651),
     g = n(794347),
     m = n(131951),
     f = n(19780),
-    p = n(626135),
-    _ = n(981631),
+    _ = n(626135),
+    p = n(981631),
     h = n(388032),
     E = n(456849);
 function b(e, t, n) {
@@ -51,7 +51,7 @@ class x extends r.PureComponent {
                 isDetectingInput: !0,
                 didDeafenUser: d
             }),
-            p.default.track(_.rMx.MIC_TESTING_STARTED, {
+            _.default.track(p.rMx.MIC_TESTING_STARTED, {
                 input_device_name: t,
                 input_device_volume: n,
                 output_device_name: i,
@@ -75,7 +75,7 @@ class x extends r.PureComponent {
             }),
             null != this._micTestStartTime)
         )
-            p.default.track(_.rMx.MIC_TESTING_STOPPED, { testing_duration: Math.round((Date.now() - this._micTestStartTime) / 1000) });
+            _.default.track(p.rMx.MIC_TESTING_STOPPED, { testing_duration: Math.round((Date.now() - this._micTestStartTime) / 1000) });
     }
     renderCaption() {
         let { captionVoice: e, captionNoVoice: t } = this.props,

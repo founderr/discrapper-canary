@@ -11,8 +11,8 @@ var i = n(200651),
     g = n(546791),
     m = n(259756),
     f = n(785681),
-    p = n(985002),
-    _ = n(858719),
+    _ = n(985002),
+    p = n(858719),
     h = n(780985),
     E = n(880257),
     b = n(631885),
@@ -51,9 +51,9 @@ function Z(e) {
             (0, o.showToast)((0, o.createToast)(A.intl.string(A.t.Wu8BKy), o.ToastType.FAILURE));
         }, []),
         a = (0, E.Z)(),
-        l = (0, _.ws)(t),
-        c = (0, _.C7)(t),
-        { loadMore: u, isMoreLoading: f } = (0, p.G)({ onError: n }),
+        l = (0, p.ws)(t),
+        c = (0, p.C7)(t),
+        { loadMore: u, isMoreLoading: f } = (0, _.G)({ onError: n }),
         h = S.tx.get(t),
         [b, x] = r.useState(S.iB),
         T = (0, m.Xi)({ location: 'family_center_activity_section_web' }),
@@ -135,7 +135,7 @@ function Z(e) {
         ]
     });
 }
-let M = () => {
+let O = () => {
         let e = (0, E.Z)(),
             t = (0, b.mq)(S.ne.ACTIVE),
             n = (0, f.o)(A.intl.formatToPlainString(A.t['7hqFl5'], { activeLinks: t.length }), A.intl.string(A.t['Q/D/0d'])),
@@ -162,7 +162,7 @@ let M = () => {
                   ]
               });
     },
-    O = (e) => {
+    M = (e) => {
         let { userId: t, subText: n, avatarSize: r = o.AvatarSizes.SIZE_40 } = e,
             a = (0, h.I)(t);
         return void 0 === a
@@ -193,14 +193,14 @@ let M = () => {
     B = () => {
         let e = (0, b.mq)(S.ne.ACTIVE),
             t = (0, l.e7)([u.Z], () => u.Z.getSelectedTeenId()),
-            { selectTeenUser: n } = (0, p.G)({}),
+            { selectTeenUser: n } = (0, _.G)({}),
             a = e.map((e) => ({
                 label: e.id,
                 value: e.id
             })),
             s = r.useCallback(
                 (e) =>
-                    (0, i.jsx)(O, {
+                    (0, i.jsx)(M, {
                         userId: e.value,
                         avatarSize: o.AvatarSizes.SIZE_24
                     }),
@@ -229,7 +229,7 @@ let M = () => {
             s = (0, b.Rd)(a);
         return n && 1 !== r.length
             ? (0, i.jsx)(B, {})
-            : (0, i.jsx)(O, {
+            : (0, i.jsx)(M, {
                   userId: t,
                   subText: s
               });
@@ -237,7 +237,7 @@ let M = () => {
 t.Z = (e) => {
     let { user: t } = e,
         n = Array.from(S.tx.entries()),
-        r = (0, _.kE)(),
+        r = (0, p.kE)(),
         a = (0, g.t3)(),
         s = (0, b.Rd)(a);
     return (0, i.jsxs)('div', {
@@ -245,7 +245,7 @@ t.Z = (e) => {
         children: [
             (0, i.jsxs)('div', {
                 className: j.connectedCounter,
-                children: [(0, i.jsx)(M, {}), (0, i.jsx)(P, {})]
+                children: [(0, i.jsx)(O, {}), (0, i.jsx)(P, {})]
             }),
             (0, i.jsxs)('div', {
                 className: j.card,
