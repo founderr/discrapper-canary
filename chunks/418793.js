@@ -43,6 +43,17 @@ let s = (e) => {
                     expiresAt: e.expires_at,
                     ...t
                 };
+            case r.w.FRACTIONAL_PREMIUM:
+                return {
+                    type: r.w.FRACTIONAL_PREMIUM,
+                    quantity: e.quantity,
+                    messages: {
+                        redemptionInstructionsByPlatform: a(e.messages.redemption_instructions_by_platform),
+                        name: e.messages.name,
+                        nameWithArticle: e.messages.name_with_article
+                    },
+                    ...t
+                };
             case r.w.IN_GAME:
                 return {
                     type: r.w.IN_GAME,

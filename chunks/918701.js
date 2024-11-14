@@ -599,34 +599,42 @@ let em = (e, t) => {
             includeTaskTypes: i
         });
     },
-    eA = (e, t) =>
-        e.config.taskConfig.type !== u.L.FIRST_PARTY
-            ? {
-                  progressSeconds: 0,
-                  targetSeconds: 1,
-                  targetMinutes: 1,
-                  percentComplete: 0,
-                  taskType: s.X.STREAM_ON_DESKTOP
-              }
-            : eO(e)
-              ? ey({
-                    quest: e,
-                    includeTaskTypes: null != t ? t : ew(e) ? s.T.CONSOLE : s.T.ALL
-                })
-              : eD(e)
-                ? eS({
-                      quest: e,
-                      taskType: s.X.WATCH_VIDEO
-                  })
-                : ed(e)
-                  ? eS({
-                        quest: e,
-                        taskType: s.X.PLAY_ON_DESKTOP
-                    })
-                  : eS({
-                        quest: e,
-                        taskType: s.X.STREAM_ON_DESKTOP
-                    });
+    eA = (e, t) => {
+        var n;
+        if (e.config.taskConfig.type !== u.L.FIRST_PARTY)
+            return {
+                progressSeconds: 0,
+                targetSeconds: 1,
+                targetMinutes: 1,
+                percentComplete: 0,
+                taskType: s.X.STREAM_ON_DESKTOP
+            };
+        if (eO(e))
+            return ey({
+                quest: e,
+                includeTaskTypes: null != t ? t : ew(e) ? s.T.CONSOLE : s.T.ALL
+            });
+        if (eD(e))
+            return eS({
+                quest: e,
+                taskType: s.X.WATCH_VIDEO
+            });
+        if (ed(e))
+            return eS({
+                quest: e,
+                taskType: s.X.PLAY_ON_DESKTOP
+            });
+        if ((n = e).config.taskConfig.type === u.L.FIRST_PARTY && null != n.config.taskConfig.tasks[s.X.PLAY_ACTIVITY])
+            return eS({
+                quest: e,
+                taskType: s.X.PLAY_ACTIVITY
+            });
+        else
+            return eS({
+                quest: e,
+                taskType: s.X.STREAM_ON_DESKTOP
+            });
+    };
 function eN(e) {
     var t, n, r, i;
     if (e.config.taskConfig.type !== u.L.THIRD_PARTY || 0 === Object.keys(e.config.taskConfig.tasks).length) return null;
