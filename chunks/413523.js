@@ -172,12 +172,7 @@ class C {
     _getEmbeddedActivities() {
         let e = l.ZP.getEmbeddedActivitiesForChannel(this.channelId),
             t = l.ZP.getSelfEmbeddedActivityForChannel(this.channelId);
-        if (null == t) return e;
-        {
-            var n;
-            let r = (0, a.uniqBy)([...e, t], (e) => e.applicationId);
-            return (null === (n = t.participants) || void 0 === n ? void 0 : n.some((e) => e.sessionId === d.default.getSessionId())) ? r.filter((e) => e.applicationId !== t.applicationId && e.compositeInstanceId !== t.compositeInstanceId) : r;
-        }
+        return null == t ? e : (0, a.uniqBy)([...e, t], (e) => e.applicationId);
     }
     _getParticipantsForEmbeddedActivities() {
         return this._getEmbeddedActivities().map((e, t) => {

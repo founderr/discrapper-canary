@@ -6,19 +6,11 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var r = n(481060),
-    l = n(812206),
-    a = n(486003);
+    l = n(522474),
+    a = n(981631);
 function s(e) {
     let { applicationId: t, channelId: s, mediaUrl: o } = e,
-        c = l.Z.getApplication(t),
-        d =
-            null !=
-            (0, a.ZP)({
-                application: c,
-                channelId: s
-            })
-                ? r.POPOUT_MODAL_CONTEXT
-                : r.DEFAULT_MODAL_CONTEXT;
+        c = l.Z.getWindowOpen(a.KJ3.CHANNEL_CALL_POPOUT) ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT;
     (0, r.openModalLazy)(
         async () => {
             let { default: e } = await n.e('4530').then(n.bind(n, 899201));
@@ -32,7 +24,7 @@ function s(e) {
         },
         {
             modalKey: 'activity-share-moment-modal',
-            contextKey: d
+            contextKey: c
         }
     );
 }

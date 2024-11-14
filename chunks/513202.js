@@ -4,41 +4,18 @@ n(192379);
 var i = n(481060),
     a = n(570140),
     s = n(468026),
-    o = n(522474),
-    l = n(566620),
-    u = n(287545),
-    c = n(317381),
-    d = n(318891),
-    f = n(719296),
-    _ = n(981631),
-    p = n(388032);
-function h(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let m = !1;
-class g extends u.Z {
-    _initialize() {
-        super._initialize(), o.Z.addChangeListener(this.handlePopoutWindowUpdate);
-    }
-    _terminate() {
-        super._terminate(), o.Z.removeChangeListener(this.handlePopoutWindowUpdate);
-    }
+    o = n(566620),
+    l = n(287545),
+    u = n(318891),
+    c = n(719296),
+    d = n(388032);
+class f extends l.Z {
     showErrorModal(e) {
         let { code: t, message: n } = e;
         (0, i.openModalLazy)(
             async () => (e) =>
                 (0, r.jsx)(s.default, {
-                    title: p.intl.formatToPlainString(p.t.hbiAOz, { code: t }),
+                    title: d.intl.formatToPlainString(d.t.hbiAOz, { code: t }),
                     body: n,
                     ...e
                 })
@@ -48,7 +25,7 @@ class g extends u.Z {
         (0, i.openModalLazy)(
             async () => (t) =>
                 (0, r.jsx)(s.default, {
-                    title: p.intl.string(p.t.PtobXV),
+                    title: d.intl.string(d.t.PtobXV),
                     body: e,
                     ...t
                 })
@@ -57,7 +34,7 @@ class g extends u.Z {
     leaveActivity(e) {
         let { channelId: t, applicationId: n, showFeedback: r } = e;
         a.Z.wait(() => {
-            (0, l.mW)({
+            (0, o.mW)({
                 channelId: t,
                 applicationId: n,
                 showFeedback: r
@@ -66,32 +43,30 @@ class g extends u.Z {
     }
     hidePIPEmbed(e) {
         let { channelId: t, applicationId: n } = e,
-            r = (0, f.Z)(t, n);
-        (0, d.RI)(r);
+            r = (0, c.Z)(t, n);
+        (0, u.RI)(r);
     }
     releaseWebView() {}
     constructor(...e) {
+        var t, n, r;
         super(...e),
-            h(this, 'handleRPCDisconnect', (e) => {
+            (t = this),
+            (n = 'handleRPCDisconnect'),
+            (r = (e) => {
                 let { reason: t, application: n } = e;
                 this.superHandleRPCDisconnect({
                     reason: t,
                     application: n
                 });
             }),
-            h(this, 'handlePopoutWindowUpdate', () => {
-                let e = m,
-                    t = o.Z.getWindowOpen(_.KJ3.ACTIVITY_POPOUT);
-                if (e && !t) {
-                    let e = c.ZP.getCurrentEmbeddedActivity();
-                    null != e &&
-                        this.leaveActivity({
-                            channelId: e.channelId,
-                            applicationId: e.applicationId
-                        });
-                }
-                m = t;
-            });
+            n in t
+                ? Object.defineProperty(t, n, {
+                      value: r,
+                      enumerable: !0,
+                      configurable: !0,
+                      writable: !0
+                  })
+                : (t[n] = r);
     }
 }
-t.Z = new g();
+t.Z = new f();

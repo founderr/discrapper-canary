@@ -17,66 +17,61 @@ var r = n(568611),
     d = n(906732),
     m = n(895924),
     h = n(835473),
-    f = n(523746),
-    p = n(592125),
-    _ = n(594174),
-    g = n(630388),
-    E = n(823379),
-    C = n(624138),
-    I = n(317381),
-    x = n(638880),
-    N = n(122613),
-    v = n(147865),
-    T = n(778569),
-    S = n(884338),
-    A = n(486003),
+    f = n(522474),
+    p = n(523746),
+    _ = n(592125),
+    g = n(594174),
+    E = n(630388),
+    C = n(823379),
+    I = n(624138),
+    x = n(317381),
+    N = n(638880),
+    v = n(122613),
+    T = n(147865),
+    S = n(778569),
+    A = n(884338),
     b = n(403404),
     j = n(701488),
     Z = n(981631),
     R = n(388032),
     P = n(896219);
-let L = (0, C.Mg)(a.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
+let L = (0, I.Mg)(a.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
 function y(e) {
-    var t, n, a, C;
+    var t, n, a, I;
     let { applicationId: y, message: O } = e,
         { analyticsLocations: M } = (0, d.ZP)(u.Z.ACTIVITY_BOOKMARK),
         k = (0, c.O)(),
         D = O.channel_id,
-        B = (0, l.e7)([p.Z], () => p.Z.getChannel(D), [D]),
+        B = (0, l.e7)([_.Z], () => _.Z.getChannel(D), [D]),
         U = null == B ? void 0 : B.guild_id,
         w = null != B && (B.isGuildVoice() || B.isPrivate()),
-        F = (0, l.e7)([I.ZP], () => I.ZP.getSelfEmbeddedActivityForChannel(D)),
+        F = (0, l.e7)([x.ZP], () => x.ZP.getSelfEmbeddedActivityForChannel(D)),
         G = (null == F ? void 0 : F.applicationId) === y,
         [V] = (0, h.Z)([y, null !== (n = null == F ? void 0 : F.applicationId) && void 0 !== n ? n : '']),
-        H = (0, v.ZP)(null !== (a = null == V ? void 0 : V.maxParticipants) && void 0 !== a ? a : 0),
-        [z] = (0, l.Wu)([I.ZP], () => (w ? I.ZP.getEmbeddedActivitiesForChannel(D).filter((e) => e.applicationId === y) : []), [y, D, w]),
-        W = Array.from(null !== (C = null == z ? void 0 : z.userIds) && void 0 !== C ? C : []),
-        K = (0, l.Wu)([_.default], () => W.map((e) => _.default.getUser(e)).filter(E.lm), [W]),
-        Y = (0, T.Z)({
+        H = (0, T.ZP)(null !== (a = null == V ? void 0 : V.maxParticipants) && void 0 !== a ? a : 0),
+        [z] = (0, l.Wu)([x.ZP], () => (w ? x.ZP.getEmbeddedActivitiesForChannel(D).filter((e) => e.applicationId === y) : []), [y, D, w]),
+        W = Array.from(null !== (I = null == z ? void 0 : z.userIds) && void 0 !== I ? I : []),
+        K = (0, l.Wu)([g.default], () => W.map((e) => g.default.getUser(e)).filter(C.lm), [W]),
+        Y = (0, S.Z)({
             applicationId: y,
             size: L,
             names: ['embedded_cover']
         }),
-        X =
-            null !=
-            (0, A.ZP)({
-                application: null != V ? V : void 0,
-                channelId: D
-            }),
+        X = f.Z.getWindowOpen(Z.KJ3.CHANNEL_CALL_POPOUT),
         Q = K.length > 0 ? R.intl.string(R.t.VJlc0d) : R.intl.string(R.t.I0v0Qk),
         q = async () => {
             if (w) {
                 if (null != z && K.length > 0)
-                    await (0, x.Z)({
+                    await (0, N.Z)({
                         applicationId: z.applicationId,
                         activityChannelId: D,
                         locationObject: k.location,
                         analyticsLocations: M
                     });
                 else {
-                    let e = B.isPrivate() && !f.Z.isCallActive(D),
+                    let e = B.isPrivate() && !p.Z.isCallActive(D),
                         t = async () =>
-                            await (0, N.Z)({
+                            await (0, v.Z)({
                                 targetApplicationId: y,
                                 channelId: D,
                                 analyticsLocations: M,
@@ -102,7 +97,7 @@ function y(e) {
                     analyticsLocations: M
                 });
         };
-    return null != V && (0, g.yE)(V.flags, Z.udG.EMBEDDED)
+    return null != V && (0, E.yE)(V.flags, Z.udG.EMBEDDED)
         ? (0, i.jsx)(d.Gt, {
               value: M,
               children: (0, i.jsxs)('div', {
@@ -143,7 +138,7 @@ function y(e) {
                                       K.length > 0
                                           ? (0, i.jsx)('div', {
                                                 className: P.avatars,
-                                                children: (0, i.jsx)(S.Z, {
+                                                children: (0, i.jsx)(A.Z, {
                                                     guildId: U,
                                                     users: K,
                                                     max: 4

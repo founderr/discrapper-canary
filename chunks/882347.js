@@ -70,7 +70,6 @@ async function m(e) {
                 !(await new Promise((t) => {
                     (0, l.V)({
                         application: e,
-                        channelId: r.id,
                         onAgree: () => t(!0),
                         onDisagree: () => t(!1)
                     });

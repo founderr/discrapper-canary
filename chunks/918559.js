@@ -14,7 +14,6 @@ n.d(t, {
     (a.LAUNCHING_WITH_ORIENTATION_CHANGE = 'launching_with_orientation_change'),
     (a.PANEL = 'panel'),
     (a.PIP = 'pip'),
-    (a.ACTIVITY_POPOUT_WINDOW = 'activity_popout_window'),
     ((s = i || (i = {}))[(s.NO_CHAT = 0)] = 'NO_CHAT'),
     (s[(s.RESIZABLE = 1)] = 'RESIZABLE');
 let o = 16 / 9;
