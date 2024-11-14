@@ -75,5 +75,6 @@ let _ = {
     NON_COLLAPSIBLE: new Set([24]),
     NON_PARSED: new Set([4, 12, 18]),
     AUTOMOD_INCIDENT_ACTIONS: new Set([36, 37, 38, 39]),
-    SELF_MENTIONABLE_SYSTEM: new Set([46])
+    SELF_MENTIONABLE_SYSTEM: new Set([46]),
+    SCHEDULABLE: new Set([0, 19])
 };
