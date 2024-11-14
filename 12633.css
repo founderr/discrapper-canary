@@ -18111,13 +18111,16 @@ span.clanTag_a31c43 {
 
 .heroSplash_e12502 {
     height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
     position: absolute;
     top: 0;
     right: 0;
     border-top-right-radius: var(--radius-sm);
     border-bottom-right-radius: var(--radius-sm);
-    -webkit-mask-image: linear-gradient(270deg, #000 0, #000 40px, rgba(0, 0, 0, 0)176px);
-    mask-image: linear-gradient(270deg, #000 0, #000 40px, rgba(0, 0, 0, 0)176px)
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, transparent 100px, white 240px, white 100%);
+    mask-image: linear-gradient(90deg, transparent 0%, transparent 100px, white 240px, white 100%)
 }
 
 .rankContainer_e6eff2 {
@@ -18221,7 +18224,8 @@ span.clanTag_a31c43 {
 .userContainer_d270e1 {
     display: flex;
     align-items: center;
-    margin-left: 16px
+    margin-left: 16px;
+    position: relative
 }
 
 .userName_d270e1 {
@@ -18446,7 +18450,8 @@ span.clanTag_a31c43 {
 
 .emptyTitleContainer_cf8a7d {
     margin-left: 16px;
-    max-width: 148px
+    max-width: 148px;
+    position: relative
 }
 
 .emptyTitle_cf8a7d {
