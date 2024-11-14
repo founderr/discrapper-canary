@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return m;
+            return f;
         }
     }),
     n(47120),
@@ -18,22 +18,22 @@ var i = n(200651),
     h = n(873128),
     g = n(647529),
     x = n(388032),
-    f = n(48439);
-function m(e) {
+    m = n(48439);
+function f(e) {
     let { guildId: t, leaderboardId: n, ...r } = e,
-        m = (0, h.Z)({
+        f = (0, h.Z)({
             guildId: t,
             leaderboardId: n
         });
-    a()(null != m, 'Leaderboard must be loaded before opening the settings modal');
-    let _ = m.guild_settings,
+    a()(null != f, 'Leaderboard must be loaded before opening the settings modal');
+    let _ = f.guild_settings,
         [b, j] = s.useState(_.sort_by_statistic_id),
         [p, w] = s.useState(_.sort_desc),
-        [v, C] = s.useState(_.show_winner_crown),
-        [S, { loading: y }] = (0, d.Z)(c._),
+        [v, S] = s.useState(_.show_winner_crown),
+        [C, { loading: y }] = (0, d.Z)(c._),
         N = b !== _.sort_by_statistic_id || p !== _.sort_desc || v !== _.show_winner_crown,
         I = async () => {
-            await S({
+            await C({
                 guildId: t,
                 leaderboardId: n,
                 sortByStatisticId: b,
@@ -43,7 +43,7 @@ function m(e) {
                 r.onClose();
         },
         B = s.useMemo(() => {
-            let e = Object.values(m.settings.statistics).filter((e) => e.selectable_for_competition),
+            let e = Object.values(f.settings.statistics).filter((e) => e.selectable_for_competition),
                 t = [];
             for (let n of e)
                 for (let e of [!0, !1])
@@ -59,7 +59,7 @@ function m(e) {
                         })
                     });
             return t;
-        }, [m]),
+        }, [f]),
         Z = B.find((e) =>
             (0, o.Z)(e.value, {
                 sortByStatisticId: b,
@@ -77,8 +77,16 @@ function m(e) {
             children: x.intl.string(x.t.R3BPHx)
         }),
         children: (0, i.jsxs)(l.ModalContent, {
-            className: f.content,
+            className: m.content,
             children: [
+                (0, i.jsx)(l.Spacer, { size: 32 }),
+                (0, i.jsx)(l.FormTitle, { children: x.intl.string(x.t.R0X60t) }),
+                (0, i.jsx)(l.Text, {
+                    variant: 'text-sm/normal',
+                    color: 'header-secondary',
+                    children: x.intl.string(x.t.vcisKS)
+                }),
+                (0, i.jsx)(l.Spacer, { size: 18 }),
                 (0, i.jsx)(l.Text, {
                     variant: 'text-md/medium',
                     color: 'header-primary',
@@ -94,16 +102,16 @@ function m(e) {
                         j(t), w(n);
                     }
                 }),
-                (0, i.jsx)('div', { className: f.divider }),
+                (0, i.jsx)('div', { className: m.divider }),
                 (0, i.jsx)(l.FormTitle, { children: x.intl.string(x.t.HU4EKC) }),
                 (0, i.jsx)(l.Spacer, { size: 8 }),
                 (0, i.jsx)(l.FormSwitch, {
                     hideBorder: !0,
-                    onChange: () => C((e) => !e),
+                    onChange: () => S((e) => !e),
                     value: v,
-                    className: f.showWinnerCrownSwitch,
+                    className: m.showWinnerCrownSwitch,
                     children: (0, i.jsxs)('div', {
-                        className: f.showWinnerCrownTextContainer,
+                        className: m.showWinnerCrownTextContainer,
                         children: [
                             (0, i.jsx)(l.Text, {
                                 variant: 'text-md/medium',
