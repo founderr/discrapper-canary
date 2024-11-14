@@ -2,7 +2,7 @@ var i = n(200651);
 n(192379);
 var r = n(481060),
     l = n(570140),
-    a = n(813615),
+    a = n(486003),
     s = n(812206),
     o = n(69580),
     c = n(568963),
@@ -79,13 +79,23 @@ t.Z = (0, p.Z)(
                         (0, r.closeModal)(Z), t(new m.Z({ errorCode: f.lTL.OAUTH2_ERROR }, 'User cancelled authorization'));
                     }
                 },
-                (null != y && (0, a.Z)(y, S)) || O ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT
+                null != y &&
+                    null !=
+                        (0, a.ZP)({
+                            application: y,
+                            channelId: S
+                        })
+                    ? r.POPOUT_MODAL_CONTEXT
+                    : r.DEFAULT_MODAL_CONTEXT
             );
         });
     },
     function (e, t, n) {
         if (d.Z.isReady(null != n ? n : 0) || !u.isPlatformEmbedded) return;
-        let i = (0, a.Z)(e, t) ? f.KJ3.CHANNEL_CALL_POPOUT : null;
+        let i = (0, a.ZP)({
+            application: e,
+            channelId: t
+        });
         (0, u.isWindows)() ? h.ZP.minimize(i) : h.ZP.restore(i), h.ZP.focus(i);
     }
 );
