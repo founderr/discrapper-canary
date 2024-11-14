@@ -207,9 +207,7 @@ function eG(e) {
             children: (e) => {
                 let { unavailable: t, active: n, label: r, iconComponent: l, ...s } = e,
                     o = (0, i.jsx)(v, {
-                        size: 'custom',
-                        width: 20,
-                        height: 20,
+                        size: 'sm',
                         className: a()(ej.buttonIcon, { [ej.withText]: !C }),
                         color: 'currentColor'
                     });
@@ -368,6 +366,7 @@ function eV(e) {
         { Component: b, events: x, play: Z } = (0, m.P)(A ? 'disable' : 'enable');
     r.useEffect(() => () => Z(), [Z, A]);
     let L = (0, i.jsx)(b, {
+        size: 'sm',
         color: 'currentColor',
         className: a()(ej.buttonIcon, { [ej.withText]: !N })
     });
