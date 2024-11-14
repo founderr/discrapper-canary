@@ -10467,9 +10467,20 @@ div.modalHeader_c5e09c {
     margin-left: 8px
 }
 
+.barWithAppLauncherButton_cf58b5 {
+    right: calc(16px + var(--custom-channel-textarea-text-area-height) + var(--custom-channel-textarea-app-launcher-button-gap))
+}
+
+.barWithAppsDMsUI_cf58b5 {
+    right: calc(16px + var(--custom-app-dm-chat-input-primary-button-width) + var(--custom-channel-textarea-app-launcher-button-gap))
+}
+
+.barWithAppLauncherButton_cf58b5.barWithAppsDMsUI_cf58b5 {
+    right: calc(16px + var(--custom-channel-textarea-text-area-height) + var(--custom-app-dm-chat-input-primary-button-width) + 2*var(--custom-channel-textarea-app-launcher-button-gap))
+}
+
 .jumpToPresentBar_cf58b5 {
     bottom: 0;
-    right: calc(16px + var(--custom-channel-textarea-text-area-height) + var(--custom-channel-textarea-app-launcher-button-gap));
     border-radius: 8px 8px 0 0;
     background-color: var(--background-accent);
     opacity: .95;

@@ -306,13 +306,14 @@ class A extends (r = a.Component) {
             { position: s, isPositioned: l, isSettingsLayerTransitioning: u, nudge: _ } = this.state;
         return (0, i.jsx)(d.C1, {
             children: (d) => {
-                let { theme: p } = d;
+                let { theme: p, disableAdaptiveTheme: h } = d;
                 return (0, i.jsx)('div', {
                     id: e,
                     className: o()(t, (0, f.Qe)(p), g.layer, {
                         [g.emptyError]: !1,
                         [g.layerHidden]: u,
-                        [g.disabledPointerEvents]: a
+                        [g.disabledPointerEvents]: a,
+                        'disable-adaptive-theme': h
                     }),
                     style: {
                         position: r ? 'fixed' : 'absolute',

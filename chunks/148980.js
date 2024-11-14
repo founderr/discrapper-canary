@@ -12,10 +12,11 @@ var i = n(120356),
     l = n(168551);
 function u(e) {
     var t;
-    let { theme: n, gradient: i, disableColorMixing: u, children: c } = e;
+    let { theme: n, gradient: i, disableAdaptiveTheme: u, children: c } = e;
     return (0, r.jsx)(s.ze, {
         theme: n,
         gradient: i,
+        disableAdaptiveTheme: u,
         children: c(
             a()((0, o.Qe)(null !== (t = null == i ? void 0 : i.theme) && void 0 !== t ? t : n), {
                 [l.e3]: null != i,
