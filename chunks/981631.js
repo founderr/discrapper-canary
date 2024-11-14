@@ -4582,6 +4582,7 @@ let or = Object.freeze({
     (nO.CHAT_CONTEXT_BAR_ACTION_CANCELED = 'chat_context_bar_action_canceled'),
     (nO.SHARE_SHEET_ACTION = 'share_sheet_action'),
     (nO.SHARE_MESSAGE_SENT = 'share_message_sent'),
+    (nO.EXTERNAL_SHARE_OPENED = 'external_share_opened'),
     (nO.MESSAGE_POPOUT_MENU_OPENED_MOBILE = 'message_popout_menu_opened_mobile'),
     (nO.MESSAGE_POPOUT_MENU_OPENED_DESKTOP = 'message_popout_menu_opened_desktop'),
     (nO.VOICE_CODEC_DETECTED = 'voice_codec_detected'),
