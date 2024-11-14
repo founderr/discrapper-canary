@@ -3,7 +3,7 @@ r.d(t, {
         return E;
     },
     Cd: function () {
-        return L;
+        return f;
     },
     HY: function () {
         return d;
@@ -30,7 +30,7 @@ r.d(t, {
         return T;
     },
     zQ: function () {
-        return A;
+        return N;
     }
 });
 var n = r(967752),
@@ -114,7 +114,7 @@ function I(e) {
 function R(e) {
     return [{ type: 'span' }, e];
 }
-function A(e) {
+function N(e) {
     let t = 'string' == typeof e.data ? l(e.data) : e.data;
     return [
         (0, _.Jr)({
@@ -127,7 +127,7 @@ function A(e) {
         t
     ];
 }
-let N = {
+let A = {
     session: 'session',
     sessions: 'session',
     attachment: 'attachment',
@@ -145,7 +145,7 @@ let N = {
     statsd: 'metric_bucket'
 };
 function T(e) {
-    return N[e];
+    return A[e];
 }
 function d(e) {
     if (!e || !e.sdk) return;
@@ -155,7 +155,7 @@ function d(e) {
         version: r
     };
 }
-function L(e, t, r, a) {
+function f(e, t, r, a) {
     let o = e.sdkProcessingMetadata && e.sdkProcessingMetadata.dynamicSamplingContext;
     return {
         event_id: e.event_id,

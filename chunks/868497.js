@@ -1,6 +1,6 @@
 r.d(t, {
     m: function () {
-        return A;
+        return N;
     }
 });
 var n = r(873567),
@@ -15,13 +15,13 @@ var n = r(873567),
     u = r(793373),
     I = r(152228),
     R = r(305625);
-function A(e, t, r, A, N = 'auto.http.browser') {
+function N(e, t, r, N, A = 'auto.http.browser') {
     if (!e.fetchData) return;
     let T = (0, c.z)() && t(e.fetchData.url);
     if (e.endTimestamp && T) {
         let t = e.fetchData.__span;
         if (!t) return;
-        let r = A[t];
+        let r = N[t];
         r &&
             ((function (e, t) {
                 if (t.response) {
@@ -39,12 +39,12 @@ function A(e, t, r, A, N = 'auto.http.browser') {
                         });
                 e.end();
             })(r, e),
-            delete A[t]);
+            delete N[t]);
         return;
     }
     let d = (0, i.nZ)(),
-        L = (0, i.s3)(),
-        { method: f, url: O } = e.fetchData,
+        f = (0, i.s3)(),
+        { method: L, url: O } = e.fetchData,
         p = (function (e) {
             try {
                 return new URL(e).href;
@@ -57,19 +57,19 @@ function A(e, t, r, A, N = 'auto.http.browser') {
         D =
             T && S
                 ? (0, I.qp)({
-                      name: `${f} ${O}`,
+                      name: `${L} ${O}`,
                       attributes: {
                           url: O,
                           type: 'fetch',
-                          'http.method': f,
+                          'http.method': L,
                           'http.url': p,
                           'server.address': h,
-                          [E.S3]: N,
+                          [E.S3]: A,
                           [E.$J]: 'http.client'
                       }
                   })
                 : new l.b();
-    if (((e.fetchData.__span = D.spanContext().spanId), (A[D.spanContext().spanId] = D), r(e.fetchData.url) && L)) {
+    if (((e.fetchData.__span = D.spanContext().spanId), (N[D.spanContext().spanId] = D), r(e.fetchData.url) && f)) {
         let t = e.args[0];
         e.args[1] = e.args[1] || {};
         let r = e.args[1];
@@ -83,35 +83,35 @@ function A(e, t, r, A, N = 'auto.http.browser') {
                     ...(0, i.aF)().getPropagationContext(),
                     ...r.getPropagationContext()
                 },
-                A = E ? (0, s.Hb)(E) : (0, a.$p)(c, l, u),
-                N = (0, _.IQ)(I || (E ? (0, R.jC)(E) : (0, R._l)(c, t))),
+                N = E ? (0, s.Hb)(E) : (0, a.$p)(c, l, u),
+                A = (0, _.IQ)(I || (E ? (0, R.jC)(E) : (0, R._l)(c, t))),
                 T = n.headers || ('undefined' != typeof Request && (0, o.V9)(e, Request) ? e.headers : void 0);
             if (!T)
                 return {
-                    'sentry-trace': A,
-                    baggage: N
+                    'sentry-trace': N,
+                    baggage: A
                 };
             if ('undefined' != typeof Headers && (0, o.V9)(T, Headers)) {
                 let e = new Headers(T);
-                return e.append('sentry-trace', A), N && e.append(_.bU, N), e;
+                return e.append('sentry-trace', N), A && e.append(_.bU, A), e;
             }
             if (Array.isArray(T)) {
-                let e = [...T, ['sentry-trace', A]];
-                return N && e.push([_.bU, N]), e;
+                let e = [...T, ['sentry-trace', N]];
+                return A && e.push([_.bU, A]), e;
             } else {
                 let e = 'baggage' in T ? T.baggage : void 0,
                     t = [];
                 return (
                     Array.isArray(e) ? t.push(...e) : e && t.push(e),
-                    N && t.push(N),
+                    A && t.push(A),
                     {
                         ...T,
-                        'sentry-trace': A,
+                        'sentry-trace': N,
                         baggage: t.length > 0 ? t.join(',') : void 0
                     }
                 );
             }
-        })(t, L, d, r, (0, c.z)() && S ? D : void 0);
+        })(t, f, d, r, (0, c.z)() && S ? D : void 0);
     }
     return D;
 }

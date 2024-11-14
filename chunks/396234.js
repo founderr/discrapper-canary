@@ -74,7 +74,7 @@ function i(e, t) {
         })(e, c);
 }
 function E(e, t) {
-    let { extra: r, tags: n, user: a, contexts: _, level: o, sdkProcessingMetadata: i, breadcrumbs: E, fingerprint: s, eventProcessors: l, attachments: u, propagationContext: I, transactionName: R, span: A } = t;
+    let { extra: r, tags: n, user: a, contexts: _, level: o, sdkProcessingMetadata: i, breadcrumbs: E, fingerprint: s, eventProcessors: l, attachments: u, propagationContext: I, transactionName: R, span: N } = t;
     c(e, 'extra', r),
         c(e, 'tags', n),
         c(e, 'user', a),
@@ -82,7 +82,7 @@ function E(e, t) {
         c(e, 'sdkProcessingMetadata', i),
         o && (e.level = o),
         R && (e.transactionName = R),
-        A && (e.span = A),
+        N && (e.span = N),
         E.length && (e.breadcrumbs = [...e.breadcrumbs, ...E]),
         s.length && (e.fingerprint = [...e.fingerprint, ...s]),
         l.length && (e.eventProcessors = [...e.eventProcessors, ...l]),

@@ -67,7 +67,7 @@ function U(e) {
         n = t % 60;
     return ''.concat((t - n) / 60, ':').concat(String(n).padStart(2, '0'));
 }
-let G = (e) => {
+let B = (e) => {
     let { current: t, duration: n } = e,
         r = null != t ? U(t) : w,
         i = null != n ? U(n) : w;
@@ -92,7 +92,7 @@ let G = (e) => {
         })
     );
 };
-class B extends (r = s.Component) {
+class G extends (r = s.Component) {
     componentDidMount() {
         this.state.translateY.setValue(this.props.autoPlay ? 1 : 0);
     }
@@ -180,7 +180,7 @@ class B extends (r = s.Component) {
             children: [
                 this.renderPlayIcon(),
                 'string' == typeof _ || _ > 250
-                    ? (0, a.jsx)(G, {
+                    ? (0, a.jsx)(B, {
                           current: n,
                           duration: r
                       })
@@ -262,7 +262,7 @@ function Z(e) {
         ]
     });
 }
-x(B, 'defaultProps', { disabled: !1 });
+x(G, 'defaultProps', { disabled: !1 });
 class F extends s.Component {
     pop() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
@@ -664,7 +664,7 @@ class H extends (i = s.PureComponent) {
             } = this,
             I = this.getWidth();
         return f || n || t === P.AUDIO
-            ? (0, a.jsx)(B, {
+            ? (0, a.jsx)(G, {
                   buffers: u,
                   currentTime: c,
                   duration: d,

@@ -15,12 +15,12 @@ var n = r(967752),
     u = r(510529),
     I = r(263449),
     R = r(255768),
-    A = r(380132),
-    N = r(151122),
+    N = r(380132),
+    A = r(151122),
     T = r(112797),
     d = r(305625),
-    L = r(820754),
-    f = r(822578);
+    f = r(820754),
+    L = r(822578);
 let O = "Not capturing exception because it's already been captured.";
 class p {
     constructor(e) {
@@ -98,17 +98,17 @@ class p {
     }
     addIntegration(e) {
         let t = this._integrations[e.name];
-        (0, N.m7)(this, e, this._integrations), !t && (0, N.uf)(this, [e]);
+        (0, A.m7)(this, e, this._integrations), !t && (0, A.uf)(this, [e]);
     }
     sendEvent(e, t = {}) {
         this.emit('beforeSendEvent', e, t);
-        let r = (0, A.Mq)(e, this._dsn, this._options._metadata, this._options.tunnel);
+        let r = (0, N.Mq)(e, this._dsn, this._options._metadata, this._options.tunnel);
         for (let e of t.attachments || []) r = (0, E.BO)(r, (0, E.zQ)(e));
         let n = this.sendEnvelope(r);
         n && n.then((t) => this.emit('afterSendEvent', e, t), null);
     }
     sendSession(e) {
-        let t = (0, A.Q3)(e, this._dsn, this._options._metadata, this._options.tunnel);
+        let t = (0, N.Q3)(e, this._dsn, this._options._metadata, this._options.tunnel);
         this.sendEnvelope(t);
     }
     recordDroppedEvent(e, t, r) {
@@ -137,7 +137,7 @@ class p {
     }
     _setupIntegrations() {
         let { integrations: e } = this._options;
-        (this._integrations = (0, N.q4)(this, e)), (0, N.uf)(this, e);
+        (this._integrations = (0, A.q4)(this, e)), (0, A.uf)(this, e);
     }
     _updateSessionFromEvent(e, t) {
         let r = !1,
@@ -177,7 +177,7 @@ class p {
             !t.integrations && _.length > 0 && (t.integrations = _),
             this.emit('preprocessEvent', e, t),
             !e.type && n.setLastEventId(e.event_id || t.event_id),
-            (0, f.R)(a, e, t, r, this, n).then((e) => {
+            (0, L.R)(a, e, t, r, this, n).then((e) => {
                 if (null === e) return e;
                 let t = {
                     ...n.getPropagationContext(),
@@ -218,7 +218,7 @@ class p {
             E = h(e),
             c = e.type || 'error',
             l = `before send for type \`${c}\``,
-            u = void 0 === a ? void 0 : (0, L.o)(a);
+            u = void 0 === a ? void 0 : (0, f.o)(a);
         if (E && 'number' == typeof u && Math.random() > u) return this.recordDroppedEvent('sample_rate', 'error', e), (0, i.$2)(new s.b(`Discarding event because it's not included in the random sample (sampling rate = ${a})`, 'log'));
         let I = 'replay_event' === c ? 'replay' : c,
             R = (e.sdkProcessingMetadata || {}).capturedSpanIsolationScope;

@@ -48,7 +48,7 @@ n.d(t, {
         return i;
     },
     eN: function () {
-        return G;
+        return B;
     },
     eQ: function () {
         return ec;
@@ -208,7 +208,7 @@ function U(e) {
         isFetchingCurrentQuests: n
     };
 }
-function G() {
+function B() {
     let e = u.useRef(!1),
         t = (0, p.Wu)([y.Z], () => Array.from(y.Z.claimedQuests.values())),
         n = (0, p.e7)([y.Z], () => y.Z.isFetchingClaimedQuests);
@@ -222,7 +222,7 @@ function G() {
         }
     );
 }
-function B() {
+function G() {
     let { quests: e, isFetchingCurrentQuests: t } = P({ fetchPolicy: 'cache-only' }),
         [n, r] = u.useState(() => new Map(e.map((e) => [e.id, (0, N.zi)(e)])));
     return (
@@ -250,7 +250,7 @@ function B() {
     );
 }
 function Z(e) {
-    let t = B();
+    let t = G();
     return u.useMemo(() => {
         var n;
         return null != e && null !== (n = t.get(e.id)) && void 0 !== n && n;
@@ -359,7 +359,7 @@ function z(e, t, n) {
 }
 function q() {
     let { quests: e, isFetchingCurrentQuests: t } = P({ fetchPolicy: 'cache-or-network' }),
-        n = B();
+        n = G();
     return u.useMemo(() => {
         let r = [];
         if (t || 0 === e.length) return r;

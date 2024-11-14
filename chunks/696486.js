@@ -6,13 +6,13 @@ r.d(t, {
         return g;
     },
     Gx: function () {
-        return P;
-    },
-    HN: function () {
         return U;
     },
+    HN: function () {
+        return P;
+    },
     HR: function () {
-        return A;
+        return N;
     },
     Hb: function () {
         return T;
@@ -21,7 +21,7 @@ r.d(t, {
         return O;
     },
     XU: function () {
-        return f;
+        return L;
     },
     _4: function () {
         return p;
@@ -39,7 +39,7 @@ r.d(t, {
         return I;
     },
     wy: function () {
-        return N;
+        return A;
     },
     yc: function () {
         return M;
@@ -57,9 +57,9 @@ var n = r(370336),
     u = r(99342);
 let I = 0,
     R = 1;
-function A(e) {
+function N(e) {
     let { spanId: t, traceId: r } = e.spanContext(),
-        { data: a, op: _, parent_span_id: o, status: i, origin: E } = f(e);
+        { data: a, op: _, parent_span_id: o, status: i, origin: E } = L(e);
     return (0, n.Jr)({
         parent_span_id: o,
         span_id: t,
@@ -70,9 +70,9 @@ function A(e) {
         origin: E
     });
 }
-function N(e) {
+function A(e) {
     let { spanId: t, traceId: r } = e.spanContext(),
-        { parent_span_id: a } = f(e);
+        { parent_span_id: a } = L(e);
     return (0, n.Jr)({
         parent_span_id: a,
         span_id: t,
@@ -85,12 +85,12 @@ function T(e) {
     return (0, a.$p)(t, r, n);
 }
 function d(e) {
-    return 'number' == typeof e ? L(e) : Array.isArray(e) ? e[0] + e[1] / 1000000000 : e instanceof Date ? L(e.getTime()) : (0, _.ph)();
-}
-function L(e) {
-    return e > 9999999999 ? e / 1000 : e;
+    return 'number' == typeof e ? f(e) : Array.isArray(e) ? e[0] + e[1] / 1000000000 : e instanceof Date ? f(e.getTime()) : (0, _.ph)();
 }
 function f(e) {
+    return e > 9999999999 ? e / 1000 : e;
+}
+function L(e) {
     if (
         (function (e) {
             return 'function' == typeof e.getSpanJSON;
@@ -154,15 +154,15 @@ function g(e) {
         Array.from(t)
     );
 }
-function P(e) {
+function U(e) {
     return e[S] || e;
 }
-function U() {
+function P() {
     let e = (0, i.c)(),
         t = (0, o.G)(e);
     return t.getActiveSpan ? t.getActiveSpan() : (0, u.Y)((0, E.nZ)());
 }
 function M(e, t, r, n, a, _) {
-    let o = U();
+    let o = P();
     o && (0, c.V)(o, e, t, r, n, a, _);
 }

@@ -201,7 +201,7 @@ function U(e) {
               })(1)
             : e;
 }
-function G(e, t) {
+function B(e, t) {
     var n = t.key,
         r = t.props,
         i = t.state,
@@ -240,7 +240,7 @@ function G(e, t) {
         f ? h() : ((u = O(r.delay || 0, n)), (d = D(r.pause, n)) ? (i.resumeQueue.add(p), o.pause()) : (o.resume(), p()));
     });
 }
-var B = function (e, t) {
+var G = function (e, t) {
         return 1 == t.length
             ? t[0]
             : t.some(function (e) {
@@ -744,7 +744,7 @@ var K = (function (e) {
                                                 )
                                             );
                                         case 4:
-                                            return (i = e.sent), e.abrupt('return', B(this, i));
+                                            return (i = e.sent), e.abrupt('return', G(this, i));
                                         case 6:
                                         case 'end':
                                             return e.stop();
@@ -821,7 +821,7 @@ var K = (function (e) {
                     };
                 i('cancel'), i('pause');
                 var s = this._prepareNode(e);
-                return G(++this._lastCallId, {
+                return B(++this._lastCallId, {
                     key: this.key,
                     props: e,
                     state: this._state,
@@ -888,11 +888,11 @@ var K = (function (e) {
                 if (!M || a.is.und(g)) return n(F(this, !0));
                 var P = a.is.und(t.reset) ? u && !t.default : !a.is.und(v) && D(t.reset, r),
                     k = P ? v : this.get(),
-                    G = U(g),
-                    B = a.is.num(G) || a.is.arr(G) || a.isAnimatedString(G),
-                    j = !C && (!B || D(o.immediate || t.immediate, r));
+                    B = U(g),
+                    G = a.is.num(B) || a.is.arr(B) || a.isAnimatedString(B),
+                    j = !C && (!G || D(o.immediate || t.immediate, r));
                 if (T) {
-                    if (j) M = this._updateNode(G);
+                    if (j) M = this._updateNode(B);
                     else {
                         var Y = this._getNodeType(g);
                         if (Y !== M.constructor) throw Error('Cannot animate between ' + M.constructor.name + ' and ' + Y.name + ', as the "to" prop suggests');
@@ -903,10 +903,10 @@ var K = (function (e) {
                     z = !1;
                 if (!K) {
                     var q = P || (this.is(X) && b);
-                    (T || q) && (K = !(z = a.isEqual(U(k), G))), (!a.isEqual(R.decay, L) || !a.isEqual(R.velocity, x)) && (K = !0);
+                    (T || q) && (K = !(z = a.isEqual(U(k), B))), (!a.isEqual(R.decay, L) || !a.isEqual(R.velocity, x)) && (K = !0);
                 }
                 if ((z && this.is($) && (i.changed && !P ? (K = !0) : !K && this._stop()), !C)) {
-                    (K || a.getFluidConfig(p)) && ((i.values = M.getPayload()), (i.toValues = A ? null : W == f.AnimatedString ? [1] : a.toArray(G))), (i.immediate = j), (i.onStart = ei(c('onStart'), r)), (i.onChange = ei(c('onChange'), r));
+                    (K || a.getFluidConfig(p)) && ((i.values = M.getPayload()), (i.toValues = A ? null : W == f.AnimatedString ? [1] : a.toArray(B))), (i.immediate = j), (i.onStart = ei(c('onStart'), r)), (i.onChange = ei(c('onChange'), r));
                     var Q = i.onRest,
                         ee = P && !t.onRest ? Q[0] || a.noop : ea(ei(c('onRest'), r), this);
                     if (K) {
@@ -1248,7 +1248,7 @@ function ef(e, t) {
                 return (
                     l
                         ? u.push(
-                              G(++t._lastAsyncId, {
+                              B(++t._lastAsyncId, {
                                   props: n,
                                   state: c,
                                   actions: {
@@ -1265,7 +1265,7 @@ function ef(e, t) {
                           )
                         : !n.keys && !0 === n.cancel && W(c, t._lastAsyncId),
                     Promise.all(u).then(function (a) {
-                        var o = B(t, a);
+                        var o = G(t, a);
                         if (s && o.finished && !(r && o.noop)) {
                             var l = es(n, s, i);
                             if (l) return eg(t, [l]), e(t, l, !0);
@@ -1276,7 +1276,7 @@ function ef(e, t) {
             })(e, t);
         })
     ).then(function (t) {
-        return B(e, t);
+        return G(e, t);
     });
 }
 function e_(e, t) {

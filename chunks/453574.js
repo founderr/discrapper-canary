@@ -36,7 +36,7 @@ let R = (0, a._I)((e = {}) => {
                                     let E = (function (e, t) {
                                         return (!t && e instanceof Request) || (e instanceof Request && e.bodyUsed) ? e : new Request(e, t);
                                     })(t, n);
-                                    L() && (([e, o] = A('Cookie', E)), ([a, i] = A('Set-Cookie', r)));
+                                    f() && (([e, o] = N('Cookie', E)), ([a, i] = N('Set-Cookie', r)));
                                     let c = d({
                                         url: E.url,
                                         method: E.method,
@@ -63,10 +63,10 @@ let R = (0, a._I)((e = {}) => {
                                 !(function (e, t, r, n) {
                                     if (T(e, t.status, t.responseURL)) {
                                         let e, a, o;
-                                        if (L()) {
+                                        if (f()) {
                                             try {
                                                 let e = t.getResponseHeader('Set-Cookie') || t.getResponseHeader('set-cookie') || void 0;
-                                                e && (a = N(e));
+                                                e && (a = A(e));
                                             } catch (e) {
                                                 I.X && E.kg.log('Could not extract cookies from response headers');
                                             }
@@ -104,7 +104,7 @@ let R = (0, a._I)((e = {}) => {
         }
     };
 });
-function A(e, t) {
+function N(e, t) {
     let r;
     let n = (function (e) {
         let t = {};
@@ -117,13 +117,13 @@ function A(e, t) {
     })(t.headers);
     try {
         let t = n[e] || n[e.toLowerCase()] || void 0;
-        t && (r = N(t));
+        t && (r = A(t));
     } catch (t) {
         I.X && E.kg.log(`Could not extract cookies from header ${e}`);
     }
     return [n, r];
 }
-function N(e) {
+function A(e) {
     return e.split('; ').reduce((e, t) => {
         let [r, n] = t.split('=');
         return r && n && (e[r] = n), e;
@@ -173,7 +173,7 @@ function d(e) {
         r
     );
 }
-function L() {
+function f() {
     let e = (0, o.s3)();
     return !!e && !!e.getOptions().sendDefaultPii;
 }

@@ -42,8 +42,8 @@ var r = n(200651),
     P = n(421673),
     k = n(663215),
     U = n(409673),
-    G = n(347072),
-    B = n(835648),
+    B = n(347072),
+    G = n(835648),
     Z = n(650743),
     F = n(394740),
     V = n(343747),
@@ -179,7 +179,7 @@ function J(e) {
                         refreshEnabled: E
                     });
                 case L.vB.ADD_SOUND:
-                    return (0, i.createElement)(G.Z, {
+                    return (0, i.createElement)(B.Z, {
                         ...d(t),
                         key: r,
                         guild: e.item.guild,
@@ -192,7 +192,7 @@ function J(e) {
     });
 }
 function $(e) {
-    let { guildId: t, channel: a, containerWidth: s, onClose: c, onSelect: h, shouldValidateSelectedSound: I = !1, suppressPlaySound: N = !1, shouldShowUpsell: U = !0, gridNotice: G, soundButtonOverlay: $, listPadding: ee, renderHeader: et, defaultSoundsOnly: en = !1, inExpressionPicker: er, refreshEnabled: ei } = e,
+    let { guildId: t, channel: a, containerWidth: s, onClose: c, onSelect: h, shouldValidateSelectedSound: I = !1, suppressPlaySound: N = !1, shouldShowUpsell: U = !0, gridNotice: B, soundButtonOverlay: $, listPadding: ee, renderHeader: et, defaultSoundsOnly: en = !1, inExpressionPicker: er, refreshEnabled: ei } = e,
         { currentPreviewRef: ea } = i.useContext(O.Z),
         { analyticsLocations: es } = (0, _.ZP)(),
         { analyticsLocations: eo } = (0, _.ZP)(f.Z.PREMIUM_UPSELL),
@@ -266,7 +266,7 @@ function $(e) {
             },
             [es, ek, c]
         ),
-        eG = i.useCallback(
+        eB = i.useCallback(
             (e, n, i, s, o) => {
                 let l = ey[i.sectionIndex],
                     u = U && q(l.categoryInfo, e_, t),
@@ -299,7 +299,7 @@ function $(e) {
             },
             [ey, U, e_, t, N, eU, a, ew, eM, eh, eC, es, $, eD, ei]
         ),
-        eB = i.useCallback(
+        eG = i.useCallback(
             (e, t) => {
                 if (e <= 0 || !U) return !1;
                 let n = ey[e],
@@ -310,7 +310,7 @@ function $(e) {
             },
             [ey, U, e_]
         ),
-        eZ = i.useCallback((e) => (0 === e ? 16 : eB(e, t) ? z : 32), [t, eB]),
+        eZ = i.useCallback((e) => (0 === e ? 16 : eG(e, t) ? z : 32), [t, eG]),
         eF = i.useCallback(
             (e) => {
                 let t = e === ey.length - 1;
@@ -322,7 +322,7 @@ function $(e) {
             (e, n) => {
                 let i = ''.concat(e.key),
                     a = U && q(e.categoryInfo, e_, t),
-                    s = eB(n, t);
+                    s = eG(n, t);
                 return (0, r.jsx)(
                     Q,
                     {
@@ -336,7 +336,7 @@ function $(e) {
                     'header-'.concat(i)
                 );
             },
-            [ex, eP, t, eB, U, e_, eD]
+            [ex, eP, t, eG, U, e_, eD]
         ),
         ej = i.useCallback(
             (e, t) => {
@@ -369,7 +369,7 @@ function $(e) {
         ),
         eK = i.useCallback(
             (e) =>
-                (0, r.jsx)(B.Z, {
+                (0, r.jsx)(G.Z, {
                     soundboardListRef: e,
                     categories: ev,
                     shouldUpsellLockedCategories: eD,
@@ -465,7 +465,7 @@ function $(e) {
                 onSearchExpressions: eH,
                 hasSearchResults: eI.length > 0,
                 defaultSearchPlaceholder: Y.intl.string(Y.t.sKt3xc),
-                renderRow: eG,
+                renderRow: eB,
                 renderSectionHeader: eV,
                 renderSectionFooter: ej,
                 renderCategoryList: eK,
@@ -478,7 +478,7 @@ function $(e) {
                 gridNavigatorId: eE,
                 renderEmptySearchState: X,
                 renderInspector: eX,
-                gridNotice: G,
+                gridNotice: B,
                 renderHeader: et,
                 renderUpsell: eQ,
                 setShowUpsell: eT

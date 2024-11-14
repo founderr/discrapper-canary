@@ -77,7 +77,7 @@ class f extends i.Z {
         });
     }
     mergeFromApplicationUpdate(e) {
-        var t, n, r, i, a, s, o, l, u, c, d, _, p, h, m, g, E, v, I, b, S, T, y, A, N, C, R, O, D, L, x, w, M, P, k, U, G, B, Z;
+        var t, n, r, i, a, s, o, l, u, c, d, _, p, h, m, g, E, v, I, b, S, T, y, A, N, C, R, O, D, L, x, w, M, P, k, U, B, G, Z;
         return new f({
             id: null !== (t = e.id) && void 0 !== t ? t : this.id,
             name: null !== (n = e.name) && void 0 !== n ? n : this.name,
@@ -115,8 +115,8 @@ class f extends i.Z {
             storefront_available: null !== (P = e.storefront_available) && void 0 !== P ? P : this.storefront_available,
             termsOfServiceUrl: null !== (k = e.termsOfServiceUrl) && void 0 !== k ? k : this.termsOfServiceUrl,
             privacyPolicyUrl: null !== (U = e.privacyPolicyUrl) && void 0 !== U ? U : this.privacyPolicyUrl,
-            isVerified: null !== (G = e.isVerified) && void 0 !== G ? G : this.isVerified,
-            customInstallUrl: null !== (B = e.customInstallUrl) && void 0 !== B ? B : this.customInstallUrl,
+            isVerified: null !== (B = e.isVerified) && void 0 !== B ? B : this.isVerified,
+            customInstallUrl: null !== (G = e.customInstallUrl) && void 0 !== G ? G : this.customInstallUrl,
             installParams: null !== (Z = e.installParams) && void 0 !== Z ? Z : this.installParams
         });
     }

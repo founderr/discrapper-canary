@@ -58,8 +58,8 @@ let A = {
     P = new Map(),
     k = new Map(),
     U = new Map(),
-    G = new Map();
-let B = S.Ez.DISCONNECTED,
+    B = new Map();
+let G = S.Ez.DISCONNECTED,
     Z = S.MI.RESIZABLE,
     F = b.GM.NORMAL;
 function V(e) {
@@ -141,12 +141,12 @@ function j(e) {
                                     key: T.KJ3.ACTIVITY_POPOUT
                                 });
                             }),
-                        (B = S.Ez.ACTIVITY_POPOUT_WINDOW),
+                        (G = S.Ez.ACTIVITY_POPOUT_WINDOW),
                         s.Z.wait(() => {
                             s.Z.dispatch({ type: 'ACTIVITY_POPOUT_WINDOW_OPEN' });
                         }))
-                      : (B = r !== f.Z.getChannelId() || (0, I.Z)(i) ? S.Ez.PIP : S.Ez.PANEL),
-                  G.set(K(i, a), Date.now());
+                      : (G = r !== f.Z.getChannelId() || (0, I.Z)(i) ? S.Ez.PIP : S.Ez.PANEL),
+                  B.set(K(i, a), Date.now());
           })({
               channelId: l,
               applicationId: v,
@@ -232,7 +232,7 @@ class z extends (i = a.ZP.PersistedStore) {
         return D;
     }
     getEmbeddedActivityDurationMs(e, t) {
-        let n = G.get(K(e, t));
+        let n = B.get(K(e, t));
         return null == n ? null : Date.now() - n;
     }
     isLaunchingActivity() {
@@ -272,7 +272,7 @@ class z extends (i = a.ZP.PersistedStore) {
         return r;
     }
     getActivityPanelMode() {
-        return B;
+        return G;
     }
     getFocusedLayout() {
         return Z;
@@ -481,7 +481,7 @@ let q = new z(s.Z, {
     },
     EMBEDDED_ACTIVITY_SET_PANEL_MODE: function (e) {
         let { activityPanelMode: t } = e;
-        B = t;
+        G = t;
     },
     EMBEDDED_ACTIVITY_SET_FOCUSED_LAYOUT: function (e) {
         let { focusedActivityLayout: t } = e;
@@ -489,11 +489,11 @@ let q = new z(s.Z, {
     },
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
-        r !== t && B === S.Ez.PANEL && (B = S.Ez.PIP);
+        r !== t && G === S.Ez.PANEL && (G = S.Ez.PIP);
     },
     POPOUT_WINDOW_CLOSE: function (e) {
         let { key: t } = e;
-        t === T.KJ3.ACTIVITY_POPOUT && (B = S.Ez.PIP);
+        t === T.KJ3.ACTIVITY_POPOUT && (G = S.Ez.PIP);
     }
 });
 t.ZP = q;

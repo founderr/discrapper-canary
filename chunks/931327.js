@@ -40,10 +40,10 @@ r.r(t),
             return l.f;
         },
         browserApiErrorsIntegration: function () {
-            return A.t;
+            return N.t;
         },
         browserProfilingIntegration: function () {
-            return U.x;
+            return P.x;
         },
         browserTracingIntegration: function () {
             return g.E8;
@@ -76,7 +76,7 @@ r.r(t),
             return n.xv;
         },
         contextLinesIntegration: function () {
-            return L.S;
+            return f.S;
         },
         continueTrace: function () {
             return n.yn;
@@ -163,7 +163,7 @@ r.r(t),
             return n.aF;
         },
         getReplay: function () {
-            return f.T;
+            return L.T;
         },
         getRootSpan: function () {
             return n.Gx;
@@ -199,13 +199,13 @@ r.r(t),
             return n.eW;
         },
         lazyLoadIntegration: function () {
-            return N.R;
+            return A.R;
         },
         linkedErrorsIntegration: function () {
             return R.O;
         },
         makeBrowserOfflineTransport: function () {
-            return P.O1;
+            return U.O1;
         },
         makeFetchTransport: function () {
             return o.f;
@@ -238,7 +238,7 @@ r.r(t),
             return O.m;
         },
         replayIntegration: function () {
-            return f.G;
+            return L.G;
         },
         reportingObserverIntegration: function () {
             return T.y;
@@ -343,12 +343,12 @@ var n = r(148503),
     u = r(804410),
     I = r(376457),
     R = r(42367),
-    A = r(515737),
-    N = r(27269),
+    N = r(515737),
+    A = r(27269),
     T = r(17411),
     d = r(453574),
-    L = r(386797),
-    f = r(616456),
+    f = r(386797),
+    L = r(616456),
     O = r(778600),
     p = r(780850),
     h = r(226483),
@@ -356,5 +356,5 @@ var n = r(148503),
     D = r(166800),
     C = r(799033),
     g = r(325124),
-    P = r(281894),
-    U = r(130260);
+    U = r(281894),
+    P = r(130260);

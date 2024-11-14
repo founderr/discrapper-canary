@@ -231,7 +231,7 @@ function M(e) {
                       children: v()
                   });
         })(e, P, o.type),
-        G = (function (e, t) {
+        B = (function (e, t) {
             let { baseMessage: n, channel: i, referencedMessage: a, showUsernamePopout: s, onClickUsername: o, onContextMenu: l, onPopoutRequestClose: u } = e,
                 c = (null == a ? void 0 : a.state) === g.Y.LOADED ? a.message : void 0;
             return null == c || c.type === R.uaV.USER_JOIN || c.type === R.uaV.ROLE_SUBSCRIPTION_PURCHASE || c.type === R.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION || c.type === R.uaV.GUILD_DEADCHAT_REVIVE_PROMPT || c.type === R.uaV.GUILD_GAMING_STATS_PROMPT || c.type === R.uaV.POLL_RESULT
@@ -249,7 +249,7 @@ function M(e) {
                       isRepliedMessage: !0
                   });
         })(e, P),
-        B = (function (e, t, n) {
+        G = (function (e, t, n) {
             let { content: i, referencedMessage: a, isReplyAuthorBlocked: o, onClickReply: l } = e,
                 c = a.state !== g.Y.DELETED ? l : void 0;
             switch (a.state) {
@@ -335,8 +335,8 @@ function M(e) {
                     onMouseLeave: k
                 }),
             U,
-            G,
-            B
+            B,
+            G
         ]
     });
 }

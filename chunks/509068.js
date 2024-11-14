@@ -1,6 +1,6 @@
 r.d(t, {
     Eg: function () {
-        return P;
+        return U;
     },
     Jd: function () {
         return M;
@@ -12,7 +12,7 @@ r.d(t, {
         return g;
     },
     lA: function () {
-        return U;
+        return P;
     },
     nV: function () {
         return D;
@@ -30,18 +30,18 @@ var n = r(636361),
     u = r(694043),
     I = r(688838),
     R = r(393523),
-    A = r(833772),
-    N = r(454463),
+    N = r(833772),
+    A = r(454463),
     T = r(163162),
     d = r(408720),
-    L = r(515737),
-    f = r(804410),
+    f = r(515737),
+    L = r(804410),
     O = r(376457),
     p = r(42367),
     h = r(297117),
     S = r(387486);
 function D(e) {
-    return [(0, n.S)(), (0, a.C)(), (0, L.t)(), (0, d.f)(), (0, f.k)(), (0, p.O)(), (0, _.R)(), (0, O.s)()];
+    return [(0, n.S)(), (0, a.C)(), (0, f.t)(), (0, d.f)(), (0, L.k)(), (0, p.O)(), (0, _.R)(), (0, O.s)()];
 }
 function C(e = {}) {
     let t = (function (e = {}) {
@@ -70,19 +70,19 @@ function C(e = {}) {
         });
         return;
     }
-    N.X && !(0, u.Ak)() && l.kg.warn('No Fetch API detected. The Sentry SDK requires a Fetch API compatible environment to send events. Please add a Fetch API polyfill.');
+    A.X && !(0, u.Ak)() && l.kg.warn('No Fetch API detected. The Sentry SDK requires a Fetch API compatible environment to send events. Please add a Fetch API polyfill.');
     let r = {
             ...t,
             stackParser: (0, I.Sq)(t.stackParser || h.Dt),
             integrations: (0, o.m8)(t),
             transport: t.transport || S.f
         },
-        n = (0, i.M)(A.R, r);
+        n = (0, i.M)(N.R, r);
     return (
         t.autoSessionTracking &&
             (function () {
                 if (void 0 === T.m9.document) {
-                    N.X && l.kg.warn('Session tracking in non-browser environment with @sentry/browser is not supported.');
+                    A.X && l.kg.warn('Session tracking in non-browser environment with @sentry/browser is not supported.');
                     return;
                 }
                 (0, c.yj)({ ignoreDuration: !0 }),
@@ -96,14 +96,14 @@ function C(e = {}) {
 }
 function g(e = {}) {
     if (!T.m9.document) {
-        N.X && l.kg.error('Global document not defined in showReportDialog call');
+        A.X && l.kg.error('Global document not defined in showReportDialog call');
         return;
     }
     let t = (0, E.nZ)(),
         r = t.getClient(),
         n = r && r.getDsn();
     if (!n) {
-        N.X && l.kg.error('DSN not configured for showReportDialog call');
+        A.X && l.kg.error('DSN not configured for showReportDialog call');
         return;
     }
     if (
@@ -132,10 +132,10 @@ function g(e = {}) {
         T.m9.addEventListener('message', e);
     }
     let o = T.m9.document.head || T.m9.document.body;
-    o ? o.appendChild(a) : N.X && l.kg.error('Not injecting report dialog. No injection point found in HTML');
+    o ? o.appendChild(a) : A.X && l.kg.error('Not injecting report dialog. No injection point found in HTML');
 }
-function P() {}
-function U(e) {
+function U() {}
+function P(e) {
     e();
 }
 function M(e) {

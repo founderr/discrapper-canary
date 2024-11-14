@@ -34,8 +34,8 @@ var r = n(200651),
     P = n(665906),
     k = n(695346),
     U = n(271383),
-    G = n(496675),
-    B = n(944486),
+    B = n(496675),
+    G = n(944486),
     Z = n(398327),
     F = n(117530),
     V = n(594174),
@@ -60,7 +60,7 @@ var r = n(200651),
 t.Z = i.memo(
     i.forwardRef(function (e, t) {
         var a, l, eo, el, eu, ec, ed, ef, e_, ep, eh, em, eg, eE, ev;
-        let { textValue: eI, richValue: eb, className: eS, innerClassName: eT, editorClassName: ey, id: eA, required: eN, disabled: eC, placeholder: eR, accessibilityLabel: eO, channel: eD, type: eL, focused: ex, renderAttachButton: ew, renderApplicationCommandIcon: eM, pendingReply: eP, onChange: ek, onResize: eU, onBlur: eG, onFocus: eB, onKeyDown: eZ, onSubmit: eF, promptToUpload: eV, highlighted: ej, canMentionRoles: eH, canMentionChannels: eY, maxCharacterCount: eW, showRemainingCharsAfterCount: eK, allowNewLines: ez = !0, characterCountClassName: eq, 'aria-describedby': eQ, 'aria-labelledby': eX, setEditorRef: eJ, autoCompletePosition: e$, children: e0, disableThemedBackground: e1 = !1, emojiPickerCloseOnModalOuterClick: e2, parentModalKey: e3, onCommandSentinelTyped: e4 } = e;
+        let { textValue: eI, richValue: eb, className: eS, innerClassName: eT, editorClassName: ey, id: eA, required: eN, disabled: eC, placeholder: eR, accessibilityLabel: eO, channel: eD, type: eL, focused: ex, renderAttachButton: ew, renderApplicationCommandIcon: eM, pendingReply: eP, onChange: ek, onResize: eU, onBlur: eB, onFocus: eG, onKeyDown: eZ, onSubmit: eF, promptToUpload: eV, highlighted: ej, canMentionRoles: eH, canMentionChannels: eY, maxCharacterCount: eW, showRemainingCharsAfterCount: eK, allowNewLines: ez = !0, characterCountClassName: eq, 'aria-describedby': eQ, 'aria-labelledby': eX, setEditorRef: eJ, autoCompletePosition: e$, children: e0, disableThemedBackground: e1 = !1, emojiPickerCloseOnModalOuterClick: e2, parentModalKey: e3, onCommandSentinelTyped: e4 } = e;
         u()(null != eL, 'chat input type must be set');
         let { analyticsLocations: e6 } = (0, v.ZP)(E.Z.CHANNEL_TEXT_AREA),
             e5 = (function (e) {
@@ -102,11 +102,11 @@ t.Z = i.memo(
                         return null !== (t = null != i && null != n ? (null === (e = U.ZP.getMember(i, n.id)) || void 0 === e ? void 0 : e.isPending) : null) && void 0 !== t && t;
                     }),
                     o = (0, _.cj)(
-                        [G.Z],
+                        [B.Z],
                         () => {
                             var i, a;
                             let o = e.isPrivate(),
-                                l = G.Z.computePermissions(e),
+                                l = B.Z.computePermissions(e),
                                 u = f.e$(l, er.Plq.CREATE_PUBLIC_THREADS) || f.e$(l, er.Plq.CREATE_PRIVATE_THREADS),
                                 c = (!(null === (i = t.permissions) || void 0 === i ? void 0 : i.requireCreateTherads) || u) && (!(null === (a = t.permissions) || void 0 === a ? void 0 : a.requireSendMessages) || f.e$(l, er.Plq.SEND_MESSAGES)),
                                 d = c && f.e$(l, er.Plq.ATTACH_FILES),
@@ -224,7 +224,7 @@ t.Z = i.memo(
                                 let d = ((n = u), (r = t), null !== (o = n && (null === (i = r.submit) || void 0 === i ? void 0 : i.clearOnSubmit)) && void 0 !== o && o),
                                     f = null != a.current;
                                 if (d) {
-                                    if (s !== B.Z.getChannelId()) h.Z.saveDraft(s, '', t.drafts.type);
+                                    if (s !== G.Z.getChannelId()) h.Z.saveDraft(s, '', t.drafts.type);
                                     else f && a.current.clearValue();
                                 }
                                 f && (l(!1), (0, A._Q)(), c && a.current.focus());
@@ -344,7 +344,7 @@ t.Z = i.memo(
             {
                 handleTab: tk,
                 handleEnter: tU,
-                handleMoveSelection: tG
+                handleMoveSelection: tB
             } = (function (e, t, n) {
                 let r = i.useCallback(() => {
                         var r, i;
@@ -367,7 +367,7 @@ t.Z = i.memo(
                 };
             })(tN, e7, tp),
             {
-                expressionPickerView: tB,
+                expressionPickerView: tG,
                 shouldHideExpressionPicker: tZ,
                 handleAutocompleteVisibilityChange: tF,
                 handleOuterClick: tV
@@ -502,13 +502,13 @@ t.Z = i.memo(
                                                     'aria-describedby': eQ,
                                                     onChange: tI,
                                                     onResize: tP,
-                                                    onBlur: eG,
-                                                    onFocus: eB,
+                                                    onBlur: eB,
+                                                    onFocus: eG,
                                                     onKeyDown: eZ,
                                                     onSubmit: ty,
                                                     onTab: tk,
                                                     onEnter: tU,
-                                                    onMoveSelection: tG,
+                                                    onMoveSelection: tB,
                                                     onSelectionChanged: tS,
                                                     onMaybeShowAutocomplete: tC,
                                                     onHideAutocomplete: tR,
@@ -556,7 +556,7 @@ t.Z = i.memo(
                                 canSendStickers: null === (eu = eL.stickers) || void 0 === eu ? void 0 : eu.allowSending,
                                 textValue: eI,
                                 focused: ex,
-                                expressionPickerView: tB,
+                                expressionPickerView: tG,
                                 type: eL,
                                 targetRef: e5,
                                 editorRef: e8,

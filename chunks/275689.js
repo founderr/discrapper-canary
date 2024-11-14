@@ -15,8 +15,8 @@ var n = r(394798),
     u = r(696486),
     I = r(305625),
     R = r(966497),
-    A = r(241225),
-    N = r(881243);
+    N = r(241225),
+    A = r(881243);
 class T {
     constructor(e = {}) {
         (this._traceId = e.traceId || (0, n.DM)()),
@@ -84,7 +84,7 @@ class T {
             _metrics_summary: (0, s.y)(this),
             profile_id: this._attributes[l.p6],
             exclusive_time: this._attributes[l.JQ],
-            measurements: (0, A.l)(this._events),
+            measurements: (0, N.l)(this._events),
             is_segment: (this._isStandaloneSpan && (0, u.Gx)(this) === this) || void 0,
             segment_id: this._isStandaloneSpan ? (0, u.Gx)(this).spanContext().spanId : void 0
         });
@@ -129,12 +129,12 @@ class T {
             return;
         }
         let t = this._convertSpanToTransaction();
-        t && ((0, N.I1)(this).scope || (0, i.nZ)()).captureEvent(t);
+        t && ((0, A.I1)(this).scope || (0, i.nZ)()).captureEvent(t);
     }
     _convertSpanToTransaction() {
-        if (!L((0, u.XU)(this))) return;
+        if (!f((0, u.XU)(this))) return;
         !this._name && (E.X && o.kg.warn('Transaction has no name, falling back to `<unlabeled transaction>`.'), (this._name = '<unlabeled transaction>'));
-        let { scope: e, isolationScope: t } = (0, N.I1)(this),
+        let { scope: e, isolationScope: t } = (0, A.I1)(this),
             r = (e || (0, i.nZ)()).getClient() || (0, i.s3)();
         if (!0 !== this._sampled) {
             E.X && o.kg.log('[Tracing] Discarding transaction because its trace was not chosen to be sampled.'), r && r.recordDroppedEvent('sample_rate', 'transaction');
@@ -149,7 +149,7 @@ class T {
                         })(e)
                 )
                 .map((e) => (0, u.XU)(e))
-                .filter(L),
+                .filter(f),
             a = this._attributes[l.Zj],
             c = {
                 contexts: { trace: (0, u.HR)(this) },
@@ -166,13 +166,13 @@ class T {
                 _metrics_summary: (0, s.y)(this),
                 ...(a && { transaction_info: { source: a } })
             },
-            R = (0, A.l)(this._events);
+            R = (0, N.l)(this._events);
         return R && Object.keys(R).length && (E.X && o.kg.log('[Measurements] Adding measurements to transaction event', JSON.stringify(R, void 0, 2)), (c.measurements = R)), c;
     }
 }
 function d(e) {
     return (e && 'number' == typeof e) || e instanceof Date || Array.isArray(e);
 }
-function L(e) {
+function f(e) {
     return !!e.start_timestamp && !!e.timestamp && !!e.span_id && !!e.trace_id;
 }

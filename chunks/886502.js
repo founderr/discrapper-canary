@@ -10,28 +10,28 @@ var n = r(620014),
     u = '[object Array]',
     I = '[object Object]',
     R = Object.prototype.hasOwnProperty;
-e.exports = function (e, t, r, A, N, T) {
+e.exports = function (e, t, r, N, A, T) {
     var d = E(e),
-        L = E(t),
-        f = d ? u : i(e),
-        O = L ? u : i(t);
-    (f = f == l ? I : f), (O = O == l ? I : O);
-    var p = f == I,
+        f = E(t),
+        L = d ? u : i(e),
+        O = f ? u : i(t);
+    (L = L == l ? I : L), (O = O == l ? I : O);
+    var p = L == I,
         h = O == I,
-        S = f == O;
+        S = L == O;
     if (S && c(e)) {
         if (!c(t)) return !1;
         (d = !0), (p = !1);
     }
-    if (S && !p) return T || (T = new n()), d || s(e) ? a(e, t, r, A, N, T) : _(e, t, f, r, A, N, T);
+    if (S && !p) return T || (T = new n()), d || s(e) ? a(e, t, r, N, A, T) : _(e, t, L, r, N, A, T);
     if (!(1 & r)) {
         var D = p && R.call(e, '__wrapped__'),
             C = h && R.call(t, '__wrapped__');
         if (D || C) {
             var g = D ? e.value() : e,
-                P = C ? t.value() : t;
-            return T || (T = new n()), N(g, P, r, A, T);
+                U = C ? t.value() : t;
+            return T || (T = new n()), A(g, U, r, N, T);
         }
     }
-    return !!S && (T || (T = new n()), o(e, t, r, A, N, T));
+    return !!S && (T || (T = new n()), o(e, t, r, N, A, T));
 };

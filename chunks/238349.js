@@ -1,7 +1,7 @@
 let r;
 n.d(t, {
     U: function () {
-        return B;
+        return G;
     }
 }),
     n(47120);
@@ -51,13 +51,13 @@ function k(e) {
 function U() {
     (R = []), (r = null), (y = null), (A = new Set()), (N = c.z.LATEST_ACTIVITY), (C = 0), (D = []), (L = u().chain(S)), (x = u().chain(S)), M.clear(), w.clear();
 }
-function G() {
+function B() {
     var e;
     let t = E.Z.getChannelId();
     if (null == t || !(null === (e = m.Z.getChannel(t)) || void 0 === e ? void 0 : e.isForumLikeChannel())) return U(), !1;
     Z({ refreshThreadIds: !0 });
 }
-function B(e) {
+function G(e) {
     let t = m.Z.getChannel(e);
     return null == t
         ? []
@@ -138,10 +138,10 @@ class F extends (i = d.ZP.Store) {
           })
         : (a[s] = o),
     (t.Z = new F(f.Z, {
-        CONNECTION_OPEN: G,
-        OVERLAY_INITIALIZE: G,
-        GUILD_CREATE: G,
-        CHANNEL_SELECT: G,
+        CONNECTION_OPEN: B,
+        OVERLAY_INITIALIZE: B,
+        GUILD_CREATE: B,
+        CHANNEL_SELECT: B,
         CHANNEL_DELETE: function (e) {
             let { channel: t } = e;
             if (null == t.parent_id || t.parent_id !== y) return !1;

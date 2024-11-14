@@ -21,12 +21,12 @@ var n = r(650665),
     u = r(622916),
     I = r(370541),
     R = r(101284),
-    A = r(731889),
-    N = r(467510),
+    N = r(731889),
+    A = r(467510),
     T = r(454463),
     d = r(163162),
-    L = r(119128),
-    f = r(799033);
+    f = r(119128),
+    L = r(799033);
 let O = {
         ...o.A,
         instrumentNavigation: !0,
@@ -36,20 +36,20 @@ let O = {
         enableLongAnimationFrame: !1,
         enableInp: !0,
         _experiments: {},
-        ...f.k3
+        ...L.k3
     },
     p = (e = {}) => {
         (0, i.a)();
         let {
                 enableInp: t,
                 enableLongTask: r,
-                enableLongAnimationFrame: A,
-                _experiments: { enableInteractions: N },
+                enableLongAnimationFrame: N,
+                _experiments: { enableInteractions: A },
                 beforeStartSpan: p,
                 idleTimeout: C,
                 finalTimeout: g,
-                childSpanTimeout: P,
-                markBackgroundSpan: U,
+                childSpanTimeout: U,
+                markBackgroundSpan: P,
                 traceFetch: M,
                 traceXHR: G,
                 shouldCreateSpanForRequest: m,
@@ -61,7 +61,7 @@ let O = {
                 ...e
             },
             w = (0, n.PR)();
-        t && (0, a.N)(), A && PerformanceObserver.supportedEntryTypes.includes('long-animation-frame') ? (0, n.Jk)() : r && (0, n.Fv)(), N && (0, n.sn)();
+        t && (0, a.N)(), N && PerformanceObserver.supportedEntryTypes.includes('long-animation-frame') ? (0, n.Jk)() : r && (0, n.Fv)(), A && (0, n.sn)();
         let B = {
             name: void 0,
             source: void 0
@@ -74,7 +74,7 @@ let O = {
             let i = (0, o.R)(a, {
                 idleTimeout: C,
                 finalTimeout: g,
-                childSpanTimeout: P,
+                childSpanTimeout: U,
                 disableAutoFinish: r,
                 beforeSpanEnd: (e) => {
                     w(), (0, n.f7)(e);
@@ -155,8 +155,8 @@ let O = {
                                         }
                                     }));
                             })),
-                    U && (0, L.j)(),
-                    N &&
+                    P && (0, f.j)(),
+                    A &&
                         (function (e, t, r, n) {
                             let a;
                             d.m9.document &&
@@ -192,9 +192,9 @@ let O = {
                                         capture: !0
                                     }
                                 );
-                        })(C, g, P, B),
+                        })(C, g, U, B),
                     t && (0, a.D)(),
-                    (0, f.L7)(e, {
+                    (0, L.L7)(e, {
                         traceFetch: M,
                         traceXHR: G,
                         tracePropagationTargets: e.getOptions().tracePropagationTargets,
@@ -210,11 +210,11 @@ function h(e, t, r) {
     return 'pageload' === (n && (0, s.XU)(n).op) ? n : void 0;
 }
 function S(e, t) {
-    (0, c.aF)().setPropagationContext((0, A.Q)()), (0, c.nZ)().setPropagationContext((0, A.Q)()), e.emit('startNavigationSpan', t), (0, c.nZ)().setTransactionName(t.name);
+    (0, c.aF)().setPropagationContext((0, N.Q)()), (0, c.nZ)().setPropagationContext((0, N.Q)()), e.emit('startNavigationSpan', t), (0, c.nZ)().setTransactionName(t.name);
     let r = (0, s.HN)();
     return 'navigation' === (r && (0, s.XU)(r).op) ? r : void 0;
 }
 function D(e) {
-    let t = (0, N.qT)(`meta[name=${e}]`);
+    let t = (0, A.qT)(`meta[name=${e}]`);
     return t ? t.getAttribute('content') : void 0;
 }

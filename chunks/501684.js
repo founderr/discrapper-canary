@@ -1,10 +1,10 @@
 let n, a, _, o, i;
 r.d(t, {
     $A: function () {
-        return f;
+        return L;
     },
     PR: function () {
-        return L;
+        return f;
     },
     YF: function () {
         return h;
@@ -29,21 +29,21 @@ var E = r(622916),
     u = r(661129),
     I = r(231550),
     R = r(428983),
-    A = r(622574),
-    N = r(288570);
+    N = r(622574),
+    A = r(288570);
 let T = {},
     d = {};
-function L(e, t = !1) {
+function f(e, t = !1) {
     return G('cls', e, C, n, t);
 }
-function f(e, t = !1) {
-    return G('lcp', e, P, _, t);
+function L(e, t = !1) {
+    return G('lcp', e, U, _, t);
 }
 function O(e) {
     return G('fid', e, g, a);
 }
 function p(e) {
-    return G('ttfb', e, U, o);
+    return G('ttfb', e, P, o);
 }
 function h(e) {
     return G('inp', e, M, i);
@@ -55,7 +55,7 @@ function S(e, t) {
             ((function (e) {
                 let t = {};
                 'event' === e && (t.durationThreshold = 0),
-                    (0, A.N)(
+                    (0, N.N)(
                         e,
                         (t) => {
                             D(e, { entries: t });
@@ -97,7 +97,7 @@ function g() {
         D('fid', { metric: e }), (a = e);
     });
 }
-function P() {
+function U() {
     return (0, R.N)(
         (e) => {
             D('lcp', { metric: e }), (_ = e);
@@ -105,8 +105,8 @@ function P() {
         { reportAllChanges: !0 }
     );
 }
-function U() {
-    return (0, N.m)((e) => {
+function P() {
+    return (0, A.m)((e) => {
         D('ttfb', { metric: e }), (o = e);
     });
 }

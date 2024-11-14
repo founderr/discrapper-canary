@@ -1,6 +1,6 @@
 r.d(t, {
     q: function () {
-        return A;
+        return N;
     }
 });
 var n = r(899517),
@@ -25,12 +25,12 @@ function I(e, t, r, n, _ = {}) {
     let s = (0, E.HN)(),
         l = s ? (0, E.Gx)(s) : void 0,
         I = l && (0, E.XU)(l).description,
-        { unit: R, tags: A, timestamp: N } = _,
+        { unit: R, tags: N, timestamp: A } = _,
         { release: T, environment: d } = c.getOptions(),
-        L = {};
-    T && (L.release = T),
-        d && (L.environment = d),
-        I && (L.transaction = I),
+        f = {};
+    T && (f.release = T),
+        d && (f.environment = d),
+        I && (f.transaction = I),
         i.X && a.kg.log(`Adding value of ${n} to ${t} metric ${r}`),
         u(c, e).add(
             t,
@@ -38,25 +38,25 @@ function I(e, t, r, n, _ = {}) {
             n,
             R,
             {
-                ...L,
-                ...A
+                ...f,
+                ...N
             },
-            N
+            A
         );
 }
 function R(e, t, r, n) {
-    I(e, l.g_, t, N(r), n);
+    I(e, l.g_, t, A(r), n);
 }
-let A = {
+let N = {
     increment: function (e, t, r = 1, n) {
-        I(e, l.JM, t, N(r), n);
+        I(e, l.JM, t, A(r), n);
     },
     distribution: R,
     set: function (e, t, r, n) {
         I(e, l.is, t, r, n);
     },
     gauge: function (e, t, r, n) {
-        I(e, l.uG, t, N(r), n);
+        I(e, l.uG, t, A(r), n);
     },
     timing: function (e, t, r, n = 'second', a) {
         if ('function' == typeof r) {
@@ -90,6 +90,6 @@ let A = {
     },
     getMetricsAggregatorForClient: u
 };
-function N(e) {
+function A(e) {
     return 'string' == typeof e ? parseInt(e) : e;
 }

@@ -1,6 +1,6 @@
 n.d(t, {
     Af: function () {
-        return B;
+        return G;
     },
     Ap: function () {
         return ec;
@@ -75,7 +75,7 @@ n.d(t, {
         return eD;
     },
     _O: function () {
-        return eG;
+        return eB;
     },
     a5: function () {
         return eI;
@@ -132,7 +132,7 @@ n.d(t, {
         return eZ;
     },
     u0: function () {
-        return eB;
+        return eG;
     },
     uV: function () {
         return ei;
@@ -205,7 +205,7 @@ let P = {
         BILLING_HISTORY: 'https://play.google.com/store/account/orderhistory'
     },
     U = new _.Z('PremiumUtils.tsx'),
-    G = {
+    B = {
         [x.Xh.NONE_MONTH]: [x.Xh.NONE_YEAR, x.Xh.PREMIUM_YEAR_TIER_2, x.Xh.PREMIUM_MONTH_TIER_2, x.Xh.PREMIUM_YEAR_TIER_1, x.Xh.PREMIUM_MONTH_TIER_1],
         [x.Xh.NONE_YEAR]: [x.Xh.PREMIUM_YEAR_TIER_2, x.Xh.PREMIUM_MONTH_TIER_2, x.Xh.PREMIUM_YEAR_TIER_1, x.Xh.PREMIUM_MONTH_TIER_1],
         [x.Xh.PREMIUM_MONTH_TIER_0]: [x.Xh.PREMIUM_YEAR_TIER_2, x.Xh.PREMIUM_MONTH_TIER_2, x.Xh.PREMIUM_YEAR_TIER_1, x.Xh.PREMIUM_MONTH_TIER_1, x.Xh.PREMIUM_YEAR_TIER_0],
@@ -216,7 +216,7 @@ let P = {
         [x.Xh.PREMIUM_YEAR_TIER_2]: [],
         ALL: [x.Xh.NONE_MONTH, x.Xh.NONE_YEAR, x.Xh.PREMIUM_YEAR_TIER_2, x.Xh.PREMIUM_MONTH_TIER_2, x.Xh.PREMIUM_YEAR_TIER_1, x.Xh.PREMIUM_MONTH_TIER_1, x.Xh.PREMIUM_YEAR_TIER_0, x.Xh.PREMIUM_MONTH_TIER_0]
     };
-function B(e) {
+function G(e) {
     return e.items.find((e) => x.dJ.has(e.planId));
 }
 function Z(e) {
@@ -542,11 +542,11 @@ function J(e) {
                 case D.O0b.UNPAID:
                     return M.intl.format(M.t.McIzws, {});
                 case D.O0b.PAUSE_PENDING:
-                    let G = null != _.pauseEndsAt ? c()(_.pauseEndsAt).diff(_.currentPeriodEnd, 'days') : null;
-                    return null != G
+                    let B = null != _.pauseEndsAt ? c()(_.pauseEndsAt).diff(_.currentPeriodEnd, 'days') : null;
+                    return null != B
                         ? M.intl.format(M.t.WUfODw, {
                               pauseDate: _.currentPeriodEnd,
-                              pauseDuration: G
+                              pauseDuration: B
                           })
                         : M.intl.format(M.t.VlWufn, { pauseDate: _.currentPeriodEnd });
                 case D.O0b.PAUSED:
@@ -594,11 +594,11 @@ function J(e) {
                 case D.O0b.UNPAID:
                     return M.intl.format(M.t['0HopYW'], { num: L });
                 case D.O0b.PAUSE_PENDING:
-                    let B = null != _.pauseEndsAt ? c()(_.pauseEndsAt).diff(_.currentPeriodEnd, 'days') : null;
-                    return null != B
+                    let G = null != _.pauseEndsAt ? c()(_.pauseEndsAt).diff(_.currentPeriodEnd, 'days') : null;
+                    return null != G
                         ? M.intl.format(M.t.WUfODw, {
                               pauseDate: _.currentPeriodEnd,
-                              pauseDuration: B
+                              pauseDuration: G
                           })
                         : M.intl.format(M.t.VlWufn, { pauseDate: _.currentPeriodEnd });
                 case D.O0b.PAUSED:
@@ -734,7 +734,7 @@ function en(e) {
 }
 function er(e) {
     var t;
-    return null == e ? G.ALL : null !== (t = G[e]) && void 0 !== t ? t : [];
+    return null == e ? B.ALL : null !== (t = B[e]) && void 0 !== t ? t : [];
 }
 function ei(e) {
     let t = b.Z.getPlanIdsForSkus([eU(x.Si.GUILD)]);
@@ -1114,12 +1114,12 @@ function ew(e) {
     return null == e ? null : e.items.find((e) => x.Z1.has(e.planId));
 }
 function eM(e) {
-    let t = null != e ? B(e) : null;
+    let t = null != e ? G(e) : null;
     return null != t ? en(t.planId) : null;
 }
 function eP(e) {
     if (null != e) {
-        let t = B(e);
+        let t = G(e);
         if (null != t) return W(t.planId);
     }
 }
@@ -1131,10 +1131,10 @@ function ek(e, t) {
 function eU(e) {
     return e;
 }
-function eG(e) {
+function eB(e) {
     return 'isNitroLocked' in e;
 }
-function eB(e) {
+function eG(e) {
     return null != e && x.OT.includes(e) ? 1 : 2;
 }
 function eZ(e) {
@@ -1178,7 +1178,7 @@ t.ZP = Object.freeze({
     getDisplayPremiumType: Q,
     getPremiumPlanOptions: et,
     getUpgradeEligibilities: er,
-    getReverseTrialWeeks: eB,
+    getReverseTrialWeeks: eG,
     getPlanDescription: J,
     isPremiumSku: function (e) {
         return e === x.Si.TIER_0 || e === x.Si.TIER_1 || e === x.Si.TIER_2;
@@ -1363,16 +1363,16 @@ t.ZP = Object.freeze({
     },
     getBillingReviewSubheader: eE,
     getIntervalForInvoice: ev,
-    getPremiumPlanItem: B,
+    getPremiumPlanItem: G,
     getGuildBoostPlanItem: ew,
     isBoostOnlySubscription: function (e) {
-        return null != e && null == B(e) && null != ew(e);
+        return null != e && null == G(e) && null != ew(e);
     },
     getPremiumSkuIdForSubscription: eM,
     getPremiumTypeFromSubscription: eP,
     getPremiumTypeFromSubscriptionRenewalMutations: function (e) {
         if (null != e && null != e.renewalMutations) {
-            let t = B(e.renewalMutations);
+            let t = G(e.renewalMutations);
             if (null != t) return W(t.planId);
         }
     },

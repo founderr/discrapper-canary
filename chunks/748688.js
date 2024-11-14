@@ -1,12 +1,12 @@
 r.d(t, {
     $X: function () {
-        return U;
+        return P;
     },
     AJ: function () {
         return S;
     },
     Ei: function () {
-        return P;
+        return U;
     },
     GC: function () {
         return y;
@@ -42,17 +42,17 @@ var n,
     u = r(454463),
     I = r(163162);
 let R = String(0),
-    A = '',
     N = '',
+    A = '',
     T = '',
     d = (I.m9.navigator && I.m9.navigator.userAgent) || '',
-    L = '',
-    f = (I.m9.navigator && I.m9.navigator.language) || (I.m9.navigator && I.m9.navigator.languages && I.m9.navigator.languages['0']) || '',
+    f = '',
+    L = (I.m9.navigator && I.m9.navigator.language) || (I.m9.navigator && I.m9.navigator.languages && I.m9.navigator.languages['0']) || '',
     O = I.m9.navigator && I.m9.navigator.userAgentData;
 if ('object' == typeof (n = O) && null !== n && 'getHighEntropyValues' in n)
     O.getHighEntropyValues(['architecture', 'model', 'platform', 'platformVersion', 'fullVersionList'])
         .then((e) => {
-            if (((A = e.platform || ''), (T = e.architecture || ''), (L = e.model || ''), (N = e.platformVersion || ''), e.fullVersionList && e.fullVersionList.length > 0)) {
+            if (((N = e.platform || ''), (T = e.architecture || ''), (f = e.model || ''), (A = e.platformVersion || ''), e.fullVersionList && e.fullVersionList.length > 0)) {
                 let t = e.fullVersionList[e.fullVersionList.length - 1];
                 d = `${t.brand} ${t.version}`;
             }
@@ -82,7 +82,7 @@ function S(e) {
 let D = new WeakMap(),
     C = !1,
     g = 30000;
-function P() {
+function U() {
     let e = I.m9.Profiler;
     if ('function' != typeof e) {
         u.X && i.kg.log('[Profiling] Profiling is not supported by this browser, Profiler interface missing on window object.');
@@ -98,7 +98,7 @@ function P() {
         u.X && (i.kg.log("[Profiling] Failed to initialize the Profiling constructor, this is likely due to a missing 'Document-Policy': 'js-profiling' header."), i.kg.log('[Profiling] Disabling profiling for current user session.')), (C = !0);
     }
 }
-function U(e) {
+function P(e) {
     var t;
     if (C) return u.X && i.kg.log('[Profiling] Profiling has been disabled for the duration of the current user session.'), !1;
     if (!e.isRecording()) return u.X && i.kg.log('[Profiling] Discarding profile because transaction was not sampled.'), !1;
@@ -186,13 +186,13 @@ function M(e, t, r, n) {
                       version: I.m9.navigator.userAgent
                   },
                   os: {
-                      name: A,
-                      version: N,
+                      name: N,
+                      version: A,
                       build_number: d
                   },
                   device: {
-                      locale: f,
-                      model: L,
+                      locale: L,
+                      model: f,
                       manufacturer: d,
                       architecture: T,
                       is_emulator: !1

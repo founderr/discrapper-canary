@@ -34,14 +34,14 @@ var r = n(200651),
     P = n(981631),
     k = n(388032),
     U = n(133404);
-function G(e, t) {
+function B(e, t) {
     let { elements: n } = e;
     return n.find((e) => {
         let { type: n } = e;
         return n === t;
     });
 }
-function B(e, t) {
+function G(e, t) {
     let { elements: n } = e;
     return n.filter((e) => {
         let { type: n } = e;
@@ -50,11 +50,11 @@ function B(e, t) {
 }
 t.Z = (e) => {
     let { node: t, reportType: n, reportSubType: Z, history: F, onSelectChild: V, onModalClose: j, onSubmit: H, multiSelect: Y, reportId: W, textInput: K } = e,
-        z = G(t, 'checkbox'),
-        q = G(t, 'text_line_resource'),
-        Q = B(t, 'external_link'),
-        X = B(t, 'free_text'),
-        J = B(t, 'dropdown'),
+        z = B(t, 'checkbox'),
+        q = B(t, 'text_line_resource'),
+        Q = G(t, 'external_link'),
+        X = G(t, 'free_text'),
+        J = G(t, 'dropdown'),
         [$, ee] = i.useState(!1),
         [et, en] = i.useState(!1),
         [er, ei] = i.useState(''),
@@ -132,15 +132,15 @@ t.Z = (e) => {
                 separator: !1,
                 direction: s.Z.Direction.VERTICAL,
                 className: U.header,
-                children: [(0, r.jsx)(L.Z, { element: G(t, 'success') }), (0, r.jsx)(S.Z, { node: t }), (0, r.jsx)(T.Z, { node: t })]
+                children: [(0, r.jsx)(L.Z, { element: B(t, 'success') }), (0, r.jsx)(S.Z, { node: t }), (0, r.jsx)(T.Z, { node: t })]
             }),
             (0, r.jsxs)(a.ModalContent, {
                 className: U.body,
                 children: [
                     null != q ? (0, r.jsx)(x.Z, { element: q }) : null,
-                    null != G(t, 'breadcrumbs') && (0, r.jsx)(f.Z, { history: F }),
-                    null != G(t, 'message_preview') && ('message' === n.name || 'first_dm' === n.name) && (0, r.jsx)(A.Z, { message: n.record }),
-                    null != G(t, 'user_preview') && 'user' === n.name ? (0, r.jsx)(w.Z, { user: n.record }) : null,
+                    null != B(t, 'breadcrumbs') && (0, r.jsx)(f.Z, { history: F }),
+                    null != B(t, 'message_preview') && ('message' === n.name || 'first_dm' === n.name) && (0, r.jsx)(A.Z, { message: n.record }),
+                    null != B(t, 'user_preview') && 'user' === n.name ? (0, r.jsx)(w.Z, { user: n.record }) : null,
                     (function (e) {
                         let { elements: t } = e;
                         return t.some((e) => {
@@ -150,25 +150,25 @@ t.Z = (e) => {
                     })(t) &&
                         (0, r.jsxs)(R.Z, {
                             children: [
-                                null != G(t, 'block_users') &&
+                                null != B(t, 'block_users') &&
                                     ('message' === n.name || 'first_dm' === n.name || 'user' === n.name) &&
                                     (0, r.jsx)(d.Z, {
                                         user: 'user' === n.name ? n.record : n.record.author,
                                         reportId: W
                                     }),
-                                null != G(t, 'mute_users') &&
+                                null != B(t, 'mute_users') &&
                                     ('message' === n.name || 'first_dm' === n.name || 'user' === n.name) &&
                                     (0, r.jsx)(C.Z, {
                                         user: 'user' === n.name ? n.record : n.record.author,
                                         reportId: W
                                     }),
-                                null != G(t, 'delete_message') &&
+                                null != B(t, 'delete_message') &&
                                     'message' === n.name &&
                                     (0, r.jsx)(p.Z, {
                                         message: n.record,
                                         reportId: W
                                     }),
-                                null != G(t, 'leave_guild') &&
+                                null != B(t, 'leave_guild') &&
                                     'guild' === n.name &&
                                     (0, r.jsx)(y.Z, {
                                         guildId: n.record.id,
@@ -176,7 +176,7 @@ t.Z = (e) => {
                                     })
                             ]
                         }),
-                    null != G(t, 'settings_upsells') &&
+                    null != B(t, 'settings_upsells') &&
                         'message' === n.name &&
                         null != eh &&
                         em &&
@@ -188,10 +188,10 @@ t.Z = (e) => {
                             reportType: n,
                             reportSubType: Z
                         }),
-                    null != G(t, 'channel_preview') && 'stage_channel' === n.name && (0, r.jsx)(D.Z, { stageInstance: n.record }),
-                    null != G(t, 'guild_scheduled_event_preview') && 'guild_scheduled_event' === n.name && (0, r.jsx)(b.Z, { event: n.record }),
-                    null != G(t, 'guild_directory_entry_preview') && 'guild_directory_entry' === n.name && (0, r.jsx)(v.Z, { entry: n.record }),
-                    null != G(t, 'guild_discovery_preview') && 'guild_discovery' === n.name && (0, r.jsx)(I.Z, { entry: n.record }),
+                    null != B(t, 'channel_preview') && 'stage_channel' === n.name && (0, r.jsx)(D.Z, { stageInstance: n.record }),
+                    null != B(t, 'guild_scheduled_event_preview') && 'guild_scheduled_event' === n.name && (0, r.jsx)(b.Z, { event: n.record }),
+                    null != B(t, 'guild_directory_entry_preview') && 'guild_directory_entry' === n.name && (0, r.jsx)(v.Z, { entry: n.record }),
+                    null != B(t, 'guild_discovery_preview') && 'guild_discovery' === n.name && (0, r.jsx)(I.Z, { entry: n.record }),
                     null != z &&
                         (0, r.jsx)(N.Z, {
                             element: z,

@@ -3,10 +3,10 @@ r.d(t, {
         return eI;
     },
     $V: function () {
-        return f;
+        return L;
     },
     Ai: function () {
-        return eL;
+        return ef;
     },
     Al: function () {
         return eo.A;
@@ -30,13 +30,13 @@ r.d(t, {
         return g;
     },
     ET: function () {
-        return U;
+        return P;
     },
     Et: function () {
         return T;
     },
     GZ: function () {
-        return A;
+        return N;
     },
     H0: function () {
         return ep;
@@ -63,7 +63,7 @@ r.d(t, {
         return eF;
     },
     Pl: function () {
-        return eP;
+        return eU;
     },
     Py: function () {
         return l;
@@ -72,16 +72,16 @@ r.d(t, {
         return C;
     },
     QL: function () {
-        return ef;
+        return eL;
     },
     RG: function () {
-        return P;
+        return U;
     },
     RK: function () {
         return eK;
     },
     S7: function () {
-        return N;
+        return A;
     },
     Sk: function () {
         return a;
@@ -93,7 +93,7 @@ r.d(t, {
         return I;
     },
     U9: function () {
-        return eN;
+        return eA;
     },
     Uk: function () {
         return eh;
@@ -126,7 +126,7 @@ r.d(t, {
         return G;
     },
     dG: function () {
-        return eU;
+        return eP;
     },
     fK: function () {
         return ek;
@@ -144,7 +144,7 @@ r.d(t, {
         return eD;
     },
     lT: function () {
-        return L;
+        return f;
     },
     ld: function () {
         return eS;
@@ -153,7 +153,7 @@ r.d(t, {
         return S;
     },
     rx: function () {
-        return eA;
+        return eN;
     },
     tN: function () {
         return _;
@@ -165,10 +165,10 @@ r.d(t, {
         return eR;
     },
     yA: function () {
-        return eY;
+        return ex;
     },
     yX: function () {
-        return ex;
+        return eY;
     },
     yY: function () {
         return em;
@@ -190,12 +190,12 @@ var n,
     u,
     I,
     R,
-    A,
     N,
+    A,
     T,
     d,
-    L,
     f,
+    L,
     O,
     p,
     h,
@@ -203,8 +203,8 @@ var n,
     D,
     C,
     g,
-    P,
     U,
+    P,
     M,
     G,
     m,
@@ -215,8 +215,8 @@ var n,
     B,
     W,
     H,
-    Y,
     x,
+    Y,
     K,
     V,
     k,
@@ -246,8 +246,8 @@ let el = location.protocol + window.GLOBAL_ENV.WEBAPP_ENDPOINT,
     eu = location.protocol + '//discord.gg',
     eI = 'discord.com',
     eR = 'support.discord.com',
-    eA = 'support-dev.discord.com',
-    eN = 'discord.com';
+    eN = 'support-dev.discord.com',
+    eA = 'discord.com';
 Object.freeze({
     HINT_PURPLE: '#c9d2f0',
     DARK_PURPLE: '#697ec4',
@@ -312,7 +312,7 @@ let ed = Object.freeze({
         5: 'Adyen',
         6: 'Apple Partner'
     }),
-    eL = Object.freeze({
+    ef = Object.freeze({
         BRAINTREE: {
             KEY: window.GLOBAL_ENV.BRAINTREE_KEY,
             PAYMENT_GATEWAY: 'braintree'
@@ -327,7 +327,7 @@ let ed = Object.freeze({
         }
     });
 ((W = c || (c = {}))[(W.UNKNOWN = 0)] = 'UNKNOWN'), (W[(W.CARD = 1)] = 'CARD'), (W[(W.PAYPAL = 2)] = 'PAYPAL'), (W[(W.GIROPAY = 3)] = 'GIROPAY'), (W[(W.SOFORT = 4)] = 'SOFORT'), (W[(W.PRZELEWY24 = 5)] = 'PRZELEWY24'), (W[(W.SEPA_DEBIT = 6)] = 'SEPA_DEBIT'), (W[(W.PAYSAFE_CARD = 7)] = 'PAYSAFE_CARD'), (W[(W.GCASH = 8)] = 'GCASH'), (W[(W.GRABPAY_MY = 9)] = 'GRABPAY_MY'), (W[(W.MOMO_WALLET = 10)] = 'MOMO_WALLET'), (W[(W.VENMO = 11)] = 'VENMO'), (W[(W.GOPAY_WALLET = 12)] = 'GOPAY_WALLET'), (W[(W.KAKAOPAY = 13)] = 'KAKAOPAY'), (W[(W.BANCONTACT = 14)] = 'BANCONTACT'), (W[(W.EPS = 15)] = 'EPS'), (W[(W.IDEAL = 16)] = 'IDEAL'), (W[(W.CASH_APP = 17)] = 'CASH_APP'), (W[(W.APPLE = 18)] = 'APPLE'), (W[(W.PAYMENT_REQUEST = 99)] = 'PAYMENT_REQUEST');
-let ef = new Map([
+let eL = new Map([
         [7, 'paysafecard'],
         [8, 'gcash'],
         [9, 'grabpay_MY'],
@@ -347,15 +347,15 @@ let ef = new Map([
     eD = new Set([3, 4, 5, 14, 15, 16, 7, 9, 12]),
     eC = new Set([6]);
 ((H = s || (s = {}))[(H.NEW = 1)] = 'NEW'),
-    ((Y = l || (l = {}))[(Y.PENDING = 0)] = 'PENDING'),
-    (Y[(Y.COMPLETED = 1)] = 'COMPLETED'),
-    (Y[(Y.FAILED = 2)] = 'FAILED'),
-    (Y[(Y.REVERSED = 3)] = 'REVERSED'),
-    (Y[(Y.REFUNDED = 4)] = 'REFUNDED'),
-    (Y[(Y.CANCELED = 5)] = 'CANCELED'),
-    ((x = u || (u = {}))[(x.PREMIUM = 1)] = 'PREMIUM'),
-    (x[(x.GUILD = 2)] = 'GUILD'),
-    (x[(x.APPLICATION = 3)] = 'APPLICATION'),
+    ((x = l || (l = {}))[(x.PENDING = 0)] = 'PENDING'),
+    (x[(x.COMPLETED = 1)] = 'COMPLETED'),
+    (x[(x.FAILED = 2)] = 'FAILED'),
+    (x[(x.REVERSED = 3)] = 'REVERSED'),
+    (x[(x.REFUNDED = 4)] = 'REFUNDED'),
+    (x[(x.CANCELED = 5)] = 'CANCELED'),
+    ((Y = u || (u = {}))[(Y.PREMIUM = 1)] = 'PREMIUM'),
+    (Y[(Y.GUILD = 2)] = 'GUILD'),
+    (Y[(Y.APPLICATION = 3)] = 'APPLICATION'),
     ((K = I || (I = {})).PAYPAL_POPUP_CLOSED = 'PAYPAL_POPUP_CLOSED'),
     (K.VENMO_APP_CANCELED = 'VENMO_APP_CANCELED'),
     (K.VENMO_CANCELED = 'VENMO_CANCELED'),
@@ -365,14 +365,14 @@ let ef = new Map([
     }),
     ((V = R || (R = {}))[(V.DISCOVERY = 0)] = 'DISCOVERY'),
     (V[(V.CHECKOUT = 1)] = 'CHECKOUT'),
-    ((k = A || (A = {}))[(k.SUBSCRIPTION = 0)] = 'SUBSCRIPTION'),
+    ((k = N || (N = {}))[(k.SUBSCRIPTION = 0)] = 'SUBSCRIPTION'),
     (k[(k.ONE_TIME = 1)] = 'ONE_TIME');
 let eg = Object.freeze({
     0: 'subscription',
     1: 'sku'
 });
-((F = N || (N = {}))[(F.VIEW_CHANNEL = 1024)] = 'VIEW_CHANNEL'), (F[(F.READ_MESSAGE_HISTORY = 65536)] = 'READ_MESSAGE_HISTORY'), (F[(F.CONNECT = 1048576)] = 'CONNECT');
-let eP = Object.freeze({
+((F = A || (A = {}))[(F.VIEW_CHANNEL = 1024)] = 'VIEW_CHANNEL'), (F[(F.READ_MESSAGE_HISTORY = 65536)] = 'READ_MESSAGE_HISTORY'), (F[(F.CONNECT = 1048576)] = 'CONNECT');
+let eU = Object.freeze({
         CREATE_INSTANT_INVITE: ei.r0(0),
         KICK_MEMBERS: ei.r0(1),
         BAN_MEMBERS: ei.r0(2),
@@ -425,12 +425,12 @@ let eP = Object.freeze({
         MANAGE_EVENTS: ei.r0(33),
         CREATE_EVENTS: ei.r0(44)
     }),
-    eU = function () {
+    eP = function () {
         for (var e = arguments.length, t = Array(e), r = 0; r < e; r++) t[r] = arguments[r];
     },
     eM = () => null,
     eG = () => Promise.resolve(),
-    em = [eP.KICK_MEMBERS, eP.BAN_MEMBERS, eP.ADMINISTRATOR, eP.MANAGE_CHANNELS, eP.MANAGE_GUILD, eP.MANAGE_ROLES, eP.MANAGE_MESSAGES, eP.MANAGE_THREADS, eP.MODERATE_MEMBERS],
+    em = [eU.KICK_MEMBERS, eU.BAN_MEMBERS, eU.ADMINISTRATOR, eU.MANAGE_CHANNELS, eU.MANAGE_GUILD, eU.MANAGE_ROLES, eU.MANAGE_MESSAGES, eU.MANAGE_THREADS, eU.MODERATE_MEMBERS],
     ey = ei.$e(...em),
     eb = 1,
     ev = 6463,
@@ -553,7 +553,7 @@ let eP = Object.freeze({
     (j.VIDEO_STATE_UPDATE = 'VIDEO_STATE_UPDATE'),
     (j.READY = 'READY'),
     (j.ERROR = 'ERROR'),
-    (($ = L || (L = {}))[($.UNKNOWN_ERROR = 1000)] = 'UNKNOWN_ERROR'),
+    (($ = f || (f = {}))[($.UNKNOWN_ERROR = 1000)] = 'UNKNOWN_ERROR'),
     ($[($.SERVICE_UNAVAILABLE = 1001)] = 'SERVICE_UNAVAILABLE'),
     ($[($.TRANSACTION_ABORTED = 1002)] = 'TRANSACTION_ABORTED'),
     ($[($.INVALID_PAYLOAD = 4000)] = 'INVALID_PAYLOAD'),
@@ -587,7 +587,7 @@ let eP = Object.freeze({
     ($[($.RATE_LIMITED = 5011)] = 'RATE_LIMITED'),
     ($[($.UNAUTHORIZED_FOR_APPLICATION = 5012)] = 'UNAUTHORIZED_FOR_APPLICATION'),
     ($[($.NO_CONNECTION_FOUND = 5013)] = 'NO_CONNECTION_FOUND'),
-    ((q = f || (f = {}))[(q.CLOSE_NORMAL = 1000)] = 'CLOSE_NORMAL'),
+    ((q = L || (L = {}))[(q.CLOSE_NORMAL = 1000)] = 'CLOSE_NORMAL'),
     (q[(q.CLOSE_UNSUPPORTED = 1003)] = 'CLOSE_UNSUPPORTED'),
     (q[(q.CLOSE_ABNORMAL = 1006)] = 'CLOSE_ABNORMAL'),
     (q[(q.INVALID_CLIENTID = 4000)] = 'INVALID_CLIENTID'),
@@ -598,21 +598,21 @@ let eP = Object.freeze({
     (q[(q.INVALID_ENCODING = 4005)] = 'INVALID_ENCODING');
 let eW = 'token',
     eH = 'tokens',
-    eY = 'https://'.concat('status.discord.com'),
-    ex = {
+    ex = 'https://'.concat('status.discord.com'),
+    eY = {
         PRESSKIT: 'https://app.box.com/s/5puqm5ijahrrdao7yldi7fr3zah5i1am',
         REBRAND_PRESSKIT: 'https://www.dropbox.com/scl/fo/2vittfakjukwa3zl4gnxh/AOS0AZlx-zA4TjDyv-M-dgk?rlkey=kn0v1lcqfq1lurj3lk3x1ujhf&dl=0',
         STATUS: 'https://discordstatus.com',
         HELP_AND_SUPPORT: '//'.concat(eR, '/hc/en-us'),
         FEEDBACK: '//'.concat('feedback.discord.com'),
-        EMAIL_SUPPORT: 'mailto:support@'.concat(eN),
-        EMAIL_LAW_ENFORCEMENT: 'mailto:lawenforcement@'.concat(eN),
-        EMAIL_HYPESQUAD: 'mailto:hypesquad@'.concat(eN),
-        EMAIL_JOBS: 'mailto:jobs@'.concat(eN),
+        EMAIL_SUPPORT: 'mailto:support@'.concat(eA),
+        EMAIL_LAW_ENFORCEMENT: 'mailto:lawenforcement@'.concat(eA),
+        EMAIL_HYPESQUAD: 'mailto:hypesquad@'.concat(eA),
+        EMAIL_JOBS: 'mailto:jobs@'.concat(eA),
         DEV_PERKS_FORM: 'https://goo.gl/forms/oZfKBStV3sR8GHdU2',
         VERIFICATION_REQUIREMENTS: 'https://dis.gd/vfqual',
         BASE_URL: 'https://'.concat(eI),
-        PRESS_INQUIRIES: 'mailto:press@'.concat(eN),
+        PRESS_INQUIRIES: 'mailto:press@'.concat(eA),
         CONTACT_US: 'https://dis.gd/contact',
         DEV_LANDING: '/build',
         DEV_PORTAL: '/developers',
@@ -959,9 +959,9 @@ let eF = 'US';
     (et[(et.INDIE = 67)] = 'INDIE'),
     (et[(et.ARCADE = 68)] = 'ARCADE'),
     (et[(et.POINT_AND_CLICK = 69)] = 'POINT_AND_CLICK'),
-    ((er = P || (P = {}))[(er.GUILD_ROLE_SUBSCRIPTIONS = 1)] = 'GUILD_ROLE_SUBSCRIPTIONS'),
+    ((er = U || (U = {}))[(er.GUILD_ROLE_SUBSCRIPTIONS = 1)] = 'GUILD_ROLE_SUBSCRIPTIONS'),
     (er[(er.GUILD_PRODUCTS = 2)] = 'GUILD_PRODUCTS'),
-    ((en = U || (U = {})).PERMISSION_DENIED = 'PERMISSION_DENIED'),
+    ((en = P || (P = {})).PERMISSION_DENIED = 'PERMISSION_DENIED'),
     (en.PERMISSION_DISMISSED = 'PERMISSION_DISMISSED'),
     (en.NO_DEVICES_FOUND = 'NO_DEVICES_FOUND'),
     ((ea = M || (M = {})).SWIPE = 'SWIPE'),

@@ -24,16 +24,16 @@ r.d(t, {
         return u;
     },
     eW: function () {
-        return L;
+        return f;
     },
     mG: function () {
-        return N;
+        return A;
     },
     rJ: function () {
         return R;
     },
     sU: function () {
-        return A;
+        return N;
     },
     uT: function () {
         return l;
@@ -48,7 +48,7 @@ r.d(t, {
         return S;
     },
     yl: function () {
-        return f;
+        return L;
     }
 });
 var n = r(622916),
@@ -75,10 +75,10 @@ function I(e, t) {
 function R(e) {
     (0, o.aF)().setExtras(e);
 }
-function A(e, t) {
+function N(e, t) {
     (0, o.aF)().setExtra(e, t);
 }
-function N(e) {
+function A(e) {
     (0, o.aF)().setTags(e);
 }
 function T(e, t) {
@@ -87,10 +87,10 @@ function T(e, t) {
 function d(e) {
     (0, o.aF)().setUser(e);
 }
-function L() {
+function f() {
     return (0, o.aF)().lastEventId();
 }
-async function f(e) {
+async function L(e) {
     let t = (0, o.s3)();
     return t ? t.flush(e) : (i.X && n.kg.warn('Cannot flush events. No client defined.'), Promise.resolve(!1));
 }

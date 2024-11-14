@@ -1,6 +1,6 @@
 r.d(t, {
     k: function () {
-        return A;
+        return N;
     }
 });
 var n = r(151122),
@@ -15,7 +15,7 @@ var n = r(151122),
     u = r(454463),
     I = r(878719),
     R = r(163162);
-let A = (0, n._I)((e = {}) => {
+let N = (0, n._I)((e = {}) => {
     let t = {
         onerror: !0,
         onunhandledrejection: !0,
@@ -32,8 +32,8 @@ let A = (0, n._I)((e = {}) => {
                     (0, o.V)((t) => {
                         let { stackParser: r, attachStacktrace: n } = T();
                         if ((0, a.s3)() !== e || (0, R.Wz)()) return;
-                        let { msg: o, url: i, line: l, column: u, error: A } = t,
-                            N = (function (e, t, r, n) {
+                        let { msg: o, url: i, line: l, column: u, error: N } = t,
+                            A = (function (e, t, r, n) {
                                 let a = (e.exception = e.exception || {}),
                                     _ = (a.values = a.values || []),
                                     o = (_[0] = _[0] || {}),
@@ -53,10 +53,10 @@ let A = (0, n._I)((e = {}) => {
                                         }),
                                     e
                                 );
-                            })((0, I.ME)(r, A || o, void 0, n, !1), i, l, u);
-                        (N.level = 'error'),
-                            (0, _.eN)(N, {
-                                originalException: A,
+                            })((0, I.ME)(r, N || o, void 0, n, !1), i, l, u);
+                        (A.level = 'error'),
+                            (0, _.eN)(A, {
+                                originalException: N,
                                 mechanism: {
                                     handled: !1,
                                     type: 'onerror'
@@ -64,7 +64,7 @@ let A = (0, n._I)((e = {}) => {
                             });
                     });
                 })(e),
-                N('onerror')),
+                A('onerror')),
                 t.onunhandledrejection &&
                     ((function (e) {
                         (0, i.h)((t) => {
@@ -102,11 +102,11 @@ let A = (0, n._I)((e = {}) => {
                                 });
                         });
                     })(e),
-                    N('onunhandledrejection'));
+                    A('onunhandledrejection'));
         }
     };
 });
-function N(e) {
+function A(e) {
     u.X && l.kg.log(`Global Handler attached: ${e}`);
 }
 function T() {

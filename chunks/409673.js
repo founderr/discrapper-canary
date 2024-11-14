@@ -99,7 +99,7 @@ function D(e) {
 }
 t.ZP = i.forwardRef(function (e, t) {
     var n, a, c, v, I, R, L, x, w, M;
-    let { sound: P, channel: k, containerClassName: U, className: G, focused: B, forceSecondaryActions: Z = !1, interactive: F = !0, enableSecondaryActions: V = !1, suppressPlaySound: j, onMouseEnter: H, onSelectItem: Y, analyticsLocations: W, buttonOverlay: K = b.Pb.PLAY, showLockForDisabledSound: z = !0, inNitroLockedSection: q = !1, refreshEnabled: Q = !1, isAnimated: X = !0, isPlayingSoundOverride: J, isSoundmoji: $, tooltipOverride: ee, tooltipContentClassName: et, ...en } = e,
+    let { sound: P, channel: k, containerClassName: U, className: B, focused: G, forceSecondaryActions: Z = !1, interactive: F = !0, enableSecondaryActions: V = !1, suppressPlaySound: j, onMouseEnter: H, onSelectItem: Y, analyticsLocations: W, buttonOverlay: K = b.Pb.PLAY, showLockForDisabledSound: z = !0, inNitroLockedSection: q = !1, refreshEnabled: Q = !1, isAnimated: X = !0, isPlayingSoundOverride: J, isSoundmoji: $, tooltipOverride: ee, tooltipContentClassName: et, ...en } = e,
         { name: er, emojiId: ei, emojiName: ea } = P,
         es = (0, l.e7)([E.default], () => E.default.getCurrentUser()),
         eo = (0, y.z)(P, null == k ? void 0 : k.guild_id),
@@ -250,9 +250,9 @@ t.ZP = i.forwardRef(function (e, t) {
                                     [C.premiumDisabled]: eS && !Z,
                                     [C.premiumDisabledRefresh]: eS && Q,
                                     [C.buttonDisabledSecondaryActionsEnabled]: !F && Z,
-                                    [C.focused]: F && B
+                                    [C.focused]: F && G
                                 },
-                                G
+                                B
                             ),
                             ...e,
                             onClick: ex,

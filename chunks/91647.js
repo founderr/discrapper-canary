@@ -18,12 +18,12 @@ class c {
             u = (0, E.s3)(t),
             I = (0, E.Bg)(c),
             R = (0, E.OC)(o),
-            A = (0, E.Ic)(e, u, R, I),
-            N = this._buckets.get(A),
-            T = N && e === _.is ? N.metric.weight : 0;
-        N
-            ? (N.metric.add(r), N.timestamp < l && (N.timestamp = l))
-            : ((N = {
+            N = (0, E.Ic)(e, u, R, I),
+            A = this._buckets.get(N),
+            T = A && e === _.is ? A.metric.weight : 0;
+        A
+            ? (A.metric.add(r), A.timestamp < l && (A.timestamp = l))
+            : ((A = {
                   metric: new i.ZN[e](r),
                   timestamp: l,
                   metricType: e,
@@ -31,9 +31,9 @@ class c {
                   unit: R,
                   tags: I
               }),
-              this._buckets.set(A, N));
-        let d = 'string' == typeof r ? N.metric.weight - T : r;
-        (0, a.yc)(e, u, d, R, c, A);
+              this._buckets.set(N, A));
+        let d = 'string' == typeof r ? A.metric.weight - T : r;
+        (0, a.yc)(e, u, d, R, c, N);
     }
     flush() {
         if (0 === this._buckets.size) return;

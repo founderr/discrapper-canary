@@ -78,25 +78,25 @@ function C(e) {
         P = y.ZP.useName(L),
         k = (0, l.e7)([E.Z, v.ZP, b.Z], () => T.ZP.getNickname(w, a, L)),
         U = I.Z.getGuild(w),
-        G = (0, _.Ib)(U, x) && i === A.fL ? A.jM : null;
+        B = (0, _.Ib)(U, x) && i === A.fL ? A.jM : null;
     if (null == L)
         return (0, r.jsx)(N, {
             userId: p,
             className: t,
             children: C
         });
-    let B = (e) =>
+    let G = (e) =>
         (0, r.jsx)(h.Z, {
             className: t,
             onContextMenu: M,
-            color: G,
+            color: B,
             ...e,
             children: '@'.concat(null != k ? k : P)
         });
     return R
         ? (0, r.jsx)(f.Gt, {
               value: D,
-              children: B()
+              children: G()
           })
         : (0, r.jsx)(f.Gt, {
               value: D,
@@ -119,7 +119,7 @@ function C(e) {
                       })
                   ),
                   position: o.tq ? 'top' : 'right',
-                  children: (e) => B(e)
+                  children: (e) => G(e)
               })
           });
 }

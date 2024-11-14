@@ -40,8 +40,8 @@ var r = n(525654),
     P = n(271383),
     k = n(430824),
     U = n(607744),
-    G = n(341165),
-    B = n(496675),
+    B = n(341165),
+    G = n(496675),
     Z = n(914010),
     F = n(594174),
     V = n(626135),
@@ -86,7 +86,7 @@ function er(e) {
             if ((null == n ? void 0 : n.targetType) === J.Iq.ROLE_SUBSCRIPTIONS_PURCHASE) return Q.oC.ROLE_SUBSCRIPTIONS;
             if ((null == n ? void 0 : n.targetType) == null && !L.tx.has(t.type) && (0, b.s)(e)) return Q.oC.GUILD_HOME;
             let a = w.Z.getChannel(t.id);
-            return B.Z.can(q.Plq.VIEW_CHANNEL, a) ? t.id : null !== (i = null === (r = M.ZP.getDefaultChannel(e, !0, q.Plq.CREATE_INSTANT_INVITE)) || void 0 === r ? void 0 : r.id) && void 0 !== i ? i : t.id;
+            return G.Z.can(q.Plq.VIEW_CHANNEL, a) ? t.id : null !== (i = null === (r = M.ZP.getDefaultChannel(e, !0, q.Plq.CREATE_INSTANT_INVITE)) || void 0 === r ? void 0 : r.id) && void 0 !== i ? i : t.id;
         })(t, r, i),
         S = f === q.d4z.GUILD_STAGE_VOICE,
         T = q.Z5c.CHANNEL(t, g);
@@ -227,14 +227,14 @@ t.Z = {
         }
     },
     async mobileCreateInvite(e, t) {
-        let n = G.Z.getInvite(e.id);
+        let n = B.Z.getInvite(e.id);
         if (null != n && !n.isExpired()) return n.code;
         let r = { max_age: j.Z.Seconds.DAY },
             i = await this.createInvite(e.id, r, t).catch(() => d.Z.dispatch({ type: 'NATIVE_APP_INSTANT_INVITE_GDM_SHARE_FAILED' }));
         return null == i ? void 0 : i.code;
     },
     async getAllFriendInvites(e) {
-        if ((await new Promise((e) => d.Z.wait(() => e(null))), G.Z.getFriendInvitesFetching())) return null != et ? et.then((e) => e.body) : Promise.reject(Error('Invalid friend invite fetch request'));
+        if ((await new Promise((e) => d.Z.wait(() => e(null))), B.Z.getFriendInvitesFetching())) return null != et ? et.then((e) => e.body) : Promise.reject(Error('Invalid friend invite fetch request'));
         (et = c.tn.get({
             url: q.ANM.FRIEND_INVITES,
             context: { location: e }
