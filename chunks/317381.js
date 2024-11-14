@@ -167,19 +167,20 @@ function H(e) {
     null == t ||
         t.forEach((t) => {
             let { location: n, application_id: r, launch_id: i, composite_instance_id: a, participants: s } = t;
-            j({
-                guildId: e.id,
-                channelId: n.channel_id,
-                location: n,
-                applicationId: r,
-                launchId: i,
-                compositeInstanceId: a,
-                participants: s.map((e) => ({
-                    userId: e.user_id,
-                    sessionId: e.session_id,
-                    nonce: e.nonce
-                }))
-            });
+            null != n.channel_id &&
+                j({
+                    guildId: e.id,
+                    channelId: n.channel_id,
+                    location: n,
+                    applicationId: r,
+                    launchId: i,
+                    compositeInstanceId: a,
+                    participants: s.map((e) => ({
+                        userId: e.user_id,
+                        sessionId: e.session_id,
+                        nonce: e.nonce
+                    }))
+                });
         });
 }
 function Y(e, t) {
@@ -392,6 +393,7 @@ let q = new z(s.Z, {
     EMBEDDED_ACTIVITY_UPDATE_V2: function (e) {
         let { applicationId: t, launchId: n, compositeInstanceId: r, location: i, participants: a } = e;
         null != d.Z.getChannel(i.channel_id) &&
+            null != i.channel_id &&
             j({
                 guildId: i.guild_id,
                 channelId: i.channel_id,

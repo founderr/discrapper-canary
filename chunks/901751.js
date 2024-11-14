@@ -313,6 +313,7 @@ class x extends s.Z {
                       }));
             }),
             T(this, 'handleEmbeddedActivityUpdate', (e) => {
+                if (null == e) return;
                 let { quest: t, activity: n } = L(e),
                     r = C(e),
                     i = (null == n || null == t) && this.streamKeyToHeartbeatState.has(r),
