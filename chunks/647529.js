@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return m;
     }
 });
 var i = n(200651);
@@ -9,69 +9,78 @@ var s = n(442837),
     o = n(481060),
     l = n(565138),
     a = n(430824),
-    r = n(388032),
-    d = n(436728),
-    c = n(767688);
-function u(e) {
-    let { guildId: t, title: n, transitionState: u, children: x, buttons: m, onClose: h } = e,
-        g = (0, s.e7)([a.Z], () => a.Z.getGuild(t));
-    if (null == g) return null;
-    let j = (0, i.jsx)(o.Button, {
-        onClick: h,
-        children: r.intl.string(r.t.i4jeWV)
+    r = n(63063),
+    d = n(981631),
+    c = n(388032),
+    u = n(436728),
+    x = n(767688);
+function m(e) {
+    let { guildId: t, title: n, transitionState: m, children: h, buttons: g, onClose: j } = e,
+        _ = (0, s.e7)([a.Z], () => a.Z.getGuild(t));
+    if (null == _) return null;
+    let f = (0, i.jsx)(o.Button, {
+        onClick: j,
+        children: c.intl.string(c.t.i4jeWV)
     });
     return (0, i.jsxs)(o.ModalRoot, {
-        transitionState: u,
+        transitionState: m,
         size: o.ModalSize.SMALL,
-        className: d.container,
+        className: u.container,
         children: [
             (0, i.jsxs)(o.ModalHeader, {
                 separator: !1,
-                className: d.modalHeader,
+                className: u.modalHeader,
                 children: [
-                    (0, i.jsx)('div', { className: d.gradientSplash }),
+                    (0, i.jsx)('div', { className: u.gradientSplash }),
                     (0, i.jsx)('img', {
                         alt: '',
-                        src: c,
-                        className: d.heroImage
+                        src: x,
+                        className: u.heroImage
                     }),
                     (0, i.jsx)(o.Spacer, { size: 16 }),
                     (0, i.jsx)(o.Heading, {
                         variant: 'heading-xl/bold',
                         color: 'header-primary',
-                        className: d.title,
+                        className: u.title,
                         children: n
                     }),
                     (0, i.jsx)(o.Spacer, { size: 4 }),
                     (0, i.jsxs)('div', {
-                        className: d.guildContainer,
+                        className: u.guildContainer,
                         children: [
                             (0, i.jsx)(l.Z, {
                                 size: l.Z.Sizes.SMOL,
-                                guild: g,
-                                className: d.guildIcon
+                                guild: _,
+                                className: u.guildIcon
                             }),
                             (0, i.jsx)(o.Text, {
                                 variant: 'text-md/semibold',
                                 color: 'text-secondary',
-                                children: g.name
+                                children: _.name
                             })
                         ]
                     }),
                     (0, i.jsx)(o.ModalCloseButton, {
-                        onClick: h,
-                        innerClassName: d.closeButton,
-                        className: d.close
+                        onClick: j,
+                        innerClassName: u.closeButton,
+                        className: u.close
                     })
                 ]
             }),
-            x,
-            (0, i.jsx)(o.ModalFooter, {
-                className: d.footer,
-                children: (0, i.jsx)('div', {
-                    className: d.footerButtons,
-                    children: null != m ? m : j
-                })
+            h,
+            (0, i.jsxs)(o.ModalFooter, {
+                className: u.footer,
+                children: [
+                    (0, i.jsx)('div', {
+                        className: u.footerButtons,
+                        children: null != g ? g : f
+                    }),
+                    (0, i.jsx)(o.Text, {
+                        variant: 'text-xs/normal',
+                        color: 'text-secondary',
+                        children: c.intl.format(c.t.zbMH0d, { link: r.Z.getArticleURL(d.BhN.GUILD_LEADERBOARD) })
+                    })
+                ]
             })
         ]
     });
