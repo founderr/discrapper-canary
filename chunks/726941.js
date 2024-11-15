@@ -6,35 +6,34 @@ var i = n(200651),
     o = n(17845),
     c = n(374939),
     d = n(283293),
-    u = n(292191),
-    h = n(683544),
-    m = n(388032),
+    u = n(493646),
+    h = n(292191),
+    m = n(683544),
     p = n(422311);
 t.Z = function (e) {
-    let { tabId: t, onSelectApplication: n, onScroll: g } = e,
-        f = (0, l.e7)([a.Z], () => a.Z.getCategories()),
-        _ = r.useMemo(() => f.find((e) => e.id === t), [f, t]),
-        E = r.useMemo(() => {
-            var e;
-            return [null !== (e = null == _ ? void 0 : _.name) && void 0 !== e ? e : '', m.intl.string(m.t.wDEPGR)];
-        }, [_]);
+    var t;
+    let { tabId: n, onSelectApplication: g, onScroll: f } = e,
+        _ = (0, l.e7)([a.Z], () => a.Z.getCategories()),
+        E = r.useMemo(() => _.find((e) => e.id === n), [_, n]),
+        I = r.useMemo(() => (null != E ? (0, u.v)(E) : ''), [E]);
     return (0, i.jsxs)(d.Z, {
-        onScroll: g,
+        onScroll: f,
         children: [
             (0, i.jsx)(o.Z, {
-                title: E,
+                title: null !== (t = null == E ? void 0 : E.name) && void 0 !== t ? t : '',
+                description: I,
                 children: (0, i.jsx)(s.Z, {})
             }),
             (0, i.jsx)(c.Z, {
                 children:
-                    null == _
+                    null == E
                         ? (0, i.jsx)('div', {
                               className: p.errorContainer,
-                              children: (0, i.jsx)(u.Z, { className: p.error })
+                              children: (0, i.jsx)(h.Z, { className: p.error })
                           })
-                        : (0, i.jsx)(h.Z, {
-                              categoryId: _.id,
-                              onSelectApplication: n
+                        : (0, i.jsx)(m.Z, {
+                              categoryId: E.id,
+                              onSelectApplication: g
                           })
             })
         ]
