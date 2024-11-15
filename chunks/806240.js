@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return x;
+        return m;
     }
 });
 var r = n(200651),
@@ -8,36 +8,30 @@ var r = n(200651),
     l = n(120356),
     i = n.n(l),
     o = n(481060),
-    s = n(931240),
-    c = n(207796),
-    d = n(836768),
-    u = n(859921),
-    h = n(785287),
-    m = n(219299);
-function x() {
+    c = n(931240),
+    s = n(836768),
+    d = n(859921),
+    u = n(785287),
+    h = n(219299);
+function m() {
     let e = a.useRef(null);
     return (0, r.jsxs)('div', {
         ref: e,
-        className: i()(m.panel, h.panel),
+        className: i()(h.panel, u.panel),
         children: [
             (0, r.jsx)(o.Button, {
                 size: o.Button.Sizes.SMALL,
-                onClick: s.LX,
+                onClick: c.LX,
                 children: 'Reset Every Clan Setup State'
             }),
             (0, r.jsx)(o.Button, {
                 size: o.Button.Sizes.SMALL,
-                onClick: c.PJ,
-                children: 'Reset Clan Discovery State'
-            }),
-            (0, r.jsx)(o.Button, {
-                size: o.Button.Sizes.SMALL,
-                onClick: d.u,
+                onClick: s.u,
                 children: 'Reset Global Discovery State'
             }),
             (0, r.jsx)(o.Button, {
                 size: o.Button.Sizes.SMALL,
-                onClick: u.O,
+                onClick: d.O,
                 children: 'Reset Global Discovery Servers State'
             })
         ]
