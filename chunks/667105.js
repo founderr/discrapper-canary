@@ -5,9 +5,6 @@ n.d(t, {
     Ks: function () {
         return C;
     },
-    Ws: function () {
-        return D;
-    },
     g2: function () {
         return A;
     },
@@ -230,12 +227,4 @@ function O(e) {
     let s = (null === (t = r.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
         o = null != r.userStatus && (0, h.zE)(r.userStatus, p.jn.QUEST_BAR);
     return i && !o && !s && !a;
-}
-function D(e) {
-    let { location: t } = e,
-        n = O({
-            location: t,
-            quest: R()
-        });
-    return 0 !== (0, s.e7)([_.Z], () => _.Z.lastFetchedCurrentQuests) && !n;
 }

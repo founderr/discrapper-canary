@@ -20,8 +20,8 @@ var i = n(200651),
     I = n(706590),
     b = n(940777),
     E = n(41776),
-    S = n(905423),
-    Z = n(802718),
+    Z = n(905423),
+    S = n(802718),
     N = n(796974),
     y = n(271383),
     T = n(430824),
@@ -30,8 +30,8 @@ var i = n(200651),
     P = n(709054),
     R = n(727258),
     M = n(605951),
-    L = n(474109),
-    w = n(741616),
+    w = n(474109),
+    L = n(741616),
     D = n(187835),
     O = n(118122),
     k = n(193154),
@@ -223,10 +223,10 @@ function el(e) {
     }, []),
         l.useEffect(() => {
             if ((eg.setGuildsTree(s), er.current || 0 === s.size)) return;
-            let e = S.Z.getState().guildId;
+            let e = Z.Z.getState().guildId;
             eg.scrollToGuild(e, !1);
             let t = null;
-            return S.Z.subscribe((e) => {
+            return Z.Z.subscribe((e) => {
                 let { guildId: n } = e;
                 n !== t && ((t = n), eg.scrollToGuild(t, !1));
             });
@@ -272,21 +272,9 @@ function el(e) {
     }
     (0, M.Z)(eg.scrollToGuild);
     let eE = s.getRoots(),
-        eS = (0, I.Z)(),
-        eZ = (0, Z.U)(),
-        eN = l.useCallback(
-            (e) => {
-                let { onClick: t } = e;
-                return (0, i.jsx)(U.Z, {
-                    ref: eg.guildDiscoveryRef,
-                    selected: ev,
-                    className: J.fixedDiscoveryIcon,
-                    onClick: t
-                });
-            },
-            [ev, eg.guildDiscoveryRef]
-        ),
-        ey = $.map((e) =>
+        eZ = (0, I.Z)(),
+        eS = (0, S.U)(),
+        eN = $.map((e) =>
             (0, i.jsx)(
                 k.Z,
                 {
@@ -312,7 +300,7 @@ function el(e) {
                         role: 'tree',
                         className: J.tree,
                         children: [
-                            (0, i.jsx)(L.Z, {
+                            (0, i.jsx)(w.Z, {
                                 ref: eo,
                                 isVisible: eg.isItemVisible,
                                 onJumpTo: eg.handleJumpToGuild,
@@ -328,10 +316,10 @@ function el(e) {
                                 onScroll: eg.handleScroll,
                                 children: [
                                     (0, i.jsx)(B.u, {}),
-                                    eS ? (0, i.jsx)(b.Z, {}) : null,
+                                    eZ ? (0, i.jsx)(b.Z, {}) : null,
                                     (0, i.jsx)(H.Z, { isOnHubVerificationRoute: ex }),
-                                    (0, i.jsx)(w.Z, {}),
-                                    eZ,
+                                    (0, i.jsx)(L.Z, {}),
+                                    eS,
                                     C.map((e) => (0, i.jsx)(K.Z, { guildId: e }, e)),
                                     (0, i.jsx)(Y.Z, { onActivate: eI }),
                                     (0, i.jsx)(V.Z, {}),
@@ -339,7 +327,7 @@ function el(e) {
                                         'aria-label': Q.intl.string(Q.t['7hB4kp']),
                                         children: eE.map(eb)
                                     }),
-                                    ey,
+                                    eN,
                                     n
                                         ? null
                                         : (0, i.jsx)(O.Z, {
@@ -358,9 +346,13 @@ function el(e) {
                                 ? null
                                 : (0, i.jsx)(G.L, {
                                       hideGradient: ec,
-                                      children: eN({})
+                                      children: (0, i.jsx)(U.Z, {
+                                          ref: eg.guildDiscoveryRef,
+                                          selected: ev,
+                                          className: J.fixedDiscoveryIcon
+                                      })
                                   }),
-                            (0, i.jsx)(L.Z, {
+                            (0, i.jsx)(w.Z, {
                                 reverse: !0,
                                 ref: es,
                                 isVisible: eg.isItemVisible,
