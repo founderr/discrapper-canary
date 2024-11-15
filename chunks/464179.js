@@ -236,7 +236,7 @@ let R = {
         settingsInternationalWithoutName: [[D, w], [Z], [k, j], [M]],
         settingsInternationalWithoutNameMobile: [[D], [w], [Z], [k], [j], [M]]
     };
-class B extends (i = d.PureComponent) {
+class F extends (i = d.PureComponent) {
     componentDidMount() {
         this.handleInfoChange();
     }
@@ -332,9 +332,9 @@ class B extends (i = d.PureComponent) {
             });
     }
 }
-y(B, 'Layouts', r),
-    y(B, 'Modes', l),
-    y(B, 'defaultProps', {
+y(F, 'Layouts', r),
+    y(F, 'Modes', l),
+    y(F, 'defaultProps', {
         name: '',
         country: '',
         line1: '',
@@ -346,4 +346,4 @@ y(B, 'Layouts', r),
         mode: 'create',
         error: null
     }),
-    (t.ZP = B);
+    (t.ZP = F);

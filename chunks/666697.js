@@ -19,9 +19,9 @@ var i = n(200651),
     C = n(979007),
     v = n(981631),
     S = n(388032),
-    N = n(162064);
+    T = n(162064);
 t.Z = function (e) {
-    let { applicationId: t, onSelectApplication: n, onScroll: T, initialTab: A } = e,
+    let { applicationId: t, onSelectApplication: n, onScroll: N, initialTab: A } = e,
         b = r.useRef(null),
         x = (0, l.e7)([s.Z], () => s.Z.getApplication(t)),
         Z = (0, l.e7)([s.Z], () => s.Z.getApplicationFetchState(t));
@@ -74,31 +74,31 @@ t.Z = function (e) {
     if (null == x)
         return Z === s.M.FETCHING
             ? (0, i.jsx)('div', {
-                  className: N.centerContainer,
+                  className: T.centerContainer,
                   children: (0, i.jsx)(o.Z, { loading: !0 })
               })
             : (0, i.jsx)('div', {
-                  className: N.centerContainer,
-                  children: (0, i.jsx)(m.Z, { className: N.error })
+                  className: T.centerContainer,
+                  children: (0, i.jsx)(m.Z, { className: T.error })
               });
     let w = y === C.Wc.ABOUT;
     return (0, i.jsx)(h.Z, {
-        onScroll: T,
+        onScroll: N,
         ref: b,
         children: (0, i.jsx)(d.Z, {
             children: (0, i.jsxs)('div', {
-                className: N.detailContainer,
+                className: T.detailContainer,
                 children: [
                     (0, i.jsx)(f.Z, { application: x }),
                     (0, i.jsxs)('div', {
-                        className: N.contentContainer,
+                        className: T.contentContainer,
                         children: [
                             (0, i.jsxs)('div', {
-                                className: N.contentTabsContainer,
+                                className: T.contentTabsContainer,
                                 children: [
                                     L &&
                                         (0, i.jsx)('div', {
-                                            className: N.contentTabs,
+                                            className: T.contentTabs,
                                             children: (0, i.jsx)(u.Z, {
                                                 tabs: P,
                                                 onTabSelect: D,
@@ -114,7 +114,7 @@ t.Z = function (e) {
                             }),
                             w &&
                                 (0, i.jsx)(_.Z, {
-                                    className: N.sidebar,
+                                    className: T.sidebar,
                                     application: x,
                                     onSelectCategory: M
                                 })

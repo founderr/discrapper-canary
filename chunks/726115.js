@@ -15,10 +15,10 @@ n.d(t, {
         return C;
     },
     U0: function () {
-        return N;
+        return T;
     },
     Xp: function () {
-        return T;
+        return N;
     },
     a$: function () {
         return I;
@@ -151,7 +151,7 @@ function v(e) {
 function S(e) {
     return null == e || Date.now() - e > m.AF;
 }
-function N(e) {
+function T(e) {
     return {
         id: e.id,
         name: e.name,
@@ -169,7 +169,7 @@ function N(e) {
         emojiCount: e.emoji_count
     };
 }
-function T() {
+function N() {
     var e;
     let [t] = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [l.default],
         n = (0, g.Cf)(),

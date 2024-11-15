@@ -76,8 +76,8 @@ var i,
     C = n(158776),
     v = n(594174),
     S = n(979651),
-    N = n(70956),
-    T = n(5192),
+    T = n(70956),
+    N = n(5192),
     A = n(226951),
     b = n(996106),
     x = n(863141),
@@ -92,7 +92,7 @@ let y = null !== (i = r.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && v
         return /^\d+$/.test(n) ? e : t.slice(-2).join('.');
     })(),
     R = new RegExp('^'.concat(A.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(A.Z.escape(O), '|discordapp.com|discord.com)$')),
-    P = 1 * N.Z.Millis.MINUTE,
+    P = 1 * T.Z.Millis.MINUTE,
     j = {};
 function D(e) {
     return 'customEmoji' === e.type && (e.type = 'emoji'), 'emoji' === e.type && e.src && (e.src = M(e.src)), Array.isArray(e.content) && (e.content = e.content.map(D)), e;
@@ -173,7 +173,7 @@ function G(e, t, n) {
         c = v.default.getUser(o);
     if (null == c) throw Error('Invalid user id: '.concat(o));
     return {
-        nick: T.ZP.getName(e, t, c),
+        nick: N.ZP.getName(e, t, c),
         mute: E.Z.isLocalMute(c.id),
         volume: E.Z.getLocalVolume(c.id),
         pan: E.Z.getLocalPan(c.id),

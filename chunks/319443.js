@@ -18,13 +18,13 @@ var i = n(200651),
     C = n(569527),
     v = n(979007),
     S = n(388032),
-    N = n(327900);
+    T = n(327900);
 t.Z = function () {
     let { onScroll: e, scrollPosition: t, resetScrollPosition: n } = (0, s.M)(),
-        T = (0, g.Xh)(),
-        A = (null == T ? void 0 : T.type) === g.m_.CATEGORY ? T.categoryId : void 0,
-        { applicationId: b, section: x } = (null == T ? void 0 : T.type) === g.m_.APPLICATION ? T : {},
-        { query: Z } = (null == T ? void 0 : T.type) === g.m_.SEARCH ? T : {},
+        N = (0, g.Xh)(),
+        A = (null == N ? void 0 : N.type) === g.m_.CATEGORY ? N.categoryId : void 0,
+        { applicationId: b, section: x } = (null == N ? void 0 : N.type) === g.m_.APPLICATION ? N : {},
+        { query: Z } = (null == N ? void 0 : N.type) === g.m_.SEARCH ? N : {},
         { tabs: L, selectedTab: y, onSelectTab: O } = (0, p.i)(null == A ? void 0 : A.toString());
     r.useEffect(() => {
         a.CP();
@@ -33,7 +33,7 @@ t.Z = function () {
             a.g5();
         }, []);
     let R = null != b,
-        P = (null == T ? void 0 : T.type) === g.m_.SEARCH,
+        P = (null == N ? void 0 : N.type) === g.m_.SEARCH,
         { searchQuery: j, onSearchTextChange: D, onClearSearch: M, onSearchSubmit: w } = (0, m.M)({ initialQuery: null != Z ? Z : '' }),
         {
             searchBarState: k,
@@ -56,10 +56,10 @@ t.Z = function () {
             null != (0, g.Uc)() ? (0, h.op)() : (0, f.Yp)();
         }, []);
     return (0, i.jsxs)('div', {
-        className: N.container,
+        className: T.container,
         children: [
             (0, i.jsxs)(c.ZP, {
-                className: P ? N.search : void 0,
+                className: P ? T.search : void 0,
                 children: [
                     !P && (0, i.jsx)(c.z6, { scrollPosition: t }),
                     F
@@ -75,7 +75,7 @@ t.Z = function () {
                           ? (0, i.jsx)(l.Heading, {
                                 variant: 'heading-lg/semibold',
                                 color: 'header-primary',
-                                className: N.alternateHeader,
+                                className: T.alternateHeader,
                                 children: S.intl.formatToPlainString(S.t.zHdzqa, { query: Z })
                             })
                           : (0, i.jsx)(d.Z, {

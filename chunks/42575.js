@@ -34,7 +34,7 @@ function _(e) {
         S = (e) => {
             null == e || e.stopPropagation(), o.Z.ignore(t.id);
         },
-        N = _ === p.Skl.OFFLINE ? p.Skl.UNKNOWN : _;
+        T = _ === p.Skl.OFFLINE ? p.Skl.UNKNOWN : _;
     return (0, i.jsx)(h.Z, {
         isFocused: E,
         user: t,
@@ -69,7 +69,7 @@ function _(e) {
                     (0, i.jsx)(m.Z, {
                         user: t,
                         hovered: e,
-                        status: N,
+                        status: T,
                         subText: n,
                         className: f.__invalid_userInfo
                     }),

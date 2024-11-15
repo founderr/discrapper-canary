@@ -42,7 +42,7 @@ function T(e, n) {
 function g(e) {
     var n;
     let { legalTermsNodeRef: t, invoiceError: i, planError: a, disablePurchase: d, flashLegalTerms: p, isSubmitting: b, premiumSubscription: g, isGift: y, planGroup: E, isPrepaid: I, isTrial: x, makePurchase: _, needsPaymentSource: N, inReverseTrial: C, onNext: R } = e,
-        { application: S, selectedPlan: M, hasAcceptedTerms: j, purchaseType: L, paymentSourceId: k, activeSubscription: O, devShelfFetchState: U } = (0, c.usePaymentContext)(),
+        { application: S, selectedPlan: M, hasAcceptedTerms: j, purchaseType: L, paymentSourceId: k, activeSubscription: U, devShelfFetchState: O } = (0, c.usePaymentContext)(),
         B = A({
             purchaseType: L,
             plan: M,
@@ -72,7 +72,7 @@ function g(e) {
                     children: B
                 })
         });
-    if ((0, u.yE)(null !== (n = null == S ? void 0 : S.flags) && void 0 !== n ? n : 0, m.udG.EMBEDDED) && U === s.O.LOADING)
+    if ((0, u.yE)(null !== (n = null == S ? void 0 : S.flags) && void 0 !== n ? n : 0, m.udG.EMBEDDED) && O === s.O.LOADING)
         return (0, r.jsx)(l.Tooltip, {
             text: v.intl.string(v.t.cjA5tr),
             children: (e) =>
@@ -114,9 +114,9 @@ function g(e) {
                     children: B
                 })
         });
-    else if (C && null != O && null != k)
+    else if (C && null != U && null != k)
         return (0, r.jsx)(f.Z, {
-            activeSubscription: O,
+            activeSubscription: U,
             onNext: R,
             isSubmitting: b,
             paymentSourceId: k,

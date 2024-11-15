@@ -9,9 +9,9 @@ var i = n(200651),
     d = n(866442),
     u = n(442837),
     m = n(481060),
-    h = n(231467),
-    g = n(650774),
-    x = n(430824),
+    h = n(650774),
+    g = n(430824),
+    x = n(900681),
     p = n(175557),
     f = n(688298),
     C = n(995119),
@@ -90,8 +90,8 @@ t.Z = (e) => {
     var t;
     let { handleUpdate: n, progress: l, guildId: a } = e,
         { banner: S, brandPrimaryColor: E, brandSecondaryColor: R, badgePrimaryColor: Z, badgeSecondaryColor: y } = l,
-        A = (0, u.e7)([x.Z], () => x.Z.getGuild(a)),
-        L = null !== (t = (0, u.e7)([g.Z], () => g.Z.getMemberCount(a))) && void 0 !== t ? t : 0,
+        A = (0, u.e7)([g.Z], () => g.Z.getGuild(a)),
+        L = null !== (t = (0, u.e7)([h.Z], () => h.Z.getMemberCount(a))) && void 0 !== t ? t : 0,
         D = r.useMemo(
             () => ({
                 primary: null != E ? E : _.OH,
@@ -307,7 +307,7 @@ t.Z = (e) => {
                     }),
                     (0, i.jsx)('div', {
                         className: N.clanCardWrapper,
-                        children: (0, i.jsx)(h.xV, {
+                        children: (0, i.jsx)(x.xV, {
                             bannerComponent: (0, i.jsx)(p.Z, {
                                 banner: S,
                                 primaryTintColor: B.primary,

@@ -30,8 +30,8 @@ var i = n(200651),
     C = n(921944),
     v = n(388032),
     S = n(484857);
-let N = [],
-    T = (e) => {
+let T = [],
+    N = (e) => {
         let { tagText: t, className: n } = e;
         return (0, i.jsx)(o.TextBadge, {
             className: a()(S.tag, n),
@@ -44,7 +44,7 @@ let N = [],
             className: a()(S.featureCard, { [S.wideStyle]: s }),
             children: [
                 null != l
-                    ? (0, i.jsx)(T, {
+                    ? (0, i.jsx)(N, {
                           tagText: l,
                           className: S.featureCardTag
                       })
@@ -72,7 +72,7 @@ let N = [],
         });
     };
 function b(e) {
-    let { className: t, renderModalProps: n, heroArt: l, heroArtClassName: T, modalDismissibleContent: b, modalTopExtra: x, header: Z, headerClassName: L, subHeader: y, subHeaderExtra: O, featureCards: R, changeLogId: P, button: j, body: D } = e,
+    let { className: t, renderModalProps: n, heroArt: l, heroArtClassName: N, modalDismissibleContent: b, modalTopExtra: x, header: Z, headerClassName: L, subHeader: y, subHeaderExtra: O, featureCards: R, changeLogId: P, button: j, body: D } = e,
         { onClose: M, transitionState: w } = n,
         k = (0, h.Dt)(),
         U = R.length % 2 == 0,
@@ -87,7 +87,7 @@ function b(e) {
         $ = r.useRef(z),
         ee = r.useRef(W),
         et = r.useRef(q),
-        [en, ei] = r.useState(N),
+        [en, ei] = r.useState(T),
         er = r.useRef(!1);
     function el() {
         let e = Date.now(),
@@ -118,7 +118,7 @@ function b(e) {
                               });
                     ei(await Promise.all(t));
                 } catch (e) {
-                    _.Z.captureException(e), ei(N);
+                    _.Z.captureException(e), ei(T);
                 }
             };
             !0 !== er.current && e(), (er.current = !0);
@@ -186,7 +186,7 @@ function b(e) {
                         }),
                         'video' === l.type
                             ? (0, i.jsx)(m.Z, {
-                                  className: a()(S.video, T),
+                                  className: a()(S.video, N),
                                   autoPlay: !G,
                                   loop: !0,
                                   muted: !0,
@@ -229,7 +229,7 @@ function b(e) {
                               })
                             : 'embed' === l.type
                               ? (0, i.jsx)(d.BC, {
-                                    className: a()(S.video, T),
+                                    className: a()(S.video, N),
                                     allowFullScreen: !1,
                                     href: l.href,
                                     thumbnail: l.thumbnail,
@@ -247,7 +247,7 @@ function b(e) {
                               : 'image' === l.type
                                 ? (0, i.jsx)('img', {
                                       alt: '',
-                                      className: a()(S.video, T),
+                                      className: a()(S.video, N),
                                       src: l.src
                                   })
                                 : null,

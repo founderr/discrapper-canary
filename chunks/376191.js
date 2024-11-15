@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return N;
     }
 });
 var i = n(200651);
@@ -51,13 +51,13 @@ let S = (e) => {
                   ]
               });
     },
-    N = f.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
-function T(e) {
+    T = f.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
+function N(e) {
     var t;
     let { channel: n, otherUser: c, active: m } = e,
         f = (0, r.e7)([s.Z], () => s.Z.useReducedMotion),
         E = (0, r.e7)([p.Z], () => (null == c ? null : p.Z.getNickname(c.id))),
-        T = !f && m,
+        N = !f && m,
         A = (0, _.c)(n),
         { avatarDecorationSrc: b } = (0, u.Z)({
             user: c,
@@ -66,9 +66,9 @@ function T(e) {
         });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(N, {
+            (0, i.jsx)(T, {
                 className: v.avatar,
-                src: (0, h.x)(n, 40, T),
+                src: (0, h.x)(n, 40, N),
                 avatarDecoration: b,
                 size: l.AvatarSizes.SIZE_40,
                 'aria-label': null !== (t = null == c ? void 0 : c.username) && void 0 !== t ? t : C.intl.string(C.t['30mdIy'])

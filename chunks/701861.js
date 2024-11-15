@@ -19,8 +19,8 @@ var i = n(200651),
     C = n(170245),
     v = n(981631),
     S = n(65154),
-    N = n(388032),
-    T = n(251106);
+    T = n(388032),
+    N = n(251106);
 function A(e, t, n) {
     return (
         t in e
@@ -43,14 +43,14 @@ function b(e) {
         a = t.isProvisional;
     return (0, i.jsxs)(o.Menu, {
         navId: 'friend-row',
-        'aria-label': N.intl.string(N.t.liqwPD),
+        'aria-label': T.intl.string(T.t.liqwPD),
         onClose: d.Zy,
         onSelect: n,
         children: [
             !a && l
                 ? (0, i.jsx)(o.MenuItem, {
                       id: 'start-video-call',
-                      label: N.intl.string(N.t.oCqlGB),
+                      label: T.intl.string(T.t.oCqlGB),
                       action: function () {
                           c.Z.openPrivateChannel(t.id, !0, !0);
                       }
@@ -59,25 +59,25 @@ function b(e) {
             !a &&
                 (0, i.jsx)(o.MenuItem, {
                     id: 'start-voice-call',
-                    label: N.intl.string(N.t.focH1t),
+                    label: T.intl.string(T.t.focH1t),
                     action: () => {
                         c.Z.openPrivateChannel(t.id, !0);
                     }
                 }),
             (0, i.jsx)(o.MenuItem, {
                 id: 'remove-friend',
-                label: N.intl.string(N.t.cvSt1N),
+                label: T.intl.string(T.t.cvSt1N),
                 action: () => {
                     (0, o.openModal)((e) =>
                         (0, i.jsx)(o.ConfirmModal, {
-                            header: N.intl.formatToPlainString(N.t.fPLvZW, { name: f.ZP.getName(t) }),
-                            confirmText: N.intl.string(N.t.cvSt1N),
-                            cancelText: N.intl.string(N.t['ETE/oK']),
+                            header: T.intl.formatToPlainString(T.t.fPLvZW, { name: f.ZP.getName(t) }),
+                            confirmText: T.intl.string(T.t.cvSt1N),
+                            cancelText: T.intl.string(T.t['ETE/oK']),
                             onConfirm: r,
                             ...e,
                             children: (0, i.jsx)(o.Text, {
                                 variant: 'text-md/normal',
-                                children: N.intl.format(N.t.l5FFq6, { name: f.ZP.getName(t) })
+                                children: T.intl.format(T.t.l5FFq6, { name: f.ZP.getName(t) })
                             })
                         })
                     );
@@ -106,7 +106,7 @@ class x extends r.PureComponent {
             onClick: this.handleOpenPrivateChannel,
             children: (t) =>
                 (0, i.jsxs)('div', {
-                    className: T.listItemContents,
+                    className: N.listItemContents,
                     children: [
                         (0, i.jsx)(C.Z, {
                             user: e,
@@ -123,7 +123,7 @@ class x extends r.PureComponent {
                             showAccountIdentifier: !0
                         }),
                         (0, i.jsxs)('div', {
-                            className: T.actions,
+                            className: N.actions,
                             children: [
                                 null != s &&
                                     (0, i.jsx)(h.Z, {
@@ -134,13 +134,13 @@ class x extends r.PureComponent {
                                     }),
                                 (0, i.jsx)(_.Z, {
                                     icon: o.ChatIcon,
-                                    tooltip: N.intl.string(N.t['g33r/P']),
+                                    tooltip: T.intl.string(T.t['g33r/P']),
                                     onClick: this.handleOpenPrivateChannel,
                                     shouldHighlight: t
                                 }),
                                 (0, i.jsx)(_.Z, {
                                     icon: o.MoreVerticalIcon,
-                                    tooltip: N.intl.string(N.t.UKOtz8),
+                                    tooltip: T.intl.string(T.t.UKOtz8),
                                     onClick: this.handleOpenActionsMenu,
                                     shouldHighlight: t
                                 })

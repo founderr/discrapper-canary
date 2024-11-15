@@ -23,8 +23,8 @@ var i = n(200651),
     C = n(307947),
     v = n(125855),
     S = n(687683),
-    N = n(981631),
-    T = n(388032),
+    T = n(981631),
+    N = n(388032),
     A = n(905152);
 function b() {
     let e = r.useRef(null),
@@ -35,14 +35,14 @@ function b() {
         x = (0, u.Z)('message-requests-spam-list'),
         { channelId: Z } = (0, _._)(),
         L = r.useCallback(() => {
-            (0, c.showToast)((0, c.createToast)(T.intl.string(T.t.EDYbS0), c.ToastType.FAILURE));
+            (0, c.showToast)((0, c.createToast)(N.intl.string(N.t.EDYbS0), c.ToastType.FAILURE));
         }, []),
         { rejectAll: y } = (0, f.m)({ onError: L }),
         O = r.useCallback(() => {
             y(t.map((e) => e.channel.id));
         }, [t, y]);
     r.useEffect(() => {
-        p.default.track(N.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }), m.Z.increment({ name: o.V.SPAM_MESSAGE_REQUEST_VIEW });
+        p.default.track(T.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }), m.Z.increment({ name: o.V.SPAM_MESSAGE_REQUEST_VIEW });
     }, []);
     let R = r.useCallback(
             (e) => {
@@ -75,7 +75,7 @@ function b() {
                     {
                         className: A.sectionTitle,
                         children: [
-                            T.intl.format(T.t.C79Edn, { count: n }),
+                            N.intl.format(N.t.C79Edn, { count: n }),
                             b && n > 0
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
@@ -92,8 +92,8 @@ function b() {
                                               color: c.ButtonColors.LINK,
                                               size: c.ButtonSizes.SMALL,
                                               className: A.clearAllButton,
-                                              'aria-label': T.intl.string(T.t.p6t7RE),
-                                              children: T.intl.string(T.t.p6t7RE)
+                                              'aria-label': N.intl.string(N.t.p6t7RE),
+                                              children: N.intl.string(N.t.p6t7RE)
                                           })
                                       ]
                                   })
@@ -116,7 +116,7 @@ function b() {
                           {
                               className: A.list,
                               innerRole: l,
-                              innerAriaLabel: T.intl.string(T.t.e7GWjY),
+                              innerAriaLabel: N.intl.string(N.t.e7GWjY),
                               ref: (t) => {
                                   var n;
                                   (e.current = t), (r.current = null !== (n = null == t ? void 0 : t.getScrollerNode()) && void 0 !== n ? n : null);

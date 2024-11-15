@@ -19,8 +19,8 @@ var i = n(200651),
     C = n(358085),
     v = n(557177),
     S = n(998502),
-    N = n(905656),
-    T = n(981631),
+    T = n(905656),
+    N = n(981631),
     A = n(388032),
     b = n(607179);
 function x(e, t, n) {
@@ -51,7 +51,7 @@ class Z extends r.PureComponent {
             s = l && n && !i && !r;
         e.soundpack !== a && (this._connectedSound = this.createSound()),
             e.connected !== l || s
-                ? (l && null != this.videoRef && d.K.get(T.wli) && this._connectedSound.play(),
+                ? (l && null != this.videoRef && d.K.get(N.wli) && this._connectedSound.play(),
                   this.setState({
                       problems: !1,
                       hide: l
@@ -84,7 +84,7 @@ class Z extends r.PureComponent {
                         (0, i.jsxs)('div', {
                             className: b.content,
                             children: [
-                                (0, i.jsx)(N.Z, {
+                                (0, i.jsx)(T.Z, {
                                     autoPlay: !0,
                                     loop: !e,
                                     setRef: this.setVideoRef,
@@ -123,7 +123,7 @@ class Z extends r.PureComponent {
                                     children: [
                                         (0, i.jsxs)(u.Anchor, {
                                             className: b.twitterLink,
-                                            href: T.yXt.TWITTER_SUPPORT,
+                                            href: N.yXt.TWITTER_SUPPORT,
                                             target: '_blank',
                                             children: [
                                                 (0, i.jsx)(u.XNeutralIcon, {
@@ -136,7 +136,7 @@ class Z extends r.PureComponent {
                                         }),
                                         (0, i.jsxs)(u.Anchor, {
                                             className: b.statusLink,
-                                            href: T.yXt.STATUS,
+                                            href: N.yXt.STATUS,
                                             target: '_blank',
                                             children: [(0, i.jsx)(I.Z, { className: b.icon }), A.intl.string(A.t.AgXXy8)]
                                         })

@@ -31,8 +31,8 @@ function _(e) {
         }, [_.id, E]),
         {
             acceptMessageRequest: S,
-            isAcceptLoading: N,
-            isUserProfileLoading: T,
+            isAcceptLoading: T,
+            isUserProfileLoading: N,
             isOptimisticAccepted: A
         } = (0, h.m)({
             user: n,
@@ -40,7 +40,7 @@ function _(e) {
             onRejectSuccess: C,
             onError: I
         }),
-        b = N || T,
+        b = T || N,
         x = b || A;
     return (0, i.jsxs)('div', {
         className: f.container,

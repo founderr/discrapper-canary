@@ -76,10 +76,10 @@ async function S() {
     }
     c.default.track(p.rMx.CLIENT_HEARTBEAT, r), i.K.set(g, Date.now().toString()), (0, l.Z)();
 }
-let N = null,
-    T = !0;
+let T = null,
+    N = !0;
 function A() {
-    if (T || (null != N && N !== p.hes.DISCONNECTED && N !== p.hes.RTC_DISCONNECTED))
+    if (N || (null != T && T !== p.hes.DISCONNECTED && T !== p.hes.RTC_DISCONNECTED))
         try {
             C();
         } catch (e) {
@@ -98,13 +98,13 @@ function x() {
 }
 function Z() {
     let e = o.Z.getState();
-    N !== e && ((N = e), A());
+    T !== e && ((T = e), A());
 }
 function L(e) {
     let { focused: t } = e;
-    (T = t), A();
+    (N = t), A();
 }
 function y(e) {
     let { state: t } = e;
-    (T = t === p.$7l.ACTIVE), A();
+    (N = t === p.$7l.ACTIVE), A();
 }

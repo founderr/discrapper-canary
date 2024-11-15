@@ -1,6 +1,6 @@
 n.d(t, {
     V: function () {
-        return N;
+        return T;
     },
     _: function () {
         return r;
@@ -27,12 +27,12 @@ var i,
 ((i = r || (r = {})).BOOSTING = 'BOOSTING'), (i.NITRO = 'NITRO'), (i.BASH_OUT = 'BASH_OUT'), (i.GAME_NIGHT = 'GAME_NIGHT');
 let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356018217/Activities_NUX_GL_1.mp4',
     S = 'https://cdn.discordapp.com/attachments/887469171804356628/916446867586416660/activities-video-poster-512.png',
-    N = (e) => {
+    T = (e) => {
         let { channelId: t, markAsDismissed: n, tutorialType: i } = e,
             {
                 analyticsLocation: r,
-                analyticsType: N,
-                ctaText: T,
+                analyticsType: T,
+                ctaText: N,
                 dismissText: A,
                 description: b,
                 learnMore: x,
@@ -106,8 +106,8 @@ let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
             })(i),
             { analyticsLocations: R } = (0, m.ZP)(r);
         a.useEffect(() => {
-            f.default.track(_.rMx.TOOLTIP_VIEWED, { type: N });
-        }, [N]);
+            f.default.track(_.rMx.TOOLTIP_VIEWED, { type: T });
+        }, [T]);
         let P = (0, c.bp)() === _.IlC.POPOUT,
             j = (0, s.e7)([g.Z], () => g.Z.getChannel(t), [t]);
         return (0, l.jsx)(m.Gt, {
@@ -190,7 +190,7 @@ let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                                                           }),
                                                               (0, d.w1)({ guildId: j.guild_id });
                                                   },
-                                        children: T
+                                        children: N
                                     })
                                 ]
                             })

@@ -18,15 +18,15 @@ var i = n(200651),
     C = n(558652),
     v = n(736683),
     S = n(452081),
-    N = n(46140),
-    T = n(981631),
+    T = n(46140),
+    N = n(981631),
     A = n(388032),
     b = n(654654);
 t.Z = function () {
     let { tabs: e, selectedTab: t, onSelectTab: n } = (0, S.z)(),
         { onScroll: x, scrollPosition: Z } = (0, c.M)(),
         L = I.Z.getState().getUtmCurrentContext(),
-        y = (0, E._)({ location: N.dr.QUEST_HOME_DESKTOP }) ? v.Z : v.j;
+        y = (0, E._)({ location: T.dr.QUEST_HOME_DESKTOP }) ? v.Z : v.j;
     r.useEffect(() => {
         (0, s.h)({
             name: l.ImpressionNames.QUEST_HOME,
@@ -41,7 +41,7 @@ t.Z = function () {
         });
     }, [t]);
     let O = r.useCallback(() => {
-        window.open(f.Z.getArticleURL(T.BhN.QUESTS_LEARN_MORE));
+        window.open(f.Z.getArticleURL(N.BhN.QUESTS_LEARN_MORE));
     }, []);
     return (
         (0, o.Tt)({ location: A.intl.string(A.t.JALI2N) }),

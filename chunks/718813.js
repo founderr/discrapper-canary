@@ -36,12 +36,12 @@ function S(e, t, n) {
         e
     );
 }
-let N = (0, g.Un)({
+let T = (0, g.Un)({
         createPromise: () => Promise.all([n.e('23217'), n.e('33053'), n.e('8016'), n.e('76540'), n.e('15669'), n.e('17938'), n.e('22646'), n.e('25183'), n.e('30419'), n.e('48923'), n.e('18824'), n.e('8821'), n.e('57772'), n.e('93456')]).then(n.bind(n, 989804)),
         webpackId: 989804,
         name: 'UserSettings'
     }),
-    T = (0, g.Un)({
+    N = (0, g.Un)({
         createPromise: () => Promise.all([n.e('33053'), n.e('7654'), n.e('16141'), n.e('75116')]).then(n.bind(n, 869779)),
         webpackId: 869779,
         name: 'ChannelSettings'
@@ -57,8 +57,8 @@ let N = (0, g.Un)({
         name: 'GuildSettings'
     }),
     x = {
-        [C.S9g.USER_SETTINGS]: () => (0, r.jsx)(N, {}),
-        [C.S9g.CHANNEL_SETTINGS]: () => (0, r.jsx)(T, {}),
+        [C.S9g.USER_SETTINGS]: () => (0, r.jsx)(T, {}),
+        [C.S9g.CHANNEL_SETTINGS]: () => (0, r.jsx)(N, {}),
         [C.S9g.GUILD_SETTINGS]: () => (0, r.jsx)(b, {}),
         [C.S9g.COLLECTIBLES_SHOP]: () => (0, r.jsx)(A, {})
     },

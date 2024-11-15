@@ -19,8 +19,8 @@ var i = n(200651),
     C = n(497505),
     v = n(475595),
     S = n(981631),
-    N = n(388032),
-    T = n(388175);
+    T = n(388032),
+    N = n(388175);
 t.Z = (0, r.memo)(function (e) {
     var t, n, l, A, b;
     let { quest: x } = e,
@@ -80,13 +80,13 @@ t.Z = (0, r.memo)(function (e) {
                   onBlur: J,
                   onMouseEnter: Q,
                   onMouseLeave: J,
-                  className: a()(T.container, { [T.hovered]: Z }),
+                  className: a()(N.container, { [N.hovered]: Z }),
                   children: [
                       null != w &&
                           F &&
                           (0, i.jsx)('div', {
                               ref: M,
-                              className: T.decoWrapper,
+                              className: N.decoWrapper,
                               style: { top: y },
                               children: (0, i.jsx)(m.Z, {
                                   avatarDecorationOverride: Y,
@@ -97,7 +97,7 @@ t.Z = (0, r.memo)(function (e) {
                       q.isAnimated
                           ? (0, i.jsx)(i.Fragment, {
                                 children: (0, i.jsx)(g.Z, {
-                                    className: T.assetBlurred,
+                                    className: N.assetBlurred,
                                     autoPlay: !1,
                                     children: (0, i.jsx)('source', {
                                         src: q.url,
@@ -107,42 +107,42 @@ t.Z = (0, r.memo)(function (e) {
                                 })
                             })
                           : (0, i.jsx)('img', {
-                                className: T.image,
+                                className: N.image,
                                 src: q.url,
                                 alt: x.config.messages.questName,
                                 onError: () => $(q.url)
                             }),
                       (0, i.jsx)('div', {
-                          className: a()(T.overlay, {
-                              [T.darkThemeGradient]: W,
-                              [T.lightThemeGradient]: !W
+                          className: a()(N.overlay, {
+                              [N.darkThemeGradient]: W,
+                              [N.lightThemeGradient]: !W
                           })
                       }),
                       (0, i.jsx)('div', {
                           ref: D,
-                          className: T.logoContainer,
+                          className: N.logoContainer,
                           style: { transform: 'translateY(-'.concat(X, 'px)') },
                           children: (0, i.jsx)('img', {
-                              className: T.logo,
+                              className: N.logo,
                               src: K.url,
                               alt: x.config.messages.gameTitle
                           })
                       }),
                       (0, i.jsxs)('div', {
                           ref: k,
-                          className: T.details,
+                          className: N.details,
                           children: [
                               (0, i.jsx)(d.Heading, {
-                                  className: T.title,
+                                  className: N.title,
                                   variant: 'heading-md/semibold',
                                   color: 'always-white',
-                                  children: N.intl.format(N.t.EAYZAg, { questName: x.config.messages.questName })
+                                  children: T.intl.format(T.t.EAYZAg, { questName: x.config.messages.questName })
                               }),
                               (0, i.jsx)(d.Text, {
                                   variant: 'text-sm/medium',
                                   color: W ? 'text-muted' : 'always-white',
                                   style: { opacity: W ? 1 : 0.75 },
-                                  children: N.intl.format(N.t.kXVcV1, {
+                                  children: T.intl.format(T.t.kXVcV1, {
                                       reward: H.name,
                                       claimedDate: B
                                   })

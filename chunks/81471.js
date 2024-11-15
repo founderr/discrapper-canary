@@ -18,30 +18,30 @@ var i = n(200651),
     C = n(388032),
     v = n(684550),
     S = n(882530);
-let N = r.memo(function (e) {
+let T = r.memo(function (e) {
     let { channel: t } = e,
-        { loaded: n, error: l, message: N } = (0, _.a)(t),
-        T = (0, d.p)(),
+        { loaded: n, error: l, message: T } = (0, _.a)(t),
+        N = (0, d.p)(),
         { isBlocked: A, isIgnored: b } = (0, s.cj)(
             [f.Z],
             () => ({
-                isBlocked: null != N && f.Z.isBlockedForMessage(N),
-                isIgnored: null != N && f.Z.isIgnoredForMessage(N)
+                isBlocked: null != T && f.Z.isBlockedForMessage(T),
+                isIgnored: null != T && f.Z.isIgnoredForMessage(T)
             }),
-            [N]
+            [T]
         ),
         x = (0, s.e7)([g.Z], () => g.Z.can(E.Plq.MANAGE_MESSAGES, t)),
         Z = p.cC.useSetting(),
         { content: L } = r.useMemo(
             () =>
-                (null == N ? void 0 : N.content) != null && '' !== N.content
-                    ? (0, h.ZP)(N, {
+                (null == T ? void 0 : T.content) != null && '' !== T.content
+                    ? (0, h.ZP)(T, {
                           formatInline: !0,
                           noStyleAndInteraction: !0,
-                          shouldFilterKeywords: T
+                          shouldFilterKeywords: N
                       })
                     : { content: null },
-            [N, T]
+            [T, N]
         ),
         y = null;
     if (l)
@@ -52,22 +52,22 @@ let N = r.memo(function (e) {
             children: C.intl.string(C.t.BZHld3)
         });
     else if (n) {
-        if (null != N && A)
+        if (null != T && A)
             y = (0, i.jsx)(o.Text, {
                 className: v.messageReplacement,
                 variant: 'text-sm/normal',
                 color: 'text-muted',
                 children: C.intl.string(C.t['WPe+xM'])
             });
-        else if (null != N && b)
+        else if (null != T && b)
             y = (0, i.jsx)(o.Text, {
                 className: v.messageReplacement,
                 variant: 'text-sm/normal',
                 color: 'text-muted',
                 children: C.intl.string(C.t.uxrh1N)
             });
-        else if (null != N) {
-            let { contentPlaceholder: e, renderedContent: t } = (0, m.f)(N, L, A, a()(v.messageContent, S.inlineFormat), {
+        else if (null != T) {
+            let { contentPlaceholder: e, renderedContent: t } = (0, m.f)(T, L, A, a()(v.messageContent, S.inlineFormat), {
                 leadingIconClass: v.messageContentIcon,
                 trailingIconClass: v.messageContentIcon,
                 iconSize: I.WW
@@ -103,4 +103,4 @@ let N = r.memo(function (e) {
         })
     });
 });
-t.Z = N;
+t.Z = T;

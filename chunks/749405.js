@@ -31,8 +31,8 @@ function p(e) {
             rejectMessageRequest: C,
             isAcceptLoading: v,
             isRejectLoading: S,
-            isUserProfileLoading: N,
-            isOptimisticAccepted: T,
+            isUserProfileLoading: T,
+            isOptimisticAccepted: N,
             isOptimisticRejected: A
         } = (0, d.m)({
             user: n,
@@ -40,7 +40,7 @@ function p(e) {
             onRejectSuccess: _,
             onError: f
         }),
-        b = v || S || N || T || A;
+        b = v || S || T || N || A;
     return (0, i.jsxs)('div', {
         className: m.container,
         children: [
@@ -71,7 +71,7 @@ function p(e) {
                             e.stopPropagation(), I(p.id);
                         },
                         disabled: b,
-                        submitting: v || N || T,
+                        submitting: v || T || N,
                         children: h.intl.string(h.t.Kz8Pws)
                     })
                 ]

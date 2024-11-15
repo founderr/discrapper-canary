@@ -28,11 +28,11 @@ var r = n(544891),
     s = n(314897),
     o = n(594174),
     l = n(970606),
-    u = n(981631),
-    c = n(976757);
+    u = n(308083),
+    c = n(981631);
 async function d(e) {
-    let t = await r.tn.get({ url: u.ANM.GUILD_CLAN_DISCOVERY_INFO(e) });
-    return (0, c.Gh)(t.body);
+    let t = await r.tn.get({ url: c.ANM.GUILD_CLAN_DISCOVERY_INFO(e) });
+    return (0, u.Gh)(t.body);
 }
 async function f(e, t, n) {
     try {
@@ -44,7 +44,7 @@ async function f(e, t, n) {
                 source: n
             });
         let a = await r.tn.put({
-            url: u.ANM.USER_SET_CLAN_IDENTITY,
+            url: c.ANM.USER_SET_CLAN_IDENTITY,
             body: {
                 identity_guild_id: e,
                 identity_enabled: t
@@ -95,7 +95,7 @@ let h = (e) => {
 };
 async function m(e) {
     i.Z.dispatch({ type: 'CLAN_SETTINGS_FETCH_START' });
-    let t = await r.tn.get({ url: u.ANM.CLAN_SETTINGS(e) });
+    let t = await r.tn.get({ url: c.ANM.CLAN_SETTINGS(e) });
     i.Z.dispatch({
         type: 'CLAN_SETTINGS_FETCH_SUCCESS',
         guildId: e,
@@ -110,7 +110,7 @@ async function g(e, t) {
     try {
         var n, s, o, l;
         let a = await r.tn.patch({
-            url: u.ANM.CLAN_SETTINGS(e),
+            url: c.ANM.CLAN_SETTINGS(e),
             body: {
                 tag: t.tag,
                 description: t.description,
@@ -140,7 +140,7 @@ async function g(e, t) {
 }
 async function E(e) {
     try {
-        await r.tn.post({ url: u.ANM.DISABLE_CLAN(e) });
+        await r.tn.post({ url: c.ANM.DISABLE_CLAN(e) });
     } catch (e) {
         throw e;
     }

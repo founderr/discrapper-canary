@@ -23,8 +23,8 @@ var i = n(200651),
     C = n(19780),
     v = n(944486),
     S = n(606304),
-    N = n(979651),
-    T = n(938475),
+    T = n(979651),
+    N = n(938475),
     A = n(823379),
     b = n(557177),
     x = n(981631);
@@ -138,8 +138,8 @@ function R() {
 function P() {
     return (
         Z(
-            [N.Z],
-            () => N.Z.userHasBeenMovedVersion,
+            [T.Z],
+            () => T.Z.userHasBeenMovedVersion,
             (e, t) => {
                 if (e !== t) return 'user_moved';
             }
@@ -150,11 +150,11 @@ function P() {
 function j() {
     return (
         Z(
-            [v.Z, N.Z],
+            [v.Z, T.Z],
             () => {
                 let e = v.Z.getVoiceChannelId();
                 if (null == e) return h.xO.NONE;
-                let t = N.Z.getVoiceStateForChannel(e);
+                let t = T.Z.getVoiceStateForChannel(e);
                 return (0, h.gf)(t);
             },
             (e, t) => {
@@ -167,7 +167,7 @@ function j() {
 function D() {
     return (
         Z(
-            [v.Z, p.Z, g.default, N.Z, f.Z],
+            [v.Z, p.Z, g.default, T.Z, f.Z],
             () => {
                 let e, t;
                 let n = v.Z.getVoiceChannelId(),
@@ -178,7 +178,7 @@ function D() {
                     s = p.Z.getAllActiveStreams();
                 if (null != n) {
                     let i = f.Z.getChannel(n);
-                    null != i && ((e = i.type), (t = T.ZP.countVoiceStatesForChannel(i.id) - (N.Z.isInChannel(i.id) ? 1 : 0)), (r = p.Z.getAllApplicationStreamsForChannel(i.id).map((e) => e.ownerId)));
+                    null != i && ((e = i.type), (t = N.ZP.countVoiceStatesForChannel(i.id) - (T.Z.isInChannel(i.id) ? 1 : 0)), (r = p.Z.getAllApplicationStreamsForChannel(i.id).map((e) => e.ownerId)));
                 }
                 let o = null;
                 return (

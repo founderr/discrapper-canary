@@ -17,8 +17,8 @@ var a,
 let C = [],
     v = null,
     S = !1,
-    N = I.QZA.CLOSED,
-    T = {},
+    T = I.QZA.CLOSED,
+    N = {},
     A = !1,
     b = null;
 function x() {
@@ -26,7 +26,7 @@ function x() {
         let e = L(v.id);
         null != e && (v = e);
     }
-    (N = I.QZA.OPEN), (T = {}), (A = !1);
+    (T = I.QZA.OPEN), (N = {}), (A = !1);
 }
 let Z = u().debounce(() => {
     A && ((null == v || u().isEqual(v, L(v.id))) && (A = !1), !A && O.emitChange());
@@ -51,7 +51,7 @@ class y extends (a = h.ZP.Store) {
         return v;
     }
     get formState() {
-        return N;
+        return T;
     }
     getWebhook(e) {
         return L(e);
@@ -61,14 +61,14 @@ class y extends (a = h.ZP.Store) {
     }
     getProps() {
         return {
-            submitting: N === I.QZA.SUBMITTING,
+            submitting: T === I.QZA.SUBMITTING,
             webhooks: C,
             editedWebhook: v,
             section: l,
             sectionId: b,
             hasChanges: this.hasChanges(),
             isFetching: S,
-            errors: T
+            errors: N
         };
     }
 }
@@ -105,10 +105,10 @@ let O = new y(
                   let { webhookId: t } = e,
                       n = L(t);
                   if (null == n) return !1;
-                  (v = n), (T = {}), (A = !1);
+                  (v = n), (N = {}), (A = !1);
               },
               INTEGRATION_SETTINGS_STOP_EDITING_WEBHOOK: function () {
-                  (v = null), (T = {}), (A = !1);
+                  (v = null), (N = {}), (A = !1);
               },
               INTEGRATION_SETTINGS_UPDATE_WEBHOOK: function (e) {
                   let { settings: t } = e;
@@ -116,11 +116,11 @@ let O = new y(
                   (v = { ...v }), null != t.name && v.name !== t.name && ((v.name = t.name), (A = !0)), void 0 !== t.avatar && v.avatar !== t.avatar && ((v.avatar = t.avatar), (A = !0)), null != t.channelId && v.channel_id !== t.channelId && ((v.channel_id = t.channelId), (A = !0)), A && Z();
               },
               CHANNEL_SETTINGS_CLOSE: function () {
-                  (r = null), (i = null), (C = []), (v = null), (N = I.QZA.CLOSED);
+                  (r = null), (i = null), (C = []), (v = null), (T = I.QZA.CLOSED);
               },
               WEBHOOKS_UPDATE: function (e) {
                   let { guildId: t, channelId: n, webhooks: l } = e;
-                  if (null == i || t !== i.id || null == r || n !== r.id || null == l || N === I.QZA.SUBMITTING) return !1;
+                  if (null == i || t !== i.id || null == r || n !== r.id || null == l || T === I.QZA.SUBMITTING) return !1;
                   S = !1;
                   for (let e = C.length - 1; e >= 0; e--) {
                       let t = C[e];
@@ -146,12 +146,12 @@ let O = new y(
                   (C = [...C]), Z();
               },
               INTEGRATION_SETTINGS_SUBMITTING: function () {
-                  (N = I.QZA.SUBMITTING), (T = {});
+                  (T = I.QZA.SUBMITTING), (N = {});
               },
               INTEGRATION_SETTINGS_SAVE_FAILURE: function (e) {
                   var t;
-                  if (N !== I.QZA.SUBMITTING) return !1;
-                  (N = I.QZA.OPEN), (T = null !== (t = e.errors) && void 0 !== t ? t : {});
+                  if (T !== I.QZA.SUBMITTING) return !1;
+                  (T = I.QZA.OPEN), (N = null !== (t = e.errors) && void 0 !== t ? t : {});
               }
           }
 );

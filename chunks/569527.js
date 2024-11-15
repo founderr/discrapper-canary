@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return T;
     }
 }),
     n(610138),
@@ -28,18 +28,18 @@ var i = n(200651),
     C = n(120549),
     v = n(979007),
     S = n(870411);
-function N(e) {
+function T(e) {
     var t;
     let { onSelectApplication: n } = e,
-        N = (0, l.TH)(),
-        T = r.useRef(null),
+        T = (0, l.TH)(),
+        N = r.useRef(null),
         {
             query: A,
             page: b,
             categoryId: x
         } = r.useMemo(() => {
             var e, t;
-            let n = new URLSearchParams(N.search),
+            let n = new URLSearchParams(T.search),
                 i = n.get('page'),
                 r = null != i ? Number(i) : 1;
             return {
@@ -47,10 +47,10 @@ function N(e) {
                 page: r,
                 categoryId: null !== (t = Number(n.get('category_id'))) && void 0 !== t ? t : p.MU
             };
-        }, [N.search]);
+        }, [T.search]);
     r.useEffect(() => {
-        A !== T.current &&
-            ((T.current = A),
+        A !== N.current &&
+            ((N.current = A),
             u.yC({
                 query: A,
                 options: { source: s.F.APP_DIRECTORY }

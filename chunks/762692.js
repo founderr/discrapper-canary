@@ -156,7 +156,7 @@ async function S(e) {
         }
     }
 }
-async function N(e) {
+async function T(e) {
     var t;
     let n = null !== (t = null == e ? void 0 : e.forceRefresh) && void 0 !== t && t,
         i = m.Z.getLastFetchTimestamp({ categoryId: f.Hk });
@@ -217,7 +217,7 @@ t.Z = {
             ignoreQueries: null !== (t = null == e ? void 0 : e.ignoreQueries) && void 0 !== t ? t : []
         });
     },
-    fetchFeaturedGuilds: N,
+    fetchFeaturedGuilds: T,
     fetchCategoryFeaturedGuilds: S,
     resetSearchLayout: function () {
         d.Z.dispatch({ type: 'GLOBAL_DISCOVERY_SERVERS_SEARCH_LAYOUT_RESET' });

@@ -25,8 +25,8 @@ var i = n(200651),
     C = n(586902),
     v = n(570928),
     S = n(100527),
-    N = n(906732),
-    T = n(676742),
+    T = n(906732),
+    N = n(676742),
     A = n(1585),
     b = n(304761),
     x = n(865427),
@@ -79,8 +79,8 @@ var i = n(200651),
     eC = n(870569),
     ev = n(345243),
     eS = n(115530),
-    eN = n(981631),
-    eT = n(215023),
+    eT = n(981631),
+    eN = n(215023),
     eA = n(388032),
     eb = n(453323);
 function ex(e, t, n) {
@@ -101,7 +101,7 @@ let eZ = eI.ZP.getEnableHardwareAcceleration() ? m.AnimatedAvatar : m.Avatar,
     ey = 30 * eg.Z.Millis.DAY;
 function eO(e) {
     let { speaking: t, streaming: n, currentUser: r, status: l, handleMouseLeave: s, renderNameTag: o } = e,
-        c = (0, T.Z)(null == r ? void 0 : r.avatarDecoration),
+        c = (0, N.Z)(null == r ? void 0 : r.avatarDecoration),
         d = (0, em.NZ)({
             avatarDecoration: c,
             size: (0, A.y9)(m.AvatarSizes.SIZE_32)
@@ -109,7 +109,7 @@ function eO(e) {
     return null == r
         ? null
         : (0, i.jsx)(_.Z, {
-              object: eN.qAy.AVATAR,
+              object: eT.qAy.AVATAR,
               children: (0, i.jsx)(m.Popout, {
                   renderPopout: (e) => {
                       let { closePopout: t, setPopoutRef: n } = e;
@@ -145,7 +145,7 @@ function eO(e) {
                                   src: r.getAvatarURL(void 0, 32, !1),
                                   avatarDecoration: d,
                                   'aria-label': r.username,
-                                  status: n ? eN.Skl.STREAMING : l,
+                                  status: n ? eT.Skl.STREAMING : l,
                                   isSpeaking: t,
                                   className: eb.avatar
                               }),
@@ -186,7 +186,7 @@ class eR extends r.PureComponent {
             { customStatusActivity: n, userTag: r, currentUser: l, status: a } = this.props;
         if (null == l) return null;
         let s = eE.ZP.getName(l),
-            o = null != a && a !== eN.Skl.UNKNOWN,
+            o = null != a && a !== eT.Skl.UNKNOWN,
             c = null != n;
         return (
             (c || (o && l.isPomelo())) &&
@@ -360,17 +360,17 @@ class eR extends r.PureComponent {
             }),
             ex(this, 'handleToggleSelfMute', () => {
                 let { serverMute: e, suppress: t } = this.props;
-                (0, O.Z)(e, t, eN.jXE.ACCOUNT_PANEL);
+                (0, O.Z)(e, t, eT.jXE.ACCOUNT_PANEL);
             }),
             ex(this, 'handleToggleSelfDeaf', () => {
                 let { serverDeaf: e } = this.props;
-                (0, y.Z)(e, eN.jXE.ACCOUNT_PANEL);
+                (0, y.Z)(e, eT.jXE.ACCOUNT_PANEL);
             }),
             ex(this, 'handleOpenAccountSettings', () => {
                 this.handleOpenSettings();
             }),
             ex(this, 'handleOpenSettings', function () {
-                let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : eN.oAB.ACCOUNT,
+                let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : eT.oAB.ACCOUNT,
                     t = arguments.length > 1 ? arguments[1] : void 0,
                     n = arguments.length > 2 ? arguments[2] : void 0;
                 f.Z.open(e, t, n);
@@ -393,7 +393,7 @@ class eR extends r.PureComponent {
                 (0, g.jW)(e, async () => {
                     let { default: e } = await Promise.resolve().then(n.bind(n, 659580));
                     return () =>
-                        (0, i.jsx)(N.Gt, {
+                        (0, i.jsx)(T.Gt, {
                             value: t,
                             children: (0, i.jsx)(e, {
                                 onClose: g.Zy,
@@ -408,7 +408,7 @@ class eR extends r.PureComponent {
                 (0, g.jW)(e, async () => {
                     let { default: e } = await Promise.resolve().then(n.bind(n, 659580));
                     return () =>
-                        (0, i.jsx)(N.Gt, {
+                        (0, i.jsx)(T.Gt, {
                             value: t,
                             children: (0, i.jsx)(e, {
                                 onClose: g.Zy,
@@ -444,7 +444,7 @@ class eR extends r.PureComponent {
                         identifiable: 'always'
                     })
                 ),
-                    eh.default.track(eN.rMx.TEXT_COPIED, { type: 'User Tag' });
+                    eh.default.track(eT.rMx.TEXT_COPIED, { type: 'User Tag' });
                 let i = {
                     shouldShowCopiedFeedback: !0,
                     shouldShowNametagTooltip: !0
@@ -494,7 +494,7 @@ function eP() {
         n = (0, s.e7)([ei.default], () => ei.default.getId()),
         l = (0, D.a)(),
         { streaming: a, status: c } = (0, s.cj)([eo.Z], () => ({
-            streaming: null != eo.Z.findActivity((e) => e.type === eN.IIU.STREAMING),
+            streaming: null != eo.Z.findActivity((e) => e.type === eT.IIU.STREAMING),
             status: eo.Z.getStatus()
         })),
         d = (0, C.Z)({ userId: n }),
@@ -505,7 +505,7 @@ function eP() {
             return null != e ? er.Z.getChannel(e) : null;
         }),
         { mute: f, selfMute: _, suppress: v } = (0, en.Z)(g),
-        { selfDeaf: T, deaf: A } = (0, et.Z)(g),
+        { selfDeaf: N, deaf: A } = (0, et.Z)(g),
         Z = (0, s.e7)([b.C], () => {
             var e;
             return (0, x.fD)() ? (null === (e = b.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web) : null;
@@ -520,7 +520,7 @@ function eP() {
         k = (0, E.u)(),
         G = (0, W.t)(),
         B = ef.ZP.canUsePremiumGuildMemberProfile(t),
-        z = (null == t ? void 0 : null === (e = t.avatarDecoration) || void 0 === e ? void 0 : e.skuId) === eT.rL,
+        z = (null == t ? void 0 : null === (e = t.avatarDecoration) || void 0 === e ? void 0 : e.skuId) === eN.rL,
         K = 'account';
     (0, I.j)({
         location: K + ' auto on',
@@ -538,7 +538,7 @@ function eP() {
                 { enabled: a } = F.Z.useExperiment({ location: '08bd40_1' }, { autoTrackExposure: !0 }),
                 c = r.useMemo(() => {
                     let e = new Date().getTime();
-                    return null != l && (l.status === eN.O0b.ACTIVE || e - l.currentPeriodEnd.getTime() < ey);
+                    return null != l && (l.status === eT.O0b.ACTIVE || e - l.currentPeriodEnd.getTime() < ey);
                 }, [l]);
             return (
                 r.useEffect(() => {
@@ -554,14 +554,14 @@ function eP() {
                 !e && !!a && !c && null != n && n
             );
         })(),
-        { analyticsLocations: J } = (0, N.ZP)(S.Z.ACCOUNT),
+        { analyticsLocations: J } = (0, T.ZP)(S.Z.ACCOUNT),
         $ = {
             avatar: [],
             settings: []
         };
     return (
         !R && (X && $.settings.push(o.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), M && (1 === k ? $.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : $.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), q && $.settings.push(o.z.SOUNDBOARD_VOLUME_EDUCATION), G && $.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), B && $.settings.push(o.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), z && $.avatar.push(o.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)),
-        (0, i.jsx)(N.Gt, {
+        (0, i.jsx)(T.Gt, {
             value: J,
             children: (0, i.jsx)(eR, {
                 currentUser: t,
@@ -571,7 +571,7 @@ function eP() {
                 hidePrivateData: h,
                 occluded: R,
                 premiumSubscription: L,
-                selfDeaf: T,
+                selfDeaf: N,
                 selfMute: _,
                 serverDeaf: A,
                 serverMute: f,
@@ -627,15 +627,15 @@ function eD(e) {
         f = t || l || n,
         { Component: _, play: E, events: I } = (0, u.O)(f ? 'unmute' : 'mute'),
         C = n || l ? m.MicrophoneDenyIcon : _,
-        { analyticsLocations: v } = (0, N.ZP)(S.Z.AUDIO_INPUT_BUTTON);
+        { analyticsLocations: v } = (0, T.ZP)(S.Z.AUDIO_INPUT_BUTTON);
     r.useEffect(() => () => E(), [f, E]);
-    let T = r.useCallback(
+    let N = r.useCallback(
         (e) => {
             g(e, v);
         },
         [g, v]
     );
-    return (0, i.jsx)(N.Gt, {
+    return (0, i.jsx)(T.Gt, {
         value: v,
         children: (0, i.jsx)(eC.Z, {
             tooltipText: s,
@@ -655,7 +655,7 @@ function eD(e) {
             }),
             iconForeground: f ? eb.strikethrough : null,
             onClick: p,
-            onContextMenu: T,
+            onContextMenu: N,
             role: 'switch',
             'aria-label': eA.intl.string(eA.t['w4m94+']),
             'aria-checked': f,
@@ -672,7 +672,7 @@ function eM(e) {
             events: { onMouseEnter: p, onMouseLeave: g }
         } = (0, d.l)(c ? 'undeafen' : 'deafen'),
         f = n ? m.HeadphonesDenyIcon : u,
-        { analyticsLocations: _ } = (0, N.ZP)(S.Z.AUDIO_OUTPUT_BUTTON);
+        { analyticsLocations: _ } = (0, T.ZP)(S.Z.AUDIO_OUTPUT_BUTTON);
     r.useEffect(() => () => h(), [c, h]);
     let E = r.useCallback(
         (e) => {
@@ -680,7 +680,7 @@ function eM(e) {
         },
         [o, _]
     );
-    return (0, i.jsx)(N.Gt, {
+    return (0, i.jsx)(T.Gt, {
         value: _,
         children: (0, i.jsx)(eC.Z, {
             tooltipText: (0, Z.Z)(t, n, l),

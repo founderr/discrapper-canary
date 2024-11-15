@@ -37,7 +37,7 @@ function S(e) {
         usernameLower: null != t ? t.username.toLowerCase() : null
     };
 }
-function N(e) {
+function T(e) {
     return {
         status: f.Z.getStatus(e),
         isMobile: f.Z.isMobileOnline(e),
@@ -45,7 +45,7 @@ function N(e) {
         applicationStream: m.Z.getAnyStreamForUser(e)
     };
 }
-function T(e) {
+function N(e) {
     let t = [];
     return (
         l()(p.ZP.memberOf(e))
@@ -79,8 +79,8 @@ class b {
                         type: e,
                         nickname: _.Z.getNickname(t),
                         ...S(t),
-                        ...N(t),
                         ...T(t),
+                        ...N(t),
                         spam: (0, h.A)({ location: 'friend-store' }) && _.Z.isSpam(t),
                         giftIntentType: e === I.OGo.FRIEND && u.Z.isTopAffinityFriendAnniversary({ userId: t }) ? C.hX.FRIEND_ANNIVERSARY : void 0
                     })
@@ -93,8 +93,8 @@ class b {
                         type: 99,
                         nickname: e.name,
                         ...S(e.key),
-                        ...N(e.key),
-                        ...T(e.key)
+                        ...T(e.key),
+                        ...N(e.key)
                     })
             );
         return new b(l().concat(e, t));
@@ -185,7 +185,7 @@ function M(e) {
 }
 class w extends (i = a.ZP.Store) {
     initialize() {
-        this.waitFor(_.Z, f.Z, E.default, g.Z, p.ZP, m.Z, d.Z), this.syncWith([_.Z], D), this.syncWith([d.Z], D), this.syncWith([u.Z], D), this.syncWith([E.default], M(S)), this.syncWith([f.Z, m.Z], M(N)), j();
+        this.waitFor(_.Z, f.Z, E.default, g.Z, p.ZP, m.Z, d.Z), this.syncWith([_.Z], D), this.syncWith([d.Z], D), this.syncWith([u.Z], D), this.syncWith([E.default], M(S)), this.syncWith([f.Z, m.Z], M(T)), j();
     }
     getState() {
         return {

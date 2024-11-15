@@ -30,8 +30,8 @@ var i,
     C = n(427679),
     v = n(448206),
     S = n(496675),
-    N = n(938475),
-    T = n(626135),
+    T = n(938475),
+    N = n(626135),
     A = n(823379),
     b = n(15274),
     x = n(924301),
@@ -128,9 +128,9 @@ let V = a.memo(function (e) {
 function H(e) {
     let { guildEvent: t, channel: n } = e,
         i = (0, c.Wu)(
-            [N.ZP],
+            [T.ZP],
             () =>
-                N.ZP.getVoiceStatesForChannel(n).map((e) => {
+                T.ZP.getVoiceStatesForChannel(n).map((e) => {
                     let { user: t } = e;
                     return t;
                 }),
@@ -170,7 +170,7 @@ function F(e) {
             innerClassName: B.rsvpButton,
             onClick: function () {
                 (0, w.Z)(t.id, null, t.guild_id, () => setTimeout(() => (0, Z.L_)(t.id), 1000)),
-                    T.default.track(U.rMx.CHANNEL_NOTICE_CTA_CLICKED, {
+                    N.default.track(U.rMx.CHANNEL_NOTICE_CTA_CLICKED, {
                         guild_id: t.guild_id,
                         notice_type: n
                     });
@@ -211,7 +211,7 @@ function z(e) {
         E = f ? (_ > 0 ? G.intl.formatToPlainString(G.t.PQlCWl, { minutes: _ }) : G.intl.string(G.t.WINqKS)) : G.intl.formatToPlainString(G.t.DC6h3N, { date: g });
     return (
         a.useEffect(() => {
-            T.default.track(U.rMx.CHANNEL_NOTICE_VIEWED, {
+            N.default.track(U.rMx.CHANNEL_NOTICE_VIEWED, {
                 notice_type: i,
                 guild_id: n.guild_id
             });
@@ -234,7 +234,7 @@ function z(e) {
                         }),
                         (0, l.jsx)(d.Clickable, {
                             onClick: () => {
-                                T.default.track(U.rMx.CHANNEL_NOTICE_CLOSED, {
+                                N.default.track(U.rMx.CHANNEL_NOTICE_CLOSED, {
                                     notice_type: i,
                                     guild_id: n.guild_id
                                 }),

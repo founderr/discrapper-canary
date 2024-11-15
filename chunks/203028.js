@@ -57,13 +57,13 @@ function f(e) {
                 C = _[0],
                 v = null == C ? void 0 : C.activity,
                 S = null == C ? void 0 : C.startedPlayingTime,
-                N = { name: null !== (t = null == v ? void 0 : v.name) && void 0 !== t ? t : '' };
+                T = { name: null !== (t = null == v ? void 0 : v.name) && void 0 !== t ? t : '' };
             if ((0, a.Z)(v) && null != v)
                 return {
                     subtitle: (0, i.jsx)(c.ZP, {
                         start: S,
                         location: c.ZP.Locations.ACTIVITY_FEED_NEW,
-                        messageProps: N
+                        messageProps: T
                     }),
                     icon: null
                 };
@@ -87,7 +87,7 @@ function f(e) {
                             subtitle: (0, i.jsx)(c.ZP, {
                                 start: S,
                                 location: c.ZP.Locations.ACTIVITY_FEED_NEW,
-                                messageProps: N
+                                messageProps: T
                             }),
                             icon: null != e ? (0, i.jsx)(h.Z.Header.Icon, { src: null != e.getIconURL(m.Z) ? e.getIconURL(m.Z) : n(211827) }) : null
                         };
@@ -150,7 +150,7 @@ function f(e) {
                         subtitle: (0, i.jsx)(c.ZP, {
                             start: r,
                             location: c.ZP.Locations.ACTIVITY_FEED_NEW,
-                            messageProps: N
+                            messageProps: T
                         }),
                         icon: null != n && null != n.getIconURL(m.Z) ? (0, i.jsx)(h.Z.Header.Icon, { src: n.getIconURL(m.Z) }) : null
                     }

@@ -10,8 +10,8 @@ var i = n(200651),
     s = n.n(l),
     a = n(442837),
     o = n(481060),
-    c = n(231467),
-    d = n(430824),
+    c = n(430824),
+    d = n(900681),
     u = n(214715),
     m = n(308083),
     h = n(388032),
@@ -39,7 +39,7 @@ function x(e) {
 function p(e) {
     var t;
     let { guildId: n, progress: l, traitsToHighlight: u, maskDescription: p, maskTraits: f, onTraitClick: C } = e,
-        v = (0, a.e7)([d.Z], () => d.Z.getGuild(n)),
+        v = (0, a.e7)([c.Z], () => c.Z.getGuild(n)),
         { interests: _, description: I, playstyle: N, wildcardDescriptors: T, brandPrimaryColor: j } = l,
         b = (0, o.useToken)(o.tokens.colors.TEXT_BRAND),
         S = Array.from(_),
@@ -75,7 +75,7 @@ function p(e) {
                                 children: null !== (t = (0, m.mv)(N)) && void 0 !== t ? t : h.intl.string(h.t.JijC4O)
                             }),
                             null != v &&
-                                (0, i.jsx)(c.cS, {
+                                (0, i.jsx)(d.cS, {
                                     wildcardDescriptors: T,
                                     primaryColor: null != j ? j : b.hex()
                                 })

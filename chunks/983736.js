@@ -1,6 +1,6 @@
 n.d(t, {
     OA: function () {
-        return i;
+        return o;
     },
     _C: function () {
         return s;
@@ -9,24 +9,24 @@ n.d(t, {
         return l;
     }
 });
-var o = n(823379),
-    r = n(246364),
+var r = n(823379),
+    i = n(246364),
     a = n(592286);
-let i = (e) => {
+let o = (e) => {
     let { required: t, response: n, field_type: a } = e;
     if (!t) return !0;
     if (null == n) return !1;
     switch (a) {
-        case r.QJ.TERMS:
-        case r.QJ.VERIFICATION:
+        case i.QJ.TERMS:
+        case i.QJ.VERIFICATION:
             return !!n;
-        case r.QJ.TEXT_INPUT:
-        case r.QJ.PARAGRAPH:
+        case i.QJ.TEXT_INPUT:
+        case i.QJ.PARAGRAPH:
             return 'string' == typeof n && '' !== n.trim();
-        case r.QJ.MULTIPLE_CHOICE:
+        case i.QJ.MULTIPLE_CHOICE:
             return 'number' == typeof n;
         default:
-            return (0, o.vE)(a);
+            return (0, r.vE)(a);
     }
 };
 function l(e) {

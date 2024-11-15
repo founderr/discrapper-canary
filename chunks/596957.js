@@ -19,8 +19,8 @@ var i = n(200651),
     C = n(434184),
     v = n(701861),
     S = n(437314),
-    N = n(696577),
-    T = n(163417),
+    T = n(696577),
+    N = n(163417),
     A = n(492347),
     b = n(42575),
     x = n(617015),
@@ -139,7 +139,7 @@ t.Z = function (e) {
                           className: y.emptyStateContainer,
                           children: (0, i.jsx)(S.Z, { type: S.j.SECTION_NO_RESULTS }, P)
                       })
-                    : (0, i.jsx)(T.Z, {
+                    : (0, i.jsx)(N.Z, {
                           relationshipCount: D,
                           statusSections: H,
                           renderRow: function (e) {
@@ -150,7 +150,7 @@ t.Z = function (e) {
                                           isFocused: j
                                       });
                                   case Z.pJs.PENDING:
-                                      return (0, i.jsx)(N.Z, {
+                                      return (0, i.jsx)(T.Z, {
                                           ...e,
                                           isFocused: j
                                       });

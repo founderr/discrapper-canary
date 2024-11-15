@@ -25,14 +25,14 @@ function E(e) {
         S = (e) => {
             e.stopPropagation(), s.Z.cancelFriendRequest(t.id, { location: 'Friends' });
         },
-        N = (e) => {
+        T = (e) => {
             e.stopPropagation(),
                 s.Z.addRelationship({
                     userId: t.id,
                     context: { location: 'Friends' }
                 });
         },
-        T = E === g.Skl.OFFLINE ? g.Skl.UNKNOWN : E,
+        N = E === g.Skl.OFFLINE ? g.Skl.UNKNOWN : E,
         A = n === g.OGo.PENDING_INCOMING ? f.intl.string(f.t.ZOFd1N) : f.intl.string(f.t.zz2i8v);
     return (0, i.jsx)(m.Z, {
         isFocused: I,
@@ -62,7 +62,7 @@ function E(e) {
                                   icon: a.CheckmarkLargeIcon,
                                   actionType: h.Z.ActionTypes.ACCEPT,
                                   tooltip: f.intl.string(f.t.ZcibdX),
-                                  onClick: N,
+                                  onClick: T,
                                   shouldHighlight: e
                               }),
                               (0, i.jsx)(h.Z, {
@@ -88,7 +88,7 @@ function E(e) {
                         user: t,
                         hovered: e,
                         showAccountIdentifier: !0,
-                        status: T,
+                        status: N,
                         subText: A
                     }),
                     (0, i.jsx)('div', {

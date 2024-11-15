@@ -25,8 +25,8 @@ var i = n(200651),
     C = n(665807),
     v = n(188493),
     S = n(294330),
-    N = n(981631),
-    T = n(972477);
+    T = n(981631),
+    N = n(972477);
 let A = Object.freeze({
         top: 0,
         bottom: 0,
@@ -40,9 +40,9 @@ let A = Object.freeze({
         right: 32
     }),
     x = {
-        page: N.ZY5.GUILD_DISCOVERY,
-        object: N.qAy.CARD,
-        section: N.jXE.DISCOVER_SEARCH
+        page: T.ZY5.GUILD_DISCOVERY,
+        object: T.qAy.CARD,
+        section: T.jXE.DISCOVER_SEARCH
     },
     Z = o().throttle(p.c6, 1000, {
         leading: !1,
@@ -50,7 +50,7 @@ let A = Object.freeze({
     });
 function L(e) {
     let { loadId: t, onGuildCardSeen: n, onGuildCardClick: l } = e,
-        { guildIds: o, loading: p, searchResultsQuery: N, loadMore: L, searchCategoryId: y, isBlockedSearchQuery: O } = (0, _.f)({ loadId: t }),
+        { guildIds: o, loading: p, searchResultsQuery: T, loadMore: L, searchCategoryId: y, isBlockedSearchQuery: O } = (0, _.f)({ loadId: t }),
         R = 0 === o.length && !p,
         P = r.useContext(h.AnalyticsContext),
         [j, D] = r.useState((0, u.P)()),
@@ -83,17 +83,17 @@ function L(e) {
     }, [F, o, H]),
         r.useEffect(() => {
             D((0, u.P)());
-        }, [N]),
+        }, [T]),
         r.useEffect(() => {
             Z({
                 loadId: t,
                 searchId: j,
-                query: N,
+                query: T,
                 guildResults: o.map(g.Z.getGuild).filter(m.lm),
                 analyticsContext: P,
                 categoryId: y
             });
-        }, [P, o, t, y, j, N]);
+        }, [P, o, t, y, j, T]);
     let z = r.useCallback((e) => n(e, y), [n, y]),
         Y = r.useMemo(() => (p && !O ? [o.length, 0] : [o.length]), [o.length, O, p]),
         W = r.useCallback(
@@ -107,11 +107,11 @@ function L(e) {
                                     paddingLeft: n.left,
                                     width: n.width - 16
                                 },
-                                className: a()({ [T.heading]: !M || R }),
+                                className: a()({ [N.heading]: !M || R }),
                                 children: [
                                     !M &&
                                         (0, i.jsxs)('div', {
-                                            className: T.headingFilters,
+                                            className: N.headingFilters,
                                             children: [(0, i.jsx)(I.Z, { loadId: t }), (0, i.jsx)(v.Z, { loadId: t })]
                                         }),
                                     (R || O) && (0, i.jsx)(C.Z, { loadId: t })
@@ -120,7 +120,7 @@ function L(e) {
                             r
                         );
                     case 1:
-                        return (0, i.jsx)(c.Spinner, { className: a()(T.spinner, { [T.spinnerWithSidebar]: M }) }, r);
+                        return (0, i.jsx)(c.Spinner, { className: a()(N.spinner, { [N.spinnerWithSidebar]: M }) }, r);
                 }
             },
             [O, R, M, t]
@@ -232,11 +232,11 @@ function L(e) {
         }, [O, L]),
         ee = M ? A : b;
     return (0, i.jsx)('div', {
-        className: T.container,
+        className: N.container,
         ref: F,
         children: (0, i.jsx)(c.MasonryList, {
             ref: V,
-            className: T.masonryList,
+            className: N.masonryList,
             sections: Y,
             columns: U,
             itemGutter: 16,
@@ -251,13 +251,13 @@ function L(e) {
             renderAccessory: (e) =>
                 M
                     ? (0, i.jsx)('div', {
-                          className: T.sidebar,
+                          className: N.sidebar,
                           style: { height: e },
                           children: (0, i.jsxs)('div', {
-                              className: T.sidebarContent,
+                              className: N.sidebarContent,
                               children: [
                                   (0, i.jsx)('div', {
-                                      className: T.sidebarLanguageSelect,
+                                      className: N.sidebarLanguageSelect,
                                       children: (0, i.jsx)(v.Z, { loadId: t })
                                   }),
                                   (0, i.jsx)(E.Z, { loadId: t })

@@ -16,7 +16,7 @@ var r = n(481060),
 t.Z = (0, p.Z)(
     (e) => {
         var t;
-        let { clientId: n, authorizations: d, scopes: u, parsedPermissions: h, responseType: p, redirectUri: _, codeChallenge: E, codeChallengeMethod: I, state: C, guildId: v, channelId: S, prompt: N, disableGuildSelect: T, disclosures: A, integrationType: b, pid: x } = e,
+        let { clientId: n, authorizations: d, scopes: u, parsedPermissions: h, responseType: p, redirectUri: _, codeChallenge: E, codeChallengeMethod: I, state: C, guildId: v, channelId: S, prompt: T, disableGuildSelect: N, disclosures: A, integrationType: b, pid: x } = e,
             Z = 'OAuth2Authorize_'.concat(n, '_').concat(v, '_').concat(S),
             L = null != b ? (null == d ? void 0 : d.get(b)) : void 0,
             y = null !== (t = null == L ? void 0 : L.application) && void 0 !== t ? t : s.Z.getApplication(n);
@@ -45,8 +45,8 @@ t.Z = (0, p.Z)(
                             permissions: h.toString(),
                             guildId: v,
                             channelId: S,
-                            prompt: N,
-                            disableGuildSelect: 'boolean' == typeof T ? T : 'true' === T,
+                            prompt: T,
+                            disableGuildSelect: 'boolean' == typeof N ? N : 'true' === N,
                             integrationType: b
                         }
                     });
@@ -69,8 +69,8 @@ t.Z = (0, p.Z)(
                         permissions: h,
                         guildId: v,
                         channelId: S,
-                        prompt: N,
-                        disableGuildSelect: 'boolean' == typeof T ? T : 'true' === T,
+                        prompt: T,
+                        disableGuildSelect: 'boolean' == typeof N ? N : 'true' === N,
                         integrationType: b
                     }),
                 {

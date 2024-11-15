@@ -97,7 +97,7 @@ var s = n(990547),
 let ek = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BADGE],
     ew = ev.Z,
     eU = (e) => {
-        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: eU, impressionSource: eV, numOfPendingFamilyRequests: eG, isOverlaySupported: eY, isClipsBetaTagShowing: eH = !1, shouldMergeGameSettings: ez, isUserSettingsSearchEnabled: eW, isKeywordFilteringEnabled: eK, isStaff: eq, isInappropriateConversationWarningEnabled: eQ, paymentsBlocked: eX, isEligibleForQuests: eJ, showGiftNitro: e$, isStricterMessageRequestsEnabled: e0, hasLibraryApplication: e1, hasTOTPEnabled: e6, developerMode: e2, isSafetySettingsV2Enabled: e3, isAdultUser: e4, hasSecureFramesVerifiedUserIds: e8, hypeSquadRemoved: e7 } = e;
+        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: eU, impressionSource: eV, numOfPendingFamilyRequests: eG, isOverlaySupported: eY, isClipsBetaTagShowing: eH = !1, shouldMergeGameSettings: ez, isUserSettingsSearchEnabled: eW, isKeywordFilteringEnabled: eK, isStaff: eq, isInappropriateConversationWarningEnabled: eQ, paymentsBlocked: eX, isEligibleForQuests: eJ, showGiftNitro: e$, isStricterMessageRequestsEnabled: e0, hasLibraryApplication: e1, hasTOTPEnabled: e2, developerMode: e6, isSafetySettingsV2Enabled: e3, isAdultUser: e4, hasSecureFramesVerifiedUserIds: e8, hypeSquadRemoved: e7 } = e;
         return Object.freeze({
             [ey.s6.SEARCH_NO_RESULTS]: {
                 section: h.ID.CUSTOM,
@@ -165,13 +165,13 @@ let ek = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eF.intl.string(eF.t.cDgKtb)],
                 section: eB.oAB.ACCOUNT,
                 parent: ey.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
-                predicate: () => !e6
+                predicate: () => !e2
             },
             [ey.s6.ACCOUNT_REMOVE_2FA]: {
                 searchableTitles: [eF.intl.string(eF.t['D+aE7u'])],
                 section: eB.oAB.ACCOUNT,
                 parent: ey.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
-                predicate: () => e6
+                predicate: () => e2
             },
             [ey.s6.ACCOUNT_VIEW_BACKUP_CODES]: {
                 searchableTitles: [eF.intl.string(eF.t.fZSi1N)],
@@ -1423,7 +1423,7 @@ let ek = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eB.oAB.ADVANCED,
                 searchableTitles: [eF.intl.string(eF.t.erOqlp)],
                 parent: ey.s6.SETTINGS_ADVANCED,
-                predicate: () => e2
+                predicate: () => e6
             },
             [ey.s6.ACTIVITY_PRIVACY]: {
                 section: eB.oAB.ACTIVITY_PRIVACY,

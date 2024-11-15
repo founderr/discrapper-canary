@@ -9,18 +9,18 @@ n.d(t, {
         return l;
     }
 });
-var o = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(692547),
+var i = n(692547),
     a = n(481060),
-    i = n(897198);
+    o = n(897198);
 function l(e) {
     let { title: t, children: n } = e;
-    return (0, o.jsxs)('div', {
-        className: i.questionContainer,
+    return (0, r.jsxs)('div', {
+        className: o.questionContainer,
         children: [
-            (0, o.jsx)(a.Text, {
-                className: i.questionTitle,
+            (0, r.jsx)(a.Text, {
+                className: o.questionTitle,
                 variant: 'text-md/semibold',
                 color: 'header-primary',
                 children: t
@@ -31,70 +31,70 @@ function l(e) {
 }
 function s(e) {
     let { icon: t, text: n, meetsRequirement: l } = e;
-    return (0, o.jsxs)('div', {
-        className: i.requirementContainer,
+    return (0, r.jsxs)('div', {
+        className: o.requirementContainer,
         children: [
-            (0, o.jsx)(t, {
-                className: i.requirementIcon,
+            (0, r.jsx)(t, {
+                className: o.requirementIcon,
                 height: 20,
                 width: 20,
                 size: 'custom',
                 color: 'currentColor'
             }),
-            (0, o.jsx)(a.Text, {
-                className: i.requirementText,
+            (0, r.jsx)(a.Text, {
+                className: o.requirementText,
                 variant: 'text-md/normal',
                 children: n
             }),
             l
-                ? (0, o.jsx)(a.CircleCheckIcon, {
+                ? (0, r.jsx)(a.CircleCheckIcon, {
                       size: 'md',
                       color: 'currentColor',
-                      className: i.requirementSuccess,
-                      secondaryColor: r.Z.colors.WHITE.css
+                      className: o.requirementSuccess,
+                      secondaryColor: i.Z.colors.WHITE.css
                   })
-                : (0, o.jsx)(a.CircleXIcon, {
+                : (0, r.jsx)(a.CircleXIcon, {
                       size: 'md',
                       color: 'currentColor',
-                      className: i.requirementFailure,
-                      secondaryColor: r.Z.colors.WHITE.css
+                      className: o.requirementFailure,
+                      secondaryColor: i.Z.colors.WHITE.css
                   })
         ]
     });
 }
 function c(e) {
     let { icon: t, text: n, footnote: l, meetsRequirement: s, children: c } = e;
-    return (0, o.jsxs)(o.Fragment, {
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, o.jsxs)('div', {
-                className: i.requirementContainer,
+            (0, r.jsxs)('div', {
+                className: o.requirementContainer,
                 children: [
-                    (0, o.jsx)(t, {
-                        className: i.requirementIcon,
+                    (0, r.jsx)(t, {
+                        className: o.requirementIcon,
                         height: 20,
                         width: 20,
                         size: 'custom',
                         color: 'currentColor'
                     }),
-                    (0, o.jsx)(a.Text, {
-                        className: i.requirementText,
+                    (0, r.jsx)(a.Text, {
+                        className: o.requirementText,
                         variant: 'text-md/normal',
                         children: n
                     }),
                     s
-                        ? (0, o.jsx)(a.CircleCheckIcon, {
+                        ? (0, r.jsx)(a.CircleCheckIcon, {
                               size: 'md',
                               color: 'currentColor',
-                              className: i.requirementSuccess,
-                              secondaryColor: r.Z.colors.WHITE.css
+                              className: o.requirementSuccess,
+                              secondaryColor: i.Z.colors.WHITE.css
                           })
                         : c
                 ]
             }),
             null != l &&
-                (0, o.jsx)(a.Text, {
+                (0, r.jsx)(a.Text, {
                     color: 'header-secondary',
-                    className: i.footnote,
+                    className: o.footnote,
                     variant: 'text-xs/normal',
                     children: l
                 })

@@ -23,8 +23,8 @@ var i = n(200651),
     C = n(734934),
     v = n(158238),
     S = n(759198),
-    N = n(300284),
-    T = n(680295),
+    T = n(300284),
+    N = n(680295),
     A = n(703656),
     b = n(785717),
     x = n(221292),
@@ -300,8 +300,8 @@ function ec(e) {
                 ]
             });
         })(e_),
-        eN = (0, J.g)(Q),
-        eT = (0, N.Z)({ analyticsLocations: em }),
+        eT = (0, J.g)(Q),
+        eN = (0, T.Z)({ analyticsLocations: em }),
         { customStatusBubbleEditEnabled: eA } = (0, Z.K)({ location: 'AccountProfilePopout' }),
         eb = (0, q.I5)(W),
         ex = (e) => {
@@ -369,7 +369,7 @@ function ec(e) {
                             ]
                         }),
                         (null == eu ? void 0 : eu.profileEffectId) != null &&
-                            (0, i.jsx)(T.Z, {
+                            (0, i.jsx)(N.Z, {
                                 profileEffectId: null == eu ? void 0 : eu.profileEffectId,
                                 isHovering: ef
                             }),
@@ -426,7 +426,7 @@ function ec(e) {
                                                                     label: ei.intl.string(ei.t.s5vZlZ),
                                                                     icon: c.PencilIcon,
                                                                     onClick: () => {
-                                                                        eT(), Q();
+                                                                        eN(), Q();
                                                                     }
                                                                 }),
                                                                 (0, i.jsx)('div', { className: er.menuDivider })
@@ -592,7 +592,7 @@ function ec(e) {
                                                                 navId: 'switch-accounts-submenu',
                                                                 'aria-label': ei.intl.string(ei.t.wFhVqK),
                                                                 onClose: t,
-                                                                children: eN
+                                                                children: eT
                                                             });
                                                         }
                                                     })

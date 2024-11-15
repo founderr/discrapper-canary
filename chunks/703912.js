@@ -30,35 +30,35 @@ var i = n(664751),
     C = n(996106),
     v = n(186901),
     S = n(981631);
-let N = 'CachedTokens';
-async function T(e, t, n) {
+let T = 'CachedTokens';
+async function N(e, t, n) {
     var i, l;
     let s;
     let o,
         c,
         d,
         v,
-        { client_id: N, response_type: T = 'code', redirect_uri: A, code_challenge: b, code_challenge_method: x, state: Z, nonce: L, scope: y, permissions: O, guild_id: R, channel_id: P, prompt: j, disable_guild_select: D, integration_type: M, pid: w, signal: k } = e;
+        { client_id: T, response_type: N = 'code', redirect_uri: A, code_challenge: b, code_challenge_method: x, state: Z, nonce: L, scope: y, permissions: O, guild_id: R, channel_id: P, prompt: j, disable_guild_select: D, integration_type: M, pid: w, signal: k } = e;
     if (null == k ? void 0 : k.aborted) throw new C.Z({ errorCode: S.lTL.UNKNOWN_ERROR }, 'Request aborted');
-    if (null == N) throw new C.Z({ errorCode: S.lTL.OAUTH2_ERROR }, 'No Client ID provided');
+    if (null == T) throw new C.Z({ errorCode: S.lTL.OAUTH2_ERROR }, 'No Client ID provided');
     if (null != A) throw new C.Z({ errorCode: S.lTL.OAUTH2_ERROR }, 'Redirect URI cannot be used in the RPC OAuth2 Authorization flow');
     let U = [];
     if (('string' == typeof y ? (U = y.split(' ').filter((e) => e.length > 0)) : Array.isArray(y) && (U = y), null == _.default.getCurrentUser())) throw new C.Z({ errorCode: S.lTL.OAUTH2_ERROR }, 'Client is not logged in');
-    let G = null !== (l = u.Z.getApplication(N)) && void 0 !== l ? l : null;
+    let G = null !== (l = u.Z.getApplication(T)) && void 0 !== l ? l : null;
     (null == G ||
         (function (e) {
             var t;
             let n = null !== (t = u.Z.getApplicationLastUpdated(e)) && void 0 !== t ? t : 0;
             return n < Date.now() - 5000;
         })(G.id)) &&
-        (G = f.Z.createFromServer(await (0, g.UM)(N, k)));
+        (G = f.Z.createFromServer(await (0, g.UM)(T, k)));
     let B = null != G && (0, E.yE)(G.flags, S.udG.EMBEDDED) && (null === (i = G.integrationTypesConfig) || void 0 === i ? void 0 : i[r.Y.USER_INSTALL]) != null;
     o = null == M ? (B ? r.Y.USER_INSTALL : r.Y.GUILD_INSTALL) : Number(M);
     try {
         c = await (0, m.Ww)({
-            clientId: N,
+            clientId: T,
             scopes: U,
-            responseType: T,
+            responseType: N,
             redirectUri: A,
             codeChallenge: b,
             codeChallengeMethod: x,
@@ -81,9 +81,9 @@ async function T(e, t, n) {
             return (
                 await (0, m.Iq)({
                     authorize: !0,
-                    clientId: N,
+                    clientId: T,
                     scopes: U,
-                    responseType: T,
+                    responseType: N,
                     redirectUri: A,
                     codeChallenge: b,
                     codeChallengeMethod: x,
@@ -104,11 +104,11 @@ async function T(e, t, n) {
     return (
         null != c.integration_type && Object.values(r.Y).includes(c.integration_type) && (s = new Map()).set(c.integration_type, c),
         t({
-            clientId: N,
+            clientId: T,
             authorizations: s,
             scopes: U,
             parsedPermissions: V,
-            responseType: T,
+            responseType: N,
             redirectUri: A,
             codeChallenge: b,
             codeChallengeMethod: x,
@@ -179,7 +179,7 @@ function b(e, t) {
                     if (null == n) throw new C.Z({ errorCode: S.lTL.INVALID_COMMAND }, 'No application.');
                     let o = l.x.IDENTIFY,
                         d = () =>
-                            T(
+                            N(
                                 {
                                     client_id: n,
                                     scope: o,
@@ -199,32 +199,32 @@ function b(e, t) {
                                 return (
                                     !(function (e, t, n, i) {
                                         var r;
-                                        let l = null !== (r = c.K.get(N)) && void 0 !== r ? r : {};
+                                        let l = null !== (r = c.K.get(T)) && void 0 !== r ? r : {};
                                         (l[e] = {
                                             accessToken: t,
                                             scope: n,
                                             expires: Date.now() + i
                                         }),
-                                            c.K.set(N, l);
+                                            c.K.set(T, l);
                                     })(n, l.access_token, l.scope, l.expires_in),
                                     A(r, l.access_token)
                                 );
                             });
                     return null !=
                         (s = (function (e, t) {
-                            let n = c.K.get(N);
+                            let n = c.K.get(T);
                             if (null != n && null != n[e]) {
                                 let i = n[e];
                                 if (!(i.scope !== t || i.expires <= Date.now())) return i.accessToken;
-                                delete n[e], c.K.set(N, n);
+                                delete n[e], c.K.set(T, n);
                             }
                         })(n, o))
                         ? A(r, s).catch(
                               () => (
                                   !(function (e) {
                                       var t;
-                                      let n = null !== (t = c.K.get(N)) && void 0 !== t ? t : {};
-                                      delete n[e], c.K.set(N, n);
+                                      let n = null !== (t = c.K.get(T)) && void 0 !== t ? t : {};
+                                      delete n[e], c.K.set(T, n);
                                   })(n),
                                   d()
                               )
@@ -256,7 +256,7 @@ function b(e, t) {
                             let s = l.scopes || l.scope;
                             return (
                                 delete l.scopes,
-                                T(
+                                N(
                                     {
                                         ...l,
                                         scope: s,

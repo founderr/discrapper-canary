@@ -24,8 +24,8 @@ var i = n(200651),
     C = n(153066),
     v = n(335131),
     S = n(744112),
-    N = n(267097),
-    T = n(141594),
+    T = n(267097),
+    N = n(141594),
     A = n(302800),
     b = n(981631),
     x = n(388032),
@@ -114,15 +114,15 @@ let L = (e) => {
     }),
     P = (e) => {
         var t, n, l, s, u, h, g, f, _, E, I, v;
-        let S, N;
-        let { selected: T, locationState: A, displayOptions: b } = e,
+        let S, T;
+        let { selected: N, locationState: A, displayOptions: b } = e,
             O = (0, o.e7)([p.Z], () => p.Z.useReducedMotion),
             [P, j] = r.useState(0),
             [D, M] = r.useState(!1),
             w = (0, m.ZP)(),
             k = b.entrypointDecorationAssets,
             U = (0, c.wj)(w);
-        D ? (U ? ((S = null === (t = b.entryPointBackgroundAssets) || void 0 === t ? void 0 : t.srcDarkHovered), (N = null === (l = b.entrypointBackgroundStyle) || void 0 === l ? void 0 : null === (n = l.hovered) || void 0 === n ? void 0 : n.dark)) : ((S = null === (s = b.entryPointBackgroundAssets) || void 0 === s ? void 0 : s.srcLightHovered), (N = null === (h = b.entrypointBackgroundStyle) || void 0 === h ? void 0 : null === (u = h.hovered) || void 0 === u ? void 0 : u.light))) : U ? ((S = null === (g = b.entryPointBackgroundAssets) || void 0 === g ? void 0 : g.srcDark), (N = null === (_ = b.entrypointBackgroundStyle) || void 0 === _ ? void 0 : null === (f = _.resting) || void 0 === f ? void 0 : f.dark)) : ((S = null === (E = b.entryPointBackgroundAssets) || void 0 === E ? void 0 : E.srcLight), (N = null === (v = b.entrypointBackgroundStyle) || void 0 === v ? void 0 : null === (I = v.resting) || void 0 === I ? void 0 : I.light));
+        D ? (U ? ((S = null === (t = b.entryPointBackgroundAssets) || void 0 === t ? void 0 : t.srcDarkHovered), (T = null === (l = b.entrypointBackgroundStyle) || void 0 === l ? void 0 : null === (n = l.hovered) || void 0 === n ? void 0 : n.dark)) : ((S = null === (s = b.entryPointBackgroundAssets) || void 0 === s ? void 0 : s.srcLightHovered), (T = null === (h = b.entrypointBackgroundStyle) || void 0 === h ? void 0 : null === (u = h.hovered) || void 0 === u ? void 0 : u.light))) : U ? ((S = null === (g = b.entryPointBackgroundAssets) || void 0 === g ? void 0 : g.srcDark), (T = null === (_ = b.entrypointBackgroundStyle) || void 0 === _ ? void 0 : null === (f = _.resting) || void 0 === f ? void 0 : f.dark)) : ((S = null === (E = b.entryPointBackgroundAssets) || void 0 === E ? void 0 : E.srcLight), (T = null === (v = b.entrypointBackgroundStyle) || void 0 === v ? void 0 : null === (I = v.resting) || void 0 === I ? void 0 : I.light));
         let G = r.useCallback(
                 (e) => {
                     j((e) => (e + 1) % b.assetIds.length), M(!0), null == e || e();
@@ -148,7 +148,7 @@ let L = (e) => {
             children: (e) =>
                 (0, i.jsxs)(y, {
                     className: null != b.entryPointClassName ? (0, C.l)(Z, b.entryPointClassName) : void 0,
-                    selected: T,
+                    selected: N,
                     locationState: A,
                     icon: b.entryPointIcon,
                     ...e,
@@ -157,7 +157,7 @@ let L = (e) => {
                     children: [
                         (0, i.jsx)('div', {
                             className: Z.marketingButtonBackground,
-                            style: { background: N },
+                            style: { background: T },
                             children:
                                 null != S &&
                                 (0, i.jsx)('img', {
@@ -207,10 +207,10 @@ let L = (e) => {
                 })
         });
     },
-    D = () => ((0, N.Z)(), null),
+    D = () => ((0, T.Z)(), null),
     M = (e) => {
         let { selected: t, locationState: n } = e,
-            { collectiblesShopTabNewBadgeDisplayOptions: r } = (0, T.Z)(),
+            { collectiblesShopTabNewBadgeDisplayOptions: r } = (0, N.Z)(),
             l = (0, S.b)('Collectibles Shop Button');
         if (null != r)
             switch (r.type) {

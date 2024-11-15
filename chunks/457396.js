@@ -24,8 +24,8 @@ var i,
     C = n(605236),
     v = n(243778),
     S = n(819640),
-    N = n(594174),
-    T = n(351402),
+    T = n(594174),
+    N = n(351402),
     A = n(78839),
     b = n(626135),
     x = n(74538),
@@ -64,7 +64,7 @@ let en = (e) => {
         i,
         r,
         { selected: s, route: en, locationState: ei, ...er } = e,
-        el = (0, d.e7)([N.default], () => N.default.getCurrentUser()),
+        el = (0, d.e7)([T.default], () => T.default.getCurrentUser()),
         ea = (0, d.e7)([A.ZP], () => A.ZP.getPremiumTypeSubscription()),
         es = (0, d.e7)([_.Z], () => _.Z.useReducedMotion),
         eo = (0, h.ap)((0, f.ZP)()),
@@ -75,21 +75,21 @@ let en = (e) => {
         ep = (0, P.Ng)(),
         eg = (0, d.e7)([A.ZP], () => A.ZP.inReverseTrial()),
         ef = (null == em ? void 0 : em.trial_id) === z.jz,
-        e_ = (0, d.e7)([T.Z], () => T.Z.isLocalizedPromoEnabled) && null == em,
+        e_ = (0, d.e7)([N.Z], () => N.Z.isLocalizedPromoEnabled) && null == em,
         eE = (0, k.Vi)(),
         { enabled: eI } = (0, L.Z)();
     (0, g.Z)(new Date(2024, 10, 21), 1000, void 0, !eI);
     let eC = (0, M.$_)(),
         ev = (0, B.V6)(),
         eS = (0, H.Kn)(ee),
-        eN = (0, H.vx)(ee),
-        eT = (0, H.wG)(ee),
+        eT = (0, H.vx)(ee),
+        eN = (0, H.wG)(ee),
         eA = (0, d.e7)([Z.Z], () => Z.Z.getCreatedAtOverride()),
         eb = (0, d.e7)([S.Z], () => S.Z.hasLayers()),
         { fractionalState: ex, endsAt: eZ, currentEntitlementId: eL } = (0, I.Z)({ forceFetch: !0 }),
         [ey, eO] = (0, v.XR)(u.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL, Number(eL)),
         eR = null != eA ? eA : null == el ? void 0 : el.createdAt,
-        eP = s || null != em || null != ep || eE || eN || eT || null != eC || null != ev || eu,
+        eP = s || null != em || null != ep || eE || eT || eN || null != eC || null != ev || eu,
         { enabled: ej } = O._.useExperiment({ location: ee }, { autoTrackExposure: !1 }),
         { enabled: eD } = y.Z.useExperiment(
             { location: ee },
@@ -135,9 +135,9 @@ let en = (e) => {
                 ]
             }));
     } else
-        eN
+        eT
             ? ((t = q.referralIncentive), (r = 7))
-            : eT
+            : eN
               ? ((i = (0, l.jsx)(V.Z, { copy: K.intl.string(K.t.jyYgZ2) })), (r = 8))
               : eE
                 ? ((i = (0, l.jsx)(D.Z, {})), (r = 0))
@@ -183,7 +183,7 @@ let en = (e) => {
                     badge_decorator: r,
                     has_premium: eu
                 }),
-                eN || eT ? ((0, C.EW)(u.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: W.L.TAKE_ACTION }), eT && (0, C.EW)(u.z.REFERRAL_INCENTIVE_AWARDED_INFO, { dismissAction: W.L.TAKE_ACTION })) : null != ew && ek(W.L.USER_DISMISS);
+                eT || eN ? ((0, C.EW)(u.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: W.L.TAKE_ACTION }), eN && (0, C.EW)(u.z.REFERRAL_INCENTIVE_AWARDED_INFO, { dismissAction: W.L.TAKE_ACTION })) : null != ew && ek(W.L.USER_DISMISS);
         },
         onMouseEnter: () => {
             ed(!0);
@@ -208,7 +208,7 @@ let en = (e) => {
                 variant: G.j$.REFERRAL_PROGRAM,
                 children: eV
             })
-          : eN && !eb
+          : eT && !eb
             ? (0, l.jsx)(G.A7, { children: () => eV })
             : eV;
 };

@@ -24,7 +24,7 @@ n.ZP = (0, r.B)({
             id: 1,
             label: 'Regional Payment Method for Germany',
             config: {
-                enabledPaymentTypes: [i.HeQ.SOFORT],
+                enabledPaymentTypes: [],
                 forceCountryCode: 'DE',
                 validCountryCodes: ['DE']
             }
@@ -123,7 +123,7 @@ n.ZP = (0, r.B)({
             id: 12,
             label: 'Regional Payment Method for Belgium',
             config: {
-                enabledPaymentTypes: [i.HeQ.PAYSAFE_CARD, i.HeQ.SOFORT, i.HeQ.BANCONTACT],
+                enabledPaymentTypes: [i.HeQ.PAYSAFE_CARD, i.HeQ.BANCONTACT],
                 forceCountryCode: 'BE',
                 validCountryCodes: ['BE']
             }
@@ -132,7 +132,7 @@ n.ZP = (0, r.B)({
             id: 13,
             label: 'Regional Payment Method for Austria',
             config: {
-                enabledPaymentTypes: [i.HeQ.PAYSAFE_CARD, i.HeQ.EPS, i.HeQ.SOFORT],
+                enabledPaymentTypes: [i.HeQ.PAYSAFE_CARD, i.HeQ.EPS],
                 forceCountryCode: 'AT',
                 validCountryCodes: ['AT']
             }
@@ -141,16 +141,16 @@ n.ZP = (0, r.B)({
             id: 14,
             label: 'Regional Payment Method for Netherlands',
             config: {
-                enabledPaymentTypes: [i.HeQ.PAYSAFE_CARD, i.HeQ.IDEAL, i.HeQ.SOFORT],
+                enabledPaymentTypes: [i.HeQ.PAYSAFE_CARD, i.HeQ.IDEAL],
                 forceCountryCode: 'NL',
                 validCountryCodes: ['NL']
             }
         },
         {
             id: 15,
-            label: 'Launch Paysafecard and Sofort',
+            label: 'Launch Paysafecard',
             config: {
-                enabledPaymentTypes: [i.HeQ.PAYSAFE_CARD, i.HeQ.SOFORT],
+                enabledPaymentTypes: [i.HeQ.PAYSAFE_CARD],
                 forceCountryCode: 'ES',
                 validCountryCodes: ['ES', 'IT']
             }
