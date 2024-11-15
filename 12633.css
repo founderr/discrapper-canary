@@ -51879,7 +51879,8 @@ html.disable-forced-colors * {
     --text-positive: var(--green-new-32);
     --text-primary: var(--neutral-7);
     --text-secondary: var(--neutral-27);
-    --text-warning: var(--yellow-new-34)
+    --text-warning: var(--yellow-new-34);
+    --text-feedback-positive: var(--green-new-32)
 }
 
 @supports(color:color-mix(in lch, red, blue))and (top:var(--f)) {
@@ -51942,6 +51943,9 @@ html.disable-forced-colors * {
                 var(--theme-text-color, black) var(--theme-text-color-amount, 0%));
         --text-warning: color-mix(in oklab,
                 var(--yellow-new-34) 100%,
+                var(--theme-text-color, black) var(--theme-text-color-amount, 0%));
+        --text-feedback-positive: color-mix(in oklab,
+                var(--green-new-32) 100%,
                 var(--theme-text-color, black) var(--theme-text-color-amount, 0%))
     }
 }
@@ -51967,7 +51971,8 @@ html.disable-forced-colors * {
     --text-positive: var(--green-new-56);
     --text-primary: var(--neutral-89);
     --text-secondary: var(--neutral-41);
-    --text-warning: var(--yellow-new-52)
+    --text-warning: var(--yellow-new-52);
+    --text-feedback-positive: var(--green-new-56)
 }
 
 @supports(color:color-mix(in lch, red, blue))and (top:var(--f)) {
@@ -52033,6 +52038,9 @@ html.disable-forced-colors * {
                 var(--theme-text-color, black) var(--theme-text-color-amount, 0%));
         --text-warning: color-mix(in oklab,
                 var(--yellow-new-52) 100%,
+                var(--theme-text-color, black) var(--theme-text-color-amount, 0%));
+        --text-feedback-positive: color-mix(in oklab,
+                var(--green-new-56) 100%,
                 var(--theme-text-color, black) var(--theme-text-color-amount, 0%))
     }
 }
@@ -52055,7 +52063,8 @@ html.disable-forced-colors * {
     --text-positive: var(--green-new-40);
     --text-primary: var(--neutral-8);
     --text-secondary: var(--neutral-35);
-    --text-warning: var(--yellow-new-42)
+    --text-warning: var(--yellow-new-42);
+    --text-feedback-positive: var(--green-new-40)
 }
 
 @supports(color:color-mix(in lch, red, blue))and (top:var(--f)) {
@@ -52112,6 +52121,9 @@ html.disable-forced-colors * {
                 var(--theme-text-color, black) var(--theme-text-color-amount, 0%));
         --text-warning: color-mix(in oklab,
                 var(--yellow-new-42) 100%,
+                var(--theme-text-color, black) var(--theme-text-color-amount, 0%));
+        --text-feedback-positive: color-mix(in oklab,
+                var(--green-new-40) 100%,
                 var(--theme-text-color, black) var(--theme-text-color-amount, 0%))
     }
 }
@@ -52134,7 +52146,8 @@ html.disable-forced-colors * {
     --text-positive: var(--green-new-42);
     --text-primary: var(--neutral-4);
     --text-secondary: var(--neutral-33);
-    --text-warning: var(--yellow-new-44)
+    --text-warning: var(--yellow-new-44);
+    --text-feedback-positive: var(--green-new-42)
 }
 
 @supports(color:color-mix(in lch, red, blue))and (top:var(--f)) {
@@ -52191,6 +52204,9 @@ html.disable-forced-colors * {
                 var(--theme-text-color, black) var(--theme-text-color-amount, 0%));
         --text-warning: color-mix(in oklab,
                 var(--yellow-new-44) 100%,
+                var(--theme-text-color, black) var(--theme-text-color-amount, 0%));
+        --text-feedback-positive: color-mix(in oklab,
+                var(--green-new-42) 100%,
                 var(--theme-text-color, black) var(--theme-text-color-amount, 0%))
     }
 }
