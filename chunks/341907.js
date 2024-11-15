@@ -1,5 +1,8 @@
 n.r(t),
     n.d(t, {
+        formatVideoProgressRatio: function () {
+            return C;
+        },
         maybeShowSurveyForQuest: function () {
             return N;
         },
@@ -19,7 +22,7 @@ n.r(t),
             return I;
         },
         openVideoQuestModal: function () {
-            return C;
+            return R;
         }
     });
 var r = n(200651);
@@ -44,7 +47,7 @@ var i = n(481060),
 function I(e) {
     let { questId: t, location: a, questContentPosition: s, preview: o = !1 } = e;
     (0, i.openModalLazy)(async () => {
-        let { default: e } = await Promise.all([n.e('48923'), n.e('99393'), n.e('28044'), n.e('71740')]).then(n.bind(n, 985866));
+        let { default: e } = await Promise.all([n.e('48923'), n.e('99393'), n.e('28044'), n.e('58950')]).then(n.bind(n, 985866));
         return (n) =>
             (0, r.jsx)(e, {
                 ...n,
@@ -118,7 +121,10 @@ function N(e) {
                 survey: i
             });
 }
-function C(e) {
+function C(e, t) {
+    return e <= 0 || t <= 0 ? 0 : e >= t ? 1 : Math.min(1, Math.round((e / t) * 100) / 100);
+}
+function R(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     (0, i.openModalLazy)(
         async () => {
@@ -139,16 +145,15 @@ function C(e) {
                 if (null == n) return;
                 let r = u.Z.getQuest(e.id);
                 null != r && (null === (t = r.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null && (0, l.FI)(r.id, n.maxTimestampSec);
-                let i = n.maxTimestampSec / n.duration;
-                if (!(i < 0) && !(i > 1))
-                    (0, o.dA)({
-                        questId: e.id,
-                        event: v.rMx.QUEST_VIDEO_PROGRESSED,
-                        properties: {
-                            progress: i,
-                            video_timestamp_seconds: n.maxTimestampSec
-                        }
-                    });
+                let i = C(n.maxTimestampSec, n.duration);
+                (0, o.dA)({
+                    questId: e.id,
+                    event: v.rMx.QUEST_VIDEO_PROGRESSED,
+                    properties: {
+                        progress: i,
+                        video_timestamp_seconds: n.maxTimestampSec
+                    }
+                });
             }
         }
     );
