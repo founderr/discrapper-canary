@@ -61,23 +61,28 @@ t.Z = function () {
                 className: V ? N.search : void 0,
                 children: [
                     !V && (0, i.jsx)(c.z6, { scrollPosition: t }),
-                    (0, i.jsx)(c.aV, {
-                        icon: z ? l.ArrowLargeLeftIcon : l.AppsIcon,
-                        onClick: z ? Y : void 0
-                    }),
                     z
-                        ? (0, i.jsx)(l.Heading, {
-                              variant: 'heading-lg/semibold',
-                              color: 'header-primary',
-                              className: N.alternateHeader,
-                              children: B ? S.intl.string(S.t['13/7kZ']) : S.intl.formatToPlainString(S.t.zHdzqa, { query: R })
+                        ? (0, i.jsx)(c.Cm, {
+                              icon: l.ArrowLargeLeftIcon,
+                              onClick: Y,
+                              variant: V ? c.HS.DEFAULT : c.HS.OVERLAY
                           })
-                        : (0, i.jsx)(d.Z, {
-                              tabs: Z,
-                              selectedTab: L,
-                              onTabSelect: H,
-                              onAvailableWidthChange: k
-                          }),
+                        : (0, i.jsx)(c.aV, { icon: l.AppsIcon }),
+                    B
+                        ? null
+                        : V
+                          ? (0, i.jsx)(l.Heading, {
+                                variant: 'heading-lg/semibold',
+                                color: 'header-primary',
+                                className: N.alternateHeader,
+                                children: S.intl.formatToPlainString(S.t.zHdzqa, { query: R })
+                            })
+                          : (0, i.jsx)(d.Z, {
+                                tabs: Z,
+                                selectedTab: L,
+                                onTabSelect: H,
+                                onAvailableWidthChange: k
+                            }),
                     !B &&
                         (0, i.jsx)(u.Z, {
                             query: O,

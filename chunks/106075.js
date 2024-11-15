@@ -80,10 +80,12 @@ function T() {
                     className: j ? N.search : void 0,
                     children: [
                         !j && (0, i.jsx)(c.z6, { scrollPosition: n }),
-                        (0, i.jsx)(c.aV, {
-                            icon: j ? l.ArrowLargeLeftIcon : l.ServerIcon,
-                            onClick: j ? R : void 0
-                        }),
+                        j
+                            ? (0, i.jsx)(c.Cm, {
+                                  icon: l.ArrowLargeLeftIcon,
+                                  onClick: R
+                              })
+                            : (0, i.jsx)(c.aV, { icon: l.ServerIcon }),
                         !j &&
                             (0, i.jsx)(d.Z, {
                                 className: U,

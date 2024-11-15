@@ -1,57 +1,66 @@
 n.d(t, {
+    Cm: function () {
+        return p;
+    },
+    HS: function () {
+        return r;
+    },
     ZP: function () {
-        return h;
+        return g;
     },
     aV: function () {
-        return u;
+        return h;
     },
     z6: function () {
-        return d;
+        return u;
     }
-}),
-    n(47120);
-var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    a = n.n(l),
-    s = n(100621),
-    o = n(481060),
-    c = n(25912);
-function d(e) {
+});
+var i,
+    r,
+    l = n(200651);
+n(192379);
+var a = n(120356),
+    s = n.n(a),
+    o = n(100621),
+    c = n(481060),
+    d = n(25912);
+function u(e) {
     let { scrollPosition: t } = e;
-    return (0, i.jsx)(s.animated.div, {
-        className: c.backdrop,
+    return (0, l.jsx)(o.animated.div, {
+        className: d.backdrop,
         style: {
             opacity: null == t ? void 0 : t.to([0, 100], [0, 1])
         }
     });
 }
-function u(e) {
-    let { onClick: t, icon: n } = e,
-        [l, s] = r.useState(!1),
-        d = r.useCallback(() => s(!0), []),
-        u = r.useCallback(() => s(!1), []);
-    return null != t
-        ? (0, i.jsx)(o.Clickable, {
-              className: a()(c.clickable, c.icon),
-              onClick: t,
-              onMouseEnter: d,
-              onMouseLeave: u,
-              children: (0, i.jsx)(n, {
-                  color: l ? o.tokens.colors.INTERACTIVE_HOVER : o.tokens.colors.INTERACTIVE_NORMAL,
-                  size: 'md'
-              })
-          })
-        : (0, i.jsx)(n, {
-              className: c.icon,
-              color: o.tokens.colors.HEADER_PRIMARY,
-              size: 'md'
-          });
-}
 function h(e) {
+    let { icon: t } = e;
+    return (0, l.jsx)(t, {
+        className: d.icon,
+        color: c.tokens.colors.HEADER_PRIMARY,
+        size: 'md'
+    });
+}
+((i = r || (r = {})).DEFAULT = 'default'), (i.OVERLAY = 'overlay');
+let m = (e) => {
+    if ('overlay' === e) return d.iconBackgroundOverlay;
+    return d.iconBackgroundDefault;
+};
+function p(e) {
+    let { onClick: t, icon: n, variant: i = 'default' } = e;
+    return (0, l.jsx)(c.Clickable, {
+        className: s()(d.iconButton, m(i)),
+        onClick: t,
+        children: (0, l.jsx)(n, {
+            color: 'currentColor',
+            size: 'sm'
+        })
+    });
+}
+function g(e) {
     let { className: t, children: n } = e;
-    return (0, i.jsx)('div', {
-        className: a()(c.headerBar, t),
+    return (0, l.jsx)('div', {
+        className: s()(d.headerBar, t),
         children: n
     });
 }
