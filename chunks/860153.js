@@ -50,8 +50,9 @@ function h(e) {
                 color: l.ButtonColors.CUSTOM,
                 size: l.ButtonSizes.ICON,
                 className: m.closeButton,
+                innerClassName: m.closeButtonInner,
                 onClick: i,
-                children: (0, r.jsx)(l.XLargeIcon, {})
+                children: (0, r.jsx)(l.XSmallIcon, {})
             }),
             null != a && (0, r.jsx)(f, { message: a })
         ]

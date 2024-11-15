@@ -15,10 +15,10 @@ var r = t(200651),
     g = t(701865),
     _ = t(388032),
     x = t(92718);
-function S() {
+function C() {
     (0, o.closeModal)(g.U);
 }
-function C(e) {
+function S(e) {
     let { onClick: n, tooltipText: t, children: i, selected: a, ...s } = e;
     return (0, r.jsx)(o.Tooltip, {
         text: t,
@@ -31,6 +31,7 @@ function C(e) {
                 size: o.ButtonSizes.ICON,
                 color: o.ButtonColors.CUSTOM,
                 className: l()(x.actionButton, { [x.selected]: a }),
+                innerClassName: x.actionButtonInner,
                 ...s,
                 children: i
             });
@@ -39,7 +40,7 @@ function C(e) {
 }
 function v() {
     let { zoomed: e, setZoomed: n } = (0, p.Y)();
-    return (0, r.jsx)(C, {
+    return (0, r.jsx)(S, {
         onClick: () => n(!e),
         tooltipText: e ? _.intl.string(_.t.vOFof3) : _.intl.string(_.t.Kt4gZ2),
         children: e ? (0, r.jsx)(o.MagnifyingGlassMinusIcon, {}) : (0, r.jsx)(o.MagnifyingGlassPlusIcon, {})
@@ -59,7 +60,7 @@ function E(e) {
                         message: l,
                         source: 'media-viewer',
                         forwardOptions: { onlyEmbedIndices: [d.embedIndex] },
-                        onRequestSent: S
+                        onRequestSent: C
                     });
                     return;
                 }
@@ -69,20 +70,20 @@ function E(e) {
                     message: l,
                     source: 'media-viewer',
                     forwardOptions: { onlyAttachmentIds: [d.attachmentId] },
-                    onRequestSent: S
+                    onRequestSent: C
                 });
             }
         }, [l, d]),
         { canForwardMessages: f } = (0, s.yk)({ location: 'ForwardLink' }, { autoTrackExposure: !1 });
     return null != l && f && (0, u.h)(l)
-        ? (0, r.jsx)(C, {
+        ? (0, r.jsx)(S, {
               onClick: m,
               tooltipText: _.intl.string(_.t.I3ltXF),
               children: (0, r.jsx)(o.ArrowAngleRightUpIcon, {})
           })
         : null;
 }
-function y(e) {
+function I(e) {
     let { item: n } = e;
     if (!('VIDEO' === n.type || (f.isPlatformEmbedded && null == n.children && 'IMAGE' === n.type && (0, d.gS)(n.url)))) return null;
     let t = (0, d.s$)(n.url);
@@ -94,24 +95,24 @@ function y(e) {
                 (0, o.showToast)((0, o.createToast)(_.intl.string(_.t.R0RpRU), o.ToastType.FAILURE));
             }
     }
-    return (0, r.jsx)(C, {
+    return (0, r.jsx)(S, {
         onClick: i,
         tooltipText: _.intl.string(_.t['1WjMbG']),
         children: (0, r.jsx)(o.DownloadIcon, {})
     });
 }
-function L(e) {
+function y(e) {
     var n;
     let { item: t } = e;
     if (!(0, d.Jj)(t.url)) return null;
     let i = (0, d.s$)(null !== (n = t.original) && void 0 !== n ? n : t.url);
-    return (0, r.jsx)(C, {
+    return (0, r.jsx)(S, {
         onClick: () => (0, m.q)({ href: i }),
         tooltipText: _.intl.string(_.t.wuRE8P),
         children: (0, r.jsx)(o.WindowLaunchIcon, {})
     });
 }
-function I(e) {
+function L(e) {
     let { item: n, canCopyImage: t, canCopyLink: i, onClose: a, onSelect: l } = e;
     async function s() {
         let e = (0, d.s$)(n.url);
@@ -172,7 +173,7 @@ function A(e) {
               position: 'top',
               spacing: 18,
               renderPopout: () =>
-                  (0, r.jsx)(I, {
+                  (0, r.jsx)(L, {
                       item: n,
                       canCopyImage: l,
                       canCopyLink: s,
@@ -180,7 +181,7 @@ function A(e) {
                   }),
               children: (e) => {
                   let { onClick: n } = e;
-                  return (0, r.jsx)(C, {
+                  return (0, r.jsx)(S, {
                       tooltipText: _.intl.string(_.t.UKOtz8),
                       onClick: () => a(!t),
                       selected: t,
@@ -198,7 +199,7 @@ n.Z = i.memo(function (e) {
             (0, r.jsx)(v, {}),
             !t &&
                 (0, r.jsxs)(r.Fragment, {
-                    children: [(0, r.jsx)(E, { item: n }), (0, r.jsx)(y, { item: n }), (0, r.jsx)(L, { item: n }), (0, r.jsx)(A, { item: n })]
+                    children: [(0, r.jsx)(E, { item: n }), (0, r.jsx)(I, { item: n }), (0, r.jsx)(y, { item: n }), (0, r.jsx)(A, { item: n })]
                 })
         ]
     });
