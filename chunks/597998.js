@@ -82,7 +82,7 @@ function N(e) {
     let { className: t, mute: n, localMute: i, localVideoDisabled: a, serverMute: r, deaf: c, serverDeaf: d, collapsed: f, video: p, isStreaming: h, disabled: g, isWatching: _, iconClassName: T, embeddedApplication: b, otherClientSessionType: N, voicePlatform: w, hangStatusActivity: R, showHangStatus: M, isSelf: O, application: L, guildId: k, channelId: D, user: U, handleHoverHangStatus: V, handleHoverIcons: F, disconnected: W } = e;
     if (f || g) return null;
     let G = [],
-        B = (0, l.jsx)(P, {
+        B = (0, l.jsx)(j, {
             iconClassName: T,
             mute: n,
             localMute: i,
@@ -222,7 +222,7 @@ function N(e) {
                             onMouseLeave: () => (null == V ? void 0 : V(!1)),
                             children: H
                                 ? (0, l.jsx)(
-                                      j,
+                                      P,
                                       {
                                           application: L,
                                           iconClassName: T,
@@ -364,7 +364,7 @@ class w extends (i = a.Component) {
             });
     }
 }
-function j(e) {
+function P(e) {
     let { application: t, iconClassName: n, guildId: i, channelId: r, userId: u } = e,
         [m, f] = a.useState(!1),
         h = (0, c.O)((e) => f(e));
@@ -400,7 +400,7 @@ function j(e) {
         })
     );
 }
-function P(e) {
+function j(e) {
     let { iconClassName: t, mute: n, localMute: i, serverMute: a, deaf: r, serverDeaf: c } = e,
         u = (0, o.useRedesignIconContext)().enabled,
         d = [];

@@ -33,8 +33,8 @@ var i,
     A = n(424678),
     N = n(750154),
     w = n(768581),
-    j = n(630388),
-    P = n(153066),
+    P = n(630388),
+    j = n(153066),
     R = n(740265),
     M = n(122810),
     O = n(833664),
@@ -103,7 +103,7 @@ class q extends (l = s.PureComponent) {
             : e;
     }
     getTypeClass(e, t) {
-        return (0, P.l)(G, e, this.props.type, t);
+        return (0, j.l)(G, e, this.props.type, t);
     }
     isStreamerOnTypeActivityFeed() {
         return (0, D.Z)(this.activity) && 'ActivityFeed' === this.props.type;
@@ -134,7 +134,7 @@ class q extends (l = s.PureComponent) {
         }
         if (null != i) {
             var u;
-            t = (0, j.yE)(null !== (u = null == s ? void 0 : s.flags) && void 0 !== u ? u : 0, F.xjy.EMBEDDED) ? (s.type === F.IIU.WATCHING ? W.intl.formatToPlainString(W.t['M/L8oq'], { guildName: i.name }) : W.intl.formatToPlainString(W.t['4chKQk'], { guildName: i.name })) : W.intl.formatToPlainString(W.t.sddlGB, { server: i.name });
+            t = (0, P.yE)(null !== (u = null == s ? void 0 : s.flags) && void 0 !== u ? u : 0, F.xjy.EMBEDDED) ? (s.type === F.IIU.WATCHING ? W.intl.formatToPlainString(W.t['M/L8oq'], { guildName: i.name }) : W.intl.formatToPlainString(W.t['4chKQk'], { guildName: i.name })) : W.intl.formatToPlainString(W.t.sddlGB, { server: i.name });
         }
         return (
             (null == s ? void 0 : s.type) === F.IIU.HANG_STATUS && (t = W.intl.string(W.t['74vS//'])),
@@ -142,7 +142,7 @@ class q extends (l = s.PureComponent) {
                 className: G.headerContainer,
                 children: [
                     (0, r.jsx)(f.Heading, {
-                        className: c()((0, P.l)(G, 'headerText', e ? 'EmptyBody' : 'Normal')),
+                        className: c()((0, j.l)(G, 'headerText', e ? 'EmptyBody' : 'Normal')),
                         variant: l ? 'text-xs/semibold' : 'eyebrow',
                         children: (0, r.jsx)(I.Z, { children: t })
                     }),
@@ -322,7 +322,7 @@ class q extends (l = s.PureComponent) {
             : (0, r.jsx)(f.Text, {
                   title: o,
                   variant: 'text-sm/semibold',
-                  className: c()((0, P.l)(G, 'name', t.bot ? 'wrap' : 'normal')),
+                  className: c()((0, j.l)(G, 'name', t.bot ? 'wrap' : 'normal')),
                   children: u
               });
     }
@@ -532,7 +532,7 @@ class q extends (l = s.PureComponent) {
                             this.isStreamerOnTypeActivityFeed()
                                 ? null
                                 : (0, r.jsxs)(v.Z.Child, {
-                                      className: c()((0, P.l)(G, 'content', p ? 'GameImage' : null != e ? 'Images' : 'NoImages', t)),
+                                      className: c()((0, j.l)(G, 'content', p ? 'GameImage' : null != e ? 'Images' : 'NoImages', t)),
                                       children: [
                                           (0, r.jsxs)(f.Clickable, {
                                               className: c()(null != o && G.openGameProfile),

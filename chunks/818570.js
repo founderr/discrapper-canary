@@ -6,18 +6,18 @@ n.d(t, {
 var r = n(200651);
 n(192379);
 var o = n(692547),
-    i = n(390507),
-    l = n(325767);
+    l = n(390507),
+    i = n(325767);
 let a = (e) => {
     var t, n;
     let { size: a = 'md', width: s, height: c, color: u = o.Z.colors.INTERACTIVE_NORMAL, colorClass: d = '', ...m } = e,
-        p = (0, i.m)(a),
-        f = null !== (t = null == p ? void 0 : p.width) && void 0 !== t ? t : s,
-        v = null !== (n = null == p ? void 0 : p.height) && void 0 !== n ? n : c;
+        f = (0, l.m)(a),
+        p = null !== (t = null == f ? void 0 : f.width) && void 0 !== t ? t : s,
+        v = null !== (n = null == f ? void 0 : f.height) && void 0 !== n ? n : c;
     return (0, r.jsx)('svg', {
-        ...(0, l.Z)(m),
+        ...(0, i.Z)(m),
         xmlns: 'http://www.w3.org/2000/svg',
-        width: f,
+        width: p,
         height: v,
         fill: 'none',
         viewBox: '0 0 24 24',

@@ -69,7 +69,7 @@ t.Z = function (e) {
             [t]
         ),
         M = r.useCallback((e) => {
-            (0, p.O4)({ categoryId: e.toString() });
+            (0, p.pR)({ categoryId: e });
         }, []);
     if (null == x)
         return Z === s.M.FETCHING

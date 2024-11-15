@@ -3,7 +3,7 @@ n.d(t, {
         return w;
     },
     Z: function () {
-        return j;
+        return P;
     }
 });
 var i = n(200651),
@@ -49,8 +49,8 @@ function w(e) {
           })
         : null;
 }
-function j(e) {
-    let { participant: t, channel: n, inCall: a, width: o, paused: v, selected: w, fit: j, onVideoResize: P, blocked: R, noVideoRender: M = !1, pulseSpeakingIndicator: O = !1 } = e,
+function P(e) {
+    let { participant: t, channel: n, inCall: a, width: o, paused: v, selected: w, fit: P, onVideoResize: j, blocked: R, noVideoRender: M = !1, pulseSpeakingIndicator: O = !1 } = e,
         L = _.Z.getVideoComponent(),
         k = (0, s.e7)([S.default], () => S.default.getId()),
         { user: D, streamId: U, speaking: V } = t,
@@ -77,13 +77,13 @@ function j(e) {
         ? (0, i.jsx)(
               p.Z,
               {
-                  onResize: P,
+                  onResize: j,
                   wrapperClassName: b.videoWrapper,
                   className: b.content,
                   mirror: F,
                   streamId: U,
                   videoComponent: L,
-                  fit: j,
+                  fit: P,
                   paused: v,
                   videoSpinnerContext: D.id === k ? u.m.SELF_VIDEO : u.m.REMOTE_VIDEO,
                   userId: D.id

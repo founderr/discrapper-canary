@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(200651);
 n(192379);
 var o = n(120356),
-    i = n.n(o),
-    l = n(417575);
+    l = n.n(o),
+    i = n(417575);
 function a(e) {
     let { className: t, color: n } = e;
     return (0, r.jsx)('svg', {
@@ -16,7 +16,7 @@ function a(e) {
         height: '40',
         viewBox: '0 0 2 40',
         fill: 'none',
-        className: i()(l.verticalDivider, t),
+        className: l()(i.verticalDivider, t),
         children: (0, r.jsx)('path', {
             d: 'M1 0V40',
             stroke: n,

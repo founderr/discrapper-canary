@@ -31,11 +31,11 @@ var i = n(200651),
     A = n(153066),
     N = n(981631),
     w = n(388032),
-    j = n(247111);
-function P(e) {
+    P = n(247111);
+function j(e) {
     let { type: t, source: n, activity: l, applicationStream: a, user: r, guildId: s, channelId: c, onAction: d, isEmbedded: f = (0, u.Z)(l), actionColor: p } = e;
     return (0, i.jsx)(m.Z, {
-        className: (0, A.l)(j, 'actions', t),
+        className: (0, A.l)(P, 'actions', t),
         type: t,
         source: n,
         activity: l,
@@ -101,9 +101,9 @@ t.Z = function (e) {
               renderActions: o
                   ? () =>
                         (0, i.jsxs)('div', {
-                            className: r()(B && j.actionsWrapper),
+                            className: r()(B && P.actionsWrapper),
                             children: [
-                                (0, i.jsx)(P, {
+                                (0, i.jsx)(j, {
                                     ...R,
                                     applicationStream: L,
                                     activity: t,

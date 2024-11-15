@@ -32,8 +32,8 @@ var i = n(200651),
     A = n(352978),
     N = n(936847),
     w = n(512384),
-    j = n(6242),
-    P = n(757692),
+    P = n(6242),
+    j = n(757692),
     R = n(386542),
     M = n(933843),
     O = n(746599),
@@ -71,8 +71,8 @@ var i = n(200651),
     ef = n(810190);
 let ep = l.memo((e) => {
     var t, n, a, c, x;
-    let { participant: C, onDoubleClick: y, onContextMenu: X, onClick: K, onMouseDown: ea, onKeyDown: ep, className: eh, style: ev, containerStyle: eS, channel: eI, width: e_, inPopout: ex, onVideoResize: eE, inCall: eZ = !1, selected: eC = !1, noBorder: ey = !1, noVideoRender: eT = !1, focused: eb = !1, blocked: eA = !1, fit: eN = A.L.CONTAIN, paused: ew = !1, pulseSpeakingIndicator: ej = !1, forceIdle: eP = !1 } = e,
-        eR = l.useContext(V.h9) || eP,
+    let { participant: C, onDoubleClick: y, onContextMenu: X, onClick: K, onMouseDown: ea, onKeyDown: ep, className: eh, style: ev, containerStyle: eS, channel: eI, width: e_, inPopout: ex, onVideoResize: eE, inCall: eZ = !1, selected: eC = !1, noBorder: ey = !1, noVideoRender: eT = !1, focused: eb = !1, blocked: eA = !1, fit: eN = A.L.CONTAIN, paused: ew = !1, pulseSpeakingIndicator: eP = !1, forceIdle: ej = !1 } = e,
+        eR = l.useContext(V.h9) || ej,
         [eM, eO] = l.useState(!1),
         eL = U.Sb.useSetting(),
         ek = (0, o.e7)([B.default], () => B.default.isStreamInfoOverlayEnabled),
@@ -143,8 +143,8 @@ let ep = l.memo((e) => {
         { hqStreamingState: e0 } = (0, R.k)(s.q.STREAM_HIGH_QUALITY),
         e1 = (0, L.Z)(),
         e2 = e$ && eQ && null != e1,
-        e9 = (0, P.o)(C, eF),
-        e3 = (0, j.lL)('CallTile', !0, eF, e9),
+        e9 = (0, j.o)(C, eF),
+        e3 = (0, P.lL)('CallTile', !0, eF, e9),
         e7 = (0, o.e7)([F.Z], () => (C.type === eo.fO.USER && null != eW ? F.Z.getEffectForUserId(eW) : null)),
         e8 = (0, o.e7)([q.Z], () => q.Z.getVoicePlatformForChannel(eI.id, null != eW ? eW : es.lds)),
         { enableHangStatus: e4 } = Z.n.useExperiment({
@@ -255,7 +255,7 @@ let ep = l.memo((e) => {
                 width: e_,
                 blocked: eA,
                 noVideoRender: eT || eY,
-                pulseSpeakingIndicator: ej
+                pulseSpeakingIndicator: eP
             })),
                 (t_ = (0, i.jsx)(el.T, {
                     userId: C.user.id,
@@ -454,7 +454,7 @@ function eh(e) {
 }
 ep.displayName = 'CallTile';
 let eg = l.memo((e) => {
-    let { muted: t, deafened: n, localMuted: l, serverMuted: a, serverDeafened: s, idle: d, title: m, width: f, hasVideo: p, inCall: h, localVideoDisabled: v, videoToggleState: S, focused: I, blocked: _, hideAudioIcon: E, participantType: Z, participantUserId: T, onContextMenu: b, onToggleMute: A, platform: N, hangStatusActivity: w, application: j, speaking: P, secureFramesVerified: R } = e,
+    let { muted: t, deafened: n, localMuted: l, serverMuted: a, serverDeafened: s, idle: d, title: m, width: f, hasVideo: p, inCall: h, localVideoDisabled: v, videoToggleState: S, focused: I, blocked: _, hideAudioIcon: E, participantType: Z, participantUserId: T, onContextMenu: b, onToggleMute: A, platform: N, hangStatusActivity: w, application: P, speaking: j, secureFramesVerified: R } = e,
         M = null,
         O = null,
         L = null,
@@ -554,21 +554,21 @@ let eg = l.memo((e) => {
                           children: (0, i.jsx)(y.Z, {
                               hangStatusActivity: w,
                               className: ef.hangStatusIcon,
-                              animate: P
+                              animate: j
                           })
                       })
               }))
             : Z === eo.fO.USER &&
-              null != j &&
+              null != P &&
               (k = (0, i.jsx)(u.Tooltip, {
-                  text: em.intl.formatToPlainString(em.t.Sq9xJy, { game: j.name }),
+                  text: em.intl.formatToPlainString(em.t.Sq9xJy, { game: P.name }),
                   children: (e) =>
                       (0, i.jsx)('div', {
                           ...e,
                           className: r()(ef.hangStatusContainer, { [ef.hangStatusSmall]: f < 500 }),
                           children: (0, i.jsx)(x.Z, {
                               className: ef.hangStatusIcon,
-                              game: j,
+                              game: P,
                               size: x.Z.Sizes.SMALL
                           })
                       })

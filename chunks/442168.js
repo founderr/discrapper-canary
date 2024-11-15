@@ -78,7 +78,7 @@ function I(e) {
             'animate-always'
         ),
         w = (0, l.useRef)(null),
-        j = (0, o.useTransition)(
+        P = (0, o.useTransition)(
             C,
             {
                 ref: w,
@@ -136,7 +136,7 @@ function I(e) {
                 (0, i.jsx)(f.ZP, {
                     children: (0, i.jsx)('div', {
                         className: p.hidden,
-                        children: j(
+                        children: P(
                             (e, t, n, l) =>
                                 (null == t ? void 0 : t.thumbnail) != null &&
                                 (0, i.jsx)(a.animated.img, {

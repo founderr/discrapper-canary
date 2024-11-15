@@ -1,17 +1,17 @@
 var r = n(200651),
     o = n(192379),
-    i = n(120356),
-    l = n.n(i),
+    l = n(120356),
+    i = n.n(l),
     a = n(100621),
     s = n(481060),
     c = n(569379),
     u = n(642145),
     d = n(808326);
 t.Z = o.forwardRef((e, t) => {
-    let { quest: n, percentComplete: o, size: i = 42, strokeWidth: m = 3, glowBlur: p = 0.4, percentCompleteText: f, percentCompleteTextVariant: v = 'text-lg/medium', children: C } = e,
+    let { quest: n, percentComplete: o, size: l = 42, strokeWidth: m = 3, glowBlur: f = 0.4, percentCompleteText: p, percentCompleteTextVariant: v = 'text-lg/medium', children: C } = e,
         g = (0, c.E)(n, o > 0),
-        x = i / 2,
-        S = i / 2 - m / 2,
+        x = l / 2,
+        S = l / 2 - m / 2,
         E = 2 * Math.PI * S,
         h = E - o * E,
         _ = {
@@ -23,8 +23,8 @@ t.Z = o.forwardRef((e, t) => {
             strokeDashoffset: -o * E
         },
         I = { boxShadow: '0 0 30px 0px '.concat(g.glow) },
-        { progressTextAnimation: N } = (0, s.useSpring)({
-            progressTextAnimation: null != f && 1 !== o ? 1 : 0,
+        { progressTextAnimation: j } = (0, s.useSpring)({
+            progressTextAnimation: null != p && 1 !== o ? 1 : 0,
             config: u.Y
         });
     return (0, r.jsxs)('div', {
@@ -37,15 +37,15 @@ t.Z = o.forwardRef((e, t) => {
                 children: [
                     C,
                     (0, r.jsxs)(a.animated.div, {
-                        style: { opacity: N },
-                        className: l()(d.coverContent, d.progressTextWrapper),
+                        style: { opacity: j },
+                        className: i()(d.coverContent, d.progressTextWrapper),
                         children: [
-                            (0, r.jsx)('div', { className: l()(d.coverContent, d.progressTextOverlay) }),
+                            (0, r.jsx)('div', { className: i()(d.coverContent, d.progressTextOverlay) }),
                             (0, r.jsx)(s.Text, {
                                 variant: v,
                                 color: 'text-primary',
                                 className: d.progressText,
-                                children: f
+                                children: p
                             })
                         ]
                     })
@@ -53,8 +53,8 @@ t.Z = o.forwardRef((e, t) => {
             }),
             (0, r.jsxs)('svg', {
                 className: d.progressBar,
-                height: i,
-                width: i,
+                height: l,
+                width: l,
                 children: [
                     (0, r.jsxs)('defs', {
                         children: [
@@ -63,7 +63,7 @@ t.Z = o.forwardRef((e, t) => {
                                 children: [
                                     (0, r.jsx)('feGaussianBlur', {
                                         result: 'coloredBlur',
-                                        stdDeviation: p
+                                        stdDeviation: f
                                     }),
                                     (0, r.jsxs)('feMerge', {
                                         children: [(0, r.jsx)('feMergeNode', { in: 'coloredBlur' }), (0, r.jsx)('feMergeNode', { in: 'coloredBlur' }), (0, r.jsx)('feMergeNode', { in: 'coloredBlur' }), (0, r.jsx)('feMergeNode', { in: 'SourceGraphic' })]

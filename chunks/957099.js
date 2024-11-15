@@ -6,19 +6,19 @@ n.d(t, {
 var r = n(200651);
 n(192379);
 var o = n(692547),
-    i = n(390507),
-    l = n(325767);
+    l = n(390507),
+    i = n(325767);
 let a = (e) => {
     var t, n;
     let { size: a = 'md', width: s, height: c, color: u = o.Z.colors.INTERACTIVE_NORMAL, ...d } = e,
-        m = (0, i.m)(a),
-        p = null !== (t = null == m ? void 0 : m.width) && void 0 !== t ? t : s,
-        f = null !== (n = null == m ? void 0 : m.height) && void 0 !== n ? n : c;
+        m = (0, l.m)(a),
+        f = null !== (t = null == m ? void 0 : m.width) && void 0 !== t ? t : s,
+        p = null !== (n = null == m ? void 0 : m.height) && void 0 !== n ? n : c;
     return (0, r.jsxs)('svg', {
-        ...(0, l.Z)(d),
+        ...(0, i.Z)(d),
         xmlns: 'http://www.w3.org/2000/svg',
-        width: p,
-        height: f,
+        width: f,
+        height: p,
         fill: 'none',
         viewBox: '0 0 32 32',
         children: [

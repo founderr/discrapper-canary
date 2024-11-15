@@ -9,18 +9,18 @@ var i = n(200651),
     r = n(192379),
     l = n(120356),
     a = n.n(l),
-    s = n(780384),
-    o = n(481060),
-    c = n(410030),
-    d = n(355932),
+    s = n(21260),
+    o = n(780384),
+    c = n(481060),
+    d = n(410030),
     u = n(889711),
     h = n(79707),
     m = n(388032),
     p = n(116155);
 function g(e) {
     let { onTabSelect: t, tabs: n, selectedTab: l } = e,
-        d = (0, c.ZP)(),
-        u = (0, s.wj)(d),
+        s = (0, d.ZP)(),
+        u = (0, o.wj)(s),
         g = r.useMemo(
             () =>
                 null !=
@@ -31,8 +31,8 @@ function g(e) {
             [l, n]
         ),
         f = g ? 'header-primary' : u ? 'text-muted' : 'header-primary',
-        _ = g ? o.tokens.colors.HEADER_PRIMARY : u ? o.tokens.colors.TEXT_MUTED : o.tokens.colors.HEADER_PRIMARY;
-    return (0, i.jsx)(o.Popout, {
+        _ = g ? c.tokens.colors.HEADER_PRIMARY : u ? c.tokens.colors.TEXT_MUTED : c.tokens.colors.HEADER_PRIMARY;
+    return (0, i.jsx)(c.Popout, {
         renderPopout: (e) => {
             let { closePopout: r } = e;
             return (0, i.jsx)(h.Z, {
@@ -46,24 +46,24 @@ function g(e) {
         align: 'left',
         children: (e, t) => {
             let { isShown: n } = t;
-            return (0, i.jsxs)(o.TabBar.Item, {
+            return (0, i.jsxs)(c.TabBar.Item, {
                 ...e,
                 id: 'more',
                 color: 'text-muted',
                 className: a()(p.tab, p.more, { [p.selected]: g }),
                 'aria-label': m.intl.string(m.t.UKOtz8),
                 children: [
-                    (0, i.jsx)(o.Text, {
+                    (0, i.jsx)(c.Text, {
                         variant: 'text-md/medium',
                         color: f,
                         children: m.intl.string(m.t.UKOtz8)
                     }),
                     n
-                        ? (0, i.jsx)(o.ChevronSmallUpIcon, {
+                        ? (0, i.jsx)(c.ChevronSmallUpIcon, {
                               size: 'sm',
                               color: _
                           })
-                        : (0, i.jsx)(o.ChevronSmallDownIcon, {
+                        : (0, i.jsx)(c.ChevronSmallDownIcon, {
                               size: 'sm',
                               color: _
                           })
@@ -73,7 +73,7 @@ function g(e) {
     });
 }
 function f(e) {
-    let { className: t, selectedTab: n, tabs: l, onTabSelect: s, onAvailableWidthChange: c } = e,
+    let { className: t, selectedTab: n, tabs: l, onTabSelect: o, onAvailableWidthChange: d } = e,
         [h, m] = r.useState(0),
         f = r.useRef(h),
         {
@@ -81,7 +81,7 @@ function f(e) {
             onItemLayout: E,
             overflowItemsRef: I,
             itemWidthsRef: C
-        } = (0, d.zP)({
+        } = (0, s.zP)({
             items: l,
             itemGapPx: 20,
             maxLines: 1,
@@ -97,8 +97,8 @@ function f(e) {
             m(t.width), (f.current = t.width);
             let n = C.current.reduce((e, t, n) => e + t + (0 === n ? 0 : 20)),
                 i = t.width - n;
-            null == c || c(i);
-        }, [C, c]);
+            null == d || d(i);
+        }, [C, d]);
     r.useEffect(() => {
         let e = (0, u.pP)(T);
         return (0, u.YP)(e, document.body), () => (0, u.UC)(e, document.body);
@@ -113,15 +113,15 @@ function f(e) {
                 children: [
                     l.map((e, t) =>
                         (0, i.jsx)(
-                            d.AJ,
+                            s.AJ,
                             {
                                 index: t,
                                 onItemLayout: E,
-                                children: (0, i.jsx)(o.TabBar.Item, {
+                                children: (0, i.jsx)(c.TabBar.Item, {
                                     id: e.id,
                                     'aria-label': e.label,
                                     className: p.tab,
-                                    children: (0, i.jsx)(o.Text, {
+                                    children: (0, i.jsx)(c.Text, {
                                         variant: 'text-md/medium',
                                         children: e.label
                                     })
@@ -134,23 +134,23 @@ function f(e) {
                         ref: I,
                         children: (0, i.jsx)(g, {
                             tabs: S,
-                            onTabSelect: s,
+                            onTabSelect: o,
                             selectedTab: n
                         })
                     })
                 ]
             }),
             A &&
-                (0, i.jsxs)(o.TabBar, {
+                (0, i.jsxs)(c.TabBar, {
                     type: 'top',
                     look: 'brand',
                     selectedItem: n,
-                    onItemSelect: s,
+                    onItemSelect: o,
                     className: p.tabs,
                     children: [
                         v.map((e) =>
                             (0, i.jsx)(
-                                o.TabBar.Item,
+                                c.TabBar.Item,
                                 {
                                     id: e.id,
                                     'aria-label': e.label,
@@ -163,7 +163,7 @@ function f(e) {
                         0 !== S.length
                             ? (0, i.jsx)(g, {
                                   tabs: S,
-                                  onTabSelect: s,
+                                  onTabSelect: o,
                                   selectedTab: n
                               })
                             : null

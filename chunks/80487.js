@@ -3,10 +3,10 @@ var i = n(200651),
     r = n(192379),
     a = n(120356),
     l = n.n(a),
-    o = n(780384),
-    c = n(481060),
-    s = n(410030),
-    d = n(355932),
+    o = n(21260),
+    c = n(780384),
+    s = n(481060),
+    d = n(410030),
     u = n(984370),
     m = n(785195),
     f = n(889711),
@@ -15,23 +15,23 @@ var i = n(200651),
     h = n(576779);
 let p = (e) => {
         let { tabs: t, selectedTab: n, onTabSelect: r, onClose: a } = e;
-        return (0, i.jsx)(c.Menu, {
+        return (0, i.jsx)(s.Menu, {
             navId: 'member-applications-tabs-overflow-menu',
             'aria-label': x.intl.string(x.t.riPnr6),
             hideScroller: !0,
             onClose: a,
             onSelect: a,
             children: (0, i.jsx)(
-                c.MenuGroup,
+                s.MenuGroup,
                 {
                     children: t.map((e) => {
                         let { id: t, label: a } = e;
                         return (0, i.jsx)(
-                            c.MenuItem,
+                            s.MenuItem,
                             {
                                 id: t,
                                 label: a,
-                                icon: t === n ? c.CircleCheckIcon : void 0,
+                                icon: t === n ? s.CircleCheckIcon : void 0,
                                 action: () => r(t)
                             },
                             t
@@ -68,8 +68,8 @@ let p = (e) => {
     };
 function C(e) {
     let { onTabSelect: t, tabs: n, selectedTab: a } = e,
-        d = (0, s.ZP)(),
-        u = (0, o.wj)(d),
+        o = (0, d.ZP)(),
+        u = (0, c.wj)(o),
         m = r.useMemo(
             () =>
                 null !=
@@ -80,8 +80,8 @@ function C(e) {
             [a, n]
         ),
         f = m ? 'header-primary' : u ? 'text-muted' : 'header-primary',
-        b = m ? c.tokens.colors.HEADER_PRIMARY : u ? c.tokens.colors.TEXT_MUTED : c.tokens.colors.HEADER_PRIMARY;
-    return (0, i.jsx)(c.Popout, {
+        b = m ? s.tokens.colors.HEADER_PRIMARY : u ? s.tokens.colors.TEXT_MUTED : s.tokens.colors.HEADER_PRIMARY;
+    return (0, i.jsx)(s.Popout, {
         renderPopout: (e) => {
             let { closePopout: r } = e;
             return (0, i.jsx)(p, {
@@ -95,24 +95,24 @@ function C(e) {
         align: 'left',
         children: (e, t) => {
             let { isShown: n } = t;
-            return (0, i.jsxs)(c.TabBar.Item, {
+            return (0, i.jsxs)(s.TabBar.Item, {
                 ...e,
                 id: 'more',
                 color: 'text-muted',
                 className: l()(h.more, { [h.selected]: m }),
                 'aria-label': x.intl.string(x.t.UKOtz8),
                 children: [
-                    (0, i.jsx)(c.Text, {
+                    (0, i.jsx)(s.Text, {
                         variant: 'text-md/medium',
                         color: f,
                         children: x.intl.string(x.t.UKOtz8)
                     }),
                     n
-                        ? (0, i.jsx)(c.ChevronSmallUpIcon, {
+                        ? (0, i.jsx)(s.ChevronSmallUpIcon, {
                               size: 'sm',
                               color: b
                           })
-                        : (0, i.jsx)(c.ChevronSmallDownIcon, {
+                        : (0, i.jsx)(s.ChevronSmallDownIcon, {
                               size: 'sm',
                               color: b
                           })
@@ -122,16 +122,16 @@ function C(e) {
     });
 }
 t.Z = function (e) {
-    let { pendingGuildJoinRequestsTotal: t, currentTab: n, onTabItemSelect: a, showSetupTab: l, canActionJoinRequests: o, isSidebarOpen: s } = e,
+    let { pendingGuildJoinRequestsTotal: t, currentTab: n, onTabItemSelect: a, showSetupTab: l, canActionJoinRequests: c, isSidebarOpen: d } = e,
         [b, p] = r.useState(0),
         _ = r.useRef(null),
         v = r.useRef(b),
-        j = g(l, o, t),
+        j = g(l, c, t),
         {
             lastVisibleIndex: I,
             onItemLayout: T,
             overflowItemsRef: R
-        } = (0, d.zP)({
+        } = (0, o.zP)({
             items: j,
             itemGapPx: 16,
             maxLines: 1,
@@ -151,7 +151,7 @@ t.Z = function (e) {
         }, [w]),
         r.useEffect(() => {
             w();
-        }, [w, s]),
+        }, [w, d]),
         (0, i.jsx)('div', {
             ref: _,
             children: (0, i.jsxs)(u.Z, {
@@ -159,7 +159,7 @@ t.Z = function (e) {
                 toolbar: (0, i.jsx)('div', {}),
                 children: [
                     (0, i.jsx)(u.Z.Icon, {
-                        icon: (0, c.makeIconCompat)(m.Z),
+                        icon: (0, s.makeIconCompat)(m.Z),
                         disabled: !0,
                         'aria-label': x.intl.string(x.t.tcvVXF)
                     }),
@@ -176,11 +176,11 @@ t.Z = function (e) {
                                 children: [
                                     j.map((e, t) =>
                                         (0, i.jsx)(
-                                            d.AJ,
+                                            o.AJ,
                                             {
                                                 index: t,
                                                 onItemLayout: T,
-                                                children: (0, i.jsx)(c.TabBar.Item, {
+                                                children: (0, i.jsx)(s.TabBar.Item, {
                                                     id: e.id,
                                                     'aria-label': e.label,
                                                     children: e.label
@@ -199,7 +199,7 @@ t.Z = function (e) {
                                     })
                                 ]
                             }),
-                            (0, i.jsxs)(c.TabBar, {
+                            (0, i.jsxs)(s.TabBar, {
                                 'aria-label': x.intl.string(x.t.TdEu5e),
                                 selectedItem: n,
                                 type: 'top-pill',
@@ -207,7 +207,7 @@ t.Z = function (e) {
                                 children: [
                                     E.map((e) =>
                                         (0, i.jsx)(
-                                            c.TabBar.Item,
+                                            s.TabBar.Item,
                                             {
                                                 id: e.id,
                                                 'aria-label': e.label,

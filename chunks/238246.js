@@ -27,8 +27,8 @@ var i,
     A = n(151851),
     N = n(587061),
     w = n(392358),
-    j = n(314910),
-    P = n(892254),
+    P = n(314910),
+    j = n(892254),
     R = n(706454),
     M = n(210887),
     O = n(740492),
@@ -124,7 +124,7 @@ class z extends (i = a.Component) {
             });
         return (0, l.jsx)(u.VK, {
             children: (0, l.jsx)(
-                P.Z,
+                j.Z,
                 {
                     children: (0, l.jsx)(f.ThemeProvider, {
                         theme: e,
@@ -143,7 +143,7 @@ class z extends (i = a.Component) {
                                                     (0, l.jsx)(h.Wu, {
                                                         appContext: F.IlC.POPOUT,
                                                         renderWindow: g,
-                                                        children: (0, l.jsxs)(j.yP, {
+                                                        children: (0, l.jsxs)(P.yP, {
                                                             children: [
                                                                 (0, l.jsxs)('div', {
                                                                     className: G.popout,
@@ -164,7 +164,7 @@ class z extends (i = a.Component) {
                                                                 }),
                                                                 (0, l.jsx)(f.Modals, {}),
                                                                 (0, l.jsx)(p.Z, {}),
-                                                                (0, l.jsx)(j.Un, {})
+                                                                (0, l.jsx)(P.Un, {})
                                                             ]
                                                         })
                                                     })

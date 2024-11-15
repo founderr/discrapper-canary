@@ -34,8 +34,8 @@ var i = n(200651),
     A = n(442168),
     N = n(822296),
     w = n(916771),
-    j = n(792517),
-    P = n(979425),
+    P = n(792517),
+    j = n(979425),
     R = n(651183),
     M = n(623825),
     O = n(981631),
@@ -93,7 +93,7 @@ function W(e) {
         }, [F, J, n]),
         G)
     )
-        return (0, i.jsx)(P.Z, {
+        return (0, i.jsx)(j.Z, {
             stream: t.stream,
             isSmall: ee,
             selected: n,
@@ -112,7 +112,7 @@ function W(e) {
             width: R
         });
     else if (t.type === L.fO.HIDDEN_STREAM)
-        return (0, i.jsx)(j.Z, {
+        return (0, i.jsx)(P.Z, {
             selected: n,
             participant: t,
             width: R
