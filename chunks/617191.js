@@ -4,6 +4,7 @@ var r = n(524437),
     s = n(388032);
 let o = {
     getTitle: () => s.intl.string(s.t['5Qu1IS']),
+    getDisabledTitle: () => s.intl.string(s.t.YdZZtL),
     getDescription: () => s.intl.string(s.t.Vzp5BA),
     eligibleReportSubtypes: [a.i5.SUB_CSAM, a.i5.SUB_LOLI, a.i5.SUB_NCP, a.i5.SUB_SEXUALLY_DEGRADING_CONTENT, a.i5.SUB_UNSOLICITED_PORN],
     onApply: () =>

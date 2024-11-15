@@ -5,6 +5,7 @@ var r = n(106351),
     o = n(388032);
 let l = {
     getTitle: () => o.intl.string(o.t.vJOqMD),
+    getDisabledTitle: () => o.intl.string(o.t.B5ZvY2),
     getDescription: () => o.intl.string(o.t['43UEUl']),
     eligibleReportSubtypes: [s.i5.SUB_SPAM],
     eligibleChannelTypes: [r.d.DM, r.d.GROUP_DM],
