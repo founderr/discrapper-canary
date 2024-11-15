@@ -612,6 +612,9 @@ n.r(t),
         ExpandGifIcon: function () {
             return tC.alO;
         },
+        ExperimentalImageBrokenIcon: function () {
+            return tC.svv;
+        },
         ExperimentalLootboxIcon: function () {
             return tC.Q4k;
         },
