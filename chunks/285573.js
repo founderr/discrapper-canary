@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(984933),
     h = n(496675),
     p = n(98597),
-    f = n(473403),
-    m = n(981631),
+    m = n(473403),
+    f = n(981631),
     g = n(490897),
     C = n(872356);
 let _ = (0, c.B)(function (e) {
@@ -21,7 +21,7 @@ let _ = (0, c.B)(function (e) {
         }),
         N = (0, o.e7)([u.Z], () => u.Z.getChannel(null == Z ? void 0 : Z.parent_id)),
         y = r === (null == Z ? void 0 : Z.id),
-        T = (0, o.e7)([h.Z], () => (null != N ? h.Z.can(m.Plq.MANAGE_CHANNELS, N) : null != t && h.Z.can(m.Plq.MANAGE_CHANNELS, t))),
+        T = (0, o.e7)([h.Z], () => (null != N ? h.Z.can(f.Plq.MANAGE_CHANNELS, N) : null != t && h.Z.can(f.Plq.MANAGE_CHANNELS, t))),
         j = l.useCallback(
             (e) => {
                 null != Z &&
@@ -39,13 +39,13 @@ let _ = (0, c.B)(function (e) {
     if (null == Z) return null;
     let A = (0, p.jo)(c, I),
         P = (0, p.CN)(Z, v, x),
-        M = (0, i.jsx)('div', {
+        R = (0, i.jsx)('div', {
             className: a()(A, {
                 [C.disabled]: P,
                 [C.selected]: y
             }),
             'data-dnd-name': Z.name,
-            children: (0, i.jsxs)(f.Z, {
+            children: (0, i.jsxs)(m.Z, {
                 className: C.iconVisibility,
                 channel: Z,
                 guild: t,
@@ -66,6 +66,6 @@ let _ = (0, c.B)(function (e) {
                 ]
             })
         });
-    return T && (M = E(b(M))), M;
+    return T && (R = E(b(R))), R;
 });
 t.Z = _;

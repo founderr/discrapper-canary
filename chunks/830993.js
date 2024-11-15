@@ -16,8 +16,8 @@ var i = n(200651),
     d = n(471445),
     h = n(430824),
     p = n(496675),
-    f = n(158776),
-    m = n(979651),
+    m = n(158776),
+    f = n(979651),
     g = n(823379),
     C = n(355363),
     _ = n(449932),
@@ -29,7 +29,7 @@ var i = n(200651),
     S = n(289223);
 function Z(e) {
     var t, d;
-    let { channel: h, guild: p, onAction: m, voiceStates: C, isChannelSelected: v, shouldShowSettingNudge: x } = e;
+    let { channel: h, guild: p, onAction: f, voiceStates: C, isChannelSelected: v, shouldShowSettingNudge: x } = e;
     !(function (e, t) {
         let n = l.useMemo(() => {
             var n;
@@ -53,12 +53,12 @@ function Z(e) {
         y = null !== (t = null == C ? void 0 : C.filter(g.lm)) && void 0 !== t ? t : [],
         T = (e) => (t) => ([b.IIU.PLAYING, b.IIU.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId)) || t.type === b.IIU.LISTENING,
         j = (0, r.e7)(
-            [f.Z],
+            [m.Z],
             () => {
                 let e = {};
                 return (
                     y.forEach((t) => {
-                        let n = f.Z.findActivity(t.user.id, T(t));
+                        let n = m.Z.findActivity(t.user.id, T(t));
                         if (null != n && !(0, u.Z)(n)) {
                             var i, l, r, a;
                             let o = ''.concat(null !== (l = n.application_id) && void 0 !== l ? l : '', ':').concat(null !== (r = null === (i = n.party) || void 0 === i ? void 0 : i.id) && void 0 !== r ? r : t.user.id),
@@ -97,7 +97,7 @@ function Z(e) {
                               embeddedApp: e,
                               presenceActivity: null !== (n = e.presenceActivity) && void 0 !== n ? n : void 0,
                               channel: h,
-                              onAction: m
+                              onAction: f
                           },
                           t
                       );
@@ -110,7 +110,7 @@ function Z(e) {
                               presenceActivity: l,
                               channel: h,
                               members: n,
-                              onAction: m
+                              onAction: f
                           },
                           t
                       );
@@ -146,7 +146,7 @@ function Z(e) {
 function N(e) {
     let { channel: t, isChannelSelected: n, voiceStatesCount: l } = e,
         a = (0, r.e7)([p.Z], () => !p.Z.can(b.Plq.CONNECT, t)),
-        o = (0, r.e7)([m.Z], () => m.Z.hasVideo(t.id)),
+        o = (0, r.e7)([f.Z], () => f.Z.hasVideo(t.id)),
         s = (0, C.ZP)({
             channel: t,
             locked: a,

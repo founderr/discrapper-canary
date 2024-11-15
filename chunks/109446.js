@@ -15,8 +15,8 @@ var i = n(200651),
     d = n(601070),
     h = n(91159),
     p = n(488131),
-    f = n(496675),
-    m = n(306680),
+    m = n(496675),
+    f = n(306680),
     g = n(594174),
     C = n(768581),
     _ = n(709054),
@@ -26,16 +26,16 @@ var i = n(200651),
     b = n(462397);
 function E(e) {
     let { channel: t } = e,
-        r = (0, o.Wu)([d.Z, m.ZP, f.Z], () => {
+        r = (0, o.Wu)([d.Z, f.ZP, m.Z], () => {
             let e = d.Z.getActiveJoinedRelevantThreadsForParent(t.guild_id, t.id);
             return a()(d.Z.getActiveJoinedThreadsForParent(t.guild_id, t.id))
                 .values()
                 .map((e) => e.channel)
                 .concat(a().values(d.Z.getActiveUnjoinedThreadsForParent(t.guild_id, t.id)))
-                .filter((t) => !(t.id in e) && f.Z.can(v.Plq.VIEW_CHANNEL, t))
+                .filter((t) => !(t.id in e) && m.Z.can(v.Plq.VIEW_CHANNEL, t))
                 .sort((e, t) => {
-                    let n = m.ZP.lastMessageId(e.id),
-                        i = m.ZP.lastMessageId(t.id);
+                    let n = f.ZP.lastMessageId(e.id),
+                        i = f.ZP.lastMessageId(t.id);
                     return _.default.compare(n, i);
                 })
                 .reverse()

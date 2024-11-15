@@ -17,8 +17,8 @@ var i,
     d = n(215569),
     h = n(481060),
     p = n(812206),
-    f = n(707409),
-    m = n(703656),
+    m = n(707409),
+    f = n(703656),
     g = n(417363),
     C = n(941128),
     _ = n(780570),
@@ -41,54 +41,54 @@ function E(e, t, n) {
 }
 let S = {
     [x.vxO.INSTALLING]: {
-        [f.J6.NONE]: (e, t) => I.intl.formatToPlainString(I.t['p+2sEx'], { name: e }),
-        [f.J6.SECONDS]: (e, t) =>
+        [m.J6.NONE]: (e, t) => I.intl.formatToPlainString(I.t['p+2sEx'], { name: e }),
+        [m.J6.SECONDS]: (e, t) =>
             I.intl.formatToPlainString(I.t['/0NgPD'], {
                 name: e,
                 timeRemaining: t
             }),
-        [f.J6.MINUTES]: (e, t) =>
+        [m.J6.MINUTES]: (e, t) =>
             I.intl.formatToPlainString(I.t.ZIwMzs, {
                 name: e,
                 timeRemaining: t
             }),
-        [f.J6.HOURS]: (e, t) =>
+        [m.J6.HOURS]: (e, t) =>
             I.intl.formatToPlainString(I.t['3IQDUl'], {
                 name: e,
                 timeRemaining: t
             })
     },
     [x.vxO.UPDATING]: {
-        [f.J6.NONE]: (e, t) => I.intl.formatToPlainString(I.t['6F9QzM'], { name: e }),
-        [f.J6.SECONDS]: (e, t) =>
+        [m.J6.NONE]: (e, t) => I.intl.formatToPlainString(I.t['6F9QzM'], { name: e }),
+        [m.J6.SECONDS]: (e, t) =>
             I.intl.formatToPlainString(I.t['2OVgVl'], {
                 name: e,
                 timeRemaining: t
             }),
-        [f.J6.MINUTES]: (e, t) =>
+        [m.J6.MINUTES]: (e, t) =>
             I.intl.formatToPlainString(I.t.mgQg1N, {
                 name: e,
                 timeRemaining: t
             }),
-        [f.J6.HOURS]: (e, t) =>
+        [m.J6.HOURS]: (e, t) =>
             I.intl.formatToPlainString(I.t['aTdq4+'], {
                 name: e,
                 timeRemaining: t
             })
     },
     [x.vxO.REPAIRING]: {
-        [f.J6.NONE]: (e, t) => I.intl.formatToPlainString(I.t['p+2sEx'], { name: e }),
-        [f.J6.SECONDS]: (e, t) =>
+        [m.J6.NONE]: (e, t) => I.intl.formatToPlainString(I.t['p+2sEx'], { name: e }),
+        [m.J6.SECONDS]: (e, t) =>
             I.intl.formatToPlainString(I.t['/0NgPD'], {
                 name: e,
                 timeRemaining: t
             }),
-        [f.J6.MINUTES]: (e, t) =>
+        [m.J6.MINUTES]: (e, t) =>
             I.intl.formatToPlainString(I.t.ZIwMzs, {
                 name: e,
                 timeRemaining: t
             }),
-        [f.J6.HOURS]: (e, t) =>
+        [m.J6.HOURS]: (e, t) =>
             I.intl.formatToPlainString(I.t['3IQDUl'], {
                 name: e,
                 timeRemaining: t
@@ -123,7 +123,7 @@ class Z extends r.PureComponent {
                     c = 0 !== s ? Math.max(1, (a - r) / s) : null,
                     u = S[o],
                     d = null != u ? Object.keys(u) : [],
-                    { unit: h, time: p } = (0, f.CI)(null != c ? c / 60 : null, d);
+                    { unit: h, time: p } = (0, m.CI)(null != c ? c / 60 : null, d);
                 if (null != u && null != h) {
                     let e = u[h];
                     return null != e ? e(i.name, p) : null;
@@ -189,7 +189,7 @@ class N extends (i = r.PureComponent) {
             E(this, 'state', { animationScale: new s.Z.Value(0) }),
             E(this, 'handleOnClick', (e) => {
                 let { onClick: t } = this.props;
-                e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, m.uL)(x.Z5c.APPLICATION_LIBRARY);
+                e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, f.uL)(x.Z5c.APPLICATION_LIBRARY);
             });
     }
 }

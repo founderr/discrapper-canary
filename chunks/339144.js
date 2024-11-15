@@ -17,8 +17,8 @@ var i = n(200651),
     d = n(311352),
     h = n(803647),
     p = n(131704),
-    f = n(626135),
-    m = n(870569),
+    m = n(626135),
+    f = n(870569),
     g = n(981631),
     C = n(388032),
     _ = n(900087);
@@ -31,10 +31,10 @@ let x = l.memo(function (e) {
         c,
         x,
         { stream: I, canGoLive: b, guildId: E, isStreaming: S, channel: Z, canStream: N, runningGame: y, embeddedActivity: T, activity: j, application: A, analyticsContext: P } = e,
-        M = v(A, j, T),
-        R = l.useCallback(() => {
+        R = v(A, j, T),
+        M = l.useCallback(() => {
             a()(null != j, 'Received null activity'),
-                f.default.track(g.rMx.OPEN_MODAL, {
+                m.default.track(g.rMx.OPEN_MODAL, {
                     type: 'Send Join Invite',
                     application_id: j.application_id,
                     location: P.location
@@ -73,7 +73,7 @@ let x = l.memo(function (e) {
                 ? (S ? ((t = !1), (r = w), (c = o.ScreenXIcon), (x = C.intl.string(C.t.S5anIS))) : N ? ((t = !1), (r = D), (c = o.ScreenArrowIcon), (x = null != y ? C.intl.formatToPlainString(C.t.AB5gT0, { game: y.name }) : C.intl.string(C.t.FeUKeH))) : ((t = !0), (r = null), (c = o.ScreenArrowIcon), (x = null != Z && (0, p.vd)(Z.type) ? C.intl.string(C.t.uQn9Bw) : null != E ? C.intl.string(C.t.fBXEoK) : C.intl.string(C.t.n3feND))),
                   (0, i.jsx)('div', {
                       className: _.panelButtonContainer,
-                      children: (0, i.jsx)(m.Z, {
+                      children: (0, i.jsx)(f.Z, {
                           tooltipText: x,
                           disabled: t,
                           onClick: r,
@@ -82,17 +82,17 @@ let x = l.memo(function (e) {
                   }))
                 : null,
         k =
-            M && null == T
-                ? (0, i.jsx)(m.Z, {
+            R && null == T
+                ? (0, i.jsx)(f.Z, {
                       tooltipText: C.intl.string(C.t['hC/Ze3']),
-                      onClick: R,
+                      onClick: M,
                       icon: o.GroupPlusIcon
                   })
                 : null,
         U =
             null == T || null == Z
                 ? null
-                : (0, i.jsx)(m.Z, {
+                : (0, i.jsx)(f.Z, {
                       tooltipText: C.intl.string(C.t['R/FK4O']),
                       onClick: L(T.applicationId, Z),
                       icon: o.DoorExitIcon

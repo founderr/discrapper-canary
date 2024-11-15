@@ -10,8 +10,8 @@ var i = n(200651),
     d = n(695346),
     h = n(768581),
     p = n(358555),
-    f = n(981631),
-    m = n(647086),
+    m = n(981631),
+    f = n(647086),
     g = n(388032),
     C = n(501223);
 function _(e) {
@@ -50,7 +50,7 @@ function _(e) {
 function v(e) {
     let { guild: t, controller: n, hasBanner: l, hasSubheader: r } = e,
         { value: s } = n.springs,
-        u = t.hasFeature(f.oNc.DISCOVERABLE),
+        u = t.hasFeature(m.oNc.DISCOVERABLE),
         d = (0, i.jsx)('div', {
             className: C.communityInfo,
             children:
@@ -100,12 +100,12 @@ function x() {
     });
 }
 t.ZP = l.memo(function (e) {
-    let { bannerVisible: t, controller: n, className: r, onClick: o, onContextMenu: I, onMouseDown: b, disableBannerAnimation: E, 'aria-expanded': S, 'aria-controls': Z, guild: N, guildBanner: y, animationOverlayHeight: T, children: j, headerClassName: A, communityInfoVisible: P, hasSubheader: M } = e,
-        R = N.hasFeature(f.oNc.ANIMATED_BANNER),
+    let { bannerVisible: t, controller: n, className: r, onClick: o, onContextMenu: I, onMouseDown: b, disableBannerAnimation: E, 'aria-expanded': S, 'aria-controls': Z, guild: N, guildBanner: y, animationOverlayHeight: T, children: j, headerClassName: A, communityInfoVisible: P, hasSubheader: R } = e,
+        M = N.hasFeature(m.oNc.ANIMATED_BANNER),
         L = (0, u.Z)(N),
         w = !L && N.hasCommunityInfoSubheader(),
         D = !L && P,
-        O = (0, h.xR)(y) && R && !E,
+        O = (0, h.xR)(y) && M && !E,
         [k, U] = l.useState(!1),
         G = l.useRef(),
         B = l.useRef(null),
@@ -131,7 +131,7 @@ t.ZP = l.memo(function (e) {
         return null != n && !t;
     };
     return (0, i.jsx)(c.ThemeProvider, {
-        theme: t ? f.BRd.DARK : void 0,
+        theme: t ? m.BRd.DARK : void 0,
         children: (e) => {
             var l;
             return (0, i.jsxs)(i.Fragment, {
@@ -145,7 +145,7 @@ t.ZP = l.memo(function (e) {
                             [C.hasBanner]: F(),
                             [C.bannerVisible]: t,
                             [e]: t,
-                            [C.communityInfoVisible]: D || (M && w)
+                            [C.communityInfoVisible]: D || (R && w)
                         }),
                         onMouseDown: b,
                         onContextMenu: I,
@@ -161,7 +161,7 @@ t.ZP = l.memo(function (e) {
                                                 guild: N,
                                                 isBannerVisible: t
                                             }),
-                                            N.id === m._ && (0, i.jsx)(x, {}),
+                                            N.id === f._ && (0, i.jsx)(x, {}),
                                             (0, i.jsx)(c.Heading, {
                                                 variant: 'text-md/semibold',
                                                 lineClamp: 1,
@@ -192,7 +192,7 @@ t.ZP = l.memo(function (e) {
                                             guild: N,
                                             controller: n,
                                             hasBanner: null != y,
-                                            hasSubheader: null != M && M
+                                            hasSubheader: null != R && R
                                         })
                                 ]
                             }),

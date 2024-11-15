@@ -1,6 +1,6 @@
 n.d(t, {
     $p: function () {
-        return e9;
+        return e6;
     },
     BB: function () {
         return e2;
@@ -870,7 +870,7 @@ eQ(e2, 'defaultProps', {
     renderEmbeds: !0,
     compact: !1
 });
-let e9 = (e) => {
+let e6 = (e) => {
     var t;
     let { message: n, channel: i, disableReactionReads: l = !1, renderComponentAccessory: a = !1, renderThreadAccessory: o = !1, disableReactionCreates: s = !0, disableReactionUpdates: c = !0, isSearchResult: u = !1, ...d } = e,
         m = eu.x4.useSetting(),

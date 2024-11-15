@@ -23,8 +23,8 @@ var i = n(200651),
     d = n(239091),
     h = n(146773),
     p = n(82295),
-    f = n(111028),
-    m = n(680089),
+    m = n(111028),
+    f = n(680089),
     g = n(430824),
     C = n(496675),
     _ = n(9156),
@@ -40,13 +40,13 @@ let Z = l.memo(function (e) {
     let t,
         { channel: r, connectChannelDragSource: h, connectChannelDropTarget: v, disableManageChannels: x, position: Z, sortingPosition: N, hideIcon: y, children: T } = e,
         j = (0, s.e7)([_.ZP], () => _.ZP.isChannelMuted(r.getGuildId(), r.id)),
-        A = (0, s.e7)([m.Z], () => m.Z.isCollapsed(r.id)),
+        A = (0, s.e7)([f.Z], () => f.Z.isCollapsed(r.id)),
         P = (0, s.e7)([C.Z], () => C.Z.can(I.Plq.MANAGE_CHANNELS, r));
     t = null != N ? (Z > N ? E.containerDragAfter : E.containerDragBefore) : E.containerDefault;
-    let M = l.useCallback(() => {
+    let R = l.useCallback(() => {
             A ? (0, u.mJ)(r.id) : (0, u.c4)(r.id);
         }, [r.id, A]),
-        R = l.useCallback(
+        M = l.useCallback(
             (e) => {
                 if ('null' !== r.id) {
                     let t = g.Z.getGuild(r.getGuildId());
@@ -100,14 +100,14 @@ let Z = l.memo(function (e) {
                             [E.muted]: j,
                             [E.clickable]: !0
                         }),
-                        onContextMenu: R,
+                        onContextMenu: M,
                         children: [
                             (0, i.jsxs)(c.Clickable, {
                                 innerRef: k,
                                 className: E.mainContent,
                                 tabIndex: D,
                                 ...O,
-                                onClick: M,
+                                onClick: R,
                                 'aria-label': b.intl.formatToPlainString(b.t.y5l3Jy, { categoryName: r.name }),
                                 'aria-expanded': !A,
                                 focusProps: { enabled: !1 },
@@ -121,7 +121,7 @@ let Z = l.memo(function (e) {
                                           }),
                                     (0, i.jsx)(p.Z, {
                                         className: E.name,
-                                        children: (0, i.jsx)(f.Z, { children: r.name })
+                                        children: (0, i.jsx)(m.Z, { children: r.name })
                                     })
                                 ]
                             }),
@@ -181,7 +181,7 @@ let N = l.memo(function (e) {
                         className: E.mainContent,
                         children: (0, i.jsx)(p.Z, {
                             className: E.name,
-                            children: (0, i.jsx)(f.Z, { children: t })
+                            children: (0, i.jsx)(m.Z, { children: t })
                         })
                     }),
                     null != n
@@ -252,7 +252,7 @@ let N = l.memo(function (e) {
                           className: a()(E.iconVisibility, E.wrapperStatic),
                           children: (0, i.jsx)(p.Z, {
                               className: E.name,
-                              children: (0, i.jsx)(f.Z, { children: b.intl.string(b.t['V/u9Dw']) })
+                              children: (0, i.jsx)(m.Z, { children: b.intl.string(b.t['V/u9Dw']) })
                           })
                       })
                   })
@@ -267,7 +267,7 @@ let N = l.memo(function (e) {
                 className: a()(E.iconVisibility, E.wrapperStatic),
                 children: (0, i.jsx)(p.Z, {
                     className: E.name,
-                    children: (0, i.jsx)(f.Z, { children: t.name })
+                    children: (0, i.jsx)(m.Z, { children: t.name })
                 })
             })
         });

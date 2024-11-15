@@ -195,7 +195,7 @@ function U(e) {
 }
 function V(e) {
     let { subscription: t, renewalInvoicePreview: n, className: s, fractionalPremiumInfo: r } = e,
-        a = (0, u.e7)([N.Z], () => N.Z.getUnactivatedFractionalPremiumUnits());
+        a = (0, u.Wu)([N.Z], () => N.Z.getUnactivatedFractionalPremiumUnits());
     return (0, i.jsxs)('div', {
         className: l()(F.billingInformation, s),
         children: [

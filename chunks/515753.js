@@ -18,8 +18,8 @@ var i = n(200651),
     d = n(873546),
     h = n(442837),
     p = n(481060),
-    f = n(493683),
-    m = n(239091),
+    m = n(493683),
+    f = n(239091),
     g = n(420660),
     C = n(385499),
     _ = n(570908),
@@ -36,8 +36,8 @@ var i = n(200651),
     j = n(93687),
     A = n(785232),
     P = n(878857),
-    M = n(249978),
-    R = n(518950),
+    R = n(249978),
+    M = n(518950),
     L = n(199902),
     w = n(158776),
     D = n(306680),
@@ -84,10 +84,10 @@ let z = B.ZP.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar,
         });
 class Q extends l.Component {
     render() {
-        let { route: e, selected: t, icon: n, iconClassName: l, avatarWithTextClassName: r, interactiveClassName: o, text: s, children: u, locationState: h, onClick: f, className: m, role: g, 'aria-posinset': C, 'aria-setsize': v, ...x } = this.props;
+        let { route: e, selected: t, icon: n, iconClassName: l, avatarWithTextClassName: r, interactiveClassName: o, text: s, children: u, locationState: h, onClick: m, className: f, role: g, 'aria-posinset': C, 'aria-setsize': v, ...x } = this.props;
         return (0, i.jsx)(N.Z, {
-            className: a()(W.channel, { [W.fullWidth]: d.tq }, m),
-            onClick: f,
+            className: a()(W.channel, { [W.fullWidth]: d.tq }, f),
+            onClick: m,
             role: g,
             focusProps: {
                 within: !0,
@@ -125,7 +125,7 @@ class Q extends l.Component {
     }
 }
 function J(e) {
-    let { channel: t, isGDMFacepileEnabled: r, selected: o = !1, user: d, activities: S, applicationStream: j, entry: M, isTyping: L, status: w, isMobile: O, 'aria-posinset': U, 'aria-setsize': G } = e,
+    let { channel: t, isGDMFacepileEnabled: r, selected: o = !1, user: d, activities: S, applicationStream: j, entry: R, isTyping: L, status: w, isMobile: O, 'aria-posinset': U, 'aria-setsize': G } = e,
         [B, Q] = l.useState(!1),
         J = l.useRef(null),
         X = l.useRef(null),
@@ -133,7 +133,7 @@ function J(e) {
             avatarSrc: $,
             avatarDecorationSrc: ee,
             eventHandlers: et
-        } = (0, R.Z)({
+        } = (0, M.Z)({
             user: d,
             size: p.AvatarSizes.SIZE_32,
             animateOnHover: !(o || B)
@@ -150,10 +150,10 @@ function J(e) {
         },
         es = function (e) {
             let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            null != e && (e.preventDefault(), e.stopPropagation()), f.Z.closePrivateChannel(t.id, o, n);
+            null != e && (e.preventDefault(), e.stopPropagation()), m.Z.closePrivateChannel(t.id, o, n);
         },
         ec = () => {
-            f.Z.preload(V.ME, t.id);
+            m.Z.preload(V.ME, t.id);
         },
         eu = (e) => {
             e.stopPropagation();
@@ -166,7 +166,7 @@ function J(e) {
         },
         eh = (e) => {
             t.isMultiUserDM()
-                ? (0, m.jW)(
+                ? (0, f.jW)(
                       e,
                       async () => {
                           let { default: e } = await Promise.all([n.e('79695'), n.e('25421')]).then(n.bind(n, 354741));
@@ -179,7 +179,7 @@ function J(e) {
                       },
                       { noBlurEvent: !0 }
                   )
-                : (0, m.jW)(e, async () => {
+                : (0, f.jW)(e, async () => {
                       let { default: e } = await Promise.all([n.e('79695'), n.e('92453'), n.e('56826'), n.e('29212')]).then(n.bind(n, 131404));
                       return (n) =>
                           (0, i.jsx)(e, {
@@ -206,7 +206,7 @@ function J(e) {
                         });
                 });
         },
-        ef = () => {
+        em = () => {
             let e = {
                 className: W.activity,
                 textClassName: W.activityText,
@@ -231,14 +231,14 @@ function J(e) {
                           hideTooltip: !0,
                           user: d
                       })
-                    : null != M
+                    : null != R
                       ? (0, i.jsx)(Z.Z, {
                             ...e,
-                            entry: M
+                            entry: R
                         })
                       : null;
         },
-        em = () => {
+        ef = () => {
             let e = p.AvatarSizes.SIZE_32;
             if (t.isMultiUserDM())
                 return t.recipients.length >= 2 && r && null == t.icon
@@ -331,11 +331,11 @@ function J(e) {
                             }),
                             ...l,
                             children: (0, i.jsx)(_.Z, {
-                                avatar: em(),
+                                avatar: ef(),
                                 selected: o,
                                 highlighted: ei,
                                 muted: null != en && en,
-                                subText: ef(),
+                                subText: em(),
                                 name: (0, i.jsx)(y.Z, {
                                     tooltipClassName: W.overflowTooltip,
                                     children: ev
@@ -401,8 +401,8 @@ t.ZP = (e) => {
             },
             [t, r, o]
         ),
-        { recentActivityStatusEnabled: p } = (0, M.U)({ location: 'PrivateChannel' }),
-        f = (0, S.Z)(null == r ? void 0 : r.id);
+        { recentActivityStatusEnabled: p } = (0, R.U)({ location: 'PrivateChannel' }),
+        m = (0, S.Z)(null == r ? void 0 : r.id);
     return t.isMultiUserDM()
         ? (0, i.jsx)(J, {
               channel: t,
@@ -416,7 +416,7 @@ t.ZP = (e) => {
               channel: t,
               selected: n,
               user: r,
-              entry: p ? f[0] : void 0,
+              entry: p ? m[0] : void 0,
               isTyping: d,
               ...l,
               ...u

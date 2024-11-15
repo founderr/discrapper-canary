@@ -57,7 +57,7 @@ function f(e) {
             }),
             (0, i.jsxs)(c.Z, {
                 children: [
-                    (0, i.jsx)(a.KY, {
+                    (0, i.jsx)(a.K, {
                         location: 'global_discovery',
                         query: t
                     }),

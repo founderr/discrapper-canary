@@ -10,8 +10,8 @@ var i,
     d = n(358221),
     h = n(43267),
     p = n(933557),
-    f = n(93687),
-    m = n(266076),
+    m = n(93687),
+    f = n(266076),
     g = n(199902),
     C = n(19780),
     _ = n(306680),
@@ -116,14 +116,14 @@ class P extends (i = r.PureComponent) {
     }
     render() {
         let { channel: e, channelName: t, selected: n, badge: i, audio: r, video: s, stream: u, isCurrentUserInThisDMCall: d, unread: h, isGDMFacepileEnabled: p } = this.props,
-            { hovered: f, animating: g } = this.state,
+            { hovered: m, animating: g } = this.state,
             C = e.isMultiUserDM() && null == e.icon && p;
         return (0, l.jsx)(a.animated.div, {
             style: this.getAnimatedStyle(),
             children: (0, l.jsxs)(E.H, {
                 children: [
                     (0, l.jsx)(b.Z, {
-                        hovered: !g && f,
+                        hovered: !g && m,
                         selected: !g && n,
                         unread: !g && h,
                         className: y.pill
@@ -132,7 +132,7 @@ class P extends (i = r.PureComponent) {
                         text: null != t ? t : '',
                         selected: n,
                         children: (0, l.jsx)(c.BlobMask, {
-                            selected: n || f,
+                            selected: n || m,
                             lowerBadge: i > 0 ? (0, Z.Ne)(i) : null,
                             upperBadge: (0, Z.Or)({
                                 audio: r,
@@ -148,13 +148,13 @@ class P extends (i = r.PureComponent) {
                                         to: N.Z5c.CHANNEL(N.ME, e.id),
                                         onMouseEnter: () => this.setState({ hovered: !0 }),
                                         onMouseLeave: () => this.setState({ hovered: !1 }),
-                                        selected: n || f,
+                                        selected: n || m,
                                         ariaLabel: null != t ? t : '',
                                         onContextMenu: this.handleContextMenu,
                                         icon: C ? void 0 : this.getChannelIcon(),
                                         backgroundStyle: C ? 'on-hover' : 'always',
                                         children: C
-                                            ? (0, l.jsx)(m.Z, {
+                                            ? (0, l.jsx)(f.Z, {
                                                   channel: e,
                                                   size: c.AvatarSizes.SIZE_48,
                                                   facepileSizeOverride: c.AvatarSizes.SIZE_32,
@@ -222,12 +222,12 @@ T(P, 'defaultProps', {
             o = (0, s.e7)([g.Z], () => g.Z.getAllApplicationStreamsForChannel(n).length > 0),
             c = (0, s.e7)([v.Z], () => v.Z.getChannelId(), []),
             u = (0, s.e7)([_.ZP], () => _.ZP.getMentionCount(n), [n]),
-            { isFacepileEnabled: h } = f.Z.useExperiment({ location: 'unread_direct_message' }, { autoTrackExposure: !1 }),
-            m = r === n,
+            { isFacepileEnabled: h } = m.Z.useExperiment({ location: 'unread_direct_message' }, { autoTrackExposure: !1 }),
+            f = r === n,
             x = !1,
             I = !1;
         return (
-            m && ((x = a === N.WtW.VOICE), (I = a === N.WtW.VIDEO)),
+            f && ((x = a === N.WtW.VOICE), (I = a === N.WtW.VIDEO)),
             (0, l.jsx)(P, {
                 ...e,
                 ref: t,
@@ -238,7 +238,7 @@ T(P, 'defaultProps', {
                 audio: x,
                 video: I,
                 stream: o,
-                isCurrentUserInThisDMCall: m,
+                isCurrentUserInThisDMCall: f,
                 isGDMFacepileEnabled: h
             })
         );

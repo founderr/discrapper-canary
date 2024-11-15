@@ -18,8 +18,8 @@ var i = n(200651),
     d = n(481060),
     h = n(239091),
     p = n(100527),
-    f = n(367907),
-    m = n(906732),
+    m = n(367907),
+    f = n(906732),
     g = n(434404),
     C = n(496675),
     _ = n(259580),
@@ -57,36 +57,36 @@ let T = (0, x.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
     },
     A = 57,
     P = 57 + T,
-    M = {
+    R = {
         tension: 180,
         friction: 80
     };
 t.ZP = (e) => {
     let { guild: t, withMargin: n } = e,
-        { analyticsLocations: r } = (0, m.ZP)(p.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY),
+        { analyticsLocations: r } = (0, f.ZP)(p.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY),
         { premiumSubscriberCount: u, id: g } = t,
         x = (0, v.rF)(u, g),
         T = (0, v.FZ)(x, t.id),
         A = null == T,
         P = null != T ? T : x,
-        R = (0, c.e7)([b.Z], () => {
+        M = (0, c.e7)([b.Z], () => {
             var e;
             return null !== (e = b.Z.getCountForGuild(g)) && void 0 !== e ? e : 0;
         }),
         L = (0, c.e7)([C.Z], () => C.Z.can(Z.Plq.MANAGE_GUILD, t));
     l.useEffect(() => {
-        R !== u && (0, I.v)(g, u);
-    }, [g, R, u]);
+        M !== u && (0, I.v)(g, u);
+    }, [g, M, u]);
     let w = ''.concat(Math.min(100, (u / (0, v.vn)(t.id)[P]) * 100), '%'),
         { current: D } = l.useRef(w),
         O = {
-            from: { width: R === u ? D : '0%' },
+            from: { width: M === u ? D : '0%' },
             to: { width: w },
-            config: M
+            config: R
         },
         [k, U] = (0, d.useSpring)(() => O),
         G = () => {
-            (0, f.yw)(Z.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
+            (0, m.yw)(Z.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                 location: { section: Z.jXE.PREMIUM_GUILD_PROGRESS_BAR },
                 guild_id: g,
                 location_stack: r

@@ -10,8 +10,8 @@ var i = n(200651),
     d = n(475179),
     h = n(925549),
     p = n(438139),
-    f = n(730749),
-    m = n(607070),
+    m = n(730749),
+    f = n(607070),
     g = n(566620),
     C = n(317381),
     _ = n(835473),
@@ -28,8 +28,8 @@ var i = n(200651),
     j = n(690221),
     A = n(231664),
     P = n(759198),
-    M = n(131704),
-    R = n(199902),
+    R = n(131704),
+    M = n(199902),
     L = n(314897),
     w = n(592125),
     D = n(984933),
@@ -151,7 +151,7 @@ class ee extends l.PureComponent {
                                 children: t.name
                             })
                         }),
-                        (0, M.Qm)(l.type) ? c : (0, i.jsx)($, { timestamps: o })
+                        (0, R.Qm)(l.type) ? c : (0, i.jsx)($, { timestamps: o })
                     ]
                 })
             ]
@@ -177,7 +177,7 @@ class ee extends l.PureComponent {
             (i = () => {
                 var e;
                 let { channel: t, embeddedActivity: n } = this.props;
-                s()(null != t, 'Channel is null during navigation click'), s()(null != n, 'Activity null during navigation click'), (0, M.vd)(t.type) && d.Z.selectParticipant(t.id, n.applicationId), h.Z.channelListScrollTo(null !== (e = t.guild_id) && void 0 !== e ? e : Q.ME, t.id), (0, M.Qm)(t.type) && (0, g.tg)(J.Ez.PANEL);
+                s()(null != t, 'Channel is null during navigation click'), s()(null != n, 'Activity null during navigation click'), (0, R.vd)(t.type) && d.Z.selectParticipant(t.id, n.applicationId), h.Z.channelListScrollTo(null !== (e = t.guild_id) && void 0 !== e ? e : Q.ME, t.id), (0, R.Qm)(t.type) && (0, g.tg)(J.Ez.PANEL);
             }),
             n in t
                 ? Object.defineProperty(t, n, {
@@ -189,7 +189,7 @@ class ee extends l.PureComponent {
                 : (t[n] = i);
     }
 }
-t.Z = (0, f.Z)(function (e) {
+t.Z = (0, m.Z)(function (e) {
     var t;
     let { guildId: n, ...l } = e,
         r = (0, c.e7)([L.default], () => L.default.getId()),
@@ -198,8 +198,8 @@ t.Z = (0, f.Z)(function (e) {
         s = (0, c.e7)([C.ZP], () => C.ZP.getConnectedActivityChannelId()),
         u = (0, c.e7)([w.Z], () => w.Z.getChannel(s)),
         d = (0, c.e7)([O.Z], () => O.Z.getGuild(null == u ? void 0 : u.guild_id)),
-        [h, p] = (0, c.Wu)([R.Z], () => [R.Z.getCurrentUserActiveStream(), R.Z.getStreamerActiveStreamMetadata()]),
-        f = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
+        [h, p] = (0, c.Wu)([M.Z], () => [M.Z.getCurrentUserActiveStream(), M.Z.getStreamerActiveStreamMetadata()]),
+        m = (0, c.e7)([f.Z], () => f.Z.useReducedMotion),
         g = (0, c.e7)([C.ZP], () => (null != u ? C.ZP.getSelfEmbeddedActivityForChannel(u.id) : null)),
         x = (0, c.e7)([O.Z, U.Z, D.ZP], () => (null != o ? S.JL(o, O.Z, U.Z, !1) : null != n && S.h_(D.ZP.getChannels(n), O.Z, U.Z).length > 0)),
         [I] = (0, _.Z)([
@@ -226,7 +226,7 @@ t.Z = (0, f.Z)(function (e) {
         userId: r,
         runningGame: a,
         application: I,
-        useReducedMotion: f,
+        useReducedMotion: m,
         isStreaming: y,
         channel: u,
         canStream: x,

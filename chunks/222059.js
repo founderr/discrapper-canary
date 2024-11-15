@@ -15,8 +15,8 @@ var i = n(200651),
     d = n(864682),
     h = n(899740),
     p = n(155409),
-    f = n(699516),
-    m = n(944486),
+    m = n(699516),
+    f = n(944486),
     g = n(594174),
     C = n(431),
     _ = n(774343),
@@ -33,8 +33,8 @@ var i = n(200651),
     j = n(474936),
     A = n(871465),
     P = n(388032),
-    M = n(342824);
-let R = {
+    R = n(342824);
+let M = {
     origin: {
         x: -16,
         y: 0
@@ -47,7 +47,7 @@ let R = {
     }
 };
 function L(e) {
-    let { selected: t, user: n, badge: h, link: f, showProgressBadge: m } = e,
+    let { selected: t, user: n, badge: h, link: m, showProgressBadge: f } = e,
         g = (0, a.e7)([u.Z], () => u.Z.isEditorOpen),
         [C, _] = l.useState(!1),
         [v, x] = l.useState(!1),
@@ -62,9 +62,9 @@ function L(e) {
     v && (O = o.K.get(T.wli) ? P.intl.string(P.t.nkq1l5) : P.intl.string(P.t.Be8Q5O));
     let k = null;
     !t &&
-        m &&
+        f &&
         (k = (0, i.jsx)(c.Z, {
-            className: M.downloadProgress,
+            className: R.downloadProgress,
             determineOwnVisibility: !1
         }));
     let U = t || C || g,
@@ -93,7 +93,7 @@ function L(e) {
                 ariaLabel: P.intl.string(P.t.YUU0RE),
                 ...w,
                 to: {
-                    pathname: f,
+                    pathname: m,
                     state: {
                         analyticsSource: {
                             page: T.ZY5.GUILD_CHANNEL,
@@ -106,9 +106,9 @@ function L(e) {
             })
         });
     return (0, i.jsx)('div', {
-        className: M.tutorialContainer,
+        className: R.tutorialContainer,
         children: (0, i.jsx)(p.Z, {
-            inlineSpecs: R,
+            inlineSpecs: M,
             tutorialId: 'friends-list',
             position: 'right',
             children: (0, i.jsxs)(Z.H, {
@@ -116,7 +116,7 @@ function L(e) {
                     (0, i.jsx)(S.Z, {
                         selected: t,
                         hovered: C,
-                        className: M.pill
+                        className: R.pill
                     }),
                     (0, i.jsx)(N.Z, {
                         color: s.Tooltip.Colors.PRIMARY,
@@ -138,7 +138,7 @@ function w() {
                 i = I.xI(n, t);
             return i > 0 && i < 100;
         }),
-        n = (0, a.e7)([f.Z], () => f.Z.getPendingCount()),
+        n = (0, a.e7)([m.Z], () => m.Z.getPendingCount()),
         l = Object.keys(j.nG),
         { unviewedTrialCount: r, unviewedDiscountCount: o } = (0, a.cj)([C.Z], () => ({
             unviewedTrialCount: C.Z.getUnacknowledgedOffers(l).length,
@@ -155,7 +155,7 @@ function w() {
         (0, i.jsx)(L, {
             selected: e,
             user: u,
-            selectedChannelId: m.Z.getChannelId(T.ME),
+            selectedChannelId: f.Z.getChannelId(T.ME),
             badge: p,
             link: S,
             showProgressBadge: t

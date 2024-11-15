@@ -10,8 +10,8 @@ var i = n(200651),
     d = n(481060),
     h = n(493683),
     p = n(239091),
-    f = n(153867),
-    m = n(35225),
+    m = n(153867),
+    f = n(35225),
     g = n(703656),
     C = n(769654),
     _ = n(271383),
@@ -34,7 +34,7 @@ let P = {
         object: T.qAy.CHANNEL
     }
 };
-function M(e, t) {
+function R(e, t) {
     (0, p.jW)(e, async () => {
         let { default: e } = await Promise.all([n.e('33053'), n.e('15669'), n.e('7654'), n.e('42587'), n.e('44156'), n.e('44294'), n.e('85552'), n.e('58227'), n.e('16114'), n.e('28161'), n.e('73747'), n.e('33213'), n.e('92359')]).then(n.bind(n, 545135));
         return (n) =>
@@ -45,13 +45,13 @@ function M(e, t) {
     });
 }
 t.Z = l.memo(function (e) {
-    var t, n, r, p, R;
-    let { guildNode: L, setRef: w, onDragStart: D, onDragEnd: O, route: k, guild: U, animatable: G, selected: B = !1, unread: H = !1, mediaState: V, unavailable: F = !1, badge: W = 0, contextMenu: z = M, draggable: Y = !1, sorting: K = !1, preloadOnClick: q = !0, guildJoinRequestStatus: Q } = e,
+    var t, n, r, p, M;
+    let { guildNode: L, setRef: w, onDragStart: D, onDragEnd: O, route: k, guild: U, animatable: G, selected: B = !1, unread: H = !1, mediaState: V, unavailable: F = !1, badge: W = 0, contextMenu: z = R, draggable: Y = !1, sorting: K = !1, preloadOnClick: q = !0, guildJoinRequestStatus: Q } = e,
         { id: J, parentId: X } = L,
         $ = null !== (t = e.upperBadge) && void 0 !== t ? t : F ? (0, y.Ny)() : null != V ? (0, y.Or)(V) : void 0,
         ee = null !== (n = e.lowerBadge) && void 0 !== n ? n : void 0;
     null == ee && W > 0 ? (ee = null !== (r = (0, y.Ne)(W)) && void 0 !== r ? r : void 0) : null == ee && null != Q && (ee = null !== (p = (0, y.jt)({ guildJoinRequestStatus: Q })) && void 0 !== p ? p : void 0);
-    let et = null !== (R = e.lowerBadgeSize) && void 0 !== R ? R : { width: (0, d.getBadgeWidthForValue)(W) },
+    let et = null !== (M = e.lowerBadgeSize) && void 0 !== M ? M : { width: (0, d.getBadgeWidthForValue)(W) },
         [{ dragging: en }, ei] = (0, o.c)({
             type: x.eD.GUILD,
             item: () => (
@@ -64,7 +64,7 @@ t.Z = l.memo(function (e) {
                 }
             ),
             end() {
-                null == O || O(), (0, f.V1)(v.ZP.getCompatibleGuildFolders());
+                null == O || O(), (0, m.V1)(v.ZP.getCompatibleGuildFolders());
             },
             collect: (e) => ({ dragging: e.isDragging() })
         }),
@@ -82,17 +82,17 @@ t.Z = l.memo(function (e) {
             }
             (0, C.X)(J, { state: P });
         }, [J, k]),
-        ef = l.useCallback(() => {
+        em = l.useCallback(() => {
             if (null != k || null == U || F || !q) return;
-            let e = (0, m.V)(U.id);
+            let e = (0, f.V)(U.id);
             if (null != e) h.Z.preload(U.id, e);
         }, [k, U, F, q]),
-        em = (0, c.e7)([_.ZP], () => _.ZP.isCurrentUserGuest(J)),
+        ef = (0, c.e7)([_.ZP], () => _.ZP.isCurrentUserGuest(J)),
         eg = l.useCallback(
             (e) => {
-                null != U && !em && z(e, U);
+                null != U && !ef && z(e, U);
             },
-            [U, z, em]
+            [U, z, ef]
         ),
         eC = l.useCallback(
             (e) => {
@@ -146,7 +146,7 @@ t.Z = l.memo(function (e) {
                       onMouseLeave: function () {
                           K || ea(!1);
                       },
-                      onMouseDown: ef,
+                      onMouseDown: em,
                       onContextMenu: eg,
                       onKeyDown: eC,
                       icon: U.getIconURL(96, eo && G),

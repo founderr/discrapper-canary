@@ -16,8 +16,8 @@ var i,
     d = n(392711),
     h = n.n(d),
     p = n(748780),
-    f = n(442837),
-    m = n(215569),
+    m = n(442837),
+    f = n(215569),
     g = n(481060),
     C = n(612226),
     _ = n(951483),
@@ -68,7 +68,7 @@ function P(e) {
     let { showBackdrop: t } = e;
     return (0, r.jsx)('div', { className: s()(N.backdrop, { [N.show]: t }) });
 }
-function M() {
+function R() {
     let e = a.useMemo(
         () =>
             h()((0, C.Rv)())
@@ -146,7 +146,7 @@ function M() {
         })
     });
 }
-class R extends a.PureComponent {
+class M extends a.PureComponent {
     componentDidMount() {
         (this.lastInputedKeys = []), I.S.subscribe(S.CkL.SCROLL_PAGE_UP, this.scrollPageUp), I.S.subscribe(S.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), window.addEventListener('keydown', this.handleKeyDown, { capture: !0 }), window.addEventListener('keyup', this.handleKeyUp, { capture: !0 });
     }
@@ -205,7 +205,7 @@ class R extends a.PureComponent {
                 (0, r.jsx)(g.AdvancedScrollerAuto, {
                     ref: this.scrollerRef,
                     fade: !0,
-                    children: (0, r.jsx)(g.HeadingLevel, { children: (0, r.jsx)(M, {}) })
+                    children: (0, r.jsx)(g.HeadingLevel, { children: (0, r.jsx)(R, {}) })
                 })
             ]
         });
@@ -316,7 +316,7 @@ function w(e) {
         [i, l] = a.useState(!1),
         [o, c] = a.useState(!1),
         u = a.useMemo(() => (__OVERLAY__ ? (0, _.Zg)() : (0, C.Rv)()), []),
-        { keyboardModeEnabled: d, useReducedMotion: h } = (0, f.cj)([x.Z], () => ({
+        { keyboardModeEnabled: d, useReducedMotion: h } = (0, m.cj)([x.Z], () => ({
             keyboardModeEnabled: x.Z.keyboardModeEnabled,
             useReducedMotion: x.Z.useReducedMotion
         }));
@@ -328,7 +328,7 @@ function w(e) {
                 size: g.ModalSize.DYNAMIC,
                 'aria-label': Z.intl.string(Z.t.T9DA2N),
                 transitionState: t,
-                children: (0, r.jsx)(m.W, {
+                children: (0, r.jsx)(f.W, {
                     component: 'div',
                     children: i
                         ? (0, r.jsx)(
@@ -341,7 +341,7 @@ function w(e) {
                               'raging-demo'
                           )
                         : (0, r.jsx)(
-                              R,
+                              M,
                               {
                                   content: u,
                                   keyboardModeEnabled: d,

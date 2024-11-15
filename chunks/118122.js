@@ -14,8 +14,8 @@ var i = n(200651),
     d = n(885714),
     h = n(155409),
     p = n(430824),
-    f = n(594174),
-    m = n(40153),
+    m = n(594174),
+    f = n(40153),
     g = n(603592),
     C = n(981631),
     _ = n(675999),
@@ -43,7 +43,7 @@ function E(e) {
     let { disableTooltip: t, lastTargetNode: n } = e,
         o = (0, r.e7)([p.Z], () => p.Z.getGuilds()),
         E = l.useMemo(() => Object.values(o), [o]),
-        S = (0, r.e7)([f.default], () => f.default.getCurrentUser()),
+        S = (0, r.e7)([m.default], () => m.default.getCurrentUser()),
         Z = l.useMemo(() => E.some((e) => e.isOwner(S)), [E, S]),
         N = (0, a.useModalsStore)((e) => (0, a.hasModalOpenSelector)(e, _.PU)),
         { analyticsLocations: y } = (0, s.ZP)(),
@@ -79,7 +79,7 @@ function E(e) {
                   children: [
                       j,
                       null != n &&
-                          (0, i.jsx)(m.ZP, {
+                          (0, i.jsx)(f.ZP, {
                               name: v.intl.string(v.t['45xjMz']),
                               targetNode: n,
                               below: !0,

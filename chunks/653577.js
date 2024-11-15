@@ -14,8 +14,8 @@ var i = n(200651),
     d = n(111028),
     h = n(454585),
     p = n(626135),
-    f = n(981631),
-    m = n(388032),
+    m = n(981631),
+    f = n(388032),
     g = n(447871),
     C = n(554034);
 function _(e) {
@@ -27,7 +27,7 @@ function _(e) {
         N = null != _ && _.length > 0;
     l.useEffect(() => {
         E &&
-            p.default.track(f.rMx.VOICE_CHANNEL_TOPIC_VIEWED, {
+            p.default.track(m.rMx.VOICE_CHANNEL_TOPIC_VIEWED, {
                 guild_id: t.guild_id,
                 channel_id: t.id
             });
@@ -53,7 +53,7 @@ function _(e) {
                 (0, i.jsx)(s.Text, {
                     variant: 'text-xs/medium',
                     className: g.statusText,
-                    children: m.intl.string(m.t.Mgpxi4)
+                    children: f.intl.string(f.t.Mgpxi4)
                 }),
                 (0, i.jsx)(s.PencilIcon, {
                     size: 'custom',

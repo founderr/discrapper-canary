@@ -15,13 +15,13 @@ var i = n(200651),
     d = n(481060),
     h = n(565138),
     p = n(430824),
-    f = n(624138),
-    m = n(674552),
+    m = n(624138),
+    f = n(674552),
     g = n(981631),
     C = n(388032),
     _ = n(115376);
-let v = (0, f.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
-    x = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE);
+let v = (0, m.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
+    x = (0, m.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE);
 function I(e) {
     let { guildId: t, animate: n } = e,
         l = (0, c.e7)([p.Z], () => p.Z.getGuild(t), [t]);
@@ -44,8 +44,8 @@ function b(e) {
         { folderNode: r, hovered: a, expanded: c } = e,
         { color: u, children: h } = r,
         p = null != u ? u : g.Wyy,
-        f = h.map((e) => e.id),
-        [m, C] = l.useState(!1),
+        m = h.map((e) => e.id),
+        [f, C] = l.useState(!1),
         [b, E] = l.useState(c),
         S = c ? 0 : -x,
         Z = (0, d.useSpring)(
@@ -61,9 +61,9 @@ function b(e) {
             },
             'animate-always'
         ),
-        N = m ? Z : void 0;
+        N = f ? Z : void 0;
     return (
-        (m || b) &&
+        (f || b) &&
             (t = (0, i.jsx)(o.animated.div, {
                 style: N,
                 className: _.expandedFolderIconWrapper,
@@ -73,11 +73,11 @@ function b(e) {
                     style: { color: (0, s.Rf)(p) }
                 })
             })),
-        (m || !b) &&
+        (f || !b) &&
             (n = (0, i.jsx)(o.animated.div, {
                 style: N,
                 className: _.closedFolderIconWrapper,
-                children: f.slice(0, 4).map((e) =>
+                children: m.slice(0, 4).map((e) =>
                     (0, i.jsx)(
                         I,
                         {
@@ -107,7 +107,7 @@ function E(e) {
             tooltipName: u,
             folderGroupId: h,
             folderIconContent: p,
-            onClick: f,
+            onClick: m,
             onContextMenu: g,
             onHoverChange: v,
             onKeyDown: x,
@@ -120,8 +120,8 @@ function E(e) {
         y = l.useCallback(() => {
             o || Z(!1), null == v || v(!1);
         }, [o, v]),
-        T = r || null == s ? null : (0, m.Or)(s),
-        j = !r && c > 0 ? (0, m.Ne)(c) : null;
+        T = r || null == s ? null : (0, f.Or)(s),
+        j = !r && c > 0 ? (0, f.Ne)(c) : null;
     return (0, i.jsx)(d.BlobMask, {
         selected: !n,
         upperBadge: T,
@@ -129,7 +129,7 @@ function E(e) {
         lowerBadgeSize: { width: (0, d.getBadgeWidthForValue)(c) },
         children: (0, i.jsx)(d.Clickable, {
             className: a()(_.folder, { [_.hover]: S }),
-            onClick: f,
+            onClick: m,
             onContextMenu: g,
             onMouseEnter: N,
             onMouseLeave: y,

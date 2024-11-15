@@ -236,7 +236,7 @@ function y(e) {
         className: A.container,
         ref: z,
         children: [
-            (0, i.jsx)(h.KY, {
+            (0, i.jsx)(h.K, {
                 location: 'global_discovery_search',
                 query: T
             }),

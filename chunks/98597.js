@@ -26,8 +26,8 @@ var i,
     d = n(442837),
     h = n(481060),
     p = n(787014),
-    f = n(924301),
-    m = n(159300),
+    m = n(924301),
+    f = n(159300),
     g = n(152376),
     C = n(427679),
     _ = n(155409),
@@ -78,8 +78,8 @@ function P(e) {
     let { channel: t, isDefaultChannel: i = !1, locked: l, tabIndex: r, forceShowButtons: a, hasChannelInfo: s = !1 } = e,
         c = (0, d.e7)([I.Z], () => I.Z.getGuild(t.getGuildId())),
         p = (0, d.e7)([C.Z], () => C.Z.getStageInstanceByChannel(t.id), [t.id]),
-        g = (0, d.e7)([f.ZP], () => f.ZP.getActiveEventByChannel(t.id), [t.id]),
-        v = (0, d.e7)([b.Z], () => (0, m.b)(b.Z, c, t, p)),
+        g = (0, d.e7)([m.ZP], () => m.ZP.getActiveEventByChannel(t.id), [t.id]),
+        v = (0, d.e7)([b.Z], () => (0, f.b)(b.Z, c, t, p)),
         E = (0, d.e7)([b.Z], () => (b.Z.can(Z.Plq.CREATE_INSTANT_INVITE, t) ? N.intl.string(N.t.zJrgTE) : N.intl.string(N.t.Sd8Ix8)));
     if (l || !v) return null;
     function S() {
@@ -125,7 +125,7 @@ function P(e) {
         })
     );
 }
-function M(e) {
+function R(e) {
     let { channel: t } = e,
         n = () => {
             (0, g._U)(t.guild_id, t.id);
@@ -146,7 +146,7 @@ function M(e) {
             })
     });
 }
-function R(e) {
+function M(e) {
     let { channel: t } = e,
         n = () => {
             (0, g.dM)(t.guild_id, t.id, !0, { section: Z.jXE.CHANNEL_LIST });
@@ -175,10 +175,10 @@ class L extends (a = s.PureComponent) {
         return (0, o.jsx)(P, { ...this.props });
     }
     renderRemoveSuggestionButton() {
-        return (0, o.jsx)(M, { ...this.props });
+        return (0, o.jsx)(R, { ...this.props });
     }
     renderAcceptSuggestionButton() {
-        return (0, o.jsx)(R, { ...this.props });
+        return (0, o.jsx)(M, { ...this.props });
     }
     getClassName() {
         let { position: e, sortingPosition: t } = this.props;

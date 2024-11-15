@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(239091),
     h = n(111028),
     p = n(569471),
-    f = n(488131),
-    m = n(592125),
+    m = n(488131),
+    f = n(592125),
     g = n(306680),
     C = n(979651),
     _ = n(938475),
@@ -42,8 +42,8 @@ function j(e) {
 }
 t.Z = l.memo(function (e) {
     let { thread: t, isSelectedChannel: r, isSelectedVoice: T, isLast: A, withGuildIcon: P } = e,
-        M = (0, s.e7)([_.ZP], () => _.ZP.getVoiceStatesForChannel(t), [t]),
-        R = (0, s.e7)([C.Z], () => C.Z.hasVideo(t.id)),
+        R = (0, s.e7)([_.ZP], () => _.ZP.getVoiceStatesForChannel(t), [t]),
+        M = (0, s.e7)([C.Z], () => C.Z.hasVideo(t.id)),
         { unread: L, mentionCount: w } = (0, s.cj)([g.ZP], () => ({
             unread: g.ZP.hasUnread(t.id),
             mentionCount: g.ZP.getMentionCount(t.id)
@@ -51,7 +51,7 @@ t.Z = l.memo(function (e) {
         D = (0, s.e7)([p.Z], () => p.Z.isMuted(t.id)),
         O = l.useCallback(
             (e) => {
-                (0, f.ok)(t, !e.shiftKey, S.on.CHANNEL_LIST);
+                (0, m.ok)(t, !e.shiftKey, S.on.CHANNEL_LIST);
             },
             [t]
         ),
@@ -60,7 +60,7 @@ t.Z = l.memo(function (e) {
         }, [t.guild_id, t.id]),
         U = l.useCallback(
             (e) => {
-                let l = m.Z.getChannel(t.id);
+                let l = f.Z.getChannel(t.id);
                 null != l &&
                     (0, d.jW)(e, async () => {
                         let { default: e } = await n.e('40157').then(n.bind(n, 422200));
@@ -73,7 +73,7 @@ t.Z = l.memo(function (e) {
             },
             [t.id]
         ),
-        G = null == M ? 0 : M.length,
+        G = null == R ? 0 : R.length,
         { role: B, ...H } = (0, o.JA)(t.id),
         V = l.useRef(null),
         F =
@@ -136,7 +136,7 @@ t.Z = l.memo(function (e) {
                                             G > 0 && t.userLimit > 0
                                                 ? (0, i.jsx)(x.Z, {
                                                       userCount: G,
-                                                      video: R,
+                                                      video: M,
                                                       channel: t
                                                   })
                                                 : null,
@@ -153,7 +153,7 @@ t.Z = l.memo(function (e) {
                 channel: t,
                 collapsed: !T,
                 collapsedMax: 6,
-                voiceStates: M,
+                voiceStates: R,
                 location: E.Sbl.GUILD_CHANNEL_LIST
             })
         ]

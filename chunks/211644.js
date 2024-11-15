@@ -23,7 +23,7 @@ n.d(t, {
 }),
     n(47120),
     n(733860);
-var r = n(905837),
+var r = n(454000),
     i = n(731965),
     a = n(261376);
 let s = new (n(499303).I)(),
@@ -36,7 +36,7 @@ let s = new (n(499303).I)(),
         currentlyShownGroup: new Set(),
         lastWinnerTime: 0
     }),
-    l = (0, r.Ue)(o),
+    l = (0, r.F)(o),
     u = (e) => ({
         ...e,
         candidates: new Map(e.candidates),
@@ -116,6 +116,6 @@ let s = new (n(499303).I)(),
     y = () => {
         (0, i.j)(() => l.setState(o)), s.unschedule();
     };
-function A(e) {
-    return l(e);
+function A(e, t) {
+    return l(e, t);
 }

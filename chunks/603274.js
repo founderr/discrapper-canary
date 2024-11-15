@@ -18,8 +18,8 @@ var l = n(120356),
     d = n(884338),
     h = n(565799),
     p = n(501655),
-    f = n(199902),
-    m = n(592125),
+    m = n(199902),
+    f = n(592125),
     g = n(594174),
     C = n(938475),
     _ = n(823379),
@@ -49,10 +49,10 @@ function Z(e, t) {
 }
 function N() {
     var e, t;
-    let n = (0, s.Wu)([x.Z, m.Z], () =>
+    let n = (0, s.Wu)([x.Z, f.Z], () =>
             v.default
                 .keys(x.Z.getFavoriteChannels())
-                .map((e) => m.Z.getChannel(e))
+                .map((e) => f.Z.getChannel(e))
                 .filter(_.lm)
         ),
         l = n.map((e) => e.id),
@@ -85,9 +85,9 @@ function N() {
             return e;
         }),
         y = (0, s.Wu)(
-            [f.Z],
+            [m.Z],
             () =>
-                f.Z.getAllApplicationStreams()
+                m.Z.getAllApplicationStreams()
                     .filter((e) => l.includes(e.channelId))
                     .map((e) => e.ownerId),
             [l]
@@ -111,7 +111,7 @@ function N() {
             c.VoiceNormalIcon,
             b.filter((e) => !y.includes(e.id) && !T.includes(e.id))
         );
-    let M =
+    let R =
             ((e = S),
             (t = N),
             0 === e.length
@@ -146,13 +146,13 @@ function N() {
                           })
                       ]
                   })),
-        R = Z(
+        M = Z(
             c.ScreenArrowIcon,
             A.filter((e) => null != e && !T.includes(e.id))
         ),
         L = Z(c.ActivitiesIcon, j);
     return (0, i.jsxs)(i.Fragment, {
-        children: [M, P, R, L]
+        children: [R, P, M, L]
     });
 }
 function y() {

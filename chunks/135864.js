@@ -29,7 +29,7 @@ function _(e) {
                 })(t),
             [t]
         ),
-        c = r.useMemo(() => (0, u.sm)(t), [t]),
+        c = r.useMemo(() => (0, u.s)(t), [t]),
         g = n === t,
         _ = r.useCallback(() => {
             if (t === m.F$.QUESTS)

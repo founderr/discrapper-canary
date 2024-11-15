@@ -10,8 +10,8 @@ var l,
     d = n(703656),
     h = n(131704),
     p = n(601964),
-    f = n(592125),
-    m = n(430824),
+    m = n(592125),
+    f = n(430824),
     g = n(701190),
     C = n(496675),
     _ = n(594174),
@@ -27,7 +27,7 @@ function N() {
 }
 class y extends (l = s.ZP.Store) {
     initialize() {
-        this.waitFor(m.Z, g.Z, _.default);
+        this.waitFor(f.Z, g.Z, _.default);
     }
     isOpen() {
         let e = __OVERLAY__ ? x.IlC.OVERLAY : x.IlC.APP;
@@ -63,15 +63,15 @@ class y extends (l = s.ZP.Store) {
                 let { channel: e, guild: n } = t;
                 if (null == e) return !1;
                 if ((0, h.bc)(e.type)) {
-                    if (null != f.Z.getChannel(e.id)) return (0, d.XU)(x.ME, e.id), v.ZP.focus(), !1;
+                    if (null != m.Z.getChannel(e.id)) return (0, d.XU)(x.ME, e.id), v.ZP.focus(), !1;
                 } else {
                     if (null == n) return !1;
-                    if (null != m.Z.getGuild(n.id) && !(0, u.TY)(t)) {
+                    if (null != f.Z.getGuild(n.id) && !(0, u.TY)(t)) {
                         let e = (function (e) {
                             if ((0, u.W6)(e)) return I.oC.ROLE_SUBSCRIPTIONS;
                             let { channel: t } = e;
                             if (null != t) {
-                                let e = f.Z.getChannel(t.id);
+                                let e = m.Z.getChannel(t.id);
                                 if (C.Z.can(x.Plq.VIEW_CHANNEL, e)) return t.id;
                             }
                             return null;

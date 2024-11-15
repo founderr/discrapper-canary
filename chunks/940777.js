@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return M;
+        return R;
     }
 }),
     n(47120),
@@ -17,8 +17,8 @@ var i = n(200651),
     d = n(239091),
     h = n(317381),
     p = n(276952),
-    f = n(682662),
-    m = n(674552),
+    m = n(682662),
+    f = n(674552),
     g = n(593364),
     C = n(905423),
     _ = n(199902),
@@ -41,10 +41,10 @@ let P = {
         object: T.qAy.CHANNEL
     }
 };
-function M() {
+function R() {
     let e = (0, o.Ie)('favorites'),
         { favoriteAdded: t, clearFavoriteAdded: r } = (0, S.up)(),
-        [M, R] = l.useState(!1),
+        [R, M] = l.useState(!1),
         { favoriteServerMuted: L, favoriteChannels: w } = (0, s.cj)([E.Z], () => ({
             favoriteChannels: E.Z.getFavoriteChannels(),
             favoriteServerMuted: E.Z.favoriteServerMuted
@@ -74,16 +74,16 @@ function M() {
                 u = !1,
                 d = !1,
                 p = !1,
-                f = !1;
+                m = !1;
             return (
-                n ? ((u = !r), (d = r), (p = i), (f = o)) : ((p = l), (f = c)),
-                (0, m.Or)({
+                n ? ((u = !r), (d = r), (p = i), (m = o)) : ((p = l), (m = c)),
+                (0, f.Or)({
                     audio: u,
                     video: d,
                     screenshare: p,
                     liveStage: !1,
                     isCurrentUserConnected: n,
-                    activity: f
+                    activity: m
                 })
             );
         })(w),
@@ -91,11 +91,11 @@ function M() {
         V = l.useCallback(() => {
             r();
         }, [r]);
-    return (0, i.jsxs)(f.H, {
+    return (0, i.jsxs)(m.H, {
         children: [
             (0, i.jsx)(p.Z, {
                 selected: k,
-                hovered: M,
+                hovered: R,
                 unread: G && !L,
                 className: A.pill
             }),
@@ -103,7 +103,7 @@ function M() {
                 onShow: V,
                 children: (0, i.jsx)(N.S, {
                     children: (0, i.jsx)(c.BlobMask, {
-                        selected: k || M,
+                        selected: k || R,
                         upperBadge: B,
                         lowerBadge: H,
                         children: (0, i.jsx)(c.NavItem, {
@@ -116,9 +116,9 @@ function M() {
                                 pathname: T.Z5c.CHANNEL(T.I_8, D),
                                 state: P
                             },
-                            selected: k || M,
-                            onMouseEnter: () => R(!0),
-                            onMouseLeave: () => R(!1),
+                            selected: k || R,
+                            onMouseEnter: () => M(!0),
+                            onMouseLeave: () => M(!1),
                             onMouseDown: function () {
                                 if (null != O) u.Z.preload(O.guild_id, O.id);
                             },

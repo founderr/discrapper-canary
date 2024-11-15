@@ -15,8 +15,8 @@ var a = n(442837),
     d = n(144114),
     h = n(607744),
     p = n(594174),
-    f = n(981631),
-    m = n(815660),
+    m = n(981631),
+    f = n(815660),
     g = n(388032),
     C = n(816614);
 (i = l || (l = {}))[(i.VOICE = 0)] = 'VOICE';
@@ -27,7 +27,7 @@ t.Z = (e) => {
         S = 0 === t ? g.intl.string(g.t['6zY8BA']) : null,
         Z = null,
         N = null;
-    return (0 === t && (v ? ((Z = g.intl.string(g.t.IRxUlJ)), (N = g.intl.string(g.t.fiNVio))) : I ? ((Z = g.intl.string(g.t.vW8iUF)), (N = g.intl.string(g.t['50gfOj']))) : x ? ((Z = g.intl.string(g.t.vdSOp6)), (N = g.intl.string(g.t.lm1UKi))) : E ? ((Z = g.intl.formatToPlainString(g.t.v1ktYW, { min: f.YeM.MEMBER_AGE })), (N = g.intl.string(g.t.BddRzc))) : b && ((Z = g.intl.formatToPlainString(g.t['sncw4+'], { min: f.YeM.ACCOUNT_AGE })), (N = g.intl.string(g.t.BddRzc)))), null == S || null == Z)
+    return (0 === t && (v ? ((Z = g.intl.string(g.t.IRxUlJ)), (N = g.intl.string(g.t.fiNVio))) : I ? ((Z = g.intl.string(g.t.vW8iUF)), (N = g.intl.string(g.t['50gfOj']))) : x ? ((Z = g.intl.string(g.t.vdSOp6)), (N = g.intl.string(g.t.lm1UKi))) : E ? ((Z = g.intl.formatToPlainString(g.t.v1ktYW, { min: m.YeM.MEMBER_AGE })), (N = g.intl.string(g.t.BddRzc))) : b && ((Z = g.intl.formatToPlainString(g.t['sncw4+'], { min: m.YeM.ACCOUNT_AGE })), (N = g.intl.string(g.t.BddRzc)))), null == S || null == Z)
         ? null
         : (0, r.jsxs)(o.Dialog, {
               className: C.container,
@@ -69,7 +69,7 @@ t.Z = (e) => {
                                                                         ...t
                                                                     });
                                                             },
-                                                            { modalKey: m.M }
+                                                            { modalKey: f.M }
                                                         )
                                                       : x &&
                                                         (s.Z.verifyResend(),

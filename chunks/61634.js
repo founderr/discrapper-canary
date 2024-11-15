@@ -15,8 +15,8 @@ var i = n(192379),
     d = n(317381),
     h = n(470883),
     p = n(750881),
-    f = n(554747),
-    m = n(146085),
+    m = n(554747),
+    f = n(146085),
     g = n(427679),
     C = n(131704),
     _ = n(199902),
@@ -33,15 +33,15 @@ var i = n(192379),
     j = n(510601),
     A = n(901621),
     P = n(981631);
-let M = [];
-function R(e, t) {
+let R = [];
+function M(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : E.Z;
     return null != e && e.type !== a.d.GUILD_STAGE_VOICE && t !== e.id && n.canBasicChannel(P.S7T.VIEW_CHANNEL, e);
 }
 function L(e) {
     var t;
     let n = (0, o.e7)([N.ZP], () => N.ZP.isMuted(e)),
-        l = (0, f.k5)(e);
+        l = (0, m.k5)(e);
     !(function (e, t) {
         let n = i.useRef(new Set()),
             l = i.useRef(new s.V7()),
@@ -53,9 +53,9 @@ function L(e) {
             d = (0, o.cj)(
                 [y.Z],
                 () => {
-                    if (!a || t || u) return M;
+                    if (!a || t || u) return R;
                     let n = Object.keys(y.Z.getVoiceStates(e));
-                    return 0 === n.length ? M : n.slice(0, 50);
+                    return 0 === n.length ? R : n.slice(0, 50);
                 },
                 [e, t, u, a]
             );
@@ -100,14 +100,14 @@ function L(e) {
                     a = P ? (0, h.DX)(y.Z.getVoiceStates(e)) : y.Z.getVoiceStates(e),
                     o = (() => {
                         if (n) return !1;
-                        for (let e in a) if (R(x.Z.getBasicChannel(a[e].channelId), null != l ? l : void 0, E.Z)) return !0;
+                        for (let e in a) if (M(x.Z.getBasicChannel(a[e].channelId), null != l ? l : void 0, E.Z)) return !0;
                         return !1;
                     })();
                 return {
                     guildHasVoice: o,
                     guildHasVideo: (() => {
                         if (n) return !1;
-                        for (let e of r) if (R(x.Z.getBasicChannel(a[e].channelId), null != l ? l : void 0, E.Z)) return !0;
+                        for (let e of r) if (M(x.Z.getBasicChannel(a[e].channelId), null != l ? l : void 0, E.Z)) return !0;
                         return !1;
                     })(),
                     selectedVoiceChannelHasVideo: null != i && y.Z.hasVideo(i)
@@ -125,13 +125,13 @@ function L(e) {
                 c = !1,
                 u = !1,
                 p = !1,
-                f = !1,
+                m = !1,
                 v = !1,
                 I = !1;
             if (!s && n)
                 return {
                     audio: c,
-                    video: f,
+                    video: m,
                     screenshare: v,
                     liveStage: p,
                     activeEvent: u,
@@ -141,7 +141,7 @@ function L(e) {
                 };
             let b = T.default.keys(g.Z.getStageInstancesByGuild(e)).some((e) => {
                     let t = x.Z.getChannel(e);
-                    return null != t && E.Z.can(m.gl, t);
+                    return null != t && E.Z.can(f.gl, t);
                 }),
                 S = s && null !== (r = null === (i = x.Z.getChannel(o)) || void 0 === i ? void 0 : i.isGuildStageVoice()) && void 0 !== r && r,
                 N = !!s && null != _.Z.getActiveStreamForUser(U, e),
@@ -155,12 +155,12 @@ function L(e) {
                     }
                     return !1;
                 })(),
-                M = d.ZP.getEmbeddedActivitiesForGuild(e).length > 0;
+                R = d.ZP.getEmbeddedActivitiesForGuild(e).length > 0;
             return (
-                s ? ((c = !0), (u = (null == l ? void 0 : l.channel_id) === o), (p = S), (f = j), (v = N), (I = M)) : ((c = D), (u = null != l), (p = b), (f = O), (v = y), (I = A)),
+                s ? ((c = !0), (u = (null == l ? void 0 : l.channel_id) === o), (p = S), (m = j), (v = N), (I = R)) : ((c = D), (u = null != l), (p = b), (m = O), (v = y), (I = A)),
                 {
                     audio: c,
-                    video: f,
+                    video: m,
                     screenshare: v,
                     liveStage: p,
                     activeEvent: u,

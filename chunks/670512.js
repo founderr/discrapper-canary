@@ -10,8 +10,8 @@ var i,
     d = n(585483),
     h = n(981631),
     p = n(388032),
-    f = n(903949);
-function m(e, t, n) {
+    m = n(903949);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -49,31 +49,31 @@ class C extends (i = r.PureComponent) {
     }
     renderArrowGroup(e) {
         return (0, l.jsxs)('div', {
-            className: o()(f.arrowGroup, e),
+            className: o()(m.arrowGroup, e),
             children: [
                 (0, l.jsx)(s.Z.div, {
-                    className: o()(f.arrowContainer, f.horizontal),
+                    className: o()(m.arrowContainer, m.horizontal),
                     style: this.getStyle(),
                     children: (0, l.jsx)('img', {
                         alt: '',
                         src: n(403756),
-                        className: f.arrowIcon
+                        className: m.arrowIcon
                     })
                 }),
                 (0, l.jsx)('div', {
-                    className: o()(f.arrowContainer, f.diag1),
+                    className: o()(m.arrowContainer, m.diag1),
                     children: (0, l.jsx)('img', {
                         alt: '',
                         src: n(536404),
-                        className: f.arrowIcon
+                        className: m.arrowIcon
                     })
                 }),
                 (0, l.jsx)('div', {
-                    className: o()(f.arrowContainer, f.diag2),
+                    className: o()(m.arrowContainer, m.diag2),
                     children: (0, l.jsx)('img', {
                         alt: '',
                         src: n(569347),
-                        className: f.arrowIcon
+                        className: m.arrowIcon
                     })
                 })
             ]
@@ -81,14 +81,14 @@ class C extends (i = r.PureComponent) {
     }
     renderContent() {
         return (0, l.jsxs)('div', {
-            className: f.tutorialMessages,
+            className: m.tutorialMessages,
             children: [
                 (0, l.jsx)('div', {
-                    className: f.searchMessage,
+                    className: m.searchMessage,
                     children: p.intl.string(p.t.Mp0IGB)
                 }),
                 (0, l.jsx)('div', {
-                    className: f.selectMessage,
+                    className: m.selectMessage,
                     children: p.intl.string(p.t['3CbpwM'])
                 })
             ]
@@ -99,11 +99,11 @@ class C extends (i = r.PureComponent) {
             { shown: t } = this.state;
         return (0, l.jsxs)('div', {
             ref: this.rootRef,
-            className: o()(f.tutorial, {
-                [f.shown]: t,
-                [f.hasQuery]: e
+            className: o()(m.tutorial, {
+                [m.shown]: t,
+                [m.hasQuery]: e
             }),
-            children: [this.renderContent(), this.renderArrowGroup(f.__invalid_left), this.renderArrowGroup(f.right)]
+            children: [this.renderContent(), this.renderArrowGroup(m.__invalid_left), this.renderArrowGroup(m.right)]
         });
     }
     getStyle() {
@@ -125,13 +125,13 @@ class C extends (i = r.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            m(this, 'state', {
+            f(this, 'state', {
                 shown: !1,
                 translateY: new s.Z.Value(0)
             }),
-            m(this, 'rootRef', r.createRef()),
-            m(this, 'focusTimeout', new c.V7()),
-            m(this, 'handleResultFocus', (e) => {
+            f(this, 'rootRef', r.createRef()),
+            f(this, 'focusTimeout', new c.V7()),
+            f(this, 'handleResultFocus', (e) => {
                 let { node: t } = e;
                 this.focusTimeout.start(1, () => {
                     if (this.props.hasQuery && null != t && null != this.rootRef.current) {
@@ -144,4 +144,4 @@ class C extends (i = r.PureComponent) {
             });
     }
 }
-m(C, 'contextType', u.AccessibilityPreferencesContext), (t.Z = C);
+f(C, 'contextType', u.AccessibilityPreferencesContext), (t.Z = C);

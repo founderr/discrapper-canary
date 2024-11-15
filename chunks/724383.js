@@ -31,7 +31,7 @@ t.Z = function () {
     return (
         r.useEffect(() => {
             let t = _.pathname,
-                n = (0, p.IE)(t, e);
+                n = (0, p.I)(t, e);
             n !== m.Z.getField('selectedTab') && m.Z.setState({ selectedTab: n });
         }, [e, _.pathname]),
         r.useEffect(() => {
@@ -39,7 +39,7 @@ t.Z = function () {
         }, [t]),
         (0, i.jsxs)('section', {
             className: f.container,
-            children: [(0, i.jsx)(a.yY, { location: (0, p.sm)(t) }), (0, i.jsx)('div', { className: f.dragRegion }), n]
+            children: [(0, i.jsx)(a.yY, { location: (0, p.s)(t) }), (0, i.jsx)('div', { className: f.dragRegion }), n]
         })
     );
 };

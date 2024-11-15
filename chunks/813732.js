@@ -113,7 +113,7 @@ t.Z = function () {
         }),
         Q = (0, x.Z)({ forceFetch: !0 }),
         X = (0, a.e7)([P.Z], () => P.Z.getFractionalPremium(!1)),
-        J = (0, a.e7)([P.Z], () => P.Z.getUnactivatedFractionalPremiumUnits()),
+        J = (0, a.Wu)([P.Z], () => P.Z.getUnactivatedFractionalPremiumUnits()),
         $ = null !== r ? r.currentPeriodEnd : void 0,
         ee = X.length > 0 || J.length > 0;
     if (
