@@ -1,47 +1,47 @@
 t.d(n, {
     D: function () {
-        return f;
+        return h;
     }
 });
 var r = t(200651),
     i = t(192379),
     a = t(124347),
-    l = t(80966),
-    o = t(524444),
+    o = t(80966),
+    l = t(524444),
     s = t(52824),
     u = t(956664),
     c = t(589530),
     d = t(591759),
     m = t(718263);
-function f(e) {
+function h(e) {
     let n = d.Z.toURLSafe(e);
     return null == n ? null : (n.searchParams.append('format', 'webp'), n.toString());
 }
 n.Z = i.memo(function (e) {
     let { media: n, obscured: t = !1, onContextMenu: i } = e,
-        { width: d, height: h, url: p, proxyUrl: g, alt: _, type: x, maxWidth: S, maxHeight: C, ...v } = n,
-        { width: E, height: y } = (0, u.zp)(null != d ? d : 0, null != h ? h : 0),
-        L = (0, s.q)({
+        { width: d, height: f, url: p, proxyUrl: g, alt: _, type: C, maxWidth: x, maxHeight: S, ...v } = n,
+        { width: E, height: I } = (0, u.zp)(null != d ? d : 0, null != f ? f : 0),
+        y = (0, s.q)({
             proxyURL: g,
             url: p
         }),
-        I = !(null == d || 0 === d || null == h || 0 === h);
-    if ('VIDEO' === x && I && null != g) {
+        L = !(null == d || 0 === d || null == f || 0 === f);
+    if ('VIDEO' === C && L && null != g) {
         var A;
-        let e = f(g);
+        let e = h(g);
         if (null == e) return null;
-        let a = null !== (A = n.renderLinkComponent) && void 0 !== A ? A : o.iT;
-        return (0, r.jsx)(l.Z, {
+        let a = null !== (A = n.renderLinkComponent) && void 0 !== A ? A : l.iT;
+        return (0, r.jsx)(o.Z, {
             ...v,
-            src: L,
+            src: y,
             width: d,
-            height: h,
+            height: f,
             maxWidth: E,
-            maxHeight: y,
+            maxHeight: I,
             responsive: !0,
             poster: e,
             naturalWidth: d,
-            naturalHeight: h,
+            naturalHeight: f,
             volume: c.FC,
             autoMute: c.rs,
             onVolumeChange: c.jA,
@@ -52,16 +52,16 @@ n.Z = i.memo(function (e) {
             onContextMenu: i
         });
     }
-    if ('IMAGE' === x)
-        return I
+    if ('IMAGE' === C)
+        return L
             ? (0, r.jsx)(a.ZP, {
                   ...v,
-                  src: L,
+                  src: y,
                   width: d,
-                  height: h,
+                  height: f,
                   shouldLink: !1,
                   maxWidth: E,
-                  maxHeight: y,
+                  maxHeight: I,
                   animated: !t && n.animated,
                   autoPlay: !t,
                   alt: _,
@@ -70,7 +70,7 @@ n.Z = i.memo(function (e) {
                   responsive: !0
               })
             : (0, r.jsx)('img', {
-                  src: L,
+                  src: y,
                   alt: _,
                   onContextMenu: i,
                   className: m.dimensionlessImage

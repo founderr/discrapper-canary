@@ -39,14 +39,14 @@ function D(e) {
             user: t
         }),
         U = (0, g.Z)(a),
-        { largeImage: B } = (0, d.FO)(a),
-        { analyticsLocations: G } = (0, c.ZP)(u.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
+        { largeImage: G } = (0, d.FO)(a),
+        { analyticsLocations: B } = (0, c.ZP)(u.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
         Z = (0, h.Z)({
             display: 'live',
             user: t,
             activity: a,
             entry: k,
-            analyticsLocations: G
+            analyticsLocations: B
         }),
         F = (0, m.Z)({
             userId: t.id,
@@ -123,7 +123,7 @@ function D(e) {
                       })
                   });
     return (0, r.jsx)(c.Gt, {
-        value: G,
+        value: B,
         children: (0, r.jsx)(y.Z, {
             user: t,
             onClose: w,
@@ -151,7 +151,7 @@ function D(e) {
                                     className: s()(O.content, P),
                                     children: [
                                         (0, r.jsx)(f.E, {
-                                            image: B,
+                                            image: G,
                                             onClick: () => {
                                                 Z({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, p.Z5)(a, t.id);
                                             },

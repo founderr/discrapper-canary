@@ -198,14 +198,14 @@ function U(e, t) {
             messageId: g.ZP.getCurrentSidebarMessageId(t)
         });
 }
-function B() {
+function G() {
     let e = b.Z.getChannelId(),
         t = S.Z.getGuildId();
     if (null == t || null == e) return;
     let n = g.ZP.getSidebarState(e);
     if ((null == n ? void 0 : n.type) !== h.tI.VIEW_CHANNEL) U(t, e);
 }
-function G(e) {
+function B(e) {
     let { guildId: t, channelId: n, context: r } = e;
     r === A.e3s &&
         (D({
@@ -286,7 +286,7 @@ class W extends d.Z {
         super(...e),
             R(this, 'fetchMessages', D),
             R(this, 'loadSelectedChannelIfNecessary', M),
-            R(this, 'stores', new Map().set(g.ZP, B)),
+            R(this, 'stores', new Map().set(g.ZP, G)),
             R(this, 'actions', {
                 APP_STATE_UPDATE: Y,
                 OVERLAY_INITIALIZE: w,
@@ -295,7 +295,7 @@ class W extends d.Z {
                 THREAD_CREATE: Z,
                 THREAD_LIST_SYNC: () => M(),
                 CHANNEL_CREATE: Z,
-                CHANNEL_PRELOAD: G,
+                CHANNEL_PRELOAD: B,
                 GUILD_CREATE: () => M(),
                 MESSAGE_END_EDIT: F,
                 LOAD_MESSAGES_SUCCESS: j,

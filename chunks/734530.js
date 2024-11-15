@@ -610,15 +610,15 @@ var r;
                     a
                 );
             },
-            B = 'undefined' == typeof window,
-            G = t.createContext(null);
-        G.displayName = 'EmbeddedCheckoutProviderContext';
+            G = 'undefined' == typeof window,
+            B = t.createContext(null);
+        B.displayName = 'EmbeddedCheckoutProviderContext';
         var Z = function () {
-                var e = t.useContext(G);
+                var e = t.useContext(B);
                 if (!e) throw Error('<EmbeddedCheckout> must be used within <EmbeddedCheckoutProvider>');
                 return e;
             },
-            F = B
+            F = G
                 ? function (e) {
                       var n = e.id,
                           r = e.className;
@@ -658,25 +658,25 @@ var r;
                           })
                       );
                   },
-            V = U('auBankAccount', B),
-            j = U('card', B),
-            H = U('cardNumber', B),
-            Y = U('cardExpiry', B),
-            W = U('cardCvc', B),
-            K = U('fpxBank', B),
-            z = U('iban', B),
-            q = U('idealBank', B),
-            Q = U('p24Bank', B),
-            X = U('epsBank', B),
-            J = U('payment', B),
-            $ = U('expressCheckout', B),
-            ee = U('paymentRequestButton', B),
-            et = U('linkAuthentication', B),
-            en = U('address', B),
-            er = U('shippingAddress', B),
-            ei = U('paymentMethodMessaging', B),
-            ea = U('affirmMessage', B),
-            es = U('afterpayClearpayMessage', B);
+            V = U('auBankAccount', G),
+            j = U('card', G),
+            H = U('cardNumber', G),
+            Y = U('cardExpiry', G),
+            W = U('cardCvc', G),
+            K = U('fpxBank', G),
+            z = U('iban', G),
+            q = U('idealBank', G),
+            Q = U('p24Bank', G),
+            X = U('epsBank', G),
+            J = U('payment', G),
+            $ = U('expressCheckout', G),
+            ee = U('paymentRequestButton', G),
+            et = U('linkAuthentication', G),
+            en = U('address', G),
+            er = U('shippingAddress', G),
+            ei = U('paymentMethodMessaging', G),
+            ea = U('affirmMessage', G),
+            es = U('afterpayClearpayMessage', G);
         (e.AddressElement = en),
             (e.AffirmMessageElement = ea),
             (e.AfterpayClearpayMessageElement = es),
@@ -764,7 +764,7 @@ var r;
                         },
                         [_, r]
                     ),
-                    t.createElement(G.Provider, { value: c }, i)
+                    t.createElement(B.Provider, { value: c }, i)
                 );
             }),
             (e.EpsBankElement = X),

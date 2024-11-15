@@ -574,7 +574,7 @@ function U(e, t, n) {
     var R = M(n, 'useGrouping', 'boolean', void 0, !0);
     i['[[useGrouping]]'] = R;
     var D = d[_].patterns[p];
-    return (i['[[positivePattern]]'] = D.positivePattern), (i['[[negativePattern]]'] = D.negativePattern), (i['[[boundFormat]]'] = void 0), (i['[[initializedNumberFormat]]'] = !0), l && (e.format = B.call(e)), a.exp.test(a.input), e;
+    return (i['[[positivePattern]]'] = D.positivePattern), (i['[[negativePattern]]'] = D.negativePattern), (i['[[boundFormat]]'] = void 0), (i['[[initializedNumberFormat]]'] = !0), l && (e.format = G.call(e)), a.exp.test(a.input), e;
 }
 c(s, 'NumberFormat', {
     configurable: !0,
@@ -582,18 +582,18 @@ c(s, 'NumberFormat', {
     value: k
 }),
     c(s.NumberFormat, 'prototype', { writable: !1 });
-function B() {
+function G() {
     var e = this != null && 'object' == typeof this && en(this);
     if (!e || !e['[[initializedNumberFormat]]']) throw TypeError('`this` value for format() is not an initialized Intl.NumberFormat object.');
     if (void 0 === e['[[boundFormat]]']) {
         var t = E.call(function (e) {
-            return G(this, Number(e));
+            return B(this, Number(e));
         }, this);
         e['[[boundFormat]]'] = t;
     }
     return e['[[boundFormat]]'];
 }
-function G(e, t) {
+function B(e, t) {
     var n,
         r = $(),
         i = en(e),
@@ -686,7 +686,7 @@ function G(e, t) {
     }),
     c(s.NumberFormat.prototype, 'format', {
         configurable: !0,
-        get: B
+        get: G
     });
 var Z = {
     arab: ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'],
@@ -888,8 +888,8 @@ function K(e, t) {
                 m,
                 g = n['[[' + p + ']]'],
                 E = l['[[' + p + ']]'];
-            if (('year' === p && E <= 0 ? (E = 1 - E) : 'month' === p ? E++ : 'hour' === p && !0 === n['[[hour12]]'] && ((E %= 12), (h = E !== l['[[' + p + ']]']), 0 === E && !0 === n['[[hourNo0]]'] && (E = 12)), 'numeric' === g)) m = G(a, E);
-            else if ('2-digit' === g) (m = G(o, E)).length > 2 && (m = m.slice(-2));
+            if (('year' === p && E <= 0 ? (E = 1 - E) : 'month' === p ? E++ : 'hour' === p && !0 === n['[[hour12]]'] && ((E %= 12), (h = E !== l['[[' + p + ']]']), 0 === E && !0 === n['[[hourNo0]]'] && (E = 12)), 'numeric' === g)) m = B(a, E);
+            else if ('2-digit' === g) (m = B(o, E)).length > 2 && (m = m.slice(-2));
             else if (g in b)
                 switch (p) {
                     case 'month':
@@ -952,7 +952,7 @@ var z = (s.__localeSensitiveProtos = {
 });
 (z.Number.toLocaleString = function () {
     if ('[object Number]' !== Object.prototype.toString.call(this)) throw TypeError('`this` value must be a number for Number.prototype.toLocaleString()');
-    return G(new k(arguments[0], arguments[1]), this);
+    return B(new k(arguments[0], arguments[1]), this);
 }),
     (z.Date.toLocaleString = function () {
         if ('[object Date]' !== Object.prototype.toString.call(this)) throw TypeError('`this` value must be a Date instance for Date.prototype.toLocaleString()');

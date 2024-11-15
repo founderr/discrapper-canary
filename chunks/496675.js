@@ -78,10 +78,10 @@ function k() {
 function U() {
     k();
 }
-function B() {
+function G() {
     k();
 }
-function G(e) {
+function B(e) {
     var t;
     let { user: n } = e;
     if (n.id !== (null === (t = A.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) return !1;
@@ -251,12 +251,12 @@ function K() {
         CONNECTION_CLOSED: function () {
             K();
         },
-        GUILD_CREATE: B,
-        GUILD_UPDATE: B,
-        GUILD_DELETE: B,
-        GUILD_MEMBER_ADD: G,
-        GUILD_MEMBER_UPDATE: G,
-        CURRENT_USER_UPDATE: G,
+        GUILD_CREATE: G,
+        GUILD_UPDATE: G,
+        GUILD_DELETE: G,
+        GUILD_MEMBER_ADD: B,
+        GUILD_MEMBER_UPDATE: B,
+        CURRENT_USER_UPDATE: B,
         CHANNEL_CREATE: function (e) {
             let {
                     channel: { id: t }

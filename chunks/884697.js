@@ -196,9 +196,9 @@ let d = (e) => (null == e ? void 0 : e.premiumType) != null,
                     if (null != e && !P(e) && (n.push(r), n.length >= u.K8)) return n;
                 }
         }
-        return B(n);
+        return G(n);
     },
-    B = (e) => {
+    G = (e) => {
         if (e.length < u.K8) {
             let t = u.HU.slice(0, u.K8 - e.length);
             return e.concat(t);

@@ -534,7 +534,7 @@ var C = r.forwardRef(function (e, t) {
         },
         [M, w, P, k, U]
     );
-    var B = r.useCallback(
+    var G = r.useCallback(
             function (e, t) {
                 var n,
                     r,
@@ -586,29 +586,29 @@ var C = r.forwardRef(function (e, t) {
             },
             [s]
         ),
-        G = r.useCallback(
+        B = r.useCallback(
             function (e) {
-                return B(e, { clickHandler: l });
+                return G(e, { clickHandler: l });
             },
-            [B, l]
+            [G, l]
         ),
         Z = r.useCallback(
             function (e) {
-                return B(e, { clickHandler: d });
+                return G(e, { clickHandler: d });
             },
-            [B, d]
+            [G, d]
         ),
         F = r.useCallback(
             function (e) {
-                return B(e, { mouseHandler: f });
+                return G(e, { mouseHandler: f });
             },
-            [B, f]
+            [G, f]
         ),
         V = r.useCallback(
             function (e) {
-                return B(e, { mouseHandler: _ });
+                return G(e, { mouseHandler: _ });
             },
-            [B, _]
+            [G, _]
         );
     return (
         r.useEffect(
@@ -617,16 +617,16 @@ var C = r.forwardRef(function (e, t) {
                     null != n && window.addEventListener(e, t);
                 };
                 return (
-                    e('click', G, l),
+                    e('click', B, l),
                     e('mousedown', Z, d),
                     e('mousemove', F, f),
                     e('mouseup', V, _),
                     function () {
-                        window.removeEventListener('click', G), window.removeEventListener('mousedown', Z), window.removeEventListener('mousemove', F), window.removeEventListener('mouseup', F);
+                        window.removeEventListener('click', B), window.removeEventListener('mousedown', Z), window.removeEventListener('mousemove', F), window.removeEventListener('mouseup', F);
                     }
                 );
             },
-            [G, Z, F, V, l, d, f, _]
+            [B, Z, F, V, l, d, f, _]
         ),
         r.useEffect(function () {
             var e = C.current,

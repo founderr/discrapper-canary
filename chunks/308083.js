@@ -195,11 +195,11 @@ if (isNaN(M) || isNaN(P)) throw Error('Failed to get the last step in the ClanSe
 if (M > P) throw Error('Early Signup last step mismatch.');
 let k = '700136079562375258',
     U = '762434991303950386',
-    B = ['Server: NA', 'Server: EU', 'Server: LATAM', 'Server: KR', 'Server: AP', 'Voice ON', 'Voice OFF', 'Unrated', 'All Ranks', 'Bronze+', 'Silver+', 'Gold+', 'Platinum+', 'Diamond+'],
-    G = new Set([...B, 'Server: NA', 'Server: EU', 'Server: Asia', 'Server: TW/HK/MO', 'Mondstadt', 'Liyue', 'Inazuma', 'Sumeru', 'Fontaine', 'F2P', 'Spenders', 'Co-op', 'Support']),
+    G = ['Server: NA', 'Server: EU', 'Server: LATAM', 'Server: KR', 'Server: AP', 'Voice ON', 'Voice OFF', 'Unrated', 'All Ranks', 'Bronze+', 'Silver+', 'Gold+', 'Platinum+', 'Diamond+'],
+    B = new Set([...G, 'Server: NA', 'Server: EU', 'Server: Asia', 'Server: TW/HK/MO', 'Mondstadt', 'Liyue', 'Inazuma', 'Sumeru', 'Fontaine', 'F2P', 'Spenders', 'Co-op', 'Support']),
     Z = ['20+', '30+', '40+', 'All Ages'],
     F = ['Recurring Events', 'Beginner Friendly', 'PUGs', 'Inclusive', 'Parent Friendly', 'Work-life Balance', 'Competitive', 'Streamer', 'Esports'],
-    V = new Set([...B, ...Z, ...F]),
+    V = new Set([...G, ...Z, ...F]),
     j = new Set(['Bulgarian', 'Chinese (Simplified)', 'Chinese (Traditional)', 'Croatian', 'Czech', 'Danish', 'Dutch', 'English', 'Finnish', 'French', 'German', 'Greek', 'Hindi', 'Hungarian', 'Italian', 'Japanese', 'Korean', 'Lithuanian', 'Norwegian', 'Polish', 'Portuguese', 'Romanian', 'Russian', 'Spanish', 'Swedish', 'Thai', 'Turkish', 'Ukrainian', 'Vietnamese']);
 function H(e, t) {
     var n;
@@ -208,7 +208,7 @@ function H(e, t) {
         ((n = t),
         (e) => {
             var t;
-            return -((((null == n ? void 0 : n.includes(e)) ? 1 : 0) << 4) | ((((t = e), V.has(t) || Y.has(t) || j.has(t)) ? 0 : 1) << 3) | ((G.has(e) ? 1 : 0) << 2) | ((Z.includes(e) ? 1 : 0) << 1) | ((F.includes(e) ? 1 : 0) << 0));
+            return -((((null == n ? void 0 : n.includes(e)) ? 1 : 0) << 4) | ((((t = e), V.has(t) || Y.has(t) || j.has(t)) ? 0 : 1) << 3) | ((B.has(e) ? 1 : 0) << 2) | ((Z.includes(e) ? 1 : 0) << 1) | ((F.includes(e) ? 1 : 0) << 0));
         })
     );
 }

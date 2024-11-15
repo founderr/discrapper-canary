@@ -150,7 +150,7 @@ n.d(t, {
         return Y;
     },
     kJ: function () {
-        return G;
+        return B;
     },
     kU: function () {
         return W;
@@ -159,7 +159,7 @@ n.d(t, {
         return eO;
     },
     mX: function () {
-        return B;
+        return G;
     },
     nc: function () {
         return ec;
@@ -397,7 +397,7 @@ let E = (0, o.Zc)(
         (e) => (null != e ? e : k),
         (e) => e
     ),
-    B = (0, o.Zc)(
+    G = (0, o.Zc)(
         'privacy',
         'defaultMessageRequestRestricted',
         (e) => {
@@ -406,7 +406,7 @@ let E = (0, o.Zc)(
         },
         (e) => a.D5.create({ value: e })
     ),
-    G = (0, o.Zc)(
+    B = (0, o.Zc)(
         'privacy',
         'nonSpamRetrainingOptIn',
         (e) => (null == e ? void 0 : e.value),

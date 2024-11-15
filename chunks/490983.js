@@ -34,8 +34,8 @@ var r,
     P = n(981631);
 let k = f()().subtract(1, 'week'),
     U = [],
-    B = '',
-    G = !1;
+    G = '',
+    B = !1;
 function Z(e, t) {
     return e.application.name.localeCompare(t.application.name, E.default.locale, { sensitivity: 'base' });
 }
@@ -143,7 +143,7 @@ function z() {
             ...i
         ].sort((e, t) => (e.lastPlayed === t.lastPlayed ? 0 : e.lastPlayed > t.lastPlayed ? -1 : 1));
     return (
-        (G = null != I.Z.lastFetched && b.Z.fetched),
+        (B = null != I.Z.lastFetched && b.Z.fetched),
         !c().isEqual(a, U) &&
             ((U = a),
             L.isPlatformEmbedded &&
@@ -160,7 +160,7 @@ class q extends (r = _.ZP.Store) {
         this.syncWith([h.Z, I.Z, g.Z, m.ZP, A.Z, N.Z, b.Z, T.Z, S.Z, v.Z], z, 200), this.syncWith([y.Z, E.default], () => !0);
     }
     get applicationFilterQuery() {
-        return B;
+        return G;
     }
     get applicationViewItems() {
         return U;
@@ -172,7 +172,7 @@ class q extends (r = _.ZP.Store) {
         return V(U);
     }
     get filteredLibraryApplicationViewItems() {
-        return H(this.libraryApplicationViewItems, B);
+        return H(this.libraryApplicationViewItems, G);
     }
     get sortedFilteredLibraryApplicationViewItems() {
         return Y(this.filteredLibraryApplicationViewItems, y.Z.sortKey, y.Z.sortDirection, E.default.locale);
@@ -181,7 +181,7 @@ class q extends (r = _.ZP.Store) {
         return W(U);
     }
     get hasFetchedApplications() {
-        return G;
+        return B;
     }
 }
 (s = 'ApplicationViewStore'),
@@ -196,6 +196,6 @@ class q extends (r = _.ZP.Store) {
     (t.Z = new q(p.Z, {
         LIBRARY_APPLICATION_FILTER_UPDATE: function (e) {
             let { query: t } = e;
-            B = t;
+            G = t;
         }
     }));
