@@ -26,7 +26,8 @@ function g() {
         i = (0, l.e7)([d.ZP], () => d.ZP.getPremiumTypeSubscription()),
         [s, g] = r.useState({
             fractionalState: m.a$.NONE,
-            endsAt: o()(0)
+            endsAt: o()(0),
+            currentEntitlementId: ''
         });
     return (
         r.useEffect(() => {
@@ -39,7 +40,8 @@ function g() {
                         ? e
                         : {
                               fractionalState: m.a$.NONE,
-                              endsAt: o()(0)
+                              endsAt: o()(0),
+                              currentEntitlementId: ''
                           }
                 );
                 return;
@@ -52,7 +54,8 @@ function g() {
             }
             g({
                 fractionalState: null == i || h.JwP.INACTIVE.has(i.status) || i.isBoostOnly ? m.a$.FP_ONLY : m.a$.FP_SUB_PAUSED,
-                endsAt: o()(e[0].endsAt)
+                endsAt: o()(e[0].endsAt),
+                currentEntitlementId: e.length > 0 ? e[0].id : ''
             });
         }, [t, n, i]),
         s

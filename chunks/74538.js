@@ -1251,7 +1251,8 @@ t.ZP = Object.freeze({
                     ? arguments[4]
                     : {
                           fractionalState: x.a$.NONE,
-                          endsAt: c()(0)
+                          endsAt: c()(0),
+                          currentEntitlementId: ''
                       },
             a = n
                 ? (0, O.T4)(

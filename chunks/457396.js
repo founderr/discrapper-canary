@@ -86,20 +86,21 @@ let en = (e) => {
         eT = (0, H.wG)(ee),
         eA = (0, d.e7)([Z.Z], () => Z.Z.getCreatedAtOverride()),
         eb = (0, d.e7)([S.Z], () => S.Z.hasLayers()),
-        { fractionalState: ex, endsAt: eZ } = (0, I.Z)({ forceFetch: !0 }),
-        eL = null != eA ? eA : null == el ? void 0 : el.createdAt,
-        ey = s || null != em || null != ep || eE || eN || eT || null != eC || null != ev || eu,
-        { enabled: eO } = O._.useExperiment({ location: ee }, { autoTrackExposure: !1 }),
-        { enabled: eR } = y.Z.useExperiment(
+        { fractionalState: ex, endsAt: eZ, currentEntitlementId: eL } = (0, I.Z)({ forceFetch: !0 }),
+        [ey, eO] = (0, v.XR)(u.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL, Number(eL)),
+        eR = null != eA ? eA : null == el ? void 0 : el.createdAt,
+        eP = s || null != em || null != ep || eE || eN || eT || null != eC || null != ev || eu,
+        { enabled: ej } = O._.useExperiment({ location: ee }, { autoTrackExposure: !1 }),
+        { enabled: eD } = y.Z.useExperiment(
             { location: ee },
             {
                 autoTrackExposure: ef,
                 disable: !ef
             }
         ),
-        eP = eO && (null == em ? void 0 : em.trial_id) === z.a7,
-        [ej, eD] = (0, v.US)(eg ? [u.z.REVERSE_TRIAL_NITRO_TAB_BADGE] : [], void 0, !0);
-    if (!(ey = ey || (null != el && null != eL && Date.now() - eL.getTime() > et))) return null;
+        eM = ej && (null == em ? void 0 : em.trial_id) === z.a7,
+        [ew, ek] = (0, v.US)(eg ? [u.z.REVERSE_TRIAL_NITRO_TAB_BADGE] : [], void 0, !0);
+    if (!(eP = eP || (null != el && null != eR && Date.now() - eR.getTime() > et))) return null;
     if (
         (ex !== z.a$.NONE &&
             ((r = 9),
@@ -107,11 +108,12 @@ let en = (e) => {
                 className: '',
                 endsAt: eZ,
                 messageStyle: E.a.SHORT_TIME,
-                upperCase: !0
+                upperCase: !0,
+                currentEntitlementId: eL
             }))),
         ef)
     ) {
-        var eM, ew, ek;
+        var eU, eG, eB;
         (n = q.trialForAllButton),
             (r = 10),
             (i = (0, l.jsxs)(l.Fragment, {
@@ -119,14 +121,14 @@ let en = (e) => {
                     (0, l.jsx)(G.dX, {
                         isSelected: s,
                         trialOffer: em,
-                        q4MarketingEnabled: eR
+                        q4MarketingEnabled: eD
                     }),
-                    eR &&
+                    eD &&
                         (0, l.jsx)('div', {
                             className: q.tabBackground,
                             children: (0, l.jsx)('img', {
                                 className: o()(q.tabBackgroundImage, { [q.tabBackgroundImageHovered]: ec }),
-                                src: ((eM = es), (ew = eo), (ek = ec), ew ? (eM || !ek ? $.Z : J.Z) : eM || !ek ? Q.Z : X.Z),
+                                src: ((eU = es), (eG = eo), (eB = ec), eG ? (eU || !eB ? $.Z : J.Z) : eU || !eB ? Q.Z : X.Z),
                                 alt: ''
                             })
                         })
@@ -139,7 +141,7 @@ let en = (e) => {
               ? ((i = (0, l.jsx)(V.Z, { copy: K.intl.string(K.t.jyYgZ2) })), (r = 8))
               : eE
                 ? ((i = (0, l.jsx)(D.Z, {})), (r = 0))
-                : null != ej && ej === u.z.REVERSE_TRIAL_NITRO_TAB_BADGE
+                : null != ew && ew === u.z.REVERSE_TRIAL_NITRO_TAB_BADGE
                   ? ((i = (0, l.jsx)(F.Z, {
                         copy: K.intl.string(K.t.HwUCnp),
                         showStars: !1
@@ -156,7 +158,7 @@ let en = (e) => {
                               includesAmountOff: !1
                           })),
                           (r = 3))
-                        : null == em || eP
+                        : null == em || eM
                           ? eS
                               ? ((i = (0, l.jsx)(G.lH, {
                                     isSelected: s,
@@ -169,18 +171,19 @@ let en = (e) => {
                                 isTabSelected: s
                             })),
                             (r = 4));
-    let eU = (0, l.jsx)(p.Qj, {
+    let eV = (0, l.jsx)(p.Qj, {
         selected: s,
         route: en,
         icon: m.NitroWheelIcon,
         text: K.intl.string(K.t.Ipxkoq),
         locationState: ei,
         onClick: () => {
-            b.default.track(Y.rMx.NITRO_TAB_VISITED, {
-                badge_decorator: r,
-                has_premium: eu
-            }),
-                eN || eT ? ((0, C.EW)(u.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: W.L.TAKE_ACTION }), eT && (0, C.EW)(u.z.REFERRAL_INCENTIVE_AWARDED_INFO, { dismissAction: W.L.TAKE_ACTION })) : null != ej && eD(W.L.USER_DISMISS);
+            ey === u.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL && eO(W.L.TAKE_ACTION),
+                b.default.track(Y.rMx.NITRO_TAB_VISITED, {
+                    badge_decorator: r,
+                    has_premium: eu
+                }),
+                eN || eT ? ((0, C.EW)(u.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: W.L.TAKE_ACTION }), eT && (0, C.EW)(u.z.REFERRAL_INCENTIVE_AWARDED_INFO, { dismissAction: W.L.TAKE_ACTION })) : null != ew && ek(W.L.USER_DISMISS);
         },
         onMouseEnter: () => {
             ed(!0);
@@ -194,18 +197,18 @@ let en = (e) => {
         avatarWithTextClassName: n,
         children: i
     });
-    return ef && eR
+    return ef && eD
         ? (0, l.jsx)(G.CI, {
               variant: G.j$.TRIAL_FOR_ALL,
               trialOffer: em,
-              children: eU
+              children: eV
           })
         : eS
           ? (0, l.jsx)(G.CI, {
                 variant: G.j$.REFERRAL_PROGRAM,
-                children: eU
+                children: eV
             })
           : eN && !eb
-            ? (0, l.jsx)(G.A7, { children: () => eU })
-            : eU;
+            ? (0, l.jsx)(G.A7, { children: () => eV })
+            : eV;
 };

@@ -1,21 +1,25 @@
 s.d(t, {
     Z: function () {
-        return f;
+        return C;
     }
-});
-var n = s(200651),
-    r = s(120356),
+}),
+    s(47120);
+var n = s(200651);
+s(192379);
+var r = s(120356),
     i = s.n(r),
-    o = s(927359),
-    a = s(325767),
-    l = s(823188),
-    c = s(860553);
-let d = 'premium_tier_gradient',
-    u = 'smaller_sparkle_gradient';
-function p(e) {
+    o = s(704215),
+    a = s(927359),
+    l = s(243778),
+    c = s(325767),
+    d = s(823188),
+    u = s(860553);
+let p = 'premium_tier_gradient',
+    f = 'smaller_sparkle_gradient';
+function x(e) {
     let { width: t = 14, height: s = 15, color: r = 'white', foreground: i, ...o } = e;
     return (0, n.jsxs)('svg', {
-        ...(0, a.Z)({ ...o }),
+        ...(0, c.Z)({ ...o }),
         preserveAspectRatio: 'none',
         width: t,
         height: s,
@@ -25,7 +29,7 @@ function p(e) {
         children: [
             (0, n.jsx)('defs', {
                 children: (0, n.jsxs)('linearGradient', {
-                    id: d,
+                    id: p,
                     x1: '0%',
                     y1: '0%',
                     x2: '100%',
@@ -47,7 +51,7 @@ function p(e) {
                 })
             }),
             (0, n.jsxs)('linearGradient', {
-                id: u,
+                id: f,
                 x1: '-4.95474',
                 y1: '5.44067',
                 x2: '11.2384',
@@ -72,31 +76,32 @@ function p(e) {
         ]
     });
 }
-function f(e) {
-    let { className: t, endsAt: s, messageStyle: r, upperCase: a, showSparkles: f } = e,
-        x = (0, o.Z)(s, r);
+function C(e) {
+    let { className: t, endsAt: s, messageStyle: r, upperCase: c, showSparkles: C, currentEntitlementId: g } = e,
+        [_] = (0, l.XR)(o.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL, Number(g)),
+        h = (0, a.Z)(s, r);
     return (
-        a && x.toUpperCase(),
+        c && (h = h.toUpperCase()),
         (0, n.jsxs)('div', {
-            className: i()(t, c.countDown),
+            className: i()(t, u.countDown),
             children: [
-                f
+                C
                     ? (0, n.jsxs)(n.Fragment, {
                           children: [
-                              (0, n.jsx)(p, {
-                                  foreground: c.sparkleStar1,
-                                  color: 'url(#'.concat(u, ')')
+                              (0, n.jsx)(x, {
+                                  foreground: u.sparkleStar1,
+                                  color: 'url(#'.concat(f, ')')
                               }),
-                              (0, n.jsx)(p, {
-                                  foreground: c.sparkleStar2,
-                                  color: 'url(#'.concat(d, ')')
+                              (0, n.jsx)(x, {
+                                  foreground: u.sparkleStar2,
+                                  color: 'url(#'.concat(p, ')')
                               })
                           ]
                       })
                     : null,
-                (0, n.jsx)(l.mn, {
-                    text: x,
-                    colorOptions: l.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL
+                (0, n.jsx)(d.mn, {
+                    text: h,
+                    colorOptions: _ === o.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL ? d.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL : d.VE.PREMIUM_TIER_2_GREY_FILL
                 })
             ]
         })

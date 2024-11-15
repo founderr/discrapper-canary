@@ -83,14 +83,15 @@ function X(e) {
             [z.freeTrialPillTier0GradientFill]: 1 === r,
             [z.freeTrialPillTier2GradientFill]: 3 === r,
             [z.freeTrialPillTier2OldGradientFill]: 4 === r,
-            [z.lightBackgroundPill]: 5 === r
+            [z.lightBackgroundPill]: 5 === r,
+            [z.greyBackgroundPill]: 6 === r
         }),
         children: (0, d.jsx)(v.Text, {
             variant: 'text-xs/bold',
             className: _()(z.freeTrialPillText, {
                 [z.freeTrialPillTextInverted]: 0 !== r && 2 !== r,
                 [z.freeTrialPillTextTier0]: 0 === r,
-                [z.freeTrialPillTextTier2]: 2 === r
+                [z.freeTrialPillTextTier2]: 2 === r || 6 === r
             }),
             children: t
         })
@@ -751,4 +752,4 @@ function es(e) {
         })
     });
 }
-((r = o || (o = {}))[(r.PREMIUM_TIER_0_WHITE_FILL = 0)] = 'PREMIUM_TIER_0_WHITE_FILL'), (r[(r.PREMIUM_TIER_0_GRADIENT_FILL = 1)] = 'PREMIUM_TIER_0_GRADIENT_FILL'), (r[(r.PREMIUM_TIER_2_WHITE_FILL = 2)] = 'PREMIUM_TIER_2_WHITE_FILL'), (r[(r.PREMIUM_TIER_2_NEW_GRADIENT_FILL = 3)] = 'PREMIUM_TIER_2_NEW_GRADIENT_FILL'), (r[(r.PREMIUM_TIER_2_OLD_GRADIENT_FILL = 4)] = 'PREMIUM_TIER_2_OLD_GRADIENT_FILL'), (r[(r.PREMIUM_TIER_2_OLD_GRADIENT_FILL_LIGHT_MODE = 5)] = 'PREMIUM_TIER_2_OLD_GRADIENT_FILL_LIGHT_MODE'), ((i = l || (l = {}))[(i.PREMIUM_TRIAL = 0)] = 'PREMIUM_TRIAL'), (i[(i.PREMIUM_DISCOUNT = 1)] = 'PREMIUM_DISCOUNT'), ((a = u || (u = {}))[(a.DEFAULT = 0)] = 'DEFAULT'), (a[(a.BOOSTING = 1)] = 'BOOSTING'), (a[(a.TAGLINE_XP = 2)] = 'TAGLINE_XP'), (a[(a.FRACTIONAL_PREMIUM = 3)] = 'FRACTIONAL_PREMIUM'), ((s = c || (c = {}))[(s.DEFAULT = 0)] = 'DEFAULT'), (s[(s.TAGLINE_XP_COPY_HOME = 1)] = 'TAGLINE_XP_COPY_HOME'), (s[(s.TAGLINE_XP_COPY_SETTINGS = 2)] = 'TAGLINE_XP_COPY_SETTINGS');
+((r = o || (o = {}))[(r.PREMIUM_TIER_0_WHITE_FILL = 0)] = 'PREMIUM_TIER_0_WHITE_FILL'), (r[(r.PREMIUM_TIER_0_GRADIENT_FILL = 1)] = 'PREMIUM_TIER_0_GRADIENT_FILL'), (r[(r.PREMIUM_TIER_2_WHITE_FILL = 2)] = 'PREMIUM_TIER_2_WHITE_FILL'), (r[(r.PREMIUM_TIER_2_NEW_GRADIENT_FILL = 3)] = 'PREMIUM_TIER_2_NEW_GRADIENT_FILL'), (r[(r.PREMIUM_TIER_2_OLD_GRADIENT_FILL = 4)] = 'PREMIUM_TIER_2_OLD_GRADIENT_FILL'), (r[(r.PREMIUM_TIER_2_OLD_GRADIENT_FILL_LIGHT_MODE = 5)] = 'PREMIUM_TIER_2_OLD_GRADIENT_FILL_LIGHT_MODE'), (r[(r.PREMIUM_TIER_2_GREY_FILL = 6)] = 'PREMIUM_TIER_2_GREY_FILL'), ((i = l || (l = {}))[(i.PREMIUM_TRIAL = 0)] = 'PREMIUM_TRIAL'), (i[(i.PREMIUM_DISCOUNT = 1)] = 'PREMIUM_DISCOUNT'), ((a = u || (u = {}))[(a.DEFAULT = 0)] = 'DEFAULT'), (a[(a.BOOSTING = 1)] = 'BOOSTING'), (a[(a.TAGLINE_XP = 2)] = 'TAGLINE_XP'), (a[(a.FRACTIONAL_PREMIUM = 3)] = 'FRACTIONAL_PREMIUM'), ((s = c || (c = {}))[(s.DEFAULT = 0)] = 'DEFAULT'), (s[(s.TAGLINE_XP_COPY_HOME = 1)] = 'TAGLINE_XP_COPY_HOME'), (s[(s.TAGLINE_XP_COPY_SETTINGS = 2)] = 'TAGLINE_XP_COPY_SETTINGS');

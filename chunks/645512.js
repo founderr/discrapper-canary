@@ -30,6 +30,7 @@ e.exports = {
     freeTrialPill: 'freeTrialPill_c87d73',
     freeTrialPillTier0GradientFill: 'freeTrialPillTier0GradientFill_c87d73',
     freeTrialPillTier2GradientFill: 'freeTrialPillTier2GradientFill_c87d73',
+    greyBackgroundPill: 'greyBackgroundPill_c87d73',
     freeTrialPillTier2OldGradientFill: 'freeTrialPillTier2OldGradientFill_c87d73',
     lightBackgroundPill: 'lightBackgroundPill_c87d73',
     freeTrialPillText: 'freeTrialPillText_c87d73',

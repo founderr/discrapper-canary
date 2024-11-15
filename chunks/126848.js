@@ -36,15 +36,14 @@ function y(e) {
         { enabled: Z } = u._.useExperiment({ location: C }, { autoTrackExposure: !1 }),
         O = Z && (null == E ? void 0 : E.trial_id) === j.a7,
         _ = (null == E ? void 0 : E.trial_id) === j.jz,
-        { enabled: w } = c.Z.getCurrentConfig({ location: C }, { autoTrackExposure: _ });
+        { enabled: B } = c.Z.getCurrentConfig({ location: C }, { autoTrackExposure: _ });
     return (
         (t =
             T !== j.a$.NONE
                 ? (0, i.jsx)(d.Z, {
                       className: '',
                       endsAt: P,
-                      messageStyle: o.a.SHORT_TIME_LEFT,
-                      showSparkles: !0
+                      messageStyle: o.a.SHORT_TIME_LEFT
                   })
                 : R
                   ? (0, i.jsx)(p.Z, {})
@@ -58,7 +57,7 @@ function y(e) {
                       ? (0, i.jsx)(S.dX, {
                             isSelected: y,
                             trialOffer: E,
-                            q4MarketingEnabled: w
+                            q4MarketingEnabled: B
                         })
                       : null == E || O
                         ? null != n
