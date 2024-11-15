@@ -92,16 +92,16 @@ function y(e) {
         : null;
 }
 t.Z = (e) => {
-    let { guildId: t, previewMode: n = !1, source: a } = e,
-        o = g._,
-        [l, c] = i.useState(n),
-        d = i.useRef(null),
-        f = (0, _.Z)({
+    let { guildId: t, previewMode: n = !1, source: a, trackRankingItemInteraction: o } = e,
+        l = g._,
+        [c, d] = i.useState(n),
+        f = i.useRef(null),
+        p = (0, _.Z)({
             guildId: t,
             leaderboardId: g._,
             intervalOffset: 0
         });
-    return ((0, s.useFocusLock)(d),
+    return ((0, s.useFocusLock)(f),
     !(function (e) {
         let { guildId: t, leaderboardId: n, source: r } = e,
             a = (0, _.Z)({
@@ -143,46 +143,47 @@ t.Z = (e) => {
         }, [t, n, r]);
     })({
         guildId: t,
-        leaderboardId: o,
+        leaderboardId: l,
         source: a
     }),
-    null == f)
+    null == p)
         ? null
         : (0, r.jsx)(S, {
               children: (0, r.jsxs)('div', {
                   className: b.popout,
-                  ref: d,
+                  ref: f,
                   children: [
                       (0, r.jsxs)('div', {
                           className: b.content,
                           children: [
-                              (0, r.jsx)(T, { leaderboard: f }),
+                              (0, r.jsx)(T, { leaderboard: p }),
                               (0, r.jsx)(m.Z, {
-                                  leaderboard: f,
-                                  previewMode: l
+                                  leaderboard: p,
+                                  previewMode: c,
+                                  trackRankingItemInteraction: o
                               }),
-                              l
+                              c
                                   ? null
                                   : (0, r.jsxs)(r.Fragment, {
                                         children: [
                                             (0, r.jsx)(h.Z, {
                                                 className: b.previousChampion,
                                                 guildId: t,
-                                                leaderboardId: o,
+                                                leaderboardId: l,
                                                 intervalOffset: -1
                                             }),
                                             (0, r.jsx)(y, {
                                                 guildId: t,
-                                                leaderboardId: o
+                                                leaderboardId: l
                                             })
                                         ]
                                     })
                           ]
                       }),
-                      l
+                      c
                           ? (0, r.jsx)(r.Fragment, {
                                 children: (0, r.jsx)(s.Clickable, {
-                                    onClick: () => c(!1),
+                                    onClick: () => d(!1),
                                     children: (0, r.jsx)('div', {
                                         className: b.exitPreviewModeButton,
                                         children: (0, r.jsx)(s.Text, {

@@ -6,7 +6,7 @@ n.d(t, {
         return k;
     },
     iZ: function () {
-        return w;
+        return R;
     }
 }),
     n(47120);
@@ -16,8 +16,8 @@ var l = n(200651),
     r = n.n(i),
     o = n(91192),
     s = n(876215),
-    u = n(442837),
-    c = n(481060),
+    c = n(442837),
+    u = n(481060),
     d = n(239091),
     m = n(607070),
     x = n(100527),
@@ -41,10 +41,10 @@ var l = n(200651),
     A = n(797342),
     M = n(206583);
 let k = 72;
-function w(e) {
+function R(e) {
     return (null == e ? void 0 : e.type) === C.so.CONTENT_INVENTORY ? k : 0;
 }
-let R = (e) => {
+let w = (e) => {
         let { entry: t, ...n } = e;
         switch (t.content_type) {
             case s.s.PLAYED_GAME:
@@ -144,7 +144,8 @@ let R = (e) => {
                 return (null === (a = n.channel) || void 0 === a ? void 0 : a.guild_id) != null
                     ? (0, l.jsx)(h.Z, {
                           guildId: n.channel.guild_id,
-                          source: x.Z.MEMBER_LIST
+                          source: x.Z.MEMBER_LIST,
+                          trackRankingItemInteraction: n.trackRankingItemInteraction
                       })
                     : null;
             default:
@@ -171,7 +172,7 @@ t.ZP = a.memo((e) => {
         P = a.useRef(!1),
         [Z, L] = a.useState(!1),
         [y, T] = a.useState(!1),
-        N = (0, u.e7)([m.Z], () => m.Z.keyboardModeEnabled);
+        N = (0, c.e7)([m.Z], () => m.Z.keyboardModeEnabled);
     a.useEffect(() => {
         Z && N && T(!0);
     }, [Z, N]);
@@ -215,7 +216,7 @@ t.ZP = a.memo((e) => {
             ),
             []
         ),
-        w = () => {
+        R = () => {
             (P.current = !1),
                 setTimeout(() => {
                     !P.current && (L(!1), T(N));
@@ -228,8 +229,8 @@ t.ZP = a.memo((e) => {
                     P.current && L(!0), k(j);
                 }, 100);
         },
-        onMouseLeave: w,
-        children: (0, l.jsx)(c.Popout, {
+        onMouseLeave: R,
+        children: (0, l.jsx)(u.Popout, {
             renderPopout: (e) => {
                 let { closePopout: t } = e;
                 return (0, l.jsx)(b, {
@@ -244,12 +245,12 @@ t.ZP = a.memo((e) => {
             positionKey: x,
             onRequestOpen: () => k(j),
             onRequestClose: () => {
-                y && w();
+                y && R();
             },
             spacing: 8,
             children: (e, t) => {
                 let { isShown: n } = t;
-                return (0, l.jsx)(c.Clickable, {
+                return (0, l.jsx)(u.Clickable, {
                     ...e,
                     ...p,
                     focusProps: {
@@ -264,7 +265,7 @@ t.ZP = a.memo((e) => {
                         !Z && L(!0);
                     },
                     onContextMenu: _,
-                    children: (0, l.jsx)(R, {
+                    children: (0, l.jsx)(w, {
                         ...s,
                         selected: n,
                         hovered: P.current
