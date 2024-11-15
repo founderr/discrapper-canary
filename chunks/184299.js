@@ -59,6 +59,7 @@ let d = (0, o.Ue)()(
             setFullScreenEnabled: (t) => {
                 (0, u.j)(() => e({ fullScreenEnabled: t }));
             },
+            getVideoProgress: (e) => t().videoProgress[e],
             getVideoProgressState: (e) => {
                 let n = t().videoProgress[e];
                 return null == n ? 'UNKNOWN' : 0 === n.timestampSec ? 'NOT_STARTED' : n.timestampSec >= n.duration ? 'COMPLETED' : 'IN_PROGRESS';
