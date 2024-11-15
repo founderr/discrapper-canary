@@ -8,7 +8,7 @@ var r = n(200651),
     c = n(243778),
     d = n(197115),
     f = n(703656),
-    _ = n(221292),
+    _ = n(785717),
     p = n(652853),
     h = n(475413),
     m = n(228168),
@@ -32,7 +32,8 @@ function S(e) {
 }
 function T(e) {
     let { tiny: t, isPremiumUser: n, onInteraction: i } = e,
-        { analyticsLocations: a, newestAnalyticsLocation: s } = (0, l.ZP)();
+        { analyticsLocations: a, newestAnalyticsLocation: s } = (0, l.ZP)(),
+        { trackUserProfileAction: c } = (0, _.KZ)();
     return (0, r.jsxs)('div', {
         className: b.upsellButtons,
         children: [
@@ -48,7 +49,7 @@ function T(e) {
                           innerClassName: b.viewPremiumPerksButtonInner,
                           buttonShineClassName: b.viewPremiumPerksButtonShine,
                           onClick: () => {
-                              (0, _.pQ)({ action: m.yM.VIEW_PREMIUM_PERKS }), (0, f.uL)(g.Z5c.APPLICATION_STORE), null == i || i();
+                              c({ action: m.yM.VIEW_PREMIUM_PERKS }), (0, f.uL)(g.Z5c.APPLICATION_STORE), null == i || i();
                           },
                           children: [
                               (0, r.jsx)(o.NitroWheelIcon, {
@@ -60,7 +61,7 @@ function T(e) {
                       })
                     : (0, r.jsx)(d.Z, {
                           onClick: () => {
-                              (0, _.pQ)({ action: m.yM.GET_PREMIUM }), null == i || i();
+                              c({ action: m.yM.GET_PREMIUM }), null == i || i();
                           },
                           buttonText: I.intl.string(I.t.x6rkDg),
                           subscriptionTier: v.Si.TIER_2,
