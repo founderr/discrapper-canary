@@ -4,26 +4,27 @@ var r = n(442837),
     a = n(699516),
     s = n(979651),
     o = n(414509),
-    l = n(807031),
-    u = n(981631);
-let c = {},
+    l = n(807031);
+let u = {},
+    c = {},
     d = new Set();
 function f() {
-    c = {};
+    (u = {}), (c = {});
 }
 function _(e) {
-    let { relationship: t } = e;
-    if (t.type === u.OGo.BLOCKED) {
-        let e = s.Z.getVoiceStateForUser(t.id);
-        if (null != e && null != e.channelId) return p(e.channelId, t.id);
-    }
-    return !1;
+    let { relationship: t } = e,
+        n = s.Z.getVoiceStateForUser(t.id);
+    return null != n && null != n.channelId && p(n.channelId, t.id);
 }
 function p(e, t) {
     let n = !1,
-        r = new Set(c[e]),
-        i = a.Z.isBlocked(t);
-    return i && !r.has(t) ? (r.add(t), o.Z.handleBlockedUserVoiceChannelJoin(e, t), (n = !0)) : !i && (n = r.delete(t)), 0 === r.size && n ? delete c[e] : n && (c[e] = r), n;
+        r = !1,
+        i = new Set(u[e]),
+        s = a.Z.isBlocked(t);
+    s && !i.has(t) ? (i.add(t), (r = !0), (n = !0)) : !s && (n = i.delete(t)), 0 === i.size && n ? delete u[e] : n && (u[e] = i);
+    let l = new Set(c[e]),
+        d = a.Z.isIgnored(t);
+    return d && !l.has(t) ? (l.add(t), (r = !0), (n = !0)) : !d && (n = l.delete(t)), 0 === l.size && n ? delete c[e] : n && (c[e] = l), r && o.Z.handleBlockedOrIgnoredUserVoiceChannelJoin(e, t), n;
 }
 class h extends r.ZP.Store {
     initialize() {
@@ -31,7 +32,11 @@ class h extends r.ZP.Store {
     }
     getBlockedUsersForVoiceChannel(e) {
         var t;
-        return (0, l.wC)({ location: 'VoiceChannelBlockedUserStore_getBlockedUsersForVoiceChannel' }) ? (null !== (t = c[e]) && void 0 !== t ? t : d) : d;
+        return (0, l.wC)({ location: 'VoiceChannelBlockedUserStore_getBlockedUsersForVoiceChannel' }) ? (null !== (t = u[e]) && void 0 !== t ? t : d) : d;
+    }
+    getIgnoredUsersForVoiceChannel(e) {
+        var t;
+        return (0, l.wC)({ location: 'VoiceChannelBlockedUserStore_getIgnoredUsersForVoiceChannel' }) ? (null !== (t = c[e]) && void 0 !== t ? t : d) : d;
     }
 }
 t.Z = new h(i.Z, {
@@ -49,9 +54,9 @@ t.Z = new h(i.Z, {
             n = !1;
         return (
             t.forEach((e) => {
-                if (null != e.oldChannelId && null != c[e.oldChannelId]) {
-                    var t;
-                    null === (t = c[e.oldChannelId]) || void 0 === t || t.delete(e.userId), (n = !0);
+                if (null != e.oldChannelId) {
+                    var t, r;
+                    null != u[e.oldChannelId] && (null === (t = u[e.oldChannelId]) || void 0 === t || t.delete(e.userId), (n = !0)), null != c[e.oldChannelId] && (null === (r = c[e.oldChannelId]) || void 0 === r || r.delete(e.userId), (n = !0));
                 }
                 null != e.channelId && (n = p(e.channelId, e.userId) || n);
             }),
@@ -59,5 +64,6 @@ t.Z = new h(i.Z, {
         );
     },
     RELATIONSHIP_ADD: _,
-    RELATIONSHIP_REMOVE: _
+    RELATIONSHIP_REMOVE: _,
+    RELATIONSHIP_UPDATE: _
 });
