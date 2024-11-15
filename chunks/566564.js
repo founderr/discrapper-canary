@@ -6,170 +6,188 @@ var r = n(200651),
     l = n(180650),
     o = n(442837),
     c = n(481060),
-    d = n(580747),
-    u = n(594174),
-    m = n(960048),
-    p = n(381585),
-    h = n(597688),
-    f = n(884697),
-    g = n(251068),
-    C = n(43610),
-    b = n(744112),
-    x = n(223143),
-    v = n(937510),
-    _ = n(823941),
-    k = n(752053),
-    j = n(38900),
-    E = n(709999),
-    I = n(215023),
-    S = n(388032),
-    T = n(632007),
-    N = n(454410),
-    B = n(783433),
-    y = n(170873),
-    L = n(562292),
-    P = n(196315);
+    d = n(607070),
+    u = n(70097),
+    m = n(580747),
+    h = n(594174),
+    p = n(960048),
+    f = n(381585),
+    g = n(597688),
+    C = n(884697),
+    b = n(251068),
+    x = n(43610),
+    v = n(744112),
+    _ = n(223143),
+    k = n(937510),
+    j = n(823941),
+    E = n(752053),
+    I = n(38900),
+    S = n(709999),
+    T = n(215023),
+    N = n(388032),
+    B = n(632007),
+    y = n(454410),
+    L = n(783433),
+    Z = n(170873),
+    P = n(562292),
+    O = n(196315);
 t.Z = (e) => {
-    var t, n, i, Z, O, w, A;
-    let { handleTransition: R, numVisibleItems: H } = e,
-        { categories: F, isFetchingCategories: D, fetchCategoriesError: V, fetchPurchasesError: M, claimError: W, refreshCategories: U } = (0, x.Z)(),
-        z = null !== (t = null != V ? V : M) && void 0 !== t ? t : W,
-        G = Array.from(F.values()),
-        K = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
-        $ = a.createRef(),
-        J = (0, C.t)('CollectiblesFeedShop'),
-        Y = (0, g.m)('CollectiblesFeedShop'),
-        q = (0, b.b)('Collectibles Shop Button'),
-        Q = (0, d.Z)('shop_disable_cache'),
-        X = (0, d.Z)('shop_include_unpublished'),
-        ee = Y ? G[0] : h.Z.getCategory(J ? l.T.SPOOKY_NIGHT : l.T.BAND),
-        et = Y ? G[1] : h.Z.getCategory(J ? l.T.BAND : l.T.AUTUMN_EQUINOX),
-        en = h.Z.getCategory(l.T.ANIME_V2),
-        er = Y
-            ? (0, f.uV)(null !== (n = null == ee ? void 0 : ee.heroBanner) && void 0 !== n ? n : '', {
-                  size: I.pv,
+    var t, n, i, w, A, R, H, F;
+    let { handleTransition: V, numVisibleItems: D } = e,
+        { categories: M, isFetchingCategories: W, fetchCategoriesError: U, fetchPurchasesError: z, claimError: G, refreshCategories: K } = (0, _.Z)(),
+        $ = null !== (t = null != U ? U : z) && void 0 !== t ? t : G,
+        J = Array.from(M.values()),
+        Y = (0, o.e7)([h.default], () => h.default.getCurrentUser()),
+        q = a.createRef(),
+        Q = (0, x.t)('CollectiblesFeedShop'),
+        X = (0, b.m)('CollectiblesFeedShop'),
+        ee = (0, v.b)('Collectibles Shop Button'),
+        et = (0, m.Z)('shop_disable_cache'),
+        en = (0, m.Z)('shop_include_unpublished'),
+        er = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
+        ea = X ? J[0] : g.Z.getCategory(Q ? l.T.SPOOKY_NIGHT : l.T.BAND),
+        ei = X ? J[1] : g.Z.getCategory(Q ? l.T.BAND : l.T.AUTUMN_EQUINOX),
+        es = g.Z.getCategory(l.T.ANIME_V2),
+        el = X
+            ? (0, C.uV)(null !== (n = null == ea ? void 0 : ea.heroBanner) && void 0 !== n ? n : '', {
+                  size: T.pv,
                   format: 'jpg'
               })
-            : J
-              ? P
-              : y,
-        ea = Y
-            ? (0, f.uV)(null !== (i = null == et ? void 0 : et.featuredBlock) && void 0 !== i ? i : '', {
-                  size: I.J0,
+            : Q
+              ? O
+              : Z,
+        eo = X
+            ? (0, C.uV)(null !== (i = null == ei ? void 0 : ei.featuredBlock) && void 0 !== i ? i : '', {
+                  size: T.J0,
                   format: 'png'
               })
-            : J
-              ? B
-              : L,
-        ei = Y
-            ? (0, f.uV)(null !== (Z = null == en ? void 0 : en.featuredBlock) && void 0 !== Z ? Z : '', {
-                  size: I.J0,
+            : Q
+              ? L
+              : P,
+        ec = X
+            ? (0, C.uV)(null !== (w = null == es ? void 0 : es.featuredBlock) && void 0 !== w ? w : '', {
+                  size: T.J0,
                   format: 'png'
               })
-            : N,
-        es = a.useCallback(() => {
-            U();
-        }, [U]),
-        el = Y ? (null !== (O = null == ee ? void 0 : ee.heroRanking) && void 0 !== O ? O : []) : J ? I.Ku : I.WC,
-        eo = a.useMemo(() => el.map((e) => h.Z.getProduct(e)).filter((e) => null != e), [D, J]),
-        ec = (0, v.l)(eo).slice(0, 4),
-        ed = a.useMemo(() => I.yo.map((e) => h.Z.getProduct(e)).filter((e) => null != e), [D]),
-        eu = (0, v.l)(ed);
-    if (null == K) return null;
-    let em = S.intl.formatToPlainString(S.t.wvKYCg, { category_name: null == ee ? void 0 : ee.name });
-    if (null != z) {
+            : y,
+        ed = a.useCallback(() => {
+            K();
+        }, [K]),
+        eu = X ? (null !== (A = null == ea ? void 0 : ea.heroRanking) && void 0 !== A ? A : []) : Q ? T.Ku : T.WC,
+        em = a.useMemo(() => eu.map((e) => g.Z.getProduct(e)).filter((e) => null != e), [W, Q]),
+        eh = (0, k.l)(em).slice(0, 4),
+        ep = a.useMemo(() => T.yo.map((e) => g.Z.getProduct(e)).filter((e) => null != e), [W]),
+        ef = (0, k.l)(ep),
+        eg = (null == ea ? void 0 : ea.skuId) != null ? (0, T.ZS)(ea.skuId) : void 0;
+    if (null == Y) return null;
+    let eC = N.intl.formatToPlainString(N.t.wvKYCg, { category_name: null == ea ? void 0 : ea.name });
+    if (null != $) {
         let e = [];
-        null != V ? e.push('shop load fetch categories error: '.concat(z.message)) : null != M ? e.push('shop load fetch purchase error: '.concat(z.message)) : e.push('shop load claim error: '.concat(z.message)),
-            m.Z.captureMessage(e.join('\n'), {
+        null != U ? e.push('shop load fetch categories error: '.concat($.message)) : null != z ? e.push('shop load fetch purchase error: '.concat($.message)) : e.push('shop load claim error: '.concat($.message)),
+            p.Z.captureMessage(e.join('\n'), {
                 tags: {
-                    isStaff: K.isStaff().toString(),
-                    preloadEnabled: q.toString(),
-                    disableCache: Q.toString(),
-                    includeUnpublished: X.toString()
+                    isStaff: Y.isStaff().toString(),
+                    preloadEnabled: ee.toString(),
+                    disableCache: et.toString(),
+                    includeUnpublished: en.toString()
                 }
             });
     }
-    if (null != V)
-        return (0, r.jsx)(k.Z, {
-            onRetry: es,
-            errorOrigin: k.i.SHOP_PAGE,
-            errorMessage: V.message
+    if (null != U)
+        return (0, r.jsx)(E.Z, {
+            onRetry: ed,
+            errorOrigin: E.i.SHOP_PAGE,
+            errorMessage: U.message
         });
+    let eb = null !== (R = null == eg ? void 0 : eg.heroBanner) && void 0 !== R ? R : void 0;
     return (0, r.jsx)(r.Fragment, {
         children: (0, r.jsxs)('div', {
-            className: T.shop,
+            className: B.shop,
             children: [
                 (0, r.jsxs)('div', {
-                    className: T.banner,
+                    className: B.banner,
                     children: [
+                        (null == eb ? void 0 : eb.animationSource) == null || er
+                            ? (0, r.jsx)('div', {
+                                  className: B.bannerImage,
+                                  style: { backgroundImage: 'url('.concat(el, ')') }
+                              })
+                            : (0, r.jsx)(u.Z, {
+                                  className: B.bannerVideoBackground,
+                                  src: eb.animationSource,
+                                  autoPlay: !0,
+                                  loop: !0
+                              }),
                         (0, r.jsx)('div', {
-                            className: T.bannerImage,
-                            style: { backgroundImage: 'url('.concat(er, ')') }
+                            className: s()(B.bannerShadow, B.left, { [B.darker]: null == eb ? void 0 : eb.darker }),
+                            style: (null == eb ? void 0 : eb.gradientLeft) != null ? { background: null == eb ? void 0 : eb.gradientLeft } : void 0
                         }),
-                        (0, r.jsx)('div', { className: s()(T.bannerShadow, T.left) }),
-                        (0, r.jsx)('div', { className: s()(T.bannerShadow, T.right) })
+                        (0, r.jsx)('div', {
+                            className: s()(B.bannerShadow, B.right, { [B.darker]: null == eb ? void 0 : eb.darker }),
+                            style: (null == eb ? void 0 : eb.gradientRight) != null ? { background: null == eb ? void 0 : eb.gradientRight } : void 0
+                        })
                     ]
                 }),
                 (0, r.jsxs)('div', {
-                    className: s()(T.content, T.mainContent),
+                    className: s()(B.content, B.mainContent),
                     children: [
                         (0, r.jsxs)('div', {
-                            className: s()(T.heroHeaderContainer),
+                            className: s()(B.heroHeaderContainer),
                             children: [
-                                D
-                                    ? (0, r.jsx)('div', { className: s()(T.heroHeaderBadgeLogoSummaryContainer) })
+                                W
+                                    ? (0, r.jsx)('div', { className: s()(B.heroHeaderBadgeLogoSummaryContainer) })
                                     : (0, r.jsxs)('div', {
-                                          className: s()(T.heroHeaderBadgeLogoSummaryContainer),
+                                          className: s()(B.heroHeaderBadgeLogoSummaryContainer),
                                           children: [
-                                              (null == ee ? void 0 : ee.unpublishedAt) != null &&
+                                              (null == ea ? void 0 : ea.unpublishedAt) != null &&
                                                   (0, r.jsx)(c.TextBadge, {
                                                       disableColor: !0,
-                                                      text: S.intl.string(S.t['h/uBCQ']),
-                                                      className: T.limitedTimeBadge
+                                                      text: N.intl.string(N.t['h/uBCQ']),
+                                                      className: B.limitedTimeBadge
                                                   }),
                                               (0, r.jsxs)('div', {
-                                                  className: s()(T.heroLogoNameContainer),
+                                                  className: s()(B.heroLogoNameContainer),
                                                   children: [
                                                       (0, r.jsx)('img', {
-                                                          className: T.heroHeaderLogo,
-                                                          src: (0, f.uV)(null !== (A = null !== (w = null == ee ? void 0 : ee.heroLogo) && void 0 !== w ? w : null == ee ? void 0 : ee.logo) && void 0 !== A ? A : '', { size: _.n }),
-                                                          alt: null == ee ? void 0 : ee.name
+                                                          className: B.heroHeaderLogo,
+                                                          src: (0, C.uV)(null !== (F = null !== (H = null == ea ? void 0 : ea.heroLogo) && void 0 !== H ? H : null == ea ? void 0 : ea.logo) && void 0 !== F ? F : '', { size: j.n }),
+                                                          alt: null == ea ? void 0 : ea.name
                                                       }),
                                                       (0, r.jsx)(c.Text, {
-                                                          color: 'always-white',
+                                                          color: null != eg && eg.showDarkBannerText ? 'status-warning-text' : 'always-white',
                                                           variant: 'text-md/normal',
-                                                          className: T.subHeaderText,
-                                                          children: null == ee ? void 0 : ee.summary
+                                                          className: B.subHeaderText,
+                                                          children: null == ea ? void 0 : ea.summary
                                                       })
                                                   ]
                                               })
                                           ]
                                       }),
-                                !D &&
+                                !W &&
                                     (0, r.jsx)('div', {
-                                        className: T.heroHeaderButtonContainer,
+                                        className: B.heroHeaderButtonContainer,
                                         children: (0, r.jsx)(c.Button, {
-                                            className: T.heroHeaderButton,
+                                            className: B.heroHeaderButton,
                                             color: c.ButtonColors.WHITE,
-                                            onClick: () => R('shop latest category hero', null == ee ? void 0 : ee.skuId),
-                                            children: em
+                                            onClick: () => V('shop latest category hero', null == ea ? void 0 : ea.skuId),
+                                            children: eC
                                         })
                                     })
                             ]
                         }),
                         (0, r.jsx)('div', {
-                            className: s()(T.row, T.feed, T.feedSingleRow),
-                            children: D
+                            className: s()(B.row, B.feed, B.feedSingleRow),
+                            children: W
                                 ? (0, r.jsx)(r.Fragment, {
-                                      children: [void 0, void 0, void 0, void 0].map((e, t) => (0, r.jsx)(j.K, {}, t))
+                                      children: [void 0, void 0, void 0, void 0].map((e, t) => (0, r.jsx)(I.K, {}, t))
                                   })
                                 : (0, r.jsx)(r.Fragment, {
-                                      children: ec.map((e, t) => {
-                                          let n = h.Z.getCategoryForProduct(e.skuId);
+                                      children: eh.map((e, t) => {
+                                          let n = g.Z.getCategoryForProduct(e.skuId);
                                           return null == e || null == n
                                               ? null
                                               : (0, r.jsx)(
-                                                    p.k0,
+                                                    f.k0,
                                                     {
                                                         newValue: {
                                                             tilePosition: t,
@@ -177,11 +195,11 @@ t.Z = (e) => {
                                                             categoryPosition: 0
                                                         },
                                                         children: (0, r.jsx)(
-                                                            E.Z,
+                                                            S.Z,
                                                             {
                                                                 product: e,
                                                                 category: n,
-                                                                user: K,
+                                                                user: Y,
                                                                 isInFeedView: !0
                                                             },
                                                             e.skuId
@@ -193,59 +211,59 @@ t.Z = (e) => {
                                   })
                         }),
                         (0, r.jsx)('div', {
-                            className: s()(T.section, T.col2, T.featuredBlocksContainer),
-                            children: D
+                            className: s()(B.section, B.col2, B.featuredBlocksContainer),
+                            children: W
                                 ? (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           (0, r.jsx)('div', {
-                                              className: s()(T.skeleton, T.featuredBlock),
-                                              children: (0, r.jsx)('div', { className: T.skeletonBody })
+                                              className: s()(B.skeleton, B.featuredBlock),
+                                              children: (0, r.jsx)('div', { className: B.skeletonBody })
                                           }),
                                           (0, r.jsx)('div', {
-                                              className: s()(T.skeleton, T.featuredBlock),
-                                              children: (0, r.jsx)('div', { className: T.skeletonBody })
+                                              className: s()(B.skeleton, B.featuredBlock),
+                                              children: (0, r.jsx)('div', { className: B.skeletonBody })
                                           })
                                       ]
                                   })
                                 : (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           (0, r.jsxs)(c.Clickable, {
-                                              className: s()(T.featuredBlock),
-                                              style: { backgroundImage: 'url('.concat(ea, ')') },
-                                              onClick: () => R('shop marketing tile', null == et ? void 0 : et.skuId),
+                                              className: s()(B.featuredBlock),
+                                              style: { backgroundImage: 'url('.concat(eo, ')') },
+                                              onClick: () => V('shop marketing tile', null == ei ? void 0 : ei.skuId),
                                               children: [
-                                                  (null == et ? void 0 : et.unpublishedAt) != null &&
+                                                  (null == ei ? void 0 : ei.unpublishedAt) != null &&
                                                       (0, r.jsx)(c.TextBadge, {
                                                           disableColor: !0,
-                                                          text: S.intl.string(S.t['h/uBCQ']),
-                                                          className: T.featuredBlockBadge
+                                                          text: N.intl.string(N.t['h/uBCQ']),
+                                                          className: B.featuredBlockBadge
                                                       }),
                                                   (0, r.jsx)(c.Button, {
-                                                      className: T.featuredBlockButton,
+                                                      className: B.featuredBlockButton,
                                                       color: c.ButtonColors.WHITE,
                                                       onClick: () => {},
-                                                      children: S.intl.string(S.t.jVcuVV)
+                                                      children: N.intl.string(N.t.jVcuVV)
                                                   })
                                               ]
                                           }),
                                           (0, r.jsx)(c.Clickable, {
-                                              className: s()(T.featuredBlock),
-                                              style: { backgroundImage: 'url('.concat(ei, ')') },
-                                              onClick: () => R('shop marketing tile', l.T.ANIME_V2),
+                                              className: s()(B.featuredBlock),
+                                              style: { backgroundImage: 'url('.concat(ec, ')') },
+                                              onClick: () => V('shop marketing tile', l.T.ANIME_V2),
                                               children:
-                                                  !D &&
+                                                  !W &&
                                                   (0, r.jsxs)(r.Fragment, {
                                                       children: [
                                                           (0, r.jsx)(c.TextBadge, {
                                                               disableColor: !0,
-                                                              text: S.intl.string(S.t['o/oRJC']),
-                                                              className: T.featuredBlockBadge
+                                                              text: N.intl.string(N.t['o/oRJC']),
+                                                              className: B.featuredBlockBadge
                                                           }),
                                                           (0, r.jsx)(c.Button, {
-                                                              className: T.featuredBlockButton,
+                                                              className: B.featuredBlockButton,
                                                               color: c.ButtonColors.WHITE,
                                                               onClick: () => {},
-                                                              children: S.intl.string(S.t.jVcuVV)
+                                                              children: N.intl.string(N.t.jVcuVV)
                                                           })
                                                       ]
                                                   })
@@ -254,37 +272,37 @@ t.Z = (e) => {
                                   })
                         }),
                         (0, r.jsxs)('div', {
-                            className: s()(T.row, T.between, T.section),
+                            className: s()(B.row, B.between, B.section),
                             children: [
                                 (0, r.jsx)(c.Heading, {
                                     variant: 'heading-lg/semibold',
-                                    children: S.intl.string(S.t.ivaAAw)
+                                    children: N.intl.string(N.t.ivaAAw)
                                 }),
                                 (0, r.jsxs)(c.Clickable, {
-                                    className: T.shopAll,
-                                    onClick: () => R('shop all top'),
+                                    className: B.shopAll,
+                                    onClick: () => V('shop all top'),
                                     children: [
                                         (0, r.jsx)(c.ServerGridIcon, {}),
                                         (0, r.jsx)(c.Text, {
                                             variant: 'text-sm/medium',
-                                            children: S.intl.string(S.t.xFcotb)
+                                            children: N.intl.string(N.t.xFcotb)
                                         })
                                     ]
                                 })
                             ]
                         }),
                         (0, r.jsx)('div', {
-                            className: T.feed,
-                            ref: $,
-                            children: D
-                                ? (0, r.jsx)(r.Fragment, { children: [...Array(12)].map((e, t) => (0, r.jsx)(j.K, {}, t + 1)) })
+                            className: B.feed,
+                            ref: q,
+                            children: W
+                                ? (0, r.jsx)(r.Fragment, { children: [...Array(12)].map((e, t) => (0, r.jsx)(I.K, {}, t + 1)) })
                                 : (0, r.jsx)(r.Fragment, {
-                                      children: eu.slice(0, H).map((e, t) => {
-                                          let n = h.Z.getCategoryForProduct(e.skuId);
+                                      children: ef.slice(0, D).map((e, t) => {
+                                          let n = g.Z.getCategoryForProduct(e.skuId);
                                           return null == e || null == n
                                               ? null
                                               : (0, r.jsx)(
-                                                    p.k0,
+                                                    f.k0,
                                                     {
                                                         newValue: {
                                                             tilePosition: t,
@@ -292,11 +310,11 @@ t.Z = (e) => {
                                                             categoryPosition: 2
                                                         },
                                                         children: (0, r.jsx)(
-                                                            E.Z,
+                                                            S.Z,
                                                             {
                                                                 product: e,
                                                                 category: n,
-                                                                user: K,
+                                                                user: Y,
                                                                 isInFeedView: !0
                                                             },
                                                             e.skuId
@@ -307,23 +325,23 @@ t.Z = (e) => {
                                       })
                                   })
                         }),
-                        H >= I.iA &&
+                        D >= T.iA &&
                             (0, r.jsxs)('div', {
-                                className: T.endOfFeed,
+                                className: B.endOfFeed,
                                 children: [
                                     (0, r.jsx)(c.Heading, {
                                         variant: 'heading-md/semibold',
-                                        children: S.intl.string(S.t.Yr70c3)
+                                        children: N.intl.string(N.t.Yr70c3)
                                     }),
                                     (0, r.jsx)(c.Button, {
-                                        className: T.endOfFeedButton,
+                                        className: B.endOfFeedButton,
                                         onClick: () => {
-                                            R('shop all bottom', void 0, !0);
+                                            V('shop all bottom', void 0, !0);
                                         },
                                         children: (0, r.jsx)(c.Text, {
                                             variant: 'text-md/medium',
                                             color: 'always-white',
-                                            children: S.intl.string(S.t.AfrvRE)
+                                            children: N.intl.string(N.t.AfrvRE)
                                         })
                                     })
                                 ]

@@ -147,7 +147,19 @@ let f = {
             showDarkBannerText: !0,
             pdpLogoStyle: { maxHeight: '60px' }
         },
-        [d.T.DOJO]: { showDarkBannerText: !0 }
+        [d.T.DOJO]: { showDarkBannerText: !0 },
+        [d.T.BAND]: { animatedBanner: '//cdn.discordapp.com/assets/content/7e328a07e057745faad2366c9ebdf03e2bd69d22dfe8d41c81a10d29a8de7cf7.png' },
+        [d.T.WARRIOR]: { animatedBanner: 'https://cdn.discordapp.com/assets/content/db9fb34f490b777a6e9712b129f9e23ad930595d2df73ca85d2b54f247806e01.png' },
+        [d.T.KAWAII_MODE]: {
+            showDarkBannerText: !0,
+            heroBanner: {
+                darker: !0,
+                gradientLeft: 'linear-gradient(284deg, rgba(228, 23, 180, 0.00) 29.64%, rgba(228, 23, 180, 0.30) 68.69%)',
+                gradientRight: 'linear-gradient(76deg, rgba(228, 23, 180, 0.00) 29.64%, rgba(228, 23, 180, 0.30) 68.69%)',
+                animationSource: 'https://cdn.discordapp.com/assets/content/6d65dc8e86ffdeed50ea47de3770044e6e65ee9b87eb89486cb6af8a55c7caf0.webm'
+            },
+            animatedBanner: 'https://cdn.discordapp.com/assets/content/8f1e14026cd1810312c106ddd16cc2dca0d69144f8853c24ed2936bcf6defc48.webm'
+        }
     },
     _ = (e) => f[e],
     p = '1225876188074082374',

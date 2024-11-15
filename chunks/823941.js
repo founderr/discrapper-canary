@@ -3,22 +3,21 @@ n.d(t, {
         return y;
     },
     n: function () {
-        return N;
+        return T;
     }
-}),
-    n(627341);
+});
 var r = n(200651),
     a = n(192379),
     i = n(120356),
     s = n.n(i),
-    l = n(278074),
-    o = n(180650),
-    c = n(399606),
-    d = n(481060),
-    u = n(607070),
-    m = n(906732),
-    p = n(963249),
-    h = n(594174),
+    l = n(180650),
+    o = n(399606),
+    c = n(481060),
+    d = n(607070),
+    u = n(906732),
+    m = n(70097),
+    h = n(963249),
+    p = n(594174),
     f = n(754347),
     g = n(74538),
     C = n(884697),
@@ -30,31 +29,30 @@ var r = n(200651),
     j = n(215023),
     E = n(474936),
     I = n(388032),
-    S = n(462972),
-    T = n(275001);
-let N = (0, C.IC)(96),
-    B = (e) => {
+    S = n(462972);
+let T = (0, C.IC)(96),
+    N = (e) => {
         let { category: t } = e,
-            { analyticsLocations: n } = (0, m.ZP)(),
+            { analyticsLocations: n } = (0, u.ZP)(),
             i = a.useRef(null),
-            s = (0, c.e7)([h.default], () => h.default.getCurrentUser());
+            s = (0, o.e7)([p.default], () => p.default.getCurrentUser());
         return g.ZP.canUseCollectibles(s)
             ? (0, r.jsx)(r.Fragment, { children: t.summary })
             : (0, r.jsx)(r.Fragment, {
                   children: I.intl.format(I.t['9hafRk'], {
                       getPremium: (e) =>
-                          (0, r.jsx)(d.Clickable, {
+                          (0, r.jsx)(c.Clickable, {
                               innerRef: i,
                               className: S.getPremiumHook,
                               onClick: () => {
-                                  (0, p.Z)({
+                                  (0, h.Z)({
                                       subscriptionTier: E.Si.TIER_2,
                                       analyticsLocations: n,
                                       returnRef: i
                                   });
                               },
                               tag: 'span',
-                              children: (0, r.jsx)(d.Text, {
+                              children: (0, r.jsx)(c.Text, {
                                   variant: 'text-md/normal',
                                   color: 'always-white',
                                   tag: 'span',
@@ -63,41 +61,48 @@ let N = (0, C.IC)(96),
                           })
                   })
               });
+    },
+    B = (e) => {
+        let { src: t } = e;
+        return /.*\.png/i.test(t)
+            ? (0, r.jsx)('img', {
+                  src: t,
+                  alt: '',
+                  className: S.animationAsset
+              })
+            : (0, r.jsx)(m.Z, {
+                  src: t,
+                  className: S.animationAsset,
+                  autoPlay: !0,
+                  loop: !0
+              });
     };
 function y(e) {
-    var t, n, a, i;
-    let { category: m, className: p, hideLimitedTimeBadge: h = !1 } = e,
-        { backgroundColors: g } = (0, b.Z)(m.styles),
-        E = !!(null === (t = j.Ve[m.skuId]) || void 0 === t ? void 0 : t.showDarkBannerText),
-        I = (0, c.e7)([u.Z], () => u.Z.useReducedMotion);
-    if (m.skuId === o.T.CHANCE) return (0, r.jsx)(_.O, { category: m });
-    let y = (0, l.EQ)(m.skuId)
-        .with(o.T.BAND, () => T)
-        .with(o.T.WARRIOR, () => 'https://cdn.discordapp.com/assets/content/db9fb34f490b777a6e9712b129f9e23ad930595d2df73ca85d2b54f247806e01.png')
-        .otherwise(() => void 0);
+    var t, n, a;
+    let { category: i, className: u, hideLimitedTimeBadge: m = !1 } = e,
+        { backgroundColors: h } = (0, b.Z)(i.styles),
+        p = (0, j.ZS)(i.skuId),
+        g = (0, o.e7)([d.Z], () => d.Z.useReducedMotion);
+    if (i.skuId === l.T.CHANCE) return (0, r.jsx)(_.O, { category: i });
+    let E = !!(null == p ? void 0 : p.showDarkBannerText),
+        I = null == p ? void 0 : p.animatedBanner;
     return (0, r.jsxs)(x.Z, {
-        asset: m.banner,
-        className: s()(S.shopBanner, p),
+        asset: i.banner,
+        className: s()(S.shopBanner, u),
         style:
-            null != g
+            null != h
                 ? {
-                      background: ''.concat((0, k.nH)(g), ' border-box border-box'),
-                      outlineColor: g.border.toHslString()
+                      background: ''.concat((0, k.nH)(h), ' border-box border-box'),
+                      outlineColor: h.border.toHslString()
                   }
                 : void 0,
         children: [
-            !I &&
-                void 0 !== y &&
-                (0, r.jsx)('img', {
-                    src: y,
-                    alt: '',
-                    className: S.animationAsset
-                }),
-            (null === (n = j.Ve[m.skuId]) || void 0 === n ? void 0 : n.addAttributionLogo)
+            !g && void 0 !== I && (0, r.jsx)(B, { src: I }),
+            (null === (t = j.Ve[i.skuId]) || void 0 === t ? void 0 : t.addAttributionLogo)
                 ? (0, r.jsxs)('div', {
                       className: S.discordLogo,
                       children: [
-                          (0, r.jsx)(d.ClydeIcon, {
+                          (0, r.jsx)(c.ClydeIcon, {
                               size: 'custom',
                               width: 28,
                               height: 28,
@@ -107,23 +112,23 @@ function y(e) {
                           (0, r.jsx)(f.Z, { className: S.discordWordmark })
                       ]
                   })
-                : (0, r.jsx)(d.Spacer, { size: 28 }),
-            (null === (a = j.Ve[m.skuId]) || void 0 === a ? void 0 : a.addLogo)
+                : (0, r.jsx)(c.Spacer, { size: 28 }),
+            (null === (n = j.Ve[i.skuId]) || void 0 === n ? void 0 : n.addLogo)
                 ? (0, r.jsx)('img', {
                       className: S.categoryLogo,
-                      src: (0, C.uV)(m.logo, { size: N }),
-                      alt: m.name,
-                      style: { maxWidth: null === (i = j.Ve[m.skuId]) || void 0 === i ? void 0 : i.logoMaxWidth }
+                      src: (0, C.uV)(i.logo, { size: T }),
+                      alt: i.name,
+                      style: { maxWidth: null === (a = j.Ve[i.skuId]) || void 0 === a ? void 0 : a.logoMaxWidth }
                   })
-                : (0, r.jsx)(d.Spacer, { size: 96 }),
-            (0, r.jsx)(d.Text, {
+                : (0, r.jsx)(c.Spacer, { size: 96 }),
+            (0, r.jsx)(c.Text, {
                 className: s()(S.summary, { [S.blackSummary]: E }),
                 variant: 'text-md/normal',
-                children: m.skuId === o.T.DISXCORE ? (0, r.jsx)(B, { category: m }) : m.summary
+                children: i.skuId === l.T.DISXCORE ? (0, r.jsx)(N, { category: i }) : i.summary
             }),
-            !h &&
+            !m &&
                 (0, r.jsx)(v.Z, {
-                    category: m,
+                    category: i,
                     className: S.limitedTimeBadge,
                     display: 'banner'
                 })
