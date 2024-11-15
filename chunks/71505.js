@@ -1,0 +1,1 @@
+o.r(a), (a.default = JSON.parse('{"KUFsLi":"\xA1El cambio fue hecho!","yQfLwM":"Discord está configurado en Español. Puedes elegir otro idioma en \\"Ajustes de aplicación\\" > \\"Idioma\\".","QkGMPz":"Sí","jM7sUl":"No","09QGGB":"\xBFCambiar idioma?","ofazSU":"Entendido","xi8rEx":"\xBFTe gustaría configurar Discord en Español?"}'));

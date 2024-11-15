@@ -1,15 +1,48 @@
-e.exports = {
-    helpUrl: 'helpUrl_a7a160',
-    descriptionHeader: 'descriptionHeader_a7a160',
-    description: 'description_a7a160',
-    descriptionContainer: 'descriptionContainer_a7a160',
-    descriptionAvatarContainer: 'descriptionAvatarContainer_a7a160',
-    categoryHeader: 'categoryHeader_a7a160',
-    categoryContainer: 'categoryContainer_a7a160',
-    textBadge: 'textBadge_a7a160',
-    automodBadgeText: 'automodBadgeText_a7a160',
-    automodText: 'automodText_a7a160',
-    checkmarkIcon: 'checkmarkIcon_a7a160',
-    endSpacer: 'endSpacer_a7a160',
-    explicitContentFilterSection: 'explicitContentFilterSection_a7a160'
-};
+n.d(t, {
+    Z: function () {
+        return a;
+    }
+}),
+    n(47120);
+var i = n(192379),
+    l = n(999153),
+    r = n(584922);
+function a(e) {
+    let { type: t, index: n, optionId: a, onDragStart: o, onDragComplete: s, onDragReset: c } = e,
+        [d, u] = i.useState(!1),
+        [, m] = (0, l.c)({
+            type: t,
+            item: () => (
+                o(a),
+                {
+                    id: a,
+                    position: n
+                }
+            ),
+            canDrag: () => d,
+            collect: (e) => ({ isDragging: e.isDragging() }),
+            end: (e, t) => {
+                let n = t.getDropResult();
+                if (null == n) {
+                    c();
+                    return;
+                }
+                s(n.optionId);
+            }
+        }),
+        [{ dragSourcePosition: h }, p] = (0, r.L)({
+            accept: t,
+            canDrop: () => !0,
+            collect: (e) => {
+                let t = e.getItem();
+                return null != t && e.isOver() && e.canDrop() ? { dragSourcePosition: t.position } : { dragSourcePosition: null };
+            },
+            drop: () => ({ optionId: a })
+        });
+    return {
+        drag: m,
+        dragSourcePosition: h,
+        drop: p,
+        setIsDraggable: u
+    };
+}
