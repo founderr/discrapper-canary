@@ -8,7 +8,7 @@ e(192379);
 var i = e(120356),
     o = e.n(i),
     l = e(481060),
-    c = e(507716);
+    c = e(694123);
 function u(t) {
     let { loading: n, children: e } = t;
     return (0, r.jsxs)('div', {

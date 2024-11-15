@@ -24,7 +24,7 @@ var r = n(200651),
     v = n(354459),
     b = n(981631),
     I = n(388032),
-    S = n(526982);
+    S = n(884532);
 function T(e, t) {
     switch (e) {
         case v.fO.ACTIVITY:
@@ -139,7 +139,7 @@ function C(e) {
                     (0, f.jW)(
                         e,
                         async () => {
-                            let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('50261')]).then(n.bind(n, 881351));
+                            let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('44378')]).then(n.bind(n, 881351));
                             return (n) =>
                                 (0, r.jsx)(e, {
                                     ...n,

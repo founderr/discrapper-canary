@@ -8,7 +8,7 @@ n(192379);
 var l = n(120356),
     a = n.n(l),
     r = n(134433),
-    s = n(139513);
+    s = n(896510);
 function o(e) {
     let t,
         { className: n, children: l, verified: o, roleColor: c, roleName: d } = e;

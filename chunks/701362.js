@@ -28,7 +28,7 @@ var i = n(200651),
     C = n(871118),
     y = n(981631),
     T = n(388032),
-    b = n(278552);
+    b = n(67338);
 class A extends l.PureComponent {
     componentDidMount() {
         let { user: e, streamApplication: t } = this.props;

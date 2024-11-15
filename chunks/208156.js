@@ -22,7 +22,7 @@ var r = n(200651),
     p = n(486003),
     h = n(701488),
     m = n(981631),
-    g = n(336259);
+    g = n(835296);
 function E(e) {
     let { url: t, className: n, style: a, onLoad: s, shouldRefocus: g, queryParams: E, allowPopups: v = !1, referrerPolicy: b = 'origin' } = e,
         I = (0, p.sU)({}),

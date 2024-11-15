@@ -3,7 +3,7 @@ n(192379);
 var i = n(481060),
     s = n(600164),
     r = n(388032),
-    o = n(58259);
+    o = n(712694);
 t.Z = {
     SlideContent: function (e) {
         let { children: t } = e;

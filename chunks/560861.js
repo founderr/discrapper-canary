@@ -14,7 +14,7 @@ var i = n(200651),
     d = n(594174),
     u = n(335131),
     h = n(388032),
-    p = n(114031);
+    p = n(44229);
 function m(e) {
     let { channel: t } = e,
         n = (0, l.useRef)(!0),

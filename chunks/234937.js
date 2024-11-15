@@ -5,7 +5,7 @@ var i = n(442837),
     s = n(565138),
     o = n(430824),
     l = n(388032),
-    u = n(69563);
+    u = n(55747);
 t.Z = (e) => {
     let { event: t } = e,
         n = (0, i.e7)([o.Z], () => o.Z.getGuild(t.guild_id));

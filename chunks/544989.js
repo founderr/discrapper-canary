@@ -8,7 +8,7 @@ n(192379);
 var i = n(120356),
     a = n.n(i),
     s = n(228168),
-    o = n(177518);
+    o = n(958310);
 function l(e) {
     let { profileType: t, children: n } = e;
     return (0, r.jsx)('div', {

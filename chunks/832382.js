@@ -6,7 +6,7 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(70097),
-    a = n(23573);
+    a = n(720924);
 function o(e) {
     let { children: t, channel: n } = e,
         o = (0, l.useRef)(null),

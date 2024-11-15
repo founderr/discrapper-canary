@@ -20,7 +20,7 @@ var r = n(200651),
     g = n(526617),
     E = n(474936),
     v = n(388032),
-    b = n(199398);
+    b = n(47293);
 let I = [8, 8, 8, 8];
 function S(e) {
     let { icon: t, isSelected: n, onClick: i, listItemProps: a, ...o } = e;

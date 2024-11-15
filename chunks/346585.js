@@ -1,41 +1,41 @@
 n.d(t, {
     IE: function () {
-        return I;
+        return y;
     },
     K9: function () {
-        return C;
+        return R;
     },
     NX: function () {
-        return S;
+        return C;
     },
     R_: function () {
-        return m;
+        return h;
     },
     e$: function () {
-        return E;
+        return m;
     },
     ti: function () {
-        return g;
+        return I;
     },
     zV: function () {
-        return _;
+        return c;
     }
 }),
     n(757143),
     n(47120),
     n(627341);
-var r = n(913527),
-    i = n.n(r),
-    s = n(278074),
-    l = n(768581),
-    a = n(709054),
-    o = n(624138),
-    c = n(219496),
-    d = n(801461),
-    u = n(388032);
-function _(e) {
+var i = n(913527),
+    r = n.n(i),
+    o = n(278074),
+    a = n(768581),
+    s = n(709054),
+    f = n(624138),
+    d = n(219496),
+    u = n(801461),
+    l = n(388032);
+function c(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return l.ZP.getUserAvatarURL(
+    return a.ZP.getUserAvatarURL(
         {
             id: e.id,
             avatar: e.avatar,
@@ -46,68 +46,68 @@ function _(e) {
         80
     );
 }
-function E(e) {
-    let t = (0, o._I)(e.username).replace(d.RN, '').replace(d.iF, '.').toLowerCase();
+function m(e) {
+    let t = (0, f._I)(e.username).replace(u.RN, '').replace(u.iF, '.').toLowerCase();
     return ''.concat(t).concat(e.discriminator).substring(0, 32);
 }
-let p = ['@', '#', ':'],
-    h = ['```', 'discord', 'hypesquad', 'system message', 'system mesage', 'sustem message', 'sustem mesage', 'clyde'],
-    f = ['discordtag', 'everyone', 'here', 'discord nitro', 'discord', 'snowsgiving'];
-function S(e) {
+let g = ['@', '#', ':'],
+    _ = ['```', 'discord', 'hypesquad', 'system message', 'system mesage', 'sustem message', 'sustem mesage', 'clyde'],
+    p = ['discordtag', 'everyone', 'here', 'discord nitro', 'discord', 'snowsgiving'];
+function C(e) {
     var t, n;
-    let r = e.username.toLowerCase();
+    let i = e.username.toLowerCase();
     if (
-        ((t = r),
-        (n = d.kt),
+        ((t = i),
+        (n = u.kt),
         t
             .split('')
             .filter((e) => !n.includes(e.charCodeAt(0)))
             .join('')).length < 2
     )
         return !0;
-    for (let e of p) if (r.includes(e)) return !0;
-    for (let e of f) if (r === e.toLowerCase()) return !0;
-    for (let e of h) if (r.includes(e.toLowerCase())) return !0;
+    for (let e of g) if (i.includes(e)) return !0;
+    for (let e of p) if (i === e.toLowerCase()) return !0;
+    for (let e of _) if (i.includes(e.toLowerCase())) return !0;
     return !1;
 }
-function m(e) {
+function h(e) {
     return e.toLowerCase().replace(/\s/g, '').replace('@', '');
 }
-function C(e) {
-    let t = a.default.extractTimestamp(e);
+function R(e) {
+    let t = s.default.extractTimestamp(e);
     try {
-        return i()(new Date(t)).format('MMM DD, YYYY');
+        return r()(new Date(t)).format('MMM DD, YYYY');
     } catch (e) {}
     return null;
 }
-function g(e) {
-    return (0, s.EQ)(e)
+function I(e) {
+    return (0, o.EQ)(e)
         .with({ rateLimited: !0 }, () => ({
-            type: c.K.RATE_LIMIT,
-            message: u.intl.string(u.t.T15lqq)
+            type: d.K.RATE_LIMIT,
+            message: l.intl.string(l.t.T15lqq)
         }))
-        .with({ error: s.P.not(s.P.nullish) }, (e) => {
+        .with({ error: o.P.not(o.P.nullish) }, (e) => {
             let { error: t } = e;
             return {
-                type: c.K.ERROR,
+                type: d.K.ERROR,
                 message: t
             };
         })
         .with({ taken: !1 }, () => ({
-            type: c.K.AVAILABLE,
-            message: u.intl.string(u.t.PgfBS0)
+            type: d.K.AVAILABLE,
+            message: l.intl.string(l.t.PgfBS0)
         }))
         .with({ taken: !0 }, () => ({
-            type: c.K.ERROR,
-            message: u.intl.string(u.t.mCrAUV)
+            type: d.K.ERROR,
+            message: l.intl.string(l.t.mCrAUV)
         }))
-        .with({ error: s.P.nullish }, () => ({
-            type: c.K.INTERNAL_ERROR,
+        .with({ error: o.P.nullish }, () => ({
+            type: d.K.INTERNAL_ERROR,
             message: ''
         }))
         .otherwise(() => void 0);
 }
-function I(e) {
+function y(e) {
     return new Date(2024, 2, 4).toLocaleDateString(e, {
         month: 'long',
         day: 'numeric',

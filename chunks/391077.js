@@ -8,7 +8,7 @@ var s = n(120356),
     c = n(74538),
     d = n(474936),
     u = n(388032),
-    m = n(153457);
+    m = n(702422);
 function h(e) {
     let { showChargingUpState: t, rowValueText: n, endsAt: s, fractionalState: a, activationDate: o } = e,
         c = t ? u.intl.string(u.t['hT6i//']) : u.intl.string(u.t['3G0CTE']),

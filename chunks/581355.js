@@ -18,7 +18,7 @@ var l = t(200651),
     x = t(180899),
     g = t(157925),
     f = t(388032),
-    v = t(639879);
+    v = t(84908);
 function _(e) {
     let { guild: n, channel: t, stageInstance: i, headerId: a, onClose: o, loading: s, error: c, onSave: u, defaultOptions: h, isSlideReady: x } = e;
     return (0, l.jsxs)(l.Fragment, {

@@ -13,7 +13,7 @@ var r = n(200651),
     c = n(678738),
     d = n(981631),
     f = n(388032),
-    _ = n(987352);
+    _ = n(234654);
 function p(e) {
     let { applicationId: t, commandIds: n, guildId: p, channel: h, onClick: m } = e,
         { trackUserProfileAction: g } = (0, u.KZ)(),

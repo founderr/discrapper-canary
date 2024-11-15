@@ -18,7 +18,7 @@ var i = e(120356),
     C = e(390966),
     g = e(765305),
     x = e(388032),
-    v = e(676646);
+    v = e(621773);
 function k(t) {
     let { recurrenceId: n, originalScheduledStartTime: i, guildEventId: k, onClick: p, isActive: f } = t,
         B = (0, s.e7)([d.ZP], () => d.ZP.getGuildScheduledEvent(k)),

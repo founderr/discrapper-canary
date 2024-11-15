@@ -34,7 +34,7 @@ var i = n(200651),
     B = n(981631),
     P = n(354459),
     D = n(388032),
-    U = n(869630);
+    U = n(684905);
 t.Z = function (e) {
     var t, n, l;
     let { channelId: w, previewQuest: Q, isParticipatingOverride: k } = e,

@@ -6,13 +6,13 @@ n.d(t, {
     n(47120);
 var r = n(200651),
     o = n(192379),
-    l = n(120356),
-    i = n.n(l),
+    i = n(120356),
+    l = n.n(i),
     a = n(481060),
     s = n(393903),
     c = n(604162),
     u = n(420212),
-    d = n(504446);
+    d = n(584448);
 function m(e, t, n) {
     return n * (Math.max(e - t.left, 0) / t.width);
 }
@@ -20,7 +20,7 @@ function f(e, t, n) {
     return n.left + (e / t) * n.width;
 }
 function p(e) {
-    let { percent: t, animate: n, interactionEnabled: l, backgroundColor: p, preloadedBuffers: v, duration: C, maxSeekableTime: g, onClick: x, onScrubBack: S, onScrubForward: E } = e,
+    let { percent: t, animate: n, interactionEnabled: i, backgroundColor: p, preloadedBuffers: v, duration: C, maxSeekableTime: g, onClick: x, onScrubBack: S, onScrubForward: E } = e,
         [h, _] = o.useState(null),
         [T, I] = o.useState(null),
         [j, N] = o.useState(null),
@@ -64,22 +64,22 @@ function p(e) {
         ref: k,
         children: [
             (0, r.jsxs)(a.Clickable, {
-                className: i()(d.hitboxArea, { [d.interactionEnabled]: l }),
+                className: l()(d.hitboxArea, { [d.interactionEnabled]: i }),
                 ignoreKeyPress: !0,
                 onClick: (e) => {
-                    if (!!l && null != x) x(m(e.clientX, e.currentTarget.getBoundingClientRect(), C));
+                    if (!!i && null != x) x(m(e.clientX, e.currentTarget.getBoundingClientRect(), C));
                 },
                 onMouseEnter: (e) => {
-                    if (!!l) null != k.current && A(k.current.getBoundingClientRect()), D(!0), B(e);
+                    if (!!i) null != k.current && A(k.current.getBoundingClientRect()), D(!0), B(e);
                 },
                 onMouseLeave: (e) => {
-                    if (!!l) D(!1), I(null);
+                    if (!!i) D(!1), I(null);
                 },
                 onMouseMove: (e) => {
-                    if (!!l) b && B(e);
+                    if (!!i) b && B(e);
                 },
                 onKeyDown: L,
-                tabIndex: l ? void 0 : -1,
+                tabIndex: i ? void 0 : -1,
                 focusProps: {
                     offset: {
                         top: 12,
@@ -93,7 +93,7 @@ function p(e) {
                               (0, r.jsx)(
                                   'div',
                                   {
-                                      className: i()(d.buffer, { [d.bufferHovered]: b }),
+                                      className: l()(d.buffer, { [d.bufferHovered]: b }),
                                       style: {
                                           width: ''.concat(100 * e.size, '%'),
                                           left: ''.concat(100 * e.start, '%')
@@ -102,7 +102,7 @@ function p(e) {
                                   ''.concat(e.start, ':').concat(e.size)
                               )
                           ),
-                    !l &&
+                    !i &&
                         null != w &&
                         w > 0 &&
                         (0, r.jsx)('div', {
@@ -132,7 +132,7 @@ function p(e) {
                             children: M
                         }),
                     b &&
-                        l &&
+                        i &&
                         null != O &&
                         (0, r.jsx)('div', {
                             className: d.grabber,

@@ -8,6 +8,8 @@ e.exports = {
     headerValue: 'headerValue_cf8a7d',
     userRow: 'userRow_cf8a7d',
     copyLinkContainer: 'copyLinkContainer_cf8a7d',
+    copyLink: 'copyLink_cf8a7d',
+    copySpinner: 'copySpinner_cf8a7d',
     liveIcon: 'liveIcon_cf8a7d',
     rankChangeIndicator: 'rankChangeIndicator_cf8a7d',
     userRank: 'userRank_cf8a7d',
@@ -19,8 +21,6 @@ e.exports = {
     emptyTitleContainer: 'emptyTitleContainer_cf8a7d',
     emptyTitle: 'emptyTitle_cf8a7d',
     emptyCrownIcon: 'emptyCrownIcon_cf8a7d',
-    copySpinner: 'copySpinner_cf8a7d',
-    copyLink: 'copyLink_cf8a7d',
     badgesContainer: 'badgesContainer_cf8a7d',
     tooltip: 'tooltip_cf8a7d'
 };

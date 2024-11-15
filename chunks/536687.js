@@ -7,8 +7,8 @@ n.r(t),
     n(47120);
 var r = n(200651),
     o = n(192379),
-    l = n(120356),
-    i = n.n(l),
+    i = n(120356),
+    l = n.n(i),
     a = n(442837),
     s = n(780384),
     c = n(481060),
@@ -32,10 +32,10 @@ var r = n(200651),
     b = n(46140),
     D = n(981631),
     y = n(388032),
-    A = n(417575);
+    A = n(136880);
 function k(e) {
     var t;
-    let { transitionState: n, onClose: l, quest: p, autoplay: k } = e,
+    let { transitionState: n, onClose: i, quest: p, autoplay: k } = e,
         B = (0, C.il)(p),
         L = (0, a.e7)([d.Z], () => d.Z.getState().theme),
         P = (0, s.wj)(L) ? D.BRd.DARK : D.BRd.LIGHT,
@@ -96,7 +96,7 @@ function k(e) {
                                             children: [
                                                 (0, r.jsx)('img', {
                                                     alt: p.config.messages.gameTitle,
-                                                    className: i()(A.contentHeaderLogotype, A.accentOnHover),
+                                                    className: l()(A.contentHeaderLogotype, A.accentOnHover),
                                                     src: (0, g.fh)(p, g.eC.LOGO_TYPE, P).url
                                                 }),
                                                 (0, r.jsx)(I.Z, {}),
@@ -154,7 +154,7 @@ function k(e) {
                                     className: A.contentFooter,
                                     children: [
                                         (0, r.jsx)(c.Button, {
-                                            onClick: l,
+                                            onClick: i,
                                             color: c.Button.Colors.PRIMARY,
                                             size: c.Button.Sizes.MEDIUM,
                                             children: y.intl.string(y.t.cpT0Cg)
@@ -192,11 +192,11 @@ function k(e) {
 }
 function B(e) {
     let { questId: t, autoplay: n, ...o } = e,
-        l = (0, a.e7)([p.Z], () => p.Z.getQuest(t));
-    return null != l
+        i = (0, a.e7)([p.Z], () => p.Z.getQuest(t));
+    return null != i
         ? (0, r.jsx)(k, {
               ...o,
-              quest: l,
+              quest: i,
               autoplay: n
           })
         : null;

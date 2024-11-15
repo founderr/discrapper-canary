@@ -11,7 +11,7 @@ var o = n(200651),
     I = n(981631),
     _ = n(526761),
     m = n(388032),
-    E = n(754812),
+    E = n(191623),
     h = n(444812);
 e.default = (t) => {
     let { channelId: e, messageId: f, transitionState: C, onClose: g } = t,

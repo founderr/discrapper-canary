@@ -68,7 +68,7 @@ var i = n(200651),
     eu = n(524484),
     ed = n(65154),
     em = n(388032),
-    ef = n(810190);
+    ef = n(169501);
 let ep = l.memo((e) => {
     var t, n, a, c, x;
     let { participant: C, onDoubleClick: y, onContextMenu: X, onClick: K, onMouseDown: ea, onKeyDown: ep, className: eh, style: ev, containerStyle: eS, channel: eI, width: e_, inPopout: ex, onVideoResize: eE, inCall: eZ = !1, selected: eC = !1, noBorder: ey = !1, noVideoRender: eT = !1, focused: eb = !1, blocked: eA = !1, fit: eN = A.L.CONTAIN, paused: ew = !1, pulseSpeakingIndicator: eP = !1, forceIdle: ej = !1 } = e,
@@ -142,24 +142,24 @@ let ep = l.memo((e) => {
     let e$ = (0, M.So)(s.q.STREAM_HIGH_QUALITY),
         { hqStreamingState: e0 } = (0, R.k)(s.q.STREAM_HIGH_QUALITY),
         e1 = (0, L.Z)(),
-        e2 = e$ && eQ && null != e1,
-        e9 = (0, j.o)(C, eF),
-        e3 = (0, P.lL)('CallTile', !0, eF, e9),
+        e3 = e$ && eQ && null != e1,
+        e2 = (0, j.o)(C, eF),
+        e9 = (0, P.lL)('CallTile', !0, eF, e2),
         e7 = (0, o.e7)([F.Z], () => (C.type === eo.fO.USER && null != eW ? F.Z.getEffectForUserId(eW) : null)),
         e8 = (0, o.e7)([q.Z], () => q.Z.getVoicePlatformForChannel(eI.id, null != eW ? eW : es.lds)),
-        { enableHangStatus: e4 } = Z.n.useExperiment({
+        { enableHangStatus: e6 } = Z.n.useExperiment({
             guildId: eI.guild_id,
             location: 'VoiceUsers'
         }),
-        { showGameIcon: e6 } = E.ZP.useExperiment({ location: 'voice_users' }, { autoTrackExposure: !1 }),
-        e5 = e6 || e4,
+        { showGameIcon: e4 } = E.ZP.useExperiment({ location: 'voice_users' }, { autoTrackExposure: !1 }),
+        e5 = e4 || e6,
         { hangStatusActivity: te, gameActivity: tt } = (0, o.cj)(
             [Y.Z],
             () => ({
-                hangStatusActivity: e4 && null != eW ? Y.Z.findActivity(eW, (e) => e.type === es.IIU.HANG_STATUS) : null,
+                hangStatusActivity: e6 && null != eW ? Y.Z.findActivity(eW, (e) => e.type === es.IIU.HANG_STATUS) : null,
                 gameActivity: e5 && null != eW ? Y.Z.findActivity(eW, (e) => null != e.application_id && e.type === es.IIU.PLAYING) : null
             }),
-            [e4, eW, e5]
+            [e6, eW, e5]
         ),
         tn = (0, o.e7)([z.Z], () => ((null == tt ? void 0 : tt.application_id) != null ? z.Z.getDetectableGame(tt.application_id) : null)),
         ti = (0, o.e7)([p.Z], () => (null != tn && (null == tt ? void 0 : tt.application_id) != null ? p.Z.getApplication(null == tt ? void 0 : tt.application_id) : void 0)),
@@ -217,7 +217,7 @@ let ep = l.memo((e) => {
             [X, C]
         ),
         tS = eR;
-    e2 && (tS = !1);
+    e3 && (tS = !1);
     let tI = null,
         t_ = null,
         tx = '';
@@ -239,7 +239,7 @@ let ep = l.memo((e) => {
                     width: e_,
                     focused: eb,
                     idle: tS,
-                    premiumIndicator: e2 || e3.enabled
+                    premiumIndicator: e3 || e9.enabled
                 })),
                 (tx = em.intl.formatToPlainString(em.t.gHPz3d, { streamerName: C.user.username }));
             break;
@@ -347,7 +347,7 @@ let ep = l.memo((e) => {
                                           })
                                         : null,
                                     tI,
-                                    e2
+                                    e3
                                         ? (0, i.jsx)(k.W, {
                                               onPlayed: tp,
                                               played: e0.hqStreamingFrameAnimationPlayed

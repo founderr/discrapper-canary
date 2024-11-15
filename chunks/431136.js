@@ -10,7 +10,7 @@ var c = t(468194),
     d = t(481060),
     i = t(430824),
     o = t(768581),
-    l = t(419091);
+    l = t(63605);
 function f(e) {
     let { guildId: n } = e,
         t = (0, s.e7)([i.Z], () => i.Z.getGuild(n));

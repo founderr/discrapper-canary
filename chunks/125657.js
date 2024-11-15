@@ -22,7 +22,7 @@ var i = n(200651),
     f = n(823379),
     b = n(700785),
     v = n(388032),
-    C = n(452199);
+    C = n(419224);
 function N(e) {
     var t;
     let { guild: n, applicationIntegration: N } = e,

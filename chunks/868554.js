@@ -26,7 +26,7 @@ var i = n(200651),
     E = n(981631),
     b = n(37113),
     Z = n(388032),
-    N = n(277865),
+    N = n(382873),
     S = n(454120);
 function T(e) {
     let { buttonRef: t, channel: a, userId: s, streaming: T, onClose: j, dismissibleContent: A } = e,

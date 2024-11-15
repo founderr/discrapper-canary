@@ -6,7 +6,7 @@ e.d(i, {
 var l = e(200651),
     t = e(192379),
     r = e(777207),
-    s = e(529079);
+    s = e(13951);
 function o(n) {
     let { title: i, subtitle: e, iconSrc: o, backgroundSrc: a, animatedBackgroundSrc: d, prefersReducedMotion: u = !0 } = n,
         c = t.useMemo(() => {

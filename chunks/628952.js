@@ -17,7 +17,7 @@ var l = t(120356),
     p = t(583434),
     g = t(905357),
     C = t(388032),
-    j = t(696307),
+    j = t(424188),
     I = t(223223);
 let E = (e) => {
         let { avatarDecoration: n } = e,

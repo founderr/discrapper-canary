@@ -8,7 +8,7 @@ n(192379);
 var r = n(120356),
     l = n.n(r),
     o = n(481060),
-    a = n(96685);
+    a = n(78561);
 function s(e) {
     let { onClick: t, keybind: n, className: r, IconComponent: s } = e;
     return (0, i.jsxs)('div', {

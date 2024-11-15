@@ -9,8 +9,8 @@ n.d(t, {
 var r = n(200651);
 n(192379);
 var o = n(120356),
-    l = n.n(o),
-    i = n(481060),
+    i = n.n(o),
+    l = n(481060),
     a = n(617136),
     s = n(497505),
     c = n(918701),
@@ -20,25 +20,25 @@ var o = n(120356),
     f = n(604162),
     p = n(46140),
     v = n(388032),
-    C = n(128220);
+    C = n(798020);
 function g(e) {
     let { quest: t, taskDetails: n } = e;
-    return (0, r.jsx)(i.Button, {
+    return (0, r.jsx)(l.Button, {
         className: C.cta,
-        color: i.Button.Colors.BRAND,
+        color: l.Button.Colors.BRAND,
         fullWidth: !0,
         onClick: () => {
             (0, m.openVideoQuestModal)(t);
         },
-        size: i.Button.Sizes.SMALL,
+        size: l.Button.Sizes.SMALL,
         children: (0, f.F9)(n)
     });
 }
 let x = (e) => {
         let { quest: t } = e;
-        return (0, r.jsx)(i.Button, {
+        return (0, r.jsx)(l.Button, {
             className: C.cta,
-            size: i.Button.Sizes.SMALL,
+            size: l.Button.Sizes.SMALL,
             onClick: () =>
                 (0, c.FE)(t, {
                     content: s.jn.QUEST_BAR_V2,
@@ -49,7 +49,7 @@ let x = (e) => {
     },
     S = (e) => {
         let { quest: t } = e;
-        return (0, r.jsx)(i.Button, {
+        return (0, r.jsx)(l.Button, {
             fullWidth: !0,
             className: C.cta,
             onClick: () =>
@@ -60,7 +60,7 @@ let x = (e) => {
                         ctaContent: a.jZ.CONNECT_CONSOLE
                     }
                 ),
-            size: i.Button.Sizes.SMALL,
+            size: l.Button.Sizes.SMALL,
             children: v.intl.string(v.t.csptqa)
         });
     },
@@ -70,12 +70,12 @@ let x = (e) => {
                 quest: t,
                 location: s.jn.QUEST_BAR_V2
             });
-        return (0, r.jsx)(i.ShinyButton, {
+        return (0, r.jsx)(l.ShinyButton, {
             fullWidth: !0,
-            size: i.Button.Sizes.SMALL,
+            size: l.Button.Sizes.SMALL,
             onClick: m,
             pauseAnimation: n || !o,
-            className: l()(C.cta, a),
+            className: i()(C.cta, a),
             buttonShineClassName: C.shine,
             ...u,
             children: null != c ? c : v.intl.string(v.t.cfY4PD)
@@ -83,7 +83,7 @@ let x = (e) => {
     },
     h = (e) => {
         var t;
-        let { quest: n, useReducedMotion: o, isExpanded: l, awaitingConsoleConnections: i, hasMadeProgress: a, isProgressing: d, activeScreen: m, taskDetails: f } = e,
+        let { quest: n, useReducedMotion: o, isExpanded: i, awaitingConsoleConnections: l, hasMadeProgress: a, isProgressing: d, activeScreen: m, taskDetails: f } = e,
             v = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
             C = (0, u.P)({ location: p.dr.QUESTS_BAR }),
             h = (0, c.cr)(n);
@@ -91,14 +91,14 @@ let x = (e) => {
             return (0, r.jsx)(E, {
                 quest: n,
                 useReducedMotion: o,
-                isExpanded: l
+                isExpanded: i
             });
         if (h)
             return (0, r.jsx)(g, {
                 quest: n,
                 taskDetails: f
             });
-        if (m === s.LI.CONSOLE && i && !C) return (0, r.jsx)(S, { quest: n });
+        if (m === s.LI.CONSOLE && l && !C) return (0, r.jsx)(S, { quest: n });
         else if (m !== s.LI.SELECT && !a && !d) return (0, r.jsx)(x, { quest: n });
         return null;
     };
@@ -107,7 +107,7 @@ function _(e) {
         className: C.ctaButtons,
         children: [
             e.showBackButton &&
-                (0, r.jsx)(i.Button, {
+                (0, r.jsx)(l.Button, {
                     className: C.backButton,
                     innerClassName: C.backButtonInner,
                     look: 'blank',
@@ -115,7 +115,7 @@ function _(e) {
                     fullWidth: !1,
                     size: 'none',
                     onClick: e.onBack,
-                    children: (0, r.jsx)(i.ChevronSmallLeftIcon, { className: C.backIcon })
+                    children: (0, r.jsx)(l.ChevronSmallLeftIcon, { className: C.backIcon })
                 }),
             (0, r.jsx)(h, { ...e })
         ]

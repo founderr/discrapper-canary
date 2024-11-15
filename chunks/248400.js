@@ -4,7 +4,7 @@ var l = n(692547),
     a = n(481060),
     r = n(311888),
     s = n(388032),
-    o = n(80130);
+    o = n(878491);
 t.Z = () =>
     (0, i.jsx)(a.Tooltip, {
         text: s.intl.string(s.t.GMZqSk),

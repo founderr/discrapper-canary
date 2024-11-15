@@ -1,19 +1,19 @@
-e.d(t, {
+n.d(e, {
     Y: function () {
         return r;
     }
 });
-var i = e(388032);
-function r(n) {
-    let { application: t, username: e, usernameOnClick: r } = n;
-    return null != t
+var i = n(388032);
+function r(t) {
+    let { application: e, username: n, usernameOnClick: r } = t;
+    return null != e
         ? i.intl.formatToParts(i.t.Tes5Oj, {
-              username: e,
-              applicationName: t.name,
+              username: n,
+              applicationName: e.name,
               usernameOnClick: r
           })
         : i.intl.formatToParts(i.t.PUJtgo, {
-              username: e,
+              username: n,
               usernameOnClick: r
           });
 }

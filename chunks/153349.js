@@ -25,13 +25,13 @@ var i,
     I = n(158776),
     E = n(471253),
     b = n(431328),
-    Z = n(62526),
+    Z = n(145834),
     N = n(590415),
     S = n(614173),
     T = n(618896),
     j = n(231338),
     A = n(388032),
-    y = n(425205);
+    y = n(728200);
 let P = r.memo(function (e) {
         let { toggleRequestToSpeakSidebar: t, chatOpen: n } = e,
             i = (0, a.jsx)(g.ZP.Icon, {
@@ -78,7 +78,7 @@ let P = r.memo(function (e) {
         }
         let R = (e) => {
             (0, p.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e('79695'), n.e('92453'), n.e('13125'), n.e('91864')]).then(n.bind(n, 757387));
+                let { default: e } = await Promise.all([n.e('79695'), n.e('92453'), n.e('13125'), n.e('59458')]).then(n.bind(n, 757387));
                 return (n) =>
                     (0, a.jsx)(e, {
                         ...n,

@@ -16,7 +16,7 @@ var i = n(200651),
     p = n(358221),
     m = n(354459),
     f = n(388032),
-    g = n(285403);
+    g = n(41721);
 function C(e) {
     let { channel: t } = e,
         n = (0, a.e7)([p.Z], () => p.Z.getSelectedParticipant(t.id)),

@@ -10,8 +10,8 @@ var i = n(200651),
     s = n(273504),
     a = n(981631),
     o = n(388032),
-    c = n(753925),
-    d = n(707524);
+    c = n(95510),
+    d = n(340444);
 function u(e) {
     let { rule: t, onChangeRule: n } = e,
         [u, m] = r.useState(t.name);

@@ -17,7 +17,7 @@ var r = n(120356),
     h = n(594278),
     g = n(549631),
     x = n(388032),
-    p = n(674132);
+    p = n(13482);
 function f(e) {
     let { subscribers: t } = e;
     return (0, i.jsxs)('div', {

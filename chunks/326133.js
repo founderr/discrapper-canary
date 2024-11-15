@@ -19,7 +19,7 @@ var r = n(200651),
     b = n(606992),
     I = n(51062),
     S = n(918559),
-    T = n(828021);
+    T = n(115672);
 t.Z = i.forwardRef(function (e, t) {
     var n, a, y, A, N;
     let { channel: C, type: R, editorHeight: O, onVisibilityChange: D } = e,

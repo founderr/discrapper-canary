@@ -1,39 +1,39 @@
 n.d(t, {
     AF: function () {
-        return p;
+        return f;
     },
     BP: function () {
-        return d;
-    },
-    KL: function () {
-        return h;
-    },
-    MU: function () {
-        return o;
-    },
-    Qq: function () {
-        return r;
-    },
-    q5: function () {
-        return c;
-    },
-    t0: function () {
         return u;
     },
-    vf: function () {
+    KL: function () {
+        return _;
+    },
+    MU: function () {
+        return l;
+    },
+    Qq: function () {
         return i;
+    },
+    q5: function () {
+        return s;
+    },
+    t0: function () {
+        return d;
+    },
+    vf: function () {
+        return o;
     }
 }),
     n(47120);
-var i,
-    r,
-    s,
+var o,
+    i,
     a,
-    l = n(70956);
-n(731455), ((s = i || (i = {})).FEATURED = 'featured'), (s.GAMING = 'gaming'), (s.MUSIC = 'music'), (s.ENTERTAINMENT = 'entertainment'), (s.TECH = 'tech'), (s.EDUCATION = 'education'), (s.HUBS = 'hubs'), ((a = r || (r = {})).UNKNOWN = 'unknown'), (a.GUILDS_BAR = 'guilds_bar'), (a.RTC_PANEL = 'rtc_panel'), (a.PROFILE = 'profile'), (a.GAME_LINK = 'game_link'), (a.EMBED = 'embed');
-let o = new Set(['hubs']),
-    c = [],
-    d = 'q',
-    u = 'c',
-    h = 'l',
-    p = 10 * l.Z.Millis.MINUTE;
+    r,
+    c = n(70956);
+n(731455), ((a = o || (o = {})).FEATURED = 'featured'), (a.GAMING = 'gaming'), (a.MUSIC = 'music'), (a.ENTERTAINMENT = 'entertainment'), (a.TECH = 'tech'), (a.EDUCATION = 'education'), (a.HUBS = 'hubs'), ((r = i || (i = {})).UNKNOWN = 'unknown'), (r.GUILDS_BAR = 'guilds_bar'), (r.RTC_PANEL = 'rtc_panel'), (r.PROFILE = 'profile'), (r.GAME_LINK = 'game_link'), (r.EMBED = 'embed');
+let l = new Set(['hubs']),
+    s = 12633 == n.j ? [] : null,
+    u = 'q',
+    d = 'c',
+    _ = 'l',
+    f = 10 * c.Z.Millis.MINUTE;

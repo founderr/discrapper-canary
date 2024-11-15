@@ -383,7 +383,7 @@ function w(e) {
             null === (e = (t = T.app).pauseFrameEvictor) || void 0 === e || e.call(t);
         },
         getPidFromDesktopSource(e) {
-            if (!((0, v.isWindows)() || (0, v.isMac)()) || null == this.getDiscordUtils().getPidFromWindowHandle) return null;
+            if (null == this.getDiscordUtils().getPidFromWindowHandle) return null;
             let t = null == e ? void 0 : e.split(':'),
                 n = null == t ? void 0 : t[0];
             if ('window' === n) {

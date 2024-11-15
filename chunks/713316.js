@@ -1,31 +1,31 @@
 t.d(n, {
     w: function () {
-        return h;
+        return p;
     }
 });
 var i = t(200651);
 t(192379);
-var l = t(512722),
-    r = t.n(l),
+var r = t(512722),
+    o = t.n(r),
     a = t(481060),
-    s = t(563132),
-    o = t(698708),
-    d = t(614277),
-    c = t(388032),
-    u = t(525550);
-function h(e) {
+    l = t(563132),
+    s = t(698708),
+    c = t(614277),
+    d = t(388032),
+    u = t(538228);
+function p(e) {
     let { handleClose: n } = e,
-        { skusById: t, selectedSkuId: l, application: h } = (0, s.usePaymentContext)();
-    r()(null != l, 'Expected selectedSkuId'), r()(null != h, 'Expected application');
-    let m = t[l];
-    r()(null != m, 'Expected sku');
-    let f = c.intl.formatToPlainString(c.t.wK0IbG, {
-        applicationName: h.name,
-        itemName: m.name
+        { skusById: t, selectedSkuId: r, application: p } = (0, l.usePaymentContext)();
+    o()(null != r, 'Expected selectedSkuId'), o()(null != p, 'Expected application');
+    let f = t[r];
+    o()(null != f, 'Expected sku');
+    let m = d.intl.formatToPlainString(d.t.wK0IbG, {
+        applicationName: p.name,
+        itemName: f.name
     });
-    return (0, i.jsxs)(d.C3, {
+    return (0, i.jsxs)(c.C3, {
         children: [
-            (0, i.jsx)(o.Z, {}),
+            (0, i.jsx)(s.Z, {}),
             (0, i.jsxs)('div', {
                 className: u.confirmation,
                 children: [
@@ -36,12 +36,12 @@ function h(e) {
                     }),
                     (0, i.jsx)(a.Text, {
                         variant: 'text-md/normal',
-                        children: f
+                        children: m
                     }),
                     (0, i.jsx)('div', { className: u.divider }),
                     (0, i.jsx)(a.Button, {
                         onClick: n,
-                        children: c.intl.string(c.t.cpT0Cg)
+                        children: d.intl.string(d.t.cpT0Cg)
                     })
                 ]
             })

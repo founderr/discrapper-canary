@@ -6,7 +6,7 @@ var r = n(120356),
     l = n(976465),
     o = n(474936),
     c = n(388032),
-    d = n(305675);
+    d = n(444328);
 let u = (e) => {
     switch (e) {
         case o.VU.PREMIUM_TENURE_1_MONTH:

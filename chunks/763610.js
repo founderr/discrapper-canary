@@ -9,7 +9,7 @@ var n = t(200651),
     a = t.n(s),
     o = t(481060),
     r = t(53281),
-    u = t(914530);
+    u = t(300869);
 function d(e) {
     let { filename: l, className: t, filters: s, buttonText: d, placeholder: c, onFileSelect: m } = e,
         f = i.useRef(null);

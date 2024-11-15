@@ -23,7 +23,7 @@ var i,
     g = n(695346),
     m = n(572004),
     h = n(388032),
-    S = n(813778);
+    S = n(889160);
 function I(e) {
     let { tag: t, size: i = 1, disabled: r, className: u, onClick: I, onRemove: v, selected: C, ariaLabel: T } = e,
         { name: N, emojiId: b, emojiName: A } = t,

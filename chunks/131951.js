@@ -1156,7 +1156,7 @@ class tA extends (l = g.ZP.Store) {
         return eG;
     }
     supportsScreenSoundshare() {
-        return ((0, q.isMac)() && eS.supports(e_.AN.SOUNDSHARE) && h().satisfies(null === S.Z || void 0 === S.Z ? void 0 : S.Z.os.release, ec.yG) && ts()) || ((0, q.isWindows)() && eS.supports(e_.AN.SCREEN_SOUNDSHARE) && this.getExperimentalSoundshare());
+        return (0, q.isMac)() ? eS.supports(e_.AN.SOUNDSHARE) && h().satisfies(null === S.Z || void 0 === S.Z ? void 0 : S.Z.os.release, ec.yG) && ts() : (0, q.isWindows)() ? eS.supports(e_.AN.SCREEN_SOUNDSHARE) && this.getExperimentalSoundshare() : !!(0, q.isLinux)() && eS.supports(e_.AN.SCREEN_SOUNDSHARE);
     }
     getVideoStreamParameters() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : e_.Yn.DEFAULT,

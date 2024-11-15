@@ -12,7 +12,7 @@ var r = n(481060),
     o = n(434404),
     c = n(981631),
     d = n(388032),
-    u = n(657968);
+    u = n(241745);
 function m(e) {
     let { guildId: t, role: n } = e;
     return (0, i.jsx)(i.Fragment, {

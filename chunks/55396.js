@@ -26,7 +26,7 @@ var a,
     b = n(810568),
     I = n(701488),
     f = n(388032),
-    C = n(666046);
+    C = n(126963);
 ((i = a || (a = {}))[(i.FEEDBACK_TYPE = 0)] = 'FEEDBACK_TYPE'), (i[(i.WRONG_GAME = 1)] = 'WRONG_GAME'), (i[(i.OUTDATED_INFO = 2)] = 'OUTDATED_INFO'), (i[(i.OTHER = 3)] = 'OTHER'), (i[(i.CONFIRMATION = 4)] = 'CONFIRMATION');
 function S(e) {
     let { showOutdatedInfoOption: t, onChoice: n } = e,

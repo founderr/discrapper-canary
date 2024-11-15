@@ -14,7 +14,7 @@ n(192379);
 var l = n(120356),
     a = n.n(l),
     r = n(481060),
-    s = n(722029);
+    s = n(893250);
 let o = 16;
 function c(e) {
     let { description: t, name: n, icon: l, onNavigate: c, className: d, missingNavIcon: u } = e;

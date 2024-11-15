@@ -21,7 +21,7 @@ var r,
     I = e(768581),
     E = e(624138),
     h = e(388032),
-    L = e(488107);
+    L = e(343364);
 ((i = r || (r = {}))[(i.SMALL = (0, E.Mg)(s.Z.GUILD_COUNT_SMALL_ICON_SIZE))] = 'SMALL'), (i[(i.LARGE = (0, E.Mg)(s.Z.GUILD_COUNT_LARGE_ICON_SIZE))] = 'LARGE');
 let g = {
         [r.SMALL]: L.moreGuildsSmall,

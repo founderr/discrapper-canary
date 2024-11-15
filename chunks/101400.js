@@ -16,7 +16,7 @@ var i = n(200651),
     h = n(682807),
     m = n(981631),
     p = n(388032),
-    g = n(889280);
+    g = n(159172);
 let f = (0, p.getAvailableLocales)();
 function _(e) {
     let { className: t, application: n, onSelectCategory: _ } = e,

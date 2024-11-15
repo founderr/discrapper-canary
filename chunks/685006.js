@@ -15,7 +15,7 @@ var i = n(200651),
     h = n(541716),
     p = n(61356),
     m = n(981631),
-    f = n(589858);
+    f = n(902265);
 function g(e) {
     let { channel: t, entryPointCommandButtonRef: n, type: a } = e,
         { isInitialLoading: c, application: p, primaryEntryPointCommand: f } = (0, o.Z)({ channel: t }),

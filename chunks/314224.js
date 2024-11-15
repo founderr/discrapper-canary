@@ -14,7 +14,7 @@ var i = n(200651),
     u = n(620436),
     m = n(273504),
     h = n(388032),
-    g = n(739864);
+    g = n(505457);
 function x(e) {
     var t, n, x, p, f, C;
     let { rule: v, onChangeRule: _ } = e,

@@ -6,16 +6,16 @@ n.d(t, {
 var r = n(200651);
 n(192379);
 var o = n(692547),
-    l = n(390507),
-    i = n(325767);
+    i = n(390507),
+    l = n(325767);
 let a = (e) => {
     var t, n;
     let { size: a = 'md', width: s, height: c, color: u = o.Z.colors.INTERACTIVE_NORMAL, colorClass: d = '', ...m } = e,
-        f = (0, l.m)(a),
+        f = (0, i.m)(a),
         p = null !== (t = null == f ? void 0 : f.width) && void 0 !== t ? t : s,
         v = null !== (n = null == f ? void 0 : f.height) && void 0 !== n ? n : c;
     return (0, r.jsx)('svg', {
-        ...(0, i.Z)(m),
+        ...(0, l.Z)(m),
         xmlns: 'http://www.w3.org/2000/svg',
         width: p,
         height: v,

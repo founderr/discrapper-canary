@@ -12,7 +12,7 @@ var i = n(120356),
     l = n(436774),
     u = n(197115),
     c = n(474936),
-    d = n(422455);
+    d = n(167805);
 function f(e) {
     let { showUpsell: t, text: n, textVariant: i, button: f, buttonAnalyticsObject: _, className: p, onSubscribeModalClose: h, showShadow: m = !0, position: g = 'floating' } = e,
         E = (0, o.useSpring)({

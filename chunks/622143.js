@@ -1,8 +1,8 @@
 n.d(t, {
     r: function () {
-        return r;
+        return o;
     }
 });
-function r(e) {
+function o(e) {
     return !0;
 }

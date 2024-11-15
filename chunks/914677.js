@@ -4,7 +4,7 @@ var n = s(200651),
     i = s(780384),
     o = s(410030),
     a = s(119269),
-    l = s(315566);
+    l = s(77368);
 let c = 'url(#gradient)',
     d = (e, t) => {
         switch (e) {

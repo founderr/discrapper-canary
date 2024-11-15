@@ -1,7 +1,7 @@
 var i = n(200651);
 n(192379);
 var s = n(481060),
-    r = n(93560);
+    r = n(937558);
 t.Z = (e) => {
     let { label: t, onClick: n, submitting: l } = e;
     return (0, i.jsx)(s.Clickable, {

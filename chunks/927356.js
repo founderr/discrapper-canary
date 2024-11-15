@@ -1,36 +1,36 @@
-n.d(t, {
+i.d(t, {
     Z: function () {
         return u;
     }
 });
-var i = n(200651),
-    a = n(192379),
-    l = n(120356),
-    r = n.n(l),
-    c = n(481060),
-    o = n(388032),
-    s = n(202371),
-    d = n(902294);
+var n = i(200651),
+    a = i(192379),
+    r = i(120356),
+    o = i.n(r),
+    l = i(481060),
+    s = i(388032),
+    c = i(912067),
+    d = i(902294);
 function u(e) {
-    let { heading: t = o.intl.string(o.t.NGw8v7), body: n = o.intl.string(o.t['1XZRY2']), className: l } = e;
-    return (0, i.jsxs)('div', {
-        className: r()(s.container, l),
+    let { heading: t = s.intl.string(s.t.NGw8v7), body: i = s.intl.string(s.t['1XZRY2']), className: r } = e;
+    return (0, n.jsxs)('div', {
+        className: o()(c.container, r),
         children: [
-            (0, i.jsx)('img', {
-                className: s.image,
+            (0, n.jsx)('img', {
+                className: c.image,
                 src: d,
-                alt: o.intl.string(o.t['/UJaIy'])
+                alt: s.intl.string(s.t['/UJaIy'])
             }),
-            (0, i.jsxs)(a.Fragment, {
+            (0, n.jsxs)(a.Fragment, {
                 children: [
-                    (0, i.jsx)(c.Heading, {
-                        className: s.header,
+                    (0, n.jsx)(l.Heading, {
+                        className: c.header,
                         variant: 'heading-xl/semibold',
                         children: t
                     }),
-                    (0, i.jsx)(c.Text, {
+                    (0, n.jsx)(l.Text, {
                         variant: 'text-md/normal',
-                        children: n
+                        children: i
                     })
                 ]
             })

@@ -15,7 +15,7 @@ var i = n(120356),
     d = n(685203),
     f = n(112560),
     _ = n(388032),
-    p = n(452580);
+    p = n(71734);
 let h = n(978538);
 function m(e) {
     let { participant: t, width: n, noArt: i = !1, selected: m = !1 } = e,

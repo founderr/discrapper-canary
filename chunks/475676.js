@@ -22,7 +22,7 @@ var l = n(200651),
     g = n(463031),
     f = n(981631),
     I = n(388032),
-    j = n(835777);
+    j = n(827721);
 function P() {
     return (0, l.jsxs)('div', {
         className: j.gameTitleContainer,

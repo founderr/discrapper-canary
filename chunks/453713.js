@@ -11,7 +11,7 @@ var a = n(120356),
     l = n(429368),
     o = n(724994),
     c = n(388032),
-    d = n(591014);
+    d = n(724806);
 let u = (e) => {
         let { variantGroupProduct: t, variant: n, variantIndex: a, selectedVariantIndex: c, minimal: u } = e,
             { isPurchased: m } = (0, o.L)(n);

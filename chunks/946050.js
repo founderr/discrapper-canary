@@ -8,7 +8,7 @@ n(192379);
 var l = n(481060),
     a = n(670044),
     r = n(388032),
-    s = n(915383);
+    s = n(54086);
 function o(e) {
     let { channel: t } = e;
     return (0, i.jsxs)('div', {
@@ -32,7 +32,7 @@ function o(e) {
                     innerClassName: s.buttonInner,
                     onClick: () => {
                         (0, l.openModalLazy)(async () => {
-                            let { default: e } = await Promise.all([n.e('70205'), n.e('5863'), n.e('72332')]).then(n.bind(n, 751212));
+                            let { default: e } = await Promise.all([n.e('70205'), n.e('5863'), n.e('71111')]).then(n.bind(n, 751212));
                             return (n) =>
                                 (0, i.jsx)(e, {
                                     ...n,

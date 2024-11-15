@@ -6,7 +6,7 @@ n.d(t, {
     n(47120);
 var r = n(192379);
 function o(e) {
-    let { videoRef: t, isPlaying: n, isMetadataLoaded: o, isInitialSeekComplete: l, onAnalytics: i, emitIntervalMs: a, minSegmentDurationMs: s } = e,
+    let { videoRef: t, isPlaying: n, isMetadataLoaded: o, isInitialSeekComplete: i, onAnalytics: l, emitIntervalMs: a, minSegmentDurationMs: s } = e,
         [c, u] = r.useState(null),
         d = (0, r.useRef)(null),
         m = (0, r.useRef)(Date.now()),
@@ -14,7 +14,7 @@ function o(e) {
         p = (0, r.useCallback)(
             (e) => {
                 if (!(e.segmentEndSec < e.segmentStartSec))
-                    i({
+                    l({
                         start_time: e.startTime,
                         end_time: e.endTime,
                         duration: e.endTime - e.startTime,
@@ -23,10 +23,10 @@ function o(e) {
                         segment_duration_sec: e.segmentEndSec - e.segmentStartSec
                     });
             },
-            [i]
+            [l]
         ),
         v = (0, r.useCallback)(() => {
-            if (null != t.current && o && l) {
+            if (null != t.current && o && i) {
                 let e = Date.now(),
                     n = t.current.currentTime;
                 u({
@@ -37,7 +37,7 @@ function o(e) {
                 }),
                     (f.current = !0);
             }
-        }, [t, o, l]),
+        }, [t, o, i]),
         C = (0, r.useCallback)(() => {
             if (null == t.current || null == c) return;
             let e = Date.now();
@@ -59,10 +59,10 @@ function o(e) {
         }, [c, p, a, t, s]);
     return (
         (0, r.useEffect)(() => {
-            (!o || !l) && (u(null), (f.current = !1));
-        }, [o, l]),
+            (!o || !i) && (u(null), (f.current = !1));
+        }, [o, i]),
         (0, r.useEffect)(() => {
-            if (n && o && l)
+            if (n && o && i)
                 !f.current && v(),
                     (d.current = window.setInterval(() => {
                         C();
@@ -83,7 +83,7 @@ function o(e) {
             return () => {
                 null != d.current && (clearInterval(d.current), (d.current = null));
             };
-        }, [n, o, l, c, C, p, t, v]),
+        }, [n, o, i, c, C, p, t, v]),
         {
             forceSendCurrentSegment: (0, r.useCallback)(() => {
                 if (null != c && null != t.current) {

@@ -7,7 +7,7 @@ var r = n(100621),
     l = n(644646),
     c = n(46140),
     d = n(388032),
-    u = n(437567);
+    u = n(408901);
 t.Z = (e) => {
     let { quest: t, expansionSpring: n, isFullyExpanded: p, partnerBranding: m, useReducedMotion: x } = e,
         { enabled: g, variant: f } = i.Hp.useExperiment({ location: c.dr.QUESTS_BAR });

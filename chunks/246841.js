@@ -8,7 +8,7 @@ n(192379);
 var l = n(481060),
     a = n(395361),
     r = n(829820),
-    s = n(26118);
+    s = n(810768);
 function o(e) {
     let { activity: t, user: n, source: o, className: c, size: u, look: d, color: m, fullWidth: f, onAction: p } = e,
         { label: h, tooltip: g, loading: v, disabled: S, onClick: I } = (0, r.Ih)(t, n, o),

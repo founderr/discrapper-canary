@@ -27,7 +27,7 @@ var r,
     I = n(474936),
     S = n(981631),
     T = n(388032),
-    y = n(739626);
+    y = n(869810);
 function A(e) {
     let { containerContext: t, image: n, title: r, description: i, enableSocialProof: o, analyticsLocationSection: A, upsellViewedTrackingData: N, onClose: C, onDisplay: R, onLearnMore: O } = e,
         D = (0, u.e7)([g.Z], () => g.Z.affinities),

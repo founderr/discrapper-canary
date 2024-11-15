@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return u;
     }
 }),
     n(47120),
@@ -9,15 +9,15 @@ var i = n(836560),
     s = n(358085),
     r = n(998502),
     l = n(13140),
-    a = n(981631);
-let o = [],
-    c = (e, t, n) => {
+    o = n(981631);
+let a = [],
+    d = (e, t, n) => {
         let i = (0, s.isWindows)() ? 0 : 1;
-        if (e !== a.MoX.MOUSE_BUTTON || n !== i) o.forEach((i) => i._handleEvent(e, t, n));
+        if (e !== o.MoX.MOUSE_BUTTON || n !== i) a.forEach((i) => i._handleEvent(e, t, n));
     };
-class d extends i.EventEmitter {
+class u extends i.EventEmitter {
     destroy() {
-        this.removeAllListeners(), 0 === (o = o.filter((e) => e !== this)).length && r.ZP.setOnInputEventCallback(null);
+        this.removeAllListeners(), 0 === (a = a.filter((e) => e !== this)).length && r.ZP.setOnInputEventCallback(null);
     }
     toString() {
         return (0, l.BB)(this.combo);
@@ -43,7 +43,7 @@ class d extends i.EventEmitter {
                       writable: !0
                   })
                 : (e[t] = n),
-            o.push(this),
-            1 === o.length && r.ZP.setOnInputEventCallback(c);
+            a.push(this),
+            1 === a.length && r.ZP.setOnInputEventCallback(d);
     }
 }

@@ -10,7 +10,7 @@ var i = n(481060),
     s = n(447564),
     a = n(207126),
     o = n(388032),
-    c = n(371275);
+    c = n(652484);
 function d(e) {
     let { channel: t } = e;
     return (0, l.jsxs)('div', {

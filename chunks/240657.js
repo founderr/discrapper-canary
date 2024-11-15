@@ -9,8 +9,8 @@ var A = n(200651),
     l = n.n(a),
     i = n(481060),
     o = n(741914),
-    s = n(677390),
-    d = n(554034);
+    s = n(609887),
+    d = n(882530);
 function c(e) {
     let { color: t, className: n, variant: a, text: c, lineClamp: u } = e,
         g = (0, i.usePrivateHeadingLevel)(),

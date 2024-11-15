@@ -29,7 +29,7 @@ var s = n(512722),
     A = n(430131),
     b = n(133484),
     v = n(388032),
-    j = n(944167);
+    j = n(314807);
 function O(e) {
     var t, n, s, O;
     let { guild: R } = e,

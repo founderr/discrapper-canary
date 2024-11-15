@@ -39,7 +39,7 @@ var i,
     S = n(281029),
     Z = n(981631),
     N = n(388032),
-    y = n(872356);
+    y = n(766075);
 function T(e, t, n) {
     return null != t && !!t && !(0, S.ig)(n, e.type);
 }
@@ -86,7 +86,7 @@ function P(e) {
         if (null != c) {
             let e = x.Z.getAllActiveStreams().filter((e) => e.state !== Z.jm8.ENDED && e.channelId === t.id);
             (0, h.openModalLazy)(async () => {
-                let { default: i } = await Promise.all([n.e('7654'), n.e('85683')]).then(n.bind(n, 560114));
+                let { default: i } = await Promise.all([n.e('7654'), n.e('19821')]).then(n.bind(n, 560114));
                 return (n) =>
                     (0, o.jsx)(i, {
                         ...n,

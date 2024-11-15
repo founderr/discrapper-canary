@@ -1,12 +1,12 @@
 n.d(t, {
     h: function () {
-        return r;
+        return i;
     },
     r: function () {
-        return s;
+        return a;
     }
 });
-let i = (0, n(818083).B)({
+let o = (0, n(818083).B)({
     kind: 'user',
     id: '2024-09_global_discovery_apps',
     label: 'Global Discovery Apps',
@@ -19,12 +19,12 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-function r(e) {
+function i(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
-        { enabled: r } = i.useExperiment({ location: t }, { autoTrackExposure: n });
-    return r;
+        { enabled: i } = o.useExperiment({ location: t }, { autoTrackExposure: n });
+    return i;
 }
-function s(e) {
+function a(e) {
     let { location: t } = e;
-    return i.getCurrentConfig({ location: t }, { autoTrackExposure: !1 }).enabled;
+    return o.getCurrentConfig({ location: t }, { autoTrackExposure: !1 }).enabled;
 }

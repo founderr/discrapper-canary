@@ -15,7 +15,7 @@ var l = n(200651),
     a = n(270144),
     d = n(689011),
     u = n(388032),
-    c = n(389142);
+    c = n(334419);
 function x(e) {
     let { transitionState: t, onClose: n, sku: x, onSelect: b, currentGuildId: m } = e,
         [h, p] = s.useState(),

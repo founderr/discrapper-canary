@@ -34,7 +34,7 @@ var i,
     P = n(223021),
     L = n(981631),
     y = n(388032),
-    O = n(825193);
+    O = n(12645);
 function M(e) {
     let { width: t = 6, height: n = 10, color: i = 'currentColor', className: r, foreground: a } = e;
     return (0, l.jsx)('svg', {

@@ -12,7 +12,7 @@ var s = n(120356),
     l = n(873546),
     u = n(481060),
     c = n(388032),
-    d = n(619558);
+    d = n(50893);
 function f(e) {
     let { closeAction: t, variant: n = '', keybind: r, className: i } = e;
     return (0, a.jsxs)('div', {

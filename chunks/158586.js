@@ -7,7 +7,7 @@ var i = o(200651),
     d = o(946458),
     r = o(185923),
     c = o(388032),
-    m = o(880584);
+    m = o(322625);
 t.default = (e) => {
     var t, o, u;
     let { channel: j, onClose: h, transitionState: x } = e,

@@ -27,7 +27,7 @@ var l = n(442837),
     E = n(981631),
     S = n(490897),
     Z = n(388032),
-    N = n(718317);
+    N = n(360110);
 function y(e) {
     var t;
     let { channel: n, isChannelSelected: y, isChannelCollapsed: T, voiceStates: j, enableConnectedUserLimit: A, enableActivities: P, isSubscriptionGated: M, needSubscriptionToAccess: R, isNewChannel: w, muted: L, resolvedUnreadSetting: D } = e,

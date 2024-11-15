@@ -9,7 +9,7 @@ var i = n(200651),
     a = n(283836),
     o = n(728345),
     s = n(388032),
-    c = n(364060);
+    c = n(918665);
 function u(e) {
     let { applicationId: t, guildId: n } = e,
         { data: r } = (0, o.IX)(t);
@@ -25,7 +25,7 @@ function d(e) {
     (0, a.q)(t.id);
     let u = r.useCallback(() => {
         (0, l.openModalLazy)(async () => {
-            let { default: e } = await Promise.all([n.e('77803'), n.e('65355')]).then(n.bind(n, 7225));
+            let { default: e } = await Promise.all([n.e('77803'), n.e('87499')]).then(n.bind(n, 7225));
             return (n) =>
                 (0, i.jsx)(e, {
                     appId: t.id,

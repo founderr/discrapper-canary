@@ -60,7 +60,7 @@ var l,
     ee = n(921944),
     et = n(761274),
     en = n(388032),
-    el = n(410894);
+    el = n(507178);
 ((i = l || (l = {}))[(i.GUILD = 0)] = 'GUILD'), (i[(i.NATIVE_PICKER_SOURCE = 1)] = 'NATIVE_PICKER_SOURCE'), (i[(i.SOURCE = 2)] = 'SOURCE'), (i[(i.CONFIRM = 3)] = 'CONFIRM');
 let ei = (e) => {
     let { visibleContent: t, markAsDismissed: n } = e;
@@ -236,7 +236,7 @@ function er(e) {
             [es]
         ),
         e4 = !(1 === ey && eZ && e_ === V.Uc.Error),
-        e9 = (function (e) {
+        e8 = (function (e) {
             switch (e) {
                 case 2:
                     return en.intl.string(en.t['aC4/Zm']);
@@ -248,7 +248,7 @@ function er(e) {
                     return en.intl.string(en.t['1hKIam']);
             }
         })(ey),
-        e8 = (0, r.jsx)(m.ModalHeader, {
+        e9 = (0, r.jsx)(m.ModalHeader, {
             className: el.modalHeader,
             separator: !1,
             children: (0, r.jsxs)(_.Z, {
@@ -262,12 +262,12 @@ function er(e) {
                         className: el.headerText,
                         children: en.intl.string(en.t.RDkJQ0)
                     }),
-                    e4 && null != e9
+                    e4 && null != e8
                         ? (0, r.jsx)(m.Text, {
                               className: el.headerDescription,
                               variant: 'text-md/normal',
                               color: 'text-normal',
-                              children: e9
+                              children: e8
                           })
                         : null
                 ]
@@ -427,7 +427,7 @@ function er(e) {
                     children: () =>
                         (0, r.jsxs)('form', {
                             onSubmit: e5,
-                            children: [e8, ts, to]
+                            children: [e9, ts, to]
                         })
                 })
             ]

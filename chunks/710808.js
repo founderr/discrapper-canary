@@ -23,7 +23,7 @@ var i = n(200651),
     C = n(981631),
     _ = n(65154),
     E = n(388032),
-    I = n(113207);
+    I = n(971436);
 async function f() {
     let e = await d.Z.fileManager.getLogPath();
     d.Z.fileManager.showItemInFolder(e);

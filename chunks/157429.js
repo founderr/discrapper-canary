@@ -15,7 +15,7 @@ var o = a(512722),
     c = a(53365),
     d = a(981631),
     u = a(388032),
-    g = a(591836);
+    g = a(40);
 function x(n) {
     let { transitionState: t, guild: a, onClose: o } = n,
         x = (0, r.Dt)(),

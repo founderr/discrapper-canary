@@ -10,7 +10,7 @@ var o = n(120356),
     l = n(297700),
     a = n(471885),
     c = n(981631),
-    s = n(188662);
+    s = n(407015);
 let d = {
         [c.Eu4.NONE]: s.iconBackgroundTierNone,
         [c.Eu4.TIER_1]: s.iconBackgroundTierOne,

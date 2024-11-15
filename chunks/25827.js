@@ -14,7 +14,7 @@ var r = n(200651),
     l = n(40851),
     u = n(67844),
     c = n(871499),
-    d = n(491957);
+    d = n(841421);
 function f(e) {
     let t = (0, u.X)(e),
         { enabled: n, cameraUnavailable: a, onChange: s, onCameraUnavailable: c, hasPermission: d, children: f, channelLimitReached: _ = !1, join: p } = e,

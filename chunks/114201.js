@@ -20,7 +20,7 @@ var i = n(99815),
     m = n(703733),
     g = n(981631),
     E = n(388032),
-    v = n(288984);
+    v = n(529191);
 function b(e) {
     let { guildId: t, leaderboardId: b } = e,
         I = (0, a.e7)([l.default], () => l.default.getId()),

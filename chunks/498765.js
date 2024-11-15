@@ -2,7 +2,7 @@ var i = n(200651);
 n(192379);
 var r = n(120356),
     a = n.n(r),
-    s = n(811802);
+    s = n(635026);
 t.Z = (e) => {
     let { lifted: t = !1 } = e;
     return (0, i.jsxs)('svg', {

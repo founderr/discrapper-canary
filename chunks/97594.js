@@ -19,7 +19,7 @@ var r = t(200651),
     f = t(860153),
     p = t(981631),
     g = t(388032),
-    _ = t(619377);
+    _ = t(267189);
 function C(e) {
     let { onClose: n, items: t, startingIndex: a, onIndexChange: C, shouldRedactExplicitContent: x, shouldHideMediaOptions: S = !1, className: v, transitionState: E, ...I } = e,
         [y, L] = i.useState(null != a ? a : 0),

@@ -8,7 +8,7 @@ var r = n(200651),
     u = n(353093),
     c = n(686546),
     d = n(388032),
-    f = n(845024);
+    f = n(725642);
 function _(e) {
     let { games: t, gameActivity: n } = e;
     return (0, r.jsx)('div', {

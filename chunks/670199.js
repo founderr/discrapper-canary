@@ -16,7 +16,7 @@ var l = t(120356),
     x = t(97568),
     m = t(800530),
     C = t(388032),
-    h = t(487043);
+    h = t(483760);
 function N(e) {
     var n, t;
     let { classification: l, isDsaEligible: N = !1, isSpam: p = !1, isCoppa: _ = !1, className: g, onClose: j, onNext: b } = e,

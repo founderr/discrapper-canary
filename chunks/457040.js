@@ -34,7 +34,7 @@ var r = n(200651),
     P = n(15350),
     k = n(611480),
     U = n(981631),
-    B = n(858260);
+    B = n(319796);
 let G = (0, S.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
     Z = (0, S.Mg)(u.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
     F = (0, S.Mg)(u.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
@@ -110,7 +110,7 @@ let G = (0, S.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                 location: Y
                             }),
                                 (0, c.openModalLazy)(async () => {
-                                    let { default: t } = await Promise.all([n.e('93626'), n.e('44600')]).then(n.bind(n, 136735));
+                                    let { default: t } = await Promise.all([n.e('93626'), n.e('25887')]).then(n.bind(n, 136735));
                                     return (n) =>
                                         (0, r.jsx)(t, {
                                             guildId: e.guild_id,
