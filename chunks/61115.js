@@ -39,7 +39,8 @@ function I(e) {
                 null != l &&
                     f.default.track(m.rMx.QUEST_SURVEY_SUBMITTED, {
                         ...T(l, n),
-                        choice: e
+                        choice: e.text,
+                        choice_id: e.key
                     });
         },
         A = async (e) => {
@@ -93,10 +94,10 @@ function I(e) {
                                     (0, a.jsx)(
                                         b,
                                         {
-                                            text: e,
+                                            choice: e,
                                             onClick: y
                                         },
-                                        e
+                                        e.key
                                     )
                                 )
                             })
@@ -147,14 +148,14 @@ function I(e) {
     );
 }
 function b(e) {
-    let { className: t, text: n, onClick: r } = e;
+    let { className: t, choice: n, onClick: r } = e;
     return (0, a.jsxs)(c.Clickable, {
         className: l()(E.choiceContainer, t),
         onClick: () => r(n),
         children: [
             (0, a.jsx)(c.Text, {
                 variant: 'text-sm/semibold',
-                children: n
+                children: n.text
             }),
             (0, a.jsx)(c.ChevronSmallRightIcon, {})
         ]
@@ -193,7 +194,7 @@ function T(e, t) {
         survey_id: t.id,
         survey_title: t.title,
         survey_subtitle: t.subtitle,
-        choices: t.choices
+        choices: t.choices.map((e) => e.text)
     };
 }
 ((i = r || (r = {}))[(i.SURVEY = 0)] = 'SURVEY'), (i[(i.COMPLETE = 1)] = 'COMPLETE');
