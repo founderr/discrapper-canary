@@ -1,37 +1,58 @@
 n.d(t, {
     Gp: function () {
-        return c;
+        return u;
     },
     O4: function () {
-        return s;
+        return o;
     },
     Yp: function () {
-        return a;
+        return s;
+    },
+    pR: function () {
+        return d;
     },
     ph: function () {
-        return o;
+        return c;
     }
-});
-var i = n(703656),
-    r = n(258971),
-    l = n(981631);
-let a = () => {
-        let e = { previousView: (0, r.Xh)() };
-        (0, i.uL)(l.Z5c.GLOBAL_DISCOVERY_APPS, { state: e });
-    },
-    s = (e) => {
-        let { categoryId: t } = e,
-            n = { previousView: (0, r.Xh)() };
-        (0, i.uL)(l.Z5c.GLOBAL_DISCOVERY_APPS_CATEGORY(t), { state: n });
+}),
+    n(610138),
+    n(216116),
+    n(78328),
+    n(815648),
+    n(47120);
+var i = n(34674),
+    r = n(703656),
+    l = n(258971),
+    a = n(981631);
+let s = () => {
+        let e = { previousView: (0, l.Xh)() };
+        (0, r.uL)(a.Z5c.GLOBAL_DISCOVERY_APPS, { state: e });
     },
     o = (e) => {
-        let { applicationId: t } = e,
-            n = { previousView: (0, r.Xh)() };
-        (0, i.uL)(l.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(t), { state: n });
+        let { categoryId: t } = e,
+            n = { previousView: (0, l.Xh)() };
+        (0, r.uL)(a.Z5c.GLOBAL_DISCOVERY_APPS_CATEGORY(t), { state: n });
     },
     c = (e) => {
+        let { applicationId: t } = e,
+            n = { previousView: (0, l.Xh)() };
+        (0, r.uL)(a.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(t), { state: n });
+    },
+    d = function () {
+        let { query: e, categoryId: t, page: n } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+            s = { previousView: (0, l.Xh)() },
+            o = new URLSearchParams();
+        null != e && '' !== e && o.set('q', e),
+            null != t && t !== i.MU && o.set('category_id', t.toString()),
+            null != n && n > 1 && o.set('page', n.toString()),
+            (0, r.uL)(a.Z5c.GLOBAL_DISCOVERY_APPS_SEARCH, {
+                state: s,
+                search: o.toString()
+            });
+    },
+    u = (e) => {
         let {
             location: { state: t }
-        } = (0, i.s1)();
-        (0, i.dL)(e, t);
+        } = (0, r.s1)();
+        (0, r.dL)(e, t);
     };

@@ -6,9 +6,14 @@ n.d(t, {
         return u;
     },
     m_: function () {
-        return r;
+        return i;
     }
-});
+}),
+    n(610138),
+    n(216116),
+    n(78328),
+    n(815648),
+    n(47120);
 var i,
     r,
     l = n(512969),
@@ -25,7 +30,7 @@ function d() {
 function u() {
     var e, t, n;
     let {
-        location: { pathname: i }
+        location: { pathname: i, search: r }
     } = (0, s.s1)();
     if (
         null !=
@@ -42,30 +47,33 @@ function u() {
             exact: !0
         })
     )
-        return { type: 'search' };
-    let r = (0, l.LX)(i, {
+        return {
+            type: 'search',
+            query: new URLSearchParams(r).get('q')
+        };
+    let d = (0, l.LX)(i, {
             path: [c.Z5c.GLOBAL_DISCOVERY_APPS_CATEGORY(':categoryId')],
             exact: !0
         }),
-        { categoryId: d } = null !== (e = null == r ? void 0 : r.params) && void 0 !== e ? e : {};
-    if (null != r && null != d)
+        { categoryId: u } = null !== (e = null == d ? void 0 : d.params) && void 0 !== e ? e : {};
+    if (null != d && null != u)
         return {
             type: 'category',
-            categoryId: d
+            categoryId: u
         };
-    let u = (0, l.LX)(i, {
+    let h = (0, l.LX)(i, {
             path: [c.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(':applicationId'), c.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(':applicationId', ':section'), c.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(':applicationId', ':skuId')],
             exact: !0
         }),
-        { applicationId: h, section: m, skuId: p } = null !== (t = null == u ? void 0 : u.params) && void 0 !== t ? t : {};
-    if (null != u && null != h) {
-        let e = null === (n = a.Z.getApplication(h)) || void 0 === n ? void 0 : n.name;
+        { applicationId: m, section: p, skuId: g } = null !== (t = null == h ? void 0 : h.params) && void 0 !== t ? t : {};
+    if (null != h && null != m) {
+        let e = null === (n = a.Z.getApplication(m)) || void 0 === n ? void 0 : n.name;
         return {
             type: 'application',
-            applicationId: h,
+            applicationId: m,
             applicationName: e,
-            section: null != m ? m : null != p ? o.Wc.STORE : o.Wc.ABOUT
+            section: null != p ? p : null != g ? o.Wc.STORE : o.Wc.ABOUT
         };
     }
 }
-((i = r || (r = {})).HOME = 'home'), (i.SEARCH = 'search'), (i.APPLICATION = 'application'), (i.CATEGORY = 'category');
+((r = i || (i = {})).HOME = 'home'), (r.SEARCH = 'search'), (r.APPLICATION = 'application'), (r.CATEGORY = 'category');

@@ -1,41 +1,27 @@
 n.d(t, {
     M: function () {
-        return s;
+        return l;
     }
 }),
     n(47120);
 var i = n(192379),
-    r = n(288385),
-    l = n(674588),
-    a = n(979007);
-function s() {
-    let [e, t] = i.useState(''),
-        [n, s] = i.useState(''),
-        [o, c] = i.useState(!1),
-        d = i.useCallback((e) => {
-            t(e);
+    r = n(133743);
+function l(e) {
+    let { initialQuery: t = '' } = e,
+        [n, l] = i.useState(null != t ? t : ''),
+        a = i.useCallback((e) => {
+            l(e);
         }, []),
-        u = i.useCallback(() => {
-            t(''), s(''), c(!1);
+        s = i.useCallback(() => {
+            l('');
         }, []),
-        h = i.useCallback(() => {
-            l.yC({
-                query: e,
-                options: {
-                    page: 1,
-                    source: r.F.APP_DIRECTORY,
-                    pageSize: a.IV
-                }
-            }),
-                c(!0),
-                s(e);
-        }, [e]);
+        o = i.useCallback(() => {
+            (0, r.pR)({ query: n });
+        }, [n]);
     return {
-        searchQuery: e,
-        searchFetchedQuery: n,
-        onSearchTextChange: d,
-        onClearSearch: u,
-        onSearchSubmit: h,
-        hasSearchView: o
+        searchQuery: n,
+        onSearchTextChange: a,
+        onClearSearch: s,
+        onSearchSubmit: o
     };
 }
