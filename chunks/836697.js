@@ -16,23 +16,91 @@ var i = n(200651),
     d = n(914010),
     h = n(289090),
     p = n(727258),
-    f = n(234383),
-    m = n(179809),
-    g = n(773182),
-    C = n(588275),
-    _ = n(388032),
-    v = n(496657);
+    m = n(234383),
+    f = n(179809),
+    g = n(588275),
+    C = n(388032),
+    _ = n(496657);
+function v(e) {
+    let { onActivate: t, children: n } = e,
+        s = (0, r.e7)([u.Z], () => u.Z.hasJoinRequestCoackmark()),
+        d = l.useCallback(() => {
+            c.ZP.clearCoachmark();
+        }, []),
+        h = (0, o.Z)(s),
+        p = l.useRef(null);
+    return (
+        l.useEffect(() => {
+            if (s && s !== h) {
+                var e, n, i, l, r;
+                t(), null === (r = p.current) || void 0 === r || null === (l = r.ref) || void 0 === l || null === (i = l.current) || void 0 === i || null === (n = i.layerRef) || void 0 === n || null === (e = n.current) || void 0 === e || e.updatePosition();
+            }
+        }, [p, s, h, t]),
+        (0, i.jsxs)('div', {
+            className: _.container,
+            children: [
+                (0, i.jsx)(a.Popout, {
+                    ref: p,
+                    shouldShow: s,
+                    renderPopout: () =>
+                        (0, i.jsxs)('div', {
+                            className: _.popoutContainer,
+                            children: [
+                                (0, i.jsxs)('div', {
+                                    className: _.popoutContent,
+                                    children: [
+                                        (0, i.jsxs)('div', {
+                                            className: _.coachmarkTextContainer,
+                                            children: [
+                                                (0, i.jsx)(a.Heading, {
+                                                    variant: 'heading-md/medium',
+                                                    children: C.intl.string(C.t.fRUGzs)
+                                                }),
+                                                (0, i.jsx)(a.Text, {
+                                                    variant: 'text-xs/normal',
+                                                    color: 'text-muted',
+                                                    children: C.intl.string(C.t.ja0Tg4)
+                                                })
+                                            ]
+                                        }),
+                                        (0, i.jsx)(a.Button, {
+                                            fullWidth: !0,
+                                            size: a.ButtonSizes.SMALL,
+                                            color: a.ButtonColors.BRAND,
+                                            onClick: d,
+                                            children: C.intl.string(C.t.E0MgHh)
+                                        })
+                                    ]
+                                }),
+                                (0, i.jsx)('div', { className: _.popoutCaretLeft })
+                            ]
+                        }),
+                    position: 'right',
+                    animationPosition: 'right',
+                    align: 'top',
+                    spacing: 16,
+                    children: (e) =>
+                        (0, i.jsx)('div', {
+                            ...e,
+                            className: _.popoutAnchor
+                        })
+                }),
+                n
+            ]
+        })
+    );
+}
 function x(e) {
     let { onActivate: t } = e,
         [n, x] = l.useState(!1),
         I = (0, r.e7)([d.Z], () => d.Z.getGuildId()),
         b = (0, r.e7)([u.Z], () => u.Z.hasFetchedRequestToJoinGuilds),
-        E = (0, f.Z)(),
+        E = (0, m.Z)(),
         S = (0, o.Z)(I),
         Z = l.useMemo(() => {
             let e = (0, p.qQ)({
                 folderId: h.S.PENDING_JOIN_REQUESTS_FOLDER,
-                folderName: _.intl.string(_.t['scsU+v']),
+                folderName: C.intl.string(C.t['scsU+v']),
                 expanded: n,
                 guildIds: []
             });
@@ -48,9 +116,9 @@ function x(e) {
     }, [n, N, S, I]),
     0 === E.length)
         ? null
-        : (0, i.jsx)(g.TH, {
+        : (0, i.jsx)(v, {
               onActivate: t,
-              children: (0, i.jsx)(m.Z, {
+              children: (0, i.jsx)(f.Z, {
                   folderNode: Z,
                   expanded: n,
                   useCircleMask: !n && !N,
@@ -65,10 +133,10 @@ function x(e) {
                       color: 'currentColor',
                       width: 24,
                       height: 24,
-                      className: v.pendingIcon
+                      className: _.pendingIcon
                   }),
                   renderChildNode: function (e) {
-                      return e.type !== p.eD.GUILD ? null : (0, i.jsx)(C.Z, { guildNode: e }, e.id);
+                      return e.type !== p.eD.GUILD ? null : (0, i.jsx)(g.Z, { guildNode: e }, e.id);
                   }
               })
           });

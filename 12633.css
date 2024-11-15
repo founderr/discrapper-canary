@@ -11995,27 +11995,6 @@ div.modalHeader_c5e09c {
     border-color: var(--brand-500)
 }
 
-@keyframes placeholderPulse_d82d0d {
-    0% {
-        opacity: .2
-    }
-
-    50% {
-        opacity: .5
-    }
-
-    to {
-        opacity: .2
-    }
-}
-
-.placeholderSkeleton_d82d0d {
-    border-radius: 8px;
-    background: var(--bg-mod-faint);
-    opacity: .2;
-    animation: placeholderPulse_d82d0d 3s ease-in-out infinite
-}
-
 .gameImageContainer_fda254 {
     position: relative;
     width: 24px;

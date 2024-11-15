@@ -6,9 +6,8 @@ var r = n(200651),
     o = n(97028),
     l = n(481060),
     u = n(353093),
-    c = n(686546);
-n(852786);
-var d = n(388032),
+    c = n(686546),
+    d = n(388032),
     f = n(845024);
 function _(e) {
     let { games: t, gameActivity: n } = e;
