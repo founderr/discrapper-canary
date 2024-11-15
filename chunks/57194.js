@@ -98,12 +98,12 @@ e.exports = function (e) {
             scope: 'computation-expression',
             match: /\b[_a-z]\w*(?=\s*\{)/
         },
-        I = {
+        b = {
             begin: [/^\s*/, i(/#/, a('if', 'else', 'endif', 'line', 'nowarn', 'light', 'r', 'i', 'I', 'load', 'time', 'help', 'quit')), /\b/],
             beginScope: { 2: 'meta' },
             end: r(/\s|$/)
         },
-        b = {
+        I = {
             variants: [e.BINARY_NUMBER_MODE, e.C_NUMBER_MODE]
         },
         S = {
@@ -147,7 +147,7 @@ e.exports = function (e) {
             match: i(/'/, a(/[^\\']/, /\\(?:.|\d{3}|x[a-fA-F\d]{2}|u[a-fA-F\d]{4}|U[a-fA-F\d]{8})/), /'/)
         };
     return (
-        (A.contains = [C, N, T, S, R, n, l, u, m, v, I, b, d, _]),
+        (A.contains = [C, N, T, S, R, n, l, u, m, v, b, I, d, _]),
         {
             name: 'F#',
             aliases: ['fs', 'f#'],
@@ -181,13 +181,13 @@ e.exports = function (e) {
                     begin: /\[</,
                     end: />\]/,
                     relevance: 2,
-                    contains: [u, y, T, S, R, b]
+                    contains: [u, y, T, S, R, I]
                 },
                 g,
                 m,
                 v,
-                I,
                 b,
+                I,
                 d,
                 _
             ]

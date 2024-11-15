@@ -16,16 +16,16 @@ async function d(e) {
         E = (0, u.Z)(),
         v = i.default.getCurrentUser();
     if (null == t) return !1;
-    let I = await (0, l.Z)(t, d);
+    let b = await (0, l.Z)(t, d);
     return null == d
         ? (a.S.dispatch(c.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, { applicationId: t }), !1)
         : null != r.Z.getChannel(d) &&
               null != v &&
-              null != I &&
-              (s.tZ(I.id),
+              null != b &&
+              (s.tZ(b.id),
               await (0, o.af)({
                   channelId: d,
-                  applicationId: I.id,
+                  applicationId: b.id,
                   isStart: !0,
                   embeddedActivitiesManager: E,
                   componentId: _,

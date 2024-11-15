@@ -16,8 +16,8 @@ var r = n(200651),
     g = n(594174),
     E = n(51144),
     v = n(970606),
-    I = n(963202),
-    b = n(645896),
+    b = n(963202),
+    I = n(645896),
     S = n(905362),
     T = n(353093),
     y = n(574410),
@@ -34,8 +34,8 @@ function x(e) {
 t.Z = i.memo(function (e) {
     var t, n;
     let { clan: w, isLoading: M, onClose: P, profileViewedAnalytics: k, userId: U } = e,
-        G = null == w ? void 0 : w.identityGuildId,
-        B = (0, b.Cc)(null != G ? G : null),
+        B = null == w ? void 0 : w.identityGuildId,
+        G = (0, I.Cc)(null != B ? B : null),
         Z = null == w ? void 0 : w.tag,
         F = (0, N.Z)('clan_guild_profile'),
         { enabled: V } = (0, u.I7)(),
@@ -45,29 +45,29 @@ t.Z = i.memo(function (e) {
         z = (0, s.e7)([g.default], () => g.default.getUser(U)),
         q = (0, A.Z)('base_clan_tag_chiplet'),
         Q = (0, s.e7)([h.default], () => h.default.getId()),
-        X = (0, s.e7)([m.ZP], () => (null != G ? m.ZP.getMember(G, Q) : null), [G, Q]),
+        X = (0, s.e7)([m.ZP], () => (null != B ? m.ZP.getMember(B, Q) : null), [B, Q]),
         J = (0, s.e7)([d.Z], () => {
             var e;
-            return (null == B ? void 0 : B.id) != null && (null === (e = d.Z.getRequest(B.id)) || void 0 === e ? void 0 : e.applicationStatus) === c.wB.SUBMITTED;
+            return (null == G ? void 0 : G.id) != null && (null === (e = d.Z.getRequest(G.id)) || void 0 === e ? void 0 : e.applicationStatus) === c.wB.SUBMITTED;
         }),
-        $ = null != B && B.memberCount >= R.Du,
+        $ = null != G && G.memberCount >= R.Du,
         ee = (0, s.e7)([g.default], () => g.default.getUser(Q), [Q]),
         et = (null == X ? void 0 : X.joinedAt) != null,
-        en = (0, T.Z4)(G, null == ee ? void 0 : ee.clan),
-        er = null != (0, f.Z)(G),
-        ei = (0, I.iN)('ClanGuildProfile');
+        en = (0, T.Z4)(B, null == ee ? void 0 : ee.clan),
+        er = null != (0, f.Z)(B),
+        ei = (0, b.iN)('ClanGuildProfile');
     i.useEffect(() => {
-        null != G &&
+        null != B &&
             (0, v.u0)({
-                guildId: G,
+                guildId: B,
                 hasJoinRequest: er,
                 ...k,
                 location: o.Z.CLAN_GUILD_PROFILE
             });
-    }, [G, er, k]);
+    }, [B, er, k]);
     let ea = i.useCallback(() => {
-            (0, v.hM)(G, v.UE.ASK_TO_JOIN), Y(!H);
-        }, [G, H]),
+            (0, v.hM)(B, v.UE.ASK_TO_JOIN), Y(!H);
+        }, [B, H]),
         es = i.useCallback(async () => {
             if (null != z)
                 try {
@@ -81,30 +81,30 @@ t.Z = i.memo(function (e) {
         }, [z, W]),
         eo = i.useCallback(
             (e) => {
-                if (null != G) e.stopPropagation(), e.preventDefault(), null == P || P(), (0, v.hM)(G, v.UE.TAG_ADOPTION), (0, S.SJ)(G);
+                if (null != B) e.stopPropagation(), e.preventDefault(), null == P || P(), (0, v.hM)(B, v.UE.TAG_ADOPTION), (0, S.SJ)(B);
             },
-            [G, P]
+            [B, P]
         ),
         el = i.useCallback(
             (e) => {
-                if (null == B || null == G) return;
+                if (null == G || null == B) return;
                 if ((e.stopPropagation(), e.preventDefault(), null == P || P(), !er))
-                    (0, v.hM)(G, v.UE.APPLY_FLOW),
-                        (0, S.qF)(G, B, {
+                    (0, v.hM)(B, v.UE.APPLY_FLOW),
+                        (0, S.qF)(B, G, {
                             source: null == k ? void 0 : k.source,
                             messageId: null == k ? void 0 : k.messageId,
                             tagUserId: null == k ? void 0 : k.tagUserId,
                             location: o.Z.CLAN_GUILD_PROFILE
                         });
             },
-            [B, G, er, P, k]
+            [G, B, er, P, k]
         ),
         eu = i.useCallback(() => {
-            if (null != G) (0, v.hM)(G, v.UE.APPLICATION), (0, _.uL)(O.Z5c.GUILD_MEMBER_VERIFICATION(G));
-        }, [G]),
+            if (null != B) (0, v.hM)(B, v.UE.APPLICATION), (0, _.uL)(O.Z5c.GUILD_MEMBER_VERIFICATION(B));
+        }, [B]),
         ec = i.useCallback(() => {
-            if (null != G) (0, v.hM)(G, v.UE.GUILD), (0, _.XU)(G);
-        }, [G]),
+            if (null != B) (0, v.hM)(B, v.UE.GUILD), (0, _.XU)(B);
+        }, [B]),
         ed = i.useMemo(() => {
             var e, t;
             return {
@@ -112,9 +112,9 @@ t.Z = i.memo(function (e) {
                 size: a.Button.Sizes.SMALL,
                 fullWidth: !0,
                 className: L.button,
-                themeColor: null !== (t = null == B ? void 0 : null === (e = B.branding) || void 0 === e ? void 0 : e.primaryColor) && void 0 !== t ? t : null
+                themeColor: null !== (t = null == G ? void 0 : null === (e = G.branding) || void 0 === e ? void 0 : e.primaryColor) && void 0 !== t ? t : null
             };
-        }, [null == B ? void 0 : null === (t = B.branding) || void 0 === t ? void 0 : t.primaryColor]),
+        }, [null == G ? void 0 : null === (t = G.branding) || void 0 === t ? void 0 : t.primaryColor]),
         ef = i.useMemo(() => {
             var e;
             switch (!0) {
@@ -126,7 +126,7 @@ t.Z = i.memo(function (e) {
                         ...ed,
                         children: D.intl.string(D.t.dXvKgY)
                     });
-                case !et && (null == B ? void 0 : null === (e = B.discoveryProfileFeatures) || void 0 === e ? void 0 : e.has(O.oNc.CLAN_DISCOVERY_DISABLED)):
+                case !et && (null == G ? void 0 : null === (e = G.discoveryProfileFeatures) || void 0 === e ? void 0 : e.has(O.oNc.CLAN_DISCOVERY_DISABLED)):
                     return null;
                 case !et && ei:
                     return (0, r.jsx)(C.Z, {
@@ -149,7 +149,7 @@ t.Z = i.memo(function (e) {
                 default:
                     return null;
             }
-        }, [q, et, er, null == B ? void 0 : B.discoveryProfileFeatures, ei, en, eu, ed, el, eo, ec]),
+        }, [q, et, er, null == G ? void 0 : G.discoveryProfileFeatures, ei, en, eu, ed, el, eo, ec]),
         e_ = i.useMemo(
             () => ({
                 className: L.container,
@@ -157,7 +157,7 @@ t.Z = i.memo(function (e) {
             }),
             []
         );
-    if (null == Z || null == B || null == G || M)
+    if (null == Z || null == G || null == B || M)
         return (0, r.jsx)('div', {
             ...e_,
             children: (0, r.jsx)(a.Spinner, {})
@@ -171,7 +171,7 @@ t.Z = i.memo(function (e) {
                 ...e_,
                 children: [
                     (0, r.jsx)(l.xV, {
-                        clan: B,
+                        clan: G,
                         className: L.cardContainer,
                         isMember: et,
                         hasPendingJoinRequest: J,

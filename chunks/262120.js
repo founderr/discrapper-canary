@@ -110,8 +110,8 @@ function i() {
         g = 'completed',
         E = {};
     function v() {}
-    function I() {}
     function b() {}
+    function I() {}
     var S = {};
     f(S, u, function () {
         return this;
@@ -119,7 +119,7 @@ function i() {
     var T = Object.getPrototypeOf,
         y = T && T(T(L([])));
     y && y !== a && s.call(y, u) && (S = y);
-    var A = (b.prototype = v.prototype = Object.create(S));
+    var A = (I.prototype = v.prototype = Object.create(S));
     function N(e) {
         ['next', 'throw', 'return'].forEach(function (t) {
             f(e, t, function (e) {
@@ -192,22 +192,22 @@ function i() {
         throw TypeError(r(e) + ' is not iterable');
     }
     return (
-        (I.prototype = b),
+        (b.prototype = I),
         o(A, 'constructor', {
-            value: b,
-            configurable: !0
-        }),
-        o(b, 'constructor', {
             value: I,
             configurable: !0
         }),
-        (I.displayName = f(b, d, 'GeneratorFunction')),
+        o(I, 'constructor', {
+            value: b,
+            configurable: !0
+        }),
+        (b.displayName = f(I, d, 'GeneratorFunction')),
         (n.isGeneratorFunction = function (e) {
             var t = 'function' == typeof e && e.constructor;
-            return !!t && (t === I || 'GeneratorFunction' === (t.displayName || t.name));
+            return !!t && (t === b || 'GeneratorFunction' === (t.displayName || t.name));
         }),
         (n.mark = function (e) {
-            return Object.setPrototypeOf ? Object.setPrototypeOf(e, b) : ((e.__proto__ = b), f(e, d, 'GeneratorFunction')), (e.prototype = Object.create(A)), e;
+            return Object.setPrototypeOf ? Object.setPrototypeOf(e, I) : ((e.__proto__ = I), f(e, d, 'GeneratorFunction')), (e.prototype = Object.create(A)), e;
         }),
         (n.awrap = function (e) {
             return { __await: e };

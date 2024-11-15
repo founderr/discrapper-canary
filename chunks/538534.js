@@ -30,7 +30,7 @@ var r,
     g = n(553826),
     E = n(981631),
     v = n(780994);
-function I(e, t, n) {
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -43,7 +43,7 @@ function I(e, t, n) {
         e
     );
 }
-let b = {
+let I = {
     NOT_SET: '',
     NONE: '0',
     SMALL: '7px 10px',
@@ -95,8 +95,8 @@ function S(e) {
 }
 function T(e) {
     var t;
-    let { disabled: n, checked: r, option: a, size: s, onClick: l, infoClassName: c, titleClassName: d, radioItemClassName: _, radioItemIconClassName: p, radioBarClassName: h, hasSelection: m, radioPosition: g = 'left', icon: E, withTransparentBackground: I } = e,
-        b = null !== (t = a.color) && void 0 !== t ? t : '',
+    let { disabled: n, checked: r, option: a, size: s, onClick: l, infoClassName: c, titleClassName: d, radioItemClassName: _, radioItemIconClassName: p, radioBarClassName: h, hasSelection: m, radioPosition: g = 'left', icon: E, withTransparentBackground: b } = e,
+        I = null !== (t = a.color) && void 0 !== t ? t : '',
         T = r || !m,
         y = (0, i.jsx)(S, {
             checked: r,
@@ -112,13 +112,13 @@ function T(e) {
             null != a.collapsibleContent ? v.collapsibleItem : v.item,
             {
                 [v.disabled]: n,
-                [v.itemFilled]: !I
+                [v.itemFilled]: !b
             },
             _
         ),
         children: (0, i.jsxs)('div', {
             style: {
-                '--radio-bar-accent-color': b,
+                '--radio-bar-accent-color': I,
                 padding: s
             },
             className: o()(
@@ -158,8 +158,8 @@ class y extends (r = a.PureComponent) {
     render() {
         let { checked: e, disabled: t, option: n, size: r, infoClassName: a, hasSelection: s, titleClassName: o, radioItemClassName: l, radioItemIconClassName: u, radioBarClassName: d, collapsibleClassName: f, withTransparentBackground: p, radioPosition: h } = this.props,
             m = t || n.disabled,
-            { tooltipText: g, tooltipPosition: E, icon: I } = n,
-            b =
+            { tooltipText: g, tooltipPosition: E, icon: b } = n,
+            I =
                 null != n.collapsibleContent
                     ? (0, i.jsx)(c.z, {
                           className: f,
@@ -182,7 +182,7 @@ class y extends (r = a.PureComponent) {
                                   radioItemIconClassName: u,
                                   radioBarClassName: d,
                                   radioPosition: h,
-                                  icon: I,
+                                  icon: b,
                                   withTransparentBackground: p
                               });
                           }
@@ -200,7 +200,7 @@ class y extends (r = a.PureComponent) {
                           radioItemIconClassName: u,
                           radioBarClassName: d,
                           radioPosition: h,
-                          icon: I,
+                          icon: b,
                           withTransparentBackground: p
                       });
         return null != g
@@ -211,14 +211,14 @@ class y extends (r = a.PureComponent) {
                       (0, i.jsx)('div', {
                           ...e,
                           className: v.tooltipWrapper,
-                          children: b
+                          children: I
                       })
               })
-            : b;
+            : I;
     }
     constructor(...e) {
         super(...e),
-            I(this, 'handleClick', (e) => {
+            b(this, 'handleClick', (e) => {
                 e.preventDefault();
                 let { onClick: t, option: n } = this.props;
                 return null == t ? void 0 : t(n);
@@ -280,14 +280,14 @@ function N(e) {
     };
 }
 function C(e) {
-    let { itemInfoClassName: t, itemTitleClassName: n, radioItemClassName: r, collapsibleClassName: a, className: s, value: o = null, size: l = b.MEDIUM, radioPosition: u = 'left', onChange: c = E.dG4, disabled: f = !1, options: _ = [], 'aria-labelledby': p, orientation: h, withTransparentBackground: m } = e,
+    let { itemInfoClassName: t, itemTitleClassName: n, radioItemClassName: r, collapsibleClassName: a, className: s, value: o = null, size: l = I.MEDIUM, radioPosition: u = 'left', onChange: c = E.dG4, disabled: f = !1, options: _ = [], 'aria-labelledby': p, orientation: h, withTransparentBackground: m } = e,
         g = (0, d.Gc)(),
         v = A({
             labelledBy: null != p ? p : g.titleId,
             orientation: h,
             isDisabled: f
         }),
-        I = _.some((e) => e.value === o);
+        b = _.some((e) => e.value === o);
     return (0, i.jsx)('div', {
         ...v,
         className: s,
@@ -295,7 +295,7 @@ function C(e) {
             (0, i.jsx)(
                 y,
                 {
-                    hasSelection: I,
+                    hasSelection: b,
                     disabled: f,
                     checked: o === e.value,
                     option: e,
@@ -315,8 +315,8 @@ function C(e) {
         )
     });
 }
-I(y, 'defaultProps', {
+b(y, 'defaultProps', {
     withTransparentBackground: !1,
     radioPosition: 'left'
 }),
-    (C.Sizes = b);
+    (C.Sizes = I);

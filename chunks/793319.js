@@ -95,7 +95,7 @@ function ey(e, t) {
 }
 function eP(e) {
     let { channel: t, currentUser: i, exitFullScreen: l, canGoLive: s, hasPermission: o, disabled: c } = e,
-        d = t.hdStreamingBuyerId === i.id && null != t.hdStreamingUntil && new Date(t.hdStreamingUntil) < new Date() ? [m.z.HD_STREAMING_POTION_MODAL_UPSELL] : [],
+        d = t.hdStreamingBuyerId === i.id && t.isHDStreamSplashed ? [m.z.HD_STREAMING_POTION_MODAL_UPSELL] : [],
         [u, C] = (0, D.US)(d);
     r.useEffect(() => {
         if (u === m.z.HD_STREAMING_POTION_MODAL_UPSELL) {
@@ -142,7 +142,7 @@ function eP(e) {
         F = (0, K.x8)('GoLiveButton'),
         V = (0, R.Z)(t, 'GoLiveButton'),
         z = (0, O.wE)(m.z.CONSUMABLE_HD_POTION_UPSELL),
-        ee = (V && !z) || (null != t.hdStreamingUntil && new Date(t.hdStreamingUntil) > new Date()),
+        ee = (V && !z) || t.isHDStreamSplashed,
         et = () => {
             if (s) {
                 H();
@@ -217,7 +217,7 @@ function eP(e) {
                             E(!1);
                         }
                     })
-                  : null != t.hdStreamingUntil && new Date(t.hdStreamingUntil) > new Date()
+                  : t.isHDStreamSplashed
                     ? (0, a.jsx)(D.ZP, {
                           contentTypes: [m.z.HD_STREAMING_POTION_BANNER],
                           bypassAutoDismiss: !0,

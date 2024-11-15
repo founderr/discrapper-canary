@@ -15,9 +15,9 @@ var r = n(200651),
     g = n(341907),
     E = n(46140),
     v = n(388032),
-    I = n(141533);
+    b = n(141533);
 t.Z = function (e) {
-    let { className: t, quest: n, autoplay: a = !0, learnMoreStyle: b = null } = e,
+    let { className: t, quest: n, autoplay: a = !0, learnMoreStyle: I = null } = e,
         S = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
         T = i.useMemo(() => (0, p.fh)(n, p.eC.REWARD), [n]),
         y = i.useCallback(
@@ -60,7 +60,7 @@ t.Z = function (e) {
                       loop: !0,
                       muted: !0,
                       playsInline: !0,
-                      className: I.questRewardTileAsset,
+                      className: b.questRewardTileAsset,
                       controls: !1,
                       children: (0, r.jsx)('source', {
                           src: T.url,
@@ -75,22 +75,22 @@ t.Z = function (e) {
                   (0, r.jsx)('img', {
                       ref: e,
                       alt: h.r.build(n.config).defaultReward.messages.name,
-                      className: s()(I.questRewardTileAsset, I.questRewardTileAssetStatic),
+                      className: s()(b.questRewardTileAsset, b.questRewardTileAssetStatic),
                       src: T.url
                   })
           });
-    return null == b
+    return null == I
         ? (0, r.jsx)('div', {
-              className: s()(I.questRewardTile, t),
+              className: s()(b.questRewardTile, t),
               children: R
           })
         : (0, r.jsxs)(u.Clickable, {
               className: s()(
-                  I.questRewardTileInteractive,
-                  I.questRewardTile,
+                  b.questRewardTileInteractive,
+                  b.questRewardTile,
                   {
-                      [I.rewardHighlight]: A,
-                      [I.borderOverlay]: !A
+                      [b.rewardHighlight]: A,
+                      [b.borderOverlay]: !A
                   },
                   t
               ),
@@ -99,19 +99,19 @@ t.Z = function (e) {
                   R,
                   A &&
                       (0, r.jsx)(u.Shine, {
-                          className: I.shine,
+                          className: b.shine,
                           shineSize: u.ShineSizes.SMALL
                       }),
-                  'text' === b &&
+                  'text' === I &&
                       (0, r.jsx)(u.Text, {
                           color: 'always-white',
                           variant: 'text-xs/normal',
-                          className: I.questRewardTileDetailsLearnMore,
+                          className: b.questRewardTileDetailsLearnMore,
                           children: v.intl.format(v.t.DYAleX, {})
                       }),
-                  'icon' === b &&
+                  'icon' === I &&
                       (0, r.jsx)('div', {
-                          className: I.questRewardTileDetailsLearnMore,
+                          className: b.questRewardTileDetailsLearnMore,
                           children: (0, r.jsx)(u.CircleInformationIcon, {
                               size: 'xxs',
                               color: u.tokens.colors.WHITE.css

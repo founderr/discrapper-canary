@@ -24,8 +24,8 @@ var r = n(200651),
     g = n(28546),
     E = n(468954),
     v = n(53691),
-    I = n(75145),
-    b = n(631771),
+    b = n(75145),
+    I = n(631771),
     S = n(609218),
     T = n(695346),
     y = n(594174),
@@ -42,8 +42,8 @@ var r = n(200651),
     P = n(421673),
     k = n(663215),
     U = n(409673),
-    G = n(347072),
-    B = n(835648),
+    B = n(347072),
+    G = n(835648),
     Z = n(650743),
     F = n(394740),
     V = n(343747),
@@ -52,7 +52,7 @@ var r = n(200651),
     Y = n(388032),
     W = n(185426);
 let K = [8, 0, 8, 0],
-    z = 32 + I.Kn;
+    z = 32 + b.Kn;
 function q(e, t, n) {
     return (null == n && e.type === L.bg.GUILD && !t) || (e.type === L.bg.GUILD && e.guild.id !== n && !t);
 }
@@ -61,7 +61,7 @@ function Q(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             u &&
-                (0, r.jsx)(I.ZP, {
+                (0, r.jsx)(b.ZP, {
                     colorOpacity: 0.35,
                     glowOpacity: 0.35
                 }),
@@ -179,7 +179,7 @@ function J(e) {
                         refreshEnabled: E
                     });
                 case L.vB.ADD_SOUND:
-                    return (0, i.createElement)(G.Z, {
+                    return (0, i.createElement)(B.Z, {
                         ...d(t),
                         key: r,
                         guild: e.item.guild,
@@ -192,7 +192,7 @@ function J(e) {
     });
 }
 function $(e) {
-    let { guildId: t, channel: a, containerWidth: s, onClose: c, onSelect: h, shouldValidateSelectedSound: I = !1, suppressPlaySound: N = !1, shouldShowUpsell: U = !0, gridNotice: G, soundButtonOverlay: $, listPadding: ee, renderHeader: et, defaultSoundsOnly: en = !1, inExpressionPicker: er, refreshEnabled: ei } = e,
+    let { guildId: t, channel: a, containerWidth: s, onClose: c, onSelect: h, shouldValidateSelectedSound: b = !1, suppressPlaySound: N = !1, shouldShowUpsell: U = !0, gridNotice: B, soundButtonOverlay: $, listPadding: ee, renderHeader: et, defaultSoundsOnly: en = !1, inExpressionPicker: er, refreshEnabled: ei } = e,
         { currentPreviewRef: ea } = i.useContext(O.Z),
         { analyticsLocations: es } = (0, _.ZP)(),
         { analyticsLocations: eo } = (0, _.ZP)(f.Z.PREMIUM_UPSELL),
@@ -216,12 +216,12 @@ function $(e) {
         eg = null != em && '' !== em,
         eE = (0, p.Dt)(),
         { categories: ev } = (0, k.ZP)(a, void 0, en),
-        [eI, eb] = i.useState([]),
+        [eb, eI] = i.useState([]),
         [eS, eT] = i.useState(!1),
-        ey = (0, k.FS)(ev, eI, em).filter((e) => e.items.length > 0),
+        ey = (0, k.FS)(ev, eb, em).filter((e) => e.items.length > 0),
         eA = ey.some((e) => !!(0, R._O)(e.categoryInfo) && e.categoryInfo.isNitroLocked),
         eN = !e_ && U && eA,
-        { enableInlineUpsell: eC, enableRoadblock: eR, enableRoadblockWithSocialProof: eO } = b.Qs.useExperiment({ location: 'Soundboard Picker' }, { autoTrackExposure: eN }),
+        { enableInlineUpsell: eC, enableRoadblock: eR, enableRoadblockWithSocialProof: eO } = I.Qs.useExperiment({ location: 'Soundboard Picker' }, { autoTrackExposure: eN }),
         eD = eN && eC,
         eL = T.T4.useSetting(),
         ex = i.useMemo(() => new Set(eL), [eL]),
@@ -235,9 +235,9 @@ function $(e) {
         ),
         ek = i.useCallback(
             (e, t) => {
-                if (null != h && !I) return h(e);
+                if (null != h && !b) return h(e);
                 let n = (0, x.Nq)(ef, e, a, !1);
-                if (null != h && I && n) h(e);
+                if (null != h && b && n) h(e);
                 else if (!N && n) {
                     var r;
                     (0, x.GN)(e, null !== (r = null == a ? void 0 : a.id) && void 0 !== r ? r : j.lds, t),
@@ -253,7 +253,7 @@ function $(e) {
                     U && ed(e);
                 }
             },
-            [N, ef, a, U, eg, em, h, I]
+            [N, ef, a, U, eg, em, h, b]
         ),
         eU = i.useCallback(
             (e) => {
@@ -266,7 +266,7 @@ function $(e) {
             },
             [es, ek, c]
         ),
-        eG = i.useCallback(
+        eB = i.useCallback(
             (e, n, i, s, o) => {
                 let l = ey[i.sectionIndex],
                     u = U && q(l.categoryInfo, e_, t),
@@ -299,7 +299,7 @@ function $(e) {
             },
             [ey, U, e_, t, N, eU, a, ew, eM, eh, eC, es, $, eD, ei]
         ),
-        eB = i.useCallback(
+        eG = i.useCallback(
             (e, t) => {
                 if (e <= 0 || !U) return !1;
                 let n = ey[e],
@@ -310,7 +310,7 @@ function $(e) {
             },
             [ey, U, e_]
         ),
-        eZ = i.useCallback((e) => (0 === e ? 16 : eB(e, t) ? z : 32), [t, eB]),
+        eZ = i.useCallback((e) => (0 === e ? 16 : eG(e, t) ? z : 32), [t, eG]),
         eF = i.useCallback(
             (e) => {
                 let t = e === ey.length - 1;
@@ -322,7 +322,7 @@ function $(e) {
             (e, n) => {
                 let i = ''.concat(e.key),
                     a = U && q(e.categoryInfo, e_, t),
-                    s = eB(n, t);
+                    s = eG(n, t);
                 return (0, r.jsx)(
                     Q,
                     {
@@ -336,7 +336,7 @@ function $(e) {
                     'header-'.concat(i)
                 );
             },
-            [ex, eP, t, eB, U, e_, eD]
+            [ex, eP, t, eG, U, e_, eD]
         ),
         ej = i.useCallback(
             (e, t) => {
@@ -345,7 +345,7 @@ function $(e) {
             },
             [ey, eD]
         ),
-        eH = i.useCallback((e) => eb((0, P.ZP)(e, ev, ef, a, es)), [a, ef, ev, es]),
+        eH = i.useCallback((e) => eI((0, P.ZP)(e, ev, ef, a, es)), [a, ef, ev, es]),
         eY = i.useCallback((e) => {
             (0, u.jW)(e, async () => {
                 let { default: e } = await n.e('56049').then(n.bind(n, 338991));
@@ -369,7 +369,7 @@ function $(e) {
         ),
         eK = i.useCallback(
             (e) =>
-                (0, r.jsx)(B.Z, {
+                (0, r.jsx)(G.Z, {
                     soundboardListRef: e,
                     categories: ev,
                     shouldUpsellLockedCategories: eD,
@@ -463,9 +463,9 @@ function $(e) {
                 store: m.Wq,
                 onSelectItem: eU,
                 onSearchExpressions: eH,
-                hasSearchResults: eI.length > 0,
+                hasSearchResults: eb.length > 0,
                 defaultSearchPlaceholder: Y.intl.string(Y.t.sKt3xc),
-                renderRow: eG,
+                renderRow: eB,
                 renderSectionHeader: eV,
                 renderSectionFooter: ej,
                 renderCategoryList: eK,
@@ -478,7 +478,7 @@ function $(e) {
                 gridNavigatorId: eE,
                 renderEmptySearchState: X,
                 renderInspector: eX,
-                gridNotice: G,
+                gridNotice: B,
                 renderHeader: et,
                 renderUpsell: eQ,
                 setShowUpsell: eT

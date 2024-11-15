@@ -22,8 +22,8 @@ var r = n(200651),
     g = n(409700),
     E = n(767434),
     v = n(474936),
-    I = n(981631),
-    b = n(710111),
+    b = n(981631),
+    I = n(710111),
     S = n(388032),
     T = n(629152);
 function y(e) {
@@ -38,7 +38,7 @@ function y(e) {
         ? (0, r.jsx)(m.Z, {
               fullWidth: !0,
               showGradient: !0,
-              premiumModalAnalyticsLocation: { section: I.jXE.PREMIUM_SOUNDMOJI_GUILD_INFO_POPOUT },
+              premiumModalAnalyticsLocation: { section: b.jXE.PREMIUM_SOUNDMOJI_GUILD_INFO_POPOUT },
               subscriptionTier: v.Si.TIER_2,
               size: o.Button.Sizes.SMALL,
               color: o.Button.Colors.CUSTOM,
@@ -56,13 +56,13 @@ function y(e) {
 }
 function A(e) {
     let { sound: t, channel: n, closePopout: o, refreshPosition: l } = e,
-        m = t.guildId === b.X8,
+        m = t.guildId === I.X8,
         v = (0, s.e7)([h.Z], () => h.Z.getGuild(t.guildId)),
-        I = !m && null != v,
-        [S, A] = i.useState(!m && !I),
+        b = !m && null != v,
+        [S, A] = i.useState(!m && !b),
         [N, C] = i.useState();
     i.useEffect(() => {
-        if (!m && !I && null == N)
+        if (!m && !b && null == N)
             A(!0),
                 (0, f.xU)(t.soundId, t.guildId)
                     .then((e) => {
@@ -71,11 +71,11 @@ function A(e) {
                     .finally(() => {
                         A(!1), l();
                     });
-    }, [t, m, I, l, N]);
-    let { buttonType: R, description: O } = (0, E.Z)(t, n, I, N),
-        D = !I && null != N,
+    }, [t, m, b, l, N]);
+    let { buttonType: R, description: O } = (0, E.Z)(t, n, b, N),
+        D = !b && null != N,
         L = !m && S,
-        x = i.useMemo(() => (I ? u.JO.createFromGuildRecord(v) : null != N ? u.JO.createFromDiscoverableGuild(N) : void 0), [v, I, N]);
+        x = i.useMemo(() => (b ? u.JO.createFromGuildRecord(v) : null != N ? u.JO.createFromDiscoverableGuild(N) : void 0), [v, b, N]);
     return L
         ? (0, r.jsx)(d.SE, {})
         : (0, r.jsxs)(d.W_, {
@@ -113,7 +113,7 @@ function A(e) {
                                   className: T.infoExpandedGuildInfo,
                                   children: (0, r.jsx)(c.Oe, {
                                       expressionSourceGuild: x,
-                                      hasJoinedExpressionSourceGuild: I,
+                                      hasJoinedExpressionSourceGuild: b,
                                       isDisplayingJoinGuildButtonInPopout: D
                                   })
                               }),

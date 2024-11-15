@@ -46,8 +46,8 @@ let g = 100,
         maxSamples: 10
     }),
     v = null,
-    I = null;
-function b(e) {
+    b = null;
+function I(e) {
     let { guildId: t, channelId: n } = e,
         r = !1;
     return (
@@ -61,8 +61,8 @@ function b(e) {
                     key: n,
                     timestamp: Date.now()
                 }))),
-        t !== I &&
-            ((I = null != t ? t : null),
+        t !== b &&
+            ((b = null != t ? t : null),
             null != t &&
                 p.Xyh.test(t) &&
                 ((r = !0),
@@ -121,8 +121,8 @@ class y extends (r = s.ZP.PersistedStore) {
 m(y, 'displayName', 'FrecencyStore'),
     m(y, 'persistKey', 'FrecencyStore'),
     (t.Z = new y(o.Z, {
-        CHANNEL_SELECT: b,
-        VOICE_CHANNEL_SELECT: b,
+        CHANNEL_SELECT: I,
+        VOICE_CHANNEL_SELECT: I,
         USER_SETTINGS_PROTO_UPDATE: function (e) {
             let {
                 settings: { type: t },

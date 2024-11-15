@@ -33,9 +33,9 @@ var i = n(200651),
     j = n(981631),
     A = n(474936),
     P = n(388032),
-    R = n(56180),
-    M = n(113207);
-function L() {
+    M = n(56180),
+    R = n(113207);
+function w() {
     let { analyticsLocations: e, sourceAnalyticsLocations: t } = (0, d.ZP)(u.Z.PREMIUM_UPSELL_TOOLTIP);
     return (
         l.useEffect(() => {
@@ -55,40 +55,40 @@ function L() {
                     },
                     analyticsLocations: e
                 }),
-            className: R.experimentUpsellError,
+            className: M.experimentUpsellError,
             children: [
                 (0, i.jsx)(s.NitroWheelIcon, {
                     size: 'md',
-                    className: R.experimentUpsellIcon,
+                    className: M.experimentUpsellIcon,
                     color: f.JX.PREMIUM_TIER_2
                 }),
                 (0, i.jsx)('span', {
-                    className: R.experimentUpsellText,
+                    className: M.experimentUpsellText,
                     children: P.intl.string(P.t['4/W4Pz'])
                 }),
                 (0, i.jsx)('span', {
-                    className: R.experimentGetNitro,
+                    className: M.experimentGetNitro,
                     children: P.intl.string(P.t.b6KOkJ)
                 })
             ]
         })
     );
 }
-function w(e) {
+function L(e) {
     let { className: t } = e;
     return (0, i.jsxs)('div', {
         'aria-hidden': 'true',
-        className: a()(R.iconContainer, t),
+        className: a()(M.iconContainer, t),
         children: [
-            (0, i.jsx)(I.Z, { className: R.iconSparklePlus }),
+            (0, i.jsx)(I.Z, { className: M.iconSparklePlus }),
             (0, i.jsx)(s.LinkIcon, {
                 size: 'custom',
                 color: 'currentColor',
-                className: R.iconLink,
+                className: M.iconLink,
                 width: 40,
                 height: 40
             }),
-            (0, i.jsx)(b.Z, { className: R.iconSparkleStar })
+            (0, i.jsx)(b.Z, { className: M.iconSparkleStar })
         ]
     });
 }
@@ -103,9 +103,9 @@ function D(e) {
             'aria-labelledby': n,
             transitionState: t,
             children: (0, i.jsxs)(s.ModalContent, {
-                className: R.errorContent,
+                className: M.errorContent,
                 children: [
-                    (0, i.jsx)(w, { className: R.errorImage }),
+                    (0, i.jsx)(L, { className: M.errorImage }),
                     (0, i.jsx)(s.Heading, {
                         id: n,
                         variant: 'heading-xl/semibold',
@@ -113,7 +113,7 @@ function D(e) {
                         children: P.intl.string(P.t.u9zxnZ)
                     }),
                     (0, i.jsx)('div', {
-                        className: R.errorBody,
+                        className: M.errorBody,
                         children: P.intl.string(P.t.FWkU6O)
                     }),
                     (0, i.jsx)(h.zx, {
@@ -147,16 +147,16 @@ function O(e) {
     function A() {
         null != f && y.Z.acceptInvite(f);
     }
-    let { guild: w, channel: O, inviter: k, target_application: U } = f,
-        G = null != w,
+    let { guild: L, channel: O, inviter: k, target_application: U } = f,
+        G = null != L,
         B = null != f.stage_instance,
         H = null == f.guild && null == f.channel && null != f.inviter;
-    if (null != U) (t = null == w ? void 0 : w.name), (n = v.Z.createFromServer(U).getCoverImageURL(1024));
-    else if (null != w)
-        (t = w.name),
+    if (null != U) (t = null == L ? void 0 : L.name), (n = v.Z.createFromServer(U).getCoverImageURL(1024));
+    else if (null != L)
+        (t = L.name),
             (n = S.ZP.getGuildSplashURL({
-                id: w.id,
-                splash: w.splash
+                id: L.id,
+                splash: L.splash
             }));
     else if (((null == (t = O.name) || '' === t) && null != k && (t = k.username), null == t)) throw Error('no name for group DM invite');
     let V = (0, C.yU)(),
@@ -169,39 +169,39 @@ function O(e) {
                 size: s.ModalSize.DYNAMIC,
                 'aria-labelledby': b,
                 transitionState: r,
-                className: R.container,
+                className: M.container,
                 children: [
                     (0, i.jsx)('div', {
-                        className: R.contentWrapper,
+                        className: M.contentWrapper,
                         children: (0, i.jsx)(s.Scroller, {
-                            className: R.scroller,
+                            className: M.scroller,
                             children: (0, i.jsxs)(m.Z, {
-                                className: R.inviteContent,
+                                className: M.inviteContent,
                                 direction: m.Z.Direction.VERTICAL,
                                 justify: m.Z.Justify.BETWEEN,
                                 children: [
                                     (0, i.jsx)('div', {
                                         id: b,
-                                        className: M.marginBottom20,
+                                        className: R.marginBottom20,
                                         children: (0, i.jsx)(c.Z, {
                                             invite: f,
                                             disableUser: G,
                                             error: _
                                         })
                                     }),
-                                    B && null != w
+                                    B && null != L
                                         ? (0, i.jsx)('div', {
-                                              className: a()(M.marginBottom20, R.stage),
+                                              className: a()(R.marginBottom20, M.stage),
                                               children: (0, i.jsx)(p.Z, {
                                                   isCard: !0,
                                                   stageInstance: f.stage_instance,
-                                                  guild: w
+                                                  guild: L
                                               })
                                           })
                                         : null,
                                     (0, i.jsxs)('div', {
                                         children: [
-                                            V ? (0, i.jsx)(L, {}) : null,
+                                            V ? (0, i.jsx)(w, {}) : null,
                                             null == U
                                                 ? (0, i.jsx)(s.Tooltip, {
                                                       text: V ? P.intl.string(P.t.iLyuDA) : null,
@@ -221,7 +221,7 @@ function O(e) {
                                                       }
                                                   })
                                                 : (0, i.jsxs)('div', {
-                                                      className: R.buttonGroup,
+                                                      className: M.buttonGroup,
                                                       children: [
                                                           (0, i.jsx)(h.zx, {
                                                               size: h.zx.Sizes.LARGE,
@@ -240,10 +240,10 @@ function O(e) {
                                                   }),
                                             (0, i.jsx)(m.Z, {
                                                 justify: m.Z.Justify.CENTER,
-                                                className: M.marginTop8,
+                                                className: R.marginTop8,
                                                 children: (0, i.jsx)(h.zx, {
                                                     look: h.zx.Looks.LINK,
-                                                    className: R.noThanksButton,
+                                                    className: M.noThanksButton,
                                                     onClick: function () {
                                                         y.Z.close();
                                                     },
@@ -259,7 +259,7 @@ function O(e) {
                     }),
                     null != n &&
                         (0, i.jsx)('div', {
-                            className: R.inviteSplash,
+                            className: M.inviteSplash,
                             style: { backgroundImage: 'url('.concat(n, ')') }
                         })
                 ]

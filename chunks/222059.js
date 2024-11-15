@@ -1,6 +1,6 @@
 n.d(t, {
     u: function () {
-        return w;
+        return L;
     }
 }),
     n(47120);
@@ -33,8 +33,8 @@ var i = n(200651),
     j = n(474936),
     A = n(871465),
     P = n(388032),
-    R = n(342824);
-let M = {
+    M = n(342824);
+let R = {
     origin: {
         x: -16,
         y: 0
@@ -46,16 +46,16 @@ let M = {
         y: 0
     }
 };
-function L(e) {
+function w(e) {
     let { selected: t, user: n, badge: h, link: m, showProgressBadge: f } = e,
         g = (0, a.e7)([u.Z], () => u.Z.isEditorOpen),
         [C, _] = l.useState(!1),
         [v, x] = l.useState(!1),
         [I, E] = l.useState(null),
-        [j, L] = l.useState(0),
-        w = (0, r.Ie)('home'),
+        [j, w] = l.useState(0),
+        L = (0, r.Ie)('home'),
         D = () => {
-            E(null), L(0), clearTimeout(I);
+            E(null), w(0), clearTimeout(I);
         };
     if (null == n) return null;
     let O = P.intl.string(P.t.YUU0RE);
@@ -64,7 +64,7 @@ function L(e) {
     !t &&
         f &&
         (k = (0, i.jsx)(c.Z, {
-            className: R.downloadProgress,
+            className: M.downloadProgress,
             determineOwnVisibility: !1
         }));
     let U = t || C || g,
@@ -77,7 +77,7 @@ function L(e) {
                 onMouseEnter: () => _(!0),
                 onMouseLeave: () => _(!1),
                 onClick: () => {
-                    if (!__OVERLAY__ && (null != I && clearTimeout(I), E(setTimeout(D, 500)), L(j + 1), 15 === j)) {
+                    if (!__OVERLAY__ && (null != I && clearTimeout(I), E(setTimeout(D, 500)), w(j + 1), 15 === j)) {
                         D();
                         let e = !o.K.get(T.wli);
                         o.K.set(T.wli, e),
@@ -91,7 +91,7 @@ function L(e) {
                 },
                 selected: U,
                 ariaLabel: P.intl.string(P.t.YUU0RE),
-                ...w,
+                ...L,
                 to: {
                     pathname: m,
                     state: {
@@ -106,9 +106,9 @@ function L(e) {
             })
         });
     return (0, i.jsx)('div', {
-        className: R.tutorialContainer,
+        className: M.tutorialContainer,
         children: (0, i.jsx)(p.Z, {
-            inlineSpecs: M,
+            inlineSpecs: R,
             tutorialId: 'friends-list',
             position: 'right',
             children: (0, i.jsxs)(Z.H, {
@@ -116,7 +116,7 @@ function L(e) {
                     (0, i.jsx)(S.Z, {
                         selected: t,
                         hovered: C,
-                        className: R.pill
+                        className: M.pill
                     }),
                     (0, i.jsx)(N.Z, {
                         color: s.Tooltip.Colors.PRIMARY,
@@ -130,7 +130,7 @@ function L(e) {
         })
     });
 }
-function w() {
+function L() {
     let e = (0, E.n)(),
         t = (0, a.e7)([x.Z, v.Z], () => {
             let e = (0, c.E)(x.Z.activeItems, v.Z),
@@ -152,7 +152,7 @@ function w() {
         S = _.Z.getHomeLink();
     return (
         b && (S = T.Z5c.APPLICATION_STORE),
-        (0, i.jsx)(L, {
+        (0, i.jsx)(w, {
             selected: e,
             user: u,
             selectedChannelId: f.Z.getChannelId(T.ME),

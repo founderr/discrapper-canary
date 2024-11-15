@@ -15,11 +15,11 @@ var r,
 let g = Date.now(),
     E = !1,
     v = !1,
-    I = !1,
     b = !1,
+    I = !1,
     S = !1;
 function T() {
-    return I || b || ((0, _.isAndroid)() && S);
+    return b || I || ((0, _.isAndroid)() && S);
 }
 function y() {
     Date.now() - g > h.OSm || T()
@@ -59,16 +59,16 @@ function y() {
               }
           })(),
           c.Z.remotePowerMonitor.on('resume', () => {
-              (I = !1), A({});
+              (b = !1), A({});
           }),
           c.Z.remotePowerMonitor.on('suspend', () => {
-              (I = !0), A({}), u.default.disconnect();
+              (b = !0), A({}), u.default.disconnect();
           }),
           c.Z.remotePowerMonitor.on('lock-screen', () => {
-              (b = !0), A({});
+              (I = !0), A({});
           }),
           c.Z.remotePowerMonitor.on('unlock-screen', () => {
-              (b = !1), A({});
+              (I = !1), A({});
           }))
         : setInterval(y, 0.25 * h.OSm));
 function A(e) {

@@ -16,8 +16,8 @@ var r,
     g = n(780570),
     E = n(77498),
     v = n(517100),
-    I = n(283595),
-    b = n(293273),
+    b = n(283595),
+    I = n(293273),
     S = n(158776),
     T = n(797258),
     y = n(981631);
@@ -31,7 +31,7 @@ let A = !1,
     x = Object.freeze([]),
     w = [];
 function M(e) {
-    return (0, g.OT)(e, I.Z);
+    return (0, g.OT)(e, b.Z);
 }
 function P(e) {
     switch (e.type) {
@@ -62,7 +62,7 @@ function k() {
     }
     N === y.Skl.ONLINE && R > 0 && (N = y.Skl.IDLE);
     let t = !1,
-        n = L || N === y.Skl.INVISIBLE ? [] : b.Z.getActivities().filter(P);
+        n = L || N === y.Skl.INVISIBLE ? [] : I.Z.getActivities().filter(P);
     !l()(O, n) && ((O = n), (t = !0));
     let r = T.Z.getRemoteActivities();
     if ((x !== r && ((x = r), (t = !0)), t)) {
@@ -84,9 +84,9 @@ function k() {
 function U() {
     (L = !1), (C = y.Skl.UNKNOWN), k(), S.Z.setCurrentUserOnConnectionOpen(N, w);
 }
-class G extends (r = d.ZP.Store) {
+class B extends (r = d.ZP.Store) {
     initialize() {
-        this.waitFor(v.Z, m.Z, b.Z, T.Z, I.Z, E.Z), this.syncWith([b.Z], k);
+        this.waitFor(v.Z, m.Z, I.Z, T.Z, b.Z, E.Z), this.syncWith([I.Z], k);
     }
     getLocalPresence() {
         return {
@@ -117,7 +117,7 @@ class G extends (r = d.ZP.Store) {
     }
 }
 (s = 'SelfPresenceStore'),
-    (a = 'displayName') in (i = G)
+    (a = 'displayName') in (i = B)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -125,7 +125,7 @@ class G extends (r = d.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new G(f.Z, {
+    (t.Z = new B(f.Z, {
         START_SESSION: k,
         CONNECTION_OPEN: function () {
             U();

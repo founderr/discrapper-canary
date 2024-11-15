@@ -21,8 +21,8 @@ var i = n(120356),
     g = n(810568),
     E = n(168524),
     v = n(833858),
-    I = n(769654),
-    b = n(960870),
+    b = n(769654),
+    I = n(960870),
     S = n(139793),
     T = n(994746),
     y = n(232174),
@@ -39,8 +39,8 @@ var i = n(120356),
     P = n(290274),
     k = n(553375),
     U = n(228168),
-    G = n(981631),
-    B = n(701488),
+    B = n(981631),
+    G = n(701488),
     Z = n(388032),
     F = n(676411);
 function V(e) {
@@ -62,7 +62,7 @@ function V(e) {
                 entry: Q
             })
         }),
-        J = (0, b.Z)({
+        J = (0, I.Z)({
             display: 'live',
             user: t,
             activity: i,
@@ -108,7 +108,7 @@ function V(e) {
         },
         ea = () => {
             var e;
-            return i.type === G.IIU.HANG_STATUS
+            return i.type === B.IIU.HANG_STATUS
                 ? (0, r.jsx)(D.Z, {
                       variant: 'heading-sm/semibold',
                       text: (0, v.O8)(i)
@@ -139,14 +139,14 @@ function V(e) {
                       });
         },
         es = () =>
-            i.type === G.IIU.HANG_STATUS
+            i.type === B.IIU.HANG_STATUS
                 ? null
                 : (0, d.Z)(i) && null != j
                   ? (0, r.jsx)(D.Z, {
                         variant: 'text-xs/normal',
                         text: Z.intl.formatToPlainString(Z.t['hq/Qzc'], { guildName: j.name }),
                         onClick: () => {
-                            (0, I.X)(j.id), J({ action: 'OPEN_VOICE_GUILD' }), null == W || W();
+                            (0, b.X)(j.id), J({ action: 'OPEN_VOICE_GUILD' }), null == W || W();
                         }
                     })
                   : (0, c.Z)(i)
@@ -160,7 +160,7 @@ function V(e) {
                       }),
         eo = () => {
             var e;
-            return i.type === G.IIU.WATCHING
+            return i.type === B.IIU.WATCHING
                 ? null
                 : (0, c.Z)(i)
                   ? el()
@@ -171,7 +171,7 @@ function V(e) {
         },
         el = () => {
             var e, t, n, a;
-            return (null === (e = i.party) || void 0 === e ? void 0 : e.size) == null && i.application_id === B.Zc
+            return (null === (e = i.party) || void 0 === e ? void 0 : e.size) == null && i.application_id === G.Zc
                 ? (0, r.jsxs)('div', {
                       className: F.gameState,
                       children: [

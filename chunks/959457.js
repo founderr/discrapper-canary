@@ -15,8 +15,8 @@ var a,
     g = n(444852),
     E = n(569545),
     v = n(687516),
-    I = n(139656),
-    b = n(358085),
+    b = n(139656),
+    I = n(358085),
     S = n(199902),
     T = n(314897),
     y = n(131951),
@@ -53,12 +53,12 @@ function U(e) {
                 });
             });
 }
-function G() {
+function B() {
     return !0;
 }
-class B extends (a = _.ZP.Store) {
+class G extends (a = _.ZP.Store) {
     getActiveStreamKey() {
-        return (0, I.Z)(y.Z) ? i : null;
+        return (0, b.Z)(y.Z) ? i : null;
     }
     getRTCConnections() {
         return M;
@@ -70,7 +70,7 @@ class B extends (a = _.ZP.Store) {
         return M[e];
     }
     getStatsHistory(e, t, n) {
-        if (!(0, I.Z)(y.Z) || null == t) return null;
+        if (!(0, b.Z)(y.Z) || null == t) return null;
         if (n) {
             let n = S.Z.getActiveStreamForUser(t, e);
             if (null == n || 0 === S.Z.getViewerIds(n).length) return null;
@@ -109,7 +109,7 @@ class B extends (a = _.ZP.Store) {
         );
     }
     getQuality() {
-        if (!(0, I.Z)(y.Z)) return C.IE4.UNKNOWN;
+        if (!(0, b.Z)(y.Z)) return C.IE4.UNKNOWN;
         let e = this.getActiveStreamKey(),
             t = null != e ? M[e] : null;
         return null != t ? t.quality : C.IE4.UNKNOWN;
@@ -166,7 +166,7 @@ class B extends (a = _.ZP.Store) {
     }
 }
 (l = 'StreamRTCConnectionStore'),
-    (o = 'displayName') in (s = B)
+    (o = 'displayName') in (s = G)
         ? Object.defineProperty(s, o, {
               value: l,
               enumerable: !0,
@@ -174,7 +174,7 @@ class B extends (a = _.ZP.Store) {
               writable: !0
           })
         : (s[o] = l),
-    (t.Z = new B(
+    (t.Z = new G(
         h.Z,
         !y.Z.isSupported() || __OVERLAY__
             ? {}
@@ -185,13 +185,13 @@ class B extends (a = _.ZP.Store) {
                   CONNECTION_CLOSED: function () {
                       (r = null), (i = null), k();
                   },
-                  RTC_CONNECTION_STATE: G,
-                  RTC_CONNECTION_PING: G,
-                  RTC_CONNECTION_LOSS_RATE: G,
+                  RTC_CONNECTION_STATE: B,
+                  RTC_CONNECTION_PING: B,
+                  RTC_CONNECTION_LOSS_RATE: B,
                   RTC_CONNECTION_UPDATE_ID: function (e) {
                       return f().some(M, (t) => t === e.connection);
                   },
-                  RTC_CONNECTION_SECURE_FRAMES_UPDATE: G,
+                  RTC_CONNECTION_SECURE_FRAMES_UPDATE: B,
                   STREAM_START: function (e) {
                       let { streamType: t, guildId: n, channelId: r, appContext: i, pid: a, sourceId: s } = e,
                           o = (0, E.V9)({
@@ -245,7 +245,7 @@ class B extends (a = _.ZP.Store) {
                               streamSourceType: (function (e) {
                                   var t, n, r;
                                   if (null == e) return 'unknown';
-                                  if (b.isPlatformEmbedded || (null === (t = platform) || void 0 === t ? void 0 : t.name) === 'Chrome') {
+                                  if (I.isPlatformEmbedded || (null === (t = platform) || void 0 === t ? void 0 : t.name) === 'Chrome') {
                                       if (e.startsWith('web-contents-media-stream:')) return 'tab';
                                       if (e.startsWith('window:')) return 'window';
                                       else if (e.startsWith('screen:')) return 'screen';

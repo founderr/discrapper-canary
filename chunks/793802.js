@@ -16,8 +16,8 @@ var n = 'function' == typeof Symbol && Symbol.for,
     g = n ? Symbol.for('react.block') : 60121,
     E = n ? Symbol.for('react.fundamental') : 60117,
     v = n ? Symbol.for('react.responder') : 60118,
-    I = n ? Symbol.for('react.scope') : 60119;
-function b(e) {
+    b = n ? Symbol.for('react.scope') : 60119;
+function I(e) {
     if ('object' == typeof e && null !== e) {
         var t = e.$$typeof;
         switch (t) {
@@ -48,7 +48,7 @@ function b(e) {
     }
 }
 function S(e) {
-    return b(e) === d;
+    return I(e) === d;
 }
 (t.AsyncMode = c),
     (t.ConcurrentMode = d),
@@ -64,43 +64,43 @@ function S(e) {
     (t.StrictMode = s),
     (t.Suspense = _),
     (t.isAsyncMode = function (e) {
-        return S(e) || b(e) === c;
+        return S(e) || I(e) === c;
     }),
     (t.isConcurrentMode = S),
     (t.isContextConsumer = function (e) {
-        return b(e) === u;
+        return I(e) === u;
     }),
     (t.isContextProvider = function (e) {
-        return b(e) === l;
+        return I(e) === l;
     }),
     (t.isElement = function (e) {
         return 'object' == typeof e && null !== e && e.$$typeof === r;
     }),
     (t.isForwardRef = function (e) {
-        return b(e) === f;
+        return I(e) === f;
     }),
     (t.isFragment = function (e) {
-        return b(e) === a;
+        return I(e) === a;
     }),
     (t.isLazy = function (e) {
-        return b(e) === m;
+        return I(e) === m;
     }),
     (t.isMemo = function (e) {
-        return b(e) === h;
+        return I(e) === h;
     }),
     (t.isPortal = function (e) {
-        return b(e) === i;
+        return I(e) === i;
     }),
     (t.isProfiler = function (e) {
-        return b(e) === o;
+        return I(e) === o;
     }),
     (t.isStrictMode = function (e) {
-        return b(e) === s;
+        return I(e) === s;
     }),
     (t.isSuspense = function (e) {
-        return b(e) === _;
+        return I(e) === _;
     }),
     (t.isValidElementType = function (e) {
-        return 'string' == typeof e || 'function' == typeof e || e === a || e === d || e === o || e === s || e === _ || e === p || ('object' == typeof e && null !== e && (e.$$typeof === m || e.$$typeof === h || e.$$typeof === l || e.$$typeof === u || e.$$typeof === f || e.$$typeof === E || e.$$typeof === v || e.$$typeof === I || e.$$typeof === g));
+        return 'string' == typeof e || 'function' == typeof e || e === a || e === d || e === o || e === s || e === _ || e === p || ('object' == typeof e && null !== e && (e.$$typeof === m || e.$$typeof === h || e.$$typeof === l || e.$$typeof === u || e.$$typeof === f || e.$$typeof === E || e.$$typeof === v || e.$$typeof === b || e.$$typeof === g));
     }),
-    (t.typeOf = b);
+    (t.typeOf = I);

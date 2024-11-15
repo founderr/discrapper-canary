@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return k;
+        return I;
     }
 }),
     n(47120);
@@ -9,9 +9,9 @@ var r = n(200651),
     l = n(120356),
     i = n.n(l),
     o = n(658722),
-    s = n.n(o),
-    c = n(913527),
-    d = n.n(c),
+    c = n.n(o),
+    s = n(913527),
+    d = n.n(s),
     u = n(442837),
     h = n(481060),
     m = n(570140),
@@ -21,12 +21,12 @@ var r = n(200651),
     b = n(31336),
     g = n(257785),
     v = n(484036),
-    j = n(681619),
-    C = n(621060),
-    _ = n(388032),
+    C = n(681619),
+    _ = n(621060),
+    j = n(388032),
     T = n(574001),
     S = n(219299);
-let N = [
+let y = [
         {
             key: 'id',
             cellClassName: T.eventColumn,
@@ -52,13 +52,13 @@ let N = [
             }
         }
     ],
-    y = [
+    N = [
         {
             id: 'details',
             name: 'Details',
             render: (e) => {
                 let {
-                        loggedTrigger: { experimentId: t, descriptor: n, exposureType: a, excluded: l, timestamp: o, location: s, previouslyTracked: c }
+                        loggedTrigger: { experimentId: t, descriptor: n, exposureType: a, excluded: l, timestamp: o, location: c, previouslyTracked: s }
                     } = e,
                     u = d()(o);
                 return (0, r.jsxs)(r.Fragment, {
@@ -111,11 +111,11 @@ let N = [
                                 }),
                                 (0, r.jsx)(g.Z9, {
                                     name: 'Previously tracked',
-                                    children: (0, r.jsx)(g.wl, { value: c })
+                                    children: (0, r.jsx)(g.wl, { value: s })
                                 }),
                                 (0, r.jsx)(g.Z9, {
                                     name: 'Location',
-                                    children: (0, r.jsx)('code', { children: s })
+                                    children: (0, r.jsx)('code', { children: c })
                                 })
                             ]
                         })
@@ -124,16 +124,16 @@ let N = [
             }
         }
     ];
-function k() {
+function I() {
     let [e, t] = a.useState(''),
         n = a.useRef(null),
         l = (0, u.Wu)([p.Z], () => p.Z.loggedTriggers),
-        o = a.useMemo(() => l.filter((t) => 0 === e.length || s()(e, t.experimentId)).sort((e, t) => t.timestamp.getTime() - e.timestamp.getTime()), [l, e]),
-        [c, d] = a.useState(void 0),
-        x = o.find((e) => e.key === c),
-        { TabBar: f, renderSelectedTab: g } = (0, C.Z)({ tabs: y }, []),
-        k = (0, u.e7)([p.Z], () => p.Z.trackTriggers),
-        I = a.useCallback((e) => {
+        o = a.useMemo(() => l.filter((t) => 0 === e.length || c()(e, t.experimentId)).sort((e, t) => t.timestamp.getTime() - e.timestamp.getTime()), [l, e]),
+        [s, d] = a.useState(void 0),
+        x = o.find((e) => e.key === s),
+        { TabBar: f, renderSelectedTab: g } = (0, _.Z)({ tabs: N }, []),
+        I = (0, u.e7)([p.Z], () => p.Z.trackTriggers),
+        k = a.useCallback((e) => {
             m.Z.dispatch({
                 type: 'SET_TRACK_TRIGGERS',
                 enabled: e
@@ -150,8 +150,8 @@ function k() {
                         title: 'Enables tracking of all triggers',
                         className: T.triggersEnable,
                         children: (0, r.jsx)(h.Switch, {
-                            checked: k,
-                            onChange: I,
+                            checked: I,
+                            onChange: k,
                             className: T.__invalid_toolbarSwitch
                         })
                     }),
@@ -161,11 +161,11 @@ function k() {
                         size: h.Button.Sizes.ICON,
                         onClick: b.Zw,
                         children: (0, r.jsx)('span', {
-                            title: _.intl.string(_.t.VkKicX),
+                            title: j.intl.string(j.t.VkKicX),
                             children: (0, r.jsx)(h.TrashIcon, {
                                 size: 'md',
                                 color: 'currentColor',
-                                'aria-label': _.intl.string(_.t.VkKicX)
+                                'aria-label': j.intl.string(j.t.VkKicX)
                             })
                         })
                     }),
@@ -178,10 +178,10 @@ function k() {
                     })
                 ]
             }),
-            (0, r.jsx)(j.Z, {
-                columns: N,
+            (0, r.jsx)(C.Z, {
+                columns: y,
                 data: o,
-                selectedRowKey: c,
+                selectedRowKey: s,
                 onClickRow: (e) => d(e.key)
             }),
             null != x &&

@@ -1,47 +1,47 @@
-t.d(n, {
+n.d(t, {
     M: function () {
-        return a;
+        return o;
     }
 });
 var r,
     i,
-    l,
-    s,
     a,
+    s,
     o,
-    c = t(442837),
-    u = t(570140),
-    d = t(592125),
-    m = t(757266),
-    p = t(375954);
-((r = a || (a = {})).NOT_FETCHED = 'NOT_FETCHED'), (r.FETCHING = 'FETCHING'), (r.FETCHED = 'FETCHED');
-let x = null,
+    l,
+    u = n(442837),
+    c = n(570140),
+    d = n(592125),
+    f = n(757266),
+    _ = n(375954);
+((r = o || (o = {})).NOT_FETCHED = 'NOT_FETCHED'), (r.FETCHING = 'FETCHING'), (r.FETCHED = 'FETCHED');
+let p = null,
     h = 'NOT_FETCHED';
-class f extends (o = c.ZP.Store) {
+class m extends (l = u.ZP.Store) {
     initialize() {
-        this.waitFor(d.Z, m.Z, p.Z);
+        this.waitFor(d.Z, f.Z, _.Z);
     }
     getApps() {
-        return x;
+        return p;
     }
     getFetchState() {
         return h;
     }
 }
 (s = 'AuthorizedAppsStore'),
-    (l = 'displayName') in (i = f)
-        ? Object.defineProperty(i, l, {
+    (a = 'displayName') in (i = m)
+        ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[l] = s),
-    (n.Z = new f(u.Z, {
+        : (i[a] = s),
+    (t.Z = new m(c.Z, {
         USER_AUTHORIZED_APPS_REQUEST: function () {
             h = 'FETCHING';
         },
         USER_AUTHORIZED_APPS_UPDATE: function (e) {
-            (h = 'FETCHED'), (x = e.apps);
+            (h = 'FETCHED'), (p = e.apps);
         }
     }));

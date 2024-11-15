@@ -22,13 +22,13 @@ function m(e) {
         n = (0, s.e7)([l.Z], () => l.Z.useReducedMotion),
         [m, g] = i.useState(!1),
         [E, v] = i.useState(0),
-        I = i.useRef(null),
-        b = Math.min(f.Eu4.TIER_3, t.premiumTier + 1),
+        b = i.useRef(null),
+        I = Math.min(f.Eu4.TIER_3, t.premiumTier + 1),
         S = f.oCV[t.premiumTier],
-        T = f.oCV[b],
+        T = f.oCV[I],
         y = (t.premiumSubscriberCount - S) / (T - S),
         A = d.P[t.premiumTier],
-        N = d.P[b],
+        N = d.P[I],
         C = t.premiumTier === f.Eu4.TIER_3,
         {
             progressBarFillWidthFactor: R,
@@ -132,7 +132,7 @@ function m(e) {
                     (0, r.jsx)(
                         d.Z,
                         {
-                            confettiTriggerRef: I,
+                            confettiTriggerRef: b,
                             guild: t,
                             isProgressBarAnimationComplete: O,
                             setConfettiCount: v,
@@ -146,7 +146,7 @@ function m(e) {
                 ),
                 (0, r.jsx)(c.Z, {
                     confettiCount: E,
-                    confettiTriggerRef: I,
+                    confettiTriggerRef: b,
                     isFiring: L
                 })
             ]

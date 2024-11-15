@@ -24,14 +24,14 @@ function h(e) {
     let g = (0, o.e7)([u.default], () => u.default.getCurrentUser());
     s()(null != g, 'UserProfilePopoutWrapper: currentUser cannot be undefined');
     let E = (0, o.e7)([l.Z], () => l.Z.isBlocked(m.id)),
-        [v, I] = i.useState(E),
-        b = (0, c.sS)({ location: 'UserProfilePopoutWrapper' });
-    return v && b
+        [v, b] = i.useState(E),
+        I = (0, c.sS)({ location: 'UserProfilePopoutWrapper' });
+    return v && I
         ? (0, r.jsx)(d.Z, {
               ...a,
               user: m,
               currentUser: g,
-              onViewBlockedProfileClick: () => I(!1)
+              onViewBlockedProfileClick: () => b(!1)
           })
         : m.isNonUserBot()
           ? (0, r.jsx)(_.Z, {

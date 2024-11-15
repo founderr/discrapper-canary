@@ -1,145 +1,145 @@
-n.d(t, {
+e.d(n, {
     Z: function () {
-        return g;
+        return _;
     },
     x: function () {
-        return i;
+        return r;
     }
 }),
-    n(653041);
-var i,
-    r,
-    l = n(200651),
-    c = n(192379),
-    o = n(120356),
-    s = n.n(o),
-    a = n(442837),
-    u = n(477690),
-    d = n(481060),
-    C = n(686546),
-    p = n(706454),
-    h = n(768581),
-    f = n(624138),
-    m = n(388032),
-    E = n(488107);
-((r = i || (i = {}))[(r.SMALL = (0, f.Mg)(u.Z.GUILD_COUNT_SMALL_ICON_SIZE))] = 'SMALL'), (r[(r.LARGE = (0, f.Mg)(u.Z.GUILD_COUNT_LARGE_ICON_SIZE))] = 'LARGE');
-let A = {
-        [i.SMALL]: E.moreGuildsSmall,
-        [i.LARGE]: E.moreGuildsLarge
+    e(653041);
+var r,
+    i,
+    o = e(200651),
+    l = e(192379),
+    c = e(120356),
+    u = e.n(c),
+    a = e(442837),
+    s = e(477690),
+    d = e(481060),
+    p = e(686546),
+    f = e(706454),
+    I = e(768581),
+    E = e(624138),
+    h = e(388032),
+    L = e(488107);
+((i = r || (r = {}))[(i.SMALL = (0, E.Mg)(s.Z.GUILD_COUNT_SMALL_ICON_SIZE))] = 'SMALL'), (i[(i.LARGE = (0, E.Mg)(s.Z.GUILD_COUNT_LARGE_ICON_SIZE))] = 'LARGE');
+let g = {
+        [r.SMALL]: L.moreGuildsSmall,
+        [r.LARGE]: L.moreGuildsLarge
     },
-    v = {
-        [i.SMALL]: E.iconSmall,
-        [i.LARGE]: E.iconLarge
+    A = {
+        [r.SMALL]: L.iconSmall,
+        [r.LARGE]: L.iconLarge
     };
-function g(e) {
-    var t, n, r;
-    let { application: o, mutualGuilds: u, mutualGuildShownMax: f = 4, className: g, textVariant: x = 'text-sm/normal', compact: L, guildIconSize: Z = i.LARGE, guildsClassName: N } = e,
-        S = (0, a.e7)([p.default], () => p.default.locale),
-        j = new Intl.ListFormat(S),
-        T = null !== (n = null === (t = o.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== n ? n : 0,
-        y = null !== (r = null == u ? void 0 : u.length) && void 0 !== r ? r : 0,
-        _ = Math.max(0, T - y),
-        { shownMutualGuilds: I, hiddenMutualGuilds: P } = c.useMemo(() => {
-            let e = [],
-                t = [];
+function _(t) {
+    var n, e, i;
+    let { application: c, mutualGuilds: s, mutualGuildShownMax: E = 4, className: _, textVariant: T = 'text-sm/normal', compact: S, guildIconSize: m = r.LARGE, guildsClassName: R } = t,
+        O = (0, a.e7)([f.default], () => f.default.locale),
+        N = new Intl.ListFormat(O),
+        P = null !== (e = null === (n = c.directory_entry) || void 0 === n ? void 0 : n.guild_count) && void 0 !== e ? e : 0,
+        C = null !== (i = null == s ? void 0 : s.length) && void 0 !== i ? i : 0,
+        v = Math.max(0, P - C),
+        { shownMutualGuilds: w, hiddenMutualGuilds: y } = l.useMemo(() => {
+            let t = [],
+                n = [];
             return (
-                null == u ||
-                    u.forEach((n) => {
-                        e.length < f && null != n.icon ? e.push(n) : t.push(n);
+                null == s ||
+                    s.forEach((e) => {
+                        t.length < E && null != e.icon ? t.push(e) : n.push(e);
                     }),
-                e.length === f && t.length > 0 && (t.push(e[f - 1]), (e = e.slice(0, f - 1))),
+                t.length === E && n.length > 0 && (n.push(t[E - 1]), (t = t.slice(0, E - 1))),
                 {
-                    shownMutualGuilds: e,
-                    hiddenMutualGuilds: t
+                    shownMutualGuilds: t,
+                    hiddenMutualGuilds: n
                 }
             );
-        }, [u, f]),
-        R = P.length,
-        M = (function (e, t, n, i, r) {
-            if (0 === t && 0 === e) return null;
-            if (t > 0 && 0 === n) return m.intl.formatToPlainString(m.t.pnzE1t, { mutualGuildCount: t });
-            let l = t > 0 ? m.t.YR8PSE : m.t.GQjq6e,
-                c = new Intl.NumberFormat(i, {
-                    notation: r ? 'compact' : 'standard',
+        }, [s, E]),
+        D = y.length,
+        G = (function (t, n, e, r, i) {
+            if (0 === n && 0 === t) return null;
+            if (n > 0 && 0 === e) return h.intl.formatToPlainString(h.t.pnzE1t, { mutualGuildCount: n });
+            let o = n > 0 ? h.t.YR8PSE : h.t.GQjq6e,
+                l = new Intl.NumberFormat(r, {
+                    notation: i ? 'compact' : 'standard',
                     compactDisplay: 'short'
                 });
-            return m.intl.formatToPlainString(l, {
-                guildCount: c.format(e),
-                mutualGuildCount: t,
-                nonMutualGuildCount: c.format(n)
+            return h.intl.formatToPlainString(o, {
+                guildCount: l.format(t),
+                mutualGuildCount: n,
+                nonMutualGuildCount: l.format(e)
             });
-        })(T, y, _, S, L);
-    return 0 === I.length && null == M
+        })(P, C, v, O, S);
+    return 0 === w.length && null == G
         ? null
-        : (0, l.jsxs)('div', {
-              className: s()(g, E.wrapper),
+        : (0, o.jsxs)('div', {
+              className: u()(_, L.wrapper),
               children: [
-                  (0, l.jsx)('div', {
-                      className: s()(E.icons, N),
+                  (0, o.jsx)('div', {
+                      className: u()(L.icons, R),
                       children:
-                          I.length > 0
-                              ? (0, l.jsxs)(l.Fragment, {
+                          w.length > 0
+                              ? (0, o.jsxs)(o.Fragment, {
                                     children: [
-                                        I.map((e, t) => {
-                                            let n = t === I.length - 1 && 0 === R,
-                                                i = h.ZP.getGuildIconURL({
-                                                    id: e.id,
-                                                    icon: e.icon,
-                                                    size: Z,
+                                        w.map((t, n) => {
+                                            let e = n === w.length - 1 && 0 === D,
+                                                r = I.ZP.getGuildIconURL({
+                                                    id: t.id,
+                                                    icon: t.icon,
+                                                    size: m,
                                                     canAnimate: !1
                                                 }),
-                                                r = (0, l.jsx)(d.Tooltip, {
-                                                    text: e.name,
+                                                i = (0, o.jsx)(d.Tooltip, {
+                                                    text: t.name,
                                                     position: 'top',
-                                                    children: (e) =>
-                                                        (0, l.jsx)('img', {
-                                                            ...e,
-                                                            className: s()(E.icon, v[Z]),
-                                                            src: i,
+                                                    children: (t) =>
+                                                        (0, o.jsx)('img', {
+                                                            ...t,
+                                                            className: u()(L.icon, A[m]),
+                                                            src: r,
                                                             alt: ''
                                                         })
                                                 });
-                                            return n
-                                                ? (0, l.jsx)(c.Fragment, { children: r }, e.id)
-                                                : (0, l.jsx)(
-                                                      C.ZP,
+                                            return e
+                                                ? (0, o.jsx)(l.Fragment, { children: i }, t.id)
+                                                : (0, o.jsx)(
+                                                      p.ZP,
                                                       {
-                                                          className: E.iconMask,
-                                                          height: Z,
-                                                          width: Z,
-                                                          mask: C.ZP.Masks.VOICE_USER_SUMMARY_ITEM,
-                                                          children: r
+                                                          className: L.iconMask,
+                                                          height: m,
+                                                          width: m,
+                                                          mask: p.ZP.Masks.VOICE_USER_SUMMARY_ITEM,
+                                                          children: i
                                                       },
-                                                      e.id
+                                                      t.id
                                                   );
                                         }),
-                                        R > 0
-                                            ? (0, l.jsx)(d.Tooltip, {
-                                                  text: m.intl.formatToPlainString(m.t.m6oRrK, { appNames: j.format(P.map((e) => e.name)) }),
+                                        D > 0
+                                            ? (0, o.jsx)(d.Tooltip, {
+                                                  text: h.intl.formatToPlainString(h.t.m6oRrK, { appNames: N.format(y.map((t) => t.name)) }),
                                                   position: 'top',
-                                                  children: (e) =>
-                                                      (0, l.jsxs)('div', {
-                                                          ...e,
-                                                          className: s()(E.moreGuilds, A[Z]),
-                                                          children: ['+', R]
+                                                  children: (t) =>
+                                                      (0, o.jsxs)('div', {
+                                                          ...t,
+                                                          className: u()(L.moreGuilds, g[m]),
+                                                          children: ['+', D]
                                                       })
                                               })
                                             : null
                                     ]
                                 })
-                              : (0, l.jsx)(d.ServerIcon, {
+                              : (0, o.jsx)(d.ServerIcon, {
                                     size: 'custom',
                                     color: 'currentColor',
-                                    width: Z,
-                                    height: Z,
-                                    className: E.defaultIcon
+                                    width: m,
+                                    height: m,
+                                    className: L.defaultIcon
                                 })
                   }),
-                  null != M
-                      ? (0, l.jsx)(d.Text, {
-                            variant: x,
+                  null != G
+                      ? (0, o.jsx)(d.Text, {
+                            variant: T,
                             color: 'header-secondary',
-                            children: M
+                            children: G
                         })
                       : null
               ]

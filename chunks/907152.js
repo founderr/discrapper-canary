@@ -16,9 +16,9 @@ n(220082);
 var o = n(693824),
     s = n(690725);
 n(706454), n(594174);
-var u = n(70956);
+var c = n(70956);
 n(5192);
-var c = n(709054),
+var u = n(709054),
     d = n(561308);
 n(206295);
 var m = n(737583),
@@ -37,7 +37,7 @@ let p = (e, t) => ({
                     text: t
                 }
             ],
-            l = c.default.extractTimestamp(e.extra.application_id);
+            l = u.default.extractTimestamp(e.extra.application_id);
         if (
             (7 >= a()().diff(a()(l), 'days') &&
                 n.push({
@@ -81,7 +81,7 @@ let p = (e, t) => ({
         if ((0, d.Jd)(e)) {
             let t = (0, d.yA)(e);
             if (null != t) {
-                let e = h.intl.formatToPlainString(h.t.C0Axoa, { hours: Math.round(t / u.Z.Seconds.HOUR) });
+                let e = h.intl.formatToPlainString(h.t.C0Axoa, { hours: Math.round(t / c.Z.Seconds.HOUR) });
                 return [
                     {
                         iconPath: x.eF,
@@ -94,7 +94,7 @@ let p = (e, t) => ({
     },
     v = (e, t) => {
         let { timestamp: n, colors: l, description: a, entry: i, numAvatars: s } = t,
-            u = l.map((e, t) => ({
+            c = l.map((e, t) => ({
                 color: e,
                 stop: t
             }));
@@ -106,7 +106,7 @@ let p = (e, t) => ({
             4
         ),
             e.drawRoundedGradientRect(
-                u,
+                c,
                 {
                     x: 0,
                     y: x.bg
@@ -171,17 +171,17 @@ let p = (e, t) => ({
                 },
                 !0
             );
-        let c = C(i, n);
+        let u = C(i, n);
         (0, m.J)({
             canvas: e,
-            badges: c,
+            badges: u,
             startPosition: x.Iq,
             maxWidth: x.kC
         });
     },
     g = async (e) => {
-        let { applicationImageSrc: t, entry: n, avatarSrcs: l, description: a, timestamp: i, colors: r, channelId: u } = e,
-            c = n.extra.activity_name,
+        let { applicationImageSrc: t, entry: n, avatarSrcs: l, description: a, timestamp: i, colors: r, channelId: c } = e,
+            u = n.extra.activity_name,
             d = p(l, t);
         return await (0, s.f)({
             assetsToLoad: d,
@@ -196,9 +196,9 @@ let p = (e, t) => ({
             exportConfigs: {
                 format: o.kH.CloudUpload,
                 quality: 1,
-                fileName: 'user-reacting-to-'.concat(c, '.png').toLowerCase(),
+                fileName: 'user-reacting-to-'.concat(u, '.png').toLowerCase(),
                 fileType: 'png',
-                channelId: u
+                channelId: c
             }
         });
     };

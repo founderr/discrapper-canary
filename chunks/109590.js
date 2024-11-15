@@ -1,6 +1,6 @@
 n.d(t, {
     EB: function () {
-        return I;
+        return b;
     },
     cl: function () {
         return E;
@@ -106,12 +106,12 @@ function v(e, t) {
         let { loaded: a, firstMessage: s } = d.Z.getMessage(t);
         if (((r = a), (i = s), !r && null == i)) h.request(e.id, t), (n = !0);
     }),
-        n && null == m && (m = setTimeout(b, 0));
+        n && null == m && (m = setTimeout(I, 0));
 }
-function I(e) {
+function b(e) {
     v(e, (0, c.U)(e.id).slice(0, 10));
 }
-async function b() {
+async function I() {
     try {
         for (; h.hasNext(); ) await S(h.next());
     } finally {

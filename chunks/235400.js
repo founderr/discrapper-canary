@@ -22,8 +22,8 @@ var r = n(200651),
     g = n(197115),
     E = n(369111),
     v = n(594174),
-    I = n(626135),
-    b = n(74538),
+    b = n(626135),
+    I = n(74538),
     S = n(864106),
     T = n(240781),
     y = n(818611),
@@ -32,14 +32,14 @@ var r = n(200651),
     C = n(388032),
     R = n(398787);
 function O(e) {
-    let { user: t, categories: n, purchases: a, analyticsLocations: s, onClose: u, initialSelectedDecoration: _, initialSelectedDecorationId: v, isTryItOutFlow: I, guild: A } = e,
+    let { user: t, categories: n, purchases: a, analyticsLocations: s, onClose: u, initialSelectedDecoration: _, initialSelectedDecorationId: v, isTryItOutFlow: b, guild: A } = e,
         {
             pendingAvatarDecoration: O,
             setPendingAvatarDecoration: D,
             savedAvatarDecoration: L
         } = (0, E.Z)({
             analyticsLocations: s,
-            isTryItOut: I,
+            isTryItOut: b,
             guildId: null == A ? void 0 : A.id
         }),
         [x, w] = i.useState(() => {
@@ -49,10 +49,10 @@ function O(e) {
             return null != v ? (null !== (e = r.find((e) => e.id === v)) && void 0 !== e ? e : null) : void 0 !== O ? O : null == L ? null : null !== (t = r.find((e) => (0, S.sr)(e, L))) && void 0 !== t ? t : null;
         }),
         { product: M, purchase: P } = (0, f.Z)(null == x ? void 0 : x.skuId),
-        k = b.ZP.canUseCollectibles(t),
+        k = I.ZP.canUseCollectibles(t),
         U = i.useRef(null),
-        G = (0, p.Z)(s),
-        B = (0, S.sr)(x, void 0 === O ? L : O),
+        B = (0, p.Z)(s),
+        G = (0, S.sr)(x, void 0 === O ? L : O),
         Z = () => {
             D(x), u();
         },
@@ -94,7 +94,7 @@ function O(e) {
                         pendingAvatarDecoration: x,
                         selectedAvatarDecorationRef: U,
                         onSelect: (e) => {
-                            w(e), null != e && G(e);
+                            w(e), null != e && B(e);
                         },
                         onOpenShop: F
                     }),
@@ -114,7 +114,7 @@ function O(e) {
                             (null != P && (!(0, d.qS)(P) || k)) || null === x
                                 ? (0, r.jsx)(o.Button, {
                                       onClick: Z,
-                                      disabled: B,
+                                      disabled: G,
                                       children: C.intl.string(C.t.d6sv6u)
                                   })
                                 : null == P && (k || !(0, d.G1)(M))
@@ -126,7 +126,7 @@ function O(e) {
                                   : (0, r.jsx)(g.Z, {
                                         subscriptionTier: N.Si.TIER_2,
                                         showGradient: V,
-                                        buttonText: b.ZP.isPremium(t) ? C.intl.string(C.t.KXLX7u) : V ? C.intl.string(C.t.pj0XBA) : C.intl.string(C.t.mr4K7O)
+                                        buttonText: I.ZP.isPremium(t) ? C.intl.string(C.t.KXLX7u) : V ? C.intl.string(C.t.pj0XBA) : C.intl.string(C.t.mr4K7O)
                                     })
                     }),
                     !V &&
@@ -150,16 +150,16 @@ function O(e) {
 function D(e) {
     let { transitionState: t, analyticsLocations: n, onClose: d, onCloseModal: f, initialSelectedDecoration: p, initialSelectedDecorationId: h, isTryItOutFlow: m, guild: g } = e,
         E = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
-        { analyticsLocations: b } = (0, u.ZP)(n, l.Z.EDIT_AVATAR_DECORATION_MODAL),
+        { analyticsLocations: I } = (0, u.ZP)(n, l.Z.EDIT_AVATAR_DECORATION_MODAL),
         { categories: S, purchases: T, isFetchingCategories: y, isFetchingPurchases: N } = (0, _.Z)(),
         C = y || (N && 0 === T.size);
     return (
         i.useEffect(() => {
-            I.default.track(A.rMx.OPEN_MODAL, {
+            b.default.track(A.rMx.OPEN_MODAL, {
                 type: 'Edit Avatar Decoration Modal',
-                location_stack: b
+                location_stack: I
             });
-        }, [b]),
+        }, [I]),
         i.useEffect(
             () => () => {
                 (0, c.K$)({
@@ -172,7 +172,7 @@ function D(e) {
         null == E
             ? null
             : (0, r.jsx)(u.Gt, {
-                  value: b,
+                  value: I,
                   children: (0, r.jsx)(o.ModalRoot, {
                       transitionState: t,
                       className: R.modal,
@@ -187,7 +187,7 @@ function D(e) {
                                 guild: g,
                                 categories: S,
                                 purchases: T,
-                                analyticsLocations: b,
+                                analyticsLocations: I,
                                 initialSelectedDecoration: p,
                                 initialSelectedDecorationId: h,
                                 onClose: () => {

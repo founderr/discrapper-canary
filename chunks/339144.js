@@ -31,8 +31,8 @@ let x = l.memo(function (e) {
         c,
         x,
         { stream: I, canGoLive: b, guildId: E, isStreaming: S, channel: Z, canStream: N, runningGame: y, embeddedActivity: T, activity: j, application: A, analyticsContext: P } = e,
-        R = v(A, j, T),
-        M = l.useCallback(() => {
+        M = v(A, j, T),
+        R = l.useCallback(() => {
             a()(null != j, 'Received null activity'),
                 m.default.track(g.rMx.OPEN_MODAL, {
                     type: 'Send Join Invite',
@@ -41,7 +41,7 @@ let x = l.memo(function (e) {
                 }),
                 (0, s.h7)(j, !1);
         }, [j, P]),
-        L = l.useCallback(
+        w = l.useCallback(
             (e, t) => () => {
                 u.Z.leaveActivity({
                     channelId: t.id,
@@ -51,7 +51,7 @@ let x = l.memo(function (e) {
             },
             []
         ),
-        w = l.useCallback(() => {
+        L = l.useCallback(() => {
             (0, h.Z)(I);
         }, [I]),
         D = l.useCallback(() => {
@@ -70,7 +70,7 @@ let x = l.memo(function (e) {
         }, [Z, E]);
     let O =
             (null != y || null == T) && (S || (b && null != y))
-                ? (S ? ((t = !1), (r = w), (c = o.ScreenXIcon), (x = C.intl.string(C.t.S5anIS))) : N ? ((t = !1), (r = D), (c = o.ScreenArrowIcon), (x = null != y ? C.intl.formatToPlainString(C.t.AB5gT0, { game: y.name }) : C.intl.string(C.t.FeUKeH))) : ((t = !0), (r = null), (c = o.ScreenArrowIcon), (x = null != Z && (0, p.vd)(Z.type) ? C.intl.string(C.t.uQn9Bw) : null != E ? C.intl.string(C.t.fBXEoK) : C.intl.string(C.t.n3feND))),
+                ? (S ? ((t = !1), (r = L), (c = o.ScreenXIcon), (x = C.intl.string(C.t.S5anIS))) : N ? ((t = !1), (r = D), (c = o.ScreenArrowIcon), (x = null != y ? C.intl.formatToPlainString(C.t.AB5gT0, { game: y.name }) : C.intl.string(C.t.FeUKeH))) : ((t = !0), (r = null), (c = o.ScreenArrowIcon), (x = null != Z && (0, p.vd)(Z.type) ? C.intl.string(C.t.uQn9Bw) : null != E ? C.intl.string(C.t.fBXEoK) : C.intl.string(C.t.n3feND))),
                   (0, i.jsx)('div', {
                       className: _.panelButtonContainer,
                       children: (0, i.jsx)(f.Z, {
@@ -82,10 +82,10 @@ let x = l.memo(function (e) {
                   }))
                 : null,
         k =
-            R && null == T
+            M && null == T
                 ? (0, i.jsx)(f.Z, {
                       tooltipText: C.intl.string(C.t['hC/Ze3']),
-                      onClick: M,
+                      onClick: R,
                       icon: o.GroupPlusIcon
                   })
                 : null,
@@ -94,7 +94,7 @@ let x = l.memo(function (e) {
                 ? null
                 : (0, i.jsx)(f.Z, {
                       tooltipText: C.intl.string(C.t['R/FK4O']),
-                      onClick: L(T.applicationId, Z),
+                      onClick: w(T.applicationId, Z),
                       icon: o.DoorExitIcon
                   }),
         G = null == I ? null : (0, i.jsx)(d.Z, {});

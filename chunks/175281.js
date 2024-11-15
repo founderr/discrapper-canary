@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return w;
+        return L;
     }
 }),
     n(47120),
@@ -68,7 +68,7 @@ function P(e) {
     let { showBackdrop: t } = e;
     return (0, r.jsx)('div', { className: s()(N.backdrop, { [N.show]: t }) });
 }
-function R() {
+function M() {
     let e = a.useMemo(
         () =>
             h()((0, C.Rv)())
@@ -146,7 +146,7 @@ function R() {
         })
     });
 }
-class M extends a.PureComponent {
+class R extends a.PureComponent {
     componentDidMount() {
         (this.lastInputedKeys = []), I.S.subscribe(S.CkL.SCROLL_PAGE_UP, this.scrollPageUp), I.S.subscribe(S.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), window.addEventListener('keydown', this.handleKeyDown, { capture: !0 }), window.addEventListener('keyup', this.handleKeyUp, { capture: !0 });
     }
@@ -176,25 +176,25 @@ class M extends a.PureComponent {
                 (0, r.jsxs)('div', {
                     className: N.ddrArrows,
                     children: [
-                        (0, r.jsx)(L, {
+                        (0, r.jsx)(w, {
                             arrow: 'LEFT',
                             isActive: n,
                             className: N.left,
                             children: 'left'
                         }),
-                        (0, r.jsx)(L, {
+                        (0, r.jsx)(w, {
                             arrow: 'DOWN',
                             isActive: t,
                             className: N.down,
                             children: 'down'
                         }),
-                        (0, r.jsx)(L, {
+                        (0, r.jsx)(w, {
                             arrow: 'UP',
                             isActive: e,
                             className: N.up,
                             children: 'up'
                         }),
-                        (0, r.jsx)(L, {
+                        (0, r.jsx)(w, {
                             arrow: 'RIGHT',
                             isActive: i,
                             className: N.right,
@@ -205,7 +205,7 @@ class M extends a.PureComponent {
                 (0, r.jsx)(g.AdvancedScrollerAuto, {
                     ref: this.scrollerRef,
                     fade: !0,
-                    children: (0, r.jsx)(g.HeadingLevel, { children: (0, r.jsx)(R, {}) })
+                    children: (0, r.jsx)(g.HeadingLevel, { children: (0, r.jsx)(M, {}) })
                 })
             ]
         });
@@ -291,7 +291,7 @@ class M extends a.PureComponent {
             });
     }
 }
-function L(e) {
+function w(e) {
     let { isActive: t, arrow: n, className: i, children: l } = e,
         [o, c] = a.useState(t),
         u = a.useCallback(() => {
@@ -311,7 +311,7 @@ function L(e) {
         })
     );
 }
-function w(e) {
+function L(e) {
     let { transitionState: t, onClose: n } = e,
         [i, l] = a.useState(!1),
         [o, c] = a.useState(!1),
@@ -341,7 +341,7 @@ function w(e) {
                               'raging-demo'
                           )
                         : (0, r.jsx)(
-                              M,
+                              R,
                               {
                                   content: u,
                                   keyboardModeEnabled: d,

@@ -1,6 +1,6 @@
 n.d(t, {
     V: function () {
-        return I;
+        return b;
     },
     e: function () {
         return E;
@@ -61,7 +61,7 @@ let g = new m(s.Z, {}),
         let t = l.Z.getChannel(e);
         null != t && t.isPrivate() && !h.has(t.getRecipientId()) && (h.add(t.getRecipientId()), g.emitChange());
     },
-    I = () =>
+    b = () =>
         (0, i.jsxs)('div', {
             className: _.bar,
             children: [f.intl.string(f.t['2UvR1N']), (0, i.jsx)(o.B, { onClick: v })]

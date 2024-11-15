@@ -29,7 +29,7 @@ function h(e) {
                     analyticsLocations: g
                 })
         }),
-        I = (0, l.Z)({
+        b = (0, l.Z)({
             user: t,
             location: E,
             color: 'danger',
@@ -44,7 +44,7 @@ function h(e) {
                     analyticsLocations: g
                 })
         }),
-        b = (0, u.Z)({
+        I = (0, u.Z)({
             user: t,
             location: E,
             onIgnore: () =>
@@ -82,7 +82,7 @@ function h(e) {
         }),
         y = [
             [h, v],
-            [b, I, S, T],
+            [I, b, S, T],
             [
                 (0, o.Z)({
                     id: t.id,

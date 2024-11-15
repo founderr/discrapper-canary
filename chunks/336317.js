@@ -52,11 +52,11 @@ var n = (function () {
                                           for (var r, i, a = t.childNodes, o = a.length; o--; ) 3 === (i = (r = a[o]).nodeType) ? n.push(r) : 1 === i && !('ownerSVGElement' in r) && !s.test(r.nodeName.toLowerCase()) && e(r, n);
                                           return n;
                                       })(e, []),
-                                      I = v.length;
-                                  I--;
+                                      b = v.length;
+                                  b--;
 
                               ) {
-                                  for (a = !1, o = document.createDocumentFragment(), d = (u = v[I]).nodeValue, _ = 0; (f = n.exec(d)); ) {
+                                  for (a = !1, o = document.createDocumentFragment(), d = (u = v[b]).nodeValue, _ = 0; (f = n.exec(d)); ) {
                                       if (((p = f.index) !== _ && o.appendChild(l(d.slice(_, p), !0)), (g = c((m = f[0]))), (_ = p + m.length), (E = t.callback(g, t)), g && E)) {
                                           for (i in (((h = new Image()).onerror = t.onerror), h.setAttribute('draggable', 'false'), (r = t.attributes(m, g)))) r.hasOwnProperty(i) && 0 !== i.indexOf('on') && !h.hasAttribute(i) && h.setAttribute(i, r[i]);
                                           (h.className = t.className), (h.alt = m), (h.src = E), (a = !0), o.appendChild(h);

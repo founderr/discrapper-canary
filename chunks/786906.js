@@ -5,9 +5,9 @@ n.d(t, {
 }),
     n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    r = n(192379),
+    s = n(120356),
+    a = n.n(s),
     l = n(442837),
     o = n(481060),
     c = n(13245),
@@ -16,16 +16,16 @@ var i = n(200651),
     h = n(984370),
     p = n(910611),
     f = n(131704),
-    m = n(523746),
-    g = n(592125),
+    g = n(523746),
+    m = n(592125),
     v = n(430824),
-    _ = n(699516),
-    E = n(944486),
+    E = n(699516),
+    _ = n(944486),
     x = n(707878),
     Z = n(518084),
     S = n(388032),
-    C = n(64437);
-function I(e, t, n) {
+    I = n(64437);
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -38,18 +38,18 @@ function I(e, t, n) {
         e
     );
 }
-class y extends s.Component {
+class y extends r.Component {
     componentDidUpdate() {
         this.props.locked && this.state.showOpacitySlider && this.setState({ showOpacitySlider: !1 });
     }
     renderCallButton() {
         let e, t;
-        let { channel: n, channelHasActiveCall: s, userIsInChannelCall: r, isBlocked: a } = this.props;
+        let { channel: n, channelHasActiveCall: r, userIsInChannelCall: s, isBlocked: a } = this.props;
         if (!(0, f.hv)(n.type)) return null;
         let l = o.PhoneCallIcon,
             c = !1;
         return (
-            s ? (r ? ((e = S.intl.string(S.t['4ry6ys'])), (l = o.PhoneHangUpIcon)) : (e = S.intl.string(S.t['0D/6R0']))) : a ? ((e = S.intl.string(S.t.PHzjvb)), (t = o.Tooltip.Colors.RED), (c = !0)) : (e = S.intl.string(S.t.focH1t)),
+            r ? (s ? ((e = S.intl.string(S.t['4ry6ys'])), (l = o.PhoneHangUpIcon)) : (e = S.intl.string(S.t['0D/6R0']))) : a ? ((e = S.intl.string(S.t.PHzjvb)), (t = o.Tooltip.Colors.RED), (c = !0)) : (e = S.intl.string(S.t.focH1t)),
             (0, i.jsx)(h.Z.Icon, {
                 icon: l,
                 tooltip: e,
@@ -60,11 +60,11 @@ class y extends s.Component {
         );
     }
     render() {
-        let { className: e, draggableClassName: t, locked: n, channel: s, channelName: r, guild: l, onMouseDown: c, onContextMenu: d, isPreviewingInGame: u, disableDragIndicator: f } = this.props,
-            { showOpacitySlider: m } = this.state;
-        return m && !n
+        let { className: e, draggableClassName: t, locked: n, channel: r, channelName: s, guild: l, onMouseDown: c, onContextMenu: d, isPreviewingInGame: u, disableDragIndicator: f } = this.props,
+            { showOpacitySlider: g } = this.state;
+        return g && !n
             ? (0, i.jsxs)(Z.ZP.Bar, {
-                  className: C.opacityHeader,
+                  className: I.opacityHeader,
                   children: [
                       (0, i.jsx)(x.Z, {}),
                       (0, i.jsx)(h.Z.Icon, {
@@ -77,12 +77,12 @@ class y extends s.Component {
             : (0, i.jsx)(Z.ZP.Background, {
                   opacityOverride: n || u ? null : 1,
                   children: (0, i.jsx)('div', {
-                      className: a()(e, t, C.headerContainer),
+                      className: a()(e, t, I.headerContainer),
                       onMouseDown: c,
                       onContextMenu: d,
                       children: (0, i.jsxs)(h.Z, {
-                          guildId: s.guild_id,
-                          channelId: s.id,
+                          guildId: r.guild_id,
+                          channelId: r.id,
                           toolbar: this.renderWidgetButtons(),
                           transparent: !0,
                           children: [
@@ -91,15 +91,15 @@ class y extends s.Component {
                                   : (0, i.jsx)(o.DragIcon, {
                                         size: 'custom',
                                         color: 'currentColor',
-                                        className: a()(C.dragIcon, t),
+                                        className: a()(I.dragIcon, t),
                                         width: 20,
                                         height: 20
                                     }),
                               (0, p.ud)({
-                                  channel: s,
-                                  channelName: r
+                                  channel: r,
+                                  channelName: s
                               }),
-                              n ? null : (0, p.v0)(s, l)
+                              n ? null : (0, p.v0)(r, l)
                           ]
                       })
                   })
@@ -107,8 +107,8 @@ class y extends s.Component {
     }
     constructor(...e) {
         super(...e),
-            I(this, 'state', { showOpacitySlider: !1 }),
-            I(this, 'handleClickCall', (e) => {
+            C(this, 'state', { showOpacitySlider: !1 }),
+            C(this, 'handleClickCall', (e) => {
                 let { channel: t, userIsInChannelCall: n, channelHasActiveCall: i } = this.props;
                 if (i) n ? d.default.selectVoiceChannel(null) : c.Z.callPrivateChannel(t.id, !1);
                 else {
@@ -116,24 +116,24 @@ class y extends s.Component {
                     c.Z.callPrivateChannel(t.id, n);
                 }
             }),
-            I(this, 'handleOpenOpacitySettings', () => {
+            C(this, 'handleOpenOpacitySettings', () => {
                 let { pinned: e } = this.props;
                 this.setState({ showOpacitySlider: !0 }), e && c.Z.setPreviewInGameMode(!0);
             }),
-            I(this, 'handleCloseOpacitySettings', () => {
+            C(this, 'handleCloseOpacitySettings', () => {
                 let { pinned: e } = this.props;
                 this.setState({ showOpacitySlider: !1 }), e && c.Z.setPreviewInGameMode(!1);
             }),
-            I(this, 'handleMouseDown', (e) => {
+            C(this, 'handleMouseDown', (e) => {
                 let { onMouseDown: t } = this.props;
                 null != t && t(e);
             }),
-            I(this, 'renderWidgetButtons', () => {
+            C(this, 'renderWidgetButtons', () => {
                 let { locked: e, handlePin: t, pinned: n } = this.props,
-                    r = n ? S.intl.string(S.t.cSu80t) : S.intl.string(S.t.cM8Vnp);
+                    s = n ? S.intl.string(S.t.cSu80t) : S.intl.string(S.t.cM8Vnp);
                 return e
                     ? null
-                    : (0, i.jsxs)(s.Fragment, {
+                    : (0, i.jsxs)(r.Fragment, {
                           children: [
                               this.renderCallButton(),
                               n
@@ -145,7 +145,7 @@ class y extends s.Component {
                                   : null,
                               (0, i.jsx)(h.Z.Icon, {
                                   icon: n ? o.PinUprightSlashIcon : o.PinUprightIcon,
-                                  tooltip: r,
+                                  tooltip: s,
                                   selected: n,
                                   onClick: t
                               })
@@ -156,20 +156,20 @@ class y extends s.Component {
 }
 function N(e) {
     let { channel: t, ...n } = e,
-        s = (0, l.e7)([E.Z, g.Z], () => {
-            let e = E.Z.getVoiceChannelId();
-            return g.Z.getChannel(e);
+        r = (0, l.e7)([_.Z, m.Z], () => {
+            let e = _.Z.getVoiceChannelId();
+            return m.Z.getChannel(e);
         }),
-        r = (0, l.e7)([v.Z], () => v.Z.getGuild(t.guild_id)),
-        a = (0, l.e7)([m.Z], () => m.Z.isCallActive(t.id)),
+        s = (0, l.e7)([v.Z], () => v.Z.getGuild(t.guild_id)),
+        a = (0, l.e7)([g.Z], () => g.Z.isCallActive(t.id)),
         o = (0, u.ZP)(t),
-        c = (0, l.e7)([_.Z], () => !!t.isDM() && null != t.getRecipientId() && _.Z.isBlocked(t.getRecipientId()));
+        c = (0, l.e7)([E.Z], () => !!t.isDM() && null != t.getRecipientId() && E.Z.isBlocked(t.getRecipientId()));
     return (0, i.jsx)(y, {
         channel: t,
         channelName: o,
-        guild: r,
+        guild: s,
         channelHasActiveCall: a,
-        userIsInChannelCall: null != s && s.id === t.id,
+        userIsInChannelCall: null != r && r.id === t.id,
         isBlocked: c,
         ...n
     });

@@ -21,8 +21,8 @@ var i = n(120356),
     g = n(82295),
     E = n(818083),
     v = n(480608),
-    I = n(124072),
-    b = n(184301),
+    b = n(124072),
+    I = n(184301),
     S = n(347475),
     T = n(592125),
     y = n(271383),
@@ -50,8 +50,8 @@ function L(e) {
         P = (0, u.e7)([_.Z], () => _.Z.roleStyle),
         k = null != t && 0 !== t && !w,
         U = k && 'dot' === P,
-        G = (e) =>
-            (0, r.jsxs)(I.Z, {
+        B = (e) =>
+            (0, r.jsxs)(b.Z, {
                 className: a()(R.roleMention),
                 color: 'username' === P && k ? t : null,
                 ...e,
@@ -66,11 +66,11 @@ function L(e) {
                     x
                 ]
             }),
-        { enabled: B } = D.getCurrentConfig({ location: '2ec235_1' }, { autoTrackExposure: !1 });
-    return !B || w || null == s || null == L || (null == i && '@everyone' !== E)
+        { enabled: G } = D.getCurrentConfig({ location: '2ec235_1' }, { autoTrackExposure: !1 });
+    return !G || w || null == s || null == L || (null == i && '@everyone' !== E)
         ? (0, r.jsx)(h.Gt, {
               value: M,
-              children: G()
+              children: B()
           })
         : (0, r.jsx)(h.Gt, {
               value: M,
@@ -96,7 +96,7 @@ function L(e) {
                                       c.Popout,
                                       {
                                           preload: () =>
-                                              (0, b.Z)(i.id, i.getAvatarURL(t.guild_id, 80), {
+                                              (0, I.Z)(i.id, i.getAvatarURL(t.guild_id, 80), {
                                                   guildId: t.guild_id,
                                                   channelId: t.id
                                               }),
@@ -169,7 +169,7 @@ function L(e) {
                       });
                   },
                   position: 'right',
-                  children: G
+                  children: B
               })
           });
 }

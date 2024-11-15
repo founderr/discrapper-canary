@@ -27,7 +27,7 @@ n.d(t, {
         return O;
     },
     jD: function () {
-        return I;
+        return b;
     },
     lf: function () {
         return T;
@@ -45,7 +45,7 @@ n.d(t, {
         return y;
     },
     ye: function () {
-        return b;
+        return I;
     }
 }),
     n(789020),
@@ -74,10 +74,10 @@ function E(e) {
 function v(e) {
     return E(e) ? e.name : m.intl.string(m.t.UB2gGx);
 }
-function I(e) {
+function b(e) {
     return E(e) ? e.description : m.intl.string(m.t.X9fusr);
 }
-function b(e) {
+function I(e) {
     var t;
     return E(e) && (0, d.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, p.udG.EMBEDDED);
 }
@@ -90,7 +90,7 @@ function T(e) {
     return E(e) && (0, d.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, p.udG.PROMOTED);
 }
 function y(e) {
-    return E(e) && b(e) ? (e instanceof u.Z ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
+    return E(e) && I(e) ? (e instanceof u.Z ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
 }
 function A(e) {
     let { command: t, optionValues: n, context: a, commandTargetId: u, maxSizeCallback: c, sectionName: d, commandOrigin: _ = s.bB.APPLICATION_LAUNCHER } = e,
@@ -165,7 +165,7 @@ function L(e) {
             var t;
             let n = e.application,
                 r = null !== (t = e.commands) && void 0 !== t ? t : [];
-            return b(n) && r.some((e) => e.type === a.yU.PRIMARY_ENTRY_POINT);
+            return I(n) && r.some((e) => e.type === a.yU.PRIMARY_ENTRY_POINT);
         });
         if (0 !== e.length)
             t.push({

@@ -20,10 +20,10 @@ var i = n(442837),
 function m(e) {
     let { user: t, guildId: n, channelId: m, onClose: g, shouldShowTooltip: E } = e,
         { newestAnalyticsLocation: v } = (0, s.ZP)(),
-        I = (0, i.e7)([c.default], () => c.default.getId() === (null == t ? void 0 : t.id)),
-        b = (0, l.ms)(null != n ? n : null, !0),
+        b = (0, i.e7)([c.default], () => c.default.getId() === (null == t ? void 0 : t.id)),
+        I = (0, l.ms)(null != n ? n : null, !0),
         S = (0, i.e7)([d.Z], () => (null != m ? m : d.Z.getChannelId(n, !0)), [m, n]);
-    return null == n || !b || I
+    return null == n || !I || b
         ? null
         : (0, r.jsx)(f.oY, {
               action: 'PRESS_MOD_VIEW',

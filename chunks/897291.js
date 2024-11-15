@@ -15,12 +15,12 @@ t.Z = i.memo(function (e) {
     let { disabled: t, channel: i } = e,
         { analyticsLocations: m } = (0, l.ZP)(o.Z.GIFT_BUTTON),
         g = (0, d.Ft)(i),
-        { Component: E, events: v, play: I } = (0, a.$)(),
-        { enabled: b } = c.G.useExperiment({ location: 'gift-button' }, { autoTrackExposure: !1 }),
+        { Component: E, events: v, play: b } = (0, a.$)(),
+        { enabled: I } = c.G.useExperiment({ location: 'gift-button' }, { autoTrackExposure: !1 }),
         S = i.type === _.d4z.DM;
     if (t) return null;
     let T = () => {
-        b && S && null != g
+        I && S && null != g
             ? (0, s.openModalLazy)(async () => {
                   let { default: e } = await Promise.all([n.e('63288'), n.e('77298'), n.e('23357'), n.e('29549'), n.e('12013'), n.e('52249'), n.e('99783'), n.e('31605'), n.e('26182'), n.e('95900'), n.e('32776'), n.e('87624'), n.e('60691'), n.e('57674'), n.e('82296')]).then(n.bind(n, 435626));
                   return (t) =>
@@ -59,7 +59,7 @@ t.Z = i.memo(function (e) {
                 'aria-label': p.intl.string(p.t.Z1RnTk),
                 'aria-haspopup': 'dialog',
                 onClick: () => {
-                    T(), I();
+                    T(), b();
                 },
                 ...v,
                 children: (0, r.jsx)(E, { color: 'currentColor' })

@@ -16,8 +16,8 @@ var r = n(392711),
     g = n(581025),
     E = n(795448),
     v = n(441623),
-    I = n(474936),
-    b = n(981631);
+    b = n(474936),
+    I = n(981631);
 class S extends s.Z {
     isChannelEligible(e, t) {
         switch (e.type) {
@@ -55,10 +55,10 @@ class S extends s.Z {
                 a = v.Z.getFriendAnniversaries().filter((e) => t.has(e));
             if (r && a.length > 0) {
                 let e = a[0];
-                this.maybeSendGiftingPromptSystemMessageDebounced(i.id, I.hX.FRIEND_ANNIVERSARY, e, a.length > 1 ? I.X2.VIEW_ALL : I.X2.SEND_MESSAGE);
+                this.maybeSendGiftingPromptSystemMessageDebounced(i.id, b.hX.FRIEND_ANNIVERSARY, e, a.length > 1 ? b.X2.VIEW_ALL : b.X2.SEND_MESSAGE);
             }
             n &&
-                h.default.track(b.rMx.FRIEND_ANNIVERSARIES_CHANNEL_VIEWED, {
+                h.default.track(I.rMx.FRIEND_ANNIVERSARIES_CHANNEL_VIEWED, {
                     friend_anniversaries_count: a.length,
                     ...(0, o.v_)(i)
                 });

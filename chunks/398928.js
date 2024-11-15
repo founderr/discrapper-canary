@@ -25,18 +25,18 @@ function o(e) {
         m = (0, i.useMemo)(() => l(e.defaultSelectedKeys, new s()), [e.defaultSelectedKeys]),
         [g, E] = (0, r.zk)(h, m, e.onSelectionChange),
         v = (0, i.useMemo)(() => (e.disabledKeys ? new Set(e.disabledKeys) : new Set()), [e.disabledKeys]),
-        [I, b] = (0, i.useState)(o);
-    'replace' === o && 'toggle' === I && 'object' == typeof g && 0 === g.size && b('replace');
+        [b, I] = (0, i.useState)(o);
+    'replace' === o && 'toggle' === b && 'object' == typeof g && 0 === g.size && I('replace');
     let S = (0, i.useRef)(o);
     return (
         (0, i.useEffect)(() => {
-            o !== S.current && (b(o), (S.current = o));
+            o !== S.current && (I(o), (S.current = o));
         }, [o]),
         {
             selectionMode: t,
             disallowEmptySelection: n,
-            selectionBehavior: I,
-            setSelectionBehavior: b,
+            selectionBehavior: b,
+            setSelectionBehavior: I,
             get isFocused() {
                 return c.current;
             },

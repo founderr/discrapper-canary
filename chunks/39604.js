@@ -70,8 +70,8 @@ var r = n(46973),
     g = n(959457),
     E = n(33039),
     v = n(626135),
-    I = n(358085),
-    b = n(557177),
+    b = n(358085),
+    I = n(557177),
     S = n(435064),
     T = n(61994),
     y = n(550351),
@@ -155,7 +155,7 @@ function U(e) {
     }),
         n && v.default.track(O.rMx.CLIPS_SETTINGS_UPDATED, { viewer_clips_enabled: t });
 }
-function G(e, t) {
+function B(e, t) {
     var n, r, i, a, s, o, u, c, d, f;
     let p = new Map();
     for (let e in t.framesEncodedByEncoder) {
@@ -193,7 +193,7 @@ function G(e, t) {
         saved_at: t.savedAt
     };
 }
-async function B(e) {
+async function G(e) {
     let t = S.Z.getSettings().storageLocation,
         n = (0, y.Z)(e),
         r = ''.concat((0, T.Z)(n.applicationName.substring(0, 20)), '_').concat(n.id, '.mp4'),
@@ -235,7 +235,7 @@ async function B(e) {
     try {
         var f;
         let { duration: e, clipStats: t } = await (null != u ? a.saveClipForUser(u, i, l) : a.saveClip(i, l)),
-            r = G(d, t);
+            r = B(d, t);
         (r.clip_save_time_ms = t.clipSaveTimeMs), (r.clip_size_bytes = t.clipSizeBytes), null != t.viewerDecodeFps && ((r.decode_fps_during_clip = t.viewerDecodeFps), (r.encode_fps_during_clip = t.viewerEncodeFps), (r.target_fps = null)), v.default.track(O.rMx.CLIP_SAVED, r);
         let s = await (0, C.R)(o.Z.clips.getClipProtocolURLFromPath(i), 0);
         return (
@@ -258,7 +258,7 @@ async function B(e) {
             !('errorMessage' in r))
         )
             throw (v.default.track(O.rMx.CLIP_SAVE_FAILURE, d), r);
-        let t = G(d, r);
+        let t = B(d, r);
         throw ((t.error_at = r.errorAt), (t.error_message = r.errorMessage), v.default.track(O.rMx.CLIP_SAVE_FAILURE, t), r.errorMessage);
     }
 }
@@ -274,7 +274,7 @@ async function Z(e) {
     let _ = p.Z.getCurrentUserActiveStream(),
         g = null != _ ? (0, c.V9)(_) : void 0,
         v = null != e ? e : g,
-        I = (() => {
+        b = (() => {
             let e = null != v ? (0, c.my)(v).ownerId : void 0;
             return e === h.default.getId() ? R.X9.STREAMER : null != e ? R.X9.VIEWER : R.X9.DECOUPLED;
         })(),
@@ -293,20 +293,20 @@ async function Z(e) {
         })();
     s.Z.dispatch({
         type: 'CLIPS_SAVE_CLIP_START',
-        clipType: I,
+        clipType: b,
         streamKey: v,
         thumbnail: T
     });
-    let y = (0, b.GN)('clip_save', 0.5),
+    let y = (0, I.GN)('clip_save', 0.5),
         A = performance.now();
     try {
-        let e = await B(v);
+        let e = await G(v);
         s.Z.dispatch({
             type: 'CLIPS_SAVE_CLIP',
             clip: e
         });
     } catch (e) {
-        R.jF.error('Clip Failed to Save', e), null == y || y.stop(), (0, b.GN)('clip_error', 0.5), s.Z.dispatch({ type: 'CLIPS_SAVE_CLIP_ERROR' });
+        R.jF.error('Clip Failed to Save', e), null == y || y.stop(), (0, I.GN)('clip_error', 0.5), s.Z.dispatch({ type: 'CLIPS_SAVE_CLIP_ERROR' });
     }
     R.jF.info(''.concat(S.Z.getSettings().clipsLength / 1000, 's clip save took ').concat(Math.round(performance.now() - A), 'ms'));
 }
@@ -340,7 +340,7 @@ function H() {
 }
 async function Y(e) {
     var t;
-    if (!(0, I.isDesktop)() || (null === (t = o.Z.clips) || void 0 === t ? void 0 : t.loadClipsDirectory) == null) return;
+    if (!(0, b.isDesktop)() || (null === (t = o.Z.clips) || void 0 === t ? void 0 : t.loadClipsDirectory) == null) return;
     let n = await o.Z.clips.loadClipsDirectory(e),
         r = [];
     for (let e of n) {
@@ -357,7 +357,7 @@ async function Y(e) {
 }
 async function W(e) {
     var t;
-    if (!!(0, I.isDesktop)() && (null === (t = o.Z.clips) || void 0 === t ? void 0 : t.deleteClip) != null)
+    if (!!(0, b.isDesktop)() && (null === (t = o.Z.clips) || void 0 === t ? void 0 : t.deleteClip) != null)
         await o.Z.clips.deleteClip(e),
             s.Z.dispatch({
                 type: 'CLIPS_DELETE_CLIP',

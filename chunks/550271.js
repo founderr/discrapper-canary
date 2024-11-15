@@ -21,8 +21,8 @@ var i = n(496532),
     g = n(933632),
     E = n(158188),
     v = n(66334),
-    I = n(215635),
-    b = n(718572),
+    b = n(215635),
+    I = n(718572),
     S = n(496223),
     T = n(846262),
     y = n(926372),
@@ -31,7 +31,7 @@ let N = (e) => {
     let { badge: t, primaryTintColor: n, secondaryTintColor: N, ...C } = e;
     switch (t) {
         case A.ZD.SWORD:
-            return (0, r.jsx)(b.o, {
+            return (0, r.jsx)(I.o, {
                 primaryTintColor: n,
                 secondaryTintColor: N,
                 ...C
@@ -138,7 +138,7 @@ let N = (e) => {
                 ...C
             });
         case A.ZD.SUN:
-            return (0, r.jsx)(I.O, {
+            return (0, r.jsx)(b.O, {
                 primaryTintColor: n,
                 secondaryTintColor: N,
                 ...C

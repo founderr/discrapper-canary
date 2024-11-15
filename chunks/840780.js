@@ -28,10 +28,10 @@ var i = n(200651),
     j = n(690221),
     A = n(231664),
     P = n(759198),
-    R = n(131704),
-    M = n(199902),
-    L = n(314897),
-    w = n(592125),
+    M = n(131704),
+    R = n(199902),
+    w = n(314897),
+    L = n(592125),
     D = n(984933),
     O = n(430824),
     k = n(131951),
@@ -151,7 +151,7 @@ class ee extends l.PureComponent {
                                 children: t.name
                             })
                         }),
-                        (0, R.Qm)(l.type) ? c : (0, i.jsx)($, { timestamps: o })
+                        (0, M.Qm)(l.type) ? c : (0, i.jsx)($, { timestamps: o })
                     ]
                 })
             ]
@@ -177,7 +177,7 @@ class ee extends l.PureComponent {
             (i = () => {
                 var e;
                 let { channel: t, embeddedActivity: n } = this.props;
-                s()(null != t, 'Channel is null during navigation click'), s()(null != n, 'Activity null during navigation click'), (0, R.vd)(t.type) && d.Z.selectParticipant(t.id, n.applicationId), h.Z.channelListScrollTo(null !== (e = t.guild_id) && void 0 !== e ? e : Q.ME, t.id), (0, R.Qm)(t.type) && (0, g.tg)(J.Ez.PANEL);
+                s()(null != t, 'Channel is null during navigation click'), s()(null != n, 'Activity null during navigation click'), (0, M.vd)(t.type) && d.Z.selectParticipant(t.id, n.applicationId), h.Z.channelListScrollTo(null !== (e = t.guild_id) && void 0 !== e ? e : Q.ME, t.id), (0, M.Qm)(t.type) && (0, g.tg)(J.Ez.PANEL);
             }),
             n in t
                 ? Object.defineProperty(t, n, {
@@ -192,13 +192,13 @@ class ee extends l.PureComponent {
 t.Z = (0, m.Z)(function (e) {
     var t;
     let { guildId: n, ...l } = e,
-        r = (0, c.e7)([L.default], () => L.default.getId()),
+        r = (0, c.e7)([w.default], () => w.default.getId()),
         a = (0, c.e7)([b.ZP, F.Z], () => (0, T.Z)(b.ZP, F.Z)),
-        o = (0, c.e7)([H.Z, w.Z], () => w.Z.getChannel(H.Z.getVoiceChannelId())),
+        o = (0, c.e7)([H.Z, L.Z], () => L.Z.getChannel(H.Z.getVoiceChannelId())),
         s = (0, c.e7)([C.ZP], () => C.ZP.getConnectedActivityChannelId()),
-        u = (0, c.e7)([w.Z], () => w.Z.getChannel(s)),
+        u = (0, c.e7)([L.Z], () => L.Z.getChannel(s)),
         d = (0, c.e7)([O.Z], () => O.Z.getGuild(null == u ? void 0 : u.guild_id)),
-        [h, p] = (0, c.Wu)([M.Z], () => [M.Z.getCurrentUserActiveStream(), M.Z.getStreamerActiveStreamMetadata()]),
+        [h, p] = (0, c.Wu)([R.Z], () => [R.Z.getCurrentUserActiveStream(), R.Z.getStreamerActiveStreamMetadata()]),
         m = (0, c.e7)([f.Z], () => f.Z.useReducedMotion),
         g = (0, c.e7)([C.ZP], () => (null != u ? C.ZP.getSelfEmbeddedActivityForChannel(u.id) : null)),
         x = (0, c.e7)([O.Z, U.Z, D.ZP], () => (null != o ? S.JL(o, O.Z, U.Z, !1) : null != n && S.h_(D.ZP.getChannels(n), O.Z, U.Z).length > 0)),

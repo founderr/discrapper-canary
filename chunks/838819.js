@@ -9,8 +9,8 @@ var r = n(200651),
     d = n(704215),
     u = n(952265),
     m = n(481060),
-    p = n(150063),
-    h = n(434650),
+    h = n(150063),
+    p = n(434650),
     f = n(100527),
     g = n(906732),
     C = n(702486),
@@ -28,16 +28,16 @@ var r = n(200651),
     B = n(381585),
     y = n(597688),
     L = n(328347),
-    P = n(307043),
-    Z = n(223143),
+    Z = n(307043),
+    P = n(223143),
     O = n(298228),
     w = n(937510),
     A = n(309956),
     R = n(853748),
     H = n(426171),
     F = n(823941),
-    D = n(752053),
-    V = n(963102),
+    V = n(752053),
+    D = n(963102),
     M = n(508498),
     W = n(38900),
     U = n(709999),
@@ -122,9 +122,9 @@ function ei(e) {
 function es(e) {
     let { category: t, isPremiumUser: n, initialItemCardRef: i, isGiftEasterEggEnabled: l, setIsGiftEasterEggEnabled: o, showEasterEggToggle: c, isFullScreen: d } = e,
         u = a.useRef(10 + 70 * Math.random()),
-        [p, f] = a.useState(!1),
+        [h, f] = a.useState(!1),
         g = (0, q.M7)(t.skuId),
-        C = (0, h.O)(
+        C = (0, p.O)(
             (e) => {
                 f(e && null != g);
             },
@@ -158,7 +158,7 @@ function es(e) {
                 null != t.unpublishedAt &&
                 (0, r.jsx)(R.$, {
                     unpublishedAt: t.unpublishedAt,
-                    isVisible: p,
+                    isVisible: h,
                     displayOptions: g,
                     isFullScreen: d
                 })
@@ -169,9 +169,9 @@ t.default = function (e) {
     var t;
     let { isFullScreen: n = !0 } = e;
     (0, v.z)(x.f);
-    let i = (0, P.u)('CollectiblesShop'),
-        { analyticsSource: l, analyticsLocations: h } = (0, c.cj)([L.Z], () => L.Z.getAnalytics()),
-        { analyticsLocations: _ } = (0, g.ZP)([...h, f.Z.COLLECTIBLES_SHOP]),
+    let i = (0, Z.u)('CollectiblesShop'),
+        { analyticsSource: l, analyticsLocations: p } = (0, c.cj)([L.Z], () => L.Z.getAnalytics()),
+        { analyticsLocations: _ } = (0, g.ZP)([...p, f.Z.COLLECTIBLES_SHOP]),
         { sessionId: k, scrollerRef: w, scrollHandler: R } = (0, C._)(X.rMx.COLLECTIBLES_SHOP_SCROLLED, l),
         { feedState: F, catalogState: U, transitionToCatalog: G, transitionToFeed: K } = (0, A.B)(i, w),
         [q, ea] = a.useState(!1),
@@ -179,11 +179,11 @@ t.default = function (e) {
         [eo, ec] = a.useState(),
         [ed, eu] = a.useState(),
         em = (0, c.e7)([E.Z], () => E.Z.getLayers().includes(X.S9g.COLLECTIBLES_SHOP)),
-        ep = (0, u.f9)(),
-        { onClose: eh } = (0, M.Db)(),
+        eh = (0, u.f9)(),
+        { onClose: ep } = (0, M.Db)(),
         ef = (0, c.e7)([I.default], () => I.default.getCurrentUser()),
         eg = T.ZP.canUseCollectibles(ef),
-        { categories: eC, isFetchingCategories: eb, fetchCategoriesError: ex, fetchPurchasesError: ev, claimError: e_, refreshCategories: ek } = (0, Z.Z)(),
+        { categories: eC, isFetchingCategories: eb, fetchCategoriesError: ex, fetchPurchasesError: ev, claimError: e_, refreshCategories: ek } = (0, P.Z)(),
         ej = null !== (t = null != ex ? ex : ev) && void 0 !== t ? t : e_;
     (0, j.P)();
     let eE = (0, O.O)(eC),
@@ -223,7 +223,7 @@ t.default = function (e) {
             });
     }, [eN]),
         a.useEffect(() => {
-            !n && (0, p.Y)(X.Z5c.COLLECTIBLES_SHOP);
+            !n && (0, h.Y)(X.Z5c.COLLECTIBLES_SHOP);
         }, [n]),
         a.useEffect(
             () => () => {
@@ -235,20 +235,20 @@ t.default = function (e) {
             [eC]
         ),
         a.useEffect(() => {
-            if (!n || em || ep) return;
+            if (!n || em || eh) return;
             let e = (e) => {
-                if (e.key === et.mR.Escape) eh();
+                if (e.key === et.mR.Escape) ep();
             };
             return window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e);
-        }, [n, em, ep, eh]);
+        }, [n, em, eh, ep]);
     let eB = a.useCallback(() => {
             ek();
         }, [ek]),
         { setCategoryRef: ey, handleScrollToCategory: eL } = (0, H.xV)(w.current),
-        { reducedMotion: eP } = a.useContext(m.AccessibilityPreferencesContext),
-        eZ = a.useRef(null),
+        { reducedMotion: eZ } = a.useContext(m.AccessibilityPreferencesContext),
+        eP = a.useRef(null),
         eO = a.useRef(null);
-    (0, m.useFocusLock)(eZ),
+    (0, m.useFocusLock)(eP),
         a.useEffect(() => {
             if (!n) {
                 var e;
@@ -257,10 +257,10 @@ t.default = function (e) {
         }, [n]);
     let ew = a.useCallback(
             async (e, t, r) => {
-                let a = r && !n && !eP.enabled;
+                let a = r && !n && !eZ.enabled;
                 eu(e), ec(t), await G(a), t && eL(t);
             },
-            [G, eL, n, eP]
+            [G, eL, n, eZ]
         ),
         eA = (0, c.e7)([y.Z], () => {
             var e;
@@ -276,7 +276,7 @@ t.default = function (e) {
             children: [
                 (0, r.jsx)('div', {
                     className: er.shop,
-                    ref: n ? eZ : eO,
+                    ref: n ? eP : eO,
                     tabIndex: -1,
                     children: (0, r.jsxs)(m.AdvancedScroller, {
                         className: er.shopScroll,
@@ -296,10 +296,10 @@ t.default = function (e) {
                                         [er.out]: F === Q.f7.OUT
                                     }),
                                     children: [
-                                        (0, r.jsx)(V.I, {
+                                        (0, r.jsx)(D.I, {
                                             isFullScreen: n,
                                             isLayer: em,
-                                            onClose: eh,
+                                            onClose: ep,
                                             isCatalogView: !1,
                                             transparent: !0
                                         }),
@@ -317,10 +317,10 @@ t.default = function (e) {
                                         [er.out]: U === Q.f7.OUT
                                     }),
                                     children: [
-                                        (0, r.jsx)(V.I, {
+                                        (0, r.jsx)(D.I, {
                                             isFullScreen: n,
                                             isLayer: em,
-                                            onClose: eh,
+                                            onClose: ep,
                                             isCatalogView: i,
                                             transparent: i,
                                             handleTransition: K
@@ -332,9 +332,9 @@ t.default = function (e) {
                                                 children: eb
                                                     ? (0, r.jsx)(W.Z, {})
                                                     : null != ej
-                                                      ? (0, r.jsx)(D.Z, {
+                                                      ? (0, r.jsx)(V.Z, {
                                                             onRetry: eB,
-                                                            errorOrigin: D.i.SHOP_PAGE
+                                                            errorOrigin: V.i.SHOP_PAGE
                                                         })
                                                       : (0, r.jsx)('div', {
                                                             className: er.categories,

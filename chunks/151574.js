@@ -16,8 +16,8 @@ var r,
     g = n(570220),
     E = n(686546),
     v = n(28546),
-    I = n(285651),
-    b = n(926491),
+    b = n(285651),
+    I = n(926491),
     S = n(373228),
     T = n(378233),
     y = n(419922),
@@ -34,7 +34,7 @@ let M = (0, f.Mg)(_.Z.EXPRESSION_SUGGESTIONS_CONTAINER_PADDING),
     P = (0, f.Mg)(_.Z.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_SIZE),
     k = 2 * P + (0, f.Mg)(_.Z.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_MARGIN) + 2 * M,
     U = () => Promise.resolve();
-function G(e) {
+function B(e) {
     let { isFocused: t, isHidden: n, sendability: r, listIndex: i, sticker: s, onMouseOver: o, onSelectSticker: c } = e,
         { tabIndex: d, ...f } = (0, u.JA)(''.concat(i));
     return (0, a.jsxs)(p.Clickable, {
@@ -58,7 +58,7 @@ function G(e) {
                 sticker: s,
                 className: w.__invalid_sticker
             }),
-            r !== I.eb.SENDABLE && (0, a.jsx)(A.Z, { size: 14 })
+            r !== b.eb.SENDABLE && (0, a.jsx)(A.Z, { size: 14 })
         ]
     });
 }
@@ -69,7 +69,7 @@ t.Z = s.memo(function (e) {
         E = s.useContext(g.ZP),
         [y, A] = s.useState(null),
         [M, P] = s.useState(!1),
-        [B, Z] = s.useState(null),
+        [G, Z] = s.useState(null),
         F = (0, v.Iu)((e) => null != e.activeView),
         V = s.useRef(null),
         [j, H] = s.useState(''),
@@ -172,11 +172,11 @@ t.Z = s.memo(function (e) {
                         sticker_id: e.id,
                         suggestion_trigger: Y
                     }),
-                    t === I.eb.SENDABLE)
+                    t === b.eb.SENDABLE)
                 )
                     P(!0), o(e, S.V0.EXPRESSION_SUGGESTIONS), ee.cancel(), H('');
                 else if ((0, T.jl)(e)) {
-                    let t = b.Z.getStickerPack(e.pack_id);
+                    let t = I.Z.getStickerPack(e.pack_id);
                     null != t &&
                         (0, N.Z)({
                             stickerPack: t,
@@ -230,9 +230,9 @@ t.Z = s.memo(function (e) {
                                         children: ec.map((e, t) => {
                                             let { sticker: n, sendability: r } = e;
                                             return (0, a.jsx)(
-                                                G,
+                                                B,
                                                 {
-                                                    isFocused: B === ''.concat(t),
+                                                    isFocused: G === ''.concat(t),
                                                     isHidden: eu,
                                                     sendability: r,
                                                     listIndex: t,
@@ -261,8 +261,8 @@ t.Z = s.memo(function (e) {
                                             style: { maxWidth: k },
                                             variant: 'text-sm/normal',
                                             children:
-                                                null != B
-                                                    ? x.intl.format(x.t['5gglIi'], { stickerName: null === (t = X[+B]) || void 0 === t ? void 0 : t.sticker.name })
+                                                null != G
+                                                    ? x.intl.format(x.t['5gglIi'], { stickerName: null === (t = X[+G]) || void 0 === t ? void 0 : t.sticker.name })
                                                     : x.intl.format(x.t['8DjNnJ'], {
                                                           upHook: (e, t) =>
                                                               (0, a.jsx)(

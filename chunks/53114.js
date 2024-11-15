@@ -364,7 +364,7 @@ class m extends s.Z {
                 duration_decoder_unknown: p(e.decoderBuckets[f.gr.UNKNOWN]),
                 ...c
             },
-            { bytes: _, framesDropped: h, framesCodecError: m, framesCodec: g, framesNetwork: E, packets: v, packetsLost: I, nackCount: b, pliCount: S, qpSum: T, pauseCount: y, freezeCount: A, totalPausesDuration: N, totalFreezesDuration: C, totalFramesDuration: R, keyframes: O, passthroughCount: D, cryptorSuccessCount: L, cryptorFailureCount: x, cryptorDuration: w, cryptorAttempts: M, qualityDecodeErrors: P, qualityDecoderReboots: k, qualityScoreErrors: U, qualityFrameDrops: G, qualitySizeMismatches: B } = e.aggregatedProperties;
+            { bytes: _, framesDropped: h, framesCodecError: m, framesCodec: g, framesNetwork: E, packets: v, packetsLost: b, nackCount: I, pliCount: S, qpSum: T, pauseCount: y, freezeCount: A, totalPausesDuration: N, totalFreezesDuration: C, totalFramesDuration: R, keyframes: O, passthroughCount: D, cryptorSuccessCount: L, cryptorFailureCount: x, cryptorDuration: w, cryptorAttempts: M, qualityDecodeErrors: P, qualityDecoderReboots: k, qualityScoreErrors: U, qualityFrameDrops: B, qualitySizeMismatches: G } = e.aggregatedProperties;
         return (
             e instanceof f.nt ? ((d.sender_freeze_count = A), (d.sender_total_freezes_duration = C), (d.sender_total_frames_duration = R)) : ((d.receiver_freeze_count = A), (d.receiver_total_freezes_duration = C), (d.receiver_total_frames_duration = R), (d.receiver_pause_count = y), (d.receiver_total_pauses_duration = N)),
             {
@@ -372,13 +372,13 @@ class m extends s.Z {
                 avg_bitrate: r > 0 ? Math.round(((null != _ ? _ : 0) * 8) / r) : 0,
                 avg_fps: r > 0 ? Math.round((null != g ? g : 0) / r) : 0,
                 num_bytes: _,
-                num_packets_lost: I,
+                num_packets_lost: b,
                 num_packets: v,
                 num_frames: E,
                 num_frames_codec_error: m,
                 time_to_first_frame_ms: e.timeToFirstFrame,
                 num_frames_dropped: h,
-                num_nacks: b,
+                num_nacks: I,
                 num_plis: S,
                 qp_sum: T,
                 num_keyframes: O,
@@ -390,8 +390,8 @@ class m extends s.Z {
                 encoder_quality_decode_errors: P,
                 encoder_quality_decoder_reboots: k,
                 encoder_quality_score_errors: U,
-                encoder_quality_frame_drops: G,
-                encoder_quality_size_mismatches: B
+                encoder_quality_frame_drops: B,
+                encoder_quality_size_mismatches: G
             }
         );
     }
@@ -424,12 +424,12 @@ class m extends s.Z {
                             g,
                             E,
                             v,
-                            I = !0;
+                            b = !0;
                         if (this.connection.context === o.Yn.STREAM) {
-                            var b = this.connection.getRemoteVideoSinkWants(S);
-                            (null == b || 0 === b) && (null == y ? void 0 : y.quality) === h && (b = this.connection.getRemoteVideoSinkWants('any')), (I = (null != b ? b : 0) > 0);
+                            var I = this.connection.getRemoteVideoSinkWants(S);
+                            (null == I || 0 === I) && (null == y ? void 0 : y.quality) === h && (I = this.connection.getRemoteVideoSinkWants('any')), (b = (null != I ? I : 0) > 0);
                         }
-                        let A = this.videoStopped.value || !I;
+                        let A = this.videoStopped.value || !b;
                         if ((A !== T.isVideoStopped && T.setVideoStopped(A, f.Mq.SenderStopped), !A)) {
                             T.appendAndIncrementStats(f.z4.parseOutboundStats(t, e)), T.encoderCodec !== f.u7.UNKNOWN && _.add(T.encoderCodec);
                             let n = null == y ? void 0 : y.maxBitrate;

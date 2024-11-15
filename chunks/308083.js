@@ -39,7 +39,7 @@ n.d(t, {
         return N;
     },
     WZ: function () {
-        return G;
+        return B;
     },
     Wy: function () {
         return r;
@@ -48,7 +48,7 @@ n.d(t, {
         return T;
     },
     cG: function () {
-        return I;
+        return b;
     },
     cm: function () {
         return S;
@@ -63,7 +63,7 @@ n.d(t, {
         return Q;
     },
     gh: function () {
-        return B;
+        return G;
     },
     i1: function () {
         return V;
@@ -81,7 +81,7 @@ n.d(t, {
         return x;
     },
     q2: function () {
-        return b;
+        return I;
     },
     qC: function () {
         return i;
@@ -121,8 +121,8 @@ var r,
     g = n(137920),
     E = n(388032);
 let v = 200,
-    I = 4,
-    b = 'ClanSettingsModal',
+    b = 4,
+    I = 'ClanSettingsModal',
     S = 20,
     T = 30,
     y = 24,
@@ -184,8 +184,8 @@ let x = '700136079562375258',
     P = new Set([...M, 'Server: NA', 'Server: EU', 'Server: Asia', 'Server: TW/HK/MO', 'Mondstadt', 'Liyue', 'Inazuma', 'Sumeru', 'Fontaine', 'F2P', 'Spenders', 'Co-op', 'Support']),
     k = ['20+', '30+', '40+', 'All Ages'],
     U = ['Recurring Events', 'Beginner Friendly', 'PUGs', 'Inclusive', 'Parent Friendly', 'Work-life Balance', 'Competitive', 'Streamer', 'Esports'],
-    G = new Set([...M, ...k, ...U]),
-    B = new Set(['Bulgarian', 'Chinese (Simplified)', 'Chinese (Traditional)', 'Croatian', 'Czech', 'Danish', 'Dutch', 'English', 'Finnish', 'French', 'German', 'Greek', 'Hindi', 'Hungarian', 'Italian', 'Japanese', 'Korean', 'Lithuanian', 'Norwegian', 'Polish', 'Portuguese', 'Romanian', 'Russian', 'Spanish', 'Swedish', 'Thai', 'Turkish', 'Ukrainian', 'Vietnamese']);
+    B = new Set([...M, ...k, ...U]),
+    G = new Set(['Bulgarian', 'Chinese (Simplified)', 'Chinese (Traditional)', 'Croatian', 'Czech', 'Danish', 'Dutch', 'English', 'Finnish', 'French', 'German', 'Greek', 'Hindi', 'Hungarian', 'Italian', 'Japanese', 'Korean', 'Lithuanian', 'Norwegian', 'Polish', 'Portuguese', 'Romanian', 'Russian', 'Spanish', 'Swedish', 'Thai', 'Turkish', 'Ukrainian', 'Vietnamese']);
 function Z(e, t) {
     var n;
     return p().sortBy(
@@ -193,7 +193,7 @@ function Z(e, t) {
         ((n = t),
         (e) => {
             var t;
-            return -((((null == n ? void 0 : n.includes(e)) ? 1 : 0) << 4) | ((((t = e), G.has(t) || F.has(t) || B.has(t)) ? 0 : 1) << 3) | ((P.has(e) ? 1 : 0) << 2) | ((k.includes(e) ? 1 : 0) << 1) | ((U.includes(e) ? 1 : 0) << 0));
+            return -((((null == n ? void 0 : n.includes(e)) ? 1 : 0) << 4) | ((((t = e), B.has(t) || F.has(t) || G.has(t)) ? 0 : 1) << 3) | ((P.has(e) ? 1 : 0) << 2) | ((k.includes(e) ? 1 : 0) << 1) | ((U.includes(e) ? 1 : 0) << 0));
         })
     );
 }

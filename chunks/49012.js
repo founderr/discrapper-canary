@@ -23,8 +23,8 @@ var r = n(302454),
     g = n(881706),
     E = n(592125),
     v = n(430824),
-    I = n(20303),
-    b = n(902676),
+    b = n(20303),
+    I = n(902676),
     S = n(375954),
     T = n(699516),
     y = n(944486),
@@ -59,15 +59,15 @@ function O(e, t) {
         P = !1,
         k = D,
         U = L,
-        G = null;
+        B = null;
     if (null != D && null != L) {
-        var B, Z, F;
+        var G, Z, F;
         let e = S.Z.getMessage(L, D),
             t = E.Z.getBasicChannel(L);
         M = null !== (F = null == t ? void 0 : t.guild_id) && void 0 !== F ? F : null;
         let n = v.Z.getGuild(M),
-            r = (null == e ? void 0 : null === (B = e.messageReference) || void 0 === B ? void 0 : B.guild_id) != null && (null == e ? void 0 : e.webhookId) != null && (null == e ? void 0 : e.hasFlag(N.iLy.IS_CROSSPOST)) && null != M;
-        r && (null == e ? void 0 : null === (Z = e.messageReference) || void 0 === Z ? void 0 : Z.guild_id) != null ? ((k = e.messageReference.message_id), (U = e.messageReference.channel_id), (G = e.messageReference.guild_id)) : (G = M);
+            r = (null == e ? void 0 : null === (G = e.messageReference) || void 0 === G ? void 0 : G.guild_id) != null && (null == e ? void 0 : e.webhookId) != null && (null == e ? void 0 : e.hasFlag(N.iLy.IS_CROSSPOST)) && null != M;
+        r && (null == e ? void 0 : null === (Z = e.messageReference) || void 0 === Z ? void 0 : Z.guild_id) != null ? ((k = e.messageReference.message_id), (U = e.messageReference.channel_id), (B = e.messageReference.guild_id)) : (B = M);
         let i = (null == t ? void 0 : t.type) === N.d4z.GUILD_ANNOUNCEMENT && (null == n ? void 0 : n.hasFeature(N.oNc.COMMUNITY)) === !0,
             a = (null == e ? void 0 : e.hasFlag(N.iLy.EPHEMERAL)) === !0;
         P = null != e && !a && (r || i);
@@ -79,7 +79,7 @@ function O(e, t) {
             null != t &&
             t.hasFeature(N.oNc.DISCOVERABLE) &&
             A.default.track(N.rMx.URL_CLICKED, {
-                url_domain: (0, b.F)(w),
+                url_domain: (0, I.F)(w),
                 guild_id: t.id,
                 channel_id: e.id
             }),
@@ -107,7 +107,7 @@ function O(e, t) {
                     channelId: L,
                     guildId: M,
                     sourceChannelId: U,
-                    sourceGuildId: G
+                    sourceGuildId: B
                 }),
             null != R)
         ) {
@@ -129,9 +129,9 @@ function O(e, t) {
         return;
     }
     let j = 'function' == typeof T ? T() : T,
-        H = (0, b.E)(w),
+        H = (0, I.E)(w),
         Y = !('http:' === H || 'https:' === H);
-    if ((!Y && (j || I.Z.isTrustedDomain(w))) || (Y && I.Z.isTrustedProtocol(w))) {
+    if ((!Y && (j || b.Z.isTrustedDomain(w))) || (Y && b.Z.isTrustedProtocol(w))) {
         null == t || (null != O && O)
             ? V()
             : P &&
@@ -140,7 +140,7 @@ function O(e, t) {
                   channelId: L,
                   guildId: M,
                   sourceChannelId: U,
-                  sourceGuildId: G
+                  sourceGuildId: B
               });
         return;
     }

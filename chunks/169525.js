@@ -3,7 +3,7 @@ n.d(t, {
         return S;
     },
     BP: function () {
-        return I;
+        return b;
     },
     MC: function () {
         return y;
@@ -15,7 +15,7 @@ n.d(t, {
         return T;
     },
     lK: function () {
-        return b;
+        return I;
     },
     wk: function () {
         return r;
@@ -48,7 +48,7 @@ let v = (e, t) => {
         }
         return n || (0, h.yE)(r, g.J0y.IS_SPOILER) ? 'spoiler' : null;
     },
-    I = (e, t, n, r, i) => {
+    b = (e, t, n, r, i) => {
         let { flags: a = 0, contentScanVersion: s } = e,
             u = _.Z.getMessage(t, n);
         if (null == u) return null;
@@ -58,7 +58,7 @@ let v = (e, t) => {
         }
         return r ? 'spoiler' : null;
     },
-    b = function (e, t) {
+    I = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             { contentScanMetadata: r } = e;
         if (t) {

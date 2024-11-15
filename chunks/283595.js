@@ -19,8 +19,8 @@ function E() {
     return null !== (e = c.K.get(g)) && void 0 !== e ? e : {};
 }
 let v = !1,
-    I = {},
     b = {},
+    I = {},
     S = new Set(),
     T = {},
     y = {},
@@ -40,24 +40,24 @@ function C() {
 function R(e) {
     for (let t of e) {
         let e = f.Z.createFromServer(t);
-        I[(0, p.Tu)(e.id, e.branchId)] = e;
+        b[(0, p.Tu)(e.id, e.branchId)] = e;
     }
 }
 function O(e) {
     let { libraryApplication: t } = e,
         n = f.Z.createFromServer(t),
         r = (0, p.Tu)(n.id, n.branchId);
-    (I[r] = n), S.delete(r);
+    (b[r] = n), S.delete(r);
 }
 function D(e, t) {
     var n;
     let r = (0, p.Tu)(e, t);
-    return null !== (n = I[r]) && void 0 !== n ? n : b[r];
+    return null !== (n = b[r]) && void 0 !== n ? n : I[r];
 }
 function L() {
     return {
-        ...b,
-        ...I
+        ...I,
+        ...b
     };
 }
 class x extends (r = u.ZP.Store) {
@@ -99,7 +99,7 @@ class x extends (r = u.ZP.Store) {
         if (null != n) {
             var r;
             let i = (0, p.Tu)(e, n),
-                a = null !== (r = I[i]) && void 0 !== r ? r : b[i];
+                a = null !== (r = b[i]) && void 0 !== r ? r : I[i];
             if (null != a && (0, p.Je)(a) && (t || !a.isHidden())) return a;
         }
         let i = L();
@@ -149,7 +149,7 @@ class x extends (r = u.ZP.Store) {
         },
         LIBRARY_FETCH_SUCCESS: function (e) {
             let { libraryApplications: t } = e;
-            (I = {}), R(t), (v = !0);
+            (b = {}), R(t), (v = !0);
         },
         SKU_PURCHASE_SUCCESS: function (e) {
             let { libraryApplications: t } = e;
@@ -174,9 +174,9 @@ class x extends (r = u.ZP.Store) {
         },
         LIBRARY_APPLICATIONS_TEST_MODE_ENABLED: function (e) {
             let { libraryApplications: t } = e;
-            for (let e of t) b[(0, p.Tu)(e.id, e.branchId)] = e;
+            for (let e of t) I[(0, p.Tu)(e.id, e.branchId)] = e;
         },
         DEVELOPER_TEST_MODE_RESET: function () {
-            b = {};
+            I = {};
         }
     }));

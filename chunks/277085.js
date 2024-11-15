@@ -31,7 +31,7 @@ function m(e) {
         { analyticsLocations: m } = (0, u.ZP)(),
         { trackUserProfileAction: g } = (0, f.KZ)(),
         [E, v] = (0, s.Wu)([l.Z], () => [l.Z.useReducedMotion, l.Z.keyboardModeEnabled]),
-        I = !n || E || v ? 0 : 300;
+        b = !n || E || v ? 0 : 300;
     return (0, r.jsxs)(c.ZP, {
         className: a()(p.popover, {
             [p.visible]: t,
@@ -40,7 +40,7 @@ function m(e) {
         children: [
             (0, r.jsx)(o.TooltipContainer, {
                 text: _.intl.string(_.t.bt75u7),
-                delay: I,
+                delay: b,
                 'aria-label': !1,
                 children: (0, r.jsx)(c.zx, {
                     className: a()(p.button, p.left),
@@ -57,7 +57,7 @@ function m(e) {
             }),
             (0, r.jsx)(o.TooltipContainer, {
                 text: _.intl.string(_.t.VkKicX),
-                delay: I,
+                delay: b,
                 'aria-label': !1,
                 children: (0, r.jsx)(c.zx, {
                     className: a()(p.button, p.right),

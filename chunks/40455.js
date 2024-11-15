@@ -29,7 +29,7 @@ let h = null,
     E = !1;
 class v extends s.Z {
     initialize() {
-        this.waitFor(r.Z), this.waitFor(a.Z), this.waitFor(i.Z), this.syncWith([o.Z], () => !0), this.syncWith([a.Z], I);
+        this.waitFor(r.Z), this.waitFor(a.Z), this.waitFor(i.Z), this.syncWith([o.Z], () => !0), this.syncWith([a.Z], b);
     }
     loadCache() {
         let e = this.readSnapshot(v.LATEST_SNAPSHOT_VERSION);
@@ -101,7 +101,7 @@ class v extends s.Z {
             CACHE_LOADED_LAZY: () => this.loadCache(),
             CHANNEL_DELETE: y,
             CHANNEL_UPDATES: T,
-            CONNECTION_OPEN_SUPPLEMENTAL: b,
+            CONNECTION_OPEN_SUPPLEMENTAL: I,
             GUILD_DELETE: C,
             LOGIN_SUCCESS: R,
             THREAD_DELETE: N,
@@ -109,11 +109,11 @@ class v extends s.Z {
         });
     }
 }
-function I() {
+function b() {
     let e = a.Z.getChannelId();
     null != e && v.recordChannel(e);
 }
-function b() {
+function I() {
     v.dropUnreachableChannels(), v.replaceLru((0, _.J)(m, 1250));
 }
 function S(e) {

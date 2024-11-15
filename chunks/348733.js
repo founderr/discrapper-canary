@@ -1,33 +1,33 @@
 var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    r = n(192379),
+    s = n(120356),
+    a = n.n(s),
     l = n(442837),
     o = n(261435),
     c = n(237997),
     d = n(438015),
     u = n(981631),
     h = n(455178);
-class p extends s.Component {
+class p extends r.Component {
     render() {
-        let { keybind: e, notifications: t, position: n, locked: s } = this.props;
+        let { keybind: e, notifications: t, position: n, locked: r } = this.props;
         if (n === u._vf.DISABLED) return null;
-        let r = -1;
+        let s = -1;
         return (0, i.jsx)('div', {
             className: a()(h.container, h[n]),
             children: t.map((t) =>
-                s && t.status === u._1z.TIMED_OUT
+                r && t.status === u._1z.TIMED_OUT
                     ? null
-                    : ((r += 1),
+                    : ((s += 1),
                       (0, i.jsx)(
                           d.Z,
                           {
-                              index: r,
-                              zIndex: 100 - r,
+                              index: s,
+                              zIndex: 100 - s,
                               position: n,
                               notification: t,
                               keybind: e,
-                              locked: s
+                              locked: r
                           },
                           t.id
                       ))

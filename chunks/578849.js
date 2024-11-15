@@ -174,7 +174,7 @@ function E(e) {
     return RegExp(e.toString() + '|').exec('').length - 1;
 }
 let v = /\[(?:[^\\\]]|\\.)*\]|\(\??|\\([1-9][0-9]*)|\\./;
-function I(e, { joinWith: t }) {
+function b(e, { joinWith: t }) {
     let n = 0;
     return e
         .map((e) => {
@@ -194,7 +194,7 @@ function I(e, { joinWith: t }) {
         .map((e) => `(${e})`)
         .join(t);
 }
-let b = '[a-zA-Z]\\w*',
+let I = '[a-zA-Z]\\w*',
     S = '[a-zA-Z_]\\w*',
     T = '\\b\\d+(\\.\\d+)?',
     y = '(-?)(\\b0[xX][a-fA-F0-9]+|(\\b\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)',
@@ -229,7 +229,7 @@ let b = '[a-zA-Z]\\w*',
 var L = Object.freeze({
     __proto__: null,
     MATCH_NOTHING_RE: /\b\B/,
-    IDENT_RE: b,
+    IDENT_RE: I,
     UNDERSCORE_IDENT_RE: S,
     NUMBER_RE: T,
     C_NUMBER_RE: y,
@@ -310,7 +310,7 @@ var L = Object.freeze({
     },
     TITLE_MODE: {
         scope: 'title',
-        begin: b,
+        begin: I,
         relevance: 0
     },
     UNDERSCORE_TITLE_MODE: {
@@ -354,7 +354,7 @@ function k(e, t) {
 function U(e, t) {
     void 0 === e.relevance && (e.relevance = 1);
 }
-let G = (e, t) => {
+let B = (e, t) => {
         if (!e.beforeMatch) return;
         if (e.starts) throw Error('beforeMatch cannot be used with starts');
         let n = Object.assign({}, e);
@@ -370,7 +370,7 @@ let G = (e, t) => {
             (e.relevance = 0),
             delete n.beforeMatch;
     },
-    B = ['of', 'and', 'for', 'in', 'not', 'or', 'if', 'then', 'parent', 'list', 'value'],
+    G = ['of', 'and', 'for', 'in', 'not', 'or', 'if', 'then', 'parent', 'list', 'value'],
     Z = {},
     F = (e) => {
         console.error(e);
@@ -399,14 +399,14 @@ function W(e) {
             if (Array.isArray(e.begin)) {
                 if (e.skip || e.excludeBegin || e.returnBegin) throw (F('skip, excludeBegin, returnBegin not compatible with beginScope: {}'), H);
                 if ('object' != typeof e.beginScope || null === e.beginScope) throw (F('beginScope must be object'), H);
-                Y(e, e.begin, { key: 'beginScope' }), (e.begin = I(e.begin, { joinWith: '' }));
+                Y(e, e.begin, { key: 'beginScope' }), (e.begin = b(e.begin, { joinWith: '' }));
             }
         })(e),
         !(function (e) {
             if (Array.isArray(e.end)) {
                 if (e.skip || e.excludeEnd || e.returnEnd) throw (F('skip, excludeEnd, returnEnd not compatible with endScope: {}'), H);
                 if ('object' != typeof e.endScope || null === e.endScope) throw (F('endScope must be object'), H);
-                Y(e, e.end, { key: 'endScope' }), (e.end = I(e.end, { joinWith: '' }));
+                Y(e, e.end, { key: 'endScope' }), (e.end = b(e.end, { joinWith: '' }));
             }
         })(e);
 }
@@ -437,7 +437,7 @@ var q = (function (e) {
             languages: null,
             __emitter: d
         };
-    function b(e) {
+    function I(e) {
         return v.noHighlightRe.test(e);
     }
     function S(e, t, n) {
@@ -466,13 +466,13 @@ var q = (function (e) {
             for (; t; ) {
                 var r, i;
                 n += D.substring(e, t.index);
-                let a = b.case_insensitive ? t[0].toLowerCase() : t[0];
+                let a = I.case_insensitive ? t[0].toLowerCase() : t[0];
                 let s = ((r = N), (i = a), r.keywords[i]);
                 if (s) {
                     let [e, r] = s;
                     if ((O.addText(n), (n = ''), (c[a] = (c[a] || 0) + 1), c[a] <= 7 && (L += r), e.startsWith('_'))) n += t[0];
                     else {
-                        let n = b.classNameAliases[e] || e;
+                        let n = I.classNameAliases[e] || e;
                         O.addKeyword(t[0], n);
                     }
                 } else n += t[0];
@@ -505,13 +505,13 @@ var q = (function (e) {
                     n++;
                     continue;
                 }
-                let r = b.classNameAliases[e[n]] || e[n],
+                let r = I.classNameAliases[e[n]] || e[n],
                     i = t[n];
                 r ? O.addKeyword(i, r) : ((D = i), d(), (D = '')), n++;
             }
         }
         function h(e, t) {
-            return e.scope && 'string' == typeof e.scope && O.openNode(b.classNameAliases[e.scope] || e.scope), e.beginScope && (e.beginScope._wrap ? (O.addKeyword(D, b.classNameAliases[e.beginScope._wrap] || e.beginScope._wrap), (D = '')) : e.beginScope._multi && (p(e.beginScope, t), (D = ''))), (N = Object.create(e, { parent: { value: N } }));
+            return e.scope && 'string' == typeof e.scope && O.openNode(I.classNameAliases[e.scope] || e.scope), e.beginScope && (e.beginScope._wrap ? (O.addKeyword(D, I.classNameAliases[e.beginScope._wrap] || e.beginScope._wrap), (D = '')) : e.beginScope._multi && (p(e.beginScope, t), (D = ''))), (N = Object.create(e, { parent: { value: N } }));
         }
         let m = {};
         function g(n, i) {
@@ -575,8 +575,8 @@ var q = (function (e) {
             if (Z > 100000 && Z > 3 * i.index) throw Error('potential infinite loop, way more iterations than matches');
             return (D += a), a.length;
         }
-        let b = R(e);
-        if (!b) throw (F(u.replace('{}', e)), Error('Unknown language: "' + e + '"'));
+        let I = R(e);
+        if (!I) throw (F(u.replace('{}', e)), Error('Unknown language: "' + e + '"'));
         let S = (function (e) {
                 function t(t, n) {
                     return RegExp(f(t), 'm' + (e.case_insensitive ? 'i' : '') + (e.unicodeRegex ? 'u' : '') + (n ? 'g' : ''));
@@ -591,7 +591,7 @@ var q = (function (e) {
                     compile() {
                         0 === this.regexes.length && (this.exec = () => null);
                         let e = this.regexes.map((e) => e[1]);
-                        (this.matcherRe = t(I(e, { joinWith: '|' }), !0)), (this.lastIndex = 0);
+                        (this.matcherRe = t(b(e, { joinWith: '|' }), !0)), (this.lastIndex = 0);
                     }
                     exec(e) {
                         this.matcherRe.lastIndex = this.lastIndex;
@@ -639,7 +639,7 @@ var q = (function (e) {
                     (e.classNameAliases = a(e.classNameAliases || {})),
                     (function n(i, s) {
                         if (i.isCompiled) return i;
-                        [w, k, W, G].forEach((e) => e(i, s)), e.compilerExtensions.forEach((e) => e(i, s)), (i.__beforeBegin = null), [M, P, U].forEach((e) => e(i, s)), (i.isCompiled = !0);
+                        [w, k, W, B].forEach((e) => e(i, s)), e.compilerExtensions.forEach((e) => e(i, s)), (i.__beforeBegin = null), [M, P, U].forEach((e) => e(i, s)), (i.isCompiled = !0);
                         let o = null;
                         return (
                             'object' == typeof i.keywords && i.keywords.$pattern && ((i.keywords = Object.assign({}, i.keywords)), (o = i.keywords.$pattern), delete i.keywords.$pattern),
@@ -667,7 +667,7 @@ var q = (function (e) {
                                                         return t
                                                             ? Number(t)
                                                             : (function (e) {
-                                                                    return B.includes(e.toLowerCase());
+                                                                    return G.includes(e.toLowerCase());
                                                                 })(e)
                                                               ? 0
                                                               : 1;
@@ -722,14 +722,14 @@ var q = (function (e) {
                         );
                     })(e)
                 );
-            })(b),
+            })(I),
             A = '',
             N = o || S,
             C = {},
             O = new v.__emitter(v);
         !(function () {
             let e = [];
-            for (let t = N; t !== b; t = t.parent) t.scope && e.unshift(t.scope);
+            for (let t = N; t !== I; t = t.parent) t.scope && e.unshift(t.scope);
             e.forEach((e) => O.openNode(e));
         })();
         let D = '',
@@ -826,9 +826,9 @@ var q = (function (e) {
                     let t = R(n[1]);
                     return !t && (V(u.replace('{}', n[1])), V('Falling back to no-highlight mode for this block.', e)), t ? n[1] : 'no-highlight';
                 }
-                return t.split(/\s+/).find((e) => b(e) || R(e));
+                return t.split(/\s+/).find((e) => I(e) || R(e));
             })(e);
-        if (b(n)) return;
+        if (I(n)) return;
         if (
             (x('before:highlightElement', {
                 el: e,

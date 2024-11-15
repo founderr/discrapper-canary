@@ -12,8 +12,8 @@ var r = n(200651),
 t.Z = (e) => {
     let { reportType: t, menu: n, modalProps: _, onSubmit: p, onNavigate: h, emailToken: m, isAuthenticated: g = !0 } = e,
         E = (0, o.Dt)(),
-        { nodes: v, root_node_id: I, success_node_id: b, fail_node_id: S } = n,
-        [T, y] = i.useState(I),
+        { nodes: v, root_node_id: b, success_node_id: I, fail_node_id: S } = n,
+        [T, y] = i.useState(b),
         [A, N] = i.useState(void 0),
         [C, R] = i.useState(void 0),
         [O, D] = i.useState([]),
@@ -52,7 +52,7 @@ t.Z = (e) => {
             if (O.length < 1) return;
             let r = [...O],
                 i = r.pop(),
-                a = null !== (n = null == i ? void 0 : i.nodeRef) && void 0 !== n ? n : I;
+                a = null !== (n = null == i ? void 0 : i.nodeRef) && void 0 !== n ? n : b;
             if (t.name === l.b.MESSAGE || t.name === l.b.FIRST_DM) {
                 let e = t.record.id;
                 s.ZP.trackWithMetadata(d.rMx.IAR_NAVIGATE, {
@@ -65,13 +65,13 @@ t.Z = (e) => {
             }
             N(null == i ? void 0 : null === (e = i.multiSelect) || void 0 === e ? void 0 : e.state), R(null == i ? void 0 : i.textInput), y(a), D(r), null == h || h('..');
         },
-        G = i.useMemo(() => {
+        B = i.useMemo(() => {
             let e = [],
                 t = [];
             for (let a in v) {
                 var n, r, i;
                 let s = v[a];
-                if (s.id !== b && s.id !== S && s.id !== I) {
+                if (s.id !== I && s.id !== S && s.id !== b) {
                     if (s.key.endsWith('_SUBMIT') || (null === (n = s.button) || void 0 === n ? void 0 : n.type) === 'submit') {
                         t.push(s);
                         continue;
@@ -83,8 +83,8 @@ t.Z = (e) => {
                     }
                 }
             }
-            return [v[I], ...e, ...t, v[b], v[S]];
-        }, [v, I, S, b]);
+            return [v[b], ...e, ...t, v[I], v[S]];
+        }, [v, b, S, I]);
     return (0, r.jsx)(a.ModalRoot, {
         transitionState: _.transitionState,
         'aria-labelledby': E,
@@ -92,7 +92,7 @@ t.Z = (e) => {
             width: 440,
             activeSlide: T,
             centered: !1,
-            children: G.map((e) =>
+            children: B.map((e) =>
                 (0, r.jsx)(
                     a.Slide,
                     {
@@ -109,7 +109,7 @@ t.Z = (e) => {
                                 onNavigateBack: U,
                                 multiSelect: A,
                                 textInput: C,
-                                successNodeId: b,
+                                successNodeId: I,
                                 failNodeId: S,
                                 onSubmit: k,
                                 reportId: L

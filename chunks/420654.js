@@ -16,7 +16,7 @@ t.Z = i.memo(function (e) {
     let { user: t, onClose: n, bio: a, hidePersonalInformation: m, viewFullBioDisabled: g = !1 } = e,
         { context: E } = (0, u.KZ)(),
         { analyticsLocations: v } = (0, l.ZP)(),
-        [I, b] = i.useState(!1),
+        [b, I] = i.useState(!1),
         [S, T] = i.useState(!1);
     return m || null == a || '' === a
         ? null
@@ -24,7 +24,7 @@ t.Z = i.memo(function (e) {
               children: [
                   (0, r.jsx)('div', {
                       ref: (e) => {
-                          null != e && (b(!S && e.scrollHeight - e.clientHeight > 1), e.getBoundingClientRect().height > h && T(!0));
+                          null != e && (I(!S && e.scrollHeight - e.clientHeight > 1), e.getBoundingClientRect().height > h && T(!0));
                       },
                       className: s()(p.descriptionClamp, S && p.maxBioHeight),
                       children: (0, r.jsx)(c.Z, {
@@ -33,7 +33,7 @@ t.Z = i.memo(function (e) {
                           textColor: 'header-primary'
                       })
                   }),
-                  (I || S) &&
+                  (b || S) &&
                       (0, r.jsx)(o.Button, {
                           look: o.Button.Looks.BLANK,
                           size: o.Button.Sizes.NONE,

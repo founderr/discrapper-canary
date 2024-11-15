@@ -15,8 +15,8 @@ var r = n(687249),
     g = n(292548),
     E = n(290677),
     v = n(551023),
-    I = n(118788),
-    b = n(661233),
+    b = n(118788),
+    I = n(661233),
     S = n(357361),
     T = n(438330),
     y = '[object Arguments]',
@@ -30,30 +30,30 @@ e.exports = function e(t, n, R, O, D, L) {
         M = 2 & n,
         P = 4 & n;
     if ((R && (x = D ? R(t, O, D, L) : R(t)), void 0 !== x)) return x;
-    if (!b(t)) return t;
+    if (!I(t)) return t;
     var k = E(t);
     if (k) {
         if (((x = h(t)), !w)) return u(t, x);
     } else {
         var U = p(t),
-            G = U == A || '[object GeneratorFunction]' == U;
+            B = U == A || '[object GeneratorFunction]' == U;
         if (v(t)) return l(t, w);
-        if (U == N || U == y || (G && !D)) {
-            if (((x = M || G ? {} : g(t)), !w)) return M ? d(t, o(x, t)) : c(t, s(x, t));
+        if (U == N || U == y || (B && !D)) {
+            if (((x = M || B ? {} : g(t)), !w)) return M ? d(t, o(x, t)) : c(t, s(x, t));
         } else {
             if (!C[U]) return D ? t : {};
             x = m(t, U, w);
         }
     }
     L || (L = new r());
-    var B = L.get(t);
-    if (B) return B;
+    var G = L.get(t);
+    if (G) return G;
     L.set(t, x),
         S(t)
             ? t.forEach(function (r) {
                   x.add(e(r, n, R, r, t, L));
               })
-            : I(t) &&
+            : b(t) &&
               t.forEach(function (r, i) {
                   x.set(i, e(r, n, R, i, t, L));
               });

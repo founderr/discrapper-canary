@@ -22,15 +22,15 @@ t.Z = {
             g = n.boundary,
             E = n.rootBoundary,
             v = n.altBoundary,
-            I = n.padding,
-            b = n.tether,
-            S = void 0 === b || b,
+            b = n.padding,
+            I = n.tether,
+            S = void 0 === I || I,
             T = n.tetherOffset,
             y = void 0 === T ? 0 : T,
             A = (0, c.Z)(t, {
                 boundary: g,
                 rootBoundary: E,
-                padding: I,
+                padding: b,
                 altBoundary: v
             }),
             N = (0, i.Z)(t.placement),
@@ -62,12 +62,12 @@ t.Z = {
             };
         if (!!L) {
             if (void 0 === h || h) {
-                var G,
-                    B = 'y' === O ? r.we : r.t$,
+                var B,
+                    G = 'y' === O ? r.we : r.t$,
                     Z = 'y' === O ? r.I : r.F2,
                     F = 'y' === O ? 'height' : 'width',
                     V = L[O],
-                    j = V + A[B],
+                    j = V + A[G],
                     H = V - A[Z],
                     Y = S ? -w[F] / 2 : 0,
                     W = C === r.BL ? x[F] : w[F],
@@ -81,14 +81,14 @@ t.Z = {
                                   height: 0
                               },
                     Q = t.modifiersData['arrow#persistent'] ? t.modifiersData['arrow#persistent'].padding : (0, f.Z)(),
-                    X = Q[B],
+                    X = Q[G],
                     J = Q[Z],
                     $ = (0, o.u)(0, x[F], q[F]),
                     ee = R ? x[F] / 2 - Y - $ - X - P.mainAxis : W - $ - X - P.mainAxis,
                     et = R ? -x[F] / 2 + Y + $ + J + P.mainAxis : K + $ + J + P.mainAxis,
                     en = t.elements.arrow && (0, u.Z)(t.elements.arrow),
                     er = en ? ('y' === O ? en.clientTop || 0 : en.clientLeft || 0) : 0,
-                    ei = null != (G = null == k ? void 0 : k[O]) ? G : 0,
+                    ei = null != (B = null == k ? void 0 : k[O]) ? B : 0,
                     ea = (0, o.u)(S ? (0, _.VV)(j, V + ee - ei - er) : j, V, S ? (0, _.Fp)(H, V + et - ei) : H);
                 (L[O] = ea), (U[O] = ea - V);
             }

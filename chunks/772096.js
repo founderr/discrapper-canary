@@ -38,16 +38,16 @@ let h = ['http:', 'https:', 'discord:'],
     g = [...m, d.b.EMOJI, d.b.CUSTOM_EMOJI],
     E = [d.b.LIST, d.b.HEADING, d.b.BLOCK_QUOTE, d.b.SUBTEXT],
     v = [d.b.TEXT],
-    I = [d.b.UNDERLINE, d.b.STRONG, d.b.ITALICS, d.b.STRIKETHROUGH, d.b.INLINE_CODE, d.b.SPOILER, d.b.LINE_BREAK, d.b.TIMESTAMP, d.b.EMOJI, d.b.CUSTOM_EMOJI, d.b.LIST, d.b.HEADING, d.b.BLOCK_QUOTE, d.b.SUBTEXT];
-function b(e, t) {
+    b = [d.b.UNDERLINE, d.b.STRONG, d.b.ITALICS, d.b.STRIKETHROUGH, d.b.INLINE_CODE, d.b.SPOILER, d.b.LINE_BREAK, d.b.TIMESTAMP, d.b.EMOJI, d.b.CUSTOM_EMOJI, d.b.LIST, d.b.HEADING, d.b.BLOCK_QUOTE, d.b.SUBTEXT];
+function I(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
     for (let r of (!Array.isArray(e) && (e = [e]), e)) {
         if (void 0 === r || !t.includes(r.type)) return null;
         if (r.type === d.b.INLINE_CODE) {
             let e = [...t, ...n];
-            if (null == b(r.validationChildContent, e)) return null;
+            if (null == I(r.validationChildContent, e)) return null;
         }
-        if (Array.isArray(r.content) && null == b(r.content, t)) return null;
+        if (Array.isArray(r.content) && null == I(r.content, t)) return null;
     }
     return e;
 }
@@ -96,9 +96,9 @@ t.ZP = {
             },
             L = n.allowEmojiLinks ? g : m,
             x = [...L, ...E],
-            w = [...v, ...I],
-            M = b(t(A, D), x, [d.b.EMOJI]),
-            P = b(t(N, D), w);
+            w = [...v, ...b],
+            M = I(t(A, D), x, [d.b.EMOJI]),
+            P = I(t(N, D), w);
         if (
             null == M ||
             null == P ||
@@ -145,12 +145,12 @@ t.ZP = {
             return f();
         let k = i().pick(t.rules, L),
             U = l().parserFor(k)(h.whitespaceSanitized, D),
-            G = T.whitespaceSanitized,
-            { target: B } = R;
+            B = T.whitespaceSanitized,
+            { target: G } = R;
         return {
             content: U,
-            target: B,
-            title: G
+            target: G,
+            title: B
         };
     }
 };

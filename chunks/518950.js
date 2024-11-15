@@ -35,7 +35,7 @@ function l(e) {
             avatarDecorationOverride: f,
             showTryItOut: c
         }),
-        I = r.useCallback(() => {
+        b = r.useCallback(() => {
             m.onMouseEnter(), v.onMouseEnter();
         }, [m, v]);
     return {
@@ -44,7 +44,7 @@ function l(e) {
         avatarSrc: p,
         isAnimating: h,
         eventHandlers: {
-            onMouseEnter: I,
+            onMouseEnter: b,
             onMouseLeave: r.useCallback(() => {
                 m.onMouseLeave(), v.onMouseLeave();
             }, [m, v])

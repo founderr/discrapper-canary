@@ -26,7 +26,7 @@ function h(e) {
             activeCommandOptionStates: s.Z.getOptionStates(t.id)
         })),
         v = (0, c.e)(t),
-        I = (0, o.__)(h, t, { location: 'ChannelTextAreaBars' });
+        b = (0, o.__)(h, t, { location: 'ChannelTextAreaBars' });
     return i.useMemo(() => {
         let e = [],
             i = [];
@@ -41,7 +41,7 @@ function h(e) {
                     })
                 ),
             null != h &&
-                (I && e.push((0, r.jsx)(u.Z, { activeCommand: h })),
+                (b && e.push((0, r.jsx)(u.Z, { activeCommand: h })),
                 e.push(
                     (0, r.jsx)(l.Z, {
                         activeCommand: h,
@@ -63,7 +63,7 @@ function h(e) {
                 floating: i
             }
         );
-    }, [h, g, E, t, m, v, I, n]);
+    }, [h, g, E, t, m, v, b, n]);
 }
 function m(e) {
     let { bars: t } = e,

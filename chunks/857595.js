@@ -21,7 +21,7 @@ n.d(t, {
         return d;
     },
     Zt: function () {
-        return I;
+        return b;
     },
     cq: function () {
         return f;
@@ -45,7 +45,7 @@ n.d(t, {
         return c;
     },
     qz: function () {
-        return b;
+        return I;
     },
     r_: function () {
         return g;
@@ -110,7 +110,7 @@ function v(e) {
         saturation: e
     });
 }
-function I(e) {
+function b(e) {
     let t = s.Z.useReducedMotion;
     r.Z.dispatch({
         type: 'ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION',
@@ -134,7 +134,7 @@ function I(e) {
           })
         : t && !n && i.ZP.clearSettingsOverride('gifAutoPlay', 'animateEmoji', 'animateStickers');
 }
-function b(e) {
+function I(e) {
     r.Z.dispatch({
         type: 'ACCESSIBILITY_SET_SYNC_FORCED_COLORS',
         syncForcedColors: e

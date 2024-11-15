@@ -28,8 +28,8 @@ function m(e, t, n) {
 let g = 1 * f.Z.Millis.MINUTE,
     E = (e) => 'https://youtube.com/watch?v='.concat(e),
     v = 5 * f.Z.Millis.MINUTE,
-    I = /live_user_(.*)-\{width\}/,
-    b = null,
+    b = /live_user_(.*)-\{width\}/,
+    I = null,
     S = 0,
     T = null,
     y = new Set(),
@@ -89,9 +89,9 @@ let R = new (class e {
                 p = { large_image: null != u && null !== (r = (0, d.getAssetFromImageURL)(h.ABu.TWITCH, u)) && void 0 !== r ? r : void 0 },
                 m = await C(f, t),
                 g = c.Z.get(h.ABu.TWITCH);
-            let E = null !== ((a = u), (i = null === (s = I.exec(a)) || void 0 === s ? void 0 : s[1])) && void 0 !== i ? i : e.name,
+            let E = null !== ((a = u), (i = null === (s = b.exec(a)) || void 0 === s ? void 0 : s[1])) && void 0 !== i ? i : e.name,
                 v = null != _ && '' !== _ ? _.slice(0, 128) : void 0,
-                b = null != m && '' !== m ? m.slice(0, 128) : void 0;
+                I = null != m && '' !== m ? m.slice(0, 128) : void 0;
             return {
                 url:
                     null === (n = g.getPlatformUserUrl) || void 0 === n
@@ -103,7 +103,7 @@ let R = new (class e {
                 name: g.name,
                 assets: p,
                 details: v,
-                state: b
+                state: I
             };
         } catch (n) {
             if (401 === n.status && null == t)
@@ -187,15 +187,15 @@ class D extends (r = s.ZP.Store) {
         O(), this.waitFor(_.Z), this.syncWith([p.Z], O);
     }
     getStream() {
-        return b;
+        return I;
     }
 }
 m(D, 'displayName', 'ExternalStreamingStore'),
     (t.Z = new D(l.Z, {
         STREAMING_UPDATE: function (e) {
             var t;
-            if (a()(e.stream, b)) return !1;
-            b = null !== (t = e.stream) && void 0 !== t ? t : null;
+            if (a()(e.stream, I)) return !1;
+            I = null !== (t = e.stream) && void 0 !== t ? t : null;
         },
         USER_CONNECTIONS_UPDATE: () => R._check()
     }));

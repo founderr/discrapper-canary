@@ -138,10 +138,10 @@ function v(e) {
         'application/x-www-form-urlencoded': v,
         'application/json': JSON.parse
     });
-function I(e) {
+function b(e) {
     return /[/+]json($|[^-\w])/i.test(e);
 }
-function b(e) {
+function I(e) {
     (this.req = e), (this.xhr = this.req.xhr), (this.text = ('HEAD' !== this.req.method && ('' === this.xhr.responseType || 'text' === this.xhr.responseType)) || void 0 === this.xhr.responseType ? this.xhr.responseText : null), (this.statusText = this.req.xhr.statusText);
     let t = this.xhr.status;
     1223 === t && (t = 204),
@@ -172,7 +172,7 @@ function S(e, t) {
                 t = null,
                 r = null;
             try {
-                r = new b(n);
+                r = new I(n);
             } catch (e) {
                 return ((t = Error('Parser is unable to parse the response')).parse = !0), (t.original = e), n.xhr ? ((t.rawResponse = void 0 === n.xhr.responseType ? n.xhr.responseText : n.xhr.response), (t.status = n.xhr.status ? n.xhr.status : null), (t.statusCode = t.status)) : ((t.rawResponse = null), (t.status = null)), n.callback(t);
             }
@@ -185,19 +185,19 @@ function S(e, t) {
             e ? ((e.original = t), (e.response = r), (e.status = e.status || r.status), n.callback(e, r)) : n.callback(null, r);
         });
 }
-d(b.prototype, _.prototype),
-    (b.prototype._parseBody = function (e) {
+d(I.prototype, _.prototype),
+    (I.prototype._parseBody = function (e) {
         let t = m.parse[this.type];
-        return this.req._parser ? this.req._parser(this, e) : (!t && I(this.type) && (t = m.parse['application/json']), t && e && (e.length > 0 || e instanceof Object) ? t(e) : null);
+        return this.req._parser ? this.req._parser(this, e) : (!t && b(this.type) && (t = m.parse['application/json']), t && e && (e.length > 0 || e instanceof Object) ? t(e) : null);
     }),
-    (b.prototype.toError = function () {
+    (I.prototype.toError = function () {
         let e = this.req,
             t = e.method,
             n = e.url,
             r = Error(`cannot ${t} ${n} (${this.status})`);
         return (r.status = this.status), (r.method = t), (r.url = n), r;
     }),
-    (m.Response = b),
+    (m.Response = I),
     a(S.prototype),
     d(S.prototype, l.prototype),
     (S.prototype.type = function (e) {
@@ -300,7 +300,7 @@ d(b.prototype, _.prototype),
         if ((this._withCredentials && (t.withCredentials = !0), !this._formData && 'GET' !== this.method && 'HEAD' !== this.method && 'string' != typeof n && !this._isHost(n))) {
             let e = this._header['content-type'],
                 t = this._serializer || m.serialize[e ? e.split(';')[0] : ''];
-            !t && I(e) && (t = m.serialize['application/json']), t && (n = t(n));
+            !t && b(e) && (t = m.serialize['application/json']), t && (n = t(n));
         }
         for (let e in this.header) null !== this.header[e] && f(this.header, e) && t.setRequestHeader(e, this.header[e]);
         this._responseType && (t.responseType = this._responseType), this.emit('request', this), t.send(void 0 === n ? null : n);

@@ -18,12 +18,12 @@ var i = n(481060),
     _ = n(981631),
     p = n(388032);
 function h(e) {
-    let { openWarningPopout: t, type: n, content: h, stickers: m, uploads: g, channel: E, restrictMentions: v = !0, respectCooldown: I = !0 } = e,
-        b = f.ZP.canUseIncreasedMessageLength(u.default.getCurrentUser());
+    let { openWarningPopout: t, type: n, content: h, stickers: m, uploads: g, channel: E, restrictMentions: v = !0, respectCooldown: b = !0 } = e,
+        I = f.ZP.canUseIncreasedMessageLength(u.default.getCurrentUser());
     return new Promise((e) =>
         (function (e) {
             var t, n, u;
-            let { openWarningPopout: f, type: h, content: m, stickers: g, uploads: E, channel: v, restrictMentions: I, respectCooldown: b, userCanUsePremiumMessageLength: S, resolve: T } = e;
+            let { openWarningPopout: f, type: h, content: m, stickers: g, uploads: E, channel: v, restrictMentions: b, respectCooldown: I, userCanUsePremiumMessageLength: S, resolve: T } = e;
             if (0 === m.length && !(null === (t = h.submit) || void 0 === t ? void 0 : t.allowEmptyMessage) && (null == g || 0 === g.length) && (null == E || 0 === E.length)) {
                 T({
                     valid: !1,
@@ -64,7 +64,7 @@ function h(e) {
                 return;
             }
             if (null != v) {
-                if (null != v.getGuildId() && b && l.Z.getSlowmodeCooldownGuess(v.id) > 0) {
+                if (null != v.getGuildId() && I && l.Z.getSlowmodeCooldownGuess(v.id) > 0) {
                     T({
                         valid: !1,
                         failureReason: _.zYc.SLOWMODE_COOLDOWN
@@ -73,7 +73,7 @@ function h(e) {
                 }
                 if (null != f)
                     for (let { check: e, analyticsType: t, animation: n } of d.$) {
-                        let r = e(m, v, I);
+                        let r = e(m, v, b);
                         if (!1 !== r) {
                             f({
                                 analyticsType: t,
@@ -117,8 +117,8 @@ function h(e) {
             uploads: g,
             channel: E,
             restrictMentions: v,
-            respectCooldown: I,
-            userCanUsePremiumMessageLength: b,
+            respectCooldown: b,
+            userCanUsePremiumMessageLength: I,
             resolve: e
         })
     );

@@ -6,7 +6,7 @@ n.d(t, {
         return j;
     },
     DV: function () {
-        return B;
+        return G;
     },
     Gn: function () {
         return M;
@@ -30,7 +30,7 @@ n.d(t, {
         return D;
     },
     Y1: function () {
-        return G;
+        return B;
     },
     fe: function () {
         return P;
@@ -82,8 +82,8 @@ var d = n(558217),
     E = n(176354),
     v = n(111361);
 n(709054);
-var I = n(304852),
-    b = n(199257),
+var b = n(304852),
+    I = n(199257),
     S = n(149203),
     T = n(981631),
     y = n(185923),
@@ -106,8 +106,8 @@ let R = function (e, t) {
             });
         c.Xb.useExperiment({ location: 'useEmojiCategories' }, { autoTrackExposure: !0 });
         let g = V(n),
-            { topEmojis: T, newlyAddedEmojis: A } = (0, b.Z)(n, e),
-            { allEmojis: N } = (0, I.Z)({
+            { topEmojis: T, newlyAddedEmojis: A } = (0, I.Z)(n, e),
+            { allEmojis: N } = (0, b.Z)({
                 topEmojis: T,
                 newlyAddedEmojis: A
             }),
@@ -342,7 +342,7 @@ let U = (e, t) => {
         if (e.type === S.En.GUILD) return null != t ? t.toString() : '';
         return e.id;
     },
-    G = (e, t) => {
+    B = (e, t) => {
         switch (e) {
             case S.UX.TOP_GUILD_EMOJI:
                 return C.intl.formatToPlainString(C.t.W6Wi1d, { guildName: t });
@@ -372,7 +372,7 @@ let U = (e, t) => {
                 return null != t ? t : e;
         }
     };
-function B(e, t, n) {
+function G(e, t, n) {
     r.useEffect(() => {
         f.DZ.loadIfNecessary();
     }, []);

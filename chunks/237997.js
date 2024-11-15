@@ -16,8 +16,8 @@ var r,
     g = n(998502),
     E = n(145597),
     v = n(451478),
-    I = n(981631),
-    b = n(987650);
+    b = n(981631),
+    I = n(987650);
 function S(e, t, n) {
     return (
         t in e
@@ -34,15 +34,15 @@ function S(e, t, n) {
 let T = Object.freeze({
         selectedGuildId: null,
         selectedChannelId: null,
-        displayUserMode: I.OYC.ALWAYS,
-        displayNameMode: I.wC$.ALWAYS,
-        avatarSizeMode: I.ipw.LARGE,
-        notificationPositionMode: I._vf.TOP_LEFT,
-        textChatNotifications: I.Ypu.ENABLED,
+        displayUserMode: b.OYC.ALWAYS,
+        displayNameMode: b.wC$.ALWAYS,
+        avatarSizeMode: b.ipw.LARGE,
+        notificationPositionMode: b._vf.TOP_LEFT,
+        textChatNotifications: b.Ypu.ENABLED,
         disableExternalLinkAlert: !1,
         disablePinTutorial: !1,
         showKeybindIndicators: !0,
-        textWidgetOpacity: b.wF.LOWER
+        textWidgetOpacity: I.wF.LOWER
     }),
     y = null,
     A = {},
@@ -61,13 +61,13 @@ function M(e) {
 let P = { ...T },
     k = new Set(['AUDIO_SET_INPUT_DEVICE', 'AUDIO_SET_INPUT_VOLUME', 'AUDIO_SET_LOCAL_VIDEO_DISABLED', 'AUDIO_SET_LOCAL_VOLUME', 'AUDIO_SET_MODE', 'AUDIO_SET_NOISE_CANCELLATION', 'AUDIO_SET_NOISE_SUPPRESSION', 'AUDIO_SET_OUTPUT_DEVICE', 'AUDIO_SET_OUTPUT_VOLUME', 'AUDIO_TOGGLE_LOCAL_MUTE', 'AUDIO_TOGGLE_SELF_DEAF', 'AUDIO_TOGGLE_SELF_MUTE', 'BILLING_SUBSCRIPTION_UPDATE_SUCCESS', 'CATEGORY_COLLAPSE', 'CATEGORY_EXPAND', 'CHANNEL_ACK', 'CHANNEL_PRELOAD', 'GIFT_CODE_REDEEM', 'GIFT_CODE_REDEEM_FAILURE', 'GIFT_CODE_REDEEM_SUCCESS', 'HOTSPOT_HIDE', 'INVITE_MODAL_CLOSE', 'LAYOUT_CREATE', 'LAYOUT_CREATE_WIDGETS', 'LAYOUT_DELETE_ALL_WIDGETS', 'LAYOUT_DELETE_WIDGET', 'LAYOUT_SET_PINNED', 'LAYOUT_SET_TOP_WIDGET', 'LAYOUT_UPDATE_WIDGET', 'LOAD_MESSAGES', 'LOAD_MESSAGES_FAILURE', 'LOAD_MESSAGES_SUCCESS', 'MEDIA_ENGINE_SET_GO_LIVE_SOURCE', 'OVERLAY_ACTIVATE_REGION', 'OVERLAY_DEACTIVATE_ALL_REGIONS', 'OVERLAY_MESSAGE_EVENT_ACTION', 'OVERLAY_SET_AVATAR_SIZE_MODE', 'OVERLAY_SET_CLICK_ZONES', 'OVERLAY_SET_DISPLAY_NAME_MODE', 'OVERLAY_SET_DISPLAY_USER_MODE', 'OVERLAY_SET_INPUT_LOCKED', 'OVERLAY_SET_NOTIFICATION_POSITION_MODE', 'OVERLAY_SET_TEXT_CHAT_NOTIFICATION_MODE', 'OVERLAY_SET_SHOW_KEYBIND_INDICATORS', 'OVERLAY_SET_TEXT_WIDGET_OPACITY', 'OVERLAY_NOTIFY_READY_TO_SHOW', 'OVERLAY_OAUTH2_AUTHORIZE_MODAL_OPEN', 'OVERLAY_OAUTH2_AUTHORIZE_MODAL_CLOSE', 'PREMIUM_PAYMENT_ERROR_CLEAR', 'PREMIUM_PAYMENT_MODAL_CLOSE', 'PREMIUM_PAYMENT_MODAL_OPEN', 'PREMIUM_PAYMENT_SUBSCRIBE_FAIL', 'PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS', 'PREMIUM_PAYMENT_UPDATE_FAIL', 'PREMIUM_PAYMENT_UPDATE_SUCCESS', 'PREMIUM_REQUIRED_MODAL_CLOSE', 'PREMIUM_REQUIRED_MODAL_OPEN', 'PURCHASE_CONFIRMATION_MODAL_CLOSE', 'PURCHASE_CONFIRMATION_MODAL_OPEN', 'SKU_PURCHASE_CLEAR_ERROR', 'SKU_PURCHASE_FAIL', 'SKU_PURCHASE_MODAL_CLOSE', 'SKU_PURCHASE_MODAL_OPEN', 'SKU_PURCHASE_PREVIEW_FETCH_SUCCESS', 'SKU_PURCHASE_SHOW_CONFIRMATION_STEP', 'SKU_PURCHASE_START', 'SKU_PURCHASE_SUCCESS', 'STREAM_CLOSE', 'STREAM_START', 'VOICE_CHANNEL_SELECT', 'USER_SETTINGS_PROTO_ENQUEUE_UPDATE', 'USER_SETTINGS_PROTO_LOAD_IF_NECESSARY']),
     U = new Set([...k.values(), 'ACTIVITY_INVITE_MODAL_CLOSE', 'CALL_DELETE', 'CHANNEL_COLLAPSE', 'CHANNEL_SELECT', 'GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY', 'OVERLAY_CALL_PRIVATE_CHANNEL', 'OVERLAY_JOIN_GAME', 'OVERLAY_NOTIFICATION_EVENT', 'OVERLAY_SELECT_CALL', 'OVERLAY_SET_NOT_IDLE', 'OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST', 'OVERLAY_WIDGET_CHANGED', 'SOUNDBOARD_SET_OVERLAY_ENABLED', 'STREAM_STOP']);
-function G() {
+function B() {
     if (!__OVERLAY__) return !1;
     let e = y === (0, E.QF)(),
         t = C.has((0, E.QF)()) || x.size > 0;
     e && t ? (0, o.T_)(window, !0) : (0, o.T_)(window, !1);
 }
-function B() {
+function G() {
     if (y !== (0, E.QF)()) return !1;
     x.clear();
 }
@@ -75,10 +75,10 @@ function Z(e) {
     let t = (0, E.QF)();
     if (null == e.pid || e.pid === t)
         switch (e.type) {
-            case I.BmY.STORAGE_SYNC:
+            case b.BmY.STORAGE_SYNC:
                 i.ZP.PersistedStore.initializeAll(e.states);
                 break;
-            case I.BmY.DISPATCH:
+            case b.BmY.DISPATCH:
                 null != e.payloads &&
                     ((D = !0),
                     e.payloads.forEach((e) =>
@@ -207,7 +207,7 @@ class F extends (r = i.ZP.PersistedStore) {
         return P.notificationPositionMode;
     }
     getTextChatNotificationMode() {
-        return P.notificationPositionMode === I._vf.DISABLED ? I.Ypu.DISABLED : P.textChatNotifications;
+        return P.notificationPositionMode === b._vf.DISABLED ? b.Ypu.DISABLED : P.textChatNotifications;
     }
     get showKeybindIndicators() {
         return null == P.showKeybindIndicators || P.showKeybindIndicators;
@@ -267,15 +267,15 @@ S(F, 'displayName', 'OverlayStore'),
                     return (
                         null != n &&
                         ((0, l.lW)({
-                            type: I.BmY.DISPATCH,
+                            type: b.BmY.DISPATCH,
                             pid: (0, E.QF)(),
                             token: (0, E.Ht)(),
                             payloads: [
                                 {
                                     type: 'CHANNEL_PRELOAD',
-                                    guildId: t === I.ME ? null : t,
+                                    guildId: t === b.ME ? null : t,
                                     channelId: n,
-                                    context: I.e3s
+                                    context: b.e3s
                                 },
                                 {
                                     type: 'OVERLAY_SELECT_CHANNEL',
@@ -289,7 +289,7 @@ S(F, 'displayName', 'OverlayStore'),
                 }
                 return (
                     (0, l.lW)({
-                        type: I.BmY.DISPATCH,
+                        type: b.BmY.DISPATCH,
                         pid: (0, E.QF)(),
                         token: (0, E.Ht)(),
                         payloads: [e]
@@ -300,7 +300,7 @@ S(F, 'displayName', 'OverlayStore'),
                 (0, l.Ty)(Z, (0, E.Ht)()),
                 (0, l.$j)(),
                 (0, l.lW)({
-                    type: I.BmY.CONNECT,
+                    type: b.BmY.CONNECT,
                     pid: (0, E.QF)(),
                     token: (0, E.Ht)()
                 });
@@ -320,7 +320,7 @@ S(F, 'displayName', 'OverlayStore'),
         },
         OVERLAY_FOCUSED: function (e) {
             let { pid: t } = e;
-            (y = t), G();
+            (y = t), B();
         },
         OVERLAY_SELECT_CHANNEL: function (e) {
             let { guildId: t, channelId: n } = e;
@@ -371,14 +371,14 @@ S(F, 'displayName', 'OverlayStore'),
         },
         OVERLAY_SET_INPUT_LOCKED: function (e) {
             let { locked: t, pid: n } = e;
-            t ? C.delete(n) : C.add(n), B(), G(), (w = !1);
+            t ? C.delete(n) : C.add(n), G(), B(), (w = !1);
         },
         OVERLAY_ACTIVATE_REGION: function (e) {
             let { region: t } = e;
             if (y !== (0, E.QF)() || x.has(t)) return !1;
             x.add(t);
         },
-        OVERLAY_DEACTIVATE_ALL_REGIONS: B,
+        OVERLAY_DEACTIVATE_ALL_REGIONS: G,
         OVERLAY_SET_PREVIEW_IN_GAME_MODE: function (e) {
             w = e.isPreviewingInGame;
         },

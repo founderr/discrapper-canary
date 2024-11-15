@@ -60,13 +60,13 @@ var t, n;
                                     for (var g = 0; g < m.length; g++) {
                                         var E = m[g],
                                             v = e[E],
-                                            I = v.order;
-                                        if (I > _) break;
-                                        var b = null == s.prevCapture ? '' : s.prevCapture[0],
-                                            S = v.match(t, s, b);
+                                            b = v.order;
+                                        if (b > _) break;
+                                        var I = null == s.prevCapture ? '' : s.prevCapture[0],
+                                            S = v.match(t, s, I);
                                         if (S) {
-                                            var T = v.quality ? v.quality(S, s, b) : 0;
-                                            (I < _ || T > f) && ((l = E), (c = v), (d = S), (f = T), (_ = I));
+                                            var T = v.quality ? v.quality(S, s, I) : 0;
+                                            (b < _ || T > f) && ((l = E), (c = v), (d = S), (f = T), (_ = b));
                                         }
                                     }
                             }
@@ -121,8 +121,8 @@ var t, n;
                 var o = '<' + e + i + '>';
                 return r ? o + t + '</' + e + '>' : o;
             },
-            I = {},
-            b = function (e) {
+            b = {},
+            I = function (e) {
                 if (null == e) return null;
                 try {
                     var t = new URL(e, 'https://localhost').protocol;
@@ -171,8 +171,8 @@ var t, n;
             P = /^ (?= *`)|(` *) $/g,
             k = / *\n+$/,
             U = RegExp('^( *)(' + D + ') [\\s\\S]+?(?:\n{2,}(?! )(?!\\1' + D + ' )\\n*|\\s*\n*$)'),
-            G = /(?:^|\n)( *)$/;
-        var B =
+            B = /(?:^|\n)( *)$/;
+        var G =
                 ((e = /^ *\| *| *\| *$/g),
                 (t = / *$/),
                 (n = /^ *-+: *$/),
@@ -308,8 +308,8 @@ var t, n;
                 },
                 nptable: {
                     order: Y++,
-                    match: h(B.NPTABLE_REGEX),
-                    parse: B.parseNpTable,
+                    match: h(G.NPTABLE_REGEX),
+                    parse: G.parseNpTable,
                     react: null,
                     html: null
                 },
@@ -331,7 +331,7 @@ var t, n;
                     match: h(/^( *[-*_]){3,} *(?:\n *)+\n/),
                     parse: O,
                     react: function (e, t, n) {
-                        return E('hr', n.key, I);
+                        return E('hr', n.key, b);
                     },
                     html: function (e, t, n) {
                         return '<hr>';
@@ -391,7 +391,7 @@ var t, n;
                     order: Y++,
                     match: function (e, t) {
                         var n = null == t.prevCapture ? '' : t.prevCapture[0],
-                            r = G.exec(n),
+                            r = B.exec(n),
                             i = t._list || !t.inline;
                         return r && i ? ((e = r[1] + e), U.exec(e)) : null;
                     },
@@ -471,8 +471,8 @@ var t, n;
                 },
                 table: {
                     order: Y++,
-                    match: h(B.TABLE_REGEX),
-                    parse: B.parseTable,
+                    match: h(G.TABLE_REGEX),
+                    parse: G.parseTable,
                     react: function (e, t, n) {
                         var r = function (t) {
                                 return null == e.align[t] ? {} : { textAlign: e.align[t] };
@@ -654,14 +654,14 @@ var t, n;
                     },
                     react: function (e, t, n) {
                         return E('a', n.key, {
-                            href: b(e.target),
+                            href: I(e.target),
                             title: e.title,
                             children: t(e.content, n)
                         });
                     },
                     html: function (e, t, n) {
                         var r = {
-                            href: b(e.target),
+                            href: I(e.target),
                             title: e.title
                         };
                         return v('a', t(e.content, n), r);
@@ -679,7 +679,7 @@ var t, n;
                     },
                     react: function (e, t, n) {
                         return E('img', n.key, {
-                            src: b(e.target),
+                            src: I(e.target),
                             alt: e.alt,
                             title: e.title
                         });
@@ -689,7 +689,7 @@ var t, n;
                             'img',
                             '',
                             {
-                                src: b(e.target),
+                                src: I(e.target),
                                 alt: e.alt,
                                 title: e.title
                             },
@@ -799,7 +799,7 @@ var t, n;
                     match: m(/^ {2,}\n/),
                     parse: O,
                     react: function (e, t, n) {
-                        return E('br', n.key, I);
+                        return E('br', n.key, b);
                     },
                     html: function (e, t, n) {
                         return '<br>';
@@ -876,7 +876,7 @@ var t, n;
             defaultHtmlOutput: J,
             preprocess: d,
             sanitizeText: y,
-            sanitizeUrl: b,
+            sanitizeUrl: I,
             unescapeUrl: N,
             htmlTag: v,
             reactElement: E,

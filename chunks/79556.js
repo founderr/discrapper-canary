@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return w;
+        return L;
     }
 }),
     n(47120);
@@ -34,7 +34,7 @@ var l = n(120356),
     j = n(981631),
     A = n(647086),
     P = n(872356);
-function R(e, t, n) {
+function M(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -47,7 +47,7 @@ function R(e, t, n) {
         e
     );
 }
-class M extends Z.ZP {
+class R extends Z.ZP {
     componentWillUnmount() {
         this.resetTextChannelPopoutTimers();
     }
@@ -114,41 +114,41 @@ class M extends Z.ZP {
     }
     constructor(...e) {
         super(...e),
-            R(this, 'state', {
+            M(this, 'state', {
                 shouldShowThreadsPopout: !1,
                 shouldShowActivities: !1
             }),
-            R(this, 'enterTimer', 0),
-            R(this, 'exitTimer', 0),
-            R(this, 'handleMouseEnter', () => {
+            M(this, 'enterTimer', 0),
+            M(this, 'exitTimer', 0),
+            M(this, 'handleMouseEnter', () => {
                 if (!!this.props.canShowThreadPreviewForUser || null != this.props.embeddedApps)
                     this.resetTextChannelPopoutTimers(),
                         (this.enterTimer = setTimeout(() => {
                             null != this.props.embeddedApps && this.props.embeddedApps.length > 0 ? this.setState({ shouldShowActivities: !0 }) : this.props.canShowThreadPreviewForUser && this.setState({ shouldShowThreadsPopout: !0 });
                         }, 200));
             }),
-            R(this, 'handleMouseLeave', () => {
+            M(this, 'handleMouseLeave', () => {
                 this.resetTextChannelPopoutTimers(),
                     (this.exitTimer = setTimeout(() => {
                         this.state.shouldShowActivities && this.setState({ shouldShowActivities: !1 }), this.state.shouldShowThreadsPopout && this.setState({ shouldShowThreadsPopout: !1 });
                     }, 250));
             }),
-            R(this, 'handleThreadsPopoutClose', () => {
+            M(this, 'handleThreadsPopoutClose', () => {
                 this.resetTextChannelPopoutTimers(), this.setState({ shouldShowThreadsPopout: !1 });
             }),
-            R(this, 'handleActivitiesPopoutClose', () => {
+            M(this, 'handleActivitiesPopoutClose', () => {
                 this.resetTextChannelPopoutTimers(), this.setState({ shouldShowActivities: !1 });
             }),
-            R(this, 'handleClosePopout', () => {
+            M(this, 'handleClosePopout', () => {
                 this.state.shouldShowActivities && this.handleActivitiesPopoutClose(), this.state.shouldShowThreadsPopout && this.handleThreadsPopoutClose();
             }),
-            R(this, 'handleMouseDown', () => {
+            M(this, 'handleMouseDown', () => {
                 this.handleActivitiesPopoutClose(), this.handleThreadsPopoutClose();
                 let { channel: e } = this.props,
                     t = e.getGuildId();
                 s.Z.preload(null != t ? t : j.ME, e.id);
             }),
-            R(this, 'renderPopout', (e) => {
+            M(this, 'renderPopout', (e) => {
                 let { channel: t, sorting: n, embeddedApps: l } = this.props,
                     { shouldShowActivities: r } = this.state;
                 return null != l && l.length > 0 && r && !n
@@ -161,7 +161,7 @@ class M extends Z.ZP {
                           channel: this.props.channel
                       });
             }),
-            R(this, 'handleContextMenu', (e) => {
+            M(this, 'handleContextMenu', (e) => {
                 let { channel: t } = this.props;
                 if (t.type === j.d4z.GROUP_DM) {
                     (0, c.jW)(e, async () => {
@@ -204,8 +204,8 @@ class M extends Z.ZP {
             });
     }
 }
-let L = (0, u.B)(M);
-function w(e) {
+let w = (0, u.B)(R);
+function L(e) {
     let { channel: t, guild: n, disableSorting: l, isFavoriteCategory: r, muted: o, selected: s } = e,
         { hasActiveThreads: c, hasMoreActiveThreads: u } = (0, C.JQ)(t),
         p = (0, a.cj)([I.ZP], () => ({
@@ -232,8 +232,8 @@ function w(e) {
             },
             [t]
         ),
-        R = (0, d.NX)(t.id),
-        M = (0, N.Z)({
+        M = (0, d.NX)(t.id),
+        R = (0, N.Z)({
             channel: t,
             isChannelCollapsed: !1,
             isChannelSelected: s,
@@ -241,11 +241,11 @@ function w(e) {
             needSubscriptionToAccess: Z,
             isNewChannel: S,
             muted: o,
-            enableActivities: R,
+            enableActivities: M,
             resolvedUnreadSetting: m
         }),
-        w = (0, h.ZP)(t);
-    return (0, i.jsx)(L, {
+        L = (0, h.ZP)(t);
+    return (0, i.jsx)(w, {
         ...p,
         ...v,
         ...e,
@@ -256,10 +256,10 @@ function w(e) {
         isNewChannel: S && e.canBeNewChannel,
         isFavoriteSuggestion: r && !T,
         canShowThreadPreviewForUser: P,
-        channelInfo: M,
-        embeddedApps: w,
+        channelInfo: R,
+        embeddedApps: L,
         resolvedUnreadSetting: m,
-        hasChannelInfo: null != M,
-        enableActivities: R
+        hasChannelInfo: null != R,
+        enableActivities: M
     });
 }

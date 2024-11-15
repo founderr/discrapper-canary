@@ -33,13 +33,13 @@ var i = n(200651),
     T = n(638880),
     F = n(255621),
     j = n(452634),
-    O = n(527805),
-    A = n(620662),
-    L = n(275920),
+    A = n(527805),
+    L = n(620662),
+    O = n(275920),
     D = n(915863),
     M = n(701488),
-    N = n(981631),
-    U = n(388032);
+    U = n(981631),
+    N = n(388032);
 function _(t) {
     var e, n;
     let { activity: _, embeddedActivity: k, user: B, onAction: G, isEmbedded: z = !1, ButtonComponent: J = D.Z, ...H } = t,
@@ -72,9 +72,9 @@ function _(t) {
                 return (e === (null == _ ? void 0 : _.application_id) || e === (null == k ? void 0 : k.applicationId)) && n === K;
             })
         ),
-        te = (0, r.e7)([C.Z], () => null != _ && null != _.application_id && C.Z.getState(_.application_id, N.mFx.JOIN) === N.OcF.LOADING),
+        te = (0, r.e7)([C.Z], () => null != _ && null != _.application_id && C.Z.getState(_.application_id, U.mFx.JOIN) === U.OcF.LOADING),
         [tn] = (0, h.Z)((null == k ? void 0 : k.applicationId) != null ? [null == k ? void 0 : k.applicationId] : (null == _ ? void 0 : _.application_id) != null ? [null == _ ? void 0 : _.application_id] : []),
-        ti = (0, O.s5)({
+        ti = (0, A.s5)({
             userId: B.id,
             activity: _,
             channelId: K,
@@ -82,7 +82,7 @@ function _(t) {
         }),
         tl = (0, r.e7)([v.Z, g.Z, x.Z, y.Z, P.Z, I.Z, w.Z], () =>
             null != k
-                ? ti === O.Fw.CAN_JOIN
+                ? ti === A.Fw.CAN_JOIN
                 : null != _
                   ? (0, F.Z)({
                         user: B,
@@ -104,16 +104,16 @@ function _(t) {
         tr = (0, r.e7)([E.ZP], () => Array.from(E.ZP.getSelfEmbeddedActivities().values()).some((t) => t.applicationId === (null == k ? void 0 : k.applicationId) && t.channelId === (null == k ? void 0 : k.channelId))),
         to = (0, c.O)(),
         ta = !b.isPlatformEmbedded;
-    if (!((0, A.Z)(_, N.xjy.JOIN) || z) || null == Y) return null;
+    if (!((0, L.Z)(_, U.xjy.JOIN) || z) || null == Y) return null;
     let ts = !q || (z && !tr),
         tu = ts && (ta || $) && !V && !tt && (!z || tl),
         tc = null;
-    ts ? !ta && !$ && null != _ && (tc = U.intl.formatToPlainString(U.t.SqJBnJ, { name: _.name })) : (tc = U.intl.string(U.t['0OiwfH']));
+    ts ? !ta && !$ && null != _ && (tc = N.intl.formatToPlainString(N.t.SqJBnJ, { name: _.name })) : (tc = N.intl.string(N.t['0OiwfH']));
     let td = null !== (n = null == k ? void 0 : k.launchId) && void 0 !== n ? n : null == _ ? void 0 : _.session_id,
         th = async (t, e) => {
             var n, i;
             if (null == td || null == Y) return;
-            let l = (0, A.Z)(e, N.xjy.EMBEDDED),
+            let l = (0, L.Z)(e, U.xjy.EMBEDDED),
                 r = P.Z.getVoiceChannelId(),
                 o = v.Z.getChannel(r);
             await s.Z.join({
@@ -129,8 +129,8 @@ function _(t) {
                 analyticsLocations: W
             }),
                 !l &&
-                    (0, L.Z)({
-                        type: N.q5t.JOIN,
+                    (0, O.Z)({
+                        type: U.q5t.JOIN,
                         userId: t.id,
                         guildId: null == o ? void 0 : o.guild_id,
                         channelId: r,
@@ -161,18 +161,18 @@ function _(t) {
                 Q(!0),
                     null != _ &&
                         (t = await a.Z.sendActivityInviteUser({
-                            type: N.mFx.JOIN_REQUEST,
+                            type: U.mFx.JOIN_REQUEST,
                             userId: B.id,
                             activity: _,
-                            location: N.Sbl.PROFILE_POPOUT
+                            location: U.Sbl.PROFILE_POPOUT
                         })),
                     null != t && u.default.selectPrivateChannel(t.id);
             }
         },
-        tv = tl ? U.intl.string(U.t.VJlc0d) : U.intl.string(U.t.OKsSCQ);
+        tv = tl ? N.intl.string(N.t.VJlc0d) : N.intl.string(N.t.OKsSCQ);
     return (
-        z && (tv = U.intl.string(U.t['4i2vj4'])),
-        tr && (tv = U.intl.string(U.t.DPfdsr)),
+        z && (tv = N.intl.string(N.t['4i2vj4'])),
+        tr && (tv = N.intl.string(N.t.DPfdsr)),
         (0, i.jsx)(
             o.Tooltip,
             {

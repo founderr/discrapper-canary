@@ -15,8 +15,8 @@ var a,
     g = n(592125),
     E = n(594174),
     v = n(74538),
-    I = n(51144),
-    b = n(47760),
+    b = n(51144),
+    I = n(47760),
     S = n(469115),
     T = n(874893);
 function y(e, t, n) {
@@ -76,7 +76,7 @@ class w extends (a = s.ZP.PersistedStore) {
         return r;
     }
     getLinearGradient() {
-        return null == this.gradientPreset ? null : (0, b.VK)(this.gradientPreset);
+        return null == this.gradientPreset ? null : (0, I.VK)(this.gradientPreset);
     }
     get isEditorOpen() {
         return A;
@@ -133,7 +133,7 @@ y(w, 'displayName', 'ClientThemesBackgroundStore'),
         CHANNEL_SELECT: (e) => {
             let { channelId: t, guildId: n } = e,
                 r = E.default.getCurrentUser();
-            if (null == t || null == n || (0, u.un)(o.z.CLIENT_THEMES_COACHMARK) || !(0, I.Fc)(r)) return;
+            if (null == t || null == n || (0, u.un)(o.z.CLIENT_THEMES_COACHMARK) || !(0, b.Fc)(r)) return;
             let i = g.Z.getChannel(t);
             null != i &&
                 (0, m.zi)(i.type) &&

@@ -23,8 +23,8 @@ var r,
     g = n(372900),
     E = n(477734),
     v = n(184301),
-    I = n(768581),
-    b = n(463396),
+    b = n(768581),
+    I = n(463396),
     S = n(981631),
     T = n(825193);
 function y(e) {
@@ -42,7 +42,7 @@ function A(e) {
         P = s.useContext(g.Z),
         k = null !== (t = null == o ? void 0 : o.guild_id) && void 0 !== t ? t : P,
         { analyticsLocations: U } = (0, p.ZP)(_.Z.USERNAME),
-        { nick: G, colorString: B, colorRoleName: Z } = r,
+        { nick: B, colorString: G, colorRoleName: Z } = r,
         F = null != i.messageReference && null != i.webhookId && i.hasFlag(S.iLy.IS_CROSSPOST),
         V = (0, c.e7)([f.Z], () => f.Z.roleStyle),
         j = (0, E.X$)(),
@@ -56,10 +56,10 @@ function A(e) {
         ),
         Y = {
             className: T.username,
-            style: 'username' === V && null != B ? { color: B } : void 0,
+            style: 'username' === V && null != G ? { color: G } : void 0,
             onClick: O,
             onContextMenu: D,
-            children: (0, a.jsx)(a.Fragment, { children: (N ? '@' : '') + G })
+            children: (0, a.jsx)(a.Fragment, { children: (N ? '@' : '') + B })
         },
         W = s.useMemo(
             () =>
@@ -84,7 +84,7 @@ function A(e) {
                             return (0, v.Z)(
                                 e.id,
                                 null != r.guildMemberAvatar && null != k
-                                    ? (0, I.JM)({
+                                    ? (0, b.JM)({
                                           guildId: k,
                                           userId: e.id,
                                           avatar: r.guildMemberAvatar,
@@ -137,7 +137,7 @@ function A(e) {
                 : null,
             'dot' === V
                 ? (0, a.jsx)(d.RoleDot, {
-                      color: B,
+                      color: G,
                       name: Z,
                       className: T.roleDot
                   })
@@ -155,7 +155,7 @@ function A(e) {
                 }),
             null != z ? (0, a.jsx)(a.Fragment, { children: z }) : null,
             null == K || A ? null : K,
-            null != i && (0, b.f)(i) && j && w ? (0, a.jsx)(y, {}) : null
+            null != i && (0, I.f)(i) && j && w ? (0, a.jsx)(y, {}) : null
         ]
     });
 }

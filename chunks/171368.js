@@ -27,9 +27,9 @@ let d = (0, i.getAvatarSize)(i.AvatarSizes.SIZE_120),
     };
 async function p(e) {
     let { userId: t, guildId: n, channelId: r, messageId: i, roleId: o, sessionId: l, joinRequestId: f, section: p, subsection: h, friendToken: m, showGuildProfile: g, analyticsLocation: E, sourceAnalyticsLocations: v } = e,
-        I = u.default.getUser(t);
+        b = u.default.getUser(t);
     _(t),
-        null == I
+        null == b
             ? await (0, s.In)(t, {
                   guildId: g && null != n ? n : void 0,
                   withMutualGuilds: !0,
@@ -37,7 +37,7 @@ async function p(e) {
                   friendToken: m,
                   joinRequestId: f
               })
-            : (0, c.Z)(I.id, I.getAvatarURL(void 0, d), {
+            : (0, c.Z)(b.id, b.getAvatarURL(void 0, d), {
                   guildId: g && null != n ? n : void 0,
                   withMutualGuilds: !0,
                   withMutualFriends: !0,

@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(120356),
-    r = n.n(s),
+var r = n(120356),
+    s = n.n(r),
     a = n(442837),
     l = n(481060),
     o = n(556296),
@@ -26,24 +26,24 @@ let h = {
     }
 };
 function p(e) {
-    let { value: t, action: n, shouldShow: s } = e,
+    let { value: t, action: n, shouldShow: r } = e,
         d = (0, a.e7)([o.Z], () => o.Z.getKeybindForAction(n, !1, !0)),
         p = (0, l.useRedesignIconContext)().enabled;
-    if (null == d || !s) return null;
+    if (null == d || !r) return null;
     let f = c.BB(d.shortcut),
-        m = p ? h[n].new : h[n].legacy,
-        g = t ? m.slash : m.default;
+        g = p ? h[n].new : h[n].legacy,
+        m = t ? g.slash : g.default;
     return (0, i.jsxs)('div', {
         className: u.keybindIndicator,
         children: [
-            (0, i.jsx)(g, {
+            (0, i.jsx)(m, {
                 className: u.keybindIcon,
                 size: 'xs',
                 color: 'currentColor'
             }),
             (0, i.jsx)(l.Text, {
                 variant: 'text-xxs/semibold',
-                className: r()(u.keybindIndicatorText),
+                className: s()(u.keybindIndicatorText),
                 children: f
             })
         ]

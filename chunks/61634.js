@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return L;
+        return w;
     }
 }),
     n(47120);
@@ -33,12 +33,12 @@ var i = n(192379),
     j = n(510601),
     A = n(901621),
     P = n(981631);
-let R = [];
-function M(e, t) {
+let M = [];
+function R(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : E.Z;
     return null != e && e.type !== a.d.GUILD_STAGE_VOICE && t !== e.id && n.canBasicChannel(P.S7T.VIEW_CHANNEL, e);
 }
-function L(e) {
+function w(e) {
     var t;
     let n = (0, o.e7)([N.ZP], () => N.ZP.isMuted(e)),
         l = (0, m.k5)(e);
@@ -53,9 +53,9 @@ function L(e) {
             d = (0, o.cj)(
                 [y.Z],
                 () => {
-                    if (!a || t || u) return R;
+                    if (!a || t || u) return M;
                     let n = Object.keys(y.Z.getVoiceStates(e));
-                    return 0 === n.length ? R : n.slice(0, 50);
+                    return 0 === n.length ? M : n.slice(0, 50);
                 },
                 [e, t, u, a]
             );
@@ -81,11 +81,11 @@ function L(e) {
     })(e, n);
     let a = (0, A.Z)(e),
         { enabled: P } = (0, p.bA)('use-guild-media-state'),
-        L = (0, o.Wu)([d.ZP, S.Z], () => {
+        w = (0, o.Wu)([d.ZP, S.Z], () => {
             let t = d.ZP.getEmbeddedActivitiesForGuild(e);
             return P ? t.filter((e) => !(0, h.Wu)([...e.userIds], S.Z.getBlockedIDs())) : t;
         }),
-        w = (0, u.NX)(null === (t = L[0]) || void 0 === t ? void 0 : t.channelId),
+        L = (0, u.NX)(null === (t = w[0]) || void 0 === t ? void 0 : t.channelId),
         {
             guildHasVoice: D,
             guildHasVideo: O,
@@ -100,14 +100,14 @@ function L(e) {
                     a = P ? (0, h.DX)(y.Z.getVoiceStates(e)) : y.Z.getVoiceStates(e),
                     o = (() => {
                         if (n) return !1;
-                        for (let e in a) if (M(x.Z.getBasicChannel(a[e].channelId), null != l ? l : void 0, E.Z)) return !0;
+                        for (let e in a) if (R(x.Z.getBasicChannel(a[e].channelId), null != l ? l : void 0, E.Z)) return !0;
                         return !1;
                     })();
                 return {
                     guildHasVoice: o,
                     guildHasVideo: (() => {
                         if (n) return !1;
-                        for (let e of r) if (M(x.Z.getBasicChannel(a[e].channelId), null != l ? l : void 0, E.Z)) return !0;
+                        for (let e of r) if (R(x.Z.getBasicChannel(a[e].channelId), null != l ? l : void 0, E.Z)) return !0;
                         return !1;
                     })(),
                     selectedVoiceChannelHasVideo: null != i && y.Z.hasVideo(i)
@@ -148,16 +148,16 @@ function L(e) {
                 y = (P ? (0, h.aK)(_.Z.getAllApplicationStreams()) : _.Z.getAllApplicationStreams()).some((t) => t.guildId === e),
                 j = s && k,
                 A = (() => {
-                    if (w) return L.length > 0;
-                    for (let e of L) {
+                    if (L) return w.length > 0;
+                    for (let e of w) {
                         let t = x.Z.getChannel(e.channelId);
                         if (null != t && (0, C.vd)(t.type)) return !0;
                     }
                     return !1;
                 })(),
-                R = d.ZP.getEmbeddedActivitiesForGuild(e).length > 0;
+                M = d.ZP.getEmbeddedActivitiesForGuild(e).length > 0;
             return (
-                s ? ((c = !0), (u = (null == l ? void 0 : l.channel_id) === o), (p = S), (m = j), (v = N), (I = R)) : ((c = D), (u = null != l), (p = b), (m = O), (v = y), (I = A)),
+                s ? ((c = !0), (u = (null == l ? void 0 : l.channel_id) === o), (p = S), (m = j), (v = N), (I = M)) : ((c = D), (u = null != l), (p = b), (m = O), (v = y), (I = A)),
                 {
                     audio: c,
                     video: m,
@@ -170,6 +170,6 @@ function L(e) {
                 }
             );
         },
-        [e, n, P, k, a, U, w, L, l, D, O]
+        [e, n, P, k, a, U, L, w, l, D, O]
     );
 }

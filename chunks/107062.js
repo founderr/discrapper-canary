@@ -5,8 +5,8 @@ var l = n(200651),
     r = n(481060),
     o = n(620662),
     s = n(841784),
-    u = n(429589),
-    c = n(499254),
+    c = n(429589),
+    u = n(499254),
     d = n(827498),
     m = n(541716),
     x = n(706454),
@@ -53,12 +53,12 @@ let T = (e, t) =>
 t.ZP = (e) => {
     let { channel: t, entry: n, onReaction: p, onVoiceChannelPreview: E } = e,
         { largeImage: S } = (0, C.rv)({ entry: n }),
-        { user: A, details: M, activity: k, embeddedActivity: w } = (0, Z.n)(n),
-        { primaryColor: R, secondaryColor: b } = (0, I.Z)(null == S ? void 0 : S.src),
+        { user: A, details: M, activity: k, embeddedActivity: R } = (0, Z.n)(n),
+        { primaryColor: w, secondaryColor: b } = (0, I.Z)(null == S ? void 0 : S.src),
         H = (0, i.e7)([x.default], () => x.default.locale),
         { displayParticipants: O, participant1: V, participant2: B, numOtherParticipants: U } = (0, v.Z)(n, 3),
         D = () => {
-            c.__(d._b.TEXT, m.I.NORMAL, { applicationId: n.extra.application_id });
+            u.__(d._b.TEXT, m.I.NORMAL, { applicationId: n.extra.application_id });
         },
         G = a.useCallback(
             (e) => {
@@ -78,11 +78,11 @@ t.ZP = (e) => {
                     avatarSrcs: O.map((e) => e.getAvatarURL(t.guild_id, 128)),
                     description: l,
                     timestamp: (0, g.yh)(n, H),
-                    colors: [R, b],
+                    colors: [w, b],
                     channelId: e
                 });
             },
-            [null == S ? void 0 : S.src, t, O, n, H, U, V, B, R, b, A]
+            [null == S ? void 0 : S.src, t, O, n, H, U, V, B, w, b, A]
         );
     if (null == A) return null;
     let z = (0, l.jsx)(j.PZ, {
@@ -102,9 +102,9 @@ t.ZP = (e) => {
         }),
         q = (0, o.Z)(k, L.xjy.JOIN) || (0, s.Z)(k),
         Y = q
-            ? (0, l.jsx)(u.Z, {
+            ? (0, l.jsx)(c.Z, {
                   isEmbedded: (0, s.Z)(k),
-                  embeddedActivity: w,
+                  embeddedActivity: R,
                   activity: k,
                   user: A,
                   ButtonComponent: (e) =>

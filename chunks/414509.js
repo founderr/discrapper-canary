@@ -43,7 +43,7 @@ function g(e) {
     return (0, u.Iu)(e) > Date.now() - _;
 }
 class E extends r.Z {
-    handleBlockedUserVoiceChannelJoin(e, t) {
+    handleBlockedOrIgnoredUserVoiceChannelJoin(e, t) {
         let n = a.Z.getChannelId();
         if (e === n && null != i.Z.getChannel(e)) (0, c.wC)({ location: 'warning_manager' }) && !g(e) && (0, f.H)(n, t);
     }

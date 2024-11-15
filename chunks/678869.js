@@ -12,8 +12,8 @@ var l = n(200651),
     r = n(442837),
     o = n(902704),
     s = n(481060),
-    u = n(952164),
-    c = n(768419),
+    c = n(952164),
+    u = n(768419),
     d = n(424678),
     m = n(239470),
     x = n(894344),
@@ -89,16 +89,16 @@ function M(e) {
     let Z,
         _,
         M,
-        { channel: k, entry: w, closePopout: R, onReaction: b, onVoiceChannelPreview: H } = e,
-        { largeImage: O } = (0, v.rv)({ entry: w }),
-        { activity: V, currentEntry: B, artist: U, title: D, user: G } = (0, j.pi)(w),
+        { channel: k, entry: R, closePopout: w, onReaction: b, onVoiceChannelPreview: H } = e,
+        { largeImage: O } = (0, v.rv)({ entry: R }),
+        { activity: V, currentEntry: B, artist: U, title: D, user: G } = (0, j.pi)(R),
         { primaryColor: z, secondaryColor: W } = (0, I.Z)(null == O ? void 0 : O.src),
-        q = (0, r.e7)([c.Z, h.default], () => ((null == V ? void 0 : V.type) === y.IIU.LISTENING && null != G ? (0, m.Z)(c.Z, h.default, G, V) : void 0), [V, G], o.Z),
+        q = (0, r.e7)([u.Z, h.default], () => ((null == V ? void 0 : V.type) === y.IIU.LISTENING && null != G ? (0, m.Z)(u.Z, h.default, G, V) : void 0), [V, G], o.Z),
         Y = a.useCallback(() => {
             var e;
             if (null == k || null == G) return;
             let t = null === (e = V.timestamps) || void 0 === e ? void 0 : e.start,
-                n = (0, g.T_)(null != t ? { start: t } : w, Date.now());
+                n = (0, g.T_)(null != t ? { start: t } : R, Date.now());
             return (0, f.CR)({
                 user: G,
                 channel: k,
@@ -115,26 +115,26 @@ function M(e) {
                 colors: [z, W],
                 badges: (0, f.jE)({ timestamp: n })
             });
-        }, [V, U, k, w, null == O ? void 0 : O.src, z, W, D, G]);
+        }, [V, U, k, R, null == O ? void 0 : O.src, z, W, D, G]);
     if (null == V || null == B) return null;
     let F = U,
         J = [];
     if (B.media.provider === i.p.SPOTIFY) {
         (_ = () => {
-            (0, u.aG)(V);
+            (0, c.aG)(V);
         }),
             (M = () => {
-                (0, u.Z5)(V, G.id);
+                (0, c.Z5)(V, G.id);
             }),
             (Z = () => {
-                (0, u.aG)(V);
+                (0, c.aG)(V);
             });
         (F = (0, l.jsx)(d.Z, {
             artists: U,
             canOpen: null != V.sync_id,
             linkClassName: E.popoutTextSecondary,
             onOpenSpotifyArtist: (e) => {
-                (0, u.d$)(V, G.id, e);
+                (0, c.d$)(V, G.id, e);
             }
         })),
             (null == q ? void 0 : q.syncDisabled) === !1 &&
@@ -143,7 +143,7 @@ function M(e) {
                         P.Ll,
                         {
                             onClick: () => {
-                                (0, x.Z)(q, T.kG.USER_ACTIVITY_SYNC), R();
+                                (0, x.Z)(q, T.kG.USER_ACTIVITY_SYNC), w();
                             },
                             IconComponent: s.UserPlayIcon,
                             children: N.intl.string(N.t.eU3inJ)
@@ -155,7 +155,7 @@ function M(e) {
     let K = (0, l.jsx)(P.wG, {
         onClickThumbnail: M,
         channel: k,
-        entry: w,
+        entry: R,
         headerIcons:
             B.media.provider === i.p.SPOTIFY
                 ? (0, l.jsx)(L.Z, {
@@ -164,7 +164,7 @@ function M(e) {
                       Icon: p.Z
                   })
                 : null,
-        userDescription: (0, g.kr)(w) ? N.t.Tzx5Dw : N.t.CcVI1d,
+        userDescription: (0, g.kr)(R) ? N.t.Tzx5Dw : N.t.CcVI1d,
         title: D,
         onClickTitle: _,
         subtitle: F,
@@ -188,7 +188,7 @@ function M(e) {
                             username: C.username,
                             activity: n
                         })),
-                    entry: w,
+                    entry: R,
                     buttons: J
                 })
             })

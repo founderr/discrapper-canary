@@ -26,8 +26,8 @@ var r,
     g = n(700785),
     E = n(314897),
     v = n(592125),
-    I = n(271383),
-    b = n(430824),
+    b = n(271383),
+    I = n(430824),
     S = n(496675),
     T = n(699516),
     y = n(594174),
@@ -48,10 +48,10 @@ let N = 'SELECTABLE',
             name: 'Uncategorized'
         })
     },
-    P = G(A.kod),
+    P = B(A.kod),
     k = [],
     U = {};
-function G(e) {
+function B(e) {
     return {
         id: e,
         [N]: [],
@@ -60,7 +60,7 @@ function G(e) {
         count: 0
     };
 }
-function B(e, t) {
+function G(e, t) {
     let { comparator: n } = e,
         { comparator: r } = t;
     return n - r;
@@ -70,7 +70,7 @@ function Z() {
 }
 function F(e) {
     var t;
-    let n = G(e);
+    let n = B(e);
     return (
         (O[e] = n),
         (w[e] = []),
@@ -110,9 +110,9 @@ function F(e) {
                 i.type === A.d4z.GUILD_DIRECTORY && (null == w[t] && (w[t] = []), w[t].push(n)), null != e[a] && e[a].push(n);
             });
         })(n),
-        (t = n)[N].sort(B),
-        t[C].sort(B),
-        t[A.d4z.GUILD_CATEGORY].sort(B),
+        (t = n)[N].sort(G),
+        t[C].sort(G),
+        t[A.d4z.GUILD_CATEGORY].sort(G),
         (function (e) {
             let t = (D[e.id] = {}),
                 n = {};
@@ -129,7 +129,7 @@ function F(e) {
         })(n),
         (function (e) {
             (function (e, t) {
-                let n = b.Z.getGuild(t);
+                let n = I.Z.getGuild(t);
                 if (null != n && Y(e, n)) return !0;
                 let r = O[t];
                 null == r && (r = F(t));
@@ -184,7 +184,7 @@ function K() {
 }
 class z extends (r = c.ZP.Store) {
     initialize() {
-        this.waitFor(b.Z, I.ZP, v.Z, S.Z, E.default, f.Z, p.Z), this.syncWith([p.Z], K);
+        this.waitFor(I.Z, b.ZP, v.Z, S.Z, E.default, f.Z, p.Z), this.syncWith([p.Z], K);
     }
     getAllGuilds() {
         return O;

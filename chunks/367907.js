@@ -12,10 +12,10 @@ n.d(t, {
         return x;
     },
     kO: function () {
-        return G;
+        return B;
     },
     oG: function () {
-        return B;
+        return G;
     },
     v_: function () {
         return M;
@@ -41,8 +41,8 @@ var r = n(392711),
     g = n(158776),
     E = n(19780),
     v = n(306680),
-    I = n(944486),
-    b = n(914010),
+    b = n(944486),
+    I = n(914010),
     S = n(9156),
     T = n(594174),
     y = n(979651),
@@ -120,7 +120,7 @@ function P(e) {
         channel_type: t.type,
         guild_id: t.getGuildId(),
         media_session_id: r,
-        ...G(t.getGuildId(), t.id, n),
+        ...B(t.getGuildId(), t.id, n),
         ...(0, R.V)()
     };
 }
@@ -130,8 +130,8 @@ function k(e) {
         o = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     if (A.default.isThrottled(e)) return;
     let l = !('location' in s) || s.location !== O.Sbl.GUILD_CREATE_INVITE_SUGGESTION,
-        u = 'guild_id' in s ? s.guild_id : l ? b.Z.getGuildId() : null,
-        d = 'channel_id' in s ? s.channel_id : l ? I.Z.getChannelId(u) : null,
+        u = 'guild_id' in s ? s.guild_id : l ? I.Z.getGuildId() : null,
+        d = 'channel_id' in s ? s.channel_id : l ? b.Z.getChannelId(u) : null,
         f = c.Z.getChannel(d);
     let _ = ((t = f), (n = u), null == t ? (null != n ? n : null) : t.isPrivate() ? null : null !== (i = null !== (r = t.getGuildId()) && void 0 !== r ? r : n) && void 0 !== i ? i : null);
     let p = {
@@ -184,7 +184,7 @@ function U(e) {
         is_app_dm: !1
     };
 }
-function G(e, t, n) {
+function B(e, t, n) {
     let r = {
         voice_state_count: 0,
         video_stream_count: 0,
@@ -200,7 +200,7 @@ function G(e, t, n) {
         r
     );
 }
-function B(e, t) {
+function G(e, t) {
     let n = { custom_status_count: 0 };
     return (
         i()(y.Z.getVoiceStates(e)).forEach((e) => {
@@ -211,5 +211,5 @@ function B(e, t) {
 }
 t.ZP = {
     trackWithMetadata: k,
-    getVoiceStateMetadata: G
+    getVoiceStateMetadata: B
 };

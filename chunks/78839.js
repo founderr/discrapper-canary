@@ -22,8 +22,8 @@ let m = null,
     g = null,
     E = null,
     v = null,
-    I = null,
-    b = !1,
+    b = null,
+    I = !1,
     S = !1,
     T = null,
     y = !1,
@@ -38,7 +38,7 @@ function N(e) {
     }
 }
 function C() {
-    (m = null), (g = null), (E = null), (v = null), (I = null), (b = !1), (S = !1), (T = null), (y = !1);
+    (m = null), (g = null), (E = null), (v = null), (b = null), (I = !1), (S = !1), (T = null), (y = !1);
 }
 function R(e) {
     return e.status !== p.O0b.UNPAID;
@@ -77,7 +77,7 @@ class L extends (r = o.ZP.Store) {
         return null != m;
     }
     hasFetchedMostRecentPremiumTypeSubscription() {
-        return b;
+        return I;
     }
     hasFetchedPreviousPremiumTypeSubscription() {
         return y;
@@ -106,7 +106,7 @@ class L extends (r = o.ZP.Store) {
         return v;
     }
     getActiveApplicationSubscriptions() {
-        return I;
+        return b;
     }
     getSubscriptionForPlanIds(e) {
         var t;
@@ -158,7 +158,7 @@ class L extends (r = o.ZP.Store) {
                 (m = n),
                 (g = r),
                 (v = i),
-                (I = a);
+                (b = a);
         },
         BILLING_SUBSCRIPTION_UPDATE_SUCCESS: function (e) {
             let { subscription: t } = e,
@@ -178,16 +178,16 @@ class L extends (r = o.ZP.Store) {
                         activeSubscriptions: v,
                         record: n
                     })),
-                null != I &&
+                null != b &&
                     n.type === p.NYc.APPLICATION &&
                     (v = N({
-                        activeSubscriptions: I,
+                        activeSubscriptions: b,
                         record: n
                     }));
         },
         BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: function (e) {
             let { subscription: t } = e;
-            if (((b = !0), null != t)) {
+            if (((I = !0), null != t)) {
                 let e = f.default.getId();
                 if (t.user_id !== e && !S) {
                     A.log('[handleMostRecentSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch'),
@@ -198,7 +198,7 @@ class L extends (r = o.ZP.Store) {
                                 subscriptionUserId: t.user_id
                             }
                         }),
-                        (b = !1),
+                        (I = !1),
                         (S = !0);
                     return;
                 }

@@ -20,8 +20,8 @@ var r = n(200651),
     g = n(639119),
     E = n(165583),
     v = n(197115),
-    I = n(302945),
-    b = n(631771),
+    b = n(302945),
+    I = n(631771),
     S = n(474936),
     T = n(981631),
     y = n(388032),
@@ -29,7 +29,7 @@ var r = n(200651),
     N = n(769860);
 function C(e) {
     var t, n, a;
-    let { title: C, type: R, guildBoostProps: O, analyticsSource: D, analyticsLocation: L, body: x, context: w, glowUp: M, modalClassName: P, modalContentClassName: k, artContainerClassName: U, headerClassName: G, bodyClassName: B, transitionState: Z, onClose: F, onSubscribeClick: V, onSubscribeFinish: j, onSecondaryClick: H, secondaryCTA: Y, subscribeButtonText: W, showNewBadge: K = !1, enableArtBoxShadow: z = !0, subscriptionTier: q = S.Si.TIER_2, isLoading: Q = !1, hideBackButton: X, backButtonText: J, showEnhancedUpsell: $, useSubscribeButtonGradient: ee, subscribeButtonClassname: et, hidePremiumOfferUpsell: en, children: er, LeadingComponent: ei, ...ea } = e,
+    let { title: C, type: R, guildBoostProps: O, analyticsSource: D, analyticsLocation: L, body: x, context: w, glowUp: M, modalClassName: P, modalContentClassName: k, artContainerClassName: U, headerClassName: B, bodyClassName: G, transitionState: Z, onClose: F, onSubscribeClick: V, onSubscribeFinish: j, onSecondaryClick: H, secondaryCTA: Y, subscribeButtonText: W, showNewBadge: K = !1, enableArtBoxShadow: z = !0, subscriptionTier: q = S.Si.TIER_2, isLoading: Q = !1, hideBackButton: X, backButtonText: J, showEnhancedUpsell: $, useSubscribeButtonGradient: ee, subscribeButtonClassname: et, hidePremiumOfferUpsell: en, children: er, LeadingComponent: ei, ...ea } = e,
         es = null != O,
         eo = (0, g.N)(),
         el = (0, m.Ng)(),
@@ -54,7 +54,7 @@ function C(e) {
                   }));
     }, [es, q, Q]);
     let ed = (0, o.e7)([h.Z], () => h.Z.affinities),
-        ef = ed.length > 1 && (0, b.YN)(R),
+        ef = ed.length > 1 && (0, I.YN)(R),
         e_ = (0, o.e7)([h.Z], () => h.Z.hasFetched);
     i.useEffect(() => {
         !e_ && u.MH();
@@ -116,15 +116,15 @@ function C(e) {
                                                 className: A.bodyContent,
                                                 children: [
                                                     (0, r.jsx)(l.Heading, {
-                                                        className: s()(A.header, { [A.enhancedHeader]: $ }, G),
+                                                        className: s()(A.header, { [A.enhancedHeader]: $ }, B),
                                                         variant: 'heading-xl/bold',
                                                         children: C
                                                     }),
-                                                    ef ? (0, r.jsx)(I.Z, { affinities: ed }) : void 0,
+                                                    ef ? (0, r.jsx)(b.Z, { affinities: ed }) : void 0,
                                                     er,
                                                     (0, r.jsx)(l.Text, {
                                                         variant: 'text-md/normal',
-                                                        className: s()(B, A.subHeader),
+                                                        className: s()(G, A.subHeader),
                                                         children: x
                                                     })
                                                 ]

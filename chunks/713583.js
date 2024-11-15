@@ -19,7 +19,7 @@ function _(e) {
         _,
         p,
         { className: h, activeCommand: m, activeOption: g, optionStates: E, channelId: v } = e,
-        I = i.useCallback(
+        b = i.useCallback(
             (e) => {
                 var t;
                 let i = null == m ? void 0 : null === (t = m.rootCommand) || void 0 === t ? void 0 : t.id;
@@ -39,7 +39,7 @@ function _(e) {
             },
             [null == m ? void 0 : null === (t = m.rootCommand) || void 0 === t ? void 0 : t.id]
         ),
-        b = i.useCallback(() => {
+        I = i.useCallback(() => {
             u.Po({
                 channelId: v,
                 command: null,
@@ -53,7 +53,7 @@ function _(e) {
     } else (a = ''.concat(c.GI).concat(m.displayName)), (_ = m.displayDescription), (p = null);
     return (0, r.jsxs)('div', {
         className: s()(h, f.bar),
-        onContextMenu: I,
+        onContextMenu: b,
         children: [
             (0, r.jsxs)('div', {
                 className: f.commandInfo,
@@ -75,7 +75,7 @@ function _(e) {
             }),
             (0, r.jsx)('div', {
                 className: f.actions,
-                children: (0, r.jsx)(l.B, { onClick: b })
+                children: (0, r.jsx)(l.B, { onClick: I })
             })
         ]
     });

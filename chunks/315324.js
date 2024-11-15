@@ -23,13 +23,13 @@ let h = 3;
 function m(e) {
     let { user: t, guild: n, channel: m, onAction: g, onClose: E } = e,
         { profileType: v } = (0, f.z)(),
-        I = (0, i.Wu)([d.ZP], () =>
+        b = (0, i.Wu)([d.ZP], () =>
             d.ZP.getVoiceStatesForChannel(m).map((e) => {
                 let { user: t } = e;
                 return t;
             })
         ),
-        b = m.isGuildStageVoice() ? a.StageIcon : a.VoiceNormalIcon,
+        I = m.isGuildStageVoice() ? a.StageIcon : a.VoiceNormalIcon,
         S = v === _.y0.FULL_SIZE,
         T = v === _.y0.PANEL;
     return (0, r.jsxs)('div', {
@@ -48,7 +48,7 @@ function m(e) {
             (0, r.jsxs)('div', {
                 className: p.voiceChannelText,
                 children: [
-                    (0, r.jsx)(b, {
+                    (0, r.jsx)(I, {
                         size: 'xxs',
                         color: a.tokens.colors.INTERACTIVE_NORMAL,
                         className: p.voiceIcon
@@ -68,7 +68,7 @@ function m(e) {
                 ]
             }),
             (0, r.jsx)(l.Z, {
-                users: I,
+                users: b,
                 guildId: n.id,
                 channelId: m.id,
                 maxUsers: h,

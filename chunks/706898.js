@@ -39,18 +39,18 @@ let v = {
         top: g.top,
         'top-pill': g.topPill
     },
-    I = l.forwardRef(function (e, t) {
+    b = l.forwardRef(function (e, t) {
         let { children: n, id: r, ...i } = e;
         return (0, o.jsx)('div', {
             ...i,
             ref: t,
             role: 'tabpanel',
-            id: b(r),
+            id: I(r),
             tabIndex: -1,
             children: n
         });
     });
-function b(e) {
+function I(e) {
     return ''.concat(e.replace(/\s+/g, '-').toLowerCase(), '-tab');
 }
 function S(e, t) {
@@ -107,7 +107,7 @@ class T extends (i = l.Component) {
             style: this.getStyle(),
             role: 'tab',
             'aria-selected': _,
-            'aria-controls': _ ? b(''.concat(n)) : void 0,
+            'aria-controls': _ ? I(''.concat(n)) : void 0,
             'aria-disabled': a,
             tabIndex: _ ? 0 : -1,
             onMouseEnter: null != i ? this.handleMouseOver : void 0,
@@ -243,4 +243,4 @@ E(y, 'Header', function (e) {
             style: t
         });
     }),
-    E(y, 'Panel', I);
+    E(y, 'Panel', b);

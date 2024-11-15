@@ -1,7 +1,7 @@
 n.r(t);
 var i = n(200651),
-    s = n(192379),
-    r = n(442837),
+    r = n(192379),
+    s = n(442837),
     a = n(481060),
     l = n(490173),
     o = n(735246),
@@ -11,26 +11,26 @@ var i = n(200651),
     h = n(436774),
     p = n(686546),
     f = n(314910),
-    m = n(367207),
-    g = n(241890),
+    g = n(367207),
+    m = n(241890),
     v = n(649561),
-    _ = n(631553),
-    E = n(981631);
-n(635324), n(167666), n(308765), n(913487), r.ZP.initialize();
+    E = n(631553),
+    _ = n(981631);
+n(635324), n(167666), n(308765), n(913487), s.ZP.initialize();
 t.default = function () {
     return (
-        s.useEffect(
+        r.useEffect(
             () => (
-                m.Z.initialize(),
+                g.Z.initialize(),
                 d.Z.initialize(),
-                g.Z.init(),
+                m.Z.init(),
                 () => {
-                    m.Z.terminate(), d.Z.terminate();
+                    g.Z.terminate(), d.Z.terminate();
                 }
             ),
             []
         ),
-        (0, i.jsxs)(s.Fragment, {
+        (0, i.jsxs)(r.Fragment, {
             children: [
                 (0, i.jsx)(u.Z, {}),
                 (0, i.jsx)(o.T, {
@@ -39,10 +39,10 @@ t.default = function () {
                             (0, i.jsx)(p.Co, {}),
                             (0, i.jsx)(h.ZP, {}),
                             (0, i.jsx)(c.Wu, {
-                                appContext: E.IlC.OVERLAY,
+                                appContext: _.IlC.OVERLAY,
                                 renderWindow: window,
                                 children: (0, i.jsxs)(f.yP, {
-                                    children: [(0, i.jsx)(_.Z, {}), (0, i.jsx)(a.Modals, {}), (0, i.jsx)(l.Z, {}), (0, i.jsx)(f.Un, {})]
+                                    children: [(0, i.jsx)(E.Z, {}), (0, i.jsx)(a.Modals, {}), (0, i.jsx)(l.Z, {}), (0, i.jsx)(f.Un, {})]
                                 })
                             })
                         ]

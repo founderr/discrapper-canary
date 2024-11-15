@@ -24,8 +24,8 @@ var r = n(200651),
     g = n(869765),
     E = n(403132),
     v = n(378233),
-    I = n(768581),
-    b = n(55935),
+    b = n(768581),
+    I = n(55935),
     S = n(823379),
     T = n(453687),
     y = n(930282),
@@ -67,8 +67,8 @@ function w(e, t, n, i, a) {
     let s, o, l, c;
     let d = (0, p.Z)(e),
         { trailingIconClass: f, leadingIconClass: g, iconSize: E } = a,
-        I = null == t || '' === t || (Array.isArray(t) && 0 === t.length),
-        b = (0, v.cv)(d).length > 0,
+        b = null == t || '' === t || (Array.isArray(t) && 0 === t.length),
+        I = (0, v.cv)(d).length > 0,
         S = null != d.interaction,
         T = d.hasFlag(R.iLy.IS_VOICE_MESSAGE),
         A = d.isPoll(),
@@ -85,14 +85,14 @@ function w(e, t, n, i, a) {
     )
         s = O.intl.string(O.t.XAkOo6);
     else if (d.type === R.uaV.CHANNEL_PINNED_MESSAGE) s = O.intl.string(O.t.sCfDDg);
-    else if (I) {
+    else if (b) {
         if (A) {
             var C, D;
             o = null == d ? void 0 : null === (D = d.poll) || void 0 === D ? void 0 : null === (C = D.question) || void 0 === C ? void 0 : C.text;
         } else
             N
                 ? (s = (0, m.N4)(d))
-                : b
+                : I
                   ? (s = O.intl.string(O.t.kHdYCQ))
                   : S
                     ? (s = O.intl.string(O.t['E+6SSU']))
@@ -113,7 +113,7 @@ function w(e, t, n, i, a) {
             className: i
         });
     return (
-        b
+        I
             ? (l = (0, r.jsx)(u.StickerSmallIcon, {
                   size: 'custom',
                   color: 'currentColor',
@@ -200,7 +200,7 @@ function M(e) {
                         alt: '',
                         src:
                             (null == t ? void 0 : t.guildMemberAvatar) != null && null != n
-                                ? (0, I.JM)({
+                                ? (0, b.JM)({
                                       guildId: n,
                                       userId: e.id,
                                       avatar: t.guildMemberAvatar
@@ -231,7 +231,7 @@ function M(e) {
                       children: v()
                   });
         })(e, P, o.type),
-        G = (function (e, t) {
+        B = (function (e, t) {
             let { baseMessage: n, channel: i, referencedMessage: a, showUsernamePopout: s, onClickUsername: o, onContextMenu: l, onPopoutRequestClose: u } = e,
                 c = (null == a ? void 0 : a.state) === g.Y.LOADED ? a.message : void 0;
             return null == c || c.type === R.uaV.USER_JOIN || c.type === R.uaV.ROLE_SUBSCRIPTION_PURCHASE || c.type === R.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION || c.type === R.uaV.GUILD_DEADCHAT_REVIVE_PROMPT || c.type === R.uaV.GUILD_GAMING_STATS_PROMPT || c.type === R.uaV.POLL_RESULT
@@ -249,7 +249,7 @@ function M(e) {
                       isRepliedMessage: !0
                   });
         })(e, P),
-        B = (function (e, t, n) {
+        G = (function (e, t, n) {
             let { content: i, referencedMessage: a, isReplyAuthorBlocked: o, onClickReply: l } = e,
                 c = a.state !== g.Y.DELETED ? l : void 0;
             switch (a.state) {
@@ -307,7 +307,7 @@ function M(e) {
                     (0, S.vE)(a);
             }
         })(e, y, k),
-        Z = i.useMemo(() => (e.compact ? (0, N.Z)((0, b.vc)(l()(), 'LT')) : null), [e.compact]);
+        Z = i.useMemo(() => (e.compact ? (0, N.Z)((0, I.vc)(l()(), 'LT')) : null), [e.compact]);
     null != n &&
         null != a &&
         (t = O.intl.formatToPlainString(O.t.RhbQ2N, {
@@ -335,8 +335,8 @@ function M(e) {
                     onMouseLeave: k
                 }),
             U,
-            G,
-            B
+            B,
+            G
         ]
     });
 }

@@ -35,10 +35,10 @@ var l = n(120356),
     j = n(496675),
     A = n(306680),
     P = n(9156),
-    R = n(979651),
-    M = n(934415),
-    L = n(98597),
-    w = n(648501),
+    M = n(979651),
+    R = n(934415),
+    w = n(98597),
+    L = n(648501),
     D = n(473403),
     O = n(207055),
     k = n(981631),
@@ -59,7 +59,7 @@ function V(e, t, n) {
         e
     );
 }
-class F extends L.ZP {
+class F extends w.ZP {
     getVoiceStatesCount() {
         var e;
         let { voiceStates: t } = this.props;
@@ -67,7 +67,7 @@ class F extends L.ZP {
     }
     isFull() {
         let { channel: e } = this.props;
-        return (0, M.rY)(e, R.Z, y.Z);
+        return (0, R.rY)(e, M.Z, y.Z);
     }
     getModeClass() {
         let { position: e, sortingPosition: t, isUserOver: n } = this.props;
@@ -250,7 +250,7 @@ function z(e) {
         { isSubscriptionGated: C, needSubscriptionToAccess: _ } = (0, g.Z)(n.id),
         v = (0, a.e7)([P.ZP], () => P.ZP.isFavorite(t.id, n.id)),
         y = (0, E.xJ)(n.id),
-        R = (0, w.Z)({
+        M = (0, L.Z)({
             channel: n,
             isChannelSelected: !1,
             isChannelCollapsed: o,
@@ -259,7 +259,7 @@ function z(e) {
             needSubscriptionToAccess: _,
             enableConnectedUserLimit: y || (n.userLimit > 0 && n.userLimit < k.xGv)
         }),
-        M = e.connected && null == R;
+        R = e.connected && null == M;
     return (0, i.jsx)(W, {
         categoryCollapsed: h,
         connectAction: p,
@@ -271,8 +271,8 @@ function z(e) {
         ...d,
         ...e,
         isFavoriteSuggestion: r && !v,
-        forceShowButtons: M,
-        channelInfo: R,
+        forceShowButtons: R,
+        channelInfo: M,
         resolvedUnreadSetting: u
     });
 }

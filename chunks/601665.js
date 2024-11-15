@@ -21,8 +21,8 @@ var r = n(200651),
     g = n(438163),
     E = n(502762),
     v = n(952124),
-    I = n(544989),
-    b = n(171368),
+    b = n(544989),
+    I = n(171368),
     S = n(895697),
     T = n(161572),
     y = n(228168),
@@ -40,8 +40,8 @@ function C(e) {
             roleId: D
         }),
         U = (0, p.ZP)(t.id, C),
-        G = (0, a.e7)([d.Z], () => (null != C ? d.Z.getGuild(C) : null)),
-        B = (0, a.e7)([c.ZP], () => (null != C ? c.ZP.getMember(C, t.id) : null)),
+        B = (0, a.e7)([d.Z], () => (null != C ? d.Z.getGuild(C) : null)),
+        G = (0, a.e7)([c.ZP], () => (null != C ? c.ZP.getMember(C, t.id) : null)),
         Z = i.useRef(null),
         F = (0, o.Z)(Z);
     i.useEffect(() => {
@@ -49,7 +49,7 @@ function C(e) {
     }, [Z, x]);
     let V = (e) => {
         null == L || L(),
-            (0, b.openUserProfileModal)({
+            (0, I.openUserProfileModal)({
                 sourceAnalyticsLocations: P,
                 ...k,
                 ...e
@@ -59,7 +59,7 @@ function C(e) {
         value: P,
         children: (0, r.jsx)(f.Mt, {
             value: k,
-            shouldTrackViewOnMount: null == B || null != B.fullProfileLoadedTimestamp,
+            shouldTrackViewOnMount: null == G || null != G.fullProfileLoadedTimestamp,
             children: (0, r.jsx)(s.Dialog, {
                 ref: Z,
                 'aria-label': t.username,
@@ -68,7 +68,7 @@ function C(e) {
                     displayProfile: U,
                     profileType: y.y0.BITE_SIZE,
                     children: [
-                        (0, r.jsx)(I.Z, {
+                        (0, r.jsx)(b.Z, {
                             profileType: y.y0.BITE_SIZE,
                             children: (0, r.jsx)(v.Z, {
                                 user: t,
@@ -117,7 +117,7 @@ function C(e) {
                             user: t,
                             currentUser: n,
                             displayProfile: U,
-                            guild: G,
+                            guild: B,
                             isHovering: F,
                             onOpenProfile: w ? void 0 : V,
                             channelId: R,

@@ -3,7 +3,7 @@ n.d(t, {
         return m;
     },
     GA: function () {
-        return b;
+        return I;
     },
     I: function () {
         return T;
@@ -18,7 +18,7 @@ n.d(t, {
         return r;
     },
     jz: function () {
-        return I;
+        return b;
     },
     rU: function () {
         return S;
@@ -85,11 +85,11 @@ function g(e, t, n, r, i) {
             };
         },
         _ = u(n),
-        h = u(b(e), t),
+        h = u(I(e), t),
         g = E(_, h, 'RETURN_PREVIOUS_WHEN_CHANGED'),
         v = null !== (o = g('guild_flags')) && void 0 !== o ? o : 0,
-        I = (null !== (l = h.guild_flags) && void 0 !== l ? l : 0) ^ v,
-        S = 0 === (0, c.M1)(I, p.vc.OPT_IN_CHANNELS_OFF, p.vc.OPT_IN_CHANNELS_ON);
+        b = (null !== (l = h.guild_flags) && void 0 !== l ? l : 0) ^ v,
+        S = 0 === (0, c.M1)(b, p.vc.OPT_IN_CHANNELS_OFF, p.vc.OPT_IN_CHANNELS_ON);
     a.ZP.trackWithMetadata(d.rMx.NOTIFICATION_SETTINGS_UPDATED, {
         ...h,
         ...s.Z.getStats(e),
@@ -116,9 +116,9 @@ function E(e, t, n) {
 function v(e) {
     return null != e && null != e.end_time ? new Date(e.end_time).getTime() : null;
 }
-function I(e, t, n, r, i, u) {
-    var _, h, g, I;
-    let b = function (t) {
+function b(e, t, n, r, i, u) {
+    var _, h, g, b;
+    let I = function (t) {
             var n, r;
             let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                 a = null !== (n = i.muted) && void 0 !== n ? n : null == t ? void 0 : t.channel_is_muted,
@@ -132,14 +132,14 @@ function I(e, t, n, r, i, u) {
                 channel_muted_until: v(i.mute_config)
             };
         },
-        S = b(r),
-        y = b(T(e, t), n),
+        S = I(r),
+        y = I(T(e, t), n),
         A = E(S, y, 'RETURN_PREVIOUS_WHEN_CHANGED'),
         N = o.Z.getChannel(t),
         C = null !== (h = A('channel_flags')) && void 0 !== h ? h : 0,
         R = (null !== (g = y.channel_flags) && void 0 !== g ? g : 0) ^ C,
         O = 0 === (0, c.M1)(R, p.ic.FAVORITED, p.ic.OPT_IN_ENABLED),
-        D = null !== (I = null === (_ = l.Z.getLastMessage(t)) || void 0 === _ ? void 0 : _.type) && void 0 !== I ? I : null;
+        D = null !== (b = null === (_ = l.Z.getLastMessage(t)) || void 0 === _ ? void 0 : _.type) && void 0 !== b ? b : null;
     a.ZP.trackWithMetadata(d.rMx.NOTIFICATION_SETTINGS_UPDATED, {
         ...y,
         ...s.Z.getStats(e),
@@ -158,7 +158,7 @@ function I(e, t, n, r, i, u) {
         last_message_type: D
     });
 }
-function b(e) {
+function I(e) {
     let t = u.ZP.isMuted(e),
         n = u.ZP.getMuteConfig(e);
     return {
@@ -175,7 +175,7 @@ function b(e) {
 }
 function S(e) {
     let t = new Map();
-    return e.forEach((e) => t.set(e, b(e))), t;
+    return e.forEach((e) => t.set(e, I(e))), t;
 }
 function T(e, t) {
     let n = u.ZP.isChannelMuted(e, t),

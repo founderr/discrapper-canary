@@ -18,7 +18,7 @@ var r = n(200651),
     h = n(388032),
     m = n(543337);
 function g(e) {
-    let { user: t, profileType: n, usernameIcon: a, tags: g, nickname: E, nicknameIcons: v, pronouns: I, className: b, isTryItOut: S, onOpenProfile: T, nicknameVariant: y = 'heading-lg/bold', pronounsVariant: A = 'text-sm/medium' } = e,
+    let { user: t, profileType: n, usernameIcon: a, tags: g, nickname: E, nicknameIcons: v, pronouns: b, className: I, isTryItOut: S, onOpenProfile: T, nicknameVariant: y = 'heading-lg/bold', pronounsVariant: A = 'text-sm/medium' } = e,
         { newestAnalyticsLocation: N } = (0, u.ZP)(),
         C = {
             [m.biteSize]: n === p.y0.BITE_SIZE,
@@ -33,7 +33,7 @@ function g(e) {
                       className: m.clickableUsername,
                       children: e
                   }),
-        O = null != I && I.length > 0,
+        O = null != b && b.length > 0,
         D = (0, c.D)(t),
         L = (0, f.Z)('UserProfileUsername'),
         x = i.useMemo(
@@ -44,7 +44,7 @@ function g(e) {
             [N, t.id]
         );
     return (0, r.jsxs)('div', {
-        className: s()(m.container, { [m.bot]: null != D }, b),
+        className: s()(m.container, { [m.bot]: null != D }, I),
         children: [
             (0, r.jsxs)('div', {
                 className: m.usernameRow,
@@ -101,7 +101,7 @@ function g(e) {
                                         variant: A,
                                         className: m.pronounsText,
                                         color: 'header-primary',
-                                        children: I
+                                        children: b
                                     })
                                 })
                             ]

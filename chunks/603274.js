@@ -111,7 +111,7 @@ function N() {
             c.VoiceNormalIcon,
             b.filter((e) => !y.includes(e.id) && !T.includes(e.id))
         );
-    let R =
+    let M =
             ((e = S),
             (t = N),
             0 === e.length
@@ -146,13 +146,13 @@ function N() {
                           })
                       ]
                   })),
-        M = Z(
+        R = Z(
             c.ScreenArrowIcon,
             A.filter((e) => null != e && !T.includes(e.id))
         ),
-        L = Z(c.ActivitiesIcon, j);
+        w = Z(c.ActivitiesIcon, j);
     return (0, i.jsxs)(i.Fragment, {
-        children: [R, P, M, L]
+        children: [M, P, R, w]
     });
 }
 function y() {

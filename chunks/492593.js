@@ -26,8 +26,8 @@ t.Z = function (e) {
                 }
             },
             hasThread: v,
-            isSystemMessage: I,
-            hasReply: b,
+            isSystemMessage: b,
+            hasReply: I,
             ...S
         } = e,
         T = (0, r.jsx)(s.FocusRing, {
@@ -40,8 +40,8 @@ t.Z = function (e) {
                     [o.cozy]: !n,
                     [o.zalgo]: l,
                     [o.hasThread]: v,
-                    [o.isSystemMessage]: I,
-                    [o.hasReply]: b
+                    [o.isSystemMessage]: b,
+                    [o.hasReply]: I
                 }),
                 ref: g,
                 ...S,

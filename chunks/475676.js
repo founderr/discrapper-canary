@@ -10,8 +10,8 @@ var l = n(200651),
     r = n(481060),
     o = n(297781),
     s = n(443487),
-    u = n(314897),
-    c = n(594174),
+    c = n(314897),
+    u = n(594174),
     d = n(626135),
     m = n(5192),
     x = n(873128),
@@ -51,7 +51,7 @@ function Z(e) {
             leaderboardId: g._,
             intervalStart: null !== (v = null == _ ? void 0 : _.interval_start) && void 0 !== v ? v : ''
         }),
-        S = (0, i.e7)([u.default], () => u.default.getId()),
+        S = (0, i.e7)([c.default], () => c.default.getId()),
         [A, M] = a.useMemo(() => {
             let e = E.find((e) => e.userId === S),
                 t = E[0],
@@ -59,8 +59,8 @@ function Z(e) {
                 l = null == _ ? void 0 : _.users.find((e) => e.user_id === (null == n ? void 0 : n.userId));
             return [n, l];
         }, [_, E, S]),
-        k = (0, i.e7)([c.default], () => c.default.getUser(null == A ? void 0 : A.userId)),
-        w = m.ZP.getName(N, void 0, k);
+        k = (0, i.e7)([u.default], () => u.default.getUser(null == A ? void 0 : A.userId)),
+        R = m.ZP.getName(N, void 0, k);
     if (
         (!(function (e) {
             let { leaderboard: t, guildId: n } = e,
@@ -80,8 +80,8 @@ function Z(e) {
     )
         return null;
     if (0 === _.users.length || null == A || null == k) return (0, l.jsx)(L, { selected: y });
-    let { sort_by_statistic_id: R } = _.guild_settings,
-        b = null !== (j = null == M ? void 0 : null === (n = M.statistics) || void 0 === n ? void 0 : null === (t = n[R]) || void 0 === t ? void 0 : t.value) && void 0 !== j ? j : 0,
+    let { sort_by_statistic_id: w } = _.guild_settings,
+        b = null !== (j = null == M ? void 0 : null === (n = M.statistics) || void 0 === n ? void 0 : null === (t = n[w]) || void 0 === t ? void 0 : t.value) && void 0 !== j ? j : 0,
         { currentRank: H } = A;
     return (
         (Z =
@@ -89,7 +89,7 @@ function Z(e) {
                 ? I.intl.formatToPlainString(I.t['eU+JxM'], { rank: H })
                 : I.intl.formatToPlainString(I.t['8BLSQ0'], {
                       rank: H,
-                      username: w
+                      username: R
                   })),
         (0, l.jsxs)(s.Zb, {
             selected: y,
@@ -103,7 +103,7 @@ function Z(e) {
                             location: o.Gt.CARD,
                             children: (0, l.jsx)(p.DC, {
                                 value: b,
-                                statisticId: R
+                                statisticId: w
                             })
                         })
                     ]

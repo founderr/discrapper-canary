@@ -16,8 +16,8 @@ var r,
     g = n(145597),
     E = n(454991),
     v = n(568963),
-    I = n(388627),
-    b = n(987650),
+    b = n(388627),
+    I = n(987650),
     S = n(501787);
 let T = new d.Z('OverlayStore'),
     y = new Set(),
@@ -53,7 +53,7 @@ function w(e) {
 }
 async function M(e) {
     var t, n;
-    return await (0, I.fK)(), c.Z.window.setBackgroundThrottling(!1), (O = e), (0, g.tB)(O), null !== (n = await (null === c.Z || void 0 === c.Z ? void 0 : null === (t = c.Z.window) || void 0 === t ? void 0 : t.getNativeHandle(S.$J))) && void 0 !== n ? n : '';
+    return await (0, b.fK)(), c.Z.window.setBackgroundThrottling(!1), (O = e), (0, g.tB)(O), null !== (n = await (null === c.Z || void 0 === c.Z ? void 0 : null === (t = c.Z.window) || void 0 === t ? void 0 : t.getNativeHandle(S.$J))) && void 0 !== n ? n : '';
 }
 function P() {
     var e;
@@ -97,10 +97,10 @@ function U(e, t, n, r) {
     if (null == l) throw Error();
     l.dispatchEvent(o);
 }
-function G(e) {
+function B(e) {
     (R = e), u.Z.setFocusedPID(R);
 }
-function B(e) {
+function G(e) {
     (R = null), u.Z.setFocusedPID(null);
 }
 function Z(e) {
@@ -109,12 +109,12 @@ function Z(e) {
 let F = (() => {
     let e = null;
     async function t() {
-        if (!b.iP) throw (T.error('Attempted to load overlay on an unsupported platform.'), Error('Overlay v3 is not supported on this platform.'));
+        if (!I.iP) throw (T.error('Attempted to load overlay on an unsupported platform.'), Error('Overlay v3 is not supported on this platform.'));
         try {
             var e, t, n;
             await m.ZP.ensureModule('discord_desktop_overlay');
             let r = m.ZP.requireModule('discord_desktop_overlay');
-            null == r || null === (e = r.init) || void 0 === e || e.call(r), r.setCaptureZoneCallback(U), r.setHostWindowCallbacks(M, P, k), r.setFocusCallback(G), null === (t = r.setFocusLostCallback) || void 0 === t || t.call(r, B), null === (n = r.setSuccessfullyShownCallback) || void 0 === n || n.call(r, Z), (N = r), x();
+            null == r || null === (e = r.init) || void 0 === e || e.call(r), r.setCaptureZoneCallback(U), r.setHostWindowCallbacks(M, P, k), r.setFocusCallback(B), null === (t = r.setFocusLostCallback) || void 0 === t || t.call(r, G), null === (n = r.setSuccessfullyShownCallback) || void 0 === n || n.call(r, Z), (N = r), x();
         } catch (e) {
             throw (T.error('failed loading overlay module', e), e);
         }
@@ -122,7 +122,7 @@ let F = (() => {
     return () => (null == e && (e = t()), e);
 })();
 function V(e, t) {
-    if (!!b.iP && !!L()) {
+    if (!!I.iP && !!L()) {
         if (
             ((C = e),
             E.v.update({
@@ -149,7 +149,7 @@ class H extends (r = o.ZP.Store) {
         return !A.has(e);
     }
     isSupported() {
-        return b.iP;
+        return I.iP;
     }
     isOverlayV3Enabled() {
         return L();

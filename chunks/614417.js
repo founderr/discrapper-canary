@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return b;
     }
 }),
     n(47120);
@@ -21,14 +21,14 @@ var r = n(200651),
     g = n(388032),
     E = n(572046),
     v = n(609440);
-function I(e) {
-    let { user: t, guildId: n, setPopoutRef: I, channelId: b, messageId: S, roleId: T, onViewBlockedProfileClick: y, newAnalyticsLocations: A = [] } = e,
+function b(e) {
+    let { user: t, guildId: n, setPopoutRef: b, channelId: I, messageId: S, roleId: T, onViewBlockedProfileClick: y, newAnalyticsLocations: A = [] } = e,
         { analyticsLocations: N } = (0, l.ZP)([...A, o.Z.BLOCKED_PROFILE_POPOUT]),
         C = (0, c.ZB)({
             layout: 'BLOCKED_PROFILE_POPOUT',
             userId: t.id,
             guildId: n,
-            channelId: b,
+            channelId: I,
             messageId: S,
             roleId: T
         }),
@@ -37,8 +37,8 @@ function I(e) {
         D = (0, a.e7)([u.ZP], () => (null != n ? u.ZP.getMember(n, t.id) : null));
     return (
         i.useEffect(() => {
-            null == I || I(null == R ? void 0 : R.current);
-        }, [R, I]),
+            null == b || b(null == R ? void 0 : R.current);
+        }, [R, b]),
         (0, r.jsx)(l.Gt, {
             value: N,
             children: (0, r.jsx)(c.Mt, {

@@ -15,8 +15,8 @@ var a,
     g = n(911969),
     E = n(109728),
     v = n(670890),
-    I = n(569611),
-    b = n(710845),
+    b = n(569611),
+    I = n(710845),
     S = n(703656),
     T = n(786213),
     y = n(626135),
@@ -26,15 +26,15 @@ var a,
     R = n(412788),
     O = n(981631),
     D = n(723359);
-let L = new b.Z('AuthenticationStore'),
+let L = new I.Z('AuthenticationStore'),
     x = 'fingerprint',
     w = 'email_cache',
     M = 'user_id_cache',
     P = null,
     k = null,
     U = null,
-    G = null,
     B = null,
+    G = null,
     Z = null,
     F = null,
     V = null,
@@ -143,7 +143,7 @@ function eg(e) {
             type: (null == e ? void 0 : e.isSwitchingAccount) ? 'user-data-only' : 'all'
         }),
         R.Z.clearAll();
-    I.ZH(), N.Z.clearUser(), h.K.remove(M), (P = null), (U = null), (j = (null == e ? void 0 : e.isSwitchingAccount) ? O.u34.LOGGING_IN : O.u34.NONE), (H = O.$ib.NONE), (K = ''), (J = ''), (q = null), (z = !1), ($ = !1), (ee = !1), (et = {}), (en = {}), (eo = !1), (el = !1);
+    b.ZH(), N.Z.clearUser(), h.K.remove(M), (P = null), (U = null), (j = (null == e ? void 0 : e.isSwitchingAccount) ? O.u34.LOGGING_IN : O.u34.NONE), (H = O.$ib.NONE), (K = ''), (J = ''), (q = null), (z = !1), ($ = !1), (ee = !1), (et = {}), (en = {}), (eo = !1), (el = !1);
 }
 class eE extends (a = _.ZP.Store) {
     initialize() {
@@ -177,10 +177,10 @@ class eE extends (a = _.ZP.Store) {
         return U;
     }
     getAuthSessionIdHash() {
-        return G;
+        return B;
     }
     getStaticAuthSessionId() {
-        return B;
+        return G;
     }
     getToken() {
         return (0, A.LP)();
@@ -283,7 +283,7 @@ class eE extends (a = _.ZP.Store) {
             CONNECTION_OPEN: function (e) {
                 var t;
                 let { user: n, sessionId: r, authSessionIdHash: i, analyticsToken: a, auth: s, staticAuthSessionId: o } = e;
-                ec('handleConnectionOpen called'), N.Z.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, T.Z)(n)), (U = r), (G = i), (B = o), (V = a), (P = n.id), (k = n.email), void 0 !== s && (W = s.authenticator_types), h.K.set(w, n.email), h.K.set(M, n.id);
+                ec('handleConnectionOpen called'), N.Z.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, T.Z)(n)), (U = r), (B = i), (G = o), (V = a), (P = n.id), (k = n.email), void 0 !== s && (W = s.authenticator_types), h.K.set(w, n.email), h.K.set(M, n.id);
             },
             OVERLAY_INITIALIZE: function (e) {
                 var t;
@@ -304,7 +304,7 @@ class eE extends (a = _.ZP.Store) {
             },
             AUTH_SESSION_CHANGE: function (e) {
                 let { authSessionIdHash: t } = e;
-                null != t && (G = t);
+                null != t && (B = t);
             },
             LOGIN: function (e) {
                 (en = {}), (j = O.u34.LOGGING_IN), (J = ''), (i = null), null != e.login && (ea = e.login), el || (el = e.loginMethod === O.nnr.PASSWORD);

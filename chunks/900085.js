@@ -34,8 +34,8 @@ var i,
     j = n(670512),
     A = n(981631),
     P = n(388032),
-    R = n(91475);
-function M(e, t, n) {
+    M = n(91475);
+function R(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -48,17 +48,17 @@ function M(e, t, n) {
         e
     );
 }
-let L = 10,
-    w = () =>
+let w = 10,
+    L = () =>
         (0, l.jsxs)('div', {
-            className: R.emptyState,
+            className: M.emptyState,
             children: [
                 (0, l.jsx)('div', {
-                    className: R.emptyStateNote,
+                    className: M.emptyStateNote,
                     children: P.intl.string(P.t.bpbATE)
                 }),
                 (0, l.jsx)('div', {
-                    className: R.emptyStateCTA,
+                    className: M.emptyStateCTA,
                     children: (0, l.jsx)(u.Anchor, {
                         href: Z.Z.getArticleURL(A.BhN.QUICK_SWITCHER_TUTORIAL),
                         children: P.intl.string(P.t['4iPfEB'])
@@ -72,13 +72,13 @@ class D extends (i = r.Component) {
         return (0, l.jsx)(T.$W, {
             ...this.props,
             children: (0, l.jsx)('div', {
-                className: R.miscContainer,
+                className: M.miscContainer,
                 children: null != e ? e.name : null
             })
         });
     }
 }
-M(D, 'defaultProps', { unread: !1 });
+R(D, 'defaultProps', { unread: !1 });
 let O = c.ZP.connectStores([I.ZP, _.Z], (e) => {
         let { channel: t } = e;
         return {
@@ -113,7 +113,7 @@ function H(e, t, n) {
             children: (e) =>
                 (0, l.jsx)('span', {
                     ...e,
-                    className: R.autocompleteQuerySymbol,
+                    className: M.autocompleteQuerySymbol,
                     children: t
                 })
         },
@@ -154,7 +154,7 @@ class V extends r.PureComponent {
             i = t.length > 0 && '' !== n;
         return (0, l.jsx)(u.FocusRing, {
             children: (0, l.jsx)('input', {
-                className: R.input,
+                className: M.input,
                 'aria-label': P.intl.string(P.t.ZvKwYW),
                 ref: this.inputRef,
                 type: 'text',
@@ -179,7 +179,7 @@ class V extends r.PureComponent {
         let { query: e } = this.state,
             { results: t } = this.props;
         return 0 === t.length && e.length > 0
-            ? (0, l.jsx)(w, {})
+            ? (0, l.jsx)(L, {})
             : 0 === t.length
               ? null
               : (0, l.jsx)(u.ListAuto, {
@@ -189,9 +189,9 @@ class V extends r.PureComponent {
                     ref: this.scrollerRef,
                     sectionHeight: 0,
                     rowHeight: 34,
-                    paddingBottom: L,
+                    paddingBottom: w,
                     sections: [t.length],
-                    className: R.scroller,
+                    className: M.scroller,
                     renderRow: this.renderRow,
                     renderSection: this.renderSection
                 });
@@ -204,7 +204,7 @@ class V extends r.PureComponent {
     }
     renderProtip() {
         return (0, l.jsx)(g.Z, {
-            className: o()(R.protip, { [R.hasContent]: this.state.query.length > 0 }),
+            className: o()(M.protip, { [M.hasContent]: this.state.query.length > 0 }),
             type: g.Z.Types.INLINE,
             children: P.intl.format(P.t.wukqXV, {
                 userSymbolHook: (e, t) => H(t, m.xQ.USER, P.intl.string(P.t.GQRCGh)),
@@ -225,10 +225,10 @@ class V extends r.PureComponent {
             'aria-label': P.intl.string(P.t.ZvKwYW),
             size: u.ModalSize.DYNAMIC,
             transitionState: this.props.transitionState,
-            className: o()(R.container, s.tq && R.mobileContainer),
+            className: o()(M.container, s.tq && M.mobileContainer),
             fullscreenOnMobile: !1,
             children: (0, l.jsxs)('div', {
-                className: o()(R.quickswitcher, s.tq && R.mobileQuickswitcher),
+                className: o()(M.quickswitcher, s.tq && M.mobileQuickswitcher),
                 onMouseMove: this.handleMouseMove,
                 children: [this.renderInput(), this.renderResults(), this.renderProtip(), this.renderTutorial()]
             })
@@ -236,28 +236,28 @@ class V extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            M(this, 'scrollerRef', r.createRef()),
-            M(this, 'inputRef', r.createRef()),
-            M(this, '_listId', (0, C.hQ)()),
-            M(this, 'state', {
+            R(this, 'scrollerRef', r.createRef()),
+            R(this, 'inputRef', r.createRef()),
+            R(this, '_listId', (0, C.hQ)()),
+            R(this, 'state', {
                 query: this.props.query,
                 mouseFocusDisabled: !0
             }),
-            M(this, 'handleInputChange', () => {
+            R(this, 'handleInputChange', () => {
                 let { current: e } = this.inputRef;
                 null != e && this.search(e.value);
             }),
-            M(this, 'handleMouseMove', () => {
+            R(this, 'handleMouseMove', () => {
                 let { mouseFocusDisabled: e } = this.state;
                 if (!1 !== e) this.setState({ mouseFocusDisabled: !1 });
             }),
-            M(this, 'focusResult', (e) => {
+            R(this, 'focusResult', (e) => {
                 if (!this.state.mouseFocusDisabled) (0, N.tF)(this.props.results.indexOf(e));
             }),
-            M(this, 'selectResult', (e) => {
+            R(this, 'selectResult', (e) => {
                 (0, N.Se)(e, this.props.queryMode === m.h8.TEXT_CHANNEL);
             }),
-            M(this, 'handleContextMenu', (e) => {
+            R(this, 'handleContextMenu', (e) => {
                 let t = this.props.results[this.props.selectedIndex];
                 switch (t.type) {
                     case m.h8.GUILD:
@@ -360,7 +360,7 @@ class V extends r.PureComponent {
                         });
                 }
             }),
-            M(this, 'handleKeyDown', (e) => {
+            R(this, 'handleKeyDown', (e) => {
                 let { mouseFocusDisabled: t, query: n } = this.state,
                     { results: i } = this.props;
                 !1 === t && this.setState({ mouseFocusDisabled: !0 });
@@ -399,7 +399,7 @@ class V extends r.PureComponent {
                 }
                 e.preventDefault(), (0, N.tF)(r);
             }),
-            M(this, 'renderRow', (e) => {
+            R(this, 'renderRow', (e) => {
                 let { row: t } = e,
                     n = this.props.results[t],
                     { selectedIndex: i } = this.props,

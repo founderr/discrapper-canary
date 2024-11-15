@@ -23,7 +23,7 @@ function f(e, t) {
 let _ = (e) => {
     let t,
         n,
-        { backgroundStyle: a = 'always', children: _, icon: p, name: h, ariaLabel: m, className: g, style: E, to: v, onClick: I, selected: b = !1, ...S } = e,
+        { backgroundStyle: a = 'always', children: _, icon: p, name: h, ariaLabel: m, className: g, style: E, to: v, onClick: b, selected: I = !1, ...S } = e,
         T = (0, o.k6)();
     if (null == p && null != h) {
         var y;
@@ -37,14 +37,14 @@ let _ = (e) => {
                 let { pathname: e = '', state: t } = v;
                 T.push(e, t);
             }
-            null != I && I(e);
+            null != b && b(e);
         },
-        [T, v, I]
+        [T, v, b]
     );
     return (0, r.jsxs)(l.Clickable, {
         ...S,
         onClick: A,
-        className: s()(g, c.wrapper, { [c.selected]: b }),
+        className: s()(g, c.wrapper, { [c.selected]: I }),
         'aria-label': null != m && '' !== m ? m : null != h ? h : '',
         style: {
             ...E,

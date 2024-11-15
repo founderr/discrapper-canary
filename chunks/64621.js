@@ -21,8 +21,8 @@ var r = n(200651),
     g = n(388032),
     E = n(671511),
     v = n(425637),
-    I = n(895982),
-    b = n(685741),
+    b = n(895982),
+    I = n(685741),
     S = n(20818);
 function T(e) {
     var t, n, T;
@@ -39,8 +39,8 @@ function T(e) {
         P = y === m.n_.AVATAR && L,
         k = y === m.n_.ACTIVITY && D && !L,
         U = !x && C === m.y0.BITE_SIZE && (w || M || P || k),
-        [G, B] = i.useState(!1);
-    (0, l.Z)(() => B(!0), U ? 200 : null);
+        [B, G] = i.useState(!1);
+    (0, l.Z)(() => G(!0), U ? 200 : null);
     let {
             asset: Z,
             assetClassName: F,
@@ -54,7 +54,7 @@ function T(e) {
         (T = D),
         L
             ? {
-                  asset: b,
+                  asset: I,
                   assetClassName: E.profileImage,
                   className: E.profileCoachmark,
                   content: g.intl.string(g.t.HEGlIC),
@@ -74,7 +74,7 @@ function T(e) {
                 }
               : t && n
                 ? {
-                      asset: b,
+                      asset: I,
                       assetClassName: E.profileImage,
                       className: E.profileCoachmark,
                       content: g.intl.string(g.t['yzj+dn']),
@@ -93,7 +93,7 @@ function T(e) {
                         dismissibleContentType: s.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK_STATUS
                     }
                   : {
-                        asset: I,
+                        asset: b,
                         assetClassName: E.avatarImage,
                         className: E.avatarCoachmark,
                         content: g.intl.string(g.t['65191t']),
@@ -102,7 +102,7 @@ function T(e) {
                         dismissibleContentType: s.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK_AVATAR
                     }),
         K = (0, u.N)(s.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK),
-        [z, q] = (0, c.US)(G && !K ? [W] : []);
+        [z, q] = (0, c.US)(B && !K ? [W] : []);
     return (0, r.jsx)(o.Popout, {
         align: 'center',
         position: y === m.n_.AVATAR ? 'left' : 'right',

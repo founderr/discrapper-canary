@@ -23,7 +23,7 @@ function E(e) {
 }
 ((r = i || (i = {}))[(r.SMALL = 0)] = 'SMALL'), (r[(r.MEDIUM = 1)] = 'MEDIUM'), (r[(r.CLIP = 2)] = 'CLIP');
 t.Z = s.forwardRef(function (e, t) {
-    let { id: n, channelId: r, className: i, children: s, actions: o, handleEditModal: v, keyboardModeEnabled: I, onKeyDown: b, draftType: S, size: T = 1 } = e,
+    let { id: n, channelId: r, className: i, children: s, actions: o, handleEditModal: v, keyboardModeEnabled: b, onKeyDown: I, draftType: S, size: T = 1 } = e,
         { onFocus: y, ...A } = (0, u.JA)(n),
         { handleFocus: N, handleBlur: C } = (0, p.b)(y),
         R = 0 === T,
@@ -34,7 +34,7 @@ t.Z = s.forwardRef(function (e, t) {
             onFocus: N,
             onBlur: C,
             onKeyDown: (e) => {
-                if (!!I) {
+                if (!!b) {
                     switch (e.which) {
                         case h.yXg.D:
                             e.preventDefault(), d.Z.remove(r, n, S);
@@ -49,7 +49,7 @@ t.Z = s.forwardRef(function (e, t) {
                             if (e.shiftKey || e.altKey || e.ctrlKey || e.metaKey) return;
                             e.preventDefault(), _.S.dispatchToLastSubscribed(h.CkL.FOCUS_MESSAGES, { atEnd: !0 });
                     }
-                    null == b || b(e);
+                    null == I || I(e);
                 }
             },
             className: l()(g.upload, i, { [g.sizeClip]: 2 === T }),

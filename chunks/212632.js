@@ -1,16 +1,16 @@
 n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    l = n.n(r),
-    a = n(481060),
+    r = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(481060),
     o = n(981631),
     c = n(388032),
     d = n(167740),
     u = n(113207);
-let m = 0,
-    h = () => 'notification-position-selector-'.concat(m++),
-    g = (e) => {
+let h = 0,
+    p = () => 'notification-position-selector-'.concat(h++),
+    f = (e) => {
         switch (e) {
             case o._vf.TOP_LEFT:
                 return c.intl.string(c.t.xlchpa);
@@ -24,23 +24,23 @@ let m = 0,
                 return c.intl.string(c.t.AlY4ZW);
         }
     },
-    p = [o._vf.DISABLED, o._vf.TOP_LEFT, o._vf.TOP_RIGHT, o._vf.BOTTOM_LEFT, o._vf.BOTTOM_RIGHT];
-function x(e) {
+    g = [o._vf.DISABLED, o._vf.TOP_LEFT, o._vf.TOP_RIGHT, o._vf.BOTTOM_LEFT, o._vf.BOTTOM_RIGHT];
+function m(e) {
     let { position: t, onChange: n } = e,
-        [r] = s.useState(() => h()),
-        m = t === o._vf.DISABLED ? c.intl.string(c.t.R6LxVV) : c.intl.formatToPlainString(c.t.XXHDMz, { position: g(t) });
+        [s] = r.useState(() => p()),
+        h = t === o._vf.DISABLED ? c.intl.string(c.t.R6LxVV) : c.intl.formatToPlainString(c.t.XXHDMz, { position: f(t) });
     return (0, i.jsxs)('div', {
         children: [
-            (0, i.jsx)(a.FocusRing, {
+            (0, i.jsx)(l.FocusRing, {
                 within: !0,
                 offset: -2,
                 children: (0, i.jsx)('div', {
-                    className: l()(d.wrapper, { [d.disabledSelected]: t === o._vf.DISABLED }),
-                    children: p.map((e) =>
+                    className: a()(d.wrapper, { [d.disabledSelected]: t === o._vf.DISABLED }),
+                    children: g.map((e) =>
                         (0, i.jsxs)(
                             'label',
                             {
-                                className: l()({
+                                className: a()({
                                     [d.selected]: e === t,
                                     [d.disabled]: e === o._vf.DISABLED,
                                     [d.topRight]: e === o._vf.TOP_RIGHT,
@@ -49,9 +49,9 @@ function x(e) {
                                     [d.bottomLeft]: e === o._vf.BOTTOM_LEFT
                                 }),
                                 children: [
-                                    g(e),
+                                    f(e),
                                     e === o._vf.DISABLED
-                                        ? (0, i.jsx)(a.DenyIcon, {
+                                        ? (0, i.jsx)(l.DenyIcon, {
                                               size: 'md',
                                               color: 'currentColor',
                                               className: d.disabledIcon
@@ -59,7 +59,7 @@ function x(e) {
                                         : null,
                                     (0, i.jsx)('input', {
                                         type: 'radio',
-                                        name: r,
+                                        name: s,
                                         value: e,
                                         onChange: (t) => n(t, e),
                                         className: d.hiddenInput
@@ -71,12 +71,12 @@ function x(e) {
                     )
                 })
             }),
-            (0, i.jsx)(a.FormText, {
-                type: a.FormTextTypes.DESCRIPTION,
+            (0, i.jsx)(l.FormText, {
+                type: l.FormTextTypes.DESCRIPTION,
                 className: u.marginTop8,
-                children: m
+                children: h
             })
         ]
     });
 }
-(x.Positions = o._vf), (t.Z = x);
+(m.Positions = o._vf), (t.Z = m);

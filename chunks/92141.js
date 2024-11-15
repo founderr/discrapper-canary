@@ -25,8 +25,8 @@ e.exports = function (e, t, n, a, s, o) {
     }
     if (p && !h) {
         var v = e.constructor,
-            I = t.constructor;
-        v != I && 'constructor' in e && 'constructor' in t && !('function' == typeof v && v instanceof v && 'function' == typeof I && I instanceof I) && (p = !1);
+            b = t.constructor;
+        v != b && 'constructor' in e && 'constructor' in t && !('function' == typeof v && v instanceof v && 'function' == typeof b && b instanceof b) && (p = !1);
     }
     return o.delete(e), o.delete(t), p;
 };

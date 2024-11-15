@@ -15,8 +15,8 @@ var r = n(200651),
     g = n(267642),
     E = n(981631),
     v = n(30513),
-    I = n(388032),
-    b = n(40847);
+    b = n(388032),
+    I = n(40847);
 t.Z = (e) => {
     let { className: t, guildId: n, channel: a, shouldTrackUpsellViewed: S, setTrackedUpsellViewed: T } = e,
         { location: y } = (0, u.O)(),
@@ -40,18 +40,18 @@ t.Z = (e) => {
     null != N && C)
         ? R
             ? (0, r.jsxs)('div', {
-                  className: s()(b.upsell, t),
+                  className: s()(I.upsell, t),
                   children: [
                       (0, r.jsx)(l.BoostTier2SimpleIcon, {
                           size: 'md',
                           color: 'currentColor',
-                          className: b.icon
+                          className: I.icon
                       }),
                       (0, r.jsx)(l.Text, {
                           color: 'interactive-normal',
-                          className: b.body,
+                          className: I.body,
                           variant: 'text-sm/normal',
-                          children: I.intl.format(I.t.AXWla2, { count: (0, g.A3)(E.Eu4.TIER_1) })
+                          children: b.intl.format(b.t.AXWla2, { count: (0, g.A3)(E.Eu4.TIER_1) })
                       }),
                       (0, r.jsx)(l.Button, {
                           look: l.Button.Looks.LINK,
@@ -64,25 +64,25 @@ t.Z = (e) => {
                                   perks: (0, v.hC)()
                               });
                           },
-                          children: I.intl.string(I.t['Gb+BJC'])
+                          children: b.intl.string(b.t['Gb+BJC'])
                       })
                   ]
               })
             : (0, r.jsxs)('div', {
-                  className: s()(b.upsell, t),
+                  className: s()(I.upsell, t),
                   children: [
                       (0, r.jsx)(l.StickerIcon, {
                           size: 'custom',
                           color: 'currentColor',
-                          className: b.icon,
+                          className: I.icon,
                           width: 20,
                           height: 20
                       }),
                       (0, r.jsx)(l.Text, {
                           color: 'interactive-normal',
-                          className: b.body,
+                          className: I.body,
                           variant: 'text-sm/normal',
-                          children: I.intl.string(I.t.S83wgo)
+                          children: b.intl.string(b.t.S83wgo)
                       }),
                       (0, r.jsx)(l.Button, {
                           look: l.Button.Looks.LINK,
@@ -90,7 +90,7 @@ t.Z = (e) => {
                           onClick: () => {
                               (0, f._Q)(), p.Z.open(n, E.pNK.STICKERS, y);
                           },
-                          children: I.intl.string(I.t.bwNjur)
+                          children: b.intl.string(b.t.bwNjur)
                       })
                   ]
               })

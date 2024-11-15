@@ -1,10 +1,10 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return r;
     }
 });
 var i = n(987650);
-function s(e) {
+function r(e) {
     switch (e) {
         case i.wF.BOTTOM:
             return i.ap.LOW;

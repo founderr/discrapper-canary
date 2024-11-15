@@ -6,7 +6,7 @@ n.d(t, {
         return g;
     },
     BU: function () {
-        return I;
+        return b;
     },
     Dz: function () {
         return m;
@@ -322,7 +322,7 @@ var r = {
         800: '#4e342e',
         900: '#3e2723'
     },
-    I = {
+    b = {
         50: '#eceff1',
         100: '#cfd8dc',
         200: '#b0bec5',

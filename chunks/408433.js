@@ -9,13 +9,13 @@ n.d(t, {
         return A;
     },
     kC: function () {
-        return I;
+        return b;
     },
     l3: function () {
         return T;
     },
     o3: function () {
-        return b;
+        return I;
     },
     vP: function () {
         return y;
@@ -60,7 +60,7 @@ function v(e) {
         srcIsAnimated: l.Z.getCurrentConfig({ location: 'embed_utils_sanitize_media' }).enabled && (0, u.yE)(null != o ? o : 0, d.J0y.IS_ANIMATED)
     };
 }
-function I(e, t, n) {
+function b(e, t, n) {
     let r = {
         id: i().uniqueId('embed_'),
         url: n.url,
@@ -146,7 +146,7 @@ function I(e, t, n) {
     } else r.fields = [];
     return r;
 }
-function b(e) {
+function I(e) {
     let t = new Map(),
         n = [];
     return (

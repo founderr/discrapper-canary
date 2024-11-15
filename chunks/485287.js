@@ -1,6 +1,6 @@
 n.d(t, {
     U5: function () {
-        return I;
+        return b;
     },
     pp: function () {
         return v;
@@ -54,13 +54,13 @@ function v(e) {
         i = (0, r.e7)([_.Z], () => _.Z.getStageInstanceByChannel(e));
     return t && null == i && !n;
 }
-function I(e) {
+function b(e) {
     let t = o.Z.getVoiceChannelId() === e,
         n = null != c.Z.getMutableParticipants(e, f.pV.SPEAKER).find((e) => !e.voiceState.isVoiceMuted()),
         r = _.Z.getStageInstanceByChannel(e);
     return t && null == r && !n;
 }
-class b extends i.Z {
+class I extends i.Z {
     handleVoiceChannelSelect(e) {
         let { channelId: t } = e;
         if (null != t) {
@@ -113,4 +113,4 @@ class b extends i.Z {
                 : (t[n] = r);
     }
 }
-t.ZP = new b();
+t.ZP = new I();

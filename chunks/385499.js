@@ -38,9 +38,9 @@ let d = (e) => {
     }
     let E = i === l.Hb.ORIGINAL_POSTER,
         v = i === l.Hb.REMIX,
-        I = null;
+        b = null;
     f &&
-        (I = (0, r.jsx)(s.u, {
+        (b = (0, r.jsx)(s.u, {
             text: g,
             align: 'center',
             position: 'top',
@@ -52,7 +52,7 @@ let d = (e) => {
                 })
         })),
         (t = i === l.Hb.AI ? c.botTagAI : n ? c.botTagInvert : c.botTagRegular);
-    let b = (e) =>
+    let I = (e) =>
         (0, r.jsxs)('span', {
             ...e,
             className: a()(d, t, p ? c.rem : c.px, {
@@ -60,7 +60,7 @@ let d = (e) => {
                 [c.botTagRemix]: v
             }),
             children: [
-                _ ? null : I,
+                _ ? null : b,
                 h,
                 (0, r.jsx)('span', {
                     className: c.botText,
@@ -73,16 +73,16 @@ let d = (e) => {
             return (0, r.jsx)(s.u, {
                 text: u.intl.string(u.t.xb0str),
                 position: 'top',
-                children: (e) => b(e)
+                children: (e) => I(e)
             });
         case l.Hb.ORIGINAL_POSTER:
             return (0, r.jsx)(s.u, {
                 text: u.intl.string(u.t.uN6Emp),
                 position: 'top',
-                children: (e) => b(e)
+                children: (e) => I(e)
             });
         default:
-            return b();
+            return I();
     }
 };
 (d.Types = l.Hb), (t.Z = d);

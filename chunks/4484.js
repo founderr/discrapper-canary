@@ -16,8 +16,8 @@ var r = n(200651),
     g = n(436660),
     E = n(887490),
     v = n(194625),
-    I = n(77188),
-    b = n(230554),
+    b = n(77188),
+    I = n(230554),
     S = n(780748),
     T = n(464581),
     y = n(732659),
@@ -28,7 +28,7 @@ var r = n(200651),
     O = n(981631),
     D = n(770206);
 t.Z = i.forwardRef(function (e, t) {
-    let { value: n, type: a, channel: L, className: x, id: w, disabled: M, submitting: P, placeholder: k, required: U, textAreaPaddingClassName: G, onChange: B, onPaste: Z, onResize: F, onFocus: V, onBlur: j, onKeyDown: H, onKeyUp: Y, onTab: W, onEnter: K, onSubmit: z, maybeShowAutocomplete: q, hideAutocomplete: Q, moveSelection: X, spellcheckEnabled: J, canUseCommands: $, canOnlyUseTextCommands: ee, disableAutoFocus: et, disableEnterToSubmit: en, allowNewLines: er, 'aria-owns': ei, 'aria-expanded': ea, 'aria-haspopup': es, 'aria-activedescendant': eo, 'aria-controls': el, 'aria-invalid': eu, 'aria-describedby': ec, 'aria-labelledby': ed, 'aria-autocomplete': ef } = e,
+    let { value: n, type: a, channel: L, className: x, id: w, disabled: M, submitting: P, placeholder: k, required: U, textAreaPaddingClassName: B, onChange: G, onPaste: Z, onResize: F, onFocus: V, onBlur: j, onKeyDown: H, onKeyUp: Y, onTab: W, onEnter: K, onSubmit: z, maybeShowAutocomplete: q, hideAutocomplete: Q, moveSelection: X, spellcheckEnabled: J, canUseCommands: $, canOnlyUseTextCommands: ee, disableAutoFocus: et, disableEnterToSubmit: en, allowNewLines: er, 'aria-owns': ei, 'aria-expanded': ea, 'aria-haspopup': es, 'aria-activedescendant': eo, 'aria-controls': el, 'aria-invalid': eu, 'aria-describedby': ec, 'aria-labelledby': ed, 'aria-autocomplete': ef } = e,
         e_ = i.useRef(null),
         ep = i.useRef(null),
         eh = i.useRef(!0),
@@ -87,28 +87,28 @@ t.Z = i.forwardRef(function (e, t) {
         ev = i.useCallback(() => {
             eh.current = !1;
         }, []),
-        eI = i.useCallback(() => {
+        eb = i.useCallback(() => {
             eh.current = !0;
         }, []),
-        eb = (0, I.Z)({
+        eI = (0, b.Z)({
             channel: L,
             chatInputType: a,
             canUseCommands: $,
             canOnlyUseTextCommands: ee,
             onChangeStart: ev,
-            onChangeEnd: eI,
+            onChangeEnd: eb,
             updateState: eE
         }),
         eS = i.useCallback(
             (e, t) => {
-                let n = _.tM(eb, e, L.id),
+                let n = _.tM(eI, e, L.id),
                     r = _.lk(e, L.guild_id, L.id, n, t);
                 return {
                     values: n,
                     results: r
                 };
             },
-            [L.guild_id, L.id, eb]
+            [L.guild_id, L.id, eI]
         ),
         eT = i.useCallback(() => {
             let e;
@@ -116,17 +116,17 @@ t.Z = i.forwardRef(function (e, t) {
             if (null != t && null != t.options) {
                 let i = eS(t, !1);
                 e = i.values;
-                let a = _.cu(eb)
+                let a = _.cu(eI)
                     .filter((e) => !i.results[e].success)
                     .map((e) => {
                         var n;
                         return (null !== (n = t.options) && void 0 !== n ? n : []).find((t) => t.name === e);
                     });
-                for (let e of t.options) e.required && !(e.name in i.values) && (g.Q.insertCommandOption(eb, e), a.push(e));
+                for (let e of t.options) e.required && !(e.name in i.values) && (g.Q.insertCommandOption(eI, e), a.push(e));
                 if (a.length > 0) {
                     var n, r;
                     let e = a[0];
-                    g.Q.selectCommandOption(eb, e.name),
+                    g.Q.selectCommandOption(eI, e.name),
                         f.S.dispatch(O.CkL.SHAKE_APP, {
                             duration: 200,
                             intensity: 2
@@ -142,17 +142,17 @@ t.Z = i.forwardRef(function (e, t) {
             }
             null == z ||
                 z(
-                    (0, m.sk)(E.bN.richValue(eb), {
+                    (0, m.sk)(E.bN.richValue(eI), {
                         mode: 'raw',
                         ignoreTrailingEmptyNodes: !0
                     }),
                     t,
                     e
                 );
-        }, [L.id, eb, z, eS, $]);
-    (0, b.Z)(t, eb, L, eT), (0, y.Z)(eb, e_, F);
+        }, [L.id, eI, z, eS, $]);
+    (0, I.Z)(t, eI, L, eT), (0, y.Z)(eI, e_, F);
     let { handleKeyDown: ey, handleKeyUp: eA } = (0, S.Z)({
-            editor: eb,
+            editor: eI,
             channel: L,
             disableEnterToSubmit: en,
             onKeyDown: H,
@@ -164,7 +164,7 @@ t.Z = i.forwardRef(function (e, t) {
             hideAutocomplete: Q,
             moveSelection: X
         }),
-        { handlePaste: eN, handleGlobalPaste: eC } = (0, T.Z)(eb, eg, Z),
+        { handlePaste: eN, handleGlobalPaste: eC } = (0, T.Z)(eI, eg, Z),
         eR = i.useCallback(
             (e) => {
                 null == q || q();
@@ -173,13 +173,13 @@ t.Z = i.forwardRef(function (e, t) {
         ),
         eO = i.useCallback(
             (e) => {
-                e !== ep.current ? em.current && (null == B || B(null, (0, m.sk)(e, { mode: 'raw' }), e)) : em.current && q();
+                e !== ep.current ? em.current && (null == G || G(null, (0, m.sk)(e, { mode: 'raw' }), e)) : em.current && q();
             },
-            [q, B]
+            [q, G]
         );
     i.useLayoutEffect(() => {
-        eh.current && ((ep.current = n), eE(eb, 'parent', { value: n }));
-    }, [eb, n, eE]),
+        eh.current && ((ep.current = n), eE(eI, 'parent', { value: n }));
+    }, [eI, n, eE]),
         i.useEffect(() => {
             let e = () => {
                 var e;
@@ -187,9 +187,9 @@ t.Z = i.forwardRef(function (e, t) {
                 null !== t && null != t.options && eS(t, !0);
             };
             return c.Z.addChangeListener(e), () => c.Z.removeChangeListener(e);
-        }, [L, eb, eS]);
+        }, [L, eI, eS]);
     let eD = i.useCallback((e, t) => (0, v.Z)(e, t), []),
-        eL = i.useCallback((e) => (0, C.Z)(eb, e, L.id), [L.id, eb]),
+        eL = i.useCallback((e) => (0, C.Z)(eI, e, L.id), [L.id, eI]),
         ex = i.useCallback((e) => (0, R.Z)(e), []);
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -202,10 +202,10 @@ t.Z = i.forwardRef(function (e, t) {
                 className: s()(x, D.slateContainer),
                 children: (0, r.jsx)(h.Z, {
                     id: w,
-                    editor: eb,
+                    editor: eI,
                     channelId: L.id,
                     guildId: L.guild_id,
-                    className: s()(D.slateTextArea, G),
+                    className: s()(D.slateTextArea, B),
                     placeholder: k,
                     readOnly: eg,
                     spellCheck: J,

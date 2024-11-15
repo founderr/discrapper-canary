@@ -62,7 +62,7 @@ function v(e) {
         n = _.Z.getChannel(t.channelId);
     return null != n && g(n, 0, 0);
 }
-class I extends (i = u.ZP.Store) {
+class b extends (i = u.ZP.Store) {
     initialize() {
         this.waitFor(_.Z);
     }
@@ -72,7 +72,7 @@ class I extends (i = u.ZP.Store) {
     }
 }
 (l = 'SlowmodeStore'),
-    (o = 'displayName') in (s = I)
+    (o = 'displayName') in (s = b)
         ? Object.defineProperty(s, o, {
               value: l,
               enumerable: !0,
@@ -80,7 +80,7 @@ class I extends (i = u.ZP.Store) {
               writable: !0
           })
         : (s[o] = l),
-    (t.Z = new I(d.Z, {
+    (t.Z = new b(d.Z, {
         SLOWMODE_RESET_COOLDOWN: function (e) {
             let { channelId: t, slowmodeType: n } = e;
             return E(t, n);

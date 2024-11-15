@@ -30,25 +30,25 @@ let Z = (0, m.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
     N = (0, m.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE),
     y = (0, m.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_MARGIN);
 function T(e) {
-    let { folderNode: t, setNodeRef: n, selected: r, expanded: u, mediaState: m, mentionCount: T = 0, unread: j = !1, defaultFolderName: A, useCircleMask: P = !1, draggable: R = !1, sorting: M = !1, onDragStart: L, onDragEnd: w, onExpandCollapse: D, onContextMenu: O, renderChildNode: k, folderIconContent: U } = e,
+    let { folderNode: t, setNodeRef: n, selected: r, expanded: u, mediaState: m, mentionCount: T = 0, unread: j = !1, defaultFolderName: A, useCircleMask: P = !1, draggable: M = !1, sorting: R = !1, onDragStart: w, onDragEnd: L, onExpandCollapse: D, onContextMenu: O, renderChildNode: k, folderIconContent: U } = e,
         { id: G, name: B, children: H } = t,
         [V, F] = l.useState(!1),
         [W, z] = l.useState(!1),
         Y = V || W;
     l.useEffect(() => {
-        M && F(!1);
-    }, [M]);
+        R && F(!1);
+    }, [R]);
     let [{ dragging: K }, q] = (0, o.c)({
             type: f.eD.FOLDER,
             item: () => (
-                null == L || L(),
+                null == w || w(),
                 {
                     type: f.eD.FOLDER,
                     nodeId: t.id
                 }
             ),
             end() {
-                null == w || w(), (0, h.V1)(p.ZP.getCompatibleGuildFolders());
+                null == L || L(), (0, h.V1)(p.ZP.getCompatibleGuildFolders());
             },
             collect: (e) => ({ dragging: e.isDragging() })
         }),
@@ -83,11 +83,11 @@ function T(e) {
                 }),
                 (0, i.jsx)(I.Z, {
                     text: X,
-                    disabled: M,
+                    disabled: R,
                     selected: r,
                     disableWrapper: !0,
                     children: (0, i.jsx)('div', {
-                        ref: R ? q : void 0,
+                        ref: M ? q : void 0,
                         className: a()({ [S.wobble]: !K && W && !u }),
                         'data-dnd-name': X,
                         children: K
@@ -96,7 +96,7 @@ function T(e) {
                                   folderNode: t,
                                   expanded: u,
                                   forceCircular: P,
-                                  sorting: M,
+                                  sorting: R,
                                   mediaState: m,
                                   mentionCount: T,
                                   tooltipName: X,
@@ -110,7 +110,7 @@ function T(e) {
                               })
                     })
                 }),
-                R
+                M
                     ? (0, i.jsx)(_.ZP, {
                           name: X,
                           targetNode: t,
@@ -148,7 +148,7 @@ function T(e) {
                     )
                 );
             }),
-            R && u
+            M && u
                 ? (0, i.jsx)(_.Zu, {
                       name: X,
                       targetNode: t

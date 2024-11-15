@@ -100,12 +100,12 @@ function x() {
     });
 }
 t.ZP = l.memo(function (e) {
-    let { bannerVisible: t, controller: n, className: r, onClick: o, onContextMenu: I, onMouseDown: b, disableBannerAnimation: E, 'aria-expanded': S, 'aria-controls': Z, guild: N, guildBanner: y, animationOverlayHeight: T, children: j, headerClassName: A, communityInfoVisible: P, hasSubheader: R } = e,
-        M = N.hasFeature(m.oNc.ANIMATED_BANNER),
-        L = (0, u.Z)(N),
-        w = !L && N.hasCommunityInfoSubheader(),
-        D = !L && P,
-        O = (0, h.xR)(y) && M && !E,
+    let { bannerVisible: t, controller: n, className: r, onClick: o, onContextMenu: I, onMouseDown: b, disableBannerAnimation: E, 'aria-expanded': S, 'aria-controls': Z, guild: N, guildBanner: y, animationOverlayHeight: T, children: j, headerClassName: A, communityInfoVisible: P, hasSubheader: M } = e,
+        R = N.hasFeature(m.oNc.ANIMATED_BANNER),
+        w = (0, u.Z)(N),
+        L = !w && N.hasCommunityInfoSubheader(),
+        D = !w && P,
+        O = (0, h.xR)(y) && R && !E,
         [k, U] = l.useState(!1),
         G = l.useRef(),
         B = l.useRef(null),
@@ -145,7 +145,7 @@ t.ZP = l.memo(function (e) {
                             [C.hasBanner]: F(),
                             [C.bannerVisible]: t,
                             [e]: t,
-                            [C.communityInfoVisible]: D || (R && w)
+                            [C.communityInfoVisible]: D || (M && L)
                         }),
                         onMouseDown: b,
                         onContextMenu: I,
@@ -187,12 +187,12 @@ t.ZP = l.memo(function (e) {
                                             })
                                         ]
                                     }),
-                                    w &&
+                                    L &&
                                         (0, i.jsx)(v, {
                                             guild: N,
                                             controller: n,
                                             hasBanner: null != y,
-                                            hasSubheader: null != R && R
+                                            hasSubheader: null != M && M
                                         })
                                 ]
                             }),

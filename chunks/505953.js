@@ -21,8 +21,8 @@ var r = n(200651),
     g = n(477291),
     E = n(478758),
     v = n(789707),
-    I = n(981631),
-    b = n(531578),
+    b = n(981631),
+    I = n(531578),
     S = n(857911);
 function T(e) {
     let { summary: t, channel: f, members: v, guildId: T, unread: y, onClick: A } = e,
@@ -37,7 +37,7 @@ function T(e) {
                     rating: n
                 });
         },
-        L = d.Z.can(I.Plq.MANAGE_MESSAGES, f);
+        L = d.Z.can(b.Plq.MANAGE_MESSAGES, f);
     return (0, r.jsxs)(s.Clickable, {
         className: S.container,
         onClick: A,
@@ -117,7 +117,7 @@ function T(e) {
                     className: S.feedbackContainer,
                     children: [
                         (0, r.jsx)(s.Clickable, {
-                            onClick: (e) => D(e, b.aZ.GOOD),
+                            onClick: (e) => D(e, I.aZ.GOOD),
                             children: (0, r.jsx)(p.Z, {
                                 className: S.thumbIcon,
                                 width: 12,
@@ -125,7 +125,7 @@ function T(e) {
                             })
                         }),
                         (0, r.jsx)(s.Clickable, {
-                            onClick: (e) => D(e, b.aZ.BAD),
+                            onClick: (e) => D(e, I.aZ.BAD),
                             children: (0, r.jsx)(_.Z, {
                                 className: S.thumbIcon,
                                 width: 12,

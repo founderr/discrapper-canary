@@ -26,12 +26,12 @@ var r = n(581031),
     v = function (e) {
         return e + 22 + 75 * (e < 26);
     },
-    I = function (e, t, n) {
+    b = function (e, t, n) {
         var r = 0;
         for (e = n ? c(e / 700) : e >> 1, e += c(e / t); e > (26 * o) >> 1; ) (e = c(e / o)), (r += 36);
         return c(r + ((o + 1) * e) / (e + 38));
     },
-    b = function (e) {
+    I = function (e) {
         var t,
             n,
             r = [],
@@ -50,14 +50,14 @@ var r = n(581031),
             for (o += (m - a) * g, a = m, t = 0; t < e.length; t++) {
                 if ((n = e[t]) < a && ++o > 2147483647) throw l(s);
                 if (n === a) {
-                    for (var b = o, S = 36; ; ) {
+                    for (var I = o, S = 36; ; ) {
                         var T = S <= u ? 1 : S >= u + 26 ? 26 : S - u;
-                        if (b < T) break;
-                        var y = b - T,
+                        if (I < T) break;
+                        var y = I - T,
                             A = 36 - T;
-                        p(r, d(v(T + (y % A)))), (b = c(y / A)), (S += 36);
+                        p(r, d(v(T + (y % A)))), (I = c(y / A)), (S += 36);
                     }
-                    p(r, d(v(b))), (u = I(o, g, h === f)), (o = 0), h++;
+                    p(r, d(v(I))), (u = b(o, g, h === f)), (o = 0), h++;
                 }
             }
             o++, a++;
@@ -69,6 +69,6 @@ e.exports = function (e) {
         n,
         r = [],
         s = m(h(g(e), a, '.'), '.');
-    for (t = 0; t < s.length; t++) p(r, u(i, (n = s[t])) ? 'xn--' + b(n) : n);
+    for (t = 0; t < s.length; t++) p(r, u(i, (n = s[t])) ? 'xn--' + I(n) : n);
     return _(r, '.');
 };

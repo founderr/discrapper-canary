@@ -26,8 +26,8 @@ var r,
     g = n(593472),
     E = n(189451),
     v = n(358085),
-    I = n(591759),
-    b = n(981631),
+    b = n(591759),
+    I = n(981631),
     S = n(413135).Buffer;
 let T = window.DiscordNative,
     y = ['jpg', 'jpeg', 'png'],
@@ -103,7 +103,7 @@ function w(e) {
             try {
                 n = this.requireModule('discord_overlay2');
             } catch (e) {}
-            n && n.reset && n.reset(), n && n.disconnectAllProcesses && n.destroyHostProcess && (n.disconnectAllProcesses(), n.destroyHostProcess()), T.remotePowerMonitor.removeAllListeners(), window.location.origin === window.GLOBAL_ENV.MIGRATION_SOURCE_ORIGIN && !0 !== m.K.get(p.SV) && this.supportsFeature(b.eRX.USER_DATA_CACHE) && T.userDataCache.cacheUserData(m.K.stringify()), null == T || null === (t = T.window) || void 0 === t || t.close(null == T ? void 0 : null === (e = T.globalOverlay) || void 0 === e ? void 0 : e.WINDOW_KEY);
+            n && n.reset && n.reset(), n && n.disconnectAllProcesses && n.destroyHostProcess && (n.disconnectAllProcesses(), n.destroyHostProcess()), T.remotePowerMonitor.removeAllListeners(), window.location.origin === window.GLOBAL_ENV.MIGRATION_SOURCE_ORIGIN && !0 !== m.K.get(p.SV) && this.supportsFeature(I.eRX.USER_DATA_CACHE) && T.userDataCache.cacheUserData(m.K.stringify()), null == T || null === (t = T.window) || void 0 === t || t.close(null == T ? void 0 : null === (e = T.globalOverlay) || void 0 === e ? void 0 : e.WINDOW_KEY);
         },
         inputEventRegister(e, t, n, r) {
             !Array.isArray(t) && (t = t.toJS()),
@@ -263,7 +263,7 @@ function w(e) {
         async saveImage(e) {
             var t;
             f()(v.isPlatformEmbedded, 'Save image method called outside native app');
-            let n = I.Z.toURLSafe(e);
+            let n = b.Z.toURLSafe(e);
             if (null == n) return;
             let r = null !== (t = n.pathname.split('/').pop()) && void 0 !== t ? t : 'unknown',
                 i = await L(e),
@@ -273,7 +273,7 @@ function w(e) {
         async saveFile(e, t) {
             var n;
             f()(v.isPlatformEmbedded, 'Save file method called outside native app');
-            let r = I.Z.toURLSafe(e);
+            let r = b.Z.toURLSafe(e);
             if (null == r) return;
             let i = null !== (n = null != t ? t : r.pathname.split('/').pop()) && void 0 !== n ? n : 'unknown',
                 a = await L(e),
@@ -284,7 +284,7 @@ function w(e) {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : void 0;
             if (null != e) {
                 var t, n;
-                let r = null === (t = I.Z.toURLSafe(e)) || void 0 === t ? void 0 : t.pathname;
+                let r = null === (t = b.Z.toURLSafe(e)) || void 0 === t ? void 0 : t.pathname;
                 if (null == r) return !1;
                 let i = null === (n = r.split('.').pop()) || void 0 === n ? void 0 : n.toLowerCase();
                 if (null != i && !y.includes(i)) return !1;

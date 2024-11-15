@@ -16,8 +16,8 @@ var i = n(392711),
     g = n(960861),
     E = n(803647),
     v = n(70722),
-    I = n(981631);
-let b = (0, i.debounce)(l.xc, 1000);
+    b = n(981631);
+let I = (0, i.debounce)(l.xc, 1000);
 t.Z = {
     init() {
         h.Z.init(),
@@ -26,12 +26,12 @@ t.Z = {
                 let { videoState: t } = e,
                     n = c.Z.getCurrentUserActiveStream();
                 if (null != n) {
-                    let e = t === I.FQ1.PAUSED;
+                    let e = t === b.FQ1.PAUSED;
                     (0, l.tK)(n, e);
                 }
             }),
             s.Z.subscribe('STREAM_DELETE', (e) => {
-                e.reason === I.si2.STREAM_FULL &&
+                e.reason === b.si2.STREAM_FULL &&
                     ((0, l.aP)(e.streamKey, !1),
                     (0, a.openModalLazy)(async () => {
                         let { default: e } = await n.e('63757').then(n.bind(n, 309690));
@@ -64,7 +64,7 @@ t.Z = {
                     { ownerId: r, guildId: i } = (0, m.my)(n);
                 if (null == i || null == r || r !== (null === (t = p.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) return;
                 let a = f.Z.getMemberCount(i);
-                if (null != a && !(a < 2) && !(a > v.tB)) u.eo.getSetting() && b(n);
+                if (null != a && !(a < 2) && !(a > v.tB)) u.eo.getSetting() && I(n);
             });
     }
 };

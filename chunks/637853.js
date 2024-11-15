@@ -1,6 +1,6 @@
 n.d(t, {
     Ee: function () {
-        return b;
+        return I;
     },
     L6: function () {
         return L;
@@ -80,7 +80,7 @@ function v(e, t) {
     let r = null !== (n = t.flags) && void 0 !== n ? n : 0;
     return c.yE(r, h.q.STARTED_ONBOARDING) && !c.yE(r, h.q.COMPLETED_ONBOARDING);
 }
-function I(e, t, n) {
+function b(e, t, n) {
     let r = new Set();
     e.forEach((e) => {
         e.options.forEach((e) => {
@@ -98,8 +98,8 @@ function I(e, t, n) {
         s = i.filter((e) => r.has(e.id) || (null != e.parent_id && r.has(e.parent_id)));
     return [s, i.filter((e) => !r.has(e.id) && !(null != e.parent_id && r.has(e.parent_id)))];
 }
-function b(e, t, n) {
-    return I(
+function I(e, t, n) {
+    return b(
         t,
         n,
         o.ZP.getChannels(e)[o.sH].map((e) => {
@@ -109,7 +109,7 @@ function b(e, t, n) {
     );
 }
 function S(e, t, n) {
-    return I(
+    return b(
         t,
         n,
         (0, r.e7)([o.ZP], () => o.ZP.getChannels(e))[o.sH].map((e) => {

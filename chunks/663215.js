@@ -32,7 +32,7 @@ function v(e) {
         }));
     return t ? n.sort((e, t) => d.default.compare(e.sound.soundId, t.sound.soundId)) : n;
 }
-function I(e) {
+function b(e) {
     let { sections: t, guildIds: n, allSounds: r, potentialSoundIdsForSection: i, sectionType: a, sortById: s } = e,
         o = {};
     for (let e of [...n, g.X8]) {
@@ -52,7 +52,7 @@ function I(e) {
             items: c
         });
 }
-function b(e, t) {
+function I(e, t) {
     var n;
     let r = null !== (n = t.get(g.X8)) && void 0 !== n ? n : g.Hy;
     e.push({
@@ -104,12 +104,12 @@ function S(e) {
     return r.useMemo(() => {
         let e = [];
         return n
-            ? (b(e, S),
+            ? (I(e, S),
               {
                   categories: e,
                   isFetching: y
               })
-            : (I({
+            : (b({
                   sections: e,
                   guildIds: A,
                   allSounds: S,
@@ -118,7 +118,7 @@ function S(e) {
                   sortById: !0
               }),
               D &&
-                  I({
+                  b({
                       sections: e,
                       guildIds: A,
                       allSounds: S,
@@ -127,7 +127,7 @@ function S(e) {
                       sortById: !1
                   }),
               L &&
-                  I({
+                  b({
                       sections: e,
                       guildIds: A,
                       allSounds: S,
@@ -159,7 +159,7 @@ function S(e) {
                           items: o
                       });
               })(e, R, O, S, t),
-              !C && b(e, S),
+              !C && I(e, S),
               !(function (e, t, n, r, i) {
                   for (let s of t) {
                       var a;
@@ -177,7 +177,7 @@ function S(e) {
                           });
                   }
               })(e, N, null == R ? void 0 : R.id, S, g),
-              C && b(e, S),
+              C && I(e, S),
               {
                   categories: e,
                   isFetching: y

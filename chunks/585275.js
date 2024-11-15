@@ -16,8 +16,8 @@ var i = n(512722),
     g = n(199902),
     E = n(314897),
     v = n(358085),
-    I = n(998502),
-    b = n(569545),
+    b = n(998502),
+    I = n(569545),
     S = n(70722),
     T = n(981631),
     y = n(65154);
@@ -33,7 +33,7 @@ function D() {
 let L = o().debounce((e, t, n, r) => {
     x(
         e,
-        (0, b.V9)({
+        (0, I.V9)({
             streamType: null != t ? S.lo.GUILD : S.lo.CALL,
             guildId: t,
             channelId: n,
@@ -129,7 +129,7 @@ async function x(e, t) {
             ) {
                 let e = E.default.getToken();
                 a()(null != e, 'Auth token was null while sending screenshot.'),
-                    await I.ZP.makeChunkedRequest(
+                    await b.ZP.makeChunkedRequest(
                         T.ANM.STREAM_PREVIEW(t),
                         { thumbnail: i },
                         {

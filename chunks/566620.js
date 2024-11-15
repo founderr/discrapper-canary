@@ -58,8 +58,8 @@ var r = n(990547),
     g = n(812206),
     E = n(358221),
     v = n(233764),
-    I = n(375824),
-    b = n(48854),
+    b = n(375824),
+    I = n(48854),
     S = n(835873),
     T = n(973616),
     y = n(314897),
@@ -76,8 +76,8 @@ var r = n(990547),
     P = n(317381),
     k = n(672181),
     U = n(882347),
-    G = n(224189),
-    B = n(374065),
+    B = n(224189),
+    G = n(374065),
     Z = n(917107),
     F = n(89425),
     V = n(275920),
@@ -103,7 +103,7 @@ async function q(e) {
         E = A.Z.getChannel(r),
         S = null !== (t = null == E ? void 0 : E.getGuildId()) && void 0 !== t ? t : void 0;
     if (null == S && !(null !== (n = null == E ? void 0 : E.isPrivate()) && void 0 !== n && n)) return !1;
-    let T = (0, b.r)();
+    let T = (0, I.r)();
     try {
         a.Z.dispatch({
             type: 'EMBEDDED_ACTIVITY_LAUNCH_START',
@@ -180,7 +180,7 @@ async function q(e) {
                 applicationId: i,
                 channelId: r,
                 isStart: s,
-                error: e instanceof v.Z || e instanceof d.Z || e instanceof I.Z ? e : new d.Z(e)
+                error: e instanceof v.Z || e instanceof d.Z || e instanceof b.Z ? e : new d.Z(e)
             }),
             !1
         );
@@ -247,9 +247,9 @@ async function Q(e) {
                                           }
                                       })
                                   )
-                                : null != i && i in I.Z.ReasonCodes
-                                  ? t(new I.Z(i))
-                                  : t(new I.Z(I.Z.ReasonCodes.UNKNOWN));
+                                : null != i && i in b.Z.ReasonCodes
+                                  ? t(new b.Z(i))
+                                  : t(new b.Z(b.Z.ReasonCodes.UNKNOWN));
                     }
                 })
             });
@@ -263,25 +263,25 @@ async function X(e) {
         u = y.default.getSessionId(),
         c = R.default.getCurrentUser();
     if (null == n) return !1;
-    let d = await (0, G.Z)(n, i);
+    let d = await (0, B.Z)(n, i);
     if (null == i) return D.S.dispatch(H.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, { applicationId: n }), !1;
     let f = A.Z.getChannel(i);
     if (null == f || null == c || null == d) return !1;
     let _ =
         null != i
-            ? (0, B.e4)({
+            ? (0, G.e4)({
                   channelId: i,
                   ChannelStore: A.Z,
                   GuildStore: N.Z,
                   PermissionStore: C.Z,
                   VoiceStateStore: O.Z
               })
-            : B.jy.NO_CHANNEL;
-    if (_ !== B.jy.CAN_LAUNCH)
+            : G.jy.NO_CHANNEL;
+    if (_ !== G.jy.CAN_LAUNCH)
         return (
-            _ === B.jy.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION
+            _ === G.jy.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION
                 ? (0, S.w)()
-                : _ === B.jy.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS &&
+                : _ === G.jy.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS &&
                   s.Z.show({
                       title: K.intl.string(K.t['IOy+Iy']),
                       body: K.intl.string(K.t.UXoQTk),

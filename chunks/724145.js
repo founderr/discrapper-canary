@@ -22,8 +22,8 @@ var r = n(200651),
     g = n(639119),
     E = n(197115),
     v = n(587446),
-    I = n(594174),
-    b = n(626135),
+    b = n(594174),
+    I = n(626135),
     S = n(74538),
     T = n(238302),
     y = n(514361),
@@ -77,7 +77,7 @@ let x = () =>
         var t, n, i;
         let { onSubscribeSuccess: a, markAsDismissed: s } = e,
             { analyticsLocations: o } = (0, m.ZP)(h.Z.CLIENT_THEMES_EDITOR),
-            [f, _] = (0, l.Wu)([I.default, y.Z], () => [y.Z.gradientPreset, S.ZP.isPremium(I.default.getCurrentUser())]),
+            [f, _] = (0, l.Wu)([b.default, y.Z], () => [y.Z.gradientPreset, S.ZP.isPremium(b.default.getCurrentUser())]),
             p = (0, g.N)(),
             v = (0, S.Rt)({
                 intervalType: null == p ? void 0 : null === (t = p.subscription_trial) || void 0 === t ? void 0 : t.interval,
@@ -158,7 +158,7 @@ function k(e) {
     i.useEffect(() => f(C.rMx.CLIENT_THEME_PREVIEW_VIEWED), [f]),
         i.useEffect(() => {
             if (!!a)
-                b.default.track(C.rMx.PREMIUM_UPSELL_VIEWED, {
+                I.default.track(C.rMx.PREMIUM_UPSELL_VIEWED, {
                     type: O.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                     location_stack: n
                 });

@@ -18,13 +18,13 @@ e.exports = function (e) {
         g,
         E = a(e),
         v = l(this),
-        I = arguments.length,
-        b = I > 1 ? arguments[1] : void 0,
-        S = void 0 !== b;
-    S && (b = r(b, I > 2 ? arguments[2] : void 0));
+        b = arguments.length,
+        I = b > 1 ? arguments[1] : void 0,
+        S = void 0 !== I;
+    S && (I = r(I, b > 2 ? arguments[2] : void 0));
     var T = f(E),
         y = 0;
-    if (T && !(this === _ && o(T))) for (m = (h = d(E, T)).next, n = v ? new this() : []; !(p = i(m, h)).done; y++) (g = S ? s(h, b, [p.value, y], !0) : p.value), c(n, y, g);
-    else for (t = u(E), n = v ? new this(t) : _(t); t > y; y++) (g = S ? b(E[y], y) : E[y]), c(n, y, g);
+    if (T && !(this === _ && o(T))) for (m = (h = d(E, T)).next, n = v ? new this() : []; !(p = i(m, h)).done; y++) (g = S ? s(h, I, [p.value, y], !0) : p.value), c(n, y, g);
+    else for (t = u(E), n = v ? new this(t) : _(t); t > y; y++) (g = S ? I(E[y], y) : E[y]), c(n, y, g);
     return (n.length = y), n;
 };

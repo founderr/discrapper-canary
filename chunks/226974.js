@@ -55,8 +55,8 @@ var c = [],
     g = !1,
     E = 'function' == typeof setTimeout ? setTimeout : null,
     v = 'function' == typeof clearTimeout ? clearTimeout : null,
-    I = 'undefined' != typeof setImmediate ? setImmediate : null;
-function b(e) {
+    b = 'undefined' != typeof setImmediate ? setImmediate : null;
+function I(e) {
     for (var t = r(d); null !== t; ) {
         if (null === t.callback) i(d);
         else if (t.startTime <= e) i(d), (t.sortIndex = t.expirationTime), n(c, t);
@@ -65,7 +65,7 @@ function b(e) {
     }
 }
 function S(e) {
-    if (((g = !1), b(e), !m)) {
+    if (((g = !1), I(e), !m)) {
         if (null !== r(c)) (m = !0), w(T);
         else {
             var t = r(d);
@@ -77,12 +77,12 @@ function T(e, n) {
     (m = !1), g && ((g = !1), v(N), (N = -1)), (h = !0);
     var a = p;
     try {
-        for (b(n), _ = r(c); null !== _ && (!(_.expirationTime > n) || (e && !O())); ) {
+        for (I(n), _ = r(c); null !== _ && (!(_.expirationTime > n) || (e && !O())); ) {
             var s = _.callback;
             if ('function' == typeof s) {
                 (_.callback = null), (p = _.priorityLevel);
                 var o = s(_.expirationTime <= n);
-                (n = t.unstable_now()), 'function' == typeof o ? (_.callback = o) : _ === r(c) && i(c), b(n);
+                (n = t.unstable_now()), 'function' == typeof o ? (_.callback = o) : _ === r(c) && i(c), I(n);
             } else i(c);
             _ = r(c);
         }
@@ -117,9 +117,9 @@ function D() {
         }
     } else y = !1;
 }
-if ('function' == typeof I)
+if ('function' == typeof b)
     s = function () {
-        I(D);
+        b(D);
     };
 else if ('undefined' != typeof MessageChannel) {
     var L = new MessageChannel(),

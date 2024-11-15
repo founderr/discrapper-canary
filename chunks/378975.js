@@ -130,7 +130,7 @@ function _(e) {
         [y, Z] = i.useState(!1),
         [k, L] = i.useState(() => new Set(t.filter((e) => e.default).map((e) => e.value))),
         [R, O] = i.useState(k),
-        M = i.useMemo(() => t.some((e) => null != e.emoji), [t]);
+        P = i.useMemo(() => t.some((e) => null != e.emoji), [t]);
     i.useEffect(() => {
         if ((null == I ? void 0 : I.type) === c.re.STRING_SELECT) {
             let e = new Set(I.values);
@@ -140,7 +140,7 @@ function _(e) {
             L(e), O(e);
         }
     }, [r, g, I]);
-    let P = i.useCallback(() => {
+    let M = i.useCallback(() => {
         if (R !== k)
             b({
                 type: c.re.STRING_SELECT,
@@ -148,8 +148,8 @@ function _(e) {
             }) && O(k);
     }, [k, R, O, b]);
     i.useEffect(() => {
-        if (!(y || (k.size === R.size && Array.from(R).every((e) => k.has(e))))) P();
-    }, [y, k, R, P]);
+        if (!(y || (k.size === R.size && Array.from(R).every((e) => k.has(e))))) M();
+    }, [y, k, R, M]);
     let A = o.singleSelect;
     E ? (A = o.multiSelect) : 0 === _ && (A = o.toggleSelect);
     let B = (0, o.useVariableSelect)({
@@ -179,7 +179,7 @@ function _(e) {
                             (0, l.jsx)(h, {
                                 ...e,
                                 isDisabled: E && !k.has(e.value) && k.size === s,
-                                isOffset: M
+                                isOffset: P
                             }),
                         renderOptionValue: (e) => (E ? (0, l.jsx)(v, { options: e }) : (0, l.jsx)(x, { ...e[0] })),
                         ...B

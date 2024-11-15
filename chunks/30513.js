@@ -102,12 +102,12 @@ let c = () => ({
         color: r.Z.unsafe_rawColors.PREMIUM_PERK_PINK.css,
         description: u.intl.string(u.t.QouJkp)
     }),
-    I = () => ({
+    b = () => ({
         icon: i.ShieldUserIcon,
         color: r.Z.unsafe_rawColors.PREMIUM_PERK_YELLOW.css,
         description: u.intl.string(u.t['3MpIx8'])
     }),
-    b = () => ({
+    I = () => ({
         color: r.Z.unsafe_rawColors.PREMIUM_PERK_BLUE.css,
         icon: i.ReactionIcon,
         description: u.intl.string(u.t.gAeHJS)
@@ -152,5 +152,5 @@ function D() {
     return [h(), S()];
 }
 function L() {
-    return [v(), I(), E(), b()];
+    return [v(), b(), E(), I()];
 }

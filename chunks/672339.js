@@ -1,9 +1,9 @@
 n.d(t, {
     FU: function () {
-        return I;
+        return b;
     },
     eH: function () {
-        return b;
+        return I;
     },
     wG: function () {
         return v;
@@ -106,7 +106,7 @@ async function v(e, t) {
     let { track: n = !0, location: r } = t;
     await E(a.TO.CAMERA_BACKGROUND_LIVE, { type: a.W$.INPUT_DEVICE }, e), n && (0, d.Bh)(e, r, 'Enabled');
 }
-async function I(e, t, n) {
+async function b(e, t, n) {
     let { track: r = !0, location: i } = n;
     (0, u.GS)(),
         await E(
@@ -119,7 +119,7 @@ async function I(e, t, n) {
         ),
         r && (0, d.Bh)(e, i, 'Preview');
 }
-function b() {
+function I() {
     let e = s.default.getCurrentUser();
     if (null == e) return;
     let t = (0, l.P)(e);

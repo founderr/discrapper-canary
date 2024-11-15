@@ -13,7 +13,7 @@ var r = n(200651),
     p = n(388032),
     h = n(74353);
 let m = i.forwardRef(function (e, t) {
-    let { emojiListRef: n, gridNavigatorId: a, isFullRow: m, onKeyDown: g, onFocus: E, autoFocus: v, className: I, defaultSearchPlaceholder: b } = e,
+    let { emojiListRef: n, gridNavigatorId: a, isFullRow: m, onKeyDown: g, onFocus: E, autoFocus: v, className: b, defaultSearchPlaceholder: I } = e,
         S = i.useRef(null),
         T = (0, d.Iu)((e) => e.searchQuery),
         [y, A] = c.kJ.useStore((e) => [e.inspectedExpressionPosition, e.searchPlaceholder], o.X),
@@ -39,7 +39,7 @@ let m = i.forwardRef(function (e, t) {
             query: T,
             ref: S,
             size: u.ZP.Sizes.MEDIUM,
-            placeholder: null != A ? A : b,
+            placeholder: null != A ? A : I,
             onClear: C,
             onKeyDown: (e) => {
                 switch (e.keyCode) {
@@ -53,7 +53,7 @@ let m = i.forwardRef(function (e, t) {
             },
             onFocus: E,
             onQueryChange: N,
-            className: s()(I, { [h.searchBarFullRow]: m }),
+            className: s()(b, { [h.searchBarFullRow]: m }),
             preventEscapePropagation: !1,
             useKeyboardNavigation: !1,
             inputProps: {

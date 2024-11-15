@@ -28,7 +28,7 @@ function E(e, t, n) {
 }
 ((o = a || (a = {})).REQUIRED = 'REQUIRED'), (o.OPTIONAL = 'OPTIONAL'), (o.OPTIONAL_DEFAULT = 'OPTIONAL_DEFAULT');
 let v = 'migrated',
-    I = {
+    b = {
         [g.Odu.GUILDS]: {
             minSize: {
                 width: 312,
@@ -268,7 +268,7 @@ let v = 'migrated',
             version: 1
         }
     };
-function b(e, t) {
+function I(e, t) {
     let n = i[e];
     if (null == n) return !1;
     let a = r[n.layoutId];
@@ -276,7 +276,7 @@ function b(e, t) {
 }
 function S(e) {
     var t;
-    return null === (t = I[e]) || void 0 === t ? void 0 : t.defaultSettings;
+    return null === (t = b[e]) || void 0 === t ? void 0 : t.defaultSettings;
 }
 class T extends (s = d.ZP.PersistedStore) {
     initialize(e) {
@@ -302,7 +302,7 @@ class T extends (s = d.ZP.PersistedStore) {
             : ((r = {}), (i = {}));
         let t = !1,
             n = [];
-        u().forEach(I, (e, t) => {
+        u().forEach(b, (e, t) => {
             'REQUIRED' === e.layoutPolicy && n.push(t);
         }),
             u().forEach(r, (e, a) => {
@@ -310,7 +310,7 @@ class T extends (s = d.ZP.PersistedStore) {
                     o = !1;
                 for (let r of n) {
                     let n = s.find((e) => e.type === r);
-                    if (null != n || I[r].version !== e.version) continue;
+                    if (null != n || b[r].version !== e.version) continue;
                     o = t = !0;
                     let l = (0, c.Z)();
                     (n = new h.Z({
@@ -373,7 +373,7 @@ class T extends (s = d.ZP.PersistedStore) {
               }, []);
     }
     getWidgetConfig(e) {
-        return I[e];
+        return b[e];
     }
     getWidgetDefaultSettings(e) {
         return S(e);
@@ -383,7 +383,7 @@ class T extends (s = d.ZP.PersistedStore) {
         return null != t ? t.type : '';
     }
     getRegisteredWidgets() {
-        return I;
+        return b;
     }
     getDefaultLayout(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
@@ -568,7 +568,7 @@ E(T, 'displayName', 'LayoutStore'),
         },
         LAYOUT_SET_PINNED: function (e) {
             let { widgetId: t } = e;
-            return b(t, (e, t) => {
+            return I(t, (e, t) => {
                 (function (e) {
                     i = {
                         ...i,
@@ -579,7 +579,7 @@ E(T, 'displayName', 'LayoutStore'),
         },
         LAYOUT_UPDATE_WIDGET: function (e) {
             let { widgetId: t, anchor: n, size: r, opacity: a } = e;
-            return b(t, (e, t) =>
+            return I(t, (e, t) =>
                 (function (e, t, n, r) {
                     i = {
                         ...i,
@@ -594,7 +594,7 @@ E(T, 'displayName', 'LayoutStore'),
         },
         LAYOUT_SET_TOP_WIDGET: function (e) {
             let { widgetId: t } = e;
-            return b(t, (e, t) =>
+            return I(t, (e, t) =>
                 (function (e, t) {
                     let n = (function (e) {
                         let t = [];
@@ -670,7 +670,7 @@ E(T, 'displayName', 'LayoutStore'),
         },
         LAYOUT_SET_WIDGET_META: function (e) {
             let { widgetId: t, meta: n } = e;
-            return b(t, (e, t) => {
+            return I(t, (e, t) => {
                 (function (e, t) {
                     i = {
                         ...i,

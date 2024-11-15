@@ -15,8 +15,8 @@ var r = n(200651),
     f = n(770347);
 function _(e) {
     let { value: t, disabled: n = !1, hideBorder: a = !1, tooltipNote: _, onChange: p, className: h, style: m, note: g, children: E, disabledText: v } = e,
-        I = i.useRef(null),
         b = i.useRef(null),
+        I = i.useRef(null),
         S = i.useId(),
         T = (0, r.jsx)(l.r, {
             id: S,
@@ -24,7 +24,7 @@ function _(e) {
             onChange: p,
             disabled: n,
             focusProps: { enabled: !1 },
-            innerRef: I
+            innerRef: b
         });
     return (0, r.jsxs)('div', {
         style: m,
@@ -33,11 +33,11 @@ function _(e) {
             (0, r.jsx)(o.t, {
                 within: !0,
                 offset: -4,
-                focusTarget: I,
-                ringTarget: b,
+                focusTarget: b,
+                ringTarget: I,
                 children: (0, r.jsxs)('div', {
                     className: f.labelRow,
-                    ref: b,
+                    ref: I,
                     children: [
                         (0, r.jsx)('label', {
                             htmlFor: S,

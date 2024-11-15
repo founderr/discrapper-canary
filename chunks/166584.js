@@ -22,8 +22,8 @@ var r = n(200651),
     g = n(785717),
     E = n(256226),
     v = n(314172),
-    I = n(981631),
-    b = n(388032),
+    b = n(981631),
+    I = n(388032),
     S = n(561145);
 let T = (e) => {
     if (null == e) return 0;
@@ -71,12 +71,12 @@ function y(e) {
         U = (0, s.ZP)({
             id: k,
             isEnabled: !0,
-            scrollToStart: I.Cyb,
-            scrollToEnd: I.Cyb,
+            scrollToStart: b.Cyb,
+            scrollToEnd: b.Cyb,
             wrap: !0
         }),
-        G = d.length,
-        B = 0 === G ? b.intl.string(b.t['vR7M+/']) : b.intl.formatToPlainString(b.t.PCs0oq, { numRoles: G }),
+        B = d.length,
+        G = 0 === B ? I.intl.string(I.t['vR7M+/']) : I.intl.formatToPlainString(I.t.PCs0oq, { numRoles: B }),
         Z = (L ? d : C).map((e, i) => {
             var a;
             return (0, r.jsx)(
@@ -107,7 +107,7 @@ function y(e) {
                 let { ref: t, ...n } = e;
                 return (0, r.jsxs)('div', {
                     className: S.root,
-                    'aria-label': B,
+                    'aria-label': G,
                     ref: t,
                     ...n,
                     children: [
@@ -115,7 +115,7 @@ function y(e) {
                         C.length < d.length
                             ? L
                                 ? (0, r.jsx)(u.TooltipContainer, {
-                                      text: b.intl.string(b.t.XnXtCg),
+                                      text: I.intl.string(I.t.XnXtCg),
                                       children: (0, r.jsx)(u.Clickable, {
                                           onClick: j,
                                           className: S.collapseButton,
@@ -127,7 +127,7 @@ function y(e) {
                                       })
                                   })
                                 : (0, r.jsx)(u.TooltipContainer, {
-                                      text: b.intl.string(b.t.DY6n4u),
+                                      text: I.intl.string(I.t.DY6n4u),
                                       children: (0, r.jsx)(u.Clickable, {
                                           innerRef: w,
                                           onClick: V,
@@ -144,7 +144,7 @@ function y(e) {
                                   buttonRef: M,
                                   guild: l,
                                   guildMember: c,
-                                  numRoles: G,
+                                  numRoles: B,
                                   highestRole: f,
                                   onAddRole: p
                               })
@@ -176,7 +176,7 @@ function A(e) {
             [u, h]
         ),
         v = m.e9(a, n.id),
-        [b] = (0, l.Wu)([p.Z], () => [p.Z.can(I.Plq.MANAGE_ROLES, a), null != a ? p.Z.getGuildVersion(a.id) : null]),
+        [I] = (0, l.Wu)([p.Z], () => [p.Z.can(b.Plq.MANAGE_ROLES, a), null != a ? p.Z.getGuildVersion(a.id) : null]),
         S = i.useCallback(
             (e) => {
                 var n, r;
@@ -194,7 +194,7 @@ function A(e) {
             },
             [h, a.id, t.id, s]
         ),
-        A = b && null != o;
+        A = I && null != o;
     return 0 !== E.length || A
         ? (0, r.jsx)(y, {
               user: t,
@@ -203,7 +203,7 @@ function A(e) {
               guildMember: o,
               roles: E,
               highestRole: v,
-              canManageRoles: b,
+              canManageRoles: I,
               onAddRole: T,
               onRemoveRole: S
           })

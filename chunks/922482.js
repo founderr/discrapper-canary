@@ -6,7 +6,7 @@ n.d(t, {
         return v;
     },
     R5: function () {
-        return I;
+        return b;
     },
     TM: function () {
         return E;
@@ -53,9 +53,9 @@ function v(e) {
         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         i = f.Z.getVoiceChannelId();
-    if (!(!r && i !== e.id && (0, s._)(e) && _.Gy(e, () => v(e, t, n, !0)))) E(e, t) && I(e, i, n);
+    if (!(!r && i !== e.id && (0, s._)(e) && _.Gy(e, () => v(e, t, n, !0)))) E(e, t) && b(e, i, n);
 }
-function I(e, t) {
+function b(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
     _.R5(e, t, n);
 }

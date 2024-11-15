@@ -20,8 +20,8 @@ var r = n(200651),
     g = n(684259),
     E = n(104494),
     v = n(639119),
-    I = n(631771),
-    b = n(790527),
+    b = n(631771),
+    I = n(790527),
     S = n(474936),
     T = n(981631),
     y = n(731994),
@@ -35,7 +35,7 @@ function C(e) {
         D = (0, v.N)(),
         L = (0, E.Ng)(),
         x = null != D || null != L,
-        { enabled: w } = I.MP.useExperiment(
+        { enabled: w } = b.MP.useExperiment(
             { location: 'File Upload Roadblock' },
             {
                 autoTrackExposure: !x,
@@ -52,21 +52,21 @@ function C(e) {
                   src: 'https://cdn.discordapp.com/assets/premium/roadblocks/file_upload_'.concat(k, '_v2.png')
               })
             : (0, r.jsx)(o.Z, { icons: y.J6 }),
-        G = i.useMemo(() => {
+        B = i.useMemo(() => {
             let e = m.ZP.getUserMaxFileSize(C);
             return (0, _.BU)(e / 1024, { useKibibytes: !0 });
         }, [C]),
-        B = i.useMemo(() => {
-            let e = A.intl.formatToPlainString(A.t.q5fTZm, { maxSize: G });
+        G = i.useMemo(() => {
+            let e = A.intl.formatToPlainString(A.t.q5fTZm, { maxSize: B });
             switch (O) {
                 case S.p9.TIER_0:
-                    e = A.intl.formatToPlainString(A.t['/DXKen'], { maxSize: G });
+                    e = A.intl.formatToPlainString(A.t['/DXKen'], { maxSize: B });
                     break;
                 case S.p9.TIER_1:
-                    e = A.intl.formatToPlainString(A.t['Kf/MPD'], { maxSize: G });
+                    e = A.intl.formatToPlainString(A.t['Kf/MPD'], { maxSize: B });
             }
             return e;
-        }, [O, G]),
+        }, [O, B]),
         Z = (0, _.BU)(S.Uq / 1024, { useKibibytes: !0 }),
         F = M ? A.intl.string(A.t['9C+41t']) : A.intl.string(A.t['/tGlcn']),
         V = P
@@ -90,21 +90,21 @@ function C(e) {
             : (0, r.jsxs)('div', {
                   className: N.body,
                   children: [
-                      (0, r.jsx)('span', { children: B }),
+                      (0, r.jsx)('span', { children: G }),
                       (0, r.jsx)(s.Text, {
                           variant: 'text-md/medium',
                           children: V
                       })
                   ]
               });
-    return (0, r.jsx)(b.Z, {
+    return (0, r.jsx)(I.Z, {
         artElement: U,
         artContainerClassName: P ? N.updatedArtContainer : N.artContainer,
         enableArtBoxShadow: !1,
         type: S.cd.UPLOAD_ERROR_UPSELL,
         title: F,
         body: j,
-        context: A.intl.formatToPlainString(A.t.q5fTZm, { maxSize: G }),
+        context: A.intl.formatToPlainString(A.t.q5fTZm, { maxSize: B }),
         glowUp: V,
         analyticsLocation: { section: T.jXE.FILE_UPLOAD_POPOUT },
         onClose: t,

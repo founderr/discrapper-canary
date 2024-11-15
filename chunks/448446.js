@@ -28,7 +28,7 @@ function s(e, t) {
                   'aria-disabled': o && 'input' !== s ? o : void 0,
                   rel: 'a' === s ? E : void 0
               };
-    let { pressProps: I, isPressed: b } = (0, a.r7)({
+    let { pressProps: b, isPressed: I } = (0, a.r7)({
             onPressStart: u,
             onPressEnd: c,
             onPressChange: f,
@@ -40,9 +40,9 @@ function s(e, t) {
         }),
         { focusableProps: S } = (0, i.kc)(e, t);
     p && (S.tabIndex = o ? -1 : S.tabIndex);
-    let T = (0, r.dG)(S, I, (0, r.zL)(e, { labelable: !0 }));
+    let T = (0, r.dG)(S, b, (0, r.zL)(e, { labelable: !0 }));
     return {
-        isPressed: b,
+        isPressed: I,
         buttonProps: (0, r.dG)(n, T, {
             'aria-haspopup': e['aria-haspopup'],
             'aria-expanded': e['aria-expanded'],

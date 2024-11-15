@@ -36,10 +36,10 @@ let u = (e) => {
     m = (e) => {
         var t, n;
         let { product: a, className: o, minimal: m } = e,
-            p = (0, l.o0)(a),
-            h = null === (t = a.variants) || void 0 === t ? void 0 : t[p];
-        if (null == h) return null;
-        let f = null == h ? void 0 : h.variantLabel;
+            h = (0, l.o0)(a),
+            p = null === (t = a.variants) || void 0 === t ? void 0 : t[h];
+        if (null == p) return null;
+        let f = null == p ? void 0 : p.variantLabel;
         return (0, r.jsxs)('div', {
             className: i()(d.variantsPanel, o, { [d.minimalState]: m }),
             onMouseEnter: () => (0, l.B2)(a, !0),
@@ -57,7 +57,7 @@ let u = (e) => {
                                           variantGroupProduct: a,
                                           variant: e,
                                           variantIndex: t,
-                                          selectedVariantIndex: p,
+                                          selectedVariantIndex: h,
                                           minimal: m
                                       },
                                       t

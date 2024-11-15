@@ -45,8 +45,8 @@ var r,
     g = n(675478),
     E = n(314897),
     v = n(592125),
-    I = n(430824),
-    b = n(594174),
+    b = n(430824),
+    I = n(594174),
     S = n(626135),
     T = n(254711),
     y = n(700089),
@@ -75,20 +75,20 @@ function M(e, t, n) {
 let P = new u.Yd('ApplicationCommandIndexStore'),
     k = Symbol('currentUser'),
     U = Symbol('stale'),
-    G = Symbol('current'),
-    B = Object.freeze({
+    B = Symbol('current'),
+    G = Object.freeze({
         descriptors: [],
         commands: [],
         sectionedCommands: [],
         loading: !0
     }),
     Z = Object.freeze({
-        serverVersion: G,
+        serverVersion: B,
         fetchState: { fetching: !1 },
         result: {
             sections: {},
             sectionIdsByBotId: {},
-            version: G
+            version: B
         }
     }),
     F = Object.freeze({
@@ -167,7 +167,7 @@ async function Q(e) {
 function X(e) {
     var t, n;
     let { target: r, index: i } = e,
-        a = null === (t = b.default.getCurrentUser()) || void 0 === t ? void 0 : t.id;
+        a = null === (t = I.default.getCurrentUser()) || void 0 === t ? void 0 : t.id;
     if (null == a) return !j && H.push(e), !1;
     let s = {},
         o = {},
@@ -175,7 +175,7 @@ function X(e) {
     for (let e of i.applications) {
         if (null == e.bot && null != e.bot_id) {
             o[e.bot_id] = e.id;
-            let t = b.default.getUser(e.bot_id);
+            let t = I.default.getUser(e.bot_id);
             null != t ? (e.bot = t) : l.add(e.bot_id);
         } else null != e.bot && (o[e.bot.id] = e.id);
         let t = {
@@ -224,7 +224,7 @@ function X(e) {
         }
         t.commands[e.id] = e;
     }
-    let u = null !== (n = i.version) && void 0 !== n ? n : G;
+    let u = null !== (n = i.version) && void 0 !== n ? n : B;
     W(r, {
         serverVersion: u,
         result: {
@@ -288,7 +288,7 @@ class $ extends (r = c.ZP.Store) {
         return e in this.indices;
     }
     query(e, t, n) {
-        if (null == b.default.getCurrentUser()) return B;
+        if (null == I.default.getCurrentUser()) return G;
         let r = this.getContextState(e),
             i = this.getUserState(),
             a = this.getApplicationState(n.applicationId),
@@ -663,7 +663,7 @@ function es(e, t, n) {
 }
 function eo(e) {
     var t, n, r, i, a, s, o;
-    let { permissionContext: u, contextState: c, userState: d, applicationStates: f, text: _, builtIns: h = C.D.ALLOW, allowApplicationCommands: m = !0, singleApplicationId: E, allowEmptySections: v = !1, scoreMethod: b = C.p.NONE, sortOptions: S = ea, installOnDemand: y = !1 } = e,
+    let { permissionContext: u, contextState: c, userState: d, applicationStates: f, text: _, builtIns: h = C.D.ALLOW, allowApplicationCommands: m = !0, singleApplicationId: E, allowEmptySections: v = !1, scoreMethod: I = C.p.NONE, sortOptions: S = ea, installOnDemand: y = !1 } = e,
         { commandTypes: N } = u,
         R = null == _ ? void 0 : _.toLowerCase(),
         O = null == R ? void 0 : R.split(' '),
@@ -675,7 +675,7 @@ function eo(e) {
             query: R,
             splitQuery: O,
             allowEmptySections: v,
-            scoreMethod: b,
+            scoreMethod: I,
             installOnDemand: y
         },
         P = null !== (i = null === (t = c.result) || void 0 === t ? void 0 : t.sections) && void 0 !== i ? i : {},
@@ -692,17 +692,17 @@ function eo(e) {
             (null == E || t.descriptor.id === E) && U.add(e);
         }
     }
-    let G = new Map();
+    let B = new Map();
     for (let [e, t] of f)
         if (null == E || e === E) {
             let e = null === (s = t.result) || void 0 === s ? void 0 : s.sections;
-            if (null != e) for (let t of Object.keys(e)) U.add(t), G.set(t, e[t]);
+            if (null != e) for (let t of Object.keys(e)) U.add(t), B.set(t, e[t]);
         }
     for (let e of Array.from(U)) {
         let t, n;
         let r = P[e],
             i = k[e],
-            a = G.get(e),
+            a = B.get(e),
             s = null != r,
             o = null != i;
         if (null != r && null != i) {
@@ -723,7 +723,7 @@ function eo(e) {
     if (
         (S.applications.useFrecency && g.DZ.loadIfNecessary(),
         w.sort((e, t) => {
-            if (S.applications.useScore && b === C.p.APPLICATION_ONLY) {
+            if (S.applications.useScore && I === C.p.APPLICATION_ONLY) {
                 var n, r, i, a;
                 let s = null !== (i = null === (n = e.data[0]) || void 0 === n ? void 0 : n.score) && void 0 !== i ? i : Number.MAX_VALUE,
                     o = null !== (a = null === (r = t.data[0]) || void 0 === r ? void 0 : r.score) && void 0 !== a ? a : Number.MAX_VALUE;
@@ -741,15 +741,15 @@ function eo(e) {
         let e = el(T.Tm[x.bi.BUILT_IN], L, !0, !0, M);
         null != e && w.push(e);
     }
-    let B = w.flatMap((e) =>
+    let G = w.flatMap((e) =>
         e.data.map((t) => ({
             ...t,
             section: e.section
         }))
     );
-    if (b === C.p.COMMAND_ONLY || b === C.p.COMMAND_OR_APPLICATION) {
+    if (I === C.p.COMMAND_ONLY || I === C.p.COMMAND_OR_APPLICATION) {
         let e = u.context,
-            t = I.Z.getGuild(null == u ? void 0 : null === (o = u.context) || void 0 === o ? void 0 : o.guild_id);
+            t = b.Z.getGuild(null == u ? void 0 : null === (o = u.context) || void 0 === o ? void 0 : o.guild_id);
         S.commands.useFrecency && g.DZ.loadIfNecessary();
         let n =
             null != e
@@ -758,7 +758,7 @@ function eo(e) {
                       guild: t
                   }
                 : void 0;
-        B.sort((e, t) => {
+        G.sort((e, t) => {
             if (S.commands.useScore) {
                 var r, i;
                 let n = null !== (r = e.score) && void 0 !== r ? r : 0,
@@ -774,7 +774,7 @@ function eo(e) {
         });
     }
     return {
-        commands: B,
+        commands: G,
         descriptors: w.map((e) => e.section),
         sectionedCommands: w,
         loading: (null == c ? void 0 : c.fetchState.fetching) === !0 || (null == d ? void 0 : d.fetchState.fetching) === !0 || (null != E && (null === (r = f.get(E)) || void 0 === r ? void 0 : r.fetchState.fetching) === !0)
@@ -852,7 +852,7 @@ function el(e, t, n, r, i) {
 }
 function eu(e) {
     var t;
-    return (null == e ? void 0 : e.guild_id) != null || (e.type === w.d4z.DM && (null === (t = b.default.getUser(e.getRecipientId())) || void 0 === t ? void 0 : t.bot) === !0);
+    return (null == e ? void 0 : e.guild_id) != null || (e.type === w.d4z.DM && (null === (t = I.default.getUser(e.getRecipientId())) || void 0 === t ? void 0 : t.bot) === !0);
 }
 function ec(e) {
     return (

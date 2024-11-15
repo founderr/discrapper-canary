@@ -25,16 +25,16 @@ let m = {
     [_.Eu4.TIER_3]: 1
 };
 t.Z = function (e) {
-    let { children: t, confettiTriggerRef: n, guild: i, isProgressBarAnimationComplete: g, setConfettiCount: E, setShouldFireConfetti: v, tier: I, tierMarkerAnimationPosition: b } = e,
+    let { children: t, confettiTriggerRef: n, guild: i, isProgressBarAnimationComplete: g, setConfettiCount: E, setShouldFireConfetti: v, tier: b, tierMarkerAnimationPosition: I } = e,
         { analyticsLocations: S } = (0, l.ZP)(),
-        T = _.oCV[I] - i.premiumSubscriberCount,
-        y = I <= b || g,
-        A = y && I <= i.premiumTier,
-        N = y && I < i.premiumTier,
-        C = y && I === i.premiumTier,
+        T = _.oCV[b] - i.premiumSubscriberCount,
+        y = b <= I || g,
+        A = y && b <= i.premiumTier,
+        N = y && b < i.premiumTier,
+        C = y && b === i.premiumTier,
         { scaleFactor: R } = (0, o.useSpring)({
             from: { scaleFactor: 0 },
-            to: { scaleFactor: b >= I || (g && b + 1 === I) || (g && -1 === b && I === _.Eu4.NONE) ? 1 : 0 },
+            to: { scaleFactor: I >= b || (g && I + 1 === b) || (g && -1 === I && b === _.Eu4.NONE) ? 1 : 0 },
             config: {
                 tension: 360,
                 friction: 12
@@ -46,9 +46,9 @@ t.Z = function (e) {
                     className: h.progressBarMarkerIndicator,
                     style: { transform: R.to((e) => 'translate(-50%, -50%) scale('.concat(e, ')')) }
                 }),
-                I !== _.Eu4.NONE &&
+                b !== _.Eu4.NONE &&
                     (0, r.jsx)(u.Z, {
-                        tier: I,
+                        tier: b,
                         className: h.boostedTierIcon
                     })
             ]
@@ -76,7 +76,7 @@ t.Z = function (e) {
                                           default:
                                               throw Error('Unsupported Boosting tier: '.concat(e));
                                       }
-                                  })(I)
+                                  })(b)
                               },
                               numberOfBoostsToAdd: T,
                               guild: i
@@ -85,12 +85,12 @@ t.Z = function (e) {
               };
     return (0, r.jsx)(o.Tooltip, {
         text: A
-            ? p.intl.formatToPlainString(p.t['1o48kp'], { tierName: (0, c.nW)(I, { useLevels: !1 }) })
+            ? p.intl.formatToPlainString(p.t['1o48kp'], { tierName: (0, c.nW)(b, { useLevels: !1 }) })
             : p.intl.formatToPlainString(p.t.r6NN6e, {
                   numBoostsRequired: T,
-                  tierName: (0, c.nW)(I, { useLevels: !1 })
+                  tierName: (0, c.nW)(b, { useLevels: !1 })
               }),
-        shouldShow: I !== _.Eu4.NONE,
+        shouldShow: b !== _.Eu4.NONE,
         children: (e) =>
             (0, r.jsxs)(D, {
                 className: a()(h.progressBarMarker, {
@@ -99,12 +99,12 @@ t.Z = function (e) {
                     [h.progressBarMarkerLower]: N,
                     [h.progressBarMarkerCurrent]: C
                 }),
-                style: { left: ''.concat(100 * m[I], '%') },
+                style: { left: ''.concat(100 * m[b], '%') },
                 ...e,
                 ...L,
                 children: [
                     !A && (0, r.jsx)('div', { className: h.boostedTierIconBackground }),
-                    A && I === _.Eu4.TIER_3
+                    A && b === _.Eu4.TIER_3
                         ? (0, r.jsx)(f.m, {
                               confettiTriggerRef: n,
                               setConfettiCount: E,
@@ -117,7 +117,7 @@ t.Z = function (e) {
                         variant: 'text-md/normal',
                         children: [
                             A &&
-                                I !== _.Eu4.NONE &&
+                                b !== _.Eu4.NONE &&
                                 (0, r.jsx)(o.CheckmarkLargeIcon, {
                                     size: 'md',
                                     color: 'currentColor',

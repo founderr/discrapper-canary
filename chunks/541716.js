@@ -264,7 +264,7 @@ let o = {
         disableAutoFocus: !0,
         showCharacterCount: !0
     },
-    I = {
+    b = {
         analyticsName: 'custom_gift_type',
         drafts: { type: s.d.ChannelMessage },
         emojis: {},
@@ -276,7 +276,7 @@ let o = {
         disableAutoFocus: !0,
         showCharacterCount: !0
     },
-    b = {
+    I = {
         analyticsName: 'rules_input',
         drafts: { type: s.d.ChannelMessage },
         permissions: { requireSendMessages: !0 },
@@ -325,8 +325,8 @@ let o = {
         USER_PROFILE: m,
         USER_PROFILE_REPLY: E,
         PROFILE_BIO_INPUT: v,
-        CUSTOM_GIFT: I,
-        RULES_INPUT: b,
+        CUSTOM_GIFT: b,
+        RULES_INPUT: I,
         CREATE_FORUM_POST: p,
         CREATE_POLL: h,
         FORUM_CHANNEL_GUIDELINES: S,

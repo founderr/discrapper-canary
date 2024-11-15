@@ -16,8 +16,8 @@ var r = n(200651),
     g = n(474936),
     E = n(388032),
     v = n(595499);
-let I = 'premiumRetentionEmojiPickerNotice',
-    b = l.K.get(I);
+let b = 'premiumRetentionEmojiPickerNotice',
+    I = l.K.get(b);
 t.Z = (e) => {
     let { closePopout: t, channel: n } = e,
         [a, S] = i.useState(!1),
@@ -34,7 +34,7 @@ t.Z = (e) => {
         return null;
     let A = T.status === m.O0b.PAST_DUE ? (0, p.lY)(T).expiresDate : s()(T.currentPeriodStart).add(g.gh),
         N = ''.concat(T.id, ':').concat(A.toISOString());
-    if (b === N) return null;
+    if (I === N) return null;
     let C = p.ZP.getPremiumType(T.planId) === g.p9.TIER_0 ? f.JX.PREMIUM_TIER_0 : p.ZP.getPremiumType(T.planId) === g.p9.TIER_1 ? f.JX.PREMIUM_TIER_1 : f.JX.PREMIUM_TIER_2;
     return (0, r.jsxs)('div', {
         className: v.premiumRetentionNotice,
@@ -66,7 +66,7 @@ t.Z = (e) => {
             }),
             (0, r.jsx)(u.Clickable, {
                 onClick: () => {
-                    l.K.set(I, N), (b = N), S(!0);
+                    l.K.set(b, N), (I = N), S(!0);
                 },
                 children: (0, r.jsx)(u.XSmallIcon, {
                     size: 'md',

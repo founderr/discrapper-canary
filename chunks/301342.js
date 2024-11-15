@@ -43,10 +43,10 @@ let Z = l.memo(function (e) {
         A = (0, s.e7)([f.Z], () => f.Z.isCollapsed(r.id)),
         P = (0, s.e7)([C.Z], () => C.Z.can(I.Plq.MANAGE_CHANNELS, r));
     t = null != N ? (Z > N ? E.containerDragAfter : E.containerDragBefore) : E.containerDefault;
-    let R = l.useCallback(() => {
+    let M = l.useCallback(() => {
             A ? (0, u.mJ)(r.id) : (0, u.c4)(r.id);
         }, [r.id, A]),
-        M = l.useCallback(
+        R = l.useCallback(
             (e) => {
                 if ('null' !== r.id) {
                     let t = g.Z.getGuild(r.getGuildId());
@@ -64,7 +64,7 @@ let Z = l.memo(function (e) {
             },
             [r]
         ),
-        L = l.useCallback(() => {
+        w = l.useCallback(() => {
             let e = r.type === I.d4z.GUILD_CATEGORY ? null : r.type,
                 t = r.getGuildId();
             null != t &&
@@ -79,7 +79,7 @@ let Z = l.memo(function (e) {
                         });
                 });
         }, [r]),
-        { role: w, tabIndex: D, ...O } = (0, o.JA)(r.id),
+        { role: L, tabIndex: D, ...O } = (0, o.JA)(r.id),
         k = l.useRef(null),
         U = l.useRef(null),
         G = (0, i.jsxs)('li', {
@@ -100,14 +100,14 @@ let Z = l.memo(function (e) {
                             [E.muted]: j,
                             [E.clickable]: !0
                         }),
-                        onContextMenu: M,
+                        onContextMenu: R,
                         children: [
                             (0, i.jsxs)(c.Clickable, {
                                 innerRef: k,
                                 className: E.mainContent,
                                 tabIndex: D,
                                 ...O,
-                                onClick: R,
+                                onClick: M,
                                 'aria-label': b.intl.formatToPlainString(b.t.y5l3Jy, { categoryName: r.name }),
                                 'aria-expanded': !A,
                                 focusProps: { enabled: !1 },
@@ -139,7 +139,7 @@ let Z = l.memo(function (e) {
                                                       look: c.Button.Looks.BLANK,
                                                       size: c.Button.Sizes.NONE,
                                                       className: a()(E.addButton, E.forceVisible),
-                                                      onClick: L,
+                                                      onClick: w,
                                                       onMouseEnter: t,
                                                       onMouseLeave: n,
                                                       tabIndex: D,

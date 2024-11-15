@@ -42,9 +42,9 @@ function j(e) {
 }
 t.Z = l.memo(function (e) {
     let { thread: t, isSelectedChannel: r, isSelectedVoice: T, isLast: A, withGuildIcon: P } = e,
-        R = (0, s.e7)([_.ZP], () => _.ZP.getVoiceStatesForChannel(t), [t]),
-        M = (0, s.e7)([C.Z], () => C.Z.hasVideo(t.id)),
-        { unread: L, mentionCount: w } = (0, s.cj)([g.ZP], () => ({
+        M = (0, s.e7)([_.ZP], () => _.ZP.getVoiceStatesForChannel(t), [t]),
+        R = (0, s.e7)([C.Z], () => C.Z.hasVideo(t.id)),
+        { unread: w, mentionCount: L } = (0, s.cj)([g.ZP], () => ({
             unread: g.ZP.hasUnread(t.id),
             mentionCount: g.ZP.getMentionCount(t.id)
         })),
@@ -73,16 +73,16 @@ t.Z = l.memo(function (e) {
             },
             [t.id]
         ),
-        G = null == R ? 0 : R.length,
+        G = null == M ? 0 : M.length,
         { role: B, ...H } = (0, o.JA)(t.id),
         V = l.useRef(null),
         F =
-            w > 0
+            L > 0
                 ? Z.intl.formatToPlainString(Z.t['ZL7+Iy'], {
                       channelName: t.name,
-                      mentionCount: w
+                      mentionCount: L
                   })
-                : L
+                : w
                   ? Z.intl.formatToPlainString(Z.t.YlVvmZ, { channelName: t.name })
                   : Z.intl.formatToPlainString(Z.t['0nZpiI'], { channelName: t.name });
     return (0, i.jsxs)('li', {
@@ -108,13 +108,13 @@ t.Z = l.memo(function (e) {
                     className: a()(N.iconVisibility, y.wrapper, y.typeThread, {
                         [y.modeSelected]: r,
                         [y.modeMuted]: !r && D,
-                        [y.modeUnreadImportant]: !D && !r && L,
+                        [y.modeUnreadImportant]: !D && !r && w,
                         [y.withGuildIcon]: P
                     }),
                     onMouseDown: k,
                     onContextMenu: U,
                     children: [
-                        !L || D || r ? null : (0, i.jsx)('div', { className: a()(y.unread, y.unreadImportant) }),
+                        !w || D || r ? null : (0, i.jsx)('div', { className: a()(y.unread, y.unreadImportant) }),
                         (0, i.jsx)(c.Clickable, {
                             ...H,
                             innerRef: V,
@@ -136,11 +136,11 @@ t.Z = l.memo(function (e) {
                                             G > 0 && t.userLimit > 0
                                                 ? (0, i.jsx)(x.Z, {
                                                       userCount: G,
-                                                      video: M,
+                                                      video: R,
                                                       channel: t
                                                   })
                                                 : null,
-                                            (0, v.Z)(w) ? (0, i.jsx)(I.Z, { mentionsCount: w }) : null
+                                            (0, v.Z)(L) ? (0, i.jsx)(I.Z, { mentionsCount: L }) : null
                                         ]
                                     })
                                 ]
@@ -153,7 +153,7 @@ t.Z = l.memo(function (e) {
                 channel: t,
                 collapsed: !T,
                 collapsedMax: 6,
-                voiceStates: R,
+                voiceStates: M,
                 location: E.Sbl.GUILD_CHANNEL_LIST
             })
         ]

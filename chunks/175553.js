@@ -4,16 +4,16 @@ n.d(t, {
     }
 });
 var i = n(593481),
-    s = n(768581),
-    r = n(312839),
+    r = n(768581),
+    s = n(312839),
     a = n(981631),
     l = n(987650),
     o = n(388032);
 function c(e, t) {
     let n = e.username,
         c = o.intl.format(o.t['Yk+uYG'], { username: '' }),
-        d = (0, s.ov)(e),
-        { trackView: u, trackClick: h } = (0, r.R)(l.n0.ActivityUserJoin, {
+        d = (0, r.ov)(e),
+        { trackView: u, trackClick: h } = (0, s.R)(l.n0.ActivityUserJoin, {
             notif_type: l.n0.ActivityUserJoin,
             notif_user_id: e.id,
             activity_type: a.mFx.JOIN,

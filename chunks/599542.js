@@ -135,12 +135,12 @@ function g(e) {
 }
 let E = 'undefined' != typeof document && window.visualViewport;
 function v() {
-    let [e, t] = (0, r.useState)(() => I());
+    let [e, t] = (0, r.useState)(() => b());
     return (
         (0, r.useEffect)(() => {
             let e = () => {
                 t((e) => {
-                    let t = I();
+                    let t = b();
                     return t.width === e.width && t.height === e.height ? e : t;
                 });
             };
@@ -154,13 +154,13 @@ function v() {
         e
     );
 }
-function I() {
+function b() {
     return {
         width: (null == E ? void 0 : E.width) || window.innerWidth,
         height: (null == E ? void 0 : E.height) || window.innerHeight
     };
 }
-function b(e) {
+function I(e) {
     var t;
     return 'undefined' != typeof window && null != window.navigator && ((null === (t = window.navigator.userAgentData) || void 0 === t ? void 0 : t.brands.some((t) => e.test(t.brand))) || e.test(window.navigator.userAgent));
 }
@@ -173,9 +173,9 @@ function T() {
 }
 function y() {
     return (
-        b(/AppleWebKit/i) &&
+        I(/AppleWebKit/i) &&
         !(function () {
-            return b(/Chrome/i);
+            return I(/Chrome/i);
         })()
     );
 }

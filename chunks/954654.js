@@ -16,7 +16,7 @@ var i = t(120356),
     c = t(927057),
     u = t(574597),
     d = t(378975),
-    m = t(413991),
+    m = t(732586),
     f = t(12067),
     p = t(676149),
     h = t(861529),
@@ -46,9 +46,9 @@ function C(e) {
                 case a.re.ROLE_SELECT:
                 case a.re.MENTIONABLE_SELECT:
                     return (0, l.jsx)(u.Z, { ...e }, n);
-                case a.re.INPUT_TEXT:
+                case a.re.TEXT_INPUT:
                     return (0, l.jsx)(m.Z, { ...e }, n);
-                case a.re.TEXT:
+                case a.re.TEXT_DISPLAY:
                     return (0, l.jsx)(h.Z, { ...e }, n);
                 case a.re.MEDIA_GALLERY:
                     return (0, l.jsx)(f.Z, { ...e }, n);

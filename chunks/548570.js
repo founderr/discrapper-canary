@@ -28,8 +28,8 @@ var r = n(512722),
     g = n(797614),
     E = n(218543),
     v = n(857192),
-    I = n(626135),
-    b = n(12647),
+    b = n(626135),
+    I = n(12647),
     S = n(70956),
     T = n(358085),
     y = n(960048),
@@ -58,8 +58,8 @@ function P(e, t, n) {
 }
 let k = new m.Z('GatewaySocket'),
     U = new R.Z();
-function G() {}
-let B = 30 * S.Z.Millis.SECOND,
+function B() {}
+let G = 30 * S.Z.Millis.SECOND,
     Z = 3 * S.Z.Millis.MINUTE,
     F = 1 * S.Z.Millis.MINUTE;
 function V(e) {
@@ -103,7 +103,7 @@ class H extends L.Z {
             (this.helloTimeout = setTimeout(() => {
                 let e = Date.now() - this.connectionStartTime;
                 this._handleClose(!1, 0, 'The connection timed out after '.concat(e, ' ms - did not receive OP_HELLO in time.')), this.setResumeUrl(null);
-            }, B));
+            }, G));
         let i = new URL(n);
         i.searchParams.append('encoding', t),
             i.searchParams.append('v', r.toString()),
@@ -216,7 +216,7 @@ class H extends L.Z {
                     this._sendHeartbeatIfDue();
                 }),
                 onError: () => {
-                    this.setResumeUrl(null), b.Z.flushDNSCache(), this._handleClose(!1, 0, 'An error with the websocket occurred');
+                    this.setResumeUrl(null), I.Z.flushDNSCache(), this._handleClose(!1, 0, 'An error with the websocket occurred');
                 },
                 onClose: (e) => {
                     let { wasClean: t, code: n, reason: r } = e;
@@ -305,11 +305,11 @@ class H extends L.Z {
                     .then(
                         (e) => {
                             let { status: t } = e;
-                            I.default.track(M.rMx.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
+                            b.default.track(M.rMx.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
                         },
                         (e) => {
                             let { status: t } = e;
-                            401 === t && ((this.connectionState = A.Z.CLOSED), k.warn('[WS CLOSED] because of manual authentication failure, marking as closed.'), this._reset(n, 4004, 'invalid token manually detected')), I.default.track(M.rMx.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
+                            401 === t && ((this.connectionState = A.Z.CLOSED), k.warn('[WS CLOSED] because of manual authentication failure, marking as closed.'), this._reset(n, 4004, 'invalid token manually detected')), b.default.track(M.rMx.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
                         }
                     ));
     }
@@ -352,7 +352,7 @@ class H extends L.Z {
     _cleanup(e) {
         u.ZP.Emitter.resume(), this._stopHeartbeater(), this._clearHelloTimeout();
         let t = this.webSocket;
-        (this.webSocket = null), null != t && ((t.onopen = G), (t.onmessage = G), (t.onerror = G), (t.onclose = G), null == e || e(t)), this.gatewayBackoff.cancel(), this.compressionHandler.close(), (this.compressionHandler = (0, C.I)(U));
+        (this.webSocket = null), null != t && ((t.onopen = B), (t.onmessage = B), (t.onerror = B), (t.onclose = B), null == e || e(t)), this.gatewayBackoff.cancel(), this.compressionHandler.close(), (this.compressionHandler = (0, C.I)(U));
     }
     _doResume() {
         var e;
@@ -458,7 +458,7 @@ class H extends L.Z {
                 !0
             ),
             !1 !== e.sentry && y.Z.captureException(n, { tags: { socketCrashedAction: t } }),
-            I.default.track(M.rMx.GATEWAY_SOCKET_RESET, {
+            b.default.track(M.rMx.GATEWAY_SOCKET_RESET, {
                 error_message: n.message,
                 error_stack: n.stack,
                 action: t

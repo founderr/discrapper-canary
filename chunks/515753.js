@@ -36,10 +36,10 @@ var i = n(200651),
     j = n(93687),
     A = n(785232),
     P = n(878857),
-    R = n(249978),
-    M = n(518950),
-    L = n(199902),
-    w = n(158776),
+    M = n(249978),
+    R = n(518950),
+    w = n(199902),
+    L = n(158776),
     D = n(306680),
     O = n(111583),
     k = n(9156),
@@ -125,7 +125,7 @@ class Q extends l.Component {
     }
 }
 function J(e) {
-    let { channel: t, isGDMFacepileEnabled: r, selected: o = !1, user: d, activities: S, applicationStream: j, entry: R, isTyping: L, status: w, isMobile: O, 'aria-posinset': U, 'aria-setsize': G } = e,
+    let { channel: t, isGDMFacepileEnabled: r, selected: o = !1, user: d, activities: S, applicationStream: j, entry: M, isTyping: w, status: L, isMobile: O, 'aria-posinset': U, 'aria-setsize': G } = e,
         [B, Q] = l.useState(!1),
         J = l.useRef(null),
         X = l.useRef(null),
@@ -133,7 +133,7 @@ function J(e) {
             avatarSrc: $,
             avatarDecorationSrc: ee,
             eventHandlers: et
-        } = (0, M.Z)({
+        } = (0, R.Z)({
             user: d,
             size: p.AvatarSizes.SIZE_32,
             animateOnHover: !(o || B)
@@ -222,7 +222,7 @@ function J(e) {
                         className: W.subtext,
                         children: F.intl.format(F.t.CxSA5O, { members: t.recipients.length + 1 })
                     })
-                  : w !== V.Skl.OFFLINE && w !== V.Skl.INVISIBLE && null != S && S.length > 0
+                  : L !== V.Skl.OFFLINE && L !== V.Skl.INVISIBLE && null != S && S.length > 0
                     ? (0, i.jsx)(H.ZP, {
                           ...e,
                           activities: S,
@@ -231,10 +231,10 @@ function J(e) {
                           hideTooltip: !0,
                           user: d
                       })
-                    : null != R
+                    : null != M
                       ? (0, i.jsx)(Z.Z, {
                             ...e,
-                            entry: R
+                            entry: M
                         })
                       : null;
         },
@@ -246,21 +246,21 @@ function J(e) {
                           'aria-hidden': !0,
                           recipients: t.recipients,
                           size: e,
-                          isTyping: L,
-                          status: w
+                          isTyping: w,
+                          status: L
                       })
                     : (0, i.jsx)(z, {
                           ...et,
                           src: (0, I.x)(t),
                           'aria-hidden': !0,
                           size: e,
-                          status: L ? V.Skl.ONLINE : w,
-                          isTyping: L
+                          status: w ? V.Skl.ONLINE : L,
+                          isTyping: w
                       });
             s()(null != d, 'PrivateChannel.renderAvatar: Invalid prop configuration - no user or channel');
             let n = null;
             return (
-                !d.isSystemUser() && (n = (0, g.Z)(S) ? V.Skl.STREAMING : w),
+                !d.isSystemUser() && (n = (0, g.Z)(S) ? V.Skl.STREAMING : L),
                 (0, i.jsx)(z, {
                     ...et,
                     size: p.AvatarSizes.SIZE_32,
@@ -268,7 +268,7 @@ function J(e) {
                     avatarDecoration: ee,
                     status: n,
                     isMobile: O,
-                    isTyping: L,
+                    isTyping: w,
                     'aria-label': d.username,
                     statusTooltip: !0
                 })
@@ -367,20 +367,20 @@ t.ZP = (e) => {
         { isStatusIndicatorEnabled: a, isTypingIndicatorEnabled: o, isFacepileEnabled: s } = j.Z.useExperiment({ location: 'private_channel' }, { autoTrackExposure: !0 }),
         c = null == r ? void 0 : r.id,
         u = (0, h.cj)(
-            [w.Z, L.Z],
+            [L.Z, w.Z],
             () => {
                 let e;
                 if (t.isMultiUserDM()) {
                     if (a) {
-                        let n = w.Z.getState().statuses;
+                        let n = L.Z.getState().statuses;
                         t.recipients.some((e) => n[e] === V.Skl.ONLINE) && (e = V.Skl.ONLINE);
                     }
-                } else null != c && (e = w.Z.getStatus(c));
+                } else null != c && (e = L.Z.getStatus(c));
                 return {
                     status: e,
-                    activities: null != c ? w.Z.getActivities(c) : null,
-                    applicationStream: null != c ? L.Z.getAnyStreamForUser(c) : null,
-                    isMobile: null != c && w.Z.isMobileOnline(c)
+                    activities: null != c ? L.Z.getActivities(c) : null,
+                    applicationStream: null != c ? w.Z.getAnyStreamForUser(c) : null,
+                    isMobile: null != c && L.Z.isMobileOnline(c)
                 };
             },
             [t, c, a]
@@ -401,7 +401,7 @@ t.ZP = (e) => {
             },
             [t, r, o]
         ),
-        { recentActivityStatusEnabled: p } = (0, R.U)({ location: 'PrivateChannel' }),
+        { recentActivityStatusEnabled: p } = (0, M.U)({ location: 'PrivateChannel' }),
         m = (0, S.Z)(null == r ? void 0 : r.id);
     return t.isMultiUserDM()
         ? (0, i.jsx)(J, {

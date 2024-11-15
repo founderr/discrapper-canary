@@ -35,8 +35,8 @@ var r = n(198453),
     g = n(726983),
     E = n(311300),
     v = n(563947),
-    I = n(738279),
-    b = n(92828),
+    b = n(738279),
+    I = n(92828),
     S = n(184495),
     T = n(918629),
     y = n(149901),
@@ -53,8 +53,8 @@ var r = n(198453),
     P = n(599542),
     k = n(192379),
     U = n(430370),
-    G = n(995295),
-    B = n(969710),
+    B = n(995295),
+    G = n(969710),
     Z = n(903646),
     F = n(554373),
     V = n(959125),
@@ -353,11 +353,11 @@ function ep(e, t) {
     let n = (0, k.useMemo)(() => new ec(t || new eu()), [t]),
         i = (0, k.useCallback)((e) => n.subscribe(e), [n]),
         a = (0, k.useCallback)(() => n.getCollection(), [n]),
-        s = (0, B.useSyncExternalStore)(i, a, a),
+        s = (0, G.useSyncExternalStore)(i, a, a),
         o = ef(e),
         l = (0, k.useMemo)(() => k.createElement(e_.Provider, { value: !0 }, o), [o]);
     return {
-        portal: (0, r.Av)() ? null : (0, G.createPortal)(l, n),
+        portal: (0, r.Av)() ? null : (0, B.createPortal)(l, n),
         collection: s
     };
 }
@@ -378,8 +378,8 @@ let eg = (0, k.forwardRef)(function (e, t) {
     }),
     eE = (0, k.createContext)(null),
     ev = (0, k.createContext)(null),
-    eI = Symbol('callback'),
-    eb = Symbol('default');
+    eb = Symbol('callback'),
+    eI = Symbol('default');
 function eS({ values: e, children: t }) {
     for (let [n, r] of e) t = k.createElement(n.Provider, { value: r }, t);
     return t;
@@ -402,12 +402,12 @@ function eT(e) {
 function ey(e, t, n) {
     let r = (0, k.useContext)(n) || {};
     if ('slots' in r && r.slots) {
-        if (!e.slot && !r.slots[eb]) throw Error('A slot prop is required');
-        let t = e.slot || eb;
+        if (!e.slot && !r.slots[eI]) throw Error('A slot prop is required');
+        let t = e.slot || eI;
         if (!r.slots[t]) throw Error(`Invalid slot "${e.slot}". Valid slot names are ` + new Intl.ListFormat().format(Object.keys(r.slots).map((e) => `"${e}"`)) + '.');
         r = r.slots[t];
     }
-    let { ref: i, [eI]: a, ...s } = r,
+    let { ref: i, [eb]: a, ...s } = r,
         o = (0, P.B3)((0, P.lq)(t, i)),
         l = (0, P.dG)(s, e);
     return (
@@ -467,7 +467,7 @@ function eR(e, t, n) {
                     let t = (i) => {
                             i.target === e.current &&
                                 (r.removeEventListener('animationend', t),
-                                G.flushSync(() => {
+                                B.flushSync(() => {
                                     n();
                                 }));
                         },
@@ -518,8 +518,8 @@ let eM = new Set(['form', 'formAction', 'formEncType', 'formMethod', 'formNoVali
     eP = (0, k.createContext)({}),
     ek = (0, k.createContext)({}),
     eU = (0, k.createContext)({}),
-    eG = (0, k.createContext)({}),
-    eB = (0, k.createContext)(null),
+    eB = (0, k.createContext)({}),
+    eG = (0, k.createContext)(null),
     eZ = (0, k.createContext)(null),
     eF = (0, k.forwardRef)(function (e, t) {
         let { children: n, style: r, className: i } = e,
@@ -555,7 +555,7 @@ let eM = new Set(['form', 'formAction', 'formEncType', 'formMethod', 'formNoVali
     }),
     ej = (0, k.forwardRef)(function (e, t) {
         let { children: n, style: r, className: i } = e,
-            a = (0, k.useContext)(eB),
+            a = (0, k.useContext)(eG),
             { startDate: s } = (0, k.useContext)(eZ),
             { locale: o } = (0, c.bU)(),
             l = (0, Z.Rn)(s, o);
@@ -681,17 +681,17 @@ function e4({ state: e, props: t, listBoxRef: n }) {
         E = (0, k.useRef)(f);
     g.current !== d && console.warn('Drag hooks were provided during one render, but not another. This should be avoided as it may produce unexpected behavior.'), E.current !== f && console.warn('Drop hooks were provided during one render, but not another. This should be avoided as it may produce unexpected behavior.');
     let v = !1,
-        I = null,
-        b = (0, k.useRef)(null);
+        b = null,
+        I = (0, k.useRef)(null);
     if (d && l) {
         (r = l.useDraggableCollectionState({
             collection: u,
             selectionManager: c,
-            preview: l.renderDragPreview ? b : void 0
+            preview: l.renderDragPreview ? I : void 0
         })),
             l.useDraggableCollection({}, r, n);
         let e = l.DragPreview;
-        I = l.renderDragPreview ? k.createElement(e, { ref: b }, l.renderDragPreview) : null;
+        b = l.renderDragPreview ? k.createElement(e, { ref: I }, l.renderDragPreview) : null;
     }
     if (f && l) {
         i = l.useDroppableCollectionState({
@@ -771,7 +771,7 @@ function e4({ state: e, props: t, listBoxRef: n }) {
                     p
                 ),
                 N,
-                I
+                b
             )
         )
     );
@@ -843,7 +843,7 @@ function e5({ item: e }) {
         ));
     let E = e.props,
         v = s && s.isDragging(e.key),
-        I = eT({
+        b = eT({
             ...E,
             id: void 0,
             children: e.rendered,
@@ -858,7 +858,7 @@ function e5({ item: e }) {
                 isDropTarget: null == g ? void 0 : g.isDropTarget
             }
         }),
-        b = (null == i ? void 0 : i.renderDropIndicator) || ((e) => k.createElement(eQ, { target: e }));
+        I = (null == i ? void 0 : i.renderDropIndicator) || ((e) => k.createElement(eQ, { target: e }));
     return (
         (0, k.useEffect)(() => {
             !e.textValue && console.warn('A `textValue` prop is required for <Item> elements with non-plain text children in order to support accessibility features such as type to select.');
@@ -867,7 +867,7 @@ function e5({ item: e }) {
             k.Fragment,
             null,
             (null == i ? void 0 : i.useDropIndicator) &&
-                b({
+                I({
                     type: 'item',
                     key: e.key,
                     dropPosition: 'before'
@@ -876,7 +876,7 @@ function e5({ item: e }) {
                 'div',
                 {
                     ...(0, o.dG)((0, P.zL)(E), u, _, null == m ? void 0 : m.dragProps, null == g ? void 0 : g.dropProps),
-                    ...I,
+                    ...b,
                     ref: t,
                     'data-hovered': p || void 0,
                     'data-focused': f.isFocused || void 0,
@@ -900,12 +900,12 @@ function e5({ item: e }) {
                             ]
                         ]
                     },
-                    I.children
+                    b.children
                 )
             ),
             (null == i ? void 0 : i.useDropIndicator) &&
                 null == n.collection.getKeyAfter(e.key) &&
-                b({
+                I({
                     type: 'item',
                     key: e.key,
                     dropPosition: 'after'
@@ -1123,7 +1123,7 @@ function tE({ item: e }) {
             gridCellProps: c,
             descriptionProps: d,
             ..._
-        } = (0, b.Fb)(
+        } = (0, I.Fb)(
             {
                 node: e,
                 shouldSelectOnPressUp: !!r
@@ -1133,7 +1133,7 @@ function tE({ item: e }) {
         ),
         { hoverProps: p, isHovered: h } = (0, a.XI)({ isDisabled: !_.allowsSelection && !_.hasAction }),
         { isFocusVisible: m, focusProps: g } = (0, s.Fx)(),
-        { checkboxProps: E } = (0, b.fQ)({ key: e.key }, t),
+        { checkboxProps: E } = (0, I.fQ)({ key: e.key }, t),
         v = null;
     r &&
         n &&
@@ -1144,12 +1144,12 @@ function tE({ item: e }) {
             },
             r
         ));
-    let I = null,
+    let b = null,
         S = (0, k.useRef)(null),
         { visuallyHiddenProps: T } = (0, f.S)();
     i &&
         n &&
-        (I = n.useDropIndicator(
+        (b = n.useDropIndicator(
             {
                 target: {
                     type: 'item',
@@ -1175,7 +1175,7 @@ function tE({ item: e }) {
                 selectionBehavior: t.selectionManager.selectionBehavior,
                 allowsDragging: !!r,
                 isDragging: A,
-                isDropTarget: null == I ? void 0 : I.isDropTarget
+                isDropTarget: null == b ? void 0 : b.isDropTarget
             }
         }),
         C = (null == n ? void 0 : n.renderDropIndicator) || ((e) => k.createElement(eQ, { target: e })),
@@ -1196,8 +1196,8 @@ function tE({ item: e }) {
                     key: e.key,
                     dropPosition: 'before'
                 }),
-            I &&
-                !I.isHidden &&
+            b &&
+                !b.isHidden &&
                 k.createElement(
                     'div',
                     {
@@ -1210,7 +1210,7 @@ function tE({ item: e }) {
                         k.createElement('div', {
                             role: 'button',
                             ...T,
-                            ...(null == I ? void 0 : I.dropIndicatorProps),
+                            ...(null == b ? void 0 : b.dropIndicatorProps),
                             ref: S
                         })
                     )
@@ -1226,7 +1226,7 @@ function tE({ item: e }) {
                     'data-focus-visible': m || void 0,
                     'data-pressed': _.isPressed || void 0,
                     'data-dragging': A || void 0,
-                    'data-drop-target': (null == I ? void 0 : I.isDropTarget) || void 0
+                    'data-drop-target': (null == b ? void 0 : b.isDropTarget) || void 0
                 },
                 k.createElement(
                     'div',
@@ -1240,7 +1240,7 @@ function tE({ item: e }) {
                                     eP,
                                     {
                                         slots: {
-                                            [eb]: {},
+                                            [eI]: {},
                                             drag: {
                                                 ...(null == v ? void 0 : v.dragButtonProps),
                                                 ref: R,
@@ -1273,7 +1273,7 @@ function tv(e, t) {
         { dropIndicatorProps: a, isHidden: s, isDropTarget: o } = n.useDropIndicator(e, r, i);
     return s
         ? null
-        : k.createElement(tI, {
+        : k.createElement(tb, {
               ...e,
               dropIndicatorProps: a,
               isDropTarget: o,
@@ -1281,7 +1281,7 @@ function tv(e, t) {
               ref: t
           });
 }
-let tI = (0, k.forwardRef)(function (e, t) {
+let tb = (0, k.forwardRef)(function (e, t) {
     let { dropIndicatorProps: n, isDropTarget: r, buttonRef: i, ...a } = e,
         { visuallyHiddenProps: s } = (0, f.S)(),
         o = eT({
@@ -1309,7 +1309,7 @@ let tI = (0, k.forwardRef)(function (e, t) {
         )
     );
 });
-function tb() {
+function tI() {
     let { dragAndDropHooks: e, dropState: t } = (0, k.useContext)(tg),
         n = (0, k.useRef)(null),
         { dropIndicatorProps: r } = e.useDropIndicator({ target: { type: 'root' } }, t, n),
@@ -1491,8 +1491,8 @@ let tR = (0, k.createContext)(null),
     tP = (0, k.createContext)(null),
     tk = (0, k.createContext)(null),
     tU = (0, k.createContext)(null),
-    tG = (0, k.createContext)(null),
-    tB = Symbol.iterator;
+    tB = (0, k.createContext)(null),
+    tG = Symbol.iterator;
 class tZ extends eu {
     addNode(e) {
         super.addNode(e), this.columnsDirty || (this.columnsDirty = 'column' === e.type), 'tableheader' === e.type && (this.head = e), 'tablebody' === e.type && (this.body = e);
@@ -1517,7 +1517,7 @@ class tZ extends eu {
     get rows() {
         return [...this.getChildren(this.body.key)];
     }
-    *[tB]() {
+    *[tG]() {
         yield* this.getChildren(this.body.key);
     }
     get size() {
@@ -1594,16 +1594,16 @@ let tF = (0, k.createContext)(null),
         h.current !== _ && console.warn('Drag hooks were provided during one render, but not another. This should be avoided as it may produce unexpected behavior.'), g.current !== p && console.warn('Drop hooks were provided during one render, but not another. This should be avoided as it may produce unexpected behavior.');
         let E = !1,
             v = null,
-            I = (0, k.useRef)(null);
+            b = (0, k.useRef)(null);
         if (_ && d) {
             (n = d.useDraggableCollectionState({
                 collection: l,
                 selectionManager: f,
-                preview: d.renderDragPreview ? I : void 0
+                preview: d.renderDragPreview ? b : void 0
             })),
                 d.useDraggableCollection({}, n, t);
             let e = d.DragPreview;
-            v = d.renderDragPreview ? k.createElement(e, { ref: I }, d.renderDragPreview) : null;
+            v = d.renderDragPreview ? k.createElement(e, { ref: b }, d.renderDragPreview) : null;
         }
         if (p && d) {
             r = d.useDroppableCollectionState({
@@ -1622,7 +1622,7 @@ let tF = (0, k.createContext)(null),
             )),
                 (E = r.isDropTarget({ type: 'root' }));
         }
-        let { focusProps: b, isFocused: S, isFocusVisible: T } = (0, s.Fx)(),
+        let { focusProps: I, isFocused: S, isFocusVisible: T } = (0, s.Fx)(),
             y = eT({
                 className: e.className,
                 style: e.style,
@@ -1670,7 +1670,7 @@ let tF = (0, k.createContext)(null),
                         {
                             ...(0, P.zL)(e),
                             ...y,
-                            ...(0, o.dG)(c, b, null == i ? void 0 : i.collectionProps),
+                            ...(0, o.dG)(c, I, null == i ? void 0 : i.collectionProps),
                             ref: t,
                             slot: e.slot,
                             'data-drop-target': E || void 0,
@@ -1875,8 +1875,8 @@ function t0({ item: e }) {
             },
             u
         ));
-    let I = (0, k.useRef)(null),
-        { visuallyHiddenProps: b } = (0, f.S)();
+    let b = (0, k.useRef)(null),
+        { visuallyHiddenProps: I } = (0, f.S)();
     c &&
         l &&
         (n = l.useDropIndicator(
@@ -1888,7 +1888,7 @@ function t0({ item: e }) {
                 }
             },
             c,
-            I
+            b
         ));
     let S = (null == l ? void 0 : l.renderDropIndicator) || ((e) => k.createElement(eQ, { target: e })),
         T = (0, k.useRef)(null);
@@ -1945,9 +1945,9 @@ function t0({ item: e }) {
                     },
                     k.createElement('div', {
                         role: 'button',
-                        ...b,
+                        ...I,
                         ...n.dropIndicatorProps,
-                        ref: I
+                        ref: b
                     })
                 )
             ),
@@ -1973,7 +1973,7 @@ function t0({ item: e }) {
                             eP,
                             {
                                 slots: {
-                                    [eb]: {},
+                                    [eI]: {},
                                     drag: {
                                         ...(null == t ? void 0 : t.dragButtonProps),
                                         ref: T,

@@ -1,9 +1,9 @@
 s.d(t, {
     A7: function () {
-        return y;
+        return S;
     },
     CI: function () {
-        return N;
+        return y;
     },
     dX: function () {
         return G;
@@ -12,7 +12,7 @@ s.d(t, {
         return r;
     },
     lH: function () {
-        return w;
+        return R;
     }
 });
 var n,
@@ -71,8 +71,8 @@ let I = () =>
                 fill: 'white'
             })
         }),
-    S = () => (0, p.EW)(l.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: j.L.TAKE_ACTION }),
-    y = (e) => {
+    N = () => (0, p.EW)(l.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: j.L.TAKE_ACTION }),
+    S = (e) => {
         let { children: t } = e;
         return (0, i.jsx)(c.Popout, {
             shouldShow: !0,
@@ -80,13 +80,13 @@ let I = () =>
                 (0, i.jsx)(f.Z, {
                     artClassName: E.coachmarkArt,
                     dismissIconClassName: E.exitIcon,
-                    onDismissIconClick: S,
+                    onDismissIconClick: N,
                     dismissIcon: (0, i.jsx)(b, {}),
                     headerClassName: E.incentiveCoachtipContent,
                     contentClassName: E.incentiveCoachtipContainer,
                     pointerClassName: E.incentiveTooltipPointer,
                     onTryFeature: () => {
-                        (0, x.uL)(v.Z5c.NITRO_HOME), S();
+                        (0, x.uL)(v.Z5c.NITRO_HOME), N();
                     },
                     art: (0, i.jsx)(i.Fragment, {
                         children: (0, i.jsx)(h.ZP, {
@@ -112,7 +112,7 @@ let I = () =>
             children: t
         });
     },
-    N = (e) => {
+    y = (e) => {
         let t,
             { children: s, variant: n, trialOffer: r, isHovered: o } = e,
             l = 'referral_program' === n;
@@ -149,7 +149,7 @@ let I = () =>
                       children: [
                           (0, i.jsx)('div', {
                               className: E.t4ACoachtipArtOuterContainer,
-                              children: (0, i.jsx)(R, {})
+                              children: (0, i.jsx)(w, {})
                           }),
                           (0, i.jsx)(B, { trialExpiration: (null == r ? void 0 : r.expires_at) != null ? Date.parse(r.expires_at) : void 0 })
                       ]
@@ -169,7 +169,7 @@ let I = () =>
             })
         );
     },
-    w = (e) => {
+    R = (e) => {
         let { isSelected: t, onSelect: s } = e;
         return (
             o.useEffect(() => {
@@ -178,7 +178,7 @@ let I = () =>
             (0, i.jsx)(L.Z, { copy: A.intl.string(A.t.y2b7CA) })
         );
     },
-    R = () =>
+    w = () =>
         (0, i.jsx)('div', {
             className: E.t4ACoachtipArtInnerContainer,
             children: (0, i.jsx)('img', {

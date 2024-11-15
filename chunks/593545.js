@@ -98,7 +98,7 @@ function v(e) {
         ]
     });
 }
-function I(e) {
+function b(e) {
     let { language: t, setLanguage: n } = e;
     return (0, r.jsx)(l.Popout, {
         position: 'left',
@@ -145,7 +145,7 @@ function I(e) {
             })
     });
 }
-function b(e) {
+function I(e) {
     return (0, r.jsx)(l.Tooltip, {
         text: p.intl.string(p.t['0PQYk5']),
         children: (t) =>
@@ -206,7 +206,7 @@ function S(e) {
                                       isWholeFile: C,
                                       numLines: A
                                   }),
-                                  (0, r.jsx)(b, {
+                                  (0, r.jsx)(I, {
                                       url: n,
                                       fileName: i,
                                       fileSize: a,
@@ -223,7 +223,7 @@ function S(e) {
                         fileName: i,
                         fileSize: a
                     }),
-                    (0, r.jsx)(I, {
+                    (0, r.jsx)(b, {
                         language: f,
                         setLanguage: m
                     })
@@ -267,7 +267,7 @@ function T(e) {
                                 fileName: n,
                                 fileSize: a
                             }),
-                            (0, r.jsx)(I, {
+                            (0, r.jsx)(b, {
                                 language: d,
                                 setLanguage: f
                             })

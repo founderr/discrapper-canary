@@ -5,8 +5,8 @@ var l = n(200651),
     r = n(70956),
     o = n(5192),
     s = n(379357),
-    u = n(561308),
-    c = n(919394),
+    c = n(561308),
+    u = n(919394),
     d = n(206295),
     m = n(227172),
     x = n(555672),
@@ -38,12 +38,12 @@ t.Z = (e) => {
         { largeImage: P } = (0, s.rv)({ entry: n }),
         { user: Z, details: L, appName: y } = (0, v.n)(n),
         { primaryColor: T, secondaryColor: N } = (0, d.Z)(null == P ? void 0 : P.src),
-        _ = (0, u.yA)(n),
-        E = (0, u.Nq)(n),
+        _ = (0, c.yA)(n),
+        E = (0, c.Nq)(n),
         S = a.useCallback(
             (e) => {
                 if (null != t && null != Z && null != _ && null != E && !!(0, x.qy)(E))
-                    return (0, c.SO)({
+                    return (0, u.SO)({
                         entry: n,
                         applicationImageSrc: null == P ? void 0 : P.src,
                         avatarSrcs: [Z.getAvatarURL(null == t ? void 0 : t.guild_id, 128)],

@@ -17,16 +17,16 @@ function a(e) {
         m = l(e.value, e.defaultValue, e.onChange),
         g = l(e.value, e.defaultValue, e.onChangeEnd),
         [E, v] = (0, r.zk)(p, h, m),
-        [I, b] = (0, i.useState)(Array(E.length).fill(!1)),
+        [b, I] = (0, i.useState)(Array(E.length).fill(!1)),
         S = (0, i.useRef)(Array(E.length).fill(!0)),
         [T, y] = (0, i.useState)(void 0),
         A = (0, i.useRef)(E),
-        N = (0, i.useRef)(I),
+        N = (0, i.useRef)(b),
         C = (e) => {
             (A.current = e), v(e);
         },
         R = (e) => {
-            (N.current = e), b(e);
+            (N.current = e), I(e);
         };
     function O(e) {
         return (e - a) / (u - a);
@@ -60,7 +60,7 @@ function a(e) {
         setThumbPercent: function (e, t) {
             w(e, P(t));
         },
-        isThumbDragging: (e) => I[e],
+        isThumbDragging: (e) => b[e],
         setThumbDragging: function (e, t) {
             if (n || !x(e)) return;
             let r = N.current[e];

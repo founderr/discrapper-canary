@@ -25,8 +25,8 @@ var r,
     g = n(313201),
     E = n(540059),
     v = n(98278),
-    I = n(639119),
-    b = n(311476),
+    b = n(639119),
+    I = n(311476),
     S = n(165583),
     T = n(587446),
     y = n(210887),
@@ -44,11 +44,11 @@ var r,
     k = n(388032),
     U = n(767023);
 ((i = r || (r = {})).EDITOR = 'EDITOR'), (i.SETTINGS = 'SETTINGS');
-let G = Object.freeze({
+let B = Object.freeze({
         EDITOR: M.fy.SLOW_USER_ACTION,
         SETTINGS: M.fy.INFREQUENT_USER_ACTION
     }),
-    B = s.createContext({}),
+    G = s.createContext({}),
     Z = (e) => {
         let { isPersisted: t, themeName: n, analyticsLocations: r } = e;
         N.default.track(L.rMx.CLIENT_THEME_UPDATED, {
@@ -60,7 +60,7 @@ let G = Object.freeze({
     },
     F = (e) => {
         let { type: t, isPreview: n, isCoachmark: r } = e,
-            { enabled: i } = b.Z.useExperiment(
+            { enabled: i } = I.Z.useExperiment(
                 { location: 'GradientSelectorsTitle' },
                 {
                     autoTrackExposure: !1,
@@ -105,8 +105,8 @@ let G = Object.freeze({
     V = (e) => {
         var t, n;
         let { type: r, isPreview: i, isCoachmark: s } = e,
-            o = (null === (n = (0, I.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === x.Si.TIER_2,
-            { enabled: l } = b.Z.useExperiment(
+            o = (null === (n = (0, b.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === x.Si.TIER_2,
+            { enabled: l } = I.Z.useExperiment(
                 { location: 'GradientSelectorsTitle' },
                 {
                     autoTrackExposure: !1,
@@ -169,9 +169,9 @@ let G = Object.freeze({
     j = (e) => {
         var t, n;
         let { renderCTAButtons: r } = e,
-            { type: i } = s.useContext(B),
+            { type: i } = s.useContext(G),
             [o, l] = (0, c.Wu)([R.Z], () => [R.Z.isPreview, R.Z.isCoachmark]),
-            u = (null === (n = (0, I.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === x.Si.TIER_2;
+            u = (null === (n = (0, b.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === x.Si.TIER_2;
         return (0, a.jsx)(a.Fragment, {
             children:
                 'EDITOR' === i && o && u
@@ -205,19 +205,19 @@ let G = Object.freeze({
     },
     H = (e) => {
         let { disabled: t } = e,
-            { type: r, delay: i } = s.useContext(B),
+            { type: r, delay: i } = s.useContext(G),
             { analyticsLocations: o } = (0, m.ZP)(h.Z.CLIENT_THEMES_THEME_SELECTOR),
             [l, u] = (0, c.Wu)([R.Z], () => {
                 var e;
                 return [R.Z.isPreview, null === (e = R.Z.gradientPreset) || void 0 === e ? void 0 : e.id];
             }),
             [g, E] = s.useState(!1),
-            [v, I] = s.useState(-1),
+            [v, b] = s.useState(-1),
             S = (0, c.e7)([p.Z], () => p.Z.useReducedMotion);
         s.useEffect(() => {
             ((v === D.XV.length - 2 && 'EDITOR' === r) || u === d.Us.EASTER_EGG) && E(!0);
         }, [v, r, u]);
-        let { enabled: T } = b.Z.useExperiment({ location: 'useGradientSelectors' }, { autoTrackExposure: !1 }),
+        let { enabled: T } = I.Z.useExperiment({ location: 'useGradientSelectors' }, { autoTrackExposure: !1 }),
             y = (e, t) => {
                 if (
                     ((0, C.zO)(e.id),
@@ -258,10 +258,10 @@ let G = Object.freeze({
                     null != t)
                 ) {
                     if ((g && E(!1), t <= v || 0 === t)) {
-                        I(0);
+                        b(0);
                         return;
                     }
-                    I((e) => e + 1);
+                    b((e) => e + 1);
                 }
             };
         return (0, a.jsxs)(a.Fragment, {
@@ -313,7 +313,7 @@ let G = Object.freeze({
     },
     Y = (e) => {
         let { systemSelectorFirst: t, hideSystemSelector: n = !1 } = e,
-            { delay: r } = s.useContext(B),
+            { delay: r } = s.useContext(G),
             { analyticsLocations: i } = (0, m.ZP)(h.Z.CLIENT_THEMES_THEME_SELECTOR),
             [o, l, u] = (0, c.Wu)([y.Z, A.ZP, R.Z], () => [y.Z.theme, null == R.Z.gradientPreset, A.ZP.useSystemTheme === w.K.ON]),
             d = (e) => {
@@ -380,11 +380,11 @@ let G = Object.freeze({
             o = s.useMemo(
                 () => ({
                     type: t,
-                    delay: G[t]
+                    delay: B[t]
                 }),
                 [t]
             );
-        return (0, a.jsx)(B.Provider, {
+        return (0, a.jsx)(G.Provider, {
             value: o,
             children: (0, a.jsx)('div', {
                 ...i,

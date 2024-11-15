@@ -34,7 +34,7 @@ let P = {
         object: T.qAy.CHANNEL
     }
 };
-function R(e, t) {
+function M(e, t) {
     (0, p.jW)(e, async () => {
         let { default: e } = await Promise.all([n.e('33053'), n.e('15669'), n.e('7654'), n.e('42587'), n.e('44156'), n.e('44294'), n.e('85552'), n.e('58227'), n.e('16114'), n.e('28161'), n.e('73747'), n.e('33213'), n.e('92359')]).then(n.bind(n, 545135));
         return (n) =>
@@ -45,13 +45,13 @@ function R(e, t) {
     });
 }
 t.Z = l.memo(function (e) {
-    var t, n, r, p, M;
-    let { guildNode: L, setRef: w, onDragStart: D, onDragEnd: O, route: k, guild: U, animatable: G, selected: B = !1, unread: H = !1, mediaState: V, unavailable: F = !1, badge: W = 0, contextMenu: z = R, draggable: Y = !1, sorting: K = !1, preloadOnClick: q = !0, guildJoinRequestStatus: Q } = e,
-        { id: J, parentId: X } = L,
+    var t, n, r, p, R;
+    let { guildNode: w, setRef: L, onDragStart: D, onDragEnd: O, route: k, guild: U, animatable: G, selected: B = !1, unread: H = !1, mediaState: V, unavailable: F = !1, badge: W = 0, contextMenu: z = M, draggable: Y = !1, sorting: K = !1, preloadOnClick: q = !0, guildJoinRequestStatus: Q } = e,
+        { id: J, parentId: X } = w,
         $ = null !== (t = e.upperBadge) && void 0 !== t ? t : F ? (0, y.Ny)() : null != V ? (0, y.Or)(V) : void 0,
         ee = null !== (n = e.lowerBadge) && void 0 !== n ? n : void 0;
     null == ee && W > 0 ? (ee = null !== (r = (0, y.Ne)(W)) && void 0 !== r ? r : void 0) : null == ee && null != Q && (ee = null !== (p = (0, y.jt)({ guildJoinRequestStatus: Q })) && void 0 !== p ? p : void 0);
-    let et = null !== (M = e.lowerBadgeSize) && void 0 !== M ? M : { width: (0, d.getBadgeWidthForValue)(W) },
+    let et = null !== (R = e.lowerBadgeSize) && void 0 !== R ? R : { width: (0, d.getBadgeWidthForValue)(W) },
         [{ dragging: en }, ei] = (0, o.c)({
             type: x.eD.GUILD,
             item: () => (
@@ -59,8 +59,8 @@ t.Z = l.memo(function (e) {
                     null == D || D();
                 }),
                 {
-                    type: L.type,
-                    nodeId: L.id
+                    type: w.type,
+                    nodeId: w.id
                 }
             ),
             end() {
@@ -115,9 +115,9 @@ t.Z = l.memo(function (e) {
         ),
         ev = l.useCallback(
             (e) => {
-                null == w || w(J, e);
+                null == L || L(J, e);
             },
-            [J, w]
+            [J, L]
         );
     if (null == U) return null;
     let ex =
@@ -190,7 +190,7 @@ t.Z = l.memo(function (e) {
             Y
                 ? (0, i.jsx)(E.ZP, {
                       name: U.name,
-                      targetNode: L,
+                      targetNode: w,
                       onDragOverChanged: e_
                   })
                 : null

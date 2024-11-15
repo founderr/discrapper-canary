@@ -75,10 +75,10 @@ function u(e) {
         (null == u ? void 0 : u.validationDetails.valid) && (u = null);
         let g = (0, r.useContext)(o),
             E = (0, r.useMemo)(() => (i ? (Array.isArray(i) ? i.flatMap((e) => c(g[e])) : c(g[i])) : []), [g, i]),
-            [v, I] = (0, r.useState)(g),
-            [b, S] = (0, r.useState)(!1);
-        g !== v && (I(g), S(!1));
-        let T = (0, r.useMemo)(() => d(b ? [] : E), [b, E]),
+            [v, b] = (0, r.useState)(g),
+            [I, S] = (0, r.useState)(!1);
+        g !== v && (b(g), S(!1));
+        let T = (0, r.useMemo)(() => d(I ? [] : E), [I, E]),
             y = (0, r.useRef)(s),
             [A, N] = (0, r.useState)(s),
             C = (0, r.useRef)(s),

@@ -22,10 +22,10 @@ o(g);
 var E = Array(29);
 o(E);
 var v = Array(30);
-function I(e, t, n, r, i) {
+function b(e, t, n, r, i) {
     (this.static_tree = e), (this.extra_bits = t), (this.extra_base = n), (this.elems = r), (this.max_length = i), (this.has_stree = e && e.length);
 }
-function b(e, t) {
+function I(e, t) {
     (this.dyn_tree = e), (this.max_code = 0), (this.stat_desc = t);
 }
 function S(e) {
@@ -194,12 +194,12 @@ function U(e, t, n, r) {
             for (; e <= 279; ) (p[2 * e + 1] = 7), e++, u[7]++;
             for (; e <= 287; ) (p[2 * e + 1] = 8), e++, u[8]++;
             for (C(p, l + 1, u), e = 0; e < 30; e++) (h[2 * e + 1] = 5), (h[2 * e] = N(e, 5));
-            (r = new I(p, c, 257, l, 15)), (i = new I(h, d, 0, 30, 15)), (a = new I([], f, 0, 19, 7));
+            (r = new b(p, c, 257, l, 15)), (i = new b(h, d, 0, 30, 15)), (a = new b([], f, 0, 19, 7));
         })(),
         (k = !0)),
-        (e.l_desc = new b(e.dyn_ltree, r)),
-        (e.d_desc = new b(e.dyn_dtree, i)),
-        (e.bl_desc = new b(e.bl_tree, a)),
+        (e.l_desc = new I(e.dyn_ltree, r)),
+        (e.d_desc = new I(e.dyn_dtree, i)),
+        (e.bl_desc = new I(e.bl_tree, a)),
         (e.bi_buf = 0),
         (e.bi_valid = 0),
         R(e);

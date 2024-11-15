@@ -12,14 +12,14 @@ var r = n(373793),
     u = n(689079);
 function c(e) {
     var t, n, c, d, f;
-    let { applicationId: _, userIndexState: p, guildIndexState: h, onSuccess: m, sectionName: g, location: E, entrypoint: v, commandIntegrationTypes: I } = e;
-    if ((null != I && !I.includes(r.Y.USER_INSTALL)) || _ === u.bi.BUILT_IN || (null === (t = p.result) || void 0 === t ? void 0 : t.sections[_]) != null || (null === (n = h.result) || void 0 === n ? void 0 : n.sections[_]) != null) return null == m || m(), Promise.resolve(!0);
-    let b = null != v ? v : o.Z.lastShownEntrypoint();
+    let { applicationId: _, userIndexState: p, guildIndexState: h, onSuccess: m, sectionName: g, location: E, entrypoint: v, commandIntegrationTypes: b } = e;
+    if ((null != b && !b.includes(r.Y.USER_INSTALL)) || _ === u.bi.BUILT_IN || (null === (t = p.result) || void 0 === t ? void 0 : t.sections[_]) != null || (null === (n = h.result) || void 0 === n ? void 0 : n.sections[_]) != null) return null == m || m(), Promise.resolve(!0);
+    let I = null != v ? v : o.Z.lastShownEntrypoint();
     (0, i.yw)(l.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, {
         location: E,
         application_id: _,
         section_name: g,
-        source: b
+        source: I
     });
     let S = a.Z.getApplication(_),
         T = r.Y.USER_INSTALL,
@@ -37,7 +37,7 @@ function c(e) {
                             location: E,
                             application_id: _,
                             section_name: g,
-                            source: b
+                            source: I
                         }),
                         e(!0),
                         null == m || m());

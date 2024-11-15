@@ -24,7 +24,7 @@ n.d(t, {
         return u;
     },
     hs: function () {
-        return I;
+        return b;
     },
     j1: function () {
         return g;
@@ -70,7 +70,7 @@ let u = [0, 4, 8, 16, 24],
     E = 'SPOILER_';
 ((r = a || (a = {})).ERROR_SOURCE_UNKNOWN = 'ERROR_SOURCE_UNKNOWN'), (r.PRECOMPRESSION_SUM_TOO_LARGE = 'PRECOMPRESSION_SUM_TOO_LARGE'), (r.PRECOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE = 'PRECOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE'), (r.POSTCOMPRESSION_SUM_TOO_LARGE = 'POSTCOMPRESSION_SUM_TOO_LARGE'), (r.POSTCOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE = 'POSTCOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE'), (r.UPLOAD_ATTACHMENT_MAX_SIZE_ERROR = 'UPLOAD_MESSAGE_ATTACHMENT_MAX_SIZE_ERROR'), (r.EXPLICIT_CONTENT = 'EXPLICIT_CONTENT'), ((i = s || (s = {})).SYSTEM_DM_TAG_SYSTEM_TYPE = 'a'), (i.BOT_TAG_SERVER_TYPE = 'b'), (i.AI_TAG_TYPE = 'c'), (i.BOT_TAG_BOT_TYPE = 'd'), (i.REMIXING_TYPE = 'e'), (i.POLL_TYPE = 'g');
 let v = 209715200,
-    I = {
+    b = {
         timeout: 60 * l.Z.Millis.SECOND,
         retries: 3,
         backoff: new o.Z()

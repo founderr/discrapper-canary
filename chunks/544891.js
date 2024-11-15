@@ -211,14 +211,14 @@ function E(e, t, n) {
     });
 }
 let v = E.bind(null, 'get'),
-    I = E.bind(null, 'post'),
-    b = E.bind(null, 'put'),
+    b = E.bind(null, 'post'),
+    I = E.bind(null, 'put'),
     S = E.bind(null, 'patch'),
     T = E.bind(null, 'del'),
     y = {
         get: v,
-        post: I,
-        put: b,
+        post: b,
+        put: I,
         patch: S,
         del: T
     };
@@ -231,7 +231,7 @@ if (n.g.isServerRendering) {
             body: null,
             text: ''
         });
-    (v = e), (I = e), (b = e), (S = e), (T = e);
+    (v = e), (b = e), (I = e), (S = e), (T = e);
 }
 function A() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];

@@ -79,7 +79,7 @@ function T(e) {
                 : !0 === T
                   ? Z.intl.format(Z.t.JkWoqK, {
                         username: y.username,
-                        helpCenterLink: v.Z.getArticleURL(E.BhN.HD_STREAMING_POTION)
+                        helpCenterLink: v.Z.getArticleURL(E.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
                     })
                   : Z.intl.formatToPlainString(Z.t.vNbVXF, { username: y.username });
         })(),

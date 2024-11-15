@@ -21,8 +21,8 @@ var r = n(200651),
     g = n(430824),
     E = n(358085),
     v = n(288406),
-    I = n(388032),
-    b = n(886028);
+    b = n(388032),
+    I = n(886028);
 let S = (e, t) => ''.concat(e, ':').concat(t),
     T = i.forwardRef(function (e, t) {
         let n,
@@ -31,12 +31,12 @@ let S = (e, t) => ''.concat(e, ':').concat(t),
         return (0, r.jsx)(l.FocusRing, {
             children: (0, r.jsx)('button', {
                 ...C,
-                className: s()(b.emojiItem, {
-                    [b.emojiItemLarge]: u,
-                    [b.emojiItemMedium]: c,
-                    [b.emojiItemSelected]: d,
+                className: s()(I.emojiItem, {
+                    [I.emojiItemLarge]: u,
+                    [I.emojiItemMedium]: c,
+                    [I.emojiItemSelected]: d,
                     [null != A ? A : '']: d,
-                    [b.showPulse]: h
+                    [I.showPulse]: h
                 }),
                 'data-type': p.S.EMOJI,
                 'data-id': i.id,
@@ -48,12 +48,12 @@ let S = (e, t) => ''.concat(e, ':').concat(t),
                     'aria-label':
                         ((n = i.allNamesString),
                         ((null == R ? void 0 : R.name) != null &&
-                            (n = I.intl.formatToPlainString(I.t['nXv4/P'], {
+                            (n = b.intl.formatToPlainString(b.t['nXv4/P'], {
                                 names: n,
                                 guildName: R.name
                             })),
                         a)
-                            ? I.intl.formatToPlainString(I.t['9FI9Z2'], { names: n })
+                            ? b.intl.formatToPlainString(b.t['9FI9Z2'], { names: n })
                             : n),
                     columnIndex: m,
                     rowIndex: E,
@@ -67,14 +67,14 @@ let S = (e, t) => ''.concat(e, ':').concat(t),
         });
     });
 function y(e) {
-    let { descriptor: t, emojiItemKey: a, isInspected: s, rowIndex: f, channelGuildId: p, onInspect: g, onSelect: v, isScrolling: b, isUsingKeyboardNavigation: y, showEmojiFavoriteTooltip: A, surrogateCodePoint: N, selectedItemClassName: C, getEmojiItemProps: R, isMediumSize: O, isLargeSize: D, pulseItemKey: L, allowAnimatedEmoji: x, setPulseItemKey: w, messageId: M, isBurstReaction: P, rowPosition: k, inNitroLockedSection: U } = e,
-        [G, B] = i.useState(''),
+    let { descriptor: t, emojiItemKey: a, isInspected: s, rowIndex: f, channelGuildId: p, onInspect: g, onSelect: v, isScrolling: I, isUsingKeyboardNavigation: y, showEmojiFavoriteTooltip: A, surrogateCodePoint: N, selectedItemClassName: C, getEmojiItemProps: R, isMediumSize: O, isLargeSize: D, pulseItemKey: L, allowAnimatedEmoji: x, setPulseItemKey: w, messageId: M, isBurstReaction: P, rowPosition: k, inNitroLockedSection: U } = e,
+        [B, G] = i.useState(''),
         Z = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
         F = (0, o.e7)([d.ZP], () => d.ZP.getDisambiguatedEmojiContext(p), [p]),
         V = i.useRef(null),
         { emoji: j, size: H, isDisabled: Y, columnIndex: W } = t,
         K = (e) => {
-            if ((e.stopPropagation(), b.current || y.current)) return;
+            if ((e.stopPropagation(), I.current || y.current)) return;
             let n = e.altKey;
             n && !d.ZP.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(j) && w(a),
                 (0, h.Kw)(h.v6.FAVORITE_EMOJI_TOOLTIP),
@@ -84,7 +84,7 @@ function y(e) {
                 });
         },
         z = () => {
-            !b.current && !y.current && g(t);
+            !I.current && !y.current && g(t);
         },
         q = (e) => {
             (0, u.jW)(e, async () => {
@@ -103,7 +103,7 @@ function y(e) {
                     key: a,
                     ref: V
                 },
-                G !== S(W, f) &&
+                B !== S(W, f) &&
                     (0, r.jsx)(T, {
                         ref: o,
                         emoji: j,
@@ -122,7 +122,7 @@ function y(e) {
                             if (null != V.current && null != k && null != M && !e.shiftKey && null != j.name && P && !Z && x) {
                                 let e = null == j.id ? _.ZP.convertNameToSurrogate(j.name) : j.name,
                                     t = V.current.getBoundingClientRect();
-                                (t.x = k.x + (W + 1) * H), B(S(W, f)), (0, m.U)(M, e, j.id, t);
+                                (t.x = k.x + (W + 1) * H), G(S(W, f)), (0, m.U)(M, e, j.id, t);
                             }
                             K(e);
                         },
@@ -141,7 +141,7 @@ function y(e) {
         ? (0, r.jsx)(
               l.Tooltip,
               {
-                  text: I.intl.formatToPlainString(I.t.glqNsb, { key: (0, E.isMac)() ? 'Opt' : 'Alt' }),
+                  text: b.intl.formatToPlainString(b.t.glqNsb, { key: (0, E.isMac)() ? 'Opt' : 'Alt' }),
                   position: 'top',
                   delay: 200,
                   children: (e) => Q(e)

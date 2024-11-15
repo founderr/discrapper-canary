@@ -18,9 +18,9 @@ t.Z = (e) => {
         n = (0, l.ZP)(t),
         E = (0, a.e7)([p.Z], () => p.Z.getChannel(t.channel_id)),
         v = i.useMemo(() => (0, o.Z)(t), [t]),
-        { content: I } = (0, _.Z)(v, { hideSimpleEmbedContent: !1 }),
-        b = i.useCallback(() => {
-            let { leadingIcon: e, trailingIcon: n } = (0, f.f)(t, I, !1, '', {
+        { content: b } = (0, _.Z)(v, { hideSimpleEmbedContent: !1 }),
+        I = i.useCallback(() => {
+            let { leadingIcon: e, trailingIcon: n } = (0, f.f)(t, b, !1, '', {
                 leadingIconClass: g.attachmentIcon,
                 trailingIconClass: g.attachmentIcon,
                 iconSize: h.WW
@@ -31,12 +31,12 @@ t.Z = (e) => {
                     e,
                     (0, r.jsx)(c.ZP, {
                         message: t,
-                        content: I
+                        content: b
                     }),
                     n
                 ]
             });
-        }, [t, I]);
+        }, [t, b]);
     return null == E
         ? null
         : (0, r.jsxs)('div', {
@@ -50,7 +50,7 @@ t.Z = (e) => {
                   (0, r.jsx)(s.Scroller, {
                       className: g.messagePreviewContainer,
                       children: (0, r.jsx)(u.Z, {
-                          childrenMessageContent: b(),
+                          childrenMessageContent: I(),
                           childrenHeader: (0, r.jsx)(d.ZP, {
                               message: t,
                               channel: E,

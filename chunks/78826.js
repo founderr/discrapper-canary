@@ -35,13 +35,13 @@ function f(e) {
         [p, h] = i.useState(!1),
         [m, g] = i.useState(new Set()),
         [E, v] = i.useState(!1),
-        I = i.useRef(!1);
+        b = i.useRef(!1);
     i.useEffect(() => {
         let e = new Set();
         for (let t of m) !c(t) && e.add(t);
         e.size !== m.size && g(e);
     }, [m]);
-    let b = i.useCallback(
+    let I = i.useCallback(
             (e) => {
                 let { assetNode: t, nodeId: r, errorPrefix: i, errorMessage: a } = e;
                 !n &&
@@ -85,7 +85,7 @@ function f(e) {
                 });
                 e.addEventListener('error', function n(r) {
                     S(e),
-                        b({
+                        I({
                             assetNode: e,
                             nodeId: t,
                             errorPrefix: 'Error loading asset',
@@ -94,18 +94,18 @@ function f(e) {
                         e.removeEventListener('error', n);
                 });
             },
-            [b, S]
+            [I, S]
         ),
         y = i.useMemo(() => m.size > 0 || !E, [E, m]);
     i.useEffect(() => {
-        !y && (I.current = !0);
+        !y && (b.current = !0);
     }, [y]);
     let A = i.useMemo(
         () => ({
             registerAsset: T,
             unregisterAsset: S,
             hasError: p,
-            isLoading: y && !I.current
+            isLoading: y && !b.current
         }),
         [T, S, p, y]
     );

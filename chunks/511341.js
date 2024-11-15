@@ -20,22 +20,22 @@ var r = n(200651),
     g = n(228168),
     E = n(185923),
     v = n(420212),
-    I = n(231338),
-    b = n(388032),
+    b = n(231338),
+    I = n(388032),
     S = n(209960);
 let T = (e) => {
     let { emoji: t, username: n, sourceType: r, sourceDetails: i } = e,
         a = ':'.concat(t.name, ':');
     switch (r) {
         case g.n_.ACTIVITY:
-            let s = b.intl.formatToPlainString(b.t.EUFEJi, { username: n }),
+            let s = I.intl.formatToPlainString(I.t.EUFEJi, { username: n }),
                 o = '\n> '.concat(i);
             return null != i ? ''.concat(h.jd).concat(s, '*').concat(o, '\n').concat(a) : ''.concat(h.jd).concat(s, '*\n').concat(a);
         case g.n_.AVATAR:
-            let l = b.intl.formatToPlainString(b.t.E6H15u, { username: n });
+            let l = I.intl.formatToPlainString(I.t.E6H15u, { username: n });
             return ''.concat(h.jd).concat(l, '*\n').concat(a);
         case g.n_.STATUS:
-            let c = b.intl.formatToPlainString(b.t.XPQgLy, { username: n }),
+            let c = I.intl.formatToPlainString(I.t.XPQgLy, { username: n }),
                 d = '\n> '.concat(i);
             return null != i ? ''.concat(h.jd).concat(c, '*').concat(d, '\n').concat(a) : ''.concat(h.jd).concat(c, '*\n').concat(a);
         default:
@@ -43,7 +43,7 @@ let T = (e) => {
     }
 };
 function y(e) {
-    let { user: t, guildId: n, sourceType: u, sourceDetails: h, setPopoutRef: b, onClose: y, entry: A } = e,
+    let { user: t, guildId: n, sourceType: u, sourceDetails: h, setPopoutRef: I, onClose: y, entry: A } = e,
         { trackUserProfileAction: N } = (0, d.KZ)(),
         { sendReact: C } = (0, f.Q)(u),
         { resetInteraction: R, setInteractionToast: O } = (0, p.Xo)(),
@@ -52,8 +52,8 @@ function y(e) {
         x = (0, s.wj)(L) ? !(0, s.wj)(D) : (0, s.wj)(D),
         w = i.useRef(null);
     i.useEffect(() => {
-        null == b || b(null == w ? void 0 : w.current);
-    }, [w, b]),
+        null == I || I(null == w ? void 0 : w.current);
+    }, [w, I]),
         i.useEffect(() => {
             let e = (e) => {
                 e.key === v.vn.ESCAPE && (e.stopPropagation(), R());
@@ -90,7 +90,7 @@ function y(e) {
     return (0, r.jsx)(o.Z, {
         headerClassName: x ? S.noBoxShadowMargin : void 0,
         guildId: null != n ? n : void 0,
-        closePopout: I.dG,
+        closePopout: b.dG,
         onSelectEmoji: async (e, t) => {
             await M(e), t && (R(), null == y || y());
         },

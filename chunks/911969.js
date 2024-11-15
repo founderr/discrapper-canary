@@ -1,4 +1,4 @@
-var r, i, a, s, o, l, u, c, d, f, _, p, h, m, g, E, v, I, b, S, T, y, A, N, C, R, O, D, L, x, w, M, P, k;
+var r, i, a, s, o, l, u, c, d, f, _, p, h, m, g, E, v, b, I, S, T, y, A, N, C, R, O, D, L, x, w, M, P, k;
 n.d(t, {
     B8: function () {
         return d;
@@ -15,7 +15,7 @@ n.d(t, {
     Eh: function () {
         return E;
     },
-    FO: function () {
+    PT: function () {
         return h;
     },
     Pi: function () {
@@ -52,11 +52,11 @@ n.d(t, {
         return c;
     }
 }),
-    ((I = r || (r = {}))[(I.ROLE = 0)] = 'ROLE'),
-    (I[(I.MEMBER = 1)] = 'MEMBER'),
-    ((b = i || (i = {})).IOS = 'ios'),
-    (b.ANDROID = 'android'),
-    (b.WEB = 'web'),
+    ((b = r || (r = {}))[(b.ROLE = 0)] = 'ROLE'),
+    (b[(b.MEMBER = 1)] = 'MEMBER'),
+    ((I = i || (i = {})).IOS = 'ios'),
+    (I.ANDROID = 'android'),
+    (I.WEB = 'web'),
     ((S = a || (a = {}))[(S.NONE = 0)] = 'NONE'),
     (S[(S.NEW = 1)] = 'NEW'),
     (S[(S.UPDATED = 2)] = 'UPDATED'),
@@ -93,12 +93,12 @@ n.d(t, {
     ((D = _ || (_ = {}))[(D.ACTION_ROW = 1)] = 'ACTION_ROW'),
     (D[(D.BUTTON = 2)] = 'BUTTON'),
     (D[(D.STRING_SELECT = 3)] = 'STRING_SELECT'),
-    (D[(D.INPUT_TEXT = 4)] = 'INPUT_TEXT'),
+    (D[(D.TEXT_INPUT = 4)] = 'TEXT_INPUT'),
     (D[(D.USER_SELECT = 5)] = 'USER_SELECT'),
     (D[(D.ROLE_SELECT = 6)] = 'ROLE_SELECT'),
     (D[(D.MENTIONABLE_SELECT = 7)] = 'MENTIONABLE_SELECT'),
     (D[(D.CHANNEL_SELECT = 8)] = 'CHANNEL_SELECT'),
-    (D[(D.TEXT = 10)] = 'TEXT'),
+    (D[(D.TEXT_DISPLAY = 10)] = 'TEXT_DISPLAY'),
     (D[(D.MEDIA_GALLERY = 12)] = 'MEDIA_GALLERY'),
     (D[(D.SEPARATOR = 14)] = 'SEPARATOR'),
     (D[(D.CONTENT_INVENTORY_ENTRY = 16)] = 'CONTENT_INVENTORY_ENTRY'),

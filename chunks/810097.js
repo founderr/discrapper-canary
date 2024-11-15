@@ -3,7 +3,7 @@ n.d(t, {
         return y;
     },
     _1: function () {
-        return b;
+        return I;
     },
     jd: function () {
         return S;
@@ -28,8 +28,8 @@ var i = n(120356),
     g = n(652853),
     E = n(228168),
     v = n(388032),
-    I = n(727747);
-let b = 2700,
+    b = n(727747);
+let I = 2700,
     S = '> -# *',
     T = (e, t) =>
         (0, s.EQ)({
@@ -80,7 +80,7 @@ let b = 2700,
             )
             .exhaustive();
 function y(e) {
-    let { user: t, sourceType: n, isVisible: i, isExpandable: s, interactionSourceId: b, moreButton: S } = e,
+    let { user: t, sourceType: n, isVisible: i, isExpandable: s, interactionSourceId: I, moreButton: S } = e,
         { trackUserProfileAction: y } = (0, _.KZ)(),
         { pressReact: A, pressReply: N } = (0, h.Q)(n),
         C = (0, o.e7)([f.default], () => f.default.getId() === t.id),
@@ -90,12 +90,12 @@ function y(e) {
     return t.bot || C || !R
         ? null
         : (0, r.jsxs)(c.ZP, {
-              className: a()(I.popover, {
-                  [I.visible]: i,
-                  [I.expandable]: s,
-                  [I.statusPopover]: n === E.n_.STATUS,
-                  [I.avatarPopover]: n === E.n_.AVATAR,
-                  [I.activityPopover]: n === E.n_.ACTIVITY
+              className: a()(b.popover, {
+                  [b.visible]: i,
+                  [b.expandable]: s,
+                  [b.statusPopover]: n === E.n_.STATUS,
+                  [b.avatarPopover]: n === E.n_.AVATAR,
+                  [b.activityPopover]: n === E.n_.ACTIVITY
               }),
               children: [
                   (0, r.jsx)(u.TooltipContainer, {
@@ -110,16 +110,16 @@ function y(e) {
                                       D({
                                           interactionType: E.P.REACT,
                                           interactionSource: n,
-                                          interactionSourceId: b
+                                          interactionSourceId: I
                                       }),
                                   O === E.y0.BITE_SIZE && (0, d.EW)(l.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
                           },
-                          className: a()(I.button, I.left),
+                          className: a()(b.button, b.left),
                           'aria-label': T(E.P.REACT, n),
                           'aria-haspopup': 'dialog',
                           children: (0, r.jsx)(u.ReactionIcon, {
                               size: 'xs',
-                              className: I.icon
+                              className: b.icon
                           })
                       })
                   }),
@@ -135,16 +135,16 @@ function y(e) {
                                       D({
                                           interactionType: E.P.REPLY,
                                           interactionSource: n,
-                                          interactionSourceId: b
+                                          interactionSourceId: I
                                       }),
                                   O === E.y0.BITE_SIZE && (0, d.EW)(l.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
                           },
-                          className: I.button,
+                          className: b.button,
                           'aria-label': T(E.P.REPLY, n),
                           'aria-haspopup': 'dialog',
                           children: (0, r.jsx)(u.ArrowAngleLeftUpIcon, {
                               size: 'xs',
-                              className: I.icon
+                              className: b.icon
                           })
                       })
                   }),

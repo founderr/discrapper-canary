@@ -25,17 +25,17 @@ var p = !!String.prototype.startsWith && '_a'.startsWith('a', 1),
     g = !!String.prototype.codePointAt,
     E = !!String.prototype.trimStart,
     v = !!String.prototype.trimEnd,
-    I = Number.isSafeInteger
+    b = Number.isSafeInteger
         ? Number.isSafeInteger
         : function (e) {
               return 'number' == typeof e && isFinite(e) && Math.floor(e) === e && 9007199254740991 >= Math.abs(e);
           },
-    b = !0;
+    I = !0;
 try {
     var S = O('([^\\p{White_Space}\\p{Pattern_Syntax}]*)', 'yu');
-    b = (null === (r = S.exec('a')) || void 0 === r ? void 0 : r[0]) === 'a';
+    I = (null === (r = S.exec('a')) || void 0 === r ? void 0 : r[0]) === 'a';
 } catch (e) {
-    b = !1;
+    I = !1;
 }
 var T = p
         ? function (e, t, n) {
@@ -94,7 +94,7 @@ var T = p
 function O(e, t) {
     return new RegExp(e, t);
 }
-if (b) {
+if (I) {
     var D = O('([^\\p{White_Space}\\p{Pattern_Syntax}]*)', 'yu');
     i = function (e, t) {
         var n;
@@ -611,9 +611,9 @@ var L = (function () {
                     if (E.err) return E;
                     var v = _(r, this.clonePosition());
                     if (p && T(null == p ? void 0 : p.style, '::', 0)) {
-                        var I = C(p.style.slice(2));
+                        var b = C(p.style.slice(2));
                         if ('number' === d) {
-                            var m = this.parseNumberSkeletonFromString(I, p.styleLocation);
+                            var m = this.parseNumberSkeletonFromString(b, p.styleLocation);
                             if (m.err) return m;
                             return {
                                 val: {
@@ -625,14 +625,14 @@ var L = (function () {
                                 err: null
                             };
                         }
-                        if (0 === I.length) return this.error(s.o.EXPECT_DATE_TIME_SKELETON, v);
-                        var b = I;
-                        this.locale && (b = (0, c.T)(I, this.locale));
+                        if (0 === b.length) return this.error(s.o.EXPECT_DATE_TIME_SKELETON, v);
+                        var I = b;
+                        this.locale && (I = (0, c.T)(b, this.locale));
                         var g = {
                             type: o.aV.dateTime,
-                            pattern: b,
+                            pattern: I,
                             location: p.styleLocation,
-                            parsedOptions: this.shouldParseSkeletons ? (0, u.TE)(b) : {}
+                            parsedOptions: this.shouldParseSkeletons ? (0, u.TE)(I) : {}
                         };
                         return {
                             val: {
@@ -802,7 +802,7 @@ var L = (function () {
             }
             var o = _(r, this.clonePosition());
             return i
-                ? I((a *= n))
+                ? b((a *= n))
                     ? {
                           val: a,
                           err: null

@@ -67,10 +67,10 @@ var m = {
         name: ['robots', 'description'],
         property: ['og:type', 'og:title', 'og:url', 'og:image', 'og:image:alt', 'og:description', 'twitter:url', 'twitter:title', 'twitter:description', 'twitter:image', 'twitter:image:alt', 'twitter:card', 'twitter:site']
     },
-    I = Object.keys(m).map(function (e) {
+    b = Object.keys(m).map(function (e) {
         return m[e];
     }),
-    b = {
+    I = {
         accesskey: 'accessKey',
         charset: 'charSet',
         class: 'className',
@@ -80,8 +80,8 @@ var m = {
         itemprop: 'itemProp',
         tabindex: 'tabIndex'
     },
-    S = Object.keys(b).reduce(function (e, t) {
-        return (e[b[t]] = t), e;
+    S = Object.keys(I).reduce(function (e, t) {
+        return (e[I[t]] = t), e;
     }, {}),
     T = function (e, t) {
         for (var n = e.length - 1; n >= 0; n -= 1) {
@@ -195,7 +195,7 @@ var m = {
         return (
             void 0 === t && (t = {}),
             Object.keys(e).reduce(function (t, n) {
-                return (t[b[n] || n] = e[n]), t;
+                return (t[I[n] || n] = e[n]), t;
             }, t)
         );
     },
@@ -205,7 +205,7 @@ var m = {
                 a = (((i = { key: n })['data-rh'] = !0), i);
             return (
                 Object.keys(t).forEach(function (e) {
-                    var n = b[e] || e;
+                    var n = I[e] || e;
                     'innerHTML' === n || 'cssText' === n ? (a.dangerouslySetInnerHTML = { __html: t.innerHTML || t.cssText }) : (a[n] = t[e]);
                 }),
                 r.createElement(e, a)
@@ -286,27 +286,27 @@ var m = {
             var _,
                 p,
                 h,
-                I,
                 b,
+                I,
                 S,
                 T,
                 y =
                     ((p = (_ = e).linkTags),
                     (h = _.scriptTags),
-                    (I = _.encode),
-                    (b = O(_.metaTags, v)),
+                    (b = _.encode),
+                    (I = O(_.metaTags, v)),
                     (S = O(p, g)),
                     (T = O(h, E)),
                     {
                         priorityMethods: {
                             toComponent: function () {
-                                return [].concat(P(m.META, b.priority), P(m.LINK, S.priority), P(m.SCRIPT, T.priority));
+                                return [].concat(P(m.META, I.priority), P(m.LINK, S.priority), P(m.SCRIPT, T.priority));
                             },
                             toString: function () {
-                                return k(m.META, b.priority, I) + ' ' + k(m.LINK, S.priority, I) + ' ' + k(m.SCRIPT, T.priority, I);
+                                return k(m.META, I.priority, b) + ' ' + k(m.LINK, S.priority, b) + ' ' + k(m.SCRIPT, T.priority, b);
                             }
                         },
-                        metaTags: b.default,
+                        metaTags: I.default,
                         linkTags: S.default,
                         scriptTags: T.default
                     });
@@ -332,8 +332,8 @@ var m = {
             )
         };
     },
-    G = [],
-    B = function (e, t) {
+    B = [],
+    G = function (e, t) {
         var n = this;
         void 0 === t && (t = 'undefined' != typeof document),
             (this.instances = []),
@@ -343,14 +343,14 @@ var m = {
                 },
                 helmetInstances: {
                     get: function () {
-                        return n.canUseDOM ? G : n.instances;
+                        return n.canUseDOM ? B : n.instances;
                     },
                     add: function (e) {
-                        (n.canUseDOM ? G : n.instances).push(e);
+                        (n.canUseDOM ? B : n.instances).push(e);
                     },
                     remove: function (e) {
-                        var t = (n.canUseDOM ? G : n.instances).indexOf(e);
-                        (n.canUseDOM ? G : n.instances).splice(t, 1);
+                        var t = (n.canUseDOM ? B : n.instances).indexOf(e);
+                        (n.canUseDOM ? B : n.instances).splice(t, 1);
                     }
                 }
             }),
@@ -384,7 +384,7 @@ var m = {
     j = (function (e) {
         function t(n) {
             var r;
-            return ((r = e.call(this, n) || this).helmetData = new B(r.props.context, t.canUseDOM)), r;
+            return ((r = e.call(this, n) || this).helmetData = new G(r.props.context, t.canUseDOM)), r;
         }
         return (
             _(t, e),
@@ -622,10 +622,10 @@ var q = ['children'],
             (n.warnOnInvalidChildren = function (e, t) {
                 return (
                     u()(
-                        I.some(function (t) {
+                        b.some(function (t) {
                             return e.type === t;
                         }),
-                        'function' == typeof e.type ? 'You may be attempting to nest <Helmet> components within each other, which is not allowed. Refer to our API for more information.' : 'Only elements types ' + I.join(', ') + ' are allowed. Helmet does not support rendering <' + e.type + '> elements. Refer to our API for more information.'
+                        'function' == typeof e.type ? 'You may be attempting to nest <Helmet> components within each other, which is not allowed. Refer to our API for more information.' : 'Only elements types ' + b.join(', ') + ' are allowed. Helmet does not support rendering <' + e.type + '> elements. Refer to our API for more information.'
                     ),
                     u()(
                         !t ||
@@ -689,7 +689,7 @@ var q = ['children'],
                     a = n.helmetData;
                 return (
                     t && (i = this.mapChildrenToProps(t, i)),
-                    !a || a instanceof B || (a = new B(a.context, a.instances)),
+                    !a || a instanceof G || (a = new G(a.context, a.instances)),
                     a
                         ? r.createElement(
                               z,

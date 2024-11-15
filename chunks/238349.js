@@ -1,7 +1,7 @@
 let r;
 n.d(t, {
     U: function () {
-        return B;
+        return G;
     }
 }),
     n(47120);
@@ -21,8 +21,8 @@ var i,
     g = n(306680),
     E = n(944486),
     v = n(823379),
-    I = n(709054),
-    b = n(882252);
+    b = n(709054),
+    I = n(882252);
 let S = [],
     T = null,
     y = null,
@@ -42,22 +42,22 @@ function P(e) {
 }
 function k(e) {
     return function (t, n) {
-        if ((0, b.yv)(t)) return -1;
-        if ((0, b.yv)(n)) return 1;
-        if (e === c.z.LATEST_ACTIVITY) return I.default.compare(P(n), P(t));
-        else return I.default.compare(n, t);
+        if ((0, I.yv)(t)) return -1;
+        if ((0, I.yv)(n)) return 1;
+        if (e === c.z.LATEST_ACTIVITY) return b.default.compare(P(n), P(t));
+        else return b.default.compare(n, t);
     };
 }
 function U() {
     (R = []), (r = null), (y = null), (A = new Set()), (N = c.z.LATEST_ACTIVITY), (C = 0), (D = []), (L = u().chain(S)), (x = u().chain(S)), M.clear(), w.clear();
 }
-function G() {
+function B() {
     var e;
     let t = E.Z.getChannelId();
     if (null == t || !(null === (e = m.Z.getChannel(t)) || void 0 === e ? void 0 : e.isForumLikeChannel())) return U(), !1;
     Z({ refreshThreadIds: !0 });
 }
-function B(e) {
+function G(e) {
     let t = m.Z.getChannel(e);
     return null == t
         ? []
@@ -138,10 +138,10 @@ class F extends (i = d.ZP.Store) {
           })
         : (a[s] = o),
     (t.Z = new F(f.Z, {
-        CONNECTION_OPEN: G,
-        OVERLAY_INITIALIZE: G,
-        GUILD_CREATE: G,
-        CHANNEL_SELECT: G,
+        CONNECTION_OPEN: B,
+        OVERLAY_INITIALIZE: B,
+        GUILD_CREATE: B,
+        CHANNEL_SELECT: B,
         CHANNEL_DELETE: function (e) {
             let { channel: t } = e;
             if (null == t.parent_id || t.parent_id !== y) return !1;
@@ -161,7 +161,7 @@ class F extends (i = d.ZP.Store) {
         THREAD_UPDATE: function (e) {
             let { channel: t } = e;
             if (null == t.parent_id || t.parent_id !== y) return !1;
-            let n = (0, b.yv)(t.id),
+            let n = (0, I.yv)(t.id),
                 r = M.has(t.id);
             if (n && !r) M.add(t.id), Z({ sortThreadIds: !0 });
             else {

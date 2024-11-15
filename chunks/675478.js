@@ -80,8 +80,8 @@ function v(e, t, n) {
         e
     );
 }
-let I = 'UserSettingsProtoLastWriteTimes',
-    b = Date.now();
+let b = 'UserSettingsProtoLastWriteTimes',
+    I = Date.now();
 function S() {}
 d.Z.subscribe('CONNECTION_OPEN', () => {
     Date.now();
@@ -160,8 +160,8 @@ class T {
     }
     saveLastSendTime() {
         var e;
-        let t = null !== (e = c.K.get(I)) && void 0 !== e ? e : {};
-        (t[this.type] = Date.now()), c.K.set(I, t);
+        let t = null !== (e = c.K.get(b)) && void 0 !== e ? e : {};
+        (t[this.type] = Date.now()), c.K.set(b, t);
     }
     loadIfUncached(e, t) {
         (!h.Z.hasLoaded(e) || !0 === t) && this.loadIfNecessary(t);

@@ -40,8 +40,8 @@ var _ = n(807675),
     g = n(960904),
     E = n(981631);
 let v = /^\/([a-zA-Z0-9-]+)$/,
-    I = /^\/channels\/([0-9]+|@me)\/([0-9]+)$/,
-    b = /^\/(invite|template)\/([a-zA-Z0-9-]+)\/?$/,
+    b = /^\/channels\/([0-9]+|@me)\/([0-9]+)$/,
+    I = /^\/(invite|template)\/([a-zA-Z0-9-]+)\/?$/,
     S = RegExp('^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?'),
     T = /^\/application-directory\/([0-9-]+)\/?$/,
     y = /^\/application-directory\/([0-9-]+)\/store\/?([0-9-]+)?\/?$/,
@@ -58,8 +58,8 @@ let v = /^\/([a-zA-Z0-9-]+)$/,
     P = Z('//ptb.'.concat(E.$R1)),
     k = Z('discordapp.com'),
     U = Z('discord.com'),
-    G = [h.Z.escape(null !== (i = L.host) && void 0 !== i ? i : ''), h.Z.escape(null !== (a = x.host) && void 0 !== a ? a : ''), h.Z.escape(null !== (s = w.host) && void 0 !== s ? s : ''), h.Z.escape(null !== (o = k.host) && void 0 !== o ? o : ''), h.Z.escape(null !== (l = U.host) && void 0 !== l ? l : '')].filter(Boolean),
-    B = RegExp('((https?://[^ ]*)|^|[^/][^/.])('.concat(G.join('|'), ')'), 'g');
+    B = [h.Z.escape(null !== (i = L.host) && void 0 !== i ? i : ''), h.Z.escape(null !== (a = x.host) && void 0 !== a ? a : ''), h.Z.escape(null !== (s = w.host) && void 0 !== s ? s : ''), h.Z.escape(null !== (o = k.host) && void 0 !== o ? o : ''), h.Z.escape(null !== (l = U.host) && void 0 !== l ? l : '')].filter(Boolean),
+    G = RegExp('((https?://[^ ]*)|^|[^/][^/.])('.concat(B.join('|'), ')'), 'g');
 function Z(e) {
     if (null == e)
         return {
@@ -115,7 +115,7 @@ function H(e) {
     if (null == e) return [];
     let t = new Set(),
         n = [],
-        r = (e = e.replace(B, (e, t, n, r) => (null == n ? ''.concat(t, 'http://').concat(r) : e))).match(m.Z.URL_REGEX),
+        r = (e = e.replace(G, (e, t, n, r) => (null == n ? ''.concat(t, 'http://').concat(r) : e))).match(m.Z.URL_REGEX),
         i = e.match(D);
     if (null == (r = (null != r ? r : []).concat(null != i ? i : [])) || 0 === r.length) return [];
     for (let e of r) {
@@ -136,7 +136,7 @@ function H(e) {
             l(g.g.INVITE, e);
         }
         (null == s ? void 0 : s.match(v)) != null && l(g.g.TEMPLATE, s.substring(1));
-        let u = null == o ? void 0 : o.match(b);
+        let u = null == o ? void 0 : o.match(I);
         if (null != u) {
             let e = u[1].toUpperCase();
             if (e === g.g.INVITE) {
@@ -144,7 +144,7 @@ function H(e) {
                 l(g.g.INVITE, e);
             } else l(e, u[2]);
         }
-        (null == o ? void 0 : o.match(I)) != null && l(g.g.CHANNEL_LINK, o.replace('/channels/', ''));
+        (null == o ? void 0 : o.match(b)) != null && l(g.g.CHANNEL_LINK, o.replace('/channels/', ''));
         let h = (function (e) {
             if (null == e) return null;
             let t = e.match(S);

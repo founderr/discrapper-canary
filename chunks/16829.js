@@ -166,7 +166,7 @@ function U(e) {
               ]
           });
 }
-function h(e) {
+function C(e) {
     let { children: t, hasTooltip: n, guildId: l, inviterUser: i, joinSourceType: s } = e;
     return n && null != i
         ? (0, r.jsx)(o.Tooltip, {
@@ -181,7 +181,7 @@ function h(e) {
           })
         : (0, r.jsx)(r.Fragment, { children: t({}) });
 }
-function C(e) {
+function h(e) {
     let { type: t } = e,
         n = (0, f.Ph)(t);
     return null == n
@@ -236,7 +236,7 @@ function L(e) {
                 tabIndex: 0,
                 onClick: T,
                 children: [
-                    (0, r.jsx)(C, { type: i }),
+                    (0, r.jsx)(h, { type: i }),
                     (0, r.jsx)(o.Text, {
                         variant: 'text-sm/medium',
                         children: (0, f.MS)(i)
@@ -288,11 +288,11 @@ t.ZP = l.memo(function (e) {
     let N = (0, a.e7)([_.Z], () => _.Z.hideInstantInvites, []);
     if (null == d) return (0, r.jsx)(S, {});
     let { sourceInviteCode: R, joinSourceType: O, integrationType: U } = d,
-        C = null != O ? D[O] : null,
-        M = null !== (n = null == C ? void 0 : C.hasTooltip) && void 0 !== n && n;
+        h = null != O ? D[O] : null,
+        M = null !== (n = null == h ? void 0 : h.hasTooltip) && void 0 !== n && n;
     return (O === f.gq.INVITE || O === f.gq.VANITY_URL || (O === f.gq.MANUAL_MEMBER_VERIFICATION && null != R)) && N
         ? (0, r.jsx)(p, {})
-        : (0, r.jsx)(h, {
+        : (0, r.jsx)(C, {
               hasTooltip: M && !o,
               inviterUser: null != I ? I : null,
               guildId: s,

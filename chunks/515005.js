@@ -16,13 +16,13 @@ var r = n(200651),
     g = n(378233),
     E = n(419922),
     v = n(490095),
-    I = n(981631),
-    b = n(388032),
+    b = n(981631),
+    I = n(388032),
     S = n(911038);
 let T = (0, l.Mg)(S.__invalid_stickerPickerPreviewDimensions),
     y = (0, l.Mg)(S.__invalid_stickerPickerPreviewPadding),
     A = i.memo(function (e) {
-        let { isDisplayingIndividualStickers: t = !1, preferAnimation: a = !0, getStickerItemProps: l, getStickerRowProps: A, gutterWidth: N, inspectedStickerPosition: C, isScrolling: R, isUsingKeyboardNavigation: O, onInspect: D, onSelect: L, rowIndex: x, stickerClassName: w, stickerDescriptors: M, stickerPadding: P = y, stickerSize: k = T, ownedStickerPacks: U, enlargeOnInteraction: G = !1, channel: B, currentUser: Z, checkSendability: F = !0 } = e,
+        let { isDisplayingIndividualStickers: t = !1, preferAnimation: a = !0, getStickerItemProps: l, getStickerRowProps: A, gutterWidth: N, inspectedStickerPosition: C, isScrolling: R, isUsingKeyboardNavigation: O, onInspect: D, onSelect: L, rowIndex: x, stickerClassName: w, stickerDescriptors: M, stickerPadding: P = y, stickerSize: k = T, ownedStickerPacks: U, enlargeOnInteraction: B = !1, channel: G, currentUser: Z, checkSendability: F = !0 } = e,
             { location: V } = (0, d.O)(),
             j = k + 2 * P,
             H = i.useMemo(
@@ -50,7 +50,7 @@ let T = (0, l.Mg)(S.__invalid_stickerPickerPreviewDimensions),
             children: M.map((e) => {
                 var d;
                 let f = e.visibleRowIndex === (null == C ? void 0 : C.rowIndex) && e.columnIndex === (null == C ? void 0 : C.columnIndex),
-                    T = e.type === m.al.STICKER && G && f,
+                    T = e.type === m.al.STICKER && B && f,
                     y = (0, o.throttle)(() => {
                         (null == R ? void 0 : R.current) !== !0 && (null == O ? void 0 : O.current) !== !0 && !f && (null == D || D(e));
                     }, 250),
@@ -70,8 +70,8 @@ let T = (0, l.Mg)(S.__invalid_stickerPickerPreviewDimensions),
                                     onMouseMove: y,
                                     onClick: () => {
                                         e.type === m.al.CREATE_STICKER &&
-                                            (p.default.track(I.rMx.OPEN_MODAL, {
-                                                type: I.jXE.CREATE_STICKER_MODAL,
+                                            (p.default.track(b.rMx.OPEN_MODAL, {
+                                                type: b.jXE.CREATE_STICKER_MODAL,
                                                 location: V
                                             }),
                                             (0, u.openModalLazy)(async () => {
@@ -85,7 +85,7 @@ let T = (0, l.Mg)(S.__invalid_stickerPickerPreviewDimensions),
                                     },
                                     style: Y,
                                     children: [
-                                        !G && (0, r.jsx)('div', { className: S.inspectedIndicator }),
+                                        !B && (0, r.jsx)('div', { className: S.inspectedIndicator }),
                                         (0, r.jsx)('div', {
                                             className: S.iconWrapper,
                                             children: (0, r.jsx)(u.PlusSmallIcon, {
@@ -97,7 +97,7 @@ let T = (0, l.Mg)(S.__invalid_stickerPickerPreviewDimensions),
                                         (0, r.jsx)(u.Text, {
                                             color: 'interactive-active',
                                             variant: 'text-xs/normal',
-                                            children: b.intl.string(b.t['+nEuqq'])
+                                            children: I.intl.string(I.t['+nEuqq'])
                                         })
                                     ]
                                 })
@@ -140,15 +140,15 @@ let T = (0, l.Mg)(S.__invalid_stickerPickerPreviewDimensions),
                                     (0, r.jsxs)('div', {
                                         'aria-hidden': !0,
                                         children: [
-                                            !G && (0, r.jsx)('div', { className: S.inspectedIndicator }),
+                                            !B && (0, r.jsx)('div', { className: S.inspectedIndicator }),
                                             (0, r.jsx)(E.ZP, {
                                                 className: s()(S.stickerNode, {
-                                                    [S.stickerNodeDimmed]: G && !f && null != C && -1 !== C.rowIndex && -1 !== C.columnIndex,
+                                                    [S.stickerNodeDimmed]: B && !f && null != C && -1 !== C.rowIndex && -1 !== C.columnIndex,
                                                     [S.stickerNodeHidden]: T,
-                                                    [S.stickerUnsendable]: F && !(0, h.kl)(e.sticker, Z, B)
+                                                    [S.stickerUnsendable]: F && !(0, h.kl)(e.sticker, Z, G)
                                                 }),
                                                 disableAnimation: !f && !a,
-                                                enlargeOnInteraction: G,
+                                                enlargeOnInteraction: B,
                                                 isInteracting: f,
                                                 maskAsset: f,
                                                 sticker: e.sticker,

@@ -1,7 +1,7 @@
 n(47120);
 var i = n(200651),
-    s = n(192379),
-    r = n(442837),
+    r = n(192379),
+    s = n(442837),
     a = n(481060),
     l = n(13245),
     o = n(313201),
@@ -11,9 +11,9 @@ var i = n(200651),
     h = n(981631),
     p = n(388032),
     f = n(824425);
-let m = Object.values(u.wF).map((e) => 100 * e),
-    g = (0, o.hQ)();
-class v extends s.PureComponent {
+let g = Object.values(u.wF).map((e) => 100 * e),
+    m = (0, o.hQ)();
+class v extends r.PureComponent {
     handleUpdateBackgroundOpacity(e) {
         l.Z.setTextWidgetOpacity((0, d.Z)(e / 100)), l.Z.track(h.rMx.OVERLAY_SETTINGS_UPDATED, { text_opacity_slider: e });
     }
@@ -25,7 +25,7 @@ class v extends s.PureComponent {
             className: f.container,
             children: [
                 (0, i.jsx)(a.FormTitle, {
-                    id: g,
+                    id: m,
                     tag: a.FormTitleTags.H5,
                     className: f.title,
                     children: p.intl.string(p.t.OVovCQ)
@@ -36,16 +36,16 @@ class v extends s.PureComponent {
                         mini: !0,
                         initialValue: this.initialValue,
                         defaultValue: this.initialValue,
-                        minValue: m[0],
-                        maxValue: m[m.length - 1],
+                        minValue: g[0],
+                        maxValue: g[g.length - 1],
                         handleSize: 10,
                         onValueChange: this.handleUpdateBackgroundOpacity,
                         asValueChanges: this.handlePreviewBackgroundOpacity,
-                        markers: m,
+                        markers: g,
                         onMarkerRender: h.dG4,
                         equidistant: !0,
                         stickToMarkers: !0,
-                        'aria-labelledby': g
+                        'aria-labelledby': m
                     })
                 })
             ]
@@ -67,4 +67,4 @@ class v extends s.PureComponent {
                 : (t[n] = i);
     }
 }
-t.Z = r.ZP.connectStores([c.Z], () => ({ opacity: c.Z.getTextWidgetOpacity() }))(v);
+t.Z = s.ZP.connectStores([c.Z], () => ({ opacity: c.Z.getTextWidgetOpacity() }))(v);

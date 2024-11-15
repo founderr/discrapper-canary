@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return Z;
+        return E;
     }
 }),
     n(47120);
@@ -9,8 +9,8 @@ var r = n(200651),
     l = n(120356),
     i = n.n(l),
     o = n(392711),
-    s = n.n(o),
-    c = n(876215),
+    c = n.n(o),
+    s = n(876215),
     d = n(442837),
     u = n(433517),
     h = n(481060),
@@ -21,29 +21,29 @@ var r = n(200651),
     b = n(810568),
     g = n(168524),
     v = n(77498),
-    j = n(823379),
-    C = n(71585),
-    _ = n(146282),
+    C = n(823379),
+    _ = n(71585),
+    j = n(146282),
     T = n(650613),
     S = n(789086),
-    N = n(206583),
-    y = n(768452),
-    k = n(219299);
-let I = [
+    y = n(206583),
+    N = n(768452),
+    I = n(219299);
+let k = [
     {
         key: 'type',
-        cellClassName: i()(y.cell, y.cellType),
+        cellClassName: i()(N.cell, N.cellType),
         render(e) {
             let { type: t } = e;
             return (0, r.jsx)(h.Text, {
                 variant: 'text-md/semibold',
-                children: c.s[t]
+                children: s.s[t]
             });
         }
     },
     {
         key: 'count',
-        cellClassName: i()(y.cell, y.cellCount),
+        cellClassName: i()(N.cell, N.cellCount),
         render(e) {
             let { entries: t } = e;
             return (0, r.jsx)('div', {
@@ -56,7 +56,7 @@ let I = [
     },
     {
         key: 'only?',
-        cellClassName: y.cell,
+        cellClassName: N.cell,
         render(e) {
             let { type: t } = e;
             return (0, r.jsx)(w, { type: t });
@@ -66,7 +66,7 @@ let I = [
 function w(e) {
     var t, n;
     let { type: a } = e,
-        l = (0, d.e7)([_.Z], () => _.Z.getFilters()),
+        l = (0, d.e7)([j.Z], () => j.Z.getFilters()),
         i = null !== (n = null == l ? void 0 : null === (t = l.types) || void 0 === t ? void 0 : t.has(a)) && void 0 !== n && n;
     return (0, r.jsx)(h.Checkbox, {
         value: i,
@@ -83,13 +83,13 @@ function w(e) {
         }
     });
 }
-function Z() {
+function E() {
     var e, t;
-    let n = (0, d.e7)([_.Z], () => _.Z.getFeed(N.YN.GLOBAL_FEED)),
-        l = (0, d.e7)([_.Z], () => _.Z.getDebugImpressionCappingDisabled()),
-        o = (0, d.e7)([C.Z], () => C.Z.getDebugFastImpressionCappingEnabled()),
-        c = (function (e) {
-            let t = s().groupBy(e, (e) => e.content_type);
+    let n = (0, d.e7)([j.Z], () => j.Z.getFeed(y.YN.GLOBAL_FEED)),
+        l = (0, d.e7)([j.Z], () => j.Z.getDebugImpressionCappingDisabled()),
+        o = (0, d.e7)([_.Z], () => _.Z.getDebugFastImpressionCappingEnabled()),
+        s = (function (e) {
+            let t = c().groupBy(e, (e) => e.content_type);
             return Object.keys(t).map((e) => {
                 let n = t[e];
                 return {
@@ -99,25 +99,25 @@ function Z() {
                 };
             });
         })(null == n ? void 0 : null === (e = n.entries) || void 0 === e ? void 0 : e.map((e) => e.content)),
-        w = (0, d.e7)([_.Z], () => {
+        w = (0, d.e7)([j.Z], () => {
             var e;
-            return (null === (e = _.Z.getFeedState(N.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.loading) === !0;
+            return (null === (e = j.Z.getFeedState(y.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.loading) === !0;
         }),
-        [Z, R] = a.useState(''),
-        B = (0, d.e7)(
+        [E, R] = a.useState(''),
+        O = (0, d.e7)(
             [v.Z, x.Z],
             () => {
                 var e, t, n;
-                return parseInt(Z) > 0 ? Z : null !== (n = null === (e = v.Z.getGameByName(Z)) || void 0 === e ? void 0 : e.id) && void 0 !== n ? n : null === (t = x.Z.getApplicationByName(Z)) || void 0 === t ? void 0 : t.id;
+                return parseInt(E) > 0 ? E : null !== (n = null === (e = v.Z.getGameByName(E)) || void 0 === e ? void 0 : e.id) && void 0 !== n ? n : null === (t = x.Z.getApplicationByName(E)) || void 0 === t ? void 0 : t.id;
             },
-            [Z]
+            [E]
         ),
-        O = (0, g.Z)({
-            applicationId: B,
+        A = (0, g.Z)({
+            applicationId: O,
             location: 'DevToolsContentInventory',
             source: b.m1.DevTools
         }),
-        A = Object.entries(null !== (t = u.K.get('GameProfileModal')) && void 0 !== t ? t : {})
+        B = Object.entries(null !== (t = u.K.get('GameProfileModal')) && void 0 !== t ? t : {})
             .filter((e) => {
                 let [t, n] = e;
                 return n;
@@ -126,19 +126,19 @@ function Z() {
                 let [t] = e;
                 return t;
             }),
-        P = (0, f.Z)(A).filter(j.lm);
+        P = (0, f.Z)(B).filter(C.lm);
     return (0, r.jsx)('div', {
-        className: i()(k.panel),
+        className: i()(I.panel),
         children: (0, r.jsxs)(h.ScrollerThin, {
-            className: y.content,
+            className: N.content,
             children: [
                 (0, r.jsxs)(h.FormSection, {
                     children: [
                         (0, r.jsx)(h.FormTitle, { children: 'Inventory' }),
-                        c.length > 0 &&
+                        s.length > 0 &&
                             (0, r.jsx)(p.Z, {
-                                columns: I,
-                                data: c
+                                columns: k,
+                                data: s
                             }),
                         (0, r.jsx)(h.Spacer, { size: 8 }),
                         (0, r.jsx)(S.Z, {}),
@@ -147,7 +147,7 @@ function Z() {
                             onClick: function () {
                                 m.Z.dispatch({
                                     type: 'CONTENT_INVENTORY_MANUAL_REFRESH',
-                                    feedId: N.YN.GLOBAL_FEED
+                                    feedId: y.YN.GLOBAL_FEED
                                 });
                             },
                             submitting: w,
@@ -200,19 +200,19 @@ function Z() {
                             placeholder: 'App ID or full name',
                             onChange: (e) => (0 === e.length || e.length >= 18) && R(e),
                             onKeyDown: (e) => {
-                                'Enter' === e.key && (Z === e.currentTarget.value ? null == O || O(e) : R(e.currentTarget.value));
+                                'Enter' === e.key && (E === e.currentTarget.value ? null == A || A(e) : R(e.currentTarget.value));
                             },
-                            error: Z.length > 0 && null == O ? 'No game profile for '.concat(null != B ? B : Z + ' - try by id', '.') : void 0,
-                            style: null != O ? { border: '1px solid green' } : {}
+                            error: E.length > 0 && null == A ? 'No game profile for '.concat(null != O ? O : E + ' - try by id', '.') : void 0,
+                            style: null != A ? { border: '1px solid green' } : {}
                         }),
-                        (0, r.jsx)('ul', { children: P.map((e) => (0, r.jsx)('li', { children: (0, r.jsx)(E, { application: e }) }, 'follow-game-'.concat(e.id))) })
+                        (0, r.jsx)('ul', { children: P.map((e) => (0, r.jsx)('li', { children: (0, r.jsx)(Z, { application: e }) }, 'follow-game-'.concat(e.id))) })
                     ]
                 })
             ]
         })
     });
 }
-let E = (e) => {
+let Z = (e) => {
     let { application: t } = e,
         n = (0, g.Z)({
             applicationId: t.id,

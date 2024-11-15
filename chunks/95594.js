@@ -18,8 +18,8 @@ let o = Object.freeze({
     }
 });
 function l(e) {
-    let { sections: t, columns: n, getItemKey: l, getItemHeight: u, getSectionHeight: c, chunkSize: d = 250, getScrollerState: f, maxBufferWidth: _, itemGutter: p, removeEdgeItemGutters: h, sectionGutter: m, padding: g, paddingVertical: E, paddingHorizontal: v, dir: I } = e,
-        b = (0, a.Z)(),
+    let { sections: t, columns: n, getItemKey: l, getItemHeight: u, getSectionHeight: c, chunkSize: d = 250, getScrollerState: f, maxBufferWidth: _, itemGutter: p, removeEdgeItemGutters: h, sectionGutter: m, padding: g, paddingVertical: E, paddingHorizontal: v, dir: b } = e,
+        I = (0, a.Z)(),
         S = (0, r.useRef)(o),
         [T] = (0, r.useState)(() => new i.ZP()),
         y = f(),
@@ -33,7 +33,7 @@ function l(e) {
         } = (0, s.Z)({
             chunkSize: d,
             getScrollerState: f,
-            forceUpdate: b
+            forceUpdate: I
         });
     return (
         (S.current = (0, r.useMemo)(
@@ -54,17 +54,17 @@ function l(e) {
                           paddingVertical: E,
                           paddingHorizontal: v,
                           marginLeft: N / 2,
-                          dir: I
+                          dir: b
                       }),
                       T.computeVisibleSections(Math.max(0, R * d), O * d),
                       T.getState()),
-            [C, T, t, n, l, u, c, R, O, d, p, h, m, g, E, v, A, I]
+            [C, T, t, n, l, u, c, R, O, d, p, h, m, g, E, v, A, b]
         )),
         {
             ...S.current,
             masonryComputer: T,
             forceUpdateOnChunkChange: D,
-            forceUpdate: b
+            forceUpdate: I
         }
     );
 }

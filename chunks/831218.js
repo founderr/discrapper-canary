@@ -28,10 +28,10 @@ var i,
     j = n(249978),
     A = n(210887),
     P = n(592125),
-    R = n(158776),
-    M = n(55589),
-    L = n(515753),
-    w = n(981631),
+    M = n(158776),
+    R = n(55589),
+    w = n(515753),
+    L = n(981631),
     D = n(388032),
     O = n(156762);
 function k(e, t, n) {
@@ -298,10 +298,10 @@ class G extends (l = o.Component) {
                     c = n.some((e) => (0, v.Z)(e)),
                     u = {
                         num_users_visible: a.length,
-                        num_users_visible_with_mobile_indicator: s.filter((e) => null != e && R.Z.isMobileOnline(e)).length
+                        num_users_visible_with_mobile_indicator: s.filter((e) => null != e && M.Z.isMobileOnline(e)).length
                     };
                 (this.hasReportedAnalytics = !0),
-                    C.ZP.trackWithMetadata(w.rMx.DM_LIST_VIEWED, {
+                    C.ZP.trackWithMetadata(L.rMx.DM_LIST_VIEWED, {
                         ...u,
                         ...(0, _.X)(),
                         visible_user_ids: s.filter((e) => null != e),
@@ -318,7 +318,7 @@ class G extends (l = o.Component) {
                 c()(() => {
                     if (null != this._list) {
                         let e = this._list.getScrollerNode();
-                        null != e && f.Z.updateChannelListScroll(w.ME, e.scrollTop);
+                        null != e && f.Z.updateChannelListScroll(L.ME, e.scrollTop);
                     }
                 }, 100)
             ),
@@ -329,7 +329,7 @@ class G extends (l = o.Component) {
                 return null == s
                     ? null
                     : (0, a.jsx)(
-                          L.ZP,
+                          w.ZP,
                           {
                               channel: s,
                               selected: s.id === l,
@@ -394,9 +394,9 @@ t.Z = (e) => {
         s = P.Z.getMutablePrivateChannels(),
         c = (0, y.k1)(s),
         p = (0, h.Wu)(
-            [M.Z, N.Z, T.Z],
+            [R.Z, N.Z, T.Z],
             () => {
-                let e = M.Z.getPrivateChannelIds();
+                let e = R.Z.getPrivateChannelIds();
                 return (0, y.tU)(e, [N.Z, T.Z]);
             },
             []
@@ -407,7 +407,7 @@ t.Z = (e) => {
         m && (0, x.Jn)();
     }, [m]);
     let f = (0, h.cj)([g.Z, A.Z, P.Z], () => ({
-            theme: A.Z.darkSidebar ? w.BRd.DARK : n,
+            theme: A.Z.darkSidebar ? L.BRd.DARK : n,
             keyboardModeEnabled: g.Z.keyboardModeEnabled,
             version: null != t ? ''.concat(t, ':').concat(P.Z.getPrivateChannelsVersion()) : P.Z.getPrivateChannelsVersion()
         })),
@@ -450,7 +450,7 @@ t.Z = (e) => {
             []
         ),
         Z = (0, b.Dt)(),
-        R = (0, d.ZP)({
+        M = (0, d.ZP)({
             id: 'private-channels-'.concat(Z),
             isEnabled: f.keyboardModeEnabled,
             scrollToStart: v,
@@ -459,7 +459,7 @@ t.Z = (e) => {
             setFocus: _
         });
     return (0, a.jsx)(u.bG, {
-        navigator: R,
+        navigator: M,
         children: (0, a.jsx)(G, {
             channels: c,
             privateChannelIds: p,

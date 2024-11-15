@@ -20,8 +20,8 @@ var r = n(200651),
     g = n(994746),
     E = n(273284),
     v = n(510659),
-    I = n(287954),
-    b = n(660579),
+    b = n(287954),
+    I = n(660579),
     S = n(502762),
     T = n(652853),
     y = n(64621),
@@ -38,7 +38,7 @@ var r = n(200651),
     P = n(676411);
 function k(e) {
     var t;
-    let { user: n, currentUser: a, activity: k, guild: U, channel: G, className: B, onClose: Z, profileGuildId: F } = e,
+    let { user: n, currentUser: a, activity: k, guild: U, channel: B, className: G, onClose: Z, profileGuildId: F } = e,
         { profileType: V } = (0, T.z)(),
         j = { [P.fullSize]: V === w.y0.FULL_SIZE },
         { interactionSource: H, interactionSourceId: Y } = (0, v.Xo)(),
@@ -105,7 +105,7 @@ function k(e) {
                   });
         },
         ee = () =>
-            null == U || null == G
+            null == U || null == B
                 ? null
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
@@ -113,7 +113,7 @@ function k(e) {
                           (0, r.jsx)(R.Z, {
                               user: n,
                               guild: U,
-                              channel: G,
+                              channel: B,
                               onAction: Q,
                               onClose: Z
                           })
@@ -143,7 +143,7 @@ function k(e) {
                 onClose: Z,
                 children: (e) => {
                     let { onAutoDismiss: t } = e;
-                    return (0, r.jsx)(I.Z, {
+                    return (0, r.jsx)(b.Z, {
                         user: n,
                         guildId: F,
                         profileType: V,
@@ -153,9 +153,9 @@ function k(e) {
                         sourceType: w.n_.ACTIVITY,
                         children: () =>
                             (0, r.jsx)(S.Z.Overlay, {
-                                className: s()(P.card, B, { [P.hoisted]: er }),
+                                className: s()(P.card, G, { [P.hoisted]: er }),
                                 ref: X,
-                                children: (0, r.jsxs)(b.Z, {
+                                children: (0, r.jsxs)(I.Z, {
                                     user: n,
                                     className: P.body,
                                     sourceType: w.n_.ACTIVITY,

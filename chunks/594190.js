@@ -34,8 +34,8 @@ var i,
     g = n(439849),
     E = n(710845),
     v = n(630699),
-    I = n(855403),
-    b = n(454991),
+    b = n(855403),
+    I = n(454991),
     S = n(568963),
     T = n(77498),
     y = n(283595),
@@ -52,7 +52,7 @@ var i,
     P = n(987650);
 let k = new E.Z('RunningGameStore'),
     U = 'RunningGameStore',
-    G = [
+    B = [
         {
             executables: [
                 {
@@ -157,7 +157,7 @@ let k = new E.Z('RunningGameStore'),
             name: m.Z.get(M.ABu.SPOTIFY).name
         }
     ],
-    B = [],
+    G = [],
     Z = !0,
     F = new Set(),
     V = [],
@@ -191,7 +191,7 @@ function eo(e, t) {
     null != t.lastLaunched ? (e.lastLaunched = t.lastLaunched) : null != t.start && (e.lastLaunched = t.start);
 }
 function el(e) {
-    return G.some((t) => t.name === e.name && !0 === t.streamerTool);
+    return B.some((t) => t.name === e.name && !0 === t.streamerTool);
 }
 function eu() {
     if (H.length > 0) {
@@ -236,7 +236,7 @@ function ed(e) {
                 overlayMethod: P.gl.Disabled
             };
     }
-    let n = (v.H() || (0, S.R)()) && (0, x.VS)() && !b.v.legacyEnabled,
+    let n = (v.H() || (0, S.R)()) && (0, x.VS)() && !I.v.legacyEnabled,
         r = n ? P.gl.OutOfProcess : P.gl.Hook,
         i = q.enableOverlay[ec(e)];
     if (null != i)
@@ -373,7 +373,7 @@ function ev() {
                 supportsOutOfProcessOverlay: e.supportsOutOfProcessOverlay
             };
         }
-        [...n, ...G].forEach((n) => {
+        [...n, ...B].forEach((n) => {
             var r;
             let i =
                     null != n.executables
@@ -424,7 +424,7 @@ function ev() {
                             return '0' === t ? null : t;
                         })(e.pid, e.windowHandle)),
                         null ==
-                            G.find((t) => {
+                            B.find((t) => {
                                 let { name: n } = t;
                                 return n === e.name;
                             }) || (n.push(e), !1)
@@ -444,7 +444,7 @@ function ev() {
             }),
             eg();
     });
-class eI extends (i = f.ZP.Store) {
+class eb extends (i = f.ZP.Store) {
     initialize() {
         var e, t, n, r;
         let i =
@@ -548,7 +548,7 @@ class eI extends (i = f.ZP.Store) {
     }
     getObservedAppNameForWindow(e) {
         var t, n;
-        return null !== (n = null === (t = W.find((t) => (0, I.Z)(e, t.windowHandle))) || void 0 === t ? void 0 : t.name) && void 0 !== n ? n : null;
+        return null !== (n = null === (t = W.find((t) => (0, b.Z)(e, t.windowHandle))) || void 0 === t ? void 0 : t.name) && void 0 !== n ? n : null;
     }
     get canShowAdminWarning() {
         return Z;
@@ -562,7 +562,7 @@ class eI extends (i = f.ZP.Store) {
     }
 }
 (o = 'RunningGameStore'),
-    (s = 'displayName') in (a = eI)
+    (s = 'displayName') in (a = eb)
         ? Object.defineProperty(a, s, {
               value: o,
               enumerable: !0,
@@ -570,7 +570,7 @@ class eI extends (i = f.ZP.Store) {
               writable: !0
           })
         : (a[s] = o),
-    (t.ZP = new eI(p.Z, {
+    (t.ZP = new eb(p.Z, {
         RUNNING_GAMES_CHANGE: function (e) {
             eE(H);
         },
@@ -701,13 +701,13 @@ class eI extends (i = f.ZP.Store) {
                 })
                 .filter((e) => {
                     if (en.has(e.pid) || er.has(e.cleanedExePath)) return !1;
-                    let t = B.some((t) => e.cleanedExePath.includes(t));
+                    let t = G.some((t) => e.cleanedExePath.includes(t));
                     return t && en.add(e.pid), t;
                 })
                 .map((e) => e.cleanedExePath);
             t.length > 0 &&
                 N.default.track(M.rMx.GAME_DETECTION_DEBUGGING_KEYWORD_MATCH, {
-                    keywords: B,
+                    keywords: G,
                     paths: t,
                     debugging_level: ei,
                     interval_seconds: ea

@@ -19,13 +19,13 @@ let E = {
         height: 315
     },
     v = new Set(),
-    I = [],
-    b = new Map(),
+    b = [],
+    I = new Map(),
     S = new Set(),
     T = !1;
 function y(e) {
-    if (null == e || null == b.get(e)) return !1;
-    b.delete(e), (S = new Set(S)).delete(e);
+    if (null == e || null == I.get(e)) return !1;
+    I.delete(e), (S = new Set(S)).delete(e);
 }
 function A(e) {
     let { channelId: t, ringing: n } = e,
@@ -44,7 +44,7 @@ function A(e) {
                       };
             })();
         return (
-            b.set(t, {
+            I.set(t, {
                 channel: e,
                 x: i + n,
                 y: a + n
@@ -63,7 +63,7 @@ class C extends (i = l.ZP.Store) {
         this.waitFor(p.Z, h.Z), this.syncWith([h.Z], N), this.syncWith([f.Z], N);
     }
     getIncomingCalls() {
-        return T ? I : Array.from(b.values());
+        return T ? b : Array.from(I.values());
     }
     getIncomingCallChannelIds() {
         return T ? v : S;

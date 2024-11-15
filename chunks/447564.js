@@ -1,10 +1,10 @@
 t.r(n),
     t.d(n, {
         HD_STREAMING_POTION_MODAL_KEY: function () {
-            return T;
+            return I;
         },
         default: function () {
-            return N;
+            return T;
         }
     }),
     t(47120);
@@ -18,35 +18,35 @@ var l = t(200651),
     c = t(335131),
     u = t(120619),
     m = t(955843),
-    f = t(688465),
-    h = t(690221),
-    x = t(333867),
-    g = t(937615),
+    h = t(688465),
+    x = t(690221),
+    g = t(333867),
+    f = t(937615),
     v = t(82950),
     j = t(981631),
     p = t(215023),
     Z = t(388032),
-    b = t(912568),
-    C = t(99713);
-function N(e) {
+    C = t(912568),
+    N = t(99713);
+function T(e) {
     let { transitionState: n, channel: t } = e;
     return (0, l.jsx)(a.ModalRoot, {
         size: a.ModalSize.DYNAMIC,
         transitionState: n,
-        children: (0, l.jsx)(I, { channel: t })
+        children: (0, l.jsx)(E, { channel: t })
     });
 }
-let T = 'HD_STREAMING_POTION_MODAL_KEY';
-function I(e) {
+let I = 'HD_STREAMING_POTION_MODAL_KEY';
+function E(e) {
     let { channel: n } = e,
         t = (0, m.T)(n),
-        [N, I] = i.useState(!1),
-        [E, S, A, M, _, k] = (0, r.Wu)([u.Z], () => [u.Z.isFetchingPrice(p.FX), u.Z.isEntitlementFetched(p.FX), u.Z.isEntitlementFetching(p.FX), u.Z.getPrice(p.FX), u.Z.getErrored(p.FX), u.Z.getEntitlement(p.FX)]),
+        [T, E] = i.useState(!1),
+        [S, b, A, M, _, k] = (0, r.Wu)([u.Z], () => [u.Z.isFetchingPrice(p.FX), u.Z.isEntitlementFetched(p.FX), u.Z.isEntitlementFetching(p.FX), u.Z.getPrice(p.FX), u.Z.getErrored(p.FX), u.Z.getEntitlement(p.FX)]),
         { analyticsLocations: F } = (0, d.ZP)([o.Z.HD_STREAMING_POTION_MODAL]),
         P = null != k && !k.consumed;
     i.useEffect(() => {
-        null != k && !1 === k.consumed && k.type !== j.qc2.DEVELOPER_GIFT && N && (0, c.Zu)(n.id);
-    }, [k, n, N]),
+        null != k && !1 === k.consumed && k.type !== j.qc2.DEVELOPER_GIFT && T && (0, c.Zu)(n.id);
+    }, [k, n, T]),
         i.useEffect(
             () => () => {
                 (0, c.SN)(p.FX);
@@ -54,20 +54,20 @@ function I(e) {
             []
         ),
         i.useEffect(() => {
-            !E && null == M && !_ && (0, c.Gq)(p.FX);
-        }, [E, M, _]),
+            !S && null == M && !_ && (0, c.Gq)(p.FX);
+        }, [S, M, _]),
         i.useEffect(() => {
-            !S && !A && (0, c.gA)(p.FX);
-        }, [S, A]);
+            !b && !A && (0, c.gA)(p.FX);
+        }, [b, A]);
     let D = () => (0, a.closeAllModals)();
     return _
         ? (0, l.jsx)('div', {
-              className: b.anomaly,
+              className: C.anomaly,
               children: (0, l.jsxs)('div', {
-                  className: b.error,
+                  className: C.error,
                   children: [
                       (0, l.jsx)(a.Image, {
-                          src: C,
+                          src: N,
                           width: 178,
                           height: 190
                       }),
@@ -80,40 +80,40 @@ function I(e) {
           })
         : null == M
           ? (0, l.jsx)('div', {
-                className: b.anomaly,
+                className: C.anomaly,
                 children: (0, l.jsx)('div', {
-                    className: b.spinner,
+                    className: C.spinner,
                     children: (0, l.jsx)(a.Spinner, {})
                 })
             })
           : (0, l.jsxs)(l.Fragment, {
                 children: [
                     (0, l.jsxs)('div', {
-                        className: b.modal,
+                        className: C.modal,
                         children: [
                             (0, l.jsx)('img', {
-                                className: b.image,
-                                src: 'https://cdn.discordapp.com/assets/content/f7cb08dc1c9ca86a0c705f26d6e9af2ba2cc1acd4fd51e039417b2936069bc5b.png',
+                                className: C.image,
+                                src: 'https://cdn.discordapp.com/assets/premium/roadblocks/hd_streaming.png',
                                 alt: Z.intl.string(Z.t.DdigcX)
                             }),
                             (0, l.jsxs)('div', {
-                                className: b.body,
+                                className: C.body,
                                 children: [
                                     (0, l.jsxs)('div', {
-                                        className: b.heading,
+                                        className: C.heading,
                                         children: [
                                             (0, l.jsx)(a.Heading, {
                                                 variant: 'heading-lg/bold',
                                                 children: Z.intl.string(Z.t.K04rOD)
                                             }),
-                                            (0, l.jsx)(f.Z, {})
+                                            (0, l.jsx)(h.Z, {})
                                         ]
                                     }),
                                     (0, l.jsx)(a.Text, {
                                         variant: 'text-sm/normal',
                                         children: Z.intl.string(Z.t.lq40Pz)
                                     }),
-                                    (0, l.jsx)(h.Z, {
+                                    (0, l.jsx)(x.Z, {
                                         onClick: () => {},
                                         children: (0, l.jsx)(a.Text, {
                                             color: 'text-link',
@@ -128,9 +128,9 @@ function I(e) {
                                     })
                                 ]
                             }),
-                            (0, l.jsx)('div', { className: b.divider }),
+                            (0, l.jsx)('div', { className: C.divider }),
                             (0, l.jsxs)('div', {
-                                className: b.applyingTo,
+                                className: C.applyingTo,
                                 children: [
                                     (0, l.jsx)(a.Text, {
                                         variant: 'eyebrow',
@@ -142,11 +142,11 @@ function I(e) {
                         ]
                     }),
                     (0, l.jsxs)('div', {
-                        className: b.footer,
+                        className: C.footer,
                         children: [
                             (0, l.jsx)(a.Button, {
                                 onClick: () => {
-                                    (0, a.closeModal)(T);
+                                    (0, a.closeModal)(I);
                                 },
                                 color: a.Button.Colors.PRIMARY,
                                 children: Z.intl.string(Z.t.Avt5KS)
@@ -154,11 +154,11 @@ function I(e) {
                             t
                                 ? (0, l.jsx)(a.Button, {
                                       onClick: () => {
-                                          if ((I(!0), P)) {
+                                          if ((E(!0), P)) {
                                               (0, c.Zu)(n.id), (0, a.closeAllModals)();
                                               return;
                                           }
-                                          (0, x.Z)({
+                                          (0, g.Z)({
                                               skuId: p.FX,
                                               analyticsLocations: F,
                                               onComplete: D
@@ -166,13 +166,13 @@ function I(e) {
                                       },
                                       disabled: !t,
                                       children: (0, l.jsxs)('div', {
-                                          className: b.buttonCopy,
+                                          className: C.buttonCopy,
                                           children: [
                                               (0, l.jsx)(a.PotionIcon, {
                                                   color: s.Z.colors.INTERACTIVE_ACTIVE,
                                                   size: 'sm'
                                               }),
-                                              P ? Z.intl.string(Z.t.sl6Tcn) : Z.intl.formatToPlainString(Z.t.S9LAdX, { price: (0, g.T4)(M.amount, M.currency) })
+                                              P ? Z.intl.string(Z.t.sl6Tcn) : Z.intl.formatToPlainString(Z.t.S9LAdX, { price: (0, f.T4)(M.amount, M.currency) })
                                           ]
                                       })
                                   })
@@ -186,7 +186,7 @@ function I(e) {
                                               onClick: n,
                                               onMouseEnter: t,
                                               onMouseLeave: i,
-                                              children: Z.intl.formatToPlainString(Z.t.S9LAdX, { price: (0, g.T4)(M.amount, M.currency) })
+                                              children: Z.intl.formatToPlainString(Z.t.S9LAdX, { price: (0, f.T4)(M.amount, M.currency) })
                                           });
                                       }
                                   })

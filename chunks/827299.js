@@ -115,7 +115,7 @@ function _(e, t) {
             g = m.error,
             E = !0 === m.isLoading,
             v = (0, r.useRef)(c),
-            I = (0, r.useCallback)(() => {
+            b = (0, r.useCallback)(() => {
                 if (null == p || !0 === E) return;
                 let e = !1;
                 u === i.Wu ? h.length > 0 && (e = !0) : null != h && (e = !0);
@@ -155,13 +155,13 @@ function _(e, t) {
         return (
             (0, r.useEffect)(
                 () => (
-                    I(),
-                    d.subscribe(p, I),
+                    b(),
+                    d.subscribe(p, b),
                     () => {
                         d.subscribe(p, void 0);
                     }
                 ),
-                [p, I]
+                [p, b]
             ),
             {
                 data: h,

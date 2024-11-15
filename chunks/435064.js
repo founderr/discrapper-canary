@@ -28,8 +28,8 @@ function g(e, t, n) {
 }
 let E = 'default',
     v = [],
-    I = [],
     b = [],
+    I = [],
     S = 0,
     T = null,
     y = null,
@@ -74,10 +74,10 @@ class x extends (r = i.ZP.DeviceSettingsStore) {
         null != e && (D = e), L(), this.waitFor(o.ZP);
     }
     getClips() {
-        return I;
+        return b;
     }
     getPendingClips() {
-        return b;
+        return I;
     }
     getUserAgnosticState() {
         return D;
@@ -267,20 +267,20 @@ let w = new x(a.Z, {
                 ...D,
                 newClipIds: [...(null !== (n = D.newClipIds) && void 0 !== n ? n : []), r.id]
             }),
-            (b = b.filter((e) => {
+            (I = I.filter((e) => {
                 let { id: t } = e;
                 return t !== r.id;
             })),
-            (I = [r, ...I]),
+            (b = [r, ...b]),
             (D.hasClips = !0);
     },
     CLIPS_SAVE_CLIP_PLACEHOLDER: function (e) {
         let { clip: t } = e;
-        b = [t, ...b];
+        I = [t, ...I];
     },
     CLIPS_SAVE_CLIP_PLACEHOLDER_ERROR: function (e) {
         let { clipId: t } = e;
-        b = b.filter((e) => {
+        I = I.filter((e) => {
             let { id: n } = e;
             return n !== t;
         });
@@ -342,20 +342,20 @@ let w = new x(a.Z, {
         D.newClipIds = [];
     },
     CLIPS_LOAD_DIRECTORY_SUCCESS: function (e) {
-        (D.hasClips = e.clips.length > 0), (I = e.clips);
+        (D.hasClips = e.clips.length > 0), (b = e.clips);
     },
     CLIPS_DELETE_CLIP: function (e) {
         0 ===
-            (I = I.filter((t) => {
+            (b = b.filter((t) => {
                 let { filepath: n } = t;
                 return n !== e.filepath;
             })).length && (D.hasClips = !1);
     },
     CLIPS_UPDATE_METADATA: function (e) {
         let { clip: t } = e;
-        for (let [e, n] of I.entries())
+        for (let [e, n] of b.entries())
             if (n.id === t.id) {
-                (I[e] = t), (I = [...I]);
+                (b[e] = t), (b = [...b]);
                 return;
             }
     },

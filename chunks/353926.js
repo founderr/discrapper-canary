@@ -36,8 +36,8 @@ function g(e, t, n) {
 }
 let E = 'scientist:triggered',
     v = 'exerimentOverrides',
-    I = 'userExperimentOverrides',
-    b = 'guildExperimentOverrides',
+    b = 'userExperimentOverrides',
+    I = 'guildExperimentOverrides',
     S = new c.Z('ExperimentStore'),
     T = !1,
     y = {},
@@ -69,22 +69,22 @@ function U(e) {
     var t;
     return ((null !== (t = e.flags) && void 0 !== t ? t : 0) & m.xW$.STAFF) === m.xW$.STAFF || null != e.personal_connection_id || !1;
 }
-function G(e, t, n, r) {
+function B(e, t, n, r) {
     let i = ''.concat(t.type, '|').concat(e),
         a = t.triggerDebuggingEnabled && void 0 !== n && n.length > 0;
     if (t.type === h.xY.USER) return a && ((i += '|'.concat(n)), r && (i += '|triggerDebugging')), i;
     if (t.type === h.xY.GUILD) return (i += '|'.concat(t.guildId)), a && ((i += '|'.concat(n)), r && (i += '|triggerDebugging')), i;
     throw Error();
 }
-function B(e) {
+function G(e) {
     if (e.type === h.xY.USER) return M(''.concat(e.bucket, '|').concat(e.revision));
     if (e.type === h.xY.GUILD) return M(''.concat(e.bucket, '|').concat(e.revision, '|').concat(e.guildId));
     throw Error();
 }
 let Z = Date.now();
 function F(e, t, n, r) {
-    let i = y[G(e, t, n, r)];
-    return !(null == i || Date.now() - i.time > 604800000) && i.hash === B(t);
+    let i = y[B(e, t, n, r)];
+    return !(null == i || Date.now() - i.time > 604800000) && i.hash === G(t);
 }
 function V(e) {
     let { experimentId: t, descriptor: n, location: r, location_stack: i, context: a, fingerprint: s, excluded: o, exposureType: l } = e,
@@ -173,9 +173,9 @@ function V(e) {
             });
     }
     !u &&
-        ((y[G(t, n, r, c)] = {
+        ((y[B(t, n, r, c)] = {
             time: Date.now(),
-            hash: B(n)
+            hash: G(n)
         }),
         ee(y));
 }
@@ -346,7 +346,7 @@ function Q() {
 function X(e) {
     let { isSwitchingAccount: t } = e;
     o.K.remove(E),
-        !t && (o.K.remove(v), o.K.remove(I), o.K.remove(b), (D = {}), (L = {})),
+        !t && (o.K.remove(v), o.K.remove(b), o.K.remove(I), (D = {}), (L = {})),
         (C = {}),
         (N = {
             ...N,
@@ -360,7 +360,7 @@ function J() {
 }
 function $() {
     try {
-        o.K.set(I, D);
+        o.K.set(b, D);
     } catch (e) {
         S.error('Error saving user experiment overrides, unsaved data will be lost', e),
             _.default.track(m.rMx.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
@@ -369,7 +369,7 @@ function $() {
             });
     }
     try {
-        o.K.set(b, L);
+        o.K.set(I, L);
     } catch (e) {
         S.error('Error saving guild experiment overrides, unsaved data will be lost', e),
             _.default.track(m.rMx.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
@@ -455,7 +455,7 @@ class ei extends f.Z {
         })()),
             !(function () {
                 var e, t, n;
-                let r = [null !== (e = o.K.get(v)) && void 0 !== e ? e : {}, null !== (t = o.K.get(I)) && void 0 !== t ? t : {}, null !== (n = o.K.get(b)) && void 0 !== n ? n : {}];
+                let r = [null !== (e = o.K.get(v)) && void 0 !== e ? e : {}, null !== (t = o.K.get(b)) && void 0 !== t ? t : {}, null !== (n = o.K.get(I)) && void 0 !== n ? n : {}];
                 (D = {}), (L = {});
                 let a = !i().isEmpty(r[0]);
                 for (let e of r)

@@ -21,16 +21,16 @@ var i = n(278074),
     m = n(388032);
 function g(e) {
     let { user: t, color: n, onBlock: g, onUnblock: E, location: v = 'ContextMenu' } = e,
-        { id: I } = t,
-        b = (0, s.e7)(
+        { id: b } = t,
+        I = (0, s.e7)(
             [_.default],
             () => {
                 var e;
-                return (null === (e = _.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === I;
+                return (null === (e = _.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === b;
             },
-            [I]
+            [b]
         ),
-        S = (0, s.e7)([f.Z], () => f.Z.isBlocked(I), [I]),
+        S = (0, s.e7)([f.Z], () => f.Z.isBlocked(b), [b]),
         T = (0, d.Do)({ location: 'use-block-user-item-web' }),
         y = (0, i.EQ)({
             isStealthRemediationEnabled: T,
@@ -51,7 +51,7 @@ function g(e) {
                 () => 'danger'
             )
             .otherwise(() => n);
-    return b
+    return I
         ? null
         : (0, r.jsx)(o.MenuItem, {
               id: 'block',
@@ -59,7 +59,7 @@ function g(e) {
               label: S ? m.intl.string(m.t.XyHpKC) : m.intl.string(m.t.l4EmaW),
               action: S
                   ? () => {
-                        null == E || E(), l.Z.unblockUser(I, { location: v });
+                        null == E || E(), l.Z.unblockUser(b, { location: v });
                     }
                   : () => {
                         (0, o.openModal)((e) =>
@@ -70,7 +70,7 @@ function g(e) {
                                 onConfirm: () => {
                                     null == g || g(),
                                         l.Z.addRelationship({
-                                            userId: I,
+                                            userId: b,
                                             context: { location: v },
                                             type: h.OGo.BLOCKED
                                         }),

@@ -19,7 +19,7 @@ var r = n(812206),
     m = n(701488);
 async function g(e) {
     let t,
-        { applicationId: n, activityChannelId: g, locationObject: E, analyticsLocations: v, componentId: I, sectionName: b, source: S, partyId: T } = e,
+        { applicationId: n, activityChannelId: g, locationObject: E, analyticsLocations: v, componentId: b, sectionName: I, source: S, partyId: T } = e,
         y = (0, f.Z)(),
         A = i.Z.getChannel(g),
         N = null == A ? void 0 : A.getGuildId(),
@@ -59,8 +59,8 @@ async function g(e) {
             embeddedActivitiesManager: y,
             analyticsLocations: v,
             locationObject: E,
-            componentId: I,
-            sectionName: b,
+            componentId: b,
+            sectionName: I,
             source: S,
             partyId: T
         })

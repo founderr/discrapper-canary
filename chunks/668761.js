@@ -8,15 +8,15 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(481060),
-    r = n(312839),
+var r = n(481060),
+    s = n(312839),
     a = n(556296),
     l = n(13140),
     o = n(981631),
     c = n(987650),
     d = n(388032);
 function u() {
-    let { trackView: e, trackClick: t } = (0, r.R)(c.n0.ClipsReminderNotification, { notif_type: c.n0.ClipsReminderNotification }),
+    let { trackView: e, trackClick: t } = (0, s.R)(c.n0.ClipsReminderNotification, { notif_type: c.n0.ClipsReminderNotification }),
         n = a.Z.getKeybindForAction(o.kg4.SAVE_CLIP);
     if (null == n) return null;
     let u = l.BB(n.shortcut, !0);
@@ -26,10 +26,10 @@ function u() {
             keybindHook: () =>
                 (0, i.jsx)('span', {
                     style: { display: 'inline-block' },
-                    children: (0, i.jsx)(s.KeyCombo, { shortcut: u })
+                    children: (0, i.jsx)(r.KeyCombo, { shortcut: u })
                 })
         }),
-        icon: (0, i.jsx)(s.ClipsIcon, {
+        icon: (0, i.jsx)(r.ClipsIcon, {
             size: 'xs',
             color: 'currentColor'
         }),
@@ -42,10 +42,10 @@ function u() {
     };
 }
 function h(e) {
-    let { trackView: t, trackClick: n } = (0, r.R)(c.n0.ClipsNotification, { notif_type: c.n0.ClipsNotification });
+    let { trackView: t, trackClick: n } = (0, s.R)(c.n0.ClipsNotification, { notif_type: c.n0.ClipsNotification });
     return {
         title: e,
-        icon: (0, i.jsx)(s.ClipsIcon, {
+        icon: (0, i.jsx)(r.ClipsIcon, {
             size: 'xs',
             color: 'currentColor'
         }),

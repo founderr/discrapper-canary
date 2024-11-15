@@ -59,7 +59,7 @@ function h(e) {
     if (0 === i.length) return null;
     let E = g(),
         v = m ? f.t.PZpY9f : f.t['1Hz+Sk'],
-        I = u === o.Y.USER_INSTALL && a.includes(l.x.APPLICATIONS_COMMANDS);
+        b = u === o.Y.USER_INSTALL && a.includes(l.x.APPLICATIONS_COMMANDS);
     return (0, r.jsxs)('div', {
         className: _.scopes,
         children: [
@@ -83,7 +83,7 @@ function h(e) {
                     })
                 )
                 .flat(),
-            I && (0, r.jsx)(p, { text: f.intl.string(f.t.Ls2XRk) }),
+            b && (0, r.jsx)(p, { text: f.intl.string(f.t.Ls2XRk) }),
             (0, r.jsx)(p, {
                 text: E,
                 isFake: !0

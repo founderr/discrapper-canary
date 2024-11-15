@@ -34,7 +34,7 @@ var n = i(200651),
     y = i(621925);
 function A(e, l) {
     (0, d.openModalLazy)(async () => {
-        let { default: o } = await Promise.all([i.e('56630'), i.e('82412'), i.e('18993')]).then(i.bind(i, 107807));
+        let { default: o } = await Promise.all([i.e('82412'), i.e('18993')]).then(i.bind(i, 107807));
         return (i) =>
             (0, n.jsx)(o, {
                 role: e,

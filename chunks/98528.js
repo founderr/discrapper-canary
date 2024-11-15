@@ -15,7 +15,7 @@ n.d(t, {
         return p;
     },
     t$: function () {
-        return I;
+        return b;
     },
     yi: function () {
         return v;
@@ -223,7 +223,7 @@ let _ = (0, u.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
                 autoFocusElement: !1,
                 useVirtualFocus: !0
             }),
-            { gridContainerProps: v, handleGridContainerKeyDown: I } = r.useMemo(() => {
+            { gridContainerProps: v, handleGridContainerKeyDown: b } = r.useMemo(() => {
                 let e = E();
                 return {
                     gridContainerProps: e,
@@ -242,7 +242,7 @@ let _ = (0, u.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
                 getItemProps: m,
                 getRowProps: g,
                 gridContainerProps: v,
-                handleGridContainerKeyDown: I,
+                handleGridContainerKeyDown: b,
                 isUsingKeyboardNavigation: c
             }
         );
@@ -293,7 +293,7 @@ function v(e) {
         };
     }, [t, n, i, o, s, a]);
 }
-function I(e) {
+function b(e) {
     let { columnCounts: t, expressionsGrid: n, expressionsListRef: i, store: a, gridNavigatorId: s, onSelectItem: o } = e,
         {
             gridDispatch: u,

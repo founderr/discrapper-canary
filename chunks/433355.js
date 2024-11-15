@@ -3,7 +3,7 @@ n.d(t, {
         return R;
     },
     uZ: function () {
-        return I;
+        return b;
     }
 });
 var r,
@@ -35,8 +35,8 @@ function v(e, t, n) {
         e
     );
 }
-let I = 'message_requests',
-    b = !1,
+let b = 'message_requests',
+    I = !1,
     S = !1,
     T = !0,
     y = !1,
@@ -78,13 +78,13 @@ class x extends (r = a.ZP.PersistedStore) {
     initialize(e) {
         if (null != e) {
             var t, n, r, i, a;
-            (b = null !== (t = e.isMembersOpen) && void 0 !== t && t), (S = null !== (n = e.isSummariesOpen) && void 0 !== n && n), (T = null === (r = e.isProfileOpen) || void 0 === r || r), (A = null !== (i = e.sidebars) && void 0 !== i ? i : {}), (N = null !== (a = e.guildSidebars) && void 0 !== a ? a : {});
+            (I = null !== (t = e.isMembersOpen) && void 0 !== t && t), (S = null !== (n = e.isSummariesOpen) && void 0 !== n && n), (T = null === (r = e.isProfileOpen) || void 0 === r || r), (A = null !== (i = e.sidebars) && void 0 !== i ? i : {}), (N = null !== (a = e.guildSidebars) && void 0 !== a ? a : {});
         }
         this.syncWith([f.Z], L), this.syncWith([d.Z], D);
     }
     getState() {
         return {
-            isMembersOpen: b,
+            isMembersOpen: I,
             isSummariesOpen: S,
             isProfileOpen: T,
             sidebars: A,
@@ -94,7 +94,7 @@ class x extends (r = a.ZP.PersistedStore) {
     getSection(e, t) {
         if (y) return m.ULH.SEARCH;
         let n = C(e);
-        return null != n && null != A[n] ? m.ULH.SIDEBAR_CHAT : t && T ? m.ULH.PROFILE : S ? m.ULH.SUMMARIES : b ? m.ULH.MEMBERS : m.ULH.NONE;
+        return null != n && null != A[n] ? m.ULH.SIDEBAR_CHAT : t && T ? m.ULH.PROFILE : S ? m.ULH.SUMMARIES : I ? m.ULH.MEMBERS : m.ULH.NONE;
     }
     getSidebarState(e) {
         let t = C(e);
@@ -121,13 +121,13 @@ v(x, 'displayName', 'ChannelSectionStore'),
     v(x, 'persistKey', 'ChannelSectionStore2'),
     (t.ZP = new x(s.Z, {
         CHANNEL_TOGGLE_MEMBERS_SECTION: function () {
-            S && (S = O(S)), (b = O(b));
+            S && (S = O(S)), (I = O(I));
         },
         PROFILE_PANEL_TOGGLE_SECTION: function () {
             !T && l.S.dispatch(m.CkL.SEARCH_RESULTS_CLOSE), (T = O(T));
         },
         CHANNEL_TOGGLE_SUMMARIES_SECTION: function () {
-            b && (b = O(b)), (S = O(S));
+            I && (I = O(I)), (S = O(S));
         },
         SIDEBAR_VIEW_CHANNEL: function (e) {
             let { sidebarType: t, baseChannelId: n, channelId: r, details: i } = e;
@@ -190,7 +190,7 @@ v(x, 'displayName', 'ChannelSectionStore'),
             return n;
         },
         CHANNEL_SELECT: function () {
-            i.tq && b && ((b = !1), (S = !1));
+            i.tq && I && ((I = !1), (S = !1));
         },
         THREAD_CREATE: function (e) {
             var t;

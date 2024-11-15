@@ -22,12 +22,12 @@ function v(e) {
     let r = null != e ? e : (0, p.Gx)(null === (t = c.Z.settings.voiceAndVideo) || void 0 === t ? void 0 : t.videoBackgroundFilterDesktop, n.id);
     return null != f.Z.getVoiceChannelId() && d.Z.isVideoEnabled() && null != r;
 }
-function I() {
+function b() {
     m !== f.Z.getVoiceChannelId() && (g = !1), v() && (g = !0), (m = f.Z.getVoiceChannelId());
 }
-class b extends (r = o.ZP.Store) {
+class I extends (r = o.ZP.Store) {
     initialize() {
-        this.waitFor(c.Z, f.Z, d.Z), this.syncWith([f.Z, d.Z], I);
+        this.waitFor(c.Z, f.Z, d.Z), this.syncWith([f.Z, d.Z], b);
     }
     get videoFilterAssets() {
         return E;
@@ -40,7 +40,7 @@ class b extends (r = o.ZP.Store) {
     }
 }
 (s = 'VideoBackgroundStore'),
-    (a = 'displayName') in (i = b)
+    (a = 'displayName') in (i = I)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -48,7 +48,7 @@ class b extends (r = o.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new b(u.Z, {
+    (t.Z = new I(u.Z, {
         VIDEO_FILTER_ASSETS_FETCH_SUCCESS: function (e) {
             let { assets: t } = e;
             E = t.reduce(

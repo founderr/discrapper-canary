@@ -15,11 +15,11 @@ var r = n(200651),
     g = n(557177),
     E = n(918559),
     v = n(871465);
-let I = {
+let b = {
         transform: 'scale(0.7)',
         opacity: 0
     },
-    b = {
+    I = {
         transform: 'scale(1)',
         opacity: 1
     };
@@ -57,10 +57,10 @@ t.Z = i.memo(function () {
                 return null === (t = e.channel) || void 0 === t ? void 0 : t.id;
             },
             enter: {
-                from: I,
-                to: b
+                from: b,
+                to: I
             },
-            leave: I,
+            leave: b,
             config: {
                 mass: 1,
                 tension: 500,

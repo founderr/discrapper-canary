@@ -25,8 +25,8 @@ var r,
     g = n(471445),
     E = n(511618),
     v = n(926491),
-    I = n(378233),
-    b = n(695346),
+    b = n(378233),
+    I = n(695346),
     S = n(430824),
     T = n(699516),
     y = n(594174),
@@ -325,7 +325,7 @@ x(
         class e extends k {
             renderContent() {
                 let { emoji: e, sentinel: t, guild: n } = this.props,
-                    r = b.Yk.getSetting(),
+                    r = I.Yk.getSetting(),
                     a =
                         null != e.id || '' !== e.url
                             ? (0, i.jsx)('img', {
@@ -390,7 +390,7 @@ x(
                 let { queryMatch: r, renderSticker: a, selected: s, sticker: o } = this.props,
                     { hovered: l } = this.state;
                 return (
-                    (0, I.jl)(o) ? (n = null === (e = v.Z.getStickerPack(o.pack_id)) || void 0 === e ? void 0 : e.name) : (0, I.J8)(o) && (n = null === (t = S.Z.getGuild(o.guild_id)) || void 0 === t ? void 0 : t.name),
+                    (0, b.jl)(o) ? (n = null === (e = v.Z.getStickerPack(o.pack_id)) || void 0 === e ? void 0 : e.name) : (0, b.J8)(o) && (n = null === (t = S.Z.getGuild(o.guild_id)) || void 0 === t ? void 0 : t.name),
                     (0, i.jsxs)(C.RX, {
                         children: [
                             (0, i.jsx)(C.Tw, { children: a(o, l || !0 === s) }),

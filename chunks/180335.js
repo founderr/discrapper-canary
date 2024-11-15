@@ -3,7 +3,7 @@ n.d(t, {
         return p;
     },
     Bq: function () {
-        return I;
+        return b;
     },
     RL: function () {
         return E;
@@ -61,7 +61,7 @@ function v(e, t) {
     let n = e.filter(u.kr);
     return t.type === d.IIU.PLAYING ? n.filter(l.dX).find((e) => m(e, t)) : t.type === d.IIU.LISTENING ? n.filter(l.dU).find((e) => g(e, t)) : t.type === d.IIU.WATCHING ? e.filter(l.y0).find((e) => E(e, t)) : void 0;
 }
-function I(e) {
+function b(e) {
     let { activity: t, user: n } = e,
         r = (0, i.e7)([o.Z], () =>
             o.Z.getMatchingInboxEntry({

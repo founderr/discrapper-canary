@@ -66,7 +66,7 @@ e.exports = function (e) {
             ]
         },
         v = t.concat(r, '\\b(?!\\()'),
-        I = {
+        b = {
             variants: [
                 {
                     match: [t.concat(/::/, t.lookahead(/(?!class\b)/)), v],
@@ -96,7 +96,7 @@ e.exports = function (e) {
                 }
             ]
         },
-        b = {
+        I = {
             scope: 'attr',
             match: t.concat(r, t.lookahead(':'), t.lookahead(/(?!::)/))
         },
@@ -105,7 +105,7 @@ e.exports = function (e) {
             begin: /\(/,
             end: /\)/,
             keywords: m,
-            contains: [b, a, I, e.C_BLOCK_COMMENT_MODE, d, f, E]
+            contains: [I, a, b, e.C_BLOCK_COMMENT_MODE, d, f, E]
         },
         T = {
             relevance: 0,
@@ -114,7 +114,7 @@ e.exports = function (e) {
             contains: [S]
         };
     S.contains.push(T);
-    let y = [b, I, e.C_BLOCK_COMMENT_MODE, d, f, E];
+    let y = [I, b, e.C_BLOCK_COMMENT_MODE, d, f, E];
     return {
         case_insensitive: !1,
         keywords: m,
@@ -191,7 +191,7 @@ e.exports = function (e) {
             },
             a,
             T,
-            I,
+            b,
             {
                 match: [/const/, /\s/, r],
                 scope: {
@@ -221,7 +221,7 @@ e.exports = function (e) {
                         excludeBegin: !0,
                         excludeEnd: !0,
                         keywords: m,
-                        contains: ['self', a, I, e.C_BLOCK_COMMENT_MODE, d, f]
+                        contains: ['self', a, b, e.C_BLOCK_COMMENT_MODE, d, f]
                     }
                 ]
             },

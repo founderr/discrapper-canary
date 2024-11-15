@@ -20,16 +20,16 @@ var i = n(200651),
     I = n(706590),
     b = n(940777),
     E = n(41776),
-    Z = n(905423),
-    S = n(802718),
+    S = n(905423),
+    Z = n(802718),
     N = n(796974),
     y = n(271383),
     T = n(430824),
     j = n(771845),
     A = n(358085),
     P = n(709054),
-    R = n(727258),
-    M = n(605951),
+    M = n(727258),
+    R = n(605951),
     w = n(474109),
     L = n(741616),
     D = n(187835),
@@ -223,10 +223,10 @@ function el(e) {
     }, []),
         l.useEffect(() => {
             if ((eg.setGuildsTree(s), er.current || 0 === s.size)) return;
-            let e = Z.Z.getState().guildId;
+            let e = S.Z.getState().guildId;
             eg.scrollToGuild(e, !1);
             let t = null;
-            return Z.Z.subscribe((e) => {
+            return S.Z.subscribe((e) => {
                 let { guildId: n } = e;
                 n !== t && ((t = n), eg.scrollToGuild(t, !1));
             });
@@ -239,7 +239,7 @@ function el(e) {
     }, [eg]);
     function eb(e) {
         switch (e.type) {
-            case R.eD.FOLDER:
+            case M.eD.FOLDER:
                 return (0, i.jsx)(
                     W.Z,
                     {
@@ -253,7 +253,7 @@ function el(e) {
                     },
                     e.id
                 );
-            case R.eD.GUILD:
+            case M.eD.GUILD:
                 return (0, i.jsx)(
                     z.Z,
                     {
@@ -270,10 +270,10 @@ function el(e) {
                 return null;
         }
     }
-    (0, M.Z)(eg.scrollToGuild);
+    (0, R.Z)(eg.scrollToGuild);
     let eE = s.getRoots(),
-        eZ = (0, I.Z)(),
-        eS = (0, S.U)(),
+        eS = (0, I.Z)(),
+        eZ = (0, Z.U)(),
         eN = $.map((e) =>
             (0, i.jsx)(
                 k.Z,
@@ -316,10 +316,10 @@ function el(e) {
                                 onScroll: eg.handleScroll,
                                 children: [
                                     (0, i.jsx)(B.u, {}),
-                                    eZ ? (0, i.jsx)(b.Z, {}) : null,
+                                    eS ? (0, i.jsx)(b.Z, {}) : null,
                                     (0, i.jsx)(H.Z, { isOnHubVerificationRoute: ex }),
                                     (0, i.jsx)(L.Z, {}),
-                                    eS,
+                                    eZ,
                                     C.map((e) => (0, i.jsx)(K.Z, { guildId: e }, e)),
                                     (0, i.jsx)(Y.Z, { onActivate: eI }),
                                     (0, i.jsx)(V.Z, {}),

@@ -21,9 +21,9 @@ function s(e) {
     E.current = o;
     let v = r.useRef(l);
     v.current = l;
-    let I = r.useRef(u);
-    I.current = u;
-    let [b, S] = r.useState(!1),
+    let b = r.useRef(u);
+    b.current = u;
+    let [I, S] = r.useState(!1),
         T = r.useCallback(() => S(!1), []);
     return (
         r.useLayoutEffect(() => {
@@ -38,7 +38,7 @@ function s(e) {
                 o = null !== (r = v.current) && void 0 !== r ? r : h.current,
                 l = m.current !== t;
             if (((m.current = t), null == s || null == o || l)) return;
-            let u = Math.min(null !== (i = I.current) && void 0 !== i ? i : o, o),
+            let u = Math.min(null !== (i = b.current) && void 0 !== i ? i : o, o),
                 c = n ? s : u,
                 f = n ? u : s;
             if (!(c !== f)) return;
@@ -52,11 +52,11 @@ function s(e) {
             );
         }, [t, d, n]),
         r.useLayoutEffect(() => {
-            if (null != d && !b) (d.style.height = ''), (d.style.transition = '');
-        }, [t, d, b]),
+            if (null != d && !I) (d.style.height = ''), (d.style.transition = '');
+        }, [t, d, I]),
         {
             ref: c ? _ : f,
-            isTransitioning: b,
+            isTransitioning: I,
             onTransitionEnd: T
         }
     );

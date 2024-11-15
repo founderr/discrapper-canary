@@ -1,6 +1,6 @@
 n.d(t, {
     Fo: function () {
-        return C;
+        return h;
     },
     KY: function () {
         return L;
@@ -42,10 +42,10 @@ var r = n(192379),
     p = n(443063),
     D = n(490897),
     U = n(388032);
-function h(e, t) {
+function C(e, t) {
     e.index = t;
 }
-function C(e, t, n, l) {
+function h(e, t, n, l) {
     l = l.toLowerCase();
     let s = (0, _.g)(e),
         a = r.useCallback((e, t) => !(s && e.channel.hasFlag(S.zZ.IS_GUILD_RESOURCE_CHANNEL)) && e.channel.type !== O.d4z.GUILD_DIRECTORY && (0 === t.length || i()(t, e.channel.name.toLowerCase()) || e.channel.topic.toLowerCase().includes(t)), [s]);
@@ -60,7 +60,7 @@ function C(e, t, n, l) {
                 'null' === r.id && (e.null = t.null.filter((e) => a(e, l))), (e[r.id] = t[r.id].filter((e) => a(e, l)));
             }),
             (e._categories = t._categories.filter((t) => 'null' === t.channel.id || 0 === l.length || e[t.channel.id].length > 0)),
-            (0, u.Z)(e._categories, e).forEach(h),
+            (0, u.Z)(e._categories, e).forEach(C),
             e
         );
     }, [t, n, a, l]);

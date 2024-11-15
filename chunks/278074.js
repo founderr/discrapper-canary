@@ -154,10 +154,10 @@ function E(...e) {
 function v(e) {
     return 'number' == typeof e;
 }
-function I(e) {
+function b(e) {
     return 'string' == typeof e;
 }
-function b(e) {
+function I(e) {
     return 'bigint' == typeof e;
 }
 let S = d(
@@ -171,40 +171,40 @@ let S = d(
                 T(
                     h(
                         e,
-                        g((e) => I(e) && e.startsWith(t))
+                        g((e) => b(e) && e.startsWith(t))
                     )
                 ),
             endsWith: (t) =>
                 T(
                     h(
                         e,
-                        g((e) => I(e) && e.endsWith(t))
+                        g((e) => b(e) && e.endsWith(t))
                     )
                 ),
             minLength: (t) => {
                 let n;
-                return T(h(e, ((n = t), g((e) => I(e) && e.length >= n))));
+                return T(h(e, ((n = t), g((e) => b(e) && e.length >= n))));
             },
             maxLength: (t) => {
                 let n;
-                return T(h(e, ((n = t), g((e) => I(e) && e.length <= n))));
+                return T(h(e, ((n = t), g((e) => b(e) && e.length <= n))));
             },
             includes: (t) =>
                 T(
                     h(
                         e,
-                        g((e) => I(e) && e.includes(t))
+                        g((e) => b(e) && e.includes(t))
                     )
                 ),
             regex: (t) =>
                 T(
                     h(
                         e,
-                        g((e) => I(e) && !!e.match(t))
+                        g((e) => b(e) && !!e.match(t))
                     )
                 )
         }),
-    y = T(g(I)),
+    y = T(g(b)),
     A = (e, t) => g((n) => v(n) && e <= n && t >= n),
     N = (e) => g((t) => v(t) && t < e),
     C = (e) => g((t) => v(t) && t > e),
@@ -227,24 +227,24 @@ let S = d(
             negative: () => M(h(e, w()))
         }),
     P = M(g(v)),
-    k = (e, t) => g((n) => b(n) && e <= n && t >= n),
-    U = (e) => g((t) => b(t) && t < e),
-    G = (e) => g((t) => b(t) && t > e),
-    B = (e) => g((t) => b(t) && t <= e),
-    Z = (e) => g((t) => b(t) && t >= e),
-    F = () => g((e) => b(e) && e > 0),
-    V = () => g((e) => b(e) && e < 0),
+    k = (e, t) => g((n) => I(n) && e <= n && t >= n),
+    U = (e) => g((t) => I(t) && t < e),
+    B = (e) => g((t) => I(t) && t > e),
+    G = (e) => g((t) => I(t) && t <= e),
+    Z = (e) => g((t) => I(t) && t >= e),
+    F = () => g((e) => I(e) && e > 0),
+    V = () => g((e) => I(e) && e < 0),
     j = (e) =>
         Object.assign(d(e), {
             between: (t, n) => j(h(e, k(t, n))),
             lt: (t) => j(h(e, U(t))),
-            gt: (t) => j(h(e, G(t))),
-            lte: (t) => j(h(e, B(t))),
+            gt: (t) => j(h(e, B(t))),
+            lte: (t) => j(h(e, G(t))),
             gte: (t) => j(h(e, Z(t))),
             positive: () => j(h(e, F())),
             negative: () => j(h(e, V()))
         }),
-    H = j(g(b)),
+    H = j(g(I)),
     Y = d(
         g(function (e) {
             return 'boolean' == typeof e;
@@ -393,8 +393,8 @@ var z = {
     number: P,
     betweenBigInt: k,
     ltBigInt: U,
-    gtBigInt: G,
-    lteBigInt: B,
+    gtBigInt: B,
+    lteBigInt: G,
     gteBigInt: Z,
     positiveBigInt: F,
     negativeBigInt: V,

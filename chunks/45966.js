@@ -16,8 +16,8 @@ var r,
     g = n(290511);
 let E = {},
     v = {},
-    I = {},
-    b = !1;
+    b = {},
+    I = !1;
 function S(e, t, n) {
     return e.map((e) =>
         (function (e, t, n) {
@@ -126,12 +126,12 @@ class R extends (r = u.ZP.Store) {
             .find((t) => t.id === e);
     }
     isLoading() {
-        return b;
+        return I;
     }
     shouldFetchPrompts(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _.Z.Millis.HOUR;
-        if (b) return !1;
-        let n = I[e];
+        if (I) return !1;
+        let n = b[e];
         return null == n || Date.now() - n > t;
     }
     getPendingResponseOptions(e) {
@@ -151,7 +151,7 @@ class R extends (r = u.ZP.Store) {
         );
     }
     lastFetchedAt(e) {
-        return I[e];
+        return b[e];
     }
     isAdvancedMode(e) {
         var t;
@@ -169,14 +169,14 @@ class R extends (r = u.ZP.Store) {
         : (i[a] = s),
     (t.Z = new R(c.Z, {
         CONNECTION_OPEN: function () {
-            (b = !1), (E = {});
+            (I = !1), (E = {});
         },
         GUILD_ONBOARDING_PROMPTS_FETCH_START: function () {
-            b = !0;
+            I = !0;
         },
         GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: function (e) {
             let { guildId: t, prompts: n, defaultChannelIds: r, enabled: i, responses: a, onboardingPromptsSeen: s, onboardingResponsesSeen: o, mode: l, belowRequirements: u } = e;
-            b = !1;
+            I = !1;
             let c = m.ZP.getOnboardingStatus(t) === m.uX.READY,
                 d = S(n, s, o);
             (E[t] = {
@@ -191,10 +191,10 @@ class R extends (r = u.ZP.Store) {
                 onboardingResponsesSeen: o
             }),
                 !c && y(t, a),
-                (I[t] = Date.now());
+                (b[t] = Date.now());
         },
         GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE: function () {
-            b = !1;
+            I = !1;
         },
         GUILD_ONBOARDING_SELECT_OPTION: function (e) {
             let { guildId: t, optionId: n, selected: r, removedOptionIds: i } = e;

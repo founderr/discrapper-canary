@@ -30,7 +30,7 @@ var l = n(442837),
     N = n(718317);
 function y(e) {
     var t;
-    let { channel: n, isChannelSelected: y, isChannelCollapsed: T, voiceStates: j, enableConnectedUserLimit: A, enableActivities: P, isSubscriptionGated: R, needSubscriptionToAccess: M, isNewChannel: L, muted: w, resolvedUnreadSetting: D } = e,
+    let { channel: n, isChannelSelected: y, isChannelCollapsed: T, voiceStates: j, enableConnectedUserLimit: A, enableActivities: P, isSubscriptionGated: M, needSubscriptionToAccess: R, isNewChannel: w, muted: L, resolvedUnreadSetting: D } = e,
         O = (0, l.e7)([m.ZP], () => m.ZP.getMentionCount(n.id)),
         k = (0, o.ZP)(n),
         U = (0, l.e7)([p.Z], () => !p.Z.can(E.Plq.CONNECT, n)),
@@ -49,20 +49,20 @@ function y(e) {
             return null !== (t = null === (e = h.Z.getGuild(n.guild_id)) || void 0 === e ? void 0 : e.hasFeature(E.oNc.COMMUNITY)) && void 0 !== t && t;
         });
     if ((0, _.Z)(O)) return (0, i.jsx)(b.Z, { mentionsCount: O });
-    if ((0, c.O)(R)) return (0, i.jsx)(c.Z, { locked: M });
-    if (L)
+    if ((0, c.O)(M)) return (0, i.jsx)(c.Z, { locked: R });
+    if (w)
         return (0, i.jsx)(a.TextBadge, {
             text: Z.intl.string(Z.t.y2b7CA),
             color: r.Z.unsafe_rawColors.BRAND_260.css,
             className: N.newChannel
         });
-    if (!w && D === S.i.ALL_MESSAGES && n.isForumLikeChannel() && null != V && V > 0)
+    if (!L && D === S.i.ALL_MESSAGES && n.isForumLikeChannel() && null != V && V > 0)
         return (0, i.jsx)(a.Text, {
             variant: 'text-xs/semibold',
             color: 'text-brand',
             children: Z.intl.format(Z.t.GkAbqa, { count: (0, a.getBadgeCountString)(V) })
         });
-    if (!w && n.isForumLikeChannel() && null != F && F > 0)
+    if (!L && n.isForumLikeChannel() && null != F && F > 0)
         return (0, i.jsx)(a.Text, {
             variant: 'text-xs/semibold',
             color: 'text-muted',
@@ -83,7 +83,7 @@ function y(e) {
           : null != P && P && (0, C.u)(k)
             ? (0, i.jsx)(x.Z, {
                   embeddedApps: k,
-                  muted: w
+                  muted: L
               })
             : null;
 }

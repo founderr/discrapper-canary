@@ -16,8 +16,8 @@ var r = n(392711),
     g = n(723454),
     E = n(772096),
     v = n(800927),
-    I = n(945884),
-    b = n(594199),
+    b = n(945884),
+    I = n(594199),
     S = n(97734),
     T = n(303694),
     y = n(660199),
@@ -128,7 +128,7 @@ let P = (e) => {
         em: s().defaultRules.em,
         u: s().defaultRules.u,
         br: s().defaultRules.br,
-        text: b.ZP,
+        text: I.ZP,
         inlineCode: {
             ...s().defaultRules.inlineCode,
             parse(e, t, n) {
@@ -142,7 +142,7 @@ let P = (e) => {
             }
         },
         emoticon: {
-            order: b.ZP.order,
+            order: I.ZP.order,
             requiredFirstCharacters: ['\xAF'],
             match: (e) => /^(¯\\_\(ツ\)_\/¯)/.exec(e),
             parse: (e) => ({
@@ -164,7 +164,7 @@ let P = (e) => {
             }
         },
         roleMention: {
-            order: b.ZP.order,
+            order: I.ZP.order,
             requiredFirstCharacters: ['<'],
             match: (e) => /^<@&(\d+)>/.exec(e),
             parse(e, t, n) {
@@ -200,7 +200,7 @@ let P = (e) => {
             }
         },
         mention: {
-            order: b.ZP.order,
+            order: I.ZP.order,
             requiredFirstCharacters: ['<', '@'],
             match(e, t) {
                 let n = /^<@!?(\d+)>|^(@(?:everyone|here|Clyde))/.exec(e);
@@ -245,7 +245,7 @@ let P = (e) => {
             }
         },
         silentPrefix: {
-            order: b.ZP.order,
+            order: I.ZP.order,
             requiredFirstCharacters: ['@'],
             match: (e, t, n) => (null == n || '' === n ? /^(@silent(?![^\s]))/.exec(e) : null),
             parse: function (e) {
@@ -286,7 +286,7 @@ let P = (e) => {
             }
         },
         emoji: {
-            order: b.ZP.order,
+            order: I.ZP.order,
             requiredFirstCharacters: [':'],
             match(e) {
                 let t = l.ZP.EMOJI_NAME_RE.exec(e);
@@ -301,13 +301,13 @@ let P = (e) => {
             }
         },
         soundboard: {
-            order: b.ZP.order,
+            order: I.ZP.order,
             requiredFirstCharacters: ['<'],
             match: (e) => u.hf.exec(e),
             parse: (e, t, n) => (0, u.ZP)(e, n)
         },
         customEmoji: {
-            order: b.ZP.order,
+            order: I.ZP.order,
             requiredFirstCharacters: ['<'],
             match: (e) => /^<a?:(\w+):(\d+)>/.exec(e),
             parse: (e) => ({
@@ -316,7 +316,7 @@ let P = (e) => {
             })
         },
         timestamp: {
-            order: b.ZP.order - 1,
+            order: I.ZP.order - 1,
             requiredFirstCharacters: ['<'],
             match: (e) => y.Ay.exec(e),
             parse(e) {
@@ -337,7 +337,7 @@ let P = (e) => {
             parse: s().defaultRules.u.parse
         },
         spoiler: {
-            order: b.ZP.order,
+            order: I.ZP.order,
             requiredFirstCharacters: ['|'],
             match: (e) => N.$92.exec(e),
             parse: (e, t, n) => ({
@@ -346,7 +346,7 @@ let P = (e) => {
             })
         },
         staticRouteLink: {
-            order: b.ZP.order,
+            order: I.ZP.order,
             requiredFirstCharacters: ['<'],
             match: (e) => N.PEY.exec(e),
             parse(e, t, n) {
@@ -377,21 +377,21 @@ let P = (e) => {
         },
         heading: g.Z,
         list: v.Z,
-        subtext: I.Z
+        subtext: b.Z
     },
-    G = (0, A.Z)([U, S.Z]),
-    B = i().omit(G, ['inlineCode', 'codeBlock', 'br', 'blockQuote', 'subtext']),
-    Z = i().omit(G, ['inlineCode', 'codeBlock', 'br', 'blockQuote', 'autolink', 'url', 'attachmentLink', 'mention', 'roleMention', 'channelMention', 'channelOrMessageUrl', 'mediaPostLink', 'subtext']),
-    F = i().omit(G, ['codeBlock', 'br', 'mention', 'channel', 'roleMention', 'attachmentLink', 'subtext']),
+    B = (0, A.Z)([U, S.Z]),
+    G = i().omit(B, ['inlineCode', 'codeBlock', 'br', 'blockQuote', 'subtext']),
+    Z = i().omit(B, ['inlineCode', 'codeBlock', 'br', 'blockQuote', 'autolink', 'url', 'attachmentLink', 'mention', 'roleMention', 'channelMention', 'channelOrMessageUrl', 'mediaPostLink', 'subtext']),
+    F = i().omit(B, ['codeBlock', 'br', 'mention', 'channel', 'roleMention', 'attachmentLink', 'subtext']),
     V = i().omit(
         (0, A.Z)([
-            G,
+            B,
             {
                 inlineCode: {
                     match(e, t, n) {
-                        let r = G.codeBlock.match(e, t, n);
+                        let r = B.codeBlock.match(e, t, n);
                         if (null != r) return r;
-                        let i = G.inlineCode.match(e, t, n);
+                        let i = B.inlineCode.match(e, t, n);
                         if (null != i) return i;
                     }
                 }
@@ -399,10 +399,10 @@ let P = (e) => {
         ]),
         ['blockQuote', 'codeBlock', 'br']
     ),
-    j = i().omit(G, ['codeBlock', 'br', 'blockQuote']),
-    H = i().omit(G, ['codeBlock', 'br', 'attachmentLink', 'mention', 'roleMention', 'channel', 'paragraph', 'newline', 'subtext']),
-    Y = i().omit(G, ['codeBlock', 'blockQuote', 'br']),
-    W = i().omit(G, ['codeBlock', 'br', 'inlineCode']);
+    j = i().omit(B, ['codeBlock', 'br', 'blockQuote']),
+    H = i().omit(B, ['codeBlock', 'br', 'attachmentLink', 'mention', 'roleMention', 'channel', 'paragraph', 'newline', 'subtext']),
+    Y = i().omit(B, ['codeBlock', 'blockQuote', 'br']),
+    W = i().omit(B, ['codeBlock', 'br', 'inlineCode']);
 function K(e, t) {
     return 0 === e.length || 0 === t || '' === e.charAt(t - 1).trim();
 }
@@ -443,11 +443,11 @@ let z = (0, A.Z)([
             }
         }
     },
-    i().omit(G, ['url'])
+    i().omit(B, ['url'])
 ]);
 t.Z = {
-    RULES: G,
-    CHANNEL_TOPIC_RULES: B,
+    RULES: B,
+    CHANNEL_TOPIC_RULES: G,
     VOICE_CHANNEL_STATUS_RULES: Z,
     EMBED_TITLE_RULES: F,
     INLINE_REPLY_RULES: V,

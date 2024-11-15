@@ -29,8 +29,8 @@ var r,
     g = n(592125),
     E = n(650774),
     v = n(271383),
-    I = n(430824),
-    b = n(158776),
+    b = n(430824),
+    I = n(158776),
     S = n(885110),
     T = n(594174),
     y = n(981631),
@@ -73,8 +73,8 @@ function O(e, t, n, r) {
                 index: r
             };
         default:
-            let i = I.Z.getGuild(e),
-                a = null != i ? I.Z.getRole(i.id, t) : null;
+            let i = b.Z.getGuild(e),
+                a = null != i ? b.Z.getRole(i.id, t) : null;
             return {
                 type: 'GROUP',
                 key: t,
@@ -87,9 +87,9 @@ function O(e, t, n, r) {
 }
 function D(e, t, n) {
     let r = n === m.default.getId(),
-        i = b.Z.isMobileOnline(n),
-        a = r ? S.Z.getStatus() : b.Z.getStatus(n, e),
-        s = r ? S.Z.getActivities() : b.Z.getActivities(n, e),
+        i = I.Z.isMobileOnline(n),
+        a = r ? S.Z.getStatus() : I.Z.getStatus(n, e),
+        s = r ? S.Z.getActivities() : I.Z.getActivities(n, e),
         o = h.Z.getStreamForUser(n, e),
         l = T.default.getUser(n);
     return null == l
@@ -130,7 +130,7 @@ function L(e) {
 ((a = r || (r = {})).GROUP = 'GROUP'), (a.MEMBER = 'MEMBER'), (a.CONTENT_INVENTORY = 'CONTENT_INVENTORY'), (a.CONTENT_INVENTORY_GROUP = 'CONTENT_INVENTORY_GROUP'), (a.HIDDEN_CONTENT_INVENTORY = 'HIDDEN_CONTENT_INVENTORY'), (a.CONTENT_INVENTORY_LEADERBOARD = 'CONTENT_INVENTORY_LEADERBOARD');
 class x {
     updateOwnerId() {
-        let e = I.Z.getGuild(this.guildId);
+        let e = b.Z.getGuild(this.guildId);
         if (null == e) return !1;
         let t = p.iJ(e);
         return this.ownerId !== t && ((this.ownerId = t), !0);
@@ -251,9 +251,9 @@ function U() {
     let e = m.default.getId();
     w.forEach(null, (t) => t.rebuildMember(e));
 }
-class G extends (i = d.ZP.Store) {
+class B extends (i = d.ZP.Store) {
     initialize() {
-        this.waitFor(T.default, I.Z, g.Z, v.ZP, b.Z, S.Z, m.default, E.Z, h.Z, _.Z), this.syncWith([S.Z], U), this.syncWith([h.Z], k);
+        this.waitFor(T.default, b.Z, g.Z, v.ZP, I.Z, S.Z, m.default, E.Z, h.Z, _.Z), this.syncWith([S.Z], U), this.syncWith([h.Z], k);
     }
     getProps(e, t) {
         let n = w.get(e, L(t));
@@ -268,8 +268,8 @@ class G extends (i = d.ZP.Store) {
         return w.get(e, L(t)).rows;
     }
 }
-N(G, 'displayName', 'ChannelMemberStore'),
-    (t.ZP = new G(f.Z, {
+N(B, 'displayName', 'ChannelMemberStore'),
+    (t.ZP = new B(f.Z, {
         CONNECTION_OPEN: M,
         OVERLAY_INITIALIZE: M,
         GUILD_MEMBER_LIST_UPDATE: function (e) {

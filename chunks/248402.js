@@ -15,7 +15,7 @@ var a,
     g = n(131951),
     E = n(606304),
     v = n(354459);
-function I() {
+function b() {
     let e,
         t = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     if (null == r) e = null;
@@ -48,16 +48,16 @@ function I() {
     }
     i !== e && ((i = e), t && y.emitChange());
 }
-let b = c().debounce(I, 300);
+let I = c().debounce(b, 300);
 function S() {
-    return b(), !1;
+    return I(), !1;
 }
 class T extends (a = d.ZP.Store) {
     initialize() {
         this.waitFor(_.Z, m.default, E.Z, h.Z, g.Z), this.syncWith([_.Z, h.Z], S);
     }
     getSpeaker(e) {
-        return r !== e && ((r = e), I(!1)), null != i ? i : m.default.getId();
+        return r !== e && ((r = e), b(!1)), null != i ? i : m.default.getId();
     }
 }
 (l = 'VideoSpeakerStore'),

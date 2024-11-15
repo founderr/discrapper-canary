@@ -16,8 +16,8 @@ var r = n(392711),
 let g = h.YN.GLOBAL_FEED,
     E = new Map(),
     v = new Set(),
-    I = new Map(),
-    b = null,
+    b = new Map(),
+    I = null,
     S = (0, r.debounce)(f.yK, 3000, { trailing: !0 });
 function T(e, t) {
     i.Z.dispatch({
@@ -46,9 +46,9 @@ function N(e) {
 function C() {
     if ((N(g), !A(g))) return;
     let e = p.Z.getFeed(g);
-    if ((null == e ? void 0 : e.refresh_stale_inbox_after_ms) != null && null == b) return;
+    if ((null == e ? void 0 : e.refresh_stale_inbox_after_ms) != null && null == I) return;
     let t = (null == e ? void 0 : e.expired_at) == null ? 0 : new Date(e.expired_at).getTime() - Date.now(),
-        n = Math.max(0, null == b ? 0 : new Date(b).getTime() - Date.now(), t);
+        n = Math.max(0, null == I ? 0 : new Date(I).getTime() - Date.now(), t);
     T(g, {
         loading: !1,
         nextFetchDate: new Date(Date.now() + n)
@@ -73,20 +73,20 @@ async function R(e) {
                 feedId: e,
                 feed: n
             }),
-                I.set(e, 0),
+                b.set(e, 0),
                 v.delete(e),
                 T(e, { loading: !1 }),
-                e === g && ((b = null), C());
+                e === g && ((I = null), C());
         } catch (a) {
             var n;
-            let r = null !== (n = I.get(e)) && void 0 !== n ? n : 0;
+            let r = null !== (n = b.get(e)) && void 0 !== n ? n : 0;
             if (r < 3) {
                 let n = 1000 * Math.pow(5, r);
                 E.set(
                     e,
                     setTimeout(() => R(e, { force: t }), n)
                 ),
-                    I.set(e, r + 1);
+                    b.set(e, r + 1);
             } else
                 i.Z.dispatch({
                     type: 'CONTENT_INVENTORY_CLEAR_FEED',
@@ -105,7 +105,7 @@ function D(e) {
 function L(e) {
     let { refreshAfterMs: t } = e,
         n = p.Z.getFeed(g);
-    if ((null == n ? void 0 : n.refresh_stale_inbox_after_ms) != null) (b = new Date(Date.now() + (null != t ? t : n.refresh_stale_inbox_after_ms)).toUTCString()), C();
+    if ((null == n ? void 0 : n.refresh_stale_inbox_after_ms) != null) (I = new Date(Date.now() + (null != t ? t : n.refresh_stale_inbox_after_ms)).toUTCString()), C();
 }
 function x(e) {
     var t;

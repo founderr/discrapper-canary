@@ -51,12 +51,12 @@ let d = (e, t) => ({
             case r.re.ACTION_ROW:
             case r.re.BUTTON:
             case r.re.STRING_SELECT:
-            case r.re.INPUT_TEXT:
+            case r.re.TEXT_INPUT:
             case r.re.USER_SELECT:
             case r.re.ROLE_SELECT:
             case r.re.MENTIONABLE_SELECT:
             case r.re.CHANNEL_SELECT:
-            case r.re.TEXT:
+            case r.re.TEXT_DISPLAY:
             case r.re.MEDIA_GALLERY:
             case r.re.SEPARATOR:
                 return !0;
@@ -71,7 +71,7 @@ function h(e) {
             (function e(t, n, i) {
                 var s, u, f, _, h, g, E, v;
                 if (!p(t.type)) return null;
-                let { includeEmojiSrc: I } = n;
+                let { includeEmojiSrc: b } = n;
                 switch (t.type) {
                     case r.re.ACTION_ROW: {
                         let a = t.components
@@ -89,7 +89,7 @@ function h(e) {
                         };
                     }
                     case r.re.BUTTON: {
-                        let e = null != t.emoji ? d(t.emoji, I) : void 0;
+                        let e = null != t.emoji ? d(t.emoji, b) : void 0;
                         return {
                             type: r.re.BUTTON,
                             id: m(i),
@@ -114,13 +114,13 @@ function h(e) {
                                 value: e.value,
                                 default: e.default,
                                 description: e.description,
-                                emoji: null != e.emoji ? d(e.emoji, I) : void 0
+                                emoji: null != e.emoji ? d(e.emoji, b) : void 0
                             })),
                             placeholder: null !== (s = t.placeholder) && void 0 !== s ? s : c.intl.string(c.t.Otr6W1),
                             minValues: t.min_values,
                             maxValues: t.max_values
                         };
-                    case r.re.INPUT_TEXT:
+                    case r.re.TEXT_INPUT:
                         return {
                             type: t.type,
                             id: m(i),
@@ -179,9 +179,9 @@ function h(e) {
                             channelTypes: t.channel_types,
                             defaultValues: t.default_values
                         };
-                    case r.re.TEXT:
+                    case r.re.TEXT_DISPLAY:
                         return {
-                            type: r.re.TEXT,
+                            type: r.re.TEXT_DISPLAY,
                             id: m(i),
                             content: t.content
                         };

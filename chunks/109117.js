@@ -31,7 +31,7 @@ async function f() {
             };
         })(i.K.get(d, {}), n),
         l = (function (e, t, n) {
-            var i, a, s, o, l, u, c, d, f, _, p, h, m, g, E, v, I, b, S;
+            var i, a, s, o, l, u, c, d, f, _, p, h, m, g, E, v, b, I, S;
             function T(e) {
                 return (null == n ? void 0 : n.storedInformation) != null && 1 === n.storedInformation[e];
             }
@@ -72,8 +72,8 @@ async function f() {
                 electron_crash_reporter_did_crash: e,
                 minidump_exception_type: null !== (E = null == N ? void 0 : N.exceptionString) && void 0 !== E ? E : null,
                 minidump_exception_module_name: null !== (v = null == N ? void 0 : N.exceptionModuleName) && void 0 !== v ? v : null,
-                minidump_relative_crash_address: null !== (I = null == N ? void 0 : N.relativeCrashAddress) && void 0 !== I ? I : null,
-                minidump_exception_module_version: null !== (b = null == N ? void 0 : N.exceptionModuleVersion) && void 0 !== b ? b : null,
+                minidump_relative_crash_address: null !== (b = null == N ? void 0 : N.relativeCrashAddress) && void 0 !== b ? b : null,
+                minidump_exception_module_version: null !== (I = null == N ? void 0 : N.exceptionModuleVersion) && void 0 !== I ? I : null,
                 minidump_exception_module_code_id: null !== (S = null == N ? void 0 : N.exceptionModuleCodeId) && void 0 !== S ? S : null,
                 ...A
             };

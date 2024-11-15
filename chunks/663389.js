@@ -15,8 +15,8 @@ let _ = f.QZA.CLOSED,
     g = {},
     E = {},
     v = null,
-    I = null,
-    b = !1,
+    b = null,
+    I = !1,
     S = !1,
     T = null,
     y = null,
@@ -35,7 +35,7 @@ function O(e) {
         (S = !!e.openWithoutBackstack),
         (_ = f.QZA.OPEN),
         (E = {}),
-        (I = {
+        (b = {
             ...(v = {
                 [f.oAB.ACCOUNT]: {
                     userId: o.id,
@@ -55,7 +55,7 @@ function O(e) {
         (R = null !== (s = e.impressionSource) && void 0 !== s ? s : null);
 }
 function D() {
-    (_ = f.QZA.CLOSED), (b = !1), (v = null), (C = null), (I = null), (p = null), (h = null), (m = {}), (g = {}), (y = null), (A = null), (N = []), (R = null);
+    (_ = f.QZA.CLOSED), (I = !1), (v = null), (C = null), (b = null), (p = null), (h = null), (m = {}), (g = {}), (y = null), (A = null), (N = []), (R = null);
 }
 function L() {
     (_ = f.QZA.OPEN), (E = {});
@@ -65,10 +65,10 @@ class x extends (s = u.ZP.Store) {
         this.waitFor(d.default);
     }
     hasChanges() {
-        return null != I && null != v && (!!this.isOpen() || T === f.cII.USER_SETTINGS) && !l().isEqual(I, v);
+        return null != b && null != v && (!!this.isOpen() || T === f.cII.USER_SETTINGS) && !l().isEqual(b, v);
     }
     isOpen() {
-        return b;
+        return I;
     }
     getPreviousSection() {
         return p;
@@ -91,7 +91,7 @@ class x extends (s = u.ZP.Store) {
             section: h,
             subsection: null != h ? m[h] : null,
             scrollPosition: null != h ? g[h] : null,
-            settings: I,
+            settings: b,
             errors: E,
             hasChanges: this.hasChanges(),
             openWithoutBackstack: S,
@@ -116,7 +116,7 @@ class x extends (s = u.ZP.Store) {
         : (r[i] = a),
     (t.Z = new x(c.Z, {
         USER_SETTINGS_MODAL_OPEN: function (e) {
-            (b = !0), O(e);
+            (I = !0), O(e);
         },
         USER_SETTINGS_MODAL_INIT: O,
         USER_SETTINGS_MODAL_CLOSE: D,
@@ -143,9 +143,9 @@ class x extends (s = u.ZP.Store) {
         },
         USER_SETTINGS_MODAL_UPDATE_ACCOUNT: function (e) {
             let { settings: t } = e;
-            null == I && (I = {});
-            let n = I[f.oAB.ACCOUNT];
-            I[f.oAB.ACCOUNT] = {
+            null == b && (b = {});
+            let n = b[f.oAB.ACCOUNT];
+            b[f.oAB.ACCOUNT] = {
                 ...n,
                 ...t
             };
@@ -155,7 +155,7 @@ class x extends (s = u.ZP.Store) {
             let e = d.default.getCurrentUser();
             L(),
                 null != e &&
-                    (I = {
+                    (b = {
                         ...(v = {
                             [f.oAB.ACCOUNT]: {
                                 userId: e.id,

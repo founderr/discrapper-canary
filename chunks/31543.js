@@ -20,8 +20,8 @@ let p = i.forwardRef(function (e, t) {
             }),
             a.X
         ),
-        I = l.ZN.useStore((e) => e.searchPlaceholder),
-        b = l.ZN.useStore((e) => e.inspectedExpressionPosition, a.X),
+        b = l.ZN.useStore((e) => e.searchPlaceholder),
+        I = l.ZN.useStore((e) => e.inspectedExpressionPosition, a.X),
         S = i.useCallback(
             (e) => {
                 var t;
@@ -53,7 +53,7 @@ let p = i.forwardRef(function (e, t) {
                 query: E,
                 ref: g,
                 size: o.ZP.Sizes.MEDIUM,
-                placeholder: null != I ? I : m ? f.intl.string(f.t.dt5h1N) : f.intl.string(f.t['Pck/4e']),
+                placeholder: null != b ? b : m ? f.intl.string(f.t.dt5h1N) : f.intl.string(f.t['Pck/4e']),
                 onClear: T,
                 onKeyDown: n,
                 onQueryChange: S,
@@ -64,7 +64,7 @@ let p = i.forwardRef(function (e, t) {
                     'aria-haspopup': 'grid',
                     'aria-controls': d.Vr,
                     'aria-expanded': !0,
-                    'aria-activedescendant': (0, s.NE)(d.Vr, b.columnIndex, b.rowIndex)
+                    'aria-activedescendant': (0, s.NE)(d.Vr, I.columnIndex, I.rowIndex)
                 }
             })
         })

@@ -30,8 +30,8 @@ let _ = {
     g = '',
     E = '',
     v = [],
-    I = [],
     b = [],
+    I = [],
     S = [];
 function T(e) {
     return e.replace(/^https?:/, '');
@@ -50,13 +50,13 @@ class y extends (r = o.ZP.Store) {
         return v;
     }
     getTrendingCategories() {
-        return I;
+        return b;
     }
     getSelectedFormat() {
         return h;
     }
     getSuggestions() {
-        return b;
+        return I;
     }
     getTrendingSearchTerms() {
         return S;
@@ -76,7 +76,7 @@ class y extends (r = o.ZP.Store) {
             m = e.analyticsID;
         },
         GIF_PICKER_QUERY: function (e) {
-            '' === (g = e.query) && ((E = ''), (v = []), (b = []));
+            '' === (g = e.query) && ((E = ''), (v = []), (I = []));
         },
         GIF_PICKER_QUERY_SUCCESS: function (e) {
             if (null != e.query && g === E) return !1;
@@ -121,7 +121,7 @@ class y extends (r = o.ZP.Store) {
         },
         GIF_PICKER_TRENDING_FETCH_SUCCESS: function (e) {
             let t = e.trendingCategories;
-            I = [
+            b = [
                 ...(null != e.trendingGIFPreview
                     ? [
                           {
@@ -143,7 +143,7 @@ class y extends (r = o.ZP.Store) {
         },
         GIF_PICKER_SUGGESTIONS_SUCCESS: function (e) {
             let { items: t } = e;
-            b = t;
+            I = t;
         },
         GIF_PICKER_TRENDING_SEARCH_TERMS_SUCCESS: function (e) {
             let { items: t } = e;

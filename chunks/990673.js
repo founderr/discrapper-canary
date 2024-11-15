@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var s = n(382790),
-    r = n(430036),
+var r = n(382790),
+    s = n(430036),
     a = n(518084),
     l = n(240038);
 function o(e) {
@@ -14,12 +14,12 @@ function o(e) {
     return (0, i.jsxs)(a.ZP, {
         className: l.wrapper,
         children: [
-            (0, i.jsx)(s.Z, {
+            (0, i.jsx)(r.Z, {
                 contained: !0,
                 dragStart: t,
                 locked: c
             }),
-            (0, i.jsx)(r.Z, {
+            (0, i.jsx)(s.Z, {
                 dragStart: t,
                 locked: c,
                 pinned: o,

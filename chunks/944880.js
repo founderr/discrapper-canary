@@ -18,7 +18,7 @@ let g = null,
 function v(e) {
     let t = o.Z.createFromServer(e.entitlement);
     (0, p._k)(t)
-        ? I({ forceRefresh: !0 })
+        ? b({ forceRefresh: !0 })
         : (0, p.YE)(t) &&
           null != _.Z.getTenureRewardStatusForRewardId(t.skuId) &&
           a.Z.dispatch({
@@ -26,7 +26,7 @@ function v(e) {
               tenureRewardIds: [t.skuId]
           });
 }
-function I() {
+function b() {
     let { forceRefresh: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     S();
     let t = u.Z.getForApplication(h.CL),
@@ -57,7 +57,7 @@ function I() {
                 })(s)) &&
             null == r
         )
-            b();
+            I();
         else {
             let e = u.Z.getForApplication(h.CL);
             if (null == e) return;
@@ -71,7 +71,7 @@ function I() {
                 });
         }
 }
-async function b() {
+async function I() {
     if (!E)
         (E = !0),
             await d.V(),
@@ -82,7 +82,7 @@ async function b() {
                     let e = (0, p.GT)();
                     if ((null == e ? void 0 : e.redeemable_at) == null) return;
                     let t = (null == e ? void 0 : e.redeemable_at) != null ? new Date(e.redeemable_at).getTime() - Date.now() : null;
-                    null != t && t > 0 && (g = setTimeout(I, t));
+                    null != t && t > 0 && (g = setTimeout(b, t));
                 })()
             );
 }
@@ -93,12 +93,12 @@ function T() {
     S();
 }
 function y() {
-    I();
+    b();
 }
 class A extends s.Z {
     forceRefreshIfOutdated() {
         let e = _.Z.getState();
-        null != e.lastFetchTimeMs && Date.now() - e.lastFetchTimeMs > 86400000 && I({ forceRefresh: !0 });
+        null != e.lastFetchTimeMs && Date.now() - e.lastFetchTimeMs > 86400000 && b({ forceRefresh: !0 });
     }
     constructor(...e) {
         var t, n, r;
@@ -108,10 +108,10 @@ class A extends s.Z {
             (r = {
                 POST_CONNECTION_OPEN: y,
                 CONNECTION_CLOSED: T,
-                ENTITLEMENT_FETCH_APPLICATION_SUCCESS: () => I(),
+                ENTITLEMENT_FETCH_APPLICATION_SUCCESS: () => b(),
                 ENTITLEMENT_CREATE: v,
-                ENTITLEMENT_UPDATE: () => I(),
-                ENTITLEMENT_DELETE: () => I(),
+                ENTITLEMENT_UPDATE: () => b(),
+                ENTITLEMENT_DELETE: () => b(),
                 LOGOUT: S
             }),
             n in t

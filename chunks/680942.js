@@ -8,8 +8,8 @@ var r = n(200651),
     d = n(884697),
     u = n(67409),
     m = n(474936),
-    p = n(231338),
-    h = n(388032),
+    h = n(231338),
+    p = n(388032),
     f = n(65297);
 let g = {
     dark: [
@@ -78,11 +78,11 @@ t.Z = (e) => {
         { analyticsLocations: k } = (0, l.ZP)(),
         j = a.useRef(null),
         E = (0, s.Z)(j),
-        I = _ ? p.BR.DARK : p.BR.LIGHT;
+        I = _ ? h.BR.DARK : h.BR.LIGHT;
     return (0, d.x6)(t)
         ? null
         : (0, r.jsx)(i.Tooltip, {
-              text: h.intl.string(h.t['JCFN//']),
+              text: p.intl.string(p.t['JCFN//']),
               delay: x,
               children: (e) =>
                   (0, r.jsx)(i.Button, {
@@ -93,7 +93,7 @@ t.Z = (e) => {
                       look: i.Button.Looks.FILLED,
                       size: i.ButtonSizes.ICON,
                       innerClassName: f.giftButtonInner,
-                      'aria-label': h.intl.string(h.t.PEjaCw),
+                      'aria-label': p.intl.string(p.t.PEjaCw),
                       onClick: (e) => {
                           e.stopPropagation(),
                               (0, c.Z)({

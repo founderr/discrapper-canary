@@ -46,7 +46,7 @@ function d(e, t) {
         case i.re.MENTIONABLE_SELECT:
         case i.re.CHANNEL_SELECT:
             return a(e, t);
-        case i.re.INPUT_TEXT:
+        case i.re.TEXT_INPUT:
             return o(e, t);
         default:
             u()(!1, 'missing validator for this component');

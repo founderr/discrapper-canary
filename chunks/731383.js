@@ -40,7 +40,7 @@ var r = n(728804),
         strictNullHandling: !1
     },
     p = {},
-    h = function e(t, n, a, s, o, u, d, f, h, m, g, E, v, I, b, S) {
+    h = function e(t, n, a, s, o, u, d, f, h, m, g, E, v, b, I, S) {
         for (var T, y, A = t, N = S, C = 0, R = !1; void 0 !== (N = N.get(p)) && !R; ) {
             var O = N.get(t);
             if (((C += 1), void 0 !== O)) {
@@ -61,13 +61,13 @@ var r = n(728804),
                     })),
             null === A)
         ) {
-            if (o) return d && !I ? d(n, _.encoder, b, 'key', E) : n;
+            if (o) return d && !b ? d(n, _.encoder, I, 'key', E) : n;
             A = '';
         }
-        if ('string' == typeof (T = A) || 'number' == typeof T || 'boolean' == typeof T || 'symbol' == typeof T || 'bigint' == typeof T || i.isBuffer(A)) return d ? [v(I ? n : d(n, _.encoder, b, 'key', E)) + '=' + v(d(A, _.encoder, b, 'value', E))] : [v(n) + '=' + v(String(A))];
+        if ('string' == typeof (T = A) || 'number' == typeof T || 'boolean' == typeof T || 'symbol' == typeof T || 'bigint' == typeof T || i.isBuffer(A)) return d ? [v(b ? n : d(n, _.encoder, I, 'key', E)) + '=' + v(d(A, _.encoder, I, 'value', E))] : [v(n) + '=' + v(String(A))];
         var D = [];
         if (void 0 === A) return D;
-        if ('comma' === a && l(A)) I && d && (A = i.maybeMap(A, d)), (y = [{ value: A.length > 0 ? A.join(',') || null : void 0 }]);
+        if ('comma' === a && l(A)) b && d && (A = i.maybeMap(A, d)), (y = [{ value: A.length > 0 ? A.join(',') || null : void 0 }]);
         else if (l(f)) y = f;
         else {
             var L = Object.keys(A);
@@ -80,7 +80,7 @@ var r = n(728804),
                 var k = l(A) ? ('function' == typeof a ? a(x, M) : x) : x + (m ? '.' + M : '[' + M + ']');
                 S.set(t, C);
                 var U = r();
-                U.set(p, S), c(D, e(P, k, a, s, o, u, 'comma' === a && I && l(A) ? null : d, f, h, m, g, E, v, I, b, U));
+                U.set(p, S), c(D, e(P, k, a, s, o, u, 'comma' === a && b && l(A) ? null : d, f, h, m, g, E, v, b, I, U));
             }
         }
         return D;
@@ -137,6 +137,6 @@ e.exports = function (e, t) {
         if (!u.skipNulls || null !== s[E]) c(d, h(s[E], E, f, _, u.strictNullHandling, u.skipNulls, u.encode ? u.encoder : null, u.filter, u.sort, u.allowDots, u.serializeDate, u.format, u.formatter, u.encodeValuesOnly, u.charset, p));
     }
     var v = d.join(u.delimiter),
-        I = !0 === u.addQueryPrefix ? '?' : '';
-    return u.charsetSentinel && ('iso-8859-1' === u.charset ? (I += 'utf8=%26%2310003%3B&') : (I += 'utf8=%E2%9C%93&')), v.length > 0 ? I + v : '';
+        b = !0 === u.addQueryPrefix ? '?' : '';
+    return u.charsetSentinel && ('iso-8859-1' === u.charset ? (b += 'utf8=%26%2310003%3B&') : (b += 'utf8=%E2%9C%93&')), v.length > 0 ? b + v : '';
 };

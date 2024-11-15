@@ -9,7 +9,7 @@ n.d(t, {
         return S;
     },
     W5: function () {
-        return b;
+        return I;
     },
     _T: function () {
         return p;
@@ -103,7 +103,7 @@ function v(e) {
         maxDaysOld: 7
     });
 }
-function I(e, t, n) {
+function b(e, t, n) {
     if (null == e) return o.intl.string(o.t.sKdZ6e);
     if (!d(e.username)) return '???';
     let r = n;
@@ -111,13 +111,13 @@ function I(e, t, n) {
     let i = r ? l(e.username) : e.username;
     return 'never' !== t.decoration ? u(i) : i;
 }
-function b(e, t) {
+function I(e, t) {
     let n = {
             ...c,
             ...t
         },
         r = 'auto' !== n.identifiable || i.Z.hidePersonalInformation;
-    return I(e, n, r);
+    return b(e, n, r);
 }
 function S(e) {
     return (0, r.e7)([a.default], () => {
@@ -128,13 +128,13 @@ t.ZP = {
     getName: _,
     useName: p,
     isNameConcealed: (e) => 4 === e.length && e.endsWith('...'),
-    getUserTag: b,
+    getUserTag: I,
     useUserTag: function (e, t) {
         let n = {
             ...c,
             ...t
         };
-        return I(
+        return b(
             e,
             n,
             (0, r.e7)([i.Z], () => i.Z.hidePersonalInformation)
@@ -145,7 +145,7 @@ t.ZP = {
         let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         if (null == e) return '???';
         let r = h(e),
-            i = n ? b(e) : null !== (t = e.username) && void 0 !== t ? t : '???';
+            i = n ? I(e) : null !== (t = e.username) && void 0 !== t ? t : '???';
         return r === i ? r : null != r ? ''.concat(r, ' (').concat(i, ')') : i;
     },
     getGlobalName: h,

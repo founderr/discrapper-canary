@@ -1,10 +1,10 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return G;
+            return B;
         },
         openCollectibleRewardModal: function () {
-            return B;
+            return G;
         }
     }),
     n(773603),
@@ -26,8 +26,8 @@ var r = n(200651),
     g = n(70097),
     E = n(454585),
     v = n(164946),
-    I = n(369111),
-    b = n(25990),
+    b = n(369111),
+    I = n(25990),
     S = n(594174),
     T = n(960048),
     y = n(272008),
@@ -41,7 +41,7 @@ var r = n(200651),
     x = n(388032),
     w = n(837053);
 function M() {
-    let e = b.Z.getAllPending(),
+    let e = I.Z.getAllPending(),
         t = (0, v.ED)(e);
     return (0, d.Mn)(t).finally(d.si);
 }
@@ -49,8 +49,8 @@ function P(e) {
     var t;
     let { transitionState: n, onClose: a, quest: l, location: d, reward: _, decoration: p, onUseNow: h, preview: g } = e,
         E = i.useRef(null),
-        [v, I] = i.useState(null),
-        b = i.useRef(new o.qA()),
+        [v, b] = i.useState(null),
+        I = i.useRef(new o.qA()),
         T = (0, u.e7)([f.Z], () => f.Z.useReducedMotion),
         N = (0, u.e7)([S.default], () => S.default.getCurrentUser()),
         R = i.useMemo(() => (0, C.fh)(l, C.eC.HERO), [l]),
@@ -67,9 +67,9 @@ function P(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(o.O_, {
-                ref: I,
+                ref: b,
                 className: w.confettiCanvas,
-                environment: b.current
+                environment: I.current
             }),
             (0, r.jsx)('div', {
                 ref: E,
@@ -203,13 +203,13 @@ function U(e) {
         ]
     });
 }
-function G(e) {
+function B(e) {
     var t, n;
     let { quest: a, location: s, onClose: o, transitionState: u, preview: c } = e,
         f = i.useMemo(() => (0, N.xn)(a.config), [a]),
         [p, m] = (function (e) {
             let { product: t, isFetching: n } = (0, h.T)(e),
-                {} = (0, I.Z)({}),
+                {} = (0, b.Z)({}),
                 r = i.useMemo(() => {
                     if (null == t || n) return null;
                     let e = t.items.find((e) => e.type === l.Z.AVATAR_DECORATION);
@@ -238,7 +238,7 @@ function G(e) {
                 preview: c
             });
 }
-function B(e, t, i) {
+function G(e, t, i) {
     (0, c.openModalLazy)(async () => {
         let { default: a } = await Promise.resolve().then(n.bind(n, 920916));
         return (n) =>

@@ -23,7 +23,7 @@ function g(e, t) {
 }
 async function E(e) {
     var t, a, s, E;
-    let { userId: v, section: I, subsection: b, guildId: S, channelId: T, friendToken: y, analyticsLocation: A, showGuildProfile: N = !0, ...C } = e,
+    let { userId: v, section: b, subsection: I, guildId: S, channelId: T, friendToken: y, analyticsLocation: A, showGuildProfile: N = !0, ...C } = e,
         R = d.default.getUser(v);
     if (null == R) return;
     let O = _.Z.getUserProfile(v),
@@ -33,17 +33,17 @@ async function E(e) {
         { party: w, assets: M, application_id: P } = null != D ? D : {},
         k = null != P ? l.Z.getApplication(P) : null,
         U = x ? p.j28.ONLINE_MOBILE : p.j28.ONLINE_DESKTOP,
-        G = L === p.Skl.ONLINE ? U : L;
+        B = L === p.Skl.ONLINE ? U : L;
     (m = await (0, i.openModalLazy)(
         async () => {
-            let { default: e } = await Promise.all([n.e('56630'), n.e('89943'), n.e('62880'), n.e('82412'), n.e('8576')]).then(n.bind(n, 533835));
+            let { default: e } = await Promise.all([n.e('89943'), n.e('62880'), n.e('82412'), n.e('8576')]).then(n.bind(n, 533835));
             return (t) =>
                 (0, r.jsx)(e, {
                     user: R,
                     guildId: S,
                     friendToken: y,
-                    initialSection: I,
-                    initialSubsection: b,
+                    initialSection: b,
+                    initialSubsection: I,
                     channelId: T,
                     showGuildProfile: N,
                     ...t,
@@ -66,7 +66,7 @@ async function E(e) {
             party_id: null == w ? void 0 : w.id,
             party_platform: (0, h.Ps)(null == w ? void 0 : w.id) ? p.ABu.SPOTIFY : null,
             game_platform: (0, o.Z)(D),
-            profile_user_status: G,
+            profile_user_status: B,
             profile_has_nitro_customization: (null == O ? void 0 : O.banner) != null,
             profile_has_profile_effect: (null == O ? void 0 : O.profileEffectId) != null,
             ...(null == A ? null : (0, f.expandLocation)(A))
@@ -75,7 +75,7 @@ async function E(e) {
 function v() {
     null != m && (0, i.closeModal)(m), (m = null);
 }
-class I extends s.Z {
+class b extends s.Z {
     _initialize() {
         a.Z.subscribe('USER_PROFILE_MODAL_OPEN', E), a.Z.subscribe('USER_PROFILE_MODAL_CLOSE', v);
     }
@@ -83,4 +83,4 @@ class I extends s.Z {
         a.Z.unsubscribe('USER_PROFILE_MODAL_OPEN', E), a.Z.unsubscribe('USER_PROFILE_MODAL_CLOSE', v);
     }
 }
-t.Z = new I();
+t.Z = new b();

@@ -18,14 +18,14 @@ var i = n(481060),
     E = n(110223);
 t.Z = {
     async handleVoiceConnect(e) {
-        let { channel: t, connected: v, needSubscriptionToAccess: I, locked: b = !1, routeDirectlyToChannel: S = !1, bypassChangeModal: T, bypassBlockedWarningModal: y, bypassGuildIdCheck: A = !1 } = e;
+        let { channel: t, connected: v, needSubscriptionToAccess: b, locked: I = !1, routeDirectlyToChannel: S = !1, bypassChangeModal: T, bypassBlockedWarningModal: y, bypassGuildIdCheck: A = !1 } = e;
         t.isThread() && (await d.Z.unarchiveThreadIfNecessary(t.id), !c.Z.hasJoined(t.id) && (await d.Z.joinThread(t, 'Join Voice')));
         let N = s.Z.getRemoteSessionId(),
             C = p.Z.getVoiceStateForSession(f.default.getId(), N),
             R = (null == C ? void 0 : C.channelId) === t.id || _.Z.getChannelId() === p.Z.getCurrentClientVoiceChannelId(t.guild_id),
             O = u.Z.getBlockedUsersForVoiceChannel(t.id);
-        return ((0, l.B)(t.id) && (y = !0), y || b || v || !(O.size > 0))
-            ? !T && !b && (0, m._)(t)
+        return ((0, l.B)(t.id) && (y = !0), y || I || v || !(O.size > 0))
+            ? !T && !I && (0, m._)(t)
                 ? new Promise((e) => {
                       (0, i.openModalLazy)(async () => {
                           let { default: i } = await n.e('65045').then(n.bind(n, 143782));
@@ -37,9 +37,9 @@ t.Z = {
                                           this.handleVoiceConnect({
                                               channel: t,
                                               connected: v,
-                                              needSubscriptionToAccess: I,
+                                              needSubscriptionToAccess: b,
                                               routeDirectlyToChannel: S,
-                                              locked: b,
+                                              locked: I,
                                               bypassChangeModal: !0
                                           })
                                       ),
@@ -47,9 +47,9 @@ t.Z = {
                               });
                       });
                   })
-                : (!b && !v && a.default.selectVoiceChannel(t.id),
+                : (!I && !v && a.default.selectVoiceChannel(t.id),
                   !__OVERLAY__ &&
-                      (v || R || I || S) &&
+                      (v || R || b || S) &&
                       !(function (e) {
                           let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                               n = e.getGuildId();
@@ -73,9 +73,9 @@ t.Z = {
                                           this.handleVoiceConnect({
                                               channel: t,
                                               connected: v,
-                                              needSubscriptionToAccess: I,
+                                              needSubscriptionToAccess: b,
                                               routeDirectlyToChannel: S,
-                                              locked: b,
+                                              locked: I,
                                               bypassChangeModal: !0,
                                               bypassBlockedWarningModal: !0
                                           })

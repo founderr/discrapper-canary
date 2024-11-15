@@ -6,7 +6,7 @@ n.d(t, {
         return S;
     },
     ZJ: function () {
-        return b;
+        return I;
     },
     mF: function () {
         return r;
@@ -30,7 +30,7 @@ var r,
     g = n(981631);
 function E(e, t, n) {
     var r;
-    let { context: i, commandTypes: a, allowNsfw: c, computedPermissions: E, userId: v, roleIds: I, isImpersonating: T, hasBaseAccessPermissions: y } = t,
+    let { context: i, commandTypes: a, allowNsfw: c, computedPermissions: E, userId: v, roleIds: b, isImpersonating: T, hasBaseAccessPermissions: y } = t,
         { applicationAllowedForUser: A, applicationAllowedForChannel: N, isGuildInstalled: C, isUserInstalled: R, commandBotId: O } = n;
     if (!a.includes(e.type)) return 2;
     if (e.nsfw && !c) return 1;
@@ -54,7 +54,7 @@ function E(e, t, n) {
     if (!y && C && (null == e.integration_types || e.integration_types.includes(o.Y.GUILD_INSTALL))) return 5;
     if (i instanceof d.Sf) {
         s()(void 0 !== N, 'missing applicationAllowedForChannel');
-        let t = b(e.permissions, i, L);
+        let t = I(e.permissions, i, L);
         if (
             (function (e) {
                 return !1 === e;
@@ -68,7 +68,7 @@ function E(e, t, n) {
         )
             return 6;
     }
-    let x = S(e.permissions, L, v, I, T);
+    let x = S(e.permissions, L, v, b, T);
     return (function (e) {
         return !0 === e;
     })(x)
@@ -87,10 +87,10 @@ function E(e, t, n) {
 function v(e) {
     return !0 === e;
 }
-function I(e) {
+function b(e) {
     return !1 === e;
 }
-function b(e, t, n) {
+function I(e, t, n) {
     if (null == e) return null;
     let r = t.id;
     if (t.isThread()) {

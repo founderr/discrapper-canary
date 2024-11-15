@@ -3,7 +3,7 @@ n.d(t, {
         return T;
     },
     ZP: function () {
-        return L;
+        return w;
     },
     eP: function () {
         return P;
@@ -125,7 +125,7 @@ function P(e) {
         })
     );
 }
-function R(e) {
+function M(e) {
     let { channel: t } = e,
         n = () => {
             (0, g._U)(t.guild_id, t.id);
@@ -146,7 +146,7 @@ function R(e) {
             })
     });
 }
-function M(e) {
+function R(e) {
     let { channel: t } = e,
         n = () => {
             (0, g.dM)(t.guild_id, t.id, !0, { section: Z.jXE.CHANNEL_LIST });
@@ -167,7 +167,7 @@ function M(e) {
             })
     });
 }
-class L extends (a = s.PureComponent) {
+class w extends (a = s.PureComponent) {
     renderEditButton() {
         return (0, o.jsx)(A, { ...this.props });
     }
@@ -175,10 +175,10 @@ class L extends (a = s.PureComponent) {
         return (0, o.jsx)(P, { ...this.props });
     }
     renderRemoveSuggestionButton() {
-        return (0, o.jsx)(R, { ...this.props });
+        return (0, o.jsx)(M, { ...this.props });
     }
     renderAcceptSuggestionButton() {
-        return (0, o.jsx)(M, { ...this.props });
+        return (0, o.jsx)(R, { ...this.props });
     }
     getClassName() {
         let { position: e, sortingPosition: t } = this.props;
@@ -190,7 +190,7 @@ class L extends (a = s.PureComponent) {
     }
 }
 (r = { isDefaultChannel: !1 }),
-    (l = 'defaultProps') in (i = L)
+    (l = 'defaultProps') in (i = w)
         ? Object.defineProperty(i, l, {
               value: r,
               enumerable: !0,

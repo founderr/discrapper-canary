@@ -34,8 +34,8 @@ function g() {
         n = (0, c._O)(),
         g = (0, i.e7)([l.Z], () => l.Z.hasAnyUnexpiredOffer()),
         E = (0, i.e7)([o.ZP], () => o.ZP.inReverseTrial()),
-        [v, I] = r.useState(!1),
-        [b, S] = r.useState([]);
+        [v, b] = r.useState(!1),
+        [I, S] = r.useState([]);
     r.useEffect(() => {
         null != e && a.Z.wait(() => _.ZP.markOutboundPromotionsSeen());
     }, [e]);
@@ -67,15 +67,15 @@ function g() {
             a.Z.wait(() => {
                 (0, f.t8)()
                     .then((e) => {
-                        S(e), I(!0);
+                        S(e), b(!0);
                     })
                     .catch(() => {
-                        S([]), I(!0);
+                        S([]), b(!0);
                     });
             });
         }, []);
     let N = {};
-    for (let { code: e, promotion: t } of b) N[t.id] = e;
+    for (let { code: e, promotion: t } of I) N[t.id] = e;
     let C = m(n, g, E, N),
         R = new Set(
             C.map((e) => {
@@ -83,7 +83,7 @@ function g() {
                 return t;
             })
         ),
-        O = b.filter((e) => {
+        O = I.filter((e) => {
             let { promotion: t } = e;
             return !R.has(t.id);
         });

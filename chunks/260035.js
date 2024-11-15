@@ -23,7 +23,7 @@ function d(e) {
             p.current.delete(e), m(p.current.size > 0);
         }, []),
         v = i.useCallback((e) => (p.current.add(e), m(!0), () => E(e)), [E]),
-        I = i.useCallback((e, t) => {
+        b = i.useCallback((e, t) => {
             for (let n of p.current) n(e, t);
         }, []);
     return (
@@ -44,7 +44,7 @@ function d(e) {
                     ref: _,
                     className: c.canvas,
                     environment: u.rq,
-                    onClick: h ? I : void 0
+                    onClick: h ? b : void 0
                 }),
                 (0, r.jsx)(a.Ji, {
                     ref: d,

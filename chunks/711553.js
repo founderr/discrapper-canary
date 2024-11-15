@@ -1,7 +1,7 @@
 var i = n(200651);
 n(192379);
-var s = n(120356),
-    r = n.n(s),
+var r = n(120356),
+    s = n.n(r),
     a = n(481060),
     l = n(518084),
     o = n(981631),
@@ -9,16 +9,16 @@ var s = n(120356),
     d = n(230519);
 t.Z = function (e) {
     let t;
-    let { title: n, header: s, children: u, renderSettings: h, onDragStart: p } = e;
+    let { title: n, header: r, children: u, renderSettings: h, onDragStart: p } = e;
     return (
         (t =
             null != n
                 ? (0, i.jsxs)(l.ZP.Bar, {
-                      className: r()(d.header, d.draggableStartArea),
+                      className: s()(d.header, d.draggableStartArea),
                       onMouseDown: p,
                       children: [
                           (0, i.jsx)(l.ZP.Content, {
-                              className: r()(d.headerTitle, d.draggableStartArea),
+                              className: s()(d.headerTitle, d.draggableStartArea),
                               dynamicSize: !0,
                               children: n
                           }),
@@ -37,7 +37,7 @@ t.Z = function (e) {
                           })
                       ]
                   })
-                : s),
+                : r),
         (0, i.jsxs)('div', {
             className: d.sidebar,
             children: [

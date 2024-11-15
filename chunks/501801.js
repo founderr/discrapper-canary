@@ -36,12 +36,12 @@ function U(e, t) {
     let n = O.vc[e.targetType];
     return null != n && !0 === n[t.key];
 }
-let h = {
+let C = {
     [S.vB8.CREATE]: D.typeCreate,
     [S.vB8.UPDATE]: D.typeUpdate,
     [S.vB8.DELETE]: D.typeDelete
 };
-function C(e) {
+function h(e) {
     let { applicationId: t } = e,
         n = (0, _.q)(t);
     return null == n
@@ -58,7 +58,7 @@ class L extends l.PureComponent {
             o = null != a ? D['themeOverride'.concat((0, R.De)(a))] : null;
         let E = s()(
             D.icon,
-            h[n],
+            C[n],
             ((e = l),
             (t = i) === S.rsA.MESSAGE_DELETE
                 ? D.targetMessage
@@ -575,7 +575,7 @@ function M(e) {
                                         newEmojiHook: (e, t) => (0, r.jsx)(d.Z, { emojiId: E }, t),
                                         applicationHook: (e, t) => {
                                             var n;
-                                            return (0, r.jsx)(C, { applicationId: null !== (n = null == o ? void 0 : o.application_id) && void 0 !== n ? n : null == E ? void 0 : E.application_id }, t);
+                                            return (0, r.jsx)(h, { applicationId: null !== (n = null == o ? void 0 : o.application_id) && void 0 !== n ? n : null == E ? void 0 : E.application_id }, t);
                                         }
                                     });
                                     return null == _

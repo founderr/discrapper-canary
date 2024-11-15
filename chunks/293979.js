@@ -168,7 +168,7 @@ let y = (e, t) =>
                     type: t.type,
                     components: y(e, t.components)
                 };
-            case d.re.INPUT_TEXT: {
+            case d.re.TEXT_INPUT: {
                 let n = N.Z.getInteractionComponentState(e, t.id);
                 return {
                     type: t.type,

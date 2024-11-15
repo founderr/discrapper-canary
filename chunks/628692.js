@@ -21,8 +21,8 @@ var r = n(200651),
     g = n(22382),
     E = n(747071),
     v = n(409673),
-    I = n(592125),
-    b = n(388032),
+    b = n(592125),
+    I = n(388032),
     S = n(42693);
 function T(e) {
     let { playSound: t } = e;
@@ -49,7 +49,7 @@ function y(e) {
 function A(e) {
     let { sound: t, playSound: n, isPlaying: i } = e,
         a = (null == t ? void 0 : t.emojiId) != null || (null == t ? void 0 : t.emojiName) != null,
-        o = b.intl.formatToPlainString(b.t.tuMUJy, {
+        o = I.intl.formatToPlainString(I.t.tuMUJy, {
             emojiName: null == t ? void 0 : t.emojiName,
             soundName: null == t ? void 0 : t.name
         });
@@ -75,20 +75,20 @@ t.ZP = function (e) {
     let { channelId: t, messageId: n, soundId: a, jumbo: s = !1 } = e,
         { currentPreviewRef: u } = i.useContext(p.Z),
         d = (0, o.e7)([h.Z], () => h.Z.getSoundById(a), [a]),
-        b = i.useMemo(() => {
+        I = i.useMemo(() => {
             var e;
             return null !== (e = (0, f.Z)(t, n, a)) && void 0 !== e ? e : d;
         }, [t, n, a, d]),
-        y = (0, o.e7)([I.Z], () => I.Z.getChannel(t)),
+        y = (0, o.e7)([b.Z], () => b.Z.getChannel(t)),
         [N, C] = i.useState(!1),
         R = (0, c.X0)({ location: 'SoundboardMention' }),
         O = i.useCallback(() => {
             var e;
             let t = new Audio((0, g.Z)(a));
-            null != u.current && u.current.pause(), (u.current = t), (t.currentTime = 0), (t.volume = (0, E.Z)(null !== (e = null == b ? void 0 : b.volume) && void 0 !== e ? e : 1)), t.play(), (t.onplay = () => C(!0)), (t.onpause = () => C(!1)), (t.onended = () => C(!1));
-        }, [a, b, u, C]);
+            null != u.current && u.current.pause(), (u.current = t), (t.currentTime = 0), (t.volume = (0, E.Z)(null !== (e = null == I ? void 0 : I.volume) && void 0 !== e ? e : 1)), t.play(), (t.onplay = () => C(!0)), (t.onpause = () => C(!1)), (t.onended = () => C(!1));
+        }, [a, I, u, C]);
     return R
-        ? null == b
+        ? null == I
             ? (0, r.jsx)(T, { playSound: O })
             : s
               ? (0, r.jsx)(
@@ -96,7 +96,7 @@ t.ZP = function (e) {
                     {
                         containerClassName: S.jumboContainer,
                         className: S.jumboButton,
-                        sound: b,
+                        sound: I,
                         channel: y,
                         refreshEnabled: !0,
                         onSelectItem: O,
@@ -106,13 +106,13 @@ t.ZP = function (e) {
                         buttonOverlay: m.Pb.SOUNDMOJI,
                         tooltipClassName: S.tooltip,
                         tooltipContentClassName: S.tooltipContainer,
-                        tooltipOverride: (0, r.jsx)(_.Dp, { sound: b })
+                        tooltipOverride: (0, r.jsx)(_.Dp, { sound: I })
                     },
-                    ''.concat(b.soundId)
+                    ''.concat(I.soundId)
                 )
               : (0, r.jsx)(l.Tooltip, {
-                    'aria-label': b.name,
-                    text: (0, r.jsx)(_.Dp, { sound: b }),
+                    'aria-label': I.name,
+                    text: (0, r.jsx)(_.Dp, { sound: I }),
                     tooltipClassName: S.tooltip,
                     tooltipContentClassName: S.tooltipContainer,
                     position: 'top',
@@ -121,7 +121,7 @@ t.ZP = function (e) {
                         (0, r.jsx)('span', {
                             ...e,
                             children: (0, r.jsx)(A, {
-                                sound: b,
+                                sound: I,
                                 playSound: O,
                                 isPlaying: N
                             })

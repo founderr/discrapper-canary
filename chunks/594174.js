@@ -7,7 +7,7 @@ n.r(t),
             return T;
         },
         transformUser: function () {
-            return b;
+            return I;
         },
         users: function () {
             return m;
@@ -54,11 +54,11 @@ function v(e, t, n) {
     let a = r !== i;
     return a && g++, a;
 }
-function I(e, t) {
+function b(e, t) {
     let n = m[e];
     return !(null == n || (0, _.Dd)(n.clan, t.clan)) && (null == n.clan || null != t.clan) && ((n.clan = (0, _.yi)(t.clan)), (m[n.id] = n), g++, !0);
 }
-function b(e) {
+function I(e) {
     let t = e.mfa_enabled;
     null != t && ((e.mfaEnabled = t), delete e.mfa_enabled);
     let n = (0, s.G)(e.premium_type);
@@ -89,7 +89,7 @@ function T(e) {
     if (null == r) void 0 !== (t = (r = new o.Z(e)).premiumType) && i && (r.premiumType = y((0, s.QI)(r), r.premiumType));
     else if (n) {
         var a;
-        let n = b(e);
+        let n = I(e);
         void 0 !== (t = null !== (a = n.premium_type) && void 0 !== a ? a : n.premiumType) &&
             i &&
             (0, s.VR)(n) &&
@@ -161,7 +161,7 @@ function N(e) {
         }),
         r.forEach((e) => {
             e.members.forEach((t) => {
-                v(t.user.id, e.id, t.avatar), I(t.user.id, t.user);
+                v(t.user.id, e.id, t.avatar), b(t.user.id, t.user);
             });
         }),
         null != m[c.default.getId()] &&
@@ -177,7 +177,7 @@ function C(e) {
     let { guilds: t, lazyPrivateChannels: n } = e;
     t.forEach((e) => {
         e.members.forEach((t) => {
-            v(t.user.id, e.id, t.avatar), I(t.user.id, t.user);
+            v(t.user.id, e.id, t.avatar), b(t.user.id, t.user);
         });
     }),
         null == n ||
@@ -234,14 +234,14 @@ function U(e) {
         null != t && A(t, !0), null != n && A(n, !0), null != r && null != r.user && T(r.user, !0);
     });
 }
-function G(e) {
+function B(e) {
     let { supplementalData: t } = e;
     Object.values(t).forEach((e) => {
         let { message_preview: t } = e;
         null != t && A(t, !0);
     });
 }
-function B(e) {
+function G(e) {
     let { guildScheduledEventUsers: t, guildId: n } = e;
     t.forEach((e) => {
         let { user: t, member: r } = e;
@@ -323,7 +323,7 @@ function J(e) {
             var n;
             let t = null === (n = e.item.member) || void 0 === n ? void 0 : n.user;
             if (null == t) continue;
-            I(t.id, t);
+            b(t.id, t);
         }
     return !1;
 }
@@ -460,7 +460,7 @@ function ev(e) {
         null != e.message && A(e.message, !0);
     }, !1);
 }
-function eI(e) {
+function eb(e) {
     let { participants: t } = e;
     t.map((e) => {
         var t;
@@ -471,19 +471,19 @@ function eI(e) {
             T(e);
         });
 }
-class eb extends d.Z {
+class eI extends d.Z {
     initialize() {
         this.waitFor(c.default, a.Z);
     }
     takeSnapshot() {
         let e = this.getCurrentUser();
         return {
-            version: eb.LATEST_SNAPSHOT_VERSION,
+            version: eI.LATEST_SNAPSHOT_VERSION,
             data: { users: [e].filter(u.lm) }
         };
     }
     handleLoadCache(e) {
-        let t = this.readSnapshot(eb.LATEST_SNAPSHOT_VERSION);
+        let t = this.readSnapshot(eI.LATEST_SNAPSHOT_VERSION);
         if (null != t) for (let e of t.users) m[e.id] = new o.Z(e);
         if (null != e.users)
             for (let t of e.users) {
@@ -573,10 +573,10 @@ class eb extends d.Z {
             LOAD_THREADS_SUCCESS: k,
             LOAD_ARCHIVED_THREADS_SUCCESS: k,
             LOAD_FORUM_POSTS: U,
-            GUILD_SCHEDULED_EVENT_USERS_FETCH_SUCCESS: B,
+            GUILD_SCHEDULED_EVENT_USERS_FETCH_SUCCESS: G,
             LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: Z,
             NOTIFICATION_CENTER_ITEM_CREATE: F,
-            LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS: G,
+            LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS: B,
             PASSIVE_UPDATE_V2: ee,
             LOCAL_MESSAGES_LOADED: et,
             FAMILY_CENTER_INITIAL_LOAD: e_,
@@ -586,8 +586,8 @@ class eb extends d.Z {
             FAMILY_CENTER_REQUEST_LINK_SUCCESS: eh,
             MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: eE,
             LOAD_GRAVITY_HYDRATED: ev,
-            EMBEDDED_ACTIVITY_UPDATE_V2: eI
+            EMBEDDED_ACTIVITY_UPDATE_V2: eb
         });
     }
 }
-h(eb, 'displayName', 'UserStore'), h(eb, 'LATEST_SNAPSHOT_VERSION', 1), (t.default = new eb());
+h(eI, 'displayName', 'UserStore'), h(eI, 'LATEST_SNAPSHOT_VERSION', 1), (t.default = new eI());

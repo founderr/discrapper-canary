@@ -18,7 +18,7 @@ n.d(t, {
         return L;
     },
     Nz: function () {
-        return G;
+        return B;
     },
     Q_: function () {
         return U;
@@ -30,7 +30,7 @@ n.d(t, {
         return M;
     },
     bT: function () {
-        return B;
+        return G;
     },
     dM: function () {
         return Z;
@@ -74,9 +74,9 @@ var r,
     g = n(981631),
     E = n(474936),
     v = n(388032);
-let I = h.Z.escape(window.GLOBAL_ENV.GIFT_CODE_HOST),
-    b = [I, ...['discordapp.com/gifts', 'discord.com/gifts'].map((e) => h.Z.escape(e))].join('|'),
-    S = RegExp('(?: |^|https?://)(?:'.concat(b, ')/([a-z0-9-]+)'), 'gi'),
+let b = h.Z.escape(window.GLOBAL_ENV.GIFT_CODE_HOST),
+    I = [b, ...['discordapp.com/gifts', 'discord.com/gifts'].map((e) => h.Z.escape(e))].join('|'),
+    S = RegExp('(?: |^|https?://)(?:'.concat(I, ')/([a-z0-9-]+)'), 'gi'),
     T = [...['discord.com/billing/promotions', 'promos.discord.gg'].map((e) => h.Z.escape(e))].join('|'),
     y = RegExp('(?: |^|https?://)(?:'.concat(T, ')(/|(/)?\\?code=)([a-z0-9-]+)'), 'gi'),
     A = (e, t) =>
@@ -120,13 +120,13 @@ let k = (e) => (null == e ? void 0 : e.type) === g.uaV.CUSTOM_GIFT && (null == e
         for (; null != (t = y.exec(e)) && n.size < 3; ) n.add(P(t[t.length - 1]));
         return Array.from(n);
     };
-function G() {
+function B() {
     let e,
         t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : '',
         n = window.GLOBAL_ENV.GIFT_CODE_HOST;
     return null != n ? (e = '/'.concat(t)) : ((n = location.host), (e = '/gifts/'.concat(t))), ''.concat(location.protocol, '//').concat(n).concat(e);
 }
-async function B(e) {
+async function G(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     try {

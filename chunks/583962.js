@@ -57,7 +57,7 @@ let T = (0, x.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
     },
     A = 57,
     P = 57 + T,
-    R = {
+    M = {
         tension: 180,
         friction: 80
     };
@@ -69,20 +69,20 @@ t.ZP = (e) => {
         T = (0, v.FZ)(x, t.id),
         A = null == T,
         P = null != T ? T : x,
-        M = (0, c.e7)([b.Z], () => {
+        R = (0, c.e7)([b.Z], () => {
             var e;
             return null !== (e = b.Z.getCountForGuild(g)) && void 0 !== e ? e : 0;
         }),
-        L = (0, c.e7)([C.Z], () => C.Z.can(Z.Plq.MANAGE_GUILD, t));
+        w = (0, c.e7)([C.Z], () => C.Z.can(Z.Plq.MANAGE_GUILD, t));
     l.useEffect(() => {
-        M !== u && (0, I.v)(g, u);
-    }, [g, M, u]);
-    let w = ''.concat(Math.min(100, (u / (0, v.vn)(t.id)[P]) * 100), '%'),
-        { current: D } = l.useRef(w),
+        R !== u && (0, I.v)(g, u);
+    }, [g, R, u]);
+    let L = ''.concat(Math.min(100, (u / (0, v.vn)(t.id)[P]) * 100), '%'),
+        { current: D } = l.useRef(L),
         O = {
-            from: { width: M === u ? D : '0%' },
-            to: { width: w },
-            config: R
+            from: { width: R === u ? D : '0%' },
+            to: { width: L },
+            config: M
         },
         [k, U] = (0, d.useSpring)(() => O),
         G = () => {
@@ -136,7 +136,7 @@ t.ZP = (e) => {
                     },
                     className: a()(y.container, { [y.containerWithMargin]: n }),
                     onContextMenu: (e) => {
-                        L &&
+                        w &&
                             (0, h.vq)(e, (e) =>
                                 (0, i.jsx)(j, {
                                     ...e,

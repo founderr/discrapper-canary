@@ -1,6 +1,6 @@
 n.d(t, {
     Ao: function () {
-        return b;
+        return I;
     },
     B3: function () {
         return j;
@@ -102,7 +102,7 @@ n.d(t, {
         return Y;
     },
     zL: function () {
-        return I;
+        return b;
     },
     zT: function () {
         return $;
@@ -214,13 +214,13 @@ let m = new Set(['id']),
     g = new Set(['aria-label', 'aria-labelledby', 'aria-describedby', 'aria-details']),
     E = new Set(['href', 'target', 'rel', 'download', 'ping', 'referrerPolicy']),
     v = /^(data-.*)$/;
-function I(e, t = {}) {
+function b(e, t = {}) {
     let { labelable: n, isLink: r, propNames: i } = t,
         a = {};
     for (let t in e) Object.prototype.hasOwnProperty.call(e, t) && (m.has(t) || (n && g.has(t)) || (r && E.has(t)) || (null == i ? void 0 : i.has(t)) || v.test(t)) && (a[t] = e[t]);
     return a;
 }
-function b(e) {
+function I(e) {
     if (
         (function () {
             if (null == S) {
@@ -338,7 +338,7 @@ function P(e, t, n = !0) {
                   bubbles: !0,
                   cancelable: !0
               });
-    (P.isOpening = n), b(e), e.dispatchEvent(u), (P.isOpening = !1);
+    (P.isOpening = n), I(e), e.dispatchEvent(u), (P.isOpening = !1);
 }
 P.isOpening = !1;
 function k(e) {
@@ -352,14 +352,14 @@ function k(e) {
     };
 }
 let U = new Map(),
-    G = new Set();
-function B() {
+    B = new Set();
+function G() {
     if ('undefined' == typeof window) return;
     let e = (t) => {
         let n = U.get(t.target);
         if (n && (n.delete(t.propertyName), 0 === n.size && (t.target.removeEventListener('transitioncancel', e), U.delete(t.target)), 0 === U.size)) {
-            for (let e of G) e();
-            G.clear();
+            for (let e of B) e();
+            B.clear();
         }
     };
     document.body.addEventListener('transitionrun', (t) => {
@@ -370,7 +370,7 @@ function B() {
 }
 function Z(e) {
     requestAnimationFrame(() => {
-        0 === U.size ? e() : G.add(e);
+        0 === U.size ? e() : B.add(e);
     });
 }
 function F() {
@@ -451,7 +451,7 @@ function H(e, t) {
             n.current ? (n.current = !1) : (!i.current || t.some((e, t) => !Object.is(e, i[t]))) && e(), (i.current = t);
         }, t);
 }
-'undefined' != typeof document && ('loading' !== document.readyState ? B() : document.addEventListener('DOMContentLoaded', B));
+'undefined' != typeof document && ('loading' !== document.readyState ? G() : document.addEventListener('DOMContentLoaded', G));
 function Y(e) {
     let { ref: t, onResize: n } = e;
     (0, r.useEffect)(() => {

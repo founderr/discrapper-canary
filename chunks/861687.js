@@ -24,8 +24,8 @@ var r,
     g = n(668781),
     E = n(846027),
     v = n(304680),
-    I = n(547727),
-    b = n(710845),
+    b = n(547727),
+    I = n(710845),
     S = n(631053),
     T = n(42352),
     y = n(148959),
@@ -43,8 +43,8 @@ var L = n(615830),
     P = n(19780),
     k = n(226961),
     U = n(936349),
-    G = n(594174),
-    B = n(626135),
+    B = n(594174),
+    G = n(626135),
     Z = n(630388),
     F = n(931619),
     V = n(358085),
@@ -316,7 +316,7 @@ class es extends _.Z {
             !t &&
                 this._connecting &&
                 !this._encountered_socket_failure &&
-                (B.default.track(et.rMx.VOICE_CONNECTION_SOCKET_FAILURE, {
+                (G.default.track(et.rMx.VOICE_CONNECTION_SOCKET_FAILURE, {
                     ...this._getAnalyticsProperties(),
                     hostname: this.hostname,
                     connect_count: this._connectCount,
@@ -339,7 +339,7 @@ class es extends _.Z {
                     e.getOutboundStats().forEach((t) => {
                         var n;
                         (null !== (n = t.num_frames) && void 0 !== n ? n : 0) > 0 &&
-                            B.default.track(et.rMx.VIDEO_STREAM_ENDED, {
+                            G.default.track(et.rMx.VIDEO_STREAM_ENDED, {
                                 ...this._getAnalyticsProperties(),
                                 media_session_id: this.getMediaSessionId(),
                                 sender_user_id: this.userId,
@@ -359,7 +359,7 @@ class es extends _.Z {
                     var n;
                     let i = e.getInboundStats(t);
                     (null !== (n = null == i ? void 0 : i.num_frames) && void 0 !== n ? n : 0) > 0 &&
-                        B.default.track(et.rMx.VIDEO_STREAM_ENDED, {
+                        G.default.track(et.rMx.VIDEO_STREAM_ENDED, {
                             ...this._getAnalyticsProperties(),
                             media_session_id: this.getMediaSessionId(),
                             sender_user_id: t,
@@ -376,7 +376,7 @@ class es extends _.Z {
             let t = U.Z.shouldIncludePreferredRegion() ? U.Z.getPreferredRegion() : null,
                 n = M.Z.getSettings(),
                 i = w.Z.getChannel(this.channelId);
-            B.default.track(et.rMx.VOICE_DISCONNECT, {
+            G.default.track(et.rMx.VOICE_DISCONNECT, {
                 ...this._getAnalyticsProperties(),
                 hostname: this.hostname,
                 port: this.port,
@@ -433,7 +433,7 @@ class es extends _.Z {
                 .then((e) => {
                     let t = JSON.parse(e);
                     if (null == t || null == t.available_video_encoders || null == t.available_video_decoders) throw Error('codec survey is not available');
-                    B.default.track(et.rMx.VOICE_CODEC_DETECTED, {
+                    G.default.track(et.rMx.VOICE_CODEC_DETECTED, {
                         ...t,
                         rtc_connection_id: this.getRTCConnectionId(),
                         media_session_id: a
@@ -510,7 +510,7 @@ class es extends _.Z {
                 this.context === en.Yn.DEFAULT && E.Z.toggleSelfMute({ playSoundEffect: !1 });
             }),
             d.on(p.Sh.NativeMuteChanged, (e) => {
-                this.context === en.Yn.DEFAULT && I.Z.nativeMuteChanged(e);
+                this.context === en.Yn.DEFAULT && b.Z.nativeMuteChanged(e);
             }),
             d.on(p.Sh.Video, (e, t, n, r, i, a) => {
                 this._handleVideoStreamId({
@@ -568,7 +568,7 @@ class es extends _.Z {
                 if (e !== this._socket) return;
                 let n = U.Z.shouldIncludePreferredRegion() ? U.Z.getPreferredRegion() : null;
                 this.logger.error('Error occurred while connecting to RTC server: '.concat(t)),
-                    B.default.track(et.rMx.VOICE_CONNECTION_FAILURE, {
+                    G.default.track(et.rMx.VOICE_CONNECTION_FAILURE, {
                         ...this._getAnalyticsProperties(),
                         hostname: this.hostname,
                         port: this.port,
@@ -605,7 +605,7 @@ class es extends _.Z {
                     let e = U.Z.shouldIncludePreferredRegion() ? U.Z.getPreferredRegion() : null;
                     if (this._connecting) {
                         let t = M.Z.getSettings();
-                        B.default.track(et.rMx.VOICE_CONNECTION_SUCCESS, {
+                        G.default.track(et.rMx.VOICE_CONNECTION_SUCCESS, {
                             ...this._getAnalyticsProperties(),
                             hostname: this.hostname,
                             port: this.port,
@@ -706,7 +706,7 @@ class es extends _.Z {
     }
     _handleRemoteStreamsReady(e) {
         let t = (0, h.zO)() - this._connectStartTime;
-        B.default.track(et.rMx.VOICE_CONNECTION_REMOTE_STREAMS_CREATED, {
+        G.default.track(et.rMx.VOICE_CONNECTION_REMOTE_STREAMS_CREATED, {
             ...this._getAnalyticsProperties(),
             number_of_users: e,
             duration_ms: t
@@ -812,7 +812,7 @@ class es extends _.Z {
                 n = null !== (i = null == t ? void 0 : t.num_frames) && void 0 !== i ? i : 0;
             null != t &&
                 n > 0 &&
-                (B.default.track(et.rMx.VIDEO_STREAM_ENDED, {
+                (G.default.track(et.rMx.VIDEO_STREAM_ENDED, {
                     ...this._getAnalyticsProperties(),
                     media_session_id: this.getMediaSessionId(),
                     sender_user_id: e,
@@ -842,7 +842,7 @@ class es extends _.Z {
     async _handleMediaSessionId(e) {
         (this._mediaSessionId = e), this.logger.info('Setting media-session-id: '.concat(e, ' for rtc-connection-id: ').concat(this.getRTCConnectionId()));
         let t = await (0, T.Z)();
-        B.default.track(et.rMx.MEDIA_SESSION_JOINED, {
+        G.default.track(et.rMx.MEDIA_SESSION_JOINED, {
             ...this._getAnalyticsProperties(),
             media_session_id: this.getMediaSessionId(),
             parent_media_session_id: this.parentMediaSessionId,
@@ -874,7 +874,7 @@ class es extends _.Z {
         }
     }
     _trackSecureFrameTransition(e, t) {
-        B.default.track(et.rMx.SECURE_FRAMES_TRANSITION, {
+        G.default.track(et.rMx.SECURE_FRAMES_TRANSITION, {
             ...this._getAnalyticsProperties(),
             media_session_id: this.getMediaSessionId(),
             parent_media_session_id: this.parentMediaSessionId,
@@ -1000,7 +1000,7 @@ class es extends _.Z {
             ],
             t = this.getMediaSessionId();
         for (let [n, r, i, a] of e)
-            B.default.track(et.rMx.MLS_FAILURES, {
+            G.default.track(et.rMx.MLS_FAILURES, {
                 ...this._getAnalyticsProperties(),
                 media_session_id: t,
                 parent_media_session_id: this.parentMediaSessionId,
@@ -1011,7 +1011,7 @@ class es extends _.Z {
             });
     }
     _alertMLSFailure(e, t) {
-        let n = G.default.getCurrentUser();
+        let n = B.default.getCurrentUser();
         ((null == n ? void 0 : n.isStaff()) || (null == n ? void 0 : n.isStaffPersonal())) &&
             g.Z.show({
                 title: 'MLS Error in '.concat(e),
@@ -1128,7 +1128,7 @@ class es extends _.Z {
                     let e = this._voiceQuality.getPeriodicStats();
                     if (this.shouldReportPeriodicStats(e))
                         for (let t of e)
-                            B.default.track(et.rMx.VOICE_QUALITY_PERIODIC_STATS, {
+                            G.default.track(et.rMx.VOICE_QUALITY_PERIODIC_STATS, {
                                 ...this._getAnalyticsProperties(),
                                 media_session_id: this.getMediaSessionId(),
                                 sender_user_id: t.userId,
@@ -1158,7 +1158,7 @@ class es extends _.Z {
             er(this, '_trackVoiceConnectionConnecting', () => {
                 let e = w.Z.getChannel(this.channelId),
                     t = null != e ? e.type : null;
-                B.default.track(et.rMx.VOICE_CONNECTION_CONNECTING, {
+                G.default.track(et.rMx.VOICE_CONNECTION_CONNECTING, {
                     guild_id: this.guildId,
                     channel_id: this.channelId,
                     rtc_connection_id: this.getRTCConnectionId(),
@@ -1177,7 +1177,7 @@ class es extends _.Z {
                 null === (t = this.getOrCreateVideoQuality()) || void 0 === t || t.setWindowOcclusionState(!e);
             }),
             (this.context = i),
-            (this.logger = new b.Z('RTCConnection('.concat(null !== (l = null != a ? a : n) && void 0 !== l ? l : r, ', ').concat(this.context, ')'))),
+            (this.logger = new I.Z('RTCConnection('.concat(null !== (l = null != a ? a : n) && void 0 !== l ? l : r, ', ').concat(this.context, ')'))),
             this.logger.enableNativeLogger(!0),
             (this.userId = e),
             (this.sessionId = t),

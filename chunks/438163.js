@@ -21,8 +21,8 @@ var r = n(200651),
     g = n(785717),
     E = n(481046),
     v = n(277085),
-    I = n(228168),
-    b = n(388032),
+    b = n(228168),
+    I = n(388032),
     S = n(393480);
 let T = 'text-sm/medium',
     y = 36,
@@ -39,10 +39,10 @@ function N(e) {
         P = i.useRef(null),
         k = i.useRef(null),
         U = i.useRef(null),
-        { emoji: G, state: B } = null != a ? a : {},
-        Z = null != B && '' !== B ? B : null,
+        { emoji: B, state: G } = null != a ? a : {},
+        Z = null != G && '' !== G ? G : null,
         F = null != Z && Z.length > 0,
-        V = null != G,
+        V = null != B,
         j = V && !F,
         H = V ? 1.25 : 0,
         Y = 18 + H,
@@ -106,10 +106,10 @@ function N(e) {
             V
                 ? (0, r.jsx)(d.Iv, {
                       className: F ? S.statusEmojiInline : S.statusEmojiOnly,
-                      emoji: G,
+                      emoji: B,
                       animate: N,
                       hideTooltip: !1,
-                      tooltipDelay: I.vB
+                      tooltipDelay: b.vB
                   })
                 : null,
         el = () =>
@@ -134,13 +134,13 @@ function N(e) {
         },
         ec = () =>
             (0, r.jsxs)('div', {
-                className: s()(S.content, S.clamp, S.placeholderWidth, { [S.panel]: h === I.y0.PANEL }),
+                className: s()(S.content, S.clamp, S.placeholderWidth, { [S.panel]: h === b.y0.PANEL }),
                 ref: k,
                 children: [eo(), el()]
             }),
         ed = () =>
             (0, r.jsxs)('div', {
-                className: s()(S.content, S.unclamp, S.placeholderWidth, S.incorporeal, { [S.panel]: h === I.y0.PANEL }),
+                className: s()(S.content, S.unclamp, S.placeholderWidth, S.incorporeal, { [S.panel]: h === b.y0.PANEL }),
                 ref: M,
                 children: [eo(), el()]
             }),
@@ -157,9 +157,9 @@ function N(e) {
                 });
         },
         e_ = {
-            [S.biteSize]: h === I.y0.BITE_SIZE,
-            [S.fullSize]: h === I.y0.FULL_SIZE,
-            [S.panel]: h === I.y0.PANEL
+            [S.biteSize]: h === b.y0.BITE_SIZE,
+            [S.fullSize]: h === b.y0.FULL_SIZE,
+            [S.panel]: h === b.y0.PANEL
         },
         ep = s()(S.background, { [S.editable]: Q }),
         eh = s()({
@@ -178,7 +178,7 @@ function N(e) {
         children: (0, r.jsx)('div', {
             children: q
                 ? (0, r.jsx)(c.Clickable, {
-                      'aria-label': b.intl.string(b.t['zrpF/f']),
+                      'aria-label': I.intl.string(I.t['zrpF/f']),
                       onClick: ef,
                       className: s()(S.addCustomStatusButtonBubble, e_, ep),
                       focusProps: { ringClassName: eh },
@@ -196,7 +196,7 @@ function N(e) {
                                       (0, r.jsx)(c.Text, {
                                           variant: T,
                                           className: S.addStatusPrompt,
-                                          children: b.intl.string(b.t.evw0o6)
+                                          children: I.intl.string(I.t.evw0o6)
                                       })
                                   ]
                               })
@@ -221,9 +221,9 @@ function N(e) {
                                   ref: er,
                                   className: s()(S.visibleContainer, e_, ep),
                                   role: 'tooltip',
-                                  'aria-label': b.intl.formatToPlainString(b.t.UpF5QU, {
-                                      emoji: null !== (t = null == G ? void 0 : G.name) && void 0 !== t ? t : '',
-                                      status: B
+                                  'aria-label': I.intl.formatToPlainString(I.t.UpF5QU, {
+                                      emoji: null !== (t = null == B ? void 0 : B.name) && void 0 !== t ? t : '',
+                                      status: G
                                   }),
                                   tabIndex: 0,
                                   onFocus: () => {

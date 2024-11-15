@@ -20,8 +20,8 @@ var r = n(200651),
     g = n(994746),
     E = n(502762),
     v = n(652853),
-    I = n(448980),
-    b = n(194811),
+    b = n(448980),
+    I = n(194811),
     S = n(373826),
     T = n(315324),
     y = n(582123),
@@ -39,14 +39,14 @@ function D(e) {
             user: t
         }),
         U = (0, g.Z)(a),
-        { largeImage: G } = (0, d.FO)(a),
-        { analyticsLocations: B } = (0, c.ZP)(u.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
+        { largeImage: B } = (0, d.FO)(a),
+        { analyticsLocations: G } = (0, c.ZP)(u.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
         Z = (0, h.Z)({
             display: 'live',
             user: t,
             activity: a,
             entry: k,
-            analyticsLocations: B
+            analyticsLocations: G
         }),
         F = (0, m.Z)({
             userId: t.id,
@@ -123,7 +123,7 @@ function D(e) {
                       })
                   });
     return (0, r.jsx)(c.Gt, {
-        value: B,
+        value: G,
         children: (0, r.jsx)(y.Z, {
             user: t,
             onClose: w,
@@ -133,7 +133,7 @@ function D(e) {
                     className: s()(O.card, x),
                     ref: F,
                     children: [
-                        (0, r.jsx)(b.Z, {
+                        (0, r.jsx)(I.Z, {
                             ...U,
                             contextMenu: (0, r.jsx)(C.Z, {
                                 display: 'live',
@@ -151,7 +151,7 @@ function D(e) {
                                     className: s()(O.content, P),
                                     children: [
                                         (0, r.jsx)(f.E, {
-                                            image: G,
+                                            image: B,
                                             onClick: () => {
                                                 Z({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, p.Z5)(a, t.id);
                                             },
@@ -172,7 +172,7 @@ function D(e) {
                                                         V()
                                                     ]
                                                 }),
-                                                (0, r.jsx)(I.Z, {
+                                                (0, r.jsx)(b.Z, {
                                                     user: t,
                                                     activity: a,
                                                     className: O.badges

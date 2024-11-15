@@ -24,8 +24,8 @@ var r = n(200651),
     g = n(849727),
     E = n(198620),
     v = n(29909),
-    I = n(591759),
-    b = n(132748),
+    b = n(591759),
+    I = n(132748),
     S = n(981631),
     T = n(388032),
     y = n(877557);
@@ -115,7 +115,7 @@ class M extends i.PureComponent {
                   src: (function (e) {
                       var t;
                       if (!g.Z.getCurrentConfig({ location: 'gif_picker' }).enabled) return e;
-                      let n = I.Z.toURLSafe(e);
+                      let n = b.Z.toURLSafe(e);
                       return null != n && ((t = n), ((0, E._M)(t) || (0, E.MO)(t)) && t.pathname.toLowerCase().endsWith('.webp')) ? (n.searchParams.set('animated', 'true'), n.toString()) : e;
                   })(e),
                   width: t,
@@ -237,7 +237,7 @@ class P extends i.PureComponent {
                       getCoordsMap: this.getCoordsMap,
                       onFocus: this.handleFocus,
                       onSelect: this.handleSelect,
-                      children: (0, r.jsx)(b.Z, {
+                      children: (0, r.jsx)(I.Z, {
                           desiredItemWidth: 200,
                           maxColumns: 8,
                           children: this.renderContent

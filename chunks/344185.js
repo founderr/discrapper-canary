@@ -29,11 +29,11 @@ function v(e, t) {
         r = t.parent_id;
     !(r in n) && (n[r] = {}), (p[e][r][t.id] = m(t));
 }
-function I(e) {
+function b(e) {
     var t, n;
     let { channel: r } = e;
     if (!d.AW.has(r.type)) return !1;
-    if ((null === (t = r.threadMetadata) || void 0 === t ? void 0 : t.archived) === !0) return b(r);
+    if ((null === (t = r.threadMetadata) || void 0 === t ? void 0 : t.archived) === !0) return I(r);
     {
         let e = null !== (n = p[r.guild_id]) && void 0 !== n ? n : {};
         p[r.guild_id] = {
@@ -45,7 +45,7 @@ function I(e) {
         };
     }
 }
-function b(e) {
+function I(e) {
     let { guild_id: t, parent_id: n, id: r } = e;
     if (null == t || null == n || !(t in p) || !(n in p[t]) || !(r in p[t][n])) return !1;
     (p[t] = {
@@ -118,8 +118,8 @@ class T extends (r = u.ZP.Store) {
             let { guild: t } = e;
             g(t.id);
         },
-        THREAD_CREATE: I,
-        THREAD_UPDATE: I,
+        THREAD_CREATE: b,
+        THREAD_UPDATE: b,
         THREAD_LIST_SYNC: function (e) {
             let { guildId: t, threads: n, channelIds: r } = e;
             for (let e in (null == r && h.add(t), (p[t] = { ...p[t] }), p[t])) p[t][e] = { ...p[t][e] };
@@ -127,7 +127,7 @@ class T extends (r = u.ZP.Store) {
         },
         THREAD_DELETE: function (e) {
             let { channel: t } = e;
-            return b(t);
+            return I(t);
         },
         CHANNEL_DELETE: function (e) {
             let { channel: t } = e;

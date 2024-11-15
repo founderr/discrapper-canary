@@ -18,8 +18,8 @@ function d(e) {
         g = (0, a.ZP)(),
         E = (0, i.e7)([s.Z], () => s.Z.syncProfileThemeWithUserTheme),
         v = null != h ? h : null == f ? void 0 : f.getAvatarURL(null == _ ? void 0 : _.guildId, 80),
-        I = (0, l.Sl)(c.Ilk.PRIMARY_530).hex,
-        [b, S] = (0, o.Cf)(v, I, !1);
+        b = (0, l.Sl)(c.Ilk.PRIMARY_530).hex,
+        [I, S] = (0, o.Cf)(v, b, !1);
     if (!(null == _ ? void 0 : _.canEditThemes) && !m)
         return {
             theme: g,
@@ -27,7 +27,7 @@ function d(e) {
             secondaryColor: null
         };
     let T = null == _ ? void 0 : _.getPreviewThemeColors(p),
-        y = null !== (t = null == T ? void 0 : T[0]) && void 0 !== t ? t : (0, r._i)(b),
+        y = null !== (t = null == T ? void 0 : T[0]) && void 0 !== t ? t : (0, r._i)(I),
         A = null !== (n = null == T ? void 0 : T[1]) && void 0 !== n ? n : (0, r._i)(S);
     return {
         theme: E ? g : null !== (d = (0, u.V3)(y)) && void 0 !== d ? d : g,

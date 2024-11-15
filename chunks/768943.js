@@ -29,13 +29,13 @@ function v(e) {
     let t = E.get(e);
     return null != t && t.size > 0;
 }
-function I(e) {
+function b(e) {
     let { channelId: t, messageId: n } = e;
     return ''.concat(t, '-').concat(n);
 }
-function b(e) {
+function I(e) {
     var t;
-    let n = I(e.saveData);
+    let n = b(e.saveData);
     null == _.get(n) && (h = Date.now()), _.set(n, e);
     let r = e.saveData.messageId,
         i = e.saveData.channelId,
@@ -44,7 +44,7 @@ function b(e) {
 }
 function S(e) {
     let { messageId: t, channelId: n } = e,
-        r = I({
+        r = b({
             messageId: t,
             channelId: n
         }),
@@ -64,7 +64,7 @@ class y extends (r = o.ZP.Store) {
     }
     getSavedMessage(e, t) {
         return _.get(
-            I({
+            b({
                 channelId: e,
                 messageId: t
             })
@@ -93,7 +93,7 @@ class y extends (r = o.ZP.Store) {
     }
     isMessageBookmarked(e, t) {
         let n = _.get(
-            I({
+            b({
                 channelId: e,
                 messageId: t
             })
@@ -102,7 +102,7 @@ class y extends (r = o.ZP.Store) {
     }
     isMessageReminder(e, t) {
         let n = _.get(
-            I({
+            b({
                 channelId: e,
                 messageId: t
             })
@@ -128,17 +128,17 @@ class y extends (r = o.ZP.Store) {
         },
         SAVED_MESSAGES_UPDATE: function (e) {
             let { savedMessages: t } = e;
-            for (let e of ((p = !1), _.clear(), E.clear(), g.clear(), t)) b(e);
+            for (let e of ((p = !1), _.clear(), E.clear(), g.clear(), t)) I(e);
         },
         SAVED_MESSAGE_CREATE: function (e) {
             let { savedMessage: t } = e;
-            b(t);
+            I(t);
         },
         SAVED_MESSAGE_DELETE: function (e) {
             let { savedMessageData: t } = e;
             return (function (e) {
                 var t;
-                let n = I(e),
+                let n = b(e),
                     r = _.get(n);
                 if (null == r) return !1;
                 _.delete(n);
@@ -164,7 +164,7 @@ class y extends (r = o.ZP.Store) {
         MESSAGE_UPDATE: function (e) {
             let { message: t } = e;
             if (null == t.id || null == t.channel_id) return !1;
-            let n = I({
+            let n = b({
                     messageId: t.id,
                     channelId: t.channel_id
                 }),

@@ -10,7 +10,7 @@ var i = n(120356),
     d = n(185923),
     f = n(74353);
 t.Z = (e) => {
-    let { accessory: t, pickerIntention: n, headerClassName: i, emojiListRef: _, onKeyDown: p, onFocus: h, autoFocus: m, searchBarRef: g, hasTabWrapper: E, diversitySurrogate: v, isBurstReaction: I, onBurstReactionToggle: b, renderHeader: S } = e,
+    let { accessory: t, pickerIntention: n, headerClassName: i, emojiListRef: _, onKeyDown: p, onFocus: h, autoFocus: m, searchBarRef: g, hasTabWrapper: E, diversitySurrogate: v, isBurstReaction: b, onBurstReactionToggle: I, renderHeader: S } = e,
         T = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(u.Z, {
@@ -22,14 +22,14 @@ t.Z = (e) => {
                     isFullRow: !1,
                     onFocus: h,
                     autoFocus: m,
-                    defaultSearchPlaceholder: (0, o.nV)(n, I)
+                    defaultSearchPlaceholder: (0, o.nV)(n, b)
                 }),
                 n === d.Hz.REACTION
                     ? (0, r.jsx)('div', {
                           className: f.burstToggle,
                           children: (0, r.jsx)(s.Z, {
-                              checked: I,
-                              onClick: b
+                              checked: b,
+                              onClick: I
                           })
                       })
                     : null,

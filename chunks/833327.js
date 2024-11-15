@@ -30,8 +30,8 @@ var o = { deprecate: n(220342) },
     g = _.ERR_STREAM_CANNOT_PIPE,
     E = _.ERR_STREAM_DESTROYED,
     v = _.ERR_STREAM_NULL_VALUES,
-    I = _.ERR_STREAM_WRITE_AFTER_END,
-    b = _.ERR_UNKNOWN_ENCODING,
+    b = _.ERR_STREAM_WRITE_AFTER_END,
+    I = _.ERR_UNKNOWN_ENCODING,
     S = d.errorOrDestroy;
 function T() {}
 function y(e, t, i) {
@@ -125,14 +125,14 @@ n(689118)(A, l),
         m,
         g = this._writableState,
         E = !1;
-    var b = !g.objectMode && ((r = e), u.isBuffer(r) || r instanceof c);
-    if (b && !u.isBuffer(e)) {
+    var I = !g.objectMode && ((r = e), u.isBuffer(r) || r instanceof c);
+    if (I && !u.isBuffer(e)) {
         (i = e), (e = u.from(i));
     }
-    if (('function' == typeof t && ((n = t), (t = null)), b ? (t = 'buffer') : !t && (t = g.defaultEncoding), 'function' != typeof n && (n = T), g.ending)) {
-        (s = this), (o = n), S(s, (l = new I())), a.nextTick(o, l);
+    if (('function' == typeof t && ((n = t), (t = null)), I ? (t = 'buffer') : !t && (t = g.defaultEncoding), 'function' != typeof n && (n = T), g.ending)) {
+        (s = this), (o = n), S(s, (l = new b())), a.nextTick(o, l);
     } else {
-        if (b || ((d = this), (f = g), (_ = e), (h = n), null === _ ? (m = new v()) : 'string' != typeof _ && !f.objectMode && (m = new p('chunk', ['string', 'Buffer'], _)), !m || (S(d, m), a.nextTick(h, m), 0)))
+        if (I || ((d = this), (f = g), (_ = e), (h = n), null === _ ? (m = new v()) : 'string' != typeof _ && !f.objectMode && (m = new p('chunk', ['string', 'Buffer'], _)), !m || (S(d, m), a.nextTick(h, m), 0)))
             g.pendingcb++,
                 (E = (function (e, t, n, r, i, a) {
                     if (!n) {
@@ -158,7 +158,7 @@ n(689118)(A, l),
                             (t.bufferedRequestCount += 1);
                     } else N(e, t, !1, d, r, i, a);
                     return f;
-                })(this, g, b, e, t, n));
+                })(this, g, I, e, t, n));
     }
     return E;
 }),
@@ -170,7 +170,7 @@ n(689118)(A, l),
         e.corked && (e.corked--, !e.writing && !e.corked && !e.bufferProcessing && e.bufferedRequest && R(this, e));
     }),
     (A.prototype.setDefaultEncoding = function (e) {
-        if (('string' == typeof e && (e = e.toLowerCase()), !(['hex', 'utf8', 'utf-8', 'ascii', 'binary', 'base64', 'ucs2', 'ucs-2', 'utf16le', 'utf-16le', 'raw'].indexOf((e + '').toLowerCase()) > -1))) throw new b(e);
+        if (('string' == typeof e && (e = e.toLowerCase()), !(['hex', 'utf8', 'utf-8', 'ascii', 'binary', 'base64', 'ucs2', 'ucs-2', 'utf16le', 'utf-16le', 'raw'].indexOf((e + '').toLowerCase()) > -1))) throw new I(e);
         return (this._writableState.defaultEncoding = e), this;
     }),
     Object.defineProperty(A.prototype, 'writableBuffer', {

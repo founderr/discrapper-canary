@@ -5,8 +5,8 @@ var l = n(200651),
     r = n(423875),
     o = n(442837),
     s = n(18323),
-    u = n(594174),
-    c = n(908841),
+    c = n(594174),
+    u = n(908841),
     d = n(823379),
     m = n(5192),
     x = n(561308),
@@ -40,7 +40,7 @@ t.Z = (e) => {
     let { channel: t, entry: n, onReaction: i, onVoiceChannelPreview: m } = e,
         { parent_title: L, provider: y, image_url: T } = n.extra.media,
         N = n.extra.artist.name,
-        _ = (0, o.e7)([u.default], () => u.default.getUser(n.author_id)),
+        _ = (0, o.e7)([c.default], () => c.default.getUser(n.author_id)),
         { primaryColor: E, secondaryColor: S } = (0, p.Z)(T),
         A = (0, x.Nq)(n),
         M = a.useCallback(() => {
@@ -77,7 +77,7 @@ t.Z = (e) => {
                 headerIcons:
                     y === r.p.SPOTIFY
                         ? (0, l.jsx)(f.Z, {
-                              Icon: c.Z,
+                              Icon: u.Z,
                               'aria-label': j.intl.string(j.t['0ZB/XF'])
                           })
                         : null,

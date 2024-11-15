@@ -74,9 +74,9 @@ function u(e, t) {
             var E = [-3, -1, -5, -7, 0, 7, 5, 1, 3],
                 v = s(n[h], n[m]);
             for (l = 0, _ = Math.max(v[0].length, _), f[h] = Array(_), f[m] = Array(_); l < _; l++) {
-                var I = 0 | v[0][l],
-                    b = 0 | v[1][l];
-                (f[h][l] = E[(I + 1) * 3 + (b + 1)]), (f[m][l] = 0), (d[h] = g);
+                var b = 0 | v[0][l],
+                    I = 0 | v[1][l];
+                (f[h][l] = E[(b + 1) * 3 + (I + 1)]), (f[m][l] = 0), (d[h] = g);
             }
         }
         var S = this.jpoint(null, null, null),

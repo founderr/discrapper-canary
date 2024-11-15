@@ -14,8 +14,8 @@ var s,
     g = n(726542),
     E = n(524331),
     v = n(710845),
-    I = n(594190),
-    b = n(314897),
+    b = n(594190),
+    I = n(314897),
     S = n(553795),
     T = n(517100),
     y = n(158776),
@@ -44,8 +44,8 @@ function M(e, t, n) {
 let P = g.Z.get(w.ABu.SPOTIFY),
     k = 'hm://pusher/v1/connections/',
     U = 30 * O.Z.Millis.SECOND,
-    G = 30 * O.Z.Millis.SECOND,
-    B = 5 * O.Z.Millis.MINUTE,
+    B = 30 * O.Z.Millis.SECOND,
+    G = 5 * O.Z.Millis.MINUTE,
     Z = 5 * O.Z.Millis.SECOND,
     F = 1.5 * O.Z.Millis.SECOND,
     V = 1 * O.Z.Millis.MINUTE,
@@ -277,14 +277,14 @@ function ep() {
     (et = !0), (0, L.wO)(t.accountId, t.accessToken), C.default.track(w.rMx.SPOTIFY_AUTO_PAUSED), W.info('Playback auto paused');
 }
 function eh(e) {
-    if (e === b.default.getId()) {
+    if (e === I.default.getId()) {
         let t = N.Z.isCurrentClientInVoiceChannel(),
             n = (0, m.O)({
                 userId: e,
                 checkSoundSharing: !0,
                 checkSoundboardSounds: !1
             });
-        t && n && null != r ? (K.start(G, ep, !1), z.stop()) : z.start(100, () => K.stop(), !1);
+        t && n && null != r ? (K.start(B, ep, !1), z.stop()) : z.start(100, () => K.stop(), !1);
     }
     return !1;
 }
@@ -292,7 +292,7 @@ function em(e, t, n) {
     var r, i, a, s, o, l, u, c, d, f, _, p, m, g;
     let E,
         v,
-        { device: I, progress_ms: b, is_playing: S, repeat_state: T, item: y, context: A } = n;
+        { device: b, progress_ms: I, is_playing: S, repeat_state: T, item: y, context: A } = n;
     if (null != y && y.type === x.Hw.TRACK) {
         let e = y.id;
         null != y.linked_from && null != y.linked_from.id && (e = y.linked_from.id),
@@ -328,10 +328,10 @@ function em(e, t, n) {
                 isLocal: !1
             });
     if (
-        (null != I &&
-            !0 !== I.is_active &&
-            (I = {
-                ...I,
+        (null != b &&
+            !0 !== b.is_active &&
+            (b = {
+                ...b,
                 is_active: !0
             }),
         null != A && [x.Hw.PLAYLIST, x.Hw.ALBUM].includes(A.type))
@@ -359,12 +359,12 @@ function em(e, t, n) {
                 type: 'SPOTIFY_PLAYER_STATE',
                 accountId: e,
                 track: E,
-                volumePercent: null != I ? I.volume_percent : 0,
+                volumePercent: null != b ? b.volume_percent : 0,
                 isPlaying: S,
                 repeat: 'off' !== T,
-                position: b,
+                position: I,
                 context: t,
-                device: I
+                device: b
             });
     });
 }
@@ -391,7 +391,7 @@ class eE extends (o = f.ZP.Store) {
                         t = ea(e);
                     if (null == t)
                         return (
-                            q.start(B, () => {
+                            q.start(G, () => {
                                 if (null != i && i.userId === e) (0, E.Z)();
                             }),
                             !1
@@ -465,7 +465,7 @@ class eE extends (o = f.ZP.Store) {
                 .join('; '));
         let h = {},
             m = null != s.image ? (0, R.getAssetFromImageURL)(w.ABu.SPOTIFY, s.image.url) : null;
-        null != s.image && null != m && (h.large_image = m), s.type !== Y && (h.large_text = s.name), null != _ && (t = _.uri), (n = null != i && null != i.partyId ? i.partyId : ''.concat(x.lS).concat(b.default.getId()));
+        null != s.image && null != m && (h.large_image = m), s.type !== Y && (h.large_text = s.name), null != _ && (t = _.uri), (n = null != i && null != i.partyId ? i.partyId : ''.concat(x.lS).concat(I.default.getId()));
         let g = o.length > 128 ? o.substring(0, 125) + '...' : o,
             E = {
                 context_uri: t,
@@ -521,7 +521,7 @@ let ev = new eE(h.Z, {
                 null == e ? ($[t].push(l), (d = !0)) : !(0, _.Z)(e, l) && (Object.assign(e, l), (d = !0)), ec(t, l.id);
             } else ($[t] = [l]), (d = !0);
         }
-        n ? null == en || en.start(G, ep) : ((s = null), null == en || en.stop());
+        n ? null == en || en.start(B, ep) : ((s = null), null == en || en.stop());
         let f = S.Z.getAccount(t, w.ABu.SPOTIFY);
         if (null == f) return d;
         let p = ee[t],
@@ -547,7 +547,7 @@ let ev = new eE(h.Z, {
             ((r = c()
                 .values(ee)
                 .find((e) => null != e)),
-            eh(b.default.getId()),
+            eh(I.default.getId()),
             null == s || g ? Q.stop() : Q.start(s.duration - o + Z, () => ei(f.id)),
             null != i && ((!n && o > 0) || null == l || (null != m && i.trackId !== m.track.id))
                 ? (W.info('Listen along active but playback stopped or track changed. Stopping listen along in '.concat(Z, 'ms')),
@@ -628,7 +628,7 @@ let ev = new eE(h.Z, {
         if ((null == t ? void 0 : t.desktopSettings) != null) {
             null == en || en.stop();
             let { sourceId: e, sound: n } = null == t ? void 0 : t.desktopSettings;
-            null != e && I.ZP.getObservedAppNameForWindow(e) === P.name && n ? (en = new p.Xp()).start(G, ep) : (null == en || en.stop(), (en = null));
+            null != e && b.ZP.getObservedAppNameForWindow(e) === P.name && n ? (en = new p.Xp()).start(B, ep) : (null == en || en.stop(), (en = null));
         } else null == t && (null == en || en.stop(), (en = null));
     }
 });

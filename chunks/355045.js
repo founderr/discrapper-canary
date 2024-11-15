@@ -15,8 +15,8 @@ var r = n(200651),
     g = n(267642),
     E = n(74538),
     v = n(678558),
-    I = n(981631),
-    b = n(474936),
+    b = n(981631),
+    I = n(474936),
     S = n(388032),
     T = n(933815);
 t.Z = function (e) {
@@ -88,10 +88,10 @@ t.Z = function (e) {
                                 buttonShineClassName: T.guildBoostCtaBoostShine,
                                 guild: n,
                                 analyticsLocation: {
-                                    page: I.ZY5.PREMIUM_GUILD_USER_MODAL,
-                                    section: I.jXE.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
-                                    object: I.qAy.BUTTON_CTA,
-                                    objectType: I.Qqv.BUY
+                                    page: b.ZY5.PREMIUM_GUILD_USER_MODAL,
+                                    section: b.jXE.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
+                                    object: b.qAy.BUTTON_CTA,
+                                    objectType: b.Qqv.BUY
                                 },
                                 closeLayer: t,
                                 color: u.Button.Colors.WHITE,
@@ -100,7 +100,7 @@ t.Z = function (e) {
                             })
                         })
                     }),
-                    E.ZP.hasFreeBoosts(y) || E.ZP.isPremium(y, b.p9.TIER_2)
+                    E.ZP.hasFreeBoosts(y) || E.ZP.isPremium(y, I.p9.TIER_2)
                         ? (0, r.jsxs)(u.Button, {
                               className: s()(T.guildBoostCta, T.guildBoostCtaSecondary),
                               innerClassName: s()(T.__invalid_guildBoostCtaContent, T.guildBoostCtaGiftContent),
@@ -109,14 +109,14 @@ t.Z = function (e) {
                               onClick: function () {
                                   (0, f.Z)({
                                       initialPlanId: null,
-                                      subscriptionTier: b.Si.TIER_2,
+                                      subscriptionTier: I.Si.TIER_2,
                                       isGift: !0,
                                       analyticsLocations: N,
                                       analyticsObject: {
-                                          page: I.ZY5.PREMIUM_GUILD_USER_MODAL,
-                                          section: I.jXE.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
-                                          object: I.qAy.BUTTON_ICON,
-                                          objectType: I.Qqv.GIFT
+                                          page: b.ZY5.PREMIUM_GUILD_USER_MODAL,
+                                          section: b.jXE.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
+                                          object: b.qAy.BUTTON_ICON,
+                                          objectType: b.Qqv.GIFT
                                       },
                                       onClose: (e) => e && t()
                                   });
@@ -139,13 +139,13 @@ t.Z = function (e) {
                               onClick: function () {
                                   (0, f.Z)({
                                       initialPlanId: null,
-                                      subscriptionTier: b.Si.TIER_2,
+                                      subscriptionTier: I.Si.TIER_2,
                                       analyticsLocations: N,
                                       analyticsObject: {
-                                          page: I.ZY5.PREMIUM_GUILD_USER_MODAL,
-                                          section: I.jXE.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
-                                          object: I.qAy.BUTTON_ICON,
-                                          objectType: I.Qqv.BUY
+                                          page: b.ZY5.PREMIUM_GUILD_USER_MODAL,
+                                          section: b.jXE.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
+                                          object: b.qAy.BUTTON_ICON,
+                                          objectType: b.Qqv.BUY
                                       },
                                       onClose: (e) => e && t()
                                   });

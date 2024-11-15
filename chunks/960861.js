@@ -26,8 +26,8 @@ var r,
     g = n(496675),
     E = n(944486),
     v = n(102172),
-    I = n(74299),
-    b = n(299570),
+    b = n(74299),
+    I = n(299570),
     S = n(65154);
 ((r = o || (o = {}))[(r.Present = 0)] = 'Present'), (r[(r.Update = 1)] = 'Update'), (r[(r.Cancel = 2)] = 'Cancel'), (r[(r.Error = 3)] = 'Error');
 let T = !1,
@@ -71,7 +71,7 @@ function L() {
 }
 function x() {
     let e = p.Z.getChannel(E.Z.getVoiceChannelId());
-    return (T = null != e && (0, I.Z)(m.Z) && (0, v.JL)(e, h.Z, g.Z, !1)), O(), !1;
+    return (T = null != e && (0, b.Z)(m.Z) && (0, v.JL)(e, h.Z, g.Z, !1)), O(), !1;
 }
 class w extends (l = c.ZP.Store) {
     initialize() {
@@ -84,7 +84,7 @@ class w extends (l = c.ZP.Store) {
         return R();
     }
     releasePickerStream() {
-        (0, b.t)();
+        (0, I.t)();
     }
     getPickerState() {
         return C;
@@ -104,7 +104,7 @@ t.ZP = new w(d.Z, {
         let { existing: t } = e;
         if (((C = { lastPickerAction: 1 }), 0 === y && !t)) {
             let e = p.Z.getChannel(E.Z.getVoiceChannelId());
-            null != e && (0, I.Z)(m.Z) && (0, v.JL)(e, h.Z, g.Z, !1) && (0, f.WH)(e.getGuildId(), e.id, { sourceId: 'prepicked:0' });
+            null != e && (0, b.Z)(m.Z) && (0, v.JL)(e, h.Z, g.Z, !1) && (0, f.WH)(e.getGuildId(), e.id, { sourceId: 'prepicked:0' });
         }
     },
     NATIVE_SCREEN_SHARE_PICKER_CANCEL: function () {

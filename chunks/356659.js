@@ -1,6 +1,6 @@
 n.d(t, {
     A5: function () {
-        return G;
+        return B;
     },
     Bg: function () {
         return g;
@@ -21,7 +21,7 @@ n.d(t, {
         return S;
     },
     Hp: function () {
-        return b;
+        return I;
     },
     JO: function () {
         return O;
@@ -72,7 +72,7 @@ n.d(t, {
         return x;
     },
     mg: function () {
-        return I;
+        return b;
     },
     nU: function () {
         return v;
@@ -108,8 +108,8 @@ let _ = 'alt+c',
     g = 3,
     E = 1,
     v = /(NVIDIA GeForce GTX (98|10|16).*|Radeon RX 5(500|600|).*|Radeon RX5.*)/,
-    I = /(NVIDIA GeForce (RTX (20|30|40).*))|(.*Radeon RX (57|58|59|6|7).*)/,
-    b = 0.1,
+    b = /(NVIDIA GeForce (RTX (20|30|40).*))|(.*Radeon RX (57|58|59|6|7).*)/,
+    I = 0.1,
     S = 25,
     T = 0,
     y = 200,
@@ -126,4 +126,4 @@ let _ = 'alt+c',
     P = 14 * f.Z.Millis.DAY,
     k = 5,
     U = 5,
-    G = 1;
+    B = 1;

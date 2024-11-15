@@ -25,7 +25,7 @@ class f extends (r = a.PureComponent) {
         var e;
         let { title: t, actionText: n, children: r, error: s, isLoading: d, maxLength: f, transitionState: _, helpMessage: p, retryPrompt: h, retrySuccessMessage: m } = this.props,
             { code: g, errorMessage: E, retrySuccess: v } = this.state,
-            I =
+            b =
                 a.Children.count(r) > 0
                     ? (0, i.jsx)(l.Card, {
                           type: l.Card.Types.WARNING,
@@ -36,7 +36,7 @@ class f extends (r = a.PureComponent) {
                           })
                       })
                     : null,
-            b =
+            I =
                 null != h
                     ? (0, i.jsxs)(l.Text, {
                           className: o()(c.__invalid_submitText, c.spacing),
@@ -83,7 +83,7 @@ class f extends (r = a.PureComponent) {
                                       children: p
                                   })
                                 : null,
-                            I,
+                            b,
                             S,
                             (0, i.jsxs)(l.FormItem, {
                                 title: this.getLabelText(),
@@ -106,7 +106,7 @@ class f extends (r = a.PureComponent) {
                                               children: null != s ? s : E
                                           })
                                         : null,
-                                    b
+                                    I
                                 ]
                             })
                         ]

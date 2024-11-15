@@ -60,7 +60,7 @@ let Y = ['discord_web', 'discord_marketing', 'discord_developers', 'discord_ios'
         },
         {
             value: 'id',
-            label: 'Build ID'
+            label: 'Commit SHA'
         }
     ];
 function z(e) {
@@ -96,7 +96,7 @@ class W extends s.Component {
                         (0, i.jsx)(f.Z.Child, {
                             basis: '50%',
                             children: (0, i.jsx)(m.FormItem, {
-                                title: 'branch' === t ? 'Branch Name' : 'Build ID',
+                                title: 'branch' === t ? 'Branch Name' : 'Commit SHA',
                                 className: k.item,
                                 children: (0, i.jsx)(m.TextInput, {
                                     value: n,

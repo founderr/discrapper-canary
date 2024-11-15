@@ -16,15 +16,15 @@ var i,
     g = n(433355),
     E = n(592125),
     v = n(486472),
-    I = n(271383),
-    b = n(430824),
+    b = n(271383),
+    I = n(430824),
     S = n(19780),
     T = n(699516),
     y = n(944486),
     A = n(914010),
     N = n(981631);
 let C = new f.ZP((e) => {
-    for (let t in e) null == b.Z.getGuild(t) && !v.Z.isUnavailable(t) && delete e[t];
+    for (let t in e) null == I.Z.getGuild(t) && !v.Z.isUnavailable(t) && delete e[t];
     d.Z.dispatch({
         type: 'GUILD_SUBSCRIPTIONS_FLUSH',
         subscriptions: e
@@ -59,7 +59,7 @@ function L(e) {
     null != n && O(n, y.Z.getChannelId(n));
     let r = {};
     C.forEach((e) => {
-        null == b.Z.getGuild(e) ? C.clearWithoutFlushing(e, !0) : (r[e] = C.get(e));
+        null == I.Z.getGuild(e) ? C.clearWithoutFlushing(e, !0) : (r[e] = C.get(e));
     }),
         !u().isEmpty(r) &&
             d.Z.dispatch({
@@ -80,7 +80,7 @@ function M() {
     else {
         let { userId: t } = e;
         if ((null != r && r.userId === t) || T.Z.isFriend(t)) return !1;
-        let n = I.ZP.memberOf(t);
+        let n = b.ZP.memberOf(t);
         if (0 === n.length) return !1;
         let [i] = n;
         (r = {
@@ -93,7 +93,7 @@ function M() {
 }
 class P extends (i = c.ZP.Store) {
     initialize() {
-        this.waitFor(E.Z, b.Z, A.Z, y.Z, S.Z, h.default, g.ZP, _.Z), this.syncWith([p.Z], M), this.syncWith([g.ZP], w);
+        this.waitFor(E.Z, I.Z, A.Z, y.Z, S.Z, h.default, g.ZP, _.Z), this.syncWith([p.Z], M), this.syncWith([g.ZP], w);
     }
     getSubscribedThreadIds() {
         return C.getSubscribedThreadIds();

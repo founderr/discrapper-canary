@@ -17,8 +17,8 @@ var r = n(200651),
     E = n(886777);
 function v(e) {
     let { movDark: t = d, movLight: n = h, mp4Dark: i = f, mp4Light: a = m, pngDark: s = _, pngLight: o = g, webmDark: u = p, webmLight: v = E } = e,
-        I = (0, l.vu)(),
-        b = [
+        b = (0, l.vu)(),
+        I = [
             (0, r.jsx)(
                 'source',
                 {
@@ -55,8 +55,8 @@ function v(e) {
             )
         ];
     return (
-        (I > 52 || -1 === I) &&
-            (b.unshift(
+        (b > 52 || -1 === b) &&
+            (I.unshift(
                 (0, r.jsx)(
                     'source',
                     {
@@ -77,7 +77,7 @@ function v(e) {
                 )
             )),
         (0, l.rO)() &&
-            (b.unshift(
+            (I.unshift(
                 (0, r.jsx)(
                     'source',
                     {
@@ -98,13 +98,13 @@ function v(e) {
                 )
             )),
         {
-            [c.BRd.DARK]: b,
+            [c.BRd.DARK]: I,
             [c.BRd.LIGHT]: S
         }
     );
 }
-let I = o.Z.getAppSpinnerSources(),
-    b = null != I ? v(I) : null,
+let b = o.Z.getAppSpinnerSources(),
+    I = null != b ? v(b) : null,
     S = v({});
 t.Z = (e) => {
     var t;
@@ -112,7 +112,7 @@ t.Z = (e) => {
         { theme: _ } = (0, s.useThemeContext)(),
         { reducedMotion: p } = i.useContext(s.AccessibilityPreferencesContext),
         h = S;
-    null != b && (h = b);
+    null != I && (h = I);
     let m = null !== (t = h[(0, a.wj)(_) ? c.BRd.DARK : c.BRd.LIGHT]) && void 0 !== t ? t : h[c.BRd.DARK];
     return (0, r.jsx)(
         u.Z,

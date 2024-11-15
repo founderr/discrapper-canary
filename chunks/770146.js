@@ -1,20 +1,20 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
-        return i;
+        return o;
     }
 });
-var r = t(200651);
-t(192379);
-var l = t(120356),
-    a = t.n(l),
-    o = t(353947);
-function i(e) {
-    let { children: n, tag: t, className: l } = e;
+var r = n(200651);
+n(192379);
+var a = n(120356),
+    l = n.n(a),
+    i = n(353947);
+function o(e) {
+    let { children: t, tag: n, className: a } = e;
     return (
-        (t = null != t ? t : 'h3'),
-        (0, r.jsx)(t, {
-            className: a()(o.title, l),
-            children: n
+        (n = null != n ? n : 'h3'),
+        (0, r.jsx)(n, {
+            className: l()(i.title, a),
+            children: t
         })
     );
 }

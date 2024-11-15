@@ -51,7 +51,7 @@ function v() {
         m.pendingUsages
     );
 }
-class I extends (r = s.ZP.PersistedStore) {
+class b extends (r = s.ZP.PersistedStore) {
     initialize(e) {
         null != e && (m = e), this.waitFor(c.ZP), this.syncWith([d.Z], v);
     }
@@ -72,9 +72,9 @@ class I extends (r = s.ZP.PersistedStore) {
         return g.frequently;
     }
 }
-p(I, 'displayName', 'ApplicationFrecencyStore'),
-    p(I, 'persistKey', 'ApplicationFrecency'),
-    (t.Z = new I(o.Z, {
+p(b, 'displayName', 'ApplicationFrecencyStore'),
+    p(b, 'persistKey', 'ApplicationFrecency'),
+    (t.Z = new b(o.Z, {
         APPLICATION_COMMAND_USED: function (e) {
             var t;
             let { command: n } = e;

@@ -3,7 +3,7 @@ n.d(t, {
         return h;
     },
     It: function () {
-        return I;
+        return b;
     },
     iN: function () {
         return f;
@@ -110,7 +110,7 @@ function h(e) {
                             },
                             { autoTrackExposure: a }
                         ),
-                        i = b.getCurrentConfig(
+                        i = I.getCurrentConfig(
                             {
                                 guildId: n.id,
                                 location: t
@@ -245,7 +245,7 @@ let v = (0, a.B)({
         }
     ]
 });
-function I(e) {
+function b(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = f(e, t),
         r = v.useExperiment({ location: e }, { autoTrackExposure: t });
@@ -290,7 +290,7 @@ function I(e) {
             }
         ]
     });
-let b = (0, a.B)({
+let I = (0, a.B)({
     kind: 'guild',
     id: '2024-10_rapidash_discovery_sign_up',
     label: 'Rapidash Discovery Early Sign Up',

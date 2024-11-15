@@ -137,14 +137,14 @@ function _(e) {
         {
             lastVisibleIndex: E,
             onItemLayout: v,
-            overflowItemsRef: I
+            overflowItemsRef: b
         } = c({
             items: n,
             itemGapPx: _,
             maxLines: p,
             containerWidth: g
         }),
-        b = i.useCallback(
+        I = i.useCallback(
             (e) =>
                 (0, r.jsx)(d, {
                     items: e,
@@ -178,13 +178,13 @@ function _(e) {
                     }),
                     (0, r.jsx)('div', {
                         className: u.overflowMeasurement,
-                        ref: I,
+                        ref: b,
                         children: a(l.intl.formatToPlainString(l.t.vGclWl, { count: Number('1'.concat(n.length)) }))
                     })
                 ]
             }),
             S.map(a),
-            T.length > 0 && (null != h ? h : b)(T)
+            T.length > 0 && (null != h ? h : I)(T)
         ]
     });
 }

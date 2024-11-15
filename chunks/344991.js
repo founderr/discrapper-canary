@@ -49,8 +49,8 @@ function _(e) {
         T(n), Z(new Set(n.keys())), O((e) => e + 1);
     }, [o, k]);
     let {
-            state: M,
-            executeStateUpdate: P,
+            state: P,
+            executeStateUpdate: M,
             visualState: A,
             isDisabled: B,
             error: w
@@ -60,17 +60,17 @@ function _(e) {
         }),
         U = A === f.gH.LOADING;
     a.useEffect(() => {
-        if ((null == M ? void 0 : M.type) === u.re.USER_SELECT || (null == M ? void 0 : M.type) === u.re.ROLE_SELECT || (null == M ? void 0 : M.type) === u.re.MENTIONABLE_SELECT || (null == M ? void 0 : M.type) === u.re.CHANNEL_SELECT) {
-            let e = new Map(M.selectedOptions.map((e) => [e.value, e]));
+        if ((null == P ? void 0 : P.type) === u.re.USER_SELECT || (null == P ? void 0 : P.type) === u.re.ROLE_SELECT || (null == P ? void 0 : P.type) === u.re.MENTIONABLE_SELECT || (null == P ? void 0 : P.type) === u.re.CHANNEL_SELECT) {
+            let e = new Map(P.selectedOptions.map((e) => [e.value, e]));
             T(e), Z(new Set(e.keys()));
         }
-    }, [M]);
+    }, [P]);
     let G = a.useCallback(() => {
-        P({
+        M({
             type: _,
             selectedOptions: Array.from(E.values())
         }) && Z(new Set(E.keys()));
-    }, [P, _, E]);
+    }, [M, _, E]);
     a.useEffect(() => {
         if (!(b || S || (E.size === y.size && Array.from(E.keys()).every((e) => y.has(e))))) G();
     }, [b, S, y, E, G]);

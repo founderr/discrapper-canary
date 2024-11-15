@@ -16,8 +16,8 @@ var r = n(200651),
     g = n(358221),
     E = n(414910),
     v = n(221888),
-    I = n(933557),
-    b = n(569545),
+    b = n(933557),
+    I = n(569545),
     S = n(74299),
     T = n(863908),
     y = n(803647),
@@ -34,8 +34,8 @@ var r = n(200651),
     P = n(199902),
     k = n(314897),
     U = n(131951),
-    G = n(699516),
-    B = n(594174),
+    B = n(699516),
+    G = n(594174),
     Z = n(248402),
     F = n(33039),
     V = n(451478),
@@ -83,11 +83,11 @@ class ei extends i.PureComponent {
     }
     get streamerPaused() {
         let { isMainWindowFocused: e, activeSelfStream: t, participantOnScreen: n } = this.props;
-        return null != t && (null == n ? void 0 : n.id) === (0, b.V9)(t) && !e;
+        return null != t && (null == n ? void 0 : n.id) === (0, I.V9)(t) && !e;
     }
     get activeStreamForSelectedParticipant() {
         let { participantOnScreen: e, activeStreams: t } = this.props;
-        return (0, ee._5)(e) ? t.find((t) => (0, b.V9)(t) === e.id) : null;
+        return (0, ee._5)(e) ? t.find((t) => (0, I.V9)(t) === e.id) : null;
     }
     getScreenMessage() {
         let { participantOnScreen: e, currentUserId: t } = this.props;
@@ -146,7 +146,7 @@ class ei extends i.PureComponent {
     }
     render() {
         let { channel: e, streamId: t, participantOnScreen: n, isVideoEnabled: i, width: a } = this.props,
-            s = (0, I.F6)(e, B.default, G.Z),
+            s = (0, b.F6)(e, G.default, B.Z),
             o = (null == n ? void 0 : n.id) === k.default.getId() && i,
             l = this.renderStreamState(),
             u = null;
@@ -206,7 +206,7 @@ class ei extends i.PureComponent {
                 let n = null !== (e = t.getGuildId()) && void 0 !== e ? e : $.ME;
                 (0, C.XU)(n, t.id), _.Z.channelListScrollTo(n, t.id);
                 let r = this.activeStreamForSelectedParticipant;
-                null != r && f.Z.selectParticipant(r.channelId, (0, b.V9)(r));
+                null != r && f.Z.selectParticipant(r.channelId, (0, I.V9)(r));
             }),
             er(this, 'handleStartStream', () => {
                 let { canGoLive: e, channel: t } = this.props,
@@ -271,7 +271,7 @@ class ei extends i.PureComponent {
             er(this, 'renderSettingsIcon', () => {
                 let { participantOnScreen: e, activeStreams: t } = this.props;
                 s()((0, ee._5)(e), 'Cannot render settings for non stream participant');
-                let n = t.find((t) => (0, b.V9)(t) === e.id);
+                let n = t.find((t) => (0, I.V9)(t) === e.id);
                 return null == n || n.state === $.jm8.ENDED
                     ? null
                     : (0, r.jsx)(M.Z, {

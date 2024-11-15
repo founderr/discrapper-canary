@@ -23,8 +23,8 @@ var r = n(200651),
     g = n(585483),
     E = n(981631),
     v = n(689079),
-    I = n(665692),
-    b = n(388032),
+    b = n(665692),
+    I = n(388032),
     S = n(634996);
 function T(e, t, n, i, a) {
     if (null == e) return;
@@ -61,9 +61,9 @@ function T(e, t, n, i, a) {
     '' !== p.Z.getDraft(e, p.d.ChannelMessage)
         ? (0, s.openModal)((t) =>
               (0, r.jsx)(s.ConfirmModal, {
-                  header: b.intl.string(b.t.pe26Cg),
-                  confirmText: b.intl.string(b.t.VkKicX),
-                  cancelText: b.intl.string(b.t['ETE/oK']),
+                  header: I.intl.string(I.t.pe26Cg),
+                  confirmText: I.intl.string(I.t.VkKicX),
+                  cancelText: I.intl.string(I.t['ETE/oK']),
                   onConfirm: () => c(),
                   confirmButtonColor: s.Button.Colors.BRAND,
                   onCloseCallback: () => {
@@ -72,7 +72,7 @@ function T(e, t, n, i, a) {
                   ...t,
                   children: (0, r.jsx)(s.Text, {
                       variant: 'text-md/normal',
-                      children: b.intl.string(b.t['+awCIy'])
+                      children: I.intl.string(I.t['+awCIy'])
                   })
               })
           )
@@ -89,7 +89,7 @@ function y(e) {
             },
             [n.channelId]
         ),
-        { hasSendMessagePerm: b, hasUseAppCommandsPerm: S } = (0, a.cj)([h.Z], () => {
+        { hasSendMessagePerm: I, hasUseAppCommandsPerm: S } = (0, a.cj)([h.Z], () => {
             let e = h.Z.can(E.Plq.SEND_MESSAGES, g);
             return {
                 hasSendMessagePerm: e,
@@ -101,10 +101,10 @@ function y(e) {
         N = i.useMemo(() => {
             if (null == y || null == g || y.untranslatedName !== n.commandName || A) return !1;
             let e = g.isPrivate();
-            if ((0, d.xl)(g) || (!e && !b)) return !1;
+            if ((0, d.xl)(g) || (!e && !I)) return !1;
             let t = (null == y ? void 0 : y.applicationId) === v.bi.BUILT_IN;
             return !!e || !!t || !!S || !1;
-        }, [g, y, b, S, n.commandName, A]),
+        }, [g, y, I, S, n.commandName, A]),
         C = i.useCallback(
             (e) => {
                 null == e || e.stopPropagation(), null != g && null != n.commandName && null != n.commandKey && T(g.id, n.commandName, n.commandKey, u.Vh.MENTION);
@@ -126,7 +126,7 @@ function y(e) {
                               onClick: C,
                               onMouseEnter: t,
                               onMouseLeave: i,
-                              children: [I.GI, o(n.content, p)]
+                              children: [b.GI, o(n.content, p)]
                           },
                           p.key
                       );
@@ -135,7 +135,7 @@ function y(e) {
               p.key
           )
         : (0, r.jsxs)('span', {
-              children: [I.GI, o(n.content, p)]
+              children: [b.GI, o(n.content, p)]
           });
 }
 function A(e) {

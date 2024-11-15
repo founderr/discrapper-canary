@@ -42,7 +42,7 @@ let h = (e) => {
             case d.re.CHANNEL_SELECT:
                 return !0;
             case d.re.ACTION_ROW:
-            case d.re.INPUT_TEXT:
+            case d.re.TEXT_INPUT:
                 return !1;
         }
     },
