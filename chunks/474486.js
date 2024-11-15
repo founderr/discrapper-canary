@@ -214,9 +214,11 @@ let I = () =>
         var t, s;
         let { isSelected: n, trialOffer: r, q4MarketingEnabled: a } = e,
             c = (0, p.wE)(l.z.TRIAL_FOR_ALL_MARKETING_PAGE_BADGE),
-            d = (0, g.a5)({
-                intervalType: null === (t = r.subscription_trial) || void 0 === t ? void 0 : t.interval,
-                intervalCount: null === (s = r.subscription_trial) || void 0 === s ? void 0 : s.interval_count
+            d = null === (t = r.subscription_trial) || void 0 === t ? void 0 : t.interval,
+            u = null === (s = r.subscription_trial) || void 0 === s ? void 0 : s.interval_count,
+            f = (0, g.a5)({
+                intervalType: null !== d ? d : void 0,
+                intervalCount: null !== u ? u : void 0
             });
         return (
             o.useEffect(() => {
@@ -226,7 +228,7 @@ let I = () =>
                 ackedClassName: E.trialAckedBadge,
                 className: E.trialBadgeBackground,
                 isTabSelected: n,
-                badgeCopy: a ? A.intl.string(A.t.OS9KPj) : d,
+                badgeCopy: a ? A.intl.string(A.t.OS9KPj) : f,
                 offerExpiresAt: c ? r.expires_at : void 0
             })
         );
