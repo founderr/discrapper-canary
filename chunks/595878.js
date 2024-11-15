@@ -24,8 +24,9 @@ function i(e) {
 }
 function a(e) {
     let { location: t } = e,
-        { enableNitroTenureRewardCard: n } = r.OW.getCurrentConfig({ location: t }, { autoTrackExposure: !1 });
-    return n;
+        { enableNitroTenureRewardCard: n } = r.OW.getCurrentConfig({ location: t }, { autoTrackExposure: !1 }),
+        { enabled: i } = r.Hd.getCurrentConfig({ location: t }, { autoTrackExposure: !1 });
+    return n || i;
 }
 function s(e) {
     let { location: t } = e,
