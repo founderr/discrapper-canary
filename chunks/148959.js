@@ -48,11 +48,13 @@ class b extends d.Z {
         return this.userId;
     }
     updateAudioAndVideoStreamInfo(e, t) {
-        if (((this.audioSSRC = e), (this.videoStreams = t), this.videoStreams.length > 1)) {
-            var n, r, i, a;
-            let e = null !== (i = null === (n = c().minBy(this.videoStreams, (e) => e.quality)) || void 0 === n ? void 0 : n.ssrc) && void 0 !== i ? i : 0,
-                t = null !== (a = null === (r = c().maxBy(this.videoStreams, (e) => e.quality)) || void 0 === r ? void 0 : r.ssrc) && void 0 !== a ? a : 0;
-            (e !== this.lqSSRC || t !== this.hqSSRC) && ((this.lqSSRC = e), (this.hqSSRC = t), this.reset(), this.update());
+        let n = t.filter((e) => e.active),
+            r = this.videoStreams.length !== n.length;
+        if (((this.audioSSRC = e), (this.videoStreams = n), this.videoStreams.length > 1)) {
+            var i, a, s, o;
+            let e = null !== (s = null === (i = c().minBy(this.videoStreams, (e) => e.quality)) || void 0 === i ? void 0 : i.ssrc) && void 0 !== s ? s : 0,
+                t = null !== (o = null === (a = c().maxBy(this.videoStreams, (e) => e.quality)) || void 0 === a ? void 0 : a.ssrc) && void 0 !== o ? o : 0;
+            (e !== this.lqSSRC || t !== this.hqSSRC || r) && ((this.lqSSRC = e), (this.hqSSRC = t), this.reset(), this.update());
         } else this.update();
     }
     setGoLiveStreamDowngraded(e) {

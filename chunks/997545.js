@@ -558,26 +558,29 @@ class C extends _.Z {
                 height: t,
                 framerate: n
             },
-            a = this.videoQualityManager.getQuality();
-        if (!h.SF.equals(i, a.capture) || a.bitrateMax !== r) {
-            this.videoQualityManager.setGoliveQuality({
-                capture: i,
-                encode: i,
-                bitrateMax: r
-            });
-            let a = this.videoStreamParameters.findIndex((e) => 100 === e.quality);
-            -1 === a && (a = 0),
-                this.videoStreamParameters.length > 0 &&
-                    ((this.videoStreamParameters[a].maxResolution = {
+            a = this.videoQualityManager.getQuality(),
+            s = !h.SF.equals(i, a.capture) || a.bitrateMax !== r,
+            o = this.videoStreamParameters.findIndex((e) => e.quality === S.y7);
+        -1 === o && (o = 0),
+            s &&
+                (this.videoQualityManager.setGoliveQuality({
+                    capture: i,
+                    encode: i,
+                    bitrateMax: r
+                }),
+                this.videoStreamParameters.length > o &&
+                    ((this.videoStreamParameters[o].maxResolution = {
                         type: 0 === e && 0 === t ? T.uA.SOURCE : T.uA.FIXED,
                         width: e,
                         height: t
                     }),
-                    (this.videoStreamParameters[a].maxFrameRate = n),
-                    (this.videoStreamParameters[a].maxBitrate = r)),
-                this.emit(m.Sh.Video, this.userId, null, this.audioSSRC, this.videoStreamParameters[a].ssrc, N(this.videoStreamParameters[a].ssrc), this.videoStreamParameters),
-                this.conn.setTransportOptions(this.applyQualityConstraints().constraints);
-        }
+                    (this.videoStreamParameters[o].maxFrameRate = n),
+                    (this.videoStreamParameters[o].maxBitrate = r)));
+        let l = this.videoStreamParameters.findIndex((e) => e.quality === S.LD),
+            u = -1 !== l && this.videoStreamParameters.length > l,
+            c = this.videoQualityManager.shouldEnableGoliveSimulcastForHqQuality(i),
+            d = u && this.videoStreamParameters[l].active !== c;
+        u && ((this.videoStreamParameters[l].active = c), (this.simulcastLQDisabledSsrc = c ? void 0 : this.videoStreamParameters[l].ssrc)), (s || d) && (this.emit(m.Sh.Video, this.userId, null, this.audioSSRC, this.videoStreamParameters[o].ssrc, N(this.videoStreamParameters[o].ssrc), this.videoStreamParameters), this.conn.setTransportOptions(this.applyQualityConstraints().constraints));
     }
     setSDP(e) {}
     setRemoteVideoSinkWants(e) {
@@ -880,6 +883,7 @@ class C extends _.Z {
             y(this, 'videoQualityMeasurement', ''),
             y(this, 'videoEncoderExperiments', ''),
             y(this, 'numFastUdpReconnects', 0),
+            y(this, 'simulcastLQDisabledSsrc', void 0),
             y(this, 'logger', void 0),
             y(this, 'handleSpeakingNative', (e, t) => {
                 let n = T.Dg.NONE;
@@ -929,13 +933,15 @@ class C extends _.Z {
                     ? null != r && Array.isArray(r) && r.length > 0
                         ? r.forEach((e) => {
                               i.forEach((t, n) => {
-                                  t.rid === e.rid &&
-                                      (i[n] = {
+                                  if (t.rid === e.rid) {
+                                      let r = this.simulcastLQDisabledSsrc !== e.ssrc && e.active;
+                                      i[n] = {
                                           ...t,
                                           ssrc: e.ssrc,
                                           rtxSsrc: e.rtxSsrc,
-                                          active: e.active
-                                      });
+                                          active: r
+                                      };
+                                  }
                               });
                           })
                         : t > 0

@@ -735,14 +735,15 @@ class es extends _.Z {
                     }),
                     this._localMediaSinkWantsManager.setVideoSSRCs(t, e);
             } else {
-                var a, s;
+                var a, s, o;
                 let e = [];
                 for (let t of i)
                     null != t.ssrc &&
                         null != t.quality &&
                         e.push({
                             ssrc: t.ssrc,
-                            quality: t.quality
+                            quality: t.quality,
+                            active: null === (o = t.active) || void 0 === o || o
                         });
                 null === (a = this._goLiveQualityManager) || void 0 === a || a.setUserID(t), null === (s = this._goLiveQualityManager) || void 0 === s || s.updateAudioAndVideoStreamInfo(n, e);
             }

@@ -32,6 +32,9 @@ n.d(t, {
     JA: function () {
         return X;
     },
+    LD: function () {
+        return eo;
+    },
     P8: function () {
         return ei;
     },
@@ -45,13 +48,13 @@ n.d(t, {
         return F;
     },
     R$: function () {
-        return el;
+        return ec;
     },
     Tr: function () {
         return w;
     },
     UC: function () {
-        return ec;
+        return ef;
     },
     Uc: function () {
         return G;
@@ -63,10 +66,10 @@ n.d(t, {
         return q;
     },
     XR: function () {
-        return e_;
+        return eh;
     },
     YE: function () {
-        return ed;
+        return e_;
     },
     Yh: function () {
         return V;
@@ -90,7 +93,7 @@ n.d(t, {
         return H;
     },
     ef: function () {
-        return es;
+        return el;
     },
     fC: function () {
         return N;
@@ -105,7 +108,7 @@ n.d(t, {
         return K;
     },
     kS: function () {
-        return ep;
+        return em;
     },
     mC: function () {
         return ee;
@@ -114,16 +117,16 @@ n.d(t, {
         return $;
     },
     n4: function () {
-        return em;
+        return eE;
     },
     pM: function () {
         return T;
     },
     pk: function () {
-        return eu;
+        return ed;
     },
     ru: function () {
-        return eo;
+        return eu;
     },
     u$: function () {
         return en;
@@ -132,7 +135,7 @@ n.d(t, {
         return P;
     },
     ux: function () {
-        return eh;
+        return eg;
     },
     vA: function () {
         return Z.vA;
@@ -140,8 +143,11 @@ n.d(t, {
     w5: function () {
         return Y;
     },
+    y7: function () {
+        return es;
+    },
     yf: function () {
-        return ef;
+        return ep;
     },
     ym: function () {
         return k;
@@ -205,15 +211,17 @@ let F = 100,
     er = 30,
     ei = 20,
     ea = 12,
-    es = 1280,
-    eo = 720,
-    el = 30,
-    eu = 1500000,
-    ec = 150000,
-    ed = 3500000,
-    ef = 9000000,
-    e_ = ['remoteSinkWantsPixelCount', 'remoteSinkWantsMaxFramerate', 'encodingVideoMinBitRate', 'encodingVideoMaxBitRate', 'encodingVideoBitRate', 'streamParameters'],
-    ep = {
+    es = 100,
+    eo = 50,
+    el = 1280,
+    eu = 720,
+    ec = 30,
+    ed = 1500000,
+    ef = 150000,
+    e_ = 3500000,
+    ep = 9000000,
+    eh = ['remoteSinkWantsPixelCount', 'remoteSinkWantsMaxFramerate', 'encodingVideoMinBitRate', 'encodingVideoMaxBitRate', 'encodingVideoBitRate', 'streamParameters'],
+    em = {
         videoBudget: {
             width: 1280,
             height: 720,
@@ -235,8 +243,8 @@ let F = 100,
         },
         videoBitrateFloor: 150000
     },
-    eh = 60000,
-    em = '>=22.0.0';
+    eg = 60000,
+    eE = '>=22.0.0';
 ((c = R || (R = {})).AUTO_ENABLE = 'AUTO_ENABLE'),
     (c.ATTENUATION = 'ATTENUATION'),
     (c.AUDIO_INPUT_DEVICE = 'AUDIO_INPUT_DEVICE'),

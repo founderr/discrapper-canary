@@ -113,6 +113,9 @@ class u {
     setGoLiveSimulcastLQTargetBitrate(e) {
         this.goliveSimulcastLQBitrateTarget = e;
     }
+    shouldEnableGoliveSimulcastForHqQuality(e) {
+        return !!this.goliveSimulcastEnabled && e.width * e.height > i.ef * i.ru;
+    }
     getVideoQuality(e) {
         let t = this.ladder.getResolution(e),
             n = this.options.videoBitrate.min * t.budgetPortion,
