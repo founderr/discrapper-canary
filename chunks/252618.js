@@ -1,85 +1,86 @@
 n.d(t, {
     EM: function () {
-        return d;
+        return f;
     },
     PR: function () {
-        return c;
+        return d;
     },
     Tt: function () {
-        return _;
+        return p;
     },
     ZD: function () {
-        return h;
+        return m;
     },
     yY: function () {
-        return p;
+        return h;
     }
 }),
     n(47120);
 var r = n(192379),
-    i = n(905837),
-    a = n(731965);
-let s = { base: n(358085).isPlatformEmbedded ? void 0 : 'Discord' },
-    o = 0,
-    l = {
+    i = n(976649),
+    a = n(454000),
+    s = n(731965);
+let o = { base: n(358085).isPlatformEmbedded ? void 0 : 'Discord' },
+    l = 0,
+    u = {
         count: 3,
         onlyWhenBlurred: !1,
         interval: 1000
     },
-    u = (0, i.Ue)(() => ({
-        titles: [s],
+    c = (0, a.F)(() => ({
+        titles: [o],
         notificationCount: void 0,
         flashQueue: []
     }));
-function c(e) {
-    (0, a.j)(() => u.setState({ notificationCount: e }));
-}
 function d(e) {
+    (0, s.j)(() => c.setState({ notificationCount: e }));
+}
+function f(e) {
     let t = {
-        ...l,
+        ...u,
         ...e,
-        id: o++
+        id: l++
     };
     return (
         (t.count = Math.max(t.count, t.messages.length)),
-        u.setState((e) => ({
+        c.setState((e) => ({
             flashQueue: [...e.flashQueue, t]
         })),
-        () => f(t.id)
+        () => _(t.id)
     );
 }
-function f(e) {
-    u.setState((t) => ({ flashQueue: t.flashQueue.filter((t) => t.id !== e) }));
-}
 function _(e) {
+    c.setState((t) => ({ flashQueue: t.flashQueue.filter((t) => t.id !== e) }));
+}
+function p(e) {
     r.useEffect(() => {
         var t;
         return (
             (t = e),
-            (0, a.j)(() =>
-                u.setState((e) => ({
+            (0, s.j)(() =>
+                c.setState((e) => ({
                     titles: [t, ...e.titles]
                 }))
             ),
             () => {
-                (0, a.j)(() => u.setState((e) => ({ titles: e.titles.filter((e) => e !== t) })));
+                (0, s.j)(() => c.setState((e) => ({ titles: e.titles.filter((e) => e !== t) })));
             }
         );
     }, [...Object.values(e)]);
 }
-function p(e) {
-    return _(e), null;
+function h(e) {
+    return p(e), null;
 }
-function h() {
+function m() {
     let { skipsSettingDefaultPageTitle: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     r.useEffect(() => {
         function e() {
-            u.setState({ flashQueue: [] });
+            c.setState({ flashQueue: [] });
         }
         return document.addEventListener('focusin', e, { capture: !0 }), () => document.removeEventListener('focusin', e, { capture: !0 });
     }, []);
     let t = (function () {
-        let [e, t] = u((e) => {
+        let [e, t] = c((e) => {
                 let { flashQueue: t } = e,
                     n = (function (e) {
                         let t, n, r;
@@ -96,34 +97,34 @@ function h() {
                         return null == t || 0 === t ? '' : t < 0 ? '\u2022 ' : '('.concat(t, ') ');
                     })(e);
                 return [''.concat(r).concat(n), t[0]];
-            }),
-            [n, i] = r.useState(!1),
-            a = r.useRef(0),
-            s = null == t ? void 0 : t.messages[a.current % t.messages.length];
+            }, i.X),
+            [n, a] = r.useState(!1),
+            s = r.useRef(0),
+            o = null == t ? void 0 : t.messages[s.current % t.messages.length];
         return (
             r.useEffect(() => {
                 if (null == t) {
-                    (a.current = 0), i(!1);
+                    (s.current = 0), a(!1);
                     return;
                 }
                 if (document.hasFocus() && t.onlyWhenBlurred) {
-                    f(t.id), i(!1);
+                    _(t.id), a(!1);
                     return;
                 }
                 let e = setInterval(() => {
-                    if (a.current >= t.count) {
-                        f(t.id), i(!1);
+                    if (s.current >= t.count) {
+                        _(t.id), a(!1);
                         return;
                     }
-                    i((e) => !e || ((a.current += 1), !1));
+                    a((e) => !e || ((s.current += 1), !1));
                 }, t.interval);
                 return () => clearInterval(e);
             }, [t]),
-            n ? s : e
+            n ? o : e
         );
     })();
     r.useEffect(() => {
-        let n = t === s.base;
+        let n = t === o.base;
         if (!e || !n) document.title = t;
     }, [e, t]);
 }
