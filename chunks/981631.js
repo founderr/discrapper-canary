@@ -3388,6 +3388,8 @@ let _J = 'help_center_cta';
     (r2.REVERSE_TRIAL_UPSELL_MODAL = 'Reverse trial Upsell Modal'),
     (r2.WEB_SETTING_TREE_TOOL = 'Web Setting Tree Tool'),
     (r2.THIRD_PARTY_ACCESS = 'Third Party Access'),
+    (r2.GUILD_LEADERBOARD_SETTINGS_MODAL = 'Guild Leaderboard Setting'),
+    (r2.GUILD_LEADERBOARD_ACCESS_MODAL = 'Guild Leaderboard Access Modal'),
     ((r3 = eA || (eA = {})).TOOLTIP = 'Tooltip'),
     (r3.CARD = 'Card'),
     (r3.CAROUSEL = 'Carousel'),

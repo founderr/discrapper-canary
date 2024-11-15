@@ -1,49 +1,54 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return m;
+            return b;
         }
     }),
     n(47120),
     n(653041);
 var i = n(200651),
     s = n(192379),
-    r = n(512722),
-    a = n.n(r),
+    a = n(512722),
+    r = n.n(a),
     o = n(902704),
     l = n(481060),
     d = n(935369),
-    c = n(707515),
-    u = n(528567),
-    h = n(873128),
-    g = n(647529),
-    x = n(388032),
-    f = n(48439);
-function m(e) {
-    let { guildId: t, leaderboardId: n, ...r } = e,
-        m = (0, h.Z)({
+    c = n(367907),
+    u = n(707515),
+    h = n(528567),
+    g = n(873128),
+    x = n(647529),
+    f = n(981631),
+    m = n(388032),
+    _ = n(48439);
+function b(e) {
+    let { guildId: t, leaderboardId: n, ...a } = e,
+        b = (0, g.Z)({
             guildId: t,
             leaderboardId: n
         });
-    a()(null != m, 'Leaderboard must be loaded before opening the settings modal');
-    let _ = m.guild_settings,
-        [b, j] = s.useState(_.sort_by_statistic_id),
-        [p, w] = s.useState(_.sort_desc),
-        [v, C] = s.useState(_.show_winner_crown),
-        [S, { loading: y }] = (0, d.Z)(c._),
-        N = b !== _.sort_by_statistic_id || p !== _.sort_desc || v !== _.show_winner_crown,
-        I = async () => {
-            await S({
+    r()(null != b, 'Leaderboard must be loaded before opening the settings modal');
+    let j = b.guild_settings,
+        [p, w] = s.useState(j.sort_by_statistic_id),
+        [v, S] = s.useState(j.sort_desc),
+        [C, N] = s.useState(j.show_winner_crown),
+        [y, { loading: I }] = (0, d.Z)(u._);
+    s.useEffect(() => {
+        c.ZP.trackWithMetadata(f.rMx.OPEN_MODAL, { type: f.jXE.GUILD_LEADERBOARD_SETTINGS_MODAL });
+    }, []);
+    let B = p !== j.sort_by_statistic_id || v !== j.sort_desc || C !== j.show_winner_crown,
+        Z = async () => {
+            await y({
                 guildId: t,
                 leaderboardId: n,
-                sortByStatisticId: b,
-                sortDesc: p,
-                showWinnerCrown: v
+                sortByStatisticId: p,
+                sortDesc: v,
+                showWinnerCrown: C
             }),
-                r.onClose();
+                a.onClose();
         },
-        B = s.useMemo(() => {
-            let e = Object.values(m.settings.statistics).filter((e) => e.selectable_for_competition),
+        M = s.useMemo(() => {
+            let e = Object.values(b.settings.statistics).filter((e) => e.selectable_for_competition),
                 t = [];
             for (let n of e)
                 for (let e of [!0, !1])
@@ -52,63 +57,63 @@ function m(e) {
                             sortByStatisticId: n.id,
                             sortDesc: e
                         },
-                        label: (0, u.s)({
+                        label: (0, h.s)({
                             statisticId: n.id,
                             sortDesc: e,
                             aggregationType: n.aggregation_type
                         })
                     });
             return t;
-        }, [m]),
-        Z = B.find((e) =>
+        }, [b]),
+        L = M.find((e) =>
             (0, o.Z)(e.value, {
-                sortByStatisticId: b,
-                sortDesc: p
+                sortByStatisticId: p,
+                sortDesc: v
             })
         );
-    return (0, i.jsx)(g.Z, {
-        ...r,
+    return (0, i.jsx)(x.Z, {
+        ...a,
         guildId: t,
-        title: x.intl.string(x.t.rv9GUV),
+        title: m.intl.string(m.t.rv9GUV),
         buttons: (0, i.jsx)(l.Button, {
-            onClick: I,
-            submitting: y,
-            disabled: !N,
-            children: x.intl.string(x.t.R3BPHx)
+            onClick: Z,
+            submitting: I,
+            disabled: !B,
+            children: m.intl.string(m.t.R3BPHx)
         }),
         children: (0, i.jsxs)(l.ModalContent, {
-            className: f.content,
+            className: _.content,
             children: [
                 (0, i.jsx)(l.Text, {
                     variant: 'text-md/medium',
                     color: 'header-primary',
-                    children: x.intl.string(x.t.IQO9Fx)
+                    children: m.intl.string(m.t.IQO9Fx)
                 }),
                 (0, i.jsx)(l.Spacer, { size: 8 }),
                 (0, i.jsx)(l.SingleSelect, {
-                    placeholder: x.intl.string(x.t['g/Rr2d']),
-                    value: null == Z ? void 0 : Z.value,
-                    options: B,
+                    placeholder: m.intl.string(m.t['g/Rr2d']),
+                    value: null == L ? void 0 : L.value,
+                    options: M,
                     onChange: (e) => {
                         let { sortByStatisticId: t, sortDesc: n } = e;
-                        j(t), w(n);
+                        w(t), S(n);
                     }
                 }),
-                (0, i.jsx)('div', { className: f.divider }),
-                (0, i.jsx)(l.FormTitle, { children: x.intl.string(x.t.HU4EKC) }),
+                (0, i.jsx)('div', { className: _.divider }),
+                (0, i.jsx)(l.FormTitle, { children: m.intl.string(m.t.HU4EKC) }),
                 (0, i.jsx)(l.Spacer, { size: 8 }),
                 (0, i.jsx)(l.FormSwitch, {
                     hideBorder: !0,
-                    onChange: () => C((e) => !e),
-                    value: v,
-                    className: f.showWinnerCrownSwitch,
+                    onChange: () => N((e) => !e),
+                    value: C,
+                    className: _.showWinnerCrownSwitch,
                     children: (0, i.jsxs)('div', {
-                        className: f.showWinnerCrownTextContainer,
+                        className: _.showWinnerCrownTextContainer,
                         children: [
                             (0, i.jsx)(l.Text, {
                                 variant: 'text-md/medium',
                                 color: 'header-primary',
-                                children: x.intl.string(x.t.cH7QEx)
+                                children: m.intl.string(m.t.cH7QEx)
                             }),
                             (0, i.jsx)(l.LeagueOfLegendsBrandIcon, { size: 'xs' })
                         ]

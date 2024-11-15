@@ -1,96 +1,104 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return j;
+            return f;
         }
     });
-var s = n(200651);
-n(192379);
-var o = n(442837),
-    i = n(481060),
-    l = n(231757),
-    a = n(511010),
-    r = n(553795),
-    d = n(430824),
-    c = n(979192),
-    u = n(647529),
-    x = n(463031),
-    m = n(981631),
-    h = n(388032),
-    g = n(97741);
-function j(e) {
+var i = n(200651),
+    s = n(192379),
+    o = n(442837),
+    l = n(481060),
+    a = n(367907),
+    r = n(231757),
+    d = n(511010),
+    c = n(553795),
+    u = n(430824),
+    x = n(979192),
+    m = n(647529),
+    h = n(463031),
+    g = n(981631),
+    j = n(388032),
+    _ = n(97741);
+function f(e) {
     let { guildId: t, ...n } = e,
-        l = (0, o.e7)([d.Z], () => d.Z.getGuild(t));
-    return null == l
+        r = (0, o.e7)([u.Z], () => u.Z.getGuild(t));
+    return (s.useEffect(() => {
+        null != t &&
+            a.ZP.trackWithMetadata(g.rMx.OPEN_MODAL, {
+                type: g.jXE.GUILD_LEADERBOARD_ACCESS_MODAL,
+                guild_id: t
+            });
+    }, [t]),
+    null == r)
         ? null
-        : (0, s.jsx)(u.Z, {
+        : (0, i.jsx)(m.Z, {
               guildId: t,
-              title: h.intl.string(h.t['WWBw5+']),
+              title: j.intl.string(j.t['WWBw5+']),
               ...n,
-              children: (0, s.jsxs)(i.ModalContent, {
-                  className: g.modalContent,
+              children: (0, i.jsxs)(l.ModalContent, {
+                  className: _.modalContent,
                   children: [
-                      (0, s.jsxs)('div', {
-                          className: g.subtitleContainer,
+                      (0, i.jsxs)('div', {
+                          className: _.subtitleContainer,
                           children: [
-                              (0, s.jsx)(i.Text, {
+                              (0, i.jsx)(l.Text, {
                                   variant: 'text-md/normal',
                                   color: 'text-secondary',
-                                  children: h.intl.string(h.t.OBuzJi)
+                                  children: j.intl.string(j.t.OBuzJi)
                               }),
-                              (0, s.jsx)(i.LeagueOfLegendsBrandIcon, { size: 'xs' })
+                              (0, i.jsx)(l.LeagueOfLegendsBrandIcon, { size: 'xs' })
                           ]
                       }),
-                      (0, s.jsxs)('div', {
-                          className: g.notes,
-                          children: [(0, s.jsx)(p, {}), (0, s.jsx)(i.Spacer, { size: 4 }), (0, s.jsx)(a.Z, { className: g.divider }), null != l && (0, s.jsx)(B, { guild: l })]
+                      (0, i.jsxs)('div', {
+                          className: _.notes,
+                          children: [(0, i.jsx)(p, {}), (0, i.jsx)(l.Spacer, { size: 4 }), (0, i.jsx)(d.Z, { className: _.divider }), null != r && (0, i.jsx)(B, { guild: r })]
                       })
                   ]
               })
           });
 }
 function p() {
-    return (0, s.jsxs)('div', {
-        className: g.row,
+    return (0, i.jsxs)('div', {
+        className: _.row,
         children: [
-            (0, s.jsx)(i.Text, {
+            (0, i.jsx)(l.Text, {
                 variant: 'text-md/medium',
-                children: h.intl.string(h.t.PL48CA)
+                children: j.intl.string(j.t.PL48CA)
             }),
-            (0, s.jsx)(f, {})
+            (0, i.jsx)(C, {})
         ]
     });
 }
-function f() {
-    return null != (0, o.e7)([r.Z], () => r.Z.getAccount(null, m.ABu.RIOT_GAMES))
-        ? (0, s.jsxs)(i.Button, {
+function C() {
+    return null != (0, o.e7)([c.Z], () => c.Z.getAccount(null, g.ABu.RIOT_GAMES))
+        ? (0, i.jsxs)(l.Button, {
               disabled: !0,
-              color: i.Button.Colors.TRANSPARENT,
-              look: i.Button.Looks.OUTLINED,
-              innerClassName: g.doneButton,
+              color: l.Button.Colors.TRANSPARENT,
+              look: l.Button.Looks.OUTLINED,
+              innerClassName: _.doneButton,
               children: [
-                  (0, s.jsx)(i.CheckmarkSmallIcon, {}),
-                  (0, s.jsx)(i.Text, {
+                  (0, i.jsx)(l.CheckmarkSmallIcon, {}),
+                  (0, i.jsx)(l.Text, {
                       variant: 'text-sm/medium',
-                      children: h.intl.string(h.t.i4jeWV)
+                      children: j.intl.string(j.t.i4jeWV)
                   })
               ]
           })
-        : (0, s.jsx)(i.Button, {
-              onClick: () => (0, l.Z)({ platformType: m.ABu.RIOT_GAMES }),
-              size: i.Button.Sizes.SMALL,
-              color: i.Button.Colors.PRIMARY,
-              children: h.intl.string(h.t.To26Nj)
+        : (0, i.jsx)(l.Button, {
+              onClick: () => (0, r.Z)({ platformType: g.ABu.RIOT_GAMES }),
+              size: l.Button.Sizes.SMALL,
+              color: l.Button.Colors.PRIMARY,
+              children: j.intl.string(j.t.To26Nj)
           });
 }
 function B(e) {
     let { guild: t } = e,
-        { leaderboardsDisabled: n, toggleGuildLeaderboardsDisabled: o } = (0, c.O)(t.id, x._);
-    return (0, s.jsx)(i.FormSwitch, {
+        { leaderboardsDisabled: n, toggleGuildLeaderboardsDisabled: s } = (0, x.O)(t.id, h._);
+    return (0, i.jsx)(l.FormSwitch, {
         hideBorder: !0,
-        onChange: o,
+        onChange: s,
         value: !n,
-        className: g.guildOptoutSwitch,
-        children: h.intl.string(h.t.eZhXQU)
+        className: _.guildOptoutSwitch,
+        children: j.intl.string(j.t.eZhXQU)
     });
 }
