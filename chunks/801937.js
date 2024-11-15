@@ -36,9 +36,8 @@ let _ = {
     },
     y = [E.HeQ.CARD, E.HeQ.PAYPAL],
     P = new Set(['DE', 'BG', 'CZ', 'DK', 'HU', 'RO', 'SE', 'CH', 'SI', 'IE', 'LV', 'MT', 'FR', 'SK', 'FI', 'GR', 'PT', 'LU', 'LT', 'CY', 'NO', 'NL', 'ES', 'BE', 'AT', 'IT']),
-    g = new Set(['BE', 'NL', 'DE', 'ES', 'AT', 'IT']),
-    C = new Map([
-        [E.HeQ.SOFORT, new Set(['ALL', ...g])],
+    g = new Map([
+        [E.HeQ.SOFORT, new Set([])],
         [E.HeQ.PRZELEWY24, new Set(['ALL', 'PL'])],
         [E.HeQ.GIROPAY, new Set(['ALL', 'DE'])],
         [E.HeQ.PAYSAFE_CARD, new Set(['ALL', ...P])],
@@ -53,18 +52,18 @@ let _ = {
         [E.HeQ.IDEAL, new Set(['ALL', 'NL'])],
         [E.HeQ.CASH_APP, new Set(['ALL', 'US'])]
     ]),
-    I = new Map([[E.HeQ.PAYSAFE_CARD, new Set(['DE'])]]);
-function T(e) {
+    C = new Map([[E.HeQ.PAYSAFE_CARD, new Set(['DE'])]]);
+function I(e) {
     let { enabledPaymentTypes: t, forceCountryCode: n, validCountryCodes: a } = d.ZP.getCurrentConfig({ location: '40c266_1' }, { autoTrackExposure: !1 }),
         r = null != e ? e : 'ALL';
     a.length > 0 && null != n && null != e && (r = a.includes(e) ? e : n);
     let l = new Set(),
         i = [];
     return (
-        C.forEach((e, n) => {
+        g.forEach((e, n) => {
             t.includes(n) && (e.has(r) ? l.add(n) : i.push(n));
         }),
-        I.forEach((e, t) => {
+        C.forEach((e, t) => {
             e.has(r) && l.add(t);
         }),
         {
@@ -73,7 +72,7 @@ function T(e) {
         }
     );
 }
-class S extends r.PureComponent {
+class T extends r.PureComponent {
     componentDidMount() {
         (0, c.GE)();
     }
@@ -128,9 +127,9 @@ class S extends r.PureComponent {
             p = [],
             h = [],
             E = void 0 === s;
-        if (c) p.push(...this.createPaymentButtons(T('ALL').countryPaymentMethods));
+        if (c) p.push(...this.createPaymentButtons(I('ALL').countryPaymentMethods));
         else {
-            let { countryPaymentMethods: e, remainingPaymentMethods: t } = T(s);
+            let { countryPaymentMethods: e, remainingPaymentMethods: t } = I(s);
             p.push(...this.createPaymentButtons(e)), h.push(...this.createPaymentButtons(t));
         }
         let _ = (0, a.jsxs)('div', {
@@ -179,4 +178,4 @@ t.Z = s.ZP.connectStores([h.Z], () => ({
     ipCountryCode: h.Z.ipCountryCode,
     ipCountryCodeHasError: h.Z.ipCountryCodeHasError,
     localizedPromo: h.Z.localizedPricingPromo
-}))(S);
+}))(T);
