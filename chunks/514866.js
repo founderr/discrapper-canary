@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return x;
+        return f;
     }
 });
 var r = n(200651);
@@ -8,13 +8,14 @@ n(192379);
 var a = n(120356),
     l = n.n(a),
     i = n(481060),
-    o = n(110478),
-    s = n(423932),
-    c = n(601948),
-    d = n(594174),
-    u = n(820756),
-    h = n(113207);
-let m = () => {
+    o = n(963886),
+    s = n(110478),
+    c = n(423932),
+    d = n(601948),
+    u = n(594174),
+    h = n(820756),
+    m = n(113207);
+let x = () => {
     Promise.all([n.e('52030'), n.e('47238')])
         .then(n.bind(n, 24031))
         .then((e) => {
@@ -40,35 +41,43 @@ let m = () => {
             );
         });
 };
-function x() {
-    let e = d.default.getCurrentUser(),
+function f() {
+    let e = u.default.getCurrentUser(),
         t = null == e ? void 0 : e.isStaff();
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)('div', {
-                className: l()(u.buttonsContainer, h.marginBottom20),
-                children: (0, r.jsx)(c.S, { isDevTools: !0 })
+                className: l()(h.buttonsContainer, m.marginBottom20),
+                children: (0, r.jsx)(d.S, { isDevTools: !0 })
             }),
             (0, r.jsx)('div', {
-                className: l()(u.buttonsContainer, h.marginBottom20),
+                className: l()(h.buttonsContainer, m.marginBottom20),
                 children: (0, r.jsx)(i.Button, {
-                    onClick: m,
+                    onClick: x,
                     children: 'Launch MFA'
                 })
             }),
             (0, r.jsx)('div', {
-                className: l()(u.buttonsContainer, h.marginBottom20),
+                className: l()(h.buttonsContainer, m.marginBottom20),
                 children: (0, r.jsx)(i.Button, {
-                    onClick: () => (0, s.Z)(),
+                    onClick: () => (0, c.Z)(),
                     children: 'Launch Vibing Wumpus'
                 })
             }),
             t &&
                 (0, r.jsx)('div', {
-                    className: l()(u.buttonsContainer, h.marginBottom20),
+                    className: l()(h.buttonsContainer, m.marginBottom20),
                     children: (0, r.jsx)(i.Button, {
-                        onClick: () => (0, o.N)(),
+                        onClick: () => (0, s.N)(),
                         children: 'Launch Captcha Test Tool'
+                    })
+                }),
+            t &&
+                (0, r.jsx)('div', {
+                    className: l()(h.buttonsContainer, m.marginBottom20),
+                    children: (0, r.jsx)(i.Button, {
+                        onClick: () => (0, o.E)(),
+                        children: 'Launch Age Verification Test Tool'
                     })
                 })
         ]
