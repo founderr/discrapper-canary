@@ -8,39 +8,39 @@ t.d(n, {
 var r = t(200651),
     i = t(192379),
     a = t(120356),
-    l = t.n(a),
-    o = t(299608),
-    s = t.n(o),
+    o = t.n(a),
+    l = t(299608),
+    s = t.n(l),
     u = t(100621),
     c = t(484957),
     d = t(481060),
     m = t(95398),
-    f = t(247206),
-    h = t(134432),
+    h = t(247206),
+    f = t(134432),
     p = t(169525),
     g = t(585483),
     _ = t(212459),
-    x = t(683528),
-    S = t(549635),
-    C = t(981631),
+    C = t(683528),
+    x = t(549635),
+    S = t(981631),
     v = t(388032),
     E = t(193889);
-function y(e, n) {
+function I(e, n) {
     return ((e % n) + n) % n;
 }
-function L(e) {
+function y(e) {
     let { width: n, height: t } = e;
     return null == n || 0 === n || null == t || 0 === t;
 }
-function I(e) {
+function L(e) {
     let { children: n, isObscured: t, src: a } = e,
-        [o, s] = i.useState(!1),
+        [l, s] = i.useState(!1),
         u = i.useCallback(() => {
             s((e) => !e);
         }, []);
     return t
         ? (0, r.jsx)(m.a.Provider, {
-              value: o,
+              value: l,
               children: (0, r.jsx)(
                   m.Z,
                   {
@@ -52,7 +52,7 @@ function I(e) {
                       children: (e) =>
                           (0, r.jsx)(r.Fragment, {
                               children: (0, r.jsx)('div', {
-                                  className: l()(E.obscureWrapper, { [E.obscure]: e }),
+                                  className: o()(E.obscureWrapper, { [E.obscure]: e }),
                                   children: n(e)
                               })
                           })
@@ -64,54 +64,54 @@ function I(e) {
 }
 function A(e) {
     var n;
-    let { items: t, onIndexChange: a, startIndex: l = 0, shouldRedactExplicitContent: o = !1, shouldHideMediaOptions: m = !1 } = e,
-        [p, y] = i.useState(l),
-        A = i.useRef(l),
-        [R, M] = i.useState([]),
-        { zoomed: O, setZoomed: b } = (0, _.Y)();
+    let { items: t, onIndexChange: a, startIndex: o = 0, shouldRedactExplicitContent: l = !1, shouldHideMediaOptions: m = !1 } = e,
+        [p, I] = i.useState(o),
+        A = i.useRef(o),
+        [R, j] = i.useState([]),
+        { zoomed: M, setZoomed: O } = (0, _.Y)();
     i.useEffect(() => {
         var e, n;
         let r = (((p + 1) % (e = t.length)) + e) % e;
         let i = (((p - 1) % (n = t.length)) + n) % n;
-        L(t[r]) && (0, h.po)(t[r].url), L(t[i]) && (0, h.po)(t[i].url);
+        y(t[r]) && (0, f.po)(t[r].url), y(t[i]) && (0, f.po)(t[i].url);
     }, [p, t]);
-    let j = i.useCallback(
+    let b = i.useCallback(
         (e) => {
             var n;
             let r = e - A.current;
-            y((e = ((e % (n = t.length)) + n) % n)), (A.current = e), M((e) => [...e, r]), null == a || a(e), b(!1);
+            I((e = ((e % (n = t.length)) + n) % n)), (A.current = e), j((e) => [...e, r]), null == a || a(e), O(!1);
         },
-        [a, t, b]
+        [a, t, O]
     );
     i.useEffect(() => {
         let e = s()(() => {
-                j(A.current + 1);
+                b(A.current + 1);
             }, 300),
             n = s()(() => {
-                j(A.current - 1);
+                b(A.current - 1);
             }, 300);
         return (
-            g.S.subscribe(C.CkL.MODAL_CAROUSEL_NEXT, e),
-            g.S.subscribe(C.CkL.MODAL_CAROUSEL_PREV, n),
+            g.S.subscribe(S.CkL.MODAL_CAROUSEL_NEXT, e),
+            g.S.subscribe(S.CkL.MODAL_CAROUSEL_PREV, n),
             () => {
-                g.S.unsubscribe(C.CkL.MODAL_CAROUSEL_NEXT, e), g.S.unsubscribe(C.CkL.MODAL_CAROUSEL_PREV, n);
+                g.S.unsubscribe(S.CkL.MODAL_CAROUSEL_NEXT, e), g.S.unsubscribe(S.CkL.MODAL_CAROUSEL_PREV, n);
             }
         );
-    }, [j, b]);
+    }, [b, O]);
     let T = t[p],
-        D = (0, f.KP)(
+        P = (0, h.KP)(
             {
-                type: f.lJ.GenericMedia,
+                type: h.lJ.GenericMedia,
                 media: T
             },
-            o
+            l
         ),
-        P = m
+        k = m
             ? (e) => {
                   e.stopPropagation(), e.preventDefault();
               }
             : void 0,
-        k = (function (e) {
+        D = (function (e) {
             if (0 === e) return ['translateX(0)'];
             let n = ['translateX(100px)', 'translateX(-100px)'];
             return e > 0 ? n : n.toReversed();
@@ -120,7 +120,7 @@ function A(e) {
             key: T.url,
             from: {
                 opacity: 0,
-                transform: k[0]
+                transform: D[0]
             },
             enter: {
                 opacity: 1,
@@ -128,7 +128,7 @@ function A(e) {
             },
             leave: {
                 opacity: 0,
-                transform: k[k.length - 1]
+                transform: D[D.length - 1]
             },
             config: {
                 friction: 20,
@@ -145,7 +145,9 @@ function A(e) {
                         ? (0, r.jsx)(d.CircleIconButton, {
                               className: E.navPrev,
                               size: d.CircleIconButtonSizes.SIZE_36,
-                              onClick: () => g.S.dispatch(C.CkL.MODAL_CAROUSEL_PREV),
+                              onClick: (e) => {
+                                  e.stopPropagation(), g.S.dispatch(S.CkL.MODAL_CAROUSEL_PREV);
+                              },
                               icon: (0, r.jsx)(c.j, {}),
                               tooltip: v.intl.string(v.t.vgfxaG),
                               color: d.CircleIconButtonColors.PRIMARY
@@ -160,14 +162,19 @@ function A(e) {
                                     {
                                         style: e,
                                         className: E.mediaWrapper,
-                                        children: (0, r.jsx)(I, {
-                                            isObscured: !O && D,
+                                        children: (0, r.jsx)(L, {
+                                            isObscured: !M && P,
                                             src: n.url,
                                             children: (e) =>
-                                                (0, r.jsx)(S.Z, {
-                                                    media: n,
-                                                    obscured: e,
-                                                    onContextMenu: P
+                                                (0, r.jsx)(r.Fragment, {
+                                                    children: (0, r.jsx)('div', {
+                                                        onClick: (e) => e.stopPropagation(),
+                                                        children: (0, r.jsx)(x.Z, {
+                                                            media: n,
+                                                            obscured: e,
+                                                            onContextMenu: k
+                                                        })
+                                                    })
                                                 })
                                         })
                                     },
@@ -180,7 +187,9 @@ function A(e) {
                         ? (0, r.jsx)(d.CircleIconButton, {
                               className: E.navNext,
                               size: d.CircleIconButtonSizes.SIZE_36,
-                              onClick: () => g.S.dispatch(C.CkL.MODAL_CAROUSEL_NEXT),
+                              onClick: (e) => {
+                                  e.stopPropagation(), g.S.dispatch(S.CkL.MODAL_CAROUSEL_NEXT);
+                              },
                               icon: (0, r.jsx)(d.ArrowLargeRightIcon, {}),
                               tooltip: v.intl.string(v.t.XiOHRU),
                               color: d.CircleIconButtonColors.PRIMARY
@@ -189,10 +198,10 @@ function A(e) {
                 ]
             }),
             Z &&
-                (0, r.jsx)(x.Z, {
+                (0, r.jsx)(C.Z, {
                     items: t,
                     currentIndex: p,
-                    onGalleryItemClick: j
+                    onGalleryItemClick: b
                 })
         ]
     });

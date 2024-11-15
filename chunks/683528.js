@@ -6,8 +6,8 @@ t.d(n, {
 var r = t(200651),
     i = t(192379),
     a = t(120356),
-    l = t.n(a),
-    o = t(481060),
+    o = t.n(a),
+    l = t(481060),
     s = t(607070),
     u = t(124347),
     c = t(52824),
@@ -58,15 +58,16 @@ function _(e) {
         }, [t]),
         (0, r.jsx)('div', {
             className: f.galleryContainer,
-            children: (0, r.jsx)(o.AdvancedScrollerThin, {
+            children: (0, r.jsx)(l.AdvancedScrollerThin, {
                 orientation: 'horizontal',
                 className: f.gallery,
                 ref: u,
+                onClick: (e) => e.stopPropagation(),
                 children: n.map((e, i) => {
                     let s = i === t,
                         u = s ? h.t['qv/U5e'] : h.t.zviMAA;
                     return (0, r.jsxs)(
-                        o.Clickable,
+                        l.Clickable,
                         {
                             id: p(i),
                             className: f.galleryItem,
@@ -75,7 +76,7 @@ function _(e) {
                                 totalPages: n.length
                             }),
                             onClick: () => a(i),
-                            children: [(0, r.jsx)('div', { className: l()(f.galleryItemOverlay, { [f.selected]: s }) }), (0, r.jsx)(g, { item: e })]
+                            children: [(0, r.jsx)('div', { className: o()(f.galleryItemOverlay, { [f.selected]: s }) }), (0, r.jsx)(g, { item: e })]
                         },
                         i
                     );
