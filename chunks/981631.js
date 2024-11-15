@@ -4695,6 +4695,7 @@ let or = Object.freeze({
     (nO.MOBILE_OVERLAY_OPENED = 'mobile_overlay_opened'),
     (nO.MOBILE_OVERLAY_TOGGLED = 'mobile_overlay_toggled'),
     (nO.POGGERMODE_SETTINGS_UPDATED = 'poggermode_settings_updated'),
+    (nO.IAR_IGNORE_USER_BUTTON_CLICKED = 'iar_ignore_user_button_clicked'),
     (nO.IAR_BLOCK_USER_BUTTON_CLICKED = 'iar_block_user_button_clicked'),
     (nO.IAR_MUTE_USER_BUTTON_CLICKED = 'iar_mute_user_button_clicked'),
     (nO.IAR_LEAVE_GUILD_BUTTON_CLICKED = 'iar_leave_guild_button_clicked'),
