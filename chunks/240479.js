@@ -1,73 +1,129 @@
-n.d(e, {
-    v: function () {
-        return x;
+n.d(t, {
+    Z: function () {
+        return A;
     }
 }),
-    n(47120);
-var a = n(200651),
-    r = n(192379),
-    o = n(120356),
-    i = n.n(o),
-    l = n(593473),
-    s = n(512969),
-    c = n(481060),
-    u = n(489863),
-    d = n(511540),
-    f = n(828878),
-    p = n(388032),
-    h = n(74939);
-function x(t) {
-    let { onUserCodeAccepted: e, usePrefilledCode: n } = t,
-        [o, x] = r.useState(() => {
-            let { user_code: t } = l.parse(window.location.search);
-            return n && null != t ? t : '';
-        }),
-        C = (0, s.TH)(),
-        _ = r.useCallback(() => {
-            (0, u.c$)(C);
-        }, [C]),
-        { manualSubmit: m, error: I, submitting: v } = (0, d.c)(o, e, _);
-    return (0, a.jsxs)('div', {
-        className: h.content,
-        children: [
-            (0, a.jsxs)('div', {
-                className: h.innerContent,
-                children: [
-                    (0, a.jsx)(c.Heading, {
-                        variant: 'heading-xl/extrabold',
-                        className: h.text,
-                        children: p.intl.string(p.t.KYPNUl)
-                    }),
-                    (0, a.jsx)(c.Text, {
-                        variant: 'text-md/medium',
-                        color: 'header-secondary',
-                        className: h.text,
-                        children: p.intl.string(p.t.xRHk7e)
-                    }),
-                    (0, a.jsx)(c.TextInput, {
-                        placeholder: p.intl.formatToPlainString(p.t['0tbz6+'], { number: f.A.USER_CODE_LENGTH }),
-                        maxLength: f.A.USER_CODE_LENGTH,
-                        className: h.textInputContainer,
-                        inputClassName: i()(h.textInput, { [h.textInputError]: null != I }),
-                        autoComplete: 'off',
-                        autoFocus: !0,
-                        value: o,
-                        onChange: x,
-                        error: I
-                    })
-                ]
-            }),
-            (0, a.jsx)(c.Button, {
+    n(47120),
+    n(773603);
+var r = n(200651),
+    i = n(192379),
+    a = n(793030),
+    s = n(442837),
+    o = n(481060),
+    l = n(749210),
+    u = n(231053),
+    c = n(183023),
+    d = n(524444),
+    f = n(208049),
+    _ = n(697426),
+    p = n(409673),
+    h = n(430824),
+    m = n(197115),
+    g = n(409700),
+    E = n(767434),
+    v = n(474936),
+    I = n(981631),
+    b = n(710111),
+    S = n(388032),
+    T = n(629152);
+function y(e) {
+    let { discoverableGuildId: t, closePopout: n, buttonType: a } = e,
+        s = i.useCallback(async () => {
+            if ((n(), null != t))
+                try {
+                    await l.Z.joinGuild(t), l.Z.transitionToGuildSync(t);
+                } catch {}
+        }, [n, t]);
+    return a === E.y.GET_NITRO
+        ? (0, r.jsx)(m.Z, {
+              fullWidth: !0,
+              showGradient: !0,
+              premiumModalAnalyticsLocation: { section: I.jXE.PREMIUM_SOUNDMOJI_GUILD_INFO_POPOUT },
+              subscriptionTier: v.Si.TIER_2,
+              size: o.Button.Sizes.SMALL,
+              color: o.Button.Colors.CUSTOM,
+              onClick: n,
+              buttonText: S.intl.string(S.t.pj0XBA)
+          })
+        : a === E.y.JOIN_GUILD
+          ? (0, r.jsx)(o.Button, {
+                size: o.Button.Sizes.SMALL,
                 fullWidth: !0,
-                color: c.Button.Colors.BRAND,
-                onClick: m,
-                submitting: v,
-                disabled: o.length !== f.A.USER_CODE_LENGTH,
-                children: (0, a.jsx)(c.Text, {
-                    variant: 'text-md/medium',
-                    children: p.intl.string(p.t['3PatS0'])
-                })
+                onClick: s,
+                children: S.intl.string(S.t.riu2R0)
             })
-        ]
-    });
+          : null;
+}
+function A(e) {
+    let { sound: t, channel: n, closePopout: o, refreshPosition: l } = e,
+        m = t.guildId === b.X8,
+        v = (0, s.e7)([h.Z], () => h.Z.getGuild(t.guildId)),
+        I = !m && null != v,
+        [S, A] = i.useState(!m && !I),
+        [N, C] = i.useState();
+    i.useEffect(() => {
+        if (!m && !I && null == N)
+            A(!0),
+                (0, f.xU)(t.soundId, t.guildId)
+                    .then((e) => {
+                        C(e);
+                    })
+                    .finally(() => {
+                        A(!1), l();
+                    });
+    }, [t, m, I, l, N]);
+    let { buttonType: R, description: O } = (0, E.Z)(t, n, I, N),
+        D = !I && null != N,
+        L = !m && S,
+        x = i.useMemo(() => (I ? u.JO.createFromGuildRecord(v) : null != N ? u.JO.createFromDiscoverableGuild(N) : void 0), [v, I, N]);
+    return L
+        ? (0, r.jsx)(d.SE, {})
+        : (0, r.jsxs)(d.W_, {
+              className: T.infoContainer,
+              children: [
+                  !m && (0, r.jsx)(g.nA, {}),
+                  (0, r.jsxs)('div', {
+                      className: T.infoExpandedSoundContainer,
+                      children: [
+                          (0, r.jsx)(p.ZP, {
+                              refreshEnabled: !0,
+                              buttonOverlay: _.Pb.NONE,
+                              sound: t,
+                              channel: void 0,
+                              isSoundmoji: !0,
+                              onSelectItem: () => {}
+                          }),
+                          (0, r.jsx)(a.xv, {
+                              variant: 'text-sm/normal',
+                              children: O
+                          })
+                      ]
+                  }),
+                  null != x &&
+                      (0, r.jsxs)('div', {
+                          className: T.infoExpandedGuildContainer,
+                          children: [
+                              (0, r.jsx)(a.xv, {
+                                  variant: 'eyebrow',
+                                  color: 'header-muted',
+                                  className: T.infoExpandedGuildTitle,
+                                  children: 'This soundmoji is from'
+                              }),
+                              (0, r.jsx)('div', {
+                                  className: T.infoExpandedGuildInfo,
+                                  children: (0, r.jsx)(c.Oe, {
+                                      expressionSourceGuild: x,
+                                      hasJoinedExpressionSourceGuild: I,
+                                      isDisplayingJoinGuildButtonInPopout: D
+                                  })
+                              }),
+                              (0, r.jsx)(y, {
+                                  buttonType: R,
+                                  discoverableGuildId: null == N ? void 0 : N.id,
+                                  closePopout: o
+                              })
+                          ]
+                      })
+              ]
+          });
 }

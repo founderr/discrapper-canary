@@ -11388,6 +11388,10 @@ div.modalHeader_c5e09c {
     align-items: start
 }
 
+.infoExpandedGuildInfo_dd5a70 {
+    width: 100%
+}
+
 .infoExpandedGuildTitle_dd5a70 {
     align-self: flex-start
 }
@@ -11451,6 +11455,10 @@ div.modalHeader_c5e09c {
     width: 1em;
     position: relative;
     top: 2px
+}
+
+.tooltip_f38a29 {
+    border-radius: var(--radius-sm)
 }
 
 .tooltipContainer_f38a29 {

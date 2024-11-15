@@ -3071,6 +3071,7 @@ let _J = 'help_center_cta';
     (r2.PREMIUM_GUILD_UPSELL_MODAL = 'Premium Guild Upsell Modal'),
     (r2.PREMIUM_GUILD_MEMBER_PROFILE_UPSELL_MODAL = 'Premium Guild Member Profile Upsell Modal'),
     (r2.PREMIUM_CUSTOM_NOTIFICATION_SOUND_UPSELL_MODAL = 'Premium Custom Notification Sound Upsell'),
+    (r2.PREMIUM_SOUNDMOJI_GUILD_INFO_POPOUT = 'Premium Soundmoji Guild Info Popout'),
     (r2.PREMIUM_CUSTOM_NOTIFICATION_SOUND_SETTINGS_UPSELL = 'Premium Custom Notification Sound Settings Upsell'),
     (r2.PREMIUM_PERKS_DEMO_UPSELL_MODAL = 'Premium Perks Demo Upsell Modal'),
     (r2.PREMIUM_FOR_LATER_UPSELL_MODAL = 'Premium For Later Upsell Modal'),

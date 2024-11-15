@@ -6,5 +6,6 @@ e.exports = {
     inlineContainer: 'inlineContainer_f38a29',
     soundmojiEmoji: 'soundmojiEmoji_f38a29',
     unknownSound: 'unknownSound_f38a29',
+    tooltip: 'tooltip_f38a29',
     tooltipContainer: 'tooltipContainer_f38a29'
 };

@@ -73,49 +73,62 @@ function A(e) {
 }
 t.ZP = function (e) {
     let { channelId: t, messageId: n, soundId: a, jumbo: s = !1 } = e,
-        { currentPreviewRef: l } = i.useContext(p.Z),
-        u = (0, o.e7)(
+        { currentPreviewRef: u } = i.useContext(p.Z),
+        d = (0, o.e7)(
             [h.Z],
             () => {
                 var e;
-                return null !== (e = h.Z.getSoundById(a)) && void 0 !== e ? e : (0, f.Z)(t, n, a);
+                return null !== (e = (0, f.Z)(t, n, a)) && void 0 !== e ? e : h.Z.getSoundById(a);
             },
             [t, n, a]
         ),
-        d = (0, o.e7)([I.Z], () => I.Z.getChannel(t)),
-        [b, y] = i.useState(!1),
-        N = (0, c.X0)({ location: 'SoundboardMention' }),
-        C = i.useCallback(() => {
+        b = (0, o.e7)([I.Z], () => I.Z.getChannel(t)),
+        [y, N] = i.useState(!1),
+        C = (0, c.X0)({ location: 'SoundboardMention' }),
+        R = i.useCallback(() => {
             var e;
             let t = new Audio((0, g.Z)(a));
-            null != l.current && l.current.pause(), (l.current = t), (t.currentTime = 0), (t.volume = (0, E.Z)(null !== (e = null == u ? void 0 : u.volume) && void 0 !== e ? e : 1)), t.play(), (t.onplay = () => y(!0)), (t.onpause = () => y(!1)), (t.onended = () => y(!1));
-        }, [a, u, l, y]);
-    return N
-        ? null == u
-            ? (0, r.jsx)(T, { playSound: C })
+            null != u.current && u.current.pause(), (u.current = t), (t.currentTime = 0), (t.volume = (0, E.Z)(null !== (e = null == d ? void 0 : d.volume) && void 0 !== e ? e : 1)), t.play(), (t.onplay = () => N(!0)), (t.onpause = () => N(!1)), (t.onended = () => N(!1));
+        }, [a, d, u, N]);
+    return C
+        ? null == d
+            ? (0, r.jsx)(T, { playSound: R })
             : s
               ? (0, r.jsx)(
                     v.ZP,
                     {
                         containerClassName: S.jumboContainer,
                         className: S.jumboButton,
-                        sound: u,
-                        channel: d,
+                        sound: d,
+                        channel: b,
                         refreshEnabled: !0,
-                        onSelectItem: C,
-                        isPlayingSoundOverride: b,
+                        onSelectItem: R,
+                        isPlayingSoundOverride: y,
                         isAnimated: !1,
                         isSoundmoji: !0,
                         buttonOverlay: m.Pb.SOUNDMOJI,
+                        tooltipClassName: S.tooltip,
                         tooltipContentClassName: S.tooltipContainer,
-                        tooltipOverride: (0, r.jsx)(_.D, { sound: u })
+                        tooltipOverride: (0, r.jsx)(_.Dp, { sound: d })
                     },
-                    ''.concat(u.soundId)
+                    ''.concat(d.soundId)
                 )
-              : (0, r.jsx)(A, {
-                    sound: u,
-                    playSound: C,
-                    isPlaying: b
+              : (0, r.jsx)(l.Tooltip, {
+                    'aria-label': d.name,
+                    text: (0, r.jsx)(_.Dp, { sound: d }),
+                    tooltipClassName: S.tooltip,
+                    tooltipContentClassName: S.tooltipContainer,
+                    position: 'top',
+                    delay: 500,
+                    children: (e) =>
+                        (0, r.jsx)('span', {
+                            ...e,
+                            children: (0, r.jsx)(A, {
+                                sound: d,
+                                playSound: R,
+                                isPlaying: y
+                            })
+                        })
                 })
         : null;
 };
