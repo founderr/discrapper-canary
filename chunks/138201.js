@@ -10,16 +10,17 @@ var i = n(120356),
     s = n(481060),
     o = n(9636);
 function l(e) {
-    let { icon: t, title: n, titleVariant: i = 'text-md/semibold', description: l, descriptionVariant: u = 'text-xs/medium', iconClassName: c, color: d, buttonText: f, buttonColor: _ = s.Button.Colors.PRIMARY, buttonSize: p = s.Button.Sizes.SMALL, buttonDisabled: h, onButtonPress: m } = e,
-        g =
+    let { icon: t, title: n, titleVariant: i = 'text-md/semibold', description: l, descriptionVariant: u = 'text-xs/medium', iconClassName: c, color: d, buttonText: f, buttonColor: _ = s.Button.Colors.PRIMARY, buttonSize: p = s.Button.Sizes.SMALL, buttonLook: h = s.Button.Looks.FILLED, buttonDisabled: m, onButtonPress: g } = e,
+        E =
             null != f
                 ? (0, r.jsx)(s.Button, {
                       className: o.button,
                       size: p,
                       color: _,
-                      disabled: h,
+                      look: h,
+                      disabled: m,
                       'aria-label': f,
-                      onClick: m,
+                      onClick: g,
                       children: f
                   })
                 : void 0;
@@ -50,7 +51,7 @@ function l(e) {
                         })
                 ]
             }),
-            null != g && g
+            null != E && E
         ]
     });
 }

@@ -9,7 +9,7 @@ var r = n(544891),
     s = n(598077),
     o = n(981631);
 function l(e) {
-    r.tn
+    return r.tn
         .get({
             url: o.ANM.GUILD_INTEGRATIONS(e),
             query: {
@@ -20,11 +20,14 @@ function l(e) {
         })
         .then((t) => {
             let n = t.body.map((e) => (null != e.user && (e.user = new s.Z(e.user)), null != e.application && (e.application = a.Z.createFromServer(e.application)), e));
-            i.Z.dispatch({
-                type: 'GUILD_SETTINGS_LOADED_INTEGRATIONS',
-                guildId: e,
-                integrations: n
-            });
+            return (
+                i.Z.dispatch({
+                    type: 'GUILD_SETTINGS_LOADED_INTEGRATIONS',
+                    guildId: e,
+                    integrations: n
+                }),
+                n
+            );
         })
         .catch(() => {});
 }
