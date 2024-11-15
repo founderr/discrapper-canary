@@ -88,8 +88,8 @@ function y(e) {
             clearTimeout(e);
         };
     }, [C]);
-    let { id: k, expires_at: I, redeemed_at: w, trial_id: Z, subscription_trial: E } = s,
-        R =
+    let { id: k, expires_at: I, redeemed_at: w, trial_id: Z, subscription_trial: E, referrer: R } = s,
+        B =
             null !==
                 (n =
                     null ===
@@ -100,12 +100,13 @@ function y(e) {
                         ? void 0
                         : t.label) && void 0 !== n
                 ? n
-                : 'Unknown',
-        B = null != I,
-        O = null != I && new Date(I).getTime() < Date.now(),
-        A = (null == E ? void 0 : E.sku_id) === b.Si.TIER_0,
-        P = async () => {
-            S(!0), B ? await T(k, 'trial') : await (0, d.a)(s), h(), S(!1);
+                : 'Unknown';
+    null != R && (B = ''.concat(B, ' from @').concat(R.username));
+    let O = null != I,
+        A = null != I && new Date(I).getTime() < Date.now(),
+        P = (null == E ? void 0 : E.sku_id) === b.Si.TIER_0,
+        L = async () => {
+            S(!0), O ? await T(k, 'trial') : await (0, d.a)(s), h(), S(!1);
         };
     a.useEffect(() => {
         if (f) {
@@ -125,12 +126,12 @@ function y(e) {
             };
         }
     }, [f, g]);
-    let L = 'Active';
+    let F = 'Active';
     return (
-        B && (L = 'Acknowledged'),
-        O && (L = 'Expired'),
+        O && (F = 'Acknowledged'),
+        A && (F = 'Expired'),
         (0, r.jsxs)('div', {
-            className: i()(v.card, A ? v.gradientWrapperTier0 : v.gradientWrapperTier2),
+            className: i()(v.card, P ? v.gradientWrapperTier0 : v.gradientWrapperTier2),
             children: [
                 (0, r.jsxs)('div', {
                     className: i()(v.row, v.nameRow),
@@ -138,7 +139,7 @@ function y(e) {
                         (0, r.jsx)(c.Heading, {
                             variant: 'heading-lg/semibold',
                             color: 'always-white',
-                            children: R
+                            children: B
                         }),
                         (0, r.jsx)(c.Clickable, {
                             onClick: async () => {
@@ -219,15 +220,15 @@ function y(e) {
                     className: v.badgeContainer,
                     children: [
                         (0, r.jsx)(c.Clickable, {
-                            onClick: P,
+                            onClick: L,
                             className: i()(v.badge, v.clickable, {
-                                [v.acked]: B,
-                                [v.expired]: O
+                                [v.acked]: O,
+                                [v.expired]: A
                             }),
                             children: (0, r.jsx)(c.Text, {
                                 variant: 'eyebrow',
-                                color: 'Acknowledged' === L ? void 0 : 'always-white',
-                                children: L
+                                color: 'Acknowledged' === F ? void 0 : 'always-white',
+                                children: F
                             })
                         }),
                         null != w &&
