@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return g;
+        return _;
     }
 });
 var r = t(200651),
@@ -12,12 +12,13 @@ var r = t(200651),
     u = t(124347),
     c = t(52824),
     d = t(549635),
-    m = t(388032),
+    m = t(217702),
+    h = t(388032),
     f = t(244190);
-function h(e) {
+function p(e) {
     return 'media-view-scroll-thumbnail-'.concat(e);
 }
-let p = i.memo(function (e) {
+let g = i.memo(function (e) {
     var n;
     let { item: t } = e;
     let i =
@@ -37,15 +38,16 @@ let p = i.memo(function (e) {
               src: i,
               shouldAnimate: !1,
               srcIsAnimated: t.srcIsAnimated,
-              alt: t.alt
+              alt: t.alt,
+              mediaLayoutType: m.hV.MOSAIC
           });
 });
-function g(e) {
+function _(e) {
     let { items: n, currentIndex: t, onGalleryItemClick: a } = e,
         u = i.useRef(null);
     return (
         i.useLayoutEffect(() => {
-            let e = document.getElementById(h(t));
+            let e = document.getElementById(p(t));
             null != u.current &&
                 null != e &&
                 u.current.scrollIntoViewNode({
@@ -62,18 +64,18 @@ function g(e) {
                 ref: u,
                 children: n.map((e, i) => {
                     let s = i === t,
-                        u = s ? m.t['qv/U5e'] : m.t.zviMAA;
+                        u = s ? h.t['qv/U5e'] : h.t.zviMAA;
                     return (0, r.jsxs)(
                         o.Clickable,
                         {
-                            id: h(i),
+                            id: p(i),
                             className: f.galleryItem,
-                            'aria-label': m.intl.formatToPlainString(u, {
+                            'aria-label': h.intl.formatToPlainString(u, {
                                 pageNumber: i + 1,
                                 totalPages: n.length
                             }),
                             onClick: () => a(i),
-                            children: [(0, r.jsx)('div', { className: l()(f.galleryItemOverlay, { [f.selected]: s }) }), (0, r.jsx)(p, { item: e })]
+                            children: [(0, r.jsx)('div', { className: l()(f.galleryItemOverlay, { [f.selected]: s }) }), (0, r.jsx)(g, { item: e })]
                         },
                         i
                     );
