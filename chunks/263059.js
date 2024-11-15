@@ -148,7 +148,8 @@ function k(e) {
                         guildId: F,
                         profileType: V,
                         sourceId: en,
-                        sourceDetails: (0, E.Z)(k),
+                        sourceDetails: null == W ? (0, E.Z)(k) : null,
+                        entry: W,
                         sourceType: w.n_.ACTIVITY,
                         children: () =>
                             (0, r.jsx)(S.Z.Overlay, {

@@ -286,7 +286,8 @@ function z(e) {
                         guildId: ee,
                         profileType: en,
                         sourceId: eT,
-                        sourceDetails: (0, y.Z)(z),
+                        sourceDetails: null == es ? (0, y.Z)(z) : null,
+                        entry: es,
                         sourceType: V.n_.ACTIVITY,
                         children: () =>
                             (0, r.jsx)(O.Z.Overlay, {

@@ -62,60 +62,61 @@ let N = (0, f.kt)({
         }
     };
 function O(e) {
-    let { user: t, guildId: n, channelId: a, profileType: o, sourceType: f, sourceDetails: _, setPopoutRef: I, modalKey: O, onClose: D } = e,
-        { trackUserProfileAction: L } = (0, m.KZ)(),
-        { sendReply: x } = (0, g.Q)(f),
-        { resetInteraction: w, setInteractionToast: M } = (0, v.Xo)(),
-        { primaryColor: P } = (0, b.z)(),
-        [k, U] = i.useState(''),
-        [G, B] = i.useState((0, c.JM)(k)),
-        Z = i.useRef(!1),
-        F = i.useRef(null),
-        V = i.useCallback(
+    let { user: t, guildId: n, channelId: a, profileType: o, sourceType: f, sourceDetails: _, setPopoutRef: I, modalKey: O, onClose: D, entry: L } = e,
+        { trackUserProfileAction: x } = (0, m.KZ)(),
+        { sendReply: w } = (0, g.Q)(f),
+        { resetInteraction: M, setInteractionToast: P } = (0, v.Xo)(),
+        { primaryColor: k } = (0, b.z)(),
+        [U, G] = i.useState(''),
+        [B, Z] = i.useState((0, c.JM)(U)),
+        F = i.useRef(!1),
+        V = i.useRef(null),
+        j = i.useCallback(
             (e) => {
-                e.key === T.vn.ESCAPE && (e.stopPropagation(), w());
+                e.key === T.vn.ESCAPE && (e.stopPropagation(), M());
             },
-            [w]
+            [M]
         );
     i.useEffect(() => {
-        null == I || I(null == F ? void 0 : F.current);
-    }, [F, I]);
-    let j = async (e) => {
+        null == I || I(null == V ? void 0 : V.current);
+    }, [V, I]);
+    let H = async (e) => {
             if (null == e) return;
-            L({ action: x });
+            x({ action: w });
             let n = C({
                 input: e,
                 username: h.ZP.getName(t),
                 sourceType: f,
                 sourceDetails: _
             });
-            M(null);
+            P(null);
             try {
                 await (0, E.Z)({
                     userId: t.id,
                     content: n,
                     location: 'UserProfileReplyPopout',
                     openChannel: !1,
-                    whenReady: !1
+                    whenReady: !1,
+                    entry: L
                 });
             } catch (e) {}
-            M(S.P.REPLY);
+            P(S.P.REPLY);
         },
-        H = {
+        Y = {
             [A.biteSize]: o === S.y0.BITE_SIZE,
             [A.panel]: o === S.y0.PANEL,
             [A.fullSize]: o === S.y0.FULL_SIZE
         },
-        Y = {
+        W = {
             [A.status]: f === S.n_.STATUS,
             [A.avatar]: f === S.n_.AVATAR,
             [A.activity]: f === S.n_.ACTIVITY
         };
     return (0, r.jsx)(l.V, {
-        ref: F,
-        onKeyDown: V,
+        ref: V,
+        onKeyDown: j,
         children: (0, r.jsx)('div', {
-            className: s()(A.container, H, Y, { [A.customProfileTheme]: null != P }),
+            className: s()(A.container, Y, W, { [A.customProfileTheme]: null != k }),
             children: (0, r.jsx)(d.Z, {
                 parentModalKey: O,
                 emojiPickerCloseOnModalOuterClick: !0,
@@ -124,14 +125,14 @@ function O(e) {
                 type: u.I.USER_PROFILE_REPLY,
                 placeholder: y.intl.formatToPlainString(R(f), { username: p.ZP.getName(n, a, t) }),
                 channel: N,
-                textValue: k,
-                richValue: G,
+                textValue: U,
+                richValue: B,
                 onChange: (e, t, n) => {
-                    if (t !== k) U(t), B(n);
+                    if (t !== U) G(t), Z(n);
                 },
-                focused: Z.current,
+                focused: F.current,
                 onFocus: () => {
-                    Z.current = !0;
+                    F.current = !0;
                 },
                 onSubmit: async (e) => {
                     let { value: t } = e,
@@ -143,8 +144,8 @@ function O(e) {
                         };
                     try {
                         return (
-                            await j(n),
-                            w(),
+                            await H(n),
+                            M(),
                             null == D || D(),
                             {
                                 shouldClear: !0,

@@ -43,20 +43,20 @@ let T = (e) => {
     }
 };
 function y(e) {
-    let { user: t, guildId: n, sourceType: u, sourceDetails: h, setPopoutRef: b, onClose: y } = e,
-        { trackUserProfileAction: A } = (0, d.KZ)(),
-        { sendReact: N } = (0, f.Q)(u),
-        { resetInteraction: C, setInteractionToast: R } = (0, p.Xo)(),
-        { theme: O } = (0, m.z)(),
-        D = (0, a.e7)([l.Z], () => l.Z.theme),
-        L = (0, s.wj)(D) ? !(0, s.wj)(O) : (0, s.wj)(O),
-        x = i.useRef(null);
+    let { user: t, guildId: n, sourceType: u, sourceDetails: h, setPopoutRef: b, onClose: y, entry: A } = e,
+        { trackUserProfileAction: N } = (0, d.KZ)(),
+        { sendReact: C } = (0, f.Q)(u),
+        { resetInteraction: R, setInteractionToast: O } = (0, p.Xo)(),
+        { theme: D } = (0, m.z)(),
+        L = (0, a.e7)([l.Z], () => l.Z.theme),
+        x = (0, s.wj)(L) ? !(0, s.wj)(D) : (0, s.wj)(D),
+        w = i.useRef(null);
     i.useEffect(() => {
-        null == b || b(null == x ? void 0 : x.current);
-    }, [x, b]),
+        null == b || b(null == w ? void 0 : w.current);
+    }, [w, b]),
         i.useEffect(() => {
             let e = (e) => {
-                e.key === v.vn.ESCAPE && (e.stopPropagation(), C());
+                e.key === v.vn.ESCAPE && (e.stopPropagation(), R());
             };
             return (
                 document.addEventListener('keydown', e),
@@ -64,34 +64,35 @@ function y(e) {
                     document.removeEventListener('keydown', e);
                 }
             );
-        }, [y, C]);
-    let w = async (e) => {
+        }, [y, R]);
+    let M = async (e) => {
         if (null == e) return;
-        A({ action: N });
+        N({ action: C });
         let n = T({
             emoji: e,
             username: c.ZP.getName(t),
             sourceType: u,
             sourceDetails: h
         });
-        R(null);
+        O(null);
         try {
             await (0, _.Z)({
                 userId: t.id,
                 content: n,
                 location: 'UserProfileReactPopout',
                 openChannel: !1,
-                whenReady: !1
+                whenReady: !1,
+                entry: A
             });
         } catch (e) {}
-        R(g.P.REACT);
+        O(g.P.REACT);
     };
     return (0, r.jsx)(o.Z, {
-        headerClassName: L ? S.noBoxShadowMargin : void 0,
+        headerClassName: x ? S.noBoxShadowMargin : void 0,
         guildId: null != n ? n : void 0,
         closePopout: I.dG,
         onSelectEmoji: async (e, t) => {
-            await w(e), t && (C(), null == y || y());
+            await M(e), t && (R(), null == y || y());
         },
         pickerIntention: E.Hz.PROFILE
     });

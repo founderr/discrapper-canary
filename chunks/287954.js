@@ -13,15 +13,15 @@ var i = n(481060),
     u = n(228168);
 function c(e) {
     var t, n;
-    let { user: c, guildId: d, channelId: f, profileType: _, sourceType: p, sourceDetails: h, sourceId: m, onClose: g, children: E } = e,
-        { interactionType: v, interactionSource: I, resetInteraction: b, interactionSourceId: S } = (0, a.Xo)(),
-        T = _ === u.y0.FULL_SIZE ? (0, l.z)(c.id, d) : void 0,
-        y = I === p && v === u.P.REACT,
-        A = I === p && v === u.P.REPLY;
+    let { user: c, guildId: d, channelId: f, profileType: _, sourceType: p, sourceDetails: h, sourceId: m, onClose: g, children: E, entry: v } = e,
+        { interactionType: I, interactionSource: b, resetInteraction: S, interactionSourceId: T } = (0, a.Xo)(),
+        y = _ === u.y0.FULL_SIZE ? (0, l.z)(c.id, d) : void 0,
+        A = b === p && I === u.P.REACT,
+        N = b === p && I === u.P.REPLY;
     return (0, r.jsx)(i.Popout, {
         renderPopout: (e) => {
             let { setPopoutRef: t } = e,
-                n = y ? s.Z : o.Z;
+                n = A ? s.Z : o.Z;
             return (0, r.jsx)(n, {
                 user: c,
                 guildId: d,
@@ -29,16 +29,17 @@ function c(e) {
                 profileType: _,
                 sourceType: p,
                 sourceDetails: h,
+                entry: v,
                 onClose: g,
-                modalKey: T,
+                modalKey: y,
                 setPopoutRef: t
             });
         },
         onRequestClose: () => {
-            b(), null == g || g();
+            S(), null == g || g();
         },
-        shouldShow: (y || A) && S === m,
-        ...((t = v),
+        shouldShow: (A || N) && T === m,
+        ...((t = I),
         (n = _),
         t === u.P.REACT
             ? {
