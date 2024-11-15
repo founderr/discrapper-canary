@@ -10,9 +10,6 @@ n.d(t, {
     },
     nk: function () {
         return E;
-    },
-    r3: function () {
-        return S;
     }
 }),
     n(47120),
@@ -113,7 +110,7 @@ function h(e) {
                             },
                             { autoTrackExposure: a }
                         ),
-                        i = T.getCurrentConfig(
+                        i = b.getCurrentConfig(
                             {
                                 guildId: n.id,
                                 location: t
@@ -266,37 +263,20 @@ function I(e) {
             config: { clanTagsVisible: !0 }
         }
     ]
-});
-let b = (0, a.B)({
-    kind: 'user',
-    id: '2024-08_load_test_guild_recs',
-    label: 'Guild Recs Load Testing',
-    defaultConfig: { enabled: !1 },
-    treatments: [
-        {
-            id: 1,
-            label: 'Enable',
-            config: { enabled: !0 }
-        }
-    ]
-});
-function S(e) {
-    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return b.useExperiment({ location: e }, { autoTrackExposure: t }).enabled;
-}
-(0, a.B)({
-    kind: 'user',
-    id: '2024-07_rapidash_m3_admins_browse',
-    label: 'Rapidash M3 Admins Browse',
-    defaultConfig: { canAdminsBrowse: !1 },
-    treatments: [
-        {
-            id: 1,
-            label: 'Enable',
-            config: { canAdminsBrowse: !0 }
-        }
-    ]
 }),
+    (0, a.B)({
+        kind: 'user',
+        id: '2024-07_rapidash_m3_admins_browse',
+        label: 'Rapidash M3 Admins Browse',
+        defaultConfig: { canAdminsBrowse: !1 },
+        treatments: [
+            {
+                id: 1,
+                label: 'Enable',
+                config: { canAdminsBrowse: !0 }
+            }
+        ]
+    }),
     (0, a.B)({
         kind: 'user',
         id: '2024-10_rapidash_discovery_entrypoint',
@@ -310,7 +290,7 @@ function S(e) {
             }
         ]
     });
-let T = (0, a.B)({
+let b = (0, a.B)({
     kind: 'guild',
     id: '2024-10_rapidash_discovery_sign_up',
     label: 'Rapidash Discovery Early Sign Up',

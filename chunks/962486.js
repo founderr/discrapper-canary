@@ -1,75 +1,70 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return g;
     }
 }),
     n(653041);
 var i = n(200651),
     r = n(192379),
     l = n(481060),
-    a = n(229765),
-    s = n(322665),
-    o = n(17845),
-    c = n(374939),
-    d = n(283293),
-    u = n(726115),
-    h = n(294330),
-    m = n(981631),
-    p = n(417712);
-let g = {
-    page: m.ZY5.GUILD_DISCOVERY,
-    object: m.qAy.CARD,
-    section: m.jXE.DISCOVER_POPULAR
+    a = n(322665),
+    s = n(17845),
+    o = n(374939),
+    c = n(283293),
+    d = n(726115),
+    u = n(294330),
+    h = n(981631),
+    m = n(417712);
+let p = {
+    page: h.ZY5.GUILD_DISCOVERY,
+    object: h.qAy.CARD,
+    section: h.jXE.DISCOVER_POPULAR
 };
-function f(e) {
-    let { tab: t, guildIds: n, loading: m, onScroll: f, onGuildCardClick: _, onGuildCardSeen: E } = e,
-        I = (0, u.Mf)(t),
-        C = (0, u.a$)(t),
-        v = (0, u.QW)(t),
-        S = (0, u.lg)(t),
-        N = r.useMemo(() => {
-            let e = m ? 30 : n.length,
+function g(e) {
+    let { tab: t, guildIds: n, loading: h, onScroll: g, onGuildCardClick: f, onGuildCardSeen: _ } = e,
+        E = (0, d.Mf)(t),
+        I = (0, d.a$)(t),
+        C = (0, d.QW)(t),
+        v = (0, d.lg)(t),
+        S = r.useMemo(() => {
+            let e = h ? 30 : n.length,
                 t = [];
             for (let l = 0; l < e; l++) {
                 var r;
                 t.push(
                     (0, i.jsx)(
-                        h.Eo,
+                        u.Eo,
                         {
                             guildId: null !== (r = n[l]) && void 0 !== r ? r : null,
                             index: l,
-                            onClick: (e) => _(e, l, S, g),
-                            onView: (e) => E(e, S)
+                            onClick: (e) => f(e, l, v, p),
+                            onView: (e) => _(e, v)
                         },
                         n[l]
                     )
                 );
             }
             return t;
-        }, [S, n, m, _, E]);
-    return (0, i.jsxs)(d.Z, {
-        onScroll: f,
+        }, [v, n, h, f, _]);
+    return (0, i.jsxs)(c.Z, {
+        onScroll: g,
         children: [
-            (0, i.jsx)(o.Z, {
-                title: I,
-                description: C,
-                children: (0, i.jsx)(s.Z, {})
+            (0, i.jsx)(s.Z, {
+                title: E,
+                description: I,
+                children: (0, i.jsx)(a.Z, {})
             }),
-            (0, i.jsxs)(c.Z, {
+            (0, i.jsxs)(o.Z, {
                 children: [
-                    (0, i.jsx)(a.K, {
-                        location: 'global_discovery',
-                        query: t
-                    }),
                     (0, i.jsx)(l.Heading, {
-                        className: p.sectionTitle,
+                        className: m.sectionTitle,
                         variant: 'heading-lg/semibold',
                         color: 'header-primary',
-                        children: v
+                        children: C
                     }),
                     (0, i.jsx)('div', {
-                        className: p.content,
-                        children: N
+                        className: m.content,
+                        children: S
                     })
                 ]
             })
