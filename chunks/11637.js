@@ -1,46 +1,63 @@
 n.d(t, {
     ZP: function () {
-        return l;
+        return p;
     },
     hf: function () {
-        return o;
+        return _;
     }
 });
 var r = n(763296),
-    i = n(768581),
-    a = n(722932),
-    s = n(801606);
-let o = /^<sound:(\d+):(\d+)>/;
-function l(e, t) {
+    i = n(375954),
+    a = n(914010),
+    s = n(594174),
+    o = n(768581),
+    l = n(74538),
+    u = n(722932),
+    c = n(801606),
+    d = n(981631),
+    f = n(710111);
+let _ = /^<sound:(\d+):(\d+)>/;
+function p(e, t) {
     var n;
-    let o = e[1],
-        l = e[2],
-        { messageId: u, channelId: c } = t,
-        d = (function (e, t, n) {
-            if (!a.zv.getCurrentConfig({ location: 'getSoundmojiASTFromString' }, { autoTrackExposure: !1 }).enabled) return;
-            let i = r.Z.getSoundById(n);
-            if (null != i) return i;
-            if (null != t && null != e) return (0, s.Z)(e, t, n);
-        })(c, u, l);
-    if (null == d)
+    let _ = e[1],
+        p = e[2],
+        { messageId: h, channelId: m } = t,
+        g = (function (e, t, n) {
+            if (!u.zv.getCurrentConfig({ location: 'getSoundmojiASTFromString' }, { autoTrackExposure: !1 }).enabled) return;
+            let o = r.Z.getSoundById(n),
+                _ = a.Z.getGuildId(),
+                p = l.ZP.canUseSoundboardEverywhere(s.default.getCurrentUser()) || (null == o ? void 0 : o.guildId) === f.X8 || (null == o ? void 0 : o.guildId) === _;
+            if (null != t && null != e) {
+                let r = (0, c.Z)(e, t, n);
+                if (p && null == r) {
+                    let n = i.Z.getMessage(e, t);
+                    if ((null == n ? void 0 : n.state) !== d.yb.SENT) return o;
+                }
+                return r;
+            }
+            if (!!p) {
+                if (null != o) return o;
+            }
+        })(m, h, p);
+    if (null == g)
         return {
             type: 'text',
-            content: '<sound:'.concat(o, ':').concat(l, '>')
+            content: '<sound:'.concat(_, ':').concat(p, '>')
         };
-    let f = null !== (n = null == d ? void 0 : d.name) && void 0 !== n ? n : l;
+    let E = null !== (n = null == g ? void 0 : g.name) && void 0 !== n ? n : p;
     return {
         type: 'soundboard',
-        soundId: l,
-        guildId: o,
+        soundId: p,
+        guildId: _,
         messageId: t.messageId,
         channelId: t.channelId,
-        content: f,
-        emojiId: null == d ? void 0 : d.emojiId,
-        emojiName: null == d ? void 0 : d.emojiName,
+        content: E,
+        emojiId: null == g ? void 0 : g.emojiId,
+        emojiName: null == g ? void 0 : g.emojiName,
         emojiSrc:
-            (null == d ? void 0 : d.emojiId) != null
-                ? (0, i.gT)({
-                      id: null == d ? void 0 : d.emojiId,
+            (null == g ? void 0 : g.emojiId) != null
+                ? (0, o.gT)({
+                      id: null == g ? void 0 : g.emojiId,
                       animated: !1,
                       size: 16
                   })
