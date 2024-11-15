@@ -26,8 +26,7 @@ class l extends (r = i.ZP.PersistedStore) {
         return o;
     }
     getLastUpdateRequested(e) {
-        let t = o.lastUpdateRequested[e];
-        return null != t ? new Date(1000 * t) : void 0;
+        return o.lastUpdateRequested[e];
     }
 }
 s(l, 'displayName', 'UserLeaderboardStore'),
