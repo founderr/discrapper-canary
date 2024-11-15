@@ -183,6 +183,7 @@ var n, r;
     (r.INTERACTIVE_HOVER = 'var(--interactive-hover)'),
     (r.INTERACTIVE_MUTED = 'var(--interactive-muted)'),
     (r.INTERACTIVE_NORMAL = 'var(--interactive-normal)'),
+    (r.LEADERBOARD_LEAGUE_BRAND_TEXT = 'var(--leaderboard-league-brand-text)'),
     (r.LEGACY_ANDROID_BLUR_OVERLAY_DEFAULT = 'var(--legacy-android-blur-overlay-default)'),
     (r.LEGACY_ANDROID_BLUR_OVERLAY_ULTRA_THIN = 'var(--legacy-android-blur-overlay-ultra-thin)'),
     (r.LEGACY_BLUR_FALLBACK_DEFAULT = 'var(--legacy-blur-fallback-default)'),

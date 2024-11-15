@@ -3777,6 +3777,25 @@ let { Themes: n } = r(15202).V,
                 opacity: 1
             }
         },
+        LEADERBOARD_LEAGUE_BRAND_TEXT: {
+            category: 'text',
+            [n.DARK]: {
+                raw: 'LOL_TEXT_LIGHT',
+                opacity: 1
+            },
+            [n.LIGHT]: {
+                raw: 'LOL_TEXT_DARK',
+                opacity: 1
+            },
+            [n.MIDNIGHT]: {
+                raw: 'LOL_TEXT_LIGHT',
+                opacity: 1
+            },
+            [n.DARKER]: {
+                raw: 'LOL_TEXT_LIGHT',
+                opacity: 1
+            }
+        },
         LEGACY_ANDROID_BLUR_OVERLAY_DEFAULT: {
             category: 'generic',
             [n.DARK]: {
@@ -6575,6 +6594,8 @@ let { Themes: n } = r(15202).V,
             HYPESQUAD_HOUSE_3: '#45ddc0',
             INPUT_PLACEHOLDER_TEXT_DARK: '#87898c',
             LOL: '#021f25',
+            LOL_TEXT_DARK: '#94620f',
+            LOL_TEXT_LIGHT: '#cbaa62',
             NEUTRAL_1: '#ffffff',
             NEUTRAL_100: '#000000',
             NEUTRAL_22: '#aeaeb4',

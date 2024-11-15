@@ -491,6 +491,8 @@ let r = Object.freeze({
     HYPESQUAD_HOUSE_3: 'hsl(169, calc(var(--saturation-factor, 1) * 69.1%), 56.9%)',
     INPUT_PLACEHOLDER_TEXT_DARK: 'hsl(216, calc(var(--saturation-factor, 1) * 2.1%), 53.9%)',
     LOL: 'hsl(190, calc(var(--saturation-factor, 1) * 89.7%), 7.6%)',
+    LOL_TEXT_DARK: 'hsl(37, calc(var(--saturation-factor, 1) * 81.6%), 32.0%)',
+    LOL_TEXT_LIGHT: 'hsl(41, calc(var(--saturation-factor, 1) * 50.2%), 59.0%)',
     NEUTRAL_1: 'hsl(0, calc(var(--saturation-factor, 1) * 0.0%), 100.0%)',
     NEUTRAL_10: 'hsl(240, calc(var(--saturation-factor, 1) * 2.9%), 86.7%)',
     NEUTRAL_100: 'hsl(0, calc(var(--saturation-factor, 1) * 0.0%), 0.0%)',
