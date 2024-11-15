@@ -107,7 +107,10 @@ function w(e) {
                     guildHasVoice: o,
                     guildHasVideo: (() => {
                         if (n) return !1;
-                        for (let e of r) if (R(x.Z.getBasicChannel(a[e].channelId), null != l ? l : void 0, E.Z)) return !0;
+                        for (let t of r) {
+                            var e;
+                            if (R(x.Z.getBasicChannel(null === (e = a[t]) || void 0 === e ? void 0 : e.channelId), null != l ? l : void 0, E.Z)) return !0;
+                        }
                         return !1;
                     })(),
                     selectedVoiceChannelHasVideo: null != i && y.Z.hasVideo(i)
