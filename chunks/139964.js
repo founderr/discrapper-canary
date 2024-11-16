@@ -51,13 +51,13 @@ function f(e) {
                       }),
                       (0, i.jsxs)('div', {
                           className: _.notes,
-                          children: [(0, i.jsx)(p, {}), (0, i.jsx)(l.Spacer, { size: 4 }), (0, i.jsx)(d.Z, { className: _.divider }), null != r && (0, i.jsx)(B, { guild: r })]
+                          children: [(0, i.jsx)(B, {}), (0, i.jsx)(l.Spacer, { size: 4 }), (0, i.jsx)(d.Z, { className: _.divider }), null != r && (0, i.jsx)(C, { guild: r })]
                       })
                   ]
               })
           });
 }
-function p() {
+function B() {
     return (0, i.jsxs)('div', {
         className: _.row,
         children: [
@@ -65,11 +65,11 @@ function p() {
                 variant: 'text-md/medium',
                 children: j.intl.string(j.t.PL48CA)
             }),
-            (0, i.jsx)(C, {})
+            (0, i.jsx)(p, {})
         ]
     });
 }
-function C() {
+function p() {
     return null != (0, o.e7)([c.Z], () => c.Z.getAccount(null, g.ABu.RIOT_GAMES))
         ? (0, i.jsxs)(l.Button, {
               disabled: !0,
@@ -91,7 +91,7 @@ function C() {
               children: j.intl.string(j.t.To26Nj)
           });
 }
-function B(e) {
+function C(e) {
     let { guild: t } = e,
         { leaderboardsDisabled: n, toggleGuildLeaderboardsDisabled: s } = (0, x.O)(t.id, h._);
     return (0, i.jsx)(l.FormSwitch, {

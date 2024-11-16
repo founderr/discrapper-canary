@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return L;
+        return B;
     }
 }),
     n(47120);
@@ -64,7 +64,7 @@ function P() {
         ]
     });
 }
-function B(e) {
+function L(e) {
     let t,
         n,
         { type: i, selected: r, needsPremium: a, needsDemo: o, analyticsLocation: c, onClick: d, onClose: f, setIsHovering: h } = e,
@@ -112,8 +112,8 @@ function B(e) {
         }
     );
 }
-function L(e) {
-    let { onClose: t, selectedPreset: n, selectedResolution: r, selectedFPS: s, onResolutionChange: a, onFPSChange: g, onPresetChange: P, targetGuildPremiumTier: L, captureDeviceSelected: G } = e,
+function B(e) {
+    let { onClose: t, selectedPreset: n, selectedResolution: r, selectedFPS: s, onResolutionChange: a, onFPSChange: g, onPresetChange: P, targetGuildPremiumTier: B, captureDeviceSelected: G } = e,
         D = (0, d.e7)([Z.default], () => {
             let e = Z.default.getCurrentUser();
             return o()(null != e, 'StreamSettings: user cannot be undefined'), e;
@@ -143,10 +143,10 @@ function L(e) {
         },
         ee = (0, l.jsx)(u.ButtonGroup, {
             buttons: Q.map((e) =>
-                B({
+                L({
                     type: e,
                     selected: e.value === r,
-                    needsPremium: !(0, T.Z)(n, e.value, s, D, L, O),
+                    needsPremium: !(0, T.Z)(n, e.value, s, D, B, O),
                     needsDemo: (Y || V) && e.value !== b.LY.RESOLUTION_720,
                     analyticsLocation: $,
                     onClick: () => a(e.value),
@@ -157,10 +157,10 @@ function L(e) {
         }),
         et = (0, l.jsx)(u.ButtonGroup, {
             buttons: b.k0.map((e) =>
-                B({
+                L({
                     type: e,
                     selected: e.value === s,
-                    needsPremium: !(0, T.Z)(n, r, e.value, D, L, O),
+                    needsPremium: !(0, T.Z)(n, r, e.value, D, B, O),
                     needsDemo: (Y || V) && e.value === b.ws.FPS_60,
                     analyticsLocation: $,
                     onClick: () => g(e.value),

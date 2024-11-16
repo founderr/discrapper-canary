@@ -39,8 +39,8 @@ var l,
     k = n(430824),
     A = n(131951),
     P = n(944486),
-    B = n(594174),
-    L = n(449224),
+    L = n(594174),
+    B = n(449224),
     G = n(626135),
     D = n(63063),
     O = n(358085),
@@ -83,9 +83,9 @@ function er(e) {
     let { selectGuild: er = !1, selectSource: es = !0, guildId: ea, analyticsLocation: eo, onClose: ec, transitionState: ed } = e,
         { preset: eu, resolution: ef, fps: eh, soundshareEnabled: em } = (0, f.cj)([R.Z], () => R.Z.getState()),
         ex = (0, f.e7)([P.Z, M.Z], () => M.Z.getChannel(P.Z.getVoiceChannelId())),
-        eg = (0, f.e7)([T.ZP, L.Z], () => ((0, O.isWindows)() ? (0, z.Z)(T.ZP, L.Z) : null)),
-        ep = (0, f.e7)([B.default], () => {
-            let e = B.default.getCurrentUser();
+        eg = (0, f.e7)([T.ZP, B.Z], () => ((0, O.isWindows)() ? (0, z.Z)(T.ZP, B.Z) : null)),
+        ep = (0, f.e7)([L.default], () => {
+            let e = L.default.getCurrentUser();
             return o()(null != e, 'GoLiveModal: user cannot be undefined'), e;
         }),
         ev = null !== (t = null == ex ? void 0 : ex.getGuildId()) && void 0 !== t ? t : ea,
@@ -106,7 +106,7 @@ function er(e) {
     let [ey, eE] = s.useState(((w = er), (D = es && !eI), w ? 0 : D ? 2 : 3)),
         [eR, eM] = s.useState(eI),
         [ek, eA] = s.useState(null),
-        [eP, eB] = s.useState(
+        [eP, eL] = s.useState(
             eI
                 ? {
                       id: 'prepicked:',
@@ -115,7 +115,7 @@ function er(e) {
                   }
                 : null
         ),
-        [eL, eG] = s.useState(null),
+        [eB, eG] = s.useState(null),
         [eD, eO] = s.useState(eu),
         [eU, eF] = s.useState(ef),
         [eH, eW] = s.useState(eh),
@@ -124,7 +124,7 @@ function er(e) {
         [eX, eJ] = s.useState(null != ea ? ea : null),
         eq = null !== (a = null == ex ? void 0 : ex.id) && void 0 !== a ? a : ek;
     s.useEffect(() => {
-        let e = (0, O.isWindows)() ? (0, z.Z)(T.ZP, L.Z) : null,
+        let e = (0, O.isWindows)() ? (0, z.Z)(T.ZP, B.Z) : null,
             t = (null == e ? void 0 : e.id) != null ? C.Z.getApplication(e.id) : null;
         G.default.track($.rMx.OPEN_MODAL, {
             type: 'Go Live Modal',
@@ -160,7 +160,7 @@ function er(e) {
                 pid: d,
                 sourceId: null == d && null != eP ? eP.id : null,
                 sourceName: null == d && null != eP ? eP.name : null,
-                audioSourceId: eL,
+                audioSourceId: eB,
                 sound: eV,
                 previewDisabled: eK
             }),
@@ -223,7 +223,7 @@ function er(e) {
     }
     let e3 = s.useCallback(
             (e) => {
-                eB(e), null != e && (eZ && (null == e ? void 0 : e.id.startsWith('camera:')) !== !0 ? e0(e.id.split(':')[1]) : e0(void 0), eE(3), eM(!0));
+                eL(e), null != e && (eZ && (null == e ? void 0 : e.id.startsWith('camera:')) !== !0 ? e0(e.id.split(':')[1]) : e0(void 0), eE(3), eM(!0));
             },
             [eZ]
         ),
@@ -278,7 +278,7 @@ function er(e) {
         }, [eZ]),
         te = (0, S.j)('GoLiveModal'),
         tt = (0, f.e7)([k.Z], () => k.Z.getGuild(ea)),
-        tn = (null == ex ? void 0 : ex.type) === $.d4z.GUILD_VOICE && te && null != tt && tt.premiumTier === $.Eu4.NONE,
+        tn = (null == ex ? void 0 : ex.type) === $.d4z.GUILD_VOICE && te && null != tt && tt.premiumTier === $.Eu4.NONE && !(null == ex ? void 0 : ex.isHDStreamSplashed),
         tl = (function (e, t, n, l) {
             switch (e) {
                 case 2:

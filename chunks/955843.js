@@ -1,6 +1,6 @@
 t.d(n, {
     T: function () {
-        return x;
+        return h;
     },
     Z: function () {
         return g;
@@ -17,8 +17,8 @@ var l = t(192379),
     c = t(959457),
     u = t(594174),
     m = t(215339);
-let h = new i.Yd('HDStreamingConsumableModal'),
-    x = (e) => {
+let f = new i.Yd('HDStreamingConsumableModal'),
+    h = (e) => {
         let n = (0, r.e7)([o.Z], () => o.Z.getGuild(e.guild_id)),
             t = (0, r.e7)([u.default], () => {
                 var e;
@@ -29,29 +29,29 @@ let h = new i.Yd('HDStreamingConsumableModal'),
                 let n = u.default.getUser(e.ownerId);
                 return null != n && d.Z.isMobileOnline(n.id);
             }),
-            [x, g] = l.useState(null),
-            [f, v] = l.useState([]);
+            [h, g] = l.useState(null),
+            [x, v] = l.useState([]);
         (0, r.e7)(
             [c.Z],
             () => {
-                if (null == x || Date.now() - x > 10000) {
+                if (null == h || Date.now() - h > 10000) {
                     let e = i.map((e) => {
                         var n;
                         let t = (0, s.V9)(e),
                             l = c.Z.getRTCConnection(t);
                         return null == l ? void 0 : null === (n = l.getVideoStats()) || void 0 === n ? void 0 : n.inbound_bitrate_estimate_percentile99;
                     });
-                    h.info('Setting bitrates', e), v(e), g(Date.now());
+                    f.info('Setting bitrates', e), v(e), g(Date.now());
                 }
             },
-            [x, i]
+            [h, i]
         );
         let j = l.useMemo(() => {
-            if (0 === f.length) return !0;
-            if (f.some((e) => null == e)) return !1;
-            for (let e of f) if (null == e || e < 3500000) return !1;
+            if (0 === x.length) return !0;
+            if (x.some((e) => null == e)) return !1;
+            for (let e of x) if (null == e || e < 3500000) return !1;
             return !0;
-        }, [f]);
+        }, [x]);
         return null != n && 0 === n.premiumTier && j && !m;
     },
     g = (e, n) => {
@@ -61,6 +61,6 @@ let h = new i.Yd('HDStreamingConsumableModal'),
             }),
             l = (0, r.e7)([a.Z], () => a.Z.getAllActiveStreamsForChannel(e.id).filter((e) => e.ownerId !== t)),
             i = (0, m.j)(n),
-            s = x(e);
+            s = h(e);
         return i && s && l.length > 0;
     };

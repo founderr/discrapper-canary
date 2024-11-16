@@ -142,7 +142,7 @@ function eP(e) {
         F = (0, K.x8)('GoLiveButton'),
         V = (0, R.Z)(t, 'GoLiveButton'),
         z = (0, O.wE)(m.z.CONSUMABLE_HD_POTION_UPSELL),
-        ee = (V && !z) || t.isHDStreamSplashed,
+        ee = (V && !z) || (t.isHDStreamSplashed && null == T),
         et = () => {
             if (s) {
                 H();

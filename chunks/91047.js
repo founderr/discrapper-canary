@@ -6,10 +6,10 @@ n.d(t, {
         return a;
     },
     nm: function () {
-        return l;
+        return s;
     },
     xS: function () {
-        return s;
+        return l;
     }
 }),
     n(411104);
@@ -60,9 +60,9 @@ function o(e, t, o) {
               });
 }
 function a(e, t) {
-    let { user: o, channel: a, moderationAlertId: l, guildId: s, ...c } = t;
+    let { user: o, channel: a, moderationAlertId: s, guildId: l, ...c } = t;
     if ((null == a ? void 0 : a.isGroupDM()) || (null == a ? void 0 : a.isDM())) throw Error('Cannot moderate user in DM or group DM');
-    let u = null != s ? s : null == a ? void 0 : a.getGuildId();
+    let u = null != l ? l : null == a ? void 0 : a.getGuildId();
     null != u &&
         (0, i.jW)(e, async () => {
             let { default: e } = await Promise.all([n.e('13125'), n.e('43039')]).then(n.bind(n, 833737));
@@ -72,13 +72,13 @@ function a(e, t) {
                     user: o,
                     channelId: null == a ? void 0 : a.id,
                     guildId: u,
-                    moderationAlertId: l,
+                    moderationAlertId: s,
                     ...c
                 });
         });
 }
-function l(e, t) {
-    let { user: o, guildId: a, analyticsLocations: l, onCloseContextMenu: s, isViewOnly: c } = t;
+function s(e, t) {
+    let { user: o, guildId: a, analyticsLocations: s, onCloseContextMenu: l, isViewOnly: c } = t;
     (0, i.jW)(e, async () => {
         let { default: e } = await n.e('45130').then(n.bind(n, 246389));
         return (t) =>
@@ -86,13 +86,13 @@ function l(e, t) {
                 ...t,
                 user: o,
                 guildId: a,
-                analyticsLocations: l,
-                onCloseContextMenu: s,
+                analyticsLocations: s,
+                onCloseContextMenu: l,
                 isViewOnly: c
             });
     });
 }
-function s(e, t, o) {
+function l(e, t, o) {
     null != o &&
         (0, i.jW)(e, async () => {
             let { default: e } = await n.e('50331').then(n.bind(n, 158195));

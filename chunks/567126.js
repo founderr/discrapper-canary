@@ -57,8 +57,8 @@ var l = n(200651),
     k = n(152165),
     A = n(133179),
     P = n(70722),
-    B = n(46140),
-    L = n(65154),
+    L = n(46140),
+    B = n(65154),
     G = n(388032),
     D = n(986682);
 async function O() {
@@ -153,7 +153,7 @@ function F(e) {
 function H(e) {
     let { selectedSource: t, onChangeSelectedSource: n } = e,
         { enableGoLiveCaptureCard: r } = b.Z.useExperiment({ location: 'GoLive_Source_Select' }),
-        a = I.Z.supports(L.AN.GO_LIVE_HARDWARE),
+        a = I.Z.supports(B.AN.GO_LIVE_HARDWARE),
         [o, c] = i.useState(null),
         [f, x] = i.useState(null),
         [g, T] = i.useState(null),
@@ -164,7 +164,7 @@ function H(e) {
         U = i.useRef(new h.Xp()),
         H = (0, u.e7)([j.ZP], () => j.ZP.getRunningGames()),
         W = (function (e, t, n) {
-            let l = (0, _.Zy)({ location: B.dr.STREAM_SOURCE_SELECT });
+            let l = (0, _.Zy)({ location: L.dr.STREAM_SOURCE_SELECT });
             return i.useMemo(() => {
                 if (null == n || !l) return null;
                 for (let l of n) {
