@@ -37,7 +37,7 @@ function N(e) {
                 if ((0, a.k)(i) && null != i.closest('.' + v.Jh)) return;
                 for (; (0, a.k)(i); ) {
                     if (i === m.current) return;
-                    if (i.classList.contains(v.t4)) {
+                    if (i.classList.contains(v.t4) || i.classList.contains(v.Id)) {
                         e.preventDefault();
                         return;
                     }
