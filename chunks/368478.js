@@ -22,28 +22,29 @@ var i = n(192379),
     m = n(981631),
     f = n(388032);
 function g(e) {
-    let { channel: t, primaryEntryPointCommand: n, application: r } = e,
-        [s, u] = i.useState(!1),
-        g = (0, l.e7)([a.ZP], () => a.ZP.getCurrentEmbeddedActivity()),
-        C = i.useMemo(() => (null != n ? (0, d.XZ)(n.displayName) : f.intl.string(f.t['3xjX0d'])), [n]),
-        x = void 0 !== r.flags && (0, p.yE)(r.flags, m.udG.EMBEDDED),
-        v = null != g && g.applicationId === r.id && g.channelId === t.id,
-        { analyticsLocations: _ } = (0, c.ZP)(o.Z.APP_DMS_ENTRY_POINT_COMMAND_BUTTON),
-        I = null != t.recipients ? t.recipients[0] : void 0,
-        E = (0, h.ms)({
+    let { channel: t, primaryEntryPointCommand: n, application: r, showAppLauncherPopup: s = !1 } = e,
+        [u, g] = i.useState(!1),
+        C = (0, l.e7)([a.ZP], () => a.ZP.getCurrentEmbeddedActivity()),
+        x = s ? f.t.cpT0Cg : f.t['0hKkS0'],
+        v = i.useMemo(() => (null != n ? (0, d.XZ)(n.displayName) : f.intl.string(f.t['3xjX0d'])), [n]),
+        _ = void 0 !== r.flags && (0, p.yE)(r.flags, m.udG.EMBEDDED),
+        I = null != C && C.applicationId === r.id && C.channelId === t.id,
+        { analyticsLocations: E } = (0, c.ZP)(o.Z.APP_DMS_ENTRY_POINT_COMMAND_BUTTON),
+        b = null != t.recipients ? t.recipients[0] : void 0,
+        Z = (0, h.ms)({
             channel: t,
             applicationId: r.id,
-            botUserId: I
+            botUserId: b
         });
     return {
-        isExecutingLaunchInteraction: s,
-        buttonText: E && x ? (v ? f.intl.string(f.t['Hi1/aW']) : null != C ? C : f.intl.string(f.t.zKX8Nj)) : f.intl.string(f.t['0hKkS0']),
-        hasActiveMatchingEmbeddedActivity: v,
-        isEmbeddedApp: x,
-        currentEmbeddedActivity: g,
-        channelRecipientUserId: I,
-        setIsExecutingLaunchInteraction: u,
-        analyticsLocations: _
+        isExecutingLaunchInteraction: u,
+        buttonText: Z && _ ? (I ? f.intl.string(f.t['Hi1/aW']) : null != v ? v : f.intl.string(f.t.zKX8Nj)) : f.intl.string(x),
+        hasActiveMatchingEmbeddedActivity: I,
+        isEmbeddedApp: _,
+        currentEmbeddedActivity: C,
+        channelRecipientUserId: b,
+        setIsExecutingLaunchInteraction: g,
+        analyticsLocations: E
     };
 }
 function C(e) {
