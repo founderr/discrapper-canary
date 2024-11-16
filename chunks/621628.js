@@ -72,12 +72,17 @@ function I(e) {
 function f() {
     var e;
     let t = (0, S.ZP)((e) => e.recentlyShown),
-        { dailyCapReached: n, dailyCapOverridden: r } = (0, a.cj)([x.Z], () => ({
+        {
+            dailyCapReached: n,
+            dailyCapOverridden: r,
+            newUserMinAgeRequiredOverridden: m
+        } = (0, a.cj)([x.Z], () => ({
             dailyCapReached: x.Z.hasUserHitDCCap(),
-            dailyCapOverridden: x.Z.dailyCapOverridden
+            dailyCapOverridden: x.Z.dailyCapOverridden,
+            newUserMinAgeRequiredOverridden: x.Z.newUserMinAgeRequiredOverridden
         })),
-        [m, T] = s.useState(''),
-        E =
+        [T, E] = s.useState(''),
+        f =
             null !==
                 (e = (0, a.e7)([g.Z], () => {
                     var e;
@@ -85,7 +90,7 @@ function f() {
                 })) && void 0 !== e
                 ? e
                 : new Uint8Array(),
-        [f, N] = (function (e, t) {
+        [N, A] = (function (e, t) {
             let [n, i] = s.useState(() => {
                 let n = c.K.get(e);
                 return null != n ? n : t;
@@ -97,20 +102,20 @@ function f() {
                 [n, i]
             );
         })('RecentDismissibleOverrides', []),
-        A = (e) => {
-            N((t) => {
+        b = (e) => {
+            A((t) => {
                 let n = new Set(t);
                 n.delete(e);
                 let i = Array.from(n).slice(0, 4);
                 return i.unshift(e), i;
             });
         },
-        b = t.map((e) => o.z[e]),
-        v = f.filter((e) => e.toLowerCase().includes(m.toLowerCase())).filter((e) => !b.includes(e)),
-        j = Object.keys(o.z)
-            .filter((e) => !b.includes(e))
-            .filter((e) => !f.includes(e))
-            .filter((e) => e.toLowerCase().includes(m.toLowerCase()))
+        v = t.map((e) => o.z[e]),
+        j = N.filter((e) => e.toLowerCase().includes(T.toLowerCase())).filter((e) => !v.includes(e)),
+        O = Object.keys(o.z)
+            .filter((e) => !v.includes(e))
+            .filter((e) => !N.includes(e))
+            .filter((e) => e.toLowerCase().includes(T.toLowerCase()))
             .sort((e, t) => e.localeCompare(t));
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -129,6 +134,11 @@ function f() {
                         value: r,
                         onChange: p.Nj,
                         children: 'Override Dismissible Content Daily Cap'
+                    }),
+                    (0, i.jsx)(d.FormSwitch, {
+                        value: m,
+                        onChange: p.KC,
+                        children: 'Override Minimum User Account Age Requirement'
                     }),
                     (0, i.jsxs)(d.FormItem, {
                         children: [
@@ -151,9 +161,9 @@ function f() {
                     (0, i.jsx)(d.SearchBar, {
                         className: _.marginBottom20,
                         size: d.SearchBar.Sizes.LARGE,
-                        query: m,
-                        onChange: T,
-                        onClear: () => T('')
+                        query: T,
+                        onChange: E,
+                        onClear: () => E('')
                     }),
                     (0, i.jsxs)(d.FormItem, {
                         className: C.buttonsContainer,
@@ -177,14 +187,14 @@ function f() {
                                       children: (0, i.jsx)(d.FormTitle, { children: 'Recently Shown' })
                                   }),
                                   (0, i.jsx)(I, {
-                                      items: b,
-                                      dismissedContents: E,
-                                      handleChange: A
+                                      items: v,
+                                      dismissedContents: f,
+                                      handleChange: b
                                   })
                               ]
                           })
                         : null,
-                    v.length > 0
+                    j.length > 0
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
                                   (0, i.jsx)('div', {
@@ -192,9 +202,9 @@ function f() {
                                       children: (0, i.jsx)(d.FormTitle, { children: 'Recent Overrides' })
                                   }),
                                   (0, i.jsx)(I, {
-                                      items: v,
-                                      dismissedContents: E,
-                                      handleChange: A
+                                      items: j,
+                                      dismissedContents: f,
+                                      handleChange: b
                                   })
                               ]
                           })
@@ -204,9 +214,9 @@ function f() {
                         children: (0, i.jsx)(d.FormTitle, { children: 'Available Dismissible Contents' })
                     }),
                     (0, i.jsx)(I, {
-                        items: j,
-                        dismissedContents: E,
-                        handleChange: A
+                        items: O,
+                        dismissedContents: f,
+                        handleChange: b
                     })
                 ]
             })

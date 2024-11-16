@@ -2,6 +2,9 @@ n.d(t, {
     EG: function () {
         return s;
     },
+    KC: function () {
+        return l;
+    },
     Nj: function () {
         return o;
     },
@@ -31,6 +34,12 @@ let i = (e) => {
     o = (e) => {
         r.Z.dispatch({
             type: 'DCF_DAILY_CAP_OVERRIDE',
+            value: e
+        });
+    },
+    l = (e) => {
+        r.Z.dispatch({
+            type: 'DCF_NEW_USER_MIN_AGE_REQUIRED_OVERRIDE',
             value: e
         });
     };

@@ -23,6 +23,7 @@ let c = {
     dailyCapPeriodStart: null,
     dismissibleContentSeenDuringSession: new Set(),
     dailyCapOverridden: !1,
+    newUserMinAgeRequiredOverridden: !1,
     renderedAtTimestamps: new Map(),
     lastDCDismissed: null
 };
@@ -39,6 +40,9 @@ class d extends (r = i.ZP.PersistedStore) {
     }
     get dailyCapOverridden() {
         return c.dailyCapOverridden;
+    }
+    get newUserMinAgeRequiredOverridden() {
+        return c.newUserMinAgeRequiredOverridden;
     }
     get lastDCDismissed() {
         return c.lastDCDismissed;
@@ -66,6 +70,10 @@ u(d, 'displayName', 'DismissibleContentFrameworkStore'),
         DCF_DAILY_CAP_OVERRIDE: function (e) {
             let { value: t } = e;
             c.dailyCapOverridden = t;
+        },
+        DCF_NEW_USER_MIN_AGE_REQUIRED_OVERRIDE: function (e) {
+            let { value: t } = e;
+            c.newUserMinAgeRequiredOverridden = t;
         },
         DCF_HANDLE_DC_SHOWN: function (e) {
             let { dismissibleContent: t } = e,

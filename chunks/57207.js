@@ -1,17 +1,18 @@
 n.d(t, {
     B: function () {
-        return d;
+        return f;
     },
     i: function () {
-        return c;
+        return d;
     }
 });
 var r = n(399606),
     i = n(704215),
     a = n(314897),
     s = n(70956),
-    o = n(709054);
-let l = {
+    o = n(709054),
+    l = n(68985);
+let u = {
         [i.z.MJ_NEW_USER_CHAT_BAR]: 0,
         [i.z.NUX_GUILD_CHANNEL_EXPLAINER]: 0,
         [i.z.SEEN_LAUNCH_WELCOME]: 0,
@@ -28,17 +29,22 @@ let l = {
         [i.z.WHATS_NEW_TENURE_BADGE_REWARD]: 0,
         [i.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL]: 0
     },
-    u = s.Z.Millis.DAY;
-function c(e) {
-    let t = (0, r.e7)([a.default], () => a.default.getId()),
-        n = null != t ? o.default.age(t) : 0;
+    c = s.Z.Millis.DAY;
+function d(e) {
+    let { userId: t, newUserMinAgeRequiredOverridden: n } = (0, r.cj)([a.default, l.Z], () => ({
+        userId: a.default.getId(),
+        newUserMinAgeRequiredOverridden: l.Z.newUserMinAgeRequiredOverridden
+    }));
+    if (n) return e;
+    let i = null != t ? o.default.age(t) : 0;
     return e.filter((e) => {
         var t;
-        return n > (null !== (t = l[e]) && void 0 !== t ? t : u);
+        return i > (null !== (t = u[e]) && void 0 !== t ? t : c);
     });
 }
-function d(e) {
+function f(e) {
     var t;
+    if (l.Z.newUserMinAgeRequiredOverridden) return !1;
     let n = null != a.default.getId() ? o.default.age(a.default.getId()) : 0;
-    return n < (null !== (t = l[e]) && void 0 !== t ? t : u);
+    return n < (null !== (t = u[e]) && void 0 !== t ? t : c);
 }
