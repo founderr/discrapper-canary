@@ -84,5 +84,8 @@ class g extends (r = s.ZP.Store) {
         },
         SET_PREVIOUS_GO_LIVE_SETTINGS: (e) => {
             b = e.previousGoLiveSettings;
+        },
+        CLEAR_CONSUMED_ENTITLEMENT: (e) => {
+            _.delete(e.skuId);
         }
     }));
