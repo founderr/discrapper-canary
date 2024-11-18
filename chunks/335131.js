@@ -95,17 +95,19 @@ let g = (e) => {
             );
         }
     },
-    T = async () => {
+    T = async (e) => {
         if (!d.Z.isFetching) {
             o.Z.dispatch({ type: 'COLLECTIBLES_PURCHASES_FETCH' });
             try {
-                let e = await s.tn.get({
+                let t = {
                     url: m.ANM.COLLECTIBLES_PURCHASES,
                     rejectWithError: !1
-                });
+                };
+                (null == e ? void 0 : e.variantsReturnStyle) === a.v.VARIANTS_GROUP && (t.query = { variants_return_style: a.v.VARIANTS_GROUP });
+                let n = await s.tn.get(t);
                 o.Z.dispatch({
                     type: 'COLLECTIBLES_PURCHASES_FETCH_SUCCESS',
-                    purchases: e.body.map(h.Z.fromServer)
+                    purchases: n.body.map(h.Z.fromServer)
                 });
             } catch (e) {
                 throw (

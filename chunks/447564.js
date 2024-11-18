@@ -1,174 +1,176 @@
 n.r(t),
     n.d(t, {
         HD_STREAMING_POTION_MODAL_KEY: function () {
-            return S;
+            return A;
         },
         default: function () {
-            return I;
+            return x;
         }
     }),
     n(47120);
 var r,
-    l,
-    i = n(200651),
+    i,
+    o = n(200651),
     a = n(192379),
+    l = n(311570),
     s = n(692547),
-    o = n(481060),
-    c = n(100527),
+    c = n(481060),
+    u = n(100527),
     d = n(906732),
-    u = n(997323),
-    E = n(955843),
-    m = n(688465),
-    h = n(333867),
-    p = n(63063),
-    f = n(937615),
-    x = n(82950),
-    T = n(981631),
-    _ = n(215023),
-    N = n(388032),
-    g = n(1114),
-    A = n(99713);
-function I(e) {
+    f = n(997323),
+    p = n(955843),
+    h = n(688465),
+    v = n(333867),
+    _ = n(63063),
+    m = n(937615),
+    b = n(82950),
+    g = n(981631),
+    E = n(215023),
+    S = n(388032),
+    C = n(1114),
+    I = n(99713);
+function x(e) {
     let { transitionState: t, channel: n } = e;
-    return (0, i.jsx)(o.ModalRoot, {
-        size: o.ModalSize.DYNAMIC,
+    return (0, o.jsx)(c.ModalRoot, {
+        size: c.ModalSize.DYNAMIC,
         transitionState: t,
-        children: (0, i.jsx)(C, { channel: n })
+        children: (0, o.jsx)(T, { channel: n })
     });
 }
-let S = 'HD_STREAMING_POTION_MODAL_KEY';
-function C(e) {
+let A = 'HD_STREAMING_POTION_MODAL_KEY';
+function T(e) {
     let { channel: t } = e,
-        n = (0, E.T$)(t),
-        [r, l] = (0, a.useState)(!1),
-        { price: s, fetchingPrice: m, error: p } = (0, E.R2)(_.FX),
-        { entitlement: f, fetchedEntitlement: x, error: N } = (0, E.t6)(_.FX),
-        g = p || N,
-        { analyticsLocations: A } = (0, d.ZP)([c.Z.HD_STREAMING_POTION_MODAL]),
-        I = null != f && !f.consumed;
+        n = (0, p.T$)(t),
+        [r, i] = (0, a.useState)(!1),
+        { price: s, fetchingPrice: h, error: _ } = (0, p.R2)(E.FX),
+        { entitlement: m, fetchedEntitlement: b, error: S } = (0, p.t6)(E.FX),
+        C = _ || S,
+        { analyticsLocations: I } = (0, d.ZP)([u.Z.HD_STREAMING_POTION_MODAL]),
+        x = null != m && !m.consumed;
     (0, a.useEffect)(
         () => (
-            null != f && !1 === f.consumed && r && (0, u.Zu)(t.id, _.FX),
+            null != m && !1 === m.consumed && r && (0, f.Zu)(t.id, E.FX),
             () => {
-                g && (0, u.SN)(_.FX);
+                C && (0, f.SN)(E.FX);
             }
         ),
-        [f, t, r, g]
+        [m, t, r, C]
     );
-    let S = (0, a.useMemo)(
+    let A = (0, a.useMemo)(
             () => () =>
-                (0, h.Z)({
-                    skuId: _.FX,
-                    analyticsLocations: A,
-                    onComplete: o.closeAllModals
+                (0, v.Z)({
+                    skuId: E.FX,
+                    analyticsLocations: I,
+                    onComplete: c.closeAllModals,
+                    variantsReturnStyle: l.v.INDIVIDUAL_PRODUCTS
                 }),
-            [A]
+            [I]
         ),
-        C = (0, a.useMemo)(
+        T = (0, a.useMemo)(
             () => () => {
-                (0, u.Zu)(t.id, _.FX), (0, o.closeAllModals)();
+                (0, f.Zu)(t.id, E.FX), (0, c.closeAllModals)();
             },
             [t.id]
         ),
-        j = (0, a.useMemo)(() => () => (t.isHDStreamSplashed ? 4 : n ? ((null == f ? void 0 : f.type) === T.qc2.DEVELOPER_GIFT ? 1 : I ? 2 : 0) : 3), [t.isHDStreamSplashed, n, null == f ? void 0 : f.type, I]),
-        M = (0, a.useMemo)(() => j(), [j]);
-    return (0, i.jsx)(v, {
+        y = (0, a.useMemo)(() => () => (t.isHDStreamSplashed ? 4 : n ? ((null == m ? void 0 : m.type) === g.qc2.DEVELOPER_GIFT ? 1 : x ? 2 : 0) : 3), [t.isHDStreamSplashed, n, null == m ? void 0 : m.type, x]),
+        w = (0, a.useMemo)(() => y(), [y]);
+    return (0, o.jsx)(N, {
         channel: t,
-        buttonState: M,
+        buttonState: w,
         price: s,
         onActionClick: () => {
-            l(!0), (I ? C : S)();
+            i(!0), (x ? T : A)();
         },
-        loading: m || !x
+        loading: h || !b
     });
 }
-let v = (e) => {
-        let { channel: t, buttonState: n, price: r, onActionClick: l, loading: a } = e;
+let N = (e) => {
+        let { channel: t, buttonState: n, price: r, onActionClick: i, loading: a } = e;
         return a
-            ? (0, i.jsx)(R, {})
+            ? (0, o.jsx)(R, {})
             : null == r
-              ? (0, i.jsx)(b, {})
-              : (0, i.jsxs)(i.Fragment, {
+              ? (0, o.jsx)(P, {})
+              : (0, o.jsxs)(o.Fragment, {
                     children: [
-                        (0, i.jsxs)('div', {
-                            className: g.modal,
-                            children: [(0, i.jsx)(j, {}), (0, i.jsx)(M, { channel: t })]
+                        (0, o.jsxs)('div', {
+                            className: C.modal,
+                            children: [(0, o.jsx)(y, {}), (0, o.jsx)(w, { channel: t })]
                         }),
-                        (0, i.jsx)(Z, {
+                        (0, o.jsx)(M, {
                             buttonState: n,
                             price: r,
-                            onActionClick: l
+                            onActionClick: i
                         })
                     ]
                 });
     },
-    j = () =>
-        (0, i.jsx)('img', {
-            className: g.image,
+    y = () =>
+        (0, o.jsx)('img', {
+            className: C.image,
             src: 'https://cdn.discordapp.com/assets/premium/roadblocks/hd_streaming.png',
-            alt: N.intl.string(N.t.DdigcX)
+            alt: S.intl.string(S.t.DdigcX)
         }),
-    M = (e) => {
+    w = (e) => {
         let { channel: t } = e;
-        return (0, i.jsxs)(i.Fragment, {
+        return (0, o.jsxs)(o.Fragment, {
             children: [
-                (0, i.jsxs)('div', {
-                    className: g.body,
+                (0, o.jsxs)('div', {
+                    className: C.body,
                     children: [
-                        (0, i.jsxs)('div', {
-                            className: g.heading,
+                        (0, o.jsxs)('div', {
+                            className: C.heading,
                             children: [
-                                (0, i.jsx)(o.Heading, {
+                                (0, o.jsx)(c.Heading, {
                                     variant: 'heading-lg/bold',
-                                    children: N.intl.string(N.t.K04rOD)
+                                    children: S.intl.string(S.t.K04rOD)
                                 }),
-                                (0, i.jsx)(m.Z, {})
+                                (0, o.jsx)(h.Z, {})
                             ]
                         }),
-                        (0, i.jsx)(o.Text, {
+                        (0, o.jsx)(c.Text, {
                             variant: 'text-sm/normal',
-                            children: N.intl.string(N.t.lq40Pz)
+                            children: S.intl.string(S.t.lq40Pz)
                         }),
-                        (0, i.jsx)(o.Text, {
+                        (0, o.jsx)(c.Text, {
                             color: 'text-link',
                             variant: 'text-sm/normal',
-                            children: N.intl.format(N.t['1wV4qq'], { helpCenterLink: p.Z.getArticleURL(T.BhN.HD_STREAMING_POTION) })
+                            children: S.intl.format(S.t['1wV4qq'], { helpCenterLink: _.Z.getArticleURL(g.BhN.HD_STREAMING_POTION) })
                         }),
-                        (0, i.jsx)(o.Text, {
+                        (0, o.jsx)(c.Text, {
                             color: 'text-muted',
                             variant: 'text-xs/medium',
-                            children: N.intl.string(N.t.qk07Mj)
+                            children: S.intl.string(S.t.qk07Mj)
                         })
                     ]
                 }),
-                (0, i.jsx)('div', { className: g.divider }),
-                (0, i.jsxs)('div', {
-                    className: g.applyingTo,
+                (0, o.jsx)('div', { className: C.divider }),
+                (0, o.jsxs)('div', {
+                    className: C.applyingTo,
                     children: [
-                        (0, i.jsx)(o.Text, {
+                        (0, o.jsx)(c.Text, {
                             variant: 'eyebrow',
-                            children: N.intl.string(N.t.tZyXg4)
+                            children: S.intl.string(S.t.tZyXg4)
                         }),
-                        (0, i.jsx)(x.Z, { channel: t })
+                        (0, o.jsx)(b.Z, { channel: t })
                     ]
                 })
             ]
         });
     };
-((l = r || (r = {}))[(l.BUY = 0)] = 'BUY'), (l[(l.REDEEM = 1)] = 'REDEEM'), (l[(l.ACTIVATE = 2)] = 'ACTIVATE'), (l[(l.INELIGIBLE = 3)] = 'INELIGIBLE'), (l[(l.ALREADY_ACTIVE = 4)] = 'ALREADY_ACTIVE');
-let Z = (e) => {
+((i = r || (r = {}))[(i.BUY = 0)] = 'BUY'), (i[(i.REDEEM = 1)] = 'REDEEM'), (i[(i.ACTIVATE = 2)] = 'ACTIVATE'), (i[(i.INELIGIBLE = 3)] = 'INELIGIBLE'), (i[(i.ALREADY_ACTIVE = 4)] = 'ALREADY_ACTIVE');
+let M = (e) => {
         let { buttonState: t, price: n, onActionClick: r } = e;
-        return (0, i.jsxs)('div', {
-            className: g.footer,
+        return (0, o.jsxs)('div', {
+            className: C.footer,
             children: [
-                (0, i.jsx)(o.Button, {
+                (0, o.jsx)(c.Button, {
                     onClick: () => {
-                        (0, o.closeModal)(S);
+                        (0, c.closeModal)(A);
                     },
-                    color: o.Button.Colors.PRIMARY,
-                    children: N.intl.string(N.t.Avt5KS)
+                    color: c.Button.Colors.PRIMARY,
+                    children: S.intl.string(S.t.Avt5KS)
                 }),
-                (0, i.jsx)(L, {
+                (0, o.jsx)(O, {
                     buttonState: t,
                     price: n,
                     onActionClick: r
@@ -176,36 +178,36 @@ let Z = (e) => {
             ]
         });
     },
-    L = (e) => {
+    O = (e) => {
         let { buttonState: t, price: n, onActionClick: r } = e,
-            l = N.intl.formatToPlainString(N.t.S9LAdX, { price: (0, f.T4)(n.amount, n.currency) });
+            i = S.intl.formatToPlainString(S.t.S9LAdX, { price: (0, m.T4)(n.amount, n.currency) });
         if (3 === t || 4 === t) {
             let e = {
-                3: N.intl.string(N.t.Qrh2BQ),
-                4: N.intl.string(N.t.utRdl5)
+                3: S.intl.string(S.t.Qrh2BQ),
+                4: S.intl.string(S.t.utRdl5)
             }[t];
-            return (0, i.jsx)(o.Tooltip, {
-                tooltipContentClassName: g.tooltip,
+            return (0, o.jsx)(c.Tooltip, {
+                tooltipContentClassName: C.tooltip,
                 text: e,
                 children: (e) =>
-                    (0, i.jsx)(o.Button, {
+                    (0, o.jsx)(c.Button, {
                         ...e,
                         disabled: !0,
-                        children: l
+                        children: i
                     })
             });
         }
         let a = {
-            0: l,
-            1: N.intl.string(N.t.sl6Tcn),
-            2: N.intl.string(N.t.XJ9INj)
+            0: i,
+            1: S.intl.string(S.t.sl6Tcn),
+            2: S.intl.string(S.t.XJ9INj)
         }[t];
-        return (0, i.jsx)(o.Button, {
+        return (0, o.jsx)(c.Button, {
             onClick: r,
-            children: (0, i.jsxs)('div', {
-                className: g.buttonCopy,
+            children: (0, o.jsxs)('div', {
+                className: C.buttonCopy,
                 children: [
-                    (0, i.jsx)(o.PotionIcon, {
+                    (0, o.jsx)(c.PotionIcon, {
                         color: s.Z.colors.WHITE,
                         size: 'sm'
                     }),
@@ -214,29 +216,29 @@ let Z = (e) => {
             })
         });
     },
-    b = () =>
-        (0, i.jsx)('div', {
-            className: g.anomaly,
-            children: (0, i.jsxs)('div', {
-                className: g.error,
+    P = () =>
+        (0, o.jsx)('div', {
+            className: C.anomaly,
+            children: (0, o.jsxs)('div', {
+                className: C.error,
                 children: [
-                    (0, i.jsx)(o.Image, {
-                        src: A,
+                    (0, o.jsx)(c.Image, {
+                        src: I,
                         width: 178,
                         height: 190
                     }),
-                    (0, i.jsx)(o.Text, {
+                    (0, o.jsx)(c.Text, {
                         variant: 'text-md/normal',
-                        children: N.intl.string(N.t.sIA0OD)
+                        children: S.intl.string(S.t.sIA0OD)
                     })
                 ]
             })
         }),
     R = () =>
-        (0, i.jsx)('div', {
-            className: g.anomaly,
-            children: (0, i.jsx)('div', {
-                className: g.spinner,
-                children: (0, i.jsx)(o.Spinner, {})
+        (0, o.jsx)('div', {
+            className: C.anomaly,
+            children: (0, o.jsx)('div', {
+                className: C.spinner,
+                children: (0, o.jsx)(c.Spinner, {})
             })
         });

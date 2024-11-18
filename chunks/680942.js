@@ -6,12 +6,13 @@ var r = n(200651),
     o = n(241553),
     c = n(333867),
     d = n(884697),
-    u = n(67409),
-    m = n(474936),
-    h = n(231338),
-    p = n(388032),
-    f = n(149158);
-let g = {
+    u = n(228624),
+    m = n(67409),
+    h = n(474936),
+    p = n(231338),
+    f = n(388032),
+    g = n(149158);
+let C = {
     dark: [
         {
             box: '#FFF19E',
@@ -74,51 +75,53 @@ let g = {
     ]
 };
 t.Z = (e) => {
-    let { product: t, selectedVariantIndex: n, returnRef: C, onSuccess: b, tooltipDelay: x, isGiftEasterEggEnabled: v, disableCustomColor: _ = !1 } = e,
-        { analyticsLocations: k } = (0, l.ZP)(),
-        j = a.useRef(null),
-        E = (0, s.Z)(j),
-        I = _ ? h.BR.DARK : h.BR.LIGHT;
+    let { product: t, selectedVariantIndex: n, returnRef: b, onSuccess: x, tooltipDelay: v, isGiftEasterEggEnabled: _, disableCustomColor: k = !1 } = e,
+        { analyticsLocations: j } = (0, l.ZP)(),
+        E = a.useRef(null),
+        S = (0, s.Z)(E),
+        I = k ? p.BR.DARK : p.BR.LIGHT,
+        T = (0, u.h)('CollectiblesShopGiftButton');
     return (0, d.x6)(t)
         ? null
         : (0, r.jsx)(i.Tooltip, {
-              text: p.intl.string(p.t['JCFN//']),
-              delay: x,
+              text: f.intl.string(f.t['JCFN//']),
+              delay: v,
               children: (e) =>
                   (0, r.jsx)(i.Button, {
                       ...e,
-                      buttonRef: j,
-                      className: f.giftButton,
-                      color: _ ? i.ButtonColors.BRAND : i.ButtonColors.CUSTOM,
+                      buttonRef: E,
+                      className: g.giftButton,
+                      color: k ? i.ButtonColors.BRAND : i.ButtonColors.CUSTOM,
                       look: i.Button.Looks.FILLED,
                       size: i.ButtonSizes.ICON,
-                      innerClassName: f.giftButtonInner,
-                      'aria-label': p.intl.string(p.t.PEjaCw),
+                      innerClassName: g.giftButtonInner,
+                      'aria-label': f.intl.string(f.t.PEjaCw),
                       onClick: (e) => {
                           e.stopPropagation(),
                               (0, c.Z)({
-                                  skuId: (0, u.S)({
+                                  skuId: (0, m.S)({
                                       product: t,
                                       selectedVariantIndex: n
                                   }),
                                   isGift: !0,
-                                  giftingOrigin: m.Wt.SHOP_PAGE,
-                                  analyticsLocations: k,
-                                  returnRef: C,
+                                  giftingOrigin: h.Wt.SHOP_PAGE,
+                                  analyticsLocations: j,
+                                  returnRef: b,
+                                  variantsReturnStyle: T,
                                   onClose:
-                                      null != b
+                                      null != x
                                           ? (e) => {
-                                                e && b();
+                                                e && x();
                                             }
                                           : void 0
                               });
                       },
-                      children: v
+                      children: _
                           ? (0, r.jsx)(o.e, {
-                                hovered: E,
+                                hovered: S,
                                 isContentDismissed: !0,
                                 themeOverride: I,
-                                boxColors: g
+                                boxColors: C
                             })
                           : (0, r.jsx)(i.GiftIcon, {
                                 size: 'md',

@@ -1,4 +1,7 @@
 n.d(t, {
+    e: function () {
+        return l;
+    },
     h: function () {
         return o;
     }
@@ -20,4 +23,5 @@ let s = (0, i.B)({
         ],
         commonTriggerPoint: a.$P.COLLECTIBLES_SHOP_OPEN
     }),
-    o = (e) => s.useExperiment({ location: e }).variantsReturnStyle;
+    o = (e) => s.useExperiment({ location: e }).variantsReturnStyle,
+    l = (e) => o(e) === r.v.VARIANTS_GROUP;
