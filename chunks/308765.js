@@ -391,6 +391,11 @@ let i = {
         actions: ['POST_CONNECTION_OPEN', 'EXPERIMENTS_FETCH_SUCCESS', 'CACHE_LOADED', 'LOGIN_SUCCESS', 'EXPERIMENT_OVERRIDE_BUCKET'],
         inlineRequire: () => n(902629).Z,
         neverLoadBeforeConnectionOpen: !0
+    },
+    GlobalDiscoveryServersFeaturedSearchManager: {
+        actions: ['POST_CONNECTION_OPEN'],
+        inlineRequire: () => n(275131).Z,
+        neverLoadBeforeConnectionOpen: !0
     }
 };
 (0, r.j)(i);
