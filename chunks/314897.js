@@ -33,8 +33,8 @@ let L = new I.Z('AuthenticationStore'),
     P = null,
     k = null,
     U = null,
-    G = null,
     B = null,
+    G = null,
     Z = null,
     F = null,
     V = null,
@@ -178,10 +178,10 @@ class eE extends (a = _.ZP.Store) {
         return U;
     }
     getAuthSessionIdHash() {
-        return G;
+        return B;
     }
     getStaticAuthSessionId() {
-        return B;
+        return G;
     }
     getToken() {
         return (0, A.LP)();
@@ -284,7 +284,7 @@ class eE extends (a = _.ZP.Store) {
             CONNECTION_OPEN: function (e) {
                 var t;
                 let { user: n, sessionId: r, authSessionIdHash: i, analyticsToken: a, auth: s, staticAuthSessionId: o } = e;
-                ec('handleConnectionOpen called'), N.Z.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, T.Z)(n)), (U = r), (G = i), (B = o), (V = a), (P = n.id), (k = n.email), void 0 !== s && (W = s.authenticator_types), h.K.set(w, n.email), h.K.set(M, n.id);
+                ec('handleConnectionOpen called'), N.Z.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, T.Z)(n)), (U = r), (B = i), (G = o), (V = a), (P = n.id), (k = n.email), void 0 !== s && (W = s.authenticator_types), h.K.set(w, n.email), h.K.set(M, n.id);
             },
             OVERLAY_INITIALIZE: function (e) {
                 var t;
@@ -305,7 +305,7 @@ class eE extends (a = _.ZP.Store) {
             },
             AUTH_SESSION_CHANGE: function (e) {
                 let { authSessionIdHash: t } = e;
-                null != t && (G = t);
+                null != t && (B = t);
             },
             LOGIN: function (e) {
                 (en = {}), (j = O.u34.LOGGING_IN), (J = ''), (i = null), null != e.login && (ea = e.login), el || (el = e.loginMethod === O.nnr.PASSWORD);

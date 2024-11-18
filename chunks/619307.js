@@ -120,7 +120,7 @@ function C(e) {
     return e.map((e) => N(e)).join(', ');
 }
 function R(e) {
-    let { options: t, placeholder: n = E.intl.string(E.t.XqMe3N), className: a, isDisabled: o = !1, maxVisibleItems: l = 7, autoFocus: c = !1, popoutWidth: f, clearable: m = !1, look: b = g.q.FILLED, onClose: I, onOpen: S, renderOptionLabel: T = N, renderOptionValue: y = C, popoutClassName: A, popoutPosition: R = 'bottom', popoutLayerContext: D, optionClassName: L, closeOnSelect: x, select: w, isSelected: M, serialize: P, clear: k, hideIcon: U = !1, 'aria-label': G, 'aria-labelledby': B } = e,
+    let { options: t, placeholder: n = E.intl.string(E.t.XqMe3N), className: a, isDisabled: o = !1, maxVisibleItems: l = 7, autoFocus: c = !1, popoutWidth: f, clearable: m = !1, look: b = g.q.FILLED, onClose: I, onOpen: S, renderOptionLabel: T = N, renderOptionValue: y = C, popoutClassName: A, popoutPosition: R = 'bottom', popoutLayerContext: D, optionClassName: L, closeOnSelect: x, select: w, isSelected: M, serialize: P, clear: k, hideIcon: U = !1, 'aria-label': B, 'aria-labelledby': G } = e,
         [Z, F] = i.useState(!1),
         { ref: V, width: j, height: H } = (0, p.Z)(),
         Y = i.useCallback(
@@ -218,8 +218,8 @@ function R(e) {
                 }),
                 'aria-haspopup': 'listbox',
                 'aria-expanded': d,
-                'aria-label': G,
-                'aria-labelledby': B,
+                'aria-label': B,
+                'aria-labelledby': G,
                 children: [
                     Q.length > 0
                         ? (0, r.jsx)('span', {

@@ -50,16 +50,16 @@ function v(e, t, n) {
             activeCommand: o.Z.getActiveCommand(N.id),
             activeCommandOption: o.Z.getActiveOption(N.id)
         })),
-        G = (0, h.Z)({
+        B = (0, h.Z)({
             navId: 'channel-autocomplete',
             scrollerRef: n,
             state: R,
             onFocus: (e) => F.setSelectedIndex(e)
         }),
-        B = null === (v = e.editorRef.current) || void 0 === v ? void 0 : v.getCurrentWord(),
+        G = null === (v = e.editorRef.current) || void 0 === v ? void 0 : v.getCurrentWord(),
         Z = {
             ...e,
-            navigator: G,
+            navigator: B,
             activeCommand: k,
             activeCommandOption: U,
             canMentionUsers: null !== (T = null === (b = C.users) || void 0 === b ? void 0 : b.allowMentioning) && void 0 !== T && T,
@@ -68,8 +68,8 @@ function v(e, t, n) {
             hidePersonalInformation: P,
             hideMentionDescription: C === l.I.RULES_INPUT,
             emojiIntention: C === l.I.RULES_INPUT ? E.Hz.COMMUNITY_CONTENT : E.Hz.CHAT,
-            currentWord: null !== (y = null == B ? void 0 : B.word) && void 0 !== y ? y : '',
-            currentWordIsAtStart: (null == B ? void 0 : B.isAtStart) === !0,
+            currentWord: null !== (y = null == G ? void 0 : G.word) && void 0 !== y ? y : '',
+            currentWordIsAtStart: (null == G ? void 0 : G.isAtStart) === !0,
             optionText: null != U ? (0, s.KF)({ [U.name]: null !== (A = null === (I = e.editorRef.current) || void 0 === I ? void 0 : I.getCurrentCommandOptionValue()) && void 0 !== A ? A : [] }, U.name) : ''
         },
         [F] = r.useState(() => new p.Z(Z));
@@ -99,6 +99,6 @@ function v(e, t, n) {
                 };
             }
         }, [F, null === (S = R.query) || void 0 === S ? void 0 : S.typeInfo]),
-        [R, F, G]
+        [R, F, B]
     );
 }

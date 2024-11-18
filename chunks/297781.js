@@ -48,10 +48,10 @@ n.d(t, {
         return j;
     },
     pQ: function () {
-        return G;
+        return B;
     },
     v1: function () {
-        return B;
+        return G;
     },
     wO: function () {
         return U;
@@ -84,10 +84,10 @@ var r,
     C = n(369312);
 let R = {
     [d.s.TOP_ARTIST]: [V],
-    [d.s.PLAYED_GAME]: [M, P, w, H, U, Z, j, B, G],
+    [d.s.PLAYED_GAME]: [M, P, w, H, U, Z, j, G, B],
     [d.s.TOP_GAME]: [F],
     [d.s.WATCHED_MEDIA]: [Y, W],
-    [d.s.LAUNCHED_ACTIVITY]: [M, P, w, H, j, G]
+    [d.s.LAUNCHED_ACTIVITY]: [M, P, w, H, j, B]
 };
 ((r = i || (i = {}))[(r.CARD = 0)] = 'CARD'), (r[(r.POPOUT = 1)] = 'POPOUT'), (r[(r.STREAMING_POPOUT = 2)] = 'STREAMING_POPOUT'), (r[(r.GAME_PROFILE = 3)] = 'GAME_PROFILE'), (r[(r.USER_PROFILE = 4)] = 'USER_PROFILE'), (r[(r.EMBED = 5)] = 'EMBED'), (r[(r.LEADERBOARD_POPOUT = 6)] = 'LEADERBOARD_POPOUT'), (r[(r.OVERLAY = 7)] = 'OVERLAY');
 let O = s.createContext({});
@@ -236,7 +236,7 @@ function U(e) {
           })
         : null;
 }
-function G(e) {
+function B(e) {
     let { entry: t } = e,
         { location: n } = D();
     if (!(0, S.V5)(t)) return null;
@@ -251,7 +251,7 @@ function G(e) {
               showTooltip: 0 === n && !r
           });
 }
-function B(e) {
+function G(e) {
     let { entry: t } = e,
         { location: n } = D(),
         r = 0 !== n,

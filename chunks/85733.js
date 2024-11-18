@@ -81,13 +81,13 @@ var r = n(478497),
         if (o && l(C) && 0 === C.length) return P + '[]';
         for (var k = 0; k < N.length; ++k) {
             var U = N[k],
-                G = 'object' == typeof U && void 0 !== U.value ? U.value : C[U];
-            if (!d || null !== G) {
-                var B = E && f ? U.replace(/\./g, '%2E') : U,
-                    Z = l(C) ? ('function' == typeof a ? a(P, B) : P) : P + (E ? '.' + B : '[' + B + ']');
+                B = 'object' == typeof U && void 0 !== U.value ? U.value : C[U];
+            if (!d || null !== B) {
+                var G = E && f ? U.replace(/\./g, '%2E') : U,
+                    Z = l(C) ? ('function' == typeof a ? a(P, G) : P) : P + (E ? '.' + G : '[' + G + ']');
                 y.set(t, O);
                 var F = r();
-                F.set(p, y), c(x, e(G, Z, a, s, o, u, d, f, 'comma' === a && S && l(C) ? null : h, m, g, E, v, b, I, S, T, F));
+                F.set(p, y), c(x, e(B, Z, a, s, o, u, d, f, 'comma' === a && S && l(C) ? null : h, m, g, E, v, b, I, S, T, F));
             }
         }
         return x;

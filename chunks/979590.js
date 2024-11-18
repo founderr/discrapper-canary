@@ -254,7 +254,7 @@
         },
         toHex8: function (e) {
             return (function (e, t, n, r, i) {
-                var a = [k(l(e).toString(16)), k(l(t).toString(16)), k(l(n).toString(16)), k(G(r))];
+                var a = [k(l(e).toString(16)), k(l(t).toString(16)), k(l(n).toString(16)), k(B(r))];
                 return i && a[0].charAt(0) == a[0].charAt(1) && a[1].charAt(0) == a[1].charAt(1) && a[2].charAt(0) == a[2].charAt(1) && a[3].charAt(0) == a[3].charAt(1) ? a[0].charAt(0) + a[1].charAt(0) + a[2].charAt(0) + a[3].charAt(0) : a.join('');
             })(this._r, this._g, this._b, this._a, e);
         },
@@ -422,7 +422,7 @@
         return r && i[0].charAt(0) == i[0].charAt(1) && i[1].charAt(0) == i[1].charAt(1) && i[2].charAt(0) == i[2].charAt(1) ? i[0].charAt(0) + i[1].charAt(0) + i[2].charAt(0) : i.join('');
     }
     function m(e, t, n, r) {
-        return [k(G(r)), k(l(e).toString(16)), k(l(t).toString(16)), k(l(n).toString(16))].join('');
+        return [k(B(r)), k(l(e).toString(16)), k(l(t).toString(16)), k(l(n).toString(16))].join('');
     }
     function g(e, t) {
         t = 0 === t ? 0 : t || 10;
@@ -798,10 +798,10 @@
     function U(e) {
         return e <= 1 && (e = 100 * e + '%'), e;
     }
-    function G(e) {
+    function B(e) {
         return t.round(255 * parseFloat(e)).toString(16);
     }
-    function B(e) {
+    function G(e) {
         return P(e) / 255;
     }
     var Z =

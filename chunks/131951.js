@@ -31,8 +31,8 @@ var o,
     P = n(706629),
     k = n(166884),
     U = n(998594),
-    G = n(14457),
-    B = n(529558),
+    B = n(14457),
+    G = n(529558),
     Z = n(111672),
     F = n(441167),
     V = n(338336),
@@ -156,8 +156,8 @@ let eT = {},
     eP = !1,
     ek = e_.Av,
     eU = !1,
-    eG = !1,
     eB = !1,
+    eG = !1,
     eZ = new b.V7(),
     eF = !1,
     eV = !1,
@@ -504,7 +504,7 @@ function tS(e) {
 }
 function tT() {
     if (eS.supports(e_.AN.AUDIO_SUBSYSTEM_DEFERRED_SWITCH)) {
-        let { enabled: e } = G.I.getCurrentConfig({ location: 'interpretAutomaticAudioSubsystem' });
+        let { enabled: e } = B.I.getCurrentConfig({ location: 'interpretAutomaticAudioSubsystem' });
         e ? eS.queueAudioSubsystem(e_.iA.EXPERIMENTAL) : eS.queueAudioSubsystem(e_.iA.STANDARD);
     } else eS.setAudioSubsystem(e_.iA.STANDARD);
 }
@@ -559,15 +559,15 @@ class tA extends (l = g.ZP.Store) {
                 });
             }),
                 e.context === e_.Yn.DEFAULT &&
-                    ((eG = !1),
-                    (eB = !1),
+                    ((eB = !1),
+                    (eG = !1),
                     e.on(E.Sh.SpeakingWhileMuted, () => {
-                        (eG = !0),
-                            (eB = !0),
+                        (eB = !0),
+                            (eG = !0),
                             r.emitChange(),
                             eZ.stop(),
                             eZ.start(eb, () => {
-                                (eB = !1), r.emitChange();
+                                (eG = !1), r.emitChange();
                             });
                     })),
                 e.on(E.Sh.DesktopSourceEnd, () => {
@@ -1156,10 +1156,10 @@ class tA extends (l = g.ZP.Store) {
         return e8().openH264;
     }
     getEverSpeakingWhileMuted() {
-        return eG;
+        return eB;
     }
     getSpeakingWhileMuted() {
-        return eB;
+        return eG;
     }
     supportsScreenSoundshare() {
         return (0, q.isMac)() ? eS.supports(e_.AN.SOUNDSHARE) && h().satisfies(null === S.Z || void 0 === S.Z ? void 0 : S.Z.os.release, ec.yG) && ts() : (0, q.isWindows)() ? eS.supports(e_.AN.SCREEN_SOUNDSHARE) && this.getExperimentalSoundshare() : !!(0, q.isLinux)() && eS.supports(e_.AN.SCREEN_SOUNDSHARE);
@@ -1189,10 +1189,10 @@ class tA extends (l = g.ZP.Store) {
     getSupportedSecureFramesProtocolVersion(e) {
         var t;
         let n = eS.getSupportedSecureFramesProtocolVersion(),
-            r = B.m.getCurrentConfig({ location: 'MediaEngineStore' }),
+            r = G.m.getCurrentConfig({ location: 'MediaEngineStore' }),
             i =
                 null != e
-                    ? B.N.getCurrentConfig({
+                    ? G.N.getCurrentConfig({
                           guildId: e,
                           location: 'MediaEngineStore'
                       })

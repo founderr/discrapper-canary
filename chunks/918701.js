@@ -48,7 +48,7 @@ n.d(t, {
         return ec;
     },
     OG: function () {
-        return eG;
+        return eB;
     },
     PM: function () {
         return z;
@@ -87,7 +87,7 @@ n.d(t, {
         return x;
     },
     _j: function () {
-        return eB;
+        return eG;
     },
     b7: function () {
         return eN;
@@ -105,7 +105,7 @@ n.d(t, {
         return j;
     },
     iQ: function () {
-        return G;
+        return B;
     },
     il: function () {
         return eA;
@@ -120,7 +120,7 @@ n.d(t, {
         return eu;
     },
     q6: function () {
-        return B;
+        return G;
     },
     q8: function () {
         return eD;
@@ -236,13 +236,13 @@ function k(e, t) {
 function U(e) {
     return new Date(e.config.expiresAt).valueOf() <= Date.now();
 }
-function G(e) {
+function B(e) {
     if (!U(e)) return !1;
     let t = Date.now() - 2592000000,
         n = new Date(e.config.expiresAt).valueOf();
     return null != e.config.expiresAt && !(n <= t) && !0;
 }
-function B(e) {
+function G(e) {
     return (0, a.EQ)(e)
         .with({ config_version: 2 }, (e) => (0, y.Q)(e))
         .exhaustive();
@@ -285,7 +285,7 @@ function F(e) {
     return {
         id: e.id,
         preview: e.preview,
-        config: B(e.config),
+        config: G(e.config),
         userStatus: null == e.user_status ? null : Z(e.user_status),
         targetedContent: e.targeted_content
     };
@@ -727,14 +727,14 @@ function eU(e, t) {
     }),
         d.Z.open(N.oAB.CONNECTIONS);
 }
-function eG() {
+function eB() {
     return window.location.pathname.startsWith(N.Z5c.QUEST_HOME);
 }
-function eB(e) {
+function eG(e) {
     return 'xbox' === e.connected_account_type ? N.ABu.XBOX : N.ABu.PLAYSTATION;
 }
 function eZ(e) {
-    return eB(e) === N.ABu.XBOX ? R.t.mytEv7 : R.t.iDiwb2;
+    return eG(e) === N.ABu.XBOX ? R.t.mytEv7 : R.t.iDiwb2;
 }
 function eF(e) {
     var t, n, r, i;

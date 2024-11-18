@@ -38,7 +38,7 @@ var r = n(200651),
     M = n(388032),
     P = n(653134);
 function k(e) {
-    let { user: t, currentUser: n, guildId: k, channelId: U, messageId: G, roleId: B, closePopout: Z, setPopoutRef: F, disableUserProfileLink: V = __OVERLAY__, newAnalyticsLocations: j = [] } = e,
+    let { user: t, currentUser: n, guildId: k, channelId: U, messageId: B, roleId: G, closePopout: Z, setPopoutRef: F, disableUserProfileLink: V = __OVERLAY__, newAnalyticsLocations: j = [] } = e,
         { analyticsLocations: H } = (0, d.ZP)([...j, c.Z.BITE_SIZE_PROFILE_POPOUT]),
         Y = (0, E.Z)({
             user: t,
@@ -50,8 +50,8 @@ function k(e) {
             userId: t.id,
             guildId: k,
             channelId: U,
-            messageId: G,
-            roleId: B
+            messageId: B,
+            roleId: G
         }),
         K = (0, s.e7)([p.Z], () => (null != k ? p.Z.getGuild(k) : null)),
         z = (0, s.e7)([_.ZP], () => (null != k ? _.ZP.getMember(k, t.id) : null)),

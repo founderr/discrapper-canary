@@ -75,20 +75,20 @@ function M(e, t, n) {
 let P = new u.Yd('ApplicationCommandIndexStore'),
     k = Symbol('currentUser'),
     U = Symbol('stale'),
-    G = Symbol('current'),
-    B = Object.freeze({
+    B = Symbol('current'),
+    G = Object.freeze({
         descriptors: [],
         commands: [],
         sectionedCommands: [],
         loading: !0
     }),
     Z = Object.freeze({
-        serverVersion: G,
+        serverVersion: B,
         fetchState: { fetching: !1 },
         result: {
             sections: {},
             sectionIdsByBotId: {},
-            version: G
+            version: B
         }
     }),
     F = Object.freeze({
@@ -224,7 +224,7 @@ function X(e) {
         }
         t.commands[e.id] = e;
     }
-    let u = null !== (n = i.version) && void 0 !== n ? n : G;
+    let u = null !== (n = i.version) && void 0 !== n ? n : B;
     W(r, {
         serverVersion: u,
         result: {
@@ -288,7 +288,7 @@ class $ extends (r = c.ZP.Store) {
         return e in this.indices;
     }
     query(e, t, n) {
-        if (null == I.default.getCurrentUser()) return B;
+        if (null == I.default.getCurrentUser()) return G;
         let r = this.getContextState(e),
             i = this.getUserState(),
             a = this.getApplicationState(n.applicationId),
@@ -692,17 +692,17 @@ function eo(e) {
             (null == E || t.descriptor.id === E) && U.add(e);
         }
     }
-    let G = new Map();
+    let B = new Map();
     for (let [e, t] of f)
         if (null == E || e === E) {
             let e = null === (s = t.result) || void 0 === s ? void 0 : s.sections;
-            if (null != e) for (let t of Object.keys(e)) U.add(t), G.set(t, e[t]);
+            if (null != e) for (let t of Object.keys(e)) U.add(t), B.set(t, e[t]);
         }
     for (let e of Array.from(U)) {
         let t, n;
         let r = P[e],
             i = k[e],
-            a = G.get(e),
+            a = B.get(e),
             s = null != r,
             o = null != i;
         if (null != r && null != i) {
@@ -741,7 +741,7 @@ function eo(e) {
         let e = el(T.Tm[x.bi.BUILT_IN], L, !0, !0, M);
         null != e && w.push(e);
     }
-    let B = w.flatMap((e) =>
+    let G = w.flatMap((e) =>
         e.data.map((t) => ({
             ...t,
             section: e.section
@@ -758,7 +758,7 @@ function eo(e) {
                       guild: t
                   }
                 : void 0;
-        B.sort((e, t) => {
+        G.sort((e, t) => {
             if (S.commands.useScore) {
                 var r, i;
                 let n = null !== (r = e.score) && void 0 !== r ? r : 0,
@@ -774,7 +774,7 @@ function eo(e) {
         });
     }
     return {
-        commands: B,
+        commands: G,
         descriptors: w.map((e) => e.section),
         sectionedCommands: w,
         loading: (null == c ? void 0 : c.fetchState.fetching) === !0 || (null == d ? void 0 : d.fetchState.fetching) === !0 || (null != E && (null === (r = f.get(E)) || void 0 === r ? void 0 : r.fetchState.fetching) === !0)

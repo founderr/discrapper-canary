@@ -12,7 +12,7 @@ n.d(t, {
         return x;
     },
     HR: function () {
-        return G;
+        return B;
     },
     Hr: function () {
         return y;
@@ -286,7 +286,7 @@ function U() {
         location: { section: _.jXE.CHANNEL_WELCOME_CTA }
     });
 }
-function G(e) {
+function B(e) {
     let { guildId: t, channelId: n } = e;
     r.ZP.trackWithMetadata(_.rMx.THREAD_CREATION_STARTED, {
         ...(0, i.K)(s.Z.getChannel(n)),

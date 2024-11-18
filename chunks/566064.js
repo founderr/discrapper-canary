@@ -174,19 +174,19 @@ function c(e) {
                         T(!1);
                     }
                 }, []),
-                G = r.useMemo(() => Math.max(...n), [n]),
-                B = r.useCallback(
+                B = r.useMemo(() => Math.max(...n), [n]),
+                G = r.useCallback(
                     () => ({
                         role: 'grid',
                         'aria-rowcount': n.length,
-                        'aria-colcount': G,
+                        'aria-colcount': B,
                         tabIndex: S && m ? -1 : 0,
                         'data-ref-id': t,
                         onKeyDown: P,
                         onFocus: k,
                         onBlur: U
                     }),
-                    [n.length, G, S, m, t, P, k, U]
+                    [n.length, B, S, m, t, P, k, U]
                 ),
                 Z = r.useCallback(
                     (e, n) => {
@@ -212,11 +212,11 @@ function c(e) {
             return r.useMemo(
                 () => ({
                     dispatch: h,
-                    getContainerProps: B,
+                    getContainerProps: G,
                     getItemProps: Z,
                     getRowProps: F
                 }),
-                [h, B, Z, F]
+                [h, G, Z, F]
             );
         })({
             navId: t,

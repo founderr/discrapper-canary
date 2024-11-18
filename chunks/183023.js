@@ -51,8 +51,8 @@ var r = n(200651),
     P = n(626135),
     k = n(768581),
     U = n(900849),
-    G = n(74538),
-    B = n(886132),
+    B = n(74538),
+    G = n(886132),
     Z = n(524444),
     F = n(981631),
     V = n(176505),
@@ -251,7 +251,7 @@ let W = () => ({
         let { node: u, sourceType: g, expressionSourceApplication: b, expressionSourceGuild: T, joinedEmojiSourceGuildRecord: y, closePopout: R, onToggleShowMoreEmojis: L, guildEmoji: x, demoMode: k = !1, nonce: U } = e,
             K = (0, l.e7)([M.default], () => M.default.getCurrentUser()),
             q = (0, l.e7)([w.Z], () => w.Z.getGuildId()),
-            Q = G.ZP.isPremium(K),
+            Q = B.ZP.isPremium(K),
             J = null != q && (q === (null == T ? void 0 : T.id) || q === (null == y ? void 0 : y.id)),
             $ = null != y,
             ee = null !== (t = null == T ? void 0 : T.isDiscoverable()) && void 0 !== t && t;
@@ -291,7 +291,7 @@ let W = () => ({
             { disableTrack: !en }
         );
         let eo = w.Z.getGuildId(),
-            el = (0, B.a)({
+            el = (0, G.a)({
                 sourceType: g,
                 expressionSourceApplication: b,
                 isPremium: Q,
@@ -321,8 +321,8 @@ let W = () => ({
                 nonce: U,
                 demoMode: k
             }),
-            ef = el.type === B.$.JOIN_GUILD,
-            e_ = el.type === B.$.GET_PREMIUM,
+            ef = el.type === G.$.JOIN_GUILD,
+            e_ = el.type === G.$.GET_PREMIUM,
             [ep, eh] = i.useState(!1),
             em = ee || ($ && !J) || null != T;
         return (0, r.jsxs)(Z.W_, {
@@ -496,7 +496,7 @@ let W = () => ({
                           )
                       ),
                 !l &&
-                    (d === B.$.GET_PREMIUM
+                    (d === G.$.GET_PREMIUM
                         ? (0, r.jsxs)(r.Fragment, {
                               children: [
                                   (0, r.jsx)(D.Z, {
@@ -517,7 +517,7 @@ let W = () => ({
                                       })
                               ]
                           })
-                        : d === B.$.JOIN_GUILD
+                        : d === G.$.JOIN_GUILD
                           ? (0, r.jsx)(c.Button, {
                                 size: c.Button.Sizes.SMALL,
                                 className: Y.ctaButton,

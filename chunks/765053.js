@@ -332,8 +332,8 @@ var m = {
             )
         };
     },
-    G = [],
-    B = function (e, t) {
+    B = [],
+    G = function (e, t) {
         var n = this;
         void 0 === t && (t = 'undefined' != typeof document),
             (this.instances = []),
@@ -343,14 +343,14 @@ var m = {
                 },
                 helmetInstances: {
                     get: function () {
-                        return n.canUseDOM ? G : n.instances;
+                        return n.canUseDOM ? B : n.instances;
                     },
                     add: function (e) {
-                        (n.canUseDOM ? G : n.instances).push(e);
+                        (n.canUseDOM ? B : n.instances).push(e);
                     },
                     remove: function (e) {
-                        var t = (n.canUseDOM ? G : n.instances).indexOf(e);
-                        (n.canUseDOM ? G : n.instances).splice(t, 1);
+                        var t = (n.canUseDOM ? B : n.instances).indexOf(e);
+                        (n.canUseDOM ? B : n.instances).splice(t, 1);
                     }
                 }
             }),
@@ -384,7 +384,7 @@ var m = {
     j = (function (e) {
         function t(n) {
             var r;
-            return ((r = e.call(this, n) || this).helmetData = new B(r.props.context, t.canUseDOM)), r;
+            return ((r = e.call(this, n) || this).helmetData = new G(r.props.context, t.canUseDOM)), r;
         }
         return (
             _(t, e),
@@ -689,7 +689,7 @@ var q = ['children'],
                     a = n.helmetData;
                 return (
                     t && (i = this.mapChildrenToProps(t, i)),
-                    !a || a instanceof B || (a = new B(a.context, a.instances)),
+                    !a || a instanceof G || (a = new G(a.context, a.instances)),
                     a
                         ? r.createElement(
                               z,

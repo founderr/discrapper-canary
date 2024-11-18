@@ -146,7 +146,7 @@ function P() {
     let e = (0, N.en)(h.Z.APP_DMS_QUICK_LAUNCHER),
         { frecentApps: t } = (0, p.f)({
             channel: void 0,
-            onlyActivityApps: !1,
+            onlyActivityApps: !0,
             allowCommandFetch: e,
             includeAuthorizedAppsAndFetch: !1
         }),
@@ -176,7 +176,7 @@ function P() {
                           className: Z.textContainer,
                           children: (0, i.jsx)('span', {
                               className: L.headerText,
-                              children: x.intl.string(x.t.SCViVl)
+                              children: x.intl.string(x.t.vayAzs)
                           })
                       }),
                       (0, i.jsx)(R, {

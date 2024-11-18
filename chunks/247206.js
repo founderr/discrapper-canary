@@ -12,7 +12,7 @@ n.d(t, {
         return W;
     },
     KP: function () {
-        return B;
+        return G;
     },
     OP: function () {
         return H;
@@ -57,7 +57,7 @@ n.d(t, {
         return K;
     },
     zj: function () {
-        return G;
+        return B;
     }
 }),
     n(789020);
@@ -162,14 +162,14 @@ function U(e) {
     if (s.isDM() || s.isGroupDM()) return null != e.author && v.Z.getFriendIDs().includes(e.author.id) ? k(i) : k(a);
     return k(r);
 }
-let G = (e) => {
+let B = (e) => {
     let t = P();
     g.Sh.updateSetting({
         ...t,
         ...e
     });
 };
-function B(e, t) {
+function G(e, t) {
     var n, r, i, a;
     if (!t) return !1;
     if (_.ZP.get('obscure_blur_effect_enabled')) return !0;
@@ -188,7 +188,7 @@ function Z(e) {
     return U(e)
         ? {
               obscuredAttachments: e.attachments.filter((e) =>
-                  B(
+                  G(
                       {
                           type: 0,
                           media: e
@@ -197,7 +197,7 @@ function Z(e) {
                   )
               ),
               obscuredEmbeds: e.embeds.filter((e) =>
-                  B(
+                  G(
                       {
                           type: 1,
                           media: e

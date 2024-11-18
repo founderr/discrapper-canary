@@ -38,12 +38,12 @@ var r = n(992420),
     P = n(916866),
     k = n(456057),
     U = n(661763),
-    G = n(649859),
-    B = n(298397),
+    B = n(649859),
+    G = n(298397),
     Z = {};
 function F(e, t, n) {
     var r;
-    let i = (0, G.qb)((r = Z) && r.__esModule ? r.default : r, '@react-aria/searchfield'),
+    let i = (0, B.qb)((r = Z) && r.__esModule ? r.default : r, '@react-aria/searchfield'),
         { isDisabled: a, isReadOnly: s, onSubmit: o = () => {}, onClear: l, type: u = 'search' } = e,
         {
             labelProps: c,
@@ -51,7 +51,7 @@ function F(e, t, n) {
             descriptionProps: f,
             errorMessageProps: _,
             ...p
-        } = (0, B.E)(
+        } = (0, G.E)(
             {
                 ...e,
                 value: t.value,

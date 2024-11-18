@@ -68,8 +68,8 @@ function T(e) {
     let P = null == (h = e).author ? I : null != h.webhook_id ? new d.Z(h.author) : null !== (v = p.default.getUser(h.author.id)) && void 0 !== v ? v : new d.Z(h.author),
         k = null == e ? void 0 : e.gift_info,
         U = e.gifting_prompt,
-        G = null != e.interaction ? u.Z.createFromServer(e.interaction) : null,
-        B = e.type === b.uaV.THREAD_STARTER_MESSAGE ? (null === (r = e.referenced_message) || void 0 === r ? void 0 : null === (n = r.author) || void 0 === n ? void 0 : n.id) : void 0;
+        B = null != e.interaction ? u.Z.createFromServer(e.interaction) : null,
+        G = e.type === b.uaV.THREAD_STARTER_MESSAGE ? (null === (r = e.referenced_message) || void 0 === r ? void 0 : null === (n = r.author) || void 0 === n ? void 0 : n.id) : void 0;
     let Z = e.content;
     return (
         e.type === b.uaV.PREMIUM_REFERRAL && ((y = g.default.isProbablyAValidSnowflake(e.content) ? e.content : void 0), (Z = '')),
@@ -79,8 +79,8 @@ function T(e) {
             ...R.toJS(),
             author: P,
             webhookId: e.webhook_id,
-            blocked: _.Z.isBlockedForMessage(e) || (null != B && _.Z.isBlocked(B)),
-            ignored: _.Z.isIgnoredForMessage(e) || (null != B && _.Z.isIgnored(B)),
+            blocked: _.Z.isBlockedForMessage(e) || (null != G && _.Z.isBlocked(G)),
+            ignored: _.Z.isIgnoredForMessage(e) || (null != G && _.Z.isIgnored(G)),
             mentionEveryone: e.mention_everyone,
             mentions: L,
             mentionRoles: x,
@@ -99,7 +99,7 @@ function T(e) {
             call: C(e.call, R.timestamp),
             messageSnapshots: D(e),
             reactions: O(null != A ? A : e.reactions, e.poll),
-            interaction: G,
+            interaction: B,
             interactionData: null != N ? N : e.interaction_data,
             interactionMetadata: e.interaction_metadata,
             roleSubscriptionData: e.role_subscription_data,

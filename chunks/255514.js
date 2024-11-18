@@ -34,8 +34,8 @@ var r = n(200651),
     P = n(739319),
     k = n(842401),
     U = n(375790),
-    G = n(981631),
-    B = n(388032),
+    B = n(981631),
+    G = n(388032),
     Z = n(980105);
 function F(e, t) {
     let { elements: n } = e;
@@ -95,8 +95,8 @@ t.Z = (e) => {
         null != z && eu(z), null != Q && ed(Q);
     }, [z, Q]);
     let em = (e) => {
-            if (e === G.evJ.INVALID_FORM_BODY) eo(B.intl.string(B.t.VjAAuL));
-            else eo(B.intl.string(B.t.h6D8V1));
+            if (e === B.evJ.INVALID_FORM_BODY) eo(G.intl.string(G.t.VjAAuL));
+            else eo(G.intl.string(G.t.h6D8V1));
         },
         eg = () =>
             K({

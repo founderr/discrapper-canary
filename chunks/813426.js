@@ -51,7 +51,7 @@ function M(e, t) {
 var P = n(771673),
     k = P.custom,
     U = F(k) ? k : null;
-function G(e, t, n) {
+function B(e, t, n) {
     var r = 'double' === (n.quoteStyle || t) ? '"' : "'";
     return r + e + r;
 }
@@ -73,7 +73,7 @@ e.exports = function e(t, r, i, o) {
                 var r = t.length - n.maxStringLength;
                 return e(E.call(t, 0, n.maxStringLength), n) + ('... ' + r + ' more character') + (r > 1 ? 's' : '');
             }
-            return G(v.call(v.call(t, /(['\\])/g, '\\$1'), /[\x00-\x1f]/g, W), 'single', n);
+            return B(v.call(v.call(t, /(['\\])/g, '\\$1'), /[\x00-\x1f]/g, W), 'single', n);
         })(t, l);
     if ('number' == typeof t) {
         if (0 === t) return 1 / 0 / t > 0 ? '0' : '-0';
@@ -85,7 +85,7 @@ e.exports = function e(t, r, i, o) {
         return b ? M(t, N) : N;
     }
     var R = void 0 === l.depth ? 5 : l.depth;
-    if ((void 0 === i && (i = 0), i >= R && R > 0 && 'object' == typeof t)) return B(t) ? '[Array]' : '[Object]';
+    if ((void 0 === i && (i = 0), i >= R && R > 0 && 'object' == typeof t)) return G(t) ? '[Array]' : '[Object]';
     var k = (function (e, t) {
         var n;
         if ('\t' === e.indent) n = '\t';
@@ -130,7 +130,7 @@ e.exports = function e(t, r, i, o) {
                 ' ' +
                 en[er].name +
                 '=' +
-                G(
+                B(
                     (function (e) {
                         return v.call(String(e), /"/g, '&quot;');
                     })(en[er].value),
@@ -139,7 +139,7 @@ e.exports = function e(t, r, i, o) {
                 );
         return (et += '>'), t.childNodes && t.childNodes.length && (et += '...'), (et += '</' + I.call(String(t.nodeName)) + '>');
     }
-    if (B(t)) {
+    if (G(t)) {
         if (0 === t.length) return '[]';
         var ei = X(t, V);
         return k &&
@@ -297,7 +297,7 @@ e.exports = function e(t, r, i, o) {
     }
     return String(t);
 };
-function B(e) {
+function G(e) {
     return '[object Array]' === H(e) && (!L || !('object' == typeof e && L in e));
 }
 function Z(e) {
@@ -355,7 +355,7 @@ function Q(e, t) {
 }
 function X(e, t) {
     var n,
-        r = B(e),
+        r = G(e),
         i = [];
     if (r) {
         i.length = e.length;

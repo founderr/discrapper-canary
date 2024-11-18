@@ -39,8 +39,8 @@ var r = n(200651),
     P = n(194811),
     k = n(373826),
     U = n(315324),
-    G = n(582123),
-    B = n(599864),
+    B = n(582123),
+    G = n(599864),
     Z = n(290274),
     F = n(228168),
     V = n(981631),
@@ -248,7 +248,7 @@ function z(e) {
                 ? null
                 : (0, r.jsx)('div', {
                       className: s()(H.actions, J),
-                      children: (0, r.jsx)(B.Z, {
+                      children: (0, r.jsx)(G.Z, {
                           channel: ea,
                           onAction: en,
                           onClose: q
@@ -256,7 +256,7 @@ function z(e) {
                   });
     return (0, r.jsx)(h.Gt, {
         value: et,
-        children: (0, r.jsx)(G.Z, {
+        children: (0, r.jsx)(B.Z, {
             user: t,
             onClose: q,
             children: (e) => {

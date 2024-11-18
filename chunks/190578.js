@@ -112,25 +112,25 @@ e.exports = function (e) {
             className: 'subst',
             match: r(/\\/, e, /[\t ]*(?:[\r\n]|\r\n)/)
         }),
-        G = (e = '') => ({
+        B = (e = '') => ({
             className: 'subst',
             label: 'interpol',
             begin: r(/\\/, e, /\(/),
             end: /\)/
         }),
-        B = (e = '') => ({
+        G = (e = '') => ({
             begin: r(e, /"""/),
             end: r(/"""/, e),
-            contains: [k(e), U(e), G(e)]
+            contains: [k(e), U(e), B(e)]
         }),
         Z = (e = '') => ({
             begin: r(e, /"/),
             end: r(/"/, e),
-            contains: [k(e), G(e)]
+            contains: [k(e), B(e)]
         }),
         F = {
             className: 'string',
-            variants: [B(), B('#'), B('##'), B('###'), Z(), Z('#'), Z('##'), Z('###')]
+            variants: [G(), G('#'), G('##'), G('###'), Z(), Z('#'), Z('##'), Z('###')]
         },
         V = { match: r(/`/, v, /`/) },
         j = [

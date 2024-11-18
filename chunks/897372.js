@@ -34,8 +34,8 @@ var r,
     P = u([].join),
     k = u((1).toString),
     U = u([].pop),
-    G = u([].push),
-    B = u(''.replace),
+    B = u([].push),
+    G = u(''.replace),
     Z = u([].shift),
     F = u(''.split),
     V = u(''.slice),
@@ -73,7 +73,7 @@ var r,
                 if (!M(10 === a ? $ : 8 === a ? J : ee, i)) return e;
                 s = D(i, a);
             }
-            G(n, s);
+            B(n, s);
         }
         for (r = 0; r < t; r++)
             if (((s = n[r]), r === t - 1)) {
@@ -223,8 +223,8 @@ var r,
     eP = {},
     ek = {},
     eU = {},
-    eG = {},
-    eB = function (e, t, n) {
+    eB = {},
+    eG = function (e, t, n) {
         var r,
             i,
             a,
@@ -233,11 +233,11 @@ var r,
             if ((i = this.parse(s))) throw O(i);
             this.searchParams = null;
         } else {
-            if ((void 0 !== n && (r = new eB(n, !0)), (i = this.parse(s, null, r)))) throw O(i);
+            if ((void 0 !== n && (r = new eG(n, !0)), (i = this.parse(s, null, r)))) throw O(i);
             (a = C(new N())).bindURL(this), (this.searchParams = a);
         }
     };
-eB.prototype = {
+eG.prototype = {
     type: 'URL',
     parse: function (e, t, n) {
         var i = t || eE,
@@ -246,7 +246,7 @@ eB.prototype = {
             o = !1,
             l = !1,
             u = !1;
-        for (e = v(e), !t && ((this.scheme = ''), (this.username = ''), (this.password = ''), (this.host = null), (this.port = null), (this.path = []), (this.query = null), (this.fragment = null), (this.cannotBeABaseURL = !1), (e = B(e, er, '')), (e = B(e, ei, '$1'))), c = h((e = B(e, ea, ''))); a <= c.length; ) {
+        for (e = v(e), !t && ((this.scheme = ''), (this.username = ''), (this.password = ''), (this.host = null), (this.port = null), (this.path = []), (this.query = null), (this.fragment = null), (this.cannotBeABaseURL = !1), (e = G(e, er, '')), (e = G(e, ei, '$1'))), c = h((e = G(e, ea, ''))); a <= c.length; ) {
             switch (((d = c[a]), i)) {
                 case eE:
                     if (d && M(z, d)) (s += j(d)), (i = ev);
@@ -264,7 +264,7 @@ eB.prototype = {
                             this.isSpecial() && eh[this.scheme] === this.port && (this.port = null);
                             return;
                         }
-                        (s = ''), 'file' === this.scheme ? (i = eL) : this.isSpecial() && n && n.scheme === this.scheme ? (i = eI) : this.isSpecial() ? (i = eA) : '/' === c[a + 1] ? ((i = eS), a++) : ((this.cannotBeABaseURL = !0), G(this.path, ''), (i = ek));
+                        (s = ''), 'file' === this.scheme ? (i = eL) : this.isSpecial() && n && n.scheme === this.scheme ? (i = eI) : this.isSpecial() ? (i = eA) : '/' === c[a + 1] ? ((i = eS), a++) : ((this.cannotBeABaseURL = !0), B(this.path, ''), (i = ek));
                     } else {
                         if (t) return Y;
                         (s = ''), (i = eb), (a = 0);
@@ -274,7 +274,7 @@ eB.prototype = {
                 case eb:
                     if (!n || (n.cannotBeABaseURL && '#' !== d)) return Y;
                     if (n.cannotBeABaseURL && '#' === d) {
-                        (this.scheme = n.scheme), (this.path = m(n.path)), (this.query = n.query), (this.fragment = ''), (this.cannotBeABaseURL = !0), (i = eG);
+                        (this.scheme = n.scheme), (this.path = m(n.path)), (this.query = n.query), (this.fragment = ''), (this.cannotBeABaseURL = !0), (i = eB);
                         break;
                     }
                     i = 'file' === n.scheme ? eL : eT;
@@ -297,7 +297,7 @@ eB.prototype = {
                     if (((this.scheme = n.scheme), d === r)) (this.username = n.username), (this.password = n.password), (this.host = n.host), (this.port = n.port), (this.path = m(n.path)), (this.query = n.query);
                     else if ('/' === d || ('\\' === d && this.isSpecial())) i = ey;
                     else if ('?' === d) (this.username = n.username), (this.password = n.password), (this.host = n.host), (this.port = n.port), (this.path = m(n.path)), (this.query = ''), (i = eU);
-                    else if ('#' === d) (this.username = n.username), (this.password = n.password), (this.host = n.host), (this.port = n.port), (this.path = m(n.path)), (this.query = n.query), (this.fragment = ''), (i = eG);
+                    else if ('#' === d) (this.username = n.username), (this.password = n.password), (this.host = n.host), (this.port = n.port), (this.path = m(n.path)), (this.query = n.query), (this.fragment = ''), (i = eB);
                     else {
                         (this.username = n.username), (this.password = n.password), (this.host = n.host), (this.port = n.port), (this.path = m(n.path)), this.path.length--, (i = eP);
                         continue;
@@ -384,7 +384,7 @@ eB.prototype = {
                                 (this.host = n.host), (this.path = m(n.path)), (this.query = ''), (i = eU);
                                 break;
                             case '#':
-                                (this.host = n.host), (this.path = m(n.path)), (this.query = n.query), (this.fragment = ''), (i = eG);
+                                (this.host = n.host), (this.path = m(n.path)), (this.query = n.query), (this.fragment = ''), (i = eB);
                                 break;
                             default:
                                 !eg(P(m(c, a), '')) && ((this.host = n.host), (this.path = m(n.path)), this.shortenPath()), (i = eP);
@@ -400,7 +400,7 @@ eB.prototype = {
                         i = ew;
                         break;
                     }
-                    n && 'file' === n.scheme && !eg(P(m(c, a), '')) && (em(n.path[0], !0) ? G(this.path, n.path[0]) : (this.host = n.host)), (i = eP);
+                    n && 'file' === n.scheme && !eg(P(m(c, a), '')) && (em(n.path[0], !0) ? B(this.path, n.path[0]) : (this.host = n.host)), (i = eP);
                     continue;
                 case ew:
                     if (d === r || '/' === d || '\\' === d || '?' === d || '#' === d) {
@@ -423,27 +423,27 @@ eB.prototype = {
                     } else if (t || '?' !== d) {
                         if (t || '#' !== d) {
                             if (d !== r && ((i = eP), '/' !== d)) continue;
-                        } else (this.fragment = ''), (i = eG);
+                        } else (this.fragment = ''), (i = eB);
                     } else (this.query = ''), (i = eU);
                     break;
                 case eP:
                     if (d === r || '/' === d || ('\\' === d && this.isSpecial()) || (!t && ('?' === d || '#' === d))) {
-                        if ('..' === (g = j((g = s))) || '%2e.' === g || '.%2e' === g || '%2e%2e' === g) this.shortenPath(), '/' !== d && !('\\' === d && this.isSpecial()) && G(this.path, '');
+                        if ('..' === (g = j((g = s))) || '%2e.' === g || '.%2e' === g || '%2e%2e' === g) this.shortenPath(), '/' !== d && !('\\' === d && this.isSpecial()) && B(this.path, '');
                         else {
-                            if ('.' === (E = s) || '%2e' === j(E)) '/' !== d && !('\\' === d && this.isSpecial()) && G(this.path, '');
-                            else 'file' === this.scheme && !this.path.length && em(s) && (this.host && (this.host = ''), (s = w(s, 0) + ':')), G(this.path, s);
+                            if ('.' === (E = s) || '%2e' === j(E)) '/' !== d && !('\\' === d && this.isSpecial()) && B(this.path, '');
+                            else 'file' === this.scheme && !this.path.length && em(s) && (this.host && (this.host = ''), (s = w(s, 0) + ':')), B(this.path, s);
                         }
                         if (((s = ''), 'file' === this.scheme && (d === r || '?' === d || '#' === d))) for (; this.path.length > 1 && '' === this.path[0]; ) Z(this.path);
-                        '?' === d ? ((this.query = ''), (i = eU)) : '#' === d && ((this.fragment = ''), (i = eG));
+                        '?' === d ? ((this.query = ''), (i = eU)) : '#' === d && ((this.fragment = ''), (i = eB));
                     } else s += ep(d, ef);
                     break;
                 case ek:
-                    '?' === d ? ((this.query = ''), (i = eU)) : '#' === d ? ((this.fragment = ''), (i = eG)) : d !== r && (this.path[0] += ep(d, ec));
+                    '?' === d ? ((this.query = ''), (i = eU)) : '#' === d ? ((this.fragment = ''), (i = eB)) : d !== r && (this.path[0] += ep(d, ec));
                     break;
                 case eU:
-                    t || '#' !== d ? d !== r && ("'" === d && this.isSpecial() ? (this.query += '%27') : '#' === d ? (this.query += '%23') : (this.query += ep(d, ec))) : ((this.fragment = ''), (i = eG));
+                    t || '#' !== d ? d !== r && ("'" === d && this.isSpecial() ? (this.query += '%27') : '#' === d ? (this.query += '%23') : (this.query += ep(d, ec))) : ((this.fragment = ''), (i = eB));
                     break;
-                case eG:
+                case eB:
                     d !== r && (this.fragment += ep(d, ed));
             }
             a++;
@@ -579,7 +579,7 @@ eB.prototype = {
             this.fragment = null;
             return;
         }
-        '#' === w(e, 0) && (e = V(e, 1)), (this.fragment = ''), this.parse(e, eG);
+        '#' === w(e, 0) && (e = V(e, 1)), (this.fragment = ''), this.parse(e, eB);
     },
     update: function () {
         this.query = this.searchParams.serialize() || null;
@@ -588,7 +588,7 @@ eB.prototype = {
 var eZ = function (e) {
         var t = f(this, eF),
             n = I(arguments.length, 1) > 1 ? arguments[1] : void 0,
-            r = y(t, new eB(e, !1, n));
+            r = y(t, new eG(e, !1, n));
         !a && ((t.href = r.serialize()), (t.origin = r.getOrigin()), (t.protocol = r.getProtocol()), (t.username = r.getUsername()), (t.password = r.getPassword()), (t.host = r.getHost()), (t.hostname = r.getHostname()), (t.port = r.getPort()), (t.pathname = r.getPathname()), (t.search = r.getSearch()), (t.searchParams = r.getSearchParams()), (t.hash = r.getHash()));
     },
     eF = eZ.prototype,

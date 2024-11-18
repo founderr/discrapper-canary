@@ -44,8 +44,8 @@ function M(e, t, n) {
 let P = g.Z.get(w.ABu.SPOTIFY),
     k = 'hm://pusher/v1/connections/',
     U = 30 * O.Z.Millis.SECOND,
-    G = 30 * O.Z.Millis.SECOND,
-    B = 5 * O.Z.Millis.MINUTE,
+    B = 30 * O.Z.Millis.SECOND,
+    G = 5 * O.Z.Millis.MINUTE,
     Z = 5 * O.Z.Millis.SECOND,
     F = 1.5 * O.Z.Millis.SECOND,
     V = 1 * O.Z.Millis.MINUTE,
@@ -284,7 +284,7 @@ function eh(e) {
                 checkSoundSharing: !0,
                 checkSoundboardSounds: !1
             });
-        t && n && null != r ? (K.start(G, ep, !1), z.stop()) : z.start(100, () => K.stop(), !1);
+        t && n && null != r ? (K.start(B, ep, !1), z.stop()) : z.start(100, () => K.stop(), !1);
     }
     return !1;
 }
@@ -391,7 +391,7 @@ class eE extends (o = f.ZP.Store) {
                         t = ea(e);
                     if (null == t)
                         return (
-                            q.start(B, () => {
+                            q.start(G, () => {
                                 if (null != i && i.userId === e) (0, E.Z)();
                             }),
                             !1
@@ -521,7 +521,7 @@ let ev = new eE(h.Z, {
                 null == e ? ($[t].push(l), (d = !0)) : !(0, _.Z)(e, l) && (Object.assign(e, l), (d = !0)), ec(t, l.id);
             } else ($[t] = [l]), (d = !0);
         }
-        n ? null == en || en.start(G, ep) : ((s = null), null == en || en.stop());
+        n ? null == en || en.start(B, ep) : ((s = null), null == en || en.stop());
         let f = S.Z.getAccount(t, w.ABu.SPOTIFY);
         if (null == f) return d;
         let p = ee[t],
@@ -628,7 +628,7 @@ let ev = new eE(h.Z, {
         if ((null == t ? void 0 : t.desktopSettings) != null) {
             null == en || en.stop();
             let { sourceId: e, sound: n } = null == t ? void 0 : t.desktopSettings;
-            null != e && b.ZP.getObservedAppNameForWindow(e) === P.name && n ? (en = new p.Xp()).start(G, ep) : (null == en || en.stop(), (en = null));
+            null != e && b.ZP.getObservedAppNameForWindow(e) === P.name && n ? (en = new p.Xp()).start(B, ep) : (null == en || en.stop(), (en = null));
         } else null == t && (null == en || en.stop(), (en = null));
     }
 });

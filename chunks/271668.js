@@ -41,7 +41,7 @@ t.Z = i.forwardRef(function (e, t) {
         l = i.useRef(0),
         [P, k] = i.useState(0),
         U = i.useRef(null),
-        [G, B] = i.useState(!1),
+        [B, G] = i.useState(!1),
         Z = m.Xn.useStore((e) => e.activeCategoryIndex);
     i.useEffect(() => {
         (0, d.yw)(R.rMx.APPLICATION_COMMAND_BROWSER_OPENED);
@@ -94,8 +94,8 @@ t.Z = i.forwardRef(function (e, t) {
     let X = i.useCallback((e) => (e !== V.length - 1 || H ? 16 : 0), [V.length, H]),
         J = j.map((e) => e.data.length);
     i.useEffect(() => {
-        null != U.current && G && null != P && U.current.scrollRowIntoView(P);
-    }, [G, P]),
+        null != U.current && B && null != P && U.current.scrollRowIntoView(P);
+    }, [B, P]),
         i.useLayoutEffect(() => {
             if (null != W) {
                 var e;
@@ -145,7 +145,7 @@ t.Z = i.forwardRef(function (e, t) {
                 let t = H ? 7 : 0,
                     n = Y.length + t,
                     r = null == P ? 0 : P + e;
-                return r >= n ? (r = n - 1) : r < 0 && (r = 0), k(r), B(!0), !0;
+                return r >= n ? (r = n - 1) : r < 0 && (r = 0), k(r), G(!0), !0;
             }
         }),
         [Y.length, j, H, F, ee, P]
@@ -220,7 +220,7 @@ t.Z = i.forwardRef(function (e, t) {
                         section: l,
                         onClick: () => ee(s, l, (0, T.tI)(a.section)),
                         onHover: () => {
-                            k(null), B(!1);
+                            k(null), G(!1);
                         }
                     },
                     o

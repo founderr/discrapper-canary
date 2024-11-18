@@ -53,15 +53,15 @@ function A(e) {
         P = null !== (c = E.find((e) => e.ownerId === (null == g ? void 0 : g.id))) && void 0 !== c ? c : null,
         k = y(h, g, E),
         U = (0, f.Z)(P, D),
-        G = (0, d.Z)(P, D, I.VqG),
-        B = (0, a.e7)([m.Z], () => m.Z.supports(S.AN.SOUNDSHARE)),
+        B = (0, d.Z)(P, D, I.VqG),
+        G = (0, a.e7)([m.Z], () => m.Z.supports(S.AN.SOUNDSHARE)),
         Z = (0, a.e7)([m.Z], () => m.Z.supportsScreenSoundshare()),
         F = (null == x ? void 0 : x.desktopSource) != null,
         V = null == x ? void 0 : null === (n = x.desktopSource) || void 0 === n ? void 0 : null === (t = n.id) || void 0 === t ? void 0 : t.startsWith('screen'),
         j = b.Z.useExperiment(
             { location: 'ManageStreamsMenu' },
             {
-                disable: !(F && B && (!V || Z)),
+                disable: !(F && G && (!V || Z)),
                 autoTrackExposure: !0
             }
         ).enabled,
@@ -115,7 +115,7 @@ function A(e) {
                                     children: U
                                 })
                               : null,
-                          N ? G : null,
+                          N ? B : null,
                           j
                               ? (0, r.jsx)(s.MenuCheckboxItem, {
                                     id: 'stream-settings-audio-enable',

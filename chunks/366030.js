@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return G;
+        return B;
     }
 }),
     n(536091),
@@ -225,7 +225,7 @@ function U(e) {
         })
     );
 }
-function G(e) {
+function B(e) {
     let { userId: t, messageId: n, guild: a, channel: o } = e,
         { analyticsLocations: l } = (0, E.ZP)(),
         c = (0, N.Z)(a, t, o.id, !0),
