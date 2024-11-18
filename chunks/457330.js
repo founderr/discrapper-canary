@@ -18,7 +18,8 @@ function h(e, t) {
         body: {
             ...t,
             insecure: n,
-            friend_sync: _.BFP.has(e)
+            friend_sync: _.BFP.has(e),
+            ...(o.g.getCurrentConfig({ location: 'ConnectedAccountsActionCreators.callback' }).enabled ? { session_id: u.default.getSessionId() } : {})
         },
         oldFormErrors: !0,
         rejectWithError: !1
