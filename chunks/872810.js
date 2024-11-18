@@ -147,7 +147,8 @@ async function w(e, t, n) {
         let e = await s.tn.get({
             url: T.ANM.STREAM_PREVIEW(r),
             query: { version: Date.now() },
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         });
         o.Z.dispatch({
             type: 'STREAM_PREVIEW_FETCH_SUCCESS',
@@ -169,7 +170,8 @@ async function M(e) {
         await I.Z.post({
             url: T.ANM.STREAM_NOTIFY(e),
             oldFormErrors: !0,
-            trackedActionData: { event: a.NetworkActionNames.STREAM_NOTIFY }
+            trackedActionData: { event: a.NetworkActionNames.STREAM_NOTIFY },
+            rejectWithError: !1
         });
     } catch (e) {}
 }
@@ -184,7 +186,8 @@ function k(e, t) {
     s.tn.patch({
         url: T.ANM.STREAM(e),
         body: { region: t },
-        oldFormErrors: !0
+        oldFormErrors: !0,
+        rejectWithError: !1
     });
 }
 function U() {

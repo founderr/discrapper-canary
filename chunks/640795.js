@@ -32,7 +32,8 @@ async function _() {
                 let a = (
                     await i.tn.get({
                         url: c,
-                        query: { revision: n }
+                        query: { revision: n },
+                        rejectWithError: !1
                     })
                 ).body;
                 if (0 === a.ADDED.length && 0 === a.REMOVED.length) {
@@ -58,7 +59,13 @@ async function _() {
                     d.verbose('Slow network detected, not downloading full list');
                     return;
                 }
-                d.verbose('Downloading the full bad domains file'), (e = (await i.tn.get({ url: 'https://cdn.discordapp.com/bad-domains/updated_hashes.json' })).body);
+                d.verbose('Downloading the full bad domains file'),
+                    (e = (
+                        await i.tn.get({
+                            url: 'https://cdn.discordapp.com/bad-domains/updated_hashes.json',
+                            rejectWithError: !1
+                        })
+                    ).body);
             }
             d.verbose('Blocked domains list length: '.concat(e.length, ' after update')),
                 r.Z.time('\uD83D\uDCBE', 'Save Blocked Domain List', () =>

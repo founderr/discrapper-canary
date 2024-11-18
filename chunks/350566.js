@@ -18,7 +18,8 @@ t.Z = {
                         name: t,
                         icon: n
                     },
-                    oldFormErrors: !0
+                    oldFormErrors: !0,
+                    rejectWithError: !1
                 })
                 .then(
                     (t) => {

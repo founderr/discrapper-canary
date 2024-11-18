@@ -59,7 +59,8 @@ function p(e, t, n) {
                         user_banned: h
                     });
                 }
-            }
+            },
+            rejectWithError: !1
         })
             .then(
                 (r) => {

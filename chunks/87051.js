@@ -95,7 +95,8 @@ t.Z = {
             i = (0, l.mB)(n, e, t);
         await r.tn.patch({
             url: d.ANM.ACCOUNT_NOTIFICATION_SETTINGS,
-            body: { flags: i }
+            body: { flags: i },
+            rejectWithError: !1
         }),
             await a.Z.dispatch({
                 type: 'NOTIFICATION_SETTINGS_UPDATE',

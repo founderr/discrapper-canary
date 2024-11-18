@@ -26,7 +26,8 @@ function o(e) {
             .get({
                 url: s.ANM.ENTITLEMENTS_FOR_APPLICATION(e),
                 oldFormErrors: !0,
-                query: { exclude_consumed: t }
+                query: { exclude_consumed: t },
+                rejectWithError: !1
             })
             .then(
                 (t) => (
@@ -56,7 +57,8 @@ async function l(e) {
                 with_sku: t,
                 with_application: n,
                 entitlement_type: a
-            }
+            },
+            rejectWithError: !1
         });
         i.Z.dispatch({
             type: 'ENTITLEMENTS_FETCH_FOR_USER_SUCCESS',
@@ -69,7 +71,10 @@ async function l(e) {
 async function u() {
     i.Z.dispatch({ type: 'ENTITLEMENTS_GIFTABLE_FETCH' });
     try {
-        let e = await (0, a.Kb)({ url: s.ANM.ENTITLEMENTS_GIFTABLE });
+        let e = await (0, a.Kb)({
+            url: s.ANM.ENTITLEMENTS_GIFTABLE,
+            rejectWithError: !1
+        });
         i.Z.dispatch({
             type: 'ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS',
             entitlements: e.body

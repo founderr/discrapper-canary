@@ -20,7 +20,8 @@ t.Z = {
             r.tn
                 .get({
                     url: f.ANM.CALL(e),
-                    oldFormErrors: !0
+                    oldFormErrors: !0,
+                    rejectWithError: !1
                 })
                 .then(
                     (e) => {
@@ -53,7 +54,8 @@ t.Z = {
             r.tn.post({
                 url: f.ANM.CALL_RING(e),
                 body: { recipients: t },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             });
             return;
         }
@@ -67,6 +69,7 @@ t.Z = {
         r.tn.post({
             url: f.ANM.CALL_STOP_RINGING(e),
             body: { recipients: t },
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         })
 };

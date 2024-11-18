@@ -46,7 +46,8 @@ class s extends a.Z {
         let s = {
                 url: this._url,
                 body: a,
-                signal: e
+                signal: e,
+                rejectWithError: !1
             },
             d = 'POST' === this._method ? A.tn.post : A.tn.patch;
         try {

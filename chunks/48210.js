@@ -11,7 +11,8 @@ t.Z = {
                     days: t,
                     include_roles: n
                 },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
         ).body.pruned;
     },
@@ -23,6 +24,7 @@ t.Z = {
                 compute_prune_count: !1,
                 include_roles: n
             },
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         })
 };

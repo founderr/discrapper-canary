@@ -42,7 +42,8 @@ async function l(e, t) {
                     url: n,
                     retries: 3 - u - 1,
                     signal: t.signal,
-                    onRequestCreated: () => u++
+                    onRequestCreated: () => u++,
+                    rejectWithError: !1
                 })
                 .then(
                     (t) =>

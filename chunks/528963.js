@@ -6,7 +6,8 @@ t.Z = {
         i.tn.post({
             url: l.ANM.CHANNEL_FOLLOWERS(t),
             body: { webhook_channel_id: e },
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         }),
     async fetchChannelFollowerStats(e) {
         r.Z.dispatch({ type: 'CHANNEL_FOLLOWER_STATS_FETCH_START' });
@@ -14,7 +15,8 @@ t.Z = {
             let t = await i.tn.get({
                 url: l.ANM.CHANNEL_FOLLOWER_STATS(e),
                 body: { channel_id: e },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             });
             r.Z.dispatch({
                 type: 'CHANNEL_FOLLOWER_STATS_FETCH_SUCCESS',

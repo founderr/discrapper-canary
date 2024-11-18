@@ -32,7 +32,8 @@ async function c(e) {
     let t = (
         await r.tn.get({
             url: u.ANM.APPLIED_GUILD_BOOSTS_FOR_GUILD(e),
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         })
     ).body.map((e) => s.Z.createFromServer(e));
     return (
@@ -50,7 +51,8 @@ async function d() {
             await r.tn.get({
                 url: u.ANM.USER_APPLIED_GUILD_BOOSTS,
                 oldFormErrors: !0,
-                query: { paused: e }
+                query: { paused: e },
+                rejectWithError: !1
             })
         ).body.map((e) => s.Z.createFromServer(e));
     return (
@@ -65,7 +67,8 @@ async function f() {
     let e = (
         await r.tn.get({
             url: u.ANM.USER_GUILD_BOOST_SLOTS,
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         })
     ).body.map((e) => o.Z.createFromServer(e, l.ZP.getSubscriptionById(e.subscription_id)));
     return (
@@ -82,7 +85,8 @@ async function _(e, t) {
         let n = await r.tn.put({
                 url: u.ANM.APPLIED_GUILD_BOOSTS_FOR_GUILD(e),
                 body: { user_premium_guild_subscription_slot_ids: t },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             }),
             a = Array.isArray(n.body) ? n.body.map(s.Z.createFromServer) : [s.Z.createFromServer(n.body)];
         return (
@@ -109,7 +113,8 @@ async function p(e, t) {
     try {
         await r.tn.del({
             url: u.ANM.APPLIED_GUILD_BOOST(e, t),
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         }),
             f();
     } catch (t) {
@@ -130,7 +135,8 @@ async function p(e, t) {
 async function h(e) {
     let t = await r.tn.post({
             url: u.ANM.USER_GUILD_BOOST_SLOT_CANCEL(e),
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         }),
         n = o.Z.createFromServer(t.body, l.ZP.getSubscriptionById(t.body.subscription_id));
     return (
@@ -144,7 +150,8 @@ async function h(e) {
 async function m(e) {
     let t = await r.tn.post({
             url: u.ANM.USER_GUILD_BOOST_SLOT_UNCANCEL(e),
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         }),
         n = o.Z.createFromServer(t.body, l.ZP.getSubscriptionById(t.body.subscription_id));
     return (

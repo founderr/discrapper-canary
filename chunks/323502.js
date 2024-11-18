@@ -10,7 +10,8 @@ function s(e) {
     return i.tn
         .get({
             url: l.ANM.GUILD_TOP_READ_CHANNELS(e),
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         })
         .then((t) => {
             let { body: n } = t;

@@ -139,7 +139,8 @@ async function eR(e) {
         _.tn.post({
             url: er.ANM.BULK_ACK,
             body: { read_states: t },
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         })
     ),
         await (0, p.GR)(1000),
@@ -440,7 +441,8 @@ class eL {
                 eO(() =>
                     _.tn.post({
                         url: er.ANM.PINS_ACK(this.channelId),
-                        oldFormErrors: !0
+                        oldFormErrors: !0,
+                        rejectWithError: !1
                     })
                 );
         }
@@ -518,7 +520,8 @@ class eL {
                     last_viewed: this.lastViewed,
                     flags: o
                 },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
         ).then((e) => {
             null != e &&
@@ -561,7 +564,8 @@ class eL {
                     _.tn.post({
                         url: e,
                         body: {},
-                        oldFormErrors: !0
+                        oldFormErrors: !0,
+                        rejectWithError: !1
                     })
                 );
         }
@@ -591,7 +595,8 @@ class eL {
                         version: 2,
                         read_state_type: this.type
                     },
-                    oldFormErrors: !0
+                    oldFormErrors: !0,
+                    rejectWithError: !1
                 }),
             null === (e = eL._readStates[this.type]) || void 0 === e || delete e[this.channelId],
             eL._mentionChannels.delete(this.channelId);

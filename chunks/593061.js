@@ -19,7 +19,8 @@ async function m(e) {
             await r.tn.get({
                 url: o.ANM.BILLING_INVOICE_BREAKDOWN,
                 query: { payment_id: e },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
         ).body;
     } catch (e) {

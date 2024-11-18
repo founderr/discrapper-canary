@@ -26,7 +26,8 @@ function a(e, t) {
             end: n.toISOString(),
             interval: 2
         },
-        oldFormErrors: !0
+        oldFormErrors: !0,
+        rejectWithError: !1
     });
 }
 function o(e) {
@@ -93,15 +94,20 @@ function d(e) {
     );
 }
 function u(e) {
-    return i.tn.get({ url: l.ANM.GUILD_ANALYTICS_MEMBER_INSIGHTS(e) }).then(
-        (t) => {
-            r.Z.dispatch({
-                type: 'GUILD_ANALYTICS_MEMBER_INSIGHTS_FETCH_SUCCESS',
-                guildId: e,
-                hasAccessRate: t.body.has_access_rate,
-                accessRate: t.body.access_rate
-            });
-        },
-        () => {}
-    );
+    return i.tn
+        .get({
+            url: l.ANM.GUILD_ANALYTICS_MEMBER_INSIGHTS(e),
+            rejectWithError: !1
+        })
+        .then(
+            (t) => {
+                r.Z.dispatch({
+                    type: 'GUILD_ANALYTICS_MEMBER_INSIGHTS_FETCH_SUCCESS',
+                    guildId: e,
+                    hasAccessRate: t.body.has_access_rate,
+                    accessRate: t.body.access_rate
+                });
+            },
+            () => {}
+        );
 }

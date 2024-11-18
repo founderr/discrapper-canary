@@ -32,7 +32,8 @@ let E = async (e, t) => {
                     with_guild: s,
                     invite_code: null != n ? (0, c.jX)(n) : void 0
                 },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             });
             if (null == t.body) throw t;
             let { body: a } = t;
@@ -60,7 +61,8 @@ let E = async (e, t) => {
         let { body: n } = await r.tn.patch({
             url: m.ANM.GUILD_MEMBER_VERIFICATION(e),
             body: { form_fields: t },
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         });
         i.Z.dispatch({
             type: 'MEMBER_VERIFICATION_FORM_UPDATE',
@@ -76,7 +78,8 @@ let E = async (e, t) => {
         let { body: n } = await r.tn.patch({
             url: m.ANM.GUILD_MEMBER_VERIFICATION(e),
             body: { description: t },
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         });
         i.Z.dispatch({
             type: 'MEMBER_VERIFICATION_FORM_UPDATE',
@@ -92,7 +95,8 @@ let E = async (e, t) => {
         await r.tn.patch({
             url: m.ANM.GUILD_MEMBER_VERIFICATION(e),
             body: { enabled: t },
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         });
     },
     S = -1,
@@ -108,7 +112,8 @@ let E = async (e, t) => {
                 body: {
                     version: t.version,
                     form_fields: t.formFields
-                }
+                },
+                rejectWithError: !1
             });
             return (
                 i.Z.dispatch({

@@ -24,14 +24,16 @@ var r = n(544891),
 function f(e) {
     r.tn.post({
         url: d.ANM.INITIATE_CHANNEL_PROMPTS,
-        body: { guild_ids: e }
+        body: { guild_ids: e },
+        rejectWithError: !1
     });
 }
 function _(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d.uaV.GUILD_DEADCHAT_REVIVE_PROMPT;
     r.tn.post({
         url: d.ANM.FORCE_SEND_PROMPT(e),
-        body: { prompt_type: t }
+        body: { prompt_type: t },
+        rejectWithError: !1
     });
 }
 async function p(e, t, n) {
@@ -43,12 +45,16 @@ async function p(e, t, n) {
                 channel_id: t,
                 message_id: n
             }
-        }
+        },
+        rejectWithError: !1
     }),
         m(t);
 }
 async function h(e) {
-    let t = await r.tn.patch({ url: d.ANM.UPDATE_GAMING_STATS(e.channel_id, e.id) });
+    let t = await r.tn.patch({
+        url: d.ANM.UPDATE_GAMING_STATS(e.channel_id, e.id),
+        rejectWithError: !1
+    });
     if (null != t.text && '' !== t.text) {
         let n = o.Z.getChannel(e.channel_id);
         null != n &&

@@ -25,7 +25,8 @@ function l(e, t) {
         r.tn.patch({
             url: o.ANM.SET_GUILD_MEMBER(e),
             body: t,
-            oldFormErrors: !!n || void 0
+            oldFormErrors: !!n || void 0,
+            rejectWithError: !1
         })
     );
 }

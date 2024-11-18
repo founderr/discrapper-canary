@@ -364,7 +364,8 @@ let eg = {
                         around: n
                     },
                     retries: 2,
-                    oldFormErrors: !0
+                    oldFormErrors: !0,
+                    rejectWithError: !1
                 })
                 .then((e) => {
                     if (e.body.length > 0) return (0, R.e5)(e.body[0]);
@@ -410,7 +411,8 @@ let eg = {
                             preload: c
                         },
                         retries: 2,
-                        oldFormErrors: !0
+                        oldFormErrors: !0,
+                        rejectWithError: !1
                     })
                     .then(
                         (e) => (
@@ -688,7 +690,8 @@ let eg = {
                         allowed_mentions: a,
                         message_reference: r
                     },
-                    oldFormErrors: !0
+                    oldFormErrors: !0,
+                    rejectWithError: !1
                 })
                 .then(
                     (n) => (
@@ -1058,7 +1061,8 @@ let eg = {
                 i.tn.patch({
                     url: el.ANM.MESSAGE(e, t),
                     body: { flags: el.iLy.SUPPRESS_EMBEDS },
-                    oldFormErrors: !0
+                    oldFormErrors: !0,
+                    rejectWithError: !1
                 });
         },
         async patchMessageAttachments(e, t, n) {
@@ -1066,7 +1070,8 @@ let eg = {
                 i.tn.patch({
                     url: el.ANM.MESSAGE(e, t),
                     body: { attachments: n },
-                    oldFormErrors: !0
+                    oldFormErrors: !0,
+                    rejectWithError: !1
                 });
         },
         async deleteMessage(e, t) {
@@ -1086,7 +1091,8 @@ let eg = {
                   i.tn
                       .del({
                           url: el.ANM.MESSAGE(e, t),
-                          oldFormErrors: !0
+                          oldFormErrors: !0,
+                          rejectWithError: !1
                       })
                       .then(() => {
                           r();
@@ -1114,7 +1120,8 @@ let eg = {
                 .post({
                     url: el.ANM.MESSAGE_CROSSPOST(e, t),
                     oldFormErrors: !0,
-                    failImmediatelyWhenRateLimited: !0
+                    failImmediatelyWhenRateLimited: !0,
+                    rejectWithError: !1
                 })
                 .catch((e) => {
                     let t;

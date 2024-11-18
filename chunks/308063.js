@@ -1,6 +1,6 @@
 var i = n(392711),
-    l = n.n(i),
-    r = n(544891),
+    r = n.n(i),
+    l = n(544891),
     T = n(570140),
     I = n(981631);
 let o = ['Spidey Bot', 'Captain Hook'];
@@ -10,10 +10,11 @@ t.Z = {
             type: 'WEBHOOKS_FETCHING',
             guildId: e
         }),
-            r.tn
+            l.tn
                 .get({
                     url: I.ANM.GUILD_WEBHOOKS(e),
-                    oldFormErrors: !0
+                    oldFormErrors: !0,
+                    rejectWithError: !1
                 })
                 .then((t) => {
                     let { body: n } = t;
@@ -38,10 +39,11 @@ t.Z = {
             guildId: e,
             channelId: t
         }),
-            r.tn
+            l.tn
                 .get({
                     url: I.ANM.CHANNEL_WEBHOOKS(t),
-                    oldFormErrors: !0
+                    oldFormErrors: !0,
+                    rejectWithError: !1
                 })
                 .then((n) => {
                     let { body: i } = n;
@@ -54,12 +56,13 @@ t.Z = {
                 });
     },
     create: (e, t, n) => (
-        null == n && (n = o[l().random(0, o.length - 1)]),
-        r.tn
+        null == n && (n = o[r().random(0, o.length - 1)]),
+        l.tn
             .post({
                 url: I.ANM.CHANNEL_WEBHOOKS(t),
                 body: { name: n },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then((t) => {
                 let { body: n } = t;
@@ -74,10 +77,11 @@ t.Z = {
             })
     ),
     delete: (e, t) =>
-        r.tn
+        l.tn
             .del({
                 url: I.ANM.WEBHOOK(t),
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then(() => {
                 T.Z.dispatch({
@@ -87,11 +91,12 @@ t.Z = {
                 });
             }),
     update: (e, t, n) =>
-        r.tn
+        l.tn
             .patch({
                 url: I.ANM.WEBHOOK(t),
                 body: n,
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then((t) => {
                 let { body: n } = t;

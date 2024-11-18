@@ -20,7 +20,8 @@ async function o(e) {
     let t = a.ANM.APPLICATION_DISCLOSURES(e),
         n = await r.tn.get({
             url: t,
-            retries: 3
+            retries: 3,
+            rejectWithError: !1
         }),
         i = n.body.disclosures,
         s = n.body.acked_disclosures;
@@ -34,7 +35,8 @@ async function l(e, t) {
     let n = a.ANM.APPLICATION_DISCLOSURES(e);
     await r.tn.post({
         url: n,
-        body: { disclosures: t }
+        body: { disclosures: t },
+        rejectWithError: !1
     });
 }
 function u(e) {

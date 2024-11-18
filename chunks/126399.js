@@ -2,8 +2,8 @@ n(47120);
 var i = n(544891),
     r = n(570140),
     s = n(893776),
-    a = n(899742),
-    l = n(743142),
+    l = n(899742),
+    a = n(743142),
     o = n(117240),
     c = n(626135),
     u = n(317770),
@@ -14,7 +14,7 @@ function h(e, t) {
         handoff_source: t
     });
 }
-class g extends u.Z {
+class p extends u.Z {
     _initialize() {
         r.Z.subscribe('BROWSER_HANDOFF_END', this.handleEnd), r.Z.subscribe('BROWSER_HANDOFF_FROM_APP', this.handleHandoff);
     }
@@ -30,15 +30,16 @@ class g extends u.Z {
                       body: {
                           key: t,
                           handoff_token: n
-                      }
+                      },
+                      rejectWithError: !1
                   })
                   .then(
                       (e) => {
                           let { body: t } = e;
-                          (0, a.Vb)(t.user), s.Z.loginToken(t.token, !1), h(!0, o);
+                          (0, l.Vb)(t.user), s.Z.loginToken(t.token, !1), h(!0, o);
                       },
                       (e) => {
-                          if ((null != r && h(!1, o), s.Z.setFingerprint(r), (0, a.lx)(), o === l.F.ROLE_SUBSCRIPTION)) {
+                          if ((null != r && h(!1, o), s.Z.setFingerprint(r), (0, l.lx)(), o === a.F.ROLE_SUBSCRIPTION)) {
                               var t;
                               c.default.track(d.rMx.MOBILE_WEB_HANDOFF_FAILURE, {
                                   reason: null !== (t = e.message) && void 0 !== t ? t : e.text,
@@ -48,8 +49,8 @@ class g extends u.Z {
                       }
                   )
             : null != r
-              ? (s.Z.setFingerprint(r), h(!1, o), (0, a.lx)())
-              : (s.Z.setFingerprint(r), (0, a.by)());
+              ? (s.Z.setFingerprint(r), h(!1, o), (0, l.lx)())
+              : (s.Z.setFingerprint(r), (0, l.by)());
     }
     constructor(...e) {
         var t, n, i;
@@ -66,7 +67,7 @@ class g extends u.Z {
                           fingerprint: n,
                           handoffSource: void 0
                       })
-                    : (s.Z.setFingerprint(null), (0, a.by)());
+                    : (s.Z.setFingerprint(null), (0, l.by)());
             }),
             n in t
                 ? Object.defineProperty(t, n, {
@@ -78,4 +79,4 @@ class g extends u.Z {
                 : (t[n] = i);
     }
 }
-t.Z = new g();
+t.Z = new p();

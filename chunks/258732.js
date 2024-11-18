@@ -4,6 +4,7 @@ t.Z = {
     updatePrivateChannelRecipientFlags: (e, t) =>
         r.tn.patch({
             url: a.ANM.CHANNEL_RECIPIENT_ME(e),
-            body: { flags: t }
+            body: { flags: t },
+            rejectWithError: !1
         })
 };

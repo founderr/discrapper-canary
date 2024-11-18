@@ -2,19 +2,19 @@ n(47120);
 var i,
     r = n(200651),
     s = n(192379),
-    a = n(593473),
-    l = n(442837),
+    l = n(593473),
+    a = n(442837),
     o = n(544891),
     c = n(481060),
     u = n(129293),
     d = n(388905),
     h = n(108427),
-    g = n(598077),
-    m = n(896797),
-    p = n(981631),
+    p = n(598077),
+    g = n(896797),
+    m = n(981631),
     f = n(930441),
-    _ = n(388032),
-    x = n(971436);
+    x = n(388032),
+    _ = n(971436);
 function E(e, t, n) {
     return (
         t in e
@@ -28,28 +28,29 @@ function E(e, t, n) {
         e
     );
 }
-l.ZP.initialize();
+a.ZP.initialize();
 class v extends (i = s.PureComponent) {
     componentDidMount() {
         let e = (0, u.Z)(this.props.location),
-            t = (0, a.parse)(this.props.location.search);
+            t = (0, l.parse)(this.props.location.search);
         o.tn
             .post({
-                url: p.ANM.DISABLE_EMAIL_NOTIFICATIONS,
+                url: m.ANM.DISABLE_EMAIL_NOTIFICATIONS,
                 body: {
                     token: e,
                     pixel_uuid: t.hash,
                     category: t.category,
                     email_type: t.email_type
                 },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then(
                 (e) => {
                     let {
                             body: { user: n }
                         } = e,
-                        i = new g.Z(n);
+                        i = new p.Z(n);
                     this.setState({
                         success: !0,
                         busy: !1,
@@ -70,25 +71,25 @@ class v extends (i = s.PureComponent) {
     }
     renderCategorySuccess(e, t) {
         let { defaultRoute: n, transitionTo: i } = this.props,
-            s = _.intl.formatToPlainString(_.t.YDAohI, { category: t });
+            s = x.intl.formatToPlainString(x.t.YDAohI, { category: t });
         return (0, r.jsxs)(d.ZP, {
             children: [
                 (0, r.jsx)(d.Dx, {
-                    className: x.marginBottom8,
-                    children: _.intl.string(_.t.f6rdLi)
+                    className: _.marginBottom8,
+                    children: x.intl.string(x.t.f6rdLi)
                 }),
                 (0, r.jsx)(d.DK, { children: s }),
                 (0, r.jsx)(d.zx, {
-                    className: x.marginTop20,
+                    className: _.marginTop20,
                     onClick: () => i(n),
-                    children: _.intl.string(_.t.fIv16O)
+                    children: x.intl.string(x.t.fIv16O)
                 }),
                 (0, r.jsx)(d.zx, {
-                    className: x.marginTop8,
+                    className: _.marginTop8,
                     color: d.zx.Colors.LINK,
                     look: d.zx.Looks.LINK,
-                    onClick: () => i(p.Z5c.SETTINGS('notifications', f.vG)),
-                    children: _.intl.string(_.t.YYTira)
+                    onClick: () => i(m.Z5c.SETTINGS('notifications', f.vG)),
+                    children: x.intl.string(x.t.YYTira)
                 })
             ]
         });
@@ -105,17 +106,17 @@ class v extends (i = s.PureComponent) {
                 (0, r.jsx)(d.qE, {
                     src: null == n ? void 0 : n.getAvatarURL(void 0, 100),
                     size: c.AvatarSizes.DEPRECATED_SIZE_100,
-                    className: x.marginBottom20
+                    className: _.marginBottom20
                 }),
                 (0, r.jsx)(d.Dx, {
-                    className: x.marginBottom8,
-                    children: _.intl.string(_.t['6U6OMT'])
+                    className: _.marginBottom8,
+                    children: x.intl.string(x.t['6U6OMT'])
                 }),
-                (0, r.jsx)(d.DK, { children: _.intl.string(_.t['yaDJ4+']) }),
+                (0, r.jsx)(d.DK, { children: x.intl.string(x.t['yaDJ4+']) }),
                 (0, r.jsx)(d.zx, {
-                    className: x.marginTop40,
+                    className: _.marginTop40,
                     onClick: () => t(e),
-                    children: _.intl.string(_.t.fIv16O)
+                    children: x.intl.string(x.t.fIv16O)
                 })
             ]
         });
@@ -126,17 +127,17 @@ class v extends (i = s.PureComponent) {
             children: [
                 (0, r.jsx)(d.Ee, {
                     src: n(105020),
-                    className: x.marginBottom20
+                    className: _.marginBottom20
                 }),
                 (0, r.jsx)(d.Dx, {
-                    className: x.marginBottom8,
-                    children: _.intl.string(_.t.ox9hIS)
+                    className: _.marginBottom8,
+                    children: x.intl.string(x.t.ox9hIS)
                 }),
-                (0, r.jsx)(d.DK, { children: _.intl.string(_.t['/dcuR0']) }),
+                (0, r.jsx)(d.DK, { children: x.intl.string(x.t['/dcuR0']) }),
                 (0, r.jsx)(d.zx, {
-                    className: x.marginTop40,
+                    className: _.marginTop40,
                     onClick: () => t(e),
-                    children: _.intl.string(_.t.fIv16O)
+                    children: x.intl.string(x.t.fIv16O)
                 })
             ]
         });
@@ -155,4 +156,4 @@ class v extends (i = s.PureComponent) {
             });
     }
 }
-E(v, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) }), (t.Z = l.ZP.connectStores([m.Z], () => ({ defaultRoute: m.Z.defaultRoute }))(v));
+E(v, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) }), (t.Z = a.ZP.connectStores([g.Z], () => ({ defaultRoute: g.Z.defaultRoute }))(v));

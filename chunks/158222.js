@@ -25,7 +25,12 @@ async function s(e) {
         threadId: e
     });
     try {
-        let t = (await i.tn.get({ url: a.ANM.MEDIA_POST_RESHARE_GET_PREVIEW(e) })).body;
+        let t = (
+            await i.tn.get({
+                url: a.ANM.MEDIA_POST_RESHARE_GET_PREVIEW(e),
+                rejectWithError: !1
+            })
+        ).body;
         r.Z.dispatch({
             type: 'MEDIA_POST_EMBED_FETCH_SUCCESS',
             threadId: e,
@@ -43,7 +48,8 @@ async function c(e) {
         return (
             await i.tn.post({
                 url: a.ANM.UNFURL_EMBED_URLS,
-                body: { urls: e }
+                body: { urls: e },
+                rejectWithError: !1
             })
         ).body;
     } catch (e) {

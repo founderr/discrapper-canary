@@ -31,7 +31,10 @@ function h(e) {
             exact: !0
         }),
         m = i.tn
-            .get(d.ANM.CHANNEL(e))
+            .get({
+                url: d.ANM.CHANNEL(e),
+                rejectWithError: !1
+            })
             .then((t) => {
                 let { body: r } = t;
                 if (((_[e] = { type: 'LOADED' }), l.Ec.has(r.type))) {

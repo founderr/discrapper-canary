@@ -59,7 +59,8 @@ async function f(e, t) {
     let r = S(e),
         i = await s.tn.get({
             url: d.ANM.GET_REPORT_MENU(r),
-            query: (null == t ? void 0 : t.variant) != null ? { variant: t.variant } : void 0
+            query: (null == t ? void 0 : t.variant) != null ? { variant: t.variant } : void 0,
+            rejectWithError: !1
         });
     return null !== (n = i.body) && void 0 !== n ? n : JSON.parse(i.text);
 }
@@ -68,7 +69,8 @@ async function _(e, t) {
     let r = I(e),
         i = await s.tn.get({
             url: d.ANM.GET_UNAUTHENTICATED_REPORT_MENU(r),
-            query: (null == t ? void 0 : t.variant) != null ? { variant: t.variant } : void 0
+            query: (null == t ? void 0 : t.variant) != null ? { variant: t.variant } : void 0,
+            rejectWithError: !1
         });
     return null !== (n = i.body) && void 0 !== n ? n : JSON.parse(i.text);
 }
@@ -82,7 +84,8 @@ async function p(e, t) {
                 nodeRef: r.root_node_id,
                 destination: ['', r.success_node_id]
             }
-        ])
+        ]),
+        rejectWithError: !1
     });
 }
 function h(e, t, n) {
@@ -90,7 +93,8 @@ function h(e, t, n) {
         ? Promise.resolve()
         : s.tn.post({
               url: d.ANM.SUBMIT_REPORT_MENU(S(t)),
-              body: T(e, t, n)
+              body: T(e, t, n),
+              rejectWithError: !1
           });
 }
 function m(e, t, n, r) {
@@ -98,7 +102,8 @@ function m(e, t, n, r) {
     let i = I(t);
     return s.tn.post({
         url: d.ANM.SUBMIT_UNAUTHENTICATED_REPORT_MENU(i),
-        body: T(e, t, n, r)
+        body: T(e, t, n, r),
+        rejectWithError: !1
     });
 }
 function g(e, t) {
@@ -107,7 +112,8 @@ function g(e, t) {
         body: {
             name: e,
             email: t
-        }
+        },
+        rejectWithError: !1
     });
 }
 async function E(e, t, n) {
@@ -118,18 +124,23 @@ async function E(e, t, n) {
                 name: e,
                 email: t,
                 code: n
-            }
+            },
+            rejectWithError: !1
         })
     ).body;
 }
 async function v() {
-    return await s.tn.get({ url: d.ANM.DSA_EXPERIMENT_UNAUTHENTICATED });
+    return await s.tn.get({
+        url: d.ANM.DSA_EXPERIMENT_UNAUTHENTICATED,
+        rejectWithError: !1
+    });
 }
 async function b(e) {
     return (
         await s.tn.post({
             url: d.ANM.SUBMIT_REPORT_SECOND_LOOK,
-            body: { token: e }
+            body: { token: e },
+            rejectWithError: !1
         })
     ).body;
 }

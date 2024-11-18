@@ -40,7 +40,8 @@ t.Z = {
                         everyone: o
                     },
                     retries: 2,
-                    oldFormErrors: !0
+                    oldFormErrors: !0,
+                    rejectWithError: !1
                 })
                 .then(
                     (t) => {
@@ -61,7 +62,8 @@ t.Z = {
         i.tn.del({
             url: l.ANM.MENTIONS_MESSAGE_ID(e),
             retries: 2,
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         }),
             r.Z.dispatch({
                 type: 'RECENT_MENTION_DELETE',

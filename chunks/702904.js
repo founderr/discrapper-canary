@@ -67,15 +67,24 @@ function b() {
             '' === t && (t = 'pm_card_us'),
                 await c.tn.post({
                     url: '/debug/payment-source',
-                    body: { token: t }
+                    body: { token: t },
+                    rejectWithError: !1
                 }),
                 await (0, d.tZ)();
         },
         u = async () => {
-            await c.tn.del('/debug/payment-source'), await (0, d.tZ)();
+            await c.tn.del({
+                url: '/debug/payment-source',
+                rejectWithError: !1
+            }),
+                await (0, d.tZ)();
         },
         b = async () => {
-            await c.tn.del('/debug/rate-limits'), window.location.reload();
+            await c.tn.del({
+                url: '/debug/rate-limits',
+                rejectWithError: !1
+            }),
+                window.location.reload();
         };
     return (
         a.useEffect(() => {

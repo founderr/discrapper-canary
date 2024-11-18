@@ -25,7 +25,10 @@ let l = (e) => {
             if (s.Z.canFetch()) {
                 i.Z.dispatch({ type: 'USER_PROFILE_EFFECTS_FETCH' });
                 try {
-                    let { body: e } = await r.tn.get(o.ANM.USER_PROFILE_EFFECTS),
+                    let { body: e } = await r.tn.get({
+                            url: o.ANM.USER_PROFILE_EFFECTS,
+                            rejectWithError: !1
+                        }),
                         t = (null == e ? void 0 : e.profile_effect_configs).map(l);
                     i.Z.dispatch({
                         type: 'USER_PROFILE_EFFECTS_FETCH_SUCCESS',

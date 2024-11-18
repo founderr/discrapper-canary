@@ -14,7 +14,8 @@ t.Z = {
                     body: {
                         category_ids: e,
                         offset: t
-                    }
+                    },
+                    rejectWithError: !1
                 })
             ).body;
             return (
@@ -44,7 +45,8 @@ t.Z = {
             let l = Date.now(),
                 a = await i.tn.get({
                     url: n ? o.ANM.GRAVITY_ITEMS_NEGATIVE : o.ANM.GRAVITY_ITEMS_DEHYDRATED,
-                    query: { refresh: t }
+                    query: { refresh: t },
+                    rejectWithError: !1
                 });
             await r.Z.dispatch({
                 type: 'LOAD_GRAVITY_DEHYDRATED',
@@ -66,7 +68,8 @@ t.Z = {
                         body: {
                             guild_ids: e,
                             location: t
-                        }
+                        },
+                        rejectWithError: !1
                     }),
                     !0
                 );
@@ -94,7 +97,8 @@ t.Z = {
                         ],
                         summary_items: [],
                         activity_items: []
-                    }
+                    },
+                    rejectWithError: !1
                 });
                 if (0 === n.body.message_items.length) return;
                 r.Z.dispatch({
@@ -128,7 +132,8 @@ t.Z = {
                         message_items: e,
                         summary_items: t,
                         activity_items: n
-                    }
+                    },
+                    rejectWithError: !1
                 });
                 r.Z.dispatch({
                     type: 'LOAD_GRAVITY_HYDRATED',
@@ -149,7 +154,10 @@ t.Z = {
     async getGuildChannelScores() {
         if (!!(0, s.rK)('guildChannelScores'))
             try {
-                let e = await i.tn.get({ url: o.ANM.GRAVITY_CUSTOM_SCORES });
+                let e = await i.tn.get({
+                    url: o.ANM.GRAVITY_CUSTOM_SCORES,
+                    rejectWithError: !1
+                });
                 r.Z.dispatch({
                     type: 'LOAD_GRAVITY_CUSTOM_SCORES',
                     scores: e.body
@@ -161,7 +169,10 @@ t.Z = {
     async getRecommendedGuilds() {
         if (!!(0, s.rK)('recommendedGuilds'))
             try {
-                let e = await i.tn.get({ url: o.ANM.GRAVITY_RECOMMENDED_GUILDS });
+                let e = await i.tn.get({
+                    url: o.ANM.GRAVITY_RECOMMENDED_GUILDS,
+                    rejectWithError: !1
+                });
                 r.Z.dispatch({
                     type: 'LOAD_GRAVITY_RECOMMENDED_GUILDS',
                     guilds: e.body.guilds

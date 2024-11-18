@@ -35,7 +35,8 @@ function h() {
         .get({
             url: _.ANM.ME,
             query: { with_analytics_token: t },
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         })
         .then(
             (e) => (
@@ -58,7 +59,8 @@ function m() {
             terms: e,
             privacy: t
         },
-        oldFormErrors: !0
+        oldFormErrors: !0,
+        rejectWithError: !1
     }).then(
         () => !0,
         () => !1
@@ -71,7 +73,8 @@ function g(e, t) {
     return o.tn.patch({
         url: _.ANM.ME,
         oldFormErrors: !0,
-        body: { flags: r }
+        body: { flags: r },
+        rejectWithError: !1
     });
 }
 function E(e) {
@@ -81,7 +84,8 @@ function E(e) {
         : o.tn
               .get({
                   url: _.ANM.USER(e),
-                  oldFormErrors: !0
+                  oldFormErrors: !0,
+                  rejectWithError: !1
               })
               .then(
                   (t) => (
@@ -114,7 +118,8 @@ async function v(e) {
                 join_request_id: c
             },
             oldFormErrors: !0,
-            signal: d
+            signal: d,
+            rejectWithError: !1
         });
         return (
             null == f || f(u.body, a),

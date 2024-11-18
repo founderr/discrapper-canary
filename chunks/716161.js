@@ -31,7 +31,10 @@ var r = n(544891),
     c = n(901757),
     d = n(981631);
 async function f() {
-    let e = await r.tn.get(d.ANM.VIDEO_FILTER_ASSETS);
+    let e = await r.tn.get({
+        url: d.ANM.VIDEO_FILTER_ASSETS,
+        rejectWithError: !1
+    });
     return (
         i.Z.dispatch({
             type: 'VIDEO_FILTER_ASSETS_FETCH_SUCCESS',
@@ -48,7 +51,8 @@ async function _(e, t, n) {
                 type: t,
                 asset: e,
                 last_used: null == n ? void 0 : n.toISOString()
-            }
+            },
+            rejectWithError: !1
         });
         return (
             i.Z.dispatch({
@@ -62,7 +66,10 @@ async function _(e, t, n) {
     }
 }
 async function p(e) {
-    await r.tn.del(d.ANM.VIDEO_FILTER_ASSET(e.id));
+    await r.tn.del({
+        url: d.ANM.VIDEO_FILTER_ASSET(e.id),
+        rejectWithError: !1
+    });
     let t = (0, l.P)(o.default.getCurrentUser());
     (0, u.rD)(t) && t.id === e.id && h(null),
         i.Z.dispatch({
@@ -81,7 +88,10 @@ async function h(e) {
         ),
         (0, u.rD)(e))
     ) {
-        let t = await r.tn.post(d.ANM.VIDEO_FILTER_ASSET_LAST_USED(e.id));
+        let t = await r.tn.post({
+            url: d.ANM.VIDEO_FILTER_ASSET_LAST_USED(e.id),
+            rejectWithError: !1
+        });
         i.Z.dispatch({
             type: 'VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION',
             backgroundOption: t.body

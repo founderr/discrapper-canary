@@ -74,7 +74,8 @@ function g(e, t) {
                     password: e,
                     ...t
                 },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             }),
         {
             modalProps: { title: n },
@@ -88,7 +89,8 @@ async function E(e) {
     let t = await r.tn.patch({
             url: f.ANM.ME,
             oldFormErrors: !0,
-            body: e
+            body: e,
+            rejectWithError: !1
         }),
         n = t.body;
     if (n.token) {
@@ -167,14 +169,16 @@ function v(e) {
 function b() {
     return r.tn.get({
         url: f.ANM.USER_HARVEST,
-        oldFormErrors: !0
+        oldFormErrors: !0,
+        rejectWithError: !1
     });
 }
 function I(e) {
     return r.tn.post({
         url: f.ANM.USER_HARVEST,
         body: { backends: e },
-        oldFormErrors: !0
+        oldFormErrors: !0,
+        rejectWithError: !1
     });
 }
 function S(e) {

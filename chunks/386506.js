@@ -28,7 +28,8 @@ async function u(e) {
                 version: o.Ji
             },
             headers: { Authorization: null !== (t = a.default.getToken()) && void 0 !== t ? t : '' },
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         });
         return await r(n), n;
     } catch (e) {
@@ -44,7 +45,8 @@ async function c(e) {
                 token: a.default.getToken(),
                 version: o.Ji
             },
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         });
         return await r(t), t;
     } catch (e) {
@@ -54,7 +56,8 @@ async function c(e) {
 async function d() {
     let e = await i.tn.del({
         url: (0, o.pU)(l),
-        oldFormErrors: !0
+        oldFormErrors: !0,
+        rejectWithError: !1
     });
     return await r(e), e;
 }
@@ -65,7 +68,8 @@ function f(e) {
             url: (0, o.pU)('/__development/create_build_override_link'),
             body: e,
             headers: { Authorization: null !== (t = a.default.getToken()) && void 0 !== t ? t : '' },
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         })
         .then(
             (e) => ({

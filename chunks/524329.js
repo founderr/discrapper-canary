@@ -34,7 +34,8 @@ let s = function (e) {
         try {
             let t = await r.tn.get({
                 url: i.ANM.GUILD_WELCOME_SCREEN(e),
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             });
             return (
                 l.Z.dispatch({
@@ -70,7 +71,8 @@ let s = function (e) {
                     welcome_channels: t.channels,
                     enabled: t.enabled
                 },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             });
             l.Z.dispatch({
                 type: 'WELCOME_SCREEN_SUBMIT_SUCCESS',

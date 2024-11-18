@@ -138,7 +138,8 @@ class D extends v.Z {
                     signal: l.signal,
                     onRequestCreated: () => {
                         null != e.nonce && this.requests.set(e.nonce, l);
-                    }
+                    },
+                    rejectWithError: !1
                 },
                 o
             );
@@ -155,7 +156,8 @@ class D extends v.Z {
                 signal: a.signal,
                 onRequestCreated: () => {
                     this.requests.set(r, a);
-                }
+                },
+                rejectWithError: !1
             },
             this.createResponseHandler(r, t)
         );
@@ -198,7 +200,8 @@ class D extends v.Z {
                                 n = (0, E.dg)(i);
                             null != t && t > n && (this.cancelRequest(o), null == f || f(n));
                         });
-                }
+                },
+                rejectWithError: !1
             },
             this.createResponseHandler(o, t)
         );

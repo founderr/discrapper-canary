@@ -91,7 +91,8 @@ async function O(n) {
     let t = M(n),
         e = await r.tn.post({
             url: E.ANM.GUILD_AUTOMOD_VALIDATE_RULE(n.guildId),
-            body: t
+            body: t,
+            rejectWithError: !1
         });
     return (0, s.C)(e.body);
 }
@@ -103,7 +104,8 @@ async function N(n) {
             (
                 await r.tn.post({
                     url: E.ANM.GUILD_AUTOMOD_RULES(n.guildId),
-                    body: t
+                    body: t,
+                    rejectWithError: !1
                 })
             ).body
         )
@@ -115,16 +117,26 @@ async function T(n) {
         (
             await r.tn.patch({
                 url: E.ANM.GUILD_AUTOMOD_RULE(n.guildId, n.id),
-                body: t
+                body: t,
+                rejectWithError: !1
             })
         ).body
     );
 }
 async function L(n, t) {
-    return await r.tn.del({ url: E.ANM.GUILD_AUTOMOD_RULE(t, n) }), !0;
+    return (
+        await r.tn.del({
+            url: E.ANM.GUILD_AUTOMOD_RULE(t, n),
+            rejectWithError: !1
+        }),
+        !0
+    );
 }
 async function g(n) {
-    let t = await r.tn.get({ url: E.ANM.GUILD_AUTOMOD_RULES(n) });
+    let t = await r.tn.get({
+        url: E.ANM.GUILD_AUTOMOD_RULES(n),
+        rejectWithError: !1
+    });
     return Array.isArray(t.body) ? t.body.map(I) : [];
 }
 async function p(n, t, e) {
@@ -135,7 +147,8 @@ async function p(n, t, e) {
                 message_id: n,
                 channel_id: t.id,
                 alert_action_type: e
-            }
+            },
+            rejectWithError: !1
         });
 }
 function S(n, t, e) {
@@ -146,7 +159,10 @@ function S(n, t, e) {
                 feedback_type: d.x2.MENTION_RAID_REMOVE_RESTRICTION,
                 decision_id: t
             }),
-                r.tn.post({ url: E.ANM.GUILD_AUTOMOD_CLEAR_MENTION_RAID(n) }),
+                r.tn.post({
+                    url: E.ANM.GUILD_AUTOMOD_CLEAR_MENTION_RAID(n),
+                    rejectWithError: !1
+                }),
                 e();
         });
 }

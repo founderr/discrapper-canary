@@ -19,7 +19,12 @@ async function u(e) {
             }),
                 l.add(e);
             try {
-                let t = (await r.tn.get({ url: o.ANM.GUILD_BASIC(e) })).body;
+                let t = (
+                    await r.tn.get({
+                        url: o.ANM.GUILD_BASIC(e),
+                        rejectWithError: !1
+                    })
+                ).body;
                 i.Z.dispatch({
                     type: 'BASIC_GUILD_FETCH_SUCCESS',
                     guildId: e,

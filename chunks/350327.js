@@ -68,7 +68,8 @@ async function p(e, t) {
         });
         let n = await r.tn.patch({
             url: null != t ? d.ANM.GUILD_PROFILE(t, d.ME) : d.ANM.USER_PROFILE(d.ME),
-            body: e
+            body: e,
+            rejectWithError: !1
         });
         if (n.ok) {
             let e = null === (u = n.body.profile_effect) || void 0 === u ? void 0 : u.id,

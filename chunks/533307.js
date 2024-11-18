@@ -2,8 +2,8 @@ let r;
 var i = n(544891),
     s = n(570140),
     l = n(728345),
-    a = n(812206),
-    o = n(625128),
+    o = n(812206),
+    a = n(625128),
     c = n(335131),
     d = n(669079),
     u = n(981631),
@@ -18,7 +18,7 @@ async function E(e) {
     try {
         let r = await (0, d.bT)(e, t, n);
         if (null != r.application_id && r.application_id !== _.CL) {
-            let e = a.Z.getApplication(r.application_id);
+            let e = o.Z.getApplication(r.application_id);
             if (null == e)
                 try {
                     await l.ZP.fetchApplication(r.application_id);
@@ -63,7 +63,8 @@ async function E(e) {
                         sku_id: e,
                         subscription_plan_id: t
                     },
-                    oldFormErrors: !0
+                    oldFormErrors: !0,
+                    rejectWithError: !1
                 });
                 s.Z.dispatch({
                     type: 'GIFT_CODES_FETCH_SUCCESS',
@@ -95,7 +96,8 @@ async function E(e) {
                         subscription_plan_id: t,
                         gift_style: n
                     },
-                    oldFormErrors: !0
+                    oldFormErrors: !0,
+                    rejectWithError: !1
                 });
                 return (
                     s.Z.dispatch({
@@ -120,7 +122,8 @@ async function E(e) {
             try {
                 await i.tn.del({
                     url: u.ANM.USER_GIFT_CODE_REVOKE(e),
-                    oldFormErrors: !0
+                    oldFormErrors: !0,
+                    rejectWithError: !1
                 }),
                     s.Z.dispatch({
                         type: 'GIFT_CODE_REVOKE_SUCCESS',
@@ -134,7 +137,7 @@ async function E(e) {
             }
         },
         openNativeGiftCodeModal(e) {
-            o.Z.openNativeAppModal(e, u.Etm.GIFT_CODE_BROWSER);
+            a.Z.openNativeAppModal(e, u.Etm.GIFT_CODE_BROWSER);
         },
         ...r
     });

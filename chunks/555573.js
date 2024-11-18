@@ -76,7 +76,8 @@ function m(e, t) {
 function g(e, t, n, r) {
     return a.tn.put({
         body: { permissions: r },
-        url: f.ANM.APPLICATION_BOT_GUILD_COMMAND_PERMISSIONS(e, t, n)
+        url: f.ANM.APPLICATION_BOT_GUILD_COMMAND_PERMISSIONS(e, t, n),
+        rejectWithError: !1
     });
 }
 function E(e, t, n) {
@@ -106,7 +107,8 @@ function E(e, t, n) {
                     data: n,
                     nonce: p
                 },
-                timeout: 3000
+                timeout: 3000,
+                rejectWithError: !1
             })
             .catch(() => {
                 s.Z.dispatch({

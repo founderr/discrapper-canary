@@ -58,7 +58,8 @@ let E = async (e) => {
             let t = (
                 await a.tn.get({
                     url: h.ANM.SOUNDBOARD_DEFAULT_SOUNDS,
-                    query: { guild_ids: e }
+                    query: { guild_ids: e },
+                    rejectWithError: !1
                 })
             ).body.map((e) => (0, f.o3)(e, p.X8));
             s.Z.dispatch({
@@ -106,7 +107,8 @@ async function T(e) {
                 volume: i,
                 emoji_id: s,
                 emoji_name: o
-            }
+            },
+            rejectWithError: !1
         });
     return (0, f.o3)(l.body, t);
 }
@@ -119,14 +121,16 @@ async function y(e) {
                 volume: i,
                 emoji_id: s,
                 emoji_name: o
-            }
+            },
+            rejectWithError: !1
         });
     return (0, f.o3)(l.body, t);
 }
 async function A(e, t) {
     await a.tn.del({
         url: h.ANM.GUILD_SOUNDBOARD_SOUND(e, t),
-        oldFormErrors: !0
+        oldFormErrors: !0,
+        rejectWithError: !1
     });
 }
 function N(e) {
@@ -154,7 +158,10 @@ function C(e) {
 }
 async function R(e, t) {
     try {
-        let n = await a.tn.get({ url: h.ANM.SOUNDBOARD_SOUND_GUILD_DATA(e, t) });
+        let n = await a.tn.get({
+            url: h.ANM.SOUNDBOARD_SOUND_GUILD_DATA(e, t),
+            rejectWithError: !1
+        });
         return null != n.body ? (0, c.PP)(n.body) : null;
     } catch (e) {
         throw new l.Z(e);

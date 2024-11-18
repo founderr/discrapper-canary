@@ -8,6 +8,7 @@ var r = n(544891),
 function a(e, t) {
     r.tn.post({
         url: i.ANM.VOICE_CHANNEL_NOTIFICATIONS(e),
-        query: { first_user: t }
+        query: { first_user: t },
+        rejectWithError: !1
     });
 }

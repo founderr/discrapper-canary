@@ -12,7 +12,8 @@ let d = {
             i.tn
                 .put({
                     url: s.ANM.PIN(t, n),
-                    oldFormErrors: !0
+                    oldFormErrors: !0,
+                    rejectWithError: !1
                 })
                 .catch(() => {
                     let n;
@@ -34,7 +35,8 @@ let d = {
             i.tn
                 .del({
                     url: s.ANM.PIN(e.id, n),
-                    oldFormErrors: !0
+                    oldFormErrors: !0,
+                    rejectWithError: !1
                 })
                 .catch(() =>
                     o.Z.show({
@@ -64,7 +66,8 @@ let d = {
                     .get({
                         url: s.ANM.PINS(e),
                         retries: 2,
-                        oldFormErrors: !0
+                        oldFormErrors: !0,
+                        rejectWithError: !1
                     })
                     .then(
                         (n) => {

@@ -300,7 +300,8 @@ class H extends L.Z {
                 c.tn
                     .get({
                         url: M.ANM.ME,
-                        headers: { authorization: this.token }
+                        headers: { authorization: this.token },
+                        rejectWithError: !1
                     })
                     .then(
                         (e) => {

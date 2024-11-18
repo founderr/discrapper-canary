@@ -14,7 +14,8 @@ t.Z = {
                     .get({
                         url: s.ANM.INTEGRATION_SEARCH('tenor'),
                         query: { q: t },
-                        oldFormErrors: !0
+                        oldFormErrors: !0,
+                        rejectWithError: !1
                     })
                     .then(
                         (n) => {

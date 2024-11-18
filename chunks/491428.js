@@ -53,7 +53,8 @@ function m(e, t) {
                     let n = null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.survey;
                     return (0, r.iG)({ key: null == n ? void 0 : n.key });
                 }
-            }
+            },
+            rejectWithError: !1
         }).then(
             (e) => {
                 var t;
@@ -84,7 +85,8 @@ function h(e) {
                 trackedActionData: {
                     event: i.NetworkActionNames.USER_SURVEY_SEEN,
                     properties: (t) => (0, r.iG)({ key: e })
-                }
+                },
+                rejectWithError: !1
             })
         );
 }

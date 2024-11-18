@@ -89,7 +89,10 @@ let m = () => {
         let e = null;
         try {
             var t;
-            let n = await o.tn.post({ url: p.ANM.CHURN_USER_OFFER });
+            let n = await o.tn.post({
+                url: p.ANM.CHURN_USER_OFFER,
+                rejectWithError: !1
+            });
             e = null !== (t = n.body.offer) && void 0 !== t ? t : null;
         } catch (e) {}
         return e;

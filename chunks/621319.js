@@ -32,7 +32,8 @@ function c(e, t) {
         .patch({
             url: l.ANM.GUILD_VANITY_URL(e),
             body: { code: t },
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         })
         .then(
             (e) => {

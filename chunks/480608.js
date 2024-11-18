@@ -19,7 +19,12 @@ async function c(e) {
             type: 'GUILD_ROLE_MEMBER_COUNT_FETCH_START',
             guildId: e
         });
-        let t = (await a.tn.get({ url: u.ANM.GUILD_ROLE_MEMBER_COUNTS(e) })).body;
+        let t = (
+            await a.tn.get({
+                url: u.ANM.GUILD_ROLE_MEMBER_COUNTS(e),
+                rejectWithError: !1
+            })
+        ).body;
         s.Z.dispatch({
             type: 'GUILD_ROLE_MEMBER_COUNT_FETCH_SUCCESS',
             guildId: e,
@@ -41,7 +46,17 @@ function _(e, t) {
         r = ''.concat(e, '-').concat(t);
     if (!n || null == f.get(r)) {
         var i, s;
-        return f.set(r, !0), (i = e), (s = t), a.tn.get({ url: u.ANM.GUILD_ROLE_MEMBER_IDS(i, s) }).then((e) => (o.Z.requestMembersById(i, e.body, !1), e.body.length));
+        return (
+            f.set(r, !0),
+            (i = e),
+            (s = t),
+            a.tn
+                .get({
+                    url: u.ANM.GUILD_ROLE_MEMBER_IDS(i, s),
+                    rejectWithError: !1
+                })
+                .then((e) => (o.Z.requestMembersById(i, e.body, !1), e.body.length))
+        );
     }
     return Promise.resolve(null);
 }

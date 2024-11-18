@@ -15,7 +15,8 @@ async function c() {
         try {
             let e = await i.tn.get({
                 url: l.ANM.USER_ACTIVITY_STATISTICS,
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             });
             r.Z.dispatch({
                 type: 'USER_ACTIVITY_STATISTICS_FETCH_SUCCESS',

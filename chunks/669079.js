@@ -137,7 +137,8 @@ async function G(e) {
                     with_application: t,
                     with_subscription_plan: n
                 },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
         ).body;
         return (

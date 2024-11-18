@@ -67,7 +67,8 @@ t.Z = {
                     url: _.ANM.ENTITLEMENT_TICKET(l),
                     body: { test_mode: h.Z.inTestModeForApplication(l) || o.Z.inDevModeForApplication(l) },
                     retries: 3,
-                    oldFormErrors: !0
+                    oldFormErrors: !0,
+                    rejectWithError: !1
                 })
                 .then((e) => {
                     let { body: t } = e;

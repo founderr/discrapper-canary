@@ -96,7 +96,8 @@ t.Z = {
                     r.tn.patch({
                         url: d.ANM.ME,
                         oldFormErrors: !0,
-                        body: t
+                        body: t,
+                        rejectWithError: !1
                     })
                 );
             },

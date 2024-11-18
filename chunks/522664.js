@@ -22,7 +22,8 @@ function a(e, t, n, a) {
             message_id: t,
             attachment_ids: n,
             embed_ids: a
-        }
+        },
+        rejectWithError: !1
     });
 }
 function s(e, t, n, a) {
@@ -33,13 +34,15 @@ function s(e, t, n, a) {
             message_id: t,
             attachment_ids: n,
             filenames: a
-        }
+        },
+        rejectWithError: !1
     });
 }
 function o(e, t) {
     return r.tn.patch({
         url: i.ANM.EXPLICIT_MEDIA_SCAN_MESSAGES(e),
-        body: { message_ids: t }
+        body: { message_ids: t },
+        rejectWithError: !1
     });
 }
 function l(e) {
@@ -49,6 +52,7 @@ function l(e) {
     }));
     return r.tn.patch({
         url: i.ANM.EXPLICIT_MEDIA_SCAN_MULTI_CHANNEL_MESSAGES,
-        body: { messages: t }
+        body: { messages: t },
+        rejectWithError: !1
     });
 }

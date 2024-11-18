@@ -74,7 +74,8 @@ function H(e) {
         .post({
             url: E.ANM.HANDOFF,
             body: { key: n },
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         })
         .then(
             (e) => {

@@ -31,7 +31,8 @@ async function h(e, t) {
     null == e || e === l.ME
         ? await r.tn.patch({
               url: l.ANM.USER_GUILD_SETTINGS(l.ME),
-              body: t
+              body: t,
+              rejectWithError: !1
           })
         : await m(null != t ? { [null != e ? e : l.ME]: t } : {});
 }
@@ -64,7 +65,8 @@ async function m(e) {
           (
               await r.tn.patch({
                   url: l.ANM.USER_GUILD_SETTINGS_BULK,
-                  body: { guilds: e }
+                  body: { guilds: e },
+                  rejectWithError: !1
               })
           ).body)
         : [];

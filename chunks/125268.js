@@ -51,7 +51,8 @@ function c(e, t, n, i) {
         body: {
             line_id: t,
             points: i
-        }
+        },
+        rejectWithError: !1
     });
 }
 function u(e, t, n, i) {
@@ -66,13 +67,15 @@ function u(e, t, n, i) {
 function d(e, t, n) {
     return l.tn.post({
         url: s.ANM.SHARED_CANVAS_EMOJI_HOSES(e, t),
-        body: { emoji_hose: n }
+        body: { emoji_hose: n },
+        rejectWithError: !1
     });
 }
 function m(e, t, n) {
     l.tn.del({
         url: s.ANM.SHARED_CANVAS_EMOJI_HOSE(e, t, n),
-        backoff: new i.Z()
+        backoff: new i.Z(),
+        rejectWithError: !1
     });
 }
 function f(e, t) {

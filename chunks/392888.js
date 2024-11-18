@@ -29,7 +29,10 @@ class _ extends o.Z {
         if (!e) return;
         let {
                 body: { guild_noise: a, usage: o }
-            } = await i.tn.get('/users/@me/notification-migration-data2'),
+            } = await i.tn.get({
+                url: '/users/@me/notification-migration-data2',
+                rejectWithError: !1
+            }),
             l = (0, d._Y)(o),
             { default: u } = await n.e('53512').then(n.bind(n, 753521));
         if ((0, s.hasAnyModalOpen)()) return;
@@ -72,7 +75,10 @@ class _ extends o.Z {
 async function p(e) {
     let {
             body: { guild_noise: t, usage: a }
-        } = await i.tn.get('/users/@me/notification-migration-data2'),
+        } = await i.tn.get({
+            url: '/users/@me/notification-migration-data2',
+            rejectWithError: !1
+        }),
         o = (0, d._Y)(a);
     (0, s.openModalLazy)(async () => {
         let { default: i } = await n.e('53512').then(n.bind(n, 753521));

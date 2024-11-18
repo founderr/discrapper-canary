@@ -92,7 +92,8 @@ async function D(e) {
                 },
                 retries: 3,
                 body: { authorize: !0 },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then(
                 (e) => {
@@ -223,7 +224,8 @@ t.Z = {
             try {
                 let t = await s.tn.get({
                     url: N.ANM.APPLICATIONS_GAMES_SUPPLEMENTAL,
-                    query: { application_ids: e }
+                    query: { application_ids: e },
+                    rejectWithError: !1
                 });
                 l.Z.dispatch({
                     type: 'DETECTABLE_GAME_SUPPLEMENTAL_FETCH_SUCCESS',
@@ -258,7 +260,8 @@ t.Z = {
                                 received_etag: null == t ? void 0 : null === (n = t.headers) || void 0 === n ? void 0 : n.etag
                             });
                         }
-                    }
+                    },
+                    rejectWithError: !1
                 }).then(
                     (e) => {
                         let {
@@ -310,7 +313,8 @@ t.Z = {
                         report_version: 3
                     },
                     retries: 1,
-                    oldFormErrors: !0
+                    oldFormErrors: !0,
+                    rejectWithError: !1
                 })
                 .then((e) => {
                     let {
@@ -333,7 +337,8 @@ t.Z = {
                 icon: n
             },
             retries: 1,
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         });
     },
     deleteEntry(e) {

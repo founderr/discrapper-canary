@@ -6,7 +6,13 @@ let a = ''.concat(l.dGm, '/api/v2/scheduled-maintenances'),
     o = ''.concat(l.dGm, '/api/v2/incidents/unresolved.json');
 t.Z = {
     checkIncidents() {
-        Promise.all([i.tn.get(''.concat(a, '/active.json')), i.tn.get(o)]).then((e) => {
+        Promise.all([
+            i.tn.get({
+                url: ''.concat(a, '/active.json'),
+                rejectWithError: !1
+            }),
+            i.tn.get(o)
+        ]).then((e) => {
             let [t, n] = e,
                 [i] = t.body.scheduled_maintenances,
                 [l] = n.body.incidents;
@@ -17,13 +23,18 @@ t.Z = {
         });
     },
     checkScheduledMaintenances() {
-        i.tn.get(''.concat(a, '/upcoming.json')).then((e) => {
-            let [t] = e.body.scheduled_maintenances;
-            r.Z.dispatch({
-                type: 'STATUS_PAGE_SCHEDULED_MAINTENANCE',
-                maintenance: t
+        i.tn
+            .get({
+                url: ''.concat(a, '/upcoming.json'),
+                rejectWithError: !1
+            })
+            .then((e) => {
+                let [t] = e.body.scheduled_maintenances;
+                r.Z.dispatch({
+                    type: 'STATUS_PAGE_SCHEDULED_MAINTENANCE',
+                    maintenance: t
+                });
             });
-        });
     },
     ackScheduledMaintenance() {
         r.Z.dispatch({ type: 'STATUS_PAGE_SCHEDULED_MAINTENANCE_ACK' });

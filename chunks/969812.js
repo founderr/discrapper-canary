@@ -8,7 +8,8 @@ t.Z = {
             .patch({
                 url: a.ANM.GUILD_MEMBER_NICK(e, n),
                 body: { nick: o },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then(
                 (e) => {

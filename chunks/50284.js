@@ -40,6 +40,7 @@ async function f(e, t) {
                 manual: !0,
                 mention_count: _
             },
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         });
 }

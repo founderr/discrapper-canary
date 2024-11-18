@@ -73,7 +73,8 @@ let S = new o.Z('GuildSettingsActionCreators'),
                         enabled: t,
                         channel_id: n
                     },
-                    oldFormErrors: !0
+                    oldFormErrors: !0,
+                    rejectWithError: !1
                 })
                 .then((t) => {
                     a.Z.dispatch({
@@ -94,7 +95,8 @@ let S = new o.Z('GuildSettingsActionCreators'),
                             level: n,
                             ...e
                         },
-                        oldFormErrors: !0
+                        oldFormErrors: !0,
+                        rejectWithError: !1
                     }),
                 {
                     modalProps: {
@@ -115,7 +117,8 @@ let S = new o.Z('GuildSettingsActionCreators'),
                 .patch({
                     url: v.ANM.GUILD(e),
                     body: { icon: t },
-                    oldFormErrors: !0
+                    oldFormErrors: !0,
+                    rejectWithError: !1
                 })
                 .then(
                     () => {
@@ -187,7 +190,8 @@ let S = new o.Z('GuildSettingsActionCreators'),
                         url: v.ANM.GUILD(e),
                         query: { for_discovery: O.isForDiscovery },
                         body: D,
-                        oldFormErrors: !0
+                        oldFormErrors: !0,
+                        rejectWithError: !1
                     })
                     .then(
                         (t) => {
@@ -219,7 +223,8 @@ let S = new o.Z('GuildSettingsActionCreators'),
                         verification_level: t.verificationLevel,
                         explicit_content_filter: t.explicitContentFilter
                     },
-                    oldFormErrors: !0
+                    oldFormErrors: !0,
+                    rejectWithError: !1
                 })
                 .then((t) => (l.Z.checkGuildTemplateDirty(e), t)),
         transferOwnership(e, t) {
@@ -241,7 +246,8 @@ let S = new o.Z('GuildSettingsActionCreators'),
                                 guild_id: e,
                                 verification_type: n
                             }
-                        }
+                        },
+                        rejectWithError: !1
                     }),
                 {
                     modalProps: {
@@ -263,7 +269,8 @@ let S = new o.Z('GuildSettingsActionCreators'),
                         guild_id: e,
                         is_resend: t
                     }
-                }
+                },
+                rejectWithError: !1
             });
         },
         deleteGuild: (e, t) =>
@@ -272,7 +279,8 @@ let S = new o.Z('GuildSettingsActionCreators'),
                     i.tn.post({
                         url: v.ANM.GUILD_DELETE(e),
                         body: t,
-                        oldFormErrors: !0
+                        oldFormErrors: !0,
+                        rejectWithError: !1
                     }),
                 {
                     modalProps: {
@@ -289,7 +297,8 @@ let S = new o.Z('GuildSettingsActionCreators'),
             await i.tn.del({
                 url: v.ANM.GUILD_LEAVE(e),
                 body: { lurking: d.Z.isLurking(e) || p.ZP.isCurrentUserGuest(e) },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             }),
                 T.close();
         },
@@ -301,7 +310,8 @@ let S = new o.Z('GuildSettingsActionCreators'),
             await i.tn.patch({
                 url: v.ANM.GUILD_MEMBER(e, t),
                 body: { roles: n },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             }),
                 r.forEach((n) =>
                     a.Z.dispatch({
@@ -324,7 +334,8 @@ let S = new o.Z('GuildSettingsActionCreators'),
             i.tn
                 .patch({
                     url: v.ANM.GUILD_ROLE_MEMBERS(e, t),
-                    body: { member_ids: n }
+                    body: { member_ids: n },
+                    rejectWithError: !1
                 })
                 .then((n) => {
                     a.Z.dispatch({
@@ -341,12 +352,14 @@ let S = new o.Z('GuildSettingsActionCreators'),
                     type: t,
                     id: n
                 },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             }),
         disableIntegration: (e, t) =>
             i.tn.del({
                 url: v.ANM.GUILD_INTEGRATION(e, t),
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             }),
         updateIntegration: (e, t, n, r, a) =>
             i.tn.patch({
@@ -356,12 +369,14 @@ let S = new o.Z('GuildSettingsActionCreators'),
                     expire_grace_period: r,
                     enable_emoticons: a
                 },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             }),
         syncIntegration(e, t) {
             i.tn.post({
                 url: v.ANM.GUILD_INTEGRATION_SYNC(e, t),
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             });
         }
     };

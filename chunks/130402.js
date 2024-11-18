@@ -13,7 +13,10 @@ var r = n(544891),
 async function s() {
     i.Z.dispatch({ type: 'EMOJI_CAPTIONS_FETCH' });
     try {
-        let { body: e } = await r.tn.get({ url: a.ANM.EMOJI_CAPTIONS_GET }),
+        let { body: e } = await r.tn.get({
+                url: a.ANM.EMOJI_CAPTIONS_GET,
+                rejectWithError: !1
+            }),
             t = {};
         for (let n of e.items) t[n.emoji_id] = n.emoji_captions;
         i.Z.dispatch({

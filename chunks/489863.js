@@ -34,7 +34,8 @@ function u(e) {
     return i.tn.post({
         url: l.ANM.OAUTH2_WHITELIST_ACCEPT,
         query: { token: e },
-        oldFormErrors: !0
+        oldFormErrors: !0,
+        rejectWithError: !1
     });
 }
 async function c(e) {
@@ -70,7 +71,8 @@ async function c(e) {
                     };
                 })()
             },
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         })
     ).body;
 }
@@ -92,7 +94,8 @@ async function d(e) {
             },
             signal: f,
             retries: 3,
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         })
     ).body;
 }
@@ -100,7 +103,8 @@ async function f(e) {
     let { body: t } = await i.tn.get({
         url: l.ANM.OAUTH2_AUTHORIZE_WEBHOOK_CHANNELS,
         query: { guild_id: e },
-        oldFormErrors: !0
+        oldFormErrors: !0,
+        rejectWithError: !1
     });
     return t;
 }
@@ -110,7 +114,8 @@ function _(e) {
 async function p(e) {
     return await i.tn.post({
         url: l.ANM.OAUTH2_DEVICE_VERIFY,
-        body: { user_code: e }
+        body: { user_code: e },
+        rejectWithError: !1
     });
 }
 async function h(e, t) {
@@ -119,7 +124,8 @@ async function h(e, t) {
         body: {
             user_code: e,
             result: t
-        }
+        },
+        rejectWithError: !1
     });
 }
 async function m(e, t, n) {
@@ -130,6 +136,7 @@ async function m(e, t, n) {
             result: 'two_way_link_error',
             error_code: t,
             error_source: n
-        }
+        },
+        rejectWithError: !1
     });
 }

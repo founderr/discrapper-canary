@@ -33,7 +33,10 @@ let o = async (e) => {
             skuId: e
         });
         try {
-            let t = await r.tn.get({ url: s.ANM.CONSUMABLE_FETCH_PRICE(e) });
+            let t = await r.tn.get({
+                url: s.ANM.CONSUMABLE_FETCH_PRICE(e),
+                rejectWithError: !1
+            });
             if (null == t.body.price)
                 throw (
                     (l.Z.dispatch({
@@ -71,7 +74,10 @@ let o = async (e) => {
             skuId: e
         });
         try {
-            let t = await r.tn.get({ url: s.ANM.FETCH_HD_STREAMING_ENTITLEMENT }),
+            let t = await r.tn.get({
+                    url: s.ANM.FETCH_HD_STREAMING_ENTITLEMENT,
+                    rejectWithError: !1
+                }),
                 n = null != t.body.entitlement ? a.Z.createFromServer(t.body.entitlement) : null;
             return (
                 l.Z.dispatch({
@@ -95,7 +101,8 @@ let o = async (e) => {
         try {
             await r.tn.post({
                 url: s.ANM.CONSUME_HD_STREAMING_POTION,
-                body: { channel_id: e }
+                body: { channel_id: e },
+                rejectWithError: !1
             }),
                 l.Z.dispatch({
                     type: 'CLEAR_CONSUMED_ENTITLEMENT',

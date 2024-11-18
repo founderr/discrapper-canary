@@ -2,10 +2,10 @@ var r = n(544891),
     i = n(570140),
     s = n(881052),
     l = n(122289),
-    a = n(981631);
-let o = Object.freeze({});
+    o = n(981631);
+let a = Object.freeze({});
 async function c(e) {
-    let { code: t, options: n = o, onRedeemed: c, onError: d } = e,
+    let { code: t, options: n = a, onRedeemed: c, onError: d } = e,
         { channelId: u = null, paymentSource: _ = null } = n;
     i.Z.dispatch({
         type: 'GIFT_CODE_REDEEM',
@@ -13,13 +13,14 @@ async function c(e) {
     });
     try {
         let e = await r.tn.post({
-            url: a.ANM.GIFT_CODE_REDEEM(t),
+            url: o.ANM.GIFT_CODE_REDEEM(t),
             body: {
                 channel_id: u,
                 payment_source_id: null == _ ? void 0 : _.id,
                 gateway_checkout_context: await (0, l.cn)(_)
             },
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         });
         return (
             i.Z.dispatch({

@@ -76,7 +76,8 @@ class c extends u {
             : i.tn.get({
                   url: e,
                   query: r.stringify(this.query),
-                  oldFormErrors: !0
+                  oldFormErrors: !0,
+                  rejectWithError: !1
               });
     }
 }
@@ -103,7 +104,8 @@ class d extends u {
             : i.tn.post({
                   url: e,
                   body: this.payload,
-                  oldFormErrors: !0
+                  oldFormErrors: !0,
+                  rejectWithError: !1
               });
     }
     constructor(e, t, n, r) {

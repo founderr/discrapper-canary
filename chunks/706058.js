@@ -21,7 +21,8 @@ async function a(e, n, t, a, s) {
                 privacy_level: t,
                 guild_scheduled_event_id: s,
                 send_start_notification: a
-            }
+            },
+            rejectWithError: !1
         })
     ).body;
 }
@@ -32,10 +33,14 @@ async function s(e, n, t) {
             body: {
                 topic: n,
                 privacy_level: t
-            }
+            },
+            rejectWithError: !1
         })
     ).body;
 }
 function r(e) {
-    return l.tn.del(i.ANM.STAGE_INSTANCE(e));
+    return l.tn.del({
+        url: i.ANM.STAGE_INSTANCE(e),
+        rejectWithError: !1
+    });
 }

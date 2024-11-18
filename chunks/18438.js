@@ -67,7 +67,8 @@ async function s(e, t) {
         let t = await r.tn.patch({
             url: a.ANM.SET_GUILD_MEMBER(e),
             body: l,
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         });
         return (
             i.Z.dispatch({ type: 'GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS' }),

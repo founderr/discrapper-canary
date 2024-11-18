@@ -83,7 +83,8 @@ function y(e) {
 async function A(e) {
     let t = await s.tn.post({
         url: u.ANM.ATTACHMENTS_REFRESH_URLS,
-        body: { attachment_urls: [e] }
+        body: { attachment_urls: [e] },
+        rejectWithError: !1
     });
     return t.ok ? t.body.refreshed_urls[0].refreshed : void 0;
 }

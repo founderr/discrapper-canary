@@ -57,7 +57,8 @@ function I(e) {
         a.tn
             .get({
                 url: g.ANM.GUILD_EMOJIS(e),
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then(
                 (t) =>
@@ -88,7 +89,8 @@ function S(e) {
                     name: r,
                     roles: i
                 },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then(
                 () =>
@@ -115,7 +117,8 @@ function T(e, t) {
         }),
         a.tn.del({
             url: g.ANM.GUILD_EMOJI(e, t),
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         })
     );
 }
@@ -128,7 +131,8 @@ async function y(e) {
                 name: r,
                 roles: i
             },
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         });
     } catch (e) {
         throw new l.Z(e);

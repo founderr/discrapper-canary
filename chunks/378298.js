@@ -28,7 +28,8 @@ function s(e, t) {
         r.tn.post({
             url: a.ANM.CHANNEL_SAFETY_WARNINGS_ACK(e),
             body: { warning_ids: t },
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         })
     );
 }
@@ -53,5 +54,8 @@ function u(e) {
     });
 }
 function c(e) {
-    return r.tn.post({ url: a.ANM.SAFETY_WARNING_FALSE_POSITIVE(e) });
+    return r.tn.post({
+        url: a.ANM.SAFETY_WARNING_FALSE_POSITIVE(e),
+        rejectWithError: !1
+    });
 }

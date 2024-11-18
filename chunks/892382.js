@@ -16,12 +16,12 @@ var n = s(200651),
     v = s(346486),
     b = s(600164),
     f = s(210887),
-    Z = s(758449),
-    j = s(598077),
+    j = s(758449),
+    Z = s(598077),
     C = s(592125),
     I = s(246946),
-    _ = s(626135),
-    E = s(981631),
+    E = s(626135),
+    _ = s(981631),
     N = s(388032),
     T = s(640669),
     k = s(455029),
@@ -42,7 +42,7 @@ function y(e, t, s) {
 class S extends i.PureComponent {
     render() {
         let { invite: e, hideDiscriminator: t, hideInviteCode: s } = this.props,
-            i = new j.Z(e.inviter);
+            i = new Z.Z(e.inviter);
         return (0, n.jsxs)(b.Z, {
             className: a()(T.row, k.card),
             children: [
@@ -113,14 +113,15 @@ class R extends i.PureComponent {
         let { channelId: e } = this.props;
         d.tn
             .get({
-                url: E.ANM.INSTANT_INVITES(e),
+                url: _.ANM.INSTANT_INVITES(e),
                 retries: 3,
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then((e) => {
                 let t = e.body.map(
                     (e) =>
-                        new Z.Z({
+                        new j.Z({
                             ...e,
                             maxUses: e.max_uses,
                             maxAge: e.max_age,
@@ -132,7 +133,7 @@ class R extends i.PureComponent {
                     invites: t
                 });
             }),
-            _.default.track(E.rMx.OPEN_MODAL, {
+            E.default.track(_.rMx.OPEN_MODAL, {
                 ...(0, g.v_)(C.Z.getChannel(e)),
                 type: 'Group DM Invites',
                 source: 'Group DM Menu'

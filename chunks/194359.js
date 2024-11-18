@@ -70,7 +70,8 @@ let I = {
                     ...r
                 },
                 context: n,
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .catch((e) => {
                 b(e, i, t);
@@ -90,7 +91,8 @@ let I = {
                     ...l
                 },
                 context: r,
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then(() => {
                 null == t || t();
@@ -122,7 +124,8 @@ let I = {
             .del({
                 url: g.ANM.USER_RELATIONSHIP(e),
                 context: t,
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then(() => {
                 null == n || n();
@@ -133,13 +136,15 @@ let I = {
     updateRelationship: (e, t) =>
         a.tn.patch({
             url: g.ANM.USER_RELATIONSHIP(e),
-            body: { nickname: t }
+            body: { nickname: t },
+            rejectWithError: !1
         }),
     fetchRelationships() {
         a.tn
             .get({
                 url: g.ANM.USER_RELATIONSHIPS(),
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then(
                 (e) =>
@@ -157,7 +162,8 @@ let I = {
         a.tn
             .del({
                 url: g.ANM.USER_RELATIONSHIPS(),
-                query: { relationship_type: g.OGo.PENDING_INCOMING }
+                query: { relationship_type: g.OGo.PENDING_INCOMING },
+                rejectWithError: !1
             })
             .then(() => {
                 o.Z.dispatch({ type: 'RELATIONSHIP_PENDING_INCOMING_REMOVED' });
@@ -172,7 +178,8 @@ let I = {
                 query: {
                     relationship_type: g.OGo.PENDING_INCOMING,
                     only_spam: !0
-                }
+                },
+                rejectWithError: !1
             })
             .then(() => {
                 o.Z.dispatch({ type: 'RELATIONSHIP_PENDING_INCOMING_REMOVED' });
@@ -183,12 +190,14 @@ let I = {
     ignoreUser: (e, t) =>
         a.tn.put({
             url: g.ANM.IGNORE_USER(e),
-            context: { location: t }
+            context: { location: t },
+            rejectWithError: !1
         }),
     unignoreUser: (e, t) =>
         a.tn.del({
             url: g.ANM.IGNORE_USER(e),
-            context: { location: t }
+            context: { location: t },
+            rejectWithError: !1
         })
 };
 t.Z = I;

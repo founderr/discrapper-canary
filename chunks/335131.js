@@ -78,7 +78,8 @@ let g = (e) => {
         try {
             let e = await s.tn.get({
                 url: m.ANM.COLLECTIBLES_CATEGORIES,
-                query: t
+                query: t,
+                rejectWithError: !1
             });
             o.Z.dispatch({
                 type: 'COLLECTIBLES_CATEGORIES_FETCH_SUCCESS',
@@ -98,7 +99,10 @@ let g = (e) => {
         if (!d.Z.isFetching) {
             o.Z.dispatch({ type: 'COLLECTIBLES_PURCHASES_FETCH' });
             try {
-                let e = await s.tn.get(m.ANM.COLLECTIBLES_PURCHASES);
+                let e = await s.tn.get({
+                    url: m.ANM.COLLECTIBLES_PURCHASES,
+                    rejectWithError: !1
+                });
                 o.Z.dispatch({
                     type: 'COLLECTIBLES_PURCHASES_FETCH_SUCCESS',
                     purchases: e.body.map(h.Z.fromServer)
@@ -124,7 +128,8 @@ let g = (e) => {
             (null == t ? void 0 : t.countryCode) !== null && (n.country_code = null == t ? void 0 : t.countryCode), (null == t ? void 0 : t.paymentGateway) !== null && (n.payment_gateway = null == t ? void 0 : t.paymentGateway);
             let r = await s.tn.get({
                 url: m.ANM.COLLECTIBLES_PRODUCTS(e),
-                query: n
+                query: n,
+                rejectWithError: !1
             });
             o.Z.dispatch({
                 type: 'COLLECTIBLES_PRODUCT_FETCH_SUCCESS',
@@ -151,7 +156,8 @@ let g = (e) => {
             var t;
             let n = await s.tn.put({
                 url: m.ANM.COLLECTIBLES_CLAIM,
-                body: { sku_id: e }
+                body: { sku_id: e },
+                rejectWithError: !1
             });
             o.Z.dispatch({
                 type: 'COLLECTIBLES_CLAIM_SUCCESS',
@@ -177,7 +183,8 @@ let g = (e) => {
                     query: {
                         sku_id: t,
                         recipient_id: e
-                    }
+                    },
+                    rejectWithError: !1
                 })
             ).body.valid;
         } catch (e) {
@@ -198,7 +205,8 @@ let g = (e) => {
         try {
             let e = await s.tn.get({
                 url: m.ANM.COLLECTIBLES_MARKETING,
-                query: n
+                query: n,
+                rejectWithError: !1
             });
             o.Z.dispatch({
                 type: 'COLLECTIBLES_MARKETING_FETCH_SUCCESS',

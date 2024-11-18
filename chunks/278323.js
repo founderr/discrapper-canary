@@ -33,7 +33,8 @@ t.Z = {
                         media_session_id: _
                     },
                     retries: 1,
-                    oldFormErrors: !0
+                    oldFormErrors: !0,
+                    rejectWithError: !1
                 })
                 .then((e) => {
                     let {
@@ -100,7 +101,8 @@ t.Z = {
                 await r.tn.get({
                     url: c.ANM.USER_ACTIVITY_JOIN(e, t, n),
                     retries: 3,
-                    query: s
+                    query: s,
+                    rejectWithError: !1
                 })
             ).body.secret
         );

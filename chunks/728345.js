@@ -35,7 +35,8 @@ async function d(e) {
             url: c.ANM.APPLICATION_PUBLIC(e),
             query: { with_guild: t },
             oldFormErrors: !0,
-            signal: n
+            signal: n,
+            rejectWithError: !1
         });
         return (
             a.Z.dispatch({
@@ -65,7 +66,8 @@ t.ZP = {
                         type: r,
                         guild_id: n,
                         team_id: s
-                    }
+                    },
+                    rejectWithError: !1
                 })
             ).body;
         return (
@@ -86,7 +88,8 @@ t.ZP = {
                     query: {
                         ...n,
                         include_team: t
-                    }
+                    },
+                    rejectWithError: !1
                 })
             ).body;
         return (
@@ -102,7 +105,8 @@ t.ZP = {
             r = (
                 await i.tn.post({
                     url: c.ANM.APPLICATION_OWNER_TRANSFER(t),
-                    body: { team_id: n }
+                    body: { team_id: n },
+                    rejectWithError: !1
                 })
             ).body;
         return (
@@ -135,7 +139,8 @@ t.ZP = {
                 e = await i.tn.get({
                     url: c.ANM.APPLICATIONS_PUBLIC,
                     query: new URLSearchParams(n.map((e) => ['application_ids', e])).toString(),
-                    oldFormErrors: !0
+                    oldFormErrors: !0,
+                    rejectWithError: !1
                 });
             } catch (e) {
                 throw (

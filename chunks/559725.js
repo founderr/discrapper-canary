@@ -20,7 +20,8 @@ var a = n(175145),
 async function p() {
     return await r.tn.get({
         url: d.ANM.BILLING_ADYEN_PAYMENT_METHODS,
-        oldFormErrors: !0
+        oldFormErrors: !0,
+        rejectWithError: !1
     });
 }
 async function h() {

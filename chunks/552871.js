@@ -40,7 +40,8 @@ async function d(e, t) {
                     filename: 'media_engine_state.json',
                     file: new Blob([JSON.stringify(e, void 0, 2)])
                 }
-            ]
+            ],
+            rejectWithError: !1
         });
     } catch (e) {
         if (429 === e.status) throw new a.n0(a.cz.PROGRESS);

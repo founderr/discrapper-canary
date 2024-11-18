@@ -42,7 +42,8 @@ function C(e) {
                       onboarding_responses: i.map((e) => e.id),
                       onboarding_prompts_seen: o,
                       onboarding_responses_seen: l
-                  }
+                  },
+                  rejectWithError: !1
               })
               .then((t) => {
                   null != t.body &&
@@ -62,7 +63,8 @@ function C(e) {
                       onboarding_responses: i.map((e) => e.id),
                       onboarding_prompts_seen: o,
                       onboarding_responses_seen: l
-                  }
+                  },
+                  rejectWithError: !1
               })
               .then((t) => {
                   null != t.body &&

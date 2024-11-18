@@ -4,7 +4,10 @@ var i = n(544891),
 t.Z = {
     async fetch() {
         try {
-            let e = await i.tn.get({ url: l.ANM.FRIEND_SUGGESTIONS });
+            let e = await i.tn.get({
+                url: l.ANM.FRIEND_SUGGESTIONS,
+                rejectWithError: !1
+            });
             r.Z.dispatch({
                 type: 'LOAD_FRIEND_SUGGESTIONS_SUCCESS',
                 suggestions: e.body
@@ -14,6 +17,9 @@ t.Z = {
         }
     },
     ignore(e) {
-        i.tn.del(l.ANM.FRIEND_SUGGESTION(e));
+        i.tn.del({
+            url: l.ANM.FRIEND_SUGGESTION(e),
+            rejectWithError: !1
+        });
     }
 };

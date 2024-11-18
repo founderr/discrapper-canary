@@ -1,8 +1,8 @@
 n(47120);
 var r = n(192379),
     i = n(399606),
-    a = n(544891),
-    o = n(570140),
+    o = n(544891),
+    a = n(570140),
     l = n(367907),
     s = n(430824),
     c = n(496675),
@@ -10,8 +10,8 @@ var r = n(192379),
     d = n(70956),
     _ = n(997787),
     m = n(981631);
-let p = 1 * d.Z.Millis.DAY,
-    h = new Map();
+let h = 1 * d.Z.Millis.DAY,
+    E = new Map();
 t.Z = {
     useShouldShowChannelNotice(e) {
         let t = (0, i.e7)([s.Z, c.Z], () => {
@@ -23,36 +23,41 @@ t.Z = {
                 !(function (e) {
                     var t;
                     let n = Date.now(),
-                        r = null !== (t = h.get(e)) && void 0 !== t ? t : 0;
-                    if (!(n < r + p))
-                        h.set(e, n),
-                            a.tn.post({ url: m.ANM.GUILD_MIGRATE_COMMAND_SCOPE(e) }).then(
-                                (t) => {
-                                    var n, r;
-                                    o.Z.dispatch({
-                                        type: 'COMMANDS_MIGRATION_UPDATE_SUCCESS',
-                                        guildId: e,
-                                        integrationIdsWithAppCommands: null !== (r = null === (n = t.body) || void 0 === n ? void 0 : n.integration_ids_with_app_commands) && void 0 !== r ? r : []
-                                    });
-                                },
-                                () => {
-                                    h.set(e, r);
-                                }
-                            );
+                        r = null !== (t = E.get(e)) && void 0 !== t ? t : 0;
+                    if (!(n < r + h))
+                        E.set(e, n),
+                            o.tn
+                                .post({
+                                    url: m.ANM.GUILD_MIGRATE_COMMAND_SCOPE(e),
+                                    rejectWithError: !1
+                                })
+                                .then(
+                                    (t) => {
+                                        var n, r;
+                                        a.Z.dispatch({
+                                            type: 'COMMANDS_MIGRATION_UPDATE_SUCCESS',
+                                            guildId: e,
+                                            integrationIdsWithAppCommands: null !== (r = null === (n = t.body) || void 0 === n ? void 0 : n.integration_ids_with_app_commands) && void 0 !== r ? r : []
+                                        });
+                                    },
+                                    () => {
+                                        E.set(e, r);
+                                    }
+                                );
                 })(e);
         }, [e, t]);
         let n = (0, i.e7)([_.Z], () => _.Z.shouldShowChannelNotice(e));
         return t && n;
     },
     dismissNotice(e) {
-        o.Z.dispatch({
+        a.Z.dispatch({
             type: 'COMMANDS_MIGRATION_NOTICE_DISMISSED',
             guildId: e
         });
     },
     dismissOverviewTooltip(e, t) {
         var n;
-        o.Z.dispatch({
+        a.Z.dispatch({
             type: 'COMMANDS_MIGRATION_OVERVIEW_TOOLTIP_DISMISSED',
             guildId: e,
             integrationId: t.id
@@ -66,7 +71,7 @@ t.Z = {
     dismissToggleTooltip(e, t) {
         var n;
         if (void 0 !== t)
-            o.Z.dispatch({
+            a.Z.dispatch({
                 type: 'COMMANDS_MIGRATION_TOGGLE_TOOLTIP_DISMISSED',
                 integrationId: t.id
             }),

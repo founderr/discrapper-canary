@@ -92,7 +92,8 @@ function m() {
                             body: {
                                 return_url: t.returnUrl,
                                 cancel_url: t.cancelUrl
-                            }
+                            },
+                            rejectWithError: !1
                         })
                         .then((e) => {
                             let {

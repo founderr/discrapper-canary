@@ -169,7 +169,8 @@ async function E(e, n) {
 async function _(e, n) {
     await i.tn.put({
         url: I.ANM.GUILD_ONBOARDING(e),
-        body: n
+        body: n,
+        rejectWithError: !1
     });
 }
 function v(e, n, t) {

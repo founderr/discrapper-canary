@@ -10,7 +10,8 @@ async function s(e, t) {
     try {
         await r.tn.patch({
             url: a.ANM.MY_CONTENT_INVENTORY_APPLICATION(e),
-            body: t
+            body: t,
+            rejectWithError: !1
         });
     } catch (e) {
         throw new i.Hx(e);

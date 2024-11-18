@@ -63,7 +63,8 @@ let d = 'https://i.scdn.co/image/',
 async function E(e) {
     let { body: t } = await a.tn.get({
         url: c.ANM.APPLICATION_ASSETS(e),
-        oldFormErrors: !0
+        oldFormErrors: !0,
+        rejectWithError: !1
     });
     return (
         s.Z.dispatch({
@@ -115,7 +116,8 @@ async function S(e, t) {
     let { body: r } = await a.tn.post({
         url: c.ANM.APPLICATION_EXTERNAL_ASSETS(e),
         body: { urls: n },
-        oldFormErrors: !0
+        oldFormErrors: !0,
+        rejectWithError: !1
     });
     for (let { url: e, external_asset_path: t } of r) g[e] = t;
 }

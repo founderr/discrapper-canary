@@ -17,7 +17,8 @@ async function r(t, e, n, r) {
             let s = await l.tn.post({
                 url: a.ANM.APPLICATION_BUILD_SIZE(t, e, n),
                 body: { manifest_ids: r },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             });
             i.Z.dispatch({
                 type: 'APPLICATION_BUILD_SIZE_FETCH_SUCCESS',

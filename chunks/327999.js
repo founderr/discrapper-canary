@@ -112,7 +112,8 @@ async function N(e, t) {
     try {
         let t = await u.tn.post({
             url: p.ANM.MEMBER_SAFETY_SUPPLEMENTAL(e),
-            body: { user_ids: r }
+            body: { user_ids: r },
+            rejectWithError: !1
         });
         if (!Array.isArray(t.body)) return b(n, 0), [];
         let i = t.body.map(A),

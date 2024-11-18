@@ -141,7 +141,8 @@ async function x(e, t) {
                 await l.tn.post({
                     url: T.ANM.STREAM_PREVIEW(t),
                     body: { thumbnail: i },
-                    oldFormErrors: !0
+                    oldFormErrors: !0,
+                    rejectWithError: !1
                 });
         } catch (t) {
             new p.Z('ApplicationStreamPreviewUploadManager').error('Failed to post stream preview', t), r === e && N.start(60000, s);

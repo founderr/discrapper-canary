@@ -34,7 +34,8 @@ function o(e, t) {
     return r.tn.get({
         url: s.ANM.GUILD_AUDIT_LOG(e),
         query: n,
-        oldFormErrors: !0
+        oldFormErrors: !0,
+        rejectWithError: !1
     });
 }
 function E(e, t, n, r) {

@@ -24,7 +24,8 @@ let p = async () =>
                 query: {
                     include_inactive: !0,
                     limit: 5
-                }
+                },
+                rejectWithError: !1
             })
         ).body.map((e) => s.Z.createFromServer(e)),
     b = [
@@ -75,12 +76,17 @@ function g() {
         v = async () => {
             await o.tn.post({
                 url: '/debug/subscription',
-                body: { plan_id: e }
+                body: { plan_id: e },
+                rejectWithError: !1
             }),
                 await s();
         },
         C = async () => {
-            await o.tn.del('/debug/subscription'), await s();
+            await o.tn.del({
+                url: '/debug/subscription',
+                rejectWithError: !1
+            }),
+                await s();
         };
     return (0, r.jsx)(c.ScrollerThin, {
         className: i()(x.panel),

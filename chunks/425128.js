@@ -24,7 +24,8 @@ let l = async (e) => {
                         query: {
                             interval_offset: i,
                             cached: !s
-                        }
+                        },
+                        rejectWithError: !1
                     })
                 ).body,
                 a = null !== (l = e.wait_ms_until_next_fetch) && void 0 !== l ? l : 900000;
@@ -43,7 +44,8 @@ let l = async (e) => {
                         riot_connection_id: t,
                         lol_connection_id: n,
                         only_update_if_stale: l
-                    }
+                    },
+                    rejectWithError: !1
                 })
             ).body;
             return (
@@ -69,7 +71,8 @@ let l = async (e) => {
                         sort_by_statistic_id: i,
                         sort_desc: s,
                         show_winner_crown: l
-                    }
+                    },
+                    rejectWithError: !1
                 })
             ).body;
         } catch (e) {

@@ -20,7 +20,8 @@ function s(e) {
         r.tn
             .get({
                 url: a.ANM.TOP_EMOJIS_FOR_GUILD(e),
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then(
                 (t) =>

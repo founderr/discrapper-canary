@@ -68,7 +68,8 @@ async function _(e) {
         let { stripe_payment_intent_client_secret: t } = (
                 await o.tn.get({
                     url: l.ANM.BILLING_STRIPE_PAYMENT_INTENTS(e),
-                    oldFormErrors: !0
+                    oldFormErrors: !0,
+                    rejectWithError: !1
                 })
             ).body,
             n = await d();

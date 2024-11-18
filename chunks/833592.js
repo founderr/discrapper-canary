@@ -52,7 +52,8 @@ async function f(e, t) {
                     });
                 }
             },
-            query: { ...e }
+            query: { ...e },
+            rejectWithError: !1
         });
         null == t || t(),
             await a.Z.dispatch({
@@ -90,7 +91,10 @@ async function _(e) {
             optimistic: !0,
             ids: [e]
         }),
-            await r.tn.post({ url: d.ANM.NOTIF_CENTER_ITEMS_ACK(e) });
+            await r.tn.post({
+                url: d.ANM.NOTIF_CENTER_ITEMS_ACK(e),
+                rejectWithError: !1
+            });
     } catch (t) {
         a.Z.dispatch({
             type: 'NOTIFICATION_CENTER_ITEMS_ACK_FAILURE',
@@ -115,7 +119,8 @@ async function g(e) {
                         acked: (0, u.r)(e, t),
                         item_type: e.type
                     }
-                }
+                },
+                rejectWithError: !1
             });
     } catch (t) {
         throw (

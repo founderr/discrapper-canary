@@ -30,7 +30,8 @@ function c() {
     return i.tn
         .get({
             url: a.ANM.SETTINGS_CONSENT,
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         })
         .then(l, (e) => Promise.reject(Error(e.body.message)));
 }
@@ -42,7 +43,8 @@ function d(e, t) {
                 grant: e,
                 revoke: t
             },
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         })
         .then(l, o);
 }

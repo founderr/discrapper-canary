@@ -12,8 +12,8 @@ var i = n(200651),
     r = n(990547),
     a = n(442837),
     l = n(283693),
-    d = n(481060),
-    c = n(218613),
+    c = n(481060),
+    d = n(218613),
     s = n(911969),
     u = n(600164),
     _ = n(313201),
@@ -41,25 +41,25 @@ function x(e) {
         B = (0, _.Dt)(),
         [H, Z] = o.useState(A.Sc2),
         [D, P] = o.useState(A.d4z.GUILD_TEXT),
-        [k, j] = o.useState(''),
-        [O, K] = o.useState(!1),
-        G = (0, a.e7)([I.Z], () => I.Z.getGuild(x), [x]),
-        V = (0, h.m)(x),
-        W = (0, p.W3)(x),
-        Y = (0, E.Ui)(G),
+        [j, k] = o.useState(''),
+        [O, G] = o.useState(!1),
+        K = (0, a.e7)([I.Z], () => I.Z.getGuild(x), [x]),
+        W = (0, h.m)(x),
+        V = (0, p.W3)(x),
+        Y = (0, E.Ui)(K),
         z = o.useMemo(
             () =>
                 (function (e) {
                     let { canCreateStageChannel: t, canCreateForumChannel: n, canCreateMediaChannel: o } = e,
                         r = [
                             {
-                                icon: d.TextIcon,
+                                icon: c.TextIcon,
                                 label: U.intl.string(U.t.pnuRXF),
                                 value: A.d4z.GUILD_TEXT,
                                 description: U.intl.string(U.t.Hf5Lb2)
                             },
                             {
-                                icon: d.VoiceNormalIcon,
+                                icon: c.VoiceNormalIcon,
                                 label: U.intl.string(U.t.Sx55Oj),
                                 value: A.d4z.GUILD_VOICE,
                                 description: U.intl.string(U.t.pqfkoK)
@@ -68,21 +68,21 @@ function x(e) {
                     return (
                         t &&
                             r.push({
-                                icon: d.StageIcon,
+                                icon: c.StageIcon,
                                 label: U.intl.string(U.t.pNWst7),
                                 value: A.d4z.GUILD_STAGE_VOICE,
                                 description: U.intl.string(U.t.VPAwgo)
                             }),
                         n &&
                             (r.push({
-                                icon: d.ForumIcon,
+                                icon: c.ForumIcon,
                                 label: U.intl.string(U.t.eAVIDw),
                                 value: A.d4z.GUILD_FORUM,
                                 description: U.intl.string(U.t.iZ5pgo)
                             }),
                             o &&
                                 r.push({
-                                    icon: d.ImageIcon,
+                                    icon: c.ImageIcon,
                                     label: U.intl.string(U.t['6x6fVl']),
                                     value: A.d4z.GUILD_MEDIA,
                                     description: U.intl.string(U.t.JyCrwc),
@@ -97,12 +97,12 @@ function x(e) {
                                         (0, i.jsx)(t, { className: T.icon }),
                                         (0, i.jsxs)('div', {
                                             children: [
-                                                (0, i.jsxs)(d.Text, {
+                                                (0, i.jsxs)(c.Text, {
                                                     variant: 'text-md/normal',
                                                     color: 'header-primary',
-                                                    children: [n, (0, i.jsx)(c.ChannelTypeBadge, { isBeta: a })]
+                                                    children: [n, (0, i.jsx)(d.ChannelTypeBadge, { isBeta: a })]
                                                 }),
-                                                (0, i.jsx)(d.Text, {
+                                                (0, i.jsx)(c.Text, {
                                                     variant: 'text-xs/normal',
                                                     color: 'header-secondary',
                                                     children: r
@@ -117,11 +117,11 @@ function x(e) {
                         })
                     );
                 })({
-                    canCreateStageChannel: V,
-                    canCreateForumChannel: W,
+                    canCreateStageChannel: W,
+                    canCreateForumChannel: V,
                     canCreateMediaChannel: Y
                 }),
-            [V, W, Y]
+            [W, V, Y]
         ),
         Q = (0, a.e7)([S.Z], () => S.Z.getCategories(x)._categories, [x]),
         X = o.useMemo(
@@ -136,14 +136,14 @@ function x(e) {
             [Q]
         ),
         q = null !== (n = null === (t = z.find((e) => e.value === D)) || void 0 === t ? void 0 : t.channelIcon) && void 0 !== n ? n : N.Vq,
-        J = '' !== k;
+        J = '' !== j;
     return (0, i.jsx)('form', {
         onSubmit: function (e) {
             if ((e.preventDefault(), !J)) return;
-            K(!0);
+            G(!0);
             let t = {
                 type: D,
-                name: k,
+                name: j,
                 parent_id: 'null' !== H ? H : void 0,
                 permission_overwrites: [
                     {
@@ -168,7 +168,8 @@ function x(e) {
                             channel_type: null == e ? void 0 : null === (n = e.body) || void 0 === n ? void 0 : n.type
                         });
                     }
-                }
+                },
+                rejectWithError: !1
             })
                 .then(
                     (e) => {
@@ -177,33 +178,33 @@ function x(e) {
                     (e) => {}
                 )
                 .finally(() => {
-                    K(!1);
+                    G(!1);
                 });
         },
-        children: (0, i.jsxs)(d.ModalRoot, {
+        children: (0, i.jsxs)(c.ModalRoot, {
             transitionState: g,
             'aria-labelledby': w,
             children: [
-                (0, i.jsxs)(d.ModalHeader, {
+                (0, i.jsxs)(c.ModalHeader, {
                     children: [
-                        (0, i.jsx)(d.Heading, {
+                        (0, i.jsx)(c.Heading, {
                             id: w,
                             variant: 'heading-md/semibold',
                             children: U.intl.string(U.t['fUYU+v'])
                         }),
-                        (0, i.jsx)(d.ModalCloseButton, {
+                        (0, i.jsx)(c.ModalCloseButton, {
                             className: T.closeButton,
                             onClick: v
                         })
                     ]
                 }),
-                (0, i.jsxs)(d.ModalContent, {
+                (0, i.jsxs)(c.ModalContent, {
                     className: T.modalContent,
                     children: [
-                        (0, i.jsx)(d.FormItem, {
+                        (0, i.jsx)(c.FormItem, {
                             title: U.intl.string(U.t.vHCZws),
                             titleId: F,
-                            children: (0, i.jsx)(d.SingleSelect, {
+                            children: (0, i.jsx)(c.SingleSelect, {
                                 placeholder: U.intl.string(U.t['g/Rr2d']),
                                 value: H,
                                 options: X,
@@ -212,10 +213,10 @@ function x(e) {
                             })
                         }),
                         (0, i.jsx)('div', { className: T.spacer }),
-                        (0, i.jsx)(d.FormItem, {
+                        (0, i.jsx)(c.FormItem, {
                             title: U.intl.string(U.t['7ZcXGx']),
                             titleId: M,
-                            children: (0, i.jsx)(d.RadioGroup, {
+                            children: (0, i.jsx)(c.RadioGroup, {
                                 options: z,
                                 value: D,
                                 onChange: (e) => {
@@ -226,13 +227,13 @@ function x(e) {
                             })
                         }),
                         (0, i.jsx)('div', { className: T.spacer }),
-                        (0, i.jsx)(d.FormItem, {
+                        (0, i.jsx)(c.FormItem, {
                             title: U.intl.string(U.t.PVbHDg),
                             titleId: B,
-                            children: (0, i.jsx)(d.TextInput, {
-                                value: k,
+                            children: (0, i.jsx)(c.TextInput, {
+                                value: j,
                                 onChange: function (e) {
-                                    (0, m.zi)(D) && (e = (0, y.Nj)(e)), j(e);
+                                    (0, m.zi)(D) && (e = (0, y.Nj)(e)), k(e);
                                 },
                                 maxLength: A.HN8,
                                 placeholder: U.intl.string(U.t['bw/b8P']),
@@ -249,18 +250,18 @@ function x(e) {
                         })
                     ]
                 }),
-                (0, i.jsxs)(d.ModalFooter, {
+                (0, i.jsxs)(c.ModalFooter, {
                     justify: u.Z.Justify.BETWEEN,
                     children: [
-                        (0, i.jsx)(d.Button, {
+                        (0, i.jsx)(c.Button, {
                             type: 'submit',
                             submitting: O,
                             disabled: !J,
                             children: U.intl.string(U.t.R3BPHx)
                         }),
-                        (0, i.jsxs)(d.Button, {
-                            look: d.Button.Looks.LINK,
-                            color: d.Button.Colors.PRIMARY,
+                        (0, i.jsxs)(c.Button, {
+                            look: c.Button.Looks.LINK,
+                            color: c.Button.Colors.PRIMARY,
                             className: T.backButton,
                             innerClassName: T.backButtonInner,
                             onClick: v,

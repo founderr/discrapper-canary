@@ -13,7 +13,10 @@ function s(e) {
             applicationId: e
         }),
         r.tn
-            .get({ url: a.ANM.STORE_LAYOUT(e) })
+            .get({
+                url: a.ANM.STORE_LAYOUT(e),
+                rejectWithError: !1
+            })
             .then(
                 (t) => (
                     i.Z.dispatch({

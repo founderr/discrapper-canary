@@ -41,7 +41,8 @@ function N(e, t, n) {
         headers: {
             'Client-ID': '33kozedd0zs6fbauka98psnc7zwom2s',
             Authorization: 'Bearer '.concat(n)
-        }
+        },
+        rejectWithError: !1
     });
 }
 async function C(e, t) {
@@ -128,7 +129,8 @@ let R = new (class e {
                     broadcastType: 'all'
                 },
                 headers: { Authorization: 'Bearer '.concat(null != t ? t : e.accessToken) },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             });
             if (r.length < 1) throw Error('no stream');
             let {

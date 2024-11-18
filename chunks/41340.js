@@ -86,7 +86,8 @@ function v(e) {
                 };
             await o.tn.patch({
                 url: '/debug/subscriptions/'.concat(v.id),
-                body: a
+                body: a,
+                rejectWithError: !1
             }),
                 C();
         },

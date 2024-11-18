@@ -54,7 +54,8 @@ function T(e, t, n) {
             url: b.ANM.CUSTOM_CALL_SOUNDS(e),
             body: u,
             signal: i.signal,
-            onRequestProgress: a
+            onRequestProgress: a,
+            rejectWithError: !1
         })
         .then(b.VqG, () => {
             if (i.signal.aborted) return;
@@ -76,7 +77,8 @@ function y(e, t, n, r) {
                 url: b.ANM.SEND_SOUNDBOARD_SOUND(e),
                 body: _,
                 signal: l.signal,
-                onRequestProgress: u
+                onRequestProgress: u,
+                rejectWithError: !1
             })
             .then(b.VqG, () => {
                 if (l.signal.aborted) return;
@@ -105,7 +107,8 @@ let A = async (e) => {
                       };
             await s.tn.post({
                 url: b.ANM.VOICE_CHANNEL_EFFECTS(t.id),
-                body: e
+                body: e,
+                rejectWithError: !1
             }),
                 C(t, n, r, u),
                 o.Z.dispatch({ type: 'VOICE_CHANNEL_EFFECT_SENT_LOCAL' });

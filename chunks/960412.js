@@ -27,7 +27,8 @@ async function c() {
                     let n = null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.initialized;
                     return (0, r.iG)({ initialized: n });
                 }
-            }
+            },
+            rejectWithError: !1
         });
         return (
             a.Z.dispatch({
@@ -55,7 +56,8 @@ async function d(e, t) {
                     category: e,
                     value: t
                 }
-            }
+            },
+            rejectWithError: !1
         });
         a.Z.dispatch({
             type: 'EMAIL_SETTINGS_UPDATE_SUCCESS',
@@ -87,7 +89,8 @@ async function u() {
                     category: 'marketing',
                     value: !1
                 }
-            }
+            },
+            rejectWithError: !1
         });
         a.Z.dispatch({
             type: 'EMAIL_SETTINGS_UPDATE_SUCCESS',

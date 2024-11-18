@@ -20,7 +20,10 @@ async function c(e) {
         try {
             var n, c, d;
             null != e && l.default.track(u.rMx.FETCH_USER_OFFER_STARTED, { call_location: e });
-            let t = await r.tn.post({ url: u.ANM.USER_OFFER }),
+            let t = await r.tn.post({
+                    url: u.ANM.USER_OFFER,
+                    rejectWithError: !1
+                }),
                 f = null !== (n = t.body.user_trial_offer) && void 0 !== n ? n : null,
                 _ = null !== (c = t.body.user_discount) && void 0 !== c ? c : null,
                 p = null !== (d = t.body.user_discount_offer) && void 0 !== d ? d : null;
@@ -54,7 +57,8 @@ function d(e, t) {
                     user_trial_offer_id: n,
                     user_discount_offer_id: i
                 },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then((e) => {
                 var t, n, r;

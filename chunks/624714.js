@@ -58,7 +58,8 @@ t.Z = {
                     url: g.ANM.APPLICATION_TICKET(n),
                     body: { test_mode: s.Z.inTestModeForApplication(n) || r.Z.inDevModeForApplication(n) },
                     retries: 3,
-                    oldFormErrors: !0
+                    oldFormErrors: !0,
+                    rejectWithError: !1
                 })
                 .then((e) => {
                     let { body: t } = e;

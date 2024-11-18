@@ -18,7 +18,10 @@ var r = n(913527),
 async function f() {
     let e = l.default.getCurrentUser();
     try {
-        let { body: t } = await a.tn.get({ url: d.ANM.USER_PERKS_DEMOS });
+        let { body: t } = await a.tn.get({
+            url: d.ANM.USER_PERKS_DEMOS,
+            rejectWithError: !1
+        });
         (0, o.QI)(e) &&
             (t.available = {
                 ...t.available,
@@ -57,7 +60,10 @@ async function _(e) {
                     !0
                 );
         }
-        let { body: n } = await a.tn.post({ url: d.ANM.USER_PERKS_DEMOS_ACTIVATE(e) });
+        let { body: n } = await a.tn.post({
+            url: d.ANM.USER_PERKS_DEMOS_ACTIVATE(e),
+            rejectWithError: !1
+        });
         return p(e, n), !0;
     } catch {
         return (

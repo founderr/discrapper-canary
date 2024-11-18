@@ -39,7 +39,8 @@ t.Z = {
                 body: { recipients: s },
                 context: { location: i },
                 oldFormErrors: !0,
-                retries: 3
+                retries: 3,
+                rejectWithError: !1
             });
             null == a || a();
             let t = this._openPrivateChannel(e.body);
@@ -59,7 +60,8 @@ t.Z = {
             n = await r.tn.post({
                 url: b.ANM.USER_CHANNELS,
                 body: { recipients: t },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             }),
             i = (0, _.q_)(n.body);
         return (
@@ -75,7 +77,10 @@ t.Z = {
         return null != t ? t : await this.ensurePrivateChannel(e);
     },
     async getDMChannel(e) {
-        let t = await r.tn.get(b.ANM.DM_CHANNEL(e)),
+        let t = await r.tn.get({
+                url: b.ANM.DM_CHANNEL(e),
+                rejectWithError: !1
+            }),
             n = (0, _.q_)(t.body);
         return (
             a.Z.dispatch({
@@ -120,7 +125,8 @@ t.Z = {
                 .del({
                     url: b.ANM.CHANNEL(e),
                     query: { silent: n },
-                    oldFormErrors: !0
+                    oldFormErrors: !0,
+                    rejectWithError: !1
                 })
                 .then(() => {
                     i.uv.announce(I.intl.string(I.t.nRbucn));
@@ -134,7 +140,8 @@ t.Z = {
         let n = await r.tn.put({
             url: b.ANM.CHANNEL_PERMISSIONS_OVERWRITE(e, t.id),
             body: t,
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         });
         return (
             a.Z.dispatch({
@@ -148,7 +155,8 @@ t.Z = {
     async clearPermissionOverwrite(e, t) {
         let n = await r.tn.del({
             url: b.ANM.CHANNEL_PERMISSIONS_OVERWRITE(e, t),
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         });
         return (
             a.Z.dispatch({
@@ -164,7 +172,8 @@ t.Z = {
             .put({
                 url: b.ANM.CHANNEL_RECIPIENT(e, t),
                 context: { location: n },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then((t) => ((i.uv.announce(I.intl.string(I.t.cU0t1N)), null == a || a(), 201 === t.status) ? this._openPrivateChannel(t.body).id : e))
             .catch(() => (i.uv.announce(I.intl.string(I.t['8GEden'])), e));
@@ -175,20 +184,23 @@ t.Z = {
     removeRecipient: (e, t) =>
         r.tn.del({
             url: b.ANM.CHANNEL_RECIPIENT(e, t),
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         }),
     setDMOwner: (e, t) =>
         r.tn.patch({
             url: b.ANM.CHANNEL(e),
             body: { owner: t },
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         }),
     async setName(e, t) {
         let n = p.Z.getChannel(e),
             i = await r.tn.patch({
                 url: b.ANM.CHANNEL(e),
                 body: { name: t },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             }),
             a = null == n ? void 0 : n.getGuildId();
         return null != a && !(null == n ? void 0 : n.isThread()) && l.Z.checkGuildTemplateDirty(a), i;
@@ -199,7 +211,8 @@ t.Z = {
             .patch({
                 url: b.ANM.CHANNEL(e),
                 body: { icon: t },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then(() => {
                 let e = null == n ? void 0 : n.getGuildId();
@@ -209,7 +222,8 @@ t.Z = {
     convertToGuild: (e) =>
         r.tn.post({
             url: b.ANM.CHANNEL_CONVERT(e),
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         }),
     preload(e, t) {
         a.Z.dispatch({
@@ -239,9 +253,16 @@ t.Z = {
         let s = await r.tn.post({
             url: b.ANM.GUILD_CHANNELS(e),
             body: a,
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         });
         return l.Z.checkGuildTemplateDirty(e), s;
     },
-    fetchChannel: async (e) => (await r.tn.get(b.ANM.CHANNEL(e))).body
+    fetchChannel: async (e) =>
+        (
+            await r.tn.get({
+                url: b.ANM.CHANNEL(e),
+                rejectWithError: !1
+            })
+        ).body
 };

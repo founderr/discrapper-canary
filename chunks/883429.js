@@ -35,7 +35,8 @@ t.Z = {
                 emoji_id: e.emojiId,
                 emoji_name: null != e.emojiId ? void 0 : e.emojiName,
                 moderated: e.moderated
-            }
+            },
+            rejectWithError: !1
         }),
     updateForumTag(e, t) {
         let n = r.tn.put({
@@ -45,19 +46,24 @@ t.Z = {
                 emoji_id: e.emojiId,
                 emoji_name: null == e.emojiId ? e.emojiName : void 0,
                 moderated: e.moderated
-            }
+            },
+            rejectWithError: !1
         });
         _(() => n, f.intl.string(f.t.T8sBLC), f.intl.string(f.t.imcb5u));
     },
     deleteForumTag(e, t) {
-        let n = r.tn.del({ url: d.ANM.FORUM_TAG(e, t) });
+        let n = r.tn.del({
+            url: d.ANM.FORUM_TAG(e, t),
+            rejectWithError: !1
+        });
         _(() => n, f.intl.string(f.t['0ZkNDQ']), f.intl.string(f.t.imcb5u));
     },
     updateForumPostTags: async (e, t) => (
         await s.Z.unarchiveThreadIfNecessary(e),
         r.tn.patch({
             url: d.ANM.CHANNEL(e),
-            body: { applied_tags: t }
+            body: { applied_tags: t },
+            rejectWithError: !1
         })
     ),
     hideAdminOnboarding(e, t) {

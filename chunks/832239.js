@@ -28,11 +28,15 @@ function s() {
     o.Z.dispatch({ type: 'VIBING_WUMPUS_PAUSE_MUSIC' });
 }
 function u(t) {
-    return i.tn.del({ url: r.ANM.DELETE_SAFETY_WARNINGS(t) });
+    return i.tn.del({
+        url: r.ANM.DELETE_SAFETY_WARNINGS(t),
+        rejectWithError: !1
+    });
 }
 function l(t, n) {
     return i.tn.post({
         url: r.ANM.ADD_SAFETY_WARNING(t),
-        body: { safety_warning_type: n }
+        body: { safety_warning_type: n },
+        rejectWithError: !1
     });
 }

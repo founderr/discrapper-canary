@@ -52,7 +52,8 @@ class E extends r.PureComponent {
                     .post({
                         url: u.ANM.HANDOFF,
                         body: { key: e },
-                        oldFormErrors: !0
+                        oldFormErrors: !0,
+                        rejectWithError: !1
                     })
                     .then(
                         (t) => this.handoff(t.body.handoff_token),

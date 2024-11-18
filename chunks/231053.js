@@ -39,7 +39,8 @@ let f = async (e) => {
             await a.tn.get({
                 url: c.ANM.EMOJI_SOURCE_DATA(e),
                 oldFormErrors: !0,
-                timeout: 5000
+                timeout: 5000,
+                rejectWithError: !1
             })
         ).body;
         (null == n ? void 0 : n.type) === 'GUILD'

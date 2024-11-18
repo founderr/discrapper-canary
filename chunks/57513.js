@@ -34,7 +34,8 @@ async function m(e, t) {
                     platform: (0, u.D)(),
                     locale: c
                 },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then(
                 (n) => {

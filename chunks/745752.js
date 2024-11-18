@@ -38,24 +38,29 @@ function m(e) {
             type: 'GUILD_ONBOARDING_PROMPTS_FETCH_START',
             guildId: e
         }),
-        r.tn.get({ url: _.ANM.GUILD_ONBOARDING(e) }).then(
-            (t) => {
-                let { body: n } = t,
-                    r = (0, f.cf)(n);
-                return i.Z.dispatch({
-                    type: 'GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS',
-                    guildId: e,
-                    ...r
-                }).then(() => r.prompts);
-            },
-            (t) => (
-                i.Z.dispatch({
-                    type: 'GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE',
-                    guildId: e
-                }),
-                t
+        r.tn
+            .get({
+                url: _.ANM.GUILD_ONBOARDING(e),
+                rejectWithError: !1
+            })
+            .then(
+                (t) => {
+                    let { body: n } = t,
+                        r = (0, f.cf)(n);
+                    return i.Z.dispatch({
+                        type: 'GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS',
+                        guildId: e,
+                        ...r
+                    }).then(() => r.prompts);
+                },
+                (t) => (
+                    i.Z.dispatch({
+                        type: 'GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE',
+                        guildId: e
+                    }),
+                    t
+                )
             )
-        )
     );
 }
 async function g(e) {

@@ -20,7 +20,8 @@ function h(e, t) {
             insecure: n,
             friend_sync: _.BFP.has(e)
         },
-        oldFormErrors: !0
+        oldFormErrors: !0,
+        rejectWithError: !1
     });
 }
 t.Z = {
@@ -28,7 +29,8 @@ t.Z = {
         i.tn
             .get({
                 url: _.ANM.CONNECTIONS,
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then(
                 (e) =>
@@ -62,7 +64,8 @@ t.Z = {
         p = p + '?' + h.toString();
         let g = await i.tn.get({
                 url: p,
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             }),
             { state: E } = (0, s.xp)(null !== (t = g.body.url) && void 0 !== t ? t : '');
         return null != E && !o.g.getCurrentConfig({ location: 'ConnectedAccountsActionCreators.authorize' }).enabled && c.Z.addPendingAuthorizedState(E), g;
@@ -84,18 +87,21 @@ t.Z = {
                     name: n,
                     friend_sync: _.BFP.has(e)
                 }
-            }
+            },
+            rejectWithError: !1
         });
     },
     disconnect: (e, t) =>
         i.tn.del({
             url: _.ANM.CONNECTION(e, t),
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         }),
     refresh: (e, t) =>
         i.tn.post({
             url: _.ANM.CONNECTION_REFRESH(e, t),
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         }),
     setVisibility(e, t, n) {
         return this.update(e, t, { visibility: 1 === n });
@@ -117,7 +123,8 @@ t.Z = {
             trackedActionData: {
                 event: r.NetworkActionNames.USER_CONNECTIONS_UPDATE,
                 properties: { ...n }
-            }
+            },
+            rejectWithError: !1
         }),
     joinServer(e, t) {
         a.Z.dispatch({
@@ -128,7 +135,8 @@ t.Z = {
             i.tn.post(
                 {
                     url: _.ANM.INTEGRATION_JOIN(e),
-                    oldFormErrors: !0
+                    oldFormErrors: !0,
+                    rejectWithError: !1
                 },
                 (n) => {
                     a.Z.dispatch({
@@ -152,7 +160,8 @@ t.Z = {
                 body: { access_token: n }
             } = await i.tn.get({
                 url: _.ANM.CONNECTION_ACCESS_TOKEN(e, t),
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             });
             return (
                 a.Z.dispatch({
@@ -180,7 +189,8 @@ t.Z = {
         i.tn.post({
             url: _.ANM.CONNECTIONS_LINK_DISPATCH_AUTH_CALLBACK(e),
             body: { ...t },
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         }),
     async completeTwoWayLink(e, t, n, r, i) {
         if (null == t) {
@@ -210,7 +220,8 @@ t.Z = {
                 code: n,
                 openid_params: r
             },
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         });
     },
     getHandoffStatus: function (e, t) {
@@ -219,7 +230,8 @@ t.Z = {
         let r = ''.concat(_.ANM.CONNECTIONS_SESSION_HANDOFF(e), '?').concat(n.toString());
         return i.tn.get({
             url: r,
-            body: { state: t }
+            body: { state: t },
+            rejectWithError: !1
         });
     }
 };

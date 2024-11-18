@@ -31,7 +31,10 @@ var r = n(544891),
     u = n(308083),
     c = n(981631);
 async function d(e) {
-    let t = await r.tn.get({ url: c.ANM.GUILD_CLAN_DISCOVERY_INFO(e) });
+    let t = await r.tn.get({
+        url: c.ANM.GUILD_CLAN_DISCOVERY_INFO(e),
+        rejectWithError: !1
+    });
     return (0, u.Gh)(t.body);
 }
 async function f(e, t, n) {
@@ -48,7 +51,8 @@ async function f(e, t, n) {
             body: {
                 identity_guild_id: e,
                 identity_enabled: t
-            }
+            },
+            rejectWithError: !1
         });
         i.Z.dispatch({
             type: 'CURRENT_USER_UPDATE',
@@ -95,7 +99,10 @@ let h = (e) => {
 };
 async function m(e) {
     i.Z.dispatch({ type: 'CLAN_SETTINGS_FETCH_START' });
-    let t = await r.tn.get({ url: c.ANM.CLAN_SETTINGS(e) });
+    let t = await r.tn.get({
+        url: c.ANM.CLAN_SETTINGS(e),
+        rejectWithError: !1
+    });
     i.Z.dispatch({
         type: 'CLAN_SETTINGS_FETCH_SUCCESS',
         guildId: e,
@@ -125,7 +132,8 @@ async function g(e, t) {
                 brand_color_primary: t.brandPrimaryColor,
                 brand_color_secondary: t.brandSecondaryColor,
                 wildcard_descriptors: t.wildcardDescriptors
-            }
+            },
+            rejectWithError: !1
         });
         return i.Z.dispatch({ type: 'CLAN_SETTINGS_SUBMIT_SUCCESS' }), a.body;
     } catch (e) {
@@ -140,7 +148,10 @@ async function g(e, t) {
 }
 async function E(e) {
     try {
-        await r.tn.post({ url: c.ANM.DISABLE_CLAN(e) });
+        await r.tn.post({
+            url: c.ANM.DISABLE_CLAN(e),
+            rejectWithError: !1
+        });
     } catch (e) {
         throw e;
     }

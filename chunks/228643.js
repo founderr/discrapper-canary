@@ -1,21 +1,24 @@
 n.d(t, {
     L_: function () {
-        return r;
+        return s;
     },
     nj: function () {
         return c;
     },
     sE: function () {
-        return s;
+        return r;
     }
 });
 var i = n(544891),
     o = n(570140),
     a = n(480608),
     l = n(981631);
-function s(e, t) {
+function r(e, t) {
     i.tn
-        .get({ url: l.ANM.GUILD_ROLE_CONNECTIONS_CONFIGURATION(e, t) })
+        .get({
+            url: l.ANM.GUILD_ROLE_CONNECTIONS_CONFIGURATION(e, t),
+            rejectWithError: !1
+        })
         .then((e) => {
             let n = [];
             e.body.length > 0 &&
@@ -36,8 +39,8 @@ function s(e, t) {
         })
         .catch(() => {});
 }
-async function r(e, t, n) {
-    let s = n.map((e) =>
+async function s(e, t, n) {
+    let r = n.map((e) =>
             e.map((e) => ({
                 connection_type: e.connectionType,
                 connection_metadata_field: e.connectionMetadataField,
@@ -46,11 +49,12 @@ async function r(e, t, n) {
                 value: e.value
             }))
         ),
-        r = await i.tn
+        s = await i.tn
             .put({
                 url: l.ANM.GUILD_ROLE_CONNECTIONS_CONFIGURATION(e, t),
-                body: 0 === s.length ? [] : s,
-                oldFormErrors: !0
+                body: 0 === r.length ? [] : r,
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then((e) => {
                 let t = [];
@@ -79,9 +83,14 @@ async function r(e, t, n) {
         o.Z.dispatch({
             type: 'GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS',
             roleId: t,
-            roleConnectionConfigurations: r
+            roleConnectionConfigurations: s
         });
 }
 async function c() {
-    return (await i.tn.get({ url: l.ANM.APPLICATION_USER_ROLE_CONNECTIONS })).body;
+    return (
+        await i.tn.get({
+            url: l.ANM.APPLICATION_USER_ROLE_CONNECTIONS,
+            rejectWithError: !1
+        })
+    ).body;
 }

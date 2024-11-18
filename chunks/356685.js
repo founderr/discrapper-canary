@@ -12,7 +12,8 @@ async function r(e, n, t) {
             query: {
                 type: n,
                 entity_id: t
-            }
+            },
+            rejectWithError: !1
         })
     ).body;
 }

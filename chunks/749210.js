@@ -76,7 +76,8 @@ async function D(e) {
                 },
                 context: { source: d },
                 oldFormErrors: !0,
-                body: {}
+                body: {},
+                rejectWithError: !1
             });
         if (
             (null != i.body.join_request &&
@@ -156,33 +157,38 @@ t.Z = {
         a.tn.patch({
             url: A.ANM.GUILD_MEMBER(e, t),
             body: { mute: n },
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         }),
     setServerDeaf: (e, t, n) =>
         a.tn.patch({
             url: A.ANM.GUILD_MEMBER(e, t),
             body: { deaf: n },
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         }),
     setChannel(e, t, n) {
         a.tn.patch({
             url: A.ANM.GUILD_MEMBER(e, t),
             body: { channel_id: n },
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         });
     },
     setMemberFlags(e, t, n) {
         a.tn.patch({
             url: A.ANM.GUILD_MEMBER(e, t),
             body: { flags: n },
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         });
     },
     kickUser: (e, t, n) =>
         a.tn.del({
             url: A.ANM.GUILD_MEMBER(e, t),
             reason: n,
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         }),
     setCommunicationDisabledUntil(e) {
         let { guildId: t, userId: n, communicationDisabledUntilTimestamp: i, duration: a, reason: s, location: o } = e;
@@ -201,7 +207,8 @@ t.Z = {
                     communication_disabled_until: i,
                     location: null != o ? o : null
                 }
-            }
+            },
+            rejectWithError: !1
         });
     },
     banUser: (e, t, n, r) =>
@@ -209,12 +216,14 @@ t.Z = {
             url: A.ANM.GUILD_BAN(e, t),
             reason: r,
             body: { delete_message_seconds: n },
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         }),
     unbanUser: (e, t) =>
         a.tn.del({
             url: A.ANM.GUILD_BAN(e, t),
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         }),
     banMultipleUsers: (e, t, n, r) =>
         a.tn.post({
@@ -224,7 +233,8 @@ t.Z = {
                 delete_message_seconds: n
             },
             reason: r,
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         }),
     async createRole(e, t, n) {
         let r = {
@@ -236,7 +246,8 @@ t.Z = {
             let t = await a.tn.post({
                     url: A.ANM.GUILD_ROLES(e),
                     oldFormErrors: !0,
-                    body: r
+                    body: r,
+                    rejectWithError: !1
                 }),
                 n = t.body;
             return (
@@ -263,7 +274,8 @@ t.Z = {
                     icon: o,
                     unicode_emoji: i
                 },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             });
         return l.Z.checkGuildTemplateDirty(e), u;
     },
@@ -271,13 +283,15 @@ t.Z = {
         a.tn.patch({
             url: A.ANM.GUILD_ROLE(e, t),
             body: { permissions: n },
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         }),
     deleteRole(e, t) {
         a.tn
             .del({
                 url: A.ANM.GUILD_ROLE(e, t),
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then(() => {
                 l.Z.checkGuildTemplateDirty(e);
@@ -287,7 +301,8 @@ t.Z = {
         let n = await a.tn.patch({
             url: A.ANM.GUILD_CHANNELS(e),
             body: t,
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         });
         return l.Z.checkGuildTemplateDirty(e), n;
     },
@@ -295,7 +310,8 @@ t.Z = {
         let n = await a.tn.patch({
             url: A.ANM.GUILD_ROLES(e),
             body: t,
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         });
         return l.Z.checkGuildTemplateDirty(e), n;
     },
@@ -414,7 +430,8 @@ t.Z = {
     async fetchApplications(e, t) {
         let n = {
             url: A.ANM.GUILD_APPLICATIONS(e),
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         };
         null != t && (n.query = { channel_id: t });
         let r = (await a.tn.get(n)).body;
@@ -433,7 +450,8 @@ t.Z = {
                 .get({
                     url: A.ANM.GUILD_BANS(e),
                     oldFormErrors: !0,
-                    query: r
+                    query: r,
+                    rejectWithError: !1
                 })
                 .then((t) => {
                     s.Z.dispatch({
@@ -452,7 +470,8 @@ t.Z = {
                 .get({
                     url: A.ANM.GUILD_BANS_SEARCH(e),
                     oldFormErrors: !0,
-                    query: i
+                    query: i,
+                    rejectWithError: !1
                 })
                 .then((t) => {
                     s.Z.dispatch({
@@ -466,7 +485,8 @@ t.Z = {
         await a.tn
             .get({
                 url: A.ANM.GUILD_BANS(e),
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then((e) => {
                 s.Z.dispatch({
@@ -479,7 +499,8 @@ t.Z = {
         a.tn
             .get({
                 url: A.ANM.GUILD_ROLE_CONNECTIONS_ELIGIBILITY(e, t),
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then((e) => {
                 let { body: n } = e;
@@ -495,20 +516,23 @@ t.Z = {
     async assignGuildRoleConnection(e, t) {
         await a.tn.post({
             url: A.ANM.GUILD_ROLE_CONNECTIONS_ASSIGN(e, t),
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         });
     },
     async unassignGuildRoleConnection(e, t) {
         await a.tn.post({
             url: A.ANM.GUILD_ROLE_CONNECTIONS_UNASSIGN(e, t),
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         });
     },
     getGuildRoleConnectionsConfigurations: async (e) =>
         (
             await a.tn.get({
                 url: A.ANM.GUILD_ROLE_CONNECTIONS_CONFIGURATIONS(e),
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
         ).body
 };

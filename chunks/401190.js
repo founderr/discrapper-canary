@@ -13,7 +13,8 @@ t.Z = {
             .post({
                 url: l.ANM.HYPESQUAD_ONLINE,
                 body: { house_id: a[e.houseID] },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then(() =>
                 s.Z.dispatch({
@@ -28,7 +29,8 @@ t.Z = {
         i.tn
             .del({
                 url: l.ANM.HYPESQUAD_ONLINE,
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then(() => s.Z.dispatch({ type: 'HYPESQUAD_ONLINE_MEMBERSHIP_LEAVE_SUCCESS' }))
             .catch((e) => {

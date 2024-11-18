@@ -101,7 +101,8 @@ async function S(e) {
                 after: s,
                 type: l
             },
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         }),
         f = l === u.O.VOTE ? d.body.users : d.body;
     return (
@@ -154,7 +155,8 @@ async function T(e, t, n) {
                     location: r,
                     type: o ? u.O.BURST : u.O.NORMAL
                 },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then(() => {
                 o
@@ -198,7 +200,8 @@ async function A(e, t, n) {
         a.tn
             .del({
                 url: g.ANM.REMOVE_REACTIONS(e, t),
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .catch((n) => {
                 v(n, () => A(e, t, { isRetry: !0 }), { isRetry: r });
@@ -211,7 +214,8 @@ async function N(e, t, n, r) {
     a.tn
         .del({
             url: g.ANM.REMOVE_EMOJI_REACTIONS(e, t, s),
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         })
         .catch((r) => {
             v(r, () => N(e, t, n, { isRetry: !0 }), { isRetry: i });
@@ -240,7 +244,8 @@ async function C(e) {
                     location: i,
                     burst: d
                 },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then(() => {
                 (null == l ? void 0 : l.burst) ? s.uv.announce(E.intl.formatToPlainString(E.t['3l9f6u'], { name: r.name })) : s.uv.announce(E.intl.formatToPlainString(E.t['DQxi+/'], { name: r.name }));

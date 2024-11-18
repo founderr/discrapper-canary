@@ -21,7 +21,8 @@ t.Z = {
                 let i = await s.tn.get({
                     url: m.ANM.POMELO_SUGGESTIONS_UNAUTHED,
                     query: null == e ? void 0 : { global_name: e },
-                    timeout: t
+                    timeout: t,
+                    rejectWithError: !1
                 });
                 if (i.ok && (null === (n = i.body) || void 0 === n ? void 0 : n.username) != null)
                     return r.Z.dispatch({
@@ -44,7 +45,8 @@ t.Z = {
                 });
                 let n = await s.tn.get({
                     url: m.ANM.POMELO_SUGGESTIONS,
-                    timeout: e
+                    timeout: e,
+                    rejectWithError: !1
                 });
                 if (n.ok && (null === (t = n.body) || void 0 === t ? void 0 : t.username) != null)
                     return r.Z.dispatch({
@@ -94,7 +96,8 @@ t.Z = {
                     trackedActionData: {
                         event: i.NetworkActionNames.POMELO_ATTEMPT,
                         properties: { requested_username: e }
-                    }
+                    },
+                    rejectWithError: !1
                 });
                 t.body.taken &&
                     l.default.track(m.rMx.POMELO_ERRORS, {
@@ -134,7 +137,8 @@ t.Z = {
                 trackedActionData: {
                     event: i.NetworkActionNames.POMELO_CREATE,
                     properties: { one_click_flow: t }
-                }
+                },
+                rejectWithError: !1
             });
         return (
             r.Z.dispatch({

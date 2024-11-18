@@ -137,7 +137,8 @@ async function S(e) {
                 await o.tn.get({
                     url: g.ANM.GUILD_DISCOVERY,
                     query: s.stringify({ categories: [t] }),
-                    oldFormErrors: !0
+                    oldFormErrors: !0,
+                    rejectWithError: !1
                 })
             ).body;
             d.Z.dispatch({
@@ -156,7 +157,7 @@ async function S(e) {
         }
     }
 }
-async function T(e) {
+async function N(e) {
     var t;
     let n = null !== (t = null == e ? void 0 : e.forceRefresh) && void 0 !== t && t,
         i = m.Z.getLastFetchTimestamp({ categoryId: f.Hk });
@@ -174,7 +175,8 @@ async function T(e) {
                         offset: 0,
                         limit: 30
                     }),
-                    oldFormErrors: !0
+                    oldFormErrors: !0,
+                    rejectWithError: !1
                 })
             ).body;
             d.Z.dispatch({
@@ -217,7 +219,7 @@ t.Z = {
             ignoreQueries: null !== (t = null == e ? void 0 : e.ignoreQueries) && void 0 !== t ? t : []
         });
     },
-    fetchFeaturedGuilds: T,
+    fetchFeaturedGuilds: N,
     fetchCategoryFeaturedGuilds: S,
     resetSearchLayout: function () {
         d.Z.dispatch({ type: 'GLOBAL_DISCOVERY_SERVERS_SEARCH_LAYOUT_RESET' });

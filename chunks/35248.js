@@ -52,7 +52,8 @@ let _ = (e) => {
                                             .post({
                                                 url: E.ANM.HANDOFF,
                                                 body: { key: o },
-                                                oldFormErrors: !0
+                                                oldFormErrors: !0,
+                                                rejectWithError: !1
                                             })
                                             .then(
                                                 (e) => {

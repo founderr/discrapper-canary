@@ -5,7 +5,8 @@ n.Z = {
         i.tn.put({
             url: l.ANM.NOTE(e),
             body: { note: n },
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         });
     }
 };

@@ -24,7 +24,8 @@ let u = async (e) => {
             let e = (
                     await r.tn.get({
                         url: o.ANM.MY_CONTENT_INVENTORY(t),
-                        ...(n === s.YN.GAME_PROFILE_FEED && { query: { for_game_profile: !0 } })
+                        ...(n === s.YN.GAME_PROFILE_FEED && { query: { for_game_profile: !0 } }),
+                        rejectWithError: !1
                     })
                 ).body,
                 i = e.wait_ms_until_next_fetch;
@@ -46,7 +47,8 @@ let u = async (e) => {
             let n = (
                 await r.tn.get({
                     url: o.ANM.CONTENT_INVENTORY_OUTBOX(e),
-                    signal: t
+                    signal: t,
+                    rejectWithError: !1
                 })
             ).body;
             return (
@@ -70,7 +72,10 @@ let u = async (e) => {
     d = async (e, t, n) => {
         try {
             i.Z.dispatch({ type: 'CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_START' }),
-                await r.tn.del({ url: o.ANM.DELETE_MY_CONTENT_INVENTORY_OUTBOX_ENTRY_HISTORY(e.id) }),
+                await r.tn.del({
+                    url: o.ANM.DELETE_MY_CONTENT_INVENTORY_OUTBOX_ENTRY_HISTORY(e.id),
+                    rejectWithError: !1
+                }),
                 i.Z.dispatch({
                     type: 'CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_SUCCESS',
                     userId: t,
@@ -93,7 +98,8 @@ async function f(e, t) {
             body: {
                 connection_id: e,
                 tracks: [t]
-            }
+            },
+            rejectWithError: !1
         });
     } catch (e) {
         throw new a.Hx(e);

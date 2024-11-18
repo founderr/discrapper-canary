@@ -31,7 +31,8 @@ async function c(e) {
     try {
         let { body: t } = await a.tn.get({
             url: l.ANM.NOTE(e),
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         });
         s.Z.dispatch({
             type: 'USER_NOTE_LOADED',

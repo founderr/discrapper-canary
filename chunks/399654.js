@@ -39,7 +39,8 @@ async function u(e) {
                     channel_id: n,
                     location: t,
                     with_commands: o
-                }
+                },
+                rejectWithError: !1
             });
             l.Z.dispatch({
                 type: 'APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS_SUCCESS',

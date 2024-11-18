@@ -14,7 +14,10 @@ var i = n(544891),
     r = n(981631);
 async function l() {
     var e;
-    let t = await i.tn.get({ url: r.ANM.AUTH_SESSIONS });
+    let t = await i.tn.get({
+        url: r.ANM.AUTH_SESSIONS,
+        rejectWithError: !1
+    });
     return (
         (null == t ? void 0 : t.ok) &&
             (null === (e = t.body) || void 0 === e ? void 0 : e.user_sessions) != null &&
@@ -37,7 +40,8 @@ async function o(e) {
     } else e = [e];
     let t = await i.tn.post({
         url: r.ANM.AUTH_SESSIONS_LOGOUT,
-        body: { session_id_hashes: e }
+        body: { session_id_hashes: e },
+        rejectWithError: !1
     });
     return (
         (null == t ? void 0 : t.ok) &&

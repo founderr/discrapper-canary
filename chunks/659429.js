@@ -16,7 +16,8 @@ async function s(e) {
         let t = (
             await i.tn.get({
                 url: a.ANM.APPLICATION_ACTIVITY_STATISTICS(e),
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
         ).body;
         return (

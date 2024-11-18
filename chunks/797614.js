@@ -70,11 +70,12 @@ t.Z = new (class e {
                     body: {
                         metrics: e,
                         client_info: {
-                            built_at: '1731949778252',
-                            build_number: '345382'
+                            built_at: '1731957149811',
+                            build_number: '345465'
                         }
                     },
-                    retries: 1
+                    retries: 1,
+                    rejectWithError: !1
                 })
                 .catch((t) => {
                     this._metrics.length + e.length < 100 && (this._metrics = [...this._metrics, ...e]);

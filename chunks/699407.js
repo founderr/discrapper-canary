@@ -84,7 +84,8 @@ let f = 1500,
                     token: r,
                     events: n
                 },
-                retries: 3
+                retries: 3,
+                rejectWithError: !1
             });
         }
         (h.handleConnectionOpen = function (e) {

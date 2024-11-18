@@ -48,7 +48,8 @@ async function c(e, t) {
     if (null == e.session_id) throw Error('null/undefined session_id');
     let { body: l } = await r.tn.get({
         url: o.ANM.USER_ACTIVITY_METADATA(t, e.session_id, e.application_id),
-        oldFormErrors: !0
+        oldFormErrors: !0,
+        rejectWithError: !1
     });
     return (
         i.Z.dispatch({

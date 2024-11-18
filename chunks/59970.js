@@ -14,7 +14,8 @@ async function s(e) {
     try {
         let t = await i.tn.get({
             url: l.ANM.GUILD_DISCOVERY_REQUIREMENTS(e),
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         });
         r.Z.dispatch({
             type: 'DISCOVER_CHECKLIST_FETCH_SUCCESS',

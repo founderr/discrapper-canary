@@ -25,6 +25,7 @@ n.d(t, {
     }
 }),
     n(47120),
+    n(411104),
     n(653041);
 var r = n(203651),
     i = n.n(r),
@@ -131,7 +132,16 @@ function _(e, t, n, r, s) {
                             let { errors: e } = d.body;
                             null != e && (d.body = (0, l.J)(e));
                         }
-                        r(d);
+                        t.rejectWithError
+                            ? r(
+                                  Error('HTTP Error: '.concat(d.status), {
+                                      cause: {
+                                          ...d,
+                                          url: t.url
+                                      }
+                                  })
+                              )
+                            : r(d);
                     }
                     null != s &&
                         s({
@@ -204,7 +214,11 @@ let g = (e, t) => {
 };
 function E(e, t, n) {
     return new Promise((r, i) => {
-        'string' == typeof t && (t = { url: t });
+        'string' == typeof t &&
+            (t = {
+                url: t,
+                rejectWithError: !1
+            });
         let a = p.get(t.url);
         if (null != a && t.failImmediatelyWhenRateLimited) return g(i, a);
         null != a ? (d.verbose('makeRequest: queueing request for ', t.url), a.queue.push(_.bind(null, e, t, r, i, n))) : _(e, t, r, i, n);

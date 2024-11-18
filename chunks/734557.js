@@ -16,7 +16,12 @@ function r(e) {
         C = l.useMemo(() => t.reduce((e, t) => ((e[t.code] = t), e), {}), [t]),
         d = l.useCallback(async () => {
             s(!0);
-            let t = (await o.tn.get(a.ANM.GUILD_INSTANT_INVITES(e))).body.sort((e, t) => new Date(t.created_at).getTime() - new Date(e.created_at).getTime());
+            let t = (
+                await o.tn.get({
+                    url: a.ANM.GUILD_INSTANT_INVITES(e),
+                    rejectWithError: !1
+                })
+            ).body.sort((e, t) => new Date(t.created_at).getTime() - new Date(e.created_at).getTime());
             n(t), i.set(e, new Set(t)), s(!1);
         }, [e]);
     return (

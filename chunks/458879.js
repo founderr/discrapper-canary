@@ -22,7 +22,8 @@ async function o(e, t, n, o, r) {
                         template_name: n.id,
                         is_community_intent: o
                     }
-                }
+                },
+                rejectWithError: !1
             })
         ).body;
     } catch (e) {

@@ -59,7 +59,8 @@ async function m(e) {
                 url: p.ANM.APPLICATION_DIRECTORY_EMBED_APPLICATION(e),
                 backoff: o,
                 retries: 10,
-                interceptResponse: u
+                interceptResponse: u,
+                rejectWithError: !1
             })
         ).body;
         s.Z.dispatch({
@@ -91,7 +92,8 @@ async function g(e) {
                 query: {
                     locale: o.default.locale,
                     nocache: c
-                }
+                },
+                rejectWithError: !1
             });
             s.Z.dispatch({
                 type: 'APPLICATION_DIRECTORY_FETCH_APPLICATION_SUCCESS',
@@ -112,7 +114,8 @@ async function E() {
     if (null != t && t + 600000 > e) return;
     let n = await a.tn.get({
         url: p.ANM.APPLICATION_DIRECTORY_CATEGORIES,
-        query: { locale: o.default.locale }
+        query: { locale: o.default.locale },
+        rejectWithError: !1
     });
     s.Z.dispatch({
         type: 'APPLICATION_DIRECTORY_FETCH_CATEGORIES_SUCCESS',
@@ -150,7 +153,8 @@ async function v(e) {
                     guild_id: r,
                     page: l,
                     locale: o.default.locale
-                }
+                },
+                rejectWithError: !1
             });
             s.Z.dispatch({
                 type: 'APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS_SUCCESS',
@@ -227,7 +231,8 @@ async function b(e) {
                     exclude_non_embedded_apps: E,
                     exclude_embedded_apps_without_primary_entry_point_app_command: v,
                     source: b
-                }
+                },
+                rejectWithError: !1
             });
             s.Z.dispatch({
                 type: 'APPLICATION_DIRECTORY_FETCH_SEARCH_SUCCESS',
@@ -286,7 +291,8 @@ async function I() {
                 query: {
                     includes_inactive: e,
                     locale: o.default.locale
-                }
+                },
+                rejectWithError: !1
             });
             s.Z.dispatch({
                 type: 'APPLICATION_DIRECTORY_FETCH_COLLECTIONS_SUCCESS',
@@ -309,7 +315,10 @@ async function S() {
     if (t !== _.M.FETCHING && (null == n || !(n + 86400000 > e)) && (null == r || !(e < r))) {
         s.Z.dispatch({ type: 'FETCH_INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS' });
         try {
-            let e = await a.tn.get({ url: p.ANM.INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS });
+            let e = await a.tn.get({
+                url: p.ANM.INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS,
+                rejectWithError: !1
+            });
             s.Z.dispatch({
                 type: 'FETCH_INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS_SUCCESS',
                 guildIdToApplicationIds: e.body

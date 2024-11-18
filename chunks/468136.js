@@ -11,7 +11,8 @@ t.Z = {
                 i.tn
                     .get({
                         url: location.protocol + window.GLOBAL_ENV.NETWORKING_ENDPOINT,
-                        retries: 3
+                        retries: 3,
+                        rejectWithError: !1
                     })
                     .then((e) => {
                         let {
@@ -23,7 +24,8 @@ t.Z = {
                     .post({
                         url: a.ANM.NETWORKING_TOKEN,
                         retries: 3,
-                        oldFormErrors: !0
+                        oldFormErrors: !0,
+                        rejectWithError: !1
                     })
                     .then((e) => {
                         let {
@@ -60,7 +62,8 @@ t.Z = {
                 .post({
                     url: a.ANM.NETWORKING_TOKEN,
                     retries: 1,
-                    oldFormErrors: !0
+                    oldFormErrors: !0,
+                    rejectWithError: !1
                 })
                 .then((e) => e.body)
     }

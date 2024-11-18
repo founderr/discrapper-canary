@@ -1,6 +1,6 @@
 var i = n(544891),
     l = n(570140),
-    a = n(981631);
+    r = n(981631);
 t.Z = {
     show(e, t) {
         l.Z.wait(() =>
@@ -27,15 +27,17 @@ t.Z = {
             })
         ),
             i.tn.put({
-                url: a.ANM.TUTORIAL_INDICATOR(e),
-                oldFormErrors: !0
+                url: r.ANM.TUTORIAL_INDICATOR(e),
+                oldFormErrors: !0,
+                rejectWithError: !1
             });
     },
     suppressAll() {
         l.Z.dispatch({ type: 'TUTORIAL_INDICATOR_SUPPRESS_ALL' }),
             i.tn.post({
-                url: a.ANM.TUTORIAL_INDICATORS_SUPPRESS,
-                oldFormErrors: !0
+                url: r.ANM.TUTORIAL_INDICATORS_SUPPRESS,
+                oldFormErrors: !0,
+                rejectWithError: !1
             });
     }
 };

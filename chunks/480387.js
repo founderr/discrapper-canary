@@ -10,8 +10,8 @@ n.d(e, {
     }
 });
 var l = n(213919),
-    i = n(544891),
-    r = n(570140),
+    r = n(544891),
+    i = n(570140),
     a = n(893776),
     u = n(710845),
     o = n(314897),
@@ -25,35 +25,36 @@ function _() {
             { id: a } = e,
             u = l.getToken(a);
         if (null == u || '' === u) {
-            r.Z.dispatch({
+            i.Z.dispatch({
                 type: 'MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE',
                 userId: a
             });
             return;
         }
-        r.Z.dispatch({
+        i.Z.dispatch({
             type: 'MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST',
             userId: a
         });
         try {
-            n = await i.tn.get({
+            n = await r.tn.get({
                 url: c.ANM.ME,
                 headers: { authorization: u },
-                retries: 3
+                retries: 3,
+                rejectWithError: !1
             });
         } catch (e) {
             let t = (null == e ? void 0 : e.status) === 401 || (null == e ? void 0 : e.status) === 403;
-            r.Z.dispatch({
+            i.Z.dispatch({
                 type: t ? 'MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE' : 'MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS',
                 userId: a
             });
             return;
         }
-        r.Z.dispatch({
+        i.Z.dispatch({
             type: t === a ? 'CURRENT_USER_UPDATE' : 'USER_UPDATE',
             user: n.body
         }),
-            r.Z.dispatch({
+            i.Z.dispatch({
                 type: 'MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS',
                 userId: a
             });
@@ -64,7 +65,7 @@ function E(t, e) {
     let n = l.getToken(t);
     return null == n
         ? (d.log('Switching accounts failed because there was no token'),
-          r.Z.dispatch({
+          i.Z.dispatch({
               type: 'MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE',
               userId: t
           }),
@@ -72,7 +73,7 @@ function E(t, e) {
         : a.Z.switchAccountToken(n, e);
 }
 function p(t) {
-    r.Z.dispatch({
+    i.Z.dispatch({
         type: 'MULTI_ACCOUNT_REMOVE_ACCOUNT',
         userId: t
     });

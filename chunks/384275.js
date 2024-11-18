@@ -7,7 +7,8 @@ t.Z = {
             r.tn
                 .get({
                     url: a.ANM.OAUTH2_TOKENS,
-                    oldFormErrors: !0
+                    oldFormErrors: !0,
+                    rejectWithError: !1
                 })
                 .then(
                     (e) =>
@@ -26,7 +27,8 @@ t.Z = {
         r.tn
             .del({
                 url: a.ANM.OAUTH2_TOKEN(e),
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then(() => {
                 this.fetch();

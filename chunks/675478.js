@@ -180,7 +180,10 @@ class T {
             try {
                 let {
                         body: { settings: t }
-                    } = await s.tn.get({ url: E.ANM.USER_SETTINGS_PROTO(this.type) }),
+                    } = await s.tn.get({
+                        url: E.ANM.USER_SETTINGS_PROTO(this.type),
+                        rejectWithError: !1
+                    }),
                     n = (0, m.d5)(this.ProtoClass, t);
                 if (null == n) {
                     this.dispatchChanges({
@@ -276,7 +279,8 @@ class T {
                         body: {
                             settings: t,
                             required_data_version: e.offlineEditDataVersion
-                        }
+                        },
+                        rejectWithError: !1
                     });
                     n.out_of_date && this.logger.log('Proto was out of date, discarding changes'), this.getEditInfo().editInfo.cleanupFuncs.forEach((e) => e());
                     let r = (0, m.d5)(this.ProtoClass, n.settings);

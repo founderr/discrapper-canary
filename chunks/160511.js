@@ -7,8 +7,8 @@ n.d(t, {
     n(773603);
 var l = n(200651),
     i = n(192379),
-    s = n(658550),
-    r = n(544891),
+    r = n(658550),
+    s = n(544891),
     o = n(481060),
     a = n(507453),
     d = n(981631),
@@ -21,14 +21,15 @@ function h(e) {
         [p, j] = i.useState(!1),
         [C, b] = i.useState(null),
         [y, Z] = i.useState(''),
-        w = i.useRef(null);
+        E = i.useRef(null);
     i.useEffect(() => {
         S(!0),
-            r.tn
+            s.tn
                 .post({
                     url: d.ANM.LOGIN_SMS_SEND,
                     body: { ticket: t.ticket },
-                    oldFormErrors: !0
+                    oldFormErrors: !0,
+                    rejectWithError: !1
                 })
                 .then((e) => {
                     v(e.body.phone);
@@ -44,10 +45,10 @@ function h(e) {
         i.useEffect(() => {
             if (m) {
                 var e;
-                null === (e = w.current) || void 0 === e || e.focus();
+                null === (e = E.current) || void 0 === e || e.focus();
             }
         }, [m]);
-    let k = null == x ? u.intl.string(u.t.LQdCQE) : u.intl.formatToPlainString(u.t['8r6h7+'], { phoneNumber: x });
+    let w = null == x ? u.intl.string(u.t.LQdCQE) : u.intl.formatToPlainString(u.t['8r6h7+'], { phoneNumber: x });
     return (0, l.jsxs)('form', {
         onSubmit: (e) => {
             e.preventDefault(),
@@ -66,7 +67,7 @@ function h(e) {
         },
         children: [
             (0, l.jsx)(a.Z.SlideHeader, {
-                subtitle: k,
+                subtitle: w,
                 onClose: f
             }),
             (0, l.jsx)(a.Z.SlideContent, {
@@ -78,7 +79,7 @@ function h(e) {
                             children: [
                                 (0, l.jsx)(o.TextInput, {
                                     className: c.smsInput,
-                                    inputRef: w,
+                                    inputRef: E,
                                     onChange: Z,
                                     placeholder: u.intl.string(u.t.tARzgo),
                                     maxLength: 10,
@@ -91,11 +92,12 @@ function h(e) {
                                     size: o.Button.Sizes.MEDIUM,
                                     submitting: g,
                                     onClick: () => {
-                                        r.tn
+                                        s.tn
                                             .post({
                                                 url: d.ANM.LOGIN_SMS_SEND,
                                                 body: { ticket: t.ticket },
-                                                oldFormErrors: !0
+                                                oldFormErrors: !0,
+                                                rejectWithError: !1
                                             })
                                             .then((e) => {
                                                 v(e.body.phone);
@@ -117,7 +119,7 @@ function h(e) {
                 mfaChallenge: t,
                 setSlide: h,
                 showConfirm: !0,
-                disabled: y.length !== s.Gz,
+                disabled: y.length !== r.Gz,
                 submitting: p
             })
         ]

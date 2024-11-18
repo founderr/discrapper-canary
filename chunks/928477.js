@@ -114,7 +114,8 @@ function w(e) {
                             type: b ? C.d4z.PRIVATE_THREAD : t.type === C.d4z.GUILD_ANNOUNCEMENT ? C.d4z.ANNOUNCEMENT_THREAD : C.d4z.PUBLIC_THREAD,
                             auto_archive_duration: y,
                             location: o
-                        }
+                        },
+                        rejectWithError: !1
                     });
                 });
             N !== A &&
@@ -141,7 +142,8 @@ function M(e, t, n, r, i) {
                 type: n,
                 auto_archive_duration: r,
                 location: i
-            }
+            },
+            rejectWithError: !1
         })
     );
 }
@@ -169,7 +171,8 @@ function P(e) {
                         ? o(E, v, l)
                         : s.tn.post({
                               url: E,
-                              body: v
+                              body: v,
+                              rejectWithError: !1
                           })
                 );
             return (

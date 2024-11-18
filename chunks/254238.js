@@ -57,7 +57,10 @@ async function v() {
         null != t &&
             n.push(
                 (function (e) {
-                    return a.tn.del({ url: m.ANM.CONNECT_REQUEST(e) });
+                    return a.tn.del({
+                        url: m.ANM.CONNECT_REQUEST(e),
+                        rejectWithError: !1
+                    });
                 })(t)
             );
     try {
@@ -119,7 +122,8 @@ async function y() {
         e = (
             await a.tn.post({
                 url: m.ANM.CONNECT_REQUEST_CREATE,
-                body: { analytics_properties: { handoff_type: t } }
+                body: { analytics_properties: { handoff_type: t } },
+                rejectWithError: !1
             })
         ).body.nonce;
     } catch (e) {
@@ -134,7 +138,10 @@ async function A(e) {
         platform: e
     });
     try {
-        t = await a.tn.get({ url: m.ANM.CONSOLES_DEVICES(e) });
+        t = await a.tn.get({
+            url: m.ANM.CONSOLES_DEVICES(e),
+            rejectWithError: !1
+        });
     } catch (t) {
         throw (
             (s.Z.dispatch({
@@ -176,7 +183,8 @@ async function C(e, t, n, i) {
                 channel_id: n.id,
                 guild_id: n.guild_id,
                 nonce: i
-            }
+            },
+            rejectWithError: !1
         });
     } catch (t) {
         throw (
@@ -209,7 +217,10 @@ async function R(e, t, n) {
         commandId: n
     });
     try {
-        await a.tn.del({ url: m.ANM.CONSOLES_DEVICES_COMMAND(e, t, n) });
+        await a.tn.del({
+            url: m.ANM.CONSOLES_DEVICES_COMMAND(e, t, n),
+            rejectWithError: !1
+        });
     } catch (r) {
         throw (
             (s.Z.dispatch({

@@ -43,7 +43,8 @@ async function h(e) {
             body: p,
             retries: 3,
             headers: { 'Content-Type': 'text/plain' },
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         });
     } catch (e) {
         _.error('uploadAppLogFiles: upload app log files error '.concat(e.message));

@@ -48,7 +48,8 @@ function l(e, t, n, r) {
 async function u(e, t) {
     let n = await r.tn.get({
         url: a.ANM.MESSAGE_INTERACTION_DATA(e, t),
-        oldFormErrors: !0
+        oldFormErrors: !0,
+        rejectWithError: !1
     });
     if (!n.ok) return null;
     {

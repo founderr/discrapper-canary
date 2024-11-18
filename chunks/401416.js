@@ -29,6 +29,9 @@ class o extends i.Z {
     }
 }
 function l(e) {
-    return r.tn.post({ url: s.ANM.DM_SETTINGS_UPSELL_ACK(e) });
+    return r.tn.post({
+        url: s.ANM.DM_SETTINGS_UPSELL_ACK(e),
+        rejectWithError: !1
+    });
 }
 t.Z = new o();

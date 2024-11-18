@@ -85,7 +85,8 @@ async function W(e) {
         (await o.tn.post({
             url: G.ANM.ACTIVITY_LEAVE(i, a, s),
             body: { session_id: u },
-            retries: 2
+            retries: 2,
+            rejectWithError: !1
         }));
     let c = V[i],
         d = b.Z.getChannel(r),

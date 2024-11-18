@@ -57,7 +57,8 @@ let o = async (e, t) => {
             return (
                 await r.tn.post({
                     url: a.ANM.GUILD_ROLE_SUBSCRIPTION_GROUP_LISTINGS(e),
-                    body: t
+                    body: t,
+                    rejectWithError: !1
                 })
             ).body;
         } catch (e) {
@@ -73,7 +74,8 @@ let o = async (e, t) => {
                     body: {
                         ...o,
                         price_tier: s
-                    }
+                    },
+                    rejectWithError: !1
                 })
             ).body;
         } catch (e) {
@@ -89,7 +91,8 @@ let o = async (e, t) => {
                     body: {
                         ...l,
                         price_tier: o
-                    }
+                    },
+                    rejectWithError: !1
                 })
             ).body;
         } catch (e) {
@@ -106,20 +109,28 @@ let o = async (e, t) => {
             return (
                 await r.tn.get({
                     url: a.ANM.GUILD_ROLE_SUBSCRIPTION_GROUP_LISTINGS(e),
-                    query: n
+                    query: n,
+                    rejectWithError: !1
                 })
             ).body;
         } catch (e) {
             throw new i.Hx(e);
         }
     },
-    d = async (e) => (await r.tn.get({ url: a.ANM.GUILD_ROLE_SUBSCRIPTIONS_SETTINGS(e) })).body,
+    d = async (e) =>
+        (
+            await r.tn.get({
+                url: a.ANM.GUILD_ROLE_SUBSCRIPTIONS_SETTINGS(e),
+                rejectWithError: !1
+            })
+        ).body,
     f = async (e, t) => {
         try {
             return (
                 await r.tn.patch({
                     url: a.ANM.GUILD_ROLE_SUBSCRIPTIONS_SETTINGS(e),
-                    body: t
+                    body: t,
+                    rejectWithError: !1
                 })
             ).body;
         } catch (e) {
@@ -134,7 +145,8 @@ let o = async (e, t) => {
                     query: {
                         price_tier_type: s.RG.GUILD_ROLE_SUBSCRIPTIONS,
                         guild_id: e
-                    }
+                    },
+                    rejectWithError: !1
                 })
             ).body;
         } catch (e) {
@@ -150,7 +162,8 @@ let o = async (e, t) => {
                     query: {
                         include_draft_listings: n.includeDraftListings,
                         include_archived_listings: n.includeArchivedListings
-                    }
+                    },
+                    rejectWithError: !1
                 })
             ).body;
         } catch (e) {
@@ -159,28 +172,46 @@ let o = async (e, t) => {
     },
     h = async (e) => {
         try {
-            return (await r.tn.get({ url: a.ANM.SUBSCRIPTION_PLAN_GUILD_ROLE_GROUP_LISTING(e) })).body;
+            return (
+                await r.tn.get({
+                    url: a.ANM.SUBSCRIPTION_PLAN_GUILD_ROLE_GROUP_LISTING(e),
+                    rejectWithError: !1
+                })
+            ).body;
         } catch (e) {
             throw new i.Hx(e);
         }
     },
     m = async (e, t, n) => {
         try {
-            await r.tn.del({ url: a.ANM.GUILD_ROLE_SUBSCRIPTION_LISTINGS(e, t, n) });
+            await r.tn.del({
+                url: a.ANM.GUILD_ROLE_SUBSCRIPTION_LISTINGS(e, t, n),
+                rejectWithError: !1
+            });
         } catch (e) {
             throw new i.Hx(e);
         }
     },
     g = async (e, t, n) => {
         try {
-            return (await r.tn.post({ url: a.ANM.GUILD_ROLE_SUBSCRIPTION_GROUP_LISTING_ARCHIVE(e, t, n) })).body;
+            return (
+                await r.tn.post({
+                    url: a.ANM.GUILD_ROLE_SUBSCRIPTION_GROUP_LISTING_ARCHIVE(e, t, n),
+                    rejectWithError: !1
+                })
+            ).body;
         } catch (e) {
             throw new i.Hx(e);
         }
     },
     E = async (e) => {
         try {
-            return (await r.tn.get({ url: a.ANM.GUILD_ROLE_SUBSCRIPTION_TRIALS(e) })).body;
+            return (
+                await r.tn.get({
+                    url: a.ANM.GUILD_ROLE_SUBSCRIPTION_TRIALS(e),
+                    rejectWithError: !1
+                })
+            ).body;
         } catch (e) {
             throw new i.Hx(e);
         }
@@ -190,7 +221,8 @@ let o = async (e, t) => {
             return (
                 await r.tn.patch({
                     url: a.ANM.GUILD_ROLE_SUBSCRIPTION_LISTING_TRIAL(e, t),
-                    body: n
+                    body: n,
+                    rejectWithError: !1
                 })
             ).body;
         } catch (e) {
@@ -199,7 +231,12 @@ let o = async (e, t) => {
     },
     b = async (e, t, n) => {
         try {
-            return (await r.tn.get({ url: a.ANM.GUILD_ROLE_SUBSCRIPTION_TRIAL_ELIGIBILITY(e, t, n) })).body;
+            return (
+                await r.tn.get({
+                    url: a.ANM.GUILD_ROLE_SUBSCRIPTION_TRIAL_ELIGIBILITY(e, t, n),
+                    rejectWithError: !1
+                })
+            ).body;
         } catch (e) {
             throw new i.Hx(e);
         }
@@ -210,7 +247,8 @@ let o = async (e, t) => {
             return (
                 await r.tn.get({
                     url: a.ANM.CREATOR_MONETIZATION_RESTRICTIONS(e),
-                    signal: t
+                    signal: t,
+                    rejectWithError: !1
                 })
             ).body;
         } catch (e) {
@@ -220,7 +258,10 @@ let o = async (e, t) => {
     S = async (e) => {
         try {
             var t;
-            let n = await r.tn.get({ url: a.ANM.GUILD_DISCOVERY_SLUG(e) });
+            let n = await r.tn.get({
+                url: a.ANM.GUILD_DISCOVERY_SLUG(e),
+                rejectWithError: !1
+            });
             return null !== (t = n.body) && void 0 !== t ? t : JSON.parse(n.text);
         } catch (e) {
             throw new i.Hx(e);

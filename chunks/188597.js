@@ -84,7 +84,8 @@ let I = async (e) => {
             {
                 url: E.ANM.INTERACTIONS,
                 body: v,
-                timeout: 3000
+                timeout: 3000,
+                rejectWithError: !1
             },
             (e) => {
                 T(g, e, o, u, c);

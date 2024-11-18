@@ -17,7 +17,8 @@ t.Z = {
         let u = r.tn
             .get({
                 url: o.ANM.UNRESOLVED_GUILD_TEMPLATE(t),
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then(
                 (e) => {
@@ -65,7 +66,8 @@ t.Z = {
         r.tn
             .get({
                 url: o.ANM.GUILD_TEMPLATES(e),
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then(
                 (e) => (
@@ -84,7 +86,8 @@ t.Z = {
                     name: t,
                     description: n
                 },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then((e) => {
                 i.Z.dispatch({
@@ -97,7 +100,8 @@ t.Z = {
         r.tn
             .put({
                 url: o.ANM.GUILD_TEMPLATE(e, t),
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then((e) => {
                 i.Z.dispatch({
@@ -114,7 +118,8 @@ t.Z = {
                     name: n,
                     description: a
                 },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then((e) => {
                 i.Z.dispatch({
@@ -127,7 +132,8 @@ t.Z = {
         r.tn
             .del({
                 url: o.ANM.GUILD_TEMPLATE(e, t),
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then(() => {
                 i.Z.dispatch({

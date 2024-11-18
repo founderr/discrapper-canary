@@ -18,7 +18,8 @@ async function a(e) {
             await r.tn.get({
                 url: s.ANM.GUILD_DISCOVERY,
                 query: i.stringify({ guild_ids: e }),
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
         ).body;
         l.Z.dispatch({

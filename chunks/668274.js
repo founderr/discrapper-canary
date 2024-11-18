@@ -9,7 +9,8 @@ var r = t(544891),
 async function o(e) {
     let n = await r.tn.get({
         url: a.ANM.STORE_EULA(e),
-        oldFormErrors: !0
+        oldFormErrors: !0,
+        rejectWithError: !1
     });
     l.Z.dispatch({
         type: 'EULA_FETCH_SUCCESS',

@@ -23,7 +23,12 @@ var l = n(573261),
     s = n(981631),
     c = n(388032);
 async function u() {
-    return (await r.tn.get({ url: s.ANM.BUG_REPORTS })).body;
+    return (
+        await r.tn.get({
+            url: s.ANM.BUG_REPORTS,
+            rejectWithError: !1
+        })
+    ).body;
 }
 function m(e) {
     var t, n;
@@ -142,7 +147,8 @@ async function h(e, t, n) {
                     priority: e.priority,
                     asana_inbox_id: m
                 }
-            }
+            },
+            rejectWithError: !1
         });
     } catch (e) {
         return e;

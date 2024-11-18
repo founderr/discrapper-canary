@@ -9,6 +9,7 @@ let l = async (e, t) =>
     (
         await i.tn.get({
             url: r.ANM.PAYMENT_PAYOUT_GROUPS(e),
-            query: t
+            query: t,
+            rejectWithError: !1
         })
     ).body;

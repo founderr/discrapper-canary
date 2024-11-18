@@ -178,7 +178,8 @@ class C extends b.ZP {
                             headers: t,
                             signal: this._abortController.signal,
                             onRequestProgress: i,
-                            ...this.retryOpts()
+                            ...this.retryOpts(),
+                            rejectWithError: !1
                         })
                     ).ok
                 )
@@ -224,7 +225,8 @@ class C extends b.ZP {
             headers: r,
             signal: this._abortController.signal,
             onRequestProgress: n,
-            ...this.retryOpts()
+            ...this.retryOpts(),
+            rejectWithError: !1
         });
     }
     async getSize() {
@@ -271,7 +273,8 @@ class C extends b.ZP {
                     await l.tn.post({
                         url: i.getCreateAttachmentURL(this.channelId),
                         body: { files: [r] },
-                        ...this.createAttachmentUrlRetryOpts()
+                        ...this.createAttachmentUrlRetryOpts(),
+                        rejectWithError: !1
                     })
             );
             this.setResponseUrl(e.body.attachments[0].upload_url), this.setUploadedFilename(e.body.attachments[0].upload_filename);

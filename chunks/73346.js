@@ -116,7 +116,8 @@ async function y(e) {
             ('string' == typeof e &&
                 (e = {
                     url: e,
-                    oldFormErrors: !0
+                    oldFormErrors: !0,
+                    rejectWithError: !1
                 }),
             'string' == typeof e.query)
         )

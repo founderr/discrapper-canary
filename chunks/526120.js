@@ -38,7 +38,8 @@ let m = async (e) => {
         try {
             let t = await r.tn.get({
                     url: h.ANM.GUILD_HOME_SETTINGS(e),
-                    oldFormErrors: !0
+                    oldFormErrors: !0,
+                    rejectWithError: !1
                 }),
                 n = (0, _.tB)(t.body);
             return (
@@ -65,7 +66,8 @@ let m = async (e) => {
             try {
                 let t = await r.tn.get({
                         url: h.ANM.GUILD_MEMBER_ACTIONS(e),
-                        oldFormErrors: !0
+                        oldFormErrors: !0,
+                        rejectWithError: !1
                     }),
                     n = (0, _.rk)(t.body);
                 return (
@@ -158,5 +160,8 @@ let m = async (e) => {
                 has_completed_all: r.reduce((e, n) => e && t.includes(n.channelId), !0)
             });
         }
-        r.tn.post({ url: h.ANM.GUILD_MEMBER_ACTION_UPDATE(e, t) });
+        r.tn.post({
+            url: h.ANM.GUILD_MEMBER_ACTION_UPDATE(e, t),
+            rejectWithError: !1
+        });
     };

@@ -79,12 +79,20 @@ async function g() {
         await r.tn.get({
             url: f.ANM.CLAIMED_OUTBOUND_PROMOTION_CODES,
             query: { locale: a.default.locale },
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         })
     ).body.map(m);
 }
 async function E(e) {
-    return m((await r.tn.post({ url: f.ANM.CLAIM_OUTBOUND_PROMOTION_CODE(e) })).body);
+    return m(
+        (
+            await r.tn.post({
+                url: f.ANM.CLAIM_OUTBOUND_PROMOTION_CODE(e),
+                rejectWithError: !1
+            })
+        ).body
+    );
 }
 function v(e, t) {
     return null != t.outboundRedemptionUrlFormat ? t.outboundRedemptionUrlFormat.replace('{code}', encodeURIComponent(e)) : t.outboundRedemptionPageLink;

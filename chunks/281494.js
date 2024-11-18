@@ -76,7 +76,8 @@ let h = new (class e {
         o.tn
             .get({
                 url: _.ANM.GET_REFERRAL_INCENTIVE_ELIGIBILITY,
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then(
                 (e) => {
@@ -104,7 +105,8 @@ async function g(e, t) {
                     limit: 10,
                     search_query: t
                 },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
         ).body,
         a = {
@@ -118,7 +120,8 @@ let E = () => (
         o.tn
             .get({
                 url: _.ANM.GET_REFERRALS_REMAINING,
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then(
                 (e) => {
@@ -154,7 +157,8 @@ let E = () => (
         o.tn
             .post({
                 url: _.ANM.CREATE_REFERRAL_PREVIEW(e),
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then(
                 (t) => {
@@ -180,7 +184,8 @@ async function b(e) {
             var r;
             let e = await o.tn.post({
                     url: _.ANM.CREATE_REFERRAL(i),
-                    oldFormErrors: !0
+                    oldFormErrors: !0,
+                    rejectWithError: !1
                 }),
                 a = null !== (r = e.body) && void 0 !== r ? r : null;
             null != a && t.push(a), n.set(i, 1);
@@ -200,7 +205,8 @@ async function I(e) {
         var t;
         let n = await o.tn.post({
                 url: _.ANM.CREATE_REFERRAL(e),
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             }),
             r = null !== (t = n.body) && void 0 !== t ? t : null;
         return (
@@ -222,7 +228,8 @@ async function S(e) {
         var t;
         let n = await o.tn.get({
                 url: _.ANM.REFERRAL_OFFER_ID_RESOLVE(e),
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             }),
             r = null !== (t = n.body) && void 0 !== t ? t : null;
         return (

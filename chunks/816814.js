@@ -9,7 +9,8 @@ function a(e, t) {
             .post({
                 url: e,
                 body: { password: t },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then(
                 (e) => (s.Z.dispatch({ type: 'MFA_SMS_TOGGLE_COMPLETE' }), e),
@@ -25,20 +26,23 @@ t.Z = {
             await i.tn.post({
                 url: l.ANM.MFA_TOTP_ENABLE,
                 body: { password: e },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
         ).body,
     verifyEmailCode: async (e) =>
         (
             await i.tn.post({
                 url: l.ANM.MFA_TOTP_ENABLE_VERIFY,
-                body: { code: e }
+                body: { code: e },
+                rejectWithError: !1
             })
         ).body,
     resendEmailCode: (e) =>
         i.tn.post({
             url: l.ANM.MFA_TOTP_ENABLE_RESEND,
-            body: { password: e }
+            body: { password: e },
+            rejectWithError: !1
         }),
     setEmailToken(e) {
         s.Z.dispatch({
@@ -57,7 +61,8 @@ t.Z = {
                     password: t,
                     email_token: a
                 },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then((e) =>
                 s.Z.dispatch({
@@ -71,7 +76,8 @@ t.Z = {
         i.tn
             .post({
                 url: l.ANM.MFA_TOTP_DISABLE,
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then((e) => {
                 let {
@@ -90,7 +96,8 @@ t.Z = {
             .post({
                 url: l.ANM.MFA_SEND_VERIFICATION_KEY,
                 body: { password: e },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then(
                 (e) =>
@@ -115,7 +122,8 @@ t.Z = {
                     nonce: t ? a : n,
                     regenerate: t
                 },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then(
                 (t) =>

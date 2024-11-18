@@ -20,7 +20,8 @@ async function u(e, t) {
         let a = await r.tn.post({
             url: l.ANM.GUILD_MEMBER_SEARCH(e),
             body: t,
-            signal: f
+            signal: f,
+            rejectWithError: !1
         });
         if (a.status === o.t) {
             if (null == a.body.retry_after) throw Error('Indexing response did not include retry_after');

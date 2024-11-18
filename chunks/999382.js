@@ -88,7 +88,8 @@ function ea(e) {
         b.tn
             .get({
                 url: w.ANM.GUILD_INSTANT_INVITES(o.id),
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then((e) => {
                 S.Z.dispatch({
@@ -100,7 +101,8 @@ function ea(e) {
         b.tn
             .get({
                 url: w.ANM.GUILD_WIDGET(o.id),
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then((e) => {
                 S.Z.dispatch({
@@ -118,7 +120,8 @@ function ea(e) {
               ? b.tn
                     .get({
                         url: w.ANM.GUILD_VANITY_URL(o.id),
-                        oldFormErrors: !0
+                        oldFormErrors: !0,
+                        rejectWithError: !1
                     })
                     .then((e) => {
                         let {

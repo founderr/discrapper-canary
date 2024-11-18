@@ -157,7 +157,8 @@ async function A(e) {
         let r = await s.tn.get({
                 url: p.ANM.GUILD_DISCOVERY,
                 query: a.stringify({ guild_ids: e }),
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             }),
             i = null === (n = r.body) || void 0 === n ? void 0 : null === (t = n.guilds) || void 0 === t ? void 0 : t[0];
         if (null == i) return i;

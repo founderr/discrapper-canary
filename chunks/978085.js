@@ -19,7 +19,8 @@ async function l() {
         let e = await (0, s.Kb)(
             {
                 url: o.ANM.LIBRARY,
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             },
             !1
         );
@@ -41,7 +42,8 @@ async function u(e) {
         await r.tn
             .get({
                 url: o.ANM.APPLICATION_BRANCH_LIST(e.id),
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then((e) => e.body)
     ).map((n) =>

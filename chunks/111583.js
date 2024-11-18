@@ -1,6 +1,6 @@
 let u;
-var l,
-    r,
+var r,
+    l,
     i,
     o,
     a = t(442837),
@@ -11,8 +11,8 @@ var l,
     g = t(300429),
     m = t(981631),
     Z = t(176505);
-let v = 10 * s.Z.Millis.SECOND,
-    h = 1.5 * s.Z.Millis.SECOND,
+let h = 10 * s.Z.Millis.SECOND,
+    v = 1.5 * s.Z.Millis.SECOND,
     E = {},
     T = Object.freeze({});
 function _(e) {
@@ -21,27 +21,27 @@ function _(e) {
 }
 function S(e) {
     var n, t;
-    let { channelId: u, userId: l } = e,
-        r = { ..._(u) };
-    clearTimeout(r[l]),
-        (r[l] =
+    let { channelId: u, userId: r } = e,
+        l = { ..._(u) };
+    clearTimeout(l[r]),
+        (l[r] =
             ((n = u),
-            (t = l),
+            (t = r),
             setTimeout(() => {
                 c.Z.dispatch({
                     type: 'TYPING_STOP',
                     channelId: n,
                     userId: t
                 });
-            }, v))),
-        (E[u] = r);
+            }, h))),
+        (E[u] = l);
 }
 function I(e) {
     let { channelId: n, userId: t } = e,
         u = E[n];
     if (null == u || null == u[t]) return !1;
-    let l = { ...u };
-    clearTimeout(l[t]), delete l[t], (E[n] = l);
+    let r = { ...u };
+    clearTimeout(r[t]), delete r[t], (E[n] = r);
 }
 function p() {
     E = {};
@@ -55,14 +55,14 @@ class M extends (o = a.ZP.Store) {
     }
 }
 (i = 'TypingStore'),
-    (r = 'displayName') in (l = M)
-        ? Object.defineProperty(l, r, {
+    (l = 'displayName') in (r = M)
+        ? Object.defineProperty(r, l, {
               value: i,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[r] = i),
+        : (r[l] = i),
     (n.Z = new M(c.Z, {
         TYPING_START: S,
         TYPING_STOP: I,
@@ -71,9 +71,9 @@ class M extends (o = a.ZP.Store) {
                 t = f.default.getId();
             if (null == t || n === Z.V) return !1;
             null != u && u.channelId !== n && (null != u.timeout && clearTimeout(u.timeout), (u = null));
-            let l = Date.now(),
-                r = 0.8 * v;
-            if (null != u && (null != u.timeout || u.prevSend + r > l)) return !1;
+            let r = Date.now(),
+                l = 0.8 * h;
+            if (null != u && (null != u.timeout || u.prevSend + l > r)) return !1;
             let i = setTimeout(
                 () => {
                     if (null == u || u.channelId !== n || t !== f.default.getId() || null == u.timeout) return;
@@ -89,37 +89,38 @@ class M extends (o = a.ZP.Store) {
                         d.tn
                             .post({
                                 url: m.ANM.TYPING(n),
-                                oldFormErrors: !0
+                                oldFormErrors: !0,
+                                rejectWithError: !1
                             })
                             .then((e) => {
                                 if (200 === e.status) {
                                     var t, u;
-                                    let l = null !== (t = e.body.message_send_cooldown_ms) && void 0 !== t ? t : 0,
-                                        r = null !== (u = e.body.thread_create_cooldown_ms) && void 0 !== u ? u : 0;
-                                    l > 0 &&
+                                    let r = null !== (t = e.body.message_send_cooldown_ms) && void 0 !== t ? t : 0,
+                                        l = null !== (u = e.body.thread_create_cooldown_ms) && void 0 !== u ? u : 0;
+                                    r > 0 &&
                                         c.Z.dispatch({
                                             type: 'SLOWMODE_SET_COOLDOWN',
                                             channelId: n,
                                             slowmodeType: g.S.SendMessage,
-                                            cooldownMs: l
+                                            cooldownMs: r
                                         }),
-                                        r > 0 &&
+                                        l > 0 &&
                                             c.Z.dispatch({
                                                 type: 'SLOWMODE_SET_COOLDOWN',
                                                 channelId: n,
                                                 slowmodeType: g.S.CreateThread,
-                                                cooldownMs: r
+                                                cooldownMs: l
                                             });
                                 }
                             });
                 },
-                null == u || u.prevSend > l - 2 * r ? h : 0
+                null == u || u.prevSend > r - 2 * l ? v : 0
             );
             return (
                 (u = {
                     channelId: n,
                     timeout: i,
-                    prevSend: l
+                    prevSend: r
                 }),
                 S({
                     channelId: n,
@@ -149,10 +150,10 @@ class M extends (o = a.ZP.Store) {
             let {
                 channelId: n,
                 message: { author: t },
-                optimistic: l
+                optimistic: r
             } = e;
             return (
-                l &&
+                r &&
                     !(function (e) {
                         if (null == u || u.channelId !== e) return;
                         null != u.timeout && clearTimeout(u.timeout), (u = null);

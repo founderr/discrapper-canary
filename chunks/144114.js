@@ -31,7 +31,8 @@ var o,
                     password: e,
                     change_phone_reason: n
                 },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             }),
         resendCode(e) {
             let n = {},
@@ -41,7 +42,8 @@ var o,
                 a.tn.post({
                     url: d.ANM.RESEND_PHONE,
                     headers: n,
-                    body: { phone: e }
+                    body: { phone: e },
+                    rejectWithError: !1
                 })
             );
         },
@@ -51,7 +53,8 @@ var o,
                 body: {
                     phone: e,
                     change_phone_reason: n
-                }
+                },
+                rejectWithError: !1
             }),
         addPhone: (e, n, t) =>
             a.tn.post({
@@ -61,12 +64,14 @@ var o,
                     password: n,
                     change_phone_reason: t
                 },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             }),
         addPhoneWithoutPassword: (e) =>
             a.tn.post({
                 url: d.ANM.PHONE_VERIFY_NO_PASSWORD,
-                body: { code: e }
+                body: { code: e },
+                rejectWithError: !1
             }),
         beginReverifyPhone: (e, n) =>
             a.tn.post({
@@ -74,7 +79,8 @@ var o,
                 body: {
                     phone: e,
                     change_phone_reason: n
-                }
+                },
+                rejectWithError: !1
             }),
         reverifyPhone: (e, n, t) =>
             a.tn.post({
@@ -84,13 +90,15 @@ var o,
                     password: n,
                     change_phone_reason: t
                 },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             }),
         validatePhoneForSupport: (e) =>
             a.tn.post({
                 url: d.ANM.VERIFY_PHONE_FOR_TICKET,
                 body: { token: e },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             }),
         async verifyPhone(e, n) {
             let t = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
@@ -106,7 +114,8 @@ var o,
                     code: n
                 },
                 oldFormErrors: !0,
-                trackedActionData: { event: i.NetworkActionNames.USER_VERIFY_PHONE }
+                trackedActionData: { event: i.NetworkActionNames.USER_VERIFY_PHONE },
+                rejectWithError: !1
             });
             return (
                 t &&

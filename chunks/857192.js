@@ -22,7 +22,8 @@ let g = (() => {
                     .put({
                         url: e,
                         headers: { Authorization: l.getToken() },
-                        oldFormErrors: !0
+                        oldFormErrors: !0,
+                        rejectWithError: !1
                     })
                     .then(
                         (e) => {
@@ -43,7 +44,8 @@ let g = (() => {
                           c.tn.del({
                               url: e,
                               headers: { Authorization: l.getToken() },
-                              oldFormErrors: !0
+                              oldFormErrors: !0,
+                              rejectWithError: !1
                           }));
             }
         };

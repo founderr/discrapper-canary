@@ -49,7 +49,8 @@ function N(t) {
                 r.tn
                     .post({
                         url: x.ANM.CONNECTION(x.ABu.DOMAIN, o),
-                        body: {}
+                        body: {},
+                        rejectWithError: !1
                     })
                     .then(() => {
                         n();

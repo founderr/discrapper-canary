@@ -46,7 +46,10 @@ async function g(e, t) {
         requestedAt: i
     });
     try {
-        let n = await o.tn.get(h.Z5c.CHANNEL_SUMMARY(e, t));
+        let n = await o.tn.get({
+            url: h.Z5c.CHANNEL_SUMMARY(e, t),
+            rejectWithError: !1
+        });
         r = null == n ? void 0 : n.body;
     } catch (e) {
         n = new u.Hx(e);
@@ -71,7 +74,10 @@ async function E(e) {
         requestedAt: s
     });
     try {
-        i = await o.tn.get(h.Z5c.CHANNEL_SUMMARIES(e));
+        i = await o.tn.get({
+            url: h.Z5c.CHANNEL_SUMMARIES(e),
+            rejectWithError: !1
+        });
     } catch (e) {
         r = new u.Hx(e);
     }
@@ -128,7 +134,10 @@ async function y() {
         requestedAt: r
     });
     try {
-        n = await o.tn.get('/users/@me/affinities/channels');
+        n = await o.tn.get({
+            url: '/users/@me/affinities/channels',
+            rejectWithError: !1
+        });
     } catch (e) {
         t = new u.Hx(e);
     }
@@ -178,7 +187,8 @@ async function A(e) {
     try {
         n = await o.tn.post({
             url: h.Z5c.USER_SUMMARIES,
-            body: { channel_ids: e }
+            body: { channel_ids: e },
+            rejectWithError: !1
         });
     } catch (e) {
         t = new u.Hx(e);
@@ -195,7 +205,10 @@ async function A(e) {
 }
 async function N(e) {
     try {
-        await o.tn.del(h.Z5c.CHANNEL_SUMMARY(e.channelId, e.id)),
+        await o.tn.del({
+            url: h.Z5c.CHANNEL_SUMMARY(e.channelId, e.id),
+            rejectWithError: !1
+        }),
             l.Z.dispatch({
                 type: 'DELETE_SUMMARY',
                 summary: e

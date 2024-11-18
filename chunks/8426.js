@@ -96,7 +96,8 @@ async function I(e, t, n, i) {
         let i = await l.tn.patch({
                 url: g.ANM.NEW_MEMBER_ACTION(e, t),
                 body: { icon: n },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             }),
             r = (0, c.cq)(i.body);
         return (
@@ -150,7 +151,8 @@ async function S(e, t, n) {
         let i = await l.tn.put({
                 url: g.ANM.RESOURCE_CHANNEL(e, t),
                 body: { icon: n },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             }),
             r = (0, c.vD)(i.body);
         return (
@@ -211,7 +213,8 @@ async function Z(e, t) {
         let r = await l.tn.put({
                 url: g.ANM.GUILD_HOME_SETTINGS(e),
                 body: (0, c.HH)(e, t),
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             }),
             a = (0, c.tB)(r.body);
         return (

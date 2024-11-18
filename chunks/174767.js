@@ -57,10 +57,16 @@ function d() {
     r.Z.dispatch({ type: 'GAME_INVITE_CLEAR_UNSEEN' });
 }
 async function m(e) {
-    await i.tn.del({ url: o.ANM.GAME_INVITE(e.invite_id) });
+    await i.tn.del({
+        url: o.ANM.GAME_INVITE(e.invite_id),
+        rejectWithError: !1
+    });
 }
 async function h() {
-    await i.tn.del({ url: o.ANM.GAME_INVITES });
+    await i.tn.del({
+        url: o.ANM.GAME_INVITES,
+        rejectWithError: !1
+    });
 }
 async function f(e, t) {
     if (!(0, a.isWindows)()) return !1;

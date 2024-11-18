@@ -75,7 +75,10 @@ let R = 'dismissedCommunityFeaturesUpsell',
             [g, f] = r.useState(!1);
         r.useEffect(() => {
             o.tn
-                .get(T.ANM.GUILD_ADMIN_SERVER_ELIGIBILITY(l.id))
+                .get({
+                    url: T.ANM.GUILD_ADMIN_SERVER_ELIGIBILITY(l.id),
+                    rejectWithError: !1
+                })
                 .then((e) => {
                     f(e.body.eligible_for_admin_server);
                 })
@@ -88,7 +91,8 @@ let R = 'dismissedCommunityFeaturesUpsell',
             try {
                 let e = await o.tn.post({
                     url: T.ANM.JOIN_ADMIN_SERVER(l.id),
-                    oldFormErrors: !0
+                    oldFormErrors: !0,
+                    rejectWithError: !1
                 });
                 _.Z.close(), (0, h.X)(e.body.id);
             } catch {}

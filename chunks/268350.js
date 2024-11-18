@@ -51,7 +51,10 @@ var r = n(392711),
     g = n(526761),
     E = n(388032);
 let v = async (e, t) => {
-        let { body: n } = await (0, p.Kb)(m.ANM.STICKER_PACK(e));
+        let { body: n } = await (0, p.Kb)({
+            url: m.ANM.STICKER_PACK(e),
+            rejectWithError: !1
+        });
         return (
             s.Z.dispatch({
                 type: 'STICKER_PACK_FETCH_SUCCESS',
@@ -72,7 +75,8 @@ let v = async (e, t) => {
             body: { sticker_packs: t }
         } = await a.tn.get({
             url: m.ANM.STICKER_PACKS,
-            query: { locale: e }
+            query: { locale: e },
+            rejectWithError: !1
         });
         s.Z.dispatch({
             type: 'STICKER_PACKS_FETCH_SUCCESS',
@@ -80,14 +84,20 @@ let v = async (e, t) => {
         });
     },
     I = async (e) => {
-        let { body: t } = await a.tn.get({ url: m.ANM.STICKER(e) });
+        let { body: t } = await a.tn.get({
+            url: m.ANM.STICKER(e),
+            rejectWithError: !1
+        });
         s.Z.dispatch({
             type: 'STICKER_FETCH_SUCCESS',
             sticker: t
         });
     },
     S = async (e) => {
-        let { body: t } = await a.tn.get({ url: m.ANM.GUILD_STICKER_PACKS(e) });
+        let { body: t } = await a.tn.get({
+            url: m.ANM.GUILD_STICKER_PACKS(e),
+            rejectWithError: !1
+        });
         s.Z.dispatch({
             type: 'GUILD_STICKERS_FETCH_SUCCESS',
             guildId: e,
@@ -102,12 +112,16 @@ let v = async (e, t) => {
         });
     },
     T = async (e) => {
-        await a.tn.del({ url: m.ANM.GUILD_STICKER(e.guild_id, e.id) });
+        await a.tn.del({
+            url: m.ANM.GUILD_STICKER(e.guild_id, e.id),
+            rejectWithError: !1
+        });
     },
     y = async (e, t) => {
         let n = await a.tn.post({
             url: m.ANM.GUILD_STICKER_PACKS(e),
-            body: t
+            body: t,
+            rejectWithError: !1
         });
         return (
             s.Z.dispatch({
@@ -125,7 +139,8 @@ let v = async (e, t) => {
         (
             await a.tn.patch({
                 url: m.ANM.GUILD_STICKER(e, t),
-                body: n
+                body: n,
+                rejectWithError: !1
             })
         ).body;
 function N(e, t, n) {

@@ -96,7 +96,8 @@ function y(e, t, n) {
                     locale: d.default.locale,
                     limit: n
                 },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then(
                 (i) => {
@@ -141,7 +142,8 @@ function C(e) {
                     limit: 5,
                     locale: d.default.locale
                 },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then((t) => {
                 let n = t.body;
@@ -179,7 +181,8 @@ function O(e) {
                     id: c,
                     q: l
                 },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             });
 }
 function D() {
@@ -204,7 +207,8 @@ function L() {
                 locale: d.default.locale,
                 media_format: _.Z.getSelectedFormat()
             },
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         })
         .then((e) => {
             let { body: t } = e,
@@ -228,7 +232,8 @@ function x(e) {
                     locale: d.default.locale,
                     limit: e
                 },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then(
                 (n) => {

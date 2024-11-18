@@ -50,7 +50,8 @@ function f() {
           a.tn
               .get({
                   url: i.format(e),
-                  oldFormErrors: !0
+                  oldFormErrors: !0,
+                  rejectWithError: !1
               })
               .then(
                   (e) => e.body || null,
@@ -87,7 +88,8 @@ function _(e) {
           a.tn
               .get({
                   url: i.format(t),
-                  oldFormErrors: !0
+                  oldFormErrors: !0,
+                  rejectWithError: !1
               })
               .then(
                   (e) => e.body || null,

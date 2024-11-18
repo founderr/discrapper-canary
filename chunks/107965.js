@@ -81,11 +81,12 @@ class E {
                         .get({
                             url: ''.concat(location.protocol, '//').concat(location.host).concat('/assets/', 'version.').concat(window.GLOBAL_ENV.RELEASE_CHANNEL, '.json'),
                             query: { _: (Date.now() / 1000 / 60 / 5) | 0 },
-                            oldFormErrors: !0
+                            oldFormErrors: !0,
+                            rejectWithError: !1
                         })
                         .then(
                             (e) => {
-                                if (null == e.body || 'e99a779f035acefcc93377681e265bb03a7d8f1e' === e.body.hash) return this._handleUpdateNotAvailable();
+                                if (null == e.body || '54818ecbd8f8cee9ef2fe052dd965519beb05a31' === e.body.hash) return this._handleUpdateNotAvailable();
                                 if (e.body.required || (0, a.fD)()) return this._handleUpdateDownloaded(!1);
                                 let t = 'stable' === window.GLOBAL_ENV.RELEASE_CHANNEL ? f : p;
                                 if (Date.now() - _ > t) return r.K.set('lastNonRequiredUpdateShown', Date.now()), this._handleUpdateDownloaded(!1);

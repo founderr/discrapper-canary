@@ -192,7 +192,8 @@ function O(e, t) {
     let i = a.Z.getApplication(e);
     r.tn.post({
         url: h.ANM.LIBRARY_APPLICATION_INSTALLED(e, e),
-        oldFormErrors: !0
+        oldFormErrors: !0,
+        rejectWithError: !1
     }),
         null != i &&
             (f.Z.createShortcuts(l.Xc.getSetting(), l.Pe.getSetting(), i.name, i.id, t.installPath),

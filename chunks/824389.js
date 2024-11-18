@@ -31,7 +31,8 @@ let u = async (e, t, n) => {
                         price_tier: l,
                         create_new_role: a,
                         unlink_role: s
-                    }
+                    },
+                    rejectWithError: !1
                 })
             ).body;
         } catch (e) {
@@ -40,21 +41,34 @@ let u = async (e, t, n) => {
     },
     a = async (e, t) => {
         try {
-            await i.tn.del({ url: o.ANM.GUILD_PRODUCT_LISTINGS(e, t) });
+            await i.tn.del({
+                url: o.ANM.GUILD_PRODUCT_LISTINGS(e, t),
+                rejectWithError: !1
+            });
         } catch (e) {
             throw new r.Hx(e);
         }
     },
     s = async (e) => {
         try {
-            return (await (0, l.Kb)({ url: o.ANM.GUILD_PRODUCT_LISTINGS(e) })).body.listings;
+            return (
+                await (0, l.Kb)({
+                    url: o.ANM.GUILD_PRODUCT_LISTINGS(e),
+                    rejectWithError: !1
+                })
+            ).body.listings;
         } catch (e) {
             throw new r.Hx(e);
         }
     },
     c = async (e, t) => {
         try {
-            return (await (0, l.Kb)({ url: o.ANM.GUILD_PRODUCT_LISTINGS(e, t) })).body;
+            return (
+                await (0, l.Kb)({
+                    url: o.ANM.GUILD_PRODUCT_LISTINGS(e, t),
+                    rejectWithError: !1
+                })
+            ).body;
         } catch (e) {
             throw new r.Hx(e);
         }
@@ -62,7 +76,12 @@ let u = async (e, t, n) => {
     d = async (e) => {
         let { guildId: t, productId: n, attachmentId: l } = e;
         try {
-            return (await i.tn.post({ url: o.ANM.GUILD_PRODUCT_ATTACHMENT_DOWNLOAD(t, n, l) })).body;
+            return (
+                await i.tn.post({
+                    url: o.ANM.GUILD_PRODUCT_ATTACHMENT_DOWNLOAD(t, n, l),
+                    rejectWithError: !1
+                })
+            ).body;
         } catch (e) {
             throw new r.Hx(e);
         }

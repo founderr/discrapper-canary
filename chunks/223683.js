@@ -20,21 +20,37 @@ var r = n(392711),
     a = n(544891),
     s = n(981631);
 async function o() {
-    return (await a.tn.get(s.ANM.NOTIFICATION_SNAPSHOTS)).body;
+    return (
+        await a.tn.get({
+            url: s.ANM.NOTIFICATION_SNAPSHOTS,
+            rejectWithError: !1
+        })
+    ).body;
 }
 async function l(e) {
     return (
         await a.tn.post({
             url: s.ANM.NOTIFICATION_SNAPSHOTS,
-            body: { label: e }
+            body: { label: e },
+            rejectWithError: !1
         })
     ).body;
 }
 async function u(e) {
-    return (await a.tn.post(s.ANM.RESTORE_NOTIFICATION_SNAPSHOT(e))).body;
+    return (
+        await a.tn.post({
+            url: s.ANM.RESTORE_NOTIFICATION_SNAPSHOT(e),
+            rejectWithError: !1
+        })
+    ).body;
 }
 async function c(e) {
-    return (await a.tn.del(s.ANM.NOTIFICATION_SNAPSHOT(e))).body;
+    return (
+        await a.tn.del({
+            url: s.ANM.NOTIFICATION_SNAPSHOT(e),
+            rejectWithError: !1
+        })
+    ).body;
 }
 async function d() {
     let e = await o(),

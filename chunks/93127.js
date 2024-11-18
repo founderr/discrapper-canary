@@ -20,7 +20,8 @@ function c() {
               .get({
                   url: l.ANM.USER_AFFINITIES,
                   retries: e ? 3 : 0,
-                  oldFormErrors: !0
+                  oldFormErrors: !0,
+                  rejectWithError: !1
               })
               .then(
                   (e) => {
@@ -44,7 +45,8 @@ function d() {
               .get({
                   url: l.ANM.USER_AFFINITIES_V2,
                   retries: e ? 3 : 0,
-                  oldFormErrors: !0
+                  oldFormErrors: !0,
+                  rejectWithError: !1
               })
               .then(
                   (e) => {

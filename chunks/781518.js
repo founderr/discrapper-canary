@@ -75,7 +75,8 @@ function p(e) {
     return r.tn
         .get({
             url: d.ANM.CONNECTION_ACCESS_TOKEN(d.ABu.SPOTIFY, e),
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         })
         .catch((t) => {
             var n;

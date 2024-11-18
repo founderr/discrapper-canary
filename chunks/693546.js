@@ -10,7 +10,10 @@ var r = n(544891),
     f = n(981631),
     _ = n(388032);
 let p = async (e) => {
-        let t = await r.tn.get({ url: f.ANM.GUILD_JOIN_REQUEST_BY_ID(e) }),
+        let t = await r.tn.get({
+                url: f.ANM.GUILD_JOIN_REQUEST_BY_ID(e),
+                rejectWithError: !1
+            }),
             n = (0, d.j)(t.body);
         return (
             i.Z.dispatch({
@@ -34,7 +37,8 @@ let p = async (e) => {
                             limit: o,
                             before: a,
                             after: s
-                        }
+                        },
+                        rejectWithError: !1
                     }),
                     l = e.body.total,
                     u = (null !== (p = e.body.guild_join_requests) && void 0 !== p ? p : []).map(d.j);
@@ -56,7 +60,10 @@ let p = async (e) => {
     },
     m = async (e) => {
         try {
-            let t = await r.tn.del({ url: f.ANM.GUILD_MEMBER_REQUEST_TO_JOIN(e) });
+            let t = await r.tn.del({
+                url: f.ANM.GUILD_MEMBER_REQUEST_TO_JOIN(e),
+                rejectWithError: !1
+            });
             return (
                 i.Z.dispatch({
                     type: 'USER_GUILD_JOIN_REQUEST_UPDATE',
@@ -71,7 +78,10 @@ let p = async (e) => {
     },
     g = async (e, t) => {
         try {
-            return await r.tn.post({ url: f.ANM.GUILD_JOIN_REQUEST_ACK(e, t) });
+            return await r.tn.post({
+                url: f.ANM.GUILD_JOIN_REQUEST_ACK(e, t),
+                rejectWithError: !1
+            });
         } catch (e) {
         } finally {
             i.Z.dispatch({
@@ -95,7 +105,8 @@ let p = async (e) => {
                 body: {
                     action: s,
                     rejection_reason: l
-                }
+                },
+                rejectWithError: !1
             })
             .catch(
                 (e) => (
@@ -119,7 +130,8 @@ let p = async (e) => {
     v = async (e, t) => {
         let n = await r.tn.patch({
             url: f.ANM.GUILD_JOIN_REQUESTS(e),
-            body: { action: t }
+            body: { action: t },
+            rejectWithError: !1
         });
         return (
             i.Z.dispatch({
@@ -132,7 +144,10 @@ let p = async (e) => {
     },
     b = async (e) => {
         try {
-            let { body: t } = await r.tn.post({ url: f.ANM.GUILD_MEMBER_REQUEST_TO_JOIN(e) });
+            let { body: t } = await r.tn.post({
+                url: f.ANM.GUILD_MEMBER_REQUEST_TO_JOIN(e),
+                rejectWithError: !1
+            });
             return (
                 i.Z.dispatch({
                     type: 'USER_GUILD_JOIN_REQUEST_UPDATE',
@@ -146,7 +161,10 @@ let p = async (e) => {
         }
     },
     I = async () => {
-        let e = await r.tn.get({ url: f.ANM.USER_JOIN_REQUEST_GUILDS });
+        let e = await r.tn.get({
+            url: f.ANM.USER_JOIN_REQUEST_GUILDS,
+            rejectWithError: !1
+        });
         i.Z.dispatch({
             type: 'USER_JOIN_REQUEST_GUILDS_FETCH',
             guilds: e.body
@@ -154,7 +172,10 @@ let p = async (e) => {
     },
     S = async function (e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-            n = await r.tn.post({ url: f.ANM.GUILD_JOIN_REQUEST_INTERVIEW(e) }),
+            n = await r.tn.post({
+                url: f.ANM.GUILD_JOIN_REQUEST_INTERVIEW(e),
+                rejectWithError: !1
+            }),
             a = (0, l.q_)(n.body);
         return (
             i.Z.dispatch({
@@ -167,7 +188,10 @@ let p = async (e) => {
     },
     T = async (e) => {
         try {
-            let t = await r.tn.get({ url: f.ANM.GUILD_MEMBER_JOIN_REQUEST_COOLDOWN(e) });
+            let t = await r.tn.get({
+                url: f.ANM.GUILD_MEMBER_JOIN_REQUEST_COOLDOWN(e),
+                rejectWithError: !1
+            });
             return (
                 i.Z.dispatch({
                     type: 'USER_GUILD_JOIN_REQUEST_COOLDOWN_FETCH',

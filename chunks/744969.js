@@ -39,7 +39,10 @@ let C = (0, r.Kb)([d.Z, u.Z, m.Z], {
     },
     load: async (e, n) => {
         if (null == n) return;
-        let t = { url: v.ANM.STOREFRONT_PREMIUM_BUTTON(n) },
+        let t = {
+                url: v.ANM.STOREFRONT_PREMIUM_BUTTON(n),
+                rejectWithError: !1
+            },
             { body: l } = await a.tn.get(t);
         s.Z.dispatch({
             type: 'STORE_LISTINGS_FETCH_SUCCESS',

@@ -18,5 +18,12 @@ let l = (e) =>
         {}
     );
 async function s(e) {
-    return l((await i.tn.get({ url: r.ANM.GUILD_TOP_GAMES(e) })).body.top_games);
+    return l(
+        (
+            await i.tn.get({
+                url: r.ANM.GUILD_TOP_GAMES(e),
+                rejectWithError: !1
+            })
+        ).body.top_games
+    );
 }

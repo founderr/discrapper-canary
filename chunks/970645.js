@@ -11,7 +11,10 @@ var i = n(544891),
 async function s() {
     try {
         l.Z.dispatch({ type: 'CHECKOUT_RECOVERY_STATUS_FETCH' });
-        let { body: e } = await i.tn.get({ url: o.ANM.CHECKOUT_RECOVERY }),
+        let { body: e } = await i.tn.get({
+                url: o.ANM.CHECKOUT_RECOVERY,
+                rejectWithError: !1
+            }),
             t = (null == e ? void 0 : e.is_eligible) === !0;
         t && !a.Z.hasFetchedPaymentSources && (await (0, r.tZ)()),
             l.Z.dispatch({

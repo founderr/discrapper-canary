@@ -27,7 +27,8 @@ async function u(e) {
                     await r.tn.del({
                         url: l.ANM.GUILD_LEAVE(e),
                         body: { lurking: !0 },
-                        oldFormErrors: !0
+                        oldFormErrors: !0,
+                        rejectWithError: !1
                     });
                 } catch (n) {
                     i.Z.dispatch({

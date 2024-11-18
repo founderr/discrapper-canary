@@ -177,7 +177,8 @@ async function k(t, e, n) {
                 body: {
                     public_key: b(e),
                     key_version: n
-                }
+                },
+                rejectWithError: !1
             })
         ).body.is_match;
     } catch (t) {
@@ -193,7 +194,8 @@ async function Y(t) {
                 public_key: b(e),
                 signature: b(n),
                 key_version: t
-            }
+            },
+            rejectWithError: !1
         }),
             p.Z.addUploadedKeyVersion(t);
     } catch (t) {

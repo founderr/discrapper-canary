@@ -18,7 +18,8 @@ function s(e, t, n) {
             .patch({
                 url: a.ANM.LIBRARY_APPLICATION_BRANCH(e, t),
                 body: { flags: n },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then((e) => {
                 i.Z.dispatch({

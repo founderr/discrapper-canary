@@ -10,7 +10,8 @@ let s = () =>
     i.tn
         .get({
             url: a.ANM.GUILD_AFFINITIES,
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         })
         .then(
             (e) => {

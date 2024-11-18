@@ -14,7 +14,8 @@ let o = async (e, t) => {
                 query: {
                     price_tier_type: t,
                     guild_id: e
-                }
+                },
+                rejectWithError: !1
             })
         ).body;
     } catch (e) {

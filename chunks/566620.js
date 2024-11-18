@@ -333,7 +333,8 @@ async function X(e) {
                 }
             },
             retries: 3,
-            oldFormErrors: !0
+            oldFormErrors: !0,
+            rejectWithError: !1
         }),
         !0
     );
@@ -360,7 +361,8 @@ async function $() {
         let e = await i.tn.get({
                 url: H.ANM.APPLICATIONS_WITH_ASSETS,
                 query: { with_team_applications: !0 },
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             }),
             t = e.body.applications,
             n = t.map((e) => T.Z.createFromServer(e));
@@ -388,7 +390,8 @@ async function ee(e, t, n) {
                     name: 'file',
                     file: n
                 }
-            ]
+            ],
+            rejectWithError: !1
         });
         return (
             a.Z.dispatch({
@@ -440,7 +443,8 @@ async function en(e) {
                     properties: { guild_id: o }
                 },
                 retries: 3,
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             }),
             l = null !== (n = t.body.activities) && void 0 !== n ? n : [],
             u = null !== (i = t.body.applications) && void 0 !== i ? i : [],
@@ -511,7 +515,8 @@ async function es(e) {
         return (
             await i.tn.get({
                 url: t,
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             }),
             !0
         );

@@ -93,7 +93,8 @@ function ef(e) {
                 headers: n,
                 context: { location: (0, S.Wf)() },
                 retries: 3,
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then(
                 (e) => {

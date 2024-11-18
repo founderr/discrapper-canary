@@ -206,7 +206,8 @@ t.Z = {
             let { body: r } = await c.tn.post({
                 url: q.ANM.INSTANT_INVITES(e),
                 body: t,
-                context: { location: n }
+                context: { location: n },
+                rejectWithError: !1
             });
             return (
                 d.Z.dispatch({
@@ -237,7 +238,8 @@ t.Z = {
         if ((await new Promise((e) => d.Z.wait(() => e(null))), B.Z.getFriendInvitesFetching())) return null != et ? et.then((e) => e.body) : Promise.reject(Error('Invalid friend invite fetch request'));
         (et = c.tn.get({
             url: q.ANM.FRIEND_INVITES,
-            context: { location: e }
+            context: { location: e },
+            rejectWithError: !1
         })),
             d.Z.dispatch({
                 type: 'FRIEND_INVITES_FETCH_REQUEST',
@@ -260,7 +262,8 @@ t.Z = {
             .post({
                 url: q.ANM.FRIEND_INVITES,
                 body: null != e ? e : {},
-                context: { location: t }
+                context: { location: t },
+                rejectWithError: !1
             })
             .then(
                 (e) => {
@@ -289,7 +292,8 @@ t.Z = {
         c.tn
             .del({
                 url: q.ANM.FRIEND_INVITES,
-                context: { location }
+                context: { location },
+                rejectWithError: !1
             })
             .then((e) => {
                 let { body: t } = e;
@@ -299,7 +303,11 @@ t.Z = {
                 });
             })
     ),
-    revokeFriendInvite: (e) => c.tn.del({ url: q.ANM.INVITE(e) }),
+    revokeFriendInvite: (e) =>
+        c.tn.del({
+            url: q.ANM.INVITE(e),
+            rejectWithError: !1
+        }),
     clearInviteFromStore(e) {
         d.Z.dispatch({
             type: 'INSTANT_INVITE_CLEAR',
@@ -319,7 +327,8 @@ t.Z = {
                     max_age: e.maxAge,
                     invite_type: e.type
                 }
-            }
+            },
+            rejectWithError: !1
         }).then(() => {
             d.Z.dispatch({
                 type: 'INSTANT_INVITE_REVOKE_SUCCESS',
@@ -353,7 +362,8 @@ t.Z = {
                       url: q.ANM.INVITE(f),
                       context: h,
                       oldFormErrors: !0,
-                      body: { session_id: p }
+                      body: { session_id: p },
+                      rejectWithError: !1
                   })
                   .then(
                       async (e) => {

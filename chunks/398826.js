@@ -16,7 +16,8 @@ function a() {
         i.tn
             .get({
                 url: l.ANM.USER_HARVEST,
-                oldFormErrors: !0
+                oldFormErrors: !0,
+                rejectWithError: !1
             })
             .then((e) => {
                 s.Z.dispatch({

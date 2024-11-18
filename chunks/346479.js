@@ -22,7 +22,8 @@ function S(e, t) {
     return i.tn
         .patch({
             url: v.ANM.CHANNEL(e.id),
-            body: t
+            body: t,
+            rejectWithError: !1
         })
         .then(
             (t) => (
@@ -118,7 +119,8 @@ t.Z = {
         try {
             return await i.tn.post({
                 url: v.ANM.THREAD_MEMBER(e.id),
-                query: { location: t }
+                query: { location: t },
+                rejectWithError: !1
             });
         } catch (t) {
             var n;
@@ -140,7 +142,8 @@ t.Z = {
         try {
             return await i.tn.post({
                 url: v.ANM.THREAD_MEMBER(e.id, t),
-                query: { location: n }
+                query: { location: n },
+                rejectWithError: !1
             });
         } catch (t) {
             var r;
@@ -161,18 +164,21 @@ t.Z = {
         e.isForumPost() && T(e, !1),
         i.tn.del({
             url: v.ANM.THREAD_MEMBER(e.id),
-            query: { location: t }
+            query: { location: t },
+            rejectWithError: !1
         })
     ),
     removeMember: (e, t, n) =>
         i.tn.del({
             url: v.ANM.THREAD_MEMBER(e.id, t),
-            query: { location: n }
+            query: { location: n },
+            rejectWithError: !1
         }),
     setAutoArchiveDuration: (e, t) =>
         i.tn.patch({
             url: v.ANM.CHANNEL(e.id),
-            body: { auto_archive_duration: t }
+            body: { auto_archive_duration: t },
+            rejectWithError: !1
         }),
     pin(e) {
         let t = e.flags | b.zZ.PINNED;
@@ -193,7 +199,8 @@ t.Z = {
         try {
             await i.tn.patch({
                 url: v.ANM.CHANNEL(e.id),
-                body: r
+                body: r,
+                rejectWithError: !1
             });
         } catch {
             a.Z.dispatch({
@@ -218,7 +225,8 @@ t.Z = {
         try {
             await i.tn.patch({
                 url: v.ANM.CHANNEL(e.id),
-                body: { flags: e.flags & ~b.zZ.PINNED }
+                body: { flags: e.flags & ~b.zZ.PINNED },
+                rejectWithError: !1
             });
         } catch {
             a.Z.dispatch({
@@ -234,7 +242,8 @@ t.Z = {
         try {
             await i.tn.patch({
                 url: v.ANM.CHANNEL(t.id),
-                body: { flags: t.flags | b.zZ.PINNED }
+                body: { flags: t.flags | b.zZ.PINNED },
+                rejectWithError: !1
             });
         } catch {
             a.Z.dispatch({
@@ -267,7 +276,8 @@ t.Z = {
             !m.Z.hasJoined(e.id) && (await this.joinThread(e, 'Change Notification Settings')),
             i.tn.patch({
                 url: v.ANM.THREAD_MEMBER_SETTINGS(e.id),
-                body: t
+                body: t,
+                rejectWithError: !1
             })
         );
     },
@@ -291,7 +301,8 @@ t.Z = {
                         tag_setting: r.z.MATCH_SOME,
                         offset: o
                     },
-                    retries: 2
+                    retries: 2,
+                    rejectWithError: !1
                 })
                 .then(
                     (r) => {
@@ -340,7 +351,8 @@ t.Z = {
                     name: n,
                     tag: o,
                     tag_setting: r.z.MATCH_SOME
-                }
+                },
+                rejectWithError: !1
             });
         return (
             a.Z.dispatch({

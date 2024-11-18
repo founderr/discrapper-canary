@@ -107,7 +107,8 @@ function R(e, t) {
                                                 session_id: T.default.getSessionId(),
                                                 nonce: n
                                             },
-                                            signal: t
+                                            signal: t,
+                                            rejectWithError: !1
                                         })
                                         .catch((e) => {
                                             429 === e.status ? setTimeout(o, e.body.retry_after * S.Z.Millis.SECOND) : (0, E.yr)(n);

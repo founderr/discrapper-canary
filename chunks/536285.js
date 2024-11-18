@@ -107,7 +107,8 @@ class m extends r.EventEmitter {
                     args: t,
                     evt: n,
                     nonce: (0, o.Z)()
-                }
+                },
+                rejectWithError: !1
             })
             .then((e) => {
                 let {
