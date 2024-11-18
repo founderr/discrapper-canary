@@ -1,180 +1,126 @@
 n.d(t, {
     Z: function () {
-        return V;
+        return F;
     }
 }),
     n(47120);
-var i,
-    s,
-    r = n(200651),
-    l = n(192379),
-    a = n(120356),
-    o = n.n(a),
-    c = n(512722),
-    d = n.n(c),
-    u = n(442837),
-    m = n(622535),
-    h = n(481060),
-    g = n(570140),
-    p = n(232567),
-    x = n(809206),
-    S = n(497321),
-    T = n(634894),
-    C = n(100527),
-    _ = n(906732),
-    E = n(475977),
-    I = n(957730),
-    f = n(31590),
-    N = n(53691),
-    A = n(267717),
-    b = n(296810),
-    v = n(921813),
-    j = n(610794),
-    O = n(935147),
-    R = n(246946),
-    P = n(25990),
-    D = n(594174),
-    y = n(626135),
-    B = n(74538),
-    L = n(413182),
-    Z = n(695346),
-    F = n(265159),
-    M = n(532495),
-    k = n(981631),
-    w = n(388032),
-    U = n(520443);
-function V() {
-    let e = (0, u.e7)([D.default], () => {
-        let e = D.default.getCurrentUser();
-        return d()(null != e, 'UserSettingsProfileCustomization: user cannot be undefined'), e;
+var i = n(200651),
+    s = n(192379),
+    r = n(512722),
+    l = n.n(r),
+    a = n(442837),
+    o = n(622535),
+    c = n(481060),
+    d = n(570140),
+    u = n(232567),
+    m = n(809206),
+    h = n(497321),
+    g = n(634894),
+    p = n(100527),
+    x = n(906732),
+    S = n(475977),
+    T = n(957730),
+    C = n(53691),
+    E = n(267717),
+    _ = n(296810),
+    f = n(921813),
+    I = n(610794),
+    N = n(935147),
+    A = n(246946),
+    b = n(25990),
+    v = n(594174),
+    j = n(626135),
+    O = n(74538),
+    R = n(413182),
+    P = n(695346),
+    D = n(265159),
+    y = n(532495),
+    B = n(981631),
+    L = n(388032),
+    Z = n(520443);
+function F() {
+    let e = (0, a.e7)([v.default], () => {
+        let e = v.default.getCurrentUser();
+        return l()(null != e, 'UserSettingsProfileCustomization: user cannot be undefined'), e;
     });
-    l.useEffect(() => {
-        (0, p.In)(e.id);
+    s.useEffect(() => {
+        (0, u.In)(e.id);
     }, [e.id]);
-    let t = (0, u.e7)([R.Z], () => R.Z.hidePersonalInformation),
-        { pendingBio: n, ...i } = (0, u.cj)([P.Z], () => P.Z.getAllPending()),
-        s = (0, u.e7)([P.Z], () => P.Z.showNotice()),
-        a = Z.dN.useSetting() && null != n ? I.ZP.parse(void 0, n).content : n,
-        c = B.ZP.canUsePremiumProfileCustomization(e),
-        { analyticsLocations: V } = (0, _.ZP)(C.Z.PROFILE);
-    l.useEffect(() => () => g.Z.wait(x.W3), []);
-    let G = 'UserSettingsProfileCustomization';
-    (0, T.j)({
-        location: G + ' auto on',
+    let t = (0, a.e7)([A.Z], () => A.Z.hidePersonalInformation),
+        { pendingBio: n, ...r } = (0, a.cj)([b.Z], () => b.Z.getAllPending()),
+        F = (0, a.e7)([b.Z], () => b.Z.showNotice()),
+        M = P.dN.useSetting() && null != n ? T.ZP.parse(void 0, n).content : n,
+        k = O.ZP.canUsePremiumProfileCustomization(e),
+        { analyticsLocations: w } = (0, x.ZP)(p.Z.PROFILE);
+    s.useEffect(() => () => d.Z.wait(m.W3), []);
+    let U = 'UserSettingsProfileCustomization';
+    (0, g.j)({
+        location: U + ' auto on',
         autoTrackExposure: !0
     }),
-        (0, T.j)({
-            location: G + ' auto off',
+        (0, g.j)({
+            location: U + ' auto off',
             autoTrackExposure: !1
         });
-    let {
-            enabled: Y,
-            showSegmentedControl: H,
-            showFloatingUpsell: z
-        } = f.Z.useExperiment(
-            { location: 'UserSettingsProfileCustomization' },
-            {
-                autoTrackExposure: !c,
-                disable: c
-            }
-        ),
-        [W, K] = l.useState(0),
-        [q, Q] = l.useState(!1),
-        X = l.useMemo(
-            () =>
-                H
-                    ? [
-                          {
-                              name: w.intl.string(w.t['q/MslJ']),
-                              value: 0
-                          },
-                          {
-                              name: w.intl.string(w.t['5SObwM']),
-                              value: 1
-                          }
-                      ]
-                    : [],
-            [H]
-        ),
-        J = !Y || z || (H && 0 === W),
-        $ = !c && (!Y || z || (H && 1 === W)),
-        { showRedesign: ee } = L.b.useExperiment({ location: 'profile customization' }),
-        et = l.useRef(null),
-        en = l.useCallback((e) => {
-            1 === e && y.default.track(k.rMx.TRY_IT_OUT_PRESET_CLICKED, { cta_variant: 'segmented_control' }), K(e);
-        }, []);
+    let [V, G] = s.useState(!1),
+        { showRedesign: Y } = R.b.useExperiment({ location: 'profile customization' }),
+        H = !k,
+        z = s.useRef(null);
     return t
-        ? (0, r.jsx)(S.Z, {})
-        : (0, r.jsxs)(_.Gt, {
-              value: V,
+        ? (0, i.jsx)(h.Z, {})
+        : (0, i.jsxs)(x.Gt, {
+              value: w,
               children: [
-                  (0, r.jsx)(E.Z, {}),
-                  H &&
-                      !c &&
-                      (0, r.jsx)(h.SegmentedControl, {
-                          className: o()({
-                              [U.segmentedControlNonNitro]: 0 === W,
-                              [U.segmentedControlTryItOut]: 1 === W
-                          }),
-                          options: X,
-                          value: W,
-                          onChange: (e) => en(e.value),
-                          look: 'pill'
+                  (0, i.jsx)(S.Z, {}),
+                  (0, i.jsx)(_.Z, {
+                      profilePreview: (0, i.jsx)(f.Z, {
+                          user: e,
+                          canUsePremiumCustomization: k,
+                          onUpsellClick: D.Z,
+                          pendingBio: M,
+                          ...r
                       }),
-                  J &&
-                      (0, r.jsxs)(r.Fragment, {
-                          children: [
-                              (0, r.jsx)(b.Z, {
-                                  profilePreview: (0, r.jsx)(v.Z, {
-                                      user: e,
-                                      canUsePremiumCustomization: c,
-                                      onUpsellClick: F.Z,
-                                      pendingBio: a,
-                                      ...i
-                                  }),
-                                  children: (0, r.jsx)(M.Z, {})
-                              }),
-                              ee && (0, r.jsx)(j.Z, {})
-                          ]
-                      }),
-                  (0, r.jsx)(m.$, {
-                      onChange: (e) => Q(e),
+                      children: (0, i.jsx)(y.Z, {})
+                  }),
+                  Y && (0, i.jsx)(I.Z, {}),
+                  (0, i.jsx)(o.$, {
+                      onChange: (e) => G(e),
                       threshold: 0.25,
-                      active: z,
-                      children: (0, r.jsx)('div', {
-                          ref: et,
-                          children: (0, r.jsx)(O.Z, {
+                      active: H,
+                      children: (0, i.jsx)('div', {
+                          ref: z,
+                          children: (0, i.jsx)(N.Z, {
                               user: e,
-                              shouldShow: $,
-                              isVisible: q
+                              shouldShow: H,
+                              isVisible: V
                           })
                       })
                   }),
-                  z &&
-                      !s &&
-                      (0, r.jsx)(N.p, {
-                          className: U.floatingNitroUpsell,
-                          showUpsell: z && !q,
-                          text: w.intl.format(w.t.TmfgIy, { onClick: () => (0, A.openPremiumTryItOutProfileUpsell)() }),
+                  H &&
+                      !F &&
+                      (0, i.jsx)(C.p, {
+                          className: Z.floatingNitroUpsell,
+                          showUpsell: H && !V,
+                          text: L.intl.format(L.t.TmfgIy, { onClick: () => (0, E.openPremiumTryItOutProfileUpsell)() }),
                           textVariant: 'heading-md/medium',
-                          button: (0, r.jsxs)(h.ShinyButton, {
-                              className: U.floatingNitroButton,
-                              innerClassName: U.floatingNitroButtonInner,
+                          button: (0, i.jsxs)(c.ShinyButton, {
+                              className: Z.floatingNitroButton,
+                              innerClassName: Z.floatingNitroButtonInner,
                               onClick: () => {
                                   var e;
-                                  y.default.track(k.rMx.TRY_IT_OUT_PRESET_CLICKED, { cta_variant: 'floating_action_button' }), null == et || null === (e = et.current) || void 0 === e || e.scrollIntoView({ behavior: 'smooth' });
+                                  j.default.track(B.rMx.TRY_IT_OUT_PRESET_CLICKED, { cta_variant: 'floating_action_button' }), null == z || null === (e = z.current) || void 0 === e || e.scrollIntoView({ behavior: 'smooth' });
                               },
-                              color: h.Button.Colors.GREEN,
-                              size: h.ButtonSizes.MEDIUM,
+                              color: c.Button.Colors.GREEN,
+                              size: c.ButtonSizes.MEDIUM,
                               children: [
-                                  (0, r.jsx)(h.NitroWheelIcon, {
+                                  (0, i.jsx)(c.NitroWheelIcon, {
                                       size: 'sm',
                                       color: 'currentColor'
                                   }),
-                                  (0, r.jsx)(h.Text, {
+                                  (0, i.jsx)(c.Text, {
                                       variant: 'text-sm/medium',
                                       color: 'currentColor',
-                                      children: w.intl.string(w.t.uw9zIy)
+                                      children: L.intl.string(L.t.uw9zIy)
                                   })
                               ]
                           })
@@ -182,4 +128,3 @@ function V() {
               ]
           });
 }
-((s = i || (i = {}))[(s.NON_NITRO = 0)] = 'NON_NITRO'), (s[(s.TRY_IT_OUT = 1)] = 'TRY_IT_OUT');

@@ -1,241 +1,220 @@
 n.d(t, {
     Z: function () {
-        return z;
+        return U;
     }
 }),
     n(47120);
 var i = n(200651),
     s = n(192379),
-    r = n(120356),
-    l = n.n(r),
-    a = n(442837),
-    o = n(481060),
-    c = n(809206),
-    d = n(634894),
-    u = n(100527),
-    m = n(906732),
-    h = n(335131),
-    g = n(597688),
-    p = n(1870),
-    x = n(884697),
-    S = n(175756),
-    T = n(104494),
-    C = n(639119),
-    E = n(211712),
-    _ = n(31590),
-    I = n(222062),
-    f = n(629654),
-    N = n(53691),
-    A = n(165583),
-    b = n(197115),
-    v = n(267717),
-    j = n(350327),
-    O = n(996073),
-    R = n(25990),
-    P = n(626135),
-    D = n(74538),
-    y = n(296810),
-    B = n(433411),
-    L = n(532432),
-    Z = n(504983),
-    F = n(134795),
-    M = n(513901),
-    k = n(451392),
-    w = n(649700),
-    U = n(981631),
-    V = n(474936),
-    G = n(526761),
-    Y = n(388032),
-    H = n(520169);
-function z(e) {
+    r = n(442837),
+    l = n(481060),
+    a = n(809206),
+    o = n(634894),
+    c = n(100527),
+    d = n(906732),
+    u = n(335131),
+    m = n(597688),
+    h = n(1870),
+    g = n(884697),
+    p = n(175756),
+    x = n(104494),
+    S = n(639119),
+    T = n(211712),
+    C = n(629654),
+    E = n(53691),
+    _ = n(165583),
+    f = n(267717),
+    I = n(350327),
+    N = n(996073),
+    A = n(25990),
+    b = n(626135),
+    v = n(74538),
+    j = n(296810),
+    O = n(433411),
+    R = n(532432),
+    P = n(504983),
+    D = n(134795),
+    y = n(513901),
+    B = n(451392),
+    L = n(649700),
+    Z = n(981631),
+    F = n(474936),
+    M = n(526761),
+    k = n(388032),
+    w = n(520169);
+function U(e) {
     var t, n;
-    let { user: r, isVisible: z, shouldShow: W } = e,
-        K = D.ZP.isPremium(r),
+    let { user: U, isVisible: V, shouldShow: G } = e,
+        Y = v.ZP.isPremium(U),
         {
-            pendingAvatar: q,
-            pendingThemeColors: Q,
-            tryItOutThemeColors: X,
-            tryItOutAvatar: J,
-            tryItOutBanner: $,
-            tryItOutProfileEffectId: ee,
-            tryItOutAvatarDecoration: et
-        } = (0, a.cj)([R.Z], () => {
-            let e = R.Z.getAllPending(),
-                t = R.Z.getErrors(),
-                n = R.Z.getAllTryItOut();
+            pendingAvatar: H,
+            pendingThemeColors: z,
+            tryItOutThemeColors: W,
+            tryItOutAvatar: K,
+            tryItOutBanner: q,
+            tryItOutProfileEffectId: Q,
+            tryItOutAvatarDecoration: X
+        } = (0, r.cj)([A.Z], () => {
+            let e = A.Z.getAllPending(),
+                t = A.Z.getErrors(),
+                n = A.Z.getAllTryItOut();
             return {
                 ...e,
                 ...n,
                 errors: t
             };
         }),
-        en = (0, S.Z)(ee),
-        ei = s.useRef(null);
-    (0, O.Z)(ei, G.Y_.TRY_IT_OUT);
-    let { analyticsLocations: es, sourceAnalyticsLocations: er } = (0, m.ZP)(u.Z.USER_SETTINGS_TRY_OUT_PREMIUM),
-        [el, ea] = s.useState(Math.floor(Math.random() * E.J2.length)),
-        eo = (e) => {
+        J = (0, p.Z)(Q),
+        $ = s.useRef(null);
+    (0, N.Z)($, M.Y_.TRY_IT_OUT);
+    let { analyticsLocations: ee, sourceAnalyticsLocations: et } = (0, d.ZP)(c.Z.USER_SETTINGS_TRY_OUT_PREMIUM),
+        [en, ei] = s.useState(Math.floor(Math.random() * T.J2.length)),
+        es = (e) => {
             if (e) {
-                if (((0, c.I5)(J), (0, j.z5)(X), (0, j.ho)($), null != et)) {
-                    let e = g.Z.getProduct(et.skuId);
-                    null != e && (0, x.G1)(e) ? (0, h.fK)(e.skuId).then(() => (0, c.cV)(et)) : null != p.Z.getPurchase(et.skuId) && (0, c.cV)(et);
+                if (((0, a.I5)(K), (0, I.z5)(W), (0, I.ho)(q), null != X)) {
+                    let e = m.Z.getProduct(X.skuId);
+                    null != e && (0, g.G1)(e) ? (0, u.fK)(e.skuId).then(() => (0, a.cV)(X)) : null != h.Z.getPurchase(X.skuId) && (0, a.cV)(X);
                 }
-                P.default.track(U.rMx.TRY_IT_OUT_PRESET_SELECTED, { preset: E.J2[el].presetName });
+                b.default.track(Z.rMx.TRY_IT_OUT_PRESET_SELECTED, { preset: T.J2[en].presetName });
             }
         };
     s.useEffect(() => {
-        if (!!z)
-            P.default.track(U.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: V.cd.PREMIUM_PROFILE_TRY_IT_OUT,
-                location: { page: U.ZY5.USER_SETTINGS },
-                location_stack: er
+        if (!!V)
+            b.default.track(Z.rMx.PREMIUM_UPSELL_VIEWED, {
+                type: F.cd.PREMIUM_PROFILE_TRY_IT_OUT,
+                location: { page: Z.ZY5.USER_SETTINGS },
+                location_stack: et
             });
-    }, [er, r, z]);
-    let ec = (null === (n = (0, C.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === V.Si.TIER_2,
-        ed = (0, T.Ng)(),
-        eu = (0, T.Wp)(ed, V.Si.TIER_2),
-        em = 'TryOutPremiumSection';
-    (0, d.j)({
-        location: em + ' auto on',
+    }, [et, U, V]);
+    let er = (null === (n = (0, S.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === F.Si.TIER_2,
+        el = (0, x.Ng)(),
+        ea = (0, x.Wp)(el, F.Si.TIER_2),
+        eo = 'TryOutPremiumSection';
+    return ((0, o.j)({
+        location: eo + ' auto on',
         autoTrackExposure: !0
     }),
-        (0, d.j)({
-            location: em + ' auto off',
-            autoTrackExposure: !1
-        });
-    let eh = (0, I.M)(),
-        { enabled: eg } = _.Z.useExperiment({ location: 'UserSettingsProfileCustomization' }, { autoTrackExposure: !1 });
-    return W
-        ? (0, i.jsx)(m.Gt, {
-              value: es,
-              children: (0, i.jsxs)(Z.Z, {
-                  ref: ei,
-                  className: H.tryItOutSection,
-                  type: Z.Y.PREMIUM,
+    (0, o.j)({
+        location: eo + ' auto off',
+        autoTrackExposure: !1
+    }),
+    G)
+        ? (0, i.jsx)(d.Gt, {
+              value: ee,
+              children: (0, i.jsxs)(P.Z, {
+                  ref: $,
+                  className: w.tryItOutSection,
+                  type: P.Y.PREMIUM,
                   isShown: !0,
                   hasBackground: !0,
                   children: [
-                      (0, i.jsx)(y.Z, {
-                          layoutClassName: H.tryItOutLayout,
+                      (0, i.jsx)(j.Z, {
+                          layoutClassName: w.tryItOutLayout,
                           previewTitle: (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, i.jsx)(o.NitroWheelIcon, {
+                                  (0, i.jsx)(l.NitroWheelIcon, {
                                       size: 'md',
                                       color: 'currentColor',
-                                      className: H.premiumIcon
+                                      className: w.premiumIcon
                                   }),
-                                  Y.intl.string(Y.t.gMlDNT)
+                                  k.intl.string(k.t.gMlDNT)
                               ]
                           }),
                           profilePreview: (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  eg &&
-                                      (0, i.jsx)(f.Z, {
-                                          selectedIndex: el,
-                                          setSelectedIndex: ea
-                                      }),
-                                  (0, i.jsx)(w.Z, { user: r })
+                                  (0, i.jsx)(C.Z, {
+                                      selectedIndex: en,
+                                      setSelectedIndex: ei
+                                  }),
+                                  (0, i.jsx)(L.Z, { user: U })
                               ]
                           }),
                           children: (0, i.jsxs)('div', {
-                              className: H.editor,
+                              className: w.editor,
                               children: [
                                   (0, i.jsxs)('div', {
                                       children: [
-                                          (0, i.jsx)(o.Heading, {
+                                          (0, i.jsx)(l.Heading, {
                                               variant: 'heading-xl/extrabold',
-                                              children: Y.intl.string(Y.t['2zGdAQ'])
+                                              children: k.intl.string(k.t['2zGdAQ'])
                                           }),
-                                          (0, i.jsx)(o.Text, {
-                                              className: H.description,
+                                          (0, i.jsx)(l.Text, {
+                                              className: w.description,
                                               variant: 'text-sm/normal',
-                                              children: Y.intl.string(Y.t.xeEC29)
+                                              children: k.intl.string(k.t.xeEC29)
                                           })
                                       ]
                                   }),
-                                  (0, i.jsx)(k.Z, {
-                                      className: H.customizationSection,
-                                      user: r,
-                                      pendingAvatar: null != J ? J : q,
-                                      pendingColors: null != X ? X : Q,
-                                      onThemeColorsChange: j.rf,
+                                  (0, i.jsx)(B.Z, {
+                                      className: w.customizationSection,
+                                      user: U,
+                                      pendingAvatar: null != K ? K : H,
+                                      pendingColors: null != W ? W : z,
+                                      onThemeColorsChange: I.rf,
                                       showPremiumIcon: !1,
                                       preventDisabled: !0
                                   }),
-                                  (0, i.jsx)(F.Z, {
-                                      className: H.customizationSection,
+                                  (0, i.jsx)(D.Z, {
+                                      className: w.customizationSection,
                                       isTryItOutFlow: !0,
-                                      showRemoveBannerButton: null != $,
-                                      onBannerChange: j.f4,
+                                      showRemoveBannerButton: null != q,
+                                      onBannerChange: I.f4,
                                       showPremiumIcon: !1
                                   }),
-                                  (0, i.jsx)(L.Z, {
-                                      className: H.customizationSection,
+                                  (0, i.jsx)(R.Z, {
+                                      className: w.customizationSection,
                                       isTryItOutFlow: !0,
-                                      onAvatarChange: j.c_,
+                                      onAvatarChange: I.c_,
                                       showRemoveAvatarButton: !1,
-                                      changeAvatarButtonText: Y.intl.string(Y.t['7z0D1d']),
-                                      sectionTitle: Y.intl.string(Y.t.vtFfPT)
+                                      changeAvatarButtonText: k.intl.string(k.t['7z0D1d']),
+                                      sectionTitle: k.intl.string(k.t.vtFfPT)
                                   }),
                                   (0, i.jsx)(
-                                      B.Z,
+                                      O.Z,
                                       {
                                           isTryItOutFlow: !0,
-                                          className: H.customizationSection,
-                                          user: r,
-                                          sectionTitle: Y.intl.string(Y.t['7v0T9P'])
+                                          className: w.customizationSection,
+                                          user: U,
+                                          sectionTitle: k.intl.string(k.t['7v0T9P'])
                                       },
                                       'decoration'
                                   ),
                                   (0, i.jsx)(
-                                      M.Z,
+                                      y.Z,
                                       {
-                                          className: H.customizationSection,
+                                          className: w.customizationSection,
                                           isTryItOutFlow: !0,
-                                          initialSelectedEffectId: en,
-                                          user: r,
-                                          sectionTitle: Y.intl.string(Y.t.wR5wOj)
+                                          initialSelectedEffectId: J,
+                                          user: U,
+                                          sectionTitle: k.intl.string(k.t.wR5wOj)
                                       },
                                       'effect'
                                   ),
-                                  !ec &&
-                                      (0, i.jsxs)(i.Fragment, {
-                                          children: [
-                                              (0, i.jsx)(o.Text, {
-                                                  variant: 'text-sm/normal',
-                                                  className: l()({ [H.premiumPerksListTitle]: !eh }),
-                                                  children: Y.intl.string(Y.t['smo74+'])
-                                              }),
-                                              !eh &&
-                                                  (0, i.jsx)(b.Z, {
-                                                      onSubscribeModalClose: eo,
-                                                      subscriptionTier: V.Si.TIER_2,
-                                                      className: H.premiumSubscribeButton,
-                                                      size: o.Button.Sizes.MEDIUM,
-                                                      buttonText: K ? Y.intl.string(Y.t.AfRWIy) : eu ? Y.intl.formatToPlainString(Y.t.bkQ4bG, { percent: null == ed ? void 0 : ed.discount.amount }) : Y.intl.string(Y.t.pj0XBA)
-                                                  })
-                                          ]
+                                  !er &&
+                                      (0, i.jsx)(l.Text, {
+                                          variant: 'text-sm/normal',
+                                          children: k.intl.string(k.t['smo74+'])
                                       })
                               ]
                           })
                       }),
-                      eh &&
-                          (0, i.jsx)(N.p, {
-                              onSubscribeModalClose: eo,
-                              className: H.floatingUpsell,
+                      !er &&
+                          (0, i.jsx)(E.p, {
+                              onSubscribeModalClose: es,
+                              className: w.floatingUpsell,
                               showUpsell: !0,
-                              text: Y.intl.format(Y.t.TmfgIy, { onClick: () => (0, v.openPremiumTryItOutProfileUpsell)(eo) }),
-                              button: Y.intl.string(Y.t.pj0XBA),
+                              text: k.intl.format(k.t.TmfgIy, { onClick: () => (0, f.openPremiumTryItOutProfileUpsell)(es) }),
+                              button: Y ? k.intl.string(k.t.AfRWIy) : ea ? k.intl.formatToPlainString(k.t.bkQ4bG, { percent: null == el ? void 0 : el.discount.amount }) : k.intl.string(k.t.pj0XBA),
                               position: 'inline',
                               showShadow: !1
                           }),
-                      ec &&
+                      er &&
                           (0, i.jsxs)('div', {
                               children: [
-                                  (0, i.jsx)('div', { className: H.premiumTier2Divider }),
-                                  (0, i.jsx)(A.ZP, {
-                                      type: V.cd.CUSTOM_PROFILE_TRY_OUT_UPSELL,
-                                      subscriptionTier: V.Si.TIER_2
+                                  (0, i.jsx)('div', { className: w.premiumTier2Divider }),
+                                  (0, i.jsx)(_.ZP, {
+                                      type: F.cd.CUSTOM_PROFILE_TRY_OUT_UPSELL,
+                                      subscriptionTier: F.Si.TIER_2
                                   })
                               ]
                           })

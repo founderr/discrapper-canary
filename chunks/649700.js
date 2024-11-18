@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return u;
     }
 });
 var i = n(200651),
@@ -8,49 +8,47 @@ var i = n(200651),
     r = n(442837),
     l = n(481060),
     a = n(588126),
-    o = n(31590),
-    c = n(25990),
-    d = n(921813),
-    u = n(283655);
-function m(e) {
+    o = n(25990),
+    c = n(921813),
+    d = n(283655);
+function u(e) {
     var t;
-    let { user: m, disabledInputs: h, containerClassName: g } = e,
-        { reducedMotion: p } = s.useContext(l.AccessibilityPreferencesContext),
+    let { user: u, disabledInputs: m, containerClassName: h } = e,
+        { reducedMotion: g } = s.useContext(l.AccessibilityPreferencesContext),
         {
-            pendingAvatar: x,
-            pendingBanner: S,
-            pendingThemeColors: T,
-            pendingPronouns: C,
-            pendingBio: E,
-            tryItOutThemeColors: _,
-            tryItOutAvatar: I,
+            pendingAvatar: p,
+            pendingBanner: x,
+            pendingThemeColors: S,
+            pendingPronouns: T,
+            pendingBio: C,
+            tryItOutThemeColors: E,
+            tryItOutAvatar: _,
             tryItOutBanner: f,
-            tryItOutAvatarDecoration: N,
-            tryItOutProfileEffectId: A
-        } = (0, r.cj)([c.Z], () => {
-            let e = c.Z.getAllPending(),
-                t = c.Z.getAllTryItOut();
+            tryItOutAvatarDecoration: I,
+            tryItOutProfileEffectId: N
+        } = (0, r.cj)([o.Z], () => {
+            let e = o.Z.getAllPending(),
+                t = o.Z.getAllTryItOut();
             return {
                 ...e,
                 ...t
             };
         }),
-        { enabled: b } = o.Z.useExperiment({ location: 'TryItOutPreview' }, { autoTrackExposure: !1 }),
-        v = (0, a.Z)(N, !b);
-    return (0, i.jsx)(d.Z, {
-        containerClassName: g,
-        user: m,
-        pendingPronouns: C,
-        pendingBio: E,
-        pendingBanner: null !== (t = null != f ? f : S) && void 0 !== t ? t : n(466045),
-        pendingAvatar: null != I ? I : x,
-        pendingThemeColors: null != _ ? _ : T,
-        pendingAvatarDecoration: v,
-        pendingProfileEffectId: A,
-        avatarClassName: null != I || null != x || p.enabled ? void 0 : u.spinningAvatar,
+        A = (0, a.Z)(I, !1);
+    return (0, i.jsx)(c.Z, {
+        containerClassName: h,
+        user: u,
+        pendingPronouns: T,
+        pendingBio: C,
+        pendingBanner: null !== (t = null != f ? f : x) && void 0 !== t ? t : n(466045),
+        pendingAvatar: null != _ ? _ : p,
+        pendingThemeColors: null != E ? E : S,
+        pendingAvatarDecoration: A,
+        pendingProfileEffectId: N,
+        avatarClassName: null != _ || null != p || g.enabled ? void 0 : d.spinningAvatar,
         canUsePremiumCustomization: !0,
         isTryItOutFlow: !0,
         hideExampleButton: !0,
-        disabledInputs: h
+        disabledInputs: m
     });
 }
