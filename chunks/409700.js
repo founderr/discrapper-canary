@@ -116,42 +116,50 @@ function m(e) {
         ),
         h = i.useCallback(() => {
             _(String(Date.now()));
-        }, []);
-    return (0, r.jsx)(s.Popout, {
-        renderPopout: (e) =>
-            (0, r.jsx)(s.Clickable, {
-                onClick: (e) => e.stopPropagation(),
-                onMouseOver: (e) => e.stopPropagation(),
-                children: t({
-                    ...e,
-                    refreshPosition: h
-                })
-            }),
-        align: 'center',
-        nudgeAlignIntoViewport: !0,
-        position: n,
-        shouldShow: u,
-        onRequestClose: () => c(!1),
-        animationPosition: 'bottom',
-        positionKey: d,
-        children: (e) =>
-            (0, r.jsx)(s.Tooltip, {
-                onTooltipHide: () => l(!1),
-                onTooltipShow: () => l(!0),
-                text: a,
-                position: 'top',
-                shouldShow: !u,
-                children: (t) =>
-                    (0, r.jsx)(s.Clickable, {
-                        ...t,
+        }, []),
+        m = i.useRef(null);
+    return (
+        i.useEffect(() => {
+            var e, t;
+            u ? null === (e = m.current) || void 0 === e || e.focus() : null === (t = m.current) || void 0 === t || t.blur();
+        }, [u]),
+        (0, r.jsx)(s.Popout, {
+            renderPopout: (e) =>
+                (0, r.jsx)(s.Clickable, {
+                    onClick: (e) => e.stopPropagation(),
+                    onMouseOver: (e) => e.stopPropagation(),
+                    children: t({
                         ...e,
-                        'aria-label': a,
-                        onClick: p,
-                        className: f.secondaryButtonRefresh,
-                        children: o
+                        refreshPosition: h
                     })
-            })
-    });
+                }),
+            align: 'center',
+            nudgeAlignIntoViewport: !0,
+            position: n,
+            shouldShow: u,
+            onRequestClose: () => c(!1),
+            animationPosition: 'bottom',
+            positionKey: d,
+            children: (e) =>
+                (0, r.jsx)(s.Tooltip, {
+                    onTooltipHide: () => l(!1),
+                    onTooltipShow: () => l(!0),
+                    text: a,
+                    position: 'top',
+                    shouldShow: !u,
+                    children: (t) =>
+                        (0, r.jsx)(s.Clickable, {
+                            innerRef: m,
+                            ...t,
+                            ...e,
+                            'aria-label': a,
+                            onClick: p,
+                            className: f.secondaryButtonRefresh,
+                            children: o
+                        })
+                })
+        })
+    );
 }
 function g(e) {
     let { sound: t, channel: n, setTooltipShowing: i } = e;

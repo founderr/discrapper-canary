@@ -11206,6 +11206,10 @@ div.modalHeader_c5e09c {
     transition: margin-top.2s ease
 }
 
+.buttonOverlayActionsRefresh_f40049:focus-within {
+    margin-top: 0
+}
+
 .secondaryButton_f40049 {
     color: var(--interactive-normal);
     display: flex
