@@ -88,8 +88,9 @@ function g(e, t) {
 }
 function E(e) {
     let t = s.default.getId(),
-        n = (0, c.Z7)(e);
-    return !o.ZP.isModerator(t, e) && n > 0;
+        n = (0, c.Z7)(e),
+        r = (0, c.wK)(e);
+    return !o.ZP.isModerator(t, e) && (n > 0 || r > 0);
 }
 function v(e, t) {
     var c;

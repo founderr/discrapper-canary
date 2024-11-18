@@ -5,8 +5,11 @@ n.d(t, {
     _d: function () {
         return s;
     },
-    z: function () {
+    wK: function () {
         return l;
+    },
+    z: function () {
+        return u;
     }
 });
 var r = n(442837),
@@ -20,5 +23,9 @@ function o(e) {
     return null !== (t = i.Z.getParticipantCount(e, a.pV.BLOCKED)) && void 0 !== t ? t : 0;
 }
 function l(e) {
+    var t;
+    return null !== (t = i.Z.getParticipantCount(e, a.pV.IGNORED)) && void 0 !== t ? t : 0;
+}
+function u(e) {
     return (0, r.e7)([i.Z], () => i.Z.getMutableParticipants(e, a.pV.BLOCKED), [e]);
 }

@@ -205,6 +205,7 @@ class K extends (r = d.ZP.Store) {
         STREAM_DELETE: Y,
         RELATIONSHIP_ADD: j,
         RELATIONSHIP_REMOVE: j,
+        RELATIONSHIP_UPDATE: j,
         GUILD_CREATE: H,
         GUILD_DELETE: H,
         PASSIVE_UPDATE_V2: function (e) {
