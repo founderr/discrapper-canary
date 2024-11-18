@@ -347,6 +347,7 @@ var n, r;
     (r.IN_CASE_YOU_MISSED_IT_TAB = 'ICYMI Tab'),
     (r.REVERSE_TRIAL_UPSELL_MODAL = 'reverse trial upsell modal'),
     (r.NITROWEEN_COACHMARK = 'nitroween coachmark'),
+    (r.SEASONAL_GIFTING_COACHMARK = 'seasonal gifting coachmark'),
     (r.HD_STREAMING_POTION_MODAL = 'hd streaming potion modal'),
     (r.APP_DMS_QUICK_LAUNCHER = 'app_dms_quick_launcher'),
     (r.DEEPLINK = 'deeplink'),
