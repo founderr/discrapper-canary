@@ -12,8 +12,7 @@ n.d(t, {
         return E;
     }
 }),
-    n(47120),
-    n(653041);
+    n(47120);
 var r = n(192379),
     i = n(442837),
     a = n(818083),
@@ -263,33 +262,7 @@ function b(e) {
             config: { clanTagsVisible: !0 }
         }
     ]
-}),
-    (0, a.B)({
-        kind: 'user',
-        id: '2024-07_rapidash_m3_admins_browse',
-        label: 'Rapidash M3 Admins Browse',
-        defaultConfig: { canAdminsBrowse: !1 },
-        treatments: [
-            {
-                id: 1,
-                label: 'Enable',
-                config: { canAdminsBrowse: !0 }
-            }
-        ]
-    }),
-    (0, a.B)({
-        kind: 'user',
-        id: '2024-10_rapidash_discovery_entrypoint',
-        label: 'Rapidash Discovery Entrypoint',
-        defaultConfig: { showDiscovery: !1 },
-        treatments: [
-            {
-                id: 1,
-                label: 'Enable',
-                config: { showDiscovery: !0 }
-            }
-        ]
-    });
+});
 let I = (0, a.B)({
     kind: 'guild',
     id: '2024-10_rapidash_discovery_sign_up',
