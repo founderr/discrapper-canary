@@ -583,63 +583,6 @@ let { Themes: n } = r(15202).V,
                 }
             }
         },
-        BACKGROUND_SURFACE_HIGH: {
-            category: 'background',
-            [n.DARK]: {
-                raw: 'NEUTRAL_64',
-                opacity: 1
-            },
-            [n.LIGHT]: {
-                raw: 'NEUTRAL_4',
-                opacity: 1
-            },
-            [n.MIDNIGHT]: {
-                raw: 'NEUTRAL_88',
-                opacity: 1
-            },
-            [n.DARKER]: {
-                raw: 'NEUTRAL_72',
-                opacity: 1
-            }
-        },
-        BACKGROUND_SURFACE_HIGHER: {
-            category: 'background',
-            [n.DARK]: {
-                raw: 'NEUTRAL_60',
-                opacity: 1
-            },
-            [n.LIGHT]: {
-                raw: 'NEUTRAL_1',
-                opacity: 1
-            },
-            [n.MIDNIGHT]: {
-                raw: 'NEUTRAL_84',
-                opacity: 1
-            },
-            [n.DARKER]: {
-                raw: 'NEUTRAL_68',
-                opacity: 1
-            }
-        },
-        BACKGROUND_SURFACE_HIGHEST: {
-            category: 'background',
-            [n.DARK]: {
-                raw: 'NEUTRAL_56',
-                opacity: 1
-            },
-            [n.LIGHT]: {
-                raw: 'NEUTRAL_1',
-                opacity: 1
-            },
-            [n.MIDNIGHT]: {
-                raw: 'NEUTRAL_80',
-                opacity: 1
-            },
-            [n.DARKER]: {
-                raw: 'NEUTRAL_64',
-                opacity: 1
-            }
-        },
         BACKGROUND_TERTIARY: {
             category: 'background',
             [n.DARK]: {
@@ -6521,6 +6464,10 @@ let { Themes: n } = r(15202).V,
             BLUE_NEW_43: '#2d83e7',
             BLUE_NEW_45: '#237ee6',
             BLUE_NEW_56: '#0c66c3',
+            BLURPLE_24: '#94a9fb',
+            BLURPLE_28: '#899ffa',
+            BLURPLE_29: '#869cfa',
+            BLURPLE_69: '#35428c',
             BRAND_100: '#f7f7fe',
             BRAND_130: '#f0f1fe',
             BRAND_160: '#e7e9fd',
@@ -6597,8 +6544,12 @@ let { Themes: n } = r(15202).V,
             LOL_TEXT_DARK: '#94620f',
             LOL_TEXT_LIGHT: '#cbaa62',
             NEUTRAL_1: '#ffffff',
+            NEUTRAL_10: '#dcdcde',
             NEUTRAL_100: '#000000',
+            NEUTRAL_12: '#d4d4d7',
+            NEUTRAL_20: '#b5b6bb',
             NEUTRAL_22: '#aeaeb4',
+            NEUTRAL_23: '#aaaab1',
             NEUTRAL_24: '#a7a7ad',
             NEUTRAL_26: '#9f9fa6',
             NEUTRAL_27: '#9c9ca3',
@@ -6611,18 +6562,13 @@ let { Themes: n } = r(15202).V,
             NEUTRAL_41: '#6a6a74',
             NEUTRAL_5: '#efeff0',
             NEUTRAL_55: '#484851',
-            NEUTRAL_56: '#46474f',
             NEUTRAL_60: '#404048',
-            NEUTRAL_64: '#3a3a41',
-            NEUTRAL_68: '#34343a',
             NEUTRAL_7: '#e7e7e9',
             NEUTRAL_72: '#2e2e34',
             NEUTRAL_73: '#2d2d32',
             NEUTRAL_75: '#2a2a2f',
             NEUTRAL_8: '#e3e3e6',
-            NEUTRAL_80: '#232327',
-            NEUTRAL_84: '#1d1d21',
-            NEUTRAL_88: '#18181b',
+            NEUTRAL_81: '#212125',
             NEUTRAL_89: '#161619',
             NEUTRAL_90: '#151518',
             NEUTRAL_91: '#131416',
