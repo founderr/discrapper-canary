@@ -7,35 +7,36 @@ var r,
     l = n(391650),
     u = n(877215),
     c = n(895886),
-    d = n(397550),
-    f = n(594174),
-    _ = n(657682),
-    p = n(51144),
-    h = n(668781),
-    m = n(239091),
-    g = n(981631),
-    E = n(388032);
-function v(e) {
-    (0, m.Zy)(), h.Z.show(e);
+    d = n(760030),
+    f = n(397550),
+    _ = n(594174),
+    p = n(657682),
+    h = n(51144),
+    m = n(668781),
+    g = n(239091),
+    E = n(981631),
+    v = n(388032);
+function b(e) {
+    (0, g.Zy)(), m.Z.show(e);
 }
-function b(e, t, n) {
+function I(e, t, n) {
     let { status: r, body: i } = e,
         a = i && i.code;
     switch (r) {
         case 429:
             0 === t &&
-                v({
-                    title: E.intl.string(E.t['3D5eo6']),
-                    body: E.intl.string(E.t.TuJriI),
-                    confirmText: E.intl.string(E.t.DppXIy)
+                b({
+                    title: v.intl.string(v.t['3D5eo6']),
+                    body: v.intl.string(v.t.TuJriI),
+                    confirmText: v.intl.string(v.t.DppXIy)
                 });
             break;
         case 403:
-            if (a === g.evJ.EMAIL_VERIFICATION_REQUIRED) {
-                v({
-                    title: E.intl.string(E.t.Gqf33N),
-                    body: E.intl.string(E.t.GHOBd3),
-                    confirmText: E.intl.string(E.t.HbTSEx),
+            if (a === E.evJ.EMAIL_VERIFICATION_REQUIRED) {
+                b({
+                    title: v.intl.string(v.t.Gqf33N),
+                    body: v.intl.string(v.t.GHOBd3),
+                    confirmText: v.intl.string(v.t.HbTSEx),
                     onConfirm: () => {
                         l.j();
                     }
@@ -43,27 +44,27 @@ function b(e, t, n) {
                 break;
             }
         default:
-            if (a === g.evJ.USER_QUARANTINED) (0, m.Zy)(), (0, c.default)();
-            else if ((0, d.b)(r, a)) break;
+            if (a === E.evJ.USER_QUARANTINED) (0, g.Zy)(), (0, c.default)();
+            else if ((0, f.b)(r, a)) break;
             else if (0 === t) {
-                let e = null != n ? (0, _.NF)(a || 0, n) : E.intl.string(E.t.paDJBA);
-                v({
-                    title: E.intl.string(E.t['6moJ8v']),
+                let e = null != n ? (0, p.NF)(a || 0, n) : v.intl.string(v.t.paDJBA);
+                b({
+                    title: v.intl.string(v.t['6moJ8v']),
                     body: e,
-                    confirmText: E.intl.string(E.t.BddRzc)
+                    confirmText: v.intl.string(v.t.BddRzc)
                 });
             }
     }
     throw e;
 }
 ((i = r || (r = {}))[(i.SHOW_ALWAYS = 0)] = 'SHOW_ALWAYS'), (i[(i.SHOW_ONLY_IF_ACTION_NEEDED = 1)] = 'SHOW_ONLY_IF_ACTION_NEEDED');
-let I = {
+let S = {
     sendRequest(e) {
         let { discordTag: t, context: n, captchaPayload: r, errorUxConfig: i = 0 } = e,
             [s, o] = t.split('#');
         return a.tn
             .post({
-                url: g.ANM.USER_RELATIONSHIPS(),
+                url: E.ANM.USER_RELATIONSHIPS(),
                 body: {
                     username: s,
                     discriminator: parseInt(o),
@@ -74,16 +75,16 @@ let I = {
                 rejectWithError: !1
             })
             .catch((e) => {
-                b(e, i, t);
+                I(e, i, t);
             });
     },
     addRelationship(e, t) {
         let { userId: n, context: r, type: i, friendToken: s, fromFriendSuggestion: o, captchaPayload: l } = e,
             u = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-            c = f.default.getUser(n);
+            c = _.default.getUser(n);
         return a.tn
             .put({
-                url: g.ANM.USER_RELATIONSHIP(n),
+                url: E.ANM.USER_RELATIONSHIP(n),
                 body: {
                     type: i,
                     friend_token: s,
@@ -98,31 +99,31 @@ let I = {
                 null == t || t();
             })
             .catch((e) => {
-                b(e, u, p.ZP.getUserTag(c));
+                I(e, u, h.ZP.getUserTag(c));
             });
     },
     acceptFriendRequest: (e) =>
-        I.addRelationship(e, function () {
-            s.uv.announce(E.intl.string(E.t['3goNa2']));
+        S.addRelationship(e, function () {
+            s.uv.announce(v.intl.string(v.t['3goNa2']));
         }),
     cancelFriendRequest: (e, t) =>
-        I.removeRelationship(e, t, function () {
-            s.uv.announce(E.intl.string(E.t.pLUaxc));
+        S.removeRelationship(e, t, function () {
+            s.uv.announce(v.intl.string(v.t.pLUaxc));
         }),
     removeFriend(e, t) {
-        I.removeRelationship(e, t, function () {
-            s.uv.announce(E.intl.string(E.t.vGSLa2));
+        S.removeRelationship(e, t, function () {
+            s.uv.announce(v.intl.string(v.t.vGSLa2));
         });
     },
     unblockUser(e, t) {
-        I.removeRelationship(e, t, function () {
-            s.uv.announce(E.intl.string(E.t['9t1au7']));
+        S.removeRelationship(e, t, function () {
+            s.uv.announce(v.intl.string(v.t['9t1au7']));
         });
     },
     removeRelationship: (e, t, n) =>
         a.tn
             .del({
-                url: g.ANM.USER_RELATIONSHIP(e),
+                url: E.ANM.USER_RELATIONSHIP(e),
                 context: t,
                 oldFormErrors: !0,
                 rejectWithError: !1
@@ -131,20 +132,20 @@ let I = {
                 null == n || n();
             })
             .catch(() => {
-                s.uv.announce(E.intl.string(E.t.n6Jo3N));
+                s.uv.announce(v.intl.string(v.t.n6Jo3N));
             }),
     updateRelationship: (e, t) =>
         a.tn.patch({
-            url: g.ANM.USER_RELATIONSHIP(e),
+            url: E.ANM.USER_RELATIONSHIP(e),
             body: { nickname: t },
             rejectWithError: !1
         }),
     fetchRelationships() {
         a.tn
             .get({
-                url: g.ANM.USER_RELATIONSHIPS(),
+                url: E.ANM.USER_RELATIONSHIPS(),
                 oldFormErrors: !0,
-                rejectWithError: !1
+                rejectWithError: !0
             })
             .then(
                 (e) =>
@@ -161,22 +162,22 @@ let I = {
     clearPendingRelationships: () =>
         a.tn
             .del({
-                url: g.ANM.USER_RELATIONSHIPS(),
-                query: { relationship_type: g.OGo.PENDING_INCOMING },
+                url: E.ANM.USER_RELATIONSHIPS(),
+                query: { relationship_type: E.OGo.PENDING_INCOMING },
                 rejectWithError: !1
             })
             .then(() => {
                 o.Z.dispatch({ type: 'RELATIONSHIP_PENDING_INCOMING_REMOVED' });
             })
             .catch(() => {
-                s.uv.announce(E.intl.string(E.t.n6Jo3N));
+                s.uv.announce(v.intl.string(v.t.n6Jo3N));
             }),
     clearPendingSpam: () =>
         a.tn
             .del({
-                url: g.ANM.USER_RELATIONSHIPS(),
+                url: E.ANM.USER_RELATIONSHIPS(),
                 query: {
-                    relationship_type: g.OGo.PENDING_INCOMING,
+                    relationship_type: E.OGo.PENDING_INCOMING,
                     only_spam: !0
                 },
                 rejectWithError: !1
@@ -185,19 +186,39 @@ let I = {
                 o.Z.dispatch({ type: 'RELATIONSHIP_PENDING_INCOMING_REMOVED' });
             })
             .catch(() => {
-                s.uv.announce(E.intl.string(E.t.n6Jo3N));
+                s.uv.announce(v.intl.string(v.t.n6Jo3N));
             }),
-    ignoreUser: (e, t) =>
-        a.tn.put({
-            url: g.ANM.IGNORE_USER(e),
-            context: { location: t },
-            rejectWithError: !1
-        }),
-    unignoreUser: (e, t) =>
-        a.tn.del({
-            url: g.ANM.IGNORE_USER(e),
-            context: { location: t },
-            rejectWithError: !1
-        })
+    ignoreUser(e, t) {
+        let n = _.default.getUser(e),
+            r = h.ZP.getUserTag(n);
+        return a.tn
+            .put({
+                url: E.ANM.IGNORE_USER(e),
+                context: { location: t },
+                rejectWithError: !1
+            })
+            .then(() => {
+                d.Z.showIgnoreSuccessToast(r);
+            })
+            .catch(() => {
+                d.Z.showFailedToast();
+            });
+    },
+    unignoreUser(e, t) {
+        let n = _.default.getUser(e),
+            r = h.ZP.getUserTag(n);
+        return a.tn
+            .del({
+                url: E.ANM.IGNORE_USER(e),
+                context: { location: t },
+                rejectWithError: !1
+            })
+            .then(() => {
+                d.Z.showUnignoreSuccessToast(r);
+            })
+            .catch(() => {
+                d.Z.showFailedToast();
+            });
+    }
 };
-t.Z = I;
+t.Z = S;
