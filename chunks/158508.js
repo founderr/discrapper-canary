@@ -23,8 +23,15 @@ function d(e) {
             },
             [_]
         ),
-        h = (0, i.e7)([l.Z], () => l.Z.isIgnored(_), [_]);
-    return !(0, o.Do)({ location: 'use-block-user-item-web' }) || p
+        { isIgnored: h, isBlocked: m } = (0, i.cj)(
+            [l.Z],
+            () => ({
+                isIgnored: l.Z.isIgnored(_),
+                isBlocked: l.Z.isBlocked(_)
+            }),
+            [_]
+        );
+    return !(0, o.Do)({ location: 'use-block-user-item-web' }) || p || m
         ? null
         : (0, r.jsx)(a.MenuItem, {
               id: 'ignore',

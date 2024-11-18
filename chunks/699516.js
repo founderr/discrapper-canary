@@ -163,7 +163,14 @@ class R extends (r = u.ZP.Store) {
         },
         RELATIONSHIP_UPDATE: function (e) {
             let { relationship: t } = e;
-            null == t.since ? delete v[t.id] : (v[t.id] = t.since), null == t.nickname ? delete E[t.id] : (E[t.id] = t.nickname), (0, d.A)({ location: 'relationship_store' }) && t.isSpamRequest ? b.add(t.id) : b.delete(t.id), t.userIgnored ? I.add(t.id) : I.delete(t.id);
+            (g = {
+                ...g,
+                [t.id]: t.type
+            }),
+                null == t.since ? delete v[t.id] : (v[t.id] = t.since),
+                null == t.nickname ? delete E[t.id] : (E[t.id] = t.nickname),
+                (0, d.A)({ location: 'relationship_store' }) && t.isSpamRequest ? b.add(t.id) : b.delete(t.id),
+                t.userIgnored ? I.add(t.id) : I.delete(t.id);
         },
         RELATIONSHIP_PENDING_INCOMING_REMOVED: function (e) {
             (g = { ...g }),
