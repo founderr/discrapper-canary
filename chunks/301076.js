@@ -17,9 +17,9 @@ function o(e) {
         { isActivityActive: d, onMouseEnter: u, onMouseLeave: h, onClick: p, ...m } = e,
         { enabled: f } = r.nS.useExperiment({ location: 'ActivityButton' }, { autoTrackExposure: !0 }),
         { Component: g, events: C, play: x } = (0, l.s)(),
-        { Component: v, events: _, play: I } = (0, a.w)();
+        { Component: _, events: v, play: I } = (0, a.w)();
     return (
-        f ? ((n = v), (o = _), (c = I)) : ((n = g), (o = C), (c = x)),
+        f ? ((n = _), (o = v), (c = I)) : ((n = g), (o = C), (c = x)),
         (0, i.jsx)(s.d, {
             isActive: d,
             color: t,

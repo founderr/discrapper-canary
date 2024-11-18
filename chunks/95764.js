@@ -22,13 +22,13 @@ function C(e) {
     let { channelId: t, onClick: n } = e,
         C = (0, r.bp)(),
         x = (0, m.qY)(t),
-        v = (0, l.e7)([d.Z], () => d.Z.getChannel(t), [t]),
-        { canManageGuildEvent: _ } = (0, s.XJ)(v),
-        I = _(x);
+        _ = (0, l.e7)([d.Z], () => d.Z.getChannel(t), [t]),
+        { canManageGuildEvent: v } = (0, s.XJ)(_),
+        I = v(x);
     if (null == x) return null;
     let E = () => {
-            if (null != v && (0, p.Z)(v)) {
-                (0, u.lC)(v, C);
+            if (null != _ && (0, p.Z)(_)) {
+                (0, u.lC)(_, C);
                 return;
             }
             n();

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return _;
     }
 });
 var i = n(200651),
@@ -19,12 +19,12 @@ var i = n(200651),
     g = n(981631),
     C = n(314734),
     x = n(902265);
-function v(e) {
+function _(e) {
     let { channel: t, entryPointCommandButtonRef: n, type: a } = e,
         { isInitialLoading: r, application: s, primaryEntryPointCommand: u } = (0, d.Z)({ channel: t }),
         C = null == s ? void 0 : s.id,
         x = (0, f.Z)({ type: a }),
-        v = l.useCallback(() => {
+        _ = l.useCallback(() => {
             x
                 ? h.yT(p.ti.DISMISSED)
                 : (h.__(p._b.TEXT, m.I.NORMAL, { applicationId: C }),
@@ -36,16 +36,16 @@ function v(e) {
         }, [C, x]);
     return r || null == s
         ? null
-        : (0, i.jsx)(_, {
+        : (0, i.jsx)(v, {
               channel: t,
               application: s,
               primaryEntryPointCommand: u,
-              onOpenButtonPress: v,
+              onOpenButtonPress: _,
               entryPointCommandButtonRef: n,
               type: a
           });
 }
-function _(e) {
+function v(e) {
     let { channel: t, application: n, primaryEntryPointCommand: l, onOpenButtonPress: a, entryPointCommandButtonRef: o, type: c } = e,
         d = (0, f.Z)({ type: c }),
         {
@@ -53,8 +53,8 @@ function _(e) {
             buttonText: p,
             hasActiveMatchingEmbeddedActivity: m,
             isEmbeddedApp: g,
-            currentEmbeddedActivity: v,
-            channelRecipientUserId: _,
+            currentEmbeddedActivity: _,
+            channelRecipientUserId: v,
             setIsExecutingLaunchInteraction: I,
             analyticsLocations: E
         } = (0, u.Z)({
@@ -68,9 +68,9 @@ function _(e) {
             application: n,
             isEmbeddedApp: g,
             hasActiveMatchingEmbeddedActivity: m,
-            currentEmbeddedActivity: v,
+            currentEmbeddedActivity: _,
             onOpenButtonPress: a,
-            channelRecipientUserId: _,
+            channelRecipientUserId: v,
             setIsExecutingLaunchInteraction: I,
             analyticsLocations: E
         }),

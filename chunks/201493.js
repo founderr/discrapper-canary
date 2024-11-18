@@ -15,8 +15,8 @@ var i = n(200651),
     g = n(683818),
     C = n(102888),
     x = n(65839),
-    v = n(453879),
-    _ = n(408310),
+    _ = n(453879),
+    v = n(408310),
     I = n(486527),
     E = n(981631),
     b = n(67915);
@@ -52,11 +52,11 @@ t.Z = (e) => {
         },
         [Z.id]
     );
-    let P = l.useMemo(() => (null != T ? (0, v.v)(Object.values(T), S) : null), [T, S]),
+    let P = l.useMemo(() => (null != T ? (0, _.v)(Object.values(T), S) : null), [T, S]),
         {
             mostRecentQuery: M,
-            searchFetching: R,
-            searchResults: L
+            searchFetching: L,
+            searchResults: R
         } = (0, a.cj)([m.Z], () => {
             let { mostRecentQuery: e, fetching: t } = m.Z.getSearchState(Z.id);
             return {
@@ -112,15 +112,15 @@ t.Z = (e) => {
             O(''), p.So(Z.id);
         };
     return D
-        ? (0, i.jsx)(_.Z, {
+        ? (0, i.jsx)(v.Z, {
               searchQuery: k,
               setSearchQuery: O,
               mostRecentQuery: M,
               handleSearchKeyPress: U,
               handleClearSearch: H,
               handleCreateOrAddGuild: B,
-              searchResults: L,
-              searchFetching: R
+              searchResults: R,
+              searchFetching: L
           })
         : null == P && null == S
           ? (0, i.jsx)('div', {

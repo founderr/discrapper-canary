@@ -15,8 +15,8 @@ var i = n(200651),
     g = n(543241),
     C = n(407477),
     x = n(633302),
-    v = n(856985),
-    _ = n(346610),
+    _ = n(856985),
+    v = n(346610),
     I = n(868643),
     E = n(245216),
     b = n(223606),
@@ -29,8 +29,8 @@ var i = n(200651),
     y = n(2818),
     P = n(768943),
     M = n(665906),
-    R = n(695346),
-    L = n(314897),
+    L = n(695346),
+    R = n(314897),
     k = n(323873),
     O = n(271383),
     D = n(430824),
@@ -89,7 +89,7 @@ let es = l.memo(function (e) {
                     guildId: t.guild_id
                 })
         ),
-        a = (l.length >= 3 ? l : [...(0, v.Z)(l.concat(el)).values()]).slice(0, 3),
+        a = (l.length >= 3 ? l : [...(0, _.Z)(l.concat(el)).values()]).slice(0, 3),
         r = n.reactions.filter((e) => e.me);
     return (0, i.jsx)(i.Fragment, {
         children: a.map((e) => {
@@ -152,7 +152,7 @@ function eo(e) {
             canEdit: h,
             canPublish: g,
             canReact: x,
-            canConfigureJoin: v,
+            canConfigureJoin: _,
             canReply: b,
             canStartThread: Z,
             canViewThread: S,
@@ -170,13 +170,13 @@ function eo(e) {
             let { channel: t, message: n, showEmojiPicker: i, showEmojiBurstPicker: l, showMoreUtilities: a, setPopout: r, isFocused: s } = e,
                 { author: o } = n,
                 d = (0, c.e7)([D.Z], () => D.Z.getGuild(t.guild_id), [t.guild_id]),
-                u = (0, c.e7)([L.default], () => L.default.getId()),
+                u = (0, c.e7)([R.default], () => R.default.getId()),
                 h = (0, M.$R)(t),
                 f = (0, M.Gu)(t),
-                g = R.nc.useSetting(),
-                C = R.Sb.useSetting(),
+                g = L.nc.useSetting(),
+                C = L.Sb.useSetting(),
                 x = (0, c.e7)([w.Z], () => null == t.guild_id || w.Z.canChatInGuild(t.guild_id), [t]),
-                { canManageMessages: v, canAddNewReactions: E } = (0, c.cj)(
+                { canManageMessages: _, canAddNewReactions: E } = (0, c.cj)(
                     [B.Z],
                     () => ({
                         canAddNewReactions: x && B.Z.can($.Plq.ADD_REACTIONS, t),
@@ -190,10 +190,10 @@ function eo(e) {
                 T = (0, c.e7)([N.Z], () => null != t.guild_id && N.Z.isLurking(t.guild_id), [t]),
                 j = (0, c.e7)([O.ZP], () => null != t.guild_id && O.ZP.isCurrentUserGuest(t.guild_id), [t]),
                 k = o.id === u,
-                U = (v || n.canDeleteOwnMessage(u)) && h && !$.V$x.UNDELETABLE.has(n.type);
-            n.type === $.uaV.AUTO_MODERATION_ACTION && (U = U && v);
+                U = (_ || n.canDeleteOwnMessage(u)) && h && !$.V$x.UNDELETABLE.has(n.type);
+            n.type === $.uaV.AUTO_MODERATION_ACTION && (U = U && _);
             let G = (0, V.a4)(n),
-                F = (0, W.Z)(n, t, v),
+                F = (0, W.Z)(n, t, _),
                 Y = !t.isSystemDM() && (0, z.Z)(n, u) && h && !f,
                 { disableReactionCreates: q } = (0, K.Z)({
                     channel: t,
@@ -204,10 +204,10 @@ function eo(e) {
                     isGuest: j,
                     isActiveChannelOrUnarchivableThread: h
                 }),
-                X = t.type === $.d4z.GUILD_ANNOUNCEMENT && null != d && d.hasFeature($.oNc.NEWS) && (k || v) && (0, m.Z)(n),
+                X = t.type === $.d4z.GUILD_ANNOUNCEMENT && null != d && d.hasFeature($.oNc.NEWS) && (k || _) && (0, m.Z)(n),
                 J = t.getGuildId(),
                 ee = null != J && (n.type === $.uaV.USER_JOIN || n.type === $.uaV.GUILD_INVITE_REMINDER) && B.Z.canWithPartialContext($.Plq.MANAGE_GUILD, { guildId: J }),
-                { canForwardMessages: et } = (0, _.yk)({ location: 'useMessageUtilitiesProps' }, { autoTrackExposure: !1 }),
+                { canForwardMessages: et } = (0, v.yk)({ location: 'useMessageUtilitiesProps' }, { autoTrackExposure: !1 }),
                 en = (0, I.a)(n),
                 { enabled: ei } = y.Z.useExperiment({ location: 'message_utilities' }),
                 el = (0, c.e7)([P.Z], () => null != P.Z.getSavedMessage(t.id, n.id)),
@@ -259,10 +259,10 @@ function eo(e) {
         ex = l.useCallback(() => {
             eC(!0);
         }, []),
-        ev = l.useCallback(() => {
+        e_ = l.useCallback(() => {
             eC(!1);
         }, []),
-        e_ = l.useCallback(
+        ev = l.useCallback(
             (e, t) => {
                 em(ee.L.TAKE_ACTION), (0, q.ts)(e, t);
             },
@@ -298,7 +298,7 @@ function eo(e) {
                                         'copy-link'
                                     )
                                   : null,
-                              v
+                              _
                                   ? (0, i.jsx)(
                                         Y.sF,
                                         {
@@ -420,9 +420,9 @@ function eo(e) {
                           {
                               label: en.intl.string(en.t.I3ltXF),
                               icon: E.Z,
-                              onClick: () => e_(t, n),
+                              onClick: () => ev(t, n),
                               onTooltipShow: ex,
-                              onTooltipHide: ev,
+                              onTooltipHide: e_,
                               showNewBadge: !eg && ef
                           },
                           'forward'

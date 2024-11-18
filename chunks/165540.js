@@ -14,8 +14,8 @@ var i = n(200651),
     g = n(663924),
     C = n(533379),
     x = n(404295),
-    v = n(605236),
-    _ = n(819640),
+    _ = n(605236),
+    v = n(819640),
     I = n(291407),
     E = n(61356),
     b = n(981631),
@@ -37,8 +37,8 @@ let A = l.forwardRef(function (e, t) {
         }),
         [C]
     );
-    let _ = l.useCallback(() => {
-        (0, u.yw)(b.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), f ? h.yT(m.ti.DISMISSED) : ((0, v.EW)(o.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: N.L.TAKE_ACTION }), h.__(m._b.TEXT, n)), x();
+    let v = l.useCallback(() => {
+        (0, u.yw)(b.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), f ? h.yT(m.ti.DISMISSED) : ((0, _.EW)(o.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: N.L.TAKE_ACTION }), h.__(m._b.TEXT, n)), x();
     }, [f, n, x]);
     return (0, i.jsx)('div', {
         className: r()(T.buttonContainer, Z.t4),
@@ -48,7 +48,7 @@ let A = l.forwardRef(function (e, t) {
             size: d.Button.Sizes.NONE,
             tabIndex: 0,
             className: r()(T.button, { [T.buttonActive]: f }),
-            onClick: _,
+            onClick: v,
             'aria-label': S.intl.string(S.t.erHFxM),
             focusProps: {
                 offset: {
@@ -66,7 +66,7 @@ let A = l.forwardRef(function (e, t) {
 });
 function y(e) {
     let { showAppLauncherPopup: t, children: n } = e,
-        l = (0, s.e7)([_.Z], () => _.Z.hasLayers()),
+        l = (0, s.e7)([v.Z], () => v.Z.hasLayers()),
         {
             enabled: a,
             shouldShow: o,

@@ -26,14 +26,14 @@ function g(e) {
                 loading: null == n || (null != e && e.loading)
             };
         }),
-        v = (0, a.e7)([u.ZP], () => u.ZP.hasUnreadPins(t.id));
+        _ = (0, a.e7)([u.ZP], () => u.ZP.hasUnreadPins(t.id));
     return (
         l.useEffect(() => {
             C.some(c.k5) && o.Z.fetchPins(t.id, !0);
         }, []),
         l.useEffect(() => {
-            v && o.Z.ackPins(t.id);
-        }, [v, t.id]),
+            _ && o.Z.ackPins(t.id);
+        }, [_, t.id]),
         (0, i.jsx)(s.Dialog, {
             'aria-label': m.intl.string(m.t['mp1N//']),
             children: (0, i.jsx)(h.ZP, {

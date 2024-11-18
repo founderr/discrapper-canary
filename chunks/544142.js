@@ -20,45 +20,45 @@ var l = n(120356),
     g = n(51144),
     C = n(967128),
     x = n(981631),
-    v = n(388032),
-    _ = n(171162);
+    _ = n(388032),
+    v = n(171162);
 function I(e) {
     var t, l;
     let { userId: u, channel: C } = e,
         { analyticsLocations: x } = (0, d.ZP)(c.Z.USERNAME),
-        v = (0, r.e7)([f.default], () => f.default.getUser(u)),
+        _ = (0, r.e7)([f.default], () => f.default.getUser(u)),
         I = (0, r.e7)([m.ZP], () => (null != u ? m.ZP.getMember(C.guild_id, u) : null));
     function E(e) {
-        if (null == v) return null;
+        if (null == _) return null;
         (0, o.jW)(e, async () => {
             let { default: e } = await Promise.all([n.e('79695'), n.e('70675')]).then(n.bind(n, 654663));
             return (t) =>
                 (0, i.jsx)(e, {
                     ...t,
-                    user: v,
+                    user: _,
                     guildId: C.guild_id,
                     channel: C
                 });
         });
     }
-    let b = null !== (l = null !== (t = null == I ? void 0 : I.nick) && void 0 !== t ? t : g.ZP.getName(v)) && void 0 !== l ? l : '???',
+    let b = null !== (l = null !== (t = null == I ? void 0 : I.nick) && void 0 !== t ? t : g.ZP.getName(_)) && void 0 !== l ? l : '???',
         Z = null == I ? void 0 : I.colorString;
-    return null == v
+    return null == _
         ? (0, i.jsx)('span', {
-              className: a()(_.threadCreatorName, _.unknownCreatorName),
+              className: a()(v.threadCreatorName, v.unknownCreatorName),
               children: b
           })
         : (0, i.jsx)(d.Gt, {
               value: x,
               children: (0, i.jsx)(s.Popout, {
                   preload: () =>
-                      (0, h.Z)(v, {
+                      (0, h.Z)(_, {
                           guildId: C.guild_id,
                           channelId: C.id
                       }),
                   renderPopout: (e) =>
                       (0, i.jsx)(p.Z, {
-                          userId: v.id,
+                          userId: _.id,
                           guildId: C.guild_id,
                           channelId: C.id,
                           roleId: null == I ? void 0 : I.colorRoleId,
@@ -69,7 +69,7 @@ function I(e) {
                       (0, i.jsx)(s.Clickable, {
                           ...e,
                           tag: 'span',
-                          className: _.threadCreatorName,
+                          className: v.threadCreatorName,
                           onContextMenu: E,
                           children: (0, i.jsx)(s.NameWithRole, {
                               name: b,
@@ -90,8 +90,8 @@ function E(e) {
                       variant: 'text-md/normal',
                       color: 'header-secondary',
                       children: (0, i.jsx)('div', {
-                          className: _.subtitle,
-                          children: v.intl.format(v.t.imPXd3, {
+                          className: v.subtitle,
+                          children: _.intl.format(_.t.imPXd3, {
                               usernameHook: (e, n) =>
                                   (0, i.jsx)(
                                       I,
@@ -108,7 +108,7 @@ function E(e) {
                       ? (0, i.jsx)(s.Text, {
                             variant: 'text-md/normal',
                             color: 'header-secondary',
-                            children: v.intl.string(v.t['1awbZG'])
+                            children: _.intl.string(_.t['1awbZG'])
                         })
                       : null
               ]
@@ -122,8 +122,8 @@ function b(e) {
         channelId: n.id,
         children: [
             (0, i.jsx)('div', {
-                className: _.iconWrapper,
-                children: (0, i.jsx)(l, { className: _.icon })
+                className: v.iconWrapper,
+                children: (0, i.jsx)(l, { className: v.icon })
             }),
             (0, i.jsx)(C.Ot, { children: n.name }),
             (0, i.jsx)(E, { channel: n })

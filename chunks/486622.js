@@ -21,23 +21,23 @@ var i = n(192379),
 function C(e) {
     let { user: t, onAcceptSuccess: n, onRejectSuccess: l, onError: C } = e,
         x = (0, m.Z)(),
-        [v, _] = i.useState(!1),
+        [_, v] = i.useState(!1),
         [I, E] = i.useState(!1),
         [b, Z] = i.useState(!1),
         [N, S] = i.useState(!1),
         [T, j] = i.useState(!1),
-        A = v || I || b,
+        A = _ || I || b,
         y = i.useCallback(
             async (e) => {
                 if (!A) {
-                    _(!0);
+                    v(!0);
                     try {
                         await (0, h.e4)(e), S(!0), null == n || n();
                     } catch (t) {
                         let e = new r.Hx(t);
                         null == C || C(e);
                     } finally {
-                        _(!1);
+                        v(!1);
                     }
                 }
             },
@@ -76,7 +76,7 @@ function C(e) {
             },
             [A, l, C]
         ),
-        R = i.useCallback(
+        L = i.useCallback(
             async (e) => {
                 if (A) return;
                 if (null != t && null == o.Z.getMutualGuilds(t.id)) {
@@ -119,7 +119,7 @@ function C(e) {
             },
             [y, A, t]
         ),
-        L = i.useCallback(
+        R = i.useCallback(
             (e, t, n) => {
                 let i = (i, l) => {
                         l && d.kJ.updateSetting(i),
@@ -150,11 +150,11 @@ function C(e) {
             [y]
         );
     return {
-        acceptMessageRequest: x ? R : y,
+        acceptMessageRequest: x ? L : y,
         rejectMessageRequest: P,
         rejectAll: M,
-        markAsNotSpam: L,
-        isAcceptLoading: v,
+        markAsNotSpam: R,
+        isAcceptLoading: _,
         isRejectLoading: I,
         isUserProfileLoading: b,
         isOptimisticAccepted: N,

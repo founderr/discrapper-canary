@@ -19,8 +19,8 @@ var i = n(200651),
     g = n(623624),
     C = n(665149),
     x = n(984370),
-    v = n(141321),
-    _ = n(618158),
+    _ = n(141321),
+    v = n(618158),
     I = n(390322),
     E = n(616286),
     b = n(961048),
@@ -33,8 +33,8 @@ var i = n(200651),
     y = n(146085),
     P = n(427679),
     M = n(592473),
-    R = n(831002),
-    L = n(903108),
+    L = n(831002),
+    R = n(903108),
     k = n(981631),
     O = n(474936),
     D = n(388032),
@@ -45,7 +45,7 @@ function B(e) {
         g = (0, s.e7)([h.Z], () => h.Z.getChatOpen(n.id)),
         C = (0, A.B)(n.id),
         x = (0, T.Rk)(n.id, j.pV.REQUESTED_TO_SPEAK_ONLY),
-        { preventIdle: Z, allowIdle: N } = (0, _.Y)('popup');
+        { preventIdle: Z, allowIdle: N } = (0, v.Y)('popup');
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(f.Z, { channelId: n.id }, 'clips-enabled-indicator'),
@@ -57,7 +57,7 @@ function B(e) {
                     align: 'right',
                     renderPopout: (e) =>
                         (0, i.jsx)(I.Z, {
-                            children: (0, i.jsx)(R.Z, {
+                            children: (0, i.jsx)(L.Z, {
                                 ...e,
                                 channelId: n.id,
                                 appContext: p
@@ -79,7 +79,7 @@ function B(e) {
             ),
             !t && (0, i.jsx)(m.Z, { className: w.button }, 'clips'),
             (0, i.jsx)(
-                v.Z,
+                _.Z,
                 {
                     onOpen: Z,
                     onClose: N,
@@ -117,14 +117,14 @@ function U(e) {
     let { inPopout: n, channel: a, toggleRequestToSpeakSidebar: u, showRequestToSpeakSidebar: h } = e,
         m = (0, p.ZP)(a),
         f = (0, s.e7)([P.Z], () => P.Z.getStageInstanceByChannel(a.id)),
-        v = (0, T.Io)(a.id),
-        _ = (0, T.Rk)(a.id, j.pV.AUDIENCE),
+        _ = (0, T.Io)(a.id),
+        v = (0, T.Rk)(a.id, j.pV.AUDIENCE),
         I = (0, s.e7)([Z.Z], () => Z.Z.getGuild(a.guild_id), [a.guild_id]),
         E = null !== (t = null == I ? void 0 : I.maxStageVideoChannelUsers) && void 0 !== t ? t : 0,
         b = (null == I ? void 0 : I.isCommunity()) ? E < k.TU7 : (null == I ? void 0 : I.premiumTier) !== k.Eu4.TIER_3 && E <= k.eez,
-        A = (0, L.Z)(a),
+        A = (0, R.Z)(a),
         M = (0, s.e7)([N.Z], () => N.Z.can(y.yP, a)),
-        R = () => {
+        L = () => {
             d.Z.updateStageVideoLimitBoostUpsellDismissed(a.id, !0),
                 S.default.track(k.rMx.BOOSTING_UPSELL_CLICKED, {
                     guild_id: a.guild_id,
@@ -139,7 +139,7 @@ function U(e) {
                 guild_id: a.guild_id,
                 type: O.cd.VIDEO_STAGE_LIMIT,
                 is_moderator: M,
-                listener_count: v + _
+                listener_count: _ + v
             });
     }, [A]);
     let U = (0, i.jsx)(c.ThemeProvider, {
@@ -180,7 +180,7 @@ function U(e) {
                                 variant: 'text-xs/medium',
                                 color: 'header-secondary',
                                 className: w.speakerCount,
-                                children: D.intl.format(D.t.chmM9P, { count: v })
+                                children: D.intl.format(D.t.chmM9P, { count: _ })
                             }),
                             (0, i.jsx)(c.GroupIcon, {
                                 size: 'xs',
@@ -190,7 +190,7 @@ function U(e) {
                                 variant: 'text-xs/medium',
                                 color: 'header-secondary',
                                 className: w.speakerCount,
-                                children: D.intl.format(D.t['+v2pNz'], { count: _ })
+                                children: D.intl.format(D.t['+v2pNz'], { count: v })
                             })
                         ]
                     })
@@ -228,7 +228,7 @@ function U(e) {
                                         children: [
                                             (0, i.jsx)(c.Button, {
                                                 className: w.notNowButton,
-                                                onClick: R,
+                                                onClick: L,
                                                 look: c.Button.Looks.BLANK,
                                                 size: c.Button.Sizes.SMALL,
                                                 children: D.intl.string(D.t.L5eIZ2)
@@ -254,7 +254,7 @@ function U(e) {
                                     })
                                   : (0, i.jsx)(c.Button, {
                                         className: w.notNowButton,
-                                        onClick: R,
+                                        onClick: L,
                                         look: c.Button.Looks.BLANK,
                                         size: c.Button.Sizes.SMALL,
                                         children: D.intl.string(D.t.WAI6xs)

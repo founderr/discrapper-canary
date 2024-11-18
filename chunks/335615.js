@@ -21,8 +21,8 @@ var i = n(200651),
     g = n(941028),
     C = n(144144),
     x = n(276264),
-    v = n(607070),
-    _ = n(100527),
+    _ = n(607070),
+    v = n(100527),
     I = n(367907),
     E = n(906732),
     b = n(493324),
@@ -35,8 +35,8 @@ var i = n(200651),
     y = n(313201),
     P = n(623624),
     M = n(518738),
-    R = n(155409),
-    L = n(184301),
+    L = n(155409),
+    R = n(184301),
     k = n(347475),
     O = n(439170),
     D = n(430824),
@@ -82,10 +82,10 @@ class J extends l.Component {
     }
     render() {
         let { colorString: e, colorRoleName: t, isOwner: n, nick: l, user: a, currentUser: r, activities: s, applicationStream: o, status: c, channel: d, guildId: h, isTyping: p, isMobileOnline: f, premiumSince: g, ...C } = this.props,
-            v = null != g ? new Date(g) : null;
+            _ = null != g ? new Date(g) : null;
         return (0, i.jsx)(m.Popout, {
             preload: () =>
-                (0, L.Z)(a, {
+                (0, R.Z)(a, {
                     channelId: d.id,
                     guildId: h
                 }),
@@ -106,7 +106,7 @@ class J extends l.Component {
                     activities: s,
                     applicationStream: o,
                     isOwner: n,
-                    premiumSince: v,
+                    premiumSince: _,
                     colorString: e,
                     colorRoleName: t,
                     isTyping: p,
@@ -342,7 +342,7 @@ class et extends l.Component {
                       })
                     : 0 === t
                       ? (0, i.jsx)(
-                            R.Z,
+                            L.Z,
                             {
                                 tutorialId: 'whos-online',
                                 position: 'left',
@@ -491,8 +491,8 @@ class et extends l.Component {
 }
 function en(e) {
     let { channel: t, className: n } = e,
-        { analyticsLocations: a } = (0, E.ZP)(_.Z.MEMBER_LIST),
-        s = (0, h.e7)([v.Z], () => v.Z.keyboardModeEnabled),
+        { analyticsLocations: a } = (0, E.ZP)(v.Z.MEMBER_LIST),
+        s = (0, h.e7)([_.Z], () => _.Z.keyboardModeEnabled),
         o = (0, h.cj)([O.ZP], () => O.ZP.getProps(t.guild_id, t.id)),
         {
             rows: u,

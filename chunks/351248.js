@@ -21,7 +21,7 @@ var i = n(200651),
     g = n(132195),
     C = n(639944),
     x = n(736879);
-function v(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,7 +34,7 @@ function v(e, t, n) {
         e
     );
 }
-let _ = {
+let v = {
         STEPS: 23,
         FRAME_DURATION: 17,
         FRAME_SIZE: 26
@@ -77,11 +77,11 @@ class Z extends l.PureComponent {
         let { scaleAnimation: t, spriteAnimation: n, spriteOpacity: i, widthAnimation: l } = this;
         i.setValue(1), n.setValue(0);
         let a = [];
-        for (let e = 0; e < _.STEPS; e++)
+        for (let e = 0; e < v.STEPS; e++)
             a.push(
                 s.Z.timing(n, {
-                    toValue: -_.FRAME_SIZE * e,
-                    duration: _.FRAME_DURATION
+                    toValue: -v.FRAME_SIZE * e,
+                    duration: v.FRAME_DURATION
                 })
             );
         s.Z.sequence([
@@ -152,14 +152,14 @@ class Z extends l.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e), v(this, 'scaleAnimation', new s.Z.Value(0)), v(this, 'spriteAnimation', new s.Z.Value(0)), v(this, 'spriteOpacity', new s.Z.Value(0)), v(this, 'widthAnimation', new s.Z.Value(0));
+        super(...e), _(this, 'scaleAnimation', new s.Z.Value(0)), _(this, 'spriteAnimation', new s.Z.Value(0)), _(this, 'spriteOpacity', new s.Z.Value(0)), _(this, 'widthAnimation', new s.Z.Value(0));
     }
 }
 function N(e) {
     var t, n;
     let { participants: l, onContextMenu: a, className: s, onClick: d, width: C, guildId: x } = e,
-        v = (0, h.ZP)();
-    let _ = ((t = C), (n = l.length), ((0, u.getAvatarSize)(u.AvatarSizes.SIZE_80) + 16) * n > t ? u.AvatarSizes.SIZE_40 : u.AvatarSizes.SIZE_80),
+        _ = (0, h.ZP)();
+    let v = ((t = C), (n = l.length), ((0, u.getAvatarSize)(u.AvatarSizes.SIZE_80) + 16) * n > t ? u.AvatarSizes.SIZE_40 : u.AvatarSizes.SIZE_80),
         I = (0, o.e7)([p.Z], () => p.Z.isFocused()),
         E = l.map((e) => {
             var t, n;
@@ -169,13 +169,13 @@ function N(e) {
                 Z,
                 {
                     className: g.participant,
-                    width: (0, u.getAvatarSize)(_),
-                    theme: v,
+                    width: (0, u.getAvatarSize)(v),
+                    theme: _,
                     children: (0, i.jsx)(
                         m.Z,
                         {
-                            src: l.getAvatarURL(x, (0, u.getAvatarSize)(_), s && I),
-                            size: _,
+                            src: l.getAvatarURL(x, (0, u.getAvatarSize)(v), s && I),
+                            size: v,
                             muted: null !== (t = null == r ? void 0 : r.isVoiceMuted()) && void 0 !== t && t,
                             deafen: null !== (n = null == r ? void 0 : r.isVoiceDeafened()) && void 0 !== n && n,
                             speaking: s,

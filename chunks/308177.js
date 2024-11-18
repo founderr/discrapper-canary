@@ -15,8 +15,8 @@ var i,
     g = n(401139),
     C = n(12779),
     x = n(450369),
-    v = n(388032),
-    _ = n(361802);
+    _ = n(388032),
+    v = n(361802);
 let I = 424,
     E = 624,
     b = 824;
@@ -55,12 +55,12 @@ t.Z = (0, o.Z)((e) => {
         y = (0, s.e7)([d.Z], () => (null != I ? d.Z.getParticipant(i.id, I) : null)),
         P = (0, u.w8)(i.id, h.pV.SPEAKER),
         M = P.filter(T),
-        R = null != P.find((e) => e.type === h.Ui.STREAM),
-        L = S(l),
+        L = null != P.find((e) => e.type === h.Ui.STREAM),
+        R = S(l),
         k = N(l, b),
         O = {
             [h.pV.SPEAKER]: k,
-            [h.pV.AUDIENCE]: L,
+            [h.pV.AUDIENCE]: R,
             [h.pV.SELECTED]: 1
         },
         D = (0, p.Dx)(i.id),
@@ -82,13 +82,13 @@ t.Z = (0, o.Z)((e) => {
                           C.Z,
                           {
                               participantCount: j,
-                              label: v.intl.string(v.t.CduOk5),
-                              className: _.header,
+                              label: _.intl.string(_.t.CduOk5),
+                              className: v.header,
                               onClick: () => W(!z),
                               collapsed: z,
                               speakers: M,
                               channel: i,
-                              isStreamLive: R
+                              isStreamLive: L
                           },
                           'speaker-header-'.concat(t)
                       );
@@ -99,8 +99,8 @@ t.Z = (0, o.Z)((e) => {
                           C.Z,
                           {
                               participantCount: A,
-                              label: v.intl.string(v.t['3foUu7']),
-                              className: _.header,
+                              label: _.intl.string(_.t['3foUu7']),
+                              className: v.header,
                               onClick: () => Y(!K),
                               collapsed: K,
                               channel: i
@@ -120,7 +120,7 @@ t.Z = (0, o.Z)((e) => {
                     return (0, a.jsx)(
                         'div',
                         {
-                            className: _.focusedRow,
+                            className: v.focusedRow,
                             children: (0, a.jsx)(x.Z, {
                                 channel: i,
                                 participant: l[0],
@@ -150,7 +150,7 @@ t.Z = (0, o.Z)((e) => {
                         {
                             channel: i,
                             participants: l,
-                            maxTiles: L
+                            maxTiles: R
                         },
                         'audience-'.concat(t, '-').concat(n)
                     );
@@ -161,10 +161,10 @@ t.Z = (0, o.Z)((e) => {
         rowHeight: (e) => (null == B[e][0] ? 0 : 0 === e ? F / x.Q + 8 : 1 === e ? (z ? 0 : G) : K ? 0 : 98),
         renderFooter: (e) => {
             let { section: t } = e;
-            return V(t) ? (0, a.jsx)('div', { className: _.spacer }, 'bottom-spacer') : null;
+            return V(t) ? (0, a.jsx)('div', { className: v.spacer }, 'bottom-spacer') : null;
         },
         footerHeight: (e) => (1 === e ? 8 : 0 === e ? 12 : V(e) ? 88 : 0),
-        className: _.scroller,
+        className: v.scroller,
         chunkSize: 60,
         onScroll: o
     });

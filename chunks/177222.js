@@ -19,8 +19,8 @@ var i = n(200651),
     g = n(687158),
     C = n(326094),
     x = n(510659),
-    v = n(113557),
-    _ = n(867176),
+    _ = n(113557),
+    v = n(867176),
     I = n(169979),
     E = n(451834),
     b = n(502762),
@@ -33,8 +33,8 @@ var i = n(200651),
     y = n(179142),
     P = n(228168),
     M = n(981631),
-    R = n(388032),
-    L = n(483078);
+    L = n(388032),
+    R = n(483078);
 function k(e) {
     let { user: t, currentUser: n, channel: k } = e,
         O = __OVERLAY__,
@@ -81,7 +81,7 @@ function k(e) {
                         null != V.interactionType &&
                             (0, i.jsx)(a.animated.div, {
                                 style: z,
-                                className: L.backdrop
+                                className: R.backdrop
                             }),
                         (0, i.jsxs)(r.u2, {
                             children: [
@@ -96,20 +96,20 @@ function k(e) {
                                     ]
                                 }),
                                 (0, i.jsxs)('header', {
-                                    className: L.header,
+                                    className: R.header,
                                     children: [
-                                        (0, i.jsx)(_.Z, {
+                                        (0, i.jsx)(v.Z, {
                                             user: t,
                                             displayProfile: D,
                                             profileType: P.y0.PANEL,
                                             animateOnHover: !F,
-                                            className: L.banner
+                                            className: R.banner
                                         }),
                                         (0, i.jsx)(E.Z, {
                                             userId: t.id,
-                                            className: L.toast
+                                            className: R.toast
                                         }),
-                                        (0, i.jsx)(v.Z, {
+                                        (0, i.jsx)(_.Z, {
                                             location: 'UserProfilePanel',
                                             user: t,
                                             displayProfile: D,
@@ -123,7 +123,7 @@ function k(e) {
                                             channelId: k.id,
                                             profileType: P.y0.PANEL
                                         }),
-                                        t.isClyde() && (0, i.jsx)(h.Z, { className: L.headerTag })
+                                        t.isClyde() && (0, i.jsx)(h.Z, { className: R.headerTag })
                                     ]
                                 }),
                                 (0, i.jsx)(A.Z, {
@@ -139,12 +139,12 @@ function k(e) {
                         }),
                         !O &&
                             (0, i.jsx)('footer', {
-                                className: L.footer,
+                                className: R.footer,
                                 children: (0, i.jsx)(s.Button, {
                                     fullWidth: !0,
                                     size: s.Button.Sizes.LARGE,
                                     look: s.Button.Looks.BLANK,
-                                    color: L.footerButtonColor,
+                                    color: R.footerButtonColor,
                                     onClick: () => {
                                         W(),
                                             (0, f.pQ)({
@@ -153,7 +153,7 @@ function k(e) {
                                                 ...U
                                             });
                                     },
-                                    children: R.intl.string(R.t['+Xp3ho'])
+                                    children: L.intl.string(L.t['+Xp3ho'])
                                 })
                             }),
                         (null == D ? void 0 : D.profileEffectId) != null &&

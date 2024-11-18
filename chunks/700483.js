@@ -15,8 +15,8 @@ var i = n(200651),
     g = n(74299),
     C = n(924301),
     x = n(459502),
-    v = n(856691),
-    _ = n(357156),
+    _ = n(856691),
+    v = n(357156),
     I = n(923973),
     E = n(829750),
     b = n(189771),
@@ -29,8 +29,8 @@ var i = n(200651),
     y = n(25827),
     P = n(314897),
     M = n(131951),
-    R = n(496675),
-    L = n(944486),
+    L = n(496675),
+    R = n(944486),
     k = n(594174),
     O = n(881824),
     D = n(471253),
@@ -63,7 +63,7 @@ function et(e) {
     let { channel: l } = e,
         a = (0, Y.Z)(l.id),
         [r, c] = (0, X.Z)(l),
-        d = (0, s.e7)([R.Z], () => R.Z.can(J.Plq.REQUEST_TO_SPEAK, l));
+        d = (0, s.e7)([L.Z], () => L.Z.can(J.Plq.REQUEST_TO_SPEAK, l));
     if (a) return null;
     return (0, i.jsx)(j.d, {
         isActive: r,
@@ -81,7 +81,7 @@ function et(e) {
 }
 let en = l.memo(function (e) {
     let { channel: t } = e,
-        n = (0, s.e7)([L.Z], () => L.Z.getVoiceChannelId() === t.id, [t.id]);
+        n = (0, s.e7)([R.Z], () => R.Z.getVoiceChannelId() === t.id, [t.id]);
     return (0, i.jsxs)('div', {
         className: $.container,
         children: [(0, i.jsx)(er, { channelId: t.id }), n ? (0, i.jsx)(et, { channel: t }) : null, (0, i.jsx)(el, { channel: t })]
@@ -114,18 +114,18 @@ function ei(e) {
 function el(e) {
     let { channel: t, onSelect: n } = e,
         l = (0, d.bp)(),
-        { canManageGuildEvent: a } = (0, _.XJ)(t),
+        { canManageGuildEvent: a } = (0, v.XJ)(t),
         c = (0, s.e7)([G.Z], () => G.Z.getStageInstanceByChannel(t.id), [t.id]),
         u = (0, s.e7)([C.ZP], () => C.ZP.getGuildScheduledEvent(null == c ? void 0 : c.guild_scheduled_event_id)),
-        h = (0, s.e7)([L.Z], () => L.Z.getVoiceChannelId() === t.id, [t.id]),
+        h = (0, s.e7)([R.Z], () => R.Z.getVoiceChannelId() === t.id, [t.id]),
         { suppress: p } = (0, Z.Z)(t),
         m = P.default.getId(),
         [f] = (0, X.Z)(t),
         g = H.ZP.isModerator(m, t.id),
         x = (0, B.B)(t.id),
-        v = a(u);
+        _ = a(u);
     return h
-        ? (g || v) && null != c
+        ? (g || _) && null != c
             ? (0, i.jsx)(o.Popout, {
                   renderPopout: (e) => {
                       let { closePopout: a } = e;
@@ -305,14 +305,14 @@ let es = l.memo(function (e) {
         c = (0, B.B)(t.id),
         d = (0, s.e7)([f.Z], () => null != f.Z.getAwaitingRemoteSessionInfo()),
         { cameraUnavailable: C, enabled: x } = (0, I.Z)(),
-        v = (0, b.Z)(t),
-        { limit: _, reachedLimit: j } = (0, E.Z)(t),
+        _ = (0, b.Z)(t),
+        { limit: v, reachedLimit: j } = (0, E.Z)(t),
         P = (0, s.e7)([k.default], () => k.default.getCurrentUser()),
-        R = (0, s.e7)([M.Z], () => (0, g.Z)(M.Z)),
-        O = (0, s.e7)([L.Z], () => L.Z.getVoiceChannelId() === t.id, [t.id]),
+        L = (0, s.e7)([M.Z], () => (0, g.Z)(M.Z)),
+        O = (0, s.e7)([R.Z], () => R.Z.getVoiceChannelId() === t.id, [t.id]),
         w = (0, s.e7)([u.Z], () => u.Z.getStreamParticipants(t.id)[0], [t.id]),
         U = (0, F.PK)(t.id),
-        H = _ > 0,
+        H = v > 0,
         G = (j && !U) || (null != w && w.user.id !== (null == P ? void 0 : P.id));
     if (null == P) return null;
     let V = (0, i.jsxs)(i.Fragment, {
@@ -330,13 +330,13 @@ let es = l.memo(function (e) {
                         { isShown: l } = t;
                     return (0, i.jsx)(y.C, {
                         centerButton: !0,
-                        hasPermission: v,
+                        hasPermission: _,
                         enabled: x,
                         cameraUnavailable: C,
                         onChange: N.r,
                         onCameraUnavailable: S.Z,
                         channelLimitReached: j,
-                        channelLimit: _,
+                        channelLimit: v,
                         popoutOpen: l,
                         onPopoutClick: n
                     });
@@ -346,8 +346,8 @@ let es = l.memo(function (e) {
                 channel: t,
                 currentUser: P,
                 exitFullScreen: () => null,
-                canGoLive: R,
-                hasPermission: v,
+                canGoLive: L,
+                hasPermission: _,
                 disabled: G
             })
         ]
@@ -361,7 +361,7 @@ let es = l.memo(function (e) {
                 ? (0, i.jsxs)('div', {
                       className: r()($.avControls, $.buttonSpacing),
                       children: [
-                          H && _ > 0 && V,
+                          H && v > 0 && V,
                           (0, i.jsx)(o.Popout, {
                               renderPopout: (e) => {
                                   let { closePopout: t } = e;
@@ -411,7 +411,7 @@ t.Z = l.memo(function (e) {
     let { channel: t, isOnStartStageScreen: n } = e,
         l = (0, Y.Z)(t.id),
         a = (0, B.B)(t.id),
-        r = (0, s.e7)([R.Z], () => R.Z.can(U.yP, t), [t]),
+        r = (0, s.e7)([L.Z], () => L.Z.can(U.yP, t), [t]),
         o = (0, q.Z)(t.id),
         c = (0, s.e7)([u.Z], () => (null != t ? u.Z.getSelectedParticipant(t.id) : null)),
         d = !o && null == c;
@@ -427,7 +427,7 @@ t.Z = l.memo(function (e) {
                             d ? (0, i.jsx)(x.Z, { channelId: null == t ? void 0 : t.id }) : null,
                             (0, i.jsx)('div', { className: $.separator }),
                             d && r
-                                ? (0, i.jsx)(v.Z, {
+                                ? (0, i.jsx)(_.Z, {
                                       highlight: !0,
                                       channel: t
                                   })

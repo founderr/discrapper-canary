@@ -20,8 +20,8 @@ var i = n(200651),
     g = n(131951),
     C = n(459273),
     x = n(304388),
-    v = n(981631),
-    _ = n(388032);
+    _ = n(981631),
+    v = n(388032);
 function I(e) {
     let { channel: t, themeable: I } = e,
         E = t.getGuildId(),
@@ -48,7 +48,7 @@ function I(e) {
         }, []);
     return (
         (0, C.yp)({
-            event: v.CkL.TOGGLE_SOUNDBOARD,
+            event: _.CkL.TOGGLE_SOUNDBOARD,
             handler: M
         }),
         (0, i.jsx)(x.Z, {
@@ -76,9 +76,9 @@ function I(e) {
                 (0, i.jsx)(f.Z, {
                     themeable: I,
                     label: (function () {
-                        if (b) return _.intl.string(_.t['Ox4/zc']);
-                        if (Z) return _.intl.string(_.t['+YBKYG']);
-                        if (N) return _.intl.string(_.t.X1lQlp);
+                        if (b) return v.intl.string(v.t['Ox4/zc']);
+                        if (Z) return v.intl.string(v.t['+YBKYG']);
+                        if (N) return v.intl.string(v.t.X1lQlp);
                     })(),
                     iconComponent: s.SoundboardIcon,
                     disabled: S,

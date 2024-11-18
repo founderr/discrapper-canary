@@ -31,8 +31,8 @@ function h(e) {
             height: 0
         }),
         { width: C, height: x } = f,
-        v = null !== (t = null == a ? void 0 : a.length) && void 0 !== t ? t : 0,
-        _ = C - 16,
+        _ = null !== (t = null == a ? void 0 : a.length) && void 0 !== t ? t : 0,
+        v = C - 16,
         I = x - (p + m),
         {
             tileStyle: E,
@@ -81,8 +81,8 @@ function h(e) {
                         rows: i,
                         columns: l
                     };
-                })(v, _, I),
-            [v, _, I]
+                })(_, v, I),
+            [_, v, I]
         ),
         S = N + 1,
         T = S * b + (S - 1) * 8 <= C,
@@ -114,7 +114,7 @@ function h(e) {
                                             className: r()(o.tile, {
                                                 [o.padColumn]: T,
                                                 [o.noVerticalMargin]: a >= (Z - 1) * N,
-                                                [o.noHorizontalMargin]: (a + 1) % N == 0 || a === v - 1
+                                                [o.noHorizontalMargin]: (a + 1) % N == 0 || a === _ - 1
                                             }),
                                             children: (0, i.jsx)('div', {
                                                 className: o.tileSizer,

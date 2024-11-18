@@ -20,8 +20,8 @@ var l = n(120356),
     g = n(271383),
     C = n(430824),
     x = n(496675),
-    v = n(158776),
-    _ = n(885110),
+    _ = n(158776),
+    v = n(885110),
     I = n(594174),
     E = n(572004),
     b = n(5192),
@@ -33,7 +33,7 @@ var l = n(120356),
 function A(e) {
     let { user: t, guildId: n, onClose: l } = e,
         a = t.id,
-        o = (0, r.e7)([_.Z, v.Z, f.default], () => (a === f.default.getId() ? _.Z.getStatus() : v.Z.getStatus(a, n)), [a, n]);
+        o = (0, r.e7)([v.Z, _.Z, f.default], () => (a === f.default.getId() ? v.Z.getStatus() : _.Z.getStatus(a, n)), [a, n]);
     return (0, i.jsxs)('div', {
         className: j.topRow,
         children: [
@@ -115,8 +115,8 @@ function P(e) {
         d = (0, r.e7)([C.Z], () => C.Z.getGuild(a)),
         {
             canKickUser: g,
-            canBanUser: v,
-            canModerateMembers: _
+            canBanUser: _,
+            canModerateMembers: v
         } = (0, r.cj)(
             [x.Z, I.default, C.Z],
             () => ({
@@ -187,7 +187,7 @@ function P(e) {
                 ]
             }),
             (0, i.jsxs)(y, {
-                disabled: !v,
+                disabled: !_,
                 'aria-label': T.intl.string(T.t['5MBJ5O']),
                 onClick: () => {
                     (0, s.openModalLazy)(async () => {
@@ -216,7 +216,7 @@ function P(e) {
                 ]
             }),
             (0, i.jsxs)(y, {
-                disabled: !_,
+                disabled: !v,
                 'aria-label': T.intl.string(T.t.kTlLr6),
                 onClick: () => {
                     b

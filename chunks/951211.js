@@ -18,24 +18,24 @@ var i,
     u = n(981631),
     h = n(388032);
 function p(e) {
-    let { canAttachFiles: t, canStartThreads: n, useSlate: i, canUseApplicationCommands: l, hasClips: p, channel: m, activities: f, newClipsCount: g, canPostPolls: C, canLaunchActivities: x, appContext: v } = e,
-        _ = [];
+    let { canAttachFiles: t, canStartThreads: n, useSlate: i, canUseApplicationCommands: l, hasClips: p, channel: m, activities: f, newClipsCount: g, canPostPolls: C, canLaunchActivities: x, appContext: _ } = e,
+        v = [];
     return (
         t &&
-            (_.push({
+            (v.push({
                 type: 'UPLOAD_A_FILE',
                 icon: a.FileUpIcon,
                 display: h.intl.string(h.t['d3+iYm'])
             }),
-            _.push({
+            v.push({
                 type: 'UPLOAD_TEXT_AS_FILE',
                 icon: a.FileUpIcon,
                 display: h.intl.string(h.t['G9s+EB'])
             })),
         p &&
             t &&
-            v !== u.IlC.POPOUT &&
-            _.push({
+            _ !== u.IlC.POPOUT &&
+            v.push({
                 type: 'CLIPS',
                 icon: a.ClipsIcon,
                 display: h.intl.string(h.t.o034cn),
@@ -43,26 +43,26 @@ function p(e) {
                 badgeColor: o.Z.BG_BRAND
             }),
         n &&
-            _.push({
+            v.push({
                 type: 'CREATE_THREAD',
                 icon: a.ThreadPlusIcon,
                 display: h.intl.string(h.t.rBIGBA)
             }),
         C &&
-            _.push({
+            v.push({
                 type: 'POLL',
                 icon: a.PollsIcon,
                 display: h.intl.string(h.t.Flr51t)
             }),
         i &&
             l &&
-            _.push({
+            v.push({
                 type: 'SLASH_COMMAND',
                 icon: a.AppsIcon,
                 display: h.intl.string(h.t.Bbvp6O)
             }),
         x &&
-            _.push({
+            v.push({
                 type: 'ACTIVITY',
                 icon: a.ActivitiesIcon,
                 display: h.intl.string(h.t['16Lfra'])
@@ -71,7 +71,7 @@ function p(e) {
             if (!(0, r.Z)(e, u.xjy.EMBEDDED))
                 e.type === u.IIU.PLAYING &&
                     (0, r.Z)(e, u.xjy.JOIN) &&
-                    _.push({
+                    v.push({
                         type: 'INVITE_TO_GAME',
                         icon: a.DpadIcon,
                         display: h.intl.formatToPlainString(h.t['KHLo+P'], {
@@ -82,7 +82,7 @@ function p(e) {
                     }),
                     e.type === u.IIU.LISTENING &&
                         (0, r.Z)(e, u.xjy.SYNC) &&
-                        _.push({
+                        v.push({
                             type: 'INVITE_TO_LISTEN',
                             icon: a.UserPlayIcon,
                             display: h.intl.formatToPlainString(h.t.I479p6, {
@@ -93,7 +93,7 @@ function p(e) {
                         }),
                     e.type === u.IIU.WATCHING &&
                         (0, r.Z)(e, u.xjy.SYNC) &&
-                        _.push({
+                        v.push({
                             type: 'INVITE_TO_WATCH',
                             icon: a.EyeIcon,
                             display: h.intl.formatToPlainString(h.t['EvCP/v'], {
@@ -103,7 +103,7 @@ function p(e) {
                             activity: e
                         });
         }),
-        _
+        v
     );
 }
 ((l = i || (i = {})).UPLOAD_A_FILE = 'UPLOAD_A_FILE'), (l.UPLOAD_TEXT_AS_FILE = 'UPLOAD_TEXT_AS_FILE'), (l.INVITE_TO_PLAY_GAME = 'INVITE_TO_GAME'), (l.INVITE_TO_LISTEN = 'INVITE_TO_LISTEN'), (l.INVITE_TO_WATCH = 'INVITE_TO_WATCH'), (l.CREATE_THREAD = 'CREATE_THREAD'), (l.SLASH_COMMAND = 'SLASH_COMMAND'), (l.CLIPS = 'CLIPS'), (l.POLL = 'POLL'), (l.ACTIVITY = 'ACTIVITY');

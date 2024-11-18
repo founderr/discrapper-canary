@@ -20,15 +20,15 @@ var l = n(442837),
     g = n(643632),
     C = n(939863),
     x = n(388032),
-    v = n(324167);
-function _(e) {
+    _ = n(324167);
+function v(e) {
     let { onClick: t } = e;
     return (0, i.jsx)(o.Z, {
-        iconContainerClassName: v.continueIconContainer,
+        iconContainerClassName: _.continueIconContainer,
         icon: (0, i.jsx)(r.StageIcon, {
             size: 'custom',
             color: 'currentColor',
-            className: v.continueIcon,
+            className: _.continueIcon,
             height: 20,
             width: 20
         }),
@@ -42,10 +42,10 @@ function I(e) {
     let { channel: t } = e,
         { participants: n, usersInSummary: l } = (0, f.Z)(t.id);
     return (0, i.jsxs)('div', {
-        className: v.audienceSummary,
+        className: _.audienceSummary,
         children: [
             (0, i.jsx)(s.Z, {
-                className: v.summaryItem,
+                className: _.summaryItem,
                 guildId: t.guild_id,
                 users: l,
                 size: s.u.SIZE_16
@@ -83,26 +83,26 @@ function E(e) {
         children: [
             (0, i.jsx)(C.Z, {
                 children: (0, i.jsx)('div', {
-                    className: v.iconBackground,
+                    className: _.iconBackground,
                     children: (0, i.jsx)(r.StageIcon, {
                         size: 'custom',
                         color: 'currentColor',
                         width: 40,
                         height: 40,
-                        className: v.icon
+                        className: _.icon
                     })
                 })
             }),
             (0, i.jsxs)('div', {
-                className: v.headerContainer,
+                className: _.headerContainer,
                 children: [
                     (0, i.jsx)(r.Heading, {
-                        className: v.__invalid_title,
+                        className: _.__invalid_title,
                         variant: 'heading-xl/semibold',
                         children: x.intl.string(x.t.QGnDLi)
                     }),
                     (0, i.jsx)(r.Text, {
-                        className: v.subtitle,
+                        className: _.subtitle,
                         variant: 'text-sm/normal',
                         children: x.intl.string(x.t.djfK39)
                     })
@@ -111,18 +111,18 @@ function E(e) {
             E ? null : (0, i.jsx)(d.Z, { channelId: t.id }),
             a
                 ? (0, i.jsx)(u.Z, {
-                      className: v.eventPrompt,
+                      className: _.eventPrompt,
                       channel: t
                   })
                 : null,
             o
                 ? (0, i.jsx)(c.Z, {
-                      className: v.eventPrompt,
+                      className: _.eventPrompt,
                       guildId: s
                   })
                 : null,
-            (a || b.length > 0) && (0, i.jsx)('hr', { className: v.separator }),
-            a ? (0, i.jsx)(_, { onClick: n }) : null,
+            (a || b.length > 0) && (0, i.jsx)('hr', { className: _.separator }),
+            a ? (0, i.jsx)(v, { onClick: n }) : null,
             (0, i.jsx)(I, { channel: t })
         ]
     });

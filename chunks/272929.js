@@ -43,16 +43,16 @@ function d(e) {
             },
             'animate-always'
         ),
-        v = C ? s.intl.formatToPlainString(s.t.D8Drx8, { seconds: n }) : void 0,
-        _ = f ? r.d : r.Z;
+        _ = C ? s.intl.formatToPlainString(s.t.D8Drx8, { seconds: n }) : void 0,
+        v = f ? r.d : r.Z;
     return (0, i.jsxs)('div', {
         className: o.container,
         children: [
             C ? (0, i.jsx)(c, { percentComplete: x.percentComplete }) : null,
-            (0, i.jsx)(_, {
+            (0, i.jsx)(v, {
                 ...g,
                 disabled: C,
-                label: v,
+                label: _,
                 iconComponent: a.ReactionIcon,
                 onClick: d,
                 onKeyDown: u,

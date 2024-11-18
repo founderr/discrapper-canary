@@ -21,8 +21,8 @@ var i = n(200651),
     g = n(626135),
     C = n(120522),
     x = n(386542),
-    v = n(933843),
-    _ = n(746599),
+    _ = n(933843),
+    v = n(746599),
     I = n(1163),
     E = n(738672),
     b = n(981631),
@@ -58,7 +58,7 @@ function y(e) {
                     .then((e) => {
                         if (e) {
                             if (
-                                ((0, _.J1)(!(0, v.mc)(j, A)),
+                                ((0, v.J1)(!(0, _.mc)(j, A)),
                                 g.default.track(b.rMx.PERK_DEMO_OFFER_ACCEPTED, {
                                     guild_id: t.guild_id,
                                     channel_id: t.id,
@@ -66,7 +66,7 @@ function y(e) {
                                     resolution: j,
                                     max_fps: A
                                 }),
-                                (0, _.cD)(!1),
+                                (0, v.cD)(!1),
                                 null == x)
                             )
                                 return;

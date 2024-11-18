@@ -20,8 +20,8 @@ var i = n(200651),
     g = n(768119),
     C = n(944486),
     x = n(585483),
-    v = n(251285),
-    _ = n(406326),
+    _ = n(251285),
+    v = n(406326),
     I = n(994463),
     E = n(619753),
     b = n(981631),
@@ -213,7 +213,7 @@ class A extends l.PureComponent {
             S(this, 'renderHeader', () => {
                 let { searchMode: e } = this.state,
                     { totalResults: t, isSearching: n, isHistoricalIndexing: l, documentsIndexed: a } = this.props.search;
-                return (0, i.jsx)(_.Z, {
+                return (0, i.jsx)(v.Z, {
                     searchMode: e,
                     searchByMode: this.searchByMode,
                     totalResults: t,
@@ -294,7 +294,7 @@ function y(e) {
             }),
             [t]
         ),
-        ...(0, v.Z)(t),
+        ...(0, _.Z)(t),
         renderEmbeds: f.NA.useSetting(),
         developerMode: f.Sb.useSetting(),
         ...(0, c.cj)([m.Z], () => {

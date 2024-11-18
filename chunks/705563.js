@@ -21,14 +21,14 @@ var l = n(442837),
     C = n(940341);
 function x(e) {
     let { channelId: t, showProfile: n = !1, showTrailingDivider: x = !1 } = e,
-        v = u.default.cast(t),
+        _ = u.default.cast(t),
         {
-            joinRequest: _,
+            joinRequest: v,
             isModmin: I,
             guildId: E,
             maxMembers: b
         } = (0, l.cj)([h.Z, c.Z, d.Z], () => {
-            let e = h.Z.getRequest(v),
+            let e = h.Z.getRequest(_),
                 t = c.Z.getGuild(null == e ? void 0 : e.guildId);
             return {
                 joinRequest: e,
@@ -39,8 +39,8 @@ function x(e) {
         }),
         Z = (0, l.e7)([o.Z], () => (null != E ? o.Z.getMemberCount(E) : 0)),
         N = null != b && (null != Z ? Z : 0) >= b,
-        { approveRequest: S, rejectRequest: T, submitting: j } = (0, m.s)(null == _ ? void 0 : _.guildId, null == _ ? void 0 : _.userId, null == _ ? void 0 : _.joinRequestId);
-    return null != _ && _.applicationStatus === p.wB.SUBMITTED && I
+        { approveRequest: S, rejectRequest: T, submitting: j } = (0, m.s)(null == v ? void 0 : v.guildId, null == v ? void 0 : v.userId, null == v ? void 0 : v.joinRequestId);
+    return null != v && v.applicationStatus === p.wB.SUBMITTED && I
         ? (0, i.jsxs)('div', {
               className: C.buttons,
               children: [
@@ -62,7 +62,7 @@ function x(e) {
                       color: a.Button.Colors.RED,
                       onClick: T,
                       size: a.ButtonSizes.SMALL,
-                      disabled: j || _.applicationStatus !== p.wB.SUBMITTED,
+                      disabled: j || v.applicationStatus !== p.wB.SUBMITTED,
                       children: g.intl.string(g.t.hDtbs7)
                   }),
                   n &&
@@ -70,8 +70,8 @@ function x(e) {
                           color: a.Button.Colors.TRANSPARENT,
                           onClick: () => {
                               (0, s.openUserProfileModal)({
-                                  userId: _.userId,
-                                  guildId: _.guildId,
+                                  userId: v.userId,
+                                  guildId: v.guildId,
                                   analyticsLocation: {
                                       section: f.jXE.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
                                       object: f.qAy.JOIN_REQUEST

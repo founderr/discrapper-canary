@@ -21,8 +21,8 @@ var i = n(200651),
     g = n(774168),
     C = n(871499),
     x = n(981631),
-    v = n(388032);
-function _(e) {
+    _ = n(388032);
+function v(e) {
     let t = (0, o.e7)([p.Z], () => !(0, s.isEmpty)(p.Z.getTypingUsers(e)), [e]),
         n = (0, o.e7)([h.Z], () => h.Z.getVoiceChannelId() === e, [e]),
         { unreadCount: i, mentionCount: l } = (0, o.cj)(
@@ -42,7 +42,7 @@ function _(e) {
 }
 function I(e) {
     let { className: t, channelId: n } = e,
-        { unreadCount: l, mentionCount: a, isTyping: r, voiceChannelIsSelected: s } = _(n);
+        { unreadCount: l, mentionCount: a, isTyping: r, voiceChannelIsSelected: s } = v(n);
     return (0, i.jsx)(g.Z, {
         className: t,
         unreadCount: l,
@@ -62,7 +62,7 @@ function E(e) {
             unreadCount: T,
             mentionCount: j
         } = (function (e) {
-            let { unreadCount: t, mentionCount: n, isTyping: i } = _(e),
+            let { unreadCount: t, mentionCount: n, isTyping: i } = v(e),
                 [a, r] = l.useState(!1);
             return (
                 l.useEffect(() => {
@@ -102,30 +102,30 @@ function E(e) {
         event: x.CkL.FOCUS_CHAT_BUTTON,
         handler: b ? null : P
     });
-    let [M, R] = l.useState(!1),
-        L = l.useCallback(() => {
-            h && R(!0);
+    let [M, L] = l.useState(!1),
+        R = l.useCallback(() => {
+            h && L(!0);
         }, [h]);
     (0, m.yp)({
         event: x.CkL.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
-        handler: L
+        handler: R
     }),
         l.useEffect(() => {
             let e;
             return (
                 M &&
                     (e = setTimeout(() => {
-                        R(!1);
+                        L(!1);
                     }, 3000)),
                 () => {
                     clearTimeout(e);
                 }
             );
         }, [M]);
-    let k = [(t = h && b ? v.intl.string(v.t.DPgc5u) : N ? v.intl.string(v.t.nthdxM) : v.intl.string(v.t['5KxXrK']))];
+    let k = [(t = h && b ? _.intl.string(_.t.DPgc5u) : N ? _.intl.string(_.t.nthdxM) : _.intl.string(_.t['5KxXrK']))];
     return (
-        j > 0 && k.push(v.intl.formatToPlainString(v.t['3l1GOz'], { mentionCount: j })),
-        T > 0 && k.push(v.intl.string(v.t.x5zAGR)),
+        j > 0 && k.push(_.intl.formatToPlainString(_.t['3l1GOz'], { mentionCount: j })),
+        T > 0 && k.push(_.intl.string(_.t.x5zAGR)),
         (0, i.jsx)(C.Z, {
             buttonRef: Z,
             onClick: A,

@@ -20,8 +20,8 @@ var l = n(442837),
     g = n(681837),
     C = n(91433),
     x = n(900927),
-    v = n(678738),
-    _ = n(502762),
+    _ = n(678738),
+    v = n(502762),
     I = n(530),
     E = n(827313),
     b = n(101638),
@@ -32,8 +32,8 @@ var l = n(442837),
 function j(e) {
     let { user: t, currentUser: n, displayProfile: j, channel: A, isHovering: y, onOpenProfile: P } = e,
         M = (0, l.e7)([r.Z], () => r.Z.getRelationshipType(t.id)),
-        R = (0, l.e7)([s.Z], () => s.Z.hidePersonalInformation),
-        L = (0, l.e7)([c.Z], () => {
+        L = (0, l.e7)([s.Z], () => s.Z.hidePersonalInformation),
+        R = (0, l.e7)([c.Z], () => {
             var e;
             return null === (e = c.Z.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application;
         }),
@@ -55,7 +55,7 @@ function j(e) {
                 nicknameIcons: (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(g.Z, { userId: t.id }),
-                        !R &&
+                        !L &&
                             (0, i.jsx)(E.Z, {
                                 userId: t.id,
                                 isHovering: y,
@@ -65,7 +65,7 @@ function j(e) {
                 })
             }),
             M === N.OGo.PENDING_INCOMING &&
-                (0, i.jsx)(_.Z.Overlay, {
+                (0, i.jsx)(v.Z.Overlay, {
                     children: (0, i.jsx)(C.Z, {
                         user: t,
                         channelId: A.id
@@ -79,13 +79,13 @@ function j(e) {
                     currentUser: n,
                     className: T.activity
                 }),
-            (0, i.jsxs)(_.Z.Overlay, {
+            (0, i.jsxs)(v.Z.Overlay, {
                 className: T.overlay,
                 children: [
-                    !R &&
+                    !L &&
                         (null == j ? void 0 : j.bio) != null &&
                         (null == j ? void 0 : j.bio) !== '' &&
-                        (0, i.jsx)(v.Z, {
+                        (0, i.jsx)(_.Z, {
                             heading: S.intl.string(S.t['61W33d']),
                             headingColor: 'header-primary',
                             children: (0, i.jsx)(m.Z, {
@@ -95,13 +95,13 @@ function j(e) {
                                 userId: t.id
                             })
                         }),
-                    (null == L ? void 0 : L.popularApplicationCommandIds) != null &&
+                    (null == R ? void 0 : R.popularApplicationCommandIds) != null &&
                         (0, i.jsx)(h.Z, {
-                            applicationId: L.id,
-                            commandIds: L.popularApplicationCommandIds,
+                            applicationId: R.id,
+                            commandIds: R.popularApplicationCommandIds,
                             channel: A
                         }),
-                    (0, i.jsx)(v.Z, {
+                    (0, i.jsx)(_.Z, {
                         heading: t.bot ? S.intl.string(S.t['A//N4u']) : S.intl.string(S.t.a6XYDw),
                         headingColor: 'header-primary',
                         children: (0, i.jsx)(x.Z, { userId: t.id })

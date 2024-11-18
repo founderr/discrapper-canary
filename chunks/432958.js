@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return v;
     }
 });
 var i = n(200651),
@@ -19,9 +19,9 @@ var i = n(200651),
     g = n(228168),
     C = n(388032),
     x = n(222470),
-    v = n(321975);
-function _(e) {
-    let { user: t, channel: n, onViewBlockedProfileClick: _ } = e,
+    _ = n(321975);
+function v(e) {
+    let { user: t, channel: n, onViewBlockedProfileClick: v } = e,
         I = (0, h.ZP)(t.id),
         E = (0, s.ZP)(),
         { analyticsLocations: b } = (0, c.ZP)(o.Z.BLOCKED_PROFILE_PANEL),
@@ -47,7 +47,7 @@ function _(e) {
                         children: [
                             (0, i.jsx)('img', {
                                 alt: '',
-                                src: v,
+                                src: _,
                                 className: x.previewForCollected,
                                 'aria-hidden': !0
                             }),
@@ -78,7 +78,7 @@ function _(e) {
                                         autoFocus: !0,
                                         fullWidth: !1,
                                         onClick: () => {
-                                            null == _ || _(),
+                                            null == v || v(),
                                                 (0, u.pQ)({
                                                     action: 'VIEW_BLOCKED_PROFILE',
                                                     analyticsLocations: b,

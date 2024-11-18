@@ -14,8 +14,8 @@ var i = n(200651),
     g = n(453687),
     C = n(930282),
     x = n(318713),
-    v = n(981631),
-    _ = n(388032),
+    _ = n(981631),
+    v = n(388032),
     I = n(587977),
     E = n(12645),
     b = n(882530);
@@ -54,7 +54,7 @@ let Z = l.memo(function (e) {
                         color: 'interactive-normal',
                         tag: 'span',
                         className: I.learnMore,
-                        children: _.intl.format(_.t.Nd3Gh4, { helpUrl: m.Z.getArticleURL(v.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE) })
+                        children: v.intl.format(v.t.Nd3Gh4, { helpUrl: m.Z.getArticleURL(_.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE) })
                     })
                 })
             })
@@ -63,7 +63,7 @@ let Z = l.memo(function (e) {
 });
 t.Z = l.memo(function (e) {
     var t, n;
-    let { className: a, compact: s, message: d, children: m, content: f, onUpdate: v } = e,
+    let { className: a, compact: s, message: d, children: m, content: f, onUpdate: _ } = e,
         N = null === (t = d.editedTimestamp) || void 0 === t ? void 0 : t.toString(),
         S = l.useRef(!1),
         T = (0, c.e7)([p.Z], () => p.Z.getMessage(d.id), [d.id]),
@@ -72,8 +72,8 @@ t.Z = l.memo(function (e) {
         }, [d, T]);
     return (
         l.useLayoutEffect(() => {
-            S.current ? null != v && v() : (S.current = !0);
-        }, [v, d.content, f, N, m]),
+            S.current ? null != _ && _() : (S.current = !0);
+        }, [_, d.content, f, N, m]),
         (0, i.jsxs)('div', {
             id: (0, g.ut)(d),
             className: r()(a, b.markup, {
@@ -95,13 +95,13 @@ t.Z = l.memo(function (e) {
                                 isInline: !1,
                                 children: (0, i.jsxs)('span', {
                                     className: E.edited,
-                                    children: ['(', _.intl.string(_.t.Z7eEx8), ')']
+                                    children: ['(', v.intl.string(v.t.Z7eEx8), ')']
                                 })
                             })
                         ]
                     }),
                 (0, i.jsx)(Z, {
-                    notice: null !== (n = null == T ? void 0 : T.errorMessage) && void 0 !== n ? n : _.intl.string(_.t.zQ69pq),
+                    notice: null !== (n = null == T ? void 0 : T.errorMessage) && void 0 !== n ? n : v.intl.string(v.t.zQ69pq),
                     message: d,
                     compact: s,
                     onDismiss: j

@@ -18,12 +18,12 @@ function u(e) {
         [m, f] = l.useState(''),
         [g, C] = l.useState(!1),
         x = (0, a.e7)([o.ZP], () => o.ZP.callHeaderHeight),
-        v = l.createRef(),
-        _ = l.useRef(0);
+        _ = l.createRef(),
+        v = l.useRef(0);
     l.useEffect(() => {
         var e, t;
-        f(String(_.current)), C(void 0 !== x && x < (null !== (t = null === (e = v.current) || void 0 === e ? void 0 : e.clientHeight) && void 0 !== t ? t : 300) + 24), (_.current += 1);
-    }, [x, v]);
+        f(String(v.current)), C(void 0 !== x && x < (null !== (t = null === (e = _.current) || void 0 === e ? void 0 : e.clientHeight) && void 0 !== t ? t : 300) + 24), (v.current += 1);
+    }, [x, _]);
     let { preventIdle: I, allowIdle: E } = (0, d.Y)('popup');
     return (null == t ? void 0 : t.current) == null
         ? null
@@ -37,7 +37,7 @@ function u(e) {
                   positionKey: m,
                   children: () =>
                       (0, i.jsx)('div', {
-                          ref: v,
+                          ref: _,
                           onMouseOver: I,
                           onFocus: I,
                           onBlur: E,

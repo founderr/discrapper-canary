@@ -15,8 +15,8 @@ var i = n(200651),
     g = n(984370),
     C = n(981631),
     x = n(388032),
-    v = n(550639);
-function _(e, t, n) {
+    _ = n(550639);
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -44,13 +44,13 @@ function I(e) {
                 onClose: l,
                 renderHeader: () =>
                     (0, i.jsxs)('div', {
-                        className: v.header,
+                        className: _.header,
                         children: [
                             null != s &&
                                 (0, i.jsx)(s, {
                                     size: 'md',
                                     color: 'currentColor',
-                                    className: v.channelIcon
+                                    className: _.channelIcon
                                 }),
                             (0, i.jsx)(o.Text, {
                                 variant: 'text-md/semibold',
@@ -63,14 +63,14 @@ function I(e) {
                     (0, i.jsx)(o.Text, {
                         selectable: !0,
                         variant: 'text-md/normal',
-                        className: v.content,
+                        className: _.content,
                         children: m.Z.parseTopic(n.topic, !0, { channelId: n.id })
                     }),
                     null != g
                         ? (0, i.jsxs)('div', {
-                              className: v.linkedLobbyNotice,
+                              className: _.linkedLobbyNotice,
                               children: [
-                                  (0, i.jsx)(o.RefreshIcon, { className: v.linkedLobbyApplicationIcon }),
+                                  (0, i.jsx)(o.RefreshIcon, { className: _.linkedLobbyApplicationIcon }),
                                   (0, i.jsx)(o.Text, {
                                       variant: 'text-sm/normal',
                                       color: 'header-secondary',
@@ -81,7 +81,7 @@ function I(e) {
                                               (0, i.jsx)(
                                                   'span',
                                                   {
-                                                      className: v.linkedLobbyNoticeSeparator,
+                                                      className: _.linkedLobbyNoticeSeparator,
                                                       children: e
                                                   },
                                                   t
@@ -108,7 +108,7 @@ class b extends l.Component {
                   children: [
                       (0, i.jsx)(g.Z.Divider, {}),
                       (0, i.jsxs)('div', {
-                          className: r()(v.topic, v.expandable),
+                          className: r()(_.topic, _.expandable),
                           onMouseDown: this.onMouseDown,
                           onMouseMove: this.onMouseMove,
                           onMouseUp: this.onMouseUp,
@@ -118,7 +118,7 @@ class b extends l.Component {
                               (0, i.jsx)(o.Clickable, {
                                   onClick: this.handleClick,
                                   'aria-label': x.intl.string(x.t.mKwsSk),
-                                  className: v.topicClickTarget
+                                  className: _.topicClickTarget
                               }),
                               m.Z.parseTopic(e.topic, !0, {
                                   channelId: e.id,
@@ -131,9 +131,9 @@ class b extends l.Component {
     }
     constructor(...e) {
         super(...e),
-            _(this, '_mouseDown', !1),
-            _(this, '_mouseUp', !1),
-            _(this, 'handleOpenTopic', (e) => {
+            v(this, '_mouseDown', !1),
+            v(this, '_mouseUp', !1),
+            v(this, 'handleOpenTopic', (e) => {
                 let t = e.target;
                 if ((0, s.k)(t)) {
                     if (E(t)) return;
@@ -147,16 +147,16 @@ class b extends l.Component {
                     })
                 );
             }),
-            _(this, 'onMouseDown', () => {
+            v(this, 'onMouseDown', () => {
                 this._mouseDown = !0;
             }),
-            _(this, 'onMouseMove', () => {
+            v(this, 'onMouseMove', () => {
                 this._mouseDown && (this._mouseDown = !1);
             }),
-            _(this, 'onMouseUp', (e) => {
+            v(this, 'onMouseUp', (e) => {
                 this._mouseDown && e.button !== C.AeJ.SECONDARY && this.handleOpenTopic(e), (this._mouseUp = !0), (this._mouseDown = !1);
             }),
-            _(this, 'handleContextMenu', (e) => {
+            v(this, 'handleContextMenu', (e) => {
                 let { channel: t, guild: l } = this.props;
                 (0, c.jW)(e, async () => {
                     let { default: e } = await n.e('24783').then(n.bind(n, 439635));
@@ -169,7 +169,7 @@ class b extends l.Component {
                         });
                 });
             }),
-            _(this, 'handleClick', (e) => {
+            v(this, 'handleClick', (e) => {
                 if (this._mouseUp) {
                     this._mouseUp = !1;
                     return;

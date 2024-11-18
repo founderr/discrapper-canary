@@ -19,8 +19,8 @@ var i = n(200651),
     g = n(909746),
     C = n(501801),
     x = n(271383),
-    v = n(430824),
-    _ = n(5192),
+    _ = n(430824),
+    v = n(5192),
     I = n(776767),
     E = n(981631),
     b = n(388032),
@@ -32,7 +32,7 @@ function T(e) {
     let { log: n, member: a, guild: s } = e,
         { analyticsLocations: u } = (0, h.ZP)(),
         f = g.nm(n),
-        v = g.QM(n),
+        _ = g.QM(n),
         I = null === (t = g.V$(E.zUn.REASON, n)) || void 0 === t ? void 0 : t.newValue,
         S = g.J5(n),
         T = (0, p.LJ)(n.id),
@@ -64,7 +64,7 @@ function T(e) {
                                       children: [
                                           '@',
                                           (0, i.jsx)(d.NameWithRole, {
-                                              name: _.ZP.getName(a.guildId, null, n.user),
+                                              name: v.ZP.getName(a.guildId, null, n.user),
                                               color: null !== (t = null == j ? void 0 : j.colorString) && void 0 !== t ? t : void 0
                                           })
                                       ]
@@ -89,11 +89,11 @@ function T(e) {
                                     color: 'header-primary',
                                     children: f
                                 }),
-                            null != v &&
+                            null != _ &&
                                 (0, i.jsxs)(d.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'header-secondary',
-                                    children: ['(', 'string' == typeof v ? v : o()(v).fromNow(), ')']
+                                    children: ['(', 'string' == typeof _ ? _ : o()(_).fromNow(), ')']
                                 })
                         ]
                     }),
@@ -164,7 +164,7 @@ function T(e) {
 }
 function j(e) {
     let { member: t } = e,
-        n = (0, c.e7)([v.Z], () => v.Z.getGuild(t.guildId), [t.guildId]),
+        n = (0, c.e7)([_.Z], () => _.Z.getGuild(t.guildId), [t.guildId]),
         a = (0, c.e7)(
             [f.Z],
             () => {

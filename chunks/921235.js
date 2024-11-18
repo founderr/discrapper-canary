@@ -20,8 +20,8 @@ var i = n(200651),
     g = n(626135),
     C = n(51144),
     x = n(901461),
-    v = n(981631),
-    _ = n(388032),
+    _ = n(981631),
+    v = n(388032),
     I = n(564557);
 let E = '749054660769218631';
 function b(e) {
@@ -36,26 +36,26 @@ function b(e) {
             () =>
                 !!r()(m.Z.getMessages(n.id).toArray())
                     .reverse()
-                    .find((e) => e.author.id !== p.default.getId() && e.state === v.yb.SENT && !(0, x.Z)(e))
+                    .find((e) => e.author.id !== p.default.getId() && e.state === _.yb.SENT && !(0, x.Z)(e))
         ),
         N = (0, s.e7)([f.default], () => f.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
-        S = null !== (t = C.ZP.useName(N)) && void 0 !== t ? t : _.intl.string(_.t.y1Wu2d),
+        S = null !== (t = C.ZP.useName(N)) && void 0 !== t ? t : v.intl.string(v.t.y1Wu2d),
         T = (0, s.e7)([u.Z], () => u.Z.getStickerById(E)),
         j = l.useCallback(async () => {
             if (null == a || '' === a)
                 try {
                     await c.Z.sendGreetMessage(n.id, E),
-                        g.default.track(v.rMx.DM_EMPTY_ACTION, {
+                        g.default.track(_.rMx.DM_EMPTY_ACTION, {
                             channel_id: n.id,
                             channel_type: n.type,
                             source: 'Wave',
                             type: 'Send wave'
                         });
                 } catch (e) {
-                    !e.ok && 429 === e.status && b(_.intl.string(_.t['Whhv4+']));
+                    !e.ok && 429 === e.status && b(v.intl.string(v.t['Whhv4+']));
                 }
         }, [n.id, n.type, a]),
-        A = _.intl.formatToPlainString(_.t.m0zYbW, { username: S }),
+        A = v.intl.formatToPlainString(v.t.m0zYbW, { username: S }),
         y =
             null != a && '' !== a
                 ? (0, i.jsx)(o.Text, {
@@ -71,7 +71,7 @@ function b(e) {
               children: [
                   (0, i.jsxs)(o.Clickable, {
                       className: null != a && '' !== a ? I.compactButtonDisabled : I.compactButton,
-                      'aria-label': _.intl.string(_.t.pJObYG),
+                      'aria-label': v.intl.string(v.t.pJObYG),
                       onClick: j,
                       children: [
                           (0, i.jsx)(h.ZP, {

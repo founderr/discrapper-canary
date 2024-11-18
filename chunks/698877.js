@@ -13,9 +13,9 @@ function o(e) {
         { hasPermission: n, streamActive: o, isSelfStream: c, centerButton: d, onMouseEnter: u, onMouseLeave: h, premiumGlow: p, buttonRef: m, ...f } = e,
         g = d ? r.d : r.Z;
     t = o ? (c ? s.intl.string(s.t.S5anIS) : s.intl.string(s.t.q3O3Jy)) : n ? s.intl.string(s.t.fjBNo6) : s.intl.string(s.t.uQn9Bw);
-    let { Component: C, events: x, play: v } = (0, a.P)(o ? 'disable' : 'enable');
+    let { Component: C, events: x, play: _ } = (0, a.P)(o ? 'disable' : 'enable');
     return (
-        l.useEffect(() => () => v(), [o, v]),
+        l.useEffect(() => () => _(), [o, _]),
         (0, i.jsx)(g, {
             buttonRef: m,
             label: t,

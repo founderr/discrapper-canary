@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return v;
     }
 });
 var i = n(200651),
@@ -19,11 +19,11 @@ var i = n(200651),
     g = n(228488),
     C = n(981631),
     x = n(265046);
-let v = () => {
+let _ = () => {
     r.Z.wait(() => d.xv(C.KJ3.CHANNEL_CALL_POPOUT));
 };
-function _(e) {
-    let { channel: t, appContext: n, popoutOpen: r, popoutWindow: d, currentWindow: _ } = e,
+function v(e) {
+    let { channel: t, appContext: n, popoutOpen: r, popoutWindow: d, currentWindow: v } = e,
         I = n === C.IlC.POPOUT,
         E = l.useRef(null),
         { currentLayout: b, mode: Z } = (0, a.cj)(
@@ -50,13 +50,13 @@ function _(e) {
     let S = l.useRef(b),
         { currentDocument: T, rootNode: j } = l.useMemo(() => {
             let e = null != d && I ? d.document : document,
-                t = _.document.getElementById('app-mount');
+                t = v.document.getElementById('app-mount');
             return {
-                currentWindow: _,
+                currentWindow: v,
                 currentDocument: e,
                 rootNode: t
             };
-        }, [d, I, _]),
+        }, [d, I, v]),
         A = r && !I,
         y = Z === C.WtW.VIDEO && N && !A,
         P = l.useCallback(
@@ -76,7 +76,7 @@ function _(e) {
             },
             [T, P, j]
         ),
-        R = l.useCallback(
+        L = l.useCallback(
             (e) => () => {
                 null != j && (e !== C.AEg.FULL_SCREEN ? ((S.current = e), P(e, C.AEg.FULL_SCREEN), (0, g.Dj)(j)) : M(e));
             },
@@ -84,7 +84,7 @@ function _(e) {
         );
     return (l.useEffect(() => {
         let e = () => {
-            null != j && !(0, g.rB)(j, T) && b === C.AEg.FULL_SCREEN && R(b)();
+            null != j && !(0, g.rB)(j, T) && b === C.AEg.FULL_SCREEN && L(b)();
         };
         return (
             T.addEventListener(g.NO, e),
@@ -92,7 +92,7 @@ function _(e) {
                 T.removeEventListener(g.NO, e);
             }
         );
-    }, [T, b, R, j]),
+    }, [T, b, L, j]),
     l.useEffect(
         () => (
             p.default.track(C.rMx.VIDEO_LAYOUT_TOGGLED, {
@@ -109,7 +109,7 @@ function _(e) {
         null != j && E.current === C.WtW.VIDEO && Z === C.WtW.VOICE && (0, g.Pr)(j, T);
     }, [T, Z, E, j]),
     l.useEffect(() => {
-        !N && I && v();
+        !N && I && _();
     }, [N, I]),
     y)
         ? (0, i.jsx)(u.Z, {
@@ -117,7 +117,7 @@ function _(e) {
               node: j,
               guestWindow: d,
               className: x.rightTrayIcon,
-              onClick: R(b)
+              onClick: L(b)
           })
         : null;
 }

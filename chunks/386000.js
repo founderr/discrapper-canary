@@ -15,15 +15,15 @@ function d(e) {
         { mode: g } = (0, o.Z)({ location: 'MicButton' }),
         C = t || n || d,
         x = u ? c.d : c.Z,
-        v = (0, s.Z)(t, n, d, h),
-        { Component: _, play: I, events: E } = (0, r.O)(C ? 'unmute' : 'mute');
+        _ = (0, s.Z)(t, n, d, h),
+        { Component: v, play: I, events: E } = (0, r.O)(C ? 'unmute' : 'mute');
     return (
         l.useEffect(() => () => I(), [I, C]),
         (0, i.jsx)(x, {
             isActive: 'mic-push-to-enable' === g ? !C : C,
-            iconComponent: _,
+            iconComponent: v,
             iconColor: C && 'mic-push-to-disable-red' === g ? a.Z.unsafe_rawColors.RED_400.css : void 0,
-            label: v,
+            label: _,
             onMouseEnter: (e) => {
                 null == p || p(e), E.onMouseEnter();
             },

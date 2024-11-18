@@ -20,8 +20,8 @@ var i = n(200651),
     g = n(937995),
     C = n(131951),
     x = n(594174),
-    v = n(63063),
-    _ = n(120619),
+    _ = n(63063),
+    v = n(120619),
     I = n(578976),
     E = n(981631),
     b = n(37113),
@@ -32,15 +32,15 @@ function T(e) {
     let { buttonRef: t, channel: a, userId: s, streaming: T, onClose: j, dismissibleContent: A } = e,
         y = (0, d.e7)([x.default], () => x.default.getUser(s)),
         P = (0, d.e7)([x.default], () => x.default.getCurrentUser()),
-        M = (0, d.e7)([_.Z], () => _.Z.getPreviousGoLiveSettings()),
-        R = (0, d.e7)([p.Z], () => p.Z.getChatOpen(a.id)),
-        L = T && null != M && M.resolution !== b.LY.RESOLUTION_1440 && M.frameRate !== b.ws.FPS_60,
+        M = (0, d.e7)([v.Z], () => v.Z.getPreviousGoLiveSettings()),
+        L = (0, d.e7)([p.Z], () => p.Z.getChatOpen(a.id)),
+        R = T && null != M && M.resolution !== b.LY.RESOLUTION_1440 && M.frameRate !== b.ws.FPS_60,
         k = l.useContext(g.h9),
         O = l.useRef(0),
         [D, w] = l.useState('0');
     l.useEffect(() => {
         (O.current += 1), w(String(O.current));
-    }, [R]);
+    }, [L]);
     let B = l.useMemo(() => {
             let e = 30;
             return k && (e = -30), (O.current += 1), w(String(O.current)), e;
@@ -61,7 +61,7 @@ function T(e) {
             size: u.AvatarSizes.SIZE_48,
             animateOnHover: !0
         }),
-        F = T && !L,
+        F = T && !R,
         V = a.hdStreamingUntil;
     if (null == V || null == y || null == P) return null;
     let z = o()(V).diff(o()(), 'hours'),
@@ -71,7 +71,7 @@ function T(e) {
                 return Z.intl.format(Z.t['6LrV9f'], {
                     username: null !== (e = y.globalName) && void 0 !== e ? e : y.username,
                     num: z,
-                    helpCenterLink: v.Z.getArticleURL(E.BhN.HD_STREAMING_POTION)
+                    helpCenterLink: _.Z.getArticleURL(E.BhN.HD_STREAMING_POTION)
                 });
             }
             return y.id === P.id
@@ -79,15 +79,15 @@ function T(e) {
                 : !0 === T
                   ? Z.intl.format(Z.t.JkWoqK, {
                         username: y.username,
-                        helpCenterLink: v.Z.getArticleURL(E.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
+                        helpCenterLink: _.Z.getArticleURL(E.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
                     })
                   : Z.intl.formatToPlainString(Z.t.vNbVXF, { username: y.username });
         })(),
-        K = L ? Z.intl.string(Z.t.o7NIjY) : F ? Z.intl.string(Z.t.r6xhBw) : Z.intl.string(Z.t.yKw8Dg);
+        K = R ? Z.intl.string(Z.t.o7NIjY) : F ? Z.intl.string(Z.t.r6xhBw) : Z.intl.string(Z.t.yKw8Dg);
     if (null == y || null == P) return null;
     let Y = () => {
-        if (L) {
-            let e = _.Z.getPreviousGoLiveSettings(),
+        if (R) {
+            let e = v.Z.getPreviousGoLiveSettings(),
                 t = C.Z.getGoLiveSource();
             if (null == e) {
                 j();

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return L;
+        return R;
     }
 }),
     n(47120);
@@ -20,8 +20,8 @@ var i = n(200651),
     g = n(333535),
     C = n(566006),
     x = n(443877),
-    v = n(60174),
-    _ = n(216337),
+    _ = n(60174),
+    v = n(216337),
     I = n(920888),
     E = n(287151),
     b = n(569471),
@@ -34,9 +34,9 @@ var i = n(200651),
     y = n(981631),
     P = n(388032),
     M = n(382275),
-    R = n(351821);
-function L(e) {
-    let { postId: t, isFirstMessage: n, isLastItem: a = !1, parentChannelId: L } = e,
+    L = n(351821);
+function R(e) {
+    let { postId: t, isFirstMessage: n, isLastItem: a = !1, parentChannelId: R } = e,
         { ref: k, width: O } = (0, p.Z)(),
         [D, w] = l.useState(3),
         [B, U] = l.useState(!n),
@@ -45,7 +45,7 @@ function L(e) {
         { firstMessage: V } = (0, j.cl)(F),
         z = (0, o.e7)([b.Z], () => b.Z.hasJoined(t)),
         { disableReactionUpdates: W, disableReactionCreates: K, isLurking: Y, isGuest: q, isPendingMember: X } = (0, x.Z)(F),
-        J = (0, o.e7)([N.Z], () => N.Z.getChannel(L)),
+        J = (0, o.e7)([N.Z], () => N.Z.getChannel(R)),
         Q = (0, T.Bs)(J),
         $ = (0, o.e7)([f.Z], () => f.Z.shouldDisplayPrompt(t) && !0 === n, [t, n]),
         ee = l.useCallback(
@@ -112,7 +112,7 @@ function L(e) {
                                 !K &&
                                 null != Q &&
                                 (0, i.jsx)('div', {
-                                    className: R.reactions,
+                                    className: L.reactions,
                                     children: (0, i.jsx)(E.le, {
                                         message: V,
                                         readOnly: !1,
@@ -144,7 +144,7 @@ function L(e) {
                                 forceHideReactionCreates: !0
                             }),
                             !K &&
-                                (0, i.jsx)(v.X, {
+                                (0, i.jsx)(_.X, {
                                     type: C.O.NORMAL,
                                     message: V,
                                     channel: F,
@@ -229,7 +229,7 @@ function L(e) {
                 ]
             }),
             $ && (0, i.jsx)(g.Z, { threadId: t }),
-            (0, i.jsx)(_.Z, {
+            (0, i.jsx)(v.Z, {
                 channel: F,
                 isLastItem: a
             })

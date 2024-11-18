@@ -15,8 +15,8 @@ var i = n(200651),
     g = n(512384),
     C = n(470956),
     x = n(597998),
-    v = n(199902),
-    _ = n(314897),
+    _ = n(199902),
+    v = n(314897),
     I = n(271383),
     E = n(131951),
     b = n(496675),
@@ -29,14 +29,14 @@ var i = n(200651),
     y = n(649739),
     P = n(262317),
     M = n(981631),
-    R = n(524484),
-    L = n(616457);
+    L = n(524484),
+    R = n(616457);
 let k = l.memo((e) => {
     var t;
     let { mute: n, deaf: l, user: a, channel: r, sessionId: o, nick: x } = e,
         b = a.id,
-        L = (0, s.e7)([_.default], () => _.default.getId() === b, [b]),
-        [k, O, D] = (0, s.Wu)([E.Z], () => (L ? [!E.Z.isSupported() || E.Z.isSelfMute() || E.Z.isSelfMutedTemporarily(), E.Z.isSelfDeaf(), !1] : [!E.Z.isSupported() || E.Z.isLocalMute(b), !1, E.Z.isLocalVideoDisabled(b)]), [L, b]),
+        R = (0, s.e7)([v.default], () => v.default.getId() === b, [b]),
+        [k, O, D] = (0, s.Wu)([E.Z], () => (R ? [!E.Z.isSupported() || E.Z.isSelfMute() || E.Z.isSelfMutedTemporarily(), E.Z.isSelfDeaf(), !1] : [!E.Z.isSupported() || E.Z.isLocalMute(b), !1, E.Z.isLocalVideoDisabled(b)]), [R, b]),
         w = (0, s.e7)([T.Z], () => T.Z.isPrioritySpeaker(b)),
         B = (0, c.Z)({
             userId: b,
@@ -54,10 +54,10 @@ let k = l.memo((e) => {
         ),
         G = (0, h.Z)(null != H ? [H.applicationId] : []),
         F = (0, y.Hr)('voice_users_eligibility_check', !1),
-        V = (0, s.e7)([Z.Z, N.Z], () => (L ? N.Z.getActivities() : Z.Z.getActivities(b, r.guild_id))).find((e) => null != e.application_id && e.type === M.IIU.PLAYING),
+        V = (0, s.e7)([Z.Z, N.Z], () => (R ? N.Z.getActivities() : Z.Z.getActivities(b, r.guild_id))).find((e) => null != e.application_id && e.type === M.IIU.PLAYING),
         z = (0, s.e7)([u.Z], () => ((null == V ? void 0 : V.application_id) != null ? u.Z.getApplication(null == V ? void 0 : V.application_id) : void 0));
     null != z && y.ZP.trackExposure({ location: 'voice_users' });
-    let [W, K] = (0, s.Wu)([v.Z], () => [v.Z.getStreamForUser(b, r.getGuildId()), v.Z.getActiveStreamForUser(b, r.getGuildId())], [r, b]),
+    let [W, K] = (0, s.Wu)([_.Z], () => [_.Z.getStreamForUser(b, r.getGuildId()), _.Z.getActiveStreamForUser(b, r.getGuildId())], [r, b]),
         Y = (0, s.e7)([S.Z], () => S.Z.getSessionById(o)),
         q = A.ZP.useName(a),
         X = (0, s.e7)([j.Z], () => j.Z.getVoicePlatformForChannel(r.id, b), [r.id, b]),
@@ -66,11 +66,11 @@ let k = l.memo((e) => {
             location: 'VoiceUsers'
         }),
         Q = (0, p.ZP)(r, !0, a),
-        $ = (0, s.e7)([f.Z], () => (L ? f.Z.getHangStatusActivity() : null), [L]),
+        $ = (0, s.e7)([f.Z], () => (R ? f.Z.getHangStatusActivity() : null), [R]),
         ee = (0, s.e7)([Z.Z], () => Z.Z.findActivity(b, (e) => e.type === M.IIU.HANG_STATUS), [b]),
         et = (0, C.Eu)(r.id, b);
     return (0, i.jsx)(g.Z, {
-        shakeLocation: R.oZ.VOICE_USER,
+        shakeLocation: L.oZ.VOICE_USER,
         isShaking: B,
         children: (0, i.jsx)(P.ZP, {
             ...e,
@@ -78,7 +78,7 @@ let k = l.memo((e) => {
             canDrag: e.canDrag && !U,
             otherClientSessionType: null == Y ? void 0 : null === (t = Y.clientInfo) || void 0 === t ? void 0 : t.os,
             voicePlatform: X,
-            localMute: k && !L,
+            localMute: k && !R,
             localVideoDisabled: D,
             mute: n || k,
             deaf: l || O,
@@ -89,9 +89,9 @@ let k = l.memo((e) => {
             isStreaming: null != W && W.channelId === r.id,
             isWatching: null != K && K.state !== M.jm8.ENDED,
             isGuest: U,
-            showHangStatus: Q && J && (_.default.getId() === a.id || null != ee),
-            hangStatusActivity: L ? $ : ee,
-            isSelf: _.default.getId() === a.id,
+            showHangStatus: Q && J && (v.default.getId() === a.id || null != ee),
+            hangStatusActivity: R ? $ : ee,
+            isSelf: v.default.getId() === a.id,
             application: J || F ? z : void 0
         })
     });
@@ -99,7 +99,7 @@ let k = l.memo((e) => {
 k.displayName = 'ConnectedVoiceUser';
 let O = [];
 t.Z = function (e) {
-    let { allowPreviews: t = !0, allowDragging: n = !0, channel: a, voiceStates: c, collapsed: d, collapsedMax: u = 6, tabIndex: p, location: m, numAudience: f, withGuildIcon: g = !1, className: v, children: I } = e,
+    let { allowPreviews: t = !0, allowDragging: n = !0, channel: a, voiceStates: c, collapsed: d, collapsedMax: u = 6, tabIndex: p, location: m, numAudience: f, withGuildIcon: g = !1, className: _, children: I } = e,
         [E, N] = l.useState(null),
         [S, T] = l.useState(!1),
         j = l.useRef(null),
@@ -109,20 +109,20 @@ t.Z = function (e) {
                 N(j.current), (j.current = null);
             })
         ),
-        R = l.useRef(
+        L = l.useRef(
             new o.sW(175, () => {
                 N(null);
             })
         ),
         D = l.useCallback(
             (e) => {
-                t && (T(!0), R.current.cancel(), (j.current = e), y.current.delay());
+                t && (T(!0), L.current.cancel(), (j.current = e), y.current.delay());
             },
             [t]
         ),
         w = l.useCallback(
             (e) => {
-                t && (y.current.cancel(), E === e && (T(!1), R.current.delay()));
+                t && (y.current.cancel(), E === e && (T(!1), L.current.delay()));
             },
             [t, E]
         ),
@@ -151,7 +151,7 @@ t.Z = function (e) {
                 {
                     user: l,
                     nick: r,
-                    isSelfOnOtherClient: _.default.getId() === l.id && s.sessionId !== _.default.getSessionId(),
+                    isSelfOnOtherClient: v.default.getId() === l.id && s.sessionId !== v.default.getSessionId(),
                     mute: s.isVoiceMuted(),
                     deaf: s.isVoiceDeafened(),
                     video: s.selfVideo,
@@ -186,9 +186,9 @@ t.Z = function (e) {
     return null == U && null == I
         ? null
         : (0, i.jsxs)(x.eJ, {
-              className: r()(v, L.list, {
-                  [L.collapsed]: d,
-                  [L.withGuildIcon]: g
+              className: r()(_, R.list, {
+                  [R.collapsed]: d,
+                  [R.withGuildIcon]: g
               }),
               collapsed: d,
               children: [U, I]

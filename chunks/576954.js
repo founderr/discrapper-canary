@@ -21,7 +21,7 @@ function g(e) {
         x = l.useCallback(() => {
             (0, c.T)(t, [g]);
         }, [t, g]),
-        v = l.useCallback(
+        _ = l.useCallback(
             (e) => () => {
                 s.Z.addRelationship({
                     userId: C,
@@ -49,7 +49,7 @@ function g(e) {
         }),
             o.Z.increment({ name: a.V.SAFETY_WARNING_VIEW });
     }, [t, g, C]);
-    let _ = () => {
+    let v = () => {
             (0, r.openModalLazy)(async () => {
                 let { default: e } = await n.e('95226').then(n.bind(n, 816960));
                 return (n) => {
@@ -61,7 +61,7 @@ function g(e) {
                         warningId: g,
                         senderId: C,
                         handleBlock: () => {
-                            I(u.NM.USER_MODAL_BLOCK_CONFIRM, u.NM.USER_MODAL_BLOCK_CANCEL, _);
+                            I(u.NM.USER_MODAL_BLOCK_CONFIRM, u.NM.USER_MODAL_BLOCK_CANCEL, v);
                         }
                     });
                 };
@@ -74,7 +74,7 @@ function g(e) {
                     (0, i.jsx)(r, {
                         ...n,
                         userId: C,
-                        confirmBlock: v(e),
+                        confirmBlock: _(e),
                         onCancel: () => {
                             null == a || a(),
                                 (0, u.qc)({
@@ -101,7 +101,7 @@ function g(e) {
                 text: f.intl.string(f.t['Qk/c4+']),
                 color: r.Button.Colors.BRAND,
                 onclick: () => {
-                    _(),
+                    v(),
                         (0, u.qc)({
                             channelId: t,
                             warningId: g,

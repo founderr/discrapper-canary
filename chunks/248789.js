@@ -22,8 +22,8 @@ function g(e) {
         x = l.useCallback(() => {
             (0, d.T)(t, [g]);
         }, [t, g]),
-        v = (0, r.e7)([c.Z], () => c.Z.isBlocked(C)),
-        _ = l.useMemo(
+        _ = (0, r.e7)([c.Z], () => c.Z.isBlocked(C)),
+        v = l.useMemo(
             () => ({
                 channelId: t,
                 warningId: g,
@@ -34,19 +34,19 @@ function g(e) {
         );
     l.useEffect(() => {
         (0, h.KQ)({
-            ..._,
+            ...v,
             viewName: h.pb.SAFETY_WARNING_BANNER
         }),
             o.Z.increment({ name: a.V.SAFETY_WARNING_VIEW });
-    }, [_]);
+    }, [v]);
     let I = l.useCallback(
             (e) => {
                 (0, h.qc)({
-                    ..._,
+                    ...v,
                     cta: e
                 });
             },
-            [_]
+            [v]
         ),
         E = l.useCallback(() => {
             (0, s.openModalLazy)(
@@ -107,7 +107,7 @@ function g(e) {
                 color: s.Button.Colors.BRAND,
                 onclick: E
             },
-            ...(v
+            ...(_
                 ? []
                 : [
                       {

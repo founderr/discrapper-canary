@@ -17,7 +17,7 @@ var l = n(512722),
     p = n(388032);
 function m(e) {
     var t, l;
-    let { applicationId: m, stream: f, channel: g, exitFullScreen: C, appContext: x, analyticsLocation: v, guildScheduledEvent: _, ...I } = e,
+    let { applicationId: m, stream: f, channel: g, exitFullScreen: C, appContext: x, analyticsLocation: _, guildScheduledEvent: v, ...I } = e,
         E = (0, o.bp)(),
         b = null == g ? void 0 : g.getGuildId(),
         Z = (0, r.e7)([c.Z], () => (null != b ? c.Z.getGuild(b) : null), [b]);
@@ -56,8 +56,8 @@ function m(e) {
                           applicationId: m,
                           appContext: null != x ? x : E,
                           exitFullScreen: C,
-                          analyticsLocation: v,
-                          guildScheduledEvent: _
+                          analyticsLocation: _,
+                          guildScheduledEvent: v
                       });
               },
               iconComponent: null != m ? s.ActivitiesPlusIcon : s.GroupPlusIcon,

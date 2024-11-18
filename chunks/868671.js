@@ -24,8 +24,8 @@ var i = n(192379),
     g = n(178762),
     C = n(206583),
     x = n(809017),
-    v = n(981631),
-    _ = n(388032);
+    _ = n(981631),
+    v = n(388032);
 let I = 0;
 function E(e) {
     let {
@@ -38,9 +38,9 @@ function E(e) {
         y = (0, l.e7)([h.Z], () => h.Z.hidden),
         P = (0, l.e7)([c.Z], () => c.Z.isFocused()),
         M = (0, l.e7)([s.Z], () => s.Z.getChannel(E)),
-        R = (0, l.e7)([o.Z], () => o.Z.getGuild(b), [b]),
-        L = (0, p.E)(R),
-        k = null != L && L && (null == M ? void 0 : M.isForumChannel()) === !1,
+        L = (0, l.e7)([o.Z], () => o.Z.getGuild(b), [b]),
+        R = (0, p.E)(L),
+        k = null != R && R && (null == M ? void 0 : M.isForumChannel()) === !1,
         [O, D, w, B] = i.useMemo(() => {
             let e;
             if (null == T || 0 === T.length || null == S || !k) return [t, n, I];
@@ -59,12 +59,12 @@ function E(e) {
                 key: x.G,
                 count: e.length,
                 index: n.length,
-                title: _.intl.string(_.t['6gwSFR']),
+                title: v.intl.string(v.t['6gwSFR']),
                 onToggleExpand: () => {
                     N((e) => {
                         let t = !e;
                         return (
-                            d.default.track(v.rMx.MEMBERLIST_CONTENT_FEED_TOGGLED, {
+                            d.default.track(_.rMx.MEMBERLIST_CONTENT_FEED_TOGGLED, {
                                 channel_id: E,
                                 guild_id: b,
                                 expanded: t
@@ -109,7 +109,7 @@ function E(e) {
                     let n = null !== (t = null === (e = H.current) || void 0 === e ? void 0 : e.map((e) => e.id)) && void 0 !== t ? t : [],
                         i = n.slice(0, U.current);
                     if (!y && !!P && !!k)
-                        (0, m.e)(v.rMx.RANKING_ITEMS_SEEN_MUST_BE_SAMPLED, {
+                        (0, m.e)(_.rMx.RANKING_ITEMS_SEEN_MUST_BE_SAMPLED, {
                             request_id: S,
                             first_shown_at: G.current,
                             item_ids: i,

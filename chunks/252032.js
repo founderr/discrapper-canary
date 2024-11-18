@@ -21,8 +21,8 @@ var i = n(200651),
     g = n(838440),
     C = n(930282),
     x = n(955384),
-    v = n(981631),
-    _ = n(596756);
+    _ = n(981631),
+    v = n(596756);
 function I(e) {
     let { value: t, channel: n } = e;
     return (0, g.v)({
@@ -39,8 +39,8 @@ function E(e) {
         { id: c } = n,
         m = t.getGuildId(),
         g = (0, a.e7)([h.Z], () => h.Z.getGuild(m), [m]),
-        C = t.type === v.d4z.GUILD_ANNOUNCEMENT,
-        E = null != g && g.hasFeature(v.oNc.NEWS),
+        C = t.type === _.d4z.GUILD_ANNOUNCEMENT,
+        E = null != g && g.hasFeature(_.oNc.NEWS),
         Z = C && E,
         {
             editingMessage: N,
@@ -59,9 +59,9 @@ function E(e) {
         A = l.useCallback(
             (e, n, i) => {
                 let { content: l } = i,
-                    a = p.Z.can(v.Plq.MANAGE_MESSAGES, t),
+                    a = p.Z.can(_.Plq.MANAGE_MESSAGES, t),
                     o = null != N && null != N.author ? N.author.id : null;
-                return Z && (o === j || a) && null != N && (0, f.yE)(N.flags, v.iLy.CROSSPOSTED) ? s.Z.confirmEdit(e, n, l) : r.Z.editMessage(e, n, { content: l }), Promise.resolve();
+                return Z && (o === j || a) && null != N && (0, f.yE)(N.flags, _.iLy.CROSSPOSTED) ? s.Z.confirmEdit(e, n, l) : r.Z.editMessage(e, n, { content: l }), Promise.resolve();
             },
             [N, Z, j, t]
         ),
@@ -69,7 +69,7 @@ function E(e) {
             (e) =>
                 (0, l.createElement)(b, {
                     ...e,
-                    className: _.channelTextArea,
+                    className: v.channelTextArea,
                     key: c
                 }),
             [c]
@@ -98,10 +98,10 @@ function b(e) {
     return (
         l.useEffect(
             () => (
-                m.S.subscribe(v.CkL.TEXTAREA_FOCUS, f),
-                m.S.subscribe(v.CkL.TEXTAREA_BLUR, g),
+                m.S.subscribe(_.CkL.TEXTAREA_FOCUS, f),
+                m.S.subscribe(_.CkL.TEXTAREA_BLUR, g),
                 () => {
-                    m.S.unsubscribe(v.CkL.TEXTAREA_FOCUS, f), m.S.unsubscribe(v.CkL.TEXTAREA_BLUR, g);
+                    m.S.unsubscribe(_.CkL.TEXTAREA_FOCUS, f), m.S.unsubscribe(_.CkL.TEXTAREA_BLUR, g);
                 }
             ),
             [f, g]
@@ -109,7 +109,7 @@ function b(e) {
         (0, i.jsx)(
             c.Z,
             {
-                className: _.channelTextArea,
+                className: v.channelTextArea,
                 textValue: t,
                 richValue: n,
                 channel: r,

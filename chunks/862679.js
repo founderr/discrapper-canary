@@ -7,10 +7,10 @@ var i = n(200651),
     c = n(433355),
     d = n(391222);
 t.Z = l.memo(function (e) {
-    let { message: t, subtitle: n, countdown: u, buttonText: h, buttonColor: p, buttonSubmitting: m, onButtonClick: f, imageSrc: g, animationSrc: C, secondaryButtonText: x, onSecondaryButtonClick: v, children: _, useReducedMotion: I = !1 } = e,
+    let { message: t, subtitle: n, countdown: u, buttonText: h, buttonColor: p, buttonSubmitting: m, onButtonClick: f, imageSrc: g, animationSrc: C, secondaryButtonText: x, onSecondaryButtonClick: _, children: v, useReducedMotion: I = !1 } = e,
         E = (0, r.e7)([c.ZP], () => c.ZP.getState().isMembersOpen);
     if (a.tq && E) return null;
-    if (null == t) return (0, i.jsx)(i.Fragment, { children: l.Children.only(_) });
+    if (null == t) return (0, i.jsx)(i.Fragment, { children: l.Children.only(v) });
     let b = null;
     return (
         null != g
@@ -57,7 +57,7 @@ t.Z = l.memo(function (e) {
                             (0, i.jsx)(s.Button, {
                                 className: d.button,
                                 size: s.Button.Sizes.SMALL,
-                                onClick: v,
+                                onClick: _,
                                 look: s.Button.Looks.LINK,
                                 color: s.Button.Colors.PRIMARY,
                                 submitting: m,

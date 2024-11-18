@@ -20,8 +20,8 @@ var i = n(200651),
     g = n(451478),
     C = n(21825),
     x = n(232495),
-    v = n(10401),
-    _ = n(223468);
+    _ = n(10401),
+    v = n(223468);
 function I(e, t, n) {
     return (
         t in e
@@ -87,7 +87,7 @@ class E extends l.PureComponent {
         if (null == a) return null;
         let { media: s, textAlign: o, isLongText: c, highPriority: d, spacing: u, arrowAlignment: p = m.cy.TOP, popoutPosition: f } = a,
             { offsetX: g, offsetY: x } = this.state,
-            v = {
+            _ = {
                 left: null != g ? l.x + g : void 0,
                 top: null != x ? l.y + x : void 0
             },
@@ -98,15 +98,15 @@ class E extends l.PureComponent {
                     : (0, i.jsxs)('div', {
                           children: [
                               (0, i.jsx)('div', {
-                                  className: r()(_.top, {
-                                      [_.animating]: t,
-                                      [_.notAnimating]: !t
+                                  className: r()(v.top, {
+                                      [v.animating]: t,
+                                      [v.notAnimating]: !t
                                   })
                               }),
                               (0, i.jsx)('div', {
-                                  className: r()(_.bottom, {
-                                      [_.animating]: t,
-                                      [_.notAnimating]: !t
+                                  className: r()(v.bottom, {
+                                      [v.animating]: t,
+                                      [v.notAnimating]: !t
                                   })
                               })
                           ]
@@ -115,9 +115,9 @@ class E extends l.PureComponent {
             E = (e) => {
                 let t = n && !e;
                 return {
-                    [_.animating]: t,
-                    [_.notAnimating]: !t,
-                    [_.highPriority]: d
+                    [v.animating]: t,
+                    [v.notAnimating]: !t,
+                    [v.highPriority]: d
                 };
             },
             b = this.getTutorialPopoutText();
@@ -137,11 +137,11 @@ class E extends l.PureComponent {
                 let { isShown: n } = t;
                 return (0, i.jsx)(h.Clickable, {
                     ...e,
-                    className: _.indicator,
-                    style: v,
+                    className: v.indicator,
+                    style: _,
                     children: (0, i.jsxs)('div', {
-                        className: r()(_.animationContainer, E(n)),
-                        children: [I(n), (0, i.jsx)('div', { className: r()(_.innerCircle, E(n)) }), (0, i.jsx)('div', { className: r()(_.outerCircle, E(n)) })]
+                        className: r()(v.animationContainer, E(n)),
+                        children: [I(n), (0, i.jsx)('div', { className: r()(v.innerCircle, E(n)) }), (0, i.jsx)('div', { className: r()(v.outerCircle, E(n)) })]
                     })
                 });
             }
@@ -166,10 +166,10 @@ t.Z =
                   tutorialData: t,
                   windowFocused: n,
                   shouldShowAny: l
-              } = (0, u.cj)([v.Z, g.Z, f.Z], () => ({
-                  indicators: v.Z.getIndicators(),
-                  tutorialData: v.Z.getData(),
-                  shouldShowAny: v.Z.shouldShowAnyIndicators() && !f.Z.hasLayers(),
+              } = (0, u.cj)([_.Z, g.Z, f.Z], () => ({
+                  indicators: _.Z.getIndicators(),
+                  tutorialData: _.Z.getData(),
+                  shouldShowAny: _.Z.shouldShowAnyIndicators() && !f.Z.hasLayers(),
                   windowFocused: g.Z.isFocused()
               }));
               return l

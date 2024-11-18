@@ -21,8 +21,8 @@ function g(e) {
         g = (0, d.bp)(),
         { reducedMotion: C } = l.useContext(s.AccessibilityPreferencesContext),
         x = (0, c.Z)({ userId: a.id }),
-        v = null != a.member ? (0, m.CA)(a.member) : null,
-        _ = (e) => {
+        _ = null != a.member ? (0, m.CA)(a.member) : null,
+        v = (e) => {
             (0, o.jW)(
                 e,
                 async () => {
@@ -67,9 +67,9 @@ function g(e) {
                         onClick: (t) => {
                             t.stopPropagation(), e.onClick(t);
                         },
-                        onContextMenu: _,
+                        onContextMenu: v,
                         children: (0, i.jsx)(s.Avatar, {
-                            src: null != v ? v : a.user.getAvatarURL(t.guild_id, 24),
+                            src: null != _ ? _ : a.user.getAvatarURL(t.guild_id, 24),
                             size: s.AvatarSizes.SIZE_24,
                             className: r()(f.avatar, p),
                             'aria-label': a.userNick,

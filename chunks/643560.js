@@ -24,15 +24,15 @@ function h(e) {
     l.useEffect(() => {
         !g && !C && null == x && (0, r.Zy)();
     });
-    let v = () => {
+    let _ = () => {
         c.kx(t.channelId, t.guildId);
     };
-    function _() {
+    function v() {
         (0, r.Zy)(), null == p || p();
     }
     return (0, i.jsxs)(a.Menu, {
         navId: 'guild-entry-context',
-        onClose: _,
+        onClose: v,
         'aria-label': u.intl.string(u.t.HpQykZ),
         onSelect: h,
         children: [
@@ -51,7 +51,7 @@ function h(e) {
                                               entry: t
                                           });
                                   }),
-                                      _();
+                                      v();
                               }
                           })
                         : null,
@@ -65,7 +65,7 @@ function h(e) {
                                           header: u.intl.string(u.t.KUxYWF),
                                           confirmText: u.intl.string(u.t.N86XcH),
                                           cancelText: u.intl.string(u.t['ETE/oK']),
-                                          onConfirm: v,
+                                          onConfirm: _,
                                           ...e,
                                           children: (0, i.jsx)(a.Text, {
                                               variant: 'text-md/normal',
@@ -73,7 +73,7 @@ function h(e) {
                                           })
                                       })
                                   ),
-                                      _();
+                                      v();
                               },
                               color: 'danger'
                           })
@@ -85,7 +85,7 @@ function h(e) {
                                   id: 'report-server-listing',
                                   label: u.intl.string(u.t.Aen9en),
                                   action: function () {
-                                      null != t && ((0, o.sq)(t), _());
+                                      null != t && ((0, o.sq)(t), v());
                                   },
                                   icon: a.FlagIcon,
                                   color: 'danger'

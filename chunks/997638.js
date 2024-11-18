@@ -26,7 +26,7 @@ var i,
     g = n(981631),
     C = n(388032),
     x = n(825617);
-function v(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -40,7 +40,7 @@ function v(e, t, n) {
     );
 }
 ((r = i || (i = {})).CENTER = 'center'), (r.LEFT = 'left'), ((s = l || (l = {})).TOP = 'top'), (s.MIDDLE = 'middle');
-class _ extends c.PureComponent {
+class v extends c.PureComponent {
     componentDidMount() {
         let { uniqueId: e } = this.props;
         m.default.track(g.rMx.SHOW_TUTORIAL, { tutorial: e });
@@ -102,8 +102,8 @@ class _ extends c.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            v(this, 'state', { confirmed: !1 }),
-            v(this, 'handleDismiss', () => {
+            _(this, 'state', { confirmed: !1 }),
+            _(this, 'handleDismiss', () => {
                 let { onClickComplete: e } = this.props;
                 this.setState({ confirmed: !0 }, () => (null == e ? void 0 : e()));
             });
@@ -124,21 +124,21 @@ class I extends (a = c.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            v(this, 'onClickComplete', (e) => {
+            _(this, 'onClickComplete', (e) => {
                 e(), this.props.onComplete();
             }),
-            v(this, 'onClickSkipAll', (e) => {
+            _(this, 'onClickSkipAll', (e) => {
                 let { onSkipAll: t, uniqueId: n } = this.props;
                 e(), t(), m.default.track(g.rMx.DISMISS_ALL_TUTORIALS, { tutorial: n });
             }),
-            v(this, 'renderPopoutContent', (e) => {
+            _(this, 'renderPopoutContent', (e) => {
                 let { closePopout: t, position: n } = e,
                     { forceTheme: i, isLongText: l, arrowAlignment: a, renderMedia: r } = this.props,
                     s = null != r;
                 return (0, o.jsx)(p.ThemeProvider, {
                     theme: i,
                     children: (e) =>
-                        (0, o.jsx)(_, {
+                        (0, o.jsx)(v, {
                             ...this.props,
                             className: u()(
                                 {
@@ -163,4 +163,4 @@ class I extends (a = c.PureComponent) {
             });
     }
 }
-v(I, 'TextAlignments', i), v(I, 'defaultProps', { textAlign: 'left' });
+_(I, 'TextAlignments', i), _(I, 'defaultProps', { textAlign: 'left' });

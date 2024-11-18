@@ -20,33 +20,33 @@ var i = n(200651),
     g = n(27457),
     C = n(111248),
     x = n(312703),
-    v = n(796638),
-    _ = n(981631),
+    _ = n(796638),
+    v = n(981631),
     I = n(354459),
     E = n(456895),
     b = n(54437);
 let Z = 16 / 9,
-    N = 8 + v.cF;
+    N = 8 + _.cF;
 function S(e) {
     var t;
     let n,
-        { onSelectParticipant: a, onContextMenuParticipant: S, onFullscreenParticipant: T, participants: j, filteredParticipants: A, popoutWindow: y, inCall: P, channel: M, selectedParticipant: R, showParticipants: L = !0, className: k, paused: O, width: D, height: w, layout: B, idle: U } = e,
+        { onSelectParticipant: a, onContextMenuParticipant: S, onFullscreenParticipant: T, participants: j, filteredParticipants: A, popoutWindow: y, inCall: P, channel: M, selectedParticipant: L, showParticipants: R = !0, className: k, paused: O, width: D, height: w, layout: B, idle: U } = e,
         H = null != y,
         G = p.Z.getVideoComponent(),
         F = h.default.getId(),
         [V, z] = l.useState(null),
         [W, K] = l.useState(!0),
         [Y, q] = l.useState(!1),
-        X = R.type === I.fO.ACTIVITY,
-        J = (0, d.Z)(R.id),
-        Q = !X && null != R.streamId,
+        X = L.type === I.fO.ACTIVITY,
+        J = (0, d.Z)(L.id),
+        Q = !X && null != L.streamId,
         $ = w <= 2 * N + 144,
-        ee = L && !$,
+        ee = R && !$,
         et = (0, c.Z)(ee),
-        en = B === _.AEg.MINIMUM || B === _.AEg.NORMAL,
+        en = B === v.AEg.MINIMUM || B === v.AEg.NORMAL,
         ei = !$ && (!en || X),
         el = (0, f.Z)(ei, 100),
-        ea = (null !== (t = (0, c.Z)(R.id)) && void 0 !== t ? t : R.id) !== R.id,
+        ea = (null !== (t = (0, c.Z)(L.id)) && void 0 !== t ? t : L.id) !== L.id,
         er = 0;
     (X || ee) && (er += 72), X && !ee && (ei ? (er += 48) : (er += 8)), ee && (er += 0.5 * N + 8);
     let es = l.useMemo(() => (X && J ? D / (w - 2 * er) : Q && null != V && V.width > 0 && V.height > 0 ? V.width / V.height : Z), [Q, V, X, D, w, er, J]),
@@ -72,9 +72,9 @@ function S(e) {
                     clamp: !0
                 },
                 onStart: () => q(!0),
-                onChange: () => m.S.dispatch(_.CkL.REMEASURE_TARGET),
+                onChange: () => m.S.dispatch(v.CkL.REMEASURE_TARGET),
                 onRest: () => {
-                    q(!1), m.S.dispatch(_.CkL.REMEASURE_TARGET);
+                    q(!1), m.S.dispatch(v.CkL.REMEASURE_TARGET);
                 }
             },
             'animate-always'
@@ -110,7 +110,7 @@ function S(e) {
             'animate-always'
         ),
         eg = (0, o.useTransition)(
-            R,
+            L,
             {
                 keys: (e) => (null == e ? void 0 : e.id),
                 config: {
@@ -127,8 +127,8 @@ function S(e) {
         eC = l.useCallback((e) => {
             z(e), K(!1);
         }, []),
-        ex = ee || O ? [] : (0, x.n3)(j, R, F),
-        { visibleParticipants: ev, participantTileWidth: e_ } = (0, v.ZB)(D, A);
+        ex = ee || O ? [] : (0, x.n3)(j, L, F),
+        { visibleParticipants: e_, participantTileWidth: ev } = (0, _.ZB)(D, A);
     return (0, i.jsxs)('div', {
         className: r()(b.root, E.flexCenter, k),
         children: [
@@ -183,7 +183,7 @@ function S(e) {
                                       style: { bottom: ef.value },
                                       children: (0, i.jsx)(u.Z, {
                                           channelId: M.id,
-                                          isParticipantsOpen: L,
+                                          isParticipantsOpen: R,
                                           isVertical: !0
                                       })
                                   })
@@ -197,16 +197,16 @@ function S(e) {
                             opacity: eh.value,
                             visibility: eh.value.to((e) => (0 === e ? 'hidden' : 'visible'))
                         },
-                        children: (0, i.jsx)(v.ZP, {
+                        children: (0, i.jsx)(_.ZP, {
                             channel: M,
                             onClick: a,
                             onContextMenu: S,
                             onDoubleClick: T,
-                            participants: ev,
-                            participantTileWidth: e_,
-                            selectedParticipantId: R.id,
+                            participants: e_,
+                            participantTileWidth: ev,
+                            selectedParticipantId: L.id,
                             inCall: P,
-                            paused: O || Y || !L,
+                            paused: O || Y || !R,
                             popoutWindow: y
                         })
                     })

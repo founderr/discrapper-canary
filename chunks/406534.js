@@ -22,8 +22,8 @@ var i = n(200651),
     g = n(359110),
     C = n(359119),
     x = n(13279),
-    v = n(248789),
-    _ = n(88101),
+    _ = n(248789),
+    v = n(88101),
     I = n(576954),
     E = n(280006),
     b = n(347102),
@@ -36,8 +36,8 @@ var i = n(200651),
     y = n(944486),
     P = n(594174),
     M = n(55935),
-    R = n(70956),
-    L = n(709054),
+    L = n(70956),
+    R = n(709054),
     k = n(534091),
     O = n(900164),
     D = n(554838),
@@ -95,10 +95,10 @@ function et(e) {
         em = u.length > 0 && (null === (t = u.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(s)),
         ef = (0, o.ts)(s),
         eg = (0, a.e7)([Z.Z], () => Z.Z.shouldShowTopicsBar() && !ec),
-        eC = (0, _.P)(s.id),
+        eC = (0, v.P)(s.id),
         ex = (0, x.z)(s.id, J.zr),
-        ev = (0, w.Z)(),
-        e_ = (function (e, t) {
+        e_ = (0, w.Z)(),
+        ev = (function (e, t) {
             return e.isDM() && null != t
                 ? t.type === C.pj.STRANGER_DANGER
                     ? (0, i.jsx)(I.M, {
@@ -106,7 +106,7 @@ function et(e) {
                           warningId: t.id,
                           senderId: e.getRecipientId()
                       })
-                    : (0, i.jsx)(v.Y, {
+                    : (0, i.jsx)(_.Y, {
                           channelId: e.id,
                           warningId: t.id,
                           senderId: e.getRecipientId()
@@ -172,7 +172,7 @@ function et(e) {
                     )
                 );
             }
-            if (null != es && es > e.content.timestamp.getTime() * R.Z.Millis.SECOND) return;
+            if (null != es && es > e.content.timestamp.getTime() * L.Z.Millis.SECOND) return;
             let a = j.Z.can(X.Plq.CREATE_INSTANT_INVITE, s);
             if ((0, O.Z)(e.content, a)) return;
             e.type === X.ys_.MESSAGE && null == eb && (eb = e);
@@ -277,9 +277,9 @@ function et(e) {
     ) {
         let e, t;
         let l = A.ZP.getOldestUnreadTimestamp(s.id),
-            a = 0 !== l ? l : L.default.extractTimestamp(s.id),
+            a = 0 !== l ? l : R.default.extractTimestamp(s.id),
             r = (0, M.KC)(new Date(), new Date(a));
-        if ((A.ZP.isEstimated(s.id) ? ((e = r ? Q.t.wvtbbG : Q.t.tHqbtr), (t = Q.t.vaPWFR)) : ((e = r ? Q.t.BctFHx : Q.t['3wXb9P']), (t = Q.t['4H8ldH'])), ef && (0, o.tW)(s) && ev.includes(Y.E.SUMMARIES))) {
+        if ((A.ZP.isEstimated(s.id) ? ((e = r ? Q.t.wvtbbG : Q.t.tHqbtr), (t = Q.t.vaPWFR)) : ((e = r ? Q.t.BctFHx : Q.t['3wXb9P']), (t = Q.t['4H8ldH'])), ef && (0, o.tW)(s) && e_.includes(Y.E.SUMMARIES))) {
             let l = A.ZP.ackMessageId(s.id),
                 r = (0, N.q)(s.id, A.ZP.getOldestUnreadMessageId(s.id));
             if (
@@ -369,7 +369,7 @@ function et(e) {
                 }
             }
         } else
-            ev.includes(Y.E.NEW_MESSAGES) &&
+            e_.includes(Y.E.NEW_MESSAGES) &&
                 (n = (0, i.jsx)(V.LE, {
                     content: Q.intl.format(e, {
                         count: U,
@@ -382,7 +382,7 @@ function et(e) {
         (null == n &&
             (0, o.Lp)(s) &&
             eg &&
-            ev.includes(Y.E.SUMMARIES) &&
+            e_.includes(Y.E.SUMMARIES) &&
             (n = (0, i.jsx)(V.BO, {
                 channel: s,
                 scrollManager: ea
@@ -441,6 +441,6 @@ function et(e) {
         newMessagesBar: n,
         jumpToPresentBar: l,
         forumPostActionBar: eI,
-        safetyWarningBanner: e_
+        safetyWarningBanner: ev
     };
 }

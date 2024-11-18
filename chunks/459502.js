@@ -23,8 +23,8 @@ function g(e) {
         g = (0, l.e7)([o.Z], () => o.Z.getChannel(t), [t]),
         C = (0, u.sz)(t),
         x = null != (0, u.qY)(t),
-        { canManageGuildEvent: v } = (0, s.XJ)(g),
-        _ = (0, l.cj)([d.ZP], () => C.reduce((e, t) => ((e[t.id] = d.ZP.getUserCount(t.id, (0, h.DK)(t))), e), {}));
+        { canManageGuildEvent: _ } = (0, s.XJ)(g),
+        v = (0, l.cj)([d.ZP], () => C.reduce((e, t) => ((e[t.id] = d.ZP.getUserCount(t.id, (0, h.DK)(t))), e), {}));
     return C.length < 1 || x
         ? null
         : (0, i.jsx)(i.Fragment, {
@@ -39,11 +39,11 @@ function g(e) {
                               width: 20
                           }),
                           color: a.Z.unsafe_rawColors.GREEN_360.css,
-                          title: m.intl.formatToPlainString(v(e) ? m.t['1vGXqK'] : m.t.xMJylZ, { eventName: e.name }),
+                          title: m.intl.formatToPlainString(_(e) ? m.t['1vGXqK'] : m.t.xMJylZ, { eventName: e.name }),
                           description: m.intl.formatToPlainString(m.t.PTebCQ, { startTime: (0, h.ub)(e.scheduled_start_time).startDateTimeString }),
                           onClick: () => {
                               var t;
-                              v((t = e))
+                              _((t = e))
                                   ? (0, r.openModalLazy)(async () => {
                                         let { default: e } = await Promise.all([n.e('22347'), n.e('84722'), n.e('46228')]).then(n.bind(n, 296864));
                                         return (n) =>
@@ -57,7 +57,7 @@ function g(e) {
                                         parentGuildId: t.guild_id
                                     });
                           },
-                          userCount: _[e.id],
+                          userCount: v[e.id],
                           className: f.eventPrompt
                       },
                       e.id

@@ -23,8 +23,8 @@ var l = n(120356),
     g = n(200634),
     C = n(228168),
     x = n(981631),
-    v = n(388032),
-    _ = n(952662),
+    _ = n(388032),
+    v = n(952662),
     I = n(806720);
 let E = (0, s.getAvatarSize)(s.AvatarSizes.SIZE_16);
 function b(e) {
@@ -32,7 +32,7 @@ function b(e) {
         f = t.hasAvatarForGuild(l.id);
     return (0, i.jsxs)(s.Clickable, {
         focusProps: { offset: { right: 8 } },
-        className: _.listRow,
+        className: v.listRow,
         onClick: p,
         onContextMenu: (e) => {
             (0, o.jW)(e, async () => {
@@ -49,7 +49,7 @@ function b(e) {
                 tabIndex: -1,
                 guild: l,
                 showBadge: !0,
-                className: a()(_.listAvatar, null == l.icon ? I.guildAvatarWithoutIcon : null),
+                className: a()(v.listAvatar, null == l.icon ? I.guildAvatarWithoutIcon : null),
                 badgeStrokeColor: (0, u.Lq)((0, r.wj)(d) ? x.Ilk.PRIMARY_600 : x.Ilk.WHITE_500),
                 badgeTooltipColor: s.TooltipColors.PRIMARY,
                 badgeTooltipDelay: C.vB,
@@ -57,10 +57,10 @@ function b(e) {
                 active: !0
             }),
             (0, i.jsxs)('div', {
-                className: _.listRowContent,
+                className: v.listRowContent,
                 children: [
                     (0, i.jsx)('div', {
-                        className: _.listName,
+                        className: v.listName,
                         children: l.toString()
                     }),
                     f || null != c
@@ -92,22 +92,22 @@ function Z(e) {
             (0, p.X)(e), n(), (0, c.xf)();
         };
     return (0, i.jsx)(s.ScrollerThin, {
-        className: _.listScroller,
+        className: v.listScroller,
         fade: !0,
         children:
             null == a
                 ? (0, i.jsx)('div', {
-                      className: _.empty,
+                      className: v.empty,
                       children: (0, i.jsx)(s.Spinner, {})
                   })
                 : 0 === a.length
                   ? (0, i.jsxs)('div', {
-                        className: _.empty,
+                        className: v.empty,
                         children: [
-                            (0, i.jsx)('div', { className: _.emptyIconGuilds }),
+                            (0, i.jsx)('div', { className: v.emptyIconGuilds }),
                             (0, i.jsx)('div', {
-                                className: _.emptyText,
-                                children: v.intl.string(v.t.zjVh8v)
+                                className: v.emptyText,
+                                children: _.intl.string(_.t.zjVh8v)
                             })
                         ]
                     })

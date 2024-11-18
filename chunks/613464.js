@@ -20,8 +20,8 @@ var i = n(200651),
     g = n(687158),
     C = n(184301),
     x = n(502762),
-    v = n(271383),
-    _ = n(594174),
+    _ = n(271383),
+    v = n(594174),
     I = n(189357),
     E = n(718617),
     b = n(327250),
@@ -29,11 +29,11 @@ var i = n(200651),
 function N(e) {
     let { userId: t, guildId: n, onClose: a, className: N, infoPanelClassName: S, style: T } = e,
         j = (0, I.ms)(n),
-        A = (0, s.e7)([_.default], () => _.default.getUser(t), [t]),
-        y = (0, s.e7)([v.ZP], () => v.ZP.getMember(n, t), [n, t]),
+        A = (0, s.e7)([v.default], () => v.default.getUser(t), [t]),
+        y = (0, s.e7)([_.ZP], () => _.ZP.getMember(n, t), [n, t]),
         [P, M] = l.useState(null == A || null == y),
-        R = (0, d.Z)(y),
-        L = l.useRef(null),
+        L = (0, d.Z)(y),
+        R = l.useRef(null),
         { analyticsLocations: k } = (0, m.ZP)(p.Z.GUILD_MEMBER_MOD_VIEW),
         O = (0, g.ZP)(t, n),
         D = (0, u.ZP)();
@@ -41,17 +41,17 @@ function N(e) {
         !j && a();
     }, [j, a]),
     l.useEffect(() => {
-        null != R && null == y && !P && a();
-    }, [P, y, a, R]),
+        null != L && null == y && !P && a();
+    }, [P, y, a, L]),
     l.useEffect(() => {
         null != A && null != y && M(!1);
     }, [A, y]),
     l.useEffect(() => {
         let e = null == y;
         return (
-            !P && e && (L.current = window.setTimeout(a, 500)),
+            !P && e && (R.current = window.setTimeout(a, 500)),
             () => {
-                null != L.current && window.clearTimeout(L.current);
+                null != R.current && window.clearTimeout(R.current);
             }
         );
     }, [P, y, a]),

@@ -21,8 +21,8 @@ var i = n(200651),
     g = n(271383),
     C = n(430824),
     x = n(496675),
-    v = n(594174),
-    _ = n(233608),
+    _ = n(594174),
+    v = n(233608),
     I = n(370595),
     E = n(351127),
     b = n(981631),
@@ -31,20 +31,20 @@ var i = n(200651),
     S = n(651772);
 function T(e) {
     var t, n, a, s;
-    let { permission: o, roleIds: g, guild: v, specMap: _, categoryTitle: I, userId: N } = e,
-        T = (0, c.e7)([C.Z], () => C.Z.getRoles(v.id)),
+    let { permission: o, roleIds: g, guild: _, specMap: v, categoryTitle: I, userId: N } = e,
+        T = (0, c.e7)([C.Z], () => C.Z.getRoles(_.id)),
         j = b.Plq[o],
-        A = null !== (a = null === (t = _[j.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== a ? a : (0, f.wt)(j),
-        y = null !== (s = null === (n = _[j.toString()]) || void 0 === n ? void 0 : n.description) && void 0 !== s ? s : '',
+        A = null !== (a = null === (t = v[j.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== a ? a : (0, f.wt)(j),
+        y = null !== (s = null === (n = v[j.toString()]) || void 0 === n ? void 0 : n.description) && void 0 !== s ? s : '',
         P = E._o.has(j),
         M = E.Qn.includes(o),
-        R = g.length,
-        L = (0, c.e7)([x.Z], () => x.Z.can(b.Plq.MANAGE_ROLES, v), [v]),
+        L = g.length,
+        R = (0, c.e7)([x.Z], () => x.Z.can(b.Plq.MANAGE_ROLES, _), [_]),
         k = l.useCallback(
             async (e) => {
-                if (!!L) await m.Z.open(v.id, b.pNK.ROLES), await m.Z.selectRole(e);
+                if (!!R) await m.Z.open(_.id, b.pNK.ROLES), await m.Z.selectRole(e);
             },
-            [L, v.id]
+            [R, _.id]
         );
     return (0, i.jsxs)('div', {
         className: r()(S.permissionItemContainer, { [S.elevatedPermission]: P }),
@@ -128,7 +128,7 @@ function T(e) {
                     (0, i.jsx)(d.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-normal',
-                        children: Z.intl.format(Z.t.KmJI4O, { roleCount: R })
+                        children: Z.intl.format(Z.t.KmJI4O, { roleCount: L })
                     })
                 ]
             }),
@@ -163,11 +163,11 @@ function T(e) {
                         : (0, i.jsx)(
                               d.Clickable,
                               {
-                                  className: r()(S.roleTooltipItem, { [S.editable]: L && !(0, u.pM)(v.id, e) }),
+                                  className: r()(S.roleTooltipItem, { [S.editable]: R && !(0, u.pM)(_.id, e) }),
                                   onClick: () => k(e),
                                   children: (0, i.jsx)(p.Z, {
                                       role: T[e],
-                                      guildId: v.id,
+                                      guildId: _.id,
                                       className: S.roleChiplet
                                   })
                               },
@@ -183,24 +183,24 @@ function j(e, t) {
 }
 function A(e) {
     let { userId: t, guildId: n, location: a, className: s, onNavigate: u } = e,
-        h = (0, c.e7)([v.default], () => v.default.getUser(t), [t]),
+        h = (0, c.e7)([_.default], () => _.default.getUser(t), [t]),
         p = (0, c.e7)([C.Z], () => C.Z.getGuild(n), [n]),
         m = (0, c.e7)([g.ZP], () => g.ZP.getMember(n, t), [n, t]),
         x = (0, E.B2)(t, n, E.pd),
         A = Object.keys(x).length,
-        y = l.useMemo(() => (null != p ? _.Z.getGuildPermissionSpecMap(p) : null), [p]),
-        P = l.useMemo(() => (null != p ? _.Z.generateGuildPermissionSpec(p) : null), [p]),
-        [M, R] = l.useState(''),
-        [L, k] = l.useState(''),
+        y = l.useMemo(() => (null != p ? v.Z.getGuildPermissionSpecMap(p) : null), [p]),
+        P = l.useMemo(() => (null != p ? v.Z.generateGuildPermissionSpec(p) : null), [p]),
+        [M, L] = l.useState(''),
+        [R, k] = l.useState(''),
         O = l.useCallback(o()(k, 300), []),
         D = l.useCallback(
             (e) => {
-                R(e), O(e);
+                L(e), O(e);
             },
             [O]
         ),
         w = l.useCallback(() => {
-            R(''), k('');
+            L(''), k('');
         }, []),
         B = l.useMemo(() => {
             if (null == p || null == y || null == m) return null;
@@ -219,7 +219,7 @@ function A(e) {
                             if (null == r) return;
                             let s = x[r];
                             if (null != s) {
-                                if (L.length > 0) {
+                                if (R.length > 0) {
                                     var o, c, d, u, h;
                                     let e = null !== (u = null === (o = y[a.toString()]) || void 0 === o ? void 0 : o.title) && void 0 !== u ? u : (0, f.wt)(a),
                                         t = null !== (h = null === (d = y[a.toString()]) || void 0 === d ? void 0 : null === (c = d.description) || void 0 === c ? void 0 : c.toString()) && void 0 !== h ? h : '',
@@ -227,10 +227,10 @@ function A(e) {
                                         l = E._o.has(a),
                                         s = E.Qn.includes(r),
                                         p = l ? Z.intl.string(Z.t.k7Kqj4) : s ? Z.intl.string(Z.t.IfqUEB) : null,
-                                        m = j(L, e),
-                                        g = j(L, t),
-                                        C = j(L, i),
-                                        x = null != p && j(L, p);
+                                        m = j(R, e),
+                                        g = j(R, t),
+                                        C = j(R, i),
+                                        x = null != p && j(R, p);
                                     if (!m && !g && !C && !x) return;
                                 }
                                 e.push(
@@ -252,7 +252,7 @@ function A(e) {
                     }),
                 e
             );
-        }, [p, y, m, A, P, x, L, t]);
+        }, [p, y, m, A, P, x, R, t]);
     return null == h || null == m
         ? null
         : (0, i.jsxs)('div', {

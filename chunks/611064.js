@@ -22,8 +22,8 @@ function C(e) {
 }
 t.Z = l.memo(function (e) {
     let t,
-        { title: h, onToggleExpand: C, expanded: x, expandedCount: v } = e,
-        _ = (0, a.e7)([d.Z], () => d.Z.hidden),
+        { title: h, onToggleExpand: C, expanded: x, expandedCount: _ } = e,
+        v = (0, a.e7)([d.Z], () => d.Z.hidden),
         I = l.useCallback((e) => {
             (0, s.jW)(e, async () => {
                 let { MemberListContentSettingsMenu: e } = await Promise.resolve().then(n.bind(n, 703180));
@@ -36,12 +36,12 @@ t.Z = l.memo(function (e) {
             (0, i.jsx)(r.HiddenVisually, {
                 children: m.intl.format(m.t.UaqbkZ, {
                     title: h,
-                    count: v
+                    count: _
                 })
             }),
             (0, i.jsxs)(r.Clickable, {
                 onClick: (e) => {
-                    if (e.currentTarget === e.target || e.currentTarget.contains(e.target)) return _ ? (0, c.lY)() : v > 3 ? C() : (0, p.dG4)();
+                    if (e.currentTarget === e.target || e.currentTarget.contains(e.target)) return v ? (0, c.lY)() : _ > 3 ? C() : (0, p.dG4)();
                 },
                 onContextMenu: I,
                 tag: 'span',
@@ -52,14 +52,14 @@ t.Z = l.memo(function (e) {
                         className: f.header,
                         children: [
                             (0, i.jsxs)('span', {
-                                children: [h, ' \u2014 ', v]
+                                children: [h, ' \u2014 ', _]
                             }),
                             (0, i.jsx)(u.default, {})
                         ]
                     }),
-                    v <= 3 && !_
+                    _ <= 3 && !v
                         ? null
-                        : ((t = _ ? (0, i.jsx)(r.ChevronSmallUpIcon, { className: f.toggleExpandIcon }) : x ? (0, i.jsx)(r.ChevronSmallDownIcon, { className: f.toggleExpandIcon }) : (0, i.jsx)(r.ChevronSmallRightIcon, { className: f.toggleExpandIcon })),
+                        : ((t = v ? (0, i.jsx)(r.ChevronSmallUpIcon, { className: f.toggleExpandIcon }) : x ? (0, i.jsx)(r.ChevronSmallDownIcon, { className: f.toggleExpandIcon }) : (0, i.jsx)(r.ChevronSmallRightIcon, { className: f.toggleExpandIcon })),
                           (0, i.jsx)(r.FocusRing, {
                               children: (0, i.jsx)('div', {
                                   tabIndex: 0,

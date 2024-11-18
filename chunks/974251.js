@@ -15,8 +15,8 @@ var i = n(200651),
     g = n(924557),
     C = n(435064),
     x = n(712114),
-    v = n(605236),
-    _ = n(536442),
+    _ = n(605236),
+    v = n(536442),
     I = n(79390),
     E = n(665906),
     b = n(706454),
@@ -29,8 +29,8 @@ var i = n(200651),
     y = n(627553),
     P = n(38761),
     M = n(585483),
-    R = n(358085),
-    L = n(127654),
+    L = n(358085),
+    R = n(127654),
     k = n(316595),
     O = n(193910),
     D = n(951211),
@@ -52,7 +52,7 @@ t.Z = l.memo(function (e) {
         en = (0, s.e7)([N.ZP], () => null == N.ZP.getCurrentSidebarChannelId(z.id)),
         { showClipsHeaderEntrypoint: ei } = g.NV.useExperiment({ location: 'ChannelAttachButton' }, { autoTrackExposure: !1 }),
         { enabled: el } = f.T.useExperiment({ location: 'ChannelAttachButton' }, { autoTrackExposure: !1 }),
-        ea = (0, s.e7)([_.qc], () => _.qc.hasHotspot(_.v6.CLIPS_CHANNEL_ATTACH_REMINDER)),
+        ea = (0, s.e7)([v.qc], () => v.qc.hasHotspot(v.v6.CLIPS_CHANNEL_ATTACH_REMINDER)),
         er = (0, c.useModalsStore)((e) => (0, c.hasModalOpenSelector)(e, B.Qr)),
         es = (0, s.e7)([S.Z], () => S.Z.hasLayers()),
         eo = (0, s.e7)([C.Z], () => C.Z.hasClips()),
@@ -66,15 +66,15 @@ t.Z = l.memo(function (e) {
     (null == eg ? void 0 : eg.newClipIds.length) !== (null == ee ? void 0 : ee.newClipIds.length) && (null !== (t = null == ee ? void 0 : ee.newClipIds.length) && void 0 !== t ? t : 0) > 0 && null == ec && ea && en && !er && !ei && !es && ed('recentClips');
     let eC = (e, t, n) => {
             null != t && 'ETOOLARGE' === t.code
-                ? (0, L.G)(z, [])
-                : (0, L.d)(e, z, W, {
+                ? (0, R.G)(z, [])
+                : (0, R.d)(e, z, W, {
                       requireConfirm: !0,
                       showLargeMessageDialog: n
                   }),
                 M.S.dispatchToLastSubscribed(w.CkL.TEXTAREA_FOCUS);
         },
         ex = (0, s.e7)([T.Z], () => T.Z.hasCurrentUserSentMessageSinceAppStart());
-    function ev() {
+    function e_() {
         (0, c.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([n.e('2668'), n.e('3682')]).then(n.bind(n, 542055));
@@ -100,16 +100,16 @@ t.Z = l.memo(function (e) {
             }
         );
     });
-    let e_ = (0, E.NE)(z),
+    let ev = (0, E.NE)(z),
         eI = (0, E.Xu)(z),
-        eE = !Z.dN.useSetting() && !(0, R.isAndroidWeb)() && null != window.ResizeObserver,
+        eE = !Z.dN.useSetting() && !(0, L.isAndroidWeb)() && null != window.ResizeObserver,
         eb = (0, I.UI)(null != z ? z : void 0),
         eZ = (0, c.useRedesignIconContext)().enabled,
         eN = (0, p.qB)(z.id, 'ChannelAttachButton'),
         eS = null !== (a = null == et ? void 0 : et.length) && void 0 !== a ? a : 0,
         eT = (0, D.Z)({
             canAttachFiles: ep,
-            canStartThreads: e_ || eI,
+            canStartThreads: ev || eI,
             useSlate: eE,
             hasClips: eu,
             canUseApplicationCommands: !q && !el,
@@ -157,17 +157,17 @@ t.Z = l.memo(function (e) {
         position: 'top',
         positionKey: null != ec ? ec : 'null',
         onRequestOpen: () => {
-            ex && (0, v.EW)(o.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, { dismissAction: U.L.TAKE_ACTION }), ed('attachMenu');
+            ex && (0, _.EW)(o.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, { dismissAction: U.L.TAKE_ACTION }), ed('attachMenu');
         },
         onRequestClose: () => {
-            !(0, c.hasAnyModalOpen)() && (ex && (0, v.EW)(o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: U.L.TAKE_ACTION }), ed(null));
+            !(0, c.hasAnyModalOpen)() && (ex && (0, _.EW)(o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: U.L.TAKE_ACTION }), ed(null));
         },
         renderPopout: (e) => {
             switch (ec) {
                 case 'recentClips':
                     return (0, i.jsx)(x.Z, {
                         ...e,
-                        onOpenClips: ev,
+                        onOpenClips: e_,
                         lastClipsSession: ee
                     });
                 case 'attachMenu':
@@ -183,7 +183,7 @@ t.Z = l.memo(function (e) {
                         draftType: W,
                         editorTextContent: K,
                         setValue: Y,
-                        openClips: ev
+                        openClips: e_
                     });
                 default:
                     throw Error('Invalid popout type provided');

@@ -3,7 +3,7 @@ n.d(t, {
         return m;
     },
     Ow: function () {
-        return _;
+        return v;
     },
     P2: function () {
         return b;
@@ -62,8 +62,8 @@ let g = {
             });
         });
     },
-    v = (e) => C((t) => t.get(e), r.X);
-function _(e, t, n) {
+    _ = (e) => C((t) => t.get(e), r.X);
+function v(e, t, n) {
     let i = null != n ? n : {};
     switch (t) {
         case 'links':
@@ -96,13 +96,13 @@ function I(e, t, n) {
     return (function (e, t, n, i) {
         let { addtionalQuery: l, shouldDispatch: r = !1 } = i,
             s = a.useMemo(() => f(e, t, n, l), [e, t, n, l]),
-            o = v(s),
+            o = _(s),
             C = (0, d.Z)(s),
             [I, E] = a.useState({});
         return (
             a.useEffect(() => {
                 if (C !== s) {
-                    let i = _(e, n, l),
+                    let i = v(e, n, l),
                         a = new u.ZP(t, p.aib.GUILD, i);
                     x(s, {
                         searchFetcher: a,
@@ -160,7 +160,7 @@ function I(e, t, n) {
 }
 function E(e, t, n, i) {
     let l = a.useMemo(() => f(e, t, n, i, !0), [e, t, n, i]),
-        r = v(l),
+        r = _(l),
         s = (0, d.Z)(l);
     return {
         key: l,
@@ -173,19 +173,19 @@ function b(e, t, n) {
     let { key: s, state: o } = E(e, t, 'messages', n),
         { key: c, state: d } = E(e, t, 'links', n),
         { key: h, state: f } = E(e, t, 'media', n),
-        g = a.useMemo(() => _(e, 'all_counts', n), [e, n]),
+        g = a.useMemo(() => v(e, 'all_counts', n), [e, n]),
         C = a.useMemo(
             () => ({
                 tabs: {
-                    messages: _(e, 'messages', g),
-                    links: _(e, 'links', g),
-                    media: _(e, 'media', g)
+                    messages: v(e, 'messages', g),
+                    links: v(e, 'links', g),
+                    media: v(e, 'media', g)
                 },
                 track_exact_total_hits: !0
             }),
             [e, g]
         ),
-        v = a.useCallback(
+        _ = a.useCallback(
             (e) => {
                 let t = e.messages,
                     n = e.links,
@@ -196,13 +196,13 @@ function b(e, t, n) {
         ),
         I = a.useCallback(
             (e) => {
-                v({
+                _({
                     messages: e,
                     links: e,
                     media: e
                 });
             },
-            [v]
+            [_]
         );
     a.useEffect(() => {
         let e = new u.tJ(t, p.aib.GUILD, g, C);
@@ -229,7 +229,7 @@ function b(e, t, n) {
                 let e = t.tabs.messages,
                     o = t.tabs.links,
                     c = t.tabs.media;
-                v({
+                _({
                     messages: {
                         messageCount: null !== (n = null == e ? void 0 : e.total_results) && void 0 !== n ? n : 0,
                         lastMessage: null !== (i = null == e ? void 0 : e.messages[0]) && void 0 !== i ? i : null
@@ -249,7 +249,7 @@ function b(e, t, n) {
         return () => {
             e.cancel(), clearTimeout(n);
         };
-    }, [e, t, g, C, I, v]);
+    }, [e, t, g, C, I, _]);
     let [b, Z] = a.useState({});
     return {
         messagesCount: null !== (i = null == o ? void 0 : o.messageCount) && void 0 !== i ? i : m,

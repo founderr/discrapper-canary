@@ -14,8 +14,8 @@ var i = n(200651),
     g = n(171368),
     C = n(433355),
     x = n(699516),
-    v = n(594174),
-    _ = n(768581),
+    _ = n(594174),
+    v = n(768581),
     I = n(525541),
     E = n(981631),
     b = n(377668),
@@ -34,7 +34,7 @@ let T = (e) => {
                                   let { guild: n } = e,
                                       l =
                                           null != n
-                                              ? _.ZP.getGuildIconURL({
+                                              ? v.ZP.getGuildIconURL({
                                                     id: n.id,
                                                     icon: n.icon,
                                                     size: 24
@@ -102,7 +102,7 @@ let T = (e) => {
     j = (e) => {
         var t;
         let { relationshipType: n, userId: l, showingBanner: a } = e,
-            r = null === (t = v.default.getUser(l)) || void 0 === t ? void 0 : t.bot,
+            r = null === (t = _.default.getUser(l)) || void 0 === t ? void 0 : t.bot,
             c = () => {
                 o.Z.addRelationship({
                     userId: l,
@@ -224,7 +224,7 @@ let T = (e) => {
                 isOptimisticAccepted: f,
                 isOptimisticRejected: g
             } = (0, u.m)({
-                user: v.default.getUser(n),
+                user: _.default.getUser(n),
                 onError: a,
                 onAcceptSuccess: o,
                 onRejectSuccess: r

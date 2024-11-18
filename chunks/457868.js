@@ -20,8 +20,8 @@ var i = n(200651),
     g = n(607070),
     C = n(100527),
     x = n(906732),
-    v = n(82295),
-    _ = n(91218),
+    _ = n(82295),
+    v = n(91218),
     I = n(623624),
     E = n(518738),
     b = n(965376),
@@ -34,8 +34,8 @@ var i = n(200651),
     y = n(158776),
     P = n(885110),
     M = n(111583),
-    R = n(594174),
-    L = n(499033),
+    L = n(594174),
+    R = n(499033),
     k = n(626135),
     O = n(585483),
     D = n(700785),
@@ -60,13 +60,13 @@ let z = B.ZP.getEnableHardwareAcceleration(),
                 },
                 [t.guild_id, d]
             ),
-            C = (0, h.e7)([R.default], () => R.default.getUser(r)),
-            x = (0, h.e7)([R.default], () => R.default.getCurrentUser()),
-            v = (null == C ? void 0 : C.id) === (null == x ? void 0 : x.id),
-            _ = (0, h.e7)([y.Z, P.Z], () => (v ? P.Z.getStatus() : y.Z.getStatus(r, t.guild_id))),
+            C = (0, h.e7)([L.default], () => L.default.getUser(r)),
+            x = (0, h.e7)([L.default], () => L.default.getCurrentUser()),
+            _ = (null == C ? void 0 : C.id) === (null == x ? void 0 : x.id),
+            v = (0, h.e7)([y.Z, P.Z], () => (_ ? P.Z.getStatus() : y.Z.getStatus(r, t.guild_id))),
             E = (0, h.e7)([y.Z], () => y.Z.isMobileOnline(r)),
-            b = (0, h.e7)([y.Z, P.Z], () => (v ? P.Z.getActivities() : y.Z.getActivities(r, t.guild_id))),
-            L = (0, h.e7)([T.Z], () => T.Z.getAnyStreamForUser(r)),
+            b = (0, h.e7)([y.Z, P.Z], () => (_ ? P.Z.getActivities() : y.Z.getActivities(r, t.guild_id))),
+            R = (0, h.e7)([T.Z], () => T.Z.getAnyStreamForUser(r)),
             k = (0, c.JA)(r),
             D = (0, h.e7)([Z.Z], () => Z.Z.canUserViewChannel(t.id, a, r)),
             B = (null == C ? void 0 : C.id) != null && C.id === s,
@@ -135,7 +135,7 @@ let z = B.ZP.getEnableHardwareAcceleration(),
                     user: C,
                     currentUser: x,
                     nick: null == d ? void 0 : d.nick,
-                    status: _,
+                    status: v,
                     activities: b,
                     colorString: null == d ? void 0 : d.colorString,
                     colorRoleName: g,
@@ -144,7 +144,7 @@ let z = B.ZP.getEnableHardwareAcceleration(),
                     guildId: t.guild_id,
                     isMobile: E,
                     selected: l,
-                    applicationStream: L,
+                    applicationStream: R,
                     premiumSince: null == K ? null : new Date(K),
                     onClickPremiumGuildIcon: W,
                     itemProps: k,
@@ -167,7 +167,7 @@ let z = B.ZP.getEnableHardwareAcceleration(),
                   className: V.membersGroup,
                   children: (0, i.jsx)('div', { className: V.memberGroupsPlaceholder })
               })
-            : (0, i.jsxs)(v.Z, {
+            : (0, i.jsxs)(_.Z, {
                   className: V.membersGroup,
                   'aria-label': G.intl.formatToPlainString(G.t.UaqbkZ, {
                       title: n,
@@ -175,7 +175,7 @@ let z = B.ZP.getEnableHardwareAcceleration(),
                   }),
                   children: [
                       null != r
-                          ? (0, i.jsx)(_.Z, {
+                          ? (0, i.jsx)(v.Z, {
                                 className: V.roleIcon,
                                 ...r
                             })
@@ -222,7 +222,7 @@ function X(e) {
         { analyticsLocations: s } = (0, x.ZP)(C.Z.MEMBER_LIST),
         u = (0, b.D)(t.id, n),
         m = u.filter((e) => e.userIds.length > 0).reverse()[0],
-        { navigator: f, listRef: v } = (function (e, t) {
+        { navigator: f, listRef: _ } = (function (e, t) {
             let n = (0, h.e7)([g.Z], () => g.Z.keyboardModeEnabled),
                 i = l.useRef(null),
                 a = l.useCallback(
@@ -279,7 +279,7 @@ function X(e) {
                 listRef: i
             };
         })(a, W),
-        _ = 0 === u.length || u.every((e) => 0 === e.userIds.length);
+        v = 0 === u.length || u.every((e) => 0 === e.userIds.length);
     if (
         (l.useEffect(() => {
             k.default.track(H.rMx.MEMBER_LIST_VIEWED, {
@@ -288,7 +288,7 @@ function X(e) {
                 guild_id: t.guild_id
             });
         }, [t.guild_id, t.id, t.type]),
-        _)
+        v)
     )
         return (0, i.jsx)(J, { channel: t });
     let I = o().omit(f.containerProps, ['ref']),
@@ -304,7 +304,7 @@ function X(e) {
                         children: (0, i.jsx)(
                             p.List,
                             {
-                                ref: v,
+                                ref: _,
                                 className: V.members,
                                 paddingTop: 0,
                                 sectionHeight: 40,
@@ -374,7 +374,7 @@ function J(e) {
                             color: 'currentColor'
                         })
                     }),
-                    (0, i.jsx)(L.Z, { className: F.emptyStateStars })
+                    (0, i.jsx)(R.Z, { className: F.emptyStateStars })
                 ]
             }),
             (0, i.jsx)(p.Heading, {

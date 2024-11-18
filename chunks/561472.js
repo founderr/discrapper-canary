@@ -15,13 +15,13 @@ var i = n(200651),
     g = n(127654),
     C = n(205822),
     x = n(731994),
-    v = n(981631),
-    _ = n(388032);
+    _ = n(981631),
+    v = n(388032);
 t.Z = function (e) {
     let { className: t, style: n, channel: I, draftType: E } = e,
         [b, Z] = l.useState(!0),
         N = (0, a.e7)([u.Z], () => u.Z.hasLayers()),
-        S = (0, a.e7)([h.Z], () => null != I && h.Z.can(v.Plq.ATTACH_FILES, I), [I]),
+        S = (0, a.e7)([h.Z], () => null != I && h.Z.can(_.Plq.ATTACH_FILES, I), [I]),
         T = null != (0, a.e7)([r.Z], () => r.Z.getActiveCommand(I.id)),
         j = I.getGuildId(),
         A = E === o.d.FirstThreadMessage,
@@ -31,14 +31,14 @@ t.Z = function (e) {
         }),
         P = (0, a.e7)([c.Z], () => c.Z.didAgree(j)) && !y,
         M = l.useMemo(() => !N && ((I.isPrivate() && !I.isManaged()) || (null != j && (!I.isNSFW() || P) && S && d.Z.canChatInGuild(j))), [S, P, I, j, N]),
-        R = A ? (v.TPd.GUILD_THREADS_ONLY.has(I.type) ? _.intl.string(_.t.RBBLhI) : _.intl.string(_.t.gUx4en)) : b ? _.intl.format(_.t.dYP2FR, { destination: (0, s.F6)(I, m.default, p.Z, !0) }) : _.intl.string(_.t.h76ulJ);
+        L = A ? (_.TPd.GUILD_THREADS_ONLY.has(I.type) ? v.intl.string(v.t.RBBLhI) : v.intl.string(v.t.gUx4en)) : b ? v.intl.format(v.t.dYP2FR, { destination: (0, s.F6)(I, m.default, p.Z, !0) }) : v.intl.string(v.t.h76ulJ);
     return T || !M
         ? null
         : (0, i.jsx)(C.Z, {
               className: t,
               style: n,
-              title: R,
-              description: A ? _.intl.string(_.t.lpgkzs) : _.intl.string(_.t.usQh4O),
+              title: L,
+              description: A ? v.intl.string(v.t.lpgkzs) : v.intl.string(v.t.usQh4O),
               icons: x.J6,
               onDrop: (e) => {
                   if (T) return !1;
@@ -48,7 +48,7 @@ t.Z = function (e) {
                           requireConfirm: b,
                           showLargeMessageDialog: !1
                       }),
-                      f.S.dispatchToLastSubscribed(v.CkL.TEXTAREA_FOCUS));
+                      f.S.dispatchToLastSubscribed(_.CkL.TEXTAREA_FOCUS));
               },
               onDragClear: () => Z(!0),
               onDragOver: (e) => {

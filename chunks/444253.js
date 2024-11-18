@@ -19,8 +19,8 @@ function m(e) {
     let { channelId: t, onClose: n, appContext: m, exitFullScreen: f, onSelect: g } = e,
         C = (0, l.e7)([r.Z], () => r.Z.getSelectedParticipant(t)),
         x = (null == C ? void 0 : C.type) === h.fO.STREAM ? C.stream : null,
-        v = (0, s.Z)(t),
-        _ = (0, c.Z)(),
+        _ = (0, s.Z)(t),
+        v = (0, c.Z)(),
         I = (0, o.Z)(t),
         E = (0, u.Z)(t);
     return (0, i.jsxs)(a.Menu, {
@@ -28,6 +28,6 @@ function m(e) {
         onClose: n,
         'aria-label': p.intl.string(p.t.pkYeAw),
         onSelect: g,
-        children: [v, _, I, E, (0, d.Z)(x, m, f)]
+        children: [_, v, I, E, (0, d.Z)(x, m, f)]
     });
 }

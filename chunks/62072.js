@@ -14,8 +14,8 @@ var i = n(192379),
     g = n(271383),
     C = n(607744),
     x = n(375954),
-    v = n(496675),
-    _ = n(572004),
+    _ = n(496675),
+    v = n(572004),
     I = n(585483),
     E = n(358085),
     b = n(709054),
@@ -25,7 +25,7 @@ var i = n(192379),
     T = n(996861),
     j = n(981631);
 function A(e) {
-    return v.Z.can(j.Plq.MANAGE_MESSAGES, e);
+    return _.Z.can(j.Plq.MANAGE_MESSAGES, e);
 }
 t.Z = function (e, t, n) {
     let y = i.useRef(n);
@@ -33,7 +33,7 @@ t.Z = function (e, t, n) {
         (y.current = n),
         i.useCallback(
             (n) => {
-                var i, P, M, R, L;
+                var i, P, M, L, R;
                 if (!y.current || n.target !== n.currentTarget) return;
                 let k = !n.altKey && !n.ctrlKey && !n.metaKey && !n.shiftKey,
                     O = n.altKey && !(n.ctrlKey || n.metaKey || n.shiftKey),
@@ -49,7 +49,7 @@ t.Z = function (e, t, n) {
                         k && (A(H) || U.canDeleteOwnMessage(G)) && (n.preventDefault(), (0, T.$Z)(H, U, n));
                         break;
                     case 'c':
-                        ((0, E.isMac)() ? w : D) && _.wS && (n.preventDefault(), (0, _.JG)(U.content));
+                        ((0, E.isMac)() ? w : D) && v.wS && (n.preventDefault(), (0, v.JG)(U.content));
                         break;
                     case 'e':
                         if (k) {
@@ -58,7 +58,7 @@ t.Z = function (e, t, n) {
                         break;
                     case 'p':
                         if (k || B) {
-                            if (((R = H), (L = U), !R.isSystemDM() && !(0, N.Z)(L) && (A(R) || R.isPrivate()))) n.preventDefault(), (0, T.rY)(H, U, n);
+                            if (((L = H), (R = U), !L.isSystemDM() && !(0, N.Z)(R) && (A(L) || L.isPrivate()))) n.preventDefault(), (0, T.rY)(H, U, n);
                         }
                         break;
                     case '+':
@@ -70,7 +70,7 @@ t.Z = function (e, t, n) {
                                         channel: e,
                                         canChat: t,
                                         renderReactions: n,
-                                        canAddNewReactions: t && v.Z.can(j.Plq.ADD_REACTIONS, e),
+                                        canAddNewReactions: t && _.Z.can(j.Plq.ADD_REACTIONS, e),
                                         isLurking: null != e.guild_id && o.Z.isLurking(e.guild_id),
                                         isGuest: null != e.guild_id && g.ZP.isCurrentUserGuest(e.guild_id),
                                         isActiveChannelOrUnarchivableThread: (0, d.RG)(e)

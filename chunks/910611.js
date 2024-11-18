@@ -3,7 +3,7 @@ n.d(t, {
         return D;
     },
     ud: function () {
-        return R;
+        return L;
     },
     v0: function () {
         return k;
@@ -26,8 +26,8 @@ var i = n(200651),
     g = n(565138),
     C = n(703656),
     x = n(699516),
-    v = n(914010),
-    _ = n(594174),
+    _ = n(914010),
+    v = n(594174),
     I = n(768581),
     E = n(63063),
     b = n(946734),
@@ -110,9 +110,9 @@ function M(e) {
         a
     );
 }
-function R(e) {
+function L(e) {
     let { channel: t, channelName: n, parentChannel: a, guild: s, inSidebar: o = !1, handleClick: d, handleContextMenu: u, handleParentClick: m, handleParentContextMenu: g, renderFollowButton: C } = e,
-        v = (0, p.KS)(t, s),
+        _ = (0, p.KS)(t, s),
         { prefix: I, level: E } = (function (e, t) {
             var n, i;
             switch (e) {
@@ -198,7 +198,7 @@ function R(e) {
         case j.d4z.GUILD_MEDIA:
             return (0, i.jsxs)(l.Fragment, {
                 children: [
-                    O(v, t.type === j.d4z.GUILD_ANNOUNCEMENT ? y.intl.string(y.t.l1dkSE) : y.intl.string(y.t.Pnajj4)),
+                    O(_, t.type === j.d4z.GUILD_ANNOUNCEMENT ? y.intl.string(y.t.l1dkSE) : y.intl.string(y.t.Pnajj4)),
                     (0, i.jsx)(S.Z.Title, {
                         level: E,
                         onContextMenu: u,
@@ -212,7 +212,7 @@ function R(e) {
         case j.d4z.GUILD_VOICE:
             return (0, i.jsxs)(l.Fragment, {
                 children: [
-                    O(v, y.intl.string(y.t.BVZqJi)),
+                    O(_, y.intl.string(y.t.BVZqJi)),
                     (0, i.jsx)(S.Z.Title, {
                         level: E,
                         onContextMenu: u,
@@ -224,7 +224,7 @@ function R(e) {
         case j.d4z.GUILD_STAGE_VOICE:
             return (0, i.jsxs)(l.Fragment, {
                 children: [
-                    O(v, y.intl.string(y.t.EErMzM)),
+                    O(_, y.intl.string(y.t.EErMzM)),
                     (0, i.jsx)(S.Z.Title, {
                         level: E,
                         onContextMenu: u,
@@ -247,7 +247,7 @@ function R(e) {
                             onContextMenu: g,
                             onClick: m,
                             className: r()(P.parentChannelName, P.cursorPointer),
-                            children: (0, h.F6)(a, _.default, x.Z)
+                            children: (0, h.F6)(a, v.default, x.Z)
                         }),
                         (0, i.jsx)(S.Z.Caret, {})
                     ]
@@ -257,7 +257,7 @@ function R(e) {
             return (0, i.jsxs)(l.Fragment, {
                 children: [
                     N,
-                    O(A ? null : v, y.intl.string(y.t['7Xm5QE'])),
+                    O(A ? null : _, y.intl.string(y.t['7Xm5QE'])),
                     (0, i.jsx)(S.Z.Title, {
                         level: E,
                         onContextMenu: u,
@@ -271,13 +271,13 @@ function R(e) {
                 ]
             });
         case j.d4z.GUILD_DIRECTORY:
-            let R = (null == s ? void 0 : s.hasFeature(j.oNc.HUB)) ? y.intl.formatToPlainString(y.t.Dy2aho, { guildName: n }) : n;
+            let L = (null == s ? void 0 : s.hasFeature(j.oNc.HUB)) ? y.intl.formatToPlainString(y.t.Dy2aho, { guildName: n }) : n;
             return (0, i.jsxs)(l.Fragment, {
                 children: [
-                    null !== v
+                    null !== _
                         ? (0, i.jsx)(S.Z.Icon, {
                               iconClassName: P.__invalid_icon,
-                              icon: v,
+                              icon: _,
                               'aria-hidden': !0
                           })
                         : null,
@@ -292,7 +292,7 @@ function R(e) {
                                   })
                                 : null,
                             ' ',
-                            R
+                            L
                         ]
                     })
                 ]
@@ -301,17 +301,17 @@ function R(e) {
             return null;
     }
 }
-let L = (e) => {
+let R = (e) => {
     let { channel: t } = e,
-        n = (0, s.e7)([_.default], () => _.default.getCurrentUser()),
-        l = (0, s.e7)([_.default], () => _.default.getUser(t.getRecipientId()));
+        n = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
+        l = (0, s.e7)([v.default], () => v.default.getUser(t.getRecipientId()));
     return t.isDM() && (null == n ? void 0 : n.isStaff()) && (null == l ? void 0 : l.isStaff()) ? (0, i.jsx)(u.Z, { type: u.Z.Types.STAFF_ONLY_DM }) : null;
 };
 function k(e, t) {
     switch (e.type) {
         case j.d4z.DM:
             return (0, i.jsxs)(i.Fragment, {
-                children: [(0, i.jsx)(L, { channel: e }), (0, i.jsx)(b.Z, { channel: e }, e.id)]
+                children: [(0, i.jsx)(R, { channel: e }), (0, i.jsx)(b.Z, { channel: e }, e.id)]
             });
         case j.d4z.GUILD_ANNOUNCEMENT:
         case j.d4z.GUILD_TEXT:
@@ -347,7 +347,7 @@ function O(e, t) {
 }
 function D(e) {
     let { guild: t, channel: n, caretPosition: l = 'left' } = e;
-    return (0, s.e7)([v.Z], () => v.Z.getGuildId()) !== j.I_8 || null == t
+    return (0, s.e7)([_.Z], () => _.Z.getGuildId()) !== j.I_8 || null == t
         ? null
         : (0, i.jsxs)('div', {
               className: P.guildBreadcrumbContainer,

@@ -19,29 +19,29 @@ var i = n(200651),
     g = n(271383),
     C = n(709586),
     x = n(5192),
-    v = n(590415),
-    _ = n(71910);
+    _ = n(590415),
+    v = n(71910);
 let I = l.memo(function (e) {
         let { guildId: t, channelId: n, user: l, isPremium: a, isBlocked: r } = e;
         return (0, i.jsxs)('div', {
-            className: _.textContainer,
+            className: v.textContainer,
             children: [
                 r
                     ? (0, i.jsx)(u.DenyIcon, {
                           size: 'lg',
-                          className: _.blockedIcon,
+                          className: v.blockedIcon,
                           color: d.Z.unsafe_rawColors.RED_400.css
                       })
                     : null,
                 (0, i.jsx)(u.Text, {
-                    className: _.text,
+                    className: v.text,
                     variant: 'text-sm/normal',
                     color: 'header-primary',
                     children: x.ZP.getName(t, n, l)
                 }),
                 a
                     ? (0, i.jsx)(C.Z, {
-                          className: _.boost,
+                          className: v.boost,
                           color: d.Z.unsafe_rawColors.GUILD_BOOSTING_PINK.css
                       })
                     : null
@@ -52,24 +52,24 @@ let I = l.memo(function (e) {
         var t;
         let { participant: n, guildId: l, channel: a, isPremium: s } = e,
             { user: o, blocked: c, rtsState: d } = n,
-            h = d === v.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK,
-            p = d === v.xO.REQUESTED_TO_SPEAK || h;
+            h = d === _.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK,
+            p = d === _.xO.REQUESTED_TO_SPEAK || h;
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)('div', {
-                    className: _.avatarContainer,
+                    className: v.avatarContainer,
                     children: [
                         p &&
                             (0, i.jsx)(u.HandRequestSpeakIcon, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: r()(_.icon, { [_.invited]: h })
+                                className: r()(v.icon, { [v.invited]: h })
                             }),
                         (0, i.jsx)('img', {
                             src: null !== (t = o.getAvatarURL(a.guild_id, 56, !1)) && void 0 !== t ? t : void 0,
                             alt: o.username,
                             'aria-label': o.username,
-                            className: r()(_.avatar, { [_.faded]: c })
+                            className: r()(v.avatar, { [v.faded]: c })
                         })
                     ]
                 }),
@@ -83,13 +83,13 @@ let I = l.memo(function (e) {
             ]
         });
     }),
-    b = () => (0, i.jsx)('div', { className: _.tileBaseContainer });
+    b = () => (0, i.jsx)('div', { className: v.tileBaseContainer });
 t.Z = l.memo(function (e) {
     let { participant: t, channel: a } = e,
         { user: s, blocked: d } = t,
         C = a.getGuildId(),
         x = (0, p.bp)(),
-        v = (0, c.e7)(
+        _ = (0, c.e7)(
             [g.ZP],
             () => {
                 var e;
@@ -141,9 +141,9 @@ t.Z = l.memo(function (e) {
         spacing: 8,
         children: (e) =>
             (0, i.jsx)(u.Clickable, {
-                className: r()(_.tileContainer, {
-                    [_.singleIcon]: v || d,
-                    [_.doubleIcon]: v && d
+                className: r()(v.tileContainer, {
+                    [v.singleIcon]: _ || d,
+                    [v.doubleIcon]: _ && d
                 }),
                 onContextMenu: I,
                 ...e,
@@ -151,7 +151,7 @@ t.Z = l.memo(function (e) {
                     participant: t,
                     guildId: C,
                     channel: a,
-                    isPremium: v
+                    isPremium: _
                 })
             })
     });

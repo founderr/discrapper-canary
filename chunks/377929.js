@@ -20,8 +20,8 @@ var i = n(200651),
     g = n(13736),
     C = n(732393),
     x = n(137591),
-    v = n(299206),
-    _ = n(665149),
+    _ = n(299206),
+    v = n(665149),
     I = n(695346),
     E = n(979651),
     b = n(488131),
@@ -48,7 +48,7 @@ function N(e) {
         },
         children: (e, t) => {
             let { isShown: n } = t;
-            return (0, i.jsx)(_.ZP.Icon, {
+            return (0, i.jsx)(v.ZP.Icon, {
                 ...e,
                 onClick: r,
                 tooltip: n ? null : s,
@@ -62,10 +62,10 @@ function N(e) {
 function S(e) {
     let { channel: t, closePopout: n, onSelect: l } = e,
         a = (0, c.Z)(t),
-        _ = (0, m.Z)(t),
+        v = (0, m.Z)(t),
         N = (0, C.Z)(t.id),
         S = (0, g.Z)(t),
-        T = (0, v.Z)({
+        T = (0, _.Z)({
             id: t.id,
             label: Z.intl.string(Z.t.DQ797u)
         }),
@@ -74,8 +74,8 @@ function S(e) {
         y = (0, h.Z)(t, 'Toolbar Overflow'),
         P = (0, f.Z)(t),
         M = (0, p.Z)(t),
-        R = (0, x.Z)(t),
-        L = I.vF.useSetting(),
+        L = (0, x.Z)(t),
+        R = I.vF.useSetting(),
         k = (0, s.e7)([E.Z], () => !r().isEmpty(E.Z.getVoiceStatesForChannel(t.id)));
     return (0, i.jsxs)(o.Menu, {
         navId: 'thread-context',
@@ -91,7 +91,7 @@ function S(e) {
                     S,
                     P,
                     N,
-                    L && !k
+                    R && !k
                         ? (0, i.jsx)(o.MenuItem, {
                               id: 'open',
                               label: Z.intl.string(Z.t.bX7EaG),
@@ -103,7 +103,7 @@ function S(e) {
                 ]
             }),
             (0, i.jsxs)(o.MenuGroup, {
-                children: [R, a, _, A]
+                children: [L, a, v, A]
             }),
             (0, i.jsxs)(o.MenuGroup, {
                 children: [j, T]

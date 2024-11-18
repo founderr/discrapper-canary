@@ -29,15 +29,15 @@ function f() {
         g = (0, a.e7)([h.default], () => h.default.getCurrentUser()),
         C = null != f ? (0, s.x)(f) : null,
         x = null != g ? g.getAvatarURL(e, 80) : p.pK['0'],
-        v = (0, i.jsx)(r.Avatar, {
+        _ = (0, i.jsx)(r.Avatar, {
             src: x,
             'aria-hidden': !0,
             size: r.AvatarSizes.SIZE_80,
             className: m.avatarSizeOverride
         }),
-        _ = null;
+        v = null;
     return (
-        (_ =
+        (v =
             null != n
                 ? (0, i.jsx)(o.Z, { guild: n })
                 : null != C
@@ -47,17 +47,17 @@ function f() {
                         size: r.AvatarSizes.SIZE_80,
                         className: m.avatarSizeOverride
                     })
-                  : v),
+                  : _),
         (0, i.jsxs)('div', {
             className: m.container,
             children: [
                 (0, i.jsx)('div', {
                     className: m.personAvatar,
-                    children: v
+                    children: _
                 }),
                 (0, i.jsx)('div', {
                     className: m.guildAvatar,
-                    children: _
+                    children: v
                 }),
                 (0, i.jsx)('svg', {
                     className: m.illustration,

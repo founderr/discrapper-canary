@@ -15,12 +15,12 @@ var i = n(200651),
     g = n(981631),
     C = n(388032),
     x = n(562838);
-function v(e) {
+function _(e) {
     var t, n;
     let { permission: l, roleIds: a, guild: h, specMap: p } = e,
         f = g.Plq[l],
-        v = null !== (n = null === (t = p[f.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== n ? n : (0, d.wt)(f),
-        _ = m._o.has(f),
+        _ = null !== (n = null === (t = p[f.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== n ? n : (0, d.wt)(f),
+        v = m._o.has(f),
         I = (0, s.e7)([u.Z], () => u.Z.getRoles(h.id));
     return (0, i.jsx)(o.Tooltip, {
         'aria-label': C.intl.string(C.t['0g8Xd3']),
@@ -31,7 +31,7 @@ function v(e) {
             children: [
                 (0, i.jsx)(o.Text, {
                     variant: 'text-sm/normal',
-                    children: _ ? C.intl.string(C.t['GEuu/P']) : C.intl.string(C.t.wgGiCg)
+                    children: v ? C.intl.string(C.t['GEuu/P']) : C.intl.string(C.t.wgGiCg)
                 }),
                 a.map((e) =>
                     (0, i.jsx)(
@@ -51,11 +51,11 @@ function v(e) {
         children: (e) => {
             let { onMouseEnter: t, onMouseLeave: n } = e;
             return (0, i.jsxs)(o.Clickable, {
-                className: r()(x.permissionChiplet, { [x.elevatedPermission]: _ }),
+                className: r()(x.permissionChiplet, { [x.elevatedPermission]: v }),
                 onMouseEnter: t,
                 onMouseLeave: n,
                 children: [
-                    _ &&
+                    v &&
                         (0, i.jsx)(o.ShieldLockIcon, {
                             size: 'custom',
                             width: 16,
@@ -65,7 +65,7 @@ function v(e) {
                     (0, i.jsx)(o.Text, {
                         variant: 'text-xs/medium',
                         color: 'interactive-normal',
-                        children: v
+                        children: _
                     })
                 ]
             });
@@ -77,13 +77,13 @@ t.Z = l.memo(function (e) {
         a = (0, s.e7)([u.Z], () => u.Z.getGuild(t.guildId), [t.guildId]),
         c = (0, m.B2)(t.userId, t.guildId, m.Qn),
         d = (0, m.B2)(t.userId, t.guildId, m.pd),
-        _ = Object.keys(c).length,
+        v = Object.keys(c).length,
         I = Object.keys(d).length,
         E = l.useMemo(() => (null != a ? h.Z.getGuildPermissionSpecMap(a) : null), [a]),
         b = l.useMemo(() => (null != a ? h.Z.generateGuildPermissionSpec(a) : null), [a]),
         Z = l.useMemo(() => {
             if (null == a || null == E) return null;
-            if (0 === _)
+            if (0 === v)
                 return (0, i.jsx)('div', {
                     className: r()(x.permissionChiplet, x.noModPerms),
                     children: (0, i.jsx)(o.Text, {
@@ -104,7 +104,7 @@ t.Z = l.memo(function (e) {
                             if (null != r)
                                 e.push(
                                     (0, i.jsx)(
-                                        v,
+                                        _,
                                         {
                                             permission: l,
                                             roleIds: r,
@@ -118,7 +118,7 @@ t.Z = l.memo(function (e) {
                     }),
                 e
             );
-        }, [a, _, c, b, E]);
+        }, [a, v, c, b, E]);
     return null == a
         ? null
         : (0, i.jsx)(o.FormItem, {

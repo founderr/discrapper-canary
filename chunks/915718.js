@@ -21,8 +21,8 @@ var i = n(200651),
     g = n(590293),
     C = n(970731),
     x = n(560688),
-    v = n(173507),
-    _ = n(523746),
+    _ = n(173507),
+    v = n(523746),
     I = n(819640),
     E = n(131951),
     b = n(699516),
@@ -35,8 +35,8 @@ var i = n(200651),
     y = n(921944),
     P = n(65154),
     M = n(388032),
-    R = n(955614);
-function L(e, t, n) {
+    L = n(955614);
+function R(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -123,7 +123,7 @@ class k extends l.PureComponent {
                                 onClick: () => {
                                     t(), a(y.L.UNKNOWN);
                                 },
-                                className: R.tooltip
+                                className: L.tooltip
                             });
                         },
                         children: () => x
@@ -139,29 +139,29 @@ class k extends l.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            L(this, 'handleStartCall', (e, t) => {
+            R(this, 'handleStartCall', (e, t) => {
                 let { channel: n, notFriend: i, appContext: l } = this.props,
                     a = i ? n.getRecipientId() : null,
                     r = () => o.Z.call(n.id, t, !i && !n.isManaged() && !(null == e ? void 0 : e.shiftKey), a);
-                t ? (0, v.Z)(r, l) : r();
+                t ? (0, _.Z)(r, l) : r();
             }),
-            L(this, 'handleJoinCall', (e) => {
+            R(this, 'handleJoinCall', (e) => {
                 c.default.selectVoiceChannel(this.props.channel.id, e);
             }),
-            L(this, 'handleVoiceClick', (e) => {
+            R(this, 'handleVoiceClick', (e) => {
                 let { callUnavailable: t, callActive: n, canShowActivityGdmTooltip: i } = this.props;
                 if ((i && (0, m.EW)(r.z.ACTIVITY_GDM_CALL_TOOLTIP, { dismissAction: y.L.AUTO }), t));
                 else if (n) return this.handleJoinCall(!1);
                 else return this.handleStartCall(e, !1);
             }),
-            L(this, 'handleStartVideoCall', (e) => {
+            R(this, 'handleStartVideoCall', (e) => {
                 this.handleStartCall(e, !0);
             }),
-            L(this, 'handleJoinVideoCall', () => {
+            R(this, 'handleJoinVideoCall', () => {
                 let { appContext: e } = this.props;
-                (0, v.Z)(() => this.handleJoinCall(!0), e);
+                (0, _.Z)(() => this.handleJoinCall(!0), e);
             }),
-            L(this, 'handleBrowserNotSupported', () => {
+            R(this, 'handleBrowserNotSupported', () => {
                 (0, x.Z)();
             });
     }
@@ -173,12 +173,12 @@ function O(e) {
         o = (0, a.e7)([p.Z], () => p.Z.getMode(n.id)),
         c = (0, a.e7)([N.Z], () => N.Z.isInChannel(n.id)),
         m = (0, a.e7)([u.Z], () => u.Z.useReducedMotion),
-        { callActive: f, callUnavailable: C } = (0, a.cj)([_.Z], () => ({
-            callActive: _.Z.isCallActive(n.id),
-            callUnavailable: _.Z.isCallUnavailable(n.id)
+        { callActive: f, callUnavailable: C } = (0, a.cj)([v.Z], () => ({
+            callActive: v.Z.isCallActive(n.id),
+            callUnavailable: v.Z.isCallUnavailable(n.id)
         })),
         x = n.getRecipientId(),
-        { notFriend: v, isBlocked: E } = (0, a.cj)([b.Z], () => ({
+        { notFriend: _, isBlocked: E } = (0, a.cj)([b.Z], () => ({
             notFriend: n.type === A.d4z.DM && null != x && !b.Z.isFriend(x),
             isBlocked: n.type === A.d4z.DM && null != x && b.Z.isBlocked(x)
         })),
@@ -188,10 +188,10 @@ function O(e) {
         y = (0, h.Z)(n.id),
         P = (0, a.e7)([I.Z], () => I.Z.hasLayers());
     y && !P && j.push(r.z.ACTIVITY_GDM_CALL_TOOLTIP);
-    let [M, R] = l.useState(!1);
+    let [M, L] = l.useState(!1);
     return (l.useEffect(() => {
         let e = setTimeout(() => {
-            R(!0);
+            L(!0);
         }, 250);
         return () => clearTimeout(e);
     }, []),
@@ -204,7 +204,7 @@ function O(e) {
               callActive: f,
               isProvisional: null !== (t = null == S ? void 0 : S.isProvisional) && void 0 !== t && t,
               callUnavailable: C,
-              notFriend: v,
+              notFriend: _,
               isBlocked: E,
               appContext: T,
               canShowTooltip: M,

@@ -24,8 +24,8 @@ var i = n(200651),
     g = n(434404),
     C = n(330010),
     x = n(314897),
-    v = n(430824),
-    _ = n(594174),
+    _ = n(430824),
+    v = n(594174),
     I = n(259580),
     E = n(585483),
     b = n(63063),
@@ -76,13 +76,13 @@ function P(e) {
 }
 function M(e) {
     let { channel: t } = e,
-        a = (0, c.e7)([v.Z], () => (null != t ? v.Z.getGuild(t.getGuildId()) : null), [t]),
+        a = (0, c.e7)([_.Z], () => (null != t ? _.Z.getGuild(t.getGuildId()) : null), [t]),
         h = null != a && N.default.extractTimestamp(a.id) < Date.now() - T._8R,
         I = (0, c.e7)([x.default], () => (null == a ? void 0 : a.ownerId) === x.default.getId(), [a]),
-        { canInvite: M, canManageGuild: R, canMessage: L } = (0, f.TE)(t, a),
-        k = (0, c.e7)([_.default], () => {
+        { canInvite: M, canManageGuild: L, canMessage: R } = (0, f.TE)(t, a),
+        k = (0, c.e7)([v.default], () => {
             var e, t;
-            return (null === (e = _.default.getCurrentUser()) || void 0 === e ? void 0 : e.desktop) === !0 || (null === (t = _.default.getCurrentUser()) || void 0 === t ? void 0 : t.mobile) === !0;
+            return (null === (e = v.default.getCurrentUser()) || void 0 === e ? void 0 : e.desktop) === !0 || (null === (t = v.default.getCurrentUser()) || void 0 === t ? void 0 : t.mobile) === !0;
         }),
         { guildPopulated: O, guildMessaged: D, guildPersonalized: w } = (0, f.h_)(a),
         {
@@ -253,7 +253,7 @@ function M(e) {
                     'invite'
                 )
             ),
-        R &&
+        L &&
             Y.push(
                 (0, i.jsx)(
                     o.Z.div,
@@ -270,7 +270,7 @@ function M(e) {
                     'customize'
                 )
             ),
-        L &&
+        R &&
             Y.push(
                 (0, i.jsx)(
                     o.Z.div,

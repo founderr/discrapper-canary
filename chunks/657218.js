@@ -20,8 +20,8 @@ var i = n(200651),
     g = n(541716),
     C = n(752305),
     x = n(893718),
-    v = n(303628),
-    _ = n(313201),
+    _ = n(303628),
+    v = n(313201),
     I = n(967128),
     E = n(665149),
     b = n(294218),
@@ -34,8 +34,8 @@ var i = n(200651),
     y = n(496675),
     P = n(117530),
     M = n(459273),
-    R = n(838440),
-    L = n(127654),
+    L = n(838440),
+    R = n(127654),
     k = n(241309),
     O = n(928477),
     D = n(456077),
@@ -122,7 +122,7 @@ function W(e) {
                 updateThreadSettings: a
             };
         })(t, n),
-        { textAreaState: x, setTextAreaState: v } = (function (e, t) {
+        { textAreaState: x, setTextAreaState: _ } = (function (e, t) {
             let [n, i] = l.useState((0, C.H2)());
             return (
                 l.useEffect(() => {
@@ -145,7 +145,7 @@ function W(e) {
                 }
             );
         })(t, f),
-        _ = (0, O.vH)(t),
+        v = (0, O.vH)(t),
         {
             nameError: E,
             messageError: b,
@@ -189,7 +189,7 @@ function W(e) {
                                 }
                             );
                         if (null == n) {
-                            let { valid: n } = await (0, R.v)({
+                            let { valid: n } = await (0, L.v)({
                                 content: e,
                                 stickers: l,
                                 uploads: a,
@@ -234,11 +234,11 @@ function W(e) {
             parentChannel: t,
             parentMessageId: n,
             threadSettings: m,
-            privateThreadMode: _,
+            privateThreadMode: v,
             textAreaState: x,
             location: a
         }),
-        A = (0, O.oD)(m, _) ? o.ThreadLockIcon : o.ThreadIcon;
+        A = (0, O.oD)(m, v) ? o.ThreadLockIcon : o.ThreadIcon;
     return (0, i.jsx)('div', {
         className: G.chat,
         onMouseDown: h,
@@ -277,7 +277,7 @@ function W(e) {
                                                   startedFromMessage: null != n,
                                                   threadSettings: m,
                                                   updateThreadSettings: g,
-                                                  privateThreadMode: _
+                                                  privateThreadMode: v
                                               })
                                             : null
                                     ]
@@ -295,7 +295,7 @@ function W(e) {
                             (0, i.jsx)(q, {
                                 parentChannel: t,
                                 textAreaState: x,
-                                setTextAreaState: v,
+                                setTextAreaState: _,
                                 submit: S,
                                 error: b
                             }),
@@ -357,7 +357,7 @@ function Y(e) {
         h = (0, k.Op)(s, { content: u }),
         p = (0, O.Od)(n, l),
         m = null != l,
-        f = (0, _.Dt)();
+        f = (0, v.Dt)();
     return (0, i.jsx)(o.FormSection, {
         tag: 'label',
         htmlFor: f,
@@ -400,7 +400,7 @@ function q(e) {
             },
             [t.id, a]
         ),
-        _ = l.useCallback(
+        v = l.useCallback(
             (e) => {
                 let { value: t, uploads: n, stickers: i } = e;
                 return u(t, i, n);
@@ -419,7 +419,7 @@ function q(e) {
         E = (0, k.Op)(h, { content: n.textValue });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(v.Z, {
+            (0, i.jsx)(_.Z, {
                 channelId: t.id,
                 type: V,
                 canAttachFiles: I
@@ -440,8 +440,8 @@ function q(e) {
                 onFocus: f,
                 onBlur: g,
                 onChange: C,
-                onSubmit: _,
-                promptToUpload: L.d
+                onSubmit: v,
+                promptToUpload: R.d
             })
         ]
     });

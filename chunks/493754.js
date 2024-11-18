@@ -20,7 +20,7 @@ var l = n(120356),
     g = n(393448);
 function C(e) {
     var t, l;
-    let { stream: r, applicationId: C, channel: x, exitFullScreen: v, appContext: _, analyticsLocation: I, className: E, ...b } = e,
+    let { stream: r, applicationId: C, channel: x, exitFullScreen: _, appContext: v, analyticsLocation: I, className: E, ...b } = e,
         Z = null == x ? void 0 : x.getGuildId(),
         N = null == x ? void 0 : x.id,
         S = (0, o.e7)([h.Z], () => (null != Z ? h.Z.getGuild(Z) : null), [Z]),
@@ -65,8 +65,8 @@ function C(e) {
                                 channel: x,
                                 streamUserId: null == r ? void 0 : r.ownerId,
                                 applicationId: C,
-                                appContext: _,
-                                exitFullScreen: v,
+                                appContext: v,
+                                exitFullScreen: _,
                                 analyticsLocation: I,
                                 guildScheduledEvent: T
                             });
@@ -78,9 +78,9 @@ function C(e) {
                 (0, i.jsx)(u.Z, {
                     channel: x,
                     stream: r,
-                    appContext: _,
+                    appContext: v,
                     className: a()(E, g.iconButton),
-                    exitFullScreen: v,
+                    exitFullScreen: _,
                     analyticsLocation: I,
                     guildScheduledEvent: T
                 })

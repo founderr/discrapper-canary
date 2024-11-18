@@ -19,8 +19,8 @@ var i = n(200651),
     g = n(895924),
     C = n(605236),
     x = n(448239),
-    v = n(626135),
-    _ = n(607187),
+    _ = n(626135),
+    v = n(607187),
     I = n(981631),
     E = n(388032),
     b = n(681363),
@@ -68,7 +68,7 @@ function S(e) {
         };
     return (0, i.jsx)(f.Gt, {
         value: a,
-        children: (0, i.jsxs)(_.Z, {
+        children: (0, i.jsxs)(v.Z, {
             className: b.root,
             children: [
                 (0, i.jsx)(c.Tooltip, {
@@ -114,7 +114,7 @@ function S(e) {
 function T(e) {
     let { channel: t, guild: a, inPopout: r, width: s } = e;
     l.useEffect(() => {
-        v.default.track(I.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
+        _.default.track(I.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
             tile_type: 'activity invite',
             n_participants: 1
         });
@@ -123,7 +123,7 @@ function T(e) {
         { analyticsLocations: u } = (0, f.ZP)(m.Z.VC_TILE_ACTIVITY_INVITE);
     return (0, i.jsx)(f.Gt, {
         value: u,
-        children: (0, i.jsxs)(_.Z, {
+        children: (0, i.jsxs)(v.Z, {
             className: b.root,
             children: [
                 s > 400
@@ -201,7 +201,7 @@ function T(e) {
 function j(e) {
     let { channel: t, guild: n, handleClose: a, width: o, userParticipantCount: d } = e;
     l.useEffect(() => {
-        v.default.track(I.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
+        _.default.track(I.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
             tile_type: 'activity suggestion',
             n_participants: d
         });
@@ -210,7 +210,7 @@ function j(e) {
         { analyticsLocations: N } = (0, f.ZP)(m.Z.VC_TILE_ACTIVITY_SUGGESTION);
     return (0, i.jsx)(f.Gt, {
         value: N,
-        children: (0, i.jsxs)(_.Z, {
+        children: (0, i.jsxs)(v.Z, {
             className: b.root,
             children: [
                 o > 480
@@ -246,7 +246,7 @@ function j(e) {
                 (0, i.jsxs)(c.Clickable, {
                     className: b.checkboxContainer,
                     onClick: function () {
-                        v.default.track(I.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
+                        _.default.track(I.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
                             tile_type: 'activity suggestion',
                             close_type: 'permanent',
                             n_participants: d
@@ -264,7 +264,7 @@ function j(e) {
                 (0, i.jsx)(c.Clickable, {
                     className: b.closeButtonContainer,
                     onClick: function () {
-                        v.default.track(I.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
+                        _.default.track(I.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
                             tile_type: 'activity suggestion',
                             close_type: 'temporary',
                             n_participants: d

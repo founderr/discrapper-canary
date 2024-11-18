@@ -20,8 +20,8 @@ var i = n(200651),
     g = n(299206),
     C = n(727429),
     x = n(665149),
-    v = n(359110),
-    _ = n(585483),
+    _ = n(359110),
+    v = n(585483),
     I = n(739830),
     E = n(488131),
     b = n(981631),
@@ -76,7 +76,7 @@ function S(e) {
         }),
         P = (0, f.Z)(t);
     function M() {
-        (0, v.Kh)(t.id);
+        (0, _.Kh)(t.id);
     }
     return (0, i.jsxs)(a.Menu, {
         navId: 'thread-context',
@@ -109,7 +109,7 @@ function S(e) {
                         action: function () {
                             M(),
                                 setTimeout(() => {
-                                    _.S.dispatch(b.CkL.FOCUS_SEARCH, { prefillCurrentChannel: !1 });
+                                    v.S.dispatch(b.CkL.FOCUS_SEARCH, { prefillCurrentChannel: !1 });
                                 }, 2000);
                         }
                     }),
@@ -118,7 +118,7 @@ function S(e) {
                         label: Z.intl.string(Z.t['2BSH7u']),
                         icon: a.WindowLaunchIcon,
                         action: function () {
-                            M(), _.S.dispatch(b.CkL.TOGGLE_CHANNEL_PINS);
+                            M(), v.S.dispatch(b.CkL.TOGGLE_CHANNEL_PINS);
                         }
                     })
                 ]

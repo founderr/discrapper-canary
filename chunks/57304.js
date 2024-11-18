@@ -24,22 +24,22 @@ t.Z = function (e) {
         ),
         [g, C] = l.useState(!1),
         x = (0, a.e7)([d.ZP], () => d.ZP.hasUnreadPins(t.id), [t]),
-        v = (0, o.Aq)(),
-        _ = l.useCallback(() => {
+        _ = (0, o.Aq)(),
+        v = l.useCallback(() => {
             !n && C((e) => !e);
         }, [n]);
     function I(e) {
-        !(null == e ? void 0 : e.shiftKey) && v.dispatch(m.CkL.POPOUT_CLOSE);
+        !(null == e ? void 0 : e.shiftKey) && _.dispatch(m.CkL.POPOUT_CLOSE);
     }
     return (
         l.useEffect(
             () => (
-                h.S.subscribe(m.CkL.TOGGLE_CHANNEL_PINS, _),
+                h.S.subscribe(m.CkL.TOGGLE_CHANNEL_PINS, v),
                 () => {
-                    h.S.unsubscribe(m.CkL.TOGGLE_CHANNEL_PINS, _);
+                    h.S.unsubscribe(m.CkL.TOGGLE_CHANNEL_PINS, v);
                 }
             ),
-            [_]
+            [v]
         ),
         (0, i.jsx)(r.Popout, {
             shouldShow: g,
@@ -60,7 +60,7 @@ t.Z = function (e) {
                 let { isShown: l } = t;
                 return (0, i.jsx)(p.JO, {
                     ...e,
-                    onClick: _,
+                    onClick: v,
                     tooltip: l ? null : f.intl.string(f.t['mp1N//']),
                     icon: r.PinIcon,
                     'aria-label': f.intl.string(f.t['mp1N//']),

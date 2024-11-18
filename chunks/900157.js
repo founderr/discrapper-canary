@@ -19,8 +19,8 @@ var i = n(200651),
     g = n(541716),
     C = n(665149),
     x = n(910611),
-    v = n(359110),
-    _ = n(592125),
+    _ = n(359110),
+    v = n(592125),
     I = n(703558),
     E = n(430824),
     b = n(979651),
@@ -31,7 +31,7 @@ var i = n(200651),
     j = n(783989);
 function A(e) {
     let { channelId: t, baseChannelId: a, channelViewSource: A = 'Split View' } = e,
-        y = (0, s.e7)([_.Z], () => _.Z.getChannel(t)),
+        y = (0, s.e7)([v.Z], () => v.Z.getChannel(t)),
         P = (0, s.e7)([E.Z], () => E.Z.getGuild(null == y ? void 0 : y.getGuildId())),
         M = (0, m.ZP)(y);
     (function (e) {
@@ -43,15 +43,15 @@ function A(e) {
                     type: 'SIDEBAR_CLOSE',
                     baseChannelId: e.parent_id
                 }),
-                (0, v.ad)(e, { source: N.on.VOICE_AUTO_OPEN }));
+                (0, _.ad)(e, { source: N.on.VOICE_AUTO_OPEN }));
         }, [t, e]);
     })(y);
-    let R = l.useRef(!1);
+    let L = l.useRef(!1);
     if (
         (l.useEffect(() => {
-            if (null == y || R.current) return;
-            R.current = !0;
-            let e = (0, h.K)(_.Z.getChannel(y.id), !0);
+            if (null == y || L.current) return;
+            L.current = !0;
+            let e = (0, h.K)(v.Z.getChannel(y.id), !0);
             (0, u.yw)(S.rMx.CHANNEL_OPENED, {
                 ...e,
                 ...(0, u.$H)(y.id),
@@ -62,7 +62,7 @@ function A(e) {
         null == y || null == P)
     )
         return null;
-    let L = (0, i.jsx)(Z.Z, {
+    let R = (0, i.jsx)(Z.Z, {
         channel: y,
         baseChannelId: a
     });
@@ -73,7 +73,7 @@ function A(e) {
                 draftType: I.d.ChannelMessage
             }),
             (0, i.jsx)(C.ZP, {
-                toolbar: L,
+                toolbar: R,
                 'aria-label': T.intl.string(T.t.Pwe8tL),
                 children: (0, x.ud)({
                     channel: y,
@@ -91,7 +91,7 @@ function A(e) {
                         });
                     },
                     handleClick: function () {
-                        if (null != y) (0, v.Kh)(y.id);
+                        if (null != y) (0, _.Kh)(y.id);
                     }
                 })
             }),

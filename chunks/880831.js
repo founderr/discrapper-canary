@@ -23,8 +23,8 @@ var i = n(200651),
     g = n(937889),
     C = n(739566),
     x = n(267128),
-    v = n(378233),
-    _ = n(419922),
+    _ = n(378233),
+    v = n(419922),
     I = n(375954),
     E = n(699516),
     b = n(768581),
@@ -71,12 +71,12 @@ function y(e) {
             leadingIconClass: j.messageContentLeadingIcon,
             iconSize: T.WW
         }),
-        R = (0, v.cv)(n),
-        L =
-            R.length > 0
-                ? R.map((e) =>
+        L = (0, _.cv)(n),
+        R =
+            L.length > 0
+                ? L.map((e) =>
                       (0, i.jsx)(
-                          _.ZP,
+                          v.ZP,
                           {
                               className: j.sticker,
                               size: 128,
@@ -99,7 +99,7 @@ function y(e) {
         children: [
             (0, i.jsxs)('div', {
                 className: r()(j.messageContentWrapper, { [j.mentioned]: n.mentioned }),
-                children: [null != L ? null : M, null !== (t = null != y ? y : L) && void 0 !== t ? t : (0, i.jsx)('span', { children: A }), null != L ? null : P]
+                children: [null != R ? null : M, null !== (t = null != y ? y : R) && void 0 !== t ? t : (0, i.jsx)('span', { children: A }), null != R ? null : P]
             }),
             (0, i.jsx)('img', {
                 alt: '',
@@ -181,12 +181,12 @@ function P(e) {
         }
         !(0, s.isEqual)(e, g) && C(e);
     }, [m]);
-    let v = m.map((e) => ({
+    let _ = m.map((e) => ({
             message: e,
             height: f.current[e.id],
             y: g[e.id]
         })),
-        _ = (0, d.useTransition)(v, {
+        v = (0, d.useTransition)(_, {
             keys: (e) => e.message.id,
             from: () => ({ opacity: 0 }),
             enter: (e) => {
@@ -220,7 +220,7 @@ function P(e) {
                 onMouseLeave: () => {
                     h(!1);
                 },
-                children: _((e, t) =>
+                children: v((e, t) =>
                     (0, i.jsx)(o.animated.div, {
                         ref: (e) => x(t.message.id, null != e ? e.offsetHeight : null),
                         className: j.toastWrapper,

@@ -20,8 +20,8 @@ var l = n(512722),
     g = n(320427),
     C = n(145010),
     x = n(933686),
-    v = n(997614),
-    _ = n(159909),
+    _ = n(997614),
+    v = n(159909),
     I = n(981631),
     E = n(141373);
 function b(e) {
@@ -48,7 +48,7 @@ function b(e) {
         className: E.voiceEffectsActionBar,
         children: [
             j &&
-                (0, i.jsx)(v.Z, {
+                (0, i.jsx)(_.Z, {
                     channel: t,
                     themeable: l
                 }),
@@ -56,7 +56,7 @@ function b(e) {
             S && T && (0, i.jsx)(f.Z, { channel: t }),
             N && n && (0, i.jsx)(g.Z, {}),
             N && n && (0, i.jsx)(C.Z, { channel: t }),
-            N && n && (0, i.jsx)(_.Z, {})
+            N && n && (0, i.jsx)(v.Z, {})
         ]
     });
 }

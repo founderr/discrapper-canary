@@ -20,8 +20,8 @@ var i = n(200651),
     g = n(402113),
     C = n(592125),
     x = n(271383),
-    v = n(944486),
-    _ = n(594174),
+    _ = n(944486),
+    v = n(594174),
     I = n(585483),
     E = n(51144),
     b = n(566620),
@@ -34,8 +34,8 @@ var i = n(200651),
     y = n(719296),
     P = n(651612),
     M = n(918559),
-    R = n(981631),
-    L = n(388032),
+    L = n(981631),
+    R = n(388032),
     k = n(744177);
 let O = A.u.SIZE_32,
     D = {
@@ -86,7 +86,7 @@ function w(e) {
         et ? ((t = $.width / M.I0) > $.height && (e = (t = $.height) * M.I0), (ei = ($.height - t) / 2)) : ((e = Math.min($.height * M.I0)) > $.width && (t = (e = $.width) / M.I0), (en = ($.width - e) / 2));
     }
     let ea = V.get(null !== (n = null == U ? void 0 : U.id) && void 0 !== n ? n : ''),
-        er = (0, s.e7)([v.Z], () => v.Z.getChannelId()),
+        er = (0, s.e7)([_.Z], () => _.Z.getChannelId()),
         es = (0, s.Wu)(
             [x.ZP],
             () => {
@@ -136,7 +136,7 @@ function w(e) {
     let ed = [];
     null != ea &&
         (ed = Array.from(ea.embeddedActivity.userIds)
-            .map((e) => _.default.getUser(e))
+            .map((e) => v.default.getUser(e))
             .filter((e) => null != e && void 0 !== e));
     let eu = (e, t) => {
         var n;
@@ -162,7 +162,7 @@ function w(e) {
         );
     };
     return (0, i.jsx)(c.ThemeProvider, {
-        theme: R.BRd.DARK,
+        theme: L.BRd.DARK,
         children: (e) =>
             (0, i.jsxs)('div', {
                 className: r()(k.wrapper, D[K], e),
@@ -228,7 +228,7 @@ function w(e) {
                                                       })
                                                   }),
                                                   (0, i.jsx)(f.d, {
-                                                      label: L.intl.string(L.t.brPQ5e),
+                                                      label: R.intl.string(R.t.brPQ5e),
                                                       onClick: z,
                                                       iconComponent: c.MinimizeIcon,
                                                       themeable: !0,
@@ -248,10 +248,10 @@ function w(e) {
                               maxHeight: a,
                               resizableNode: W,
                               onResize: (e) => {
-                                  I.S.dispatch(R.CkL.MANUAL_IFRAME_RESIZING, { resizing: !0 }), X(e);
+                                  I.S.dispatch(L.CkL.MANUAL_IFRAME_RESIZING, { resizing: !0 }), X(e);
                               },
                               onResizeEnd: (e) => {
-                                  I.S.dispatch(R.CkL.MANUAL_IFRAME_RESIZING, { resizing: !1 }), J(e);
+                                  I.S.dispatch(L.CkL.MANUAL_IFRAME_RESIZING, { resizing: !1 }), J(e);
                               }
                           })
                         : null

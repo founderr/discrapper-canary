@@ -15,11 +15,11 @@ var i = n(200651),
 let C = (e, t) => p.ZP.getName(e.getGuildId(), e.id, t.user);
 t.Z = function (e) {
     var t, n;
-    let { participants: p, channel: x, hasConnectPermission: v } = e,
-        _ = (0, d.J)(x.guild_id),
+    let { participants: p, channel: x, hasConnectPermission: _ } = e,
+        v = (0, d.J)(x.guild_id),
         I = l.useCallback(() => {
-            _ ? (0, c.hk)(x.guild_id, () => s.default.selectVoiceChannel(x.id)) : s.default.selectVoiceChannel(x.id);
-        }, [x.id, x.guild_id, _]),
+            v ? (0, c.hk)(x.guild_id, () => s.default.selectVoiceChannel(x.id)) : s.default.selectVoiceChannel(x.id);
+        }, [x.id, x.guild_id, v]),
         E = p.filter((e) => e.type === m.Ui.VOICE),
         b = 4 === E.length ? 2 : 3,
         Z = (0, a.Wu)([o.Z], () => E.map((e) => o.Z.getParticipant(x.id, e.id)).filter(h.lm), [x.id, E]);
@@ -77,12 +77,12 @@ t.Z = function (e) {
                 })
             }),
             (0, i.jsx)(r.Button, {
-                disabled: !v,
+                disabled: !_,
                 className: g.joinButton,
-                color: v ? r.Button.Colors.GREEN : r.Button.Colors.PRIMARY,
+                color: _ ? r.Button.Colors.GREEN : r.Button.Colors.PRIMARY,
                 onClick: I,
                 size: r.Button.Sizes.MEDIUM,
-                children: v ? f.intl.string(f.t['7vb2cX']) : f.intl.string(f.t.TVBCKS)
+                children: _ ? f.intl.string(f.t['7vb2cX']) : f.intl.string(f.t.TVBCKS)
             })
         ]
     });

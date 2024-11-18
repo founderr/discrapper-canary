@@ -23,10 +23,10 @@ function x(e) {
     let { user: t } = e,
         { analyticsLocations: n } = (0, a.ZP)(),
         { context: x } = (0, s.KZ)(),
-        v = (0, l.ZP)(),
-        { mutualFriends: _, isFetching: I } = (0, o.Z)(t.id, !t.bot),
+        _ = (0, l.ZP)(),
+        { mutualFriends: v, isFetching: I } = (0, o.Z)(t.id, !t.bot),
         { mutualGuilds: E, isFetching: b } = (0, c.Z)(t.id, !0),
-        Z = !t.bot && null != _ && _.length > 0,
+        Z = !t.bot && null != v && v.length > 0,
         N = null != E && E.length > 0;
     return Z || N
         ? (0, i.jsxs)(u.Z.Overlay, {
@@ -46,7 +46,7 @@ function x(e) {
                                       user: t,
                                       guild: n,
                                       nick: l,
-                                      theme: v,
+                                      theme: _,
                                       onSelect: () => (0, r.X)(n.id)
                                   },
                                   n.id
@@ -60,7 +60,7 @@ function x(e) {
                           header: g.intl.string(g.t['0mTJ3t']),
                           isLoading: I,
                           listClassName: C.list,
-                          items: _.map((e) => {
+                          items: v.map((e) => {
                               let { key: t, user: l, status: a } = e;
                               return (0, i.jsx)(
                                   p.T,

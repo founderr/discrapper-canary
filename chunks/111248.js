@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return _;
     }
 }),
     n(47120);
@@ -22,9 +22,9 @@ let C = 'CameraPreviewPosition';
 function x(e, t) {
     return e * t + 8 * (t - 1);
 }
-function v(e) {
+function _(e) {
     var t;
-    let { width: n, onContextMenuParticipant: a, height: x, channel: v, participants: _ } = e,
+    let { width: n, onContextMenuParticipant: a, height: x, channel: _, participants: v } = e,
         [I, E] = (function () {
             let [e, t] = l.useState(() => o.K.get(C, p.VD2.BOTTOM_RIGHT));
             return [
@@ -35,9 +35,9 @@ function v(e) {
             ];
         })(),
         b = l.useRef(null),
-        Z = null == v.getGuildId() ? 70 : 50,
+        Z = null == _.getGuildId() ? 70 : 50,
         N = (0, s.e7)([u.Z], () => u.Z.pipWidth(m.cL.CAMERA_PREVIEW)),
-        S = _.length;
+        S = v.length;
     let T = N * (t = S) + 8 * (t - 1),
         j = l.useMemo(() => {
             var e, t, n, i;
@@ -49,7 +49,7 @@ function v(e) {
     l.useLayoutEffect(() => {
         var e;
         null === (e = b.current) || void 0 === e || e.ensureIsInPosition();
-    }, [_.length]);
+    }, [v.length]);
     let A = l.useCallback(
             (e) => {
                 var t, n;
@@ -82,12 +82,12 @@ function v(e) {
             resizeConfig: j,
             children: (0, i.jsx)('div', {
                 className: f.tileContainer,
-                children: _.map((e) =>
+                children: v.map((e) =>
                     (0, i.jsx)(
                         h.ZP,
                         {
                             participant: e,
-                            channel: v,
+                            channel: _,
                             onContextMenu: a,
                             className: r()(f.tile, g.elevationHigh),
                             fit: h.BP.COVER,

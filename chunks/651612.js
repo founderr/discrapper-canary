@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return _;
     }
 }),
     n(653041);
@@ -20,9 +20,9 @@ var i = n(200651),
     g = n(981631),
     C = n(388032),
     x = n(98469);
-function v(e) {
-    let { channelId: t, className: n, ...v } = e,
-        _ = l.useRef(null),
+function _(e) {
+    let { channelId: t, className: n, ..._ } = e,
+        v = l.useRef(null),
         I = (0, r.e7)([m.ZP], () => m.ZP.getFocusedLayout() === f.MI.RESIZABLE),
         E = l.useCallback(() => {
             let e = I ? f.MI.NO_CHAT : f.MI.RESIZABLE;
@@ -46,7 +46,7 @@ function v(e) {
         })(t),
         N = l.useCallback(() => {
             var e;
-            null === (e = _.current) || void 0 === e || e.focus();
+            null === (e = v.current) || void 0 === e || e.focus();
         }, []);
     (0, h.yp)({
         event: g.CkL.FOCUS_CHAT_BUTTON,
@@ -62,7 +62,7 @@ function v(e) {
         className: x.wrapper,
         children: [
             (0, i.jsx)(c.d, {
-                buttonRef: _,
+                buttonRef: v,
                 onClick: E,
                 label: S,
                 'aria-label': T.join(', '),
@@ -70,7 +70,7 @@ function v(e) {
                 iconComponent: j === f.MI.NO_CHAT ? s.ChevronLargeUpIcon : s.ChevronLargeDownIcon,
                 themeable: !0,
                 className: n,
-                ...v
+                ..._
             }),
             y
                 ? (0, i.jsx)(o.Z, {

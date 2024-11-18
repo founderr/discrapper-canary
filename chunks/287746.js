@@ -15,8 +15,8 @@ var i = n(200651),
     g = n(144144),
     C = n(166459),
     x = n(966390),
-    v = n(738619),
-    _ = n(410575),
+    _ = n(738619),
+    v = n(410575),
     I = n(744061),
     E = n(857595),
     b = n(607070),
@@ -29,8 +29,8 @@ var i = n(200651),
     y = n(46332),
     P = n(533379),
     M = n(555573),
-    R = n(213459),
-    L = n(456007),
+    L = n(213459),
+    R = n(456007),
     k = n(10718),
     O = n(998698),
     D = n(895924),
@@ -69,8 +69,8 @@ var i = n(200651),
     eg = n(314897),
     eC = n(433355),
     ex = n(703558),
-    ev = n(323873),
-    e_ = n(271383),
+    e_ = n(323873),
+    ev = n(271383),
     eI = n(375954),
     eE = n(496675),
     eb = n(944486),
@@ -83,8 +83,8 @@ var i = n(200651),
     ey = n(709054),
     eP = n(838440),
     eM = n(127654),
-    eR = n(979956),
-    eL = n(655687),
+    eL = n(979956),
+    eR = n(655687),
     ek = n(165540),
     eO = n(583027),
     eD = n(25007),
@@ -168,7 +168,7 @@ class eX extends l.PureComponent {
                 command: l,
                 section: e,
                 location: D.Vh.RECALL,
-                initialValues: (0, L.Dw)(l, null != i ? i : [])
+                initialValues: (0, R.Dw)(l, null != i ? i : [])
             });
         }
     }
@@ -341,8 +341,8 @@ class eX extends l.PureComponent {
                         if (
                             !(await (0, y.L)({
                                 applicationId: l.applicationId,
-                                userIndexState: R.ZP.getUserState(),
-                                guildIndexState: R.ZP.getGuildState(o.guild_id),
+                                userIndexState: L.ZP.getUserState(),
+                                guildIndexState: L.ZP.getGuildState(o.guild_id),
                                 location: t,
                                 sectionName: n,
                                 entrypoint: i
@@ -411,8 +411,8 @@ class eX extends l.PureComponent {
                             }
                         );
                     if (null != n && n.length > 0) {
-                        let e = (0, eR.KZ)(n);
-                        if ((0, eR.Bf)(e, null == s ? void 0 : s.id))
+                        let e = (0, eL.KZ)(n);
+                        if ((0, eL.Bf)(e, null == s ? void 0 : s.id))
                             return (
                                 (0, eM.G)(o, e),
                                 {
@@ -553,14 +553,14 @@ class eJ extends l.PureComponent {
                         : null
                 ]
             }),
-            R = Z && N,
-            L = R && N ? P : M,
+            L = Z && N,
+            R = L && N ? P : M,
             k = r()({
                 [ez.barWithAppLauncherButton]: b,
                 [ez.barWithAppsDMsUI]: Z
             });
         return (0, i.jsx)(
-            _.Z,
+            v.Z,
             {
                 page: (0, eT.mE)(this.props.channel),
                 children: (0, i.jsx)(en.sW, {
@@ -621,19 +621,19 @@ class eJ extends l.PureComponent {
                                                       : (0, i.jsxs)('form', {
                                                             ref: this.inputFormRef,
                                                             onSubmit: eK,
-                                                            className: r()(eV.form, { [eV.formWithLoadedChatInput]: !R }),
+                                                            className: r()(eV.form, { [eV.formWithLoadedChatInput]: !L }),
                                                             children: [
                                                                 x && (0, i.jsx)(ec.Z, { channelId: n.id }),
                                                                 n.isPrivate()
                                                                     ? (0, i.jsx)(eU.Z, {
                                                                           channel: n,
-                                                                          children: L
+                                                                          children: R
                                                                       })
                                                                     : (0, i.jsx)(eH.Z, {
                                                                           channel: n,
-                                                                          children: L
+                                                                          children: R
                                                                       }),
-                                                                (0, i.jsx)(v.Z, {
+                                                                (0, i.jsx)(_.Z, {
                                                                     channel: n,
                                                                     poggermodeEnabled: x
                                                                 }),
@@ -739,24 +739,24 @@ function eQ(e) {
 }
 t.Z = l.memo(function (e) {
     let { channel: t, guild: n, chatInputType: a, filterAfterTimestamp: r } = e,
-        { placeholder: s, accessibilityLabel: o } = (0, eL.Z)(t),
+        { placeholder: s, accessibilityLabel: o } = (0, eR.Z)(t),
         c = (0, eu.S)(eN.default.getCurrentUser(), t),
         [d] = (0, Q.AB)(null == n ? void 0 : n.id),
         u = (0, q.Ux)(null == n ? void 0 : n.id),
         m = (0, h.e7)([eN.default], () => eN.default.getCurrentUser()),
-        f = (0, h.e7)([e_.ZP], () => {
+        f = (0, h.e7)([ev.ZP], () => {
             var e, t, i;
-            return null != m && null !== (i = null === (e = e_.ZP.getMember(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : eG.lds, null == m ? void 0 : m.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== i && i;
+            return null != m && null !== (i = null === (e = ev.ZP.getMember(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : eG.lds, null == m ? void 0 : m.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== i && i;
         }),
         g = (0, h.e7)([es.Z], () => es.Z.isEnabled()),
         C = (0, ed.Z)(t.id),
         x = (0, ee.Z)(t.id),
-        v = (0, P.R)({
+        _ = (0, P.R)({
             channel: t,
             chatInputType: a,
             location: 'ChannelChatMemo'
         }),
-        _ = (0, U.h9)(t.id, 'ChannelChatMemo'),
+        v = (0, U.h9)(t.id, 'ChannelChatMemo'),
         { isInitialLoading: I, primaryEntryPointCommand: E, isProfileFetching: Z, wasProfileFetching: T, applicationId: A, channelId: y, commands: M } = (0, N.Z)({ channel: t });
     (0, S.Z)({
         isProfileFetching: Z,
@@ -765,11 +765,11 @@ t.Z = l.memo(function (e) {
         channelId: y,
         commands: M
     });
-    let R = l.useRef(null),
-        L = (0, h.e7)([j.Z], () => j.Z.appDMChannelsWithFailedLoads().has(t.id));
+    let L = l.useRef(null),
+        R = (0, h.e7)([j.Z], () => j.Z.appDMChannelsWithFailedLoads().has(t.id));
     return (0, i.jsx)(eJ, {
         channel: t,
-        isEditing: null != (0, h.e7)([ev.Z], () => ev.Z.getEditingMessageId(t.id)),
+        isEditing: null != (0, h.e7)([e_.Z], () => e_.Z.getEditingMessageId(t.id)),
         hasModalOpen: (0, p.useModalsStore)(p.hasAnyModalOpenSelector),
         guild: n,
         keyboardModeEnabled: (0, h.e7)([b.Z], () => b.Z.keyboardModeEnabled),
@@ -784,11 +784,11 @@ t.Z = l.memo(function (e) {
         poggermodeEnabled: g,
         isSelectedResourceChannel: x,
         showAutomodUserProfileChatBlocker: u && !f,
-        showAppLauncherButton: v,
-        showAppDMsUI: _,
+        showAppLauncherButton: _,
+        showAppDMsUI: v,
         isInitialLoading: I,
         showEntryPointAppCommandButton: null != E,
-        entryPointCommandButtonRef: R,
-        isFailedAppDMLoad: L
+        entryPointCommandButtonRef: L,
+        isFailedAppDMLoad: R
     });
 });

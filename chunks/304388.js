@@ -28,10 +28,10 @@ t.Z = l.forwardRef(function (e, t) {
     function x(e) {
         'focus' !== e.type && !u && f();
     }
-    function v() {
+    function _() {
         !u && g();
     }
-    function _(e) {
+    function v(e) {
         C(), h(!u), (!p || u) && e();
     }
     l.useImperativeHandle(
@@ -59,7 +59,7 @@ t.Z = l.forwardRef(function (e, t) {
                 isHovered: I,
                 onFocus: () => h(!0),
                 onMouseEnter: f,
-                onMouseLeave: v,
+                onMouseLeave: _,
                 renderPopout: n,
                 ...e
             }),
@@ -67,14 +67,14 @@ t.Z = l.forwardRef(function (e, t) {
             let { onClick: t, onKeyDown: n } = e;
             return (0, i.jsx)(i.Fragment, {
                 children: d({
-                    onClick: (e) => _(() => t(e)),
+                    onClick: (e) => v(() => t(e)),
                     onKeyDown: (e) => {
                         var t, i;
-                        return (t = e), (i = n), void ((t.key === s.vn.ENTER || t.key === s.vn.SPACE) && _(() => i(t)));
+                        return (t = e), (i = n), void ((t.key === s.vn.ENTER || t.key === s.vn.SPACE) && v(() => i(t)));
                     },
                     className: o.actionBarButton,
                     onMouseEnter: x,
-                    onMouseLeave: v,
+                    onMouseLeave: _,
                     isActive: I
                 })
             });

@@ -14,8 +14,8 @@ var i = n(200651),
     g = n(626135),
     C = n(906605),
     x = n(574176),
-    v = n(833858),
-    _ = n(866071),
+    _ = n(833858),
+    v = n(866071),
     I = n(223135),
     E = n(625938),
     b = n(981631),
@@ -31,9 +31,9 @@ t.Z = (e) => {
         y = (0, s.e7)([f.default], () => f.default.getUser(a)),
         P = (0, s.e7)([m.Z], () => m.Z.getChannelId() === S.id),
         M = (0, s.e7)([p.Z], () => p.Z.can(b.Plq.CONNECT, S)),
-        R = (null == t ? void 0 : t.emoji) == null || (0, _.K)(t.emoji, S),
-        L = (0, s.e7)([h.ZP], () => (null != S.guild_id && null != y ? h.ZP.getMember(S.guild_id, a) : null)),
-        k = l.useMemo(() => (null != y ? (0, d.SG)(void 0, L, y, { size: 40 }) : void 0), [L, y]);
+        L = (null == t ? void 0 : t.emoji) == null || (0, v.K)(t.emoji, S),
+        R = (0, s.e7)([h.ZP], () => (null != S.guild_id && null != y ? h.ZP.getMember(S.guild_id, a) : null)),
+        k = l.useMemo(() => (null != y ? (0, d.SG)(void 0, R, y, { size: 40 }) : void 0), [R, y]);
     return (l.useEffect(() => {
         (0, C.UP)();
     }, []),
@@ -80,7 +80,7 @@ t.Z = (e) => {
                                                 variant: 'text-sm/semibold',
                                                 color: 'text-normal',
                                                 className: N.statusText,
-                                                children: (0, v.O8)(t)
+                                                children: (0, _.O8)(t)
                                             })
                                         ]
                                     }),
@@ -124,7 +124,7 @@ t.Z = (e) => {
                                       children: Z.intl.string(Z.t['B/dHXF'])
                                   })
                                 : null,
-                            P && R
+                            P && L
                                 ? (0, i.jsx)(o.Button, {
                                       className: N.cta,
                                       size: o.Button.Sizes.SMALL,

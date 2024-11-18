@@ -14,28 +14,28 @@ var i = n(200651),
     f = n(313439);
 t.Z = (e) => {
     let { channel: t, className: n } = e,
-        { isHovered: a, setIsHovered: g, onMouseEnter: C, onMouseLeave: x, cancelTimers: v } = (0, d.Z)(200, 300),
-        [_, I] = l.useState(!1),
+        { isHovered: a, setIsHovered: g, onMouseEnter: C, onMouseLeave: x, cancelTimers: _ } = (0, d.Z)(200, 300),
+        [v, I] = l.useState(!1),
         E = (0, s.e7)([h.Z], () => h.Z.effectCooldownEndTime),
         b = l.useMemo(() => (null != E ? (E.getTime() - Date.now()) / 1000 : 0), [E]),
         { seconds: Z } = (0, c.Z)(null != E ? E : new Date()),
         N = Z > 0,
         S = l.useCallback(
             (e) => {
-                if ('focus' !== e.type) !_ && !N && C();
+                if ('focus' !== e.type) !v && !N && C();
             },
-            [_, N, C]
+            [v, N, C]
         ),
         T = l.useCallback(() => {
-            !_ && x();
-        }, [x, _]),
+            !v && x();
+        }, [x, v]),
         j = l.useCallback(
             (e, t) => {
-                v(), I(!_), (!a || _) && (null == t || t(e));
+                _(), I(!v), (!a || v) && (null == t || t(e));
             },
-            [v, _, a]
+            [_, v, a]
         ),
-        A = a || _;
+        A = a || v;
     return (0, i.jsx)(o.Popout, {
         shouldShow: A,
         animationPosition: 'bottom',

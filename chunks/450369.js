@@ -19,8 +19,8 @@ var i = n(200651),
     g = n(102172),
     C = n(352978),
     x = n(184301),
-    v = n(347475),
-    _ = n(199902),
+    _ = n(347475),
+    v = n(199902),
     I = n(430824),
     E = n(496675),
     b = n(979651),
@@ -45,7 +45,7 @@ let y = 16 / 9,
                               channelId: a.id
                           }),
             renderPopout: (e) =>
-                (0, i.jsx)(v.Z, {
+                (0, i.jsx)(_.Z, {
                     ...e,
                     guildId: r,
                     channelId: a.id,
@@ -79,10 +79,10 @@ let y = 16 / 9,
     },
     M = (e) => {
         let { stageParticipant: t, rtcParticipant: n, channel: a, width: r, isModerator: d, onContextMenu: h, inPopout: x } = e,
-            { reducedMotion: v } = l.useContext(o.AccessibilityPreferencesContext),
+            { reducedMotion: _ } = l.useContext(o.AccessibilityPreferencesContext),
             { id: Z, blocked: P } = t,
-            M = (0, s.Wu)([_.Z], () => _.Z.getAllActiveStreams(), []),
-            { selectedParticipant: R, largeStream: L } = (0, s.cj)([p.Z], () => ({
+            M = (0, s.Wu)([v.Z], () => v.Z.getAllActiveStreams(), []),
+            { selectedParticipant: L, largeStream: R } = (0, s.cj)([p.Z], () => ({
                 selectedParticipant: null != a ? p.Z.getSelectedParticipant(a.id) : null,
                 largeStream: null != a && p.Z.getStageStreamSize(a.id)
             })),
@@ -92,9 +92,9 @@ let y = 16 / 9,
                         if (!(0, g.p9)(a, b.Z, I.Z, E.Z, m.Z)[0]) return;
                         (0, u.rn)((0, f.my)(e.id), { forceMultiple: t.shiftKey });
                     }
-                    (null == R ? void 0 : R.id) === e.id ? (L ? (c.Z.selectParticipant(a.id, null), c.Z.updateStageStreamSize(a.id, !1)) : c.Z.updateStageStreamSize(a.id, !0)) : (c.Z.updateStageStreamSize(a.id, !1), c.Z.selectParticipant(a.id, e.id));
+                    (null == L ? void 0 : L.id) === e.id ? (R ? (c.Z.selectParticipant(a.id, null), c.Z.updateStageStreamSize(a.id, !1)) : c.Z.updateStageStreamSize(a.id, !0)) : (c.Z.updateStageStreamSize(a.id, !1), c.Z.selectParticipant(a.id, e.id));
                 },
-                [M, a, R, L]
+                [M, a, L, R]
             );
         return (0, i.jsx)(
             N.Z,
@@ -110,7 +110,7 @@ let y = 16 / 9,
                 onClick: k,
                 onContextMenu: h,
                 paused: !1,
-                pulseSpeakingIndicator: !v.enabled,
+                pulseSpeakingIndicator: !_.enabled,
                 width: r,
                 children: d && n.type === j.fO.USER && (0, i.jsx)(S.Z, {})
             },

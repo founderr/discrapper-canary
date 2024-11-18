@@ -21,8 +21,8 @@ var i = n(200651),
     g = n(43982),
     C = n(721351),
     x = n(420529),
-    v = n(927923),
-    _ = n(981631),
+    _ = n(927923),
+    v = n(981631),
     I = n(921944),
     E = n(388032),
     b = n(125298);
@@ -49,9 +49,9 @@ function N(e) {
         y = (0, s.useModalsStore)(s.hasAnyModalOpenSelector),
         P = (0, f.Z)(),
         M = P.filter((e) => e.twoWayLink),
-        [R, L] = l.useState(!1);
+        [L, R] = l.useState(!1);
     if (null == N && 0 === P.length) return null;
-    let k = _.WtW.VOICE !== j && [_.AEg.NO_CHAT, _.AEg.FULL_SCREEN].includes(A) ? 'top' : 'bottom',
+    let k = v.WtW.VOICE !== j && [v.AEg.NO_CHAT, v.AEg.FULL_SCREEN].includes(A) ? 'top' : 'bottom',
         O = [];
     return (
         M.length > 0 && O.push(r.z.DONUT_DESKTOP_NUX),
@@ -67,8 +67,8 @@ function N(e) {
                             position: k,
                             spacing: o ? 16 : void 0,
                             positionKey: ''.concat(j, ':').concat(A),
-                            onRequestClose: () => L(!1),
-                            shouldShow: (o || R) && !T && !y,
+                            onRequestClose: () => R(!1),
+                            shouldShow: (o || L) && !T && !y,
                             renderPopout: (e) => {
                                 let { closePopout: n } = e;
                                 return (0, i.jsx)(d.Z, {
@@ -77,7 +77,7 @@ function N(e) {
                                               popoutPosition: k,
                                               onDismiss: () => a(I.L.UNKNOWN),
                                               onAccept: () => {
-                                                  a(I.L.UNKNOWN), L(!0);
+                                                  a(I.L.UNKNOWN), R(!0);
                                               },
                                               gameConsoleAccounts: M
                                           })
@@ -94,8 +94,8 @@ function N(e) {
                                 return (0, i.jsx)(u.Z, {
                                     ...e,
                                     ...x,
-                                    onClick: () => L(!0),
-                                    label: null != (t = S) ? (t === v.YE.XBOX ? E.intl.string(E.t.T0uYKy) : E.intl.string(E.t.FWAzS0)) : E.intl.string(E.t['mbi/fH']),
+                                    onClick: () => R(!0),
+                                    label: null != (t = S) ? (t === _.YE.XBOX ? E.intl.string(E.t.T0uYKy) : E.intl.string(E.t.FWAzS0)) : E.intl.string(E.t['mbi/fH']),
                                     iconComponent: (0, C.Z)(S)
                                 });
                             }

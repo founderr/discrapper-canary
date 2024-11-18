@@ -22,12 +22,12 @@ function C(e) {
     let { channel: t, children: C } = e,
         x = (0, l.e7)([d.Z], () => d.Z.isBlocked(t.getRecipientId()));
     (0, s.Z)(t.id);
-    let v = (0, o.Z)(t.id),
-        _ = t.isSystemDM(),
-        I = x && !_ && !t.isMultiUserDM(),
+    let _ = (0, o.Z)(t.id),
+        v = t.isSystemDM(),
+        I = x && !v && !t.isMultiUserDM(),
         E = {};
-    if (_) {
-        let e = v
+    if (v) {
+        let e = _
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
                       g.intl.string(g.t['+KSnWV']),
@@ -42,7 +42,7 @@ function C(e) {
             (E.subtitle = g.intl.string(g.t['n/Vzk5'])),
             (E.buttonText = e),
             (E.onButtonClick = () => {
-                if (v) {
+                if (_) {
                     open(f.D2),
                         u.default.track(m.rMx.CHANGE_LOG_CTA_CLICKED, {
                             cta_type: 'chat_blocker',

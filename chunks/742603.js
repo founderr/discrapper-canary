@@ -21,8 +21,8 @@ var l = n(120356),
     g = n(554747),
     C = n(854698),
     x = n(897669),
-    v = n(665149),
-    _ = n(984370),
+    _ = n(665149),
+    v = n(984370),
     I = n(910611),
     E = n(454585),
     b = n(134483),
@@ -35,8 +35,8 @@ var l = n(120356),
     y = n(613548),
     P = n(221888),
     M = n(339340),
-    R = n(354459),
-    L = n(981631),
+    L = n(354459),
+    R = n(981631),
     k = n(231338),
     O = n(388032),
     D = n(756567),
@@ -52,7 +52,7 @@ function B(e) {
             maxVisibleUsers: 5,
             guildId: n.getGuildId(),
             channelId: n.id,
-            disableInteraction: l === L.IlC.POPOUT || a === L.AEg.FULL_SCREEN
+            disableInteraction: l === R.IlC.POPOUT || a === R.AEg.FULL_SCREEN
         })
     });
 }
@@ -85,11 +85,11 @@ function H(e) {
         o = (0, g.qY)(a.id),
         c = null != o ? (0, C.DK)(o) : null,
         u = null != o;
-    if ((null == l ? void 0 : l.type) === R.fO.ACTIVITY)
+    if ((null == l ? void 0 : l.type) === L.fO.ACTIVITY)
         null != n &&
             (t = (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(v.ZP.Divider, { className: D.divider }),
+                    (0, i.jsx)(_.ZP.Divider, { className: D.divider }),
                     (0, i.jsx)(f.Z, {
                         game: n,
                         className: D.activityIcon
@@ -107,12 +107,12 @@ function H(e) {
                         })
                 ]
             }));
-    else if ((null == l ? void 0 : l.type) === R.fO.STREAM) {
+    else if ((null == l ? void 0 : l.type) === L.fO.STREAM) {
         let e = l.user,
             n = l.stream;
         t = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(v.ZP.Divider, { className: D.divider }),
+                (0, i.jsx)(_.ZP.Divider, { className: D.divider }),
                 (0, i.jsx)(U, {
                     user: e,
                     channel: a,
@@ -149,7 +149,7 @@ function G(e) {
         ),
         C = (0, p.ZP)(t),
         x = (0, m.KS)(t),
-        [N] = (0, u.Z)((null == g ? void 0 : g.type) === R.fO.ACTIVITY ? [g.id] : []),
+        [N] = (0, u.Z)((null == g ? void 0 : g.type) === L.fO.ACTIVITY ? [g.id] : []),
         S = O.intl.string(O.t.BVZqJi);
     t.isDM() ? (S = O.intl.string(O.t.jN2DfX)) : t.isGroupDM() && (S = O.intl.string(O.t['e5y+go']));
     let A = (0, r.e7)([h.Z], () => h.Z.getChannelStatus(t)),
@@ -207,13 +207,13 @@ function G(e) {
             (0, i.jsx)(s.ThemeProvider, {
                 theme: k.BR.DARK,
                 children: (e) =>
-                    (0, i.jsxs)(v.ZP, {
-                        onDoubleClick: _.O,
+                    (0, i.jsxs)(_.ZP, {
+                        onDoubleClick: v.O,
                         transparent: !0,
                         className: e,
                         childrenBottom: U,
                         toolbar: (0, i.jsx)(y.Z, {
-                            inPopout: o === L.IlC.POPOUT,
+                            inPopout: o === R.IlC.POPOUT,
                             channel: t,
                             appContext: o,
                             inCall: c,
@@ -222,13 +222,13 @@ function G(e) {
                         }),
                         children: [
                             null != x
-                                ? (0, i.jsx)(v.ZP.Icon, {
+                                ? (0, i.jsx)(_.ZP.Icon, {
                                       icon: x,
                                       disabled: !0,
                                       'aria-label': S
                                   })
                                 : null,
-                            (0, i.jsx)(v.ZP.Title, {
+                            (0, i.jsx)(_.ZP.Title, {
                                 children: (0, i.jsxs)(i.Fragment, {
                                     children: [
                                         C,

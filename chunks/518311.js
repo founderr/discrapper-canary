@@ -22,8 +22,8 @@ var i,
     g = n(26151),
     C = n(493683),
     x = n(529103),
-    v = n(447543),
-    _ = n(708690),
+    _ = n(447543),
+    v = n(708690),
     I = n(194359),
     E = n(425493),
     b = n(461745),
@@ -36,8 +36,8 @@ var i,
     y = n(366980),
     P = n(703656),
     M = n(93127),
-    R = n(428598),
-    L = n(131704),
+    L = n(428598),
+    R = n(131704),
     k = n(592125),
     O = n(341165),
     D = n(544610),
@@ -175,7 +175,7 @@ class ec extends (i = a.PureComponent) {
     }
     componentDidMount() {
         let { channel: e } = this.props;
-        f.Z.wait(() => _.Z.open(null == e ? void 0 : e.id));
+        f.Z.wait(() => v.Z.open(null == e ? void 0 : e.id));
         let t = (0, N.v_)(e);
         F.default.track(Q.rMx.OPEN_POPOUT, {
             ...t,
@@ -187,7 +187,7 @@ class ec extends (i = a.PureComponent) {
             z.S.subscribe(Q.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown);
     }
     componentWillUnmount() {
-        z.S.unsubscribe(Q.CkL.SCROLL_PAGE_UP, this.scrollPageUp), z.S.unsubscribe(Q.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), null != this.copyTimeout && clearTimeout(this.copyTimeout), f.Z.wait(() => _.Z.close());
+        z.S.unsubscribe(Q.CkL.SCROLL_PAGE_UP, this.scrollPageUp), z.S.unsubscribe(Q.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), null != this.copyTimeout && clearTimeout(this.copyTimeout), f.Z.wait(() => v.Z.close());
     }
     isNotFriends() {
         let { channel: e } = this.props;
@@ -200,7 +200,7 @@ class ec extends (i = a.PureComponent) {
         let { channel: e } = this.props;
         if (null == e || !e.isMultiUserDM() || this.isPartyFull()) return;
         let { inviteMaxAgeSeconds: t } = q.Z.getCurrentConfig({ location: '5326c5_1' }, { autoTrackExposure: !1 });
-        v.Z.createInvite(e.id, { max_age: t }, Q.t4x.GROUP_DM);
+        _.Z.createInvite(e.id, { max_age: t }, Q.t4x.GROUP_DM);
     }
     isPartyFull() {
         let { channel: e } = this.props;
@@ -485,7 +485,7 @@ class ec extends (i = a.PureComponent) {
         return {
             affinities: e.map((e) => {
                 var t;
-                let n = R.Z.getUserAffinity(e);
+                let n = L.Z.getUserAffinity(e);
                 return null !== (t = null == n ? void 0 : n.communicationProbability) && void 0 !== t ? t : -1;
             })
         };
@@ -561,14 +561,14 @@ class ec extends (i = a.PureComponent) {
                 null == e || e.focus();
             }),
             ei(this, 'focusResult', (e) => {
-                _.Z.select(e);
+                v.Z.select(e);
             }),
             ei(this, 'handleSelect', (e, t) => {
                 let { results: n, channel: i } = this.props;
-                null == t ? _.Z.clear(null == i ? void 0 : i.id) : null != n && this.handleClick(n[t].user.id);
+                null == t ? v.Z.clear(null == i ? void 0 : i.id) : null != n && this.handleClick(n[t].user.id);
             }),
             ei(this, 'handleSelectionChange', (e, t) => {
-                _.Z.select(t);
+                v.Z.select(t);
                 let n = this.scrollerRef.current;
                 null != n &&
                     n.scrollToIndex({
@@ -580,7 +580,7 @@ class ec extends (i = a.PureComponent) {
             ei(this, 'handleQueryChange', (e) => {
                 let { channel: t } = this.props,
                     n = (0, N.v_)(t);
-                _.Z.search(e, null == t ? void 0 : t.id),
+                v.Z.search(e, null == t ? void 0 : t.id),
                     null != this._existingTimeout && clearTimeout(this._existingTimeout),
                     (this._existingTimeout = setTimeout(() => {
                         F.default.track(Q.rMx.SEARCH_USER_LIST_STARTED, {
@@ -594,11 +594,11 @@ class ec extends (i = a.PureComponent) {
             }),
             ei(this, 'handleRemoveUser', (e) => {
                 let t = Array.from(this.props.selectedUsers);
-                _.Z.removeUser(t[e]), this.forceFocus();
+                v.Z.removeUser(t[e]), this.forceFocus();
             }),
             ei(this, 'handleClick', (e) => {
                 let { selectedUsers: t, query: n, channel: i } = this.props;
-                t.has(e) ? _.Z.removeUser(e) : (_.Z.addUser(e), n.length > 0 && _.Z.clear(null == i ? void 0 : i.id)), this.forceFocus();
+                t.has(e) ? v.Z.removeUser(e) : (v.Z.addUser(e), n.length > 0 && v.Z.clear(null == i ? void 0 : i.id)), this.forceFocus();
             }),
             ei(this, 'handleAddFriendNavigation', () => {
                 (0, P.uL)(Q.Z5c.FRIENDS), x.Z.setSection(Q.pJs.ADD_FRIEND), this.props.onClose();
@@ -768,7 +768,7 @@ function eh(e) {
     return new Set(
         c()(k.Z.getMutablePrivateChannels())
             .values()
-            .filter((e) => (0, L.bc)(e.type))
+            .filter((e) => (0, R.bc)(e.type))
             .filter((e) => ep(e.recipients) === t)
             .map((e) => e.id)
             .value()

@@ -21,8 +21,8 @@ var i = n(200651),
     g = n(488131),
     C = n(375954),
     x = n(626135),
-    v = n(585483),
-    _ = n(403182),
+    _ = n(585483),
+    v = n(403182),
     I = n(127654),
     E = n(752305),
     b = n(951211),
@@ -59,7 +59,7 @@ function y() {
     );
 }
 function P(e) {
-    let { channel: t, options: r, onFileUpload: m, onClose: f, onSelect: C, draftType: P, editorTextContent: M, setValue: R, openClips: L } = e,
+    let { channel: t, options: r, onFileUpload: m, onClose: f, onSelect: C, draftType: P, editorTextContent: M, setValue: L, openClips: R } = e,
         { analyticsLocations: k } = (0, h.ZP)();
     l.useEffect(() => {
         x.default.track(Z.rMx.OPEN_POPOUT, {
@@ -72,10 +72,10 @@ function P(e) {
         (0, g.R6)(t, void 0, 'Plus Button');
     }
     function D() {
-        x.default.track(Z.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), R('/', (0, E.JM)('/'));
+        x.default.track(Z.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), L('/', (0, E.JM)('/'));
     }
     function w() {
-        L();
+        R();
     }
     function B() {
         (0, p.EW)(s.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: N.L.TAKE_ACTION }),
@@ -117,7 +117,7 @@ function P(e) {
             n = 'txt',
             i = '',
             l = M.match(A);
-        null != l && ((i = l[1]), (n = l[2]), (e = l[3]), (i += l[4])), (0, I.d)([(0, _.dp)(new Blob([e], { type: 'text/plain' }), 'message.'.concat(n))], t, P), v.S.dispatchToLastSubscribed(Z.CkL.CLEAR_TEXT), '' !== i && v.S.dispatchToLastSubscribed(Z.CkL.INSERT_TEXT, { plainText: i });
+        null != l && ((i = l[1]), (n = l[2]), (e = l[3]), (i += l[4])), (0, I.d)([(0, v.dp)(new Blob([e], { type: 'text/plain' }), 'message.'.concat(n))], t, P), _.S.dispatchToLastSubscribed(Z.CkL.CLEAR_TEXT), '' !== i && _.S.dispatchToLastSubscribed(Z.CkL.INSERT_TEXT, { plainText: i });
     }
     return (0, i.jsx)(o.Menu, {
         onSelect: C,

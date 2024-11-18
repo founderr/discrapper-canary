@@ -20,8 +20,8 @@ var i = n(200651),
     g = n(569545),
     C = n(517525),
     x = n(665149),
-    v = n(6242),
-    _ = n(757692),
+    _ = n(6242),
+    v = n(757692),
     I = n(933843),
     E = n(141321),
     b = n(2818),
@@ -34,8 +34,8 @@ var i = n(200651),
     y = n(961048),
     P = n(179424),
     M = n(786915),
-    R = n(975146),
-    L = n(991617),
+    L = n(975146),
+    R = n(991617),
     k = n(597998),
     O = n(606304),
     D = n(594174),
@@ -102,8 +102,8 @@ function K(e) {
         K = (0, d.e7)([D.default], () => D.default.getCurrentUser()),
         Y = (0, B.Z)(n),
         q = (0, I.So)(c.q.STREAM_HIGH_QUALITY),
-        X = (0, _.o)(O, K),
-        J = (0, v.lL)('CallHeader', !0, K, X),
+        X = (0, v.o)(O, K),
+        J = (0, _.lL)('CallHeader', !0, K, X),
         { enabled: Q, inInbox: $ } = b.Z.useExperiment({ location: 'ChannelCallHeaderToolbar' }),
         ee = (0, f.Q)('ChannelCallHeaderToolbar'),
         { preventIdle: et, allowIdle: en } = (0, T.Y)('popup'),
@@ -181,7 +181,7 @@ function K(e) {
                         renderPopout: () => (0, i.jsx)(j.Z, { children: (0, i.jsx)(H.Z, { channel: n }) }),
                         children: (e, t) => {
                             let { isShown: n } = t;
-                            return (0, l.createElement)(R.Z, {
+                            return (0, l.createElement)(L.Z, {
                                 ...e,
                                 isActive: n,
                                 count: V,
@@ -205,7 +205,7 @@ function K(e) {
                           'deselect-participant'
                       )
                     : (0, i.jsx)(
-                          L.Z,
+                          R.Z,
                           {
                               className: z.button,
                               channelId: N,

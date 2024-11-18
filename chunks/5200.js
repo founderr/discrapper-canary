@@ -1,6 +1,6 @@
 n.d(t, {
     Y: function () {
-        return _;
+        return v;
     }
 }),
     n(47120);
@@ -20,13 +20,13 @@ var i,
     g = n(388032),
     C = n(194392);
 let x = ['embedded_cover'],
-    v = {
+    _ = {
         tension: 800,
         friction: 24
     };
-function _(e) {
+function v(e) {
     var t;
-    let { channel: n, activityItem: i, onClick: l, aspectRatio: s = 0, animatedDivClass: _, commandOrigin: I } = e,
+    let { channel: n, activityItem: i, onClick: l, aspectRatio: s = 0, animatedDivClass: v, commandOrigin: I } = e,
         {
             onActivityItemSelected: E,
             imageBackground: b,
@@ -105,7 +105,7 @@ function _(e) {
         onMouseLeave: A,
         innerClassName: C.activityItemButtonInnerClass,
         children: (0, a.jsx)(d.Spring, {
-            config: v,
+            config: _,
             from: { value: 0 },
             to: { value: S ? 1 : 0 },
             children: (e) => {
@@ -114,7 +114,7 @@ function _(e) {
                     theme: f.BRd.DARK,
                     children: (e) =>
                         (0, a.jsx)(c.animated.div, {
-                            className: o()(e, C.activityItem, _, {
+                            className: o()(e, C.activityItem, v, {
                                 [C.activityItem_13_11]: 0 === s,
                                 [C.activityItem_16_9]: 1 === s
                             }),
@@ -139,4 +139,4 @@ function _(e) {
         })
     });
 }
-((l = i || (i = {}))[(l.THIRTEEN_BY_ELEVEN = 0)] = 'THIRTEEN_BY_ELEVEN'), (l[(l.SIXTEEN_BY_NINE = 1)] = 'SIXTEEN_BY_NINE'), (_.AspectRatio = i);
+((l = i || (i = {}))[(l.THIRTEEN_BY_ELEVEN = 0)] = 'THIRTEEN_BY_ELEVEN'), (l[(l.SIXTEEN_BY_NINE = 1)] = 'SIXTEEN_BY_NINE'), (v.AspectRatio = i);

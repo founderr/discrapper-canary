@@ -20,8 +20,8 @@ var l = n(512722),
     g = n(423589),
     C = n(592125),
     x = n(496675),
-    v = n(881824),
-    _ = n(146085),
+    _ = n(881824),
+    v = n(146085),
     I = n(427679),
     E = n(354459),
     b = n(388032);
@@ -38,10 +38,10 @@ function Z(e) {
         children: [
             (function (e) {
                 let t = (0, r.e7)([C.Z], () => C.Z.getChannel(e), [e]),
-                    n = (0, r.e7)([x.Z], () => x.Z.can(_.yP, t)),
+                    n = (0, r.e7)([x.Z], () => x.Z.can(v.yP, t)),
                     l = (0, r.e7)([I.Z], () => I.Z.getStageInstanceByChannel(e), [e]),
                     a = (0, o.bp)(),
-                    c = () => null != t && (0, v.T)(t, a);
+                    c = () => null != t && (0, _.T)(t, a);
                 return (null == t ? void 0 : t.isGuildStageVoice()) && n
                     ? null != l
                         ? (0, i.jsx)(s.MenuItem, {

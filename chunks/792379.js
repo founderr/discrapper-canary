@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return R;
+        return L;
     }
 });
 var i = n(200651),
@@ -19,8 +19,8 @@ var i = n(200651),
     g = n(221292),
     C = n(687158),
     x = n(899007),
-    v = n(648052),
-    _ = n(867176),
+    _ = n(648052),
+    v = n(867176),
     I = n(280885),
     E = n(900927),
     b = n(678738),
@@ -33,10 +33,10 @@ var i = n(200651),
     y = n(388032),
     P = n(483078),
     M = n(237563);
-function R(e) {
+function L(e) {
     let { user: t, channel: n } = e,
-        R = __OVERLAY__ || !(0, u.Z)(t.id),
-        L = (0, C.ZP)(t.id),
+        L = __OVERLAY__ || !(0, u.Z)(t.id),
+        R = (0, C.ZP)(t.id),
         k = (0, o.ZP)(),
         { analyticsLocations: O } = (0, d.ZP)(c.Z.PROFILE_PANEL),
         D = (0, f.ZB)({
@@ -60,7 +60,7 @@ function R(e) {
             children: (0, i.jsxs)(Z.Z, {
                 ref: w,
                 user: t,
-                displayProfile: L,
+                displayProfile: R,
                 profileType: A.y0.PANEL,
                 themeOverride: k,
                 children: [
@@ -73,18 +73,18 @@ function R(e) {
                             (0, i.jsxs)('header', {
                                 className: P.header,
                                 children: [
-                                    (0, i.jsx)(_.Z, {
+                                    (0, i.jsx)(v.Z, {
                                         user: t,
-                                        displayProfile: L,
+                                        displayProfile: R,
                                         profileType: A.y0.PANEL,
                                         animateOnHover: !B
                                     }),
                                     (0, i.jsx)(x.Z, {
                                         user: t,
-                                        displayProfile: L,
+                                        displayProfile: R,
                                         channelId: n.id,
                                         profileType: A.y0.PANEL,
-                                        onOpenProfile: R ? void 0 : U
+                                        onOpenProfile: L ? void 0 : U
                                     }),
                                     t.isClyde() && (0, i.jsx)(h.Z, { className: P.headerTag })
                                 ]
@@ -96,10 +96,10 @@ function R(e) {
                                         user: t,
                                         profileType: A.y0.PANEL,
                                         nickname: m.ZP.getName(null, n.id, t),
-                                        pronouns: null == L ? void 0 : L.pronouns,
-                                        onOpenProfile: R ? void 0 : U,
-                                        tags: (0, i.jsx)(v.Z, {
-                                            displayProfile: L,
+                                        pronouns: null == R ? void 0 : R.pronouns,
+                                        onOpenProfile: L ? void 0 : U,
+                                        tags: (0, i.jsx)(_.Z, {
+                                            displayProfile: R,
                                             profileType: A.y0.PANEL
                                         })
                                     }),
@@ -110,7 +110,7 @@ function R(e) {
                                                 heading: y.intl.string(y.t['61W33d']),
                                                 headingColor: 'header-primary',
                                                 children: (0, i.jsx)(I.Z, {
-                                                    userBio: null == L ? void 0 : L.bio,
+                                                    userBio: null == R ? void 0 : R.bio,
                                                     userId: t.id,
                                                     animateOnHover: !0,
                                                     isHovering: B
@@ -127,7 +127,7 @@ function R(e) {
                             })
                         ]
                     }),
-                    !R &&
+                    !L &&
                         (0, i.jsx)('footer', {
                             className: P.footer,
                             children: (0, i.jsx)(r.Button, {
@@ -146,9 +146,9 @@ function R(e) {
                                 children: y.intl.string(y.t['+Xp3ho'])
                             })
                         }),
-                    (null == L ? void 0 : L.profileEffectId) != null &&
+                    (null == R ? void 0 : R.profileEffectId) != null &&
                         (0, i.jsx)(p.Z, {
-                            profileEffectId: null == L ? void 0 : L.profileEffectId,
+                            profileEffectId: null == R ? void 0 : R.profileEffectId,
                             isHovering: B
                         })
                 ]

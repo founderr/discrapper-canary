@@ -19,8 +19,8 @@ var i = n(200651),
     g = n(937889),
     C = n(739566),
     x = n(267128),
-    v = n(507418),
-    _ = n(348238),
+    _ = n(507418),
+    v = n(348238),
     I = n(981631),
     E = n(388032);
 let b = l.memo(function (e) {
@@ -28,8 +28,8 @@ let b = l.memo(function (e) {
     let { baseMessage: n, referencedMessage: b, channel: Z, compact: N = !1, referencedUsernameProfile: S, referencedAvatarProfile: T, setPopout: j, isReplySpineClickable: A, showReplySpine: y } = e,
         P = b.state === p.Y.LOADED ? b.message : void 0,
         M = (0, C.Uj)(P),
-        R = (0, c.p)(),
-        L = (0, d.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()),
+        L = (0, c.p)(),
+        R = (0, d.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()),
         k = l.useMemo(() => {
             if (null == P) return null;
             let e = (0, s.Z)(P);
@@ -76,7 +76,7 @@ let b = l.memo(function (e) {
                 let t = {
                         formatInline: !0,
                         allowLinks: !0,
-                        shouldFilterKeywords: R
+                        shouldFilterKeywords: L
                     },
                     n = e.isFirstMessageInForumPost(Z)
                         ? {
@@ -88,18 +88,18 @@ let b = l.memo(function (e) {
                         : {
                               ...t,
                               formatInline: !0,
-                              allowHeading: L,
-                              allowList: L
+                              allowHeading: R,
+                              allowList: R
                           };
                 return (0, g.ZP)(e, n).content;
             }
             return null;
-        }, [P, M, Z, L, R]),
+        }, [P, M, Z, R, L]),
         O = (0, a.e7)([m.Z], () => null != P && m.Z.isBlockedForMessage(P), [P]),
-        D = (0, _.wq)(null == P ? void 0 : P.author.id, Z.id),
-        w = (0, _.$3)(n, P, O),
-        B = (0, _.Wl)(P, Z, S, j),
-        U = (0, _.rY)(T, j),
+        D = (0, v.wq)(null == P ? void 0 : P.author.id, Z.id),
+        w = (0, v.$3)(n, P, O),
+        B = (0, v.Wl)(P, Z, S, j),
+        U = (0, v.rY)(T, j),
         H = l.useCallback(
             () =>
                 j({
@@ -120,7 +120,7 @@ let b = l.memo(function (e) {
         isReplyAuthorBlocked: O,
         showAvatarPopout: T,
         showUsernamePopout: S,
-        renderPopout: v.Z,
+        renderPopout: _.Z,
         onClickAvatar: U,
         onClickUsername: B,
         onClickReply: w,

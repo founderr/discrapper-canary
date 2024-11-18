@@ -19,7 +19,7 @@ function p(e) {
         g = (0, c.f)('useTrackRoleSubscriptionUpsellAnalytics'),
         { activeSubscription: C } = (0, u.Z)(p),
         x = null != C,
-        v = (0, l.Wu)(
+        _ = (0, l.Wu)(
             [d.Z],
             () =>
                 (null != f ? f : []).filter((e) => {
@@ -28,21 +28,21 @@ function p(e) {
                 }),
             [f]
         ),
-        { analyticsLocations: _ } = (0, r.ZP)(null !== (t = (0, s.DR)()) && void 0 !== t ? t : []),
+        { analyticsLocations: v } = (0, r.ZP)(null !== (t = (0, s.DR)()) && void 0 !== t ? t : []),
         I = i.useRef(!1);
     i.useEffect(() => {
         g &&
             null != p &&
-            null != v &&
+            null != _ &&
             !I.current &&
             ((I.current = !0),
             o.default.track(h.rMx.ROLE_SUBSCRIPTION_LISTING_UPSELL_PAGE_VIEWED, {
                 role_subscription_group_listing_id: p,
-                role_subscription_listing_ids: v,
+                role_subscription_listing_ids: _,
                 is_premium_member: x,
-                location_stack: _,
+                location_stack: v,
                 location: m,
                 ...(0, a.hH)(n)
             }));
-    }, [n, p, g, m, v, x, _]);
+    }, [n, p, g, m, _, x, v]);
 }

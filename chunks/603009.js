@@ -20,8 +20,8 @@ var i = n(200651),
     g = n(594174),
     C = n(626135),
     x = n(645896),
-    v = n(905362),
-    _ = n(603368),
+    _ = n(905362),
+    v = n(603368),
     I = n(353093),
     E = n(940725),
     b = n(114487),
@@ -35,15 +35,15 @@ function A(e) {
     let { guild: n, showToast: a, onConfirm: o, onDismiss: p } = e,
         [m, f] = l.useState(!1),
         C = l.useRef(null),
-        v = (0, x.Cc)(n.id),
+        _ = (0, x.Cc)(n.id),
         E = (0, u.ZP)(),
         N = (0, d.e7)([h.Z], () => h.Z.useReducedMotion),
-        S = (0, _.nP)(null == v ? void 0 : null === (t = v.branding) || void 0 === t ? void 0 : t.primaryColor, [c.tokens.colors.BG_BRAND, 0.5]),
+        S = (0, v.nP)(null == _ ? void 0 : null === (t = _.branding) || void 0 === t ? void 0 : t.primaryColor, [c.tokens.colors.BG_BRAND, 0.5]),
         A = c.tokens.colors.BG_SURFACE_OVERLAY.resolve({
             theme: E,
             saturation: 1
         }).hex(),
-        y = (0, _.nj)(S, A, 'top left', 0.3, '30%'),
+        y = (0, v.nj)(S, A, 'top left', 0.3, '30%'),
         P = (0, d.e7)(
             [g.default],
             () => {
@@ -69,13 +69,13 @@ function A(e) {
             },
             [p]
         ),
-        R = l.useCallback(
+        L = l.useCallback(
             (e) => {
                 e.stopPropagation(), e.preventDefault(), o();
             },
             [o]
         ),
-        L = (0, c.useTransition)(
+        R = (0, c.useTransition)(
             a,
             {
                 from: {
@@ -107,7 +107,7 @@ function A(e) {
         O = k ? T.intl.formatToPlainString(T.t.qFqINz, { guildName: n.name }) : T.intl.formatToPlainString(T.t.bFwASk, { guildName: n.name }),
         D = k ? T.intl.string(T.t.eA1ymp) : T.intl.string(T.t.MF0Ntb),
         w = k ? T.intl.formatToPlainString(T.t['60PXOz'], { guildName: n.name }) : T.intl.formatToPlainString(T.t.i27ioq, { guildName: n.name });
-    return L((e, t) => {
+    return R((e, t) => {
         var l, a;
         return (
             t &&
@@ -122,7 +122,7 @@ function A(e) {
                 ref: C,
                 children: (0, i.jsx)(c.ClickableContainer, {
                     'aria-label': w,
-                    onClick: R,
+                    onClick: L,
                     children: (0, i.jsxs)('div', {
                         className: r()(j.toastContainerInner, m ? j.hovered : null),
                         children: [
@@ -204,7 +204,7 @@ function y(e) {
         []
     );
     let u = l.useCallback(() => {
-            if ((s(!1), null != t)) (0, v.SJ)(t);
+            if ((s(!1), null != t)) (0, _.SJ)(t);
         }, [, t]),
         h = l.useCallback(() => {
             if ((s(!1), null != t)) (0, p.Qd)(o.C.ADOPT_CLAN_IDENTITY_NOTICE, null != t ? t : N.lds, !0, S.L.DISMISS);

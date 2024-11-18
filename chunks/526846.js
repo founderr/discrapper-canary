@@ -20,8 +20,8 @@ var i = n(200651),
     g = n(390322),
     C = n(626135),
     x = n(566620),
-    v = n(127255),
-    _ = n(5200),
+    _ = n(127255),
+    v = n(5200),
     I = n(558317),
     E = n(403404),
     b = n(981631),
@@ -31,23 +31,23 @@ let S = 'vc-activities-'.concat((0, s.Z)()),
     T = l.forwardRef(function (e, t) {
         let { channel: n, isHovered: a, closePopout: s, onMouseEnter: T, onMouseLeave: j, onClick: A, className: y } = e,
             P = (0, o.e7)([h.Z], () => h.Z.useReducedMotion),
-            { id: M, guild_id: R } = n;
+            { id: M, guild_id: L } = n;
         l.useEffect(() => {
             C.default.track(b.rMx.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, {
                 channel_id: M,
-                guild_id: R
+                guild_id: L
             });
-        }, [M, R]),
+        }, [M, L]),
             l.useEffect(() => {
                 !a && s();
             }, [s, a]);
-        let L = (0, u.bp)(),
+        let R = (0, u.bp)(),
             { analyticsLocations: k } = (0, m.ZP)(p.Z.ACTIVITIES_MINI_SHELF),
             { analyticsLocations: O } = (0, m.ZP)([...k, p.Z.ACTIVITIES_MINI_SHELF_BANNER]),
-            D = L === b.IlC.POPOUT,
+            D = R === b.IlC.POPOUT,
             w = (0, d.O)(),
             B = (function (e) {
-                return (0, v.Z)({ guildId: e }).slice(0, 5);
+                return (0, _.Z)({ guildId: e }).slice(0, 5);
             })(n.getGuildId());
         l.useEffect(() => {
             let e = setTimeout(() => x.ux(), 1000);
@@ -143,14 +143,14 @@ let S = 'vc-activities-'.concat((0, s.Z)()),
                                     children: [
                                         B.map((e) =>
                                             (0, i.jsx)(
-                                                _.Y,
+                                                v.Y,
                                                 {
                                                     channel: n,
                                                     activityItem: e,
                                                     onClick: () => {
                                                         s(), A();
                                                     },
-                                                    aspectRatio: _.Y.AspectRatio.THIRTEEN_BY_ELEVEN,
+                                                    aspectRatio: v.Y.AspectRatio.THIRTEEN_BY_ELEVEN,
                                                     animatedDivClass: N.activitySuggestion,
                                                     commandOrigin: f.bB.MINI_SHELF
                                                 },

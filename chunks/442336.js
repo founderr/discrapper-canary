@@ -21,9 +21,9 @@ function g(e) {
     let { channel: t } = e,
         n = (0, r.useRedesignIconContext)().enabled,
         [g, C] = (0, a.Wu)([o.ZP], () => [o.ZP.isChannelMuted(t.getGuildId(), t.id), o.ZP.resolvedMessageNotifications(t)], [t]),
-        [x, v] = l.useState(!1);
+        [x, _] = l.useState(!1);
     l.useEffect(() => {
-        let e = () => v(!0);
+        let e = () => _(!0);
         return (
             c.S.subscribe(p.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e),
             () => {
@@ -31,8 +31,8 @@ function g(e) {
             }
         );
     }, []);
-    let _ = (e) => {
-            e.shiftKey ? s.Z.updateChannelOverrideSettings(t.guild_id, t.id, { muted: !g }, d.UE.muted(!g)) : v((e) => !e);
+    let v = (e) => {
+            e.shiftKey ? s.Z.updateChannelOverrideSettings(t.guild_id, t.id, { muted: !g }, d.UE.muted(!g)) : _((e) => !e);
         },
         I = m.intl.string(m.t.h850Sk);
     return (0, i.jsx)(r.Popout, {
@@ -41,7 +41,7 @@ function g(e) {
         position: 'bottom',
         align: 'right',
         autoInvert: !1,
-        onRequestClose: () => v(!1),
+        onRequestClose: () => _(!1),
         renderPopout: (e) =>
             (0, i.jsx)(h.Z, {
                 ...e,
@@ -53,7 +53,7 @@ function g(e) {
             let { isShown: l } = t;
             return (0, i.jsx)(u.ZP.Icon, {
                 ...e,
-                onClick: _,
+                onClick: v,
                 tooltip: l ? null : I,
                 icon: g || C !== p.bL.ALL_MESSAGES ? r.BellSlashIcon : r.BellIcon,
                 foreground: g && !n ? f.strikethrough : null,

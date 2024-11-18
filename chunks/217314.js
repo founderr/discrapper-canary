@@ -23,7 +23,7 @@ function m(e) {
         g = (0, l.e7)([s.Z], () => s.Z.isMobileOnline(t)),
         C = (0, l.e7)([o.Z], () => o.Z.getNickname(t)),
         x = d.ZP.useUserTag(m),
-        v = (0, r.m$)({
+        _ = (0, r.m$)({
             channelId: e.channel.id,
             location: 'HeaderBarDirectMessageV2'
         });
@@ -54,7 +54,7 @@ function m(e) {
                             position: 'bottom',
                             children: null != C ? C : d.ZP.getName(m)
                         }),
-                        v &&
+                        _ &&
                             (0, i.jsx)(a.Tooltip, {
                                 text: h.intl.string(h.t.QyZ4TU),
                                 children: (e) =>
