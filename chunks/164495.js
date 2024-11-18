@@ -86,7 +86,7 @@ let x = (e) => {
         let { quest: n, useReducedMotion: o, isExpanded: i, awaitingConsoleConnections: l, hasMadeProgress: a, isProgressing: d, activeScreen: m, taskDetails: f } = e,
             v = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
             C = (0, u.P)({ location: p.dr.QUESTS_BAR }),
-            h = (0, c.cr)(n);
+            h = (0, c.q8)(n);
         if (v)
             return (0, r.jsx)(E, {
                 quest: n,

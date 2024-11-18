@@ -10,8 +10,8 @@ var i = n(200651),
     o = n(239091),
     a = n(479531),
     u = n(390322),
-    c = n(617136),
-    d = n(272008),
+    d = n(617136),
+    c = n(272008),
     m = n(113434),
     x = n(569984),
     h = n(497505),
@@ -24,26 +24,26 @@ function T(e) {
     var t;
     let n = (0, l.e7)([x.Z], () => x.Z.questDeliveryOverride, []),
         u = (0, C.GN)(e.questContent),
-        T = (0, C.cr)(e.quest),
+        T = (0, C.q8)(e.quest),
         f = [h.jn.QUEST_BAR_V2, h.jn.QUEST_BAR].includes(e.questContent),
         v = (0, C.zK)(e.quest, p.S7.DISMISSAL_SURVEY),
         { handleComplete: S, handleProgress: N, handleResetDismissibilityClick: q, handleResetStatusClick: _, handleOverrideDeliveryClick: A } = (0, m.kJ)(e.quest.id),
         R = s.useCallback(() => {
             (0, C.FE)(e.quest, {
                 content: e.questContent,
-                ctaContent: c.jZ.CONTEXT_MENU_OPEN_GAME_LINK
+                ctaContent: d.jZ.CONTEXT_MENU_OPEN_GAME_LINK
             });
         }, [e.quest, e.questContent]),
         b = s.useCallback(() => {
             (0, C.f2)(e.quest.id, {
                 content: e.questContent,
                 position: e.questContentPosition,
-                ctaContent: c.jZ.CONTEXT_MENU_COPY_LINK
+                ctaContent: d.jZ.CONTEXT_MENU_COPY_LINK
             }),
                 (0, r.showToast)((0, r.createToast)(j.intl.string(j.t['+5kSoa']), r.ToastType.SUCCESS));
         }, [e.quest, e.questContent, e.questContentPosition]),
         I = (e) => (0, r.showToast)((0, r.createToast)(new a.Z(e, e.status).message, r.ToastType.FAILURE)),
-        M = () => (0, d.is)(e.quest.id).catch(I),
+        M = () => (0, c.is)(e.quest.id).catch(I),
         Z = s.useMemo(() => (T ? j.t.hvVgAQ : j.t.lwQdjI), [T]);
     return (0, i.jsxs)(r.Menu, {
         variant: 'fixed',
@@ -84,11 +84,11 @@ function T(e) {
                                 id: 'learn-more',
                                 label: j.intl.string(j.t['0SzXmp']),
                                 action: () => {
-                                    (0, c._3)({
+                                    (0, d._3)({
                                         questId: e.quest.id,
                                         questContent: e.questContent,
                                         questContentPosition: e.questContentPosition,
-                                        questContentCTA: c.jZ.CONTEXT_MENU_LEARN_MORE
+                                        questContentCTA: d.jZ.CONTEXT_MENU_LEARN_MORE
                                     }),
                                         (0, g.navigateToQuestHome)(p.dr.QUEST_CONTEXT_MENU, e.questContent, e.quest.id);
                                 },
@@ -102,7 +102,7 @@ function T(e) {
                                     (0, g.openDisclosureModal)(e.quest, {
                                         content: e.questContent,
                                         position: e.questContentPosition,
-                                        ctaContent: c.jZ.CONTEXT_MENU_OPEN_DISCLOSURE
+                                        ctaContent: d.jZ.CONTEXT_MENU_OPEN_DISCLOSURE
                                     });
                                 }
                             }),
@@ -112,15 +112,15 @@ function T(e) {
                                 label: j.intl.string(j.t.NN79Ex),
                                 action: () => {
                                     if (
-                                        ((0, c._3)({
+                                        ((0, d._3)({
                                             questId: e.quest.id,
                                             questContent: e.questContent,
                                             questContentPosition: e.questContentPosition,
-                                            questContentCTA: c.jZ.CONTEXT_MENU_HIDE_CONTENT
+                                            questContentCTA: d.jZ.CONTEXT_MENU_HIDE_CONTENT
                                         }),
                                         !!(0, C.GN)(e.questContent))
                                     )
-                                        (0, d.gl)(e.quest.id, e.questContent), v && f && (0, g.maybeShowSurveyForQuest)(e.quest);
+                                        (0, c.gl)(e.quest.id, e.questContent), v && f && (0, g.maybeShowSurveyForQuest)(e.quest);
                                 },
                                 subtext: j.intl.string(j.t['1u3YPD'])
                             })
@@ -177,7 +177,7 @@ function T(e) {
                                         (0, i.jsx)(r.MenuItem, {
                                             id: 'start',
                                             label: 'Start heartbeat (cheatmode)',
-                                            action: () => (0, d.CS)(e.quest.id, !0).catch(I)
+                                            action: () => (0, c.CS)(e.quest.id, !0).catch(I)
                                         }),
                                         (0, i.jsx)(r.MenuItem, {
                                             id: 'stop',
@@ -194,16 +194,16 @@ function T(e) {
     });
 }
 function f(e) {
-    let { children: t, onOpen: n, onClose: l, preventIdle: o, quest: a, questContent: d, questContentPosition: m, ...x } = e,
+    let { children: t, onOpen: n, onClose: l, preventIdle: o, quest: a, questContent: c, questContentPosition: m, ...x } = e,
         h = s.useCallback(() => {
-            (0, c._3)({
+            (0, d._3)({
                 questId: a.id,
-                questContent: d,
-                questContentCTA: c.jZ.OPEN_CONTEXT_MENU,
+                questContent: c,
+                questContentCTA: d.jZ.OPEN_CONTEXT_MENU,
                 questContentPosition: m
             }),
                 null != n && n();
-        }, [n, a.id, d, m]);
+        }, [n, a.id, c, m]);
     return (0, i.jsx)(r.Popout, {
         onRequestOpen: h,
         onRequestClose: l,
@@ -214,7 +214,7 @@ function f(e) {
                       children: (0, i.jsx)(T, {
                           ...x,
                           quest: a,
-                          questContent: d,
+                          questContent: c,
                           questContentPosition: m,
                           onClose: t
                       })
@@ -222,7 +222,7 @@ function f(e) {
                 : (0, i.jsx)(T, {
                       ...x,
                       quest: a,
-                      questContent: d,
+                      questContent: c,
                       questContentPosition: m,
                       onClose: t
                   });

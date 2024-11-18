@@ -6,8 +6,8 @@ var s = n(120356),
     o = n(481060),
     a = n(607070),
     u = n(706454),
-    c = n(63063),
-    d = n(930153),
+    d = n(63063),
+    c = n(930153),
     m = n(617136),
     x = n(113434),
     h = n(569984),
@@ -49,21 +49,21 @@ function I(e) {
           });
 }
 function M(e) {
-    let { quest: t, progressState: n, isCollectibleQuest: s, location: l, questContentPosition: u, inGiftInventory: c } = e,
-        d = n >= x.OH.COMPLETED,
+    let { quest: t, progressState: n, isCollectibleQuest: s, location: l, questContentPosition: u, inGiftInventory: d } = e,
+        c = n >= x.OH.COMPLETED,
         m = (0, r.e7)([a.Z], () => a.Z.useReducedMotion),
         C = (0, r.e7)([h.Z], () => h.Z.isEnrolling(t.id)),
-        p = (0, g.cr)(t),
+        p = (0, g.q8)(t),
         E = (0, T.Ks)({
             progressState: n,
             quest: t,
             location: l,
             isCollectibleQuest: s,
             questContentPosition: u,
-            inGiftInventory: c,
+            inGiftInventory: d,
             isVideoQuest: p
         }),
-        j = d && !m ? o.ShinyButton : o.Button;
+        j = c && !m ? o.ShinyButton : o.Button;
     return (0, i.jsx)(
         o.Tooltip,
         {
@@ -217,8 +217,8 @@ t.Z = (e) => {
                                         : null != v && null != v.approximateCount
                                           ? A.intl.format(A.t['4bMK19'], {
                                                 maxReward: v.messages.nameWithArticle,
-                                                maxRewardCount: (0, d.Bs)(v.approximateCount, a),
-                                                helpCenterLink: c.Z.getArticleURL(_.BhN.QUESTS_LEARN_MORE)
+                                                maxRewardCount: (0, c.Bs)(v.approximateCount, a),
+                                                helpCenterLink: d.Z.getArticleURL(_.BhN.QUESTS_LEARN_MORE)
                                             })
                                           : null != T
                                             ? A.intl.formatToPlainString(A.t.Pu5eyM, {

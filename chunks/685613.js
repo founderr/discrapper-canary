@@ -11,8 +11,8 @@ var r = n(120356),
     o = n.n(r),
     a = n(780384),
     u = n(302245),
-    c = n(475595),
-    d = n(78826),
+    d = n(475595),
+    c = n(78826),
     m = n(46140),
     x = n(981631),
     h = n(900019);
@@ -25,14 +25,14 @@ t.Z = function (e) {
         className: o()(h.partnerBranding, t),
         children: [
             r &&
-                (0, l.jsx)(d.Fl, {
+                (0, l.jsx)(c.Fl, {
                     id: 'QuestPartnerBranding_gameTile',
                     children: (e) =>
                         (0, l.jsx)('img', {
                             ref: e,
                             className: h.partnerBrandingGameTile,
                             alt: '',
-                            src: (0, c.fh)(i, c.eC.GAME_TILE, C).url,
+                            src: (0, d.fh)(i, d.eC.GAME_TILE, C).url,
                             style: {
                                 borderRadius: (function (e) {
                                     switch (e) {
@@ -47,14 +47,14 @@ t.Z = function (e) {
                             }
                         })
                 }),
-            (0, l.jsx)(d.Fl, {
+            (0, l.jsx)(c.Fl, {
                 id: 'QuestPartnerBranding_gameLogotype',
                 children: (e) =>
                     (0, l.jsx)('img', {
                         ref: e,
                         className: o()(h.partnerBrandingLogotype, { [h.rewardHighlightLogotype]: g }),
                         alt: i.config.messages.gameTitle,
-                        src: (0, c.fh)(i, c.eC.LOGO_TYPE, C).url
+                        src: (0, d.fh)(i, d.eC.LOGO_TYPE, C).url
                     })
             })
         ]

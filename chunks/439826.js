@@ -137,7 +137,7 @@ function k(e) {
 function q(e) {
     var t, n, o;
     let { quest: r, isHovering: i, errorHints: c, warningHints: m, onCtxMenuClose: g, onCtxMenuOpen: N, onCtxMenuSelect: A } = e,
-        q = (0, _.cr)(r),
+        q = (0, _.q8)(r),
         P = a.useMemo(() => (0, b.fh)(r, b.eC.HERO), [r]),
         M = a.useMemo(() => (0, b.fh)(r, b.eC.LOGO_TYPE, 'dark'), [r]),
         O = (0, x.ZP)(),

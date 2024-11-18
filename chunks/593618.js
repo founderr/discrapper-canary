@@ -110,7 +110,7 @@ function V(e) {
                 r = (0, A.ZP)(t),
                 a = i.useMemo(() => r.map((e) => e.id), [r]),
                 s = (0, u.e7)([M.ZP], () => M.ZP.getVoiceStates(t), [t]),
-                o = (0, u.Wu)([L.Z], () => L.Z.getBlockedIDs()),
+                o = (0, u.Wu)([L.Z], () => L.Z.getBlockedOrIgnoredIDs()),
                 { enabled: c } = (0, p.bA)('guild-tooltip'),
                 f = l().flatMap(n, (t) => {
                     var n;
@@ -119,7 +119,7 @@ function V(e) {
                         let { user: t } = e;
                         return t;
                     });
-                    return c ? (0, _.Qj)(r, o) : r;
+                    return c ? (0, _.dq)(r, o) : r;
                 }),
                 h = (0, u.Wu)([T.Z], () =>
                     l().flatMap(a, (t) => {
@@ -130,7 +130,7 @@ function V(e) {
                                 let { user: t } = e;
                                 return t;
                             });
-                        return c ? (0, _.Qj)(n, o) : n;
+                        return c ? (0, _.dq)(n, o) : n;
                     })
                 ),
                 m = (0, u.e7)([T.Z], () => {
@@ -144,13 +144,13 @@ function V(e) {
                         let e = C.Z.getAllApplicationStreams()
                             .filter((e) => e.guildId === t)
                             .map((e) => e.ownerId);
-                        return c ? (0, _.$m)(e, o) : e;
+                        return c ? (0, _._j)(e, o) : e;
                     },
                     [c, o, t]
                 ),
                 E = (0, u.Wu)([D.Z, R.Z], () => {
                     let e = f.filter((e) => D.Z.getActivities(e.id, t).some((e) => (null == e ? void 0 : e.application_id) != null && null != R.Z.getDetectableGame(null == e ? void 0 : e.application_id)));
-                    return c ? (0, _.Qj)(e, o) : e;
+                    return c ? (0, _.dq)(e, o) : e;
                 }),
                 v = (0, P.kM)('Guild Tooltip', !1),
                 b = v ? E.map((e) => e.id) : [],
@@ -158,7 +158,7 @@ function V(e) {
                     [d.ZP],
                     () => {
                         let e = d.ZP.getEmbeddedActivitiesForGuild(t).flatMap((e) => Array.from(e.userIds));
-                        return c ? (0, _.$m)(e, o) : e;
+                        return c ? (0, _._j)(e, o) : e;
                     },
                     [t, c, o]
                 ),
@@ -166,13 +166,13 @@ function V(e) {
                     [w.default],
                     () => {
                         let e = I.map((e) => w.default.getUser(e));
-                        return c ? (0, _.Qj)(e) : e;
+                        return c ? (0, _.dq)(e) : e;
                     },
                     [c, I]
                 ),
                 x = (0, u.Wu)([w.default], () => g.map((e) => w.default.getUser(e)), [g]),
                 U = f.filter((e) => !g.includes(e.id) && !I.includes(e.id) && !b.includes(e.id)),
-                B = c ? (0, _.Qj)(U) : U,
+                B = c ? (0, _.dq)(U) : U,
                 G = x.filter((e) => null != e && !I.includes(e.id)),
                 Z = h.length > 0 || U.length > 0 || G.length > 0 || S.length > 0;
             return {

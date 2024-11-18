@@ -83,7 +83,7 @@ function w(e) {
         { enabled: P } = (0, p.bA)('use-guild-media-state'),
         w = (0, o.Wu)([d.ZP, S.Z], () => {
             let t = d.ZP.getEmbeddedActivitiesForGuild(e);
-            return P ? t.filter((e) => !(0, h.Wu)([...e.userIds], S.Z.getBlockedIDs())) : t;
+            return P ? t.filter((e) => !(0, h.BA)([...e.userIds], S.Z.getBlockedOrIgnoredIDs())) : t;
         }),
         L = (0, u.NX)(null === (t = w[0]) || void 0 === t ? void 0 : t.channelId),
         {

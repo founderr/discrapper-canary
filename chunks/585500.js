@@ -134,7 +134,7 @@ function f(e) {
                     taskDetails: n,
                     withoutMarkdown: d
                 });
-            else if ((0, i.cr)(t))
+            else if ((0, i.q8)(t))
                 return (function (e, t) {
                     var n;
                     let r = o.r.build(e.config).defaultReward.messages.nameWithArticle,

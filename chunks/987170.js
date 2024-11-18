@@ -116,7 +116,7 @@ function f(e) {
                 T = (0, i.Z)(t);
             return (
                 (0, r.useEffect)(() => {
-                    if (!l && (!!_ || !!E)) p(T, m, !1 === _);
+                    if (!l && (!!_ || !!E) && null == e.commonTriggerPoint) p(T, m, !1 === _);
                 }, [l, _, T, m, b, I, E]),
                 (0, r.useEffect)(
                     () =>
@@ -138,7 +138,7 @@ function f(e) {
             let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { autoTrackExposure: !0 },
                 r = c(e.kind, e.id, t);
             if (null == r || n.disable) return d(e, u.NZ.NOT_ELIGIBLE, f, r);
-            if (!1 !== n.autoTrackExposure || r.triggerDebuggingEnabled) {
+            if ((!1 !== n.autoTrackExposure || r.triggerDebuggingEnabled) && null == e.commonTriggerPoint) {
                 let e = !1 === n.autoTrackExposure;
                 p(t, n.trackExposureOptions, e, r);
             }

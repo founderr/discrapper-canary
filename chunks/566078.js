@@ -40,7 +40,7 @@ class a {
         return this.quest.rewardsConfig.platforms;
     }
     get questType() {
-        return (0, i.cr)({ config: this.quest }) ? r.W.VIDEO : r.W.GAMEPLAY;
+        return (0, i.q8)({ config: this.quest }) ? r.W.VIDEO : r.W.GAMEPLAY;
     }
     constructor(e) {
         var t, n, r;

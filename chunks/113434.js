@@ -342,7 +342,7 @@ function z(e, t, n) {
             onClick: a,
             gameTitle: L.r.build(e.config).application.name
         });
-    if ((0, N.cr)(e)) {
+    if ((0, N.q8)(e)) {
         var s;
         let t = null === (s = e.config.videoMetadata) || void 0 === s ? void 0 : s.messages.videoTitle;
         return null == t ? M.intl.string(M.t['o+e9ys']) : M.intl.formatToPlainString(M.t['9m9MnZ'], { videoTitle: t });
@@ -683,7 +683,7 @@ function ed(e, t, n) {
         });
     if (s) return M.intl.formatToPlainString(M.t.APddvL, { expirationDate: i });
     if (t) return n === A.LI.SELECT ? M.intl.string(M.t.sWUpNz) : l;
-    if ((0, N.cr)(e)) return M.intl.string(M.t['o+e9ys']);
+    if ((0, N.q8)(e)) return M.intl.string(M.t['o+e9ys']);
     if (a.percentComplete > 0)
         return o
             ? (0, N.AV)({

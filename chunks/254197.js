@@ -126,7 +126,7 @@ function H(e) {
     r.useEffect(() => {
         null != B.current && (l && m ? (B.current.pause(), (B.current.currentTime = 0)) : !l && m && B.current.play());
     }, [l, m]);
-    let y = (0, C.cr)(t) ? Q.intl.string(Q.t.umdNio) : Q.intl.string(Q.t.l7E81t);
+    let y = (0, C.q8)(t) ? Q.intl.string(Q.t.umdNio) : Q.intl.string(Q.t.l7E81t);
     return (0, o.jsxs)(o.Fragment, {
         children: [
             (0, o.jsx)('div', {
@@ -244,7 +244,7 @@ function U(e) {
         V = r.useRef(null),
         H = (0, g.B6)(n.config.expiresAt),
         U = (0, g._s)({ quest: n }),
-        z = (0, C.cr)(n),
+        z = (0, C.q8)(n),
         F = r.useCallback(() => {
             (0, y.openVideoQuestModal)(n);
         }, [n]);
@@ -366,7 +366,7 @@ function U(e) {
 let z = r.forwardRef(function (e, t) {
     var n;
     let { children: s, className: l, collapsedHeight: c, isExpanded: d, isExpansionAnimationComplete: u, expansionSpring: p, onCtxMenuOpen: g, onCtxMenuClose: f, onCtxMenuSelect: v, overlayRef: j, quest: _, useReducedMotion: b, taskDetails: E } = e,
-        N = (0, C.cr)(_),
+        N = (0, C.q8)(_),
         B = r.useCallback(() => {
             (0, x.AH)(_.id, {
                 questContent: h.jn.QUEST_BAR_V2,

@@ -6,8 +6,8 @@ var i = n(200651),
     o = n(442837),
     a = n(780384),
     u = n(481060),
-    c = n(358221),
-    d = n(594190),
+    d = n(358221),
+    c = n(594190),
     m = n(687516),
     x = n(210887),
     h = n(937995),
@@ -46,10 +46,10 @@ t.Z = function (e) {
         V = (0, o.e7)([x.Z], () => x.Z.getState().theme),
         X = (0, a.wj)(V) ? B.BRd.DARK : B.BRd.LIGHT,
         { isCurrentUserStreamingQuestApplication: Y, quest: K } = (0, o.cj)(
-            [C.Z, c.Z, T.Z],
+            [C.Z, d.Z, T.Z],
             () => {
                 var e, t, n, i;
-                let s = c.Z.getParticipants(w),
+                let s = d.Z.getParticipants(w),
                     l =
                         null != Q
                             ? Q
@@ -92,10 +92,10 @@ t.Z = function (e) {
         J = null != K ? q.r.build(K.config) : null,
         $ = null == J ? void 0 : J.application.id,
         ee = (0, o.e7)(
-            [d.ZP, C.Z],
+            [c.ZP, C.Z],
             () => {
                 if (null == K) return !1;
-                let e = d.ZP.getRunningGames().map((e) => e.id);
+                let e = c.ZP.getRunningGames().map((e) => e.id);
                 if ((0, v.$H)(K) && e.includes($)) return !0;
                 let t = null != F ? C.Z.findActivity(F.id, (e) => e.type !== B.IIU.CUSTOM_STATUS) : null;
                 return !!(null != t && (0, v.$J)(K) && (0, v._D)(t, K)) || !1;
@@ -104,7 +104,7 @@ t.Z = function (e) {
         ),
         et = !0 === k || Y || ee,
         en = (0, o.e7)([T.Z], () => null != K && T.Z.isEnrolling(K.id), [K]),
-        ei = (0, o.e7)([c.Z], () => ((null == F ? void 0 : F.id) == null ? null : c.Z.getParticipant(w, F.id)) != null, [w, F]),
+        ei = (0, o.e7)([d.Z], () => ((null == F ? void 0 : F.id) == null ? null : d.Z.getParticipant(w, F.id)) != null, [w, F]),
         es = (0, j.B6)(null == K ? void 0 : K.config.expiresAt),
         el = (0, j.B6)(null == J ? void 0 : J.rewardsExpireAt),
         er = s.useCallback(() => {
@@ -136,7 +136,7 @@ t.Z = function (e) {
             quest: K,
             location: f.jn.QUEST_LIVE_STREAM
         }),
-        ec = s.useMemo(
+        ed = s.useMemo(
             () =>
                 (0, S.T)({
                     quest: K,
@@ -144,21 +144,21 @@ t.Z = function (e) {
                 }),
             [K]
         ),
-        ed = (0, j.tP)(K);
+        ec = (0, j.tP)(K);
     if (null == K) return null;
     let em = (null === (t = K.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
         ex = (null === (n = K.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
         eh = null != K.userStatus && (0, v.zE)(K.userStatus, f.jn.QUEST_LIVE_STREAM),
         eC = null != K.userStatus && (0, v.zE)(K.userStatus, f.jn.QUEST_BAR),
         eg = (0, v.Mi)(K, f.jn.QUEST_BAR) && !eC;
-    ec.info({
+    ed.info({
         isQuestCallHeaderDismissed: eh,
-        isQuestExpired: ed,
+        isQuestExpired: ec,
         isQuestBarShowing: eg,
         isCurrentUserCallParticipant: ei
     });
     let ep = null != Q && (null === (l = K.userStatus) || void 0 === l ? void 0 : l.claimedAt) == null;
-    if ((!ep && (eh || ed || eg)) || (!ep && !ei)) return null;
+    if ((!ep && (eh || ec || eg)) || (!ep && !ei)) return null;
     let eE = (0, v.il)(K),
         ej = (0, i.jsx)(b.Z, {
             className: U.rewardTile,
