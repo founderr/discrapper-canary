@@ -1,22 +1,22 @@
 n.d(t, {
-    g: function () {
+    xP: function () {
         return r;
     }
 });
 let i = (0, n(818083).B)({
     kind: 'user',
-    id: '2024-09_best_of_nitro_v2_experiment',
-    label: 'Best of Nitro bento boxes',
+    id: '2024-11_marketing_page_v2_experiment',
+    label: 'Marketing Page V2 Experiment',
     defaultConfig: { enabled: !1 },
     treatments: [
         {
             id: 0,
-            label: 'Users see current best of nitro section',
+            label: 'User see current marketing page',
             config: { enabled: !1 }
         },
         {
             id: 1,
-            label: 'users see best of nitro bento boxes ',
+            label: 'users see new marketing page',
             config: { enabled: !0 }
         }
     ]

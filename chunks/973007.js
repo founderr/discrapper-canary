@@ -1,61 +1,55 @@
 var i = n(200651);
 n(192379);
 var l = n(481060),
-    s = n(184508),
-    r = n(823188),
-    C = n(474936),
-    a = n(385190);
-function o(e) {
-    let { onClick: t, isGift: n, priceOptions: s, showHalloweenGift: C, shouldUseTaglineXPCopy: o } = e;
+    s = n(823188),
+    r = n(474936),
+    C = n(385190);
+function a(e) {
+    let { onClick: t, isGift: n, priceOptions: r, showHalloweenGift: a } = e;
     return (0, i.jsx)(l.Clickable, {
         onClick: t,
         style: { cursor: 'pointer' },
-        children: (0, i.jsx)(r.wp, {
-            className: a.tier2MarketingCard,
+        children: (0, i.jsx)(s.wp, {
+            className: C.tier2MarketingCard,
             ctaButton: null,
-            showWumpus: !C && !o,
-            showHalloweenGift: C,
+            showWumpus: !a,
+            showHalloweenGift: a,
             showYearlyPrice: !0,
             isGift: n,
             isModal: !0,
-            priceOptions: s,
-            shouldUseTaglineXPCopy: o
+            priceOptions: r
         })
     });
 }
-function d(e) {
-    let { onClick: t, isGift: n, priceOptions: s, shouldUseTaglineXPCopy: C } = e;
+function o(e) {
+    let { onClick: t, isGift: n, priceOptions: r } = e;
     return (0, i.jsx)(l.Clickable, {
         onClick: t,
         style: { cursor: 'pointer' },
-        children: (0, i.jsx)(r.Gq, {
-            className: a.tier0MarketingCard,
+        children: (0, i.jsx)(s.Gq, {
+            className: C.tier0MarketingCard,
             ctaButton: null,
-            showWumpus: !C,
+            showWumpus: !0,
             showYearlyPrice: !0,
             isGift: n,
-            priceOptions: s,
-            shouldUseTaglineXPCopy: C
+            priceOptions: r
         })
     });
 }
 t.Z = function (e) {
-    let { onSelectSku: t, isGift: n, priceOptions: l, shouldShowHalloweenTier2Card: r } = e,
-        a = (0, s.tY)('PremiumMarketingHome');
+    let { onSelectSku: t, isGift: n, priceOptions: l, shouldShowHalloweenTier2Card: s } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(o, {
-                onClick: () => t(C.Si.TIER_2),
+            (0, i.jsx)(a, {
+                onClick: () => t(r.Si.TIER_2),
                 isGift: n,
                 priceOptions: l,
-                showHalloweenGift: r,
-                shouldUseTaglineXPCopy: a
+                showHalloweenGift: s
             }),
-            (0, i.jsx)(d, {
-                onClick: () => t(C.Si.TIER_0),
+            (0, i.jsx)(o, {
+                onClick: () => t(r.Si.TIER_0),
                 isGift: n,
-                priceOptions: l,
-                shouldUseTaglineXPCopy: a
+                priceOptions: l
             })
         ]
     });
