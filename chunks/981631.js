@@ -4234,6 +4234,7 @@ let or = Object.freeze({
     (nO.QUEST_BAR_MODE_CHANGED = 'quest_bar_mode_changed'),
     (nO.QUEST_VIDEO_VOLUME_CHANGED = 'quest_video_volume_changed'),
     (nO.QUEST_VIDEO_PAUSED = 'quest_video_paused'),
+    (nO.QUEST_VIDEO_RESUMED = 'quest_video_resumed'),
     (nO.QUEST_VIDEO_FULLSCREEN_ENTERED = 'quest_video_fullscreen_entered'),
     (nO.QUEST_VIDEO_FULLSCREEN_EXITED = 'quest_video_fullscreen_exited'),
     (nO.QUEST_VIDEO_APP_FOCUSED = 'quest_video_app_focused'),

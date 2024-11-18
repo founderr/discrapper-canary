@@ -9,8 +9,8 @@ var r = n(200651),
     o = n(192379),
     i = n(120356),
     l = n.n(i),
-    a = n(100621),
-    s = n(442837),
+    s = n(100621),
+    a = n(442837),
     c = n(780384),
     u = n(481060),
     d = n(607070),
@@ -45,7 +45,7 @@ let O = new Set([B.IyS.FIVE_G, B.IyS.FOUR_G, B.IyS.UNKNOWN]),
         clamp: !0
     };
 function w() {
-    let e = (0, s.e7)([f.Z], () => f.Z.getState().theme);
+    let e = (0, a.e7)([f.Z], () => f.Z.getState().theme);
     return (0, r.jsx)('div', {
         className: M.pauseText,
         style: { background: (0, c.wj)(e) ? 'rgba(0, 0, 0, 0.65)' : 'rgba(255, 255, 255, 0.65)' },
@@ -76,7 +76,7 @@ function F(e) {
           });
 }
 function Z(e) {
-    let { title: t, subtitle: n, icon: i, onClick: a, className: s } = e,
+    let { title: t, subtitle: n, icon: i, onClick: s, className: a } = e,
         [c, d] = o.useState(!1),
         m = () => {
             d(!0);
@@ -85,12 +85,12 @@ function Z(e) {
             d(!1);
         };
     return (0, r.jsx)(u.Clickable, {
-        className: l()(M.endScreenPanel, M.accentOnHover, s),
+        className: l()(M.endScreenPanel, M.accentOnHover, a),
         onMouseEnter: m,
         onMouseLeave: f,
         onFocus: m,
         onBlur: f,
-        onClick: a,
+        onClick: s,
         children: (0, r.jsxs)('div', {
             className: M.endScreenPanelInner,
             children: [
@@ -130,8 +130,8 @@ function U(e) {
         ee = (0, E.km)((e) => e.setFullScreenEnabled),
         { focused: et, focusedChanged: en } = (0, A.xU)(),
         { visible: er, visibleChanged: eo, targetRef: ei } = (0, A.Yy)(),
-        [el, ea] = o.useState(!0 === Y ? b.r.PLAYING : b.r.PAUSED),
-        [es, ec] = o.useState(!1),
+        [el, es] = o.useState(!0 === Y ? b.r.PLAYING : b.r.PAUSED),
+        [ea, ec] = o.useState(!1),
         eu = (0, S.il)(H),
         [ed, em] = o.useState(eu.percentComplete),
         [ef, ep] = o.useState(!1),
@@ -155,7 +155,7 @@ function U(e) {
         eB = (0, E.km)((e) => e.setVideoProgress),
         eL = (0, E.km)((e) => e.muted),
         eP = (0, E.km)((e) => e.volume),
-        eM = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
+        eM = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
         eO = (0, o.useRef)(null),
         eR = (0, o.useRef)(null),
         ew = o.useRef(!0),
@@ -196,10 +196,19 @@ function U(e) {
         }),
         e0 = o.useCallback(
             (e) => {
-                if ((ea(e), null != eO.current))
+                if ((es(e), null != eO.current))
                     switch (e) {
                         case b.r.PLAYING:
-                            eO.current.play(), eV(null);
+                            eO.current.play(),
+                                (0, C.dA)({
+                                    questId: H.id,
+                                    event: B.rMx.QUEST_VIDEO_RESUMED,
+                                    properties: {
+                                        video_timestamp_seconds: eO.current.currentTime,
+                                        pause_reason: eU
+                                    }
+                                }),
+                                eV(null);
                             break;
                         case b.r.PAUSED:
                             eO.current.pause(), e$();
@@ -208,7 +217,7 @@ function U(e) {
                             K(!1), e$();
                     }
             },
-            [eO, ea, eV, K, e$]
+            [H.id, eU, e$, K]
         );
     o.useLayoutEffect(() => {
         ew.current && ((ew.current = !1), e_(p.Z.getEffectiveConnectionSpeed()), eF && ek.timestampSec >= ek.duration && eB(H.id, 0, ek.duration));
@@ -262,7 +271,7 @@ function U(e) {
         e9 = () => {
             ec(!1);
         },
-        e7 = es || el === b.r.PAUSED || el === b.r.ENDED,
+        e7 = ea || el === b.r.PAUSED || el === b.r.ENDED,
         e3 = o.useCallback(() => {
             var e;
             let t = (0, v.fn)(null === (e = eO.current) || void 0 === e ? void 0 : e.parentNode, eO.current);
@@ -368,22 +377,22 @@ function U(e) {
             }
         })),
         tl = (0, o.useRef)(null),
-        [{ captionHeightSpring: ta }, ts] = (0, u.useSpring)(() => ({
+        [{ captionHeightSpring: ts }, ta] = (0, u.useSpring)(() => ({
             from: { captionHeightSpring: 0 },
             config: R
         }));
     o.useEffect(() => {
         var e, t;
         return (
-            ts({
+            ta({
                 captionHeightSpring: X && null != eY && null !== (t = null === (e = tl.current) || void 0 === e ? void 0 : e.clientHeight) && void 0 !== t ? t : 0,
                 immediate: eM
             }),
             () => {
-                ta.stop();
+                ts.stop();
             }
         );
-    }, [X, ts, eM, eY, ta]),
+    }, [X, ta, eM, eY, ts]),
         o.useEffect(
             () => (
                 ti({
@@ -501,10 +510,10 @@ function U(e) {
                                     tabIndex: -1,
                                     children: (0, r.jsx)('div', { className: M.transcriptOverlay })
                                 }),
-                                (0, r.jsx)(a.animated.div, {
+                                (0, r.jsx)(s.animated.div, {
                                     className: M.transcriptCont,
                                     style: {
-                                        marginBottom: (0, a.to)([to, ta], (e, t) => ''.concat(50 * e + t, 'px'))
+                                        marginBottom: (0, s.to)([to, ts], (e, t) => ''.concat(50 * e + t, 'px'))
                                     },
                                     children: (0, r.jsx)(N.K, {
                                         quest: H,
@@ -540,10 +549,10 @@ function U(e) {
                                 }
                             })
                         }),
-                    (0, r.jsx)(a.animated.div, {
+                    (0, r.jsx)(s.animated.div, {
                         className: M.videoFooterContGradient,
                         style: {
-                            opacity: (0, a.to)(
+                            opacity: (0, s.to)(
                                 [
                                     to.to({
                                         range: [0, 1],
@@ -567,11 +576,11 @@ function U(e) {
                     ),
                     X &&
                         null != eY &&
-                        (0, r.jsx)(a.animated.div, {
+                        (0, r.jsx)(s.animated.div, {
                             className: M.captionContainer,
                             ref: tl,
                             style: {
-                                translateY: (0, a.to)(
+                                translateY: (0, s.to)(
                                     [
                                         to.to({
                                             range: [0, 1],
@@ -588,10 +597,10 @@ function U(e) {
                                 children: eY.text
                             })
                         }),
-                    (0, r.jsxs)(a.animated.div, {
+                    (0, r.jsxs)(s.animated.div, {
                         className: M.videoFooterCont,
                         style: {
-                            paddingLeft: (0, a.to)(
+                            paddingLeft: (0, s.to)(
                                 [
                                     to.to({
                                         range: [0, 1],
@@ -600,7 +609,7 @@ function U(e) {
                                 ],
                                 (e) => ''.concat(e, 'px')
                             ),
-                            paddingRight: (0, a.to)(
+                            paddingRight: (0, s.to)(
                                 [
                                     to.to({
                                         range: [0, 1],
@@ -609,7 +618,7 @@ function U(e) {
                                 ],
                                 (e) => ''.concat(e, 'px')
                             ),
-                            height: (0, a.to)(
+                            height: (0, s.to)(
                                 [
                                     to.to({
                                         range: [0, 1],
@@ -638,10 +647,10 @@ function U(e) {
                                     e4();
                                 }
                             }),
-                            (0, r.jsx)(a.animated.div, {
+                            (0, r.jsx)(s.animated.div, {
                                 className: M.videoControlsCont,
                                 style: {
-                                    paddingTop: (0, a.to)(
+                                    paddingTop: (0, s.to)(
                                         [
                                             to.to({
                                                 range: [0, 1],
@@ -650,7 +659,7 @@ function U(e) {
                                         ],
                                         (e) => ''.concat(e * e * 12, 'px')
                                     ),
-                                    paddingBottom: (0, a.to)(
+                                    paddingBottom: (0, s.to)(
                                         [
                                             to.to({
                                                 range: [0, 1],
@@ -659,7 +668,7 @@ function U(e) {
                                         ],
                                         (e) => ''.concat(e * e * 12, 'px')
                                     ),
-                                    pointerEvents: (0, a.to)(
+                                    pointerEvents: (0, s.to)(
                                         [
                                             to.to({
                                                 range: [0, 1],
