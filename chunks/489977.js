@@ -1,79 +1,61 @@
-var i = n(200651);
-n(192379);
-var r = n(481060),
-    l = n(570140),
-    a = n(809206),
-    s = n(317770),
-    o = n(18438),
-    c = n(81245),
-    d = n(378879),
-    u = n(350327),
-    h = n(594174),
-    m = n(74538),
-    p = n(486324);
-function g(e, t) {
-    let n = e === p.pC.AVATAR ? 'handleUploadAvatar' : 'handleUploadBanner';
-    return !!(0, c.iM)(n) && (0, d.openProfileUpsellModal)(e, t);
-}
-let f = (e) => {
-        let { imageSrc: t, file: l, guildId: s, isTryItOutFlow: c } = e;
-        if (c) {
-            (0, u.c_)(t);
+var i = n(570140),
+    r = n(809206),
+    l = n(317770),
+    a = n(18438),
+    s = n(378879),
+    o = n(350327),
+    c = n(594174),
+    d = n(74538),
+    u = n(486324);
+let h = (e) => {
+        let { imageSrc: t, file: n, guildId: i, isTryItOutFlow: l } = e;
+        if (l) {
+            (0, o.c_)(t);
             return;
         }
-        let d = h.default.getCurrentUser(),
-            f = null != s ? o.I5 : a.I5;
-        if (m.ZP.canUseAnimatedAvatar(d) || 'image/gif' !== l.type) {
-            f(t);
+        let h = c.default.getCurrentUser(),
+            m = null != i ? a.I5 : r.I5,
+            p = d.ZP.canUseAnimatedAvatar(h);
+        if (p || 'image/gif' !== n.type) {
+            m(t);
             return;
         }
-        if (!(null == d || g(p.pC.AVATAR, t)))
-            return (0, r.openModalLazy)(async () => {
-                let { default: e } = await n.e('12736').then(n.bind(n, 844594));
-                return (n) =>
-                    (0, i.jsx)(e, {
-                        user: d,
-                        imageSrc: t,
-                        uploadType: p.pC.AVATAR,
-                        onSubscribe: () => f(t),
-                        ...n
-                    });
-            });
+        if (null != h) {
+            if (!p) {
+                (0, s.openProfileUpsellModal)(u.pC.AVATAR, t);
+                return;
+            }
+        }
     },
-    _ = (e) => {
-        let { imageSrc: t, guildId: l, isTryItOutFlow: a } = e;
-        if (a) {
-            (0, u.f4)(t);
+    m = (e) => {
+        let { imageSrc: t, guildId: n, isTryItOutFlow: i } = e;
+        if (i) {
+            (0, o.f4)(t);
             return;
         }
-        let s = h.default.getCurrentUser(),
-            c = null != l ? o.g_ : u.g_;
-        if (m.ZP.canUsePremiumProfileCustomization(s)) {
-            c(t);
+        let r = c.default.getCurrentUser(),
+            l = null != n ? a.g_ : o.g_,
+            h = d.ZP.canUsePremiumProfileCustomization(r);
+        if (d.ZP.canUsePremiumProfileCustomization(r)) {
+            l(t);
             return;
         }
-        if (!(null == s || g(p.pC.BANNER, t)))
-            return (0, r.openModalLazy)(async () => {
-                let { default: e } = await n.e('12736').then(n.bind(n, 844594));
-                return (n) =>
-                    (0, i.jsx)(e, {
-                        user: s,
-                        imageSrc: t,
-                        uploadType: p.pC.BANNER,
-                        onSubscribe: () => c(t),
-                        ...n
-                    });
-            });
+        if (null != r) {
+            if (!h) {
+                (0, s.openProfileUpsellModal)(u.pC.BANNER, t);
+                return;
+            }
+        }
     };
-class E extends s.Z {
+class p extends l.Z {
     _initialize() {
-        l.Z.subscribe('PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL', this.maybeOpenProfilePreviewModal);
+        i.Z.subscribe('PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL', this.maybeOpenProfilePreviewModal);
     }
     _terminate() {
-        l.Z.unsubscribe('PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL', this.maybeOpenProfilePreviewModal);
+        i.Z.unsubscribe('PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL', this.maybeOpenProfilePreviewModal);
     }
     maybeOpenProfilePreviewModal(e) {
-        return e.uploadType === p.pC.AVATAR ? f(e) : e.uploadType === p.pC.BANNER ? _(e) : void 0;
+        return e.uploadType === u.pC.AVATAR ? h(e) : e.uploadType === u.pC.BANNER ? m(e) : void 0;
     }
 }
-t.Z = new E();
+t.Z = new p();
