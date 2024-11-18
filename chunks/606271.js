@@ -24,8 +24,8 @@ var i = n(392711),
     C = n(823379),
     v = n(358085),
     S = n(914946),
-    T = n(238679),
-    N = n(863141),
+    N = n(238679),
+    T = n(863141),
     A = n(981631),
     b = n(701488),
     x = n(65154);
@@ -70,7 +70,7 @@ class L {
                 });
             });
         let e = [c.Z, d.ZP, m.Z, E.Z, h.Z, p.Z];
-        new l.Fh(e.concat(this.stores), () => this.rpcServer.updateSubscriptions()).attach('RPCServerManager'), a.Z.subscribe('MESSAGE_CREATE', (e) => this.handleMessage(e)), a.Z.subscribe('MESSAGE_UPDATE', (e) => this.handleMessage(e)), a.Z.subscribe('MESSAGE_DELETE', (e) => this.handleMessage(e)), a.Z.subscribe('SPEAKING', (e) => this.handleSpeaking(e)), a.Z.subscribe('OAUTH2_TOKEN_REVOKE', (e) => this.handleOAuth2TokenRevoke(e)), a.Z.subscribe('GUILD_CREATE', (e) => this.handleGuildCreate(e)), a.Z.subscribe('CHANNEL_CREATE', (e) => this.handleChannelCreate(e)), a.Z.subscribe('LOGOUT', () => this.handleLogout()), a.Z.subscribe('VOICE_CHANNEL_SELECT', (e) => this.handleVoiceChannelSelect(e)), a.Z.subscribe('RPC_NOTIFICATION_CREATE', (e) => this.handleNotificationCreate(e)), a.Z.subscribe('ACTIVITY_JOIN', (e) => this.handleActivityJoin(e)), a.Z.subscribe('ACTIVITY_LAYOUT_MODE_UPDATE', (e) => this.handleActivityLayoutModeUpdate(e)), a.Z.subscribe('THERMAL_STATE_CHANGE', (e) => this.handleThermalStateChange(e)), a.Z.subscribe('ACTIVITY_SCREEN_ORIENTATION_UPDATE', (e) => this.handleScreenOrientationUpdate(e)), (0, T.HU)((e) => this.rpcServer.dispatchToSubscriptions(A.zMe.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE, {}, e)), a.Z.subscribe('RELATIONSHIP_ADD', (e) => this.handleRelationshipAdd(e)), a.Z.subscribe('RELATIONSHIP_REMOVE', (e) => this.handleRelationshipRemove(e)), a.Z.subscribe('PRESENCE_UPDATES', (e) => this.handlePresenceUpdate(e)), a.Z.subscribe('PRESENCES_REPLACE', () => this.handlePresencesReplace()), a.Z.subscribe('ENTITLEMENT_CREATE', (e) => this.handleEntitlementCreate(e)), a.Z.subscribe('ENTITLEMENT_DELETE', (e) => this.handleEntitlementDelete(e));
+        new l.Fh(e.concat(this.stores), () => this.rpcServer.updateSubscriptions()).attach('RPCServerManager'), a.Z.subscribe('MESSAGE_CREATE', (e) => this.handleMessage(e)), a.Z.subscribe('MESSAGE_UPDATE', (e) => this.handleMessage(e)), a.Z.subscribe('MESSAGE_DELETE', (e) => this.handleMessage(e)), a.Z.subscribe('SPEAKING', (e) => this.handleSpeaking(e)), a.Z.subscribe('OAUTH2_TOKEN_REVOKE', (e) => this.handleOAuth2TokenRevoke(e)), a.Z.subscribe('GUILD_CREATE', (e) => this.handleGuildCreate(e)), a.Z.subscribe('CHANNEL_CREATE', (e) => this.handleChannelCreate(e)), a.Z.subscribe('LOGOUT', () => this.handleLogout()), a.Z.subscribe('VOICE_CHANNEL_SELECT', (e) => this.handleVoiceChannelSelect(e)), a.Z.subscribe('RPC_NOTIFICATION_CREATE', (e) => this.handleNotificationCreate(e)), a.Z.subscribe('ACTIVITY_JOIN', (e) => this.handleActivityJoin(e)), a.Z.subscribe('ACTIVITY_LAYOUT_MODE_UPDATE', (e) => this.handleActivityLayoutModeUpdate(e)), a.Z.subscribe('THERMAL_STATE_CHANGE', (e) => this.handleThermalStateChange(e)), a.Z.subscribe('ACTIVITY_SCREEN_ORIENTATION_UPDATE', (e) => this.handleScreenOrientationUpdate(e)), (0, N.HU)((e) => this.rpcServer.dispatchToSubscriptions(A.zMe.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE, {}, e)), a.Z.subscribe('RELATIONSHIP_ADD', (e) => this.handleRelationshipAdd(e)), a.Z.subscribe('RELATIONSHIP_REMOVE', (e) => this.handleRelationshipRemove(e)), a.Z.subscribe('PRESENCE_UPDATES', (e) => this.handlePresenceUpdate(e)), a.Z.subscribe('PRESENCES_REPLACE', () => this.handlePresencesReplace()), a.Z.subscribe('ENTITLEMENT_CREATE', (e) => this.handleEntitlementCreate(e)), a.Z.subscribe('ENTITLEMENT_DELETE', (e) => this.handleEntitlementDelete(e));
     }
     handleMessage(e) {
         let t, n, i;
@@ -189,7 +189,7 @@ class L {
         switch (l.type) {
             case A.mFx.JOIN:
                 this.rpcServer.dispatchToSubscriptions(A.zMe.ACTIVITY_INVITE, (e) => e.socket.application.id === c, {
-                    user: (0, N.Z)(a),
+                    user: (0, T.Z)(a),
                     activity: o,
                     type: l.type,
                     channel_id: n,
@@ -197,7 +197,7 @@ class L {
                 });
                 break;
             case A.mFx.JOIN_REQUEST:
-                this.rpcServer.dispatchToSubscriptions(A.zMe.ACTIVITY_JOIN_REQUEST, (e) => e.socket.application.id === c, { user: (0, N.Z)(a) });
+                this.rpcServer.dispatchToSubscriptions(A.zMe.ACTIVITY_JOIN_REQUEST, (e) => e.socket.application.id === c, { user: (0, T.Z)(a) });
         }
     }
     handleOAuth2TokenRevoke(e) {

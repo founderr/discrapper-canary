@@ -11,8 +11,8 @@ n(192379);
 var o = n(120356),
     i = n.n(o),
     l = n(481060),
-    a = n(617136),
-    s = n(497505),
+    s = n(617136),
+    a = n(497505),
     c = n(918701),
     u = n(796111),
     d = n(667105),
@@ -41,8 +41,8 @@ let x = (e) => {
             size: l.Button.Sizes.SMALL,
             onClick: () =>
                 (0, c.FE)(t, {
-                    content: s.jn.QUEST_BAR_V2,
-                    ctaContent: a.jZ.OPEN_GAME_LINK
+                    content: a.jn.QUEST_BAR_V2,
+                    ctaContent: s.jZ.OPEN_GAME_LINK
                 }),
             children: v.intl.string(v.t.lwQdjI)
         });
@@ -56,8 +56,8 @@ let x = (e) => {
                 (0, c.gI)(
                     { quest: t },
                     {
-                        content: s.jn.QUEST_BAR_V2,
-                        ctaContent: a.jZ.CONNECT_CONSOLE
+                        content: a.jn.QUEST_BAR_V2,
+                        ctaContent: s.jZ.CONNECT_CONSOLE
                     }
                 ),
             size: l.Button.Sizes.SMALL,
@@ -65,17 +65,17 @@ let x = (e) => {
         });
     },
     E = (e) => {
-        let { quest: t, useReducedMotion: n, isExpanded: o, className: a, ctaLabel: c, ...u } = e,
+        let { quest: t, useReducedMotion: n, isExpanded: o, className: s, ctaLabel: c, ...u } = e,
             m = (0, d.hf)({
                 quest: t,
-                location: s.jn.QUEST_BAR_V2
+                location: a.jn.QUEST_BAR_V2
             });
         return (0, r.jsx)(l.ShinyButton, {
             fullWidth: !0,
             size: l.Button.Sizes.SMALL,
             onClick: m,
             pauseAnimation: n || !o,
-            className: i()(C.cta, a),
+            className: i()(C.cta, s),
             buttonShineClassName: C.shine,
             ...u,
             children: null != c ? c : v.intl.string(v.t.cfY4PD)
@@ -83,7 +83,7 @@ let x = (e) => {
     },
     h = (e) => {
         var t;
-        let { quest: n, useReducedMotion: o, isExpanded: i, awaitingConsoleConnections: l, hasMadeProgress: a, isProgressing: d, activeScreen: m, taskDetails: f } = e,
+        let { quest: n, useReducedMotion: o, isExpanded: i, awaitingConsoleConnections: l, hasMadeProgress: s, isProgressing: d, activeScreen: m, taskDetails: f } = e,
             v = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
             C = (0, u.P)({ location: p.dr.QUESTS_BAR }),
             h = (0, c.q8)(n);
@@ -98,8 +98,8 @@ let x = (e) => {
                 quest: n,
                 taskDetails: f
             });
-        if (m === s.LI.CONSOLE && l && !C) return (0, r.jsx)(S, { quest: n });
-        else if (m !== s.LI.SELECT && !a && !d) return (0, r.jsx)(x, { quest: n });
+        if (m === a.LI.CONSOLE && l && !C) return (0, r.jsx)(S, { quest: n });
+        else if (m !== a.LI.SELECT && !s && !d) return (0, r.jsx)(x, { quest: n });
         return null;
     };
 function _(e) {

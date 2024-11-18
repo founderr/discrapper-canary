@@ -156,9 +156,9 @@ let f = {
                 darker: !0,
                 gradientLeft: 'linear-gradient(284deg, rgba(228, 23, 180, 0.00) 29.64%, rgba(228, 23, 180, 0.30) 68.69%)',
                 gradientRight: 'linear-gradient(76deg, rgba(228, 23, 180, 0.00) 29.64%, rgba(228, 23, 180, 0.30) 68.69%)',
-                animationSource: 'https://cdn.discordapp.com/assets/content/6d65dc8e86ffdeed50ea47de3770044e6e65ee9b87eb89486cb6af8a55c7caf0.webm'
+                animationSource: 'https://cdn.discordapp.com/assets/collectibles/drops/kawaii_mode/hero_banner.webm'
             },
-            animatedBanner: 'https://cdn.discordapp.com/assets/content/8f1e14026cd1810312c106ddd16cc2dca0d69144f8853c24ed2936bcf6defc48.webm'
+            animatedBanner: 'https://cdn.discordapp.com/assets/collectibles/drops/kawaii_mode/banner_animated.webm'
         }
     },
     _ = (e) => f[e],

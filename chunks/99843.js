@@ -1,8 +1,8 @@
 var i = n(200651);
 n(192379);
 var l = n(481060),
-    a = n(493683),
-    r = n(599059),
+    r = n(493683),
+    a = n(599059),
     s = n(933557),
     o = n(210975),
     c = n(981631),
@@ -19,7 +19,7 @@ t.Z = (e) => {
         className: u.container,
         onDoubleClick: (e) => e.stopPropagation(),
         children: [
-            (0, i.jsx)(r.Z, {
+            (0, i.jsx)(a.Z, {
                 minLen: 1,
                 maxLen: c.HN8,
                 className: u.channelName,
@@ -27,7 +27,7 @@ t.Z = (e) => {
                 autoComplete: 'off',
                 value: null != n ? n : '',
                 onBlur: (e) => {
-                    n !== e.currentTarget.value && a.Z.setName(t.id, e.currentTarget.value);
+                    n !== e.currentTarget.value && r.Z.setName(t.id, e.currentTarget.value);
                 }
             }),
             h &&

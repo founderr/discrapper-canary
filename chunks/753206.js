@@ -11,11 +11,11 @@ var i = n(200651),
 t.Z = r.memo(function (e) {
     var t;
     let { message: n, channel: r, compact: l, className: p, isGroupStart: _, hideSimpleEmbedContent: E = !0, disableInteraction: g } = e,
-        m = (0, u.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()),
-        { content: h } = (0, s.Z)(n, {
+        h = (0, u.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()),
+        { content: m } = (0, s.Z)(n, {
             hideSimpleEmbedContent: E,
-            allowList: m,
-            allowHeading: m,
+            allowList: h,
+            allowHeading: h,
             allowLinks: !0,
             previewLinkTarget: !0
         });
@@ -31,7 +31,7 @@ t.Z = r.memo(function (e) {
             channel: r,
             guildId: void 0
         }),
-        childrenMessageContent: (0, c.Z)(e, h),
+        childrenMessageContent: (0, c.Z)(e, m),
         disableInteraction: g
     });
 });

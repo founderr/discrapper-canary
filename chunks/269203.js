@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(442837),
-    a = n(481060),
-    r = n(805519),
+    r = n(481060),
+    a = n(805519),
     s = n(565138),
     o = n(246364),
     c = n(705563),
@@ -17,7 +17,7 @@ var l = n(442837),
     p = n(509638);
 function m(e) {
     var t;
-    let { joinRequest: n, guild: r } = e,
+    let { joinRequest: n, guild: a } = e,
         c = (0, l.e7)([d.default], () => d.default.getUser(n.userId));
     return (0, i.jsxs)('div', {
         className: p.summaryContainer,
@@ -25,25 +25,25 @@ function m(e) {
             (0, i.jsxs)('div', {
                 className: p.summaryHeader,
                 children: [
-                    null != r &&
+                    null != a &&
                         (0, i.jsxs)('div', {
                             className: p.summaryHeaderClanInfo,
                             children: [
                                 (0, i.jsx)(s.Z, {
-                                    guild: r,
+                                    guild: a,
                                     active: !0,
                                     size: s.Z.Sizes.SMOL,
                                     className: p.guildIcon
                                 }),
-                                (0, i.jsx)(a.Heading, {
+                                (0, i.jsx)(r.Heading, {
                                     variant: 'heading-sm/semibold',
                                     color: 'header-primary',
-                                    children: r.name
+                                    children: a.name
                                 })
                             ]
                         }),
                     null != c &&
-                        (0, i.jsx)(a.Heading, {
+                        (0, i.jsx)(r.Heading, {
                             variant: 'heading-xl/semibold',
                             color: 'header-primary',
                             children: h.intl.format(h.t.jDV3i4, { username: c.globalName })
@@ -62,12 +62,12 @@ function m(e) {
                                   (0, i.jsxs)('div', {
                                       className: p.formResponseContainer,
                                       children: [
-                                          (0, i.jsx)(a.Text, {
+                                          (0, i.jsx)(r.Text, {
                                               variant: 'text-xs/semibold',
                                               color: 'text-muted',
                                               children: e.label
                                           }),
-                                          (0, i.jsx)(a.Text, {
+                                          (0, i.jsx)(r.Text, {
                                               variant: 'text-md/medium',
                                               color: 'text-primary',
                                               children: t
@@ -82,7 +82,7 @@ function m(e) {
 }
 function f(e) {
     let { channel: t } = e,
-        { loading: n, joinRequest: l, joinRequestGuild: s } = (0, r.Z)(t.id);
+        { loading: n, joinRequest: l, joinRequestGuild: s } = (0, a.Z)(t.id);
     return (0, i.jsx)(u.ZP, {
         channelId: t.id,
         className: p.container,
@@ -105,7 +105,7 @@ function f(e) {
                           ]
                       })
                     : n
-                      ? (0, i.jsx)(a.Spinner, {})
+                      ? (0, i.jsx)(r.Spinner, {})
                       : null
         })
     });

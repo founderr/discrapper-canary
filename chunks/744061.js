@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    a = n(692547),
-    r = n(780384),
+    r = n(692547),
+    a = n(780384),
     s = n(481060),
     o = n(367907),
     c = n(210887),
@@ -39,7 +39,7 @@ function f(e) {
             return (
                 null != v &&
                     (async () => {
-                        let [{ default: l }, a] = await Promise.all([Promise.resolve().then(n.t.bind(n, 500923, 23)), (0, r.wj)(t) ? v.dark() : v.light()]);
+                        let [{ default: l }, r] = await Promise.all([Promise.resolve().then(n.t.bind(n, 500923, 23)), (0, a.wj)(t) ? v.dark() : v.light()]);
                         !i &&
                             null != b.current &&
                             (e = l.loadAnimation({
@@ -47,7 +47,7 @@ function f(e) {
                                 renderer: 'svg',
                                 loop: !0,
                                 autoplay: !0,
-                                animationData: a
+                                animationData: r
                             }));
                     })(),
                 () => {
@@ -130,7 +130,7 @@ function f(e) {
                               children: [
                                   (0, i.jsx)(s.CircleInformationIcon, {
                                       size: 'xs',
-                                      color: a.Z.unsafe_rawColors.PRIMARY_400.css,
+                                      color: r.Z.unsafe_rawColors.PRIMARY_400.css,
                                       className: p.icon
                                   }),
                                   (0, i.jsx)(s.Text, {

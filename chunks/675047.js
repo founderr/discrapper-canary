@@ -20,7 +20,7 @@ var i = n(200651),
     S = n(266132),
     T = n(726985),
     C = n(388032);
-function _() {
+function E() {
     let { enabled: e } = (0, l.S)({ location: 'UserSettingsDataAndPrivacy' });
     return e
         ? (0, i.jsxs)(x.Z, {
@@ -31,7 +31,7 @@ function _() {
           })
         : null;
 }
-function E() {
+function _() {
     return (0, i.jsx)(x.Z, {
         title: C.intl.string(C.t.BG7Qsb),
         webSetting: T.s6.PRIVACY_AND_SAFETY_RECEIVE_DISCORD_DATA_CATEGORY,
@@ -52,7 +52,7 @@ function f() {
         }, []),
         (0, i.jsxs)(c.N, {
             header: C.intl.string(C.t.OAuOHB),
-            children: [(0, i.jsx)(I, {}), (0, i.jsx)(E, {}), (0, i.jsx)(_, {})]
+            children: [(0, i.jsx)(I, {}), (0, i.jsx)(_, {}), (0, i.jsx)(E, {})]
         })
     );
 }

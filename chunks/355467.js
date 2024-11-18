@@ -21,7 +21,7 @@ n.d(t, {
         return eT;
     },
     GV: function () {
-        return B;
+        return G;
     },
     K2: function () {
         return eS;
@@ -117,7 +117,7 @@ n.d(t, {
         return ev;
     },
     sF: function () {
-        return G;
+        return B;
     },
     sk: function () {
         return $;
@@ -538,7 +538,7 @@ function k(e, t, n) {
 function U(e, t, n) {
     return R(E.gg$.BRAINTREE, e, t, { analyticsLocation: n });
 }
-async function B(e, t, n, r) {
+async function G(e, t, n, r) {
     if (null == e) throw O('Stripe not loaded');
     let i = await C(t),
         { name: s, line1: o, line2: l, city: u, state: c, postalCode: d, country: f } = t,
@@ -565,7 +565,7 @@ async function B(e, t, n, r) {
         analyticsLocation: r
     });
 }
-async function G(e, t, n) {
+async function B(e, t, n) {
     let r = await C(e),
         i = { type: b.QL.get(t) };
     return R(E.gg$.ADYEN, JSON.stringify(i), e, {

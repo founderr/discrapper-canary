@@ -6,7 +6,7 @@ t.d(n, {
 var a = t(200651);
 t(192379);
 var i = t(481060),
-    c = t(81245),
+    c = t(222062),
     o = t(867176),
     s = t(654904),
     r = t(486324),
@@ -17,7 +17,7 @@ function f(e) {
     let { user: n, displayProfile: t, guildId: f, canUsePremiumCustomization: p, pendingBanner: A, isTryItOutFlow: b, disabledInputs: m, onUpsellClick: v } = e,
         Z = p || (null == t ? void 0 : t.canUsePremiumProfileCustomization) || !1,
         h = Z ? i.PencilIcon : i.NitroWheelIcon,
-        g = (0, c.Mu)('ProfileCustomizationPreviewBanner', Z);
+        g = (0, c.M)(Z);
     return (0, a.jsx)(o.Z, {
         user: n,
         displayProfile: t,

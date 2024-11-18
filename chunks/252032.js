@@ -7,8 +7,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    a = n(442837),
-    r = n(904245),
+    r = n(442837),
+    a = n(904245),
     s = n(257559),
     o = n(541716),
     c = n(893718),
@@ -38,7 +38,7 @@ function E(e) {
         { id: o } = t,
         { id: c } = n,
         m = t.getGuildId(),
-        g = (0, a.e7)([h.Z], () => h.Z.getGuild(m), [m]),
+        g = (0, r.e7)([h.Z], () => h.Z.getGuild(m), [m]),
         C = t.type === _.d4z.GUILD_ANNOUNCEMENT,
         E = null != g && g.hasFeature(_.oNc.NEWS),
         Z = C && E,
@@ -46,7 +46,7 @@ function E(e) {
             editingMessage: N,
             editingTextValue: S,
             editingRichValue: T
-        } = (0, a.cj)(
+        } = (0, r.cj)(
             [u.Z],
             () => ({
                 editingMessage: u.Z.getEditingMessage(o),
@@ -55,13 +55,13 @@ function E(e) {
             }),
             [o]
         ),
-        j = (0, a.e7)([d.default], () => d.default.getId()),
+        j = (0, r.e7)([d.default], () => d.default.getId()),
         A = l.useCallback(
             (e, n, i) => {
                 let { content: l } = i,
-                    a = p.Z.can(_.Plq.MANAGE_MESSAGES, t),
+                    r = p.Z.can(_.Plq.MANAGE_MESSAGES, t),
                     o = null != N && null != N.author ? N.author.id : null;
-                return Z && (o === j || a) && null != N && (0, f.yE)(N.flags, _.iLy.CROSSPOSTED) ? s.Z.confirmEdit(e, n, l) : r.Z.editMessage(e, n, { content: l }), Promise.resolve();
+                return Z && (o === j || r) && null != N && (0, f.yE)(N.flags, _.iLy.CROSSPOSTED) ? s.Z.confirmEdit(e, n, l) : a.Z.editMessage(e, n, { content: l }), Promise.resolve();
             },
             [N, Z, j, t]
         ),
@@ -81,8 +81,8 @@ function E(e) {
               message: n,
               textValue: S,
               richValue: T,
-              onCancel: r.Z.endEditMessage,
-              onChange: r.Z.updateEditMessage,
+              onCancel: a.Z.endEditMessage,
+              onChange: a.Z.updateEditMessage,
               onConfirmDelete: s.Z.confirmDelete,
               saveMessage: A,
               validateEdit: I,
@@ -91,7 +91,7 @@ function E(e) {
         : null;
 }
 function b(e) {
-    let { textValue: t, richValue: n, message: a, channel: r, onChange: s, onSubmit: d, onKeyDown: u } = e,
+    let { textValue: t, richValue: n, message: r, channel: a, onChange: s, onSubmit: d, onKeyDown: u } = e,
         [h, p] = l.useState(!0),
         f = l.useCallback(() => p(!0), []),
         g = l.useCallback(() => p(!1), []);
@@ -112,7 +112,7 @@ function b(e) {
                 className: v.channelTextArea,
                 textValue: t,
                 richValue: n,
-                channel: r,
+                channel: a,
                 type: o.I.EDIT,
                 onChange: s,
                 onSubmit: (e) => {
@@ -124,15 +124,15 @@ function b(e) {
                 onFocus: f,
                 onBlur: g
             },
-            a.id
+            r.id
         )
     );
 }
 function Z(e, t, n) {
-    let { message: l, channel: a } = e;
+    let { message: l, channel: r } = e;
     return n
         ? (0, i.jsx)(E, {
-              channel: a,
+              channel: r,
               message: l
           })
         : (0, i.jsx)(C.ZP, {

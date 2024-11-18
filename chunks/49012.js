@@ -59,15 +59,15 @@ function O(e, t) {
         P = !1,
         k = D,
         U = L,
-        B = null;
+        G = null;
     if (null != D && null != L) {
-        var G, Z, F;
+        var B, Z, F;
         let e = S.Z.getMessage(L, D),
             t = E.Z.getBasicChannel(L);
         M = null !== (F = null == t ? void 0 : t.guild_id) && void 0 !== F ? F : null;
         let n = v.Z.getGuild(M),
-            r = (null == e ? void 0 : null === (G = e.messageReference) || void 0 === G ? void 0 : G.guild_id) != null && (null == e ? void 0 : e.webhookId) != null && (null == e ? void 0 : e.hasFlag(N.iLy.IS_CROSSPOST)) && null != M;
-        r && (null == e ? void 0 : null === (Z = e.messageReference) || void 0 === Z ? void 0 : Z.guild_id) != null ? ((k = e.messageReference.message_id), (U = e.messageReference.channel_id), (B = e.messageReference.guild_id)) : (B = M);
+            r = (null == e ? void 0 : null === (B = e.messageReference) || void 0 === B ? void 0 : B.guild_id) != null && (null == e ? void 0 : e.webhookId) != null && (null == e ? void 0 : e.hasFlag(N.iLy.IS_CROSSPOST)) && null != M;
+        r && (null == e ? void 0 : null === (Z = e.messageReference) || void 0 === Z ? void 0 : Z.guild_id) != null ? ((k = e.messageReference.message_id), (U = e.messageReference.channel_id), (G = e.messageReference.guild_id)) : (G = M);
         let i = (null == t ? void 0 : t.type) === N.d4z.GUILD_ANNOUNCEMENT && (null == n ? void 0 : n.hasFeature(N.oNc.COMMUNITY)) === !0,
             a = (null == e ? void 0 : e.hasFlag(N.iLy.EPHEMERAL)) === !0;
         P = null != e && !a && (r || i);
@@ -107,7 +107,7 @@ function O(e, t) {
                     channelId: L,
                     guildId: M,
                     sourceChannelId: U,
-                    sourceGuildId: B
+                    sourceGuildId: G
                 }),
             null != R)
         ) {
@@ -140,7 +140,7 @@ function O(e, t) {
                   channelId: L,
                   guildId: M,
                   sourceChannelId: U,
-                  sourceGuildId: B
+                  sourceGuildId: G
               });
         return;
     }

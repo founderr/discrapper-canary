@@ -27,7 +27,7 @@ var i = n(200651),
 function I(e) {
     var t, n, r, I, j, _, T;
     let { name: S, icon: Z, imageSrc: E, iconBackgroundColor: y, iconClassName: A, iconWrapperClassName: R, details: k, integration: L, buttonText: O, buttonDisabled: w, hasNextSection: M, onButtonClick: B, guildId: P, isScrolling: D, canShowMigrationTooltip: U, trailing: F } = e,
-        [H, W] = l.useState(!1),
+        [W, H] = l.useState(!1),
         [G, z] = l.useState(!1);
     let V =
             ((I = O),
@@ -174,7 +174,7 @@ function I(e) {
                                         ),
                                     r
                                 );
-                            })(L, H, X),
+                            })(L, W, X),
                             q,
                             F
                         ]
@@ -187,8 +187,8 @@ function I(e) {
               onClick: () => {
                   U && null != P && null != L && b.Z.dismissOverviewTooltip(P, L.integration), null == B || B();
               },
-              onFocus: () => W(!0),
-              onBlur: () => W(!1),
+              onFocus: () => H(!0),
+              onBlur: () => H(!1),
               children: (0, i.jsx)(c.Card, {
                   editable: !0,
                   className: a()(N.card, N.clickable),

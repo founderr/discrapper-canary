@@ -1,13 +1,13 @@
 var i,
     r,
     s,
-    a,
-    l = n(442837),
+    l,
+    a = n(442837),
     o = n(570140);
 let c = !1,
     u = null,
     d = null;
-class h extends (a = l.ZP.Store) {
+class h extends (l = a.ZP.Store) {
     getState() {
         return {
             verifySuccess: c,

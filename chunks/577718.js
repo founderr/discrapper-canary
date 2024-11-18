@@ -19,8 +19,8 @@ var i = n(200651),
     C = n(626135),
     v = n(267642),
     S = n(981631),
-    T = n(921944),
-    N = n(30513),
+    N = n(921944),
+    T = n(30513),
     A = n(474936),
     b = n(388032),
     x = n(114778),
@@ -43,7 +43,7 @@ function D(e, t) {
                   analyticsLocations: e,
                   analyticsSourceLocation: S.jXE.PREMIUM_GUILD_INVITE_SPLASH,
                   guild: t,
-                  perks: (0, N.o9)()
+                  perks: (0, T.o9)()
               });
 }
 function M(e) {
@@ -64,7 +64,7 @@ function M(e) {
 t.Z = r.memo(function (e) {
     let { contentTypes: t, theme: n, guild: r, renderGuildHeaderDropdownButton: s } = e,
         { analyticsLocations: h } = (0, o.ZP)(),
-        N = () => {
+        T = () => {
             C.default.track(S.rMx.TOOLTIP_VIEWED, {
                 type: A.cd.PREMIUM_PROGRESS_BAR,
                 location: { page: S.ZY5.GUILD_CHANNEL }
@@ -78,7 +78,7 @@ t.Z = r.memo(function (e) {
             });
         },
         k = (0, a.wj)(n) ? y : O,
-        [U, G] = (0, u.US)(t, T.R.GUILD_HEADER_TOOLTIPS);
+        [U, G] = (0, u.US)(t, N.R.GUILD_HEADER_TOOLTIPS);
     return (0, i.jsx)(i.Fragment, {
         children: (() => {
             switch (U) {
@@ -93,7 +93,7 @@ t.Z = r.memo(function (e) {
                 case l.z.GUILD_HEADER_PREMIUM_GUILD_PROGRESS:
                     return (0, i.jsx)(M, {
                         renderPopout: (0, i.jsx)(I.ZP, {
-                            onComponentMount: N,
+                            onComponentMount: T,
                             header: b.intl.string(b.t.nxtaFx),
                             asset: (0, i.jsx)('img', {
                                 alt: '',
@@ -112,7 +112,7 @@ t.Z = r.memo(function (e) {
                 case l.z.GUILD_HEADER_PROGRESS_BAR_SIZE_COACH_MARK:
                     return (0, i.jsx)(M, {
                         renderPopout: (0, i.jsx)(I.ZP, {
-                            onComponentMount: N,
+                            onComponentMount: T,
                             header: b.intl.string(b.t.KAsfPT),
                             asset: (0, i.jsx)('img', {
                                 alt: '',
@@ -186,7 +186,7 @@ t.Z = r.memo(function (e) {
                             header: b.intl.string(b.t.hLUL3t),
                             content: b.intl.string(b.t.ahWaPT),
                             buttonCTA: b.intl.string(b.t['NX+WJC']),
-                            onClick: () => G(T.L.UNKNOWN),
+                            onClick: () => G(N.L.UNKNOWN),
                             markAsDismissed: G
                         }),
                         renderGuildHeaderDropdownButton: s

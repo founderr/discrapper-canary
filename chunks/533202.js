@@ -25,7 +25,7 @@ function L(e) {
         [I, N] = l.useState(L),
         [B, T] = l.useState(null),
         [S, Z] = l.useState(null),
-        [M, E] = l.useState(null),
+        [E, M] = l.useState(null),
         [v, H] = l.useState(null),
         [y, A] = l.useState(null),
         [k, D] = l.useState(''),
@@ -38,8 +38,8 @@ function L(e) {
     let X = async () => {
             let e = y;
             if (!G) {
-                if (null == M || null == S) return;
-                let t = await o.Z.createGuildFromTemplate(M, v, S);
+                if (null == E || null == S) return;
+                let t = await o.Z.createGuildFromTemplate(E, v, S);
                 A((e = new c.ZP(t)));
             }
             null != e && (await d.bF(t, e.id, k, R), N(h.VX.CONFIRMATION));
@@ -95,7 +95,7 @@ function L(e) {
                             children: (0, i.jsx)(r.Z, {
                                 guildTemplate: S,
                                 onHubGuildInfoSet: (e, t) => {
-                                    E(e), H(t), N(h.VX.CUSTOMIZE_EXISTING_GUILD);
+                                    M(e), H(t), N(h.VX.CUSTOMIZE_EXISTING_GUILD);
                                 },
                                 onClose: p,
                                 onBack: () => N(h.VX.GUILD_TEMPLATES),

@@ -3,7 +3,7 @@ n.d(t, {
         return q;
     },
     CT: function () {
-        return B;
+        return G;
     },
     Dd: function () {
         return K;
@@ -42,7 +42,7 @@ n.d(t, {
         return C;
     },
     WZ: function () {
-        return G;
+        return B;
     },
     Wy: function () {
         return r;
@@ -185,8 +185,8 @@ let w = '700136079562375258',
     P = ['Server: NA', 'Server: EU', 'Server: LATAM', 'Server: KR', 'Server: AP', 'Voice ON', 'Voice OFF', 'Unrated', 'All Ranks', 'Bronze+', 'Silver+', 'Gold+', 'Platinum+', 'Diamond+'],
     k = new Set([...P, 'Server: NA', 'Server: EU', 'Server: Asia', 'Server: TW/HK/MO', 'Mondstadt', 'Liyue', 'Inazuma', 'Sumeru', 'Fontaine', 'F2P', 'Spenders', 'Co-op', 'Support']),
     U = ['20+', '30+', '40+', 'All Ages'],
-    B = ['Recurring Events', 'Beginner Friendly', 'PUGs', 'Inclusive', 'Parent Friendly', 'Work-life Balance', 'Competitive', 'Streamer', 'Esports'],
-    G = new Set([...P, ...U, ...B]),
+    G = ['Recurring Events', 'Beginner Friendly', 'PUGs', 'Inclusive', 'Parent Friendly', 'Work-life Balance', 'Competitive', 'Streamer', 'Esports'],
+    B = new Set([...P, ...U, ...G]),
     Z = new Set(['Bulgarian', 'Chinese (Simplified)', 'Chinese (Traditional)', 'Croatian', 'Czech', 'Danish', 'Dutch', 'English', 'Finnish', 'French', 'German', 'Greek', 'Hindi', 'Hungarian', 'Italian', 'Japanese', 'Korean', 'Lithuanian', 'Norwegian', 'Polish', 'Portuguese', 'Romanian', 'Russian', 'Spanish', 'Swedish', 'Thai', 'Turkish', 'Ukrainian', 'Vietnamese']);
 function F(e, t) {
     var n;
@@ -195,7 +195,7 @@ function F(e, t) {
         ((n = t),
         (e) => {
             var t;
-            return -((((null == n ? void 0 : n.includes(e)) ? 1 : 0) << 4) | ((((t = e), G.has(t) || V.has(t) || Z.has(t)) ? 0 : 1) << 3) | ((k.has(e) ? 1 : 0) << 2) | ((U.includes(e) ? 1 : 0) << 1) | ((B.includes(e) ? 1 : 0) << 0));
+            return -((((null == n ? void 0 : n.includes(e)) ? 1 : 0) << 4) | ((((t = e), B.has(t) || V.has(t) || Z.has(t)) ? 0 : 1) << 3) | ((k.has(e) ? 1 : 0) << 2) | ((U.includes(e) ? 1 : 0) << 1) | ((G.includes(e) ? 1 : 0) << 0));
         })
     );
 }

@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    a = n(120356),
-    r = n.n(a),
+    r = n(120356),
+    a = n.n(r),
     s = n(100621),
     o = n(704215),
     c = n(481060),
@@ -32,7 +32,7 @@ var i = n(200651),
     j = n(883283);
 function A(e) {
     var t;
-    let { guild: n, showToast: a, onConfirm: o, onDismiss: p } = e,
+    let { guild: n, showToast: r, onConfirm: o, onDismiss: p } = e,
         [m, f] = l.useState(!1),
         C = l.useRef(null),
         _ = (0, x.Cc)(n.id),
@@ -76,7 +76,7 @@ function A(e) {
             [o]
         ),
         R = (0, c.useTransition)(
-            a,
+            r,
             {
                 from: {
                     transform: N ? 'translateY(0)' : 'translateY(16px)',
@@ -108,13 +108,13 @@ function A(e) {
         D = k ? T.intl.string(T.t.eA1ymp) : T.intl.string(T.t.MF0Ntb),
         w = k ? T.intl.formatToPlainString(T.t['60PXOz'], { guildName: n.name }) : T.intl.formatToPlainString(T.t.i27ioq, { guildName: n.name });
     return R((e, t) => {
-        var l, a;
+        var l, r;
         return (
             t &&
             (0, i.jsx)(s.animated.div, {
                 onMouseEnter: () => f(!0),
                 onMouseLeave: () => f(!1),
-                className: r()(j.wrapper),
+                className: a()(j.wrapper),
                 style: {
                     ...e,
                     ...y
@@ -124,7 +124,7 @@ function A(e) {
                     'aria-label': w,
                     onClick: L,
                     children: (0, i.jsxs)('div', {
-                        className: r()(j.toastContainerInner, m ? j.hovered : null),
+                        className: a()(j.toastContainerInner, m ? j.hovered : null),
                         children: [
                             (0, i.jsxs)('div', {
                                 className: j.guildIconContainer,
@@ -138,7 +138,7 @@ function A(e) {
                                         children: (0, i.jsx)(Z.aG, {
                                             guildId: n.id,
                                             clanTag: null === (l = n.clan) || void 0 === l ? void 0 : l.tag,
-                                            clanBadge: null === (a = n.clan) || void 0 === a ? void 0 : a.badge,
+                                            clanBadge: null === (r = n.clan) || void 0 === r ? void 0 : r.badge,
                                             className: j.guildClanTag
                                         })
                                     })
@@ -184,8 +184,8 @@ function y(e) {
     let {} = e,
         t = (0, d.e7)([f.Z], () => f.Z.getGuildId()),
         n = (0, E.h)(t, 'clan_tag_upsell_toast'),
-        a = (0, d.e7)([m.Z], () => m.Z.getGuild(t), [t]),
-        [r, s] = l.useState(!1),
+        r = (0, d.e7)([m.Z], () => m.Z.getGuild(t), [t]),
+        [a, s] = l.useState(!1),
         c = l.useRef(null);
     l.useEffect(
         () => (
@@ -209,12 +209,12 @@ function y(e) {
         h = l.useCallback(() => {
             if ((s(!1), null != t)) (0, p.Qd)(o.C.ADOPT_CLAN_IDENTITY_NOTICE, null != t ? t : N.lds, !0, S.L.DISMISS);
         }, [t]);
-    return n && null != t && null != a
+    return n && null != t && null != r
         ? (0, i.jsx)(A, {
-              guild: a,
+              guild: r,
               onConfirm: u,
               onDismiss: h,
-              showToast: r
+              showToast: a
           })
         : null;
 }

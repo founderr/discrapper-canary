@@ -7,48 +7,48 @@ n.d(t, {
 var i = n(200651),
     r = n(192379),
     s = n(990547),
-    a = n(481060),
-    l = n(301938),
+    l = n(481060),
+    a = n(301938),
     o = n(806701),
     c = n(808993),
     u = n(720196);
 function d(e) {
     let { transitionTo: t, token: n, width: d } = e,
-        [h, g] = r.useState(u.n.START),
-        [m, p] = r.useState(null),
-        [f, _] = r.useState(''),
-        x = { impression_group: s.ImpressionGroups.ACCOUNT_REVERT_FLOW };
+        [h, p] = r.useState(u.n.START),
+        [g, m] = r.useState(null),
+        [f, x] = r.useState(''),
+        _ = { impression_group: s.ImpressionGroups.ACCOUNT_REVERT_FLOW };
     return (0, i.jsx)('div', {
         style: { margin: '8px' },
-        children: (0, i.jsxs)(a.Slides, {
+        children: (0, i.jsxs)(l.Slides, {
             activeSlide: h,
             width: d,
-            onSlideReady: p,
+            onSlideReady: m,
             children: [
-                (0, i.jsx)(a.Slide, {
+                (0, i.jsx)(l.Slide, {
                     id: u.n.START,
-                    impressionProperties: x,
+                    impressionProperties: _,
                     impressionName: s.ImpressionNames.ACCOUNT_REVERT_EXPLAINER,
                     children: (0, i.jsx)(o.Z, {
-                        setSlide: g,
+                        setSlide: p,
                         transitionTo: t
                     })
                 }),
-                (0, i.jsx)(a.Slide, {
+                (0, i.jsx)(l.Slide, {
                     id: u.n.PASSWORD,
-                    impressionProperties: x,
+                    impressionProperties: _,
                     impressionName: s.ImpressionNames.ACCOUNT_REVERT_CHANGE_PASSWORD,
-                    children: (0, i.jsx)(l.Z, {
-                        setOriginalEmail: _,
-                        setSlide: g,
+                    children: (0, i.jsx)(a.Z, {
+                        setOriginalEmail: x,
+                        setSlide: p,
                         transitionTo: t,
-                        ready: m === u.n.PASSWORD,
+                        ready: g === u.n.PASSWORD,
                         token: n
                     })
                 }),
-                (0, i.jsx)(a.Slide, {
+                (0, i.jsx)(l.Slide, {
                     id: u.n.SUCCESS,
-                    impressionProperties: x,
+                    impressionProperties: _,
                     impressionName: s.ImpressionNames.ACCOUNT_REVERT_SUCCESS,
                     children: (0, i.jsx)(c.Z, { email: f })
                 })

@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return d;
+        return u;
     }
 });
 var l = t(200651),
@@ -9,9 +9,9 @@ var l = t(200651),
     s = t(481060),
     r = t(249842),
     c = t(838367),
-    u = t(83474);
-function d(e) {
-    let { guildId: n, channelId: t, messageId: d, ...o } = e,
+    o = t(83474);
+function u(e) {
+    let { guildId: n, channelId: t, messageId: u, ...d } = e,
         { unavailable: h, guild: m } = (0, a.cj)(
             [c.Z],
             () => ({
@@ -29,8 +29,8 @@ function d(e) {
     return h
         ? (0, l.jsx)(s.Popout, {
               position: 'right',
-              renderPopout: (e) => (0, l.jsx)(u.SK, {}),
-              ...o
+              renderPopout: (e) => (0, l.jsx)(o.SK, {}),
+              ...d
           })
         : (0, l.jsx)(s.Popout, {
               position: 'right',
@@ -38,12 +38,12 @@ function d(e) {
               renderPopout: (e) =>
                   null == m
                       ? (0, l.jsx)(l.Fragment, {})
-                      : (0, l.jsx)(u.sK, {
+                      : (0, l.jsx)(o.sK, {
                             ...e,
                             guild: m,
                             channelId: t,
-                            messageId: d
+                            messageId: u
                         }),
-              ...o
+              ...d
           });
 }

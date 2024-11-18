@@ -9,8 +9,8 @@ var r = n(200651),
     o = n(192379),
     i = n(120356),
     l = n.n(i),
-    a = n(442837),
-    s = n(780384),
+    s = n(442837),
+    a = n(780384),
     c = n(481060),
     u = n(607070),
     d = n(210887),
@@ -37,9 +37,9 @@ function k(e) {
     var t;
     let { transitionState: n, onClose: i, quest: p, autoplay: k } = e,
         B = (0, C.il)(p),
-        L = (0, a.e7)([d.Z], () => d.Z.getState().theme),
-        P = (0, s.wj)(L) ? D.BRd.DARK : D.BRd.LIGHT,
-        M = (0, a.e7)([u.Z], () => u.Z.useReducedMotion),
+        L = (0, s.e7)([d.Z], () => d.Z.getState().theme),
+        P = (0, a.wj)(L) ? D.BRd.DARK : D.BRd.LIGHT,
+        M = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
         [O, R] = o.useState(B.progressSeconds),
         [w, F] = o.useState(!1),
         { completedRatio: Z, completedRatioDisplay: U } = (0, f.I)(p),
@@ -192,7 +192,7 @@ function k(e) {
 }
 function B(e) {
     let { questId: t, autoplay: n, ...o } = e,
-        i = (0, a.e7)([p.Z], () => p.Z.getQuest(t));
+        i = (0, s.e7)([p.Z], () => p.Z.getQuest(t));
     return null != i
         ? (0, r.jsx)(k, {
               ...o,

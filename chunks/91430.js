@@ -30,8 +30,8 @@ var i = n(200651),
     S = n(17894),
     T = n(975298),
     C = n(600164),
-    _ = n(925329),
-    E = n(963249),
+    E = n(925329),
+    _ = n(963249),
     I = n(301766),
     f = n(594174),
     N = n(580130),
@@ -181,7 +181,7 @@ function U(e) {
                     children: Z.intl.format(Z.t['0nbf/P'], {
                         daysPastDue: t,
                         paymentModalRedirect: () => {
-                            (0, E.Z)({
+                            (0, _.Z)({
                                 initialPlanId: n.planIdFromItems,
                                 openInvoiceId: r,
                                 analyticsLocations: l
@@ -226,9 +226,9 @@ function G() {
                 children: (0, i.jsxs)(C.Z, {
                     align: C.Z.Align.CENTER,
                     children: [
-                        (0, i.jsx)(_.Z, {
+                        (0, i.jsx)(E.Z, {
                             game: null,
-                            size: _.Z.Sizes.SMALL,
+                            size: E.Z.Sizes.SMALL,
                             className: F.noItemsIcon
                         }),
                         (0, i.jsx)('span', {
@@ -265,10 +265,10 @@ function Y(e) {
                       analyticsLocations: m,
                       analyticsLocation: n
                   },
-        [_] = (0, O.ED)(C);
-    _ = null != u ? u : _;
-    let E = (0, T.Z)();
-    return null == S || null == _
+        [E] = (0, O.ED)(C);
+    E = null != u ? u : E;
+    let _ = (0, T.Z)();
+    return null == S || null == E
         ? (0, i.jsx)(h.Spinner, {})
         : (0, i.jsxs)(i.Fragment, {
               children: [
@@ -301,9 +301,9 @@ function Y(e) {
                               children: [
                                   (0, i.jsx)(V, {
                                       subscription: t,
-                                      renewalInvoicePreview: _,
+                                      renewalInvoicePreview: E,
                                       className: F.detailsBlock,
-                                      fractionalPremiumInfo: E
+                                      fractionalPremiumInfo: _
                                   }),
                                   (0, i.jsxs)('div', {
                                       className: l()(F.detailsBlock, { [F.redBorder]: o }),
@@ -375,17 +375,17 @@ function W(e) {
             analyticsLocation: c
         }),
         C = null == l ? void 0 : l.invalid,
-        _ = (0, u.e7)([f.default], () => {
+        E = (0, u.e7)([f.default], () => {
             var e;
             return null === (e = f.default.getCurrentUser()) || void 0 === e ? void 0 : e.hasFreePremium();
         }),
-        E = d()(s.currentPeriodEnd),
+        _ = d()(s.currentPeriodEnd),
         N = null != s.paymentSourceId,
         A = null !== (t = null == T ? void 0 : T.total) && void 0 !== t ? t : 0,
-        b = !N && A > 0 && (7 >= E.diff(d()(), 'days') || s.status === L.O0b.PAST_DUE) && !_ && !s.isPurchasedExternally,
-        v = C && s.status === L.O0b.PAST_DUE && !_ && !s.isPurchasedExternally,
+        b = !N && A > 0 && (7 >= _.diff(d()(), 'days') || s.status === L.O0b.PAST_DUE) && !E && !s.isPurchasedExternally,
+        v = C && s.status === L.O0b.PAST_DUE && !E && !s.isPurchasedExternally,
         j = (0, R.U)(),
-        P = !_ && j,
+        P = !E && j,
         D = (null == s ? void 0 : s.status) === L.O0b.PAST_DUE ? d()().diff(d()(s.currentPeriodStart), 'days') : 0,
         [y] = (0, O.Ox)({
             subscriptionId: s.id,

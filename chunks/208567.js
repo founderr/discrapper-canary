@@ -41,14 +41,14 @@ function f(e) {
             })
     });
 }
-class N extends (l = r.PureComponent) {
+class j extends (l = r.PureComponent) {
     handleExternalFileChange(e) {
         d()(null != this.inputRef.current, 'ImageInputRef asked to handleExternalFileChange when not mounted'), this.inputRef.current.handleFileChange(e);
     }
     render() {
         var e;
         let n, t, l, r;
-        let { image: a, hint: o, name: d, makeURL: v, disabled: N, onChange: j, showIcon: I, showIconDisabled: p, className: C, imageClassName: E, iconClassName: S, iconWrapperClassName: T, icon: y, hideSize: Z, imageStyle: b, showRemoveButton: _, maxFileSizeBytes: R, onFileSizeError: k, onOpenImageSelectModal: A, 'aria-label': L } = this.props;
+        let { image: a, hint: o, name: d, makeURL: v, disabled: j, onChange: N, showIcon: I, showIconDisabled: p, className: C, imageClassName: E, iconClassName: S, iconWrapperClassName: T, icon: y, hideSize: Z, imageStyle: b, showRemoveButton: _, maxFileSizeBytes: R, onFileSizeError: k, onOpenImageSelectModal: A, 'aria-label': L } = this.props;
         if (
             (null != (n = null != a && /^data:/.test(a) ? a : v(a))
                 ? (t = 'url("'.concat(n, '")'))
@@ -59,7 +59,7 @@ class N extends (l = r.PureComponent) {
                       className: g.imageUploaderAcronym,
                       children: (0, u.Zg)(d)
                   })),
-            N)
+            j)
         )
             return (0, i.jsx)('div', {
                 className: s()(g.imageUploader, g.disabled, C),
@@ -118,7 +118,7 @@ class N extends (l = r.PureComponent) {
                                           })
                                         : (0, i.jsx)(m.ZP, {
                                               ref: this.inputRef,
-                                              onChange: j,
+                                              onChange: N,
                                               className: g.imageUploaderFileInput,
                                               'aria-label': D,
                                               tabIndex: 0,
@@ -153,7 +153,7 @@ class N extends (l = r.PureComponent) {
             });
     }
 }
-v(N, 'defaultProps', {
+v(j, 'defaultProps', {
     name: '',
     makeURL: (e) => e,
     disabled: !1,
@@ -163,4 +163,4 @@ v(N, 'defaultProps', {
     maxFileSizeBytes: 1 / 0,
     icon: null
 }),
-    (n.Z = N);
+    (n.Z = j);

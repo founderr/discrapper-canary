@@ -5,11 +5,11 @@ n.r(e),
         }
     }),
     n(47120);
-var l = n(200651),
-    o = n(192379),
-    a = n(120356),
-    i = n.n(a),
-    r = n(481060),
+var o = n(200651),
+    l = n(192379),
+    r = n(120356),
+    i = n.n(r),
+    a = n(481060),
     s = n(367907),
     c = n(369994),
     d = n(177862),
@@ -17,25 +17,25 @@ var l = n(200651),
     _ = n(388032),
     x = n(312929);
 function h(t) {
-    let { guildId: e, messageId: a, transitionState: h, onClose: f } = t,
-        [I, A] = o.useState([]),
-        [C, N] = o.useState(),
-        p = o.useCallback(() => {
+    let { guildId: e, messageId: r, transitionState: h, onClose: f } = t,
+        [I, A] = l.useState([]),
+        [C, N] = l.useState(),
+        p = l.useCallback(() => {
             let t = {
                 raid_alert_type: d.wR.JOIN_RAID,
-                raid_alert_id: a,
+                raid_alert_id: r,
                 false_alarm_type: I.map((t) => t.toString()),
                 false_alarm_other_reason: C,
                 guild_id: e
             };
             (0, s.yw)(u.rMx.GUILD_RAID_FEEDBACK, t),
-                (0, c.Fi)(e, a, (0, d.J$)(I)),
+                (0, c.Fi)(e, r, (0, d.J$)(I)),
                 f(),
-                (0, r.openModalLazy)(async () => {
+                (0, a.openModalLazy)(async () => {
                     let { default: t } = await n.e('37564').then(n.bind(n, 969214));
-                    return (e) => (0, l.jsx)(t, { ...e });
+                    return (e) => (0, o.jsx)(t, { ...e });
                 });
-        }, [f, a, e, C, I]),
+        }, [f, r, e, C, I]),
         T = [
             {
                 text: _.intl.string(_.t.yeaXw8),
@@ -57,50 +57,50 @@ function h(t) {
     function R(t) {
         I.includes(t) ? A((e) => e.filter((e) => e !== t)) : A((e) => [...e, t]);
     }
-    return (0, l.jsxs)(r.ModalRoot, {
+    return (0, o.jsxs)(a.ModalRoot, {
         transitionState: h,
-        size: r.ModalSize.SMALL,
+        size: a.ModalSize.SMALL,
         children: [
-            (0, l.jsx)(r.ModalHeader, {
+            (0, o.jsx)(a.ModalHeader, {
                 separator: !1,
                 className: x.center,
-                children: (0, l.jsx)(r.Heading, {
+                children: (0, o.jsx)(a.Heading, {
                     color: 'header-primary',
                     variant: 'heading-xl/bold',
                     children: _.intl.string(_.t['1zmw/P'])
                 })
             }),
-            (0, l.jsxs)(r.ModalContent, {
+            (0, o.jsxs)(a.ModalContent, {
                 className: x.center,
                 children: [
-                    (0, l.jsx)(r.Text, {
+                    (0, o.jsx)(a.Text, {
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
                         className: x.textCenter,
                         children: _.intl.string(_.t.nF79oK)
                     }),
-                    (0, l.jsx)('div', {
+                    (0, o.jsx)('div', {
                         className: x.options,
                         children: T.map((t) => {
                             let { text: e, value: n } = t;
-                            return (0, l.jsxs)(
+                            return (0, o.jsxs)(
                                 'div',
                                 {
                                     className: i()(x.optionContainer, { [x.optionContainerOther]: n === d.$l.OTHER }),
                                     children: [
-                                        (0, l.jsxs)(r.Clickable, {
+                                        (0, o.jsxs)(a.Clickable, {
                                             className: x.optionText,
                                             onClick: () => R(n),
                                             children: [
-                                                (0, l.jsx)('div', {
-                                                    children: (0, l.jsx)(r.Checkbox, {
-                                                        type: r.Checkbox.Types.INVERTED,
+                                                (0, o.jsx)('div', {
+                                                    children: (0, o.jsx)(a.Checkbox, {
+                                                        type: a.Checkbox.Types.INVERTED,
                                                         size: 20,
                                                         value: I.includes(n),
                                                         onChange: () => R(n)
                                                     })
                                                 }),
-                                                (0, l.jsx)(r.Text, {
+                                                (0, o.jsx)(a.Text, {
                                                     variant: 'text-md/semibold',
                                                     color: 'header-primary',
                                                     children: e
@@ -109,9 +109,9 @@ function h(t) {
                                         }),
                                         n === d.$l.OTHER &&
                                             I.includes(d.$l.OTHER) &&
-                                            (0, l.jsx)('div', {
+                                            (0, o.jsx)('div', {
                                                 className: x.textboxContainer,
-                                                children: (0, l.jsx)(r.TextArea, {
+                                                children: (0, o.jsx)(a.TextArea, {
                                                     className: x.falseAlarmReasonText,
                                                     placeholder: _.intl.string(_.t['PAM+JS']),
                                                     onChange: (t) => N(t),
@@ -129,22 +129,22 @@ function h(t) {
                     })
                 ]
             }),
-            (0, l.jsxs)(r.ModalFooter, {
+            (0, o.jsxs)(a.ModalFooter, {
                 className: x.__invalid_modalFooter,
                 children: [
-                    (0, l.jsx)('div', {
+                    (0, o.jsx)('div', {
                         className: x.button,
-                        children: (0, l.jsx)(r.Button, {
+                        children: (0, o.jsx)(a.Button, {
                             onClick: p,
-                            color: r.Button.Colors.BRAND,
-                            look: r.Button.Looks.FILLED,
+                            color: a.Button.Colors.BRAND,
+                            look: a.Button.Looks.FILLED,
                             children: _.intl.string(_.t.Gh3A0N)
                         })
                     }),
-                    (0, l.jsx)(r.Button, {
+                    (0, o.jsx)(a.Button, {
                         onClick: f,
-                        color: r.Button.Colors.PRIMARY,
-                        look: r.Button.Looks.LINK,
+                        color: a.Button.Colors.PRIMARY,
+                        look: a.Button.Looks.LINK,
                         children: _.intl.string(_.t['ETE/oK'])
                     })
                 ]

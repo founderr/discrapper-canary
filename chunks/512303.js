@@ -19,35 +19,35 @@ function f(e) {
     if (!(0, o.a)(e)) return null;
     let m = null === (n = e.interactionMetadata) || void 0 === n ? void 0 : n.authorizing_integration_owners[l.Y.USER_INSTALL],
         h = null === (t = e.interactionMetadata) || void 0 === t ? void 0 : t.authorizing_integration_owners[l.Y.GUILD_INSTALL],
-        I = d.default.getUser(m),
-        E = u.Z.getGuild(h),
+        E = d.default.getUser(m),
+        I = u.Z.getGuild(h),
         v = d.default.getUser(null === (f = e.interactionMetadata) || void 0 === f ? void 0 : f.user.id),
         p = null;
     return (
-        null != E
+        null != I
             ? (p = (0, i.jsx)(r.MenuItem, {
                   className: g.interactionInfoMenuItem,
                   disabled: !0,
                   iconLeft: () =>
                       (0, i.jsx)(s.Z, {
-                          guild: E,
+                          guild: I,
                           size: s.Z.Sizes.MINI
                       }),
                   id: 'integration-owner',
-                  label: E.name,
+                  label: I.name,
                   subtext: c.intl.formatToPlainString(c.t.ShLXXF, { application: e.author.username })
               }))
-            : null != I &&
+            : null != E &&
               (p = (0, i.jsx)(r.MenuItem, {
                   className: g.interactionInfoMenuItem,
                   disabled: !0,
                   iconLeft: () =>
                       (0, i.jsx)(a.Z, {
-                          user: I,
+                          user: E,
                           size: r.AvatarSizes.SIZE_20
                       }),
                   id: 'integration-owner',
-                  label: I.username,
+                  label: E.username,
                   subtext: c.intl.formatToPlainString(c.t.ShLXXF, { application: e.author.username })
               })),
         (0, i.jsxs)(r.MenuItem, {

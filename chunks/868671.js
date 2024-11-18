@@ -10,8 +10,8 @@ n.d(t, {
     n(724458);
 var i = n(192379),
     l = n(442837),
-    a = n(570140),
-    r = n(439170),
+    r = n(570140),
+    a = n(439170),
     s = n(592125),
     o = n(430824),
     c = n(451478),
@@ -47,15 +47,15 @@ function E(e) {
             let i = Z ? T.length : A ? 4 : 3,
                 l = T.slice(0, i);
             e = y
-                ? [{ type: r.so.HIDDEN_CONTENT_INVENTORY }]
+                ? [{ type: a.so.HIDDEN_CONTENT_INVENTORY }]
                 : l.map((e) => ({
-                      type: r.so.CONTENT_INVENTORY,
+                      type: a.so.CONTENT_INVENTORY,
                       entry: e,
                       requestId: S
                   }));
-            let a = {
+            let r = {
                 id: x.G,
-                type: r.so.CONTENT_INVENTORY_GROUP,
+                type: a.so.CONTENT_INVENTORY_GROUP,
                 key: x.G,
                 count: e.length,
                 index: n.length,
@@ -77,7 +77,7 @@ function E(e) {
                 expandedCount: T.length,
                 feedHeight: e.map(g.iZ).reduce((e, t) => e + t, 0)
             };
-            return [[a, ...t], [...n, a, ...e], Math.random(), e];
+            return [[r, ...t], [...n, r, ...e], Math.random(), e];
         }, [E, T, Z, t, b, S, n, I, y, k, A]),
         U = i.useRef(0),
         H = i.useRef(T),
@@ -120,7 +120,7 @@ function E(e) {
                             impression_capped_item_ids: [...F.current.impressionCappedEntryIds]
                         }),
                             (0, u.wm)('useInjectContentInventoryFeed') &&
-                                a.Z.dispatch({
+                                r.Z.dispatch({
                                     type: 'CONTENT_INVENTORY_TRACK_ITEM_IMPRESSIONS',
                                     itemIds: i
                                 });

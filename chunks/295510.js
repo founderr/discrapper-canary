@@ -1,28 +1,28 @@
 t.d(e, {
     Z: function () {
-        return d;
+        return o;
     }
 });
 var i = t(200651);
 t(192379);
-var l = t(153867),
-    r = t(468026),
+var r = t(153867),
+    l = t(468026),
     u = t(394059),
     a = t(388032);
-function d(n) {
-    let { type: e, onConfirm: t, ...d } = n,
-        o = e === u.K.STREAM ? a.intl.string(a.t['/lFMWl']) : a.intl.string(a.t.xzxhZW),
-        s = e === u.K.STREAM ? a.intl.string(a.t.xaOX7e) : a.intl.string(a.t.oU1p9P);
-    return (0, i.jsx)(r.default, {
+function o(n) {
+    let { type: e, onConfirm: t, ...o } = n,
+        d = e === u.K.STREAM ? a.intl.string(a.t['/lFMWl']) : a.intl.string(a.t.xzxhZW),
+        c = e === u.K.STREAM ? a.intl.string(a.t.xaOX7e) : a.intl.string(a.t.oU1p9P);
+    return (0, i.jsx)(l.default, {
         confirmText: a.intl.string(a.t['cY+Ooa']),
         secondaryConfirmText: a.intl.string(a.t['JdIQ/f']),
-        title: o,
+        title: d,
         cancelText: a.intl.string(a.t['ETE/oK']),
         onConfirm: t,
         onConfirmSecondary: () => {
-            l.ZP.updatedUnsyncedSettings({ disableHideSelfStreamAndVideoConfirmationAlert: !0 }), t();
+            r.ZP.updatedUnsyncedSettings({ disableHideSelfStreamAndVideoConfirmationAlert: !0 }), t();
         },
-        body: s,
-        ...d
+        body: c,
+        ...o
     });
 }

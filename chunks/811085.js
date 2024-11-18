@@ -46,7 +46,7 @@ function f() {
         let t = (0, l.debounce)(m, 100);
         window.addEventListener('resize', t);
     }, [m]);
-    let T = {
+    let h = {
             [u.Sn.ALL_GOOD]: {
                 title: S.t.uaKrRk,
                 description: S.intl.format(S.t.pEdBDw, {
@@ -86,8 +86,8 @@ function f() {
                 color: r.Z.colors.ICON_MUTED
             }
         },
-        { title: h, description: A, color: x, Icon: I } = T[t.state],
-        v = Object.keys(T).length;
+        { title: T, description: A, color: x, Icon: I } = h[t.state],
+        v = Object.keys(h).length;
     return (0, i.jsxs)(o.Card, {
         className: g.container,
         outline: !1,
@@ -108,7 +108,7 @@ function f() {
                             (0, i.jsx)(o.Heading, {
                                 color: 'header-primary',
                                 variant: 'heading-lg/normal',
-                                children: S.intl.format(h, {
+                                children: S.intl.format(T, {
                                     hook: (t) =>
                                         (0, i.jsx)(o.Text, {
                                             style: { color: x.css },
@@ -130,7 +130,7 @@ function f() {
                         style: { height: n },
                         children: [
                             (0, i.jsx)('div', { className: g.line }),
-                            Object.entries(T).map((e, n) => {
+                            Object.entries(h).map((e, n) => {
                                 let [a, l] = e,
                                     s = parseInt(a) === t.state;
                                 return (0, i.jsxs)(

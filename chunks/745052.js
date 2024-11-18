@@ -19,8 +19,8 @@ var i = n(200651),
     C = n(82295),
     v = n(252618),
     S = n(605236),
-    T = n(243778),
-    N = n(984370),
+    N = n(243778),
+    T = n(984370),
     A = n(797614),
     b = n(359110),
     x = n(6025),
@@ -199,7 +199,7 @@ let er = function (e) {
             r.useEffect(() => {
                 (0, S.kk)(d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK);
             }, []),
-            (0, i.jsx)(T.ZP, {
+            (0, i.jsx)(N.ZP, {
                 contentTypes: [d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK],
                 children: (r) => {
                     let { visibleContent: s, markAsDismissed: o } = r;
@@ -274,16 +274,16 @@ let es = (0, p.Z)(function (e) {
                         (0, i.jsx)(u.ThemeProvider, {
                             theme: l,
                             children: (e) =>
-                                (0, i.jsxs)(N.Z, {
+                                (0, i.jsxs)(T.Z, {
                                     className: e,
                                     toolbar: !0,
                                     children: [
-                                        (0, i.jsx)(N.Z.Icon, {
+                                        (0, i.jsx)(T.Z.Icon, {
                                             icon: u.EnvelopeIcon,
                                             'aria-hidden': !0
                                         }),
-                                        (0, i.jsx)(el, { children: (0, i.jsx)(N.Z.Title, { children: $.intl.string($.t.e7GWjY) }) }),
-                                        (0, i.jsx)(N.Z.Divider, {}),
+                                        (0, i.jsx)(el, { children: (0, i.jsx)(T.Z.Title, { children: $.intl.string($.t.e7GWjY) }) }),
+                                        (0, i.jsx)(T.Z.Divider, {}),
                                         (0, i.jsxs)(u.TabBar, {
                                             'aria-label': $.intl.string($.t.e7GWjY),
                                             selectedItem: I,

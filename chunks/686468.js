@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(442837),
-    a = n(692547),
-    r = n(481060),
+    r = n(692547),
+    a = n(481060),
     s = n(884338),
     o = n(688641),
     c = n(596449),
@@ -25,14 +25,14 @@ function v(e) {
     let { onClick: t } = e;
     return (0, i.jsx)(o.Z, {
         iconContainerClassName: _.continueIconContainer,
-        icon: (0, i.jsx)(r.StageIcon, {
+        icon: (0, i.jsx)(a.StageIcon, {
             size: 'custom',
             color: 'currentColor',
             className: _.continueIcon,
             height: 20,
             width: 20
         }),
-        color: a.Z.unsafe_rawColors.PRIMARY_700.css,
+        color: r.Z.unsafe_rawColors.PRIMARY_700.css,
         title: x.intl.string(x.t.jMLfp6),
         description: x.intl.string(x.t['Vd/rER']),
         onClick: t
@@ -50,7 +50,7 @@ function I(e) {
                 users: l,
                 size: s.u.SIZE_16
             }),
-            (0, i.jsx)(r.Text, {
+            (0, i.jsx)(a.Text, {
                 variant: 'text-sm/normal',
                 color: 'header-secondary',
                 children: (function (e) {
@@ -74,7 +74,7 @@ function I(e) {
 }
 function E(e) {
     let { channel: t, onContinueClick: n } = e,
-        a = (0, l.e7)([p.Z], () => p.Z.can(m.yP, t), [t]),
+        r = (0, l.e7)([p.Z], () => p.Z.can(m.yP, t), [t]),
         s = t.guild_id,
         { canCreateGuildEvent: o } = (0, h.XJ)(t),
         E = (0, g.Z)(t.id),
@@ -84,7 +84,7 @@ function E(e) {
             (0, i.jsx)(C.Z, {
                 children: (0, i.jsx)('div', {
                     className: _.iconBackground,
-                    children: (0, i.jsx)(r.StageIcon, {
+                    children: (0, i.jsx)(a.StageIcon, {
                         size: 'custom',
                         color: 'currentColor',
                         width: 40,
@@ -96,12 +96,12 @@ function E(e) {
             (0, i.jsxs)('div', {
                 className: _.headerContainer,
                 children: [
-                    (0, i.jsx)(r.Heading, {
+                    (0, i.jsx)(a.Heading, {
                         className: _.__invalid_title,
                         variant: 'heading-xl/semibold',
                         children: x.intl.string(x.t.QGnDLi)
                     }),
-                    (0, i.jsx)(r.Text, {
+                    (0, i.jsx)(a.Text, {
                         className: _.subtitle,
                         variant: 'text-sm/normal',
                         children: x.intl.string(x.t.djfK39)
@@ -109,7 +109,7 @@ function E(e) {
                 ]
             }),
             E ? null : (0, i.jsx)(d.Z, { channelId: t.id }),
-            a
+            r
                 ? (0, i.jsx)(u.Z, {
                       className: _.eventPrompt,
                       channel: t
@@ -121,8 +121,8 @@ function E(e) {
                       guildId: s
                   })
                 : null,
-            (a || b.length > 0) && (0, i.jsx)('hr', { className: _.separator }),
-            a ? (0, i.jsx)(v, { onClick: n }) : null,
+            (r || b.length > 0) && (0, i.jsx)('hr', { className: _.separator }),
+            r ? (0, i.jsx)(v, { onClick: n }) : null,
             (0, i.jsx)(I, { channel: t })
         ]
     });

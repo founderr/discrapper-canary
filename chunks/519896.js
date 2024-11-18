@@ -12,7 +12,7 @@ var l = t(200651),
     s = t(757746),
     c = t(930155),
     u = t(889989),
-    d = t(696906),
+    d = t(263519),
     m = t(73346),
     f = t(591759),
     p = t(886253),
@@ -38,7 +38,7 @@ function v(e) {
                     icon: (0, u.n)(v, e.icon)
                 }));
         }, [v, null == E ? void 0 : E.benefits]),
-        { openModal: Z, cannotOpenReason: k } = (0, d.ZP)({
+        { openModal: Z, subscriptionPurchaseButtonState: k } = (0, d.Z)({
             skuId: g,
             subscribeForGuild: null != I ? I : void 0
         });
@@ -50,13 +50,13 @@ function v(e) {
               transitionState: b,
               onHeaderTitleClick: null != j ? j : C,
               onClose: C,
-              footer: (0, l.jsx)(h.p, {
+              footer: (0, l.jsx)(h.pV, {
                   onClick: Z,
                   appId: v,
                   subscriptionType: _,
                   skuId: g,
                   subscriptionPlan: N,
-                  cannotOpenReason: k
+                  state: k
               }),
               children: (0, l.jsx)(x.i, {
                   appId: v,
@@ -65,7 +65,7 @@ function v(e) {
                       null != y
                           ? y.map((e) =>
                                 (0, l.jsx)(
-                                    r.G,
+                                    r.Gm,
                                     {
                                         header: e.title,
                                         icon: e.icon,

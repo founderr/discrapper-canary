@@ -49,16 +49,16 @@ function c(e) {
     };
 }
 function d(e) {
-    var t, n, r, i, s;
-    let l = 0;
+    var t, n;
+    let r = 0;
     return (
-        (0, o.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, u.J0y.CONTAINS_EXPLICIT_MEDIA) && (l += 1),
+        (0, o.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, u.J0y.CONTAINS_EXPLICIT_MEDIA) && (r += 1),
         {
             url: e.url,
             proxyUrl: e.proxy_url,
-            height: null !== (n = e.height) && void 0 !== n ? n : 0,
-            width: null !== (r = e.width) && void 0 !== r ? r : 0,
-            contentType: null !== (i = e.content_type) && void 0 !== i ? i : 'unknown/unknown',
+            height: e.height,
+            width: e.width,
+            contentType: e.content_type,
             placeholder: e.placeholder,
             placeholderVersion: e.placeholder_version,
             loadingState: a.f.LOADED_SUCCESS,
@@ -67,9 +67,9 @@ function d(e) {
                     ? void 0
                     : {
                           version: e.content_scan_version,
-                          flags: l
+                          flags: r
                       },
-            srcIsAnimated: (0, o.yE)(null !== (s = e.flags) && void 0 !== s ? s : 0, u.J0y.IS_ANIMATED)
+            srcIsAnimated: (0, o.yE)(null !== (n = e.flags) && void 0 !== n ? n : 0, u.J0y.IS_ANIMATED)
         }
     );
 }

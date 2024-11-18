@@ -4,14 +4,14 @@ t.d(e, {
     }
 });
 var i = t(200651),
-    l = t(192379),
-    r = t(442837),
+    r = t(192379),
+    l = t(442837),
     u = t(481060),
     a = t(616780),
-    d = t(40851),
-    o = t(300284),
-    s = t(484459),
-    c = t(314897),
+    o = t(40851),
+    d = t(300284),
+    c = t(484459),
+    s = t(314897),
     f = t(271383),
     _ = t(430824),
     E = t(496675),
@@ -22,38 +22,38 @@ var i = t(200651),
 function m(n) {
     let { guildId: e, userId: m, analyticsLocation: M, analyticsLocations: I, context: Z, icon: T } = n,
         v = _.Z.getGuild(e),
-        b = c.default.getId(),
-        C = (0, r.e7)([p.default], () => p.default.getUser(m)),
-        S = (0, r.e7)([f.ZP], () => f.ZP.isGuestOrLurker(e, m), [e, m]);
-    (0, r.e7)([E.Z], () => E.Z.getGuildVersion(e), [e]);
-    let x = l.useMemo(() => ({ [e]: [m] }), [e, m]);
+        b = s.default.getId(),
+        C = (0, l.e7)([p.default], () => p.default.getUser(m)),
+        S = (0, l.e7)([f.ZP], () => f.ZP.isGuestOrLurker(e, m), [e, m]);
+    (0, l.e7)([E.Z], () => E.Z.getGuildVersion(e), [e]);
+    let x = r.useMemo(() => ({ [e]: [m] }), [e, m]);
     (0, a.$)(x);
     let N = Z === g.IlC.POPOUT,
-        y = (0, o.Z)({
+        y = (0, d.Z)({
             guild: v,
             analyticsLocation: M
         }),
-        O = (0, d.Aq)();
+        O = (0, o.Aq)();
     if (null == v || N) return null;
     let P = b === m && (E.Z.can(g.Plq.CHANGE_NICKNAME, v) || E.Z.can(g.Plq.MANAGE_NICKNAMES, v)),
         U = b === m,
-        D = E.Z.canManageUser(g.Plq.MANAGE_NICKNAMES, m, v);
-    if (!(P || D || U) || null == C || S) return null;
-    let R = v.hasFeature(g.oNc.HUB) ? h.intl.string(h.t['+MWrWl']) : h.intl.string(h.t['PKQB/P']),
-        k = U ? R : h.intl.string(h.t.dilOFx);
+        j = E.Z.canManageUser(g.Plq.MANAGE_NICKNAMES, m, v);
+    if (!(P || j || U) || null == C || S) return null;
+    let D = v.hasFeature(g.oNc.HUB) ? h.intl.string(h.t['+MWrWl']) : h.intl.string(h.t['PKQB/P']),
+        R = U ? D : h.intl.string(h.t.dilOFx);
     return (0, i.jsx)(u.MenuItem, {
         id: 'change-nickname',
         label: (0, i.jsx)('div', {
             className: A.labelWrapper,
             children: (0, i.jsx)('span', {
                 className: A.label,
-                children: k
+                children: R
             })
         }),
         icon: T,
         action: () => {
             U
-                ? ((0, s.Z)(C.id, C.getAvatarURL(e, 80), { guildId: e }), y(), O.dispatch(g.CkL.POPOUT_CLOSE), (0, u.closeAllModals)())
+                ? ((0, c.Z)(C.id, C.getAvatarURL(e, 80), { guildId: e }), y(), O.dispatch(g.CkL.POPOUT_CLOSE), (0, u.closeAllModals)())
                 : (0, u.openModalLazy)(async () => {
                       let { default: n } = await t.e('17712').then(t.bind(t, 620021));
                       return (t) =>

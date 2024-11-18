@@ -1,8 +1,8 @@
 var i = n(200651),
     r = n(192379),
     s = n(442837),
-    a = n(893776),
-    l = n(129293),
+    l = n(893776),
+    a = n(129293),
     o = n(388905),
     c = n(108427),
     u = n(314897),
@@ -10,15 +10,15 @@ var i = n(200651),
     h = n(971436);
 t.Z = (e) => {
     let { location: t } = e,
-        { verifyFailed: g, verifySucceeded: m } = (0, s.cj)([u.default], () => ({
+        { verifyFailed: p, verifySucceeded: g } = (0, s.cj)([u.default], () => ({
             verifyFailed: u.default.didVerifyFail(),
             verifySucceeded: u.default.didVerifySucceed()
         }));
     return (r.useEffect(() => {
-        let e = (0, l.Z)(t);
-        null != e && a.Z.authorizePayment(e), (0, c.e)('authorize_payment');
+        let e = (0, a.Z)(t);
+        null != e && l.Z.authorizePayment(e), (0, c.e)('authorize_payment');
     }, [t]),
-    g)
+    p)
         ? (0, i.jsxs)(o.ZP, {
               children: [
                   (0, i.jsx)('img', {
@@ -36,7 +36,7 @@ t.Z = (e) => {
                   })
               ]
           })
-        : m
+        : g
           ? (0, i.jsxs)(o.ZP, {
                 children: [
                     (0, i.jsx)('img', {

@@ -9,13 +9,13 @@ function E(t) {
     var e;
     let { stepConfigs: n, breadcrumbs: E } = t,
         [i, u] = r.useState(null === (e = n[0]) || void 0 === e ? void 0 : e.key),
-        S = r.useRef(null);
+        o = r.useRef(null);
     r.useEffect(() => {
-        S.current = i;
-    }, [S, i]);
-    let o = n.map((t) => t.key).filter((t) => null != t);
+        o.current = i;
+    }, [o, i]);
+    let S = n.map((t) => t.key).filter((t) => null != t);
     return {
-        steps: o,
+        steps: S,
         step: i,
         setStep: u,
         breadcrumbsData: n
@@ -28,6 +28,6 @@ function E(t) {
                 useBreadcrumbLabel: t.options.useBreadcrumbLabel
             }))
             .sort((t, e) => (null != E ? E.indexOf(t.id) - E.indexOf(e.id) : 0)),
-        previousStepRef: S
+        previousStepRef: o
     };
 }

@@ -21,8 +21,8 @@ var s = n(512722),
     S = n(349177),
     T = n(872736),
     C = n(134795),
-    _ = n(610966),
-    E = n(513901),
+    E = n(610966),
+    _ = n(513901),
     I = n(451392),
     f = n(906364),
     N = n(350327),
@@ -117,7 +117,7 @@ function D() {
                 'decoration'
             ),
             (0, i.jsx)(
-                E.Z,
+                _.Z,
                 {
                     user: Z,
                     sectionTitle: R.intl.string(R.t.wR5wOj)
@@ -147,7 +147,7 @@ function D() {
                       ]
                   })
                 : (0, i.jsx)(
-                      _.Z,
+                      E.Z,
                       {
                           user: Z,
                           savedUserColor: null == F ? void 0 : F.accentColor,

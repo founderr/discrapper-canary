@@ -1,6 +1,6 @@
 n.d(t, {
     o: function () {
-        return a;
+        return s;
     }
 });
 var r = n(200651);
@@ -8,11 +8,11 @@ n(192379);
 var o = n(692547),
     i = n(390507),
     l = n(325767);
-let a = (e) => {
+let s = (e) => {
     var t, n;
-    let { size: a = 'md', width: s, height: c, color: u = o.Z.colors.INTERACTIVE_NORMAL, ...d } = e,
-        m = (0, i.m)(a),
-        f = null !== (t = null == m ? void 0 : m.width) && void 0 !== t ? t : s,
+    let { size: s = 'md', width: a, height: c, color: u = o.Z.colors.INTERACTIVE_NORMAL, ...d } = e,
+        m = (0, i.m)(s),
+        f = null !== (t = null == m ? void 0 : m.width) && void 0 !== t ? t : a,
         p = null !== (n = null == m ? void 0 : m.height) && void 0 !== n ? n : c;
     return (0, r.jsxs)('svg', {
         ...(0, l.Z)(d),

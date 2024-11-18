@@ -25,7 +25,7 @@ function d(e) {
         _ = (0, l.e7)([o.Z], () => o.Z.isConnected()),
         E = (0, l.e7)([a.Z], () => (null != t ? a.Z.getSubscriptionGroupListingsForGuildFetchState(t) : a.M.FETCHED)),
         g = r.useRef(c),
-        m = r.useCallback(() => {
+        h = r.useCallback(() => {
             if (null == t || !_ || !0 === p) return;
             let e = a.Z.getSubscriptionGroupListingsForGuildFetchState(t);
             (g.current || e === a.M.NOT_FETCHED) &&
@@ -35,11 +35,11 @@ function d(e) {
                     countryCode: f
                 }));
         }, [_, t, d, f, p]),
-        h = r.useMemo(() => E === a.M.FETCHED && !0 !== g.current, [E, g]);
+        m = r.useMemo(() => E === a.M.FETCHED && !0 !== g.current, [E, g]);
     return (0, i.jsx)(s.Provider, {
         value: {
-            listingsLoaded: h,
-            fetchGroupListingsForGuild: m
+            listingsLoaded: m,
+            fetchGroupListingsForGuild: h
         },
         children: n
     });

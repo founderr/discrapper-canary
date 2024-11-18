@@ -6,11 +6,11 @@ n.d(t, {
     n(47120);
 var i = n(192379),
     l = n(442837),
-    a = n(131704),
-    r = n(423589),
+    r = n(131704),
+    a = n(423589),
     s = n(390289);
 function o(e) {
-    let t = (0, r.Mn)('useShouldRenderBanner'),
+    let t = (0, a.Mn)('useShouldRenderBanner'),
         [n, o] = i.useState('');
     i.useEffect(() => {
         o('');
@@ -18,7 +18,7 @@ function o(e) {
     let c = (0, l.e7)([s.Z], () => s.Z.getLastActionTime(e.id));
     return (
         i.useEffect(() => {
-            if (!!a.$N.has(e.type) && n !== e.id) t && s.Z.maybeAutoUpgradeChannel(e.id) && o(e.id);
+            if (!!r.$N.has(e.type) && n !== e.id) t && s.Z.maybeAutoUpgradeChannel(e.id) && o(e.id);
         }, [n, t, c, e]),
         n === e.id
     );

@@ -19,8 +19,8 @@ var a,
     g = n(519160),
     b = n(124347),
     f = n(283756),
-    I = n(524444),
-    C = n(585483),
+    C = n(524444),
+    I = n(585483),
     x = n(981631),
     _ = n(745747);
 function v(e, t, n) {
@@ -58,16 +58,16 @@ let P = {
             margin: 20
         }
     },
-    E = {
+    S = {
         width: 1920,
         height: 1080
     },
-    S = {
+    E = {
         width: 1280,
         height: 720
     },
     L = (e) =>
-        (0, I.lV)({
+        (0, C.lV)({
             ...e,
             className: _.videoWrapper,
             mediaPlayerClassName: _.mediaPlayer
@@ -81,11 +81,11 @@ let P = {
         if (s.type === x.s9s.YOUTUBE_VIDEO)
             (t = {
                 url: (0, x.n8r)(s.youtubeVideoId),
-                ...E
+                ...S
             }),
                 (n = {
                     url: ''.concat((0, x.ivE)(s.youtubeVideoId), '?').concat('rel=0&iv_load_policy=3&showinfo=0&modestbranding=1'),
-                    ...S
+                    ...E
                 }),
                 (a = h.pn.YOUTUBE);
         else {
@@ -103,7 +103,7 @@ let P = {
                     height: a
                 });
         }
-        let C = (0, i.jsx)(u.BC, {
+        let I = (0, i.jsx)(u.BC, {
             href: null,
             thumbnail: t,
             video: n,
@@ -122,14 +122,14 @@ let P = {
             autoPlay: p,
             renderVideoComponent: L,
             renderImageComponent: y,
-            renderLinkComponent: I.iT
+            renderLinkComponent: C.iT
         });
         return p
-            ? C
+            ? I
             : (0, i.jsx)(d.Clickable, {
                   className: _.itemImageWrapper,
                   onClick: c,
-                  children: C
+                  children: I
               });
     },
     k = () =>
@@ -138,15 +138,15 @@ let P = {
             children: (0, i.jsx)(f.Z, {
                 inactive: !0,
                 className: _.paginationVideoPlayPill,
-                renderLinkComponent: I.iT
+                renderLinkComponent: C.iT
             })
         });
 class w extends (a = s.PureComponent) {
     componentDidMount() {
-        C.S.subscribe(x.CkL.CAROUSEL_PREV, this.manualPrevious), C.S.subscribe(x.CkL.CAROUSEL_NEXT, this.manualNext);
+        I.S.subscribe(x.CkL.CAROUSEL_PREV, this.manualPrevious), I.S.subscribe(x.CkL.CAROUSEL_NEXT, this.manualNext);
     }
     componentWillUnmount() {
-        C.S.unsubscribe(x.CkL.CAROUSEL_PREV, this.manualPrevious), C.S.unsubscribe(x.CkL.CAROUSEL_NEXT, this.manualNext);
+        I.S.unsubscribe(x.CkL.CAROUSEL_PREV, this.manualPrevious), I.S.unsubscribe(x.CkL.CAROUSEL_NEXT, this.manualNext);
     }
     getStyle(e, t) {
         let n = t.interpolate({

@@ -69,8 +69,8 @@ function E(e) {
         {
             serviceName: U,
             channelURL: F,
-            expireBehaviorLabel: H,
-            syncLabel: W,
+            expireBehaviorLabel: W,
+            syncLabel: H,
             subscribersText: G
         } = l.useMemo(() => {
             var e, t, n, i, l;
@@ -265,7 +265,7 @@ function E(e) {
                         });
                     })({
                         integration: o,
-                        labelText: W,
+                        labelText: H,
                         subscribersText: G,
                         descriptionText: V,
                         roleLink: z,
@@ -325,7 +325,7 @@ function E(e) {
                         });
                     })({
                         integration: o,
-                        labelText: H,
+                        labelText: W,
                         onBehaviorChange: function (e) {
                             u.Z.updateIntegration({ expireBehavior: e });
                         },

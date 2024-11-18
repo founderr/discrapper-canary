@@ -22,8 +22,8 @@ var i = n(200651),
     S = n(15980),
     T = n(755733),
     C = n(981631),
-    _ = n(388032),
-    E = n(676974);
+    E = n(388032),
+    _ = n(676974);
 function I(e) {
     let { transitionState: t, onClose: l, ticket: o, challenge: c } = e,
         m = (0, d.Dt)(),
@@ -39,7 +39,7 @@ function I(e) {
             try {
                 e = await t;
             } catch (e) {
-                g.Z.captureException(e), R(_.intl.string(_.t.xSCvBQ)), b(T.x.INIT);
+                g.Z.captureException(e), R(E.intl.string(E.t.xSCvBQ)), b(T.x.INIT);
                 return;
             }
             j(e), b(T.x.NAME);
@@ -49,17 +49,17 @@ function I(e) {
         'aria-labelledby': m,
         children: [
             (0, i.jsxs)(a.ModalHeader, {
-                className: E.header,
+                className: _.header,
                 separator: !1,
                 children: [
                     (0, i.jsxs)(a.Heading, {
                         id: m,
                         variant: 'heading-lg/semibold',
-                        children: [A === T.x.INIT && _.intl.string(_.t.vrOCCg), A === T.x.REGISTER && _.intl.string(_.t.wePEBA), A === T.x.NAME && _.intl.string(_.t['cY/IOj'])]
+                        children: [A === T.x.INIT && E.intl.string(E.t.vrOCCg), A === T.x.REGISTER && E.intl.string(E.t.wePEBA), A === T.x.NAME && E.intl.string(E.t['cY/IOj'])]
                     }),
                     (0, i.jsx)(a.ModalCloseButton, {
                         onClick: l,
-                        className: E.modalCloseButton
+                        className: _.modalCloseButton
                     })
                 ]
             }),
@@ -71,10 +71,10 @@ function I(e) {
                         id: T.x.INIT,
                         children: [
                             (0, i.jsxs)(a.ModalContent, {
-                                className: E.content,
+                                className: _.content,
                                 children: [
                                     (0, i.jsx)('div', {
-                                        className: E.icon,
+                                        className: _.icon,
                                         children: (0, i.jsx)('img', {
                                             alt: '',
                                             src: n(773072)
@@ -92,7 +92,7 @@ function I(e) {
                                     (0, i.jsx)('div', {
                                         children: (0, i.jsx)(a.Text, {
                                             variant: 'text-md/normal',
-                                            children: _.intl.string(_.t.Lh5vTU)
+                                            children: E.intl.string(E.t.Lh5vTU)
                                         })
                                     })
                                 ]
@@ -100,7 +100,7 @@ function I(e) {
                             (0, i.jsx)(a.ModalFooter, {
                                 children: (0, i.jsx)(a.Button, {
                                     onClick: P,
-                                    children: _.intl.string(_.t.oibaQU)
+                                    children: E.intl.string(E.t.oibaQU)
                                 })
                             })
                         ]
@@ -109,10 +109,10 @@ function I(e) {
                         id: T.x.REGISTER,
                         children: [
                             (0, i.jsxs)(a.ModalContent, {
-                                className: E.content,
+                                className: _.content,
                                 children: [
                                     (0, i.jsx)('div', {
-                                        className: E.icon,
+                                        className: _.icon,
                                         children: (0, i.jsx)('img', {
                                             alt: '',
                                             src: n(773072)
@@ -121,7 +121,7 @@ function I(e) {
                                     (0, i.jsx)('div', {
                                         children: (0, i.jsx)(a.Text, {
                                             variant: 'text-md/normal',
-                                            children: _.intl.string(_.t.aVMiX1)
+                                            children: E.intl.string(E.t.aVMiX1)
                                         })
                                     })
                                 ]
@@ -140,15 +140,15 @@ function I(e) {
                                         })
                                         .then(() => l())
                                         .catch(() => {
-                                            R(_.intl.string(_.t.fEptJC)), b(T.x.INIT);
+                                            R(E.intl.string(E.t.fEptJC)), b(T.x.INIT);
                                         });
                             },
                             children: [
                                 (0, i.jsxs)(a.ModalContent, {
-                                    className: E.content,
+                                    className: _.content,
                                     children: [
                                         (0, i.jsx)('div', {
-                                            className: E.icon,
+                                            className: _.icon,
                                             children: (0, i.jsx)('img', {
                                                 alt: '',
                                                 src: n(637163)
@@ -158,10 +158,10 @@ function I(e) {
                                             children: [
                                                 (0, i.jsx)(a.Text, {
                                                     variant: 'text-md/normal',
-                                                    children: _.intl.string(_.t['Jzd+z8'])
+                                                    children: E.intl.string(E.t['Jzd+z8'])
                                                 }),
                                                 (0, i.jsx)(a.TextInput, {
-                                                    className: E.input,
+                                                    className: _.input,
                                                     value: S,
                                                     onChange: (e) => {
                                                         I(e), N(0 === e.length);
@@ -174,12 +174,12 @@ function I(e) {
                                     ]
                                 }),
                                 (0, i.jsxs)(a.ModalFooter, {
-                                    className: E.footer,
+                                    className: _.footer,
                                     children: [
                                         (0, i.jsx)(a.Button, {
                                             type: 'submit',
                                             disabled: f,
-                                            children: _.intl.string(_.t['5dyZ1d'])
+                                            children: E.intl.string(E.t['5dyZ1d'])
                                         }),
                                         (0, i.jsx)(a.Button, {
                                             look: a.Button.Looks.LINK,
@@ -187,7 +187,7 @@ function I(e) {
                                             onClick: () => {
                                                 b(T.x.INIT);
                                             },
-                                            children: _.intl.string(_.t['13/7kZ'])
+                                            children: E.intl.string(E.t['13/7kZ'])
                                         })
                                     ]
                                 })
@@ -204,12 +204,12 @@ function f(e) {
     return (0, i.jsxs)(a.Menu, {
         navId: 'webauthn-credential-actions',
         onClose: o.Zy,
-        'aria-label': _.intl.string(_.t['+nrTbG']),
+        'aria-label': E.intl.string(E.t['+nrTbG']),
         onSelect: t,
         children: [
             (0, i.jsx)(a.MenuItem, {
                 id: 'webauthn-edit-credential-'.concat(s.id),
-                label: _.intl.string(_.t.bt75u7),
+                label: E.intl.string(E.t.bt75u7),
                 action: () => {
                     (0, a.openModalLazy)(async () => {
                         let { default: e } = await n.e('804').then(n.bind(n, 89616));
@@ -223,7 +223,7 @@ function f(e) {
             }),
             (0, i.jsx)(a.MenuItem, {
                 id: 'webauthn-delete-credential-'.concat(s.id),
-                label: _.intl.string(_.t['+xgS+P']),
+                label: E.intl.string(E.t['+xgS+P']),
                 color: 'danger',
                 action: () => {
                     (0, x.cT)(s);
@@ -242,24 +242,24 @@ function N() {
     }, [t]);
     let [n, r] = s.useState(!1);
     return (0, i.jsxs)(a.FormSection, {
-        title: _.intl.string(_.t.y7SXYW),
-        className: E.settings,
+        title: E.intl.string(E.t.y7SXYW),
+        className: _.settings,
         children: [
             (0, i.jsx)(a.FormText, {
                 type: a.FormText.Types.DESCRIPTION,
-                className: E.description,
-                children: _.intl.string(_.t.TMukAA)
+                className: _.description,
+                children: E.intl.string(E.t.TMukAA)
             }),
             e.length > 0 &&
                 (0, i.jsx)('div', {
-                    className: E.credentialList,
+                    className: _.credentialList,
                     children: e.map((e) =>
                         (0, i.jsx)(
                             c.Z,
                             {
                                 avatar: null,
                                 name: e.name,
-                                className: E.credentialItem,
+                                className: _.credentialItem,
                                 onContextMenu: (t) => {
                                     (0, o.vq)(t, (t) =>
                                         (0, i.jsx)(f, {
@@ -280,13 +280,13 @@ function N() {
                                             })
                                         );
                                     },
-                                    'aria-label': _.intl.string(_.t['+nrTbG']),
-                                    innerClassName: E.credentialOptions,
+                                    'aria-label': E.intl.string(E.t['+nrTbG']),
+                                    innerClassName: _.credentialOptions,
                                     children: (0, i.jsx)(a.MoreVerticalIcon, {
                                         size: 'md',
                                         color: 'currentColor',
-                                        className: E.__invalid_overflowIcon,
-                                        colorClass: E.__invalid_overflowIconFg,
+                                        className: _.__invalid_overflowIcon,
+                                        colorClass: _.__invalid_overflowIconFg,
                                         'aria-hidden': !0
                                     })
                                 })
@@ -311,7 +311,7 @@ function N() {
                                     );
                                 })
                                 .catch((e) => {
-                                    e.message !== _.intl.string(_.t.N2yb9f) && g.Z.captureException(e);
+                                    e.message !== E.intl.string(E.t.N2yb9f) && g.Z.captureException(e);
                                 })
                                 .finally(() => {
                                     r(!1);
@@ -320,7 +320,7 @@ function N() {
                     submitting: n,
                     disabled: !m.Ae,
                     size: a.Button.Sizes.SMALL,
-                    children: _.intl.string(_.t.vrOCCg)
+                    children: E.intl.string(E.t.vrOCCg)
                 })
             })
         ]

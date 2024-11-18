@@ -1,20 +1,20 @@
 n.d(e, {
     Y: function () {
-        return S;
+        return o;
     }
 });
 var r,
     E,
     i,
     u,
-    S,
     o,
+    S,
     l = n(442837),
     _ = n(570140);
-((r = S || (S = {}))[(r.UNKNOWN = 0)] = 'UNKNOWN'), (r[(r.PENDING = 1)] = 'PENDING'), (r[(r.DONE = 2)] = 'DONE');
+((r = o || (o = {}))[(r.UNKNOWN = 0)] = 'UNKNOWN'), (r[(r.PENDING = 1)] = 'PENDING'), (r[(r.DONE = 2)] = 'DONE');
 let A = 0,
     a = null;
-class T extends (o = l.ZP.Store) {
+class T extends (S = l.ZP.Store) {
     get browserCheckoutState() {
         return A;
     }

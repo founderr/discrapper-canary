@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return N;
     }
 }),
     n(653041),
@@ -52,7 +52,7 @@ let C = { offset: 2 },
     };
 function S(e) {
     var t, r;
-    let { channel: l, user: p, nick: S, mute: T, deaf: N, serverMute: A, serverDeaf: b } = e,
+    let { channel: l, user: p, nick: S, mute: N, deaf: T, serverMute: A, serverDeaf: b } = e,
         x = (0, s.e7)([g.Z], () => g.Z.isLocalMute(p.id)),
         Z = (0, d.Z)({
             userId: p.id,
@@ -75,9 +75,9 @@ function S(e) {
                 else if (r) return v.mute;
             })({
                 serverDeaf: b,
-                deaf: N,
+                deaf: T,
                 serverMute: A,
-                mute: T,
+                mute: N,
                 localMute: x
             })) && void 0 !== r
             ? r
@@ -156,7 +156,7 @@ function S(e) {
             })
     });
 }
-function T(e) {
+function N(e) {
     let { voiceStates: t, channel: n, className: l } = e,
         [c, d] = r.useState(!1),
         u = c ? o.MinusIcon : o.PlusSmallIcon,

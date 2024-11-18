@@ -131,28 +131,28 @@ t.Z = function (e) {
         C = r.useCallback(() => d(!1), []),
         v = (0, u.ye)(t),
         S = (0, p.u)(l),
-        T = t.bot,
-        { botBannerUrl: N, botBannerUrlAnimated: A } = r.useMemo(
+        N = t.bot,
+        { botBannerUrl: T, botBannerUrlAnimated: A } = r.useMemo(
             () =>
-                (null == T ? void 0 : T.id) == null || (null == T ? void 0 : T.banner) == null
+                (null == N ? void 0 : N.id) == null || (null == N ? void 0 : N.banner) == null
                     ? {}
                     : {
                           botBannerUrl: (0, m.aN)({
-                              id: T.id,
-                              banner: T.banner,
+                              id: N.id,
+                              banner: N.banner,
                               canAnimate: !1,
                               size: 600
                           }),
                           botBannerUrlAnimated: a
                               ? void 0
                               : (0, m.aN)({
-                                    id: T.id,
-                                    banner: T.banner,
+                                    id: N.id,
+                                    banner: N.banner,
                                     canAnimate: !0,
                                     size: 600
                                 })
                       },
-            [null == T ? void 0 : T.id, null == T ? void 0 : T.banner, a]
+            [null == N ? void 0 : N.id, null == N ? void 0 : N.banner, a]
         );
     return (0, i.jsx)('div', {
         className: g.banner,
@@ -169,13 +169,13 @@ t.Z = function (e) {
                 ? (0, i.jsx)(E, {
                       application: t,
                       isHovered: c,
-                      botBannerUrl: null == N ? void 0 : N,
+                      botBannerUrl: null == T ? void 0 : T,
                       botBannerUrlAnimated: null == A ? void 0 : A
                   })
-                : null != N
+                : null != T
                   ? (0, i.jsx)(I, {
                         isHovered: c,
-                        url: N,
+                        url: T,
                         animatedUrl: A
                     })
                   : null

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return m;
     }
 });
 var i = n(200651),
@@ -17,10 +17,10 @@ var i = n(200651),
     _ = n(5192),
     E = n(981631),
     g = n(388032),
-    m = n(25674);
-function h(e) {
+    h = n(25674);
+function m(e) {
     var t;
-    let { guildId: n, role: l, theme: h, content: S = g.intl.string(g.t['6OSasb']), className: I } = e,
+    let { guildId: n, role: l, theme: m, content: S = g.intl.string(g.t['6OSasb']), className: I } = e,
         v = (0, u.e7)([p.default], () => p.default.getCurrentUser()),
         C = _.ZP.useName(n, null, v),
         T = (0, s.Kz)(l),
@@ -46,10 +46,10 @@ function h(e) {
             colorString: null !== (t = l.colorString) && void 0 !== t ? t : void 0
         };
     return (0, i.jsx)(a.ThemeProvider, {
-        theme: h,
+        theme: m,
         children: (e) =>
             (0, i.jsx)('div', {
-                className: o()(e, m.container, I),
+                className: o()(e, h.container, I),
                 children: (0, i.jsx)(f.Z, {
                     hideTimestamp: !0,
                     author: b,

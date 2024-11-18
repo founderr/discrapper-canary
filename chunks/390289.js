@@ -1,8 +1,8 @@
 n(47120), n(789020);
 var i,
     l = n(442837),
-    a = n(570140),
-    r = n(314897),
+    r = n(570140),
+    a = n(314897),
     s = n(592125),
     o = n(944486),
     c = n(9156),
@@ -93,7 +93,7 @@ class P extends (i = l.ZP.PersistedStore) {
     }
 }
 C(P, 'displayName', 'UnreadSettingNoticeStore2'), C(P, 'persistKey', 'UnreadSettingNoticeStore2');
-let M = new P(a.Z, {
+let M = new P(r.Z, {
     CHANNEL_SELECT: function () {
         let e = S();
         return (b = o.Z.getChannelId()), (Z = Date.now()), e;
@@ -108,7 +108,7 @@ let M = new P(a.Z, {
     },
     MESSAGE_CREATE: function (e) {
         var t;
-        if (e.optimistic || e.isPushNotification || (null === (t = e.message.author) || void 0 === t ? void 0 : t.id) !== r.default.getId() || !A(e.channelId)) return !1;
+        if (e.optimistic || e.isPushNotification || (null === (t = e.message.author) || void 0 === t ? void 0 : t.id) !== a.default.getId() || !A(e.channelId)) return !1;
         let n = j(e.channelId);
         (n.lastActionTime = Date.now()), n.numSends++;
     }

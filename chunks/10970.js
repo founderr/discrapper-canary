@@ -15,16 +15,16 @@ var s = n(442837),
     d = n(430824),
     u = n(55563),
     m = n(171246),
-    h = n(696906),
+    h = n(263519),
     g = n(63487),
     p = n(981631),
     x = n(388032),
     S = n(78481);
 function T(e) {
     var t;
-    let { app: n, currentSubscription: h, currentListing: p, alternativeListings: T, navigateToHome: _, subscriptionGroup: E, renewalSkuId: I } = e,
+    let { app: n, currentSubscription: h, currentListing: p, alternativeListings: T, navigateToHome: E, subscriptionGroup: _, renewalSkuId: I } = e,
         f = (0, l.y)(n, 100),
-        N = (0, m.KK)(E.flags),
+        N = (0, m.KK)(_.flags),
         A = N ? r.ServerIcon : r.UserIcon,
         b = N ? x.intl.string(x.t['46YF2N']) : x.intl.string(x.t.fFyGiI),
         v = null === (t = h.metadata) || void 0 === t ? void 0 : t.application_subscription_guild_id,
@@ -167,7 +167,7 @@ function T(e) {
                                   {
                                       storeListing: e,
                                       guildId: v,
-                                      navigateToHome: _
+                                      navigateToHome: E
                                   },
                                   e.id
                               )
@@ -179,7 +179,7 @@ function T(e) {
 }
 function C(e) {
     let { storeListing: t, guildId: n, navigateToHome: s } = e,
-        { openModal: l } = (0, h.ZP)({
+        { openModal: l } = (0, h.Z)({
             analyticsLocation: p.Sbl.APP_SUBSCRIPTIONS_MANAGEMENT,
             skuId: t.skuId,
             subscribeForGuild: n,

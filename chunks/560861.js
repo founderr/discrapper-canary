@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    a = n(120356),
-    r = n.n(a),
+    r = n(120356),
+    a = n.n(r),
     s = n(481060),
     o = n(70097),
     c = n(518950),
@@ -18,19 +18,19 @@ var i = n(200651),
 function m(e) {
     let { channel: t } = e,
         n = (0, l.useRef)(!0),
-        a = t.hdStreamingUntil,
-        r = d.default.getUser(t.hdStreamingBuyerId),
+        r = t.hdStreamingUntil,
+        a = d.default.getUser(t.hdStreamingBuyerId),
         [s, o] = (0, l.useState)(!1);
     return ((0, l.useEffect)(() => {
         if (n.current) {
             n.current = !1;
             return;
         }
-        null != a && new Date(a) > new Date() && o(!0);
-    }, [a]),
-    s && null != r)
+        null != r && new Date(r) > new Date() && o(!0);
+    }, [r]),
+    s && null != a)
         ? (0, i.jsx)(f, {
-              buyer: r,
+              buyer: a,
               onEnd: () => {
                   o(!1), (0, u.ag)();
               }
@@ -39,10 +39,10 @@ function m(e) {
 }
 function f(e) {
     let { onEnd: t, buyer: n } = e,
-        a = (0, l.useRef)(null),
+        r = (0, l.useRef)(null),
         [d, u] = (0, l.useState)(!1);
     (0, l.useEffect)(() => {
-        let e = a.current;
+        let e = r.current;
         if (null == e) return;
         let t = () => {
             e.currentTime >= 23 && !d && u(!0);
@@ -63,7 +63,7 @@ function f(e) {
         className: p.trigger,
         children: [
             (0, i.jsx)(o.Z, {
-                ref: a,
+                ref: r,
                 className: p.video,
                 autoPlay: !0,
                 onEnded: t,
@@ -73,7 +73,7 @@ function f(e) {
                 })
             }),
             (0, i.jsxs)('div', {
-                className: r()(p.content, { [p.masked]: d }),
+                className: a()(p.content, { [p.masked]: d }),
                 children: [
                     (0, i.jsx)(s.Avatar, {
                         src: m,

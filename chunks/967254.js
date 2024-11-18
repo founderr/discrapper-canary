@@ -20,8 +20,8 @@ var i = n(200651),
     f = n(788080),
     p = n(467432),
     m = n(451284),
-    T = n(613734),
-    h = n(800530),
+    h = n(613734),
+    T = n(800530),
     A = n(981631),
     x = n(388032),
     I = n(15999);
@@ -117,7 +117,7 @@ let v = (t) => {
             className: I.newBadge,
             children: x.intl.string(x.t.QKMRCw)
         }),
-    F = (t) => {
+    j = (t) => {
         let { classification: e } = t,
             { id: l, description: r } = e,
             c = _.default.extractTimestamp(l),
@@ -155,7 +155,7 @@ let v = (t) => {
                         return (e) =>
                             (0, i.jsx)(t, {
                                 classificationId: l,
-                                source: h.s.StandingTab,
+                                source: T.s.StandingTab,
                                 ...e
                             });
                     });
@@ -175,7 +175,7 @@ let v = (t) => {
             l
         );
     },
-    j = (t) => {
+    F = (t) => {
         let { status: e, classifications: n } = t,
             [l, s] = a.useState(!1),
             [c, u] = a.useState(3),
@@ -185,10 +185,10 @@ let v = (t) => {
         a.useEffect(() => {
             l &&
                 d.default.track(A.rMx.SAFETY_HUB_ACTION, {
-                    action: h.n0.ViewViolationsDropdown,
+                    action: T.n0.ViewViolationsDropdown,
                     account_standing: _.state,
                     classification_ids: S.map((t) => Number(t.id)),
-                    source: h.s.StandingTab,
+                    source: T.s.StandingTab,
                     is_violative_content_shown: !1,
                     is_dsa_eligible: E
                 });
@@ -213,7 +213,7 @@ let v = (t) => {
                                     width: '100%'
                                 }
                             }),
-                            S.length > 0 && S.map((t) => (0, i.jsx)(F, { classification: t }, t.id)),
+                            S.length > 0 && S.map((t) => (0, i.jsx)(j, { classification: t }, t.id)),
                             S.length < n.length &&
                                 (0, i.jsxs)(i.Fragment, {
                                     children: [
@@ -238,17 +238,17 @@ let v = (t) => {
         });
     },
     H = () => {
-        let t = (0, T.y9)(),
-            e = (0, T.KM)();
+        let t = (0, h.y9)(),
+            e = (0, h.KM)();
         return 0 === t.length && 0 === e.length
             ? null
             : (0, i.jsxs)('div', {
                   children: [
-                      (0, i.jsx)(j, {
+                      (0, i.jsx)(F, {
                           status: 'active',
                           classifications: t
                       }),
-                      (0, i.jsx)(j, {
+                      (0, i.jsx)(F, {
                           status: 'expired',
                           classifications: e
                       })

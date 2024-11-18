@@ -61,8 +61,8 @@ var r,
     P = n(703656),
     k = n(973616),
     U = n(598077),
-    B = n(314897),
-    G = n(585483),
+    G = n(314897),
+    B = n(585483),
     Z = n(176354),
     F = n(700785),
     V = n(591759),
@@ -193,17 +193,17 @@ function e_(e) {
         C,
         R,
         L,
-        { clientId: x, responseType: M, redirectUri: G, codeChallenge: en, codeChallengeMethod: eo, state: ed, nonce: ef, prompt: e_, authorizations: ep, scopes: eh, permissions: em, guildId: eg, channelId: eE, integrationType: ev, disableGuildSelect: eb = !1, showLogout: eI = !1, cancelCompletesFlow: eS = !0, isTrustedName: eT = !1, isEmbeddedFlow: ey = !1, callback: eA, callbackWithoutPost: eN, onClose: eC, disclosures: eR } = e,
+        { clientId: x, responseType: M, redirectUri: B, codeChallenge: en, codeChallengeMethod: eo, state: ed, nonce: ef, prompt: e_, authorizations: ep, scopes: eh, permissions: em, guildId: eg, channelId: eE, integrationType: ev, disableGuildSelect: eb = !1, showLogout: eI = !1, cancelCompletesFlow: eS = !0, isTrustedName: eT = !1, isEmbeddedFlow: ey = !1, callback: eA, callbackWithoutPost: eN, onClose: eC, disclosures: eR } = e,
         eO = null != ev ? (null == ep ? void 0 : ep.get(ev)) : void 0,
         eD = (0, u.TH)(),
         eL = (0, h.e7)([w.Z], () => w.Z.hasLoadedExperiments);
     s.useEffect(() => {
-        B.default.isAuthenticated() && !eL && S.Z.getExperiments();
+        G.default.isAuthenticated() && !eL && S.Z.getExperiments();
     }, [eL]);
     let [ex, ew] = s.useState(null),
         [eM, eP] = s.useState(null),
         [ek, eU] = s.useState(null),
-        [eB, eG] = s.useState(!1),
+        [eG, eB] = s.useState(!1),
         [eZ, eF] = s.useState(!1),
         eV = null == ex ? void 0 : ex.guilds,
         [ej, eH] = s.useState(null != eg ? eg : null),
@@ -214,8 +214,8 @@ function e_(e) {
         [eX, eJ] = s.useState(null),
         e$ = s.useMemo(() => {
             var e;
-            return null == eO && null == ev && (null !== (e = null == eh ? void 0 : eh.length) && void 0 !== e ? e : 0) === 0 && null == G;
-        }, [eO, null == eh ? void 0 : eh.length, G, ev]),
+            return null == eO && null == ev && (null !== (e = null == eh ? void 0 : eh.length) && void 0 !== e ? e : 0) === 0 && null == B;
+        }, [eO, null == eh ? void 0 : eh.length, B, ev]),
         [e0, e1] = s.useState(null);
     s.useEffect(() => {
         e$ && O.ZP.fetchApplication(x).then((e) => e1(k.Z.createFromServer(e)));
@@ -260,7 +260,7 @@ function e_(e) {
             }
         };
         if (null == eR) {
-            if (!B.default.isAuthenticated()) {
+            if (!G.default.isAuthenticated()) {
                 (0, H.c$)(eD);
                 return;
             }
@@ -270,7 +270,7 @@ function e_(e) {
     let tt = s.useCallback(
             async (e) => {
                 if (null != eN) {
-                    eG(!0), eN(e);
+                    eB(!0), eN(e);
                     return;
                 }
                 if (!e && !eS) {
@@ -287,13 +287,13 @@ function e_(e) {
                     return;
                 }
                 try {
-                    eG(!0);
+                    eB(!0);
                     let t = await (0, H.Iq)({
                         authorize: e,
                         clientId: x,
                         scopes: e3,
                         responseType: M,
-                        redirectUri: G,
+                        redirectUri: B,
                         codeChallenge: en,
                         codeChallengeMethod: eo,
                         state: ed,
@@ -327,17 +327,17 @@ function e_(e) {
                                   }
                               })
                             : (window.location = t.location);
-                    } else eG(!1);
+                    } else eB(!1);
                 } catch (t) {
                     let e = t.body;
-                    (null == e ? void 0 : e.message) != null && '' !== e.message ? eU(Error(e.message)) : eU(e), eP('AUTHORIZE_SCOPES'), eG(!1);
+                    (null == e ? void 0 : e.message) != null && '' !== e.message ? eU(Error(e.message)) : eU(e), eP('AUTHORIZE_SCOPES'), eB(!1);
                 }
             },
-            [eN, eS, eA, null == ex ? void 0 : ex.application, eQ, eC, x, e3, M, G, en, eo, ed, ef, e6, eK, ej, eX, eY, e7]
+            [eN, eS, eA, null == ex ? void 0 : ex.application, eQ, eC, x, e3, M, B, en, eo, ed, ef, e6, eK, ej, eX, eY, e7]
         ),
         tn = s.useRef(!1),
         tr = s.useCallback(async () => {
-            if (!B.default.isAuthenticated()) {
+            if (!G.default.isAuthenticated()) {
                 (0, H.c$)(eD);
                 return;
             }
@@ -352,7 +352,7 @@ function e_(e) {
                                       clientId: x,
                                       scopes: e3,
                                       responseType: M,
-                                      redirectUri: G,
+                                      redirectUri: B,
                                       codeChallenge: en,
                                       codeChallengeMethod: eo,
                                       state: ed,
@@ -372,7 +372,7 @@ function e_(e) {
                     }
                 }
             }
-        }, [eD, eO, x, e3, M, G, en, eo, ed, ef, eX, e_, tt, e9]),
+        }, [eD, eO, x, e3, M, B, en, eo, ed, ef, eX, e_, tt, e9]),
         ti = s.useMemo(() => {
             var e;
             return null != e0 && e$
@@ -554,7 +554,7 @@ function e_(e) {
                                   className: eu.action,
                                   children: (0, a.jsx)(g.zx, {
                                       onClick: null != v ? () => eP(v) : () => tt(!0),
-                                      submitting: eB,
+                                      submitting: eG,
                                       disabled: null == C || tu,
                                       children: tu ? el.intl.string(el.t.BwwiSE) : null != v ? el.intl.string(el.t['3PatS0']) : el.intl.string(el.t['y+/PEx'])
                                   })
@@ -569,7 +569,7 @@ function e_(e) {
                                               className: eu.tooltip,
                                               children: (0, a.jsxs)(g.zx, {
                                                   disabled: !0,
-                                                  submitting: eB,
+                                                  submitting: eG,
                                                   innerClassName: eu.buttonWithEmoji,
                                                   children: [
                                                       el.intl.string(el.t.N22i9P),
@@ -608,7 +608,7 @@ function ep(e, t) {
         let e = R._f.getCurrentConfig({ location: 'inAppOAuth2ModalCallback' }, { autoTrackExposure: !1 }),
             n = window.location.pathname.startsWith(es.ANM.CHANNELS);
         e.enabled && null != t.application && null == t.guild && n
-            ? G.S.safeDispatch(es.CkL.SHOW_APP_LAUNCHER_BUTTON_APP_INSTALLED_EDUCATION, { application: t.application })
+            ? B.S.safeDispatch(es.CkL.SHOW_APP_LAUNCHER_BUTTON_APP_INSTALLED_EDUCATION, { application: t.application })
             : (0, E.h7)((e) => {
                   let n = (0, a.jsx)(er._Z, {
                       guild: t.guild,

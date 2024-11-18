@@ -4,7 +4,7 @@ n.r(t),
             return A;
         },
         useAppSidebarState: function () {
-            return T;
+            return N;
         }
     });
 var i = n(200651),
@@ -27,15 +27,15 @@ var i = n(200651),
     C = n(981631),
     v = n(741764),
     S = n(215820);
-let T = (0, l.Ue)(() => ({ isOpen: !0 }));
-function N(e) {
+let N = (0, l.Ue)(() => ({ isOpen: !0 }));
+function T(e) {
     e.stopPropagation();
 }
 function A() {
     let e = (0, a.e7)([_.Z], () => _.Z.getChannelId()),
         t = (0, a.e7)([g.Z], () => g.Z.getChannel(e), [e]),
         n = f.Z.getGuild(null == t ? void 0 : t.guild_id),
-        l = T((e) => e.isOpen),
+        l = N((e) => e.isOpen),
         { hasBugReporterAccess: A } = c.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 });
     r.useLayoutEffect(() => {
         I.ZP.setMinimumSize(v.J, v.N);
@@ -50,14 +50,14 @@ function A() {
             (0, i.jsx)('div', {
                 className: S.left,
                 'data-sidebar-collapsed': !l,
-                onDoubleClick: N,
+                onDoubleClick: T,
                 children:
                     !l &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsx)(s.Clickable, {
                                 onClick: () => {
-                                    T.setState({ isOpen: !T.getState().isOpen });
+                                    N.setState({ isOpen: !N.getState().isOpen });
                                 },
                                 children: (0, i.jsx)(b, {})
                             }),
@@ -92,7 +92,7 @@ function A() {
             }),
             (0, i.jsxs)('div', {
                 className: S.right,
-                onDoubleClick: N,
+                onDoubleClick: T,
                 children: [(0, i.jsx)(p.Z, {}), A ? (0, i.jsx)(h.Z, {}) : (0, i.jsx)(u.Z, {}), (0, i.jsx)(m.Z, {})]
             })
         ]

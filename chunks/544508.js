@@ -46,12 +46,12 @@ t.Z = s.forwardRef(function (e, t) {
         U = s.useRef(null),
         k = s.useRef(null),
         Z = s.useMemo(() => n.merge({ discriminator: '0000' }), [n]),
-        [G, D] = (0, u.useSpring)(() => ({
+        [G, W] = (0, u.useSpring)(() => ({
             opacity: 0,
             y: 5
         }));
     s.useEffect(() => {
-        D({
+        W({
             y: 0,
             opacity: 1,
             from: {
@@ -59,7 +59,7 @@ t.Z = s.forwardRef(function (e, t) {
                 opacity: 0
             }
         });
-    }, [D, M]),
+    }, [W, M]),
         s.useImperativeHandle(
             t,
             () => ({
@@ -74,13 +74,13 @@ t.Z = s.forwardRef(function (e, t) {
             }),
             []
         );
-    let w = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
-        { createMultipleConfettiAt: W } = s.useContext(d.h),
+    let D = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
+        { createMultipleConfettiAt: w } = s.useContext(d.h),
         q = null == p ? void 0 : p.getLegacyUsername();
     return (
         s.useEffect(() => {
-            if (!w && M === N.Wq.PREVIEW && !!n.username.includes(N.nA))
-                W(
+            if (!D && M === N.Wq.PREVIEW && !!n.username.includes(N.nA))
+                w(
                     window.innerWidth / 2 + 150,
                     0,
                     {
@@ -98,7 +98,7 @@ t.Z = s.forwardRef(function (e, t) {
                     },
                     15
                 ),
-                    W(
+                    w(
                         window.innerWidth / 2 - 150,
                         0,
                         {
@@ -116,7 +116,7 @@ t.Z = s.forwardRef(function (e, t) {
                         },
                         15
                     );
-        }, [W, M, n, w]),
+        }, [w, M, n, D]),
         (0, i.jsxs)('div', {
             className: a()(_.userCardContainer, { [_.shinyCard]: M === N.Wq.PREVIEW }),
             children: [

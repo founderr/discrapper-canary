@@ -1,8 +1,8 @@
 let r;
 n(47120), n(653041);
 var i,
-    a = n(442837),
-    o = n(570140);
+    o = n(442837),
+    a = n(570140);
 function l(e, t, n) {
     return (
         t in e
@@ -19,7 +19,7 @@ function l(e, t, n) {
 let s = { guildNoticeDismissed: [] },
     c = new Map(),
     u = new Set();
-class d extends (i = a.ZP.PersistedStore) {
+class d extends (i = o.ZP.PersistedStore) {
     initialize() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : s;
         r = e;
@@ -41,7 +41,7 @@ class d extends (i = a.ZP.PersistedStore) {
 }
 l(d, 'displayName', 'CommandsMigrationStore'),
     l(d, 'persistKey', 'CommandsMigrationStore'),
-    (t.Z = new d(o.Z, {
+    (t.Z = new d(a.Z, {
         COMMANDS_MIGRATION_UPDATE_SUCCESS: function (e) {
             let { guildId: t, integrationIdsWithAppCommands: n } = e;
             return c.set(t, new Set(n)), !0;

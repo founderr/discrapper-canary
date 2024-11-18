@@ -19,8 +19,8 @@ var i,
     C = n(420660),
     v = n(74433),
     S = n(906732),
-    T = n(812206),
-    N = n(933557),
+    N = n(812206),
+    T = n(933557),
     A = n(194082),
     b = n(264165),
     x = n(630186),
@@ -245,7 +245,7 @@ let ee = (e) => {
         var t, n;
         let { guild: i, channel: r, onGuildClick: s, partySize: c, members: d, onChannelContextMenu: h } = e,
             m = a.useRef(null),
-            p = (0, N.ZP)(r, !0);
+            p = (0, T.ZP)(r, !0);
         return (0, l.jsx)(X, {
             children: (0, l.jsxs)('div', {
                 className: F.voiceSection,
@@ -504,7 +504,7 @@ let ee = (e) => {
             p = (0, m.O)(),
             { analyticsLocations: f } = (0, S.ZP)();
         if (null == d) return null;
-        let _ = T.Z.getApplication(d);
+        let _ = N.Z.getApplication(d);
         if (null == _) return null;
         let E = null != t.created_at && t.created_at > 0 ? { start: t.created_at } : void 0,
             I = (0, k.getAssetImage)(_.id, s, 300);

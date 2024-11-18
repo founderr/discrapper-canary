@@ -1,8 +1,8 @@
 n.d(t, {
-    I7: function () {
+    I: function () {
         return s;
     },
-    gh: function () {
+    g: function () {
         return a;
     }
 });

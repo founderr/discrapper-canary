@@ -35,7 +35,7 @@ t.Z = function (e) {
         {
             type: r.ImpressionTypes.VIEW,
             name: r.ImpressionNames.TRIAL_NOTICE,
-            properties: { trial_id: null == E ? void 0 : E.id }
+            properties: { trial_id: null == E ? void 0 : E.trial_id }
         },
         { disableTrack: I }
     ),

@@ -20,8 +20,8 @@ let m = [
     }
 ];
 function h(e) {
-    let { showRemoveAvatarButton: t, errors: n, onAvatarChange: s, sectionTitle: h, changeAvatarButtonText: g, guildId: p, className: x, disabled: S = !1, isTryItOutFlow: T = !1, forcedDivider: C, withHighlight: _ = !1 } = e,
-        E = _ ? l.ShinyButton : l.Button;
+    let { showRemoveAvatarButton: t, errors: n, onAvatarChange: s, sectionTitle: h, changeAvatarButtonText: g, guildId: p, className: x, disabled: S = !1, isTryItOutFlow: T = !1, forcedDivider: C, withHighlight: E = !1 } = e,
+        _ = E ? l.ShinyButton : l.Button;
     return (0, i.jsx)(o.Z, {
         className: x,
         title: h,
@@ -31,8 +31,8 @@ function h(e) {
         children: (0, i.jsxs)('div', {
             className: u.buttonsContainer,
             children: [
-                (0, i.jsx)(E, {
-                    className: r()({ [u.buttonHighlighted]: _ }),
+                (0, i.jsx)(_, {
+                    className: r()({ [u.buttonHighlighted]: E }),
                     size: l.Button.Sizes.SMALL,
                     onClick: () => (0, a.$r)(c.pC.AVATAR, p, T, T ? m : void 0),
                     children: null != g ? g : d.intl.string(d.t['4OynCA'])

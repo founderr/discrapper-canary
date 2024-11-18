@@ -26,7 +26,7 @@ var r = n(287734),
 function C(e) {
     let { party: t, onChannelContextMenu: n, quest: C } = e,
         v = (0, _.L)(),
-        { voiceChannels: S, currentActivities: T, partiedMembers: N, applicationStreams: A, guildContext: b } = t,
+        { voiceChannels: S, currentActivities: N, partiedMembers: T, applicationStreams: A, guildContext: b } = t,
         x = [],
         Z = (e) => {
             var t, n;
@@ -100,11 +100,11 @@ function C(e) {
                     )
                 );
             }),
-        T.forEach((e, t) => {
+        N.forEach((e, t) => {
             var n, r, l, m, g, _, v, A, x;
             let { activity: L, game: y, playingMembers: O, activityUser: R } = e;
             if (null == L || null == L.type) return null;
-            if (T.length > 1 && L.type === I.IIU.PLAYING && !(0, a.Z)(L) && null != y)
+            if (N.length > 1 && L.type === I.IIU.PLAYING && !(0, a.Z)(L) && null != y)
                 Z(
                     (0, i.jsx)(
                         f.Z.GameSection,
@@ -170,7 +170,7 @@ function C(e) {
                               f.Z.SpotifySection,
                               {
                                   activity: L,
-                                  isSolo: 1 === N.length,
+                                  isSolo: 1 === T.length,
                                   partySize: {
                                       knownSize: O.length,
                                       unknownSize: 0,

@@ -7,8 +7,8 @@ t.d(e, {
     t(47120);
 var i = t(200651);
 t(192379);
-var l = t(481060),
-    r = t(117984),
+var r = t(481060),
+    l = t(117984),
     u = t(593214),
     a = t(362658),
     o = t(388032);
@@ -25,28 +25,28 @@ function d(n) {
         return [t, e];
     })(d.filter((n) => n.id !== (null == t ? void 0 : t.parentId)));
     function I(n) {
-        null != t && (0, r.uA)(t.id, n);
+        null != t && (0, l.uA)(t.id, n);
     }
     return null == c && 0 === f.length
         ? null
-        : (0, i.jsxs)(l.MenuItem, {
+        : (0, i.jsxs)(r.MenuItem, {
               id: 'move-to-category',
               label: o.intl.string(o.t.FAplmp),
               children: [
                   null != c &&
-                      (0, i.jsx)(l.MenuGroup, {
-                          children: (0, i.jsx)(l.MenuItem, {
+                      (0, i.jsx)(r.MenuGroup, {
+                          children: (0, i.jsx)(r.MenuItem, {
                               id: 'favorite-uncategorized',
                               label: c.name,
                               action: () => I(c.id)
                           })
                       }),
                   f.length > 0 &&
-                      (0, i.jsx)(l.MenuGroup, {
+                      (0, i.jsx)(r.MenuGroup, {
                           children: f.map((n) => {
                               let { id: e, name: t } = n;
                               return (0, i.jsx)(
-                                  l.MenuItem,
+                                  r.MenuItem,
                                   {
                                       id: 'favorite-'.concat(e),
                                       label: t,

@@ -19,10 +19,10 @@ var i = n(200651),
     C = n(981631),
     v = n(898625),
     S = n(388032),
-    T = n(644868);
+    N = n(644868);
 t.Z = (e) => {
     var t;
-    let n, N;
+    let n, T;
     let { guildId: A, inviteCode: b } = e,
         [x, Z] = r.useState(v.hO.INITIAL),
         L = (0, l.e7)([p.Z], () => p.Z.get(A)),
@@ -49,7 +49,7 @@ t.Z = (e) => {
         };
     let w =
             ((n = S.intl.format(S.t['9ZezpK'], { name: null == P ? void 0 : P.toString() })),
-            (N = () => {
+            (T = () => {
                 Z(Math.max(x, v.hO.FILLING)), h.Z.removeGuildJoinRequest(A), (0, o.uL)(C.Z5c.ME);
             }),
             () => {
@@ -57,7 +57,7 @@ t.Z = (e) => {
                     (0, i.jsx)(a.ConfirmModal, {
                         header: S.intl.string(S.t.y0CVen),
                         cancelText: S.intl.string(S.t.oEAioK),
-                        onConfirm: N,
+                        onConfirm: T,
                         confirmText: S.intl.string(S.t.p89ACg),
                         confirmButtonColor: a.Button.Colors.RED,
                         ...e,
@@ -77,7 +77,7 @@ t.Z = (e) => {
                   })
                 : (0, d.gK)();
     return (0, i.jsx)('div', {
-        className: T.page,
+        className: N.page,
         children: (0, i.jsxs)(s.Z, {
             embedded: !0,
             splash: k,
@@ -85,9 +85,9 @@ t.Z = (e) => {
             showLogo: !1,
             updateWaveState: j,
             children: [
-                (0, i.jsx)('div', { className: T.dragRegion }),
+                (0, i.jsx)('div', { className: N.dragRegion }),
                 (0, i.jsx)('div', {
-                    className: T.contentWrapper,
+                    className: N.contentWrapper,
                     children: (() => {
                         switch (null == y ? void 0 : y.applicationStatus) {
                             case g.wB.SUBMITTED:

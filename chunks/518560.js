@@ -1,6 +1,6 @@
 n.d(e, {
     Z: function () {
-        return T;
+        return h;
     }
 });
 var i = n(200651),
@@ -19,11 +19,11 @@ var i = n(200651),
     f = n(981631),
     p = n(388032),
     m = n(394686);
-function T() {
+function h() {
     let t = (0, E.Z)(),
         e = (0, _.e)(),
         n = (0, u.P)(),
-        T = (0, d.i)();
+        h = (0, d.i)();
     return (a.useEffect(() => {
         c.yq();
     }, []),
@@ -32,7 +32,7 @@ function T() {
     }, [e]),
     t)
         ? (0, i.jsx)('div', { children: (0, i.jsx)(s.Spinner, {}) })
-        : null != T
+        : null != h
           ? (0, i.jsxs)(s.Notice, {
                 color: s.NoticeColors.DANGER,
                 className: m.nagbar,

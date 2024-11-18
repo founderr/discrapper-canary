@@ -198,7 +198,7 @@ function U(e, t) {
         !!(n.length > 0) && (P(n, t), !0)
     );
 }
-function B(e) {
+function G(e) {
     var t, n, r, i, a, s;
     let { message: o } = e;
     if (!(0, S.Kh)() || null == o.channel_id || null == o.id || (null === (t = o.author) || void 0 === t ? void 0 : t.id) === _.default.getId() || (null == o.embeds && null == o.attachments) || ((null === (n = o.embeds) || void 0 === n ? void 0 : n.length) === 0 && (null === (r = o.attachments) || void 0 === r ? void 0 : r.length) === 0)) return !1;
@@ -212,7 +212,7 @@ function B(e) {
     let d = m.Z.getMessage(o.channel_id, o.id);
     return null != d && U([d], { isMessageUpdate: !0 });
 }
-function G(e) {
+function B(e) {
     var t, n;
     let { channelId: r, message: i, optimistic: a, isPushNotification: s } = e;
     if (!(0, S.Kh)() || a || s || null == r || (null === (t = i.author) || void 0 === t ? void 0 : t.id) === _.default.getId()) return !1;
@@ -312,8 +312,8 @@ class z extends u.Z {
                 LOAD_FORUM_POSTS: V,
                 LOAD_THREADS_SUCCESS: j,
                 LOAD_ARCHIVED_THREADS_SUCCESS: j,
-                MESSAGE_CREATE: G,
-                MESSAGE_UPDATE: B,
+                MESSAGE_CREATE: B,
+                MESSAGE_UPDATE: G,
                 LOGOUT: x,
                 SEARCH_FINISH: F,
                 MOD_VIEW_SEARCH_FINISH: F,

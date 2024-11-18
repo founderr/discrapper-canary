@@ -39,7 +39,7 @@ async function s(t, e, r, s, l) {
     let { x: u, y: o, scaledCropWidth: c, scaledCropHeight: h } = (0, i.eu)(e, r, s, l),
         d = await t.arrayBuffer(),
         p = new Worker(new URL('/assets/' + n.u('86047'), n.b)),
-        g = new Promise((t, e) => {
+        A = new Promise((t, e) => {
             p.onmessage = (n) => {
                 let { data: r } = n;
                 if (r.type === a.u.CROP_GIF_COMPLETE) {
@@ -70,7 +70,7 @@ async function s(t, e, r, s, l) {
             height: 0 | h
         }),
         {
-            result: g,
+            result: A,
             cancelFn: () => p.terminate()
         }
     );

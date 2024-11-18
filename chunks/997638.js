@@ -12,8 +12,8 @@ n.d(t, {
     n(47120);
 var i,
     l,
-    a,
     r,
+    a,
     s,
     o = n(200651),
     c = n(192379),
@@ -39,7 +39,7 @@ function _(e, t, n) {
         e
     );
 }
-((r = i || (i = {})).CENTER = 'center'), (r.LEFT = 'left'), ((s = l || (l = {})).TOP = 'top'), (s.MIDDLE = 'middle');
+((a = i || (i = {})).CENTER = 'center'), (a.LEFT = 'left'), ((s = l || (l = {})).TOP = 'top'), (s.MIDDLE = 'middle');
 class v extends c.PureComponent {
     componentDidMount() {
         let { uniqueId: e } = this.props;
@@ -52,11 +52,11 @@ class v extends c.PureComponent {
         });
     }
     render() {
-        let { renderMedia: e, textAlign: t, isLongText: n, title: i, body: l, className: a, forceTheme: r, onClickSkipAll: s } = this.props,
+        let { renderMedia: e, textAlign: t, isLongText: n, title: i, body: l, className: r, forceTheme: a, onClickSkipAll: s } = this.props,
             c = 'left' === t || n,
             d = 'center' === t || !c;
         return (0, o.jsxs)(p.Dialog, {
-            className: u()(x.popoutRoot, a),
+            className: u()(x.popoutRoot, r),
             children: [
                 null != e &&
                     (0, o.jsx)(f.Z, {
@@ -91,7 +91,7 @@ class v extends c.PureComponent {
                             size: p.ButtonSizes.SMALL,
                             look: p.Button.Looks.BLANK,
                             onClick: s,
-                            color: (0, h.ap)(r) ? p.Button.Colors.PRIMARY : p.Button.Colors.WHITE,
+                            color: (0, h.ap)(a) ? p.Button.Colors.PRIMARY : p.Button.Colors.WHITE,
                             className: c ? x.buttonSkipLeftAlign : x.buttonSkipCenterAlign,
                             children: C.intl.string(C.t['33wtxs'])
                         })
@@ -109,9 +109,9 @@ class v extends c.PureComponent {
             });
     }
 }
-class I extends (a = c.PureComponent) {
+class I extends (r = c.PureComponent) {
     render() {
-        let { renderMedia: e, textAlign: t, onComplete: n, onSkipAll: i, isLongText: l, title: a, body: r, children: s, spacing: c, forceTheme: d, ...u } = this.props,
+        let { renderMedia: e, textAlign: t, onComplete: n, onSkipAll: i, isLongText: l, title: r, body: a, children: s, spacing: c, forceTheme: d, ...u } = this.props,
             h = 'top' === u.position || 'bottom' === u.position ? 'center' : 'top';
         return (0, o.jsx)(p.Popout, {
             ...u,
@@ -133,8 +133,8 @@ class I extends (a = c.PureComponent) {
             }),
             _(this, 'renderPopoutContent', (e) => {
                 let { closePopout: t, position: n } = e,
-                    { forceTheme: i, isLongText: l, arrowAlignment: a, renderMedia: r } = this.props,
-                    s = null != r;
+                    { forceTheme: i, isLongText: l, arrowAlignment: r, renderMedia: a } = this.props,
+                    s = null != a;
                 return (0, o.jsx)(p.ThemeProvider, {
                     theme: i,
                     children: (e) =>
@@ -150,8 +150,8 @@ class I extends (a = c.PureComponent) {
                                     [x.right]: 'right' === n,
                                     [x.top]: 'top' === n,
                                     [x.left]: 'left' === n,
-                                    [x.arrowAlignmentTop]: 'top' === a,
-                                    [x.arrowAlignmentMiddle]: 'middle' === a,
+                                    [x.arrowAlignmentTop]: 'top' === r,
+                                    [x.arrowAlignmentMiddle]: 'middle' === r,
                                     'force-theme': null != i
                                 },
                                 e

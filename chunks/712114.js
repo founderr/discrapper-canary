@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    a = n(990547),
-    r = n(481060),
+    r = n(990547),
+    a = n(481060),
     s = n(213609),
     o = n(536442),
     c = n(39604),
@@ -22,8 +22,8 @@ function p(e) {
         []
     ),
     (0, s.Z)({
-        type: a.ImpressionTypes.VIEW,
-        name: a.ImpressionNames.HOTSPOT,
+        type: r.ImpressionTypes.VIEW,
+        name: r.ImpressionNames.HOTSPOT,
         properties: { hotspot_location: o.v6.CLIPS_CHANNEL_ATTACH_REMINDER }
     }),
     null == n)
@@ -35,13 +35,13 @@ function p(e) {
                       className: h.thumbnailStackContainer,
                       children: (0, i.jsx)(d.Z, {})
                   }),
-                  (0, i.jsx)(r.Heading, {
+                  (0, i.jsx)(a.Heading, {
                       className: h.header,
                       color: 'header-primary',
                       variant: 'heading-md/extrabold',
                       children: u.intl.format(u.t['+qxkzM'], { count: n.newClipIds.length })
                   }),
-                  (0, i.jsx)(r.Text, {
+                  (0, i.jsx)(a.Text, {
                       color: 'text-normal',
                       className: h.__invalid_content,
                       variant: 'text-sm/medium',
@@ -50,16 +50,16 @@ function p(e) {
                   (0, i.jsxs)('div', {
                       className: h.buttonsContainer,
                       children: [
-                          (0, i.jsx)(r.Button, {
-                              color: r.Button.Colors.PRIMARY,
-                              look: r.Button.Looks.LINK,
+                          (0, i.jsx)(a.Button, {
+                              color: a.Button.Colors.PRIMARY,
+                              look: a.Button.Looks.LINK,
                               onClick: function () {
                                   (0, o.Kw)(o.v6.CLIPS_CHANNEL_ATTACH_REMINDER), p();
                               },
                               children: u.intl.string(u.t['7r5Z19'])
                           }),
-                          (0, i.jsx)(r.Button, {
-                              color: r.Button.Colors.BRAND,
+                          (0, i.jsx)(a.Button, {
+                              color: a.Button.Colors.BRAND,
                               onClick: t,
                               children: u.intl.string(u.t.md4qKy)
                           })

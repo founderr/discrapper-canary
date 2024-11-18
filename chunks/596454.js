@@ -31,22 +31,22 @@ function v(e) {
         { triggerAnimation: P } = i.useContext(u.Rm),
         k = f.Yk.useSetting(),
         U = E(),
-        B = null == C ? k : C,
-        G = g.kV[I],
+        G = null == C ? k : C,
+        B = g.kV[I],
         Z = i.useRef(null),
         F = i.useMemo(() => {
             if (null != a) return a;
             if (null != d) {
-                let e = !0 === T && B;
+                let e = !0 === T && G;
                 return p.ZP.getEmojiURL({
                     id: d,
                     animated: U && !0 === b && (e || D || !0 === S),
-                    size: G
+                    size: B
                 });
             }
             if (null != _) return h.ZP.getURL(_);
             throw Error('Unknown Src for Emoji');
-        }, [b, B, d, _, G, U, D, S, T, a]),
+        }, [b, G, d, _, B, U, D, S, T, a]),
         V = i.useCallback(() => {
             null != F &&
                 (M.current = (0, c.po)(F, (e) => {
@@ -104,7 +104,7 @@ function v(e) {
                       channelId: m,
                       messageId: v,
                       emojiName: _,
-                      disable: !1 === B || !1 === k,
+                      disable: !1 === G || !1 === k,
                       emojiRef: Z.current
                   }),
                   N

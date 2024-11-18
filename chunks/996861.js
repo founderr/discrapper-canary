@@ -62,8 +62,8 @@ var u = t(623292),
     f = t(592125),
     m = t(626135),
     h = t(934415),
-    I = t(572004),
-    E = t(585483),
+    E = t(572004),
+    I = t(585483),
     v = t(709054),
     p = t(111618),
     M = t(50284),
@@ -74,14 +74,14 @@ function S(e) {
     null != n && s.Z.open(n, x.pNK.OVERVIEW);
 }
 function j(e, n, t) {
-    (0, I.JG)(t.shiftKey ? ''.concat(n.channel_id, '-').concat(n.id) : n.id);
+    (0, E.JG)(t.shiftKey ? ''.concat(n.channel_id, '-').concat(n.id) : n.id);
 }
 function _(e, n) {
     m.default.track(x.rMx.MESSAGE_LINK_COPIED, {
         message_id: n.id,
         channel: n.channel_id
     }),
-        (0, I.JG)((0, h.wR)(e.guild_id, e.id, n.id));
+        (0, E.JG)((0, h.wR)(e.guild_id, e.id, n.id));
 }
 function b(e, n, t) {
     n.state === x.yb.SEND_FAILED || t.shiftKey ? l.Z.deleteMessage(e.id, n.id, n.state === x.yb.SEND_FAILED) : r.Z.confirmDelete(e, n);
@@ -114,7 +114,7 @@ function C(e, n, t) {
         shouldMention: !t.shiftKey && !l,
         showMentionToggle: !i && !l
     }),
-        E.S.dispatchToLastSubscribed(x.CkL.TEXTAREA_FOCUS);
+        I.S.dispatchToLastSubscribed(x.CkL.TEXTAREA_FOCUS);
 }
 function L(e, n) {
     (0, c.R6)(e, n, 'Message');

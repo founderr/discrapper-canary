@@ -8,8 +8,8 @@ n.d(t, {
     n(773603);
 var l = n(200651),
     i = n(192379),
-    s = n(658550),
-    r = n(481060),
+    r = n(658550),
+    s = n(481060),
     o = n(507453),
     a = n(388032);
 function d(e) {
@@ -52,15 +52,15 @@ function d(e) {
             children: [
                 (0, l.jsx)(o.Z.SlideHeader, { onClose: u }),
                 (0, l.jsx)(o.Z.SlideContent, {
-                    children: (0, l.jsxs)(r.FormItem, {
+                    children: (0, l.jsxs)(s.FormItem, {
                         title: p,
                         children: [
-                            (0, l.jsx)(r.TextInput, {
+                            (0, l.jsx)(s.TextInput, {
                                 inputRef: v,
                                 onChange: C,
                                 placeholder: j,
-                                maxLength: s.tL,
-                                minLength: s.th,
+                                maxLength: r.tL,
+                                minLength: r.th,
                                 value: S,
                                 spellCheck: 'false',
                                 disabled: h

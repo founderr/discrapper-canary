@@ -22,8 +22,8 @@ var l = t(200651),
     g = t(630388),
     v = t(971130),
     f = t(530436),
-    N = t(245335),
-    j = t(981631),
+    j = t(245335),
+    N = t(981631),
     I = t(388032),
     p = t(696456),
     C = t(311133),
@@ -82,7 +82,7 @@ let T = o.ZP.connectStores([m.Z], () => ({ hideValue: m.Z.hideInstantInvites }))
             { maxAge: D, maxUses: z, networkError: B, showVanityURL: M } = d,
             G = i.useCallback(() => {
                 (0, h.JG)(Z),
-                    x.default.track(j.rMx.COPY_INSTANT_INVITE, {
+                    x.default.track(N.rMx.COPY_INSTANT_INVITE, {
                         server: u.Z.getGuildId(),
                         channel: null == _ ? void 0 : _.id,
                         channel_type: null == _ ? void 0 : _.type,
@@ -123,7 +123,7 @@ let T = o.ZP.connectStores([m.Z], () => ({ hideValue: m.Z.hideInstantInvites }))
                               ' ',
                               r
                                   ? (0, l.jsx)(c.Anchor, {
-                                        onClick: () => b(N.RV.SETTINGS),
+                                        onClick: () => b(j.RV.SETTINGS),
                                         children: I.intl.string(I.t.VNe8Pz)
                                     })
                                   : null
@@ -137,7 +137,7 @@ let T = o.ZP.connectStores([m.Z], () => ({ hideValue: m.Z.hideInstantInvites }))
                               I.intl.string(I.t['0M2U9/']),
                               ' ',
                               (0, l.jsx)(c.Anchor, {
-                                  onClick: () => b(N.RV.SETTINGS),
+                                  onClick: () => b(j.RV.SETTINGS),
                                   children: I.intl.string(I.t.VNe8Pz)
                               })
                           ]

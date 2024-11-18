@@ -1,23 +1,23 @@
 e.d(i, {
     j: function () {
-        return o;
+        return d;
     }
 });
 var l = e(200651),
     t = e(192379),
     r = e(777207),
     s = e(13951);
-function o(n) {
-    let { title: i, subtitle: e, iconSrc: o, backgroundSrc: a, animatedBackgroundSrc: d, prefersReducedMotion: u = !0 } = n,
+function d(n) {
+    let { title: i, subtitle: e, iconSrc: d, backgroundSrc: u, animatedBackgroundSrc: a, prefersReducedMotion: o = !0 } = n,
         c = t.useMemo(() => {
-            let n = null != a ? a : o;
+            let n = null != u ? u : d;
             if (null != n) return { '--custom-background-url': 'url('.concat(n.toString(), ')') };
-        }, [a, o]),
+        }, [u, d]),
         m = t.useMemo(() => {
-            if (null == a) return;
-            let n = { '--custom-background-static': 'url('.concat(a.toString()) };
-            return !u && null != d && (n['--custom-background-animated'] = 'url('.concat(d.toString(), ')')), n;
-        }, [d, a, u]);
+            if (null == u) return;
+            let n = { '--custom-background-static': 'url('.concat(u.toString()) };
+            return !o && null != a && (n['--custom-background-animated'] = 'url('.concat(a.toString(), ')')), n;
+        }, [a, u, o]);
     return (0, l.jsxs)('div', {
         className: s.wrapper,
         children: [
@@ -28,11 +28,11 @@ function o(n) {
             (0, l.jsxs)('div', {
                 className: s.content,
                 children: [
-                    null != o &&
+                    null != d &&
                         (0, l.jsx)('div', {
                             className: s.icon,
                             children: (0, l.jsx)('img', {
-                                src: o.toString(),
+                                src: d.toString(),
                                 alt: ''
                             })
                         }),
@@ -52,7 +52,7 @@ function o(n) {
                     })
                 ]
             }),
-            null != a
+            null != u
                 ? (0, l.jsx)('div', {
                       className: s.image,
                       style: m

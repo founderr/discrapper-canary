@@ -1,8 +1,8 @@
 t.r(e);
 var i = t(200651);
 t(192379);
-var l = t(481060),
-    r = t(239091),
+var r = t(481060),
+    l = t(239091),
     u = t(883385),
     a = t(108843),
     o = t(911969),
@@ -13,8 +13,8 @@ var l = t(481060),
     I = t(737013),
     g = t(607783),
     x = t(702321),
-    _ = t(461535),
-    h = t(776568),
+    h = t(461535),
+    _ = t(776568),
     M = t(299206),
     m = t(895563),
     p = t(212205),
@@ -63,8 +63,8 @@ e.default = (0, a.Z)(
                 ne = (0, b.Z)(t.id, u),
                 nt = (0, R.Z)({ user: e }),
                 ni = (0, d.Z)(null, e),
-                nl = (0, k.Z)(e.id),
-                nr = (0, D.Z)(e, t.id),
+                nr = (0, k.Z)(e.id),
+                nl = (0, D.Z)(e, t.id),
                 nu = (0, N.Z)(e),
                 na = (0, L.Z)(e.id),
                 no = (0, g.B)({
@@ -76,7 +76,7 @@ e.default = (0, a.Z)(
                 nd = (0, y.Z)(e.id, t.id),
                 ns = (0, A.Z)({ user: e }),
                 nc = (0, G.Z)({ user: e }),
-                nf = (0, h.ZP)(t),
+                nf = (0, _.ZP)(t),
                 nI = (0, j.Uf)(z.aIL, t.id, 'trailing'),
                 ng = (0, M.Z)({
                     id: e.id,
@@ -86,8 +86,8 @@ e.default = (0, a.Z)(
                     id: t.id,
                     label: Y.intl.string(Y.t.gFHI3t)
                 }),
-                n_ = (0, _.Z)(t),
-                nh = (0, f.Z)(e.id),
+                nh = (0, h.Z)(t),
+                n_ = (0, f.Z)(e.id),
                 nM = (0, c.Z)(t.id),
                 nm = (0, E.Z)(e),
                 np = (0, I.Z)(e.id),
@@ -107,25 +107,25 @@ e.default = (0, a.Z)(
                 nS = (0, T.H)(t),
                 nO = t.isManaged(),
                 nU = e.isNonUserBot();
-            return (0, i.jsxs)(l.Menu, {
+            return (0, i.jsxs)(r.Menu, {
                 navId: 'user-context',
-                onClose: r.Zy,
+                onClose: l.Zy,
                 'aria-label': Y.intl.string(Y.t.liqwPD),
                 onSelect: X,
                 children: [
-                    (0, i.jsx)(l.MenuGroup, { children: !(nU && !(0, x.Z)(t.id)) && n_ }),
-                    (0, i.jsx)(l.MenuGroup, { children: nE }),
-                    (0, i.jsx)(l.MenuGroup, { children: nS }),
-                    (0, i.jsx)(l.MenuGroup, { children: nN }),
-                    (0, i.jsxs)(l.MenuGroup, {
+                    (0, i.jsx)(r.MenuGroup, { children: !(nU && !(0, x.Z)(t.id)) && nh }),
+                    (0, i.jsx)(r.MenuGroup, { children: nE }),
+                    (0, i.jsx)(r.MenuGroup, { children: nS }),
+                    (0, i.jsx)(r.MenuGroup, { children: nN }),
+                    (0, i.jsxs)(r.MenuGroup, {
                         children: [nZ, nT, nj]
                     }),
-                    (0, i.jsx)(l.MenuGroup, { children: !nU && nm }),
-                    (0, i.jsxs)(l.MenuGroup, {
+                    (0, i.jsx)(r.MenuGroup, { children: !nU && nm }),
+                    (0, i.jsxs)(r.MenuGroup, {
                         children: [
                             !nU &&
                                 (0, i.jsxs)(i.Fragment, {
-                                    children: [V && J, H, !nO && nr, V && Q, V && $, nn]
+                                    children: [V && J, H, !nO && nl, V && Q, V && $, nn]
                                 }),
                             (0, x.Z)(t.id) && J,
                             ne
@@ -134,26 +134,26 @@ e.default = (0, a.Z)(
                     !nU &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, i.jsx)(l.MenuGroup, { children: s && nl }),
-                                (0, i.jsx)(l.MenuGroup, { children: V && ni }),
-                                (0, i.jsxs)(l.MenuGroup, {
+                                (0, i.jsx)(r.MenuGroup, { children: s && nr }),
+                                (0, i.jsx)(r.MenuGroup, { children: V && ni }),
+                                (0, i.jsxs)(r.MenuGroup, {
                                     children: [s && na, V && no, s && nd, nv, V && nt, nu, V && nc, V && ns, s && np]
                                 }),
-                                (0, i.jsxs)(l.MenuGroup, {
+                                (0, i.jsxs)(r.MenuGroup, {
                                     children: [a && nf, nI]
                                 }),
                                 B &&
-                                    (0, i.jsxs)(l.MenuGroup, {
-                                        children: [nM, nh]
+                                    (0, i.jsxs)(r.MenuGroup, {
+                                        children: [nM, n_]
                                     })
                             ]
                         }),
                     (0, x.Z)(t.id) &&
-                        (0, i.jsxs)(l.MenuGroup, {
+                        (0, i.jsxs)(r.MenuGroup, {
                             children: [a && nf, nI]
                         }),
-                    (0, i.jsx)(l.MenuGroup, { children: nC }),
-                    (0, i.jsxs)(l.MenuGroup, {
+                    (0, i.jsx)(r.MenuGroup, { children: nC }),
+                    (0, i.jsxs)(r.MenuGroup, {
                         children: [ng, !W && nx]
                     })
                 ]

@@ -54,8 +54,8 @@ var i = n(200651),
     U = n(900849),
     G = n(135431),
     z = n(674588),
-    Y = n(264043),
-    V = n(303383),
+    V = n(264043),
+    Y = n(303383),
     K = n(887706),
     W = n(738130),
     X = n(4461),
@@ -97,25 +97,25 @@ function eN(e) {
         f = (0, et.useApplicationDirectoryHistory)((e) => e.guildId),
         j = (0, K.Z)(),
         es = (0, _.e7)(
-            [V.Z],
+            [Y.Z],
             () =>
-                V.Z.getFetchState({
+                Y.Z.getFetchState({
                     applicationId: m,
                     guildId: f
-                }) === V.M.FETCHING
+                }) === Y.M.FETCHING
         ),
         eN = a.useRef({
             applicationId: void 0,
             guildId: void 0
         }),
-        { similarApplications: eT, similarLoadId: ey } = (0, _.cj)([V.Z], () => {
+        { similarApplications: eT, similarLoadId: ey } = (0, _.cj)([Y.Z], () => {
             let e = {
                     applicationId: m,
                     guildId: f
                 },
-                t = V.Z.getSimilarApplications(e);
+                t = Y.Z.getSimilarApplications(e);
             return (
-                null == t ? (t = V.Z.getSimilarApplications(eN.current)) : (eN.current = e),
+                null == t ? (t = Y.Z.getSimilarApplications(eN.current)) : (eN.current = e),
                 {
                     similarApplications: null == t ? void 0 : t.applications,
                     similarLoadId: null == t ? void 0 : t.loadId
@@ -123,7 +123,7 @@ function eN(e) {
             );
         }),
         eE = a.useMemo(() => (null == eT ? void 0 : eT.slice(0, 3)), [eT]),
-        eA = (0, _.e7)([Y.Z], () => Y.Z.getApplicationFetchState(m)),
+        eA = (0, _.e7)([V.Z], () => V.Z.getApplicationFetchState(m)),
         [eP, eL] = a.useState(void 0),
         eR = a.useCallback(
             (e) => {
@@ -140,9 +140,9 @@ function eN(e) {
         ek = (0, _.e7)([w.Z], () => w.Z.isFocused()),
         eO = (0, _.e7)([B.default], () => B.default.locale),
         eB = a.useRef(m),
-        eZ = (0, _.e7)([Y.Z], () => {
-            let e = Y.Z.getApplication(m);
-            return null == e ? (e = Y.Z.getApplication(eB.current)) : (eB.current = m), e;
+        eZ = (0, _.e7)([V.Z], () => {
+            let e = V.Z.getApplication(m);
+            return null == e ? (e = V.Z.getApplication(eB.current)) : (eB.current = m), e;
         }),
         ew = (0, ei.Z)({ application: eZ }),
         eF = (0, _.e7)([Z.default], () => Z.default.getSessionId());
@@ -213,13 +213,13 @@ function eN(e) {
             id: null !== (c = null == eZ ? void 0 : eZ.id) && void 0 !== c ? c : '',
             label: e_.intl.string(e_.t['FfCL+/'])
         }),
-        { canInstall: ez, install: eY } = (0, X.P)(eZ, f),
-        eV = null === (t = (0, et.getPreviousView)()) || void 0 === t ? void 0 : t.type;
+        { canInstall: ez, install: eV } = (0, X.P)(eZ, f),
+        eY = null === (t = (0, et.getPreviousView)()) || void 0 === t ? void 0 : t.type;
     a.useEffect(() => {
         (null == eZ ? void 0 : eZ.id) != null &&
             F.default.track(ep.rMx.APP_DIRECTORY_PAGE_VIEWED, {
                 current_page: 'product',
-                previous_page: eV,
+                previous_page: eY,
                 application_id: eZ.id,
                 guild_id: f,
                 shown_mutual_guilds_count: ew.length,
@@ -357,9 +357,9 @@ function eN(e) {
         if (j && 'true' === e.searchParams.get(eC)) {
             e.searchParams.delete(eC);
             let t = e.pathname + e.search;
-            (0, k.dL)(t), eY('product_page');
+            (0, k.dL)(t), eV('product_page');
         }
-    }, [j, eY]);
+    }, [j, eV]);
     let e5 = a.useCallback(() => {
             if (null != eZ) {
                 if ((u.tq || u.Em) && null == eZ.custom_install_url) {
@@ -375,7 +375,7 @@ function eN(e) {
                     }
                 }
                 j
-                    ? eY('product_page')
+                    ? eV('product_page')
                     : (F.default.track(ep.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
                           application_id: m,
                           guild_id: f,
@@ -385,13 +385,13 @@ function eN(e) {
                       }),
                       (0, q.rf)({ [eC]: 'true' }));
             }
-        }, [eZ, j, eY, m, f]),
+        }, [eZ, j, eV, m, f]),
         e9 = (null == eZ ? void 0 : eZ.id) === em.g,
-        [e6, e8] = a.useState(!1),
+        [e8, e6] = a.useState(!1),
         [e4, e7] = a.useState(!1),
         [te, tt] = a.useState(!0),
         tn = (e) => {
-            null != e && e8(e.scrollHeight > e.clientHeight);
+            null != e && e6(e.scrollHeight > e.clientHeight);
         },
         ti = null != eK && eK.length > 0,
         ta = (null == eZ ? void 0 : eZ.flags) != null,
@@ -429,7 +429,7 @@ function eN(e) {
                                               children: r
                                           })
                                       }),
-                                      (e6 || e4) &&
+                                      (e8 || e4) &&
                                           (0, i.jsx)(eb, {
                                               isViewAll: e4,
                                               onToggle: () => {
@@ -578,7 +578,7 @@ function eN(e) {
                     )
                 )
             );
-        }, [h, eM, eZ, eP, e4, e6, eX, ek, eq, tr, m, ti, ta, eK]),
+        }, [h, eM, eZ, eP, e4, e8, eX, ek, eq, tr, m, ti, ta, eK]),
         to = a.useMemo(() => {
             let e = [
                 {
@@ -612,8 +612,8 @@ function eN(e) {
     return (
         (d =
             null == eZ
-                ? null == eA || eA === Y.M.FETCHING
-                    ? (0, i.jsx)($.Z, { loading: eA === Y.M.FETCHING })
+                ? null == eA || eA === V.M.FETCHING
+                    ? (0, i.jsx)($.Z, { loading: eA === V.M.FETCHING })
                     : (0, i.jsx)('div', {
                           className: eh.__invalid_page,
                           children: (0, i.jsxs)('div', {
@@ -632,7 +632,7 @@ function eN(e) {
                           })
                       })
                 : (0, i.jsxs)($.Z, {
-                      loading: eA === Y.M.FETCHING,
+                      loading: eA === V.M.FETCHING,
                       children: [
                           (0, i.jsx)(ej, {
                               app: eZ,

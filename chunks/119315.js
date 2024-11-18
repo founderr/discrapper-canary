@@ -8,15 +8,15 @@ n.d(t, {
 });
 var i,
     l,
-    a = n(200651);
+    r = n(200651);
 n(192379);
-var r = n(120356),
-    s = n.n(r),
+var a = n(120356),
+    s = n.n(a),
     o = n(477553);
 ((i = l || (l = {}))[(i.POPOUT = 0)] = 'POPOUT'), (i[(i.SECONDARY = 1)] = 'SECONDARY'), (i[(i.BLACK = 2)] = 'BLACK');
 let c = (e) => {
-    let { left: t, top: n = 0, right: i = 0, bottom: l, size: r = 8, alert: c = !1, maskColor: d = 1 } = e;
-    return (0, a.jsx)('span', {
+    let { left: t, top: n = 0, right: i = 0, bottom: l, size: a = 8, alert: c = !1, maskColor: d = 1 } = e;
+    return (0, r.jsx)('span', {
         className: s()(o.dot, {
             [o.alert]: c,
             [o.maskPopout]: 0 === d,
@@ -24,8 +24,8 @@ let c = (e) => {
             [o.maskBlack]: 2 === d
         }),
         style: {
-            height: r,
-            width: r,
+            height: a,
+            width: a,
             left: t,
             top: n,
             right: i,

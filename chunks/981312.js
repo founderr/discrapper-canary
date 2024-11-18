@@ -3,14 +3,14 @@ e.d(t, {
         return u;
     }
 });
-var i = e(442837),
-    r = e(594174);
+var r = e(442837),
+    i = e(594174);
 function u() {
     return (
         !1 ===
-        (0, i.e7)([r.default], () => {
+        (0, r.e7)([i.default], () => {
             var n;
-            return null === (n = r.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed;
+            return null === (n = i.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed;
         })
     );
 }

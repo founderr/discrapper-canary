@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    a = n(120356),
-    r = n.n(a),
+    r = n(120356),
+    a = n.n(r),
     s = n(481060),
     o = n(100527),
     c = n(367907),
@@ -20,10 +20,10 @@ var i = n(200651),
     C = n(314734),
     x = n(902265);
 function _(e) {
-    let { channel: t, entryPointCommandButtonRef: n, type: a } = e,
-        { isInitialLoading: r, application: s, primaryEntryPointCommand: u } = (0, d.Z)({ channel: t }),
+    let { channel: t, entryPointCommandButtonRef: n, type: r } = e,
+        { isInitialLoading: a, application: s, primaryEntryPointCommand: u } = (0, d.Z)({ channel: t }),
         C = null == s ? void 0 : s.id,
-        x = (0, f.Z)({ type: a }),
+        x = (0, f.Z)({ type: r }),
         _ = l.useCallback(() => {
             x
                 ? h.yT(p.ti.DISMISSED)
@@ -34,7 +34,7 @@ function _(e) {
                       source: p._b.TEXT
                   }));
         }, [C, x]);
-    return r || null == s
+    return a || null == s
         ? null
         : (0, i.jsx)(v, {
               channel: t,
@@ -42,11 +42,11 @@ function _(e) {
               primaryEntryPointCommand: u,
               onOpenButtonPress: _,
               entryPointCommandButtonRef: n,
-              type: a
+              type: r
           });
 }
 function v(e) {
-    let { channel: t, application: n, primaryEntryPointCommand: l, onOpenButtonPress: a, entryPointCommandButtonRef: o, type: c } = e,
+    let { channel: t, application: n, primaryEntryPointCommand: l, onOpenButtonPress: r, entryPointCommandButtonRef: o, type: c } = e,
         d = (0, f.Z)({ type: c }),
         {
             isExecutingLaunchInteraction: h,
@@ -69,14 +69,14 @@ function v(e) {
             isEmbeddedApp: g,
             hasActiveMatchingEmbeddedActivity: m,
             currentEmbeddedActivity: _,
-            onOpenButtonPress: a,
+            onOpenButtonPress: r,
             channelRecipientUserId: v,
             setIsExecutingLaunchInteraction: I,
             analyticsLocations: E
         }),
         Z = m ? s.Button.Colors.RED : s.Button.Colors.BRAND;
     return (0, i.jsx)(s.Button, {
-        className: r()(x.entryPointAppCommandButton, C.Id),
+        className: a()(x.entryPointAppCommandButton, C.Id),
         size: s.Button.Sizes.LARGE,
         color: Z,
         submitting: h,

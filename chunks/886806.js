@@ -2,19 +2,19 @@ n(47120);
 var i,
     r = n(200651),
     s = n(192379),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     o = n(442837),
     c = n(893776),
     u = n(129293),
     d = n(388905),
     h = n(17894),
-    g = n(108427),
-    m = n(314897),
-    p = n(626135),
+    p = n(108427),
+    g = n(314897),
+    m = n(626135),
     f = n(981631),
-    _ = n(388032),
-    x = n(960136),
+    x = n(388032),
+    _ = n(960136),
     E = n(971436);
 function v(e, t, n) {
     return (
@@ -32,26 +32,26 @@ function v(e, t, n) {
 o.ZP.initialize();
 class I extends (i = s.PureComponent) {
     componentDidMount() {
-        this.handleVerify(), (0, g.e)('verify_email');
+        this.handleVerify(), (0, p.e)('verify_email');
     }
     renderVerifyFailed() {
         return (0, r.jsxs)(d.ZP, {
             children: [
                 (0, r.jsx)(d.Ee, {
                     src: n(375673),
-                    className: l()(x.image, E.marginBottom20)
+                    className: a()(_.image, E.marginBottom20)
                 }),
                 (0, r.jsx)(d.Dx, {
                     className: E.marginBottom8,
-                    children: _.intl.string(_.t.PCgG39)
+                    children: x.intl.string(x.t.PCgG39)
                 }),
                 (0, r.jsx)(d.DK, {
                     className: E.marginBottom40,
-                    children: _.intl.string(_.t.tQpeAw)
+                    children: x.intl.string(x.t.tQpeAw)
                 }),
                 (0, r.jsx)(d.zx, {
                     onClick: this.handleLogin,
-                    children: _.intl.string(_.t.dKhVQE)
+                    children: x.intl.string(x.t.dKhVQE)
                 })
             ]
         });
@@ -61,15 +61,15 @@ class I extends (i = s.PureComponent) {
             children: [
                 (0, r.jsx)(d.Ee, {
                     src: n(73962),
-                    className: l()(x.image, E.marginBottom20)
+                    className: a()(_.image, E.marginBottom20)
                 }),
                 (0, r.jsx)(d.Dx, {
                     className: E.marginBottom40,
-                    children: _.intl.string(_.t.dAfGb2)
+                    children: x.intl.string(x.t.dAfGb2)
                 }),
                 (0, r.jsx)(d.zx, {
                     onClick: this.handleOpenApp,
-                    children: _.intl.string(_.t.uJWIj4)
+                    children: x.intl.string(x.t.uJWIj4)
                 })
             ]
         });
@@ -79,15 +79,15 @@ class I extends (i = s.PureComponent) {
             children: [
                 (0, r.jsx)(d.Ee, {
                     src: n(892235),
-                    className: l()(x.image, E.marginBottom20)
+                    className: a()(_.image, E.marginBottom20)
                 }),
                 (0, r.jsx)(d.Dx, {
                     className: E.marginBottom8,
-                    children: _.intl.string(_.t['0c8+5u'])
+                    children: x.intl.string(x.t['0c8+5u'])
                 }),
                 (0, r.jsx)(d.DK, {
                     className: E.marginBottom40,
-                    children: _.intl.string(_.t.ULTCBA)
+                    children: x.intl.string(x.t.ULTCBA)
                 }),
                 (0, r.jsx)(d.zx, {
                     submitting: !0,
@@ -112,15 +112,15 @@ class I extends (i = s.PureComponent) {
             }),
             v(this, 'handleOpenApp', () => {
                 let { verifyingUserId: e } = this.props;
-                p.default.track(f.rMx.VERIFY_ACCOUNT_APP_OPENED, { verifying_user_id: e }), (0, h.Z)('verify_email');
+                m.default.track(f.rMx.VERIFY_ACCOUNT_APP_OPENED, { verifying_user_id: e }), (0, h.Z)('verify_email');
             });
     }
 }
 v(I, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) }),
-    (t.Z = o.ZP.connectStores([m.default], () => ({
-        verifyFailed: m.default.didVerifyFail(),
-        verifyErrors: m.default.getVerifyErrors(),
-        verifySucceeded: m.default.didVerifySucceed(),
-        fingerprint: m.default.getFingerprint(),
-        verifyingUserId: m.default.getVerifyingUserId()
+    (t.Z = o.ZP.connectStores([g.default], () => ({
+        verifyFailed: g.default.didVerifyFail(),
+        verifyErrors: g.default.getVerifyErrors(),
+        verifySucceeded: g.default.didVerifySucceed(),
+        fingerprint: g.default.getFingerprint(),
+        verifyingUserId: g.default.getVerifyingUserId()
     }))(I));

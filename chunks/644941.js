@@ -23,8 +23,8 @@ var r = n(200651),
     S = n(998058),
     b = n(839392),
     T = n(567409),
-    P = n(774073),
-    j = n(426482),
+    j = n(774073),
+    P = n(426482),
     N = n(715318),
     M = n(38516),
     y = n(891949),
@@ -84,11 +84,11 @@ function U(e) {
                         children: [
                             (0, r.jsx)('div', {
                                 className: Z.logoWrapper,
-                                children: (0, r.jsx)(j.C, {
+                                children: (0, r.jsx)(P.C, {
                                     game: n,
                                     application: a,
                                     className: Z.logo,
-                                    size: j.Z.LARGE
+                                    size: P.Z.LARGE
                                 })
                             }),
                             (0, r.jsx)(N.Z, {
@@ -204,18 +204,18 @@ function B(e) {
         ]
     });
 }
-let F = (e) => e.filter(P.z6).slice(0, 5);
+let F = (e) => e.filter(j.z6).slice(0, 5);
 t.default = (e) => {
     var t;
     let { applicationId: n, source: a, sourceUserId: o, transitionState: s, onClose: c } = e,
         { clientThemesClassName: v } = (0, f.ZP)(),
         I = (0, d.e7)([E.default], () => E.default.locale),
         C = i.useMemo(() => (0, A.fP)(), []),
-        P = (0, d.Wu)([b.Z], () => {
+        j = (0, d.Wu)([b.Z], () => {
             var e;
             return (null !== (e = b.Z.getSimilarGames(n)) && void 0 !== e ? e : []).slice(0, 25);
         }),
-        [j, N] = i.useState(null),
+        [P, N] = i.useState(null),
         M = (0, T.Ns)(n),
         [y, O] = i.useState(null),
         L = (0, g.q)(n),
@@ -244,13 +244,13 @@ t.default = (e) => {
     i.useEffect(() => {
         (0, h.Jn)();
     }, []),
-    (0, g.Z)(P),
+    (0, g.Z)(j),
     i.useEffect(() => {
         !I.startsWith('en') && (null == R ? void 0 : R.summaryLocalized) == null && m.Z.getDetectableGamesSupplemental([n], { forceFetch: !0 });
     }, [n, null == R ? void 0 : R.summaryLocalized, I]),
     i.useEffect(() => {
         (async () => {
-            if (0 === P.length) {
+            if (0 === j.length) {
                 N(null);
                 try {
                     await (0, S.i)(n);
@@ -259,7 +259,7 @@ t.default = (e) => {
                 }
             }
         })();
-    }, [n, P]),
+    }, [n, j]),
     (0, p.Z)(() => {
         var e;
         let t = Date.now(),
@@ -277,7 +277,7 @@ t.default = (e) => {
             gameName: null != w ? w : '',
             playedFriendIds: M.map((e) => e.author_id),
             playedFriendsData: r,
-            similarGames: F(P),
+            similarGames: F(j),
             officialGuildId: null == y ? void 0 : null === (e = y.guild) || void 0 === e ? void 0 : e.id
         });
     }),
@@ -306,8 +306,8 @@ t.default = (e) => {
                                       application: L,
                                       entries: M,
                                       officialGuildInvite: y,
-                                      similarGames: P,
-                                      similarGamesError: j,
+                                      similarGames: j,
+                                      similarGamesError: P,
                                       onClose: c,
                                       viewId: C,
                                       trackAction: k

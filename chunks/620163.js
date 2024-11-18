@@ -21,8 +21,8 @@ var s = n(990547),
     S = n(163379),
     T = n(703288),
     C = n(574755),
-    _ = n(377171),
-    E = n(621628),
+    E = n(377171),
+    _ = n(621628),
     I = n(18438),
     f = n(778825),
     N = n(665166),
@@ -75,8 +75,8 @@ var s = n(990547),
     eS = n(593648),
     eT = n(327885),
     eC = n(595242),
-    e_ = n(301121),
-    eE = n(463153),
+    eE = n(301121),
+    e_ = n(463153),
     eI = n(36192),
     ef = n(889029),
     eN = n(400287),
@@ -101,7 +101,7 @@ let ek = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
         return Object.freeze({
             [ey.s6.SEARCH_NO_RESULTS]: {
                 section: h.ID.CUSTOM,
-                element: eE.Z,
+                element: e_.Z,
                 predicate: () => eW
             },
             [ey.s6.ACCOUNT_SECURITY_TAB]: {
@@ -269,7 +269,7 @@ let ek = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 label: eF.intl.string(eF.t.sKMrpq),
                 searchableTitles: [eF.intl.string(eF.t.sKMrpq)],
                 ariaLabel: eF.intl.string(eF.t.sKMrpq),
-                element: e_.Z,
+                element: eE.Z,
                 predicate: () => !e3
             },
             [ey.s6.PRIVACY_USER_SETTINGS]: {
@@ -567,7 +567,7 @@ let ek = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 badgeCount: eG,
                 newIndicator: (0, i.jsx)(a.TextBadge, {
                     text: eF.intl.string(eF.t.y2b7CA),
-                    color: _.Z.BG_BRAND
+                    color: E.Z.BG_BRAND
                 }),
                 newIndicatorDismissibleContentTypes: [r.z.FAMILY_CENTER_NEW_BADGE]
             },
@@ -1671,7 +1671,7 @@ let ek = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eB.oAB.DISMISSIBLE_CONTENT_OPTIONS,
                 searchableTitles: ['Dismissible Contents'],
                 label: 'Dismissible Contents',
-                element: E.Z,
+                element: _.Z,
                 predicate: () => B.Z.isDeveloper
             },
             [ey.s6.PAYMENT_FLOW_MODALS]: {

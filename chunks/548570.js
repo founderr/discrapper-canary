@@ -58,8 +58,8 @@ function P(e, t, n) {
 }
 let k = new m.Z('GatewaySocket'),
     U = new R.Z();
-function B() {}
-let G = 30 * S.Z.Millis.SECOND,
+function G() {}
+let B = 30 * S.Z.Millis.SECOND,
     Z = 3 * S.Z.Millis.MINUTE,
     F = 1 * S.Z.Millis.MINUTE;
 function V(e) {
@@ -103,7 +103,7 @@ class H extends L.Z {
             (this.helloTimeout = setTimeout(() => {
                 let e = Date.now() - this.connectionStartTime;
                 this._handleClose(!1, 0, 'The connection timed out after '.concat(e, ' ms - did not receive OP_HELLO in time.')), this.setResumeUrl(null);
-            }, G));
+            }, B));
         let i = new URL(n);
         i.searchParams.append('encoding', t),
             i.searchParams.append('v', r.toString()),
@@ -353,7 +353,7 @@ class H extends L.Z {
     _cleanup(e) {
         u.ZP.Emitter.resume(), this._stopHeartbeater(), this._clearHelloTimeout();
         let t = this.webSocket;
-        (this.webSocket = null), null != t && ((t.onopen = B), (t.onmessage = B), (t.onerror = B), (t.onclose = B), null == e || e(t)), this.gatewayBackoff.cancel(), this.compressionHandler.close(), (this.compressionHandler = (0, C.I)(U));
+        (this.webSocket = null), null != t && ((t.onopen = G), (t.onmessage = G), (t.onerror = G), (t.onclose = G), null == e || e(t)), this.gatewayBackoff.cancel(), this.compressionHandler.close(), (this.compressionHandler = (0, C.I)(U));
     }
     _doResume() {
         var e;

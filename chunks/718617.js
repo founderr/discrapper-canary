@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    a = n(100621),
-    r = n(442837),
+    r = n(100621),
+    a = n(442837),
     s = n(186325),
     o = n(481060),
     c = n(110924),
@@ -24,14 +24,14 @@ function _(e, t) {
         if (0 === n) return 'auto';
         let i = 'forwards' === t.current,
             l = n > 0,
-            a = !1;
-        return l && i && 'left' === e && (a = !0), l && !i && 'right' === e && (a = !0), !l && i && 'right' === e && (a = !0), !l && !i && 'left' === e && (a = !0), a ? 'calc('.concat(100 * Math.abs(n), '% + ').concat(Math.round(12 * Math.abs(n)), 'px)') : 'auto';
+            r = !1;
+        return l && i && 'left' === e && (r = !0), l && !i && 'right' === e && (r = !0), !l && i && 'right' === e && (r = !0), !l && !i && 'left' === e && (r = !0), r ? 'calc('.concat(100 * Math.abs(n), '% + ').concat(Math.round(12 * Math.abs(n)), 'px)') : 'auto';
     };
 }
 function v(e) {
     var t, n;
     let { userId: v, guildId: I, onClose: E, analyticsLocation: b, className: Z } = e,
-        N = (0, r.e7)([h.ZP], () => h.ZP.getGuildSidebarState(I), [I]),
+        N = (0, a.e7)([h.ZP], () => h.ZP.getGuildSidebarState(I), [I]),
         S = null !== (t = null == N ? void 0 : N.details.modViewPanel) && void 0 !== t ? t : C.k.INFO,
         T = (0, c.Z)(v);
     let j = null == (n = S) ? null : n === C.k.INFO ? 'backwards' : 'forwards',
@@ -67,7 +67,7 @@ function v(e) {
         },
         T !== v ? 'animate-never' : 'animate-always'
     );
-    return (0, i.jsx)(a.animated.div, {
+    return (0, i.jsx)(r.animated.div, {
         style: {
             position: 'relative',
             height: '100%',
@@ -75,10 +75,10 @@ function v(e) {
             overflow: 'hidden'
         },
         children: L((e, t, n) => {
-            var l, r, s;
+            var l, a, s;
             let { key: o } = n;
             return (0, i.jsx)(
-                a.animated.div,
+                r.animated.div,
                 {
                     style: {
                         position: 'absolute',
@@ -90,7 +90,7 @@ function v(e) {
                         ...(y.enabled
                             ? { opacity: null === (l = e.value) || void 0 === l ? void 0 : l.to((e) => 1 - Math.abs(e)) }
                             : {
-                                  left: null === (r = e.value) || void 0 === r ? void 0 : r.to(_('left', A)),
+                                  left: null === (a = e.value) || void 0 === a ? void 0 : a.to(_('left', A)),
                                   right: null === (s = e.value) || void 0 === s ? void 0 : s.to(_('right', A))
                               })
                     },

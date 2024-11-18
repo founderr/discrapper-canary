@@ -1,8 +1,8 @@
 n.r(t), n(47120), n(653041);
 var o = n(200651),
     r = n(192379),
-    a = n(100621),
-    i = n(481060),
+    i = n(100621),
+    a = n(481060),
     l = n(442837),
     s = n(607070),
     c = n(313201),
@@ -19,18 +19,18 @@ var o = n(200651),
     g = n(308083),
     v = n(388032),
     N = n(615510);
-let I = {
+let j = {
         mass: 1,
         tension: 600,
         friction: 60
     },
-    j = {
+    I = {
         mass: 1,
         tension: 300,
         friction: 25
     },
     y = 2300,
-    T = [
+    E = [
         {
             position: 0,
             alpha: 0
@@ -84,8 +84,8 @@ let I = {
             alpha: 1
         }
     ];
-function E(e) {
-    let { children: t, containerRef: n, faderSize: a, faderEdgeThreshold: l } = e,
+function T(e) {
+    let { children: t, containerRef: n, faderSize: i, faderEdgeThreshold: l } = e,
         s = r.useRef(null),
         [c, u] = r.useState(0),
         [d, m] = r.useState(0),
@@ -110,24 +110,24 @@ function E(e) {
         let e = [];
         if ((e.push('to bottom'), c > 0)) {
             let t = l > 0 ? 1 - Math.min(l, c) / l : 1;
-            for (let n = 0; n < T.length; n++) {
-                let { position: o, alpha: r } = T[n],
-                    i = (o * a).toFixed(2);
-                e.push('hsla(0, 0%, 0%, '.concat(t + r * (1 - t), ') ').concat(i, 'px'));
+            for (let n = 0; n < E.length; n++) {
+                let { position: o, alpha: r } = E[n],
+                    a = (o * i).toFixed(2);
+                e.push('hsla(0, 0%, 0%, '.concat(t + r * (1 - t), ') ').concat(a, 'px'));
             }
         }
         if (d > 0) {
-            let t = f - a,
+            let t = f - i,
                 n = l > 0 ? 1 - Math.min(l, d) / l : 1;
-            for (let o = T.length - 1; o >= 0; o--) {
-                let { position: r, alpha: i } = T[o],
-                    l = (t + (1 - r) * a).toFixed(2);
-                e.push('hsla(0, 0%, 0%, '.concat(n + i * (1 - n), ') ').concat(l, 'px'));
+            for (let o = E.length - 1; o >= 0; o--) {
+                let { position: r, alpha: a } = E[o],
+                    l = (t + (1 - r) * i).toFixed(2);
+                e.push('hsla(0, 0%, 0%, '.concat(n + a * (1 - n), ') ').concat(l, 'px'));
             }
         }
         return { maskImage: 'linear-gradient('.concat(e.join(','), ')') };
-    }, [d, c, l, a, f]);
-    return (0, o.jsx)(i.AdvancedScrollerNone, {
+    }, [d, c, l, i, f]);
+    return (0, o.jsx)(a.AdvancedScrollerNone, {
         ref: s,
         style: x,
         className: N.scroller,
@@ -140,12 +140,12 @@ function F(e) {
     return (0, o.jsxs)('div', {
         className: N.verificationForm,
         children: [
-            (0, o.jsx)(i.Heading, {
+            (0, o.jsx)(a.Heading, {
                 variant: 'heading-xxl/normal',
                 color: 'header-primary',
                 children: v.intl.string(v.t.xsSj6e)
             }),
-            (0, o.jsx)(i.Text, {
+            (0, o.jsx)(a.Text, {
                 variant: 'text-md/normal',
                 color: 'header-secondary',
                 children: v.intl.string(v.t['1VDDMT'])
@@ -161,62 +161,62 @@ function F(e) {
 }
 t.default = function (e) {
     var t, n, h;
-    let { clan: T, prioritizedGameIds: R, position: k, transitionState: B, onClose: S } = e,
+    let { clan: E, prioritizedGameIds: R, position: k, transitionState: B, onClose: S } = e,
         P = (0, c.Dt)(),
-        O = (0, l.e7)([d.Z], () => d.Z.get(T.id)),
+        O = (0, l.e7)([d.Z], () => d.Z.get(E.id)),
         [A, q] = r.useState(null !== (n = null == O ? void 0 : O.formFields) && void 0 !== n ? n : []),
         [M, w] = r.useState(!1),
         [D, H] = r.useState(!1),
         [z, Z] = r.useState(!1),
-        U = (0, l.e7)([b.default], () => b.default.getCurrentUser()),
-        Y = (0, l.e7)([x.ZP], () => x.ZP.isMember(T.id, null == U ? void 0 : U.id), [T, U]),
-        V = (0, l.e7)([p.Z], () => {
+        W = (0, l.e7)([b.default], () => b.default.getCurrentUser()),
+        U = (0, l.e7)([x.ZP], () => x.ZP.isMember(E.id, null == W ? void 0 : W.id), [E, W]),
+        Y = (0, l.e7)([p.Z], () => {
             var e;
-            return (null === (e = p.Z.getRequest(T.id)) || void 0 === e ? void 0 : e.applicationStatus) === m.wB.SUBMITTED;
+            return (null === (e = p.Z.getRequest(E.id)) || void 0 === e ? void 0 : e.applicationStatus) === m.wB.SUBMITTED;
         }),
-        [L, K] = r.useState(''),
-        Q = r.useRef(() =>
+        [V, L] = r.useState(''),
+        K = r.useRef(() =>
             (0, _._v)({
-                guildId: T.id,
+                guildId: E.id,
                 position: k
             })
         );
     r.useEffect(
         () => (
-            u.ZP.fetchVerificationForm(T.id),
+            u.ZP.fetchVerificationForm(E.id),
             () => {
-                Q.current();
+                K.current();
             }
         ),
-        [T.id, Q]
+        [E.id, K]
     ),
         r.useEffect(() => {
             null != O && q(O.formFields);
         }, [O]);
-    let G = r.useCallback(
+    let Q = r.useCallback(
             (e) => {
                 !M &&
                     (w(!0),
-                    (Q.current = () => !1),
+                    (K.current = () => !1),
                     (0, _.r)({
-                        guildId: T.id,
+                        guildId: E.id,
                         position: k
                     })),
                     q(e);
             },
-            [q, M, w, T.id, k]
+            [q, M, w, E.id, k]
         ),
-        X = r.useCallback(
+        G = r.useCallback(
             async (e) => {
-                await u.ZP.submitVerificationForm(T.id, e, u.q0);
+                await u.ZP.submitVerificationForm(E.id, e, u.q0);
             },
-            [T.id]
+            [E.id]
         ),
-        W = r.useCallback(async () => {
+        X = r.useCallback(async () => {
             try {
                 H(!0);
                 let e = Date.now();
-                await X({
+                await G({
                     ...(null != O ? O : d.t),
                     formFields: A
                 });
@@ -226,13 +226,13 @@ t.default = function (e) {
                     n = Date.now();
                 n - e > 1000 ? t() : setTimeout(t, 1000 - (n - e));
             } catch (e) {
-                K(null == e ? void 0 : e.message), H(!1);
+                L(null == e ? void 0 : e.message), H(!1);
             }
-        }, [X, S, O, A]),
+        }, [G, S, O, A]),
         J = A.some((e) => !(0, f.OA)(e)),
         $ = (null !== (h = null == O ? void 0 : null === (t = O.guild) || void 0 === t ? void 0 : t.approximate_member_count) && void 0 !== h ? h : 0) >= g.Du,
         ee = (0, l.e7)([s.Z], () => s.Z.useReducedMotion),
-        et = (0, i.useSpring)(
+        et = (0, a.useSpring)(
             {
                 from: {
                     opacity: 0,
@@ -242,12 +242,12 @@ t.default = function (e) {
                     opacity: 1,
                     transform: 'translateY(0px)'
                 },
-                config: I,
+                config: j,
                 delay: 500
             },
             'animate-always'
         ),
-        en = (0, i.useTransition)(z, {
+        en = (0, a.useTransition)(z, {
             from: {
                 opacity: 0,
                 scale: 0
@@ -260,31 +260,31 @@ t.default = function (e) {
                 opacity: 0,
                 scale: 0
             },
-            config: j
+            config: I
         }),
         eo = r.useRef(null);
-    return (0, o.jsxs)(i.ModalRoot, {
+    return (0, o.jsxs)(a.ModalRoot, {
         transitionState: B,
         'aria-labelledby': P,
-        size: i.ModalSize.DYNAMIC,
+        size: a.ModalSize.DYNAMIC,
         className: N.container,
         hideShadow: !0,
         children: [
-            (0, o.jsxs)(a.animated.div, {
+            (0, o.jsxs)(i.animated.div, {
                 className: N.body,
                 style: et,
                 children: [
                     (0, o.jsx)('div', {
                         className: N.applicationContainer,
                         ref: eo,
-                        children: (0, o.jsx)(E, {
+                        children: (0, o.jsx)(T, {
                             containerRef: eo,
                             faderSize: 180,
                             faderEdgeThreshold: 48,
                             children: (0, o.jsx)(F, {
-                                guildId: T.id,
+                                guildId: E.id,
                                 formState: A,
-                                updateFormState: G
+                                updateFormState: Q
                             })
                         })
                     }),
@@ -293,27 +293,27 @@ t.default = function (e) {
                         className: N.clanContainer,
                         children: [
                             (0, o.jsx)(C.xV, {
-                                clan: T,
+                                clan: E,
                                 className: N.profileCard,
                                 prioritizedGameIds: R,
                                 expanded: !0,
-                                isMember: Y,
-                                hasPendingJoinRequest: V,
+                                isMember: U,
+                                hasPendingJoinRequest: Y,
                                 atMaxMemberCapacity: $
                             }),
                             (0, o.jsxs)('div', {
                                 className: N.applyButtonContainer,
                                 children: [
-                                    (0, o.jsxs)(i.Button, {
+                                    (0, o.jsxs)(a.Button, {
                                         type: 'submit',
-                                        onClick: z ? void 0 : W,
+                                        onClick: z ? void 0 : X,
                                         submitting: D,
                                         fullWidth: !0,
                                         disabled: J || null == O,
                                         innerClassName: N.applyButtonInner,
                                         children: [
                                             $ &&
-                                                (0, o.jsx)(i.WarningIcon, {
+                                                (0, o.jsx)(a.WarningIcon, {
                                                     size: 'custom',
                                                     color: 'white',
                                                     width: 20,
@@ -323,10 +323,10 @@ t.default = function (e) {
                                             en(
                                                 (e, t) =>
                                                     t &&
-                                                    (0, o.jsx)(a.animated.div, {
+                                                    (0, o.jsx)(i.animated.div, {
                                                         style: e,
                                                         className: N.successCheckmark,
-                                                        children: (0, o.jsx)(i.CheckmarkLargeBoldIcon, {
+                                                        children: (0, o.jsx)(a.CheckmarkLargeBoldIcon, {
                                                             size: 'sm',
                                                             color: 'currentColor',
                                                             'aria-hidden': !0
@@ -335,18 +335,18 @@ t.default = function (e) {
                                             )
                                         ]
                                     }),
-                                    '' !== L &&
-                                        (0, o.jsx)(i.Text, {
+                                    '' !== V &&
+                                        (0, o.jsx)(a.Text, {
                                             variant: 'text-sm/normal',
                                             color: 'text-danger',
-                                            children: L
+                                            children: V
                                         })
                                 ]
                             }),
                             $ &&
                                 (0, o.jsxs)(o.Fragment, {
                                     children: [
-                                        (0, o.jsx)(i.Text, {
+                                        (0, o.jsx)(a.Text, {
                                             variant: 'text-xs/medium',
                                             color: 'text-warning',
                                             className: N.maxCapacityText,
@@ -355,13 +355,13 @@ t.default = function (e) {
                                         (0, o.jsx)('hr', { className: N.separator })
                                     ]
                                 }),
-                            (0, o.jsx)(i.Text, {
+                            (0, o.jsx)(a.Text, {
                                 variant: 'text-xs/medium',
                                 color: 'text-muted',
                                 className: N.noticeText,
                                 children: v.intl.string(v.t.FwXzw8)
                             }),
-                            (0, o.jsx)(i.Text, {
+                            (0, o.jsx)(a.Text, {
                                 variant: 'text-xs/medium',
                                 color: 'text-muted',
                                 className: N.noticeText,
@@ -373,10 +373,10 @@ t.default = function (e) {
             }),
             (0, o.jsx)('div', {
                 className: N.closeButtonContainer,
-                children: (0, o.jsx)(i.Button, {
+                children: (0, o.jsx)(a.Button, {
                     onClick: S,
-                    look: i.ButtonLooks.OUTLINED,
-                    color: i.ButtonColors.PRIMARY,
+                    look: a.ButtonLooks.OUTLINED,
+                    color: a.ButtonColors.PRIMARY,
                     children: v.intl.string(v.t.cpT0Cg)
                 })
             })

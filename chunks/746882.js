@@ -90,7 +90,7 @@ function v(e) {
             },
             [v]
         ),
-        V = i.useCallback(() => {
+        W = i.useCallback(() => {
             var e;
             null === (e = Z.current) || void 0 === e || e.focus();
         }, [Z]);
@@ -145,7 +145,7 @@ function v(e) {
                                       wrapperClassName: G.birthday,
                                       name: 'date_of_birth',
                                       onChange: z,
-                                      onPopulated: V,
+                                      onPopulated: W,
                                       error: C,
                                       value: u,
                                       ref: O,

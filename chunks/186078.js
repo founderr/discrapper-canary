@@ -11,28 +11,28 @@ n.d(t, {
 });
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     l = n(481060),
     s = n(489813),
     c = n(707592),
     u = n(633656);
 function d(e) {
-    let { disabled: t, field: n, value: a, radioItemClassName: s, radioItemIconClassName: c, onChange: d } = e,
+    let { disabled: t, field: n, value: o, radioItemClassName: s, radioItemIconClassName: c, onChange: d } = e,
         { choices: _ } = n,
         m = i.useMemo(
             () =>
                 _.map((e, t) => ({
                     name: e,
                     value: t,
-                    radioItemIconClassName: o()(u.multipleChoiceIcon, c)
+                    radioItemIconClassName: a()(u.multipleChoiceIcon, c)
                 })),
             [_, c]
         );
     return (0, r.jsx)(l.RadioGroup, {
         disabled: t,
         options: m,
-        value: a,
+        value: o,
         onChange: d,
         radioItemClassName: s,
         withTransparentBackground: !0

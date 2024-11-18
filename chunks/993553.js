@@ -52,9 +52,9 @@ function u(e) {
     s.useEffect(() => {
         requestAnimationFrame(C);
     }, [C, t, n]);
-    let _ = 'auto';
+    let E = 'auto';
     return (
-        null != g && (_ = m ? ''.concat(g.expandedHeight, 'px') : ''.concat(g.truncatedHeight, 'px')),
+        null != g && (E = m ? ''.concat(g.expandedHeight, 'px') : ''.concat(g.truncatedHeight, 'px')),
         (0, i.jsxs)('div', {
             children: [
                 (0, i.jsx)(o.Text, {
@@ -62,7 +62,7 @@ function u(e) {
                     className: d.content,
                     lineClamp: m ? void 0 : n,
                     ref: T,
-                    style: { height: _ },
+                    style: { height: E },
                     children: t
                 }),
                 x

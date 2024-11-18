@@ -10,8 +10,8 @@ n.d(t, {
     n(411104);
 var l = n(200651),
     i = n(192379),
-    s = n(481060),
-    r = n(447097),
+    r = n(481060),
+    s = n(447097),
     o = n(873124),
     a = n(248902),
     d = n(160511),
@@ -38,41 +38,41 @@ function f(e) {
             setSlide: v,
             onClose: m
         };
-    return (0, l.jsxs)(s.Slides, {
+    return (0, l.jsxs)(r.Slides, {
         activeSlide: x,
         width: S,
         onSlideReady: j,
         children: [
-            (0, l.jsx)(s.Slide, {
+            (0, l.jsx)(r.Slide, {
                 id: 'select',
                 children: (0, l.jsx)(a.Z, { ...b })
             }),
-            (0, l.jsx)(s.Slide, {
+            (0, l.jsx)(r.Slide, {
                 id: 'webauthn',
                 children: (0, l.jsx)(c.Z, { ...b })
             }),
-            (0, l.jsx)(s.Slide, {
+            (0, l.jsx)(r.Slide, {
                 id: 'totp',
                 children: (0, l.jsx)(u.Z, {
                     ...b,
                     isSlideReady: 'totp' === p
                 })
             }),
-            (0, l.jsx)(s.Slide, {
+            (0, l.jsx)(r.Slide, {
                 id: 'sms',
                 children: (0, l.jsx)(d.Z, {
                     ...b,
                     isSlideReady: 'sms' === p
                 })
             }),
-            (0, l.jsx)(s.Slide, {
+            (0, l.jsx)(r.Slide, {
                 id: 'backup',
-                children: (0, l.jsx)(r.Z, {
+                children: (0, l.jsx)(s.Z, {
                     ...b,
                     isSlideReady: 'backup' === p
                 })
             }),
-            (0, l.jsx)(s.Slide, {
+            (0, l.jsx)(r.Slide, {
                 id: 'password',
                 children: (0, l.jsx)(o.Z, {
                     ...b,
@@ -83,21 +83,21 @@ function f(e) {
     });
 }
 function m(e) {
-    let { mfaChallenge: t, finish: n, transitionState: i, onClose: r } = e;
-    return (0, l.jsx)(s.ModalRoot, {
+    let { mfaChallenge: t, finish: n, transitionState: i, onClose: s } = e;
+    return (0, l.jsx)(r.ModalRoot, {
         transitionState: i,
-        size: s.ModalSize.SMALL,
+        size: r.ModalSize.SMALL,
         'aria-label': h.intl.string(h.t.saHocH),
         children: (0, l.jsx)(f, {
             mfaChallenge: t,
             mfaFinish: n,
-            onClose: r,
-            onEarlyClose: r
+            onClose: s,
+            onEarlyClose: s
         })
     });
 }
 function g(e, t, n) {
-    (0, s.openModal)(
+    (0, r.openModal)(
         (n) =>
             (0, l.jsx)(m, {
                 finish: t,

@@ -6,20 +6,20 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(481060),
-    a = n(670044),
-    r = n(388032),
+    r = n(670044),
+    a = n(388032),
     s = n(54086);
 function o(e) {
     let { channel: t } = e;
     return (0, i.jsxs)('div', {
         className: s.notice,
         children: [
-            (0, i.jsx)(a.Z, { id: t.id }),
+            (0, i.jsx)(r.Z, { id: t.id }),
             (0, i.jsx)('div', {
                 className: s.info,
                 children: (0, i.jsx)(l.Text, {
                     variant: 'text-sm/medium',
-                    children: r.intl.format(r.t.P6Y2Nz, {})
+                    children: a.intl.format(a.t.P6Y2Nz, {})
                 })
             }),
             (0, i.jsx)('div', {
@@ -42,7 +42,7 @@ function o(e) {
                         });
                     },
                     children: [
-                        r.intl.string(r.t.h850Sk),
+                        a.intl.string(a.t.h850Sk),
                         (0, i.jsx)(l.LinkExternalSmallIcon, {
                             size: 'xs',
                             color: 'currentColor',

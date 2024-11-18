@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    a = n(597312),
-    r = n(481060),
+    r = n(597312),
+    a = n(481060),
     s = n(410030),
     o = n(100527),
     c = n(906732),
@@ -41,7 +41,7 @@ function v(e) {
                 displayProfile: I,
                 profileType: g.y0.PANEL,
                 themeOverride: E,
-                children: (0, i.jsx)(a.u2, {
+                children: (0, i.jsx)(r.u2, {
                     children: (0, i.jsxs)('div', {
                         className: x.container,
                         children: [
@@ -58,16 +58,16 @@ function v(e) {
                                         user: t,
                                         guildId: null
                                     }),
-                                    (0, i.jsx)(r.Heading, {
+                                    (0, i.jsx)(a.Heading, {
                                         variant: 'heading-lg/bold',
                                         className: x.header,
                                         children: C.intl.string(C.t.VNJ7UF)
                                     }),
-                                    (0, i.jsx)(r.Text, {
+                                    (0, i.jsx)(a.Text, {
                                         variant: 'text-sm/medium',
                                         children: C.intl.format(C.t.LXbngo, { username: t.username })
                                     }),
-                                    (0, i.jsx)(r.Text, {
+                                    (0, i.jsx)(a.Text, {
                                         variant: 'text-sm/medium',
                                         children: C.intl.string(C.t['20WzZ2'])
                                     }),

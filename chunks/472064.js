@@ -34,7 +34,7 @@ function L(t, e, n) {
         t
     );
 }
-class C extends i.Component {
+class E extends i.Component {
     fetchInstallSize() {
         let { applicationId: t, branchId: e, buildId: n, manifestIds: l, buildSizeKB: i } = this.props;
         null != n &&
@@ -191,4 +191,4 @@ e.default = s.ZP.connectStores([I.Z, T.Z, g.Z, p.Z], (t) => {
         buildSizeKB: null != l ? I.Z.getBuildSize(l) : null,
         hasPreviouslyAcceptedStoreTerms: g.Z.hasAcceptedStoreTerms
     };
-})(C);
+})(E);

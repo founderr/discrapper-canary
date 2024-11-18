@@ -64,7 +64,7 @@ function D(e) {
     });
 }
 function U(e) {
-    var t, n, r, o, U, F, H, W;
+    var t, n, r, o, U, F, W, H;
     let { guild: G, channel: z, applicationIntegrations: V, builtInIntegrations: K, customWebhooks: q, followedChannelWebhooks: Y, isLoading: J, canCreateWebhook: X, onManageBuiltIn: Q, onManageCustomWebhooks: $, onManageFollowedChannels: ee, onManageApplication: et, onManageChannelsSyncing: en } = e,
         ei = (0, h.ZP)(),
         [el, er] = l.useState(''),
@@ -300,17 +300,17 @@ function U(e) {
     }
     if (null == z && em.length > 0) {
         ek.push(
-            ((H = em.length),
-            (W = en),
+            ((W = em.length),
+            (H = en),
             (0, i.jsx)(
                 A.Z,
                 {
                     name: L.intl.string(L.t.tqtDXF),
                     icon: u.RefreshIcon,
                     trailing: (0, i.jsx)(u.ChevronLargeRightIcon, { size: 'xs' }),
-                    onButtonClick: W,
+                    onButtonClick: H,
                     hasNextSection: !0,
-                    details: [{ text: L.intl.formatToPlainString(L.t['puxS4+'], { count: H }) }]
+                    details: [{ text: L.intl.formatToPlainString(L.t['puxS4+'], { count: W }) }]
                 },
                 'channels-syncing'
             ))

@@ -13,7 +13,7 @@ var t = i(200651),
     r = i(906732),
     c = i(807582),
     d = i(813197),
-    f = i(81245),
+    f = i(222062),
     u = i(530329),
     p = i(430824),
     x = i(914010),
@@ -160,7 +160,7 @@ function E(e) {
             });
     }, [H, L, V]);
     let X = T === N.pC.AVATAR || T === N.pC.BANNER,
-        Y = (0, f.Mu)('SelectImageModal', !X);
+        Y = (0, f.M)(!X);
     return (0, t.jsxs)(l.ModalRoot, {
         transitionState: n,
         size: l.ModalSize.SMALL,

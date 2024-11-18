@@ -1,14 +1,14 @@
-t.r(a), t(47120);
-var o = t(200651),
-    r = t(192379),
-    n = t(481060),
-    s = t(277021),
-    i = t(3327);
-a.default = function (e) {
-    let { onClose: a, transitionState: t } = e,
-        [c, d] = r.useState(''),
-        [l, u] = r.useState(''),
-        f = async () => {
+a.r(t), a(47120);
+var r = a(200651),
+    o = a(192379),
+    n = a(481060),
+    s = a(277021),
+    i = a(3327);
+t.default = function (e) {
+    let { onClose: t, transitionState: a } = e,
+        [c, d] = o.useState(''),
+        [l, u] = o.useState(''),
+        h = async () => {
             u('');
             try {
                 let e = await (0, s.Q)();
@@ -17,39 +17,39 @@ a.default = function (e) {
                 d(''), u(e.message);
             }
         };
-    return (0, o.jsxs)(n.ModalRoot, {
-        transitionState: t,
+    return (0, r.jsxs)(n.ModalRoot, {
+        transitionState: a,
         className: i.root,
         children: [
-            (0, o.jsxs)(n.ModalHeader, {
+            (0, r.jsxs)(n.ModalHeader, {
                 className: i.header,
                 children: [
-                    (0, o.jsx)(n.Heading, {
+                    (0, r.jsx)(n.Heading, {
                         variant: 'heading-lg/semibold',
                         children: 'Age Verification Test Tool'
                     }),
-                    (0, o.jsx)(n.ModalCloseButton, { onClick: a })
+                    (0, r.jsx)(n.ModalCloseButton, { onClick: t })
                 ]
             }),
-            (0, o.jsx)(n.ModalContent, {
+            (0, r.jsx)(n.ModalContent, {
                 className: i.content,
                 children:
                     '' !== c &&
-                    (0, o.jsx)('iframe', {
+                    (0, r.jsx)('iframe', {
                         id: 'frame',
                         src: c,
                         className: i.iframe,
                         allow: 'camera; microphone'
                     })
             }),
-            (0, o.jsxs)(n.ModalFooter, {
+            (0, r.jsxs)(n.ModalFooter, {
                 className: i.footer,
                 children: [
-                    (0, o.jsx)(n.Button, {
-                        onClick: f,
+                    (0, r.jsx)(n.Button, {
+                        onClick: h,
                         children: 'Trigger Age Verification Test'
                     }),
-                    '' !== l && (0, o.jsx)(n.InputError, { error: l })
+                    '' !== l && (0, r.jsx)(n.InputError, { error: l })
                 ]
             })
         ]

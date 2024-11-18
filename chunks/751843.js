@@ -1,15 +1,15 @@
 var i,
     l,
-    a = n(200651);
+    r = n(200651);
 n(192379);
-var r = n(120356),
-    s = n.n(r),
+var a = n(120356),
+    s = n.n(a),
     o = n(481060),
     c = n(871499),
     d = n(32947);
 function u(e) {
     let { direction: t, className: n, themeable: i, ...l } = e;
-    return (0, a.jsx)(c.Z, {
+    return (0, r.jsx)(c.Z, {
         className: s()(n, d.arrow, { [d.up]: 0 === t }),
         iconComponent: o.ChevronSmallDownIcon,
         themeable: i,

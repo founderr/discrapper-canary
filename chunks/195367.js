@@ -19,24 +19,24 @@ var l = t(200651),
     g = t(405613),
     v = t(440371),
     f = t(765305),
-    N = t(486324),
-    j = t(388032),
+    j = t(486324),
+    N = t(388032),
     I = t(371922);
 function p(e) {
     let { editBroadcastInfoData: n } = e,
         { broadcastInfo: t, broadcastToDirectoryChannels: i, setBroadcastToDirectoryChannels: r, canEveryoneRoleViewEvent: a } = n;
     return t.can_broadcast
         ? (0, l.jsxs)(s.FormItem, {
-              title: j.intl.string(j.t.BgAW29),
+              title: N.intl.string(N.t.BgAW29),
               className: I.formItem,
               children: [
                   (0, l.jsx)(s.Tooltip, {
                       text: (0, l.jsx)(s.Text, {
                           className: I.broadcastInfoTooltip,
                           variant: 'text-sm/normal',
-                          children: j.intl.string(j.t.gTgUmZ)
+                          children: N.intl.string(N.t.gTgUmZ)
                       }),
-                      'aria-label': j.intl.string(j.t.gTgUmZ),
+                      'aria-label': N.intl.string(N.t.gTgUmZ),
                       shouldShow: !a,
                       children: (e) =>
                           (0, l.jsx)('div', {
@@ -49,7 +49,7 @@ function p(e) {
                                   children: (0, l.jsx)(s.Text, {
                                       variant: 'text-md/normal',
                                       color: 'interactive-active',
-                                      children: j.intl.string(j.t['8GW68/'])
+                                      children: N.intl.string(N.t['8GW68/'])
                                   })
                               })
                           })
@@ -58,7 +58,7 @@ function p(e) {
                       className: I.broadcastInfoDescription,
                       variant: 'text-xs/normal',
                       color: 'header-secondary',
-                      children: j.intl.string(j.t.V8Oq8P)
+                      children: N.intl.string(N.t.V8Oq8P)
                   })
               ]
           })
@@ -96,7 +96,7 @@ function C(e) {
                         imgURI: e,
                         file: n,
                         onCrop: w,
-                        uploadType: N.pC.SCHEDULED_EVENT_IMAGE,
+                        uploadType: j.pC.SCHEDULED_EVENT_IMAGE,
                         allowSkip: !0,
                         ...t
                     });
@@ -112,7 +112,7 @@ function C(e) {
                 className: I.form,
                 children: [
                     (0, l.jsxs)(s.FormItem, {
-                        title: j.intl.string(j.t['0HbEQ0']),
+                        title: N.intl.string(N.t['0HbEQ0']),
                         className: I.topicFormItem,
                         required: !0,
                         children: [
@@ -121,7 +121,7 @@ function C(e) {
                                 onChange: (e) => {
                                     y({ name: e });
                                 },
-                                placeholder: j.intl.string(j.t['6/yarq']),
+                                placeholder: N.intl.string(N.t['6/yarq']),
                                 maxLength: f.p,
                                 value: k,
                                 autoComplete: 'off',
@@ -167,11 +167,11 @@ function C(e) {
                           })
                         : null,
                     (0, l.jsx)(s.FormItem, {
-                        title: j.intl.string(j.t['+gRCCw']),
+                        title: N.intl.string(N.t['+gRCCw']),
                         className: I.formItem,
                         children: (0, l.jsx)(s.TextArea, {
                             className: I.__invalid_descriptionInput,
-                            placeholder: j.intl.string(j.t['kWO/Ex']),
+                            placeholder: N.intl.string(N.t['kWO/Ex']),
                             value: R,
                             onChange: (e) => {
                                 y({ description: e });
@@ -181,14 +181,14 @@ function C(e) {
                         })
                     }),
                     (0, l.jsxs)(s.FormItem, {
-                        title: j.intl.string(j.t.Ly121d),
+                        title: N.intl.string(N.t.Ly121d),
                         className: I.formItem,
                         children: [
                             (0, l.jsx)(s.Text, {
                                 variant: 'text-xs/normal',
                                 color: 'header-secondary',
                                 className: I.addImageHint,
-                                children: j.intl.string(j.t.B9C9bW)
+                                children: N.intl.string(N.t.B9C9bW)
                             }),
                             null != A
                                 ? (0, l.jsxs)(l.Fragment, {
@@ -205,20 +205,20 @@ function C(e) {
                                                   }
                                               },
                                               onChange: F,
-                                              hint: j.intl.string(j.t.G44Xmp),
+                                              hint: N.intl.string(N.t.G44Xmp),
                                               showRemoveButton: !1,
                                               enabled: !0
                                           }),
                                           (0, l.jsx)(s.Button, {
                                               size: s.Button.Sizes.SMALL,
                                               onClick: () => w(null),
-                                              children: j.intl.string(j.t.gmUvOz)
+                                              children: N.intl.string(N.t.gmUvOz)
                                           })
                                       ]
                                   })
                                 : (0, l.jsxs)(s.Button, {
                                       size: s.Button.Sizes.SMALL,
-                                      children: [j.intl.string(j.t.vKCGYW), (0, l.jsx)(d.ZP, { onChange: F })]
+                                      children: [N.intl.string(N.t.vKCGYW), (0, l.jsx)(d.ZP, { onChange: F })]
                                   })
                         ]
                     }),

@@ -1,15 +1,15 @@
 n.d(t, {
     Z: function () {
-        return r;
+        return a;
     }
 });
 var o = n(200651);
 n(192379);
 var s = n(481060),
     l = n(259076),
-    a = n(388032),
+    r = n(388032),
     i = n(374808);
-function r(e) {
+function a(e) {
     let { onNext: t, onClose: n } = e;
     return (0, o.jsxs)('form', {
         onSubmit: t,
@@ -20,7 +20,7 @@ function r(e) {
                 children: [
                     (0, o.jsx)(s.Heading, {
                         variant: 'heading-xl/extrabold',
-                        children: a.intl.string(a.t.hhR7gY)
+                        children: r.intl.string(r.t.hhR7gY)
                     }),
                     (0, o.jsx)(s.ModalCloseButton, {
                         onClick: n,
@@ -34,12 +34,12 @@ function r(e) {
                     (0, o.jsx)(s.Text, {
                         className: i.description,
                         variant: 'text-md/normal',
-                        children: a.intl.format(a.t.rqWXUV, { hcArticle: l.j1 })
+                        children: r.intl.format(r.t.rqWXUV, { hcArticle: l.j1 })
                     }),
                     (0, o.jsx)(s.Text, {
                         className: i.description,
                         variant: 'text-md/normal',
-                        children: a.intl.string(a.t['3LW10N'])
+                        children: r.intl.string(r.t['3LW10N'])
                     })
                 ]
             }),
@@ -49,13 +49,13 @@ function r(e) {
                     (0, o.jsx)(s.Button, {
                         color: s.Button.Colors.BRAND,
                         onClick: n,
-                        children: a.intl.string(a.t['ETE/oK'])
+                        children: r.intl.string(r.t['ETE/oK'])
                     }),
                     (0, o.jsx)(s.Button, {
                         color: s.Button.Colors.PRIMARY,
                         look: s.Button.Looks.LINK,
                         onClick: t,
-                        children: a.intl.string(a.t.rwTBFh)
+                        children: r.intl.string(r.t.rwTBFh)
                     })
                 ]
             })

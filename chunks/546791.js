@@ -1,4 +1,4 @@
-e.d(n, {
+n.d(e, {
     LI: function () {
         return c;
     },
@@ -21,11 +21,11 @@ e.d(n, {
         return _;
     }
 }),
-    e(47120);
-var i = e(913527),
-    r = e.n(i),
-    l = e(292352),
-    o = e(388032);
+    n(47120);
+var i = n(913527),
+    r = n.n(i),
+    l = n(292352),
+    o = n(388032);
 let E = 3600,
     a = 86400,
     u = 172800,
@@ -47,20 +47,20 @@ let E = 3600,
                   yesterday: o.intl.string(o.t.s3qSVl),
                   days: o.t.f1UJiI
               },
-    c = (t, n, e) => {
+    c = (t, e, n) => {
         let i = r()().diff(r()(t), 's'),
-            l = n(),
+            l = e(),
             E = r()(t).format('LL');
-        return (E = i < a ? l.today : i < u ? l.yesterday : o.intl.formatToPlainString(l.days, { days: Math.min(Math.floor(i / a), null != e ? e : 999) }));
+        return (E = i < a ? l.today : i < u ? l.yesterday : o.intl.formatToPlainString(l.days, { days: Math.min(Math.floor(i / a), null != n ? n : 999) }));
     },
-    T = (t, n) => {
-        let e = r()().diff(r()(t), 's'),
-            i = n(),
+    T = (t, e) => {
+        let n = r()().diff(r()(t), 's'),
+            i = e(),
             l = r()(t).format('LL');
-        return (l = e < 60 ? i.seconds : e < E ? o.intl.formatToPlainString(i.minutes, { count: Math.floor(e / 60) }) : e < a ? o.intl.formatToPlainString(i.hours, { count: Math.floor(e / E) }) : e < u ? i.yesterday : e < s ? o.intl.formatToPlainString(i.days, { count: Math.floor(e / a) }) : o.intl.formatToPlainString(i.date, { date: l }));
+        return (l = n < 60 ? i.seconds : n < E ? o.intl.formatToPlainString(i.minutes, { count: Math.floor(n / 60) }) : n < a ? o.intl.formatToPlainString(i.hours, { count: Math.floor(n / E) }) : n < u ? i.yesterday : n < s ? o.intl.formatToPlainString(i.days, { count: Math.floor(n / a) }) : o.intl.formatToPlainString(i.date, { date: l }));
     },
     S = (t) => t.display_type === l.MY.USER_ADD || t.display_type === l.MY.USER_INTERACTION || t.display_type === l.MY.USER_CALLED,
     I = (t) => t.display_type === l.MY.GUILD_ADD || t.display_type === l.MY.GUILD_INTERACTION,
     C = (t) => {
-        for (let n of Object.values(l.MY)) if (n.toString() === t) return n;
+        for (let e of Object.values(l.MY)) if (e.toString() === t) return e;
     };

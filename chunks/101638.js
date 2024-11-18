@@ -5,28 +5,28 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    a = n(259443),
-    r = n(81897),
+    r = n(259443),
+    a = n(81897),
     s = n(911284),
     o = n(369566),
     c = n(502762),
     d = n(527790),
     u = n(638785),
     h = n(388032);
-let p = new a.Yd('UserProfilePanelRecentActivity');
+let p = new r.Yd('UserProfilePanelRecentActivity');
 function m(e) {
     let { user: t } = e,
         { recent: n } = (0, o.Z)(t.id),
-        a = (0, r.Z)();
+        r = (0, a.Z)();
     return (l.useEffect(() => {
         (async () => {
             try {
-                await (0, s.Z)(t.id, a);
+                await (0, s.Z)(t.id, r);
             } catch (e) {
                 p.log('Failed to fetch content inventory outbox for '.concat(t.id, ':'), e);
             }
         })();
-    }, [t.id, a]),
+    }, [t.id, r]),
     0 === n.length)
         ? null
         : (0, i.jsx)(c.Z.Overlay, {

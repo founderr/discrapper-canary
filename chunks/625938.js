@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    a = n(120356),
-    r = n.n(a),
+    r = n(120356),
+    a = n.n(r),
     s = n(392711),
     o = n.n(s),
     c = n(442837),
@@ -27,20 +27,20 @@ var i = n(200651),
     b = n(388032),
     Z = n(987870);
 let N = (e) => {
-        let { style: t, className: n, name: l, icon: a } = e;
+        let { style: t, className: n, name: l, icon: r } = e;
         return (0, i.jsx)(u.Tooltip, {
             text: l,
             children: (e) =>
                 (0, i.jsx)('div', {
-                    className: r()(n, Z.iconWidget),
+                    className: a()(n, Z.iconWidget),
                     style: t,
                     ...e,
-                    children: null != a && a
+                    children: null != r && r
                 })
         });
     },
     S = (e) => {
-        let { currentStatus: t, channel: a } = e,
+        let { currentStatus: t, channel: r } = e,
             s = l.useRef(C.Z.getRecentCustomStatuses()),
             S = l.useRef((0, p.un)(d.z.HANG_STATUS_NEW_BADGE)).current,
             T = (0, x.V)(),
@@ -154,7 +154,7 @@ let N = (e) => {
                                             onMouseEnter: () => O(n),
                                             onClick: (e) => M(e, n),
                                             children: (0, i.jsx)(N, {
-                                                className: r()(Z.iconWidget, { [Z.selectedWidget]: n === (null == t ? void 0 : t.state) }),
+                                                className: a()(Z.iconWidget, { [Z.selectedWidget]: n === (null == t ? void 0 : t.state) }),
                                                 name: l.title,
                                                 icon: (0, i.jsx)('img', {
                                                     src: l.icon,
@@ -190,7 +190,7 @@ let N = (e) => {
                             children: [
                                 s.current.map((e, n) => {
                                     let l = e.status === (null == t ? void 0 : t.details) && o().isEqual(e.emoji, null == t ? void 0 : t.emoji),
-                                        s = null != e.emoji && !(0, _.K)(e.emoji, a);
+                                        s = null != e.emoji && !(0, _.K)(e.emoji, r);
                                     return (0, i.jsxs)(
                                         u.Clickable,
                                         {
@@ -200,7 +200,7 @@ let N = (e) => {
                                             className: Z.statusOptionContainer,
                                             children: [
                                                 (0, i.jsx)(N, {
-                                                    className: r()(Z.iconWidget, { [Z.selectedWidget]: l }),
+                                                    className: a()(Z.iconWidget, { [Z.selectedWidget]: l }),
                                                     name: e.status,
                                                     icon:
                                                         null != e.emoji

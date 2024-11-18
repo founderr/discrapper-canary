@@ -40,7 +40,7 @@ function v(e) {
               transitionState: g,
               onHeaderTitleClick: null != j ? j : C,
               onClose: C,
-              footer: (0, l.jsx)(f.Y, {
+              footer: (0, l.jsx)(f.YG, {
                   appId: b,
                   sku: N
               }),

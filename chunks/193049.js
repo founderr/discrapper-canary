@@ -38,8 +38,8 @@ function L(e) {
         [P, j] = s.useState(b ? A.A.SUGGESTIONS : A.A.INFO),
         [U, k] = s.useState(!1),
         [Z, G] = s.useState(null),
-        [D, w] = s.useState(b ? p.Wq.SUGGESTION : p.Wq.NONE),
-        [W, q] = s.useState(!1),
+        [W, D] = s.useState(b ? p.Wq.SUGGESTION : p.Wq.NONE),
+        [w, q] = s.useState(!1),
         [B, F] = s.useState(!1),
         H = s.useRef(null),
         z = (0, o.e7)([N.Z], () => N.Z.isCurrentUsernameInvalid()),
@@ -50,22 +50,22 @@ function L(e) {
         X = (0, x.CC)(),
         { usernameSuggestion: K, usernameSuggestionLoading: Y } = (0, _.G)(b ? p.en : void 0);
     s.useEffect(() => {
-        D === p.Wq.EDIT_USERNAME && F(!0),
+        W === p.Wq.EDIT_USERNAME && F(!0),
             h.default.track(y.rMx.POMELO_EDIT_STEP_VIEWED, {
                 source: n,
-                step: D
+                step: W
             });
-    }, [D, n]),
+    }, [W, n]),
         s.useEffect(() => {
             !B &&
-                !W &&
+                !w &&
                 null != K &&
                 K.length > 0 &&
                 J((e) => ({
                     ...e,
                     username: K
                 }));
-        }, [K, B, W]);
+        }, [K, B, w]);
     let [Q, J] = s.useState({
             username: (0, T.e$)(V),
             globalName: f.ZP.getName(V)
@@ -89,7 +89,7 @@ function L(e) {
                     slideId: A.A.EDIT_SCREEN,
                     next: A.A.FINISH_LATER,
                     back: A.A.INFO,
-                    footerButtons: [D === p.Wq.PREVIEW ? 'GOT_IT' : 'BACK', D === p.Wq.PREVIEW ? 'GOT_IT' : D === p.Wq.EDIT_USERNAME ? 'SUBMIT' : 'NEXT']
+                    footerButtons: [W === p.Wq.PREVIEW ? 'GOT_IT' : 'BACK', W === p.Wq.PREVIEW ? 'GOT_IT' : W === p.Wq.EDIT_USERNAME ? 'SUBMIT' : 'NEXT']
                 },
                 {
                     slideId: A.A.FINISH_LATER,
@@ -97,11 +97,11 @@ function L(e) {
                 },
                 {
                     slideId: A.A.SUGGESTIONS,
-                    footerButtons: [D === p.Wq.PREVIEW ? 'GOT_IT' : 'UPDATE']
+                    footerButtons: [W === p.Wq.PREVIEW ? 'GOT_IT' : 'UPDATE']
                 },
                 { slideId: A.A.FINISH_LATER }
             ],
-            [D]
+            [W]
         ),
         et = ee.length,
         en = s.useCallback(async () => {
@@ -119,11 +119,11 @@ function L(e) {
                 return;
             }
             if (f.ZP.getGlobalName(V) === Q.globalName) {
-                w(p.Wq.EDIT_USERNAME);
+                D(p.Wq.EDIT_USERNAME);
                 return;
             }
             try {
-                G(null), k(!0), await (0, d.S2)({ global_name: Q.globalName }), w(p.Wq.EDIT_USERNAME);
+                G(null), k(!0), await (0, d.S2)({ global_name: Q.globalName }), D(p.Wq.EDIT_USERNAME);
             } catch (t) {
                 let e = new m.Z(t).getAnyErrorMessage();
                 h.default.track(y.rMx.POMELO_ERRORS, {
@@ -138,7 +138,7 @@ function L(e) {
         }, [V, Q]),
         ei = s.useCallback(async () => {
             try {
-                G(null), k(!0), await S.Z.createPomelo({ username: (0, T.R_)(Q.username) }, b), await (0, c.In)(V.id), w(p.Wq.PREVIEW);
+                G(null), k(!0), await S.Z.createPomelo({ username: (0, T.R_)(Q.username) }, b), await (0, c.In)(V.id), D(p.Wq.PREVIEW);
             } catch (n) {
                 let e = new m.Z(n),
                     t = (null == e ? void 0 : e.status) != null && e.status >= 400 && e.status < 500 ? e.getAnyErrorMessage() : O.intl.string(O.t.R0RpRU);
@@ -155,23 +155,23 @@ function L(e) {
         }, [Q, V.id, b]),
         es = z || (0, T.NX)(V),
         er = s.useCallback(() => {
-            w(es ? p.Wq.EDIT_USERNAME : p.Wq.EDIT_DISPLAY_NAME), j(ee[Math.min(et - 1, P + 1)].slideId);
+            D(es ? p.Wq.EDIT_USERNAME : p.Wq.EDIT_DISPLAY_NAME), j(ee[Math.min(et - 1, P + 1)].slideId);
         }, [P, ee, et, es]),
         ea = s.useCallback(() => {
-            G(null), P === A.A.EDIT_SCREEN ? (D === p.Wq.EDIT_USERNAME ? (es ? (w(p.Wq.NONE), j(ee[Math.max(0, P - 1)].slideId)) : w(p.Wq.EDIT_DISPLAY_NAME)) : D === p.Wq.EDIT_DISPLAY_NAME ? (w(p.Wq.NONE), j(ee[Math.max(0, P - 1)].slideId)) : D === p.Wq.PREVIEW && w(p.Wq.EDIT_USERNAME)) : j(ee[Math.max(0, P - 1)].slideId);
-        }, [ee, P, D, es]),
+            G(null), P === A.A.EDIT_SCREEN ? (W === p.Wq.EDIT_USERNAME ? (es ? (D(p.Wq.NONE), j(ee[Math.max(0, P - 1)].slideId)) : D(p.Wq.EDIT_DISPLAY_NAME)) : W === p.Wq.EDIT_DISPLAY_NAME ? (D(p.Wq.NONE), j(ee[Math.max(0, P - 1)].slideId)) : W === p.Wq.PREVIEW && D(p.Wq.EDIT_USERNAME)) : j(ee[Math.max(0, P - 1)].slideId);
+        }, [ee, P, W, es]),
         el = s.useCallback(() => {
             j(A.A.FINISH_LATER);
         }, []),
         eo = s.useCallback(() => {
-            b ? (j(A.A.SUGGESTIONS), w(p.Wq.SUGGESTION)) : (j(A.A.INFO), w(p.Wq.NONE));
+            b ? (j(A.A.SUGGESTIONS), D(p.Wq.SUGGESTION)) : (j(A.A.INFO), D(p.Wq.NONE));
         }, [b]),
         eu = s.useMemo(() => {
-            if (P === A.A.EDIT_SCREEN && D === p.Wq.EDIT_DISPLAY_NAME) return en;
-            if (P === A.A.EDIT_SCREEN && D === p.Wq.EDIT_USERNAME) return ei;
-            if (P === A.A.SUGGESTIONS && D === p.Wq.SUGGESTION) return ei;
+            if (P === A.A.EDIT_SCREEN && W === p.Wq.EDIT_DISPLAY_NAME) return en;
+            if (P === A.A.EDIT_SCREEN && W === p.Wq.EDIT_USERNAME) return ei;
+            if (P === A.A.SUGGESTIONS && W === p.Wq.SUGGESTION) return ei;
             else return er;
-        }, [P, D, en, ei, er]),
+        }, [P, W, en, ei, er]),
         ec = s.useMemo(() => {
             var e, t;
             return R(
@@ -184,16 +184,16 @@ function L(e) {
                 },
                 U,
                 Y,
-                W
+                w
             );
-        }, [ea, el, eu, L, ee, P, U, Y, W]),
+        }, [ea, el, eu, L, ee, P, U, Y, w]),
         ed = s.useMemo(() => (0, T.zV)(V), [V]);
     s.useLayoutEffect(() => {
         (0, g.Z)(V.id, ed);
     }, [V, ed]),
         s.useEffect(() => {
             var e, t;
-            switch (D) {
+            switch (W) {
                 case p.Wq.EDIT_DISPLAY_NAME:
                     null === (e = H.current) || void 0 === e || e.focusDisplayName();
                     break;
@@ -201,9 +201,9 @@ function L(e) {
                 case p.Wq.SUGGESTION:
                     null === (t = H.current) || void 0 === t || t.focusUsername();
             }
-        }, [D]);
+        }, [W]);
     return (
-        !W && null == Z && (D === p.Wq.EDIT_USERNAME ? (t = O.intl.formatToPlainString(O.t.AJh8BQ, { source: V.username })) : D === p.Wq.SUGGESTION && (Y || null != K) && (t = O.intl.string(O.t['i/2SgI']))),
+        !w && null == Z && (W === p.Wq.EDIT_USERNAME ? (t = O.intl.formatToPlainString(O.t.AJh8BQ, { source: V.username })) : W === p.Wq.SUGGESTION && (Y || null != K) && (t = O.intl.string(O.t['i/2SgI']))),
         (0, i.jsxs)(u.ModalRoot, {
             className: M.modalRoot,
             impression: {
@@ -248,13 +248,13 @@ function L(e) {
                                 children: (0, i.jsx)(I.Z, {
                                     user: V,
                                     error: Z,
-                                    editState: D,
+                                    editState: W,
                                     userRef: H,
                                     formValues: Q,
                                     footerNotice: t,
                                     onChangeFormValue: $,
-                                    onFocusUsername: () => w(p.Wq.EDIT_USERNAME),
-                                    onFocusDisplayName: () => w(p.Wq.EDIT_DISPLAY_NAME),
+                                    onFocusUsername: () => D(p.Wq.EDIT_USERNAME),
+                                    onFocusDisplayName: () => D(p.Wq.EDIT_DISPLAY_NAME),
                                     onClose: L
                                 })
                             }),
@@ -270,13 +270,13 @@ function L(e) {
                                 children: (0, i.jsx)(I.Z, {
                                     user: V,
                                     error: Z,
-                                    editState: D,
+                                    editState: W,
                                     userRef: H,
                                     formValues: Q,
                                     footerNotice: t,
                                     onChangeFormValue: $,
-                                    onFocusUsername: () => w(p.Wq.SUGGESTION),
-                                    onFocusDisplayName: () => w(p.Wq.EDIT_DISPLAY_NAME),
+                                    onFocusUsername: () => D(p.Wq.SUGGESTION),
+                                    onFocusDisplayName: () => D(p.Wq.EDIT_DISPLAY_NAME),
                                     onClose: L,
                                     usernameSuggestionLoading: Y,
                                     oneClickFlow: b

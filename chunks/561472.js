@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     l = n(192379),
-    a = n(442837),
-    r = n(998698),
+    r = n(442837),
+    a = n(998698),
     s = n(933557),
     o = n(703558),
     c = n(731290),
@@ -20,16 +20,16 @@ var i = n(200651),
 t.Z = function (e) {
     let { className: t, style: n, channel: I, draftType: E } = e,
         [b, Z] = l.useState(!0),
-        N = (0, a.e7)([u.Z], () => u.Z.hasLayers()),
-        S = (0, a.e7)([h.Z], () => null != I && h.Z.can(_.Plq.ATTACH_FILES, I), [I]),
-        T = null != (0, a.e7)([r.Z], () => r.Z.getActiveCommand(I.id)),
+        N = (0, r.e7)([u.Z], () => u.Z.hasLayers()),
+        S = (0, r.e7)([h.Z], () => null != I && h.Z.can(_.Plq.ATTACH_FILES, I), [I]),
+        T = null != (0, r.e7)([a.Z], () => a.Z.getActiveCommand(I.id)),
         j = I.getGuildId(),
         A = E === o.d.FirstThreadMessage,
-        y = (0, a.e7)([m.default], () => {
+        y = (0, r.e7)([m.default], () => {
             var e;
             return !0 == !(null === (e = m.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed);
         }),
-        P = (0, a.e7)([c.Z], () => c.Z.didAgree(j)) && !y,
+        P = (0, r.e7)([c.Z], () => c.Z.didAgree(j)) && !y,
         M = l.useMemo(() => !N && ((I.isPrivate() && !I.isManaged()) || (null != j && (!I.isNSFW() || P) && S && d.Z.canChatInGuild(j))), [S, P, I, j, N]),
         L = A ? (_.TPd.GUILD_THREADS_ONLY.has(I.type) ? v.intl.string(v.t.RBBLhI) : v.intl.string(v.t.gUx4en)) : b ? v.intl.format(v.t.dYP2FR, { destination: (0, s.F6)(I, m.default, p.Z, !0) }) : v.intl.string(v.t.h76ulJ);
     return T || !M

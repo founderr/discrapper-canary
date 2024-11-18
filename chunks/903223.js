@@ -1,7 +1,7 @@
 var i,
     l,
-    a,
     r,
+    a,
     s = n(392711),
     o = n.n(s),
     c = n(442837),
@@ -9,7 +9,7 @@ var i,
     u = n(430824);
 let h = null,
     p = {};
-class m extends (r = c.ZP.Store) {
+class m extends (a = c.ZP.Store) {
     initialize() {
         this.waitFor(u.Z);
     }
@@ -46,15 +46,15 @@ class m extends (r = c.ZP.Store) {
         return null != e ? p[e] : h;
     }
 }
-(a = 'RegionStore'),
+(r = 'RegionStore'),
     (l = 'displayName') in (i = m)
         ? Object.defineProperty(i, l, {
-              value: a,
+              value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[l] = a),
+        : (i[l] = r),
     (t.Z = new m(d.Z, {
         LOAD_REGIONS: function (e) {
             let t = o().sortBy(e.regions, (e) => e.name);

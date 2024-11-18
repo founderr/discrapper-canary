@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    a = n(597312),
-    r = n(481060),
+    r = n(597312),
+    a = n(481060),
     s = n(727637),
     o = n(410030),
     c = n(100527),
@@ -64,7 +64,7 @@ function L(e) {
                 profileType: A.y0.PANEL,
                 themeOverride: k,
                 children: [
-                    (0, i.jsxs)(a.u2, {
+                    (0, i.jsxs)(r.u2, {
                         children: [
                             (0, i.jsx)(T.Z, {
                                 profileType: A.y0.PANEL,
@@ -130,10 +130,10 @@ function L(e) {
                     !L &&
                         (0, i.jsx)('footer', {
                             className: P.footer,
-                            children: (0, i.jsx)(r.Button, {
+                            children: (0, i.jsx)(a.Button, {
                                 fullWidth: !0,
-                                size: r.Button.Sizes.LARGE,
-                                look: r.Button.Looks.BLANK,
+                                size: a.Button.Sizes.LARGE,
+                                look: a.Button.Looks.BLANK,
                                 color: P.footerButtonColor,
                                 onClick: () => {
                                     U(),

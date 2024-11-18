@@ -15,8 +15,8 @@ t.Z = function (e) {
     let { application: E, onSelectApplication: I, showCategory: C = !1 } = e,
         v = (0, o.Z)({ application: E }),
         S = null === (t = E.categories) || void 0 === t ? void 0 : t[0],
-        T = (0, a.lf)(E),
-        N = r.useCallback(() => {
+        N = (0, a.lf)(E),
+        T = r.useCallback(() => {
             I(E.id);
         }, [I, E.id]),
         A = r.useMemo(
@@ -42,7 +42,7 @@ t.Z = function (e) {
         className: m.container,
         children: (0, i.jsxs)(c.Z, {
             className: m.card,
-            onClick: N,
+            onClick: T,
             onContextMenu: () => {},
             children: [
                 (0, i.jsxs)('div', {
@@ -85,7 +85,7 @@ t.Z = function (e) {
                                 })
                             })
                         }),
-                        Z || T
+                        Z || N
                             ? (0, i.jsxs)('div', {
                                   className: m.infoContainer,
                                   children: [
@@ -97,14 +97,14 @@ t.Z = function (e) {
                                                 children: S.name
                                             })
                                           : null,
-                                      Z && T
+                                      Z && N
                                           ? (0, i.jsx)(l.Text, {
                                                 variant: 'text-xs/medium',
                                                 color: 'text-secondary',
                                                 children: '\u2022'
                                             })
                                           : null,
-                                      T
+                                      N
                                           ? (0, i.jsx)(l.Text, {
                                                 variant: 'text-xs/medium',
                                                 color: 'text-secondary',
@@ -118,7 +118,7 @@ t.Z = function (e) {
                             className: m.description,
                             variant: 'text-sm/medium',
                             color: 'header-secondary',
-                            lineClamp: Z || T ? 2 : 3,
+                            lineClamp: Z || N ? 2 : 3,
                             children: null !== (_ = null === (g = E.directory_entry) || void 0 === g ? void 0 : g.short_description) && void 0 !== _ ? _ : E.description
                         }),
                         b

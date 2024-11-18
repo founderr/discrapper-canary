@@ -21,9 +21,9 @@ var i = n(200651),
     S = n(175756),
     T = n(104494),
     C = n(639119),
-    _ = n(211712),
-    E = n(31590),
-    I = n(81245),
+    E = n(211712),
+    _ = n(31590),
+    I = n(222062),
     f = n(629654),
     N = n(53691),
     A = n(165583),
@@ -73,14 +73,14 @@ function z(e) {
         ei = s.useRef(null);
     (0, O.Z)(ei, G.Y_.TRY_IT_OUT);
     let { analyticsLocations: es, sourceAnalyticsLocations: er } = (0, m.ZP)(u.Z.USER_SETTINGS_TRY_OUT_PREMIUM),
-        [el, ea] = s.useState(Math.floor(Math.random() * _.J2.length)),
+        [el, ea] = s.useState(Math.floor(Math.random() * E.J2.length)),
         eo = (e) => {
             if (e) {
                 if (((0, c.I5)(J), (0, j.z5)(X), (0, j.ho)($), null != et)) {
                     let e = g.Z.getProduct(et.skuId);
                     null != e && (0, x.G1)(e) ? (0, h.fK)(e.skuId).then(() => (0, c.cV)(et)) : null != p.Z.getPurchase(et.skuId) && (0, c.cV)(et);
                 }
-                P.default.track(U.rMx.TRY_IT_OUT_PRESET_SELECTED, { preset: _.J2[el].presetName });
+                P.default.track(U.rMx.TRY_IT_OUT_PRESET_SELECTED, { preset: E.J2[el].presetName });
             }
         };
     s.useEffect(() => {
@@ -103,8 +103,8 @@ function z(e) {
             location: em + ' auto off',
             autoTrackExposure: !1
         });
-    let eh = (0, I.Mu)('TryOutPremiumSection'),
-        { enabled: eg } = E.Z.useExperiment({ location: 'UserSettingsProfileCustomization' }, { autoTrackExposure: !1 });
+    let eh = (0, I.M)(),
+        { enabled: eg } = _.Z.useExperiment({ location: 'UserSettingsProfileCustomization' }, { autoTrackExposure: !1 });
     return W
         ? (0, i.jsx)(m.Gt, {
               value: es,

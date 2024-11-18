@@ -23,8 +23,8 @@ var i,
     S = n(782568),
     T = n(812206),
     C = n(593061),
-    _ = n(600164),
-    E = n(925329),
+    E = n(600164),
+    _ = n(925329),
     I = n(267101),
     f = n(240864),
     N = n(942833),
@@ -78,8 +78,8 @@ let en = [K.PyE.FAILED, K.PyE.REVERSED, K.PyE.CANCELED],
         let { description: t, cost: n } = e;
         return (0, l.jsx)('li', {
             className: J.paymentDetail,
-            children: (0, l.jsxs)(_.Z, {
-                justify: _.Z.Justify.BETWEEN,
+            children: (0, l.jsxs)(E.Z, {
+                justify: E.Z.Justify.BETWEEN,
                 children: [(0, l.jsx)('div', { children: t }), (0, l.jsx)('div', { children: n })]
             })
         });
@@ -117,8 +117,8 @@ let el = (e) => {
     let { description: t, detail: n } = e;
     return (0, l.jsx)('li', {
         className: J.guildProductDetail,
-        children: (0, l.jsxs)(_.Z, {
-            justify: _.Z.Justify.BETWEEN,
+        children: (0, l.jsxs)(E.Z, {
+            justify: E.Z.Justify.BETWEEN,
             children: [(0, l.jsx)('div', { children: t }), (0, l.jsx)('div', { children: n })]
         })
     });
@@ -526,12 +526,12 @@ class ec extends (s = a.PureComponent) {
                 }
             } else h.type === K.NYc.APPLICATION && (null != c && (a = c.skuId), null != s ? n.push(X.intl.formatToPlainString(X.t['0wL/VF'], { tier: null == m ? void 0 : m.name })) : n.push(X.intl.string(X.t['9czSYm'])));
             (t = 0 !== n.length ? n.join(', ') : i.description),
-                (e = (0, l.jsx)(E.Z, {
+                (e = (0, l.jsx)(_.Z, {
                     className: J.descriptionIcon,
                     guildClassName: J.guildDescriptionIcon,
                     game: s,
                     guild: r,
-                    size: E.Z.Sizes.XSMALL,
+                    size: _.Z.Sizes.XSMALL,
                     skuId: null != a ? a : null == m ? void 0 : m.id
                 }));
         } else if (null != m) {
@@ -555,12 +555,12 @@ class ec extends (s = a.PureComponent) {
                               color: 'currentColor',
                               className: J.shopIcon
                           })
-                        : (0, l.jsx)(E.Z, {
+                        : (0, l.jsx)(_.Z, {
                               className: J.descriptionIcon,
                               guildClassName: J.guildDescriptionIcon,
                               game: s,
                               guild: r,
-                              size: E.Z.Sizes.XSMALL,
+                              size: _.Z.Sizes.XSMALL,
                               skuId: m.id
                           });
         } else
@@ -662,9 +662,9 @@ class ec extends (s = a.PureComponent) {
                     focusProps: { offset: 4 },
                     ...e,
                     children: [
-                        (0, l.jsxs)(_.Z, {
+                        (0, l.jsxs)(E.Z, {
                             className: J.summaryInfo,
-                            align: _.Z.Align.CENTER,
+                            align: E.Z.Align.CENTER,
                             children: [
                                 this.renderDescription(),
                                 (0, l.jsxs)('div', {
@@ -781,12 +781,12 @@ function ed(e) {
         m && null != u && (0, P.UM)(u);
     }, [u, m]);
     let C = (0, g.e7)([L.Z], () => L.Z.getGuild(null == p ? void 0 : p.guildId)),
-        _ = c ? p : void 0,
-        E = i.subscription,
-        I = (0, g.e7)([F.Z], () => (null != E && E.type !== K.NYc.PREMIUM ? F.Z.get(E.items[0].planId) : null));
+        E = c ? p : void 0,
+        _ = i.subscription,
+        I = (0, g.e7)([F.Z], () => (null != _ && _.type !== K.NYc.PREMIUM ? F.Z.get(_.items[0].planId) : null));
     return (0, l.jsx)(ec, {
         applicationStatistics: h,
-        application: m ? S : _,
+        application: m ? S : E,
         guild: C,
         stickerPack: null,
         paymentSources: x,

@@ -19,7 +19,7 @@ var i = n(237997),
     C = n(462414),
     v = n(662194),
     S = n(188861);
-let T = {
+let N = {
         ...l.A,
         ...d.Z,
         ...u.Z,
@@ -34,15 +34,15 @@ let T = {
         ...h.Z,
         ...E.Z
     },
-    N = {
+    T = {
         ...a.Z,
         ...o.M,
         ...c.n
     };
 t.Z = {
     server: s.Z,
-    commands: T,
-    events: N,
+    commands: N,
+    events: T,
     stores: [i.Z],
     transports: [S.Z],
     registerTransportsForEmbeddedPlatform: function () {

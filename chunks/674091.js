@@ -1,6 +1,6 @@
 var r;
 (r = 0),
-    (function (e, t, r, i, a, s, o, l, u, c, d, f, _, p, h, m, g, E, v, b, I, S, T, y, A, N, C, R, O, D, L, x, w, M, P, k, U, B, G, Z, F, V, j, H, Y, W, K, z, q, Q, X, J, $, ee, et, en, er, ei, ea, es, eo, el, eu) {
+    (function (e, t, r, i, a, s, o, l, u, c, d, f, _, p, h, m, g, E, v, b, I, S, T, y, A, N, C, R, O, D, L, x, w, M, P, k, U, G, B, Z, F, V, j, H, Y, W, K, z, q, Q, X, J, $, ee, et, en, er, ei, ea, es, eo, el, eu) {
         function ec(e) {
             return e && 'object' == typeof e && 'default' in e ? e : { default: e };
         }
@@ -31,14 +31,14 @@ var r;
             eP = ec(O),
             ek = ec(D),
             eU = ec(L),
-            eB = ec(x),
-            eG = ec(w),
+            eG = ec(x),
+            eB = ec(w),
             eZ = ec(M),
             eF = ec(P),
             eV = ec(k),
             ej = ec(U),
-            eH = ec(B),
-            eY = ec(G),
+            eH = ec(G),
+            eY = ec(B),
             eW = ec(F),
             eK = ec(V),
             ez = ec(j),
@@ -261,7 +261,7 @@ var r;
             var n = t.hour,
                 r = t.minute,
                 i = t.second;
-            return eB.default(eU.default(ek.default(e, void 0 === i ? 0 : i), void 0 === r ? 0 : r), void 0 === n ? 0 : n);
+            return eG.default(eU.default(ek.default(e, void 0 === i ? 0 : i), void 0 === r ? 0 : r), void 0 === n ? 0 : n);
         }
         function tA(e, t, n) {
             var r = tP(t || tM());
@@ -316,12 +316,12 @@ var r;
             return e;
         }
         function tk(e, t) {
-            return tS(eG.default(tb(), e), 'LLLL', t);
+            return tS(eB.default(tb(), e), 'LLLL', t);
         }
         function tU(e, t) {
-            return tS(eG.default(tb(), e), 'LLL', t);
+            return tS(eB.default(tb(), e), 'LLL', t);
         }
-        function tB(e) {
+        function tG(e) {
             var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                 n = t.minDate,
                 r = t.maxDate,
@@ -345,7 +345,7 @@ var r;
                 !1
             );
         }
-        function tG(e) {
+        function tB(e) {
             var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                 n = t.excludeDates;
             return (
@@ -380,9 +380,9 @@ var r;
             if (!n || !r) throw Error('Both minTime and maxTime props required');
             var i,
                 a = tb(),
-                s = eB.default(eU.default(a, eC.default(e)), eR.default(e)),
-                o = eB.default(eU.default(a, eC.default(n)), eR.default(n)),
-                l = eB.default(eU.default(a, eC.default(r)), eR.default(r));
+                s = eG.default(eU.default(a, eC.default(e)), eR.default(e)),
+                o = eG.default(eU.default(a, eC.default(n)), eR.default(n)),
+                l = eG.default(eU.default(a, eC.default(r)), eR.default(r));
             try {
                 i = !e5.default(s, {
                     start: o,
@@ -1048,10 +1048,10 @@ var r;
                             return !e.props.disabledKeyboardNavigation && !e.isSameDay(e.props.selected) && e.isSameDay(e.props.preSelection);
                         }),
                         tl(t_(e), 'isDisabled', function () {
-                            return tB(e.props.day, e.props);
+                            return tG(e.props.day, e.props);
                         }),
                         tl(t_(e), 'isExcluded', function () {
-                            return tG(e.props.day, e.props);
+                            return tB(e.props.day, e.props);
                         }),
                         tl(t_(e), 'getHighLightedClass', function (t) {
                             var n = e.props,
@@ -1381,10 +1381,10 @@ var r;
                             })
                         ),
                         tl(t_(e), 'isDisabled', function (t) {
-                            return tB(t, e.props);
+                            return tG(t, e.props);
                         }),
                         tl(t_(e), 'isExcluded', function (t) {
-                            return tG(t, e.props);
+                            return tB(t, e.props);
                         }),
                         tl(t_(e), 'handleDayClick', function (t, n) {
                             e.props.onDayClick && e.props.onDayClick(t, n, e.props.orderInDisplay);
@@ -1400,7 +1400,7 @@ var r;
                                 r = n.day,
                                 i = n.startDate,
                                 a = n.endDate;
-                            return !(!i || !a) && tO(eG.default(r, t), i);
+                            return !(!i || !a) && tO(eB.default(r, t), i);
                         }),
                         tl(t_(e), 'isRangeStartQuarter', function (t) {
                             var n = e.props,
@@ -1414,7 +1414,7 @@ var r;
                                 r = n.day,
                                 i = n.startDate,
                                 a = n.endDate;
-                            return !(!i || !a) && tO(eG.default(r, t), a);
+                            return !(!i || !a) && tO(eB.default(r, t), a);
                         }),
                         tl(t_(e), 'isRangeEndQuarter', function (t) {
                             var n = e.props,
@@ -1488,7 +1488,7 @@ var r;
                             return t;
                         }),
                         tl(t_(e), 'onMonthClick', function (t, n) {
-                            e.handleDayClick(tN(eG.default(e.props.day, n)), t);
+                            e.handleDayClick(tN(eB.default(e.props.day, n)), t);
                         }),
                         tl(t_(e), 'handleMonthNavigation', function (t, n) {
                             e.isDisabled(n) || e.isExcluded(n) || (e.props.setPreSelection(n), e.MONTH_REFS[t].current && e.MONTH_REFS[t].current.focus());
@@ -1557,7 +1557,7 @@ var r;
                                             (s && !s(tb(e))) ||
                                             !1
                                         );
-                                    })(eG.default(f, t), e.props),
+                                    })(eB.default(f, t), e.props),
                                 'react-datepicker__month--selected': ex.default(f) === t && eM.default(f) === eM.default(h),
                                 'react-datepicker__month-text--keyboard-selected': ex.default(E) === t,
                                 'react-datepicker__month--in-range': ((n = _), (r = p), (i = t), (a = f), (s = eM.default(n)), (o = ex.default(n)), (l = eM.default(r)), (u = ex.default(r)), (c = eM.default(a)), s === l && s === c ? o <= i && i <= u : s < l ? (c === s && o <= i) || (c === l && u >= i) || (c < l && c > s) : void 0),
@@ -1574,7 +1574,7 @@ var r;
                                 r = n.ariaLabelPrefix,
                                 i = n.disabledDayAriaLabelPrefix,
                                 a = n.day,
-                                s = eG.default(a, t),
+                                s = eB.default(a, t),
                                 o = e.isDisabled(s) || e.isExcluded(s) ? (void 0 === i ? 'Not available' : i) : void 0 === r ? 'Choose' : r;
                             return ''.concat(o, ' ').concat(tS(s, 'MMMM yyyy'));
                         }),
@@ -1779,7 +1779,7 @@ var r;
                                     l = e.props.selected || e.props.openToDate || tb(),
                                     u = eR.default(l),
                                     c = eC.default(l),
-                                    d = eB.default(eU.default(a, c), u),
+                                    d = eG.default(eU.default(a, c), u),
                                     f = 0;
                                 f < s;
                                 f++
@@ -2135,7 +2135,7 @@ var r;
                             r.setState(
                                 function (t) {
                                     var n = t.date;
-                                    return { date: eG.default(n, e) };
+                                    return { date: eB.default(n, e) };
                                 },
                                 function () {
                                     return r.handleMonthChange(r.state.date);
@@ -2146,7 +2146,7 @@ var r;
                             r.setState(
                                 function (t) {
                                     var n = t.date;
-                                    return { date: eF.default(eG.default(n, ex.default(e)), eM.default(e)) };
+                                    return { date: eF.default(eB.default(n, ex.default(e)), eM.default(e)) };
                                 },
                                 function () {
                                     return r.handleMonthYearChange(r.state.date);
@@ -3004,7 +3004,7 @@ var r;
                         }),
                         tl(t_(r), 'setSelected', function (e, t, n, i) {
                             var a = e;
-                            if (null === a || !tB(a, r.props)) {
+                            if (null === a || !tG(a, r.props)) {
                                 var s = r.props,
                                     o = s.onChange,
                                     l = s.selectsRange,

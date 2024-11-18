@@ -16,7 +16,7 @@ var i = n(200651),
     S = n(220886),
     T = n(346537),
     C = n(830318);
-let _ = (e) => {
+let E = (e) => {
     let [t, n] = e.split(','),
         i = atob(n),
         s = t.split(';')[0],
@@ -28,7 +28,7 @@ let _ = (e) => {
 t.Z = (e) => {
     let { effect: t, back: n } = e,
         { upsertConfig: r } = (0, g.E)(),
-        E = (0, o.e7)([m.default], () => m.default.getCurrentUser()),
+        _ = (0, o.e7)([m.default], () => m.default.getCurrentUser()),
         [I, f] = s.useState(!0),
         N = s.useRef(null),
         [A, b] = s.useState(!1),
@@ -41,7 +41,7 @@ t.Z = (e) => {
         e.length > 0 &&
             D(
                 [...e].map((e) => {
-                    let t = _(e.base64),
+                    let t = E(e.base64),
                         n = URL.createObjectURL(t);
                     return (e.src = n), e;
                 })
@@ -54,7 +54,7 @@ t.Z = (e) => {
             config: { effects: P }
         });
     }, [P, y]),
-    null == E)
+    null == _)
         ? (0, i.jsx)('div', {})
         : (0, i.jsxs)('div', {
               className: S.root,
@@ -275,7 +275,7 @@ t.Z = (e) => {
                                               className: l()(S.userProfilePreview, S.preview),
                                               children: [
                                                   (0, i.jsx)(u.Z, {
-                                                      user: E,
+                                                      user: _,
                                                       pendingAvatar: void 0,
                                                       pendingProfileEffectId: null,
                                                       canUsePremiumCustomization: !0,

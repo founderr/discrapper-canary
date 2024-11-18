@@ -33,11 +33,11 @@ function g(e) {
         S = () => {
             (0, s.Zy)(), null == f || f();
         },
-        T = r.useCallback((e) => {
+        N = r.useCallback((e) => {
             e.stopPropagation();
         }, []);
     return (0, i.jsx)(a.Clickable, {
-        onClick: T,
+        onClick: N,
         children: (0, i.jsxs)(a.Menu, {
             onSelect: g,
             navId: 'guild-discovery-context-menu',

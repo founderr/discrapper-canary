@@ -6,8 +6,8 @@ n.d(t, {
     n(653041);
 var i = n(200651),
     l = n(192379),
-    a = n(990547),
-    r = n(731965),
+    r = n(990547),
+    a = n(731965),
     s = n(442837),
     o = n(704215),
     c = n(40851),
@@ -35,14 +35,14 @@ function S(e) {
         O = (0, s.e7)([p.Z], () => p.Z.getUserParticipantCount(j.id), [j]),
         D = (0, C.bt)(j.id, t),
         w = l.useCallback(() => {
-            (0, r.j)(() => {
+            (0, a.j)(() => {
                 E.d.setState({ dismissedActivityEntryPointTileChannel: j.id });
             });
         }, [j.id]);
     l.useEffect(() => {
         null != k &&
             j.id !== k &&
-            (0, r.j)(() => {
+            (0, a.j)(() => {
                 E.d.setState({ dismissedActivityEntryPointTileChannel: null });
             });
     }, [j.id, k]);
@@ -74,8 +74,8 @@ function S(e) {
         );
     (0, h.Z)(
         {
-            type: a.ImpressionTypes.VIEW,
-            name: a.ImpressionNames.CHANNEL_CALL_VIDEO_GRID_VIEW,
+            type: r.ImpressionTypes.VIEW,
+            name: r.ImpressionNames.CHANNEL_CALL_VIDEO_GRID_VIEW,
             properties: {
                 total_participants: P,
                 can_invite: B,

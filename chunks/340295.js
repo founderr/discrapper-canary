@@ -1,7 +1,7 @@
 var i = n(200651),
     l = n(192379),
-    a = n(481060),
-    r = n(287734),
+    r = n(481060),
+    a = n(287734),
     s = n(305325),
     o = n(281956),
     c = n(584729),
@@ -15,7 +15,7 @@ t.Z = function (e) {
         C = m.filter(u.Io),
         x = (0, o.J)(f.guild_id),
         _ = l.useCallback(() => {
-            x ? (0, s.hk)(f.guild_id, () => r.default.selectVoiceChannel(f.id)) : r.default.selectVoiceChannel(f.id);
+            x ? (0, s.hk)(f.guild_id, () => a.default.selectVoiceChannel(f.id)) : a.default.selectVoiceChannel(f.id);
         }, [f.id, f.guild_id, x]),
         v = 4 === C.length ? 2 : 3;
     return (0, i.jsxs)('div', {
@@ -41,14 +41,14 @@ t.Z = function (e) {
                     )
                 )
             }),
-            (0, i.jsx)(a.Heading, {
+            (0, i.jsx)(r.Heading, {
                 className: p.channelName,
                 variant: 'heading-xxl/semibold',
                 children: f.name
             }),
             (0, i.jsx)('div', {
                 className: p.participantsRow,
-                children: (0, i.jsx)(a.Text, {
+                children: (0, i.jsx)(r.Text, {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',
                     children:
@@ -71,12 +71,12 @@ t.Z = function (e) {
                                   : void 0)
                 })
             }),
-            (0, i.jsx)(a.Button, {
+            (0, i.jsx)(r.Button, {
                 disabled: !g,
                 className: p.joinButton,
-                color: g ? a.Button.Colors.GREEN : a.Button.Colors.PRIMARY,
+                color: g ? r.Button.Colors.GREEN : r.Button.Colors.PRIMARY,
                 onClick: _,
-                size: a.Button.Sizes.MEDIUM,
+                size: r.Button.Sizes.MEDIUM,
                 children: g ? h.intl.string(h.t['96ANUF']) : h.intl.string(h.t.TVBCKS)
             })
         ]

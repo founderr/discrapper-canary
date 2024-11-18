@@ -19,21 +19,21 @@ var i = e(512722),
     d = e(987209),
     f = e(981631);
 function p(n) {
-    let { initialPlanId: t, activeSubscription: i, analyticsObject: r, analyticsLocation: a, analyticsLocations: o, analyticsSubscriptionType: s, renderHeader: c, planGroup: p, skuId: v, guildId: m, reviewWarningMessage: h, applicationId: S, showBenefitsFirst: g, onComplete: I, forcesTransitionToGuild: Z } = n;
+    let { initialPlanId: t, activeSubscription: i, analyticsObject: r, analyticsLocation: a, analyticsLocations: o, analyticsSubscriptionType: s, renderHeader: c, planGroup: p, skuId: v, guildId: m, reviewWarningMessage: h, applicationId: I, showBenefitsFirst: S, onComplete: g, forcesTransitionToGuild: E } = n;
     (0, u.openModalLazy)(
         async () => {
             let { PaymentContextProvider: n } = await Promise.resolve().then(e.bind(e, 563132)),
                 u = (await Promise.all([e.e('52249'), e.e('26182'), e.e('32776'), e.e('97195')]).then(e.bind(e, 405083))).default,
                 { getApplicationPaymentSteps: f } = await Promise.all([e.e('63288'), e.e('77298'), e.e('23357'), e.e('12013'), e.e('14627'), e.e('26182'), e.e('95900'), e.e('66470')]).then(e.bind(e, 759386)),
-                b = f({
+                A = f({
                     guildId: m,
-                    showBenefitsFirst: g
+                    showBenefitsFirst: S
                 });
             return (e) =>
                 (0, l.jsx)(n, {
-                    applicationId: S,
+                    applicationId: I,
                     activeSubscription: i,
-                    stepConfigs: b,
+                    stepConfigs: A,
                     skuIDs: [v],
                     children: (0, l.jsx)(d.KB, {
                         children: (0, l.jsx)(u, {
@@ -47,10 +47,10 @@ function p(n) {
                             renderHeader: c,
                             planGroup: p,
                             reviewWarningMessage: h,
-                            applicationId: S,
+                            applicationId: I,
                             guildId: null != m ? m : void 0,
-                            onComplete: I,
-                            forcesTransitionToGuild: Z
+                            onComplete: g,
+                            forcesTransitionToGuild: E
                         })
                     })
                 });
@@ -68,8 +68,8 @@ async function m(n) {
         m = c.Z.get(l),
         h = s.Z.getForSKU(l);
     r()(null != m, 'Failed to find SKU');
-    let S = (0, o.KW)(m.flags);
-    r()(S, 'Guild application subscriptions unsupported!'),
+    let I = (0, o.KW)(m.flags);
+    r()(I, 'Guild application subscriptions unsupported!'),
         await v(e, l),
         p({
             initialPlanId: null != i ? i : null === (t = h[0]) || void 0 === t ? void 0 : t.id,

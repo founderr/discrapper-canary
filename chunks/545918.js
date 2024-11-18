@@ -6,8 +6,8 @@ t.r(n),
     });
 var i = t(200651),
     l = t(192379),
-    o = t(120356),
-    r = t.n(o),
+    r = t(120356),
+    o = t.n(r),
     a = t(442837),
     s = t(481060),
     d = t(100527),
@@ -22,10 +22,10 @@ var i = t(200651),
     N = t(171368),
     f = t(433355),
     m = t(592125),
-    T = t(984933),
-    E = t(430824),
-    S = t(944486),
-    j = t(241559),
+    E = t(984933),
+    T = t(430824),
+    j = t(944486),
+    S = t(241559),
     v = t(575766),
     p = t(305473),
     A = t(937283),
@@ -39,12 +39,12 @@ var i = t(200651),
     D = t(293914);
 function G(e) {
     let { guild: n, previousChannel: t } = e,
-        o = L.intl.string(L.t.oclz3d),
-        r = L.intl.string(L.t.oclz3d);
+        r = L.intl.string(L.t.oclz3d),
+        o = L.intl.string(L.t.oclz3d);
     return (
         (0, x.Tt)({
             location: n.name,
-            subsection: o
+            subsection: r
         }),
         (0, i.jsxs)(C.Z, {
             className: B.header,
@@ -99,25 +99,25 @@ function G(e) {
                     icon: s.GroupIcon,
                     'aria-hidden': !0
                 }),
-                (0, i.jsx)(C.Z.Title, { children: r })
+                (0, i.jsx)(C.Z.Title, { children: o })
             ]
         })
     );
 }
 function P(e) {
     let { guildId: n } = e,
-        t = (0, a.e7)([E.Z], () => E.Z.getGuild(n)),
-        { analyticsLocations: o } = (0, c.ZP)(d.Z.MEMBER_SAFETY_PAGE),
-        u = (0, j.n2)(n),
+        t = (0, a.e7)([T.Z], () => T.Z.getGuild(n)),
+        { analyticsLocations: r } = (0, c.ZP)(d.Z.MEMBER_SAFETY_PAGE),
+        u = (0, S.n2)(n),
         x = (0, _.ms)(n, u),
-        g = (0, a.e7)([S.Z], () => S.Z.getLastSelectedChannelId(n)),
+        g = (0, a.e7)([j.Z], () => j.Z.getLastSelectedChannelId(n)),
         C = (0, a.e7)([m.Z], () => m.Z.getChannel(g)),
         L = l.useRef(null);
     (0, v.n)(n),
         l.useEffect(() => {
             if (!u && null != t) {
                 var e;
-                let n = null === (e = T.ZP.getDefaultChannel(t.id)) || void 0 === e ? void 0 : e.id;
+                let n = null === (e = E.ZP.getDefaultChannel(t.id)) || void 0 === e ? void 0 : e.id;
                 (0, I.XU)(t.id, n);
             }
         }, [t, u]);
@@ -129,29 +129,29 @@ function P(e) {
                     : (0, N.openUserProfileModal)({
                           userId: e.userId,
                           guildId: e.guildId,
-                          sourceAnalyticsLocations: o,
+                          sourceAnalyticsLocations: r,
                           analyticsLocation: { section: R.jXE.MEMBER_SAFETY_PAGE }
                       });
             },
-            [o]
+            [r]
         );
     return null != t && u
         ? (0, i.jsxs)(c.Gt, {
-              value: o,
+              value: r,
               children: [
                   (0, i.jsxs)('div', {
-                      className: r()(D.chat, B.page, { [D.threadSidebarOpen]: P }),
+                      className: o()(D.chat, B.page, { [D.threadSidebarOpen]: P }),
                       children: [
                           (0, i.jsx)(G, {
                               guild: t,
                               previousChannel: C
                           }),
                           (0, i.jsx)(s.AdvancedScroller, {
-                              className: r()(B.scroller),
+                              className: o()(B.scroller),
                               ref: L,
                               orientation: 'vertical',
                               children: (0, i.jsxs)('div', {
-                                  className: r()(D.content, B.container),
+                                  className: o()(D.content, B.container),
                                   children: [
                                       (0, i.jsx)(p.Z, { guild: t }),
                                       (0, i.jsx)(Z.Z, {

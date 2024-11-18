@@ -14,7 +14,7 @@ var i = e(772848),
 function c(n) {
     let { applicationId: t, skuId: c, onClose: d, onComplete: f, analyticsLocations: p, analyticsLocationObject: v, contextKey: m } = n,
         h = !1,
-        S = (0, i.Z)();
+        I = (0, i.Z)();
     (0, r.openModalLazy)(
         async () => {
             let { default: n } = await Promise.all([e.e('63288'), e.e('77298'), e.e('23357'), e.e('12013'), e.e('52249'), e.e('14627'), e.e('26182'), e.e('95900'), e.e('32776'), e.e('7458')]).then(e.bind(e, 409600));
@@ -22,7 +22,7 @@ function c(n) {
                 let { onClose: i, ...r } = e;
                 return (0, l.jsx)(n, {
                     ...r,
-                    loadId: S,
+                    loadId: I,
                     applicationId: t,
                     skuId: c,
                     analyticsLocations: p,
@@ -41,7 +41,7 @@ function c(n) {
             onCloseCallback: () => {
                 !h &&
                     o.default.track(s.rMx.PAYMENT_FLOW_CANCELED, {
-                        load_id: S,
+                        load_id: I,
                         payment_type: s.Zuq[s.GZQ.ONE_TIME],
                         location: v,
                         is_gift: !1,

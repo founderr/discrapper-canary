@@ -19,8 +19,8 @@ var i,
     C = n(699516),
     v = n(9156),
     S = n(626135),
-    T = n(70956),
-    N = n(900849),
+    N = n(70956),
+    T = n(900849),
     A = n(761080),
     b = n(584925),
     x = n(207205),
@@ -39,8 +39,8 @@ function y(e, t, n) {
         e
     );
 }
-let O = 1 * T.Z.Millis.DAY,
-    R = 3 * T.Z.Millis.DAY,
+let O = 1 * N.Z.Millis.DAY,
+    R = 3 * N.Z.Millis.DAY,
     P = [],
     j = null,
     D = 0,
@@ -69,7 +69,7 @@ let O = 1 * T.Z.Millis.DAY,
     er = !0,
     el = !1;
 function ea(e) {
-    return Date.now() - D > 6 * T.Z.Millis.HOUR && [...e, ...k, ...w].slice(0, 3).reduce((e, t) => e + t.score, 0) >= A.jp;
+    return Date.now() - D > 6 * N.Z.Millis.HOUR && [...e, ...k, ...w].slice(0, 3).reduce((e, t) => e + t.score, 0) >= A.jp;
 }
 function es(e, t, n, i) {
     let r = e.filter((e) => e.type !== n);
@@ -90,7 +90,7 @@ function eo() {
                 r = 0;
             for (let i of e) {
                 if (!(0, u.Z2)(i)) {
-                    if ((0, u.BQ)(i, 2 * T.Z.Seconds.DAY) || (0, u.xt)(i)) {
+                    if ((0, u.BQ)(i, 2 * N.Z.Seconds.DAY) || (0, u.xt)(i)) {
                         var n;
                         if (
                             (null == V[i.id] &&
@@ -504,7 +504,7 @@ y(eI, 'displayName', 'GravityStore'),
         },
         LOAD_GRAVITY_RECOMMENDED_GUILDS: function (e) {
             let { guilds: t } = e;
-            (en = t.map((e) => new m.ZP((0, N.PP)(e.guild)))), ec();
+            (en = t.map((e) => new m.ZP((0, T.PP)(e.guild)))), ec();
         },
         GRAVITY_CUSTOM_SCORES_UPDATED: function (e) {
             let { channelScores: t, guildId: n, guildScore: i } = e;

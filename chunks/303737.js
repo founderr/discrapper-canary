@@ -6,10 +6,10 @@ n.d(t, {
         return I;
     },
     g4: function () {
-        return h;
+        return m;
     },
     m7: function () {
-        return m;
+        return h;
     },
     r4: function () {
         return C;
@@ -39,12 +39,12 @@ var i = n(991637),
     E = n(176505);
 r().shim();
 let g = {};
-function m(e) {
+function h(e) {
     let t = (0, l.e7)([a.Z], () => a.Z.getChannel(e)),
         n = (0, l.e7)([p.Z], () => p.Z.getChannel(e));
     return null != t ? t : n;
 }
-function h(e, t, n) {
+function m(e, t, n) {
     let i = (0, l.e7)([c.Z], () => c.Z.getSubscriptionListingsForGuild(e)),
         r = (0, d.n)((t) => t.editStateIdsForGroup[e]),
         o = (0, d.n)((e) => e.listings);

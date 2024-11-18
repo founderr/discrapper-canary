@@ -1,16 +1,16 @@
 var i = n(200651),
     l = n(192379),
-    a = n(120356),
-    r = n.n(a),
+    r = n(120356),
+    a = n.n(r),
     s = n(481060),
     o = n(194082),
     c = n(14338),
     d = n(999106);
 t.Z = l.memo(function (e) {
-    let { label: t, participantCount: n, onClick: l, className: a, collapsed: u, speakers: h, channel: p, isStreamLive: m } = e;
+    let { label: t, participantCount: n, onClick: l, className: r, collapsed: u, speakers: h, channel: p, isStreamLive: m } = e;
     return (0, i.jsxs)(s.Clickable, {
         onClick: l,
-        className: r()(d.container, a),
+        className: a()(d.container, r),
         children: [
             null == h
                 ? (0, i.jsx)(s.GroupIcon, {
@@ -51,7 +51,7 @@ t.Z = l.memo(function (e) {
                 color: 'currentColor',
                 width: 20,
                 height: 20,
-                className: r()(d.downIcon, { [d.upIcon]: u })
+                className: a()(d.downIcon, { [d.upIcon]: u })
             })
         ]
     });

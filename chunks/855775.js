@@ -7,8 +7,8 @@ n.d(e, {
     n(47120);
 var i,
     u,
-    S,
     o,
+    S,
     l = n(442837),
     _ = n(570140),
     A = n(981631);
@@ -73,15 +73,15 @@ class G extends (i = l.ZP.Store) {
         return p.has(t);
     }
 }
-(o = 'SKUPaymentModalStore'),
-    (S = 'displayName') in (u = G)
-        ? Object.defineProperty(u, S, {
-              value: o,
+(S = 'SKUPaymentModalStore'),
+    (o = 'displayName') in (u = G)
+        ? Object.defineProperty(u, o, {
+              value: S,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (u[S] = o),
+        : (u[o] = S),
     (e.Z = new G(_.Z, {
         SKU_PURCHASE_MODAL_OPEN: function (t) {
             D(), (T = t.skuId), (c = t.applicationId), (d = t.isIAP), (R = t.analyticsLocation), (L = t.context), (O = t.isGift), (f = !0), (U = !1), (r = t.resolve), (E = t.reject), (P = null), (s = null), (C = t.promotionId);

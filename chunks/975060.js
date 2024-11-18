@@ -2,8 +2,8 @@ var r,
     E,
     i,
     u,
-    S = n(442837),
-    o = n(570140),
+    o = n(442837),
+    S = n(570140),
     l = n(622999);
 let _ = '',
     A = null,
@@ -37,7 +37,7 @@ function B(t) {
     let { error: e } = t;
     O = e;
 }
-class K extends (u = S.ZP.Store) {
+class K extends (u = o.ZP.Store) {
     get stripePaymentMethod() {
         return T;
     }
@@ -96,7 +96,7 @@ class K extends (u = S.ZP.Store) {
               writable: !0
           })
         : (r[E] = i),
-    (e.Z = new K(o.Z, {
+    (e.Z = new K(S.Z, {
         NEW_PAYMENT_SOURCE_STRIPE_PAYMENT_REQUEST_UPDATE: function (t) {
             let { stripePaymentMethod: e } = t;
             if (null == e) {

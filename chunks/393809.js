@@ -1,34 +1,34 @@
-i.r(t),
-    i.d(t, {
+r.r(n),
+    r.d(n, {
         default: function () {
             return s;
         }
     }),
-    i(47120);
-var e = i(200651),
-    r = i(192379),
-    o = i(481060),
-    a = i(53365),
-    c = i(377176),
-    l = i(388032),
-    u = i(42788);
-function s(n) {
-    let { guildId: t, transitionState: i, onClose: s } = n,
-        [T, E] = r.useState(!1),
-        [_, A] = r.useState(!1),
+    r(47120);
+var e = r(200651),
+    i = r(192379),
+    o = r(481060),
+    a = r(53365),
+    c = r(377176),
+    l = r(388032),
+    u = r(42788);
+function s(t) {
+    let { guildId: n, transitionState: r, onClose: s } = t,
+        [E, T] = i.useState(!1),
+        [_, A] = i.useState(!1),
         N = async () => {
-            E(!0);
+            T(!0);
             try {
-                await (0, a.zo)(t), s();
+                await (0, a.zo)(n), s();
             } finally {
-                E(!1);
+                T(!1);
             }
         },
         d = l.intl.string(l.t['22itmp']);
     return (0, e.jsxs)(o.ModalRoot, {
         className: u.__invalid_container,
         size: o.ModalSize.DYNAMIC,
-        transitionState: i,
+        transitionState: r,
         'aria-label': d,
         children: [
             (0, e.jsxs)(o.ModalContent, {
@@ -65,7 +65,7 @@ function s(n) {
                     (0, e.jsx)(o.Spacer, { size: 28 }),
                     (0, e.jsx)(o.Checkbox, {
                         onChange: () => {
-                            A((n) => !n);
+                            A((t) => !t);
                         },
                         size: 20,
                         type: o.Checkbox.Types.INVERTED,
@@ -84,7 +84,7 @@ function s(n) {
                         color: o.Button.Colors.BRAND,
                         disabled: !_,
                         onClick: N,
-                        submitting: T,
+                        submitting: E,
                         children: l.intl.string(l.t['cY+Ooa'])
                     }),
                     (0, e.jsx)(o.Spacer, {

@@ -46,7 +46,7 @@ function y(e) {
           (0, i.jsx)(r.Popout, {
               renderPopout: (e) => {
                   let { closePopout: n } = e;
-                  return (0, i.jsx)(w, {
+                  return (0, i.jsx)(j, {
                       onClose: n,
                       channel: m,
                       imageUrl: u,
@@ -84,17 +84,17 @@ function y(e) {
               }
           }));
 }
-function w(e) {
+function j(e) {
     let { onSelect: n, onClose: t, channel: o, imageUrl: S, mimeType: y } = e,
-        w = (0, a.e7)([A.Z], () => A.Z.getGuild(o.guild_id)),
-        { fetchState: j, imageRecCommandContexts: Z } = (0, P.hR)({ channelId: o.id }),
-        D = j === b.M.FETCHING,
+        j = (0, a.e7)([A.Z], () => A.Z.getGuild(o.guild_id)),
+        { fetchState: w, imageRecCommandContexts: Z } = (0, P.hR)({ channelId: o.id }),
+        D = w === b.M.FETCHING,
         F = (0, h.g)(o),
         L = (0, E.PL)(!0, !0),
         k = (0, E.LD)(o.guild_id, !0);
     l.useEffect(() => {
-        (j === b.M.ERROR || (j === b.M.FETCHED && 0 === Z.length)) && t();
-    }, [j, Z.length, t]),
+        (w === b.M.ERROR || (w === b.M.FETCHED && 0 === Z.length)) && t();
+    }, [w, Z.length, t]),
         l.useEffect(() => {
             var e, n;
             if (D || 0 === Z.length) return;
@@ -200,12 +200,12 @@ function w(e) {
                             },
                             context: {
                                 channel: o,
-                                guild: w
+                                guild: j
                             },
                             commandOrigin: n === g.Vh.IMAGE_RECS_SUBMENU ? g.bB.IMAGE_RECS_SUBMENU : g.bB.IMAGE_RECS_MENU
                         }));
             },
-            [o, w, L, k, H]
+            [o, j, L, k, H]
         );
     return (0, i.jsxs)(r.Menu, {
         onSelect: n,

@@ -8,26 +8,26 @@ e(192379);
 var t = e(557533),
     r = e.n(t),
     s = e(489948),
-    o = e(790472),
-    a = e(777207),
-    d = e(917626),
-    u = e(847987);
+    d = e(790472),
+    u = e(777207),
+    a = e(917626),
+    o = e(847987);
 function c(n) {
-    let { title: i, description: e, headerImage: t, onDetails: c, onPurchase: m, PurchaseButton: p, availabilityLabel: v } = n;
+    let { title: i, description: e, headerImage: t, onDetails: c, onPurchase: m, PurchaseButton: v, availabilityLabel: p } = n;
     return (0, l.jsx)(s.tE, {
         children: (0, l.jsxs)('div', {
-            className: r()(d.wrapper, u.hoverCard),
+            className: r()(a.wrapper, o.hoverCard),
             tabIndex: 0,
             onClick: () => {
                 null != c ? c() : null != m && m();
             },
             children: [
                 (0, l.jsx)('div', {
-                    className: d.cardHeaderImg,
+                    className: a.cardHeaderImg,
                     style: null != t ? { backgroundImage: null != t ? 'url('.concat(t.toString(), ')') : void 0 } : void 0,
                     children:
                         null == t &&
-                        (0, l.jsx)(o.P, {
+                        (0, l.jsx)(d.P, {
                             color: 'white',
                             size: 'custom',
                             height: 80,
@@ -35,32 +35,32 @@ function c(n) {
                         })
                 }),
                 (0, l.jsxs)('div', {
-                    className: d.details,
+                    className: a.details,
                     children: [
-                        (0, l.jsx)(a.x, {
+                        (0, l.jsx)(u.x, {
                             color: 'header-primary',
                             variant: 'text-md/semibold',
                             children: i
                         }),
                         null != e &&
-                            (0, l.jsx)(a.x, {
-                                className: d.description,
+                            (0, l.jsx)(u.x, {
+                                className: a.description,
                                 color: 'text-muted',
                                 variant: 'text-sm/normal',
                                 children: e
                             })
                     ]
                 }),
-                null != p &&
+                null != v &&
                     (0, l.jsxs)('div', {
-                        className: d.footer,
+                        className: a.footer,
                         children: [
-                            (0, l.jsx)(a.x, {
+                            (0, l.jsx)(u.x, {
                                 color: 'interactive-normal',
                                 variant: 'text-sm/normal',
-                                children: v
+                                children: p
                             }),
-                            (0, l.jsx)(p, {
+                            (0, l.jsx)(v, {
                                 onClick: (n) => {
                                     n.stopPropagation(), null == m || m();
                                 }

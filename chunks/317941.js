@@ -16,8 +16,8 @@ var i = n(200651),
     S = n(82142),
     T = n(246946),
     C = n(509545),
-    _ = n(55563),
-    E = n(259580),
+    E = n(55563),
+    _ = n(259580),
     I = n(572004),
     f = n(669079),
     N = n(296848),
@@ -201,8 +201,8 @@ class R extends s.PureComponent {
                                         })
                                     ]
                                 }),
-                                (0, i.jsx)(E.Z, {
-                                    direction: m ? E.Z.Directions.UP : E.Z.Directions.DOWN,
+                                (0, i.jsx)(_.Z, {
+                                    direction: m ? _.Z.Directions.UP : _.Z.Directions.DOWN,
                                     className: v.expandIcon
                                 })
                             ]
@@ -259,9 +259,9 @@ class R extends s.PureComponent {
             });
     }
 }
-t.Z = a.ZP.connectStores([_.Z, T.Z, S.Z, m.Z, C.Z, x.default], (e) => {
+t.Z = a.ZP.connectStores([E.Z, T.Z, S.Z, m.Z, C.Z, x.default], (e) => {
     let { skuId: t, subscriptionPlanId: n, giftStyle: i } = e,
-        s = _.Z.get(t);
+        s = E.Z.get(t);
     if (null == s) throw Error('SKU was unavailable while rendering gift.');
     let r = S.Z.getForGifterSKUAndPlan(x.default.getId(), t, n)
         .filter((e) => !e.isClaimed)

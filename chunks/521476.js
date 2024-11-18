@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(481060),
-    a = n(100527),
-    r = n(906732),
+    r = n(100527),
+    a = n(906732),
     s = n(545594),
     o = n(295474),
     c = n(981631),
@@ -17,7 +17,7 @@ var l = n(481060),
 function h(e) {
     var t, n;
     let { guild: h } = e,
-        { analyticsLocations: p } = (0, r.ZP)(a.Z.AUTOMOD_PROFILE_QUARANTINE_ALERT),
+        { analyticsLocations: p } = (0, a.ZP)(r.Z.AUTOMOD_PROFILE_QUARANTINE_ALERT),
         [m, f] = (0, o.ww)({
             guildId: null !== (t = null == h ? void 0 : h.id) && void 0 !== t ? t : c.lds,
             analyticsLocations: p,

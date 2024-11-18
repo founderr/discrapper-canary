@@ -29,10 +29,10 @@ t.default = (0, c.Z)(
     (0, o.Z)(
         function (n) {
             var t;
-            let { user: e, guildId: o, channelId: c, context: C, onSelect: D, moderationAlertId: R, analyticsLocation: x, analyticsLocations: b, onCloseContextMenu: j, showTransferOwnershipItem: Z } = n,
-                { analyticsLocations: v } = (0, _.ZP)(s.Z.CONTEXT_MENU),
-                h = (0, d.O)(),
-                P = null !== (t = null == b ? void 0 : b[0]) && void 0 !== t ? t : v[0],
+            let { user: e, guildId: o, channelId: c, context: C, onSelect: D, moderationAlertId: R, analyticsLocation: j, analyticsLocations: h, onCloseContextMenu: x, showTransferOwnershipItem: b } = n,
+                { analyticsLocations: Z } = (0, _.ZP)(s.Z.CONTEXT_MENU),
+                v = (0, d.O)(),
+                P = null !== (t = null == h ? void 0 : h[0]) && void 0 !== t ? t : Z[0],
                 G = (0, M.sE)(o, {
                     location: P,
                     targetUserId: e.id
@@ -48,21 +48,21 @@ t.default = (0, c.Z)(
                 k = i.useCallback(() => {
                     G(M.jQ.COPY_ID);
                 }, [G]),
-                Y = (0, u.e7)([A.ZP], () => A.ZP.isMember(o, e.id), [o, e.id]),
-                F = (0, U.Z)({
+                W = (0, u.e7)([A.ZP], () => A.ZP.isMember(o, e.id), [o, e.id]),
+                Y = (0, U.Z)({
                     userId: e.id,
                     guildId: o,
-                    sourceAnalyticsLocations: b
+                    sourceAnalyticsLocations: h
                 }),
-                K = (0, L.Z)(e.id, C),
-                B = (0, f.Z)({
+                F = (0, L.Z)(e.id, C),
+                K = (0, f.Z)({
                     guildId: o,
                     userId: e.id,
-                    analyticsLocation: null != x ? x : h.location,
+                    analyticsLocation: null != j ? j : v.location,
                     analyticsLocations: [P],
                     context: C
                 }),
-                W = (0, N.Z)({
+                B = (0, N.Z)({
                     user: e,
                     location: P
                 }),
@@ -84,7 +84,7 @@ t.default = (0, c.Z)(
             return (0, r.jsxs)(a.Menu, {
                 navId: 'user-context',
                 onClose: () => {
-                    (0, l.Zy)(), null == j || j();
+                    (0, l.Zy)(), null == x || x();
                 },
                 'aria-label': m.intl.string(m.t.liqwPD),
                 onSelect: D,
@@ -93,12 +93,12 @@ t.default = (0, c.Z)(
                         (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsxs)(a.MenuGroup, {
-                                    children: [F, K]
+                                    children: [Y, F]
                                 }),
                                 (0, r.jsxs)(a.MenuGroup, {
-                                    children: [B, q, W]
+                                    children: [K, q, B]
                                 }),
-                                Y &&
+                                W &&
                                     (0, r.jsxs)(r.Fragment, {
                                         children: [
                                             (0, r.jsx)(a.MenuGroup, { children: V }),
@@ -108,7 +108,7 @@ t.default = (0, c.Z)(
                                         ]
                                     }),
                                 null != R ? H : null,
-                                Z && null != X ? (0, r.jsx)(a.MenuGroup, { children: X }) : null
+                                b && null != X ? (0, r.jsx)(a.MenuGroup, { children: X }) : null
                             ]
                         }),
                     (0, r.jsx)(a.MenuGroup, { children: Q })

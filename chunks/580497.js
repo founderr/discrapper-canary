@@ -6,26 +6,26 @@ n.d(t, {
 var i = n(512722),
     r = n.n(i),
     s = n(525654),
-    a = n.n(s),
-    l = n(39612),
+    l = n.n(s),
+    a = n(39612),
     o = n(271579),
     c = n(756647),
     u = n(703656),
     d = n(314897),
     h = n(896797),
-    g = n(626135),
-    m = n(954824),
-    p = n(981631);
+    p = n(626135),
+    g = n(954824),
+    m = n(981631);
 function f(e) {
     let t = (function (e) {
             var t;
-            let n = null === (t = a().os) || void 0 === t ? void 0 : t.family;
+            let n = null === (t = l().os) || void 0 === t ? void 0 : t.family;
             if ('Android' === n || 'iOS' === n) {
                 let t = d.default.getFingerprint(),
                     n = (0, o.WS)();
                 return (
                     r()(null != e, 'generateAppPath: guildId cannot be null'),
-                    (0, o.ZP)((0, l.z0)(e), {
+                    (0, o.ZP)((0, a.z0)(e), {
                         utmSource: 'verify_hub_email',
                         fingerprint: t,
                         attemptId: n
@@ -36,12 +36,12 @@ function f(e) {
         })(e),
         n = (0, o.zS)(t);
     null != n &&
-        g.default.track(p.rMx.DEEP_LINK_CLICKED, {
+        p.default.track(m.rMx.DEEP_LINK_CLICKED, {
             fingerprint: (0, c.K)(n.fingerprint),
             attempt_id: n.attemptId,
             source: n.utmSource
         }),
-        m.Z.launch(t, (e) => {
+        g.Z.launch(t, (e) => {
             !e && (0, u.dL)(h.Z.fallbackRoute);
         });
 }

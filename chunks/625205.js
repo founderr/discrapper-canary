@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return E;
     }
 }),
     n(47120);
@@ -22,12 +22,12 @@ var s = n(392711),
     S = n(388032),
     T = n(593552),
     C = n(971436);
-function _() {
+function E() {
     let e, t;
     let { analyticsLocations: s } = (0, d.ZP)(),
-        _ = (0, l.e7)([g.Z], () => g.Z.theme),
+        E = (0, l.e7)([g.Z], () => g.Z.theme),
         {
-            canSetInputDevice: E,
+            canSetInputDevice: _,
             canSetOutputDevice: I,
             inputDeviceId: f,
             outputDeviceId: N
@@ -39,7 +39,7 @@ function _() {
         })),
         A = (0, l.e7)([h.Z], () => h.Z.getInputDevices()),
         b = (0, l.e7)([h.Z], () => h.Z.getOutputDevices());
-    !E &&
+    !_ &&
         (e = (0, i.jsx)(o.FormText, {
             type: o.FormText.Types.DESCRIPTION,
             className: C.marginTop8,
@@ -59,7 +59,7 @@ function _() {
         let t,
             { label: s, value: r } = e;
         if (m.Z.isCertified(r)) {
-            let e = (0, a.ap)(_) ? n(561259) : n(887695);
+            let e = (0, a.ap)(E) ? n(561259) : n(887695);
             t = (0, i.jsx)('img', {
                 src: e,
                 alt: 'Certified',

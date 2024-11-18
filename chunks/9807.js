@@ -14,8 +14,8 @@ var a,
     g = n(524444),
     b = n(843445),
     f = n(981631),
-    I = n(388032),
-    C = n(862756);
+    C = n(388032),
+    I = n(862756);
 function x(e, t, n) {
     return (
         t in e
@@ -33,8 +33,8 @@ let _ = (e) => {
         let { className: t, ...n } = e;
         return (0, i.jsx)(m.Z, {
             ...n,
-            className: l()(C.sizedToParent, t),
-            mediaPlayerClassName: C.sizedToParent,
+            className: l()(I.sizedToParent, t),
+            mediaPlayerClassName: I.sizedToParent,
             renderLinkComponent: g.iT
         });
     },
@@ -53,7 +53,7 @@ let _ = (e) => {
         width: 640,
         height: 360
     },
-    E = (e) => {
+    S = (e) => {
         let t,
             n,
             a,
@@ -84,10 +84,10 @@ let _ = (e) => {
                 });
         }
         return (0, i.jsx)('div', {
-            className: C.embedContainer,
+            className: I.embedContainer,
             children: (0, i.jsx)(c.BC, {
-                className: C.sizedToParent,
-                iframeWrapperClassName: C.sizedToParent,
+                className: I.sizedToParent,
+                iframeWrapperClassName: I.sizedToParent,
                 href: null,
                 thumbnail: t,
                 video: n,
@@ -107,7 +107,7 @@ let _ = (e) => {
             })
         });
     };
-class S extends (a = s.PureComponent) {
+class E extends (a = s.PureComponent) {
     componentDidMount() {
         let { items: e } = this.props;
         e.length > 0 && e[0].type === f.s9s.IMG && this.setState({ imageLoadingStartTime: new Map(this.state.imageLoadingStartTime).set(e[0].src, Date.now()) });
@@ -124,7 +124,7 @@ class S extends (a = s.PureComponent) {
             delay: t,
             initialPaused: a || r,
             renderItem: this.renderItem,
-            className: l()(C.smallCarousel, n),
+            className: l()(I.smallCarousel, n),
             themedPagination: s,
             onIntentionalChange: this.handleIntentionalChange,
             onChangeItem: this.handleChangeItem
@@ -187,7 +187,7 @@ class S extends (a = s.PureComponent) {
                 switch (e.type) {
                     case f.s9s.YOUTUBE_VIDEO:
                     case f.s9s.VIDEO:
-                        n = (0, i.jsx)(E, {
+                        n = (0, i.jsx)(S, {
                             item: e,
                             onPlay: this.handlePlay,
                             isMuted: a,
@@ -201,26 +201,26 @@ class S extends (a = s.PureComponent) {
                         if ('errored' === this.state.status.get(e.src)) {
                             let e = (0, i.jsx)(o.Heading, {
                                 variant: 'heading-xl/semibold',
-                                children: I.intl.string(I.t.UvDfMz)
+                                children: C.intl.string(C.t.UvDfMz)
                             });
                             return (0, i.jsx)('div', {
-                                className: C.errorContainer,
+                                className: I.errorContainer,
                                 children: void 0 !== this.props.errorComponent ? this.props.errorComponent : e
                             });
                         }
                         {
                             var d;
-                            let t = null !== (d = e.alt) && void 0 !== d ? d : I.intl.string(I.t.X4IxWF);
+                            let t = null !== (d = e.alt) && void 0 !== d ? d : C.intl.string(C.t.X4IxWF);
                             n = (0, i.jsxs)(i.Fragment, {
                                 children: [
                                     (0, i.jsx)(o.Spinner, {
-                                        className: l()(C.spinner, { [C.hidden]: void 0 !== this.state.status.get(e.src) }),
+                                        className: l()(I.spinner, { [I.hidden]: void 0 !== this.state.status.get(e.src) }),
                                         type: o.Spinner.Type.SPINNING_CIRCLE
                                     }),
                                     (0, i.jsx)('img', {
                                         onError: this.handleOnErrorImg,
                                         onLoad: this.handleOnLoadImg,
-                                        className: l()(C.smallCarouselImage, { [C.hidden]: 'loaded' !== this.state.status.get(e.src) }),
+                                        className: l()(I.smallCarouselImage, { [I.hidden]: 'loaded' !== this.state.status.get(e.src) }),
                                         src: e.src,
                                         alt: t
                                     })
@@ -232,15 +232,15 @@ class S extends (a = s.PureComponent) {
                         throw Error('Unexpected MediaType');
                 }
                 return (0, i.jsx)(o.Clickable, {
-                    className: C.smallCarouselItem,
+                    className: I.smallCarouselItem,
                     onClick: () => this.handleCurrentItemClick(e, t),
                     children: n
                 });
             });
     }
 }
-x(S, 'defaultProps', {
+x(E, 'defaultProps', {
     paused: !1,
     videoAutoPlay: !0
 }),
-    (t.Z = S);
+    (t.Z = E);

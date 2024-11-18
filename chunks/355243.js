@@ -8,8 +8,8 @@ var r = n(200651),
     o = n(192379),
     i = n(120356),
     l = n.n(i),
-    a = n(481060),
-    s = n(393903),
+    s = n(481060),
+    a = n(393903),
     c = n(604162),
     u = n(420212),
     d = n(584448);
@@ -32,7 +32,7 @@ function p(e) {
     o.useEffect(() => {
         null != h && (null == g ? N(null) : N(f(g, C, h)));
     }, [h, g, C]);
-    let k = (0, s.y)(() => {
+    let k = (0, a.y)(() => {
         if (null != k.current) A(k.current.getBoundingClientRect());
     });
     o.useLayoutEffect(() => {
@@ -63,7 +63,7 @@ function p(e) {
         className: d.cont,
         ref: k,
         children: [
-            (0, r.jsxs)(a.Clickable, {
+            (0, r.jsxs)(s.Clickable, {
                 className: l()(d.hitboxArea, { [d.interactionEnabled]: i }),
                 ignoreKeyPress: !0,
                 onClick: (e) => {
@@ -112,17 +112,17 @@ function p(e) {
                                 opacity: null != w ? 1 : 0
                             }
                         }),
-                    (0, r.jsx)(a.Progress, {
+                    (0, r.jsx)(s.Progress, {
                         className: d.progress,
                         percent: t,
                         foregroundColor: '#FFFFFF',
                         backgroundColor: null != p ? p : void 0,
-                        size: b ? a.Progress.Sizes.XSMALL : a.Progress.Sizes.XXSMALL,
+                        size: b ? s.Progress.Sizes.XSMALL : s.Progress.Sizes.XXSMALL,
                         animate: n
                     }),
                     b &&
                         null != M &&
-                        (0, r.jsx)(a.Text, {
+                        (0, r.jsx)(s.Text, {
                             className: d.timeDisplay,
                             variant: 'text-xs/normal',
                             style: {

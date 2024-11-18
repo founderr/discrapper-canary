@@ -36,7 +36,7 @@ function u(e, t) {
 }
 function d(e) {
     let { contentType: t, width: n, height: l } = e;
-    if (n > 0 && l > 0) {
+    if (null != n && n > 0 && null != l && l > 0) {
         if ((0, i.tw)(t)) return 'IMAGE';
         if ((0, i.X2)(t)) return 'VIDEO';
     }

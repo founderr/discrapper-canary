@@ -4,22 +4,22 @@ n.d(t, {
     }
 }),
     n(47120);
-var r = n(553813),
-    i = n.n(r),
-    o = n(358085);
-let a = { [o.PlatformTypes.WINDOWS]: { nvidia: '>=397.93.0' } };
+var i = n(553813),
+    r = n.n(i),
+    l = n(358085);
+let a = { [l.PlatformTypes.WINDOWS]: { nvidia: '>=397.93.0' } };
 function s(e) {
-    let t = a[(0, o.getPlatform)()];
+    let t = a[(0, l.getPlatform)()];
     if (null == t) return !1;
     for (let n of Object.keys(e)) {
-        let r = e[n],
-            o = t[n];
-        if (null == r || null == o || null != r.error) continue;
+        let i = e[n],
+            l = t[n];
+        if (null == i || null == l || null != i.error) continue;
         let a = (function (e) {
             var t, n;
             return ''.concat(null !== (t = e.major) && void 0 !== t ? t : 0, '.').concat(null !== (n = e.minor) && void 0 !== n ? n : 0, '.0');
-        })(r);
-        if (!i().satisfies(a, o)) return !0;
+        })(i);
+        if (!r().satisfies(a, l)) return !0;
     }
     return !1;
 }

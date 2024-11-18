@@ -1,6 +1,6 @@
 var l = n(39612),
-    i = n(271579),
-    r = n(756647),
+    r = n(271579),
+    i = n(756647),
     a = n(625128),
     u = n(626135),
     o = n(954824),
@@ -15,14 +15,14 @@ e.Z = {
     openMobileApp(t, e) {
         if (null != platform.ua && platform.ua.toLowerCase().indexOf('googlebot') > -1) return;
         let n = null != t ? (0, l.Oh)(t) : (0, l.Gk)(),
-            a = (0, i.WS)(),
-            s = (0, i.ZP)(n, {
+            a = (0, r.WS)(),
+            s = (0, r.ZP)(n, {
                 utmSource: d,
                 fingerprint: e,
                 attemptId: a
             });
         u.default.track(c.rMx.DEEP_LINK_CLICKED, {
-            fingerprint: (0, r.K)(e),
+            fingerprint: (0, i.K)(e),
             attempt_id: a,
             source: d,
             guild_template_code: t

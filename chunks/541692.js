@@ -1,6 +1,6 @@
 let l;
-var i,
-    r = n(442837),
+var r,
+    i = n(442837),
     a = n(570140),
     u = n(133080);
 function o(t, e, n) {
@@ -22,7 +22,7 @@ function c(t) {
     let { countryCode: n } = t;
     if (null != n) s = null !== (e = (0, u.Zz)(n)) && void 0 !== e ? e : (0, u.K4)();
 }
-class d extends (i = r.ZP.DeviceSettingsStore) {
+class d extends (r = i.ZP.DeviceSettingsStore) {
     initialize(t) {
         if (null != t) l = t.selectedCountryCode;
     }

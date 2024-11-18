@@ -7,8 +7,8 @@ n.d(t, {
     n(773603);
 var l = n(200651),
     i = n(192379),
-    s = n(481060),
-    r = n(507453),
+    r = n(481060),
+    s = n(507453),
     o = n(388032);
 function a(e) {
     let { mfaChallenge: t, finish: n, setSlide: a, onClose: d, isSlideReady: u } = e,
@@ -40,12 +40,12 @@ function a(e) {
                         });
             },
             children: [
-                (0, l.jsx)(r.Z.SlideHeader, { onClose: d }),
-                (0, l.jsx)(r.Z.SlideContent, {
-                    children: (0, l.jsxs)(s.FormItem, {
+                (0, l.jsx)(s.Z.SlideHeader, { onClose: d }),
+                (0, l.jsx)(s.Z.SlideContent, {
+                    children: (0, l.jsxs)(r.FormItem, {
                         title: o.intl.string(o.t['CIGa+/']),
                         children: [
-                            (0, l.jsx)(s.TextInput, {
+                            (0, l.jsx)(r.TextInput, {
                                 inputRef: x,
                                 onChange: S,
                                 value: g,
@@ -54,11 +54,11 @@ function a(e) {
                                 spellCheck: 'false',
                                 disabled: c
                             }),
-                            (0, l.jsx)(r.Z.SlideError, { error: f })
+                            (0, l.jsx)(s.Z.SlideError, { error: f })
                         ]
                     })
                 }),
-                (0, l.jsx)(r.Z.SlideFooter, {
+                (0, l.jsx)(s.Z.SlideFooter, {
                     mfaChallenge: t,
                     setSlide: a,
                     showConfirm: !0,

@@ -118,7 +118,7 @@ function j(e) {
             includeNonEmbeddedApps: s
         }),
         S = (0, d.Z)({ guildId: n.getGuildId() }),
-        P = i.useMemo(() => {
+        y = i.useMemo(() => {
             var e;
             if (!r) return [];
             return (0, x.N)(C, {
@@ -205,11 +205,11 @@ function j(e) {
                 ]
             });
         }, [r, C, l, n, t]),
-        y = i.useMemo(() => {
-            if (0 === P.length) return [];
+        P = i.useMemo(() => {
+            if (0 === y.length) return [];
             let e = new Map(j.map((e) => [e.id, e]));
             return a().compact(
-                P.map((n) => {
+                y.map((n) => {
                     var t;
                     let i = e.get(n.applicationId);
                     if (null == i) return null;
@@ -221,7 +221,7 @@ function j(e) {
                     };
                 })
             );
-        }, [j, P, v]),
+        }, [j, y, v]),
         T = i.useMemo(() => {
             var e;
             let i = [];
@@ -297,10 +297,10 @@ function j(e) {
                 sortComparers: [b, E]
             });
         }, [s, f, o, n, t, j, S]),
-        L = y.length > 0,
+        L = P.length > 0,
         R = T.length > 0;
     return {
-        commandResults: y,
+        commandResults: P,
         hasCommandResults: L,
         applicationResults: T,
         hasApplicationResults: R,

@@ -19,7 +19,7 @@ var i = n(200651),
     p = n(388032),
     x = n(693189);
 function S(e) {
-    let { onChange: t, onClose: n, color: r, suggestedColors: S, disabled: T, label: C, colorPickerMiddle: _, colorPickerFooter: E, showEyeDropper: I } = e,
+    let { onChange: t, onClose: n, color: r, suggestedColors: S, disabled: T, label: C, colorPickerMiddle: E, colorPickerFooter: _, showEyeDropper: I } = e,
         f = s.useRef(null),
         N = (0, d.useToken)(c.Z.colors.BACKGROUND_PRIMARY).hex(),
         A = c.Z.colors.BACKGROUND_ACCENT.css,
@@ -27,13 +27,13 @@ function S(e) {
         v = (0, o.Rf)(r),
         j = v === N ? A : v,
         O = (0, m.Lq)(b ? g.Ilk.WHITE_500 : g.Ilk.PRIMARY_530),
-        R = (0, u.Z)(_),
-        P = (0, u.Z)(E),
+        R = (0, u.Z)(E),
+        P = (0, u.Z)(_),
         [D, y] = s.useState((0, a.Z)());
     return (
         s.useEffect(() => {
-            (R !== _ || P !== E) && y((0, a.Z)());
-        }, [E, _, P, R]),
+            (R !== E || P !== _) && y((0, a.Z)());
+        }, [_, E, P, R]),
         (0, i.jsx)(d.Popout, {
             positionKey: D,
             renderPopout: (e) =>
@@ -42,8 +42,8 @@ function S(e) {
                     value: r,
                     onChange: t,
                     suggestedColors: S,
-                    middle: _,
-                    footer: E,
+                    middle: E,
+                    footer: _,
                     showEyeDropper: I
                 }),
             onRequestClose: n,

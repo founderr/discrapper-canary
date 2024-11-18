@@ -7,18 +7,18 @@ var r = n(200651),
     u = n(100527),
     o = n(906732),
     c = n(488499),
-    h = n(81245),
+    h = n(222062),
     d = n(530329),
     p = n(626135),
-    g = n(197712),
-    A = n(511004),
-    E = n(486324),
+    A = n(197712),
+    E = n(511004),
+    g = n(486324),
     C = n(981631),
     m = n(678916),
     w = n(388032),
     f = n(695384);
 e.default = (t) => {
-    let { file: e, imgURI: n, transitionState: R, allowSkip: M = !1, onCrop: N, onClose: v, uploadType: x = E.pC.AVATAR, showUpsellHeader: _ = !1, analyticsPage: y } = t,
+    let { file: e, imgURI: n, transitionState: R, allowSkip: M = !1, onCrop: N, onClose: v, uploadType: x = g.pC.AVATAR, showUpsellHeader: _ = !1, analyticsPage: y } = t,
         [I, D] = i.useState({
             width: 0,
             height: 0
@@ -46,7 +46,7 @@ e.default = (t) => {
         Y = i.useRef(null),
         J = 'image/gif' === e.type;
     i.useEffect(() => {
-        (0, A.Z)();
+        (0, E.Z)();
     }, []),
         i.useEffect(() => {
             J &&
@@ -58,53 +58,53 @@ e.default = (t) => {
         }, [_, y, J]);
     let K = () => {
             switch (x) {
-                case E.pC.BANNER:
+                case g.pC.BANNER:
                     return {
-                        height: E.f,
-                        width: E.L0
+                        height: g.f,
+                        width: g.L0
                     };
-                case E.pC.VIDEO_BACKGROUND:
+                case g.pC.VIDEO_BACKGROUND:
                     return m.HE;
-                case E.pC.AVATAR:
-                case E.pC.AVATAR_DECORATION:
+                case g.pC.AVATAR:
+                case g.pC.AVATAR_DECORATION:
                     return {
                         height: C.dGM,
                         width: C.dGM
                     };
-                case E.pC.GUILD_BANNER:
+                case g.pC.GUILD_BANNER:
                     return {
-                        height: E._T,
-                        width: E.X_
+                        height: g._T,
+                        width: g.X_
                     };
-                case E.pC.SCHEDULED_EVENT_IMAGE:
+                case g.pC.SCHEDULED_EVENT_IMAGE:
                     return {
-                        height: E.xT,
-                        width: E.d6
+                        height: g.xT,
+                        width: g.d6
                     };
-                case E.pC.HOME_HEADER:
+                case g.pC.HOME_HEADER:
                     return {
-                        height: E.Uo,
-                        width: E.N8
+                        height: g.Uo,
+                        width: g.N8
                     };
             }
         },
         X = i.useCallback(
             (t, e, n) => {
-                (F.current = (0, g.U$)(t, e, n)), null != z.current && (z.current.style.transform = 'translate3d('.concat(F.current.x, 'px, ').concat(F.current.y, 'px, 0)'));
+                (F.current = (0, A.U$)(t, e, n)), null != z.current && (z.current.style.transform = 'translate3d('.concat(F.current.x, 'px, ').concat(F.current.y, 'px, 0)'));
             },
             [z]
         ),
         Z = i.useCallback(() => {
             if (null == z.current || S > 1) return;
             let { width: t, height: e } = z.current.getBoundingClientRect(),
-                { width: n, height: r } = (0, g.Es)(x, t, e),
-                i = (0, g.AK)(x, n, r, e);
+                { width: n, height: r } = (0, A.Es)(x, t, e),
+                i = (0, A.AK)(x, n, r, e);
             V({
                 width: n,
                 height: r
             }),
                 D(i),
-                B((0, g.kH)(n, r, i));
+                B((0, A.kH)(n, r, i));
         }, [x, S]),
         W = i.useCallback(
             (t) => {
@@ -130,7 +130,7 @@ e.default = (t) => {
                 r = K();
             if (J)
                 try {
-                    let { result: i, cancelFn: a } = await (0, g.$p)(e, n, I, F.current, r);
+                    let { result: i, cancelFn: a } = await (0, A.$p)(e, n, I, F.current, r);
                     (Y.current = a), (t = await i), (Y.current = null);
                 } catch (t) {
                     var i;
@@ -158,8 +158,8 @@ e.default = (t) => {
         i.useEffect(() => {
             if (O) return window.addEventListener('mousemove', W), () => window.removeEventListener('mousemove', W);
         }, [W, O]);
-    let tt = x === E.pC.AVATAR || x === E.pC.BANNER,
-        te = (0, h.Mu)('ImageCroppingModal', !tt);
+    let tt = x === g.pC.AVATAR || x === g.pC.BANNER,
+        te = (0, h.M)(!tt);
     return (0, r.jsx)(o.Gt, {
         value: H,
         children: (0, r.jsxs)(l.ModalRoot, {
@@ -197,7 +197,7 @@ e.default = (t) => {
                                         ...(() => {
                                             if (null == k) return {};
                                             let t = k.width / k.height,
-                                                e = q() && t > E.MY ? I.height / k.height : 1;
+                                                e = q() && t > g.MY ? I.height / k.height : 1;
                                             return {
                                                 width: k.width * S * e,
                                                 minWidth: k.width * S * e,
@@ -220,7 +220,7 @@ e.default = (t) => {
                                     draggable: !1
                                 }),
                                 (0, r.jsx)('div', {
-                                    className: x === E.pC.AVATAR ? f.overlayAvatar : f.overlayBanner,
+                                    className: x === g.pC.AVATAR ? f.overlayAvatar : f.overlayBanner,
                                     style: {
                                         opacity: null == k ? 0 : 1,
                                         width: I.width,
@@ -245,7 +245,7 @@ e.default = (t) => {
                                     asValueChanges: (t) => {
                                         if (null == k) return;
                                         let { width: e, height: n } = k,
-                                            r = (0, g.kH)(e * t, n * t, I),
+                                            r = (0, A.kH)(e * t, n * t, I),
                                             { x: i, y: s } = F.current;
                                         (!(0, a.inRange)(i, r.right, r.left) || !(0, a.inRange)(s, r.top, r.bottom)) && X(i, s, r), T(t), B(r);
                                     },

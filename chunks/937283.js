@@ -5,8 +5,8 @@ t.d(n, {
 });
 var i = t(200651),
     l = t(192379),
-    o = t(442837),
-    r = t(100527),
+    r = t(442837),
+    o = t(100527),
     a = t(906732),
     s = t(613464),
     d = t(6025),
@@ -16,9 +16,9 @@ var i = t(200651),
     h = t(743140);
 function _(e) {
     let { guildId: n } = e,
-        t = (0, o.e7)([u.Z], () => u.Z.getGuild(n)),
-        { analyticsLocations: _ } = (0, a.ZP)(r.Z.MEMBER_SAFETY_PAGE),
-        g = (0, o.e7)([c.ZP], () => c.ZP.getGuildSidebarState(n), [n]),
+        t = (0, r.e7)([u.Z], () => u.Z.getGuild(n)),
+        { analyticsLocations: _ } = (0, a.ZP)(o.Z.MEMBER_SAFETY_PAGE),
+        g = (0, r.e7)([c.ZP], () => c.ZP.getGuildSidebarState(n), [n]),
         C = l.useCallback(() => {
             d.Z.closeGuildSidebar(n);
         }, [n]),

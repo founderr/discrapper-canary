@@ -7,14 +7,14 @@ n.d(t, {
     n(653041);
 var i = n(442837),
     l = n(136015),
-    a = n(565799),
-    r = n(501655);
+    r = n(565799),
+    a = n(501655);
 function s(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3,
         [n] = (0, i.e7)(
-            [a.Z],
+            [r.Z],
             () => {
-                let n = a.Z.getMutableParticipants(e).filter((e) => e.type === r.Ui.VOICE),
+                let n = r.Z.getMutableParticipants(e).filter((e) => e.type === a.Ui.VOICE),
                     i = [];
                 for (let e of n) {
                     if (i.length >= t) break;
@@ -25,7 +25,7 @@ function s(e) {
                         participants: n,
                         usersInSummary: i
                     },
-                    a.Z.getParticipantsVersion(e)
+                    r.Z.getParticipantsVersion(e)
                 ];
             },
             [e, t],

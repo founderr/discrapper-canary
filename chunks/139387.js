@@ -1,6 +1,6 @@
 var i = n(570140),
-    l = n(434404),
-    r = n(821864),
+    r = n(434404),
+    l = n(821864),
     T = n(308063);
 t.Z = {
     init() {
@@ -59,7 +59,7 @@ t.Z = {
     async saveApplicationPermissions(e, t, n) {
         try {
             i.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SUBMITTING' }),
-                await r.U3({
+                await l.U3({
                     applicationId: e,
                     commandId: e,
                     defaultEveryoneValue: !0,
@@ -77,7 +77,7 @@ t.Z = {
     },
     async saveIntegration(e, t) {
         try {
-            i.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SUBMITTING' }), await l.Z.updateIntegration(e, t.id, t.expire_behavior, t.expire_grace_period, t.enable_emoticons), i.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SAVE_SUCCESS' });
+            i.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SUBMITTING' }), await r.Z.updateIntegration(e, t.id, t.expire_behavior, t.expire_grace_period, t.enable_emoticons), i.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SAVE_SUCCESS' });
         } catch (e) {
             i.Z.dispatch({
                 type: 'INTEGRATION_SETTINGS_SAVE_FAILURE',

@@ -10,24 +10,24 @@ var o = t(200651),
     d = t(266395),
     f = t(200305),
     m = t(592286),
-    b = t(388032),
-    h = t(916470);
+    h = t(388032),
+    b = t(916470);
 let _ = () =>
     (0, o.jsx)(l.Z, {
         submitting: !1,
-        message: b.intl.string(b.t['8g514e']),
+        message: h.intl.string(h.t['8g514e']),
         onReset: () => {
             (0, d.PE)(!1);
         },
-        onResetText: b.intl.string(b.t['ETE/oK']),
+        onResetText: h.intl.string(h.t['ETE/oK']),
         onSave: () => {
             (0, d.PE)(!1), (0, s.closeModal)(m.Pn);
         },
-        onSaveText: b.intl.string(b.t['Xt+UaW']),
+        onSaveText: h.intl.string(h.t['Xt+UaW']),
         onSaveButtonColor: s.ButtonColors.RED
     });
 n.default = (e) => {
-    let { guildId: n, transitionState: t, onClose: l, onComplete: m, isPreview: b = !1 } = e,
+    let { guildId: n, transitionState: t, onClose: l, onComplete: m, isPreview: h = !1 } = e,
         p = (0, d.rb)((e) => e.shouldShowWarning),
         x = (0, i.e7)([u.Z], () => u.Z.get(n)),
         C = (0, c.Dt)();
@@ -40,20 +40,20 @@ n.default = (e) => {
               children: [
                   (0, o.jsxs)(s.ModalRoot, {
                       size: s.ModalSize.MEDIUM,
-                      className: h.container,
+                      className: b.container,
                       transitionState: t,
                       'aria-labelledby': C,
                       children: [
                           (0, o.jsx)(s.ModalCloseButton, {
                               onClick: () => l(!1),
-                              className: h.closeButton
+                              className: b.closeButton
                           }),
                           (0, o.jsx)(f.Z, {
                               headerId: C,
                               guildId: n,
                               onClose: l,
                               onComplete: m,
-                              isPreview: b
+                              isPreview: h
                           })
                       ]
                   }),
@@ -61,7 +61,7 @@ n.default = (e) => {
                       children:
                           !0 === p &&
                           (0, o.jsx)(s.SlideIn, {
-                              className: h.notice,
+                              className: b.notice,
                               children: (0, o.jsx)(_, {})
                           })
                   })

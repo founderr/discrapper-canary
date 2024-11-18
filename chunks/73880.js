@@ -12,15 +12,15 @@ n.d(t, {
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    a = n.n(i),
-    o = n(481060),
+    o = n.n(i),
+    a = n(481060),
     l = n(489813),
     s = n(592286),
     c = n(633656);
 function u(e) {
     let { value: t, placeholder: n, onChange: i, disabled: l, className: u, autofocus: d } = e;
-    return (0, r.jsx)(o.TextArea, {
-        className: a()(c.paragraphFieldBody, u),
+    return (0, r.jsx)(a.TextArea, {
+        className: o()(c.paragraphFieldBody, u),
         maxLength: s.RS,
         value: null != t ? t : '',
         placeholder: null != n ? n : '',

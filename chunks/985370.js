@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     l = n(192379),
-    a = n(120356),
-    r = n.n(a),
+    r = n(120356),
+    a = n.n(r),
     s = n(442837),
     o = n(481060),
     c = n(774078),
@@ -14,7 +14,7 @@ var i = n(200651),
     f = n(313439);
 t.Z = (e) => {
     let { channel: t, className: n } = e,
-        { isHovered: a, setIsHovered: g, onMouseEnter: C, onMouseLeave: x, cancelTimers: _ } = (0, d.Z)(200, 300),
+        { isHovered: r, setIsHovered: g, onMouseEnter: C, onMouseLeave: x, cancelTimers: _ } = (0, d.Z)(200, 300),
         [v, I] = l.useState(!1),
         E = (0, s.e7)([h.Z], () => h.Z.effectCooldownEndTime),
         b = l.useMemo(() => (null != E ? (E.getTime() - Date.now()) / 1000 : 0), [E]),
@@ -31,11 +31,11 @@ t.Z = (e) => {
         }, [x, v]),
         j = l.useCallback(
             (e, t) => {
-                _(), I(!v), (!a || v) && (null == t || t(e));
+                _(), I(!v), (!r || v) && (null == t || t(e));
             },
-            [_, v, a]
+            [_, v, r]
         ),
-        A = a || v;
+        A = r || v;
     return (0, i.jsx)(o.Popout, {
         shouldShow: A,
         animationPosition: 'bottom',
@@ -62,7 +62,7 @@ t.Z = (e) => {
                 isCenterButton: !0,
                 totalCooldownSeconds: b,
                 remainingCooldownSeconds: Z,
-                className: r()(f.controlButton, n),
+                className: a()(f.controlButton, n),
                 onKeyDown: (e) => {
                     var t, n;
                     return (t = e), (n = l), void (t.keyCode === m.yXg.ENTER && t.keyCode === m.yXg.SPACE && j(t, n));

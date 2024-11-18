@@ -10,15 +10,15 @@ var i = n(200651),
     u = n(37234),
     f = n(597688),
     m = n(884697),
-    p = n(81245),
+    p = n(222062),
     h = n(74538),
     g = n(731896),
     v = n(528439),
     x = n(981631),
     I = n(388032),
     C = n(657992),
-    P = n(223223);
-let j = () => 80,
+    j = n(223223);
+let P = () => 80,
     Z = (e) => {
         let { children: t, className: n, isSelected: r = !1, ...l } = e;
         return (0, i.jsx)(d.Clickable, {
@@ -31,17 +31,17 @@ let j = () => 80,
     E = (e) => {
         var t;
         let { user: n, profileEffect: l, innerRef: o, section: s, isSelected: u, ...x } = e,
-            j = (0, g.V)(l.id),
+            P = (0, g.V)(l.id),
             E = (0, c.e7)([f.Z], () => {
                 let e = f.Z.getProduct(l.skuId);
                 return (0, m.G1)(e);
             }),
             _ = (0, m.Yq)(l.skuId),
             N = r.useRef(null),
-            { accessibilityLabel: y, thumbnailPreviewSrc: b, title: S } = null !== (t = null == j ? void 0 : j.config) && void 0 !== t ? t : {},
+            { accessibilityLabel: y, thumbnailPreviewSrc: b, title: S } = null !== (t = null == P ? void 0 : P.config) && void 0 !== t ? t : {},
             T = h.ZP.canUseCollectibles(n),
             A = s === v.$0.PREMIUM_PURCHASE && !T,
-            B = (0, p.Mu)('ProfileEffectPresetItem');
+            B = (0, p.M)();
         return (0, i.jsxs)(Z, {
             className: !A || u || B ? void 0 : C.decorationGridItemChurned,
             innerRef: null != o ? o : N,
@@ -49,7 +49,7 @@ let j = () => 80,
             ...x,
             children: [
                 (0, i.jsx)('img', {
-                    src: P,
+                    src: j,
                     alt: y,
                     className: C.presetEffectBackground
                 }),
@@ -198,7 +198,7 @@ t.Z = (e) => {
                 var n, i;
                 return null !== (i = null === (n = f[e].items[t]) || void 0 === n ? void 0 : n.id) && void 0 !== i ? i : null;
             },
-            getItemHeight: j,
+            getItemHeight: P,
             removeEdgeItemGutters: !0
         })
     });

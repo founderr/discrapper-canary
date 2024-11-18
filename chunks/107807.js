@@ -31,8 +31,8 @@ var c,
     I = t(277800),
     g = t(471445),
     k = t(819602),
-    S = t(706454),
-    E = t(598077),
+    E = t(706454),
+    S = t(598077),
     b = t(314897),
     G = t(592125),
     O = t(553795),
@@ -60,7 +60,7 @@ function Y(e) {
         className: r()(z.platformIcon, t)
     });
 }
-function Q(e) {
+function W(e) {
     let { channel: n, className: t } = e,
         c = (0, g.KS)(n);
     return (0, a.jsxs)('div', {
@@ -76,7 +76,7 @@ function Q(e) {
         ]
     });
 }
-function q(e) {
+function Q(e) {
     let n,
         { connectionType: t, connectionMetadataField: c, operator: o, value: l, result: i, description: r } = e,
         s = null;
@@ -138,7 +138,7 @@ function q(e) {
         })
     );
 }
-function W(e) {
+function q(e) {
     let { eligibilityStatesGroups: n, onPlatformConnect: t, onPlatformConnected: c } = e,
         [o, i] = l.useState({}),
         [s, u] = l.useState(0),
@@ -169,9 +169,9 @@ function W(e) {
                     I = (null == N || N.result) && f.every((e) => e.result),
                     g = m.find((e) => null != e.application),
                     k = T.Z.get(e),
-                    S = null == k || k.enabled,
+                    E = null == k || k.enabled,
                     b = null == g ? void 0 : g.application,
-                    G = (null == b ? void 0 : b.bot) != null ? new E.Z(b.bot) : null;
+                    G = (null == b ? void 0 : b.bot) != null ? new S.Z(b.bot) : null;
                 L.SJ.includes(null !== (n = null == b ? void 0 : b.id) && void 0 !== n ? n : '')
                     ? (u = (0, a.jsx)(F.Z, {
                           className: z.botTag,
@@ -200,7 +200,7 @@ function W(e) {
                                 className: z.connectionsChecksGroupRetryButton,
                                 children: K.intl.string(K.t['5911LS'])
                             })
-                          : S
+                          : E
                             ? (0, a.jsx)(R.Z, {
                                   direction: R.Z.Directions.RIGHT,
                                   className: z.connectionsChecksGroupCaret
@@ -214,9 +214,9 @@ function W(e) {
                     (0, a.jsxs)(
                         p.Clickable,
                         {
-                            className: r()(z.connectionsChecksGroup, I ? z.connectionsChecksGroupPassed : null, S ? null : z.connectionsChecksGroupPlatformDisabled),
+                            className: r()(z.connectionsChecksGroup, I ? z.connectionsChecksGroupPassed : null, E ? null : z.connectionsChecksGroupPlatformDisabled),
                             onClick:
-                                !I && S
+                                !I && E
                                     ? () => {
                                           var e, n, c;
                                           return (
@@ -283,7 +283,7 @@ function W(e) {
                                                 d()(null != c, 'operator is null'),
                                                 d()(null != o, 'value is null'),
                                                 (0, a.jsx)(
-                                                    q,
+                                                    Q,
                                                     {
                                                         connectionType: n,
                                                         connectionMetadataField: t,
@@ -390,15 +390,15 @@ function J(e) {
         [h, m] = l.useState(!1),
         [x, N] = l.useState(!0),
         [v, y] = l.useState(!1),
-        [g, E] = l.useState(!0),
+        [g, S] = l.useState(!0),
         [R, L] = l.useState(!1),
         Z = (0, C.e7)([O.Z], () => O.Z.getAccounts()),
         F = (0, C.e7)([b.default], () => b.default.getId()),
         [U, Y] = l.useState(null),
-        [q, J] = l.useState(null),
+        [Q, J] = l.useState(null),
         [$, ee] = l.useState(null),
         en = (0, A.ZP)(),
-        et = (0, C.e7)([S.default], () => S.default.locale),
+        et = (0, C.e7)([E.default], () => E.default.locale),
         ec = (0, C.e7)([M.ZP], () => M.ZP.getMember(c, F)),
         eo = Object.values((0, C.e7)([G.Z], () => G.Z.getMutableGuildChannelsForGuild(c))).filter((e) => P.Z.can(D.Plq.VIEW_CHANNEL, e) && P.Z.can(D.Plq.SEND_MESSAGES, e) && (0, I.Z)(e).includes(o));
     function ea() {
@@ -479,7 +479,7 @@ function J(e) {
                         case 1: {
                             var e, n;
                             d()(null != U, 'lastPlatformConnected is null');
-                            let t = null !== (n = null == q ? void 0 : q.name) && void 0 !== n ? n : null === (e = T.Z.get(U)) || void 0 === e ? void 0 : e.name;
+                            let t = null !== (n = null == Q ? void 0 : Q.name) && void 0 !== n ? n : null === (e = T.Z.get(U)) || void 0 === e ? void 0 : e.name;
                             return (0, a.jsxs)(p.ModalHeader, {
                                 className: z.header,
                                 separator: !1,
@@ -531,7 +531,7 @@ function J(e) {
                                                       }),
                                                       (0, a.jsx)(p.ScrollerThin, {
                                                           className: z.connectionsChecksGroups,
-                                                          children: (0, a.jsx)(W, {
+                                                          children: (0, a.jsx)(q, {
                                                               eligibilityStatesGroups: s,
                                                               onPlatformConnect: es,
                                                               onPlatformConnected: ed
@@ -562,7 +562,7 @@ function J(e) {
                                             ? void 0
                                             : $.find((e) => {
                                                   let { application: n } = e;
-                                                  return n.id === (null == q ? void 0 : q.id);
+                                                  return n.id === (null == Q ? void 0 : Q.id);
                                               });
                                 return (0, a.jsxs)(p.ModalContent, {
                                     children: [
@@ -615,7 +615,7 @@ function J(e) {
                                                                                     (0, a.jsx)(X, {
                                                                                         account: e,
                                                                                         setShowPreviewInvisibleIcon: L,
-                                                                                        setShowPreviewMetadata: E
+                                                                                        setShowPreviewMetadata: S
                                                                                     })
                                                                                 ]
                                                                             })
@@ -681,7 +681,7 @@ function J(e) {
                                         }),
                                         (0, a.jsx)(p.ScrollerThin, {
                                             className: z.channelsGranted,
-                                            children: eo.map((e) => (0, a.jsx)(Q, { channel: e }, e.id))
+                                            children: eo.map((e) => (0, a.jsx)(W, { channel: e }, e.id))
                                         })
                                     ]
                                 });

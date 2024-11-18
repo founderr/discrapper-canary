@@ -1,6 +1,6 @@
 n.d(t, {
     S: function () {
-        return a;
+        return r;
     }
 });
 var o = n(259076),
@@ -11,6 +11,6 @@ let l = {
     [o.pw.NEW_EMAIL]: () => s.intl.string(s.t.oOqQj4),
     [o.pw.SOMETHING_ELSE]: () => s.intl.string(s.t.p38n1d)
 };
-function a(e) {
+function r(e) {
     return l[e]();
 }

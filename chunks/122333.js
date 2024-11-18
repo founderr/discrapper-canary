@@ -20,8 +20,8 @@ var l = n(481060),
     C = n(358085),
     v = n(929809),
     S = n(179645),
-    T = n(701476),
-    N = n(785997),
+    N = n(701476),
+    T = n(785997),
     A = n(981631),
     b = n(188785),
     x = n(630724);
@@ -41,18 +41,18 @@ class L extends s.Z {
             a = S.Z.getType();
         if (null == a) return;
         switch (a) {
-            case T.M5.INVITE_UNCLAIMED:
+            case N.M5.INVITE_UNCLAIMED:
                 h.Z.flowStart(x.MK.INVITE, x.EW.NUF_STARTED);
                 break;
-            case T.M5.ORGANIC_REGISTERED:
+            case N.M5.ORGANIC_REGISTERED:
                 h.Z.flowStart(x.MK.ORGANIC, x.EW.NUF_STARTED);
                 break;
-            case T.M5.MARKETING_UNCLAIMED:
+            case N.M5.MARKETING_UNCLAIMED:
                 h.Z.flowStart(x.MK.ORGANIC_MARKETING, x.EW.NUF_STARTED);
         }
         let s = !1,
             Z = _.Z.getGuildId();
-        if (a === T.M5.INVITE_UNCLAIMED) {
+        if (a === N.M5.INVITE_UNCLAIMED) {
             let e = f.Z.getGuild(Z);
             (null == e ? void 0 : e.hasVerificationGate()) && ((s = !0), (0, m.RM)(e.id));
         }
@@ -64,25 +64,25 @@ class L extends s.Z {
                 open: async function e(e) {
                     let t = (e) => {
                         switch (e) {
-                            case N.F.AGE_GATE:
+                            case T.F.AGE_GATE:
                                 h.Z.flowStep(x.MK.ANY, x.EW.AGE_GATE);
                                 break;
-                            case N.F.CHOOSE_TEMPLATE:
+                            case T.F.CHOOSE_TEMPLATE:
                                 h.Z.flowStep(x.MK.ANY, x.X2.GUILD_TEMPLATES);
                                 break;
-                            case N.F.CUSTOMIZE_GUILD:
+                            case T.F.CUSTOMIZE_GUILD:
                                 h.Z.flowStep(x.MK.ANY, x.X2.GUILD_CREATE);
                                 break;
-                            case N.F.CHANNEL_PROMPT:
+                            case T.F.CHANNEL_PROMPT:
                                 h.Z.flowStep(x.MK.ANY, x.X2.CHANNEL_PROMPT);
                                 break;
-                            case N.F.JOIN_GUILD:
+                            case T.F.JOIN_GUILD:
                                 h.Z.flowStep(x.MK.ANY, x.X2.JOIN_GUILD);
                                 break;
-                            case N.F.CREATION_INTENT:
+                            case T.F.CREATION_INTENT:
                                 h.Z.flowStep(x.MK.ANY, x.X2.CREATION_INTENT);
                                 break;
-                            case N.F.COMPLETE:
+                            case T.F.COMPLETE:
                                 h.Z.flowStep(x.MK.ANY, x.X2.SUCCESS);
                                 break;
                             case null:

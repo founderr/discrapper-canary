@@ -54,16 +54,16 @@ function x(e) {
                 ? n
                 : j;
         }, [j, N]),
-        P = v(g),
-        y = v(A),
+        y = v(g),
+        P = v(A),
         T = l.useCallback(() => {
             var e, n, t, i, l, o, r, s, c, d;
             let u = x.current,
                 m = g.current,
                 p = b.current,
                 h = null == E ? void 0 : E.current,
-                f = parseInt(null !== (e = null == P ? void 0 : P.height) && void 0 !== e ? e : ''),
-                C = parseInt(null !== (n = null == y ? void 0 : y.height) && void 0 !== n ? n : '');
+                f = parseInt(null !== (e = null == y ? void 0 : y.height) && void 0 !== e ? e : ''),
+                C = parseInt(null !== (n = null == P ? void 0 : P.height) && void 0 !== n ? n : '');
             if (null != u && null != m && null != p && !isNaN(f) && !isNaN(C)) {
                 let e = null !== (t = u.scrollTop) && void 0 !== t ? t : 0,
                     n = 0 !== u.scrollHeight ? u.scrollHeight : C + 20,
@@ -84,7 +84,7 @@ function x(e) {
                     h.style.opacity = ''.concat(1 + (0 - (d = 1)) * g);
                 }
             }
-        }, [S, j, null == y ? void 0 : y.height, N, x, null == P ? void 0 : P.height]);
+        }, [S, j, null == P ? void 0 : P.height, N, x, null == y ? void 0 : y.height]);
     return (
         l.useEffect(() => {
             T();

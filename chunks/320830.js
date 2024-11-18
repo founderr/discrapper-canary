@@ -2,14 +2,14 @@ n(47120);
 var i = n(200651),
     r = n(192379),
     s = n(954955),
-    a = n.n(s),
-    l = n(748780),
+    l = n.n(s),
+    a = n(748780),
     o = n(873546),
     c = n(477690),
     u = n(481060),
     d = n(624138),
     h = n(319523);
-function g(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,8 +22,8 @@ function g(e, t, n) {
         e
     );
 }
-let m = (0, d.Mg)(c.Z.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
-    p = {
+let g = (0, d.Mg)(c.Z.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
+    m = {
         START: 0,
         END: 1
     },
@@ -40,16 +40,16 @@ t.Z = function (e) {
             clearTimeout(this.timeout), window.removeEventListener('resize', this.handleResizeDebounced);
         }
         componentWillAppear(e) {
-            this.state.shouldAnimate ? this.animateTo(p.END, e) : e();
+            this.state.shouldAnimate ? this.animateTo(m.END, e) : e();
         }
         componentWillEnter(e) {
-            this.state.shouldAnimate ? (clearTimeout(this.timeout), (this.timeout = setTimeout(() => this.animateTo(p.END, e), 40))) : e();
+            this.state.shouldAnimate ? (clearTimeout(this.timeout), (this.timeout = setTimeout(() => this.animateTo(m.END, e), 40))) : e();
         }
         componentWillLeave(e) {
-            this.state.shouldAnimate ? this.animateTo(p.START, e) : e();
+            this.state.shouldAnimate ? this.animateTo(m.START, e) : e();
         }
         animateTo(e, t) {
-            l.Z.spring(this.anim, {
+            a.Z.spring(this.anim, {
                 toValue: e,
                 ...f
             }).start(t);
@@ -84,7 +84,7 @@ t.Z = function (e) {
                 children: (0, i.jsx)(u.AccessibilityPreferencesContext.Consumer, {
                     children: (t) => {
                         let { reducedMotion: n } = t;
-                        return (0, i.jsx)(l.Z.div, {
+                        return (0, i.jsx)(a.Z.div, {
                             style: this.getAnimatedStyle(n.enabled),
                             children: (0, i.jsx)(e, { ...this.props })
                         });
@@ -94,14 +94,14 @@ t.Z = function (e) {
         }
         constructor(...e) {
             super(...e),
-                g(this, 'timeout', void 0),
-                g(this, 'anim', new l.Z.Value(p.START)),
-                g(this, 'state', { shouldAnimate: !o.tq }),
-                g(this, 'handleResize', () => {
-                    let e = window.innerWidth > m;
-                    !this.state.shouldAnimate && e && this.anim.setValue(p.END), this.setState({ shouldAnimate: e });
+                p(this, 'timeout', void 0),
+                p(this, 'anim', new a.Z.Value(m.START)),
+                p(this, 'state', { shouldAnimate: !o.tq }),
+                p(this, 'handleResize', () => {
+                    let e = window.innerWidth > g;
+                    !this.state.shouldAnimate && e && this.anim.setValue(m.END), this.setState({ shouldAnimate: e });
                 }),
-                g(this, 'handleResizeDebounced', a()(this.handleResize, 60));
+                p(this, 'handleResizeDebounced', l()(this.handleResize, 60));
         }
     };
 };

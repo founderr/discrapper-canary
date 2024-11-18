@@ -8,8 +8,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    a = n(120356),
-    r = n.n(a),
+    r = n(120356),
+    a = n.n(r),
     s = n(481060),
     o = n(367907),
     c = n(626135),
@@ -20,7 +20,7 @@ var i = n(200651),
     m = n(397085);
 function f(e) {
     let { channel: t, narrow: n } = e,
-        a = (0, u.tc)(t);
+        r = (0, u.tc)(t);
     return (
         l.useEffect(() => {
             c.default.track(h.rMx.CHANNEL_BANNER_VIEWED, {
@@ -30,7 +30,7 @@ function f(e) {
             });
         }, [t]),
         (0, i.jsxs)('div', {
-            className: r()(m.chatHeaderBar, { [m.narrow]: n }),
+            className: a()(m.chatHeaderBar, { [m.narrow]: n }),
             children: [
                 (0, i.jsx)(s.Text, {
                     className: m.chatHeaderBarText,
@@ -38,7 +38,7 @@ function f(e) {
                     color: 'header-secondary',
                     children: t.isForumPost() ? p.intl.string(p.t['833FDg']) : p.intl.string(p.t.rEeodH)
                 }),
-                a
+                r
                     ? (0, i.jsx)(s.Button, {
                           size: n ? s.Button.Sizes.SMALL : s.Button.Sizes.TINY,
                           className: m.chatHeaderBarButton,
@@ -61,7 +61,7 @@ function f(e) {
 }
 function g(e) {
     let { channel: t, narrow: n } = e,
-        a = (0, u.Xb)(t);
+        r = (0, u.Xb)(t);
     return (
         l.useEffect(() => {
             c.default.track(h.rMx.CHANNEL_BANNER_VIEWED, {
@@ -71,7 +71,7 @@ function g(e) {
             });
         }, [t]),
         (0, i.jsxs)('div', {
-            className: r()(m.chatHeaderBar, { [m.narrow]: n }),
+            className: a()(m.chatHeaderBar, { [m.narrow]: n }),
             children: [
                 (0, i.jsx)(s.Text, {
                     className: m.chatHeaderBarText,
@@ -79,7 +79,7 @@ function g(e) {
                     color: 'header-secondary',
                     children: t.isForumPost() ? p.intl.string(p.t.E7oO8v) : p.intl.string(p.t['V/JF2N'])
                 }),
-                a
+                r
                     ? (0, i.jsx)(s.Button, {
                           size: n ? s.Button.Sizes.SMALL : s.Button.Sizes.TINY,
                           className: m.chatHeaderBarButton,

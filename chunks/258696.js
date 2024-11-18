@@ -54,8 +54,8 @@ t.Z = i.memo(function (e) {
     var t, n, i, _, p, S, T, A;
     let { type: L, disabled: x, channel: w, handleSubmit: M, isEmpty: P, showAllButtons: k } = e,
         U = (0, s.e7)([l.Z], () => l.Z.isSubmitButtonEnabled),
-        B = (0, s.e7)([m.Z], () => m.Z.getStickerPreview(w.id, L.drafts.type)),
-        G = null != B && B.length > 0,
+        G = (0, s.e7)([m.Z], () => m.Z.getStickerPreview(w.id, L.drafts.type)),
+        B = null != G && G.length > 0,
         Z = (0, s.e7)([g.Z], () => g.Z.getUploads(w.id, L.drafts.type)),
         { activeCommand: F, activeCommandOption: V } = (0, s.cj)([u.Z], () => ({
             activeCommand: u.Z.getActiveCommand(w.id),
@@ -157,7 +157,7 @@ t.Z = i.memo(function (e) {
                 N.Z,
                 {
                     onClick: M,
-                    disabled: x || (0 === Z.length && P && !G)
+                    disabled: x || (0 === Z.length && P && !B)
                 },
                 'submit'
             )

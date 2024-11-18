@@ -62,12 +62,12 @@ t.Z = {
             };
         if (!!L) {
             if (void 0 === h || h) {
-                var B,
-                    G = 'y' === O ? r.we : r.t$,
+                var G,
+                    B = 'y' === O ? r.we : r.t$,
                     Z = 'y' === O ? r.I : r.F2,
                     F = 'y' === O ? 'height' : 'width',
                     V = L[O],
-                    j = V + A[G],
+                    j = V + A[B],
                     H = V - A[Z],
                     Y = S ? -w[F] / 2 : 0,
                     W = C === r.BL ? x[F] : w[F],
@@ -81,14 +81,14 @@ t.Z = {
                                   height: 0
                               },
                     Q = t.modifiersData['arrow#persistent'] ? t.modifiersData['arrow#persistent'].padding : (0, f.Z)(),
-                    X = Q[G],
+                    X = Q[B],
                     J = Q[Z],
                     $ = (0, o.u)(0, x[F], q[F]),
                     ee = R ? x[F] / 2 - Y - $ - X - P.mainAxis : W - $ - X - P.mainAxis,
                     et = R ? -x[F] / 2 + Y + $ + J + P.mainAxis : K + $ + J + P.mainAxis,
                     en = t.elements.arrow && (0, u.Z)(t.elements.arrow),
                     er = en ? ('y' === O ? en.clientTop || 0 : en.clientLeft || 0) : 0,
-                    ei = null != (B = null == k ? void 0 : k[O]) ? B : 0,
+                    ei = null != (G = null == k ? void 0 : k[O]) ? G : 0,
                     ea = (0, o.u)(S ? (0, _.VV)(j, V + ee - ei - er) : j, V, S ? (0, _.Fp)(H, V + et - ei) : H);
                 (L[O] = ea), (U[O] = ea - V);
             }

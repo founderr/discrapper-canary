@@ -1,6 +1,6 @@
 n.d(t, {
     A: function () {
-        return T;
+        return N;
     }
 });
 var i = n(894959),
@@ -23,7 +23,7 @@ var i = n(894959),
     C = n(905534),
     v = n(273487),
     S = n(543815);
-let T = {
+let N = {
     ...r.Z,
     ...l.Z,
     ...a.Z,

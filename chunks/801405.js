@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    a = n(442837),
-    r = n(570140),
+    r = n(442837),
+    a = n(570140),
     s = n(475179),
     o = n(367907),
     c = n(358221),
@@ -20,13 +20,13 @@ var i = n(200651),
     C = n(981631),
     x = n(265046);
 let _ = () => {
-    r.Z.wait(() => d.xv(C.KJ3.CHANNEL_CALL_POPOUT));
+    a.Z.wait(() => d.xv(C.KJ3.CHANNEL_CALL_POPOUT));
 };
 function v(e) {
-    let { channel: t, appContext: n, popoutOpen: r, popoutWindow: d, currentWindow: v } = e,
+    let { channel: t, appContext: n, popoutOpen: a, popoutWindow: d, currentWindow: v } = e,
         I = n === C.IlC.POPOUT,
         E = l.useRef(null),
-        { currentLayout: b, mode: Z } = (0, a.cj)(
+        { currentLayout: b, mode: Z } = (0, r.cj)(
             [c.Z],
             () => {
                 let e = c.Z.getMode(t.id),
@@ -43,7 +43,7 @@ function v(e) {
             },
             [t, n]
         ),
-        N = (0, a.e7)([h.Z], () => h.Z.getVoiceChannelId() === t.id, [t.id]);
+        N = (0, r.e7)([h.Z], () => h.Z.getVoiceChannelId() === t.id, [t.id]);
     l.useEffect(() => {
         E.current = Z;
     });
@@ -57,7 +57,7 @@ function v(e) {
                 rootNode: t
             };
         }, [d, I, v]),
-        A = r && !I,
+        A = a && !I,
         y = Z === C.WtW.VIDEO && N && !A,
         P = l.useCallback(
             (e, i) => {

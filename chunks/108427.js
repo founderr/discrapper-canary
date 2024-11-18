@@ -8,7 +8,7 @@ var r = n(772848),
     i = n(579806),
     s = n(626135),
     l = n(981631);
-function a(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ function a(e, t, n) {
         e
     );
 }
-let o = new (class e {
+let a = new (class e {
     trackEvent(e, t) {
         let n = Date.now();
         requestIdleCallback(() => {
@@ -67,9 +67,9 @@ let o = new (class e {
         if (!this.appUIViewed) this.trackEvent(l.rMx.APP_UI_VIEWED, e), (this.appUIViewed = !0);
     }
     constructor() {
-        a(this, 'loadId', (0, r.Z)()), a(this, 'appUIViewed', !1);
+        o(this, 'loadId', (0, r.Z)()), o(this, 'appUIViewed', !1);
     }
 })();
 function c(e) {
-    o.trackAppUIViewed(e);
+    a.trackAppUIViewed(e);
 }

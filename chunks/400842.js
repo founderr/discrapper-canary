@@ -6,9 +6,9 @@ i.d(t, {
 var n = i(200651);
 i(192379);
 var o = i(120356),
-    l = i.n(o),
-    a = i(692547),
-    r = i(481060);
+    r = i.n(o),
+    l = i(692547),
+    a = i(481060);
 i(651711);
 var s = i(551556);
 i(388032);
@@ -16,16 +16,16 @@ var c = i(212715);
 i(347157), i(177266);
 let d = (e) => {
     let { name: t, description: i, checked: o, actionLabel: d, actionHandler: u } = e,
-        _ = null;
+        E = null;
     return (
-        (_ = o
+        (E = o
             ? (0, n.jsx)(s.Z, {
                   width: 20,
                   height: 20
               })
-            : (0, n.jsx)(r.CircleXIcon, {
+            : (0, n.jsx)(a.CircleXIcon, {
                   size: 'custom',
-                  color: a.Z.unsafe_rawColors.RED_400.css,
+                  color: l.Z.unsafe_rawColors.RED_400.css,
                   width: 20,
                   height: 20
               })),
@@ -34,17 +34,17 @@ let d = (e) => {
             children: [
                 (0, n.jsx)('div', {
                     className: c.checklistIcon,
-                    children: _
+                    children: E
                 }),
                 (0, n.jsxs)('div', {
-                    className: l()(c.__invalid_checklistText, o && c.ineligibleRow),
+                    className: r()(c.__invalid_checklistText, o && c.ineligibleRow),
                     children: [
-                        (0, n.jsx)(r.Heading, {
+                        (0, n.jsx)(a.Heading, {
                             variant: 'heading-md/semibold',
                             className: c.checklistItemName,
                             children: t
                         }),
-                        (0, n.jsx)(r.Text, {
+                        (0, n.jsx)(a.Text, {
                             color: 'interactive-normal',
                             variant: 'text-sm/normal',
                             children: i
@@ -54,10 +54,10 @@ let d = (e) => {
                 null != d &&
                     (0, n.jsx)('div', {
                         className: c.eligibilityActionContainer,
-                        children: (0, n.jsx)(r.Button, {
+                        children: (0, n.jsx)(a.Button, {
                             className: c.eligibilityActionButton,
-                            look: r.ButtonLooks.OUTLINED,
-                            color: r.ButtonColors.PRIMARY,
+                            look: a.ButtonLooks.OUTLINED,
+                            color: a.ButtonColors.PRIMARY,
                             onClick: u,
                             grow: !0,
                             children: d

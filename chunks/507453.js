@@ -1,8 +1,8 @@
 var l = n(200651);
 n(192379);
 var i = n(481060),
-    s = n(600164),
-    r = n(388032),
+    r = n(600164),
+    s = n(388032),
     o = n(712694);
 t.Z = {
     SlideContent: function (e) {
@@ -29,20 +29,20 @@ t.Z = {
         return u || a
             ? (0, l.jsxs)(i.ModalFooter, {
                   className: o.footer,
-                  direction: a && !u ? s.Z.Direction.HORIZONTAL_REVERSE : s.Z.Direction.HORIZONTAL,
+                  direction: a && !u ? r.Z.Direction.HORIZONTAL_REVERSE : r.Z.Direction.HORIZONTAL,
                   children: [
                       u &&
                           (0, l.jsx)(i.Button, {
                               look: i.Button.Looks.LINK,
                               onClick: () => n('select'),
                               color: i.Button.Colors.PRIMARY,
-                              children: r.intl.string(r.t.Tot4EB)
+                              children: s.intl.string(s.t.Tot4EB)
                           }),
                       a &&
                           (0, l.jsx)(i.Button, {
                               type: 'submit',
                               ...d,
-                              children: r.intl.string(r.t['cY+Ooa'])
+                              children: s.intl.string(s.t['cY+Ooa'])
                           })
                   ]
               })
@@ -51,13 +51,13 @@ t.Z = {
     SlideHeader: function (e) {
         let { subtitle: t, onClose: n } = e;
         return (0, l.jsxs)(i.ModalHeader, {
-            direction: s.Z.Direction.VERTICAL,
+            direction: r.Z.Direction.VERTICAL,
             className: o.header,
             separator: !1,
             children: [
                 (0, l.jsx)(i.Heading, {
                     variant: 'heading-xl/semibold',
-                    children: r.intl.string(r.t.saHocH)
+                    children: s.intl.string(s.t.saHocH)
                 }),
                 null != t &&
                     (0, l.jsx)(i.Text, {

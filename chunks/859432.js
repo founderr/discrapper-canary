@@ -13,8 +13,8 @@ var i = t(200651),
     f = t(458034),
     p = t(706140),
     h = t(362658),
-    _ = t(241851),
-    E = t(294978),
+    E = t(241851),
+    _ = t(294978),
     M = t(513102),
     m = t(976192),
     x = t(887904),
@@ -42,24 +42,24 @@ var i = t(200651),
     H = t(462317);
 function z(e) {
     (0, d.openModal)((n) =>
-        (0, i.jsx)(_.g, {
+        (0, i.jsx)(E.g, {
             ...n,
             guild: e
         })
     );
 }
 let V = l.memo(function (e) {
-    let { guild: n, onClose: a, onSelect: _ } = e,
+    let { guild: n, onClose: a, onSelect: E } = e,
         V = (0, o.e7)([O.default], () => O.default.getCurrentUser());
     r()(null != V, 'GuildHeaderPopout: user cannot be undefined'),
         l.useEffect(() => {
             R.default.track(k.rMx.GUILD_DROPDOWN_MENU_VIEWED, { guild_id: n.id });
         });
-    let K = (0, o.e7)([U.ZP], () => U.ZP.isGuildCollapsed(n.id), [n.id]),
+    let W = (0, o.e7)([U.ZP], () => U.ZP.isGuildCollapsed(n.id), [n.id]),
         {
-            canAccessSettings: Y,
-            canManageChannels: q,
-            showGuildAnalytics: W
+            canAccessSettings: K,
+            canManageChannels: Y,
+            showGuildAnalytics: q
         } = (0, o.cj)(
             [S.Z],
             () => {
@@ -94,7 +94,7 @@ let V = l.memo(function (e) {
         el = n.hasFeature(k.oNc.HUB),
         ea = n.id === B._,
         er = (0, L.Z)(n.id),
-        eo = (0, E.Z)(n),
+        eo = (0, _.Z)(n),
         eu = (0, M.Z)(n),
         ed = (0, b.Z)(n, !0),
         ec = (0, x.Z)(n),
@@ -118,7 +118,7 @@ let V = l.memo(function (e) {
         eh = ef && ep === u.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE;
     return Q || $
         ? (0, i.jsx)(d.Menu, {
-              onSelect: _,
+              onSelect: E,
               navId: 'guild-header-popout',
               variant: 'fixed',
               onClose: a,
@@ -134,7 +134,7 @@ let V = l.memo(function (e) {
           })
         : ea
           ? (0, i.jsxs)(d.Menu, {
-                onSelect: _,
+                onSelect: E,
                 navId: 'favorites-header-popout',
                 variant: 'fixed',
                 onClose: a,
@@ -170,7 +170,7 @@ let V = l.memo(function (e) {
                         children: (0, i.jsx)(d.MenuCheckboxItem, {
                             id: 'hide-muted-channels',
                             label: F.intl.string(F.t.UwOLJC),
-                            checked: K,
+                            checked: W,
                             action: () => c.Z.toggleCollapseGuild(n.id)
                         })
                     })
@@ -178,7 +178,7 @@ let V = l.memo(function (e) {
             })
           : el
             ? (0, i.jsxs)(d.Menu, {
-                  onSelect: _,
+                  onSelect: E,
                   navId: 'guild-header-popout',
                   variant: 'fixed',
                   onClose: a,
@@ -186,7 +186,7 @@ let V = l.memo(function (e) {
                   children: [
                       (0, i.jsxs)(d.MenuGroup, {
                           children: [
-                              Y
+                              K
                                   ? (0, i.jsx)(d.MenuItem, {
                                         id: 'settings',
                                         label: F.intl.string(F.t['154/bG']),
@@ -228,7 +228,7 @@ let V = l.memo(function (e) {
                   ]
               })
             : (0, i.jsxs)(d.Menu, {
-                  onSelect: _,
+                  onSelect: E,
                   navId: 'guild-header-popout',
                   variant: 'fixed',
                   onClose: a,
@@ -270,7 +270,7 @@ let V = l.memo(function (e) {
                                     })
                                   : null,
                               et,
-                              Y
+                              K
                                   ? (0, i.jsx)(d.MenuItem, {
                                         id: 'settings',
                                         label: F.intl.string(F.t['154/bG']),
@@ -280,7 +280,7 @@ let V = l.memo(function (e) {
                                         }
                                     })
                                   : null,
-                              W
+                              q
                                   ? (0, i.jsx)(d.MenuItem, {
                                         id: 'insights',
                                         label: F.intl.string(F.t['0wWfUF']),
@@ -288,7 +288,7 @@ let V = l.memo(function (e) {
                                         action: () => y.Z.open(n.id, k.pNK.ANALYTICS)
                                     })
                                   : null,
-                              q
+                              Y
                                   ? (0, i.jsxs)(i.Fragment, {
                                         children: [
                                             (0, i.jsx)(d.MenuItem, {
@@ -380,7 +380,7 @@ let V = l.memo(function (e) {
                               (0, i.jsx)(d.MenuCheckboxItem, {
                                   id: 'hide-muted-channels',
                                   label: F.intl.string(F.t.UwOLJC),
-                                  checked: K,
+                                  checked: W,
                                   action: () => c.Z.toggleCollapseGuild(n.id)
                               })
                           ]

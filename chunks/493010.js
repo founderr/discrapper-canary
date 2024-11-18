@@ -1,7 +1,7 @@
 var i = n(200651),
     l = n(192379),
-    a = n(704215),
-    r = n(481060),
+    r = n(704215),
+    a = n(481060),
     s = n(475179),
     o = n(561472),
     c = n(287746),
@@ -19,13 +19,13 @@ var i = n(200651),
 t.Z = function (e) {
     let { channel: t, guild: n, maxWidth: I } = e;
     l.useEffect(() => {
-        (0, h.EW)(a.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK, { dismissAction: x.L.AUTO });
+        (0, h.EW)(r.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK, { dismissAction: x.L.AUTO });
     }, []);
     let E = l.useCallback(() => {
             s.Z.updateChatOpen(t.id, !1), f.S.safeDispatch(C.CkL.FOCUS_CHAT_BUTTON);
         }, [t.id]),
         b = (0, i.jsx)(p.ZP.Icon, {
-            icon: r.XSmallIcon,
+            icon: a.XSmallIcon,
             tooltip: _.intl.string(_.t.cpT0Cg),
             onClick: E
         });
@@ -43,7 +43,7 @@ t.Z = function (e) {
                 'aria-label': _.intl.string(_.t.BIYAqa),
                 children: [
                     (0, i.jsx)(p.ZP.Icon, {
-                        icon: r.ChatIcon,
+                        icon: a.ChatIcon,
                         disabled: !0,
                         'aria-label': _.intl.string(_.t.Kx5kCA)
                     }),

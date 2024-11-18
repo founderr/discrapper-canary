@@ -41,11 +41,11 @@ function R(e) {
             messageId: O,
             roleId: D
         }),
-        B = i.useRef(null),
-        G = (0, s.Z)(B);
+        G = i.useRef(null),
+        B = (0, s.Z)(G);
     i.useEffect(() => {
-        null == L || L(null == B ? void 0 : B.current);
-    }, [B, L]);
+        null == L || L(null == G ? void 0 : G.current);
+    }, [G, L]);
     let Z = () => {
             null == x || x(),
                 (0, y.openUserProfileModal)({
@@ -59,7 +59,7 @@ function R(e) {
         children: (0, r.jsx)(_.Mt, {
             value: U,
             children: (0, r.jsxs)(a.Dialog, {
-                ref: B,
+                ref: G,
                 'aria-label': t.username,
                 children: [
                     (0, r.jsxs)(b.Z, {
@@ -136,7 +136,7 @@ function R(e) {
                     (null == P ? void 0 : P.profileEffectId) != null &&
                         (0, r.jsx)(d.Z, {
                             profileEffectId: null == P ? void 0 : P.profileEffectId,
-                            isHovering: G
+                            isHovering: B
                         })
                 ]
             })

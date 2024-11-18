@@ -23,8 +23,8 @@ var i,
     S = n(431369),
     T = n(55610),
     C = n(653798),
-    _ = n(311821),
-    E = n(139255),
+    E = n(311821),
+    _ = n(139255),
     I = n(314884),
     f = n(509545),
     N = n(78839),
@@ -180,7 +180,7 @@ function L(e) {
                                 ? (0, r.jsxs)('div', {
                                       children: [
                                           (0, r.jsx)(C.KU, {}),
-                                          (0, r.jsx)(E.nd, {
+                                          (0, r.jsx)(_.nd, {
                                               premiumSubscription: s,
                                               renewalInvoice: M,
                                               isUpdate: !0
@@ -208,7 +208,7 @@ function L(e) {
                         },
                         children: P.intl.string(P.t['/AS/gI'])
                     }),
-                    (0, r.jsx)(_.Z, { onClick: o })
+                    (0, r.jsx)(E.Z, { onClick: o })
                 ]
             })
         ]

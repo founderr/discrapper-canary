@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(399606),
-    a = n(481060),
-    r = n(125268),
+    r = n(481060),
+    a = n(125268),
     s = n(673125),
     o = n(984063),
     c = n(390322),
@@ -21,12 +21,12 @@ function m(e) {
         m = (null == n ? void 0 : n.type) === o.W.EMOJI_HOSE,
         f = (e, t) => {
             null != e
-                ? (0, r.Bo)({
+                ? (0, a.Bo)({
                       type: o.W.EMOJI_HOSE,
                       emojiName: e.name,
                       emojiId: e.id
                   })
-                : m && (0, r.Bo)(null),
+                : m && (0, a.Bo)(null),
                 null == t || t();
         };
     return (0, i.jsx)(h.Z, {
@@ -45,7 +45,7 @@ function m(e) {
         children: (e) =>
             (0, i.jsx)(d.Z, {
                 ...e,
-                iconComponent: a.PaintbrushThinIcon,
+                iconComponent: r.PaintbrushThinIcon,
                 isActive: m || e.isActive,
                 onClick: (t) => {
                     f(null), e.onClick(t);

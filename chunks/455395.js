@@ -5,8 +5,8 @@ t.d(e, {
 });
 var i = t(200651);
 t(192379);
-var l = t(481060),
-    r = t(359119),
+var r = t(481060),
+    l = t(359119),
     u = t(832239),
     a = t(100932),
     o = t(388032);
@@ -17,16 +17,16 @@ function d(n) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             !t &&
-                (0, i.jsx)(l.MenuItem, {
+                (0, i.jsx)(r.MenuItem, {
                     id: 'mark-as-tier-1-inappro',
                     label: o.intl.string(o.t.EuzCER),
-                    action: () => (0, u.KK)(n.id, r.pj.INAPPROPRIATE_CONVERSATION_TIER_1)
+                    action: () => (0, u.KK)(n.id, l.pj.INAPPROPRIATE_CONVERSATION_TIER_1)
                 }),
             !d &&
-                (0, i.jsx)(l.MenuItem, {
+                (0, i.jsx)(r.MenuItem, {
                     id: 'mark-as-tier-2-inappro',
                     label: o.intl.string(o.t['tBw/1t']),
-                    action: () => (0, u.KK)(n.id, r.pj.INAPPROPRIATE_CONVERSATION_TIER_2)
+                    action: () => (0, u.KK)(n.id, l.pj.INAPPROPRIATE_CONVERSATION_TIER_2)
                 })
         ]
     });

@@ -21,8 +21,8 @@ var i,
     _ = n(607070),
     E = n(339085),
     g = n(695346),
-    m = n(572004),
-    h = n(388032),
+    h = n(572004),
+    m = n(388032),
     S = n(889160);
 function I(e) {
     let { tag: t, size: i = 1, disabled: r, className: u, onClick: I, onRemove: v, selected: C, ariaLabel: T } = e,
@@ -34,10 +34,10 @@ function I(e) {
         M = (!O || !L) && (null != b || null != A),
         x = 0 === i,
         Z = o.useRef(null),
-        U = (0, c.e7)([_.Z], () => _.Z.keyboardModeEnabled),
-        D = (e) => {
+        j = (0, c.e7)([_.Z], () => _.Z.keyboardModeEnabled),
+        U = (e) => {
             let i = g.Sb.getSetting();
-            m.wS &&
+            h.wS &&
                 i &&
                 (0, f.jW)(e, async () => {
                     let { default: e } = await n.e('29646').then(n.bind(n, 955116));
@@ -48,7 +48,7 @@ function I(e) {
                         });
                 });
         },
-        j = (0, l.jsxs)(l.Fragment, {
+        D = (0, l.jsxs)(l.Fragment, {
             children: [
                 M
                     ? (0, l.jsx)(p.Z, {
@@ -89,9 +89,9 @@ function I(e) {
                 u
             ),
             onClick: (e) => {
-                null == I || I(e), null == v || v(t), !U && null != Z.current && Z.current.blur();
+                null == I || I(e), null == v || v(t), !j && null != Z.current && Z.current.blur();
             },
-            onContextMenu: (e) => D(e),
+            onContextMenu: (e) => U(e),
             onMouseEnter: () => O && R(!0),
             onMouseLeave: () => O && R(!1)
         },
@@ -101,22 +101,22 @@ function I(e) {
               ...w,
               innerRef: Z,
               focusProps: { ringTarget: Z },
-              'aria-label': null != T ? T : h.intl.formatToPlainString(h.t.iyRTLi, { tagName: N }),
+              'aria-label': null != T ? T : m.intl.formatToPlainString(m.t.iyRTLi, { tagName: N }),
               role: 'button',
               'aria-pressed': C,
               ...F,
-              children: j
+              children: D
           })
         : (0, l.jsx)('div', {
               ...F,
-              children: j
+              children: D
           });
 }
 function v(e) {
     let { tags: t, count: n, size: i = 1 } = e,
         r = 0 === i;
     return (0, l.jsx)(d.Tooltip, {
-        'aria-label': h.intl.string(h.t['P/y+sr']),
+        'aria-label': m.intl.string(m.t['P/y+sr']),
         text: (0, l.jsx)(l.Fragment, {
             children: t.map((e) =>
                 (0, l.jsx)(

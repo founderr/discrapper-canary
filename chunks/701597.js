@@ -114,7 +114,7 @@ class u {
         this.goliveSimulcastLQBitrateTarget = e;
     }
     shouldEnableGoliveSimulcastForHqQuality(e) {
-        return !!this.goliveSimulcastEnabled && e.width * e.height > i.ef * i.ru;
+        return !!this.goliveSimulcastEnabled && ((0 === e.width && 0 === e.height) || e.width * e.height > i.ef * i.ru);
     }
     getVideoQuality(e) {
         let t = this.ladder.getResolution(e),

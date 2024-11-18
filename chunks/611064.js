@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    a = n(442837),
-    r = n(481060),
+    r = n(442837),
+    a = n(481060),
     s = n(239091),
     o = n(82295),
     c = n(485267),
@@ -23,7 +23,7 @@ function C(e) {
 t.Z = l.memo(function (e) {
     let t,
         { title: h, onToggleExpand: C, expanded: x, expandedCount: _ } = e,
-        v = (0, a.e7)([d.Z], () => d.Z.hidden),
+        v = (0, r.e7)([d.Z], () => d.Z.hidden),
         I = l.useCallback((e) => {
             (0, s.jW)(e, async () => {
                 let { MemberListContentSettingsMenu: e } = await Promise.resolve().then(n.bind(n, 703180));
@@ -33,13 +33,13 @@ t.Z = l.memo(function (e) {
     return (0, i.jsxs)(o.Z, {
         className: g.membersGroup,
         children: [
-            (0, i.jsx)(r.HiddenVisually, {
+            (0, i.jsx)(a.HiddenVisually, {
                 children: m.intl.format(m.t.UaqbkZ, {
                     title: h,
                     count: _
                 })
             }),
-            (0, i.jsxs)(r.Clickable, {
+            (0, i.jsxs)(a.Clickable, {
                 onClick: (e) => {
                     if (e.currentTarget === e.target || e.currentTarget.contains(e.target)) return v ? (0, c.lY)() : _ > 3 ? C() : (0, p.dG4)();
                 },
@@ -59,8 +59,8 @@ t.Z = l.memo(function (e) {
                     }),
                     _ <= 3 && !v
                         ? null
-                        : ((t = v ? (0, i.jsx)(r.ChevronSmallUpIcon, { className: f.toggleExpandIcon }) : x ? (0, i.jsx)(r.ChevronSmallDownIcon, { className: f.toggleExpandIcon }) : (0, i.jsx)(r.ChevronSmallRightIcon, { className: f.toggleExpandIcon })),
-                          (0, i.jsx)(r.FocusRing, {
+                        : ((t = v ? (0, i.jsx)(a.ChevronSmallUpIcon, { className: f.toggleExpandIcon }) : x ? (0, i.jsx)(a.ChevronSmallDownIcon, { className: f.toggleExpandIcon }) : (0, i.jsx)(a.ChevronSmallRightIcon, { className: f.toggleExpandIcon })),
+                          (0, i.jsx)(a.FocusRing, {
                               children: (0, i.jsx)('div', {
                                   tabIndex: 0,
                                   className: f.toggleExpandIcon,

@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(399606),
     l = n(317381),
-    a = n(917107),
-    r = n(592125),
+    r = n(917107),
+    a = n(592125),
     s = n(226027),
     o = n(918559);
 let c = 'no_text_activity',
@@ -21,5 +21,5 @@ let c = 'no_text_activity',
 function u() {
     let e = (0, i.e7)([l.ZP], () => l.ZP.getCurrentEmbeddedActivity()),
         t = (0, i.e7)([l.ZP], () => l.ZP.getActivityPanelMode());
-    return void 0 === e || (0, a.Z)(null == e ? void 0 : e.channelId, r.Z) ? d[c] : d[t];
+    return void 0 === e || (0, r.Z)(null == e ? void 0 : e.channelId, a.Z) ? d[c] : d[t];
 }

@@ -7,13 +7,13 @@ var r = n(200651),
     o = n(192379),
     i = n(261833),
     l = n(481060),
-    a = n(184299),
-    s = n(136880);
+    s = n(184299),
+    a = n(136880);
 function c(e) {
     var t;
     let { quest: n, onClose: c } = e,
-        u = (0, a.km)((e) => e.transcript),
-        d = (null == u ? void 0 : u.questId) === n.id && (null == u ? void 0 : u.fetchStatus) === a.iF.SUCCESS && null !== (t = u.text) && void 0 !== t ? t : '',
+        u = (0, s.km)((e) => e.transcript),
+        d = (null == u ? void 0 : u.questId) === n.id && (null == u ? void 0 : u.fetchStatus) === s.iF.SUCCESS && null !== (t = u.text) && void 0 !== t ? t : '',
         m = o.useMemo(
             () =>
                 d
@@ -25,7 +25,7 @@ function c(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {
-                className: s.transcriptHeader,
+                className: a.transcriptHeader,
                 children: [
                     (0, r.jsx)(l.Heading, {
                         variant: 'heading-md/semibold',
@@ -34,21 +34,21 @@ function c(e) {
                     }),
                     (0, r.jsx)(l.Clickable, {
                         onClick: c,
-                        className: s.transcriptBackBtn,
+                        className: a.transcriptBackBtn,
                         children: (0, r.jsx)(i.D, { color: 'currentColor' })
                     })
                 ]
             }),
             (0, r.jsx)(l.FocusRing, {
                 children: (0, r.jsx)(l.ScrollerAuto, {
-                    className: s.transcriptScroller,
+                    className: a.transcriptScroller,
                     fade: !0,
                     children: (0, r.jsx)('div', {
-                        className: s.transcriptBody,
+                        className: a.transcriptBody,
                         children:
-                            (null == u ? void 0 : u.fetchStatus) === a.iF.FETCHING
+                            (null == u ? void 0 : u.fetchStatus) === s.iF.FETCHING
                                 ? (0, r.jsx)('div', {
-                                      className: s.transcriptBodySpinner,
+                                      className: a.transcriptBodySpinner,
                                       children: (0, r.jsx)(l.Spinner, { type: l.Spinner.Type.WANDERING_CUBES })
                                   })
                                 : (0, r.jsx)(l.Heading, {

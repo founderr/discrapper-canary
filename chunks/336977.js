@@ -23,7 +23,7 @@ var i = e(200651),
 function b(t) {
     let { onClose: n, source: r = _.I.INAPPROPRIATE_CONVERSATION } = t,
         b = (0, c.e7)([u.Z], () => u.Z.useReducedMotion),
-        [x, A] = o.useState(!1);
+        [x, h] = o.useState(!1);
     o.useEffect(() => {
         let t = new Date();
         return (
@@ -38,8 +38,8 @@ function b(t) {
             }
         );
     }, [r]);
-    let h = () => {
-        x ? ((0, d.JO)(), l.default.track(I.rMx.VIBING_WUMPUS_ACTION, { action: _.G.PLAY })) : ((0, d.hW)(), l.default.track(I.rMx.VIBING_WUMPUS_ACTION, { action: _.G.PAUSE })), A(!x);
+    let A = () => {
+        x ? ((0, d.JO)(), l.default.track(I.rMx.VIBING_WUMPUS_ACTION, { action: _.G.PLAY })) : ((0, d.hW)(), l.default.track(I.rMx.VIBING_WUMPUS_ACTION, { action: _.G.PAUSE })), h(!x);
     };
     async function m() {
         let { default: t } = await e.e('29641').then(e.t.bind(e, 937359, 19));
@@ -68,7 +68,7 @@ function b(t) {
                 children: (t) =>
                     (0, i.jsx)(s.Clickable, {
                         ...t,
-                        onClick: h,
+                        onClick: A,
                         className: f.iconButton,
                         children: x
                             ? (0, i.jsx)(s.PlayIcon, {

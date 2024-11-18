@@ -22,8 +22,8 @@ var s = n(120356),
     S = n(509545),
     T = n(78839),
     C = n(931331),
-    _ = n(754347),
-    E = n(122289),
+    E = n(754347),
+    _ = n(122289),
     I = n(74538),
     f = n(212895),
     N = n(296848),
@@ -127,7 +127,7 @@ function w() {
     return (0, i.jsxs)('div', {
         className: B.wordMark,
         children: [
-            (0, i.jsx)(_.Z, {
+            (0, i.jsx)(E.Z, {
                 className: B.discordWordmark,
                 'aria-label': y.intl.string(y.t['FSOz7+'])
             }),
@@ -215,7 +215,7 @@ t.Z = function (e) {
         },
         en = () => {
             if (!F.includes(s.status) || null == s.pauseEndsAt) {
-                (0, E.q2)(Error('Invalid subscription to resume'), {
+                (0, _.q2)(Error('Invalid subscription to resume'), {
                     extra: {
                         subscriptionId: s.id,
                         status: s.status,
@@ -260,7 +260,7 @@ t.Z = function (e) {
             ec = (0, i.jsxs)('div', {
                 className: B.wordMark,
                 children: [
-                    (0, i.jsx)(_.Z, {
+                    (0, i.jsx)(E.Z, {
                         className: B.discordWordmark,
                         'aria-label': y.intl.string(y.t['t9uG/v'])
                     }),

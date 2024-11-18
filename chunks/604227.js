@@ -19,13 +19,13 @@ var s = n(525654),
 function m() {
     var e, t, n, s, m, h;
     let g = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        p = '345382',
-        x = ((e = 'e99a779f035acefcc93377681e265bb03a7d8f1e'), e.substring(0, 7)),
+        p = '345480',
+        x = ((e = '160db66f4fd04093a8dfa41e76f2f4b0dd538328'), e.substring(0, 7)),
         S = null === a.Z || void 0 === a.Z ? void 0 : a.Z.remoteApp.getVersion(),
         T = null === a.Z || void 0 === a.Z ? void 0 : null === (t = (n = a.Z.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(n),
         C = null === a.Z || void 0 === a.Z ? void 0 : null === (s = (m = a.Z.remoteApp).getAppArch) || void 0 === s ? void 0 : s.call(m),
-        _ = null === (h = o.C.getCurrentBuildOverride().overrides) || void 0 === h ? void 0 : h.discord_web,
-        E = (function () {
+        E = null === (h = o.C.getCurrentBuildOverride().overrides) || void 0 === h ? void 0 : h.discord_web,
+        _ = (function () {
             var e;
             let t = null === r() || void 0 === r() ? void 0 : null === (e = r().os) || void 0 === e ? void 0 : e.toString();
             if (null == t || null == a.Z) return null;
@@ -36,8 +36,8 @@ function m() {
         I = [g, p, '('.concat(x, ')')];
     return (
         null != S && (I.push('Host '.concat(S)), null != C && I.push(C.toLowerCase()), null != T && I.push('('.concat(T, ')'))),
-        I.push('Build Override: '.concat(null != _ ? _.id : 'N/A')),
-        null != E && I.push(E),
+        I.push('Build Override: '.concat(null != E ? E.id : 'N/A')),
+        null != _ && I.push(_),
         (0, i.jsx)(c.Z, {
             copyValue: I.join(' '),
             text: d.intl.string(d.t['9Al4QU']),
@@ -96,13 +96,13 @@ function m() {
                                       ]
                                   })
                                 : null,
-                            null != E
+                            null != _
                                 ? (0, i.jsx)(l.Text, {
                                       tag: 'span',
                                       className: u.line,
                                       variant: 'text-xs/normal',
                                       color: 'text-muted',
-                                      children: E
+                                      children: _
                                   })
                                 : null
                         ]

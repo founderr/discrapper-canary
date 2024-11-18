@@ -14,7 +14,7 @@ var t = n(200651),
     s = n(906732),
     d = n(313201),
     u = n(455708),
-    g = n(81245),
+    g = n(222062),
     f = n(530329),
     p = n(626135),
     _ = n(488499),
@@ -29,7 +29,7 @@ function E(e) {
         R = (0, a.useModalContext)(),
         A = (0, d.Dt)(),
         { analyticsLocations: P } = (0, s.ZP)(c.Z.GIF_PICKER);
-    async function k(e) {
+    async function Z(e) {
         let { gifSrc: i } = e;
         if (null == i || B) return;
         j(!0);
@@ -59,8 +59,8 @@ function E(e) {
             location: { page: I }
         });
     }, [I]);
-    let Z = b === T.pC.AVATAR || b === T.pC.BANNER,
-        v = (0, g.Mu)('GIFPickerCroppingModal', !Z);
+    let k = b === T.pC.AVATAR || b === T.pC.BANNER,
+        v = (0, g.M)(!k);
     return (0, t.jsx)(s.Gt, {
         value: P,
         children: (0, t.jsxs)(a.ModalRoot, {
@@ -96,7 +96,7 @@ function E(e) {
                         (0, t.jsx)(u.Z, {
                             contentClassName: l()({ [x.gifPickerContent]: C && v }),
                             className: l()(x.gifPicker, { [x.loadingOverlay]: B }),
-                            onSelectGIF: k,
+                            onSelectGIF: Z,
                             hideFavorites: !0
                         }),
                         B && (0, t.jsx)(a.Spinner, { className: x.spinner })

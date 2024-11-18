@@ -34,8 +34,8 @@ var r = n(200651),
     P = n(199902),
     k = n(314897),
     U = n(131951),
-    B = n(699516),
-    G = n(594174),
+    G = n(699516),
+    B = n(594174),
     Z = n(248402),
     F = n(33039),
     V = n(451478),
@@ -146,7 +146,7 @@ class ei extends i.PureComponent {
     }
     render() {
         let { channel: e, streamId: t, participantOnScreen: n, isVideoEnabled: i, width: a } = this.props,
-            s = (0, b.F6)(e, G.default, B.Z),
+            s = (0, b.F6)(e, B.default, G.Z),
             o = (null == n ? void 0 : n.id) === k.default.getId() && i,
             l = this.renderStreamState(),
             u = null;

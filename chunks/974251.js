@@ -1,8 +1,8 @@
 n(47120), n(411104);
 var i = n(200651),
     l = n(192379),
-    a = n(120356),
-    r = n.n(a),
+    r = n(120356),
+    a = n.n(r),
     s = n(442837),
     o = n(704215),
     c = n(481060),
@@ -40,7 +40,7 @@ var i = n(200651),
     H = n(388032),
     G = n(631531);
 t.Z = l.memo(function (e) {
-    var t, a;
+    var t, r;
     let F,
         { className: V, channel: z, draftType: W, editorTextContent: K, setValue: Y, canOnlyUseTextCommands: q } = e,
         X = (0, h.bp)(),
@@ -52,8 +52,8 @@ t.Z = l.memo(function (e) {
         en = (0, s.e7)([N.ZP], () => null == N.ZP.getCurrentSidebarChannelId(z.id)),
         { showClipsHeaderEntrypoint: ei } = g.NV.useExperiment({ location: 'ChannelAttachButton' }, { autoTrackExposure: !1 }),
         { enabled: el } = f.T.useExperiment({ location: 'ChannelAttachButton' }, { autoTrackExposure: !1 }),
-        ea = (0, s.e7)([v.qc], () => v.qc.hasHotspot(v.v6.CLIPS_CHANNEL_ATTACH_REMINDER)),
-        er = (0, c.useModalsStore)((e) => (0, c.hasModalOpenSelector)(e, B.Qr)),
+        er = (0, s.e7)([v.qc], () => v.qc.hasHotspot(v.v6.CLIPS_CHANNEL_ATTACH_REMINDER)),
+        ea = (0, c.useModalsStore)((e) => (0, c.hasModalOpenSelector)(e, B.Qr)),
         es = (0, s.e7)([S.Z], () => S.Z.hasLayers()),
         eo = (0, s.e7)([C.Z], () => C.Z.hasClips()),
         [ec, ed] = l.useState(null),
@@ -63,7 +63,7 @@ t.Z = l.memo(function (e) {
         em = (0, s.e7)([b.default], () => b.default.locale),
         ef = ['en-US', 'en-GB'].includes(em) ? H.intl.string(H.t.d56gCQ) : H.intl.string(H.t.PdRCRk),
         eg = (0, u.Z)(ee);
-    (null == eg ? void 0 : eg.newClipIds.length) !== (null == ee ? void 0 : ee.newClipIds.length) && (null !== (t = null == ee ? void 0 : ee.newClipIds.length) && void 0 !== t ? t : 0) > 0 && null == ec && ea && en && !er && !ei && !es && ed('recentClips');
+    (null == eg ? void 0 : eg.newClipIds.length) !== (null == ee ? void 0 : ee.newClipIds.length) && (null !== (t = null == ee ? void 0 : ee.newClipIds.length) && void 0 !== t ? t : 0) > 0 && null == ec && er && en && !ea && !ei && !es && ed('recentClips');
     let eC = (e, t, n) => {
             null != t && 'ETOOLARGE' === t.code
                 ? (0, R.G)(z, [])
@@ -106,7 +106,7 @@ t.Z = l.memo(function (e) {
         eb = (0, I.UI)(null != z ? z : void 0),
         eZ = (0, c.useRedesignIconContext)().enabled,
         eN = (0, p.qB)(z.id, 'ChannelAttachButton'),
-        eS = null !== (a = null == et ? void 0 : et.length) && void 0 !== a ? a : 0,
+        eS = null !== (r = null == et ? void 0 : et.length) && void 0 !== r ? r : 0,
         eT = (0, D.Z)({
             canAttachFiles: ep,
             canStartThreads: ev || eI,
@@ -193,7 +193,7 @@ t.Z = l.memo(function (e) {
             (0, i.jsx)(c.Button, {
                 look: c.Button.Looks.BLANK,
                 size: c.Button.Sizes.NONE,
-                className: r()(G.attachButton, V),
+                className: a()(G.attachButton, V),
                 innerClassName: G.attachButtonInner,
                 'aria-label': ef,
                 onDoubleClick: ep

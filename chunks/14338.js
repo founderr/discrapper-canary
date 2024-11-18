@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    a = n(120356),
-    r = n.n(a),
+    r = n(120356),
+    a = n.n(r),
     s = n(481060),
     o = n(239091),
     c = n(586902),
@@ -17,11 +17,11 @@ var i = n(200651),
     m = n(768581),
     f = n(201330);
 function g(e) {
-    let { channel: t, speaker: a, className: p } = e,
+    let { channel: t, speaker: r, className: p } = e,
         g = (0, d.bp)(),
         { reducedMotion: C } = l.useContext(s.AccessibilityPreferencesContext),
-        x = (0, c.Z)({ userId: a.id }),
-        _ = null != a.member ? (0, m.CA)(a.member) : null,
+        x = (0, c.Z)({ userId: r.id }),
+        _ = null != r.member ? (0, m.CA)(r.member) : null,
         v = (e) => {
             (0, o.jW)(
                 e,
@@ -30,7 +30,7 @@ function g(e) {
                     return (n) =>
                         (0, i.jsx)(e, {
                             ...n,
-                            user: a.user,
+                            user: r.user,
                             guildId: t.guild_id,
                             channel: t,
                             showMediaItems: !0,
@@ -43,7 +43,7 @@ function g(e) {
         };
     return (0, i.jsx)(s.Popout, {
         preload: () =>
-            (0, u.Z)(a.user, {
+            (0, u.Z)(r.user, {
                 guildId: t.guild_id,
                 channelId: t.id
             }),
@@ -52,13 +52,13 @@ function g(e) {
                 ...e,
                 guildId: t.guild_id,
                 channelId: t.id,
-                userId: a.id
+                userId: r.id
             }),
         position: 'right',
         spacing: 8,
         children: (e) =>
             (0, i.jsx)(s.Tooltip, {
-                text: a.userNick,
+                text: r.userNick,
                 position: 'bottom',
                 children: (n) =>
                     (0, i.jsx)(s.Clickable, {
@@ -69,10 +69,10 @@ function g(e) {
                         },
                         onContextMenu: v,
                         children: (0, i.jsx)(s.Avatar, {
-                            src: null != _ ? _ : a.user.getAvatarURL(t.guild_id, 24),
+                            src: null != _ ? _ : r.user.getAvatarURL(t.guild_id, 24),
                             size: s.AvatarSizes.SIZE_24,
-                            className: r()(f.avatar, p),
-                            'aria-label': a.userNick,
+                            className: a()(f.avatar, p),
+                            'aria-label': r.userNick,
                             isSpeaking: x && !C.enabled
                         })
                     })
@@ -100,7 +100,7 @@ function C(e) {
             (0, i.jsx)(
                 'div',
                 {
-                    className: r()(f.speakers, t),
+                    className: a()(f.speakers, t),
                     children: e
                 },
                 n

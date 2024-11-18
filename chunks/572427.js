@@ -1,6 +1,6 @@
 e.d(t, {
     Z: function () {
-        return o;
+        return a;
     }
 });
 var l = e(200651);
@@ -9,9 +9,9 @@ var i = e(481060),
     r = e(572004),
     u = e(592126),
     d = e(981631),
-    a = e(388032);
-function o(n, t, e) {
-    let o = null != e,
+    o = e(388032);
+function a(n, t, e) {
+    let a = null != e,
         { isMember: c } = (0, u.Z)(t, n);
     if (!c) return null;
     function s() {
@@ -22,24 +22,24 @@ function o(n, t, e) {
                 .concat(location.host)
                 .concat(d.Z5c.GUILD_EVENT_DETAILS(t, n, l ? null : e))
         ),
-            (0, i.showToast)((0, i.createToast)(a.intl.string(a.t['L/PwZW']), i.ToastType.SUCCESS));
+            (0, i.showToast)((0, i.createToast)(o.intl.string(o.t['L/PwZW']), i.ToastType.SUCCESS));
     }
     return (0, l.jsx)(i.MenuItem, {
-        id: a.intl.string(a.t['9o+VKy']),
-        label: a.intl.string(a.t['9o+VKy']),
-        action: o ? void 0 : () => s(!0),
+        id: o.intl.string(o.t['9o+VKy']),
+        label: o.intl.string(o.t['9o+VKy']),
+        action: a ? void 0 : () => s(!0),
         children:
-            o &&
+            a &&
             (0, l.jsxs)(l.Fragment, {
                 children: [
                     (0, l.jsx)(i.MenuItem, {
-                        id: a.intl.string(a.t.QLtDqK),
-                        label: a.intl.string(a.t.QLtDqK),
+                        id: o.intl.string(o.t.QLtDqK),
+                        label: o.intl.string(o.t.QLtDqK),
                         action: () => s(!1)
                     }),
                     (0, l.jsx)(i.MenuItem, {
-                        id: a.intl.string(a.t.AYnhBw),
-                        label: a.intl.string(a.t.AYnhBw),
+                        id: o.intl.string(o.t.AYnhBw),
+                        label: o.intl.string(o.t.AYnhBw),
                         action: () => s(!0)
                     })
                 ]

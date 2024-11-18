@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    a = n(481060),
-    r = n(32750),
+    r = n(481060),
+    a = n(32750),
     s = n(323597),
     o = n(438536),
     c = n(193987),
@@ -28,18 +28,18 @@ var i = n(200651),
     Z = n(388032);
 function N(e) {
     let { channel: t } = e,
-        [n, r] = l.useState(!1);
+        [n, a] = l.useState(!1);
     function s() {
-        r((e) => !e);
+        a((e) => !e);
     }
     let o = Z.intl.string(Z.t.UKOtz8);
-    return (0, i.jsx)(a.Popout, {
+    return (0, i.jsx)(r.Popout, {
         shouldShow: n,
-        animation: a.Popout.Animation.NONE,
+        animation: r.Popout.Animation.NONE,
         position: 'bottom',
         align: 'right',
         autoInvert: !1,
-        onRequestClose: () => r(!1),
+        onRequestClose: () => a(!1),
         renderPopout: function (e) {
             return (0, i.jsx)(S, {
                 ...e,
@@ -52,7 +52,7 @@ function N(e) {
                 ...e,
                 onClick: s,
                 tooltip: n ? null : o,
-                icon: a.MoreHorizontalIcon,
+                icon: r.MoreHorizontalIcon,
                 'aria-label': o,
                 selected: n
             });
@@ -65,7 +65,7 @@ function S(e) {
         x = (0, d.Z)(t),
         I = (0, p.Z)(t),
         E = (0, m.Z)(t),
-        N = (0, r.Z)(t),
+        N = (0, a.Z)(t),
         S = (0, c.Z)(t),
         T = (0, h.Z)(t.id),
         j = (0, u.Z)(t),
@@ -78,34 +78,34 @@ function S(e) {
     function M() {
         (0, _.Kh)(t.id);
     }
-    return (0, i.jsxs)(a.Menu, {
+    return (0, i.jsxs)(r.Menu, {
         navId: 'thread-context',
         onClose: n,
         'aria-label': Z.intl.string(Z.t['1NBjqa']),
         onSelect: l,
         children: [
-            (0, i.jsxs)(a.MenuGroup, {
+            (0, i.jsxs)(r.MenuGroup, {
                 children: [
                     C,
-                    (0, i.jsx)(a.MenuItem, {
+                    (0, i.jsx)(r.MenuItem, {
                         id: 'open',
                         label: Z.intl.string(Z.t.IxVmZm),
                         action: M
                     })
                 ]
             }),
-            (0, i.jsxs)(a.MenuGroup, {
+            (0, i.jsxs)(r.MenuGroup, {
                 children: [I, E]
             }),
-            (0, i.jsxs)(a.MenuGroup, {
+            (0, i.jsxs)(r.MenuGroup, {
                 children: [j, x, T]
             }),
-            (0, i.jsxs)(a.MenuGroup, {
+            (0, i.jsxs)(r.MenuGroup, {
                 children: [
-                    (0, i.jsx)(a.MenuItem, {
+                    (0, i.jsx)(r.MenuItem, {
                         id: 'search',
                         label: Z.intl.string(Z.t['5h0QOD']),
-                        icon: a.WindowLaunchIcon,
+                        icon: r.WindowLaunchIcon,
                         action: function () {
                             M(),
                                 setTimeout(() => {
@@ -113,20 +113,20 @@ function S(e) {
                                 }, 2000);
                         }
                     }),
-                    (0, i.jsx)(a.MenuItem, {
+                    (0, i.jsx)(r.MenuItem, {
                         id: 'pins',
                         label: Z.intl.string(Z.t['2BSH7u']),
-                        icon: a.WindowLaunchIcon,
+                        icon: r.WindowLaunchIcon,
                         action: function () {
                             M(), v.S.dispatch(b.CkL.TOGGLE_CHANNEL_PINS);
                         }
                     })
                 ]
             }),
-            (0, i.jsxs)(a.MenuGroup, {
+            (0, i.jsxs)(r.MenuGroup, {
                 children: [P, N, S, A]
             }),
-            (0, i.jsx)(a.MenuGroup, { children: y })
+            (0, i.jsx)(r.MenuGroup, { children: y })
         ]
     });
 }
@@ -137,7 +137,7 @@ function T(e) {
             t.isForumPost() ? null : (0, i.jsx)(I.Z, { channel: t }),
             (0, i.jsx)(N, { channel: t }),
             (0, i.jsx)(x.ZP.Icon, {
-                icon: a.XSmallIcon,
+                icon: r.XSmallIcon,
                 tooltip: Z.intl.string(Z.t.cpT0Cg),
                 onClick: () => (0, E.vN)((0, C.e)(t), null != n ? n : t.parent_id)
             })

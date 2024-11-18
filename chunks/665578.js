@@ -129,7 +129,7 @@ function Z(e) {
             },
             [t, Z, M, D, U]
         ),
-        H = l.useCallback(() => {
+        W = l.useCallback(() => {
             let e = Object.keys(B);
             return (0, c.openModalLazy)(async () => {
                 let { default: t } = await n.e('64908').then(n.bind(n, 557944));
@@ -147,7 +147,7 @@ function Z(e) {
                     });
             });
         }, [F, B, b, k]),
-        W = l.useCallback(() => {
+        H = l.useCallback(() => {
             let e = Object.keys(P);
             return (0, c.openModalLazy)(async () => {
                 let { default: t } = await n.e('64908').then(n.bind(n, 557944));
@@ -185,14 +185,14 @@ function Z(e) {
         V = z >= 0,
         K = [
             {
-                buttonClick: W,
+                buttonClick: H,
                 buttonText: T.intl.string(T.t['56jRn5']),
                 noneSelectedText: T.intl.string(T.t.C0rYfn),
                 overwrites: P,
                 title: null == r ? T.intl.string(T.t['vPWe+/']) : T.intl.string(T.t['1jLVGB'])
             },
             {
-                buttonClick: H,
+                buttonClick: W,
                 buttonText: T.intl.string(T.t['i1c+kZ']),
                 noneSelectedText: T.intl.string(T.t.UBJhCw),
                 overwrites: B,

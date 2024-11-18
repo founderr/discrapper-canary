@@ -17,8 +17,8 @@ var l = t(120356),
     f = t(496675),
     m = t(768581),
     h = t(176354),
-    I = t(981631),
-    E = t(185923),
+    E = t(981631),
+    I = t(185923),
     v = t(388032),
     p = t(117854);
 let M = ['slight_smile', 'frowning', 'smile', 'stuck_out_tongue', 'wink'];
@@ -72,14 +72,14 @@ function x(e, n) {
             !h.ZP.isEmojiPremiumLocked({
                 emoji: e,
                 channel: n,
-                intention: E.Hz.REACTION
+                intention: I.Hz.REACTION
             })
         );
     });
     t.length > 4 && (t.length = 4);
     let l = g.nc.useSetting(),
         r = (0, c.$R)(n),
-        m = (0, a.e7)([f.Z], () => l && r && (n.isPrivate() || f.Z.can(I.Plq.ADD_REACTIONS, n)), [n, r, l]),
+        m = (0, a.e7)([f.Z], () => l && r && (n.isPrivate() || f.Z.can(E.Plq.ADD_REACTIONS, n)), [n, r, l]),
         v = (t) => {
             (0, u.rU)(n.id, e.id, (0, d.g1)(t), u.TW.MESSAGE_CONTEXT_MENU);
         };

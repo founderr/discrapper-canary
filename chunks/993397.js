@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     l = n(192379),
-    a = n(120356),
-    r = n.n(a),
+    r = n(120356),
+    a = n.n(r),
     s = n(481060),
     o = n(492593),
     c = n(534469),
@@ -13,12 +13,12 @@ var i = n(200651),
     m = n(834872),
     f = n(596756);
 function g(e) {
-    let { expanded: t, onClick: n, count: l, compact: a, collapsedReason: r } = e;
+    let { expanded: t, onClick: n, count: l, compact: r, collapsedReason: a } = e;
     return (0, i.jsx)(o.Z, {
-        compact: a,
+        compact: r,
         role: 'group',
         childrenMessageContent: (0, i.jsx)(u.Z, {
-            compact: a,
+            compact: r,
             className: m.blockedSystemMessage,
             iconNode: (0, i.jsx)(s.XSmallIcon, {
                 size: 'md',
@@ -28,7 +28,7 @@ function g(e) {
             children: (0, i.jsxs)('div', {
                 className: m.blockedMessageText,
                 children: [
-                    p.intl.format(r, { count: l }),
+                    p.intl.format(a, { count: l }),
                     ' \u2014',
                     ' ',
                     (0, i.jsx)(s.Clickable, {
@@ -44,13 +44,13 @@ function g(e) {
 }
 t.Z = l.memo(function (e) {
     var t;
-    let { messages: n, channel: a, compact: s = !1, unreadId: o, collapsedReason: u } = e,
+    let { messages: n, channel: r, compact: s = !1, unreadId: o, collapsedReason: u } = e,
         { hasJumpTarget: p = !1 } = n,
         [C, x] = l.useState(p),
         _ = l.useCallback(() => x((e) => !e), []),
         v = n.hasUnread ? n.content.length - 1 : n.content.length;
     return (0, i.jsxs)('div', {
-        className: r()({
+        className: a()({
             [f.groupStart]: !0,
             [m.expanded]: C
         }),
@@ -79,8 +79,8 @@ t.Z = l.memo(function (e) {
             C
                 ? n.content.map((e, t) => {
                       if (e.type === h.ys_.DIVIDER && t > 0) {
-                          var l, r;
-                          let e = null !== (r = null === (l = n.content[t + 1]) || void 0 === l ? void 0 : l.isGroupStart) && void 0 !== r && r;
+                          var l, a;
+                          let e = null !== (a = null === (l = n.content[t + 1]) || void 0 === l ? void 0 : l.isGroupStart) && void 0 !== a && a;
                           return (0, i.jsx)(
                               d.Z,
                               {
@@ -98,7 +98,7 @@ t.Z = l.memo(function (e) {
                               {
                                   className: m.__invalid_blocked,
                                   compact: s,
-                                  channel: a,
+                                  channel: r,
                                   message: e.content,
                                   groupId: e.groupId,
                                   flashKey: e.flashKey,

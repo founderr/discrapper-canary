@@ -1,6 +1,6 @@
 var l,
-    i = n(442837),
-    r = n(570140);
+    r = n(442837),
+    i = n(570140);
 function a(t, e, n) {
     return (
         e in t
@@ -15,7 +15,7 @@ function a(t, e, n) {
     );
 }
 let u = null;
-class o extends (l = i.ZP.PersistedStore) {
+class o extends (l = r.ZP.PersistedStore) {
     initialize(t) {
         var e;
         u = null !== (e = null == t ? void 0 : t.type) && void 0 !== e ? e : null;
@@ -29,7 +29,7 @@ class o extends (l = i.ZP.PersistedStore) {
 }
 a(o, 'displayName', 'NewUserStore'),
     a(o, 'persistKey', 'nuf'),
-    (e.Z = new o(r.Z, {
+    (e.Z = new o(i.Z, {
         NUF_NEW_USER: function (t) {
             let { newUserType: e } = t;
             u = e;

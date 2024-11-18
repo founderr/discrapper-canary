@@ -20,8 +20,8 @@ var i = n(200651),
     S = n(703288),
     T = n(491758),
     C = n(233685),
-    _ = n(388032),
-    E = n(490715),
+    E = n(388032),
+    _ = n(490715),
     I = n(560629),
     f = n(971436);
 function N(e) {
@@ -45,8 +45,8 @@ function N(e) {
                         tag: a.FormTitleTags.H1,
                         title: n
                             ? (0, i.jsxs)('div', {
-                                  className: E.headerContainer,
-                                  children: [_.intl.string(_.t.z2jK6e), (0, i.jsx)(S.Z, {})]
+                                  className: _.headerContainer,
+                                  children: [E.intl.string(E.t.z2jK6e), (0, i.jsx)(S.Z, {})]
                               })
                             : null,
                         children:
@@ -64,9 +64,9 @@ function N(e) {
                             hideBorder: !0,
                             className: I.formItem,
                             value: N,
-                            note: _.intl.string(_.t['wW9/zc']),
+                            note: E.intl.string(E.t['wW9/zc']),
                             onChange: (e) => x.yg({ allowVoiceRecording: e }),
-                            children: _.intl.string(_.t.AGDDkJ)
+                            children: E.intl.string(E.t.AGDDkJ)
                         }),
                         A &&
                             O &&
@@ -74,13 +74,13 @@ function N(e) {
                                 hideBorder: !0,
                                 className: I.formItem,
                                 value: j,
-                                note: _.intl.string(_.t['0vjy8P']),
+                                note: E.intl.string(E.t['0vjy8P']),
                                 onChange: (e) =>
                                     x.yl({
                                         enabled: e,
                                         trackAnalytics: !0
                                     }),
-                                children: _.intl.string(_.t.NWw7kZ)
+                                children: E.intl.string(E.t.NWw7kZ)
                             })
                     ]
                 })

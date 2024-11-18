@@ -89,10 +89,10 @@ function f(e) {
         }),
         v = r.useMemo(() => l.slice(0, _ + 1), [_, l]),
         S = r.useMemo(() => l.slice(_ + 1), [_, l]),
-        T = r.useRef(null),
-        N = r.useCallback(() => {
+        N = r.useRef(null),
+        T = r.useCallback(() => {
             var e;
-            let t = null === (e = T.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
+            let t = null === (e = N.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
             if (null == t || f.current === t.width) return;
             m(t.width), (f.current = t.width);
             let n = C.current.reduce((e, t, n) => e + t + (0 === n ? 0 : 20)),
@@ -100,13 +100,13 @@ function f(e) {
             null == d || d(i);
         }, [C, d]);
     r.useEffect(() => {
-        let e = (0, u.pP)(N);
+        let e = (0, u.pP)(T);
         return (0, u.YP)(e, document.body), () => (0, u.UC)(e, document.body);
-    }, [N]);
+    }, [T]);
     let A = 0 !== h;
     return (0, i.jsxs)('div', {
         className: a()(p.container, t),
-        ref: T,
+        ref: N,
         children: [
             (0, i.jsxs)('div', {
                 className: p.measurements,

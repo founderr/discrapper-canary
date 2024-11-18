@@ -31,7 +31,7 @@ function p(t) {
         onCancel: C,
         transitionState: n,
         impression: { impressionName: i.ImpressionNames.BLOCK_USER_CONFIRMATION },
-        children: (0, s.c)({ location: 'confirm_block_modal' })
+        children: (0, s.cC)({ location: 'confirm_block_modal' })
             ? (0, a.jsx)(l.Z, {})
             : (0, a.jsx)(o.Text, {
                   variant: 'text-md/normal',

@@ -16,22 +16,22 @@ var i = n(200651),
     u = n(884697),
     f = n(449217),
     m = n(566111),
-    p = n(81245),
+    p = n(222062),
     h = n(269982),
     g = n(197115),
     v = n(150039),
     x = n(594174),
     I = n(626135),
     C = n(74538),
-    P = n(934261),
-    j = n(52268),
+    j = n(934261),
+    P = n(52268),
     Z = n(981631),
     E = n(474936),
     _ = n(388032),
     N = n(584990);
 function y(e) {
     let { user: t, product: n, purchase: l, onApply: o, onClose: c, disableApplyButton: f, canUseCollectibles: m, selectedProfileEffectId: v, selectedProfileEffectItem: x, analyticsLocations: I } = e,
-        P = r.useCallback(() => {
+        j = r.useCallback(() => {
             c(),
                 (0, d.mK)({
                     analyticsLocations: I,
@@ -39,14 +39,14 @@ function y(e) {
                     initialProductSkuId: null != x ? x.skuId : void 0
                 });
         }, [c, I, x]),
-        j = (0, p.Mu)('ProfileEffectModalFooter');
+        P = (0, p.M)();
     return (0, i.jsxs)(s.ModalFooter, {
         className: N.modalFooter,
         children: [
             (0, i.jsxs)('div', {
                 className: N.buttonsRight,
                 children: [
-                    !j &&
+                    !P &&
                         (0, i.jsx)(s.Button, {
                             look: s.Button.Looks.LINK,
                             color: s.Button.Colors.PRIMARY,
@@ -61,17 +61,17 @@ function y(e) {
                           })
                         : m || !(0, u.G1)(n)
                           ? (0, i.jsx)(s.Button, {
-                                onClick: P,
+                                onClick: j,
                                 children: _.intl.string(_.t.fYfGgI)
                             })
                           : (0, i.jsx)(g.Z, {
                                 subscriptionTier: E.Si.TIER_2,
-                                showGradient: j,
-                                buttonText: C.ZP.isPremium(t) ? _.intl.string(_.t.KXLX7u) : j ? _.intl.string(_.t.pj0XBA) : _.intl.string(_.t.mr4K7O)
+                                showGradient: P,
+                                buttonText: C.ZP.isPremium(t) ? _.intl.string(_.t.KXLX7u) : P ? _.intl.string(_.t.pj0XBA) : _.intl.string(_.t.mr4K7O)
                             })
                 ]
             }),
-            j &&
+            P &&
                 (0, u.G1)(n) &&
                 (0, i.jsx)(h.Z, {
                     product: n,
@@ -123,7 +123,7 @@ function b(e) {
             (0, i.jsxs)(s.ModalContent, {
                 className: N.modalContent,
                 children: [
-                    (0, i.jsx)(j.Z, {
+                    (0, i.jsx)(P.Z, {
                         user: t,
                         guild: n,
                         pendingProfileEffect: x,
@@ -131,7 +131,7 @@ function b(e) {
                         onSelect: k,
                         onClose: a
                     }),
-                    (0, i.jsx)(P.Z, {
+                    (0, i.jsx)(j.Z, {
                         user: t,
                         canApplySelectedChange: E,
                         pendingProfileEffectRecord: Z,
@@ -161,16 +161,16 @@ function b(e) {
 function S(e) {
     let { transitionState: t, analyticsLocations: n, initialSelectedEffectId: u, guild: f, onClose: p } = e,
         { isFetching: h, categories: g, purchases: C } = (0, m.Z)(),
-        P = (0, o.e7)([x.default], () => x.default.getCurrentUser()),
-        { analyticsLocations: j } = (0, c.ZP)(n, a.Z.EDIT_PROFILE_EFFECT_MODAL),
-        E = (0, v.Kg)(P, f);
+        j = (0, o.e7)([x.default], () => x.default.getCurrentUser()),
+        { analyticsLocations: P } = (0, c.ZP)(n, a.Z.EDIT_PROFILE_EFFECT_MODAL),
+        E = (0, v.Kg)(j, f);
     return (
         r.useEffect(() => {
             I.default.track(Z.rMx.OPEN_MODAL, {
                 type: Z.jXE.PROFILE_EFFECT_CUSTOMIZATION,
-                location_stack: j
+                location_stack: P
             });
-        }, [j]),
+        }, [P]),
         r.useEffect(
             () => () => {
                 (0, d.K$)({
@@ -181,7 +181,7 @@ function S(e) {
             [g]
         ),
         (0, i.jsx)(c.Gt, {
-            value: j,
+            value: P,
             children: (0, i.jsx)(s.ModalRoot, {
                 transitionState: t,
                 className: N.modal,
@@ -192,14 +192,14 @@ function S(e) {
                           type: s.Spinner.Type.SPINNING_CIRCLE
                       })
                     : (0, i.jsx)(b, {
-                          user: P,
+                          user: j,
                           guild: f,
                           categories: g,
                           purchases: C,
                           initialSelectedProfileEffectId: u,
                           currentSavedEffectId: E,
                           onClose: p,
-                          analyticsLocations: j
+                          analyticsLocations: P
                       })
             })
         })

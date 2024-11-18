@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    a = n(120356),
-    r = n.n(a),
+    r = n(120356),
+    a = n.n(r),
     s = n(442837),
     o = n(481060),
     c = n(749210),
@@ -27,7 +27,7 @@ var i = n(200651),
     b = n(327250),
     Z = n(959168);
 function N(e) {
-    let { userId: t, guildId: n, onClose: a, className: N, infoPanelClassName: S, style: T } = e,
+    let { userId: t, guildId: n, onClose: r, className: N, infoPanelClassName: S, style: T } = e,
         j = (0, I.ms)(n),
         A = (0, s.e7)([v.default], () => v.default.getUser(t), [t]),
         y = (0, s.e7)([_.ZP], () => _.ZP.getMember(n, t), [n, t]),
@@ -38,23 +38,23 @@ function N(e) {
         O = (0, g.ZP)(t, n),
         D = (0, u.ZP)();
     return (l.useEffect(() => {
-        !j && a();
-    }, [j, a]),
+        !j && r();
+    }, [j, r]),
     l.useEffect(() => {
-        null != L && null == y && !P && a();
-    }, [P, y, a, L]),
+        null != L && null == y && !P && r();
+    }, [P, y, r, L]),
     l.useEffect(() => {
         null != A && null != y && M(!1);
     }, [A, y]),
     l.useEffect(() => {
         let e = null == y;
         return (
-            !P && e && (R.current = window.setTimeout(a, 500)),
+            !P && e && (R.current = window.setTimeout(r, 500)),
             () => {
                 null != R.current && window.clearTimeout(R.current);
             }
         );
-    }, [P, y, a]),
+    }, [P, y, r]),
     (0, h.$)({ [n]: [t] }),
     l.useEffect(() => {
         (async function e() {
@@ -72,7 +72,7 @@ function N(e) {
     j)
         ? P || null == A || null == y
             ? (0, i.jsx)('div', {
-                  className: r()(Z.sidebarContainer, Z.loadingContainer, N),
+                  className: a()(Z.sidebarContainer, Z.loadingContainer, N),
                   style: T,
                   children: (0, i.jsx)(o.Spinner, {
                       animated: !0,
@@ -82,7 +82,7 @@ function N(e) {
             : (0, i.jsx)(m.Gt, {
                   value: k,
                   children: (0, i.jsx)('div', {
-                      className: r()(Z.sidebarContainer, N),
+                      className: a()(Z.sidebarContainer, N),
                       style: T,
                       children: (0, i.jsx)(x.Z, {
                           user: A,
@@ -97,12 +97,12 @@ function N(e) {
                                   (0, i.jsx)(b.Z, {
                                       userId: t,
                                       guildId: n,
-                                      onClose: a
+                                      onClose: r
                                   }),
                                   (0, i.jsx)(E.Z, {
                                       userId: t,
                                       guildId: n,
-                                      onClose: a,
+                                      onClose: r,
                                       className: S
                                   })
                               ]

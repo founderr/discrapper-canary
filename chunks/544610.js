@@ -1,8 +1,8 @@
 let i;
 n(47120), n(724458), n(653041);
 var l,
-    a,
     r,
+    a,
     s,
     o = n(392711),
     c = n.n(o),
@@ -76,9 +76,9 @@ function L() {
                         e.forEach((e) => {
                             let i = v.Z.getScoreWithoutFetchingLatest(e.id),
                                 l = e.getRecipientId(),
-                                a = I.Z.isFriend(l) ? 0.2 : 0,
-                                r = null != x.Z.getDMFromUserId(l) ? 0.1 : 0;
-                            n[l] = 1 + i / t + a + r;
+                                r = I.Z.isFriend(l) ? 0.2 : 0,
+                                a = null != x.Z.getDMFromUserId(l) ? 0.1 : 0;
+                            n[l] = 1 + i / t + r + a;
                         }),
                         n
                     );
@@ -94,10 +94,10 @@ function R() {
 }
 function k(e, t) {
     if (_.Z.hasConsented(b.pjP.PERSONALIZATION)) {
-        var n, i, l, a;
-        let r = null !== (l = null === (n = m.Z.getUserAffinity(e.user.id)) || void 0 === n ? void 0 : n.communicationProbability) && void 0 !== l ? l : 0,
-            s = null !== (a = null === (i = m.Z.getUserAffinity(t.user.id)) || void 0 === i ? void 0 : i.communicationProbability) && void 0 !== a ? a : 0;
-        if (r !== s) return s - r;
+        var n, i, l, r;
+        let a = null !== (l = null === (n = m.Z.getUserAffinity(e.user.id)) || void 0 === n ? void 0 : n.communicationProbability) && void 0 !== l ? l : 0,
+            s = null !== (r = null === (i = m.Z.getUserAffinity(t.user.id)) || void 0 === i ? void 0 : i.communicationProbability) && void 0 !== r ? r : 0;
+        if (a !== s) return s - a;
     }
     return (0, g._I)(C.ZP.getName(e.user).toLocaleLowerCase()).localeCompare((0, g._I)(C.ZP.getName(t.user).toLocaleLowerCase()));
 }
@@ -153,14 +153,14 @@ class H extends (l = d.ZP.Store) {
     }
 }
 (s = 'PrivateChannelRecipientsInviteStore'),
-    (r = 'displayName') in (a = H)
-        ? Object.defineProperty(a, r, {
+    (a = 'displayName') in (r = H)
+        ? Object.defineProperty(r, a, {
               value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (a[r] = s);
+        : (r[a] = s);
 let G = new H(u.Z, {
     CONNECTION_OPEN: function () {
         P();

@@ -20,13 +20,13 @@ var i = n(200651),
 function S(e) {
     let { cta: t, storeListing: n, className: r } = e,
         { applicationId: S, benefits: T, description: C } = n,
-        _ = s.useMemo(() => (null == n.thumbnail ? null : (0, g.q)(S, n.thumbnail, 256)), [S, n.thumbnail]),
-        { data: E } = (0, d.X)(n.skuId),
+        E = s.useMemo(() => (null == n.thumbnail ? null : (0, g.q)(S, n.thumbnail, 256)), [S, n.thumbnail]),
+        { data: _ } = (0, d.X)(n.skuId),
         I = s.useMemo(() => {
-            if (null == E || 0 === E.length) return null;
-            let e = E[0];
+            if (null == _ || 0 === _.length) return null;
+            let e = _[0];
             return (0, m.xg)(e);
-        }, [E]);
+        }, [_]);
     return null == I
         ? null
         : (0, i.jsxs)(a.l, {
@@ -36,9 +36,9 @@ function S(e) {
                       (0, i.jsxs)('div', {
                           className: x.headerTitle,
                           children: [
-                              null != _ &&
+                              null != E &&
                                   (0, i.jsx)(c.Image, {
-                                      src: _.href,
+                                      src: E.href,
                                       imageClassName: x.subscriptionImg,
                                       width: 48,
                                       height: 48
@@ -76,7 +76,7 @@ function S(e) {
                           children: T.map((e) => {
                               let { id: t, name: n, description: s, icon: r } = e;
                               return (0, i.jsx)(
-                                  o.G,
+                                  o.Gm,
                                   {
                                       header: n,
                                       icon: (0, u.n)(S, r),

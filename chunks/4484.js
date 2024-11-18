@@ -28,7 +28,7 @@ var r = n(200651),
     O = n(981631),
     D = n(484918);
 t.Z = i.forwardRef(function (e, t) {
-    let { value: n, type: a, channel: L, className: x, id: w, disabled: M, submitting: P, placeholder: k, required: U, textAreaPaddingClassName: B, onChange: G, onPaste: Z, onResize: F, onFocus: V, onBlur: j, onKeyDown: H, onKeyUp: Y, onTab: W, onEnter: K, onSubmit: z, maybeShowAutocomplete: q, hideAutocomplete: Q, moveSelection: X, spellcheckEnabled: J, canUseCommands: $, canOnlyUseTextCommands: ee, disableAutoFocus: et, disableEnterToSubmit: en, allowNewLines: er, 'aria-owns': ei, 'aria-expanded': ea, 'aria-haspopup': es, 'aria-activedescendant': eo, 'aria-controls': el, 'aria-invalid': eu, 'aria-describedby': ec, 'aria-labelledby': ed, 'aria-autocomplete': ef } = e,
+    let { value: n, type: a, channel: L, className: x, id: w, disabled: M, submitting: P, placeholder: k, required: U, textAreaPaddingClassName: G, onChange: B, onPaste: Z, onResize: F, onFocus: V, onBlur: j, onKeyDown: H, onKeyUp: Y, onTab: W, onEnter: K, onSubmit: z, maybeShowAutocomplete: q, hideAutocomplete: Q, moveSelection: X, spellcheckEnabled: J, canUseCommands: $, canOnlyUseTextCommands: ee, disableAutoFocus: et, disableEnterToSubmit: en, allowNewLines: er, 'aria-owns': ei, 'aria-expanded': ea, 'aria-haspopup': es, 'aria-activedescendant': eo, 'aria-controls': el, 'aria-invalid': eu, 'aria-describedby': ec, 'aria-labelledby': ed, 'aria-autocomplete': ef } = e,
         e_ = i.useRef(null),
         ep = i.useRef(null),
         eh = i.useRef(!0),
@@ -173,9 +173,9 @@ t.Z = i.forwardRef(function (e, t) {
         ),
         eO = i.useCallback(
             (e) => {
-                e !== ep.current ? em.current && (null == G || G(null, (0, m.sk)(e, { mode: 'raw' }), e)) : em.current && q();
+                e !== ep.current ? em.current && (null == B || B(null, (0, m.sk)(e, { mode: 'raw' }), e)) : em.current && q();
             },
-            [q, G]
+            [q, B]
         );
     i.useLayoutEffect(() => {
         eh.current && ((ep.current = n), eE(eI, 'parent', { value: n }));
@@ -205,7 +205,7 @@ t.Z = i.forwardRef(function (e, t) {
                     editor: eI,
                     channelId: L.id,
                     guildId: L.guild_id,
-                    className: s()(D.slateTextArea, B),
+                    className: s()(D.slateTextArea, G),
                     placeholder: k,
                     readOnly: eg,
                     spellCheck: J,

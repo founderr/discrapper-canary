@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(442837),
-    a = n(481060),
-    r = n(665149),
+    r = n(481060),
+    a = n(665149),
     s = n(171368),
     o = n(650774),
     c = n(430824),
@@ -44,30 +44,30 @@ function x(e) {
         ? (0, i.jsxs)('div', {
               className: C.buttons,
               children: [
-                  (0, i.jsx)(a.Tooltip, {
+                  (0, i.jsx)(r.Tooltip, {
                       text: g.intl.string(g.t.RbIXi4),
                       shouldShow: N,
                       children: (e) =>
-                          (0, i.jsx)(a.Button, {
+                          (0, i.jsx)(r.Button, {
                               ...e,
-                              color: a.Button.Colors.GREEN,
+                              color: r.Button.Colors.GREEN,
                               submitting: j,
                               onClick: S,
-                              size: a.ButtonSizes.SMALL,
+                              size: r.ButtonSizes.SMALL,
                               disabled: N,
                               children: g.intl.string(g.t.BzjDQE)
                           })
                   }),
-                  (0, i.jsx)(a.Button, {
-                      color: a.Button.Colors.RED,
+                  (0, i.jsx)(r.Button, {
+                      color: r.Button.Colors.RED,
                       onClick: T,
-                      size: a.ButtonSizes.SMALL,
+                      size: r.ButtonSizes.SMALL,
                       disabled: j || v.applicationStatus !== p.wB.SUBMITTED,
                       children: g.intl.string(g.t.hDtbs7)
                   }),
                   n &&
-                      (0, i.jsx)(a.Button, {
-                          color: a.Button.Colors.TRANSPARENT,
+                      (0, i.jsx)(r.Button, {
+                          color: r.Button.Colors.TRANSPARENT,
                           onClick: () => {
                               (0, s.openUserProfileModal)({
                                   userId: v.userId,
@@ -78,10 +78,10 @@ function x(e) {
                                   }
                               });
                           },
-                          size: a.ButtonSizes.SMALL,
+                          size: r.ButtonSizes.SMALL,
                           children: g.intl.string(g.t.iXAna2)
                       }),
-                  x && (0, i.jsx)(r.ZP.Divider, {})
+                  x && (0, i.jsx)(a.ZP.Divider, {})
               ]
           })
         : null;

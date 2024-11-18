@@ -23,12 +23,12 @@ n.d(t, {
 }),
     n(411104);
 var r = n(544891),
-    i = n(343817),
-    l = n(570140),
+    l = n(343817),
+    i = n(570140),
     a = n(959546),
     s = n(981631);
 let o = async (e) => {
-        l.Z.dispatch({
+        i.Z.dispatch({
             type: 'CONSUMABLES_PRICE_FETCH_STARTED',
             skuId: e
         });
@@ -39,7 +39,7 @@ let o = async (e) => {
             });
             if (null == t.body.price)
                 throw (
-                    (l.Z.dispatch({
+                    (i.Z.dispatch({
                         type: 'CONSUMABLES_PRICE_FETCH_FAILED',
                         skuId: e
                     }),
@@ -47,7 +47,7 @@ let o = async (e) => {
                 );
             let n = t.body.price;
             return (
-                l.Z.dispatch({
+                i.Z.dispatch({
                     type: 'CONSUMABLES_PRICE_FETCH_SUCCEEDED',
                     skuId: e,
                     price: n
@@ -60,16 +60,16 @@ let o = async (e) => {
             );
         } catch (t) {
             throw (
-                (l.Z.dispatch({
+                (i.Z.dispatch({
                     type: 'CONSUMABLES_PRICE_FETCH_FAILED',
                     skuId: e
                 }),
-                new i.Hx(t))
+                new l.Hx(t))
             );
         }
     },
     c = async (e) => {
-        l.Z.dispatch({
+        i.Z.dispatch({
             type: 'CONSUMABLES_ENTITLEMENT_FETCH_STARTED',
             skuId: e
         });
@@ -80,7 +80,7 @@ let o = async (e) => {
                 }),
                 n = null != t.body.entitlement ? a.Z.createFromServer(t.body.entitlement) : null;
             return (
-                l.Z.dispatch({
+                i.Z.dispatch({
                     type: 'CONSUMABLES_ENTITLEMENT_FETCH_COMPLETED',
                     skuId: e,
                     entitlement: n
@@ -89,11 +89,11 @@ let o = async (e) => {
             );
         } catch (t) {
             throw (
-                (l.Z.dispatch({
+                (i.Z.dispatch({
                     type: 'CONSUMABLES_ENTITLEMENT_FETCH_FAILED',
                     skuId: e
                 }),
-                new i.Hx(t))
+                new l.Hx(t))
             );
         }
     },
@@ -104,28 +104,28 @@ let o = async (e) => {
                 body: { channel_id: e },
                 rejectWithError: !1
             }),
-                l.Z.dispatch({
+                i.Z.dispatch({
                     type: 'CLEAR_CONSUMED_ENTITLEMENT',
                     skuId: t
                 });
         } catch (e) {
-            throw new i.Hx(e);
+            throw new l.Hx(e);
         }
     },
     u = (e) => {
-        l.Z.dispatch({
+        i.Z.dispatch({
             type: 'CONSUMABLES_CLEAR_ERROR',
             skuId: e
         });
     },
     E = () => {
-        l.Z.dispatch({ type: 'PLAYED_HD_STREAMING_POTION_ANIMATION' });
+        i.Z.dispatch({ type: 'PLAYED_HD_STREAMING_POTION_ANIMATION' });
     },
     m = () => {
-        l.Z.dispatch({ type: 'RESET_PLAYED_HD_STREAMING_POTION_ANIMATION' });
+        i.Z.dispatch({ type: 'RESET_PLAYED_HD_STREAMING_POTION_ANIMATION' });
     },
     h = (e) => {
-        l.Z.dispatch({
+        i.Z.dispatch({
             type: 'SET_PREVIOUS_GO_LIVE_SETTINGS',
             previousGoLiveSettings: e
         });

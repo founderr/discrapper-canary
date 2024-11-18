@@ -1,6 +1,6 @@
 e.d(i, {
     r: function () {
-        return u;
+        return o;
     }
 });
 var l = e(200651);
@@ -8,36 +8,36 @@ e(192379);
 var t = e(481060),
     r = e(630388),
     s = e(981631),
-    o = e(388032),
-    a = e(920633);
-let d = {
+    d = e(388032),
+    u = e(920633);
+let a = {
     size: 'md',
     color: t.tokens.colors.INTERACTIVE_NORMAL
 };
-function u(n) {
+function o(n) {
     let { subscriptions: i, color: e = 'text-normal' } = n,
-        u = i.some((n) => (0, r.yE)(n.skuFlags, s.l4R.APPLICATION_GUILD_SUBSCRIPTION));
+        o = i.some((n) => (0, r.yE)(n.skuFlags, s.l4R.APPLICATION_GUILD_SUBSCRIPTION));
     return (0, l.jsx)(t.Heading, {
         variant: 'heading-lg/semibold',
         color: e,
-        className: a.heading,
-        children: u
+        className: u.heading,
+        children: o
             ? (0, l.jsxs)(l.Fragment, {
                   children: [
                       (0, l.jsx)(t.ServerIcon, {
-                          ...d,
+                          ...a,
                           color: 'currentColor'
                       }),
-                      o.intl.string(o.t.XIhSoq)
+                      d.intl.string(d.t.XIhSoq)
                   ]
               })
             : (0, l.jsxs)(l.Fragment, {
                   children: [
                       (0, l.jsx)(t.UserIcon, {
-                          ...d,
+                          ...a,
                           color: 'currentColor'
                       }),
-                      o.intl.string(o.t.dxfZpq)
+                      d.intl.string(d.t.dxfZpq)
                   ]
               })
     });

@@ -10,8 +10,8 @@ n.d(t, {
     n(789020);
 var i = n(192379),
     l = n(442837),
-    a = n(317381),
-    r = n(122613),
+    r = n(317381),
+    a = n(122613),
     s = n(574952),
     o = n(100527),
     c = n(906732),
@@ -22,18 +22,18 @@ var i = n(192379),
     m = n(981631),
     f = n(388032);
 function g(e) {
-    let { channel: t, primaryEntryPointCommand: n, application: r, showAppLauncherPopup: s = !1 } = e,
+    let { channel: t, primaryEntryPointCommand: n, application: a, showAppLauncherPopup: s = !1 } = e,
         [u, g] = i.useState(!1),
-        C = (0, l.e7)([a.ZP], () => a.ZP.getCurrentEmbeddedActivity()),
+        C = (0, l.e7)([r.ZP], () => r.ZP.getCurrentEmbeddedActivity()),
         x = s ? f.t.cpT0Cg : f.t['0hKkS0'],
         _ = i.useMemo(() => (null != n ? (0, d.XZ)(n.displayName) : f.intl.string(f.t['3xjX0d'])), [n]),
-        v = void 0 !== r.flags && (0, p.yE)(r.flags, m.udG.EMBEDDED),
-        I = null != C && C.applicationId === r.id && C.channelId === t.id,
+        v = void 0 !== a.flags && (0, p.yE)(a.flags, m.udG.EMBEDDED),
+        I = null != C && C.applicationId === a.id && C.channelId === t.id,
         { analyticsLocations: E } = (0, c.ZP)(o.Z.APP_DMS_ENTRY_POINT_COMMAND_BUTTON),
         b = null != t.recipients ? t.recipients[0] : void 0,
         Z = (0, h.ms)({
             channel: t,
-            applicationId: r.id,
+            applicationId: a.id,
             botUserId: b
         });
     return {
@@ -48,20 +48,20 @@ function g(e) {
     };
 }
 function C(e) {
-    let { channel: t, application: n, isEmbeddedApp: l, hasActiveMatchingEmbeddedActivity: a, currentEmbeddedActivity: o, onOpenButtonPress: c, channelRecipientUserId: d, setIsExecutingLaunchInteraction: p, analyticsLocations: m } = e,
+    let { channel: t, application: n, isEmbeddedApp: l, hasActiveMatchingEmbeddedActivity: r, currentEmbeddedActivity: o, onOpenButtonPress: c, channelRecipientUserId: d, setIsExecutingLaunchInteraction: p, analyticsLocations: m } = e,
         f = (0, h.ms)({
             channel: t,
             applicationId: n.id,
             botUserId: d
         }),
         g = i.useCallback(() => {
-            a && null != o
+            r && null != o
                 ? (0, s.Z)().leaveActivity({
                       channelId: t.id,
                       applicationId: o.applicationId
                   })
                 : (p(!0),
-                  (0, r.Z)({
+                  (0, a.Z)({
                       targetApplicationId: n.id,
                       channelId: t.id,
                       analyticsLocations: m,
@@ -70,6 +70,6 @@ function C(e) {
                       },
                       commandOrigin: u.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON
                   }));
-        }, [a, t.id, n.id, o, m, p]);
+        }, [r, t.id, n.id, o, m, p]);
     return f && l ? g : c;
 }

@@ -7,8 +7,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    a = n(831209),
-    r = n(442837),
+    r = n(831209),
+    a = n(442837),
     s = n(704215),
     o = n(481060),
     c = n(278323),
@@ -33,7 +33,7 @@ var i = n(200651),
     j = n(948840);
 let A = /(.*)```(\w+)\n(.*)```(.*)/s;
 function y() {
-    let e = (0, r.e7)([C.Z], () => C.Z.hasCurrentUserSentMessageSinceAppStart()),
+    let e = (0, a.e7)([C.Z], () => C.Z.hasCurrentUserSentMessageSinceAppStart()),
         t = [];
     e && t.push(s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE);
     let [n] = (0, m.cv)(t);
@@ -51,7 +51,7 @@ function y() {
                 return t === s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE
                     ? (0, i.jsx)(o.TextBadge, {
                           text: T.intl.string(T.t.y2b7CA),
-                          color: a.Z.BUTTON_DANGER_BACKGROUND
+                          color: r.Z.BUTTON_DANGER_BACKGROUND
                       })
                     : null;
             }
@@ -59,7 +59,7 @@ function y() {
     );
 }
 function P(e) {
-    let { channel: t, options: r, onFileUpload: m, onClose: f, onSelect: C, draftType: P, editorTextContent: M, setValue: L, openClips: R } = e,
+    let { channel: t, options: a, onFileUpload: m, onClose: f, onSelect: C, draftType: P, editorTextContent: M, setValue: L, openClips: R } = e,
         { analyticsLocations: k } = (0, h.ZP)();
     l.useEffect(() => {
         x.default.track(Z.rMx.OPEN_POPOUT, {
@@ -125,7 +125,7 @@ function P(e) {
         onClose: f,
         'aria-label': T.intl.string(T.t.Xm41aW),
         className: j.menu,
-        children: r.map(function (e) {
+        children: a.map(function (e) {
             var n;
             let l = (0, i.jsxs)('div', {
                 className: j.optionLabel,
@@ -142,7 +142,7 @@ function P(e) {
                         e.badgeVal > 0 &&
                         (0, i.jsx)(o.NumberBadge, {
                             className: j.badge,
-                            color: null !== (n = e.badgeColor) && void 0 !== n ? n : a.Z.STATUS_DANGER,
+                            color: null !== (n = e.badgeColor) && void 0 !== n ? n : r.Z.STATUS_DANGER,
                             count: e.badgeVal
                         })
                 ]

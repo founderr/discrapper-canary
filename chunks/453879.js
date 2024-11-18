@@ -1,14 +1,14 @@
 n.d(t, {
     v: function () {
-        return r;
+        return a;
     }
 }),
     n(47120),
     n(653041);
 var i = n(975984),
     l = n(486527),
-    a = n(388032);
-function r(e, t) {
+    r = n(388032);
+function a(e, t) {
     if (t !== l.AR.ALL)
         return [
             {
@@ -17,19 +17,19 @@ function r(e, t) {
             }
         ];
     let n = [],
-        r = (0, i.Lz)(e),
-        s = new Set(r.map((e) => e.guildId));
-    r.length > 0 &&
+        a = (0, i.Lz)(e),
+        s = new Set(a.map((e) => e.guildId));
+    a.length > 0 &&
         n.push({
-            header: a.intl.string(a.t.CbaapK),
-            entries: r,
+            header: r.intl.string(r.t.CbaapK),
+            entries: a,
             appendEndCard: !1
         });
     let o = e.filter((e) => !s.has(e.guildId));
     return (
         (o = (0, i.Th)(o)).length > 0 &&
             n.push({
-                header: a.intl.string(a.t.wxbhER),
+                header: r.intl.string(r.t.wxbhER),
                 entries: o,
                 appendEndCard: !0
             }),

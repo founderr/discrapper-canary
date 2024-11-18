@@ -33,15 +33,15 @@ let S = ['Android', 'iOS', 'Windows Mobile', 'Windows', 'Linux', 'Mac OS X'].map
 }));
 function N(e) {
     var t, N, T, w, P;
-    let { transitionState: k, onClose: B } = e,
-        E = r.useRef(null),
+    let { transitionState: k, onClose: E } = e,
+        B = r.useRef(null),
         L = r.useRef(null),
         [D, O] = r.useState(''),
         [R, F] = r.useState(''),
         [Z, A] = r.useState(),
         [G, M] = r.useState(''),
-        [V, H] = r.useState([]),
-        [W, z] = r.useState(),
+        [V, W] = r.useState([]),
+        [H, z] = r.useState(),
         [q, U] = r.useState(),
         [K, X] = r.useState(!1),
         [Y, J] = r.useState(''),
@@ -71,10 +71,10 @@ function N(e) {
             return (null == e ? void 0 : e.isStaff()) || (null == e ? void 0 : e.isStaffPersonal());
         }),
         ex = () => {
-            null == B || B();
+            null == E || E();
         },
         ev = (e) => {
-            H(V.filter((t) => t.id !== e));
+            W(V.filter((t) => t.id !== e));
         };
     async function eg() {
         var e;
@@ -82,7 +82,7 @@ function N(e) {
             ec(!0);
             return;
         }
-        let t = null == W ? void 0 : null === (e = W.features) || void 0 === e ? void 0 : e.find((e) => (0, j.pD)(e) === q);
+        let t = null == H ? void 0 : null === (e = H.features) || void 0 === e ? void 0 : e.find((e) => (0, j.pD)(e) === q);
         em(!0), ec(!1);
         let r = (0, I.D)(
                 V.map((e) => {
@@ -265,7 +265,7 @@ function N(e) {
                                                 options:
                                                     null !==
                                                         (P =
-                                                            null == (t = W)
+                                                            null == (t = H)
                                                                 ? void 0
                                                                 : null === (w = t.features) || void 0 === w
                                                                   ? void 0
@@ -283,7 +283,7 @@ function N(e) {
                                                                       : N.sort((e, t) => e.label.localeCompare(t.label))) && void 0 !== P
                                                         ? P
                                                         : [],
-                                                isDisabled: null == W,
+                                                isDisabled: null == H,
                                                 onChange: (e) => U(e)
                                             })
                                         }),
@@ -375,11 +375,11 @@ function N(e) {
                                         children: [
                                             C.intl.string(C.t.HVxmOD),
                                             (0, i.jsx)(c.Z, {
-                                                ref: E,
+                                                ref: B,
                                                 onChange: (e) => {
                                                     var t, n;
                                                     (null === (n = e.currentTarget) || void 0 === n ? void 0 : null === (t = n.files) || void 0 === t ? void 0 : t[0]) != null &&
-                                                        H([
+                                                        W([
                                                             ...V,
                                                             ...Array.from(e.currentTarget.files).map(
                                                                 (e) =>

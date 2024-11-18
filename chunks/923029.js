@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    a = n(873546),
-    r = n(442837),
+    r = n(873546),
+    a = n(442837),
     s = n(481060),
     o = n(665149),
     c = n(911560),
@@ -21,8 +21,8 @@ function f(e) {
     l.useEffect(() => {
         c.Z.loadThread(f);
     });
-    let g = (0, r.e7)([u.Z], () => u.Z.getGuildId()) === h.I_8,
-        C = (0, r.e7)([d.Z], () => d.Z.theme);
+    let g = (0, a.e7)([u.Z], () => u.Z.getGuildId()) === h.I_8,
+        C = (0, a.e7)([d.Z], () => d.Z.theme);
     return (
         (t = g
             ? (0, i.jsx)(s.EmptyStateText, {
@@ -38,7 +38,7 @@ function f(e) {
         (0, i.jsxs)('div', {
             className: m.noChannel,
             children: [
-                a.tq && (0, i.jsx)(o.ZP, { children: (0, i.jsx)(l.Fragment, {}) }),
+                r.tq && (0, i.jsx)(o.ZP, { children: (0, i.jsx)(l.Fragment, {}) }),
                 (0, i.jsxs)(s.EmptyState, {
                     theme: C,
                     children: [

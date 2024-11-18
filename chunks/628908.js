@@ -5,8 +5,8 @@ var r = n(200651),
     a = n.n(i),
     s = n(442837),
     l = n(481060),
-    d = n(570140),
-    c = n(816814),
+    c = n(570140),
+    d = n(816814),
     u = n(23645),
     E = n(600164),
     h = n(454585),
@@ -114,7 +114,7 @@ class S extends o.PureComponent {
                 fileContents: this.getDownloadFileContents,
                 contentType: 'text/plain',
                 fileName: 'discord_backup_codes.txt',
-                onDownload: () => d.Z.dispatch({ type: 'MFA_SEEN_BACKUP_CODE_PROMPT' }),
+                onDownload: () => c.Z.dispatch({ type: 'MFA_SEEN_BACKUP_CODE_PROMPT' }),
                 children: (0, r.jsx)(l.Button, {
                     color: l.Button.Colors.GREEN,
                     size: l.Button.Sizes.SMALL,
@@ -159,7 +159,7 @@ class S extends o.PureComponent {
             cancelText: b.intl.string(b.t['ETE/oK']),
             onCancel: () => this.setState({ showConfirmModal: !1 }),
             onConfirm: () => {
-                d.Z.dispatch({ type: 'MFA_SEEN_BACKUP_CODE_PROMPT' }), t();
+                c.Z.dispatch({ type: 'MFA_SEEN_BACKUP_CODE_PROMPT' }), t();
             },
             children: (0, r.jsx)(l.Text, {
                 variant: 'text-md/normal',
@@ -245,7 +245,7 @@ class S extends o.PureComponent {
                         (0, l.openModal)((e) =>
                             (0, r.jsx)(I.default, {
                                 ...e,
-                                handleSubmit: (e) => c.Z.enableSMS(e),
+                                handleSubmit: (e) => d.Z.enableSMS(e),
                                 title: b.intl.string(b.t.DZQe29)
                             })
                         );

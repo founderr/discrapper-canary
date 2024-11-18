@@ -4,38 +4,38 @@ e.r(t),
             return _;
         }
     });
-var i = e(200651);
+var r = e(200651);
 e(192379);
-var r = e(481060),
+var i = e(481060),
     c = e(313201),
     l = e(471253),
-    s = e(930180),
-    o = e(46920),
+    o = e(930180),
+    s = e(46920),
     a = e(939863),
     d = e(388032),
     u = e(691021);
 function _(n) {
     let { channel: t, transitionState: e, onClose: _, ...h } = n,
         m = (0, c.Dt)(),
-        g = (0, s._d)(t.id),
+        g = (0, o._d)(t.id),
         f = async () => {
             await (0, l.yi)(t), _();
         },
-        p = async () => {
+        E = async () => {
             await (0, l.RK)(t, !1), _();
         };
-    return (0, i.jsx)(r.ModalRoot, {
+    return (0, r.jsx)(i.ModalRoot, {
         transitionState: e,
         'aria-labelledby': m,
         ...h,
-        size: r.ModalSize.SMALL,
-        children: (0, i.jsxs)(r.ModalContent, {
+        size: i.ModalSize.SMALL,
+        children: (0, r.jsxs)(i.ModalContent, {
             className: u.content,
             children: [
-                (0, i.jsx)(a.Z, {
-                    children: (0, i.jsx)('div', {
+                (0, r.jsx)(a.Z, {
+                    children: (0, r.jsx)('div', {
                         className: u.stageIconBackground,
-                        children: (0, i.jsx)(r.StageIcon, {
+                        children: (0, r.jsx)(i.StageIcon, {
                             size: 'custom',
                             color: 'currentColor',
                             width: 40,
@@ -44,32 +44,32 @@ function _(n) {
                         })
                     })
                 }),
-                (0, i.jsx)(r.Heading, {
+                (0, r.jsx)(i.Heading, {
                     id: m,
                     variant: 'heading-xl/semibold',
                     color: 'header-primary',
                     className: u.headerTitle,
                     children: d.intl.string(d.t.njetU1)
                 }),
-                (0, i.jsx)(r.Text, {
+                (0, r.jsx)(i.Text, {
                     variant: 'text-sm/normal',
                     color: 'header-secondary',
                     className: u.headerSubtitle,
                     children: d.intl.string(d.t.LQY4JS)
                 }),
-                g > 0 && (0, i.jsx)(o.mv, { channelId: t.id }),
-                (0, i.jsxs)('div', {
+                g > 0 && (0, r.jsx)(s.mv, { channelId: t.id }),
+                (0, r.jsxs)('div', {
                     className: u.buttonsContainer,
                     children: [
-                        (0, i.jsxs)(r.Button, {
-                            color: r.Button.Colors.PRIMARY,
+                        (0, r.jsxs)(i.Button, {
+                            color: i.Button.Colors.PRIMARY,
                             className: u.button,
                             innerClassName: u.innerButton,
-                            onClick: p,
+                            onClick: E,
                             children: [
-                                (0, i.jsx)('div', {
+                                (0, r.jsx)('div', {
                                     className: u.icon,
-                                    children: (0, i.jsx)(r.MicrophoneIcon, {
+                                    children: (0, r.jsx)(i.MicrophoneIcon, {
                                         size: 'custom',
                                         color: 'currentColor',
                                         width: 20,
@@ -79,15 +79,15 @@ function _(n) {
                                 d.intl.string(d.t['Q8o/tb'])
                             ]
                         }),
-                        (0, i.jsxs)(r.Button, {
-                            color: r.Button.Colors.PRIMARY,
+                        (0, r.jsxs)(i.Button, {
+                            color: i.Button.Colors.PRIMARY,
                             className: u.button,
                             innerClassName: u.innerButton,
                             onClick: f,
                             children: [
-                                (0, i.jsx)('div', {
+                                (0, r.jsx)('div', {
                                     className: u.icon,
-                                    children: (0, i.jsx)(r.GroupIcon, {
+                                    children: (0, r.jsx)(i.GroupIcon, {
                                         size: 'custom',
                                         color: 'currentColor',
                                         width: 20,

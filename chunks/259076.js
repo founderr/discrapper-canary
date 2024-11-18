@@ -1,13 +1,13 @@
 var o, s;
 n.d(t, {
     Mr: function () {
-        return a;
+        return r;
     },
     j1: function () {
         return i;
     },
     mF: function () {
-        return r;
+        return a;
     },
     pw: function () {
         return o;
@@ -22,6 +22,6 @@ n.d(t, {
     (s[(s.NEW_EMAIL = 2)] = 'NEW_EMAIL'),
     (s[(s.SOMETHING_ELSE = 3)] = 'SOMETHING_ELSE');
 let l = [0, 1, 2, 3],
-    a = new Set([0, 1]),
+    r = new Set([0, 1]),
     i = 'https://discord.com/safety/understanding-and-avoiding-common-scams',
-    r = 1024;
+    a = 1024;

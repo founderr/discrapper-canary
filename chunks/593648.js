@@ -22,8 +22,8 @@ var i = n(200651),
     S = n(688465),
     T = n(487419),
     C = n(197344),
-    _ = n(476756),
-    E = n(734934),
+    E = n(476756),
+    _ = n(734934),
     I = n(223683),
     f = n(312400),
     N = n(115345),
@@ -92,7 +92,7 @@ function H(e) {
 function z(e) {
     let { disabledSounds: t, disableAllSounds: n, notifyMessagesInSelectedChannel: r } = e,
         a = s.useRef(),
-        o = (0, E.p)(),
+        o = (0, _.p)(),
         c = s.useCallback((e, t) => {
             t.stopPropagation(), t.preventDefault(), null != a.current && a.current.stop(), (a.current = B.GN(e));
         }, []),
@@ -210,7 +210,7 @@ function z(e) {
                                   className: G.marginBottom20,
                                   children: U.intl.string(U.t.fgSHf3)
                               }),
-                              (0, i.jsx)(_.Z, {})
+                              (0, i.jsx)(E.Z, {})
                           ]
                       })
                     : null,
@@ -614,7 +614,7 @@ async function J(e) {
         e(!1);
 }
 function $(e) {
-    let t = (0, E.p)();
+    let t = (0, _.p)();
     return (0, i.jsx)(K, {
         ...e,
         focusMode: t

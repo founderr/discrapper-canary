@@ -36,10 +36,10 @@ n(916160);
 var P = n(857192),
     k = n(786882),
     U = n(44163),
-    B = n(710845),
-    G = n(70956);
+    G = n(710845),
+    B = n(70956);
 P.default.cssDebuggingEnabled && n.e('30592').then(n.bind(n, 623763));
-let Z = 5 * G.Z.Millis.MINUTE,
+let Z = 5 * B.Z.Millis.MINUTE,
     F = document.getElementById('app-mount');
 _()(null != F, 'Could not find app-mount'), (F.className = __OVERLAY__ ? '' : k.appMount);
 let V = (0, d.createRoot)(F),
@@ -66,7 +66,7 @@ if (null != x.Z) {
         .filter((e) => null != n[e])
         .map((e) => ''.concat(e, ': ').concat(n[e]))
         .join(', ');
-    new B.Z().log('[NATIVE INFO] host '.concat(e, ', modules: ').concat(c, ', build: ').concat(t));
+    new G.Z().log('[NATIVE INFO] host '.concat(e, ', modules: ').concat(c, ', build: ').concat(t));
     let d = null === (l = (u = x.Z.remoteApp).getReleaseChannel) || void 0 === l ? void 0 : l.call(u);
     ('canary' === d || 'development' === d) && y.ZP.pauseFrameEvictor(), y.ZP.initializeExitHook(), y.ZP.initializeWERHandler();
 }

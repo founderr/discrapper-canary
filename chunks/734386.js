@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    a = n(120356),
-    r = n.n(a),
+    r = n(120356),
+    a = n.n(r),
     s = n(392711),
     o = n.n(s),
     c = n(149765),
@@ -36,7 +36,7 @@ var i = n(200651),
     M = n(706071);
 function L(e) {
     let { channel: t } = e,
-        [n, a] = l.useState(!1),
+        [n, r] = l.useState(!1),
         s = (0, f.ZP)(t, !0),
         L = t.guild_id,
         R = (0, u.e7)([E.Z], () => (null != L ? E.Z.getRoles(L) : void 0)),
@@ -86,8 +86,8 @@ function L(e) {
                                 context: t
                             }),
                             l = null !== (n = t.permissionOverwrites[e.id]) && void 0 !== n ? n : N.Hn,
-                            a = c.e$(l.allow, y.Plq.VIEW_CHANNEL);
-                        return i || a;
+                            r = c.e$(l.allow, y.Plq.VIEW_CHANNEL);
+                        return i || r;
                     })
                     .value();
             },
@@ -97,7 +97,7 @@ function L(e) {
     function U() {
         p.ZP.open(t.id);
     }
-    let H = l.useCallback(() => a(!1), []);
+    let H = l.useCallback(() => r(!1), []);
     return (0, i.jsxs)(j.ZP, {
         channelId: t.id,
         children: [
@@ -118,7 +118,7 @@ function L(e) {
                       children: [
                           (0, i.jsx)(T.Z, {
                               label: P.intl.string(P.t.dMJ3Y2),
-                              onClick: () => a(!0),
+                              onClick: () => r(!0),
                               icon: (0, i.jsx)(h.GroupIcon, {
                                   size: 'xs',
                                   color: 'currentColor'
@@ -173,14 +173,14 @@ function L(e) {
                         });
                     })(),
                     D.map((e, n) => {
-                        var l, a;
-                        let s = null !== (a = e.colorString) && void 0 !== a ? a : (0, d.Rf)(y.p6O),
+                        var l, r;
+                        let s = null !== (r = e.colorString) && void 0 !== r ? r : (0, d.Rf)(y.p6O),
                             o = (null === (l = e.tags) || void 0 === l ? void 0 : l.guild_connections) !== void 0;
                         return B
                             ? (0, i.jsx)(
                                   x.Z,
                                   {
-                                      className: r()(M.role, { [M.last]: n === D.length - 1 }),
+                                      className: a()(M.role, { [M.last]: n === D.length - 1 }),
                                       roleName: e.name,
                                       roleColor: s,
                                       disabled: !B,
@@ -194,7 +194,7 @@ function L(e) {
                             : (0, i.jsx)(
                                   _.Z,
                                   {
-                                      className: r()(M.role, { [M.last]: n === D.length - 1 }),
+                                      className: a()(M.role, { [M.last]: n === D.length - 1 }),
                                       roleName: e.name,
                                       roleColor: s,
                                       verified: o
@@ -212,7 +212,7 @@ function L(e) {
                               onClose: () => (H(), e.onClose()),
                               channelId: t.id
                           }),
-                      onCloseRequest: () => a(!1)
+                      onCloseRequest: () => r(!1)
                   })
                 : null
         ]

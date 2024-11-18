@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    a = n(120356),
-    r = n.n(a),
+    r = n(120356),
+    a = n.n(r),
     s = n(772848),
     o = n(442837),
     c = n(481060),
@@ -29,7 +29,7 @@ var i = n(200651),
     N = n(914150);
 let S = 'vc-activities-'.concat((0, s.Z)()),
     T = l.forwardRef(function (e, t) {
-        let { channel: n, isHovered: a, closePopout: s, onMouseEnter: T, onMouseLeave: j, onClick: A, className: y } = e,
+        let { channel: n, isHovered: r, closePopout: s, onMouseEnter: T, onMouseLeave: j, onClick: A, className: y } = e,
             P = (0, o.e7)([h.Z], () => h.Z.useReducedMotion),
             { id: M, guild_id: L } = n;
         l.useEffect(() => {
@@ -39,8 +39,8 @@ let S = 'vc-activities-'.concat((0, s.Z)()),
             });
         }, [M, L]),
             l.useEffect(() => {
-                !a && s();
-            }, [s, a]);
+                !r && s();
+            }, [s, r]);
         let R = (0, u.bp)(),
             { analyticsLocations: k } = (0, m.ZP)(p.Z.ACTIVITIES_MINI_SHELF),
             { analyticsLocations: O } = (0, m.ZP)([...k, p.Z.ACTIVITIES_MINI_SHELF_BANNER]),
@@ -158,7 +158,7 @@ let S = 'vc-activities-'.concat((0, s.Z)()),
                                             )
                                         ),
                                         (0, i.jsx)('div', {
-                                            className: r()(N.wumpusRocketOuterContainer, { [N.wumpusReducedMotion]: P }),
+                                            className: a()(N.wumpusRocketOuterContainer, { [N.wumpusReducedMotion]: P }),
                                             children: (0, i.jsx)('div', {
                                                 className: N.wumpusRocketInnerContainer,
                                                 children: (0, i.jsx)(I.Z, { className: N.wumpusRocket })

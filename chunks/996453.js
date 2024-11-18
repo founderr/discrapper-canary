@@ -27,8 +27,8 @@ function L(e) {
     let { guildTemplate: n, onClose: s, onBack: L, onHubGuildInfoSet: p, onGuildCreated: b, isSlideReady: j, hasFooter: _ = !0, isCommunity: I = !1 } = e,
         [N, B] = l.useState(C.Z.getGuildNameSuggestion()),
         [T, S] = l.useState(null),
-        [Z, M] = l.useState(!1),
-        [E, v] = l.useState(null),
+        [Z, E] = l.useState(!1),
+        [M, v] = l.useState(null),
         H = !!(null === (t = m.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff()),
         [y, A] = l.useState(H),
         k = (0, u.Dt)(),
@@ -40,7 +40,7 @@ function L(e) {
     let R = l.useCallback(
             async (e) => {
                 if ((e.preventDefault(), null != n)) {
-                    M(!0), v(null);
+                    E(!0), v(null);
                     try {
                         if (null != p) p(N, T);
                         else {
@@ -50,7 +50,7 @@ function L(e) {
                     } catch (e) {
                         v(e);
                     }
-                    M(!1);
+                    E(!1);
                 }
             },
             [n, p, N, T, I, y, b]
@@ -114,7 +114,7 @@ function L(e) {
                             children: [
                                 (0, i.jsxs)(o.FormItem, {
                                     className: g.nameInput,
-                                    error: null == E ? void 0 : E.getFirstFieldErrorMessage('name'),
+                                    error: null == M ? void 0 : M.getFirstFieldErrorMessage('name'),
                                     children: [
                                         (0, i.jsx)(o.FormTitle, {
                                             tag: 'label',
@@ -151,12 +151,12 @@ function L(e) {
                                 })
                             ]
                         }),
-                        null == E || E.hasFieldErrors()
+                        null == M || M.hasFieldErrors()
                             ? null
                             : (0, i.jsx)(o.Text, {
                                   variant: 'text-xs/normal',
                                   color: 'text-danger',
-                                  children: E.message
+                                  children: M.message
                               })
                     ]
                 }),

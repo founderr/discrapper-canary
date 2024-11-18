@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return N;
+        return j;
     }
 });
 var l = t(200651),
@@ -18,16 +18,16 @@ var l = t(200651),
     g = t(460838),
     v = t(388032),
     f = t(286631);
-function N(e) {
-    var n, t, N;
-    let { guildId: j, guildEvent: I, guildEventId: p, error: C } = e,
-        E = i.useMemo(() => (0, m.Gb)(I, j), [I, j]),
+function j(e) {
+    var n, t, j;
+    let { guildId: N, guildEvent: I, guildEventId: p, error: C } = e,
+        E = i.useMemo(() => (0, m.Gb)(I, N), [I, N]),
         { channel_id: S, name: T, image: y, description: Z } = E,
         b = (0, r.e7)([d.Z], () => d.Z.getChannel(S), [S]),
-        _ = (0, r.e7)([c.Z], () => c.Z.getGuild(j), [j]),
+        _ = (0, r.e7)([c.Z], () => c.Z.getGuild(N), [N]),
         R = (0, x.cS)(E),
         k = (0, r.e7)([u.default], () => (null != I.creatorId ? u.default.getUser(I.creatorId) : u.default.getCurrentUser()), [I.creatorId]),
-        A = (0, r.e7)([o.Z], () => o.Z.isLurking(j), [j]),
+        A = (0, r.e7)([o.Z], () => o.Z.isLurking(N), [N]),
         L = (0, s.KS)(b, _);
     return (0, l.jsxs)('div', {
         className: f.content,
@@ -40,7 +40,7 @@ function N(e) {
                 creator: k,
                 name: T,
                 description: Z,
-                imageSource: ((t = (0, m.Gb)(I, j, p)), null == (N = y) && null == t.image ? null : null != N && /^data:/.test(N) ? N : (0, h.Z)(t)),
+                imageSource: ((t = (0, m.Gb)(I, N, p)), null == (j = y) && null == t.image ? null : null != j && /^data:/.test(j) ? j : (0, h.Z)(t)),
                 isActive: !1,
                 isUserLurking: A,
                 speakers: [],

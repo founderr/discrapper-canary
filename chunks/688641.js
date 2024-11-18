@@ -6,29 +6,29 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(120356),
-    a = n.n(l),
-    r = n(481060),
+    r = n.n(l),
+    a = n(481060),
     s = n(388032),
     o = n(136680);
 function c(e) {
     let { className: t, iconContainerClassName: n, icon: l, color: c, title: d, description: u, userCount: h, onClick: p, highlight: m } = e;
-    return (0, i.jsxs)(r.Clickable, {
-        className: a()(o.container, t, null != m && { [o.pulse]: m }),
+    return (0, i.jsxs)(a.Clickable, {
+        className: r()(o.container, t, null != m && { [o.pulse]: m }),
         onClick: p,
         children: [
             (0, i.jsx)('div', {
                 style: { backgroundColor: c },
-                className: a()(o.icon, n),
+                className: r()(o.icon, n),
                 children: l
             }),
             (0, i.jsxs)('div', {
                 className: o.textContainer,
                 children: [
-                    (0, i.jsx)(r.Heading, {
+                    (0, i.jsx)(a.Heading, {
                         variant: 'heading-md/semibold',
                         children: d
                     }),
-                    (0, i.jsx)(r.Text, {
+                    (0, i.jsx)(a.Text, {
                         variant: 'text-xs/normal',
                         color: 'header-secondary',
                         className: o.inline,
@@ -37,13 +37,13 @@ function c(e) {
                     null != h && h > 0
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, i.jsx)(r.Text, {
+                                  (0, i.jsx)(a.Text, {
                                       variant: 'text-xs/normal',
                                       color: 'header-secondary',
                                       className: o.dot,
                                       children: '\u2022'
                                   }),
-                                  (0, i.jsx)(r.Text, {
+                                  (0, i.jsx)(a.Text, {
                                       variant: 'text-xs/normal',
                                       color: 'header-secondary',
                                       className: o.inline,
@@ -54,7 +54,7 @@ function c(e) {
                         : null
                 ]
             }),
-            (0, i.jsx)(r.ChevronSmallRightIcon, {
+            (0, i.jsx)(a.ChevronSmallRightIcon, {
                 size: 'xs',
                 color: 'currentColor',
                 className: o.caret

@@ -2,16 +2,16 @@ n.r(t), n(47120);
 var a = n(200651),
     l = n(192379),
     r = n(481060),
-    s = n(238675),
-    o = n(32517);
-let i = Object.entries(s.fw).map((e) => {
+    o = n(238675),
+    s = n(32517);
+let i = Object.entries(o.fw).map((e) => {
         let [t, n] = e;
         return {
             label: t,
             value: n
         };
     }),
-    c = Object.entries(s.sJ)
+    c = Object.entries(o.sJ)
         .map((e) => {
             let [t, n] = e;
             return {
@@ -29,11 +29,11 @@ t.default = function (e) {
         [h, C] = l.useState(null),
         [A, T] = l.useState(null),
         [f, p] = l.useState(''),
-        R = async () => {
+        E = async () => {
             if (u) {
                 p('');
                 try {
-                    await (0, s.qy)(u, {
+                    await (0, o.qy)(u, {
                         difficulty: null != h ? h : void 0,
                         should_serve_invisible: null != A ? A : void 0
                     });
@@ -46,7 +46,7 @@ t.default = function (e) {
         transitionState: n,
         children: [
             (0, a.jsxs)(r.ModalHeader, {
-                className: o.header,
+                className: s.header,
                 children: [
                     (0, a.jsx)(r.Heading, {
                         variant: 'heading-lg/semibold',
@@ -56,23 +56,23 @@ t.default = function (e) {
                 ]
             }),
             (0, a.jsxs)(r.ModalContent, {
-                className: o.content,
+                className: s.content,
                 children: [
                     (0, a.jsx)(r.SingleSelect, {
                         value: u,
                         options: i,
                         onChange: (e) => {
-                            e !== s.fw.HCAPTCHA_RQDATA && (C(null), T(null)), d(e), p('');
+                            e !== o.fw.HCAPTCHA_RQDATA && (C(null), T(null)), d(e), p('');
                         }
                     }),
-                    u === s.fw.HCAPTCHA_RQDATA &&
+                    u === o.fw.HCAPTCHA_RQDATA &&
                         (0, a.jsxs)(a.Fragment, {
                             children: [
                                 (0, a.jsx)(r.SingleSelect, {
                                     value: h,
                                     options: c,
                                     onChange: (e) => {
-                                        u === s.fw.HCAPTCHA_RQDATA && C(e);
+                                        u === o.fw.HCAPTCHA_RQDATA && C(e);
                                     }
                                 }),
                                 (0, a.jsx)(r.Checkbox, {
@@ -88,10 +88,10 @@ t.default = function (e) {
                 ]
             }),
             (0, a.jsxs)(r.ModalFooter, {
-                className: o.footer,
+                className: s.footer,
                 children: [
                     (0, a.jsx)(r.Button, {
-                        onClick: R,
+                        onClick: E,
                         disabled: !u,
                         children: 'Trigger Captcha'
                     }),

@@ -1,7 +1,7 @@
 var i = n(200651),
     l = n(192379),
-    a = n(873546),
-    r = n(442837),
+    r = n(873546),
+    a = n(442837),
     s = n(481060),
     o = n(194359),
     c = n(686546),
@@ -24,11 +24,11 @@ var i = n(200651),
     S = n(285673);
 let T = (e) => {
         let { userId: t, channelId: n } = e,
-            a = (0, r.e7)([f.Z], () => f.Z.getMutualGuilds(t), [t]),
+            r = (0, a.e7)([f.Z], () => f.Z.getMutualGuilds(t), [t]),
             o = l.useMemo(
                 () =>
-                    null != a
-                        ? a
+                    null != r
+                        ? r
                               .slice(0, 3)
                               .map((e, t) => {
                                   let { guild: n } = e,
@@ -41,7 +41,7 @@ let T = (e) => {
                                                 })
                                               : null;
                                   if (null == l) return null;
-                                  let r = t === (a.length > 3 ? 3 : a.length) - 1,
+                                  let a = t === (r.length > 3 ? 3 : r.length) - 1,
                                       s = (0, i.jsx)(
                                           'img',
                                           {
@@ -51,7 +51,7 @@ let T = (e) => {
                                           },
                                           t
                                       );
-                                  return r
+                                  return a
                                       ? s
                                       : (0, i.jsx)(
                                             c.ZP,
@@ -67,9 +67,9 @@ let T = (e) => {
                               })
                               .filter((e) => null != e)
                         : [],
-                [a]
+                [r]
             );
-        return null == a || 0 === a.length
+        return null == r || 0 === r.length
             ? (0, i.jsx)(s.Text, {
                   color: 'header-secondary',
                   variant: 'text-sm/normal',
@@ -93,7 +93,7 @@ let T = (e) => {
                           children: (0, i.jsx)(s.Text, {
                               className: S.mutualGuilds,
                               variant: 'text-sm/normal',
-                              children: N.intl.format(N.t.eE3oen, { count: a.length })
+                              children: N.intl.format(N.t.eE3oen, { count: r.length })
                           })
                       })
                   ]
@@ -101,8 +101,8 @@ let T = (e) => {
     },
     j = (e) => {
         var t;
-        let { relationshipType: n, userId: l, showingBanner: a } = e,
-            r = null === (t = _.default.getUser(l)) || void 0 === t ? void 0 : t.bot,
+        let { relationshipType: n, userId: l, showingBanner: r } = e,
+            a = null === (t = _.default.getUser(l)) || void 0 === t ? void 0 : t.bot,
             c = () => {
                 o.Z.addRelationship({
                     userId: l,
@@ -126,8 +126,8 @@ let T = (e) => {
             case E.OGo.NONE:
                 return (0, i.jsxs)(i.Fragment, {
                     children: [
-                        !r &&
-                            !a &&
+                        !a &&
+                            !r &&
                             (0, i.jsx)(s.Button, {
                                 className: S.action,
                                 size: s.Button.Sizes.TINY,
@@ -207,10 +207,10 @@ let T = (e) => {
     },
     A = (e) => {
         let { channelId: t, otherUserId: n } = e,
-            a = l.useCallback(() => {
+            r = l.useCallback(() => {
                 (0, s.showToast)((0, s.createToast)(N.intl.string(N.t.a2j0ho), s.ToastType.FAILURE));
             }, []),
-            r = l.useCallback(() => {
+            a = l.useCallback(() => {
                 m.Z.closeChannelSidebar(C.uZ);
             }, []),
             o = l.useCallback(() => {
@@ -225,9 +225,9 @@ let T = (e) => {
                 isOptimisticRejected: g
             } = (0, u.m)({
                 user: _.default.getUser(n),
-                onError: a,
+                onError: r,
                 onAcceptSuccess: o,
-                onRejectSuccess: r
+                onRejectSuccess: a
             }),
             x = h || p || f || g;
         return (0, i.jsxs)(i.Fragment, {
@@ -255,8 +255,8 @@ let T = (e) => {
 t.Z = (e) => {
     let { userId: t, channel: n, showingBanner: l } = e,
         { channelId: s } = (0, h._)(),
-        o = (0, r.e7)([d.Z], () => null != s && d.Z.isSpam(s), [s]),
-        c = (0, r.e7)([x.Z], () => x.Z.getRelationshipType(t), [t]),
+        o = (0, a.e7)([d.Z], () => null != s && d.Z.isSpam(s), [s]),
+        c = (0, a.e7)([x.Z], () => x.Z.getRelationshipType(t), [t]),
         u = n.id === s;
     return t === b.fL
         ? null
@@ -283,7 +283,7 @@ t.Z = (e) => {
                     })
                 ]
             })
-          : !0 === a.tq || u
+          : !0 === r.tq || u
             ? (0, i.jsxs)('div', {
                   className: S.mobileContainer,
                   children: [

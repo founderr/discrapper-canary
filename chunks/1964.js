@@ -2,16 +2,16 @@ var r = n(392711),
     o = n.n(r),
     i = n(981631),
     a = n(388032);
-let { CAPTCHA: s, EMAIL: l, PHONE: d, REVERIFY_EMAIL: c, REVERIFY_PHONE: u } = i.PUi,
+let { CAPTCHA: s, EMAIL: l, PHONE: c, REVERIFY_EMAIL: d, REVERIFY_PHONE: u } = i.PUi,
     E = {
         [i.c2C.REQUIRE_VERIFIED_EMAIL]: [l],
-        [i.c2C.REQUIRE_VERIFIED_PHONE]: [d],
-        [i.c2C.REQUIRE_REVERIFIED_EMAIL]: [c],
+        [i.c2C.REQUIRE_VERIFIED_PHONE]: [c],
+        [i.c2C.REQUIRE_REVERIFIED_EMAIL]: [d],
         [i.c2C.REQUIRE_REVERIFIED_PHONE]: [u],
-        [i.c2C.REQUIRE_VERIFIED_EMAIL_OR_VERIFIED_PHONE]: [l, d],
-        [i.c2C.REQUIRE_REVERIFIED_EMAIL_OR_VERIFIED_PHONE]: [d, c],
+        [i.c2C.REQUIRE_VERIFIED_EMAIL_OR_VERIFIED_PHONE]: [l, c],
+        [i.c2C.REQUIRE_REVERIFIED_EMAIL_OR_VERIFIED_PHONE]: [c, d],
         [i.c2C.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE]: [l, u],
-        [i.c2C.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE]: [c, u],
+        [i.c2C.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE]: [d, u],
         [i.c2C.REQUIRE_CAPTCHA]: [s],
         [i.c2C.AGREEMENTS]: []
     };

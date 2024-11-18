@@ -31,11 +31,11 @@ function S(e, t, n) {
         e
     );
 }
-let T = {
+let N = {
     HOST: 5,
     LISTENER: 4
 };
-class N extends r.PureComponent {
+class T extends r.PureComponent {
     isHost() {
         let { currentUser: e, host: t } = this.props;
         return e.id === (null == t ? void 0 : t.id);
@@ -76,7 +76,7 @@ class N extends r.PureComponent {
                     className: v.party,
                     children: (0, i.jsx)(p.Z, {
                         users: this.props.party,
-                        max: this.isHost() ? T.HOST : T.LISTENER,
+                        max: this.isHost() ? N.HOST : N.LISTENER,
                         renderUser: this.renderPartyMember,
                         renderMoreUsers: this.renderPartyMemberOverflow
                     })
@@ -156,4 +156,4 @@ class N extends r.PureComponent {
             });
     }
 }
-t.Z = N;
+t.Z = T;

@@ -17,7 +17,7 @@ var i = n(200651),
     c = n(812206),
     u = n(307643),
     d = n(171246),
-    m = n(696906),
+    m = n(263519),
     h = n(592125),
     f = n(509545),
     p = n(238),
@@ -134,7 +134,7 @@ let Z = L(function (e) {
                 if ((null == N ? void 0 : N.id) != null) (0, s.oJ)(null == N ? void 0 : N.id);
             }, [null == N ? void 0 : N.id]);
         let D = (0, l.e7)([_.Z], () => (null != u ? _.Z.getParentSKU(u) : void 0), [u]),
-            { openModal: B, cannotOpenReason: U } = (0, m.ZP)({
+            { openModal: B, subscriptionPurchaseButtonState: U } = (0, m.Z)({
                 skuId: u,
                 subscribeForGuild: O
             });
@@ -255,7 +255,7 @@ let Z = L(function (e) {
                     }),
                     w
                         ? null != y
-                            ? (0, i.jsx)(T.p, {
+                            ? (0, i.jsx)(T.pV, {
                                   onClick: B,
                                   appId: N.id,
                                   subscriptionType: F ? 'user' : 'guild',
@@ -266,13 +266,13 @@ let Z = L(function (e) {
                                   }),
                                   onHasClicked: z,
                                   subscriptionPlan: y,
-                                  cannotOpenReason: U
+                                  state: U
                               })
                             : (0, i.jsx)(a.Button, {
                                   onClick: V,
                                   children: b.intl.string(b.t.uuzaAA)
                               })
-                        : (0, i.jsx)(T.Y, {
+                        : (0, i.jsx)(T.YG, {
                               appId: N.id,
                               sku: C,
                               icon: (0, i.jsx)(a.ShopIcon, {

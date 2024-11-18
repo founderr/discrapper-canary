@@ -35,24 +35,24 @@ function c(e) {
             t = d > 0 ? a.t.sDKIpq : c ? a.t.VM7z8f : a.t.WJ3MPj;
             break;
         case u.d4z.GUILD_VOICE:
-            let m = [a.intl.formatToPlainString(a.t.bkpadH, { channelName: n.name })];
-            if ((d > 0 && m.push(a.intl.formatToPlainString(a.t['3l1GOz'], { mentionCount: d })), c && m.push(a.intl.string(a.t.x5zAGR)), null != f)) {
+            let h = [a.intl.formatToPlainString(a.t.bkpadH, { channelName: n.name })];
+            if ((d > 0 && h.push(a.intl.formatToPlainString(a.t['3l1GOz'], { mentionCount: d })), c && h.push(a.intl.string(a.t.x5zAGR)), null != f)) {
                 let e = n.userLimit;
                 null != e && e > 0
-                    ? m.push(
+                    ? h.push(
                           a.intl.formatToPlainString(a.t['6qgTOD'], {
                               userCount: f,
                               limit: e
                           })
                       )
-                    : m.push(a.intl.formatToPlainString(a.t.GNIiAA, { userCount: f }));
+                    : h.push(a.intl.formatToPlainString(a.t.GNIiAA, { userCount: f }));
             }
-            null != p && p > 0 && m.push(a.intl.formatToPlainString(a.t.O6PLYW, { activitiesCount: p }));
-            let h = s({
+            null != p && p > 0 && h.push(a.intl.formatToPlainString(a.t.O6PLYW, { activitiesCount: p }));
+            let m = s({
                 isSubscriptionGated: _,
                 needSubscriptionToAccess: E
             });
-            return null != h && m.push(h), m.join(', ');
+            return null != m && h.push(m), h.join(', ');
         case u.d4z.GUILD_STAGE_VOICE:
             t = a.t.TPPk2d;
             break;

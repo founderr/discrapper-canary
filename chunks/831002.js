@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(512722),
-    a = n.n(l),
-    r = n(442837),
+    r = n.n(l),
+    a = n(442837),
     s = n(481060),
     o = n(40851),
     c = n(358221),
@@ -27,7 +27,7 @@ var l = n(512722),
     b = n(388032);
 function Z(e) {
     let { channelId: t, closePopout: n, appContext: l, onSelect: Z } = e,
-        N = (0, r.e7)([c.Z], () => c.Z.getSelectedParticipant(t)),
+        N = (0, a.e7)([c.Z], () => c.Z.getSelectedParticipant(t)),
         S = (null == N ? void 0 : N.type) === E.fO.STREAM ? N.stream : null,
         T = (0, p.Z)(t);
     return (0, i.jsxs)(s.Menu, {
@@ -37,11 +37,11 @@ function Z(e) {
         onSelect: Z,
         children: [
             (function (e) {
-                let t = (0, r.e7)([C.Z], () => C.Z.getChannel(e), [e]),
-                    n = (0, r.e7)([x.Z], () => x.Z.can(v.yP, t)),
-                    l = (0, r.e7)([I.Z], () => I.Z.getStageInstanceByChannel(e), [e]),
-                    a = (0, o.bp)(),
-                    c = () => null != t && (0, _.T)(t, a);
+                let t = (0, a.e7)([C.Z], () => C.Z.getChannel(e), [e]),
+                    n = (0, a.e7)([x.Z], () => x.Z.can(v.yP, t)),
+                    l = (0, a.e7)([I.Z], () => I.Z.getStageInstanceByChannel(e), [e]),
+                    r = (0, o.bp)(),
+                    c = () => null != t && (0, _.T)(t, r);
                 return (null == t ? void 0 : t.isGuildStageVoice()) && n
                     ? null != l
                         ? (0, i.jsx)(s.MenuItem, {
@@ -57,8 +57,8 @@ function Z(e) {
                     : null;
             })(t),
             (function (e) {
-                let t = (0, r.e7)([C.Z], () => C.Z.getChannel(e), [e]);
-                a()(null != t, 'useNotificationSettingsItem: channel cannot be undefined');
+                let t = (0, a.e7)([C.Z], () => C.Z.getChannel(e), [e]);
+                r()(null != t, 'useNotificationSettingsItem: channel cannot be undefined');
                 let n = (0, g.Mn)('StageChannelCallOverflowMenu'),
                     i = (0, f.ZP)(t),
                     l = (0, m.Z)(t);

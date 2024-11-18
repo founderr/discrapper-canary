@@ -1,12 +1,12 @@
 var i = t(200651),
-    l = t(192379),
-    r = t(512722),
-    u = t.n(r),
+    r = t(192379),
+    l = t(512722),
+    u = t.n(l),
     a = t(442837),
-    d = t(481060),
-    o = t(10718),
-    s = t(667204),
-    c = t(826298),
+    o = t(481060),
+    d = t(10718),
+    c = t(667204),
+    s = t(826298),
     f = t(276022),
     _ = t(978983),
     E = t(430824),
@@ -17,9 +17,9 @@ var i = t(200651),
     m = t(418776);
 e.Z = (n) => {
     let e,
-        { commandType: t, commandTargetId: r, channel: M, guildId: I, onHeightUpdate: Z, context: T } = n,
+        { commandType: t, commandTargetId: l, channel: M, guildId: I, onHeightUpdate: Z, context: T } = n,
         v = (0, a.e7)([E.Z], () => E.Z.getGuild(null != I ? I : M.guild_id)),
-        b = (0, a.e7)([p.default], () => p.default.getUser(r)),
+        b = (0, a.e7)([p.default], () => p.default.getUser(l)),
         C = (0, f.Z)({
             user: b,
             guildId: null == v ? void 0 : v.id,
@@ -29,13 +29,13 @@ e.Z = (n) => {
             commands: S,
             sectionDescriptors: x,
             loading: N
-        } = o.wi({
+        } = d.wi({
             channel: M,
             filters: { commandTypes: [t] },
             options: { limit: h.lr },
             allowFetch: !0
         }),
-        { sections: y } = l.useMemo(() => {
+        { sections: y } = r.useMemo(() => {
             let n = {};
             return (
                 x.forEach((e) => {
@@ -44,17 +44,17 @@ e.Z = (n) => {
                 { sections: n }
             );
         }, [x]),
-        O = l.useRef(N.current);
-    l.useEffect(() => {
+        O = r.useRef(N.current);
+    r.useEffect(() => {
         N.current !== O.current && ((O.current = N.current), null == Z || Z());
     }, [N, Z]);
-    let P = l.useCallback(
+    let P = r.useCallback(
         (n) => {
             u()(null != M, 'menu item should not show if channel is null');
             let e = y[n.applicationId],
-                t = null != e ? (0, c.ky)(e) : void 0;
+                t = null != e ? (0, s.ky)(e) : void 0;
             return (0, i.jsx)(
-                d.MenuItem,
+                o.MenuItem,
                 {
                     id: n.id,
                     label: n.displayName,
@@ -69,26 +69,26 @@ e.Z = (n) => {
                               })
                             : null,
                     action: () => {
-                        (0, s.Z)({
+                        (0, c.Z)({
                             command: n,
                             optionValues: {},
                             context: {
                                 channel: M,
                                 guild: v
                             },
-                            commandTargetId: r
+                            commandTargetId: l
                         });
                     }
                 },
                 n.id
             );
         },
-        [M, v, r, y]
+        [M, v, l, y]
     );
     if (
         (N.current
             ? (e = (0, i.jsx)(
-                  d.MenuItem,
+                  o.MenuItem,
                   {
                       id: 'menu-commands-placeholder',
                       render: () => (0, i.jsx)(_.Z, {}),
@@ -99,7 +99,7 @@ e.Z = (n) => {
             : ((e =
                   0 === S.length
                       ? (0, i.jsx)(
-                            d.MenuItem,
+                            o.MenuItem,
                             {
                                 id: 'menu-commands-empty',
                                 label: A.intl.string(A.t.YSNlV1),
@@ -110,14 +110,14 @@ e.Z = (n) => {
                       : S.map(P)),
               null != C &&
                   (e = (0, i.jsxs)(i.Fragment, {
-                      children: [e, (0, i.jsx)(d.MenuSeparator, {}, 'separator'), C]
+                      children: [e, (0, i.jsx)(o.MenuSeparator, {}, 'separator'), C]
                   }))),
         !g.TPd.TEXTUAL.has(M.type))
     ) {
         if (null == C) return null;
         e = C;
     }
-    return (0, i.jsx)(d.MenuItem, {
+    return (0, i.jsx)(o.MenuItem, {
         id: 'apps',
         label: A.intl.string(A.t.PHjkRE),
         listClassName: m.list,

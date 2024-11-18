@@ -78,7 +78,7 @@ function g(e) {
                                 },
                                 impression: { impressionName: a.ImpressionNames.BLOCK_USER_CONFIRMATION },
                                 ...e,
-                                children: (0, u.c)({ location: 'confirm_block_modal' })
+                                children: (0, u.cC)({ location: 'confirm_block_modal' })
                                     ? (0, r.jsx)(c.Z, {})
                                     : (0, r.jsx)(o.Text, {
                                           variant: 'text-md/normal',

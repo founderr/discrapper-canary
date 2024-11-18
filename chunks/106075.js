@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return T;
     }
 });
 var i = n(200651),
@@ -23,10 +23,10 @@ var i = n(200651),
     C = n(128449),
     v = n(49898),
     S = n(388032),
-    T = n(491588);
-function N() {
+    N = n(491588);
+function T() {
     let e = r.useRef((0, a.P)()),
-        { onScroll: t, scrollPosition: n, resetScrollPosition: N } = (0, s.M)(),
+        { onScroll: t, scrollPosition: n, resetScrollPosition: T } = (0, s.M)(),
         { tabs: A, selectedTab: b, setSelectedTab: x } = (0, _.Y)(),
         Z = (0, p.lg)(b),
         L = !C.MU.has(b),
@@ -68,16 +68,16 @@ function N() {
             H.current.flushSeenGuilds(e.current);
         }, [Z]),
         r.useEffect(() => {
-            N();
-        }, [b, N]),
+            T();
+        }, [b, T]),
         r.useEffect(() => {
             !j && h.Z.setState({ scrollPosition: null });
         }, [j]),
         (0, i.jsxs)('div', {
-            className: T.container,
+            className: N.container,
             children: [
                 (0, i.jsxs)(c.ZP, {
-                    className: j ? T.search : void 0,
+                    className: j ? N.search : void 0,
                     children: [
                         !j && (0, i.jsx)(c.z6, { scrollPosition: n }),
                         j
@@ -98,7 +98,7 @@ function N() {
                             (0, i.jsx)(l.Heading, {
                                 variant: 'heading-lg/semibold',
                                 color: 'header-primary',
-                                className: T.searchResultsHeader,
+                                className: N.searchResultsHeader,
                                 children: S.intl.format(S.t.zHdzqa, { query: G })
                             }),
                         L &&

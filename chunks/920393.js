@@ -6,7 +6,7 @@ n.d(t, {
     n(47120);
 var r = n(192379);
 function o(e) {
-    let { videoRef: t, isPlaying: n, isMetadataLoaded: o, isInitialSeekComplete: i, onAnalytics: l, emitIntervalMs: a, minSegmentDurationMs: s } = e,
+    let { videoRef: t, isPlaying: n, isMetadataLoaded: o, isInitialSeekComplete: i, onAnalytics: l, emitIntervalMs: s, minSegmentDurationMs: a } = e,
         [c, u] = r.useState(null),
         d = (0, r.useRef)(null),
         m = (0, r.useRef)(Date.now()),
@@ -41,9 +41,9 @@ function o(e) {
         C = (0, r.useCallback)(() => {
             if (null == t.current || null == c) return;
             let e = Date.now();
-            if (e - m.current < a) return;
+            if (e - m.current < s) return;
             let n = t.current.currentTime;
-            if (!(n - c.segmentStartSec < s / 1000))
+            if (!(n - c.segmentStartSec < a / 1000))
                 p({
                     ...c,
                     endTime: e,
@@ -56,7 +56,7 @@ function o(e) {
                         segmentEndSec: n
                     }),
                     (m.current = e);
-        }, [c, p, a, t, s]);
+        }, [c, p, s, t, a]);
     return (
         (0, r.useEffect)(() => {
             (!o || !i) && (u(null), (f.current = !1));

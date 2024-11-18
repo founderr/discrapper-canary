@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    a = n(392711),
-    r = n.n(a),
+    r = n(392711),
+    a = n.n(r),
     s = n(442837),
     o = n(481060),
     c = n(904245),
@@ -27,14 +27,14 @@ let E = '749054660769218631';
 function b(e) {
     var t;
     let { channel: n } = e,
-        [a, b] = l.useState('');
+        [r, b] = l.useState('');
     l.useEffect(() => {
         (0, d.FQ)('847199849233514549', !0);
     }, []);
     let Z = (0, s.e7)(
             [m.Z, p.default],
             () =>
-                !!r()(m.Z.getMessages(n.id).toArray())
+                !!a()(m.Z.getMessages(n.id).toArray())
                     .reverse()
                     .find((e) => e.author.id !== p.default.getId() && e.state === _.yb.SENT && !(0, x.Z)(e))
         ),
@@ -42,7 +42,7 @@ function b(e) {
         S = null !== (t = C.ZP.useName(N)) && void 0 !== t ? t : v.intl.string(v.t.y1Wu2d),
         T = (0, s.e7)([u.Z], () => u.Z.getStickerById(E)),
         j = l.useCallback(async () => {
-            if (null == a || '' === a)
+            if (null == r || '' === r)
                 try {
                     await c.Z.sendGreetMessage(n.id, E),
                         g.default.track(_.rMx.DM_EMPTY_ACTION, {
@@ -54,15 +54,15 @@ function b(e) {
                 } catch (e) {
                     !e.ok && 429 === e.status && b(v.intl.string(v.t['Whhv4+']));
                 }
-        }, [n.id, n.type, a]),
+        }, [n.id, n.type, r]),
         A = v.intl.formatToPlainString(v.t.m0zYbW, { username: S }),
         y =
-            null != a && '' !== a
+            null != r && '' !== r
                 ? (0, i.jsx)(o.Text, {
                       className: I.error,
                       color: 'text-danger',
                       variant: 'text-sm/normal',
-                      children: a
+                      children: r
                   })
                 : null;
     return Z
@@ -70,7 +70,7 @@ function b(e) {
               className: I.containerCompact,
               children: [
                   (0, i.jsxs)(o.Clickable, {
-                      className: null != a && '' !== a ? I.compactButtonDisabled : I.compactButton,
+                      className: null != r && '' !== r ? I.compactButtonDisabled : I.compactButton,
                       'aria-label': v.intl.string(v.t.pJObYG),
                       onClick: j,
                       children: [
@@ -98,7 +98,7 @@ function b(e) {
                   (0, i.jsx)(o.Button, {
                       className: I.button,
                       onClick: j,
-                      disabled: !!a,
+                      disabled: !!r,
                       children: A
                   }),
                   y

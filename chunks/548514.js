@@ -53,7 +53,7 @@ t.Z = function (e) {
             label: p.intl.string(p.t['FfCL+/']),
             onSuccess: () => (0, a.showToast)((0, a.createToast)(p.intl.string(p.t.eNjAam), a.ToastType.SUCCESS))
         }),
-        T = r.useCallback(
+        N = r.useCallback(
             (e) =>
                 (0, i.jsxs)(a.Menu, {
                     navId: 'application-directory-profile',
@@ -101,7 +101,7 @@ t.Z = function (e) {
             (0, i.jsx)(a.Popout, {
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
-                    return T(t);
+                    return N(t);
                 },
                 position: 'left',
                 align: 'top',

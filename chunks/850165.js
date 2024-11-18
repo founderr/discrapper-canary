@@ -1,42 +1,42 @@
 e.d(n, {
     Z: function () {
-        return r;
+        return s;
     }
 });
-var i = e(200651);
+var r = e(200651);
 e(192379);
-var o = e(481060),
-    s = e(324394);
-function r(t) {
-    let { heroImageSrc: n, heroImageAlt: e, children: r, header: a, description: c } = t;
-    return (0, i.jsxs)(i.Fragment, {
+var i = e(481060),
+    o = e(324394);
+function s(t) {
+    let { heroImageSrc: n, heroImageAlt: e, children: s, header: a, description: c } = t;
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, i.jsx)('img', {
+            (0, r.jsx)('img', {
                 src: n,
                 alt: e,
-                className: s.heroImage
+                className: o.heroImage
             }),
-            (0, i.jsxs)(o.ModalContent, {
-                className: s.body,
+            (0, r.jsxs)(i.ModalContent, {
+                className: o.body,
                 children: [
-                    (0, i.jsxs)('div', {
-                        className: s.textContainer,
+                    (0, r.jsxs)('div', {
+                        className: o.textContainer,
                         children: [
-                            (0, i.jsx)(o.Heading, {
+                            (0, r.jsx)(i.Heading, {
                                 variant: 'heading-xl/semibold',
                                 color: 'header-primary',
                                 children: a
                             }),
                             null != c &&
-                                (0, i.jsx)(o.Text, {
+                                (0, r.jsx)(i.Text, {
                                     variant: 'text-md/medium',
                                     color: 'header-secondary',
-                                    className: s.description,
+                                    className: o.description,
                                     children: c
                                 })
                         ]
                     }),
-                    r
+                    s
                 ]
             })
         ]

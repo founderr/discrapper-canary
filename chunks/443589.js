@@ -23,8 +23,8 @@ var i = n(200651),
     C = n(317271),
     v = n(674701),
     S = n(474936),
-    T = n(981631),
-    N = n(388032),
+    N = n(981631),
+    T = n(388032),
     A = n(611055),
     b = n(626650);
 let x = {
@@ -56,7 +56,7 @@ function Z(e) {
         M = (e) => {
             e.stopPropagation();
             let i = g.Z.getUserAffinity(t.id);
-            f.default.track(T.rMx.GIFT_INTENT_ACTION_BUTTON_CLICKED, {
+            f.default.track(N.rMx.GIFT_INTENT_ACTION_BUTTON_CLICKED, {
                 gift_intent_type: n,
                 affinity: null == i ? void 0 : i.affinity
             }),
@@ -68,19 +68,19 @@ function Z(e) {
                     analyticsLocations: L,
                     analyticsObject: {
                         page: l,
-                        section: T.jXE.FRIENDS_LIST_FRIEND_ROW,
-                        object: T.qAy.BUTTON_CTA,
-                        objectType: T.Qqv.GIFT
+                        section: N.jXE.FRIENDS_LIST_FRIEND_ROW,
+                        object: N.qAy.BUTTON_CTA,
+                        objectType: N.Qqv.GIFT
                     },
                     giftMessage: w()
                 });
         },
         w = () => {
-            if (n === S.hX.FRIEND_ANNIVERSARY) return N.intl.formatToPlainString(N.t['L2s/Nz'], { numberOfYears: I.Z.getFriendAnniversaryYears(t.id) });
+            if (n === S.hX.FRIEND_ANNIVERSARY) return T.intl.formatToPlainString(T.t['L2s/Nz'], { numberOfYears: I.Z.getFriendAnniversaryYears(t.id) });
             return (0, _.Ou)(n);
         },
         k = () => {
-            if (n === S.hX.FRIEND_ANNIVERSARY) return N.intl.string(N.t['4LohBA']);
+            if (n === S.hX.FRIEND_ANNIVERSARY) return T.intl.string(T.t['4LohBA']);
             return (0, _.Ou)(n);
         },
         U = () =>
@@ -141,7 +141,7 @@ function Z(e) {
                 onMouseLeave: P,
                 popoutPosition: e.position,
                 analyticsPage: l,
-                analyticsSection: T.jXE.FRIENDS_LIST_FRIEND_ROW_GIFT_POPOUT,
+                analyticsSection: N.jXE.FRIENDS_LIST_FRIEND_ROW_GIFT_POPOUT,
                 giftIntentSecondaryAction: S.X2.SEND_MESSAGE,
                 glow: !0
             }),

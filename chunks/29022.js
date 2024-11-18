@@ -10,8 +10,8 @@ var i,
     o,
     a = n(200651),
     l = n(192379),
-    s = n(149765),
-    r = n(442837),
+    r = n(149765),
+    s = n(442837),
     c = n(704215),
     d = n(692547),
     u = n(481060),
@@ -30,7 +30,7 @@ var i,
     O = n(237320);
 function g(e) {
     let { guild: t, headerText: i, headerSubtext: o, step: l } = e,
-        s = E.ZP.getGuildIconURL({
+        r = E.ZP.getGuildIconURL({
             id: t.id,
             icon: t.icon,
             size: 120
@@ -41,9 +41,9 @@ function g(e) {
             (0, a.jsxs)('div', {
                 className: O.headerIconContainer,
                 children: [
-                    null != s
+                    null != r
                         ? (0, a.jsx)(u.Avatar, {
-                              src: s,
+                              src: r,
                               'aria-label': t.name,
                               size: u.AvatarSizes.SIZE_120,
                               className: O.__invalid_guildIcon
@@ -85,7 +85,7 @@ function g(e) {
 }
 function R(e) {
     let { guild: t } = e,
-        n = (0, r.e7)([N.Z], () => N.Z.getRole(t.id, t.getEveryoneRoleId()));
+        n = (0, s.e7)([N.Z], () => N.Z.getRole(t.id, t.getEveryoneRoleId()));
     if (null == n) return null;
     let { name: i, color: o } = n;
     return (0, a.jsxs)('span', {
@@ -147,7 +147,7 @@ function v(e) {
               ]
           });
 }
-function b(e) {
+function j(e) {
     let { permissions: t, step: n } = e;
     return 0 === t.length && 2 !== n
         ? null
@@ -184,7 +184,7 @@ function b(e) {
               ]
           }));
 }
-function y(e) {
+function b(e) {
     let { permissions: t, step: n } = e,
         { enabledPermissions: i, disabledPermissions: o } = t;
     return 0 === i.length && 2 !== n
@@ -198,14 +198,14 @@ function y(e) {
                             step: n
                         })
                       : null,
-                  (0, a.jsx)(b, {
+                  (0, a.jsx)(j, {
                       permissions: o,
                       step: n
                   })
               ]
           });
 }
-function U(e) {
+function y(e) {
     let { guild: t, permissions: n, step: i, canEveryoneModerate: o, isDefaultNotificationsAllMessages: l } = e;
     return (0, a.jsx)(u.ModalContent, {
         children: (0, a.jsxs)('div', {
@@ -259,7 +259,7 @@ function U(e) {
                           ]
                       })
                     : null,
-                (0, a.jsx)(y, {
+                (0, a.jsx)(b, {
                     permissions: n,
                     step: i
                 })
@@ -267,7 +267,7 @@ function U(e) {
         })
     });
 }
-function j(e) {
+function U(e) {
     let { onConfirm: t, onDismiss: n, canEveryoneModerate: i, step: o } = e;
     return (0, a.jsxs)(u.ModalFooter, {
         className: O.footer,
@@ -293,7 +293,7 @@ function j(e) {
     });
 }
 function G(e) {
-    let { guild: t, canEveryoneModerate: n, isDefaultNotificationsAllMessages: i, transitionState: o, onClose: r } = e,
+    let { guild: t, canEveryoneModerate: n, isDefaultNotificationsAllMessages: i, transitionState: o, onClose: s } = e,
         [d, _] = l.useState(0),
         I = l.useMemo(() => {
             let e = [],
@@ -312,7 +312,7 @@ function G(e) {
     let E = () => {
             let e = N.Z.getRole(t.id, t.getEveryoneRoleId());
             if (null == e) return;
-            let n = s.Od(e.permissions, f.mu);
+            let n = r.Od(e.permissions, f.mu);
             (0, p.Gf)(t.id, [
                 {
                     ...e,
@@ -337,20 +337,20 @@ function G(e) {
                 headerSubtext: n ? C.intl.string(C.t.aliKPz) : C.intl.string(C.t.F4KDOD),
                 step: d
             }),
-            (0, a.jsx)(U, {
+            (0, a.jsx)(y, {
                 guild: t,
                 permissions: I,
                 step: d,
                 canEveryoneModerate: n,
                 isDefaultNotificationsAllMessages: i
             }),
-            (0, a.jsx)(j, {
+            (0, a.jsx)(U, {
                 onConfirm: () => {
                     var e, i;
-                    !n && (L(), r(), (0, h.Qd)(c.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : '', !0, x.L.PRIMARY)), 0 === d ? (_(1), setTimeout(() => _(2), 3000)) : 2 === d && (L(), r(), (0, h.Qd)(c.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (i = null == t ? void 0 : t.id) && void 0 !== i ? i : '', !0, x.L.PRIMARY));
+                    !n && (L(), s(), (0, h.Qd)(c.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : '', !0, x.L.PRIMARY)), 0 === d ? (_(1), setTimeout(() => _(2), 3000)) : 2 === d && (L(), s(), (0, h.Qd)(c.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (i = null == t ? void 0 : t.id) && void 0 !== i ? i : '', !0, x.L.PRIMARY));
                 },
                 onDismiss: () => {
-                    r(), (0, h.Qd)(c.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, t.id, !0, x.L.DISMISS);
+                    s(), (0, h.Qd)(c.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, t.id, !0, x.L.DISMISS);
                 },
                 step: d,
                 canEveryoneModerate: n

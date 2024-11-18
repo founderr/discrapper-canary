@@ -23,11 +23,11 @@ var i,
     S = n(431369),
     T = n(210887),
     C = n(78839),
-    _ = n(74538),
-    E = n(388032),
+    E = n(74538),
+    _ = n(388032),
     I = n(121254);
 async function f(e, t, n, i) {
-    await (0, h.bG)(n), await (0, m.Mg)(e, { items: (0, _.MY)(e, t) }, i);
+    await (0, h.bG)(n), await (0, m.Mg)(e, { items: (0, E.MY)(e, t) }, i);
 }
 function N(e) {
     let { premiumSubscription: t, guildBoostSlotId: n, onNext: i, onClose: s } = e,
@@ -41,14 +41,14 @@ function N(e) {
                 children: [
                     (0, r.jsx)(u.FormTitle, {
                         tag: u.FormTitleTags.H4,
-                        children: E.intl.string(E.t.l52ih4)
+                        children: _.intl.string(_.t.l52ih4)
                     }),
                     (0, r.jsx)(u.ModalCloseButton, { onClick: s })
                 ]
             }),
             (0, r.jsx)(u.ModalContent, {
                 className: I.body,
-                children: E.intl.string(E.t.DY2CXl)
+                children: _.intl.string(_.t.DY2CXl)
             }),
             (0, r.jsxs)(u.ModalFooter, {
                 justify: x.Z.Justify.START,
@@ -58,20 +58,20 @@ function N(e) {
                             try {
                                 m(!0);
                                 let e = (0, S.g)(t, 1);
-                                o()((0, _.uV)(e) <= (0, _.uV)(t.additionalPlans), 'Uncanceling should not increase the number of guild subscriptions'), await f(t, e, n, g), i();
+                                o()((0, E.uV)(e) <= (0, E.uV)(t.additionalPlans), 'Uncanceling should not increase the number of guild subscriptions'), await f(t, e, n, g), i();
                             } catch (e) {
                                 m(!1);
                             }
                         },
                         submitting: a,
-                        children: E.intl.string(E.t.etZP4O)
+                        children: _.intl.string(_.t.etZP4O)
                     }),
                     (0, r.jsx)(u.Button, {
                         look: u.Button.Looks.LINK,
                         color: (0, d.ap)(h) ? u.Button.Colors.PRIMARY : u.Button.Colors.WHITE,
                         onClick: s,
                         disabled: a,
-                        children: E.intl.string(E.t.oEAioK)
+                        children: _.intl.string(_.t.oEAioK)
                     })
                 ]
             })
@@ -87,19 +87,19 @@ function A(e) {
                 children: [
                     (0, r.jsx)(u.FormTitle, {
                         tag: u.FormTitleTags.H4,
-                        children: E.intl.string(E.t.H9QUAA)
+                        children: _.intl.string(_.t.H9QUAA)
                     }),
                     (0, r.jsx)(u.ModalCloseButton, { onClick: t })
                 ]
             }),
             (0, r.jsxs)(u.ModalContent, {
                 className: I.body,
-                children: [(0, r.jsx)('div', { className: I.uncancelImage }), (0, r.jsx)('div', { children: E.intl.string(E.t.G27uHR) })]
+                children: [(0, r.jsx)('div', { className: I.uncancelImage }), (0, r.jsx)('div', { children: _.intl.string(_.t.G27uHR) })]
             }),
             (0, r.jsx)(u.ModalFooter, {
                 children: (0, r.jsx)(u.Button, {
                     onClick: t,
-                    children: E.intl.string(E.t.BddRzc)
+                    children: _.intl.string(_.t.BddRzc)
                 })
             })
         ]

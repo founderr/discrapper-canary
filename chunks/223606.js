@@ -25,8 +25,8 @@ function _(e, t, n) {
 }
 let E = {},
     g = 0,
-    m = {},
     h = {},
+    m = {},
     S = (e, t) => {
         let n = (0, o.hc)(e),
             i = {
@@ -50,7 +50,7 @@ function T(e) {
     let { channelId: n, messages: i } = e,
         r = null === (t = a.Z.getChannel(n)) || void 0 === t ? void 0 : t.getGuildId();
     if (null == r) return !1;
-    let l = h[r],
+    let l = m[r],
         o = i.reduce((e, t) => {
             var n;
             return t.type === p.uaV.AUTO_MODERATION_ACTION &&
@@ -65,17 +65,17 @@ function T(e) {
                     : void 0
                 : e;
         }, l);
-    return null != o && h[r] !== o && ((h[r] = o), !0);
+    return null != o && m[r] !== o && ((m[r] = o), !0);
 }
 class N extends (i = r.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(s.Z), null != e && ((E = e.automodFailedMessages), (m = e.mentionRaidDetectionByGuild));
+        this.waitFor(s.Z), null != e && ((E = e.automodFailedMessages), (h = e.mentionRaidDetectionByGuild));
     }
     getState() {
         return {
             automodFailedMessages: E,
-            mentionRaidDetectionByGuild: m,
-            lastIncidentAlertMessage: h
+            mentionRaidDetectionByGuild: h,
+            lastIncidentAlertMessage: m
         };
     }
     getMessage(e) {
@@ -87,11 +87,11 @@ class N extends (i = r.ZP.PersistedStore) {
     }
     getMentionRaidDetected(e) {
         var t;
-        return null !== (t = m[e]) && void 0 !== t ? t : null;
+        return null !== (t = h[e]) && void 0 !== t ? t : null;
     }
     getLastIncidentAlertMessage(e) {
         var t;
-        return null !== (t = h[e]) && void 0 !== t ? t : null;
+        return null !== (t = m[e]) && void 0 !== t ? t : null;
     }
 }
 _(N, 'displayName', 'GuildAutomodMessageStore'),
@@ -106,7 +106,7 @@ _(N, 'displayName', 'GuildAutomodMessageStore'),
             let { guildId: t, message: n } = e;
             if (null == t || n.type !== p.uaV.AUTO_MODERATION_ACTION) return !1;
             let i = (0, u.e5)(n);
-            return !!(0, f.nY)(i) && !!(0, f.OP)(i) && ((h[t] = i.id), !0);
+            return !!(0, f.nY)(i) && !!(0, f.OP)(i) && ((m[t] = i.id), !0);
         },
         MESSAGE_SEND_FAILED_AUTOMOD: C,
         MESSAGE_EDIT_FAILED_AUTOMOD: C,
@@ -124,7 +124,7 @@ _(N, 'displayName', 'GuildAutomodMessageStore'),
         AUTO_MODERATION_MENTION_RAID_DETECTION: function (e) {
             let { guildId: t, decisionId: n, suspiciousMentionActivityUntil: i } = e;
             return (
-                (m[t] = {
+                (h[t] = {
                     guildId: t,
                     decisionId: n,
                     suspiciousMentionActivityUntil: i
@@ -134,6 +134,6 @@ _(N, 'displayName', 'GuildAutomodMessageStore'),
         },
         AUTO_MODERATION_MENTION_RAID_NOTICE_DISMISS: function (e) {
             let { guildId: t } = e;
-            return delete m[t], !0;
+            return delete h[t], !0;
         }
     }));

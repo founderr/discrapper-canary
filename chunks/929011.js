@@ -16,7 +16,7 @@ var l = e(200651),
     s = e(981631);
 async function c(n) {
     let { subscriptionPlanId: t, sku: u, subscriptionGroupPlanIds: c, activeSubscription: d, subscribeForGuild: f, analyticsLocations: p, analyticsLocation: v, disableGuildSelector: m = !1 } = n,
-        { promise: h, resolve: S } = Promise.withResolvers();
+        { promise: h, resolve: I } = Promise.withResolvers();
     if ((0, a.KK)(u.flags) && !1 === m) {
         let { promise: n, resolve: t } = Promise.withResolvers();
         (0, i.openModalLazy)(async () => {
@@ -48,7 +48,7 @@ async function c(n) {
             analyticsSubscriptionType: s.NYc.APPLICATION,
             analyticsLocations: p,
             analyticsLocation: v,
-            onComplete: S,
+            onComplete: I,
             showBenefitsFirst: !1,
             forcesTransitionToGuild: !1
         }),

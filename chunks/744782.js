@@ -19,8 +19,8 @@ var i = t(442837),
     g = t(572004),
     v = t(971130),
     f = t(230900),
-    N = t(981631),
-    j = t(388032),
+    j = t(981631),
+    N = t(388032),
     I = t(871661);
 let { INVITE_OPTIONS_7_DAYS: p, INVITE_OPTIONS_UNLIMITED: C } = v.ZP;
 function E(e) {
@@ -39,7 +39,7 @@ function E(e) {
         _ = (null == b ? void 0 : b.vanityURLCode) != null && (null == b ? void 0 : b.vanityURLCode.length) > 0,
         { enabled: R } = s.Z.useExperiment(
             {
-                guildId: null != y ? y : N.lds,
+                guildId: null != y ? y : j.lds,
                 location: 'bd50e8_1'
             },
             { autoTrackExposure: _ }
@@ -72,7 +72,7 @@ function E(e) {
             (0, l.jsx)(r.Clickable, {
                 onClick: S,
                 className: I.close,
-                'aria-label': j.intl.string(j.t.cpT0Cg),
+                'aria-label': N.intl.string(N.t.cpT0Cg),
                 children: (0, l.jsx)(r.XSmallIcon, {
                     size: 'md',
                     color: 'currentColor'
@@ -93,13 +93,13 @@ function E(e) {
             (0, l.jsx)(r.Heading, {
                 variant: 'heading-xl/semibold',
                 className: I.header,
-                children: j.intl.string(j.t.UzNv7u)
+                children: N.intl.string(N.t.UzNv7u)
             }),
             (0, l.jsx)(r.Text, {
                 variant: 'text-md/normal',
                 color: 'header-secondary',
                 className: I.body,
-                children: j.intl.string(j.t.UetJjI)
+                children: N.intl.string(N.t.UetJjI)
             }),
             (0, l.jsxs)('div', {
                 className: I.invite,
@@ -111,11 +111,11 @@ function E(e) {
                             if (B) return;
                             (0, g.JG)(e);
                             let n = (0, f.xC)(T.entity_type);
-                            h.default.track(N.rMx.COPY_INSTANT_INVITE, {
+                            h.default.track(j.rMx.COPY_INSTANT_INVITE, {
                                 server: T.guild_id,
                                 channel: k,
                                 channel_type: n,
-                                location: N.t4x.GUILD_EVENTS,
+                                location: j.t4x.GUILD_EVENTS,
                                 code: L.code,
                                 guild_scheduled_event_id: null == T ? void 0 : T.id
                             });

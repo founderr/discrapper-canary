@@ -20,8 +20,8 @@ var a,
     g = n(44488),
     b = n(585483),
     f = n(981631),
-    I = n(998294);
-function C(e, t, n) {
+    C = n(998294);
+function I(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -95,13 +95,13 @@ class v extends s.Component {
         return (0, i.jsx)(c.Z.img, {
             src: e.src,
             alt: '',
-            className: l()(I.slide, t),
+            className: l()(C.slide, t),
             style: this.getStyle()
         });
     }
     constructor(...e) {
         super(...e),
-            C(this, 'state', {
+            I(this, 'state', {
                 translate: new c.Z.Value(0),
                 opacity: new c.Z.Value(1)
             });
@@ -149,11 +149,11 @@ class N extends (a = s.Component) {
             o = this.props.items;
         return (0, i.jsxs)(u.W, {
             component: 'div',
-            className: l()(I.wrapper, t),
+            className: l()(C.wrapper, t),
             children: [
                 o.length > 1
                     ? (0, i.jsx)(g.am, {
-                          className: I.navPrev,
+                          className: C.navPrev,
                           onClick: this.gotoPrev
                       })
                     : null,
@@ -170,7 +170,7 @@ class N extends (a = s.Component) {
                       ),
                 o.length > 1
                     ? (0, i.jsx)(g.Pz, {
-                          className: I.navNext,
+                          className: C.navNext,
                           onClick: this.gotoNext
                       })
                     : null
@@ -179,20 +179,20 @@ class N extends (a = s.Component) {
     }
     constructor(e) {
         super(e),
-            C(this, 'gotoNext', () => {
+            I(this, 'gotoNext', () => {
                 let { currentIndex: e } = this.state;
                 this.navigateTo(e + 1);
             }),
-            C(this, 'gotoPrev', () => {
+            I(this, 'gotoPrev', () => {
                 let { currentIndex: e } = this.state;
                 this.navigateTo(e - 1);
             }),
-            C(this, 'gotoNextThrottled', d()(this.gotoNext, 300)),
-            C(this, 'gotoPrevThrottled', d()(this.gotoPrev, 300)),
+            I(this, 'gotoNextThrottled', d()(this.gotoNext, 300)),
+            I(this, 'gotoPrevThrottled', d()(this.gotoPrev, 300)),
             (this.state = {
                 currentIndex: e.startWith,
                 directionHistory: []
             });
     }
 }
-C(N, 'defaultProps', { startWith: 0 });
+I(N, 'defaultProps', { startWith: 0 });

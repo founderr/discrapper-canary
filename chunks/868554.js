@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    a = n(120356),
-    r = n.n(a),
+    r = n(120356),
+    a = n.n(r),
     s = n(913527),
     o = n.n(s),
     c = n(100621),
@@ -29,11 +29,11 @@ var i = n(200651),
     N = n(382873),
     S = n(454120);
 function T(e) {
-    let { buttonRef: t, channel: a, userId: s, streaming: T, onClose: j, dismissibleContent: A } = e,
+    let { buttonRef: t, channel: r, userId: s, streaming: T, onClose: j, dismissibleContent: A } = e,
         y = (0, d.e7)([x.default], () => x.default.getUser(s)),
         P = (0, d.e7)([x.default], () => x.default.getCurrentUser()),
         M = (0, d.e7)([v.Z], () => v.Z.getPreviousGoLiveSettings()),
-        L = (0, d.e7)([p.Z], () => p.Z.getChatOpen(a.id)),
+        L = (0, d.e7)([p.Z], () => p.Z.getChatOpen(r.id)),
         R = T && null != M && M.resolution !== b.LY.RESOLUTION_1440 && M.frameRate !== b.ws.FPS_60,
         k = l.useContext(g.h9),
         O = l.useRef(0),
@@ -62,7 +62,7 @@ function T(e) {
             animateOnHover: !0
         }),
         F = T && !R,
-        V = a.hdStreamingUntil;
+        V = r.hdStreamingUntil;
     if (null == V || null == y || null == P) return null;
     let z = o()(V).diff(o()(), 'hours'),
         W = (() => {
@@ -148,7 +148,7 @@ function T(e) {
                             children: [
                                 (0, i.jsx)(u.Button, {
                                     onClick: Y,
-                                    className: r()({ [N.actionButton]: !0 !== T }),
+                                    className: a()({ [N.actionButton]: !0 !== T }),
                                     children: K
                                 }),
                                 !F &&

@@ -21,8 +21,8 @@ var i = n(200651),
     S = n(145080),
     T = n(129186),
     C = n(639944),
-    _ = n(971436);
-let E = (0, h.hQ)();
+    E = n(971436);
+let _ = (0, h.hQ)();
 function I() {
     let [e, t] = s.useState(-100),
         [n, r] = s.useState(!1),
@@ -64,7 +64,7 @@ function I() {
             onValueChange: (e) => j(-((100 - e) * 1), f),
             barStyles: { background: d.Z.unsafe_rawColors.GREEN_360.css },
             fillStyles: { background: d.Z.unsafe_rawColors.YELLOW_300.css },
-            'aria-labelledby': E,
+            'aria-labelledby': _,
             children: (0, i.jsxs)('div', {
                 className: l()(S.sliderBar, S.microphone, S.inputSensitivityBar, T.bar),
                 children: [
@@ -88,7 +88,7 @@ function I() {
                     }),
                     (0, i.jsx)(u.FormText, {
                         type: u.FormText.Types.DESCRIPTION,
-                        className: _.marginBottom8,
+                        className: E.marginBottom8,
                         children: x.intl.string(x.t.W3K5Ii)
                     })
                 ]
@@ -97,9 +97,9 @@ function I() {
             className: S.sensitivity,
             children: [
                 (0, i.jsx)(u.FormTitle, {
-                    id: E,
+                    id: _,
                     tag: u.FormTitleTags.H5,
-                    className: _.marginBottom8,
+                    className: E.marginBottom8,
                     children: x.intl.string(x.t['sqUm+v'])
                 }),
                 (0, i.jsxs)('div', {
@@ -108,11 +108,11 @@ function I() {
                             (0, i.jsx)(h.FG, {
                                 children: (e) =>
                                     (0, i.jsxs)('div', {
-                                        className: l()(C.horizontal, _.marginBottom4),
+                                        className: l()(C.horizontal, E.marginBottom4),
                                         children: [
                                             (0, i.jsx)(u.FormTitle, {
                                                 tag: u.FormTitleTags.H3,
-                                                className: _.marginReset,
+                                                className: E.marginReset,
                                                 children: (0, i.jsx)('label', {
                                                     htmlFor: e,
                                                     children: x.intl.string(x.t.I1Zuq6)
@@ -132,7 +132,7 @@ function I() {
                 !b &&
                     (0, i.jsx)(u.FormText, {
                         type: u.FormText.Types.DESCRIPTION,
-                        className: l()(S.inputDisabledWarning, _.marginBottom8),
+                        className: l()(S.inputDisabledWarning, E.marginBottom8),
                         children: x.intl.format(x.t['O13I+P'], { onEnableClick: () => m.Z.enable(!0) })
                     })
             ]

@@ -19,18 +19,18 @@ var i,
     C = n(283595),
     v = n(19780),
     S = n(944486),
-    T = n(981631);
-let N = 'ActivityTrackingStore',
+    N = n(981631);
+let T = 'ActivityTrackingStore',
     A = 30 * f.Z.Millis.MINUTE,
     b = 5 * f.Z.Millis.MINUTE,
-    x = null !== (i = c.K.get(N)) && void 0 !== i ? i : {},
+    x = null !== (i = c.K.get(T)) && void 0 !== i ? i : {},
     Z = {},
     L = !1;
 function y(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     t && O(e, !0);
     let n = Z[e.applicationId];
-    null != n && (n.stop(), delete Z[e.applicationId]), delete x[e.applicationId], c.K.set(N, x);
+    null != n && (n.stop(), delete Z[e.applicationId]), delete x[e.applicationId], c.K.set(T, x);
 }
 function O(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -43,7 +43,7 @@ function O(e) {
         s = v.Z.getMediaSessionId();
     h.Z.updateActivity({
         applicationId: e.applicationId,
-        distributor: e.isDiscordApplication ? T.GQo.DISCORD : e.distributor,
+        distributor: e.isDiscordApplication ? N.GQo.DISCORD : e.distributor,
         shareActivity: r,
         token: e.token,
         duration: Math.floor(i / 1000),
@@ -55,7 +55,7 @@ function O(e) {
     }),
         (e.updatedAt = n);
     let o = Z[e.applicationId];
-    null == o && (o = Z[e.applicationId] = new d.Xp()).start(A, () => O(e)), !t && ((x[e.applicationId] = e), c.K.set(N, x));
+    null == o && (o = Z[e.applicationId] = new d.Xp()).start(A, () => O(e)), !t && ((x[e.applicationId] = e), c.K.set(T, x));
 }
 function R() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
@@ -112,12 +112,12 @@ class j extends (r = o.ZP.Store) {
             let { applicationId: t, token: n } = e,
                 i = x[t];
             if (null == i) return !1;
-            (i.token = n), c.K.set(N, x);
+            (i.token = n), c.K.set(T, x);
         },
         ACTIVITY_UPDATE_FAIL: function (e) {
             let { applicationId: t } = e,
                 n = x[t];
             if (null == n) return !1;
-            (n.token = null), (n.updatedAt = null), c.K.set(N, x);
+            (n.token = null), (n.updatedAt = null), c.K.set(T, x);
         }
     });

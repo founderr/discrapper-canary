@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(120356),
-    a = n.n(l),
-    r = n(442837),
+    r = n.n(l),
+    a = n(442837),
     s = n(481060),
     o = n(239091),
     c = n(100527),
@@ -26,8 +26,8 @@ function I(e) {
     var t, l;
     let { userId: u, channel: C } = e,
         { analyticsLocations: x } = (0, d.ZP)(c.Z.USERNAME),
-        _ = (0, r.e7)([f.default], () => f.default.getUser(u)),
-        I = (0, r.e7)([m.ZP], () => (null != u ? m.ZP.getMember(C.guild_id, u) : null));
+        _ = (0, a.e7)([f.default], () => f.default.getUser(u)),
+        I = (0, a.e7)([m.ZP], () => (null != u ? m.ZP.getMember(C.guild_id, u) : null));
     function E(e) {
         if (null == _) return null;
         (0, o.jW)(e, async () => {
@@ -45,7 +45,7 @@ function I(e) {
         Z = null == I ? void 0 : I.colorString;
     return null == _
         ? (0, i.jsx)('span', {
-              className: a()(v.threadCreatorName, v.unknownCreatorName),
+              className: r()(v.threadCreatorName, v.unknownCreatorName),
               children: b
           })
         : (0, i.jsx)(d.Gt, {

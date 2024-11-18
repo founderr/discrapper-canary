@@ -22,13 +22,13 @@ function _(e) {
     var t, n;
     let { content: _, renderModalProps: E, analyticsLocations: I, analyticsLocation: C, isLightTheme: v } = e,
         S = 'AnnouncementModalVariant1_'.concat(r.z[Number(_.dismissKey)]),
-        { onClose: T } = E,
-        N = null != _.button && '' !== _.button.copy ? _.button.copy : p.intl.string(p.t.YScQSE),
+        { onClose: N } = E,
+        T = null != _.button && '' !== _.button.copy ? _.button.copy : p.intl.string(p.t.YScQSE),
         A = (null === (t = _.button) || void 0 === t ? void 0 : t.buttonAction) === l.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button',
         b =
             (null === (n = _.button) || void 0 === n ? void 0 : n.buttonAction) === l.Wc.OPEN_MARKETING_PAGE
                 ? () => {
-                      (0, o.uL)(m.Z5c.APPLICATION_STORE), T();
+                      (0, o.uL)(m.Z5c.APPLICATION_STORE), N();
                   }
                 : () =>
                       (0, s.Z)({
@@ -40,7 +40,7 @@ function _(e) {
                               objectType: m.Qqv.TIER_2
                           },
                           onClose: (e) => {
-                              e && T();
+                              e && N();
                           }
                       }),
         x =
@@ -119,7 +119,7 @@ function _(e) {
                         className: g.nitroIconSubHeader,
                         src: f
                     }),
-                    N
+                    T
                 ]
             });
         },

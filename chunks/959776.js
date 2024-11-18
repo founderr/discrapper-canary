@@ -1,14 +1,14 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return a;
     }
 });
 var i = n(913527),
     r = n.n(i),
     s = n(626135),
-    a = n(981631);
-function l(e, t) {
-    s.default.track(a.rMx.AGE_GATE_SUBMITTED, {
+    l = n(981631);
+function a(e, t) {
+    s.default.track(l.rMx.AGE_GATE_SUBMITTED, {
         dob: 18 > r()().diff(e, 'years') ? e.format('YYYY-MM-DD') : null,
         dob_day: e.date(),
         dob_month: e.month() + 1,

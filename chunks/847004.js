@@ -7,8 +7,8 @@ n.d(t, {
 var a = n(200651),
     l = n(192379),
     i = n(120356),
-    s = n.n(i),
-    r = n(481060),
+    r = n.n(i),
+    s = n(481060),
     c = n(44315),
     o = n(937615),
     d = n(981631),
@@ -16,12 +16,12 @@ var a = n(200651),
     x = n(856547);
 function u(e) {
     let { price: t, selected: n, onClick: l } = e;
-    return (0, a.jsxs)(r.Clickable, {
-        className: s()(x.priceRow, { [x.selected]: n }),
+    return (0, a.jsxs)(s.Clickable, {
+        className: r()(x.priceRow, { [x.selected]: n }),
         onClick: l,
         children: [
             n
-                ? (0, a.jsx)(r.CircleCheckIcon, {
+                ? (0, a.jsx)(s.CircleCheckIcon, {
                       size: 'custom',
                       width: 20,
                       height: 20,
@@ -41,12 +41,12 @@ function u(e) {
             (0, a.jsxs)('div', {
                 className: x.priceRowText,
                 children: [
-                    (0, a.jsx)(r.Text, {
+                    (0, a.jsx)(s.Text, {
                         variant: 'text-sm/normal',
                         tag: 'span',
                         children: (0, o.T4)(t, d.pKx.USD)
                     }),
-                    (0, a.jsx)(r.Text, {
+                    (0, a.jsx)(s.Text, {
                         variant: 'text-xxs/medium',
                         tag: 'span',
                         children: '/mo.'
@@ -58,18 +58,18 @@ function u(e) {
 }
 function h(e) {
     let { selectedTemplate: t, handleSelectTemplate: n, newPricesToPick: i } = e,
-        [s, c] = l.useState(0);
+        [r, c] = l.useState(0);
     return (0, a.jsxs)('div', {
         className: x.container,
         children: [
             (0, a.jsxs)('div', {
                 className: x.content,
                 children: [
-                    (0, a.jsx)(r.Heading, {
+                    (0, a.jsx)(s.Heading, {
                         variant: 'heading-md/semibold',
                         children: m.intl.format(m.t['5WZ9Cg'], { tierName: t.listings[0].name })
                     }),
-                    (0, a.jsx)(r.Text, {
+                    (0, a.jsx)(s.Text, {
                         variant: 'text-sm/normal',
                         className: x.bodyText,
                         children: m.intl.format(m.t['5i7UhY'], { price: (0, o.T4)(t.listings[0].price_tier, d.pKx.USD) })
@@ -79,7 +79,7 @@ function h(e) {
                             u,
                             {
                                 price: e,
-                                selected: t === s,
+                                selected: t === r,
                                 onClick: () => c(t)
                             },
                             e
@@ -87,15 +87,15 @@ function h(e) {
                     )
                 ]
             }),
-            (0, a.jsx)(r.Button, {
-                size: r.Button.Sizes.MEDIUM,
+            (0, a.jsx)(s.Button, {
+                size: s.Button.Sizes.MEDIUM,
                 onClick: () => {
                     n({
                         ...t,
                         listings: [
                             {
                                 ...t.listings[0],
-                                price_tier: i[s]
+                                price_tier: i[r]
                             }
                         ]
                     });

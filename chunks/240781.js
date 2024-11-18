@@ -9,7 +9,7 @@ var i = n(120356),
     u = n(884697),
     c = n(449217),
     d = n(905357),
-    f = n(81245),
+    f = n(222062),
     _ = n(706454),
     p = n(158776),
     h = n(55935),
@@ -102,7 +102,7 @@ t.Z = (e) => {
         A = (0, u.qS)(T),
         N = (0, u.G1)(S),
         C = !y && A,
-        R = (0, f.Mu)('ProfileEffectDescription', !N || y),
+        R = (0, f.M)(!N || y),
         O = (0, d.k)(S);
     return null != S && (null == T || C)
         ? (0, r.jsxs)('div', {

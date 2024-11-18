@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var l = n(200651),
     i = n(192379),
-    s = n(849055),
-    r = n(481060),
+    r = n(849055),
+    s = n(481060),
     o = n(358085),
     a = n(960048),
     d = n(998502),
@@ -21,7 +21,7 @@ function f(e) {
         { challenge: p } = t.methods.find((e) => 'webauthn' === e.type),
         j = async () => {
             S(!0), v(null);
-            let e = o.isPlatformEmbedded && d.ZP.supportsFeature(c.eRX.WEBAUTHN) ? d.ZP.webAuthnAuthenticate(p) : s.U2(JSON.parse(p)).then((e) => JSON.stringify(e)),
+            let e = o.isPlatformEmbedded && d.ZP.supportsFeature(c.eRX.WEBAUTHN) ? d.ZP.webAuthnAuthenticate(p) : r.U2(JSON.parse(p)).then((e) => JSON.stringify(e)),
                 t = async (e) => {
                     try {
                         await n({
@@ -47,7 +47,7 @@ function f(e) {
             (0, l.jsx)(u.Z.SlideHeader, { onClose: m }),
             (0, l.jsxs)(u.Z.SlideContent, {
                 children: [
-                    (0, l.jsx)(r.Button, {
+                    (0, l.jsx)(s.Button, {
                         submitting: g,
                         onClick: j,
                         children: h.intl.string(h.t.Xr3Ekp)

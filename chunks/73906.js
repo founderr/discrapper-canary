@@ -2,11 +2,11 @@ var i = n(200651);
 n(192379);
 var r = n(3570),
     s = n(685311),
-    a = n(186901);
+    l = n(186901);
 t.Z = function (e) {
     let { match: t, location: n } = e,
-        l = async (e, t) => {
-            await (0, r.s)(a.jE.CHANNEL, {
+        a = async (e, t) => {
+            await (0, r.s)(l.jE.CHANNEL, {
                 guildId: e.params.guildId,
                 channelId: e.params.channelId,
                 messageId: e.params.messageId,
@@ -16,6 +16,6 @@ t.Z = function (e) {
     return (0, i.jsx)(s.Z, {
         match: t,
         location: n,
-        attemptDeepLink: l
+        attemptDeepLink: a
     });
 };

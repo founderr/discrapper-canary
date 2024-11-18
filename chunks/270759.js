@@ -19,8 +19,8 @@ var i = n(200651),
     C = n(108427),
     v = n(210887),
     S = n(974042),
-    T = n(666286),
-    N = n(596957),
+    N = n(666286),
+    T = n(596957),
     A = n(981631),
     b = n(723359),
     x = n(388032),
@@ -152,8 +152,8 @@ t.Z = function (e) {
                         'aria-labelledby': D,
                         children:
                             y === A.pJs.ADD_FRIEND
-                                ? (0, i.jsx)(T.Z, {})
-                                : (0, i.jsx)(N.Z, {
+                                ? (0, i.jsx)(N.Z, {})
+                                : (0, i.jsx)(T.Z, {
                                       titleId: D,
                                       sectionFilter: y
                                   })

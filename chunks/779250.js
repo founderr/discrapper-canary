@@ -20,8 +20,8 @@ var l,
     g = t(433775),
     v = t(984933),
     f = t(430824),
-    N = t(971130),
-    j = t(981888),
+    j = t(971130),
+    N = t(981888),
     I = t(924301),
     p = t(482241),
     C = t(951539),
@@ -39,7 +39,7 @@ var l,
     D = t(981631),
     z = t(388032),
     B = t(834635);
-let { INVITE_OPTIONS_7_DAYS: M, INVITE_OPTIONS_UNLIMITED: G } = N.ZP;
+let { INVITE_OPTIONS_7_DAYS: M, INVITE_OPTIONS_UNLIMITED: G } = j.ZP;
 function U(e) {
     let { modal: n } = e,
         { createMultipleConfetti: t } = a.useContext(m.h);
@@ -107,7 +107,7 @@ function U(e) {
     );
 }
 function P(e) {
-    let { guildId: n, guildEvent: t, guildEventId: i, editBroadcastInfoData: c, isEdit: m, formErrors: g, transitionState: v, loading: f, error: N, onChange: j, onSave: p, onClose: C, createdEvent: E } = e,
+    let { guildId: n, guildEvent: t, guildEventId: i, editBroadcastInfoData: c, isEdit: m, formErrors: g, transitionState: v, loading: f, error: j, onChange: N, onSave: p, onClose: C, createdEvent: E } = e,
         S = (0, h.Dt)(),
         T = a.useRef(t),
         y = !(0, s.isEqual)(T.current, t),
@@ -198,7 +198,7 @@ function P(e) {
                                             guildEvent: t,
                                             validationErrorMessage: g.entity,
                                             isSlideReady: V,
-                                            onChange: j
+                                            onChange: N
                                         })
                                     }),
                                     (0, r.jsx)(d.Slide, {
@@ -208,8 +208,8 @@ function P(e) {
                                             guildEventId: i,
                                             guildId: n,
                                             editBroadcastInfoData: c,
-                                            onChange: j,
-                                            error: N,
+                                            onChange: N,
+                                            error: j,
                                             validationErrorMessage: g.schedule,
                                             isSlideReady: V
                                         })
@@ -220,7 +220,7 @@ function P(e) {
                                             guildId: n,
                                             guildEvent: t,
                                             guildEventId: i,
-                                            error: N
+                                            error: j
                                         })
                                     }),
                                     (0, r.jsx)(d.Slide, {
@@ -276,7 +276,7 @@ function V(e) {
         m = (0, o.e7)([I.ZP], () => I.ZP.getGuildScheduledEvent(l), [l]),
         x = (0, o.e7)([v.ZP], () => v.ZP.getDefaultChannel(n), [n]),
         h = (0, S.j$)(m, x),
-        [N, Z] = a.useState(h),
+        [j, Z] = a.useState(h),
         [b] = a.useState((0, S.Ql)(m)),
         [_, R] = a.useState(null),
         k = (e) => {
@@ -294,18 +294,18 @@ function V(e) {
                 ),
                 t ? R(e) : s();
         },
-        B = (0, g.Z)(u, null == m ? void 0 : m.id, N),
-        [U, { loading: V, error: w }] = (0, j.Z)(async () => {
+        B = (0, g.Z)(u, null == m ? void 0 : m.id, j),
+        [U, { loading: V, error: w }] = (0, N.Z)(async () => {
             if (null != _) return;
             let e = { broadcastToDirectoryChannels: B.broadcastToDirectoryChannels };
-            if (b && null != l) return await p.Z.saveEvent(l, N, n, e), s();
-            let t = await p.Z.createGuildEvent(N, n, e);
+            if (b && null != l) return await p.Z.saveEvent(l, j, n, e), s();
+            let t = await p.Z.createGuildEvent(j, n, e);
             return k(t.body), t;
         }),
-        F = a.useMemo(() => (0, A.Z)(N, b), [N, b]);
+        F = a.useMemo(() => (0, A.Z)(j, b), [j, b]);
     return (0, r.jsx)(P, {
         guildId: n,
-        guildEvent: N,
+        guildEvent: j,
         guildEventId: l,
         editBroadcastInfoData: B,
         isEdit: b,
@@ -318,7 +318,7 @@ function V(e) {
                 var t;
                 let l = (0, T.xC)(e.entityType),
                     [i] = (0, E.SU)(n, l);
-                (e.channelId = null !== (t = null == i ? void 0 : i.id) && void 0 !== t ? t : null), e.entityType !== L.WX.EXTERNAL && N.entityType === L.WX.EXTERNAL && (e.entityMetadata = null);
+                (e.channelId = null !== (t = null == i ? void 0 : i.id) && void 0 !== t ? t : null), e.entityType !== L.WX.EXTERNAL && j.entityType === L.WX.EXTERNAL && (e.entityMetadata = null);
             }
             Z((n) => ({
                 ...n,
@@ -326,7 +326,7 @@ function V(e) {
             }));
         },
         onSave: () => {
-            null != N.recurrenceRule && b && (0, y.BP)(m, N)
+            null != j.recurrenceRule && b && (0, y.BP)(m, j)
                 ? (0, d.openModalLazy)(async () => {
                       let { ConfirmModal: e } = await Promise.resolve().then(t.bind(t, 481060));
                       return (n) =>

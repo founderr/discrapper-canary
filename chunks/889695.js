@@ -20,8 +20,8 @@ var i = n(200651),
     _ = n(594174),
     E = n(700785),
     g = n(709054),
-    m = n(962086),
-    h = n(160404),
+    h = n(962086),
+    m = n(160404),
     S = n(225675),
     I = n(981631),
     v = n(388032),
@@ -38,9 +38,9 @@ function N(e) {
         n = (0, c.e7)([_.default], () => _.default.getCurrentUser()),
         l = (0, c.e7)([p.Z], () => p.Z.getGuild(t)),
         u = (0, c.e7)([p.Z], () => p.Z.getRoles(t)),
-        { impersonateType: N, viewingRoles: b } = (0, c.cj)([h.Z], () => ({
-            impersonateType: h.Z.getImpersonateType(t),
-            viewingRoles: h.Z.getViewingRoles(t)
+        { impersonateType: N, viewingRoles: b } = (0, c.cj)([m.Z], () => ({
+            impersonateType: m.Z.getImpersonateType(t),
+            viewingRoles: m.Z.getViewingRoles(t)
         })),
         A = N === S.z.SERVER_SHOP,
         O = (0, c.e7)([f.ZP], () => (null != n ? f.ZP.getTrueMember(t, n.id) : null)),
@@ -54,7 +54,7 @@ function N(e) {
                 let n = u[t];
                 null != n && (e[t] = n);
             }
-            (0, m.Zm)(t.id, {
+            (0, h.Zm)(t.id, {
                 type: N,
                 roles: e
             });

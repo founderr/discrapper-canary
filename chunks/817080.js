@@ -15,12 +15,12 @@ var t =
                 a = /Version\/[\d\.]+.*Safari/.test(navigator.userAgent),
                 s = e.webkitRequestFileSystem,
                 l = e.requestFileSystem || s || e.mozRequestFileSystem,
-                d = function (t) {
+                c = function (t) {
                     (e.setImmediate || e.setTimeout)(function () {
                         throw t;
                     }, 0);
                 },
-                c = 'application/octet-stream',
+                d = 'application/octet-stream',
                 u = 0,
                 E = function (e) {
                     setTimeout(function () {
@@ -34,14 +34,14 @@ var t =
                             try {
                                 o.call(e, n || e);
                             } catch (e) {
-                                d(e);
+                                c(e);
                             }
                     }
                 },
                 p = function (e) {
                     return /^\s*(?:text\/\S*|application\/xml|\S*\/\S*\+xml)\s*;.*charset\s*=\s*utf-8/i.test(e.type) ? new Blob(['ï\xBB\xBF', e], { type: e.type }) : e;
                 },
-                f = function (t, d, f) {
+                f = function (t, c, f) {
                     !f && (t = p(t));
                     var _,
                         R,
@@ -73,14 +73,14 @@ var t =
                             create: !0,
                             exclusive: !1
                         };
-                    if (((I.readyState = I.INIT), !d && (d = 'download'), o)) {
+                    if (((I.readyState = I.INIT), !c && (c = 'download'), o)) {
                         (_ = n().createObjectURL(t)),
                             setTimeout(function () {
-                                (r.href = _), (r.download = d), i(r), b(), E(_), (I.readyState = I.DONE);
+                                (r.href = _), (r.download = c), i(r), b(), E(_), (I.readyState = I.DONE);
                             });
                         return;
                     }
-                    if ((e.chrome && m && m !== c && ((t = (t.slice || t.webkitSlice).call(t, 0, t.size, c)), (N = !0)), s && 'download' !== d && (d += '.download'), (m === c || s) && (R = e), !l)) {
+                    if ((e.chrome && m && m !== d && ((t = (t.slice || t.webkitSlice).call(t, 0, t.size, d)), (N = !0)), s && 'download' !== c && (c += '.download'), (m === d || s) && (R = e), !l)) {
                         g();
                         return;
                     }
@@ -95,7 +95,7 @@ var t =
                                     C(function (e) {
                                         var n = function () {
                                             e.getFile(
-                                                d,
+                                                c,
                                                 y,
                                                 C(function (e) {
                                                     e.createWriter(
@@ -123,7 +123,7 @@ var t =
                                             );
                                         };
                                         e.getFile(
-                                            d,
+                                            c,
                                             { create: !1 },
                                             C(function (e) {
                                                 e.remove(), n();

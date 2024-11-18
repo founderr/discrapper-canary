@@ -5,8 +5,8 @@ t.d(n, {
 });
 var i = t(200651),
     l = t(192379),
-    o = t(120356),
-    r = t.n(o),
+    r = t(120356),
+    o = t.n(r),
     a = t(100621),
     s = t(399606),
     d = t(481060),
@@ -33,46 +33,46 @@ function I(e) {
     });
 }
 function N(e) {
-    let { guild: n, className: t, onPageChange: o, onMemberSelect: a } = e,
+    let { guild: n, className: t, onPageChange: r, onMemberSelect: a } = e,
         N = n.id,
         f = (0, s.e7)([u.Z], () => u.Z.getEstimatedMemberSearchCountByGuildId(N), [N]),
         m = (0, c.$j)(N),
-        T = (0, c.M3)(N),
-        E = l.useCallback(
+        E = (0, c.M3)(N),
+        T = l.useCallback(
             (e) => {
                 if (null != e) null == a || a(e);
             },
             [a]
         ),
-        S = (0, x.xb)(T, m, f),
-        j = l.useRef(null),
+        j = (0, x.xb)(E, m, f),
+        S = l.useRef(null),
         v = l.useRef(null),
         p = l.useCallback(() => {
             var e;
-            null === (e = j.current) || void 0 === e || e.resetSearchText();
+            null === (e = S.current) || void 0 === e || e.resetSearchText();
         }, []);
     return (0, i.jsx)('div', {
-        className: r()(C.mainTableContainer, t),
+        className: o()(C.mainTableContainer, t),
         children: (0, i.jsxs)(d.AdvancedScroller, {
-            className: r()(C.horizatonalScroller),
+            className: o()(C.horizatonalScroller),
             ref: v,
             orientation: 'horizontal',
             children: [
                 (0, i.jsx)(g.Z, {
                     guild: n,
-                    ref: j
+                    ref: S
                 }),
                 (0, i.jsx)(I, { guild: n }),
                 (0, i.jsx)(h.Z, {
                     guild: n,
-                    onSelectRow: E,
-                    searchState: S,
+                    onSelectRow: T,
+                    searchState: j,
                     onResetForNewMembers: p
                 }),
-                S !== x.po.SUCCESS_STILL_INDEXING &&
+                j !== x.po.SUCCESS_STILL_INDEXING &&
                     (0, i.jsx)(_.Z, {
                         guildId: n.id,
-                        onPageChange: o
+                        onPageChange: r
                     })
             ]
         })

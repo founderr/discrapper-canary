@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    a = n(442837),
-    r = n(481060),
+    r = n(442837),
+    a = n(481060),
     s = n(570140),
     o = n(384275),
     c = n(763762),
@@ -43,11 +43,11 @@ var i = n(200651),
 function U(e) {
     let { canManageRoles: t, channel: n } = e,
         l = t && (0, u.Yk)(n),
-        r = (0, a.e7)([_.ZP], () => null != n.guild_id && n === _.ZP.getDefaultChannel(n.guild_id), [n]);
+        a = (0, r.e7)([_.ZP], () => null != n.guild_id && n === _.ZP.getDefaultChannel(n.guild_id), [n]);
     if ((0, h.Z)(n.id)) return null;
     if (n.isForumPost()) return (0, i.jsx)(N.Z, { channel: n });
     if (C.Ec.has(n.type)) return (0, i.jsx)(L.Z, { channel: n });
-    else if (r) return (0, i.jsx)(R.Z, { channel: n });
+    else if (a) return (0, i.jsx)(R.Z, { channel: n });
     else if (l) return (0, i.jsx)(y.Z, { channel: n });
     return (0, i.jsx)(M.Z, { channel: n });
 }
@@ -56,16 +56,16 @@ function H(e) {
     let { channel: u, showingBanner: h } = e,
         C = (0, d.ZP)(u),
         { type: _ } = u,
-        N = (0, a.e7)([I.default], () => (u.isPrivate() ? I.default.getUser(u.getRecipientId()) : null)),
+        N = (0, r.e7)([I.default], () => (u.isPrivate() ? I.default.getUser(u.getRecipientId()) : null)),
         y = E.ZP.useUserTag(N),
-        { canManageRoles: M, canReadMessageHistory: L } = (0, a.cj)([v.Z], () => ({
+        { canManageRoles: M, canReadMessageHistory: L } = (0, r.cj)([v.Z], () => ({
             canManageRoles: v.Z.can(k.Plq.MANAGE_ROLES, u),
             canReadMessageHistory: v.Z.can(k.Plq.READ_MESSAGE_HISTORY, u)
         })),
-        R = (0, a.e7)([f.Z], () => (_ === k.d4z.DM ? f.Z.getMutualGuilds(u.getRecipientId()) : null), [u, _]),
+        R = (0, r.e7)([f.Z], () => (_ === k.d4z.DM ? f.Z.getMutualGuilds(u.getRecipientId()) : null), [u, _]),
         { systemDMRedesignEnabled: H } = m.Z.useExperiment({ location: 'bf1a4f_1' }, { autoTrackExposure: null !== (t = u.isSystemDM()) && void 0 !== t && t }),
         G = (0, c.Z)(null !== (n = null == N ? void 0 : N.id) && void 0 !== n ? n : k.lds),
-        { authorizedAppToken: F, authorizedAppsFetchState: V } = (0, a.cj)([x.Z], () => {
+        { authorizedAppToken: F, authorizedAppsFetchState: V } = (0, r.cj)([x.Z], () => {
             var e;
             return {
                 authorizedAppToken: null != G ? (null === (e = x.Z.getApps()) || void 0 === e ? void 0 : e.find((e) => e.application.id === G.id)) : void 0,
@@ -118,7 +118,7 @@ function H(e) {
                 user: N,
                 children: [
                     null != N &&
-                        (0, i.jsx)(r.Heading, {
+                        (0, i.jsx)(a.Heading, {
                             variant: 'heading-xl/medium',
                             className: B.marginBottom20,
                             children: y

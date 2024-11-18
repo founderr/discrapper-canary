@@ -1,11 +1,11 @@
 t.d(n, {
     n: function () {
-        return o;
+        return r;
     }
 });
 var i = t(192379),
     l = t(941028);
-function o(e) {
+function r(e) {
     i.useEffect(
         () => (
             l.k$(e),

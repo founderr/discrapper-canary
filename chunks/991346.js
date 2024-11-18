@@ -36,8 +36,8 @@ var i = n(192379),
     S = n(160913),
     T = n(725727),
     C = n(977156),
-    _ = n(921157),
-    E = n(237292),
+    E = n(921157),
+    _ = n(237292),
     I = n(314897),
     f = n(283595),
     N = n(663389),
@@ -112,7 +112,7 @@ function M() {
         U = (0, P.eA)({ location: 'settings' }),
         V = (0, m.Xo)({ location: 'settings' }),
         G = null !== (n = null === (e = A.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== n && n,
-        Y = (0, E.y0)({ location: 'settings' }),
+        Y = (0, _.y0)({ location: 'settings' }),
         H = (0, o.Q)(),
         z = (0, C.Zy)({ location: L.dr.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
         { enabled: W } = x.Z.useExperiment({ location: 'UserSettingsInventory' }, { autoTrackExposure: !0 }),
@@ -123,7 +123,7 @@ function M() {
         J = (0, v._p)({ location: 'settings-renderer-utils-web' }),
         { hypeSquadRemoved: $ } = u.Z.useExperiment({ location: 'settings' }),
         ee = null === (i = (0, g.Z)()) || void 0 === i || i,
-        et = (null === (t = (0, _.s)()) || void 0 === t ? void 0 : t.length) > 0;
+        et = (null === (t = (0, E.s)()) || void 0 === t ? void 0 : t.length) > 0;
     return (0, R.i)({
         unseenGiftCount: l,
         showPrepaidPaymentPastDueWarning: j,

@@ -20,8 +20,8 @@ var i = n(200651),
     S = n(474936),
     T = n(388032),
     C = n(291356),
-    _ = n(971436);
-let E = () => {
+    E = n(971436);
+let _ = () => {
         (0, d.nJ)(), (0, a.xf)();
     },
     I = () => {
@@ -53,7 +53,7 @@ let E = () => {
                                 children: [
                                     (0, i.jsx)(l.Button, {
                                         color: !n && t ? l.Button.Colors.PRIMARY : l.Button.Colors.BRAND,
-                                        onClick: () => E(),
+                                        onClick: () => _(),
                                         children: n ? T.intl.string(T.t.SKNnqq) : T.intl.string(T.t['hb/wEx'])
                                     }),
                                     t
@@ -66,7 +66,7 @@ let E = () => {
                                 ]
                             })
                     }),
-                    (0, i.jsx)(l.FormDivider, { className: _.marginTop20 })
+                    (0, i.jsx)(l.FormDivider, { className: E.marginTop20 })
                 ]
             })
         );

@@ -24,8 +24,8 @@ var i = n(200651),
     C = n(358221),
     v = n(823748),
     S = n(626421),
-    T = n(118379),
-    N = n(652515),
+    N = n(118379),
+    T = n(652515),
     A = n(544978),
     b = n(540059),
     x = n(724383),
@@ -110,13 +110,13 @@ let eg = 'resizable-sidebar-width',
         name: 'ChannelsAndRolesPage',
         renderLoader: e_
     }),
-    eT = (0, c.Un)({
+    eN = (0, c.Un)({
         createPromise: () => Promise.all([n.e('44156'), n.e('19878'), n.e('38359'), n.e('40942')]).then(n.bind(n, 599263)),
         webpackId: 599263,
         name: 'GuildOnboardingPage',
         renderLoader: e_
     }),
-    eN = (e) => {
+    eT = (e) => {
         let { match: t } = e,
             n = (0, u.e7)([X.Z, $.Z], () => {
                 let e = $.Z.getChannelId();
@@ -138,7 +138,7 @@ let eg = 'resizable-sidebar-width',
                             return;
                     }
             }),
-            d = (0, N.C4)(r, 'channel_renderer');
+            d = (0, T.C4)(r, 'channel_renderer');
         if (null != r && null != l && (0, eh.AB)(l))
             switch (l) {
                 case eh.oC.ROLE_SUBSCRIPTIONS:
@@ -164,7 +164,7 @@ let eg = 'resizable-sidebar-width',
                         selectedSection: em.l7.BROWSE
                     });
                 case eh.oC.GUILD_ONBOARDING:
-                    return (0, i.jsx)(eT, { guildId: r });
+                    return (0, i.jsx)(eN, { guildId: r });
                 case eh.oC.CUSTOMIZE_COMMUNITY:
                     return (0, i.jsx)(eS, {
                         guildId: r,
@@ -214,7 +214,7 @@ let eg = 'resizable-sidebar-width',
                 )
               : (0, i.jsx)(eo.Z, {});
     }),
-    eb = (e) => (0, i.jsx)(eN, { ...e }),
+    eb = (e) => (0, i.jsx)(eT, { ...e }),
     ex = () => (0, i.jsx)(x.Z, {}),
     eZ = (e) => {
         let { match: t } = e;
@@ -239,7 +239,7 @@ let eg = 'resizable-sidebar-width',
     eR = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         return function (t) {
-            return (0, i.jsx)(T.Z, {
+            return (0, i.jsx)(N.Z, {
                 isFullScreen: e,
                 ...t
             });
@@ -322,10 +322,10 @@ function eU(e) {
             let r = t - e;
             null === (n = v.current) || void 0 === n || n.style.setProperty('--custom-overdrag', ''.concat(1 + Math.min(Math.abs(r / 76), 0.25))), i && ek(76);
         }, []),
-        T = r.useCallback(() => {
+        N = r.useCallback(() => {
             document.body.classList.add(ep.dragging);
         }, []),
-        N = r.useCallback((e) => {
+        T = r.useCallback((e) => {
             var t;
             document.body.classList.remove(ep.dragging), document.body.classList.remove(ep.collapsing), null === (t = v.current) || void 0 === t || t.style.setProperty('--custom-overdrag', '0px'), h.K.set(eg, e);
         }, []),
@@ -334,8 +334,8 @@ function eU(e) {
             maxDimension: 416,
             resizableDomNodeRef: v,
             onElementResize: S,
-            onElementResizeStart: T,
-            onElementResizeEnd: N,
+            onElementResizeStart: N,
+            onElementResizeEnd: T,
             orientation: f.y.HORIZONTAL_RIGHT,
             throttleDuration: 0
         }),

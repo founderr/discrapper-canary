@@ -9,8 +9,8 @@ n.d(t, {
     n(653041);
 var i,
     l,
-    a = n(481060),
-    r = n(620662),
+    r = n(481060),
+    a = n(620662),
     s = n(933557),
     o = n(377171),
     c = n(699516),
@@ -24,12 +24,12 @@ function p(e) {
         t &&
             (v.push({
                 type: 'UPLOAD_A_FILE',
-                icon: a.FileUpIcon,
+                icon: r.FileUpIcon,
                 display: h.intl.string(h.t['d3+iYm'])
             }),
             v.push({
                 type: 'UPLOAD_TEXT_AS_FILE',
-                icon: a.FileUpIcon,
+                icon: r.FileUpIcon,
                 display: h.intl.string(h.t['G9s+EB'])
             })),
         p &&
@@ -37,7 +37,7 @@ function p(e) {
             _ !== u.IlC.POPOUT &&
             v.push({
                 type: 'CLIPS',
-                icon: a.ClipsIcon,
+                icon: r.ClipsIcon,
                 display: h.intl.string(h.t.o034cn),
                 badgeVal: g,
                 badgeColor: o.Z.BG_BRAND
@@ -45,35 +45,35 @@ function p(e) {
         n &&
             v.push({
                 type: 'CREATE_THREAD',
-                icon: a.ThreadPlusIcon,
+                icon: r.ThreadPlusIcon,
                 display: h.intl.string(h.t.rBIGBA)
             }),
         C &&
             v.push({
                 type: 'POLL',
-                icon: a.PollsIcon,
+                icon: r.PollsIcon,
                 display: h.intl.string(h.t.Flr51t)
             }),
         i &&
             l &&
             v.push({
                 type: 'SLASH_COMMAND',
-                icon: a.AppsIcon,
+                icon: r.AppsIcon,
                 display: h.intl.string(h.t.Bbvp6O)
             }),
         x &&
             v.push({
                 type: 'ACTIVITY',
-                icon: a.ActivitiesIcon,
+                icon: r.ActivitiesIcon,
                 display: h.intl.string(h.t['16Lfra'])
             }),
         f.forEach((e) => {
-            if (!(0, r.Z)(e, u.xjy.EMBEDDED))
+            if (!(0, a.Z)(e, u.xjy.EMBEDDED))
                 e.type === u.IIU.PLAYING &&
-                    (0, r.Z)(e, u.xjy.JOIN) &&
+                    (0, a.Z)(e, u.xjy.JOIN) &&
                     v.push({
                         type: 'INVITE_TO_GAME',
-                        icon: a.DpadIcon,
+                        icon: r.DpadIcon,
                         display: h.intl.formatToPlainString(h.t['KHLo+P'], {
                             channel: (0, s.F6)(m, d.default, c.Z, !0),
                             game: null != e ? e.name : ''
@@ -81,10 +81,10 @@ function p(e) {
                         activity: e
                     }),
                     e.type === u.IIU.LISTENING &&
-                        (0, r.Z)(e, u.xjy.SYNC) &&
+                        (0, a.Z)(e, u.xjy.SYNC) &&
                         v.push({
                             type: 'INVITE_TO_LISTEN',
-                            icon: a.UserPlayIcon,
+                            icon: r.UserPlayIcon,
                             display: h.intl.formatToPlainString(h.t.I479p6, {
                                 channel: (0, s.F6)(m, d.default, c.Z, !0),
                                 name: null != e ? e.name : ''
@@ -92,10 +92,10 @@ function p(e) {
                             activity: e
                         }),
                     e.type === u.IIU.WATCHING &&
-                        (0, r.Z)(e, u.xjy.SYNC) &&
+                        (0, a.Z)(e, u.xjy.SYNC) &&
                         v.push({
                             type: 'INVITE_TO_WATCH',
-                            icon: a.EyeIcon,
+                            icon: r.EyeIcon,
                             display: h.intl.formatToPlainString(h.t['EvCP/v'], {
                                 channel: (0, s.F6)(m, d.default, c.Z, !0),
                                 name: null != e ? e.name : ''

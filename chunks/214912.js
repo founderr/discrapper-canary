@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return I;
     }
 });
 var a = n(200651);
@@ -19,10 +19,10 @@ var i = n(120356),
     g = n(388032),
     b = n(470946),
     f = n(129512),
-    I = n(330065);
-function C(e) {
+    C = n(330065);
+function I(e) {
     let { guild: t, className: n, onClick: i } = e,
-        C = (0, l.ZP)(),
+        I = (0, l.ZP)(),
         x = new h.ZP({
             name: t.name,
             icon: t.icon
@@ -40,9 +40,9 @@ function C(e) {
                           case m.BRd.DARK:
                               return f;
                           case m.BRd.LIGHT:
-                              return I;
+                              return C;
                       }
-                  })(C),
+                  })(I),
         N = p.ZP.getGuildIconURL({
             id: t.id,
             icon: t.icon,

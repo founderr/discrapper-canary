@@ -6,7 +6,7 @@ n.d(t, {
         return u;
     },
     S1: function () {
-        return s;
+        return r;
     },
     TY: function () {
         return c;
@@ -21,7 +21,7 @@ n.d(t, {
         return p;
     },
     lO: function () {
-        return r;
+        return s;
     },
     sI: function () {
         return l;
@@ -40,10 +40,10 @@ function l(e) {
         roles: e
     });
 }
-function s() {
+function r() {
     i.Z.dispatch({ type: 'GUILD_SETTINGS_ROLES_INIT' });
 }
-function r(e, t, n) {
+function s(e, t, n) {
     i.Z.dispatch({
         type: 'GUILD_SETTINGS_ROLES_UPDATE_PERMISSIONS',
         id: e,
@@ -94,7 +94,7 @@ function p(e, t) {
         roleConnectionConfigurations: t
     });
 }
-async function I(e, t, n, l, s) {
+async function I(e, t, n, l, r) {
     i.Z.dispatch({ type: 'GUILD_SETTINGS_ROLES_SUBMITTING' });
     try {
         let i = async () => {
@@ -112,16 +112,16 @@ async function I(e, t, n, l, s) {
                 unicodeEmoji: n.unicodeEmoji
             }).then(i, i);
         };
-        if ((null != n && n.length > 0 ? await o.Z.batchRoleUpdate(e, n).then(i, i) : await i(), null != s && null != l))
+        if ((null != n && n.length > 0 ? await o.Z.batchRoleUpdate(e, n).then(i, i) : await i(), null != r && null != l))
             for await (let t of l) {
-                let n = s.get(t);
+                let n = r.get(t);
                 await (0, a.L_)(e, t, null != n ? n : []);
             }
     } catch (e) {
-        var r, c;
+        var s, c;
         i.Z.dispatch({
             type: 'GUILD_SETTINGS_ROLES_SAVE_FAIL',
-            message: null !== (c = null === (r = e.body) || void 0 === r ? void 0 : r.message) && void 0 !== c ? c : Object.values(e.body)[0]
+            message: null !== (c = null === (s = e.body) || void 0 === s ? void 0 : s.message) && void 0 !== c ? c : Object.values(e.body)[0]
         });
         return;
     }

@@ -19,8 +19,8 @@ var i = n(200651),
     C = n(44315),
     v = n(600164),
     S = n(167533),
-    T = n(925329),
-    N = n(707409),
+    N = n(925329),
+    T = n(707409),
     A = n(210887),
     b = n(283595),
     x = n(417363),
@@ -88,27 +88,27 @@ function B(e, t) {
 }
 let V = {
     [j.vxO.INSTALLING]: {
-        [N.J6.NONE]: (e, t, n, i) =>
+        [T.J6.NONE]: (e, t, n, i) =>
             D.intl.formatToPlainString(D.t.JfJt9f, {
                 percent: e,
                 progress: t,
                 total: n
             }),
-        [N.J6.SECONDS]: (e, t, n, i) =>
+        [T.J6.SECONDS]: (e, t, n, i) =>
             D.intl.formatToPlainString(D.t['1z3c6e'], {
                 percent: e,
                 progress: t,
                 total: n,
                 timeRemaining: i
             }),
-        [N.J6.MINUTES]: (e, t, n, i) =>
+        [T.J6.MINUTES]: (e, t, n, i) =>
             D.intl.formatToPlainString(D.t.PCX509, {
                 percent: e,
                 progress: t,
                 total: n,
                 timeRemaining: i
             }),
-        [N.J6.HOURS]: (e, t, n, i) =>
+        [T.J6.HOURS]: (e, t, n, i) =>
             D.intl.formatToPlainString(D.t['3VG9s7'], {
                 percent: e,
                 progress: t,
@@ -117,27 +117,27 @@ let V = {
             })
     },
     [j.vxO.UPDATING]: {
-        [N.J6.NONE]: (e, t, n, i) =>
+        [T.J6.NONE]: (e, t, n, i) =>
             D.intl.formatToPlainString(D.t.JsqXXF, {
                 percent: e,
                 progress: t,
                 total: n
             }),
-        [N.J6.SECONDS]: (e, t, n, i) =>
+        [T.J6.SECONDS]: (e, t, n, i) =>
             D.intl.formatToPlainString(D.t['3BvVeX'], {
                 percent: e,
                 progress: t,
                 total: n,
                 timeRemaining: i
             }),
-        [N.J6.MINUTES]: (e, t, n, i) =>
+        [T.J6.MINUTES]: (e, t, n, i) =>
             D.intl.formatToPlainString(D.t.rwULn5, {
                 percent: e,
                 progress: t,
                 total: n,
                 timeRemaining: i
             }),
-        [N.J6.HOURS]: (e, t, n, i) =>
+        [T.J6.HOURS]: (e, t, n, i) =>
             D.intl.formatToPlainString(D.t.adcitL, {
                 percent: e,
                 progress: t,
@@ -146,27 +146,27 @@ let V = {
             })
     },
     [j.vxO.REPAIRING]: {
-        [N.J6.NONE]: (e, t, n, i) =>
+        [T.J6.NONE]: (e, t, n, i) =>
             D.intl.formatToPlainString(D.t.JfJt9f, {
                 percent: e,
                 progress: t,
                 total: n
             }),
-        [N.J6.SECONDS]: (e, t, n, i) =>
+        [T.J6.SECONDS]: (e, t, n, i) =>
             D.intl.formatToPlainString(D.t['1z3c6e'], {
                 percent: e,
                 progress: t,
                 total: n,
                 timeRemaining: i
             }),
-        [N.J6.MINUTES]: (e, t, n, i) =>
+        [T.J6.MINUTES]: (e, t, n, i) =>
             D.intl.formatToPlainString(D.t.PCX509, {
                 percent: e,
                 progress: t,
                 total: n,
                 timeRemaining: i
             }),
-        [N.J6.HOURS]: (e, t, n, i) =>
+        [T.J6.HOURS]: (e, t, n, i) =>
             D.intl.formatToPlainString(D.t['3VG9s7'], {
                 percent: e,
                 progress: t,
@@ -178,7 +178,7 @@ let V = {
 function H(e, t, n, i, r) {
     let l = V[t],
         a = null != l ? Object.keys(l) : [],
-        { unit: s, time: o } = (0, N.CI)(null != e ? e / 60 : null, a);
+        { unit: s, time: o } = (0, T.CI)(null != e ? e / 60 : null, a);
     if (null != l && null != s) {
         let e = l[s];
         return null != e ? e(n, i, r, o) : null;
@@ -450,10 +450,10 @@ let q = () =>
                 (0, i.jsxs)(v.Z, {
                     align: v.Z.Align.CENTER,
                     children: [
-                        (0, i.jsx)(T.Z, {
+                        (0, i.jsx)(N.Z, {
                             game: e.application,
                             className: M.__invalid_gameIcon,
-                            size: T.Z.Sizes.SMALL
+                            size: N.Z.Sizes.SMALL
                         }),
                         (0, i.jsx)('div', {
                             className: M.nameCellText,

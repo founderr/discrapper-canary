@@ -1,7 +1,7 @@
 var i = n(200651),
     l = n(192379),
-    a = n(120356),
-    r = n.n(a),
+    r = n(120356),
+    a = n.n(r),
     s = n(399606),
     o = n(481060),
     c = n(287734),
@@ -22,17 +22,17 @@ var i = n(200651),
     Z = n(388032),
     N = n(709942);
 t.Z = (e) => {
-    let { hangStatusActivity: t, userId: a, channel: S, previewIsOpen: T } = e,
+    let { hangStatusActivity: t, userId: r, channel: S, previewIsOpen: T } = e,
         { enableHangStatus: j } = x.n.useExperiment({
             guildId: S.guild_id,
             location: 'HangStatusPopout'
         }),
         A = (0, s.e7)([u.default], () => u.default.getId()),
-        y = (0, s.e7)([f.default], () => f.default.getUser(a)),
+        y = (0, s.e7)([f.default], () => f.default.getUser(r)),
         P = (0, s.e7)([m.Z], () => m.Z.getChannelId() === S.id),
         M = (0, s.e7)([p.Z], () => p.Z.can(b.Plq.CONNECT, S)),
         L = (null == t ? void 0 : t.emoji) == null || (0, v.K)(t.emoji, S),
-        R = (0, s.e7)([h.ZP], () => (null != S.guild_id && null != y ? h.ZP.getMember(S.guild_id, a) : null)),
+        R = (0, s.e7)([h.ZP], () => (null != S.guild_id && null != y ? h.ZP.getMember(S.guild_id, r) : null)),
         k = l.useMemo(() => (null != y ? (0, d.SG)(void 0, R, y, { size: 40 }) : void 0), [R, y]);
     return (l.useEffect(() => {
         (0, C.UP)();
@@ -42,17 +42,17 @@ t.Z = (e) => {
             null != t &&
             T &&
             null != y &&
-            A !== a &&
+            A !== r &&
             g.default.track(b.rMx.VIEW_HANG_STATUS, {
                 source: 'HangStatusPopout',
                 guild_id: S.guild_id,
                 channel_id: S.id
             });
-    }, [j, t, T, y, A, a, S]),
+    }, [j, t, T, y, A, r, S]),
     j && null != y)
-        ? A === a
+        ? A === r
             ? (0, i.jsx)('div', {
-                  className: r()(N.popoutWrapper, { [N.mounted]: T }),
+                  className: a()(N.popoutWrapper, { [N.mounted]: T }),
                   children: (0, i.jsx)(E.y, {
                       currentStatus: t,
                       channel: S
@@ -61,7 +61,7 @@ t.Z = (e) => {
             : null == t
               ? null
               : (0, i.jsx)('div', {
-                    className: r()(N.popoutWrapper, { [N.mounted]: T }),
+                    className: a()(N.popoutWrapper, { [N.mounted]: T }),
                     children: (0, i.jsxs)('div', {
                         className: N.popout,
                         children: [

@@ -43,11 +43,11 @@ function u(e, n, t) {
             }
             h(null === (e = u.has_broadcast) || void 0 === e || e);
         }, [u]);
-    let N = (0, i.e7)([a.Z], () => (0, r.wg)(t, [a.Z]));
+    let j = (0, i.e7)([a.Z], () => (0, r.wg)(t, [a.Z]));
     return {
         broadcastInfo: u,
-        broadcastToDirectoryChannels: N && x,
+        broadcastToDirectoryChannels: j && x,
         setBroadcastToDirectoryChannels: h,
-        canEveryoneRoleViewEvent: N
+        canEveryoneRoleViewEvent: j
     };
 }

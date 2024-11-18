@@ -1,6 +1,6 @@
 n.d(t, {
     Ou: function () {
-        return g;
+        return p;
     },
     SR: function () {
         return i;
@@ -13,8 +13,8 @@ n.d(t, {
 var i,
     r,
     s = n(512722),
-    a = n.n(s),
-    l = n(493683),
+    l = n.n(s),
+    a = n(493683),
     o = n(904245),
     c = n(957730),
     u = n(592125),
@@ -23,12 +23,12 @@ var i,
 let h = async (e, t) => {
         if (null == t) throw Error('giftCode must be defined');
         if (null == e) throw Error('Recipient must be defined');
-        let n = await l.Z.openPrivateChannel(e.id).then((e) => {
+        let n = await a.Z.openPrivateChannel(e.id).then((e) => {
                 let t = u.Z.getChannel(e);
-                if ((a()(null != t, 'PrivateChannel is null'), null == t)) throw Error('Channel must be defined');
+                if ((l()(null != t, 'PrivateChannel is null'), null == t)) throw Error('Channel must be defined');
                 return t;
             }),
             i = (0, d.Nz)(t);
         return o.Z.sendMessage(n.id, c.ZP.parse(n, i), void 0, { isGiftLinkSentOnBehalfOfUser: !0 });
     },
-    g = (e) => {};
+    p = (e) => {};

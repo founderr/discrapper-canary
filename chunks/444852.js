@@ -93,22 +93,22 @@ class O extends o.Z {
         return this.analyticsContext.maxViewers;
     }
     updateStats(e) {
-        var t, n, r, a, s, o, l, u, c, d, f, _;
-        let p;
-        let h = !this.isOwner && (null === (t = this._goLiveQualityManager) || void 0 === t ? void 0 : t.getUserID()) != null;
-        let m = 'unknown',
-            g = null === (n = e.find((e) => e.connection === this._connection)) || void 0 === n ? void 0 : n.stats;
-        if (null != g && h) {
-            let e = g.transport.inboundBitrateEstimate;
-            null != e && e < 100000000 && (this._bandwidthSamples.push(e), this._bandwidthSamples.length > 10 && this._bandwidthSamples.shift(), 10 === this._bandwidthSamples.length && ((p = i().mean(this._bandwidthSamples)) > 1500000 ? (m = 'HQ') : p < 1500000 && (m = 'LQ')));
+        var t, n, r, a, s, o, l, u, c, d, f, _, p;
+        let h;
+        let g = !this.isOwner && (null === (t = this._goLiveQualityManager) || void 0 === t ? void 0 : t.getUserID()) != null;
+        let E = 'unknown',
+            v = null === (n = e.find((e) => e.connection === this._connection)) || void 0 === n ? void 0 : n.stats;
+        if (null != v && g) {
+            let e = v.transport.inboundBitrateEstimate;
+            null != e && e < 100000000 && (this._bandwidthSamples.push(e), this._bandwidthSamples.length > 10 && this._bandwidthSamples.shift(), 10 === this._bandwidthSamples.length && ((h = i().mean(this._bandwidthSamples)) > 1500000 ? (E = 'HQ') : h < 1500000 && (E = 'LQ')));
         }
-        let E = null !== (a = null === (r = this._goLiveQualityManager) || void 0 === r ? void 0 : r.isDowngraded()) && void 0 !== a && a;
-        if (('HQ' === m && E ? (this.logger.info('Attempting to upgrade to HQ simulcast stream, bandwidth estimate: '.concat(p)), null === (s = this._goLiveQualityManager) || void 0 === s || s.setGoLiveStreamDowngraded(!1)) : 'LQ' === m && !E && (this.logger.info('Attempting to downgrade to LQ simulcast stream, bandwidth estimate: '.concat(p)), null === (o = this._goLiveQualityManager) || void 0 === o || o.setGoLiveStreamDowngraded(!0)), h)) {
+        let b = null !== (a = null === (r = this._goLiveQualityManager) || void 0 === r ? void 0 : r.isDowngraded()) && void 0 !== a && a;
+        if (('HQ' === E && b ? (this.logger.info('Attempting to upgrade to HQ simulcast stream, bandwidth estimate: '.concat(h)), null === (s = this._goLiveQualityManager) || void 0 === s || s.setGoLiveStreamDowngraded(!1)) : 'LQ' === E && !b && (this.logger.info('Attempting to downgrade to LQ simulcast stream, bandwidth estimate: '.concat(h)), null === (o = this._goLiveQualityManager) || void 0 === o || o.setGoLiveStreamDowngraded(!0)), g)) {
             let e = !(null === (l = this._goLiveQualityManager) || void 0 === l ? void 0 : l.senderSupportsSimulcast()) || (null === (u = this._goLiveQualityManager) || void 0 === u ? void 0 : u.isDowngraded()) === !1;
             null === (c = this._videoQuality) || void 0 === c || c.setViewedSimulcastQuality(e);
-            let t = null !== (_ = null === (d = this._goLiveQualityManager) || void 0 === d ? void 0 : d.isOneToOneCall()) && void 0 !== _ && _,
-                n = 'LQ' !== m || !!t;
-            null === (f = this._videoQuality) || void 0 === f || f.setEligibleSimulcastQuality(n);
+            let t = null !== (p = null === (d = this._goLiveQualityManager) || void 0 === d ? void 0 : d.isOneToOneCall()) && void 0 !== p && p,
+                n = (!m.Z.goLiveSimulcastEnabled() || (null === (f = this._goLiveQualityManager) || void 0 === f ? void 0 : f.senderSupportsSimulcast())) && 'LQ' === E && !t;
+            null === (_ = this._videoQuality) || void 0 === _ || _.setEligibleSimulcastQuality(!n);
         }
     }
     _initializeEvents() {
