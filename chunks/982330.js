@@ -5,11 +5,8 @@ n.d(t, {
     Yu: function () {
         return a;
     },
-    cS: function () {
-        return o;
-    },
     dP: function () {
-        return l;
+        return o;
     }
 });
 var r = n(818083),
@@ -47,9 +44,5 @@ function s(e) {
     return t;
 }
 function o(e) {
-    let { mediaViewerAffordanceEnabled: t } = a.getCurrentConfig({ location: e }, { autoTrackExposure: !1 });
-    return t;
-}
-function l(e) {
     return a.useExperiment({ location: e }, { autoTrackExposure: !1 });
 }
