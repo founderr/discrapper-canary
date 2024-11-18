@@ -1,24 +1,19 @@
 n.d(t, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var i = n(200651),
     l = n(192379),
     r = n(70097),
-    a = n(720924);
-function o(e) {
+    a = n(955843),
+    o = n(720924);
+function s(e) {
     let { children: t, channel: n } = e,
-        o = (0, l.useRef)(null),
-        s = (0, l.useRef)(!0),
-        c = n.hdStreamingUntil;
-    return ((0, l.useEffect)(() => {
-        if (s.current) {
-            s.current = !1;
-            return;
-        }
-        if (null != c && new Date(c) < new Date() && null != o.current) {
-            let e = o.current;
+        s = (0, l.useRef)(null);
+    return ((0, a.J)(n, () => {
+        if (null != s.current) {
+            let e = s.current;
             e.play();
             let t = setTimeout(() => {
                 e.pause();
@@ -27,22 +22,22 @@ function o(e) {
                 clearTimeout(t);
             };
         }
-    }, [c]),
+    }),
     n.isHDStreamSplashed)
         ? (0, i.jsxs)('div', {
-              className: a.container,
+              className: o.container,
               onMouseEnter: () => {
-                  null != o.current && o.current.play();
+                  null != s.current && s.current.play();
               },
               onMouseLeave: () => {
-                  null != o.current && o.current.pause();
+                  null != s.current && s.current.pause();
               },
               children: [
                   (0, i.jsx)('div', {
-                      className: a.videoContainer,
+                      className: o.videoContainer,
                       children: (0, i.jsx)(r.Z, {
-                          ref: o,
-                          className: a.video,
+                          ref: s,
+                          className: o.video,
                           muted: !0,
                           loop: !0,
                           preload: 'auto',
@@ -53,7 +48,7 @@ function o(e) {
                       })
                   }),
                   (0, i.jsx)('div', {
-                      className: a.content,
+                      className: o.content,
                       children: t
                   })
               ]

@@ -1,70 +1,97 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return x;
     }
 }),
-    n(47120);
+    n(47120),
+    n(653041);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
     a = n.n(r),
-    s = n(481060),
-    o = n(70097),
-    c = n(518950),
-    d = n(594174),
-    u = n(997323),
-    h = n(388032),
-    p = n(44229);
-function m(e) {
+    s = n(399606),
+    o = n(704215),
+    c = n(481060),
+    d = n(70097),
+    u = n(243778),
+    h = n(518950),
+    p = n(594174),
+    m = n(997323),
+    f = n(955843),
+    g = n(388032),
+    C = n(44229);
+function x(e) {
     let { channel: t } = e,
-        n = (0, l.useRef)(!0),
-        r = t.hdStreamingUntil,
-        a = d.default.getUser(t.hdStreamingBuyerId),
-        [s, o] = (0, l.useState)(!1);
-    return ((0, l.useEffect)(() => {
-        if (n.current) {
-            n.current = !1;
-            return;
-        }
-        null != r && new Date(r) > new Date() && o(!0);
-    }, [r]),
-    s && null != a)
-        ? (0, i.jsx)(f, {
-              buyer: a,
+        r = (0, s.e7)([p.default], () => p.default.getUser(t.hdStreamingBuyerId), [t.hdStreamingBuyerId]),
+        [a, d] = (0, l.useState)(!1);
+    return ((0, f.Uu)(t),
+    (function (e) {
+        let t = (0, s.e7)([p.default], () => p.default.getCurrentUser()),
+            r = [];
+        e.hdStreamingBuyerId === (null == t ? void 0 : t.id) && !e.isHDStreamSplashed && r.push(o.z.HD_STREAMING_POTION_MODAL_UPSELL);
+        let [a, d] = (0, u.US)(r);
+        (0, l.useEffect)(() => {
+            if (a === o.z.HD_STREAMING_POTION_MODAL_UPSELL) {
+                var t;
+                (t = d),
+                    (0, c.openModalLazy)(async () => {
+                        let { default: l } = await n.e('88452').then(n.bind(n, 552394));
+                        return (n) =>
+                            (0, i.jsx)(l, {
+                                markAsDismissed: t,
+                                channel: e,
+                                ...n
+                            });
+                    });
+            }
+        }, [a, d, e]);
+    })(t),
+    (0, f.J)(t, () => {
+        d(!0);
+    }),
+    a && null != r)
+        ? (0, i.jsx)(_, {
+              buyer: r,
               onEnd: () => {
-                  o(!1), (0, u.ag)();
+                  d(!1), (0, m.ag)();
               }
           })
         : null;
 }
-function f(e) {
+function _(e) {
     let { onEnd: t, buyer: n } = e,
         r = (0, l.useRef)(null),
-        [d, u] = (0, l.useState)(!1);
+        s = (0, l.useRef)(null),
+        [o, u] = (0, l.useState)(!1);
     (0, l.useEffect)(() => {
         let e = r.current;
         if (null == e) return;
-        let t = () => {
-            e.currentTime >= 23 && !d && u(!0);
+        let n = () => {
+            e.currentTime >= 23 && !o && u(!0);
         };
-        return (
-            e.addEventListener('timeupdate', t),
-            () => {
-                e.removeEventListener('timeupdate', t);
-            }
-        );
+        e.addEventListener('timeupdate', n);
+        let i = setInterval(() => {
+            e.currentTime >= e.duration && t();
+        }, 500);
+        return () => {
+            e.removeEventListener('timeupdate', n), clearInterval(i);
+        };
     });
-    let { avatarSrc: m, eventHandlers: f } = (0, c.Z)({
+    let [p, m] = (0, l.useState)(!1);
+    (0, l.useEffect)(() => {
+        if (null != s.current) m(s.current.offsetWidth > 245);
+    }, []);
+    let { avatarSrc: f, eventHandlers: x } = (0, h.Z)({
         user: n,
-        size: s.AvatarSizes.SIZE_32,
+        size: c.AvatarSizes.SIZE_32,
         animateOnHover: !0
     });
     return (0, i.jsxs)('div', {
-        className: p.trigger,
+        className: C.trigger,
         children: [
-            (0, i.jsx)(o.Z, {
+            (0, i.jsx)(d.Z, {
                 ref: r,
-                className: p.video,
+                className: C.video,
                 autoPlay: !0,
                 onEnded: t,
                 children: (0, i.jsx)('source', {
@@ -73,25 +100,27 @@ function f(e) {
                 })
             }),
             (0, i.jsxs)('div', {
-                className: a()(p.content, { [p.masked]: d }),
+                ref: s,
+                className: a()(C.content, { [C.masked]: o }),
                 children: [
-                    (0, i.jsx)(s.Avatar, {
-                        src: m,
+                    (0, i.jsx)(c.Avatar, {
+                        src: f,
                         'aria-label': n.username,
-                        size: s.AvatarSizes.SIZE_32,
-                        ...f
+                        size: c.AvatarSizes.SIZE_32,
+                        ...x
                     }),
                     (0, i.jsxs)('div', {
-                        className: p.text,
+                        className: C.text,
                         children: [
-                            (0, i.jsx)(s.Text, {
+                            !p &&
+                                (0, i.jsx)(c.Text, {
+                                    variant: 'text-sm/normal',
+                                    children: g.intl.string(g.t['i/nliI'])
+                                }),
+                            (0, i.jsx)(c.Text, {
+                                className: C.premium,
                                 variant: 'text-sm/normal',
-                                children: h.intl.string(h.t['i/nliI'])
-                            }),
-                            (0, i.jsx)(s.Text, {
-                                className: p.premium,
-                                variant: 'text-sm/normal',
-                                children: h.intl.string(h.t['Fh/mk5'])
+                                children: g.intl.string(g.t['Fh/mk5'])
                             })
                         ]
                     })
