@@ -31,7 +31,8 @@ t.Z = function () {
     }, []),
         r.useEffect(() => {
             a.g5();
-        }, []);
+        }, []),
+        r.useEffect(() => g.aQ.setState({ lastItem: S }), [S]);
     let P = null != b,
         R = (null == S ? void 0 : S.type) === g.m_.SEARCH,
         { searchQuery: j, onSearchTextChange: D, onClearSearch: M, onSearchSubmit: w } = (0, m.M)({ initialQuery: null != Z ? Z : '' }),
@@ -76,7 +77,7 @@ t.Z = function () {
                                 variant: 'heading-lg/semibold',
                                 color: 'header-primary',
                                 className: N.alternateHeader,
-                                children: T.intl.formatToPlainString(T.t.zHdzqa, { query: Z })
+                                children: T.intl.formatToPlainString(T.t.zHdzqa, { query: null != Z ? Z : '' })
                             })
                           : (0, i.jsx)(d.Z, {
                                 tabs: L,
