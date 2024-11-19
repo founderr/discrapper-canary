@@ -1,74 +1,78 @@
-i.d(n, {
+t.d(n, {
     Z: function () {
-        return y;
+        return w;
     }
 }),
-    i(47120);
-var t = i(200651),
-    a = i(192379),
-    l = i(120356),
-    r = i.n(l),
-    d = i(442837),
-    o = i(481060),
-    c = i(753972),
-    u = i(812206),
-    s = i(665149),
-    v = i(522474),
-    m = i(788983),
-    f = i(268353),
-    h = i(592125),
-    p = i(271383),
-    x = i(594174),
-    C = i(51144),
-    I = i(228488),
-    Z = i(566620),
-    _ = i(317381),
-    j = i(574952),
-    g = i(884338),
-    A = i(701488),
-    P = i(981631),
-    S = i(388032),
-    N = i(713622);
-let T = g.u.SIZE_24;
-function y(e) {
-    let { applicationId: n, channelId: i } = e,
-        l = (0, d.e7)([u.Z], () => u.Z.getApplication(n)),
-        y = (0, d.e7)([_.ZP], () => _.ZP.getSelfEmbeddedActivities().get(n)),
-        b = (0, d.e7)([h.Z], () => h.Z.getChannel(i)),
-        k = (0, d.Wu)(
-            [p.ZP],
+    t(47120);
+var i = t(200651),
+    a = t(192379),
+    r = t(120356),
+    o = t.n(r),
+    l = t(442837),
+    c = t(481060),
+    d = t(753972),
+    u = t(812206),
+    s = t(665149),
+    p = t(726721),
+    v = t(522474),
+    m = t(788983),
+    f = t(390322),
+    h = t(961048),
+    x = t(268353),
+    C = t(592125),
+    Z = t(271383),
+    _ = t(594174),
+    I = t(51144),
+    j = t(228488),
+    g = t(566620),
+    A = t(317381),
+    P = t(574952),
+    S = t(884338),
+    N = t(473179),
+    b = t(701488),
+    y = t(981631),
+    T = t(388032),
+    E = t(713622);
+let k = S.u.SIZE_24;
+function w(e) {
+    let { applicationId: n, channelId: t } = e,
+        r = (0, l.e7)([u.Z], () => u.Z.getApplication(n)),
+        w = (0, l.e7)([A.ZP], () => A.ZP.getSelfEmbeddedActivities().get(n)),
+        R = (0, l.e7)([C.Z], () => C.Z.getChannel(t)),
+        L = (0, l.Wu)(
+            [Z.ZP],
             () => {
                 var e;
-                return null == b || null == y ? [] : Array.from(null !== (e = y.userIds) && void 0 !== e ? e : []).map((e) => p.ZP.getMember(b.guild_id, e));
+                return null == R || null == w ? [] : Array.from(null !== (e = w.userIds) && void 0 !== e ? e : []).map((e) => Z.ZP.getMember(R.guild_id, e));
             },
-            [y, b]
+            [w, R]
         ),
-        R = a.useMemo(() => {
+        M = a.useMemo(() => {
             let e = new Map();
             return (
-                k.forEach((n) => {
+                L.forEach((n) => {
                     null != n && void 0 !== n && e.set(n.userId, n);
                 }),
                 e
             );
-        }, [k]),
-        w = a.useCallback(
+        }, [L]),
+        O = a.useCallback(
             (e, n) => {
-                var i;
+                var t;
                 if (null == e || void 0 === e || void 0 === n) return null;
-                let a = R.get(e.id),
-                    l = null !== (i = null == a ? void 0 : a.nick) && void 0 !== i ? i : C.ZP.getName(e);
-                return (0, t.jsx)(
-                    o.TooltipContainer,
+                let a = M.get(e.id),
+                    r = null !== (t = null == a ? void 0 : a.nick) && void 0 !== t ? t : I.ZP.getName(e);
+                return (0, i.jsx)(
+                    c.TooltipContainer,
                     {
-                        text: l,
+                        text: r,
                         position: 'bottom',
-                        children: (0, t.jsx)(
+                        children: (0, i.jsx)(
                             'img',
                             {
-                                src: e.getAvatarURL(n.guild_id, T),
-                                alt: l,
-                                className: N.avatar
+                                src: e.getAvatarURL(n.guild_id, k),
+                                alt: r,
+                                className: E.avatar
                             },
                             e.id
                         )
@@ -76,87 +80,115 @@ function y(e) {
                     e.id
                 );
             },
-            [R]
+            [M]
         ),
-        E = null == y ? void 0 : y.userIds,
-        L = (0, d.Wu)(
-            [x.default],
+        U = null == w ? void 0 : w.userIds,
+        B = (0, l.Wu)(
+            [_.default],
             () =>
-                Array.from(null != E ? E : [])
-                    .map((e) => x.default.getUser(e))
+                Array.from(null != U ? U : [])
+                    .map((e) => _.default.getUser(e))
                     .filter((e) => null != e && void 0 !== e),
-            [E]
+            [U]
         ),
-        O = a.useCallback(() => {
-            (0, j.Z)().leaveActivity({
-                channelId: i,
+        K = a.useCallback(() => {
+            (0, P.Z)().leaveActivity({
+                channelId: t,
                 applicationId: n
             }),
-                (0, m.xv)(P.KJ3.ACTIVITY_POPOUT);
-        }, [i, n]),
-        U = (0, d.e7)([_.ZP], () => _.ZP.getActivityPopoutWindowLayout()),
-        M = (0, d.e7)([v.Z], () => v.Z.getWindow(P.KJ3.ACTIVITY_POPOUT)),
-        B = a.useCallback(() => (null == M ? void 0 : M.document.getElementById('app-mount')), [M]),
-        K = a.useCallback(() => {
-            let e = B();
-            null != e && (U !== A.GM.FULL_SCREEN ? ((0, Z.Hp)(A.GM.FULL_SCREEN), (0, I.Dj)(e)) : ((0, Z.Hp)(A.GM.NORMAL), (0, I.Pr)(e, null == M ? void 0 : M.document)));
-        }, [U, B, M]);
-    return null == l || null == i || null == b
+                (0, m.xv)(y.KJ3.ACTIVITY_POPOUT);
+        }, [t, n]),
+        H = (0, l.e7)([A.ZP], () => A.ZP.getActivityPopoutWindowLayout()),
+        W = (0, l.e7)([v.Z], () => v.Z.getWindow(y.KJ3.ACTIVITY_POPOUT)),
+        F = a.useCallback(() => (null == W ? void 0 : W.document.getElementById('app-mount')), [W]),
+        J = a.useCallback(() => {
+            let e = F();
+            null != e && (H !== b.GM.FULL_SCREEN ? ((0, g.Hp)(b.GM.FULL_SCREEN), (0, j.Dj)(e)) : ((0, g.Hp)(b.GM.NORMAL), (0, j.Pr)(e, null == W ? void 0 : W.document)));
+        }, [H, F, W]),
+        Y = p.Z.useExperiment({ location: 'activity_popout_overflow_menu' }, { autoTrackExposure: !1 }).enabled;
+    return null == r || null == t || null == R
         ? null
-        : (0, t.jsx)(o.ThemeProvider, {
-              theme: P.BRd.DARK,
+        : (0, i.jsx)(c.ThemeProvider, {
+              theme: y.BRd.DARK,
               children: (e) =>
-                  (0, t.jsxs)('div', {
-                      className: r()(N.container, e),
+                  (0, i.jsxs)('div', {
+                      className: o()(E.container, e),
                       children: [
-                          (0, t.jsxs)('div', {
-                              className: r()(N.headerSection, N.headerSectionLeft),
+                          (0, i.jsxs)('div', {
+                              className: o()(E.headerSection, E.headerSectionLeft),
                               children: [
-                                  (0, t.jsx)('div', {
-                                      className: N.leaveIconContainer,
-                                      children: (0, t.jsx)(s.ZP.Icon, {
-                                          onClick: O,
-                                          icon: o.XSmallIcon,
-                                          tooltip: S.intl.string(S.t['R/FK4O'])
+                                  (0, i.jsx)('div', {
+                                      className: E.leaveIconContainer,
+                                      children: (0, i.jsx)(s.ZP.Icon, {
+                                          onClick: K,
+                                          icon: c.XSmallIcon,
+                                          tooltip: T.intl.string(T.t['R/FK4O'])
                                       })
                                   }),
-                                  (0, t.jsx)(c.Z, {
-                                      application: l,
+                                  (0, i.jsx)(d.Z, {
+                                      application: r,
                                       size: 24,
-                                      className: N.appIcon
+                                      className: E.appIcon
                                   }),
-                                  (0, t.jsx)(o.Text, {
+                                  (0, i.jsx)(c.Text, {
                                       variant: 'text-md/normal',
                                       color: 'header-primary',
-                                      children: l.name
+                                      children: r.name
                                   }),
-                                  (0, t.jsx)('div', {
-                                      className: N.dotSpacer,
-                                      children: (0, t.jsx)(o.Text, {
+                                  (0, i.jsx)('div', {
+                                      className: E.dotSpacer,
+                                      children: (0, i.jsx)(c.Text, {
                                           variant: 'text-md/normal',
                                           color: 'text-muted',
                                           children: '.'
                                       })
                                   }),
-                                  (0, t.jsx)(g.Z, {
+                                  (0, i.jsx)(S.Z, {
                                       renderIcon: !1,
-                                      users: L,
-                                      size: T,
+                                      users: B,
+                                      size: k,
                                       max: 6,
-                                      className: N.userAvatars,
-                                      renderUser: (e) => w(e, b)
+                                      className: E.userAvatars,
+                                      renderUser: (e) => O(e, R)
                                   })
                               ]
                           }),
-                          (0, t.jsx)('div', {
-                              className: r()(N.headerSection, N.headerSectionRight),
-                              children: (0, t.jsx)('div', {
-                                  className: N.fullScreenButtonContainer,
-                                  children: (0, t.jsx)(f.Z, {
-                                      onClick: K,
-                                      guestWindow: M,
-                                      node: B()
-                                  })
+                          (0, i.jsx)('div', {
+                              className: o()(E.headerSection, E.headerSectionRight),
+                              children: (0, i.jsxs)('div', {
+                                  className: E.actionButtonsContainer,
+                                  children: [
+                                      (0, i.jsx)(x.Z, {
+                                          onClick: J,
+                                          guestWindow: W,
+                                          node: F()
+                                      }),
+                                      Y &&
+                                          (0, i.jsx)(
+                                              c.Popout,
+                                              {
+                                                  position: 'bottom',
+                                                  renderPopout: (e) => {
+                                                      let { closePopout: n } = e;
+                                                      return (0, i.jsx)(f.Z, {
+                                                          children: (0, i.jsx)(N.Z, {
+                                                              application: r,
+                                                              onClose: n
+                                                          })
+                                                      });
+                                                  },
+                                                  children: (e, n) => {
+                                                      let { isShown: t } = n;
+                                                      return (0, a.createElement)(h.Z, {
+                                                          ...e,
+                                                          key: 'more-options',
+                                                          isActive: t
+                                                      });
+                                                  }
+                                              },
+                                              'more-options-popout'
+                                          )
+                                  ]
                               })
                           })
                       ]
