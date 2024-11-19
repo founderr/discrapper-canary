@@ -13,6 +13,6 @@ var i = n(192379),
 function d() {
     let e = (0, a.w)(o.a7),
         t = (0, l.e7)([C.Z], () => C.Z.getReferrer(null == e ? void 0 : e.trial_id)),
-        n = (0, l.e7)([r.Z], () => null == t || r.Z.isBlocked(t.id));
+        n = (0, l.e7)([r.Z], () => null == t || r.Z.isBlockedOrIgnored(t.id));
     return i.useMemo(() => (n || null == t ? null : new s.Z(t)), [t, n]);
 }

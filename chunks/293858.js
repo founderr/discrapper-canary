@@ -21,10 +21,10 @@ function f(e) {
     var t, n;
     let s,
         { handleClose: f, planGroup: j, onSubscriptionConfirmation: L, renderPurchaseConfirmation: m, postSuccessGuild: g, followupSKUInfo: E, continueSession: S } = e,
-        { activeSubscription: y, paymentSources: M, paymentSourceId: Z, selectedPlan: P, selectedSkuId: I, step: T, updatedSubscription: v, startingPremiumSubscriptionPlanIdRef: A } = (0, p.usePaymentContext)(),
+        { activeSubscription: y, paymentSources: M, paymentSourceId: Z, selectedPlan: I, selectedSkuId: P, step: T, updatedSubscription: v, startingPremiumSubscriptionPlanIdRef: A } = (0, p.usePaymentContext)(),
         { isGift: U, giftRecipient: N, giftCode: k, hasSentMessage: b, isSendingMessage: w, sendGiftMessage: O } = (0, c.wD)(),
         H = (0, a.Z2)();
-    r()(null != P, 'Expected plan to selected'), r()(null != I, 'Expected selectedSkuId'), r()(null != T, 'Step should be set');
+    r()(null != I, 'Expected plan to selected'), r()(null != P, 'Expected selectedSkuId'), r()(null != T, 'Step should be set');
     let R = l.useCallback(() => {
         f(), null == L || L();
     }, [f, L]);
@@ -34,18 +34,18 @@ function f(e) {
         }, [O, U, N, k, b, w, L]),
         (s =
             null != m
-                ? m(P, R, v)
+                ? m(I, R, v)
                 : S
                   ? (0, i.jsx)(o.VY, {})
                   : U
                     ? (0, i.jsx)(o.TB, {
-                          planId: P.id,
+                          planId: I.id,
                           onClose: R,
                           halloweenDecoPurchase: H
                       })
-                    : A.current === P.id
+                    : A.current === I.id
                       ? (0, i.jsx)(o.ZP, {
-                            planId: P.id,
+                            planId: I.id,
                             postSuccessGuild: g,
                             onClose: R,
                             paymentSourceType: null === (t = M[null != Z ? Z : '']) || void 0 === t ? void 0 : t.type
@@ -53,9 +53,9 @@ function f(e) {
                       : (0, i.jsx)(o.ZP, {
                             followupSKUInfo: E,
                             startingPremiumSubscriptionPlanId: A.current,
-                            planId: P.id,
+                            planId: I.id,
                             onClose: R,
-                            isDowngrade: null != y && (0, u.GY)(y, P.id, j),
+                            isDowngrade: null != y && (0, u.GY)(y, I.id, j),
                             paymentSourceType: null === (n = M[null != Z ? Z : '']) || void 0 === n ? void 0 : n.type
                         })),
         (0, i.jsxs)(i.Fragment, {

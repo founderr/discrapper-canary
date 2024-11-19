@@ -139,8 +139,8 @@ function S(e) {
     return (
         i.useEffect(() => {
             var e, t;
-            u ? null === (e = h.current) || void 0 === e || e.focus() : null === (t = h.current) || void 0 === t || t.blur();
-        }, [u]),
+            u ? null === (e = h.current) || void 0 === e || e.focus() : null === (t = h.current) || void 0 === t || t.blur(), l(u);
+        }, [u, l]),
         (0, r.jsx)(o.Popout, {
             renderPopout: (e) =>
                 (0, r.jsx)(o.Clickable, {

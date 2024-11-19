@@ -28,8 +28,8 @@ var i = n(200651),
     y = n(669079),
     M = n(63063),
     Z = n(74538),
-    P = n(987209),
-    I = n(563132),
+    I = n(987209),
+    P = n(563132),
     T = n(409813),
     v = n(51499),
     A = n(456251),
@@ -43,8 +43,8 @@ var i = n(200651),
 function R(e) {
     var t, n, s;
     let { handleStepChange: R, initialPlanId: B, subscriptionTier: F, trialId: G, referralTrialOfferId: W, handleClose: Y } = e,
-        { activeSubscription: D, hasFetchedSubscriptions: V, paymentSourceId: K, paymentSources: X, selectedSkuId: Q, selectedPlan: q, step: z, defaultPlanId: J, priceOptions: $, isPremium: ee } = (0, I.usePaymentContext)(),
-        { isGift: et, giftRecipient: en, giftMessage: ei } = (0, P.wD)(),
+        { activeSubscription: D, hasFetchedSubscriptions: V, paymentSourceId: K, paymentSources: X, selectedSkuId: Q, selectedPlan: q, step: z, defaultPlanId: J, priceOptions: $, isPremium: ee } = (0, P.usePaymentContext)(),
+        { isGift: et, giftRecipient: en, giftMessage: ei } = (0, I.wD)(),
         el = null != K ? X[K] : null,
         { newPlans: es } = u.ZP.useExperiment({ location: 'd17fd6_3' }, { autoTrackExposure: !1 }),
         er = (0, C.e7)([E.default], () => E.default.getCurrentUser()),
@@ -106,11 +106,11 @@ function R(e) {
     let ey = null !== (s = null == eE ? void 0 : eE.message) && void 0 !== s ? s : O.intl.string(O.t.R0RpRU),
         eM = ep && null == eE,
         eZ = ep && null != eE,
-        eP = eM && null == D && !!ep && (null == eg ? void 0 : eg.subscriptionPeriodEnd) == null,
-        { enabled: eI } = p._.useExperiment({ location: 'PremiumPaymentPlanSelectStep' }, { autoTrackExposure: !1 }),
-        eT = !et && (null == ef ? void 0 : ef.skuId) === w.Si.TIER_2 && (null == ea ? void 0 : ea.referrer_id) != null && eI,
+        eI = eM && null == D && !!ep && (null == eg ? void 0 : eg.subscriptionPeriodEnd) == null,
+        { enabled: eP } = p._.useExperiment({ location: 'PremiumPaymentPlanSelectStep' }, { autoTrackExposure: !1 }),
+        eT = !et && (null == ef ? void 0 : ef.skuId) === w.Si.TIER_2 && (null == ea ? void 0 : ea.referrer_id) != null && eP,
         ev = null;
-    return ((ev = eT ? (0, i.jsx)(m.Z, {}) : (0, i.jsx)(L.Z, {})), eP)
+    return ((ev = eT ? (0, i.jsx)(m.Z, {}) : (0, i.jsx)(L.Z, {})), eI)
         ? (0, i.jsx)(A.Z, {})
         : (r()(null != z, 'Step should be set'),
           r()(e_.length > 0, 'Premium plan options should be set'),

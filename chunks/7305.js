@@ -36,8 +36,8 @@ var i = n(200651),
     y = n(846464),
     M = n(184160),
     Z = n(48175),
-    P = n(981631),
-    I = n(474936),
+    I = n(981631),
+    P = n(474936),
     T = n(388032);
 let v = [_.h8.PLAN_SELECT, _.h8.ADD_PAYMENT_STEPS, _.h8.REVIEW, _.h8.CONFIRM];
 function A(e) {
@@ -54,7 +54,7 @@ function A(e) {
         analyticsLocation: t,
         analyticsObject: n,
         analyticsSourceLocation: s,
-        analyticsSubscriptionType: P.NYc.PREMIUM,
+        analyticsSubscriptionType: I.NYc.PREMIUM,
         onComplete: a,
         transitionState: u,
         initialPlanId: f,
@@ -65,7 +65,7 @@ function A(e) {
         isGift: B,
         trialFooterMessageOverride: g,
         reviewWarningMessage: E,
-        planGroup: I.Y1,
+        planGroup: P.Y1,
         openInvoiceId: S,
         onSubscriptionConfirmation: y,
         renderPurchaseConfirmation: M,
@@ -177,14 +177,14 @@ function b(e) {
     let t = (0, s.e7)([u.ZP], () => u.ZP.getPremiumTypeSubscription()),
         { analyticsLocations: n } = (0, o.ZP)(e.analyticsLocations, a.Z.PREMIUM_PAYMENT_MODAL),
         { subscriptionTier: l, isGift: r, giftRecipient: C, giftMessage: d, giftStyle: c, giftingOrigin: _, loadId: h, defaultPlanId: f, referralCode: j, repeatPurchase: L } = e;
-    if (null != l && !Object.values(I.Si).includes(l)) throw Error('subscriptionTier must be a premium subscription');
+    if (null != l && !Object.values(P.Si).includes(l)) throw Error('subscriptionTier must be a premium subscription');
     return (0, i.jsx)(o.Gt, {
         value: n,
         children: (0, i.jsx)(x.PaymentContextProvider, {
             loadId: h,
             activeSubscription: null != e.subscription ? e.subscription : t,
             stepConfigs: k,
-            skuIDs: [...I.YQ],
+            skuIDs: [...P.YQ],
             isGift: r,
             defaultPlanId: f,
             referralCode: j,
