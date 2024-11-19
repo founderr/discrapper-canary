@@ -12,13 +12,16 @@ n.d(t, {
         return C;
     },
     T6: function () {
-        return S;
+        return T;
+    },
+    Z1: function () {
+        return w;
     },
     aj: function () {
         return N;
     },
     bE: function () {
-        return M;
+        return P;
     },
     fy: function () {
         return g.fy;
@@ -26,16 +29,16 @@ n.d(t, {
     hW: function () {
         return y;
     },
-    m0: function () {
-        return x;
-    },
     nm: function () {
         return O;
     },
     sr: function () {
-        return w;
+        return M;
     },
     w9: function () {
+        return x;
+    },
+    z2: function () {
         return L;
     }
 }),
@@ -82,7 +85,7 @@ function v(e, t, n) {
 }
 let b = 'UserSettingsProtoLastWriteTimes',
     I = Date.now();
-function S() {}
+function T() {}
 d.Z.subscribe('CONNECTION_OPEN', () => {
     Date.now();
 }),
@@ -90,7 +93,7 @@ d.Z.subscribe('CONNECTION_OPEN', () => {
         Date.now();
     }),
     'undefined' != typeof document && (document.addEventListener('mousedown', () => {}), document.addEventListener('keydown', () => {}));
-class T {
+class S {
     getEditInfo() {
         return h.Z.getFullState()[this.type];
     }
@@ -313,8 +316,8 @@ class T {
             (this.logger = new a.Yd(this.ProtoClass.typeName));
     }
 }
-let y = new T(u.o8, g.yP.PRELOADED_USER_SETTINGS),
-    A = new T(l.ji, g.yP.FRECENCY_AND_FAVORITES_SETTINGS),
+let y = new S(u.o8, g.yP.PRELOADED_USER_SETTINGS),
+    A = new S(l.ji, g.yP.FRECENCY_AND_FAVORITES_SETTINGS),
     N = {
         [g.yP.PRELOADED_USER_SETTINGS]: y,
         [g.yP.FRECENCY_AND_FAVORITES_SETTINGS]: A
@@ -353,13 +356,27 @@ function L(e) {
     return y.updateAsync(
         'userContent',
         (t) => {
+            null == t.recurringDismissibleContentStates[e]
+                ? (t.recurringDismissibleContentStates[e] = {
+                      lastDismissedVersion: 0,
+                      lastDismissedAtMs: Date.now().toString()
+                  })
+                : (t.recurringDismissibleContentStates[e].lastDismissedAtMs = Date.now().toString());
+        },
+        g.fy.INFREQUENT_USER_ACTION
+    );
+}
+function x(e) {
+    return y.updateAsync(
+        'userContent',
+        (t) => {
             if (!(0, _.jl)(t.dismissedContents, e)) return !1;
             t.dismissedContents = (0, _.jx)(t.dismissedContents, e);
         },
         g.fy.INFREQUENT_USER_ACTION
     );
 }
-function x(e) {
+function w(e) {
     return y.updateAsync(
         'userContent',
         (t) => {
@@ -369,7 +386,7 @@ function x(e) {
         g.fy.INFREQUENT_USER_ACTION
     );
 }
-function w() {
+function M() {
     return y.updateAsync(
         'userContent',
         (e) => {
@@ -378,7 +395,7 @@ function w() {
         g.fy.INFREQUENT_USER_ACTION
     );
 }
-function M() {
+function P() {
     return y.updateAsync(
         'userContent',
         (e) => {

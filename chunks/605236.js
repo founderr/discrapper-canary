@@ -1,6 +1,9 @@
 n.d(t, {
     EW: function () {
-        return A;
+        return N;
+    },
+    Fo: function () {
+        return T;
     },
     H4: function () {
         return I;
@@ -15,7 +18,7 @@ n.d(t, {
         return b;
     },
     wH: function () {
-        return N;
+        return C;
     }
 }),
     n(47120);
@@ -46,10 +49,43 @@ function b(e) {
 }
 function I(e) {
     var t, n;
-    if ((0, h.B)(e)) return !0;
+    if ((0, h.B)(e))
+        return {
+            isDismissed: !0,
+            lastDismissedVersion: null
+        };
     let r = null === (n = o.Z.settings.userContent) || void 0 === n ? void 0 : null === (t = n.recurringDismissibleContentStates[e]) || void 0 === t ? void 0 : t.lastDismissedVersion,
         i = (0, m.t)(e);
-    return null != r && r >= i;
+    return {
+        isDismissed: null != r && r >= i,
+        lastDismissedVersion: r
+    };
+}
+function T(e, t) {
+    var n, r;
+    if ((0, h.B)(e))
+        return {
+            isDismissed: !0,
+            lastDismissedAtMs: null
+        };
+    let i = null === (r = o.Z.settings.userContent) || void 0 === r ? void 0 : null === (n = r.recurringDismissibleContentStates[e]) || void 0 === n ? void 0 : n.lastDismissedAtMs,
+        a = null != i && '0' !== i ? (Number.isNaN(Number(i)) ? void 0 : Number(i)) : void 0;
+    if (void 0 === a)
+        return {
+            isDismissed: !1,
+            lastDismissedAtMs: void 0
+        };
+    let s = !0;
+    if (null != t) {
+        let e = a + t.cooldownDurationMs,
+            n = Date.now(),
+            r = null == t.showAfterTimestamp || n >= t.showAfterTimestamp;
+        s = n < e || !r;
+    }
+    return {
+        isDismissed: s,
+        lastDismissedAtMs: a
+    };
 }
 function S(e, t, n) {
     if (
@@ -84,7 +120,7 @@ function S(e, t, n) {
             }
         });
 }
-function T(e) {
+function y(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     ((0, p.cI)(e) || t.forceTrack) &&
         (function (e, t) {
@@ -106,7 +142,7 @@ function T(e) {
         })(e, t),
         (0, d.Vr)(e);
 }
-function y(e) {
+function A(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = !f.Z.hasUserHitDCCap();
     (0, p.gE)(
@@ -117,11 +153,11 @@ function y(e) {
         n
     );
 }
-async function A(e) {
+async function N(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    T(e, t), await (0, s.nm)(e), y(e, t);
+    y(e, t), await (0, s.nm)(e), A(e, t);
 }
-async function N(e, t) {
+async function C(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-    T(e, n), await (0, s.Bn)(e, t), y(e, n);
+    y(e, n), await (0, s.Bn)(e, t), A(e, n);
 }

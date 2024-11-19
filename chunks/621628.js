@@ -36,7 +36,14 @@ var i = n(200651),
 function _(e) {
     let { contents: t, content: n, onChange: s } = e,
         r = o.z[n],
-        { isDismissed: l, handleToggleDismissState: a } = (0, T.x)(r, t);
+        { isDismissed: l, handleToggleDismissState: a, recurringDismissibleContentInfo: c } = (0, T.x)(r, t),
+        u = '';
+    if (null == c || (void 0 === c.lastDismissedVersion && void 0 === c.lastDismissedAtMs)) u = '';
+    else if (void 0 !== c.lastDismissedVersion && 0 !== c.lastDismissedVersion) u = 'last_dismissed_version: '.concat(c.lastDismissedVersion);
+    else if (void 0 !== c.lastDismissedAtMs) {
+        let e = new Date(c.lastDismissedAtMs).toLocaleString();
+        u = 'last_dismissed_at: '.concat(e);
+    }
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsx)(d.FormSwitch, {
             value: l,
@@ -46,7 +53,7 @@ function _(e) {
             children: (0, i.jsx)(d.FormText, {
                 size: m.Z.Sizes.SIZE_16,
                 className: E.marginTop4,
-                children: ''.concat(n.toLowerCase(), ' (').concat(o.z[n], ')')
+                children: ''.concat(n.toLowerCase(), ' (').concat(o.z[n], ') ').concat(u)
             })
         })
     });
