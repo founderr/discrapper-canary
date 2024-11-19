@@ -24,37 +24,42 @@ function x(e) {
     let { channel: t } = e,
         r = (0, s.e7)([p.default], () => p.default.getUser(t.hdStreamingBuyerId), [t.hdStreamingBuyerId]),
         [a, d] = (0, l.useState)(!1);
-    return ((0, f.Uu)(t),
-    (function (e) {
-        let t = (0, s.e7)([p.default], () => p.default.getCurrentUser()),
-            r = [];
-        e.hdStreamingBuyerId === (null == t ? void 0 : t.id) && !e.isHDStreamSplashed && r.push(o.z.HD_STREAMING_POTION_MODAL_UPSELL);
-        let [a, d] = (0, u.US)(r);
-        (0, l.useEffect)(() => {
-            if (a === o.z.HD_STREAMING_POTION_MODAL_UPSELL) {
-                var t;
-                (t = d),
-                    (0, c.openModalLazy)(async () => {
-                        let { default: l } = await n.e('88452').then(n.bind(n, 552394));
-                        return (n) =>
-                            (0, i.jsx)(l, {
-                                markAsDismissed: t,
-                                channel: e,
-                                ...n
-                            });
-                    });
-            }
-        }, [a, d, e]);
-    })(t),
-    (0, f.J)(t, () => {
+    (0, f.Uu)(t),
+        (function (e) {
+            let t = (0, s.e7)([p.default], () => p.default.getCurrentUser()),
+                r = [];
+            e.hdStreamingBuyerId === (null == t ? void 0 : t.id) && !e.isHDStreamSplashed && r.push(o.z.HD_STREAMING_POTION_MODAL_UPSELL);
+            let [a, d] = (0, u.US)(r);
+            (0, l.useEffect)(() => {
+                if (a === o.z.HD_STREAMING_POTION_MODAL_UPSELL) {
+                    var t;
+                    (t = d),
+                        (0, c.openModalLazy)(async () => {
+                            let { default: l } = await n.e('88452').then(n.bind(n, 552394));
+                            return (n) =>
+                                (0, i.jsx)(l, {
+                                    markAsDismissed: t,
+                                    channel: e,
+                                    ...n
+                                });
+                        });
+                }
+            }, [a, d, e]);
+        })(t);
+    let h = () => {
+        d(!1), (0, m.ag)();
+    };
+    return ((0, f.J)(t, () => {
+        if ((0, f.QC)()) {
+            h();
+            return;
+        }
         d(!0);
     }),
     a && null != r)
         ? (0, i.jsx)(_, {
               buyer: r,
-              onEnd: () => {
-                  d(!1), (0, m.ag)();
-              }
+              onEnd: h
           })
         : null;
 }
