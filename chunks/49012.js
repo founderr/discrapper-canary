@@ -39,9 +39,9 @@ function R(e, t) {
 function O(e, t) {
     let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
         T = arguments.length > 3 ? arguments[3] : void 0,
-        { trusted: y, onClick: R, onConfirm: O, shouldConfirm: D, messageId: L, channelId: x } = e,
-        w = i().sanitizeUrl(e.href);
-    if (null == w) {
+        { trusted: y, onClick: R, onConfirm: O, onCancel: D, shouldConfirm: L, messageId: x, channelId: w } = e,
+        M = i().sanitizeUrl(e.href);
+    if (null == M) {
         null != t && t.preventDefault(),
             a.Z.show({
                 title: C.intl.string(C.t.x87gam),
@@ -51,116 +51,119 @@ function O(e, t) {
             });
         return;
     }
-    let M = w;
+    let P = M;
     try {
-        decodeURI(w);
+        decodeURI(M);
     } catch (e) {
-        M = encodeURI(w);
+        P = encodeURI(M);
     }
-    let P = null,
-        k = !1,
-        U = L,
+    let k = null,
+        U = !1,
         G = x,
-        B = null;
-    if (null != L && null != x) {
-        var Z, F, V;
-        let e = S.Z.getMessage(x, L),
-            t = E.Z.getBasicChannel(x);
-        P = null !== (V = null == t ? void 0 : t.guild_id) && void 0 !== V ? V : null;
-        let n = v.Z.getGuild(P),
-            r = (null == e ? void 0 : null === (Z = e.messageReference) || void 0 === Z ? void 0 : Z.guild_id) != null && (null == e ? void 0 : e.webhookId) != null && (null == e ? void 0 : e.hasFlag(N.iLy.IS_CROSSPOST)) && null != P;
-        r && (null == e ? void 0 : null === (F = e.messageReference) || void 0 === F ? void 0 : F.guild_id) != null ? ((U = e.messageReference.message_id), (G = e.messageReference.channel_id), (B = e.messageReference.guild_id)) : (B = P);
+        B = w,
+        Z = null;
+    if (null != x && null != w) {
+        var F, V, j;
+        let e = S.Z.getMessage(w, x),
+            t = E.Z.getBasicChannel(w);
+        k = null !== (j = null == t ? void 0 : t.guild_id) && void 0 !== j ? j : null;
+        let n = v.Z.getGuild(k),
+            r = (null == e ? void 0 : null === (F = e.messageReference) || void 0 === F ? void 0 : F.guild_id) != null && (null == e ? void 0 : e.webhookId) != null && (null == e ? void 0 : e.hasFlag(N.iLy.IS_CROSSPOST)) && null != k;
+        r && (null == e ? void 0 : null === (V = e.messageReference) || void 0 === V ? void 0 : V.guild_id) != null ? ((G = e.messageReference.message_id), (B = e.messageReference.channel_id), (Z = e.messageReference.guild_id)) : (Z = k);
         let i = (null == t ? void 0 : t.type) === N.d4z.GUILD_ANNOUNCEMENT && (null == n ? void 0 : n.hasFeature(N.oNc.COMMUNITY)) === !0,
             a = (null == e ? void 0 : e.hasFlag(N.iLy.EPHEMERAL)) === !0;
-        k = null != e && !a && (r || i);
+        U = null != e && !a && (r || i);
     }
-    if (null != x) {
-        let e = E.Z.getChannel(x),
+    if (null != w) {
+        let e = E.Z.getChannel(w),
             t = v.Z.getGuild(null == e ? void 0 : e.getGuildId());
         null != e &&
             null != t &&
             t.hasFeature(N.oNc.DISCOVERABLE) &&
             A.default.track(N.rMx.URL_CLICKED, {
-                url_domain: (0, I.F)(M),
+                url_domain: (0, I.F)(P),
                 guild_id: t.id,
                 channel_id: e.id
             }),
-            (0, c.Z)(x) &&
+            (0, c.Z)(w) &&
                 A.default.track(N.rMx.CHANGE_LOG_CTA_CLICKED, {
                     cta_type: 'inline_link',
-                    target: M
+                    target: P
                 });
     }
-    if ((_.Z.trackLinkClicked(M), null != R)) {
+    if ((_.Z.trackLinkClicked(P), null != R)) {
         if (R(t)) return;
     } else {
         let { default: e } = n(315263),
-            i = e(M, {
+            i = e(P, {
                 skipExtensionCheck: void 0,
                 analyticsLocations: r
             });
         if (null != i && i(t)) return;
     }
-    let j = () => {
-        if (
-            (k &&
-                _.Z.trackAnnouncementMessageLinkClicked({
-                    messageId: U,
-                    channelId: x,
-                    guildId: P,
-                    sourceChannelId: G,
-                    sourceGuildId: B
-                }),
-            null != O)
-        ) {
-            O();
-            return;
-        }
-        (0, o.Z)(M);
-    };
-    if (null !== u.Z.isBlockedDomain(M)) {
-        null == t || t.preventDefault(), l.Z.show(M);
+    let H = () => {
+            if (
+                (U &&
+                    _.Z.trackAnnouncementMessageLinkClicked({
+                        messageId: G,
+                        channelId: w,
+                        guildId: k,
+                        sourceChannelId: B,
+                        sourceGuildId: Z
+                    }),
+                null != O)
+            ) {
+                O();
+                return;
+            }
+            (0, o.Z)(P);
+        },
+        Y = null != D ? D : () => {};
+    if (null !== u.Z.isBlockedDomain(P)) {
+        null == t || t.preventDefault(), l.Z.show(P);
         return;
     }
-    if (null != (0, g.v)(M)) {
-        null == t || t.preventDefault(), m.Z.show(M);
+    if (null != (0, g.v)(P)) {
+        null == t || t.preventDefault(), m.Z.show(P);
         return;
     }
-    if ((0, f.I)(M)) {
-        null == t || t.preventDefault(), d.Z.show(M);
+    if ((0, f.I)(P)) {
+        null == t || t.preventDefault(), d.Z.show(P);
         return;
     }
-    let H = 'function' == typeof y ? y() : y,
-        Y = (0, I.E)(M),
-        W = !('http:' === Y || 'https:' === Y);
-    if ((!W && (H || b.Z.isTrustedDomain(M))) || (W && b.Z.isTrustedProtocol(M))) {
-        null == t || (null != D && D)
-            ? j()
-            : k &&
+    let W = 'function' == typeof y ? y() : y,
+        K = (0, I.E)(P),
+        z = !('http:' === K || 'https:' === K);
+    if ((!z && (W || b.Z.isTrustedDomain(P))) || (z && b.Z.isTrustedProtocol(P))) {
+        null == t || (null != L && L)
+            ? H()
+            : U &&
               _.Z.trackAnnouncementMessageLinkClicked({
-                  messageId: U,
-                  channelId: x,
-                  guildId: P,
-                  sourceChannelId: G,
-                  sourceGuildId: B
+                  messageId: G,
+                  channelId: w,
+                  guildId: k,
+                  sourceChannelId: B,
+                  sourceGuildId: Z
               });
         return;
     }
-    if ((null != t && t.preventDefault(), W))
+    if ((null != t && t.preventDefault(), z))
         h.Z.show({
-            url: M,
+            url: P,
             trustUrl: s.u,
-            onConfirm: j,
+            onConfirm: H,
+            onCancel: Y,
             isProtocol: !0,
             contextKey: T
         });
     else {
-        let e = (0, p.yw)(M),
-            t = null != e ? e.displayTarget : M;
+        let e = (0, p.yw)(P),
+            t = null != e ? e.displayTarget : P;
         h.Z.show({
             url: t,
             trustUrl: s.o,
-            onConfirm: j,
+            onConfirm: H,
+            onCancel: Y,
             isProtocol: !1,
             contextKey: T
         });

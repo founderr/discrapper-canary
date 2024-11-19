@@ -26,18 +26,21 @@ function a(t) {
     };
 }
 function r(t) {
-    let { url: n, trustUrl: e, onConfirm: l, onClose: r } = t,
-        [i, s] = o.useState(!1),
-        { protocol: c, hostname: d, theRestOfTheUrl: x } = a(n),
-        u = o.useCallback(() => {
-            i && e(n), null == r || r(), l();
-        }, [n, i, e, l, r]);
+    let { url: n, trustUrl: e, onConfirm: l, onCancel: r, onClose: i } = t,
+        [c, s] = o.useState(!1),
+        { protocol: d, hostname: u, theRestOfTheUrl: x } = a(n),
+        h = o.useCallback(() => {
+            c && e(n), null == i || i(), l();
+        }, [n, c, e, l, i]);
     return {
-        protocol: c,
-        hostname: d,
+        protocol: d,
+        hostname: u,
         theRestOfTheUrl: x,
-        shouldTrustUrl: i,
+        shouldTrustUrl: c,
         setShouldTrustUrl: s,
-        handleConfirm: u
+        handleConfirm: h,
+        handleCancel: o.useCallback(() => {
+            null == i || i(), r();
+        }, [r, i])
     };
 }
