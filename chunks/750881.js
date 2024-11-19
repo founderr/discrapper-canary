@@ -1,32 +1,33 @@
 n.d(t, {
     $W: function () {
-        return d;
-    },
-    NR: function () {
-        return p;
-    },
-    R4: function () {
         return f;
     },
+    NR: function () {
+        return h;
+    },
+    R4: function () {
+        return _;
+    },
     bA: function () {
-        return c;
+        return d;
     },
     h9: function () {
         return i;
     },
     p7: function () {
-        return _;
+        return p;
     },
     sb: function () {
-        return u;
+        return c;
     }
 });
 var r,
     i,
     a = n(818083),
-    s = n(987338);
+    s = n(922611),
+    o = n(987338);
 ((r = i || (i = {}))[(r.SHOW = 0)] = 'SHOW'), (r[(r.HIDE = 1)] = 'HIDE'), (r[(r.DERANK = 2)] = 'DERANK');
-let o = (0, a.B)({
+let l = (0, a.B)({
         kind: 'user',
         id: '2024-08_blocking_voice_states',
         label: 'Blocking Voice States (Blocker)',
@@ -34,7 +35,7 @@ let o = (0, a.B)({
             enabled: !1,
             analyticsEligible: !1
         },
-        commonTriggerPoint: s.$P.CONNECTION_OPEN,
+        commonTriggerPoint: o.$P.CONNECTION_OPEN,
         treatments: [
             {
                 id: 0,
@@ -54,7 +55,7 @@ let o = (0, a.B)({
             }
         ]
     }),
-    l = (0, a.B)({
+    u = (0, a.B)({
         kind: 'user',
         id: '2024-09_blocking_voice_states_blockee',
         label: 'Blocking Voice States (Blockee)',
@@ -62,7 +63,7 @@ let o = (0, a.B)({
             enabled: !1,
             analyticsEligible: !1
         },
-        commonTriggerPoint: s.$P.CONNECTION_OPEN,
+        commonTriggerPoint: o.$P.CONNECTION_OPEN,
         treatments: [
             {
                 id: 0,
@@ -82,35 +83,47 @@ let o = (0, a.B)({
             }
         ]
     });
-function u(e) {
-    let { enabled: t } = o.getCurrentConfig({ location: e });
-    return t;
-}
 function c(e) {
-    return o.useExperiment({ location: e });
-}
-function d(e) {
     let { enabled: t } = l.getCurrentConfig({ location: e });
     return t;
 }
+function d(e) {
+    let t = l.useExperiment({ location: e }),
+        n = (0, s.Do)({ location: 'use_blocking_voice_states_config_for_blocker' });
+    return {
+        ...l.useExperiment({ location: e }),
+        analyticsEligible: t.analyticsEligible && !n
+    };
+}
 function f(e) {
-    return l.useExperiment({ location: e });
+    let { enabled: t } = u.getCurrentConfig({ location: e });
+    return t;
 }
 function _(e) {
-    let { enabled: t, analyticsEligible: n } = l.getCurrentConfig({ location: e }),
-        { enabled: r, analyticsEligible: i } = o.getCurrentConfig({ location: e });
+    let t = u.useExperiment({ location: e }),
+        n = (0, s.Do)({ location: 'use_blocking_voice_states_config_for_blockee' });
     return {
-        blockeeExperimentEnabled: t,
-        blockerExperimentEnabled: r,
-        analyticsEligible: n || i
+        ...u.useExperiment({ location: e }),
+        analyticsEligible: t.analyticsEligible && !n
     };
 }
 function p(e) {
-    let { enabled: t, analyticsEligible: n } = l.useExperiment({ location: e }),
-        { enabled: r, analyticsEligible: i } = o.useExperiment({ location: e });
+    let { enabled: t, analyticsEligible: n } = u.getCurrentConfig({ location: e }),
+        { enabled: r, analyticsEligible: i } = l.getCurrentConfig({ location: e }),
+        a = (0, s.JX)({ location: 'get_blocking_voice_states_experiment_configs' });
     return {
         blockeeExperimentEnabled: t,
         blockerExperimentEnabled: r,
-        analyticsEligible: n || i
+        analyticsEligible: (n || i) && !a
+    };
+}
+function h(e) {
+    let { enabled: t, analyticsEligible: n } = u.useExperiment({ location: e }),
+        { enabled: r, analyticsEligible: i } = l.useExperiment({ location: e }),
+        a = (0, s.Do)({ location: 'use_blocking_voice_states_experiment_configs' });
+    return {
+        blockeeExperimentEnabled: t,
+        blockerExperimentEnabled: r,
+        analyticsEligible: (n || i) && !a
     };
 }
