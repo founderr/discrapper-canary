@@ -72,13 +72,13 @@ let D = (0, h.Un)({
         webpackId: 924339,
         name: 'LinkAuthorize'
     }),
-    B = (0, h.Un)({
+    G = (0, h.Un)({
         createPromise: () => n.e('49277').then(n.bind(n, 197528)),
         webpackId: 197528,
         name: 'ActivateDevice'
     }),
-    G = (0, h.Un)({
-        createPromise: () => Promise.all([n.e('63288'), n.e('77298'), n.e('23357'), n.e('50506'), n.e('23755'), n.e('96211'), n.e('48835'), n.e('99152'), n.e('35535'), n.e('97858'), n.e('29549'), n.e('12013'), n.e('52249'), n.e('14627'), n.e('31605'), n.e('26182'), n.e('95900'), n.e('32776'), n.e('6380'), n.e('18543'), n.e('87624'), n.e('51269'), n.e('88449'), n.e('90508'), n.e('40216'), n.e('13351'), n.e('57674'), n.e('65840'), n.e('74891'), n.e('95393'), n.e('33862'), n.e('38902'), n.e('18101'), n.e('60365'), n.e('35886'), n.e('25788'), n.e('46097'), n.e('8739'), n.e('58059'), n.e('18895'), n.e('42587'), n.e('91304'), n.e('99393'), n.e('70205'), n.e('37229'), n.e('99008'), n.e('7590'), n.e('11388'), n.e('42471'), n.e('28044'), n.e('1187'), n.e('60178'), n.e('89943'), n.e('26069'), n.e('9540'), n.e('93375'), n.e('64679'), n.e('69057'), n.e('77564'), n.e('93936'), n.e('62880'), n.e('72173'), n.e('51866'), n.e('51677'), n.e('20011'), n.e('73747'), n.e('84804'), n.e('37220'), n.e('61447'), n.e('80026'), n.e('82158'), n.e('11794'), n.e('91315'), n.e('77803'), n.e('62320'), n.e('54109'), n.e('60673'), n.e('88549'), n.e('18751'), n.e('95468'), n.e('44522')]).then(n.bind(n, 457094)),
+    B = (0, h.Un)({
+        createPromise: () => Promise.all([n.e('63288'), n.e('77298'), n.e('23357'), n.e('50506'), n.e('23755'), n.e('96211'), n.e('48835'), n.e('99152'), n.e('35535'), n.e('34981'), n.e('29549'), n.e('12013'), n.e('52249'), n.e('14627'), n.e('31605'), n.e('26182'), n.e('95900'), n.e('32776'), n.e('6380'), n.e('18543'), n.e('87624'), n.e('51269'), n.e('88449'), n.e('90508'), n.e('72181'), n.e('13351'), n.e('57674'), n.e('65840'), n.e('74891'), n.e('95393'), n.e('33862'), n.e('38902'), n.e('18101'), n.e('60365'), n.e('25788'), n.e('46097'), n.e('8739'), n.e('58059'), n.e('18895'), n.e('42587'), n.e('91304'), n.e('99393'), n.e('70205'), n.e('37229'), n.e('99008'), n.e('7590'), n.e('75343'), n.e('62308'), n.e('42471'), n.e('28044'), n.e('1187'), n.e('60178'), n.e('89943'), n.e('26069'), n.e('9540'), n.e('93375'), n.e('64679'), n.e('69057'), n.e('77564'), n.e('93936'), n.e('62880'), n.e('72173'), n.e('51866'), n.e('51677'), n.e('20011'), n.e('73747'), n.e('84804'), n.e('37220'), n.e('61447'), n.e('80026'), n.e('82158'), n.e('91315'), n.e('11794'), n.e('77803'), n.e('62320'), n.e('54109'), n.e('60673'), n.e('4449'), n.e('18751'), n.e('95468'), n.e('44522')]).then(n.bind(n, 457094)),
         webpackId: 457094,
         name: 'ViewsWithMainInterface',
         memo: !0,
@@ -105,7 +105,7 @@ let D = (0, h.Un)({
         name: 'MobileWebHandoffFallback'
     }),
     H = (0, h.Un)({
-        createPromise: () => Promise.all([n.e('63288'), n.e('77298'), n.e('23357'), n.e('50506'), n.e('23755'), n.e('96211'), n.e('48835'), n.e('99152'), n.e('35535'), n.e('29549'), n.e('12013'), n.e('52249'), n.e('14627'), n.e('31605'), n.e('26182'), n.e('95900'), n.e('32776'), n.e('6380'), n.e('18543'), n.e('87624'), n.e('51269'), n.e('88449'), n.e('90508'), n.e('40216'), n.e('13351'), n.e('57674'), n.e('65840'), n.e('74891'), n.e('95393'), n.e('33862'), n.e('38902'), n.e('18101'), n.e('60365'), n.e('35886'), n.e('25788'), n.e('46097'), n.e('8739'), n.e('58059'), n.e('18895'), n.e('91304'), n.e('99393'), n.e('70205'), n.e('99008'), n.e('7590'), n.e('11388'), n.e('42471'), n.e('1187'), n.e('60178'), n.e('89943'), n.e('9540'), n.e('93375'), n.e('64679'), n.e('69057'), n.e('77564'), n.e('93936'), n.e('62880'), n.e('72173'), n.e('51866'), n.e('51677'), n.e('84804'), n.e('37220'), n.e('61447'), n.e('82158'), n.e('91315'), n.e('62320'), n.e('54109'), n.e('88549'), n.e('93197')]).then(n.bind(n, 290161)),
+        createPromise: () => Promise.all([n.e('63288'), n.e('77298'), n.e('23357'), n.e('50506'), n.e('23755'), n.e('96211'), n.e('48835'), n.e('99152'), n.e('35535'), n.e('29549'), n.e('12013'), n.e('52249'), n.e('14627'), n.e('31605'), n.e('26182'), n.e('95900'), n.e('32776'), n.e('6380'), n.e('18543'), n.e('87624'), n.e('51269'), n.e('88449'), n.e('90508'), n.e('72181'), n.e('13351'), n.e('57674'), n.e('65840'), n.e('74891'), n.e('95393'), n.e('33862'), n.e('38902'), n.e('18101'), n.e('60365'), n.e('25788'), n.e('46097'), n.e('8739'), n.e('58059'), n.e('18895'), n.e('91304'), n.e('99393'), n.e('70205'), n.e('99008'), n.e('7590'), n.e('75343'), n.e('62308'), n.e('42471'), n.e('1187'), n.e('60178'), n.e('89943'), n.e('9540'), n.e('93375'), n.e('64679'), n.e('69057'), n.e('77564'), n.e('93936'), n.e('62880'), n.e('72173'), n.e('51866'), n.e('51677'), n.e('84804'), n.e('37220'), n.e('61447'), n.e('82158'), n.e('91315'), n.e('62320'), n.e('54109'), n.e('4449'), n.e('93197')]).then(n.bind(n, 290161)),
         webpackId: 290161,
         name: 'Overlay'
     }),
@@ -129,12 +129,17 @@ let D = (0, h.Un)({
         webpackId: 838134,
         name: 'ApplicationDirectoryRoutes'
     }),
-    q = () => (0, r.jsx)(G, {}),
-    Q = new Set([C.Z5c.LOGIN, C.Z5c.LOGIN_HANDOFF, C.Z5c.INVITE_LOGIN(':inviteCode'), C.Z5c.GIFT_CODE_LOGIN(':giftCode'), C.Z5c.GUILD_TEMPLATE_LOGIN(':guildTemplateCode')]);
-function X(e, t) {
-    return t ? e.filter((e) => !Q.has(e)) : e;
+    q = (0, h.Un)({
+        createPromise: () => n.e('55923').then(n.bind(n, 509451)),
+        webpackId: 509451,
+        name: 'ApplicationDirectoryV2ToV1Redirector'
+    }),
+    Q = () => (0, r.jsx)(B, {}),
+    X = new Set([C.Z5c.LOGIN, C.Z5c.LOGIN_HANDOFF, C.Z5c.INVITE_LOGIN(':inviteCode'), C.Z5c.GIFT_CODE_LOGIN(':giftCode'), C.Z5c.GUILD_TEMPLATE_LOGIN(':guildTemplateCode')]);
+function J(e, t) {
+    return t ? e.filter((e) => !X.has(e)) : e;
 }
-class J extends i.Component {
+class $ extends i.Component {
     componentDidMount() {
         N.ZP.cleanupDisplaySleep(), v.Z.initialize();
     }
@@ -163,7 +168,7 @@ class J extends i.Component {
                                         component: L
                                     }),
                                     (0, r.jsx)(s.AW, {
-                                        path: X([C.Z5c.LOGIN, C.Z5c.REGISTER, C.Z5c.INVITE(':inviteCode'), C.Z5c.INVITE_LOGIN(':inviteCode'), C.Z5c.GIFT_CODE(':giftCode'), C.Z5c.GIFT_CODE_LOGIN(':giftCode'), C.Z5c.RESET], R.a),
+                                        path: J([C.Z5c.LOGIN, C.Z5c.REGISTER, C.Z5c.INVITE(':inviteCode'), C.Z5c.INVITE_LOGIN(':inviteCode'), C.Z5c.GIFT_CODE(':giftCode'), C.Z5c.GIFT_CODE_LOGIN(':giftCode'), C.Z5c.RESET], R.a),
                                         component: Z
                                     }),
                                     (0, r.jsx)(p.Z, {
@@ -178,7 +183,7 @@ class J extends i.Component {
                                         from: C.Z5c.GIFT_CODE(''),
                                         to: C.Z5c.LOGIN
                                     }),
-                                    (0, r.jsx)(s.AW, { render: q })
+                                    (0, r.jsx)(s.AW, { render: Q })
                                 ]
                             })
                           : (0, r.jsxs)(s.rs, {
@@ -189,7 +194,7 @@ class J extends i.Component {
                                         render: () => (0, r.jsx)(_.Z, {})
                                     }),
                                     (0, r.jsx)(s.AW, {
-                                        path: X([C.Z5c.LOGIN, C.Z5c.LOGIN_HANDOFF, C.Z5c.REGISTER, C.Z5c.BILLING_PREFIX, C.Z5c.BILLING_PROMOTION_REDEMPTION(':code'), C.Z5c.INVITE(':inviteCode'), C.Z5c.INVITE_LOGIN(':inviteCode'), C.Z5c.GIFT_CODE(':giftCode'), C.Z5c.GIFT_CODE_LOGIN(':giftCode'), C.Z5c.GUILD_TEMPLATE(':guildTemplateCode'), C.Z5c.GUILD_TEMPLATE_LOGIN(':guildTemplateCode'), C.Z5c.DISABLE_EMAIL_NOTIFICATIONS, C.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, C.Z5c.RESET, C.Z5c.REPORT, C.Z5c.REPORT_SECOND_LOOK, C.Z5c.ACCOUNT_REVERT(':token')], R.a),
+                                        path: J([C.Z5c.LOGIN, C.Z5c.LOGIN_HANDOFF, C.Z5c.REGISTER, C.Z5c.BILLING_PREFIX, C.Z5c.BILLING_PROMOTION_REDEMPTION(':code'), C.Z5c.INVITE(':inviteCode'), C.Z5c.INVITE_LOGIN(':inviteCode'), C.Z5c.GIFT_CODE(':giftCode'), C.Z5c.GIFT_CODE_LOGIN(':giftCode'), C.Z5c.GUILD_TEMPLATE(':guildTemplateCode'), C.Z5c.GUILD_TEMPLATE_LOGIN(':guildTemplateCode'), C.Z5c.DISABLE_EMAIL_NOTIFICATIONS, C.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, C.Z5c.RESET, C.Z5c.REPORT, C.Z5c.REPORT_SECOND_LOOK, C.Z5c.ACCOUNT_REVERT(':token')], R.a),
                                         component: Z
                                     }),
                                     t
@@ -243,7 +248,7 @@ class J extends i.Component {
                                     }),
                                     (0, r.jsx)(p.Z, {
                                         path: C.Z5c.ACTIVATE,
-                                        component: B
+                                        component: G
                                     }),
                                     (0, r.jsx)(p.Z, {
                                         path: C.Z5c.CONNECTIONS_AUTHORIZE_CONTINUE(':type'),
@@ -324,10 +329,16 @@ class J extends i.Component {
                                     t
                                         ? null
                                         : (0, r.jsx)(s.AW, {
-                                              path: C.Z5c.APPLICATION_DIRECTORY,
+                                              path: [C.Z5c.APPLICATION_DIRECTORY],
                                               component: z
                                           }),
-                                    (0, r.jsx)(s.AW, { render: q }),
+                                    t
+                                        ? null
+                                        : (0, r.jsx)(s.AW, {
+                                              path: [C.Z5c.GLOBAL_DISCOVERY_APPS],
+                                              component: q
+                                          }),
+                                    (0, r.jsx)(s.AW, { render: Q }),
                                     (0, r.jsx)(s.l_, {
                                         from: C.Z5c.ACCOUNT_REVERT(''),
                                         to: C.Z5c.LOGIN
@@ -354,7 +365,7 @@ t.Z = d.ZP.connectStores(
         let { pathname: e } = (0, s.TH)();
         return null != (0, s.LX)(e, { path: C.Z5c.APPLICATION_DIRECTORY });
     })();
-    return (0, r.jsx)(J, {
+    return (0, r.jsx)($, {
         ...e,
         skipsSettingDefaultPageTitle: t
     });

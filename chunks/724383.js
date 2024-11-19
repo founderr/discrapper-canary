@@ -1,45 +1,47 @@
 var i = n(200651),
     r = n(192379),
     l = n(512969),
-    a = n(252618),
-    s = n(352057),
-    o = n(319443),
-    c = n(106075),
-    d = n(121711),
-    u = n(823379),
-    h = n(571457),
-    m = n(836768),
-    p = n(766219),
-    g = n(49898),
-    f = n(253797);
+    a = n(509451),
+    s = n(252618),
+    o = n(352057),
+    c = n(319443),
+    d = n(106075),
+    u = n(121711),
+    h = n(823379),
+    m = n(571457),
+    p = n(836768),
+    g = n(766219),
+    f = n(49898),
+    _ = n(253797);
 t.Z = function () {
-    let e = (0, s.h)({ location: 'DiscoveryUISelectedTab' }),
-        t = m.Z.useField('selectedTab'),
+    let e = (0, o.h)({ location: 'DiscoveryUISelectedTab' }),
+        t = p.Z.useField('selectedTab'),
         n = (function (e) {
             switch (e) {
-                case g.F$.SERVERS:
-                    return (0, i.jsx)(c.Z, {});
-                case g.F$.APPS:
-                    return (0, i.jsx)(o.Z, {});
-                case g.F$.QUESTS:
+                case f.F$.SERVERS:
                     return (0, i.jsx)(d.Z, {});
+                case f.F$.APPS:
+                    return (0, i.jsx)(c.Z, {});
+                case f.F$.QUESTS:
+                    return (0, i.jsx)(u.Z, {});
                 default:
-                    (0, u.vE)(e);
+                    (0, h.vE)(e);
             }
         })(t),
-        _ = (0, l.TH)();
-    return (
-        r.useEffect(() => {
-            let t = _.pathname,
-                n = (0, p.I)(t, e);
-            n !== m.Z.getField('selectedTab') && m.Z.setState({ selectedTab: n });
-        }, [e, _.pathname]),
-        r.useEffect(() => {
-            (0, h.RI)({ selectedTab: t });
-        }, [t]),
-        (0, i.jsxs)('section', {
-            className: f.container,
-            children: [(0, i.jsx)(a.yY, { location: (0, p.s)(t) }), (0, i.jsx)('div', { className: f.dragRegion }), n]
-        })
-    );
+        E = (0, l.TH)(),
+        I = !e && t === f.F$.APPS;
+    return (r.useEffect(() => {
+        let e = E.pathname,
+            t = (0, g.I)(e);
+        t !== p.Z.getField('selectedTab') && p.Z.setState({ selectedTab: t });
+    }, [e, E.pathname]),
+    r.useEffect(() => {
+        I || (0, m.RI)({ selectedTab: t });
+    }, [I, t]),
+    I)
+        ? (0, i.jsx)(a.default, {})
+        : (0, i.jsxs)('section', {
+              className: _.container,
+              children: [(0, i.jsx)(s.yY, { location: (0, g.s)(t) }), (0, i.jsx)('div', { className: _.dragRegion }), n]
+          });
 };
