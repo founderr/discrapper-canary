@@ -1,1 +1,4 @@
-e.exports = '/assets/72c30d91fa839f7b53ae.svg';
+e.exports = {
+    anchor: 'anchor_af404b',
+    anchorUnderlineOnHover: 'anchorUnderlineOnHover_af404b'
+};

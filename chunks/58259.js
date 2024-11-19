@@ -1,31 +1,13 @@
-n.d(t, {
-    Z: function () {
-        return s;
-    }
-}),
-    n(47120);
-var i = n(192379),
-    r = n(479531),
-    l = n(53365);
-function s(e) {
-    let [t, n] = i.useState(),
-        [s, a] = i.useState(!1),
-        [o, c] = i.useState(!1);
-    return {
-        error: t,
-        loading: s,
-        createEnableRequest: i.useCallback(async () => {
-            if (null != e) {
-                a(!0), n(void 0), c(!1);
-                try {
-                    await l.He(e), c(!0);
-                } catch (e) {
-                    n(new r.Z(e));
-                } finally {
-                    a(!1);
-                }
-            }
-        }, [e]),
-        submittedRequest: o
-    };
-}
+e.exports = {
+    header: 'header_c03fd3',
+    subtitle: 'subtitle_c03fd3',
+    closeButton: 'closeButton_c03fd3',
+    content: 'content_c03fd3',
+    smsInputContainer: 'smsInputContainer_c03fd3',
+    smsInput: 'smsInput_c03fd3',
+    error: 'error_c03fd3',
+    footer: 'footer_c03fd3',
+    listItemContainer: 'listItemContainer_c03fd3',
+    listItemText: 'listItemText_c03fd3',
+    listItemArrow: 'listItemArrow_c03fd3'
+};
