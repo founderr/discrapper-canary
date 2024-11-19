@@ -19,9 +19,9 @@ var l = n(481060),
     I = n(823379),
     C = n(358085),
     v = n(929809),
-    S = n(179645),
+    T = n(179645),
     N = n(701476),
-    T = n(785997),
+    S = n(785997),
     A = n(981631),
     b = n(188785),
     x = n(630724);
@@ -38,7 +38,7 @@ class L extends s.Z {
     handleConnectionOpen() {
         var e;
         let t,
-            a = S.Z.getType();
+            a = T.Z.getType();
         if (null == a) return;
         switch (a) {
             case N.M5.INVITE_UNCLAIMED:
@@ -64,25 +64,25 @@ class L extends s.Z {
                 open: async function e(e) {
                     let t = (e) => {
                         switch (e) {
-                            case T.F.AGE_GATE:
+                            case S.F.AGE_GATE:
                                 h.Z.flowStep(x.MK.ANY, x.EW.AGE_GATE);
                                 break;
-                            case T.F.CHOOSE_TEMPLATE:
+                            case S.F.CHOOSE_TEMPLATE:
                                 h.Z.flowStep(x.MK.ANY, x.X2.GUILD_TEMPLATES);
                                 break;
-                            case T.F.CUSTOMIZE_GUILD:
+                            case S.F.CUSTOMIZE_GUILD:
                                 h.Z.flowStep(x.MK.ANY, x.X2.GUILD_CREATE);
                                 break;
-                            case T.F.CHANNEL_PROMPT:
+                            case S.F.CHANNEL_PROMPT:
                                 h.Z.flowStep(x.MK.ANY, x.X2.CHANNEL_PROMPT);
                                 break;
-                            case T.F.JOIN_GUILD:
+                            case S.F.JOIN_GUILD:
                                 h.Z.flowStep(x.MK.ANY, x.X2.JOIN_GUILD);
                                 break;
-                            case T.F.CREATION_INTENT:
+                            case S.F.CREATION_INTENT:
                                 h.Z.flowStep(x.MK.ANY, x.X2.CREATION_INTENT);
                                 break;
-                            case T.F.COMPLETE:
+                            case S.F.COMPLETE:
                                 h.Z.flowStep(x.MK.ANY, x.X2.SUCCESS);
                                 break;
                             case null:

@@ -19,8 +19,8 @@ var a = n(120356),
 let v = (t) => {
     let { product: e, isPurchased: n, isHighlighted: a, user: v, forCollectedModal: h, profileEffectClassName: b } = t,
         { firstProfileEffect: m, firstAvatarDecoration: S } = (0, d.R)(e),
-        T = (0, l.ZP)(),
-        C = (0, s.ap)(T);
+        C = (0, l.ZP)(),
+        T = (0, s.ap)(C);
     return (0, r.jsxs)('div', {
         className: f.container,
         children: [
@@ -45,7 +45,7 @@ let v = (t) => {
                           avatarSize: o.AvatarSizes.SIZE_120,
                           isPurchased: n,
                           isHighlighted: a,
-                          avatarPlaceholderSrc: C ? p : g
+                          avatarPlaceholderSrc: T ? p : g
                       })
                   })
                 : null

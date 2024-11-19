@@ -7,20 +7,20 @@ n.d(t, {
 var i = n(192379);
 function o(e, t, n) {
     let o = i.useRef(null),
-        [s, a] = i.useState(!1),
-        l = i.useCallback(() => {
+        [a, l] = i.useState(!1),
+        s = i.useCallback(() => {
             if (e && null !== o.current) {
                 var n;
-                a((null === (n = o.current) || void 0 === n ? void 0 : n.offsetHeight) > 2.5 * t);
+                l((null === (n = o.current) || void 0 === n ? void 0 : n.offsetHeight) > 2.5 * t);
             }
-        }, [a, e, t]);
+        }, [l, e, t]);
     return (
         i.useLayoutEffect(() => {
-            l();
-        }, [l, e, n]),
+            s();
+        }, [s, e, n]),
         {
             postTitleRef: o,
-            isNewBadgeOverflow: s
+            isNewBadgeOverflow: a
         }
     );
 }

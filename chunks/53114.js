@@ -364,7 +364,7 @@ class m extends s.Z {
                 duration_decoder_unknown: p(e.decoderBuckets[f.gr.UNKNOWN]),
                 ...c
             },
-            { bytes: _, framesDropped: h, framesCodecError: m, framesCodec: g, framesNetwork: E, packets: v, packetsLost: b, nackCount: I, pliCount: S, qpSum: T, pauseCount: y, freezeCount: A, totalPausesDuration: N, totalFreezesDuration: C, totalFramesDuration: R, keyframes: O, passthroughCount: D, cryptorSuccessCount: L, cryptorFailureCount: x, cryptorDuration: w, cryptorAttempts: M, qualityDecodeErrors: P, qualityDecoderReboots: k, qualityScoreErrors: U, qualityFrameDrops: B, qualitySizeMismatches: G } = e.aggregatedProperties;
+            { bytes: _, framesDropped: h, framesCodecError: m, framesCodec: g, framesNetwork: E, packets: v, packetsLost: b, nackCount: I, pliCount: S, qpSum: T, pauseCount: y, freezeCount: A, totalPausesDuration: N, totalFreezesDuration: C, totalFramesDuration: R, keyframes: O, passthroughCount: D, cryptorSuccessCount: L, cryptorFailureCount: x, cryptorDuration: w, cryptorAttempts: M, qualityDecodeErrors: P, qualityDecoderReboots: k, qualityScoreErrors: U, qualityFrameDrops: G, qualitySizeMismatches: B } = e.aggregatedProperties;
         return (
             e instanceof f.nt ? ((d.sender_freeze_count = A), (d.sender_total_freezes_duration = C), (d.sender_total_frames_duration = R)) : ((d.receiver_freeze_count = A), (d.receiver_total_freezes_duration = C), (d.receiver_total_frames_duration = R), (d.receiver_pause_count = y), (d.receiver_total_pauses_duration = N)),
             {
@@ -390,8 +390,8 @@ class m extends s.Z {
                 encoder_quality_decode_errors: P,
                 encoder_quality_decoder_reboots: k,
                 encoder_quality_score_errors: U,
-                encoder_quality_frame_drops: B,
-                encoder_quality_size_mismatches: G
+                encoder_quality_frame_drops: G,
+                encoder_quality_size_mismatches: B
             }
         );
     }

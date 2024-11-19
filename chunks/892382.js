@@ -116,7 +116,7 @@ class R extends i.PureComponent {
                 url: _.ANM.INSTANT_INVITES(e),
                 retries: 3,
                 oldFormErrors: !0,
-                rejectWithError: !1
+                rejectWithError: !0
             })
             .then((e) => {
                 let t = e.body.map(

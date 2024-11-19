@@ -37,7 +37,7 @@ var o = n(860911),
     u = n(981631),
     d = n(388032);
 let _ = 0,
-    { API_ENDPOINT: f, CDN_HOST: b } = window.GLOBAL_ENV;
+    { API_ENDPOINT: b, CDN_HOST: f } = window.GLOBAL_ENV;
 function g(e) {
     return e.id === _;
 }
@@ -70,11 +70,11 @@ function m(e) {
     let { itemId: t, hash: n } = e,
         o = new URLSearchParams({ size: (0, c.oO)(parseFloat(i.Z.APPLICATION_DIRECTORY_CONTENT_MAX_WIDTH) * (0, c.x_)()).toString() }).toString(),
         a = s.$k ? 'webp' : 'png';
-    return null != b
-        ? ''.concat(location.protocol, '//').concat(b, '/app-assets/application-directory/collection-items/').concat(t, '/').concat(n, '.').concat(a, '?').concat(o)
+    return null != f
+        ? ''.concat(location.protocol, '//').concat(f, '/app-assets/application-directory/collection-items/').concat(t, '/').concat(n, '.').concat(a, '?').concat(o)
         : ''
               .concat(location.protocol)
-              .concat(f)
+              .concat(b)
               .concat(u.ANM.APPLICATION_DIRECTORY_COLLECTION_ITEM_IMAGE(t, n, a), '?')
               .concat(o);
 }

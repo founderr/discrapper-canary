@@ -130,7 +130,7 @@ class v extends d.Z {
             (this.socket = e);
     }
 }
-class S extends r.EventEmitter {
+class T extends r.EventEmitter {
     handleConnection(e) {
         f(e, !1),
             e.pause(),
@@ -192,4 +192,4 @@ class S extends r.EventEmitter {
             });
     }
 }
-t.Z = new S();
+t.Z = new T();

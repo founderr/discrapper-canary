@@ -6,7 +6,7 @@ n.Z = {
             url: l.ANM.NOTE(e),
             body: { note: n },
             oldFormErrors: !0,
-            rejectWithError: !1
+            rejectWithError: !0
         });
     }
 };

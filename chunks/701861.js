@@ -18,9 +18,9 @@ var i = n(200651),
     I = n(825682),
     C = n(170245),
     v = n(981631),
-    S = n(65154),
+    T = n(65154),
     N = n(388032),
-    T = n(251106);
+    S = n(251106);
 function A(e, t, n) {
     return (
         t in e
@@ -39,7 +39,7 @@ function b(e) {
         r = () => {
             u.Z.removeFriend(t.id, { location: 'Friends' });
         },
-        l = (0, s.e7)([g.Z], () => g.Z.supports(S.AN.VIDEO)),
+        l = (0, s.e7)([g.Z], () => g.Z.supports(T.AN.VIDEO)),
         a = t.isProvisional;
     return (0, i.jsxs)(o.Menu, {
         navId: 'friend-row',
@@ -106,7 +106,7 @@ class x extends r.PureComponent {
             onClick: this.handleOpenPrivateChannel,
             children: (t) =>
                 (0, i.jsxs)('div', {
-                    className: T.listItemContents,
+                    className: S.listItemContents,
                     children: [
                         (0, i.jsx)(C.Z, {
                             user: e,
@@ -123,7 +123,7 @@ class x extends r.PureComponent {
                             showAccountIdentifier: !0
                         }),
                         (0, i.jsxs)('div', {
-                            className: T.actions,
+                            className: S.actions,
                             children: [
                                 null != s &&
                                     (0, i.jsx)(h.Z, {

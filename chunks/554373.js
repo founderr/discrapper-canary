@@ -70,10 +70,10 @@ function _(e) {
         let e = (0, r.Mw)(O, S);
         x(o(e, m, _, g, E)), D(e), U(S.identifier);
     }
-    function B(e) {
+    function G(e) {
         D((e = d(e, g, E)));
     }
-    function G(t) {
+    function B(t) {
         !e.isDisabled && !e.isReadOnly && (t = f((t = d(t, g, E)), L, b)) && ((t = (0, r.Mw)(t, (null == T ? void 0 : T.calendar) || new r.IQ())), T && 'hour' in T ? y(T.set(t)) : y(t));
     }
     s(O, g, E) ? D(d(O, g, E)) : 0 > O.compare(L) ? x(u(O, m, _, g, E)) : O.compare(P) > 0 && x(l(O, m, _, g, E));
@@ -84,7 +84,7 @@ function _(e) {
         isDisabled: e.isDisabled,
         isReadOnly: e.isReadOnly,
         value: A,
-        setValue: G,
+        setValue: B,
         visibleRange: {
             start: L,
             end: P
@@ -96,19 +96,19 @@ function _(e) {
         validationState: F ? 'invalid' : null,
         isValueInvalid: F,
         setFocusedDate(e) {
-            B(e), M(!0);
+            G(e), M(!0);
         },
         focusNextDay() {
-            B(O.add({ days: 1 }));
+            G(O.add({ days: 1 }));
         },
         focusPreviousDay() {
-            B(O.subtract({ days: 1 }));
+            G(O.subtract({ days: 1 }));
         },
         focusNextRow() {
-            m.days ? this.focusNextPage() : (m.weeks || m.months || m.years) && B(O.add({ weeks: 1 }));
+            m.days ? this.focusNextPage() : (m.weeks || m.months || m.years) && G(O.add({ weeks: 1 }));
         },
         focusPreviousRow() {
-            m.days ? this.focusPreviousPage() : (m.weeks || m.months || m.years) && B(O.subtract({ weeks: 1 }));
+            m.days ? this.focusPreviousPage() : (m.weeks || m.months || m.years) && G(O.subtract({ weeks: 1 }));
         },
         focusNextPage() {
             let e = L.add(V);
@@ -119,30 +119,30 @@ function _(e) {
             D(d(O.subtract(V), g, E)), x(l(c(O, e, V, _, g, E), V, _));
         },
         focusSectionStart() {
-            m.days ? B(L) : m.weeks ? B((0, r.zJ)(O, _)) : (m.months || m.years) && B((0, r.Nm)(O));
+            m.days ? G(L) : m.weeks ? G((0, r.zJ)(O, _)) : (m.months || m.years) && G((0, r.Nm)(O));
         },
         focusSectionEnd() {
-            m.days ? B(P) : m.weeks ? B((0, r.vV)(O, _)) : (m.months || m.years) && B((0, r.Vf)(O));
+            m.days ? G(P) : m.weeks ? G((0, r.vV)(O, _)) : (m.months || m.years) && G((0, r.Vf)(O));
         },
         focusNextSection(e) {
             if (!e && !m.days) {
-                B(O.add(p(m)));
+                G(O.add(p(m)));
                 return;
             }
-            m.days ? this.focusNextPage() : m.weeks ? B(O.add({ months: 1 })) : (m.months || m.years) && B(O.add({ years: 1 }));
+            m.days ? this.focusNextPage() : m.weeks ? G(O.add({ months: 1 })) : (m.months || m.years) && G(O.add({ years: 1 }));
         },
         focusPreviousSection(e) {
             if (!e && !m.days) {
-                B(O.subtract(p(m)));
+                G(O.subtract(p(m)));
                 return;
             }
-            m.days ? this.focusPreviousPage() : m.weeks ? B(O.subtract({ months: 1 })) : (m.months || m.years) && B(O.subtract({ years: 1 }));
+            m.days ? this.focusPreviousPage() : m.weeks ? G(O.subtract({ months: 1 })) : (m.months || m.years) && G(O.subtract({ years: 1 }));
         },
         selectFocusedDate() {
-            G(O);
+            B(O);
         },
         selectDate(e) {
-            G(e);
+            B(e);
         },
         isFocused: w,
         setFocused: M,
@@ -239,7 +239,7 @@ function h(e) {
                 }
             }
         },
-        [B, G] = (0, a.useState)(!1),
+        [G, B] = (0, a.useState)(!1),
         { isDateUnavailable: Z } = e,
         F = (0, a.useMemo)(() => !!I && !T && (!!(Z && (Z(I.start) || Z(I.end))) || s(I.start, h, v) || s(I.end, h, v)), [Z, I, T, h, v]),
         V = e.isInvalid || 'invalid' === e.validationState || F;
@@ -264,8 +264,8 @@ function h(e) {
             var t, n;
             return L.isInvalid(e) || s(e, null === (t = N.current) || void 0 === t ? void 0 : t.start, null === (n = N.current) || void 0 === n ? void 0 : n.end);
         },
-        isDragging: B,
-        setDragging: G
+        isDragging: G,
+        setDragging: B
     };
 }
 function m(e, t) {

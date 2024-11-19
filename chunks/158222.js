@@ -28,7 +28,7 @@ async function s(e) {
         let t = (
             await i.tn.get({
                 url: a.ANM.MEDIA_POST_RESHARE_GET_PREVIEW(e),
-                rejectWithError: !1
+                rejectWithError: !0
             })
         ).body;
         r.Z.dispatch({

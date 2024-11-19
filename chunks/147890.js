@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         goHome: function () {
-            return f;
+            return b;
         },
         goSearch: function () {
             return h;
@@ -10,7 +10,7 @@ n.r(t),
             return _;
         },
         goToApplication: function () {
-            return b;
+            return f;
         },
         goToApplicationSection: function () {
             return g;
@@ -54,7 +54,7 @@ let _ = (e) => {
         };
         switch ((r.default.track(u.rMx.APP_DIRECTORY_OPENED, { source: null == C ? void 0 : C.name }), (0, l.resetApplicationDirectoryHistory)(), (0, l.setEntrypoint)(C), null != n && (0, l.setGuildId)(n), t === l.ApplicationDirectoryViews.APPLICATION && null == a && (t = l.ApplicationDirectoryViews.HOME), t)) {
             case l.ApplicationDirectoryViews.HOME:
-                f();
+                b();
                 break;
             case l.ApplicationDirectoryViews.SEARCH:
                 h();
@@ -75,15 +75,15 @@ let _ = (e) => {
                         });
                         break;
                     }
-                    b({ applicationId: a });
+                    f({ applicationId: a });
                 }
         }
     },
-    f = () => {
+    b = () => {
         let e = { previousView: (0, l.getCurrentView)() };
         (0, a.uL)(u.Z5c.APPLICATION_DIRECTORY, { state: e });
     },
-    b = (e) => {
+    f = (e) => {
         let { applicationId: t } = e,
             n = { previousView: (0, l.getCurrentView)() };
         (0, a.uL)(u.Z5c.APPLICATION_DIRECTORY_PROFILE(t), { state: n });

@@ -1,19 +1,19 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return a;
+        return r;
     }
 });
-var i = n(442837),
-    l = n(430824),
-    r = n(981631);
-function a(e) {
+var i = t(442837),
+    a = t(430824),
+    l = t(981631);
+function r(e) {
     return (0, i.e7)(
-        [l.Z],
+        [a.Z],
         () => {
-            var t;
+            var n;
             if (null == e) return !1;
-            let n = l.Z.getGuild(e);
-            return null !== (t = null == n ? void 0 : n.hasFeature(r.oNc.HUB)) && void 0 !== t && t;
+            let t = a.Z.getGuild(e);
+            return null !== (n = null == t ? void 0 : t.hasFeature(l.oNc.HUB)) && void 0 !== n && n;
         },
         [e]
     );

@@ -36,9 +36,9 @@ try {
     } catch (e) {}
 }
 let v = h.ZP.requireModule('discord_rpc').RPCWebSocket,
-    S = window.GLOBAL_ENV.MARKETING_ENDPOINT,
+    T = window.GLOBAL_ENV.MARKETING_ENDPOINT,
     N = new d.Z('RPCServer:WSS'),
-    T = [];
+    S = [];
 function A(e) {
     return 'function' == typeof e ? e() : e;
 }
@@ -132,7 +132,7 @@ class O extends l.EventEmitter {
                 s = function () {
                     var e;
                     let { protocol: i, host: r } = o.parse(null !== (e = n.get('callback')) && void 0 !== e ? e : '');
-                    i === location.protocol && r === location.host ? t.setHeader('Location', n.get('callback')) : t.setHeader('Location', S), t.writeHead(301), t.end();
+                    i === location.protocol && r === location.host ? t.setHeader('Location', n.get('callback')) : t.setHeader('Location', T), t.writeHead(301), t.end();
                 },
                 c = new y(l ? x.bind(null, e, t) : s, l ? Z.bind(null, e, t, 400) : s, Number(n.get('v')), r);
             if (l)
@@ -167,11 +167,11 @@ class O extends l.EventEmitter {
         N.info('Socket Opened: '.concat(i.id)),
             e.on('error', (e) => N.error('WS Error: '.concat(e.message))),
             e.on('close', (e, t) => {
-                N.info('Socket Closed: '.concat(i.id, ', code ').concat(e, ', message ').concat(t)), s().remove(T, (e) => e === i), this.emit('disconnect', i);
+                N.info('Socket Closed: '.concat(i.id, ', code ').concat(e, ', message ').concat(t)), s().remove(S, (e) => e === i), this.emit('disconnect', i);
             }),
             (0, f.em)(i, l, r.get('client_id'))
                 .then(() => {
-                    T.push(i), e.on('message', (e) => this.handleMessage(i, e)), this.emit('connect', i);
+                    S.push(i), e.on('message', (e) => this.handleMessage(i, e)), this.emit('connect', i);
                 })
                 .catch((e) => {
                     let { code: t, message: n } = e;

@@ -16,7 +16,7 @@ async function a(e) {
                 user_discount: n,
                 user_discount_offer: a
             },
-            rejectWithError: !1
+            rejectWithError: !0
         });
         if (e.ok) return e.body;
         return r.Z.captureMessage('fetchPremiumMarketingContentWithUserOffer failed'), [];

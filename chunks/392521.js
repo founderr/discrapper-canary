@@ -95,7 +95,7 @@ let o = 'premium_tier_2_gradient',
     f = (0, a.jsxs)('defs', {
         children: [u, g, m]
     }),
-    _ = (e) => {
+    p = (e) => {
         let { className: t, fill: n, gradient: i } = e;
         return (0, a.jsxs)('svg', {
             width: '470',
@@ -126,7 +126,7 @@ let o = 'premium_tier_2_gradient',
             ]
         });
     },
-    p = (e) => {
+    _ = (e) => {
         let { className: t, fill: n, gradient: i } = e;
         return (0, a.jsxs)('svg', {
             width: '453',
@@ -164,13 +164,13 @@ t.ZP = (e) => {
         u = (0, s.wj)(i) ? '#F2F3F5' : 'url(#'.concat(c, ')');
     switch (n) {
         case 0:
-            return (0, a.jsx)(p, {
+            return (0, a.jsx)(_, {
                 className: t,
                 fill: u,
                 gradient: r
             });
         case 1:
-            return (0, a.jsx)(_, {
+            return (0, a.jsx)(p, {
                 className: t,
                 fill: u,
                 gradient: r

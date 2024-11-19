@@ -27,7 +27,7 @@ async function p() {
                         url: t,
                         query: { locale: o.default.locale },
                         oldFormErrors: !0,
-                        rejectWithError: !1
+                        rejectWithError: !0
                     })
                 ).body,
                 i = d.Z.consumedInboundPromotionId;
@@ -53,7 +53,7 @@ async function h() {
                 await r.tn.get({
                     url: _.ANM.BOGO_PROMOTIONS,
                     query: { locale: o.default.locale },
-                    rejectWithError: !1
+                    rejectWithError: !0
                 })
             ).body;
             a.Z.dispatch({

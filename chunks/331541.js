@@ -22,9 +22,9 @@ var i = n(200651),
     I = n(158238),
     C = n(300284),
     v = n(680295),
-    S = n(785717),
+    T = n(785717),
     N = n(221292),
-    T = n(481046),
+    S = n(481046),
     A = n(816988),
     b = n(687158),
     x = n(899007),
@@ -32,8 +32,8 @@ var i = n(200651),
     L = n(867176),
     y = n(438163),
     O = n(537006),
-    R = n(483424),
-    P = n(681837),
+    P = n(483424),
+    R = n(681837),
     j = n(502762),
     D = n(530),
     M = n(544989),
@@ -42,8 +42,8 @@ var i = n(200651),
     U = n(171368),
     G = n(420654),
     B = n(695346),
-    V = n(158776),
-    H = n(246946),
+    H = n(158776),
+    V = n(246946),
     F = n(572004),
     z = n(70956),
     Y = n(5192),
@@ -171,7 +171,7 @@ function es(e) {
         ec = (0, b.ZP)(z.id),
         ed = (0, u.O)(),
         { analyticsLocations: eu } = (0, g.ZP)(p.Z.ACCOUNT_PROFILE_POPOUT),
-        eh = (0, S.ZB)({
+        eh = (0, T.ZB)({
             layout: 'SIMPLIFIED_ACCOUNT_POPOUT',
             userId: z.id
         }),
@@ -180,8 +180,8 @@ function es(e) {
     r.useEffect(() => {
         null == es || es(em.current);
     }, [em, es]);
-    let eg = (0, o.e7)([V.Z], () => V.Z.getStatus(z.id)),
-        ef = (0, o.e7)([H.Z], () => H.Z.hidePersonalInformation),
+    let eg = (0, o.e7)([H.Z], () => H.Z.getStatus(z.id)),
+        ef = (0, o.e7)([V.Z], () => V.Z.hidePersonalInformation),
         e_ = (0, E.p)(),
         eE = B.Sb.useSetting(),
         eI = (0, f.a)(),
@@ -299,9 +299,9 @@ function es(e) {
             });
         })(eg),
         ev = (0, X.g)(q),
-        eS = (0, C.Z)({ analyticsLocations: eu }),
-        { customStatusBubbleEditEnabled: eN } = (0, T.K)({ location: 'AccountProfilePopout' }),
-        { dimissibleUpsellsEnabled: eT } = (0, A.u)({ location: 'AccountProfilePopout' }),
+        eT = (0, C.Z)({ analyticsLocations: eu }),
+        { customStatusBubbleEditEnabled: eN } = (0, S.K)({ location: 'AccountProfilePopout' }),
+        { dimissibleUpsellsEnabled: eS } = (0, A.u)({ location: 'AccountProfilePopout' }),
         eA = (0, W.I5)(z),
         eb = (e) => {
             null == q || q(),
@@ -324,7 +324,7 @@ function es(e) {
         };
     return (0, i.jsx)(g.Gt, {
         value: eu,
-        children: (0, i.jsx)(S.Mt, {
+        children: (0, i.jsx)(T.Mt, {
             value: eh,
             children: (0, i.jsx)(c.Dialog, {
                 ref: em,
@@ -386,7 +386,7 @@ function es(e) {
                                     }),
                                     nicknameIcons: (0, i.jsxs)(i.Fragment, {
                                         children: [
-                                            (0, i.jsx)(P.Z, { userId: z.id }),
+                                            (0, i.jsx)(R.Z, { userId: z.id }),
                                             (0, i.jsx)(w.Z, {
                                                 user: z,
                                                 isHovering: ep
@@ -400,12 +400,12 @@ function es(e) {
                                     hidePersonalInformation: ef,
                                     onClose: q
                                 }),
-                                eT &&
+                                eS &&
                                     (0, i.jsx)(O.Z, {
                                         isPremiumUser: eA,
                                         onInteraction: q
                                     }),
-                                (0, i.jsx)(R.Z, {
+                                (0, i.jsx)(P.Z, {
                                     user: z,
                                     currentUser: z,
                                     onClose: q
@@ -427,7 +427,7 @@ function es(e) {
                                                                     label: et.intl.string(et.t.s5vZlZ),
                                                                     icon: c.PencilIcon,
                                                                     onClick: () => {
-                                                                        eS(), q();
+                                                                        eT(), q();
                                                                     }
                                                                 }),
                                                                 (0, i.jsx)('div', { className: en.menuDivider })

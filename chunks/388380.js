@@ -6,7 +6,7 @@ t.Z = {
         try {
             let e = await i.tn.get({
                 url: l.ANM.FRIEND_SUGGESTIONS,
-                rejectWithError: !1
+                rejectWithError: !0
             });
             r.Z.dispatch({
                 type: 'LOAD_FRIEND_SUGGESTIONS_SUCCESS',
@@ -19,7 +19,7 @@ t.Z = {
     ignore(e) {
         i.tn.del({
             url: l.ANM.FRIEND_SUGGESTION(e),
-            rejectWithError: !1
+            rejectWithError: !0
         });
     }
 };

@@ -21,7 +21,7 @@ t.Z = {
                 .get({
                     url: f.ANM.CALL(e),
                     oldFormErrors: !0,
-                    rejectWithError: !1
+                    rejectWithError: !0
                 })
                 .then(
                     (e) => {
@@ -55,7 +55,7 @@ t.Z = {
                 url: f.ANM.CALL_RING(e),
                 body: { recipients: t },
                 oldFormErrors: !0,
-                rejectWithError: !1
+                rejectWithError: !0
             });
             return;
         }
@@ -70,6 +70,6 @@ t.Z = {
             url: f.ANM.CALL_STOP_RINGING(e),
             body: { recipients: t },
             oldFormErrors: !0,
-            rejectWithError: !1
+            rejectWithError: !0
         })
 };

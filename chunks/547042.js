@@ -26,13 +26,13 @@ var i,
     C = n(339800);
 ((i = r || (r = {})).BOOSTING = 'BOOSTING'), (i.NITRO = 'NITRO'), (i.BASH_OUT = 'BASH_OUT'), (i.GAME_NIGHT = 'GAME_NIGHT');
 let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356018217/Activities_NUX_GL_1.mp4',
-    S = 'https://cdn.discordapp.com/attachments/887469171804356628/916446867586416660/activities-video-poster-512.png',
+    T = 'https://cdn.discordapp.com/attachments/887469171804356628/916446867586416660/activities-video-poster-512.png',
     N = (e) => {
         let { channelId: t, markAsDismissed: n, tutorialType: i } = e,
             {
                 analyticsLocation: r,
                 analyticsType: N,
-                ctaText: T,
+                ctaText: S,
                 dismissText: A,
                 description: b,
                 learnMore: x,
@@ -49,7 +49,7 @@ let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                             description: I.intl.string(I.t.eDjBOT),
                             learnMore: !0,
                             title: I.intl.string(I.t.wbiFFB),
-                            videoPosterUrl: S,
+                            videoPosterUrl: T,
                             videoUrl: v,
                             ctaText: I.intl.string(I.t['5SaQDw']),
                             dismissText: I.intl.string(I.t.WAI6xs)
@@ -61,7 +61,7 @@ let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                             description: I.intl.string(I.t.qJn0bW),
                             learnMore: !0,
                             title: I.intl.string(I.t.g8itmp),
-                            videoPosterUrl: S,
+                            videoPosterUrl: T,
                             videoUrl: v,
                             ctaText: I.intl.string(I.t['5SaQDw']),
                             dismissText: I.intl.string(I.t.WAI6xs)
@@ -104,14 +104,14 @@ let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                         };
                 }
             })(i),
-            { analyticsLocations: R } = (0, m.ZP)(r);
+            { analyticsLocations: P } = (0, m.ZP)(r);
         a.useEffect(() => {
             f.default.track(_.rMx.TOOLTIP_VIEWED, { type: N });
         }, [N]);
-        let P = (0, c.bp)() === _.IlC.POPOUT,
+        let R = (0, c.bp)() === _.IlC.POPOUT,
             j = (0, s.e7)([g.Z], () => g.Z.getChannel(t), [t]);
         return (0, l.jsx)(m.Gt, {
-            value: R,
+            value: P,
             children: (0, l.jsx)('div', {
                 className: C.wrapper,
                 children: (0, l.jsx)('div', {
@@ -184,13 +184,13 @@ let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                                                                   object: _.qAy.ACTIVITIES_COACH_MARK,
                                                                   objectType: _.Qqv.ACTIVITY
                                                               },
-                                                              openInPopout: P,
-                                                              analyticsLocations: R,
+                                                              openInPopout: R,
+                                                              analyticsLocations: P,
                                                               opensAppLauncherModal: !0
                                                           }),
                                                               (0, d.w1)({ guildId: j.guild_id });
                                                   },
-                                        children: T
+                                        children: S
                                     })
                                 ]
                             })

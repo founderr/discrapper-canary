@@ -31,13 +31,13 @@ t.Z = function (e) {
         }),
         P = (0, r.e7)([c.Z], () => c.Z.didAgree(j)) && !y,
         M = l.useMemo(() => !N && ((I.isPrivate() && !I.isManaged()) || (null != j && (!I.isNSFW() || P) && S && d.Z.canChatInGuild(j))), [S, P, I, j, N]),
-        L = A ? (_.TPd.GUILD_THREADS_ONLY.has(I.type) ? v.intl.string(v.t.RBBLhI) : v.intl.string(v.t.gUx4en)) : b ? v.intl.format(v.t.dYP2FR, { destination: (0, s.F6)(I, m.default, p.Z, !0) }) : v.intl.string(v.t.h76ulJ);
+        R = A ? (_.TPd.GUILD_THREADS_ONLY.has(I.type) ? v.intl.string(v.t.RBBLhI) : v.intl.string(v.t.gUx4en)) : b ? v.intl.format(v.t.dYP2FR, { destination: (0, s.F6)(I, m.default, p.Z, !0) }) : v.intl.string(v.t.h76ulJ);
     return T || !M
         ? null
         : (0, i.jsx)(C.Z, {
               className: t,
               style: n,
-              title: L,
+              title: R,
               description: A ? v.intl.string(v.t.lpgkzs) : v.intl.string(v.t.usQh4O),
               icons: x.J6,
               onDrop: (e) => {

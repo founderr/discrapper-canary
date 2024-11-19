@@ -16,8 +16,8 @@ var i = n(200651),
     g = n(481060),
     m = n(570140),
     f = n(355467),
-    _ = n(37234),
-    p = n(821849),
+    p = n(37234),
+    _ = n(821849),
     h = n(230711),
     E = n(497321),
     b = n(634894),
@@ -42,8 +42,8 @@ var i = n(200651),
     L = n(898997),
     U = n(197115),
     D = n(823188),
-    G = n(504865),
-    H = n(179984),
+    H = n(504865),
+    G = n(179984),
     V = n(938736),
     F = n(386733),
     W = n(474936),
@@ -62,7 +62,7 @@ function ee(e) {
         d = n || l,
         m = null != t.trialEndsAt ? o()(t.trialEndsAt).diff(o()(), 'd') : 0,
         f = W.GP[t.planIdFromItems],
-        _ = B.ZP.formatPriceString(B.ZP.getDefaultPrice(f.id), f.interval);
+        p = B.ZP.formatPriceString(B.ZP.getDefaultPrice(f.id), f.interval);
     return d
         ? (0, i.jsxs)(i.Fragment, {
               children: [
@@ -86,24 +86,24 @@ function ee(e) {
                               }
                               return Y.intl.format(Y.t['2CGBrq'], {
                                   remainingTime: m,
-                                  price: _
+                                  price: p
                               });
                           }
                           if (c)
                               return Y.intl.format(Y.t['+qqh6u'], {
                                   percent: null !== (e = null == a ? void 0 : a.percentage) && void 0 !== e ? e : W.Bo,
-                                  regularPrice: _
+                                  regularPrice: p
                               });
                           return Y.intl.formatToPlainString(Y.t['3Ziutb'], {
                               percent: null !== (n = null == a ? void 0 : a.percentage) && void 0 !== n ? n : W.M_,
-                              regularPrice: _,
+                              regularPrice: p,
                               numMonths: null !== (i = null == a ? void 0 : a.duration) && void 0 !== i ? i : W.rt
                           });
                       })()
                   })
               ]
           })
-        : (0, i.jsx)(G.Z, {
+        : (0, i.jsx)(H.Z, {
               variant: void 0,
               subscriptionTier: W.Si.TIER_2,
               interval: f.interval
@@ -162,7 +162,7 @@ function et() {
                                 cta_type: 'to_premium_home_button',
                                 target: 'premium home page'
                             }),
-                                (0, _.xf)(),
+                                (0, p.xf)(),
                                 (0, A.uL)(z.Z5c.APPLICATION_STORE);
                         },
                         children: (0, i.jsx)(g.Text, {
@@ -299,8 +299,8 @@ t.Z = function () {
         s = (0, I.V)(),
         [l, o] = r.useState(!0),
         { fractionalState: u } = (0, N.Z)(),
-        _ = (0, k.n)(),
-        h = null == _ ? void 0 : _.countryCode,
+        p = (0, k.n)(),
+        h = null == p ? void 0 : p.countryCode,
         x = (0, c.e7)([j.Z], () => j.Z.enabled),
         A = 'PremiumManagementSettings';
     (0, b.j)({
@@ -316,7 +316,7 @@ t.Z = function () {
         M = (0, V.pn)('PremiumManagementSettings');
     r.useEffect(() => {
         m.Z.wait(async () => {
-            !x && !e && (await Promise.all([f.jg(), f.tZ(), (0, p.Y2)(h, null, z.JjL.DISCOVERY)])), o(!1);
+            !x && !e && (await Promise.all([f.jg(), f.tZ(), (0, _.Y2)(h, null, z.JjL.DISCOVERY)])), o(!1);
         });
     }, [h, x, e]);
     let [B, w] = r.useState(!1);
@@ -341,7 +341,7 @@ t.Z = function () {
                         (0, i.jsx)(et, {}),
                         (Z || M) && (0, i.jsx)(F.Z, { isInSettings: !0 }),
                         (0, i.jsx)(ei, {}),
-                        (0, i.jsx)(H.Z, {
+                        (0, i.jsx)(G.Z, {
                             className: K.__invalid_planComparisonTable,
                             hideCTAs: !0,
                             headingOverride: Y.intl.string(Y.t.dnVvQU),

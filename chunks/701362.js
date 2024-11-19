@@ -27,8 +27,8 @@ var i = n(200651),
     Z = n(718805),
     C = n(871118),
     y = n(981631),
-    T = n(388032),
-    b = n(67338);
+    b = n(388032),
+    T = n(67338);
 class A extends l.PureComponent {
     componentDidMount() {
         let { user: e, streamApplication: t } = this.props;
@@ -45,19 +45,19 @@ class A extends l.PureComponent {
         let { onWatch: t, activeStream: n, currentUserId: l, canWatch: a, unavailableReason: r } = this.props;
         return (0, i.jsxs)(o.Clickable, {
             onClick: t,
-            className: b.previewContainer,
+            className: T.previewContainer,
             children: [
                 (0, i.jsx)(C.Z, {
-                    className: b.previewImage,
+                    className: T.previewImage,
                     stream: e
                 }),
                 a
                     ? (0, i.jsx)('div', {
-                          className: b.previewHover,
+                          className: T.previewHover,
                           children: (0, i.jsx)(o.Text, {
                               variant: 'text-sm/normal',
                               color: 'none',
-                              className: b.white,
+                              className: T.white,
                               children: (0, Z.Z)(e, n, l, r)
                           })
                       })
@@ -70,13 +70,13 @@ class A extends l.PureComponent {
         return null == n
             ? null
             : (0, i.jsx)('div', {
-                  className: r()(b.streamPreviewWrapper, { [b.mounted]: l }),
+                  className: r()(T.streamPreviewWrapper, { [T.mounted]: l }),
                   children: (0, i.jsxs)('div', {
-                      className: b.streamPreview,
+                      className: T.streamPreview,
                       children: [
                           this.renderPreview(n),
                           (0, i.jsxs)('div', {
-                              className: b.body,
+                              className: T.body,
                               children: [
                                   null != e
                                       ? (0, i.jsx)(c.Z, {
@@ -100,15 +100,15 @@ class A extends l.PureComponent {
                                             user: t,
                                             guildId: n.guildId,
                                             channelId: n.channelId,
-                                            className: b.activityActions,
-                                            color: b.watchButton,
+                                            className: T.activityActions,
+                                            color: T.watchButton,
                                             onAction: a
                                         }),
                                   !s &&
                                       (0, i.jsx)(m.Z, {
                                           type: m.Z.Types.INLINE,
-                                          className: b.protip,
-                                          children: __OVERLAY__ ? T.intl.string(T.t['YRdw7+']) : T.intl.string(T.t.CCTgbG)
+                                          className: T.protip,
+                                          children: __OVERLAY__ ? b.intl.string(b.t['YRdw7+']) : b.intl.string(b.t.CCTgbG)
                                       })
                               ]
                           })

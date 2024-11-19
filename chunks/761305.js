@@ -40,7 +40,7 @@ class _ extends (i = s.PureComponent) {
                     guild_id: t.guild_id
                 },
                 oldFormErrors: !0,
-                rejectWithError: !1
+                rejectWithError: !0
             })
             .then(
                 (e) => {

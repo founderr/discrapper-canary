@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return P;
+        return R;
     }
 }),
     n(47120);
@@ -23,9 +23,9 @@ var i = n(200651),
     I = n(973616),
     C = n(592125),
     v = n(626135),
-    S = n(823379),
+    T = n(823379),
     N = n(404295),
-    T = n(728345),
+    S = n(728345),
     A = n(812206),
     b = n(981631),
     x = n(388032),
@@ -37,7 +37,7 @@ async function y(e, t, n) {
     if (null == i)
         try {
             var r, l, a;
-            i = null !== (a = null === (r = A.Z.getApplication(e.id)) || void 0 === r ? void 0 : r.bot) && void 0 !== a ? a : null === (l = I.Z.createFromServer(await (0, T.UM)(e.id))) || void 0 === l ? void 0 : l.bot;
+            i = null !== (a = null === (r = A.Z.getApplication(e.id)) || void 0 === r ? void 0 : r.bot) && void 0 !== a ? a : null === (l = I.Z.createFromServer(await (0, S.UM)(e.id))) || void 0 === l ? void 0 : l.bot;
         } catch (e) {
             t(void 0);
             return;
@@ -122,7 +122,7 @@ function O(e) {
         })
     });
 }
-function R(e) {
+function P(e) {
     let { frecentApps: t, loadingAppId: n, setLoadingAppId: r, analyticsLocations: l } = e;
     return (0, i.jsx)('div', {
         className: Z.itemContainer,
@@ -142,7 +142,7 @@ function R(e) {
         })
     });
 }
-function P() {
+function R() {
     let e = (0, N.en)(h.Z.APP_DMS_QUICK_LAUNCHER),
         { frecentApps: t } = (0, p.f)({
             channel: void 0,
@@ -158,7 +158,7 @@ function P() {
             () =>
                 t
                     .map((e) => e.application)
-                    .filter(S.lm)
+                    .filter(T.lm)
                     .slice(0, 5),
             [t]
         );
@@ -179,7 +179,7 @@ function P() {
                               children: x.intl.string(x.t.vayAzs)
                           })
                       }),
-                      (0, i.jsx)(R, {
+                      (0, i.jsx)(P, {
                           frecentApps: u,
                           loadingAppId: n,
                           setLoadingAppId: l,

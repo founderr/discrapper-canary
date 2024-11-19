@@ -21,7 +21,7 @@ n.d(t, {
         return eT;
     },
     GV: function () {
-        return B;
+        return G;
     },
     K2: function () {
         return eS;
@@ -117,7 +117,7 @@ n.d(t, {
         return ev;
     },
     sF: function () {
-        return G;
+        return B;
     },
     sk: function () {
         return $;
@@ -220,7 +220,7 @@ async function y(e) {
         await s.tn.get({
             url: E.ANM.BILLING_STRIPE_PAYMENT_INTENTS(e),
             oldFormErrors: !0,
-            rejectWithError: !1
+            rejectWithError: !0
         })
     ).body;
     return t;
@@ -230,7 +230,7 @@ async function A(e) {
         await s.tn.get({
             url: E.ANM.BILLING_STRIPE_PAYMENT_INTENTS(e),
             oldFormErrors: !0,
-            rejectWithError: !1
+            rejectWithError: !0
         })
     ).body;
     return {
@@ -243,7 +243,7 @@ async function N() {
         await s.tn.post({
             url: E.ANM.BILLING_STRIPE_SETUP_INTENT_SECRET,
             oldFormErrors: !0,
-            rejectWithError: !1
+            rejectWithError: !0
         })
     ).body.client_secret;
 }
@@ -538,7 +538,7 @@ function k(e, t, n) {
 function U(e, t, n) {
     return R(E.gg$.BRAINTREE, e, t, { analyticsLocation: n });
 }
-async function B(e, t, n, r) {
+async function G(e, t, n, r) {
     if (null == e) throw O('Stripe not loaded');
     let i = await C(t),
         { name: s, line1: o, line2: l, city: u, state: c, postalCode: d, country: f } = t,
@@ -565,7 +565,7 @@ async function B(e, t, n, r) {
         analyticsLocation: r
     });
 }
-async function G(e, t, n) {
+async function B(e, t, n) {
     let r = await C(e),
         i = { type: b.QL.get(t) };
     return R(E.gg$.ADYEN, JSON.stringify(i), e, {
@@ -713,7 +713,7 @@ async function H(e) {
 async function Y(e) {
     let t = await s.tn.get({
         url: E.ANM.BILLING_PAYMENT(e),
-        rejectWithError: !1
+        rejectWithError: !0
     });
     return (
         o.Z.dispatch({
@@ -777,7 +777,7 @@ async function z() {
     try {
         let e = await s.tn.get({
             url: E.ANM.BILLING_PERKS_RELEVANCE,
-            rejectWithError: !1
+            rejectWithError: !0
         });
         o.Z.dispatch({
             type: 'BILLING_PERKS_RELEVANCE_FETCH_SUCCESS',
@@ -791,7 +791,7 @@ async function q() {
     try {
         let e = await s.tn.get({
             url: E.ANM.BILLING_NITRO_AFFINITY,
-            rejectWithError: !1
+            rejectWithError: !0
         });
         o.Z.dispatch({
             type: 'BILLING_NITRO_AFFINITY_FETCH_SUCCEEDED',
@@ -815,7 +815,7 @@ async function Q() {
                 subscription_type: b.NY.PREMIUM
             },
             oldFormErrors: !0,
-            rejectWithError: !1
+            rejectWithError: !0
         });
         return (
             e.ok
@@ -1239,7 +1239,7 @@ async function eE(e) {
     } = await s.tn.post({
         url: E.ANM.BILLING_POPUP_BRIDGE(e),
         oldFormErrors: !0,
-        rejectWithError: !1
+        rejectWithError: !0
     });
     return (
         o.Z.dispatch({

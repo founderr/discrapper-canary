@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return S;
     }
 });
 var i = n(200651),
@@ -22,15 +22,15 @@ var i = n(200651),
     I = n(273596),
     C = n(128449),
     v = n(49898),
-    S = n(388032),
+    T = n(388032),
     N = n(491588);
-function T() {
+function S() {
     let e = r.useRef((0, a.P)()),
-        { onScroll: t, scrollPosition: n, resetScrollPosition: T } = (0, s.M)(),
+        { onScroll: t, scrollPosition: n, resetScrollPosition: S } = (0, s.M)(),
         { tabs: A, selectedTab: b, setSelectedTab: x } = (0, _.Y)(),
         Z = (0, p.lg)(b),
         L = !C.MU.has(b),
-        { searchQuery: y, onSearchTextChange: O, onClearSearch: R, onSearchSubmit: P, isSearchVisible: j } = (0, f.H)({ loadId: e.current }),
+        { searchQuery: y, onSearchTextChange: O, onClearSearch: P, onSearchSubmit: R, isSearchVisible: j } = (0, f.H)({ loadId: e.current }),
         {
             searchBarState: D,
             onTabsAvailableWidthChange: M,
@@ -44,11 +44,11 @@ function T() {
         G = h.Z.useField('fetchedQuery'),
         B = r.useCallback(
             (e) => {
-                x(e), j && R();
+                x(e), j && P();
             },
-            [j, R, x]
+            [j, P, x]
         ),
-        V = r.useMemo(
+        H = r.useMemo(
             () =>
                 j
                     ? A.filter((e) => {
@@ -58,18 +58,18 @@ function T() {
                     : A,
             [A, j]
         ),
-        H = r.useRef(new m.Z(Z)),
+        V = r.useRef(new m.Z(Z)),
         { onGuildCardSeen: F, onGuildCardClick: z } = (0, g.H)({
-            guildDiscoveryCardSeenManager: H.current,
+            guildDiscoveryCardSeenManager: V.current,
             loadId: e.current
         });
     return (
         r.useEffect(() => {
-            H.current.flushSeenGuilds(e.current);
+            V.current.flushSeenGuilds(e.current);
         }, [Z]),
         r.useEffect(() => {
-            T();
-        }, [b, T]),
+            S();
+        }, [b, S]),
         r.useEffect(() => {
             !j && h.Z.setState({ scrollPosition: null });
         }, [j]),
@@ -83,13 +83,13 @@ function T() {
                         j
                             ? (0, i.jsx)(c.Cm, {
                                   icon: l.ArrowLargeLeftIcon,
-                                  onClick: R
+                                  onClick: P
                               })
                             : (0, i.jsx)(c.aV, { icon: l.ServerIcon }),
                         !j &&
                             (0, i.jsx)(d.Z, {
                                 className: U,
-                                tabs: V,
+                                tabs: H,
                                 selectedTab: j ? null : b,
                                 onTabSelect: B,
                                 onAvailableWidthChange: M
@@ -99,15 +99,15 @@ function T() {
                                 variant: 'heading-lg/semibold',
                                 color: 'header-primary',
                                 className: N.searchResultsHeader,
-                                children: S.intl.format(S.t.zHdzqa, { query: G })
+                                children: T.intl.format(T.t.zHdzqa, { query: G })
                             }),
                         L &&
                             (0, i.jsx)(u.Z, {
                                 query: y,
-                                placeholder: S.intl.string(S.t['5h0QOD']),
+                                placeholder: T.intl.string(T.t['5h0QOD']),
                                 onTextChange: O,
-                                onClear: R,
-                                onSubmit: P,
+                                onClear: P,
+                                onSubmit: R,
                                 onCollapsedClick: w,
                                 state: j ? v.WB.DEFAULT : D,
                                 onBlur: k

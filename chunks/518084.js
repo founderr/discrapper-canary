@@ -1,6 +1,6 @@
 n.d(t, {
     wB: function () {
-        return E;
+        return _;
     }
 }),
     n(411104);
@@ -19,15 +19,15 @@ var i,
     g = n(626881),
     m = n(639944);
 let v = f.t_t.DEFAULT,
-    E = 1,
-    _ = o.createContext({
+    _ = 1,
+    E = o.createContext({
         type: v,
-        opacity: E
+        opacity: _
     }),
     x = o.createContext(void 0),
     Z = (e) => {
         let { children: t, className: n, ...i } = e;
-        return (0, l.jsx)(_.Consumer, {
+        return (0, l.jsx)(E.Consumer, {
             children: (e) => {
                 let { type: r } = e;
                 return (0, l.jsx)(x.Consumer, {
@@ -47,7 +47,7 @@ class S extends (i = o.PureComponent) {
         let { disableScroll: e, children: t, className: n } = this.props;
         return (0, l.jsx)(x.Consumer, {
             children: (i) =>
-                (0, l.jsx)(_.Consumer, {
+                (0, l.jsx)(E.Consumer, {
                     children: (r) => {
                         let s = d()(g.body, g[h()(r.type)], n);
                         return e
@@ -76,8 +76,8 @@ class S extends (i = o.PureComponent) {
           })
         : (r[s] = a);
 let I = (e) => {
-        let { type: t = v, width: n, height: i, children: r, className: s, opacity: a = E, onClick: o } = e;
-        return (0, l.jsx)(_.Provider, {
+        let { type: t = v, width: n, height: i, children: r, className: s, opacity: a = _, onClick: o } = e;
+        return (0, l.jsx)(E.Provider, {
             value: {
                 type: t,
                 opacity: a
@@ -108,7 +108,7 @@ let I = (e) => {
     let { children: t, opacityOverride: n } = e;
     if (null == t) return null;
     let i = [Z, S, C];
-    return (0, l.jsx)(_.Consumer, {
+    return (0, l.jsx)(E.Consumer, {
         children: (e) => {
             let { opacity: r } = e,
                 s = { backgroundColor: 'rgba(54, 57, 63, '.concat('' + (null != n ? n : r), ')') };

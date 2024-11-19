@@ -16,11 +16,11 @@ n(442837), n(239091), n(434650);
 var l = n(835473),
     u = n(686546);
 n(216742), n(246364), n(937111), n(703656), n(271383), n(594174);
-var c = n(970606);
-n(963202), n(905362);
-var d = n(603368),
-    f = n(353093),
-    _ = n(169559),
+var c = n(970606),
+    d = n(963202);
+n(905362);
+var f = n(603368),
+    _ = n(353093),
     p = n(449480),
     h = n(114487),
     m = n(214715),
@@ -33,13 +33,13 @@ function I(e) {
     let { wildcardDescriptors: t, primaryColor: n } = e,
         a = t.filter((e) => e !== E.U6).join(', '),
         s = (0, o.useToken)(o.tokens.colors.BACKGROUND_FLOATING),
-        l = (0, d.pX)(n, s.hex()),
+        l = (0, f.pX)(n, s.hex()),
         u = i.useRef(null),
-        [c, f] = i.useState(!1);
+        [c, d] = i.useState(!1);
     if (
         (i.useEffect(() => {
             let e = u.current;
-            null != e && null != e.offsetWidth && null != e.scrollWidth && f(e.offsetWidth < e.scrollWidth);
+            null != e && null != e.offsetWidth && null != e.scrollWidth && d(e.offsetWidth < e.scrollWidth);
         }, []),
         0 === a.length)
     )
@@ -172,16 +172,16 @@ function y(e) {
 }
 function A(e) {
     var t;
-    let { clan: n, bannerComponent: a, expanded: d, isMember: m = !1, traitsToHighlight: A, prioritizedGameIds: N, className: C, position: R, showBrandingFooter: O = !1, bannerUrl: D, onlyAnimateIconOnHover: L = !1, hasPendingJoinRequest: x = !1, atMaxMemberCapacity: w = !1, footer: M = null } = e,
+    let { clan: n, bannerComponent: a, expanded: f, isMember: m = !1, traitsToHighlight: A, prioritizedGameIds: N, className: C, position: R, showBrandingFooter: O = !1, bannerUrl: D, onlyAnimateIconOnHover: L = !1, hasPendingJoinRequest: x = !1, atMaxMemberCapacity: w = !1, footer: M = null } = e,
         {
             tag: P,
             badge: k,
-            branding: { primaryColor: U, secondaryColor: B },
-            bannerHash: G,
+            branding: { primaryColor: U, secondaryColor: G },
+            bannerHash: B,
             gameActivity: Z
         } = n,
         F = (0, l.Z)(n.games),
-        V = (0, _.Z)('clan_discovery_card'),
+        V = (0, d.iN)('clan_discovery_card'),
         [j, H] = i.useState(!1),
         Y = i.useRef(null),
         [W, K] = i.useState(!1),
@@ -192,8 +192,8 @@ function A(e) {
             H(!1);
         }, []),
         Q = v.intl.formatToPlainString(v.t['0WHArK'], { count: n.memberCount }),
-        X = null != D ? D : (0, f.pY)(n.id, G),
-        J = null == a && null == X ? { background: 'linear-gradient(90deg, '.concat(U, ', ').concat(B, ')') } : void 0,
+        X = null != D ? D : (0, _.pY)(n.id, B),
+        J = null == a && null == X ? { background: 'linear-gradient(90deg, '.concat(U, ', ').concat(G, ')') } : void 0,
         $ =
             null != a
                 ? a
@@ -220,7 +220,7 @@ function A(e) {
         [R, n.id]
     );
     return (0, r.jsxs)('div', {
-        className: s()(b.card, { [b.cardStaticHeight]: !d }, C),
+        className: s()(b.card, { [b.cardStaticHeight]: !f }, C),
         onMouseEnter: z,
         onMouseLeave: q,
         children: [
@@ -336,7 +336,7 @@ function A(e) {
                     }),
                     (0, r.jsx)(S, {
                         description: n.description,
-                        expanded: d
+                        expanded: f
                     }),
                     (0, r.jsx)(T, {
                         traits: ee,
@@ -373,7 +373,7 @@ function A(e) {
             O &&
                 (0, r.jsx)('div', {
                     className: b.cardBrandingFooter,
-                    style: { background: 'linear-gradient(90deg, '.concat(U, ', ').concat(B, ')') }
+                    style: { background: 'linear-gradient(90deg, '.concat(U, ', ').concat(G, ')') }
                 }),
             M
         ]

@@ -90,7 +90,7 @@ class M extends (o = a.ZP.Store) {
                             .post({
                                 url: m.ANM.TYPING(n),
                                 oldFormErrors: !0,
-                                rejectWithError: !1
+                                rejectWithError: !0
                             })
                             .then((e) => {
                                 if (200 === e.status) {

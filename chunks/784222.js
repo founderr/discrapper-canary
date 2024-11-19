@@ -6,7 +6,7 @@ n.d(t, {
         return F;
     },
     YH: function () {
-        return G;
+        return B;
     },
     ld: function () {
         return r;
@@ -52,15 +52,15 @@ var r,
     P = n(199257),
     k = n(149203),
     U = n(185923),
-    B = n(388032);
+    G = n(388032);
 ((s = r || (r = {}))[(s.EMOJI = 0)] = 'EMOJI'), (s[(s.CREATE_EMOJI = 1)] = 'CREATE_EMOJI'), (s[(s.EXPAND_OR_COLLAPSE_EMOJIS = 2)] = 'EXPAND_OR_COLLAPSE_EMOJIS'), ((o = i || (i = {}))[(o.SECTION_HEADING = 0)] = 'SECTION_HEADING'), (o[(o.SECTION_ROW = 1)] = 'SECTION_ROW');
-let G = (e) => {
+let B = (e) => {
     let { channel: t, collapsedSections: n, includeCreateEmojiButton: r = !0, pickerIntention: i, emojiSearchResults: a, gridWidth: s, emojiPaddingHorizontal: o, emojiSpriteSize: l } = e,
         c = (0, _.e7)([h.ZP], () => h.ZP.categories),
         p = (0, _.e7)([A.Z], () => A.Z.getGuild(null == t ? void 0 : t.getGuildId()), [t]),
         b = null == t ? null : t.getGuildId(),
         I = (0, _.e7)([h.ZP], () => h.ZP.getDisambiguatedEmojiContext(b), [b]),
-        G = (0, w.NJ)(b),
+        B = (0, w.NJ)(b),
         Z = (0, w.wC)(b),
         F = (0, w.q5)(b),
         { canSplitFrecencyList: V } = (0, g.S)({
@@ -134,7 +134,7 @@ let G = (e) => {
                     M && v.splice(b - 1);
                     let P = et && R && !c,
                         U = Math.ceil((R || L ? v.length + 1 : v.length) / E),
-                        G = [];
+                        B = [];
                     for (let e = 0; e < U; e++) {
                         let t = 0 === e,
                             n = e * E - (P && e > 0 ? 1 : 0),
@@ -161,7 +161,7 @@ let G = (e) => {
                                     {
                                         type: 1,
                                         guildId: I.id,
-                                        name: B.intl.string(B.t['Z/r7IS']),
+                                        name: G.intl.string(G.t['Z/r7IS']),
                                         size: l,
                                         rowIndex: g,
                                         columnIndex: 0,
@@ -169,15 +169,15 @@ let G = (e) => {
                                     },
                                     ...i
                                 ]),
-                            G.push(i),
+                            B.push(i),
                             !c)
                         ) {
                             if (!et && R && e === U - 1) {
-                                let t = G[e];
+                                let t = B[e];
                                 t.push({
                                     type: 1,
                                     guildId: I.id,
-                                    name: B.intl.string(B.t['Z/r7IS']),
+                                    name: G.intl.string(G.t['Z/r7IS']),
                                     size: l,
                                     rowIndex: e,
                                     columnIndex: t.length,
@@ -185,11 +185,11 @@ let G = (e) => {
                                 });
                             }
                             if (L && e === U - 1) {
-                                let t = G[e];
+                                let t = B[e];
                                 t.push({
                                     type: 2,
                                     guildId: I.id,
-                                    name: B.intl.string(B.t.NZI2Zm),
+                                    name: G.intl.string(G.t.NZI2Zm),
                                     size: l,
                                     rowIndex: e,
                                     columnIndex: t.length,
@@ -290,7 +290,7 @@ let G = (e) => {
                             isNitroLocked: !1
                         });
                     } else if (e === k.UX.FAVORITES) {
-                        let n = G.filter(
+                        let n = B.filter(
                             (e) =>
                                 !O.ZP.isEmojiFiltered({
                                     emoji: e,
@@ -324,7 +324,7 @@ let G = (e) => {
             rowCountBySection: e,
             sectionDescriptors: u
         };
-    }, [I, s, l, o, a, n, et, en, ee, r, z, er, K, t, i, H, Y, Q, c, p, W, V, j, F, Z, G, X]);
+    }, [I, s, l, o, a, n, et, en, ee, r, z, er, K, t, i, H, Y, Q, c, p, W, V, j, F, Z, B, X]);
 };
 ((l = a || (a = {}))[(l.PREMIUM = 0)] = 'PREMIUM'), (l[(l.ROLE_SUBSCRIPTION = 1)] = 'ROLE_SUBSCRIPTION');
 let Z = (e) => {

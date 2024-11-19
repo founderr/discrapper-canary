@@ -161,7 +161,7 @@ function S(e) {
         .del({
             url: d.ANM.CHANNEL(e),
             oldFormErrors: !0,
-            rejectWithError: !1
+            rejectWithError: !0
         })
         .then(() => {
             let e = null == t ? void 0 : t.getGuildId();
@@ -194,7 +194,7 @@ t.ZP = {
     removeLinkedLobby: function (e) {
         return r.tn.del({
             url: d.ANM.CHANNEL_LINKED_LOBBY(e),
-            rejectWithError: !1
+            rejectWithError: !0
         });
     }
 };

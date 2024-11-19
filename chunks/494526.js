@@ -341,7 +341,7 @@ function k(e) {
                         url: A.ANM.REMOTE_AUTH_LOGIN,
                         body: { ticket: r.ticket },
                         oldFormErrors: !0,
-                        rejectWithError: !1
+                        rejectWithError: !0
                     })
                     .then(async (e) => {
                         if (null != s)

@@ -88,12 +88,12 @@ function v(e) {
             (0, i.jsx)(c.Z, {
                 path: _.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(':applicationId', ':skuId'),
                 exact: !0,
-                render: (e) => (0, i.jsx)(S, { ...e })
+                render: (e) => (0, i.jsx)(T, { ...e })
             })
         ]
     });
 }
-function S(e) {
+function T(e) {
     let {
             match: {
                 params: { applicationId: t, skuId: l }

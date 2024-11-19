@@ -15,8 +15,8 @@ var i = n(200651),
     d = n(451284),
     _ = n(959562),
     E = n(800530),
-    S = n(388032),
-    g = n(370422);
+    g = n(388032),
+    S = n(370422);
 function f() {
     let t = (0, d.P)(),
         e = (0, s.e7)([c.default], () => c.default.getCurrentUser()),
@@ -48,40 +48,40 @@ function f() {
     }, [m]);
     let h = {
             [u.Sn.ALL_GOOD]: {
-                title: S.t.uaKrRk,
-                description: S.intl.format(S.t.pEdBDw, {
+                title: g.t.uaKrRk,
+                description: g.intl.format(g.t.pEdBDw, {
                     termsOfService: E.sQ.TOS_LINK,
                     communityGuidelines: E.sQ.COMMUNITY_GUIDELINES
                 }),
-                status: S.t['/Idfam'],
+                status: g.t['/Idfam'],
                 Icon: o.CircleCheckIcon,
                 color: r.Z.colors.STATUS_POSITIVE
             },
             [u.Sn.LIMITED]: {
-                title: S.t.epkcmZ,
-                description: S.intl.string(S.t['774jub']),
-                status: S.t.umleq6,
+                title: g.t.epkcmZ,
+                description: g.intl.string(g.t['774jub']),
+                status: g.t.umleq6,
                 Icon: o.CircleWarningIcon,
                 color: r.Z.colors.STATUS_WARNING
             },
             [u.Sn.VERY_LIMITED]: {
-                title: S.t.crzE2d,
-                description: S.intl.string(S.t['T/Ufh4']),
-                status: S.t.WBtMHR,
+                title: g.t.crzE2d,
+                description: g.intl.string(g.t['T/Ufh4']),
+                status: g.t.WBtMHR,
                 Icon: o.CircleWarningIcon,
                 color: r.Z.unsafe_rawColors.ORANGE_345
             },
             [u.Sn.AT_RISK]: {
-                title: S.t.XRNVzM,
-                description: S.intl.string(S.t['hbH+9f']),
-                status: S.t['7f+4Li'],
+                title: g.t.XRNVzM,
+                description: g.intl.string(g.t['hbH+9f']),
+                status: g.t['7f+4Li'],
                 Icon: o.CircleWarningIcon,
                 color: r.Z.colors.STATUS_DANGER
             },
             [u.Sn.SUSPENDED]: {
-                title: S.t.MExFk5,
-                description: S.intl.string(S.t['2liUvr']),
-                status: S.t['0OONGB'],
+                title: g.t.MExFk5,
+                description: g.intl.string(g.t['2liUvr']),
+                status: g.t['0OONGB'],
                 Icon: o.CircleXIcon,
                 color: r.Z.colors.ICON_MUTED
             }
@@ -89,26 +89,26 @@ function f() {
         { title: T, description: A, color: x, Icon: I } = h[t.state],
         v = Object.keys(h).length;
     return (0, i.jsxs)(o.Card, {
-        className: g.container,
+        className: S.container,
         outline: !1,
         children: [
             (0, i.jsx)('div', {
-                className: g.profile,
+                className: S.profile,
                 children: (0, i.jsx)(_.Z, {
                     user: e,
                     size: o.AvatarSizes.SIZE_80
                 })
             }),
             (0, i.jsxs)('div', {
-                className: g.status,
+                className: S.status,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: g.title,
+                        className: S.title,
                         children: [
                             (0, i.jsx)(o.Heading, {
                                 color: 'header-primary',
                                 variant: 'heading-lg/normal',
-                                children: S.intl.format(T, {
+                                children: g.intl.format(T, {
                                     hook: (t) =>
                                         (0, i.jsx)(o.Text, {
                                             style: { color: x.css },
@@ -126,38 +126,38 @@ function f() {
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: g.health,
+                        className: S.health,
                         style: { height: n },
                         children: [
-                            (0, i.jsx)('div', { className: g.line }),
+                            (0, i.jsx)('div', { className: S.line }),
                             Object.entries(h).map((e, n) => {
                                 let [a, l] = e,
                                     s = parseInt(a) === t.state;
                                 return (0, i.jsxs)(
                                     'div',
                                     {
-                                        className: g.statusOption,
+                                        className: S.statusOption,
                                         ref: (t) => (p.current[parseInt(a)] = t),
                                         children: [
                                             s
                                                 ? (0, i.jsx)(I, {
-                                                      className: g.marker,
+                                                      className: S.marker,
                                                       color: l.color
                                                   })
                                                 : (0, i.jsx)('div', {
-                                                      className: g.marker,
+                                                      className: S.marker,
                                                       style: {
                                                           marginLeft: 0 === n ? -6 : 0,
                                                           marginRight: n === v - 1 ? -6 : 0
                                                       },
-                                                      children: (0, i.jsx)('div', { className: g.empty })
+                                                      children: (0, i.jsx)('div', { className: S.empty })
                                                   }),
-                                            S.intl.format(l.status, {
+                                            g.intl.format(l.status, {
                                                 hook: (t) =>
                                                     (0, i.jsx)(o.Text, {
                                                         color: 'text-normal',
                                                         variant: 'text-sm/normal',
-                                                        className: g.statusLabel,
+                                                        className: S.statusLabel,
                                                         children: t
                                                     })
                                             })

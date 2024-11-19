@@ -9,6 +9,6 @@ function a(e, t) {
     r.tn.post({
         url: i.ANM.VOICE_CHANNEL_NOTIFICATIONS(e),
         query: { first_user: t },
-        rejectWithError: !1
+        rejectWithError: !0
     });
 }

@@ -19,8 +19,8 @@ var i,
     g = n(998502),
     m = n(13140),
     v = n(658785),
-    E = n(981631),
-    _ = n(388032),
+    _ = n(981631),
+    E = n(388032),
     x = n(150635),
     Z = n(971436);
 function S(e, t, n) {
@@ -39,44 +39,44 @@ function S(e, t, n) {
 ((r = i || (i = {})).GENERAL = 'GENERAL'), (r.VOICE = 'VOICE'), (r.DEVELOPER = 'DEVELOPER');
 let I = () => [
         {
-            value: E.ipw.LARGE,
-            name: _.intl.string(_.t.YcOxtr)
+            value: _.ipw.LARGE,
+            name: E.intl.string(E.t.YcOxtr)
         },
         {
-            value: E.ipw.SMALL,
-            name: _.intl.string(_.t.BKIKq6)
+            value: _.ipw.SMALL,
+            name: E.intl.string(E.t.BKIKq6)
         }
     ],
     C = () => [
         {
-            value: E.wC$.ALWAYS,
-            name: _.intl.string(_.t.nBmDra)
+            value: _.wC$.ALWAYS,
+            name: E.intl.string(E.t.nBmDra)
         },
         {
-            value: E.wC$.ONLY_WHILE_SPEAKING,
-            name: _.intl.string(_.t['2OvIZW'])
+            value: _.wC$.ONLY_WHILE_SPEAKING,
+            name: E.intl.string(E.t['2OvIZW'])
         },
         {
-            value: E.wC$.NEVER,
-            name: _.intl.string(_.t.ekjlPD)
+            value: _.wC$.NEVER,
+            name: E.intl.string(E.t.ekjlPD)
         }
     ],
     y = () => [
         {
-            value: E.OYC.ALWAYS,
-            name: _.intl.string(_.t.nBmDra)
+            value: _.OYC.ALWAYS,
+            name: E.intl.string(E.t.nBmDra)
         },
         {
-            value: E.OYC.ONLY_WHILE_SPEAKING,
-            name: _.intl.string(_.t['2OvIZW'])
+            value: _.OYC.ONLY_WHILE_SPEAKING,
+            name: E.intl.string(E.t['2OvIZW'])
         }
     ];
 function N() {
     let e = f.Z.getNotificationPositionMode(),
-        t = e !== E._vf.DISABLED,
+        t = e !== _._vf.DISABLED,
         n = p.Z.getOverlayKeybind(),
         i = p.Z.getOverlayChatKeybind();
-    c.Z.track(E.rMx.OVERLAY_SETTINGS_UPDATED, {
+    c.Z.track(_.rMx.OVERLAY_SETTINGS_UPDATED, {
         enabled: !0,
         notifications_enabled: t,
         notifications_position: t ? e : null,
@@ -88,7 +88,7 @@ function N() {
 }
 class T extends a.PureComponent {
     componentDidMount() {
-        c.Z.track(E.rMx.SETTINGS_PANE_VIEWED, {
+        c.Z.track(_.rMx.SETTINGS_PANE_VIEWED, {
             settings_type: 'overlay',
             destination_pane: 'OVERLAY SETTINGS',
             origin_pane: null
@@ -121,7 +121,7 @@ class T extends a.PureComponent {
                         (0, s.jsx)(o.FormTitle, {
                             className: x.headerTitle,
                             tag: 'h1',
-                            children: _.intl.string(_.t['35G2Mj'])
+                            children: E.intl.string(E.t['35G2Mj'])
                         }),
                         (0, s.jsx)(o.ModalCloseButton, {
                             className: x.headerClose,
@@ -151,12 +151,12 @@ class T extends a.PureComponent {
                 (0, s.jsx)(o.TabBar.Item, {
                     id: 'GENERAL',
                     className: x.tabBarItem,
-                    children: _.intl.string(_.t['0FYxx8'])
+                    children: E.intl.string(E.t['0FYxx8'])
                 }),
                 (0, s.jsx)(o.TabBar.Item, {
                     id: 'VOICE',
                     className: x.tabBarItem,
-                    children: _.intl.string(_.t['3WeSiI'])
+                    children: E.intl.string(E.t['3WeSiI'])
                 }),
                 t
             ]
@@ -186,11 +186,11 @@ class T extends a.PureComponent {
     }
     renderGeneralSettings() {
         let { textChatNotificationMode: e, notificationPositionMode: t, shouldShowKeybindIndicators: n, showKeybindIndicators: i } = this.props,
-            r = t !== E._vf.DISABLED;
+            r = t !== _._vf.DISABLED;
         return (0, s.jsxs)(a.Fragment, {
             children: [
                 (0, s.jsx)(o.FormItem, {
-                    title: _.intl.string(_.t.IQv8Eh),
+                    title: E.intl.string(E.t.IQv8Eh),
                     className: Z.marginBottom20,
                     children: (0, s.jsx)(u.Z, {
                         position: t,
@@ -198,18 +198,18 @@ class T extends a.PureComponent {
                     })
                 }),
                 (0, s.jsx)(o.FormSwitch, {
-                    value: r && e === E.Ypu.ENABLED,
+                    value: r && e === _.Ypu.ENABLED,
                     onChange: this.handleToggleTextChatNotifications,
                     disabled: !r,
                     hideBorder: !0,
-                    children: _.intl.string(_.t.Fy5kPj)
+                    children: E.intl.string(E.t.Fy5kPj)
                 }),
                 i &&
                     (0, s.jsx)(o.FormSwitch, {
                         value: n,
                         onChange: (e) => c.Z.setShowKeybindIndicators(e),
                         hideBorder: !0,
-                        children: _.intl.string(_.t.XZTl9v)
+                        children: E.intl.string(E.t.XZTl9v)
                     })
             ]
         });
@@ -219,7 +219,7 @@ class T extends a.PureComponent {
         return (0, s.jsxs)(a.Fragment, {
             children: [
                 (0, s.jsx)(o.FormItem, {
-                    title: _.intl.string(_.t.dnvZSk),
+                    title: E.intl.string(E.t.dnvZSk),
                     className: Z.marginBottom20,
                     children: (0, s.jsx)(o.RadioGroup, {
                         onChange: this.handleChangeAvatarSizeMode,
@@ -229,7 +229,7 @@ class T extends a.PureComponent {
                     })
                 }),
                 (0, s.jsx)(o.FormItem, {
-                    title: _.intl.string(_.t.J0dpcH),
+                    title: E.intl.string(E.t.J0dpcH),
                     className: Z.marginBottom20,
                     children: (0, s.jsx)(o.RadioGroup, {
                         onChange: this.handleChangeDisplayNameMode,
@@ -239,7 +239,7 @@ class T extends a.PureComponent {
                     })
                 }),
                 (0, s.jsx)(o.FormItem, {
-                    title: _.intl.string(_.t.swsWWF),
+                    title: E.intl.string(E.t.swsWWF),
                     className: Z.marginBottom20,
                     children: (0, s.jsx)(o.RadioGroup, {
                         onChange: this.handleChangeDisplayUserMode,
@@ -291,7 +291,7 @@ class T extends a.PureComponent {
     }
     render() {
         return (0, s.jsxs)(o.ModalRoot, {
-            'aria-label': _.intl.string(_.t['35G2Mj']),
+            'aria-label': E.intl.string(E.t['35G2Mj']),
             transitionState: o.ModalTransitionState.ENTERED,
             children: [this.renderHeader(), this.renderBody()]
         });
@@ -303,7 +303,7 @@ class T extends a.PureComponent {
                 this.setState({ selectedSection: e });
             }),
             S(this, 'handleToggleTextChatNotifications', () => {
-                let { ENABLED: e, DISABLED: t } = E.Ypu,
+                let { ENABLED: e, DISABLED: t } = _.Ypu,
                     n = this.props.textChatNotificationMode === e ? t : e;
                 c.Z.setTextChatNotificationMode(n), N();
             });

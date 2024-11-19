@@ -28,7 +28,7 @@ async function c() {
                     return (0, r.iG)({ initialized: n });
                 }
             },
-            rejectWithError: !1
+            rejectWithError: !0
         });
         return (
             a.Z.dispatch({
@@ -57,7 +57,7 @@ async function d(e, t) {
                     value: t
                 }
             },
-            rejectWithError: !1
+            rejectWithError: !0
         });
         a.Z.dispatch({
             type: 'EMAIL_SETTINGS_UPDATE_SUCCESS',
@@ -90,7 +90,7 @@ async function u() {
                     value: !1
                 }
             },
-            rejectWithError: !1
+            rejectWithError: !0
         });
         a.Z.dispatch({
             type: 'EMAIL_SETTINGS_UPDATE_SUCCESS',

@@ -43,7 +43,7 @@ class v extends (i = s.PureComponent) {
                     email_type: t.email_type
                 },
                 oldFormErrors: !0,
-                rejectWithError: !1
+                rejectWithError: !0
             })
             .then(
                 (e) => {

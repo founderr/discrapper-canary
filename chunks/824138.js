@@ -18,7 +18,7 @@ var i = n(200651),
     I = n(981631),
     C = n(388032),
     v = n(56394);
-function S(e, t, n) {
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,7 +35,7 @@ let N = {
     HOST: 5,
     LISTENER: 4
 };
-class T extends r.PureComponent {
+class S extends r.PureComponent {
     isHost() {
         let { currentUser: e, host: t } = this.props;
         return e.id === (null == t ? void 0 : t.id);
@@ -90,7 +90,7 @@ class T extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            S(this, 'renderPartyMember', (e, t) => {
+            T(this, 'renderPartyMember', (e, t) => {
                 let n;
                 if (null == e) return null;
                 let { host: l, onUserContextMenu: s } = this.props;
@@ -133,7 +133,7 @@ class T extends r.PureComponent {
                     )
                 );
             }),
-            S(this, 'renderPartyMemberOverflow', (e, t, n) => {
+            T(this, 'renderPartyMemberOverflow', (e, t, n) => {
                 let { renderOverflowPopout: r } = this.props;
                 return (0, i.jsx)(
                     c.Popout,
@@ -156,4 +156,4 @@ class T extends r.PureComponent {
             });
     }
 }
-t.Z = T;
+t.Z = S;

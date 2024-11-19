@@ -13,8 +13,8 @@ var i = n(192379),
     g = n(944486),
     m = n(914010),
     v = n(594174),
-    E = n(237997),
-    _ = n(145597),
+    _ = n(237997),
+    E = n(145597),
     x = n(981631);
 class Z extends i.Component {
     componentDidUpdate(e) {
@@ -47,7 +47,7 @@ class Z extends i.Component {
         return null;
     }
 }
-t.Z = s.ZP.connectStores([m.Z, g.Z, p.Z, v.default, E.Z, u.ZP, f.Z, h.ZP], () => {
+t.Z = s.ZP.connectStores([m.Z, g.Z, p.Z, v.default, _.Z, u.ZP, f.Z, h.ZP], () => {
     var e, t, n;
     let i = m.Z.getGuildId(),
         s = g.Z.getChannelId(i),
@@ -65,7 +65,7 @@ t.Z = s.ZP.connectStores([m.Z, g.Z, p.Z, v.default, E.Z, u.ZP, f.Z, h.ZP], () =>
     return {
         selectedGuild: i,
         selectedChannel: s,
-        locked: E.Z.isLocked((0, _.QF)()),
+        locked: _.Z.isLocked((0, E.QF)()),
         hasPreviewEnabled: null == a ? void 0 : a.features.has(x.oNc.PREVIEW_ENABLED),
         isMemberPending: d,
         postableChannelCount: c

@@ -18,9 +18,9 @@ var i = n(200651),
     I = n(566078),
     C = n(602667),
     v = n(611855),
-    S = n(670638),
+    T = n(670638),
     N = n(667105),
-    T = n(860151),
+    S = n(860151),
     A = n(341907),
     b = n(46140),
     x = n(981631),
@@ -67,10 +67,10 @@ t.Z = function (e) {
         [E, I] = r.useState(!1),
         x = r.useCallback(() => I(!0), []),
         O = r.useCallback(() => I(!1), []),
-        R = r.useCallback((e) => {
+        P = r.useCallback((e) => {
             e.stopPropagation();
         }, []),
-        P = r.useCallback(() => {
+        R = r.useCallback(() => {
             (0, h.AH)(o.id, {
                 questContent: g.jn.ACTIVITY_PANEL,
                 questContentCTA: u.jZ.ACCEPT_QUEST
@@ -102,10 +102,10 @@ t.Z = function (e) {
         U = (null === (n = o.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
         G = (null === (l = o.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null,
         B = (null == o ? void 0 : o.userStatus) == null || (0, f.zE)(o.userStatus, g.jn.ACTIVITY_PANEL),
-        V = (0, m.Rf)(o),
-        H = (0, _.D)({
+        H = (0, m.Rf)(o),
+        V = (0, _.D)({
             quest: o,
-            taskDetails: V,
+            taskDetails: H,
             location: b.dr.ACTIVITY_PANEL,
             questContent: g.jn.ACTIVITY_PANEL
         });
@@ -121,8 +121,8 @@ t.Z = function (e) {
                           e.current = t;
                       },
                       className: a()(L.wrapper, { [L.wrapperQuestAccepted]: k }),
-                      onClick: R,
-                      onKeyPress: R,
+                      onClick: P,
+                      onKeyPress: P,
                       onFocus: x,
                       onMouseEnter: x,
                       onBlur: O,
@@ -132,7 +132,7 @@ t.Z = function (e) {
                               className: L.utils,
                               children: [
                                   k ? (0, i.jsx)(y, { quest: o }) : (0, i.jsx)(v.Z, { textOpacity: 0.5 }),
-                                  (0, i.jsx)(S.r, {
+                                  (0, i.jsx)(T.r, {
                                       quest: o,
                                       questContent: g.jn.ACTIVITY_PANEL,
                                       shouldShowDisclosure: (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) == null,
@@ -158,19 +158,19 @@ t.Z = function (e) {
                                           className: L.instructions,
                                           variant: 'text-sm/normal',
                                           color: 'text-normal',
-                                          children: H
+                                          children: V
                                       })
                                   ]
                               }),
                           k &&
                               !U &&
-                              (0, i.jsx)(T.Z, {
+                              (0, i.jsx)(S.Z, {
                                   autoplay: E,
                                   className: L.rewardTileWithInstructions,
                                   quest: o,
                                   questContent: g.jn.ACTIVITY_PANEL,
                                   location: b.dr.ACTIVITY_PANEL,
-                                  taskDetails: V
+                                  taskDetails: H
                               }),
                           (0, i.jsxs)('div', {
                               className: L.ctas,
@@ -190,7 +190,7 @@ t.Z = function (e) {
                                                   className: L.cta,
                                                   color: c.Button.Colors.BRAND,
                                                   fullWidth: !0,
-                                                  onClick: P,
+                                                  onClick: R,
                                                   size: c.Button.Sizes.SMALL,
                                                   submitting: d,
                                                   children: Z.intl.string(Z.t.l7E81t)

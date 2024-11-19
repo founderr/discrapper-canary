@@ -211,7 +211,7 @@ async function S(e, t) {
             let n = await i.tn.post({
                 url: m.ANM.QUESTS_ENROLL(e),
                 body: { location: t.questContent },
-                rejectWithError: !1
+                rejectWithError: !0
             });
             a.Z.dispatch({
                 type: 'QUESTS_ENROLL_SUCCESS',
@@ -477,7 +477,7 @@ async function k(e) {
     try {
         let n = await i.tn.get({
             url: t.url,
-            rejectWithError: !1
+            rejectWithError: !0
         });
         _.ZP.getState().setTranscriptAsset({
             questId: e.id,

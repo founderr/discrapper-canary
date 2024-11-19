@@ -23,7 +23,7 @@ let g = (() => {
                         url: e,
                         headers: { Authorization: l.getToken() },
                         oldFormErrors: !0,
-                        rejectWithError: !1
+                        rejectWithError: !0
                     })
                     .then(
                         (e) => {
@@ -45,7 +45,7 @@ let g = (() => {
                               url: e,
                               headers: { Authorization: l.getToken() },
                               oldFormErrors: !0,
-                              rejectWithError: !1
+                              rejectWithError: !0
                           }));
             }
         };

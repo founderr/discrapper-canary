@@ -50,9 +50,9 @@ let C = { offset: 2 },
             getStatus: () => E.intl.string(E.t['9F+xJS'])
         }
     };
-function S(e) {
+function T(e) {
     var t, r;
-    let { channel: l, user: p, nick: S, mute: N, deaf: T, serverMute: A, serverDeaf: b } = e,
+    let { channel: l, user: p, nick: T, mute: N, deaf: S, serverMute: A, serverDeaf: b } = e,
         x = (0, s.e7)([g.Z], () => g.Z.isLocalMute(p.id)),
         Z = (0, d.Z)({
             userId: p.id,
@@ -60,10 +60,10 @@ function S(e) {
         }),
         L = null !== (t = l.getGuildId()) && void 0 !== t ? t : void 0,
         y = p.getAvatarURL(l.guild_id, 24),
-        O = null != S ? S : f.ZP.getName(p),
+        O = null != T ? T : f.ZP.getName(p),
         {
-            icon: R,
-            colorize: P,
+            icon: P,
+            colorize: R,
             getStatus: j
         } = null !==
             (r = (function (e) {
@@ -75,7 +75,7 @@ function S(e) {
                 else if (r) return v.mute;
             })({
                 serverDeaf: b,
-                deaf: T,
+                deaf: S,
                 serverMute: A,
                 mute: N,
                 localMute: x
@@ -143,9 +143,9 @@ function S(e) {
                                 className: a()(I.avatar, { [I.speaking]: Z }),
                                 style: { backgroundImage: 'url('.concat(y, ')') },
                                 children:
-                                    null != R
-                                        ? (0, i.jsx)(R, {
-                                              className: a()(I.avatarIconOverlay, { [I.avatarIconRed]: P }),
+                                    null != P
+                                        ? (0, i.jsx)(P, {
+                                              className: a()(I.avatarIconOverlay, { [I.avatarIconRed]: R }),
                                               color: 'currentColor',
                                               size: 'xs'
                                           })
@@ -198,7 +198,7 @@ function N(e) {
                           let { user: t, nick: r, voiceState: l } = e;
                           return t.id !== m
                               ? (0, i.jsx)(
-                                    S,
+                                    T,
                                     {
                                         channel: n,
                                         user: t,

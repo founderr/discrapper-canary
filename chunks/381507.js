@@ -18,10 +18,10 @@ t.Z = () => {
             size: c.EF.SIZE_32,
             animateOnHover: !0
         }),
-        h = (0, r.Fg)(),
-        _ = (0, l.ap)(h),
+        _ = (0, r.Fg)(),
+        h = (0, l.ap)(_),
         f = a.ZP.getName(e),
-        j = _ ? d.Z : u.Z;
+        j = h ? d.Z : u.Z;
     return null == e
         ? null
         : (0, i.jsxs)('div', {

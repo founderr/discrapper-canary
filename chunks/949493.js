@@ -23,7 +23,7 @@ var s = n(921801),
     C = n(919539),
     E = n(726985),
     _ = n(388032);
-let I = () =>
+let f = () =>
         (0, i.jsx)(g.Z, {
             title: _.intl.string(_.t['y62Z/f']),
             webSetting: E.s6.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_CATEGORY,
@@ -40,7 +40,7 @@ let I = () =>
                 ]
             })
         }),
-    f = () =>
+    I = () =>
         (0, i.jsxs)(g.Z, {
             title: _.intl.string(_.t.xVRG4O),
             webSetting: E.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
@@ -55,6 +55,6 @@ let I = () =>
 function A() {
     return (0, i.jsxs)(r.N, {
         header: _.intl.string(_.t['+o1pDQ']),
-        children: [(0, i.jsx)(f, {}), (0, i.jsx)(I, {}), (0, i.jsx)(N, {})]
+        children: [(0, i.jsx)(I, {}), (0, i.jsx)(f, {}), (0, i.jsx)(N, {})]
     });
 }

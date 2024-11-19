@@ -225,7 +225,7 @@ t.Z = {
                 let t = await s.tn.get({
                     url: N.ANM.APPLICATIONS_GAMES_SUPPLEMENTAL,
                     query: { application_ids: e },
-                    rejectWithError: !1
+                    rejectWithError: !0
                 });
                 l.Z.dispatch({
                     type: 'DETECTABLE_GAME_SUPPLEMENTAL_FETCH_SUCCESS',
@@ -314,7 +314,7 @@ t.Z = {
                     },
                     retries: 1,
                     oldFormErrors: !0,
-                    rejectWithError: !1
+                    rejectWithError: !0
                 })
                 .then((e) => {
                     let {
@@ -338,7 +338,7 @@ t.Z = {
             },
             retries: 1,
             oldFormErrors: !0,
-            rejectWithError: !1
+            rejectWithError: !0
         });
     },
     deleteEntry(e) {

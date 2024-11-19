@@ -65,7 +65,7 @@ t.Z = (e) => {
             }
             N(null == i ? void 0 : null === (e = i.multiSelect) || void 0 === e ? void 0 : e.state), R(null == i ? void 0 : i.textInput), y(a), D(r), null == h || h('..');
         },
-        B = i.useMemo(() => {
+        G = i.useMemo(() => {
             let e = [],
                 t = [];
             for (let a in v) {
@@ -92,7 +92,7 @@ t.Z = (e) => {
             width: 440,
             activeSlide: T,
             centered: !1,
-            children: B.map((e) =>
+            children: G.map((e) =>
                 (0, r.jsx)(
                     a.Slide,
                     {

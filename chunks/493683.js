@@ -79,7 +79,7 @@ t.Z = {
     async getDMChannel(e) {
         let t = await r.tn.get({
                 url: b.ANM.DM_CHANNEL(e),
-                rejectWithError: !1
+                rejectWithError: !0
             }),
             n = (0, _.q_)(t.body);
         return (
@@ -173,7 +173,7 @@ t.Z = {
                 url: b.ANM.CHANNEL_RECIPIENT(e, t),
                 context: { location: n },
                 oldFormErrors: !0,
-                rejectWithError: !1
+                rejectWithError: !0
             })
             .then((t) => ((i.uv.announce(I.intl.string(I.t.cU0t1N)), null == a || a(), 201 === t.status) ? this._openPrivateChannel(t.body).id : e))
             .catch(() => (i.uv.announce(I.intl.string(I.t['8GEden'])), e));
@@ -185,14 +185,14 @@ t.Z = {
         r.tn.del({
             url: b.ANM.CHANNEL_RECIPIENT(e, t),
             oldFormErrors: !0,
-            rejectWithError: !1
+            rejectWithError: !0
         }),
     setDMOwner: (e, t) =>
         r.tn.patch({
             url: b.ANM.CHANNEL(e),
             body: { owner: t },
             oldFormErrors: !0,
-            rejectWithError: !1
+            rejectWithError: !0
         }),
     async setName(e, t) {
         let n = p.Z.getChannel(e),
@@ -200,7 +200,7 @@ t.Z = {
                 url: b.ANM.CHANNEL(e),
                 body: { name: t },
                 oldFormErrors: !0,
-                rejectWithError: !1
+                rejectWithError: !0
             }),
             a = null == n ? void 0 : n.getGuildId();
         return null != a && !(null == n ? void 0 : n.isThread()) && l.Z.checkGuildTemplateDirty(a), i;
@@ -212,7 +212,7 @@ t.Z = {
                 url: b.ANM.CHANNEL(e),
                 body: { icon: t },
                 oldFormErrors: !0,
-                rejectWithError: !1
+                rejectWithError: !0
             })
             .then(() => {
                 let e = null == n ? void 0 : n.getGuildId();
@@ -223,7 +223,7 @@ t.Z = {
         r.tn.post({
             url: b.ANM.CHANNEL_CONVERT(e),
             oldFormErrors: !0,
-            rejectWithError: !1
+            rejectWithError: !0
         }),
     preload(e, t) {
         a.Z.dispatch({
@@ -262,7 +262,7 @@ t.Z = {
         (
             await r.tn.get({
                 url: b.ANM.CHANNEL(e),
-                rejectWithError: !1
+                rejectWithError: !0
             })
         ).body
 };

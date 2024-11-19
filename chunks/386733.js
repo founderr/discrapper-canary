@@ -10,8 +10,8 @@ var i = n(200651),
     g = n(518950),
     m = n(598077),
     f = n(594174),
-    _ = n(626135),
-    p = n(63063),
+    p = n(626135),
+    _ = n(63063),
     h = n(281494),
     E = n(276444),
     b = n(520540),
@@ -143,9 +143,9 @@ t.Z = (e) => {
         e === h.Fe.REDEEMED && L.redeemed++, e === h.Fe.CONVERTED && (L.redeemed++, L.converted++);
     });
     let U = L.sent === v.Q_,
-        D = p.Z.getArticleURL(T.BhN.REFERRAL_PROGRAM),
-        { analyticsLocations: G } = (0, u.ZP)(d.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
-        H = r.useRef(null),
+        D = _.Z.getArticleURL(T.BhN.REFERRAL_PROGRAM),
+        { analyticsLocations: H } = (0, u.ZP)(d.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
+        G = r.useRef(null),
         V = (L.sent / v.Q_) * 100,
         F = !1;
     Z && null != B && ((F = 0 < (t = Math.ceil((new Date(B).getTime() - new Date().getTime()) / 86400000)) && t < v.AV), (a = (100 * (v.AV - t)) / v.AV));
@@ -220,13 +220,13 @@ t.Z = (e) => {
                                         className: I.expandedProgressBarSelectFriendsCTA,
                                         color: o.ButtonColors.CUSTOM,
                                         onClick: () => {
-                                            _.default.track(T.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: G }),
+                                            p.default.track(T.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: H }),
                                                 (0, o.openModalLazy)(async () => {
                                                     let { default: e } = await n.e('47435').then(n.bind(n, 204387));
                                                     return (t) =>
                                                         (0, i.jsx)(e, {
                                                             ...t,
-                                                            sourceAnalyticsLocations: G
+                                                            sourceAnalyticsLocations: H
                                                         });
                                                 });
                                         },
@@ -252,7 +252,7 @@ t.Z = (e) => {
         Y = R.length === v.Q_,
         K = L.redeemed === v.Q_;
     return (0, i.jsx)(u.Gt, {
-        value: G,
+        value: H,
         children: (0, i.jsx)('div', {
             className: s()({
                 [I.containerWithGlowWithoutBanner]: !W && K && !y,
@@ -263,7 +263,7 @@ t.Z = (e) => {
                 [I.containerWithGlowOnSettingsPage]: !W && K && g
             }),
             children: (0, i.jsxs)('div', {
-                ref: H,
+                ref: G,
                 className: s()({
                     [I.expandedProgressBarContainer]: !g,
                     [I.expandedProgressBarContainerSettingsPage]: g,

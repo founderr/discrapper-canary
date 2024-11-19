@@ -15,35 +15,35 @@ var i = n(200651),
     c = n(987209),
     p = n(563132),
     x = n(592627),
-    h = n(614277),
-    _ = n(698708);
+    _ = n(614277),
+    h = n(698708);
 function f(e) {
     var t, n;
     let s,
         { handleClose: f, planGroup: j, onSubscriptionConfirmation: L, renderPurchaseConfirmation: m, postSuccessGuild: g, followupSKUInfo: E, continueSession: S } = e,
-        { activeSubscription: y, paymentSources: M, paymentSourceId: Z, selectedPlan: P, selectedSkuId: T, step: I, updatedSubscription: U, startingPremiumSubscriptionPlanIdRef: v } = (0, p.usePaymentContext)(),
-        { isGift: A, giftRecipient: N, giftCode: k, hasSentMessage: b, isSendingMessage: w, sendGiftMessage: H } = (0, c.wD)(),
-        O = (0, a.Z2)();
-    r()(null != P, 'Expected plan to selected'), r()(null != T, 'Expected selectedSkuId'), r()(null != I, 'Step should be set');
+        { activeSubscription: y, paymentSources: M, paymentSourceId: Z, selectedPlan: P, selectedSkuId: I, step: T, updatedSubscription: v, startingPremiumSubscriptionPlanIdRef: A } = (0, p.usePaymentContext)(),
+        { isGift: U, giftRecipient: N, giftCode: k, hasSentMessage: b, isSendingMessage: w, sendGiftMessage: O } = (0, c.wD)(),
+        H = (0, a.Z2)();
+    r()(null != P, 'Expected plan to selected'), r()(null != I, 'Expected selectedSkuId'), r()(null != T, 'Step should be set');
     let R = l.useCallback(() => {
         f(), null == L || L();
     }, [f, L]);
     return (
         l.useEffect(() => {
-            if (!(!A || null == N || null == k || b || w || (0, d.pO)(N))) C.F.getCurrentConfig({ location: '36b986_1' }).enabled && H({ onSubscriptionConfirmation: L });
-        }, [H, A, N, k, b, w, L]),
+            if (!(!U || null == N || null == k || b || w || (0, d.pO)(N))) C.F.getCurrentConfig({ location: '36b986_1' }).enabled && O({ onSubscriptionConfirmation: L });
+        }, [O, U, N, k, b, w, L]),
         (s =
             null != m
-                ? m(P, R, U)
+                ? m(P, R, v)
                 : S
                   ? (0, i.jsx)(o.VY, {})
-                  : A
+                  : U
                     ? (0, i.jsx)(o.TB, {
                           planId: P.id,
                           onClose: R,
-                          halloweenDecoPurchase: O
+                          halloweenDecoPurchase: H
                       })
-                    : v.current === P.id
+                    : A.current === P.id
                       ? (0, i.jsx)(o.ZP, {
                             planId: P.id,
                             postSuccessGuild: g,
@@ -52,7 +52,7 @@ function f(e) {
                         })
                       : (0, i.jsx)(o.ZP, {
                             followupSKUInfo: E,
-                            startingPremiumSubscriptionPlanId: v.current,
+                            startingPremiumSubscriptionPlanId: A.current,
                             planId: P.id,
                             onClose: R,
                             isDowngrade: null != y && (0, u.GY)(y, P.id, j),
@@ -60,13 +60,13 @@ function f(e) {
                         })),
         (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsxs)(h.C3, {
-                    children: [(0, i.jsx)(_.Z, {}), s]
+                (0, i.jsxs)(_.C3, {
+                    children: [(0, i.jsx)(h.Z, {}), s]
                 }),
-                A
+                U
                     ? (0, i.jsx)(x.Z, {
                           onClose: R,
-                          halloweenDecoPurchase: O
+                          halloweenDecoPurchase: H
                       })
                     : null
             ]

@@ -22,7 +22,7 @@ async function u(e) {
                 let t = (
                     await r.tn.get({
                         url: o.ANM.GUILD_BASIC(e),
-                        rejectWithError: !1
+                        rejectWithError: !0
                     })
                 ).body;
                 i.Z.dispatch({

@@ -42,7 +42,7 @@ function I(e) {
         },
         [E]
     );
-    let T = () => {
+    let b = () => {
             var e;
             let t = null === (e = _.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
             return null == t || n
@@ -54,7 +54,7 @@ function I(e) {
                       left: t.left
                   };
         },
-        b = (e) => {
+        T = (e) => {
             let t = null == x ? void 0 : x.getBoundingClientRect();
             if (((y.current = t), e.timestamp !== Z || null == t || n)) return h;
             let { top: i, left: l } = t;
@@ -78,7 +78,7 @@ function I(e) {
             'animate-always'
         ),
         w = (0, l.useRef)(null),
-        P = (0, o.useTransition)(
+        j = (0, o.useTransition)(
             C,
             {
                 ref: w,
@@ -87,13 +87,13 @@ function I(e) {
                     position: 'fixed',
                     visibility: 'hidden',
                     opacity: 1,
-                    ...(I.enabled ? b(e) : T())
+                    ...(I.enabled ? T(e) : b())
                 }),
                 enter: (e) => [
                     {
                         opacity: 1,
                         visibility: 'visible',
-                        ...b(e)
+                        ...T(e)
                     }
                 ],
                 leave: {
@@ -136,7 +136,7 @@ function I(e) {
                 (0, i.jsx)(f.ZP, {
                     children: (0, i.jsx)('div', {
                         className: p.hidden,
-                        children: P(
+                        children: j(
                             (e, t, n, l) =>
                                 (null == t ? void 0 : t.thumbnail) != null &&
                                 (0, i.jsx)(a.animated.img, {

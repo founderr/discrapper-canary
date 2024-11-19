@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return S;
     }
 });
 var i = n(200651);
@@ -23,7 +23,7 @@ var r = n(442837),
     I = n(81471),
     C = n(388032),
     v = n(863980);
-let S = (e) => {
+let T = (e) => {
         let { userId: t } = e,
             n = (0, E.O)(t);
         return null == n || 0 === n.length
@@ -52,12 +52,12 @@ let S = (e) => {
               });
     },
     N = f.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
-function T(e) {
+function S(e) {
     var t;
     let { channel: n, otherUser: c, active: m } = e,
         f = (0, r.e7)([s.Z], () => s.Z.useReducedMotion),
         E = (0, r.e7)([p.Z], () => (null == c ? null : p.Z.getNickname(c.id))),
-        T = !f && m,
+        S = !f && m,
         A = (0, _.c)(n),
         { avatarDecorationSrc: b } = (0, u.Z)({
             user: c,
@@ -68,7 +68,7 @@ function T(e) {
         children: [
             (0, i.jsx)(N, {
                 className: v.avatar,
-                src: (0, h.x)(n, 40, T),
+                src: (0, h.x)(n, 40, S),
                 avatarDecoration: b,
                 size: l.AvatarSizes.SIZE_40,
                 'aria-label': null !== (t = null == c ? void 0 : c.username) && void 0 !== t ? t : C.intl.string(C.t['30mdIy'])
@@ -98,7 +98,7 @@ function T(e) {
                     (0, i.jsx)(o.Z, {
                         hoverText: (0, i.jsx)(I.Z, { channel: n }),
                         forceHover: m,
-                        children: (0, i.jsx)(S, { userId: c.id })
+                        children: (0, i.jsx)(T, { userId: c.id })
                     })
                 ]
             })

@@ -93,8 +93,8 @@ r.inherits(v, g),
                 P = this.k[C + 1],
                 k = n[C],
                 U = n[C + 1],
-                B = h(R, O, D, L, x, w, M, P, k, U),
-                G = m(R, O, D, L, x, w, M, P, k, U);
+                G = h(R, O, D, L, x, w, M, P, k, U),
+                B = m(R, O, D, L, x, w, M, P, k, U);
             (R = (function (e, t) {
                 var n = s(e, t, 28) ^ s(t, e, 2) ^ s(t, e, 7);
                 return n < 0 && (n += 4294967296), n;
@@ -117,7 +117,7 @@ r.inherits(v, g),
                     })(r, i, l, u, _, p))
                 ),
                 F = f(R, O, D, L);
-            (A = T), (N = y), (T = I), (y = S), (I = v), (S = b), (v = d(g, E, B, G)), (b = f(E, E, B, G)), (g = _), (E = p), (_ = l), (p = u), (l = r), (u = i), (r = d(B, G, Z, F)), (i = f(B, G, Z, F));
+            (A = T), (N = y), (T = I), (y = S), (I = v), (S = b), (v = d(g, E, G, B)), (b = f(E, E, G, B)), (g = _), (E = p), (_ = l), (p = u), (l = r), (u = i), (r = d(G, B, Z, F)), (i = f(G, B, Z, F));
         }
         c(this.h, 0, r, i), c(this.h, 2, l, u), c(this.h, 4, _, p), c(this.h, 6, g, E), c(this.h, 8, v, b), c(this.h, 10, I, S), c(this.h, 12, T, y), c(this.h, 14, A, N);
     }),

@@ -38,7 +38,7 @@ var r = n(200651),
     P = n(69035);
 function k(e) {
     var t;
-    let { user: n, currentUser: a, activity: k, guild: U, channel: B, className: G, onClose: Z, profileGuildId: F } = e,
+    let { user: n, currentUser: a, activity: k, guild: U, channel: G, className: B, onClose: Z, profileGuildId: F } = e,
         { profileType: V } = (0, T.z)(),
         j = { [P.fullSize]: V === w.y0.FULL_SIZE },
         { interactionSource: H, interactionSourceId: Y } = (0, v.Xo)(),
@@ -105,7 +105,7 @@ function k(e) {
                   });
         },
         ee = () =>
-            null == U || null == B
+            null == U || null == G
                 ? null
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
@@ -113,7 +113,7 @@ function k(e) {
                           (0, r.jsx)(R.Z, {
                               user: n,
                               guild: U,
-                              channel: B,
+                              channel: G,
                               onAction: Q,
                               onClose: Z
                           })
@@ -153,7 +153,7 @@ function k(e) {
                         sourceType: w.n_.ACTIVITY,
                         children: () =>
                             (0, r.jsx)(S.Z.Overlay, {
-                                className: s()(P.card, G, { [P.hoisted]: er }),
+                                className: s()(P.card, B, { [P.hoisted]: er }),
                                 ref: X,
                                 children: (0, r.jsxs)(I.Z, {
                                     user: n,

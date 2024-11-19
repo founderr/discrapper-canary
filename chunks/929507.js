@@ -29,7 +29,7 @@ t.Z = {
                             o.tn
                                 .post({
                                     url: m.ANM.GUILD_MIGRATE_COMMAND_SCOPE(e),
-                                    rejectWithError: !1
+                                    rejectWithError: !0
                                 })
                                 .then(
                                     (t) => {

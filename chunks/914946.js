@@ -33,7 +33,7 @@ n.d(t, {
         return W;
     },
     s9: function () {
-        return V;
+        return H;
     },
     t9: function () {
         return Y;
@@ -45,7 +45,7 @@ n.d(t, {
         return K;
     },
     zM: function () {
-        return H;
+        return V;
     },
     zy: function () {
         return F;
@@ -75,9 +75,9 @@ var i,
     I = n(375954),
     C = n(158776),
     v = n(594174),
-    S = n(979651),
+    T = n(979651),
     N = n(70956),
-    T = n(5192),
+    S = n(5192),
     A = n(226951),
     b = n(996106),
     x = n(863141),
@@ -91,8 +91,8 @@ let y = null !== (i = r.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && v
             n = t[t.length - 1];
         return /^\d+$/.test(n) ? e : t.slice(-2).join('.');
     })(),
-    R = new RegExp('^'.concat(A.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(A.Z.escape(O), '|discordapp.com|discord.com)$')),
-    P = 1 * N.Z.Millis.MINUTE,
+    P = new RegExp('^'.concat(A.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(A.Z.escape(O), '|discordapp.com|discord.com)$')),
+    R = 1 * N.Z.Millis.MINUTE,
     j = {};
 function D(e) {
     return 'customEmoji' === e.type && (e.type = 'emoji'), 'emoji' === e.type && e.src && (e.src = M(e.src)), Array.isArray(e.content) && (e.content = e.content.map(D)), e;
@@ -127,7 +127,7 @@ function k(e, t) {
         Promise.all(n).then(() => {
             var n;
             let r = (!e.isNSFW() || (null === (n = v.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? I.Z.getMessages(e.id).toArray().map(U) : [],
-                l = Object.values(S.Z.getVoiceStatesForChannel(e.id)).map((t) => G(i, e.id, t));
+                l = Object.values(T.Z.getVoiceStatesForChannel(e.id)).map((t) => G(i, e.id, t));
             return {
                 id: e.id,
                 name: e.name,
@@ -173,7 +173,7 @@ function G(e, t, n) {
         c = v.default.getUser(o);
     if (null == c) throw Error('Invalid user id: '.concat(o));
     return {
-        nick: T.ZP.getName(e, t, c),
+        nick: S.ZP.getName(e, t, c),
         mute: E.Z.isLocalMute(c.id),
         volume: E.Z.getLocalVolume(c.id),
         pan: E.Z.getLocalPan(c.id),
@@ -201,7 +201,7 @@ function B(e, t, n) {
         userIgnored: l
     };
 }
-function V(e) {
+function H(e) {
     let t;
     if (null == e) return !1;
     let n = window.location.origin;
@@ -211,9 +211,9 @@ function V(e) {
     } catch (e) {
         return !1;
     }
-    return (window.location.hostname === t && 'localhost' === t) || (null == e.match('staging') && (!!(R.test(e) && R.test(n)) || !1));
+    return (window.location.hostname === t && 'localhost' === t) || (null == e.match('staging') && (!!(P.test(e) && P.test(n)) || !1));
 }
-function H(e, t, n) {
+function V(e, t, n) {
     let i = _.Z.getGuild(e.getGuildId());
     return (null != i ? i.getApplicationId() : e.getApplicationId()) === t || n.indexOf(l.x.MESSAGES_READ) > -1;
 }
@@ -243,7 +243,7 @@ function W(e, t, n) {
             url: L.ANM.APPLICATION_RPC(t),
             oldFormErrors: !0,
             retries: 3,
-            rejectWithError: !1
+            rejectWithError: !0
         })
         .then(
             (i) => {
@@ -271,7 +271,7 @@ function W(e, t, n) {
 }
 async function K(e, t) {
     let n = j[e];
-    null == n && ((n = new s.Z(t ? 2 : 60, P)), (j[e] = n)), await n.process();
+    null == n && ((n = new s.Z(t ? 2 : 60, R)), (j[e] = n)), await n.process();
 }
 function q(e, t) {
     null == t && (e.authorization.scopes = [Z.lH]);

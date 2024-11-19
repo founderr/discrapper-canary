@@ -11,8 +11,8 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var r = n(120356),
-    l = n.n(r),
+var l = n(120356),
+    r = n.n(l),
     o = n(692547),
     a = n(481060),
     s = n(765250),
@@ -49,14 +49,14 @@ function h(e) {
 }
 function f(e) {
     let { id: t, pinned: n } = e,
-        r = n ? u.intl.string(u.t.cSu80t) : u.intl.string(u.t.cM8Vnp);
+        l = n ? u.intl.string(u.t.cSu80t) : u.intl.string(u.t.cM8Vnp);
     return (0, i.jsx)(a.Tooltip, {
-        text: r,
-        'aria-label': r,
+        text: l,
+        'aria-label': l,
         children: (e) =>
             (0, i.jsx)(a.Clickable, {
                 ...e,
-                className: l()(c.button, n && c.active),
+                className: r()(c.button, n && c.active),
                 onClick: () => (0, s.xh)(t),
                 children: (0, i.jsx)(a.PinUprightIcon, {
                     size: 'xxs',

@@ -39,8 +39,8 @@ var r = n(200651),
     P = n(660579),
     k = n(502762),
     U = n(652853),
-    B = n(64621),
-    G = n(194811),
+    G = n(64621),
+    B = n(194811),
     Z = n(373826),
     F = n(315324),
     V = n(582123),
@@ -264,7 +264,7 @@ function $(e) {
         eO = null != eh ? K.intl.formatToPlainString(K.t['4CQq9f'], { name: eh.name }) : K.intl.string(K.t['Jpkr/v']);
     return (0, r.jsx)(h.Gt, {
         value: eu,
-        children: (0, r.jsx)(B.Z, {
+        children: (0, r.jsx)(G.Z, {
             sourceType: Y.n_.ACTIVITY,
             user: t,
             children: (0, r.jsx)(V.Z, {
@@ -296,7 +296,7 @@ function $(e) {
                                         className: z.button
                                     }),
                                     children: [
-                                        (0, r.jsx)(G.Z, {
+                                        (0, r.jsx)(B.Z, {
                                             text: eO,
                                             tags: (0, r.jsx)(g.ZP, { size: g.OH.SMALL })
                                         }),

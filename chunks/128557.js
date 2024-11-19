@@ -79,7 +79,7 @@ function M(e) {
         r = (0, c.e7)([_.Z], () => (null != t ? _.Z.getGuild(t.getGuildId()) : null), [t]),
         h = null != r && N.default.extractTimestamp(r.id) < Date.now() - T._8R,
         I = (0, c.e7)([x.default], () => (null == r ? void 0 : r.ownerId) === x.default.getId(), [r]),
-        { canInvite: M, canManageGuild: L, canMessage: R } = (0, f.TE)(t, r),
+        { canInvite: M, canManageGuild: R, canMessage: L } = (0, f.TE)(t, r),
         k = (0, c.e7)([v.default], () => {
             var e, t;
             return (null === (e = v.default.getCurrentUser()) || void 0 === e ? void 0 : e.desktop) === !0 || (null === (t = v.default.getCurrentUser()) || void 0 === t ? void 0 : t.mobile) === !0;
@@ -253,7 +253,7 @@ function M(e) {
                     'invite'
                 )
             ),
-        L &&
+        R &&
             Y.push(
                 (0, i.jsx)(
                     o.Z.div,
@@ -270,7 +270,7 @@ function M(e) {
                     'customize'
                 )
             ),
-        R &&
+        L &&
             Y.push(
                 (0, i.jsx)(
                     o.Z.div,

@@ -24,9 +24,9 @@ var i = n(200651),
     I = n(108427),
     C = n(911314),
     v = n(429899),
-    S = n(843445),
+    T = n(843445),
     N = n(981631),
-    T = n(388032),
+    S = n(388032),
     A = n(645610);
 function b(e, t, n) {
     return (
@@ -46,7 +46,7 @@ let x = (0, f.Un)({
     webpackId: 496691
 });
 function Z(e) {
-    return e < S.x ? S.b.SMALL : S.b.LARGE;
+    return e < T.x ? T.b.SMALL : T.b.LARGE;
 }
 s.ZP.initialize();
 class L extends r.PureComponent {
@@ -66,7 +66,7 @@ class L extends r.PureComponent {
     }
     renderCustomErrorMessage() {
         return (0, i.jsxs)('div', {
-            children: [(0, i.jsx)('p', { children: T.intl.string(T.t['1PZdFx']) }), (0, i.jsx)('p', { children: T.intl.string(T.t.CvQlAA) })]
+            children: [(0, i.jsx)('p', { children: S.intl.string(S.t['1PZdFx']) }), (0, i.jsx)('p', { children: S.intl.string(S.t.CvQlAA) })]
         });
     }
     render() {

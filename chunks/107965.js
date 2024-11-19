@@ -82,11 +82,11 @@ class E {
                             url: ''.concat(location.protocol, '//').concat(location.host).concat('/assets/', 'version.').concat(window.GLOBAL_ENV.RELEASE_CHANNEL, '.json'),
                             query: { _: (Date.now() / 1000 / 60 / 5) | 0 },
                             oldFormErrors: !0,
-                            rejectWithError: !1
+                            rejectWithError: !0
                         })
                         .then(
                             (e) => {
-                                if (null == e.body || '6d5b5620cfef0252218409ed85ae0c35f8683aed' === e.body.hash) return this._handleUpdateNotAvailable();
+                                if (null == e.body || '9507ad02a142bcf7b5ec4eeae4bd05e220cd5e65' === e.body.hash) return this._handleUpdateNotAvailable();
                                 if (e.body.required || (0, a.fD)()) return this._handleUpdateDownloaded(!1);
                                 let t = 'stable' === window.GLOBAL_ENV.RELEASE_CHANNEL ? f : p;
                                 if (Date.now() - _ > t) return r.K.set('lastNonRequiredUpdateShown', Date.now()), this._handleUpdateDownloaded(!1);

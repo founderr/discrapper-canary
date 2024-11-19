@@ -22,7 +22,7 @@ async function c(e) {
             null != e && l.default.track(u.rMx.FETCH_USER_OFFER_STARTED, { call_location: e });
             let t = await r.tn.post({
                     url: u.ANM.USER_OFFER,
-                    rejectWithError: !1
+                    rejectWithError: !0
                 }),
                 f = null !== (n = t.body.user_trial_offer) && void 0 !== n ? n : null,
                 _ = null !== (c = t.body.user_discount) && void 0 !== c ? c : null,

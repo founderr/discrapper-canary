@@ -12,8 +12,8 @@ var r = n(120356),
     g = n(78839),
     m = n(975104),
     f = n(775412),
-    _ = n(520540),
-    p = n(501862),
+    p = n(520540),
+    _ = n(501862),
     h = n(197115),
     E = n(823188),
     b = n(184176),
@@ -64,8 +64,8 @@ let R = (e) => {
     },
     A = (e) => {
         let { location: t } = e,
-            { subscriberHomeVariant: n } = _.g.useExperiment({ location: t }, { autoTrackExposure: !1 }),
-            r = n === _.p.VARIANT_2,
+            { subscriberHomeVariant: n } = p.g.useExperiment({ location: t }, { autoTrackExposure: !1 }),
+            r = n === p.p.VARIANT_2,
             { headingText: a, headingTop: s, headingBottom: o } = Z();
         return (0, i.jsxs)(i.Fragment, {
             children: [
@@ -140,7 +140,7 @@ t.Z = (e) => {
         { analyticsLocations: r } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA),
         l = (0, s.e7)([g.ZP], () => g.ZP.inReverseTrial()),
         m = (0, f._O)(),
-        _ = T.intl.string(T.t.qYKftb),
+        p = T.intl.string(T.t.qYKftb),
         h = (0, x.bD)(n),
         b = (0, x.pn)(n),
         C = (0, i.jsx)(R, { className: t }),
@@ -148,19 +148,19 @@ t.Z = (e) => {
         S = !1,
         { fractionalState: Z, endsAt: O } = (0, u.Z)(),
         M = (0, d.Z)(O, d.a.ENDS_IN);
-    l ? ((I = T.intl.string(T.t.ifwQZW)), (C = (0, i.jsx)(j, {}))) : (h || b) && ((_ = T.intl.string(T.t.qYKftb)), (I = T.intl.string(T.t.ifwQZW)), (C = (0, i.jsx)(A, { location: n })));
+    l ? ((I = T.intl.string(T.t.ifwQZW)), (C = (0, i.jsx)(j, {}))) : (h || b) && ((p = T.intl.string(T.t.qYKftb)), (I = T.intl.string(T.t.ifwQZW)), (C = (0, i.jsx)(A, { location: n })));
     let B = null;
     Z !== v.a$.NONE &&
         ((m = !0),
-        (_ = T.intl.string(T.t.vaqFvb)),
+        (p = T.intl.string(T.t.vaqFvb)),
         (S = !0),
-        (B = (0, i.jsx)(p.Z, {
+        (B = (0, i.jsx)(_.Z, {
             className: N.fpCountdownPill,
             countdownText: M
         })));
     let w = {
             className: a()(N.trialPill, { [N.hidden]: !m }),
-            text: _,
+            text: p,
             colorOptions: E.VE.PREMIUM_TIER_2_WHITE_FILL
         },
         y = S

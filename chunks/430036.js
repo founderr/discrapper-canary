@@ -19,8 +19,8 @@ var i = n(200651),
     g = n(144144),
     m = n(738619),
     v = n(744061),
-    E = n(36311),
-    _ = n(655687),
+    _ = n(36311),
+    E = n(655687),
     x = n(823748),
     Z = n(25007),
     S = n(199649),
@@ -32,8 +32,8 @@ var i = n(200651),
     b = n(249458),
     O = n(552062),
     A = n(957730),
-    L = n(400023),
-    j = n(623292),
+    j = n(400023),
+    L = n(623292),
     P = n(807092),
     R = n(592125),
     w = n(703558),
@@ -51,8 +51,8 @@ var i = n(200651),
     Y = n(519591),
     K = n(906037),
     X = n(786906),
-    q = n(518084),
-    Q = n(987650),
+    Q = n(518084),
+    q = n(987650),
     J = n(981631),
     $ = n(388032),
     ee = n(786581);
@@ -69,7 +69,7 @@ function et(e, t, n) {
         e
     );
 }
-let en = Q.wF.TOP;
+let en = q.wF.TOP;
 class ei extends r.Component {
     componentDidUpdate(e) {
         e.channel.id !== this.props.channel.id && this.draftDidChange(this.props), (this.props.channel !== e.channel || (this.props.isTemporarilyActive && !e.isTemporarilyActive)) && this.setState({ focused: !0 });
@@ -188,7 +188,7 @@ class ei extends r.Component {
                                         shouldRefocus: !1
                                     };
                           let l = p.Z.getSendMessageOptionsForReply(i);
-                          return (p.Z.sendMessage(n.id, A.ZP.parse(n, t), !0, l), this.setState((0, y.H2)()), (0, j.A6)(n.id), r)
+                          return (p.Z.sendMessage(n.id, A.ZP.parse(n, t), !0, l), this.setState((0, y.H2)()), (0, L.A6)(n.id), r)
                               ? (f.Z.deactivateAllRegions(),
                                 {
                                     shouldClear: !1,
@@ -245,7 +245,7 @@ class er extends r.PureComponent {
     getOpacity() {
         let e;
         let { locked: t, activated: n, opacity: i, isPreviewingInGame: r } = this.props;
-        return (e = (t && !n) || r ? i / 100 : n || !t ? Math.min(1, (i + 25) / 100) : q.wB);
+        return (e = (t && !n) || r ? i / 100 : n || !t ? Math.min(1, (i + 25) / 100) : Q.wB);
     }
     renderContent() {
         let e;
@@ -253,13 +253,13 @@ class er extends r.PureComponent {
         if (null == t) return null;
         let g = o || h,
             v = !s && null != t && t.isNSFW(),
-            _ = !g || c;
+            E = !g || c;
         return (
             (e =
                 v && null != l
-                    ? (0, i.jsx)(E.Z, { guild: l })
+                    ? (0, i.jsx)(_.Z, { guild: l })
                     : (0, i.jsx)(
-                          L.Z,
+                          j.Z,
                           {
                               channel: t,
                               className: ee.messages,
@@ -283,7 +283,7 @@ class er extends r.PureComponent {
                                 channel: t,
                                 guild: l
                             }),
-                        (0, i.jsx)(q.ZP.Background, {
+                        (0, i.jsx)(Q.ZP.Background, {
                             opacityOverride: o || h ? null : en,
                             children: (0, i.jsx)('div', {
                                 className: a()(ee.messagesContainer, {
@@ -296,8 +296,8 @@ class er extends r.PureComponent {
                         v
                             ? null
                             : (0, i.jsx)('div', {
-                                  children: _
-                                      ? (0, i.jsx)(q.ZP.Background, {
+                                  children: E
+                                      ? (0, i.jsx)(Q.ZP.Background, {
                                             opacityOverride: o || h ? null : en,
                                             children: (0, i.jsxs)('div', {
                                                 className: ee.footerContent,
@@ -320,8 +320,8 @@ class er extends r.PureComponent {
                                         })
                                       : (0, i.jsx)('div', {
                                             className: ee.activateContainer,
-                                            children: (0, i.jsx)(q.ZP.Background, {
-                                                opacityOverride: Q.wF.LOWER,
+                                            children: (0, i.jsx)(Q.ZP.Background, {
+                                                opacityOverride: q.wF.LOWER,
                                                 children: (0, i.jsx)('div', {
                                                     className: a()(ee.activateKeybind, ee.__invalid_mediumBackgroundOpacity),
                                                     children:
@@ -349,7 +349,7 @@ class er extends r.PureComponent {
             u = n && r,
             h = n && c && !r,
             p = (0, Y.Z)(l);
-        return (0, i.jsx)(q.ZP, {
+        return (0, i.jsx)(Q.ZP, {
             className: a()(p, {
                 [ee.widgetWrapper]: !n,
                 [ee.widgetWrapperPinned]: n,
@@ -454,7 +454,7 @@ function es(e) {
         g = null != a && a.isPrivate() ? a.getRecipientId() : null,
         m = (0, c.e7)([P.Z], () => (null != s ? P.Z.getPendingReply(s) : void 0)),
         v = (0, c.e7)([U.default], () => (null != g ? U.default.getUser(g) : null)),
-        { placeholder: E } = (0, _.Z)(a);
+        { placeholder: _ } = (0, E.Z)(a);
     return null != a && null != p && J.TPd.GUILD_THREADS_ONLY.has(a.type)
         ? (0, i.jsx)(x.Z, {})
         : (0, i.jsx)(er, {
@@ -468,7 +468,7 @@ function es(e) {
               isPreviewingInGame: h,
               pendingReply: m,
               contained: t,
-              placeholder: E,
+              placeholder: _,
               widget: J.Odu.TEXT,
               ...n
           });

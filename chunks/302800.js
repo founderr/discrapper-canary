@@ -1,6 +1,6 @@
 n.d(e, {
     GX: function () {
-        return T;
+        return C;
     },
     M7: function () {
         return h;
@@ -100,7 +100,7 @@ let h = (t) =>
         (0, i.EQ)(t)
             .with('1262491137386614805', () => b.ROBERT)
             .otherwise(() => null),
-    T = {
+    C = {
         [c.C5.TIDE]: {
             artSrc: n(94899),
             backgroundSrc: n(987583),

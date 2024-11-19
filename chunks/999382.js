@@ -27,8 +27,8 @@ var d,
     P = n(135899);
 let k = ['name', 'description', 'icon', 'splash', 'banner', 'homeHeader', 'afkChannelId', 'afkTimeout', 'systemChannelId', 'verificationLevel', 'defaultMessageNotifications', 'explicitContentFilter', 'features', 'systemChannelFlags', 'preferredLocale', 'rulesChannelId', 'safetyAlertsChannelId', 'discoverySplash', 'publicUpdatesChannelId', 'premiumProgressBarEnabled', 'clan'],
     U = new Set(['icon', 'splash', 'banner', 'discoverySplash', 'homeHeader']),
-    B = !1,
-    G = w.QZA.CLOSED,
+    G = !1,
+    B = w.QZA.CLOSED,
     Z = {},
     F = !1,
     V = null,
@@ -66,14 +66,14 @@ function er(e) {
     let { guildId: n, section: i, subsection: a, location: u } = e,
         d = R.Z.getGuild(n);
     if (null == d) return ei();
-    (s = o = d), (G = w.QZA.OPEN), (Z = {}), (l = D.default.castGuildIdAsEveryoneGuildRoleId(n)), (Y = o.mfaLevel), (Q = q), (c = null), (W = u);
+    (s = o = d), (B = w.QZA.OPEN), (Z = {}), (l = D.default.castGuildIdAsEveryoneGuildRoleId(n)), (Y = o.mfaLevel), (Q = q), (c = null), (W = u);
     ea({
         section: null !== (t = null != i ? i : r) && void 0 !== t ? t : w.pNK.OVERVIEW,
         subsection: null != a ? a : null
     });
 }
 function ei() {
-    (B = !1), (G = w.QZA.CLOSED), (s = o = null), (F = !1), (V = null), (j = null), (H = 0), (X = null), (ee = null), (et = null), (r = null), (i = null), (a = null), (Y = w.BpS.NONE), (u = void 0);
+    (G = !1), (B = w.QZA.CLOSED), (s = o = null), (F = !1), (V = null), (j = null), (H = 0), (X = null), (ee = null), (et = null), (r = null), (i = null), (a = null), (Y = w.BpS.NONE), (u = void 0);
 }
 function ea(e) {
     if (null == o) return !1;
@@ -89,7 +89,7 @@ function ea(e) {
             .get({
                 url: w.ANM.GUILD_INSTANT_INVITES(o.id),
                 oldFormErrors: !0,
-                rejectWithError: !1
+                rejectWithError: !0
             })
             .then((e) => {
                 S.Z.dispatch({
@@ -102,7 +102,7 @@ function ea(e) {
             .get({
                 url: w.ANM.GUILD_WIDGET(o.id),
                 oldFormErrors: !0,
-                rejectWithError: !1
+                rejectWithError: !0
             })
             .then((e) => {
                 S.Z.dispatch({
@@ -121,7 +121,7 @@ function ea(e) {
                     .get({
                         url: w.ANM.GUILD_VANITY_URL(o.id),
                         oldFormErrors: !0,
-                        rejectWithError: !1
+                        rejectWithError: !0
                     })
                     .then((e) => {
                         let {
@@ -156,7 +156,7 @@ function es(e) {
     });
 }
 function eo(e) {
-    if (null == o || G !== w.QZA.OPEN || ('GUILD_INTEGRATIONS_UPDATE' === e.type && e.guildId !== o.id)) return !1;
+    if (null == o || B !== w.QZA.OPEN || ('GUILD_INTEGRATIONS_UPDATE' === e.type && e.guildId !== o.id)) return !1;
     (0, x.i)(o.id);
 }
 class el extends (d = v.ZP.Store) {
@@ -170,7 +170,7 @@ class el extends (d = v.ZP.Store) {
         return !m().isEqual(o, s) || !m().isEqual(Q, q);
     }
     isOpen() {
-        return B;
+        return G;
     }
     getSavedRouteState() {
         return u;
@@ -191,7 +191,7 @@ class el extends (d = v.ZP.Store) {
         return o;
     }
     isSubmitting() {
-        return G === w.QZA.SUBMITTING;
+        return B === w.QZA.SUBMITTING;
     }
     isGuildMetadataLoaded() {
         return z;
@@ -250,7 +250,7 @@ class el extends (d = v.ZP.Store) {
             : {
                   GUILD_SETTINGS_INIT: er,
                   GUILD_SETTINGS_OPEN: function (e) {
-                      (B = !0), er(e);
+                      (G = !0), er(e);
                   },
                   GUILD_SETTINGS_CLOSE: ei,
                   GUILD_SETTINGS_UPDATE: function (e) {
@@ -276,14 +276,14 @@ class el extends (d = v.ZP.Store) {
                       return (u = t), !1;
                   },
                   GUILD_SETTINGS_SUBMIT: function () {
-                      (G = w.QZA.SUBMITTING), (Z = {});
+                      (B = w.QZA.SUBMITTING), (Z = {});
                   },
                   GUILD_SETTINGS_SUBMIT_SUCCESS: function () {
-                      G = w.QZA.OPEN;
+                      B = w.QZA.OPEN;
                   },
                   GUILD_SETTINGS_SUBMIT_FAILURE: function (e) {
                       var t;
-                      (G = w.QZA.OPEN), (r = null != r ? r : w.pNK.OVERVIEW), (i = null), (Z = null !== (t = e.errors) && void 0 !== t ? t : {});
+                      (B = w.QZA.OPEN), (r = null != r ? r : w.pNK.OVERVIEW), (i = null), (Z = null !== (t = e.errors) && void 0 !== t ? t : {});
                   },
                   GUILD_SETTINGS_SET_SECTION: ea,
                   GUILD_SETTINGS_SET_SEARCH_QUERY: function (e) {

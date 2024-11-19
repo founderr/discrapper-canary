@@ -24,12 +24,12 @@ var r = n(568611),
     E = n(823379),
     C = n(624138),
     I = n(317381),
-    x = n(638880),
-    N = n(122613),
-    v = n(147865),
-    T = n(778569),
-    S = n(884338),
-    A = n(486003),
+    x = n(531826),
+    N = n(638880),
+    v = n(122613),
+    T = n(147865),
+    S = n(778569),
+    A = n(884338),
     b = n(403404),
     j = n(701488),
     Z = n(981631),
@@ -48,18 +48,18 @@ function y(e) {
         F = (0, l.e7)([I.ZP], () => I.ZP.getSelfEmbeddedActivityForChannel(D)),
         G = (null == F ? void 0 : F.applicationId) === y,
         [V] = (0, h.Z)([y, null !== (n = null == F ? void 0 : F.applicationId) && void 0 !== n ? n : '']),
-        H = (0, v.ZP)(null !== (a = null == V ? void 0 : V.maxParticipants) && void 0 !== a ? a : 0),
+        H = (0, T.ZP)(null !== (a = null == V ? void 0 : V.maxParticipants) && void 0 !== a ? a : 0),
         [z] = (0, l.Wu)([I.ZP], () => (w ? I.ZP.getEmbeddedActivitiesForChannel(D).filter((e) => e.applicationId === y) : []), [y, D, w]),
         W = Array.from(null !== (C = null == z ? void 0 : z.userIds) && void 0 !== C ? C : []),
         K = (0, l.Wu)([_.default], () => W.map((e) => _.default.getUser(e)).filter(E.lm), [W]),
-        Y = (0, T.Z)({
+        Y = (0, S.Z)({
             applicationId: y,
             size: L,
             names: ['embedded_cover']
         }),
         X =
             null !=
-            (0, A.ZP)({
+            (0, x.ZP)({
                 application: null != V ? V : void 0,
                 channelId: D
             }),
@@ -67,7 +67,7 @@ function y(e) {
         q = async () => {
             if (w) {
                 if (null != z && K.length > 0)
-                    await (0, x.Z)({
+                    await (0, N.Z)({
                         applicationId: z.applicationId,
                         activityChannelId: D,
                         locationObject: k.location,
@@ -76,7 +76,7 @@ function y(e) {
                 else {
                     let e = B.isPrivate() && !f.Z.isCallActive(D),
                         t = async () =>
-                            await (0, N.Z)({
+                            await (0, v.Z)({
                                 targetApplicationId: y,
                                 channelId: D,
                                 analyticsLocations: M,
@@ -143,7 +143,7 @@ function y(e) {
                                       K.length > 0
                                           ? (0, i.jsx)('div', {
                                                 className: P.avatars,
-                                                children: (0, i.jsx)(S.Z, {
+                                                children: (0, i.jsx)(A.Z, {
                                                     guildId: U,
                                                     users: K,
                                                     max: 4

@@ -26,9 +26,9 @@ var i = n(200651),
     I = n(998502),
     C = n(981631),
     v = n(741764),
-    S = n(215820);
+    T = n(215820);
 let N = (0, l.Ue)(() => ({ isOpen: !0 }));
-function T(e) {
+function S(e) {
     e.stopPropagation();
 }
 function A() {
@@ -44,13 +44,13 @@ function A() {
         (0, E.isMac)() && I.ZP.maximize();
     }, []);
     return (0, i.jsxs)('div', {
-        className: S.bar,
+        className: T.bar,
         onDoubleClick: x,
         children: [
             (0, i.jsx)('div', {
-                className: S.left,
+                className: T.left,
                 'data-sidebar-collapsed': !l,
-                onDoubleClick: T,
+                onDoubleClick: S,
                 children:
                     !l &&
                     (0, i.jsxs)(i.Fragment, {
@@ -71,17 +71,17 @@ function A() {
                     })
             }),
             (0, i.jsx)('div', {
-                className: S.center,
+                className: T.center,
                 children:
                     null != n &&
                     (0, i.jsxs)('div', {
-                        className: S.guild,
+                        className: T.guild,
                         children: [
                             (0, i.jsx)(d.Z, {
                                 guild: n,
                                 size: d.Z.Sizes.SMALLER,
                                 active: !0,
-                                className: S.icon
+                                className: T.icon
                             }),
                             (0, i.jsx)(s.Text, {
                                 variant: 'text-sm/medium',
@@ -91,8 +91,8 @@ function A() {
                     })
             }),
             (0, i.jsxs)('div', {
-                className: S.right,
-                onDoubleClick: T,
+                className: T.right,
+                onDoubleClick: S,
                 children: [(0, i.jsx)(p.Z, {}), A ? (0, i.jsx)(h.Z, {}) : (0, i.jsx)(u.Z, {}), (0, i.jsx)(m.Z, {})]
             })
         ]
@@ -101,7 +101,7 @@ function A() {
 function b() {
     return (0, i.jsxs)('svg', {
         xmlns: 'http://www.w3.org/2000/svg',
-        className: S.icon,
+        className: T.icon,
         width: '24',
         height: '24',
         viewBox: '0 0 24 24',

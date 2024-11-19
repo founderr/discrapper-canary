@@ -27,7 +27,7 @@ t.Z = function (e) {
     r.useEffect(() => {
         C(1);
     }, [n]);
-    let S = r.useMemo(
+    let T = r.useMemo(
             () => ({
                 query: g.Mm,
                 page: I,
@@ -44,12 +44,12 @@ t.Z = function (e) {
                 categoryId: n
             })
         ),
-        T = (0, a.cj)([u.Z], () => {
+        S = (0, a.cj)([u.Z], () => {
             var e;
-            return null !== (e = u.Z.getSearchResults(S)) && void 0 !== e ? e : _;
+            return null !== (e = u.Z.getSearchResults(T)) && void 0 !== e ? e : _;
         }),
-        A = null !== (t = (0, o.Z)(T)) && void 0 !== t ? t : _,
-        { results: b, totalPages: x } = r.useMemo(() => (N === d.M.FETCHING ? A : T), [N, A, T]),
+        A = null !== (t = (0, o.Z)(S)) && void 0 !== t ? t : _,
+        { results: b, totalPages: x } = r.useMemo(() => (N === d.M.FETCHING ? A : S), [N, A, S]),
         Z = r.useMemo(() => (null == b ? void 0 : b.filter((e) => !(e.type !== l.s.APPLICATION))), [b]),
         L = r.useCallback((e) => {
             let { page: t, activeCategoryId: n, onSuccessCallback: i, guildId: r, fetchCounts: l } = e;

@@ -40,7 +40,7 @@ let f = async (e) => {
                 url: c.ANM.EMOJI_SOURCE_DATA(e),
                 oldFormErrors: !0,
                 timeout: 5000,
-                rejectWithError: !1
+                rejectWithError: !0
             })
         ).body;
         (null == n ? void 0 : n.type) === 'GUILD'

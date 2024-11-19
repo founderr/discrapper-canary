@@ -22,9 +22,9 @@ var i = n(200651),
     I = n(292959),
     C = n(19780),
     v = n(944486),
-    S = n(606304),
+    T = n(606304),
     N = n(979651),
-    T = n(938475),
+    S = n(938475),
     A = n(823379),
     b = n(557177),
     x = n(981631);
@@ -108,8 +108,8 @@ function y() {
 function O() {
     return (
         Z(
-            [S.Z],
-            () => S.Z.isCurrentUserSpeaking(),
+            [T.Z],
+            () => T.Z.isCurrentUserSpeaking(),
             (e, t) => {
                 if (e !== t) {
                     let e = E.Z.isSelfMute();
@@ -120,7 +120,7 @@ function O() {
         null
     );
 }
-function R() {
+function P() {
     return (
         Z(
             [E.Z],
@@ -135,7 +135,7 @@ function R() {
         null
     );
 }
-function P() {
+function R() {
     return (
         Z(
             [N.Z],
@@ -178,7 +178,7 @@ function D() {
                     s = p.Z.getAllActiveStreams();
                 if (null != n) {
                     let i = f.Z.getChannel(n);
-                    null != i && ((e = i.type), (t = T.ZP.countVoiceStatesForChannel(i.id) - (N.Z.isInChannel(i.id) ? 1 : 0)), (r = p.Z.getAllApplicationStreamsForChannel(i.id).map((e) => e.ownerId)));
+                    null != i && ((e = i.type), (t = S.ZP.countVoiceStatesForChannel(i.id) - (N.Z.isInChannel(i.id) ? 1 : 0)), (r = p.Z.getAllApplicationStreamsForChannel(i.id).map((e) => e.ownerId)));
                 }
                 let o = null;
                 return (
@@ -289,6 +289,6 @@ function w() {
 }
 function k() {
     return (0, i.jsxs)(i.Fragment, {
-        children: [(0, i.jsx)(L, {}), (0, i.jsx)(y, {}), (0, i.jsx)(O, {}), (0, i.jsx)(R, {}), (0, i.jsx)(P, {}), (0, i.jsx)(D, {}), (0, i.jsx)(j, {}), (0, i.jsx)(M, {}), (0, i.jsx)(w, {})]
+        children: [(0, i.jsx)(L, {}), (0, i.jsx)(y, {}), (0, i.jsx)(O, {}), (0, i.jsx)(P, {}), (0, i.jsx)(R, {}), (0, i.jsx)(D, {}), (0, i.jsx)(j, {}), (0, i.jsx)(M, {}), (0, i.jsx)(w, {})]
     });
 }

@@ -18,9 +18,9 @@ var i = n(200651),
     I = n(199104),
     C = n(108427),
     v = n(210887),
-    S = n(974042),
+    T = n(974042),
     N = n(666286),
-    T = n(596957),
+    S = n(596957),
     A = n(981631),
     b = n(723359),
     x = n(388032),
@@ -51,9 +51,9 @@ t.Z = function (e) {
             null != t && m.Z.setInitialSection(t);
         }, [t]);
     let E = (0, c.e7)([v.Z], () => v.Z.theme),
-        { section: y, pendingCount: O } = (0, c.cj)([S.ZP], () => S.ZP.getState()),
-        R = (0, c.cj)([f.Z], () => f.Z.getSuggestionCount()),
-        P = (e) => {
+        { section: y, pendingCount: O } = (0, c.cj)([T.ZP], () => T.ZP.getState()),
+        P = (0, c.cj)([f.Z], () => f.Z.getSuggestionCount()),
+        R = (e) => {
             m.Z.setSection(e);
         },
         j = (0, g.Dt)(),
@@ -86,7 +86,7 @@ t.Z = function (e) {
                                 'aria-label': x.intl.string(x.t.TdEu5e),
                                 selectedItem: y,
                                 type: 'top-pill',
-                                onItemSelect: P,
+                                onItemSelect: R,
                                 className: Z.tabBar,
                                 children: [
                                     (0, i.jsx)(d.TabBar.Item, {
@@ -113,7 +113,7 @@ t.Z = function (e) {
                                                 : null
                                         ]
                                     }),
-                                    R > 0
+                                    P > 0
                                         ? (0, i.jsxs)(d.TabBar.Item, {
                                               id: A.pJs.SUGGESTIONS,
                                               className: Z.item,
@@ -121,7 +121,7 @@ t.Z = function (e) {
                                               children: [
                                                   x.intl.string(x.t['8rSi19']),
                                                   (0, i.jsx)(d.NumberBadge, {
-                                                      count: R,
+                                                      count: P,
                                                       className: Z.badge
                                                   })
                                               ]
@@ -153,7 +153,7 @@ t.Z = function (e) {
                         children:
                             y === A.pJs.ADD_FRIEND
                                 ? (0, i.jsx)(N.Z, {})
-                                : (0, i.jsx)(T.Z, {
+                                : (0, i.jsx)(S.Z, {
                                       titleId: D,
                                       sectionFilter: y
                                   })

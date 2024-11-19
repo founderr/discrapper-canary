@@ -22,8 +22,8 @@ var i = n(200651),
     C = n(351402),
     E = n(853872),
     _ = n(78839),
-    I = n(706454),
-    f = n(726985),
+    f = n(706454),
+    I = n(726985),
     N = n(981631),
     A = n(388032),
     b = n(795210);
@@ -49,7 +49,7 @@ class v extends s.PureComponent {
                                 children: (0, i.jsx)(o.Spinner, {})
                             })
                           : (0, i.jsx)(x.F, {
-                                setting: f.s6.BILLING_PAYMENT_METHODS,
+                                setting: I.s6.BILLING_PAYMENT_METHODS,
                                 children: (0, i.jsx)(g.Z, {
                                     paymentSources: n,
                                     defaultPaymentSourceId: s,
@@ -60,7 +60,7 @@ class v extends s.PureComponent {
                                 })
                             }),
                       (0, i.jsx)(x.F, {
-                          setting: f.s6.BILLING_TRANSACTION_HISTORY,
+                          setting: I.s6.BILLING_TRANSACTION_HISTORY,
                           children: (0, i.jsx)('div', {
                               className: b.paymentHistory,
                               children: (0, i.jsxs)(o.HeadingLevel, {
@@ -82,13 +82,13 @@ class v extends s.PureComponent {
     }
 }
 function j() {
-    let e = (0, a.cj)([I.default, C.Z, E.Z, T.default, S.Z, _.ZP], () => {
+    let e = (0, a.cj)([f.default, C.Z, E.Z, T.default, S.Z, _.ZP], () => {
         let e = _.ZP.getPremiumTypeSubscription(),
             t = T.default.getCurrentUser();
         return (
             l()(null != t, 'UserSettingsBilling: currentUser cannot be undefined'),
             {
-                locale: I.default.locale,
+                locale: f.default.locale,
                 hide: S.Z.enabled,
                 isClaimed: t.isClaimed(),
                 isVerified: t.verified,

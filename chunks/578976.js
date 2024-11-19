@@ -1,31 +1,31 @@
 n.d(t, {
     s: function () {
-        return a;
+        return o;
     }
 });
-var i = n(46973),
-    l = n(37113);
-let a = (e, t, n) => {
-    let a = {
+var r = n(46973),
+    i = n(37113);
+let o = (e, t, n) => {
+    let o = {
         qualityOptions: {
-            preset: l.tI.PRESET_CUSTOM,
+            preset: i.tI.PRESET_CUSTOM,
             resolution: e,
             frameRate: t
         },
-        context: i.Yn.STREAM
+        context: r.Yn.STREAM
     };
     return (
         null != n &&
             (null != n.desktopSource &&
-                (a.desktopSettings = {
+                (o.desktopSettings = {
                     sourceId: n.desktopSource.id,
                     sound: !0
                 }),
             null != n.cameraSource &&
-                (a.cameraSettings = {
+                (o.cameraSettings = {
                     videoDeviceGuid: n.cameraSource.videoDeviceGuid,
                     audioDeviceGuid: n.cameraSource.audioDeviceGuid
                 })),
-        a
+        o
     );
 };

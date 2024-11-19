@@ -14,8 +14,8 @@ var i = n(200651),
     d = n(802429),
     _ = n(846488),
     E = n(181211),
-    S = n(811085),
-    g = n(967254),
+    g = n(811085),
+    S = n(967254),
     f = n(981631),
     p = n(388032),
     m = n(394686);
@@ -46,6 +46,6 @@ function h() {
             })
           : (0, i.jsxs)('div', {
                 className: m.container,
-                children: [(0, i.jsx)(S.Z, {}), (0, i.jsx)(g.N, {})]
+                children: [(0, i.jsx)(g.Z, {}), (0, i.jsx)(S.N, {})]
             });
 }

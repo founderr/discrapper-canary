@@ -31,7 +31,7 @@ t.Z = {
             .get({
                 url: _.ANM.CONNECTIONS,
                 oldFormErrors: !0,
-                rejectWithError: !1
+                rejectWithError: !0
             })
             .then(
                 (e) =>
@@ -232,7 +232,7 @@ t.Z = {
         return i.tn.get({
             url: r,
             body: { state: t },
-            rejectWithError: !1
+            rejectWithError: !0
         });
     }
 };

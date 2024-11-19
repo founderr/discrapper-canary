@@ -55,7 +55,7 @@ function T(e, t, n) {
             body: u,
             signal: i.signal,
             onRequestProgress: a,
-            rejectWithError: !1
+            rejectWithError: !0
         })
         .then(b.VqG, () => {
             if (i.signal.aborted) return;
@@ -78,7 +78,7 @@ function y(e, t, n, r) {
                 body: _,
                 signal: l.signal,
                 onRequestProgress: u,
-                rejectWithError: !1
+                rejectWithError: !0
             })
             .then(b.VqG, () => {
                 if (l.signal.aborted) return;

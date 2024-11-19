@@ -59,7 +59,7 @@ function C(e) {
 function y() {
     S.clear(), I.clear(), (_ = !1);
 }
-class T extends (i = s.ZP.Store) {
+class b extends (i = s.ZP.Store) {
     initialize() {
         this.waitFor(h.Z, g.Z, m.Z, f.Z);
     }
@@ -74,7 +74,7 @@ class T extends (i = s.ZP.Store) {
     }
 }
 (r = 'SecureFramesVerifiedStore'),
-    (a = 'displayName') in (l = T)
+    (a = 'displayName') in (l = b)
         ? Object.defineProperty(l, a, {
               value: r,
               enumerable: !0,
@@ -82,7 +82,7 @@ class T extends (i = s.ZP.Store) {
               writable: !0
           })
         : (l[a] = r),
-    (t.Z = new T(c.Z, {
+    (t.Z = new b(c.Z, {
         CONNECTION_OPEN: y,
         VOICE_CHANNEL_SELECT: function (e) {
             let { channelId: t } = e;

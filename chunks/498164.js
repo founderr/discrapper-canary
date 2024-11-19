@@ -19,9 +19,9 @@ var a = n(756647),
     I = n(553795),
     C = n(594174),
     v = n(626135),
-    S = n(585483),
+    T = n(585483),
     N = n(591759),
-    T = n(998502),
+    S = n(998502),
     A = n(996106),
     b = n(186901),
     x = n(981631);
@@ -79,7 +79,7 @@ function Z(e, t) {
                 let { guildTemplate: i } = await g.Z.resolveGuildTemplate(t);
                 if (null == i) throw new A.Z({ errorCode: x.lTL.INVALID_GUILD_TEMPLATE }, 'Invalid guild template id: '.concat(t));
                 return (
-                    T.ZP.focus(),
+                    S.ZP.focus(),
                     (0, s.openModalLazy)(async () => {
                         let { default: e } = await Promise.all([n.e('10778'), n.e('90627')]).then(n.bind(n, 766775));
                         return (t) =>
@@ -106,7 +106,7 @@ function Z(e, t) {
                         h.Z.resolveGiftCode(t, !0, !0)
                             .then((i) => {
                                 let { giftCode: r } = i;
-                                T.ZP.focus(),
+                                S.ZP.focus(),
                                     v.default.track(x.rMx.OPEN_MODAL, {
                                         type: 'gift_accept',
                                         location: x.SaU
@@ -132,7 +132,7 @@ function Z(e, t) {
                 let {
                     args: { type: t, params: n }
                 } = e;
-                switch ((T.ZP.focus(), t)) {
+                switch ((S.ZP.focus(), t)) {
                     case b.jE.USER_SETTINGS:
                         null != n && ((0, _.dL)(x.Z5c.SETTINGS(n.section, n.subsection)), Z(n.fingerprint, 'settings'));
                         break;
@@ -196,7 +196,7 @@ function Z(e, t) {
                 let {
                     args: { handoffToken: t, fingerprint: n }
                 } = e;
-                T.ZP.focus(null, !0), (0, d.lx)(t, n);
+                S.ZP.focus(null, !0), (0, d.lx)(t, n);
             }
         },
         [x.Etm.CONNECTIONS_CALLBACK]: {
@@ -217,7 +217,7 @@ function Z(e, t) {
                     );
                 } catch (e) {
                     if ((null == e ? void 0 : e.status) === 400) throw new A.Z({ errorCode: x.lTL.BAD_REQUEST_FOR_PROVIDER }, 'Bad request for provider');
-                    throw (S.S.dispatch(x.CkL.CONNECTIONS_CALLBACK_ERROR), e);
+                    throw (T.S.dispatch(x.CkL.CONNECTIONS_CALLBACK_ERROR), e);
                 }
             }
         },

@@ -14,8 +14,8 @@ var i,
     g = n(570140),
     m = n(13245),
     v = n(836932),
-    E = n(175553),
-    _ = n(158979),
+    _ = n(175553),
+    E = n(158979),
     x = n(181912),
     Z = n(791288),
     S = n(194295),
@@ -27,8 +27,8 @@ var i,
     b = n(358446),
     O = n(695346),
     A = n(314897),
-    L = n(592125),
-    j = n(292959),
+    j = n(592125),
+    L = n(292959),
     P = n(158776),
     R = n(944486),
     w = n(885110),
@@ -47,13 +47,13 @@ var i,
 let Y = 5 * V.Z.Millis.SECOND,
     K = 8 * V.Z.Millis.SECOND,
     X = 30 * V.Z.Millis.SECOND,
-    q = Object.freeze({
+    Q = Object.freeze({
         priority: 0,
         duration: Y,
         expirationExternallyManaged: !1,
         type: 0
     }),
-    Q = [],
+    q = [],
     J = (e, t, n) => {
         let i = t ? W._1z.TIMED_OUT : W._1z.DISMISSED;
         return setTimeout(() => m.Z.updateNotificationStatus(e, i), null != n ? n : Y);
@@ -61,29 +61,29 @@ let Y = 5 * V.Z.Millis.SECOND,
 function $(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : W._1z.DISMISSED;
     if (null == e) return !1;
-    let n = Q.findIndex((t) => t.id === e);
+    let n = q.findIndex((t) => t.id === e);
     if (-1 === n) return !1;
-    let i = Q[n];
+    let i = q[n];
     clearTimeout(i.timerId),
-        (Q = [...Q]),
+        (q = [...q]),
         t === W._1z.DISMISSED
-            ? Q.splice(n, 1)
-            : (Q[n] = {
+            ? q.splice(n, 1)
+            : (q[n] = {
                   ...i,
                   status: t
               });
 }
 function ee(e) {
-    let t = Q.length;
-    return (Q = Q.filter((t) => 1 !== t.type || t.channelId !== e || !1)).length !== t;
+    let t = q.length;
+    return (q = q.filter((t) => 1 !== t.type || t.channelId !== e || !1)).length !== t;
 }
 function et(e) {
-    let t = Q.find((t) => 2 === t.type && t.channelId === e);
+    let t = q.find((t) => 2 === t.type && t.channelId === e);
     return null != t ? t.id : null;
 }
 function en(e, t) {
     let n = {
-        ...q,
+        ...Q,
         ...t
     };
     if (2 !== n.priority && !z.Z.isInstanceFocused()) return null;
@@ -95,17 +95,17 @@ function en(e, t) {
             props: e,
             ...n
         },
-        s = (Q = [...Q]).findIndex((e) => e.priority <= n.priority);
-    return -1 === s ? Q.push(r) : Q.splice(s, 0, r), Q.length > 10 && clearTimeout(Q.pop().timerId), i;
+        s = (q = [...q]).findIndex((e) => e.priority <= n.priority);
+    return -1 === s ? q.push(r) : q.splice(s, 0, r), q.length > 10 && clearTimeout(q.pop().timerId), i;
 }
 function ei(e) {
     let { channelId: t, ringing: n } = e,
         i = et(t);
     if (!n.includes(A.default.getId())) return $(i);
     if (null != i) return !1;
-    let r = L.Z.getChannel(t);
+    let r = j.Z.getChannel(t);
     if (null == r || !r.isPrivate() || w.Z.getStatus() === W.Skl.DND || O.QZ.getSetting()) return !1;
-    let s = Q.find((e) => 1 === e.type && e.channelId === t && e.messageType === W.uaV.CALL);
+    let s = q.find((e) => 1 === e.type && e.channelId === t && e.messageType === W.uaV.CALL);
     null != s && $(s.id),
         en((0, x.Z)(r), {
             priority: 1,
@@ -116,10 +116,10 @@ function ei(e) {
 }
 class er extends (s = f.ZP.Store) {
     initialize() {
-        this.waitFor(L.Z, D.default);
+        this.waitFor(j.Z, D.default);
     }
     getNotifications() {
-        return Q;
+        return q;
     }
 }
 (d = 'OverlayNotificationsStore'),
@@ -145,7 +145,7 @@ class er extends (s = f.ZP.Store) {
                               switch (e.type) {
                                   case F.nc.GO_LIVE_VOICE:
                                   case F.nc.GO_LIVE_NON_VOICE:
-                                      return (0, _.Z)(e);
+                                      return (0, E.Z)(e);
                                   case F.nc.KEYBIND_INDICATORS:
                                       return (0, b.Z)(e);
                                   case F.nc.NEWS:
@@ -162,7 +162,7 @@ class er extends (s = f.ZP.Store) {
                   OVERLAY_SET_INPUT_LOCKED: function (e) {
                       let { locked: t } = e;
                       if (t) return !1;
-                      Q = Q.map((e) =>
+                      q = q.map((e) =>
                           e.status === W._1z.ACTIVE
                               ? (clearTimeout(e.timerId),
                                 {
@@ -175,7 +175,7 @@ class er extends (s = f.ZP.Store) {
                   MESSAGE_CREATE: function (e) {
                       var t, n, i;
                       let { channelId: r, message: s } = e,
-                          a = L.Z.getChannel(r),
+                          a = j.Z.getChannel(r),
                           l = D.default.getUser(null === (t = s.author) || void 0 === t ? void 0 : t.id);
                       if (null == a || null == l) return !1;
                       if ((null === (n = s.activity) || void 0 === n ? void 0 : n.type) === W.mFx.JOIN || (null === (i = s.activity) || void 0 === i ? void 0 : i.type) === W.mFx.JOIN_REQUEST) {
@@ -205,7 +205,7 @@ class er extends (s = f.ZP.Store) {
                           if (!1 !== e) return e;
                       }
                       if (((!z.Z.isInstanceLocked() || z.Z.isPinned(W.Odu.TEXT)) && r === R.Z.getChannelId()) || z.Z.getTextChatNotificationMode() === W.Ypu.DISABLED || M.Z.disableNotifications || !(0, U.eF)(s, r)) return !1;
-                      let o = !j.Z.isSoundDisabled(k.Ay);
+                      let o = !L.Z.isSoundDisabled(k.Ay);
                       en((0, I.Z)(a, s, l, o), {
                           type: 1,
                           channelId: a.id,
@@ -231,7 +231,7 @@ class er extends (s = f.ZP.Store) {
                           { actionType: n, user: i, applicationId: r } = e,
                           s = G.Z.getGame();
                       if (null == s || s.id !== r) return !1;
-                      if (n === W.mFx.JOIN) t = (0, E.Z)(i, s);
+                      if (n === W.mFx.JOIN) t = (0, _.Z)(i, s);
                       if (null == t) return !1;
                       en(t, {
                           priority: 2,

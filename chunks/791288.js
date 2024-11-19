@@ -19,8 +19,8 @@ var i = n(200651),
     g = n(297781),
     m = n(371991),
     v = n(656709),
-    E = n(561308),
-    _ = n(593481),
+    _ = n(561308),
+    E = n(593481),
     x = n(703656),
     Z = n(199902),
     S = n(592125),
@@ -32,22 +32,22 @@ var i = n(200651),
     b = n(701488),
     O = n(987650),
     A = n(388032),
-    L = n(629001);
-function j(e) {
+    j = n(629001);
+function L(e) {
     let { game: t } = e,
         n = (0, h.q)(t.id);
     if (null == n) return null;
     let r = n.getIconURL(b.Si.LARGE);
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsxs)('div', {
-            className: L.header,
+            className: j.header,
             children: [
                 (0, i.jsx)(f.f, {
                     src: r,
                     size: 32
                 }),
                 (0, i.jsx)(o.Text, {
-                    className: L.gameInfo,
+                    className: j.gameInfo,
                     variant: 'text-md/semibold',
                     color: 'header-primary',
                     children: n.name
@@ -59,11 +59,11 @@ function j(e) {
 function P(e) {
     let { entry: t, idx: n } = e,
         s = (0, l.e7)([C.default], () => C.default.getUser(t.author_id)),
-        h = (0, E.kr)(t),
+        h = (0, _.kr)(t),
         f = h ? o.tokens.colors.TEXT_POSITIVE : o.tokens.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY,
-        [_, N] = r.useState('unsent'),
+        [E, N] = r.useState('unsent'),
         [b, O] = r.useState(!1),
-        j = (0, l.e7)([Z.Z], () => (null != s ? Z.Z.getAnyStreamForUser(s.id) : null), [s]),
+        L = (0, l.e7)([Z.Z], () => (null != s ? Z.Z.getAnyStreamForUser(s.id) : null), [s]),
         { isMobileOnline: P, status: R } = (0, l.cj)(
             [I.Z],
             () =>
@@ -79,13 +79,13 @@ function P(e) {
             [s]
         );
     r.useEffect(() => {
-        if ('sent' === _) {
+        if ('sent' === E) {
             let e = setTimeout(() => O(!0), 2000);
             return () => clearTimeout(e);
         }
-    }, [_]);
+    }, [E]);
     let w = async (e) => {
-            if (null != s && 'unsent' === _) {
+            if (null != s && 'unsent' === E) {
                 e.stopPropagation();
                 try {
                     var i;
@@ -121,27 +121,27 @@ function P(e) {
     return null == s
         ? null
         : (0, i.jsxs)('div', {
-              className: L.userRow,
+              className: j.userRow,
               children: [
                   (0, i.jsx)(u.Z, {
-                      className: L.avatarContainer,
+                      className: j.avatarContainer,
                       user: s,
                       isMobile: P,
                       status: R
                   }),
                   (0, i.jsxs)('div', {
-                      className: L.userInfo,
+                      className: j.userInfo,
                       children: [
                           (0, i.jsxs)('div', {
-                              className: L.usernameWrapper,
+                              className: j.usernameWrapper,
                               children: [
                                   (0, i.jsx)(o.Text, {
-                                      className: L.username,
+                                      className: j.username,
                                       variant: 'text-md/medium',
                                       color: 'header-primary',
                                       children: y.ZP.getName(void 0, void 0, s)
                                   }),
-                                  null != j && (0, i.jsx)(p.ZP, {})
+                                  null != L && (0, i.jsx)(p.ZP, {})
                               ]
                           }),
                           (0, i.jsxs)(g.m7, {
@@ -160,16 +160,16 @@ function P(e) {
                       ]
                   }),
                   (0, i.jsx)('div', {
-                      className: L.inviteButtonWrapper,
+                      className: j.inviteButtonWrapper,
                       children: (0, i.jsx)(o.Button, {
-                          submitting: 'sending' === _,
+                          submitting: 'sending' === E,
                           onClick: b ? M : w,
-                          className: L.inviteButton,
+                          className: j.inviteButton,
                           color: o.ButtonColors.PRIMARY,
-                          look: 'sent' === _ ? o.ButtonLooks.OUTLINED : o.ButtonLooks.FILLED,
+                          look: 'sent' === E ? o.ButtonLooks.OUTLINED : o.ButtonLooks.FILLED,
                           size: o.ButtonSizes.MAX,
                           children:
-                              'sent' === _
+                              'sent' === E
                                   ? b
                                       ? (0, i.jsx)(o.ChatIcon, { size: 'sm' })
                                       : (0, i.jsx)(o.CheckmarkSmallBoldIcon, {
@@ -187,9 +187,9 @@ function R(e) {
         n = t.slice(0, 5);
     return (0, i.jsxs)('div', {
         children: [
-            (0, i.jsx)(_.iz, {}),
+            (0, i.jsx)(E.iz, {}),
             (0, i.jsxs)(o.Text, {
-                className: L.helpText,
+                className: j.helpText,
                 variant: 'text-sm/medium',
                 color: 'header-secondary',
                 children: [(0, i.jsx)(o.ChatPlusIcon, { size: 'xxs' }), A.intl.string(A.t.y9eo7e)]
@@ -213,7 +213,7 @@ function w(e, t) {
         a()(t.length > 0, 'Some entries must be present'),
         {
             icon: null,
-            title: (0, i.jsx)(j, { game: e }),
+            title: (0, i.jsx)(L, { game: e }),
             body: (0, i.jsx)(R, { entries: t }),
             onNotificationShow: () => {
                 n(),

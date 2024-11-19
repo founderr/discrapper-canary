@@ -22,13 +22,13 @@ var i,
     Z = n(168551),
     C = n(597952),
     y = n(628123),
-    T = n(686546),
-    b = n(80006),
+    b = n(686546),
+    T = n(80006),
     A = n(151851),
     N = n(587061),
     w = n(392358),
-    P = n(314910),
-    j = n(892254),
+    j = n(314910),
+    P = n(892254),
     R = n(706454),
     M = n(210887),
     O = n(740492),
@@ -39,8 +39,8 @@ var i,
     V = n(928518),
     F = n(981631),
     W = n(388032),
-    G = n(25176);
-function B(e, t, n) {
+    B = n(25176);
+function G(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -124,7 +124,7 @@ class z extends (i = a.Component) {
             });
         return (0, l.jsx)(u.VK, {
             children: (0, l.jsx)(
-                j.Z,
+                P.Z,
                 {
                     children: (0, l.jsx)(f.ThemeProvider, {
                         theme: e,
@@ -139,14 +139,14 @@ class z extends (i = a.Component) {
                                         children: (0, l.jsx)(v.Z, {
                                             children: (0, l.jsxs)(y.Z, {
                                                 children: [
-                                                    (0, l.jsx)(T.Co, {}),
+                                                    (0, l.jsx)(b.Co, {}),
                                                     (0, l.jsx)(h.Wu, {
                                                         appContext: F.IlC.POPOUT,
                                                         renderWindow: g,
-                                                        children: (0, l.jsxs)(P.yP, {
+                                                        children: (0, l.jsxs)(j.yP, {
                                                             children: [
                                                                 (0, l.jsxs)('div', {
-                                                                    className: G.popout,
+                                                                    className: B.popout,
                                                                     children: [
                                                                         m && null != x
                                                                             ? (0, l.jsx)(A.Z, {
@@ -157,14 +157,14 @@ class z extends (i = a.Component) {
                                                                               })
                                                                             : null,
                                                                         (0, l.jsx)('div', {
-                                                                            className: s()(G.content, I),
+                                                                            className: s()(B.content, I),
                                                                             children: a
                                                                         })
                                                                     ]
                                                                 }),
                                                                 (0, l.jsx)(f.Modals, {}),
                                                                 (0, l.jsx)(p.Z, {}),
-                                                                (0, l.jsx)(P.Un, {})
+                                                                (0, l.jsx)(j.Un, {})
                                                             ]
                                                         })
                                                     })
@@ -182,9 +182,9 @@ class z extends (i = a.Component) {
     }
     constructor(...e) {
         super(...e),
-            B(this, 'rootRef', a.createRef()),
-            B(this, '_cleanupWindowActionCreators', void 0),
-            B(this, 'beforeUnload', (e) => {
+            G(this, 'rootRef', a.createRef()),
+            G(this, '_cleanupWindowActionCreators', void 0),
+            G(this, 'beforeUnload', (e) => {
                 if (this.props.connectedToEmbeddedActivity && !O.ZP.disableEmbeddedActivityPopOutAlert) {
                     if (((e.returnValue = W.intl.string(W.t['bST/Y2'])), !!k.isPlatformEmbedded))
                         !(0, I.Z)() &&
@@ -193,16 +193,16 @@ class z extends (i = a.Component) {
                             });
                 } else V.Z.unmountWindow(this.props.windowKey);
             }),
-            B(this, 'handleBlur', () => {
+            G(this, 'handleBlur', () => {
                 var e, t;
                 null === (e = (t = this.props).onBlur) || void 0 === e || e.call(t);
             }),
-            B(this, 'handleContextMenu', (e) => {
+            G(this, 'handleContextMenu', (e) => {
                 e.preventDefault();
             });
     }
 }
-B(z, 'defaultProps', { withTitleBar: !0 });
+G(z, 'defaultProps', { withTitleBar: !0 });
 let H = a.forwardRef(function (e, t) {
     let { guestWindow: n, focused: i } = (0, m.cj)([V.Z], () => ({
         guestWindow: V.Z.getWindow(e.windowKey),
@@ -215,7 +215,7 @@ let H = a.forwardRef(function (e, t) {
             theme: M.Z.theme
         })),
         o = (0, m.e7)([g.Z], () => (g.Z.useForcedColors ? 'yes' : 'no')),
-        { accessibilitySettings: u, appWrapperClassName: d } = (0, b.I)(),
+        { accessibilitySettings: u, appWrapperClassName: d } = (0, T.I)(),
         p = (0, m.e7)([S.ZP], () => null != e.channelId && null !== S.ZP.getSelfEmbeddedActivityForChannel(e.channelId));
     (0, N.Z)(n, !1);
     let h = (0, w.Z)(n, i),

@@ -1,7 +1,7 @@
 n(653041), n(47120);
 var i = n(200651),
-    r = n(192379),
-    l = n(442837),
+    l = n(192379),
+    r = n(442837),
     o = n(481060),
     a = n(237997),
     s = n(388627),
@@ -12,33 +12,33 @@ var i = n(200651),
     f = n(981631),
     p = n(802015);
 let m = [];
-function E(e) {
+function v(e) {
     return e.notification.id;
 }
-function v(e, t, n, r) {
-    let { index: l, notification: o, locked: a } = t;
+function g(e, t, n, l) {
+    let { index: r, notification: o, locked: a } = t;
     return (0, i.jsx)(
         c.Z,
         {
-            index: l,
+            index: r,
             notification: o,
             locked: a,
             transitionState: n,
-            cleanUp: r
+            cleanUp: l
         },
         e
     );
 }
-function g(e) {
+function E(e) {
     return (0, i.jsx)('div', {
         className: p.container,
         children: e
     });
 }
-let _ = (e) => r.useState(() => new d.AS(e))[0];
-t.Z = r.memo(function (e) {
+let _ = (e) => l.useState(() => new d.AS(e))[0];
+t.Z = l.memo(function (e) {
     let { locked: t } = e,
-        n = (0, l.e7)(
+        n = (0, r.e7)(
             [a.Z, h.Z],
             () => {
                 if (a.Z.getNotificationPositionMode() === f._vf.DISABLED) return m;
@@ -61,15 +61,15 @@ t.Z = r.memo(function (e) {
         ),
         c = _(t);
     return (
-        r.useLayoutEffect(() => c.updateState(n, t)),
-        r.useLayoutEffect(() => (c.initialize((0, u.i)()), () => c.cleanUp()), [c]),
+        l.useLayoutEffect(() => c.updateState(n, t)),
+        l.useLayoutEffect(() => (c.initialize((0, u.i)()), () => c.cleanUp()), [c]),
         (0, i.jsx)(d.S4.Provider, {
             value: c,
             children: (0, i.jsx)(o.TransitionGroup, {
                 items: n,
-                renderItem: v,
-                getItemKey: E,
-                wrapChildren: g
+                renderItem: g,
+                getItemKey: v,
+                wrapChildren: E
             })
         })
     );

@@ -40,14 +40,14 @@ t.Z = {
         r.tn.post({
             url: o.ANM.CHANGELOG_MESSAGES,
             body: { changelog_id: e },
-            rejectWithError: !1
+            rejectWithError: !0
         });
     },
     fetchChangelogConfig() {
         let e = l.Vw.DESKTOP;
         return r.tn.get({
             url: 'https://cdn.discordapp.com/changelogs/config_'.concat(e, '.json?').concat(u()),
-            rejectWithError: !1
+            rejectWithError: !0
         });
     },
     async fetchChangelog(e, t) {
@@ -56,7 +56,7 @@ t.Z = {
         try {
             let a = await r.tn.get({
                 url: 'https://cdn.discordapp.com/changelogs/'.concat(n, '/').concat(e, '/').concat(t, '.json?').concat(u()),
-                rejectWithError: !1
+                rejectWithError: !0
             });
             return (
                 i.Z.dispatch({

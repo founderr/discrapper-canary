@@ -42,7 +42,7 @@ function U() {
     };
     p.K.set(C, e);
 }
-function B() {
+function G() {
     let e = R[0];
     if (null != e) {
         var t, n;
@@ -56,7 +56,7 @@ function B() {
         }
     }
 }
-function G(e, t) {
+function B(e, t) {
     let n = (0, b.Tu)(e, t);
     return R.findIndex((e) => e.comboId === n);
 }
@@ -68,15 +68,15 @@ function Z(e, t, n, r) {
         },
         s = O.indexOf(i);
     -1 !== s && O.splice(s, 1);
-    let o = G(e, t);
-    0 !== o && (n ? -1 === o && (R.push(a), B()) : (o > 0 && R.splice(o, 1), R.unshift(a), B())), !n && D && I.Z.resume(), U();
+    let o = B(e, t);
+    0 !== o && (n ? -1 === o && (R.push(a), G()) : (o > 0 && R.splice(o, 1), R.unshift(a), G())), !n && D && I.Z.resume(), U();
 }
 function F(e, t) {
     let n = (0, b.Tu)(e, t),
         r = O.indexOf(n);
     -1 !== r && O.splice(r, 1);
-    let i = G(e, t);
-    -1 !== i && (R.splice(i, 1), U()), B();
+    let i = B(e, t);
+    -1 !== i && (R.splice(i, 1), U()), G();
 }
 function V(e) {
     let { applicationId: t, branchId: n } = e;
@@ -133,7 +133,7 @@ class W extends (a = _.ZP.Store) {
         return D;
     }
     getQueuePosition(e, t) {
-        return G(e, t);
+        return B(e, t);
     }
     isCorruptInstallation() {
         return P;
@@ -167,14 +167,14 @@ class W extends (a = _.ZP.Store) {
         },
         DISPATCH_APPLICATION_MOVE_UP: function (e) {
             let { applicationId: t, branchId: n } = e,
-                r = G(t, n);
+                r = B(t, n);
             if (r < 1) return !1;
-            R.splice(0, 0, R.splice(r, 1)[0]), B(), D && I.Z.resume(), U();
+            R.splice(0, 0, R.splice(r, 1)[0]), G(), D && I.Z.resume(), U();
         },
         DISPATCH_APPLICATION_REMOVE_FINISHED: j,
         DISPATCH_APPLICATION_STATE_UPDATE: function (e) {
             let { state: t } = e;
-            !w && ((w = !0), B(), !D && I.Z.resume());
+            !w && ((w = !0), G(), !D && I.Z.resume());
             let n = D;
             (D = t.paused), (L = t.currentTask), (x = t.nextTask);
             let r = !1;
@@ -199,7 +199,7 @@ class W extends (a = _.ZP.Store) {
                 }
                 return !0;
             })),
-                B(),
+                G(),
                 (r || n !== D) && U();
         },
         DISPATCH_APPLICATION_ERROR: function (e) {

@@ -56,12 +56,12 @@ function f(e) {
                 I = d.length - E,
                 C = _[0],
                 v = null == C ? void 0 : C.activity,
-                S = null == C ? void 0 : C.startedPlayingTime,
+                T = null == C ? void 0 : C.startedPlayingTime,
                 N = { name: null !== (t = null == v ? void 0 : v.name) && void 0 !== t ? t : '' };
             if ((0, a.Z)(v) && null != v)
                 return {
                     subtitle: (0, i.jsx)(c.ZP, {
-                        start: S,
+                        start: T,
                         location: c.ZP.Locations.ACTIVITY_FEED_NEW,
                         messageProps: N
                     }),
@@ -85,7 +85,7 @@ function f(e) {
                             };
                         return {
                             subtitle: (0, i.jsx)(c.ZP, {
-                                start: S,
+                                start: T,
                                 location: c.ZP.Locations.ACTIVITY_FEED_NEW,
                                 messageProps: N
                             }),

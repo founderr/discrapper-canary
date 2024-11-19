@@ -171,7 +171,7 @@ async function M(e) {
             url: T.ANM.STREAM_NOTIFY(e),
             oldFormErrors: !0,
             trackedActionData: { event: a.NetworkActionNames.STREAM_NOTIFY },
-            rejectWithError: !1
+            rejectWithError: !0
         });
     } catch (e) {}
 }
@@ -187,7 +187,7 @@ function k(e, t) {
         url: T.ANM.STREAM(e),
         body: { region: t },
         oldFormErrors: !0,
-        rejectWithError: !1
+        rejectWithError: !0
     });
 }
 function U() {

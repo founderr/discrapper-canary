@@ -6,7 +6,7 @@ t.Z = (e) =>
         .get({
             url: l.ANM.STICKER_GUILD_DATA(e),
             oldFormErrors: !0,
-            rejectWithError: !1
+            rejectWithError: !0
         })
         .then((e) => ((null == e ? void 0 : e.body) != null ? (0, r.PP)(e.body) : null))
         .catch(() => null);

@@ -77,7 +77,7 @@ t.Z = () => {
                             key: R,
                             handoff_token: n
                         },
-                        rejectWithError: !1
+                        rejectWithError: !0
                     })
                     .then((e) => g.Z.loginToken(e.body.token, !1))
                     .then(() => {

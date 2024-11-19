@@ -1,6 +1,6 @@
 n.d(t, {
     F0: function () {
-        return T;
+        return S;
     },
     HR: function () {
         return A;
@@ -29,9 +29,9 @@ var i = n(200651),
     I = n(1964),
     C = n(762756),
     v = n(981631),
-    S = n(815660),
+    T = n(815660),
     N = n(388032);
-let T = 'Email Verification',
+let S = 'Email Verification',
     A = 'PHONE_THEN_EMAIL_INTERSTITIAL_MODAL_KEY';
 function b() {
     let { action: e, theme: t } = (0, a.cj)([E.Z, _.Z], () => ({
@@ -61,7 +61,7 @@ function b() {
                         return (t) => (0, i.jsx)(e, { ...t });
                     },
                     {
-                        modalKey: T,
+                        modalKey: S,
                         Layer: g.ZP
                     }
                 );
@@ -77,7 +77,7 @@ function b() {
                         });
                 },
                 {
-                    modalKey: S.M,
+                    modalKey: T.M,
                     Layer: g.ZP
                 }
             );
@@ -122,7 +122,7 @@ function b() {
                         url: v.ANM.CAPTCHA,
                         body: { captcha_key: e },
                         oldFormErrors: !0,
-                        rejectWithError: !1
+                        rejectWithError: !0
                     })
                     .then(d.xf, () => {
                         Z((e) => e + 1);

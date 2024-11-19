@@ -9,8 +9,8 @@ var o,
     u = n(246946),
     d = n(626135),
     _ = n(358085),
-    f = n(557177),
-    b = n(998502),
+    b = n(557177),
+    f = n(998502),
     g = n(981631);
 function p(e, t, n) {
     return (
@@ -33,24 +33,24 @@ if (h && !m) {
     C = parseInt(e) > 10 || parseInt(t) >= 15063;
 }
 let I = (h && C) || ('Chrome' === c().name && 47 > parseFloat(c().version)) || ('Firefox' === c().name && 52 > parseFloat(c().version)),
-    T = a().throttle(f.GN, 1000, { leading: !0 });
+    T = a().throttle(b.GN, 1000, { leading: !0 });
 function A() {
-    b.ZP.flashFrame(!1);
+    f.ZP.flashFrame(!1);
 }
-h && (window.addEventListener('focus', A), b.ZP.on('MAIN_WINDOW_FOCUS', A));
+h && (window.addEventListener('focus', A), f.ZP.on('MAIN_WINDOW_FOCUS', A));
 let w = window.Notification;
 m &&
-    (b.ZP.on('NOTIFICATION_CLICK', (e, t) => {
+    (f.ZP.on('NOTIFICATION_CLICK', (e, t) => {
         let n = null[t];
         null != n && (n.onclick(), n.close());
     }),
-    b.ZP.send('NOTIFICATIONS_CLEAR'),
+    f.ZP.send('NOTIFICATIONS_CLEAR'),
     (o = class {
         static requestPermission(e) {
             e();
         }
         close() {
-            null != null[this.id] && (delete null[this.id], b.ZP.send('NOTIFICATION_CLOSE', this.id), this.onclose());
+            null != null[this.id] && (delete null[this.id], f.ZP.send('NOTIFICATION_CLOSE', this.id), this.onclose());
         }
         constructor(e, { body: t, icon: n }) {
             p(this, 'id', w._id++),
@@ -65,7 +65,7 @@ m &&
                 (this.icon = n),
                 setImmediate(() => this.onshow()),
                 (null[this.id] = this),
-                b.ZP.send('NOTIFICATION_SHOW', {
+                f.ZP.send('NOTIFICATION_SHOW', {
                     id: this.id,
                     title: this.title,
                     body: this.body,
@@ -82,10 +82,10 @@ function R() {
 function v(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
         n = arguments.length > 2 ? arguments[2] : void 0;
-    e.includes('message') ? T(e, t, void 0, n) : (0, f.GN)(e, t);
+    e.includes('message') ? T(e, t, void 0, n) : (0, b.GN)(e, t);
 }
-function S(e) {
-    return (u.Z.disableNotifications && null == e.overrideStreamerMode) || !R() || (_.isPlatformEmbedded && !b.ZP.shouldDisplayNotifications());
+function k(e) {
+    return (u.Z.disableNotifications && null == e.overrideStreamerMode) || !R() || (_.isPlatformEmbedded && !f.ZP.shouldDisplayNotifications());
 }
 t.Z = {
     hasPermission: R,
@@ -97,8 +97,8 @@ t.Z = {
     },
     showNotification: function (e, t, n, o, i) {
         var r, c, l, u;
-        let f;
-        if (S(i)) {
+        let b;
+        if (k(i)) {
             null != i.sound && !1 !== i.playSoundIfDisabled && v(i.sound, null !== (c = i.volume) && void 0 !== c ? c : 1, i.soundpack);
             return;
         }
@@ -111,27 +111,27 @@ t.Z = {
             tag: p,
             silent: !0
         };
-        h && s.Z.taskbarFlash && b.ZP.flashFrame(!0);
+        h && s.Z.taskbarFlash && f.ZP.flashFrame(!0);
         try {
-            f = new w(t, m);
+            b = new w(t, m);
         } catch (e) {
             return null;
         }
         return (null === (r = i.onShown) || void 0 === r || r.call(i),
         !i.omitViewTracking && d.default.track(g.rMx.NOTIFICATION_VIEWED, o),
-        (f.onclick = () => {
+        (b.onclick = () => {
             var e;
-            _.isPlatformEmbedded ? b.ZP.focus() : (window.focus(), f.close()), !i.omitClickTracking && d.default.track(g.rMx.NOTIFICATION_CLICKED, o), null === (e = i.onClick) || void 0 === e || e.call(i);
+            _.isPlatformEmbedded ? f.ZP.focus() : (window.focus(), b.close()), !i.omitClickTracking && d.default.track(g.rMx.NOTIFICATION_CLICKED, o), null === (e = i.onClick) || void 0 === e || e.call(i);
         }),
-        I && setTimeout(() => f.close(), 5000),
+        I && setTimeout(() => b.close(), 5000),
         C)
-            ? f
+            ? b
             : {
                   close() {
                       var e;
-                      null == f || null === (e = f.onclose) || void 0 === e || e.call(f);
+                      null == b || null === (e = b.onclose) || void 0 === e || e.call(b);
                   }
               };
     },
-    disabled: S
+    disabled: k
 };

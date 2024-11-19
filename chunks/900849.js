@@ -158,7 +158,7 @@ async function A(e) {
                 url: p.ANM.GUILD_DISCOVERY,
                 query: a.stringify({ guild_ids: e }),
                 oldFormErrors: !0,
-                rejectWithError: !1
+                rejectWithError: !0
             }),
             i = null === (n = r.body) || void 0 === n ? void 0 : null === (t = n.guilds) || void 0 === t ? void 0 : t[0];
         if (null == i) return i;

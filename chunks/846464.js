@@ -16,8 +16,8 @@ var l = n(120356),
     c = n(74538),
     p = n(987209),
     x = n(563132),
-    h = n(409813),
-    _ = n(614223),
+    _ = n(409813),
+    h = n(614223),
     f = n(48175),
     j = n(474936),
     L = n(388032),
@@ -34,21 +34,21 @@ function g(e) {
             (function (e) {
                 let { activeSubscription: t, newSkuId: n, setSelectedSkuId: i, handleStepChange: l, isGift: s, userTrialOffer: r, setSelectedPlanId: C, startedPaymentFlowWithPaymentSources: a } = e;
                 i(n);
-                let o = h.h8.PLAN_SELECT,
+                let o = _.h8.PLAN_SELECT,
                     d = (0, c.k5)(t);
-                (d === j.Si.TIER_1 || d === j.Si.TIER_2) && n === j.Si.TIER_0 && !s && (o = h.h8.WHAT_YOU_LOSE);
+                (d === j.Si.TIER_1 || d === j.Si.TIER_2) && n === j.Si.TIER_0 && !s && (o = _.h8.WHAT_YOU_LOSE);
                 let u = (0, f.T)({
                         userTrialOffer: r,
                         isGift: s,
                         skuId: n
                     }),
-                    p = (0, _.Kp)({
+                    p = (0, h.Kp)({
                         isTrial: u,
                         isGift: s,
                         selectedSkuId: n,
                         startedPaymentFlowWithPaymentSources: a
                     });
-                o !== h.h8.WHAT_YOU_LOSE && p && ((o = h.h8.REVIEW), C((0, _.nA)(n, t))), l(o, { analyticsDataOverride: { sku_id: n } });
+                o !== _.h8.WHAT_YOU_LOSE && p && ((o = _.h8.REVIEW), C((0, h.nA)(n, t))), l(o, { analyticsDataOverride: { sku_id: n } });
             })({
                 activeSubscription: r,
                 newSkuId: e,

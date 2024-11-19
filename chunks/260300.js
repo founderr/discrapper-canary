@@ -29,7 +29,7 @@ t.Z = {
             i.tn.put({
                 url: r.ANM.TUTORIAL_INDICATOR(e),
                 oldFormErrors: !0,
-                rejectWithError: !1
+                rejectWithError: !0
             });
     },
     suppressAll() {
@@ -37,7 +37,7 @@ t.Z = {
             i.tn.post({
                 url: r.ANM.TUTORIAL_INDICATORS_SUPPRESS,
                 oldFormErrors: !0,
-                rejectWithError: !1
+                rejectWithError: !0
             });
     }
 };

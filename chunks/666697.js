@@ -18,10 +18,10 @@ var i = n(200651),
     I = n(213746),
     C = n(979007),
     v = n(981631),
-    S = n(388032),
+    T = n(388032),
     N = n(162064);
 t.Z = function (e) {
-    let { applicationId: t, onSelectApplication: n, onScroll: T, initialTab: A } = e,
+    let { applicationId: t, onSelectApplication: n, onScroll: S, initialTab: A } = e,
         b = r.useRef(null),
         x = (0, l.e7)([s.Z], () => s.Z.getApplication(t)),
         Z = (0, l.e7)([s.Z], () => s.Z.getApplicationFetchState(t));
@@ -30,7 +30,7 @@ t.Z = function (e) {
     }, [t, x]);
     let L = null == x ? void 0 : x.storefront_available,
         [y, O] = r.useState(null != A ? A : C.Wc.ABOUT),
-        R = r.useCallback(
+        P = r.useCallback(
             (e) => {
                 var t;
                 null === (t = b.current) || void 0 === t || t.scrollTo({ to: 0 }), O(C.Wc.ABOUT), n(e);
@@ -40,15 +40,15 @@ t.Z = function (e) {
     r.useEffect(() => {
         (null == x ? void 0 : x.storefront_available) && null != t && (0, c.Z)(t);
     }, [null == x ? void 0 : x.storefront_available, t]);
-    let P = r.useMemo(
+    let R = r.useMemo(
             () => [
                 {
                     id: C.Wc.ABOUT,
-                    label: S.intl.string(S.t.JkjJBQ)
+                    label: T.intl.string(T.t.JkjJBQ)
                 },
                 {
                     id: C.Wc.STORE,
-                    label: S.intl.string(S.t.NfuihY)
+                    label: T.intl.string(T.t.NfuihY)
                 }
             ],
             []
@@ -83,7 +83,7 @@ t.Z = function (e) {
               });
     let w = y === C.Wc.ABOUT;
     return (0, i.jsx)(h.Z, {
-        onScroll: T,
+        onScroll: S,
         ref: b,
         children: (0, i.jsx)(d.Z, {
             children: (0, i.jsxs)('div', {
@@ -100,7 +100,7 @@ t.Z = function (e) {
                                         (0, i.jsx)('div', {
                                             className: N.contentTabs,
                                             children: (0, i.jsx)(u.Z, {
-                                                tabs: P,
+                                                tabs: R,
                                                 onTabSelect: D,
                                                 selectedTab: y
                                             })
@@ -108,7 +108,7 @@ t.Z = function (e) {
                                     j,
                                     (0, i.jsx)(E.Z, {
                                         application: x,
-                                        onSelectApplication: R
+                                        onSelectApplication: P
                                     })
                                 ]
                             }),

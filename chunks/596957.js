@@ -18,9 +18,9 @@ var i = n(200651),
     I = n(451478),
     C = n(434184),
     v = n(701861),
-    S = n(437314),
+    T = n(437314),
     N = n(696577),
-    T = n(163417),
+    S = n(163417),
     A = n(492347),
     b = n(42575),
     x = n(617015),
@@ -30,7 +30,7 @@ var i = n(200651),
 t.Z = function (e) {
     let { sectionFilter: t, titleId: l } = e,
         { analyticsLocations: O } = (0, p.ZP)(m.Z.FRIENDS_LIST),
-        { rows: R, section: P } = (0, s.cj)([E.ZP], () => E.ZP.getState()),
+        { rows: P, section: R } = (0, s.cj)([E.ZP], () => E.ZP.getState()),
         j = (0, s.e7)([I.Z], () => I.Z.isFocused()),
         D = (0, s.e7)([_.Z], () => _.Z.getRelationshipCount()),
         [M, w] = r.useState(() => {
@@ -59,18 +59,18 @@ t.Z = function (e) {
                 [t]: ''
             });
         }, [M, t]),
-        B = (0, f.A)({ location: 'people_list' }) && t === Z.pJs.PENDING && R.filter(Z.pJs.SPAM).length > 0,
-        V = R.filter(t, M[t]);
+        B = (0, f.A)({ location: 'people_list' }) && t === Z.pJs.PENDING && P.filter(Z.pJs.SPAM).length > 0,
+        H = P.filter(t, M[t]);
     if (
         (r.useEffect(() => {
             t === Z.pJs.ALL && (0, g.d$)();
         }, [t]),
-        0 === V.length && '' === M[t])
+        0 === H.length && '' === M[t])
     )
         return (0, i.jsx)('div', {
             className: y.emptyStateContainer,
             children: (0, i.jsx)(
-                S.Z,
+                T.Z,
                 {
                     type: t,
                     onClick: B
@@ -81,12 +81,12 @@ t.Z = function (e) {
                             }
                           : void 0
                 },
-                P
+                R
             )
         });
-    let H = [V],
-        F = 0 === V.length && '' !== M[t],
-        z = V.filter((e) => e.type === Z.OGo.PENDING_INCOMING).length,
+    let V = [H],
+        F = 0 === H.length && '' !== M[t],
+        z = H.filter((e) => e.type === Z.OGo.PENDING_INCOMING).length,
         Y = t === Z.pJs.PENDING && z > 0 && z >= x.yf;
     return (0, i.jsx)(p.Gt, {
         value: O,
@@ -118,7 +118,7 @@ t.Z = function (e) {
                                     default:
                                         return L.intl.formatToPlainString(L.t.rHRrhI, { count: t.toString() });
                                 }
-                            })(t, V.length)
+                            })(t, H.length)
                         }),
                         Y &&
                             (0, i.jsx)(o.Button, {
@@ -137,11 +137,11 @@ t.Z = function (e) {
                 F
                     ? (0, i.jsx)('div', {
                           className: y.emptyStateContainer,
-                          children: (0, i.jsx)(S.Z, { type: S.j.SECTION_NO_RESULTS }, P)
+                          children: (0, i.jsx)(T.Z, { type: T.j.SECTION_NO_RESULTS }, R)
                       })
-                    : (0, i.jsx)(T.Z, {
+                    : (0, i.jsx)(S.Z, {
                           relationshipCount: D,
-                          statusSections: H,
+                          statusSections: V,
                           renderRow: function (e) {
                               switch (t) {
                                   case Z.pJs.BLOCKED:

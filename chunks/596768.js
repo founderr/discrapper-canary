@@ -22,8 +22,8 @@ var r = n(200651),
     g = n(257785),
     v = n(484036),
     C = n(681619),
-    _ = n(621060),
-    j = n(388032),
+    j = n(621060),
+    _ = n(388032),
     T = n(619208),
     S = n(986310);
 let y = [
@@ -131,7 +131,7 @@ function I() {
         o = a.useMemo(() => l.filter((t) => 0 === e.length || c()(e, t.experimentId)).sort((e, t) => t.timestamp.getTime() - e.timestamp.getTime()), [l, e]),
         [s, d] = a.useState(void 0),
         x = o.find((e) => e.key === s),
-        { TabBar: f, renderSelectedTab: g } = (0, _.Z)({ tabs: N }, []),
+        { TabBar: f, renderSelectedTab: g } = (0, j.Z)({ tabs: N }, []),
         I = (0, u.e7)([p.Z], () => p.Z.trackTriggers),
         k = a.useCallback((e) => {
             m.Z.dispatch({
@@ -161,11 +161,11 @@ function I() {
                         size: h.Button.Sizes.ICON,
                         onClick: b.Zw,
                         children: (0, r.jsx)('span', {
-                            title: j.intl.string(j.t.VkKicX),
+                            title: _.intl.string(_.t.VkKicX),
                             children: (0, r.jsx)(h.TrashIcon, {
                                 size: 'md',
                                 color: 'currentColor',
-                                'aria-label': j.intl.string(j.t.VkKicX)
+                                'aria-label': _.intl.string(_.t.VkKicX)
                             })
                         })
                     }),

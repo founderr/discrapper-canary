@@ -35,7 +35,7 @@ let m = (e) => {
 function f(e) {
     let { groupListingId: t, subscription: n, className: a } = e,
         { analyticsLocations: l } = (0, c.ZP)(o.Z.PENDING_PLAN_CHANGE_NOTICE),
-        { resetRenewalMutation: f, submitting: _, error: p } = m(l),
+        { resetRenewalMutation: f, submitting: p, error: _ } = m(l),
         h = (0, d._k)(t, { includeSoftDeleted: !0 }),
         { currentListing: E, nextListing: b } = r.useMemo(() => {
             if ((null == n ? void 0 : n.renewalMutations) == null)
@@ -59,9 +59,9 @@ function f(e) {
             nextListing: b.name,
             changeDate: x
         }),
-        error: null == p ? void 0 : p.message,
+        error: null == _ ? void 0 : _.message,
         onClick: () => f(n),
-        submitting: _,
+        submitting: p,
         ctaMessage: g.intl.string(g.t.De4wIy),
         className: a
     });

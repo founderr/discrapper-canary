@@ -67,7 +67,7 @@ async function g() {
         let t = await a.tn.get({
             url: u.ANM.MESSAGE_REQUESTS_SUPPLEMENTAL_DATA,
             query: { channel_ids: e },
-            rejectWithError: !1
+            rejectWithError: !0
         });
         s.Z.dispatch({
             type: 'LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS',

@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(120356),
-    r = n.n(l),
-    a = n(481060),
+    a = n.n(l),
+    r = n(481060),
     o = n(925329),
     s = n(841607);
 function c(e) {
@@ -15,7 +15,7 @@ function c(e) {
     if (n.length <= 0) return null;
     if (1 === n.length)
         return (0, i.jsx)('div', {
-            className: r()(s.container, t, l && s.modeMuted),
+            className: a()(s.container, t, l && s.modeMuted),
             children: (0, i.jsx)(o.Z, {
                 game: n[0].application,
                 className: s.icon20px
@@ -24,7 +24,7 @@ function c(e) {
     {
         let e = n.length - 1;
         return (0, i.jsxs)('div', {
-            className: r()(s.container, t, l && s.modeMuted),
+            className: a()(s.container, t, l && s.modeMuted),
             children: [
                 (0, i.jsx)(o.Z, {
                     game: n[0].application,
@@ -35,7 +35,7 @@ function c(e) {
                           game: n[1].application,
                           className: s.icon20px
                       })
-                    : (0, i.jsx)(a.Text, {
+                    : (0, i.jsx)(r.Text, {
                           className: s.overflow,
                           variant: 'text-xs/bold',
                           color: 'interactive-active',

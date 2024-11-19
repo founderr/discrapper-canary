@@ -23,9 +23,9 @@ var i = n(200651),
     I = n(143757),
     C = n(463119),
     v = n(377171),
-    S = n(243778),
+    T = n(243778),
     N = n(922409),
-    T = n(899740),
+    S = n(899740),
     A = n(28476),
     b = n(880257),
     x = n(631885),
@@ -33,8 +33,8 @@ var i = n(200651),
     L = n(795448),
     y = n(441623),
     O = n(457396),
-    R = n(108989),
-    P = n(51596),
+    P = n(108989),
+    R = n(51596),
     j = n(905423),
     D = n(155409),
     M = n(210887),
@@ -43,8 +43,8 @@ var i = n(200651),
     U = n(699516),
     G = n(923834),
     B = n(55563),
-    V = n(774343),
-    H = n(626135),
+    H = n(774343),
+    V = n(626135),
     F = n(814225),
     z = n(515753),
     Y = n(831218),
@@ -76,7 +76,7 @@ let $ = (e) => {
             children: [
                 (0, i.jsx)(z.Qj, {
                     onClick: () => {
-                        m && (H.default.track(K.rMx.GIFT_INTENT_BADGE_CLICKED, { gift_intent_type: X.hX.FRIEND_ANNIVERSARY }), f.Z.setSection(K.pJs.ALL), (0, L.Gk)());
+                        m && (V.default.track(K.rMx.GIFT_INTENT_BADGE_CLICKED, { gift_intent_type: X.hX.FRIEND_ANNIVERSARY }), f.Z.setSection(K.pJs.ALL), (0, L.Gk)());
                     },
                     interactiveClassName: m ? J.friendsBadge : void 0,
                     selected: t,
@@ -95,7 +95,7 @@ let $ = (e) => {
                 }),
                 m &&
                     !d &&
-                    (0, i.jsx)(R.Z, {
+                    (0, i.jsx)(P.Z, {
                         className: J.confetti,
                         wind: 0,
                         sprites: q.CA,
@@ -132,7 +132,7 @@ let $ = (e) => {
         });
     },
     et = () => {
-        let e = (0, T.q)();
+        let e = (0, S.q)();
         return e > 0 ? (0, i.jsx)(p.NumberBadge, { count: e }) : null;
     },
     en = (e) => {
@@ -194,7 +194,7 @@ let $ = (e) => {
                     className: J.familyCenterPendingBadge,
                     children: (0, i.jsx)(p.NumberBadge, { count: r })
                 })
-              : (0, i.jsx)(S.ZP, {
+              : (0, i.jsx)(T.ZP, {
                     contentTypes: [h.z.FAMILY_CENTER_NEW_BADGE],
                     children: (e) => {
                         let { visibleContent: t } = e;
@@ -207,7 +207,7 @@ let $ = (e) => {
                     }
                 });
     },
-    el = () => (0, P.$Z)('DM_SEARCH');
+    el = () => (0, R.$Z)('DM_SEARCH');
 function ea(e) {
     switch (e) {
         case K.Z5c.APPLICATION_LIBRARY:
@@ -299,7 +299,7 @@ let es = (e) => {
     });
 };
 function eo() {
-    let e = (0, u.e7)([V.Z], () => V.Z.getHomeLink()),
+    let e = (0, u.e7)([H.Z], () => H.Z.getHomeLink()),
         t = (0, u.e7)(
             [B.Z],
             () => {

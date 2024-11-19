@@ -6,7 +6,7 @@ n.d(t, {
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    a = n(486003);
+    a = n(531826);
 function s(e) {
     let { application: t, channelId: s, onAgree: o, onDisagree: l } = e,
         u =

@@ -169,7 +169,7 @@ function x(e) {
                         });
                     }
                 },
-                rejectWithError: !1
+                rejectWithError: !0
             })
                 .then(
                     (e) => {

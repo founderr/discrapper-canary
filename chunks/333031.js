@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return g;
     }
 }),
     n(47120);
 var i = n(200651),
-    r = n(192379),
-    l = n(954955),
-    o = n.n(l),
+    l = n(192379),
+    r = n(954955),
+    o = n.n(r),
     a = n(772848),
     s = n(902704),
     u = n(13245),
@@ -37,7 +37,7 @@ function m(e, t) {
         bottom: Math.ceil(t.bottom)
     };
 }
-let E = r.createContext(
+let v = l.createContext(
     new (class e {
         observe(e) {
             var t;
@@ -106,12 +106,12 @@ let E = r.createContext(
                             let e = !1;
                             for (let [t, n] of this.zones) {
                                 let i = t.getBoundingClientRect(),
-                                    r = m(n.zone.name, i);
-                                if (!(0, s.Z)(r, n.zone))
+                                    l = m(n.zone.name, i);
+                                if (!(0, s.Z)(l, n.zone))
                                     (e = !0),
                                         (n = {
                                             element: n.element,
-                                            zone: r
+                                            zone: l
                                         }),
                                         this.zones.set(t, n);
                             }
@@ -128,10 +128,10 @@ let E = r.createContext(
         }
     })((0, h.i)())
 );
-function v(e) {
-    let { observe: t = !0, className: n, children: l } = e,
-        o = r.useContext(E),
-        [{ refHandler: a, setObserve: s }] = r.useState(() => {
+function g(e) {
+    let { observe: t = !0, className: n, children: r } = e,
+        o = l.useContext(v),
+        [{ refHandler: a, setObserve: s }] = l.useState(() => {
             let e = null;
             return {
                 setObserve(t) {
@@ -143,14 +143,14 @@ function v(e) {
             };
         });
     return (
-        r.useLayoutEffect(() => {
+        l.useLayoutEffect(() => {
             s(t);
         }, [t, s]),
         (0, i.jsx)('div', {
             ref: a,
             className: n,
             'data-click-zone': !0,
-            children: l
+            children: r
         })
     );
 }

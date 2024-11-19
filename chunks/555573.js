@@ -108,7 +108,7 @@ function E(e, t, n) {
                     nonce: p
                 },
                 timeout: 3000,
-                rejectWithError: !1
+                rejectWithError: !0
             })
             .catch(() => {
                 s.Z.dispatch({

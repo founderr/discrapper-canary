@@ -25,7 +25,7 @@ function f(e) {
     r.tn.post({
         url: d.ANM.INITIATE_CHANNEL_PROMPTS,
         body: { guild_ids: e },
-        rejectWithError: !1
+        rejectWithError: !0
     });
 }
 function _(e) {
@@ -33,7 +33,7 @@ function _(e) {
     r.tn.post({
         url: d.ANM.FORCE_SEND_PROMPT(e),
         body: { prompt_type: t },
-        rejectWithError: !1
+        rejectWithError: !0
     });
 }
 async function p(e, t, n) {

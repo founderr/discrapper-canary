@@ -1,12 +1,12 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return E;
     }
 }),
     n(47120);
 var i = n(200651),
-    r = n(192379),
-    l = n(442837),
+    l = n(192379),
+    r = n(442837),
     o = n(765250),
     a = n(358221),
     s = n(569545),
@@ -17,32 +17,32 @@ var i = n(200651),
     f = n(350663),
     p = n(388627),
     m = n(75226);
-let E = [];
-function v(e, t, n, i) {
-    let r = (i - 1) * 12;
-    return e === f.C.HORIZONTAL ? Math.min(Math.max((t - r) / i, 256), Math.max((16 * n) / 9, 256)) : Math.min(Math.max(t, 256), Math.max((((n - r) / i) * 16) / 9, 256));
+let v = [];
+function g(e, t, n, i) {
+    let l = (i - 1) * 12;
+    return e === f.C.HORIZONTAL ? Math.min(Math.max((t - l) / i, 256), Math.max((16 * n) / 9, 256)) : Math.min(Math.max(t, 256), Math.max((((n - l) / i) * 16) / 9, 256));
 }
-function g(e) {
+function E(e) {
     var t;
-    let { id: n, size: g, locked: _, padding: C, borderWidth: S, opacity: I, horizontal: Z } = e,
-        N = 2 * C + 2 * S;
-    let { width: x, height: O } = {
-            width: 'number' == typeof (t = g).width ? t.width : 256,
+    let { id: n, size: E, locked: _, padding: C, borderWidth: S, opacity: Z, horizontal: I } = e,
+        x = 2 * C + 2 * S;
+    let { width: N, height: O } = {
+            width: 'number' == typeof (t = E).width ? t.width : 256,
             height: 'number' == typeof t.height ? t.height : 144
         },
-        T = (0, l.e7)([h.Z], () => h.Z.getVoiceChannelId()),
-        A = (0, l.e7)([d.Z], () => d.Z.getChannel(T)),
-        y = (0, l.e7)([c.default], () => c.default.getId()),
-        { participantsVersion: b, streamParticipants: R } = (0, l.e7)(
+        T = (0, r.e7)([h.Z], () => h.Z.getVoiceChannelId()),
+        y = (0, r.e7)([d.Z], () => d.Z.getChannel(T)),
+        b = (0, r.e7)([c.default], () => c.default.getId()),
+        { participantsVersion: A, streamParticipants: L } = (0, r.e7)(
             [u.Z, a.Z],
             () => {
                 if (null == T)
                     return {
-                        streamParticipants: E,
+                        streamParticipants: v,
                         participantsVersion: -1
                     };
                 let e = new Set(u.Z.getAllActiveStreamsForChannel(T).map((e) => (0, s.V9)(e))),
-                    t = a.Z.getStreamParticipants(T).filter((t) => t.user.id !== y && e.has((0, s.V9)(t.stream)));
+                    t = a.Z.getStreamParticipants(T).filter((t) => t.user.id !== b && e.has((0, s.V9)(t.stream)));
                 return (
                     t.sort((e, t) => e.user.username.localeCompare(t.user.username)),
                     {
@@ -51,30 +51,30 @@ function g(e) {
                     }
                 );
             },
-            [T, y],
+            [T, b],
             p.yp
         ),
-        L = R.length,
-        k = null == A || 0 === L,
-        M = Z ? f.C.HORIZONTAL : f.C.VERTICAL,
-        { tileWidth: P } = (function (e, t, n, i, l) {
+        R = L.length,
+        k = null == y || 0 === R,
+        M = I ? f.C.HORIZONTAL : f.C.VERTICAL,
+        { tileWidth: w } = (function (e, t, n, i, r) {
             let o = (function (e, t, n, i) {
-                    let r = v(f.C.HORIZONTAL, e, t, n),
-                        l = v(f.C.VERTICAL, e, t, n);
+                    let l = g(f.C.HORIZONTAL, e, t, n),
+                        r = g(f.C.VERTICAL, e, t, n);
                     switch (i) {
                         case f.C.VERTICAL:
-                            return l;
-                        case f.C.HORIZONTAL:
                             return r;
+                        case f.C.HORIZONTAL:
+                            return l;
                     }
-                    let o = ((9 * l) / 16 + 12) * n - 12;
-                    return e > (16 * t) / 9 ? r : o <= t ? l : (9 * r) / 16 <= t ? r : l;
-                })(n, i, t, l),
-                a = v(f.C.VERTICAL, n, i, t),
-                s = null != l ? l : o === a ? f.C.VERTICAL : f.C.HORIZONTAL,
-                [u, c] = r.useState(o);
+                    let o = ((9 * r) / 16 + 12) * n - 12;
+                    return e > (16 * t) / 9 ? l : o <= t ? r : (9 * l) / 16 <= t ? l : r;
+                })(n, i, t, r),
+                a = g(f.C.VERTICAL, n, i, t),
+                s = null != r ? r : o === a ? f.C.VERTICAL : f.C.HORIZONTAL,
+                [u, c] = l.useState(o);
             return (
-                r.useEffect(() => {
+                l.useEffect(() => {
                     !e && c(o);
                 }, [e, o]),
                 {
@@ -82,21 +82,21 @@ function g(e) {
                     tileWidth: u
                 }
             );
-        })(!1, L, x - N, O - N, M),
-        w = {
+        })(!1, R, N - x, O - x, M),
+        P = {
             id: n,
-            width: x,
+            width: N,
             height: O,
-            sizeOffset: N,
+            sizeOffset: x,
             layout: M,
             padding: C,
-            participants: R.length
+            participants: L.length
         },
-        j = r.useRef(w);
-    return (r.useEffect(() => void (j.current = w)),
-    r.useEffect(() => {
-        let { id: e, width: t, height: n, sizeOffset: i, layout: r, padding: l } = j.current;
-        if (0 === R.length) {
+        j = l.useRef(P);
+    return (l.useEffect(() => void (j.current = P)),
+    l.useEffect(() => {
+        let { id: e, width: t, height: n, sizeOffset: i, layout: l, padding: r } = j.current;
+        if (0 === L.length) {
             (256 !== t || 144 !== n) &&
                 (0, o.nv)({
                     widgetId: e,
@@ -108,14 +108,14 @@ function g(e) {
                 });
             return;
         }
-        if (r === f.C.HORIZONTAL) {
+        if (l === f.C.HORIZONTAL) {
             let t = (16 / 9) * (n - i);
             (0, o.nv)({
                 widgetId: e,
                 size: {
                     fixed: !0,
                     height: n,
-                    width: t * R.length + l * (R.length - 1) + i
+                    width: t * L.length + r * (L.length - 1) + i
                 }
             });
         } else {
@@ -125,21 +125,21 @@ function g(e) {
                 size: {
                     fixed: !0,
                     width: t,
-                    height: n * R.length + l * (R.length - 1) + i
+                    height: n * L.length + r * (L.length - 1) + i
                 }
             });
         }
-    }, [R.length]),
-    r.useEffect(() => {
+    }, [L.length]),
+    l.useEffect(() => {
         if (j.current.participants <= 1) return;
-        let { id: e, width: t, height: n, sizeOffset: i, padding: r, participants: l } = j.current;
+        let { id: e, width: t, height: n, sizeOffset: i, padding: l, participants: r } = j.current;
         if (M === f.C.HORIZONTAL) {
             let n = t - i;
             (0, o.nv)({
                 widgetId: e,
                 size: {
                     fixed: !0,
-                    width: n * l + r * (l - 1) + i,
+                    width: n * r + l * (r - 1) + i,
                     height: (9 / 16) * n + i
                 }
             });
@@ -150,12 +150,12 @@ function g(e) {
                 size: {
                     fixed: !0,
                     width: (16 / 9) * t + i,
-                    height: t * l + r * (l - 1) + i
+                    height: t * r + l * (r - 1) + i
                 }
             });
         }
     }, [M]),
-    r.useEffect(
+    l.useEffect(
         () => () => {
             (0, o.nv)({
                 widgetId: n,
@@ -172,13 +172,13 @@ function g(e) {
         ? null
         : (0, i.jsx)('div', {
               className: m.goLiveGridContainer,
-              style: { opacity: I },
+              style: { opacity: Z },
               children: (0, i.jsx)(f.Z, {
-                  tileWidth: P,
+                  tileWidth: w,
                   locked: _,
                   layout: M,
-                  streamParticipants: R,
-                  participantsVersion: b
+                  streamParticipants: L,
+                  participantsVersion: A
               })
           });
 }

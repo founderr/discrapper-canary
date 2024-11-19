@@ -193,7 +193,7 @@ function O(e, t) {
     r.tn.post({
         url: h.ANM.LIBRARY_APPLICATION_INSTALLED(e, e),
         oldFormErrors: !0,
-        rejectWithError: !1
+        rejectWithError: !0
     }),
         null != i &&
             (f.Z.createShortcuts(l.Xc.getSetting(), l.Pe.getSetting(), i.name, i.id, t.installPath),

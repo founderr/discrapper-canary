@@ -97,10 +97,10 @@ function U(e, t, n, r) {
     if (null == l) throw Error();
     l.dispatchEvent(o);
 }
-function B(e) {
+function G(e) {
     (R = e), u.Z.setFocusedPID(R);
 }
-function G(e) {
+function B(e) {
     (R = null), u.Z.setFocusedPID(null);
 }
 function Z(e) {
@@ -114,7 +114,7 @@ let F = (() => {
             var e, t, n;
             await m.ZP.ensureModule('discord_desktop_overlay');
             let r = m.ZP.requireModule('discord_desktop_overlay');
-            null == r || null === (e = r.init) || void 0 === e || e.call(r), r.setCaptureZoneCallback(U), r.setHostWindowCallbacks(M, P, k), r.setFocusCallback(B), null === (t = r.setFocusLostCallback) || void 0 === t || t.call(r, G), null === (n = r.setSuccessfullyShownCallback) || void 0 === n || n.call(r, Z), (N = r), x();
+            null == r || null === (e = r.init) || void 0 === e || e.call(r), r.setCaptureZoneCallback(U), r.setHostWindowCallbacks(M, P, k), r.setFocusCallback(G), null === (t = r.setFocusLostCallback) || void 0 === t || t.call(r, B), null === (n = r.setSuccessfullyShownCallback) || void 0 === n || n.call(r, Z), (N = r), x();
         } catch (e) {
             throw (T.error('failed loading overlay module', e), e);
         }

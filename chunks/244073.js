@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return j;
+        return L;
     }
 }),
     n(47120);
@@ -19,8 +19,8 @@ var i = n(200651),
     g = n(870569),
     m = n(345243),
     v = n(873596),
-    E = n(917405),
-    _ = n(430824),
+    _ = n(917405),
+    E = n(430824),
     x = n(131951),
     Z = n(699516),
     S = n(594174),
@@ -44,7 +44,7 @@ function A(e, t, n) {
         e
     );
 }
-class L extends r.PureComponent {
+class j extends r.PureComponent {
     handleDisconnect() {
         h.default.selectVoiceChannel(null);
     }
@@ -82,7 +82,7 @@ class L extends r.PureComponent {
                                   children: (e) =>
                                       (0, i.jsx)(c.Clickable, {
                                           ...e,
-                                          children: (0, i.jsx)(E.Z, {
+                                          children: (0, i.jsx)(_.Z, {
                                               channelId: s.id,
                                               quality: l,
                                               lastPing: o,
@@ -146,13 +146,13 @@ class L extends r.PureComponent {
             });
     }
 }
-function j(e) {
+function L(e) {
     let { context: t, lobbyId: n, channel: r, ...s } = e,
-        a = (0, o.e7)([_.Z], () => _.Z.getGuild(null == r ? void 0 : r.getGuildId())),
+        a = (0, o.e7)([E.Z], () => E.Z.getGuild(null == r ? void 0 : r.getGuildId())),
         l = (0, o.e7)([I.Z], () => null != r && I.Z.hasVideo(r.id)),
         [c, d] = (0, o.Wu)([x.Z], () => [x.Z.isSelfMute(t) || x.Z.isSelfMutedTemporarily(t), x.Z.isSelfDeaf(t)]),
         [u, h, p] = (0, o.Wu)([C.Z], () => [C.Z.getConnectionState(n), C.Z.getLastPing(n), C.Z.getQuality(n)]);
-    return (0, i.jsx)(L, {
+    return (0, i.jsx)(j, {
         ...s,
         context: t,
         lobbyId: n,

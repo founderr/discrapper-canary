@@ -38,10 +38,10 @@ var r = n(147018),
         var t = k(i, e);
         return t && t.value;
     },
-    B = U('fetch'),
-    G = U('Request'),
+    G = U('fetch'),
+    B = U('Request'),
     Z = U('Headers'),
-    F = G && G.prototype,
+    F = B && B.prototype,
     V = Z && Z.prototype,
     j = i.RegExp,
     H = i.TypeError,
@@ -295,7 +295,7 @@ if (
             return e;
         };
     if (
-        (m(B) &&
+        (m(G) &&
             r(
                 {
                     global: !0,
@@ -305,14 +305,14 @@ if (
                 },
                 {
                     fetch: function (e) {
-                        return B(e, arguments.length > 1 ? eh(arguments[1]) : {});
+                        return G(e, arguments.length > 1 ? eh(arguments[1]) : {});
                     }
                 }
             ),
-        m(G))
+        m(B))
     ) {
         var em = function (e) {
-            return h(this, F), new G(e, arguments.length > 1 ? eh(arguments[1]) : {});
+            return h(this, F), new B(e, arguments.length > 1 ? eh(arguments[1]) : {});
         };
         (F.constructor = em),
             (em.prototype = F),

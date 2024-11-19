@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var i = n(224706),
-    r = n(13245),
-    l = n(150097),
+    l = n(13245),
+    r = n(150097),
     o = n(620954),
     a = n(987650),
     s = n(388032);
@@ -14,8 +14,8 @@ function u(e, t, n, u, c) {
     let d = t.activity.type,
         h = c.session_id;
     if (null == h) return null;
-    let { icon: f, title: p, body: m } = (0, l.Xi)(e, t, n),
-        { trackView: E, trackClick: v } = (0, o.R)(a.n0.ActivityInvite, {
+    let { icon: f, title: p, body: m } = (0, r.Xi)(e, t, n),
+        { trackView: v, trackClick: g } = (0, o.R)(a.n0.ActivityInvite, {
             notif_type: a.n0.ActivityInvite,
             notif_user_id: n.id,
             message_id: t.id,
@@ -31,10 +31,10 @@ function u(e, t, n, u, c) {
         title: p,
         body: m,
         onNotificationShow: () => {
-            E();
+            v();
         },
         confirmText: s.intl.string(s.t.VJlc0d),
-        onConfirmClick: (l, o) => {
+        onConfirmClick: (r, o) => {
             var a;
             i.Z.join({
                 userId: n.id,
@@ -43,11 +43,11 @@ function u(e, t, n, u, c) {
                 channelId: e.id,
                 messageId: t.id
             }),
-                r.Z.updateNotificationStatus(o),
-                v('join');
+                l.Z.updateNotificationStatus(o),
+                g('join');
         },
         onDismissClick: () => {
-            v('dismiss');
+            g('dismiss');
         }
     };
 }

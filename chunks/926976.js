@@ -22,8 +22,8 @@ var r = n(200651),
     g = n(31336),
     v = n(257785),
     C = n(484036),
-    _ = n(681619),
-    j = n(621060),
+    j = n(681619),
+    _ = n(621060),
     T = n(388032),
     S = n(619208),
     y = n(986310);
@@ -216,7 +216,7 @@ function Z() {
     }, [t, p, l]);
     let [I, k] = a.useState(void 0),
         Z = v.find((e) => e.key === I),
-        { TabBar: R, renderSelectedTab: O } = (0, j.Z)({ tabs: w }, []);
+        { TabBar: R, renderSelectedTab: O } = (0, _.Z)({ tabs: w }, []);
     return (0, r.jsxs)('div', {
         ref: e,
         className: i()(y.panel, S.panel),
@@ -269,7 +269,7 @@ function Z() {
                     placeholder: 'Search by event name'
                 })
             }),
-            (0, r.jsx)(_.Z, {
+            (0, r.jsx)(j.Z, {
                 columns: N,
                 data: v,
                 selectedRowKey: I,

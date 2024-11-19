@@ -27,12 +27,12 @@ var i = n(200651),
     I = n(133743),
     C = n(120549),
     v = n(979007),
-    S = n(870411);
+    T = n(870411);
 function N(e) {
     var t;
     let { onSelectApplication: n } = e,
         N = (0, l.TH)(),
-        T = r.useRef(null),
+        S = r.useRef(null),
         {
             query: A,
             page: b,
@@ -49,8 +49,8 @@ function N(e) {
             };
         }, [N.search]);
     r.useEffect(() => {
-        A !== T.current &&
-            ((T.current = A),
+        A !== S.current &&
+            ((S.current = A),
             u.yC({
                 query: A,
                 options: { source: s.F.APP_DIRECTORY }
@@ -94,8 +94,8 @@ function N(e) {
                 : {};
         }),
         O = (0, d.Z)(L),
-        R = r.useMemo(() => (Z === h.M.FETCHING ? O : L), [Z, O, L]),
-        P = r.useCallback(
+        P = r.useMemo(() => (Z === h.M.FETCHING ? O : L), [Z, O, L]),
+        R = r.useCallback(
             (e) => {
                 (0, I.pR)({
                     query: A,
@@ -119,10 +119,10 @@ function N(e) {
             (0, i.jsx)(_.Z, {
                 children: (0, i.jsx)(f.Z, {
                     children: (0, i.jsxs)('div', {
-                        className: S.container,
+                        className: T.container,
                         children: [
                             (0, i.jsx)('div', {
-                                className: S.topFilterContainer,
+                                className: T.topFilterContainer,
                                 children: (0, i.jsx)(C.V, {
                                     countsByCategory: y,
                                     selectedCategoryId: x,
@@ -132,11 +132,11 @@ function N(e) {
                             (0, i.jsx)(g.Z, {
                                 loading: Z === h.M.FETCHING,
                                 children: (0, i.jsx)('div', {
-                                    className: S.content,
+                                    className: T.content,
                                     children:
-                                        null == R
+                                        null == P
                                             ? void 0
-                                            : R.results.map((e) => {
+                                            : P.results.map((e) => {
                                                   if (e.type === a.s.APPLICATION) {
                                                       let t = e.data;
                                                       return (0, i.jsx)(
@@ -154,22 +154,22 @@ function N(e) {
                                 })
                             }),
                             (0, i.jsx)(c.Paginator, {
-                                className: S.paginationInput,
-                                totalCount: Math.min((null !== (t = null == R ? void 0 : R.totalPages) && void 0 !== t ? t : 0) * v.IV, v.Et * v.IV),
+                                className: T.paginationInput,
+                                totalCount: Math.min((null !== (t = null == P ? void 0 : P.totalPages) && void 0 !== t ? t : 0) * v.IV, v.Et * v.IV),
                                 pageSize: v.IV,
                                 disablePaginationGap: !0,
                                 hideMaxPage: !0,
                                 currentPage: b,
-                                onPageChange: P
+                                onPageChange: R
                             })
                         ]
                     })
                 })
             }),
             (0, i.jsx)('div', {
-                className: S.sideFilterContainer,
+                className: T.sideFilterContainer,
                 children: (0, i.jsx)('div', {
-                    className: S.sideFilterContent,
+                    className: T.sideFilterContent,
                     children: (0, i.jsx)(C.Z, {
                         countsByCategory: y,
                         selectedCategoryId: x,

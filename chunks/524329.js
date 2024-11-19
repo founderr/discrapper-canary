@@ -35,7 +35,7 @@ let s = function (e) {
             let t = await r.tn.get({
                 url: i.ANM.GUILD_WELCOME_SCREEN(e),
                 oldFormErrors: !0,
-                rejectWithError: !1
+                rejectWithError: !0
             });
             return (
                 l.Z.dispatch({
@@ -72,7 +72,7 @@ let s = function (e) {
                     enabled: t.enabled
                 },
                 oldFormErrors: !0,
-                rejectWithError: !1
+                rejectWithError: !0
             });
             l.Z.dispatch({
                 type: 'WELCOME_SCREEN_SUBMIT_SUCCESS',

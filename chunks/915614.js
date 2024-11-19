@@ -5,14 +5,14 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var r = n(120356),
-    l = n.n(r),
+var l = n(120356),
+    r = n.n(l),
     o = n(481060),
     a = n(78561);
 function s(e) {
-    let { onClick: t, keybind: n, className: r, IconComponent: s } = e;
+    let { onClick: t, keybind: n, className: l, IconComponent: s } = e;
     return (0, i.jsxs)('div', {
-        className: l()(a.buttonContainer, r),
+        className: r()(a.buttonContainer, l),
         children: [
             (0, i.jsx)(o.Clickable, {
                 className: a.button,
@@ -26,7 +26,7 @@ function s(e) {
             }),
             null != n
                 ? (0, i.jsx)(o.Text, {
-                      className: l()(a.keybind),
+                      className: r()(a.keybind),
                       'aria-hidden': !0,
                       variant: 'text-xxs/bold',
                       color: 'interactive-normal',

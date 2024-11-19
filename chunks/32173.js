@@ -16,8 +16,8 @@ var s = n(399606),
     g = n(975298),
     m = n(779618),
     f = n(832149),
-    _ = n(300284),
-    p = n(703656),
+    p = n(300284),
+    _ = n(703656),
     h = n(547972),
     E = n(131951),
     b = n(594174),
@@ -42,8 +42,8 @@ var s = n(399606),
     L = n(526761),
     U = n(332325),
     D = n(388032),
-    G = n(921664),
-    H = n(660372),
+    H = n(921664),
+    G = n(660372),
     V = n(926433),
     F = n(302036),
     W = n(994554),
@@ -70,8 +70,8 @@ var s = n(399606),
     eg = n(912429),
     em = n(91394),
     ef = n(209672),
-    e_ = n(698173),
-    ep = n(926262);
+    ep = n(698173),
+    e_ = n(926262);
 ((i = r || (r = {})).AVATAR_DECORATIONS = 'avatarDecorations'), (i.CLIENT_THEMES = 'clientThemes'), (i.CLIPS = 'clips'), (i.EARLY_ACCESS = 'earlyAccess'), (i.ENTRANCE_SOUNDS = 'entranceSounds'), (i.PROFILE_EFFECTS = 'profileEffects'), (i.PROFILES = 'profiles'), (i.REMIXING = 'remixing'), (i.SERVER_BOOSTS = 'serverBoosts'), (i.SPECIAL_MEMBER_PRICING = 'specialMemberPricing'), (i.SPECIAL_MEMBER_PRICING_SEE_ALL_VARIANT = 'specialMemberPricingSeeAllVariant'), (i.SPECIAL_SHOP_PERKS = 'specialShopPerks'), (i.UNLIMITED_SUPER_REACTIONS = 'unlimitedSuperReactions'), (i.SUPER_REACTIONS = 'superReactions'), (i.UPCOMING_DROP_UNTIMED = 'upcomingDropUntimed'), (i.CUSTOM_APP_ICONS = 'customAppIcons'), (i.MORE_EMOJI_POWER = 'moreEmojiPower'), (i.CUSTOM_SOUNDS_EVERYWHERE = 'customSoundsEverywhere'), (i.SPECIAL_STICKER_ACCESS = 'specialStickerAccess'), (i.LARGE_UPLOADS = 'largeUploads'), (i.HD_VIDEO = 'hdVideo'), (i.BADGE = 'badge'), (i.ENTRANCE_SOUNDS_SEE_ALL_VARIATION = 'entranceSoundsSeeAllVariation'), (i.EARLY_ACCESS_SEE_ALL_VARIATION = 'earlyAccessSeeAllVariant'), (i.FREE_BOOST = 'freeBoost'), (i.TENURE_REWARD_COLLECTIBLE = 'tenureRewardCollectible'), (i.REFERRAL_PROGRAM = 'referralProgram'), (i.NEW_APP_STYLES_UPDATE_JUNE_2024 = 'newAppStylesUpdateJune2024'), (i.SERVER_PROFILES = 'serverProfiles'), (i.SHY_PROJECT = 'shyProject'), (i.TENURE_BADGE = 'tenureBadge');
 t.Z = () => {
     let { analyticsLocations: e } = (0, u.ZP)(d.Z.PREMIUM_MARKETING_PERK_CARD),
@@ -94,7 +94,7 @@ t.Z = () => {
         eP = (0, A.Kb)(y.qY),
         { fractionalState: eZ } = (0, g.Z)(),
         eO = eZ === w.a$.FP_ONLY,
-        eM = (0, _.Z)({
+        eM = (0, p.Z)({
             scrollPosition: L.Y_.TRY_IT_OUT,
             analyticsLocations: e
         }),
@@ -105,7 +105,7 @@ t.Z = () => {
             });
         },
         ew = () => {
-            (0, p.uL)(k.Z5c.COLLECTIBLES_SHOP);
+            (0, _.uL)(k.Z5c.COLLECTIBLES_SHOP);
         },
         ey = () => {
             o.Z.open(k.oAB.APPEARANCE, null, { scrollPosition: L.h1.CUSTOM_APP_ICONS });
@@ -366,7 +366,7 @@ t.Z = () => {
                       title: D.intl.string(D.t.hpgmOz),
                       subtitle: D.intl.string(D.t.Hxujsr),
                       description: D.intl.string(D.t['Cn/z6+']),
-                      perkImage: e_,
+                      perkImage: ep,
                       hideOnNarrowScreen: !0
                   }
                 : {
@@ -375,7 +375,7 @@ t.Z = () => {
                       subtitle: D.intl.string(D.t.Hxujsr),
                       description: D.intl.string(D.t.TF7cPT),
                       isPremiumGetCta: !0,
-                      perkImage: e_,
+                      perkImage: ep,
                       hideOnNarrowScreen: !0
                   },
             superReactions: {
@@ -395,7 +395,7 @@ t.Z = () => {
                 name: 'badge',
                 title: D.intl.string(D.t.dcFfSE),
                 subtitle: D.intl.string(D.t['37MFFh']),
-                perkImage: H,
+                perkImage: G,
                 description: D.intl.string(D.t.T1IS4u),
                 imageOverlayText: eZ === w.a$.FP_ONLY ? D.intl.string(D.t.lcYttb) : void 0
             },
@@ -433,7 +433,7 @@ t.Z = () => {
                 name: 'largeUploads',
                 title: D.intl.formatToPlainString(D.t.jqhAdH, { premiumMaxSize: i }),
                 subtitle: D.intl.formatToPlainString(D.t['HI+cfn'], { premiumMaxSize: i }),
-                perkImage: ep,
+                perkImage: e_,
                 description: D.intl.string(D.t['R0gx+/'])
             },
             hdVideo: {
@@ -475,7 +475,7 @@ t.Z = () => {
     if (null != ej) {
         let { title: t, subtitle: n, description: i, pillText: r, ctaDescription: s, dismissibleContentType: l } = ej,
             o = (0, a.jsx)('div', {
-                className: G.cardComponent,
+                className: H.cardComponent,
                 children: (0, a.jsx)(P.ZP, {
                     progressCircleVariation: P.Qo.AVATAR_DECO,
                     avatarDecoAssetId: y.VA,
@@ -509,7 +509,7 @@ t.Z = () => {
     if (null != eA) {
         let { title: t, subtitle: n, description: i, pillText: r, ctaDescription: s, dismissibleContentType: l } = eA,
             c = (0, a.jsx)('div', {
-                className: G.cardComponent,
+                className: H.cardComponent,
                 children: (0, a.jsx)(P.ZP, {
                     showAnimations: !0,
                     percentage: eS,

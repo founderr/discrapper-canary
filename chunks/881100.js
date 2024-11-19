@@ -15,8 +15,8 @@ var i = n(399606),
     g = n(526761),
     m = n(388032),
     f = n(323780),
-    _ = n(101732),
-    p = n(450598),
+    p = n(101732),
+    _ = n(450598),
     h = n(633030),
     E = n(97942),
     b = n(269987),
@@ -52,13 +52,13 @@ let U = (e, t, n) => ((0, r.wj)(e) ? t : n),
             badge: {
                 title: m.intl.string(m.t.SS87ra),
                 description: m.intl.string(m.t.oD6CRk),
-                imageSource: p,
+                imageSource: _,
                 imageClassName: t.badgeImage
             },
             badgeAlt: {
                 title: m.intl.string(m.t['5cYMu7']),
                 description: m.intl.string(m.t.vxk9vb),
-                imageSource: U(n, f, _),
+                imageSource: U(n, f, p),
                 imageClassName: t.badgeNewImage
             },
             clientThemes: {

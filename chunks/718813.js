@@ -23,7 +23,7 @@ var i,
     I = n(585483),
     C = n(981631),
     v = n(48211);
-function S(e, t, n) {
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,7 +41,7 @@ let N = (0, g.Un)({
         webpackId: 989804,
         name: 'UserSettings'
     }),
-    T = (0, g.Un)({
+    S = (0, g.Un)({
         createPromise: () => Promise.all([n.e('33053'), n.e('7654'), n.e('16141'), n.e('75116')]).then(n.bind(n, 869779)),
         webpackId: 869779,
         name: 'ChannelSettings'
@@ -58,7 +58,7 @@ let N = (0, g.Un)({
     }),
     x = {
         [C.S9g.USER_SETTINGS]: () => (0, r.jsx)(N, {}),
-        [C.S9g.CHANNEL_SETTINGS]: () => (0, r.jsx)(T, {}),
+        [C.S9g.CHANNEL_SETTINGS]: () => (0, r.jsx)(S, {}),
         [C.S9g.GUILD_SETTINGS]: () => (0, r.jsx)(b, {}),
         [C.S9g.COLLECTIBLES_SHOP]: () => (0, r.jsx)(A, {})
     },
@@ -71,7 +71,7 @@ let N = (0, g.Un)({
 function O() {
     return l.useEffect(() => (p.Z.enable(), p.Z.enableTemp(m.u), () => p.Z.disableTemp()), []), null;
 }
-class R extends (i = l.PureComponent) {
+class P extends (i = l.PureComponent) {
     static getDerivedStateFromProps(e, t) {
         return e.mode !== t.mode
             ? {
@@ -172,7 +172,7 @@ class R extends (i = l.PureComponent) {
         };
     }
     constructor(e) {
-        super(e), S(this, 'containerRef', l.createRef());
+        super(e), T(this, 'containerRef', l.createRef());
         let t = 1,
             n = 1;
         e.mode === L && ((t = 0.93), (n = 0)),
@@ -184,8 +184,8 @@ class R extends (i = l.PureComponent) {
             });
     }
 }
-S(R, 'defaultProps', { baseLayer: !1 }), S(R, 'contextType', u.AccessibilityPreferencesContext);
-class P extends l.PureComponent {
+T(P, 'defaultProps', { baseLayer: !1 }), T(P, 'contextType', u.AccessibilityPreferencesContext);
+class R extends l.PureComponent {
     componentDidMount() {
         I.S.subscribe(C.CkL.LAYER_POP_ESCAPE_KEY, h.xf);
     }
@@ -199,7 +199,7 @@ class P extends l.PureComponent {
         return (
             l.push(
                 (0, r.jsx)(
-                    R,
+                    P,
                     {
                         mode: 0 !== i || n ? L : Z,
                         baseLayer: !0,
@@ -217,7 +217,7 @@ class P extends l.PureComponent {
         return (
             (i = 'string' == typeof e ? x[e]() : (0, r.jsx)(e, {})),
             (0, r.jsxs)(
-                R,
+                P,
                 {
                     mode: t === n - 1 ? Z : L,
                     children: [(0, r.jsx)(O, {}), i]
@@ -249,7 +249,7 @@ function j(e) {
     let t = (0, c.e7)([_.Z], () => _.Z.darkSidebar) ? C.BRd.DARK : void 0,
         n = (0, c.e7)([E.Z], () => E.Z.getLayers()),
         i = (0, f.QP)((e) => e.fullScreenLayers.length > 0);
-    return (0, r.jsx)(P, {
+    return (0, r.jsx)(R, {
         ...e,
         sidebarTheme: t,
         layers: n,

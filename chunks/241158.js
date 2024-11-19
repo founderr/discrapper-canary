@@ -11,11 +11,11 @@ var i = n(200651),
     g = n(409100),
     m = n(831964),
     f = n(981631),
-    _ = n(869783),
-    p = n(388032),
+    p = n(869783),
+    _ = n(388032),
     h = n(868106);
 let E = (e) => {
-    let { name: t, title: n, description: a, descriptionCta: p, previewImage: E, videoUrl: b, shouldLoadVideo: x, isCompact: C, onClick: v, index: T } = e,
+    let { name: t, title: n, description: a, descriptionCta: _, previewImage: E, videoUrl: b, shouldLoadVideo: x, isCompact: C, onClick: v, index: T } = e,
         N = (0, u.rO)(),
         I = r.useRef(null),
         [S, R] = r.useState(0),
@@ -76,19 +76,19 @@ let E = (e) => {
                         className: h.whatsNewBoxDescription,
                         children: a
                     }),
-                    null != p &&
+                    null != _ &&
                         (null != v
                             ? (0, i.jsx)(o.Button, {
                                   className: h.whatsNewBoxButton,
                                   onClick: () => {
                                       j(), v();
                                   },
-                                  children: p
+                                  children: _
                               })
                             : (0, i.jsx)(g.Z, {
                                   className: h.whatsNewBoxButton,
                                   onClick: j,
-                                  buttonText: p,
+                                  buttonText: _,
                                   color: o.Button.Colors.BRAND,
                                   look: o.Button.Looks.FILLED,
                                   showIcon: !1
@@ -116,7 +116,7 @@ let E = (e) => {
                     ref: I,
                     children: (0, i.jsx)('source', {
                         src: b,
-                        type: N ? _.m.MP4 : _.m.WEBM
+                        type: N ? p.m.MP4 : p.m.WEBM
                     })
                 })
             });
@@ -157,7 +157,7 @@ t.Z = r.memo(function (e) {
                 (0, i.jsx)(o.Heading, {
                     className: h.whatsNewHeader,
                     variant: 'heading-xxl/extrabold',
-                    children: r ? p.intl.string(p.t.EnzW2N) : p.intl.string(p.t.LRmNAg)
+                    children: r ? _.intl.string(_.t.EnzW2N) : _.intl.string(_.t.LRmNAg)
                 }),
                 a.map((e, t) =>
                     (0, i.jsx)(

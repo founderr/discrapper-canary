@@ -26,7 +26,7 @@ async function d() {
                         url: c.ANM.APPLICATION_BRANCHES,
                         body: { branch_ids: e },
                         oldFormErrors: !0,
-                        rejectWithError: !1
+                        rejectWithError: !0
                     })
                 ).body.map(o.Z.createFromServer)
             ),
@@ -54,7 +54,7 @@ async function f(e) {
         let t = await a.tn.get({
                 url: c.ANM.OWNED_APPLICATION_BRANCHES(e),
                 oldFormErrors: !0,
-                rejectWithError: !1
+                rejectWithError: !0
             }),
             n = Array.isArray(t.body) ? t.body.map(o.Z.createFromServer) : [];
         return (

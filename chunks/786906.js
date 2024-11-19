@@ -19,8 +19,8 @@ var i = n(200651),
     g = n(523746),
     m = n(592125),
     v = n(430824),
-    E = n(699516),
-    _ = n(944486),
+    _ = n(699516),
+    E = n(944486),
     x = n(707878),
     Z = n(518084),
     S = n(388032),
@@ -156,14 +156,14 @@ class y extends r.Component {
 }
 function N(e) {
     let { channel: t, ...n } = e,
-        r = (0, l.e7)([_.Z, m.Z], () => {
-            let e = _.Z.getVoiceChannelId();
+        r = (0, l.e7)([E.Z, m.Z], () => {
+            let e = E.Z.getVoiceChannelId();
             return m.Z.getChannel(e);
         }),
         s = (0, l.e7)([v.Z], () => v.Z.getGuild(t.guild_id)),
         a = (0, l.e7)([g.Z], () => g.Z.isCallActive(t.id)),
         o = (0, u.ZP)(t),
-        c = (0, l.e7)([E.Z], () => !!t.isDM() && null != t.getRecipientId() && E.Z.isBlocked(t.getRecipientId()));
+        c = (0, l.e7)([_.Z], () => !!t.isDM() && null != t.getRecipientId() && _.Z.isBlocked(t.getRecipientId()));
     return (0, i.jsx)(y, {
         channel: t,
         channelName: o,

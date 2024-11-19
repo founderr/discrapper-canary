@@ -30,8 +30,8 @@ function S(e) {
     });
     let C = (0, p.Z)(),
         y = (0, m.Z)(Z),
-        T = (0, f.Z)(Z),
-        b = (0, c.Z)(Z),
+        b = (0, f.Z)(Z),
+        T = (0, c.Z)(Z),
         A = (0, u.Z)(Z),
         N = (0, d.Z)(Z);
     return (0, i.jsx)(r.Z, {
@@ -52,13 +52,13 @@ function S(e) {
                 n
                     ? (0, i.jsx)(a.MenuGroup, {
                           label: g.intl.string(g.t['6Ww0iI']),
-                          children: T
+                          children: b
                       })
                     : null,
                 I
                     ? (0, i.jsx)(a.MenuGroup, {
                           label: g.intl.string(g.t['pS+K2N']),
-                          children: b
+                          children: T
                       })
                     : null,
                 (0, i.jsxs)(a.MenuGroup, {

@@ -1,6 +1,6 @@
 n.d(t, {
     Eo: function () {
-        return P;
+        return R;
     },
     VD: function () {
         return O;
@@ -26,9 +26,9 @@ var i = n(200651),
     I = n(371260),
     C = n(372769),
     v = n(134432),
-    S = n(695346),
+    T = n(695346),
     N = n(768581),
-    T = n(356164),
+    S = n(356164),
     A = n(981631),
     b = n(388032),
     x = n(439069),
@@ -38,8 +38,8 @@ var i = n(200651),
 function O(e) {
     let { guild: t, onClick: l, onView: s } = e,
         [E, I] = r.useState(!1),
-        [T, O] = r.useState(!1),
-        [R, P] = r.useState(!1),
+        [S, O] = r.useState(!1),
+        [P, R] = r.useState(!1),
         j = r.useCallback(async () => {
             O(!0);
             try {
@@ -102,11 +102,11 @@ function O(e) {
         ),
         { canSeeInAppReportingButtons: B } = g.N.getCurrentConfig({ location: 'de1ef6_3' }, { autoTrackExposure: !1 });
     g.N.trackExposure({ location: 'GlobalDiscoveryServersCard' });
-    let V = S.Sb.getSetting();
+    let H = T.Sb.getSetting();
     return (0, i.jsxs)('div', {
         className: x.container,
         children: [
-            T &&
+            S &&
                 (0, i.jsx)('div', {
                     className: x.spinnerContainer,
                     children: (0, i.jsx)(c.Spinner, {
@@ -121,22 +121,22 @@ function O(e) {
                 children: (0, i.jsxs)(_.Z, {
                     className: x.card,
                     onClick: j,
-                    disabled: T,
+                    disabled: S,
                     onContextMenu: M,
                     children: [
                         (0, i.jsxs)('div', {
                             className: x.header,
                             children: [
                                 (0, i.jsx)('div', {
-                                    className: a()(x.banner, { [x.loaded]: R }),
+                                    className: a()(x.banner, { [x.loaded]: P }),
                                     children: (0, i.jsx)('img', {
                                         src: U,
                                         alt: '',
                                         className: x.bannerImage,
-                                        onLoad: () => P(!0)
+                                        onLoad: () => R(!0)
                                     })
                                 }),
-                                (V || B) &&
+                                (H || B) &&
                                     (0, i.jsx)(f.Z, {
                                         guild: t,
                                         className: x.contextMenu
@@ -227,9 +227,9 @@ function O(e) {
         ]
     });
 }
-function R(e) {
+function P(e) {
     let { guildId: t, onClick: n, onView: r } = e,
-        l = (0, s.e7)([T.Z], () => T.Z.getGuild(t));
+        l = (0, s.e7)([S.Z], () => S.Z.getGuild(t));
     return null == l
         ? null
         : (0, i.jsx)(O, {
@@ -238,7 +238,7 @@ function R(e) {
               onView: r
           });
 }
-function P(e) {
+function R(e) {
     let { guildId: t, index: n, onClick: l, onView: a } = e,
         s = r.useRef(null == t),
         o = r.useCallback(
@@ -259,7 +259,7 @@ function P(e) {
                               state: n,
                               cleanUp: r,
                               animate: s.current,
-                              children: (0, i.jsx)(R, {
+                              children: (0, i.jsx)(P, {
                                   guildId: t.guildId,
                                   onClick: l,
                                   onView: a
@@ -291,4 +291,4 @@ function P(e) {
         })
     });
 }
-t.ZP = r.memo(R);
+t.ZP = r.memo(P);

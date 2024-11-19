@@ -24,9 +24,9 @@ var i = n(200651),
     I = n(417363),
     C = n(626135),
     v = n(804739),
-    S = n(346329),
+    T = n(346329),
     N = n(981631),
-    T = n(388032);
+    S = n(388032);
 let A = d.Z.get(N.ABu.XBOX).name;
 function b(e) {
     let { currentActivities: t } = e,
@@ -43,7 +43,7 @@ function b(e) {
                 : (0, i.jsx)(a.MenuItem, {
                       id: 'xbox-connect',
                       action: () => c.Z.open(N.oAB.CONNECTIONS),
-                      label: T.intl.formatToPlainString(T.t.XWSHTU, { platform: A })
+                      label: S.intl.formatToPlainString(S.t.XWSHTU, { platform: A })
                   });
         })(e),
         x = (function (e) {
@@ -98,18 +98,18 @@ function b(e) {
                     }
                     return (0, i.jsx)(a.MenuItem, {
                         id: 'join-'.concat(r.session_id),
-                        label: t ? T.intl.formatToPlainString(T.t.wFAvxM, { name: l.toString() }) : T.intl.string(T.t.OKsSCQ),
+                        label: t ? S.intl.formatToPlainString(S.t.wFAvxM, { name: l.toString() }) : S.intl.string(S.t.OKsSCQ),
                         action: c
                     });
                 })(e, n),
                 (function (e, t) {
                     let { activity: n, game: r, libraryApplication: l, location: s, canPlay: o, isRunning: c, isLaunching: d } = e;
                     if (!o || null == n) return null;
-                    let u = c ? T.intl.formatToPlainString(T.t['gBme//'], { name: r.name }) : d ? T.intl.formatToPlainString(T.t.WtSQwM, { name: r.name }) : void 0;
+                    let u = c ? S.intl.formatToPlainString(S.t['gBme//'], { name: r.name }) : d ? S.intl.formatToPlainString(S.t.WtSQwM, { name: r.name }) : void 0;
                     return (0, i.jsx)(a.MenuItem, {
                         id: 'play-'.concat(n.session_id),
                         action: function () {
-                            (0, S.playApplication)(r.id, l, {
+                            (0, T.playApplication)(r.id, l, {
                                 analyticsParams: {
                                     location: {
                                         ...s,
@@ -118,7 +118,7 @@ function b(e) {
                                 }
                             });
                         },
-                        label: t ? T.intl.formatToPlainString(T.t.ZDZEJC, { name: r.name }) : T.intl.string(T.t.XKUw8v),
+                        label: t ? S.intl.formatToPlainString(S.t.ZDZEJC, { name: r.name }) : S.intl.string(S.t.XKUw8v),
                         subtext: u
                     });
                 })(e, n)

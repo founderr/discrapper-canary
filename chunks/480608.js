@@ -22,7 +22,7 @@ async function c(e) {
         let t = (
             await a.tn.get({
                 url: u.ANM.GUILD_ROLE_MEMBER_COUNTS(e),
-                rejectWithError: !1
+                rejectWithError: !0
             })
         ).body;
         s.Z.dispatch({

@@ -200,7 +200,7 @@ t.Z = {
             await i.tn.patch({
                 url: v.ANM.CHANNEL(e.id),
                 body: r,
-                rejectWithError: !1
+                rejectWithError: !0
             });
         } catch {
             a.Z.dispatch({
@@ -226,7 +226,7 @@ t.Z = {
             await i.tn.patch({
                 url: v.ANM.CHANNEL(e.id),
                 body: { flags: e.flags & ~b.zZ.PINNED },
-                rejectWithError: !1
+                rejectWithError: !0
             });
         } catch {
             a.Z.dispatch({
@@ -243,7 +243,7 @@ t.Z = {
             await i.tn.patch({
                 url: v.ANM.CHANNEL(t.id),
                 body: { flags: t.flags | b.zZ.PINNED },
-                rejectWithError: !1
+                rejectWithError: !0
             });
         } catch {
             a.Z.dispatch({
@@ -302,7 +302,7 @@ t.Z = {
                         offset: o
                     },
                     retries: 2,
-                    rejectWithError: !1
+                    rejectWithError: !0
                 })
                 .then(
                     (r) => {

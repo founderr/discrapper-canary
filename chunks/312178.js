@@ -14,8 +14,8 @@ var i = n(200651),
     g = n(382790),
     m = n(990673),
     v = n(906037),
-    E = n(430036),
-    _ = n(839434),
+    _ = n(430036),
+    E = n(839434),
     x = n(981631);
 function Z(e, t, n) {
     return (
@@ -33,7 +33,7 @@ function Z(e, t, n) {
 let S = {
     [x.Odu.TEXT](e) {
         let { dragging: t, locked: n, pinned: r, dragStart: s } = e;
-        return (0, i.jsx)(E.Z, {
+        return (0, i.jsx)(_.Z, {
             dragStart: s,
             locked: n,
             pinned: r,
@@ -49,7 +49,7 @@ let S = {
     },
     [x.Odu.VOICE](e) {
         let { id: t, anchor: n, isPreviewingInGame: r, locked: s, pinned: a } = e;
-        return (0, i.jsx)(_.Z, {
+        return (0, i.jsx)(E.Z, {
             anchor: n,
             id: t,
             locked: s,
@@ -97,7 +97,7 @@ class I extends r.PureComponent {
         let { id: l, pinned: o, zIndex: d, size: u, anchor: h } = e,
             f = (0, p.w_)(u, n),
             g = (0, p.KR)(h, n),
-            { minSize: m, resizeX: E, resizeY: _, dragAnywhere: x } = t,
+            { minSize: m, resizeX: _, resizeY: E, dragAnywhere: x } = t,
             Z = (0, v.eM)({
                 locked: r,
                 isPreviewingInGame: s,
@@ -116,8 +116,8 @@ class I extends r.PureComponent {
             container: S,
             minSize: m,
             hidden: !Z,
-            resizeX: E,
-            resizeY: _,
+            resizeX: _,
+            resizeY: E,
             style: { zIndex: d },
             dragAnywhere: x,
             active: !r || a,

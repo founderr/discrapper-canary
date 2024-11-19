@@ -36,14 +36,14 @@ e.exports = function e(t, n, O, D, L, x) {
     if (U) {
         if (((w = h(t)), !M)) return u(t, w);
     } else {
-        var B = p(t),
-            G = B == N || '[object GeneratorFunction]' == B;
+        var G = p(t),
+            B = G == N || '[object GeneratorFunction]' == G;
         if (v(t)) return l(t, M);
-        if (B == C || B == A || (G && !L)) {
-            if (((w = P || G ? {} : g(t)), !M)) return P ? d(t, o(w, t)) : c(t, s(w, t));
+        if (G == C || G == A || (B && !L)) {
+            if (((w = P || B ? {} : g(t)), !M)) return P ? d(t, o(w, t)) : c(t, s(w, t));
         } else {
-            if (!R[B]) return L ? t : {};
-            w = m(t, B, M);
+            if (!R[G]) return L ? t : {};
+            w = m(t, G, M);
         }
     }
     x || (x = new r());

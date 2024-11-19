@@ -15,7 +15,7 @@ function s(e) {
         r.tn
             .get({
                 url: a.ANM.STORE_LAYOUT(e),
-                rejectWithError: !1
+                rejectWithError: !0
             })
             .then(
                 (t) => (

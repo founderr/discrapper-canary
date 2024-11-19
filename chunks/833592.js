@@ -53,7 +53,7 @@ async function f(e, t) {
                 }
             },
             query: { ...e },
-            rejectWithError: !1
+            rejectWithError: !0
         });
         null == t || t(),
             await a.Z.dispatch({
@@ -93,7 +93,7 @@ async function _(e) {
         }),
             await r.tn.post({
                 url: d.ANM.NOTIF_CENTER_ITEMS_ACK(e),
-                rejectWithError: !1
+                rejectWithError: !0
             });
     } catch (t) {
         a.Z.dispatch({

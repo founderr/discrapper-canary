@@ -18,15 +18,15 @@ var i = n(200651),
     I = n(113434),
     C = n(497505),
     v = n(475595),
-    S = n(981631),
+    T = n(981631),
     N = n(388032),
-    T = n(388175);
+    S = n(388175);
 t.Z = (0, r.memo)(function (e) {
     var t, n, l, A, b;
     let { quest: x } = e,
         [Z, L] = (0, r.useState)(!1),
         [y, O] = (0, r.useState)(24),
-        [R, P] = (0, r.useState)(!1),
+        [P, R] = (0, r.useState)(!1),
         j = (0, r.useRef)(null),
         D = (0, r.useRef)(null),
         M = (0, r.useRef)(null),
@@ -37,10 +37,10 @@ t.Z = (0, r.memo)(function (e) {
             month: 'numeric',
             day: 'numeric'
         }),
-        V = null !== (A = null === (n = x.userStatus) || void 0 === n ? void 0 : n.claimedTier) && void 0 !== A ? A : 0,
-        H = x.config.rewards[V],
-        F = (null == H ? void 0 : H.type) === s.w.COLLECTIBLE,
-        { product: z } = (0, p.T)(F && null != H ? H.skuId : null),
+        H = null !== (A = null === (n = x.userStatus) || void 0 === n ? void 0 : n.claimedTier) && void 0 !== A ? A : 0,
+        V = x.config.rewards[H],
+        F = (null == V ? void 0 : V.type) === s.w.COLLECTIBLE,
+        { product: z } = (0, p.T)(F && null != V ? V.skuId : null),
         Y = null == z ? void 0 : null === (l = z.items) || void 0 === l ? void 0 : l[0];
     (0, u.P)(j, (e) => {
         let { height: t } = e;
@@ -56,21 +56,21 @@ t.Z = (0, r.memo)(function (e) {
         X = Z ? U + 8 : 0,
         Q = () => {
             L(!0),
-                _.default.track(S.rMx.QUEST_HOVER, {
+                _.default.track(T.rMx.QUEST_HOVER, {
                     quest_id: x.id,
                     ...(0, E.mH)(C.jn.TROPHY_CASE_CARD)
                 });
         },
         J = () => L(!1),
         $ = (e) => {
-            P(!0),
-                _.default.track(S.rMx.QUEST_ASSET_LOADING_FAILURE, {
+            R(!0),
+                _.default.track(T.rMx.QUEST_ASSET_LOADING_FAILURE, {
                     source: e,
                     asset_id: e,
                     quest_id: x.id
                 });
         };
-    return null == H || R
+    return null == V || P
         ? null
         : (0, i.jsx)(d.FocusRing, {
               children: (0, i.jsxs)('div', {
@@ -80,13 +80,13 @@ t.Z = (0, r.memo)(function (e) {
                   onBlur: J,
                   onMouseEnter: Q,
                   onMouseLeave: J,
-                  className: a()(T.container, { [T.hovered]: Z }),
+                  className: a()(S.container, { [S.hovered]: Z }),
                   children: [
                       null != w &&
                           F &&
                           (0, i.jsx)('div', {
                               ref: M,
-                              className: T.decoWrapper,
+                              className: S.decoWrapper,
                               style: { top: y },
                               children: (0, i.jsx)(m.Z, {
                                   avatarDecorationOverride: Y,
@@ -97,7 +97,7 @@ t.Z = (0, r.memo)(function (e) {
                       q.isAnimated
                           ? (0, i.jsx)(i.Fragment, {
                                 children: (0, i.jsx)(g.Z, {
-                                    className: T.assetBlurred,
+                                    className: S.assetBlurred,
                                     autoPlay: !1,
                                     children: (0, i.jsx)('source', {
                                         src: q.url,
@@ -107,33 +107,33 @@ t.Z = (0, r.memo)(function (e) {
                                 })
                             })
                           : (0, i.jsx)('img', {
-                                className: T.image,
+                                className: S.image,
                                 src: q.url,
                                 alt: x.config.messages.questName,
                                 onError: () => $(q.url)
                             }),
                       (0, i.jsx)('div', {
-                          className: a()(T.overlay, {
-                              [T.darkThemeGradient]: W,
-                              [T.lightThemeGradient]: !W
+                          className: a()(S.overlay, {
+                              [S.darkThemeGradient]: W,
+                              [S.lightThemeGradient]: !W
                           })
                       }),
                       (0, i.jsx)('div', {
                           ref: D,
-                          className: T.logoContainer,
+                          className: S.logoContainer,
                           style: { transform: 'translateY(-'.concat(X, 'px)') },
                           children: (0, i.jsx)('img', {
-                              className: T.logo,
+                              className: S.logo,
                               src: K.url,
                               alt: x.config.messages.gameTitle
                           })
                       }),
                       (0, i.jsxs)('div', {
                           ref: k,
-                          className: T.details,
+                          className: S.details,
                           children: [
                               (0, i.jsx)(d.Heading, {
-                                  className: T.title,
+                                  className: S.title,
                                   variant: 'heading-md/semibold',
                                   color: 'always-white',
                                   children: N.intl.format(N.t.EAYZAg, { questName: x.config.messages.questName })
@@ -143,7 +143,7 @@ t.Z = (0, r.memo)(function (e) {
                                   color: W ? 'text-muted' : 'always-white',
                                   style: { opacity: W ? 1 : 0.75 },
                                   children: N.intl.format(N.t.kXVcV1, {
-                                      reward: H.name,
+                                      reward: V.name,
                                       claimedDate: B
                                   })
                               })

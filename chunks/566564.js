@@ -21,8 +21,8 @@ var r = n(200651),
     k = n(937510),
     j = n(823941),
     E = n(752053),
-    I = n(38900),
-    S = n(709999),
+    S = n(38900),
+    I = n(709999),
     T = n(215023),
     N = n(388032),
     B = n(297233),
@@ -179,7 +179,7 @@ t.Z = (e) => {
                             className: s()(B.row, B.feed, B.feedSingleRow),
                             children: W
                                 ? (0, r.jsx)(r.Fragment, {
-                                      children: [void 0, void 0, void 0, void 0].map((e, t) => (0, r.jsx)(I.K, {}, t))
+                                      children: [void 0, void 0, void 0, void 0].map((e, t) => (0, r.jsx)(S.K, {}, t))
                                   })
                                 : (0, r.jsx)(r.Fragment, {
                                       children: eh.map((e, t) => {
@@ -195,7 +195,7 @@ t.Z = (e) => {
                                                             categoryPosition: 0
                                                         },
                                                         children: (0, r.jsx)(
-                                                            S.Z,
+                                                            I.Z,
                                                             {
                                                                 product: e,
                                                                 category: n,
@@ -295,7 +295,7 @@ t.Z = (e) => {
                             className: B.feed,
                             ref: q,
                             children: W
-                                ? (0, r.jsx)(r.Fragment, { children: [...Array(12)].map((e, t) => (0, r.jsx)(I.K, {}, t + 1)) })
+                                ? (0, r.jsx)(r.Fragment, { children: [...Array(12)].map((e, t) => (0, r.jsx)(S.K, {}, t + 1)) })
                                 : (0, r.jsx)(r.Fragment, {
                                       children: ef.slice(0, D).map((e, t) => {
                                           let n = g.Z.getCategoryForProduct(e.skuId);
@@ -310,7 +310,7 @@ t.Z = (e) => {
                                                             categoryPosition: 2
                                                         },
                                                         children: (0, r.jsx)(
-                                                            S.Z,
+                                                            I.Z,
                                                             {
                                                                 product: e,
                                                                 category: n,

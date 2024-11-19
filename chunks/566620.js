@@ -76,8 +76,8 @@ var r = n(990547),
     P = n(317381),
     k = n(672181),
     U = n(882347),
-    B = n(224189),
-    G = n(374065),
+    G = n(224189),
+    B = n(374065),
     Z = n(917107),
     F = n(89425),
     V = n(275920),
@@ -263,25 +263,25 @@ async function X(e) {
         u = y.default.getSessionId(),
         c = R.default.getCurrentUser();
     if (null == n) return !1;
-    let d = await (0, B.Z)(n, i);
+    let d = await (0, G.Z)(n, i);
     if (null == i) return D.S.dispatch(H.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, { applicationId: n }), !1;
     let f = A.Z.getChannel(i);
     if (null == f || null == c || null == d) return !1;
     let _ =
         null != i
-            ? (0, G.e4)({
+            ? (0, B.e4)({
                   channelId: i,
                   ChannelStore: A.Z,
                   GuildStore: N.Z,
                   PermissionStore: C.Z,
                   VoiceStateStore: O.Z
               })
-            : G.jy.NO_CHANNEL;
-    if (_ !== G.jy.CAN_LAUNCH)
+            : B.jy.NO_CHANNEL;
+    if (_ !== B.jy.CAN_LAUNCH)
         return (
-            _ === G.jy.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION
+            _ === B.jy.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION
                 ? (0, S.w)()
-                : _ === G.jy.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS &&
+                : _ === B.jy.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS &&
                   s.Z.show({
                       title: K.intl.string(K.t['IOy+Iy']),
                       body: K.intl.string(K.t.UXoQTk),
@@ -362,7 +362,7 @@ async function $() {
                 url: H.ANM.APPLICATIONS_WITH_ASSETS,
                 query: { with_team_applications: !0 },
                 oldFormErrors: !0,
-                rejectWithError: !1
+                rejectWithError: !0
             }),
             t = e.body.applications,
             n = t.map((e) => T.Z.createFromServer(e));
@@ -444,7 +444,7 @@ async function en(e) {
                 },
                 retries: 3,
                 oldFormErrors: !0,
-                rejectWithError: !1
+                rejectWithError: !0
             }),
             l = null !== (n = t.body.activities) && void 0 !== n ? n : [],
             u = null !== (i = t.body.applications) && void 0 !== i ? i : [],
@@ -516,7 +516,7 @@ async function es(e) {
             await i.tn.get({
                 url: t,
                 oldFormErrors: !0,
-                rejectWithError: !1
+                rejectWithError: !0
             }),
             !0
         );

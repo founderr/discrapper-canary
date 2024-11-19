@@ -13,15 +13,15 @@ var r = t(200651);
 t(192379);
 var c = t(120356),
     o = t.n(c),
-    l = t(726542),
-    i = t(981631),
+    i = t(726542),
+    l = t(981631),
     a = t(41991);
 function u(e) {
-    return null != e && Object.values(i.ABu).includes(e) ? e : null;
+    return null != e && Object.values(l.ABu).includes(e) ? e : null;
 }
 function s(e) {
     let { children: n, platformType: t } = e,
-        c = l.Z.get(t);
+        c = i.Z.get(t);
     return (0, r.jsx)('div', {
         className: a.verifyConnectedAccount,
         children: (0, r.jsxs)('div', {

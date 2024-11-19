@@ -22,9 +22,9 @@ var i = n(200651),
     I = n(772021),
     C = n(396828),
     v = n(293423),
-    S = n(20967),
+    T = n(20967),
     N = n(504762),
-    T = n(807152),
+    S = n(807152),
     A = n(176505),
     b = n(388032),
     x = n(959710);
@@ -35,15 +35,15 @@ function Z(e) {
         L = (0, h.Z)(t),
         y = (0, I.Z)(t),
         O = (0, a.e7)([_.Z], () => _.Z.isSubscriptionFetching),
-        R = (0, E.f)(),
-        { shouldHideGuildPurchaseEntryPoints: P, restrictionsLoading: j } = (0, m.uP)(t),
-        D = null == n || !R || O || j;
+        P = (0, E.f)(),
+        { shouldHideGuildPurchaseEntryPoints: R, restrictionsLoading: j } = (0, m.uP)(t),
+        D = null == n || !P || O || j;
     (0, d.Tt)({
         subsection: b.intl.string(b.t['KzCF//']),
         location: null == n ? void 0 : n.name
     }),
         (0, c.Z)(l.tq ? 'role-subscriptions-overview' : void 0);
-    let M = Z && (null == n || !(L || y) || (P && !j));
+    let M = Z && (null == n || !(L || y) || (R && !j));
     if (
         (r.useEffect(() => {
             o.jg();
@@ -53,8 +53,8 @@ function Z(e) {
         }, [t, M]),
         l.tq && M)
     ) {
-        let e = null == n ? S.J.NOT_GUILD_MEMBER : S.J.GUILD_NOT_ELIGIBLE;
-        return (0, i.jsx)(S.z, { errorType: e });
+        let e = null == n ? T.J.NOT_GUILD_MEMBER : T.J.GUILD_NOT_ELIGIBLE;
+        return (0, i.jsx)(T.z, { errorType: e });
     }
     return (0, i.jsxs)('div', {
         className: x.container,
@@ -70,7 +70,7 @@ function Z(e) {
                     (0, i.jsx)(g.Z.Title, { children: b.intl.string(b.t['KzCF//']) })
                 ]
             }),
-            (0, i.jsx)('div', { id: T.v }),
+            (0, i.jsx)('div', { id: S.v }),
             (0, i.jsx)('div', {
                 className: x.content,
                 children: L

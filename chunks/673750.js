@@ -136,10 +136,10 @@ class D extends v.Z {
                     oldFormErrors: !0,
                     ...T.hs,
                     signal: l.signal,
+                    rejectWithError: !0,
                     onRequestCreated: () => {
                         null != e.nonce && this.requests.set(e.nonce, l);
-                    },
-                    rejectWithError: !1
+                    }
                 },
                 o
             );
@@ -154,10 +154,10 @@ class D extends v.Z {
                 retries: 1,
                 oldFormErrors: !0,
                 signal: a.signal,
+                rejectWithError: !0,
                 onRequestCreated: () => {
                     this.requests.set(r, a);
-                },
-                rejectWithError: !1
+                }
             },
             this.createResponseHandler(r, t)
         );
@@ -193,6 +193,7 @@ class D extends v.Z {
                 ],
                 attachments: n,
                 signal: v.signal,
+                rejectWithError: !0,
                 onRequestCreated: (e) => {
                     this.requests.set(o, v),
                         e.on('progress', (e) => {
@@ -200,8 +201,7 @@ class D extends v.Z {
                                 n = (0, E.dg)(i);
                             null != t && t > n && (this.cancelRequest(o), null == f || f(n));
                         });
-                },
-                rejectWithError: !1
+                }
             },
             this.createResponseHandler(o, t)
         );

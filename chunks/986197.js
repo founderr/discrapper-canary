@@ -22,7 +22,7 @@ t.Z = {
                     url: m.ANM.POMELO_SUGGESTIONS_UNAUTHED,
                     query: null == e ? void 0 : { global_name: e },
                     timeout: t,
-                    rejectWithError: !1
+                    rejectWithError: !0
                 });
                 if (i.ok && (null === (n = i.body) || void 0 === n ? void 0 : n.username) != null)
                     return r.Z.dispatch({
@@ -46,7 +46,7 @@ t.Z = {
                 let n = await s.tn.get({
                     url: m.ANM.POMELO_SUGGESTIONS,
                     timeout: e,
-                    rejectWithError: !1
+                    rejectWithError: !0
                 });
                 if (n.ok && (null === (t = n.body) || void 0 === t ? void 0 : t.username) != null)
                     return r.Z.dispatch({

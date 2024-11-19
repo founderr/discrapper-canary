@@ -11,8 +11,8 @@ var i = n(200651),
     g = n(214852),
     m = n(626135),
     f = n(314684),
-    _ = n(794484),
-    p = n(536844),
+    p = n(794484),
+    _ = n(536844),
     h = n(342414),
     E = n(938736),
     b = n(391110),
@@ -46,13 +46,13 @@ t.Z = () => {
                                 className: N.heroHeading,
                                 location: b.MQ.HOME
                             }),
-                            (0, i.jsx)(_.Z, {
+                            (0, i.jsx)(p.Z, {
                                 variant: b.R0.WHATS_NEW,
                                 className: s()(N.whatsNew, { [N.whatsNewWithOriginalHeroHeading]: !(j || P) }),
                                 noBackground: !0,
                                 leftAlignHeaders: !0
                             }),
-                            (0, i.jsx)(_.Z, {
+                            (0, i.jsx)(p.Z, {
                                 className: N.perksDiscoverability,
                                 noBackground: !0,
                                 leftAlignHeaders: !0,
@@ -61,7 +61,7 @@ t.Z = () => {
                                     previousComponent: b.MQ.HOME
                                 })
                             }),
-                            (0, i.jsx)(p.Z, {
+                            (0, i.jsx)(_.Z, {
                                 className: N.giftNitro,
                                 location: c.Z.PREMIUM_MARKETING_GIFT_SECTION,
                                 analyticsLocation: {

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return P;
+        return R;
     }
 }),
     n(47120);
@@ -23,9 +23,9 @@ var i = n(200651),
     I = n(70956),
     C = n(225559),
     v = n(910436),
-    S = n(203028),
+    T = n(203028),
     N = n(358924),
-    T = n(292140),
+    S = n(292140),
     A = n(525296),
     b = n(981631),
     x = n(674563),
@@ -34,7 +34,7 @@ var i = n(200651),
 let y = 15 * I.Z.Millis.MINUTE,
     O = (0, A.Z)(function (e) {
         let { party: t, onUserContextMenu: n, onChannelContextMenu: l, quest: a } = e,
-            s = (0, i.jsx)(S.Z, {
+            s = (0, i.jsx)(T.Z, {
                 party: t,
                 onUserContextMenu: n
             }),
@@ -69,7 +69,7 @@ let y = 15 * I.Z.Millis.MINUTE,
                   position: 'left',
                   renderPopout: (e) => {
                       let { closePopout: n } = e;
-                      return (0, i.jsx)(T.Z, {
+                      return (0, i.jsx)(S.Z, {
                           party: t,
                           close: n
                       });
@@ -91,8 +91,8 @@ let y = 15 * I.Z.Millis.MINUTE,
               })
             : null;
     }),
-    R = a().throttle(() => p.W(!1), 300000);
-function P() {
+    P = a().throttle(() => p.W(!1), 300000);
+function R() {
     let {
             nowPlayingCards: e,
             loaded: t,
@@ -109,7 +109,7 @@ function P() {
         s = (0, c.e7)([h.Z], () => h.Z.quests);
     r.useEffect(() => (u.Z.wait(() => C.L()), () => u.Z.wait(() => C.v())), [null == a ? void 0 : a.id]),
         r.useEffect(() => {
-            n && !l && R();
+            n && !l && P();
         }, [n, l]);
     let o = r.useMemo(() => {
             let t = new Map(),

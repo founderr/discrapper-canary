@@ -22,8 +22,8 @@ var i = n(200651),
     Z = n(474936),
     C = n(388032),
     y = n(397741);
-let T = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
-    b = {
+let b = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
+    T = {
         opacity: 0,
         transform: 'translate3d(100%, 0, 0)'
     },
@@ -33,8 +33,8 @@ let T = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
     },
     N = { opacity: 0 },
     w = { opacity: 1 },
-    P = { borderRadius: ''.concat(T, 'px ').concat(T, 'px ').concat(T, 'px ').concat(T, 'px') },
-    j = { borderRadius: '0px '.concat(T, 'px ').concat(T, 'px 0px') },
+    j = { borderRadius: ''.concat(b, 'px ').concat(b, 'px ').concat(b, 'px ').concat(b, 'px') },
+    P = { borderRadius: '0px '.concat(b, 'px ').concat(b, 'px 0px') },
     R = {
         mass: 1,
         tension: 500,
@@ -44,10 +44,10 @@ let T = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
     M = (e) => {
         let t,
             a,
-            { participant: s, isUpsellEnabled: o, shape: d, size: g, didTrackUpsellViewed: T, setDidTrackUpsellViewed: b, className: A, premiumIndicator: N } = e,
+            { participant: s, isUpsellEnabled: o, shape: d, size: g, didTrackUpsellViewed: b, setDidTrackUpsellViewed: T, className: A, premiumIndicator: N } = e,
             w = (0, _.Wc)(s),
-            { analyticsLocations: P } = (0, p.ZP)(),
-            j = null != (0, x.Z)(s);
+            { analyticsLocations: j } = (0, p.ZP)(),
+            P = null != (0, x.Z)(s);
         try {
             t = (0, _.nG)(w);
         } catch (e) {
@@ -76,28 +76,28 @@ let T = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
             }, [L, R, M]);
         if (
             (l.useEffect(() => {
-                !T &&
+                !b &&
                     R &&
                     (S.default.track(E.rMx.PREMIUM_UPSELL_VIEWED, {
                         type: Z.cd.STREAM_QUALITY_INDICATOR,
                         has_premium_stream_fps: t,
                         has_premium_stream_resolution: a,
-                        location_stack: P
+                        location_stack: j
                     }),
-                    b(!0));
-            }, [t, a, R, T, b, P]),
+                    T(!0));
+            }, [t, a, R, b, T, j]),
             null == w)
         )
             return null;
         let D = (0, i.jsx)(m.Tooltip, {
-            text: j ? C.intl.string(C.t.q8TiVl) : R ? C.intl.string(C.t.IHgpEh) : C.intl.string(C.t.vLb0VV),
+            text: P ? C.intl.string(C.t.q8TiVl) : R ? C.intl.string(C.t.IHgpEh) : C.intl.string(C.t.vLb0VV),
             position: 'bottom',
             color: m.Tooltip.Colors.GREY,
             children: (e) =>
                 (0, i.jsxs)(m.Clickable, {
                     ...e,
                     onClick: k,
-                    className: r()(y.qualityIndicator, g, h.eE[d], j ? y.qualityIndicatorLowQuality : y.qualityIndicatorFullQuality, { [y.clickable]: L && R }),
+                    className: r()(y.qualityIndicator, g, h.eE[d], P ? y.qualityIndicatorLowQuality : y.qualityIndicatorFullQuality, { [y.clickable]: L && R }),
                     children: [
                         R
                             ? (0, i.jsx)(m.NitroWheelIcon, {
@@ -134,17 +134,17 @@ t.Z = (e) => {
             S,
             {
                 enter: {
-                    from: v.enabled ? N : b,
+                    from: v.enabled ? N : T,
                     to: v.enabled ? w : A
                 },
-                leave: v.enabled ? N : b,
+                leave: v.enabled ? N : T,
                 config: R
             },
             'animate-always'
         ),
         x = (0, m.useSpring)(
             {
-                to: S ? j : P,
+                to: S ? P : j,
                 config: R
             },
             'animate-always'

@@ -117,7 +117,7 @@ class v extends (s = u.ZP.Store) {
                         url: h.ANM.CALL_RING(t),
                         body: { recipients: e },
                         oldFormErrors: !0,
-                        rejectWithError: !1
+                        rejectWithError: !0
                     });
             }
         },

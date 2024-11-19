@@ -21,7 +21,7 @@ var s = n(120356),
     S = n(971436);
 function T() {
     let { enabled: e, autoToggle: t, hideInstantInvites: s, hidePersonalInformation: T, disableSounds: C, disableNotifications: E, enableContentProtection: _ } = (0, l.cj)([u.Z], () => ({ ...u.Z.getSettings() })),
-        I = (e, t) => {
+        f = (e, t) => {
             o.Z.update({ [e]: t });
         };
     return (0, i.jsxs)(a.FormSection, {
@@ -50,7 +50,7 @@ function T() {
                 children: [
                     (0, i.jsx)(a.FormSwitch, {
                         value: e,
-                        onChange: (e) => I('enabled', e),
+                        onChange: (e) => f('enabled', e),
                         note: p.intl.format(p.t.MLVL2N, {
                             onClick: () => {
                                 c.Z.setSection(g.oAB.KEYBINDS);
@@ -62,7 +62,7 @@ function T() {
                         if (m.isPlatformEmbedded)
                             return (0, i.jsx)(a.FormSwitch, {
                                 value: t,
-                                onChange: (e) => I('autoToggle', e),
+                                onChange: (e) => f('autoToggle', e),
                                 note: p.intl.string(p.t.ZPi4lJ),
                                 children: p.intl.string(p.t.PKDAJy)
                             });
@@ -79,7 +79,7 @@ function T() {
                         setting: h.s6.STREAMER_MODE_HIDE_PERSONAL_INFORMATION,
                         children: (0, i.jsx)(a.FormSwitch, {
                             value: T,
-                            onChange: (e) => I('hidePersonalInformation', e),
+                            onChange: (e) => f('hidePersonalInformation', e),
                             note: p.intl.string(p.t['+9Lra2']),
                             children: p.intl.string(p.t.UpQziI)
                         })
@@ -88,7 +88,7 @@ function T() {
                         setting: h.s6.STREAMER_MODE_HIDE_INVITE_LINKS,
                         children: (0, i.jsx)(a.FormSwitch, {
                             value: s,
-                            onChange: (e) => I('hideInstantInvites', e),
+                            onChange: (e) => f('hideInstantInvites', e),
                             note: p.intl.string(p.t.m7mS2d),
                             children: p.intl.string(p.t.q7WNGh)
                         })
@@ -97,7 +97,7 @@ function T() {
                         setting: h.s6.STREAMER_MODE_DISABLE_SOUNDS,
                         children: (0, i.jsx)(a.FormSwitch, {
                             value: C,
-                            onChange: (e) => I('disableSounds', e),
+                            onChange: (e) => f('disableSounds', e),
                             note: p.intl.string(p.t.eAkaio),
                             children: p.intl.string(p.t.o56OZm)
                         })
@@ -106,7 +106,7 @@ function T() {
                         setting: h.s6.STREAMER_MODE_DISABLE_NOTIFICATIONS,
                         children: (0, i.jsx)(a.FormSwitch, {
                             value: E,
-                            onChange: (e) => I('disableNotifications', e),
+                            onChange: (e) => f('disableNotifications', e),
                             note: p.intl.string(p.t.ZAmpQ0),
                             children: p.intl.string(p.t.qmYiYW)
                         })
@@ -115,7 +115,7 @@ function T() {
                         setting: h.s6.STREAMER_MODE_HIDE_DISCORD_WINDOW_FROM_SCREEN_CAPTURE,
                         children: (0, i.jsx)(a.FormSwitch, {
                             value: _,
-                            onChange: (e) => I('enableContentProtection', e),
+                            onChange: (e) => f('enableContentProtection', e),
                             note: p.intl.string(p.t.P4vj0t),
                             children: p.intl.string(p.t['iA81+f'])
                         })

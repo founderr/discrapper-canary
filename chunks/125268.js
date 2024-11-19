@@ -75,7 +75,7 @@ function m(e, t, n) {
     l.tn.del({
         url: s.ANM.SHARED_CANVAS_EMOJI_HOSE(e, t, n),
         backoff: new i.Z(),
-        rejectWithError: !1
+        rejectWithError: !0
     });
 }
 function f(e, t) {

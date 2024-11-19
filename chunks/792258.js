@@ -16,13 +16,13 @@ t.Z = (e) => {
         n = (0, l.e7)([d.Z], () => d.Z.getGuild(t));
     if (void 0 === n) return null;
     let r = n.hasFeature(u.oNc.VERIFIED) || n.hasFeature(u.oNc.PARTNERED),
-        _ = n.toString(),
-        p = n.getIconURL(40, !0),
+        p = n.toString(),
+        _ = n.getIconURL(40, !0),
         h = null,
         E = f[f.length - 1];
-    if (null == n.icon && null != _) {
+    if (null == n.icon && null != p) {
         var b;
-        E = null !== (b = f[(h = (0, s.Zg)(_)).length - 1]) && void 0 !== b ? b : f[f.length - 1];
+        E = null !== (b = f[(h = (0, s.Zg)(p)).length - 1]) && void 0 !== b ? b : f[f.length - 1];
     }
     return (0, i.jsxs)('div', {
         className: m.container,
@@ -37,7 +37,7 @@ t.Z = (e) => {
                               children: h
                           })
                         : null,
-                    null != p
+                    null != _
                         ? (0, i.jsx)(o.Avatar, {
                               src: n.getIconURL(40, !0),
                               size: o.AvatarSizes.SIZE_40,

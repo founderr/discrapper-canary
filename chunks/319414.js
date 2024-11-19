@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651);
 n(192379);
-var r = n(442837),
-    l = n(352527),
+var l = n(442837),
+    r = n(352527),
     o = n(183584),
     a = n(487029),
     s = n(592125),
@@ -16,9 +16,9 @@ var r = n(442837),
     d = n(710111),
     h = n(625478);
 function f() {
-    let [e, t] = (0, r.Wu)([l.Z], () => [l.Z.enabled, l.Z.keepOpen]),
-        n = (0, r.e7)([u.Z], () => u.Z.getVoiceChannelId()),
-        f = (0, r.e7)([s.Z], () => s.Z.getChannel(n), [n]),
+    let [e, t] = (0, l.Wu)([r.Z], () => [r.Z.enabled, r.Z.keepOpen]),
+        n = (0, l.e7)([u.Z], () => u.Z.getVoiceChannelId()),
+        f = (0, l.e7)([s.Z], () => s.Z.getChannel(n), [n]),
         p = null == f ? void 0 : f.getGuildId();
     return e && null != f
         ? (0, i.jsx)('div', {

@@ -41,9 +41,9 @@ let P = () => 80,
             { accessibilityLabel: y, thumbnailPreviewSrc: b, title: S } = null !== (t = null == P ? void 0 : P.config) && void 0 !== t ? t : {},
             T = h.ZP.canUseCollectibles(n),
             A = s === v.$0.PREMIUM_PURCHASE && !T,
-            B = (0, p.M)();
+            k = (0, p.M)();
         return (0, i.jsxs)(Z, {
-            className: !A || u || B ? void 0 : C.decorationGridItemChurned,
+            className: !A || u || k ? void 0 : C.decorationGridItemChurned,
             innerRef: null != o ? o : N,
             isSelected: u,
             ...x,

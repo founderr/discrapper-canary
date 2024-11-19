@@ -48,7 +48,7 @@ t.Z = function (e) {
                     })
                 );
         }, [C, n]),
-        S = (0, c.Z)({
+        T = (0, c.Z)({
             id: null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : '',
             label: p.intl.string(p.t['FfCL+/']),
             onSuccess: () => (0, a.showToast)((0, a.createToast)(p.intl.string(p.t.eNjAam), a.ToastType.SUCCESS))
@@ -69,10 +69,10 @@ t.Z = function (e) {
                                 action: v
                             })
                         }),
-                        null != S ? (0, i.jsx)(a.MenuGroup, { children: S }) : null
+                        null != T ? (0, i.jsx)(a.MenuGroup, { children: T }) : null
                     ]
                 }),
-            [S, v]
+            [T, v]
         );
     return (0, i.jsxs)('div', {
         className: g.actionContainer,

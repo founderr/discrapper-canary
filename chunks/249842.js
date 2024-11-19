@@ -15,7 +15,7 @@ async function s(e) {
         let n = await l.tn.get({
             url: a.ANM.GUILD_PREVIEW(e),
             oldFormErrors: !0,
-            rejectWithError: !1
+            rejectWithError: !0
         });
         i.Z.dispatch({
             type: 'GUILD_POPOUT_FETCH_SUCCESS',

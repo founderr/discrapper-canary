@@ -17,14 +17,14 @@ var i = n(200651),
     I = n(370648),
     C = n(569527),
     v = n(979007),
-    S = n(388032),
+    T = n(388032),
     N = n(327900);
 t.Z = function () {
     let { onScroll: e, scrollPosition: t, resetScrollPosition: n } = (0, s.M)(),
-        T = (0, g.Xh)(),
-        A = (null == T ? void 0 : T.type) === g.m_.CATEGORY ? T.categoryId : void 0,
-        { applicationId: b, section: x } = (null == T ? void 0 : T.type) === g.m_.APPLICATION ? T : {},
-        { query: Z } = (null == T ? void 0 : T.type) === g.m_.SEARCH ? T : {},
+        S = (0, g.Xh)(),
+        A = (null == S ? void 0 : S.type) === g.m_.CATEGORY ? S.categoryId : void 0,
+        { applicationId: b, section: x } = (null == S ? void 0 : S.type) === g.m_.APPLICATION ? S : {},
+        { query: Z } = (null == S ? void 0 : S.type) === g.m_.SEARCH ? S : {},
         { tabs: L, selectedTab: y, onSelectTab: O } = (0, p.i)(null == A ? void 0 : A.toString());
     r.useEffect(() => {
         a.CP();
@@ -32,8 +32,8 @@ t.Z = function () {
         r.useEffect(() => {
             a.g5();
         }, []);
-    let R = null != b,
-        P = (null == T ? void 0 : T.type) === g.m_.SEARCH,
+    let P = null != b,
+        R = (null == S ? void 0 : S.type) === g.m_.SEARCH,
         { searchQuery: j, onSearchTextChange: D, onClearSearch: M, onSearchSubmit: w } = (0, m.M)({ initialQuery: null != Z ? Z : '' }),
         {
             searchBarState: k,
@@ -44,14 +44,14 @@ t.Z = function () {
             isSearchBarVisible: !0,
             isSearchBarEmpty: '' === j.trim()
         }),
-        V = r.useCallback(
+        H = r.useCallback(
             (e) => {
-                O(e), P && M(), n();
+                O(e), R && M(), n();
             },
-            [P, M, O, n]
+            [R, M, O, n]
         ),
-        H = r.useCallback((e) => (0, f.ph)({ applicationId: e }), []),
-        F = R || P,
+        V = r.useCallback((e) => (0, f.ph)({ applicationId: e }), []),
+        F = P || R,
         z = r.useCallback(() => {
             null != (0, g.Uc)() ? (0, h.op)() : (0, f.Yp)();
         }, []);
@@ -59,35 +59,35 @@ t.Z = function () {
         className: N.container,
         children: [
             (0, i.jsxs)(c.ZP, {
-                className: P ? N.search : void 0,
+                className: R ? N.search : void 0,
                 children: [
-                    !P && (0, i.jsx)(c.z6, { scrollPosition: t }),
+                    !R && (0, i.jsx)(c.z6, { scrollPosition: t }),
                     F
                         ? (0, i.jsx)(c.Cm, {
                               icon: l.ArrowLargeLeftIcon,
                               onClick: z,
-                              variant: P ? c.HS.DEFAULT : c.HS.OVERLAY
+                              variant: R ? c.HS.DEFAULT : c.HS.OVERLAY
                           })
                         : (0, i.jsx)(c.aV, { icon: l.AppsIcon }),
-                    R
+                    P
                         ? null
-                        : P
+                        : R
                           ? (0, i.jsx)(l.Heading, {
                                 variant: 'heading-lg/semibold',
                                 color: 'header-primary',
                                 className: N.alternateHeader,
-                                children: S.intl.formatToPlainString(S.t.zHdzqa, { query: Z })
+                                children: T.intl.formatToPlainString(T.t.zHdzqa, { query: Z })
                             })
                           : (0, i.jsx)(d.Z, {
                                 tabs: L,
                                 selectedTab: y,
-                                onTabSelect: V,
+                                onTabSelect: H,
                                 onAvailableWidthChange: U
                             }),
-                    !R &&
+                    !P &&
                         (0, i.jsx)(u.Z, {
                             query: j,
-                            placeholder: S.intl.string(S.t['7J5i+/']),
+                            placeholder: T.intl.string(T.t['7J5i+/']),
                             onTextChange: D,
                             onClear: M,
                             onSubmit: w,
@@ -97,24 +97,24 @@ t.Z = function () {
                         })
                 ]
             }),
-            R
+            P
                 ? (0, i.jsx)(E.Z, {
                       onScroll: e,
-                      onSelectApplication: H,
+                      onSelectApplication: V,
                       applicationId: b,
                       initialTab: x
                   })
-                : P
-                  ? (0, i.jsx)(C.Z, { onSelectApplication: H })
+                : R
+                  ? (0, i.jsx)(C.Z, { onSelectApplication: V })
                   : y === v.kK
                     ? (0, i.jsx)(I.Z, {
                           onScroll: e,
-                          onSelectApplication: H
+                          onSelectApplication: V
                       })
                     : (0, i.jsx)(_.Z, {
                           tabId: Number(y),
                           onScroll: e,
-                          onSelectApplication: H
+                          onSelectApplication: V
                       })
         ]
     });

@@ -22,7 +22,7 @@ function E(e) {
     let { user: t, type: n, status: E, isFocused: I } = e,
         C = r.useContext(u.AnalyticsContext),
         { analyticsLocations: v } = (0, o.ZP)(),
-        S = (e) => {
+        T = (e) => {
             e.stopPropagation(), s.Z.cancelFriendRequest(t.id, { location: 'Friends' });
         },
         N = (e) => {
@@ -32,7 +32,7 @@ function E(e) {
                     context: { location: 'Friends' }
                 });
         },
-        T = E === g.Skl.OFFLINE ? g.Skl.UNKNOWN : E,
+        S = E === g.Skl.OFFLINE ? g.Skl.UNKNOWN : E,
         A = n === g.OGo.PENDING_INCOMING ? f.intl.string(f.t.ZOFd1N) : f.intl.string(f.t.zz2i8v);
     return (0, i.jsx)(m.Z, {
         isFocused: I,
@@ -69,7 +69,7 @@ function E(e) {
                                   icon: a.XSmallIcon,
                                   actionType: h.Z.ActionTypes.DENY,
                                   tooltip: f.intl.string(f.t.xuio0N),
-                                  onClick: S,
+                                  onClick: T,
                                   shouldHighlight: e
                               })
                           ]
@@ -78,7 +78,7 @@ function E(e) {
                           icon: a.XSmallIcon,
                           actionType: h.Z.ActionTypes.DENY,
                           tooltip: f.intl.string(f.t.eaq81d),
-                          onClick: S,
+                          onClick: T,
                           shouldHighlight: e
                       });
             return (0, i.jsxs)('div', {
@@ -88,7 +88,7 @@ function E(e) {
                         user: t,
                         hovered: e,
                         showAccountIdentifier: !0,
-                        status: T,
+                        status: S,
                         subText: A
                     }),
                     (0, i.jsx)('div', {

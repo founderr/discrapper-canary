@@ -14,9 +14,9 @@ t.Z = function (e) {
     var t, n, g, f, _;
     let { application: E, onSelectApplication: I, showCategory: C = !1 } = e,
         v = (0, o.Z)({ application: E }),
-        S = null === (t = E.categories) || void 0 === t ? void 0 : t[0],
+        T = null === (t = E.categories) || void 0 === t ? void 0 : t[0],
         N = (0, a.lf)(E),
-        T = r.useCallback(() => {
+        S = r.useCallback(() => {
             I(E.id);
         }, [I, E.id]),
         A = r.useMemo(
@@ -37,12 +37,12 @@ t.Z = function (e) {
             guildIconSize: s.x.SMALL,
             compact: !0
         }),
-        Z = C && null != S;
+        Z = C && null != T;
     return (0, i.jsx)('div', {
         className: m.container,
         children: (0, i.jsxs)(c.Z, {
             className: m.card,
-            onClick: T,
+            onClick: S,
             onContextMenu: () => {},
             children: [
                 (0, i.jsxs)('div', {
@@ -94,7 +94,7 @@ t.Z = function (e) {
                                                 className: m.appCategory,
                                                 variant: 'text-xs/medium',
                                                 color: 'text-normal',
-                                                children: S.name
+                                                children: T.name
                                             })
                                           : null,
                                       Z && N

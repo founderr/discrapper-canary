@@ -7,10 +7,10 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     o = n(192379),
-    s = n(120356),
-    a = n.n(s),
-    l = n(392711),
-    r = n.n(l),
+    a = n(120356),
+    l = n.n(a),
+    s = n(392711),
+    r = n.n(s),
     c = n(913527),
     d = n.n(c),
     u = n(748780),
@@ -26,9 +26,9 @@ var i = n(200651),
     _ = n(843693),
     S = n(246642),
     C = n(921227),
-    E = n(314897),
-    I = n(430824),
-    j = n(496675),
+    I = n(314897),
+    j = n(430824),
+    E = n(496675),
     R = n(699516),
     N = n(885110),
     Z = n(300429),
@@ -82,7 +82,7 @@ class H extends o.PureComponent {
     render() {
         let { activity: e } = this.props;
         return (0, i.jsxs)('div', {
-            className: a()(D.activityInviteEducation, { [D.activityInviteEducationFadeIn]: this.state.fadeIn }),
+            className: l()(D.activityInviteEducation, { [D.activityInviteEducationFadeIn]: this.state.fadeIn }),
             children: [
                 (0, i.jsx)('div', { className: D.activityInviteEducationArrow }),
                 (0, i.jsx)('span', {
@@ -133,30 +133,30 @@ class W extends o.PureComponent {
     }
     render() {
         let e, t;
-        let { guildId: n, activity: o, showInviteEducation: s, isFocused: l, typingUsers: c, className: h, slowmodeCooldownGuess: m, isBypassSlowmode: p, channel: g, isThreadCreation: v, renderDots: b, poggermodeEnabled: x, isComboing: _ } = this.props,
+        let { guildId: n, activity: o, showInviteEducation: a, isFocused: s, typingUsers: c, className: h, slowmodeCooldownGuess: m, isBypassSlowmode: p, channel: g, isThreadCreation: v, renderDots: b, poggermodeEnabled: x, isComboing: _ } = this.props,
             { rateLimitPerUser: C } = g,
-            E = A.default.getCurrentUser(),
-            j = I.Z.getGuild(n),
+            I = A.default.getCurrentUser(),
+            E = j.Z.getGuild(n),
             N = C > 0,
             Z = v
                 ? []
                 : r()(c)
                       .keys()
-                      .filter((e) => e !== (null == E ? void 0 : E.id))
+                      .filter((e) => e !== (null == I ? void 0 : I.id))
                       .reject((e) => R.Z.isBlockedOrIgnored(e))
                       .map((e) => A.default.getUser(e))
                       .filter(L.lm)
                       .map((e) => k.ZP.getName(n, this.props.channel.id, e))
                       .value();
         if (0 === Z.length && !N && !_)
-            return s && null != o
+            return a && null != o
                 ? (0, i.jsx)(H, {
                       activity: o,
-                      isFocused: l
+                      isFocused: s
                   })
                 : (0, i.jsx)(G, {
                       channel: g,
-                      guild: j
+                      guild: E
                   });
         let y = null,
             O = '';
@@ -201,10 +201,10 @@ class W extends o.PureComponent {
                             })
                           : B.intl.string(B.t.uVDhqa)),
             (0, i.jsxs)('div', {
-                className: a()(
+                className: l()(
                     D.typing,
                     {
-                        'stop-animation': !l,
+                        'stop-animation': !s,
                         [D.isComboing]: x && _
                     },
                     h
@@ -267,22 +267,22 @@ class W extends o.PureComponent {
 }
 function z(e) {
     let { channel: t, isThreadCreation: n = !1, ...o } = e,
-        s = (0, m.e7)([N.Z], () => N.Z.findActivity((e) => null != e.application_id)),
-        a = (0, m.e7)([_.ZP, E.default], () => _.ZP.getUserCombo(E.default.getId(), t.id)),
-        l = (0, m.e7)([C.Z, b.Z], () => (0, v.Z)(t, s, C.Z, b.Z)),
+        a = (0, m.e7)([N.Z], () => N.Z.findActivity((e) => null != e.application_id)),
+        l = (0, m.e7)([_.ZP, I.default], () => _.ZP.getUserCombo(I.default.getId(), t.id)),
+        s = (0, m.e7)([C.Z, b.Z], () => (0, v.Z)(t, a, C.Z, b.Z)),
         r = (0, m.e7)([Z.Z], () => Z.Z.getSlowmodeCooldownGuess(t.id, n ? Z.S.CreateThread : Z.S.SendMessage)),
-        c = (0, m.e7)([j.Z], () => (n ? j.Z.can(U.Plq.MANAGE_THREADS, t) : j.Z.can(U.Plq.MANAGE_CHANNELS, t) || j.Z.can(U.Plq.MANAGE_MESSAGES, t))),
+        c = (0, m.e7)([E.Z], () => (n ? E.Z.can(U.Plq.MANAGE_THREADS, t) : E.Z.can(U.Plq.MANAGE_CHANNELS, t) || E.Z.can(U.Plq.MANAGE_MESSAGES, t))),
         d = {
             ...o,
             baseTextColor: (0, f.useToken)(p.Z.colors.INTERACTIVE_NORMAL).hex(),
             activeTextColor: (0, f.useToken)(p.Z.colors.INTERACTIVE_NORMAL).hex(),
-            showInviteEducation: l,
-            activity: s,
+            showInviteEducation: s,
+            activity: a,
             typingUsers: (0, m.e7)([y.Z], () => y.Z.getTypingUsers(t.id)),
             isFocused: (0, m.e7)([O.Z], () => O.Z.isFocused()),
             guildId: t.guild_id,
             slowmodeCooldownGuess: r,
-            isComboing: null != a,
+            isComboing: null != l,
             isBypassSlowmode: c,
             channel: t,
             isThreadCreation: n

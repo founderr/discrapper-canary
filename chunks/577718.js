@@ -18,9 +18,9 @@ var i = n(200651),
     I = n(970731),
     C = n(626135),
     v = n(267642),
-    S = n(981631),
+    T = n(981631),
     N = n(921944),
-    T = n(30513),
+    S = n(30513),
     A = n(474936),
     b = n(388032),
     x = n(114778),
@@ -28,22 +28,22 @@ var i = n(200651),
     L = n(741160),
     y = n(829972),
     O = n(31932),
-    R = n(642301);
-function P(e) {
-    if (null != e) g.Z.open(e.id, S.pNK.OVERVIEW, { section: S.jXE.PREMIUM_GUILD_PROGRESS_BAR }, S.KsC.DISPLAY);
+    P = n(642301);
+function R(e) {
+    if (null != e) g.Z.open(e.id, T.pNK.OVERVIEW, { section: T.jXE.PREMIUM_GUILD_PROGRESS_BAR }, T.KsC.DISPLAY);
 }
 function j(e, t) {
-    t && g.Z.open(e.id, S.pNK.DISCOVERY);
+    t && g.Z.open(e.id, T.pNK.DISCOVERY);
 }
 function D(e, t) {
     if (null != t)
-        (0, v.f2)(t, S.Eu4.TIER_1)
-            ? g.Z.open(t.id, S.pNK.OVERVIEW, { section: S.jXE.PREMIUM_GUILD_INVITE_SPLASH }, S.KsC.INVITE)
+        (0, v.f2)(t, T.Eu4.TIER_1)
+            ? g.Z.open(t.id, T.pNK.OVERVIEW, { section: T.jXE.PREMIUM_GUILD_INVITE_SPLASH }, T.KsC.INVITE)
             : (0, h.Z)({
                   analyticsLocations: e,
-                  analyticsSourceLocation: S.jXE.PREMIUM_GUILD_INVITE_SPLASH,
+                  analyticsSourceLocation: T.jXE.PREMIUM_GUILD_INVITE_SPLASH,
                   guild: t,
-                  perks: (0, T.o9)()
+                  perks: (0, S.o9)()
               });
 }
 function M(e) {
@@ -64,16 +64,16 @@ function M(e) {
 t.Z = r.memo(function (e) {
     let { contentTypes: t, theme: n, guild: r, renderGuildHeaderDropdownButton: s } = e,
         { analyticsLocations: h } = (0, o.ZP)(),
-        T = () => {
-            C.default.track(S.rMx.TOOLTIP_VIEWED, {
+        S = () => {
+            C.default.track(T.rMx.TOOLTIP_VIEWED, {
                 type: A.cd.PREMIUM_PROGRESS_BAR,
-                location: { page: S.ZY5.GUILD_CHANNEL }
+                location: { page: T.ZY5.GUILD_CHANNEL }
             });
         },
         w = () => {
-            C.default.track(S.rMx.PREMIUM_UPSELL_VIEWED, {
+            C.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: A.cd.INVITE_SPLASH_UPSELL,
-                location: { page: S.ZY5.GUILD_CHANNEL },
+                location: { page: T.ZY5.GUILD_CHANNEL },
                 location_stack: h
             });
         },
@@ -93,7 +93,7 @@ t.Z = r.memo(function (e) {
                 case l.z.GUILD_HEADER_PREMIUM_GUILD_PROGRESS:
                     return (0, i.jsx)(M, {
                         renderPopout: (0, i.jsx)(I.ZP, {
-                            onComponentMount: T,
+                            onComponentMount: S,
                             header: b.intl.string(b.t.nxtaFx),
                             asset: (0, i.jsx)('img', {
                                 alt: '',
@@ -103,8 +103,8 @@ t.Z = r.memo(function (e) {
                             content: b.intl.format(b.t.ujItEh, {}),
                             buttonCTA: b.intl.string(b.t.UzVPra),
                             secondaryButtonCTA: b.intl.string(b.t['KkK/aG']),
-                            onSecondaryClick: () => P(),
-                            onClick: () => P(r),
+                            onSecondaryClick: () => R(),
+                            onClick: () => R(r),
                             markAsDismissed: G
                         }),
                         renderGuildHeaderDropdownButton: s
@@ -112,7 +112,7 @@ t.Z = r.memo(function (e) {
                 case l.z.GUILD_HEADER_PROGRESS_BAR_SIZE_COACH_MARK:
                     return (0, i.jsx)(M, {
                         renderPopout: (0, i.jsx)(I.ZP, {
-                            onComponentMount: T,
+                            onComponentMount: S,
                             header: b.intl.string(b.t.KAsfPT),
                             asset: (0, i.jsx)('img', {
                                 alt: '',
@@ -122,8 +122,8 @@ t.Z = r.memo(function (e) {
                             content: b.intl.format(b.t.zK1hpq, {}),
                             buttonCTA: b.intl.string(b.t.UzVPra),
                             secondaryButtonCTA: b.intl.string(b.t['KkK/aG']),
-                            onSecondaryClick: () => P(),
-                            onClick: () => P(r),
+                            onSecondaryClick: () => R(),
+                            onClick: () => R(r),
                             markAsDismissed: G
                         }),
                         renderGuildHeaderDropdownButton: s
@@ -154,8 +154,8 @@ t.Z = r.memo(function (e) {
                         renderGuildHeaderDropdownButton: s
                     });
                 case l.z.GUILD_HEADER_INVITE_SPLASH:
-                    let e = (0, v.f2)(r, S.Eu4.TIER_1) ? b.intl.format(b.t.DDzEVl, {}) : b.intl.formatToPlainString(b.t.pMftkJ, { boostCount: (0, v.KK)(r, S.Eu4.TIER_1) }),
-                        t = (0, v.f2)(r, S.Eu4.TIER_1) ? b.intl.string(b.t.rOFcBg) : b.intl.string(b.t.hvVgAQ);
+                    let e = (0, v.f2)(r, T.Eu4.TIER_1) ? b.intl.format(b.t.DDzEVl, {}) : b.intl.formatToPlainString(b.t.pMftkJ, { boostCount: (0, v.KK)(r, T.Eu4.TIER_1) }),
+                        t = (0, v.f2)(r, T.Eu4.TIER_1) ? b.intl.string(b.t.rOFcBg) : b.intl.string(b.t.hvVgAQ);
                     return (0, i.jsx)(M, {
                         renderPopout: (0, i.jsx)(I.ZP, {
                             onComponentMount: w,
@@ -200,11 +200,11 @@ t.Z = r.memo(function (e) {
                             secondaryButtonCTA: b.intl.string(b.t.f3Pet7),
                             asset: (0, i.jsx)('img', {
                                 alt: '',
-                                src: R,
+                                src: P,
                                 className: Z.fullWidthImage
                             }),
                             onClick: () => {
-                                g.Z.open(r.id, S.pNK.ROLES), g.Z.selectRole(r.getEveryoneRoleId(), b.intl.string(b.t.Bco7ND));
+                                g.Z.open(r.id, T.pNK.ROLES), g.Z.selectRole(r.getEveryoneRoleId(), b.intl.string(b.t.Bco7ND));
                             },
                             markAsDismissed: G
                         }),

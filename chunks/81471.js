@@ -17,11 +17,11 @@ var i = n(200651),
     I = n(217702),
     C = n(388032),
     v = n(684550),
-    S = n(882530);
+    T = n(882530);
 let N = r.memo(function (e) {
     let { channel: t } = e,
         { loaded: n, error: l, message: N } = (0, _.a)(t),
-        T = (0, d.p)(),
+        S = (0, d.p)(),
         { isBlocked: A, isIgnored: b } = (0, s.cj)(
             [f.Z],
             () => ({
@@ -38,10 +38,10 @@ let N = r.memo(function (e) {
                     ? (0, h.ZP)(N, {
                           formatInline: !0,
                           noStyleAndInteraction: !0,
-                          shouldFilterKeywords: T
+                          shouldFilterKeywords: S
                       })
                     : { content: null },
-            [N, T]
+            [N, S]
         ),
         y = null;
     if (l)
@@ -67,7 +67,7 @@ let N = r.memo(function (e) {
                 children: C.intl.string(C.t.uxrh1N)
             });
         else if (null != N) {
-            let { contentPlaceholder: e, renderedContent: t } = (0, m.f)(N, L, A, a()(v.messageContent, S.inlineFormat), {
+            let { contentPlaceholder: e, renderedContent: t } = (0, m.f)(N, L, A, a()(v.messageContent, T.inlineFormat), {
                 leadingIconClass: v.messageContentIcon,
                 trailingIconClass: v.messageContentIcon,
                 iconSize: I.WW

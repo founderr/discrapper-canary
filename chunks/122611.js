@@ -18,9 +18,9 @@ var i = n(200651),
     I = n(849688),
     C = n(374023),
     v = n(661599),
-    S = n(617899),
+    T = n(617899),
     N = n(8521),
-    T = n(760326),
+    S = n(760326),
     A = n(785203),
     b = n(652785),
     x = n(921944);
@@ -56,7 +56,7 @@ function L(e) {
                                 markAsDismissed: l
                             });
                         case a.z.CHANNEL_NOTICE_INVITE:
-                            return (0, i.jsx)(S.Z, {
+                            return (0, i.jsx)(T.Z, {
                                 guild: n,
                                 markAsDismissed: l
                             });
@@ -66,7 +66,7 @@ function L(e) {
                                 markAsDismissed: l
                             });
                         case a.z.CHANNEL_NOTICE_QUICKSWITCHER:
-                            return (0, i.jsx)(T.Z, {
+                            return (0, i.jsx)(S.Z, {
                                 guild: n,
                                 markAsDismissed: l
                             });

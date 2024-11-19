@@ -1,6 +1,6 @@
 var i = n(200651),
-    r = n(192379),
-    l = n(442837),
+    l = n(192379),
+    r = n(442837),
     o = n(765250),
     a = n(13245),
     s = n(355863),
@@ -11,57 +11,57 @@ var i = n(200651),
     f = n(830917),
     p = n(353038),
     m = n(561064),
-    E = n(981631),
-    v = n(782901);
-t.Z = r.memo(function (e) {
-    let { widget: t, renderWidget: n, renderTitle: g, renderButtons: _, resizeValidation: C } = e,
+    v = n(981631),
+    g = n(782901);
+t.Z = l.memo(function (e) {
+    let { widget: t, renderWidget: n, renderTitle: E, renderButtons: _, resizeValidation: C } = e,
         S = s.Z.getWidgetConfig(t.type),
-        I = (0, l.e7)([u.Z], () => u.Z.isLocked((0, h.QF)())),
-        Z = (0, m.Z)(),
-        N = (0, l.e7)([c.Z], () => c.Z.windowSize((0, f.ZY)(Z))),
-        x = (0, m.Z)(),
-        O = r.useCallback((e, t, n, i, r) => {
-            let l = c.Z.windowSize((0, f.ZY)((0, m.i)())),
-                u = (0, d.jL)(n, l),
-                h = (0, d.Ox)(i, l);
+        Z = (0, r.e7)([u.Z], () => u.Z.isLocked((0, h.QF)())),
+        I = (0, m.Z)(),
+        x = (0, r.e7)([c.Z], () => c.Z.windowSize((0, f.ZY)(I))),
+        N = (0, m.Z)(),
+        O = l.useCallback((e, t, n, i, l) => {
+            let r = c.Z.windowSize((0, f.ZY)((0, m.i)())),
+                u = (0, d.jL)(n, r),
+                h = (0, d.Ox)(i, r);
             (0, o.Os)(t),
                 (0, o.nv)({
                     widgetId: t,
                     anchor: u,
                     size: h
                 });
-            let v = e === p.B.MOVE,
-                g = (0, d.PY)(n, l.width, l.height, r.width, r.height);
-            a.Z.track(E.rMx.OVERLAY_LAYOUT_UPDATED, {
-                was_resized: !v,
-                was_dragged: v,
+            let g = e === p.B.MOVE,
+                E = (0, d.PY)(n, r.width, r.height, l.width, l.height);
+            a.Z.track(v.rMx.OVERLAY_LAYOUT_UPDATED, {
+                was_resized: !g,
+                was_dragged: g,
                 widget_type: s.Z.getWidgetType(t),
-                window_width: l.width,
-                window_height: l.height,
-                widget_width: r.width,
-                widget_height: r.height,
-                widget_left: g.left,
-                widget_top: g.top
+                window_width: r.width,
+                window_height: r.height,
+                widget_width: l.width,
+                widget_height: l.height,
+                widget_left: E.left,
+                widget_top: E.top
             });
         }, []),
-        T = r.useCallback((e) => {
+        T = l.useCallback((e) => {
             (0, o.Os)(e);
         }, []),
-        { id: A, pinned: y, zIndex: b, size: R, anchor: L } = t,
-        k = (0, d.w_)(R, N),
-        M = (0, d.KR)(L, N),
-        { minSize: P, resizeX: w, resizeY: j, dragAnywhere: D } = S,
-        z = y || !I,
-        U = r.useMemo(
+        { id: y, pinned: b, zIndex: A, size: L, anchor: R } = t,
+        k = (0, d.w_)(L, x),
+        M = (0, d.KR)(R, x),
+        { minSize: w, resizeX: P, resizeY: j, dragAnywhere: D } = S,
+        z = b || !Z,
+        U = l.useMemo(
             () => ({
                 minX: 0,
                 minY: 0,
-                maxX: N.width,
-                maxY: N.height
+                maxX: x.width,
+                maxY: x.height
             }),
-            [N]
+            [x]
         ),
-        V = r.useCallback(
+        V = l.useCallback(
             (e) =>
                 n({
                     ...e,
@@ -69,17 +69,17 @@ t.Z = r.memo(function (e) {
                 }),
             [t, n]
         ),
-        G = r.useCallback(
+        G = l.useCallback(
             (e) =>
-                null != g || null != _
+                null != E || null != _
                     ? (0, i.jsxs)('div', {
-                          className: v.extrasContainer,
-                          children: [null == g ? void 0 : g(t), null == _ ? void 0 : _(t, e)]
+                          className: g.extrasContainer,
+                          children: [null == E ? void 0 : E(t), null == _ ? void 0 : _(t, e)]
                       })
                     : null,
-            [t, g, _]
+            [t, E, _]
         ),
-        F = r.useMemo(() => {
+        W = l.useMemo(() => {
             if (null != C)
                 return (e) =>
                     C({
@@ -88,23 +88,23 @@ t.Z = r.memo(function (e) {
                     });
         }, [C, t]);
     return (0, i.jsx)(p.Z, {
-        id: A,
+        id: y,
         size: k,
         anchor: M,
         container: U,
-        minSize: P,
+        minSize: w,
         hidden: !z,
-        locked: I,
-        resizeX: w,
+        locked: Z,
+        resizeX: P,
         resizeY: j,
-        style: { zIndex: b },
+        style: { zIndex: A },
         dragAnywhere: D,
-        active: !I,
+        active: !Z,
         onUpdate: O,
         onClick: T,
-        targetWindow: x,
+        targetWindow: N,
         renderExtras: G,
-        resizeValidation: F,
+        resizeValidation: W,
         children: V
     });
 });

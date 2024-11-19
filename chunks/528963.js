@@ -16,7 +16,7 @@ t.Z = {
                 url: l.ANM.CHANNEL_FOLLOWER_STATS(e),
                 body: { channel_id: e },
                 oldFormErrors: !0,
-                rejectWithError: !1
+                rejectWithError: !0
             });
             r.Z.dispatch({
                 type: 'CHANNEL_FOLLOWER_STATS_FETCH_SUCCESS',

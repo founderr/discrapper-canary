@@ -16,8 +16,8 @@ var l = n(512722),
     c = n(563132),
     p = n(409813),
     x = n(614223),
-    h = n(388032),
-    _ = n(194778);
+    _ = n(388032),
+    h = n(194778);
 function f(e) {
     let { handleStepChange: t, handleClose: n } = e,
         l = (0, a.ZP)(),
@@ -36,22 +36,22 @@ function f(e) {
         s()(null != y, 'Expected premium type'),
         (0, i.jsx)(o.Z, {
             premiumType: y,
-            titleText: h.intl.string(h.t['7VcWW1']),
-            subtitleText: h.intl.format(h.t.Qk34Ii, { subscriptionName: S }),
+            titleText: _.intl.string(_.t['7VcWW1']),
+            subtitleText: _.intl.format(_.t.Qk34Ii, { subscriptionName: S }),
             footer: (0, i.jsxs)('div', {
-                className: _.whatYouLoseButtonContainer,
+                className: h.whatYouLoseButtonContainer,
                 children: [
                     (0, i.jsx)(C.Button, {
                         onClick: () => {
                             M ? (L((0, x.nA)(j, f)), t(p.h8.REVIEW)) : t(p.h8.PLAN_SELECT);
                         },
-                        children: h.intl.string(h.t['3PatS0'])
+                        children: _.intl.string(_.t['3PatS0'])
                     }),
                     (0, i.jsx)(C.Button, {
                         look: C.Button.Looks.LINK,
                         color: (0, r.wj)(l) ? C.Button.Colors.WHITE : C.Button.Colors.PRIMARY,
                         onClick: n,
-                        children: h.intl.string(h.t.h9tkAA)
+                        children: _.intl.string(_.t.h9tkAA)
                     })
                 ]
             }),

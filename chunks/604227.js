@@ -19,8 +19,8 @@ var s = n(525654),
 function m() {
     var e, t, n, s, m, h;
     let g = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        p = '345537',
-        x = ((e = '6d5b5620cfef0252218409ed85ae0c35f8683aed'), e.substring(0, 7)),
+        p = '345717',
+        x = ((e = '9507ad02a142bcf7b5ec4eeae4bd05e220cd5e65'), e.substring(0, 7)),
         S = null === a.Z || void 0 === a.Z ? void 0 : a.Z.remoteApp.getVersion(),
         T = null === a.Z || void 0 === a.Z ? void 0 : null === (t = (n = a.Z.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(n),
         C = null === a.Z || void 0 === a.Z ? void 0 : null === (s = (m = a.Z.remoteApp).getAppArch) || void 0 === s ? void 0 : s.call(m),
@@ -33,13 +33,13 @@ function m() {
                 [i, s, l] = n.split('.').map((e) => parseInt(e, 10));
             return t.includes('Windows 10') && void 0 !== l && l >= 22000 && (t = t.replace('Windows 10', 'Windows 11')), t.includes('OS X 10.15.7') && void 0 !== i && i >= 20 && (t = 'macOS '.concat(i - 9)), ''.concat(t, ' (').concat(n, ')');
         })(),
-        I = [g, p, '('.concat(x, ')')];
+        f = [g, p, '('.concat(x, ')')];
     return (
-        null != S && (I.push('Host '.concat(S)), null != C && I.push(C.toLowerCase()), null != T && I.push('('.concat(T, ')'))),
-        I.push('Build Override: '.concat(null != E ? E.id : 'N/A')),
-        null != _ && I.push(_),
+        null != S && (f.push('Host '.concat(S)), null != C && f.push(C.toLowerCase()), null != T && f.push('('.concat(T, ')'))),
+        f.push('Build Override: '.concat(null != E ? E.id : 'N/A')),
+        null != _ && f.push(_),
         (0, i.jsx)(c.Z, {
-            copyValue: I.join(' '),
+            copyValue: f.join(' '),
             text: d.intl.string(d.t['9Al4QU']),
             'aria-label': !1,
             children: (e) =>

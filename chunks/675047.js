@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return I;
     }
 });
 var i = n(200651),
@@ -38,21 +38,21 @@ function _() {
         children: (0, i.jsx)(d.Z, {})
     });
 }
-function I() {
+function f() {
     return (0, i.jsxs)(x.Z, {
         title: C.intl.string(C.t.SRZyHh),
         webSetting: T.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY,
         children: [(0, i.jsx)(g.Z, {}), (0, i.jsx)(h.Z, {}), (0, i.jsx)(m.Z, {}), (0, i.jsx)(u.Z, {})]
     });
 }
-function f() {
+function I() {
     return (
         s.useEffect(() => {
             (0, r.I)(), (0, o.A)();
         }, []),
         (0, i.jsxs)(c.N, {
             header: C.intl.string(C.t.OAuOHB),
-            children: [(0, i.jsx)(I, {}), (0, i.jsx)(_, {}), (0, i.jsx)(E, {})]
+            children: [(0, i.jsx)(f, {}), (0, i.jsx)(_, {}), (0, i.jsx)(E, {})]
         })
     );
 }

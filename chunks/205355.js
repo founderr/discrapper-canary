@@ -9,7 +9,7 @@ t.Z = {
         Promise.all([
             i.tn.get({
                 url: ''.concat(a, '/active.json'),
-                rejectWithError: !1
+                rejectWithError: !0
             }),
             i.tn.get(o)
         ]).then((e) => {
@@ -26,7 +26,7 @@ t.Z = {
         i.tn
             .get({
                 url: ''.concat(a, '/upcoming.json'),
-                rejectWithError: !1
+                rejectWithError: !0
             })
             .then((e) => {
                 let [t] = e.body.scheduled_maintenances;

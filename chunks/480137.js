@@ -35,7 +35,7 @@ function o(e, t) {
         url: s.ANM.GUILD_AUDIT_LOG(e),
         query: n,
         oldFormErrors: !0,
-        rejectWithError: !1
+        rejectWithError: !0
     });
 }
 function E(e, t, n, r) {

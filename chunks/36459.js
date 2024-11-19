@@ -161,7 +161,7 @@ function S(n, t, e) {
             }),
                 r.tn.post({
                     url: E.ANM.GUILD_AUTOMOD_CLEAR_MENTION_RAID(n),
-                    rejectWithError: !1
+                    rejectWithError: !0
                 }),
                 e();
         });

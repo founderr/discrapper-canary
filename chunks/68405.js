@@ -97,7 +97,7 @@ function y(e, t, n) {
                     limit: n
                 },
                 oldFormErrors: !0,
-                rejectWithError: !1
+                rejectWithError: !0
             })
             .then(
                 (i) => {
@@ -143,7 +143,7 @@ function C(e) {
                     locale: d.default.locale
                 },
                 oldFormErrors: !0,
-                rejectWithError: !1
+                rejectWithError: !0
             })
             .then((t) => {
                 let n = t.body;
@@ -182,7 +182,7 @@ function O(e) {
                     q: l
                 },
                 oldFormErrors: !0,
-                rejectWithError: !1
+                rejectWithError: !0
             });
 }
 function D() {
@@ -208,7 +208,7 @@ function L() {
                 media_format: _.Z.getSelectedFormat()
             },
             oldFormErrors: !0,
-            rejectWithError: !1
+            rejectWithError: !0
         })
         .then((e) => {
             let { body: t } = e,
@@ -233,7 +233,7 @@ function x(e) {
                     limit: e
                 },
                 oldFormErrors: !0,
-                rejectWithError: !1
+                rejectWithError: !0
             })
             .then(
                 (n) => {

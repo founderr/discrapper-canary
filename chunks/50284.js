@@ -41,6 +41,6 @@ async function f(e, t) {
                 mention_count: _
             },
             oldFormErrors: !0,
-            rejectWithError: !1
+            rejectWithError: !0
         });
 }

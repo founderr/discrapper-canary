@@ -69,22 +69,22 @@ function U(e) {
     var t;
     return ((null !== (t = e.flags) && void 0 !== t ? t : 0) & m.xW$.STAFF) === m.xW$.STAFF || null != e.personal_connection_id || !1;
 }
-function B(e, t, n, r) {
+function G(e, t, n, r) {
     let i = ''.concat(t.type, '|').concat(e),
         a = t.triggerDebuggingEnabled && void 0 !== n && n.length > 0;
     if (t.type === h.xY.USER) return a && ((i += '|'.concat(n)), r && (i += '|triggerDebugging')), i;
     if (t.type === h.xY.GUILD) return (i += '|'.concat(t.guildId)), a && ((i += '|'.concat(n)), r && (i += '|triggerDebugging')), i;
     throw Error();
 }
-function G(e) {
+function B(e) {
     if (e.type === h.xY.USER) return M(''.concat(e.bucket, '|').concat(e.revision));
     if (e.type === h.xY.GUILD) return M(''.concat(e.bucket, '|').concat(e.revision, '|').concat(e.guildId));
     throw Error();
 }
 let Z = Date.now();
 function F(e, t, n, r) {
-    let i = y[B(e, t, n, r)];
-    return !(null == i || Date.now() - i.time > 604800000) && i.hash === G(t);
+    let i = y[G(e, t, n, r)];
+    return !(null == i || Date.now() - i.time > 604800000) && i.hash === B(t);
 }
 function V(e) {
     let { experimentId: t, descriptor: n, location: r, location_stack: i, context: a, fingerprint: s, excluded: o, exposureType: l } = e,
@@ -173,9 +173,9 @@ function V(e) {
             });
     }
     !u &&
-        ((y[B(t, n, r, c)] = {
+        ((y[G(t, n, r, c)] = {
             time: Date.now(),
-            hash: G(n)
+            hash: B(n)
         }),
         ee(y));
 }

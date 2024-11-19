@@ -17,8 +17,8 @@ var r = n(13245),
     p = n(388032);
 function f(e, t, n, f) {
     var g;
-    let { icon: m, title: v, body: E } = (0, o.Xi)(e, t, n),
-        { trackView: _, trackClick: x } = (0, d.R)(h.n0.TextChat, {
+    let { icon: m, title: v, body: _ } = (0, o.Xi)(e, t, n),
+        { trackView: E, trackClick: x } = (0, d.R)(h.n0.TextChat, {
             notif_type: h.n0.TextChat,
             notif_user_id: null === (g = t.author) || void 0 === g ? void 0 : g.id,
             message_id: t.id,
@@ -30,7 +30,7 @@ function f(e, t, n, f) {
     return {
         icon: m,
         title: v,
-        body: E,
+        body: _,
         renderFooter: (e) =>
             e
                 ? (0, i.jsx)('div', {
@@ -40,7 +40,7 @@ function f(e, t, n, f) {
                 : null,
         maxBodyLines: 2,
         onNotificationShow: () => {
-            f && (0, c.GN)(a.Ay, a.yk), _();
+            f && (0, c.GN)(a.Ay, a.yk), E();
         },
         onNotificationClick: () => {
             (0, s.uL)(u.Z5c.CHANNEL(e.guild_id, e.id)), x('jump'), l.Z.isInstanceLocked() && r.Z.setInstanceLocked(!1);

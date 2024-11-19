@@ -3,7 +3,7 @@ n.d(t, {
         return r;
     },
     Z: function () {
-        return T;
+        return S;
     }
 });
 var i,
@@ -25,16 +25,16 @@ var i,
     I = n(192513),
     C = n(255791),
     v = n(70956),
-    S = n(267642),
+    T = n(267642),
     N = n(981631);
-function T(e) {
+function S(e) {
     var t;
     let n = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : N.lds,
         { lastFetchedAt: i } = (0, a.cj)([f.Z], () => ({
             appliedGuildBoosts: f.Z.getAppliedGuildBoostsForGuild(n),
             lastFetchedAt: f.Z.getLastFetchedAtForGuild(n)
         })),
-        { lastDismissedGracePeriod: r, isGracePeriodVisible: T } = (0, a.cj)([E.Z], () => ({
+        { lastDismissedGracePeriod: r, isGracePeriodVisible: S } = (0, a.cj)([E.Z], () => ({
             lastDismissedGracePeriod: E.Z.getLastDismissedGracePeriodForGuild(n),
             isGracePeriodVisible: E.Z.isVisible(n)
         })),
@@ -43,10 +43,10 @@ function T(e) {
         x = (0, a.e7)([_.Z], () => _.Z.can(N.Plq.ADMINISTRATOR, e)),
         Z = null != r && Date.now() - r <= N.Dge,
         L = null != e ? e.premiumSubscriberCount : 0,
-        y = (0, S.rF)(L, n) !== N.Eu4.NONE,
+        y = (0, T.rF)(L, n) !== N.Eu4.NONE,
         O = null != i && Date.now() - i <= 43200000,
-        R = !O && !Z && x && y,
-        P = (0, c.m)(n),
+        P = !O && !Z && x && y,
+        R = (0, c.m)(n),
         j = (0, a.e7)([I.Z], () => I.Z.isVisible(e)),
         D = h.Z.useShouldShowChannelNotice(n),
         M = (0, m.h6)(e),
@@ -62,7 +62,7 @@ function T(e) {
         l.useEffect(() => {
             let e = -1;
             return (
-                R &&
+                P &&
                     (e = window.setTimeout(
                         () => {
                             null != n && (0, s.C0)(n);
@@ -73,13 +73,13 @@ function T(e) {
                     window.clearTimeout(e);
                 }
             );
-        }, [n, R]),
+        }, [n, P]),
         A)
     )
         return 0;
-    if (T) return 1;
+    if (S) return 1;
     if (b) return 2;
-    else if (P || null != G) return 3;
+    else if (R || null != G) return 3;
     else if (j) return 4;
     else if (D) return 5;
     else if (k) return 6;

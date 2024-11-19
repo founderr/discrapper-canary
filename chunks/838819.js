@@ -21,8 +21,8 @@ var r = n(200651),
     k = n(981632),
     j = n(290026),
     E = n(819640),
-    I = n(594174),
-    S = n(626135),
+    S = n(594174),
+    I = n(626135),
     T = n(74538),
     N = n(335131),
     B = n(381585),
@@ -56,7 +56,7 @@ var r = n(200651),
     er = n(52694);
 function ea(e) {
     let { products: t, handleShopCardMount: n, header: a, category: i, isPremiumUser: s, isGiftEasterEggEnabled: l, showMysteryCard: o = !1 } = e,
-        d = (0, c.e7)([I.default], () => I.default.getCurrentUser());
+        d = (0, c.e7)([S.default], () => S.default.getCurrentUser());
     return null == d || 0 === t.length
         ? null
         : (0, r.jsxs)('div', {
@@ -181,26 +181,26 @@ t.default = function (e) {
         em = (0, c.e7)([E.Z], () => E.Z.getLayers().includes(X.S9g.COLLECTIBLES_SHOP)),
         eh = (0, u.f9)(),
         { onClose: ep } = (0, M.Db)(),
-        ef = (0, c.e7)([I.default], () => I.default.getCurrentUser()),
+        ef = (0, c.e7)([S.default], () => S.default.getCurrentUser()),
         eg = T.ZP.canUseCollectibles(ef),
         { categories: eC, isFetchingCategories: eb, fetchCategoriesError: ex, fetchPurchasesError: ev, claimError: e_, refreshCategories: ek } = (0, P.Z)(),
         ej = null !== (t = null != ex ? ex : ev) && void 0 !== t ? t : e_;
     (0, j.P)();
     let eE = (0, O.O)(eC),
-        eI = a.useRef(null),
-        [eS, eT] = a.useState(!1);
+        eS = a.useRef(null),
+        [eI, eT] = a.useState(!1);
     (0, H.Kp)({
         categories: eC,
         isFetchingCategories: eb,
         isLayer: em,
-        initialItemCardRef: eI
+        initialItemCardRef: eS
     }),
         a.useEffect(() => {
             if (F === Q.f7.VISIBLE || U === Q.f7.VISIBLE) {
                 var e;
                 let t;
                 (t = i ? (U === Q.f7.VISIBLE ? ed : l) : l),
-                    S.default.track(X.rMx.COLLECTIBLES_SHOP_VIEWED, {
+                    I.default.track(X.rMx.COLLECTIBLES_SHOP_VIEWED, {
                         location_stack: _,
                         source: t,
                         page_session_id: k,
@@ -209,7 +209,7 @@ t.default = function (e) {
                     });
             }
             !eg &&
-                S.default.track(X.rMx.PREMIUM_UPSELL_VIEWED, {
+                I.default.track(X.rMx.PREMIUM_UPSELL_VIEWED, {
                     type: en.cd.COLLECTIBLES_SHOP,
                     location_stack: _
                 });
@@ -354,9 +354,9 @@ t.default = function (e) {
                                                                                 children: (0, r.jsx)(es, {
                                                                                     isPremiumUser: eg,
                                                                                     category: e,
-                                                                                    initialItemCardRef: eI,
+                                                                                    initialItemCardRef: eS,
                                                                                     setIsGiftEasterEggEnabled: eT,
-                                                                                    isGiftEasterEggEnabled: eS,
+                                                                                    isGiftEasterEggEnabled: eI,
                                                                                     isFullScreen: n
                                                                                 })
                                                                             })
@@ -372,7 +372,7 @@ t.default = function (e) {
                         ]
                     })
                 }),
-                eS && (0, r.jsx)(z.Z, {}),
+                eI && (0, r.jsx)(z.Z, {}),
                 !n &&
                     U !== Q.f7.VISIBLE &&
                     (0, r.jsxs)(r.Fragment, {

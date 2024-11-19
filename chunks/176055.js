@@ -18,9 +18,9 @@ var i = n(200651),
     I = n(601964),
     C = n(430824),
     v = n(843445),
-    S = n(981631),
+    T = n(981631),
     N = n(388032),
-    T = n(84281);
+    S = n(84281);
 function A(e, t, n) {
     return (
         t in e
@@ -40,17 +40,17 @@ class b extends r.PureComponent {
         return null == e || null == t
             ? null
             : (0, i.jsxs)(p.Z, {
-                  className: T.memberInfo,
+                  className: S.memberInfo,
                   align: p.Z.Align.CENTER,
                   children: [
-                      (0, i.jsx)('div', { className: T.dotOnline }),
+                      (0, i.jsx)('div', { className: S.dotOnline }),
                       (0, i.jsx)('span', {
-                          className: T.memberText,
+                          className: S.memberText,
                           children: N.intl.format(N.t['LC+S+v'], { membersOnline: t })
                       }),
-                      (0, i.jsx)('div', { className: T.dotOffline }),
+                      (0, i.jsx)('div', { className: S.dotOffline }),
                       (0, i.jsx)('span', {
-                          className: T.memberText,
+                          className: S.memberText,
                           children: N.intl.format(N.t.zRl6XV, { count: e })
                       })
                   ]
@@ -68,7 +68,7 @@ class b extends r.PureComponent {
             l
                 ? n
                     ? ((f = c.Button.Looks.OUTLINED),
-                      (_ = T.buttonColorInGuild),
+                      (_ = S.buttonColorInGuild),
                       (u = (0, i.jsxs)(p.Z, {
                           align: p.Z.Align.CENTER,
                           children: [
@@ -76,33 +76,33 @@ class b extends r.PureComponent {
                               (0, i.jsx)(c.CheckmarkLargeIcon, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: T.joinedCheckmark
+                                  className: S.joinedCheckmark
                               })
                           ]
                       })))
                     : r && t && (u = N.intl.string(N.t.XpeFYm))
                 : ((u = N.intl.string(N.t.dKhVQE)), (h = this.handleLogin)),
             (0, i.jsxs)('div', {
-                className: a()(s, o === v.b.SMALL ? T.inviteSmall : T.inviteLarge),
+                className: a()(s, o === v.b.SMALL ? S.inviteSmall : S.inviteLarge),
                 children: [
                     (0, i.jsx)(m.Z, { children: N.intl.string(N.t.s1KcLi) }),
                     (0, i.jsxs)('div', {
-                        className: T.content,
+                        className: S.content,
                         children: [
                             (0, i.jsxs)('div', {
-                                className: T.info,
+                                className: S.info,
                                 children: [
                                     (0, i.jsx)(g.Z, {
                                         guild: d,
                                         active: !0,
                                         size: g.Z.Sizes.LARGE,
-                                        className: T.guildIcon
+                                        className: S.guildIcon
                                     }),
                                     (0, i.jsxs)('div', {
-                                        className: T.infoText,
+                                        className: S.infoText,
                                         children: [
                                             (0, i.jsx)('div', {
-                                                className: T.name,
+                                                className: S.name,
                                                 children: e.name
                                             }),
                                             this.renderMemberInfo()
@@ -112,7 +112,7 @@ class b extends r.PureComponent {
                             }),
                             (0, i.jsx)(c.Button, {
                                 size: c.Button.Sizes.SMALL,
-                                className: T.actionButton,
+                                className: S.actionButton,
                                 fullWidth: !0,
                                 color: _,
                                 look: f,
@@ -136,14 +136,14 @@ class b extends r.PureComponent {
                     try {
                         await d.Z.joinGuild(e.id, {
                             lurker: !0,
-                            source: S.vtS.APPLICATION_STORE
+                            source: T.vtS.APPLICATION_STORE
                         }),
                             r();
                     } catch {}
             }),
             A(this, 'handleLogin', () => {
-                let e = { redirect_to: S.Z5c.APPLICATION_STORE_LISTING_SKU(this.props.skuId) };
-                (0, _.uL)(S.Z5c.LOGIN, { search: (0, s.stringify)(e) });
+                let e = { redirect_to: T.Z5c.APPLICATION_STORE_LISTING_SKU(this.props.skuId) };
+                (0, _.uL)(T.Z5c.LOGIN, { search: (0, s.stringify)(e) });
             });
     }
 }

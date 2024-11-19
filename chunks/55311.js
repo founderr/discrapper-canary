@@ -1,21 +1,21 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var i = n(200651);
 n(192379);
 var r = n(481060),
     l = n(846027),
-    o = n(468026),
-    a = n(388032);
-function s(e, t) {
+    a = n(468026),
+    s = n(388032);
+function o(e, t) {
     if (e) {
         (0, r.openModal)((e) =>
-            (0, i.jsx)(o.default, {
+            (0, i.jsx)(a.default, {
                 ...e,
-                title: a.intl.string(a.t.QZ7WSU),
-                body: a.intl.string(a.t.Tl9JpK)
+                title: s.intl.string(s.t.QZ7WSU),
+                body: s.intl.string(s.t.Tl9JpK)
             })
         );
         return;

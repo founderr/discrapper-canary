@@ -24,11 +24,11 @@ var i = n(200651),
     C = n(981631),
     E = n(388032),
     _ = n(676974);
-function I(e) {
+function f(e) {
     let { transitionState: t, onClose: l, ticket: o, challenge: c } = e,
         m = (0, d.Dt)(),
-        [S, I] = s.useState(''),
-        [f, N] = s.useState(!0),
+        [S, f] = s.useState(''),
+        [I, N] = s.useState(!0),
         [A, b] = s.useState(T.x.INIT),
         [v, j] = s.useState(''),
         [O, R] = s.useState(null),
@@ -164,7 +164,7 @@ function I(e) {
                                                     className: _.input,
                                                     value: S,
                                                     onChange: (e) => {
-                                                        I(e), N(0 === e.length);
+                                                        f(e), N(0 === e.length);
                                                     },
                                                     autoFocus: !0,
                                                     minLength: 1
@@ -178,7 +178,7 @@ function I(e) {
                                     children: [
                                         (0, i.jsx)(a.Button, {
                                             type: 'submit',
-                                            disabled: f,
+                                            disabled: I,
                                             children: E.intl.string(E.t['5dyZ1d'])
                                         }),
                                         (0, i.jsx)(a.Button, {
@@ -199,7 +199,7 @@ function I(e) {
         ]
     });
 }
-function f(e) {
+function I(e) {
     let { onSelect: t, credential: s } = e;
     return (0, i.jsxs)(a.Menu, {
         navId: 'webauthn-credential-actions',
@@ -262,7 +262,7 @@ function N() {
                                 className: _.credentialItem,
                                 onContextMenu: (t) => {
                                     (0, o.vq)(t, (t) =>
-                                        (0, i.jsx)(f, {
+                                        (0, i.jsx)(I, {
                                             ...t,
                                             credential: e
                                         })
@@ -274,7 +274,7 @@ function N() {
                                     size: a.Button.Sizes.ICON,
                                     onClick: (t) => {
                                         (0, o.vq)(t, (t) =>
-                                            (0, i.jsx)(f, {
+                                            (0, i.jsx)(I, {
                                                 ...t,
                                                 credential: e
                                             })
@@ -303,7 +303,7 @@ function N() {
                                 .then((e) => {
                                     let { ticket: t, challenge: n } = e;
                                     (0, a.openModal)((e) =>
-                                        (0, i.jsx)(I, {
+                                        (0, i.jsx)(f, {
                                             ...e,
                                             ticket: t,
                                             challenge: n

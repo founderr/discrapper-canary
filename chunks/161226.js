@@ -17,7 +17,7 @@ function i(e, t, n) {
         e
     );
 }
-class a extends r.Z {
+class a extends r.q {
     static fromServer(e) {
         let { purchased_at: t, purchase_type: n, expires_at: r, ...i } = e;
         return new a({

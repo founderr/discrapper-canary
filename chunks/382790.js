@@ -14,8 +14,8 @@ var i,
     g = n(483962),
     m = n(711553),
     v = n(388032),
-    E = n(869753);
-function _(e, t, n) {
+    _ = n(869753);
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -53,7 +53,7 @@ class Z extends (i = s.PureComponent) {
                       }),
             s = n ? 'div' : h.ZP;
         return (0, r.jsxs)(s, {
-            className: l()(E.base, { [E.widget]: !n }),
+            className: l()(_.base, { [_.widget]: !n }),
             children: [
                 (0, r.jsx)(d.Z, {
                     isOverlay: !0,
@@ -66,10 +66,10 @@ class Z extends (i = s.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            _(this, 'onDragStart', (e) => {
+            E(this, 'onDragStart', (e) => {
                 let { dragStart: t } = this.props;
                 t(c.B.MOVE, e.clientX, e.clientY);
             });
     }
 }
-_(Z, 'defaultProps', { contained: !1 }), (t.Z = o.ZP.connectStores([u.Z], () => ({ selectedGuildId: u.Z.getGuildId() }))(Z));
+E(Z, 'defaultProps', { contained: !1 }), (t.Z = o.ZP.connectStores([u.Z], () => ({ selectedGuildId: u.Z.getGuildId() }))(Z));

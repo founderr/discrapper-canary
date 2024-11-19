@@ -18,8 +18,8 @@ var i,
     g = n(388032),
     m = n(509614),
     f = n(880511),
-    _ = n(985443),
-    p = n(612253),
+    p = n(985443),
+    _ = n(612253),
     h = n(832287),
     E = n(860528),
     b = n(872532),
@@ -98,7 +98,7 @@ t.ZP = (e) => {
                 title: g.intl.string(g.t.Ij3Zmp),
                 description: g.intl.string(g.t.UsOUxc),
                 descriptionCta: g.intl.string(g.t.jVcuVV),
-                previewImage: p,
+                previewImage: _,
                 onClick: n,
                 videoUrl: i ? P.Z : Z.Z
             },
@@ -107,7 +107,7 @@ t.ZP = (e) => {
                 title: g.intl.string(g.t.Wme3nZ),
                 description: g.intl.string(g.t['/aAIqa']),
                 descriptionCta: g.intl.string(g.t.jVcuVV),
-                previewImage: _,
+                previewImage: p,
                 onClick: () => {
                     a.Z.open(d.oAB.APPEARANCE, null, {
                         openWithoutBackstack: !0,

@@ -28,7 +28,7 @@ async function u(e) {
                         url: l.ANM.GUILD_LEAVE(e),
                         body: { lurking: !0 },
                         oldFormErrors: !0,
-                        rejectWithError: !1
+                        rejectWithError: !0
                     });
                 } catch (n) {
                     i.Z.dispatch({

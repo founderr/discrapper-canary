@@ -39,8 +39,8 @@ function T(e) {
         P = y === m.n_.AVATAR && L,
         k = y === m.n_.ACTIVITY && D && !L,
         U = !x && C === m.y0.BITE_SIZE && (w || M || P || k),
-        [B, G] = i.useState(!1);
-    (0, l.Z)(() => G(!0), U ? 200 : null);
+        [G, B] = i.useState(!1);
+    (0, l.Z)(() => B(!0), U ? 200 : null);
     let {
             asset: Z,
             assetClassName: F,
@@ -102,7 +102,7 @@ function T(e) {
                         dismissibleContentType: s.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK_AVATAR
                     }),
         K = (0, u.N)(s.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK),
-        [z, q] = (0, c.US)(B && !K ? [W] : []);
+        [z, q] = (0, c.US)(G && !K ? [W] : []);
     return (0, r.jsx)(o.Popout, {
         align: 'center',
         position: y === m.n_.AVATAR ? 'left' : 'right',

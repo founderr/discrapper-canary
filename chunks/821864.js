@@ -41,7 +41,7 @@ function u(e, t) {
     i.tn
         .get({
             url: I.ANM.GUILD_COMMANDS_FOR_APPLICATION(e, t),
-            rejectWithError: !1
+            rejectWithError: !0
         })
         .then(
             (n) => {

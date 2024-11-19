@@ -6,9 +6,9 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     o = n(192379),
-    s = n(703533),
-    a = n(100621),
-    l = n(748780),
+    a = n(703533),
+    l = n(100621),
+    s = n(748780),
     r = n(481060),
     c = n(596454),
     d = n(745510),
@@ -23,9 +23,9 @@ function b(e) {
     let { messageId: t, emoji: n, startPosition: b, targetPosition: T } = e,
         [x, _] = o.useState(0),
         [S, C] = o.useState(0),
-        [E, I] = o.useState(null),
-        { confettiCanvas: j } = o.useContext(d.h),
-        R = (0, s.uR)(j, E),
+        [I, j] = o.useState(null),
+        { confettiCanvas: E } = o.useContext(d.h),
+        R = (0, a.uR)(E, I),
         N = o.useMemo(
             () => [
                 {
@@ -49,7 +49,7 @@ function b(e) {
             to: { y: y },
             config: {
                 duration: 450,
-                easing: l.Z.Easing.in(l.Z.Easing.exp)
+                easing: s.Z.Easing.in(s.Z.Easing.exp)
             },
             onChange: (e) => {
                 let { y: t } = e;
@@ -69,7 +69,7 @@ function b(e) {
             },
             config: {
                 duration: 450,
-                easing: l.Z.Easing.in(l.Z.Easing.ease)
+                easing: s.Z.Easing.in(s.Z.Easing.ease)
             },
             onRest: () => {
                 (0, h.G)(t, n.name, n.id);
@@ -96,18 +96,18 @@ function b(e) {
         }, [R, x, S]),
         (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(s.Ji, {
-                    ref: I,
+                (0, i.jsx)(a.Ji, {
+                    ref: j,
                     sprites: N,
                     colors: v,
                     spriteWidth: f.Ko,
                     spriteHeight: f.Ko
                 }),
                 (0, i.jsx)(u.ZP, {
-                    children: (0, i.jsx)(a.animated.div, {
+                    children: (0, i.jsx)(l.animated.div, {
                         style: { ...A },
                         className: g.emojiContainer,
-                        children: (0, i.jsx)(a.animated.div, {
+                        children: (0, i.jsx)(l.animated.div, {
                             style: {
                                 ...O,
                                 opacity: O.opacity

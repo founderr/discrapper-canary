@@ -25,8 +25,8 @@ var r = n(200651),
 n(381996);
 var v = n(392750),
     C = n(926976),
-    _ = n(592197),
-    j = n(806240),
+    j = n(592197),
+    _ = n(806240),
     T = n(789654),
     S = n(691867),
     y = n(916790),
@@ -51,7 +51,7 @@ var v = n(392750),
     z = n(388032),
     V = n(654404),
     W = n(986310);
-function K(e) {
+function Y(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: a } = e,
         l = (0, d.Z)({
             minDimension: b.h,
@@ -65,7 +65,7 @@ function K(e) {
         className: V.resizeHandle
     });
 }
-function Y() {
+function K() {
     var e;
     let t = a.useMemo(() => {
             let e = [
@@ -111,7 +111,7 @@ function Y() {
                     e.push({
                         id: 'clans',
                         name: 'Clans',
-                        render: () => (0, r.jsx)(j.Z, {})
+                        render: () => (0, r.jsx)(_.Z, {})
                     }),
                     e.push({
                         id: 'performance',
@@ -193,7 +193,7 @@ function Y() {
                     e.push({
                         id: 'billing',
                         name: 'Billing',
-                        render: () => (0, r.jsx)(_.Z, {})
+                        render: () => (0, r.jsx)(j.Z, {})
                     })),
                 e.push({
                     id: 'gifting_intent',
@@ -247,7 +247,7 @@ function Y() {
         })
     );
 }
-function q() {
+function X() {
     let e = a.useRef(null),
         t = (0, c.e7)([b.Z], () => b.Z.sidebarWidth),
         [n, l] = a.useState(null),
@@ -265,26 +265,26 @@ function q() {
                   width: n
               },
               children: [
-                  (0, r.jsx)(K, {
+                  (0, r.jsx)(Y, {
                       resizableNode: e,
                       onResize: l,
                       onResizeEnd: o
                   }),
                   (0, r.jsx)('div', {
                       className: V.sidebarContent,
-                      children: (0, r.jsx)(Y, {})
+                      children: (0, r.jsx)(K, {})
                   })
               ]
           });
 }
-function X() {
+function q() {
     let e = (0, c.e7)([b.Z], () => b.Z.displayTools);
     return e
         ? (0, r.jsx)('div', {
               className: i()(V.container, V.mobileContainerExpanded),
               children: (0, r.jsx)('div', {
                   className: V.sidebarContent,
-                  children: (0, r.jsx)(Y, {})
+                  children: (0, r.jsx)(K, {})
               })
           })
         : (0, r.jsx)('div', {
@@ -307,5 +307,5 @@ function X() {
 }
 function $(e) {
     let { mobile: t } = e;
-    return t ? (0, r.jsx)(X, {}) : (0, r.jsx)(q, {});
+    return t ? (0, r.jsx)(q, {}) : (0, r.jsx)(X, {});
 }

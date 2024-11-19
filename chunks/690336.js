@@ -1,7 +1,7 @@
 n(653041), n(47120);
 var i = n(200651),
-    r = n(192379),
-    l = n(442837),
+    l = n(192379),
+    r = n(442837),
     o = n(481060),
     a = n(355863),
     s = n(451478),
@@ -14,7 +14,7 @@ var i = n(200651),
 function m(e) {
     return e.widget.id;
 }
-function E(e, t, n, r) {
+function v(e, t, n, l) {
     return n === o.TransitionStates.YEETED
         ? null
         : (0, i.jsx)(
@@ -22,21 +22,21 @@ function E(e, t, n, r) {
               {
                   ...t,
                   transitionState: n,
-                  cleanUp: r
+                  cleanUp: l
               },
               e
           );
 }
-let v = [];
-t.Z = r.memo(function (e) {
+let g = [];
+t.Z = l.memo(function (e) {
     let { className: t } = e,
         n = (0, f.Z)(),
-        d = (0, l.e7)([s.Z], () => s.Z.windowSize((0, u.ZY)(n))),
-        g = (0, l.e7)(
+        d = (0, r.e7)([s.Z], () => s.Z.windowSize((0, u.ZY)(n))),
+        E = (0, r.e7)(
             [a.Z],
             () => {
                 let e = a.Z.getLayout(p.$S);
-                if (null == e) return v;
+                if (null == e) return g;
                 let t = [];
                 for (let n of e.widgets) {
                     let e = a.Z.getWidget(n);
@@ -53,7 +53,7 @@ t.Z = r.memo(function (e) {
             [],
             c.HP
         ),
-        _ = r.useCallback(
+        _ = l.useCallback(
             (e) =>
                 (0, i.jsx)('div', {
                     className: t,
@@ -63,8 +63,8 @@ t.Z = r.memo(function (e) {
             [t, d]
         );
     return (0, i.jsx)(o.TransitionGroup, {
-        items: g,
-        renderItem: E,
+        items: E,
+        renderItem: v,
         getItemKey: m,
         wrapChildren: _
     });

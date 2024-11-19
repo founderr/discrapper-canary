@@ -74,7 +74,7 @@ let S = new o.Z('GuildSettingsActionCreators'),
                         channel_id: n
                     },
                     oldFormErrors: !0,
-                    rejectWithError: !1
+                    rejectWithError: !0
                 })
                 .then((t) => {
                     a.Z.dispatch({

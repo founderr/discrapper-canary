@@ -51,7 +51,7 @@ function j(e) {
                 .get({
                     url: v.ANM.INSTANT_INVITES(u.id),
                     oldFormErrors: !0,
-                    rejectWithError: !1
+                    rejectWithError: !0
                 })
                 .then(
                     (e) => {

@@ -2,14 +2,14 @@ t.r(n), t(757143);
 var r = t(200651),
     c = t(192379),
     o = t(593473),
-    l = t(512969),
-    i = t(478677),
+    i = t(512969),
+    l = t(478677),
     a = t(457330),
     u = t(675207),
     s = t(981631);
 function f(e) {
     let { platformType: n } = e,
-        t = (0, l.k6)();
+        t = (0, i.k6)();
     return (
         c.useEffect(() => {
             let { code: e, state: r } = o.parse(window.location.search),
@@ -38,5 +38,5 @@ n.default = function (e) {
     let { match: n } = e,
         t = n.params.type,
         { two_way_link_type: c } = o.parse(window.location.search);
-    return [s.ABu.XBOX, s.ABu.PLAYSTATION_STAGING, s.ABu.PLAYSTATION, s.ABu.CRUNCHYROLL].includes(t) && c === i.g.DESKTOP ? (0, r.jsx)(f, { platformType: t }) : null;
+    return [s.ABu.XBOX, s.ABu.PLAYSTATION_STAGING, s.ABu.PLAYSTATION, s.ABu.CRUNCHYROLL].includes(t) && c === l.g.DESKTOP ? (0, r.jsx)(f, { platformType: t }) : null;
 };

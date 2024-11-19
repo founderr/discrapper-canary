@@ -133,10 +133,10 @@ function u(e) {
                     },
                     [v, t, f, u, P, h]
                 ),
-                L = i.useCallback(() => {
+                R = i.useCallback(() => {
                     N || S(!0);
                 }, [N]),
-                R = i.useCallback(() => {
+                L = i.useCallback(() => {
                     if (!N) g ? j(v(t, u), u) : P(!0);
                 }, [v, t, j, g, N, u, P]),
                 k = i.useCallback(
@@ -157,14 +157,14 @@ function u(e) {
                 let e = O.current;
                 if (null != e)
                     return (
-                        e.addEventListener('focusin', L),
-                        e.addEventListener('focus', R),
+                        e.addEventListener('focusin', R),
+                        e.addEventListener('focus', L),
                         e.addEventListener('focusout', k),
                         () => {
-                            e.removeEventListener('focusin', L), e.removeEventListener('focus', R), e.removeEventListener('focusout', k);
+                            e.removeEventListener('focusin', R), e.removeEventListener('focus', L), e.removeEventListener('focusout', k);
                         }
                     );
-            }, [R, L, k]);
+            }, [L, R, k]);
             let D = i.useCallback(
                     () => ({
                         role: 'list',

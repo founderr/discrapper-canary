@@ -31,7 +31,7 @@ function _(e) {
                     fromFriendSuggestion: !0
                 });
         },
-        S = (e) => {
+        T = (e) => {
             null == e || e.stopPropagation(), o.Z.ignore(t.id);
         },
         N = _ === p.Skl.OFFLINE ? p.Skl.UNKNOWN : _;
@@ -58,7 +58,7 @@ function _(e) {
                         icon: l.XSmallIcon,
                         actionType: u.Z.ActionTypes.DENY,
                         tooltip: g.intl.string(g.t.xuio0N),
-                        onClick: S,
+                        onClick: T,
                         shouldHighlight: e
                     })
                 ]

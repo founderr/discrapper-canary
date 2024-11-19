@@ -18,9 +18,9 @@ var i = n(200651),
     I = n(812206),
     C = n(44315),
     v = n(600164),
-    S = n(167533),
+    T = n(167533),
     N = n(925329),
-    T = n(707409),
+    S = n(707409),
     A = n(210887),
     b = n(283595),
     x = n(417363),
@@ -28,8 +28,8 @@ var i = n(200651),
     L = n(451478),
     y = n(424218),
     O = n(780570),
-    R = n(353042),
-    P = n(86826),
+    P = n(353042),
+    R = n(86826),
     j = n(981631),
     D = n(388032),
     M = n(166345);
@@ -86,29 +86,29 @@ function B(e, t) {
             return (0, y.BU)(e, { useKibibytes: !0 });
     }
 }
-let V = {
+let H = {
     [j.vxO.INSTALLING]: {
-        [T.J6.NONE]: (e, t, n, i) =>
+        [S.J6.NONE]: (e, t, n, i) =>
             D.intl.formatToPlainString(D.t.JfJt9f, {
                 percent: e,
                 progress: t,
                 total: n
             }),
-        [T.J6.SECONDS]: (e, t, n, i) =>
+        [S.J6.SECONDS]: (e, t, n, i) =>
             D.intl.formatToPlainString(D.t['1z3c6e'], {
                 percent: e,
                 progress: t,
                 total: n,
                 timeRemaining: i
             }),
-        [T.J6.MINUTES]: (e, t, n, i) =>
+        [S.J6.MINUTES]: (e, t, n, i) =>
             D.intl.formatToPlainString(D.t.PCX509, {
                 percent: e,
                 progress: t,
                 total: n,
                 timeRemaining: i
             }),
-        [T.J6.HOURS]: (e, t, n, i) =>
+        [S.J6.HOURS]: (e, t, n, i) =>
             D.intl.formatToPlainString(D.t['3VG9s7'], {
                 percent: e,
                 progress: t,
@@ -117,27 +117,27 @@ let V = {
             })
     },
     [j.vxO.UPDATING]: {
-        [T.J6.NONE]: (e, t, n, i) =>
+        [S.J6.NONE]: (e, t, n, i) =>
             D.intl.formatToPlainString(D.t.JsqXXF, {
                 percent: e,
                 progress: t,
                 total: n
             }),
-        [T.J6.SECONDS]: (e, t, n, i) =>
+        [S.J6.SECONDS]: (e, t, n, i) =>
             D.intl.formatToPlainString(D.t['3BvVeX'], {
                 percent: e,
                 progress: t,
                 total: n,
                 timeRemaining: i
             }),
-        [T.J6.MINUTES]: (e, t, n, i) =>
+        [S.J6.MINUTES]: (e, t, n, i) =>
             D.intl.formatToPlainString(D.t.rwULn5, {
                 percent: e,
                 progress: t,
                 total: n,
                 timeRemaining: i
             }),
-        [T.J6.HOURS]: (e, t, n, i) =>
+        [S.J6.HOURS]: (e, t, n, i) =>
             D.intl.formatToPlainString(D.t.adcitL, {
                 percent: e,
                 progress: t,
@@ -146,27 +146,27 @@ let V = {
             })
     },
     [j.vxO.REPAIRING]: {
-        [T.J6.NONE]: (e, t, n, i) =>
+        [S.J6.NONE]: (e, t, n, i) =>
             D.intl.formatToPlainString(D.t.JfJt9f, {
                 percent: e,
                 progress: t,
                 total: n
             }),
-        [T.J6.SECONDS]: (e, t, n, i) =>
+        [S.J6.SECONDS]: (e, t, n, i) =>
             D.intl.formatToPlainString(D.t['1z3c6e'], {
                 percent: e,
                 progress: t,
                 total: n,
                 timeRemaining: i
             }),
-        [T.J6.MINUTES]: (e, t, n, i) =>
+        [S.J6.MINUTES]: (e, t, n, i) =>
             D.intl.formatToPlainString(D.t.PCX509, {
                 percent: e,
                 progress: t,
                 total: n,
                 timeRemaining: i
             }),
-        [T.J6.HOURS]: (e, t, n, i) =>
+        [S.J6.HOURS]: (e, t, n, i) =>
             D.intl.formatToPlainString(D.t['3VG9s7'], {
                 percent: e,
                 progress: t,
@@ -175,10 +175,10 @@ let V = {
             })
     }
 };
-function H(e, t, n, i, r) {
-    let l = V[t],
+function V(e, t, n, i, r) {
+    let l = H[t],
         a = null != l ? Object.keys(l) : [],
-        { unit: s, time: o } = (0, T.CI)(null != e ? e / 60 : null, a);
+        { unit: s, time: o } = (0, S.CI)(null != e ? e / 60 : null, a);
     if (null != l && null != s) {
         let e = l[s];
         return null != e ? e(n, i, r, o) : null;
@@ -202,7 +202,7 @@ function F(e) {
         case j.f07.ALLOCATING_DISK:
             return D.intl.formatToPlainString(D.t.XigoJy, { percent: i });
         case j.f07.PATCHING:
-            return H(a, t, i, o, s);
+            return V(a, t, i, o, s);
         case j.f07.FINALIZING:
             return D.intl.formatToPlainString(D.t['6PHDUF'], { percent: i });
         case j.f07.PAUSING:
@@ -224,7 +224,7 @@ function F(e) {
                 total: s
             });
         case j.f07.REPAIRING:
-            if (t === j.vxO.REPAIRING) return H(a, t, i, o, s);
+            if (t === j.vxO.REPAIRING) return V(a, t, i, o, s);
             return D.intl.formatToPlainString(D.t.OCzETU, {
                 percent: i,
                 progress: o,
@@ -344,7 +344,7 @@ class K extends r.PureComponent {
         });
     }
     renderProgressPatching() {
-        return (0, i.jsx)(R.Z, {
+        return (0, i.jsx)(P.Z, {
             getHistoricalTotalBytes: x.Z.getHistoricalTotalBytesWritten,
             updateInterval: 5000,
             children: this.renderProgressPatchingBody
@@ -528,14 +528,14 @@ class ee extends r.PureComponent {
                       (0, i.jsxs)('div', {
                           className: M.headerRow,
                           children: [
-                              (0, i.jsx)(P.Z, {
+                              (0, i.jsx)(R.Z, {
                                   className: a()(M.headerCell, M.networkProgress),
                                   title: D.intl.string(D.t.ytoXKi),
                                   getHistoricalTotalBytes: x.Z.getHistoricalTotalBytesDownloaded,
                                   color: j.Ilk.GREEN_360,
                                   animate: r
                               }),
-                              (0, i.jsx)(P.Z, {
+                              (0, i.jsx)(R.Z, {
                                   className: a()(M.headerCell, M.diskProgress),
                                   title: D.intl.string(D.t.SjohhI),
                                   getHistoricalTotalBytes: x.Z.getHistoricalTotalBytesWritten,
@@ -544,7 +544,7 @@ class ee extends r.PureComponent {
                               })
                           ]
                       }),
-                      (0, i.jsx)(S.Z, {
+                      (0, i.jsx)(T.Z, {
                           hasHeader: !1,
                           columns: $,
                           data: e,

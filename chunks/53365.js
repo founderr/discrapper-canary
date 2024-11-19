@@ -74,7 +74,7 @@ async function m(e) {
         let t = await r.tn.get({
             url: a.ANM.CREATOR_MONETIZATION_NAG_ACTIVATE_ELIGIBLITY,
             query: { nag_guild_ids: e },
-            rejectWithError: !1
+            rejectWithError: !0
         });
         i.Z.dispatch({
             type: 'CREATOR_MONETIZATION_NAG_ACTIVATE_ELIGIBLITY_FETCH_SUCCESS',

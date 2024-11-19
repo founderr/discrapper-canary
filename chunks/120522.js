@@ -20,7 +20,7 @@ async function f() {
     try {
         let { body: t } = await a.tn.get({
             url: d.ANM.USER_PERKS_DEMOS,
-            rejectWithError: !1
+            rejectWithError: !0
         });
         (0, o.QI)(e) &&
             (t.available = {
@@ -62,7 +62,7 @@ async function _(e) {
         }
         let { body: n } = await a.tn.post({
             url: d.ANM.USER_PERKS_DEMOS_ACTIVATE(e),
-            rejectWithError: !1
+            rejectWithError: !0
         });
         return p(e, n), !0;
     } catch {

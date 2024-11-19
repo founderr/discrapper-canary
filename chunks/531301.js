@@ -32,7 +32,7 @@ async function c(e) {
         let { body: t } = await a.tn.get({
             url: l.ANM.NOTE(e),
             oldFormErrors: !0,
-            rejectWithError: !1
+            rejectWithError: !0
         });
         s.Z.dispatch({
             type: 'USER_NOTE_LOADED',

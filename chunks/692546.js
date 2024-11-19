@@ -34,18 +34,18 @@ let v = {
         x: 0,
         y: 0
     },
-    E = !1;
-function _(e) {
+    _ = !1;
+function E(e) {
     let { clientX: t, clientY: n } = e;
-    (E = !0), (v.x = t), (v.y = n);
+    (_ = !0), (v.x = t), (v.y = n);
 }
 let x = new Map();
 function Z(e, t) {
-    if (null == t) x.delete(e), 0 === x.size && (window.removeEventListener('mousemove', _), (E = !1));
+    if (null == t) x.delete(e), 0 === x.size && (window.removeEventListener('mousemove', E), (_ = !1));
     else {
         let n = x.get(e);
         if (null != n && (0, c.Z)(n.zone, t.zone)) return;
-        0 === x.size && window.addEventListener('mousemove', _), x.set(e, t);
+        0 === x.size && window.addEventListener('mousemove', E), x.set(e, t);
     }
     p.isPlatformEmbedded &&
         ((0, g.W2)()
@@ -72,7 +72,7 @@ function Z(e, t) {
                   if (!S)
                       f.ZP.requireModule('discord_overlay2').setClickZoneCallback((e, t, n) => {
                           let i = x.get(e);
-                          null != i && (!E && ((v.x = t), (v.y = n)), i.instance.click());
+                          null != i && (!_ && ((v.x = t), (v.y = n)), i.instance.click());
                       }),
                           (S = !0);
               })()));

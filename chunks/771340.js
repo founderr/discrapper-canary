@@ -8,7 +8,7 @@ t.Z = {
                 url: r.ANM.REGIONS(e),
                 retries: 1,
                 oldFormErrors: !0,
-                rejectWithError: !1
+                rejectWithError: !0
             })
             .then(
                 (t) =>
@@ -30,7 +30,7 @@ t.Z = {
             url: r.ANM.CALL(e),
             body: { region: t },
             oldFormErrors: !0,
-            rejectWithError: !1
+            rejectWithError: !0
         });
     }
 };

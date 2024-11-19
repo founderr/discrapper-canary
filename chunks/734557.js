@@ -19,7 +19,7 @@ function r(e) {
             let t = (
                 await o.tn.get({
                     url: a.ANM.GUILD_INSTANT_INVITES(e),
-                    rejectWithError: !1
+                    rejectWithError: !0
                 })
             ).body.sort((e, t) => new Date(t.created_at).getTime() - new Date(e.created_at).getTime());
             n(t), i.set(e, new Set(t)), s(!1);

@@ -130,7 +130,7 @@ async function S(e) {
         } = await s.tn.post({
             url: f.ANM.FORUM_POSTS(e),
             body: { thread_ids: t },
-            rejectWithError: !1
+            rejectWithError: !0
         });
         o.Z.dispatch({
             type: 'LOAD_FORUM_POSTS',

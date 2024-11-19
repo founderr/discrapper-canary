@@ -43,7 +43,7 @@ t.Z = {
                 .get({
                     url: I.ANM.CHANNEL_WEBHOOKS(t),
                     oldFormErrors: !0,
-                    rejectWithError: !1
+                    rejectWithError: !0
                 })
                 .then((n) => {
                     let { body: i } = n;

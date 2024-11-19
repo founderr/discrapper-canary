@@ -39,7 +39,7 @@ let m = async (e) => {
             let t = await r.tn.get({
                     url: h.ANM.GUILD_HOME_SETTINGS(e),
                     oldFormErrors: !0,
-                    rejectWithError: !1
+                    rejectWithError: !0
                 }),
                 n = (0, _.tB)(t.body);
             return (
@@ -67,7 +67,7 @@ let m = async (e) => {
                 let t = await r.tn.get({
                         url: h.ANM.GUILD_MEMBER_ACTIONS(e),
                         oldFormErrors: !0,
-                        rejectWithError: !1
+                        rejectWithError: !0
                     }),
                     n = (0, _.rk)(t.body);
                 return (
@@ -162,6 +162,6 @@ let m = async (e) => {
         }
         r.tn.post({
             url: h.ANM.GUILD_MEMBER_ACTION_UPDATE(e, t),
-            rejectWithError: !1
+            rejectWithError: !0
         });
     };

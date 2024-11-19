@@ -18,17 +18,17 @@ var i = n(200651),
     I = n(200305),
     C = n(981631),
     v = n(898625),
-    S = n(388032),
+    T = n(388032),
     N = n(644868);
 t.Z = (e) => {
     var t;
-    let n, T;
+    let n, S;
     let { guildId: A, inviteCode: b } = e,
         [x, Z] = r.useState(v.hO.INITIAL),
         L = (0, l.e7)([p.Z], () => p.Z.get(A)),
         y = (0, l.e7)([f.Z], () => f.Z.getRequest(A)),
         O = (0, l.e7)([c.Z], () => c.Z.getGuild(A)),
-        { hasFetchedRequestToJoinGuilds: R, guildPreviewDisabled: P } = (0, l.cj)([f.Z], () => ({
+        { hasFetchedRequestToJoinGuilds: P, guildPreviewDisabled: R } = (0, l.cj)([f.Z], () => ({
             hasFetchedRequestToJoinGuilds: f.Z.hasFetchedRequestToJoinGuilds,
             guildPreviewDisabled: f.Z.getJoinRequestGuild(A)
         }));
@@ -36,8 +36,8 @@ t.Z = (e) => {
         null != O && (0, o.uL)(C.Z5c.CHANNEL(A));
     }, [O, A]),
         r.useEffect(() => {
-            !R && h.Z.fetchRequestToJoinGuilds();
-        }, [R]);
+            !P && h.Z.fetchRequestToJoinGuilds();
+        }, [P]);
     let j = r.useCallback((e) => {
             Z((t) => Math.max(t, e));
         }, []),
@@ -48,17 +48,17 @@ t.Z = (e) => {
             h.Z.resetGuildJoinRequest(A);
         };
     let w =
-            ((n = S.intl.format(S.t['9ZezpK'], { name: null == P ? void 0 : P.toString() })),
-            (T = () => {
+            ((n = T.intl.format(T.t['9ZezpK'], { name: null == R ? void 0 : R.toString() })),
+            (S = () => {
                 Z(Math.max(x, v.hO.FILLING)), h.Z.removeGuildJoinRequest(A), (0, o.uL)(C.Z5c.ME);
             }),
             () => {
                 (0, a.openModal)((e) =>
                     (0, i.jsx)(a.ConfirmModal, {
-                        header: S.intl.string(S.t.y0CVen),
-                        cancelText: S.intl.string(S.t.oEAioK),
-                        onConfirm: T,
-                        confirmText: S.intl.string(S.t.p89ACg),
+                        header: T.intl.string(T.t.y0CVen),
+                        cancelText: T.intl.string(T.t.oEAioK),
+                        onConfirm: S,
+                        confirmText: T.intl.string(T.t.p89ACg),
                         confirmButtonColor: a.Button.Colors.RED,
                         ...e,
                         children: (0, i.jsx)(a.Text, {
@@ -93,16 +93,16 @@ t.Z = (e) => {
                             case g.wB.SUBMITTED:
                                 return (0, i.jsx)(E.Z, {
                                     onWithdrawApplication: w,
-                                    guild: P
+                                    guild: R
                                 });
                             case g.wB.REJECTED:
                                 return (0, i.jsx)(_.Z, {
-                                    reapplyText: S.intl.string(S.t.I1LYVl),
+                                    reapplyText: T.intl.string(T.t.I1LYVl),
                                     onReapply: M,
-                                    confirmText: S.intl.string(S.t.mqtdmZ),
+                                    confirmText: T.intl.string(T.t.mqtdmZ),
                                     onWithdrawApplication: w,
                                     rejectionReason: null == y ? void 0 : y.rejectionReason,
-                                    guild: P
+                                    guild: R
                                 });
                             default:
                                 return (0, i.jsx)(I.Z, {

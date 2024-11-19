@@ -7,13 +7,13 @@ n.d(t, {
     }
 });
 var i = n(442837),
-    r = n(928518),
-    l = n(501787);
+    l = n(928518),
+    r = n(501787);
 function o() {
     var e;
-    let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : r.Z;
-    return null !== (e = t.getWindow(l.$J)) && void 0 !== e ? e : window;
+    let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l.Z;
+    return null !== (e = t.getWindow(r.$J)) && void 0 !== e ? e : window;
 }
 function a() {
-    return (0, i.e7)([r.Z], () => o(r.Z));
+    return (0, i.e7)([l.Z], () => o(l.Z));
 }

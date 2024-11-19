@@ -52,7 +52,7 @@ var i,
     P = n(987650);
 let k = new E.Z('RunningGameStore'),
     U = 'RunningGameStore',
-    B = [
+    G = [
         {
             executables: [
                 {
@@ -157,7 +157,7 @@ let k = new E.Z('RunningGameStore'),
             name: m.Z.get(M.ABu.SPOTIFY).name
         }
     ],
-    G = [],
+    B = [],
     Z = !0,
     F = new Set(),
     V = [],
@@ -191,7 +191,7 @@ function eo(e, t) {
     null != t.lastLaunched ? (e.lastLaunched = t.lastLaunched) : null != t.start && (e.lastLaunched = t.start);
 }
 function el(e) {
-    return B.some((t) => t.name === e.name && !0 === t.streamerTool);
+    return G.some((t) => t.name === e.name && !0 === t.streamerTool);
 }
 function eu() {
     if (H.length > 0) {
@@ -373,7 +373,7 @@ function ev() {
                 supportsOutOfProcessOverlay: e.supportsOutOfProcessOverlay
             };
         }
-        [...n, ...B].forEach((n) => {
+        [...n, ...G].forEach((n) => {
             var r;
             let i =
                     null != n.executables
@@ -424,7 +424,7 @@ function ev() {
                             return '0' === t ? null : t;
                         })(e.pid, e.windowHandle)),
                         null ==
-                            B.find((t) => {
+                            G.find((t) => {
                                 let { name: n } = t;
                                 return n === e.name;
                             }) || (n.push(e), !1)
@@ -701,13 +701,13 @@ class eb extends (i = f.ZP.Store) {
                 })
                 .filter((e) => {
                     if (en.has(e.pid) || er.has(e.cleanedExePath)) return !1;
-                    let t = G.some((t) => e.cleanedExePath.includes(t));
+                    let t = B.some((t) => e.cleanedExePath.includes(t));
                     return t && en.add(e.pid), t;
                 })
                 .map((e) => e.cleanedExePath);
             t.length > 0 &&
                 N.default.track(M.rMx.GAME_DETECTION_DEBUGGING_KEYWORD_MATCH, {
-                    keywords: G,
+                    keywords: B,
                     paths: t,
                     debugging_level: ei,
                     interval_seconds: ea

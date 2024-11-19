@@ -1,18 +1,18 @@
 n.d(t, {
     $R: function () {
-        return K;
+        return Y;
     },
     A0: function () {
         return ee;
     },
     GU: function () {
-        return q;
+        return X;
     },
     H8: function () {
         return r;
     },
     HI: function () {
-        return X;
+        return q;
     },
     HW: function () {
         return H;
@@ -51,7 +51,7 @@ n.d(t, {
         return G;
     },
     lT: function () {
-        return Y;
+        return K;
     },
     rd: function () {
         return ec;
@@ -87,8 +87,8 @@ var r,
     g = n(857702),
     v = n(20450),
     C = n(312976),
-    _ = n(147591),
-    j = n(135164),
+    j = n(147591),
+    _ = n(135164),
     T = n(940172),
     S = n(81011),
     y = n(981613),
@@ -121,8 +121,8 @@ let H = {
         JzCzHz: g.Z,
         Jzazbz: v.Z,
         LCH: C.Z,
-        LCHuv: _.Z,
-        Lab: j.Z,
+        LCHuv: j.Z,
+        Lab: _.Z,
         Lab_D65: T.Z,
         Luv: S.Z,
         OKLCH: y.Z,
@@ -152,7 +152,7 @@ function W(e, t) {
         [n, r]
     );
 }
-function K(e) {
+function Y(e) {
     let t = z[e];
     return {
         name: e,
@@ -168,7 +168,7 @@ function K(e) {
         highlight: !1
     };
 }
-function Y(e, t, n, r, a) {
+function K(e, t, n, r, a) {
     return {
         name: t,
         colors: {
@@ -181,13 +181,13 @@ function Y(e, t, n, r, a) {
         highlight: !1
     };
 }
-function q(e) {
+function X(e) {
     return {
         ...e,
         highlight: !e.highlight
     };
 }
-function X(e) {
+function q(e) {
     return (0, B.Z)((0, P.Z)(e, c.Z), { format: 'hex' });
 }
 function $() {

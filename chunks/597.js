@@ -15,7 +15,7 @@ let c = l()(async (e) => {
         let t = await r.tn.get({
             url: o.ANM.DIRECTORY_CHANNEL_ENTRIES(e),
             query: { type: s.C2.GUILD_SCHEDULED_EVENT },
-            rejectWithError: !1
+            rejectWithError: !0
         });
         a.Z.dispatch({
             type: 'EVENT_DIRECTORY_FETCH_SUCCESS',

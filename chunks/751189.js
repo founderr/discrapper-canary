@@ -18,7 +18,7 @@ t.Z = {
             .get({
                 url: o.ANM.UNRESOLVED_GUILD_TEMPLATE(t),
                 oldFormErrors: !0,
-                rejectWithError: !1
+                rejectWithError: !0
             })
             .then(
                 (e) => {

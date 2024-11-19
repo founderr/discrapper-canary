@@ -34,8 +34,8 @@ var r = n(200651),
     P = n(611480),
     k = n(388032),
     U = n(215786);
-let B = L.Om + w.Su.MEDIUM,
-    G = i.memo(function (e) {
+let G = L.Om + w.Su.MEDIUM,
+    B = i.memo(function (e) {
         let { isActive: t, className: n, viewType: i, autoFocus: a = !1, 'aria-controls': o, ...l } = e;
         return (0, r.jsx)(_.Button, {
             role: 'tab',
@@ -232,7 +232,7 @@ t.Z = i.memo(function (e) {
                                                         'aria-label': k.intl.string(k.t['2j4VgY']),
                                                         children: [
                                                             e_
-                                                                ? (0, r.jsx)(G, {
+                                                                ? (0, r.jsx)(B, {
                                                                       id: w._3,
                                                                       'aria-controls': w.vO,
                                                                       'aria-selected': er === L.X1.GIF,
@@ -242,7 +242,7 @@ t.Z = i.memo(function (e) {
                                                                   })
                                                                 : null,
                                                             ep
-                                                                ? (0, r.jsx)(G, {
+                                                                ? (0, r.jsx)(B, {
                                                                       id: P.ED,
                                                                       'aria-controls': P.nZ,
                                                                       'aria-selected': er === L.X1.STICKER,
@@ -255,7 +255,7 @@ t.Z = i.memo(function (e) {
                                                                       })
                                                                   })
                                                                 : null,
-                                                            (0, r.jsx)(G, {
+                                                            (0, r.jsx)(B, {
                                                                 id: w.td,
                                                                 'aria-controls': w.cZ,
                                                                 'aria-selected': er === L.X1.EMOJI,
@@ -265,7 +265,7 @@ t.Z = i.memo(function (e) {
                                                             }),
                                                             el &&
                                                                 null != j &&
-                                                                (0, r.jsx)(G, {
+                                                                (0, r.jsx)(B, {
                                                                     id: w.Hr,
                                                                     'aria-controls': w.gV,
                                                                     'aria-selected': er === L.X1.SOUNDBOARD,
@@ -304,7 +304,7 @@ t.Z = i.memo(function (e) {
                                                     channel: H,
                                                     containerWidth: et,
                                                     includeCreateEmojiButton: p,
-                                                    emojiSize: null != et && et < B ? w.Su.MEDIUM : w.Su.LARGE,
+                                                    emojiSize: null != et && et < G ? w.Su.MEDIUM : w.Su.LARGE,
                                                     pickerIntention: M.Hz.CHAT,
                                                     closePopout: ef,
                                                     onSelectEmoji: F,

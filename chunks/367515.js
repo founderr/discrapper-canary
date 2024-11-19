@@ -15,8 +15,8 @@ var i = n(200651),
     g = n(933970),
     m = n(340453),
     f = n(292352),
-    _ = n(388032),
-    p = n(791937);
+    p = n(388032),
+    _ = n(791937);
 function h(e) {
     let { user: t } = e,
         a = (0, d.Z)(),
@@ -59,22 +59,22 @@ function h(e) {
                 });
         }, [E, t]);
     return (0, i.jsxs)('div', {
-        className: p.container,
+        className: _.container,
         children: [
             (0, i.jsx)('div', {
-                className: p.details,
+                className: _.details,
                 children: (0, i.jsx)(m.Z, {
                     otherUser: t,
                     status: f.ne.PENDING
                 })
             }),
             (0, i.jsx)('div', {
-                className: p.actions,
+                className: _.actions,
                 children: a
                     ? (0, i.jsx)(g.Z, {
                           icon: o.XSmallIcon,
-                          className: p.__invalid_actionDeny,
-                          tooltip: _.intl.string(_.t.e5iHmZ),
+                          className: _.__invalid_actionDeny,
+                          tooltip: p.intl.string(p.t.e5iHmZ),
                           onClick: C
                       })
                     : (0, i.jsxs)(i.Fragment, {
@@ -83,14 +83,14 @@ function h(e) {
                                   ? null
                                   : (0, i.jsx)(g.Z, {
                                         icon: o.CheckmarkLargeIcon,
-                                        className: p.__invalid_actionAccept,
-                                        tooltip: _.intl.string(_.t.krWQZG),
+                                        className: _.__invalid_actionAccept,
+                                        tooltip: p.intl.string(p.t.krWQZG),
                                         onClick: b
                                     }),
                               (0, i.jsx)(g.Z, {
                                   icon: o.XSmallIcon,
-                                  className: p.__invalid_actionDeny,
-                                  tooltip: _.intl.string(_.t.bBDeND),
+                                  className: _.__invalid_actionDeny,
+                                  tooltip: p.intl.string(p.t.bBDeND),
                                   onClick: x
                               })
                           ]

@@ -64,7 +64,7 @@ async function E(e) {
                         subscription_plan_id: t
                     },
                     oldFormErrors: !0,
-                    rejectWithError: !1
+                    rejectWithError: !0
                 });
                 s.Z.dispatch({
                     type: 'GIFT_CODES_FETCH_SUCCESS',
@@ -97,7 +97,7 @@ async function E(e) {
                         gift_style: n
                     },
                     oldFormErrors: !0,
-                    rejectWithError: !1
+                    rejectWithError: !0
                 });
                 return (
                     s.Z.dispatch({
@@ -123,7 +123,7 @@ async function E(e) {
                 await i.tn.del({
                     url: u.ANM.USER_GIFT_CODE_REVOKE(e),
                     oldFormErrors: !0,
-                    rejectWithError: !1
+                    rejectWithError: !0
                 }),
                     s.Z.dispatch({
                         type: 'GIFT_CODE_REVOKE_SUCCESS',

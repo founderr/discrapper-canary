@@ -39,7 +39,7 @@ function v(e, t, n) {
         height: 'auto' === r ? 'auto' : Math.max(n, r)
     };
 }
-function E(e) {
+function _(e) {
     let { top: t, left: n, bottom: i, right: r } = e;
     return (
         null == n && null == r && (n = 0),
@@ -54,7 +54,7 @@ function E(e) {
         }
     );
 }
-function _(e) {
+function E(e) {
     return 'auto' === e || null == e ? 'auto' : ''.concat(e, 'px');
 }
 function x(e, t) {
@@ -112,7 +112,7 @@ class S extends (r = l.Component) {
         return !(0, d.Z)(t, this.state) || !(0, d.Z)(e, this.props, ['anchor', 'size', 'minSize', 'container']) || !(0, d.Z)(e.anchor, this.props.anchor) || !(0, d.Z)(e.size, this.props.size) || !(0, d.Z)(e.minSize, this.props.minSize) || !(0, d.Z)(e.container, this.props.container);
     }
     componentDidUpdate(e, t) {
-        null == t.operation && (!(0, d.Z)(this.props.anchor, e.anchor) && this.setDOMPositions(E(this.props.anchor)), !(0, d.Z)(this.props.size, e.size) && this.setDOMSize(v(this.props.size, this.props.minSize.width, this.props.minSize.height)));
+        null == t.operation && (!(0, d.Z)(this.props.anchor, e.anchor) && this.setDOMPositions(_(this.props.anchor)), !(0, d.Z)(this.props.size, e.size) && this.setDOMSize(v(this.props.size, this.props.minSize.width, this.props.minSize.height)));
     }
     componentWillUnmount() {
         this.handleOperationEnd();
@@ -138,12 +138,12 @@ class S extends (r = l.Component) {
         (e = Math.max(Math.min(r, e), a)), (t = Math.max(Math.min(s, t), l));
         let { width: g, height: m } = x(n, this.size),
             v = t - p,
-            E = e - h,
-            _ = (0, u.ou)(
+            _ = e - h,
+            E = (0, u.ou)(
                 (0, u.PY)(
                     {
                         top: v,
-                        left: E,
+                        left: _,
                         bottom: void 0,
                         right: void 0
                     },
@@ -153,7 +153,7 @@ class S extends (r = l.Component) {
                     m
                 )
             ),
-            S = d ? (0, u.R)(_) : Z('RESIZE_SOUTH_EAST', _);
+            S = d ? (0, u.R)(E) : Z('RESIZE_SOUTH_EAST', E);
         this.setDOMPositions(S), !f && (null != o && o(), this.setState({ operationStarted: !0 })), null != c && c(i, 'MOVE', this.anchor, this.size);
     }
     handleResizeMove(e, t) {
@@ -215,7 +215,7 @@ class S extends (r = l.Component) {
             }),
             null != s)
         )
-            (s.style.top = _(t)), (s.style.bottom = _(i)), (s.style.left = _(n)), (s.style.right = _(r));
+            (s.style.top = E(t)), (s.style.bottom = E(i)), (s.style.left = E(n)), (s.style.right = E(r));
     }
     setDOMSize(e) {
         let { width: t, height: n } = e,
@@ -229,7 +229,7 @@ class S extends (r = l.Component) {
             }),
             null != i)
         )
-            (i.style.width = _(t)), (i.style.height = _(n));
+            (i.style.width = E(t)), (i.style.height = E(n));
     }
     renderResizeHandles() {
         let { resizeY: e, resizeX: t, active: n } = this.props;
@@ -423,7 +423,7 @@ class S extends (r = l.Component) {
                     r
                 );
             }),
-            (this.anchor = E(e.anchor)),
+            (this.anchor = _(e.anchor)),
             (this.size = v(e.size, e.minSize.width, e.minSize.height));
     }
 }

@@ -1,6 +1,6 @@
 n.d(t, {
     _: function () {
-        return _;
+        return p;
     }
 }),
     n(47120);
@@ -28,11 +28,11 @@ function m(e, t, n) {
     );
 }
 let f = (0, u.Mg)(c.Z.GRADIENT_PROGRESS_NOTCH_WIDTH),
-    _ = Object.freeze({
+    p = Object.freeze({
         BLACK: g.black,
         GRAY: g.gray
     });
-class p extends (i = a.Component) {
+class _ extends (i = a.Component) {
     componentDidMount() {
         this.computeBars(), window.addEventListener('resize', this.computeBars);
     }
@@ -90,8 +90,8 @@ class p extends (i = a.Component) {
             });
     }
 }
-m(p, 'defaultProps', {
+m(_, 'defaultProps', {
     gradientStart: o.Z.unsafe_rawColors.YELLOW_260.css,
     gradientEnd: o.Z.unsafe_rawColors.GREEN_360.css
 }),
-    (t.Z = p);
+    (t.Z = _);

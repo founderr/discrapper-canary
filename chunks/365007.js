@@ -50,7 +50,7 @@ function c() {
     i.tn
         .get({
             url: o.ANM.MFA_WEBAUTHN_CREDENTIALS,
-            rejectWithError: !1
+            rejectWithError: !0
         })
         .then((e) => {
             a.Z.dispatch({
@@ -63,7 +63,7 @@ function d(e) {
     i.tn
         .del({
             url: o.ANM.MFA_WEBAUTHN_CREDENTIAL(e.id),
-            rejectWithError: !1
+            rejectWithError: !0
         })
         .then(() => {
             a.Z.dispatch({

@@ -17,7 +17,7 @@ function r(e, t) {
     i.tn
         .get({
             url: l.ANM.GUILD_ROLE_CONNECTIONS_CONFIGURATION(e, t),
-            rejectWithError: !1
+            rejectWithError: !0
         })
         .then((e) => {
             let n = [];

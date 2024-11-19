@@ -25,9 +25,9 @@ var i = n(200651),
     I = n(271383),
     C = n(430824),
     v = n(626135),
-    S = n(63063),
+    T = n(63063),
     N = n(134433),
-    T = n(225104),
+    S = n(225104),
     A = n(981631),
     b = n(388032),
     x = n(371086),
@@ -46,8 +46,8 @@ function L(e, t) {
 t.default = function (e) {
     let { guildId: t, transitionState: l, onClose: y } = e,
         O = (0, s.e7)([C.Z], () => C.Z.getRoles(t)),
-        R = (0, s.e7)([E.default], () => E.default.getId()),
-        P = (0, s.e7)([I.ZP], () => I.ZP.getMember(t, R)),
+        P = (0, s.e7)([E.default], () => E.default.getId()),
+        R = (0, s.e7)([I.ZP], () => I.ZP.getMember(t, P)),
         [j, D] = r.useState([]),
         M = (0, h.ZP)(),
         w = (0, f.Dt)();
@@ -65,7 +65,7 @@ t.default = function (e) {
         r.useEffect(() => {
             u.Z.getGuildRoleConnectionsConfigurations(t).then((e) => D(e));
         }, [t]),
-        null == P)
+        null == R)
     )
         return null;
     let k = Object.values(O).filter((e) => {
@@ -101,12 +101,12 @@ t.default = function (e) {
                     (0, i.jsx)(c.Heading, {
                         variant: 'heading-md/semibold',
                         color: 'header-primary',
-                        children: b.intl.format(b.t['Y+TsER'], { helpdeskArticleUrl: S.Z.getArticleURL(A.BhN.CONNECTION_DETAILS) })
+                        children: b.intl.format(b.t['Y+TsER'], { helpdeskArticleUrl: T.Z.getArticleURL(A.BhN.CONNECTION_DETAILS) })
                     }),
                     (0, i.jsx)('div', {
                         className: x.verifiedRoles,
                         children: k.map((e) => {
-                            let l = P.roles.includes(e.id),
+                            let l = R.roles.includes(e.id),
                                 s = (function (e) {
                                     let n = j.find((t) => {
                                         let { role_id: n } = t;
@@ -173,7 +173,7 @@ t.default = function (e) {
                                                   })
                                               })
                                             : null,
-                                        (0, i.jsx)(T.Z, {
+                                        (0, i.jsx)(S.Z, {
                                             guildId: t,
                                             role: e,
                                             size: 24

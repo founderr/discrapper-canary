@@ -17,18 +17,18 @@ var r = n(200651),
     u = n(631467),
     c = n(210887),
     d = n(585483),
-    f = n(53289),
-    _ = n(953101),
-    p = n(486003),
+    f = n(531826),
+    _ = n(53289),
+    p = n(953101),
     h = n(701488),
     m = n(981631),
     g = n(835296);
 function E(e) {
     let { url: t, className: n, style: a, onLoad: s, shouldRefocus: g, queryParams: E, allowPopups: v = !1, referrerPolicy: b = 'origin' } = e,
-        I = (0, p.sU)({}),
+        I = (0, f.sU)({}),
         S = (0, o.useMemoOne)(() => (0, l.Z)(), [t]),
         T = i.useRef(null),
-        y = (0, f.Z)(T, g, null == I ? window : I),
+        y = (0, _.Z)(T, g, null == I ? window : I),
         A = {
             ...E,
             frame_id: S,
@@ -70,7 +70,7 @@ function E(e) {
                       var n;
                       null == s || s(e.target), (T.current = e.target), y(!0), null === (n = e.target.contentWindow) || void 0 === n || n.postMessage([u.Z.HELLO, A], null != t ? t : '');
                   },
-                  sandbox: (0, _.Z)({ allowPopups: v }),
+                  sandbox: (0, p.Z)({ allowPopups: v }),
                   className: n,
                   src: ''.concat(t, '?').concat(new URLSearchParams(A))
               })

@@ -6,15 +6,15 @@ n.r(t),
     });
 var i = n(200651);
 n(192379);
-var r = n(238246),
-    l = n(554370);
+var l = n(238246),
+    r = n(554370);
 function o(e) {
     let { withTitleBar: t, windowKey: n } = e;
-    return (0, i.jsx)(r.Z, {
+    return (0, i.jsx)(l.Z, {
         withTitleBar: t,
         windowKey: n,
         title: 'Discord Overlay',
-        children: (0, i.jsx)(l.Z, {})
+        children: (0, i.jsx)(r.Z, {})
     });
 }
 n(606206), n(371467);

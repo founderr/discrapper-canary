@@ -34,8 +34,8 @@ var r = n(192379),
     f = n(959457),
     p = n(594174),
     h = n(997323),
-    _ = n(120619),
-    v = n(215339),
+    v = n(120619),
+    _ = n(215339),
     m = n(578976),
     b = n(37113);
 let g = new i.Yd('HDStreamingConsumableModal'),
@@ -51,7 +51,7 @@ let g = new i.Yd('HDStreamingConsumableModal'),
                 return null != t && d.Z.isMobileOnline(t.id);
             }),
             [u, h] = (0, r.useState)(null),
-            [_, v] = (0, r.useState)([]);
+            [v, _] = (0, r.useState)([]);
         (0, o.e7)(
             [f.Z],
             () => {
@@ -62,12 +62,12 @@ let g = new i.Yd('HDStreamingConsumableModal'),
                             r = f.Z.getRTCConnection(n);
                         return null == r ? void 0 : null === (t = r.getVideoStats()) || void 0 === t ? void 0 : t.inbound_bitrate_estimate_percentile99;
                     });
-                    g.info('Setting bitrates', e), v(e), h(Date.now());
+                    g.info('Setting bitrates', e), _(e), h(Date.now());
                 }
             },
             [u, i]
         );
-        let m = (0, r.useMemo)(() => 0 === _.length || (!_.some((e) => null == e || e < 3500000) && !0), [_]);
+        let m = (0, r.useMemo)(() => 0 === v.length || (!v.some((e) => null == e || e < 3500000) && !0), [v]);
         return null != t && 0 === t.premiumTier && m && !a;
     },
     S = (e, t) => {
@@ -76,12 +76,12 @@ let g = new i.Yd('HDStreamingConsumableModal'),
                 return null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.id;
             }),
             r = (0, o.Wu)([s.Z], () => s.Z.getAllActiveStreamsForChannel(e.id).filter((e) => e.ownerId !== n)),
-            i = (0, v.j)(t),
+            i = (0, _.j)(t),
             a = E(e);
         return i && a && r.length > 0;
     };
 function C(e) {
-    let [t, n, i] = (0, o.Wu)([_.Z], () => [_.Z.isFetchingPrice(e), _.Z.getPrice(e), _.Z.getErrored(e)]);
+    let [t, n, i] = (0, o.Wu)([v.Z], () => [v.Z.isFetchingPrice(e), v.Z.getPrice(e), v.Z.getErrored(e)]);
     return (
         (0, r.useEffect)(() => {
             !t && null == n && !i && (0, h.Gq)(e);
@@ -94,7 +94,7 @@ function C(e) {
     );
 }
 function I(e) {
-    let [t, n, i, a] = (0, o.Wu)([_.Z], () => [_.Z.isEntitlementFetched(e), _.Z.isEntitlementFetching(e), _.Z.getEntitlement(e), _.Z.getErrored(e)]);
+    let [t, n, i, a] = (0, o.Wu)([v.Z], () => [v.Z.isEntitlementFetched(e), v.Z.isEntitlementFetching(e), v.Z.getEntitlement(e), v.Z.getErrored(e)]);
     return (
         (0, r.useEffect)(() => {
             !t && !n && (0, h.gA)(e);
@@ -129,7 +129,7 @@ function A(e) {
     });
 }
 function T(e) {
-    let t = (0, o.e7)([_.Z], () => _.Z.getPlayedAnimation());
+    let t = (0, o.e7)([v.Z], () => v.Z.getPlayedAnimation());
     (0, r.useEffect)(() => {
         t && (e(), (0, h.LE)());
     }, [t, e]);

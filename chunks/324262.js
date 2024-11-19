@@ -12,7 +12,7 @@ var i = n(200651),
     p = n(84119);
 let g = a().debounce(o.ZP.trackWithMetadata, 500),
     f = (e) => {
-        let { guild: t, title: n, message: l, image: a, type: d, imageMarginX: u, imageMarginTop: f, trackingSource: _, undismissable: E, onDismissed: I, onClick: C, cta: v, ctaColor: S } = e;
+        let { guild: t, title: n, message: l, image: a, type: d, imageMarginX: u, imageMarginTop: f, trackingSource: _, undismissable: E, onDismissed: I, onClick: C, cta: v, ctaColor: T } = e;
         r.useEffect(() => {
             g(h.rMx.CHANNEL_NOTICE_VIEWED, {
                 notice_type: d,
@@ -36,10 +36,10 @@ let g = a().debounce(o.ZP.trackWithMetadata, 500),
                           null == C || C();
                   },
                   fullWidth: !0,
-                  color: S,
+                  color: T,
                   children: v
               }));
-        let T = null != u ? ''.concat(u, 'px') : '16px';
+        let S = null != u ? ''.concat(u, 'px') : '16px';
         return (0, i.jsxs)('div', {
             className: p.channelNotice,
             children: [
@@ -61,8 +61,8 @@ let g = a().debounce(o.ZP.trackWithMetadata, 500),
                     className: p.imageContainer,
                     style: {
                         marginTop: ''.concat(f, 'px'),
-                        marginLeft: T,
-                        marginRight: T
+                        marginLeft: S,
+                        marginRight: S
                     },
                     children: (0, i.jsx)('img', {
                         className: p.image,

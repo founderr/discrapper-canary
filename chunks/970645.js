@@ -13,7 +13,7 @@ async function s() {
         l.Z.dispatch({ type: 'CHECKOUT_RECOVERY_STATUS_FETCH' });
         let { body: e } = await i.tn.get({
                 url: o.ANM.CHECKOUT_RECOVERY,
-                rejectWithError: !1
+                rejectWithError: !0
             }),
             t = (null == e ? void 0 : e.is_eligible) === !0;
         t && !a.Z.hasFetchedPaymentSources && (await (0, r.tZ)()),

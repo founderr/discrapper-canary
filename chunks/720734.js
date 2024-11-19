@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return eP;
+        return eR;
     }
 }),
     n(47120),
@@ -24,9 +24,9 @@ var i = n(200651),
     I = n(634894),
     C = n(586902),
     v = n(570928),
-    S = n(100527),
+    T = n(100527),
     N = n(906732),
-    T = n(676742),
+    S = n(676742),
     A = n(1585),
     b = n(304761),
     x = n(865427),
@@ -34,8 +34,8 @@ var i = n(200651),
     L = n(628581),
     y = n(55311),
     O = n(575175),
-    R = n(64220),
-    P = n(377171),
+    P = n(64220),
+    R = n(377171),
     j = n(600164),
     D = n(676035),
     M = n(427217),
@@ -44,8 +44,8 @@ var i = n(200651),
     U = n(258609),
     G = n(427347),
     B = n(443669),
-    V = n(332473),
-    H = n(240504),
+    H = n(332473),
+    V = n(240504),
     F = n(637906),
     z = n(39370),
     Y = n(19199),
@@ -78,9 +78,9 @@ var i = n(200651),
     eI = n(998502),
     eC = n(870569),
     ev = n(345243),
-    eS = n(115530),
+    eT = n(115530),
     eN = n(981631),
-    eT = n(215023),
+    eS = n(215023),
     eA = n(388032),
     eb = n(453323);
 function ex(e, t, n) {
@@ -101,7 +101,7 @@ let eZ = eI.ZP.getEnableHardwareAcceleration() ? m.AnimatedAvatar : m.Avatar,
     ey = 30 * eg.Z.Millis.DAY;
 function eO(e) {
     let { speaking: t, streaming: n, currentUser: r, status: l, handleMouseLeave: s, renderNameTag: o } = e,
-        c = (0, T.Z)(null == r ? void 0 : r.avatarDecoration),
+        c = (0, S.Z)(null == r ? void 0 : r.avatarDecoration),
         d = (0, em.NZ)({
             avatarDecoration: c,
             size: (0, A.y9)(m.AvatarSizes.SIZE_32)
@@ -158,7 +158,7 @@ function eO(e) {
               })
           });
 }
-class eR extends r.PureComponent {
+class eP extends r.PureComponent {
     get isCopiedStreakGodlike() {
         let { copiedStreak: e } = this.state;
         return e >= 10;
@@ -205,7 +205,7 @@ class eR extends r.PureComponent {
                 children: [
                     (0, i.jsx)('div', {
                         className: eb.panelTitleContainer,
-                        children: (0, i.jsx)(eS.Z, { children: s })
+                        children: (0, i.jsx)(eT.Z, { children: s })
                     }),
                     (0, i.jsx)('div', {
                         className: eb.panelSubtextContainer,
@@ -232,7 +232,7 @@ class eR extends r.PureComponent {
                       children: (e) => {
                           let { visibleContent: t, markAsDismissed: n } = e;
                           if (t === o.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)
-                              return (0, i.jsx)(R.Z, {
+                              return (0, i.jsx)(P.Z, {
                                   markAsDismissed: n,
                                   children: () => this.renderAvatarWithPopout()
                               });
@@ -488,7 +488,7 @@ class eR extends r.PureComponent {
             );
     }
 }
-function eP() {
+function eR() {
     var e;
     let t = (0, s.e7)([ed.default], () => ed.default.getCurrentUser()),
         n = (0, s.e7)([ei.default], () => ei.default.getId()),
@@ -505,7 +505,7 @@ function eP() {
             return null != e ? er.Z.getChannel(e) : null;
         }),
         { mute: f, selfMute: _, suppress: v } = (0, en.Z)(g),
-        { selfDeaf: T, deaf: A } = (0, et.Z)(g),
+        { selfDeaf: S, deaf: A } = (0, et.Z)(g),
         Z = (0, s.e7)([b.C], () => {
             var e;
             return (0, x.fD)() ? (null === (e = b.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web) : null;
@@ -513,14 +513,14 @@ function eP() {
         L = (0, s.e7)([eu.ZP], () => eu.ZP.getPremiumTypeSubscription()),
         y = (0, s.e7)([ea.Z], () => ea.Z.getSpeakingWhileMuted()),
         O = (0, s.e7)([el.Z], () => el.Z.hasLayers()),
-        R = (0, m.useModalsStore)(m.hasAnyModalOpenSelector) || O || e_.s.isDisallowPopupsSet(),
-        P = (0, V.b)(),
+        P = (0, m.useModalsStore)(m.hasAnyModalOpenSelector) || O || e_.s.isDisallowPopupsSet(),
+        R = (0, H.b)(),
         j = (0, s.e7)([U.Z], () => null != U.Z.getAwaitingRemoteSessionInfo()),
         M = (0, Y.D)(),
         k = (0, E.u)(),
         G = (0, W.t)(),
         B = ef.ZP.canUsePremiumGuildMemberProfile(t),
-        z = (null == t ? void 0 : null === (e = t.avatarDecoration) || void 0 === e ? void 0 : e.skuId) === eT.rL,
+        z = (null == t ? void 0 : null === (e = t.avatarDecoration) || void 0 === e ? void 0 : e.skuId) === eS.rL,
         K = 'account';
     (0, I.j)({
         location: K + ' auto on',
@@ -533,7 +533,7 @@ function eP() {
     let q = (0, s.e7)([Q.Z], () => Q.Z.hasHadOtherUserPlaySoundInSession()),
         X = (function () {
             let e = (0, w.wE)(o.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2),
-                [t, n] = (0, s.Wu)([H.Z], () => [H.Z.hasFetchedRelevance, H.Z.profileThemesRelevanceExceeded]),
+                [t, n] = (0, s.Wu)([V.Z], () => [V.Z.hasFetchedRelevance, V.Z.profileThemesRelevanceExceeded]),
                 [i, l] = (0, s.Wu)([eu.ZP], () => [eu.ZP.hasFetchedMostRecentPremiumTypeSubscription(), eu.ZP.getMostRecentPremiumTypeSubscription()]),
                 { enabled: a } = F.Z.useExperiment({ location: '08bd40_1' }, { autoTrackExposure: !0 }),
                 c = r.useMemo(() => {
@@ -554,24 +554,24 @@ function eP() {
                 !e && !!a && !c && null != n && n
             );
         })(),
-        { analyticsLocations: J } = (0, N.ZP)(S.Z.ACCOUNT),
+        { analyticsLocations: J } = (0, N.ZP)(T.Z.ACCOUNT),
         $ = {
             avatar: [],
             settings: []
         };
     return (
-        !R && (X && $.settings.push(o.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), M && (1 === k ? $.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : $.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), q && $.settings.push(o.z.SOUNDBOARD_VOLUME_EDUCATION), G && $.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), B && $.settings.push(o.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), z && $.avatar.push(o.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)),
+        !P && (X && $.settings.push(o.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), M && (1 === k ? $.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : $.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), q && $.settings.push(o.z.SOUNDBOARD_VOLUME_EDUCATION), G && $.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), B && $.settings.push(o.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), z && $.avatar.push(o.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)),
         (0, i.jsx)(N.Gt, {
             value: J,
-            children: (0, i.jsx)(eR, {
+            children: (0, i.jsx)(eP, {
                 currentUser: t,
                 customStatusActivity: l,
                 dismissibleContents: $,
                 userTag: u,
                 hidePrivateData: h,
-                occluded: R,
+                occluded: P,
                 premiumSubscription: L,
-                selfDeaf: T,
+                selfDeaf: S,
                 selfMute: _,
                 serverDeaf: A,
                 serverMute: f,
@@ -582,7 +582,7 @@ function eP() {
                 suppress: v,
                 webBuildOverride: Z,
                 awaitingRemote: j,
-                isEligibleForPomelo: P
+                isEligibleForPomelo: R
             })
         })
     );
@@ -607,7 +607,7 @@ function ej(e) {
                 }))
               : n &&
                 (s = (0, i.jsx)(m.CircleBadge, {
-                    color: P.Z.STATUS_DANGER,
+                    color: R.Z.STATUS_DANGER,
                     className: eb.hasBuildOverride,
                     'aria-hidden': !0
                 })),
@@ -627,9 +627,9 @@ function eD(e) {
         f = t || l || n,
         { Component: _, play: E, events: I } = (0, u.O)(f ? 'unmute' : 'mute'),
         C = n || l ? m.MicrophoneDenyIcon : _,
-        { analyticsLocations: v } = (0, N.ZP)(S.Z.AUDIO_INPUT_BUTTON);
+        { analyticsLocations: v } = (0, N.ZP)(T.Z.AUDIO_INPUT_BUTTON);
     r.useEffect(() => () => E(), [f, E]);
-    let T = r.useCallback(
+    let S = r.useCallback(
         (e) => {
             g(e, v);
         },
@@ -655,7 +655,7 @@ function eD(e) {
             }),
             iconForeground: f ? eb.strikethrough : null,
             onClick: p,
-            onContextMenu: T,
+            onContextMenu: S,
             role: 'switch',
             'aria-label': eA.intl.string(eA.t['w4m94+']),
             'aria-checked': f,
@@ -672,7 +672,7 @@ function eM(e) {
             events: { onMouseEnter: p, onMouseLeave: g }
         } = (0, d.l)(c ? 'undeafen' : 'deafen'),
         f = n ? m.HeadphonesDenyIcon : u,
-        { analyticsLocations: _ } = (0, N.ZP)(S.Z.AUDIO_OUTPUT_BUTTON);
+        { analyticsLocations: _ } = (0, N.ZP)(T.Z.AUDIO_OUTPUT_BUTTON);
     r.useEffect(() => () => h(), [c, h]);
     let E = r.useCallback(
         (e) => {

@@ -12,7 +12,7 @@ var i = n(200651),
     m = n(44888);
 t.Z = (e) => {
     let { userId: t, children: n, isLast: a, className: f } = e,
-        [_, p] = r.useState(!1),
+        [p, _] = r.useState(!1),
         { analyticsLocations: h } = (0, d.ZP)(),
         E = r.useCallback(() => {
             (0, u.openUserProfileModal)({
@@ -22,10 +22,10 @@ t.Z = (e) => {
             });
         }, [t, h]),
         b = () => {
-            p(!0);
+            _(!0);
         },
         x = () => {
-            p(!1);
+            _(!1);
         };
     return (0, i.jsx)(c.mh, {
         id: t,
@@ -39,13 +39,13 @@ t.Z = (e) => {
                     style: { opacity: 1 },
                     className: s()(m.rowItem, f, {
                         [m.last]: a,
-                        [m.active]: _
+                        [m.active]: p
                     }),
                     onMouseEnter: b,
                     onMouseLeave: x,
                     onClick: E,
                     ...e,
-                    children: n(_)
+                    children: n(p)
                 })
             })
     });

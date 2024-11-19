@@ -130,9 +130,9 @@ t.Z = function (e) {
         }, []),
         C = r.useCallback(() => d(!1), []),
         v = (0, u.ye)(t),
-        S = (0, p.u)(l),
+        T = (0, p.u)(l),
         N = t.bot,
-        { botBannerUrl: T, botBannerUrlAnimated: A } = r.useMemo(
+        { botBannerUrl: S, botBannerUrlAnimated: A } = r.useMemo(
             () =>
                 (null == N ? void 0 : N.id) == null || (null == N ? void 0 : N.banner) == null
                     ? {}
@@ -157,7 +157,7 @@ t.Z = function (e) {
     return (0, i.jsx)('div', {
         className: g.banner,
         style: {
-            backgroundImage: S,
+            backgroundImage: T,
             aspectRatio: 'card' === n ? f : _
         },
         onMouseEnter: h,
@@ -169,13 +169,13 @@ t.Z = function (e) {
                 ? (0, i.jsx)(E, {
                       application: t,
                       isHovered: c,
-                      botBannerUrl: null == T ? void 0 : T,
+                      botBannerUrl: null == S ? void 0 : S,
                       botBannerUrlAnimated: null == A ? void 0 : A
                   })
-                : null != T
+                : null != S
                   ? (0, i.jsx)(I, {
                         isHovered: c,
-                        url: T,
+                        url: S,
                         animatedUrl: A
                     })
                   : null

@@ -29,37 +29,37 @@ var i = n(200651),
     I = n(981631),
     C = n(921944),
     v = n(388032),
-    S = n(484857);
+    T = n(484857);
 let N = [],
-    T = (e) => {
+    S = (e) => {
         let { tagText: t, className: n } = e;
         return (0, i.jsx)(o.TextBadge, {
-            className: a()(S.tag, n),
+            className: a()(T.tag, n),
             text: t
         });
     },
     A = (e) => {
         let { header: t, subHeader: n, imageSrc: r, tagText: l, wideStyle: s } = e;
         return (0, i.jsxs)('div', {
-            className: a()(S.featureCard, { [S.wideStyle]: s }),
+            className: a()(T.featureCard, { [T.wideStyle]: s }),
             children: [
                 null != l
-                    ? (0, i.jsx)(T, {
+                    ? (0, i.jsx)(S, {
                           tagText: l,
-                          className: S.featureCardTag
+                          className: T.featureCardTag
                       })
                     : null,
                 (0, i.jsx)('img', {
                     alt: '',
-                    className: a()(S.featureCardImg, { [S.wideStyle]: s }),
+                    className: a()(T.featureCardImg, { [T.wideStyle]: s }),
                     src: r
                 }),
                 (0, i.jsxs)('div', {
-                    className: S.featureCardTextGroup,
+                    className: T.featureCardTextGroup,
                     children: [
                         (0, i.jsx)(o.Heading, {
                             variant: 'heading-md/extrabold',
-                            className: S.featureCardTextHeader,
+                            className: T.featureCardTextHeader,
                             children: t
                         }),
                         (0, i.jsx)(o.Text, {
@@ -72,18 +72,18 @@ let N = [],
         });
     };
 function b(e) {
-    let { className: t, renderModalProps: n, heroArt: l, heroArtClassName: T, modalDismissibleContent: b, modalTopExtra: x, header: Z, headerClassName: L, subHeader: y, subHeaderExtra: O, featureCards: R, changeLogId: P, button: j, body: D } = e,
+    let { className: t, renderModalProps: n, heroArt: l, heroArtClassName: S, modalDismissibleContent: b, modalTopExtra: x, header: Z, headerClassName: L, subHeader: y, subHeaderExtra: O, featureCards: P, changeLogId: R, button: j, body: D } = e,
         { onClose: M, transitionState: w } = n,
         k = (0, h.Dt)(),
-        U = R.length % 2 == 0,
+        U = P.length % 2 == 0,
         G = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
-        [B, V] = r.useState(Date.now()),
-        [H, F] = r.useState(0),
+        [B, H] = r.useState(Date.now()),
+        [V, F] = r.useState(0),
         [z, Y] = r.useState(0),
         [W, K] = r.useState(!1),
         [q, X] = r.useState(!0),
         Q = r.useRef(B),
-        J = r.useRef(H),
+        J = r.useRef(V),
         $ = r.useRef(z),
         ee = r.useRef(W),
         et = r.useRef(q),
@@ -94,7 +94,7 @@ function b(e) {
             t = e - Q.current,
             n = J.current,
             i = $.current;
-        return ee.current && (F((n += t)), !et.current && Y((i += t))), V(e), [n, i];
+        return ee.current && (F((n += t)), !et.current && Y((i += t))), H(e), [n, i];
     }
     return (
         r.useEffect(() => {
@@ -133,60 +133,60 @@ function b(e) {
             [en]
         ),
         r.useEffect(() => {
-            (Q.current = B), (J.current = H), ($.current = z), (ee.current = W), (et.current = q);
-        }, [B, H, z, W, q]),
+            (Q.current = B), (J.current = V), ($.current = z), (ee.current = W), (et.current = q);
+        }, [B, V, z, W, q]),
         r.useEffect(
             () => () => {
                 if ('video' === l.type || 'embed' === l.type) {
                     let [e, t] = el();
                     f.default.track(I.rMx.CHANGE_LOG_VIDEO_PLAYED, {
-                        change_log_id: P,
+                        change_log_id: R,
                         seconds_played: Math.round(e / 1000)
                     }),
                         f.default.track(I.rMx.CHANGE_LOG_VIDEO_UNMUTE, {
-                            change_log_id: P,
+                            change_log_id: R,
                             seconds_unmuted: Math.round(t / 1000)
                         });
                 }
             },
-            [P, l.type]
+            [R, l.type]
         ),
         r.useEffect(() => {
             null != b && (0, p.kk)(b);
             let e = Date.now();
             return (
-                f.default.track(I.rMx.CHANGE_LOG_OPENED, { change_log_id: P }),
+                f.default.track(I.rMx.CHANGE_LOG_OPENED, { change_log_id: R }),
                 () => {
                     f.default.track(I.rMx.CHANGE_LOG_CLOSED, {
-                        change_log_id: P,
+                        change_log_id: R,
                         seconds_open: Math.round((Date.now() - e) / 1000)
                     }),
                         null != b && (0, p.EW)(b, { dismissAction: C.L.DISMISS });
                 }
             );
-        }, [b, P]),
+        }, [b, R]),
         (0, i.jsxs)(o.ModalRoot, {
-            className: a()(S.root, t),
+            className: a()(T.root, t),
             transitionState: w,
             'aria-labelledby': k,
             children: [
                 (0, i.jsx)(o.ModalCloseButton, {
-                    className: S.closeButton,
+                    className: T.closeButton,
                     onClick: M
                 }),
-                (0, i.jsx)(E.Z, { className: S.splash }),
+                (0, i.jsx)(E.Z, { className: T.splash }),
                 null == x ? void 0 : x(),
                 (0, i.jsxs)(o.ModalContent, {
-                    className: S.content,
+                    className: T.content,
                     children: [
                         (0, i.jsx)(o.Heading, {
                             variant: 'display-md',
-                            className: a()(S.headerText, L),
+                            className: a()(T.headerText, L),
                             children: Z
                         }),
                         'video' === l.type
                             ? (0, i.jsx)(m.Z, {
-                                  className: a()(S.video, T),
+                                  className: a()(T.video, S),
                                   autoPlay: !G,
                                   loop: !0,
                                   muted: !0,
@@ -195,7 +195,7 @@ function b(e) {
                                   src: l.src,
                                   poster: l.poster,
                                   onPlay: (e) => {
-                                      f.default.track(I.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: P }), V(Date.now()), K(!0), X(e.currentTarget.muted);
+                                      f.default.track(I.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: R }), H(Date.now()), K(!0), X(e.currentTarget.muted);
                                   },
                                   onEnded: (e) => {
                                       el(), X(e.currentTarget.muted), K(!1);
@@ -229,7 +229,7 @@ function b(e) {
                               })
                             : 'embed' === l.type
                               ? (0, i.jsx)(d.BC, {
-                                    className: a()(S.video, T),
+                                    className: a()(T.video, S),
                                     allowFullScreen: !1,
                                     href: l.href,
                                     thumbnail: l.thumbnail,
@@ -241,31 +241,31 @@ function b(e) {
                                     renderImageComponent: g.Yi,
                                     renderLinkComponent: g.iT,
                                     onPlay: () => {
-                                        f.default.track(I.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: P });
+                                        f.default.track(I.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: R });
                                     }
                                 })
                               : 'image' === l.type
                                 ? (0, i.jsx)('img', {
                                       alt: '',
-                                      className: a()(S.video, T),
+                                      className: a()(T.video, S),
                                       src: l.src
                                   })
                                 : null,
                         (0, i.jsxs)(o.Heading, {
                             variant: 'heading-lg/semibold',
-                            className: S.subHeader,
+                            className: T.subHeader,
                             children: [y, null == O ? void 0 : O()]
                         }),
                         null != D &&
                             (0, i.jsx)(o.Heading, {
                                 variant: 'heading-md/medium',
-                                className: S.bodyText,
+                                className: T.bodyText,
                                 children: D
                             }),
-                        R.length > 0 &&
+                        P.length > 0 &&
                             (0, i.jsx)('div', {
-                                className: a()(S.featureCardGroup, { [S.wideStyle]: U }),
-                                children: R.map((e, t) =>
+                                className: a()(T.featureCardGroup, { [T.wideStyle]: U }),
+                                children: P.map((e, t) =>
                                     (0, i.jsx)(
                                         A,
                                         {

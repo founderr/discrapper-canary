@@ -7,7 +7,7 @@ var i = n(200651);
 n(192379);
 var r = n(481060),
     l = n(812206),
-    a = n(486003);
+    a = n(531826);
 function s(e) {
     let { applicationId: t, channelId: s, mediaUrl: o } = e,
         c = l.Z.getApplication(t),

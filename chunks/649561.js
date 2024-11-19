@@ -14,8 +14,8 @@ var i = n(200651),
     g = n(797614),
     m = n(593481),
     v = n(703656),
-    E = n(254761),
-    _ = n(70956),
+    _ = n(254761),
+    E = n(70956),
     x = n(960048),
     Z = n(145597),
     S = n(692546),
@@ -37,7 +37,7 @@ function b(e, t, n) {
         e
     );
 }
-let O = 10 * _.Z.Millis.SECOND;
+let O = 10 * E.Z.Millis.SECOND;
 function A() {
     let e = (0, Z.QF)(),
         t = (0, Z.Ht)();
@@ -54,7 +54,7 @@ function A() {
         ]
     });
 }
-class L extends r.PureComponent {
+class j extends r.PureComponent {
     componentDidMount() {
         (this.notificationTimer = setTimeout(this.hideNotification, O)), p.Z.track(y.rMx.NOTIFICATION_VIEWED, { notif_type: C.n0.OverlayCrashed });
     }
@@ -79,7 +79,7 @@ class L extends r.PureComponent {
                               children: [
                                   (0, i.jsx)(m.ZP, {
                                       expand: !0,
-                                      icon: (0, i.jsx)(E.Z, {
+                                      icon: (0, i.jsx)(_.Z, {
                                           width: 40,
                                           height: 40,
                                           className: T.notificationIcon
@@ -143,7 +143,7 @@ class L extends r.PureComponent {
             });
     }
 }
-let j = o().throttle(
+let L = o().throttle(
     () => {
         g.Z.increment(
             {
@@ -191,13 +191,13 @@ class P extends r.PureComponent {
             sentry_issue_id: s,
             error_level: 'fatal'
         }),
-            j();
+            L();
     }
     render() {
         let { children: e, className: t } = this.props,
             { error: n, info: r } = this.state;
         return null != n
-            ? (0, i.jsx)(L, {
+            ? (0, i.jsx)(j, {
                   error: n,
                   info: r
               })

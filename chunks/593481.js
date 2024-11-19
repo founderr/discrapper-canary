@@ -3,7 +3,7 @@ n.d(t, {
         return v;
     },
     Yj: function () {
-        return E;
+        return _;
     },
     iz: function () {
         return m;
@@ -57,12 +57,12 @@ let f = (e) => e.stopPropagation(),
                     )
             })
         }),
-    E = (e, t) =>
+    _ = (e, t) =>
         (0, r.jsx)('div', {
             className: u.hintSubtleText,
             children: t
         });
-class _ extends (i = s.PureComponent) {
+class E extends (i = s.PureComponent) {
     static getDerivedStateFromProps(e, t) {
         let { expand: n } = e,
             { expanded: i } = t;
@@ -272,9 +272,9 @@ class _ extends (i = s.PureComponent) {
         this.state = { expanded: t };
     }
 }
-p(_, 'defaultProps', {
+p(E, 'defaultProps', {
     maxBodyLines: void 0,
     expand: !1,
     disabled: !1
 }),
-    (t.ZP = _);
+    (t.ZP = E);

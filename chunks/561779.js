@@ -108,10 +108,10 @@ class T extends (i = o.PureComponent) {
     render() {
         var e;
         let { value: t, active: n, focused: r, sortedMarkers: i, markerPositions: a, closestMarkerIndex: o, newClosestIndex: l, min: c, max: d } = this.state,
-            { disabled: _, stickToMarkers: p, className: E, children: b, barStyles: I, fillStyles: S, mini: T, hideBubble: A, defaultValue: N, orientation: C, onValueRender: R, renderMarker: O, getAriaValueText: D, barClassName: L, grabberClassName: x, grabberStyles: w = {}, markerPosition: M = 0, 'aria-hidden': P, 'aria-label': k, 'aria-labelledby': U, 'aria-describedby': B } = this.props,
-            G = 0;
-        p ? null != a && (null != l ? (G = a[l]) : null != o && (G = a[o])) : (G = this.scaleValue(t));
-        let Z = ''.concat(G, '%'),
+            { disabled: _, stickToMarkers: p, className: E, children: b, barStyles: I, fillStyles: S, mini: T, hideBubble: A, defaultValue: N, orientation: C, onValueRender: R, renderMarker: O, getAriaValueText: D, barClassName: L, grabberClassName: x, grabberStyles: w = {}, markerPosition: M = 0, 'aria-hidden': P, 'aria-label': k, 'aria-labelledby': U, 'aria-describedby': G } = this.props,
+            B = 0;
+        p ? null != a && (null != l ? (B = a[l]) : null != o && (B = a[o])) : (B = this.scaleValue(t));
+        let Z = ''.concat(B, '%'),
             F =
                 null != a && null != i
                     ? a.map((e, t) => {
@@ -144,7 +144,7 @@ class T extends (i = o.PureComponent) {
                           );
                       })
                     : null,
-            V = null != R ? R(t) : ''.concat(G.toFixed(0), '%'),
+            V = null != R ? R(t) : ''.concat(B.toFixed(0), '%'),
             j = null !== (e = null == D ? void 0 : D(t)) && void 0 !== e ? e : void 0;
         return (0, s.jsx)(y, {
             active: n,
@@ -169,7 +169,7 @@ class T extends (i = o.PureComponent) {
                         'aria-hidden': P,
                         'aria-label': k,
                         'aria-labelledby': U,
-                        'aria-describedby': B,
+                        'aria-describedby': G,
                         'aria-valuetext': j,
                         role: 'slider',
                         tabIndex: 0,

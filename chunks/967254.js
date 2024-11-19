@@ -15,8 +15,8 @@ var i = n(200651),
     d = n(626135),
     _ = n(709054),
     E = n(219230),
-    S = n(531441),
-    g = n(236289),
+    g = n(531441),
+    S = n(236289),
     f = n(788080),
     p = n(467432),
     m = n(451284),
@@ -94,7 +94,7 @@ let v = (t) => {
                 })
             ]
         }),
-    C = () =>
+    b = () =>
         (0, i.jsx)('div', {
             className: I.emptyState,
             children: (0, i.jsx)(o.Text, {
@@ -103,7 +103,7 @@ let v = (t) => {
                 children: x.intl.string(x.t.RV3AXV)
             })
         }),
-    b = (t) => {
+    C = (t) => {
         let { timestamp: e } = t;
         return (0, i.jsx)(o.Text, {
             variant: 'text-xs/normal',
@@ -123,7 +123,7 @@ let v = (t) => {
             c = _.default.extractTimestamp(l),
             u = (0, p.e)(e),
             d = (0, E.B)('violations_container'),
-            g = a.useMemo(() => {
+            S = a.useMemo(() => {
                 var t, n, a;
                 let l = {
                     description: r,
@@ -135,7 +135,7 @@ let v = (t) => {
                         })
                 };
                 if (!(d && (0, f.FB)(e))) return x.intl.format(x.t.QY4g5u, l);
-                return (null == e ? void 0 : null === (t = e.guild_metadata) || void 0 === t ? void 0 : t.member_type) === S.wO.OWNER
+                return (null == e ? void 0 : null === (t = e.guild_metadata) || void 0 === t ? void 0 : t.member_type) === g.wO.OWNER
                     ? x.intl.format(x.t.Lb0HVl, {
                           ...l,
                           guildName: null == e ? void 0 : null === (n = e.guild_metadata) || void 0 === n ? void 0 : n.name
@@ -151,7 +151,7 @@ let v = (t) => {
             {
                 onClick: () => {
                     (0, o.openModalLazy)(async () => {
-                        let { default: t } = await Promise.all([n.e('40216'), n.e('25183'), n.e('46097'), n.e('18831'), n.e('75589')]).then(n.bind(n, 41164));
+                        let { default: t } = await Promise.all([n.e('72181'), n.e('25183'), n.e('46097'), n.e('18831'), n.e('75589')]).then(n.bind(n, 41164));
                         return (e) =>
                             (0, i.jsx)(t, {
                                 classificationId: l,
@@ -164,10 +164,10 @@ let v = (t) => {
                 children: (0, i.jsxs)('div', {
                     className: I.descriptionContainer,
                     children: [
-                        u ? (0, i.jsx)(U, {}) : (0, i.jsx)(b, { timestamp: c }),
+                        u ? (0, i.jsx)(U, {}) : (0, i.jsx)(C, { timestamp: c }),
                         (0, i.jsx)(o.Heading, {
                             variant: 'heading-lg/normal',
-                            children: g
+                            children: S
                         })
                     ]
                 })
@@ -180,20 +180,20 @@ let v = (t) => {
             [l, s] = a.useState(!1),
             [c, u] = a.useState(3),
             _ = (0, m.P)(),
-            E = (0, r.e7)([g.Z], () => g.Z.getIsDsaEligible()),
-            S = a.useMemo(() => n.slice(0, c), [n, c]);
+            E = (0, r.e7)([S.Z], () => S.Z.getIsDsaEligible()),
+            g = a.useMemo(() => n.slice(0, c), [n, c]);
         a.useEffect(() => {
             l &&
                 d.default.track(A.rMx.SAFETY_HUB_ACTION, {
                     action: T.n0.ViewViolationsDropdown,
                     account_standing: _.state,
-                    classification_ids: S.map((t) => Number(t.id)),
+                    classification_ids: g.map((t) => Number(t.id)),
                     source: T.s.StandingTab,
                     is_violative_content_shown: !1,
                     is_dsa_eligible: E
                 });
-        }, [l, _.state, S, E]);
-        let f = n.length - S.length > 3 ? 3 : n.length - S.length;
+        }, [l, _.state, g, E]);
+        let f = n.length - g.length > 3 ? 3 : n.length - g.length;
         return (0, i.jsxs)('div', {
             className: I.dropdown,
             children: [
@@ -213,8 +213,8 @@ let v = (t) => {
                                     width: '100%'
                                 }
                             }),
-                            S.length > 0 && S.map((t) => (0, i.jsx)(j, { classification: t }, t.id)),
-                            S.length < n.length &&
+                            g.length > 0 && g.map((t) => (0, i.jsx)(j, { classification: t }, t.id)),
+                            g.length < n.length &&
                                 (0, i.jsxs)(i.Fragment, {
                                     children: [
                                         (0, i.jsx)(o.TabBar.Separator, {
@@ -230,8 +230,8 @@ let v = (t) => {
                                         })
                                     ]
                                 }),
-                            0 === S.length && 'active' === e && (0, i.jsx)(N, {}),
-                            0 === S.length && 'expired' === e && (0, i.jsx)(C, {})
+                            0 === g.length && 'active' === e && (0, i.jsx)(N, {}),
+                            0 === g.length && 'expired' === e && (0, i.jsx)(b, {})
                         ]
                     })
             ]

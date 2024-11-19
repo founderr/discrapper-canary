@@ -19,7 +19,7 @@ async function a(e) {
                 url: s.ANM.GUILD_DISCOVERY,
                 query: i.stringify({ guild_ids: e }),
                 oldFormErrors: !0,
-                rejectWithError: !1
+                rejectWithError: !0
             })
         ).body;
         l.Z.dispatch({

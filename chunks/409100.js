@@ -11,7 +11,7 @@ var r = n(780384),
     g = n(474936),
     m = n(388032),
     f = n(298974);
-let _ = (e) => {
+let p = (e) => {
         let { showTrialCTA: t, subscriptionTier: n, shouldShowUpsells: i, trialDurationCopy: r, isPersistentCTA: a, shouldShowReferralTrialCopy: s, subscriptionTrial: o } = e;
         if (t && s) return m.intl.string(m.t.bXTClZ);
         if (t && (n === g.Si.TIER_2 || a))
@@ -22,7 +22,7 @@ let _ = (e) => {
         if (t) return m.intl.formatToPlainString(m.t.nTmm2t, { freeTrialText: r });
         else if (i && n === g.Si.TIER_2) return m.intl.string(m.t.MtTjnZ);
     },
-    p = (e, t, n, i) => (t || n ? m.intl.string(m.t.fkPGam) : e === g.Si.TIER_2 ? m.intl.formatToPlainString(m.t.bkQ4bG, { percent: i }) : void 0);
+    _ = (e, t, n, i) => (t || n ? m.intl.string(m.t.fkPGam) : e === g.Si.TIER_2 ? m.intl.formatToPlainString(m.t.bkQ4bG, { percent: i }) : void 0);
 t.Z = (e) => {
     let { forceInverted: t, subscriptionTier: n, isEligibleForBogoPromotion: h = !1, isPersistentCTA: E = !1, useShorterCTA: b = !1, ...x } = e,
         C = (0, s.ZP)(),
@@ -40,8 +40,8 @@ t.Z = (e) => {
         P = h
             ? m.intl.string(m.t.J61px8)
             : null != S
-              ? p(n, b, E, S.discount.amount)
-              : _({
+              ? _(n, b, E, S.discount.amount)
+              : p({
                     showTrialCTA: R,
                     subscriptionTier: n,
                     shouldShowUpsells: !1,

@@ -1,16 +1,16 @@
-function n() {
+function r() {
     return {
-        get: (e, t, r = { miss: () => Promise.resolve() }) =>
+        get: (e, t, n = { miss: () => Promise.resolve() }) =>
             t()
-                .then((e) => Promise.all([e, r.miss(e)]))
+                .then((e) => Promise.all([e, n.miss(e)]))
                 .then(([e]) => e),
         set: (e, t) => Promise.resolve(t),
         delete: (e) => Promise.resolve(),
         clear: () => Promise.resolve()
     };
 }
-r.d(t, {
+n.d(t, {
     A: function () {
-        return n;
+        return r;
     }
 });

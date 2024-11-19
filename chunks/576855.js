@@ -1,34 +1,34 @@
-var i,
-    r,
+var r,
+    i,
+    u,
     l,
-    o,
-    a = n(200651),
-    s = n(192379),
-    u = n(120356),
-    c = n.n(u),
-    d = n(481060),
-    h = n(388032),
-    f = n(275906);
-let p = {
-    BLOCK: f.block,
-    INLINE: f.inline
+    s = n(200651),
+    o = n(192379),
+    a = n(120356),
+    d = n.n(a),
+    c = n(481060),
+    E = n(388032),
+    S = n(275906);
+let _ = {
+    BLOCK: S.block,
+    INLINE: S.inline
 };
-class m extends (o = s.PureComponent) {
+class f extends (l = o.PureComponent) {
     render() {
-        let { children: e, className: t, textClassName: n, type: i = p.BLOCK, style: r } = this.props;
-        return (0, a.jsxs)('div', {
-            className: c()(t, i),
-            style: r,
+        let { children: e, className: t, textClassName: n, type: r = _.BLOCK, style: i } = this.props;
+        return (0, s.jsxs)('div', {
+            className: d()(t, r),
+            style: i,
             children: [
-                (0, a.jsxs)(d.Text, {
+                (0, s.jsxs)(c.Text, {
                     variant: 'text-sm/bold',
                     tag: 'div',
                     color: 'text-positive',
-                    className: f.pro,
-                    children: [h.intl.string(h.t['8tvIiI']), ':']
+                    className: S.pro,
+                    children: [E.intl.string(E.t['8tvIiI']), ':']
                 }),
-                (0, a.jsx)(d.Text, {
-                    className: c()(f.tip, n),
+                (0, s.jsx)(c.Text, {
+                    className: d()(S.tip, n),
                     variant: 'text-sm/normal',
                     children: e
                 })
@@ -36,15 +36,15 @@ class m extends (o = s.PureComponent) {
         });
     }
 }
-(i = m),
-    (r = 'Types'),
-    (l = p),
-    r in i
-        ? Object.defineProperty(i, r, {
-              value: l,
+(r = f),
+    (i = 'Types'),
+    (u = _),
+    i in r
+        ? Object.defineProperty(r, i, {
+              value: u,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[r] = l),
-    (t.Z = m);
+        : (r[i] = u),
+    (t.Z = f);

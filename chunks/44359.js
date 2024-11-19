@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var r = n(120356),
-    l = n.n(r),
+var l = n(120356),
+    r = n.n(l),
     o = n(885870);
 function a(e) {
     let { keybind: t, className: n } = e;
@@ -15,7 +15,7 @@ function a(e) {
             (0, i.jsx)(
                 'span',
                 {
-                    className: l()(o.key, n),
+                    className: r()(o.key, n),
                     children: e
                 },
                 t

@@ -11,7 +11,7 @@ async function s() {
     try {
         let e = await r.tn.post({
             url: a.ANM.TENURE_REWARD_SYNC,
-            rejectWithError: !1
+            rejectWithError: !0
         });
         i.Z.dispatch({
             type: 'USER_TENURE_REWARD_SYNC_SUCCESS',

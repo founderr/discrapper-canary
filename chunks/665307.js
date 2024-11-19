@@ -24,9 +24,9 @@ var i,
     I = n(925329),
     C = n(707409),
     v = n(490983),
-    S = n(799777),
+    T = n(799777),
     N = n(626135),
-    T = n(780570),
+    S = n(780570),
     A = n(624138),
     b = n(645818),
     x = n(981631),
@@ -46,8 +46,8 @@ function y(e, t, n) {
     );
 }
 let O = (0, A.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
-    R = (0, A.Mg)(u.Z.GAME_LIST_LINKED_TO_GLOW_DURATION),
-    P = Object.freeze({
+    P = (0, A.Mg)(u.Z.GAME_LIST_LINKED_TO_GLOW_DURATION),
+    R = Object.freeze({
         [x.iEv.PLATFORM]: 'Platform',
         [x.iEv.LAST_PLAYED]: 'Last Played',
         [x.iEv.NAME]: 'Name'
@@ -176,9 +176,9 @@ let O = (0, A.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
                                 })
                             ]
                         }),
-                        (0, T.Je)(e.libraryApplication)
+                        (0, S.Je)(e.libraryApplication)
                             ? (0, r.jsx)(f.Z, {
-                                  analyticsListSort: ((i = t.sortKey), (a = t.sortDirection), ''.concat(P[i], ' ').concat(a === x.sHY.ASCENDING ? 'ASC' : 'DESC')),
+                                  analyticsListSort: ((i = t.sortKey), (a = t.sortDirection), ''.concat(R[i], ' ').concat(a === x.sHY.ASCENDING ? 'ASC' : 'DESC')),
                                   analyticsListIndex: n,
                                   source: x.Sbl.APPLICATION_LIBRARY,
                                   libraryApplication: e.libraryApplication,
@@ -234,7 +234,7 @@ class w extends (i = l.PureComponent) {
         null != e &&
             null != this._rowRefs[e] &&
             (this.props.scrollToRow(this._rowRefs[e], O),
-            new d.V7().start(R, () => {
+            new d.V7().start(P, () => {
                 !this._didUnmount && this.setState({ highlightedApplicationKey: null });
             }));
     }
@@ -422,11 +422,11 @@ function k(e) {
             sortDirection: u,
             activeRowKey: h,
             isNavigatingByKeyboard: m
-        } = (0, c.cj)([S.Z], () => ({
-            sortKey: S.Z.sortKey,
-            sortDirection: S.Z.sortDirection,
-            activeRowKey: S.Z.activeRowKey,
-            isNavigatingByKeyboard: S.Z.isNavigatingByKeyboard
+        } = (0, c.cj)([T.Z], () => ({
+            sortKey: T.Z.sortKey,
+            sortDirection: T.Z.sortDirection,
+            activeRowKey: T.Z.activeRowKey,
+            isNavigatingByKeyboard: T.Z.isNavigatingByKeyboard
         }));
     return (0, r.jsx)(w, {
         ...e,

@@ -93,7 +93,7 @@ async function g(e) {
                     locale: o.default.locale,
                     nocache: c
                 },
-                rejectWithError: !1
+                rejectWithError: !0
             });
             s.Z.dispatch({
                 type: 'APPLICATION_DIRECTORY_FETCH_APPLICATION_SUCCESS',
@@ -154,7 +154,7 @@ async function v(e) {
                     page: l,
                     locale: o.default.locale
                 },
-                rejectWithError: !1
+                rejectWithError: !0
             });
             s.Z.dispatch({
                 type: 'APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS_SUCCESS',
@@ -232,7 +232,7 @@ async function b(e) {
                     exclude_embedded_apps_without_primary_entry_point_app_command: v,
                     source: b
                 },
-                rejectWithError: !1
+                rejectWithError: !0
             });
             s.Z.dispatch({
                 type: 'APPLICATION_DIRECTORY_FETCH_SEARCH_SUCCESS',
@@ -292,7 +292,7 @@ async function I() {
                     includes_inactive: e,
                     locale: o.default.locale
                 },
-                rejectWithError: !1
+                rejectWithError: !0
             });
             s.Z.dispatch({
                 type: 'APPLICATION_DIRECTORY_FETCH_COLLECTIONS_SUCCESS',

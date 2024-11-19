@@ -34,9 +34,9 @@ async function C() {
         v(!1),
         (_ = setTimeout(
             () => {
-                S(),
+                T(),
                     (f = setInterval(() => {
-                        S();
+                        T();
                     }, 15 * d.Z.Millis.MINUTE));
             },
             Math.max(n, 0)
@@ -46,7 +46,7 @@ function v() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     null != _ && (clearTimeout(_), (_ = null)), null != f && (clearInterval(f), (f = null)), null != E && e && (h.Z.addBreadcrumb({ message: 'Heartbeat correctly scheduled. Clearing 10s check timeout' }), clearTimeout(E), (E = null));
 }
-async function S() {
+async function T() {
     let e = Date.now(),
         t = await (0, m.Gg)(),
         n = Date.now();
@@ -77,9 +77,9 @@ async function S() {
     c.default.track(p.rMx.CLIENT_HEARTBEAT, r), i.K.set(g, Date.now().toString()), (0, l.Z)();
 }
 let N = null,
-    T = !0;
+    S = !0;
 function A() {
-    if (T || (null != N && N !== p.hes.DISCONNECTED && N !== p.hes.RTC_DISCONNECTED))
+    if (S || (null != N && N !== p.hes.DISCONNECTED && N !== p.hes.RTC_DISCONNECTED))
         try {
             C();
         } catch (e) {
@@ -94,7 +94,7 @@ function b() {
     h.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), o.Z.addChangeListener(Z), r.Z.subscribe('WINDOW_FOCUS', L), r.Z.subscribe('APP_STATE_UPDATE', y), r.Z.subscribe('LOGIN_SUCCESS', x), A();
 }
 function x() {
-    S();
+    T();
 }
 function Z() {
     let e = o.Z.getState();
@@ -102,9 +102,9 @@ function Z() {
 }
 function L(e) {
     let { focused: t } = e;
-    (T = t), A();
+    (S = t), A();
 }
 function y(e) {
     let { state: t } = e;
-    (T = t === p.$7l.ACTIVE), A();
+    (S = t === p.$7l.ACTIVE), A();
 }

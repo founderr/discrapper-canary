@@ -21,9 +21,9 @@ var r = n(704215),
 function _(e) {
     var t, n;
     let { content: _, renderModalProps: E, analyticsLocations: I, analyticsLocation: C, isLightTheme: v } = e,
-        S = 'AnnouncementModalVariant1_'.concat(r.z[Number(_.dismissKey)]),
+        T = 'AnnouncementModalVariant1_'.concat(r.z[Number(_.dismissKey)]),
         { onClose: N } = E,
-        T = null != _.button && '' !== _.button.copy ? _.button.copy : p.intl.string(p.t.YScQSE),
+        S = null != _.button && '' !== _.button.copy ? _.button.copy : p.intl.string(p.t.YScQSE),
         A = (null === (t = _.button) || void 0 === t ? void 0 : t.buttonAction) === l.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button',
         b =
             (null === (n = _.button) || void 0 === n ? void 0 : n.buttonAction) === l.Wc.OPEN_MARKETING_PAGE
@@ -96,7 +96,7 @@ function _(e) {
             imageSrc: v ? e.imageLinkLightTheme : e.imageLink,
             tagText: '' !== e.pill ? e.pill : void 0
         })),
-        changeLogId: S,
+        changeLogId: T,
         button: () => {
             let e = Date.now();
             return (0, i.jsxs)(a.ShinyButton, {
@@ -106,10 +106,10 @@ function _(e) {
                 size: a.Button.Sizes.SMALL,
                 onClick: () => {
                     c.default.track(m.rMx.CHANGE_LOG_CTA_CLICKED, {
-                        change_log_id: S,
+                        change_log_id: T,
                         cta_type: A,
                         seconds_open: Math.round((Date.now() - e) / 1000),
-                        target: S
+                        target: T
                     }),
                         b();
                 },
@@ -119,7 +119,7 @@ function _(e) {
                         className: g.nitroIconSubHeader,
                         src: f
                     }),
-                    T
+                    S
                 ]
             });
         },

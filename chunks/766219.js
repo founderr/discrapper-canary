@@ -21,8 +21,8 @@ function a(e) {
             (0, i.vE)(e);
     }
 }
-function s(e, t) {
-    if (e.startsWith('/discovery/applications') && t) return r.F$.APPS;
+function s(e) {
+    if (e.startsWith('/discovery/applications')) return r.F$.APPS;
     switch (e) {
         case '/discovery/quests':
             return r.F$.QUESTS;

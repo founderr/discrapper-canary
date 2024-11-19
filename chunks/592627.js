@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return _;
     }
 });
 var i = n(200651);
@@ -16,11 +16,11 @@ var l = n(481060),
     c = n(474936),
     p = n(388032),
     x = n(111225);
-function h(e) {
+function _(e) {
     let { onClose: t, halloweenDecoPurchase: n } = e,
-        { selectedPlan: h } = (0, d.usePaymentContext)(),
-        { analyticsLocations: _ } = (0, s.ZP)();
-    return (0, a.Z)({ location: 'Gift purchase confirmation' }) && (null == h ? void 0 : h.skuId) === c.Si.TIER_2 && null != n
+        { selectedPlan: _ } = (0, d.usePaymentContext)(),
+        { analyticsLocations: h } = (0, s.ZP)();
+    return (0, a.Z)({ location: 'Gift purchase confirmation' }) && (null == _ ? void 0 : _.skuId) === c.Si.TIER_2 && null != n
         ? (0, i.jsx)(u.O3, {
               children: (0, i.jsx)(l.ModalFooter, {
                   align: C.Z.Align.CENTER,
@@ -33,7 +33,7 @@ function h(e) {
                                   t(),
                                       (0, r.Z)({
                                           product: n,
-                                          analyticsLocations: _
+                                          analyticsLocations: h
                                       });
                               },
                               children: p.intl.string(p.t.kMYVws)

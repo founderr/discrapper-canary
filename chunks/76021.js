@@ -24,7 +24,7 @@ function v(e, t, v) {
     let b = l.Z.getWindowOpen(g.KJ3.CHANNEL_CALL_POPOUT) ? g.KJ3.CHANNEL_CALL_POPOUT : null;
     if (((0, o.Z)(b), m.isPlatformEmbedded))
         (0, i.openModalLazy)(async () => {
-            let { default: t } = await Promise.all([n.e('63288'), n.e('77298'), n.e('23357'), n.e('29549'), n.e('12013'), n.e('52249'), n.e('14627'), n.e('31605'), n.e('26182'), n.e('95900'), n.e('32776'), n.e('87624'), n.e('88449'), n.e('57674'), n.e('35886'), n.e('46746'), n.e('23413')]).then(n.bind(n, 60594));
+            let { default: t } = await Promise.all([n.e('63288'), n.e('77298'), n.e('23357'), n.e('29549'), n.e('12013'), n.e('52249'), n.e('14627'), n.e('31605'), n.e('26182'), n.e('95900'), n.e('32776'), n.e('87624'), n.e('88449'), n.e('57674'), n.e('46746'), n.e('84980')]).then(n.bind(n, 60594));
             return (n) =>
                 (0, r.jsx)(t, {
                     ...n,

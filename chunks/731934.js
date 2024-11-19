@@ -11,8 +11,8 @@ var i = n(200651),
     g = n(863653),
     m = n(785681),
     f = n(485664),
-    _ = n(880257),
-    p = n(631885),
+    p = n(880257),
+    _ = n(631885),
     h = n(895328),
     E = n(568671),
     b = n(419821),
@@ -107,7 +107,7 @@ function j() {
     });
 }
 function P() {
-    let e = (0, p.VM)();
+    let e = (0, _.VM)();
     return (0, i.jsxs)('div', {
         className: s()(I.box, I.linkingBanner),
         children: [
@@ -210,8 +210,8 @@ function Z(e) {
     });
 }
 let O = () => {
-        let e = (0, _.Z)(),
-            t = (0, p.mq)(v.ne.ACTIVE),
+        let e = (0, p.Z)(),
+            t = (0, _.mq)(v.ne.ACTIVE),
             n = e ? v.AG : v.i0,
             r = {
                 count: t.length,
@@ -244,8 +244,8 @@ let O = () => {
         });
     },
     M = () => {
-        let e = (0, p.VM)(),
-            t = (0, _.Z)() ? v.AG : v.i0,
+        let e = (0, _.VM)(),
+            t = (0, p.Z)() ? v.AG : v.i0,
             n = (0, m.o)(N.intl.formatToPlainString(N.t['1/PzIi'], { maxConnections: t }), N.intl.formatToPlainString(N.t.RcTgiI, { maxConnections: t }));
         return e
             ? (0, i.jsx)('div', {
@@ -287,7 +287,7 @@ let O = () => {
               });
     },
     w = () => {
-        let e = (0, p.mq)(v.ne.PENDING),
+        let e = (0, _.mq)(v.ne.PENDING),
             t = (0, m.o)(N.intl.formatToPlainString(N.t.IkAgkJ, { count: e.length }), N.intl.formatToPlainString(N.t.Q8XnAQ, { count: e.length }));
         return 0 === e.length
             ? null
@@ -298,7 +298,7 @@ let O = () => {
               });
     };
 t.Z = () => {
-    let e = (0, _.Z)();
+    let e = (0, p.Z)();
     return (0, i.jsxs)('div', {
         className: I.container,
         children: [e ? (0, i.jsx)(j, {}) : (0, i.jsx)(P, {}), (0, i.jsx)(O, {}), (0, i.jsx)(w, {}), (0, i.jsx)(M, {}), (0, i.jsx)(B, {})]

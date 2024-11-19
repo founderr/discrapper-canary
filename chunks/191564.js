@@ -97,8 +97,8 @@ function b(e) {
         { product: b, purchase: S } = (0, f.Z)(null == Z ? void 0 : Z.skuId),
         T = r.useRef(null),
         A = C.ZP.canUseCollectibles(t),
-        B = x === (void 0 === p ? (null != d ? d : null) : p),
-        k = r.useCallback(
+        k = x === (void 0 === p ? (null != d ? d : null) : p),
+        B = r.useCallback(
             (e) => {
                 I(e);
             },
@@ -128,7 +128,7 @@ function b(e) {
                         guild: n,
                         pendingProfileEffect: x,
                         selectedProfileEffectRef: T,
-                        onSelect: k,
+                        onSelect: B,
                         onClose: a
                     }),
                     (0, i.jsx)(j.Z, {
@@ -152,7 +152,7 @@ function b(e) {
                 canUseCollectibles: A,
                 selectedProfileEffectId: x,
                 selectedProfileEffectItem: Z,
-                disableApplyButton: B,
+                disableApplyButton: k,
                 analyticsLocations: m
             })
         ]

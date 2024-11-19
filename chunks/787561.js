@@ -77,7 +77,7 @@ let R = 'dismissedCommunityFeaturesUpsell',
             o.tn
                 .get({
                     url: T.ANM.GUILD_ADMIN_SERVER_ELIGIBILITY(l.id),
-                    rejectWithError: !1
+                    rejectWithError: !0
                 })
                 .then((e) => {
                     f(e.body.eligible_for_admin_server);
@@ -92,7 +92,7 @@ let R = 'dismissedCommunityFeaturesUpsell',
                 let e = await o.tn.post({
                     url: T.ANM.JOIN_ADMIN_SERVER(l.id),
                     oldFormErrors: !0,
-                    rejectWithError: !1
+                    rejectWithError: !0
                 });
                 _.Z.close(), (0, h.X)(e.body.id);
             } catch {}

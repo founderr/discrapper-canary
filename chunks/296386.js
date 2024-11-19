@@ -79,7 +79,7 @@ async function c(e) {
                 await r.tn.get({
                     url: l.ANM.GUILD_DISCOVERY_METADATA(e),
                     oldFormErrors: !0,
-                    rejectWithError: !1
+                    rejectWithError: !0
                 })
             ).body,
             h = {
@@ -111,7 +111,7 @@ async function u(e) {
         let t = (
             await r.tn.get({
                 url: l.ANM.GUILD_DISCOVERY_SLUG(e),
-                rejectWithError: !1
+                rejectWithError: !0
             })
         ).body.slug;
         i.Z.dispatch({

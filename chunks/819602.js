@@ -13,8 +13,8 @@ n.d(t, {
 var c = n(200651),
     l = n(192379),
     r = n(120356),
-    o = n.n(r),
-    a = n(692547),
+    a = n.n(r),
+    o = n(692547),
     i = n(780384),
     u = n(481060),
     s = n(99690),
@@ -27,8 +27,8 @@ var c = n(200651),
     _ = n(888496),
     I = n(753194),
     N = n(598077),
-    f = n(671533),
-    h = n(49012),
+    h = n(671533),
+    f = n(49012),
     C = n(981631),
     O = n(856651),
     v = n(388032),
@@ -42,7 +42,7 @@ function P(e) {
     null == R && (R = !0);
     let S = null !== (n = E.metadata) && void 0 !== n ? n : {},
         b = R ? (0, m.FI)(S[O.PC.CREATED_AT], N) : null,
-        D = (0, u.useToken)(a.Z.unsafe_rawColors.TWITTER).hex(),
+        D = (0, u.useToken)(o.Z.unsafe_rawColors.TWITTER).hex(),
         y = v.intl.string(v.t['6H6h1t']);
     if (R)
         switch (E.type) {
@@ -64,17 +64,17 @@ function P(e) {
             case C.ABu.TIKTOK:
                 l = (0, _.hf)(S);
         }
-    let U = d.Z.get((0, p.rR)(E.type)),
-        j = null == U ? void 0 : null === (t = U.getPlatformUserUrl) || void 0 === t ? void 0 : t.call(U, E);
+    let j = d.Z.get((0, p.rR)(E.type)),
+        U = null == j ? void 0 : null === (t = j.getPlatformUserUrl) || void 0 === t ? void 0 : t.call(j, E);
     null != g && g
         ? (s = (0, c.jsx)(u.EyeSlashIcon, {
               size: 'md',
               color: 'currentColor',
-              className: o()(x.__invalid_connectedAccountOpenIconContainer, x.connectedAccountHideIcon)
+              className: a()(x.__invalid_connectedAccountOpenIconContainer, x.connectedAccountHideIcon)
           }))
-        : null != j &&
+        : null != U &&
           (s = (0, c.jsx)(u.Anchor, {
-              href: j,
+              href: U,
               onClick: (e) => {
                   var t, n;
                   (t = E.type),
@@ -83,44 +83,44 @@ function P(e) {
                           platform_type: t,
                           other_user_id: n
                       }),
-                      (0, h.q)(
+                      (0, f.q)(
                           {
-                              href: j,
-                              trusted: (null == U ? void 0 : U.type) !== C.ABu.DOMAIN
+                              href: U,
+                              trusted: (null == j ? void 0 : j.type) !== C.ABu.DOMAIN
                           },
                           e
                       );
               },
-              children: (0, c.jsx)(f.Z, {
+              children: (0, c.jsx)(h.Z, {
                   className: x.connectedAccountOpenIcon,
-                  direction: f.Z.Directions.RIGHT
+                  direction: h.Z.Directions.RIGHT
               })
           }));
-    let w = (0, u.useToken)(a.Z.colors.INTERACTIVE_MUTED).hex(),
-        M = (0, u.useToken)(a.Z.colors.INTERACTIVE_ACTIVE).hex(),
-        V = E.verified
+    let w = (0, u.useToken)(o.Z.colors.INTERACTIVE_MUTED).hex(),
+        V = (0, u.useToken)(o.Z.colors.INTERACTIVE_ACTIVE).hex(),
+        M = E.verified
             ? (0, c.jsx)(I.Z, {
                   className: x.connectedAccountVerifiedIcon,
                   color: null != r ? r : w,
-                  forcedIconColor: M,
+                  forcedIconColor: V,
                   size: 16,
                   tooltipText: y
               })
             : null;
     return (0, c.jsxs)('div', {
-        className: o()(x.connectedAccountContainer, (null != l && l.length > 0) || null != b ? x.connectedAccountContainerWithMetadata : null, L),
+        className: a()(x.connectedAccountContainer, (null != l && l.length > 0) || null != b ? x.connectedAccountContainerWithMetadata : null, L),
         children: [
             (0, c.jsxs)('div', {
                 className: x.connectedAccount,
                 children: [
                     (0, c.jsx)(u.Tooltip, {
-                        text: null == U ? void 0 : U.name,
+                        text: null == j ? void 0 : j.name,
                         children: (e) =>
                             (0, c.jsx)('img', {
                                 ...e,
-                                alt: v.intl.formatToPlainString(v.t.rtm15O, { name: null == U ? void 0 : U.name }),
+                                alt: v.intl.formatToPlainString(v.t.rtm15O, { name: null == j ? void 0 : j.name }),
                                 className: x.connectedAccountIcon,
-                                src: (0, i.wj)(A) ? (null == U ? void 0 : U.icon.darkSVG) : null == U ? void 0 : U.icon.lightSVG
+                                src: (0, i.wj)(A) ? (null == j ? void 0 : j.icon.darkSVG) : null == j ? void 0 : j.icon.lightSVG
                             })
                     }),
                     (0, c.jsxs)('div', {
@@ -144,7 +144,7 @@ function P(e) {
                                                         children: E.name
                                                     })
                                             }),
-                                            V
+                                            M
                                         ]
                                     }),
                                     s
@@ -171,24 +171,24 @@ function P(e) {
     });
 }
 function L(e) {
-    let { applicationRoleConnection: t, className: n, locale: l, onApplicationClicked: r, selectedGuildId: a } = e,
+    let { applicationRoleConnection: t, className: n, locale: l, onApplicationClicked: r, selectedGuildId: o } = e,
         i = (0, _.rm)(t, void 0, l),
         d = () => {
             null == r || r(),
                 (0, A.goToAppDirectory)({
                     view: E.ApplicationDirectoryViews.APPLICATION,
                     applicationId: t.application.id,
-                    guildId: a,
+                    guildId: o,
                     entrypoint: { name: E.ApplicationDirectoryEntrypointNames.APPLICATION_DIRECTORY_URL }
                 });
         };
     return (0, c.jsxs)('div', {
-        className: o()(x.connectedAccountContainer, null != i && i.length > 0 ? x.connectedAccountContainerWithMetadata : null, n),
+        className: a()(x.connectedAccountContainer, null != i && i.length > 0 ? x.connectedAccountContainerWithMetadata : null, n),
         children: [
             (0, c.jsx)('div', {
                 className: x.connectedAccount,
                 children: (0, c.jsxs)(u.Clickable, {
-                    className: o()(x.connectedAccountNameContainer, x.connectedAccountNameContainerClickable),
+                    className: a()(x.connectedAccountNameContainer, x.connectedAccountNameContainerClickable),
                     onClick: d,
                     children: [
                         null != t.platform_name
@@ -217,7 +217,7 @@ function L(e) {
             }),
             null != i && i.length > 0
                 ? (0, c.jsx)('div', {
-                      className: o()(x.connectedAccountChildren, x.connectedAccountChildrenNoIcon),
+                      className: a()(x.connectedAccountChildren, x.connectedAccountChildrenNoIcon),
                       children: i
                   })
                 : null,
@@ -254,7 +254,7 @@ function L(e) {
     });
 }
 let R = l.forwardRef(function (e, t) {
-    let { connectedAccounts: n, theme: l, locale: r, className: a, userId: i } = e;
+    let { connectedAccounts: n, theme: l, locale: r, className: o, userId: i } = e;
     if (null == n || 0 === n.length) return null;
     let u = n
             .filter((e) => d.Z.isSupported(e.type))
@@ -278,7 +278,7 @@ let R = l.forwardRef(function (e, t) {
     }
     return (0, c.jsxs)('div', {
         ref: t,
-        className: o()(x.connectedAccounts, a),
+        className: a()(x.connectedAccounts, o),
         children: [
             (0, c.jsx)('div', {
                 className: x.connectedAccountsColumn,

@@ -19,10 +19,10 @@ let m = 'payment-modal',
     f = new Set([c.h8.REVIEW, c.h8.CONFIRM, c.h8.GIFT_CUSTOMIZATION]);
 function x(e) {
     let n;
-    let { skuId: t, isGift: c = !1, giftMessage: x, giftingOrigin: v, onClose: p, onComplete: g, analyticsLocations: C, analyticsObject: j, giftRecipient: I } = e,
-        E = !1,
-        T = (0, l.Z)(),
-        N = (e) => {
+    let { skuId: t, isGift: c = !1, giftMessage: x, giftingOrigin: v, onClose: p, onComplete: g, analyticsLocations: C, analyticsObject: j, giftRecipient: I, variantsReturnStyle: E } = e,
+        T = !1,
+        N = (0, l.Z)(),
+        S = (e) => {
             n = e;
         };
     (0, r.openModalLazy)(
@@ -30,7 +30,7 @@ function x(e) {
             let { onClose: n, returnRef: l, ...r } = e;
             return (0, i.jsx)(u.Z, {
                 ...r,
-                loadId: T,
+                loadId: N,
                 skuId: t,
                 isGift: c,
                 giftMessage: x,
@@ -41,18 +41,18 @@ function x(e) {
                     n(), null == p || p(e);
                 },
                 onComplete: () => {
-                    (E = !0), null == g || g();
+                    (T = !0), null == g || g();
                 },
                 returnRef: l,
-                onStepChange: N
+                onStepChange: S
             });
         },
         {
             modalKey: m,
             onCloseCallback: () => {
-                !E &&
+                !T &&
                     d.default.track(h.rMx.PAYMENT_FLOW_CANCELED, {
-                        load_id: T,
+                        load_id: N,
                         payment_type: h.Zuq[h.GZQ.ONE_TIME],
                         location: j,
                         is_gift: c,
@@ -60,8 +60,8 @@ function x(e) {
                     }),
                     (0, a.fw)(),
                     (0, s.p)(),
-                    null == p || p(E),
-                    E && (0, o.qg)();
+                    null == p || p(T),
+                    T && (0, o.qg)({ variantsReturnStyle: E });
             },
             onCloseRequest: () => {
                 null != n && f.has(n) && (0, r.closeModal)(m);

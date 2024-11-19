@@ -91,7 +91,7 @@ let m = () => {
             var t;
             let n = await o.tn.post({
                 url: p.ANM.CHURN_USER_OFFER,
-                rejectWithError: !1
+                rejectWithError: !0
             });
             e = null !== (t = n.body.offer) && void 0 !== t ? t : null;
         } catch (e) {}

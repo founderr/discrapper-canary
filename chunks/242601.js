@@ -24,9 +24,9 @@ var i = n(200651),
     I = n(906732),
     C = n(211242),
     v = n(785203),
-    S = n(745837),
+    T = n(745837),
     N = n(13228),
-    T = n(1259),
+    S = n(1259),
     A = n(211644),
     b = n(605236),
     x = n(243778),
@@ -34,8 +34,8 @@ var i = n(200651),
     L = n(818634),
     y = n(596557),
     O = n(817520),
-    R = n(999309),
-    P = n(408987),
+    P = n(999309),
+    R = n(408987),
     j = n(130734),
     D = n(499137),
     M = n(258871),
@@ -44,8 +44,8 @@ var i = n(200651),
     U = n(304445),
     G = n(344185),
     B = n(155409),
-    V = n(10401),
-    H = n(970731),
+    H = n(10401),
+    V = n(970731),
     F = n(210887),
     z = n(592125),
     Y = n(796974),
@@ -151,7 +151,7 @@ class eC extends r.PureComponent {
                       renderPopout: () =>
                           (0, i.jsx)('div', {
                               onClick: (e) => e.stopPropagation(),
-                              children: (0, i.jsx)(H.ZP, {
+                              children: (0, i.jsx)(V.ZP, {
                                   header: ep.intl.string(ep.t['Q3qa4+']),
                                   content: ep.intl.string(ep.t.UyHD4O),
                                   buttonCTA: ep.intl.string(ep.t.U9PrMz),
@@ -284,7 +284,7 @@ class eC extends r.PureComponent {
                             tutorialType: el._.GAME_NIGHT
                         });
                     default:
-                        if (t) return (0, i.jsx)(S.Z, {});
+                        if (t) return (0, i.jsx)(T.Z, {});
                         return (0, i.jsx)(i.Fragment, {});
                 }
             }
@@ -372,7 +372,7 @@ class eC extends r.PureComponent {
             }),
             ef(this, 'handleCloseTemplateDirtyTooltip', () => {
                 let { guild: e, showGuildTemplateDirtyTooltip: t } = this.props;
-                null != e && t && P.Z.hideGuildTemplateDirtyTooltip(e.id);
+                null != e && t && R.Z.hideGuildTemplateDirtyTooltip(e.id);
             }),
             ef(this, 'renderMenuPopout', async () => {
                 let { default: e } = await n.e('46826').then(n.bind(n, 859432));
@@ -424,11 +424,11 @@ function ev(e) {
     let m = (0, Z.Z)(n),
         p = (0, c.e7)([Y.Z], () => Y.Z.getGuildDimensions(n).scrollTo),
         g = (0, c.e7)([ee.Z], () => ee.Z.getChannelId()),
-        [S, x, P] = (0, c.Wu)([J.Z], () => [J.Z.can(ed.Plq.MANAGE_GUILD, u), J.Z.can(ed.Plq.MANAGE_ROLES, u), J.Z.can(ed.Plq.MANAGE_THREADS, u)]),
+        [T, x, R] = (0, c.Wu)([J.Z], () => [J.Z.can(ed.Plq.MANAGE_GUILD, u), J.Z.can(ed.Plq.MANAGE_ROLES, u), J.Z.can(ed.Plq.MANAGE_THREADS, u)]),
         M = (0, c.e7)([W.Z], () => W.Z.isUnavailable(n)),
         U = (0, c.e7)([et.default], () => et.default.getCurrentUser()),
         B = (0, c.e7)([F.Z], () => (F.Z.darkSidebar ? ed.BRd.DARK : F.Z.theme)),
-        { enableStudyGroup: H } = (0, D.s)(u),
+        { enableStudyGroup: V } = (0, D.s)(u),
         K = (0, A.ZP)((e) => e.currentlyShown.has(d.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION)),
         [er, el] = r.useState(!K),
         ea = (0, _.Z)(n),
@@ -441,21 +441,21 @@ function ev(e) {
         ep = (0, v.Z)(u),
         eg = (0, h.useModalsStore)(h.hasAnyModalOpenSelector),
         ef = (0, c.e7)([Q.Z], () => Q.Z.hasLayers()),
-        e_ = (0, c.e7)([V.Z], () => V.Z.shouldShow(eE)),
-        eI = S && (null == u ? void 0 : u.premiumProgressBarEnabled) === !1 && !ei.s.isDisallowPopupsSet(),
+        e_ = (0, c.e7)([H.Z], () => H.Z.shouldShow(eE)),
+        eI = T && (null == u ? void 0 : u.premiumProgressBarEnabled) === !1 && !ei.s.isDisallowPopupsSet(),
         ev = (0, c.e7)([q.Z], () => q.Z.getMemberCount(n)),
-        eS = S && null != ev && ev >= 30 && (null == u ? void 0 : u.premiumProgressBarEnabled) === !1 && !ei.s.isDisallowPopupsSet(),
+        eT = T && null != ev && ev >= 30 && (null == u ? void 0 : u.premiumProgressBarEnabled) === !1 && !ei.s.isDisallowPopupsSet(),
         eN = x && null != u && (u.hasFeature(ed.oNc.COMMUNITY) || (null != ev && ev > 50)),
-        eT = (0, R.Z)(n),
-        eA = (0, T._)(n),
+        eS = (0, P.Z)(n),
+        eA = (0, S._)(n),
         eb = (null == u ? void 0 : u.hasFeature(ed.oNc.HUB)) === !0,
-        ex = S && (null == u ? void 0 : u.hasFeature(ed.oNc.DISCOVERABLE)) === !0,
+        ex = T && (null == u ? void 0 : u.hasFeature(ed.oNc.DISCOVERABLE)) === !0,
         eZ = (0, C.Q)(),
-        eL = (S || (null == u ? void 0 : u.premiumTier) === ed.Eu4.NONE) && !ei.s.isDisallowPopupsSet() && !eZ,
-        ey = (0, c.e7)([j.Z, Q.Z], () => null != u && null != U && S && !Q.Z.hasLayers() && j.Z.shouldShowGuildTemplateDirtyTooltip(n)),
+        eL = (T || (null == u ? void 0 : u.premiumTier) === ed.Eu4.NONE) && !ei.s.isDisallowPopupsSet() && !eZ,
+        ey = (0, c.e7)([j.Z, Q.Z], () => null != u && null != U && T && !Q.Z.hasLayers() && j.Z.shouldShowGuildTemplateDirtyTooltip(n)),
         eO = (0, c.e7)([z.Z], () => z.Z.getChannel(s)),
-        { isPopoutOpen: eR } = (0, L.y)(),
-        eP = null !== (t = null == u ? void 0 : u.hasFeature(ed.oNc.COMMUNITY)) && void 0 !== t && t,
+        { isPopoutOpen: eP } = (0, L.y)(),
+        eR = null !== (t = null == u ? void 0 : u.hasFeature(ed.oNc.COMMUNITY)) && void 0 !== t && t,
         ej = (0, c.e7)([G.Z], () => !a().isEmpty(G.Z.getThreadsForGuild(n))),
         eD = en.ZP.isNewUser(U),
         eM = er && !eD,
@@ -465,8 +465,8 @@ function ev(e) {
         eU = (0, w.Z)(n),
         eG = (0, O.Z)(n),
         eB = (0, c.e7)([ee.Z], () => ee.Z.getChannelId()),
-        eV = (0, c.e7)([$.Z], () => $.Z.desyncedVoiceStatesCount),
-        eH = k.Y.useExperiment({ location: 'GuildSidebar' }, { autoTrackExposure: !0 }).enabled;
+        eH = (0, c.e7)([$.Z], () => $.Z.desyncedVoiceStatesCount),
+        eV = k.Y.useExperiment({ location: 'GuildSidebar' }, { autoTrackExposure: !0 }).enabled;
     return (0, i.jsx)(eC, {
         guildId: n,
         hideSelectedChannel: l,
@@ -477,28 +477,28 @@ function ev(e) {
         selectedVoiceChannelId: g,
         voiceStates: m,
         rtcConnectedChannelId: eB,
-        rtcDesyncedVoiceStatesCount: eV,
+        rtcDesyncedVoiceStatesCount: eH,
         isUnavailable: M,
         theme: B,
         user: U,
         hasChannelNotice: null != ep || ec,
         anyLayerOpen: eg || ef,
         showGuildBoostingProgressBarUpsell: eI,
-        showGuildBoostingProgressBarSizeUpsell: eS,
+        showGuildBoostingProgressBarSizeUpsell: eT,
         showInviteSplashUpsell: eL,
         showDiscoveryLandingPageSettingsUpsell: ex,
         showGuildHeaderTutorial: e_,
         showGuildTemplateDirtyTooltip: ey,
-        showRoleSubscriptionUpsell: eT,
+        showRoleSubscriptionUpsell: eS,
         showDiscoveryTooltip: eA,
         showHubPrivacySettingsTooltip: eb,
-        showNewUnreadsBar: eP,
-        showActiveThreadsNotice: P && null != ev && ev >= 200 && ej,
+        showNewUnreadsBar: eR,
+        showActiveThreadsNotice: R && null != ev && ev >= 200 && ej,
         showGuildSoundboardPermissionUpsell: eN,
         showMediaChannelUpsell: eU,
         showTierTemplatesUpsell: eG,
-        isHeaderPopoutOpen: eR,
-        enableStudyGroup: H,
+        isHeaderPopoutOpen: eP,
+        enableStudyGroup: V,
         isGuildHeaderDismissibleTooltipShown: em,
         canShowCoachMarkAtBottom: er,
         headerAnalyticsLocations: es,
@@ -506,6 +506,6 @@ function ev(e) {
         shouldRenderClipsEducation: ew,
         isTutorialHighlightDismissed: ek,
         shouldRenderBurstCoachmark: eM,
-        shouldRenderCustomNotificationSoundsCoachmark: eH
+        shouldRenderCustomNotificationSoundsCoachmark: eV
     });
 }

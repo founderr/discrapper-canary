@@ -18,9 +18,9 @@ var i,
     I = n(503438),
     C = n(420660),
     v = n(74433),
-    S = n(906732),
+    T = n(906732),
     N = n(812206),
-    T = n(933557),
+    S = n(933557),
     A = n(194082),
     b = n(264165),
     x = n(630186),
@@ -28,8 +28,8 @@ var i,
     L = n(102172),
     y = n(871118),
     O = n(707409),
-    R = n(849171),
-    P = n(314897),
+    P = n(849171),
+    R = n(314897),
     j = n(592125),
     D = n(594174),
     M = n(395361),
@@ -38,8 +38,8 @@ var i,
     U = n(823379),
     G = n(51144),
     B = n(599706),
-    V = n(981631),
-    H = n(388032),
+    H = n(981631),
+    V = n(388032),
     F = n(49214);
 let z = {
         SMALL: 64,
@@ -131,7 +131,7 @@ class Q extends a.Component {
                               })
                           }),
                     (0, l.jsxs)('div', {
-                        children: [W(null != r && '' !== r ? r : H.intl.string(H.t['2TbM/P'])), null != a ? K(a) : null, this.renderTimePlayed()]
+                        children: [W(null != r && '' !== r ? r : V.intl.string(V.t['2TbM/P'])), null != a ? K(a) : null, this.renderTimePlayed()]
                     })
                 ]
             })
@@ -245,7 +245,7 @@ let ee = (e) => {
         var t, n;
         let { guild: i, channel: r, onGuildClick: s, partySize: c, members: d, onChannelContextMenu: h } = e,
             m = a.useRef(null),
-            p = (0, T.ZP)(r, !0);
+            p = (0, S.ZP)(r, !0);
         return (0, l.jsx)(X, {
             children: (0, l.jsxs)('div', {
                 className: F.voiceSection,
@@ -315,7 +315,7 @@ let ee = (e) => {
                           })
                         : null,
                     (0, l.jsxs)('div', {
-                        children: [W(n), K(H.intl.formatToPlainString(H.t.C4WXvb, { memberCount: i.totalSize }))]
+                        children: [W(n), K(V.intl.formatToPlainString(V.t.C4WXvb, { memberCount: i.totalSize }))]
                     }),
                     (0, l.jsx)(B.Z, {
                         partySize: i,
@@ -335,7 +335,7 @@ let ee = (e) => {
                     (0, l.jsx)(w.Z, { className: F.xboxSectionIcon }),
                     (0, l.jsxs)('div', {
                         className: F.__invalid_xboxSectionDetails,
-                        children: [W(t), K(H.intl.string(H.t['JG9r+/']))]
+                        children: [W(t), K(V.intl.string(V.t['JG9r+/']))]
                     })
                 ]
             })
@@ -422,7 +422,7 @@ let ee = (e) => {
                     children: [
                         (0, l.jsx)('img', {
                             alt: '',
-                            src: p.Z.get(V.ABu.TWITCH).icon.lightSVG,
+                            src: p.Z.get(H.ABu.TWITCH).icon.lightSVG,
                             className: F.twitchSectionIcon
                         }),
                         (0, l.jsxs)('div', {
@@ -463,7 +463,7 @@ let ee = (e) => {
                     })
                 ]
             }),
-            g = null !== (n = null === (t = (0, v.Z)(i, a)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : H.intl.string(H.t.eXan7O);
+            g = null !== (n = null === (t = (0, v.Z)(i, a)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : V.intl.string(V.t.eXan7O);
         return (0, l.jsxs)(X, {
             children: [
                 (0, l.jsxs)('div', {
@@ -496,13 +496,13 @@ let ee = (e) => {
                     return o(t);
                 });
         }, [d]);
-        let h = (0, c.Wu)([D.default, P.default], () =>
+        let h = (0, c.Wu)([D.default, R.default], () =>
                 Array.from(r)
-                    .map((e) => (P.default.getId() === e ? null : D.default.getUser(e)))
+                    .map((e) => (R.default.getId() === e ? null : D.default.getUser(e)))
                     .filter(U.lm)
             ),
             p = (0, m.O)(),
-            { analyticsLocations: f } = (0, S.ZP)();
+            { analyticsLocations: f } = (0, T.ZP)();
         if (null == d) return null;
         let _ = N.Z.getApplication(d);
         if (null == _) return null;
@@ -550,7 +550,7 @@ let ee = (e) => {
                         (0, l.jsxs)('div', {
                             className: F.embeddedActivityImageOverlay,
                             children: [
-                                (0, l.jsx)(R.OV, {
+                                (0, l.jsx)(P.OV, {
                                     users: h,
                                     guildId: i,
                                     channelId: n.id
@@ -568,7 +568,7 @@ let ee = (e) => {
                                                     analyticsLocations: f
                                                 });
                                         },
-                                        children: H.intl.string(H.t.VJlc0d)
+                                        children: V.intl.string(V.t.VJlc0d)
                                     })
                                 })
                             ]

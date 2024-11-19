@@ -33,7 +33,7 @@ async function c(e) {
         await r.tn.get({
             url: u.ANM.APPLIED_GUILD_BOOSTS_FOR_GUILD(e),
             oldFormErrors: !0,
-            rejectWithError: !1
+            rejectWithError: !0
         })
     ).body.map((e) => s.Z.createFromServer(e));
     return (
@@ -52,7 +52,7 @@ async function d() {
                 url: u.ANM.USER_APPLIED_GUILD_BOOSTS,
                 oldFormErrors: !0,
                 query: { paused: e },
-                rejectWithError: !1
+                rejectWithError: !0
             })
         ).body.map((e) => s.Z.createFromServer(e));
     return (
@@ -136,7 +136,7 @@ async function h(e) {
     let t = await r.tn.post({
             url: u.ANM.USER_GUILD_BOOST_SLOT_CANCEL(e),
             oldFormErrors: !0,
-            rejectWithError: !1
+            rejectWithError: !0
         }),
         n = o.Z.createFromServer(t.body, l.ZP.getSubscriptionById(t.body.subscription_id));
     return (
@@ -151,7 +151,7 @@ async function m(e) {
     let t = await r.tn.post({
             url: u.ANM.USER_GUILD_BOOST_SLOT_UNCANCEL(e),
             oldFormErrors: !0,
-            rejectWithError: !1
+            rejectWithError: !0
         }),
         n = o.Z.createFromServer(t.body, l.ZP.getSubscriptionById(t.body.subscription_id));
     return (

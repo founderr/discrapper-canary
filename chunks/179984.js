@@ -11,8 +11,8 @@ var i = n(200651),
     g = n(100527),
     m = n(906732),
     f = n(15640),
-    _ = n(594174),
-    p = n(78839),
+    p = n(594174),
+    _ = n(78839),
     h = n(74538),
     E = n(775412),
     b = n(104494),
@@ -118,8 +118,8 @@ t.Z = (e) => {
     let n,
         { className: a, hideCTAs: P = !1, headingOverride: Z, hidePill: O = !1, selectedPlanColumnClassName: M, selectedPlanTier: U = R.p9.TIER_2 } = e,
         { analyticsLocations: D } = (0, m.ZP)(g.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
-        G = (0, l.e7)([p.ZP], () => p.ZP.hasFetchedSubscriptions()),
-        H = (0, f.V)(),
+        H = (0, l.e7)([_.ZP], () => _.ZP.hasFetchedSubscriptions()),
+        G = (0, f.V)(),
         V = 'PlanComparisonTable';
     (0, d.j)({
         location: V + ' auto on',
@@ -131,7 +131,7 @@ t.Z = (e) => {
         });
     let F = (0, u.ZP)(),
         W = (0, o.ap)(F),
-        z = (0, l.e7)([_.default], () => _.default.getCurrentUser()),
+        z = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
         Y = (0, h.M5)(z, R.p9.TIER_2),
         K = (0, x.N)(),
         Q = null == K ? void 0 : null === (t = K.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
@@ -144,7 +144,7 @@ t.Z = (e) => {
         en = (0, h.CY)(R.Xh.PREMIUM_MONTH_TIER_2),
         ei = (0, N.n)(et, en, X, ee),
         er = (0, v.Vi)();
-    if (!G || !H) return null;
+    if (!H || !G) return null;
     let ea = {
         label: (0, i.jsx)(c.Heading, {
             className: j.__invalid_textColor,

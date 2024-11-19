@@ -172,7 +172,7 @@ t.Z = {
             url: A.ANM.GUILD_MEMBER(e, t),
             body: { channel_id: n },
             oldFormErrors: !0,
-            rejectWithError: !1
+            rejectWithError: !0
         });
     },
     setMemberFlags(e, t, n) {
@@ -180,7 +180,7 @@ t.Z = {
             url: A.ANM.GUILD_MEMBER(e, t),
             body: { flags: n },
             oldFormErrors: !0,
-            rejectWithError: !1
+            rejectWithError: !0
         });
     },
     kickUser: (e, t, n) =>
@@ -291,7 +291,7 @@ t.Z = {
             .del({
                 url: A.ANM.GUILD_ROLE(e, t),
                 oldFormErrors: !0,
-                rejectWithError: !1
+                rejectWithError: !0
             })
             .then(() => {
                 l.Z.checkGuildTemplateDirty(e);

@@ -59,7 +59,7 @@ function y() {
     );
 }
 function P(e) {
-    let { channel: t, options: a, onFileUpload: m, onClose: f, onSelect: C, draftType: P, editorTextContent: M, setValue: L, openClips: R } = e,
+    let { channel: t, options: a, onFileUpload: m, onClose: f, onSelect: C, draftType: P, editorTextContent: M, setValue: R, openClips: L } = e,
         { analyticsLocations: k } = (0, h.ZP)();
     l.useEffect(() => {
         x.default.track(Z.rMx.OPEN_POPOUT, {
@@ -72,10 +72,10 @@ function P(e) {
         (0, g.R6)(t, void 0, 'Plus Button');
     }
     function D() {
-        x.default.track(Z.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), L('/', (0, E.JM)('/'));
+        x.default.track(Z.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), R('/', (0, E.JM)('/'));
     }
     function w() {
-        R();
+        L();
     }
     function B() {
         (0, p.EW)(s.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: N.L.TAKE_ACTION }),

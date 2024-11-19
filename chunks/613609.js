@@ -24,7 +24,7 @@ t.Z = (e) => {
     r.useEffect(() => {
         null != v && (0, o.uL)(m.Z5c.CHANNEL(t));
     }, [v, t]);
-    let S = r.useCallback((e) => {
+    let T = r.useCallback((e) => {
             _((t) => Math.max(t, e));
         }, []),
         N = (0, u.gK)();
@@ -35,7 +35,7 @@ t.Z = (e) => {
             splash: N,
             waveState: f,
             showLogo: !1,
-            updateWaveState: S,
+            updateWaveState: T,
             children: [
                 (0, i.jsx)('div', { className: g.dragRegion }),
                 (0, i.jsx)('div', {
