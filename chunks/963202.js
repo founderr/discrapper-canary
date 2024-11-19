@@ -1,10 +1,9 @@
 n.d(t, {
-    iN: function () {
-        return a;
+    i: function () {
+        return i;
     }
 });
-var r = n(818083);
-let i = (0, r.B)({
+let r = (0, n(818083).B)({
     kind: 'user',
     id: '2024-07_rapidash_m3_joiners',
     label: 'Rapidash M3 Users',
@@ -17,20 +16,7 @@ let i = (0, r.B)({
         }
     ]
 });
-function a(e) {
+function i(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return i.useExperiment({ location: e }, { autoTrackExposure: t }).enableM3Experience;
+    return r.useExperiment({ location: e }, { autoTrackExposure: t }).enableM3Experience;
 }
-(0, r.B)({
-    kind: 'user',
-    id: '2024-06_clans_mobile_tags',
-    label: 'Clans - Mobile',
-    defaultConfig: { clanTagsVisible: !1 },
-    treatments: [
-        {
-            id: 1,
-            label: 'Show tags on mobile',
-            config: { clanTagsVisible: !0 }
-        }
-    ]
-});
