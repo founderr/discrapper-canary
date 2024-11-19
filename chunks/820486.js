@@ -37,14 +37,14 @@ let g = {},
         id: null,
         justChanged: !1
     },
-    T = {
+    N = {
         id: null,
         justChanged: !1
     },
-    N = /\(([^)]+)\)/;
+    T = /\(([^)]+)\)/;
 function S(e) {
     if ((0, d.getPlatform)() === d.PlatformTypes.WINDOWS) {
-        let t = e.name.match(N);
+        let t = e.name.match(T);
         if (null != t) return t[1];
     }
     return e.name;
@@ -85,7 +85,7 @@ class b extends (i = a.ZP.DeviceSettingsStore) {
         return I;
     }
     get lastOutputSystemDevice() {
-        return T;
+        return N;
     }
 }
 p(b, 'displayName', 'ConnectedDeviceStore'),
@@ -104,12 +104,12 @@ p(b, 'displayName', 'ConnectedDeviceStore'),
                 });
             let r = {};
             if (
-                ((T.justChanged = !1),
+                ((N.justChanged = !1),
                 n.forEach((e) => {
                     if (((r[S(e)] = e.id), e.id === m.w5)) {
                         var t;
                         let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
-                        n !== T.id && (T.justChanged = !0), (T.id = n);
+                        n !== N.id && (N.justChanged = !0), (N.id = n);
                     }
                 }),
                 !_)

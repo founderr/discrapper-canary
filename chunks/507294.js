@@ -25,8 +25,8 @@ var i = n(200651),
     I = n(271383),
     C = n(430824),
     v = n(626135),
-    T = n(63063),
-    N = n(134433),
+    N = n(63063),
+    T = n(134433),
     S = n(225104),
     A = n(981631),
     b = n(388032),
@@ -80,7 +80,7 @@ t.default = function (e) {
             (0, i.jsxs)(c.ModalHeader, {
                 separator: !1,
                 children: [
-                    (0, i.jsx)(N.Z, {
+                    (0, i.jsx)(T.Z, {
                         className: x.headerIcon,
                         size: 24
                     }),
@@ -101,7 +101,7 @@ t.default = function (e) {
                     (0, i.jsx)(c.Heading, {
                         variant: 'heading-md/semibold',
                         color: 'header-primary',
-                        children: b.intl.format(b.t['Y+TsER'], { helpdeskArticleUrl: T.Z.getArticleURL(A.BhN.CONNECTION_DETAILS) })
+                        children: b.intl.format(b.t['Y+TsER'], { helpdeskArticleUrl: N.Z.getArticleURL(A.BhN.CONNECTION_DETAILS) })
                     }),
                     (0, i.jsx)('div', {
                         className: x.verifiedRoles,

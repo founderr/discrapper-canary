@@ -18,8 +18,8 @@ var i = n(200651),
     I = n(812206),
     C = n(44315),
     v = n(600164),
-    T = n(167533),
-    N = n(925329),
+    N = n(167533),
+    T = n(925329),
     S = n(707409),
     A = n(210887),
     b = n(283595),
@@ -450,10 +450,10 @@ let q = () =>
                 (0, i.jsxs)(v.Z, {
                     align: v.Z.Align.CENTER,
                     children: [
-                        (0, i.jsx)(N.Z, {
+                        (0, i.jsx)(T.Z, {
                             game: e.application,
                             className: M.__invalid_gameIcon,
-                            size: N.Z.Sizes.SMALL
+                            size: T.Z.Sizes.SMALL
                         }),
                         (0, i.jsx)('div', {
                             className: M.nameCellText,
@@ -544,7 +544,7 @@ class ee extends r.PureComponent {
                               })
                           ]
                       }),
-                      (0, i.jsx)(T.Z, {
+                      (0, i.jsx)(N.Z, {
                           hasHeader: !1,
                           columns: $,
                           data: e,

@@ -29,8 +29,8 @@ var i = n(200651),
     I = n(1964),
     C = n(762756),
     v = n(981631),
-    T = n(815660),
-    N = n(388032);
+    N = n(815660),
+    T = n(388032);
 let S = 'Email Verification',
     A = 'PHONE_THEN_EMAIL_INTERSTITIAL_MODAL_KEY';
 function b() {
@@ -77,7 +77,7 @@ function b() {
                         });
                 },
                 {
-                    modalKey: T.M,
+                    modalKey: N.M,
                     Layer: g.ZP
                 }
             );
@@ -101,9 +101,9 @@ function b() {
                         return (t) =>
                             (0, i.jsx)(e, {
                                 ...t,
-                                title: N.intl.string(N.t.KLnLIC),
-                                body: N.intl.string(N.t.XGbCq6),
-                                confirmText: N.intl.string(N.t['3oK4q6'])
+                                title: T.intl.string(T.t.KLnLIC),
+                                body: T.intl.string(T.t.XGbCq6),
+                                confirmText: T.intl.string(T.t['3oK4q6'])
                             });
                     },
                     {
@@ -138,14 +138,14 @@ function b() {
                         let { ConfirmModal: e, Text: t } = await Promise.resolve().then(n.bind(n, 481060));
                         return (n) =>
                             (0, i.jsx)(e, {
-                                header: N.intl.string(N.t['2jxGen']),
-                                confirmText: N.intl.string(N.t['2jxGen']),
-                                cancelText: N.intl.string(N.t['ETE/oK']),
+                                header: T.intl.string(T.t['2jxGen']),
+                                confirmText: T.intl.string(T.t['2jxGen']),
+                                cancelText: T.intl.string(T.t['ETE/oK']),
                                 onConfirm: () => c.Z.logout(),
                                 ...n,
                                 children: (0, i.jsx)(t, {
                                     variant: 'text-md/normal',
-                                    children: N.intl.string(N.t.SUnWBA)
+                                    children: T.intl.string(T.t.SUnWBA)
                                 })
                             });
                     },

@@ -18,8 +18,8 @@ var i = n(200651),
     I = n(820254),
     C = n(358085),
     v = n(557177),
-    T = n(998502),
-    N = n(905656),
+    N = n(998502),
+    T = n(905656),
     S = n(981631),
     A = n(388032),
     b = n(607179);
@@ -84,7 +84,7 @@ class Z extends r.PureComponent {
                         (0, i.jsxs)('div', {
                             className: b.content,
                             children: [
-                                (0, i.jsx)(N.Z, {
+                                (0, i.jsx)(T.Z, {
                                     autoPlay: !0,
                                     loop: !e,
                                     setRef: this.setVideoRef,
@@ -350,7 +350,7 @@ class Z extends r.PureComponent {
                 })()
             ),
             x(this, 'handleReady', () => {
-                this.setState({ ready: !0 }), (0, C.isDesktop)() && (T.ZP.send('UPDATED_QUOTES', ['Hold Tight \u2014 Loading Discord']), T.ZP.send('UPDATE_OPEN_ON_STARTUP'));
+                this.setState({ ready: !0 }), (0, C.isDesktop)() && (N.ZP.send('UPDATED_QUOTES', ['Hold Tight \u2014 Loading Discord']), N.ZP.send('UPDATE_OPEN_ON_STARTUP'));
             }),
             x(this, 'setVideoRef', (e) => {
                 this.videoRef = e;

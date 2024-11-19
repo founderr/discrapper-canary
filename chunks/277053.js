@@ -17,8 +17,8 @@ var l,
 let I = new Set(),
     C = _.QZA.CLOSED,
     v = !1,
-    T = null,
     N = null,
+    T = null,
     S = null,
     A = null,
     b = null,
@@ -32,7 +32,7 @@ function L(e) {
 function y() {
     if (((S = g.Z.getChannel()), (A = g.Z.getCategory()), null == S)) return !1;
     let e = S.getGuildId();
-    (N = T = L(S)), null == T[b] && (b = e), (r = null != A), (i = p.o4(S, A)), (x = null), (v = !1), (C = _.QZA.CLOSED), I.clear();
+    (T = N = L(S)), null == N[b] && (b = e), (r = null != A), (i = p.o4(S, A)), (x = null), (v = !1), (C = _.QZA.CLOSED), I.clear();
 }
 class O extends (l = u.ZP.Store) {
     initialize() {
@@ -45,13 +45,13 @@ class O extends (l = u.ZP.Store) {
         return this.hasChanges();
     }
     getPermissionOverwrite(e) {
-        return null == T ? void 0 : T[e];
+        return null == N ? void 0 : N[e];
     }
     get editedPermissionIds() {
         return Array.from(I);
     }
     get permissionOverwrites() {
-        return T;
+        return N;
     }
     get selectedOverwriteId() {
         return b;
@@ -93,32 +93,32 @@ class O extends (l = u.ZP.Store) {
         CHANNEL_SETTINGS_PERMISSIONS_INIT: y,
         CHANNEL_SETTINGS_PERMISSIONS_UPDATE_PERMISSION: function (e) {
             let { id: t, allow: n, deny: r } = e,
-                l = null == T ? void 0 : T[t];
+                l = null == N ? void 0 : N[t];
             if (null == l || null == S) return !1;
             (l = {
                 ...l,
                 allow: n,
                 deny: r
             }),
-                (T = {
-                    ...T,
+                (N = {
+                    ...N,
                     [t]: l
                 }),
                 I.add(t),
                 (C = _.QZA.OPEN),
-                (v = !d().isEqual(T, N)),
+                (v = !d().isEqual(N, T)),
                 (i = p.o4(S, A));
         },
         CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION: function (e) {
             let { id: t } = e;
-            if (null != T && null != T[t]) b = t;
+            if (null != N && null != N[t]) b = t;
             else {
                 if (null == S) return !1;
                 x = t;
             }
         },
         CHANNEL_SETTINGS_CLOSE: function () {
-            (C = _.QZA.CLOSED), (T = null), (N = null), (S = null), (A = null), (v = !1), I.clear(), (b = null), (x = null);
+            (C = _.QZA.CLOSED), (N = null), (T = null), (S = null), (A = null), (v = !1), I.clear(), (b = null), (x = null);
         },
         CHANNEL_UPDATES: function (e) {
             let { channels: t } = e;
@@ -131,20 +131,20 @@ class O extends (l = u.ZP.Store) {
                         A = g.Z.getCategory();
                         let t = S.getGuildId();
                         if (null == t) return !1;
-                        N = L(S);
+                        T = L(S);
                         let n = {};
                         return (
                             I.forEach((e) => {
-                                null != T && (n[e] = T[e]);
+                                null != N && (n[e] = N[e]);
                             }),
                             null == n[t] && null == S.permissionOverwrites[t] && (n[t] = p.we(t)),
                             null ==
-                            (T = {
+                            (N = {
                                 ...S.permissionOverwrites,
                                 ...n
                             })[b]
                                 ? (b = t)
-                                : null != x && null != T[x] && ((b = x), (x = null)),
+                                : null != x && null != N[x] && ((b = x), (x = null)),
                             (i = p.o4(S, A)),
                             !0
                         );

@@ -88,11 +88,11 @@ function f(e) {
             containerWidth: h
         }),
         v = r.useMemo(() => l.slice(0, _ + 1), [_, l]),
-        T = r.useMemo(() => l.slice(_ + 1), [_, l]),
-        N = r.useRef(null),
+        N = r.useMemo(() => l.slice(_ + 1), [_, l]),
+        T = r.useRef(null),
         S = r.useCallback(() => {
             var e;
-            let t = null === (e = N.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
+            let t = null === (e = T.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
             if (null == t || f.current === t.width) return;
             m(t.width), (f.current = t.width);
             let n = C.current.reduce((e, t, n) => e + t + (0 === n ? 0 : 20)),
@@ -106,7 +106,7 @@ function f(e) {
     let A = 0 !== h;
     return (0, i.jsxs)('div', {
         className: a()(p.container, t),
-        ref: N,
+        ref: T,
         children: [
             (0, i.jsxs)('div', {
                 className: p.measurements,
@@ -133,7 +133,7 @@ function f(e) {
                     (0, i.jsx)('div', {
                         ref: I,
                         children: (0, i.jsx)(g, {
-                            tabs: T,
+                            tabs: N,
                             onTabSelect: o,
                             selectedTab: n
                         })
@@ -160,9 +160,9 @@ function f(e) {
                                 e.id
                             )
                         ),
-                        0 !== T.length
+                        0 !== N.length
                             ? (0, i.jsx)(g, {
-                                  tabs: T,
+                                  tabs: N,
                                   onTabSelect: o,
                                   selectedTab: n
                               })

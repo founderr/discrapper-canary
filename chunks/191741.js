@@ -4,7 +4,7 @@ n.r(t),
             return A;
         },
         useAppSidebarState: function () {
-            return N;
+            return T;
         }
     });
 var i = n(200651),
@@ -26,8 +26,8 @@ var i = n(200651),
     I = n(998502),
     C = n(981631),
     v = n(741764),
-    T = n(215820);
-let N = (0, l.Ue)(() => ({ isOpen: !0 }));
+    N = n(215820);
+let T = (0, l.Ue)(() => ({ isOpen: !0 }));
 function S(e) {
     e.stopPropagation();
 }
@@ -35,7 +35,7 @@ function A() {
     let e = (0, a.e7)([_.Z], () => _.Z.getChannelId()),
         t = (0, a.e7)([g.Z], () => g.Z.getChannel(e), [e]),
         n = f.Z.getGuild(null == t ? void 0 : t.guild_id),
-        l = N((e) => e.isOpen),
+        l = T((e) => e.isOpen),
         { hasBugReporterAccess: A } = c.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 });
     r.useLayoutEffect(() => {
         I.ZP.setMinimumSize(v.J, v.N);
@@ -44,11 +44,11 @@ function A() {
         (0, E.isMac)() && I.ZP.maximize();
     }, []);
     return (0, i.jsxs)('div', {
-        className: T.bar,
+        className: N.bar,
         onDoubleClick: x,
         children: [
             (0, i.jsx)('div', {
-                className: T.left,
+                className: N.left,
                 'data-sidebar-collapsed': !l,
                 onDoubleClick: S,
                 children:
@@ -57,7 +57,7 @@ function A() {
                         children: [
                             (0, i.jsx)(s.Clickable, {
                                 onClick: () => {
-                                    N.setState({ isOpen: !N.getState().isOpen });
+                                    T.setState({ isOpen: !T.getState().isOpen });
                                 },
                                 children: (0, i.jsx)(b, {})
                             }),
@@ -71,17 +71,17 @@ function A() {
                     })
             }),
             (0, i.jsx)('div', {
-                className: T.center,
+                className: N.center,
                 children:
                     null != n &&
                     (0, i.jsxs)('div', {
-                        className: T.guild,
+                        className: N.guild,
                         children: [
                             (0, i.jsx)(d.Z, {
                                 guild: n,
                                 size: d.Z.Sizes.SMALLER,
                                 active: !0,
-                                className: T.icon
+                                className: N.icon
                             }),
                             (0, i.jsx)(s.Text, {
                                 variant: 'text-sm/medium',
@@ -91,7 +91,7 @@ function A() {
                     })
             }),
             (0, i.jsxs)('div', {
-                className: T.right,
+                className: N.right,
                 onDoubleClick: S,
                 children: [(0, i.jsx)(p.Z, {}), A ? (0, i.jsx)(h.Z, {}) : (0, i.jsx)(u.Z, {}), (0, i.jsx)(m.Z, {})]
             })
@@ -101,7 +101,7 @@ function A() {
 function b() {
     return (0, i.jsxs)('svg', {
         xmlns: 'http://www.w3.org/2000/svg',
-        className: T.icon,
+        className: N.icon,
         width: '24',
         height: '24',
         viewBox: '0 0 24 24',

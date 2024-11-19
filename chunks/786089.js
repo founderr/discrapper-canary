@@ -18,8 +18,8 @@ var i = n(200651),
     I = n(113434),
     C = n(497505),
     v = n(475595),
-    T = n(981631),
-    N = n(388032),
+    N = n(981631),
+    T = n(388032),
     S = n(388175);
 t.Z = (0, r.memo)(function (e) {
     var t, n, l, A, b;
@@ -56,7 +56,7 @@ t.Z = (0, r.memo)(function (e) {
         X = Z ? U + 8 : 0,
         Q = () => {
             L(!0),
-                _.default.track(T.rMx.QUEST_HOVER, {
+                _.default.track(N.rMx.QUEST_HOVER, {
                     quest_id: x.id,
                     ...(0, E.mH)(C.jn.TROPHY_CASE_CARD)
                 });
@@ -64,7 +64,7 @@ t.Z = (0, r.memo)(function (e) {
         J = () => L(!1),
         $ = (e) => {
             R(!0),
-                _.default.track(T.rMx.QUEST_ASSET_LOADING_FAILURE, {
+                _.default.track(N.rMx.QUEST_ASSET_LOADING_FAILURE, {
                     source: e,
                     asset_id: e,
                     quest_id: x.id
@@ -136,13 +136,13 @@ t.Z = (0, r.memo)(function (e) {
                                   className: S.title,
                                   variant: 'heading-md/semibold',
                                   color: 'always-white',
-                                  children: N.intl.format(N.t.EAYZAg, { questName: x.config.messages.questName })
+                                  children: T.intl.format(T.t.EAYZAg, { questName: x.config.messages.questName })
                               }),
                               (0, i.jsx)(d.Text, {
                                   variant: 'text-sm/medium',
                                   color: Y ? 'text-muted' : 'always-white',
                                   style: { opacity: Y ? 1 : 0.75 },
-                                  children: N.intl.format(N.t.kXVcV1, {
+                                  children: T.intl.format(T.t.kXVcV1, {
                                       reward: V.name,
                                       claimedDate: B
                                   })

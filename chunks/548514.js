@@ -48,12 +48,12 @@ t.Z = function (e) {
                     })
                 );
         }, [C, n]),
-        T = (0, c.Z)({
+        N = (0, c.Z)({
             id: null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : '',
             label: p.intl.string(p.t['FfCL+/']),
             onSuccess: () => (0, a.showToast)((0, a.createToast)(p.intl.string(p.t.eNjAam), a.ToastType.SUCCESS))
         }),
-        N = r.useCallback(
+        T = r.useCallback(
             (e) =>
                 (0, i.jsxs)(a.Menu, {
                     navId: 'application-directory-profile',
@@ -69,10 +69,10 @@ t.Z = function (e) {
                                 action: v
                             })
                         }),
-                        null != T ? (0, i.jsx)(a.MenuGroup, { children: T }) : null
+                        null != N ? (0, i.jsx)(a.MenuGroup, { children: N }) : null
                     ]
                 }),
-            [T, v]
+            [N, v]
         );
     return (0, i.jsxs)('div', {
         className: g.actionContainer,
@@ -101,7 +101,7 @@ t.Z = function (e) {
             (0, i.jsx)(a.Popout, {
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
-                    return N(t);
+                    return T(t);
                 },
                 position: 'left',
                 align: 'top',

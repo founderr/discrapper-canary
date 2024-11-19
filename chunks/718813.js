@@ -23,7 +23,7 @@ var i,
     I = n(585483),
     C = n(981631),
     v = n(48211);
-function T(e, t, n) {
+function N(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,7 +36,7 @@ function T(e, t, n) {
         e
     );
 }
-let N = (0, g.Un)({
+let T = (0, g.Un)({
         createPromise: () => Promise.all([n.e('23217'), n.e('33053'), n.e('8016'), n.e('76540'), n.e('15669'), n.e('17938'), n.e('22646'), n.e('25183'), n.e('30419'), n.e('48923'), n.e('18824'), n.e('8821'), n.e('57772'), n.e('93456')]).then(n.bind(n, 989804)),
         webpackId: 989804,
         name: 'UserSettings'
@@ -57,7 +57,7 @@ let N = (0, g.Un)({
         name: 'GuildSettings'
     }),
     x = {
-        [C.S9g.USER_SETTINGS]: () => (0, r.jsx)(N, {}),
+        [C.S9g.USER_SETTINGS]: () => (0, r.jsx)(T, {}),
         [C.S9g.CHANNEL_SETTINGS]: () => (0, r.jsx)(S, {}),
         [C.S9g.GUILD_SETTINGS]: () => (0, r.jsx)(b, {}),
         [C.S9g.COLLECTIBLES_SHOP]: () => (0, r.jsx)(A, {})
@@ -172,7 +172,7 @@ class P extends (i = l.PureComponent) {
         };
     }
     constructor(e) {
-        super(e), T(this, 'containerRef', l.createRef());
+        super(e), N(this, 'containerRef', l.createRef());
         let t = 1,
             n = 1;
         e.mode === L && ((t = 0.93), (n = 0)),
@@ -184,7 +184,7 @@ class P extends (i = l.PureComponent) {
             });
     }
 }
-T(P, 'defaultProps', { baseLayer: !1 }), T(P, 'contextType', u.AccessibilityPreferencesContext);
+N(P, 'defaultProps', { baseLayer: !1 }), N(P, 'contextType', u.AccessibilityPreferencesContext);
 class R extends l.PureComponent {
     componentDidMount() {
         I.S.subscribe(C.CkL.LAYER_POP_ESCAPE_KEY, h.xf);

@@ -1,6 +1,6 @@
 n.d(t, {
     V: function () {
-        return N;
+        return T;
     },
     _: function () {
         return r;
@@ -26,12 +26,12 @@ var i,
     C = n(339800);
 ((i = r || (r = {})).BOOSTING = 'BOOSTING'), (i.NITRO = 'NITRO'), (i.BASH_OUT = 'BASH_OUT'), (i.GAME_NIGHT = 'GAME_NIGHT');
 let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356018217/Activities_NUX_GL_1.mp4',
-    T = 'https://cdn.discordapp.com/attachments/887469171804356628/916446867586416660/activities-video-poster-512.png',
-    N = (e) => {
+    N = 'https://cdn.discordapp.com/attachments/887469171804356628/916446867586416660/activities-video-poster-512.png',
+    T = (e) => {
         let { channelId: t, markAsDismissed: n, tutorialType: i } = e,
             {
                 analyticsLocation: r,
-                analyticsType: N,
+                analyticsType: T,
                 ctaText: S,
                 dismissText: A,
                 description: b,
@@ -49,7 +49,7 @@ let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                             description: I.intl.string(I.t.eDjBOT),
                             learnMore: !0,
                             title: I.intl.string(I.t.wbiFFB),
-                            videoPosterUrl: T,
+                            videoPosterUrl: N,
                             videoUrl: v,
                             ctaText: I.intl.string(I.t['5SaQDw']),
                             dismissText: I.intl.string(I.t.WAI6xs)
@@ -61,7 +61,7 @@ let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                             description: I.intl.string(I.t.qJn0bW),
                             learnMore: !0,
                             title: I.intl.string(I.t.g8itmp),
-                            videoPosterUrl: T,
+                            videoPosterUrl: N,
                             videoUrl: v,
                             ctaText: I.intl.string(I.t['5SaQDw']),
                             dismissText: I.intl.string(I.t.WAI6xs)
@@ -106,8 +106,8 @@ let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
             })(i),
             { analyticsLocations: P } = (0, m.ZP)(r);
         a.useEffect(() => {
-            f.default.track(_.rMx.TOOLTIP_VIEWED, { type: N });
-        }, [N]);
+            f.default.track(_.rMx.TOOLTIP_VIEWED, { type: T });
+        }, [T]);
         let R = (0, c.bp)() === _.IlC.POPOUT,
             j = (0, s.e7)([g.Z], () => g.Z.getChannel(t), [t]);
         return (0, l.jsx)(m.Gt, {

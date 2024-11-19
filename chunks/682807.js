@@ -92,7 +92,7 @@ function f(e) {
             h,
             (0, i.jsx)(s.Text, {
                 className: m.listText,
-                variant: 'text-md/normal',
+                variant: 'text-sm/medium',
                 selectable: !0,
                 children: c
             })

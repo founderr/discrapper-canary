@@ -22,8 +22,8 @@ var i = n(200651),
     I = n(440051),
     C = n(734934),
     v = n(158238),
-    T = n(759198),
-    N = n(300284),
+    N = n(759198),
+    T = n(300284),
     S = n(680295),
     A = n(703656),
     b = n(785717),
@@ -187,7 +187,7 @@ function ec(e) {
         eI = (0, C.p)(),
         eC = V.Sb.useSetting(),
         ev = (0, E.a)(),
-        eT = (function (e) {
+        eN = (function (e) {
             let t = I.Y.useExperiment({ location: 'AccountProfilePopout' }).expiringStatus,
                 n = V.Cr.useSetting(),
                 r = (0, C.p)(),
@@ -300,8 +300,8 @@ function ec(e) {
                 ]
             });
         })(e_),
-        eN = (0, J.g)(Q),
-        eS = (0, N.Z)({ analyticsLocations: em }),
+        eT = (0, J.g)(Q),
+        eS = (0, T.Z)({ analyticsLocations: em }),
         { customStatusBubbleEditEnabled: eA } = (0, Z.K)({ location: 'AccountProfilePopout' }),
         eb = (0, q.I5)(Y),
         ex = (e) => {
@@ -458,7 +458,7 @@ function ec(e) {
                                                         : (0, i.jsx)($.Mv, {
                                                               id: 'get-premium',
                                                               action: en.yM.GET_PREMIUM,
-                                                              label: (0, i.jsx)(T.Z, {
+                                                              label: (0, i.jsx)(N.Z, {
                                                                   variant: 'text-sm/medium',
                                                                   children: ei.intl.string(ei.t.x6rkDg)
                                                               }),
@@ -496,7 +496,7 @@ function ec(e) {
                                                                       className: er.statusPickerModalMenu,
                                                                       'aria-label': ei.intl.string(ei.t.E13trK),
                                                                       onClose: t,
-                                                                      children: eT
+                                                                      children: eN
                                                                   });
                                                               },
                                                         onClick: a.tq
@@ -520,7 +520,7 @@ function ec(e) {
                                                                                               hideScroller: !0,
                                                                                               onClose: t,
                                                                                               onSelect: void 0,
-                                                                                              children: eT
+                                                                                              children: eN
                                                                                           })
                                                                                       });
                                                                                   })
@@ -592,7 +592,7 @@ function ec(e) {
                                                                 navId: 'switch-accounts-submenu',
                                                                 'aria-label': ei.intl.string(ei.t.wFhVqK),
                                                                 onClose: t,
-                                                                children: eN
+                                                                children: eT
                                                             });
                                                         }
                                                     })

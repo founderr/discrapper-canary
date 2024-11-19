@@ -18,8 +18,8 @@ var i = n(200651),
     I = n(566078),
     C = n(602667),
     v = n(611855),
-    T = n(670638),
-    N = n(667105),
+    N = n(670638),
+    T = n(667105),
     S = n(860151),
     A = n(341907),
     b = n(46140),
@@ -93,7 +93,7 @@ t.Z = function (e) {
             }),
                 (0, A.navigateToQuestHome)(b.dr.ACTIVITY_PANEL, g.jn.ACTIVITY_PANEL, o.id);
         }, [o]),
-        M = (0, N.hf)({
+        M = (0, T.hf)({
             quest: o,
             location: g.jn.ACTIVITY_PANEL
         }),
@@ -132,7 +132,7 @@ t.Z = function (e) {
                               className: L.utils,
                               children: [
                                   k ? (0, i.jsx)(y, { quest: o }) : (0, i.jsx)(v.Z, { textOpacity: 0.5 }),
-                                  (0, i.jsx)(T.r, {
+                                  (0, i.jsx)(N.r, {
                                       quest: o,
                                       questContent: g.jn.ACTIVITY_PANEL,
                                       shouldShowDisclosure: (null === (t = o.userStatus) || void 0 === t ? void 0 : t.enrolledAt) == null,

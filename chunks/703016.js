@@ -18,8 +18,8 @@ var i = n(913527),
     I = n(292959),
     C = n(699516),
     v = n(944486),
-    T = n(9156),
-    N = n(594174),
+    N = n(9156),
+    T = n(594174),
     S = n(51144),
     A = n(196051),
     b = n(441729),
@@ -37,7 +37,7 @@ function D(e, t, n, i) {
             .replace(j, L.intl.string(L.t['F+x38P']))
             .replace(/<@!?(\d+)>/g, (e, t) => {
                 var i;
-                let r = N.default.getUser(t);
+                let r = T.default.getUser(t);
                 if (null == r) return e;
                 return null !== (i = f.ZP.getNick(n, r.id)) && void 0 !== i ? i : S.ZP.getName(r);
             })
@@ -47,7 +47,7 @@ function D(e, t, n, i) {
             })
             .replace(/<#(\d+)>/g, (e, t) => {
                 let n = g.Z.getChannel(t);
-                return null == n ? e : (0, o.F6)(n, N.default, C.Z);
+                return null == n ? e : (0, o.F6)(n, T.default, C.Z);
             })
             .replace(/<a?:(\w+):(\d+)>/g, (e, t) => ''.concat(L.intl.string(L.t.sMOuub), ' ').concat(t))
             .replace(/<\/([^\s]+?):(\d+)>/g, (e, t) => '/'.concat(t))
@@ -112,15 +112,15 @@ function H(e) {
     if (null == d) return !1;
     let u = v.Z.getChannelId(),
         _ = p.ZP.getCurrentSidebarChannelId(u),
-        N = s === u || s === _,
-        A = h.OW.getSetting() && o.tts && N,
+        T = s === u || s === _,
+        A = h.OW.getSetting() && o.tts && T,
         b = I.Z.getTTSType(),
-        L = (null === (t = o.author) || void 0 === t ? void 0 : t.id) !== m.default.getId() && (b === Z.PrB.ALL_CHANNELS || (b === Z.PrB.SELECTED_CHANNEL && N));
+        L = (null === (t = o.author) || void 0 === t ? void 0 : t.id) !== m.default.getId() && (b === Z.PrB.ALL_CHANNELS || (b === Z.PrB.SELECTED_CHANNEL && T));
     if ((A || L) && !C.Z.isBlockedOrIgnoredForMessage(o)) {
         if (y.indexOf(o.id) >= 0) return !1;
         y.unshift(o.id) > 10 && y.pop();
         let e = d.getGuildId();
-        if (null != e && T.ZP.getMutedChannels(e).has(s)) return !1;
+        if (null != e && N.ZP.getMutedChannels(e).has(s)) return !1;
         let t = null !== (l = null !== (r = f.ZP.getNick(e, null === (n = o.author) || void 0 === n ? void 0 : n.id)) && void 0 !== r ? r : S.ZP.getName(o.author)) && void 0 !== l ? l : '',
             c = o.type === Z.uaV.REPLY ? (null === (i = o.referenced_message) || void 0 === i ? void 0 : i.author) : null,
             u = null != c ? (null !== (a = f.ZP.getNick(e, null == c ? void 0 : c.id)) && void 0 !== a ? a : S.ZP.getName(c)) : null;

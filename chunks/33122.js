@@ -19,8 +19,8 @@ var a,
     g = n(519160),
     b = n(124347),
     f = n(283756),
-    C = n(524444),
-    I = n(585483),
+    I = n(524444),
+    C = n(585483),
     x = n(981631),
     _ = n(745747);
 function v(e, t, n) {
@@ -67,13 +67,13 @@ let P = {
         height: 720
     },
     L = (e) =>
-        (0, C.lV)({
+        (0, I.lV)({
             ...e,
             className: _.videoWrapper,
             mediaPlayerClassName: _.mediaPlayer
         }),
     y = (e) => (0, i.jsx)(b.ZP, { ...e }),
-    j = (e) => {
+    k = (e) => {
         let t,
             n,
             a,
@@ -103,7 +103,7 @@ let P = {
                     height: a
                 });
         }
-        let I = (0, i.jsx)(u.BC, {
+        let C = (0, i.jsx)(u.BC, {
             href: null,
             thumbnail: t,
             video: n,
@@ -122,31 +122,31 @@ let P = {
             autoPlay: p,
             renderVideoComponent: L,
             renderImageComponent: y,
-            renderLinkComponent: C.iT
+            renderLinkComponent: I.iT
         });
         return p
-            ? I
+            ? C
             : (0, i.jsx)(d.Clickable, {
                   className: _.itemImageWrapper,
                   onClick: c,
-                  children: I
+                  children: C
               });
     },
-    k = () =>
+    j = () =>
         (0, i.jsx)('div', {
             className: _.paginationVideoOverlay,
             children: (0, i.jsx)(f.Z, {
                 inactive: !0,
                 className: _.paginationVideoPlayPill,
-                renderLinkComponent: C.iT
+                renderLinkComponent: I.iT
             })
         });
 class w extends (a = s.PureComponent) {
     componentDidMount() {
-        I.S.subscribe(x.CkL.CAROUSEL_PREV, this.manualPrevious), I.S.subscribe(x.CkL.CAROUSEL_NEXT, this.manualNext);
+        C.S.subscribe(x.CkL.CAROUSEL_PREV, this.manualPrevious), C.S.subscribe(x.CkL.CAROUSEL_NEXT, this.manualNext);
     }
     componentWillUnmount() {
-        I.S.unsubscribe(x.CkL.CAROUSEL_PREV, this.manualPrevious), I.S.unsubscribe(x.CkL.CAROUSEL_NEXT, this.manualNext);
+        C.S.unsubscribe(x.CkL.CAROUSEL_PREV, this.manualPrevious), C.S.unsubscribe(x.CkL.CAROUSEL_NEXT, this.manualNext);
     }
     getStyle(e, t) {
         let n = t.interpolate({
@@ -332,7 +332,7 @@ class w extends (a = s.PureComponent) {
                     onMouseLeave: d ? null : this.handleEdgeItemMouseLeave,
                     children:
                         e.type === x.s9s.VIDEO || e.type === x.s9s.YOUTUBE_VIDEO
-                            ? (0, i.jsx)(j, {
+                            ? (0, i.jsx)(k, {
                                   item: e,
                                   size: this.getItemSize(),
                                   onPlay: this.handlePlay,
@@ -361,7 +361,7 @@ class w extends (a = s.PureComponent) {
                                 src: this.getPaginationSrc(e),
                                 draggable: !1
                             }),
-                            e.type === x.s9s.YOUTUBE_VIDEO || e.type === x.s9s.VIDEO ? (0, i.jsx)(k, {}) : null,
+                            e.type === x.s9s.YOUTUBE_VIDEO || e.type === x.s9s.VIDEO ? (0, i.jsx)(j, {}) : null,
                             a ? (0, i.jsx)('div', { className: _.overlappingBorder }) : null
                         ]
                     },

@@ -17,16 +17,16 @@ var i = n(200651),
     I = n(150560),
     C = n(558652),
     v = n(736683),
-    T = n(452081),
-    N = n(46140),
+    N = n(452081),
+    T = n(46140),
     S = n(981631),
     A = n(388032),
     b = n(654654);
 t.Z = function () {
-    let { tabs: e, selectedTab: t, onSelectTab: n } = (0, T.z)(),
+    let { tabs: e, selectedTab: t, onSelectTab: n } = (0, N.z)(),
         { onScroll: x, scrollPosition: Z } = (0, c.M)(),
         L = I.Z.getState().getUtmCurrentContext(),
-        y = (0, E._)({ location: N.dr.QUEST_HOME_DESKTOP }) ? v.Z : v.j;
+        y = (0, E._)({ location: T.dr.QUEST_HOME_DESKTOP }) ? v.Z : v.j;
     r.useEffect(() => {
         (0, s.h)({
             name: l.ImpressionNames.QUEST_HOME,

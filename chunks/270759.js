@@ -18,8 +18,8 @@ var i = n(200651),
     I = n(199104),
     C = n(108427),
     v = n(210887),
-    T = n(974042),
-    N = n(666286),
+    N = n(974042),
+    T = n(666286),
     S = n(596957),
     A = n(981631),
     b = n(723359),
@@ -51,7 +51,7 @@ t.Z = function (e) {
             null != t && m.Z.setInitialSection(t);
         }, [t]);
     let E = (0, c.e7)([v.Z], () => v.Z.theme),
-        { section: y, pendingCount: O } = (0, c.cj)([T.ZP], () => T.ZP.getState()),
+        { section: y, pendingCount: O } = (0, c.cj)([N.ZP], () => N.ZP.getState()),
         P = (0, c.cj)([f.Z], () => f.Z.getSuggestionCount()),
         R = (e) => {
             m.Z.setSection(e);
@@ -152,7 +152,7 @@ t.Z = function (e) {
                         'aria-labelledby': D,
                         children:
                             y === A.pJs.ADD_FRIEND
-                                ? (0, i.jsx)(N.Z, {})
+                                ? (0, i.jsx)(T.Z, {})
                                 : (0, i.jsx)(S.Z, {
                                       titleId: D,
                                       sectionFilter: y

@@ -108,7 +108,7 @@ function y(e) {
                   }
                 : e
         )),
-        r === h.OGo.BLOCKED && (g.notifCenterLocalItems = g.notifCenterLocalItems.filter((e) => !S(e, _.O7.INCOMING_FRIEND_REQUESTS, n) && !S(e, _.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED, n)));
+        (r === h.OGo.BLOCKED || a) && (g.notifCenterLocalItems = g.notifCenterLocalItems.filter((e) => !S(e, _.O7.INCOMING_FRIEND_REQUESTS, n) && !S(e, _.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED, n)));
 }
 function A(e) {
     if (!!(0, s.Z2)(e))

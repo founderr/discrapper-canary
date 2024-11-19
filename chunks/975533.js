@@ -17,8 +17,8 @@ var i = n(570140),
     I = n(246946),
     C = n(808506),
     v = n(237997),
-    T = n(626135),
-    N = n(554174),
+    N = n(626135),
+    T = n(554174),
     S = n(981631),
     A = n(65154);
 let b = {
@@ -104,7 +104,7 @@ let b = {
     },
     [S.kg4.TOGGLE_OVERLAY_INPUT_LOCK]: {
         onTrigger() {
-            let e = (0, N.Z)();
+            let e = (0, T.Z)();
             if (null != e) l.Z.setInputLocked(!v.Z.isLocked(e), e);
         },
         keyEvents: {
@@ -164,7 +164,7 @@ let b = {
     [S.kg4.SOUNDBOARD]: {
         onTrigger: () => {
             if (!(0, g.D)()) return;
-            let e = (0, N.Z)();
+            let e = (0, T.Z)();
             null != e && (v.Z.isLocked(e) ? (0, f.IN)(!0, e) : (0, f.oZ)(e));
         },
         keyEvents: {
@@ -175,7 +175,7 @@ let b = {
     [S.kg4.SOUNDBOARD_HOLD]: {
         onTrigger: (e) => {
             if (!(0, g.D)()) return;
-            let t = (0, N.Z)();
+            let t = (0, T.Z)();
             if (null != t) {
                 e ? (0, f.IN)(!1, t) : (0, f.oZ)(t);
                 return;
@@ -188,7 +188,7 @@ let b = {
     },
     [S.kg4.SAVE_CLIP]: {
         onTrigger: () => {
-            (0, d.ln)() && (T.default.track(S.rMx.CLIP_SAVE_KEYBIND_PRESSED), (0, u.C1)());
+            (0, d.ln)() && (N.default.track(S.rMx.CLIP_SAVE_KEYBIND_PRESSED), (0, u.C1)());
         },
         keyEvents: {
             keyup: !1,

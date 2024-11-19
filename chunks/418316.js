@@ -19,7 +19,7 @@ function m(e) {
         A = s.ZP.getName(a.default.getUser(null === (n = e.other_user) || void 0 === n ? void 0 : n.id));
     switch (e.type) {
         case c.O7.INCOMING_FRIEND_REQUESTS:
-            return d.intl.formatToPlainString(d.t.uIomX1, { username: '**'.concat(A, '**') });
+            return d.intl.format(d.t.uIomX1, { username: A });
         case c.O7.FRIEND_REQUESTS_GROUPED:
             let b = s.ZP.getName(a.default.getUser(null === (f = e.other_users) || void 0 === f ? void 0 : null === (h = f[0]) || void 0 === h ? void 0 : h.id)),
                 j = s.ZP.getName(a.default.getUser(null === (_ = e.other_users) || void 0 === _ ? void 0 : null === (p = _[1]) || void 0 === p ? void 0 : p.id)),
@@ -50,7 +50,7 @@ function m(e) {
                       guild_name: M
                   });
         case c.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED:
-            return d.intl.formatToPlainString(d.t['5Uzkdn'], { username: '**'.concat(A, '**') });
+            return d.intl.format(d.t['5Uzkdn'], { username: A });
     }
     return null !== (T = e.body) && void 0 !== T ? T : '';
 }

@@ -23,8 +23,8 @@ var i = n(200651),
     I = n(973616),
     C = n(592125),
     v = n(626135),
-    T = n(823379),
-    N = n(404295),
+    N = n(823379),
+    T = n(404295),
     S = n(728345),
     A = n(812206),
     b = n(981631),
@@ -143,7 +143,7 @@ function P(e) {
     });
 }
 function R() {
-    let e = (0, N.en)(h.Z.APP_DMS_QUICK_LAUNCHER),
+    let e = (0, T.en)(h.Z.APP_DMS_QUICK_LAUNCHER),
         { frecentApps: t } = (0, p.f)({
             channel: void 0,
             onlyActivityApps: !0,
@@ -158,7 +158,7 @@ function R() {
             () =>
                 t
                     .map((e) => e.application)
-                    .filter(T.lm)
+                    .filter(N.lm)
                     .slice(0, 5),
             [t]
         );

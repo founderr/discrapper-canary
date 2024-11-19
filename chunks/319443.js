@@ -17,8 +17,8 @@ var i = n(200651),
     I = n(370648),
     C = n(569527),
     v = n(979007),
-    T = n(388032),
-    N = n(327900);
+    N = n(388032),
+    T = n(327900);
 t.Z = function () {
     let { onScroll: e, scrollPosition: t, resetScrollPosition: n } = (0, s.M)(),
         S = (0, g.Xh)(),
@@ -57,10 +57,10 @@ t.Z = function () {
             null != (0, g.Uc)() ? (0, h.op)() : (0, f.Yp)();
         }, []);
     return (0, i.jsxs)('div', {
-        className: N.container,
+        className: T.container,
         children: [
             (0, i.jsxs)(c.ZP, {
-                className: R ? N.search : void 0,
+                className: R ? T.search : void 0,
                 children: [
                     !R && (0, i.jsx)(c.z6, { scrollPosition: t }),
                     F
@@ -76,8 +76,8 @@ t.Z = function () {
                           ? (0, i.jsx)(l.Heading, {
                                 variant: 'heading-lg/semibold',
                                 color: 'header-primary',
-                                className: N.alternateHeader,
-                                children: T.intl.formatToPlainString(T.t.zHdzqa, { query: null != Z ? Z : '' })
+                                className: T.alternateHeader,
+                                children: N.intl.formatToPlainString(N.t.zHdzqa, { query: null != Z ? Z : '' })
                             })
                           : (0, i.jsx)(d.Z, {
                                 tabs: L,
@@ -88,7 +88,7 @@ t.Z = function () {
                     !P &&
                         (0, i.jsx)(u.Z, {
                             query: j,
-                            placeholder: T.intl.string(T.t['7J5i+/']),
+                            placeholder: N.intl.string(N.t['7J5i+/']),
                             onTextChange: D,
                             onClear: M,
                             onSubmit: w,

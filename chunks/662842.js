@@ -23,8 +23,8 @@ var i,
     I = n(725436),
     C = n(497656),
     v = n(554747),
-    T = n(230900),
-    N = n(854698),
+    N = n(230900),
+    T = n(854698),
     S = n(703656),
     A = n(922482),
     b = n(565799),
@@ -79,7 +79,7 @@ function U(e) {
             (function (e) {
                 let { guildEvent: t, stageInstance: n, activeChannel: i, canConnect: r, myRole: a, eventCreator: s, speakers: o, listenerCount: c, isEventNoticeHidden: d, isStageNoticeHidden: h, isStudyRoomNotice: m } = e,
                     g = null != n && null != i && !h,
-                    E = null != t ? (0, N.DK)(t) : null;
+                    E = null != t ? (0, T.DK)(t) : null;
                 if (m && null != i) {
                     let e = (0, p.KS)(i);
                     return {
@@ -189,7 +189,7 @@ function U(e) {
                         );
                     }
                     if (t.entity_type === M.WX.EXTERNAL) {
-                        let e = (0, T.cS)(t);
+                        let e = (0, N.cS)(t);
                         if (null == e) return { noticeType: null };
                         let n = f.ZP.getUserCount(t.id, E);
                         return {

@@ -19,8 +19,8 @@ var l = n(481060),
     I = n(823379),
     C = n(358085),
     v = n(929809),
-    T = n(179645),
-    N = n(701476),
+    N = n(179645),
+    T = n(701476),
     S = n(785997),
     A = n(981631),
     b = n(188785),
@@ -38,21 +38,21 @@ class L extends s.Z {
     handleConnectionOpen() {
         var e;
         let t,
-            a = T.Z.getType();
+            a = N.Z.getType();
         if (null == a) return;
         switch (a) {
-            case N.M5.INVITE_UNCLAIMED:
+            case T.M5.INVITE_UNCLAIMED:
                 h.Z.flowStart(x.MK.INVITE, x.EW.NUF_STARTED);
                 break;
-            case N.M5.ORGANIC_REGISTERED:
+            case T.M5.ORGANIC_REGISTERED:
                 h.Z.flowStart(x.MK.ORGANIC, x.EW.NUF_STARTED);
                 break;
-            case N.M5.MARKETING_UNCLAIMED:
+            case T.M5.MARKETING_UNCLAIMED:
                 h.Z.flowStart(x.MK.ORGANIC_MARKETING, x.EW.NUF_STARTED);
         }
         let s = !1,
             Z = _.Z.getGuildId();
-        if (a === N.M5.INVITE_UNCLAIMED) {
+        if (a === T.M5.INVITE_UNCLAIMED) {
             let e = f.Z.getGuild(Z);
             (null == e ? void 0 : e.hasVerificationGate()) && ((s = !0), (0, m.RM)(e.id));
         }

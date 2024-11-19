@@ -30,14 +30,14 @@ function v(e, t, n) {
         e
     );
 }
-function T(e) {
+function N(e) {
     let t = E.default.getUser(e);
     return {
         user: t,
         usernameLower: null != t ? t.username.toLowerCase() : null
     };
 }
-function N(e) {
+function T(e) {
     return {
         status: f.Z.getStatus(e),
         isMobile: f.Z.isMobileOnline(e),
@@ -78,8 +78,8 @@ class b {
                         key: t,
                         type: e,
                         nickname: _.Z.getNickname(t),
-                        ...T(t),
                         ...N(t),
+                        ...T(t),
                         ...S(t),
                         spam: (0, h.A)({ location: 'friend-store' }) && _.Z.isSpam(t),
                         ignoredUser: _.Z.isIgnored(t),
@@ -93,8 +93,8 @@ class b {
                         key: e.key,
                         type: 99,
                         nickname: e.name,
-                        ...T(e.key),
                         ...N(e.key),
+                        ...T(e.key),
                         ...S(e.key)
                     })
             );
@@ -186,7 +186,7 @@ function M(e) {
 }
 class w extends (i = a.ZP.Store) {
     initialize() {
-        this.waitFor(_.Z, f.Z, E.default, g.Z, p.ZP, m.Z, d.Z), this.syncWith([_.Z], D), this.syncWith([d.Z], D), this.syncWith([u.Z], D), this.syncWith([E.default], M(T)), this.syncWith([f.Z, m.Z], M(N)), j();
+        this.waitFor(_.Z, f.Z, E.default, g.Z, p.ZP, m.Z, d.Z), this.syncWith([_.Z], D), this.syncWith([d.Z], D), this.syncWith([u.Z], D), this.syncWith([E.default], M(N)), this.syncWith([f.Z, m.Z], M(T)), j();
     }
     getState() {
         return {

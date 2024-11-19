@@ -18,8 +18,8 @@ var i,
     I = n(306680),
     C = n(699516),
     v = n(9156),
-    T = n(626135),
-    N = n(70956),
+    N = n(626135),
+    T = n(70956),
     S = n(900849),
     A = n(761080),
     b = n(584925),
@@ -39,8 +39,8 @@ function y(e, t, n) {
         e
     );
 }
-let O = 1 * N.Z.Millis.DAY,
-    P = 3 * N.Z.Millis.DAY,
+let O = 1 * T.Z.Millis.DAY,
+    P = 3 * T.Z.Millis.DAY,
     R = [],
     j = null,
     D = 0,
@@ -69,7 +69,7 @@ let O = 1 * N.Z.Millis.DAY,
     er = !0,
     el = !1;
 function ea(e) {
-    return Date.now() - D > 6 * N.Z.Millis.HOUR && [...e, ...k, ...w].slice(0, 3).reduce((e, t) => e + t.score, 0) >= A.jp;
+    return Date.now() - D > 6 * T.Z.Millis.HOUR && [...e, ...k, ...w].slice(0, 3).reduce((e, t) => e + t.score, 0) >= A.jp;
 }
 function es(e, t, n, i) {
     let r = e.filter((e) => e.type !== n);
@@ -90,7 +90,7 @@ function eo() {
                 r = 0;
             for (let i of e) {
                 if (!(0, u.Z2)(i)) {
-                    if ((0, u.BQ)(i, 2 * N.Z.Seconds.DAY) || (0, u.xt)(i)) {
+                    if ((0, u.BQ)(i, 2 * T.Z.Seconds.DAY) || (0, u.xt)(i)) {
                         var n;
                         if (
                             (null == H[i.id] &&
@@ -195,7 +195,7 @@ function ed(e) {
     }
     if ((eo(), null != G.load_id && j !== G.load_id)) {
         var t;
-        T.default.track(Z.rMx.FEED_LOADED, {
+        N.default.track(Z.rMx.FEED_LOADED, {
             ...G,
             unread_feed_item_ids: $.map((e) => e.id),
             read_feed_item_ids: ee.map((e) => e.id),

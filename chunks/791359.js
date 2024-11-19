@@ -23,8 +23,8 @@ var i = n(200651),
     I = n(70956),
     C = n(225559),
     v = n(910436),
-    T = n(203028),
-    N = n(358924),
+    N = n(203028),
+    T = n(358924),
     S = n(292140),
     A = n(525296),
     b = n(981631),
@@ -34,7 +34,7 @@ var i = n(200651),
 let y = 15 * I.Z.Millis.MINUTE,
     O = (0, A.Z)(function (e) {
         let { party: t, onUserContextMenu: n, onChannelContextMenu: l, quest: a } = e,
-            s = (0, i.jsx)(T.Z, {
+            s = (0, i.jsx)(N.Z, {
                 party: t,
                 onUserContextMenu: n
             }),
@@ -77,7 +77,7 @@ let y = 15 * I.Z.Millis.MINUTE,
                   spacing: 8,
                   children: (e, t) => {
                       let { isShown: n } = t;
-                      return (0, i.jsx)(N.Z, {
+                      return (0, i.jsx)(T.Z, {
                           ...e,
                           onMouseEnter: A,
                           'aria-haspopup': 'menu',

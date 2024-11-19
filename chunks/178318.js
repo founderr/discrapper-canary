@@ -36,8 +36,8 @@ try {
     } catch (e) {}
 }
 let v = h.ZP.requireModule('discord_rpc').RPCWebSocket,
-    T = window.GLOBAL_ENV.MARKETING_ENDPOINT,
-    N = new d.Z('RPCServer:WSS'),
+    N = window.GLOBAL_ENV.MARKETING_ENDPOINT,
+    T = new d.Z('RPCServer:WSS'),
     S = [];
 function A(e) {
     return 'function' == typeof e ? e() : e;
@@ -50,7 +50,7 @@ function b() {
                 : () => {
                       if (!A(r.listening)) return;
                       let e = r.address().port;
-                      N.info('Starting on '.concat(e)),
+                      T.info('Starting on '.concat(e)),
                           c.Z.dispatch({
                               type: 'RPC_SERVER_READY',
                               port: e
@@ -94,7 +94,7 @@ function Z(e, t, n, i) {
 }
 class L extends g.Z {
     send(e) {
-        (u.default.isLoggingOverlayEvents || (e.cmd !== E.Etm.OVERLAY && e.evt !== E.zMe.OVERLAY)) && N.info('Socket Emit: '.concat(this.id), (0, p.Z)(e)), null != i && 'etf' === this.encoding ? this._socket.send(i.pack(e), { binary: !0 }) : this._socket.send(JSON.stringify(e));
+        (u.default.isLoggingOverlayEvents || (e.cmd !== E.Etm.OVERLAY && e.evt !== E.zMe.OVERLAY)) && T.info('Socket Emit: '.concat(this.id), (0, p.Z)(e)), null != i && 'etf' === this.encoding ? this._socket.send(i.pack(e), { binary: !0 }) : this._socket.send(JSON.stringify(e));
     }
     close(e, t) {
         this._socket.close(e, t);
@@ -107,7 +107,7 @@ class L extends g.Z {
 }
 class y extends g.Z {
     send(e) {
-        (u.default.isLoggingOverlayEvents || e.cmd !== E.Etm.OVERLAY) && N.info('Socket Emit: '.concat(this.id), e), this._sendCallback(e);
+        (u.default.isLoggingOverlayEvents || e.cmd !== E.Etm.OVERLAY) && T.info('Socket Emit: '.concat(this.id), e), this._sendCallback(e);
     }
     close(e, t) {
         this._closeCallback(t, e);
@@ -132,7 +132,7 @@ class O extends l.EventEmitter {
                 s = function () {
                     var e;
                     let { protocol: i, host: r } = o.parse(null !== (e = n.get('callback')) && void 0 !== e ? e : '');
-                    i === location.protocol && r === location.host ? t.setHeader('Location', n.get('callback')) : t.setHeader('Location', T), t.writeHead(301), t.end();
+                    i === location.protocol && r === location.host ? t.setHeader('Location', n.get('callback')) : t.setHeader('Location', N), t.writeHead(301), t.end();
                 },
                 c = new y(l ? x.bind(null, e, t) : s, l ? Z.bind(null, e, t, 400) : s, Number(n.get('v')), r);
             if (l)
@@ -164,10 +164,10 @@ class O extends l.EventEmitter {
             e.close(t.code, t.message);
             return;
         }
-        N.info('Socket Opened: '.concat(i.id)),
-            e.on('error', (e) => N.error('WS Error: '.concat(e.message))),
+        T.info('Socket Opened: '.concat(i.id)),
+            e.on('error', (e) => T.error('WS Error: '.concat(e.message))),
             e.on('close', (e, t) => {
-                N.info('Socket Closed: '.concat(i.id, ', code ').concat(e, ', message ').concat(t)), s().remove(S, (e) => e === i), this.emit('disconnect', i);
+                T.info('Socket Closed: '.concat(i.id, ', code ').concat(e, ', message ').concat(t)), s().remove(S, (e) => e === i), this.emit('disconnect', i);
             }),
             (0, f.em)(i, l, r.get('client_id'))
                 .then(() => {
@@ -188,14 +188,14 @@ class O extends l.EventEmitter {
             e.close(E.$VG.CLOSE_UNSUPPORTED, 'Payload not '.concat(e.encoding));
             return;
         }
-        (u.default.isLoggingOverlayEvents || n.cmd !== E.Etm.OVERLAY) && N.info('Socket Message: '.concat(e.id), (0, p.Z)(n)), this.emit('request', e, n);
+        (u.default.isLoggingOverlayEvents || n.cmd !== E.Etm.OVERLAY) && T.info('Socket Message: '.concat(e.id), (0, p.Z)(n)), this.emit('request', e, n);
     }
     constructor() {
         var e;
         super();
         let t = 0;
         (r = v.http.createServer()).on('error', (e) => {
-            N.error('Error: '.concat(e.message)), ('EADDRINUSE' === e.code || e.message.includes('EADDRINUSE')) && setTimeout(() => b(++t), 1000);
+            T.error('Error: '.concat(e.message)), ('EADDRINUSE' === e.code || e.message.includes('EADDRINUSE')) && setTimeout(() => b(++t), 1000);
         }),
             r.on('request', this.handleRequest.bind(this)),
             b(t);

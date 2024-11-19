@@ -24,8 +24,8 @@ var i = n(200651),
     I = n(140700),
     C = n(665807),
     v = n(188493),
-    T = n(294330),
-    N = n(981631),
+    N = n(294330),
+    T = n(981631),
     S = n(972477);
 let A = Object.freeze({
         top: 0,
@@ -40,9 +40,9 @@ let A = Object.freeze({
         right: 32
     }),
     x = {
-        page: N.ZY5.GUILD_DISCOVERY,
-        object: N.qAy.CARD,
-        section: N.jXE.DISCOVER_SEARCH
+        page: T.ZY5.GUILD_DISCOVERY,
+        object: T.qAy.CARD,
+        section: T.jXE.DISCOVER_SEARCH
     },
     Z = o().throttle(p.c6, 1000, {
         leading: !1,
@@ -50,7 +50,7 @@ let A = Object.freeze({
     });
 function L(e) {
     let { loadId: t, onGuildCardSeen: n, onGuildCardClick: l } = e,
-        { guildIds: o, loading: p, searchResultsQuery: N, loadMore: L, searchCategoryId: y, isBlockedSearchQuery: O } = (0, _.f)({ loadId: t }),
+        { guildIds: o, loading: p, searchResultsQuery: T, loadMore: L, searchCategoryId: y, isBlockedSearchQuery: O } = (0, _.f)({ loadId: t }),
         P = 0 === o.length && !p,
         R = r.useContext(h.AnalyticsContext),
         [j, D] = r.useState((0, u.P)()),
@@ -83,17 +83,17 @@ function L(e) {
     }, [F, o, V]),
         r.useEffect(() => {
             D((0, u.P)());
-        }, [N]),
+        }, [T]),
         r.useEffect(() => {
             Z({
                 loadId: t,
                 searchId: j,
-                query: N,
+                query: T,
                 guildResults: o.map(g.Z.getGuild).filter(m.lm),
                 analyticsContext: R,
                 categoryId: y
             });
-        }, [R, o, t, y, j, N]);
+        }, [R, o, t, y, j, T]);
     let z = r.useCallback((e) => n(e, y), [n, y]),
         W = r.useMemo(() => (p && !O ? [o.length, 0] : [o.length]), [o.length, O, p]),
         Y = r.useCallback(
@@ -179,7 +179,7 @@ function L(e) {
                         'div',
                         {
                             style: n,
-                            children: (0, i.jsx)(T.ZP, {
+                            children: (0, i.jsx)(N.ZP, {
                                 guildId: e,
                                 onClick: async (e) => await Q(e, t, y, x),
                                 onView: (e) => z(e)

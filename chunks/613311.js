@@ -18,8 +18,8 @@ var i = n(200651),
     I = n(115130),
     C = n(812206),
     v = n(770146),
-    T = n(600164),
-    N = n(606081),
+    N = n(600164),
+    T = n(606081),
     S = n(252618),
     A = n(100159),
     b = n(646288),
@@ -290,22 +290,22 @@ class ec extends r.PureComponent {
         let r = [],
             l = n.getSplashURL(1024);
         null != l && r.push(l), null != t.headerLogoLightTheme && r.unshift((0, V._W)(n.id, t.headerLogoLightTheme, 1024, 'jpg'));
-        let a = N.Z.Product({
+        let a = T.Z.Product({
                 name: e.name,
                 description: null != e.summary && '' !== e.summary ? e.summary : t.tagline,
-                image: N.Z.Product.Image(r),
+                image: T.Z.Product.Image(r),
                 sku: e.id
             }),
             s = e.getPrice();
         if (null != s) {
             let { amount: e, currency: t } = s;
-            a.offers = N.Z.Offer({
+            a.offers = T.Z.Offer({
                 priceCurrency: t.toUpperCase(),
                 price: (0, H.T4)(e, t, { style: 'decimal' })
             });
         }
-        let o = N.Z.ItemPage({ mainEntity: a });
-        return (0, i.jsx)(N.Z, { data: o });
+        let o = T.Z.ItemPage({ mainEntity: a });
+        return (0, i.jsx)(T.Z, { data: o });
     }
     renderSmall(e, t, n) {
         return (0, i.jsxs)('div', {
@@ -344,9 +344,9 @@ class ec extends r.PureComponent {
             return (0, i.jsxs)(r.Fragment, {
                 children: [
                     this.renderHeader(e, t),
-                    (0, i.jsx)(T.Z, {
-                        align: T.Z.Align.CENTER,
-                        justify: T.Z.Justify.CENTER,
+                    (0, i.jsx)(N.Z, {
+                        align: N.Z.Align.CENTER,
+                        justify: N.Z.Justify.CENTER,
                         children: (0, i.jsx)(d.Spinner, { className: es.spinner })
                     })
                 ]
@@ -543,9 +543,9 @@ class ec extends r.PureComponent {
             eo(this, 'renderListing', () => {
                 let { application: e, storeListing: t, sku: n, pageSize: r } = this.props;
                 return null == e || null == n || null == t || t.isSlimDirectoryVersion()
-                    ? (0, i.jsx)(T.Z, {
-                          align: T.Z.Align.CENTER,
-                          justify: T.Z.Justify.CENTER,
+                    ? (0, i.jsx)(N.Z, {
+                          align: N.Z.Align.CENTER,
+                          justify: N.Z.Justify.CENTER,
                           children: (0, i.jsx)(d.Spinner, {})
                       })
                     : r === ei.b.SMALL

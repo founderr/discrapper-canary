@@ -23,8 +23,8 @@ var i = n(200651),
     I = n(143757),
     C = n(463119),
     v = n(377171),
-    T = n(243778),
-    N = n(922409),
+    N = n(243778),
+    T = n(922409),
     S = n(899740),
     A = n(28476),
     b = n(880257),
@@ -138,7 +138,7 @@ let $ = (e) => {
     en = (e) => {
         let { selected: t } = e,
             n = (0, c.JA)('messageRequests'),
-            { channelId: r } = (0, N._)();
+            { channelId: r } = (0, T._)();
         if (!(0, A.a)()) return null;
         let l = null == r ? void 0 : () => g.Z.preload(K.ME, r);
         return (0, i.jsx)(z.Qj, {
@@ -194,7 +194,7 @@ let $ = (e) => {
                     className: J.familyCenterPendingBadge,
                     children: (0, i.jsx)(p.NumberBadge, { count: r })
                 })
-              : (0, i.jsx)(T.ZP, {
+              : (0, i.jsx)(N.ZP, {
                     contentTypes: [h.z.FAMILY_CENTER_NEW_BADGE],
                     children: (e) => {
                         let { visibleContent: t } = e;

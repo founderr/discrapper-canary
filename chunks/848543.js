@@ -23,8 +23,8 @@ var i = n(200651),
     I = n(792165),
     C = n(603074),
     v = n(981631),
-    T = n(921944),
-    N = n(388032),
+    N = n(921944),
+    T = n(388032),
     S = n(246764);
 function A(e) {
     let { channel: t, iconClassName: l, className: A, innerClassName: b, ...x } = e,
@@ -87,7 +87,7 @@ function A(e) {
                             disabled: O,
                             onClick: () => {
                                 var t, n;
-                                null != M && M !== o.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && w(T.L.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), R(!P), B();
+                                null != M && M !== o.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && w(N.L.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), R(!P), B();
                             },
                             onMouseEnter: (t) => {
                                 var n, i;
@@ -121,10 +121,10 @@ function A(e) {
             value: k,
             children: (0, i.jsx)(d.Tooltip, {
                 text: (function () {
-                    if (Z) return N.intl.string(N.t['Ox4/zc']);
-                    if (L) return N.intl.string(N.t['+YBKYG']);
-                    if (y) return N.intl.string(N.t.X1lQlp);
-                    return N.intl.string(N.t['6EJvHh']);
+                    if (Z) return T.intl.string(T.t['Ox4/zc']);
+                    if (L) return T.intl.string(T.t['+YBKYG']);
+                    if (y) return T.intl.string(T.t.X1lQlp);
+                    return T.intl.string(T.t['6EJvHh']);
                 })(),
                 children: (e) => F(e)
             })

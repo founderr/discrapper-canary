@@ -14,8 +14,8 @@ var a,
     g = n(524444),
     b = n(843445),
     f = n(981631),
-    C = n(388032),
-    I = n(862756);
+    I = n(388032),
+    C = n(862756);
 function x(e, t, n) {
     return (
         t in e
@@ -33,8 +33,8 @@ let _ = (e) => {
         let { className: t, ...n } = e;
         return (0, i.jsx)(m.Z, {
             ...n,
-            className: l()(I.sizedToParent, t),
-            mediaPlayerClassName: I.sizedToParent,
+            className: l()(C.sizedToParent, t),
+            mediaPlayerClassName: C.sizedToParent,
             renderLinkComponent: g.iT
         });
     },
@@ -84,10 +84,10 @@ let _ = (e) => {
                 });
         }
         return (0, i.jsx)('div', {
-            className: I.embedContainer,
+            className: C.embedContainer,
             children: (0, i.jsx)(c.BC, {
-                className: I.sizedToParent,
-                iframeWrapperClassName: I.sizedToParent,
+                className: C.sizedToParent,
+                iframeWrapperClassName: C.sizedToParent,
                 href: null,
                 thumbnail: t,
                 video: n,
@@ -124,7 +124,7 @@ class E extends (a = s.PureComponent) {
             delay: t,
             initialPaused: a || r,
             renderItem: this.renderItem,
-            className: l()(I.smallCarousel, n),
+            className: l()(C.smallCarousel, n),
             themedPagination: s,
             onIntentionalChange: this.handleIntentionalChange,
             onChangeItem: this.handleChangeItem
@@ -201,26 +201,26 @@ class E extends (a = s.PureComponent) {
                         if ('errored' === this.state.status.get(e.src)) {
                             let e = (0, i.jsx)(o.Heading, {
                                 variant: 'heading-xl/semibold',
-                                children: C.intl.string(C.t.UvDfMz)
+                                children: I.intl.string(I.t.UvDfMz)
                             });
                             return (0, i.jsx)('div', {
-                                className: I.errorContainer,
+                                className: C.errorContainer,
                                 children: void 0 !== this.props.errorComponent ? this.props.errorComponent : e
                             });
                         }
                         {
                             var d;
-                            let t = null !== (d = e.alt) && void 0 !== d ? d : C.intl.string(C.t.X4IxWF);
+                            let t = null !== (d = e.alt) && void 0 !== d ? d : I.intl.string(I.t.X4IxWF);
                             n = (0, i.jsxs)(i.Fragment, {
                                 children: [
                                     (0, i.jsx)(o.Spinner, {
-                                        className: l()(I.spinner, { [I.hidden]: void 0 !== this.state.status.get(e.src) }),
+                                        className: l()(C.spinner, { [C.hidden]: void 0 !== this.state.status.get(e.src) }),
                                         type: o.Spinner.Type.SPINNING_CIRCLE
                                     }),
                                     (0, i.jsx)('img', {
                                         onError: this.handleOnErrorImg,
                                         onLoad: this.handleOnLoadImg,
-                                        className: l()(I.smallCarouselImage, { [I.hidden]: 'loaded' !== this.state.status.get(e.src) }),
+                                        className: l()(C.smallCarouselImage, { [C.hidden]: 'loaded' !== this.state.status.get(e.src) }),
                                         src: e.src,
                                         alt: t
                                     })
@@ -232,7 +232,7 @@ class E extends (a = s.PureComponent) {
                         throw Error('Unexpected MediaType');
                 }
                 return (0, i.jsx)(o.Clickable, {
-                    className: I.smallCarouselItem,
+                    className: C.smallCarouselItem,
                     onClick: () => this.handleCurrentItemClick(e, t),
                     children: n
                 });

@@ -31,7 +31,7 @@ function v(e, t, n) {
         e
     );
 }
-class T extends h.Z {
+class N extends h.Z {
     _initialize() {
         super._initialize(), !__OVERLAY__ && l.Z.subscribe('OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST', this._handleOverlaySoundboardSoundsFetchRequest);
     }
@@ -95,4 +95,4 @@ class T extends h.Z {
             });
     }
 }
-t.Z = new T();
+t.Z = new N();

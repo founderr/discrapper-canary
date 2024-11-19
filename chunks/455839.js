@@ -30,14 +30,14 @@ function g(e) {
         I = (0, l.e7)([d.Z], () => d.Z.getGuild(t.id), [t.id]),
         C = (0, l.e7)([u.Z], () => u.Z.can(m.Plq.ADMINISTRATOR, I)),
         { canSeeInAppReportingButtons: v } = h.N.useExperiment({ location: '0e35b9_1' }, { autoTrackExposure: !1 }),
-        T = () => {
+        N = () => {
             (0, s.Zy)(), null == f || f();
         },
-        N = r.useCallback((e) => {
+        T = r.useCallback((e) => {
             e.stopPropagation();
         }, []);
     return (0, i.jsx)(a.Clickable, {
-        onClick: N,
+        onClick: T,
         children: (0, i.jsxs)(a.Menu, {
             onSelect: g,
             navId: 'guild-discovery-context-menu',
@@ -51,7 +51,7 @@ function g(e) {
                                   id: 'report-guild-discovery-listing',
                                   label: p.intl.string(p.t.Aen9en),
                                   action: () => {
-                                      (0, c.lt)(t), T();
+                                      (0, c.lt)(t), N();
                                   },
                                   icon: a.FlagIcon,
                                   color: 'danger'

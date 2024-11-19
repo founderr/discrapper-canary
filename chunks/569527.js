@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return T;
     }
 }),
     n(610138),
@@ -27,11 +27,11 @@ var i = n(200651),
     I = n(133743),
     C = n(120549),
     v = n(979007),
-    T = n(870411);
-function N(e) {
+    N = n(870411);
+function T(e) {
     var t;
     let { onSelectApplication: n } = e,
-        N = (0, l.TH)(),
+        T = (0, l.TH)(),
         S = r.useRef(null),
         {
             query: A,
@@ -39,7 +39,7 @@ function N(e) {
             categoryId: x
         } = r.useMemo(() => {
             var e, t;
-            let n = new URLSearchParams(N.search),
+            let n = new URLSearchParams(T.search),
                 i = n.get('page'),
                 r = null != i ? Number(i) : 1;
             return {
@@ -47,7 +47,7 @@ function N(e) {
                 page: r,
                 categoryId: null !== (t = Number(n.get('category_id'))) && void 0 !== t ? t : p.MU
             };
-        }, [N.search]);
+        }, [T.search]);
     r.useEffect(() => {
         A !== S.current &&
             ((S.current = A),
@@ -119,10 +119,10 @@ function N(e) {
             (0, i.jsx)(_.Z, {
                 children: (0, i.jsx)(f.Z, {
                     children: (0, i.jsxs)('div', {
-                        className: T.container,
+                        className: N.container,
                         children: [
                             (0, i.jsx)('div', {
-                                className: T.topFilterContainer,
+                                className: N.topFilterContainer,
                                 children: (0, i.jsx)(C.V, {
                                     countsByCategory: y,
                                     selectedCategoryId: x,
@@ -132,7 +132,7 @@ function N(e) {
                             (0, i.jsx)(g.Z, {
                                 loading: Z === h.M.FETCHING,
                                 children: (0, i.jsx)('div', {
-                                    className: T.content,
+                                    className: N.content,
                                     children:
                                         null == P
                                             ? void 0
@@ -154,7 +154,7 @@ function N(e) {
                                 })
                             }),
                             (0, i.jsx)(c.Paginator, {
-                                className: T.paginationInput,
+                                className: N.paginationInput,
                                 totalCount: Math.min((null !== (t = null == P ? void 0 : P.totalPages) && void 0 !== t ? t : 0) * v.IV, v.Et * v.IV),
                                 pageSize: v.IV,
                                 disablePaginationGap: !0,
@@ -167,9 +167,9 @@ function N(e) {
                 })
             }),
             (0, i.jsx)('div', {
-                className: T.sideFilterContainer,
+                className: N.sideFilterContainer,
                 children: (0, i.jsx)('div', {
-                    className: T.sideFilterContent,
+                    className: N.sideFilterContent,
                     children: (0, i.jsx)(C.Z, {
                         countsByCategory: y,
                         selectedCategoryId: x,

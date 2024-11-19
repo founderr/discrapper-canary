@@ -24,18 +24,18 @@ t.Z = (e) => {
     r.useEffect(() => {
         null != v && (0, o.uL)(m.Z5c.CHANNEL(t));
     }, [v, t]);
-    let T = r.useCallback((e) => {
+    let N = r.useCallback((e) => {
             _((t) => Math.max(t, e));
         }, []),
-        N = (0, u.gK)();
+        T = (0, u.gK)();
     return (0, i.jsx)('div', {
         className: g.page,
         children: (0, i.jsxs)(s.Z, {
             embedded: !0,
-            splash: N,
+            splash: T,
             waveState: f,
             showLogo: !1,
-            updateWaveState: T,
+            updateWaveState: N,
             children: [
                 (0, i.jsx)('div', { className: g.dragRegion }),
                 (0, i.jsx)('div', {

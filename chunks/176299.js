@@ -23,8 +23,8 @@ var i = n(200651),
     I = n(765717),
     C = n(358221),
     v = n(823748),
-    T = n(626421),
-    N = n(118379),
+    N = n(626421),
+    T = n(118379),
     S = n(652515),
     A = n(544978),
     b = n(540059),
@@ -104,13 +104,13 @@ let eg = 'resizable-sidebar-width',
         name: 'MemberSafetyPage',
         renderLoader: e_
     }),
-    eT = (0, c.Un)({
+    eN = (0, c.Un)({
         createPromise: () => Promise.all([n.e('44156'), n.e('58227'), n.e('38359'), n.e('15023')]).then(n.bind(n, 603072)),
         webpackId: 603072,
         name: 'ChannelsAndRolesPage',
         renderLoader: e_
     }),
-    eN = (0, c.Un)({
+    eT = (0, c.Un)({
         createPromise: () => Promise.all([n.e('44156'), n.e('19878'), n.e('38359'), n.e('40942')]).then(n.bind(n, 599263)),
         webpackId: 599263,
         name: 'GuildOnboardingPage',
@@ -159,14 +159,14 @@ let eg = 'resizable-sidebar-width',
                 case eh.oC.GUILD_HOME:
                     return (0, i.jsx)(eC, { guildId: r });
                 case eh.oC.CHANNEL_BROWSER:
-                    return (0, i.jsx)(eT, {
+                    return (0, i.jsx)(eN, {
                         guildId: r,
                         selectedSection: em.l7.BROWSE
                     });
                 case eh.oC.GUILD_ONBOARDING:
-                    return (0, i.jsx)(eN, { guildId: r });
+                    return (0, i.jsx)(eT, { guildId: r });
                 case eh.oC.CUSTOMIZE_COMMUNITY:
-                    return (0, i.jsx)(eT, {
+                    return (0, i.jsx)(eN, {
                         guildId: r,
                         selectedSection: em.l7.CUSTOMIZE
                     });
@@ -239,7 +239,7 @@ let eg = 'resizable-sidebar-width',
     eP = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         return function (t) {
-            return (0, i.jsx)(N.Z, {
+            return (0, i.jsx)(T.Z, {
                 isFullScreen: e,
                 ...t
             });
@@ -314,7 +314,7 @@ function eU(e) {
             }
         }, [I]);
     let v = r.useRef(null),
-        T = r.useCallback((e, t) => {
+        N = r.useCallback((e, t) => {
             var n;
             ek(e);
             let i = t < 80;
@@ -322,7 +322,7 @@ function eU(e) {
             let r = t - e;
             null === (n = v.current) || void 0 === n || n.style.setProperty('--custom-overdrag', ''.concat(1 + Math.min(Math.abs(r / 76), 0.25))), i && ek(76);
         }, []),
-        N = r.useCallback(() => {
+        T = r.useCallback(() => {
             document.body.classList.add(ep.dragging);
         }, []),
         S = r.useCallback((e) => {
@@ -333,8 +333,8 @@ function eU(e) {
             minDimension: 240,
             maxDimension: 416,
             resizableDomNodeRef: v,
-            onElementResize: T,
-            onElementResizeStart: N,
+            onElementResize: N,
+            onElementResizeStart: T,
             onElementResizeEnd: S,
             orientation: f.y.HORIZONTAL_RIGHT,
             throttleDuration: 0
@@ -455,7 +455,7 @@ function eG() {
                             (0, i.jsxs)('div', {
                                 className: ep.content,
                                 children: [
-                                    (0, i.jsx)(T.Z, {}),
+                                    (0, i.jsx)(N.Z, {}),
                                     (0, i.jsx)(eU, {
                                         isOnFullScreenCollectiblesShopRoute: h,
                                         isSidebarOpen: m,

@@ -130,34 +130,34 @@ t.Z = function (e) {
         }, []),
         C = r.useCallback(() => d(!1), []),
         v = (0, u.ye)(t),
-        T = (0, p.u)(l),
-        N = t.bot,
+        N = (0, p.u)(l),
+        T = t.bot,
         { botBannerUrl: S, botBannerUrlAnimated: A } = r.useMemo(
             () =>
-                (null == N ? void 0 : N.id) == null || (null == N ? void 0 : N.banner) == null
+                (null == T ? void 0 : T.id) == null || (null == T ? void 0 : T.banner) == null
                     ? {}
                     : {
                           botBannerUrl: (0, m.aN)({
-                              id: N.id,
-                              banner: N.banner,
+                              id: T.id,
+                              banner: T.banner,
                               canAnimate: !1,
                               size: 600
                           }),
                           botBannerUrlAnimated: a
                               ? void 0
                               : (0, m.aN)({
-                                    id: N.id,
-                                    banner: N.banner,
+                                    id: T.id,
+                                    banner: T.banner,
                                     canAnimate: !0,
                                     size: 600
                                 })
                       },
-            [null == N ? void 0 : N.id, null == N ? void 0 : N.banner, a]
+            [null == T ? void 0 : T.id, null == T ? void 0 : T.banner, a]
         );
     return (0, i.jsx)('div', {
         className: g.banner,
         style: {
-            backgroundImage: T,
+            backgroundImage: N,
             aspectRatio: 'card' === n ? f : _
         },
         onMouseEnter: h,

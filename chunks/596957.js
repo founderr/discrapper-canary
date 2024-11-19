@@ -18,8 +18,8 @@ var i = n(200651),
     I = n(451478),
     C = n(434184),
     v = n(701861),
-    T = n(437314),
-    N = n(696577),
+    N = n(437314),
+    T = n(696577),
     S = n(163417),
     A = n(492347),
     b = n(42575),
@@ -70,7 +70,7 @@ t.Z = function (e) {
         return (0, i.jsx)('div', {
             className: y.emptyStateContainer,
             children: (0, i.jsx)(
-                T.Z,
+                N.Z,
                 {
                     type: t,
                     onClick: B
@@ -137,7 +137,7 @@ t.Z = function (e) {
                 F
                     ? (0, i.jsx)('div', {
                           className: y.emptyStateContainer,
-                          children: (0, i.jsx)(T.Z, { type: T.j.SECTION_NO_RESULTS }, R)
+                          children: (0, i.jsx)(N.Z, { type: N.j.SECTION_NO_RESULTS }, R)
                       })
                     : (0, i.jsx)(S.Z, {
                           relationshipCount: D,
@@ -150,7 +150,7 @@ t.Z = function (e) {
                                           isFocused: j
                                       });
                                   case Z.pJs.PENDING:
-                                      return (0, i.jsx)(N.Z, {
+                                      return (0, i.jsx)(T.Z, {
                                           ...e,
                                           isFocused: j
                                       });

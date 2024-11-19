@@ -19,8 +19,8 @@ var r = n(243814),
     I = n(293273),
     C = n(885110),
     v = n(451478),
-    T = n(630388),
-    N = n(823379),
+    N = n(630388),
+    T = n(823379),
     S = n(591759),
     A = n(228488),
     b = n(996106),
@@ -194,7 +194,7 @@ t.Z = {
                             }, 1000);
                     };
                     l.addEventListener('change', () => {
-                        (0, N.lm)(l.files) && e(l.files[0]), a();
+                        (0, T.lm)(l.files) && e(l.files[0]), a();
                     }),
                         l.addEventListener('cancel', () => {
                             a();
@@ -205,7 +205,7 @@ t.Z = {
                 })(
                     async (n) => {
                         let l = await (0, m.kv)(i, r, n);
-                        (0, N.lm)(l) && (0, N.lm)(l.url) && !(l instanceof u.Z) ? e({ image_url: l.url }) : t(l);
+                        (0, T.lm)(l) && (0, T.lm)(l.url) && !(l instanceof u.Z) ? e({ image_url: l.url }) : t(l);
                     },
                     () => t(Error('Upload canceled'))
                 );
@@ -226,7 +226,7 @@ t.Z = {
             (0, x.bu)(n.transport);
             let r = n.application.id;
             if (null == r) throw new b.Z({ errorCode: R.lTL.INVALID_COMMAND }, 'No application.');
-            if (!(0, T.yE)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, R.udG.EMBEDDED)) throw new b.Z({ errorCode: R.lTL.INVALID_COMMAND }, 'This application cannot access this API');
+            if (!(0, N.yE)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, R.udG.EMBEDDED)) throw new b.Z({ errorCode: R.lTL.INVALID_COMMAND }, 'This application cannot access this API');
             let l = (0, L.Z)();
             if (null == l) throw new b.Z({ errorCode: R.lTL.INVALID_COMMAND }, 'No channel found');
             if (!S.Z.isDiscordCdnUrl(i)) throw new b.Z({ errorCode: R.lTL.INVALID_PAYLOAD }, 'mediaUrl must be a Discord CDN url');

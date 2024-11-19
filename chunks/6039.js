@@ -18,8 +18,8 @@ var i = n(200651),
     I = n(200305),
     C = n(981631),
     v = n(898625),
-    T = n(388032),
-    N = n(644868);
+    N = n(388032),
+    T = n(644868);
 t.Z = (e) => {
     var t;
     let n, S;
@@ -48,17 +48,17 @@ t.Z = (e) => {
             h.Z.resetGuildJoinRequest(A);
         };
     let w =
-            ((n = T.intl.format(T.t['9ZezpK'], { name: null == R ? void 0 : R.toString() })),
+            ((n = N.intl.format(N.t['9ZezpK'], { name: null == R ? void 0 : R.toString() })),
             (S = () => {
                 Z(Math.max(x, v.hO.FILLING)), h.Z.removeGuildJoinRequest(A), (0, o.uL)(C.Z5c.ME);
             }),
             () => {
                 (0, a.openModal)((e) =>
                     (0, i.jsx)(a.ConfirmModal, {
-                        header: T.intl.string(T.t.y0CVen),
-                        cancelText: T.intl.string(T.t.oEAioK),
+                        header: N.intl.string(N.t.y0CVen),
+                        cancelText: N.intl.string(N.t.oEAioK),
                         onConfirm: S,
-                        confirmText: T.intl.string(T.t.p89ACg),
+                        confirmText: N.intl.string(N.t.p89ACg),
                         confirmButtonColor: a.Button.Colors.RED,
                         ...e,
                         children: (0, i.jsx)(a.Text, {
@@ -77,7 +77,7 @@ t.Z = (e) => {
                   })
                 : (0, d.gK)();
     return (0, i.jsx)('div', {
-        className: N.page,
+        className: T.page,
         children: (0, i.jsxs)(s.Z, {
             embedded: !0,
             splash: k,
@@ -85,9 +85,9 @@ t.Z = (e) => {
             showLogo: !1,
             updateWaveState: j,
             children: [
-                (0, i.jsx)('div', { className: N.dragRegion }),
+                (0, i.jsx)('div', { className: T.dragRegion }),
                 (0, i.jsx)('div', {
-                    className: N.contentWrapper,
+                    className: T.contentWrapper,
                     children: (() => {
                         switch (null == y ? void 0 : y.applicationStatus) {
                             case g.wB.SUBMITTED:
@@ -97,9 +97,9 @@ t.Z = (e) => {
                                 });
                             case g.wB.REJECTED:
                                 return (0, i.jsx)(_.Z, {
-                                    reapplyText: T.intl.string(T.t.I1LYVl),
+                                    reapplyText: N.intl.string(N.t.I1LYVl),
                                     onReapply: M,
-                                    confirmText: T.intl.string(T.t.mqtdmZ),
+                                    confirmText: N.intl.string(N.t.mqtdmZ),
                                     onWithdrawApplication: w,
                                     rejectionReason: null == y ? void 0 : y.rejectionReason,
                                     guild: R

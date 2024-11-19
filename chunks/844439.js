@@ -1,17 +1,17 @@
 t.d(n, {
     M: function () {
-        return r;
+        return d;
     }
 });
 var i,
     l,
-    a,
     o,
+    a,
+    d,
     r,
-    c,
-    d = t(442837),
+    c = t(442837),
     u = t(570140);
-((i = r || (r = {}))[(i.FETCHING = 0)] = 'FETCHING'), (i[(i.FETCHED = 1)] = 'FETCHED'), (i[(i.ERROR = 2)] = 'ERROR');
+((i = d || (d = {}))[(i.FETCHING = 0)] = 'FETCHING'), (i[(i.FETCHED = 1)] = 'FETCHED'), (i[(i.ERROR = 2)] = 'ERROR');
 let s = {},
     m = {},
     E = {};
@@ -19,8 +19,8 @@ function p(e) {
     let { location: n, channelId: t, withCommands: i } = e;
     return 'location:'.concat(n, ' channelId:').concat('0', ' withCommands:').concat(i);
 }
-let g = Object.freeze([]);
-class C extends (c = d.ZP.Store) {
+let v = Object.freeze([]);
+class C extends (r = c.ZP.Store) {
     getLastFetchTimeMs(e) {
         let { location: n, channelId: t, withCommands: i } = e;
         return E[
@@ -54,18 +54,18 @@ class C extends (c = d.ZP.Store) {
                     })
                 ]) && void 0 !== n
             ? n
-            : g;
+            : v;
     }
 }
-(o = void 0),
-    (a = 'displayName') in (l = C)
-        ? Object.defineProperty(l, a, {
-              value: o,
+(a = void 0),
+    (o = 'displayName') in (l = C)
+        ? Object.defineProperty(l, o, {
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[a] = o),
+        : (l[o] = a),
     (n.ZP = new C(u.Z, {
         APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS: function (e) {
             let { location: n, channelId: t, withCommands: i } = e;
@@ -80,23 +80,23 @@ class C extends (c = d.ZP.Store) {
         },
         APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS_SUCCESS: function (e) {
             let { recommendations: n, location: t, channelId: i, withCommands: l } = e,
-                a = p({
+                o = p({
                     location: t,
                     channelId: i,
                     withCommands: l
                 });
             (s = {
                 ...s,
-                [a]: n
+                [o]: n
             }),
                 (m = {
                     ...m,
-                    [a]: 1
+                    [o]: 1
                 });
-            let o = Date.now();
+            let a = Date.now();
             E = {
                 ...E,
-                [a]: o
+                [o]: a
             };
         },
         APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS_FAILURE: function (e) {

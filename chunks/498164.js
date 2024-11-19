@@ -19,8 +19,8 @@ var a = n(756647),
     I = n(553795),
     C = n(594174),
     v = n(626135),
-    T = n(585483),
-    N = n(591759),
+    N = n(585483),
+    T = n(591759),
     S = n(998502),
     A = n(996106),
     b = n(186901),
@@ -137,7 +137,7 @@ function Z(e, t) {
                         null != n && ((0, _.dL)(x.Z5c.SETTINGS(n.section, n.subsection)), Z(n.fingerprint, 'settings'));
                         break;
                     case b.jE.CHANGELOG:
-                        null != n && ((0, _.dL)(N.Z.formatPathWithQuery(x.Z5c.CHANGELOGS(n.date), n.query)), Z(n.fingerprint, 'changelog'));
+                        null != n && ((0, _.dL)(T.Z.formatPathWithQuery(x.Z5c.CHANGELOGS(n.date), n.query)), Z(n.fingerprint, 'changelog'));
                         break;
                     case b.jE.LIBRARY:
                         (0, _.dL)(x.Z5c.APPLICATION_LIBRARY), null != n && Z(n.fingerprint, 'library');
@@ -217,7 +217,7 @@ function Z(e, t) {
                     );
                 } catch (e) {
                     if ((null == e ? void 0 : e.status) === 400) throw new A.Z({ errorCode: x.lTL.BAD_REQUEST_FOR_PROVIDER }, 'Bad request for provider');
-                    throw (T.S.dispatch(x.CkL.CONNECTIONS_CALLBACK_ERROR), e);
+                    throw (N.S.dispatch(x.CkL.CONNECTIONS_CALLBACK_ERROR), e);
                 }
             }
         },

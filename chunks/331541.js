@@ -22,8 +22,8 @@ var i = n(200651),
     I = n(158238),
     C = n(300284),
     v = n(680295),
-    T = n(785717),
-    N = n(221292),
+    N = n(785717),
+    T = n(221292),
     S = n(481046),
     A = n(816988),
     b = n(687158),
@@ -171,7 +171,7 @@ function es(e) {
         ec = (0, b.ZP)(z.id),
         ed = (0, u.O)(),
         { analyticsLocations: eu } = (0, g.ZP)(p.Z.ACCOUNT_PROFILE_POPOUT),
-        eh = (0, T.ZB)({
+        eh = (0, N.ZB)({
             layout: 'SIMPLIFIED_ACCOUNT_POPOUT',
             userId: z.id
         }),
@@ -299,8 +299,8 @@ function es(e) {
             });
         })(eg),
         ev = (0, X.g)(q),
-        eT = (0, C.Z)({ analyticsLocations: eu }),
-        { customStatusBubbleEditEnabled: eN } = (0, S.K)({ location: 'AccountProfilePopout' }),
+        eN = (0, C.Z)({ analyticsLocations: eu }),
+        { customStatusBubbleEditEnabled: eT } = (0, S.K)({ location: 'AccountProfilePopout' }),
         { dimissibleUpsellsEnabled: eS } = (0, A.u)({ location: 'AccountProfilePopout' }),
         eA = (0, Y.I5)(z),
         eb = (e) => {
@@ -324,7 +324,7 @@ function es(e) {
         };
     return (0, i.jsx)(g.Gt, {
         value: eu,
-        children: (0, i.jsx)(T.Mt, {
+        children: (0, i.jsx)(N.Mt, {
             value: eh,
             children: (0, i.jsx)(c.Dialog, {
                 ref: em,
@@ -335,7 +335,7 @@ function es(e) {
                     displayProfile: ec,
                     profileType: ee.y0.BITE_SIZE,
                     children: [
-                        !eN &&
+                        !eT &&
                             (0, i.jsx)(M.Z, {
                                 profileType: ee.y0.BITE_SIZE,
                                 children: (0, i.jsx)(k.Z, {
@@ -418,7 +418,7 @@ function es(e) {
                                             children: (0, i.jsxs)(Q.PB, {
                                                 id: 'profile-'.concat(z.id),
                                                 children: [
-                                                    eN &&
+                                                    eT &&
                                                         (0, i.jsxs)(i.Fragment, {
                                                             children: [
                                                                 (0, i.jsx)(Q.Mv, {
@@ -427,7 +427,7 @@ function es(e) {
                                                                     label: et.intl.string(et.t.s5vZlZ),
                                                                     icon: c.PencilIcon,
                                                                     onClick: () => {
-                                                                        eT(), q();
+                                                                        eN(), q();
                                                                     }
                                                                 }),
                                                                 (0, i.jsx)('div', { className: en.menuDivider })
@@ -485,7 +485,7 @@ function es(e) {
                                                               }
                                                             : void 0
                                                     }),
-                                                    !eN &&
+                                                    !eT &&
                                                         (0, i.jsxs)(i.Fragment, {
                                                             children: [
                                                                 (0, i.jsx)('div', { className: en.menuDivider }),
@@ -516,7 +516,7 @@ function es(e) {
                                                                               className: en.clearCustomStatusHint,
                                                                               onClick: (e) => {
                                                                                   e.stopPropagation(),
-                                                                                      (0, N.pQ)({
+                                                                                      (0, T.pQ)({
                                                                                           action: 'PRESS_CLEAR_CUSTOM_STATUS',
                                                                                           analyticsLocations: eu
                                                                                       }),

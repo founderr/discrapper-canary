@@ -22,10 +22,10 @@ function E(e) {
     let { user: t, type: n, status: E, isFocused: I } = e,
         C = r.useContext(u.AnalyticsContext),
         { analyticsLocations: v } = (0, o.ZP)(),
-        T = (e) => {
+        N = (e) => {
             e.stopPropagation(), s.Z.cancelFriendRequest(t.id, { location: 'Friends' });
         },
-        N = (e) => {
+        T = (e) => {
             e.stopPropagation(),
                 s.Z.addRelationship({
                     userId: t.id,
@@ -62,14 +62,14 @@ function E(e) {
                                   icon: a.CheckmarkLargeIcon,
                                   actionType: h.Z.ActionTypes.ACCEPT,
                                   tooltip: f.intl.string(f.t.ZcibdX),
-                                  onClick: N,
+                                  onClick: T,
                                   shouldHighlight: e
                               }),
                               (0, i.jsx)(h.Z, {
                                   icon: a.XSmallIcon,
                                   actionType: h.Z.ActionTypes.DENY,
                                   tooltip: f.intl.string(f.t.xuio0N),
-                                  onClick: T,
+                                  onClick: N,
                                   shouldHighlight: e
                               })
                           ]
@@ -78,7 +78,7 @@ function E(e) {
                           icon: a.XSmallIcon,
                           actionType: h.Z.ActionTypes.DENY,
                           tooltip: f.intl.string(f.t.eaq81d),
-                          onClick: T,
+                          onClick: N,
                           shouldHighlight: e
                       });
             return (0, i.jsxs)('div', {

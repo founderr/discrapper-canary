@@ -26,8 +26,8 @@ var i = n(200651),
     I = n(371260),
     C = n(372769),
     v = n(134432),
-    T = n(695346),
-    N = n(768581),
+    N = n(695346),
+    T = n(768581),
     S = n(356164),
     A = n(981631),
     b = n(388032),
@@ -77,7 +77,7 @@ function O(e) {
         w = (0, m.ZP)(),
         k = t.features.has(A.oNc.HUB),
         U = r.useMemo(() => {
-            let e = N.ZP.getGuildDiscoverySplashURL({
+            let e = T.ZP.getGuildDiscoverySplashURL({
                 id: t.id,
                 splash: t.discoverySplash,
                 size: 300 * (0, v.x_)()
@@ -93,7 +93,7 @@ function O(e) {
         }, [t.discoverySplash, t.id, k, w]),
         G = r.useMemo(
             () =>
-                N.ZP.getGuildIconURL({
+                T.ZP.getGuildIconURL({
                     id: t.id,
                     icon: t.icon,
                     size: 40
@@ -102,7 +102,7 @@ function O(e) {
         ),
         { canSeeInAppReportingButtons: B } = g.N.getCurrentConfig({ location: 'de1ef6_3' }, { autoTrackExposure: !1 });
     g.N.trackExposure({ location: 'GlobalDiscoveryServersCard' });
-    let H = T.Sb.getSetting();
+    let H = N.Sb.getSetting();
     return (0, i.jsxs)('div', {
         className: x.container,
         children: [

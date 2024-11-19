@@ -77,8 +77,8 @@ let b = /^!\[([^\]]*)\]\(asset:\/\/(\d+)\)/,
                 )
         }
     },
-    C = o().parserFor(f),
-    I = o().reactFor(o().ruleOutput(f, 'react'));
+    I = o().parserFor(f),
+    C = o().reactFor(o().ruleOutput(f, 'react'));
 class x extends i.PureComponent {
     componentDidMount() {
         if (null != this._container) {
@@ -103,8 +103,8 @@ class x extends i.PureComponent {
                             }),
                             (0, a.jsx)(u.Z, {
                                 className: m.description,
-                                parser: C,
-                                output: I,
+                                parser: I,
+                                output: C,
                                 state: {
                                     assets: s,
                                     applicationId: e
