@@ -13,6 +13,12 @@ t.Z = {
     showUnblockSuccessToast(e) {
         (0, r.showToast)((0, r.createToast)(i.intl.formatToPlainString(i.t.uExcGR, { username: e }), r.ToastType.SUCCESS));
     },
+    showMuteSuccessToast(e) {
+        (0, r.showToast)((0, r.createToast)(i.intl.formatToPlainString(i.t.X4NtYW, { username: e }), r.ToastType.SUCCESS));
+    },
+    showUnmuteSuccessToast(e) {
+        (0, r.showToast)((0, r.createToast)(i.intl.formatToPlainString(i.t.tRaBfX, { username: e }), r.ToastType.SUCCESS));
+    },
     showFailedToast() {
         (0, r.showToast)((0, r.createToast)(i.intl.string(i.t.zBpoc3), r.ToastType.FAILURE));
     }
