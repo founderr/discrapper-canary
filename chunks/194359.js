@@ -115,11 +115,10 @@ let S = {
             s.uv.announce(v.intl.string(v.t.vGSLa2));
         });
     },
-    unblockUser(e, t) {
+    unblockUser: (e, t) =>
         S.removeRelationship(e, t, function () {
             s.uv.announce(v.intl.string(v.t['9t1au7']));
-        });
-    },
+        }),
     removeRelationship: (e, t, n) =>
         a.tn
             .del({

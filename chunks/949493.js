@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return A;
+        return b;
     }
 });
 var i = n(200651);
@@ -16,45 +16,46 @@ var s = n(921801),
     m = n(540204),
     h = n(546957),
     g = n(893996),
-    p = n(864239),
-    x = n(190014),
-    S = n(301812),
-    T = n(988043),
-    C = n(919539),
-    E = n(726985),
-    _ = n(388032);
+    p = n(273927),
+    x = n(864239),
+    S = n(190014),
+    T = n(301812),
+    C = n(988043),
+    E = n(919539),
+    _ = n(726985),
+    I = n(388032);
 let f = () =>
         (0, i.jsx)(g.Z, {
-            title: _.intl.string(_.t['y62Z/f']),
-            webSetting: E.s6.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_CATEGORY,
+            title: I.intl.string(I.t['y62Z/f']),
+            webSetting: _.s6.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_CATEGORY,
             children: (0, i.jsxs)(h.Z, {
                 children: [
                     (0, i.jsx)(s.F, {
-                        setting: E.s6.PRIVACY_AND_SAFETY_SERVER_SELECTOR,
+                        setting: _.s6.PRIVACY_AND_SAFETY_SERVER_SELECTOR,
                         children: (0, i.jsx)(m.Z, {})
                     }),
-                    (0, i.jsx)(T.Z, {}),
                     (0, i.jsx)(C.Z, {}),
-                    (0, i.jsx)(S.Z, {}),
-                    (0, i.jsx)(x.Z, {})
+                    (0, i.jsx)(E.Z, {}),
+                    (0, i.jsx)(T.Z, {}),
+                    (0, i.jsx)(S.Z, {})
                 ]
             })
         }),
-    I = () =>
-        (0, i.jsxs)(g.Z, {
-            title: _.intl.string(_.t.xVRG4O),
-            webSetting: E.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
-            children: [(0, i.jsx)(c.P, {}), (0, i.jsx)(o.Z, {}), (0, i.jsx)(u.Z, {}), (0, i.jsx)(a.Z, {}), (0, i.jsx)(l.Z, {}), (0, i.jsx)(p.Z, {})]
-        }),
     N = () =>
-        (0, i.jsx)(g.Z, {
-            title: _.intl.string(_.t['1Qn8iY']),
-            webSetting: E.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS_CATEGORY,
-            children: (0, i.jsx)(d.Z, {})
+        (0, i.jsxs)(g.Z, {
+            title: I.intl.string(I.t.xVRG4O),
+            webSetting: _.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
+            children: [(0, i.jsx)(c.P, {}), (0, i.jsx)(o.Z, {}), (0, i.jsx)(u.Z, {}), (0, i.jsx)(a.Z, {}), (0, i.jsx)(l.Z, {}), (0, i.jsx)(x.Z, {})]
+        }),
+    A = () =>
+        (0, i.jsxs)(g.Z, {
+            title: I.intl.string(I.t['1Qn8iY']),
+            webSetting: _.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS_CATEGORY,
+            children: [(0, i.jsx)(d.Z, {}), (0, i.jsx)(p.ZP, {})]
         });
-function A() {
+function b() {
     return (0, i.jsxs)(r.N, {
-        header: _.intl.string(_.t['+o1pDQ']),
-        children: [(0, i.jsx)(I, {}), (0, i.jsx)(f, {}), (0, i.jsx)(N, {})]
+        header: I.intl.string(I.t['+o1pDQ']),
+        children: [(0, i.jsx)(N, {}), (0, i.jsx)(f, {}), (0, i.jsx)(A, {})]
     });
 }
