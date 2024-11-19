@@ -105,7 +105,7 @@ function eT(e) {
         b = (0, V.x8)('GoLiveButton'),
         Z = (0, y.Zm)(t, 'GoLiveButton'),
         N = (0, L.wE)(m.z.CONSUMABLE_HD_POTION_UPSELL),
-        S = (Z && !N) || (t.isHDStreamSplashed && null == u),
+        S = ((Z && !N) || (t.isHDStreamSplashed && null == u)) && !(0, y.QC)(),
         T = () => {
             if (l) {
                 E();

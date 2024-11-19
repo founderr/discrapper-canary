@@ -1,6 +1,6 @@
 n.d(e, {
     GX: function () {
-        return C;
+        return x;
     },
     M7: function () {
         return h;
@@ -18,8 +18,8 @@ n.d(e, {
     n(627341),
     n(192379);
 var r,
-    a,
-    i = n(278074),
+    i,
+    a = n(278074),
     s = n(691324),
     o = n(180650),
     l = n(44315),
@@ -30,9 +30,9 @@ var r,
     g = n(39934),
     p = n(681532),
     v = n(12981);
-((a = r || (r = {}))[(a.NONE = 0)] = 'NONE'), (a[(a.TOOLTIP = 1)] = 'TOOLTIP'), (a[(a.COACHTIP = 2)] = 'COACHTIP'), (a[(a.COACHTIP_HEADLINE_ONLY = 3)] = 'COACHTIP_HEADLINE_ONLY'), (a[(a.BADGE = 4)] = 'BADGE');
+((i = r || (r = {}))[(i.NONE = 0)] = 'NONE'), (i[(i.TOOLTIP = 1)] = 'TOOLTIP'), (i[(i.COACHTIP = 2)] = 'COACHTIP'), (i[(i.COACHTIP_HEADLINE_ONLY = 3)] = 'COACHTIP_HEADLINE_ONLY'), (i[(i.BADGE = 4)] = 'BADGE');
 let h = (t) =>
-        (0, i.EQ)(t)
+        (0, a.EQ)(t)
             .with(o.T.TIDE, () => ({
                 label: () => d.intl.string(d.t.kDb9hY),
                 iconSrc: v.Z,
@@ -77,7 +77,7 @@ let h = (t) =>
         }
     },
     m = (t) =>
-        (0, i.EQ)(t)
+        (0, a.EQ)(t)
             .with('1252405010608951358', () => b.TIDE)
             .with('1252405017688936508', () => b.TIDE)
             .with('1267521289330102344', () => b.STORM)
@@ -97,10 +97,10 @@ let h = (t) =>
             .with('1220432697718083614', () => b.SHY)
             .otherwise(() => null),
     S = (t) =>
-        (0, i.EQ)(t)
+        (0, a.EQ)(t)
             .with('1262491137386614805', () => b.ROBERT)
             .otherwise(() => null),
-    C = {
+    x = {
         [c.C5.TIDE]: {
             artSrc: n(94899),
             backgroundSrc: n(987583),

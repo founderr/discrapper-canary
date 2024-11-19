@@ -3,20 +3,20 @@ n.d(e, {
         return s;
     },
     b: function () {
-        return i;
+        return a;
     }
 }),
     n(724458),
     n(653041),
     n(47120);
 var r = n(192379),
-    a = n(979554);
-class i {
+    i = n(979554);
+class a {
     get firstAvatarDecoration() {
-        return this.getFirstItemByType(a.Z.AVATAR_DECORATION);
+        return this.getFirstItemByType(i.Z.AVATAR_DECORATION);
     }
     get firstProfileEffect() {
-        return this.getFirstItemByType(a.Z.PROFILE_EFFECT);
+        return this.getFirstItemByType(i.Z.PROFILE_EFFECT);
     }
     getFirstItemByType(t) {
         var e;
@@ -45,7 +45,7 @@ class i {
     }
 }
 let s = (t) => {
-    let { firstProfileEffect: e, firstAvatarDecoration: n } = r.useMemo(() => new i(t.items), [t]);
+    let { firstProfileEffect: e, firstAvatarDecoration: n } = r.useMemo(() => new a(t.items), [t]);
     return {
         firstProfileEffect: e,
         firstAvatarDecoration: n

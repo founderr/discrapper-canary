@@ -1,23 +1,23 @@
-i.d(n, {
+t.d(n, {
     Z: function () {
-        return h;
+        return f;
     }
 });
-var t = i(200651),
-    a = i(192379),
-    l = i(442837),
-    r = i(481060),
-    d = i(110924),
-    o = i(812206),
-    c = i(788983),
-    u = i(317381),
-    s = i(781780),
-    v = i(325749),
-    m = i(981631),
-    f = i(965988);
-function h() {
+var i = t(200651),
+    a = t(192379),
+    r = t(442837),
+    o = t(481060),
+    l = t(110924),
+    c = t(812206),
+    d = t(788983),
+    u = t(317381),
+    s = t(781780),
+    p = t(325749),
+    v = t(981631),
+    m = t(965988);
+function f() {
     var e;
-    let { embeddedActivity: n, channelId: i } = (0, l.cj)([u.ZP], () => {
+    let { embeddedActivity: n, channelId: t } = (0, r.cj)([u.ZP], () => {
             let e = u.ZP.getCurrentEmbeddedActivity(),
                 n = null == e ? void 0 : e.channelId;
             return {
@@ -25,38 +25,38 @@ function h() {
                 channelId: n
             };
         }),
-        h = (0, d.Z)(n);
+        f = (0, l.Z)(n);
     a.useEffect(() => {
-        null != h && null == n && (0, c.xv)(m.KJ3.ACTIVITY_POPOUT);
-    }, [n, h]);
-    let p = (0, l.e7)([o.Z], () => {
+        null != f && null == n && (0, d.xv)(v.KJ3.ACTIVITY_POPOUT);
+    }, [n, f]);
+    let h = (0, r.e7)([c.Z], () => {
         let e = null == n ? void 0 : n.applicationId;
-        return null == e ? void 0 : o.Z.getApplication(e);
+        return null == e ? void 0 : c.Z.getApplication(e);
     });
-    return (0, t.jsx)('div', {
-        className: f.container,
+    return (0, i.jsx)('div', {
+        className: m.container,
         children:
-            null == n || null == p || null == i
-                ? (0, t.jsx)(r.Spinner, { className: f.iframe })
-                : (0, t.jsx)('div', {
-                      className: f.loadedContentContainer,
-                      children: (0, t.jsxs)('div', {
-                          className: f.iframeAndHeaderContainer,
+            null == n || null == h || null == t
+                ? (0, i.jsx)(o.Spinner, { className: m.iframe })
+                : (0, i.jsx)('div', {
+                      className: m.loadedContentContainer,
+                      children: (0, i.jsxs)('div', {
+                          className: m.iframeAndHeaderContainer,
                           children: [
-                              (0, t.jsx)('div', {
-                                  className: f.headerContainer,
-                                  children: (0, t.jsx)(v.Z, {
-                                      applicationId: p.id,
-                                      channelId: i
+                              (0, i.jsx)('div', {
+                                  className: m.headerContainer,
+                                  children: (0, i.jsx)(p.Z, {
+                                      applicationId: h.id,
+                                      channelId: t
                                   })
                               }),
-                              (0, t.jsx)('div', {
-                                  className: f.iframeContainer,
-                                  children: (0, t.jsx)(s.Z, {
-                                      channelId: i,
+                              (0, i.jsx)('div', {
+                                  className: m.iframeContainer,
+                                  children: (0, i.jsx)(s.Z, {
+                                      channelId: t,
                                       guildId: null !== (e = n.guildId) && void 0 !== e ? e : void 0,
                                       embeddedActivity: n,
-                                      application: p
+                                      application: h
                                   })
                               })
                           ]

@@ -1,15 +1,15 @@
 n(47120);
 var r = n(979590),
-    a = n.n(r),
-    i = n(399606),
+    i = n.n(r),
+    a = n(399606),
     s = n(607070),
     o = n(168631);
 let l = (t, e) => {
         let n = t.toRgb(),
             r = e.toRgb(),
-            [i, s, l] = (0, o.J2)([n.r, n.g, n.b], [r.r, r.g, r.b], 50);
-        return a()({
-            r: i,
+            [a, s, l] = (0, o.J2)([n.r, n.g, n.b], [r.r, r.g, r.b], 50);
+        return i()({
+            r: a,
             g: s,
             b: l
         });
@@ -45,15 +45,15 @@ let l = (t, e) => {
                     text: l(e[0], e[1]).isLight() ? t.dark : t.light
                 },
     u = (t, e) => {
-        let { h: n, s: r, l: i } = t.toHsl();
-        return a()({
+        let { h: n, s: r, l: a } = t.toHsl();
+        return i()({
             h: n,
             s: r * e,
-            l: i
+            l: a
         });
     };
 e.Z = (t) => (e) => {
-    let n = (0, i.e7)([s.Z], () => s.Z.saturation);
+    let n = (0, a.e7)([s.Z], () => s.Z.saturation);
     if (null == e) return {};
     let r = {
         backgroundColors: c(t, e.backgroundColors),

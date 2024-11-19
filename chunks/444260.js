@@ -62,9 +62,9 @@ let m = (e) => {
             children: [
                 (0, l.jsxs)(a.ModalHeader, {
                     children: [
-                        (0, l.jsx)(a.ModalCloseButton, {
+                        (0, l.jsx)('div', {
                             className: h.closeButton,
-                            onClick: t
+                            children: (0, l.jsx)(a.ModalCloseButton, { onClick: t })
                         }),
                         (0, l.jsx)('div', {
                             className: h.headerContainer,

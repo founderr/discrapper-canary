@@ -15,16 +15,16 @@ var i = n(120356),
     c = n(696456),
     h = n(971436);
 let g = (e) => {
-    let { handleDone: t, headerId: n, modalState: i, shouldHideTemporaryInviteToggle: g, onGenerateNewLink: m, onToggleTemporary: v, onSelectMaxAge: p, onSelectMaxUses: x } = e,
+    let { handleDone: t, headerId: n, modalState: i, shouldHideTemporaryInviteToggle: g, onGenerateNewLink: m, onToggleTemporary: v, onSelectMaxAge: x, onSelectMaxUses: p } = e,
         I = (0, a.ZP)(),
         { maxAge: S, maxUses: f, temporary: T } = i;
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsxs)(s.ModalHeader, {
                 children: [
-                    (0, l.jsx)(s.ModalCloseButton, {
+                    (0, l.jsx)('div', {
                         className: c.closeButton,
-                        onClick: t
+                        children: (0, l.jsx)(s.ModalCloseButton, { onClick: t })
                     }),
                     (0, l.jsx)('div', {
                         className: c.headerContainer,
@@ -43,8 +43,8 @@ let g = (e) => {
                 maxUses: f,
                 temporary: T,
                 onToggleTemporary: v,
-                onSelectMaxAge: p,
-                onSelectMaxUses: x,
+                onSelectMaxAge: x,
+                onSelectMaxUses: p,
                 onGenerateNewLink: m
             }),
             (0, l.jsx)(s.ModalFooter, {

@@ -36,8 +36,8 @@ var r = n(200651),
     R = n(853748),
     H = n(426171),
     F = n(823941),
-    V = n(752053),
-    D = n(963102),
+    D = n(752053),
+    V = n(963102),
     M = n(508498),
     W = n(38900),
     U = n(709999),
@@ -296,7 +296,7 @@ t.default = function (e) {
                                         [er.out]: F === Q.f7.OUT
                                     }),
                                     children: [
-                                        (0, r.jsx)(D.I, {
+                                        (0, r.jsx)(V.I, {
                                             isFullScreen: n,
                                             isLayer: em,
                                             onClose: ep,
@@ -317,7 +317,7 @@ t.default = function (e) {
                                         [er.out]: U === Q.f7.OUT
                                     }),
                                     children: [
-                                        (0, r.jsx)(D.I, {
+                                        (0, r.jsx)(V.I, {
                                             isFullScreen: n,
                                             isLayer: em,
                                             onClose: ep,
@@ -332,9 +332,9 @@ t.default = function (e) {
                                                 children: eb
                                                     ? (0, r.jsx)(W.Z, {})
                                                     : null != ej
-                                                      ? (0, r.jsx)(V.Z, {
+                                                      ? (0, r.jsx)(D.Z, {
                                                             onRetry: eB,
-                                                            errorOrigin: V.i.SHOP_PAGE
+                                                            errorOrigin: D.i.SHOP_PAGE
                                                         })
                                                       : (0, r.jsx)('div', {
                                                             className: er.categories,

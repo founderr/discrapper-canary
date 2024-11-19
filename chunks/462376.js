@@ -20,8 +20,8 @@ var l = n(200651),
     g = n(699516),
     m = n(594174),
     v = n(768581),
-    p = n(624138),
-    x = n(51144),
+    x = n(624138),
+    p = n(51144),
     I = n(388032),
     S = n(696456);
 function f(e, t, n) {
@@ -45,7 +45,7 @@ class N extends i.Component {
     renderUserOrChannel() {
         let e, t, n;
         let { user: i, channel: r } = this.props;
-        if (null != i) (t = i.getAvatarURL(null == r ? void 0 : r.guild_id, 32)), (n = x.ZP.getName(i));
+        if (null != i) (t = i.getAvatarURL(null == r ? void 0 : r.guild_id, 32)), (n = p.ZP.getName(i));
         else if (null != r && ((t = (0, o.x)(r)), (n = (0, d.F6)(r, m.default, g.Z)), null == t && null != r.guild_id)) {
             let n = c.Z.getGuild(r.guild_id);
             null != n &&
@@ -55,7 +55,7 @@ class N extends i.Component {
                           icon: n.icon,
                           size: 32
                       }))
-                    : (e = (0, p.Zg)(n.name)));
+                    : (e = (0, x.Zg)(n.name)));
         }
         if (null == t || null == n)
             return null != e
@@ -106,7 +106,7 @@ class N extends i.Component {
                             this.renderUserOrChannel(),
                             (0, l.jsxs)('div', {
                                 className: S.inviteRowName,
-                                children: [x.ZP.getName(t), null != n ? (0, d.F6)(n, m.default, g.Z, !0) : null]
+                                children: [p.ZP.getName(t), null != n ? (0, d.F6)(n, m.default, g.Z, !0) : null]
                             })
                         ]
                     }),

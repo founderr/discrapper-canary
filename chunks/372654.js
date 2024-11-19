@@ -9,13 +9,13 @@ n.d(e, {
         return d;
     },
     yV: function () {
-        return i;
+        return a;
     }
 });
 var r = n(180650),
-    a = n(921948);
-let i = 1060,
-    s = (t) => t * (0, a.Z)(),
+    i = n(921948);
+let a = 1060,
+    s = (t) => t * (0, i.Z)(),
     o = function (t) {
         let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 180,
             { primary: n, secondary: r } = t;

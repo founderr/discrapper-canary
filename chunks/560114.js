@@ -12,8 +12,8 @@ var l,
     g = n(533800),
     m = n(442837),
     v = n(692547),
-    p = n(481060),
-    x = n(447543),
+    x = n(481060),
+    p = n(447543),
     I = n(247272),
     S = n(110924),
     f = n(100527),
@@ -75,17 +75,17 @@ let { INVITE_OPTIONS_FOREVER: ed, INVITE_OPTIONS_7_DAYS: eu, INVITE_OPTIONS_UNLI
 class eh extends (l = r.PureComponent) {
     componentDidMount() {
         let { inviteChannel: e, code: t, guild: n, source: l, canCreateInvites: i, analyticsLocation: r, streamUserId: s, targetType: a, targetUserId: o, application: d, initialCounts: u, rows: c, showFriends: h, modalState: g, setModalState: m } = this.props,
-            { maxAge: v, maxUses: p, temporary: I } = g;
+            { maxAge: v, maxUses: x, temporary: I } = g;
         if (i) {
             let n = null == e ? void 0 : e.id;
             if (null == n) return;
             m({ networkError: void 0 }),
-                x.Z.createInvite(
+                p.Z.createInvite(
                     n,
                     {
                         validate: null != t ? t : null,
                         max_age: v,
-                        max_uses: p,
+                        max_uses: x,
                         target_user_id: o,
                         target_type: a,
                         target_application_id: null == d ? void 0 : d.id,
@@ -131,7 +131,7 @@ class eh extends (l = r.PureComponent) {
     }
     componentWillUnmount() {
         let { inviteChannel: e, inviteFlags: t, setInviteFlags: n } = this.props;
-        (0, H.yE)(t, g.$.IS_GUEST_INVITE) && null != e && (n((0, H.Ge)(t, g.$.IS_GUEST_INVITE)), x.Z.clearInviteFromStore(e.id));
+        (0, H.yE)(t, g.$.IS_GUEST_INVITE) && null != e && (n((0, H.Ge)(t, g.$.IS_GUEST_INVITE)), p.Z.clearInviteFromStore(e.id));
     }
     getInviteKey() {
         let { code: e, vanityURLCode: t, guildScheduledEvent: n, modalState: l } = this.props,
@@ -150,13 +150,13 @@ class eh extends (l = r.PureComponent) {
             ? (0, i.jsxs)('div', {
                   className: ei.warningContainer,
                   children: [
-                      (0, i.jsx)(p.CircleWarningIcon, {
+                      (0, i.jsx)(x.CircleWarningIcon, {
                           size: 'custom',
                           className: ei.warningIcon,
                           color: v.Z.unsafe_rawColors.YELLOW_300.css,
                           width: 12
                       }),
-                      (0, i.jsx)(p.Text, {
+                      (0, i.jsx)(x.Text, {
                           variant: 'text-xs/normal',
                           color: 'header-secondary',
                           children: el.intl.string(el.t.x1SQZW)
@@ -178,7 +178,7 @@ class eh extends (l = r.PureComponent) {
                     className: ei.headerChannelContainer,
                     children: [
                         (0, i.jsx)(e, { className: ei.channelIcon }),
-                        (0, i.jsx)(p.Text, {
+                        (0, i.jsx)(x.Text, {
                             color: 'interactive-normal',
                             variant: 'text-md/normal',
                             children: d.name
@@ -191,20 +191,20 @@ class eh extends (l = r.PureComponent) {
                 ? (0, i.jsxs)('div', {
                       className: ei.hubHeader,
                       children: [
-                          (0, i.jsx)(p.Heading, {
+                          (0, i.jsx)(x.Heading, {
                               className: a()(ei.hubInviteTitle, ei.headerCloseButtonSpacing),
                               id: this._headerId,
                               variant: 'heading-xl/semibold',
                               color: 'header-primary',
                               children: el.intl.string(el.t.WhR38v)
                           }),
-                          (0, i.jsx)(p.Text, {
+                          (0, i.jsx)(x.Text, {
                               color: 'header-secondary',
                               variant: 'text-md/normal',
                               children: el.intl.string(el.t.Ed4BMj)
                           }),
                           n &&
-                              (0, i.jsx)(p.SearchBar, {
+                              (0, i.jsx)(x.SearchBar, {
                                   query: h,
                                   className: ei.hubFriendSearch,
                                   onChange: this.handleQueryChange,
@@ -221,7 +221,7 @@ class eh extends (l = r.PureComponent) {
                         children: [
                             (0, i.jsx)('div', {
                                 className: ei.__invalid_headerTopRow,
-                                children: (0, i.jsx)(p.FormTitle, {
+                                children: (0, i.jsx)(x.FormTitle, {
                                     id: this._headerId,
                                     tag: 'h2',
                                     className: a()(er.marginBottom4, ei.headerCloseButtonSpacing, ei.headerText),
@@ -229,7 +229,7 @@ class eh extends (l = r.PureComponent) {
                                 })
                             }),
                             m,
-                            (0, i.jsx)(p.SearchBar, {
+                            (0, i.jsx)(x.SearchBar, {
                                 query: h,
                                 className: ei.searchBar,
                                 onChange: this.handleQueryChange,
@@ -245,7 +245,7 @@ class eh extends (l = r.PureComponent) {
                     })
                   : (0, i.jsxs)(i.Fragment, {
                         children: [
-                            (0, i.jsx)(p.FormTitle, {
+                            (0, i.jsx)(x.FormTitle, {
                                 id: this._headerId,
                                 tag: 'h2',
                                 className: a()(er.marginReset, ei.headerCloseButtonSpacing, ei.headerText),
@@ -255,12 +255,12 @@ class eh extends (l = r.PureComponent) {
                             this.renderChannelWarning()
                         ]
                     })),
-            (0, i.jsxs)(p.ModalHeader, {
+            (0, i.jsxs)(x.ModalHeader, {
                 separator: n,
                 children: [
-                    (0, i.jsx)(p.ModalCloseButton, {
+                    (0, i.jsx)('div', {
                         className: ei.closeButton,
-                        onClick: c
+                        children: (0, i.jsx)(x.ModalCloseButton, { onClick: c })
                     }),
                     (0, i.jsxs)('div', {
                         className: ei.headerContainer,
@@ -273,12 +273,12 @@ class eh extends (l = r.PureComponent) {
                                             src: ea,
                                             alt: ''
                                         }),
-                                        (0, i.jsx)(p.Heading, {
+                                        (0, i.jsx)(x.Heading, {
                                             variant: 'heading-lg/semibold',
                                             className: ei.welcomeHeading,
                                             children: el.intl.string(el.t.DpoBNz)
                                         }),
-                                        (0, i.jsx)(p.Text, {
+                                        (0, i.jsx)(x.Text, {
                                             variant: 'text-md/normal',
                                             color: 'text-secondary',
                                             className: ei.welcomeSubheading,
@@ -298,16 +298,16 @@ class eh extends (l = r.PureComponent) {
         let { rows: e } = this.props,
             t = this.getInviteKey();
         return 0 === e.length
-            ? (0, i.jsx)(p.ModalContent, {
+            ? (0, i.jsx)(x.ModalContent, {
                   className: a()(ei.inviteRowEmptyState),
-                  children: (0, i.jsx)(p.EmptyStateText, { children: el.intl.string(el.t.ojoWgY) })
+                  children: (0, i.jsx)(x.EmptyStateText, { children: el.intl.string(el.t.ojoWgY) })
               })
             : null == t
-              ? (0, i.jsx)(p.ModalContent, {
+              ? (0, i.jsx)(x.ModalContent, {
                     className: a()(ei.inviteRowEmptyState),
-                    children: (0, i.jsx)(p.EmptyStateText, { children: el.intl.string(el.t.hzPwGB) })
+                    children: (0, i.jsx)(x.EmptyStateText, { children: el.intl.string(el.t.hzPwGB) })
                 })
-              : (0, i.jsx)(p.ModalListContent, {
+              : (0, i.jsx)(x.ModalListContent, {
                     className: ei.scroller,
                     sections: [e.length],
                     renderSection: this.renderSection,
@@ -330,13 +330,13 @@ class eh extends (l = r.PureComponent) {
         let o = t.isOwner(a) ? el.intl.string(el.t.HFbByM) : el.intl.string(el.t.ueBhAw);
         return (
             null != l ? (o = el.intl.string(el.t.CXpS1N)) : null != r && (o = el.intl.string(el.t.ueCrHB)),
-            (0, i.jsx)(p.ModalContent, {
+            (0, i.jsx)(x.ModalContent, {
                 className: ei.noScroll,
                 children: (0, i.jsxs)(j.Z, {
                     direction: j.Z.Direction.VERTICAL,
                     className: er.marginBottom20,
                     children: [
-                        (0, i.jsx)(p.Text, {
+                        (0, i.jsx)(x.Text, {
                             className: ei.subText,
                             variant: 'text-sm/normal',
                             children: o
@@ -363,7 +363,7 @@ class eh extends (l = r.PureComponent) {
                     direction: j.Z.Direction.VERTICAL,
                     className: ei.content,
                     children: [
-                        (0, i.jsx)(p.FormTitle, {
+                        (0, i.jsx)(x.FormTitle, {
                             tag: 'h5',
                             className: er.marginBottom8,
                             children: e
@@ -380,26 +380,26 @@ class eh extends (l = r.PureComponent) {
                     justify: j.Z.Justify.BETWEEN,
                     className: er.marginTop20,
                     children: [
-                        (0, i.jsx)(p.Checkbox, {
+                        (0, i.jsx)(x.Checkbox, {
                             size: 18,
-                            type: p.Checkbox.Types.INVERTED,
+                            type: x.Checkbox.Types.INVERTED,
                             value: u === ed.value,
                             onChange: this.handleToggleMaxAge,
-                            children: (0, i.jsx)(p.Text, {
+                            children: (0, i.jsx)(x.Text, {
                                 variant: 'text-sm/normal',
                                 children: el.intl.string(el.t.QKJru7)
                             })
                         }),
-                        (0, i.jsx)(p.Tooltip, {
+                        (0, i.jsx)(x.Tooltip, {
                             text: el.intl.string(el.t.Yx4IiI),
                             children: (e) => {
                                 let { onMouseEnter: t, onMouseLeave: n } = e;
-                                return (0, i.jsx)(p.Clickable, {
+                                return (0, i.jsx)(x.Clickable, {
                                     onClick: this.openSettings,
                                     onMouseEnter: t,
                                     onMouseLeave: n,
                                     className: es.cursorPointer,
-                                    children: (0, i.jsx)(p.SettingsIcon, {
+                                    children: (0, i.jsx)(x.SettingsIcon, {
                                         size: 'sm',
                                         color: v.Z.unsafe_rawColors.PRIMARY_400.css
                                     })
@@ -409,7 +409,7 @@ class eh extends (l = r.PureComponent) {
                     ]
                 }));
         return null != c
-            ? (0, i.jsx)(p.ModalFooter, {
+            ? (0, i.jsx)(x.ModalFooter, {
                   className: a()({
                       [ei.noPadding]: !n,
                       [ei.footer]: n
@@ -452,7 +452,7 @@ class eh extends (l = r.PureComponent) {
         let { transitionState: e, inviteChannel: t, guild: n } = this.props;
         return (0, i.jsx)('div', {
             className: this.props.showFriends ? ei.wrapper : void 0,
-            children: (0, i.jsx)(p.ModalRoot, {
+            children: (0, i.jsx)(x.ModalRoot, {
                 impression: {
                     impressionName: h.ImpressionNames.GUILD_INVITE,
                     impressionProperties: {
@@ -566,7 +566,7 @@ eo(eh, 'defaultProps', {
 }),
     (t.default = r.forwardRef(function (e, t) {
         var n, l, s, a;
-        let { channel: o, guild: d, source: u, guildScheduledEvent: c, streamUserId: h, applicationId: v, transitionState: p, onClose: C, welcomeToServer: j, page: y, analyticsLocation: Z } = e,
+        let { channel: o, guild: d, source: u, guildScheduledEvent: c, streamUserId: h, applicationId: v, transitionState: x, onClose: C, welcomeToServer: j, page: y, analyticsLocation: Z } = e,
             [B, k] = r.useState(y === ee.RV.GUEST ? g.$.IS_GUEST_INVITE : 0),
             { analyticsLocations: D } = (0, T.ZP)(f.Z.INSTANT_INVITE_MODAL),
             O = (0, m.e7)([U.Z, L.Z], () => {
@@ -635,8 +635,8 @@ eo(eh, 'defaultProps', {
                     e
                 );
             }),
-            ep = null == o ? void 0 : o.id,
-            ex = (0, m.e7)([w.Z], () => w.Z.getStageInstanceByChannel(ep), [ep]);
+            ex = null == o ? void 0 : o.id,
+            ep = (0, m.e7)([w.Z], () => w.Z.getStageInstanceByChannel(ex), [ex]);
         r.useEffect(() => {
             (0, I.x)({
                 omitUserIds: ev,
@@ -664,7 +664,7 @@ eo(eh, 'defaultProps', {
             ey = ej && !(null == Q ? void 0 : Q.isGuildVocal()) && e_,
             eZ = (null == Q ? void 0 : Q.type) === et.d4z.GUILD_VOICE,
             eM = (0, E.Z)(Q);
-        !eg && (null == ex ? void 0 : ex.invite_code) != null && (ef = ex.invite_code);
+        !eg && (null == ep ? void 0 : ep.invite_code) != null && (ef = ep.invite_code);
         let [eb, ew] = r.useState({
                 query: '',
                 maxAge: null !== (a = null != eT ? eT : eS) && void 0 !== a ? a : eu.value,
@@ -716,7 +716,7 @@ eo(eh, 'defaultProps', {
                           networkError: void 0,
                           showVanityURL: !1
                       }),
-                      x.Z.createInvite(
+                      p.Z.createInvite(
                           e,
                           {
                               max_age: eV,
@@ -766,7 +766,7 @@ eo(eh, 'defaultProps', {
                     welcomeToServer: j,
                     analyticsLocations: D,
                     analyticsLocation: Z,
-                    transitionState: p,
+                    transitionState: x,
                     onClose: C,
                     canShowVanityURL: ey,
                     isGuestInviteCreationToggleEnabled: eR && eU,

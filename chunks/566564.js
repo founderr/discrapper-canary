@@ -33,7 +33,7 @@ var r = n(200651),
     O = n(196315);
 t.Z = (e) => {
     var t, n, i, w, A, R, H, F;
-    let { handleTransition: V, numVisibleItems: D } = e,
+    let { handleTransition: D, numVisibleItems: V } = e,
         { categories: M, isFetchingCategories: W, fetchCategoriesError: U, fetchPurchasesError: z, claimError: G, refreshCategories: K } = (0, _.Z)(),
         $ = null !== (t = null != U ? U : z) && void 0 !== t ? t : G,
         J = Array.from(M.values()),
@@ -169,7 +169,7 @@ t.Z = (e) => {
                                         children: (0, r.jsx)(c.Button, {
                                             className: B.heroHeaderButton,
                                             color: c.ButtonColors.WHITE,
-                                            onClick: () => V('shop latest category hero', null == ea ? void 0 : ea.skuId),
+                                            onClick: () => D('shop latest category hero', null == ea ? void 0 : ea.skuId),
                                             children: eC
                                         })
                                     })
@@ -230,7 +230,7 @@ t.Z = (e) => {
                                           (0, r.jsxs)(c.Clickable, {
                                               className: s()(B.featuredBlock),
                                               style: { backgroundImage: 'url('.concat(eo, ')') },
-                                              onClick: () => V('shop marketing tile', null == ei ? void 0 : ei.skuId),
+                                              onClick: () => D('shop marketing tile', null == ei ? void 0 : ei.skuId),
                                               children: [
                                                   (null == ei ? void 0 : ei.unpublishedAt) != null &&
                                                       (0, r.jsx)(c.TextBadge, {
@@ -249,7 +249,7 @@ t.Z = (e) => {
                                           (0, r.jsx)(c.Clickable, {
                                               className: s()(B.featuredBlock),
                                               style: { backgroundImage: 'url('.concat(ec, ')') },
-                                              onClick: () => V('shop marketing tile', l.T.ANIME_V2),
+                                              onClick: () => D('shop marketing tile', l.T.ANIME_V2),
                                               children:
                                                   !W &&
                                                   (0, r.jsxs)(r.Fragment, {
@@ -280,7 +280,7 @@ t.Z = (e) => {
                                 }),
                                 (0, r.jsxs)(c.Clickable, {
                                     className: B.shopAll,
-                                    onClick: () => V('shop all top'),
+                                    onClick: () => D('shop all top'),
                                     children: [
                                         (0, r.jsx)(c.ServerGridIcon, {}),
                                         (0, r.jsx)(c.Text, {
@@ -297,7 +297,7 @@ t.Z = (e) => {
                             children: W
                                 ? (0, r.jsx)(r.Fragment, { children: [...Array(12)].map((e, t) => (0, r.jsx)(S.K, {}, t + 1)) })
                                 : (0, r.jsx)(r.Fragment, {
-                                      children: ef.slice(0, D).map((e, t) => {
+                                      children: ef.slice(0, V).map((e, t) => {
                                           let n = g.Z.getCategoryForProduct(e.skuId);
                                           return null == e || null == n
                                               ? null
@@ -325,7 +325,7 @@ t.Z = (e) => {
                                       })
                                   })
                         }),
-                        D >= T.iA &&
+                        V >= T.iA &&
                             (0, r.jsxs)('div', {
                                 className: B.endOfFeed,
                                 children: [
@@ -336,7 +336,7 @@ t.Z = (e) => {
                                     (0, r.jsx)(c.Button, {
                                         className: B.endOfFeedButton,
                                         onClick: () => {
-                                            V('shop all bottom', void 0, !0);
+                                            D('shop all bottom', void 0, !0);
                                         },
                                         children: (0, r.jsx)(c.Text, {
                                             variant: 'text-md/medium',

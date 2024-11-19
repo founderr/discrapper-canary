@@ -26,8 +26,8 @@ var r,
     b = n(82950),
     g = n(981631),
     E = n(215023),
-    S = n(388032),
-    C = n(1114),
+    C = n(388032),
+    S = n(1114),
     I = n(99713);
 function x(e) {
     let { transitionState: t, channel: n } = e;
@@ -43,18 +43,18 @@ function T(e) {
         n = (0, p.T$)(t),
         [r, i] = (0, a.useState)(!1),
         { price: s, fetchingPrice: h, error: _ } = (0, p.R2)(E.FX),
-        { entitlement: m, fetchedEntitlement: b, error: S } = (0, p.t6)(E.FX),
-        C = _ || S,
+        { entitlement: m, fetchedEntitlement: b, error: C } = (0, p.t6)(E.FX),
+        S = _ || C,
         { analyticsLocations: I } = (0, d.ZP)([u.Z.HD_STREAMING_POTION_MODAL]),
         x = null != m && !m.consumed;
     (0, a.useEffect)(
         () => (
             null != m && !1 === m.consumed && r && (0, f.Zu)(t.id, E.FX),
             () => {
-                C && (0, f.SN)(E.FX);
+                S && (0, f.SN)(E.FX);
             }
         ),
-        [m, t, r, C]
+        [m, t, r, S]
     );
     let A = (0, a.useMemo)(
             () => () =>
@@ -72,11 +72,11 @@ function T(e) {
             },
             [t.id]
         ),
-        y = (0, a.useMemo)(() => () => (t.isHDStreamSplashed ? 4 : n ? ((null == m ? void 0 : m.type) === g.qc2.DEVELOPER_GIFT ? 1 : x ? 2 : 0) : 3), [t.isHDStreamSplashed, n, null == m ? void 0 : m.type, x]),
-        w = (0, a.useMemo)(() => y(), [y]);
+        w = (0, a.useMemo)(() => () => (t.isHDStreamSplashed ? 4 : n ? ((null == m ? void 0 : m.type) === g.qc2.DEVELOPER_GIFT ? 1 : x ? 2 : 0) : 3), [t.isHDStreamSplashed, n, null == m ? void 0 : m.type, x]),
+        y = (0, a.useMemo)(() => w(), [w]);
     return (0, o.jsx)(N, {
         channel: t,
-        buttonState: w,
+        buttonState: y,
         price: s,
         onActionClick: () => {
             i(!0), (x ? T : A)();
@@ -87,14 +87,14 @@ function T(e) {
 let N = (e) => {
         let { channel: t, buttonState: n, price: r, onActionClick: i, loading: a } = e;
         return a
-            ? (0, o.jsx)(R, {})
+            ? (0, o.jsx)(P, {})
             : null == r
-              ? (0, o.jsx)(P, {})
+              ? (0, o.jsx)(L, {})
               : (0, o.jsxs)(o.Fragment, {
                     children: [
                         (0, o.jsxs)('div', {
-                            className: C.modal,
-                            children: [(0, o.jsx)(y, {}), (0, o.jsx)(w, { channel: t })]
+                            className: S.modal,
+                            children: [(0, o.jsx)(w, {}), (0, o.jsx)(y, { channel: t })]
                         }),
                         (0, o.jsx)(M, {
                             buttonState: n,
@@ -104,52 +104,52 @@ let N = (e) => {
                     ]
                 });
     },
-    y = () =>
+    w = () =>
         (0, o.jsx)('img', {
-            className: C.image,
+            className: S.image,
             src: 'https://cdn.discordapp.com/assets/premium/roadblocks/hd_streaming.png',
-            alt: S.intl.string(S.t.DdigcX)
+            alt: C.intl.string(C.t.DdigcX)
         }),
-    w = (e) => {
+    y = (e) => {
         let { channel: t } = e;
         return (0, o.jsxs)(o.Fragment, {
             children: [
                 (0, o.jsxs)('div', {
-                    className: C.body,
+                    className: S.body,
                     children: [
                         (0, o.jsxs)('div', {
-                            className: C.heading,
+                            className: S.heading,
                             children: [
                                 (0, o.jsx)(c.Heading, {
                                     variant: 'heading-lg/bold',
-                                    children: S.intl.string(S.t.K04rOD)
+                                    children: C.intl.string(C.t.K04rOD)
                                 }),
                                 (0, o.jsx)(h.Z, {})
                             ]
                         }),
                         (0, o.jsx)(c.Text, {
                             variant: 'text-sm/normal',
-                            children: S.intl.string(S.t.lq40Pz)
+                            children: C.intl.string(C.t.lq40Pz)
                         }),
                         (0, o.jsx)(c.Text, {
                             color: 'text-link',
                             variant: 'text-sm/normal',
-                            children: S.intl.format(S.t['1wV4qq'], { helpCenterLink: _.Z.getArticleURL(g.BhN.HD_STREAMING_POTION) })
+                            children: C.intl.format(C.t['1wV4qq'], { helpCenterLink: _.Z.getArticleURL(g.BhN.HD_STREAMING_POTION) })
                         }),
                         (0, o.jsx)(c.Text, {
                             color: 'text-muted',
                             variant: 'text-xs/medium',
-                            children: S.intl.string(S.t.qk07Mj)
+                            children: C.intl.string(C.t.qk07Mj)
                         })
                     ]
                 }),
-                (0, o.jsx)('div', { className: C.divider }),
+                (0, o.jsx)('div', { className: S.divider }),
                 (0, o.jsxs)('div', {
-                    className: C.applyingTo,
+                    className: S.applyingTo,
                     children: [
                         (0, o.jsx)(c.Text, {
                             variant: 'eyebrow',
-                            children: S.intl.string(S.t.tZyXg4)
+                            children: C.intl.string(C.t.tZyXg4)
                         }),
                         (0, o.jsx)(b.Z, { channel: t })
                     ]
@@ -161,14 +161,14 @@ let N = (e) => {
 let M = (e) => {
         let { buttonState: t, price: n, onActionClick: r } = e;
         return (0, o.jsxs)('div', {
-            className: C.footer,
+            className: S.footer,
             children: [
                 (0, o.jsx)(c.Button, {
                     onClick: () => {
                         (0, c.closeModal)(A);
                     },
                     color: c.Button.Colors.PRIMARY,
-                    children: S.intl.string(S.t.Avt5KS)
+                    children: C.intl.string(C.t.Avt5KS)
                 }),
                 (0, o.jsx)(O, {
                     buttonState: t,
@@ -180,14 +180,14 @@ let M = (e) => {
     },
     O = (e) => {
         let { buttonState: t, price: n, onActionClick: r } = e,
-            i = S.intl.formatToPlainString(S.t.S9LAdX, { price: (0, m.T4)(n.amount, n.currency) });
+            i = C.intl.formatToPlainString(C.t.S9LAdX, { price: (0, m.T4)(n.amount, n.currency) });
         if (3 === t || 4 === t) {
             let e = {
-                3: S.intl.string(S.t.Qrh2BQ),
-                4: S.intl.string(S.t.utRdl5)
+                3: C.intl.string(C.t.Qrh2BQ),
+                4: C.intl.string(C.t.utRdl5)
             }[t];
             return (0, o.jsx)(c.Tooltip, {
-                tooltipContentClassName: C.tooltip,
+                tooltipContentClassName: S.tooltip,
                 text: e,
                 children: (e) =>
                     (0, o.jsx)(c.Button, {
@@ -199,13 +199,13 @@ let M = (e) => {
         }
         let a = {
             0: i,
-            1: S.intl.string(S.t.sl6Tcn),
-            2: S.intl.string(S.t.XJ9INj)
+            1: C.intl.string(C.t.sl6Tcn),
+            2: C.intl.string(C.t.XJ9INj)
         }[t];
         return (0, o.jsx)(c.Button, {
             onClick: r,
             children: (0, o.jsxs)('div', {
-                className: C.buttonCopy,
+                className: S.buttonCopy,
                 children: [
                     (0, o.jsx)(c.PotionIcon, {
                         color: s.Z.colors.WHITE,
@@ -216,11 +216,11 @@ let M = (e) => {
             })
         });
     },
-    P = () =>
+    L = () =>
         (0, o.jsx)('div', {
-            className: C.anomaly,
+            className: S.anomaly,
             children: (0, o.jsxs)('div', {
-                className: C.error,
+                className: S.error,
                 children: [
                     (0, o.jsx)(c.Image, {
                         src: I,
@@ -229,16 +229,16 @@ let M = (e) => {
                     }),
                     (0, o.jsx)(c.Text, {
                         variant: 'text-md/normal',
-                        children: S.intl.string(S.t.sIA0OD)
+                        children: C.intl.string(C.t.sIA0OD)
                     })
                 ]
             })
         }),
-    R = () =>
+    P = () =>
         (0, o.jsx)('div', {
-            className: C.anomaly,
+            className: S.anomaly,
             children: (0, o.jsx)('div', {
-                className: C.spinner,
+                className: S.spinner,
                 children: (0, o.jsx)(c.Spinner, {})
             })
         });

@@ -5,8 +5,8 @@ n.d(e, {
 });
 var r = n(200651);
 n(192379);
-var a = n(120356),
-    i = n.n(a),
+var i = n(120356),
+    a = n.n(i),
     s = n(780384),
     o = n(481060),
     l = n(410030),
@@ -17,18 +17,18 @@ var a = n(120356),
     g = n(63243),
     p = n(244488);
 let v = (t) => {
-    let { product: e, isPurchased: n, isHighlighted: a, user: v, forCollectedModal: h, profileEffectClassName: b } = t,
+    let { product: e, isPurchased: n, isHighlighted: i, user: v, forCollectedModal: h, profileEffectClassName: b } = t,
         { firstProfileEffect: m, firstAvatarDecoration: S } = (0, d.R)(e),
-        C = (0, l.ZP)(),
-        T = (0, s.ap)(C);
+        x = (0, l.ZP)(),
+        C = (0, s.ap)(x);
     return (0, r.jsxs)('div', {
         className: f.container,
         children: [
             null != m
                 ? (0, r.jsx)('div', {
-                      className: i()(f.profileEffectShopPreview, b),
+                      className: a()(f.profileEffectShopPreview, b),
                       children: (0, r.jsx)(c.Z, {
-                          isHovering: a,
+                          isHovering: i,
                           profileEffectId: m.id,
                           isPurchased: n,
                           forCollectedModal: h,
@@ -44,8 +44,8 @@ let v = (t) => {
                           user: v,
                           avatarSize: o.AvatarSizes.SIZE_120,
                           isPurchased: n,
-                          isHighlighted: a,
-                          avatarPlaceholderSrc: T ? p : g
+                          isHighlighted: i,
+                          avatarPlaceholderSrc: C ? p : g
                       })
                   })
                 : null

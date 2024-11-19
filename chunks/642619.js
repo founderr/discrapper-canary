@@ -1,20 +1,20 @@
 n.d(e, {
     H: function () {
-        return i;
+        return a;
     }
 });
 var r = n(200651);
 n(192379);
-var a = n(481060);
-let i = (t) => {
-    let { analyticsLocations: e, initialSelectedEffectId: i, guild: s } = t;
-    (0, a.openModalLazy)(async () => {
+var i = n(481060);
+let a = (t) => {
+    let { analyticsLocations: e, initialSelectedEffectId: a, guild: s } = t;
+    (0, i.openModalLazy)(async () => {
         let { default: t } = await n.e('55183').then(n.bind(n, 191564));
         return (n) =>
             (0, r.jsx)(t, {
                 ...n,
                 guild: s,
-                initialSelectedEffectId: i,
+                initialSelectedEffectId: a,
                 analyticsLocations: e
             });
     }, {});
