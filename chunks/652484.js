@@ -1,4 +1,7 @@
 e.exports = {
-    closeButton: 'closeButton_cb4d21',
-    closeIcon: 'closeIcon_cb4d21'
+    bar: 'bar_f80bcd',
+    top: 'top_f80bcd',
+    button: 'button_f80bcd',
+    buttonLeft: 'buttonLeft_f80bcd',
+    text: 'text_f80bcd'
 };

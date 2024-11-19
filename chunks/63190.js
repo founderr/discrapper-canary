@@ -1,1 +1,5 @@
-e.exports = '/assets/9340da265d74c18a4603.svg';
+e.exports = {
+    button: 'button_adca65',
+    enabled: 'enabled_adca65',
+    disabled: 'disabled_adca65'
+};

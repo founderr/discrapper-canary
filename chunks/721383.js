@@ -1,13 +1,24 @@
-n.d(t, {
-    _: function () {
-        return a;
-    }
-});
-var c = n(481060),
-    i = n(191980),
-    l = n(285371);
-let a = {
-    binds: ['mod+/', 'mod+shift+/'],
-    comboKeysBindGlobal: !0,
-    action: () => ((0, c.hasModalOpen)(l.J) ? i.C() : i.$(), !1)
+e.exports = {
+    row: 'row_b10b92',
+    soundEditContainer: 'soundEditContainer_b10b92',
+    soundPreviewIcon: 'soundPreviewIcon_b10b92',
+    active: 'active_b10b92',
+    tableTitle: 'tableTitle_b10b92',
+    boostingIconWrapper: 'boostingIconWrapper_b10b92',
+    soundName: 'soundName_b10b92',
+    helpText: 'helpText_b10b92',
+    divider: 'divider_b10b92',
+    empty: 'empty_b10b92',
+    emptyText: 'emptyText_b10b92',
+    buttons: 'buttons_b10b92',
+    soundTable: 'soundTable_b10b92',
+    tableHeaders: 'tableHeaders_b10b92',
+    tableHeader: 'tableHeader_b10b92',
+    soundUpdate: 'soundUpdate_b10b92 soundEdit_b10b92',
+    soundRemove: 'soundRemove_b10b92 soundEdit_b10b92',
+    soundEditIcon: 'soundEditIcon_b10b92',
+    emoji: 'emoji_b10b92',
+    uploaderAvatar: 'uploaderAvatar_b10b92',
+    uploader: 'uploader_b10b92',
+    browserUnsupportedDialog: 'browserUnsupportedDialog_b10b92'
 };
