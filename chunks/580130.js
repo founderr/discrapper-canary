@@ -18,8 +18,8 @@ let E = {},
     v = {},
     b = {},
     I = {},
-    S = !1,
     T = !1,
+    S = !1,
     y = new Set(),
     A = new Set(),
     N = {};
@@ -61,10 +61,10 @@ class L extends (r = c.yh) {
         return n;
     }
     get fetchingAllEntitlements() {
-        return S;
+        return T;
     }
     get fetchedAllEntitlements() {
-        return T;
+        return S;
     }
     get applicationIdsFetching() {
         return y;
@@ -169,16 +169,16 @@ class L extends (r = c.yh) {
             })(e.entitlement);
         },
         LOGOUT: function () {
-            (E = {}), (b = {}), (I = {}), (S = !1), (T = !1), (y = new Set()), (A = new Set());
+            (E = {}), (b = {}), (I = {}), (T = !1), (S = !1), (y = new Set()), (A = new Set());
         },
         ENTITLEMENTS_FETCH_FOR_USER_START: function () {
-            S = !0;
+            T = !0;
         },
         ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: function (e) {
             let { entitlements: t } = e;
-            for (let e of ((T = !0), (S = !1), t)) C(e);
+            for (let e of ((S = !0), (T = !1), t)) C(e);
         },
         ENTITLEMENTS_FETCH_FOR_USER_FAIL: function () {
-            (T = !1), (S = !1);
+            (S = !1), (T = !1);
         }
     }));

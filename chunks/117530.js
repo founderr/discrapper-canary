@@ -27,7 +27,7 @@ function I(e, t, n) {
     let r = b(e);
     r.set(t, n), g.set(e, r);
 }
-class S extends (r = u.ZP.Store) {
+class T extends (r = u.ZP.Store) {
     getFirstUpload(e, t) {
         let n = v(e, t);
         return n.length > 0 ? n[0] : null;
@@ -51,7 +51,7 @@ class S extends (r = u.ZP.Store) {
     }
 }
 (s = 'UploadAttachmentStore'),
-    (a = 'displayName') in (i = S)
+    (a = 'displayName') in (i = T)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -59,7 +59,7 @@ class S extends (r = u.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new S(c.Z, {
+    (t.Z = new T(c.Z, {
         UPLOAD_ATTACHMENT_POP_FILE: function (e) {
             let { channelId: t } = e,
                 n = [...v(t, p.d.ChannelMessage)];

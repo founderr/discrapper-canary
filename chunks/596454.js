@@ -24,29 +24,29 @@ n(837748);
 let E = __OVERLAY__ ? () => (0, o.e7)([_.Z], () => _.Z.isInstanceFocused()) : m.n;
 function v(e) {
     var t, n;
-    let { src: a, alt: o, className: l, emojiId: d, emojiName: _, channelId: m, messageId: v, animated: b, size: I = 'default', isInteracting: S = !1, shouldAnimate: T, onMouseEnter: y, onMouseLeave: A, canSelect: N = !0, autoplay: C, registerAnimatedElementRef: R, ...O } = e,
+    let { src: a, alt: o, className: l, emojiId: d, emojiName: _, channelId: m, messageId: v, animated: b, size: I = 'default', isInteracting: T = !1, shouldAnimate: S, onMouseEnter: y, onMouseLeave: A, canSelect: N = !0, autoplay: C, registerAnimatedElementRef: R, ...O } = e,
         [D, L] = i.useState(!1),
         [x, w] = i.useState(void 0),
         M = i.useRef(),
         { triggerAnimation: P } = i.useContext(u.Rm),
         k = f.Yk.useSetting(),
         U = E(),
-        G = null == C ? k : C,
-        B = g.kV[I],
+        B = null == C ? k : C,
+        G = g.kV[I],
         Z = i.useRef(null),
         F = i.useMemo(() => {
             if (null != a) return a;
             if (null != d) {
-                let e = !0 === T && G;
+                let e = !0 === S && B;
                 return p.ZP.getEmojiURL({
                     id: d,
-                    animated: U && !0 === b && (e || D || !0 === S),
-                    size: B
+                    animated: U && !0 === b && (e || D || !0 === T),
+                    size: G
                 });
             }
             if (null != _) return h.ZP.getURL(_);
             throw Error('Unknown Src for Emoji');
-        }, [b, G, d, _, B, U, D, S, T, a]),
+        }, [b, B, d, _, G, U, D, T, S, a]),
         V = i.useCallback(() => {
             null != F &&
                 (M.current = (0, c.po)(F, (e) => {
@@ -104,7 +104,7 @@ function v(e) {
                       channelId: m,
                       messageId: v,
                       emojiName: _,
-                      disable: !1 === G || !1 === k,
+                      disable: !1 === B || !1 === k,
                       emojiRef: Z.current
                   }),
                   N

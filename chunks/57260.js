@@ -19,10 +19,10 @@ function d(e) {
         [m, g] = i.useState(!1),
         E = null != d ? d : f,
         { ref: v, height: b = 0 } = (0, u.Z)(),
-        { ref: I, height: S = 0 } = (0, u.Z)(),
-        T = (0, l.useSpring)(
+        { ref: I, height: T = 0 } = (0, u.Z)(),
+        S = (0, l.useSpring)(
             {
-                height: E ? b + S : S,
+                height: E ? b + T : T,
                 config: o.config.stiff,
                 onRest: () => g(!0)
             },
@@ -42,7 +42,7 @@ function d(e) {
             className: s()(c.collapseable, { [c.toggled]: E }, n),
             children: (0, r.jsxs)(o.animated.div, {
                 className: s()(c.contentExpandContainer, { [c.showOverflow]: E && m }),
-                style: T,
+                style: S,
                 children: [
                     (0, r.jsx)('div', {
                         ref: I,

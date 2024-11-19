@@ -15,7 +15,7 @@ n.d(t, {
         return R;
     },
     RF: function () {
-        return S;
+        return T;
     },
     Un: function () {
         return l;
@@ -27,7 +27,7 @@ n.d(t, {
         return h;
     },
     ae: function () {
-        return T;
+        return S;
     },
     b3: function () {
         return E;
@@ -76,13 +76,13 @@ let f = 100,
     v = 7,
     b = 5,
     I = 13;
-function S(e) {
+function T(e) {
     if (e.options.length > 0) return !1;
-    let { id: t, ...n } = T(),
+    let { id: t, ...n } = S(),
         { id: r, ...i } = e;
     return c()(n, i);
 }
-function T() {
+function S() {
     return {
         id: String(Date.now()),
         title: d.intl.string(d.t.vY91Cw),

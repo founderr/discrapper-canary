@@ -23,8 +23,8 @@ var i = n(120356),
     v = n(833858),
     b = n(769654),
     I = n(960870),
-    S = n(139793),
-    T = n(994746),
+    T = n(139793),
+    S = n(994746),
     y = n(232174),
     A = n(502762),
     N = n(652853),
@@ -39,8 +39,8 @@ var i = n(120356),
     P = n(290274),
     k = n(553375),
     U = n(228168),
-    G = n(981631),
-    B = n(701488),
+    B = n(981631),
+    G = n(701488),
     Z = n(388032),
     F = n(69035);
 function V(e) {
@@ -69,11 +69,11 @@ function V(e) {
             entry: Q,
             analyticsLocations: K
         }),
-        $ = (0, S.Z)({
+        $ = (0, T.Z)({
             userId: t.id,
             onAction: J
         }),
-        ee = (0, T.Z)(i),
+        ee = (0, S.Z)(i),
         { largeImage: et, smallImage: en } = (0, p.FO)(i, V),
         er = (0, s.EQ)(i)
             .when(c.Z, () => X)
@@ -108,7 +108,7 @@ function V(e) {
         },
         ea = () => {
             var e;
-            return i.type === G.IIU.HANG_STATUS
+            return i.type === B.IIU.HANG_STATUS
                 ? (0, r.jsx)(D.Z, {
                       variant: 'heading-sm/semibold',
                       text: (0, v.O8)(i)
@@ -139,7 +139,7 @@ function V(e) {
                       });
         },
         es = () =>
-            i.type === G.IIU.HANG_STATUS
+            i.type === B.IIU.HANG_STATUS
                 ? null
                 : (0, d.Z)(i) && null != j
                   ? (0, r.jsx)(D.Z, {
@@ -160,7 +160,7 @@ function V(e) {
                       }),
         eo = () => {
             var e;
-            return i.type === G.IIU.WATCHING
+            return i.type === B.IIU.WATCHING
                 ? null
                 : (0, c.Z)(i)
                   ? el()
@@ -171,7 +171,7 @@ function V(e) {
         },
         el = () => {
             var e, t, n, a;
-            return (null === (e = i.party) || void 0 === e ? void 0 : e.size) == null && i.application_id === B.Zc
+            return (null === (e = i.party) || void 0 === e ? void 0 : e.size) == null && i.application_id === G.Zc
                 ? (0, r.jsxs)('div', {
                       className: F.gameState,
                       children: [

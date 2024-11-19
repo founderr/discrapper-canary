@@ -23,8 +23,8 @@ var r = n(200651),
     v = n(277085),
     b = n(228168),
     I = n(388032),
-    S = n(705994);
-let T = 'text-sm/medium',
+    T = n(705994);
+let S = 'text-sm/medium',
     y = 36,
     A = 144;
 function N(e) {
@@ -39,10 +39,10 @@ function N(e) {
         P = i.useRef(null),
         k = i.useRef(null),
         U = i.useRef(null),
-        { emoji: G, state: B } = null != a ? a : {},
-        Z = null != B && '' !== B ? B : null,
+        { emoji: B, state: G } = null != a ? a : {},
+        Z = null != G && '' !== G ? G : null,
         F = null != Z && Z.length > 0,
-        V = null != G,
+        V = null != B,
         j = V && !F,
         H = V ? 1.25 : 0,
         Y = 18 + H,
@@ -105,8 +105,8 @@ function N(e) {
         eo = () =>
             V
                 ? (0, r.jsx)(d.Iv, {
-                      className: F ? S.statusEmojiInline : S.statusEmojiOnly,
-                      emoji: G,
+                      className: F ? T.statusEmojiInline : T.statusEmojiOnly,
+                      emoji: B,
                       animate: N,
                       hideTooltip: !1,
                       tooltipDelay: b.vB
@@ -115,16 +115,16 @@ function N(e) {
         el = () =>
             F
                 ? (0, r.jsx)(c.Text, {
-                      variant: T,
-                      className: S.statusText,
+                      variant: S,
+                      className: T.statusText,
                       children: Z
                   })
                 : null,
         eu = () => {
-            let e = s()(S.content, {
-                [S.clamp]: x,
-                [S.unclamp]: !x,
-                [S.singleLineAlign]: X
+            let e = s()(T.content, {
+                [T.clamp]: x,
+                [T.unclamp]: !x,
+                [T.singleLineAlign]: X
             });
             return (0, r.jsxs)(o.animated.div, {
                 style: ei,
@@ -134,13 +134,13 @@ function N(e) {
         },
         ec = () =>
             (0, r.jsxs)('div', {
-                className: s()(S.content, S.clamp, S.placeholderWidth, { [S.panel]: h === b.y0.PANEL }),
+                className: s()(T.content, T.clamp, T.placeholderWidth, { [T.panel]: h === b.y0.PANEL }),
                 ref: k,
                 children: [eo(), el()]
             }),
         ed = () =>
             (0, r.jsxs)('div', {
-                className: s()(S.content, S.unclamp, S.placeholderWidth, S.incorporeal, { [S.panel]: h === b.y0.PANEL }),
+                className: s()(T.content, T.unclamp, T.placeholderWidth, T.incorporeal, { [T.panel]: h === b.y0.PANEL }),
                 ref: M,
                 children: [eo(), el()]
             }),
@@ -157,21 +157,21 @@ function N(e) {
                 });
         },
         e_ = {
-            [S.biteSize]: h === b.y0.BITE_SIZE,
-            [S.fullSize]: h === b.y0.FULL_SIZE,
-            [S.panel]: h === b.y0.PANEL
+            [T.biteSize]: h === b.y0.BITE_SIZE,
+            [T.fullSize]: h === b.y0.FULL_SIZE,
+            [T.panel]: h === b.y0.PANEL
         },
-        ep = s()(S.background, { [S.editable]: Q }),
+        ep = s()(T.background, { [T.editable]: Q }),
         eh = s()({
-            [S.statusBubbleShape]: (!F && V) || !X,
-            [S.statusBubbleSingleLineWithTextShape]: (X && F) || q
+            [T.statusBubbleShape]: (!F && V) || !X,
+            [T.statusBubbleSingleLineWithTextShape]: (X && F) || q
         }),
-        em = s()(S.statusBubbleOuter, e_, eh, { [S.statusBubbleOuterAddStatusCursor]: q }),
-        eg = s()(S.statusBubble, eh, {
-            [S.statusBubbleEmojiOnlyPadding]: j,
-            [S.statusBubbleWithTextPadding]: F || q,
-            [S.statusBubbleWithTextMinWidth]: F,
-            [S.statusBubbleCopyStatusCursor]: z
+        em = s()(T.statusBubbleOuter, e_, eh, { [T.statusBubbleOuterAddStatusCursor]: q }),
+        eg = s()(T.statusBubble, eh, {
+            [T.statusBubbleEmojiOnlyPadding]: j,
+            [T.statusBubbleWithTextPadding]: F || q,
+            [T.statusBubbleWithTextMinWidth]: F,
+            [T.statusBubbleCopyStatusCursor]: z
         });
     return (0, r.jsx)(p.Gt, {
         value: R,
@@ -180,22 +180,22 @@ function N(e) {
                 ? (0, r.jsx)(c.Clickable, {
                       'aria-label': I.intl.string(I.t['zrpF/f']),
                       onClick: ef,
-                      className: s()(S.addCustomStatusButtonBubble, e_, ep),
+                      className: s()(T.addCustomStatusButtonBubble, e_, ep),
                       focusProps: { ringClassName: eh },
                       children: (0, r.jsx)('div', {
                           className: em,
                           children: (0, r.jsx)('span', {
                               className: eg,
                               children: (0, r.jsxs)('div', {
-                                  className: S.content,
+                                  className: T.content,
                                   children: [
                                       (0, r.jsx)(c.CirclePlusIcon, {
-                                          className: S.addStatusIcon,
-                                          colorClass: S.addStatusIconColor
+                                          className: T.addStatusIcon,
+                                          colorClass: T.addStatusIconColor
                                       }),
                                       (0, r.jsx)(c.Text, {
-                                          variant: T,
-                                          className: S.addStatusPrompt,
+                                          variant: S,
+                                          className: T.addStatusPrompt,
                                           children: I.intl.string(I.t.evw0o6)
                                       })
                                   ]
@@ -206,7 +206,7 @@ function N(e) {
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)('div', {
-                              className: s()(S.invisibleContainer, e_),
+                              className: s()(T.invisibleContainer, e_),
                               children: (0, r.jsx)('div', {
                                   className: em,
                                   children: (0, r.jsxs)('span', {
@@ -219,11 +219,11 @@ function N(e) {
                               ringClassName: eh,
                               children: (0, r.jsxs)('div', {
                                   ref: er,
-                                  className: s()(S.visibleContainer, e_, ep),
+                                  className: s()(T.visibleContainer, e_, ep),
                                   role: 'tooltip',
                                   'aria-label': I.intl.formatToPlainString(I.t.UpF5QU, {
-                                      emoji: null !== (t = null == G ? void 0 : G.name) && void 0 !== t ? t : '',
-                                      status: B
+                                      emoji: null !== (t = null == B ? void 0 : B.name) && void 0 !== t ? t : '',
+                                      status: G
                                   }),
                                   tabIndex: 0,
                                   onFocus: () => {

@@ -18,8 +18,8 @@ var i = n(512722),
     v = n(358085),
     b = n(998502),
     I = n(569545),
-    S = n(70722),
-    T = n(981631),
+    T = n(70722),
+    S = n(981631),
     y = n(65154);
 let A = {},
     N = new f.V7(),
@@ -34,7 +34,7 @@ let L = o().debounce((e, t, n, r) => {
     x(
         e,
         (0, I.V9)({
-            streamType: null != t ? S.lo.GUILD : S.lo.CALL,
+            streamType: null != t ? T.lo.GUILD : T.lo.CALL,
             guildId: t,
             channelId: n,
             ownerId: r
@@ -130,7 +130,7 @@ async function x(e, t) {
                 let e = E.default.getToken();
                 a()(null != e, 'Auth token was null while sending screenshot.'),
                     await b.ZP.makeChunkedRequest(
-                        T.ANM.STREAM_PREVIEW(t),
+                        S.ANM.STREAM_PREVIEW(t),
                         { thumbnail: i },
                         {
                             method: 'POST',
@@ -139,7 +139,7 @@ async function x(e, t) {
                     );
             } else
                 await l.tn.post({
-                    url: T.ANM.STREAM_PREVIEW(t),
+                    url: S.ANM.STREAM_PREVIEW(t),
                     body: { thumbnail: i },
                     oldFormErrors: !0,
                     rejectWithError: !1
@@ -161,7 +161,7 @@ t.Z = {
             }),
             _.Z.subscribe('MEDIA_ENGINE_VIDEO_STATE_CHANGED', (e) => {
                 let { videoState: t } = e;
-                C = t === T.FQ1.PAUSED || !1;
+                C = t === S.FQ1.PAUSED || !1;
             });
     }
 };

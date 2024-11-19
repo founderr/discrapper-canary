@@ -59,15 +59,15 @@ function b(e) {
     let { checked: t, onClick: n, id: a = 'burst-reaction-toggle-button' } = e,
         b = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         I = _.default.getCurrentUser(),
-        S = null == I || (0, p.I5)(I) ? [u.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
-        [T, y] = (0, f.US)(S),
+        T = null == I || (0, p.I5)(I) ? [u.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
+        [S, y] = (0, f.US)(T),
         [A, N] = i.useState(!1),
         [C, R] = (0, c.useSpring)(() => ({})),
         O = (0, o.animated)(c.SuperReactionIcon);
     i.useEffect(() => {
-        let e = T === u.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
+        let e = S === u.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
         e && (y(h.L.DISMISS), setTimeout(() => N(e), 200));
-    }, [T, y]);
+    }, [S, y]);
     let D = A ? m.intl.string(m.t['Osi/u7']) : t ? m.intl.string(m.t['5cRA/f']) : m.intl.string(m.t.buV4am),
         L = A ? m.intl.string(m.t.ORK94u) : void 0;
     return (0, r.jsxs)(c.TooltipContainer, {

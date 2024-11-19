@@ -71,14 +71,14 @@ function v(e) {
 }
 t.Z = (e) => {
     var t, n, a;
-    let { loading: o = !1, currentOverrides: d, linkMeta: b, url: I, applyBuildOverride: S, clearBuildOverride: T } = e,
+    let { loading: o = !1, currentOverrides: d, linkMeta: b, url: I, applyBuildOverride: T, clearBuildOverride: S } = e,
         [y, A] = i.useState(!1),
         N = i.useCallback(() => {
-            if (!y) A(!0), S().catch(() => A(!1));
-        }, [S, y]),
-        C = i.useCallback(() => {
             if (!y) A(!0), T().catch(() => A(!1));
-        }, [T, y]);
+        }, [T, y]),
+        C = i.useCallback(() => {
+            if (!y) A(!0), S().catch(() => A(!1));
+        }, [S, y]);
     return (0, r.jsxs)('div', {
         className: g.wrapper,
         children: [

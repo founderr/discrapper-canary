@@ -24,8 +24,8 @@ var r = n(200651),
     v = n(117530),
     b = n(459273),
     I = n(403182),
-    S = n(541716),
-    T = n(752305),
+    T = n(541716),
+    S = n(752305),
     y = n(30465),
     A = n(140963),
     N = n(4484),
@@ -67,7 +67,7 @@ class M extends i.Component {
         if ((this.fixFocus(e), this.props.useSlate !== e.useSlate)) {
             var t, n;
             let e;
-            (e = this.props.useSlate ? this.props.textValue : (0, C.sk)(this.props.richValue, { mode: 'plain' })), null === (t = (n = this.props).onChange) || void 0 === t || t.call(n, null, e, (0, T.JM)(e));
+            (e = this.props.useSlate ? this.props.textValue : (0, C.sk)(this.props.richValue, { mode: 'plain' })), null === (t = (n = this.props).onChange) || void 0 === t || t.call(n, null, e, (0, S.JM)(e));
         } else this.props.textValue !== e.textValue && this.saveCurrentTextThrottled();
     }
     componentWillUnmount() {
@@ -162,21 +162,21 @@ class M extends i.Component {
     }
     render() {
         var e, t, n, i, a, o;
-        let { textValue: l, richValue: u, disabled: c, onChange: d, onKeyDown: _, onResize: p, onSubmit: h, channel: m, type: g, fontSize: E, useSlate: v, spellcheckEnabled: I, useNewSlashCommands: y, canOnlyUseTextCommands: C, className: O, id: L, required: x, maxCharacterCount: M, allowNewLines: P, 'aria-describedby': k, 'aria-labelledby': U, accessibilityLabel: G } = this.props,
-            { submitting: B, popup: Z } = this.state,
+        let { textValue: l, richValue: u, disabled: c, onChange: d, onKeyDown: _, onResize: p, onSubmit: h, channel: m, type: g, fontSize: E, useSlate: v, spellcheckEnabled: I, useNewSlashCommands: y, canOnlyUseTextCommands: C, className: O, id: L, required: x, maxCharacterCount: M, allowNewLines: P, 'aria-describedby': k, 'aria-labelledby': U, accessibilityLabel: B } = this.props,
+            { submitting: G, popup: Z } = this.state,
             F = {
                 channel: m,
                 className: s()(O, D.textArea, {
                     [D.textAreaSlate]: v,
-                    [D.textAreaDisabled]: c || B
+                    [D.textAreaDisabled]: c || G
                 }),
                 id: L,
                 placeholder: this.getPlaceholder(),
                 required: x,
-                accessibilityLabel: G,
+                accessibilityLabel: B,
                 disabled: c || !1,
-                submitting: B,
-                isEdit: g === S.I.EDIT,
+                submitting: G,
+                isEdit: g === T.I.EDIT,
                 onFocus: this.handleFocus,
                 onBlur: this.handleBlur,
                 onPaste: this.handlePaste,
@@ -191,11 +191,11 @@ class M extends i.Component {
                 onKeyDown: _,
                 onSubmit: h,
                 textAreaPaddingClassName: s()(w[E], {
-                    [D.textAreaWithoutAttachmentButton]: g !== S.I.NORMAL && g !== S.I.OVERLAY && g !== S.I.THREAD_CREATION && g !== S.I.SIDEBAR,
-                    [D.textAreaForPostCreation]: g === S.I.CREATE_FORUM_POST,
-                    [D.textAreaCustomGift]: g === S.I.CUSTOM_GIFT,
-                    [D.textAreaForUserProfile]: g === S.I.USER_PROFILE,
-                    [D.textAreaForOverlayInlineReply]: g === S.I.OVERLAY_INLINE_REPLY
+                    [D.textAreaWithoutAttachmentButton]: g !== T.I.NORMAL && g !== T.I.OVERLAY && g !== T.I.THREAD_CREATION && g !== T.I.SIDEBAR,
+                    [D.textAreaForPostCreation]: g === T.I.CREATE_FORUM_POST,
+                    [D.textAreaCustomGift]: g === T.I.CUSTOM_GIFT,
+                    [D.textAreaForUserProfile]: g === T.I.USER_PROFILE,
+                    [D.textAreaForOverlayInlineReply]: g === T.I.OVERLAY_INLINE_REPLY
                 }),
                 spellcheckEnabled: I,
                 useNewSlashCommands: y,
@@ -215,7 +215,7 @@ class M extends i.Component {
                       ref: this.ref,
                       ...F,
                       type: g,
-                      value: c ? (0, T.JM)('') : u,
+                      value: c ? (0, S.JM)('') : u,
                       canUseCommands: null === (t = g.commands) || void 0 === t ? void 0 : t.enabled,
                       canOnlyUseTextCommands: C
                   })
@@ -294,7 +294,7 @@ class M extends i.Component {
             }),
             L(this, 'handleClearText', () => {
                 var e, t;
-                null === (e = (t = this.props).onChange) || void 0 === e || e.call(t, null, '', (0, T.JM)(''));
+                null === (e = (t = this.props).onChange) || void 0 === e || e.call(t, null, '', (0, S.JM)(''));
             }),
             L(this, 'handleInsertText', (e) => {
                 let { plainText: t, rawText: n, addSpace: r = !1 } = e;

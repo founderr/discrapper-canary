@@ -1,6 +1,6 @@
 n.d(t, {
     Ej: function () {
-        return S;
+        return T;
     },
     Nc: function () {
         return E;
@@ -12,7 +12,7 @@ n.d(t, {
         return _;
     },
     TX: function () {
-        return T;
+        return S;
     },
     Uv: function () {
         return C;
@@ -140,14 +140,14 @@ function I(e) {
         syncForcedColors: e
     });
 }
-function S(e, t) {
+function T(e, t) {
     r.Z.dispatch({
         type: 'ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED',
         systemPrefersColorScheme: e,
         systemForcedColors: t
     });
 }
-function T(e) {
+function S(e) {
     r.Z.dispatch({
         type: 'ACCESSIBILITY_SYSTEM_PREFERS_CONTRAST_CHANGED',
         systemPrefersContrast: e

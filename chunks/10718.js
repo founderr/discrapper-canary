@@ -9,7 +9,7 @@ n.d(t, {
         return m;
     },
     Qm: function () {
-        return S;
+        return T;
     },
     VB: function () {
         return g;
@@ -218,7 +218,7 @@ function I(e, t) {
         };
     }, [i.result, n.result, t]);
 }
-function S(e, t, n) {
+function T(e, t, n) {
     let i = (0, l.PL)(!0, !0),
         a = (0, l.em)(e, !0, !0);
     return r.useMemo(() => {
@@ -241,7 +241,7 @@ function S(e, t, n) {
         };
     }, [null == i ? void 0 : i.result, null == a ? void 0 : a.result, t, n]);
 }
-let T = {
+let S = {
     id: 'placeholder-section',
     type: c.Qi.APPLICATION,
     name: ''
@@ -260,7 +260,7 @@ function y(e, t) {
                     untranslatedDescription: '',
                     displayDescription: '',
                     applicationId: '',
-                    section: T
+                    section: S
                 };
             })(r, t)
         );

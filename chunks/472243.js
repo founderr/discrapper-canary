@@ -22,11 +22,11 @@ var i = n(120356),
     E = n(444045);
 function v(e) {
     var t, n, i, v;
-    let { type: b, textValue: I, maxCharacterCount: S, showRemainingCharsAfterCount: T, className: y } = e,
+    let { type: b, textValue: I, maxCharacterCount: T, showRemainingCharsAfterCount: S, className: y } = e,
         A = (0, s.e7)([f.default], () => _.ZP.canUseIncreasedMessageLength(f.default.getCurrentUser())),
         N = (0, c.Z)(),
-        C = null != S ? S : N,
-        R = null !== (v = null != T ? T : S) && void 0 !== v ? v : N / 10,
+        C = null != T ? T : N,
+        R = null !== (v = null != S ? S : T) && void 0 !== v ? v : N / 10,
         O = I.length,
         D = null != b.upsellLongMessages && (null != O ? O : 0) > h.J6R && A,
         L = null != b.upsellLongMessages && !A,

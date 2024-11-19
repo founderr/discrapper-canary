@@ -23,10 +23,10 @@ function E(e) {
 }
 ((r = i || (i = {}))[(r.SMALL = 0)] = 'SMALL'), (r[(r.MEDIUM = 1)] = 'MEDIUM'), (r[(r.CLIP = 2)] = 'CLIP');
 t.Z = s.forwardRef(function (e, t) {
-    let { id: n, channelId: r, className: i, children: s, actions: o, handleEditModal: v, keyboardModeEnabled: b, onKeyDown: I, draftType: S, size: T = 1 } = e,
+    let { id: n, channelId: r, className: i, children: s, actions: o, handleEditModal: v, keyboardModeEnabled: b, onKeyDown: I, draftType: T, size: S = 1 } = e,
         { onFocus: y, ...A } = (0, u.JA)(n),
         { handleFocus: N, handleBlur: C } = (0, p.b)(y),
-        R = 0 === T,
+        R = 0 === S,
         O = null != o;
     return (0, a.jsx)(c.FocusRing, {
         children: (0, a.jsx)('li', {
@@ -37,13 +37,13 @@ t.Z = s.forwardRef(function (e, t) {
                 if (!!b) {
                     switch (e.which) {
                         case h.yXg.D:
-                            e.preventDefault(), d.Z.remove(r, n, S);
+                            e.preventDefault(), d.Z.remove(r, n, T);
                             return;
                         case h.yXg.E:
                             null != v && (e.preventDefault(), v(e));
                             return;
                         case h.yXg.BACKSPACE:
-                            e.ctrlKey ? (e.preventDefault(), d.Z.clearAll(r, S)) : (e.preventDefault(), d.Z.remove(r, n, S));
+                            e.ctrlKey ? (e.preventDefault(), d.Z.clearAll(r, T)) : (e.preventDefault(), d.Z.remove(r, n, T));
                             return;
                         case h.yXg.ARROW_UP:
                             if (e.shiftKey || e.altKey || e.ctrlKey || e.metaKey) return;
@@ -52,7 +52,7 @@ t.Z = s.forwardRef(function (e, t) {
                     null == I || I(e);
                 }
             },
-            className: l()(g.upload, i, { [g.sizeClip]: 2 === T }),
+            className: l()(g.upload, i, { [g.sizeClip]: 2 === S }),
             ref: t,
             children: (0, a.jsxs)('div', {
                 className: g.uploadContainer,

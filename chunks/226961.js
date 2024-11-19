@@ -86,8 +86,8 @@ class b {
     }
 }
 let I = b.empty(),
-    S = !1,
-    T = null;
+    T = !1,
+    S = null;
 function y(e, t, n) {
     return ''.concat(e, ':').concat(t, ':').concat(n);
 }
@@ -105,7 +105,7 @@ function N() {
 }
 N();
 function C() {
-    null != T && (T.destroy(), (T = null));
+    null != S && (S.destroy(), (S = null));
 }
 class R extends (r = i.ZP.Store) {
     getSection() {
@@ -149,7 +149,7 @@ class R extends (r = i.ZP.Store) {
         return I;
     }
     shouldRecordNextConnection() {
-        return S;
+        return T;
     }
     getSimulcastDebugOverride(e, t) {
         let n = v(e, t);
@@ -220,7 +220,7 @@ f(R, 'displayName', 'RTCDebugStore'),
             if ((C(), !n.supports(d.AN.CONNECTION_REPLAY) || 0 === t.length)) return;
             let r = n.createReplayConnection(d.Yn.DEFAULT, t);
             null != r &&
-                ((T = r),
+                ((S = r),
                 r.on(a.Sh.Video, (e, t, n, i, a) => {
                     s.Z.dispatch({
                         type: 'RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT',
@@ -237,7 +237,7 @@ f(R, 'displayName', 'RTCDebugStore'),
         },
         RTC_DEBUG_SET_RECORDING_FLAG: function (e) {
             let { value: t } = e;
-            S = t;
+            T = t;
         },
         RTC_DEBUG_SET_SIMULCAST_OVERRIDE: function (e) {
             let { userId: t, context: n, quality: r } = e;

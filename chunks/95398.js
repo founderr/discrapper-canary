@@ -104,7 +104,7 @@ let g = (e) => {
               });
     },
     I = o.createContext(!1);
-class S extends (i = o.PureComponent) {
+class T extends (i = o.PureComponent) {
     renderWithTooltip(e) {
         return (0, s.jsx)(d.Tooltip, {
             position: 'left',
@@ -331,4 +331,4 @@ class S extends (i = o.PureComponent) {
             });
     }
 }
-m(S, 'Types', r), m(S, 'Reasons', f.wk), (t.Z = S);
+m(T, 'Types', r), m(T, 'Reasons', f.wk), (t.Z = T);

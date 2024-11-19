@@ -20,18 +20,18 @@ let v = new Map(),
 function I(e) {
     return b[e];
 }
-function S(e, t) {
+function T(e, t) {
     (b[e] = t), v.set(e, l()());
 }
-function T(e, t, n) {
+function S(e, t, n) {
     if (t !== n && null != t) {
         if (t === m.wB.SUBMITTED) {
             let t = b[e];
-            S(e, t + 1);
+            T(e, t + 1);
         }
         if (n === m.wB.SUBMITTED) {
             let t = b[e];
-            S(e, Math.max(0, t - 1));
+            T(e, Math.max(0, t - 1));
         }
     }
 }
@@ -58,14 +58,14 @@ function w(e) {
         s = _.default.getCurrentUser();
     if (null == s || a.userId === s.id) return !1;
     let o = null === ((n = a.joinRequestId), (t = R.get(n))) || void 0 === t ? void 0 : t.applicationStatus;
-    return T(r, a.applicationStatus, o), x(a), !0;
+    return S(r, a.applicationStatus, o), x(a), !0;
 }
 let M = {},
     P = {},
     k = {},
     U = {},
-    G = 10 * p.Z.Seconds.MINUTE;
-class B extends (r = u.ZP.Store) {
+    B = 10 * p.Z.Seconds.MINUTE;
+class G extends (r = u.ZP.Store) {
     getRequest(e) {
         return U[e];
     }
@@ -82,7 +82,7 @@ class B extends (r = u.ZP.Store) {
     hasFetched(e) {
         if (!v.has(e)) return !1;
         let t = v.get(e);
-        return null != t && l()().diff(t, 'seconds') < G;
+        return null != t && l()().diff(t, 'seconds') < B;
     }
     getSelectedApplicationTab(e) {
         var t;
@@ -102,7 +102,7 @@ class B extends (r = u.ZP.Store) {
     }
 }
 (s = 'GuildJoinRequestStoreV2'),
-    (a = 'displayName') in (i = B)
+    (a = 'displayName') in (i = G)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -110,7 +110,7 @@ class B extends (r = u.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new B(d.Z, {
+    (t.Z = new G(d.Z, {
         GUILD_JOIN_REQUEST_BY_ID_FETCH_SUCCESS: function (e) {
             let { joinRequest: t } = e;
             x(t);
@@ -118,7 +118,7 @@ class B extends (r = u.ZP.Store) {
         GUILD_JOIN_REQUESTS_FETCH_SUCCESS: function (e) {
             let { status: t, requests: n, total: r, guildId: i } = e;
             (y = !1),
-                t === m.wB.SUBMITTED && S(i, r),
+                t === m.wB.SUBMITTED && T(i, r),
                 n.forEach((e) => {
                     x(e);
                 });
@@ -137,7 +137,7 @@ class B extends (r = u.ZP.Store) {
                     applicationStatus: n
                 });
             }),
-                S(t, 0);
+                T(t, 0);
         },
         GUILD_JOIN_REQUEST_CREATE: w,
         GUILD_JOIN_REQUEST_UPDATE: w,
@@ -146,7 +146,7 @@ class B extends (r = u.ZP.Store) {
             let { id: r, guildId: i } = e;
             let a = ((t = r), R.get(t));
             if (null != a) {
-                T(i, null, a.applicationStatus), (n = r), delete U[n], R.delete(n), O.delete(n), D.delete(n);
+                S(i, null, a.applicationStatus), (n = r), delete U[n], R.delete(n), O.delete(n), D.delete(n);
             }
         },
         GUILD_JOIN_REQUESTS_SET_APPLICATION_TAB: function (e) {

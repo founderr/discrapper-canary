@@ -235,9 +235,9 @@ class p {
                     v = null === (o = c.find((e) => 'group' === e.type)) || void 0 === o ? void 0 : o.value,
                     b = [...new Set([...c.filter((e) => !h.has(e.type)).map((e) => E(e.value)), ...f.flatMap((e) => e.filter((e) => !h.has(e.type)).map((e) => E(e.value)))])].sort((e, t) => t.length - e.length),
                     I = 0 === b.length ? RegExp('[\\p{White_Space}]', 'gu') : RegExp(`${b.join('|')}|[\\p{White_Space}]`, 'gu'),
-                    S = [...new Intl.NumberFormat(n.locale, { useGrouping: !1 }).format(9876543210)].reverse(),
-                    T = new Map(S.map((e, t) => [e, t])),
-                    y = RegExp(`[${S.join('')}]`, 'g');
+                    T = [...new Intl.NumberFormat(n.locale, { useGrouping: !1 }).format(9876543210)].reverse(),
+                    S = new Map(T.map((e, t) => [e, t])),
+                    y = RegExp(`[${T.join('')}]`, 'g');
                 return {
                     minusSign: _,
                     plusSign: p,
@@ -245,7 +245,7 @@ class p {
                     group: v,
                     literals: I,
                     numeral: y,
-                    index: (e) => String(T.get(e))
+                    index: (e) => String(S.get(e))
                 };
             })(e, this.formatter, this.options, t)),
             'percent' === this.options.style && ((null !== (n = this.options.minimumFractionDigits) && void 0 !== n ? n : 0) > 18 || (null !== (r = this.options.maximumFractionDigits) && void 0 !== r ? r : 0) > 18) && console.warn('NumberParser cannot handle percentages with greater than 18 decimal places, please reduce the number in your options.');

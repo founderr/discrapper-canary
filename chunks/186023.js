@@ -12,8 +12,8 @@ var r = n(200651),
 t.Z = (e) => {
     let { reportType: t, menu: n, modalProps: _, onSubmit: p, onNavigate: h, emailToken: m, isAuthenticated: g = !0 } = e,
         E = (0, o.Dt)(),
-        { nodes: v, root_node_id: b, success_node_id: I, fail_node_id: S } = n,
-        [T, y] = i.useState(b),
+        { nodes: v, root_node_id: b, success_node_id: I, fail_node_id: T } = n,
+        [S, y] = i.useState(b),
         [A, N] = i.useState(void 0),
         [C, R] = i.useState(void 0),
         [O, D] = i.useState([]),
@@ -35,7 +35,7 @@ t.Z = (e) => {
                     message_id: e,
                     content_type: t.name,
                     report_sub_type: a.report_type,
-                    current_node: v[T].id,
+                    current_node: v[S].id,
                     next_node: a.id
                 });
             }
@@ -59,19 +59,19 @@ t.Z = (e) => {
                     message_id: e,
                     content_type: t.name,
                     report_sub_type: v[a].report_type,
-                    current_node: v[T].id,
+                    current_node: v[S].id,
                     next_node: v[a].id
                 });
             }
             N(null == i ? void 0 : null === (e = i.multiSelect) || void 0 === e ? void 0 : e.state), R(null == i ? void 0 : i.textInput), y(a), D(r), null == h || h('..');
         },
-        G = i.useMemo(() => {
+        B = i.useMemo(() => {
             let e = [],
                 t = [];
             for (let a in v) {
                 var n, r, i;
                 let s = v[a];
-                if (s.id !== I && s.id !== S && s.id !== b) {
+                if (s.id !== I && s.id !== T && s.id !== b) {
                     if (s.key.endsWith('_SUBMIT') || (null === (n = s.button) || void 0 === n ? void 0 : n.type) === 'submit') {
                         t.push(s);
                         continue;
@@ -83,16 +83,16 @@ t.Z = (e) => {
                     }
                 }
             }
-            return [v[b], ...e, ...t, v[I], v[S]];
-        }, [v, b, S, I]);
+            return [v[b], ...e, ...t, v[I], v[T]];
+        }, [v, b, T, I]);
     return (0, r.jsx)(a.ModalRoot, {
         transitionState: _.transitionState,
         'aria-labelledby': E,
         children: (0, r.jsx)(a.Slides, {
             width: 440,
-            activeSlide: T,
+            activeSlide: S,
             centered: !1,
-            children: G.map((e) =>
+            children: B.map((e) =>
                 (0, r.jsx)(
                     a.Slide,
                     {
@@ -110,7 +110,7 @@ t.Z = (e) => {
                                 multiSelect: A,
                                 textInput: C,
                                 successNodeId: I,
-                                failNodeId: S,
+                                failNodeId: T,
                                 onSubmit: k,
                                 reportId: L
                             })

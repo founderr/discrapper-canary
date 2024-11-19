@@ -28,12 +28,12 @@ function I(e) {
     });
 }
 t.Z = i.memo(function (e) {
-    var t, n, a, d, S, T;
+    var t, n, a, d, T, S;
     let y,
         { src: A, volume: N = 1, onVolumeChange: C, onMute: R, waveform: O, durationSecs: D, onVolumeShow: L, onVolumeHide: x, onPlay: w, onPause: M, onError: P } = e,
         k = i.useRef(null),
-        [U, G] = i.useState(0),
-        [B, Z] = i.useState(D),
+        [U, B] = i.useState(0),
+        [G, Z] = i.useState(D),
         [F, V] = i.useState(!1),
         [j, H] = i.useState(!1),
         [Y, W] = i.useState(!1),
@@ -80,16 +80,16 @@ t.Z = i.memo(function (e) {
             W(!0);
         }, []),
         eu = i.useCallback(() => {
-            W(!1), U === B && er();
-        }, [U, B, er]),
+            W(!1), U === G && er();
+        }, [U, G, er]),
         ec = i.useCallback(
             (e) => {
                 let t = k.current;
-                if (null == B || null == t) return;
-                let n = e * B;
-                G(n), (t.currentTime = n), z(!0), clearTimeout($.current), ($.current = void 0);
+                if (null == G || null == t) return;
+                let n = e * G;
+                B(n), (t.currentTime = n), z(!0), clearTimeout($.current), ($.current = void 0);
             },
-            [B]
+            [G]
         );
     i.useEffect(() => {
         !K && j && z(!0);
@@ -109,7 +109,7 @@ t.Z = i.memo(function (e) {
     }, [j]),
         (t = k),
         (n = j),
-        (a = G),
+        (a = B),
         i.useEffect(() => {
             let e;
             return (
@@ -124,10 +124,10 @@ t.Z = i.memo(function (e) {
             );
         }, [t, n, a]),
         (d = A),
-        (S = j),
-        (T = H),
+        (T = j),
+        (S = H),
         i.useEffect(() => {
-            if (!!S)
+            if (!!T)
                 return (
                     _.S.dispatch(g.CkL.VOICE_MESSAGE_PLAYBACK_STARTED, { src: d }),
                     _.S.subscribe(g.CkL.VOICE_MESSAGE_PLAYBACK_STARTED, e),
@@ -137,9 +137,9 @@ t.Z = i.memo(function (e) {
                 );
             function e(e) {
                 let { src: t } = e;
-                if (d !== t) T(!1);
+                if (d !== t) S(!1);
             }
-        }, [d, S, T]);
+        }, [d, T, S]);
     let ef = j ? l.PauseIcon : l.PlayIcon,
         e_ = j ? E.intl.string(E.t.ZcgDJS) : E.intl.string(E.t.RscU7O);
     'Safari' === platform.name
@@ -196,7 +196,7 @@ t.Z = i.memo(function (e) {
                 className: v.waveform,
                 waveform: O,
                 currentTime: U,
-                duration: null != B ? B : 1,
+                duration: null != G ? G : 1,
                 playing: j,
                 played: K,
                 onDrag: ec,
@@ -206,7 +206,7 @@ t.Z = i.memo(function (e) {
             (0, r.jsx)(I, {
                 played: K,
                 currentTime: U,
-                duration: B
+                duration: G
             }),
             (0, r.jsx)(f.Z, {
                 className: v.volumeButton,

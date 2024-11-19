@@ -1,6 +1,6 @@
 n.d(t, {
     e: function () {
-        return B;
+        return G;
     }
 }),
     n(47120),
@@ -24,8 +24,8 @@ var r = n(200651),
     v = n(594174),
     b = n(965645),
     I = n(362061),
-    S = n(70956),
-    T = n(709054),
+    T = n(70956),
+    S = n(709054),
     y = n(51144),
     A = n(443603),
     N = n(981631),
@@ -95,11 +95,11 @@ let x = [
         }
     ],
     M = 1 / 300,
-    P = S.Z.Millis.DAYS_30,
+    P = T.Z.Millis.DAYS_30,
     k = (0, a.animated)(b.Z),
     U = (0, a.animated)(I.Z),
-    G = (0, a.animated)(u.GiftIcon);
-function B(e) {
+    B = (0, a.animated)(u.GiftIcon);
+function G(e) {
     let {
             themeOverride: t,
             hovered: n,
@@ -140,7 +140,7 @@ function B(e) {
         p = a ? f : 0,
         h = (0, l.wj)(null != t ? t : o) ? s.dark[p] : s.light[p];
     return !n && a
-        ? (0, r.jsx)(G, {})
+        ? (0, r.jsx)(B, {})
         : a && c
           ? (0, r.jsx)(U, {
                 isDark: (0, l.wj)(o),
@@ -158,13 +158,13 @@ t.Z = i.memo(function (e) {
         [l, d] = i.useState(!1),
         b = (0, s.e7)([E.Z], () => !(null === E.Z || void 0 === E.Z ? void 0 : E.Z.hasLayers())),
         I = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
-        S = null != I ? T.default.age(I.id) : 0,
-        x = !t && b && S >= P,
+        T = null != I ? S.default.age(I.id) : 0,
+        x = !t && b && T >= P,
         { enabled: w } = g.RO.useExperiment({ location: 'ChannelPremiumGiftButton' }, { autoTrackExposure: x }),
         M = [];
     w && x && M.push(o.z.SEASONAL_GIFTING_COACHMARK_2023);
     let [k, U] = (0, h.US)(M),
-        G = null != k,
+        B = null != k,
         Z = (0, y.Ft)(n),
         F = null != Z;
     if (t) return null;
@@ -192,7 +192,7 @@ t.Z = i.memo(function (e) {
                 d(!1);
             },
             children: [
-                G &&
+                B &&
                     (0, r.jsx)(c.Z, {
                         onComplete: () => d(!1),
                         onDMCheckItOutClick: V,
@@ -208,15 +208,15 @@ t.Z = i.memo(function (e) {
                     },
                     children: (0, r.jsx)('div', {
                         className: D.noPointerEvents,
-                        children: (0, r.jsx)(B, {
+                        children: (0, r.jsx)(G, {
                             hovered: l,
-                            isContentDismissed: !G
+                            isContentDismissed: !B
                         })
                     })
                 })
             ]
         });
-    return G
+    return B
         ? j
         : (0, r.jsx)(u.TooltipContainer, {
               className: D.container,

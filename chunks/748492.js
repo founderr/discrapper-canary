@@ -32,8 +32,8 @@ var i = n(120356),
     v = n(402113),
     b = n(800965),
     I = n(157813),
-    S = n(25827),
-    T = n(131951),
+    T = n(25827),
+    S = n(131951),
     y = n(316253),
     A = n(884338),
     N = n(349619),
@@ -55,12 +55,12 @@ function w(e) {
     var t, n;
     let { channel: i, applicationId: a, onMouseDown: o, onMouseMove: E, onMouseLeave: I, onJumpToChannel: A, idle: O, selectedParticipant: x } = e,
         w = (0, u.bp)() === C.IlC.POPOUT,
-        M = (0, s.e7)([T.Z], () => T.Z.isVideoEnabled()),
-        P = (0, s.e7)([T.Z], () => Object.values(T.Z.getVideoDevices())[0]),
+        M = (0, s.e7)([S.Z], () => S.Z.isVideoEnabled()),
+        P = (0, s.e7)([S.Z], () => Object.values(S.Z.getVideoDevices())[0]),
         k = !1 === (null === (t = null == P ? void 0 : P.disabled) || void 0 === t || t),
         U = (0, c.Z)([a])[0],
-        G = (0, p.Z)(i),
-        B = (e) => {
+        B = (0, p.Z)(i),
+        G = (e) => {
             l.Z.setVideoEnabled(e);
         };
     return (0, r.jsxs)('div', {
@@ -87,14 +87,14 @@ function w(e) {
                         basis: '50%',
                         align: f.Z.Align.CENTER,
                         children: [
-                            (0, r.jsx)(S.C, {
+                            (0, r.jsx)(T.C, {
                                 className: D.leftPipIcon,
                                 enabled: M,
                                 cameraUnavailable: !k,
-                                hasPermission: G,
-                                onChange: B,
+                                hasPermission: B,
+                                onChange: G,
                                 onCameraUnavailable: () => {
-                                    k ? B(!0) : (0, h.Z)();
+                                    k ? G(!0) : (0, h.Z)();
                                 }
                             }),
                             (0, r.jsx)(m.Z, {

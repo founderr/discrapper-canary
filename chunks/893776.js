@@ -25,8 +25,8 @@ var i,
     v = n(573261),
     b = n(572691),
     I = n(981631),
-    S = n(792101);
-let T = new _.Z('AuthenticationActionCreators'),
+    T = n(792101);
+let S = new _.Z('AuthenticationActionCreators'),
     y = null;
 function A(e) {
     let t = {
@@ -35,7 +35,7 @@ function A(e) {
     };
     c.Z.dispatch(t).catch((e) => {
         var t;
-        throw (T.error('Error while dispatching LOGOUT', e), null === (t = window.DiscordErrors) || void 0 === t || t.softCrash(e), e);
+        throw (S.error('Error while dispatching LOGOUT', e), null === (t = window.DiscordErrors) || void 0 === t || t.softCrash(e), e);
     });
 }
 function N() {
@@ -305,9 +305,9 @@ function N() {
             return v.Z.post({
                 url: I.ANM.LOGOUT,
                 body: {
-                    provider: (0, S.xJ)(),
+                    provider: (0, T.xJ)(),
                     token: u.K.get(I.JkL),
-                    voip_provider: S.mv,
+                    voip_provider: T.mv,
                     voip_token: u.K.get(I.scU)
                 },
                 oldFormErrors: !0,
@@ -322,7 +322,7 @@ function N() {
             let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
                 n = g.default.getToken();
             return (
-                T.log('Switching accounts', {
+                S.log('Switching accounts', {
                     wasLoggedIn: null != n,
                     tokenHasChanged: e !== n
                 }),
@@ -332,7 +332,7 @@ function N() {
                 }),
                 this.loginToken(e, !0).then(() => {
                     let t = g.default.getToken();
-                    T.log('Switched accounts finished', { isCorrectToken: e === t });
+                    S.log('Switched accounts finished', { isCorrectToken: e === t });
                 })
             );
         },
@@ -432,10 +432,10 @@ function N() {
                     source: n
                 },
                 i = u.K.get(I.JkL),
-                a = (0, S.xJ)();
+                a = (0, T.xJ)();
             null != a && null != i && ((r.push_provider = a), (r.push_token = i));
             let o = u.K.get(I.scU);
-            null != S.mv && null != o && ((r.push_voip_provider = S.mv), (r.push_voip_token = o));
+            null != T.mv && null != o && ((r.push_voip_provider = T.mv), (r.push_voip_token = o));
             try {
                 let {
                     body: { mfa: e, sms: t, webauthn: n, ticket: i, token: a, backup: o, totp: l }

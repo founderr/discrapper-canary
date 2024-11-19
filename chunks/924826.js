@@ -16,8 +16,8 @@ function u(e, t) {
 }
 function c(e) {
     let { id: t, defaultFocused: n, isEnabled: c, scrollToStart: d, scrollToEnd: f, onNavigatePreviousAtStart: _, onNavigateNextAtEnd: p, setFocus: h, setFocusOnList: m, preserveFocusPosition: g = !0, useVirtualFocus: E = !1, wrap: v = !1, orientation: b = o.hy.VERTICAL, disableClickOnSpace: I = !1 } = e,
-        S = r.useRef(n ? (0, l.jb)(t, n) : null),
-        T = r.useRef(!1),
+        T = r.useRef(n ? (0, l.jb)(t, n) : null),
+        S = r.useRef(!1),
         y = r.useRef(null),
         A = r.useRef(c);
     function N(e) {
@@ -45,7 +45,7 @@ function c(e) {
         ),
         D = r.useCallback(
             (e) => {
-                if (((S.current = e), null == e)) {
+                if (((T.current = e), null == e)) {
                     (0, a.h)(t, null, g);
                     return;
                 }
@@ -94,19 +94,19 @@ function c(e) {
                 if (!e.currentTarget.contains(e.relatedTarget))
                     w(!1),
                         requestAnimationFrame(() => {
-                            let e = S.current;
+                            let e = T.current;
                             null !== e && null == N((0, l.P1)(e)) && O((0, l.P1)(t, l.kn));
                         });
             }
             async function i() {
                 let e = y.current;
                 if (M.current || null == e) return;
-                let n = S.current;
+                let n = T.current;
                 if (g && null !== n) {
                     let t = (0, l.P1)(n),
                         r = N(t);
                     if (null != r) {
-                        if (!0 !== T.current) return R(t, (0, l.x3)(n));
+                        if (!0 !== S.current) return R(t, (0, l.x3)(n));
                         if (await (0, s.JJ)(e, r)) return R(t, (0, l.x3)(n));
                     }
                 }
@@ -114,7 +114,7 @@ function c(e) {
                 null !== r && D(r);
             }
             function a() {
-                T.current = !0;
+                S.current = !0;
             }
         }, [c, t, g, R, m, O, D]);
     let P = r.useMemo(
@@ -122,7 +122,7 @@ function c(e) {
                 wrap: v,
                 get from() {
                     if (!E) return;
-                    let t = S.current;
+                    let t = T.current;
                     if (null != t) {
                         var e;
                         return null !== (e = N((0, l.P1)(t))) && void 0 !== e ? e : void 0;
@@ -142,7 +142,7 @@ function c(e) {
                 t = null == e ? void 0 : e.getAttribute(l.ie);
             null != t ? D(t) : null == e && null != _ && _();
         }, [L, P, _, D]),
-        G = r.useCallback(
+        B = r.useCallback(
             (e) => {
                 if (!A.current || (!E && !M.current)) return;
                 let n = b === o.hy.HORIZONTAL ? o.R8.RIGHT : o.R8.DOWN,
@@ -176,7 +176,7 @@ function c(e) {
                     case o.R8.SPACE:
                     case o.R8.ENTER: {
                         if ((e.key === o.R8.SPACE && I) || e.repeat) return;
-                        let t = S.current;
+                        let t = T.current;
                         if (null != t) {
                             var i;
                             let n = N((0, l.P1)(t)),
@@ -189,10 +189,10 @@ function c(e) {
             },
             [k, U, t, b, f, d, D, E]
         ),
-        B = r.useCallback(
+        G = r.useCallback(
             (e) => {
                 let n = null != e ? (0, l.jb)(t, e) : null;
-                (S.current = n), (0, a.h)(t, e, g);
+                (T.current = n), (0, a.h)(t, e, g);
             },
             [t, g]
         );
@@ -200,12 +200,12 @@ function c(e) {
         () => ({
             id: t,
             containerProps: {
-                onKeyDown: G,
+                onKeyDown: B,
                 ref: y,
                 tabIndex: x && g ? -1 : 0
             },
             orientation: b,
-            setFocus: B,
+            setFocus: G,
             async focusLastVisibleItem() {
                 var e;
                 let n = await (0, s.jo)(null !== (e = y.current) && void 0 !== e ? e : document.body, u(t, y));
@@ -219,10 +219,10 @@ function c(e) {
             focusPreviousItem: U,
             focusNextItem: k,
             focusedItemId() {
-                let e = S.current;
+                let e = T.current;
                 return e ? (0, l.x3)(e) : null;
             }
         }),
-        [t, G, b, x, g, B, U, k, D]
+        [t, B, b, x, g, G, U, k, D]
     );
 }

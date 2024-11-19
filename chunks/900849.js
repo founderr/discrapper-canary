@@ -15,7 +15,7 @@ n.d(t, {
         return m;
     },
     c6: function () {
-        return T;
+        return S;
     },
     m9: function () {
         return I;
@@ -24,7 +24,7 @@ n.d(t, {
         return y;
     },
     rC: function () {
-        return S;
+        return T;
     },
     sq: function () {
         return h;
@@ -126,11 +126,11 @@ function I(e) {
         is_request_retry: i
     });
 }
-function S(e) {
+function T(e) {
     let { categoryId: t } = e;
     _.default.track(p.rMx.GUILD_DISCOVERY_GET_FEATURED_GUILDS_FAILED, { category_id: t });
 }
-function T(e) {
+function S(e) {
     let { loadId: t, searchId: n, query: r, guildResults: i, analyticsContext: a, categoryId: s, isTagSearch: o } = e;
     _.default.track(p.rMx.SEARCH_RESULT_VIEWED, {
         search_type: o ? p.aib.GUILD_DISCOVERY_TAG : p.aib.GUILD_DISCOVERY,

@@ -17,8 +17,8 @@ let E = {},
     v = {},
     b = {},
     I = {},
-    S = !1,
     T = !1,
+    S = !1,
     y = !1;
 class A extends (o = p.ZP.Store) {
     getInvite(e) {
@@ -30,10 +30,10 @@ class A extends (o = p.ZP.Store) {
         return r;
     }
     getFriendInvitesFetching() {
-        return S;
+        return T;
     }
     canRevokeFriendInvite() {
-        return null != r && !T && !y;
+        return null != r && !S && !y;
     }
 }
 (s = 'InstantInviteStore'),
@@ -47,7 +47,7 @@ class A extends (o = p.ZP.Store) {
         : (i[a] = s),
     (t.Z = new A(h.Z, {
         CONNECTION_OPEN: function () {
-            (E = {}), (v = {}), (b = {}), (I = {}), (r = null), (T = !1), (y = !1), (S = !1);
+            (E = {}), (v = {}), (b = {}), (I = {}), (r = null), (S = !1), (y = !1), (T = !1);
         },
         CHANNEL_DELETE: function (e) {
             let { channel: t } = e;
@@ -67,7 +67,7 @@ class A extends (o = p.ZP.Store) {
                     null != I[e.code] && delete I[e.code];
                 }),
                 (r = null !== (t = u()(d()(_()(Object.values(I), 'createdAt')))) && void 0 !== t ? t : null),
-                (T = !1);
+                (S = !1);
         },
         INSTANT_INVITE_CREATE_SUCCESS: function (e) {
             let { channelId: t, invite: n } = e,
@@ -83,13 +83,13 @@ class A extends (o = p.ZP.Store) {
             E[t] = null;
         },
         FRIEND_INVITE_REVOKE_REQUEST: function () {
-            T = !0;
+            S = !0;
         },
         FRIEND_INVITE_CREATE_REQUEST: function () {
             y = !0;
         },
         FRIEND_INVITES_FETCH_REQUEST: function () {
-            S = !0;
+            T = !0;
         },
         FRIEND_INVITES_FETCH_RESPONSE: function (e) {
             var t;
@@ -98,7 +98,7 @@ class A extends (o = p.ZP.Store) {
                     I[e.code] = m.Z.createFromServer(e);
                 }),
                 (r = null !== (t = u()(d()(_()(Object.values(I), 'createdAt')))) && void 0 !== t ? t : null),
-                (S = !1);
+                (T = !1);
         },
         INSTANT_INVITE_CLEAR: function (e) {
             delete E[e.channelId];

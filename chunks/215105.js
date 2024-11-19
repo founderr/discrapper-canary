@@ -23,8 +23,8 @@ var r = n(200651),
     v = n(510659),
     b = n(810097),
     I = n(652853),
-    S = n(228168),
-    T = n(420212),
+    T = n(228168),
+    S = n(420212),
     y = n(388032),
     A = n(678668);
 let N = (0, f.kt)({
@@ -34,14 +34,14 @@ let N = (0, f.kt)({
     C = (e) => {
         let { input: t, username: n, sourceType: r, sourceDetails: i } = e;
         switch (r) {
-            case S.n_.ACTIVITY:
+            case T.n_.ACTIVITY:
                 let a = y.intl.formatToPlainString(y.t.WmvMCg, { username: n }),
                     s = '\n> '.concat(i);
                 return null != i ? ''.concat(b.jd).concat(a, '*').concat(s, '\n').concat(t) : ''.concat(b.jd).concat(a, '*\n').concat(t);
-            case S.n_.AVATAR:
+            case T.n_.AVATAR:
                 let o = y.intl.formatToPlainString(y.t.lpaBsL, { username: n });
                 return ''.concat(b.jd).concat(o, '*\n').concat(t);
-            case S.n_.STATUS:
+            case T.n_.STATUS:
                 let l = y.intl.formatToPlainString(y.t.lFXgFR, { username: n }),
                     u = '\n> '.concat(i);
                 return null != i ? ''.concat(b.jd).concat(l, '*').concat(u, '\n').concat(t) : ''.concat(b.jd).concat(l, '*\n').concat(t);
@@ -51,11 +51,11 @@ let N = (0, f.kt)({
     },
     R = (e) => {
         switch (e) {
-            case S.n_.ACTIVITY:
+            case T.n_.ACTIVITY:
                 return y.t.Qn081N;
-            case S.n_.AVATAR:
+            case T.n_.AVATAR:
                 return y.t.xGNPFB;
-            case S.n_.STATUS:
+            case T.n_.STATUS:
                 return y.t.g9BTCA;
             default:
                 (0, _.vE)(e);
@@ -67,13 +67,13 @@ function O(e) {
         { sendReply: w } = (0, g.Q)(f),
         { resetInteraction: M, setInteractionToast: P } = (0, v.Xo)(),
         { primaryColor: k } = (0, I.z)(),
-        [U, G] = i.useState(''),
-        [B, Z] = i.useState((0, c.JM)(U)),
+        [U, B] = i.useState(''),
+        [G, Z] = i.useState((0, c.JM)(U)),
         F = i.useRef(!1),
         V = i.useRef(null),
         j = i.useCallback(
             (e) => {
-                e.key === T.vn.ESCAPE && (e.stopPropagation(), M());
+                e.key === S.vn.ESCAPE && (e.stopPropagation(), M());
             },
             [M]
         );
@@ -100,17 +100,17 @@ function O(e) {
                     entry: L
                 });
             } catch (e) {}
-            P(S.P.REPLY);
+            P(T.P.REPLY);
         },
         Y = {
-            [A.biteSize]: o === S.y0.BITE_SIZE,
-            [A.panel]: o === S.y0.PANEL,
-            [A.fullSize]: o === S.y0.FULL_SIZE
+            [A.biteSize]: o === T.y0.BITE_SIZE,
+            [A.panel]: o === T.y0.PANEL,
+            [A.fullSize]: o === T.y0.FULL_SIZE
         },
         W = {
-            [A.status]: f === S.n_.STATUS,
-            [A.avatar]: f === S.n_.AVATAR,
-            [A.activity]: f === S.n_.ACTIVITY
+            [A.status]: f === T.n_.STATUS,
+            [A.avatar]: f === T.n_.AVATAR,
+            [A.activity]: f === T.n_.ACTIVITY
         };
     return (0, r.jsx)(l.V, {
         ref: V,
@@ -126,9 +126,9 @@ function O(e) {
                 placeholder: y.intl.formatToPlainString(R(f), { username: p.ZP.getName(n, a, t) }),
                 channel: N,
                 textValue: U,
-                richValue: B,
+                richValue: G,
                 onChange: (e, t, n) => {
-                    if (t !== U) G(t), Z(n);
+                    if (t !== U) B(t), Z(n);
                 },
                 focused: F.current,
                 onFocus: () => {

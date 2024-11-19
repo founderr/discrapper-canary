@@ -3,7 +3,7 @@ n.d(t, {
         return b;
     },
     J7: function () {
-        return T;
+        return S;
     },
     JM: function () {
         return I;
@@ -21,7 +21,7 @@ n.d(t, {
         return m;
     },
     eE: function () {
-        return S;
+        return T;
     },
     ic: function () {
         return h;
@@ -210,7 +210,7 @@ function I(e, t) {
             e
         );
 }
-function S(e, t) {
+function T(e, t) {
     let n = new a.ZP({});
     N(o.BM.MESSAGE, {
         message_id: void 0,
@@ -229,7 +229,7 @@ function S(e, t) {
             e
         );
 }
-async function T(e, t, n) {
+async function S(e, t, n) {
     try {
         await (0, l.ox)(
             {

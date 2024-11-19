@@ -23,7 +23,7 @@ function m(e) {
         { analyticsLocations: E, newestAnalyticsLocation: v } = (0, o.ZP)(s.Z.USER_PROFILE_OVERFLOW_MENU),
         b = (0, i.e7)([_.Z], () => _.Z.getUserProfile(t.id)),
         I = null == b ? void 0 : b.application,
-        S = (0, u.Z)({
+        T = (0, u.Z)({
             user: t,
             location: v,
             color: 'danger',
@@ -38,7 +38,7 @@ function m(e) {
                     analyticsLocations: E
                 })
         }),
-        T = (0, c.Z)({
+        S = (0, c.Z)({
             user: t,
             location: v,
             onIgnore: () =>
@@ -65,7 +65,7 @@ function m(e) {
         }),
         A = [
             [m],
-            [T, S, y],
+            [S, T, y],
             [
                 (0, l.Z)({
                     id: null == I ? void 0 : I.id,

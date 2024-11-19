@@ -19,19 +19,19 @@ var r = n(668781),
     m = n(388032);
 async function g(e) {
     let { channelId: t, applicationId: n, launchId: g, inputApplication: E, analyticsLocations: v, launchingComponentId: b, sectionName: I } = e,
-        S = f.ZP.getEmbeddedActivitiesForChannel(t).find((e) => e.applicationId === n && (null == g || e.launchId === g)),
-        T = E;
-    if (null == T) {
+        T = f.ZP.getEmbeddedActivitiesForChannel(t).find((e) => e.applicationId === n && (null == g || e.launchId === g)),
+        S = E;
+    if (null == S) {
         let e = await i.ZP.fetchApplication(n);
-        T = s.Z.createFromServer(e);
+        S = s.Z.createFromServer(e);
     }
-    if (null == S || null == T) return;
+    if (null == T || null == S) return;
     let y = c.default.getCurrentUser(),
         A = o.Z.getChannel(t);
     async function N() {
-        if (null != S)
+        if (null != T)
             await (0, _.Z)({
-                applicationId: S.applicationId,
+                applicationId: T.applicationId,
                 activityChannelId: t,
                 locationObject: {},
                 analyticsLocations: v,
@@ -82,7 +82,7 @@ async function g(e) {
     })({
         embeddedActivityJoinability: (0, h.ZP)({
             userId: null == y ? void 0 : y.id,
-            application: T,
+            application: S,
             channelId: t,
             currentUser: y,
             isActivitiesEnabledForCurrentPlatform: (0, p.a)(A),

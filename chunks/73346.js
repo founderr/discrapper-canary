@@ -9,10 +9,10 @@ n.d(t, {
         return O;
     },
     ZI: function () {
-        return S;
+        return T;
     },
     _W: function () {
-        return T;
+        return S;
     },
     uF: function () {
         return A;
@@ -44,7 +44,7 @@ var v = n(709054),
     b = n(981631);
 n(388032), l().shim();
 let I = !u.tq && !u.Em && -1 !== (0, m.vu)();
-function S(e, t) {
+function T(e, t) {
     let { analyticsSource: n, analyticsProperties: r, storeListingId: i, slug: a, channelId: s, guildId: o } = t;
     return {
         pathname: null != s && null != o ? b.Z5c.CHANNEL(o, s, e) : b.Z5c.APPLICATION_STORE_LISTING_SKU(e, a),
@@ -55,7 +55,7 @@ function S(e, t) {
         search: null != i ? '?store_listing_id='.concat(i) : ''
     };
 }
-function T(e, t, n, r) {
+function S(e, t, n, r) {
     var i;
     let a;
     let s = window.GLOBAL_ENV.CDN_HOST;

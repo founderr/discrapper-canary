@@ -26,8 +26,8 @@ var r = n(200651),
     v = n(29909),
     b = n(591759),
     I = n(132748),
-    S = n(981631),
-    T = n(388032),
+    T = n(981631),
+    S = n(388032),
     y = n(645452);
 function A(e, t, n) {
     return (
@@ -167,7 +167,7 @@ class M extends i.PureComponent {
 class P extends i.PureComponent {
     componentDidMount() {
         let { resultType: e, data: t } = this.props;
-        e === S.wI2.FAVORITES && ((0, _.t1)(S.wI2.FAVORITES), (0, _.hM)(t, S.wI2.FAVORITES, { limit: null }));
+        e === T.wI2.FAVORITES && ((0, _.t1)(T.wI2.FAVORITES), (0, _.hM)(t, T.wI2.FAVORITES, { limit: null }));
     }
     selectItem(e, t) {
         let { onSelectGIF: n, resultType: r, data: i, resultQuery: a } = this.props;
@@ -217,17 +217,17 @@ class P extends i.PureComponent {
             fade: !0,
             children: (0, r.jsxs)('div', {
                 className: y.emptyHints,
-                children: [this.renderEmptyFavorite(T.intl.string(T.t['3gyw4e']), !0), this.renderEmptyFavorite(T.intl.string(T.t.yThUi4)), this.renderEmptyFavorite(T.intl.string(T.t.MeP0SE)), Array.from({ length: 15 }).map((e, t) => (0, r.jsx)(i.Fragment, { children: this.renderEmptyFavorite() }, t)), this.renderEmptyFavorite(T.intl.string(T.t['5u99XV'])), Array.from({ length: 16 }).map((e, t) => (0, r.jsx)(i.Fragment, { children: this.renderEmptyFavorite() }, t)), this.renderEmptyFavorite(T.intl.string(T.t.o6CLLy))]
+                children: [this.renderEmptyFavorite(S.intl.string(S.t['3gyw4e']), !0), this.renderEmptyFavorite(S.intl.string(S.t.yThUi4)), this.renderEmptyFavorite(S.intl.string(S.t.MeP0SE)), Array.from({ length: 15 }).map((e, t) => (0, r.jsx)(i.Fragment, { children: this.renderEmptyFavorite() }, t)), this.renderEmptyFavorite(S.intl.string(S.t['5u99XV'])), Array.from({ length: 16 }).map((e, t) => (0, r.jsx)(i.Fragment, { children: this.renderEmptyFavorite() }, t)), this.renderEmptyFavorite(S.intl.string(S.t.o6CLLy))]
             })
         });
     }
     render() {
         let { data: e, resultQuery: t, query: n, resultType: i } = this.props;
-        return 0 === e.length && t === n && i !== S.wI2.TRENDING_GIFS
-            ? i === S.wI2.FAVORITES
+        return 0 === e.length && t === n && i !== T.wI2.TRENDING_GIFS
+            ? i === T.wI2.FAVORITES
                 ? this.renderEmptyFavorites()
                 : (0, r.jsx)(h.Z, {
-                      message: T.intl.string(T.t['5dX4UF']),
+                      message: S.intl.string(S.t['5dX4UF']),
                       className: y.noResults
                   })
             : (0, r.jsx)(
@@ -330,7 +330,7 @@ class P extends i.PureComponent {
                                             children: [
                                                 (0, r.jsx)('div', {
                                                     className: y.endText,
-                                                    children: T.intl.string(T.t['3JGJo6'])
+                                                    children: S.intl.string(S.t['3JGJo6'])
                                                 }),
                                                 (0, r.jsx)('div', {
                                                     className: y.searchSuggestions,
@@ -361,7 +361,7 @@ class P extends i.PureComponent {
             }),
             A(this, 'renderContent', (e, t, n) => {
                 let { className: i, data: a, resultQuery: o, query: l, resultType: u } = this.props;
-                return 0 === a.length && (o !== l || u === S.wI2.TRENDING_GIFS)
+                return 0 === a.length && (o !== l || u === T.wI2.TRENDING_GIFS)
                     ? (0, r.jsx)(
                           f.MasonryList,
                           {

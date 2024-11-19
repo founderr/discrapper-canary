@@ -110,7 +110,7 @@ async function I(e) {
     })(e);
     return null == t ? void 0 : t.assets;
 }
-async function S(e, t) {
+async function T(e, t) {
     let n = t.filter((e) => null != e && !Object.prototype.hasOwnProperty.call(g, e) && null == g[e]);
     if (0 === n.length) return;
     let { body: r } = await a.tn.post({
@@ -121,7 +121,7 @@ async function S(e, t) {
     });
     for (let { url: e, external_asset_path: t } of r) g[e] = t;
 }
-function T(e, t) {
+function S(e, t) {
     let n = 0;
     if (e.filter((e) => (null == e ? void 0 : e.startsWith('http:')) || (null == e ? void 0 : e.startsWith('https:'))).length > 0)
         for (let r = 0; r < e.length; r++) {
@@ -157,7 +157,7 @@ async function A(e, t) {
     });
     let r = [],
         i = t.filter((e) => (null == e ? void 0 : e.startsWith('http:')) || (null == e ? void 0 : e.startsWith('https:')));
-    if ((i.length > 0 && (await S(e, i)), T(t, r)))
+    if ((i.length > 0 && (await T(e, i)), S(t, r)))
         return (
             s.Z.dispatch({
                 type: 'APPLICATION_ASSETS_FETCH_SUCCESS',
@@ -182,7 +182,7 @@ async function A(e, t) {
 function N(e, t) {
     var n;
     let r = [];
-    if (T(t, r)) return r;
+    if (S(t, r)) return r;
     let i = null === (n = o.Z.getApplicationAssets(e)) || void 0 === n ? void 0 : n.assets;
     return null == i ? r : (y(t, r, i), r);
 }

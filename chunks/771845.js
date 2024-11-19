@@ -30,7 +30,7 @@ function b(e, t, n) {
     );
 }
 let I = new l.g8();
-function S(e) {
+function T(e) {
     switch (e.type) {
         case l.eD.FOLDER:
             return {
@@ -49,7 +49,7 @@ function S(e) {
             throw Error('[SortedGuildStore] Unexpected guilds tree node type.');
     }
 }
-function T(e, t) {
+function S(e, t) {
     let n = I;
     if (((I = new l.g8()), 0 === e.length && t.length > 0)) for (let e of t) I.addNode((0, l.Mg)(e));
     else
@@ -75,12 +75,12 @@ function T(e, t) {
 }
 function y() {
     var e, t, n;
-    return T(null !== (t = c.Z.getGuildFolders()) && void 0 !== t ? t : [], null !== (n = null === (e = c.Z.settings.guildFolders) || void 0 === e ? void 0 : e.guildPositions) && void 0 !== n ? n : []);
+    return S(null !== (t = c.Z.getGuildFolders()) && void 0 !== t ? t : [], null !== (n = null === (e = c.Z.settings.guildFolders) || void 0 === e ? void 0 : e.guildPositions) && void 0 !== n ? n : []);
 }
 function A() {
     var e, t;
     let n = c.Z.getGuildFolders();
-    return !(null != r && a()(r, n)) && T(null != (r = n) ? r : [], null !== (t = null === (e = c.Z.settings.guildFolders) || void 0 === e ? void 0 : e.guildPositions) && void 0 !== t ? t : []);
+    return !(null != r && a()(r, n)) && S(null != (r = n) ? r : [], null !== (t = null === (e = c.Z.settings.guildFolders) || void 0 === e ? void 0 : e.guildPositions) && void 0 !== t ? t : []);
 }
 function N(e) {
     let { sourceId: t, targetId: n, moveToBelow: r, combine: i } = e,
@@ -172,7 +172,7 @@ function M(e, t) {
     o()(n.id === e.id, '[SORTED GUILDS] setNodeExpanded: Replacement folder node must have same id.'), (n.expanded = t), I.replaceNode(e, n);
 }
 let P = (0, d.oH)((e, t) => e.sortedGuildNodes().map((e) => e.id)),
-    k = (0, d.oH)((e, t) => e.getRoots().map(S)),
+    k = (0, d.oH)((e, t) => e.getRoots().map(T)),
     U = (0, d.oH)((e, t) => {
         let n = [];
         return (
@@ -187,8 +187,8 @@ let P = (0, d.oH)((e, t) => e.sortedGuildNodes().map((e) => e.id)),
             n
         );
     }),
-    G = (0, d.oH)((e, t) => e.root.children.map(S));
-class B extends g.Z {
+    B = (0, d.oH)((e, t) => e.root.children.map(T));
+class G extends g.Z {
     initialize() {
         this.waitFor(m.Z, E.ZP, c.Z, p.Z, u.Z, _.Z);
     }
@@ -208,14 +208,14 @@ class B extends g.Z {
         return U(I, I.version);
     }
     getCompatibleGuildFolders() {
-        return G(I, I.version);
+        return B(I, I.version);
     }
     getFastListGuildFolders() {
         return I.getRoots();
     }
     takeSnapshot() {
         return {
-            version: B.LATEST_SNAPSHOT_VERSION,
+            version: G.LATEST_SNAPSHOT_VERSION,
             data: { tree: I.getSnapshot() }
         };
     }
@@ -237,10 +237,10 @@ class B extends g.Z {
             GUILD_FOLDER_COLLAPSE: w
         }),
             b(this, 'loadCache', () => {
-                let e = this.readSnapshot(B.LATEST_SNAPSHOT_VERSION),
+                let e = this.readSnapshot(G.LATEST_SNAPSHOT_VERSION),
                     t = null == e ? void 0 : e.tree;
                 if (null != t) for (let e of ((I = new l.g8()).loadSnapshot(t), I.allNodes())) e.type === l.eD.FOLDER && (e.expanded = _.Z.isFolderExpanded(e.id));
             });
     }
 }
-b(B, 'displayName', 'SortedGuildStore'), b(B, 'LATEST_SNAPSHOT_VERSION', 2), (t.ZP = new B());
+b(G, 'displayName', 'SortedGuildStore'), b(G, 'LATEST_SNAPSHOT_VERSION', 2), (t.ZP = new G());

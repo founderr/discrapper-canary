@@ -36,7 +36,7 @@ n.d(t, {
         return _;
     },
     xj: function () {
-        return T;
+        return S;
     }
 }),
     n(411104),
@@ -256,14 +256,14 @@ function I(e) {
                           }
             };
         })
-        .sort(S)[0].hex;
+        .sort(T)[0].hex;
 }
-function S(e, t) {
+function T(e, t) {
     let n = e.hsv,
         r = t.hsv;
     return r.s + r.v - (n.s + n.v);
 }
-function T(e) {
+function S(e) {
     var t;
     let { colorRGB: n, saturationFactor: r = 1 } = e;
     if (null == n) return n;

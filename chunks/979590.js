@@ -254,7 +254,7 @@
         },
         toHex8: function (e) {
             return (function (e, t, n, r, i) {
-                var a = [k(l(e).toString(16)), k(l(t).toString(16)), k(l(n).toString(16)), k(G(r))];
+                var a = [k(l(e).toString(16)), k(l(t).toString(16)), k(l(n).toString(16)), k(B(r))];
                 return i && a[0].charAt(0) == a[0].charAt(1) && a[1].charAt(0) == a[1].charAt(1) && a[2].charAt(0) == a[2].charAt(1) && a[3].charAt(0) == a[3].charAt(1) ? a[0].charAt(0) + a[1].charAt(0) + a[2].charAt(0) + a[3].charAt(0) : a.join('');
             })(this._r, this._g, this._b, this._a, e);
         },
@@ -318,7 +318,7 @@
             return this._applyModification(I, arguments);
         },
         darken: function () {
-            return this._applyModification(S, arguments);
+            return this._applyModification(T, arguments);
         },
         desaturate: function () {
             return this._applyModification(g, arguments);
@@ -330,7 +330,7 @@
             return this._applyModification(v, arguments);
         },
         spin: function () {
-            return this._applyModification(T, arguments);
+            return this._applyModification(S, arguments);
         },
         _applyCombination: function (e, t) {
             return e.apply(null, [this].concat([].slice.call(t)));
@@ -422,7 +422,7 @@
         return r && i[0].charAt(0) == i[0].charAt(1) && i[1].charAt(0) == i[1].charAt(1) && i[2].charAt(0) == i[2].charAt(1) ? i[0].charAt(0) + i[1].charAt(0) + i[2].charAt(0) : i.join('');
     }
     function m(e, t, n, r) {
-        return [k(G(r)), k(l(e).toString(16)), k(l(t).toString(16)), k(l(n).toString(16))].join('');
+        return [k(B(r)), k(l(e).toString(16)), k(l(t).toString(16)), k(l(n).toString(16))].join('');
     }
     function g(e, t) {
         t = 0 === t ? 0 : t || 10;
@@ -447,12 +447,12 @@
         var n = f(e).toRgb();
         return (n.r = c(0, u(255, n.r - l(-((t / 100) * 255))))), (n.g = c(0, u(255, n.g - l(-((t / 100) * 255))))), (n.b = c(0, u(255, n.b - l(-((t / 100) * 255))))), f(n);
     }
-    function S(e, t) {
+    function T(e, t) {
         t = 0 === t ? 0 : t || 10;
         var n = f(e).toHsl();
         return (n.l -= t / 100), (n.l = M(n.l)), f(n);
     }
-    function T(e, t) {
+    function S(e, t) {
         var n = f(e).toHsl(),
             r = (n.h + t) % 360;
         return (n.h = r < 0 ? 360 + r : r), f(n);
@@ -798,10 +798,10 @@
     function U(e) {
         return e <= 1 && (e = 100 * e + '%'), e;
     }
-    function G(e) {
+    function B(e) {
         return t.round(255 * parseFloat(e)).toString(16);
     }
-    function B(e) {
+    function G(e) {
         return P(e) / 255;
     }
     var Z =

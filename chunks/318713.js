@@ -39,10 +39,10 @@ t.Z = function (e) {
     let { children: t, className: n, compact: i = !1, timestamp: _, isVisibleOnlyOnHover: p = !1, cozyAlt: h = !1, isInline: m = !0, id: g, isEdited: E = !1, application: v } = e,
         b = (0, o.Hg)(_),
         I = i ? (0, o.vc)(_, 'LT') : (0, o.Y4)(_),
-        S = i ? (0, u.Z)(I) : null,
-        T = E ? c.intl.formatToPlainString(c.t.CDzOFR, { timeFormatted: b }) : b;
+        T = i ? (0, u.Z)(I) : null,
+        S = E ? c.intl.formatToPlainString(c.t.CDzOFR, { timeFormatted: b }) : b;
     return (0, r.jsx)('span', {
-        className: a()(n, S, {
+        className: a()(n, T, {
             [d.timestamp]: !0,
             [d.timestampVisibleOnHover]: p,
             [d.timestampInline]: m,
@@ -52,7 +52,7 @@ t.Z = function (e) {
             null == v
                 ? (0, r.jsx)(s.Tooltip, {
                       text: (0, o.vc)(_, 'LLLL'),
-                      'aria-label': T,
+                      'aria-label': S,
                       tooltipClassName: d.timestampTooltip,
                       delay: 750,
                       children: (e) =>

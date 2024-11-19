@@ -23,8 +23,8 @@ var r = n(200651),
     v = n(441319),
     b = n(981631),
     I = n(526761),
-    S = n(388032),
-    T = n(709554);
+    T = n(388032),
+    S = n(709554);
 function y(e) {
     let { className: t, disabled: a, isEditor: y, renderCTAButtons: A } = e,
         [N, C] = (0, o.Wu)([m.Z], () => [m.Z.getCurrentDesktopIcon(), m.Z.isUpsellPreview]),
@@ -67,41 +67,41 @@ function y(e) {
         ref: O,
         children: (0, r.jsx)('div', {
             ...L,
-            className: T.__invalid_container,
+            className: S.__invalid_container,
             children: (0, r.jsxs)('div', {
                 className: t,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: T.header,
+                        className: S.header,
                         children: [
                             (0, r.jsxs)('div', {
-                                className: T.headings,
+                                className: S.headings,
                                 children: [
                                     !y &&
                                         (0, r.jsxs)('div', {
-                                            className: T.title,
+                                            className: S.title,
                                             children: [
                                                 (0, r.jsx)(l.Heading, {
                                                     variant: 'text-md/medium',
-                                                    children: S.intl.string(S.t.NThqT0)
+                                                    children: T.intl.string(T.t.NThqT0)
                                                 }),
-                                                !R && (0, r.jsx)(p.Z, { className: T.premiumIcon })
+                                                !R && (0, r.jsx)(p.Z, { className: S.premiumIcon })
                                             ]
                                         }),
                                     R
                                         ? y
                                             ? null
                                             : (0, r.jsxs)('div', {
-                                                  className: T.description,
+                                                  className: S.description,
                                                   children: [
                                                       (0, r.jsx)(l.NitroWheelIcon, {
                                                           size: 'md',
                                                           color: 'currentColor',
-                                                          className: T.nitroWheel
+                                                          className: S.nitroWheel
                                                       }),
                                                       (0, r.jsx)(l.Heading, {
                                                           variant: 'text-sm/normal',
-                                                          children: S.intl.format(S.t.x2dQxM, {
+                                                          children: T.intl.format(T.t.x2dQxM, {
                                                               onClick: () => {
                                                                   (0, f.$)();
                                                               }
@@ -111,7 +111,7 @@ function y(e) {
                                               })
                                         : (0, r.jsx)(l.Heading, {
                                               variant: 'text-sm/normal',
-                                              children: S.intl.string(S.t.IgENJi)
+                                              children: T.intl.string(T.t.IgENJi)
                                           })
                                 ]
                             }),
@@ -119,7 +119,7 @@ function y(e) {
                         ]
                     }),
                     (0, r.jsx)('div', {
-                        className: s()(T.presets, { [T.presetsJustified]: R && y }),
+                        className: s()(S.presets, { [S.presetsJustified]: R && y }),
                         children: (0, v.wu)()
                             .filter((e) => {
                                 let { isHidden: t } = e;

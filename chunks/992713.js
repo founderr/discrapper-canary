@@ -115,16 +115,16 @@ function I(e) {
                 var t, n, r;
                 let i = null === (t = _.Z.getGuild(e)) || void 0 === t ? void 0 : t.name;
                 m.fileOnly('requesting deleted guild entities (id: '.concat(e, ', name: ').concat(i, ')'));
-                let a = S(Object.keys(f.Z.getMutableBasicGuildChannelsForGuild(e))),
-                    s = S(Object.keys(_.Z.getRoles(e))),
-                    o = S(c.ZP.getGuildEmoji(e).map((e) => e.id)),
-                    l = S(null !== (r = null === (n = d.Z.getStickersByGuildId(e)) || void 0 === n ? void 0 : n.map((e) => e.id)) && void 0 !== r ? r : []);
+                let a = T(Object.keys(f.Z.getMutableBasicGuildChannelsForGuild(e))),
+                    s = T(Object.keys(_.Z.getRoles(e))),
+                    o = T(c.ZP.getGuildEmoji(e).map((e) => e.id)),
+                    l = T(null !== (r = null === (n = d.Z.getStickersByGuildId(e)) || void 0 === n ? void 0 : n.map((e) => e.id)) && void 0 !== r ? r : []);
                 h.Z.getSocket().getDeletedEntityIdsNotMatchingHash(e, a, s, o, l);
             })(e),
         Math.ceil(2000 * Math.random())
     );
 }
-function S(e) {
+function T(e) {
     return i().v3(e.sort().join(',')).toString();
 }
 t.Z = new g();

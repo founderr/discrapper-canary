@@ -18,8 +18,8 @@ var r = n(200651),
     v = n(695346),
     b = n(594174),
     I = n(626135),
-    S = n(624138),
-    T = n(45521),
+    T = n(624138),
+    S = n(45521),
     y = n(285651),
     A = n(217590),
     N = n(453070),
@@ -34,29 +34,29 @@ var r = n(200651),
     P = n(15350),
     k = n(611480),
     U = n(981631),
-    G = n(319796);
-let B = (0, S.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
-    Z = (0, S.Mg)(u.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
-    F = (0, S.Mg)(u.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
-    V = (0, S.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN),
-    j = (0, S.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN_SMALL),
-    H = (0, S.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS),
-    Y = (0, S.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL),
-    W = (0, S.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_PADDING),
+    B = n(319796);
+let G = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
+    Z = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
+    F = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
+    V = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN),
+    j = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN_SMALL),
+    H = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS),
+    Y = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL),
+    W = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_PADDING),
     K = H + 2 * W,
     z = Y + 2 * W,
     q = s()(A.Iw, 200),
     Q = s()(A.m1, 200),
     X = i.forwardRef(function (e, t) {
         var a;
-        let { containerWidth: s, channel: u, onSelectSticker: S, closePopout: H } = e,
+        let { containerWidth: s, channel: u, onSelectSticker: T, closePopout: H } = e,
             { location: Y } = (0, d.O)(),
             { analyticsLocations: W } = (0, _.ZP)(f.Z.STICKER_PICKER),
             X = (null === (a = (0, E.N)()) || void 0 === a ? void 0 : a.subscription_trial) != null,
             J = i.useRef(null),
             $ = i.useRef(null),
             ee = i.useRef(null),
-            et = (0, T.Q)((e) => e.showPremiumUpsell),
+            et = (0, S.Q)((e) => e.showPremiumUpsell),
             [en, er] = (0, h.Iu)((e) => [e.searchQuery, e.isSearchSuggestion], o.X),
             ei = i.useRef('');
         i.useImperativeHandle(t, () => ({ onPickerOpen: eL }));
@@ -80,16 +80,16 @@ let B = (0, S.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             eg = eh.length + em.length,
             eE = i.useCallback(
                 (e) => {
-                    '' === en ? (0, A.On)(e) : (0, A.Yk)(e, en, eg), S(e.sticker, R.V0.STICKER_PICKER);
+                    '' === en ? (0, A.On)(e) : (0, A.Yk)(e, en, eg), T(e.sticker, R.V0.STICKER_PICKER);
                 },
-                [S, en, eg]
+                [T, en, eg]
             ),
-            ev = null != eo && eo > B,
+            ev = null != eo && eo > G,
             {
                 rowCount: eb,
                 rowCountBySection: eI,
-                stickersGrid: eS,
-                gutterWidth: eT,
+                stickersGrid: eT,
+                gutterWidth: eS,
                 columnCounts: ey
             } = (0, N.el)({
                 filteredStickers: ed,
@@ -133,7 +133,7 @@ let B = (0, S.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             } = (0, O.t)({
                 columnCounts: ey,
                 stickersListRef: $,
-                stickersGrid: eS,
+                stickersGrid: eT,
                 onGridItemSelect: eA,
                 store: p.ZN,
                 setInspectedStickerPosition: p.ZN.setInspectedExpressionPosition,
@@ -178,7 +178,7 @@ let B = (0, S.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             children: [
                 !(X && es) &&
                     (0, r.jsx)('div', {
-                        className: G.header,
+                        className: B.header,
                         children: (0, r.jsx)(w.Z, {
                             ref: ee,
                             onKeyDown: eO,
@@ -188,14 +188,14 @@ let B = (0, S.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                     }),
                 es
                     ? (0, r.jsx)(L.Z, {
-                          className: G.emptyState,
+                          className: B.emptyState,
                           onClose: H
                       })
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)('div', {
                                   ref: J,
-                                  className: G.listWrapper,
+                                  className: B.listWrapper,
                                   id: k.Vr,
                                   ...eR,
                                   children:
@@ -207,13 +207,13 @@ let B = (0, S.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                                 getStickerItemProps: eN,
                                                 getStickerRowProps: eC,
                                                 gridWidth: eo,
-                                                gutterWidth: eT,
+                                                gutterWidth: eS,
                                                 isUsingKeyboardNavigation: eD,
                                                 onSelectSticker: eE,
                                                 rowCount: eb,
                                                 rowCountBySection: eI,
                                                 stickersCategories: ea,
-                                                stickersGrid: eS,
+                                                stickersGrid: eT,
                                                 channel: u
                                             })
                                           : null
@@ -232,12 +232,12 @@ t.Z = i.forwardRef(
     (e, t) => (
         (0, N.fP)(),
         (0, r.jsx)('div', {
-            className: G.wrapper,
+            className: B.wrapper,
             id: k.nZ,
             'aria-labelledby': k.ED,
             role: 'tabpanel',
             children: e.isLoading
-                ? (0, r.jsx)(c.Spinner, { className: G.loadingIndicator })
+                ? (0, r.jsx)(c.Spinner, { className: B.loadingIndicator })
                 : (0, r.jsx)(X, {
                       ...e,
                       ref: t

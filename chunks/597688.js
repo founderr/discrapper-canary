@@ -16,31 +16,31 @@ let E = new Map(),
     v = new Map(),
     b = [],
     I = E,
-    S = v,
-    T = b,
+    T = v,
+    S = b,
     y = null,
     A = !1,
     N = new Set();
 let C = {},
     R = (e, t) => {
         if (0 === e.length) {
-            T = b;
+            S = b;
             return;
         }
         switch (y) {
             case p.u.POPULAR:
-                T = g.HU;
+                S = g.HU;
                 break;
             case p.u.RECENT:
-                T = (0, m.x0)(e, t);
+                S = (0, m.x0)(e, t);
                 break;
             case p.u.NONE:
             default:
-                T = b;
+                S = b;
         }
     },
     O = () => {
-        (I = E), (S = v), (T = b), (i = void 0), (A = !1), (N = new Set()), (r = void 0), (a = void 0), (C = {});
+        (I = E), (T = v), (S = b), (i = void 0), (A = !1), (N = new Set()), (r = void 0), (a = void 0), (C = {});
     },
     D = () => {
         if (!_.Z.hasLoadedExperiments) return;
@@ -73,16 +73,16 @@ class L extends (s = d.ZP.Store) {
         return I;
     }
     get products() {
-        return S;
+        return T;
     }
     get recommendedGiftSkuIds() {
-        return T;
+        return S;
     }
     getCategory(e) {
         return null != e ? I.get(e) : void 0;
     }
     getProduct(e) {
-        return null != e ? S.get(e) : void 0;
+        return null != e ? T.get(e) : void 0;
     }
     getCategoryForProduct(e) {
         let t = this.getProduct(e);
@@ -103,11 +103,11 @@ class L extends (s = d.ZP.Store) {
             (A = !0), (r = void 0), (a = void 0), (C = e.options);
         },
         COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: (e) => {
-            0 === e.categories.length ? ((I = E), (S = v)) : !(0, c.isEqual)([...I.values()], e.categories) && ((I = new Map(e.categories.map((e) => [e.skuId, e]))), (S = new Map((0, m.Cs)(I).map((e) => [e.skuId, e])))), R(e.categories, S), (i = Date.now()), (A = !1), (r = void 0), (a = void 0);
+            0 === e.categories.length ? ((I = E), (T = v)) : !(0, c.isEqual)([...I.values()], e.categories) && ((I = new Map(e.categories.map((e) => [e.skuId, e]))), (T = new Map((0, m.Cs)(I).map((e) => [e.skuId, e])))), R(e.categories, T), (i = Date.now()), (A = !1), (r = void 0), (a = void 0);
         },
         COLLECTIBLES_CATEGORIES_FETCH_FAILURE: (e) => {
             let { error: t } = e;
-            (I = E), (S = v), (T = b), (A = !1), (N = new Set()), (r = t), (a = Date.now());
+            (I = E), (T = v), (S = b), (A = !1), (N = new Set()), (r = t), (a = Date.now());
         },
         COLLECTIBLES_PRODUCT_FETCH: (e) => {
             let { skuId: t } = e;
@@ -115,7 +115,7 @@ class L extends (s = d.ZP.Store) {
         },
         COLLECTIBLES_PRODUCT_FETCH_SUCCESS: (e) => {
             let { skuId: t, product: n } = e;
-            S.set(t, n), (N = new Set(N)).delete(t), (r = void 0), (a = void 0);
+            T.set(t, n), (N = new Set(N)).delete(t), (r = void 0), (a = void 0);
         },
         COLLECTIBLES_PRODUCT_FETCH_FAILURE: (e) => {
             let { skuId: t, error: n } = e;

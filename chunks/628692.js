@@ -23,19 +23,19 @@ var r = n(200651),
     v = n(409673),
     b = n(592125),
     I = n(388032),
-    S = n(979093);
-function T(e) {
+    T = n(979093);
+function S(e) {
     let { playSound: t } = e;
     return (0, r.jsxs)(l.Clickable, {
         title: 'Risky Click',
         tag: 'span',
         onClick: t,
-        className: S.inlineContainer,
+        className: T.inlineContainer,
         children: [
             (0, r.jsx)(l.VoiceNormalIcon, {
                 size: 'md',
                 color: 'currentColor',
-                className: S.unknownSound
+                className: T.unknownSound
             }),
             (0, r.jsx)('span', { children: 'Unknown' })
         ]
@@ -44,7 +44,7 @@ function T(e) {
 function y(e) {
     let { soundId: t } = e,
         n = (0, o.e7)([h.Z], () => h.Z.getSoundById(t));
-    return (0, d.V)({ location: 'SoundboardMentionInline' }) ? (null == n ? (0, r.jsx)(T, {}) : (0, r.jsx)(A, { sound: n })) : null;
+    return (0, d.V)({ location: 'SoundboardMentionInline' }) ? (null == n ? (0, r.jsx)(S, {}) : (0, r.jsx)(A, { sound: n })) : null;
 }
 function A(e) {
     let { sound: t, playSound: n, isPlaying: i } = e,
@@ -58,13 +58,13 @@ function A(e) {
               'aria-label': o,
               tag: 'span',
               onClick: n,
-              className: s()(S.inlineContainer, S.inlineButton, { [S.playing]: !0 === i }),
+              className: s()(T.inlineContainer, T.inlineButton, { [T.playing]: !0 === i }),
               children: [
                   a &&
                       (0, r.jsx)(u.Z, {
                           emojiId: null == t ? void 0 : t.emojiId,
                           emojiName: null == t ? void 0 : t.emojiName,
-                          className: S.soundmojiEmoji
+                          className: T.soundmojiEmoji
                       }),
                   (0, r.jsx)('span', { children: ' '.concat(null == t ? void 0 : t.name, ' ') })
               ]
@@ -89,13 +89,13 @@ t.ZP = function (e) {
         }, [a, I, u, C]);
     return R
         ? null == I
-            ? (0, r.jsx)(T, { playSound: O })
+            ? (0, r.jsx)(S, { playSound: O })
             : s
               ? (0, r.jsx)(
                     v.ZP,
                     {
-                        containerClassName: S.jumboContainer,
-                        className: S.jumboButton,
+                        containerClassName: T.jumboContainer,
+                        className: T.jumboButton,
                         sound: I,
                         channel: y,
                         refreshEnabled: !0,
@@ -104,8 +104,8 @@ t.ZP = function (e) {
                         isAnimated: !1,
                         isSoundmoji: !0,
                         buttonOverlay: m.Pb.SOUNDMOJI,
-                        tooltipClassName: S.tooltip,
-                        tooltipContentClassName: S.tooltipContainer,
+                        tooltipClassName: T.tooltip,
+                        tooltipContentClassName: T.tooltipContainer,
                         tooltipOverride: (0, r.jsx)(_.Dp, { sound: I })
                     },
                     ''.concat(I.soundId)
@@ -113,8 +113,8 @@ t.ZP = function (e) {
               : (0, r.jsx)(l.Tooltip, {
                     'aria-label': I.name,
                     text: (0, r.jsx)(_.Dp, { sound: I }),
-                    tooltipClassName: S.tooltip,
-                    tooltipContentClassName: S.tooltipContainer,
+                    tooltipClassName: T.tooltip,
+                    tooltipContentClassName: T.tooltipContainer,
                     position: 'top',
                     delay: 500,
                     children: (e) =>

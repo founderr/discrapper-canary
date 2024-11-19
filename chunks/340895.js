@@ -21,19 +21,19 @@ let E = {
     v = new Set(),
     b = [],
     I = new Map(),
-    S = new Set(),
-    T = !1;
+    T = new Set(),
+    S = !1;
 function y(e) {
     if (null == e || null == I.get(e)) return !1;
-    I.delete(e), (S = new Set(S)).delete(e);
+    I.delete(e), (T = new Set(T)).delete(e);
 }
 function A(e) {
     let { channelId: t, ringing: n } = e,
         i = n.includes(_.default.getId());
-    if (!S.has(t) && i) {
+    if (!T.has(t) && i) {
         let e = p.Z.getChannel(t);
         if (null == e) return !1;
-        let n = 10 * S.size,
+        let n = 10 * T.size,
             { x: i, y: a } = (function () {
                 let e = m.Z.windowSize();
                 return null != r && r.x + E.width < e.width && r.y + E.height < e.height
@@ -49,30 +49,30 @@ function A(e) {
                 x: i + n,
                 y: a + n
             }),
-            (S = new Set(S)).add(t),
+            (T = new Set(T)).add(t),
             void 0
         );
     }
-    return !!S.has(t) && !i && y(t);
+    return !!T.has(t) && !i && y(t);
 }
 function N() {
-    T = h.Z.getStatus() === g.Skl.DND || d.QZ.getSetting();
+    S = h.Z.getStatus() === g.Skl.DND || d.QZ.getSetting();
 }
 class C extends (i = l.ZP.Store) {
     initialize() {
         this.waitFor(p.Z, h.Z), this.syncWith([h.Z], N), this.syncWith([f.Z], N);
     }
     getIncomingCalls() {
-        return T ? b : Array.from(I.values());
+        return S ? b : Array.from(I.values());
     }
     getIncomingCallChannelIds() {
-        return T ? v : S;
+        return S ? v : T;
     }
     getFirstIncomingCallId() {
-        return T ? null : S.values().next().value;
+        return S ? null : T.values().next().value;
     }
     hasIncomingCalls() {
-        return !T && S.size > 0;
+        return !S && T.size > 0;
     }
 }
 (o = 'IncomingCallStore'),

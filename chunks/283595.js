@@ -21,8 +21,8 @@ function E() {
 let v = !1,
     b = {},
     I = {},
-    S = new Set(),
-    T = {},
+    T = new Set(),
+    S = {},
     y = {},
     A = !1;
 function N() {
@@ -34,7 +34,7 @@ function N() {
 function C() {
     c.K.set(g, {
         ...E(),
-        activeLibraryApplicationBranchIds: T
+        activeLibraryApplicationBranchIds: S
     });
 }
 function R(e) {
@@ -47,7 +47,7 @@ function O(e) {
     let { libraryApplication: t } = e,
         n = f.Z.createFromServer(t),
         r = (0, p.Tu)(n.id, n.branchId);
-    (b[r] = n), S.delete(r);
+    (b[r] = n), T.delete(r);
 }
 function D(e, t) {
     var n;
@@ -64,7 +64,7 @@ class x extends (r = u.ZP.Store) {
     initialize() {
         this.waitFor(h.default);
         let e = c.K.get(g);
-        null != e && (null == e.activeLaunchOptionIds ? N() : (y = e.activeLaunchOptionIds), null == e.activeLibraryApplicationBranchIds ? C() : (T = e.activeLibraryApplicationBranchIds));
+        null != e && (null == e.activeLaunchOptionIds ? N() : (y = e.activeLaunchOptionIds), null == e.activeLibraryApplicationBranchIds ? C() : (S = e.activeLibraryApplicationBranchIds));
     }
     get libraryApplications() {
         return (function (e) {
@@ -95,7 +95,7 @@ class x extends (r = u.ZP.Store) {
     }
     getActiveLibraryApplication(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            n = T[e];
+            n = S[e];
         if (null != n) {
             var r;
             let i = (0, p.Tu)(e, n),
@@ -110,7 +110,7 @@ class x extends (r = u.ZP.Store) {
             }
     }
     isUpdatingFlags(e, t) {
-        return S.has((0, p.Tu)(e, t));
+        return T.has((0, p.Tu)(e, t));
     }
     getActiveLaunchOptionId(e, t) {
         return y[(0, p.Tu)(e, t)];
@@ -159,7 +159,7 @@ class x extends (r = u.ZP.Store) {
             let { applicationId: t, branchId: n, flags: r } = e,
                 i = (0, p.Tu)(t, n),
                 a = D(t, n);
-            null != a && !a.isHidden() && _.yE(r, m.eHb.HIDDEN) && (A = !0), S.add(i);
+            null != a && !a.isHidden() && _.yE(r, m.eHb.HIDDEN) && (A = !0), T.add(i);
         },
         LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: O,
         LIBRARY_APPLICATION_UPDATE: O,
@@ -169,8 +169,8 @@ class x extends (r = u.ZP.Store) {
         },
         LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE: function (e) {
             let { applicationId: t, branchId: n } = e;
-            if (T[t] === n) return !1;
-            (T[t] = n), C();
+            if (S[t] === n) return !1;
+            (S[t] = n), C();
         },
         LIBRARY_APPLICATIONS_TEST_MODE_ENABLED: function (e) {
             let { libraryApplications: t } = e;

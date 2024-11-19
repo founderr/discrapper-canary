@@ -218,23 +218,23 @@ var r;
                     : null;
             },
             I = 'Invalid prop `stripe` supplied to `Elements`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.',
-            S = function (e) {
+            T = function (e) {
                 var t,
                     n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : I;
                 if (null === e || (g((t = e)) && 'function' == typeof t.elements && 'function' == typeof t.createToken && 'function' == typeof t.createPaymentMethod && 'function' == typeof t.confirmCardPayment)) return e;
                 throw Error(n);
             },
-            T = function (e) {
+            S = function (e) {
                 var t,
                     n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : I;
                 if (g((t = e)) && 'function' == typeof t.then)
                     return {
                         tag: 'async',
                         stripePromise: Promise.resolve(e).then(function (e) {
-                            return S(e, n);
+                            return T(e, n);
                         })
                     };
-                var r = S(e, n);
+                var r = T(e, n);
                 return null === r
                     ? { tag: 'empty' }
                     : {
@@ -266,7 +266,7 @@ var r;
                     i = e.children,
                     a = t.useMemo(
                         function () {
-                            return T(n);
+                            return S(n);
                         },
                         [n]
                     ),
@@ -386,7 +386,7 @@ var r;
                     i = e.children,
                     a = t.useMemo(
                         function () {
-                            return T(n, 'Invalid prop `stripe` supplied to `CustomCheckoutProvider`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.');
+                            return S(n, 'Invalid prop `stripe` supplied to `CustomCheckoutProvider`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.');
                         },
                         [n]
                     ),
@@ -519,8 +519,8 @@ var r;
                                   E = n.onLoadError,
                                   v = n.onLoaderStart,
                                   I = n.onNetworksChange,
-                                  S = n.onConfirm,
-                                  T = n.onCancel,
+                                  T = n.onConfirm,
+                                  S = n.onCancel,
                                   y = n.onShippingAddressChange,
                                   A = n.onShippingRateChange,
                                   N = k('mounts <'.concat(i, '>')),
@@ -538,8 +538,8 @@ var r;
                                   h(D, 'loaderror', E),
                                   h(D, 'loaderstart', v),
                                   h(D, 'networkschange', I),
-                                  h(D, 'confirm', S),
-                                  h(D, 'cancel', T),
+                                  h(D, 'confirm', T),
+                                  h(D, 'cancel', S),
                                   h(D, 'shippingaddresschange', y),
                                   h(D, 'shippingratechange', A),
                                   h(D, 'change', _),
@@ -610,15 +610,15 @@ var r;
                     a
                 );
             },
-            G = 'undefined' == typeof window,
-            B = t.createContext(null);
-        B.displayName = 'EmbeddedCheckoutProviderContext';
+            B = 'undefined' == typeof window,
+            G = t.createContext(null);
+        G.displayName = 'EmbeddedCheckoutProviderContext';
         var Z = function () {
-                var e = t.useContext(B);
+                var e = t.useContext(G);
                 if (!e) throw Error('<EmbeddedCheckout> must be used within <EmbeddedCheckoutProvider>');
                 return e;
             },
-            F = G
+            F = B
                 ? function (e) {
                       var n = e.id,
                           r = e.className;
@@ -658,25 +658,25 @@ var r;
                           })
                       );
                   },
-            V = U('auBankAccount', G),
-            j = U('card', G),
-            H = U('cardNumber', G),
-            Y = U('cardExpiry', G),
-            W = U('cardCvc', G),
-            K = U('fpxBank', G),
-            z = U('iban', G),
-            q = U('idealBank', G),
-            Q = U('p24Bank', G),
-            X = U('epsBank', G),
-            J = U('payment', G),
-            $ = U('expressCheckout', G),
-            ee = U('paymentRequestButton', G),
-            et = U('linkAuthentication', G),
-            en = U('address', G),
-            er = U('shippingAddress', G),
-            ei = U('paymentMethodMessaging', G),
-            ea = U('affirmMessage', G),
-            es = U('afterpayClearpayMessage', G);
+            V = U('auBankAccount', B),
+            j = U('card', B),
+            H = U('cardNumber', B),
+            Y = U('cardExpiry', B),
+            W = U('cardCvc', B),
+            K = U('fpxBank', B),
+            z = U('iban', B),
+            q = U('idealBank', B),
+            Q = U('p24Bank', B),
+            X = U('epsBank', B),
+            J = U('payment', B),
+            $ = U('expressCheckout', B),
+            ee = U('paymentRequestButton', B),
+            et = U('linkAuthentication', B),
+            en = U('address', B),
+            er = U('shippingAddress', B),
+            ei = U('paymentMethodMessaging', B),
+            ea = U('affirmMessage', B),
+            es = U('afterpayClearpayMessage', B);
         (e.AddressElement = en),
             (e.AffirmMessageElement = ea),
             (e.AfterpayClearpayMessageElement = es),
@@ -695,7 +695,7 @@ var r;
                     i = e.children,
                     a = t.useMemo(
                         function () {
-                            return T(n, 'Invalid prop `stripe` supplied to `EmbeddedCheckoutProvider`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.');
+                            return S(n, 'Invalid prop `stripe` supplied to `EmbeddedCheckoutProvider`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.');
                         },
                         [n]
                     ),
@@ -764,7 +764,7 @@ var r;
                         },
                         [_, r]
                     ),
-                    t.createElement(B.Provider, { value: c }, i)
+                    t.createElement(G.Provider, { value: c }, i)
                 );
             }),
             (e.EpsBankElement = X),

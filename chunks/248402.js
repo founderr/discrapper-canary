@@ -49,19 +49,19 @@ function b() {
     i !== e && ((i = e), t && y.emitChange());
 }
 let I = c().debounce(b, 300);
-function S() {
+function T() {
     return I(), !1;
 }
-class T extends (a = d.ZP.Store) {
+class S extends (a = d.ZP.Store) {
     initialize() {
-        this.waitFor(_.Z, m.default, E.Z, h.Z, g.Z), this.syncWith([_.Z, h.Z], S);
+        this.waitFor(_.Z, m.default, E.Z, h.Z, g.Z), this.syncWith([_.Z, h.Z], T);
     }
     getSpeaker(e) {
         return r !== e && ((r = e), b(!1)), null != i ? i : m.default.getId();
     }
 }
 (l = 'VideoSpeakerStore'),
-    (o = 'displayName') in (s = T)
+    (o = 'displayName') in (s = S)
         ? Object.defineProperty(s, o, {
               value: l,
               enumerable: !0,
@@ -69,5 +69,5 @@ class T extends (a = d.ZP.Store) {
               writable: !0
           })
         : (s[o] = l);
-let y = new T(f.Z, { AUDIO_SET_LOCAL_VIDEO_DISABLED: S });
+let y = new S(f.Z, { AUDIO_SET_LOCAL_VIDEO_DISABLED: T });
 t.Z = y;

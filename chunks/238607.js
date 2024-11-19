@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return G;
+        return B;
     }
 }),
     n(47120);
@@ -23,8 +23,8 @@ var r = n(200651),
     v = n(835473),
     b = n(592745),
     I = n(592125),
-    S = n(757266),
-    T = n(650774),
+    T = n(757266),
+    S = n(650774),
     y = n(430824),
     A = n(283595),
     N = n(496675),
@@ -39,21 +39,21 @@ var r = n(200651),
     P = n(981631),
     k = n(701488),
     U = n(388032);
-function G(e) {
-    let { user: t, currentUser: n, activity: G, onAction: B, onClose: Z } = e,
+function B(e) {
+    let { user: t, currentUser: n, activity: B, onAction: G, onClose: Z } = e,
         { analyticsLocations: F, newestAnalyticsLocation: V } = (0, E.ZP)(),
-        [j] = (0, v.Z)([null == G ? void 0 : G.application_id]),
-        H = (0, m.Z)(G),
-        Y = null == G ? void 0 : G.application_id,
-        W = null == G ? void 0 : G.session_id,
+        [j] = (0, v.Z)([null == B ? void 0 : B.application_id]),
+        H = (0, m.Z)(B),
+        Y = null == B ? void 0 : B.application_id,
+        W = null == B ? void 0 : B.session_id,
         K = (0, p.Z)({
-            activity: G,
+            activity: B,
             userId: t.id,
             channelId: void 0
         }),
         z =
             (0, a.e7)(
-                [A.Z, b.Z, L.Z, S.Z],
+                [A.Z, b.Z, L.Z, T.Z],
                 () =>
                     null != Y &&
                     (0, w.t)({
@@ -61,7 +61,7 @@ function G(e) {
                         LibraryApplicationStore: A.Z,
                         LaunchableGameStore: b.Z,
                         DispatchApplicationStore: L.Z,
-                        ConnectedAppsStore: S.Z
+                        ConnectedAppsStore: T.Z
                     })
             ) || H,
         q = (0, a.e7)([d.ZP], () =>
@@ -71,17 +71,17 @@ function G(e) {
             })
         ),
         Q = (0, a.e7)([D.Z], () => null != Y && D.Z.getState(Y, P.mFx.JOIN) === P.OcF.LOADING),
-        X = (0, a.e7)([I.Z, y.Z, T.Z, C.Z, R.Z, O.Z, N.Z], () =>
+        X = (0, a.e7)([I.Z, y.Z, S.Z, C.Z, R.Z, O.Z, N.Z], () =>
             (0, _.Z)({
                 user: t,
-                activity: G,
+                activity: B,
                 application: j,
                 channelId: K,
                 currentUser: n,
                 isEmbedded: H,
                 ChannelStore: I.Z,
                 GuildStore: y.Z,
-                GuildMemberCountStore: T.Z,
+                GuildMemberCountStore: S.Z,
                 RelationshipStore: C.Z,
                 SelectedChannelStore: R.Z,
                 VoiceStateStore: O.Z,
@@ -90,7 +90,7 @@ function G(e) {
         ),
         [J, $] = i.useState(!1),
         ee = J || q || (x.isPlatformEmbedded && !z);
-    if (null == Y || !X || (!(0, h.Z)(G, P.xjy.JOIN) && !H)) return null;
+    if (null == Y || !X || (!(0, h.Z)(B, P.xjy.JOIN) && !H)) return null;
     let et = async () => {
             if (
                 H &&
@@ -119,7 +119,7 @@ function G(e) {
                     messageId: null,
                     intent: k.Ws.PLAY,
                     embedded: H,
-                    partyId: null == G ? void 0 : null === (e = G.party) || void 0 === e ? void 0 : e.id,
+                    partyId: null == B ? void 0 : null === (e = B.party) || void 0 === e ? void 0 : e.id,
                     locationObject: { page: P.ZY5.USER_PROFILE },
                     analyticsLocations: F
                 }),
@@ -130,7 +130,7 @@ function G(e) {
                             guildId: null == i ? void 0 : i.guild_id,
                             channelId: r,
                             channelType: null == i ? void 0 : i.type,
-                            partyId: null == G ? void 0 : null === (n = G.party) || void 0 === n ? void 0 : n.id,
+                            partyId: null == B ? void 0 : null === (n = B.party) || void 0 === n ? void 0 : n.id,
                             applicationId: Y,
                             analyticsLocations: F
                         });
@@ -142,17 +142,17 @@ function G(e) {
                     userId: t.id,
                     location: V
                 });
-            if (null != G) {
+            if (null != B) {
                 let e = await o.Z.sendActivityInviteUser({
                     type: P.mFx.JOIN_REQUEST,
                     userId: t.id,
-                    activity: G,
+                    activity: B,
                     location: P.Sbl.PROFILE_POPOUT
                 });
                 null != e && u.default.selectPrivateChannel(e.id);
             }
         },
-        en = () => (t.id === n.id ? U.intl.string(U.t['0OiwfH']) : x.isPlatformEmbedded && !z && null != G ? U.intl.formatToPlainString(U.t.SqJBnJ, { name: G.name }) : null);
+        en = () => (t.id === n.id ? U.intl.string(U.t['0OiwfH']) : x.isPlatformEmbedded && !z && null != B ? U.intl.formatToPlainString(U.t.SqJBnJ, { name: B.name }) : null);
     return H
         ? (0, r.jsx)(s.Tooltip, {
               text: en(),
@@ -165,7 +165,7 @@ function G(e) {
                       submitting: Q,
                       fullWidth: !0,
                       onClick: () => {
-                          null == B || B({ action: 'PRESS_JOIN_BUTTON' }), et();
+                          null == G || G({ action: 'PRESS_JOIN_BUTTON' }), et();
                       }
                   })
           })
@@ -180,7 +180,7 @@ function G(e) {
                       submitting: Q,
                       fullWidth: !0,
                       onClick: () => {
-                          null == B || B({ action: 'PRESS_ASK_TO_JOIN_BUTTON' }), et();
+                          null == G || G({ action: 'PRESS_ASK_TO_JOIN_BUTTON' }), et();
                       }
                   })
           });

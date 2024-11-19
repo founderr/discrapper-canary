@@ -18,7 +18,7 @@ var r = n(392711),
     v = n(441623),
     b = n(474936),
     I = n(981631);
-class S extends s.Z {
+class T extends s.Z {
     isChannelEligible(e, t) {
         switch (e.type) {
             case i.d.DM:
@@ -94,4 +94,4 @@ class S extends s.Z {
                 : (t[n] = r);
     }
 }
-t.Z = new S();
+t.Z = new T();

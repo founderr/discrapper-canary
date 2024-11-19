@@ -71,8 +71,8 @@ var r,
     v = n(110924),
     b = n(858644),
     I = n(249458),
-    S = n(313201),
-    T = n(688465),
+    T = n(313201),
+    S = n(688465),
     y = n(425886),
     A = n(80966),
     N = n(593545),
@@ -87,8 +87,8 @@ var r,
     P = n(626135),
     k = n(823379),
     U = n(589530),
-    G = n(709054),
-    B = n(217702),
+    B = n(709054),
+    G = n(217702),
     Z = n(981631),
     F = n(420212),
     V = n(814249),
@@ -167,7 +167,7 @@ function Q(e) {
 }
 function X(e) {
     let { alt: t, hiddenSpoilers: n, renderAdjacentContent: r, containerClassName: i, imageContainerClassName: o, disableAltTextDisplay: u = !1, mediaLayoutType: c, imageContainerStyle: d } = e,
-        f = c === B.hV.MOSAIC,
+        f = c === G.hV.MOSAIC,
         p = !u && D.H1.getSetting() && null != t && '' !== t && !0 !== n,
         h = (e) => {
             let { altText: t } = e;
@@ -341,7 +341,7 @@ let et = (e) => {
     };
 function er(e) {
     let { content: t, channelId: n } = e,
-        [r] = s.useState(() => (0, S.hQ)('NewMessagesBarJumpToNewMessages_')),
+        [r] = s.useState(() => (0, T.hQ)('NewMessagesBarJumpToNewMessages_')),
         i = s.useCallback(() => {
             let e = x.ZP.ackMessageId(n);
             null != e
@@ -353,7 +353,7 @@ function er(e) {
                   })
                 : p.Z.jumpToMessage({
                       channelId: n,
-                      messageId: G.default.castChannelIdAsMessageId(n),
+                      messageId: B.default.castChannelIdAsMessageId(n),
                       offset: 1,
                       context: 'Mark As Read'
                   });
@@ -406,7 +406,7 @@ function ei(e) {
     let { channel: i, content: o, scrollManager: u } = e,
         { disableInteractions: m } = s.useContext(I.G),
         [g, b] = s.useState(null),
-        S = s.useRef(null),
+        T = s.useRef(null),
         [y, A] = s.useState(null),
         N = s.useRef(null),
         D = (0, f.Wu)(
@@ -456,8 +456,8 @@ function ei(e) {
             [D],
             ea
         ),
-        B = null !== (n = (0, f.e7)([R.Z], () => R.Z.visibleSummaryIndex())) && void 0 !== n ? n : -1,
-        F = null == D ? void 0 : null === (t = D[B]) || void 0 === t ? void 0 : t.topic;
+        G = null !== (n = (0, f.e7)([R.Z], () => R.Z.visibleSummaryIndex())) && void 0 !== n ? n : -1,
+        F = null == D ? void 0 : null === (t = D[G]) || void 0 === t ? void 0 : t.topic;
     null == F && null == g && (null == D ? void 0 : D.length) >= 1 && (F = null === (r = D[0]) || void 0 === r ? void 0 : r.topic);
     let Y = s.useMemo(
             () =>
@@ -546,7 +546,7 @@ function ei(e) {
     let $ = s.useCallback(
         (e) => {
             var t;
-            if (!((0, d.k)(e.target) && (null === (t = S.current) || void 0 === t ? void 0 : t.contains(e.target))))
+            if (!((0, d.k)(e.target) && (null === (t = T.current) || void 0 === t ? void 0 : t.contains(e.target))))
                 z &&
                     P.default.track(Z.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
                         topics_dropdown_open: !1,
@@ -606,7 +606,7 @@ function ei(e) {
                   })
                 : p.Z.jumpToMessage({
                       channelId: i.id,
-                      messageId: G.default.castChannelIdAsMessageId(i.id),
+                      messageId: B.default.castChannelIdAsMessageId(i.id),
                       offset: 1,
                       context: 'Mark As Read'
                   });
@@ -620,7 +620,7 @@ function ei(e) {
         m
             ? null
             : (0, a.jsxs)('div', {
-                  ref: S,
+                  ref: T,
                   className: l()(H.newTopicsBarContainer, H.containerMarginTop),
                   children: [
                       (0, a.jsx)('div', {
@@ -698,7 +698,7 @@ function ei(e) {
                                                       lineClamp: 1,
                                                       children: j.intl.string(j.t.q21fUl)
                                                   }),
-                                                  (0, a.jsx)(T.Z, { className: H.summariesBetaTag })
+                                                  (0, a.jsx)(S.Z, { className: H.summariesBetaTag })
                                               ]
                                           }),
                                           (0, a.jsx)(_.Clickable, {
@@ -740,7 +740,7 @@ function es(e) {
         { disableInteractions: u } = s.useContext(I.G),
         [h, m] = s.useState(null),
         g = s.useRef(null),
-        [b, S] = s.useState(null),
+        [b, T] = s.useState(null),
         y = s.useRef(null),
         A = (0, f.Wu)(
             [R.Z],
@@ -793,8 +793,8 @@ function es(e) {
         x = null == A ? void 0 : null === (t = A[L]) || void 0 === t ? void 0 : t.topic;
     null == x && null == h && (null == A ? void 0 : A.length) >= 1 && (x = null === (r = A[0]) || void 0 === r ? void 0 : r.topic);
     let U = s.useMemo(() => c().get(A, L - 1), [L, A]),
-        G = s.useMemo(() => c().get(A, L + 1), [L, A]),
-        B = s.useMemo(
+        B = s.useMemo(() => c().get(A, L + 1), [L, A]),
+        G = s.useMemo(
             () =>
                 c().debounce((e) => {
                     var t;
@@ -815,9 +815,9 @@ function es(e) {
         ),
         Y = s.useCallback(
             (e) => {
-                F(), B(e);
+                F(), G(e);
             },
-            [B, F]
+            [G, F]
         ),
         [W, K] = s.useState(!1),
         z = s.useCallback(() => {
@@ -876,7 +876,7 @@ function es(e) {
             var t;
             K(e);
             let n = null === (t = y.current) || void 0 === t ? void 0 : t.scrollTop;
-            null != n && S(n);
+            null != n && T(n);
         }, []);
     s.useEffect(() => {
         if (null != b && W) {
@@ -984,7 +984,7 @@ function es(e) {
                                       (0, a.jsx)(_.Clickable, {
                                           'aria-label': j.intl.string(j.t['4huCnJ']),
                                           onClick: X,
-                                          className: l()(H.topicsPillCaret, H.topicsCaretLeft, { [H.topicsPillCaretDisabled]: null == G }),
+                                          className: l()(H.topicsPillCaret, H.topicsCaretLeft, { [H.topicsPillCaretDisabled]: null == B }),
                                           children: (0, a.jsx)(M.Z, {
                                               width: 16,
                                               height: 16,
@@ -1028,7 +1028,7 @@ function es(e) {
                                                       lineClamp: 1,
                                                       children: j.intl.string(j.t.q21fUl)
                                                   }),
-                                                  (0, a.jsx)(T.Z, { className: H.summariesBetaTag })
+                                                  (0, a.jsx)(S.Z, { className: H.summariesBetaTag })
                                               ]
                                           }),
                                           (0, a.jsx)(_.Clickable, {

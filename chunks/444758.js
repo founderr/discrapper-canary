@@ -20,7 +20,7 @@ let I = (e) => {
     let t = u.Z.getChannel(e);
     return null == t ? void 0 : t.getGuildId();
 };
-function S(e) {
+function T(e) {
     return {
         type: 'guild',
         guildId: e.id,
@@ -32,7 +32,7 @@ function S(e) {
         })
     };
 }
-function T(e, t) {
+function S(e, t) {
     let n;
     let r = C((0, m.aF)(e.name, 32));
     return {
@@ -123,9 +123,9 @@ function R(e, t, n, r, i) {
         channelId: t,
         messageId: n,
         originalLink: i,
-        inContent: null == a || s ? null : [S(a)],
+        inContent: null == a || s ? null : [T(a)],
         content: [
-            T(
+            S(
                 {
                     name: b.intl.string(b.t.zLZPmp).toLowerCase(),
                     type: v.d4z.UNKNOWN,
@@ -169,7 +169,7 @@ function O(e, t, n, r) {
             return {
                 ...i,
                 guildId: v.ME,
-                inContent: [T(e)],
+                inContent: [S(e)],
                 content: [y(!1)]
             };
         return null != (s = r) ? N(s) : C('#'.concat(b.intl.string(b.t.J90oLS)));
@@ -178,8 +178,8 @@ function O(e, t, n, r) {
     return {
         ...i,
         ...(function (e, t, n, r) {
-            let i = S(e),
-                a = T(t),
+            let i = T(e),
+                a = S(t),
                 s = y(t.isForumPost);
             if (n && r) {
                 if (t.isForumPost) {
@@ -188,7 +188,7 @@ function O(e, t, n, r) {
                         var o;
                         return {
                             inContent: [
-                                T({
+                                S({
                                     name: e.name,
                                     type: e.type,
                                     iconType: null !== (o = (0, h.wl)(e)) && void 0 !== o ? o : 'forum'

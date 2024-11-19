@@ -95,7 +95,7 @@ function I(e) {
         }
     });
 }
-class S extends i.Component {
+class T extends i.Component {
     render() {
         var e;
         if (this.props.upload.item.platform !== u.ow.WEB) return null;
@@ -103,7 +103,7 @@ class S extends i.Component {
         return (0, r.jsx)('div', { className: s()(E.icon, { [E[null !== (e = this.props.upload.classification) && void 0 !== e ? e : '']]: !0 }) });
     }
 }
-class T extends i.Component {
+class S extends i.Component {
     componentDidMount() {
         var e;
         (null === (e = this.props.upload) || void 0 === e ? void 0 : e.showLargeMessageDialog) &&
@@ -136,7 +136,7 @@ class T extends i.Component {
                         (0, r.jsxs)('div', {
                             className: s()(E.file, { [E.expandable]: e.isImage }),
                             children: [
-                                (0, r.jsx)(S, { upload: e }),
+                                (0, r.jsx)(T, { upload: e }),
                                 (0, r.jsxs)('div', {
                                     className: E.description,
                                     children: [
@@ -268,7 +268,7 @@ function y(e) {
     let t = (0, d.Z)();
     return e.upload.item.platform !== u.ow.WEB
         ? null
-        : (0, r.jsx)(T, {
+        : (0, r.jsx)(S, {
               ...e,
               file: e.upload.item.file,
               messageMaxLength: t

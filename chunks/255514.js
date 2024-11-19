@@ -18,8 +18,8 @@ var r = n(200651),
     v = n(996701),
     b = n(320596),
     I = n(273514),
-    S = n(995712),
-    T = n(234937),
+    T = n(995712),
+    S = n(234937),
     y = n(473121),
     A = n(449413),
     N = n(266080),
@@ -34,8 +34,8 @@ var r = n(200651),
     P = n(739319),
     k = n(842401),
     U = n(375790),
-    G = n(981631),
-    B = n(388032),
+    B = n(981631),
+    G = n(388032),
     Z = n(980105);
 function F(e, t) {
     let { elements: n } = e;
@@ -95,8 +95,8 @@ t.Z = (e) => {
         null != z && eu(z), null != Q && ed(Q);
     }, [z, Q]);
     let em = (e) => {
-            if (e === G.evJ.INVALID_FORM_BODY) eo(B.intl.string(B.t.VjAAuL));
-            else eo(B.intl.string(B.t.h6D8V1));
+            if (e === B.evJ.INVALID_FORM_BODY) eo(G.intl.string(G.t.VjAAuL));
+            else eo(G.intl.string(G.t.h6D8V1));
         },
         eg = () =>
             K({
@@ -208,9 +208,9 @@ t.Z = (e) => {
                             reportSubType: j
                         }),
                     null != F(t, 'channel_preview') && 'stage_channel' === n.name && (0, r.jsx)(w.Z, { stageInstance: n.record }),
-                    null != F(t, 'guild_scheduled_event_preview') && 'guild_scheduled_event' === n.name && (0, r.jsx)(T.Z, { event: n.record }),
+                    null != F(t, 'guild_scheduled_event_preview') && 'guild_scheduled_event' === n.name && (0, r.jsx)(S.Z, { event: n.record }),
                     null != F(t, 'guild_directory_entry_preview') && 'guild_directory_entry' === n.name && (0, r.jsx)(I.Z, { entry: n.record }),
-                    null != F(t, 'guild_discovery_preview') && 'guild_discovery' === n.name && (0, r.jsx)(S.Z, { entry: n.record }),
+                    null != F(t, 'guild_discovery_preview') && 'guild_discovery' === n.name && (0, r.jsx)(T.Z, { entry: n.record }),
                     null != F(t, 'app_preview') && 'application' === n.name && (0, r.jsx)(d.Z, { entry: n.record }),
                     null != X &&
                         (0, r.jsx)(R.Z, {

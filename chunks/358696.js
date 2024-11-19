@@ -18,8 +18,8 @@ var s = n(120356),
     d = n(388032),
     f = n(891437);
 let _ = {
-    default: void 0,
-    crunchyroll: f.aspectRatioCrunchyroll
+    default: f.aspectRatio,
+    crunchyroll: o()(f.aspectRatio, f.crunchyroll)
 };
 ((r = i || (i = {})).SIZE_60 = 'size-60'), (r.SIZE_72 = 'size-72');
 let p = {
@@ -52,13 +52,13 @@ function m(e) {
             src: null == r ? void 0 : r.src,
             alt: null !== (n = null !== (t = null == r ? void 0 : r.alt) && void 0 !== t ? t : null == r ? void 0 : r.text) && void 0 !== n ? n : d.intl.string(d.t['2B/phI']),
             size: E,
-            className: f.contentImage,
+            className: o()(f.contentImage, _[null != s ? s : 'default']),
             constrain: 'width'
         });
     return null == r
         ? I
         : (0, a.jsxs)('div', {
-              className: o()(f.imagePosition, _[null != s ? s : 'default']),
+              className: f.imagePosition,
               children: [
                   (0, a.jsx)(l.Tooltip, {
                       text: r.text,

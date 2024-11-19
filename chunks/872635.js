@@ -144,7 +144,7 @@ t.Z = i.forwardRef(function (e, t) {
         b = i.useCallback(() => {
             p(!1), clearTimeout(m.current);
         }, []),
-        S = i.useCallback(
+        T = i.useCallback(
             (e) => {
                 var t;
                 let n = v.renderWindow;
@@ -152,7 +152,7 @@ t.Z = i.forwardRef(function (e, t) {
             },
             [v, b]
         ),
-        T = i.useCallback(
+        S = i.useCallback(
             (e) => {
                 let t = v.renderWindow;
                 if (e.target instanceof t.Element) {
@@ -177,15 +177,15 @@ t.Z = i.forwardRef(function (e, t) {
             let e = v.renderWindow;
             return (
                 e.document.addEventListener('keydown', b),
-                e.document.addEventListener('mousedown', S),
-                e.document.addEventListener('mouseup', T),
+                e.document.addEventListener('mousedown', T),
+                e.document.addEventListener('mouseup', S),
                 e.addEventListener('focus', b),
                 e.addEventListener('blur', b),
                 () => {
-                    e.document.removeEventListener('keydown', b), e.document.removeEventListener('mousedown', S), e.document.removeEventListener('mouseup', T), e.removeEventListener('focus', b), e.removeEventListener('blur', b), clearTimeout(m.current);
+                    e.document.removeEventListener('keydown', b), e.document.removeEventListener('mousedown', T), e.document.removeEventListener('mouseup', S), e.removeEventListener('focus', b), e.removeEventListener('blur', b), clearTimeout(m.current);
                 }
             );
-        }, [v, b, S, T]);
+        }, [v, b, T, S]);
     let { x: y, y: A } = i.useMemo(() => {
             var e, t, n, r;
             let i = null === (e = a.current) || void 0 === e ? void 0 : e.getSlateEditor();

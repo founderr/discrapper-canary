@@ -24,8 +24,8 @@ var r = n(990547),
     v = n(594174),
     b = n(626135),
     I = n(700785),
-    S = n(74538),
-    T = n(573261),
+    T = n(74538),
+    S = n(573261),
     y = n(668781),
     A = n(981631),
     N = n(388032);
@@ -114,7 +114,7 @@ async function D(e) {
     } catch (t) {
         if ((null === (i = t.body) || void 0 === i ? void 0 : i.code) === A.evJ.TOO_MANY_USER_GUILDS) {
             let e = v.default.getCurrentUser();
-            S.ZP.canUseIncreasedGuildCap(e) || (null == e ? void 0 : e.isStaff()) ? C(A.tHP) : C(A.DZw);
+            T.ZP.canUseIncreasedGuildCap(e) || (null == e ? void 0 : e.isStaff()) ? C(A.tHP) : C(A.DZw);
         }
         throw ((null === (o = t.body) || void 0 === o ? void 0 : o.code) === A.evJ.GUILD_AT_CAPACITY && O(), b && (null === (l = t.body) || void 0 === l ? void 0 : l.code) === A.evJ.UNKNOWN_GUILD && R(e), t);
     }
@@ -192,7 +192,7 @@ t.Z = {
         }),
     setCommunicationDisabledUntil(e) {
         let { guildId: t, userId: n, communicationDisabledUntilTimestamp: i, duration: a, reason: s, location: o } = e;
-        return T.Z.patch({
+        return S.Z.patch({
             url: A.ANM.GUILD_MEMBER(t, n),
             reason: s,
             body: { communication_disabled_until: i },

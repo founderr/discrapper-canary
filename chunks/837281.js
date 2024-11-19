@@ -286,7 +286,7 @@ var t, n;
                 g = r.method,
                 E = 'GET' !== r.method ? {} : t(t({}, r.data), a.data),
                 v = t(t(t({ 'x-algolia-agent': e.userAgent.value }, e.queryParameters), E), a.queryParameters),
-                T = 0,
+                S = 0,
                 y = function t(n, i) {
                     var s = n.pop();
                     if (void 0 === s)
@@ -307,8 +307,8 @@ var t, n;
                                         .concat('/' === t.charAt(0) ? t.substr(1) : t);
                                 return r.length && (i += '?'.concat(r)), i;
                             })(s, r.path, v),
-                            connectTimeout: i(T, e.timeouts.connect),
-                            responseTimeout: i(T, a.timeout)
+                            connectTimeout: i(S, e.timeouts.connect),
+                            responseTimeout: i(S, a.timeout)
                         },
                         l = function (e) {
                             var t = {
@@ -340,8 +340,8 @@ var t, n;
                             onRetry: function (r) {
                                 var a = l(r);
                                 return (
-                                    r.isTimedOut && T++,
-                                    Promise.all([e.logger.info('Retryable failure', S(a)), e.hostsCache.set(s, p(s, r.isTimedOut ? 3 : 2))]).then(function () {
+                                    r.isTimedOut && S++,
+                                    Promise.all([e.logger.info('Retryable failure', T(a)), e.hostsCache.set(s, p(s, r.isTimedOut ? 3 : 2))]).then(function () {
                                         return t(n, i);
                                     })
                                 );
@@ -497,14 +497,14 @@ var t, n;
         }
         function I(e) {
             return e.map(function (e) {
-                return S(e);
+                return T(e);
             });
         }
-        function S(e) {
+        function T(e) {
             var n = e.request.headers['x-algolia-api-key'] ? { 'x-algolia-api-key': '*****' } : {};
             return t(t({}, e), {}, { request: t(t({}, e.request), {}, { headers: t(t({}, e.request.headers), n) }) });
         }
-        var T = function (e) {
+        var S = function (e) {
                 return function (t, n) {
                     return e.transporter.write(
                         {
@@ -700,12 +700,12 @@ var t, n;
                     return P(e)(n, r, t(t({}, i), {}, { scope: [e1.Settings] }));
                 };
             },
-            G = function (e) {
+            B = function (e) {
                 return function (n, r, i) {
                     return P(e)(n, r, t(t({}, i), {}, { scope: [e1.Synonyms] }));
                 };
             },
-            B = function (e) {
+            G = function (e) {
                 return function (t, n) {
                     return 'GET' === t.method ? e.transporter.read(t, n) : e.transporter.write(t, n);
                 };
@@ -1375,7 +1375,7 @@ var t, n;
                     );
                 };
             },
-            eS = function (e) {
+            eT = function (e) {
                 return function (t, n) {
                     return l(
                         e.transporter.write(
@@ -1392,7 +1392,7 @@ var t, n;
                     );
                 };
             },
-            eT = function (e) {
+            eS = function (e) {
                 return function (t) {
                     return l(
                         e.transporter.write(
@@ -1612,7 +1612,7 @@ var t, n;
             eU = function (e) {
                 return function (t, n) {
                     return l(
-                        eG(e)([t], n).then(function (e) {
+                        eB(e)([t], n).then(function (e) {
                             return {
                                 objectID: e.objectIDs[0],
                                 taskID: e.taskIDs[0]
@@ -1624,7 +1624,7 @@ var t, n;
                     );
                 };
             },
-            eG = function (e) {
+            eB = function (e) {
                 return function (t, r) {
                     var i = r || {},
                         a = i.createIfNotExists,
@@ -1633,7 +1633,7 @@ var t, n;
                     return eE(e)(t, o, s);
                 };
             },
-            eB = function (e) {
+            eG = function (e) {
                 return function (a, s) {
                     var o = s || {},
                         u = o.safe,
@@ -2079,7 +2079,7 @@ var t, n;
                 E,
                 b,
                 I,
-                S,
+                T,
                 D,
                 eE = {
                     appId: e,
@@ -2356,7 +2356,7 @@ var t, n;
                             multipleQueries: er,
                             copyIndex: P,
                             copySettings: U,
-                            copySynonyms: G,
+                            copySynonyms: B,
                             copyRules: k,
                             moveIndex: ee,
                             listIndices: J,
@@ -2386,13 +2386,13 @@ var t, n;
                             searchDictionaryEntries: eu,
                             setDictionarySettings: ed,
                             waitAppTask: e_,
-                            customRequest: B,
+                            customRequest: G,
                             initIndex: function (e) {
                                 return function (t) {
                                     return q(e)(t, {
                                         methods: {
                                             batch: ep,
-                                            delete: eT,
+                                            delete: eS,
                                             findAnswers: eO,
                                             getObject: eL,
                                             getObjects: ew,
@@ -2404,10 +2404,10 @@ var t, n;
                                             setSettings: eJ,
                                             getSettings: eP,
                                             partialUpdateObject: eU,
-                                            partialUpdateObjects: eG,
+                                            partialUpdateObjects: eB,
                                             deleteObject: ey,
                                             deleteObjects: eA,
-                                            deleteBy: eS,
+                                            deleteBy: eT,
                                             clearObjects: ev,
                                             browseObjects: eh,
                                             getObjectPosition: ex,
@@ -2420,7 +2420,7 @@ var t, n;
                                             browseSynonyms: eg,
                                             deleteSynonym: eC,
                                             clearSynonyms: eI,
-                                            replaceAllObjects: eB,
+                                            replaceAllObjects: eG,
                                             replaceAllSynonyms: eF,
                                             searchRules: eQ,
                                             getRule: eM,
@@ -2444,7 +2444,7 @@ var t, n;
                                                 {},
                                                 {
                                                     methods: {
-                                                        addABTest: T,
+                                                        addABTest: S,
                                                         getABTest: A,
                                                         getABTests: N,
                                                         stopABTest: C,
@@ -2489,7 +2489,7 @@ var t, n;
                         }
                     }
                 )).appId),
-                (S = s(void 0 !== b.authMode ? b.authMode : d.WithinHeaders, I, b.apiKey)),
+                (T = s(void 0 !== b.authMode ? b.authMode : d.WithinHeaders, I, b.apiKey)),
                 u(
                     {
                         transporter: (D = v(
@@ -2520,8 +2520,8 @@ var t, n;
                                 ),
                                 {},
                                 {
-                                    headers: t(t(t({}, S.headers()), { 'content-type': 'application/x-www-form-urlencoded' }), b.headers),
-                                    queryParameters: t(t({}, S.queryParameters()), b.queryParameters)
+                                    headers: t(t(t({}, T.headers()), { 'content-type': 'application/x-www-form-urlencoded' }), b.headers),
+                                    queryParameters: t(t({}, T.queryParameters()), b.queryParameters)
                                 }
                             )
                         )),

@@ -18,8 +18,8 @@ var r,
     v = n(606304),
     b = n(594174),
     I = n(33039),
-    S = n(979651),
-    T = n(413523),
+    T = n(979651),
+    S = n(413523),
     y = n(354459),
     A = n(981631);
 function N(e, t, n) {
@@ -46,11 +46,11 @@ let C = new d.Z('ChannelRTCStore'),
     P = {},
     k = {},
     U = {},
-    G = {},
-    B = {};
+    B = {},
+    G = {};
 function Z(e) {
     let t = D[e];
-    return null == t && ((t = new T.ZP(e)), (D[e] = t)), t;
+    return null == t && ((t = new S.ZP(e)), (D[e] = t)), t;
 }
 function F(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : O;
@@ -71,11 +71,11 @@ function F(e) {
                           return;
                       }
                       let r = y.dF.NONE,
-                          i = n.toArray(T.sI.STREAM).find((e) => e.type === y.fO.STREAM && p.Z.getActiveStreamForStreamKey(e.id));
+                          i = n.toArray(S.sI.STREAM).find((e) => e.type === y.fO.STREAM && p.Z.getActiveStreamForStreamKey(e.id));
                       if (null != i) a()(i.type === y.fO.STREAM, 'Impossible condition'), (r = i.id);
                       else if (1 === n.size()) r = t;
-                      else if (1 === n.size(T.sI.VIDEO)) {
-                          let [e] = n.toArray(T.sI.VIDEO);
+                      else if (1 === n.size(S.sI.VIDEO)) {
+                          let [e] = n.toArray(S.sI.VIDEO);
                           r = e.id;
                       } else {
                           var s;
@@ -132,7 +132,7 @@ function W(e, t) {
     null == t ? delete L[e] : (L[e] = t), n !== H(e) && x[e].toggleCount++;
 }
 function K(e) {
-    return e.size(T.sI.STREAM) > 0 || e.size(T.sI.VIDEO) > 0 || e.hasEmbeddedActivity();
+    return e.size(S.sI.STREAM) > 0 || e.size(S.sI.VIDEO) > 0 || e.hasEmbeddedActivity();
 }
 function z(e) {
     delete D[e], delete L[e], delete w[e], delete M[e];
@@ -147,7 +147,7 @@ function q() {
             let n = E.Z.getVoiceChannelId();
             null != n && !e.includes(n) && e.push(n);
             let r = f.Z.getRemoteSessionId(),
-                i = S.Z.getVoiceStateForSession(h.default.getId(), r);
+                i = T.Z.getVoiceStateForSession(h.default.getId(), r);
             (null == i ? void 0 : i.channelId) != null && e.push(null == i ? void 0 : i.channelId), o().difference(O, e).forEach(z);
             let a = o().difference(e, O);
             return (O = e), a;
@@ -173,7 +173,7 @@ function ee(e) {
     let {
         channel: { id: t }
     } = e;
-    return delete U[t], delete G[t], z(t);
+    return delete U[t], delete B[t], z(t);
 }
 function et(e) {
     let { streamKey: t } = e,
@@ -186,7 +186,7 @@ function en(e) {
 }
 class er extends (r = l.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(p.Z, h.default, m.Z, g.Z, c.ZP, E.Z, v.Z, b.default, I.Z, S.Z), this.syncWith([c.ZP], Q), this.syncWith([f.Z], q), (null == e ? void 0 : e.voiceParticipantsHidden) !== void 0 && Object.assign(k, null == e ? void 0 : e.voiceParticipantsHidden);
+        this.waitFor(p.Z, h.default, m.Z, g.Z, c.ZP, E.Z, v.Z, b.default, I.Z, T.Z), this.syncWith([c.ZP], Q), this.syncWith([f.Z], q), (null == e ? void 0 : e.voiceParticipantsHidden) !== void 0 && Object.assign(k, null == e ? void 0 : e.voiceParticipantsHidden);
     }
     getState() {
         return { voiceParticipantsHidden: k };
@@ -200,29 +200,29 @@ class er extends (r = l.ZP.PersistedStore) {
     }
     getSpeakingParticipants(e) {
         var t;
-        return null !== (t = Z(e).toArray(T.sI.SPEAKING)) && void 0 !== t ? t : R;
+        return null !== (t = Z(e).toArray(S.sI.SPEAKING)) && void 0 !== t ? t : R;
     }
     getFilteredParticipants(e) {
-        return k[e] ? Z(e).toArray(T.sI.FILTERED) : Z(e).toArray();
+        return k[e] ? Z(e).toArray(S.sI.FILTERED) : Z(e).toArray();
     }
     getVideoParticipants(e) {
         var t;
-        return null !== (t = Z(e).toArray(T.sI.VIDEO)) && void 0 !== t ? t : R;
+        return null !== (t = Z(e).toArray(S.sI.VIDEO)) && void 0 !== t ? t : R;
     }
     getStreamParticipants(e) {
         var t;
-        return null !== (t = Z(e).toArray(T.sI.STREAM)) && void 0 !== t ? t : R;
+        return null !== (t = Z(e).toArray(S.sI.STREAM)) && void 0 !== t ? t : R;
     }
     getActivityParticipants(e) {
         var t;
-        return null !== (t = Z(e).toArray(T.sI.ACTIVITY)) && void 0 !== t ? t : R;
+        return null !== (t = Z(e).toArray(S.sI.ACTIVITY)) && void 0 !== t ? t : R;
     }
     getParticipant(e, t) {
         return Z(e).getParticipant(t);
     }
     getUserParticipantCount(e) {
         let t = Z(e);
-        return t.size() - t.size(T.sI.STREAM) - t.size(T.sI.ACTIVITY);
+        return t.size() - t.size(S.sI.STREAM) - t.size(S.sI.ACTIVITY);
     }
     getParticipantsOpen(e) {
         var t;
@@ -273,10 +273,10 @@ class er extends (r = l.ZP.PersistedStore) {
         return Object.values(M).some((t) => t[e] === A.AEg.FULL_SCREEN);
     }
     getStageStreamSize(e) {
-        return G[e];
+        return B[e];
     }
     getStageVideoLimitBoostUpsellDismissed(e) {
-        return B[e];
+        return G[e];
     }
 }
 N(er, 'displayName', 'ChannelRTCStore'),
@@ -291,7 +291,7 @@ N(er, 'displayName', 'ChannelRTCStore'),
         OVERLAY_INITIALIZE: q,
         VOICE_CHANNEL_SELECT: function (e) {
             let { channelId: t, currentVoiceChannelId: n } = e;
-            return null != t ? delete x[t] : null != n && (delete U[n], delete G[n], Y(n)), q();
+            return null != t ? delete x[t] : null != n && (delete U[n], delete B[n], Y(n)), q();
         },
         CHANNEL_SELECT: function (e) {
             let { channelId: t, messageId: n } = e,
@@ -330,7 +330,7 @@ N(er, 'displayName', 'ChannelRTCStore'),
             let { channelId: t, id: n } = e,
                 r = Z(t);
             null == n &&
-                r.toArray(T.sI.STREAM).forEach((e) => {
+                r.toArray(S.sI.STREAM).forEach((e) => {
                     (0, y._5)(e) && r.updateParticipant(e.user.id);
                 });
             let [, i] = j(t);
@@ -361,11 +361,11 @@ N(er, 'displayName', 'ChannelRTCStore'),
         },
         CHANNEL_RTC_UPDATE_STAGE_STREAM_SIZE: function (e) {
             let { channelId: t, large: n } = e;
-            G[t] = n;
+            B[t] = n;
         },
         CHANNEL_RTC_UPDATE_STAGE_VIDEO_LIMIT_BOOST_UPSELL_DISMISSED: function (e) {
             let { channelId: t, dismissed: n } = e;
-            B[t] = n;
+            G[t] = n;
         },
         STREAM_UPDATE_SELF_HIDDEN: function (e) {
             let { channelId: t, selfStreamHidden: n } = e,

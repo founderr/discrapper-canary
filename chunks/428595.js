@@ -18,8 +18,8 @@ var r = n(392711),
     v = n(800927),
     b = n(945884),
     I = n(594199),
-    S = n(97734),
-    T = n(303694),
+    T = n(97734),
+    S = n(303694),
     y = n(660199),
     A = n(364458),
     N = n(981631),
@@ -352,8 +352,8 @@ let P = (e) => {
             parse(e, t, n) {
                 var r;
                 let [, i, a] = e,
-                    s = (0, T.l)(i),
-                    o = (0, T.W)(i, a, null === (r = k(n)) || void 0 === r ? void 0 : r.id);
+                    s = (0, S.l)(i),
+                    o = (0, S.W)(i, a, null === (r = k(n)) || void 0 === r ? void 0 : r.id);
                 function l(e) {
                     return null == e
                         ? null
@@ -379,19 +379,19 @@ let P = (e) => {
         list: v.Z,
         subtext: b.Z
     },
-    G = (0, A.Z)([U, S.Z]),
-    B = i().omit(G, ['inlineCode', 'codeBlock', 'br', 'blockQuote', 'subtext']),
-    Z = i().omit(G, ['inlineCode', 'codeBlock', 'br', 'blockQuote', 'autolink', 'url', 'attachmentLink', 'mention', 'roleMention', 'channelMention', 'channelOrMessageUrl', 'mediaPostLink', 'subtext']),
-    F = i().omit(G, ['codeBlock', 'br', 'mention', 'channel', 'roleMention', 'attachmentLink', 'subtext']),
+    B = (0, A.Z)([U, T.Z]),
+    G = i().omit(B, ['inlineCode', 'codeBlock', 'br', 'blockQuote', 'subtext']),
+    Z = i().omit(B, ['inlineCode', 'codeBlock', 'br', 'blockQuote', 'autolink', 'url', 'attachmentLink', 'mention', 'roleMention', 'channelMention', 'channelOrMessageUrl', 'mediaPostLink', 'subtext']),
+    F = i().omit(B, ['codeBlock', 'br', 'mention', 'channel', 'roleMention', 'attachmentLink', 'subtext']),
     V = i().omit(
         (0, A.Z)([
-            G,
+            B,
             {
                 inlineCode: {
                     match(e, t, n) {
-                        let r = G.codeBlock.match(e, t, n);
+                        let r = B.codeBlock.match(e, t, n);
                         if (null != r) return r;
-                        let i = G.inlineCode.match(e, t, n);
+                        let i = B.inlineCode.match(e, t, n);
                         if (null != i) return i;
                     }
                 }
@@ -399,10 +399,10 @@ let P = (e) => {
         ]),
         ['blockQuote', 'codeBlock', 'br']
     ),
-    j = i().omit(G, ['codeBlock', 'br', 'blockQuote']),
-    H = i().omit(G, ['codeBlock', 'br', 'attachmentLink', 'mention', 'roleMention', 'channel', 'paragraph', 'newline', 'subtext']),
-    Y = i().omit(G, ['codeBlock', 'blockQuote', 'br']),
-    W = i().omit(G, ['codeBlock', 'br', 'inlineCode']);
+    j = i().omit(B, ['codeBlock', 'br', 'blockQuote']),
+    H = i().omit(B, ['codeBlock', 'br', 'attachmentLink', 'mention', 'roleMention', 'channel', 'paragraph', 'newline', 'subtext']),
+    Y = i().omit(B, ['codeBlock', 'blockQuote', 'br']),
+    W = i().omit(B, ['codeBlock', 'br', 'inlineCode']);
 function K(e, t) {
     return 0 === e.length || 0 === t || '' === e.charAt(t - 1).trim();
 }
@@ -443,11 +443,11 @@ let z = (0, A.Z)([
             }
         }
     },
-    i().omit(G, ['url'])
+    i().omit(B, ['url'])
 ]);
 t.Z = {
-    RULES: G,
-    CHANNEL_TOPIC_RULES: B,
+    RULES: B,
+    CHANNEL_TOPIC_RULES: G,
     VOICE_CHANNEL_STATUS_RULES: Z,
     EMBED_TITLE_RULES: F,
     INLINE_REPLY_RULES: V,

@@ -51,8 +51,8 @@ function f(e, t, n) {
                 null != E.current && (t.setThumbDragging(E.current, !1), (E.current = null));
             }
         }),
-        S = (0, a.useRef)(void 0),
-        T = (r, i, a, s) => {
+        T = (0, a.useRef)(void 0),
+        S = (r, i, a, s) => {
             if (n.current && !e.isDisabled && t.values.every((e, n) => !t.isThumbDragging(n))) {
                 let e,
                     { height: o, width: l, top: u, left: c } = n.current.getBoundingClientRect(),
@@ -60,12 +60,12 @@ function f(e, t, n) {
                 ('rtl' === h || p) && (d = 1 - d);
                 let f = t.getPercentValue(d),
                     _ = t.values.findIndex((e) => f - e < 0);
-                (e = 0 === _ ? _ : -1 === _ ? t.values.length - 1 : Math.abs(t.values[_ - 1] - f) < Math.abs(t.values[_] - f) ? _ - 1 : _) >= 0 && t.isThumbEditable(e) ? (r.preventDefault(), (E.current = e), t.setFocusedThumb(e), (S.current = i), t.setThumbDragging(E.current, !0), t.setThumbValue(e, f), m(window, 'mouseup', y, !1), m(window, 'touchend', y, !1), m(window, 'pointerup', y, !1)) : (E.current = null);
+                (e = 0 === _ ? _ : -1 === _ ? t.values.length - 1 : Math.abs(t.values[_ - 1] - f) < Math.abs(t.values[_] - f) ? _ - 1 : _) >= 0 && t.isThumbEditable(e) ? (r.preventDefault(), (E.current = e), t.setFocusedThumb(e), (T.current = i), t.setThumbDragging(E.current, !0), t.setThumbValue(e, f), m(window, 'mouseup', y, !1), m(window, 'touchend', y, !1), m(window, 'pointerup', y, !1)) : (E.current = null);
             }
         },
         y = (e) => {
             var n, r;
-            (null !== (r = e.pointerId) && void 0 !== r ? r : null === (n = e.changedTouches) || void 0 === n ? void 0 : n[0].identifier) === S.current && (null != E.current && (t.setThumbDragging(E.current, !1), (E.current = null)), g(window, 'mouseup', y, !1), g(window, 'touchend', y, !1), g(window, 'pointerup', y, !1));
+            (null !== (r = e.pointerId) && void 0 !== r ? r : null === (n = e.changedTouches) || void 0 === n ? void 0 : n[0].identifier) === T.current && (null != E.current && (t.setThumbDragging(E.current, !1), (E.current = null)), g(window, 'mouseup', y, !1), g(window, 'touchend', y, !1), g(window, 'pointerup', y, !1));
         };
     return (
         'htmlFor' in f &&
@@ -84,13 +84,13 @@ function f(e, t, n) {
             trackProps: (0, r.dG)(
                 {
                     onMouseDown(e) {
-                        0 === e.button && !e.altKey && !e.ctrlKey && !e.metaKey && T(e, void 0, e.clientX, e.clientY);
+                        0 === e.button && !e.altKey && !e.ctrlKey && !e.metaKey && S(e, void 0, e.clientX, e.clientY);
                     },
                     onPointerDown(e) {
-                        ('mouse' !== e.pointerType || (0 === e.button && !e.altKey && !e.ctrlKey && !e.metaKey)) && T(e, e.pointerId, e.clientX, e.clientY);
+                        ('mouse' !== e.pointerType || (0 === e.button && !e.altKey && !e.ctrlKey && !e.metaKey)) && S(e, e.pointerId, e.clientX, e.clientY);
                     },
                     onTouchStart(e) {
-                        T(e, e.changedTouches[0].identifier, e.changedTouches[0].clientX, e.changedTouches[0].clientY);
+                        S(e, e.changedTouches[0].identifier, e.changedTouches[0].clientX, e.changedTouches[0].clientY);
                     },
                     style: {
                         position: 'relative',
@@ -111,8 +111,8 @@ function _(e, t) {
     let { index: f = 0, isRequired: _, validationState: p, isInvalid: h, trackRef: m, inputRef: g, orientation: E = t.orientation, name: v } = e,
         b = e.isDisabled || t.isDisabled,
         I = 'vertical' === E,
-        { direction: S } = (0, l.bU)(),
-        { addGlobalListener: T, removeGlobalListener: y } = (0, r.xi)(),
+        { direction: T } = (0, l.bU)(),
+        { addGlobalListener: S, removeGlobalListener: y } = (0, r.xi)(),
         A = c.get(t),
         { labelProps: N, fieldProps: C } = (0, o.N)({
             ...e,
@@ -127,7 +127,7 @@ function _(e, t) {
     (0, a.useEffect)(() => {
         D && O();
     }, [D, O]);
-    let L = 'rtl' === S,
+    let L = 'rtl' === T,
         x = (0, a.useRef)(null),
         { keyboardProps: w } = (0, s.v5)({
             onKeyDown(e) {
@@ -180,14 +180,14 @@ function _(e, t) {
         ),
         k = (0, a.useRef)(void 0),
         U = (e) => {
-            O(), (k.current = e), t.setThumbDragging(f, !0), T(window, 'mouseup', G, !1), T(window, 'touchend', G, !1), T(window, 'pointerup', G, !1);
+            O(), (k.current = e), t.setThumbDragging(f, !0), S(window, 'mouseup', B, !1), S(window, 'touchend', B, !1), S(window, 'pointerup', B, !1);
         },
-        G = (e) => {
+        B = (e) => {
             var n, r;
-            (null !== (r = e.pointerId) && void 0 !== r ? r : null === (n = e.changedTouches) || void 0 === n ? void 0 : n[0].identifier) === k.current && (O(), t.setThumbDragging(f, !1), y(window, 'mouseup', G, !1), y(window, 'touchend', G, !1), y(window, 'pointerup', G, !1));
+            (null !== (r = e.pointerId) && void 0 !== r ? r : null === (n = e.changedTouches) || void 0 === n ? void 0 : n[0].identifier) === k.current && (O(), t.setThumbDragging(f, !1), y(window, 'mouseup', B, !1), y(window, 'touchend', B, !1), y(window, 'pointerup', B, !1));
         },
-        B = t.getThumbPercent(f);
-    (I || 'rtl' === S) && (B = 1 - B);
+        G = t.getThumbPercent(f);
+    (I || 'rtl' === T) && (G = 1 - G);
     let Z = b
         ? {}
         : (0, r.dG)(w, M, {
@@ -230,7 +230,7 @@ function _(e, t) {
                 ...Z,
                 style: {
                     position: 'absolute',
-                    [I ? 'top' : 'left']: `${100 * B}%`,
+                    [I ? 'top' : 'left']: `${100 * G}%`,
                     transform: 'translate(-50%, -50%)',
                     touchAction: 'none'
                 }

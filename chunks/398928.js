@@ -27,10 +27,10 @@ function o(e) {
         v = (0, i.useMemo)(() => (e.disabledKeys ? new Set(e.disabledKeys) : new Set()), [e.disabledKeys]),
         [b, I] = (0, i.useState)(o);
     'replace' === o && 'toggle' === b && 'object' == typeof g && 0 === g.size && I('replace');
-    let S = (0, i.useRef)(o);
+    let T = (0, i.useRef)(o);
     return (
         (0, i.useEffect)(() => {
-            o !== S.current && (I(o), (S.current = o));
+            o !== T.current && (I(o), (T.current = o));
         }, [o]),
         {
             selectionMode: t,

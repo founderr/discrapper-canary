@@ -23,8 +23,8 @@ var r = n(200651),
     v = n(102172),
     b = n(359110),
     I = n(769654),
-    S = n(922482),
-    T = n(543882),
+    T = n(922482),
+    S = n(543882),
     y = n(592125),
     A = n(430824),
     N = n(496675),
@@ -39,8 +39,8 @@ var r = n(200651),
     P = n(660579),
     k = n(502762),
     U = n(652853),
-    G = n(64621),
-    B = n(194811),
+    B = n(64621),
+    G = n(194811),
     Z = n(373826),
     F = n(315324),
     V = n(582123),
@@ -90,12 +90,12 @@ function $(e) {
             url: eE,
             isLoading: ev,
             canSeePreview: eb
-        } = (0, o.cj)([N.Z, T.Z], () => {
+        } = (0, o.cj)([N.Z, S.Z], () => {
             let e = null != e_ && N.Z.canBasicChannel(W.S7T.CONNECT, e_);
             return e
                 ? {
-                      url: T.Z.getPreviewURL(a.guildId, a.channelId, a.ownerId),
-                      isLoading: T.Z.getIsPreviewLoading(a.guildId, a.channelId, a.ownerId),
+                      url: S.Z.getPreviewURL(a.guildId, a.channelId, a.ownerId),
+                      isLoading: S.Z.getIsPreviewLoading(a.guildId, a.channelId, a.ownerId),
                       canSeePreview: e
                   }
                 : {
@@ -117,20 +117,20 @@ function $(e) {
             });
         }
     }, [t, eI, eo, el, a]);
-    let eS = (0, d.Z)(ev ? null : eE),
-        eT = ev || null == eE ? eS : eE;
+    let eT = (0, d.Z)(ev ? null : eE),
+        eS = ev || null == eE ? eT : eE;
     if (null == ef || null == e_ || (eo && !1 === a.discoverable) || null === en) return null;
     let ey = () => {
             let e = s()(Q.preview, es),
                 t = () => {
                     ec({ action: 'PRESS_IMAGE' }), u.default.selectVoiceChannel(a.channelId), (0, c.iV)(a), null == ee || ee();
                 };
-            return null == eT && ev
+            return null == eS && ev
                 ? (0, r.jsx)('div', {
                       className: e,
                       children: (0, r.jsx)(l.Spinner, {})
                   })
-                : null == eT
+                : null == eS
                   ? (0, r.jsxs)(l.Clickable, {
                         className: s()(e, Q.overlay, { [Q.clickable]: em }),
                         onClick: em ? t : void 0,
@@ -162,7 +162,7 @@ function $(e) {
                         children: [
                             (0, r.jsx)('img', {
                                 alt: '',
-                                src: eT,
+                                src: eS,
                                 className: Q.image
                             }),
                             en !== Y.y0.FULL_SIZE &&
@@ -206,7 +206,7 @@ function $(e) {
                                     (0, r.jsx)(l.Clickable, {
                                         className: s()(q.clickable, q.inline),
                                         onClick: () => {
-                                            null == ec || ec({ action: 'OPEN_VOICE_CHANNEL' }), e ? (0, S.Cq)(e_) : (u.default.selectVoiceChannel(e_.id), (0, b.Kh)(e_.id)), null == ee || ee();
+                                            null == ec || ec({ action: 'OPEN_VOICE_CHANNEL' }), e ? (0, T.Cq)(e_) : (u.default.selectVoiceChannel(e_.id), (0, b.Kh)(e_.id)), null == ee || ee();
                                         },
                                         children: e_.name
                                     })
@@ -264,7 +264,7 @@ function $(e) {
         eO = null != eh ? K.intl.formatToPlainString(K.t['4CQq9f'], { name: eh.name }) : K.intl.string(K.t['Jpkr/v']);
     return (0, r.jsx)(h.Gt, {
         value: eu,
-        children: (0, r.jsx)(G.Z, {
+        children: (0, r.jsx)(B.Z, {
             sourceType: Y.n_.ACTIVITY,
             user: t,
             children: (0, r.jsx)(V.Z, {
@@ -296,7 +296,7 @@ function $(e) {
                                         className: z.button
                                     }),
                                     children: [
-                                        (0, r.jsx)(B.Z, {
+                                        (0, r.jsx)(G.Z, {
                                             text: eO,
                                             tags: (0, r.jsx)(g.ZP, { size: g.OH.SMALL })
                                         }),

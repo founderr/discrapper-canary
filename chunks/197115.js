@@ -18,10 +18,10 @@ var i = n(120356),
     v = n(639119),
     b = n(474936),
     I = n(981631),
-    S = n(388032),
-    T = n(910465);
+    T = n(388032),
+    S = n(910465);
 t.Z = function (e) {
-    let { isGift: t, subscriptionTier: i, onClick: y, size: A, className: N, isTrialCTA: C, buttonText: R, buttonTextClassName: O, iconClassName: D, postSuccessGuild: L, onSubscribeModalClose: x, premiumModalAnalyticsLocation: w, showIcon: M = !0, disableShine: P, applicationId: k, giftMessage: U, overrideDisabledButtonText: G, shinyButtonClassName: B, showGradient: Z = !1, ...F } = e,
+    let { isGift: t, subscriptionTier: i, onClick: y, size: A, className: N, isTrialCTA: C, buttonText: R, buttonTextClassName: O, iconClassName: D, postSuccessGuild: L, onSubscribeModalClose: x, premiumModalAnalyticsLocation: w, showIcon: M = !0, disableShine: P, applicationId: k, giftMessage: U, overrideDisabledButtonText: B, shinyButtonClassName: G, showGradient: Z = !1, ...F } = e,
         V = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
         j = (0, s.e7)([g.Z], () => g.Z.isFocused()),
         H = (0, s.e7)([m.ZP], () => m.ZP.getPremiumTypeSubscription()),
@@ -103,7 +103,7 @@ t.Z = function (e) {
         return (0, r.jsxs)(o.Button, {
             size: A,
             className: N,
-            innerClassName: T.premiumSubscribeButton,
+            innerClassName: S.premiumSubscribeButton,
             color: o.Button.Colors.BRAND_INVERTED,
             onClick: q,
             ...F,
@@ -112,11 +112,11 @@ t.Z = function (e) {
                     (0, r.jsx)(o.NitroWheelIcon, {
                         size: 'md',
                         color: 'currentColor',
-                        className: T.premiumIcon
+                        className: S.premiumIcon
                     }),
                 (0, r.jsx)('span', {
-                    className: a()(T.buttonText, O),
-                    children: null != R ? R : S.intl.string(S.t['Gd/XHB'])
+                    className: a()(S.buttonText, O),
+                    children: null != R ? R : T.intl.string(T.t['Gd/XHB'])
                 })
             ]
         });
@@ -124,7 +124,7 @@ t.Z = function (e) {
         return (0, r.jsxs)(o.Button, {
             size: A,
             className: N,
-            innerClassName: T.giftButton,
+            innerClassName: S.giftButton,
             color: o.Button.Colors.PRIMARY,
             onClick: q,
             ...F,
@@ -132,24 +132,24 @@ t.Z = function (e) {
                 (0, r.jsx)(o.GiftIcon, {
                     size: 'md',
                     color: 'currentColor',
-                    className: T.giftIcon
+                    className: S.giftIcon
                 }),
                 (0, r.jsx)('span', {
-                    className: a()(T.buttonText, O),
-                    children: null != R ? R : S.intl.string(S.t.PEjaCw)
+                    className: a()(S.buttonText, O),
+                    children: null != R ? R : T.intl.string(T.t.PEjaCw)
                 })
             ]
         });
-    let Q = S.intl.string(S.t['2pG5GR']),
+    let Q = T.intl.string(T.t['2pG5GR']),
         X = null != H ? (0, E.Af)(H) : null,
         J = null != X ? E.ZP.getPremiumType(X.planId) : null == V ? void 0 : V.premiumType,
         $ = i === b.Si.TIER_2 && null != J && [b.p9.TIER_0, b.p9.TIER_1].includes(J);
-    $ && (Q = S.intl.string(S.t.IJI7ys));
+    $ && (Q = T.intl.string(T.t.IJI7ys));
     let ee = null != H && E.ZP.isSwitchingPlansDisabled(H, Y),
         et = (null != H && H.status !== I.O0b.ACCOUNT_HOLD && !(0, p.Q0)(H.planId) && !$) || ee,
         en = et
-            ? null != G
-                ? G
+            ? null != B
+                ? B
                 : (function (e) {
                       let { ctaSubscriptionSkuId: t, currentPremiumType: n, isSwitchingDisabled: r, subscription: i } = e,
                           a = null,
@@ -163,7 +163,7 @@ t.Z = function (e) {
                           l = null != o ? b.$e[o] : null,
                           u = null != n ? b.$e[n] : null;
                       return (
-                          r ? (s = E.ZP.getSwitchingPlansDisabledMessage(i)) : null != u && null != l && l < u ? ((a = S.intl.string(S.t['2pG5GR'])), (s = S.intl.string(S.t.jXaaRk))) : null != o && null != n && o === n ? ((a = S.intl.string(S.t.ymSxh4)), (s = S.intl.string(S.t.jXaaRk))) : null == o && null != n && n === b.p9.TIER_2 && (s = S.intl.string(S.t.jXaaRk)),
+                          r ? (s = E.ZP.getSwitchingPlansDisabledMessage(i)) : null != u && null != l && l < u ? ((a = T.intl.string(T.t['2pG5GR'])), (s = T.intl.string(T.t.jXaaRk))) : null != o && null != n && o === n ? ((a = T.intl.string(T.t.ymSxh4)), (s = T.intl.string(T.t.jXaaRk))) : null == o && null != n && n === b.p9.TIER_2 && (s = T.intl.string(T.t.jXaaRk)),
                           {
                               disabledButtonText: a,
                               disabledButtonTooltipText: s
@@ -181,14 +181,14 @@ t.Z = function (e) {
         return (0, r.jsxs)(o.ShinyButton, {
             disabled: et,
             onClick: q,
-            innerClassName: T.premiumSubscribeButton,
+            innerClassName: S.premiumSubscribeButton,
             color: i === b.Si.TIER_1 ? o.Button.Colors.PRIMARY : o.Button.Colors.GREEN,
             size: A,
-            className: B,
+            className: G,
             wrapperClassName: a()(
                 {
-                    [T.tier2Gradient]: Z && i === b.Si.TIER_2,
-                    [T.tier1Gradient]: Z && i === b.Si.TIER_1
+                    [S.tier2Gradient]: Z && i === b.Si.TIER_2,
+                    [S.tier1Gradient]: Z && i === b.Si.TIER_1
                 },
                 N
             ),
@@ -200,10 +200,10 @@ t.Z = function (e) {
                     (0, r.jsx)(o.NitroWheelIcon, {
                         size: 'md',
                         color: 'currentColor',
-                        className: a()(T.premiumIcon, D)
+                        className: a()(S.premiumIcon, D)
                     }),
                 (0, r.jsx)('span', {
-                    className: a()(T.buttonText, O),
+                    className: a()(S.buttonText, O),
                     children: null !== (n = null !== (t = null == en ? void 0 : en.disabledButtonText) && void 0 !== t ? t : R) && void 0 !== n ? n : Q
                 })
             ]

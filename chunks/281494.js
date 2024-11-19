@@ -12,7 +12,7 @@ n.d(t, {
         return i;
     },
     IB: function () {
-        return S;
+        return T;
     },
     Ve: function () {
         return v;
@@ -223,7 +223,7 @@ async function I(e) {
         }
     }
 }
-async function S(e) {
+async function T(e) {
     try {
         var t;
         let n = await o.tn.get({

@@ -24,8 +24,8 @@ var r = n(729594),
     v = n(977156),
     b = n(341907),
     I = n(540709),
-    S = n(881706),
-    T = n(701190),
+    T = n(881706),
+    S = n(701190),
     y = n(944486),
     A = n(914010),
     N = n(771845),
@@ -44,7 +44,7 @@ async function L(e, t) {
 }
 async function x(e) {
     var t;
-    let n = T.Z.getInvite(e.code);
+    let n = S.Z.getInvite(e.code);
     if (null == n) {
         let { invite: t } = await o.Z.resolveInvite(e.code, 'Markdown Link');
         n = t;
@@ -121,11 +121,11 @@ function M(e) {
                 }),
             !0
         );
-    let { pathname: T, hostname: N = '', host: L, query: M, hash: P } = r.parse(e),
+    let { pathname: S, hostname: N = '', host: L, query: M, hash: P } = r.parse(e),
         k = R.Z.isDiscordHostname(N) || R.Z.isDiscordLocalhost(L, N);
-    if (k && (null == T ? void 0 : T.startsWith('/application-directory'))) {
+    if (k && (null == S ? void 0 : S.startsWith('/application-directory'))) {
         let e;
-        let t = T.split('/'),
+        let t = S.split('/'),
             [, , r, a] = t;
         5 === t.length && (e = t[4]);
         let s = null != r && (0, c.BH)(r) ? r : void 0;
@@ -164,20 +164,20 @@ function M(e) {
             );
         };
     }
-    if (null != T && k && R.Z.isAppRoute(T)) {
+    if (null != S && k && R.Z.isAppRoute(S)) {
         let e = {
             navigationReplace: !1,
             openChannel: !0
         };
-        return null != M && (e.search = M), null != P && (e.hash = P), (t) => (null == t || t.preventDefault(), (0, E.Z)(T, e), !0);
+        return null != M && (e.search = M), null != P && (e.hash = P), (t) => (null == t || t.preventDefault(), (0, E.Z)(S, e), !0);
     }
-    if (null != T && k) {
+    if (null != S && k) {
         let { getOAuth2AuthorizeProps: t, openOAuth2ModalWithCreateGuildModal: r } = n(69580),
             i = t(e);
         if (null != i) return (e) => (null == e || e.preventDefault(), null != o && o.type === f.g.APP_OAUTH2_LINK && u.ZP.trackWithMetadata(O.rMx.APP_OAUTH2_LINK_EMBED_URL_CLICKED, { application_id: i.clientId }), r(i), !0);
     }
-    let U = (0, g.Ao)(T);
-    if (null != T && k && null != U)
+    let U = (0, g.Ao)(S);
+    if (null != S && k && null != U)
         return (e) => {
             null == e || e.preventDefault();
             let t = A.Z.getGuildId();
@@ -185,9 +185,9 @@ function M(e) {
             let n = h.ZP.getGuildScheduledEvent(U.guildEventId);
             return null != n && (0, p.bO)({ eventId: n.id }), !0;
         };
-    if (k && (null == T ? void 0 : T.startsWith('/settings/'))) {
+    if (k && (null == S ? void 0 : S.startsWith('/settings/'))) {
         let { default: e } = n(357269),
-            t = e(T);
+            t = e(S);
         if (null != t)
             return (e) => (
                 null == e || e.preventDefault(),
@@ -199,5 +199,5 @@ function M(e) {
                 !0
             );
     }
-    return k && (null == T ? void 0 : T.startsWith('/discovery/quests')) ? (e) => (null == e || e.preventDefault(), (0, b.navigateToQuestHome)(D.dr.BADGE, a.j.QUEST_BADGE), !0) : t || null == (0, S.v)(e) ? void 0 : (t) => (null == t || t.preventDefault(), I.Z.show(e), !0);
+    return k && (null == S ? void 0 : S.startsWith('/discovery/quests')) ? (e) => (null == e || e.preventDefault(), (0, b.navigateToQuestHome)(D.dr.BADGE, a.j.QUEST_BADGE), !0) : t || null == (0, T.v)(e) ? void 0 : (t) => (null == t || t.preventDefault(), I.Z.show(e), !0);
 }

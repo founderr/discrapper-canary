@@ -109,25 +109,25 @@ function f(e) {
                 h = c(e.kind, e.id, t),
                 m = null == o.trackExposureOptions ? void 0 : (0, i.Z)(null !== (a = o.trackExposureOptions) && void 0 !== a ? a : {}),
                 E = null !== (s = null == h ? void 0 : h.triggerDebuggingEnabled) && void 0 !== s && s,
-                [[v, b, I], S] = (0, r.useState)(() => {
+                [[v, b, I], T] = (0, r.useState)(() => {
                     let t = null == h || l ? u.NZ.NOT_ELIGIBLE : h.bucket;
                     return [d(e, t, f, h), t, null == h ? -1 : h.revision];
                 }),
-                T = (0, i.Z)(t);
+                S = (0, i.Z)(t);
             return (
                 (0, r.useEffect)(() => {
-                    if (!l && (!!_ || !!E) && null == e.commonTriggerPoint) p(T, m, !1 === _);
-                }, [l, _, T, m, b, I, E]),
+                    if (!l && (!!_ || !!E) && null == e.commonTriggerPoint) p(S, m, !1 === _);
+                }, [l, _, S, m, b, I, E]),
                 (0, r.useEffect)(
                     () =>
                         g(
-                            T,
+                            S,
                             (e, t, n) => {
-                                S((r) => (r[0] === e && r[1] === t && r[2] === n ? r : [e, t, n]));
+                                T((r) => (r[0] === e && r[1] === t && r[2] === n ? r : [e, t, n]));
                             },
                             { disable: l }
                         ),
-                    [l, T]
+                    [l, S]
                 ),
                 v
             );

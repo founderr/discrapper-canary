@@ -17,8 +17,8 @@ var l = n(200651),
     u = n(596454),
     d = n(727637),
     m = n(313201),
-    x = n(543241),
-    h = n(318766),
+    h = n(543241),
+    x = n(318766),
     p = n(907040),
     C = n(633302),
     v = n(806966),
@@ -33,7 +33,7 @@ let L = j.Hz.CHAT,
 function T(e) {
     let { emoji: t, isDisabled: n = !1, onClick: i, className: o } = e,
         m = a.useRef(null),
-        x = (0, d.Z)(m);
+        h = (0, d.Z)(m);
     return (0, l.jsx)('span', {
         ref: m,
         children: (0, l.jsx)(c.Button, {
@@ -42,9 +42,9 @@ function T(e) {
             size: c.Button.Sizes.NONE,
             focusProps: { enabled: !n },
             children: (0, l.jsx)(c.Spring, {
-                config: h.u,
+                config: x.u,
                 from: { value: 0 },
-                to: { value: x ? 1 : 0 },
+                to: { value: h ? 1 : 0 },
                 children: (e) => {
                     let { value: a } = e;
                     return (0, l.jsx)(s.animated.div, {
@@ -83,10 +83,10 @@ function N(e) {
     });
 }
 function _(e) {
-    let { channel: t, title: n, closePopout: i, onFocus: s, onSelectEmoji: u, onSelectDisabledEmoji: d, onExpandedToggle: h, emojiSearchProps: C, recentlyUsedEmojis: f, analyticsOverride: _ } = e,
+    let { channel: t, title: n, closePopout: i, onFocus: s, onSelectEmoji: u, onSelectDisabledEmoji: d, onExpandedToggle: x, emojiSearchProps: C, recentlyUsedEmojis: f, analyticsOverride: _ } = e,
         E = (0, m.Dt)(),
         [S, A] = a.useState(!1),
-        M = (0, x.wC)(t.guild_id),
+        M = (0, h.wC)(t.guild_id),
         k = (0, o.uniqBy)([...M, ...y], 'name')
             .filter(
                 (e) =>
@@ -98,16 +98,16 @@ function _(e) {
             )
             .slice(0, I.e5);
     null != f && f.length > 0 && k.splice(k.length - 1, 1, f[0]);
-    let R = (e) => {
-            A(e), null == h || h(e);
+    let w = (e) => {
+            A(e), null == x || x(e);
         },
-        w = (e, t) => {
+        R = (e, t) => {
             if (null == e && t) {
                 i();
                 return;
             }
             null != e && u(e);
-            R(!t), t && v.kJ.setSearchPlaceholder(null);
+            w(!t), t && v.kJ.setSearchPlaceholder(null);
         };
     return (0, l.jsxs)(c.Dialog, {
         'aria-labelledby': E,
@@ -130,7 +130,7 @@ function _(e) {
                         className: r()(Z.animatedPicker, { [Z.animatedPickerTall]: S }),
                         headerClassName: r()(Z.emojiPickerHeader, { [Z.emojiPickerHeaderExpanded]: S }),
                         closePopout: i,
-                        onSelectEmoji: S ? w : () => {},
+                        onSelectEmoji: S ? R : () => {},
                         shouldHidePickerActions: !S,
                         wrapper: 'div',
                         pickerIntention: L,
@@ -139,11 +139,11 @@ function _(e) {
                             accessory: (0, l.jsx)(N, {
                                 otherAccessories: null == C ? void 0 : C.accessory,
                                 isEmojiPickerExpanded: S,
-                                onSetExpanded: R,
+                                onSetExpanded: w,
                                 onFocus: s
                             }),
                             onKeyDown: (e) => {
-                                null != e && e.key !== P.vn.TAB && (e.key !== P.vn.ENTER || e.shiftKey ? R(!0) : R(!S));
+                                null != e && e.key !== P.vn.TAB && (e.key !== P.vn.ENTER || e.shiftKey ? w(!0) : w(!S));
                             }
                         }
                     }),
@@ -171,7 +171,7 @@ function _(e) {
                                                 emoji: e,
                                                 isDisabled: n,
                                                 onClick: () => {
-                                                    n ? null == d || d(e) : w(e, !0);
+                                                    n ? null == d || d(e) : R(e, !0);
                                                 }
                                             })
                                         })

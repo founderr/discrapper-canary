@@ -69,7 +69,7 @@ function I(e) {
         ]
     });
 }
-function S(e) {
+function T(e) {
     let { description: t, expanded: n } = e;
     return null == t
         ? null
@@ -93,7 +93,7 @@ function S(e) {
                 })
             });
 }
-function T(e) {
+function S(e) {
     let { traits: t, traitsToHighlight: n, onInteraction: a } = e,
         l = i.useMemo(() => (null == n ? new Set() : new Set(n)), [n]),
         u = i.useCallback(
@@ -176,8 +176,8 @@ function A(e) {
         {
             tag: P,
             badge: k,
-            branding: { primaryColor: U, secondaryColor: G },
-            bannerHash: B,
+            branding: { primaryColor: U, secondaryColor: B },
+            bannerHash: G,
             gameActivity: Z
         } = n,
         F = (0, l.Z)(n.games),
@@ -192,8 +192,8 @@ function A(e) {
             H(!1);
         }, []),
         Q = v.intl.formatToPlainString(v.t['0WHArK'], { count: n.memberCount }),
-        X = null != D ? D : (0, _.pY)(n.id, B),
-        J = null == a && null == X ? { background: 'linear-gradient(90deg, '.concat(U, ', ').concat(G, ')') } : void 0,
+        X = null != D ? D : (0, _.pY)(n.id, G),
+        J = null == a && null == X ? { background: 'linear-gradient(90deg, '.concat(U, ', ').concat(B, ')') } : void 0,
         $ =
             null != a
                 ? a
@@ -334,11 +334,11 @@ function A(e) {
                             })
                         ]
                     }),
-                    (0, r.jsx)(S, {
+                    (0, r.jsx)(T, {
                         description: n.description,
                         expanded: f
                     }),
-                    (0, r.jsx)(T, {
+                    (0, r.jsx)(S, {
                         traits: ee,
                         traitsToHighlight: A,
                         onInteraction: et('traits')
@@ -373,7 +373,7 @@ function A(e) {
             O &&
                 (0, r.jsx)('div', {
                     className: b.cardBrandingFooter,
-                    style: { background: 'linear-gradient(90deg, '.concat(U, ', ').concat(G, ')') }
+                    style: { background: 'linear-gradient(90deg, '.concat(U, ', ').concat(B, ')') }
                 }),
             M
         ]

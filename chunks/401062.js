@@ -6,7 +6,7 @@ n.d(t, {
         return y;
     },
     vy: function () {
-        return T;
+        return S;
     },
     yX: function () {
         return i;
@@ -31,7 +31,7 @@ var r,
     v = n(353368),
     b = n(981631),
     I = n(710111);
-function S(e) {
+function T(e) {
     let t = new AbortController(),
         n = (0, a.throttle)((n) => {
             _.Z.getVoiceChannelId() !== e && t.abort();
@@ -41,9 +41,9 @@ function S(e) {
         onRequestProgress: n
     };
 }
-function T(e, t, n) {
+function S(e, t, n) {
     var r;
-    let { abortController: i, onRequestProgress: a } = S(e),
+    let { abortController: i, onRequestProgress: a } = T(e),
         o = null !== (r = m.Z.getState().animationType) && void 0 !== r ? r : v.q.BASIC,
         u = {
             animation_type: o,
@@ -65,7 +65,7 @@ function T(e, t, n) {
 function y(e, t, n, r) {
     var i, a;
     let o = c.ZP.getCustomEmojiById(null !== (i = t.emojiId) && void 0 !== i ? i : ''),
-        { abortController: l, onRequestProgress: u } = S(e),
+        { abortController: l, onRequestProgress: u } = T(e),
         _ = {
             sound_id: t.soundId,
             emoji_id: t.emojiId,

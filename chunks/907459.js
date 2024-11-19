@@ -22,8 +22,8 @@ var r = n(200651),
     v = n(74538),
     b = n(94795),
     I = n(327943),
-    S = n(539873),
-    T = n(981631),
+    T = n(539873),
+    S = n(981631),
     y = n(921944),
     A = n(474936),
     N = n(388032),
@@ -110,12 +110,12 @@ function L(e) {
         }));
     i.useEffect(() => {
         if (!!p)
-            E.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, {
+            E.default.track(S.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: A.cd.APP_ICON_UPSELL,
                 location_stack: a
             });
     }, [p, a]);
-    let v = (0, c.Z)(null, p ? b.O7 : T.dG4);
+    let v = (0, c.Z)(null, p ? b.O7 : S.dG4);
     return (i.useEffect(() => {
         if (!!p && !h) return b.O7;
     }, [p, h]),
@@ -131,7 +131,7 @@ function L(e) {
                           (0, r.jsx)(O, { markAsDismissed: n }),
                           (0, r.jsx)(l.Scroller, {
                               className: C.editorBody,
-                              children: (0, r.jsx)(S.Z, {
+                              children: (0, r.jsx)(T.Z, {
                                   className: C.selectionGroup,
                                   isEditor: !0
                               })

@@ -34,9 +34,9 @@ t.Z = i.memo(function () {
         t = (0, l.e7)([m.Z], () => m.Z.hasIncomingCalls()),
         n = (0, l.e7)([_.Z], () => _.Z.isSoundDisabled('call_ringing')),
         a = (0, l.e7)([h.Z], () => h.Z.disableSounds),
-        S = (0, l.e7)([f.Z], () => f.Z.getSoundpack()),
-        T = i.useRef(!1),
-        y = (0, o.Z)(() => (S === v.YC.CLASSIC ? (0, g.tu)(500 !== s().random(1, 1000) ? 'call_ringing' : s().sample(['call_ringing_beat', 'call_ringing_snow_halation']), 'call_ringing') : (0, g.uk)('call_ringing', S)), [S]);
+        T = (0, l.e7)([f.Z], () => f.Z.getSoundpack()),
+        S = i.useRef(!1),
+        y = (0, o.Z)(() => (T === v.YC.CLASSIC ? (0, g.tu)(500 !== s().random(1, 1000) ? 'call_ringing' : s().sample(['call_ringing_beat', 'call_ringing_snow_halation']), 'call_ringing') : (0, g.uk)('call_ringing', T)), [T]);
     return (
         i.useEffect(
             () => () => {
@@ -46,10 +46,10 @@ t.Z = i.memo(function () {
         ),
         i.useEffect(() => {
             if (a || n) {
-                T.current && (y.stop(), (T.current = !1));
+                S.current && (y.stop(), (S.current = !1));
                 return;
             }
-            t && !T.current ? (y.loop(), (T.current = !0)) : !t && T.current && (y.stop(), (T.current = !1));
+            t && !S.current ? (y.loop(), (S.current = !0)) : !t && S.current && (y.stop(), (S.current = !1));
         }, [n, a, t, y]),
         (0, u.useTransition)(e, {
             keys: (e) => {

@@ -1,6 +1,6 @@
 n.d(t, {
     Vq: function () {
-        return S;
+        return T;
     },
     Xo: function () {
         return O;
@@ -50,7 +50,7 @@ function I(e) {
         ...a
     });
 }
-function S(e, t, n) {
+function T(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         i = (0, c.W5)(e.status, t, n, r),
         a = (r ? e.size - (i.width / 2 + e.status / 2) : e.size - i.width) - e.offset;
@@ -60,8 +60,8 @@ function S(e, t, n) {
         y: e.size - i.height - e.offset
     };
 }
-function T(e, t, n, i) {
-    let a = S(n, i, t, !1),
+function S(e, t, n, i) {
+    let a = T(n, i, t, !1),
         s = (0, c.lm)(i, e);
     if (!t) {
         let t = a.height / 2 + n.stroke,
@@ -116,7 +116,7 @@ function y(e) {
     };
 }
 function A(e) {
-    let { children: t, size: n, onClick: i, onMouseDown: a, onKeyDown: o, onContextMenu: u, onMouseEnter: c, onMouseLeave: d, className: f, tabIndex: m, ariaLabel: b, ariaHidden: I, status: S, isMobile: T = !1, isTyping: y = !1, avatarDecoration: A, typingOffset: N, specs: C } = e,
+    let { children: t, size: n, onClick: i, onMouseDown: a, onKeyDown: o, onContextMenu: u, onMouseEnter: c, onMouseLeave: d, className: f, tabIndex: m, ariaLabel: b, ariaHidden: I, status: T, isMobile: S = !1, isTyping: y = !1, avatarDecoration: A, typingOffset: N, specs: C } = e,
         R = {
             width: (0, h.px)(n),
             height: (0, h.px)(n)
@@ -132,7 +132,7 @@ function A(e) {
                                 status: (0, p.u5)(t, n)
                             })
                           : e;
-                  })(b, S, T),
+                  })(b, T, S),
         D = C.size * g.hs,
         L = (function (e, t, n, r) {
             if (null == e) return null;
@@ -193,7 +193,7 @@ function A(e) {
                     return _.QS.AVATAR_DECORATION_STATUS_ROUND_120;
             }
             return null;
-        })(S, n, T, y),
+        })(T, n, S, y),
         x =
             null != A &&
             (0, r.jsx)('svg', {
@@ -371,7 +371,7 @@ function C(e) {
                         className: R
                     })
                 }),
-                null != O && null != I ? T(I, o, D, O) : null,
+                null != O && null != I ? S(I, o, D, O) : null,
                 null != O
                     ? (0, r.jsx)(d.u, {
                           text: E ? (0, p.u5)(O) : null,
@@ -384,7 +384,7 @@ function C(e) {
                                   children: [
                                       (0, r.jsx)('rect', {
                                           ...e,
-                                          ...S(D, O, o, l),
+                                          ...T(D, O, o, l),
                                           fill: w,
                                           mask: 'url(#'.concat((0, c.rs)(O, o, l), ')'),
                                           className: v.pointerEvents
@@ -406,11 +406,11 @@ function C(e) {
     });
 }
 function R(e) {
-    let { fromIsMobile: t = !0, fromStatus: n, fromColor: a, isMobile: l = !1, isTyping: _ = !1, typingIndicatorRef: m, isSpeaking: g = !1, size: E, src: S, status: C, statusColor: R, statusTooltip: O = !1, statusTooltipDelay: D, statusBackdropColor: L, 'aria-hidden': x = !1, 'aria-label': w, imageClassName: M } = e,
+    let { fromIsMobile: t = !0, fromStatus: n, fromColor: a, isMobile: l = !1, isTyping: _ = !1, typingIndicatorRef: m, isSpeaking: g = !1, size: E, src: T, status: C, statusColor: R, statusTooltip: O = !1, statusTooltipDelay: D, statusBackdropColor: L, 'aria-hidden': x = !1, 'aria-label': w, imageClassName: M } = e,
         P = (0, c.vj)(C, R),
         k = i.useId(),
         U = i.useId(),
-        [G] = i.useState(() => ({
+        [B] = i.useState(() => ({
             fill: a,
             ...y({
                 size: E,
@@ -419,7 +419,7 @@ function R(e) {
                 isTyping: !1
             })
         })),
-        B = i.useMemo(
+        G = i.useMemo(
             () => ({
                 fill: P,
                 ...y({
@@ -442,8 +442,8 @@ function R(e) {
         } = (0, f.useSpring)(
             {
                 config: b,
-                from: G,
-                to: B
+                from: B,
+                to: G
             },
             document.hasFocus() ? 'animate-always' : 'animate-never'
         ),
@@ -498,12 +498,12 @@ function R(e) {
                     height: K,
                     mask: 'url(#'.concat(k, ')'),
                     children: (0, r.jsx)(N, {
-                        src: S,
+                        src: T,
                         isSpeaking: g,
                         className: M
                     })
                 }),
-                null != L && T(L, l, z, C),
+                null != L && S(L, l, z, C),
                 (0, r.jsx)(d.u, {
                     text: O ? (0, p.u5)(C) : null,
                     'aria-label': !1,

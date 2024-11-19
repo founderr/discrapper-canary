@@ -63,10 +63,10 @@ var t, n;
                                             b = v.order;
                                         if (b > _) break;
                                         var I = null == s.prevCapture ? '' : s.prevCapture[0],
-                                            S = v.match(t, s, I);
-                                        if (S) {
-                                            var T = v.quality ? v.quality(S, s, I) : 0;
-                                            (b < _ || T > f) && ((l = E), (c = v), (d = S), (f = T), (_ = b));
+                                            T = v.match(t, s, I);
+                                        if (T) {
+                                            var S = v.quality ? v.quality(T, s, I) : 0;
+                                            (b < _ || S > f) && ((l = E), (c = v), (d = T), (f = S), (_ = b));
                                         }
                                     }
                             }
@@ -132,8 +132,8 @@ var t, n;
                 }
                 return e;
             },
-            S = /[<>&"']/g,
-            T = {
+            T = /[<>&"']/g,
+            S = {
                 '<': '&lt;',
                 '>': '&gt;',
                 '&': '&amp;',
@@ -143,8 +143,8 @@ var t, n;
                 '`': '&#96;'
             },
             y = function (e) {
-                return String(e).replace(S, function (e) {
-                    return T[e];
+                return String(e).replace(T, function (e) {
+                    return S[e];
                 });
             },
             A = /\\([^0-9A-Za-z\s])/g,
@@ -171,8 +171,8 @@ var t, n;
             P = /^ (?= *`)|(` *) $/g,
             k = / *\n+$/,
             U = RegExp('^( *)(' + D + ') [\\s\\S]+?(?:\n{2,}(?! )(?!\\1' + D + ' )\\n*|\\s*\n*$)'),
-            G = /(?:^|\n)( *)$/;
-        var B =
+            B = /(?:^|\n)( *)$/;
+        var G =
                 ((e = /^ *\| *| *\| *$/g),
                 (t = / *$/),
                 (n = /^ *-+: *$/),
@@ -308,8 +308,8 @@ var t, n;
                 },
                 nptable: {
                     order: Y++,
-                    match: h(B.NPTABLE_REGEX),
-                    parse: B.parseNpTable,
+                    match: h(G.NPTABLE_REGEX),
+                    parse: G.parseNpTable,
                     react: null,
                     html: null
                 },
@@ -391,7 +391,7 @@ var t, n;
                     order: Y++,
                     match: function (e, t) {
                         var n = null == t.prevCapture ? '' : t.prevCapture[0],
-                            r = G.exec(n),
+                            r = B.exec(n),
                             i = t._list || !t.inline;
                         return r && i ? ((e = r[1] + e), U.exec(e)) : null;
                     },
@@ -471,8 +471,8 @@ var t, n;
                 },
                 table: {
                     order: Y++,
-                    match: h(B.TABLE_REGEX),
-                    parse: B.parseTable,
+                    match: h(G.TABLE_REGEX),
+                    parse: G.parseTable,
                     react: function (e, t, n) {
                         var r = function (t) {
                                 return null == e.align[t] ? {} : { textAlign: e.align[t] };

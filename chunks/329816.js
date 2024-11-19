@@ -18,8 +18,8 @@ var r = n(200651),
     v = n(315263),
     b = n(40851),
     I = n(607070),
-    S = n(899663),
-    T = n(793903),
+    T = n(899663),
+    S = n(793903),
     y = n(213609),
     A = n(613413),
     N = n(94795),
@@ -34,8 +34,8 @@ var r = n(200651),
     P = n(482215),
     k = n(947519),
     U = n(243778),
-    G = n(314910),
-    B = n(84615),
+    B = n(314910),
+    G = n(84615),
     Z = n(429142),
     F = n(813744),
     V = n(311476),
@@ -117,19 +117,19 @@ t.Z = function (e) {
     }, [eE, ev, eg, a]);
     let eb = i.useRef(document.body),
         eI = (ep && !el) || ev,
-        eS = ec && !ef && !ev,
-        eT = eu || ed,
+        eT = ec && !ef && !ev,
+        eS = eu || ed,
         { enabled: ey } = V.Z.useExperiment(
             { location: 'AppSkeleton' },
             {
-                autoTrackExposure: eT && (eI || eS),
-                disable: !eT
+                autoTrackExposure: eS && (eI || eT),
+                disable: !eS
             }
         );
     return (0, r.jsx)(
         j.Z,
         {
-            children: (0, r.jsx)(S.Z, {
+            children: (0, r.jsx)(T.Z, {
                 children: (0, r.jsxs)(_.RedesignIconContextProvider, {
                     children: [
                         (0, r.jsx)(J.Z, { skipsSettingDefaultPageTitle: n }),
@@ -144,7 +144,7 @@ t.Z = function (e) {
                                         (0, r.jsx)(b.Wu, {
                                             appContext: er.IlC.APP,
                                             renderWindow: window,
-                                            children: (0, r.jsxs)(G.yP, {
+                                            children: (0, r.jsxs)(B.yP, {
                                                 children: [
                                                     null != f
                                                         ? (0, r.jsx)(eo, {
@@ -170,7 +170,7 @@ t.Z = function (e) {
                                                                 'data-app-not-dev-tools': !0,
                                                                 children: (0, r.jsx)(M.m, {
                                                                     children: (0, r.jsx)(Z.OR, {
-                                                                        children: (0, r.jsx)(T.Z.Provider, {
+                                                                        children: (0, r.jsx)(S.Z.Provider, {
                                                                             value: y.Z,
                                                                             children: (0, r.jsxs)(w.p, {
                                                                                 children: [
@@ -182,8 +182,8 @@ t.Z = function (e) {
                                                                                     (0, r.jsx)(m.Z, {}),
                                                                                     (0, r.jsx)(_.Modals, {}),
                                                                                     (0, r.jsx)(g.Z, {}),
-                                                                                    (0, r.jsx)(B.Ox, {}),
-                                                                                    (0, r.jsx)(G.Un, {}),
+                                                                                    (0, r.jsx)(G.Ox, {}),
+                                                                                    (0, r.jsx)(B.Un, {}),
                                                                                     (0, r.jsx)(Z.ot, {}),
                                                                                     (0, r.jsx)(_.ToastContainer, {}),
                                                                                     (0, r.jsx)(A.Z, {}),
@@ -198,16 +198,16 @@ t.Z = function (e) {
                                                             (0, r.jsx)(D.Z, {}),
                                                             (0, r.jsx)(h.Z, {}),
                                                             eI && !ey && (0, r.jsx)(x.Z, { markAsDismissed: eg }),
-                                                            eS &&
+                                                            eT &&
                                                                 !ey &&
                                                                 (0, r.jsx)(R.Z, {
                                                                     isCoachmark: eE,
                                                                     markAsDismissed: eg
                                                                 }),
-                                                            (eI || eS) &&
+                                                            (eI || eT) &&
                                                                 ey &&
                                                                 (0, r.jsx)(Y.Z, {
-                                                                    initialTab: eS ? Y._.APP_ICONS : Y._.CLIENT_THEMES,
+                                                                    initialTab: eT ? Y._.APP_ICONS : Y._.CLIENT_THEMES,
                                                                     markAsDismissed: eg
                                                                 }),
                                                             (0, r.jsx)(k.Z, { mobile: v })

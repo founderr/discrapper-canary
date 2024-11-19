@@ -435,7 +435,7 @@ class b extends o.C {
     }
 }
 let I = new b();
-class S extends o.C {
+class T extends o.C {
     internalJsonWrite(e, t) {
         return this.refJsonWriter.scalar(12, e.value, 'value', !1, !0);
     }
@@ -484,4 +484,4 @@ class S extends o.C {
         ]);
     }
 }
-new S();
+new T();

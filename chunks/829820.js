@@ -6,7 +6,7 @@ n.d(t, {
         return b;
     },
     Lz: function () {
-        return S;
+        return T;
     }
 }),
     n(47120);
@@ -84,7 +84,7 @@ function I(e, t, n, i) {
         spotifyData: s
     };
 }
-function S(e, t, n) {
+function T(e, t, n) {
     let i = v(e, t),
         { notPlayable: a, syncingWithUser: s, syncingWithParty: o, isCurrentUser: l } = i,
         { loading: u, startLoading: c, clearLoading: _ } = E(i),

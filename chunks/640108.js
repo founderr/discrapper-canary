@@ -25,8 +25,8 @@ var r,
     v = n(626135),
     b = n(70956),
     I = n(36703),
-    S = n(228488),
-    T = n(540026),
+    T = n(228488),
+    S = n(540026),
     y = n(455813),
     A = n(283756),
     N = n(793148),
@@ -67,7 +67,7 @@ function U(e) {
         n = t % 60;
     return ''.concat((t - n) / 60, ':').concat(String(n).padStart(2, '0'));
 }
-let G = (e) => {
+let B = (e) => {
     let { current: t, duration: n } = e,
         r = null != t ? U(t) : w,
         i = null != n ? U(n) : w;
@@ -92,7 +92,7 @@ let G = (e) => {
         })
     );
 };
-class B extends (r = s.Component) {
+class G extends (r = s.Component) {
     componentDidMount() {
         this.state.translateY.setValue(this.props.autoPlay ? 1 : 0);
     }
@@ -180,18 +180,18 @@ class B extends (r = s.Component) {
             children: [
                 this.renderPlayIcon(),
                 'string' == typeof _ || _ > 250
-                    ? (0, a.jsx)(G, {
+                    ? (0, a.jsx)(B, {
                           current: n,
                           duration: r
                       })
                     : null,
-                (0, a.jsx)(T.Z, {
+                (0, a.jsx)(S.Z, {
                     buffers: e,
                     value: null != r ? r : 0,
                     onDrag: s,
                     onDragEnd: o,
                     onDragStart: l,
-                    type: T.Z.Types.DURATION,
+                    type: S.Z.Types.DURATION,
                     ref: this.setDurationRef
                 }),
                 (0, a.jsx)('div', {
@@ -203,7 +203,7 @@ class B extends (r = s.Component) {
                         minValue: 0,
                         maxValue: 1,
                         currentWindow: window,
-                        onValueChange: (e) => s(e, T.Z.Types.VOLUME),
+                        onValueChange: (e) => s(e, S.Z.Types.VOLUME),
                         onToggleMute: u,
                         onVolumeShow: c,
                         onVolumeHide: f,
@@ -262,7 +262,7 @@ function Z(e) {
         ]
     });
 }
-x(B, 'defaultProps', { disabled: !1 });
+x(G, 'defaultProps', { disabled: !1 });
 class F extends s.Component {
     pop() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
@@ -546,15 +546,15 @@ class H extends (i = s.PureComponent) {
             { current: d } = this.playPausePopRef;
         if (null == c) return;
         a && !t.playing ? (this.play(), this.handleMouseMove(), this.handleUIUpdate(), t.hasClickedPlay && (null == d || d.pop(a))) : !a && t.playing && (c.pause(), null == d || d.pop(a), null == n || n());
-        let f = (0, S.fn)(c.parentNode, c);
-        s && !t.fullscreen && null != f ? ((0, S.Dj)(f), f.addEventListener(S.NO, this.handleFullScreenExit)) : !s && t.fullscreen && null != f && (f.removeEventListener(S.NO, this.handleFullScreenExit), (0, S.Pr)(f)), l === T.Z.Types.DURATION && t.dragging !== T.Z.Types.DURATION && a ? c.pause() : l !== T.Z.Types.DURATION && t.dragging === T.Z.Types.DURATION && a && c.play(), o !== t.muted && ((c.muted = o), null == i || i(o)), u !== t.volume && ((c.volume = u), null == r || r(u));
+        let f = (0, T.fn)(c.parentNode, c);
+        s && !t.fullscreen && null != f ? ((0, T.Dj)(f), f.addEventListener(T.NO, this.handleFullScreenExit)) : !s && t.fullscreen && null != f && (f.removeEventListener(T.NO, this.handleFullScreenExit), (0, T.Pr)(f)), l === S.Z.Types.DURATION && t.dragging !== S.Z.Types.DURATION && a ? c.pause() : l !== S.Z.Types.DURATION && t.dragging === S.Z.Types.DURATION && a && c.play(), o !== t.muted && ((c.muted = o), null == i || i(o)), u !== t.volume && ((c.volume = u), null == r || r(u));
     }
     componentWillUnmount() {
         this._unmounted = !0;
         let { current: e } = this.mediaRef;
         if (null == e) return;
-        let t = (0, S.fn)(e.parentNode, e);
-        null != t && (t.removeEventListener(S.NO, this.handleFullScreenExit), (0, S.Pr)(t));
+        let t = (0, T.fn)(e.parentNode, e);
+        null != t && (t.removeEventListener(T.NO, this.handleFullScreenExit), (0, T.Pr)(t));
     }
     play() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
@@ -664,7 +664,7 @@ class H extends (i = s.PureComponent) {
             } = this,
             b = this.getWidth();
         return f || n || t === P.AUDIO
-            ? (0, a.jsx)(B, {
+            ? (0, a.jsx)(G, {
                   buffers: u,
                   currentTime: c,
                   duration: d,
@@ -696,7 +696,7 @@ class H extends (i = s.PureComponent) {
                                 iconClassName: D.controlIcon,
                                 guestWindow: window,
                                 onClick: this.toggleFullscreen,
-                                node: (0, S.fn)(null == e ? void 0 : e.parentNode, e)
+                                node: (0, T.fn)(null == e ? void 0 : e.parentNode, e)
                             })
                           : null
               })
@@ -804,8 +804,8 @@ class H extends (i = s.PureComponent) {
             x(this, 'handleFullScreenExit', () => {
                 let { current: e } = this.mediaRef;
                 if (null == e) return;
-                let t = (0, S.fn)(e.parentNode, e);
-                (null == t || !(0, S.rB)(t)) && this.setState({ fullscreen: !1 });
+                let t = (0, T.fn)(e.parentNode, e);
+                (null == t || !(0, T.rB)(t)) && this.setState({ fullscreen: !1 });
             }),
             x(this, 'toggleFullscreen', () => {
                 let e = !this.state.fullscreen;
@@ -829,8 +829,8 @@ class H extends (i = s.PureComponent) {
             }),
             x(this, 'handleDrag', (e, t) => {
                 let { current: n } = this.mediaRef;
-                if (t === T.Z.Types.DURATION) null != n && isFinite(n.duration) && this.setTime(n.duration * e, !1);
-                else if (t === T.Z.Types.VOLUME) {
+                if (t === S.Z.Types.DURATION) null != n && isFinite(n.duration) && this.setTime(n.duration * e, !1);
+                else if (t === S.Z.Types.VOLUME) {
                     let t = (0, I.A)(e, 1);
                     0 === t
                         ? this.setState({

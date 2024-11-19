@@ -26,19 +26,19 @@ t.Z = {
                     v = n.altBoundary,
                     b = n.flipVariations,
                     I = void 0 === b || b,
-                    S = n.allowedAutoPlacements,
-                    T = t.options.placement,
-                    y = (0, i.Z)(T) === T,
+                    T = n.allowedAutoPlacements,
+                    S = t.options.placement,
+                    y = (0, i.Z)(S) === S,
                     A =
                         h ||
                         (y || !I
-                            ? [(0, r.Z)(T)]
+                            ? [(0, r.Z)(S)]
                             : (function (e) {
                                   if ((0, i.Z)(e) === l.d7) return [];
                                   var t = (0, r.Z)(e);
                                   return [(0, a.Z)(e), t, (0, a.Z)(t)];
-                              })(T)),
-                    N = [T].concat(A).reduce(function (e, n) {
+                              })(S)),
+                    N = [S].concat(A).reduce(function (e, n) {
                         return e.concat(
                             (0, i.Z)(n) === l.d7
                                 ? (0, o.Z)(t, {
@@ -47,7 +47,7 @@ t.Z = {
                                       rootBoundary: E,
                                       padding: m,
                                       flipVariations: I,
-                                      allowedAutoPlacements: S
+                                      allowedAutoPlacements: T
                                   })
                                 : n
                         );
@@ -66,20 +66,20 @@ t.Z = {
                     P = (0, u.Z)(w) === l.BL,
                     k = [l.we, l.I].indexOf(M) >= 0,
                     U = k ? 'width' : 'height',
-                    G = (0, s.Z)(t, {
+                    B = (0, s.Z)(t, {
                         placement: w,
                         boundary: g,
                         rootBoundary: E,
                         altBoundary: v,
                         padding: m
                     }),
-                    B = k ? (P ? l.F2 : l.t$) : P ? l.I : l.we;
-                C[U] > R[U] && (B = (0, r.Z)(B));
-                var Z = (0, r.Z)(B),
+                    G = k ? (P ? l.F2 : l.t$) : P ? l.I : l.we;
+                C[U] > R[U] && (G = (0, r.Z)(G));
+                var Z = (0, r.Z)(G),
                     F = [];
                 if (
-                    (f && F.push(G[M] <= 0),
-                    p && F.push(G[B] <= 0, G[Z] <= 0),
+                    (f && F.push(B[M] <= 0),
+                    p && F.push(B[G] <= 0, B[Z] <= 0),
                     F.every(function (e) {
                         return e;
                     }))

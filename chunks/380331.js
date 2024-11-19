@@ -18,8 +18,8 @@ var r = n(200651),
     v = n(626135),
     b = n(624138),
     I = n(543241),
-    S = n(883661),
-    T = n(880949),
+    T = n(883661),
+    S = n(880949),
     y = n(784222),
     A = n(149203),
     N = n(981631),
@@ -34,9 +34,9 @@ let D = (0, b.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_SIZE),
     P = (0, b.Mg)(O.__invalid_unicodeCategoryShortcutHeight),
     k = (0, b.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
     U = (0, b.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
-    G = x + L + 2 * M,
-    B = D + L,
-    Z = B + (k + 2 * U),
+    B = x + L + 2 * M,
+    G = D + L,
+    Z = G + (k + 2 * U),
     F = x + w + 2 * M;
 function V(e) {
     let { activeIndex: t, categoryIndex: n, analyticsContext: a, categories: o, category: l, handleCategorySelect: c, isWindowFocused: d, useReducedMotion: _ } = e,
@@ -64,7 +64,7 @@ function V(e) {
             },
             children: [
                 null != E
-                    ? (0, r.jsx)(T.Z, {
+                    ? (0, r.jsx)(S.Z, {
                           guild: E,
                           isSelected: m,
                           shouldAnimate: !_ && d,
@@ -72,7 +72,7 @@ function V(e) {
                       })
                     : null,
                 null == E && null != h
-                    ? (0, r.jsx)(S.Z, {
+                    ? (0, r.jsx)(T.Z, {
                           categoryId: h,
                           className: O.categoryIcon,
                           height: x,
@@ -106,8 +106,8 @@ t.Z = (e) => {
         }),
         v = (0, _.O)(),
         b = (0, I.kI)(o, u),
-        S = i.useRef(null),
-        T = (0, c.e7)([E.Z], () => E.Z.isFocused()),
+        T = i.useRef(null),
+        S = (0, c.e7)([E.Z], () => E.Z.isFocused()),
         N = (0, c.e7)([p.Z], () => p.Z.useReducedMotion, []),
         C = i.useMemo(
             () =>
@@ -123,22 +123,22 @@ t.Z = (e) => {
                                 category: n,
                                 categoryIndex: t,
                                 handleCategorySelect: g,
-                                isWindowFocused: T,
+                                isWindowFocused: S,
                                 useReducedMotion: N
                             },
                             t
                         );
                 }),
-            [d, v, b, g, T, N]
+            [d, v, b, g, S, N]
         ),
         D = i.useMemo(() => [8, 8, 0, 8], []),
         M = i.useCallback(
             (e, t) => {
                 let n = b[t];
-                if (n.type === A.En.RECENT) return G;
+                if (n.type === A.En.RECENT) return B;
                 if (n.type === A.En.GUILD) {
                     let e = b[t + 1];
-                    return null != e && e.type !== A.En.GUILD ? Z : B;
+                    return null != e && e.type !== A.En.GUILD ? Z : G;
                 }
                 return F;
             },
@@ -157,7 +157,7 @@ t.Z = (e) => {
             b.forEach((i) => {
                 i.type === A.En.GUILD ? ((t += 1), (n += 1)) : i.type === A.En.UNICODE ? (r += 1) : ((e += 1), (t += 1));
             });
-            let i = G + t * B + Z;
+            let i = B + t * G + Z;
             return {
                 nonUnicodeCategoryCount: t,
                 firstUnicodeCategoryIndex: t,
@@ -172,7 +172,7 @@ t.Z = (e) => {
     let q = i.useCallback(
             (e) => {
                 var t;
-                let n = null === (t = S.current) || void 0 === t ? void 0 : t.getListDimensions();
+                let n = null === (t = T.current) || void 0 === t ? void 0 : t.getListDimensions();
                 if (null != n) e + n.height - k >= Y ? z(!1) : z(!0);
             },
             [Y]
@@ -180,7 +180,7 @@ t.Z = (e) => {
         Q = i.useCallback(
             (e) => {
                 var t;
-                e(H), null === (t = S.current) || void 0 === t || t.scrollTo(Y);
+                e(H), null === (t = T.current) || void 0 === t || t.scrollTo(Y);
             },
             [Y, H]
         ),
@@ -207,7 +207,7 @@ t.Z = (e) => {
         ),
         $ = K ? 'shortcut' : 'hiddenshortcut';
     return (0, r.jsx)(m.Z, {
-        categoryListRef: S,
+        categoryListRef: T,
         expressionsListRef: n,
         className: t,
         store: h.kJ,

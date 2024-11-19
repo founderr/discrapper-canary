@@ -18,13 +18,13 @@ let p = {},
     v = 'lastChangeLogDate',
     b = null,
     I = null,
-    S = new Set();
-function T() {
+    T = new Set();
+function S() {
     b = d.l4.getSetting();
 }
 class y extends (r = o.ZP.Store) {
     initialize() {
-        this.waitFor(c.default, f.Z), this.syncWith([c.default], () => !0), this.syncWith([f.Z], T);
+        this.waitFor(c.default, f.Z), this.syncWith([c.default], () => !0), this.syncWith([f.Z], S);
         let e = l.K.get(v);
         if (null != e)
             try {
@@ -68,7 +68,7 @@ class y extends (r = o.ZP.Store) {
         };
     }
     isLocked() {
-        return S.size > 0;
+        return T.size > 0;
     }
 }
 (s = 'ChangelogStore'),
@@ -83,13 +83,13 @@ class y extends (r = o.ZP.Store) {
     (t.Z = new y(u.Z, {
         CHANGE_LOG_LOCK: function (e) {
             let { key: t } = e;
-            if (S.has(t)) return !1;
-            (S = new Set(S)).add(t);
+            if (T.has(t)) return !1;
+            (T = new Set(T)).add(t);
         },
         CHANGE_LOG_UNLOCK: function (e) {
             let { key: t } = e;
-            if (!S.has(t)) return !1;
-            (S = new Set(S)).delete(t);
+            if (!T.has(t)) return !1;
+            (T = new Set(T)).delete(t);
         },
         CHANGE_LOG_SET_CONFIG: function (e) {
             let { config: t, latestChangelogId: n } = e;

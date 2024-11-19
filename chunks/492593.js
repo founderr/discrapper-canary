@@ -28,9 +28,9 @@ t.Z = function (e) {
             hasThread: v,
             isSystemMessage: b,
             hasReply: I,
-            ...S
+            ...T
         } = e,
-        T = (0, r.jsx)(s.FocusRing, {
+        S = (0, r.jsx)(s.FocusRing, {
             ...E,
             children: (0, r.jsxs)('div', {
                 className: a()(t, {
@@ -44,7 +44,7 @@ t.Z = function (e) {
                     [o.hasReply]: I
                 }),
                 ref: g,
-                ...S,
+                ...T,
                 role: 'article',
                 children: [
                     c,
@@ -63,5 +63,5 @@ t.Z = function (e) {
                 ]
             })
         });
-    return u ? (0, r.jsx)(s.FocusBlock, { children: T }) : T;
+    return u ? (0, r.jsx)(s.FocusBlock, { children: S }) : S;
 };

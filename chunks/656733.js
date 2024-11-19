@@ -32,8 +32,8 @@ let _ = {
     v = [],
     b = [],
     I = [],
-    S = [];
-function T(e) {
+    T = [];
+function S(e) {
     return e.replace(/^https?:/, '');
 }
 class y extends (r = o.ZP.Store) {
@@ -59,7 +59,7 @@ class y extends (r = o.ZP.Store) {
         return I;
     }
     getTrendingSearchTerms() {
-        return S;
+        return T;
     }
 }
 (s = 'GIFPickerViewStore'),
@@ -86,8 +86,8 @@ class y extends (r = o.ZP.Store) {
                     return {
                         width: t,
                         height: n,
-                        src: T(r),
-                        gifSrc: T(i),
+                        src: S(r),
+                        gifSrc: S(i),
                         url: a,
                         id: s,
                         format: !(function (e) {
@@ -128,14 +128,14 @@ class y extends (r = o.ZP.Store) {
                               type: d.wI2.TRENDING_GIFS,
                               icon: u.I,
                               name: f.intl.string(f.t.H6zNFx),
-                              src: T(e.trendingGIFPreview.src),
+                              src: S(e.trendingGIFPreview.src),
                               format: l.EO.IMAGE
                           }
                       ]
                     : []),
                 ...t.map((e) => ({
                     ...e,
-                    src: T(e.src),
+                    src: S(e.src),
                     type: d.wI2.TRENDING_CATEGORY,
                     format: l.EO.VIDEO
                 }))
@@ -147,6 +147,6 @@ class y extends (r = o.ZP.Store) {
         },
         GIF_PICKER_TRENDING_SEARCH_TERMS_SUCCESS: function (e) {
             let { items: t } = e;
-            S = t;
+            T = t;
         }
     }));

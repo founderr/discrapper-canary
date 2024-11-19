@@ -1,6 +1,6 @@
 n.d(t, {
     K: function () {
-        return S;
+        return T;
     }
 }),
     n(653041);
@@ -35,7 +35,7 @@ function E(e, t, n) {
 let v = (0, l.Z)(),
     b = (0, l.Z)(),
     I = (0, l.Z)();
-class S extends (r = a.Component) {
+class T extends (r = a.Component) {
     getPaddingRight() {
         let { maxLength: e, showCharacterCountFullPadding: t } = this.props;
         if (null == e) return 10;
@@ -100,7 +100,7 @@ class S extends (r = a.Component) {
     }
     render() {
         var e, t;
-        let { disabled: n, value: r, placeholder: a, autoFocus: s, minLength: l, maxLength: c, allowOverflow: f, spellCheck: E, resizeable: v, className: S, id: T, rows: y, flex: A, autosize: N, required: C, onInvalid: R, inputRef: O } = this.props,
+        let { disabled: n, value: r, placeholder: a, autoFocus: s, minLength: l, maxLength: c, allowOverflow: f, spellCheck: E, resizeable: v, className: T, id: S, rows: y, flex: A, autosize: N, required: C, onInvalid: R, inputRef: O } = this.props,
             D = N ? _.l : 'textarea',
             L = this.hasError(),
             x = null !== (t = this.props['aria-labelledby']) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId,
@@ -114,7 +114,7 @@ class S extends (r = a.Component) {
                         (0, i.jsx)(u.t, {
                             children: (0, i.jsx)(D, {
                                 type: 'text',
-                                className: o()(m.inputDefault, h.textArea, g.scrollbarDefault, S, {
+                                className: o()(m.inputDefault, h.textArea, g.scrollbarDefault, T, {
                                     [m.error]: L,
                                     [m.disabled]: n,
                                     [h.resizeable]: v
@@ -123,7 +123,7 @@ class S extends (r = a.Component) {
                                 'aria-describedby': w,
                                 'aria-invalid': L,
                                 style: { paddingRight: this.getPaddingRight() },
-                                id: T,
+                                id: S,
                                 disabled: n,
                                 placeholder: a,
                                 value: r,
@@ -188,8 +188,8 @@ class S extends (r = a.Component) {
             (this.state = { dirty: null !== (t = e.defaultDirty) && void 0 !== t && t });
     }
 }
-E(S, 'contextType', c.q3),
-    E(S, 'defaultProps', {
+E(T, 'contextType', c.q3),
+    E(T, 'defaultProps', {
         name: '',
         disabled: !1,
         placeholder: '',

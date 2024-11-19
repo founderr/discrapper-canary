@@ -42,15 +42,15 @@ function I(e) {
         supportsOutOfProcessOverlay: e.supportsOutOfProcessOverlay
     };
 }
-function S(e) {
+function T(e) {
     let t = e instanceof d.Z ? I(e) : e;
     for (let n of (h.set(e.id, t), (m[e.name.toLowerCase()] = t), e.aliases)) m[n.toLowerCase()] = t;
     if ((0, f.isDesktop)()) for (let n of e.executables) g[n.name] = t;
 }
-class T extends (a = s.ZP.PersistedStore) {
+class S extends (a = s.ZP.PersistedStore) {
     initialize(e) {
         var t;
-        null != e && (null != e.detectableGamesEtag && (v = e.detectableGamesEtag), null === (t = e.detectableGames) || void 0 === t || t.forEach((e) => S(e)));
+        null != e && (null != e.detectableGamesEtag && (v = e.detectableGamesEtag), null === (t = e.detectableGames) || void 0 === t || t.forEach((e) => T(e)));
     }
     getState() {
         return (0, f.isDesktop)()
@@ -112,9 +112,9 @@ class T extends (a = s.ZP.PersistedStore) {
         (E[e] = !0), o.K.set(p, E);
     }
 }
-_(T, 'displayName', 'GameStore'),
-    _(T, 'persistKey', 'GameStore'),
-    _(T, 'migrations', [
+_(S, 'displayName', 'GameStore'),
+    _(S, 'persistKey', 'GameStore'),
+    _(S, 'migrations', [
         (e) => {
             var t, n;
             if (null == e)
@@ -135,10 +135,10 @@ _(T, 'displayName', 'GameStore'),
                       detectableGames: []
                   }
     ]),
-    (t.Z = new T(l.Z, {
+    (t.Z = new S(l.Z, {
         OVERLAY_INITIALIZE: function (e) {
             let { detectableApplications: t } = e;
-            for (let e of t) S(e);
+            for (let e of t) T(e);
         },
         GAMES_DATABASE_FETCH: function () {
             r = !0;
@@ -149,7 +149,7 @@ _(T, 'displayName', 'GameStore'),
         GAMES_DATABASE_UPDATE: function (e) {
             let { games: t, etag: n } = e;
             for (let e of (null != n && v !== n && (v = n), t))
-                S(
+                T(
                     (function (e) {
                         var t, n, r, i, a, s;
                         return {

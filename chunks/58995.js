@@ -18,8 +18,8 @@ var r = n(200651),
     v = n(594174),
     b = n(70956),
     I = n(709054),
-    S = n(51144),
-    T = n(443603),
+    T = n(51144),
+    S = n(443603),
     y = n(981631),
     A = n(921944),
     N = n(388032),
@@ -68,13 +68,13 @@ t.Z = i.memo(function (e) {
     w && !t && b && x >= O && M.push(l.z.NITROWEEN_COACHMARKS);
     let [P, k] = (0, p.US)(M),
         U = null != P,
-        G = (0, S.Ft)(n),
-        { Component: B, events: Z, play: F } = (0, u.$)();
+        B = (0, T.Ft)(n),
+        { Component: G, events: Z, play: F } = (0, u.$)();
     if (t) return null;
     let V = () => {
         (0, h.Z)({
             isGift: !0,
-            giftRecipient: null == G ? void 0 : G,
+            giftRecipient: null == B ? void 0 : B,
             giftMessage: N.intl.string(N.t['rX/m/f']),
             initialPlanId: null,
             analyticsLocations: a,
@@ -101,7 +101,7 @@ t.Z = i.memo(function (e) {
                     onCheckItOutClick: V,
                     markAsDismissed: k
                 }),
-            (0, r.jsx)(T.Z, {
+            (0, r.jsx)(S.Z, {
                 innerClassName: R.button,
                 'aria-label': N.intl.string(N.t.Z1RnTk),
                 isActive: !1,
@@ -110,7 +110,7 @@ t.Z = i.memo(function (e) {
                 },
                 ...Z,
                 children: (0, r.jsx)(D, {
-                    animatedIconComponent: B,
+                    animatedIconComponent: G,
                     hovered: s,
                     isCoachmarkDismissed: !U
                 })

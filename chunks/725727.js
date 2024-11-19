@@ -35,12 +35,12 @@ function g() {
         g = (0, i.e7)([l.Z], () => l.Z.hasAnyUnexpiredOffer()),
         E = (0, i.e7)([o.ZP], () => o.ZP.inReverseTrial()),
         [v, b] = r.useState(!1),
-        [I, S] = r.useState([]);
+        [I, T] = r.useState([]);
     r.useEffect(() => {
         null != e && a.Z.wait(() => _.ZP.markOutboundPromotionsSeen());
     }, [e]);
-    let T = r.useCallback((e) => {
-            S((t) =>
+    let S = r.useCallback((e) => {
+            T((t) =>
                 t.some((t) => {
                     let { promotion: n } = t;
                     return n.id === e.promotion.id;
@@ -67,10 +67,10 @@ function g() {
             a.Z.wait(() => {
                 (0, f.t8)()
                     .then((e) => {
-                        S(e), b(!0);
+                        T(e), b(!0);
                     })
                     .catch(() => {
-                        S([]), b(!0);
+                        T([]), b(!0);
                     });
             });
         }, []);
@@ -92,7 +92,7 @@ function g() {
         activeOutboundPromotions: C,
         claimedEndedOutboundPromotions: O.filter((e) => (0, f.ZC)(e.promotion)),
         claimedOutboundPromotionCodeMap: N,
-        addClaimedOutboundPromotionCode: T
+        addClaimedOutboundPromotionCode: S
     };
 }
 function E() {

@@ -19,7 +19,7 @@ var r = n(200651),
 function m(e) {
     let { color: t = 'default', label: n, checked: a, subtext: m, disabled: g, isFocused: E, menuItemProps: v, action: b } = e,
         I = i.useRef(null),
-        S = (0, d.Q)('MenuRadioItem');
+        T = (0, d.Q)('MenuRadioItem');
     return (
         i.useEffect(() => {
             E && (0, u.F)(I);
@@ -48,7 +48,7 @@ function m(e) {
                 }),
                 (0, r.jsx)('div', {
                     className: h.iconContainer,
-                    children: S
+                    children: T
                         ? (0, r.jsx)(c.RadioIndicator, {
                               checked: a,
                               radioItemIconClassName: h.radioIcon

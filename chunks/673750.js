@@ -30,8 +30,8 @@ var r,
     v = n(651655),
     b = n(861990),
     I = n(141795),
-    S = n(981631),
-    T = n(959517);
+    T = n(981631),
+    S = n(959517);
 function y(e, t, n) {
     return (
         t in e
@@ -84,7 +84,7 @@ class D extends v.Z {
     startQueueMetricTimers(e) {
         let t = O.map((e) =>
             setTimeout(() => {
-                (0, d.yw)(S.rMx.SEND_MESSAGE_QUEUED, { queued_duration_ms: e });
+                (0, d.yw)(T.rMx.SEND_MESSAGE_QUEUED, { queued_duration_ms: e });
             }, e)
         );
         this.analyticsTimeouts.set(e, t);
@@ -96,7 +96,7 @@ class D extends v.Z {
     createResponseHandler(e, t) {
         return (n) => {
             if ((null != e && (this.requests.delete(e), this.cancelQueueMetricTimers(e)), n.hasErr)) return t(null, n);
-            if (null != n.body && (n.body.code === S.evJ.SLOWMODE_RATE_LIMITED || n.body.code === S.evJ.CHANNEL_FOLLOWING_EDIT_RATE_LIMITED)) t(null, n);
+            if (null != n.body && (n.body.code === T.evJ.SLOWMODE_RATE_LIMITED || n.body.code === T.evJ.CHANNEL_FOLLOWING_EDIT_RATE_LIMITED)) t(null, n);
             else if (429 === n.status) {
                 let e = parseInt(n.headers['retry-after']);
                 isNaN(e) ? t(null, n) : t({ retryAfter: e * g.Z.Millis.SECOND });
@@ -124,17 +124,17 @@ class D extends v.Z {
                 });
             return;
         }
-        null != A && (A.isInstanceLocked() ? (n = { location: 'overlay_locked_activated' }) : !A.isInstanceLocked() && (n = A.isPinned(S.Odu.TEXT) ? { location: 'overlay_unlocked_pinned' } : { location: 'overlay_unlocked' }));
+        null != A && (A.isInstanceLocked() ? (n = { location: 'overlay_locked_activated' }) : !A.isInstanceLocked() && (n = A.isPinned(T.Odu.TEXT) ? { location: 'overlay_unlocked_pinned' } : { location: 'overlay_unlocked' }));
         let o = this.createResponseHandler(e.nonce, t),
             l = new AbortController();
         this.startQueueMetricTimers(e.nonce),
             u.tn.post(
                 {
-                    url: S.ANM.MESSAGES(r),
+                    url: T.ANM.MESSAGES(r),
                     body: s,
                     context: n,
                     oldFormErrors: !0,
-                    ...T.hs,
+                    ...S.hs,
                     signal: l.signal,
                     rejectWithError: !0,
                     onRequestCreated: () => {
@@ -149,7 +149,7 @@ class D extends v.Z {
             a = new AbortController();
         u.tn.patch(
             {
-                url: S.ANM.MESSAGE(n, r),
+                url: T.ANM.MESSAGE(n, r),
                 body: i,
                 retries: 1,
                 oldFormErrors: !0,
@@ -184,7 +184,7 @@ class D extends v.Z {
         let v = new AbortController();
         u.tn.post(
             {
-                url: S.ANM.INTERACTIONS,
+                url: T.ANM.INTERACTIONS,
                 fields: [
                     {
                         name: 'payload_json',

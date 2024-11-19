@@ -26,8 +26,8 @@ var r = n(200651),
     v = n(378233),
     b = n(768581),
     I = n(55935),
-    S = n(823379),
-    T = n(453687),
+    T = n(823379),
+    S = n(453687),
     y = n(930282),
     A = n(123145),
     N = n(223021),
@@ -69,8 +69,8 @@ function w(e, t, n, i, a) {
         { trailingIconClass: f, leadingIconClass: g, iconSize: E } = a,
         b = null == t || '' === t || (Array.isArray(t) && 0 === t.length),
         I = (0, v.cv)(d).length > 0,
-        S = null != d.interaction,
-        T = d.hasFlag(R.iLy.IS_VOICE_MESSAGE),
+        T = null != d.interaction,
+        S = d.hasFlag(R.iLy.IS_VOICE_MESSAGE),
         A = d.isPoll(),
         N = d.type === R.uaV.POLL_RESULT;
     if (
@@ -94,9 +94,9 @@ function w(e, t, n, i, a) {
                 ? (s = (0, m.N4)(d))
                 : I
                   ? (s = O.intl.string(O.t.kHdYCQ))
-                  : S
+                  : T
                     ? (s = O.intl.string(O.t['E+6SSU']))
-                    : T
+                    : S
                       ? (s = O.intl.string(O.t['XC3A5+']))
                       : ((s = O.intl.string(O.t['6hGo0d'])),
                         (l = (0, r.jsx)(u.ImageIcon, {
@@ -121,7 +121,7 @@ function w(e, t, n, i, a) {
                   width: E,
                   height: E
               }))
-            : S
+            : T
               ? (l = (0, r.jsx)(u.SlashBoxIcon, {
                     size: 'custom',
                     color: 'currentColor',
@@ -129,7 +129,7 @@ function w(e, t, n, i, a) {
                     width: E,
                     height: E
                 }))
-              : T
+              : S
                 ? (l = (0, r.jsx)(u.MicrophoneIcon, {
                       size: 'custom',
                       color: 'currentColor',
@@ -231,7 +231,7 @@ function M(e) {
                       children: v()
                   });
         })(e, P, o.type),
-        G = (function (e, t) {
+        B = (function (e, t) {
             let { baseMessage: n, channel: i, referencedMessage: a, showUsernamePopout: s, onClickUsername: o, onContextMenu: l, onPopoutRequestClose: u } = e,
                 c = (null == a ? void 0 : a.state) === g.Y.LOADED ? a.message : void 0;
             return null == c || c.type === R.uaV.USER_JOIN || c.type === R.uaV.ROLE_SUBSCRIPTION_PURCHASE || c.type === R.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION || c.type === R.uaV.GUILD_DEADCHAT_REVIVE_PROMPT || c.type === R.uaV.GUILD_GAMING_STATS_PROMPT || c.type === R.uaV.POLL_RESULT
@@ -249,7 +249,7 @@ function M(e) {
                       isRepliedMessage: !0
                   });
         })(e, P),
-        B = (function (e, t, n) {
+        G = (function (e, t, n) {
             let { content: i, referencedMessage: a, isReplyAuthorBlocked: o, onClickReply: l } = e,
                 c = a.state !== g.Y.DELETED ? l : void 0;
             switch (a.state) {
@@ -304,7 +304,7 @@ function M(e) {
                         })
                     });
                 default:
-                    (0, S.vE)(a);
+                    (0, T.vE)(a);
             }
         })(e, y, k),
         Z = i.useMemo(() => (e.compact ? (0, N.Z)((0, I.vc)(l()(), 'LT')) : null), [e.compact]);
@@ -316,7 +316,7 @@ function M(e) {
         }));
     let F = o.type === R.uaV.CONTEXT_MENU_COMMAND;
     return (0, r.jsxs)('div', {
-        id: (0, T.Gq)(o),
+        id: (0, S.Gq)(o),
         className: s()(D.repliedMessage, Z, {
             [D.messageSpine]: !v || (!h && m),
             [D.contextCommandMessage]: F
@@ -335,8 +335,8 @@ function M(e) {
                     onMouseLeave: k
                 }),
             U,
-            G,
-            B
+            B,
+            G
         ]
     });
 }

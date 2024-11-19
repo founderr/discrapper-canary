@@ -6,7 +6,7 @@ n.d(t, {
         return k;
     },
     iZ: function () {
-        return R;
+        return w;
     }
 }),
     n(47120);
@@ -20,8 +20,8 @@ var l = n(200651),
     u = n(481060),
     d = n(239091),
     m = n(607070),
-    x = n(100527),
-    h = n(704041),
+    h = n(100527),
+    x = n(704041),
     p = n(475676),
     C = n(439170),
     v = n(594174),
@@ -41,10 +41,10 @@ var l = n(200651),
     A = n(797342),
     M = n(206583);
 let k = 72;
-function R(e) {
+function w(e) {
     return (null == e ? void 0 : e.type) === C.so.CONTENT_INVENTORY ? k : 0;
 }
-let w = (e) => {
+let R = (e) => {
         let { entry: t, ...n } = e;
         switch (t.content_type) {
             case s.s.PLAYED_GAME:
@@ -142,9 +142,9 @@ let w = (e) => {
             case s.s.LEADERBOARD:
                 var a;
                 return (null === (a = n.channel) || void 0 === a ? void 0 : a.guild_id) != null
-                    ? (0, l.jsx)(h.Z, {
+                    ? (0, l.jsx)(x.Z, {
                           guildId: n.channel.guild_id,
-                          source: x.Z.MEMBER_LIST,
+                          source: h.Z.MEMBER_LIST,
                           trackRankingItemInteraction: n.trackRankingItemInteraction
                       })
                     : null;
@@ -155,7 +155,7 @@ let w = (e) => {
 t.ZP = a.memo((e) => {
     var t;
     let { index: i, ...s } = e,
-        [x, h] = a.useState('default'),
+        [h, x] = a.useState('default'),
         p = (0, o.JA)(''.concat(i)),
         C = null === (t = v.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(),
         { isRich: f, appName: I } = (0, A.n)(s.entry),
@@ -191,7 +191,7 @@ t.ZP = a.memo((e) => {
             [s, C]
         ),
         E = a.useCallback(() => {
-            h(String(Date.now()));
+            x(String(Date.now()));
         }, []),
         S = a.useCallback(
             function (e) {
@@ -216,7 +216,7 @@ t.ZP = a.memo((e) => {
             ),
             []
         ),
-        R = () => {
+        w = () => {
             (P.current = !1),
                 setTimeout(() => {
                     !P.current && (L(!1), T(N));
@@ -229,7 +229,7 @@ t.ZP = a.memo((e) => {
                     P.current && L(!0), k(j);
                 }, 100);
         },
-        onMouseLeave: R,
+        onMouseLeave: w,
         children: (0, l.jsx)(u.Popout, {
             renderPopout: (e) => {
                 let { closePopout: t } = e;
@@ -242,10 +242,10 @@ t.ZP = a.memo((e) => {
             },
             position: 'left',
             shouldShow: Z,
-            positionKey: x,
+            positionKey: h,
             onRequestOpen: () => k(j),
             onRequestClose: () => {
-                y && R();
+                y && w();
             },
             spacing: 8,
             children: (e, t) => {
@@ -265,7 +265,7 @@ t.ZP = a.memo((e) => {
                         !Z && L(!0);
                     },
                     onContextMenu: _,
-                    children: (0, l.jsx)(w, {
+                    children: (0, l.jsx)(R, {
                         ...s,
                         selected: n,
                         hovered: P.current

@@ -42,9 +42,9 @@ let g = {
     },
     b = !1;
 function I() {
-    S();
+    T();
 }
-function S() {
+function T() {
     Object.values(v).forEach((e) => {
         if (null != e.editInfo.timeout) {
             var t, n;
@@ -52,7 +52,7 @@ function S() {
         }
     });
 }
-function T(e) {
+function S(e) {
     null != e.editInfo.timeout && clearTimeout(e.editInfo.timeout), (e.editInfo = (0, h.JC)());
 }
 function y(e) {
@@ -64,7 +64,7 @@ function y(e) {
     } = e;
     b = !s;
     let o = v[n];
-    i && T(o), r ? ((o.proto = (0, p.re)(o.ProtoClass, o.proto, t)), a()('string' != typeof o.proto, 'UserSettingsProto cannot be a string')) : ((o.proto = t), a()('string' != typeof o.proto, 'UserSettingsProto cannot be a string'), (o.editInfo.loaded = !0), (o.editInfo.loading = !1));
+    i && S(o), r ? ((o.proto = (0, p.re)(o.ProtoClass, o.proto, t)), a()('string' != typeof o.proto, 'UserSettingsProto cannot be a string')) : ((o.proto = t), a()('string' != typeof o.proto, 'UserSettingsProto cannot be a string'), (o.editInfo.loaded = !0), (o.editInfo.loading = !1));
 }
 function A(e) {
     null != e &&
@@ -169,7 +169,7 @@ m(N, 'displayName', 'UserSettingsProtoStore'),
             let { userSettingsProto: t } = e;
             null != t && ((g.proto = t), a()('string' != typeof g.proto, 'UserSettingsProto cannot be a string'));
             let { proto: n, isDirty: r, cleanupFuncs: i } = (0, p.xt)(g.proto, _.Z[h.yP.PRELOADED_USER_SETTINGS]);
-            r && T(g),
+            r && S(g),
                 (g.proto = n),
                 a()('string' != typeof g.proto, 'UserSettingsProto cannot be a string'),
                 (g.editInfo.triggeredMigrations = r),
@@ -178,7 +178,7 @@ m(N, 'displayName', 'UserSettingsProtoStore'),
                 Object.values(v).forEach((e) => {
                     e.lazyLoaded && ((e.editInfo.loaded = !1), (e.editInfo.loading = !1));
                 }),
-                S();
+                T();
         },
         CONNECTION_CLOSED: I,
         CONNECTION_RESUMED: I,
@@ -187,7 +187,7 @@ m(N, 'displayName', 'UserSettingsProtoStore'),
             (g.proto = (0, p.ac)(t)), a()('string' != typeof g.proto, 'UserSettingsProto cannot be a string');
         },
         LOGOUT: function () {
-            S(),
+            T(),
                 Object.values(v).forEach((e) => {
                     (e.proto = e.ProtoClass.create()), (e.editInfo = (0, h.JC)());
                 });

@@ -3,10 +3,10 @@ n.d(t, {
         return A;
     },
     R6: function () {
-        return T;
+        return S;
     },
     ok: function () {
-        return S;
+        return T;
     },
     vN: function () {
         return y;
@@ -31,7 +31,7 @@ var r = n(512722),
     v = n(124368),
     b = n(981631),
     I = n(176505);
-function S(e, t, n) {
+function T(e, t, n) {
     u.UI.dispatch(b.CkL.POPOUT_CLOSE);
     let r = !s().isEmpty(g.Z.getVoiceStatesForChannel(e.id));
     if (t || !p.vF.getSetting() || __OVERLAY__ || r) {
@@ -50,7 +50,7 @@ function S(e, t, n) {
             E.S.dispatch(b.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e.id });
         }, 0);
 }
-function T(e, t, n) {
+function S(e, t, n) {
     if (
         (i()(!e.isForumLikeChannel(), 'cannot open thread creation sidebar in forums'),
         i()(!__OVERLAY__, 'Cannot create threads in the overlay.'),

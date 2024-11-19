@@ -24,8 +24,8 @@ var r = n(200651),
     v = n(587446),
     b = n(594174),
     I = n(626135),
-    S = n(74538),
-    T = n(238302),
+    T = n(74538),
+    S = n(238302),
     y = n(514361),
     A = n(572397),
     N = n(705262),
@@ -58,7 +58,7 @@ let x = () =>
                 (0, r.jsx)(c.Clickable, {
                     className: L.closeCircleButton,
                     onClick: () => {
-                        null != t && t(R.L.DISMISS), n(C.rMx.CLIENT_THEME_PREVIEW_CLOSED), (0, T.Mo)();
+                        null != t && t(R.L.DISMISS), n(C.rMx.CLIENT_THEME_PREVIEW_CLOSED), (0, S.Mo)();
                     },
                     children: (0, r.jsx)(c.CircleXIcon, {
                         size: 'md',
@@ -77,9 +77,9 @@ let x = () =>
         var t, n, i;
         let { onSubscribeSuccess: a, markAsDismissed: s } = e,
             { analyticsLocations: o } = (0, m.ZP)(h.Z.CLIENT_THEMES_EDITOR),
-            [f, _] = (0, l.Wu)([b.default, y.Z], () => [y.Z.gradientPreset, S.ZP.isPremium(b.default.getCurrentUser())]),
+            [f, _] = (0, l.Wu)([b.default, y.Z], () => [y.Z.gradientPreset, T.ZP.isPremium(b.default.getCurrentUser())]),
             p = (0, g.N)(),
-            v = (0, S.Rt)({
+            v = (0, T.Rt)({
                 intervalType: null == p ? void 0 : null === (t = p.subscription_trial) || void 0 === t ? void 0 : t.interval,
                 intervalCount: null == p ? void 0 : null === (n = p.subscription_trial) || void 0 === n ? void 0 : n.interval_count
             });
@@ -131,7 +131,7 @@ let x = () =>
                 (0, r.jsx)(c.Button, {
                     className: L.footerButton,
                     onClick: () => {
-                        null != t && t(R.L.DISMISS), d(C.rMx.CLIENT_THEME_PREVIEW_CLOSED), (0, T.Mo)(), !a && f.Z.open();
+                        null != t && t(R.L.DISMISS), d(C.rMx.CLIENT_THEME_PREVIEW_CLOSED), (0, S.Mo)(), !a && f.Z.open();
                     },
                     color: c.Button.Colors.PRIMARY,
                     size: c.Button.Sizes.MEDIUM,

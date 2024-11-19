@@ -26,8 +26,8 @@ var r = n(200651),
     v = n(483444),
     b = n(599250),
     I = n(424218),
-    S = n(74538),
-    T = n(960048),
+    T = n(74538),
+    S = n(960048),
     y = n(861990),
     A = n(98278),
     N = n(639119),
@@ -100,7 +100,7 @@ function k(e) {
         _ =
             null != c
                 ? L.intl.formatToPlainString(L.t.bkQ4bG, { percent: c.discount.amount })
-                : (0, S.Rt)({
+                : (0, T.Rt)({
                       intervalType: null == u ? void 0 : null === (t = u.subscription_trial) || void 0 === t ? void 0 : t.interval,
                       intervalCount: null == u ? void 0 : null === (n = u.subscription_trial) || void 0 === n ? void 0 : n.interval_count
                   });
@@ -131,13 +131,13 @@ function U(e) {
             [x.trialBadgeGradientTier2]: a === O.Si.TIER_2
         }),
         color: 'none',
-        children: (0, S.a5)({
+        children: (0, T.a5)({
             intervalType: null == i ? void 0 : i.interval,
             intervalCount: null == i ? void 0 : i.interval_count
         })
     });
 }
-function G(e) {
+function B(e) {
     let { subscriptionTier: t, onClose: n, analyticsLocationObject: i, trialOffer: a, discountOffer: s } = e;
     return (0, r.jsxs)('div', {
         className: x.footer,
@@ -160,7 +160,7 @@ function G(e) {
         ]
     });
 }
-function B(e) {
+function G(e) {
     let { onClose: t, analyticsLocationObject: n } = e,
         i = (0, N.N)();
     return (0, r.jsxs)('div', {
@@ -248,13 +248,13 @@ function F(e) {
                                 trialOffer: b,
                                 discountOffer: A,
                                 children: L.intl.format(L.t['2HoFKC'], {
-                                    planName: (0, S.jP)(c),
+                                    planName: (0, T.jP)(c),
                                     onClick: () => (0, E.uL)(D.Z5c.APPLICATION_STORE)
                                 })
                             })
                         ]
                     }),
-                    (0, r.jsx)(G, {
+                    (0, r.jsx)(B, {
                         subscriptionTier: c,
                         onClose: o,
                         analyticsLocationObject: {
@@ -288,13 +288,13 @@ function F(e) {
                                     trialOffer: b,
                                     discountOffer: A,
                                     children: L.intl.format(L.t['2HoFKC'], {
-                                        planName: (0, S.jP)(c),
+                                        planName: (0, T.jP)(c),
                                         onClick: () => (0, E.uL)(D.Z5c.APPLICATION_STORE)
                                     })
                                 })
                             ]
                         }),
-                        (0, r.jsx)(G, {
+                        (0, r.jsx)(B, {
                             subscriptionTier: c,
                             onClose: o,
                             analyticsLocationObject: {
@@ -329,13 +329,13 @@ function F(e) {
                                 trialOffer: b,
                                 discountOffer: A,
                                 children: L.intl.format(L.t.md4nPz, {
-                                    planName: (0, S.jP)(c),
+                                    planName: (0, T.jP)(c),
                                     onClick: () => (0, E.uL)(D.Z5c.APPLICATION_STORE)
                                 })
                             })
                         ]
                     }),
-                    (0, r.jsx)(G, {
+                    (0, r.jsx)(B, {
                         subscriptionTier: c,
                         onClose: o,
                         analyticsLocationObject: {
@@ -355,7 +355,7 @@ function F(e) {
             switch (u) {
                 case O.cd.UPLOAD_ERROR_UPSELL:
                     U = L.intl.format(L.t.F4qoDw, {
-                        planName: (0, S.jP)(c),
+                        planName: (0, T.jP)(c),
                         premiumMaxSize: c === O.Si.TIER_0 ? L.intl.string(L.t['C/Rhb2']) : R,
                         onClick: () => {
                             (0, E.uL)(D.Z5c.APPLICATION_STORE), null == o || o();
@@ -364,7 +364,7 @@ function F(e) {
                     break;
                 case O.cd.BURST_REACTION_UPSELL:
                     U = L.intl.format(L.t.poib9P, {
-                        planName: (0, S.jP)(c),
+                        planName: (0, T.jP)(c),
                         onClick: () => {
                             (0, E.uL)(D.Z5c.APPLICATION_STORE), null == o || o();
                         }
@@ -426,7 +426,7 @@ function F(e) {
                         trialOffer: b,
                         discountOffer: A,
                         children: L.intl.format(L.t.poib9P, {
-                            planName: (0, S.jP)(c),
+                            planName: (0, T.jP)(c),
                             onClick: () => (0, E.uL)(D.Z5c.APPLICATION_STORE)
                         })
                     }),
@@ -492,7 +492,7 @@ function F(e) {
             });
         case O.cd.CUSTOM_PROFILE_TRY_OUT_UPSELL:
         case O.cd.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL:
-            return (0, r.jsx)(B, {});
+            return (0, r.jsx)(G, {});
         case O.cd.GUILD_CAP_MODAL_UPSELL:
         case O.cd.PREMIUM_GUILD_IDENTITY_MODAL:
         case O.cd.CUSTOM_PROFILE_UPSELL:
@@ -513,7 +513,7 @@ function F(e) {
             });
         default:
             return (
-                T.Z.captureMessage('Possible mishandling of a PremiumUpsellType: '.concat(u)),
+                S.Z.captureMessage('Possible mishandling of a PremiumUpsellType: '.concat(u)),
                 (0, r.jsx)(Z, {
                     headingText: t,
                     context: i,

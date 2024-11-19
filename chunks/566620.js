@@ -60,8 +60,8 @@ var r = n(990547),
     v = n(233764),
     b = n(375824),
     I = n(48854),
-    S = n(835873),
-    T = n(973616),
+    T = n(835873),
+    S = n(973616),
     y = n(314897),
     A = n(592125),
     N = n(430824),
@@ -76,8 +76,8 @@ var r = n(990547),
     P = n(317381),
     k = n(672181),
     U = n(882347),
-    G = n(224189),
-    B = n(374065),
+    B = n(224189),
+    G = n(374065),
     Z = n(917107),
     F = n(89425),
     V = n(275920),
@@ -101,13 +101,13 @@ async function q(e) {
     var t, n;
     let { channelId: r, applicationId: i, isStart: s, analyticsLocations: o, locationObject: l, embeddedActivitiesManager: u, componentId: c, commandOrigin: f, sectionName: _, source: p, partyId: h, onExecutedCallback: m } = e,
         E = A.Z.getChannel(r),
-        S = null !== (t = null == E ? void 0 : E.getGuildId()) && void 0 !== t ? t : void 0;
-    if (null == S && !(null !== (n = null == E ? void 0 : E.isPrivate()) && void 0 !== n && n)) return !1;
-    let T = (0, I.r)();
+        T = null !== (t = null == E ? void 0 : E.getGuildId()) && void 0 !== t ? t : void 0;
+    if (null == T && !(null !== (n = null == E ? void 0 : E.isPrivate()) && void 0 !== n && n)) return !1;
+    let S = (0, I.r)();
     try {
         a.Z.dispatch({
             type: 'EMBEDDED_ACTIVITY_LAUNCH_START',
-            nonce: T,
+            nonce: S,
             applicationId: i,
             channelId: r,
             componentId: c,
@@ -121,7 +121,7 @@ async function q(e) {
                 (0, V.Z)({
                     type: s ? H.q5t.LAUNCH : H.q5t.JOIN,
                     userId: null == e ? void 0 : e.id,
-                    guildId: S,
+                    guildId: T,
                     channelId: r,
                     channelType: null == E ? void 0 : E.type,
                     applicationId: i,
@@ -145,9 +145,9 @@ async function q(e) {
             if (
                 !(await Q({
                     applicationId: i,
-                    nonce: T,
+                    nonce: S,
                     channelId: r,
-                    guildId: S,
+                    guildId: T,
                     commandOrigin: f,
                     sectionName: _,
                     source: p,
@@ -161,13 +161,13 @@ async function q(e) {
                 channelId: r,
                 embeddedActivitiesManager: u,
                 isStart: s,
-                guildId: S
+                guildId: T
             });
             if ((null == m || m(), !e)) throw new v.Z(v.Z.Reasons.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED);
         }
         a.Z.dispatch({
             type: 'EMBEDDED_ACTIVITY_LAUNCH_SUCCESS',
-            nonce: T,
+            nonce: S,
             applicationId: i,
             channelId: r
         });
@@ -175,8 +175,8 @@ async function q(e) {
         return (
             a.Z.dispatch({
                 type: 'EMBEDDED_ACTIVITY_LAUNCH_FAIL',
-                nonce: T,
-                guildId: S,
+                nonce: S,
+                guildId: T,
                 applicationId: i,
                 channelId: r,
                 isStart: s,
@@ -263,25 +263,25 @@ async function X(e) {
         u = y.default.getSessionId(),
         c = R.default.getCurrentUser();
     if (null == n) return !1;
-    let d = await (0, G.Z)(n, i);
+    let d = await (0, B.Z)(n, i);
     if (null == i) return D.S.dispatch(H.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, { applicationId: n }), !1;
     let f = A.Z.getChannel(i);
     if (null == f || null == c || null == d) return !1;
     let _ =
         null != i
-            ? (0, B.e4)({
+            ? (0, G.e4)({
                   channelId: i,
                   ChannelStore: A.Z,
                   GuildStore: N.Z,
                   PermissionStore: C.Z,
                   VoiceStateStore: O.Z
               })
-            : B.jy.NO_CHANNEL;
-    if (_ !== B.jy.CAN_LAUNCH)
+            : G.jy.NO_CHANNEL;
+    if (_ !== G.jy.CAN_LAUNCH)
         return (
-            _ === B.jy.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION
-                ? (0, S.w)()
-                : _ === B.jy.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS &&
+            _ === G.jy.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION
+                ? (0, T.w)()
+                : _ === G.jy.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS &&
                   s.Z.show({
                       title: K.intl.string(K.t['IOy+Iy']),
                       body: K.intl.string(K.t.UXoQTk),
@@ -365,7 +365,7 @@ async function $() {
                 rejectWithError: !0
             }),
             t = e.body.applications,
-            n = t.map((e) => T.Z.createFromServer(e));
+            n = t.map((e) => S.Z.createFromServer(e));
         a.Z.dispatch({
             type: 'DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS',
             applications: n,
@@ -464,7 +464,7 @@ async function en(e) {
                 }),
             {
                 activityConfigs: l,
-                applications: u.map((e) => T.Z.createFromServer(e))
+                applications: u.map((e) => S.Z.createFromServer(e))
             }
         );
     } catch (e) {

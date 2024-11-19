@@ -45,7 +45,7 @@ function I(e) {
             },
             [n]
         ),
-        [I, S] = i.useState({});
+        [I, T] = i.useState({});
     return (null == u ? void 0 : u.id) === t.id || t.bot || 0 === d.length || h.Z.isBlockedOrIgnored(t.id)
         ? null
         : (0, r.jsx)(s.MenuItem, {
@@ -73,7 +73,7 @@ function I(e) {
                                             let n = f.ZP.getDefaultChannel(e.id, !0, E.Plq.CREATE_INSTANT_INVITE);
                                             if (null != n) {
                                                 if (
-                                                    (S({
+                                                    (T({
                                                         ...I,
                                                         [e.id]: !0
                                                     }),

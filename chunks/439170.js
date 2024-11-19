@@ -31,8 +31,8 @@ var r,
     v = n(271383),
     b = n(430824),
     I = n(158776),
-    S = n(885110),
-    T = n(594174),
+    T = n(885110),
+    S = n(594174),
     y = n(981631),
     A = n(388032);
 function N(e, t, n) {
@@ -88,10 +88,10 @@ function O(e, t, n, r) {
 function D(e, t, n) {
     let r = n === m.default.getId(),
         i = I.Z.isMobileOnline(n),
-        a = r ? S.Z.getStatus() : I.Z.getStatus(n, e),
-        s = r ? S.Z.getActivities() : I.Z.getActivities(n, e),
+        a = r ? T.Z.getStatus() : I.Z.getStatus(n, e),
+        s = r ? T.Z.getActivities() : I.Z.getActivities(n, e),
         o = h.Z.getStreamForUser(n, e),
-        l = T.default.getUser(n);
+        l = S.default.getUser(n);
     return null == l
         ? null
         : {
@@ -251,9 +251,9 @@ function U() {
     let e = m.default.getId();
     w.forEach(null, (t) => t.rebuildMember(e));
 }
-class G extends (i = d.ZP.Store) {
+class B extends (i = d.ZP.Store) {
     initialize() {
-        this.waitFor(T.default, b.Z, g.Z, v.ZP, I.Z, S.Z, m.default, E.Z, h.Z, _.Z), this.syncWith([S.Z], U), this.syncWith([h.Z], k);
+        this.waitFor(S.default, b.Z, g.Z, v.ZP, I.Z, T.Z, m.default, E.Z, h.Z, _.Z), this.syncWith([T.Z], U), this.syncWith([h.Z], k);
     }
     getProps(e, t) {
         let n = w.get(e, L(t));
@@ -268,8 +268,8 @@ class G extends (i = d.ZP.Store) {
         return w.get(e, L(t)).rows;
     }
 }
-N(G, 'displayName', 'ChannelMemberStore'),
-    (t.ZP = new G(f.Z, {
+N(B, 'displayName', 'ChannelMemberStore'),
+    (t.ZP = new B(f.Z, {
         CONNECTION_OPEN: M,
         OVERLAY_INITIALIZE: M,
         GUILD_MEMBER_LIST_UPDATE: function (e) {

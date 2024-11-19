@@ -7,9 +7,9 @@ var p,
     v = n(570140),
     b = n(981631);
 let I = b.QZA.CLOSED,
-    S = {};
-function T() {
-    y(), A(), (S = {}), (I = b.QZA.OPEN);
+    T = {};
+function S() {
+    y(), A(), (T = {}), (I = b.QZA.OPEN);
 }
 function y() {
     (r = void 0), (u = void 0), (i = void 0);
@@ -22,7 +22,7 @@ class N extends (g = E.ZP.Store) {
         return I;
     }
     getErrors() {
-        return S;
+        return T;
     }
     showNotice() {
         return void 0 !== r || void 0 !== i || void 0 !== a || void 0 !== s || void 0 !== o || void 0 !== l || void 0 !== u || void 0 !== c;
@@ -90,24 +90,24 @@ class N extends (g = E.ZP.Store) {
         : (p[h] = m),
     (t.Z = new N(v.Z, {
         GUILD_IDENTITY_SETTINGS_INIT: function (e) {
-            (d = e.guild), (I = b.QZA.OPEN), (S = {}), (f = e.source), (_ = e.analyticsLocations);
+            (d = e.guild), (I = b.QZA.OPEN), (T = {}), (f = e.source), (_ = e.analyticsLocations);
         },
         GUILD_IDENTITY_SETTINGS_RESET_AND_CLOSE_FORM: function () {
-            T(), (I = b.QZA.CLOSED), (S = {}), (f = void 0), (_ = []);
+            S(), (I = b.QZA.CLOSED), (T = {}), (f = void 0), (_ = []);
         },
         GUILD_IDENTITY_SETTINGS_SET_GUILD: function (e) {
-            (d = e.guild), (S = {});
+            (d = e.guild), (T = {});
         },
         GUILD_IDENTITY_SETTINGS_SUBMIT: function () {
-            (I = b.QZA.SUBMITTING), (S = {});
+            (I = b.QZA.SUBMITTING), (T = {});
         },
         GUILD_IDENTITY_SETTINGS_SUBMIT_FAILURE: function (e) {
             var t;
             if (I !== b.QZA.SUBMITTING) return !1;
-            (I = b.QZA.OPEN), (S = null !== (t = e.errors) && void 0 !== t ? t : {});
+            (I = b.QZA.OPEN), (T = null !== (t = e.errors) && void 0 !== t ? t : {});
         },
         USER_PROFILE_UPDATE_FAILURE: function (e) {
-            (I = b.QZA.OPEN), (S = e.errors);
+            (I = b.QZA.OPEN), (T = e.errors);
         },
         GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR: function (e) {
             let { avatar: t } = e;
@@ -143,9 +143,9 @@ class N extends (g = E.ZP.Store) {
         },
         GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES: y,
         GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES: A,
-        GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: T,
-        GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: T,
+        GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: S,
+        GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: S,
         GUILD_IDENTITY_SETTINGS_CLEAR_ERRORS: function () {
-            S = {};
+            T = {};
         }
     }));

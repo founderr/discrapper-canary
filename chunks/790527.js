@@ -22,14 +22,14 @@ var r = n(200651),
     v = n(197115),
     b = n(302945),
     I = n(631771),
-    S = n(474936),
-    T = n(981631),
+    T = n(474936),
+    S = n(981631),
     y = n(388032),
     A = n(12087),
     N = n(769860);
 function C(e) {
     var t, n, a;
-    let { title: C, type: R, guildBoostProps: O, analyticsSource: D, analyticsLocation: L, body: x, context: w, glowUp: M, modalClassName: P, modalContentClassName: k, artContainerClassName: U, headerClassName: G, bodyClassName: B, transitionState: Z, onClose: F, onSubscribeClick: V, onSubscribeFinish: j, onSecondaryClick: H, secondaryCTA: Y, subscribeButtonText: W, showNewBadge: K = !1, enableArtBoxShadow: z = !0, subscriptionTier: q = S.Si.TIER_2, isLoading: Q = !1, hideBackButton: X, backButtonText: J, showEnhancedUpsell: $, useSubscribeButtonGradient: ee, subscribeButtonClassname: et, hidePremiumOfferUpsell: en, children: er, LeadingComponent: ei, ...ea } = e,
+    let { title: C, type: R, guildBoostProps: O, analyticsSource: D, analyticsLocation: L, body: x, context: w, glowUp: M, modalClassName: P, modalContentClassName: k, artContainerClassName: U, headerClassName: B, bodyClassName: G, transitionState: Z, onClose: F, onSubscribeClick: V, onSubscribeFinish: j, onSecondaryClick: H, secondaryCTA: Y, subscribeButtonText: W, showNewBadge: K = !1, enableArtBoxShadow: z = !0, subscriptionTier: q = T.Si.TIER_2, isLoading: Q = !1, hideBackButton: X, backButtonText: J, showEnhancedUpsell: $, useSubscribeButtonGradient: ee, subscribeButtonClassname: et, hidePremiumOfferUpsell: en, children: er, LeadingComponent: ei, ...ea } = e,
         es = null != O,
         eo = (0, g.N)(),
         el = (0, m.Ng)(),
@@ -38,14 +38,14 @@ function C(e) {
     i.useEffect(() => {
         !Q &&
             (es
-                ? _.default.track(T.rMx.PREMIUM_GUILD_UPSELL_VIEWED, {
+                ? _.default.track(S.rMx.PREMIUM_GUILD_UPSELL_VIEWED, {
                       type: ''.concat(R, ' - Tier ').concat(O.boostedGuildTier),
                       guild_id: O.guild.id,
                       channel_id: O.channelId,
                       location: L,
                       location_stack: ec
                   })
-                : _.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, {
+                : _.default.track(S.rMx.PREMIUM_UPSELL_VIEWED, {
                       type: R,
                       source: D,
                       location: L,
@@ -99,7 +99,7 @@ function C(e) {
                                         children: (0, r.jsx)(E.ZP, {
                                             onClose: F,
                                             type: R,
-                                            subscriptionTier: null !== (a = null == eo ? void 0 : null === (n = eo.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : S.Si.TIER_2,
+                                            subscriptionTier: null !== (a = null == eo ? void 0 : null === (n = eo.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : T.Si.TIER_2,
                                             headingText: C,
                                             context: w,
                                             analyticsLocationObject: L,
@@ -116,7 +116,7 @@ function C(e) {
                                                 className: A.bodyContent,
                                                 children: [
                                                     (0, r.jsx)(l.Heading, {
-                                                        className: s()(A.header, { [A.enhancedHeader]: $ }, G),
+                                                        className: s()(A.header, { [A.enhancedHeader]: $ }, B),
                                                         variant: 'heading-xl/bold',
                                                         children: C
                                                     }),
@@ -124,7 +124,7 @@ function C(e) {
                                                     er,
                                                     (0, r.jsx)(l.Text, {
                                                         variant: 'text-md/normal',
-                                                        className: s()(B, A.subHeader),
+                                                        className: s()(G, A.subHeader),
                                                         children: x
                                                     })
                                                 ]

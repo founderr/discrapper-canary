@@ -21,7 +21,7 @@ t.Z = function (e) {
             return null !== (e = n.map((e) => _.default.getUser(e)).filter(p.lm)) && void 0 !== e ? e : [];
         }),
         I = null == v ? void 0 : v.name,
-        S = o()(t).fromNow();
+        T = o()(t).fromNow();
     return null == t
         ? null
         : (0, r.jsxs)('div', {
@@ -46,7 +46,7 @@ t.Z = function (e) {
                               variant: 'text-xs/medium',
                               color: 'text-muted',
                               className: m.__invalid_subtitle,
-                              children: [null != I ? ''.concat(I, ' \u2022 ') : null, S]
+                              children: [null != I ? ''.concat(I, ' \u2022 ') : null, T]
                           }),
                           (0, r.jsx)(u.Text, {
                               variant: 'text-xs/medium',

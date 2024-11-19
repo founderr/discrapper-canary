@@ -21,7 +21,7 @@ n.d(t, {
         return r;
     },
     z4: function () {
-        return T;
+        return S;
     }
 }),
     n(47120),
@@ -78,7 +78,7 @@ function I(e) {
     return 'uncategorized';
 }
 ((c = s || (s = {}))[(c.None = 0)] = 'None'), (c[(c.ClientSideDisableVideo = 1)] = 'ClientSideDisableVideo'), (c[(c.SenderStopped = 2)] = 'SenderStopped');
-function S(e) {
+function T(e) {
     if (null == e) return 'UNKNOWN';
     if ('H264' === (e = e.toUpperCase())) return 'H264';
     if ('H265' === e) return 'H265';
@@ -87,10 +87,10 @@ function S(e) {
     else if ('AV1' === e || 'AV1X' === e) return 'AV1';
     else return 'UNKNOWN';
 }
-class T {
+class S {
     static parseInboundStats(e, t) {
         var n, r, i, a, s, o, l, u;
-        let c = new T();
+        let c = new S();
         return null == e
             ? c
             : ((c.bytes = e.bytesReceived),
@@ -111,7 +111,7 @@ class T {
                   for (let t of Object.keys(b)) if (e.includes(t)) return b[t];
                   return 'uncategorized';
               })(e.decoderImplementationName)),
-              (c.codecType = S(e.codec.name)),
+              (c.codecType = T(e.codec.name)),
               (c.qpSum = 0),
               (c.freezeCount = e.freezeCount),
               (c.pauseCount = e.pauseCount),
@@ -129,7 +129,7 @@ class T {
     }
     static parseOutboundStats(e, t) {
         var n, r, i, a, s, o, l, u, c, d, f, _, p, h, m, g, E, v, b, y, A, N, C, R;
-        let O = new T();
+        let O = new S();
         return null == e
             ? O
             : {
@@ -146,7 +146,7 @@ class T {
                   timestamp: t,
                   encoder: I(e.encoderImplementationName),
                   decoder: null,
-                  codecType: S(e.codec.name),
+                  codecType: T(e.codec.name),
                   nackCount: e.nackCount,
                   pliCount: e.pliCount,
                   qpSum: e.qpSum,
@@ -220,17 +220,17 @@ class y {
             s <= e && (this.resolutionBuckets[e] += p);
         });
         let I = (a - b) / 1000,
-            S = ((r - E) * 8) / I,
-            T = (i - v) / I;
+            T = ((r - E) * 8) / I,
+            S = (i - v) / I;
         h.forEach((e) => {
-            S <= e && (this.bitrateBuckets[e] += p);
+            T <= e && (this.bitrateBuckets[e] += p);
         }),
             m.forEach((e) => {
-                T <= e && (this.fpsBuckets[e] += p);
+                S <= e && (this.fpsBuckets[e] += p);
             }),
             this.resolutionHistogram.addSample(s),
-            this.bitrateHistogram.addSample(S),
-            this.fpsHistogram.addSample(T),
+            this.bitrateHistogram.addSample(T),
+            this.fpsHistogram.addSample(S),
             this.localWantHistogram.addSample(f),
             this.statsWindow.shift();
     }

@@ -18,8 +18,8 @@ var r,
     v = n(418476),
     b = n(739566),
     I = n(995774),
-    S = n(706454),
-    T = n(630388),
+    T = n(706454),
+    S = n(630388),
     y = n(709054),
     A = n(314897),
     N = n(592125),
@@ -34,8 +34,8 @@ var r,
     P = n(594174),
     k = n(981631);
 let U = new Set(),
-    G = new p.Z('MessageStore'),
-    B = !1;
+    B = new p.Z('MessageStore'),
+    G = !1;
 function Z() {
     f.Z.forEach((e) => {
         f.Z.commit(
@@ -74,13 +74,13 @@ function H(e) {
     if (!s.has(i)) return !1;
     (s = s.update(i, (e) => {
         var n;
-        return (null === (n = e.embeds) || void 0 === n ? void 0 : n.filter(m.K).length) > 0 && (e = e.set('embeds', [])), 'MESSAGE_SEND_FAILED_AUTOMOD' === t && (e = e.set('flags', (0, T.pj)(e.flags, k.iLy.EPHEMERAL))), e;
+        return (null === (n = e.embeds) || void 0 === n ? void 0 : n.filter(m.K).length) > 0 && (e = e.set('embeds', [])), 'MESSAGE_SEND_FAILED_AUTOMOD' === t && (e = e.set('flags', (0, S.pj)(e.flags, k.iLy.EPHEMERAL))), e;
     })),
         f.Z.commit(s);
 }
 class Y extends (r = u.ZP.Store) {
     initialize() {
-        this.waitFor(P.default, N.Z, C.Z, O.ZP, S.default, w.Z, M.Z, D.Z, x.Z, R.ZP), this.syncWith([g.Z], () => {});
+        this.waitFor(P.default, N.Z, C.Z, O.ZP, T.default, w.Z, M.Z, D.Z, x.Z, R.ZP), this.syncWith([g.Z], () => {});
     }
     getMessages(e) {
         if (g.Z.hasViewingRoles()) {
@@ -146,7 +146,7 @@ class Y extends (r = u.ZP.Store) {
         return null != this.getMessages(e).findNewest((e) => e.author.id === (null == t ? void 0 : t.id));
     }
     hasCurrentUserSentMessageSinceAppStart() {
-        return B;
+        return G;
     }
 }
 (s = 'MessageStore'),
@@ -224,19 +224,19 @@ class Y extends (r = u.ZP.Store) {
         },
         TRUNCATE_MESSAGES: function (e) {
             let { channelId: t, truncateBottom: n, truncateTop: r } = e;
-            G.log('Truncating messages for '.concat(t, ' bottom:').concat(n, ' top:').concat(r));
+            B.log('Truncating messages for '.concat(t, ' bottom:').concat(n, ' top:').concat(r));
             let i = f.Z.getOrCreate(t);
             (i = i.truncate(n, r)), f.Z.commit(i);
         },
         CLEAR_MESSAGES: function (e) {
             let { channelId: t } = e;
-            G.log('Clearing messages for '.concat(t)), f.Z.clear(t), U.clear();
+            B.log('Clearing messages for '.concat(t)), f.Z.clear(t), U.clear();
         },
         MESSAGE_CREATE: function (e) {
             let { channelId: t, message: n, isPushNotification: r } = e,
                 i = f.Z.getOrCreate(t);
             if (r) {
-                G.log('Inserting message tapped on from a push notification', n.id, n.channel_id), f.Z.commit(i.receivePushNotification(n));
+                B.log('Inserting message tapped on from a push notification', n.id, n.channel_id), f.Z.commit(i.receivePushNotification(n));
                 return;
             }
             if (!i.ready) return !1;
@@ -247,7 +247,7 @@ class Y extends (r = u.ZP.Store) {
                 i = f.Z.getOrCreate(t);
             if (null == i || !i.has(n)) return !1;
             let a = i.get(n, !0);
-            (i = (null == a ? void 0 : a.isPoll()) === !0 ? i.remove(n) : i.update(n, (e) => ((e = e.set('state', k.yb.SEND_FAILED)).isCommandType() ? (e = (e = e.set('interactionError', null != r ? r : '')).set('flags', (0, T.pj)(e.flags, k.iLy.EPHEMERAL))) : null != r && (e = e.set('interactionError', null != r ? r : '')), e))), f.Z.commit(i);
+            (i = (null == a ? void 0 : a.isPoll()) === !0 ? i.remove(n) : i.update(n, (e) => ((e = e.set('state', k.yb.SEND_FAILED)).isCommandType() ? (e = (e = e.set('interactionError', null != r ? r : '')).set('flags', (0, S.pj)(e.flags, k.iLy.EPHEMERAL))) : null != r && (e = e.set('interactionError', null != r ? r : '')), e))), f.Z.commit(i);
         },
         MESSAGE_SEND_FAILED_AUTOMOD: H,
         MESSAGE_EDIT_FAILED_AUTOMOD: H,
@@ -358,6 +358,6 @@ class Y extends (r = u.ZP.Store) {
         LOCAL_MESSAGE_CREATE: function (e) {
             let { message: t } = e,
                 n = P.default.getCurrentUser();
-            null != t && null != t.author && null != n && t.author.id === n.id && (B = !0);
+            null != t && null != t.author && null != n && t.author.id === n.id && (G = !0);
         }
     }));

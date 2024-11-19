@@ -3,7 +3,7 @@ n.d(t, {
         return E;
     },
     ML: function () {
-        return S;
+        return T;
     },
     ZJ: function () {
         return I;
@@ -30,7 +30,7 @@ var r,
     g = n(981631);
 function E(e, t, n) {
     var r;
-    let { context: i, commandTypes: a, allowNsfw: c, computedPermissions: E, userId: v, roleIds: b, isImpersonating: T, hasBaseAccessPermissions: y } = t,
+    let { context: i, commandTypes: a, allowNsfw: c, computedPermissions: E, userId: v, roleIds: b, isImpersonating: S, hasBaseAccessPermissions: y } = t,
         { applicationAllowedForUser: A, applicationAllowedForChannel: N, isGuildInstalled: C, isUserInstalled: R, commandBotId: O } = n;
     if (!a.includes(e.type)) return 2;
     if (e.nsfw && !c) return 1;
@@ -68,7 +68,7 @@ function E(e, t, n) {
         )
             return 6;
     }
-    let x = S(e.permissions, L, v, b, T);
+    let x = T(e.permissions, L, v, b, S);
     return (function (e) {
         return !0 === e;
     })(x)
@@ -102,7 +102,7 @@ function I(e, t, n) {
     let s = e[(0, c.rE)((0, p.bD)(n), _.Kw.CHANNEL)];
     return null != s ? s.permission : null;
 }
-function S(e, t, n, r, i) {
+function T(e, t, n, r, i) {
     if (null == e) return null;
     if (!i) {
         let t = e[(0, c.rE)(n, _.Kw.USER)];

@@ -23,8 +23,8 @@ var r = n(200651),
     v = n(481046),
     b = n(510659),
     I = n(277085),
-    S = n(287954),
-    T = n(810097),
+    T = n(287954),
+    S = n(810097),
     y = n(64621),
     A = n(228168),
     N = n(388032),
@@ -37,8 +37,8 @@ function L(e) {
         { analyticsLocations: P } = (0, p.ZP)(_.Z.PROFILE_CUSTOM_STATUS),
         { trackUserProfileAction: k } = (0, E.KZ)(),
         U = (0, l.e7)([f.Z], () => f.Z.useReducedMotion),
-        [G] = i.useState(() => new u.V7()),
-        [B, Z] = i.useState(!0),
+        [B] = i.useState(() => new u.V7()),
+        [G, Z] = i.useState(!0),
         F = i.useRef(null),
         V = i.useRef(null),
         j = i.useRef(null),
@@ -80,7 +80,7 @@ function L(e) {
             duration: 150
         }
     }));
-    i.useEffect(() => () => G.stop(), [G]);
+    i.useEffect(() => () => B.stop(), [B]);
     let ev = i.useRef(t);
     if (
         (i.useEffect(() => {
@@ -113,7 +113,7 @@ function L(e) {
                     Z(!e);
                     return;
                 }
-                G.start(e ? 300 : 150, () => {
+                B.start(e ? 300 : 150, () => {
                     Z(!e);
                 });
             }
@@ -128,7 +128,7 @@ function L(e) {
                       tooltipDelay: A.vB
                   })
                 : null,
-        eS = () =>
+        eT = () =>
             z
                 ? (0, r.jsx)(c.Text, {
                       variant: R,
@@ -136,29 +136,29 @@ function L(e) {
                       children: K
                   })
                 : null,
-        eT = () => {
+        eS = () => {
             let e = s()(C.content, {
-                [C.clamp]: B,
-                [C.unclamp]: !B,
+                [C.clamp]: G,
+                [C.unclamp]: !G,
                 [C.singleLineAlign]: ec
             });
             return (0, r.jsxs)(o.animated.div, {
                 style: eg,
                 className: e,
-                children: [eI(), eS()]
+                children: [eI(), eT()]
             });
         },
         ey = () =>
             (0, r.jsxs)('div', {
                 className: s()(C.content, C.clamp, C.placeholderWidth, { [C.panel]: v === A.y0.PANEL }),
                 ref: j,
-                children: [eI(), eS()]
+                children: [eI(), eT()]
             }),
         eA = () =>
             (0, r.jsxs)('div', {
                 className: s()(C.content, C.unclamp, C.placeholderWidth, C.incorporeal, { [C.panel]: v === A.y0.PANEL }),
                 ref: F,
-                children: [eI(), eS()]
+                children: [eI(), eT()]
             }),
         eN = () => {
             k({ action: 'PRESS_ADD_CUSTOM_STATUS' }),
@@ -221,7 +221,7 @@ function L(e) {
                             className: eL,
                             children: (0, r.jsx)('span', {
                                 className: ex,
-                                children: et && eT()
+                                children: et && eS()
                             })
                         }),
                         eu
@@ -230,7 +230,7 @@ function L(e) {
                                   isExpandable: ef,
                                   onCloseProfile: M
                               })
-                            : (0, r.jsx)(T.ZP, {
+                            : (0, r.jsx)(S.ZP, {
                                   user: a,
                                   sourceType: A.n_.STATUS,
                                   isVisible: ep && !eo,
@@ -290,7 +290,7 @@ function L(e) {
                               ]
                           });
                       })(),
-                      (0, r.jsx)(S.Z, {
+                      (0, r.jsx)(T.Z, {
                           user: a,
                           guildId: h,
                           channelId: g,

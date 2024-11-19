@@ -37,8 +37,8 @@ let h = {
     g = function (e) {
         let { id: t, onChange: n, checked: a, disabled: g, className: E, focusProps: v, innerRef: b } = e,
             { reducedMotion: I } = i.useContext(u.S),
-            S = i.useRef(null),
-            [T, y] = i.useState(!1),
+            T = i.useRef(null),
+            [S, y] = i.useState(!1),
             A = (0, _.Q)('Switch'),
             N = (0, d.d)(A ? l.Z.colors.INTERACTIVE_MUTED : l.Z.unsafe_rawColors.PRIMARY_400).spring(),
             C = (0, d.d)(A ? l.Z.colors.REDESIGN_INPUT_CONTROL_SELECTED : l.Z.unsafe_rawColors.GREEN_360).spring(),
@@ -46,7 +46,7 @@ let h = {
                 {
                     config: h,
                     opacity: g ? (A ? 0.5 : 0.3) : 1,
-                    state: T ? (a ? 0.7 : 0.3) : a ? 1 : 0
+                    state: S ? (a ? 0.7 : 0.3) : a ? 1 : 0
                 },
                 'animate-always'
             );
@@ -134,7 +134,7 @@ let h = {
                         id: t,
                         type: 'checkbox',
                         ref: (e) => {
-                            (S.current = e), null != b && (b.current = e);
+                            (T.current = e), null != b && (b.current = e);
                         },
                         className: p.input,
                         tabIndex: g ? -1 : 0,
@@ -143,7 +143,7 @@ let h = {
                         },
                         onKeyUp: function (e) {
                             var t;
-                            if (!g && !!T && !e.repeat) y(!1), 'Enter' === e.key && (null === (t = S.current) || void 0 === t || t.click());
+                            if (!g && !!S && !e.repeat) y(!1), 'Enter' === e.key && (null === (t = T.current) || void 0 === t || t.click());
                         },
                         onChange: function (e) {
                             y(!1), null == n || n(e.currentTarget.checked, e);

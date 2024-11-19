@@ -223,17 +223,17 @@ function b(e, t = {}) {
 function I(e) {
     if (
         (function () {
-            if (null == S) {
-                S = !1;
+            if (null == T) {
+                T = !1;
                 try {
                     document.createElement('div').focus({
                         get preventScroll() {
-                            return (S = !0), !0;
+                            return (T = !0), !0;
                         }
                     });
                 } catch (e) {}
             }
-            return S;
+            return T;
         })()
     )
         e.focus({ preventScroll: !0 });
@@ -263,8 +263,8 @@ function I(e) {
             })(t);
     }
 }
-let S = null;
-function T(e) {
+let T = null;
+function S(e) {
     var t;
     return 'undefined' != typeof window && null != window.navigator && ((null === (t = window.navigator.userAgentData) || void 0 === t ? void 0 : t.brands.some((t) => e.test(t.brand))) || e.test(window.navigator.userAgent));
 }
@@ -289,14 +289,14 @@ function O() {
 }
 function D() {
     return (
-        T(/AppleWebKit/i) &&
+        S(/AppleWebKit/i) &&
         !(function () {
-            return T(/Chrome/i);
+            return S(/Chrome/i);
         })()
     );
 }
 function L() {
-    return T(/Android/i);
+    return S(/Android/i);
 }
 let x = (0, r.createContext)({
     isNative: !0,
@@ -320,7 +320,7 @@ function M(e, t) {
 function P(e, t, n = !0) {
     var r, i;
     let { metaKey: a, ctrlKey: s, altKey: o, shiftKey: l } = t;
-    T(/Firefox/i) && (null === (i = window.event) || void 0 === i ? void 0 : null === (r = i.type) || void 0 === r ? void 0 : r.startsWith('key')) && '_blank' === e.target && (A() ? (a = !0) : (s = !0));
+    S(/Firefox/i) && (null === (i = window.event) || void 0 === i ? void 0 : null === (r = i.type) || void 0 === r ? void 0 : r.startsWith('key')) && '_blank' === e.target && (A() ? (a = !0) : (s = !0));
     let u =
         D() && A() && !C()
             ? new KeyboardEvent('keydown', {
@@ -352,14 +352,14 @@ function k(e) {
     };
 }
 let U = new Map(),
-    G = new Set();
-function B() {
+    B = new Set();
+function G() {
     if ('undefined' == typeof window) return;
     let e = (t) => {
         let n = U.get(t.target);
         if (n && (n.delete(t.propertyName), 0 === n.size && (t.target.removeEventListener('transitioncancel', e), U.delete(t.target)), 0 === U.size)) {
-            for (let e of G) e();
-            G.clear();
+            for (let e of B) e();
+            B.clear();
         }
     };
     document.body.addEventListener('transitionrun', (t) => {
@@ -370,7 +370,7 @@ function B() {
 }
 function Z(e) {
     requestAnimationFrame(() => {
-        0 === U.size ? e() : G.add(e);
+        0 === U.size ? e() : B.add(e);
     });
 }
 function F() {
@@ -451,7 +451,7 @@ function H(e, t) {
             n.current ? (n.current = !1) : (!i.current || t.some((e, t) => !Object.is(e, i[t]))) && e(), (i.current = t);
         }, t);
 }
-'undefined' != typeof document && ('loading' !== document.readyState ? B() : document.addEventListener('DOMContentLoaded', B));
+'undefined' != typeof document && ('loading' !== document.readyState ? G() : document.addEventListener('DOMContentLoaded', G));
 function Y(e) {
     let { ref: t, onResize: n } = e;
     (0, r.useEffect)(() => {

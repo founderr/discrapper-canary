@@ -15,7 +15,7 @@ n.d(t, {
         return C;
     },
     Ol: function () {
-        return T;
+        return S;
     },
     PJ: function () {
         return I;
@@ -39,7 +39,7 @@ n.d(t, {
         return U;
     },
     kr: function () {
-        return S;
+        return T;
     },
     n2: function () {
         return y;
@@ -48,7 +48,7 @@ n.d(t, {
         return P;
     },
     qy: function () {
-        return G;
+        return B;
     },
     vU: function () {
         return M;
@@ -141,16 +141,16 @@ let h = (e) => {
     b = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now(),
             r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-        return S(e) ? g(e, n) : v(e, t, n, r);
+        return T(e) ? g(e, n) : v(e, t, n, r);
     };
 function I(e, t) {
     return e.traits.find((e) => e.type === t);
 }
-function S(e) {
+function T(e) {
     var t, n;
     return null !== (n = null === (t = I(e, s.N.IS_LIVE)) || void 0 === t ? void 0 : t.is_live) && void 0 !== n && n;
 }
-function T(e) {
+function S(e) {
     var t, n;
     return null !== (n = null === (t = I(e, s.N.FIRST_TIME)) || void 0 === t ? void 0 : t.first_time) && void 0 !== n && n;
 }
@@ -158,7 +158,7 @@ function y(e) {
     return null != e.expires_at && new Date(e.expires_at) < new Date();
 }
 function A(e) {
-    return S(e) && !y(e);
+    return T(e) && !y(e);
 }
 function N(e) {
     var t;
@@ -249,7 +249,7 @@ function U(e) {
     var t;
     return null === (t = I(e, s.N.TRENDING_CONTENT)) || void 0 === t ? void 0 : t.trending;
 }
-function G(e) {
+function B(e) {
     let t = (0, o.e7)([_.Z], () => _.Z.getMatchingActivity(e)),
         [n, r] = (0, c.Z)([null == t ? void 0 : t.application_id, 'application_id' in e.extra ? e.extra.application_id : void 0]),
         i = (0, o.e7)([u.ZP], () => u.ZP.getEmbeddedActivityForUserId(e.author_id, null == n ? void 0 : n.id));

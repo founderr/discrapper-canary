@@ -183,7 +183,7 @@ function A(e) {
 function y(e) {
     let {} = e,
         t = (0, d.e7)([f.Z], () => f.Z.getGuildId()),
-        n = (0, E.h)(t, 'clan_tag_upsell_toast'),
+        n = (0, E.h)(t),
         r = (0, d.e7)([m.Z], () => m.Z.getGuild(t), [t]),
         [a, s] = l.useState(!1),
         c = l.useRef(null);

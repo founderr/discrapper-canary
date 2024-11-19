@@ -66,7 +66,7 @@ function I() {
     for (let n of a().difference(t, [...r])) E.delete(n), (e = !0);
     return e;
 }
-class S extends (r = l.ZP.Store) {
+class T extends (r = l.ZP.Store) {
     initialize() {
         this.waitFor(d.Z, c.Z), this.syncWith([c.Z], I);
     }
@@ -77,8 +77,8 @@ class S extends (r = l.ZP.Store) {
         super(...e), m(this, 'canRenderContent', (e) => !(0, p.n2)(e) && (!g.has(e.content_type) || null != this.getMatchingActivity(e)));
     }
 }
-m(S, 'displayName', 'ContentInventoryActivityStore'),
-    (t.Z = new S(u.Z, {
+m(T, 'displayName', 'ContentInventoryActivityStore'),
+    (t.Z = new T(u.Z, {
         CONNECTION_OPEN: function () {
             E.clear();
         },

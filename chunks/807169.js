@@ -32,14 +32,14 @@ function m(e, t) {
         m = l.xM.getSetting(),
         g = c.default.getId(),
         b = null !== (a = null === (n = p.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) && void 0 !== a && a,
-        S = null != h && null !== (s = null === (r = f.ZP.getMember(h, g)) || void 0 === r ? void 0 : r.roles) && void 0 !== s ? s : [],
-        T = o.Z.isViewingRoles(h),
+        T = null != h && null !== (s = null === (r = f.ZP.getMember(h, g)) || void 0 === r ? void 0 : r.roles) && void 0 !== s ? s : [],
+        S = o.Z.isViewingRoles(h),
         { computedPermissions: y, hasBaseAccessPermissions: A, hasSendMessagesPermission: N } = v(_, e instanceof u.Sf && e.isThread());
     return {
         context: _,
         userId: g,
-        roleIds: S,
-        isImpersonating: T,
+        roleIds: T,
+        isImpersonating: S,
         commandTypes: t,
         computedPermissions: y,
         hasBaseAccessPermissions: A,

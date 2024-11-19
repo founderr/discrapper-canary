@@ -4,8 +4,8 @@ var g,
     v,
     b,
     I = n(979554),
-    S = n(442837),
-    T = n(570140),
+    T = n(442837),
+    S = n(570140),
     y = n(981631);
 let A = y.QZA.CLOSED,
     N = {};
@@ -27,7 +27,7 @@ function L() {
 function x() {
     (_ = void 0), (p = void 0), (h = void 0), (m = void 0), (f = void 0);
 }
-class w extends (b = S.ZP.Store) {
+class w extends (b = T.ZP.Store) {
     getFormState() {
         return A;
     }
@@ -114,7 +114,7 @@ class w extends (b = S.ZP.Store) {
               writable: !0
           })
         : (g[E] = v),
-    (t.Z = new w(T.Z, {
+    (t.Z = new w(S.Z, {
         USER_SETTINGS_ACCOUNT_INIT: C,
         USER_SETTINGS_MODAL_INIT: C,
         USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS: C,

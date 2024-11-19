@@ -18,8 +18,8 @@ var r = n(200651),
     v = n(626135),
     b = n(960048),
     I = n(998502),
-    S = n(981631),
-    T = n(388032),
+    T = n(981631),
+    S = n(388032),
     y = n(624013);
 function A(e, t, n) {
     return (
@@ -56,7 +56,7 @@ function N() {
         onClick: n,
         submitting: e,
         className: y.clearOverrideButton,
-        children: T.intl.string(T.t['/Nz9ra'])
+        children: S.intl.string(S.t['/Nz9ra'])
     });
 }
 let C = s().throttle(
@@ -84,7 +84,7 @@ class R extends i.PureComponent {
         });
         let r = (0, m.e)(),
             i = b.Z.captureCrash(e, { extra: t });
-        v.default.track(S.rMx.APP_CRASHED, {
+        v.default.track(T.rMx.APP_CRASHED, {
             path: n.pathname,
             extra: t,
             error_message: e.message,
@@ -115,7 +115,7 @@ class R extends i.PureComponent {
         let { children: e, renderCustomMessage: t } = this.props;
         if (null !== this.state.error) {
             let e = (0, r.jsxs)('div', {
-                    children: [(0, r.jsx)('p', { children: T.intl.string(T.t.tx8CkJ) }), (0, r.jsx)('p', { children: T.intl.string(T.t.CvQlAA) })]
+                    children: [(0, r.jsx)('p', { children: S.intl.string(S.t.tx8CkJ) }), (0, r.jsx)('p', { children: S.intl.string(S.t.CvQlAA) })]
                 }),
                 n = (0, r.jsxs)('div', {
                     className: y.buttons,
@@ -123,13 +123,13 @@ class R extends i.PureComponent {
                         (0, r.jsx)(d.Button, {
                             size: d.ButtonSizes.LARGE,
                             onClick: this._handleSubmitReport,
-                            children: T.intl.string(T.t['+hivLS'])
+                            children: S.intl.string(S.t['+hivLS'])
                         }),
                         (0, r.jsx)(N, {})
                     ]
                 });
             return (0, r.jsx)(h.Z, {
-                title: T.intl.string(T.t['3h+n+/']),
+                title: S.intl.string(S.t['3h+n+/']),
                 note: null != t ? t() : e,
                 action: n,
                 className: y.errorPage

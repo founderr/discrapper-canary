@@ -1,6 +1,6 @@
 n.d(t, {
     Iu: function () {
-        return B;
+        return G;
     },
     Jw: function () {
         return U;
@@ -12,7 +12,7 @@ n.d(t, {
         return V;
     },
     lv: function () {
-        return G;
+        return B;
     },
     v: function () {
         return M;
@@ -37,8 +37,8 @@ var r = n(392711),
     v = n(252611),
     b = n(136144),
     I = n(316137),
-    S = n(654123),
-    T = n(660020),
+    T = n(654123),
+    S = n(660020),
     y = n(980084),
     A = n(24688),
     N = n(200997),
@@ -54,12 +54,12 @@ let M = {
         end: 15
     },
     P = [a],
-    k = [s, o, l, u, c, d, f, _, p, h, m, g, E, v, b, I, S, T, y, A, N],
+    k = [s, o, l, u, c, d, f, _, p, h, m, g, E, v, b, I, T, S, y, A, N],
     U = {
         [x.q.BASIC]: P,
         [x.q.PREMIUM]: k
     },
-    G = i().memoize(
+    B = i().memoize(
         (e) =>
             new Promise((t) => {
                 let n = new Image();
@@ -76,7 +76,7 @@ let M = {
                     });
             })
     ),
-    B = (e, t) => {
+    G = (e, t) => {
         let n = U[e];
         if (null != t && e === x.q.PREMIUM) {
             let e = t.end + 1;

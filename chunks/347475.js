@@ -29,21 +29,21 @@ function m(e) {
             isIgnored: u.Z.isIgnored(g.id)
         })),
         I = (0, l.Do)({ location: 'UserProfileModalWrapper' }),
-        [S, T] = i.useState(v || (I && (b || v))),
+        [T, S] = i.useState(v || (I && (b || v))),
         y = (0, d.sS)({ location: 'UserProfilePopoutWrapper' });
-    return S && y && !I
+    return T && y && !I
         ? (0, r.jsx)(f.Z, {
               ...a,
               user: g,
               currentUser: E,
-              onViewBlockedProfileClick: () => T(!1)
+              onViewBlockedProfileClick: () => S(!1)
           })
-        : S && I
+        : T && I
           ? (0, r.jsx)(f.Y, {
                 ...a,
                 user: g,
                 currentUser: E,
-                onViewBlockedProfileClick: () => T(!1)
+                onViewBlockedProfileClick: () => S(!1)
             })
           : g.isNonUserBot()
             ? (0, r.jsx)(p.Z, {

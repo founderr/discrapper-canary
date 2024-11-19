@@ -20,7 +20,7 @@ var i = n(97613),
     m = n(981631),
     g = n(474936);
 function E(e) {
-    let { initialPlanId: t, followupSKUInfo: i, onClose: E, onComplete: v, onSubscriptionConfirmation: b, analyticsLocations: I, analyticsObject: S, analyticsLocation: T, analyticsSourceLocation: y, isGift: A = !1, giftMessage: N, giftStyle: C, giftingOrigin: R, subscriptionTier: O, trialId: D, postSuccessGuild: L, openInvoiceId: x, applicationId: w, referralTrialOfferId: M, giftRecipient: P, returnRef: k, subscription: U, skipConfirm: G, repeatPurchase: B } = null != e ? e : {},
+    let { initialPlanId: t, followupSKUInfo: i, onClose: E, onComplete: v, onSubscriptionConfirmation: b, analyticsLocations: I, analyticsObject: T, analyticsLocation: S, analyticsSourceLocation: y, isGift: A = !1, giftMessage: N, giftStyle: C, giftingOrigin: R, subscriptionTier: O, trialId: D, postSuccessGuild: L, openInvoiceId: x, applicationId: w, referralTrialOfferId: M, giftRecipient: P, returnRef: k, subscription: U, skipConfirm: B, repeatPurchase: G } = null != e ? e : {},
         Z = !1,
         F = (0, s.Z)(),
         V = f.default.getCurrentUser(),
@@ -57,8 +57,8 @@ function E(e) {
                     },
                     onSubscriptionConfirmation: b,
                     analyticsLocations: I,
-                    analyticsObject: S,
-                    analyticsLocation: T,
+                    analyticsObject: T,
+                    analyticsLocation: S,
                     analyticsSourceLocation: y,
                     trialId: D,
                     postSuccessGuild: L,
@@ -68,8 +68,8 @@ function E(e) {
                     referralTrialOfferId: M,
                     returnRef: k,
                     subscription: U,
-                    skipConfirm: !!G,
-                    repeatPurchase: B
+                    skipConfirm: !!B,
+                    repeatPurchase: G
                 });
             };
         },
@@ -80,7 +80,7 @@ function E(e) {
                     _.default.track(m.rMx.PAYMENT_FLOW_CANCELED, {
                         load_id: F,
                         payment_type: m.Zuq[m.GZQ.SUBSCRIPTION],
-                        location: null != T ? T : S,
+                        location: null != S ? S : T,
                         source: y,
                         subscription_type: m.NYc.PREMIUM,
                         is_gift: A,

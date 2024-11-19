@@ -85,7 +85,7 @@ function I(e) {
         })
     );
 }
-let S = {
+let T = {
         enter: E.enter,
         enterActive: E.enterActive,
         enterDone: E.enterDone,
@@ -93,7 +93,7 @@ let S = {
         exitActive: E.exitActive,
         exitDone: E.exitDone
     },
-    T = {
+    S = {
         enter: E.enterReducedMotion,
         enterActive: E.enterActiveReducedMotion,
         enterDone: E.enterDoneReducedMotion,
@@ -103,7 +103,7 @@ let S = {
     };
 function y() {
     let { reducedMotion: e } = s.useContext(p.AccessibilityPreferencesContext),
-        t = e.enabled ? T : S,
+        t = e.enabled ? S : T,
         n = b((e) => e.fullScreenLayers);
     return (0, a.jsx)(u.Z, {
         children: n.map((e) =>

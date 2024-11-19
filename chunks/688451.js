@@ -74,7 +74,7 @@ function c(e) {
     return U && e instanceof Map;
 }
 function d(e) {
-    return G && e instanceof Set;
+    return B && e instanceof Set;
 }
 function f(e) {
     return e.o || e.t;
@@ -133,12 +133,12 @@ function v(e, t) {
     t && (g('Patches'), (e.u = []), (e.s = []), (e.v = t));
 }
 function b(e) {
-    I(e), e.p.forEach(T), (e.p = null);
+    I(e), e.p.forEach(S), (e.p = null);
 }
 function I(e) {
     e === P && (P = e.l);
 }
-function S(e) {
+function T(e) {
     return (P = {
         p: [],
         l: P,
@@ -147,7 +147,7 @@ function S(e) {
         _: 0
     });
 }
-function T(e) {
+function S(e) {
     var t = e[V];
     0 === t.i || 1 === t.i ? t.j() : (t.g = !0);
 }
@@ -273,8 +273,8 @@ var M,
     P,
     k = 'undefined' != typeof Symbol && 'symbol' == typeof Symbol('x'),
     U = 'undefined' != typeof Map,
-    G = 'undefined' != typeof Set,
-    B = 'undefined' != typeof Proxy && void 0 !== Proxy.revocable && 'undefined' != typeof Reflect,
+    B = 'undefined' != typeof Set,
+    G = 'undefined' != typeof Proxy && void 0 !== Proxy.revocable && 'undefined' != typeof Reflect,
     Z = k ? Symbol.for('immer-nothing') : (((M = {})['immer-nothing'] = !0), M),
     F = k ? Symbol.for('immer-draftable') : '__$immer_draftable',
     V = k ? Symbol.for('immer-state') : '__$immer_state',
@@ -372,7 +372,7 @@ s(K, function (e, t) {
 var q = new ((function () {
         function e(e) {
             var t = this;
-            (this.O = B),
+            (this.O = G),
                 (this.D = !0),
                 (this.produce = function (e, n, i) {
                     if ('function' == typeof e && 'function' != typeof n) {
@@ -392,7 +392,7 @@ var q = new ((function () {
                         );
                     }
                     if (('function' != typeof n && r(6), void 0 !== i && 'function' != typeof i && r(7), a(e))) {
-                        var l = S(t),
+                        var l = T(t),
                             u = x(t, e, void 0),
                             c = !0;
                         try {
@@ -467,7 +467,7 @@ var q = new ((function () {
                             );
                         })(t)));
                 var t,
-                    n = S(this),
+                    n = T(this),
                     l = x(this, e, void 0);
                 return (l[V].C = !0), I(n), l;
             }),
@@ -479,7 +479,7 @@ var q = new ((function () {
                 this.D = e;
             }),
             (t.setUseProxies = function (e) {
-                e && !B && r(20), (this.O = e);
+                e && !G && r(20), (this.O = e);
             }),
             (t.applyPatches = function (e, t) {
                 for (n = t.length - 1; n >= 0; n--) {

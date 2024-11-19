@@ -62,7 +62,7 @@ function b(e) {
 function I(e) {
     let { reply: t, chatInputType: n } = e,
         { channel: i, message: a, shouldMention: u, showMentionToggle: p } = t,
-        { nick: I, colorString: S, colorRoleName: T } = (0, c.ZP)(a),
+        { nick: I, colorString: T, colorRoleName: S } = (0, c.ZP)(a),
         y = (function (e, t) {
             let n = e.id,
                 r = t.id;
@@ -114,8 +114,8 @@ function I(e) {
                                             {
                                                 className: v.name,
                                                 name: I,
-                                                color: S,
-                                                roleName: T
+                                                color: T,
+                                                roleName: S
                                             },
                                             t
                                         )

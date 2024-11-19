@@ -17,8 +17,8 @@ var a,
     v = n(687516),
     b = n(139656),
     I = n(358085),
-    S = n(199902),
-    T = n(314897),
+    T = n(199902),
+    S = n(314897),
     y = n(131951),
     A = n(158776),
     N = n(19780),
@@ -53,10 +53,10 @@ function U(e) {
                 });
             });
 }
-function G() {
+function B() {
     return !0;
 }
-class B extends (a = _.ZP.Store) {
+class G extends (a = _.ZP.Store) {
     getActiveStreamKey() {
         return (0, b.Z)(y.Z) ? i : null;
     }
@@ -72,8 +72,8 @@ class B extends (a = _.ZP.Store) {
     getStatsHistory(e, t, n) {
         if (!(0, b.Z)(y.Z) || null == t) return null;
         if (n) {
-            let n = S.Z.getActiveStreamForUser(t, e);
-            if (null == n || 0 === S.Z.getViewerIds(n).length) return null;
+            let n = T.Z.getActiveStreamForUser(t, e);
+            if (null == n || 0 === T.Z.getViewerIds(n).length) return null;
         }
         return P.map((e) =>
             n
@@ -166,7 +166,7 @@ class B extends (a = _.ZP.Store) {
     }
 }
 (l = 'StreamRTCConnectionStore'),
-    (o = 'displayName') in (s = B)
+    (o = 'displayName') in (s = G)
         ? Object.defineProperty(s, o, {
               value: l,
               enumerable: !0,
@@ -174,7 +174,7 @@ class B extends (a = _.ZP.Store) {
               writable: !0
           })
         : (s[o] = l),
-    (t.Z = new B(
+    (t.Z = new G(
         h.Z,
         !y.Z.isSupported() || __OVERLAY__
             ? {}
@@ -185,20 +185,20 @@ class B extends (a = _.ZP.Store) {
                   CONNECTION_CLOSED: function () {
                       (r = null), (i = null), k();
                   },
-                  RTC_CONNECTION_STATE: G,
-                  RTC_CONNECTION_PING: G,
-                  RTC_CONNECTION_LOSS_RATE: G,
+                  RTC_CONNECTION_STATE: B,
+                  RTC_CONNECTION_PING: B,
+                  RTC_CONNECTION_LOSS_RATE: B,
                   RTC_CONNECTION_UPDATE_ID: function (e) {
                       return f().some(M, (t) => t === e.connection);
                   },
-                  RTC_CONNECTION_SECURE_FRAMES_UPDATE: G,
+                  RTC_CONNECTION_SECURE_FRAMES_UPDATE: B,
                   STREAM_START: function (e) {
                       let { streamType: t, guildId: n, channelId: r, appContext: i, pid: a, sourceId: s } = e,
                           o = (0, E.V9)({
                               streamType: t,
                               guildId: n,
                               channelId: r,
-                              ownerId: T.default.getId()
+                              ownerId: S.default.getId()
                           });
                       if (
                           ((O[o] = i),

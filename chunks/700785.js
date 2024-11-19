@@ -1,6 +1,6 @@
 n.d(t, {
     BT: function () {
-        return B;
+        return G;
     },
     Hn: function () {
         return b;
@@ -12,7 +12,7 @@ n.d(t, {
         return function e(t) {
             let n,
                 { forceRoles: r, context: i, overwrites: a, roles: s, checkElevated: o = !0, excludeGuildPermissions: l } = t,
-                u = T;
+                u = S;
             if (i instanceof f.Sf) {
                 var c;
                 if (i.isScheduledForDeletion()) return b;
@@ -74,7 +74,7 @@ n.d(t, {
         return x;
     },
     TP: function () {
-        return S;
+        return T;
     },
     Uu: function () {
         return Z;
@@ -98,7 +98,7 @@ n.d(t, {
         return L;
     },
     we: function () {
-        return G;
+        return B;
     },
     ym: function () {
         return C;
@@ -124,8 +124,8 @@ var r = n(392711),
     v = n(981631);
 let b = a.vB(0),
     I = a.$e(...i().values(v.Plq)),
-    S = a.$e(v.Plq.CREATE_INSTANT_INVITE, v.Plq.CHANGE_NICKNAME, v.Plq.VIEW_CHANNEL, v.Plq.SEND_MESSAGES, v.Plq.EMBED_LINKS, v.Plq.ATTACH_FILES, v.Plq.READ_MESSAGE_HISTORY, v.Plq.MENTION_EVERYONE, v.Plq.USE_EXTERNAL_EMOJIS, v.Plq.USE_EXTERNAL_STICKERS, v.Plq.ADD_REACTIONS, v.Plq.CREATE_PUBLIC_THREADS, v.Plq.CREATE_PRIVATE_THREADS, v.Plq.SEND_MESSAGES_IN_THREADS, v.Plq.SEND_POLLS, v.Plq.CONNECT, v.Plq.SPEAK, v.Plq.USE_VAD, v.Plq.STREAM, v.Plq.USE_EMBEDDED_ACTIVITIES, v.Plq.USE_SOUNDBOARD, v.Plq.REQUEST_TO_SPEAK, v.Plq.USE_APPLICATION_COMMANDS, v.Plq.CREATE_GUILD_EXPRESSIONS, v.Plq.CREATE_EVENTS, v.Plq.USE_EXTERNAL_APPS),
-    T = a.$e(v.Plq.VIEW_CHANNEL, v.Plq.READ_MESSAGE_HISTORY),
+    T = a.$e(v.Plq.CREATE_INSTANT_INVITE, v.Plq.CHANGE_NICKNAME, v.Plq.VIEW_CHANNEL, v.Plq.SEND_MESSAGES, v.Plq.EMBED_LINKS, v.Plq.ATTACH_FILES, v.Plq.READ_MESSAGE_HISTORY, v.Plq.MENTION_EVERYONE, v.Plq.USE_EXTERNAL_EMOJIS, v.Plq.USE_EXTERNAL_STICKERS, v.Plq.ADD_REACTIONS, v.Plq.CREATE_PUBLIC_THREADS, v.Plq.CREATE_PRIVATE_THREADS, v.Plq.SEND_MESSAGES_IN_THREADS, v.Plq.SEND_POLLS, v.Plq.CONNECT, v.Plq.SPEAK, v.Plq.USE_VAD, v.Plq.STREAM, v.Plq.USE_EMBEDDED_ACTIVITIES, v.Plq.USE_SOUNDBOARD, v.Plq.REQUEST_TO_SPEAK, v.Plq.USE_APPLICATION_COMMANDS, v.Plq.CREATE_GUILD_EXPRESSIONS, v.Plq.CREATE_EVENTS, v.Plq.USE_EXTERNAL_APPS),
+    S = a.$e(v.Plq.VIEW_CHANNEL, v.Plq.READ_MESSAGE_HISTORY),
     y = a.$e(v.Plq.VIEW_CHANNEL, v.Plq.SEND_MESSAGES, v.Plq.CONNECT, v.Plq.SPEAK, v.Plq.STREAM, v.Plq.USE_EMBEDDED_ACTIVITIES, v.Plq.USE_EXTERNAL_APPS, v.Plq.USE_EXTERNAL_EMOJIS, v.Plq.USE_EXTERNAL_SOUNDS, v.Plq.USE_EXTERNAL_STICKERS, v.Plq.USE_SOUNDBOARD, v.Plq.USE_VAD),
     A = a.$e(v.Plq.VIEW_CHANNEL, v.Plq.READ_MESSAGE_HISTORY),
     N = a.$e(v.Plq.VIEW_CHANNEL, v.Plq.READ_MESSAGE_HISTORY, v.Plq.CHANGE_NICKNAME),
@@ -156,7 +156,7 @@ function O(e, t, n, r) {
     return n;
 }
 function D(e) {
-    let { userId: t, member: n, guild: r, overwrites: i, roles: s, checkElevated: o = !0, excludeGuildPermissions: l = !1, lurkerPermissionsMask: u = T } = e;
+    let { userId: t, member: n, guild: r, overwrites: i, roles: s, checkElevated: o = !0, excludeGuildPermissions: l = !1, lurkerPermissionsMask: u = S } = e;
     if (l) return O(r.id, n, b, i);
     let d = (s =
             null != s
@@ -165,7 +165,7 @@ function D(e) {
                       ...s
                   }
                 : m.Z.getRoles(r.id))[r.getEveryoneRoleId()],
-        f = null != d ? d.permissions : S;
+        f = null != d ? d.permissions : T;
     if (null != n)
         for (let e = 0; e < n.roles.length; e++) {
             let t = s[n.roles[e]];
@@ -179,7 +179,7 @@ function L(e) {
         { user: a, context: s, overwrites: o, roles: l, checkElevated: c = !0, excludeGuildPermissions: _ = !1 } = e;
     if (null == a) return b;
     let E = 'string' == typeof a ? a : a.id,
-        v = T;
+        v = S;
     if (s instanceof f.Sf) {
         if (s.isScheduledForDeletion()) return b;
         if (f.Ec.has(s.type)) {
@@ -212,10 +212,10 @@ function L(e) {
     } else (o = null != o ? o : {}), (i = s);
     if (null == i) return b;
     if (!(E === (null === (t = g.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) && u.Z.isViewingRoles(i.id)) && i.isOwner(E)) return R(I, i, E, c);
-    let S = h.ZP.getMember(i.id, E);
+    let T = h.ZP.getMember(i.id, E);
     return D({
         userId: E,
-        member: S,
+        member: T,
         guild: i,
         overwrites: o,
         roles: l,
@@ -234,8 +234,8 @@ function w(e, t) {
     let r = { ...e.permissionOverwrites },
         i = { ...t.permissionOverwrites };
     return (
-        null == r[n] && (r[n] = G(n)),
-        null == i[n] && (i[n] = G(n)),
+        null == r[n] && (r[n] = B(n)),
+        null == i[n] && (i[n] = B(n)),
         Object.keys(r).length === Object.keys(i).length &&
             !Object.keys(r).some((e) => {
                 let t = r[e],
@@ -268,7 +268,7 @@ function k(e, t) {
 function U(e, t) {
     return null == t.hoistRoleId ? null : m.Z.getRole(e.id, t.hoistRoleId);
 }
-function G(e) {
+function B(e) {
     return {
         id: e,
         type: s.BN.ROLE,
@@ -276,7 +276,7 @@ function G(e) {
         deny: b
     };
 }
-function B(e) {
+function G(e) {
     let { permission: t, user: n, context: r, overwrites: i, roles: s, excludeGuildPermissions: o } = e;
     return a.e$(
         L({

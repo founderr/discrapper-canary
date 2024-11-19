@@ -6,7 +6,7 @@ n.d(t, {
         return I;
     },
     jd: function () {
-        return S;
+        return T;
     }
 }),
     n(627341);
@@ -30,8 +30,8 @@ var i = n(120356),
     v = n(388032),
     b = n(617114);
 let I = 2700,
-    S = '> -# *',
-    T = (e, t) =>
+    T = '> -# *',
+    S = (e, t) =>
         (0, s.EQ)({
             interactionType: e,
             sourceType: t
@@ -80,7 +80,7 @@ let I = 2700,
             )
             .exhaustive();
 function y(e) {
-    let { user: t, sourceType: n, isVisible: i, isExpandable: s, interactionSourceId: I, moreButton: S } = e,
+    let { user: t, sourceType: n, isVisible: i, isExpandable: s, interactionSourceId: I, moreButton: T } = e,
         { trackUserProfileAction: y } = (0, _.KZ)(),
         { pressReact: A, pressReply: N } = (0, h.Q)(n),
         C = (0, o.e7)([f.default], () => f.default.getId() === t.id),
@@ -115,7 +115,7 @@ function y(e) {
                                   O === E.y0.BITE_SIZE && (0, d.EW)(l.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
                           },
                           className: a()(b.button, b.left),
-                          'aria-label': T(E.P.REACT, n),
+                          'aria-label': S(E.P.REACT, n),
                           'aria-haspopup': 'dialog',
                           children: (0, r.jsx)(u.ReactionIcon, {
                               size: 'xs',
@@ -140,7 +140,7 @@ function y(e) {
                                   O === E.y0.BITE_SIZE && (0, d.EW)(l.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
                           },
                           className: b.button,
-                          'aria-label': T(E.P.REPLY, n),
+                          'aria-label': S(E.P.REPLY, n),
                           'aria-haspopup': 'dialog',
                           children: (0, r.jsx)(u.ArrowAngleLeftUpIcon, {
                               size: 'xs',
@@ -148,13 +148,13 @@ function y(e) {
                           })
                       })
                   }),
-                  null != S &&
+                  null != T &&
                       (0, r.jsx)(u.TooltipContainer, {
                           text: v.intl.string(v.t.UKOtz8),
                           shouldShow: i,
                           delay: 0,
                           'aria-label': !1,
-                          children: S
+                          children: T
                       })
               ]
           });

@@ -26,7 +26,7 @@ function I(e, t, n) {
     var r, i, a;
     return ((null !== (a = null === (i = m.get(e)) || void 0 === i ? void 0 : null === (r = i.get(t)) || void 0 === r ? void 0 : r.flags) && void 0 !== a ? a : h.Dg.NONE) & n) === n;
 }
-function S(e, t) {
+function T(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = m.get(e);
     if (null == r) return !1;
@@ -37,7 +37,7 @@ function S(e, t) {
     }
     return !1;
 }
-function T(e) {
+function S(e) {
     let { user: t, sessionId: n } = e;
     (g = t.id), (E = n), (v = null);
 }
@@ -70,7 +70,7 @@ class y extends (r = o.ZP.Store) {
     }
     isAnyoneElseSpeaking() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : h.Yn.DEFAULT;
-        return S(e, h.Dg.VOICE, !0);
+        return T(e, h.Dg.VOICE, !0);
     }
     isCurrentUserSpeaking() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : h.Yn.DEFAULT;
@@ -78,7 +78,7 @@ class y extends (r = o.ZP.Store) {
     }
     isAnyonePrioritySpeaking() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : h.Yn.DEFAULT;
-        return S(e, h.Dg.VOICE | h.Dg.PRIORITY);
+        return T(e, h.Dg.VOICE | h.Dg.PRIORITY);
     }
     isCurrentUserPrioritySpeaking() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : h.Yn.DEFAULT;
@@ -95,8 +95,8 @@ class y extends (r = o.ZP.Store) {
           })
         : (i[a] = s),
     (t.Z = new y(l.Z, {
-        CONNECTION_OPEN: T,
-        OVERLAY_INITIALIZE: T,
+        CONNECTION_OPEN: S,
+        OVERLAY_INITIALIZE: S,
         SPEAKING: function (e) {
             let { context: t, userId: n, speakingFlags: r } = e;
             if ((r & h.Dg.PRIORITY) === h.Dg.PRIORITY) {

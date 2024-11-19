@@ -47,8 +47,8 @@ var r,
     v = n(592125),
     b = n(430824),
     I = n(594174),
-    S = n(626135),
-    T = n(254711),
+    T = n(626135),
+    S = n(254711),
     y = n(700089),
     A = n(654455),
     N = n(963456),
@@ -75,20 +75,20 @@ function M(e, t, n) {
 let P = new u.Yd('ApplicationCommandIndexStore'),
     k = Symbol('currentUser'),
     U = Symbol('stale'),
-    G = Symbol('current'),
-    B = Object.freeze({
+    B = Symbol('current'),
+    G = Object.freeze({
         descriptors: [],
         commands: [],
         sectionedCommands: [],
         loading: !0
     }),
     Z = Object.freeze({
-        serverVersion: G,
+        serverVersion: B,
         fetchState: { fetching: !1 },
         result: {
             sections: {},
             sectionIdsByBotId: {},
-            version: G
+            version: B
         }
     }),
     F = Object.freeze({
@@ -224,7 +224,7 @@ function X(e) {
         }
         t.commands[e.id] = e;
     }
-    let u = null !== (n = i.version) && void 0 !== n ? n : G;
+    let u = null !== (n = i.version) && void 0 !== n ? n : B;
     W(r, {
         serverVersion: u,
         result: {
@@ -288,7 +288,7 @@ class $ extends (r = c.ZP.Store) {
         return e in this.indices;
     }
     query(e, t, n) {
-        if (null == I.default.getCurrentUser()) return B;
+        if (null == I.default.getCurrentUser()) return G;
         let r = this.getContextState(e),
             i = this.getUserState(),
             a = this.getApplicationState(n.applicationId),
@@ -302,7 +302,7 @@ class $ extends (r = c.ZP.Store) {
                 l &&
                 null != e &&
                 eu(e) &&
-                (S.default.track(w.rMx.APPLICATION_COMMAND_CACHE_FETCH, {
+                (T.default.track(w.rMx.APPLICATION_COMMAND_CACHE_FETCH, {
                     miss: null == r.result,
                     size: Object.keys(ee.indices).length
                 }),
@@ -503,7 +503,7 @@ function et(e, t, n) {
                 n &&
                     t &&
                     eu(e) &&
-                    (S.default.track(w.rMx.APPLICATION_COMMAND_CACHE_FETCH, {
+                    (T.default.track(w.rMx.APPLICATION_COMMAND_CACHE_FETCH, {
                         miss: null == a.result,
                         size: Object.keys(ee.indices).length
                     }),
@@ -534,7 +534,7 @@ function en(e, t) {
             n &&
                 null != e &&
                 (t &&
-                    (S.default.track(w.rMx.APPLICATION_COMMAND_CACHE_FETCH, {
+                    (T.default.track(w.rMx.APPLICATION_COMMAND_CACHE_FETCH, {
                         miss: null == i.result,
                         size: Object.keys(ee.indices).length
                     }),
@@ -595,11 +595,11 @@ function ei(e, t, n, r) {
                   loading: l
               }
             : {
-                  descriptors: [T.Tm[x.bi.FRECENCY], ...i],
+                  descriptors: [S.Tm[x.bi.FRECENCY], ...i],
                   commands: e.concat(a),
                   sectionedCommands: [
                       {
-                          section: T.Tm[x.bi.FRECENCY],
+                          section: S.Tm[x.bi.FRECENCY],
                           data: e
                       },
                       ...o
@@ -663,12 +663,12 @@ function es(e, t, n) {
 }
 function eo(e) {
     var t, n, r, i, a, s, o;
-    let { permissionContext: u, contextState: c, userState: d, applicationStates: f, text: _, builtIns: h = C.D.ALLOW, allowApplicationCommands: m = !0, singleApplicationId: E, allowEmptySections: v = !1, scoreMethod: I = C.p.NONE, sortOptions: S = ea, installOnDemand: y = !1 } = e,
+    let { permissionContext: u, contextState: c, userState: d, applicationStates: f, text: _, builtIns: h = C.D.ALLOW, allowApplicationCommands: m = !0, singleApplicationId: E, allowEmptySections: v = !1, scoreMethod: I = C.p.NONE, sortOptions: T = ea, installOnDemand: y = !1 } = e,
         { commandTypes: N } = u,
         R = null == _ ? void 0 : _.toLowerCase(),
         O = null == R ? void 0 : R.split(' '),
         D = h === C.D.ONLY_TEXT,
-        L = h !== C.D.DENY ? (0, T.Kh)(N, !0, D) : [],
+        L = h !== C.D.DENY ? (0, S.Kh)(N, !0, D) : [],
         w = [],
         M = {
             permissionContext: u,
@@ -692,17 +692,17 @@ function eo(e) {
             (null == E || t.descriptor.id === E) && U.add(e);
         }
     }
-    let G = new Map();
+    let B = new Map();
     for (let [e, t] of f)
         if (null == E || e === E) {
             let e = null === (s = t.result) || void 0 === s ? void 0 : s.sections;
-            if (null != e) for (let t of Object.keys(e)) U.add(t), G.set(t, e[t]);
+            if (null != e) for (let t of Object.keys(e)) U.add(t), B.set(t, e[t]);
         }
     for (let e of Array.from(U)) {
         let t, n;
         let r = P[e],
             i = k[e],
-            a = G.get(e),
+            a = B.get(e),
             s = null != r,
             o = null != i;
         if (null != r && null != i) {
@@ -721,15 +721,15 @@ function eo(e) {
         null != u && w.push(u);
     }
     if (
-        (S.applications.useFrecency && g.DZ.loadIfNecessary(),
+        (T.applications.useFrecency && g.DZ.loadIfNecessary(),
         w.sort((e, t) => {
-            if (S.applications.useScore && I === C.p.APPLICATION_ONLY) {
+            if (T.applications.useScore && I === C.p.APPLICATION_ONLY) {
                 var n, r, i, a;
                 let s = null !== (i = null === (n = e.data[0]) || void 0 === n ? void 0 : n.score) && void 0 !== i ? i : Number.MAX_VALUE,
                     o = null !== (a = null === (r = t.data[0]) || void 0 === r ? void 0 : r.score) && void 0 !== a ? a : Number.MAX_VALUE;
                 if (s !== o) return s - o;
             }
-            if (S.applications.useFrecency) {
+            if (T.applications.useFrecency) {
                 let n = p.Z.getScoreWithoutLoadingLatest(e.section.id),
                     r = p.Z.getScoreWithoutLoadingLatest(t.section.id);
                 if (n !== r) return r - n;
@@ -738,10 +738,10 @@ function eo(e) {
         }),
         L.length > 0 || !0 === v)
     ) {
-        let e = el(T.Tm[x.bi.BUILT_IN], L, !0, !0, M);
+        let e = el(S.Tm[x.bi.BUILT_IN], L, !0, !0, M);
         null != e && w.push(e);
     }
-    let B = w.flatMap((e) =>
+    let G = w.flatMap((e) =>
         e.data.map((t) => ({
             ...t,
             section: e.section
@@ -750,7 +750,7 @@ function eo(e) {
     if (I === C.p.COMMAND_ONLY || I === C.p.COMMAND_OR_APPLICATION) {
         let e = u.context,
             t = b.Z.getGuild(null == u ? void 0 : null === (o = u.context) || void 0 === o ? void 0 : o.guild_id);
-        S.commands.useFrecency && g.DZ.loadIfNecessary();
+        T.commands.useFrecency && g.DZ.loadIfNecessary();
         let n =
             null != e
                 ? {
@@ -758,14 +758,14 @@ function eo(e) {
                       guild: t
                   }
                 : void 0;
-        B.sort((e, t) => {
-            if (S.commands.useScore) {
+        G.sort((e, t) => {
+            if (T.commands.useScore) {
                 var r, i;
                 let n = null !== (r = e.score) && void 0 !== r ? r : 0,
                     a = null !== (i = t.score) && void 0 !== i ? i : 0;
                 if (n !== a) return n - a;
             }
-            if (S.commands.useFrecency) {
+            if (T.commands.useFrecency) {
                 let r = A.ZP.getScoreWithoutLoadingLatest(n, e),
                     i = A.ZP.getScoreWithoutLoadingLatest(n, t);
                 if (r !== i) return i - r;
@@ -774,7 +774,7 @@ function eo(e) {
         });
     }
     return {
-        commands: B,
+        commands: G,
         descriptors: w.map((e) => e.section),
         sectionedCommands: w,
         loading: (null == c ? void 0 : c.fetchState.fetching) === !0 || (null == d ? void 0 : d.fetchState.fetching) === !0 || (null != E && (null === (r = f.get(E)) || void 0 === r ? void 0 : r.fetchState.fetching) === !0)
@@ -921,8 +921,8 @@ function em(e, t) {
     let l, u;
     if (t === x.bi.BUILT_IN)
         return {
-            descriptor: T.Tm[x.bi.BUILT_IN],
-            sectionCommands: (0, T.Kh)([_.yU.CHAT], !0, !1),
+            descriptor: S.Tm[x.bi.BUILT_IN],
+            sectionCommands: (0, S.Kh)([_.yU.CHAT], !0, !1),
             isGuildInstalled: !0,
             isUserInstalled: !0
         };

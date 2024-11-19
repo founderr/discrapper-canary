@@ -1,7 +1,7 @@
 let r;
 n.d(t, {
     U: function () {
-        return B;
+        return G;
     }
 }),
     n(47120);
@@ -23,8 +23,8 @@ var i,
     v = n(823379),
     b = n(709054),
     I = n(882252);
-let S = [],
-    T = null,
+let T = [],
+    S = null,
     y = null,
     A = new Set(),
     N = c.z.LATEST_ACTIVITY,
@@ -32,8 +32,8 @@ let S = [],
     R = [],
     O = !1,
     D = [],
-    L = u().chain(S),
-    x = u().chain(S),
+    L = u().chain(T),
+    x = u().chain(T),
     w = new Set(),
     M = new Set();
 function P(e) {
@@ -49,15 +49,15 @@ function k(e) {
     };
 }
 function U() {
-    (R = []), (r = null), (y = null), (A = new Set()), (N = c.z.LATEST_ACTIVITY), (C = 0), (D = []), (L = u().chain(S)), (x = u().chain(S)), M.clear(), w.clear();
+    (R = []), (r = null), (y = null), (A = new Set()), (N = c.z.LATEST_ACTIVITY), (C = 0), (D = []), (L = u().chain(T)), (x = u().chain(T)), M.clear(), w.clear();
 }
-function G() {
+function B() {
     var e;
     let t = E.Z.getChannelId();
     if (null == t || !(null === (e = m.Z.getChannel(t)) || void 0 === e ? void 0 : e.isForumLikeChannel())) return U(), !1;
     Z({ refreshThreadIds: !0 });
 }
-function B(e) {
+function G(e) {
     let t = m.Z.getChannel(e);
     return null == t
         ? []
@@ -121,8 +121,8 @@ class F extends (i = d.ZP.Store) {
         return R;
     }
     getAndDeleteMostRecentUserCreatedThreadId() {
-        let e = T;
-        return (T = null), e;
+        let e = S;
+        return (S = null), e;
     }
     getFirstNoReplyThreadId() {
         return r;
@@ -138,10 +138,10 @@ class F extends (i = d.ZP.Store) {
           })
         : (a[s] = o),
     (t.Z = new F(f.Z, {
-        CONNECTION_OPEN: G,
-        OVERLAY_INITIALIZE: G,
-        GUILD_CREATE: G,
-        CHANNEL_SELECT: G,
+        CONNECTION_OPEN: B,
+        OVERLAY_INITIALIZE: B,
+        GUILD_CREATE: B,
+        CHANNEL_SELECT: B,
         CHANNEL_DELETE: function (e) {
             let { channel: t } = e;
             if (null == t.parent_id || t.parent_id !== y) return !1;
@@ -156,7 +156,7 @@ class F extends (i = d.ZP.Store) {
         THREAD_CREATE: function (e) {
             let { channel: t, isNewlyCreated: n } = e;
             if (null == t.parent_id || t.parent_id !== y || !n) return !1;
-            t.ownerId !== h.default.getId() ? C++ : (T = t.id);
+            t.ownerId !== h.default.getId() ? C++ : (S = t.id);
         },
         THREAD_UPDATE: function (e) {
             let { channel: t } = e;

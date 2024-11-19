@@ -23,7 +23,7 @@ var r = n(200651),
     v = n(216701),
     b = n(388032),
     I = n(699656);
-function S(e) {
+function T(e) {
     let { action: t } = e,
         n = (0, l.e7)([_.Z], () => _.Z.getChannel(t.channelId)),
         i = (0, d.ZP)(n, !0);
@@ -39,7 +39,7 @@ function S(e) {
               children: b.intl.format(b.t.MkzlDA, { channelName: i })
           });
 }
-function T(e) {
+function S(e) {
     var t;
     let { channelId: n, emojiId: i, emojiName: a } = e,
         s = (0, l.e7)([_.Z], () => _.Z.getChannel(n));
@@ -108,7 +108,7 @@ function y(e) {
                                 className: s()(I.banner, I.clickable),
                                 onClick: x,
                                 children: [
-                                    (0, r.jsx)(T, {
+                                    (0, r.jsx)(S, {
                                         channelId: y.channelId,
                                         emojiId: null === (t = y.emoji) || void 0 === t ? void 0 : t.id,
                                         emojiName: null == y ? void 0 : null === (n = y.emoji) || void 0 === n ? void 0 : n.name
@@ -121,7 +121,7 @@ function y(e) {
                                                 color: 'header-primary',
                                                 children: b.intl.format(b.t['/beONz'], { step: y.title })
                                             }),
-                                            (0, r.jsx)(S, { action: y })
+                                            (0, r.jsx)(T, { action: y })
                                         ]
                                     }),
                                     (0, r.jsx)('div', {
@@ -144,7 +144,7 @@ function y(e) {
                                 })
                             },
                             children: [
-                                (0, r.jsx)(T, {
+                                (0, r.jsx)(S, {
                                     channelId: E.channelId,
                                     emojiId: null === (a = E.emoji) || void 0 === a ? void 0 : a.id,
                                     emojiName: null == E ? void 0 : null === (d = E.emoji) || void 0 === d ? void 0 : d.name

@@ -23,27 +23,27 @@ var r = n(200651),
     v = n(228168),
     b = n(981631),
     I = n(474936),
-    S = n(388032),
-    T = n(704938);
+    T = n(388032),
+    S = n(704938);
 let y = (e) => {
     if (null != e)
         switch (e) {
             case I.VU.PREMIUM_TENURE_1_MONTH:
-                return T.tieredTenureBadgeBronzeGlow;
+                return S.tieredTenureBadgeBronzeGlow;
             case I.VU.PREMIUM_TENURE_3_MONTH:
-                return T.tieredTenureBadgeSilverGlow;
+                return S.tieredTenureBadgeSilverGlow;
             case I.VU.PREMIUM_TENURE_6_MONTH:
-                return T.tieredTenureBadgeGoldGlow;
+                return S.tieredTenureBadgeGoldGlow;
             case I.VU.PREMIUM_TENURE_12_MONTH:
-                return T.tieredTenureBadgePlatinumGlow;
+                return S.tieredTenureBadgePlatinumGlow;
             case I.VU.PREMIUM_TENURE_24_MONTH:
-                return T.tieredTenureBadgeDiamondGlow;
+                return S.tieredTenureBadgeDiamondGlow;
             case I.VU.PREMIUM_TENURE_36_MONTH:
-                return T.tieredTenureBadgeEmeraldGlow;
+                return S.tieredTenureBadgeEmeraldGlow;
             case I.VU.PREMIUM_TENURE_60_MONTH:
-                return T.tieredTenureBadgeRubyGlow;
+                return S.tieredTenureBadgeRubyGlow;
             case I.VU.PREMIUM_TENURE_72_MONTH:
-                return T.tieredTenureBadgeFireGlow;
+                return S.tieredTenureBadgeFireGlow;
             default:
                 return;
         }
@@ -54,8 +54,8 @@ function A(e) {
         { context: N, trackUserProfileAction: C } = (0, h.KZ)(),
         [R, O] = i.useState(!1);
     return (0, r.jsx)('div', {
-        className: s()(T.container, n),
-        'aria-label': S.intl.string(S.t.VWV0y8),
+        className: s()(S.container, n),
+        'aria-label': T.intl.string(T.t.VWV0y8),
         role: 'group',
         children: t.map((e) => {
             let t = (0, p.gn)(e.id),
@@ -95,12 +95,12 @@ function A(e) {
                                 alt: ' ',
                                 'aria-hidden': !0,
                                 src: (0, v.jC)(e.icon),
-                                className: s()(T.badge, a)
+                                className: s()(S.badge, a)
                             }),
                             i &&
                                 (0, r.jsxs)('div', {
-                                    className: T.starContainer,
-                                    children: [(0, r.jsx)(E.Z, { className: T.topLeftStar }), (0, r.jsx)(E.Z, { className: T.bottomRightStar })]
+                                    className: S.starContainer,
+                                    children: [(0, r.jsx)(E.Z, { className: S.topLeftStar }), (0, r.jsx)(E.Z, { className: S.bottomRightStar })]
                                 })
                         ]
                     })

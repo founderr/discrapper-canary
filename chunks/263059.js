@@ -22,8 +22,8 @@ var r = n(200651),
     v = n(510659),
     b = n(287954),
     I = n(660579),
-    S = n(502762),
-    T = n(652853),
+    T = n(502762),
+    S = n(652853),
     y = n(64621),
     A = n(448980),
     N = n(194811),
@@ -38,8 +38,8 @@ var r = n(200651),
     P = n(69035);
 function k(e) {
     var t;
-    let { user: n, currentUser: a, activity: k, guild: U, channel: G, className: B, onClose: Z, profileGuildId: F } = e,
-        { profileType: V } = (0, T.z)(),
+    let { user: n, currentUser: a, activity: k, guild: U, channel: B, className: G, onClose: Z, profileGuildId: F } = e,
+        { profileType: V } = (0, S.z)(),
         j = { [P.fullSize]: V === w.y0.FULL_SIZE },
         { interactionSource: H, interactionSourceId: Y } = (0, v.Xo)(),
         W = (0, _.Bq)({
@@ -105,7 +105,7 @@ function k(e) {
                   });
         },
         ee = () =>
-            null == U || null == G
+            null == U || null == B
                 ? null
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
@@ -113,7 +113,7 @@ function k(e) {
                           (0, r.jsx)(R.Z, {
                               user: n,
                               guild: U,
-                              channel: G,
+                              channel: B,
                               onAction: Q,
                               onClose: Z
                           })
@@ -152,8 +152,8 @@ function k(e) {
                         entry: W,
                         sourceType: w.n_.ACTIVITY,
                         children: () =>
-                            (0, r.jsx)(S.Z.Overlay, {
-                                className: s()(P.card, B, { [P.hoisted]: er }),
+                            (0, r.jsx)(T.Z.Overlay, {
+                                className: s()(P.card, G, { [P.hoisted]: er }),
                                 ref: X,
                                 children: (0, r.jsxs)(I.Z, {
                                     user: n,

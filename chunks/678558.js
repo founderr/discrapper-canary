@@ -18,16 +18,16 @@ var r = n(200651),
     v = n(388032),
     b = n(817407);
 t.Z = (e) => {
-    let { analyticsLocation: t, analyticsSourceLocation: n, guild: a, buttonText: I, targetBoostedGuildTier: S, onClose: T = () => {}, closeLayer: y = () => {}, pauseAnimation: A = !1, applicationId: N, handleSubscribeModalClose: C, withHighlight: R = !1, ...O } = e,
+    let { analyticsLocation: t, analyticsSourceLocation: n, guild: a, buttonText: I, targetBoostedGuildTier: T, onClose: S = () => {}, closeLayer: y = () => {}, pauseAnimation: A = !1, applicationId: N, handleSubscribeModalClose: C, withHighlight: R = !1, ...O } = e,
         { analyticsLocations: D } = (0, c.ZP)(),
         L = (0, u.bp)() === g.IlC.POPOUT,
         [x, w] = i.useState(!1),
         { fractionalState: M } = (0, d.Z)();
     !_.Z.hasFetched && (0, l.X8)();
     let P = (0, h.vx)(_.Z.boostSlots),
-        k = null != S ? Math.max((0, h.KK)(a, S), 1) : 1,
+        k = null != T ? Math.max((0, h.KK)(a, T), 1) : 1,
         U = (0, h.aq)({ fractionalState: M }),
-        G = async () => {
+        B = async () => {
             w(!0),
                 await (0, m.u)({
                     analyticsLocations: D,
@@ -35,7 +35,7 @@ t.Z = (e) => {
                     analyticsSourceLocation: n,
                     guild: a,
                     numberOfBoostsToAdd: k,
-                    onClose: T,
+                    onClose: S,
                     closeLayer: y,
                     inPopout: L,
                     applicationId: N,
@@ -43,9 +43,9 @@ t.Z = (e) => {
                 }),
                 w(!1);
         },
-        B = p.ZP.getPremiumTypeSubscription(),
+        G = p.ZP.getPremiumTypeSubscription(),
         Z = (0, r.jsx)('span', { children: null != I ? I : v.intl.string(v.t.gKmQ1N) });
-    return ((null == B ? void 0 : B.isPausedOrPausePending) &&
+    return ((null == G ? void 0 : G.isPausedOrPausePending) &&
         (M === E.a$.NONE || 0 === P.length) &&
         ((Z = (0, r.jsxs)('div', {
             className: b.pausedButton,
@@ -78,7 +78,7 @@ t.Z = (e) => {
               ...O,
               className: s()(O.className, { [b.buttonHighlighted]: R }),
               submitting: x,
-              onClick: G,
+              onClick: B,
               pauseAnimation: A,
               children: Z
           });

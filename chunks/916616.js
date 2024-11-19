@@ -1,6 +1,6 @@
 n.d(t, {
     E: function () {
-        return S;
+        return T;
     }
 }),
     n(47120);
@@ -35,40 +35,40 @@ function I(e, t, n) {
         e
     );
 }
-class S extends (r = a.PureComponent) {
+class T extends (r = a.PureComponent) {
     render() {
         let e;
-        let { className: t, imageClassName: n, readyState: r, src: a, placeholder: s, placeholderVersion: l, alt: c, width: _, height: v, maxWidth: b = _, maxHeight: I = v, minWidth: S, minHeight: A, mediaLayoutType: N, limitResponsiveWidth: C = !0, accessory: R, zoomable: O, original: D, children: L, renderAccessory: x, onClick: w, tabIndex: M, dataSafeSrc: P, useFullWidth: k = !1, ...U } = this.props;
+        let { className: t, imageClassName: n, readyState: r, src: a, placeholder: s, placeholderVersion: l, alt: c, width: _, height: v, maxWidth: b = _, maxHeight: I = v, minWidth: T, minHeight: A, mediaLayoutType: N, limitResponsiveWidth: C = !0, accessory: R, zoomable: O, original: D, children: L, renderAccessory: x, onClick: w, tabIndex: M, dataSafeSrc: P, useFullWidth: k = !1, ...U } = this.props;
         if (1 === _ && 1 === v) return null;
-        let G = (0, f.Tj)({
+        let B = (0, f.Tj)({
                 width: _,
                 height: v,
                 maxWidth: b,
                 maxHeight: I,
-                minWidth: S,
+                minWidth: T,
                 minHeight: A
             }),
-            B = 0 !== G.width ? G.width / G.height : 1;
+            G = 0 !== B.width ? B.width / B.height : 1;
         '' !== a && r !== h.zo9.ERROR
             ? (e = L({
                   src: a,
-                  size: G,
+                  size: B,
                   alt: c,
                   className: n,
                   mediaLayoutType: N
               }))
             : r !== h.zo9.LOADING &&
-              (e = (0, i.jsx)(T, {
-                  size: G,
+              (e = (0, i.jsx)(S, {
+                  size: B,
                   mediaLayoutType: N,
                   alt: c
               })),
             (e = (0, i.jsx)(p.N, {
                 readyState: r,
-                aspectRatio: B,
+                aspectRatio: G,
                 placeholder: s,
                 placeholderVersion: l,
-                placeholderStyle: y(G, N),
+                placeholderStyle: y(B, N),
                 children: e
             }));
         let Z = null != x ? x() : null;
@@ -103,7 +103,7 @@ class S extends (r = a.PureComponent) {
                                     aspectRatio: ''.concat(e.width, ' / ').concat(e.height)
                                 }
                               : e;
-                    })(G, C, k, N),
+                    })(B, C, k, N),
                     ...U,
                     children: [
                         null != D &&
@@ -144,7 +144,7 @@ class S extends (r = a.PureComponent) {
         super(...e), I(this, '_containerRef', a.createRef()), I(this, '_clickableRef', a.createRef());
     }
 }
-function T(e) {
+function S(e) {
     let { size: t, mediaLayoutType: n, alt: r } = e,
         a = (0, c.ZP)();
     return (0, i.jsx)('div', {
@@ -175,7 +175,7 @@ function T(e) {
         })
     });
 }
-I(S, 'defaultProps', {
+I(T, 'defaultProps', {
     readyState: h.zo9.READY,
     zoomable: !0,
     children: (e) => {

@@ -23,8 +23,8 @@ var r = n(200651),
     v = n(998502),
     b = n(528567),
     I = n(371583),
-    S = n(246627),
-    T = n(249268),
+    T = n(246627),
+    S = n(249268),
     y = n(864138),
     A = n(473188),
     N = n(169080),
@@ -36,7 +36,7 @@ function L(e) {
     let { leaderboard: t, previewMode: n = !1, trackRankingItemInteraction: a } = e,
         s = (0, o.e7)([_.default], () => _.default.getId()),
         u = (0, o.e7)([f.default], () => f.default.locale),
-        { rankChanges: p } = (0, S.Z)({
+        { rankChanges: p } = (0, T.Z)({
             guildId: t.guild_id,
             leaderboardId: t.leaderboard_id,
             intervalStart: t.interval_start
@@ -82,7 +82,7 @@ function L(e) {
         className: D.container,
         style: { background: v },
         children: [
-            (0, r.jsx)(T.Z, {
+            (0, r.jsx)(S.Z, {
                 userId: h[0].userId,
                 leaderboard: t
             }),
@@ -167,7 +167,7 @@ function w(e) {
         m = (0, o.e7)([h.default], () => h.default.getUser(t)),
         b = g.ZP.getName(s, void 0, m),
         I = null != c && c > n,
-        [S, T] = i.useState('default'),
+        [T, S] = i.useState('default'),
         y = (0, o.e7)([p.Z], () => {
             let e = p.Z.getPrimaryActivity(t);
             return (null == e ? void 0 : e.application_id) != null && C.T.includes(e.application_id);
@@ -185,16 +185,16 @@ function w(e) {
         w = async () => {
             try {
                 let e = await x();
-                await v.ZP.copyImageBlob(e, 'leaderboard.png'), T('copied'), null == _ || _(R.xP.COPIED_LEADERBOARD_ROW);
+                await v.ZP.copyImageBlob(e, 'leaderboard.png'), S('copied'), null == _ || _(R.xP.COPIED_LEADERBOARD_ROW);
             } catch (e) {
-                T('error');
+                S('error');
             }
         },
         M = (0, r.jsx)(l.Text, {
             className: D.tooltip,
             variant: 'text-sm/medium',
             children:
-                'copied' === S
+                'copied' === T
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(l.CheckmarkSmallBoldIcon, {
@@ -204,7 +204,7 @@ function w(e) {
                               O.intl.string(O.t.ZO0ku7)
                           ]
                       })
-                    : 'error' === S
+                    : 'error' === T
                       ? (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)(l.XSmallBoldIcon, {
@@ -281,7 +281,7 @@ function w(e) {
                             text: M,
                             'aria-label': !1,
                             shouldShow: !L,
-                            onTooltipHide: () => T('default'),
+                            onTooltipHide: () => S('default'),
                             children: (e) =>
                                 (0, r.jsx)(l.Clickable, {
                                     ...e,

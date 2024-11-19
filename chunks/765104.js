@@ -15,8 +15,8 @@ var o,
     v = n(353926),
     b = n(823385),
     I = n(592125),
-    S = n(430824),
-    T = n(306680),
+    T = n(430824),
+    S = n(306680),
     y = n(944486),
     A = n(9156),
     N = n(594174),
@@ -36,8 +36,8 @@ let L = {},
         lastResponse: null
     },
     U = [],
-    G = [];
-function B() {
+    B = [];
+function G() {
     U = b.Z.getProps()
         .results.filter((e) => e.type === E.h8.TEXT_CHANNEL && 0 === e.record.type)
         .map((e) => e.record.id);
@@ -48,7 +48,7 @@ class Z extends (l = h.ZP.PersistedStore) {
     }
     initialize(e) {
         var t;
-        (r = null === (t = null == e ? void 0 : e.shouldShowTopicsBar) || void 0 === t || t), this.waitFor(I.Z, N.default, y.Z, S.Z, v.Z), this.syncWith([b.Z], B);
+        (r = null === (t = null == e ? void 0 : e.shouldShowTopicsBar) || void 0 === t || t), this.waitFor(I.Z, N.default, y.Z, T.Z, v.Z), this.syncWith([b.Z], G);
     }
     allSummaries() {
         return L;
@@ -61,7 +61,7 @@ class Z extends (l = h.ZP.PersistedStore) {
     }
     summaries(e) {
         var t;
-        return null !== (t = L[e]) && void 0 !== t ? t : G;
+        return null !== (t = L[e]) && void 0 !== t ? t : B;
     }
     shouldShowTopicsBar() {
         return r;
@@ -117,7 +117,7 @@ class Z extends (l = h.ZP.PersistedStore) {
             r &&
                 (a = a.filter((e) => {
                     let t = I.Z.getChannel(e);
-                    return null != t && !A.ZP.isChannelMuted(t.guild_id, e) && T.ZP.hasUnread(e);
+                    return null != t && !A.ZP.isChannelMuted(t.guild_id, e) && S.ZP.hasUnread(e);
                 })),
             (a = a.filter((e) => {
                 let t = I.Z.getChannel(e);

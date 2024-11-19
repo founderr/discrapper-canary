@@ -1,6 +1,6 @@
 n.d(t, {
     As: function () {
-        return S;
+        return T;
     },
     BP: function () {
         return b;
@@ -12,7 +12,7 @@ n.d(t, {
         return v;
     },
     hL: function () {
-        return T;
+        return S;
     },
     lK: function () {
         return I;
@@ -68,7 +68,7 @@ let v = (e, t) => {
         }
         return n ? 'spoiler' : null;
     };
-function S(e, t, n) {
+function T(e, t, n) {
     if (null == e) return [!1, void 0];
     if (n && (0, l.Sv)(e.contentScanVersion)) return [!0, 'potential_explicit_content'];
     let r = (function (e) {
@@ -94,12 +94,12 @@ function S(e, t, n) {
           ? [t, 'spoiler']
           : [!1, void 0];
 }
-function T(e) {
+function S(e) {
     let { channel: t, media: n } = e,
         r = (0, s.e7)([p.Z], () => null != t && p.Z.can(g.Plq.MANAGE_MESSAGES, t)),
         i = f.cC.useSetting(),
         a = (0, u.m)();
-    return S(n, !(0, m.Z)(i, r), a);
+    return T(n, !(0, m.Z)(i, r), a);
 }
 let y = (e) =>
     (0, a.EQ)(e)

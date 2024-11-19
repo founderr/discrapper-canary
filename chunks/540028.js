@@ -22,7 +22,7 @@ function v(e) {
     let v = (0, i.e7)([u.ZP], () => u.ZP.getSelfEmbeddedActivityForChannel(p)),
         b = (0, i.e7)([_.Z], () => _.Z.pipWindow),
         I = (0, i.e7)([d.Z], () => d.Z.getSelectedParticipant(p)),
-        S = (0, i.e7)([d.Z], () => d.Z.getStreamParticipants(p));
+        T = (0, i.e7)([d.Z], () => d.Z.getStreamParticipants(p));
     return (0, r.jsx)(s.Menu, {
         navId: 'pip-menu',
         'aria-label': 'switch PIP',
@@ -33,7 +33,7 @@ function v(e) {
                 t = a.find((e) => e.component === h.NYg.VIDEO);
             return (
                 null != t &&
-                    S.forEach((n) => {
+                    T.forEach((n) => {
                         let r = f.Z.getActiveStreamForApplicationStream(n.stream),
                             i = n.id === (null == I ? void 0 : I.id) && (null == b ? void 0 : b.id) === t.id;
                         null != r &&

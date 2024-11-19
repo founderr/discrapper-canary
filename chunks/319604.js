@@ -1,6 +1,6 @@
 n.d(t, {
     CR: function () {
-        return h;
+        return x;
     },
     UU: function () {
         return m;
@@ -40,22 +40,22 @@ let d = (e) => {
                   }
               ];
     },
-    x = (e) => {
+    h = (e) => {
         let { avatarSrc: t, mediaImageSrc: n } = e;
         return {
             AvatarImage: t,
             ...(null != n && { MediaImage: n })
         };
     },
-    h = async (e) => {
+    x = async (e) => {
         let { user: t, channel: n, mediaImageSrc: l, artist: o, description: u, colors: d, badges: m } = e,
-            h = x({
+            x = h({
                 avatarSrc: t.getAvatarURL(n.guild_id, 128),
                 mediaImageSrc: l
             }),
             p = o.replaceAll(/[^a-zA-Z0-9 ]/g, '').replaceAll(' ', '-');
         return await (0, r.f)({
-            assetsToLoad: h,
+            assetsToLoad: x,
             drawImage: (e) => {
                 (function (e, t) {
                     let n = t.map((e, t) => ({

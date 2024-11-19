@@ -57,7 +57,7 @@ function I(e) {
                 p.Xyh.test(n) &&
                 ((r = !0),
                 E.track(n),
-                T.pendingUsages.push({
+                S.pendingUsages.push({
                     key: n,
                     timestamp: Date.now()
                 }))),
@@ -67,14 +67,14 @@ function I(e) {
                 p.Xyh.test(t) &&
                 ((r = !0),
                 E.track(t),
-                T.pendingUsages.push({
+                S.pendingUsages.push({
                     key: t,
                     timestamp: Date.now()
                 }))),
         r
     );
 }
-function S() {
+function T() {
     var e;
     let t = null === (e = u.Z.frecencyWithoutFetchingLatest.guildAndChannelFrecency) || void 0 === e ? void 0 : e.guildAndChannels;
     if (null == t) return !1;
@@ -83,19 +83,19 @@ function S() {
             ...e,
             recentUses: e.recentUses.map(Number).filter((e) => e > 0)
         })),
-        T.pendingUsages
+        S.pendingUsages
     );
 }
-let T = { pendingUsages: [] };
+let S = { pendingUsages: [] };
 class y extends (r = s.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(_.Z, f.Z), null != e && ((e.pendingUsages = e.pendingUsages.filter((e) => null != e && p.Xyh.test(e.key))), (T = e)), this.syncWith([u.Z], S);
+        this.waitFor(_.Z, f.Z), null != e && ((e.pendingUsages = e.pendingUsages.filter((e) => null != e && p.Xyh.test(e.key))), (S = e)), this.syncWith([u.Z], T);
     }
     getState() {
-        return T;
+        return S;
     }
     hasPendingUsage() {
-        return T.pendingUsages.length > 0;
+        return S.pendingUsages.length > 0;
     }
     get frecencyWithoutFetchingLatest() {
         return E;
@@ -128,6 +128,6 @@ m(y, 'displayName', 'FrecencyStore'),
                 settings: { type: t },
                 wasSaved: n
             } = e;
-            return t === h.yP.FRECENCY_AND_FAVORITES_SETTINGS && !!n && ((T.pendingUsages = []), !0);
+            return t === h.yP.FRECENCY_AND_FAVORITES_SETTINGS && !!n && ((S.pendingUsages = []), !0);
         }
     }));

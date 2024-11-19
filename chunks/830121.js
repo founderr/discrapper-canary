@@ -42,8 +42,8 @@ var _ = n(807675),
 let v = /^\/([a-zA-Z0-9-]+)$/,
     b = /^\/channels\/([0-9]+|@me)\/([0-9]+)$/,
     I = /^\/(invite|template)\/([a-zA-Z0-9-]+)\/?$/,
-    S = RegExp('^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?'),
-    T = /^\/application-directory\/([0-9-]+)\/?$/,
+    T = RegExp('^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?'),
+    S = /^\/application-directory\/([0-9-]+)\/?$/,
     y = /^\/application-directory\/([0-9-]+)\/store\/?([0-9-]+)?\/?$/,
     A = /^\/activities\/([0-9-]+)\/?$/,
     N = /^\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
@@ -58,8 +58,8 @@ let v = /^\/([a-zA-Z0-9-]+)$/,
     P = Z('//ptb.'.concat(E.$R1)),
     k = Z('discordapp.com'),
     U = Z('discord.com'),
-    G = [h.Z.escape(null !== (i = L.host) && void 0 !== i ? i : ''), h.Z.escape(null !== (a = x.host) && void 0 !== a ? a : ''), h.Z.escape(null !== (s = w.host) && void 0 !== s ? s : ''), h.Z.escape(null !== (o = k.host) && void 0 !== o ? o : ''), h.Z.escape(null !== (l = U.host) && void 0 !== l ? l : '')].filter(Boolean),
-    B = RegExp('((https?://[^ ]*)|^|[^/][^/.])('.concat(G.join('|'), ')'), 'g');
+    B = [h.Z.escape(null !== (i = L.host) && void 0 !== i ? i : ''), h.Z.escape(null !== (a = x.host) && void 0 !== a ? a : ''), h.Z.escape(null !== (s = w.host) && void 0 !== s ? s : ''), h.Z.escape(null !== (o = k.host) && void 0 !== o ? o : ''), h.Z.escape(null !== (l = U.host) && void 0 !== l ? l : '')].filter(Boolean),
+    G = RegExp('((https?://[^ ]*)|^|[^/][^/.])('.concat(B.join('|'), ')'), 'g');
 function Z(e) {
     if (null == e)
         return {
@@ -115,7 +115,7 @@ function H(e) {
     if (null == e) return [];
     let t = new Set(),
         n = [],
-        r = (e = e.replace(B, (e, t, n, r) => (null == n ? ''.concat(t, 'http://').concat(r) : e))).match(m.Z.URL_REGEX),
+        r = (e = e.replace(G, (e, t, n, r) => (null == n ? ''.concat(t, 'http://').concat(r) : e))).match(m.Z.URL_REGEX),
         i = e.match(D);
     if (null == (r = (null != r ? r : []).concat(null != i ? i : [])) || 0 === r.length) return [];
     for (let e of r) {
@@ -147,7 +147,7 @@ function H(e) {
         (null == o ? void 0 : o.match(b)) != null && l(g.g.CHANNEL_LINK, o.replace('/channels/', ''));
         let h = (function (e) {
             if (null == e) return null;
-            let t = e.match(S);
+            let t = e.match(T);
             return null != t && t.length >= 4
                 ? {
                       guildId: t[1],
@@ -162,7 +162,7 @@ function H(e) {
                 t = e.clientId;
             null != t && '' !== t && !(null === (a = e.scopes) || void 0 === a ? void 0 : a.some((e) => e !== c.x.APPLICATIONS_COMMANDS)) && l(g.g.APP_OAUTH2_LINK, t);
         }
-        let m = null == o ? void 0 : o.match(T);
+        let m = null == o ? void 0 : o.match(S);
         if (null != m) {
             let e = m[1];
             l(g.g.APP_DIRECTORY_PROFILE, e);

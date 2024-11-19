@@ -50,12 +50,12 @@ var a = (function () {
             }
         }
         p.push(f[f.length - 1]);
-        for (var b = [], I = [], S = 0; S < p.length - 1; S++) {
-            s = f[S];
-            var T = p[S],
-                y = 1 / d[S],
-                A = T + p[S + 1] - s - s;
-            b.push((s - T - A) * y), I.push(A * y * y);
+        for (var b = [], I = [], T = 0; T < p.length - 1; T++) {
+            s = f[T];
+            var S = p[T],
+                y = 1 / d[T],
+                A = S + p[T + 1] - s - s;
+            b.push((s - S - A) * y), I.push(A * y * y);
         }
         (this.xs = e), (this.ys = t), (this.c1s = p), (this.c2s = b), (this.c3s = I);
     }

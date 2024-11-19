@@ -69,7 +69,7 @@ function b(e) {
     });
 }
 function I(e) {
-    let { children: t, idle: n, onJumpToChannel: i, onHide: s, backgroundKey: o, onActive: u, onForceIdle: d, renderBottomLeftControls: f, renderBottomRightControls: p, screenMessage: h, hideControls: g = !1, className: E, innerClassName: I, ...S } = e;
+    let { children: t, idle: n, onJumpToChannel: i, onHide: s, backgroundKey: o, onActive: u, onForceIdle: d, renderBottomLeftControls: f, renderBottomRightControls: p, screenMessage: h, hideControls: g = !1, className: E, innerClassName: I, ...T } = e;
     return (0, r.jsxs)('div', {
         onMouseMove: u,
         onMouseDown: u,
@@ -103,7 +103,7 @@ function I(e) {
                                 idle: n,
                                 onJumpToChannel: i,
                                 onHide: s,
-                                ...S
+                                ...T
                             })
                         }),
                         (0, r.jsxs)('div', {

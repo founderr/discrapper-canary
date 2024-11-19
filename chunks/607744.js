@@ -47,27 +47,27 @@ function v(e) {
         m = !1,
         v = !1,
         I = !1,
-        S = !1;
-    !r.isPhoneVerified() && !r.isStaff() && ((m = n.verificationLevel >= p.sFg.LOW && !r.verified), (v = n.verificationLevel >= p.sFg.VERY_HIGH), (I = n.verificationLevel >= p.sFg.MEDIUM && s > 0), (S = n.verificationLevel >= p.sFg.HIGH && o > 0));
-    let T = [];
-    S && T.push(o),
-        I && T.push(s),
-        T.length > 0 &&
+        T = !1;
+    !r.isPhoneVerified() && !r.isStaff() && ((m = n.verificationLevel >= p.sFg.LOW && !r.verified), (v = n.verificationLevel >= p.sFg.VERY_HIGH), (I = n.verificationLevel >= p.sFg.MEDIUM && s > 0), (T = n.verificationLevel >= p.sFg.HIGH && o > 0));
+    let S = [];
+    T && S.push(o),
+        I && S.push(s),
+        S.length > 0 &&
             (t = setTimeout(
                 () =>
                     l.Z.dispatch({
                         type: 'GUILD_VERIFICATION_CHECK',
                         guildId: e
                     }),
-                Math.max(...T)
+                Math.max(...S)
             )),
         (E[e] = {
             notClaimed: c,
             notEmailVerified: m,
             notPhoneVerified: v,
             newAccount: I,
-            newMember: S,
-            canChat: !(c || m || v || I || S),
+            newMember: T,
+            canChat: !(c || m || v || I || T),
             accountDeadline: new Date(Date.now() + s),
             memberDeadline: new Date(Date.now() + o),
             timeoutRef: t
@@ -80,7 +80,7 @@ function b(e) {
 function I(e) {
     g.delete(e.guild.id), v(e.guild.id);
 }
-class S extends (r = o.ZP.Store) {
+class T extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(f.Z, _.default);
     }
@@ -93,7 +93,7 @@ class S extends (r = o.ZP.Store) {
     }
 }
 (s = 'GuildVerificationStore'),
-    (a = 'displayName') in (i = S)
+    (a = 'displayName') in (i = T)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -101,7 +101,7 @@ class S extends (r = o.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new S(l.Z, {
+    (t.Z = new T(l.Z, {
         CONNECTION_OPEN: function () {
             for (let e in (g.clear(), E)) b(e);
         },

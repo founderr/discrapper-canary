@@ -18,8 +18,8 @@ var r,
     v = n(5881),
     b = n(566078),
     I = n(46140),
-    S = n(70722);
-function T(e, t, n) {
+    T = n(70722);
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,7 +37,7 @@ let y = 1 * p.Z.Millis.MINUTE,
     N = (0, v.T)({ location: I.dr.QUESTS_MANAGER }),
     C = (e) =>
         (0, u.V9)({
-            streamType: S.lo.CALL,
+            streamType: T.lo.CALL,
             channelId: e,
             ownerId: '1'
         });
@@ -87,8 +87,8 @@ function L(e) {
 class x extends s.Z {
     constructor(...e) {
         super(...e),
-            T(this, 'streamKeyToHeartbeatState', new Map()),
-            T(this, 'initiateHeartbeat', (e) => {
+            S(this, 'streamKeyToHeartbeatState', new Map()),
+            S(this, 'initiateHeartbeat', (e) => {
                 let { questId: t, streamKey: n, applicationId: r } = e;
                 if (this.streamKeyToHeartbeatState.has(n)) {
                     N.log('~ initiateHeartbeat -> Heartbeat already initiated:', n);
@@ -133,14 +133,14 @@ class x extends s.Z {
                 };
                 i();
             }),
-            T(this, 'calculateHeartbeatDurationMs', (e) => {
+            S(this, 'calculateHeartbeatDurationMs', (e) => {
                 let t = m.Z.quests.get(e);
                 if (null == t || null == t.config || null == t.userStatus) return y;
                 let { progressSeconds: n, targetSeconds: r } = (0, g.il)(t, a.T.DESKTOP),
                     i = Math.max(0, (r - n) * p.Z.Millis.SECOND);
                 return i <= y ? i + A : y;
             }),
-            T(this, 'terminateHeartbeat', (e) => {
+            S(this, 'terminateHeartbeat', (e) => {
                 let { streamKey: t, sendTerminalHeartbeat: n } = e,
                     r = this.streamKeyToHeartbeatState.get(t);
                 if (null != r) {
@@ -159,7 +159,7 @@ class x extends s.Z {
                             });
                 }
             }),
-            T(this, 'terminateHeartbeatForQuestId', (e) => {
+            S(this, 'terminateHeartbeatForQuestId', (e) => {
                 let { previewQuestUserStatus: t } = e,
                     { questId: n, enrolledAt: r, completedAt: i } = t;
                 (null === r || null === i) &&
@@ -172,7 +172,7 @@ class x extends s.Z {
                             }));
                     });
             }),
-            T(this, 'handleEnrollmentSuccess', (e) => {
+            S(this, 'handleEnrollmentSuccess', (e) => {
                 let {
                         enrolledQuestUserStatus: { questId: t }
                     } = e,
@@ -211,7 +211,7 @@ class x extends s.Z {
                     }
                 });
             }),
-            T(this, 'handleSendHeartbeatSuccess', (e) => {
+            S(this, 'handleSendHeartbeatSuccess', (e) => {
                 let { streamKey: t, userStatus: n } = e;
                 N.log('~ handleSendHeartbeatSuccess -> Heartbeat succeeded:', t),
                     null != n.completedAt &&
@@ -220,11 +220,11 @@ class x extends s.Z {
                             sendTerminalHeartbeat: !1
                         });
             }),
-            T(this, 'handleSendHeartbeatFailure', (e) => {
+            S(this, 'handleSendHeartbeatFailure', (e) => {
                 let { streamKey: t } = e;
                 N.log('~ handleSendHeartbeatFailure -> Heartbeat failed:', t);
             }),
-            T(this, 'handleQuestsFetchCurrentQuestsSuccess', (e) => {
+            S(this, 'handleQuestsFetchCurrentQuestsSuccess', (e) => {
                 let { quests: t } = e;
                 N.log('~ handleQuestsFetchCurrentQuestsSuccess -> Quests fetched:', t);
                 let n = l.ZP.getRunningGames().map((e) => e.id);
@@ -248,10 +248,10 @@ class x extends s.Z {
                     }
                 });
             }),
-            T(this, 'handleRunningGamesChange', (e) => {
+            S(this, 'handleRunningGamesChange', (e) => {
                 this._handlePlayOnDesktopQuestsUpdate(e);
             }),
-            T(this, '_handlePlayOnDesktopQuestsUpdate', (e) => {
+            S(this, '_handlePlayOnDesktopQuestsUpdate', (e) => {
                 let { removed: t, games: n } = e;
                 N.log('~ handleRunningGamesChange -> Games detected:', {
                     runningGames: n,
@@ -284,7 +284,7 @@ class x extends s.Z {
                             });
                     });
             }),
-            T(this, 'handleVoiceStateChange', () => {
+            S(this, 'handleVoiceStateChange', () => {
                 let e = c.Z.getCurrentUserActiveStream(),
                     t = R();
                 null != e &&
@@ -294,7 +294,7 @@ class x extends s.Z {
                         quest: t
                     });
             }),
-            T(this, '_handleVoiceStateChange', (e) => {
+            S(this, '_handleVoiceStateChange', (e) => {
                 let { streamKey: t, channelId: n, quest: r } = e,
                     i = null == r || !O(n),
                     a = O(n) && !this.streamKeyToHeartbeatState.has(t) && null != r && D(r) && !(0, g.$H)(r);
@@ -312,7 +312,7 @@ class x extends s.Z {
                           questId: r.id
                       }));
             }),
-            T(this, 'handleEmbeddedActivityUpdate', (e) => {
+            S(this, 'handleEmbeddedActivityUpdate', (e) => {
                 if (null == e) return;
                 let { quest: t, activity: n } = L(e),
                     r = C(e),
@@ -332,7 +332,7 @@ class x extends s.Z {
                           questId: t.id
                       }));
             }),
-            T(this, 'handleStreamCreate', (e) => {
+            S(this, 'handleStreamCreate', (e) => {
                 let { streamKey: t } = e,
                     { channelId: n, ownerId: r } = (0, u.my)(t);
                 if (r !== d.default.getId()) return;
@@ -356,7 +356,7 @@ class x extends s.Z {
                         questId: i.id
                     }));
             }),
-            T(this, 'handleStreamStart', (e) => {
+            S(this, 'handleStreamStart', (e) => {
                 let { streamType: t, guildId: n, channelId: r } = e,
                     i = R(),
                     a = (0, u.V9)({
@@ -382,7 +382,7 @@ class x extends s.Z {
                           questId: i.id
                       }));
             }),
-            T(this, 'handleStreamClose', (e) => {
+            S(this, 'handleStreamClose', (e) => {
                 let { streamKey: t } = e;
                 N.log('handleStreamClose - terminating heartbeat'),
                     this.terminateHeartbeat({
@@ -390,7 +390,7 @@ class x extends s.Z {
                         sendTerminalHeartbeat: !0
                     });
             }),
-            T(this, 'actions', {
+            S(this, 'actions', {
                 QUESTS_FETCH_CURRENT_QUESTS_SUCCESS: this.handleQuestsFetchCurrentQuestsSuccess,
                 QUESTS_ENROLL_SUCCESS: this.handleEnrollmentSuccess,
                 QUESTS_SEND_HEARTBEAT_SUCCESS: this.handleSendHeartbeatSuccess,

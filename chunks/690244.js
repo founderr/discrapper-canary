@@ -118,10 +118,10 @@ if (E)
     try {
         null.error;
     } catch (e) {
-        var S = E(E(e));
-        I['%Error.prototype%'] = S;
+        var T = E(E(e));
+        I['%Error.prototype%'] = T;
     }
-var T = function e(t) {
+var S = function e(t) {
         var n;
         if ('%AsyncFunction%' === t) n = f('async function () {}');
         else if ('%GeneratorFunction%' === t) n = f('function* () {}');
@@ -216,7 +216,7 @@ var T = function e(t) {
             r = e;
         if ((N(y, r) && (r = '%' + (n = y[r])[0] + '%'), N(I, r))) {
             var i = I[r];
-            if ((i === v && (i = T(r)), void 0 === i && !t)) throw new u('intrinsic ' + e + ' exists, but is not available. Please file an issue!');
+            if ((i === v && (i = S(r)), void 0 === i && !t)) throw new u('intrinsic ' + e + ' exists, but is not available. Please file an issue!');
             return {
                 alias: n,
                 name: r,

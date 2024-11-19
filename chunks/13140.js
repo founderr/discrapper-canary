@@ -12,7 +12,7 @@ n.d(t, {
         return y;
     },
     d2: function () {
-        return T;
+        return S;
     },
     dU: function () {
         return m;
@@ -118,8 +118,8 @@ let v = [
         for (let [t, n] of v) if (n === e.toUpperCase()) return t.toLowerCase();
         return e;
     },
-    S = /shift|meta|ctrl|alt$/;
-function T(e) {
+    T = /shift|meta|ctrl|alt$/;
+function S(e) {
     let t = {
         keyCode: 0,
         metaKey: !1,
@@ -140,7 +140,7 @@ function T(e) {
                       }),
                       e
                   );
-              if (S.test(r)) return (t[r + 'Key'] = !0), e.map((e) => ((e[r + 'Key'] = !0), e));
+              if (T.test(r)) return (t[r + 'Key'] = !0), e.map((e) => ((e[r + 'Key'] = !0), e));
               {
                   let t = E(r, c.CgE.BROWSER);
                   return null != t && (i.keyCode = t), e.push(i), e;

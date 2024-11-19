@@ -19,7 +19,7 @@ function _(e) {
     let { href: t, onClick: n, className: a, children: _, rel: p, target: h, useDefaultUnderlineStyles: m = !0, title: g, style: E, focusProps: v, ...b } = e;
     null != t && null == n && (n = c.X.getDefaultLinkInterceptor(t));
     let I = i.useContext(o.g),
-        S = {
+        T = {
             className: s()(f.anchor, { [f.anchorUnderlineOnHover]: m }, a),
             href: t,
             onClick: n,
@@ -28,11 +28,11 @@ function _(e) {
             title: null != g ? g : void 0,
             style: null != E ? E : void 0
         };
-    return (null != t && !(0, d.B)(t) && ((S.rel = 'noreferrer noopener'), (S.target = '_blank')), I && delete S.href, null != n)
+    return (null != t && !(0, d.B)(t) && ((T.rel = 'noreferrer noopener'), (T.target = '_blank')), I && delete T.href, null != n)
         ? (0, r.jsx)(l.P, {
               tag: 'a',
               ...b,
-              ...S,
+              ...T,
               onClick: n,
               focusProps: v,
               children: _
@@ -41,7 +41,7 @@ function _(e) {
               ...v,
               children: (0, r.jsx)('a', {
                   ...b,
-                  ...S,
+                  ...T,
                   children: _
               })
           });

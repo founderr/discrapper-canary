@@ -23,8 +23,8 @@ var r = n(200651),
     v = n(353903),
     b = n(215016),
     I = n(981631),
-    S = n(388032),
-    T = n(736940);
+    T = n(388032),
+    S = n(736940);
 function y(e, t, n) {
     return (
         t in e
@@ -50,18 +50,18 @@ class N extends i.PureComponent {
         let { name: t, icon: n, type: a } = e;
         return (0, r.jsxs)(i.Fragment, {
             children: [
-                (0, r.jsx)('div', { className: a === I.wI2.FAVORITES ? T.categoryFadeBlurple : T.categoryFade }),
+                (0, r.jsx)('div', { className: a === I.wI2.FAVORITES ? S.categoryFadeBlurple : S.categoryFade }),
                 (0, r.jsxs)('div', {
-                    className: T.categoryText,
+                    className: S.categoryText,
                     children: [
                         null != n
                             ? (0, r.jsx)(n, {
-                                  className: T.categoryIcon,
+                                  className: S.categoryIcon,
                                   color: 'currentColor'
                               })
                             : null,
                         (0, r.jsx)('span', {
-                            className: T.categoryName,
+                            className: S.categoryName,
                             children: t
                         })
                     ]
@@ -91,7 +91,7 @@ class N extends i.PureComponent {
                     let n = l().sample(l().values(e));
                     return {
                         type: I.wI2.FAVORITES,
-                        name: S.intl.string(S.t.y3LQCA),
+                        name: T.intl.string(T.t.y3LQCA),
                         icon: f.StarIcon,
                         src: null != n ? n.src : 'https://media.giphy.com/media/1TOSaJsWtnhe0/giphy.gif',
                         format: null !== (t = null == n ? void 0 : n.format) && void 0 !== t ? t : c.EO.IMAGE
@@ -167,7 +167,7 @@ class N extends i.PureComponent {
                     : (0, r.jsx)(f.MasonryList, {
                           ref: this._masonryRef,
                           fade: !0,
-                          className: s()(T.container, i),
+                          className: s()(S.container, i),
                           itemGutter: 12,
                           getItemKey: this.getItemKey,
                           columns: e,

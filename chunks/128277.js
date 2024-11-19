@@ -22,8 +22,8 @@ var r = n(200651),
     v = n(652853),
     b = n(448980),
     I = n(194811),
-    S = n(373826),
-    T = n(315324),
+    T = n(373826),
+    S = n(315324),
     y = n(582123),
     A = n(262210),
     N = n(666984),
@@ -39,14 +39,14 @@ function D(e) {
             user: t
         }),
         U = (0, g.Z)(a),
-        { largeImage: G } = (0, d.FO)(a),
-        { analyticsLocations: B } = (0, c.ZP)(u.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
+        { largeImage: B } = (0, d.FO)(a),
+        { analyticsLocations: G } = (0, c.ZP)(u.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
         Z = (0, h.Z)({
             display: 'live',
             user: t,
             activity: a,
             entry: k,
-            analyticsLocations: B
+            analyticsLocations: G
         }),
         F = (0, m.Z)({
             userId: t.id,
@@ -59,11 +59,11 @@ function D(e) {
             return 0 === l.length
                 ? null
                 : null == a.sync_id
-                  ? (0, r.jsx)(S.Z, {
+                  ? (0, r.jsx)(T.Z, {
                         variant: 'text-xs/normal',
                         text: l.join(', ')
                     })
-                  : (0, r.jsx)(S.Z, {
+                  : (0, r.jsx)(T.Z, {
                         variant: 'text-xs/normal',
                         text: l.map((e, n) =>
                             (0, r.jsxs)(
@@ -102,7 +102,7 @@ function D(e) {
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)('div', { className: O.voiceChannelDivider }),
-                          (0, r.jsx)(T.Z, {
+                          (0, r.jsx)(S.Z, {
                               user: t,
                               guild: D,
                               channel: L,
@@ -123,7 +123,7 @@ function D(e) {
                       })
                   });
     return (0, r.jsx)(c.Gt, {
-        value: B,
+        value: G,
         children: (0, r.jsx)(y.Z, {
             user: t,
             onClose: w,
@@ -151,7 +151,7 @@ function D(e) {
                                     className: s()(O.content, P),
                                     children: [
                                         (0, r.jsx)(f.E, {
-                                            image: G,
+                                            image: B,
                                             onClick: () => {
                                                 Z({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, p.Z5)(a, t.id);
                                             },
@@ -162,7 +162,7 @@ function D(e) {
                                             children: [
                                                 (0, r.jsxs)('div', {
                                                     children: [
-                                                        (0, r.jsx)(S.Z, {
+                                                        (0, r.jsx)(T.Z, {
                                                             variant: 'heading-sm/semibold',
                                                             text: a.details,
                                                             onClick: () => {

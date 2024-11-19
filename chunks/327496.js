@@ -23,8 +23,8 @@ function f(e, t) {
 let _ = (e) => {
     let t,
         n,
-        { backgroundStyle: a = 'always', children: _, icon: p, name: h, ariaLabel: m, className: g, style: E, to: v, onClick: b, selected: I = !1, ...S } = e,
-        T = (0, o.k6)();
+        { backgroundStyle: a = 'always', children: _, icon: p, name: h, ariaLabel: m, className: g, style: E, to: v, onClick: b, selected: I = !1, ...T } = e,
+        S = (0, o.k6)();
     if (null == p && null != h) {
         var y;
         n = null !== (y = d[(t = (0, u.Zg)(h)).length - 1]) && void 0 !== y ? y : d[d.length - 1];
@@ -32,17 +32,17 @@ let _ = (e) => {
     let A = i.useCallback(
         (e) => {
             if (null == v);
-            else if ('string' == typeof v) T.push(v);
+            else if ('string' == typeof v) S.push(v);
             else {
                 let { pathname: e = '', state: t } = v;
-                T.push(e, t);
+                S.push(e, t);
             }
             null != b && b(e);
         },
-        [T, v, b]
+        [S, v, b]
     );
     return (0, r.jsxs)(l.Clickable, {
-        ...S,
+        ...T,
         onClick: A,
         className: s()(g, c.wrapper, { [c.selected]: I }),
         'aria-label': null != m && '' !== m ? m : null != h ? h : '',

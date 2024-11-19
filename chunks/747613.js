@@ -18,8 +18,8 @@ var r = n(200651),
     v = n(176354),
     b = n(624138),
     I = n(981631),
-    S = n(388032),
-    T = n(750498);
+    T = n(388032),
+    S = n(750498);
 let y = (0, g.hQ)(),
     A = d.Z.convert.fromCodePoint('1f44f'),
     N = (0, b.Mg)(f.Z.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
@@ -41,25 +41,25 @@ let y = (0, g.hQ)(),
             role: 'option',
             'aria-selected': 0 === s,
             onClick: () => i(n),
-            className: T.diversityEmojiItem,
+            className: S.diversityEmojiItem,
             children: (0, r.jsx)(u.animated.div, {
                 'aria-label': (function (e) {
                     switch (d.Z.convert.toCodePoint(e)) {
                         case '1f3fb':
-                            return S.intl.string(S.t.BVK5b2);
+                            return T.intl.string(T.t.BVK5b2);
                         case '1f3fc':
-                            return S.intl.string(S.t.xJWOKy);
+                            return T.intl.string(T.t.xJWOKy);
                         case '1f3fd':
-                            return S.intl.string(S.t['MB+T5u']);
+                            return T.intl.string(T.t['MB+T5u']);
                         case '1f3fe':
-                            return S.intl.string(S.t.MODud3);
+                            return T.intl.string(T.t.MODud3);
                         case '1f3ff':
-                            return S.intl.string(S.t['0uzqsb']);
+                            return T.intl.string(T.t['0uzqsb']);
                         default:
-                            return S.intl.string(S.t.bGN1o6);
+                            return T.intl.string(T.t.bGN1o6);
                     }
                 })(n),
-                className: T.diversityEmojiItemImage,
+                className: S.diversityEmojiItemImage,
                 style: {
                     backgroundImage: 'url("'.concat(l, '")'),
                     ...f
@@ -91,7 +91,7 @@ let y = (0, g.hQ)(),
                             ...i,
                             id: t,
                             ref: n,
-                            className: s()(T.diversitySelectorOptions, { [T.diversitySelectorOptionsHasTabWrapper]: o }),
+                            className: s()(S.diversitySelectorOptions, { [S.diversitySelectorOptionsHasTabWrapper]: o }),
                             style: f,
                             role: 'listbox',
                             children: p.map((e, t) =>
@@ -125,17 +125,17 @@ t.Z = (e) => {
         children: [
             (0, r.jsx)(_.Clickable, {
                 innerRef: d,
-                className: T.diversitySelectorButton,
+                className: S.diversitySelectorButton,
                 onClick: () => {
                     u(!0);
                 },
-                'aria-label': S.intl.string(S.t.pAVHxc),
+                'aria-label': T.intl.string(T.t.pAVHxc),
                 'aria-haspopup': !0,
                 'aria-expanded': l,
                 'aria-controls': y,
                 tabIndex: l ? -1 : 0,
                 children: (0, r.jsx)('div', {
-                    className: T.diversityEmojiItemImage,
+                    className: S.diversityEmojiItemImage,
                     style: { backgroundImage: 'url("'.concat(o, '")') }
                 })
             }),

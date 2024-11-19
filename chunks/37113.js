@@ -15,7 +15,7 @@ n.d(t, {
         return f;
     },
     af: function () {
-        return S;
+        return T;
     },
     k0: function () {
         return I;
@@ -218,4 +218,4 @@ let g = [m(720), m(1080), m(1440), m(0, () => d.intl.string(d.t.XjXqzs))],
     v = (e) => (0 === e ? d.intl.string(d.t.XjXqzs) : d.intl.formatToPlainString(d.t.TEOC0N, { resolution: e })),
     b = [m(480, () => v(480)), m(720, () => v(720)), m(1080, () => v(1080)), m(1440, () => v(1440)), m(0, () => v(0))],
     I = [m(15), m(30), m(60)],
-    S = [m(15, () => d.intl.formatToPlainString(d.t['bW+JCQ'], { value: 15 })), m(30, () => d.intl.formatToPlainString(d.t['bW+JCQ'], { value: 30 })), m(60, () => d.intl.formatToPlainString(d.t['bW+JCQ'], { value: 60 }))];
+    T = [m(15, () => d.intl.formatToPlainString(d.t['bW+JCQ'], { value: 15 })), m(30, () => d.intl.formatToPlainString(d.t['bW+JCQ'], { value: 30 })), m(60, () => d.intl.formatToPlainString(d.t['bW+JCQ'], { value: 60 }))];

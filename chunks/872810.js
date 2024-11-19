@@ -56,9 +56,9 @@ var r = n(512722),
     b = n(557457),
     I = n(573261);
 n(26151), n(493683);
-var S = n(475179);
+var T = n(475179);
 n(287734);
-var T = n(981631),
+var S = n(981631),
     y = n(70722);
 function A(e, t, n) {
     o.Z.dispatch({
@@ -66,7 +66,7 @@ function A(e, t, n) {
         streamType: null != e ? y.lo.GUILD : y.lo.CALL,
         guildId: e,
         channelId: t,
-        appContext: __OVERLAY__ ? T.IlC.OVERLAY : T.IlC.APP,
+        appContext: __OVERLAY__ ? S.IlC.OVERLAY : S.IlC.APP,
         ...n
     });
 }
@@ -98,7 +98,7 @@ function R(e, t) {
         streamKey: i,
         allowMultiple: a
     }),
-        !a && (null == t || !t.noFocus) && S.Z.selectParticipant(e.channelId, i);
+        !a && (null == t || !t.noFocus) && T.Z.selectParticipant(e.channelId, i);
 }
 function O(e, t) {
     o.Z.dispatch({
@@ -111,7 +111,7 @@ function D(e, t) {
     let { guildId: n, channelId: r } = e;
     if (null != n && C(n, r)) return;
     R(e, t);
-    let i = d.Z.getWindowOpen(T.KJ3.CHANNEL_CALL_POPOUT),
+    let i = d.Z.getWindowOpen(S.KJ3.CHANNEL_CALL_POPOUT),
         a = m.Z.getVoiceChannelId();
     if (!i || a !== r) (0, c.Z)(e);
 }
@@ -121,7 +121,7 @@ function L(e) {
         o.Z.dispatch({
             type: 'STREAM_STOP',
             streamKey: e,
-            appContext: __OVERLAY__ ? T.IlC.OVERLAY : T.IlC.APP
+            appContext: __OVERLAY__ ? S.IlC.OVERLAY : S.IlC.APP
         });
 }
 function x(e) {
@@ -145,7 +145,7 @@ async function w(e, t, n) {
     });
     try {
         let e = await s.tn.get({
-            url: T.ANM.STREAM_PREVIEW(r),
+            url: S.ANM.STREAM_PREVIEW(r),
             query: { version: Date.now() },
             oldFormErrors: !0,
             rejectWithError: !1
@@ -168,7 +168,7 @@ async function w(e, t, n) {
 async function M(e) {
     try {
         await I.Z.post({
-            url: T.ANM.STREAM_NOTIFY(e),
+            url: S.ANM.STREAM_NOTIFY(e),
             oldFormErrors: !0,
             trackedActionData: { event: a.NetworkActionNames.STREAM_NOTIFY },
             rejectWithError: !0
@@ -184,7 +184,7 @@ function P(e) {
 }
 function k(e, t) {
     s.tn.patch({
-        url: T.ANM.STREAM(e),
+        url: S.ANM.STREAM(e),
         body: { region: t },
         oldFormErrors: !0,
         rejectWithError: !0

@@ -26,14 +26,14 @@ t.Z = {
         if (!!h && !!m) {
             var b = ((t = p.padding), (n = f), (t = 'function' == typeof t ? t(Object.assign({}, n.rects, { placement: n.placement })) : t), (0, u.Z)('number' != typeof t ? t : (0, c.Z)(t, d.mv))),
                 I = (0, i.Z)(h),
-                S = 'y' === E ? d.we : d.t$,
-                T = 'y' === E ? d.I : d.F2,
+                T = 'y' === E ? d.we : d.t$,
+                S = 'y' === E ? d.I : d.F2,
                 y = f.rects.reference[v] + f.rects.reference[E] - m[E] - f.rects.popper[v],
                 A = m[E] - f.rects.reference[E],
                 N = (0, s.Z)(h),
                 C = N ? ('y' === E ? N.clientHeight || 0 : N.clientWidth || 0) : 0,
-                R = b[S],
-                O = C - I[v] - b[T],
+                R = b[T],
+                O = C - I[v] - b[S],
                 D = C / 2 - I[v] / 2 + (y / 2 - A / 2),
                 L = (0, l.u)(R, D, O);
             f.modifiersData[_] = (((a = {})[E] = L), (a.centerOffset = L - D), a);

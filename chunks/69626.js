@@ -25,8 +25,8 @@ var r = n(200651),
     v = n(689079),
     b = n(665692),
     I = n(388032),
-    S = n(223960);
-function T(e, t, n, i, a) {
+    T = n(223960);
+function S(e, t, n, i, a) {
     if (null == e) return;
     let c = () => {
         let r = _.Z.getChannel(e);
@@ -89,7 +89,7 @@ function y(e) {
             },
             [n.channelId]
         ),
-        { hasSendMessagePerm: I, hasUseAppCommandsPerm: S } = (0, a.cj)([h.Z], () => {
+        { hasSendMessagePerm: I, hasUseAppCommandsPerm: T } = (0, a.cj)([h.Z], () => {
             let e = h.Z.can(E.Plq.SEND_MESSAGES, g);
             return {
                 hasSendMessagePerm: e,
@@ -103,11 +103,11 @@ function y(e) {
             let e = g.isPrivate();
             if ((0, d.xl)(g) || (!e && !I)) return !1;
             let t = (null == y ? void 0 : y.applicationId) === v.bi.BUILT_IN;
-            return !!e || !!t || !!S || !1;
-        }, [g, y, I, S, n.commandName, A]),
+            return !!e || !!t || !!T || !1;
+        }, [g, y, I, T, n.commandName, A]),
         C = i.useCallback(
             (e) => {
-                null == e || e.stopPropagation(), null != g && null != n.commandName && null != n.commandKey && T(g.id, n.commandName, n.commandKey, u.Vh.MENTION);
+                null == e || e.stopPropagation(), null != g && null != n.commandName && null != n.commandKey && S(g.id, n.commandName, n.commandKey, u.Vh.MENTION);
             },
             [g, n.commandKey, n.commandName]
         );
@@ -142,12 +142,12 @@ function A(e) {
     let { commandId: t, commandName: n, commandDescription: i, applicationId: o, onClick: l } = e,
         c = (0, a.e7)([m.Z], () => m.Z.getChannelId()),
         d = (e) => {
-            null == e || e.stopPropagation(), T(c, n, t, u.Vh.POPULAR_COMMANDS, o), null == l || l(t);
+            null == e || e.stopPropagation(), S(c, n, t, u.Vh.POPULAR_COMMANDS, o), null == l || l(t);
         };
     return (0, r.jsx)(s.Tooltip, {
         text: i,
         position: 'top',
-        tooltipContentClassName: S.tooltip,
+        tooltipContentClassName: T.tooltip,
         children: (e) => {
             let { onMouseEnter: t, onMouseLeave: i } = e;
             return (0, r.jsxs)(s.Button, {

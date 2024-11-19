@@ -30,7 +30,7 @@ n.d(t, {
         return F;
     },
     IF: function () {
-        return B;
+        return G;
     },
     In: function () {
         return Y;
@@ -78,7 +78,7 @@ n.d(t, {
         return c;
     },
     cc: function () {
-        return T;
+        return S;
     },
     eB: function () {
         return Q;
@@ -87,7 +87,7 @@ n.d(t, {
         return H;
     },
     fE: function () {
-        return G;
+        return B;
     },
     jT: function () {
         return M;
@@ -140,8 +140,8 @@ var r,
     v,
     b,
     I = n(911969),
-    S = n(981631);
-let T = 160,
+    T = n(981631);
+let S = 160,
     y = /^https?:\/\/(?:www\.)?(twitch\.tv\/(.+)|youtube.com\/watch\?v=)/,
     A = '438122941302046720',
     N = '773336526917861400',
@@ -156,8 +156,8 @@ let T = 160,
     P = '1078728822972764312',
     k = '947957217959759964',
     U = '832013003968348200',
-    G = '832012774040141894',
-    B = '832025144389533716',
+    B = '832012774040141894',
+    G = '832025144389533716',
     Z = '755827207812677713',
     F = '879863686565621790',
     V = '902271654783242291',
@@ -198,6 +198,6 @@ let et = {
         has_csp_exception: !1,
         displays_advertisements: !1
     },
-    er = [S.d4z.GUILD_TEXT, S.d4z.DM, S.d4z.GROUP_DM],
+    er = [T.d4z.GUILD_TEXT, T.d4z.DM, T.d4z.GROUP_DM],
     ei = 'https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety';
 ((b = d || (d = {})).NORMAL = 'normal'), (b.FULL_SCREEN = 'full-screen');

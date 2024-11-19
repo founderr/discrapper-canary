@@ -77,7 +77,7 @@ function I(e) {
         g.set(b.sourceMapsEnabled),
         d.K.set(E, b);
 }
-class S extends (r = u.ZP.Store) {
+class T extends (r = u.ZP.Store) {
     initialize() {
         let e = d.K.get(E);
         null != e &&
@@ -138,7 +138,7 @@ class S extends (r = u.ZP.Store) {
     }
 }
 (s = 'DeveloperOptionsStore'),
-    (a = 'displayName') in (i = S)
+    (a = 'displayName') in (i = T)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -146,7 +146,7 @@ class S extends (r = u.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.default = new S(f.Z, {
+    (t.default = new T(f.Z, {
         LOGOUT: function (e) {
             I(v);
         },

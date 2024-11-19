@@ -3,7 +3,7 @@ n.d(t, {
         return x;
     },
     e5: function () {
-        return T;
+        return S;
     },
     gx: function () {
         return y;
@@ -44,7 +44,7 @@ let I = new d.Z({
     id: '???',
     username: '???'
 });
-function S(e) {
+function T(e) {
     var t;
     return new c.pi({
         ...e,
@@ -56,11 +56,11 @@ function S(e) {
         codedLinks: e.type === b.uaV.THREAD_CREATED ? [] : (0, a.ZP)(e.content)
     });
 }
-function T(e) {
-    var t, n, r, i, a, s, l, h, v, T;
+function S(e) {
+    var t, n, r, i, a, s, l, h, v, S;
     let y;
     let { reactions: A, interactionData: N } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        R = S(e),
+        R = T(e),
         L = null !== (i = null === (t = e.mentions) || void 0 === t ? void 0 : t.map((e) => e.id)) && void 0 !== i ? i : [],
         x = null !== (a = e.mention_roles) && void 0 !== a ? a : [],
         w = null !== (s = e.mention_channels) && void 0 !== s ? s : [],
@@ -68,19 +68,19 @@ function T(e) {
     let P = null == (h = e).author ? I : null != h.webhook_id ? new d.Z(h.author) : null !== (v = p.default.getUser(h.author.id)) && void 0 !== v ? v : new d.Z(h.author),
         k = null == e ? void 0 : e.gift_info,
         U = e.gifting_prompt,
-        G = null != e.interaction ? u.Z.createFromServer(e.interaction) : null,
-        B = e.type === b.uaV.THREAD_STARTER_MESSAGE ? (null === (r = e.referenced_message) || void 0 === r ? void 0 : null === (n = r.author) || void 0 === n ? void 0 : n.id) : void 0;
+        B = null != e.interaction ? u.Z.createFromServer(e.interaction) : null,
+        G = e.type === b.uaV.THREAD_STARTER_MESSAGE ? (null === (r = e.referenced_message) || void 0 === r ? void 0 : null === (n = r.author) || void 0 === n ? void 0 : n.id) : void 0;
     let Z = e.content;
     return (
         e.type === b.uaV.PREMIUM_REFERRAL && ((y = g.default.isProbablyAValidSnowflake(e.content) ? e.content : void 0), (Z = '')),
-        (T = 0),
+        (S = 0),
         new c.ZP({
             ...e,
             ...R.toJS(),
             author: P,
             webhookId: e.webhook_id,
-            blocked: _.Z.isBlockedForMessage(e) || (null != B && _.Z.isBlocked(B)),
-            ignored: _.Z.isIgnoredForMessage(e) || (null != B && _.Z.isIgnored(B)),
+            blocked: _.Z.isBlockedForMessage(e) || (null != G && _.Z.isBlocked(G)),
+            ignored: _.Z.isIgnoredForMessage(e) || (null != G && _.Z.isIgnored(G)),
             mentionEveryone: e.mention_everyone,
             mentions: L,
             mentionRoles: x,
@@ -99,7 +99,7 @@ function T(e) {
             call: C(e.call, R.timestamp),
             messageSnapshots: D(e),
             reactions: O(null != A ? A : e.reactions, e.poll),
-            interaction: G,
+            interaction: B,
             interactionData: null != N ? N : e.interaction_data,
             interactionMetadata: e.interaction_metadata,
             roleSubscriptionData: e.role_subscription_data,
@@ -124,7 +124,7 @@ function y(e, t) {
 }
 function A(e, t) {
     if (null != t.edited_timestamp)
-        return T(t, {
+        return S(t, {
             reactions: e.reactions,
             interactionData: e.interactionData
         });
@@ -215,7 +215,7 @@ function D(e) {
         ? []
         : e.message_snapshots.map((e) => {
               let { message: t } = e;
-              return new c.Hx({ message: S(t) });
+              return new c.Hx({ message: T(t) });
           });
 }
 let L = (e) => 0 === (0, l.cv)(e).length || '' !== e.content;

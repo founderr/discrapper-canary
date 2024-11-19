@@ -36,10 +36,10 @@ function I(e) {
     }
     return m.set(e, r), E.set(e, a), g.set(e, i), !0;
 }
-function S() {
+function T() {
     m.clear(), E.clear(), g.clear(), v.clear(), (b = null);
 }
-function T(e) {
+function S(e) {
     let {
         guild: { id: t }
     } = e;
@@ -105,9 +105,9 @@ class A extends (r = l.ZP.Store) {
           })
         : (i[a] = s),
     (t.Z = new A(u.Z, {
-        CONNECTION_OPEN: S,
-        LOGOUT: S,
-        GUILD_CREATE: T,
+        CONNECTION_OPEN: T,
+        LOGOUT: T,
+        GUILD_CREATE: S,
         GUILD_DELETE: function (e) {
             let {
                 guild: { id: t }
@@ -116,7 +116,7 @@ class A extends (r = l.ZP.Store) {
             let n = new Set(b);
             n.delete(t), (b = n);
         },
-        GUILD_UPDATE: T,
+        GUILD_UPDATE: S,
         GUILD_ROLE_CREATE: y,
         GUILD_ROLE_UPDATE: y,
         GUILD_ROLE_DELETE: y,

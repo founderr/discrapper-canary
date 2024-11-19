@@ -22,8 +22,8 @@ var r = n(200651),
     v = n(639119),
     b = n(631771),
     I = n(790527),
-    S = n(474936),
-    T = n(981631),
+    T = n(474936),
+    S = n(981631),
     y = n(731994),
     A = n(388032),
     N = n(746971);
@@ -44,7 +44,7 @@ function C(e) {
         ),
         M = (0, h.XS)(),
         P = w || M,
-        k = R === T.BRd.LIGHT ? 'light' : 'dark',
+        k = R === S.BRd.LIGHT ? 'light' : 'dark',
         U = P
             ? (0, r.jsx)('img', {
                   className: N.updatedArt,
@@ -52,29 +52,29 @@ function C(e) {
                   src: 'https://cdn.discordapp.com/assets/premium/roadblocks/file_upload_'.concat(k, '_v2.png')
               })
             : (0, r.jsx)(o.Z, { icons: y.J6 }),
-        G = i.useMemo(() => {
+        B = i.useMemo(() => {
             let e = m.ZP.getUserMaxFileSize(C);
             return (0, _.BU)(e / 1024, { useKibibytes: !0 });
         }, [C]),
-        B = i.useMemo(() => {
-            let e = A.intl.formatToPlainString(A.t.q5fTZm, { maxSize: G });
+        G = i.useMemo(() => {
+            let e = A.intl.formatToPlainString(A.t.q5fTZm, { maxSize: B });
             switch (O) {
-                case S.p9.TIER_0:
-                    e = A.intl.formatToPlainString(A.t['/DXKen'], { maxSize: G });
+                case T.p9.TIER_0:
+                    e = A.intl.formatToPlainString(A.t['/DXKen'], { maxSize: B });
                     break;
-                case S.p9.TIER_1:
-                    e = A.intl.formatToPlainString(A.t['Kf/MPD'], { maxSize: G });
+                case T.p9.TIER_1:
+                    e = A.intl.formatToPlainString(A.t['Kf/MPD'], { maxSize: B });
             }
             return e;
-        }, [O, G]),
-        Z = (0, _.BU)(S.Uq / 1024, { useKibibytes: !0 }),
+        }, [O, B]),
+        Z = (0, _.BU)(T.Uq / 1024, { useKibibytes: !0 }),
         F = M ? A.intl.string(A.t['9C+41t']) : A.intl.string(A.t['/tGlcn']),
         V = P
             ? M
                 ? (0, g.T)({
                       user: C,
                       onClick: () => {
-                          window.open(p.Z.getArticleURL(T.BhN.NITRO_FAQ), '_blank');
+                          window.open(p.Z.getArticleURL(S.BhN.NITRO_FAQ), '_blank');
                       }
                   })
                 : A.intl.string(A.t.ZcYwgY)
@@ -90,7 +90,7 @@ function C(e) {
             : (0, r.jsxs)('div', {
                   className: N.body,
                   children: [
-                      (0, r.jsx)('span', { children: B }),
+                      (0, r.jsx)('span', { children: G }),
                       (0, r.jsx)(s.Text, {
                           variant: 'text-md/medium',
                           children: V
@@ -101,24 +101,24 @@ function C(e) {
         artElement: U,
         artContainerClassName: P ? N.updatedArtContainer : N.artContainer,
         enableArtBoxShadow: !1,
-        type: S.cd.UPLOAD_ERROR_UPSELL,
+        type: T.cd.UPLOAD_ERROR_UPSELL,
         title: F,
         body: j,
-        context: A.intl.formatToPlainString(A.t.q5fTZm, { maxSize: G }),
+        context: A.intl.formatToPlainString(A.t.q5fTZm, { maxSize: B }),
         glowUp: V,
-        analyticsLocation: { section: T.jXE.FILE_UPLOAD_POPOUT },
+        analyticsLocation: { section: S.jXE.FILE_UPLOAD_POPOUT },
         onClose: t,
-        subscriptionTier: S.Si.TIER_2,
+        subscriptionTier: T.Si.TIER_2,
         secondaryCTA: P ? A.intl.string(A.t.ZnqyZ2) : void 0,
         onSecondaryClick: P
             ? function () {
                   (0, l.Z)(),
                       t(),
-                      f.default.track(T.rMx.PREMIUM_PROMOTION_OPENED, {
-                          location_section: T.jXE.FILE_UPLOAD_UPSELL_MODAL,
-                          location_object: T.qAy.NAVIGATION_LINK
+                      f.default.track(S.rMx.PREMIUM_PROMOTION_OPENED, {
+                          location_section: S.jXE.FILE_UPLOAD_UPSELL_MODAL,
+                          location_object: S.qAy.NAVIGATION_LINK
                       }),
-                      (0, u.uL)(T.Z5c.APPLICATION_STORE);
+                      (0, u.uL)(S.Z5c.APPLICATION_STORE);
               }
             : void 0,
         showEnhancedUpsell: P,

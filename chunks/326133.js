@@ -18,8 +18,8 @@ var r = n(200651),
     v = n(590921),
     b = n(606992),
     I = n(51062),
-    S = n(918559),
-    T = n(115672);
+    T = n(918559),
+    S = n(115672);
 t.Z = i.forwardRef(function (e, t) {
     var n, a, y, A, N;
     let { channel: C, type: R, editorHeight: O, onVisibilityChange: D } = e,
@@ -42,21 +42,21 @@ t.Z = i.forwardRef(function (e, t) {
             w
         ),
         U = (null === (n = R.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? m.ZP : h.ZP,
-        G = (0, f.DJ)(M.selectedIndex);
-    (0, _.KR)(L, M.isVisible, G), E.Z.trackExposure({ location: '6e9811_1' });
-    let { usePopoutAutocomplete: B } = E.Z.useExperiment({ location: '6e9811_2' }, { autoTrackExposure: !1 }),
+        B = (0, f.DJ)(M.selectedIndex);
+    (0, _.KR)(L, M.isVisible, B), E.Z.trackExposure({ location: '6e9811_1' });
+    let { usePopoutAutocomplete: G } = E.Z.useExperiment({ location: '6e9811_2' }, { autoTrackExposure: !1 }),
         Z = (0, b.Z)({
             editorHeight: O,
             type: R,
             state: M,
-            isInPopoutExperiment: B
+            isInPopoutExperiment: G
         }),
         F = (0, l.e7)(
             [d.ZP],
             () => {
                 let e = d.ZP.getSelfEmbeddedActivityForChannel(C.id),
                     t = d.ZP.getActivityPanelMode();
-                return (0, c.l5)(C) && null != e && e.channelId === C.id && t === S.Ez.PANEL;
+                return (0, c.l5)(C) && null != e && e.channelId === C.id && t === T.Ez.PANEL;
             },
             [C]
         ),
@@ -84,17 +84,17 @@ t.Z = i.forwardRef(function (e, t) {
             : null;
     if (null == j) return null;
     let H = {
-            [T.autocompleteAttached]: null == Z,
-            [T.autocompletePopout]: null != Z,
-            [T.bottom]: null == Z && 'bottom' === e.position,
-            [T.autocompleteTop]: F
+            [S.autocompleteAttached]: null == Z,
+            [S.autocompletePopout]: null != Z,
+            [S.bottom]: null == Z && 'bottom' === e.position,
+            [S.autocompleteTop]: F
         },
         Y = 490;
     null != Z && (Y = (null === (y = R.autocomplete) || void 0 === y ? void 0 : y.small) ? 200 : (null === (A = M.query) || void 0 === A ? void 0 : A.type) === v.eq.EMOJIS_AND_STICKERS ? 490 : 245), (Y = Math.min(window.innerHeight - 175, Y));
     let W = (0, r.jsx)(f.ZP, {
         id: L,
-        className: s()(T.autocomplete, H),
-        innerClassName: T.autocompleteInner,
+        className: s()(S.autocomplete, H),
+        innerClassName: S.autocompleteInner,
         onMouseDown: (e) => e.preventDefault(),
         children: (0, r.jsx)(o.bG, {
             navigator: k,
@@ -108,7 +108,7 @@ t.Z = i.forwardRef(function (e, t) {
                             (t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null), (w.current = e);
                         },
                         ...n,
-                        className: T.scroller,
+                        className: S.scroller,
                         style: { maxHeight: Y },
                         role: 'listbox',
                         'aria-labelledby': (0, f.rp)(L),

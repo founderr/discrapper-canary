@@ -39,8 +39,8 @@ var a,
     v = n(579806),
     b = n(887278),
     I = n(490029),
-    S = n(710845),
-    T = n(594190),
+    T = n(710845),
+    S = n(594190),
     y = n(454991),
     A = n(633565),
     N = n(610394),
@@ -55,9 +55,9 @@ var a,
     P = n(998502),
     k = n(145597),
     U = n(981631),
-    G = n(987650);
+    B = n(987650);
 ((o = a || (a = {})).ATTACHING = 'ATTACHING'), (o.CONNECTING = 'CONNECTING'), (o.CONNECTED = 'CONNECTED'), (o.READY = 'READY'), (o.CRASHED = 'CRASHED'), (o.CONNECT_FAILED = 'CONNECT_FAILED'), (o.HOOK_FAILED = 'HOOK_FAILED');
-let B = {},
+let G = {},
     Z = new Map(),
     F = !1,
     V = new Set(),
@@ -71,7 +71,7 @@ let B = {},
     Q = !1,
     X = new Set(['CONNECTION_OPEN', 'CONNECTION_RESUMED', 'CONNECTION_CLOSED', 'WINDOW_INIT', 'WINDOW_FULLSCREEN_CHANGE', 'WINDOW_FOCUS', 'WINDOW_RESIZED', 'WINDOW_HIDDEN', 'CHANNEL_SELECT', 'DELAYED_CHANNEL_SELECT', 'DELAYED_SELECT_FLUSH', 'LOAD_MESSAGES_SUCCESS', 'LOAD_MESSAGES_FAILURE', 'LOAD_MESSAGES', 'MESSAGE_START_EDIT', 'MESSAGE_UPDATE_EDIT', 'MESSAGE_END_EDIT', 'APP_VIEW_SET_HOME_LINK', 'APPLICATION_STORE_LOCATION_CHANGE', 'LOGIN', 'LOGIN_SUCCESS', 'LOGIN_FAILURE', 'LOGIN_MFA_STEP', 'LOGIN_MFA', 'LOGIN_MFA_FAILURE', 'LOGIN_MFA_SMS', 'LOGIN_MFA_SMS_REQUEST_SUCCESS', 'LOGIN_MFA_SMS_FAILURE', 'LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION', 'LOGIN_ACCOUNT_DISABLED', 'LOGIN_RESET', 'FINGERPRINT', 'REGISTER', 'REGISTER_SUCCESS', 'REGISTER_FAILURE', 'VERIFY_FAILURE', 'VERIFY_SUCCESS', 'START_SESSION', 'FORGOT_PASSWORD_SENT', 'UPDATE_TOKEN', 'SET_CONSENT_REQUIRED', 'PASSWORDLESS_START', 'PASSWORDLESS_FAILURE', 'CONTEXT_MENU_OPEN', 'CONTEXT_MENU_CLOSE', 'MODAL_PUSH', 'MODAL_POP', 'MODAL_UPDATE', 'MODAL_POP_ALL', 'GUILD_SETTINGS_OPEN', 'USER_SETTINGS_MODAL_OPEN', 'CHANNEL_SETTINGS_OPEN', 'NOTIFICATION_SETTINGS_MODAL_OPEN', 'EMAIL_VERIFICATION_MODAL_OPEN', 'MENTION_MODAL_OPEN', 'QUICKSWITCHER_SHOW', 'IFE_EXPERIMENT_SEARCH_MODAL_OPEN', 'SHOW_KEYBOARD_SHORTCUTS', 'DM_SETTINGS_UPSELL_SHOW', 'USER_PROFILE_MODAL_OPEN', 'INTERACTION_MODAL_CREATE', 'INTERACTION_IFRAME_MODAL_CREATE', 'GUILD_SETTINGS_CLOSE', 'USER_SETTINGS_MODAL_CLOSE', 'CHANNEL_SETTINGS_CLOSE', 'NOTIFICATION_SETTINGS_MODAL_CLOSE', 'EMAIL_VERIFICATION_MODAL_CLOSE', 'MENTION_MODAL_CLOSE', 'QUICKSWITCHER_HIDE', 'IFE_EXPERIMENT_SEARCH_MODAL_CLOSE', 'HIDE_KEYBOARD_SHORTCUTS', 'USER_PROFILE_MODAL_CLOSE', 'QUICKSWITCHER_SHOW', 'QUICKSWITCHER_HIDE', 'QUICKSWITCHER_SWITCH_TO', 'QUICKSWITCHER_SEARCH', 'QUICKSWITCHER_SELECT', 'UPDATE_CHANNEL_DIMENSIONS', 'UPDATE_CHANNEL_LIST_DIMENSIONS', 'UPDATE_GUILD_LIST_DIMENSIONS', 'TRACK', 'CHANNEL_SETTINGS_OPEN', 'CHANNEL_SETTINGS_INIT', 'CHANNEL_SETTINGS_CLOSE', 'GUILD_SETTINGS_INIT', 'GUILD_SETTINGS_OPEN', 'GUILD_SETTINGS_CLOSE', 'TUTORIAL_INDICATOR_SHOW', 'TUTORIAL_INDICATOR_HIDE', 'TUTORIAL_INDICATOR_SUPPRESS_ALL', 'USER_SETTINGS_ACCOUNT_INIT', 'USER_SETTINGS_ACCOUNT_CLOSE', 'NOTICE_SHOW', 'NOTICE_DISMISS', 'NOTICE_DISABLE', 'SEARCH_EDITOR_STATE_CHANGE', 'SEARCH_EDITOR_STATE_CLEAR', 'SEARCH_START', 'SEARCH_FINISH', 'MOD_VIEW_SEARCH_FINISH', 'SEARCH_INDEXING', 'SEARCH_CLEAR', 'SEARCH_ENSURE_SEARCH_STATE', 'SEARCH_AUTOCOMPLETE_QUERY_UPDATE', 'SEARCH_CLEAR_HISTORY', 'SEARCH_SET_SHOW_BLOCKED_RESULTS', 'LAYOUT_CREATE', 'POPOUT_WINDOW_OPEN', 'POPOUT_WINDOW_CLOSE', 'POPOUT_WINDOW_SET_ALWAYS_ON_TOP', 'TYPING_START_LOCAL', 'TYPING_STOP_LOCAL', 'SPOTIFY_SET_ACTIVE_DEVICE', 'LOAD_INVITE_SUGGESTIONS', 'INVITE_SUGGESTIONS_SEARCH', 'IMPERSONATE_UPDATE', 'IMPERSONATE_STOP', 'CREATE_PENDING_REPLY', 'CREATE_SHALLOW_PENDING_REPLY', 'DELETE_PENDING_REPLY', 'USER_SETTINGS_PROTO_UPDATE_EDIT_INFO', 'APPLICATION_COMMAND_INDEX_FETCH_REQUEST', 'APPLICATION_COMMAND_INDEX_FETCH_SUCCESS', 'APPLICATION_COMMAND_INDEX_FETCH_FAILURE', 'APPLICATION_COMMAND_EXECUTE_BAD_VERSION', 'APPLICATION_COMMAND_AUTOCOMPLETE_REQUEST', 'APPLICATION_COMMAND_AUTOCOMPLETE_RESPONSE', 'APPLICATION_COMMAND_SET_ACTIVE_COMMAND', 'APPLICATION_COMMAND_SET_PREFERRED_COMMAND', 'APPLICATION_COMMAND_UPDATE_OPTIONS', 'APPLICATION_COMMAND_UPDATE_CHANNEL_STATE', 'APPLICATION_COMMAND_USED', 'DCF_HANDLE_DC_SHOWN', 'DCF_HANDLE_DC_DISMISSED']),
     J = new Set(),
-    $ = new S.Z('OverlayBridgeStore'),
+    $ = new T.Z('OverlayBridgeStore'),
     ee = 'none',
     et = (0, d.H)({
         onContention: (e, t) => $.verbose('overlayLock contention: lastMutexCall '.concat(ee)),
@@ -179,12 +179,12 @@ async function eo(e) {
         return;
     }
     async function n(t) {
-        if (!(t in B)) {
-            $.error('Unexpected. '.concat(t, ' is not a tracked game?'), B, e);
+        if (!(t in G)) {
+            $.error('Unexpected. '.concat(t, ' is not a tracked game?'), G, e);
             return;
         }
-        let n = B[t];
-        delete B[t];
+        let n = G[t];
+        delete G[t];
         try {
             await n.deconstructor();
         } catch (e) {
@@ -192,17 +192,17 @@ async function eo(e) {
         }
     }
     if (null == e || !j || N.Z.isOverlayV3Enabled()) {
-        for (let t of ($.verbose('updateIntendedOverlayPIDs: Removing all.', B, e), Object.keys(B))) await n(Number(t));
+        for (let t of ($.verbose('updateIntendedOverlayPIDs: Removing all.', G, e), Object.keys(G))) await n(Number(t));
         return;
     }
     for (let n of null !== (t = e.added) && void 0 !== t ? t : []) {
-        let t = T.ZP.getGameOverlayStatus(n);
+        let t = S.ZP.getGameOverlayStatus(n);
         if (($.verbose('updateIntendedOverlayPIDs: newGame', n, t), null != t && t.enabled))
-            switch ((n.pid in B && $.error('Unexpected. '.concat(n.pid, ' is being added twice?'), B, e), t.overlayMethod)) {
-                case G.gl.OutOfProcess:
+            switch ((n.pid in G && $.error('Unexpected. '.concat(n.pid, ' is being added twice?'), G, e), t.overlayMethod)) {
+                case B.gl.OutOfProcess:
                     let r = await ep();
                     null == r || r.trackGame(n.pid),
-                        (B[n.pid] = {
+                        (G[n.pid] = {
                             method: t.overlayMethod,
                             deconstructor: async () => {
                                 let e = await ep();
@@ -210,16 +210,16 @@ async function eo(e) {
                             }
                         });
                     break;
-                case G.gl.Hook:
+                case B.gl.Hook:
                     !Z.has(n.pid) && (await ea(n.pid)),
-                        (B[n.pid] = {
+                        (G[n.pid] = {
                             method: t.overlayMethod,
                             deconstructor: async () => {
                                 await es(n.pid);
                             }
                         });
                     break;
-                case G.gl.Disabled:
+                case B.gl.Disabled:
                     $.verbose('updateIntendedOverlayPIDs: disabled', n);
                     break;
                 default:
@@ -239,7 +239,7 @@ function eu() {
 let ec = (() => {
     let e = null;
     async function t() {
-        if (!G.iP) throw ($.error('Attempted to load overlay on an unsupported platform.'), Error('Overlay is not supported on this platform.'));
+        if (!B.iP) throw ($.error('Attempted to load overlay on an unsupported platform.'), Error('Overlay is not supported on this platform.'));
         try {
             return (
                 await P.ZP.ensureModule('discord_overlay2'),
@@ -276,7 +276,7 @@ let ep = (() => {
     let e = null;
     async function t() {
         if (N.Z.isOverlayV3Enabled()) return null;
-        if (!G.iP || !(0, k.VS)()) throw ($.error('Attempted to load out of process overlay on an unsupported platform.'), Error('Out of Process Overlay is not supported on this platform.'));
+        if (!B.iP || !(0, k.VS)()) throw ($.error('Attempted to load out of process overlay on an unsupported platform.'), Error('Out of Process Overlay is not supported on this platform.'));
         try {
             var e, t, n;
             let { OutOfProcess: r } = await ec();
@@ -289,12 +289,12 @@ let ep = (() => {
 })();
 function eh() {
     return el({
-        added: T.ZP.getRunningGames(),
+        added: S.ZP.getRunningGames(),
         removed: []
     });
 }
 let em = en('setOverlayEnabled', async (e, t, n) => {
-    if (!G.iP || N.Z.isOverlayV3Enabled() || (j === e && H === t)) return;
+    if (!B.iP || N.Z.isOverlayV3Enabled() || (j === e && H === t)) return;
     (j = e),
         (H = t),
         y.v.update({
@@ -310,7 +310,7 @@ let em = en('setOverlayEnabled', async (e, t, n) => {
 function eg(e) {
     if (0 === e) {
         var t, n;
-        if ((null !== (n = null === (t = B[null != W ? W : 0]) || void 0 === t ? void 0 : t.method) && void 0 !== n ? n : G.gl.Disabled) === G.gl.OutOfProcess) return;
+        if ((null !== (n = null === (t = G[null != W ? W : 0]) || void 0 === t ? void 0 : t.method) && void 0 !== n ? n : B.gl.Disabled) === B.gl.OutOfProcess) return;
     }
     g.Z.setFocusedPID(0 === e ? null : e);
 }
@@ -322,7 +322,7 @@ function ev(e) {
 }
 function eb(e, t, n) {
     var r;
-    let i = null === (r = T.ZP.getGameForPID(e)) || void 0 === r ? void 0 : r.name,
+    let i = null === (r = S.ZP.getGameForPID(e)) || void 0 === r ? void 0 : r.name,
         a = O.Z.getGameByName(i),
         s = {
             game_name: i,
@@ -355,7 +355,7 @@ function eI() {
             ]
         });
 }
-async function eS(e) {
+async function eT(e) {
     let t = await ec();
     if (
         (null != W &&
@@ -370,12 +370,12 @@ async function eS(e) {
         null == t || t.setInteractionEnabled(!e);
     }
 }
-function eT(e) {
+function eS(e) {
     if (e) {
-        let t = T.ZP.getVisibleGame(),
-            n = null == t ? null : T.ZP.getGameOverlayStatus(t);
-        (null == n ? void 0 : n.overlayMethod) === G.gl.OutOfProcess ? eS(e) : setTimeout(() => eS(e), 200);
-    } else eS(e);
+        let t = S.ZP.getVisibleGame(),
+            n = null == t ? null : S.ZP.getGameOverlayStatus(t);
+        (null == n ? void 0 : n.overlayMethod) === B.gl.OutOfProcess ? eT(e) : setTimeout(() => eT(e), 200);
+    } else eT(e);
 }
 let ey = null;
 function eA(e, t, n) {
@@ -465,13 +465,13 @@ function eD(e) {
 }
 class eL extends (s = f.ZP.Store) {
     initialize() {
-        if (!(!G.iP || __OVERLAY__)) this.waitFor(T.ZP, R.default, N.Z), I.sr(eD, eO), R.default.addChangeListener(eI), em(y.v.enabled, y.v.legacyEnabled, y.v.global), _.Z.addInterceptor(eC);
+        if (!(!B.iP || __OVERLAY__)) this.waitFor(S.ZP, R.default, N.Z), I.sr(eD, eO), R.default.addChangeListener(eI), em(y.v.enabled, y.v.legacyEnabled, y.v.global), _.Z.addInterceptor(eC);
     }
     isInputLocked(e) {
         return N.Z.isOverlayV3Enabled() ? N.Z.isInputLocked(e) : !q.has(e);
     }
     isSupported() {
-        return !!N.Z.isOverlayV3Enabled() || G.iP;
+        return !!N.Z.isOverlayV3Enabled() || B.iP;
     }
     get enabled() {
         return N.Z.isOverlayV3Enabled() ? N.Z.enabled : j;
@@ -558,23 +558,23 @@ let ex = new eL(
                   if (!t && !('READY' === r || 'CRASHED' === r)) return;
                   if ((t ? q.delete(n) : q.add(n), J.clear(), null == ey || (clearTimeout(ey), (ey = null), !t)))
                       t
-                          ? eT(t)
+                          ? eS(t)
                           : (ey = setTimeout(() => {
-                                eT(t), (ey = null);
+                                eS(t), (ey = null);
                             }, 100));
               },
               OVERLAY_ACTIVATE_REGION: function (e) {
                   let { region: t } = e;
-                  J.add(t), eT(!1);
+                  J.add(t), eS(!1);
               },
               OVERLAY_DEACTIVATE_ALL_REGIONS: function () {
-                  J.clear(), eT(!0);
+                  J.clear(), eS(!0);
               },
               RPC_SERVER_READY: function (e) {
                   let { port: t } = e;
                   z = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
                   let n = new URLSearchParams();
-                  n.append('build_id', 'c23f90c9f8a649a97ced9031b8f93978b022f487'), n.append('rpc', String(t)), n.append('rpc_auth_token', z), (r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString()));
+                  n.append('build_id', '9b250c5b3bffb764898e14ac4ba0da9118ad0b87'), n.append('rpc', String(t)), n.append('rpc_auth_token', z), (r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString()));
               },
               OVERLAY_CALL_PRIVATE_CHANNEL: function (e) {
                   let { channelId: t, ring: n } = e;
@@ -616,7 +616,7 @@ let ex = new eL(
               },
               OVERLAY_SET_ASSOCIATED_GAME: function (e) {
                   var t, n;
-                  if ((null !== (n = null === (t = B[e.previousAssociatedGamePID]) || void 0 === t ? void 0 : t.method) && void 0 !== n ? n : G.gl.Disabled) !== G.gl.OutOfProcess) return;
+                  if ((null !== (n = null === (t = G[e.previousAssociatedGamePID]) || void 0 === t ? void 0 : t.method) && void 0 !== n ? n : B.gl.Disabled) !== B.gl.OutOfProcess) return;
                   let r = Z.get(e.previousAssociatedGamePID);
                   null != r && (Z.delete(e.previousAssociatedGamePID), Z.set(e.associatedGamePID, r)), q.delete(e.previousAssociatedGamePID), (K = e.associatedGamePID);
               },

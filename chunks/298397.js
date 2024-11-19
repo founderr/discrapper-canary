@@ -23,8 +23,8 @@ function c(e, t) {
         }),
         { isInvalid: v, validationErrors: b, validationDetails: I } = E.displayValidation,
         {
-            labelProps: S,
-            fieldProps: T,
+            labelProps: T,
+            fieldProps: S,
             descriptionProps: y,
             errorMessageProps: A
         } = (0, s.U)({
@@ -51,7 +51,7 @@ function c(e, t) {
             }
         }, [t]),
         {
-            labelProps: S,
+            labelProps: T,
             inputProps: (0, i.dG)(N, 'input' === n && C, {
                 disabled: c,
                 readOnly: f,
@@ -81,7 +81,7 @@ function c(e, t) {
                 onBeforeInput: e.onBeforeInput,
                 onInput: e.onInput,
                 ...g,
-                ...T
+                ...S
             }),
             descriptionProps: y,
             errorMessageProps: A,

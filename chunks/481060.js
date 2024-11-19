@@ -298,7 +298,7 @@ n.r(t),
             return E.s;
         },
         ChainedLottieAnimation: function () {
-            return tT.R;
+            return tS.R;
         },
         ChannelListIcon: function () {
             return tC.OvV;
@@ -445,7 +445,7 @@ n.r(t),
             return I.P;
         },
         ClickableContainer: function () {
-            return S.k;
+            return T.k;
         },
         ClipboardCheckIcon: function () {
             return tC.C2q;
@@ -490,10 +490,10 @@ n.r(t),
             return to.AG;
         },
         Combobox: function () {
-            return T.hQ;
+            return S.hQ;
         },
         ComboboxItem: function () {
-            return T.lo;
+            return S.lo;
         },
         ComboboxPopout: function () {
             return y.D;
@@ -712,13 +712,13 @@ n.r(t),
             return U.$;
         },
         FormErrorBlock: function () {
-            return G.k;
+            return B.k;
         },
         FormErrorBlockColors: function () {
-            return G.m;
+            return B.m;
         },
         FormItem: function () {
-            return B.x;
+            return G.x;
         },
         FormLabel: function () {
             return Z.l;
@@ -889,7 +889,7 @@ n.r(t),
             return tE.G2;
         },
         IconSelectOption: function () {
-            return eG.Z;
+            return eB.Z;
         },
         IdIcon: function () {
             return tC.VuL;
@@ -973,7 +973,7 @@ n.r(t),
             return X.li;
         },
         LazyPopout: function () {
-            return eS.K;
+            return eT.K;
         },
         LeagueOfLegendsBrandIcon: function () {
             return tC.EVB;
@@ -1033,7 +1033,7 @@ n.r(t),
             return tI.F;
         },
         LottieSparkle: function () {
-            return tS.K;
+            return tT.K;
         },
         MagicWandIcon: function () {
             return tC.$2U;
@@ -1363,10 +1363,10 @@ n.r(t),
             return tC.QDj;
         },
         Popout: function () {
-            return eS.y;
+            return eT.y;
         },
         PopoutCSSAnimator: function () {
-            return eT.l;
+            return eS.l;
         },
         PopoutList: function () {
             return ey.m;
@@ -1525,7 +1525,7 @@ n.r(t),
             return ek.Ph;
         },
         SelectLooks: function () {
-            return eB.q;
+            return eG.q;
         },
         SendMessageIcon: function () {
             return tC.Uuj;
@@ -2230,7 +2230,7 @@ n.r(t),
             return ef.s9;
         },
         useMultiSelect: function () {
-            return T.A7;
+            return S.A7;
         },
         useMultiSelectState: function () {
             return ek.Vn;
@@ -2251,7 +2251,7 @@ n.r(t),
             return eR.zn;
         },
         useSingleSelect: function () {
-            return T.yn;
+            return S.yn;
         },
         useSingleSelectState: function () {
             return ek.nV;
@@ -2300,8 +2300,8 @@ var r = n(680732),
     v = n(178940),
     b = n(57260),
     I = n(1561),
-    S = n(605578),
-    T = n(838331),
+    T = n(605578),
+    S = n(838331),
     y = n(6745),
     A = n(67979),
     N = n(507274),
@@ -2316,8 +2316,8 @@ var r = n(680732),
     P = n(347016),
     k = n(15127),
     U = n(770102),
-    G = n(434333),
-    B = n(540863),
+    B = n(434333),
+    G = n(540863),
     Z = n(722187),
     F = n(383838),
     V = n(789164),
@@ -2354,8 +2354,8 @@ var r = n(680732),
     ev = n(507173),
     eb = n(930295),
     eI = n(920676),
-    eS = n(235874),
-    eT = n(126306),
+    eT = n(235874),
+    eS = n(126306),
     ey = n(119638),
     eA = n(538534),
     eN = n(346314),
@@ -2370,8 +2370,8 @@ var r = n(680732),
     eP = n(189283),
     ek = n(619307),
     eU = n(921349),
-    eG = n(119757),
-    eB = n(748585),
+    eB = n(119757),
+    eG = n(748585),
     eZ = n(263953),
     eF = n(503145),
     eV = n(936621),
@@ -2418,8 +2418,8 @@ var r = n(680732),
     tv = n(683976),
     tb = n(488164),
     tI = n(226690),
-    tS = n(912494),
-    tT = n(300033),
+    tT = n(912494),
+    tS = n(300033),
     ty = n(479498),
     tA = n(359255),
     tN = n(525605),

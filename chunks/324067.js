@@ -25,7 +25,7 @@ let b = v();
 function I(e, t) {
     e.index = t;
 }
-function S(e) {
+function T(e) {
     let t = _.ZP.getChannels(e),
         n = v(),
         r = (e) => {
@@ -52,33 +52,33 @@ function S(e) {
         n
     );
 }
-function T() {
-    (g = {}), null != m && S(m);
+function S() {
+    (g = {}), null != m && T(m);
 }
 function y(e) {
     let {
         guild: { id: t }
     } = e;
-    (g[t] = void 0), m === t && S(t);
+    (g[t] = void 0), m === t && T(t);
 }
 function A(e) {
     let {
         channel: { guild_id: t }
     } = e;
     if (null == t) return !1;
-    (g[t] = void 0), m === t && S(t);
+    (g[t] = void 0), m === t && T(t);
 }
 function N(e) {
     let { guildId: t } = e;
-    (g[t] = void 0), t === m && S(t);
+    (g[t] = void 0), t === m && T(t);
 }
 function C(e, t) {
     if (((E = t), null == e || null == e.getGuildId())) return !1;
     let n = e.getGuildId();
-    return null != n && ((g[n] = void 0), n === m && S(n), !0);
+    return null != n && ((g[n] = void 0), n === m && T(n), !0);
 }
 function R() {
-    S(h.I_8);
+    T(h.I_8);
 }
 class O extends (r = o.ZP.Store) {
     initialize() {
@@ -88,7 +88,7 @@ class O extends (r = o.ZP.Store) {
         return null != e
             ? (function (e) {
                   let t = g[e];
-                  return null != t ? t : S(e);
+                  return null != t ? t : T(e);
               })(e)
             : b;
     }
@@ -106,11 +106,11 @@ class O extends (r = o.ZP.Store) {
         CHANNEL_SELECT: function (e) {
             let { guildId: t } = e;
             if (((m = null != t ? t : null), null == t || null != g[t])) return !1;
-            S(t);
+            T(t);
         },
-        CONNECTION_OPEN: T,
-        OVERLAY_INITIALIZE: T,
-        CACHE_LOADED_LAZY: T,
+        CONNECTION_OPEN: S,
+        OVERLAY_INITIALIZE: S,
+        CACHE_LOADED_LAZY: S,
         GUILD_CREATE: y,
         GUILD_UPDATE: y,
         GUILD_DELETE: function (e) {
@@ -124,17 +124,17 @@ class O extends (r = o.ZP.Store) {
         CHANNEL_UPDATES: function (e) {
             let { channels: t } = e,
                 n = !1;
-            for (let { guild_id: e } of t) null != e && ((g[e] = void 0), (n = !0), m === e && S(e));
+            for (let { guild_id: e } of t) null != e && ((g[e] = void 0), (n = !0), m === e && T(e));
             return n;
         },
         GUILD_MEMBER_UPDATE: function (e) {
             let { guildId: t, user: n } = e;
             if (d.default.getId() !== n.id) return !1;
-            (g[t] = void 0), t === m && S(t);
+            (g[t] = void 0), t === m && T(t);
         },
         CURRENT_USER_UPDATE: function () {
             if (null == m) return !1;
-            S(m);
+            T(m);
         },
         GUILD_ROLE_CREATE: N,
         GUILD_ROLE_UPDATE: N,

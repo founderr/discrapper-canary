@@ -24,7 +24,7 @@ n.d(t, {
         return x;
     },
     l_: function () {
-        return T;
+        return S;
     },
     rs: function () {
         return O;
@@ -126,7 +126,7 @@ var v = (function (e) {
     })(s.Component),
     b = {},
     I = 0;
-function S(e, t) {
+function T(e, t) {
     return (
         void 0 === e && (e = '/'),
         void 0 === t && (t = {}),
@@ -139,7 +139,7 @@ function S(e, t) {
               })(e)(t, { pretty: !0 })
     );
 }
-function T(e) {
+function S(e) {
     var t = e.computedMatch,
         n = e.to,
         r = e.push,
@@ -149,7 +149,7 @@ function T(e) {
         var r = e.history,
             a = e.staticContext,
             l = i ? r.push : r.replace,
-            d = (0, o.ob)(t ? ('string' == typeof n ? S(n, t.params) : (0, c.Z)({}, n, { pathname: S(n.pathname, t.params) })) : n);
+            d = (0, o.ob)(t ? ('string' == typeof n ? T(n, t.params) : (0, c.Z)({}, n, { pathname: T(n.pathname, t.params) })) : n);
         return a
             ? (l(d), null)
             : s.createElement(v, {

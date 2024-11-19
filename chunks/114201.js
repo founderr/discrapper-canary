@@ -24,23 +24,23 @@ var i = n(99815),
 function b(e) {
     let { guildId: t, leaderboardId: b } = e,
         I = (0, a.e7)([l.default], () => l.default.getId()),
-        S = (0, a.e7)([u.Z], () => u.Z.getAccount(null, g.ABu.RIOT_GAMES)),
-        T = (0, a.e7)([u.Z], () => u.Z.getAccount(null, g.ABu.LEAGUE_OF_LEGENDS)),
+        T = (0, a.e7)([u.Z], () => u.Z.getAccount(null, g.ABu.RIOT_GAMES)),
+        S = (0, a.e7)([u.Z], () => u.Z.getAccount(null, g.ABu.LEAGUE_OF_LEGENDS)),
         { leaderboardsDisabled: y } = (0, h.O)(t, b),
         A =
-            null != T && null != S
+            null != S && null != T
                 ? () => {
                       f.default.track(g.rMx.LEADERBOARD_USER_DATA_REFRESH_REQUESTED, {
                           leaderboard_id: b,
                           guild_id: t
                       }),
                           (0, p._7)({
-                              riotConnectionId: S.id,
-                              lolConnectionId: T.id
+                              riotConnectionId: T.id,
+                              lolConnectionId: S.id
                           });
                   }
                 : g.dG4,
-        N = null == S || y ? E.intl.string(E.t['0yRXHx']) : E.intl.string(E.t['KWpU6+']),
+        N = null == T || y ? E.intl.string(E.t['0yRXHx']) : E.intl.string(E.t['KWpU6+']),
         { lastUpdateRequested: C, statisticLastUpdatedDate: R } = (0, m.Z)({
             userId: I,
             guildId: t,
@@ -110,7 +110,7 @@ function b(e) {
                 children: (0, r.jsx)(r.Fragment, {
                     children: (0, r.jsxs)(s.MenuGroup, {
                         children: [
-                            null != S &&
+                            null != T &&
                                 (0, r.jsx)(s.MenuItem, {
                                     id: 'refresh-my-data',
                                     label: E.intl.string(E.t.iopWUV),

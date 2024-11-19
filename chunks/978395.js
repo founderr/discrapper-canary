@@ -23,8 +23,8 @@ var i = n(442837),
     v = n(827313),
     b = n(420654),
     I = n(116854),
-    S = n(166584),
-    T = n(915014),
+    T = n(166584),
+    S = n(915014),
     y = n(228168),
     A = n(981631),
     N = n(653134);
@@ -35,7 +35,7 @@ function C(e) {
         P = (0, i.e7)([l.Z], () => l.Z.hidePersonalInformation),
         k = t.id === n.id,
         { dimissibleUpsellsEnabled: U } = (0, d.u)({ location: 'UserProfilePopoutBody' }),
-        G = (0, c.I5)(n);
+        B = (0, c.I5)(n);
     return (0, r.jsxs)(a.Scroller, {
         fade: !0,
         className: N.body,
@@ -78,7 +78,7 @@ function C(e) {
                     })
                 }),
             !k &&
-                (0, r.jsx)(T.Z, {
+                (0, r.jsx)(S.Z, {
                     user: t,
                     onOpenProfile: (e) => (null == D ? void 0 : D({ section: e }))
                 }),
@@ -93,7 +93,7 @@ function C(e) {
             U &&
                 k &&
                 (0, r.jsx)(_.Z, {
-                    isPremiumUser: G,
+                    isPremiumUser: B,
                     onInteraction: x,
                     className: N.upsell
                 }),
@@ -104,7 +104,7 @@ function C(e) {
                 className: N.activity
             }),
             null != R &&
-                (0, r.jsx)(S.Z, {
+                (0, r.jsx)(T.Z, {
                     user: t,
                     currentUser: n,
                     guild: R

@@ -65,13 +65,13 @@ function f(e) {
             },
             [n, f, _]
         ),
-        S = i.useCallback((e) => {
+        T = i.useCallback((e) => {
             g((t) => {
                 let n = new Set(t);
                 return n.delete(e), n;
             });
         }, []),
-        T = i.useCallback(
+        S = i.useCallback(
             (e, t) => {
                 var n;
                 if ((v(!0), c(e))) return;
@@ -81,10 +81,10 @@ function f(e) {
                 });
                 let r = ((n = e), (0, a.k)(n, HTMLImageElement) ? 'load' : (0, a.k)(n, HTMLVideoElement) ? 'canplaythrough' : 'load');
                 e.addEventListener(r, function t() {
-                    S(e), e.removeEventListener(r, t);
+                    T(e), e.removeEventListener(r, t);
                 });
                 e.addEventListener('error', function n(r) {
-                    S(e),
+                    T(e),
                         I({
                             assetNode: e,
                             nodeId: t,
@@ -94,7 +94,7 @@ function f(e) {
                         e.removeEventListener('error', n);
                 });
             },
-            [I, S]
+            [I, T]
         ),
         y = i.useMemo(() => m.size > 0 || !E, [E, m]);
     i.useEffect(() => {
@@ -102,12 +102,12 @@ function f(e) {
     }, [y]);
     let A = i.useMemo(
         () => ({
-            registerAsset: T,
-            unregisterAsset: S,
+            registerAsset: S,
+            unregisterAsset: T,
             hasError: p,
             isLoading: y && !b.current
         }),
-        [T, S, p, y]
+        [S, T, p, y]
     );
     return (0, r.jsx)(u.Provider, {
         value: A,

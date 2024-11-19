@@ -160,22 +160,22 @@ function b(e) {
 function I(e) {
     return 'bigint' == typeof e;
 }
-let S = d(
+let T = d(
         g(function (e) {
             return !0;
         })
     ),
-    T = (e) =>
+    S = (e) =>
         Object.assign(d(e), {
             startsWith: (t) =>
-                T(
+                S(
                     h(
                         e,
                         g((e) => b(e) && e.startsWith(t))
                     )
                 ),
             endsWith: (t) =>
-                T(
+                S(
                     h(
                         e,
                         g((e) => b(e) && e.endsWith(t))
@@ -183,28 +183,28 @@ let S = d(
                 ),
             minLength: (t) => {
                 let n;
-                return T(h(e, ((n = t), g((e) => b(e) && e.length >= n))));
+                return S(h(e, ((n = t), g((e) => b(e) && e.length >= n))));
             },
             maxLength: (t) => {
                 let n;
-                return T(h(e, ((n = t), g((e) => b(e) && e.length <= n))));
+                return S(h(e, ((n = t), g((e) => b(e) && e.length <= n))));
             },
             includes: (t) =>
-                T(
+                S(
                     h(
                         e,
                         g((e) => b(e) && e.includes(t))
                     )
                 ),
             regex: (t) =>
-                T(
+                S(
                     h(
                         e,
                         g((e) => b(e) && !!e.match(t))
                     )
                 )
         }),
-    y = T(g(b)),
+    y = S(g(b)),
     A = (e, t) => g((n) => v(n) && e <= n && t >= n),
     N = (e) => g((t) => v(t) && t < e),
     C = (e) => g((t) => v(t) && t > e),
@@ -229,8 +229,8 @@ let S = d(
     P = M(g(v)),
     k = (e, t) => g((n) => I(n) && e <= n && t >= n),
     U = (e) => g((t) => I(t) && t < e),
-    G = (e) => g((t) => I(t) && t > e),
-    B = (e) => g((t) => I(t) && t <= e),
+    B = (e) => g((t) => I(t) && t > e),
+    G = (e) => g((t) => I(t) && t <= e),
     Z = (e) => g((t) => I(t) && t >= e),
     F = () => g((e) => I(e) && e > 0),
     V = () => g((e) => I(e) && e < 0),
@@ -238,8 +238,8 @@ let S = d(
         Object.assign(d(e), {
             between: (t, n) => j(h(e, k(t, n))),
             lt: (t) => j(h(e, U(t))),
-            gt: (t) => j(h(e, G(t))),
-            lte: (t) => j(h(e, B(t))),
+            gt: (t) => j(h(e, B(t))),
+            lte: (t) => j(h(e, G(t))),
             gte: (t) => j(h(e, Z(t))),
             positive: () => j(h(e, F())),
             negative: () => j(h(e, V()))
@@ -378,8 +378,8 @@ var z = {
     },
     when: g,
     select: E,
-    any: S,
-    _: S,
+    any: T,
+    _: T,
     string: y,
     between: A,
     lt: N,
@@ -393,8 +393,8 @@ var z = {
     number: P,
     betweenBigInt: k,
     ltBigInt: U,
-    gtBigInt: G,
-    lteBigInt: B,
+    gtBigInt: B,
+    lteBigInt: G,
     gteBigInt: Z,
     positiveBigInt: F,
     negativeBigInt: V,

@@ -24,8 +24,8 @@ let m = null,
     v = null,
     b = null,
     I = !1,
-    S = !1,
-    T = null,
+    T = !1,
+    S = null,
     y = !1,
     A = new u.Z('SubscriptionStore');
 function N(e) {
@@ -38,7 +38,7 @@ function N(e) {
     }
 }
 function C() {
-    (m = null), (g = null), (E = null), (v = null), (b = null), (I = !1), (S = !1), (T = null), (y = !1);
+    (m = null), (g = null), (E = null), (v = null), (b = null), (I = !1), (T = !1), (S = null), (y = !1);
 }
 function R(e) {
     return e.status !== p.O0b.UNPAID;
@@ -54,7 +54,7 @@ function D(e, t) {
     for (let n in r) {
         let i = r[n];
         if (!O(i)) {
-            if (!S) {
+            if (!T) {
                 let e = f.default.getId();
                 A.log('user id mismatch between logged in user and SubscriptionStore user'),
                     (0, _.g9)('user id mismatch between logged in user and SubscriptionStore user', {
@@ -64,7 +64,7 @@ function D(e, t) {
                             subscriptionUserId: i.userId
                         }
                     }),
-                    (S = !0);
+                    (T = !0);
             }
             break;
         }
@@ -119,7 +119,7 @@ class L extends (r = o.ZP.Store) {
         return E;
     }
     getPreviousPremiumTypeSubscription() {
-        return T;
+        return S;
     }
 }
 (s = 'SubscriptionStore'),
@@ -140,7 +140,7 @@ class L extends (r = o.ZP.Store) {
                 a = [],
                 s = f.default.getId();
             t.forEach((e) => {
-                if (e.user_id !== s && !S) {
+                if (e.user_id !== s && !T) {
                     A.log('[handleSubscriptionsFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch'),
                         (0, _.g9)('[handleSubscriptionsFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch', {
                             extra: {
@@ -149,7 +149,7 @@ class L extends (r = o.ZP.Store) {
                                 subscriptionUserId: e.user_id
                             }
                         }),
-                        (S = !0);
+                        (T = !0);
                     return;
                 }
                 let t = d.Q.createFromServer(e);
@@ -189,7 +189,7 @@ class L extends (r = o.ZP.Store) {
             let { subscription: t } = e;
             if (((I = !0), null != t)) {
                 let e = f.default.getId();
-                if (t.user_id !== e && !S) {
+                if (t.user_id !== e && !T) {
                     A.log('[handleMostRecentSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch'),
                         (0, _.g9)('[handleMostRecentSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch', {
                             extra: {
@@ -199,7 +199,7 @@ class L extends (r = o.ZP.Store) {
                             }
                         }),
                         (I = !1),
-                        (S = !0);
+                        (T = !0);
                     return;
                 }
                 E = d.Q.createFromServer(t);
@@ -209,7 +209,7 @@ class L extends (r = o.ZP.Store) {
             let { subscription: t } = e;
             if (((y = !0), null != t)) {
                 let e = f.default.getId();
-                if (t.user_id !== e && !S) {
+                if (t.user_id !== e && !T) {
                     A.log('[handlePreviousSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch'),
                         (0, _.g9)('[handlePreviousSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch', {
                             extra: {
@@ -219,10 +219,10 @@ class L extends (r = o.ZP.Store) {
                             }
                         }),
                         (y = !1),
-                        (S = !0);
+                        (T = !0);
                     return;
                 }
-                T = d.Q.createFromServer(t);
+                S = d.Q.createFromServer(t);
             }
         },
         BILLING_SUBSCRIPTION_RESET: C,

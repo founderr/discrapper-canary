@@ -38,10 +38,10 @@ function I(e) {
             emoji_id: null != s ? s : null
         }
     });
-    let S = (0, a.e7)([_.Z], () => _.Z.getGuild(n)),
-        T = (0, a.e7)([p.Z], () => null != n && p.Z.getUserSubscriptionRoles(n).size > 0),
-        y = T ? E.intl.string(E.t['GoLM9/']) : E.intl.formatToPlainString(E.t['h0u/Hh'], { serverName: null == S ? void 0 : S.name }),
-        A = T ? E.intl.string(E.t.PjZ7DQ) : E.intl.string(E.t.p8FG1N);
+    let T = (0, a.e7)([_.Z], () => _.Z.getGuild(n)),
+        S = (0, a.e7)([p.Z], () => null != n && p.Z.getUserSubscriptionRoles(n).size > 0),
+        y = S ? E.intl.string(E.t['GoLM9/']) : E.intl.formatToPlainString(E.t['h0u/Hh'], { serverName: null == T ? void 0 : T.name }),
+        A = S ? E.intl.string(E.t.PjZ7DQ) : E.intl.string(E.t.p8FG1N);
     return (0, r.jsxs)('div', {
         className: v.container,
         children: [

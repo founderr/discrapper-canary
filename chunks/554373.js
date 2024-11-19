@@ -43,12 +43,12 @@ function _(e) {
     let t = (0, a.useMemo)(() => new r.CN(e.locale), [e.locale]),
         n = (0, a.useMemo)(() => t.resolvedOptions(), [t]),
         { locale: _, createCalendar: h, visibleDuration: m = { months: 1 }, minValue: g, maxValue: E, selectionAlignment: v, isDateUnavailable: b, pageBehavior: I = 'visible' } = e,
-        S = (0, a.useMemo)(() => h(n.calendar), [h, n.calendar]),
-        [T, y] = (0, i.zk)(e.value, e.defaultValue, e.onChange),
-        A = (0, a.useMemo)(() => (T ? (0, r.Mw)((0, r.WG)(T), S) : null), [T, S]),
-        N = (0, a.useMemo)(() => (T && 'timeZone' in T ? T.timeZone : n.timeZone), [T, n.timeZone]),
-        C = (0, a.useMemo)(() => (e.focusedValue ? d((0, r.Mw)((0, r.WG)(e.focusedValue), S), g, E) : void 0), [e.focusedValue, S, g, E]),
-        R = (0, a.useMemo)(() => d(e.defaultFocusedValue ? (0, r.Mw)((0, r.WG)(e.defaultFocusedValue), S) : A || (0, r.Mw)((0, r.Lg)(N), S), g, E), [e.defaultFocusedValue, A, N, S, g, E]),
+        T = (0, a.useMemo)(() => h(n.calendar), [h, n.calendar]),
+        [S, y] = (0, i.zk)(e.value, e.defaultValue, e.onChange),
+        A = (0, a.useMemo)(() => (S ? (0, r.Mw)((0, r.WG)(S), T) : null), [S, T]),
+        N = (0, a.useMemo)(() => (S && 'timeZone' in S ? S.timeZone : n.timeZone), [S, n.timeZone]),
+        C = (0, a.useMemo)(() => (e.focusedValue ? d((0, r.Mw)((0, r.WG)(e.focusedValue), T), g, E) : void 0), [e.focusedValue, T, g, E]),
+        R = (0, a.useMemo)(() => d(e.defaultFocusedValue ? (0, r.Mw)((0, r.WG)(e.defaultFocusedValue), T) : A || (0, r.Mw)((0, r.Lg)(N), T), g, E), [e.defaultFocusedValue, A, N, T, g, E]),
         [O, D] = (0, i.zk)(C, R, e.onFocusChange),
         [L, x] = (0, a.useState)(() => {
             switch (v) {
@@ -65,16 +65,16 @@ function _(e) {
             let e = { ...m };
             return e.days ? e.days-- : (e.days = -1), L.add(e);
         }, [L, m]),
-        [k, U] = (0, a.useState)(S.identifier);
-    if (S.identifier !== k) {
-        let e = (0, r.Mw)(O, S);
-        x(o(e, m, _, g, E)), D(e), U(S.identifier);
+        [k, U] = (0, a.useState)(T.identifier);
+    if (T.identifier !== k) {
+        let e = (0, r.Mw)(O, T);
+        x(o(e, m, _, g, E)), D(e), U(T.identifier);
     }
-    function G(e) {
+    function B(e) {
         D((e = d(e, g, E)));
     }
-    function B(t) {
-        !e.isDisabled && !e.isReadOnly && (t = f((t = d(t, g, E)), L, b)) && ((t = (0, r.Mw)(t, (null == T ? void 0 : T.calendar) || new r.IQ())), T && 'hour' in T ? y(T.set(t)) : y(t));
+    function G(t) {
+        !e.isDisabled && !e.isReadOnly && (t = f((t = d(t, g, E)), L, b)) && ((t = (0, r.Mw)(t, (null == S ? void 0 : S.calendar) || new r.IQ())), S && 'hour' in S ? y(S.set(t)) : y(t));
     }
     s(O, g, E) ? D(d(O, g, E)) : 0 > O.compare(L) ? x(u(O, m, _, g, E)) : O.compare(P) > 0 && x(l(O, m, _, g, E));
     let Z = (0, a.useMemo)(() => !!A && (!!(b && b(A)) || s(A, g, E)), [A, b, g, E]),
@@ -84,7 +84,7 @@ function _(e) {
         isDisabled: e.isDisabled,
         isReadOnly: e.isReadOnly,
         value: A,
-        setValue: B,
+        setValue: G,
         visibleRange: {
             start: L,
             end: P
@@ -96,19 +96,19 @@ function _(e) {
         validationState: F ? 'invalid' : null,
         isValueInvalid: F,
         setFocusedDate(e) {
-            G(e), M(!0);
+            B(e), M(!0);
         },
         focusNextDay() {
-            G(O.add({ days: 1 }));
+            B(O.add({ days: 1 }));
         },
         focusPreviousDay() {
-            G(O.subtract({ days: 1 }));
+            B(O.subtract({ days: 1 }));
         },
         focusNextRow() {
-            m.days ? this.focusNextPage() : (m.weeks || m.months || m.years) && G(O.add({ weeks: 1 }));
+            m.days ? this.focusNextPage() : (m.weeks || m.months || m.years) && B(O.add({ weeks: 1 }));
         },
         focusPreviousRow() {
-            m.days ? this.focusPreviousPage() : (m.weeks || m.months || m.years) && G(O.subtract({ weeks: 1 }));
+            m.days ? this.focusPreviousPage() : (m.weeks || m.months || m.years) && B(O.subtract({ weeks: 1 }));
         },
         focusNextPage() {
             let e = L.add(V);
@@ -119,30 +119,30 @@ function _(e) {
             D(d(O.subtract(V), g, E)), x(l(c(O, e, V, _, g, E), V, _));
         },
         focusSectionStart() {
-            m.days ? G(L) : m.weeks ? G((0, r.zJ)(O, _)) : (m.months || m.years) && G((0, r.Nm)(O));
+            m.days ? B(L) : m.weeks ? B((0, r.zJ)(O, _)) : (m.months || m.years) && B((0, r.Nm)(O));
         },
         focusSectionEnd() {
-            m.days ? G(P) : m.weeks ? G((0, r.vV)(O, _)) : (m.months || m.years) && G((0, r.Vf)(O));
+            m.days ? B(P) : m.weeks ? B((0, r.vV)(O, _)) : (m.months || m.years) && B((0, r.Vf)(O));
         },
         focusNextSection(e) {
             if (!e && !m.days) {
-                G(O.add(p(m)));
+                B(O.add(p(m)));
                 return;
             }
-            m.days ? this.focusNextPage() : m.weeks ? G(O.add({ months: 1 })) : (m.months || m.years) && G(O.add({ years: 1 }));
+            m.days ? this.focusNextPage() : m.weeks ? B(O.add({ months: 1 })) : (m.months || m.years) && B(O.add({ years: 1 }));
         },
         focusPreviousSection(e) {
             if (!e && !m.days) {
-                G(O.subtract(p(m)));
+                B(O.subtract(p(m)));
                 return;
             }
-            m.days ? this.focusPreviousPage() : m.weeks ? G(O.subtract({ months: 1 })) : (m.months || m.years) && G(O.subtract({ years: 1 }));
+            m.days ? this.focusPreviousPage() : m.weeks ? B(O.subtract({ months: 1 })) : (m.months || m.years) && B(O.subtract({ years: 1 }));
         },
         selectFocusedDate() {
-            B(O);
+            G(O);
         },
         selectDate(e) {
-            B(e);
+            G(e);
         },
         isFocused: w,
         setFocused: M,
@@ -187,8 +187,8 @@ function p(e) {
 }
 function h(e) {
     let { value: t, defaultValue: n, onChange: l, createCalendar: u, locale: c, visibleDuration: p = { months: 1 }, minValue: h, maxValue: v, ...b } = e,
-        [I, S] = (0, i.zk)(t, n || null, l),
-        [T, y] = (0, a.useState)(null),
+        [I, T] = (0, i.zk)(t, n || null, l),
+        [S, y] = (0, a.useState)(null),
         A = 'center';
     if (I && I.start && I.end) {
         let e = o((0, r.WG)(I.start), p, c, h, v)
@@ -220,17 +220,17 @@ function h(e) {
                 : ((N.current = null), R(null));
         },
         [w, M] = (0, a.useState)(L.visibleRange);
-    (!(0, r.N9)(L.visibleRange.start, w.start) || !(0, r.N9)(L.visibleRange.end, w.end)) && (x(T), M(L.visibleRange));
+    (!(0, r.N9)(L.visibleRange.start, w.start) || !(0, r.N9)(L.visibleRange.end, w.end)) && (x(S), M(L.visibleRange));
     let P = (e) => {
             e ? (y(e), x(e)) : (y(null), x(null));
         },
-        k = T ? m(T, L.focusedDate) : I && m(I.start, I.end),
+        k = S ? m(S, L.focusedDate) : I && m(I.start, I.end),
         U = (t) => {
             if (!e.isReadOnly) {
                 if ((t = f((t = d(t, O, D)), L.visibleRange.start, e.isDateUnavailable))) {
-                    if (T) {
-                        let e = m(T, t);
-                        S({
+                    if (S) {
+                        let e = m(S, t);
+                        T({
                             start: g(e.start, null == I ? void 0 : I.start),
                             end: g(e.end, null == I ? void 0 : I.end)
                         }),
@@ -239,15 +239,15 @@ function h(e) {
                 }
             }
         },
-        [G, B] = (0, a.useState)(!1),
+        [B, G] = (0, a.useState)(!1),
         { isDateUnavailable: Z } = e,
-        F = (0, a.useMemo)(() => !!I && !T && (!!(Z && (Z(I.start) || Z(I.end))) || s(I.start, h, v) || s(I.end, h, v)), [Z, I, T, h, v]),
+        F = (0, a.useMemo)(() => !!I && !S && (!!(Z && (Z(I.start) || Z(I.end))) || s(I.start, h, v) || s(I.end, h, v)), [Z, I, S, h, v]),
         V = e.isInvalid || 'invalid' === e.validationState || F;
     return {
         ...L,
         value: I,
-        setValue: S,
-        anchorDate: T,
+        setValue: T,
+        anchorDate: S,
         setAnchorDate: P,
         highlightedRange: k,
         validationState: V ? 'invalid' : null,
@@ -257,15 +257,15 @@ function h(e) {
         },
         selectDate: U,
         highlightDate(e) {
-            T && L.setFocusedDate(e);
+            S && L.setFocusedDate(e);
         },
         isSelected: (e) => k && e.compare(k.start) >= 0 && 0 >= e.compare(k.end) && !L.isCellDisabled(e) && !L.isCellUnavailable(e),
         isInvalid(e) {
             var t, n;
             return L.isInvalid(e) || s(e, null === (t = N.current) || void 0 === t ? void 0 : t.start, null === (n = N.current) || void 0 === n ? void 0 : n.end);
         },
-        isDragging: G,
-        setDragging: B
+        isDragging: B,
+        setDragging: G
     };
 }
 function m(e, t) {

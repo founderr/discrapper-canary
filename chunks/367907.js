@@ -12,10 +12,10 @@ n.d(t, {
         return x;
     },
     kO: function () {
-        return G;
+        return B;
     },
     oG: function () {
-        return B;
+        return G;
     },
     v_: function () {
         return M;
@@ -43,8 +43,8 @@ var r = n(392711),
     v = n(306680),
     b = n(944486),
     I = n(914010),
-    S = n(9156),
-    T = n(594174),
+    T = n(9156),
+    S = n(594174),
     y = n(979651),
     A = n(626135),
     N = n(70956),
@@ -120,7 +120,7 @@ function P(e) {
         channel_type: t.type,
         guild_id: t.getGuildId(),
         media_session_id: r,
-        ...G(t.getGuildId(), t.id, n),
+        ...B(t.getGuildId(), t.id, n),
         ...(0, R.V)()
     };
 }
@@ -154,7 +154,7 @@ function U(e) {
     if (null == n) {
         let n = !1;
         if (t.isDM()) {
-            let e = T.default.getUser(t.recipients[0]);
+            let e = S.default.getUser(t.recipients[0]);
             null != e && (n = e.bot);
         }
         return {
@@ -167,16 +167,16 @@ function U(e) {
         channel_id: e,
         channel_was_unread: r.unread,
         channel_mention_count: r.mentionCount,
-        channel_is_muted: S.ZP.isChannelMuted(t.guild_id, t.id),
+        channel_is_muted: T.ZP.isChannelMuted(t.guild_id, t.id),
         channel_is_nsfw: t.isNSFW(),
-        channel_resolved_unread_setting: S.ZP.resolveUnreadSetting(t),
-        channel_preset: (0, o.gs)(S.ZP.resolveUnreadSetting(t), S.ZP.resolvedMessageNotifications(t)),
+        channel_resolved_unread_setting: T.ZP.resolveUnreadSetting(t),
+        channel_preset: (0, o.gs)(T.ZP.resolveUnreadSetting(t), T.ZP.resolvedMessageNotifications(t)),
         guild_id: t.guild_id,
         guild_was_unread: r.guildUnread,
         guild_mention_count: r.guildMentionCount,
-        guild_is_muted: S.ZP.isMuted(t.guild_id),
-        guild_resolved_unread_setting: S.ZP.resolveGuildUnreadSetting(n),
-        guild_preset: (0, o.gs)(S.ZP.resolveGuildUnreadSetting(n), S.ZP.getMessageNotifications(t.guild_id)),
+        guild_is_muted: T.ZP.isMuted(t.guild_id),
+        guild_resolved_unread_setting: T.ZP.resolveGuildUnreadSetting(n),
+        guild_preset: (0, o.gs)(T.ZP.resolveGuildUnreadSetting(n), T.ZP.getMessageNotifications(t.guild_id)),
         parent_id: t.parent_id,
         parent_channel_type: t.parentChannelThreadType,
         has_pending_member_action: (0, s.P)(t.guild_id, e),
@@ -184,7 +184,7 @@ function U(e) {
         is_app_dm: !1
     };
 }
-function G(e, t, n) {
+function B(e, t, n) {
     let r = {
         voice_state_count: 0,
         video_stream_count: 0,
@@ -200,7 +200,7 @@ function G(e, t, n) {
         r
     );
 }
-function B(e, t) {
+function G(e, t) {
     let n = { custom_status_count: 0 };
     return (
         i()(y.Z.getVoiceStates(e)).forEach((e) => {
@@ -211,5 +211,5 @@ function B(e, t) {
 }
 t.ZP = {
     trackWithMetadata: k,
-    getVoiceStateMetadata: G
+    getVoiceStateMetadata: B
 };

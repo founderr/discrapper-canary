@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         AnalyticEventConfigs: function () {
-            return S;
+            return T;
         },
         AnalyticsContext: function () {
             return g;
@@ -22,7 +22,7 @@ n.r(t),
             return C;
         },
         expandLocation: function () {
-            return T;
+            return S;
         },
         getAnalyticsEventsRecording: function () {
             return w;
@@ -66,7 +66,7 @@ let g = r.createContext({ location: {} }),
 function I(e) {
     b.push(e);
 }
-let S = {
+let T = {
     [p.rMx.APP_OPENED]: {
         throttlePeriod: 300000,
         throttleKeys: () => []
@@ -257,7 +257,7 @@ let S = {
         deduplicate: !0
     }
 };
-function T(e) {
+function S(e) {
     return 'string' == typeof e
         ? { location: e }
         : {
@@ -270,7 +270,7 @@ function T(e) {
 }
 let y = () => h.E.NONE,
     A = (0, a.trackMaker)({
-        analyticEventConfigs: S,
+        analyticEventConfigs: T,
         dispatcher: s.Z,
         TRACK_ACTION_NAME: 'TRACK'
     });
@@ -284,7 +284,7 @@ function C(e) {
         let { location: e, ...t } = s;
         s = {
             ...t,
-            ...T(e)
+            ...S(e)
         };
     }
     if (null != s.source) {
@@ -329,7 +329,7 @@ function M() {
     });
 }
 let P = (0, a.trackMaker)({
-    analyticEventConfigs: S,
+    analyticEventConfigs: T,
     dispatcher: s.Z,
     TRACK_ACTION_NAME: 'TRACK'
 });

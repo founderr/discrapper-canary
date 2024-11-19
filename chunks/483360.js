@@ -26,8 +26,8 @@ var i = n(658722),
     v = n(926491),
     b = n(373228),
     I = n(601070),
-    S = n(675478),
-    T = n(131704),
+    T = n(675478),
+    S = n(131704),
     y = n(598077),
     A = n(592125),
     N = n(984933),
@@ -42,8 +42,8 @@ var i = n(658722),
     P = n(594174),
     k = n(55563),
     U = n(823379),
-    G = n(892880),
-    B = n(700785),
+    B = n(892880),
+    G = n(700785),
     Z = n(226951),
     F = n(709054),
     V = n(624138),
@@ -101,7 +101,7 @@ function ea(e) {
         h = 0,
         m = 0;
     for (; h < p; ) {
-        var g, E, v, b, I, S, T, A, N;
+        var g, E, v, b, I, T, S, A, N;
         let e, r;
         let u = n[h];
         u instanceof y.Z ? ((r = u), (e = null === (E = C.ZP.getNick(l, r.id)) || void 0 === E ? void 0 : E.toLocaleLowerCase())) : ((e = null === (v = u.nick) || void 0 === v ? void 0 : v.toLocaleLowerCase()), (r = o[u.userId]));
@@ -127,8 +127,8 @@ function ea(e) {
                         type: Y.h8.USER,
                         record: r,
                         score: 1,
-                        comparator: null !== (S = null != p ? p : e) && void 0 !== S ? S : n,
-                        sortable: null !== (T = null != h ? h : l) && void 0 !== T ? T : i
+                        comparator: null !== (T = null != p ? p : e) && void 0 !== T ? T : n,
+                        sortable: null !== (S = null != h ? h : l) && void 0 !== S ? S : i
                     })
                   : m < 50 &&
                     (a()(c, i) || a()(d, o) || (null != l && a()(c, l)) || (null != u && a()(d, u)) || (null != h && a()(c, h)) || (null != g && a()(d, g))) &&
@@ -231,7 +231,7 @@ t.ZP = {
                 let e = eo(l.id, i);
                 if (e.length > 0) return e;
             }
-            (t = C.ZP.getMembers(c.guild_id).filter(ei)), a && G.Z.requestMembers(c.guild_id, r, i);
+            (t = C.ZP.getMembers(c.guild_id).filter(ei)), a && B.Z.requestMembers(c.guild_id, r, i);
         }
         return ea({
             query: r,
@@ -239,7 +239,7 @@ t.ZP = {
             limit: i,
             filter: (e) =>
                 c.isPrivate() ||
-                B.BT({
+                G.BT({
                     permission: H.Plq.VIEW_CHANNEL,
                     user: e,
                     context: c
@@ -256,7 +256,7 @@ t.ZP = {
         }
         let l = C.ZP.getMembers(t).filter(ei);
         return (
-            i && n.length > 0 && G.Z.requestMembers(t, n, r),
+            i && n.length > 0 && B.Z.requestMembers(t, n, r),
             ea({
                 query: n,
                 members: l,
@@ -271,7 +271,7 @@ t.ZP = {
             n = (arguments.length > 2 && void 0 !== arguments[2] && arguments[2], !(arguments.length > 3) || void 0 === arguments[3] || arguments[3]),
             r = arguments.length > 4 ? arguments[4] : void 0;
         return (
-            n && e.length > 0 && G.Z.requestMembers(null, e, t),
+            n && e.length > 0 && B.Z.requestMembers(null, e, t),
             ea({
                 query: e,
                 members: o()(P.default.getUsers()).values().value(),
@@ -318,8 +318,8 @@ t.ZP = {
         let m = {},
             g = [];
         for (let e of t) {
-            var E, v, b, S, y;
-            if (((E = l), (v = e.type), (b = null != r), !(E === v || ((b || (0, T.Km)(v)) && (E === N.sH ? (0, T.r8)(v) || (0, T.bw)(v) : E === N.Zb && (0, T.bw)(v)))) || ((0, T.Km)(e.type) && !D.Z.can(f ? e.accessPermissions : H.Plq.VIEW_CHANNEL, e)) || !s(e))) continue;
+            var E, v, b, T, y;
+            if (((E = l), (v = e.type), (b = null != r), !(E === v || ((b || (0, S.Km)(v)) && (E === N.sH ? (0, S.r8)(v) || (0, S.bw)(v) : E === N.Zb && (0, S.bw)(v)))) || ((0, S.Km)(e.type) && !D.Z.can(f ? e.accessPermissions : H.Plq.VIEW_CHANNEL, e)) || !s(e))) continue;
             let t = [...h],
                 i = e.name.toLocaleLowerCase(),
                 o = p && n === e.id,
@@ -353,9 +353,9 @@ t.ZP = {
                     u = Math.min(6, u);
                 }
                 if (0 === u || t.length > 1 || (1 === t.length && !t[0].isFullMatch && !o)) continue;
-                if (((S = l), (y = e.type), S === N.sH && (0, T.bw)(y))) u = Math.max(u - 1, 0.5);
+                if (((T = l), (y = e.type), T === N.sH && (0, S.bw)(y))) u = Math.max(u - 1, 0.5);
                 g.push({
-                    type: (0, T.bw)(e.type) ? Y.h8.VOICE_CHANNEL : Y.h8.TEXT_CHANNEL,
+                    type: (0, S.bw)(e.type) ? Y.h8.VOICE_CHANNEL : Y.h8.TEXT_CHANNEL,
                     record: e,
                     score: et(u, _[e.id]),
                     comparator: (0, c.F6)(e, P.default, x.Z),
@@ -649,7 +649,7 @@ t.ZP = {
             if ((e.id !== W.HY.SERVER_GUIDE || !!a) && (e.id !== W.HY.CHANNEL_BROWSER || !!s) && (e.id !== W.HY.CUSTOMIZE_COMMUNITY || !!o))
                 er(e.name.toLocaleLowerCase(), i, !1) > 0 &&
                     u.push(
-                        new T.nl({
+                        new S.nl({
                             id: e.id,
                             name: e.name,
                             type: H.d4z.UNKNOWN,
@@ -718,7 +718,7 @@ t.ZP = {
     queryEmojiResults(e) {
         let { query: t, channel: n, intention: r, maxCount: i = H.rnv, matchComparator: a } = e;
         return (
-            S.DZ.loadIfNecessary(),
+            T.DZ.loadIfNecessary(),
             {
                 emojis: p.ZP.searchWithoutFetchingLatest({
                     channel: n,
@@ -737,7 +737,7 @@ t.ZP = {
             a = P.default.getCurrentUser(),
             s = new Set(),
             l = [];
-        for (let o of (S.DZ.loadIfNecessary(), e)) {
+        for (let o of (T.DZ.loadIfNecessary(), e)) {
             if ('' === o) continue;
             let e = o.toLocaleLowerCase(),
                 u = (0, V._I)(e),

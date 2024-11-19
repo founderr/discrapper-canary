@@ -100,7 +100,7 @@ class v extends s.Z {
             CACHE_LOADED_LAZY_NO_CACHE: O,
             CACHE_LOADED_LAZY: () => this.loadCache(),
             CHANNEL_DELETE: y,
-            CHANNEL_UPDATES: T,
+            CHANNEL_UPDATES: S,
             CONNECTION_OPEN_SUPPLEMENTAL: I,
             GUILD_DELETE: C,
             LOGIN_SUCCESS: R,
@@ -116,20 +116,20 @@ function b() {
 function I() {
     v.dropUnreachableChannels(), v.replaceLru((0, _.J)(m, 1250));
 }
-function S(e) {
+function T(e) {
     let t = e.id,
         n = (0, f.v)(e),
         r = a.Z.getChannelId();
     n && t === r && v.recordChannel(t), !n && v.deleteChannel(t);
 }
-function T(e) {
-    for (let t of e.channels) S(t);
+function S(e) {
+    for (let t of e.channels) T(t);
 }
 function y(e) {
     v.deleteChannel(e.channel.id);
 }
 function A(e) {
-    S(e.channel);
+    T(e.channel);
 }
 function N(e) {
     v.deleteChannel(e.channel.id);

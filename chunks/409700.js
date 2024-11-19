@@ -6,7 +6,7 @@ n.d(t, {
         return b;
     },
     ZP: function () {
-        return T;
+        return S;
     }
 }),
     n(47120);
@@ -122,7 +122,7 @@ function I(e) {
         ]
     });
 }
-function S(e) {
+function T(e) {
     let { renderPopout: t, position: n, tooltipText: a, children: s, setTooltipShowing: l } = e,
         [u, c] = i.useState(!1),
         [d, f] = i.useState(String(Date.now())),
@@ -180,11 +180,11 @@ function S(e) {
         })
     );
 }
-function T(e) {
+function S(e) {
     let { sound: t, channel: n, setTooltipShowing: i } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(S, {
+            (0, r.jsx)(T, {
                 setTooltipShowing: i,
                 renderPopout: () => (0, r.jsx)(v, {}),
                 tooltipText: m.intl.string(m.t['19lt29']),
@@ -195,7 +195,7 @@ function T(e) {
                     className: E.secondaryIcon
                 })
             }),
-            (0, r.jsx)(S, {
+            (0, r.jsx)(T, {
                 setTooltipShowing: i,
                 renderPopout: (e) =>
                     (0, r.jsx)(p.Z, {

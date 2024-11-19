@@ -17,8 +17,8 @@ var a,
 let v = [],
     b = null,
     I = null,
-    S = null,
     T = null,
+    S = null,
     y = !1,
     A = !1;
 function N(e, t) {
@@ -72,7 +72,7 @@ function N(e, t) {
             );
         }),
         a.on(d.z.Speaking, (e, t) => {
-            null == S || S.setSpeaking(e, t);
+            null == T || T.setSpeaking(e, t);
         }),
         a.on(d.z.Flags, (e, t) => {
             c.Z.wait(() => {
@@ -131,8 +131,8 @@ function N(e, t) {
                 });
             });
         }),
-        (S = new f.Z(h.default.getId(), t)),
-        (T = null),
+        (T = new f.Z(h.default.getId(), t)),
+        (S = null),
         (y = !1),
         (A = !1),
         a
@@ -140,7 +140,7 @@ function N(e, t) {
 }
 function C() {
     if (null == r) return !1;
-    (T = r.getDuration()), r.destroy(), (r = null), (S = null);
+    (S = r.getDuration()), r.destroy(), (r = null), (T = null);
 }
 function R() {
     b = null;
@@ -210,13 +210,13 @@ class L extends (a = u.ZP.Store) {
     }
     getDuration() {
         var e;
-        return null !== (e = null == r ? void 0 : r.getDuration()) && void 0 !== e ? e : T;
+        return null !== (e = null == r ? void 0 : r.getDuration()) && void 0 !== e ? e : S;
     }
     getPacketStats() {
         return null == r ? void 0 : r.getPacketStats();
     }
     getVoiceStateStats() {
-        return null == S ? void 0 : S.getStats();
+        return null == T ? void 0 : T.getStats();
     }
     getWasEverMultiParticipant() {
         return y;
@@ -277,11 +277,11 @@ let x = new L(
                   let { voiceStates: t } = e;
                   return t.reduce((e, t) => {
                       var n, a, s;
-                      if ((null == S || S.updateVoiceStates(t.userId, t.channelId), (y = y || (null !== (n = null == S ? void 0 : S.getStats().max_voice_state_count) && void 0 !== n ? n : 0) > 1), h.default.getId() !== t.userId)) return !1;
-                      if (null != r) t.sessionId === i ? ((null != t.guildId && t.guildId === r.guildId) || (null == t.guildId && t.channelId === r.channelId) ? (null == t.channelId ? C() : (r.channelId = t.channelId)) : ((t.guildId !== r.guildId && null == t.channelId) || C(), null != t.channelId && ((b = null), (I = null), (r = N(t.guildId, t.channelId)), (y = (null !== (a = null == S ? void 0 : S.getStats().max_voice_state_count) && void 0 !== a ? a : 0) > 1)))) : t.guildId === r.guildId && (!(null != _.Z.getAwaitingRemoteSessionInfo() && null != _.Z.getRemoteSessionId()) && (b = r.channelId), C());
+                      if ((null == T || T.updateVoiceStates(t.userId, t.channelId), (y = y || (null !== (n = null == T ? void 0 : T.getStats().max_voice_state_count) && void 0 !== n ? n : 0) > 1), h.default.getId() !== t.userId)) return !1;
+                      if (null != r) t.sessionId === i ? ((null != t.guildId && t.guildId === r.guildId) || (null == t.guildId && t.channelId === r.channelId) ? (null == t.channelId ? C() : (r.channelId = t.channelId)) : ((t.guildId !== r.guildId && null == t.channelId) || C(), null != t.channelId && ((b = null), (I = null), (r = N(t.guildId, t.channelId)), (y = (null !== (a = null == T ? void 0 : T.getStats().max_voice_state_count) && void 0 !== a ? a : 0) > 1)))) : t.guildId === r.guildId && (!(null != _.Z.getAwaitingRemoteSessionInfo() && null != _.Z.getRemoteSessionId()) && (b = r.channelId), C());
                       else {
                           if (t.sessionId !== i || null == t.channelId) return e;
-                          (b = null), (I = null), (r = N(t.guildId, t.channelId)), (y = (null !== (s = null == S ? void 0 : S.getStats().max_voice_state_count) && void 0 !== s ? s : 0) > 1);
+                          (b = null), (I = null), (r = N(t.guildId, t.channelId)), (y = (null !== (s = null == T ? void 0 : T.getStats().max_voice_state_count) && void 0 !== s ? s : 0) > 1);
                       }
                       return !0;
                   }, !1);

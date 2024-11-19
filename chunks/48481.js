@@ -27,13 +27,13 @@ n.d(t, {
         return b;
     },
     uL: function () {
-        return S;
+        return T;
     },
     xU: function () {
         return E;
     },
     xt: function () {
-        return T;
+        return S;
     }
 }),
     n(411104),
@@ -83,12 +83,12 @@ function b(e, t, n) {
 }
 function I(e, t, n, r) {
     var i, a, s;
-    return (i = e), (a = t), (s = (e) => S(e, n, r)), null == i.guilds && (i.guilds = l.os.create()), b(i.guilds, a, s);
+    return (i = e), (a = t), (s = (e) => T(e, n, r)), null == i.guilds && (i.guilds = l.os.create()), b(i.guilds, a, s);
 }
-function S(e, t, n) {
+function T(e, t, n) {
     return !(t in e.channels) && (e.channels[t] = l.p5.create()), n(e.channels[t]);
 }
-function T(e, t) {
+function S(e, t) {
     null == e.versions && (e.versions = u.L.create());
     let n = 0;
     for (let e of t) {

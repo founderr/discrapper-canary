@@ -6,7 +6,7 @@ n.d(t, {
         return O;
     },
     Ku: function () {
-        return T;
+        return S;
     },
     VF: function () {
         return D;
@@ -57,7 +57,7 @@ n.d(t, {
         return L;
     },
     zw: function () {
-        return S;
+        return T;
     }
 }),
     n(47120);
@@ -80,8 +80,8 @@ var r,
 let v = 100,
     b = 1000,
     I = 100,
-    S = 'Guild Events Modal',
-    T = '-1';
+    T = 'Guild Events Modal',
+    S = '-1';
 ((c = r || (r = {}))[(c.SCHEDULED = 1)] = 'SCHEDULED'), (c[(c.ACTIVE = 2)] = 'ACTIVE'), (c[(c.COMPLETED = 3)] = 'COMPLETED'), (c[(c.CANCELED = 4)] = 'CANCELED');
 let y = new Set([3, 4]);
 ((d = i || (i = {}))[(d.NONE = 0)] = 'NONE'), (d[(d.STAGE_INSTANCE = 1)] = 'STAGE_INSTANCE'), (d[(d.VOICE = 2)] = 'VOICE'), (d[(d.EXTERNAL = 3)] = 'EXTERNAL'), (d[(d.PRIME_TIME = 4)] = 'PRIME_TIME'), ((f = a || (a = {}))[(f.EVENT_START = 1)] = 'EVENT_START'), ((_ = s || (s = {}))[(_.PUBLIC = 1)] = 'PUBLIC'), (_[(_.GUILD_ONLY = 2)] = 'GUILD_ONLY');

@@ -9,7 +9,7 @@ n.d(t, {
         return w;
     },
     Dx: function () {
-        return T;
+        return S;
     },
     R: function () {
         return L;
@@ -24,7 +24,7 @@ n.d(t, {
         return C;
     },
     w: function () {
-        return S;
+        return T;
     },
     xR: function () {
         return D;
@@ -96,8 +96,8 @@ let E = async (e) => {
             t
         );
     },
-    S = () => (__OVERLAY__ ? (s.Z.dispatch({ type: 'OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST' }), Promise.all([])) : Promise.all([b(), I()]));
-async function T(e) {
+    T = () => (__OVERLAY__ ? (s.Z.dispatch({ type: 'OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST' }), Promise.all([])) : Promise.all([b(), I()]));
+async function S(e) {
     let { guildId: t, name: n, sound: r, volume: i, emojiId: s, emojiName: o } = e,
         l = await a.tn.post({
             url: h.ANM.GUILD_SOUNDBOARD_SOUNDS(t),

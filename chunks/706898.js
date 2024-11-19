@@ -53,18 +53,18 @@ let v = {
 function I(e) {
     return ''.concat(e.replace(/\s+/g, '-').toLowerCase(), '-tab');
 }
-function S(e, t) {
+function T(e, t) {
     if (null == e) return;
     let n = {};
     return 'Selected' === t ? ((n.backgroundColor = e), (n.color = _.Z.unsafe_rawColors.WHITE_500.css), n) : ('Hover' === t && (n.backgroundColor = (0, f.wK)(e, 0.1)), (n.color = e), n);
 }
 ((s = r || (r = {})).DEFAULT = 'Default'), (s.HOVER = 'Hover'), (s.SELECTED = 'Selected');
-class T extends (i = l.Component) {
+class S extends (i = l.Component) {
     getStyle() {
         let { color: e, id: t, selectedItem: n, itemType: r } = this.props,
             { hover: i, active: a } = this.state;
         if (null != e) {
-            if ('side' === r) return (null != t && n === t) || a ? S(e, 'Selected') : i ? S(e, 'Hover') : S(e);
+            if ('side' === r) return (null != t && n === t) || a ? T(e, 'Selected') : i ? T(e, 'Hover') : T(e);
             if ('top' === r)
                 return n === t
                     ? {
@@ -149,7 +149,7 @@ class T extends (i = l.Component) {
             });
     }
 }
-E(T, 'defaultProps', {
+E(S, 'defaultProps', {
     disabled: !1,
     look: 'grey',
     disableItemStyles: !1
@@ -235,7 +235,7 @@ E(y, 'Header', function (e) {
         })
     });
 }),
-    E(y, 'Item', T),
+    E(y, 'Item', S),
     E(y, 'Separator', function (e) {
         let { style: t } = e;
         return (0, o.jsx)('div', {

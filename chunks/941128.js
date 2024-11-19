@@ -18,8 +18,8 @@ var r,
     v = n(173747),
     b = n(780570),
     I = n(830168),
-    S = n(358085),
-    T = n(417363),
+    T = n(358085),
+    S = n(417363),
     y = n(981631),
     A = n(186901);
 ((s = r || (r = {})).INSTALL = 'Install'), (s.REPAIR = 'Repair'), ((o = i || (i = {})).PATCH = 'Patch'), (o.REPAIR = 'Repair');
@@ -42,7 +42,7 @@ function U() {
     };
     p.K.set(C, e);
 }
-function G() {
+function B() {
     let e = R[0];
     if (null != e) {
         var t, n;
@@ -56,7 +56,7 @@ function G() {
         }
     }
 }
-function B(e, t) {
+function G(e, t) {
     let n = (0, b.Tu)(e, t);
     return R.findIndex((e) => e.comboId === n);
 }
@@ -68,15 +68,15 @@ function Z(e, t, n, r) {
         },
         s = O.indexOf(i);
     -1 !== s && O.splice(s, 1);
-    let o = B(e, t);
-    0 !== o && (n ? -1 === o && (R.push(a), G()) : (o > 0 && R.splice(o, 1), R.unshift(a), G())), !n && D && I.Z.resume(), U();
+    let o = G(e, t);
+    0 !== o && (n ? -1 === o && (R.push(a), B()) : (o > 0 && R.splice(o, 1), R.unshift(a), B())), !n && D && I.Z.resume(), U();
 }
 function F(e, t) {
     let n = (0, b.Tu)(e, t),
         r = O.indexOf(n);
     -1 !== r && O.splice(r, 1);
-    let i = B(e, t);
-    -1 !== i && (R.splice(i, 1), U()), G();
+    let i = G(e, t);
+    -1 !== i && (R.splice(i, 1), U()), B();
 }
 function V(e) {
     let { applicationId: t, branchId: n } = e;
@@ -118,7 +118,7 @@ class W extends (a = _.ZP.Store) {
                       }
                     : e
             );
-        null != t.paused && (D = t.paused), null != t.userActions && (M = new Map(Array.from(t.userActions))), this.waitFor(T.Z, g.ZP), this.syncWith([g.ZP], Y), this.waitFor(T.Z);
+        null != t.paused && (D = t.paused), null != t.userActions && (M = new Map(Array.from(t.userActions))), this.waitFor(S.Z, g.ZP), this.syncWith([g.ZP], Y), this.waitFor(S.Z);
     }
     get activeItems() {
         return R.map((e) => {
@@ -133,7 +133,7 @@ class W extends (a = _.ZP.Store) {
         return D;
     }
     getQueuePosition(e, t) {
-        return B(e, t);
+        return G(e, t);
     }
     isCorruptInstallation() {
         return P;
@@ -167,21 +167,21 @@ class W extends (a = _.ZP.Store) {
         },
         DISPATCH_APPLICATION_MOVE_UP: function (e) {
             let { applicationId: t, branchId: n } = e,
-                r = B(t, n);
+                r = G(t, n);
             if (r < 1) return !1;
-            R.splice(0, 0, R.splice(r, 1)[0]), G(), D && I.Z.resume(), U();
+            R.splice(0, 0, R.splice(r, 1)[0]), B(), D && I.Z.resume(), U();
         },
         DISPATCH_APPLICATION_REMOVE_FINISHED: j,
         DISPATCH_APPLICATION_STATE_UPDATE: function (e) {
             let { state: t } = e;
-            !w && ((w = !0), G(), !D && I.Z.resume());
+            !w && ((w = !0), B(), !D && I.Z.resume());
             let n = D;
             (D = t.paused), (L = t.currentTask), (x = t.nextTask);
             let r = !1;
             (R = R.filter((e) => {
                 let { comboId: t } = e,
                     { applicationId: n, branchId: i } = (0, b.CP)(t),
-                    a = T.Z.getState(n, i),
+                    a = S.Z.getState(n, i),
                     s = v.Z.getTargetBuildId(n, i),
                     o = v.Z.getTargetManifests(n, i);
                 if (null != a && a.type === y.vxO.UP_TO_DATE && a.buildId === a.targetBuildId && a.buildId === s && f().isEqual(a.manifestIds, a.targetManifestIds) && f().isEqual(a.manifestIds, o)) {
@@ -199,7 +199,7 @@ class W extends (a = _.ZP.Store) {
                 }
                 return !0;
             })),
-                G(),
+                B(),
                 (r || n !== D) && U();
         },
         DISPATCH_APPLICATION_ERROR: function (e) {
@@ -217,9 +217,9 @@ class W extends (a = _.ZP.Store) {
             }
         },
         CONNECTION_OPEN: function () {
-            (0, S.isDesktop)() && H();
+            (0, T.isDesktop)() && H();
         },
         LOGOUT: function () {
-            p.K.remove(C), (0, S.isDesktop)() && I.Z.pause();
+            p.K.remove(C), (0, T.isDesktop)() && I.Z.pause();
         }
     }));

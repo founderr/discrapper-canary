@@ -22,8 +22,8 @@ var r = n(288377),
     v = n(629053),
     b = n(890521),
     I = n(891873),
-    S = n(695848),
-    T = n(261978),
+    T = n(695848),
+    S = n(261978),
     y = n(917322),
     A = n(108901),
     N = n(591840),
@@ -38,18 +38,18 @@ var r = n(288377),
     P = n(882645),
     k = n(788654),
     U = n(770003),
-    G = n(192379),
-    B = n(661763),
+    B = n(192379),
+    G = n(661763),
     Z = n(649859),
     F = {};
 function V(e) {
     var t;
-    let n = (0, G.useRef)(),
+    let n = (0, B.useRef)(),
         { value: r, textValue: i, minValue: a, maxValue: s, isDisabled: o, isReadOnly: l, isRequired: u, onIncrement: c, onIncrementPage: d, onDecrement: f, onDecrementPage: _, onDecrementToMin: p, onIncrementToMax: h } = e;
     let m = (0, Z.qb)((t = F) && t.__esModule ? t.default : t, '@react-aria/spinbutton'),
         g = () => clearTimeout(n.current);
-    (0, G.useEffect)(() => () => g(), []);
-    let E = (0, G.useRef)(!1),
+    (0, B.useEffect)(() => () => g(), []);
+    let E = (0, B.useRef)(!1),
         v = () => {
             E.current = !0;
         },
@@ -57,27 +57,27 @@ function V(e) {
             E.current = !1;
         };
     (i = '' === i ? m.format('Empty') : (i || `${r}`).replace('-', '\u2212')),
-        (0, G.useEffect)(() => {
+        (0, B.useEffect)(() => {
             E.current && ((0, U.gb)('assertive'), (0, U.xQ)(i, 'assertive'));
         }, [i]);
-    let I = (0, B.iW)((e) => {
+    let I = (0, G.iW)((e) => {
             g(),
                 c(),
                 (n.current = window.setTimeout(() => {
                     (isNaN(s) || isNaN(r) || r < s) && I(60);
                 }, e));
         }),
-        S = (0, B.iW)((e) => {
+        T = (0, G.iW)((e) => {
             g(),
                 f(),
                 (n.current = window.setTimeout(() => {
-                    (isNaN(a) || isNaN(r) || r > a) && S(60);
+                    (isNaN(a) || isNaN(r) || r > a) && T(60);
                 }, e));
         }),
-        T = (e) => {
+        S = (e) => {
             e.preventDefault();
         },
-        { addGlobalListener: y, removeAllGlobalListeners: A } = (0, B.xi)();
+        { addGlobalListener: y, removeAllGlobalListeners: A } = (0, G.xi)();
     return {
         spinButtonProps: {
             role: 'spinbutton',
@@ -121,7 +121,7 @@ function V(e) {
         },
         incrementButtonProps: {
             onPressStart: () => {
-                I(400), y(window, 'contextmenu', T);
+                I(400), y(window, 'contextmenu', S);
             },
             onPressEnd: () => {
                 g(), A();
@@ -131,7 +131,7 @@ function V(e) {
         },
         decrementButtonProps: {
             onPressStart: () => {
-                S(400), y(window, 'contextmenu', T);
+                T(400), y(window, 'contextmenu', S);
             },
             onPressEnd: () => {
                 g(), A();
@@ -161,8 +161,8 @@ F = {
     'ko-KR': v.Z,
     'lt-LT': b.Z,
     'lv-LV': I.Z,
-    'nb-NO': S.Z,
-    'nl-NL': T.Z,
+    'nb-NO': T.Z,
+    'nl-NL': S.Z,
     'pl-PL': y.Z,
     'pt-BR': A.Z,
     'pt-PT': N.Z,

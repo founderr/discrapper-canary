@@ -30,7 +30,7 @@ n.d(t, {
         return b;
     },
     lf: function () {
-        return T;
+        return S;
     },
     pF: function () {
         return L;
@@ -39,7 +39,7 @@ n.d(t, {
         return N;
     },
     vJ: function () {
-        return S;
+        return T;
     },
     yJ: function () {
         return y;
@@ -81,11 +81,11 @@ function I(e) {
     var t;
     return E(e) && (0, d.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, p.udG.EMBEDDED);
 }
-function S(e) {
+function T(e) {
     var t;
     return E(e) && (0, d.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, p.udG.PARTNER);
 }
-function T(e) {
+function S(e) {
     var t;
     return E(e) && (0, d.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, p.udG.PROMOTED);
 }

@@ -18,8 +18,8 @@ var r = n(392711),
     v = n(430824),
     b = n(496675),
     I = n(699516),
-    S = n(246946),
-    T = n(594174),
+    T = n(246946),
+    S = n(594174),
     y = n(483360),
     A = n(176354),
     N = n(51144),
@@ -73,8 +73,8 @@ let w = c.Z.RULES,
     P = /^<@!?(\d+)>/,
     k = /^<@&(\d+)>/,
     U = /^<#(\d+)>/,
-    G = /^<a?:(\w+):(\d+)>/,
-    B = /(@everyone|@here|@Clyde)\b/,
+    B = /^<a?:(\w+):(\d+)>/,
+    G = /(@everyone|@here|@Clyde)\b/,
     Z = {
         link: L(s().defaultRules.link),
         autolink: L(s().defaultRules.autolink),
@@ -84,7 +84,7 @@ let w = c.Z.RULES,
         rawUserMention: x(P),
         rawRoleMention: x(k),
         rawChannelMention: x(U),
-        rawEmoji: x(G),
+        rawEmoji: x(B),
         mention: {
             match(e, t, n) {
                 let r = n.split(' ').pop() + e;
@@ -103,7 +103,7 @@ let w = c.Z.RULES,
                     ))
                 )
                     return null;
-                let a = B.exec(e);
+                let a = G.exec(e);
                 if (null != a && i[0].length <= a[0].length) return null;
                 if ('' === n) {
                     let t = _.v.exec(e);
@@ -231,9 +231,9 @@ let w = c.Z.RULES,
             match: s().anyScopeRegex(P),
             parse(e, t, n) {
                 let { isNotification: r } = n,
-                    i = T.default.getUser(e[1]);
+                    i = S.default.getUser(e[1]);
                 if (null == i) return { content: e[0] };
-                let a = N.ZP.getUserTag(i, { identifiable: r && S.Z.enabled ? 'never' : 'always' });
+                let a = N.ZP.getUserTag(i, { identifiable: r && T.Z.enabled ? 'never' : 'always' });
                 if (!r) return { content: '@'.concat(a) };
                 {
                     let e = N.ZP.getGlobalName(i);
@@ -256,11 +256,11 @@ let w = c.Z.RULES,
             match: s().anyScopeRegex(U),
             parse(e) {
                 let t = m.Z.getChannel(e[1]);
-                return { content: null == t ? e[0] : (0, o.F6)(t, T.default, I.Z, !0, !0) };
+                return { content: null == t ? e[0] : (0, o.F6)(t, S.default, I.Z, !0, !0) };
             }
         },
         emoji: {
-            match: s().anyScopeRegex(G),
+            match: s().anyScopeRegex(B),
             parse(e, t, n) {
                 let [r, i, a] = e,
                     { guild: s } = n,
@@ -358,7 +358,7 @@ function Y(e) {
     let s = i()(
             t.reduce((e, t) => {
                 let { userId: n } = t,
-                    r = T.default.getUser(n);
+                    r = S.default.getUser(n);
                 return null == r
                     ? e
                     : (e.push({

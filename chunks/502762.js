@@ -20,22 +20,22 @@ let _ = i.forwardRef(function (e, t) {
                 pendingThemeColors: p,
                 isPreview: g
             }),
-            { profileThemeStyle: I, profileThemeClassName: S } = (0, u.Z)({
+            { profileThemeStyle: I, profileThemeClassName: T } = (0, u.Z)({
                 theme: null != h ? h : E,
                 primaryColor: v,
                 secondaryColor: b
             }),
-            T = {
+            S = {
                 [f.biteSize]: a === d.y0.BITE_SIZE,
                 [f.fullSize]: a === d.y0.FULL_SIZE,
                 [f.panel]: a === d.y0.PANEL
             };
         return (0, r.jsx)('div', {
-            className: s()(f.outer, S, T, _),
+            className: s()(f.outer, T, S, _),
             style: I,
             ref: t,
             children: (0, r.jsx)('div', {
-                className: s()(f.inner, T),
+                className: s()(f.inner, S),
                 children: (0, r.jsx)(o.ThemeContextProvider, {
                     theme: null != h ? h : E,
                     children: (0, r.jsx)(c.X, {

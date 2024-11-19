@@ -194,7 +194,7 @@ class E extends (a = u.PureComponent) {
                 )
                     return;
                 g = !0;
-                let { clientWidth: S, clientHeight: T } = r,
+                let { clientWidth: T, clientHeight: S } = r,
                     y = n - this._offsetY,
                     A = m(
                         _(
@@ -204,8 +204,8 @@ class E extends (a = u.PureComponent) {
                             },
                             i,
                             a,
-                            S,
-                            T
+                            T,
+                            S
                         )
                     );
                 if (d) {
@@ -216,8 +216,8 @@ class E extends (a = u.PureComponent) {
                         top: A.top,
                         left: A.left
                     };
-                2 === o && b !== this.state.horizontalOrientation && ((this._offsetX = S - this._offsetX), (I = !0)),
-                    2 === s && v !== this.state.verticalOrientation && ((this._offsetY = T - this._offsetY), (I = !0)),
+                2 === o && b !== this.state.horizontalOrientation && ((this._offsetX = T - this._offsetX), (I = !0)),
+                    2 === s && v !== this.state.verticalOrientation && ((this._offsetY = S - this._offsetY), (I = !0)),
                     this.setDOMPositions(A),
                     !E && (null == l || l(A, r)),
                     null == u || u(A, r),

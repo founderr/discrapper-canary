@@ -22,14 +22,14 @@ let p = i.forwardRef(function (e, t) {
         ),
         b = l.ZN.useStore((e) => e.searchPlaceholder),
         I = l.ZN.useStore((e) => e.inspectedExpressionPosition, a.X),
-        S = i.useCallback(
+        T = i.useCallback(
             (e) => {
                 var t;
                 l.ZN.setActiveCategoryIndex('' === e ? 0 : d.c), l.ZN.setInspectedExpressionPosition(0, 0), l.ZN.setSearchPlaceholder(null), (0, u.ql)(e), null === (t = p.current) || void 0 === t || t.scrollTo(0);
             },
             [p]
         ),
-        T = i.useCallback(() => {
+        S = i.useCallback(() => {
             (0, u.ql)('');
         }, []);
     return (
@@ -54,9 +54,9 @@ let p = i.forwardRef(function (e, t) {
                 ref: g,
                 size: o.ZP.Sizes.MEDIUM,
                 placeholder: null != b ? b : m ? f.intl.string(f.t.dt5h1N) : f.intl.string(f.t['Pck/4e']),
-                onClear: T,
+                onClear: S,
                 onKeyDown: n,
-                onQueryChange: S,
+                onQueryChange: T,
                 className: _.__invalid_searchBar,
                 preventEscapePropagation: !1,
                 useKeyboardNavigation: !1,

@@ -30,11 +30,11 @@ function g(e) {
             },
             [b]
         ),
-        S = (0, s.e7)([f.Z], () => f.Z.isBlocked(b), [b]),
-        T = (0, d.Do)({ location: 'use-block-user-item-web' }),
+        T = (0, s.e7)([f.Z], () => f.Z.isBlocked(b), [b]),
+        S = (0, d.Do)({ location: 'use-block-user-item-web' }),
         y = (0, i.EQ)({
-            isStealthRemediationEnabled: T,
-            isBlocked: S
+            isStealthRemediationEnabled: S,
+            isBlocked: T
         })
             .with(
                 {
@@ -56,8 +56,8 @@ function g(e) {
         : (0, r.jsx)(o.MenuItem, {
               id: 'block',
               color: null != y ? y : 'default',
-              label: S ? m.intl.string(m.t.XyHpKC) : m.intl.string(m.t.l4EmaW),
-              action: S
+              label: T ? m.intl.string(m.t.XyHpKC) : m.intl.string(m.t.l4EmaW),
+              action: T
                   ? () => {
                         null == E || E(), l.Z.unblockUser(b, { location: v });
                     }

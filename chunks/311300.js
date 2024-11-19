@@ -22,8 +22,8 @@ var r = n(513394),
     v = n(685995),
     b = n(478638),
     I = n(578163),
-    S = n(595048),
-    T = n(762120),
+    T = n(595048),
+    S = n(762120),
     y = n(670598),
     A = n(102315),
     N = n(948109),
@@ -38,8 +38,8 @@ var r = n(513394),
     P = n(683384),
     k = n(373141),
     U = n(770003),
-    G = n(726983),
-    B = n(46670),
+    B = n(726983),
+    G = n(46670),
     Z = n(661763),
     F = n(192379),
     V = n(989103),
@@ -61,7 +61,7 @@ function q(e, t) {
             t,
             a
         );
-    (0, B.Oj).set(t, { id: h.id });
+    (0, G.Oj).set(t, { id: h.id });
     let m = (0, F.useMemo)(() => u || new j.dp(t.collection, t.disabledKeys, l), [u, t.collection, t.disabledKeys, l]),
         { collectionProps: g } = (0, j.gq)({
             selectionManager: t.selectionManager,
@@ -75,8 +75,8 @@ function q(e, t) {
         E = (0, Z.tv)(),
         { isInvalid: v, validationErrors: b, validationDetails: I } = t.displayValidation,
         {
-            labelProps: S,
-            inputProps: T,
+            labelProps: T,
+            inputProps: S,
             descriptionProps: y,
             errorMessageProps: A
         } = (0, K.E)(
@@ -132,12 +132,12 @@ function q(e, t) {
         N = (0, Z.bE)({
             id: p.id,
             'aria-label': _.format('buttonLabel'),
-            'aria-labelledby': e['aria-labelledby'] || S.id
+            'aria-labelledby': e['aria-labelledby'] || T.id
         }),
         C = (0, Z.bE)({
             id: h.id,
             'aria-label': _.format('listboxLabel'),
-            'aria-labelledby': e['aria-labelledby'] || S.id
+            'aria-labelledby': e['aria-labelledby'] || T.id
         }),
         R = (0, F.useRef)(0),
         O = null != t.selectionManager.focusedKey && t.isOpen ? t.collection.getItem(t.selectionManager.focusedKey) : void 0,
@@ -183,10 +183,10 @@ function q(e, t) {
             q.current = t.selectedKey;
         }),
         (0, F.useEffect)(() => {
-            if (t.isOpen) return (0, G.RP)([o.current, s.current]);
+            if (t.isOpen) return (0, B.RP)([o.current, s.current]);
         }, [t.isOpen, o, s]),
         {
-            labelProps: S,
+            labelProps: T,
             buttonProps: {
                 ...p,
                 ...N,
@@ -199,12 +199,12 @@ function q(e, t) {
                 },
                 isDisabled: f || d
             },
-            inputProps: (0, Z.dG)(T, {
+            inputProps: (0, Z.dG)(S, {
                 role: 'combobox',
                 'aria-expanded': p['aria-expanded'],
                 'aria-controls': t.isOpen ? h.id : void 0,
                 'aria-autocomplete': 'list',
-                'aria-activedescendant': O ? (0, B.x3)(t, O.key) : void 0,
+                'aria-activedescendant': O ? (0, G.x3)(t, O.key) : void 0,
                 onTouchEnd: (e) => {
                     if (f || d) return;
                     if (e.timeStamp - R.current < 500) {
@@ -255,8 +255,8 @@ z = {
     'ko-KR': v.Z,
     'lt-LT': b.Z,
     'lv-LV': I.Z,
-    'nb-NO': S.Z,
-    'nl-NL': T.Z,
+    'nb-NO': T.Z,
+    'nl-NL': S.Z,
     'pl-PL': y.Z,
     'pt-BR': A.Z,
     'pt-PT': N.Z,

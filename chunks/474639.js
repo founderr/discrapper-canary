@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return S;
     }
 }),
     n(47120);
@@ -23,8 +23,8 @@ var r = n(46973),
     v = n(779618),
     b = n(356659),
     I = n(981631),
-    S = n(70722);
-class T extends a.Z {
+    T = n(70722);
+class S extends a.Z {
     handleRTCConnectionState(e) {
         let { context: t, state: n, streamKey: i } = e;
         if (!(0, m.ln)() || n !== I.hes.RTC_CONNECTED) return;
@@ -47,7 +47,7 @@ class T extends a.Z {
         this.maybeShowClipsWarning(t), this.applyUserVoiceRecording(t);
         let i = f.Z.getRTCConnection(
             o.V9({
-                streamType: null != r ? S.lo.GUILD : S.lo.CALL,
+                streamType: null != r ? T.lo.GUILD : T.lo.CALL,
                 ownerId: t,
                 channelId: n,
                 guildId: r
@@ -92,7 +92,7 @@ class T extends a.Z {
         if (n !== r.Yn.STREAM || !(0, v.Z)(c.Z)) return;
         let s = f.Z.getRTCConnection(
             o.V9({
-                streamType: null != a ? S.lo.GUILD : S.lo.CALL,
+                streamType: null != a ? T.lo.GUILD : T.lo.CALL,
                 ownerId: t,
                 channelId: i,
                 guildId: a

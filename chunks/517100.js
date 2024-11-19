@@ -17,12 +17,12 @@ let g = Date.now(),
     v = !1,
     b = !1,
     I = !1,
-    S = !1;
-function T() {
-    return b || I || ((0, _.isAndroid)() && S);
+    T = !1;
+function S() {
+    return b || I || ((0, _.isAndroid)() && T);
 }
 function y() {
-    Date.now() - g > h.OSm || T()
+    Date.now() - g > h.OSm || S()
         ? E ||
           l.Z.dispatch({
               type: 'IDLE',
@@ -34,7 +34,7 @@ function y() {
               type: 'IDLE',
               idle: !1
           }),
-        Date.now() - g > Math.min(d.CM.getSetting() * f.Z.Millis.SECOND, h.OSm) || T()
+        Date.now() - g > Math.min(d.CM.getSetting() * f.Z.Millis.SECOND, h.OSm) || S()
             ? v ||
               l.Z.dispatch({
                   type: 'AFK',
@@ -119,7 +119,7 @@ class N extends (s = o.ZP.Store) {
         },
         APP_STATE_UPDATE: function (e) {
             let { state: t } = e;
-            return (S = t === h.$7l.BACKGROUND), (g = Date.now()), y(), !1;
+            return (T = t === h.$7l.BACKGROUND), (g = Date.now()), y(), !1;
         },
         OVERLAY_SET_NOT_IDLE: A,
         CHANNEL_SELECT: A,

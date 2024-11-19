@@ -18,13 +18,13 @@ var r = n(200651),
     v = n(111846),
     b = n(392552),
     I = n(784222),
-    S = n(926243),
-    T = n(149203),
+    T = n(926243),
+    S = n(149203),
     y = n(981631),
     A = n(388032),
     N = n(949235);
 t.Z = (e) => {
-    let { emojiDescriptors: t, emojiSize: a, onSelect: C, onInspect: R, surrogateCodePoint: O, getEmojiItemProps: D, getEmojiRowProps: L, isScrolling: x, isUsingKeyboardNavigation: w, rowIndex: M, allowAnimatedEmoji: P, showEmojiFavoriteTooltip: k, channelGuildId: U, category: G, selectedItemClassName: B, messageId: Z, isBurstReaction: F, inNitroLockedSection: V, handleScrollUpOnSectionCollapse: j } = e,
+    let { emojiDescriptors: t, emojiSize: a, onSelect: C, onInspect: R, surrogateCodePoint: O, getEmojiItemProps: D, getEmojiRowProps: L, isScrolling: x, isUsingKeyboardNavigation: w, rowIndex: M, allowAnimatedEmoji: P, showEmojiFavoriteTooltip: k, channelGuildId: U, category: B, selectedItemClassName: G, messageId: Z, isBurstReaction: F, inNitroLockedSection: V, handleScrollUpOnSectionCollapse: j } = e,
         { enabled: H } = b.Z.useExperiment({ location: 'EmojiPicker' }, { autoTrackExposure: !1 }),
         { useTransparentIcons: Y } = v.Z.useExperiment({ location: 'EmojiPicker' }, { autoTrackExposure: !1 }),
         W = Y ? n(187119) : n(137321),
@@ -51,8 +51,8 @@ t.Z = (e) => {
         i.useEffect(() => {
             m.DZ.loadIfNecessary();
         }, []);
-    let eo = a === T.Su.LARGE,
-        el = a === T.Su.MEDIUM,
+    let eo = a === S.Su.LARGE,
+        el = a === S.Su.MEDIUM,
         eu = (e) => {
             let t = ''.concat(e.rowIndex, 'c').concat(e.columnIndex),
                 n = function () {
@@ -79,7 +79,7 @@ t.Z = (e) => {
                                     [N.emojiItemMedium]: el,
                                     [N.emojiItemSelected]: v && !f,
                                     [N.expandCollapseButtonSelected]: v && f && !Y,
-                                    [null != B ? B : '']: v,
+                                    [null != G ? G : '']: v,
                                     [N.showPulse]: ei === t
                                 }),
                                 onFocus: null != g ? g : b,
@@ -176,7 +176,7 @@ t.Z = (e) => {
                     let { columnIndex: n, visibleRowIndex: i } = e,
                         s = en.rowIndex === i && en.columnIndex === n;
                     return (0, r.jsx)(
-                        S.Z,
+                        T.Z,
                         {
                             rowIndex: M,
                             descriptor: e,
@@ -186,7 +186,7 @@ t.Z = (e) => {
                             isUsingKeyboardNavigation: w,
                             surrogateCodePoint: O,
                             allowAnimatedEmoji: P,
-                            selectedItemClassName: B,
+                            selectedItemClassName: G,
                             onSelect: C,
                             onInspect: R,
                             channelGuildId: U,
@@ -216,9 +216,9 @@ t.Z = (e) => {
                 ref: es,
                 children: e.map(eu)
             });
-    if (G !== T.En.TOP_GUILD_EMOJI) return ec(t);
-    let ed = t.filter((e) => (!!H && e.type === I.ld.CREATE_EMOJI) || e.subCategory === T.t0.TOP_GUILD_EMOJI || (e.subCategory === T.t0.NEWLY_ADDED_EMOJI && e.emoji.type === f.B.GUILD && !_.Z.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id))),
-        ef = t.filter((e) => e.subCategory === T.t0.NEWLY_ADDED_EMOJI && e.emoji.type === f.B.GUILD && _.Z.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id));
+    if (B !== S.En.TOP_GUILD_EMOJI) return ec(t);
+    let ed = t.filter((e) => (!!H && e.type === I.ld.CREATE_EMOJI) || e.subCategory === S.t0.TOP_GUILD_EMOJI || (e.subCategory === S.t0.NEWLY_ADDED_EMOJI && e.emoji.type === f.B.GUILD && !_.Z.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id))),
+        ef = t.filter((e) => e.subCategory === S.t0.NEWLY_ADDED_EMOJI && e.emoji.type === f.B.GUILD && _.Z.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id));
     return 0 === ef.length
         ? ec(t)
         : (0, r.jsxs)('div', {

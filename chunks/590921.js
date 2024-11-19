@@ -1,4 +1,4 @@
-var r, i, a, s, o, l, u, c, d, f, _, p, h, m, g, E, v, b, I, S;
+var r, i, a, s, o, l, u, c, d, f, _, p, h, m, g, E, v, b, I, T;
 n.d(t, {
     AQ: function () {
         return y;
@@ -19,7 +19,7 @@ n.d(t, {
         return r;
     },
     YP: function () {
-        return T;
+        return S;
     },
     cz: function () {
         return o;
@@ -37,6 +37,6 @@ n.d(t, {
         return d;
     }
 });
-let T = 3,
+let S = 3,
     y = 20;
-((_ = r || (r = {}))[(_.DENY = 0)] = 'DENY'), (_[(_.ALLOW_EVERYONE = 1)] = 'ALLOW_EVERYONE'), (_[(_.ALLOW_EVERYONE_OR_HERE = 2)] = 'ALLOW_EVERYONE_OR_HERE'), ((p = i || (i = {}))[(p.DENY = 0)] = 'DENY'), (p[(p.ALLOW_CHANNEL = 1)] = 'ALLOW_CHANNEL'), (p[(p.ALLOW_GUILD = 2)] = 'ALLOW_GUILD'), ((h = a || (a = {}))[(h.DENY = 0)] = 'DENY'), (h[(h.ALLOW_MENTIONABLE = 1)] = 'ALLOW_MENTIONABLE'), (h[(h.ALLOW_ALL = 2)] = 'ALLOW_ALL'), ((m = s || (s = {}))[(m.DENY = 0)] = 'DENY'), (m[(m.ALLOW_SELECTABLE = 1)] = 'ALLOW_SELECTABLE'), ((g = o || (o = {}))[(g.DENY = 0)] = 'DENY'), (g[(g.ALLOW = 1)] = 'ALLOW'), ((E = l || (l = {}))[(E.DISABLED = 0)] = 'DISABLED'), (E[(E.OLD_BUILT_INS = 1)] = 'OLD_BUILT_INS'), (E[(E.NEW_TEXT_ONLY = 2)] = 'NEW_TEXT_ONLY'), (E[(E.NEW = 3)] = 'NEW'), ((v = u || (u = {}))[(v.INSERT = 0)] = 'INSERT'), (v[(v.SEND = 1)] = 'SEND'), ((b = c || (c = {})).MENTIONS = 'MENTIONS'), (b.CHANNELS = 'CHANNELS'), (b.EMOJIS_AND_STICKERS = 'EMOJIS_AND_STICKERS'), (b.REACTIONS = 'REACTIONS'), (b.STICKERS = 'STICKERS'), (b.GIFS = 'GIFS'), (b.LEGACY_COMMANDS = 'LEGACY_COMMANDS'), (b.COMMANDS = 'COMMANDS'), (b.COMMAND_OPTIONS = 'COMMAND_OPTIONS'), (b.CHOICES = 'CHOICES'), ((I = d || (d = {})).MENTION = 'MENTION'), (I.CHANNEL = 'CHANNEL'), (I.EMOJI = 'EMOJI'), (I.STICKER = 'STICKER'), (I.REACTION = 'REACTION'), (I.GIF = 'GIF'), (I.COMMAND = 'COMMAND'), (I.COMMAND_OPTION = 'COMMAND_OPTION'), (I.COMMAND_SUGGESTION = 'COMMAND_SUGGESTION'), (I.CHOICE = 'CHOICE'), (I.EMOJI_UPSELL = 'EMOJI_UPSELL'), ((S = f || (f = {}))[(S.AUTO = 0)] = 'AUTO'), (S[(S.AUTO_WHEN_FILTERED = 1)] = 'AUTO_WHEN_FILTERED'), (S[(S.MANUAL = 2)] = 'MANUAL');
+((_ = r || (r = {}))[(_.DENY = 0)] = 'DENY'), (_[(_.ALLOW_EVERYONE = 1)] = 'ALLOW_EVERYONE'), (_[(_.ALLOW_EVERYONE_OR_HERE = 2)] = 'ALLOW_EVERYONE_OR_HERE'), ((p = i || (i = {}))[(p.DENY = 0)] = 'DENY'), (p[(p.ALLOW_CHANNEL = 1)] = 'ALLOW_CHANNEL'), (p[(p.ALLOW_GUILD = 2)] = 'ALLOW_GUILD'), ((h = a || (a = {}))[(h.DENY = 0)] = 'DENY'), (h[(h.ALLOW_MENTIONABLE = 1)] = 'ALLOW_MENTIONABLE'), (h[(h.ALLOW_ALL = 2)] = 'ALLOW_ALL'), ((m = s || (s = {}))[(m.DENY = 0)] = 'DENY'), (m[(m.ALLOW_SELECTABLE = 1)] = 'ALLOW_SELECTABLE'), ((g = o || (o = {}))[(g.DENY = 0)] = 'DENY'), (g[(g.ALLOW = 1)] = 'ALLOW'), ((E = l || (l = {}))[(E.DISABLED = 0)] = 'DISABLED'), (E[(E.OLD_BUILT_INS = 1)] = 'OLD_BUILT_INS'), (E[(E.NEW_TEXT_ONLY = 2)] = 'NEW_TEXT_ONLY'), (E[(E.NEW = 3)] = 'NEW'), ((v = u || (u = {}))[(v.INSERT = 0)] = 'INSERT'), (v[(v.SEND = 1)] = 'SEND'), ((b = c || (c = {})).MENTIONS = 'MENTIONS'), (b.CHANNELS = 'CHANNELS'), (b.EMOJIS_AND_STICKERS = 'EMOJIS_AND_STICKERS'), (b.REACTIONS = 'REACTIONS'), (b.STICKERS = 'STICKERS'), (b.GIFS = 'GIFS'), (b.LEGACY_COMMANDS = 'LEGACY_COMMANDS'), (b.COMMANDS = 'COMMANDS'), (b.COMMAND_OPTIONS = 'COMMAND_OPTIONS'), (b.CHOICES = 'CHOICES'), ((I = d || (d = {})).MENTION = 'MENTION'), (I.CHANNEL = 'CHANNEL'), (I.EMOJI = 'EMOJI'), (I.STICKER = 'STICKER'), (I.REACTION = 'REACTION'), (I.GIF = 'GIF'), (I.COMMAND = 'COMMAND'), (I.COMMAND_OPTION = 'COMMAND_OPTION'), (I.COMMAND_SUGGESTION = 'COMMAND_SUGGESTION'), (I.CHOICE = 'CHOICE'), (I.EMOJI_UPSELL = 'EMOJI_UPSELL'), ((T = f || (f = {}))[(T.AUTO = 0)] = 'AUTO'), (T[(T.AUTO_WHEN_FILTERED = 1)] = 'AUTO_WHEN_FILTERED'), (T[(T.MANUAL = 2)] = 'MANUAL');

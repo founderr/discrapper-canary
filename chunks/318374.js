@@ -16,7 +16,7 @@ var r = n(200651),
     f = n(51144),
     _ = n(351342);
 function p(e) {
-    let { users: t, maxUsers: a, guildId: o, channelId: p, className: h, avatarClassName: m, onClick: g, onFocus: E, size: v = u.AvatarSizes.SIZE_24, overflowCountVariant: b = 'text-xs/medium', overflowCountColor: I = 'interactive-normal', hideOverflowCount: S = !1, disableUsernameTooltip: T = !1, disableUserPopout: y = !1, onUserPopoutClosed: A } = e,
+    let { users: t, maxUsers: a, guildId: o, channelId: p, className: h, avatarClassName: m, onClick: g, onFocus: E, size: v = u.AvatarSizes.SIZE_24, overflowCountVariant: b = 'text-xs/medium', overflowCountColor: I = 'interactive-normal', hideOverflowCount: T = !1, disableUsernameTooltip: S = !1, disableUserPopout: y = !1, onUserPopoutClosed: A } = e,
         [N, C] = i.useState(!1);
     function R() {
         return (0, r.jsx)(u.Dialog, {
@@ -67,7 +67,7 @@ function p(e) {
                           .take(a)
                           .map((e) => {
                               let t = f.ZP.getName(e);
-                              return T
+                              return S
                                   ? (0, r.jsx)(
                                         'div',
                                         {
@@ -98,7 +98,7 @@ function p(e) {
                       n = t.length - a;
                   return (
                       n > 0 &&
-                          !S &&
+                          !T &&
                           (e[e.length - 1] = (0, r.jsx)(
                               u.Popout,
                               {

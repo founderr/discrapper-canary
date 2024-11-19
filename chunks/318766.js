@@ -1,6 +1,6 @@
 n.d(t, {
     u: function () {
-        return S;
+        return T;
     }
 }),
     n(47120);
@@ -23,11 +23,11 @@ var r = n(200651),
     v = n(185923),
     b = n(388032),
     I = n(120385);
-let S = {
+let T = {
         tension: 800,
         friction: 24
     },
-    T = () => {
+    S = () => {
         let e = (0, l.e7)([d.Z], () => d.Z.useReducedMotion);
         return (0, r.jsxs)('div', {
             className: I.premiumTooltipContainer,
@@ -67,15 +67,15 @@ t.Z = function (e) {
             let e = Math.floor(77 * Math.random());
             D(!0), x(e), (0, _.x)(v.qR.EmojiButtonMouseEntered);
         }, [M, D, x]),
-        G = i.useCallback(() => {
+        B = i.useCallback(() => {
             D(!1);
         }, [D]),
-        B = i.useCallback(() => (0, _.x)(v.qR.EmojiButtonFocused), []),
+        G = i.useCallback(() => (0, _.x)(v.qR.EmojiButtonFocused), []),
         [Z, F] = (0, f.US)(w ? [u.z.TRIAL_FOR_ALL_EMOJI_BUTTON] : [], void 0, !0),
         V = Z === u.z.TRIAL_FOR_ALL_EMOJI_BUTTON,
         j = (0, l.e7)([d.Z], () => d.Z.useReducedMotion);
     return (0, r.jsx)(c.Tooltip, {
-        text: T(),
+        text: S(),
         'aria-label': b.intl.formatToMarkdownString(b.t['/7R4q6'], {}),
         position: 'top',
         shouldShow: w && !A && V,
@@ -94,9 +94,9 @@ t.Z = function (e) {
                 onMouseOver: U,
                 onMouseLeave: () => {
                     var t;
-                    G(), null === (t = e.onMouseLeave) || void 0 === t || t.call(e), V && F(E.L.USER_DISMISS);
+                    B(), null === (t = e.onMouseLeave) || void 0 === t || t.call(e), V && F(E.L.USER_DISMISS);
                 },
-                onFocus: B,
+                onFocus: G,
                 onClick: (t) => {
                     var n;
                     null == N || N(t), null === (n = e.onClick) || void 0 === n || n.call(e);
@@ -111,7 +111,7 @@ t.Z = function (e) {
                     null != y
                         ? y()
                         : (0, r.jsx)(c.Spring, {
-                              config: S,
+                              config: T,
                               to: { value: M ? 1 : 0 },
                               children: (e) => {
                                   let { value: t } = e;

@@ -27,8 +27,8 @@ var r,
     v = n(238302),
     b = n(514361),
     I = n(572397),
-    S = n(705262),
-    T = n(436774),
+    T = n(705262),
+    S = n(436774),
     y = n(768762),
     A = n(197115),
     N = n(727939),
@@ -41,9 +41,9 @@ function x() {
     let e = (0, I.q)();
     return (
         s.useEffect(() => ((0, v.Kq)(), e(C.rMx.CLIENT_THEME_PREVIEW_VIEWED), () => e(C.rMx.CLIENT_THEME_PREVIEW_CLOSED)), [e]),
-        (0, a.jsx)(S.ZP, {
-            type: S.yH.EDITOR,
-            children: (0, a.jsx)(S.ZP.BasicAndGradient, { isEditor: !0 })
+        (0, a.jsx)(T.ZP, {
+            type: T.yH.EDITOR,
+            children: (0, a.jsx)(T.ZP.BasicAndGradient, { isEditor: !0 })
         })
     );
 }
@@ -104,7 +104,7 @@ function M(e) {
                         (0, a.jsx)(d.NitroWheelIcon, {
                             className: L.footerNitro,
                             size: 'xs',
-                            color: T.JX.PREMIUM_TIER_2
+                            color: S.JX.PREMIUM_TIER_2
                         }),
                         (0, a.jsx)(d.Text, {
                             className: L.footerText,
@@ -163,7 +163,7 @@ function P(e) {
             l && p(), u && (0, h.O7)();
         }, [l, u, p]),
         E = (0, _.Z)(null, f ? g : C.dG4),
-        S = s.useCallback(() => {
+        T = s.useCallback(() => {
             (0, h.G8)(), (0, v.Mo)(), g(), null == n || n(R.L.DISMISS);
         }, [g, n]);
     return (0, a.jsx)(N.Z, {
@@ -186,7 +186,7 @@ function P(e) {
                                     className: L.closeContainer,
                                     innerClassName: L.closeInner,
                                     withCircleBackground: !0,
-                                    onClick: S
+                                    onClick: T
                                 })
                             ]
                         }),
@@ -208,7 +208,7 @@ function P(e) {
                 (0, a.jsx)(M, {
                     tab: r,
                     isPreview: f,
-                    onClose: S,
+                    onClose: T,
                     isCoachmark: !1
                 })
             ]

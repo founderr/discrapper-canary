@@ -71,7 +71,7 @@ function I(e) {
     if (!g.initialized || !E(t) || g.notifCenterIds.has(t.id)) return !1;
     g.notifCenterIds.add(t.id), (g.notifCenterItems = [t, ...g.notifCenterItems]), g.notifCenterItems.sort((e, t) => f.default.compare(t.id, e.id));
 }
-function S(e, t) {
+function T(e, t) {
     g.notifCenterItems = g.notifCenterItems
         .map((n) =>
             e.includes(n.id)
@@ -83,7 +83,7 @@ function S(e, t) {
         )
         .filter(E);
 }
-function T(e, t, n) {
+function S(e, t, n) {
     var r;
     return e.type === t && (null === (r = e.other_user) || void 0 === r ? void 0 : r.id) === n;
 }
@@ -98,7 +98,7 @@ function y(e) {
     }
     r === h.OGo.FRIEND &&
         (g.notifCenterLocalItems = g.notifCenterLocalItems.map((e) =>
-            T(e, _.O7.INCOMING_FRIEND_REQUESTS, t.user.id)
+            S(e, _.O7.INCOMING_FRIEND_REQUESTS, t.user.id)
                 ? {
                       ...e,
                       acked: !0,
@@ -108,7 +108,7 @@ function y(e) {
                   }
                 : e
         )),
-        r === h.OGo.BLOCKED && (g.notifCenterLocalItems = g.notifCenterLocalItems.filter((e) => !T(e, _.O7.INCOMING_FRIEND_REQUESTS, n) && !T(e, _.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED, n)));
+        r === h.OGo.BLOCKED && (g.notifCenterLocalItems = g.notifCenterLocalItems.filter((e) => !S(e, _.O7.INCOMING_FRIEND_REQUESTS, n) && !S(e, _.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED, n)));
 }
 function A(e) {
     if (!!(0, s.Z2)(e))
@@ -199,11 +199,11 @@ let C = new N(a.Z, {
     LOGOUT: v,
     NOTIFICATION_CENTER_ITEMS_ACK: function (e) {
         let { ids: t } = e;
-        S(t, !0);
+        T(t, !0);
     },
     NOTIFICATION_CENTER_ITEMS_ACK_FAILURE: function (e) {
         let { ids: t } = e;
-        S(t, !1);
+        T(t, !1);
     },
     GUILD_SCHEDULED_EVENT_UPDATE: function (e) {
         let { guildScheduledEvent: t } = e;
@@ -238,7 +238,7 @@ let C = new N(a.Z, {
     RELATIONSHIP_ADD: y,
     RELATIONSHIP_UPDATE: y,
     RELATIONSHIP_REMOVE: function (e) {
-        g.notifCenterLocalItems = g.notifCenterLocalItems.filter((t) => !T(t, _.O7.INCOMING_FRIEND_REQUESTS, e.relationship.id) && !T(t, _.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED, e.relationship.id));
+        g.notifCenterLocalItems = g.notifCenterLocalItems.filter((t) => !S(t, _.O7.INCOMING_FRIEND_REQUESTS, e.relationship.id) && !S(t, _.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED, e.relationship.id));
     },
     NOTIFICATION_CENTER_ITEM_COMPLETED: function (e) {
         let { item_enum: t } = e;

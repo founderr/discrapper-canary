@@ -36,7 +36,7 @@ let I = [
             showStatus: !0
         }
     ],
-    S = (e) => {
+    T = (e) => {
         let { purchase: t } = e,
             n = (0, o.e7)([p.default], () => p.default.locale),
             i = (0, u.qS)(t),
@@ -99,14 +99,14 @@ let I = [
 t.Z = (e) => {
     let { user: t, guildId: n, avatarDecorationOverride: i, className: f } = e,
         p = (0, o.e7)([h.Z], () => h.Z.getStatus(t.id)),
-        { product: m, purchase: T } = (0, c.Z)(null == i ? void 0 : i.skuId),
+        { product: m, purchase: S } = (0, c.Z)(null == i ? void 0 : i.skuId),
         y = g.ZP.canUseCollectibles(t),
-        A = (0, u.qS)(T),
+        A = (0, u.qS)(S),
         N = (0, u.G1)(m),
         C = !y && A,
         R = (0, _.M)(!N || y),
         O = (0, d.k)(m);
-    return null != m && (null == T || C)
+    return null != m && (null == S || C)
         ? (0, r.jsxs)('div', {
               className: a()(b.modalPreview, b.shopPreviewContainer, f),
               children: [
@@ -176,7 +176,7 @@ t.Z = (e) => {
                           })
                       ]
                   }),
-                  null != T && (0, r.jsx)(S, { purchase: T })
+                  null != S && (0, r.jsx)(T, { purchase: S })
               ]
           });
 };

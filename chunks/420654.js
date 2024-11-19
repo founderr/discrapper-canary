@@ -17,23 +17,23 @@ t.Z = i.memo(function (e) {
         { context: E } = (0, u.KZ)(),
         { analyticsLocations: v } = (0, l.ZP)(),
         [b, I] = i.useState(!1),
-        [S, T] = i.useState(!1);
+        [T, S] = i.useState(!1);
     return m || null == a || '' === a
         ? null
         : (0, r.jsxs)('div', {
               children: [
                   (0, r.jsx)('div', {
                       ref: (e) => {
-                          null != e && (I(!S && e.scrollHeight - e.clientHeight > 1), e.getBoundingClientRect().height > h && T(!0));
+                          null != e && (I(!T && e.scrollHeight - e.clientHeight > 1), e.getBoundingClientRect().height > h && S(!0));
                       },
-                      className: s()(p.descriptionClamp, S && p.maxBioHeight),
+                      className: s()(p.descriptionClamp, T && p.maxBioHeight),
                       children: (0, r.jsx)(c.Z, {
                           userBio: a,
                           setLineClamp: !1,
                           textColor: 'header-primary'
                       })
                   }),
-                  (b || S) &&
+                  (b || T) &&
                       (0, r.jsx)(o.Button, {
                           look: o.Button.Looks.BLANK,
                           size: o.Button.Sizes.NONE,

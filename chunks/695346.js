@@ -75,7 +75,7 @@ n.d(t, {
         return eE;
     },
     Wz: function () {
-        return eT;
+        return eS;
     },
     Xc: function () {
         return x;
@@ -90,7 +90,7 @@ n.d(t, {
         return eg;
     },
     _O: function () {
-        return T;
+        return S;
     },
     bh: function () {
         return K;
@@ -111,7 +111,7 @@ n.d(t, {
         return L;
     },
     d4: function () {
-        return S;
+        return T;
     },
     dN: function () {
         return f;
@@ -144,13 +144,13 @@ n.d(t, {
         return Z;
     },
     iH: function () {
-        return eS;
+        return eT;
     },
     jU: function () {
         return Y;
     },
     kJ: function () {
-        return B;
+        return G;
     },
     kU: function () {
         return W;
@@ -159,7 +159,7 @@ n.d(t, {
         return eO;
     },
     mX: function () {
-        return G;
+        return B;
     },
     nc: function () {
         return ec;
@@ -290,13 +290,13 @@ let E = (0, o.Zc)(
         (e) => e
     ),
     I = [],
-    S = (0, o.Zc)(
+    T = (0, o.Zc)(
         'textAndImages',
         'emojiPickerCollapsedSections',
         (e) => (null != e ? e : I),
         (e) => e
     ),
-    T = (0, o.Zc)(
+    S = (0, o.Zc)(
         'textAndImages',
         'stickerPickerCollapsedSections',
         (e) => (null != e ? e : I),
@@ -397,7 +397,7 @@ let E = (0, o.Zc)(
         (e) => (null != e ? e : k),
         (e) => e
     ),
-    G = (0, o.Zc)(
+    B = (0, o.Zc)(
         'privacy',
         'defaultMessageRequestRestricted',
         (e) => {
@@ -406,7 +406,7 @@ let E = (0, o.Zc)(
         },
         (e) => a.D5.create({ value: e })
     ),
-    B = (0, o.Zc)(
+    G = (0, o.Zc)(
         'privacy',
         'nonSpamRetrainingOptIn',
         (e) => (null == e ? void 0 : e.value),
@@ -812,13 +812,13 @@ let ep = (0, o.KM)(
         (e) => e
     ),
     eI = [],
-    eS = (0, o.Zc)(
+    eT = (0, o.Zc)(
         'privacy',
         'activityJoiningRestrictedGuildIds',
         (e) => (null != e ? e : eI),
         (e) => e
     ),
-    eT = (0, o.Zc)(
+    eS = (0, o.Zc)(
         'privacy',
         'defaultGuildsActivityRestricted',
         (e) => e === i.E5.ON_FOR_LARGE_GUILDS,

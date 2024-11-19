@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return G;
+        return B;
     }
 }),
     n(536091),
@@ -24,8 +24,8 @@ var r = n(200651),
     v = n(385499),
     b = n(171368),
     I = n(598077),
-    S = n(271383),
-    T = n(626135),
+    T = n(271383),
+    S = n(626135),
     y = n(275759),
     A = n(107484),
     N = n(977392),
@@ -170,7 +170,7 @@ function U(e) {
     let t,
         { onGetRolesClicked: n, onOpenProfile: a, eligibilityStates: s, userId: o, roleId: l, channelId: c, guildId: d } = e;
     i.useEffect(() => {
-        T.default.track(L.rMx.PASSPORT_ROLE_POPOUT_VIEWED, {
+        S.default.track(L.rMx.PASSPORT_ROLE_POPOUT_VIEWED, {
             other_user_id: o,
             role_id: l,
             ...(0, g.JS)(c),
@@ -178,10 +178,10 @@ function U(e) {
         });
     }, [o, l, c, d]);
     let _ = (0, u.e7)(
-        [S.ZP],
+        [T.ZP],
         () => {
             var e, t;
-            return null !== (t = null === (e = S.ZP.getSelfMember(d)) || void 0 === e ? void 0 : e.roles.includes(l)) && void 0 !== t && t;
+            return null !== (t = null === (e = T.ZP.getSelfMember(d)) || void 0 === e ? void 0 : e.roles.includes(l)) && void 0 !== t && t;
         },
         [d, l]
     );
@@ -225,7 +225,7 @@ function U(e) {
         })
     );
 }
-function G(e) {
+function B(e) {
     let { userId: t, messageId: n, guild: a, channel: o } = e,
         { analyticsLocations: l } = (0, E.ZP)(),
         c = (0, N.Z)(a, t, o.id, !0),

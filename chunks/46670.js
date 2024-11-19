@@ -76,8 +76,8 @@ function d(e, t, n) {
         v = null !== (d = e.isSelected) && void 0 !== d ? d : t.selectionManager.isSelected(m),
         b = null !== (f = e.shouldSelectOnPressUp) && void 0 !== f ? f : null == g ? void 0 : g.shouldSelectOnPressUp,
         I = null !== (_ = e.shouldFocusOnHover) && void 0 !== _ ? _ : null == g ? void 0 : g.shouldFocusOnHover,
-        S = null !== (p = e.shouldUseVirtualFocus) && void 0 !== p ? p : null == g ? void 0 : g.shouldUseVirtualFocus,
-        T = null !== (h = e.isVirtualized) && void 0 !== h ? h : null == g ? void 0 : g.isVirtualized,
+        T = null !== (p = e.shouldUseVirtualFocus) && void 0 !== p ? p : null == g ? void 0 : g.shouldUseVirtualFocus,
+        S = null !== (h = e.isVirtualized) && void 0 !== h ? h : null == g ? void 0 : g.isVirtualized,
         y = (0, r.mp)(),
         A = (0, r.mp)(),
         N = {
@@ -87,7 +87,7 @@ function d(e, t, n) {
         };
     !((0, r.V5)() && (0, r.Pf)()) && ((N['aria-label'] = e['aria-label']), (N['aria-labelledby'] = y), (N['aria-describedby'] = A));
     let C = t.collection.getItem(m);
-    if (T) {
+    if (S) {
         let e = Number(null == C ? void 0 : C.index);
         (N['aria-posinset'] = Number.isNaN(e) ? void 0 : e + 1), (N['aria-setsize'] = (0, o.is)(t.collection));
     }
@@ -103,8 +103,8 @@ function d(e, t, n) {
             ref: n,
             shouldSelectOnPressUp: b,
             allowsDifferentPressOrigin: b && I,
-            isVirtualized: T,
-            shouldUseVirtualFocus: S,
+            isVirtualized: S,
+            shouldUseVirtualFocus: T,
             isDisabled: E,
             onAction: (null == g ? void 0 : g.onAction)
                 ? () => {

@@ -46,8 +46,8 @@ function I(e, t, n) {
     );
 }
 ((a = r || (r = {})).PRIMARY = 'primary'), (a.NESTED = 'nested'), (a.BLACK = 'black'), (a.GREY = 'grey'), (a.BRAND = 'brand'), (a.GREEN = 'green'), (a.YELLOW = 'yellow'), (a.RED = 'red'), (a.PREMIUM = 'premium');
-let S = Object.freeze({}),
-    T = Object.freeze({
+let T = Object.freeze({}),
+    S = Object.freeze({
         top: b.tooltipTop,
         bottom: b.tooltipBottom,
         left: b.tooltipLeft,
@@ -86,7 +86,7 @@ let A = (e) => {
                 let { position: t, nudge: _ } = e;
                 return (0, s.jsxs)(d.animated.div, {
                     onClick: o,
-                    className: u()(b.tooltip, T[null != t ? t : r], T[i], { [b.tooltipDisablePointerEvents]: h }, l),
+                    className: u()(b.tooltip, S[null != t ? t : r], S[i], { [b.tooltipDisablePointerEvents]: h }, l),
                     style: {
                         ...p,
                         ...c
@@ -169,7 +169,7 @@ class D extends (i = o.Component) {
     render() {
         let e;
         let { children: t, text: n, 'aria-label': r } = this.props;
-        if (null == n) return t(S);
+        if (null == n) return t(T);
         'string' == typeof r ? (e = r) : 'string' == typeof n && !1 !== r && (e = n);
         let i = {
             onClick: this.handleClick,

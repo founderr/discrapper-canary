@@ -3,8 +3,8 @@ n(47120);
 var v,
     b,
     I,
-    S,
-    T = n(392711),
+    T,
+    S = n(392711),
     y = n(754700),
     A = n(887003),
     N = n(442837),
@@ -30,7 +30,7 @@ function P(e, t) {
             var n, r, i, a;
             if (null != t.userStatus)
                 for (let s of Object.values(null !== (r = null === (n = t.userStatus) || void 0 === n ? void 0 : n.progress) && void 0 !== r ? r : {})) {
-                    if (!(0, T.isNil)(s)) y.T.DESKTOP.has(s.eventName) && ((null === (i = s.heartbeat) || void 0 === i ? void 0 : i.lastBeatAt) != null ? f.add(e) : (null === (a = s.heartbeat) || void 0 === a ? void 0 : a.lastBeatAt) == null && f.delete(e));
+                    if (!(0, S.isNil)(s)) y.T.DESKTOP.has(s.eventName) && ((null === (i = s.heartbeat) || void 0 === i ? void 0 : i.lastBeatAt) != null ? f.add(e) : (null === (a = s.heartbeat) || void 0 === a ? void 0 : a.lastBeatAt) == null && f.delete(e));
                 }
         })(e, t),
             a.set(e, r);
@@ -43,11 +43,11 @@ function k(e, t) {
 function U(e) {
     null != h.get(e) && (h = new Map(h)).delete(e);
 }
-function G(e) {
+function B(e) {
     let t = new Set(l);
     t.delete(e), (l = t);
 }
-function B(e) {
+function G(e) {
     let t = new Set(d);
     t.delete(e), (d = t);
 }
@@ -109,15 +109,15 @@ class Z extends (v = N.ZP.Store) {
         return null === (n = w.get(e)) || void 0 === n ? void 0 : n.get(t);
     }
 }
-(S = 'QuestsStore'),
+(T = 'QuestsStore'),
     (I = 'displayName') in (b = Z)
         ? Object.defineProperty(b, I, {
-              value: S,
+              value: T,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (b[I] = S),
+        : (b[I] = T),
     (t.Z = new Z(C.Z, {
         LOGOUT: function () {
             M();
@@ -170,11 +170,11 @@ class Z extends (v = N.ZP.Store) {
         },
         QUESTS_ENROLL_SUCCESS: function (e) {
             let { enrolledQuestUserStatus: t } = e;
-            P(t.questId, { userStatus: t }), G(t.questId);
+            P(t.questId, { userStatus: t }), B(t.questId);
         },
         QUESTS_ENROLL_FAILURE: function (e) {
             let { questId: t } = e;
-            G(t);
+            B(t);
         },
         QUESTS_FETCH_REWARD_CODE_BEGIN: function (e) {
             let { questId: t } = e,
@@ -251,11 +251,11 @@ class Z extends (v = N.ZP.Store) {
         },
         QUESTS_DISMISS_CONTENT_SUCCESS: function (e) {
             let { dismissedQuestUserStatus: t } = e;
-            P(t.questId, { userStatus: t }), B(t.questId);
+            P(t.questId, { userStatus: t }), G(t.questId);
         },
         QUESTS_DISMISS_CONTENT_FAILURE: function (e) {
             let { questId: t } = e;
-            B(t);
+            G(t);
         },
         QUESTS_USER_STATUS_UPDATE: function (e) {
             let { user_status: t } = e,

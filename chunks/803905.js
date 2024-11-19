@@ -6,7 +6,7 @@ n.d(t, {
         return w;
     },
     Ct: function () {
-        return T;
+        return S;
     },
     EQ: function () {
         return U;
@@ -36,7 +36,7 @@ n.d(t, {
         return E;
     },
     _O: function () {
-        return S;
+        return T;
     },
     _y: function () {
         return h;
@@ -54,7 +54,7 @@ n.d(t, {
         return A;
     },
     ks: function () {
-        return B;
+        return G;
     },
     lX: function () {
         return g;
@@ -103,7 +103,7 @@ class d extends s.Z {
                     try {
                         let n = c[t.premiumType];
                         if (null == n) return u.warn("Cannot find the corresponding SKU to the user's premium type ".concat(t.premiumType)), !1;
-                        let r = G[n];
+                        let r = B[n];
                         if (null == r) return u.warn("Cannot find the corresponding product catalog entry to the user's SKU ".concat(n, ' and premium type ').concat(t.premiumType)), !1;
                         return r.skuFeatures.includes(e);
                     } catch (e) {
@@ -126,8 +126,8 @@ let f = new d(r.q.ANIMATED_EMOJIS),
     v = new d(r.q.PREMIUM_GUILD_MEMBER_PROFILE),
     b = new d('profileBadges'),
     I = new d(r.q.PROFILE_PREMIUM_FEATURES, 'custom banner and avatar decoration'),
-    S = new d('collectibles'),
-    T = new d('appIcons'),
+    T = new d('collectibles'),
+    S = new d('appIcons'),
     y = new d(r.q.CLIENT_THEMES),
     A = new d('boostDiscount'),
     N = new d('freeBoosts'),
@@ -143,11 +143,11 @@ let M = new d(r.q.INCREASED_GUILD_LIMIT),
     P = new d(r.q.INCREASED_MESSAGE_LENGTH),
     k = new d('increasedVideoUploadQuality'),
     U = new d('uploadLargeFiles'),
-    G = Object.freeze({
-        [l.Si.TIER_0]: new o.Z(l.Si.TIER_0, [f, _, p, b, w, k, U, T]),
-        [l.Si.TIER_1]: new o.Z(l.Si.TIER_1, [f, _, g, E, b, A, C, D, k, U, T]),
-        [l.Si.TIER_2]: new o.Z(l.Si.TIER_2, [f, _, p, h, m, g, E, v, b, I, y, A, N, C, R, D, L, x, w, M, P, k, U, T, S, O])
+    B = Object.freeze({
+        [l.Si.TIER_0]: new o.Z(l.Si.TIER_0, [f, _, p, b, w, k, U, S]),
+        [l.Si.TIER_1]: new o.Z(l.Si.TIER_1, [f, _, g, E, b, A, C, D, k, U, S]),
+        [l.Si.TIER_2]: new o.Z(l.Si.TIER_2, [f, _, p, h, m, g, E, v, b, I, y, A, N, C, R, D, L, x, w, M, P, k, U, S, T, O])
     });
-function B(e, t) {
+function G(e, t) {
     return e.getFeatureValue(t);
 }

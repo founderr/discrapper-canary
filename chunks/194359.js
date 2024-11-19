@@ -58,7 +58,7 @@ function I(e, t, n) {
     throw e;
 }
 ((i = r || (r = {}))[(i.SHOW_ALWAYS = 0)] = 'SHOW_ALWAYS'), (i[(i.SHOW_ONLY_IF_ACTION_NEEDED = 1)] = 'SHOW_ONLY_IF_ACTION_NEEDED');
-let S = {
+let T = {
     sendRequest(e) {
         let { discordTag: t, context: n, captchaPayload: r, errorUxConfig: i = 0 } = e,
             [s, o] = t.split('#');
@@ -103,20 +103,20 @@ let S = {
             });
     },
     acceptFriendRequest: (e) =>
-        S.addRelationship(e, function () {
+        T.addRelationship(e, function () {
             s.uv.announce(v.intl.string(v.t['3goNa2']));
         }),
     cancelFriendRequest: (e, t) =>
-        S.removeRelationship(e, t, function () {
+        T.removeRelationship(e, t, function () {
             s.uv.announce(v.intl.string(v.t.pLUaxc));
         }),
     removeFriend(e, t) {
-        S.removeRelationship(e, t, function () {
+        T.removeRelationship(e, t, function () {
             s.uv.announce(v.intl.string(v.t.vGSLa2));
         });
     },
     unblockUser: (e, t) =>
-        S.removeRelationship(e, t, function () {
+        T.removeRelationship(e, t, function () {
             s.uv.announce(v.intl.string(v.t['9t1au7']));
         }),
     removeRelationship: (e, t, n) =>
@@ -220,4 +220,4 @@ let S = {
             });
     }
 };
-t.Z = S;
+t.Z = T;

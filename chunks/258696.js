@@ -18,8 +18,8 @@ var r = n(200651),
     v = n(74538),
     b = n(94161),
     I = n(9277),
-    S = n(58995),
-    T = n(897291),
+    T = n(58995),
+    S = n(897291),
     y = n(764794),
     A = n(241553),
     N = n(319417),
@@ -36,7 +36,7 @@ function D(e) {
     let { enabled: o } = p.O.useExperiment({ location: 'gift-button' }),
         l = a && s;
     return o
-        ? (0, r.jsx)(S.Z, {
+        ? (0, r.jsx)(T.Z, {
               disabled: t,
               channel: n
           })
@@ -45,17 +45,17 @@ function D(e) {
                 disabled: t,
                 channel: n
             })
-          : (0, r.jsx)(T.Z, {
+          : (0, r.jsx)(S.Z, {
                 disabled: t,
                 channel: n
             });
 }
 t.Z = i.memo(function (e) {
-    var t, n, i, _, p, S, T, A;
+    var t, n, i, _, p, T, S, A;
     let { type: L, disabled: x, channel: w, handleSubmit: M, isEmpty: P, showAllButtons: k } = e,
         U = (0, s.e7)([l.Z], () => l.Z.isSubmitButtonEnabled),
-        G = (0, s.e7)([m.Z], () => m.Z.getStickerPreview(w.id, L.drafts.type)),
-        B = null != G && G.length > 0,
+        B = (0, s.e7)([m.Z], () => m.Z.getStickerPreview(w.id, L.drafts.type)),
+        G = null != B && B.length > 0,
         Z = (0, s.e7)([g.Z], () => g.Z.getUploads(w.id, L.drafts.type)),
         { activeCommand: F, activeCommandOption: V } = (0, s.cj)([u.Z], () => ({
             activeCommand: u.Z.getActiveCommand(w.id),
@@ -98,7 +98,7 @@ t.Z = i.memo(function (e) {
                         'referral'
                     )
                 )),
-        (null === (S = L.gifts) || void 0 === S ? void 0 : S.button) != null &&
+        (null === (T = L.gifts) || void 0 === T ? void 0 : T.button) != null &&
             null == F &&
             !j &&
             (null == q || v.ZP.isPremiumEligible(q)) &&
@@ -112,7 +112,7 @@ t.Z = i.memo(function (e) {
                     'gift'
                 )
             ),
-        (null === (T = L.gifs) || void 0 === T ? void 0 : T.button) != null &&
+        (null === (S = L.gifs) || void 0 === S ? void 0 : S.button) != null &&
             null == F &&
             k &&
             H.push(
@@ -157,7 +157,7 @@ t.Z = i.memo(function (e) {
                 N.Z,
                 {
                     onClick: M,
-                    disabled: x || (0 === Z.length && P && !B)
+                    disabled: x || (0 === Z.length && P && !G)
                 },
                 'submit'
             )

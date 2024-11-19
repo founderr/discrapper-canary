@@ -17,7 +17,7 @@ var r = n(200651),
     v = n(474936),
     b = n(388032),
     I = n(429264);
-function S(e) {
+function T(e) {
     let { onClose: t } = e;
     return (0, r.jsx)(o.Clickable, {
         'aria-label': b.intl.string(b.t.WAI6xs),
@@ -30,7 +30,7 @@ function S(e) {
         })
     });
 }
-function T(e) {
+function S(e) {
     let { tiny: t, isPremiumUser: n, onInteraction: i } = e,
         { analyticsLocations: a, newestAnalyticsLocation: s } = (0, l.ZP)(),
         { trackUserProfileAction: c } = (0, _.KZ)();
@@ -111,8 +111,8 @@ t.Z = function (e) {
                             children: b.intl.string(b.t.EIYbj4)
                         })
                     }),
-                    s = (0, r.jsx)(S, { onClose: () => c(E.L.USER_DISMISS) }),
-                    l = (0, r.jsx)(T, {
+                    s = (0, r.jsx)(T, { onClose: () => c(E.L.USER_DISMISS) }),
+                    l = (0, r.jsx)(S, {
                         isPremiumUser: t,
                         onInteraction: n,
                         tiny: u

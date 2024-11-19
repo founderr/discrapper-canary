@@ -17,8 +17,8 @@ var r = n(990547),
     v = n(981631),
     b = n(308083),
     I = n(388032);
-let S = new o.Z('GuildSettingsActionCreators'),
-    T = {
+let T = new o.Z('GuildSettingsActionCreators'),
+    S = {
         init(e, t, n, r) {
             a.Z.dispatch({
                 type: 'GUILD_SETTINGS_INIT',
@@ -30,7 +30,7 @@ let S = new o.Z('GuildSettingsActionCreators'),
         },
         async open(e, t, r, i) {
             var a;
-            await Promise.all([n.e('63288'), n.e('23755'), n.e('48835'), n.e('33053'), n.e('15669'), n.e('90508'), n.e('65840'), n.e('7654'), n.e('33862'), n.e('42587'), n.e('44156'), n.e('16141'), n.e('42471'), n.e('85552'), n.e('58227'), n.e('16114'), n.e('1187'), n.e('28356'), n.e('93375'), n.e('64679'), n.e('72173'), n.e('73747'), n.e('44566')]).then(n.bind(n, 994763)), (null === (a = h.Z.getGuild(e)) || void 0 === a ? void 0 : a.hasFeature(v.oNc.COMMUNITY)) && (t === v.pNK.GUILD_AUTOMOD && ((t = v.pNK.SAFETY), (i = v.KsC.SAFETY_AUTOMOD)), t === v.pNK.MEMBER_VERIFICATION && ((t = v.pNK.SAFETY), (i = v.KsC.SAFETY_DM_AND_SPAM_PROTECTION))), T.init(e, t, r, i);
+            await Promise.all([n.e('63288'), n.e('23755'), n.e('48835'), n.e('33053'), n.e('15669'), n.e('90508'), n.e('65840'), n.e('7654'), n.e('33862'), n.e('42587'), n.e('44156'), n.e('16141'), n.e('42471'), n.e('85552'), n.e('58227'), n.e('16114'), n.e('1187'), n.e('28356'), n.e('93375'), n.e('64679'), n.e('72173'), n.e('73747'), n.e('44566')]).then(n.bind(n, 994763)), (null === (a = h.Z.getGuild(e)) || void 0 === a ? void 0 : a.hasFeature(v.oNc.COMMUNITY)) && (t === v.pNK.GUILD_AUTOMOD && ((t = v.pNK.SAFETY), (i = v.KsC.SAFETY_AUTOMOD)), t === v.pNK.MEMBER_VERIFICATION && ((t = v.pNK.SAFETY), (i = v.KsC.SAFETY_DM_AND_SPAM_PROTECTION))), S.init(e, t, r, i);
             f.Z.closeGuildSidebar(e), (0, s.jN)(v.S9g.GUILD_SETTINGS);
         },
         close() {
@@ -158,7 +158,7 @@ let S = new o.Z('GuildSettingsActionCreators'),
                 });
         },
         saveGuild(e, t) {
-            let { name: n, description: r, icon: s, splash: o, banner: u, homeHeader: c, afkChannelId: d, afkTimeout: f, systemChannelId: _, verificationLevel: p, defaultMessageNotifications: h, explicitContentFilter: m, features: g, systemChannelFlags: E, preferredLocale: I, rulesChannelId: T, safetyAlertsChannelId: y, discoverySplash: A, publicUpdatesChannelId: N, premiumProgressBarEnabled: C, clan: R } = t,
+            let { name: n, description: r, icon: s, splash: o, banner: u, homeHeader: c, afkChannelId: d, afkTimeout: f, systemChannelId: _, verificationLevel: p, defaultMessageNotifications: h, explicitContentFilter: m, features: g, systemChannelFlags: E, preferredLocale: I, rulesChannelId: S, safetyAlertsChannelId: y, discoverySplash: A, publicUpdatesChannelId: N, premiumProgressBarEnabled: C, clan: R } = t,
                 O = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
                 D = {
                     name: n,
@@ -176,7 +176,7 @@ let S = new o.Z('GuildSettingsActionCreators'),
                     default_message_notifications: h,
                     explicit_content_filter: m,
                     system_channel_flags: E,
-                    rules_channel_id: T,
+                    rules_channel_id: S,
                     discovery_splash: A,
                     public_updates_channel_id: N,
                     safety_alerts_channel_id: y,
@@ -207,7 +207,7 @@ let S = new o.Z('GuildSettingsActionCreators'),
                                     type: 'GUILD_SETTINGS_SUBMIT_FAILURE',
                                     errors: e.body
                                 }),
-                                S.error('Failed to save guild settings', { errors: e.body }),
+                                T.error('Failed to save guild settings', { errors: e.body }),
                                 O.throwErr)
                             )
                                 throw e.body;
@@ -291,7 +291,7 @@ let S = new o.Z('GuildSettingsActionCreators'),
                     checkEnabled: !1
                 }
             ).then(() => {
-                T.close();
+                S.close();
             }),
         async leaveGuild(e) {
             await i.tn.del({
@@ -300,7 +300,7 @@ let S = new o.Z('GuildSettingsActionCreators'),
                 oldFormErrors: !0,
                 rejectWithError: !1
             }),
-                T.close();
+                S.close();
         },
         async updateMemberRoles(e, t, n, r, s) {
             if (c.Z.isFullServerPreview(e) && t === _.default.getId()) {
@@ -380,4 +380,4 @@ let S = new o.Z('GuildSettingsActionCreators'),
             });
         }
     };
-t.Z = T;
+t.Z = S;

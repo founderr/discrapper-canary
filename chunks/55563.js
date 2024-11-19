@@ -34,16 +34,16 @@ function b(e) {
 function I(e) {
     v(e.sku), null != e.child_skus && e.child_skus.forEach((e) => v(e)), null != e.alternative_skus && e.alternative_skus.forEach((e) => v(e));
 }
-function S(e) {
+function T(e) {
     let { entitlements: t } = e;
     for (let e of t) null != e.sku && v(e.sku);
 }
-function T() {
+function S() {
     (_ = new Map()), (p = new Set()), (h = new Set()), (m = new Map()), (g = new Map()), (E = new Map());
 }
 function y() {
     if (r === c.default.locale) return !1;
-    (r = c.default.locale), T();
+    (r = c.default.locale), S();
 }
 class A extends (i = l.yh) {
     initialize() {
@@ -118,8 +118,8 @@ class A extends (i = l.yh) {
             for (let e of n) v(e);
             null != t && E.set(t, new Set(n.map((e) => e.id)));
         },
-        ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: S,
-        APPLICATION_STORE_CLEAR_DATA: T,
-        APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: S,
-        ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: S
+        ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: T,
+        APPLICATION_STORE_CLEAR_DATA: S,
+        APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: T,
+        ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: T
     }));

@@ -49,14 +49,14 @@ function b(e) {
 }
 ((a = r || (r = {})).JACK_O_LANTERN = 'jack_o_lantern'), (a.NOSE = 'nose');
 let I = new Set(['jack_o_lantern', 'nose']),
-    S = {
+    T = {
         jack_o_lantern: {
             sprites: b(['chocolate_bar', 'lollipop', 'candy'])
         },
         nose: { sprites: b(['foot']) }
     };
 ((s = i || (i = {})).ENTER = 'enter'), (s.CONFETTI = 'confetti'), (s.EXIT = 'exit');
-let T = {
+let S = {
     enter: {
         BEG: 0,
         END: 22
@@ -193,8 +193,8 @@ function N(e) {
               value: b,
               children: [
                   t,
-                  Object.keys(S).map((e) => {
-                      let t = S[e];
+                  Object.keys(T).map((e) => {
+                      let t = T[e];
                       return (0, o.jsx)(
                           A,
                           {
@@ -214,7 +214,7 @@ function N(e) {
                                     animationRef: R,
                                     className: E.lottieAnimation,
                                     nextScene: a,
-                                    sceneSegments: T,
+                                    sceneSegments: S,
                                     onScenePlay: N,
                                     onSceneComplete: C,
                                     importData: y,

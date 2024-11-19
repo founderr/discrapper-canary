@@ -49,16 +49,16 @@ function b(e, t) {
     return null == r ? n : t(r);
 }
 let I = 'SearchStore',
-    S = !1,
-    T = {},
+    T = !1,
+    S = {},
     y = null;
 function A(e) {
     var t;
     let { searchId: n, query: r } = e;
     if ('string' != typeof r || '' === (r = r.trim())) return;
-    let i = (T[n] = null !== (t = T[n]) && void 0 !== t ? t : []),
+    let i = (S[n] = null !== (t = S[n]) && void 0 !== t ? t : []),
         a = i.indexOf(r);
-    -1 !== a ? (i.splice(a, 1), i.unshift(r)) : null != i[0] && '' !== i[0] && r.startsWith(i[0]) ? (i[0] = r) : a < 0 && i.unshift(r), i.length > 5 && i.splice(5, i.length), c.K.set(I, { history: T });
+    -1 !== a ? (i.splice(a, 1), i.unshift(r)) : null != i[0] && '' !== i[0] && r.startsWith(i[0]) ? (i[0] = r) : a < 0 && i.unshift(r), i.length > 5 && i.splice(5, i.length), c.K.set(I, { history: S });
 }
 function N(e) {
     let { searchId: t } = e,
@@ -79,9 +79,9 @@ class R extends (r = u.ZP.Store) {
             Object.keys((t = e.history)).forEach((e) => {
                 Array.isArray(t[e]) && (t[e] = t[e].filter((e) => 'string' == typeof e && e.trim())), (!Array.isArray(t[e]) || 0 === t[e].length) && delete t[e];
             }),
-                (T = t);
+                (S = t);
         }
-        S = !!c.K.get('tokenized');
+        T = !!c.K.get('tokenized');
     }
     getCurrentSearchId() {
         return y;
@@ -91,7 +91,7 @@ class R extends (r = u.ZP.Store) {
         return null != e && (this.isIndexing(e) || this.isSearching(e) || this.hasResults(e));
     }
     isTokenized() {
-        return S;
+        return T;
     }
     getSearchType(e) {
         return b(null != e ? e : y, (e) => e.searchType);
@@ -131,7 +131,7 @@ class R extends (r = u.ZP.Store) {
         return b(e, (e) => e.editorState);
     }
     getHistory(e) {
-        return T[e];
+        return S[e];
     }
     getOffset(e) {
         var t;
@@ -272,15 +272,15 @@ class R extends (r = u.ZP.Store) {
         },
         SEARCH_CLEAR_HISTORY: function (e) {
             let { searchId: t } = e;
-            null == t ? (c.K.remove(I), (T = {})) : (delete T[t], c.K.set(I, { history: T }));
+            null == t ? (c.K.remove(I), (S = {})) : (delete S[t], c.K.set(I, { history: S }));
         },
         SEARCH_REMOVE_HISTORY: function (e) {
             let { searchId: t, query: n } = e;
-            null != T[t] && ((T[t] = T[t].filter((e) => e !== n)), c.K.set(I, { history: T }));
+            null != S[t] && ((S[t] = S[t].filter((e) => e !== n)), c.K.set(I, { history: S }));
         },
         SEARCH_ADD_HISTORY: A,
         LOGOUT: function () {
-            c.K.remove(I), (T = {});
+            c.K.remove(I), (S = {});
         },
         CONNECTION_OPEN: function () {
             Object.keys(g).forEach((e) => {

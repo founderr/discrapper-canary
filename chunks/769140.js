@@ -23,8 +23,8 @@ var r = n(200651),
     v = n(102172),
     b = n(359110),
     I = n(769654),
-    S = n(922482),
-    T = n(543882),
+    T = n(922482),
+    S = n(543882),
     y = n(592125),
     A = n(430824),
     N = n(496675),
@@ -39,8 +39,8 @@ var r = n(200651),
     P = n(194811),
     k = n(373826),
     U = n(315324),
-    G = n(582123),
-    B = n(599864),
+    B = n(582123),
+    G = n(599864),
     Z = n(290274),
     F = n(228168),
     V = n(981631),
@@ -84,12 +84,12 @@ function z(e) {
             url: ec,
             isLoading: ed,
             canSeePreview: ef
-        } = (0, o.cj)([N.Z, T.Z], () => {
+        } = (0, o.cj)([N.Z, S.Z], () => {
             let e = null != ea && N.Z.canBasicChannel(V.S7T.CONNECT, ea);
             return e
                 ? {
-                      url: T.Z.getPreviewURL(a.guildId, a.channelId, a.ownerId),
-                      isLoading: T.Z.getIsPreviewLoading(a.guildId, a.channelId, a.ownerId),
+                      url: S.Z.getPreviewURL(a.guildId, a.channelId, a.ownerId),
+                      isLoading: S.Z.getIsPreviewLoading(a.guildId, a.channelId, a.ownerId),
                       canSeePreview: e
                   }
                 : {
@@ -200,7 +200,7 @@ function z(e) {
                                     (0, r.jsx)(l.Clickable, {
                                         className: s()(H.clickable, H.inline),
                                         onClick: () => {
-                                            null == en || en({ action: 'OPEN_VOICE_CHANNEL' }), e ? (0, S.Cq)(ea) : (u.default.selectVoiceChannel(ea.id), (0, b.Kh)(ea.id)), null == q || q();
+                                            null == en || en({ action: 'OPEN_VOICE_CHANNEL' }), e ? (0, T.Cq)(ea) : (u.default.selectVoiceChannel(ea.id), (0, b.Kh)(ea.id)), null == q || q();
                                         },
                                         children: ea.name
                                     })
@@ -248,7 +248,7 @@ function z(e) {
                 ? null
                 : (0, r.jsx)('div', {
                       className: s()(H.actions, J),
-                      children: (0, r.jsx)(B.Z, {
+                      children: (0, r.jsx)(G.Z, {
                           channel: ea,
                           onAction: en,
                           onClose: q
@@ -256,7 +256,7 @@ function z(e) {
                   });
     return (0, r.jsx)(h.Gt, {
         value: et,
-        children: (0, r.jsx)(G.Z, {
+        children: (0, r.jsx)(B.Z, {
             user: t,
             onClose: q,
             children: (e) => {

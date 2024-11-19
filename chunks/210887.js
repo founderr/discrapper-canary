@@ -19,8 +19,8 @@ var h = n(12647),
     v = n(581883),
     b = n(874893),
     I = n(981631),
-    S = n(469115);
-function T(e, t, n) {
+    T = n(469115);
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -96,9 +96,9 @@ class L extends (a = s.ZP.PersistedStore) {
         return null !== A;
     }
 }
-T(L, 'displayName', 'ThemeStore'),
-    T(L, 'persistKey', 'ThemeStore'),
-    T(L, 'migrations', [
+S(L, 'displayName', 'ThemeStore'),
+    S(L, 'persistKey', 'ThemeStore'),
+    S(L, 'migrations', [
         (e) => {
             let t = e.theme;
             return (
@@ -131,7 +131,7 @@ T(L, 'displayName', 'ThemeStore'),
         UPDATE_BACKGROUND_GRADIENT_PRESET: function (e) {
             var t, n;
             let { presetId: r } = e;
-            y = null != r && null !== (n = null === (t = S.qt[r]) || void 0 === t ? void 0 : t.theme) && void 0 !== n ? n : C();
+            y = null != r && null !== (n = null === (t = T.qt[r]) || void 0 === t ? void 0 : t.theme) && void 0 !== n ? n : C();
             let i = null != r;
             return N !== i
                 ? ((N = i), !0)

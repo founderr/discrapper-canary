@@ -18,10 +18,10 @@ let E = {},
     v = {},
     b = !1,
     I = [];
-function S(e) {
+function T(e) {
     for (let t of ((v = {}), (E = {}), (r = 0), e)) r++, (v[t.id] = f.cL(t)), (E[t.id] = t.roles);
 }
-function T(e) {
+function S(e) {
     let { guildId: t, role: n } = e,
         r = E[t],
         i = _.CL(n),
@@ -117,11 +117,11 @@ class A extends (i = l.ZP.Store) {
                 (E = e.allGuildsRoles);
         },
         CACHE_LOADED: function (e) {
-            S(e.guilds);
+            T(e.guilds);
         },
         CACHE_LOADED_LAZY: function (e) {
             if (0 === e.guilds.length) return !1;
-            S(e.guilds);
+            T(e.guilds);
         },
         GUILD_CREATE: function (e) {
             let t = f.wD(e.guild, v[e.guild.id]);
@@ -151,8 +151,8 @@ class A extends (i = l.ZP.Store) {
             if (null == v[t.id] || t.unavailable) return !1;
             (v = { ...v }), delete v[t.id], (E[t.id] = void 0), r--;
         },
-        GUILD_ROLE_CREATE: T,
-        GUILD_ROLE_UPDATE: T,
+        GUILD_ROLE_CREATE: S,
+        GUILD_ROLE_UPDATE: S,
         GUILD_ROLE_DELETE: function (e) {
             let { guildId: t, roleId: n } = e,
                 r = E[t];

@@ -6,7 +6,7 @@ n.d(t, {
         return E;
     },
     Ft: function () {
-        return S;
+        return T;
     },
     W5: function () {
         return I;
@@ -119,7 +119,7 @@ function I(e, t) {
         r = 'auto' !== n.identifiable || i.Z.hidePersonalInformation;
     return b(e, n, r);
 }
-function S(e) {
+function T(e) {
     return (0, r.e7)([a.default], () => {
         if (null != e) return e.isPrivate() && e.isDM() ? a.default.getUser(e.getRecipientId()) : null;
     });
@@ -150,5 +150,5 @@ t.ZP = {
     },
     getGlobalName: h,
     humanizeStatus: m,
-    useDirectMessageRecipient: S
+    useDirectMessageRecipient: T
 };

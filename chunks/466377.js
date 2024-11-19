@@ -40,8 +40,8 @@ var r,
     v = n(147479),
     b = n(481060),
     I = n(600164),
-    S = n(602091),
-    T = n(231338),
+    T = n(602091),
+    S = n(231338),
     y = n(388032),
     A = n(148337);
 ((r = i || (i = {})).SMALL = 'small'), (r.MEDIUM = 'medium'), (r.LARGE = 'large'), (r.DYNAMIC = 'dynamic');
@@ -53,8 +53,8 @@ let N = Object.freeze({
 });
 function C(e) {
     var t;
-    let { transitionState: n, children: r, size: i = 'small', role: o = 'dialog', className: p, fullscreenOnMobile: g = !0, hideShadow: E = !1, onAnimationEnd: v = T.dG, returnRef: b, ...I } = e,
-        y = n === S.Dv.ENTERING || n === S.Dv.ENTERED,
+    let { transitionState: n, children: r, size: i = 'small', role: o = 'dialog', className: p, fullscreenOnMobile: g = !0, hideShadow: E = !1, onAnimationEnd: v = S.dG, returnRef: b, ...I } = e,
+        y = n === T.Dv.ENTERING || n === T.Dv.ENTERED,
         { reducedMotion: C } = s.useContext(_.S),
         R = (0, f.q)(
             {
@@ -81,7 +81,7 @@ function C(e) {
             }),
             [w, L]
         );
-    return (0, a.jsx)(S.zM.Provider, {
+    return (0, a.jsx)(T.zM.Provider, {
         value: M,
         children: (0, a.jsx)(h.V, {
             className: A.focusLock,
@@ -107,7 +107,7 @@ function C(e) {
 }
 function R(e) {
     var t, n, r, i, o;
-    let { headerId: u, headerIdIsManaged: c } = s.useContext(S.zM);
+    let { headerId: u, headerIdIsManaged: c } = s.useContext(T.zM);
     return (0, a.jsx)(I.Z, {
         grow: 0,
         shrink: 0,

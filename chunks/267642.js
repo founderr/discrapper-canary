@@ -18,7 +18,7 @@ n.d(t, {
         return r;
     },
     U2: function () {
-        return T;
+        return S;
     },
     Vx: function () {
         return P;
@@ -42,13 +42,13 @@ n.d(t, {
         return x;
     },
     gZ: function () {
-        return B;
+        return G;
     },
     ge: function () {
         return O;
     },
     ig: function () {
-        return S;
+        return T;
     },
     nW: function () {
         return N;
@@ -108,11 +108,11 @@ Object.freeze({
 let v = [m.Eu4.NONE, m.Eu4.TIER_1, m.Eu4.TIER_2, m.Eu4.TIER_3],
     b = (e, t) => {
         var n;
-        return e === m.Eu4.NONE ? m.Eu4.TIER_1 : null === (n = G(t).find((t) => t.tier === e)) || void 0 === n ? void 0 : n.nextTier;
+        return e === m.Eu4.NONE ? m.Eu4.TIER_1 : null === (n = B(t).find((t) => t.tier === e)) || void 0 === n ? void 0 : n.nextTier;
     },
     I = (e, t) => (null != t && t.hasFeature(m.oNc.MORE_STICKERS) && e === m.Eu4.TIER_3 ? l.D.MAX_STICKER_SLOTS : g.$8[e]),
-    S = (e) => g.pH[e],
-    T = (e, t) => (null != t && t.hasFeature(m.oNc.MORE_SOUNDBOARD) ? 96 : g._k[e]),
+    T = (e) => g.pH[e],
+    S = (e, t) => (null != t && t.hasFeature(m.oNc.MORE_SOUNDBOARD) ? 96 : g._k[e]),
     y = (e) => {
         if (e === m.Eu4.NONE) return g._k[e];
         let t = v[v.indexOf(e) - 1];
@@ -133,7 +133,7 @@ let v = [m.Eu4.NONE, m.Eu4.TIER_1, m.Eu4.TIER_2, m.Eu4.TIER_3],
                 },
                 {
                     title: E.intl.formatToPlainString(E.t['/9p2/v'], {
-                        adding: S(m.Eu4.TIER_1),
+                        adding: T(m.Eu4.TIER_1),
                         total: I(m.Eu4.TIER_1)
                     }),
                     description: E.intl.string(E.t.JfsnDQ),
@@ -142,7 +142,7 @@ let v = [m.Eu4.NONE, m.Eu4.TIER_1, m.Eu4.TIER_2, m.Eu4.TIER_3],
                 {
                     title: E.intl.formatToPlainString(E.t.NRuk5u, {
                         soundCount: y(m.Eu4.TIER_1),
-                        totalSoundCount: T(m.Eu4.TIER_1)
+                        totalSoundCount: S(m.Eu4.TIER_1)
                     }),
                     description: E.intl.string(E.t.Oq7OVl),
                     icon: 13
@@ -183,7 +183,7 @@ let v = [m.Eu4.NONE, m.Eu4.TIER_1, m.Eu4.TIER_2, m.Eu4.TIER_3],
                 },
                 {
                     title: E.intl.formatToPlainString(E.t['/9p2/v'], {
-                        adding: S(m.Eu4.TIER_2),
+                        adding: T(m.Eu4.TIER_2),
                         total: I(m.Eu4.TIER_2)
                     }),
                     description: E.intl.string(E.t.t4TM29),
@@ -192,7 +192,7 @@ let v = [m.Eu4.NONE, m.Eu4.TIER_1, m.Eu4.TIER_2, m.Eu4.TIER_3],
                 {
                     title: E.intl.formatToPlainString(E.t.NRuk5u, {
                         soundCount: y(m.Eu4.TIER_2),
-                        totalSoundCount: T(m.Eu4.TIER_2)
+                        totalSoundCount: S(m.Eu4.TIER_2)
                     }),
                     description: E.intl.string(E.t.pEYlPT),
                     icon: 13
@@ -245,7 +245,7 @@ let v = [m.Eu4.NONE, m.Eu4.TIER_1, m.Eu4.TIER_2, m.Eu4.TIER_3],
                 },
                 {
                     title: E.intl.formatToPlainString(E.t['/9p2/v'], {
-                        adding: S(m.Eu4.TIER_3),
+                        adding: T(m.Eu4.TIER_3),
                         total: I(m.Eu4.TIER_3)
                     }),
                     description: E.intl.string(E.t['+ZI4QU']),
@@ -254,7 +254,7 @@ let v = [m.Eu4.NONE, m.Eu4.TIER_1, m.Eu4.TIER_2, m.Eu4.TIER_3],
                 {
                     title: E.intl.formatToPlainString(E.t.NRuk5u, {
                         soundCount: y(m.Eu4.TIER_3),
-                        totalSoundCount: T(m.Eu4.TIER_3)
+                        totalSoundCount: S(m.Eu4.TIER_3)
                     }),
                     description: E.intl.string(E.t['8omJSU']),
                     icon: 13
@@ -328,7 +328,7 @@ let R = s().memoize((e) => (g.HO[m.Eu4.TIER_1].features.includes(e) ? m.Eu4.TIER
         return null;
     };
 function D(e, t) {
-    for (let n of G(t)) if (e >= n.amount) return n.tier;
+    for (let n of B(t)) if (e >= n.amount) return n.tier;
     return m.Eu4.NONE;
 }
 function L(e, t) {
@@ -410,7 +410,7 @@ function k(e, t) {
 function U(e) {
     return m.oCV;
 }
-function G(e) {
+function B(e) {
     let t = U(e);
     return [
         {
@@ -430,7 +430,7 @@ function G(e) {
         }
     ];
 }
-function B(e, t) {
+function G(e, t) {
     let n = k(e, t);
     if (n > 0) {
         let t = e.sort((e, t) => (null != e.endsAt && null != t.endsAt ? e.endsAt.getTime() - t.endsAt.getTime() : -1)).filter((e) => null != e.endsAt);
@@ -439,7 +439,7 @@ function B(e, t) {
     return null;
 }
 function Z(e, t) {
-    let n = S(t),
+    let n = T(t),
         r = v.indexOf(t);
     if (-1 === r) return 0;
     let i = v[r - 1],
@@ -448,7 +448,7 @@ function Z(e, t) {
     return Math.max(0, n - e.slice(a, s).length);
 }
 function F(e, t, n) {
-    return -1 === v.indexOf(n) ? 0 : Math.max(0, T(n, e) - t.length);
+    return -1 === v.indexOf(n) ? 0 : Math.max(0, S(n, e) - t.length);
 }
 function V(e, t) {
     let n = e.premiumSubscriberCount;

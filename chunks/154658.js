@@ -20,17 +20,17 @@ var i = n(120356),
 function m(e) {
     var t, i, m, g, E;
     let { guildId: v, leaderboard: b, className: I } = e,
-        S = null == b ? void 0 : null === (t = b.users) || void 0 === t ? void 0 : t[0],
-        { sort_by_statistic_id: T } = b.guild_settings,
-        y = null !== (E = null == S ? void 0 : null === (m = S.statistics) || void 0 === m ? void 0 : null === (i = m[T]) || void 0 === i ? void 0 : i.value) && void 0 !== E ? E : 0,
+        T = null == b ? void 0 : null === (t = b.users) || void 0 === t ? void 0 : t[0],
+        { sort_by_statistic_id: S } = b.guild_settings,
+        y = null !== (E = null == T ? void 0 : null === (m = T.statistics) || void 0 === m ? void 0 : null === (i = m[S]) || void 0 === i ? void 0 : i.value) && void 0 !== E ? E : 0,
         A = p.intl.formatToPlainString(p.t.yhdo8v, {
             value: y,
-            statisticName: (0, _.C)(T)
+            statisticName: (0, _.C)(S)
         }),
-        N = null == S ? void 0 : null === (g = S.statistics[o.E.LOL_MOST_PLAYED_CHAMPION_ID]) || void 0 === g ? void 0 : g.value,
+        N = null == T ? void 0 : null === (g = T.statistics[o.E.LOL_MOST_PLAYED_CHAMPION_ID]) || void 0 === g ? void 0 : g.value,
         C = null != N ? n(692425)('./champion_'.concat(N, '.jpg')).default : null,
         { primaryColor: R, secondaryColor: O } = (0, c.Z)(''.concat(C, '?forColors')),
-        D = (0, l.e7)([d.default], () => d.default.getUser(null == S ? void 0 : S.user_id));
+        D = (0, l.e7)([d.default], () => d.default.getUser(null == T ? void 0 : T.user_id));
     if (null == D) return null;
     let L = f.ZP.getName(v, void 0, D);
     return (0, r.jsxs)('div', {

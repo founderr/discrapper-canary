@@ -28,9 +28,9 @@ var r,
     v = n(102172),
     b = n(74299),
     I = n(299570),
-    S = n(65154);
+    T = n(65154);
 ((r = o || (o = {}))[(r.Present = 0)] = 'Present'), (r[(r.Update = 1)] = 'Update'), (r[(r.Cancel = 2)] = 'Cancel'), (r[(r.Error = 3)] = 'Error');
-let T = !1,
+let S = !1,
     y = 0,
     A = 0,
     N = !1,
@@ -39,7 +39,7 @@ function R() {
     return m.Z.getUseSystemScreensharePicker();
 }
 function O() {
-    let e = R() && (A > 0 || (T && 0 === y));
+    let e = R() && (A > 0 || (S && 0 === y));
     if (e !== N) {
         var t, n;
         (N = e), null === (n = m.Z.getMediaEngine()) || void 0 === n || null === (t = n.setNativeDesktopVideoSourcePickerActive) || void 0 === t || t.call(n, N);
@@ -71,14 +71,14 @@ function L() {
 }
 function x() {
     let e = p.Z.getChannel(E.Z.getVoiceChannelId());
-    return (T = null != e && (0, b.Z)(m.Z) && (0, v.JL)(e, h.Z, g.Z, !1)), O(), !1;
+    return (S = null != e && (0, b.Z)(m.Z) && (0, v.JL)(e, h.Z, g.Z, !1)), O(), !1;
 }
 class w extends (l = c.ZP.Store) {
     initialize() {
         this.syncWith([m.Z, E.Z, p.Z, h.Z, g.Z], x), _.Z.subscribe({ location: 'NativeScreenSharePickerStore_initialize' }, O), x();
     }
     supported() {
-        return m.Z.supports(S.AN.NATIVE_SCREENSHARE_PICKER);
+        return m.Z.supports(T.AN.NATIVE_SCREENSHARE_PICKER);
     }
     enabled() {
         return R();

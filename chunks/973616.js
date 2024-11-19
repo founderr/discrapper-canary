@@ -77,7 +77,7 @@ class f extends i.Z {
         });
     }
     mergeFromApplicationUpdate(e) {
-        var t, n, r, i, a, s, o, l, u, c, d, _, p, h, m, g, E, v, b, I, S, T, y, A, N, C, R, O, D, L, x, w, M, P, k, U, G, B, Z;
+        var t, n, r, i, a, s, o, l, u, c, d, _, p, h, m, g, E, v, b, I, T, S, y, A, N, C, R, O, D, L, x, w, M, P, k, U, B, G, Z;
         return new f({
             id: null !== (t = e.id) && void 0 !== t ? t : this.id,
             name: null !== (n = e.name) && void 0 !== n ? n : this.name,
@@ -99,8 +99,8 @@ class f extends i.Z {
             executables: null !== (v = e.executables) && void 0 !== v ? v : this.executables,
             hashes: null !== (b = e.hashes) && void 0 !== b ? b : this.hashes,
             description: null !== (I = e.description) && void 0 !== I ? I : this.description,
-            eulaId: null !== (S = e.eulaId) && void 0 !== S ? S : this.eulaId,
-            slug: null !== (T = e.slug) && void 0 !== T ? T : this.slug,
+            eulaId: null !== (T = e.eulaId) && void 0 !== T ? T : this.eulaId,
+            slug: null !== (S = e.slug) && void 0 !== S ? S : this.slug,
             coverImage: null !== (y = e.coverImage) && void 0 !== y ? y : this.coverImage,
             bot: null !== (A = e.bot) && void 0 !== A ? A : this.bot,
             flags: null !== (N = e.flags) && void 0 !== N ? N : this.flags,
@@ -115,8 +115,8 @@ class f extends i.Z {
             storefront_available: null !== (P = e.storefront_available) && void 0 !== P ? P : this.storefront_available,
             termsOfServiceUrl: null !== (k = e.termsOfServiceUrl) && void 0 !== k ? k : this.termsOfServiceUrl,
             privacyPolicyUrl: null !== (U = e.privacyPolicyUrl) && void 0 !== U ? U : this.privacyPolicyUrl,
-            isVerified: null !== (G = e.isVerified) && void 0 !== G ? G : this.isVerified,
-            customInstallUrl: null !== (B = e.customInstallUrl) && void 0 !== B ? B : this.customInstallUrl,
+            isVerified: null !== (B = e.isVerified) && void 0 !== B ? B : this.isVerified,
+            customInstallUrl: null !== (G = e.customInstallUrl) && void 0 !== G ? G : this.customInstallUrl,
             installParams: null !== (Z = e.installParams) && void 0 !== Z ? Z : this.installParams
         });
     }

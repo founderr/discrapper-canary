@@ -47,20 +47,20 @@ e.exports = function (e) {
             variants: [{ begin: `(\\b(${b})((${v})|\\.)?|(${v}))[eE][+-]?(${E})\\b` }, { begin: `\\b(${b})\\b((${v})\\b|\\.)?|(${v})\\b` }, { begin: '\\b(0|[1-9](_?[0-9])*)n\\b' }, { begin: '\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b' }, { begin: '\\b0[bB][0-1](_?[0-1])*n?\\b' }, { begin: '\\b0[oO][0-7](_?[0-7])*n?\\b' }, { begin: '\\b0[0-7]+n?\\b' }],
             relevance: 0
         },
-        S = {
+        T = {
             className: 'subst',
             begin: '\\$\\{',
             end: '\\}',
             keywords: g,
             contains: []
         },
-        T = {
+        S = {
             begin: 'html`',
             end: '',
             starts: {
                 end: '`',
                 returnEnd: !1,
-                contains: [e.BACKSLASH_ESCAPE, S],
+                contains: [e.BACKSLASH_ESCAPE, T],
                 subLanguage: 'xml'
             }
         },
@@ -70,7 +70,7 @@ e.exports = function (e) {
             starts: {
                 end: '`',
                 returnEnd: !1,
-                contains: [e.BACKSLASH_ESCAPE, S],
+                contains: [e.BACKSLASH_ESCAPE, T],
                 subLanguage: 'css'
             }
         },
@@ -78,7 +78,7 @@ e.exports = function (e) {
             className: 'string',
             begin: '`',
             end: '`',
-            contains: [e.BACKSLASH_ESCAPE, S]
+            contains: [e.BACKSLASH_ESCAPE, T]
         },
         N = {
             className: 'comment',
@@ -120,14 +120,14 @@ e.exports = function (e) {
                 e.C_LINE_COMMENT_MODE
             ]
         },
-        C = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, T, y, A, { match: /\$\d+/ }, I];
-    S.contains = C.concat({
+        C = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, S, y, A, { match: /\$\d+/ }, I];
+    T.contains = C.concat({
         begin: /\{/,
         end: /\}/,
         keywords: g,
         contains: ['self'].concat(C)
     });
-    let R = [].concat(N, S.contains),
+    let R = [].concat(N, T.contains),
         O = R.concat([
             {
                 begin: /\(/,
@@ -219,7 +219,7 @@ e.exports = function (e) {
             },
             e.APOS_STRING_MODE,
             e.QUOTE_STRING_MODE,
-            T,
+            S,
             y,
             A,
             N,

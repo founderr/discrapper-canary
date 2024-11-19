@@ -18,8 +18,8 @@ var r = n(200651),
     v = n(194625),
     b = n(77188),
     I = n(230554),
-    S = n(780748),
-    T = n(464581),
+    T = n(780748),
+    S = n(464581),
     y = n(732659),
     A = n(86724),
     N = n(847302),
@@ -28,7 +28,7 @@ var r = n(200651),
     O = n(981631),
     D = n(484918);
 t.Z = i.forwardRef(function (e, t) {
-    let { value: n, type: a, channel: L, className: x, id: w, disabled: M, submitting: P, placeholder: k, required: U, textAreaPaddingClassName: G, onChange: B, onPaste: Z, onResize: F, onFocus: V, onBlur: j, onKeyDown: H, onKeyUp: Y, onTab: W, onEnter: K, onSubmit: z, maybeShowAutocomplete: q, hideAutocomplete: Q, moveSelection: X, spellcheckEnabled: J, canUseCommands: $, canOnlyUseTextCommands: ee, disableAutoFocus: et, disableEnterToSubmit: en, allowNewLines: er, 'aria-owns': ei, 'aria-expanded': ea, 'aria-haspopup': es, 'aria-activedescendant': eo, 'aria-controls': el, 'aria-invalid': eu, 'aria-describedby': ec, 'aria-labelledby': ed, 'aria-autocomplete': ef } = e,
+    let { value: n, type: a, channel: L, className: x, id: w, disabled: M, submitting: P, placeholder: k, required: U, textAreaPaddingClassName: B, onChange: G, onPaste: Z, onResize: F, onFocus: V, onBlur: j, onKeyDown: H, onKeyUp: Y, onTab: W, onEnter: K, onSubmit: z, maybeShowAutocomplete: q, hideAutocomplete: Q, moveSelection: X, spellcheckEnabled: J, canUseCommands: $, canOnlyUseTextCommands: ee, disableAutoFocus: et, disableEnterToSubmit: en, allowNewLines: er, 'aria-owns': ei, 'aria-expanded': ea, 'aria-haspopup': es, 'aria-activedescendant': eo, 'aria-controls': el, 'aria-invalid': eu, 'aria-describedby': ec, 'aria-labelledby': ed, 'aria-autocomplete': ef } = e,
         e_ = i.useRef(null),
         ep = i.useRef(null),
         eh = i.useRef(!0),
@@ -99,7 +99,7 @@ t.Z = i.forwardRef(function (e, t) {
             onChangeEnd: eb,
             updateState: eE
         }),
-        eS = i.useCallback(
+        eT = i.useCallback(
             (e, t) => {
                 let n = _.tM(eI, e, L.id),
                     r = _.lk(e, L.guild_id, L.id, n, t);
@@ -110,11 +110,11 @@ t.Z = i.forwardRef(function (e, t) {
             },
             [L.guild_id, L.id, eI]
         ),
-        eT = i.useCallback(() => {
+        eS = i.useCallback(() => {
             let e;
             let t = $ ? u.Z.getActiveCommand(L.id) : null;
             if (null != t && null != t.options) {
-                let i = eS(t, !1);
+                let i = eT(t, !1);
                 e = i.values;
                 let a = _.cu(eI)
                     .filter((e) => !i.results[e].success)
@@ -149,9 +149,9 @@ t.Z = i.forwardRef(function (e, t) {
                     t,
                     e
                 );
-        }, [L.id, eI, z, eS, $]);
-    (0, I.Z)(t, eI, L, eT), (0, y.Z)(eI, e_, F);
-    let { handleKeyDown: ey, handleKeyUp: eA } = (0, S.Z)({
+        }, [L.id, eI, z, eT, $]);
+    (0, I.Z)(t, eI, L, eS), (0, y.Z)(eI, e_, F);
+    let { handleKeyDown: ey, handleKeyUp: eA } = (0, T.Z)({
             editor: eI,
             channel: L,
             disableEnterToSubmit: en,
@@ -160,11 +160,11 @@ t.Z = i.forwardRef(function (e, t) {
             onTab: W,
             onEnter: K,
             allowNewLines: er,
-            submit: eT,
+            submit: eS,
             hideAutocomplete: Q,
             moveSelection: X
         }),
-        { handlePaste: eN, handleGlobalPaste: eC } = (0, T.Z)(eI, eg, Z),
+        { handlePaste: eN, handleGlobalPaste: eC } = (0, S.Z)(eI, eg, Z),
         eR = i.useCallback(
             (e) => {
                 null == q || q();
@@ -173,9 +173,9 @@ t.Z = i.forwardRef(function (e, t) {
         ),
         eO = i.useCallback(
             (e) => {
-                e !== ep.current ? em.current && (null == B || B(null, (0, m.sk)(e, { mode: 'raw' }), e)) : em.current && q();
+                e !== ep.current ? em.current && (null == G || G(null, (0, m.sk)(e, { mode: 'raw' }), e)) : em.current && q();
             },
-            [q, B]
+            [q, G]
         );
     i.useLayoutEffect(() => {
         eh.current && ((ep.current = n), eE(eI, 'parent', { value: n }));
@@ -184,10 +184,10 @@ t.Z = i.forwardRef(function (e, t) {
             let e = () => {
                 var e;
                 let t = null !== (e = u.Z.getActiveCommand(L.id)) && void 0 !== e ? e : null;
-                null !== t && null != t.options && eS(t, !0);
+                null !== t && null != t.options && eT(t, !0);
             };
             return c.Z.addChangeListener(e), () => c.Z.removeChangeListener(e);
-        }, [L, eI, eS]);
+        }, [L, eI, eT]);
     let eD = i.useCallback((e, t) => (0, v.Z)(e, t), []),
         eL = i.useCallback((e) => (0, C.Z)(eI, e, L.id), [L.id, eI]),
         ex = i.useCallback((e) => (0, R.Z)(e), []);
@@ -205,7 +205,7 @@ t.Z = i.forwardRef(function (e, t) {
                     editor: eI,
                     channelId: L.id,
                     guildId: L.guild_id,
-                    className: s()(D.slateTextArea, G),
+                    className: s()(D.slateTextArea, B),
                     placeholder: k,
                     readOnly: eg,
                     spellCheck: J,

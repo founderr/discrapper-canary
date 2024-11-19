@@ -30,7 +30,7 @@ function I(e, t, n) {
         e
     );
 }
-function S(e) {
+function T(e) {
     if (null == e || _.Z.isBlockedOrIgnored(e.id)) return null;
     let t = {
         id: e.id,
@@ -43,7 +43,7 @@ function S(e) {
     } else t.isProvisional = !1;
     return _.Z.isFriend(e.id) && ((t.isFriend = !0), (t.friendNickname = _.Z.getNickname(e.id))), t;
 }
-function T(e, t, n) {
+function S(e, t, n) {
     null != e && (e[t] = null != n && '' !== n ? n : null);
 }
 function y(e) {
@@ -52,8 +52,8 @@ function y(e) {
     let { recipients: n = [] } = e;
     return (
         n.forEach((n) => {
-            let r = S(p.default.getUser(n));
-            null != e && T(r, e.id), t.push(r);
+            let r = T(p.default.getUser(n));
+            null != e && S(r, e.id), t.push(r);
         }),
         t
     );
@@ -62,8 +62,8 @@ function A(e, t) {
     let n = [];
     return (
         e.forEach((e) => {
-            let r = S(e.user);
-            null != r && (T(r, t, e.nick), n.push(r));
+            let r = T(e.user);
+            null != r && (S(r, t, e.nick), n.push(r));
         }),
         n
     );
@@ -211,10 +211,10 @@ class C extends l.Z {
                 setTimeout(() => {
                     let e = p.default.getCurrentUser();
                     if (null == e) return;
-                    let t = S(e),
+                    let t = T(e),
                         n = { [t.id]: t };
                     Object.values(p.default.getUsers()).forEach((e) => {
-                        n[e.id] = S(e);
+                        n[e.id] = T(e);
                     });
                     let r = f.ZP.getMutableAllGuildsAndMembers();
                     for (let e in r)
@@ -241,8 +241,8 @@ class C extends l.Z {
                                         t.participants.forEach((t) => {
                                             let r = t.member;
                                             if (null != r) {
-                                                let t = S(r.user);
-                                                null != t && (T(t, e.id, r.nick), n.push(t));
+                                                let t = T(r.user);
+                                                null != t && (S(t, e.id, r.nick), n.push(t));
                                             }
                                         });
                                     }),
@@ -255,21 +255,21 @@ class C extends l.Z {
             I(this, '_handleOverlayInitialize', (e) => {
                 let { users: t, guildMembers: n } = e,
                     r = new Map();
-                for (let e of t) r.set(e.id, S(e));
+                for (let e of t) r.set(e.id, T(e));
                 for (let e of E.default.keys(n)) {
                     let t = n[e];
                     if (null != t)
                         for (let n of E.default.keys(t)) {
                             let i = r.get(n),
                                 a = t[n];
-                            if (null != i && null != a && null != a.nick) T(i, e, a.nick), r.set(n, i);
+                            if (null != i && null != a && null != a.nick) S(i, e, a.nick), r.set(n, i);
                         }
                 }
                 this.updateUsers(Array.from(r.values()), 'overlay_initialize'), r.clear();
             }),
             I(this, '_handleCurrentUserUpdate', (e) => {
                 let { user: t } = e,
-                    n = S(t);
+                    n = T(t);
                 null != n && this.updateUsers([n], 'current_user_update');
             }),
             I(this, '_handleGuildCreate', (e) => {
@@ -285,22 +285,22 @@ class C extends l.Z {
             }),
             I(this, '_handleGuildMemberUpdate', (e) => {
                 let { guildId: t, user: n, nick: r } = e,
-                    i = S(n);
-                null != i && (T(i, t, r), this.updateUsers([i], 'guild_member_update'));
+                    i = T(n);
+                null != i && (S(i, t, r), this.updateUsers([i], 'guild_member_update'));
             }),
             I(this, '_handlePassiveUpdateV2', (e) => {
                 this.updateUsers(A(e.members, e.guildId), 'passive_update_v2');
             }),
             I(this, '_handleRelationshipAdd', (e) => {
-                let t = S(e.relationship.user);
+                let t = T(e.relationship.user);
                 this.updateUsers([t], 'relationship_add');
             }),
             I(this, '_handleRelationshipUpdate', (e) => {
-                let t = S(p.default.getUser(e.relationship.id));
+                let t = T(p.default.getUser(e.relationship.id));
                 this.updateUsers([t], 'relationship_update');
             }),
             I(this, '_handleRelationshipRemove', (e) => {
-                let t = S(p.default.getUser(e.relationship.id));
+                let t = T(p.default.getUser(e.relationship.id));
                 this.updateUsers([t], 'relationship_remove');
             }),
             I(this, '_handleDMCreate', (e) => {
@@ -309,23 +309,23 @@ class C extends l.Z {
                     } = e,
                     n = y(d.Z.getChannel(t));
                 if (0 === n.length) return;
-                let r = S(p.default.getCurrentUser());
-                T(r, t), n.push(r), this.updateUsers(n, 'dm_create');
+                let r = T(p.default.getCurrentUser());
+                S(r, t), n.push(r), this.updateUsers(n, 'dm_create');
             }),
             I(this, '_handleDMUpdates', (e) => {
                 let { channels: t } = e;
                 for (let e of t) {
                     let t = y(d.Z.getChannel(e.id));
                     if (0 === t.length) continue;
-                    let n = S(p.default.getCurrentUser());
-                    T(n, e.id), t.push(n), this.updateUsers(t, 'dm_updates');
+                    let n = T(p.default.getCurrentUser());
+                    S(n, e.id), t.push(n), this.updateUsers(t, 'dm_updates');
                 }
             }),
             I(this, '_handleRecipientChanges', (e) => {
                 let { channelId: t, user: n, isMember: r } = e;
                 if (!r) return;
-                let i = S(n);
-                T(i, t), this.updateUsers([i], 'recipient_changes');
+                let i = T(n);
+                S(i, t), this.updateUsers([i], 'recipient_changes');
             });
     }
 }

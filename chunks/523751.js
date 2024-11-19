@@ -22,41 +22,41 @@ var r = n(200651),
     v = n(665786),
     b = n(697725),
     I = n(267642),
-    S = n(284363),
-    T = n(854218),
+    T = n(284363),
+    S = n(854218),
     y = n(981631),
     A = n(388032),
     N = n(326421);
 let C = {
-    [S.Q.STAFF]: {
+    [T.Q.STAFF]: {
         IconComponent: c.StaffBadgeIcon,
         foregroundDarkColor: l.Z.unsafe_rawColors.WHITE_400.css,
         foregroundLightColor: l.Z.unsafe_rawColors.WHITE_400.css,
         backgroundDarkColor: l.Z.unsafe_rawColors.GREEN_360.css,
         backgroundLightColor: l.Z.unsafe_rawColors.GREEN_360.css
     },
-    [S.Q.VERIFIED_AND_PARTNERED]: {
+    [T.Q.VERIFIED_AND_PARTNERED]: {
         IconComponent: c.CheckmarkSmallIcon,
         foregroundDarkColor: l.Z.unsafe_rawColors.WHITE_400.css,
         foregroundLightColor: l.Z.unsafe_rawColors.WHITE_400.css,
         backgroundDarkColor: l.Z.unsafe_rawColors.GREEN_360.css,
         backgroundLightColor: l.Z.unsafe_rawColors.GREEN_360.css
     },
-    [S.Q.VERIFIED]: {
+    [T.Q.VERIFIED]: {
         IconComponent: c.CheckmarkSmallIcon,
         foregroundDarkColor: l.Z.unsafe_rawColors.WHITE_400.css,
         foregroundLightColor: l.Z.unsafe_rawColors.WHITE_400.css,
         backgroundDarkColor: l.Z.unsafe_rawColors.GREEN_360.css,
         backgroundLightColor: l.Z.unsafe_rawColors.GREEN_360.css
     },
-    [S.Q.PARTNERED]: {
+    [T.Q.PARTNERED]: {
         IconComponent: (0, c.makeIconCompat)(v.Z),
         foregroundDarkColor: l.Z.unsafe_rawColors.WHITE_400.css,
         foregroundLightColor: l.Z.unsafe_rawColors.WHITE_400.css,
         backgroundDarkColor: l.Z.unsafe_rawColors.BRAND_500.css,
         backgroundLightColor: l.Z.unsafe_rawColors.BRAND_500.css
     },
-    [S.Q.COMMUNITY]: {
+    [T.Q.COMMUNITY]: {
         IconComponent: c.HomeIcon,
         foregroundDarkColor: l.Z.unsafe_rawColors.PRIMARY_500.css,
         foregroundLightColor: l.Z.unsafe_rawColors.WHITE_400.css,
@@ -66,7 +66,7 @@ let C = {
         premiumForegroundColor: l.Z.unsafe_rawColors.WHITE_400.css,
         sizeAdjustment: 2
     },
-    [S.Q.DISCOVERABLE]: {
+    [T.Q.DISCOVERABLE]: {
         IconComponent: c.GlobeEarthIcon,
         foregroundDarkColor: l.Z.unsafe_rawColors.PRIMARY_500.css,
         foregroundLightColor: l.Z.unsafe_rawColors.WHITE_400.css,
@@ -76,8 +76,8 @@ let C = {
         premiumForegroundColor: l.Z.unsafe_rawColors.WHITE_400.css,
         sizeAdjustment: 2
     },
-    [S.Q.CLAN]: {},
-    [S.Q.NONE]: {}
+    [T.Q.CLAN]: {},
+    [T.Q.NONE]: {}
 };
 function R(e) {
     let { guildTraits: t } = e;
@@ -117,43 +117,43 @@ function O(e) {
             tooltipSubtitle: a,
             tooltipDescription: s
         } = (function (e, t) {
-            let n = t === T.PZ.PUBLIC ? A.intl.string(A.t.op2cJy) : A.intl.string(A.t.TME4LC);
+            let n = t === S.PZ.PUBLIC ? A.intl.string(A.t.op2cJy) : A.intl.string(A.t.TME4LC);
             switch (e) {
-                case S.Q.STAFF:
+                case T.Q.STAFF:
                     return {
                         tooltipTitle: A.intl.string(A.t['lMrv9/']),
                         tooltipSubtitle: A.intl.string(A.t['lMrv9/']),
                         tooltipDescription: A.intl.string(A.t['lMrv9/'])
                     };
-                case S.Q.VERIFIED:
+                case T.Q.VERIFIED:
                     return {
                         tooltipTitle: A.intl.string(A.t.K7iRio),
                         tooltipSubtitle: A.intl.string(A.t.iCehw8),
                         tooltipDescription: n
                     };
-                case S.Q.PARTNERED:
+                case T.Q.PARTNERED:
                     return {
                         tooltipTitle: A.intl.string(A.t.K7iRio),
                         tooltipSubtitle: A.intl.string(A.t.hfYfEB),
                         tooltipDescription: n
                     };
-                case S.Q.VERIFIED_AND_PARTNERED:
+                case T.Q.VERIFIED_AND_PARTNERED:
                     return {
                         tooltipTitle: A.intl.string(A.t.K7iRio),
                         tooltipSubtitle: A.intl.string(A.t['TX+iFB']),
                         tooltipDescription: n
                     };
-                case S.Q.COMMUNITY:
+                case T.Q.COMMUNITY:
                     return {
                         tooltipTitle: A.intl.string(A.t.K7iRio),
                         tooltipDescription: A.intl.string(A.t.TME4LC)
                     };
-                case S.Q.DISCOVERABLE:
+                case T.Q.DISCOVERABLE:
                     return {
                         tooltipTitle: A.intl.string(A.t.K7iRio),
                         tooltipDescription: A.intl.string(A.t.op2cJy)
                     };
-                case S.Q.CLAN:
+                case T.Q.CLAN:
                     return {
                         tooltipTitle: A.intl.string(A.t['5K6LdX']),
                         tooltipDescription: A.intl.string(A.t.YwZfbm)
@@ -201,8 +201,8 @@ function D(e) {
             return g.ZP.isMember(null == a ? void 0 : a.id, null == e ? void 0 : e.id);
         }),
         M = (0, o.e7)([m.Z], () => m.Z.theme),
-        P = (0, T.XX)(a),
-        k = (0, S.i)(P),
+        P = (0, S.XX)(a),
+        k = (0, T.i)(P),
         U = i.useCallback(
             (e) => {
                 P.premium &&
@@ -220,10 +220,10 @@ function D(e) {
             },
             [P.premium, w, L, a.id]
         );
-    if (k === S.Q.NONE) return null;
-    if (k === S.Q.CLAN) {
-        var G;
-        let e = (0, d.ky)(a.id, null === (G = a.clan) || void 0 === G ? void 0 : G.badge, D);
+    if (k === T.Q.NONE) return null;
+    if (k === T.Q.CLAN) {
+        var B;
+        let e = (0, d.ky)(a.id, null === (B = a.clan) || void 0 === B ? void 0 : B.badge, D);
         return null == e
             ? null
             : (0, r.jsx)(c.Tooltip, {
@@ -247,8 +247,8 @@ function D(e) {
                       })
               });
     }
-    let { IconComponent: B, backgroundDarkColor: Z, backgroundLightColor: F, foregroundDarkColor: V, foregroundLightColor: j, premiumBackgroundColor: H, premiumForegroundColor: Y, sizeAdjustment: W } = C[k];
-    if (null == B) return null;
+    let { IconComponent: G, backgroundDarkColor: Z, backgroundLightColor: F, foregroundDarkColor: V, foregroundLightColor: j, premiumBackgroundColor: H, premiumForegroundColor: Y, sizeAdjustment: W } = C[k];
+    if (null == G) return null;
     P.premium && ((t = Y), (n = H));
     let K = (0, u.wj)(M) ? V : j,
         z = (0, u.wj)(M) ? Z : F;
@@ -274,7 +274,7 @@ function D(e) {
                     color: null != n ? n : R,
                     stroke: A,
                     size: D,
-                    children: (0, r.jsx)(B, {
+                    children: (0, r.jsx)(G, {
                         size: 'custom',
                         width: q,
                         height: q,

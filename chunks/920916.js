@@ -1,10 +1,10 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return G;
+            return B;
         },
         openCollectibleRewardModal: function () {
-            return B;
+            return G;
         }
     }),
     n(773603),
@@ -28,8 +28,8 @@ var r = n(200651),
     v = n(164946),
     b = n(369111),
     I = n(25990),
-    S = n(594174),
-    T = n(960048),
+    T = n(594174),
+    S = n(960048),
     y = n(272008),
     A = n(497505),
     N = n(918701),
@@ -51,8 +51,8 @@ function P(e) {
         E = i.useRef(null),
         [v, b] = i.useState(null),
         I = i.useRef(new o.qA()),
-        T = (0, u.e7)([f.Z], () => f.Z.useReducedMotion),
-        N = (0, u.e7)([S.default], () => S.default.getCurrentUser()),
+        S = (0, u.e7)([f.Z], () => f.Z.useReducedMotion),
+        N = (0, u.e7)([T.default], () => T.default.getCurrentUser()),
         R = i.useMemo(() => (0, C.fh)(l, C.eC.HERO), [l]),
         D = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
         [x, M] = i.useState(!0 === g || D ? 'claimed' : 'loading');
@@ -96,7 +96,7 @@ function P(e) {
                             })
                 })
             }),
-            !T &&
+            !S &&
                 !D &&
                 'claimed' === x &&
                 (0, r.jsx)(m.Z, {
@@ -203,7 +203,7 @@ function U(e) {
         ]
     });
 }
-function G(e) {
+function B(e) {
     var t, n;
     let { quest: a, location: s, onClose: o, transitionState: u, preview: c } = e,
         f = i.useMemo(() => (0, N.xn)(a.config), [a]),
@@ -215,7 +215,7 @@ function G(e) {
                     let e = t.items.find((e) => e.type === l.Z.AVATAR_DECORATION);
                     return null == e ? null : e;
                 }, [t, n]);
-            return [r, () => (null == r ? (T.Z.addBreadcrumb({ message: 'Error saving avatar decoration; it is null' }), Promise.reject()) : ((0, d.cV)(r), M()))];
+            return [r, () => (null == r ? (S.Z.addBreadcrumb({ message: 'Error saving avatar decoration; it is null' }), Promise.reject()) : ((0, d.cV)(r), M()))];
         })(null !== (n = null == f ? void 0 : f.skuId) && void 0 !== n ? n : null);
     return null == f
         ? null
@@ -238,7 +238,7 @@ function G(e) {
                 preview: c
             });
 }
-function B(e, t, i) {
+function G(e, t, i) {
     (0, c.openModalLazy)(async () => {
         let { default: a } = await Promise.resolve().then(n.bind(n, 920916));
         return (n) =>

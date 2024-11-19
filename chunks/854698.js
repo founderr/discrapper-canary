@@ -3,7 +3,7 @@ n.d(t, {
         return H;
     },
     DK: function () {
-        return G;
+        return B;
     },
     G3: function () {
         return _;
@@ -21,7 +21,7 @@ n.d(t, {
         return U;
     },
     Rp: function () {
-        return B;
+        return G;
     },
     Uq: function () {
         return M;
@@ -78,8 +78,8 @@ let _ = 365,
     v = [s.Ci.SA.weekday, s.Ci.SU.weekday],
     b = [s.Ci.FR.weekday, s.Ci.SA.weekday],
     I = [s.Ci.SU.weekday, s.Ci.MO.weekday],
-    S = [s.Ci.SU.weekday, s.Ci.MO.weekday, s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday, s.Ci.FR.weekday, s.Ci.SA.weekday],
-    T = new Set([0, 6]);
+    T = [s.Ci.SU.weekday, s.Ci.MO.weekday, s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday, s.Ci.FR.weekday, s.Ci.SA.weekday],
+    S = new Set([0, 6]);
 function y(e) {
     var t;
     let n = e.toDate(),
@@ -116,7 +116,7 @@ function y(e) {
             }
         ];
     return (
-        T.has(n.getDay())
+        S.has(n.getDay())
             ? (null === (t = o.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff()) &&
               a.push({
                   value: c.z.WEEKEND_ONLY,
@@ -151,7 +151,7 @@ function R(e, t, n) {
     };
 }
 function O(e) {
-    return new s.OG(S[e]);
+    return new s.OG(T[e]);
 }
 function D(e, t) {
     let n;
@@ -228,13 +228,13 @@ function U(e, t, n) {
     }
     return i;
 }
-function G(e) {
+function B(e) {
     var t;
     if (null == e) return null;
     let n = null == (t = e).recurrence_rule ? null : new Date(t.scheduled_start_time);
     return null != n ? u.default.fromTimestamp(Math.floor(n.getTime() / l.Z.Millis.SECOND) * l.Z.Millis.SECOND) : null;
 }
-function B(e, t) {
+function G(e, t) {
     if (null == t || null == e) return !1;
     let n = new Date(e.start),
         r = new Date(u.default.extractTimestamp(t));

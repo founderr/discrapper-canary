@@ -27,15 +27,15 @@ function f(e) {
         v = !g && u.has_media_attachment,
         b = g ? d.intl.string(d.t.UsZEBA) : d.intl.string(d.t.ReFzYW),
         I = null != h ? o.ZP.getName(u.guild_id, u.channel_id, h) : void 0,
-        S = null == h ? void 0 : h.getAvatarURL(null == f ? void 0 : f.id, 40);
-    (null == S || m !== u.guild_id) &&
-        (S = s.ZP.getGuildIconURL({
+        T = null == h ? void 0 : h.getAvatarURL(null == f ? void 0 : f.id, 40);
+    (null == T || m !== u.guild_id) &&
+        (T = s.ZP.getGuildIconURL({
             id: u.guild_id,
             icon: u.guild_icon,
             size: 40,
             canAnimate: !1
         }));
-    let T =
+    let S =
             (function (e) {
                 if (null == e) return !1;
                 let { height: t, width: n } = e;
@@ -58,9 +58,9 @@ function f(e) {
         authorId: null == u ? void 0 : u.author_id,
         authorName: I,
         channelName: null == _ ? void 0 : _.name,
-        avatarUrl: S,
+        avatarUrl: T,
         shouldShowBlurredThumbnailImage: v,
-        shouldContainMediaWithBackground: T,
+        shouldContainMediaWithBackground: S,
         shouldSpoiler: y,
         obscureAwaitingScan: !1,
         flags: u.flags,

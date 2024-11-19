@@ -18,8 +18,8 @@ var i = n(512969),
     v = n(430824),
     b = n(306680),
     I = n(944486),
-    S = n(914010),
-    T = n(70956),
+    T = n(914010),
+    S = n(70956),
     y = n(198620),
     A = n(981631),
     N = n(176505),
@@ -132,7 +132,7 @@ function D(e) {
         }
     }
 }
-let L = 90 * T.Z.Millis.DAY,
+let L = 90 * S.Z.Millis.DAY,
     x = 'viewedThreadIds';
 function w() {
     let e = I.Z.getChannelId();
@@ -198,14 +198,14 @@ function U(e, t) {
             messageId: g.ZP.getCurrentSidebarMessageId(t)
         });
 }
-function G() {
+function B() {
     let e = I.Z.getChannelId(),
-        t = S.Z.getGuildId();
+        t = T.Z.getGuildId();
     if (null == t || null == e) return;
     let n = g.ZP.getSidebarState(e);
     if ((null == n ? void 0 : n.type) !== h.tI.VIEW_CHANNEL) U(t, e);
 }
-function B(e) {
+function G(e) {
     let { guildId: t, channelId: n, context: r } = e;
     r === A.e3s &&
         (D({
@@ -243,7 +243,7 @@ function j(e) {
     let { channelId: n, jump: r, isStale: i, isPreview: a = !1 } = e;
     if (a) return;
     let s = null !== (t = V[n]) && void 0 !== t ? t : 0;
-    if (Date.now() - s < 10 * T.Z.Millis.SECOND) return;
+    if (Date.now() - s < 10 * S.Z.Millis.SECOND) return;
     V[n] = Date.now();
     let o = I.Z.getChannelId(),
         l = g.ZP.getCurrentSidebarChannelId(o),
@@ -286,7 +286,7 @@ class W extends d.Z {
         super(...e),
             R(this, 'fetchMessages', D),
             R(this, 'loadSelectedChannelIfNecessary', M),
-            R(this, 'stores', new Map().set(g.ZP, G)),
+            R(this, 'stores', new Map().set(g.ZP, B)),
             R(this, 'actions', {
                 APP_STATE_UPDATE: Y,
                 OVERLAY_INITIALIZE: w,
@@ -295,7 +295,7 @@ class W extends d.Z {
                 THREAD_CREATE: Z,
                 THREAD_LIST_SYNC: () => M(),
                 CHANNEL_CREATE: Z,
-                CHANNEL_PRELOAD: B,
+                CHANNEL_PRELOAD: G,
                 GUILD_CREATE: () => M(),
                 MESSAGE_END_EDIT: F,
                 LOAD_MESSAGES_SUCCESS: j,

@@ -268,12 +268,12 @@ var p = function () {
 function I(e, t) {
     return e === t ? e : Math.random() * (t - e + 1) + e;
 }
-function S(e) {
+function T(e) {
     var t = Math.floor(I(0, e.length - 1));
     return [e[t], t];
 }
-function T(e, t) {
-    return S([e, t])[0];
+function S(e, t) {
+    return T([e, t])[0];
 }
 function y(e) {
     return 'number' == typeof e
@@ -328,7 +328,7 @@ function N(e) {
                     g = y(e.maxDuration),
                     A = y(e.minDirection),
                     N = y(e.maxDirection);
-                return new m(new b(I(n.x, r.x), I(d.x, f.x), I(_.x, p.x), I(h.x, g.x), T(A.x, N.x), S(e.easingFunctions)[0]), new b(I(n.y, r.y), I(d.y, f.y), I(_.y, p.y), I(h.y, g.y), T(A.y, N.y), S(e.easingFunctions)[0]));
+                return new m(new b(I(n.x, r.x), I(d.x, f.x), I(_.x, p.x), I(h.x, g.x), S(A.x, N.x), T(e.easingFunctions)[0]), new b(I(n.y, r.y), I(d.y, f.y), I(_.y, p.y), I(h.y, g.y), S(A.y, N.y), T(e.easingFunctions)[0]));
         }
     })(p(p({}, e), { valueType: 'Vector2' }));
 }
@@ -424,7 +424,7 @@ var C = r.forwardRef(function (e, t) {
                                 });
                                 if (-1 !== n) return [e, n];
                             }
-                            return S(t.sprites);
+                            return T(t.sprites);
                         })(d, l))[0]),
                         (R = y[1]),
                         (O = (function (e, t, n) {
@@ -479,7 +479,7 @@ var C = r.forwardRef(function (e, t) {
                                                 m = A(e.maxDuration),
                                                 y = A(e.minDirection),
                                                 N = A(e.maxDirection);
-                                            return new g(new b(I(n.x, r.x), I(d.x, f.x), I(_.x, p.x), I(h.x, m.x), T(y.x, N.x), S(e.easingFunctions)[0]), new b(I(n.y, r.y), I(d.y, f.y), I(_.y, p.y), I(h.y, m.y), T(y.y, N.y), S(e.easingFunctions)[0]), new b(I(n.z, r.z), I(d.z, f.z), I(_.z, p.z), I(h.z, m.z), T(y.z, N.z), S(e.easingFunctions)[0]));
+                                            return new g(new b(I(n.x, r.x), I(d.x, f.x), I(_.x, p.x), I(h.x, m.x), S(y.x, N.x), T(e.easingFunctions)[0]), new b(I(n.y, r.y), I(d.y, f.y), I(_.y, p.y), I(h.y, m.y), S(y.y, N.y), T(e.easingFunctions)[0]), new b(I(n.z, r.z), I(d.z, f.z), I(_.z, p.z), I(h.z, m.z), S(y.z, N.z), T(e.easingFunctions)[0]));
                                     }
                                 })(p(p({}, D), { valueType: 'Vector3' }))),
                             dragCoefficient: N(h.dragCoefficient),
@@ -499,7 +499,7 @@ var C = r.forwardRef(function (e, t) {
                                         case 'oscillating':
                                             return new b(e.value, e.start, e.final, e.duration, e.direction, e.easingFunction);
                                         case 'oscillating-random':
-                                            return new b(I(e.minValue, e.maxValue), I(e.minStart, e.maxStart), I(e.minFinal, e.maxFinal), I(e.minDuration, e.maxDuration), T(e.minDirection, e.maxDirection), S(e.easingFunctions)[0]);
+                                            return new b(I(e.minValue, e.maxValue), I(e.minStart, e.maxStart), I(e.minFinal, e.maxFinal), I(e.minDuration, e.maxDuration), S(e.minDirection, e.maxDirection), T(e.easingFunctions)[0]);
                                     }
                                 })(p(p({}, L), { valueType: 'number' }))),
                             airResistanceArea: N(h.airResistanceArea),
@@ -534,7 +534,7 @@ var C = r.forwardRef(function (e, t) {
         },
         [M, w, P, k, U]
     );
-    var G = r.useCallback(
+    var B = r.useCallback(
             function (e, t) {
                 var n,
                     r,
@@ -586,29 +586,29 @@ var C = r.forwardRef(function (e, t) {
             },
             [s]
         ),
-        B = r.useCallback(
+        G = r.useCallback(
             function (e) {
-                return G(e, { clickHandler: l });
+                return B(e, { clickHandler: l });
             },
-            [G, l]
+            [B, l]
         ),
         Z = r.useCallback(
             function (e) {
-                return G(e, { clickHandler: d });
+                return B(e, { clickHandler: d });
             },
-            [G, d]
+            [B, d]
         ),
         F = r.useCallback(
             function (e) {
-                return G(e, { mouseHandler: f });
+                return B(e, { mouseHandler: f });
             },
-            [G, f]
+            [B, f]
         ),
         V = r.useCallback(
             function (e) {
-                return G(e, { mouseHandler: _ });
+                return B(e, { mouseHandler: _ });
             },
-            [G, _]
+            [B, _]
         );
     return (
         r.useEffect(
@@ -617,16 +617,16 @@ var C = r.forwardRef(function (e, t) {
                     null != n && window.addEventListener(e, t);
                 };
                 return (
-                    e('click', B, l),
+                    e('click', G, l),
                     e('mousedown', Z, d),
                     e('mousemove', F, f),
                     e('mouseup', V, _),
                     function () {
-                        window.removeEventListener('click', B), window.removeEventListener('mousedown', Z), window.removeEventListener('mousemove', F), window.removeEventListener('mouseup', F);
+                        window.removeEventListener('click', G), window.removeEventListener('mousedown', Z), window.removeEventListener('mousemove', F), window.removeEventListener('mouseup', F);
                     }
                 );
             },
-            [B, Z, F, V, l, d, f, _]
+            [G, Z, F, V, l, d, f, _]
         ),
         r.useEffect(function () {
             var e = C.current,

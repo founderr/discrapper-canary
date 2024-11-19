@@ -6,7 +6,7 @@ n.d(t, {
         return L;
     },
     V7: function () {
-        return T;
+        return S;
     },
     VF: function () {
         return D;
@@ -18,7 +18,7 @@ n.d(t, {
         return R;
     },
     dF: function () {
-        return S;
+        return T;
     },
     dX: function () {
         return x;
@@ -108,7 +108,7 @@ function I(e, t, n) {
         })
     );
 }
-function S(e, t, n) {
+function T(e, t, n) {
     return b(
         t,
         n,
@@ -118,7 +118,7 @@ function S(e, t, n) {
         })
     );
 }
-function T(e) {
+function S(e) {
     return y(s.Z.getChannel(e));
 }
 function y(e) {

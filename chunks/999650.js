@@ -33,8 +33,8 @@ var r,
     v = n(483360),
     b = n(226951),
     I = n(51144),
-    S = n(981631),
-    T = n(388032);
+    T = n(981631),
+    S = n(388032);
 function y() {
     return new Set(
         c()
@@ -69,11 +69,11 @@ function O(e, t, n) {
 }
 function D() {
     return {
-        [T.intl.string(T.t.HYiVER)]: () => R('day'),
-        [T.intl.string(T.t.cu86KC)]: () => R('day', -1),
-        [T.intl.string(T.t['FvBj//'])]: () => R('week'),
-        [T.intl.string(T.t['20uWCw'])]: () => R('month'),
-        [T.intl.string(T.t['dXC/ho'])]: () => R('year')
+        [S.intl.string(S.t.HYiVER)]: () => R('day'),
+        [S.intl.string(S.t.cu86KC)]: () => R('day', -1),
+        [S.intl.string(S.t['FvBj//'])]: () => R('week'),
+        [S.intl.string(S.t['20uWCw'])]: () => R('month'),
+        [S.intl.string(S.t['dXC/ho'])]: () => R('year')
     };
 }
 let L = RegExp('(?:\\s*('.concat('([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})', '|').concat('([0-9]{4})-([0-9]{1,2})', '|').concat('\\d{4}', '|').concat('([^\\d\\s]+)', '))'), 'i'),
@@ -88,13 +88,13 @@ function P(e) {
     let t;
     let n = e.getMatch(1),
         r = (e) => (null != e ? (null == e ? void 0 : e.id) : null);
-    return null != (t = S.Xyh.test(n) ? n : n === S.ME ? r(E.default.getCurrentUser()) : null != e.getMatch(4) ? r(E.default.findByTag(e.getMatch(4))) : r(E.default.findByTag(e.getMatch(2), e.getMatch(3)))) && (e.setData('userId', t), !0);
+    return null != (t = T.Xyh.test(n) ? n : n === T.ME ? r(E.default.getCurrentUser()) : null != e.getMatch(4) ? r(E.default.findByTag(e.getMatch(4))) : r(E.default.findByTag(e.getMatch(2), e.getMatch(3)))) && (e.setData('userId', t), !0);
 }
 function k(e, t) {
     let n, r;
     let i = e.getFullMatch().trim().toLowerCase(),
         a = D()[i];
-    return null != a ? ([n, r] = a()) : y().has(i) ? ([n, r] = O(i, 'MMMM', 'month')) : A().has(i) ? ([n, r] = O(i, 'dddd', 'day')) : N().has(i) ? ([n, r] = O(i, 'YYYY', 'year')) : ([n, r] = O(i, S.b2L, 'day')), !!(n.isValid() && r.isValid()) && ('before' === t ? ((r = n), (n = null)) : 'after' === t && ((n = r), (r = null)), e.setData('start', n), e.setData('end', r), !0);
+    return null != a ? ([n, r] = a()) : y().has(i) ? ([n, r] = O(i, 'MMMM', 'month')) : A().has(i) ? ([n, r] = O(i, 'dddd', 'day')) : N().has(i) ? ([n, r] = O(i, 'YYYY', 'year')) : ([n, r] = O(i, T.b2L, 'day')), !!(n.isValid() && r.isValid()) && ('before' === t ? ((r = n), (n = null)) : 'after' === t && ((n = r), (r = null)), e.setData('start', n), e.setData('end', r), !0);
 }
 function U(e) {
     let t = e.getMatch(1),
@@ -114,28 +114,28 @@ function U(e) {
             .value();
     return null != a && (e.setData('channel', a), !0);
 }
-function G(e) {
+function B(e) {
     let t = {
-        [T.intl.string(T.t.ZNR2fn)]: 'link',
-        [T.intl.string(T.t['20uQR0'])]: 'embed',
-        [T.intl.string(T.t.L4lxyM)]: 'poll',
-        [T.intl.string(T.t.nrpA5O)]: 'snapshot',
-        [T.intl.string(T.t['AV/v6u'])]: 'file',
-        [T.intl.string(T.t.XM9XGB)]: 'video',
-        [T.intl.string(T.t.TNLcp6)]: 'image',
-        [T.intl.string(T.t.F8Wf0d)]: 'sound',
-        [T.intl.string(T.t.PJgX2t)]: 'sticker'
+        [S.intl.string(S.t.ZNR2fn)]: 'link',
+        [S.intl.string(S.t['20uQR0'])]: 'embed',
+        [S.intl.string(S.t.L4lxyM)]: 'poll',
+        [S.intl.string(S.t.nrpA5O)]: 'snapshot',
+        [S.intl.string(S.t['AV/v6u'])]: 'file',
+        [S.intl.string(S.t.XM9XGB)]: 'video',
+        [S.intl.string(S.t.TNLcp6)]: 'image',
+        [S.intl.string(S.t.F8Wf0d)]: 'sound',
+        [S.intl.string(S.t.PJgX2t)]: 'sticker'
     }[e.getMatch(1)];
     return null != t && '' !== t && (e.setData('has', t), !0);
 }
-function B() {
+function G() {
     return [...Array.from(y()), ...Array.from(A()), ...Array.from(N()), ...Object.keys(D())];
 }
 function Z() {
-    return l().sample(B());
+    return l().sample(G());
 }
 function F(e, t, n) {
-    return V(e, t, B()).map((e) => ({
+    return V(e, t, G()).map((e) => ({
         ...e,
         group: n,
         key: ''.concat(n, '-').concat(e.text)
@@ -160,19 +160,19 @@ function j(e, t) {
             request: i
         };
     switch (a) {
-        case S.aib.GUILD:
+        case T.aib.GUILD:
             n = v.ZP.queryGuildUsers({
                 ...s,
                 guildId: t
             });
             break;
-        case S.aib.CHANNEL:
+        case T.aib.CHANNEL:
             n = v.ZP.queryChannelUsers({
                 ...s,
                 channelId: t
             });
             break;
-        case S.aib.DMS:
+        case T.aib.DMS:
             n = v.ZP.queryUsers(e, r, !0, i, () => !0);
             break;
         default:
@@ -192,7 +192,7 @@ function j(e, t) {
         });
 }
 function H() {
-    return p.Z.getSearchType() === S.aib.GUILD;
+    return p.Z.getSearchType() === T.aib.GUILD;
 }
 function Y() {
     return !g.Z.hidePersonalInformation;
@@ -205,128 +205,128 @@ function z() {
         K,
         (function () {
             let { canForwardMessages: e } = (0, d.WT)({ location: 'SearchTokens' }, { autoTrackExposure: !1 }),
-                t = e ? [T.intl.string(T.t.nrpA5O)] : [],
-                n = [T.intl.string(T.t.ZNR2fn), T.intl.string(T.t['20uQR0']), T.intl.string(T.t.L4lxyM), T.intl.string(T.t['AV/v6u']), T.intl.string(T.t.XM9XGB), T.intl.string(T.t.TNLcp6), T.intl.string(T.t.F8Wf0d), T.intl.string(T.t.PJgX2t), ...t];
+                t = e ? [S.intl.string(S.t.nrpA5O)] : [],
+                n = [S.intl.string(S.t.ZNR2fn), S.intl.string(S.t['20uQR0']), S.intl.string(S.t.L4lxyM), S.intl.string(S.t['AV/v6u']), S.intl.string(S.t.XM9XGB), S.intl.string(S.t.TNLcp6), S.intl.string(S.t.F8Wf0d), S.intl.string(S.t.PJgX2t), ...t];
             return {
-                [S.dCx.FILTER_FROM]: {
-                    regex: M(T.intl.string(T.t['1TUdFh'])),
+                [T.dCx.FILTER_FROM]: {
+                    regex: M(S.intl.string(S.t['1TUdFh'])),
                     componentType: 'FILTER',
-                    key: w(T.intl.string(T.t['1TUdFh'])),
-                    plainText: T.intl.string(T.t['1TUdFh']),
+                    key: w(S.intl.string(S.t['1TUdFh'])),
+                    plainText: S.intl.string(S.t['1TUdFh']),
                     validator: Y,
                     getAutocompletions: j
                 },
-                [S.dCx.ANSWER_USERNAME_FROM]: {
-                    follows: [S.dCx.FILTER_FROM],
+                [T.dCx.ANSWER_USERNAME_FROM]: {
+                    follows: [T.dCx.FILTER_FROM],
                     regex: W,
                     validator: P,
                     mutable: !0,
                     componentType: 'ANSWER',
                     queryKey: 'author_id'
                 },
-                [S.dCx.FILTER_MENTIONS]: {
-                    regex: M(T.intl.string(T.t.i96lOz)),
+                [T.dCx.FILTER_MENTIONS]: {
+                    regex: M(S.intl.string(S.t.i96lOz)),
                     componentType: 'FILTER',
-                    key: w(T.intl.string(T.t.i96lOz)),
-                    plainText: T.intl.string(T.t.i96lOz),
+                    key: w(S.intl.string(S.t.i96lOz)),
+                    plainText: S.intl.string(S.t.i96lOz),
                     validator: Y,
                     getAutocompletions: j
                 },
-                [S.dCx.ANSWER_USERNAME_MENTIONS]: {
-                    follows: [S.dCx.FILTER_MENTIONS],
+                [T.dCx.ANSWER_USERNAME_MENTIONS]: {
+                    follows: [T.dCx.FILTER_MENTIONS],
                     regex: W,
                     validator: P,
                     mutable: !0,
                     componentType: 'ANSWER',
                     queryKey: 'mentions'
                 },
-                [S.dCx.FILTER_HAS]: {
-                    regex: M(T.intl.string(T.t.CqCvio)),
+                [T.dCx.FILTER_HAS]: {
+                    regex: M(S.intl.string(S.t.CqCvio)),
                     componentType: 'FILTER',
-                    key: w(T.intl.string(T.t.CqCvio)),
-                    plainText: T.intl.string(T.t.CqCvio),
+                    key: w(S.intl.string(S.t.CqCvio)),
+                    plainText: S.intl.string(S.t.CqCvio),
                     getAutocompletions: (e, t, r) => V(e, r, n)
                 },
-                [S.dCx.ANSWER_HAS]: {
+                [T.dCx.ANSWER_HAS]: {
                     regex: RegExp('(?:\\s*-?('.concat(n.map((e) => b.Z.escape(e)).join('|'), '))'), 'i'),
-                    follows: [S.dCx.FILTER_HAS],
-                    validator: G,
+                    follows: [T.dCx.FILTER_HAS],
+                    validator: B,
                     componentType: 'ANSWER',
                     queryKey: 'has'
                 },
-                [S.dCx.FILTER_FILE_TYPE]: {
-                    regex: M(T.intl.string(T.t.TMNjFh)),
-                    key: w(T.intl.string(T.t.TMNjFh)),
-                    plainText: T.intl.string(T.t.TMNjFh),
+                [T.dCx.FILTER_FILE_TYPE]: {
+                    regex: M(S.intl.string(S.t.TMNjFh)),
+                    key: w(S.intl.string(S.t.TMNjFh)),
+                    plainText: S.intl.string(S.t.TMNjFh),
                     componentType: 'FILTER'
                 },
-                [S.dCx.ANSWER_FILE_TYPE]: {
+                [T.dCx.ANSWER_FILE_TYPE]: {
                     regex: /(?:\s*([^\s]+))/,
-                    follows: [S.dCx.FILTER_FILE_TYPE],
+                    follows: [T.dCx.FILTER_FILE_TYPE],
                     mutable: !0,
                     componentType: 'ANSWER',
                     queryKey: 'attachment_extensions'
                 },
-                [S.dCx.FILTER_FILE_NAME]: {
-                    regex: M(T.intl.string(T.t['5xtLRE'])),
-                    key: w(T.intl.string(T.t['5xtLRE'])),
-                    plainText: T.intl.string(T.t['5xtLRE']),
+                [T.dCx.FILTER_FILE_NAME]: {
+                    regex: M(S.intl.string(S.t['5xtLRE'])),
+                    key: w(S.intl.string(S.t['5xtLRE'])),
+                    plainText: S.intl.string(S.t['5xtLRE']),
                     componentType: 'FILTER'
                 },
-                [S.dCx.ANSWER_FILE_NAME]: {
+                [T.dCx.ANSWER_FILE_NAME]: {
                     regex: /(?:\s*([^\s]+)(?=\s))/,
-                    follows: [S.dCx.FILTER_FILE_NAME],
+                    follows: [T.dCx.FILTER_FILE_NAME],
                     mutable: !0,
                     componentType: 'ANSWER',
                     queryKey: 'attachment_filename'
                 },
-                [S.dCx.FILTER_BEFORE]: {
-                    regex: M(T.intl.string(T.t['qZ+7BA'])),
+                [T.dCx.FILTER_BEFORE]: {
+                    regex: M(S.intl.string(S.t['qZ+7BA'])),
                     componentType: 'FILTER',
-                    key: w(T.intl.string(T.t['qZ+7BA'])),
-                    plainText: T.intl.string(T.t['qZ+7BA']),
-                    getAutocompletions: (e, t, n) => F(e, n, S.dCx.FILTER_BEFORE)
+                    key: w(S.intl.string(S.t['qZ+7BA'])),
+                    plainText: S.intl.string(S.t['qZ+7BA']),
+                    getAutocompletions: (e, t, n) => F(e, n, T.dCx.FILTER_BEFORE)
                 },
-                [S.dCx.FILTER_ON]: {
-                    regex: M('('.concat(T.intl.string(T.t.tIxkOj), '|').concat(T.intl.string(T.t.h2NzSU), ')')),
+                [T.dCx.FILTER_ON]: {
+                    regex: M('('.concat(S.intl.string(S.t.tIxkOj), '|').concat(S.intl.string(S.t.h2NzSU), ')')),
                     componentType: 'FILTER',
-                    key: w(T.intl.string(T.t.h2NzSU)),
-                    plainText: T.intl.string(T.t.h2NzSU),
-                    getAutocompletions: (e, t, n) => F(e, n, S.dCx.FILTER_ON)
+                    key: w(S.intl.string(S.t.h2NzSU)),
+                    plainText: S.intl.string(S.t.h2NzSU),
+                    getAutocompletions: (e, t, n) => F(e, n, T.dCx.FILTER_ON)
                 },
-                [S.dCx.FILTER_AFTER]: {
-                    regex: M(T.intl.string(T.t.KSDx7O)),
+                [T.dCx.FILTER_AFTER]: {
+                    regex: M(S.intl.string(S.t.KSDx7O)),
                     componentType: 'FILTER',
-                    key: w(T.intl.string(T.t.KSDx7O)),
-                    plainText: T.intl.string(T.t.KSDx7O),
-                    getAutocompletions: (e, t, n) => F(e, n, S.dCx.FILTER_AFTER)
+                    key: w(S.intl.string(S.t.KSDx7O)),
+                    plainText: S.intl.string(S.t.KSDx7O),
+                    getAutocompletions: (e, t, n) => F(e, n, T.dCx.FILTER_AFTER)
                 },
-                [S.dCx.ANSWER_BEFORE]: {
+                [T.dCx.ANSWER_BEFORE]: {
                     regex: L,
-                    follows: [S.dCx.FILTER_BEFORE],
+                    follows: [T.dCx.FILTER_BEFORE],
                     componentType: 'ANSWER',
                     mutable: !0,
                     validator: (e) => k(e, 'before')
                 },
-                [S.dCx.ANSWER_ON]: {
+                [T.dCx.ANSWER_ON]: {
                     regex: L,
-                    follows: [S.dCx.FILTER_ON],
+                    follows: [T.dCx.FILTER_ON],
                     componentType: 'ANSWER',
                     mutable: !0,
                     validator: (e) => k(e, 'on')
                 },
-                [S.dCx.ANSWER_AFTER]: {
+                [T.dCx.ANSWER_AFTER]: {
                     regex: L,
-                    follows: [S.dCx.FILTER_AFTER],
+                    follows: [T.dCx.FILTER_AFTER],
                     componentType: 'ANSWER',
                     mutable: !0,
                     validator: (e) => k(e, 'after')
                 },
-                [S.dCx.FILTER_IN]: {
-                    regex: M(T.intl.string(T.t.WNpFHR)),
+                [T.dCx.FILTER_IN]: {
+                    regex: M(S.intl.string(S.t.WNpFHR)),
                     componentType: 'FILTER',
-                    key: w(T.intl.string(T.t.WNpFHR)),
-                    plainText: T.intl.string(T.t.WNpFHR),
+                    key: w(S.intl.string(S.t.WNpFHR)),
+                    plainText: S.intl.string(S.t.WNpFHR),
                     validator: H,
                     getAutocompletions(e, t, n) {
                         '#' === e[0] && (e = e.substring(1));
@@ -367,25 +367,25 @@ function z() {
                             .value();
                     }
                 },
-                [S.dCx.ANSWER_IN]: {
+                [T.dCx.ANSWER_IN]: {
                     regex: /(?:\s*#?([^ ]+))/i,
                     mutable: !0,
-                    follows: [S.dCx.FILTER_IN],
+                    follows: [T.dCx.FILTER_IN],
                     componentType: 'ANSWER',
                     validator: U,
                     queryKey: 'channel_id'
                 },
-                [S.dCx.FILTER_PINNED]: {
-                    regex: M(T.intl.string(T.t['0B74eX'])),
+                [T.dCx.FILTER_PINNED]: {
+                    regex: M(S.intl.string(S.t['0B74eX'])),
                     componentType: 'FILTER',
-                    key: w(T.intl.string(T.t['0B74eX'])),
-                    plainText: T.intl.string(T.t['0B74eX']),
+                    key: w(S.intl.string(S.t['0B74eX'])),
+                    plainText: S.intl.string(S.t['0B74eX']),
                     getAutocompletions: () => [{ text: 'true' }, { text: 'false' }]
                 },
-                [S.dCx.ANSWER_PINNED]: {
+                [T.dCx.ANSWER_PINNED]: {
                     regex: x,
                     componentType: 'ANSWER',
-                    follows: [S.dCx.FILTER_PINNED],
+                    follows: [T.dCx.FILTER_PINNED],
                     queryKey: 'pinned',
                     validator: (e) => {
                         let t = e.getMatch(1);
@@ -400,7 +400,7 @@ function q(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.keys(K).length;
     return l()(K)
         .keys()
-        .filter((e) => S.TNx.test(e))
+        .filter((e) => T.TNx.test(e))
         .filter((e) => null != K[e].key)
         .map((e) => ({
             token: e,

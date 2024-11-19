@@ -29,8 +29,8 @@ var r = n(200651),
     E = n(7758);
 function v(e) {
     var t;
-    let { navId: n, variant: a = 'flexible', hideScroller: o = !1, className: f, children: v, onClose: b, onSelect: S } = e,
-        T = (function e(t) {
+    let { navId: n, variant: a = 'flexible', hideScroller: o = !1, className: f, children: v, onClose: b, onSelect: T } = e,
+        S = (function e(t) {
             return (function e(t) {
                 return null == t
                     ? []
@@ -149,10 +149,10 @@ function v(e) {
                         : t,
                 []
             );
-        })(T),
+        })(S),
         A = i.useRef([]);
     !l()(A.current, y) && (A.current = y);
-    let N = null === (t = T.find((e) => null != e.key)) || void 0 === t ? void 0 : t.key,
+    let N = null === (t = S.find((e) => null != e.key)) || void 0 === t ? void 0 : t.key,
         C = (0, u.ZP)({
             navId: n,
             items: A.current,
@@ -166,7 +166,7 @@ function v(e) {
     (0, c.T)(R);
     let O = o ? d.u2 : d.zJ;
     return (0, r.jsx)(m.r.Provider, {
-        value: S,
+        value: T,
         children: (0, r.jsx)('div', {
             className: s()(E.menu, E[a], f),
             ...C.getContainerProps(),
@@ -175,7 +175,7 @@ function v(e) {
             children: (0, r.jsxs)(O, {
                 className: E.scroller,
                 children: [
-                    0 === T.length &&
+                    0 === S.length &&
                         (0, r.jsx)(g.ck, {
                             disabled: !0,
                             label: () => (0, r.jsx)(I, {}),
@@ -184,7 +184,7 @@ function v(e) {
                             onFocus: () => {},
                             onClose: b
                         }),
-                    T.length > 0 &&
+                    S.length > 0 &&
                         (function e(t, n, i, a) {
                             let s = 0,
                                 o = [];
@@ -365,7 +365,7 @@ function v(e) {
                                 }
                                 return t;
                             }, []);
-                        })(T, C, [], b)
+                        })(S, C, [], b)
                 ]
             })
         })

@@ -18,8 +18,8 @@ var r,
     v = n(598077),
     b = n(386438),
     I = n(700785),
-    S = n(592125),
-    T = n(271383),
+    T = n(592125),
+    S = n(271383),
     y = n(430824),
     A = n(594174),
     N = n(981631),
@@ -48,10 +48,10 @@ function w(e) {
     let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         r = A.default.getCurrentUser();
     if (null == r) return I.Hn;
-    let i = S.Z.getChannel(e);
+    let i = T.Z.getChannel(e);
     if (null == i) return I.Hn;
     let a = i.getGuildId(),
-        s = null != a && (_.Z.isLurking(a) || (null === (t = T.ZP.getMember(a, r.id)) || void 0 === t ? void 0 : t.isPending));
+        s = null != a && (_.Z.isLurking(a) || (null === (t = S.ZP.getMember(a, r.id)) || void 0 === t ? void 0 : t.isPending));
     return !i.isScheduledForDeletion() && !s && l().isEmpty(i.permissionOverwrites) && null != a
         ? x(a)
         : I.uB({
@@ -78,10 +78,10 @@ function k() {
 function U() {
     k();
 }
-function G() {
+function B() {
     k();
 }
-function B(e) {
+function G(e) {
     var t;
     let { user: n } = e;
     if (n.id !== (null === (t = A.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) return !1;
@@ -97,7 +97,7 @@ function F(e) {
 function V(e) {
     let { guildId: t } = e;
     delete R[t];
-    let n = S.Z.getMutableBasicGuildChannelsForGuild(t);
+    let n = T.Z.getMutableBasicGuildChannelsForGuild(t);
     l().forEach(n, (e) => {
         delete O[e.id];
     }),
@@ -106,7 +106,7 @@ function V(e) {
 }
 function j(e) {
     let { instance: t } = e,
-        n = S.Z.getChannel(t.channel_id);
+        n = T.Z.getChannel(t.channel_id);
     if (null == n) return !1;
     let r = A.default.getCurrentUser(),
         i = I.uB({
@@ -119,7 +119,7 @@ function j(e) {
 function H(e) {
     let { guildId: t } = e;
     delete R[t];
-    let n = S.Z.getMutableBasicGuildChannelsForGuild(t);
+    let n = T.Z.getMutableBasicGuildChannelsForGuild(t);
     l().forEach(n, (e) => {
         delete O[e.id];
     }),
@@ -130,7 +130,7 @@ function Y(e, t, n, r) {
     let i = I.Hn;
     if (e instanceof g.Sf) {
         if (g.Ec.has(e.type)) {
-            let i = S.Z.getChannel(e.parent_id);
+            let i = T.Z.getChannel(e.parent_id);
             return null == i ? I.Hn : I.Og(e, Y(i, t, n, r), h.Z.hasJoined(e.id));
         }
         i = M(e.id);
@@ -148,7 +148,7 @@ function Y(e, t, n, r) {
 }
 class W extends (r = c.ZP.Store) {
     initialize() {
-        this.waitFor(A.default, y.Z, S.Z, T.ZP, h.Z, p.Z, f.Z);
+        this.waitFor(A.default, y.Z, T.Z, S.ZP, h.Z, p.Z, f.Z);
     }
     getChannelPermissions(e) {
         return g.Ec.has(e.type) ? w(e.id) : M(e.id);
@@ -183,7 +183,7 @@ class W extends (r = c.ZP.Store) {
         return u.Db(x(e.id), I.ym);
     }
     canWithPartialContext(e, t) {
-        return 'channelId' in t && 'string' == typeof t.channelId ? this.can(e, S.Z.getChannel(t.channelId)) : 'guildId' in t && 'string' == typeof t.guildId && this.can(e, y.Z.getGuild(t.guildId));
+        return 'channelId' in t && 'string' == typeof t.channelId ? this.can(e, T.Z.getChannel(t.channelId)) : 'guildId' in t && 'string' == typeof t.guildId && this.can(e, y.Z.getGuild(t.guildId));
     }
     can(e, t, n, r, i) {
         let a = Y(t, n, r, i);
@@ -251,17 +251,17 @@ function K() {
         CONNECTION_CLOSED: function () {
             K();
         },
-        GUILD_CREATE: G,
-        GUILD_UPDATE: G,
-        GUILD_DELETE: G,
-        GUILD_MEMBER_ADD: B,
-        GUILD_MEMBER_UPDATE: B,
-        CURRENT_USER_UPDATE: B,
+        GUILD_CREATE: B,
+        GUILD_UPDATE: B,
+        GUILD_DELETE: B,
+        GUILD_MEMBER_ADD: G,
+        GUILD_MEMBER_UPDATE: G,
+        CURRENT_USER_UPDATE: G,
         CHANNEL_CREATE: function (e) {
             let {
                     channel: { id: t }
                 } = e,
-                n = S.Z.getChannel(t);
+                n = T.Z.getChannel(t);
             if (null == n || n.isPrivate()) return !1;
             let r = A.default.getCurrentUser(),
                 i = I.uB({
@@ -280,7 +280,7 @@ function K() {
             let { channels: t } = e,
                 n = !1;
             for (let { id: e } of t) {
-                let t = S.Z.getChannel(e);
+                let t = T.Z.getChannel(e);
                 if (null == t || t.isPrivate()) continue;
                 let r = A.default.getCurrentUser(),
                     i = I.uB({

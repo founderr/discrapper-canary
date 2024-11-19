@@ -6,10 +6,10 @@ n.d(t, {
         return _;
     },
     QX: function () {
-        return T;
+        return S;
     },
     TD: function () {
-        return S;
+        return T;
     },
     Xf: function () {
         return g;
@@ -103,7 +103,7 @@ let I = [
         millisecondsInUnit: 1000
     }
 ];
-function S(e, t) {
+function T(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = {
             days: 0,
@@ -121,7 +121,7 @@ function S(e, t) {
         r
     );
 }
-function T(e, t) {
+function S(e, t) {
     return e.days > 0
         ? l.intl.formatToPlainString(t.days, {
               days: e.days,

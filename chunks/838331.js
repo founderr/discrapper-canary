@@ -3,7 +3,7 @@ n.d(t, {
         return v;
     },
     hQ: function () {
-        return T;
+        return S;
     },
     lo: function () {
         return A;
@@ -56,14 +56,14 @@ function b(e) {
 function I(e) {
     return String(e);
 }
-let S = i.createContext({
+let T = i.createContext({
     activeDescendant: null,
     selected: new Set(),
     setSelected: () => null,
     itemToString: I
 });
-function T(e) {
-    let { placeholder: t, children: n, value: a, onChange: u, className: c, listClassName: E, 'aria-label': v, multiSelect: b = !1, autoFocus: T = !1, maxVisibleItems: y = 5, itemToString: A = I, showScrollbar: N = !1 } = e,
+function S(e) {
+    let { placeholder: t, children: n, value: a, onChange: u, className: c, listClassName: E, 'aria-label': v, multiSelect: b = !1, autoFocus: S = !1, maxVisibleItems: y = 5, itemToString: A = I, showScrollbar: N = !1 } = e,
         [C, R] = i.useState(''),
         [O] = i.useState(!0),
         [D, L] = i.useState(null),
@@ -91,7 +91,7 @@ function T(e) {
                 }),
             []
         ),
-        G = i.useCallback(
+        B = i.useCallback(
             () =>
                 new Promise((e) => {
                     let t = w.current;
@@ -100,7 +100,7 @@ function T(e) {
                 }),
             []
         ),
-        B = i.useCallback((e, t) => {
+        G = i.useCallback((e, t) => {
             L(t);
             let n = document.querySelector(e),
                 r = w.current;
@@ -111,8 +111,8 @@ function T(e) {
             isEnabled: !0,
             useVirtualFocus: !0,
             scrollToStart: U,
-            scrollToEnd: G,
-            setFocus: B
+            scrollToEnd: B,
+            setFocus: G
         }),
         F = N ? d.Tv : d.lW;
     return (0, r.jsx)(l.bG, {
@@ -131,7 +131,7 @@ function T(e) {
                     className: s()(m.combobox, c),
                     children: [
                         (0, r.jsx)(f.E, {
-                            autoFocus: T,
+                            autoFocus: S,
                             size: f.E.Sizes.MEDIUM,
                             placeholder: t,
                             query: C,
@@ -163,7 +163,7 @@ function T(e) {
                                               })
                                           ]
                                       })
-                                    : (0, r.jsx)(S.Provider, {
+                                    : (0, r.jsx)(T.Provider, {
                                           value: {
                                               activeDescendant: D,
                                               selected: a,
@@ -198,11 +198,11 @@ let y = i.createContext(null);
 function A(e) {
     var t;
     let { value: n, children: a, disabled: o = !1, selectedColor: u = E.STANDARD, ...d } = e,
-        { activeDescendant: f, selected: _, setSelected: p, itemToString: h } = i.useContext(S),
+        { activeDescendant: f, selected: _, setSelected: p, itemToString: h } = i.useContext(T),
         v = h(n),
         b = f === v,
         I = null !== (t = null == d ? void 0 : d.selected) && void 0 !== t ? t : _.has(n),
-        T = (0, l.JA)(v);
+        S = (0, l.JA)(v);
     return (0, r.jsx)(c.P, {
         tag: 'li',
         id: v,
@@ -213,7 +213,7 @@ function A(e) {
             [u]: I,
             [m.disabled]: o
         }),
-        ...T,
+        ...S,
         role: 'option',
         'aria-selected': I,
         'aria-disabled': o,
@@ -240,7 +240,7 @@ function A(e) {
     }),
     (A.Checkbox = function (e) {
         let { checked: t } = e,
-            { selected: n } = i.useContext(S),
+            { selected: n } = i.useContext(T),
             a = i.useContext(y);
         return (0, r.jsx)('span', {
             className: m.itemCheckbox,
@@ -253,7 +253,7 @@ function A(e) {
         });
     }),
     (A.Checkmark = function () {
-        let { selected: e } = i.useContext(S),
+        let { selected: e } = i.useContext(T),
             t = i.useContext(y);
         return e.has(t)
             ? (0, r.jsx)('span', {

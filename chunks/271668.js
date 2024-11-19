@@ -18,8 +18,8 @@ var r = n(200651),
     v = n(555573),
     b = n(10718),
     I = n(367790),
-    S = n(895924),
-    T = n(581364),
+    T = n(895924),
+    S = n(581364),
     y = n(56801),
     A = n(342687),
     N = n(826298),
@@ -41,7 +41,7 @@ t.Z = i.forwardRef(function (e, t) {
         l = i.useRef(0),
         [P, k] = i.useState(0),
         U = i.useRef(null),
-        [G, B] = i.useState(!1),
+        [B, G] = i.useState(!1),
         Z = m.Xn.useStore((e) => e.activeCategoryIndex);
     i.useEffect(() => {
         (0, d.yw)(R.rMx.APPLICATION_COMMAND_BROWSER_OPENED);
@@ -94,8 +94,8 @@ t.Z = i.forwardRef(function (e, t) {
     let X = i.useCallback((e) => (e !== V.length - 1 || H ? 16 : 0), [V.length, H]),
         J = j.map((e) => e.data.length);
     i.useEffect(() => {
-        null != U.current && G && null != P && U.current.scrollRowIntoView(P);
-    }, [G, P]),
+        null != U.current && B && null != P && U.current.scrollRowIntoView(P);
+    }, [B, P]),
         i.useLayoutEffect(() => {
             if (null != W) {
                 var e;
@@ -117,7 +117,7 @@ t.Z = i.forwardRef(function (e, t) {
                     channelId: n.id,
                     command: e,
                     section: t,
-                    location: S.Vh.DISCOVERY,
+                    location: T.Vh.DISCOVERY,
                     triggerSection: r
                 });
             },
@@ -135,7 +135,7 @@ t.Z = i.forwardRef(function (e, t) {
                     if (((t = n), P < (n += e.data.length))) {
                         let n = e.data[P - t],
                             r = F.find((e) => e.id === n.applicationId);
-                        ee(n, r, (0, T.tI)(e.section));
+                        ee(n, r, (0, S.tI)(e.section));
                         break;
                     }
                 return !0;
@@ -145,7 +145,7 @@ t.Z = i.forwardRef(function (e, t) {
                 let t = H ? 7 : 0,
                     n = Y.length + t,
                     r = null == P ? 0 : P + e;
-                return r >= n ? (r = n - 1) : r < 0 && (r = 0), k(r), B(!0), !0;
+                return r >= n ? (r = n - 1) : r < 0 && (r = 0), k(r), G(!0), !0;
             }
         }),
         [Y.length, j, H, F, ee, P]
@@ -206,7 +206,7 @@ t.Z = i.forwardRef(function (e, t) {
                 let a = j[t.sectionIndex],
                     s = a.data[t.sectionRowIndex],
                     o = ''.concat(a.section.id, ':').concat(null !== (i = null == s ? void 0 : s.id) && void 0 !== i ? i : e);
-                if (null == s || (a.section.id !== s.applicationId && a.section.id !== C.bi.FRECENCY) || s.inputType === S.iw.PLACEHOLDER) return (0, r.jsx)(A.Z, {}, o);
+                if (null == s || (a.section.id !== s.applicationId && a.section.id !== C.bi.FRECENCY) || s.inputType === T.iw.PLACEHOLDER) return (0, r.jsx)(A.Z, {}, o);
                 let l = F.find((e) => e.id === s.applicationId);
                 return (0, r.jsx)(
                     f.ZP.NewCommand,
@@ -218,9 +218,9 @@ t.Z = i.forwardRef(function (e, t) {
                         selected: P === e,
                         showImage: a.section.id !== s.applicationId,
                         section: l,
-                        onClick: () => ee(s, l, (0, T.tI)(a.section)),
+                        onClick: () => ee(s, l, (0, S.tI)(a.section)),
                         onHover: () => {
-                            k(null), B(!1);
+                            k(null), G(!1);
                         }
                     },
                     o

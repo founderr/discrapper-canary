@@ -101,25 +101,25 @@ e.exports = function (e) {
             function I(e, t, n) {
                 (i(e).lastWidth = t), (i(e).lastHeight = n);
             }
-            function S() {
+            function T() {
                 return 2 * s.width + 1;
             }
-            function T() {
+            function S() {
                 return 2 * s.height + 1;
             }
             function y(e) {
-                return e + 10 + S();
+                return e + 10 + T();
             }
             function A(e) {
-                return e + 10 + T();
+                return e + 10 + S();
             }
             function N(e, t, n) {
                 var r = f(e),
                     i = _(e),
-                    a = t + 10 + S(),
-                    s = n + 10 + T(),
-                    o = 2 * t + S(),
-                    l = 2 * n + T();
+                    a = t + 10 + T(),
+                    s = n + 10 + S(),
+                    o = 2 * t + T(),
+                    l = 2 * n + S();
                 (r.scrollLeft = a), (r.scrollTop = s), (i.scrollLeft = o), (i.scrollTop = l);
             }
             function C() {
@@ -164,8 +164,8 @@ e.exports = function (e) {
                     v = u(['position: absolute', 'flex: none', 'overflow: scroll', 'z-index: -1', 'visibility: hidden', 'width: 100%', 'height: 100%']),
                     b = u(['position: absolute', 'left: 0', 'top: 0']),
                     I = u(['position: absolute', 'width: 200%', 'height: 200%']),
-                    S = document.createElement('div'),
                     T = document.createElement('div'),
+                    S = document.createElement('div'),
                     y = document.createElement('div'),
                     A = document.createElement('div'),
                     N = document.createElement('div'),
@@ -178,13 +178,13 @@ e.exports = function (e) {
                     var e = i(l);
                     e && e.onShrink ? e.onShrink() : g('Aborting shrink scroll handler: element has been uninstalled');
                 }
-                (S.dir = 'ltr'), (S.style.cssText = h), (S.className = o), (T.className = o), (T.style.cssText = m), (y.style.cssText = E), (A.style.cssText = b), (N.style.cssText = v), (R.style.cssText = I), y.appendChild(A), N.appendChild(R), T.appendChild(y), T.appendChild(N), S.appendChild(T), f.appendChild(S), c(y, 'scroll', O), c(N, 'scroll', D), (i(l).onExpandScroll = O), (i(l).onShrinkScroll = D);
+                (T.dir = 'ltr'), (T.style.cssText = h), (T.className = o), (S.className = o), (S.style.cssText = m), (y.style.cssText = E), (A.style.cssText = b), (N.style.cssText = v), (R.style.cssText = I), y.appendChild(A), N.appendChild(R), S.appendChild(y), S.appendChild(N), T.appendChild(S), f.appendChild(T), c(y, 'scroll', O), c(N, 'scroll', D), (i(l).onExpandScroll = O), (i(l).onShrinkScroll = D);
             }
             function O() {
                 function s(t, n, r) {
                     var i = f(t).childNodes[0],
-                        a = n + 10 + S(),
-                        s = r + 10 + T();
+                        a = n + 10 + T(),
+                        s = r + 10 + S();
                     i.style.setProperty('width', a + 'px', e.important ? 'important' : ''), i.style.setProperty('height', s + 'px', e.important ? 'important' : '');
                 }
                 function o(r) {

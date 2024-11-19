@@ -26,12 +26,12 @@ var r = n(200651),
 function E(e) {
     let { url: t, className: n, style: a, onLoad: s, shouldRefocus: g, queryParams: E, allowPopups: v = !1, referrerPolicy: b = 'origin' } = e,
         I = (0, f.sU)({}),
-        S = (0, o.useMemoOne)(() => (0, l.Z)(), [t]),
-        T = i.useRef(null),
-        y = (0, _.Z)(T, g, null == I ? window : I),
+        T = (0, o.useMemoOne)(() => (0, l.Z)(), [t]),
+        S = i.useRef(null),
+        y = (0, _.Z)(S, g, null == I ? window : I),
         A = {
             ...E,
-            frame_id: S,
+            frame_id: T,
             platform: h.S4.DESKTOP
         },
         [N, C] = i.useState(!1),
@@ -41,12 +41,12 @@ function E(e) {
         R === m.BRd.LIGHT ? (O.colorScheme = 'light') : (O.colorScheme = 'dark'),
         i.useEffect(
             () => (
-                d.S.dispatch(m.CkL.IFRAME_MOUNT, { id: S }),
+                d.S.dispatch(m.CkL.IFRAME_MOUNT, { id: T }),
                 () => {
-                    d.S.dispatch(m.CkL.IFRAME_UNMOUNT, { id: S });
+                    d.S.dispatch(m.CkL.IFRAME_UNMOUNT, { id: T });
                 }
             ),
-            [S]
+            [T]
         ),
         i.useEffect(() => {
             let e = (e) => {
@@ -68,7 +68,7 @@ function E(e) {
                   referrerPolicy: b,
                   onLoad: function (e) {
                       var n;
-                      null == s || s(e.target), (T.current = e.target), y(!0), null === (n = e.target.contentWindow) || void 0 === n || n.postMessage([u.Z.HELLO, A], null != t ? t : '');
+                      null == s || s(e.target), (S.current = e.target), y(!0), null === (n = e.target.contentWindow) || void 0 === n || n.postMessage([u.Z.HELLO, A], null != t ? t : '');
                   },
                   sandbox: (0, p.Z)({ allowPopups: v }),
                   className: n,

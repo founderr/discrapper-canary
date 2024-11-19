@@ -19,16 +19,16 @@ function d(e) {
         E = (0, i.e7)([s.Z], () => s.Z.syncProfileThemeWithUserTheme),
         v = null != h ? h : null == f ? void 0 : f.getAvatarURL(null == _ ? void 0 : _.guildId, 80),
         b = (0, l.Sl)(c.Ilk.PRIMARY_530).hex,
-        [I, S] = (0, o.Cf)(v, b, !1);
+        [I, T] = (0, o.Cf)(v, b, !1);
     if (!(null == _ ? void 0 : _.canEditThemes) && !m)
         return {
             theme: g,
             primaryColor: null,
             secondaryColor: null
         };
-    let T = null == _ ? void 0 : _.getPreviewThemeColors(p),
-        y = null !== (t = null == T ? void 0 : T[0]) && void 0 !== t ? t : (0, r._i)(I),
-        A = null !== (n = null == T ? void 0 : T[1]) && void 0 !== n ? n : (0, r._i)(S);
+    let S = null == _ ? void 0 : _.getPreviewThemeColors(p),
+        y = null !== (t = null == S ? void 0 : S[0]) && void 0 !== t ? t : (0, r._i)(I),
+        A = null !== (n = null == S ? void 0 : S[1]) && void 0 !== n ? n : (0, r._i)(T);
     return {
         theme: E ? g : null !== (d = (0, u.V3)(y)) && void 0 !== d ? d : g,
         primaryColor: y,

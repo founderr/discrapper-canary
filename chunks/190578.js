@@ -37,7 +37,7 @@ let a = (e) => r(/\b/, e, /\w$/.test(e) ? /\b/ : /\B/),
     v = r(g, E, '*'),
     b = r(/[A-Z]/, E, '*'),
     I = ['autoclosure', r(/convention\(/, i('swift', 'block', 'c'), /\)/), 'discardableResult', 'dynamicCallable', 'dynamicMemberLookup', 'escaping', 'frozen', 'GKInspectable', 'IBAction', 'IBDesignable', 'IBInspectable', 'IBOutlet', 'IBSegueAction', 'inlinable', 'main', 'nonobjc', 'NSApplicationMain', 'NSCopying', 'NSManaged', r(/objc\(/, v, /\)/), 'objc', 'objcMembers', 'propertyWrapper', 'requires_stored_property_inits', 'resultBuilder', 'testable', 'UIApplicationMain', 'unknown', 'usableFromInline'],
-    S = ['iOS', 'iOSApplicationExtension', 'macOS', 'macOSApplicationExtension', 'macCatalyst', 'macCatalystApplicationExtension', 'watchOS', 'watchOSApplicationExtension', 'tvOS', 'tvOSApplicationExtension', 'swift'];
+    T = ['iOS', 'iOSApplicationExtension', 'macOS', 'macOSApplicationExtension', 'macCatalyst', 'macCatalystApplicationExtension', 'watchOS', 'watchOSApplicationExtension', 'tvOS', 'tvOSApplicationExtension', 'swift'];
 e.exports = function (e) {
     let t = {
             match: /\s+/,
@@ -45,7 +45,7 @@ e.exports = function (e) {
         },
         p = e.COMMENT('/\\*', '\\*/', { contains: ['self'] }),
         g = [e.C_LINE_COMMENT_MODE, p],
-        T = {
+        S = {
             match: [/\./, i(...s, ...o)],
             className: { 2: 'keyword' }
         },
@@ -73,7 +73,7 @@ e.exports = function (e) {
             keyword: A.concat(f),
             literal: c
         },
-        R = [T, y, N],
+        R = [S, y, N],
         O = {
             match: r(/\./, i(..._)),
             relevance: 0
@@ -112,25 +112,25 @@ e.exports = function (e) {
             className: 'subst',
             match: r(/\\/, e, /[\t ]*(?:[\r\n]|\r\n)/)
         }),
-        G = (e = '') => ({
+        B = (e = '') => ({
             className: 'subst',
             label: 'interpol',
             begin: r(/\\/, e, /\(/),
             end: /\)/
         }),
-        B = (e = '') => ({
+        G = (e = '') => ({
             begin: r(e, /"""/),
             end: r(/"""/, e),
-            contains: [k(e), U(e), G(e)]
+            contains: [k(e), U(e), B(e)]
         }),
         Z = (e = '') => ({
             begin: r(e, /"/),
             end: r(/"/, e),
-            contains: [k(e), G(e)]
+            contains: [k(e), B(e)]
         }),
         F = {
             className: 'string',
-            variants: [B(), B('#'), B('##'), B('###'), Z(), Z('#'), Z('##'), Z('###')]
+            variants: [G(), G('#'), G('##'), G('###'), Z(), Z('#'), Z('##'), Z('###')]
         },
         V = { match: r(/`/, v, /`/) },
         j = [
@@ -152,7 +152,7 @@ e.exports = function (e) {
                     {
                         begin: /\(/,
                         end: /\)/,
-                        keywords: S,
+                        keywords: T,
                         contains: [...x, P, F]
                     }
                 ]

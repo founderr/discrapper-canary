@@ -18,12 +18,12 @@ let f = {},
     v = [...o.u.binds, 'mod+shift+[', 'mod+shift+]', 'mod+[', 'mod+]', 'alt+[', 'alt+]', 'ctrl+shift+tab', 'ctrl+tab', 'mod+n', 'mod+t', 'mod+shift+t', 'mod+plus', 'mod+minus', 'mod+0'].map((e) => e.replace('mod', m)),
     b = () => [],
     I = [];
-function S(e) {
+function T(e) {
     let t = [];
     for (let n of Object.values(e)) null != n && t.push(...n.binds);
     return t.map((e) => e.replace('mod', m));
 }
-function T(e, t) {
+function S(e, t) {
     return (n, r) => (u.default.track(d.rMx.KEYBOARD_SHORTCUT_USED, { shortcut_name: e }), t(n, r));
 }
 function y(e) {
@@ -34,7 +34,7 @@ function y(e) {
         let r = n.binds.filter((t) => ((t = t.replace('mod', m)), 0 > e.indexOf(t)));
         if (0 === r.length) continue;
         let i = n.comboKeysBindGlobal ? h.bindGlobal : h.bind;
-        if ((null != n.action && i.call(h, r, T(t, n.action)), null != n.keyup && i.call(h, r, T(t, n.keyup), 'keyup'), null != n.keydown)) {
+        if ((null != n.action && i.call(h, r, S(t, n.action)), null != n.keyup && i.call(h, r, S(t, n.keyup), 'keyup'), null != n.keydown)) {
             let e = r.indexOf('any-character');
             -1 !== e &&
                 (!(function (e, t) {
@@ -42,9 +42,9 @@ function y(e) {
                     document.addEventListener(e, n), I.push(() => document.removeEventListener(e, n));
                 })('keydown', n.keydown),
                 r.splice(e, 1)),
-                r.length > 0 && i.call(h, r, T(t, n.keydown), 'keydown');
+                r.length > 0 && i.call(h, r, S(t, n.keydown), 'keydown');
         }
-        null != n.keypress && i.call(h, r, T(t, n.keypress), 'keypress');
+        null != n.keypress && i.call(h, r, S(t, n.keypress), 'keypress');
     }
 }
 (0, c.isDesktop)() && new (i())(document.documentElement).bind('backspace', (e) => e.preventDefault()),
@@ -59,7 +59,7 @@ function y(e) {
         checkDupes(e) {
             let t = new Set(),
                 n = [];
-            for (let r of S(e)) t.has(r) && n.push(r), t.add(r);
+            for (let r of T(e)) t.has(r) && n.push(r), t.add(r);
             n.length > 0 && new l.Z('Keybinds').warn('Duplicate keyboard shortcuts defined:', n);
         },
         setLayout(e) {
@@ -82,7 +82,7 @@ function y(e) {
             if (!!p && !!this.hasBind(e)) h.unbind(e);
         },
         hasBind(e) {
-            let t = S(f);
+            let t = T(f);
             return (e = (e = e.replace('meta', 'cmd')).replace(/right |left /i, '').trim()), t.includes(e);
         }
     });

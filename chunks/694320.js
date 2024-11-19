@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return S;
     }
 });
 var r = n(200651),
@@ -22,7 +22,7 @@ var r = n(200651),
     v = n(474936),
     b = n(388032),
     I = n(438103);
-function S() {
+function T() {
     (0, l.openModalLazy)(async () => {
         let { default: e } = await n.e('3289').then(n.bind(n, 682609));
         return (t) =>
@@ -32,9 +32,9 @@ function S() {
             });
     });
 }
-function T(e) {
+function S(e) {
     var t;
-    let { className: n, iconOnly: a, remaining: T } = e,
+    let { className: n, iconOnly: a, remaining: S } = e,
         y = (0, o.e7)([m.Z, h.Z], () => {
             let e = h.Z.getChannel(m.Z.getChannelId());
             return (null == e ? void 0 : e.isPrivate()) ? E.ZY5.DM_CHANNEL : E.ZY5.GUILD_CHANNEL;
@@ -54,19 +54,19 @@ function T(e) {
             location_stack: A
         });
     }, [y, A]),
-    (O || R) && T < 0)
+    (O || R) && S < 0)
         ? (0, r.jsx)(p.ZP, {
               type: v.cd.MESSAGE_LENGTH_IN_EDITOR_UPSELL,
               subscriptionTier: v.Si.TIER_2,
-              context: T,
+              context: S,
               discountOffer: N,
               trialOffer: C,
-              children: b.intl.format(b.t.BNAIBQ, { onLearnMore: S })
+              children: b.intl.format(b.t.BNAIBQ, { onLearnMore: T })
           })
         : a
           ? (0, r.jsx)(l.Clickable, {
                 className: I.iconOnly,
-                onClick: () => S(),
+                onClick: () => T(),
                 children: (0, r.jsx)(l.Tooltip, {
                     text: b.intl.string(b.t['+eFIjY']),
                     position: 'top',
@@ -90,7 +90,7 @@ function T(e) {
                     (0, r.jsx)(l.Text, {
                         className: I.text,
                         variant: 'text-sm/normal',
-                        children: b.intl.format(b.t.BNAIBQ, { onLearnMore: S })
+                        children: b.intl.format(b.t.BNAIBQ, { onLearnMore: T })
                     })
                 ]
             });

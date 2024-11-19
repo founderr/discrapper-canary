@@ -13,8 +13,8 @@ var l = n(200651),
     u = n(420660),
     d = n(429589),
     m = n(757182),
-    x = n(706454),
-    h = n(374129),
+    h = n(706454),
+    x = n(374129),
     p = n(639351),
     C = n(823379),
     v = n(379357),
@@ -39,19 +39,19 @@ let A = {
     [i.z.IOS]: null,
     [i.z.ANDROID]: null,
     [i.z.XBOX]: p.Z,
-    [i.z.PLAYSTATION]: h.Z
+    [i.z.PLAYSTATION]: x.Z
 };
 t.Z = (e) => {
-    let { channel: t, entry: n, disableGameProfileLinks: i, onReaction: h, onVoiceChannelPreview: p, onUserPopoutClosed: M, trackRankingItemInteraction: k } = e,
-        { largeImage: R } = (0, v.rv)({ entry: n }),
-        { user: w, details: b, appName: H, activity: O } = (0, _.n)(n),
-        { primaryColor: V, secondaryColor: B } = (0, Z.Z)(null == R ? void 0 : R.src),
-        U = (0, r.e7)([x.default], () => x.default.locale),
+    let { channel: t, entry: n, disableGameProfileLinks: i, onReaction: x, onVoiceChannelPreview: p, onUserPopoutClosed: M, trackRankingItemInteraction: k } = e,
+        { largeImage: w } = (0, v.rv)({ entry: n }),
+        { user: R, details: b, appName: H, activity: O } = (0, _.n)(n),
+        { primaryColor: V, secondaryColor: B } = (0, Z.Z)(null == w ? void 0 : w.src),
+        U = (0, r.e7)([h.default], () => h.default.locale),
         { streamPreviewUrl: D, stream: G } = (0, f.Z)(n),
         { displayParticipants: z, participant1: W, participant2: q, numOtherParticipants: Y } = (0, g.Z)(n, 3),
         F = a.useCallback(
             (e) => {
-                if ((null == R ? void 0 : R.src) == null || null == t || null == w) return;
+                if ((null == w ? void 0 : w.src) == null || null == t || null == R) return;
                 let l =
                     Y > 0
                         ? (0, P.VY)({
@@ -60,10 +60,10 @@ t.Z = (e) => {
                               users: [W, q],
                               countOthers: Y
                           })
-                        : (0, P.HV)(n, t, w);
+                        : (0, P.HV)(n, t, R);
                 return (0, j.SO)({
                     entry: n,
-                    applicationImageSrc: null == R ? void 0 : R.src,
+                    applicationImageSrc: null == w ? void 0 : w.src,
                     avatarSrcs: z.map((e) => e.getAvatarURL(t.guild_id, 128)),
                     description: l,
                     timestamp: (0, I.yh)(n, U),
@@ -71,9 +71,9 @@ t.Z = (e) => {
                     channelId: e
                 });
             },
-            [null == R ? void 0 : R.src, t, z, n, U, Y, W, q, V, B, w]
+            [null == w ? void 0 : w.src, t, z, n, U, Y, W, q, V, B, R]
         );
-    if (null == w) return null;
+    if (null == R) return null;
     let J = null != n.extra.platform ? A[n.extra.platform] : null,
         K = (0, l.jsx)(y.Gk, {
             location: null == D ? y.Gt.POPOUT : y.Gt.STREAMING_POPOUT,
@@ -115,7 +115,7 @@ t.Z = (e) => {
             (0, s.Z)(O, E.xjy.JOIN) || (0, c.Z)(O)
                 ? (0, l.jsx)(d.Z, {
                       activity: O,
-                      user: w,
+                      user: R,
                       ButtonComponent: (e) =>
                           (0, l.jsx)(T.Ll, {
                               IconComponent: o.GameControllerIcon,
@@ -141,12 +141,12 @@ t.Z = (e) => {
             X,
             (0, l.jsx)(T.St, {
                 children: (0, l.jsx)(T.WT, {
-                    onReaction: h,
+                    onReaction: x,
                     onVoiceChannelPreview: p,
-                    user: w,
+                    user: R,
                     channel: t,
                     generateReactionImage: F,
-                    reactionImageAltText: (0, P.IS)(n, w),
+                    reactionImageAltText: (0, P.IS)(n, R),
                     entry: n,
                     buttons: Q
                 })

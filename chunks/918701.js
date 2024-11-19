@@ -48,7 +48,7 @@ n.d(t, {
         return ec;
     },
     OG: function () {
-        return eG;
+        return eB;
     },
     PM: function () {
         return z;
@@ -87,7 +87,7 @@ n.d(t, {
         return x;
     },
     _j: function () {
-        return eB;
+        return eG;
     },
     b7: function () {
         return eN;
@@ -105,7 +105,7 @@ n.d(t, {
         return j;
     },
     iQ: function () {
-        return G;
+        return B;
     },
     il: function () {
         return eA;
@@ -120,7 +120,7 @@ n.d(t, {
         return eu;
     },
     q6: function () {
-        return B;
+        return G;
     },
     q8: function () {
         return eD;
@@ -190,8 +190,8 @@ var p = n(572004),
     b = n(617136);
 n(272008);
 var I = n(569984),
-    S = n(497505),
-    T = n(566078),
+    T = n(497505),
+    S = n(566078),
     y = n(312046),
     A = n(46140),
     N = n(981631),
@@ -212,14 +212,14 @@ let D = (e) => e.application_id === C.Ev || e.platform === N.M7m.XBOX,
 function x(e, t) {
     if (null == e) return !1;
     let n = e.name.toLowerCase(),
-        r = T.r.build(t.config).application.name.toLowerCase();
+        r = S.r.build(t.config).application.name.toLowerCase();
     return D(e) || L(e) ? n === r : null != e.application_id && M(e.application_id, t);
 }
 function w(e, t) {
     for (let [n, r] of e) if (x(t, r) && !U(r)) return r;
 }
 function M(e, t) {
-    return null != T.r.build(t.config).application.ids.find((t) => t === e);
+    return null != S.r.build(t.config).application.ids.find((t) => t === e);
 }
 function P(e, t) {
     let n;
@@ -236,13 +236,13 @@ function k(e, t) {
 function U(e) {
     return new Date(e.config.expiresAt).valueOf() <= Date.now();
 }
-function G(e) {
+function B(e) {
     if (!U(e)) return !1;
     let t = Date.now() - 2592000000,
         n = new Date(e.config.expiresAt).valueOf();
     return null != e.config.expiresAt && !(n <= t) && !0;
 }
-function B(e) {
+function G(e) {
     return (0, a.EQ)(e)
         .with({ config_version: 2 }, (e) => (0, y.Q)(e))
         .exhaustive();
@@ -285,7 +285,7 @@ function F(e) {
     return {
         id: e.id,
         preview: e.preview,
-        config: B(e.config),
+        config: G(e.config),
         userStatus: null == e.user_status ? null : Z(e.user_status),
         targetedContent: e.targeted_content
     };
@@ -387,15 +387,15 @@ function Q(e, t) {
 }
 let X = (e) => {
     switch (e) {
-        case S.y$.XBOX:
+        case T.y$.XBOX:
             return R.intl.string(R.t.G84UWV);
-        case S.y$.PLAYSTATION:
+        case T.y$.PLAYSTATION:
             return R.intl.string(R.t['6IeKx8']);
-        case S.y$.SWITCH:
+        case T.y$.SWITCH:
             return R.intl.string(R.t['1pp0sr']);
-        case S.y$.PC:
+        case T.y$.PC:
             return R.intl.string(R.t['YK+wUl']);
-        case S.y$.CROSS_PLATFORM:
+        case T.y$.CROSS_PLATFORM:
             return R.intl.string(R.t.UWVbzc);
     }
 };
@@ -411,11 +411,11 @@ function J(e) {
     return R.intl.formatToPlainString(R.t.EQa7oq, { questName: r.config.messages.questName });
 }
 function $(e) {
-    return Object.keys(A.a_).includes(S.jn[e]);
+    return Object.keys(A.a_).includes(T.jn[e]);
 }
 function ee(e, t) {
     if (!$(t)) return !1;
-    let n = S.jn[t];
+    let n = T.jn[t];
     return (0, m.yE)(e.dismissedQuestContent, A.a_[n]);
 }
 function et(e) {
@@ -490,10 +490,10 @@ function ed(e) {
     return null != e && ec({ quest: e });
 }
 function ef(e, t) {
-    return T.r.build(t.config).application.id === e;
+    return S.r.build(t.config).application.id === e;
 }
 function e_(e, t) {
-    return T.r.build(e.config).features.has(t);
+    return S.r.build(e.config).features.has(t);
 }
 function ep(e) {
     let { quest: t, idx: n } = e;
@@ -502,7 +502,7 @@ function ep(e) {
     return r.type === l.w.REWARD_CODE ? r : null;
 }
 function eh(e, t) {
-    let n = T.r.build(e.config).application.link;
+    let n = S.r.build(e.config).application.link;
     (0, E.q)({
         href: n,
         onConfirm: () => {
@@ -551,7 +551,7 @@ let em = (e, t) => {
         let a = Math.min(0.99 * r, eb(e, t));
         return Math.max((0, i.floor)(a, 2), 0);
     },
-    eS = (e) => {
+    eT = (e) => {
         var t, n;
         let { quest: r, taskType: i, includeTaskTypes: a = s.T.ALL } = e,
             o = r.config.taskConfig;
@@ -569,7 +569,7 @@ let em = (e, t) => {
             taskType: l
         };
     },
-    eT = (e) => (s.T.ALL.has(e) ? e : null),
+    eS = (e) => (s.T.ALL.has(e) ? e : null),
     ey = (e) => {
         var t, n;
         let { quest: r, includeTaskTypes: i = s.T.ALL } = e;
@@ -584,17 +584,17 @@ let em = (e, t) => {
                 else return 1;
             })
             .filter(g.lm)) {
-            let t = eT(e.eventName);
+            let t = eS(e.eventName);
             if (null != t) {
                 if (null == i ? void 0 : i.has(t))
-                    return eS({
+                    return eT({
                         quest: r,
                         taskType: t,
                         includeTaskTypes: i
                     });
             }
         }
-        return eS({
+        return eT({
             quest: r,
             includeTaskTypes: i
         });
@@ -615,22 +615,22 @@ let em = (e, t) => {
                 includeTaskTypes: null != t ? t : ew(e) ? s.T.CONSOLE : s.T.ALL
             });
         if (eD(e))
-            return eS({
+            return eT({
                 quest: e,
                 taskType: s.X.WATCH_VIDEO
             });
         if (ed(e))
-            return eS({
+            return eT({
                 quest: e,
                 taskType: s.X.PLAY_ON_DESKTOP
             });
         if ((n = e).config.taskConfig.type === u.L.FIRST_PARTY && null != n.config.taskConfig.tasks[s.X.PLAY_ACTIVITY])
-            return eS({
+            return eT({
                 quest: e,
                 taskType: s.X.PLAY_ACTIVITY
             });
         else
-            return eS({
+            return eT({
                 quest: e,
                 taskType: s.X.STREAM_ON_DESKTOP
             });
@@ -727,14 +727,14 @@ function eU(e, t) {
     }),
         d.Z.open(N.oAB.CONNECTIONS);
 }
-function eG() {
+function eB() {
     return window.location.pathname.startsWith(N.Z5c.QUEST_HOME);
 }
-function eB(e) {
+function eG(e) {
     return 'xbox' === e.connected_account_type ? N.ABu.XBOX : N.ABu.PLAYSTATION;
 }
 function eZ(e) {
-    return eB(e) === N.ABu.XBOX ? R.t.mytEv7 : R.t.iDiwb2;
+    return eG(e) === N.ABu.XBOX ? R.t.mytEv7 : R.t.iDiwb2;
 }
 function eF(e) {
     var t, n, r, i;

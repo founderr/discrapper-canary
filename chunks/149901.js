@@ -22,8 +22,8 @@ var r = n(443704),
     v = n(112741),
     b = n(421607),
     I = n(595938),
-    S = n(154072),
-    T = n(999209),
+    T = n(154072),
+    S = n(999209),
     y = n(374705),
     A = n(868055),
     N = n(443507),
@@ -38,8 +38,8 @@ var r = n(443704),
     P = n(40889),
     k = n(686949),
     U = n(661763),
-    G = n(192379),
-    B = n(969129),
+    B = n(192379),
+    G = n(969129),
     Z = n(921336),
     F = n(298397),
     V = n(649859),
@@ -48,7 +48,7 @@ var r = n(443704),
 function Y(e, t, n) {
     var r;
     let i,
-        { id: a, decrementAriaLabel: s, incrementAriaLabel: o, isDisabled: l, isReadOnly: u, isRequired: c, minValue: d, maxValue: f, autoFocus: _, label: p, formatOptions: h, onBlur: m = () => {}, onFocus: g, onFocusChange: E, onKeyDown: v, onKeyUp: b, description: I, errorMessage: S, ...T } = e,
+        { id: a, decrementAriaLabel: s, incrementAriaLabel: o, isDisabled: l, isReadOnly: u, isRequired: c, minValue: d, maxValue: f, autoFocus: _, label: p, formatOptions: h, onBlur: m = () => {}, onFocus: g, onFocusChange: E, onKeyDown: v, onKeyUp: b, description: I, errorMessage: T, ...S } = e,
         { increment: y, incrementToMax: A, decrement: N, decrementToMin: C, numberValue: R, inputValue: O, commit: D, commitValidation: L } = t;
     let x = (0, V.qb)((r = H) && r.__esModule ? r.default : r, '@react-aria/numberfield'),
         w = (0, U.Me)(a),
@@ -58,12 +58,12 @@ function Y(e, t, n) {
             }
         }),
         P = (0, V.Ux)(h),
-        k = (0, G.useMemo)(() => P.resolvedOptions(), [P]),
+        k = (0, B.useMemo)(() => P.resolvedOptions(), [P]),
         Y = (0, V.Ux)({
             ...h,
             currencySign: void 0
         }),
-        W = (0, G.useMemo)(() => (isNaN(R) ? '' : Y.format(R)), [Y, R]),
+        W = (0, B.useMemo)(() => (isNaN(R) ? '' : Y.format(R)), [Y, R]),
         {
             spinButtonProps: K,
             incrementButtonProps: z,
@@ -81,12 +81,12 @@ function Y(e, t, n) {
             value: R,
             textValue: W
         }),
-        [Q, X] = (0, G.useState)(!1),
+        [Q, X] = (0, B.useState)(!1),
         { focusWithinProps: J } = (0, Z.L_)({
             isDisabled: l,
             onFocusWithinChange: X
         }),
-        $ = (0, G.useCallback)(
+        $ = (0, B.useCallback)(
             (e) => {
                 !(Math.abs(e.deltaY) <= Math.abs(e.deltaX)) && (e.deltaY > 0 ? y() : e.deltaY < 0 && N());
             },
@@ -105,7 +105,7 @@ function Y(e, t, n) {
         er = 'numeric';
     (0, U.IN)() ? (en ? (er = 'text') : et && (er = 'decimal')) : (0, U.Dt)() && (en ? (er = 'numeric') : et && (er = 'decimal'));
     let ei = (0, U.zL)(e),
-        ea = (0, G.useCallback)(
+        ea = (0, B.useCallback)(
             (e) => {
                 'Enter' === e.key ? (D(), L()) : e.continuePropagation();
             },
@@ -119,7 +119,7 @@ function Y(e, t, n) {
             errorMessageProps: ef
         } = (0, F.h)(
             {
-                ...T,
+                ...S,
                 ...ei,
                 name: void 0,
                 label: p,
@@ -128,7 +128,7 @@ function Y(e, t, n) {
                 isReadOnly: u,
                 isRequired: c,
                 validate: void 0,
-                [B.tL]: t,
+                [G.tL]: t,
                 value: O,
                 defaultValue: void 0,
                 autoComplete: 'off',
@@ -143,10 +143,10 @@ function Y(e, t, n) {
                 onBlur: m,
                 onFocus: g,
                 onFocusChange: E,
-                onKeyDown: (0, G.useMemo)(() => (0, U.tS)(ea, v), [ea, v]),
+                onKeyDown: (0, B.useMemo)(() => (0, U.tS)(ea, v), [ea, v]),
                 onKeyUp: b,
                 description: I,
-                errorMessage: S
+                errorMessage: T
             },
             t,
             n
@@ -230,8 +230,8 @@ H = {
     'ko-KR': v.Z,
     'lt-LT': b.Z,
     'lv-LV': I.Z,
-    'nb-NO': S.Z,
-    'nl-NL': T.Z,
+    'nb-NO': T.Z,
+    'nl-NL': S.Z,
     'pl-PL': y.Z,
     'pt-BR': A.Z,
     'pt-PT': N.Z,

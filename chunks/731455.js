@@ -18,7 +18,7 @@ n.d(t, {
         return p;
     },
     b0: function () {
-        return S;
+        return T;
     },
     dc: function () {
         return _;
@@ -30,7 +30,7 @@ n.d(t, {
         return b;
     },
     md: function () {
-        return T;
+        return S;
     },
     o3: function () {
         return f;
@@ -111,8 +111,8 @@ function I() {
                 : e
         );
 }
-let S = 40,
-    T = 20;
+let T = 40,
+    S = 20;
 ((a = u || (u = {})).GAME_RECOMMENDATIONS = 'Game Recommendations'), (a.SERVER_RECOMMENDATIONS = 'Server Recommendations'), ((s = c || (c = {}))[(s.Activity = 0)] = 'Activity'), (s[(s.Discover = 1)] = 'Discover'), (s[(s.Education = 2)] = 'Education'), (s[(s.Music = 3)] = 'Music'), (s[(s.Science = 4)] = 'Science'), (s[(s.Stage = 5)] = 'Stage'), (s[(s.Television = 6)] = 'Television'), (s[(s.Server = 7)] = 'Server'), (s[(s.Quest = 8)] = 'Quest');
 let y = {
     facebook: {

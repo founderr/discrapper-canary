@@ -14,7 +14,7 @@ var r = n(570140),
     d = n(120569);
 async function f(e, t) {
     var n, f, _, p;
-    let { withMutualGuilds: h = !1, withMutualFriendsCount: m = !1, withMutualFriends: g = !1, friendToken: E, preloadUserBanner: v = !0, dispatchWait: b = !1, guildId: I, channelId: S, joinRequestId: T, abortSignal: y } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+    let { withMutualGuilds: h = !1, withMutualFriendsCount: m = !1, withMutualFriends: g = !1, friendToken: E, preloadUserBanner: v = !0, dispatchWait: b = !1, guildId: I, channelId: T, joinRequestId: S, abortSignal: y } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     if ('' === e || c.Z.isFetchingProfile(e, I)) return;
     let A = c.Z.getUserProfile(e),
         N = Date.now() - (null !== (p = null == A ? void 0 : A.lastFetched) && void 0 !== p ? p : 0) >= 60000;
@@ -35,7 +35,7 @@ async function f(e, t) {
             withMutualFriendsCount: m,
             friendToken: E,
             guildId: I,
-            joinRequestId: T,
+            joinRequestId: S,
             abortSignal: y,
             connectionsRoleId:
                 null == I
@@ -43,7 +43,7 @@ async function f(e, t) {
                     : null ===
                             (_ = (0, s.Ur)({
                                 guildMember: u.ZP.getMember(I, e),
-                                channel: l.Z.getChannel(S)
+                                channel: l.Z.getChannel(T)
                             })) || void 0 === _
                       ? void 0
                       : _.id

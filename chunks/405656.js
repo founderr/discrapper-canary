@@ -18,7 +18,7 @@ n.d(t, {
         return N;
     },
     WU: function () {
-        return T;
+        return S;
     },
     cl: function () {
         return b;
@@ -30,7 +30,7 @@ n.d(t, {
         return p;
     },
     kG: function () {
-        return S;
+        return T;
     },
     qc: function () {
         return g;
@@ -214,10 +214,10 @@ function b(e) {
     return null == e ? '' : e.map((e) => e.getFullMatch()).join('');
 }
 let I = new a.ZP();
-function S(e) {
+function T(e) {
     return I.tokenize(e);
 }
-function T() {
+function S() {
     return I.clearCache();
 }
 function y(e) {

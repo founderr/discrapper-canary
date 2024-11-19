@@ -22,8 +22,8 @@ var r = n(995153),
     v = n(768093),
     b = n(4667),
     I = n(354382),
-    S = n(509912),
-    T = n(557047),
+    T = n(509912),
+    S = n(557047),
     y = n(830144),
     A = n(882554),
     N = n(44507),
@@ -38,12 +38,12 @@ var r = n(995153),
     P = n(656638),
     k = n(955307),
     U = n(661763),
-    G = n(649859),
-    B = {};
+    B = n(649859),
+    G = {};
 function Z(e) {
     var t;
     let { 'aria-label': n, ...r } = e;
-    let i = (0, G.qb)((t = B) && t.__esModule ? t.default : t, '@react-aria/breadcrumbs');
+    let i = (0, B.qb)((t = G) && t.__esModule ? t.default : t, '@react-aria/breadcrumbs');
     return {
         navProps: {
             ...(0, U.zL)(r, { labelable: !0 }),
@@ -51,7 +51,7 @@ function Z(e) {
         }
     };
 }
-B = {
+G = {
     'ar-AE': r.Z,
     'bg-BG': i.Z,
     'cs-CZ': a.Z,
@@ -71,8 +71,8 @@ B = {
     'ko-KR': v.Z,
     'lt-LT': b.Z,
     'lv-LV': I.Z,
-    'nb-NO': S.Z,
-    'nl-NL': T.Z,
+    'nb-NO': T.Z,
+    'nl-NL': S.Z,
     'pl-PL': y.Z,
     'pt-BR': A.Z,
     'pt-PT': N.Z,

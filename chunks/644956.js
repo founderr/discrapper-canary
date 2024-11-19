@@ -23,8 +23,8 @@ var i = n(120356),
     v = n(480608),
     b = n(124072),
     I = n(184301),
-    S = n(347475),
-    T = n(592125),
+    T = n(347475),
+    S = n(592125),
     y = n(271383),
     A = n(430824),
     N = n(594174),
@@ -50,7 +50,7 @@ function L(e) {
         P = (0, u.e7)([_.Z], () => _.Z.roleStyle),
         k = null != t && 0 !== t && !w,
         U = k && 'dot' === P,
-        G = (e) =>
+        B = (e) =>
             (0, r.jsxs)(b.Z, {
                 className: a()(R.roleMention),
                 color: 'username' === P && k ? t : null,
@@ -66,11 +66,11 @@ function L(e) {
                     x
                 ]
             }),
-        { enabled: B } = D.getCurrentConfig({ location: '2ec235_1' }, { autoTrackExposure: !1 });
-    return !B || w || null == s || null == L || (null == i && '@everyone' !== E)
+        { enabled: G } = D.getCurrentConfig({ location: '2ec235_1' }, { autoTrackExposure: !1 });
+    return !G || w || null == s || null == L || (null == i && '@everyone' !== E)
         ? (0, r.jsx)(h.Gt, {
               value: M,
-              children: G()
+              children: B()
           })
         : (0, r.jsx)(h.Gt, {
               value: M,
@@ -79,7 +79,7 @@ function L(e) {
                       null != i && (await (0, v.H)(L, i));
                   },
                   renderPopout: (e) => {
-                      let t = T.Z.getChannel(s),
+                      let t = S.Z.getChannel(s),
                           a = A.Z.getGuild(L),
                           l = y.ZP.getMembers(a.id),
                           u = A.Z.getRole(L, null != i ? i : a.getEveryoneRoleId()),
@@ -101,7 +101,7 @@ function L(e) {
                                                   channelId: t.id
                                               }),
                                           renderPopout: (n) =>
-                                              (0, r.jsx)(S.Z, {
+                                              (0, r.jsx)(T.Z, {
                                                   ...n,
                                                   userId: e.userId,
                                                   guildId: a.id,
@@ -169,7 +169,7 @@ function L(e) {
                       });
                   },
                   position: 'right',
-                  children: G
+                  children: B
               })
           });
 }

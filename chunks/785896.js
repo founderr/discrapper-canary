@@ -33,7 +33,7 @@ let c = (e, t, n) => {
             [g, E] = r.useState(null),
             v = null != o ? l.JO.createFromGuildRecord(o) : null,
             [b, I] = r.useState(v),
-            [S, T] = r.useState(null);
+            [T, S] = r.useState(null);
         return (
             r.useEffect(() => {
                 null == n || n();
@@ -42,7 +42,7 @@ let c = (e, t, n) => {
                     if (null != e)
                         switch ((E(e.type), e.type)) {
                             case l.w6.APPLICATION:
-                                T(e.application);
+                                S(e.application);
                                 break;
                             case l.w6.GUILD:
                                 I(e.guild);
@@ -57,7 +57,7 @@ let c = (e, t, n) => {
             }, [t, p]),
             {
                 expressionSourceGuild: b,
-                expressionSourceApplication: S,
+                expressionSourceApplication: T,
                 sourceType: g,
                 joinedEmojiSourceGuildRecord: o,
                 hasJoinedEmojiSourceGuild: f,

@@ -23,8 +23,8 @@ var r = n(200651),
     v = n(898531),
     b = n(923973),
     I = n(189771),
-    S = n(560688),
-    T = n(871499),
+    T = n(560688),
+    S = n(871499),
     y = n(136995),
     A = n(25827),
     N = n(131951),
@@ -42,11 +42,11 @@ let U = {
         width: 232,
         height: 315
     },
-    G = {
+    B = {
         width: 232,
         height: 267
     },
-    B = 475,
+    G = 475,
     Z = 267;
 function F(e) {
     let { header: t } = e,
@@ -70,7 +70,7 @@ function F(e) {
                     children: (0, r.jsx)(n, {
                         disabled: !1,
                         deviceId: a,
-                        width: B,
+                        width: G,
                         height: Z
                     })
                 }),
@@ -89,7 +89,7 @@ function V(e) {
     return (0, r.jsxs)('div', {
         className: P.actions,
         children: [
-            (0, r.jsx)(T.d, {
+            (0, r.jsx)(S.d, {
                 iconComponent: u.XSmallIcon,
                 color: 'red',
                 className: P.actionButton,
@@ -119,7 +119,7 @@ function V(e) {
                             onPopoutClick: i > 1 ? s : null,
                             className: P.actionButton,
                             popoutOpen: u,
-                            onCameraUnavailable: S.Z,
+                            onCameraUnavailable: T.Z,
                             onChange: () => {
                                 f.default.selectVoiceChannel(n.id, !0), (0, m.XU)(x.ME, n.id);
                             }
@@ -141,8 +141,8 @@ function j(e) {
         E = (0, p.x)(f),
         v = (0, h.ZP)(f),
         [b, I] = (0, l.Wu)([N.Z], () => [N.Z.supports(w.AN.VIDEO), Object.keys(N.Z.getVideoDevices()).length]),
-        S = (0, l.e7)([R.Z], () => R.Z.isFocused()),
-        T = (0, l.e7)([O.Z], () => O.Z.getMode(f.id)),
+        T = (0, l.e7)([R.Z], () => R.Z.isFocused()),
+        S = (0, l.e7)([O.Z], () => O.Z.getMode(f.id)),
         y = i.useCallback((e) => {
             null != e.top && null != e.left && d.Z.move(e.left, e.top);
         }, []),
@@ -162,12 +162,12 @@ function j(e) {
         };
         return window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e);
     }, [f]);
-    let C = T === x.WtW.VIDEO && b && I > 0,
+    let C = S === x.WtW.VIDEO && b && I > 0,
         L = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(D.Z, {
                     className: P.icon,
-                    ringing: S,
+                    ringing: T,
                     src: null != E ? E : '',
                     ringingType: D.Z.RingingType.INCOMING,
                     size: m ? u.AvatarSizes.SIZE_40 : u.AvatarSizes.SIZE_80
@@ -185,13 +185,13 @@ function j(e) {
                             color: 'header-secondary',
                             className: P.subtitle,
                             variant: m ? 'text-sm/normal' : 'text-md/normal',
-                            children: T === x.WtW.VOICE ? M.intl.string(M.t.Js8cKy) : M.intl.string(M.t.KcnWCA)
+                            children: S === x.WtW.VOICE ? M.intl.string(M.t.Js8cKy) : M.intl.string(M.t.KcnWCA)
                         })
                     ]
                 })
             ]
         }),
-        j = C ? U : G,
+        j = C ? U : B,
         H = (0, l.e7)([R.Z], () => R.Z.windowSize());
     return (0, r.jsx)(_.Z, {
         className: P.wrapper,
@@ -211,9 +211,9 @@ function j(e) {
                     className: s()(P.root, k.elevationHigh, { [P.previewCamera]: m }, e),
                     style: {
                         ...t,
-                        width: A.value.interpolate([0, 1], [j.width, B]),
+                        width: A.value.interpolate([0, 1], [j.width, G]),
                         minHeight: A.value.interpolate([0, 1], [j.height, Z]),
-                        translateX: A.value.interpolate([0, 1], [0, (-1 * Math.abs(B - j.width)) / 2])
+                        translateX: A.value.interpolate([0, 1], [0, (-1 * Math.abs(G - j.width)) / 2])
                     },
                     children: [
                         m

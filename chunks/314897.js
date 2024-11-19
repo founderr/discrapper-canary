@@ -17,8 +17,8 @@ var a,
     v = n(670890),
     b = n(569611),
     I = n(710845),
-    S = n(703656),
-    T = n(786213),
+    T = n(703656),
+    S = n(786213),
     y = n(626135),
     A = n(449934),
     N = n(960048),
@@ -33,8 +33,8 @@ let L = new I.Z('AuthenticationStore'),
     P = null,
     k = null,
     U = null,
-    G = null,
     B = null,
+    G = null,
     Z = null,
     F = null,
     V = null,
@@ -78,7 +78,7 @@ function ed() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     if (((Z = h.K.get(x)), null != ei)) return ei;
     let t = null != Z ? Z : d.getToken();
-    if (!(!(0, S.m1)() || (!e && null != t) || C.Z.isHandoffAvailable())) ef({ withGuildExperiments: !0 });
+    if (!(!(0, T.m1)() || (!e && null != t) || C.Z.isHandoffAvailable())) ef({ withGuildExperiments: !0 });
 }
 function ef(e) {
     let { withGuildExperiments: t } = e,
@@ -91,7 +91,7 @@ function ef(e) {
                 url: O.ANM.EXPERIMENTS,
                 query: { with_guild_experiments: t },
                 headers: n,
-                context: { location: (0, S.Wf)() },
+                context: { location: (0, T.Wf)() },
                 retries: 3,
                 oldFormErrors: !0,
                 rejectWithError: !1
@@ -131,7 +131,7 @@ function em() {
     (Y = !0),
         eg(),
         m.Z.wait(() => {
-            (0, S.uL)(O.Z5c.REGISTER);
+            (0, T.uL)(O.Z5c.REGISTER);
         });
 }
 function eg(e) {
@@ -178,10 +178,10 @@ class eE extends (a = _.ZP.Store) {
         return U;
     }
     getAuthSessionIdHash() {
-        return G;
+        return B;
     }
     getStaticAuthSessionId() {
-        return B;
+        return G;
     }
     getToken() {
         return (0, A.LP)();
@@ -284,12 +284,12 @@ class eE extends (a = _.ZP.Store) {
             CONNECTION_OPEN: function (e) {
                 var t;
                 let { user: n, sessionId: r, authSessionIdHash: i, analyticsToken: a, auth: s, staticAuthSessionId: o } = e;
-                ec('handleConnectionOpen called'), N.Z.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, T.Z)(n)), (U = r), (G = i), (B = o), (V = a), (P = n.id), (k = n.email), void 0 !== s && (W = s.authenticator_types), h.K.set(w, n.email), h.K.set(M, n.id);
+                ec('handleConnectionOpen called'), N.Z.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, S.Z)(n)), (U = r), (B = i), (G = o), (V = a), (P = n.id), (k = n.email), void 0 !== s && (W = s.authenticator_types), h.K.set(w, n.email), h.K.set(M, n.id);
             },
             OVERLAY_INITIALIZE: function (e) {
                 var t;
                 let { user: n, sessionId: r, analyticsToken: i, token: a } = e;
-                N.Z.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, T.Z)(n)), (U = r), (V = i), ep(a), e_(), (P = n.id), h.K.set(M, n.id);
+                N.Z.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, S.Z)(n)), (U = r), (V = i), ep(a), e_(), (P = n.id), h.K.set(M, n.id);
             },
             CONNECTION_CLOSED: function (e) {
                 let { code: t } = e;
@@ -300,12 +300,12 @@ class eE extends (a = _.ZP.Store) {
                         em();
                         return;
                     }
-                    y.default.track(O.rMx.APP_USER_DEAUTHENTICATED, { user_id: h.K.get(M) }), eg(), setImmediate(() => (0, S.uL)(O.Z5c.DEFAULT_LOGGED_OUT));
+                    y.default.track(O.rMx.APP_USER_DEAUTHENTICATED, { user_id: h.K.get(M) }), eg(), setImmediate(() => (0, T.uL)(O.Z5c.DEFAULT_LOGGED_OUT));
                 }
             },
             AUTH_SESSION_CHANGE: function (e) {
                 let { authSessionIdHash: t } = e;
-                null != t && (G = t);
+                null != t && (B = t);
             },
             LOGIN: function (e) {
                 (en = {}), (j = O.u34.LOGGING_IN), (J = ''), (i = null), null != e.login && (ea = e.login), el || (el = e.loginMethod === O.nnr.PASSWORD);
@@ -372,7 +372,7 @@ class eE extends (a = _.ZP.Store) {
             },
             LOGIN_SUSPENDED_USER: function (e) {
                 let { suspendedUserToken: t } = e;
-                (eo = !1), (es = t), setImmediate(() => (0, S.uL)(O.Z5c.ACCOUNT_STANDING));
+                (eo = !1), (es = t), setImmediate(() => (0, T.uL)(O.Z5c.ACCOUNT_STANDING));
             },
             SET_LOGIN_CREDENTIALS: function (e) {
                 let { login: t, password: n } = e;
@@ -455,7 +455,7 @@ class eE extends (a = _.ZP.Store) {
                 en = {};
             },
             CLOSE_SUSPENDED_USER: function () {
-                (es = null), (j = O.u34.NONE), eg(), setImmediate(() => (0, S.uL)(O.Z5c.DEFAULT_LOGGED_OUT));
+                (es = null), (j = O.u34.NONE), eg(), setImmediate(() => (0, T.uL)(O.Z5c.DEFAULT_LOGGED_OUT));
             },
             PASSWORDLESS_FAILURE: function (e) {
                 let { error: t } = e;

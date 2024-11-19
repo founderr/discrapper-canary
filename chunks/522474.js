@@ -30,8 +30,8 @@ let E = {},
     v = {},
     b = {},
     I = {},
-    S = {},
-    T = new Set(),
+    T = {},
+    S = new Set(),
     y = () => x.emitChange(),
     A = o().debounce(y, 150);
 function N(e) {
@@ -67,7 +67,7 @@ function R(e) {
             let t = b[e];
             a()(null != t, 'Popout window was null during unmount'), t.removeEventListener('focus', y), t.removeEventListener('blur', y), t.removeEventListener('resize', A);
             let n = I[e];
-            a()(null != n, 'Window root was null while unmounting'), n.unmount(), delete b[e], delete v[e], delete S[e], delete I[e];
+            a()(null != n, 'Window root was null while unmounting'), n.unmount(), delete b[e], delete v[e], delete T[e], delete I[e];
         })(e),
         x.emitChange());
 }
@@ -82,10 +82,10 @@ function O(e) {
                 return (
                     (r = n.key),
                     void (
-                        T.has(r) &&
+                        S.has(r) &&
                         (!(function (e) {
                             let t = b[e],
-                                n = S[e];
+                                n = T[e];
                             if (null == t) {
                                 new d.Z('PopoutWindowStore').warn('Failed to open window', e);
                                 return;
@@ -101,7 +101,7 @@ function O(e) {
                             let i = (0, l.createRoot)(r.getElementById('app-mount'));
                             a()(null != i, 'No render target for popout!'), (I[e] = i), i.render(n(e));
                         })(r),
-                        T.delete(r),
+                        S.delete(r),
                         x.emitChange())
                     )
                 );
@@ -175,7 +175,7 @@ let x = new L(c.Z, {
                 });
         }
         let p = window.open(m.Z5c.POPOUT_WINDOW, t, (0, h.Z)(u));
-        (p.windowKey = t), null == p || p.focus(), (b[t] = p), (S[t] = r), f.isPlatformEmbedded && (_.ZP.setAlwaysOnTop(t, c), (v[t] = c), _.ZP.isAlwaysOnTop(t).then((e) => (v[t] = e))), T.add(t);
+        (p.windowKey = t), null == p || p.focus(), (b[t] = p), (T[t] = r), f.isPlatformEmbedded && (_.ZP.setAlwaysOnTop(t, c), (v[t] = c), _.ZP.isAlwaysOnTop(t).then((e) => (v[t] = e))), S.add(t);
     },
     POPOUT_WINDOW_ADD_STYLESHEET: function (e) {
         let { url: t, integrity: n } = e;

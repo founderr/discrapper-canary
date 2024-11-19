@@ -30,7 +30,7 @@ var r,
     v = n(427679),
     b = n(590415),
     I = n(974609);
-function S(e, t, n) {
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -43,7 +43,7 @@ function S(e, t, n) {
         e
     );
 }
-function T(e) {
+function S(e) {
     var t;
     let { speaker: n, role: r, user: i, userNick: a, connectedOn: s, voiceState: o, type: u } = e,
         c = o.selfMute ? '\x01' : '\0',
@@ -94,16 +94,16 @@ class C {
                 isFriend: p.Z.isFriend(o.id),
                 connectedOn: null !== (n = null == l ? void 0 : l.connectedOn) && void 0 !== n ? n : Date.now()
             },
-            S = {
+            T = {
                 ...d,
                 type: 'VOICE',
                 id: o.id,
                 rtsState: (0, b.gf)(s)
             };
-        a.push(S);
-        let T = null !== (r = c.Z.getStreamForUser(e, this.guildId)) && void 0 !== r ? r : c.Z.getActiveStreamForUser(e, this.guildId);
-        if (null != T && T.channelId === this.channelId) {
-            let e = (0, u.V9)(T);
+        a.push(T);
+        let S = null !== (r = c.Z.getStreamForUser(e, this.guildId)) && void 0 !== r ? r : c.Z.getActiveStreamForUser(e, this.guildId);
+        if (null != S && S.channelId === this.channelId) {
+            let e = (0, u.V9)(S);
             (i = {
                 ...d,
                 id: e,
@@ -157,6 +157,6 @@ class C {
     }
     constructor(e) {
         var t;
-        S(this, 'channelId', void 0), S(this, 'guildId', void 0), S(this, 'participants', {}), S(this, '_participantsIndex', new o.h(N, T)), S(this, '_requestToSpeakIndex', new o.h(() => [], y)), (this.channelId = e), (this.guildId = null === (t = d.Z.getChannel(e)) || void 0 === t ? void 0 : t.getGuildId());
+        T(this, 'channelId', void 0), T(this, 'guildId', void 0), T(this, 'participants', {}), T(this, '_participantsIndex', new o.h(N, S)), T(this, '_requestToSpeakIndex', new o.h(() => [], y)), (this.channelId = e), (this.guildId = null === (t = d.Z.getChannel(e)) || void 0 === t ? void 0 : t.getGuildId());
     }
 }

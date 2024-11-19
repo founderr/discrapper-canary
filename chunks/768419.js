@@ -16,8 +16,8 @@ var s,
     v = n(710845),
     b = n(594190),
     I = n(314897),
-    S = n(553795),
-    T = n(517100),
+    T = n(553795),
+    S = n(517100),
     y = n(158776),
     A = n(606304),
     N = n(979651),
@@ -44,8 +44,8 @@ function M(e, t, n) {
 let P = g.Z.get(w.ABu.SPOTIFY),
     k = 'hm://pusher/v1/connections/',
     U = 30 * O.Z.Millis.SECOND,
-    G = 30 * O.Z.Millis.SECOND,
-    B = 5 * O.Z.Millis.MINUTE,
+    B = 30 * O.Z.Millis.SECOND,
+    G = 5 * O.Z.Millis.MINUTE,
     Z = 5 * O.Z.Millis.SECOND,
     F = 1.5 * O.Z.Millis.SECOND,
     V = 1 * O.Z.Millis.MINUTE,
@@ -245,7 +245,7 @@ function ef() {
 }
 function e_() {
     let e = Object.keys(J),
-        t = S.Z.getAccounts().filter((e) => {
+        t = T.Z.getAccounts().filter((e) => {
             let { type: t } = e;
             return t === w.ABu.SPOTIFY;
         });
@@ -284,7 +284,7 @@ function eh(e) {
                 checkSoundSharing: !0,
                 checkSoundboardSounds: !1
             });
-        t && n && null != r ? (K.start(G, ep, !1), z.stop()) : z.start(100, () => K.stop(), !1);
+        t && n && null != r ? (K.start(B, ep, !1), z.stop()) : z.start(100, () => K.stop(), !1);
     }
     return !1;
 }
@@ -292,7 +292,7 @@ function em(e, t, n) {
     var r, i, a, s, o, l, u, c, d, f, _, p, m, g;
     let E,
         v,
-        { device: b, progress_ms: I, is_playing: S, repeat_state: T, item: y, context: A } = n;
+        { device: b, progress_ms: I, is_playing: T, repeat_state: S, item: y, context: A } = n;
     if (null != y && y.type === x.Hw.TRACK) {
         let e = y.id;
         null != y.linked_from && null != y.linked_from.id && (e = y.linked_from.id),
@@ -360,8 +360,8 @@ function em(e, t, n) {
                 accountId: e,
                 track: E,
                 volumePercent: null != b ? b.volume_percent : 0,
-                isPlaying: S,
-                repeat: 'off' !== T,
+                isPlaying: T,
+                repeat: 'off' !== S,
                 position: I,
                 context: t,
                 device: b
@@ -383,7 +383,7 @@ function eg(e, t) {
 }
 class eE extends (o = f.ZP.Store) {
     initialize() {
-        this.waitFor(S.Z, A.Z),
+        this.waitFor(T.Z, A.Z),
             this.syncWith([y.Z], () =>
                 (function () {
                     if (null == i || null == er()) return !1;
@@ -391,7 +391,7 @@ class eE extends (o = f.ZP.Store) {
                         t = ea(e);
                     if (null == t)
                         return (
-                            q.start(B, () => {
+                            q.start(G, () => {
                                 if (null != i && i.userId === e) (0, E.Z)();
                             }),
                             !1
@@ -445,7 +445,7 @@ class eE extends (o = f.ZP.Store) {
         return ee[e];
     }
     shouldShowActivity() {
-        return null != r && r.account.showActivity && !T.Z.isIdle();
+        return null != r && r.account.showActivity && !S.Z.isIdle();
     }
     getActivity() {
         let e, t, n;
@@ -521,8 +521,8 @@ let ev = new eE(h.Z, {
                 null == e ? ($[t].push(l), (d = !0)) : !(0, _.Z)(e, l) && (Object.assign(e, l), (d = !0)), ec(t, l.id);
             } else ($[t] = [l]), (d = !0);
         }
-        n ? null == en || en.start(G, ep) : ((s = null), null == en || en.stop());
-        let f = S.Z.getAccount(t, w.ABu.SPOTIFY);
+        n ? null == en || en.start(B, ep) : ((s = null), null == en || en.stop());
+        let f = T.Z.getAccount(t, w.ABu.SPOTIFY);
         if (null == f) return d;
         let p = ee[t],
             m =
@@ -628,7 +628,7 @@ let ev = new eE(h.Z, {
         if ((null == t ? void 0 : t.desktopSettings) != null) {
             null == en || en.stop();
             let { sourceId: e, sound: n } = null == t ? void 0 : t.desktopSettings;
-            null != e && b.ZP.getObservedAppNameForWindow(e) === P.name && n ? (en = new p.Xp()).start(G, ep) : (null == en || en.stop(), (en = null));
+            null != e && b.ZP.getObservedAppNameForWindow(e) === P.name && n ? (en = new p.Xp()).start(B, ep) : (null == en || en.stop(), (en = null));
         } else null == t && (null == en || en.stop(), (en = null));
     }
 });

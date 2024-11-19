@@ -68,17 +68,17 @@ function I(e) {
     let t = l.Z.toURLSafe(e.url);
     return null != t && b(t);
 }
-function S(e) {
+function T(e) {
     if (null == e) return !1;
     let t = l.Z.toURLSafe(e.url);
     return !!(null != t && g(t)) && b(t);
 }
-function T(e) {
+function S(e) {
     var t;
-    return S(e.image) || (null === (t = e.images) || void 0 === t ? void 0 : t.some(S)) || S(e.video);
+    return T(e.image) || (null === (t = e.images) || void 0 === t ? void 0 : t.some(T)) || T(e.video);
 }
 function y(e) {
-    return e.attachments.some(I) || e.embeds.some(T);
+    return e.attachments.some(I) || e.embeds.some(S);
 }
 async function A(e) {
     let t = await s.tn.post({

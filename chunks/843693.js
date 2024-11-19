@@ -1,6 +1,6 @@
 n.d(t, {
     wU: function () {
-        return S;
+        return T;
     }
 }),
     n(47120);
@@ -52,10 +52,10 @@ let E = new Set(),
         let { userId: t, channelId: n } = e;
         return ''.concat(t, '-').concat(n);
     };
-function S(e, t, n, r) {
+function T(e, t, n, r) {
     return !(e !== t || null == n || r.has(n)) && (r.add(n), !0);
 }
-class T extends (r = o.ZP.Store) {
+class S extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(d.default, f.Z);
     }
@@ -96,7 +96,7 @@ class T extends (r = o.ZP.Store) {
     }
 }
 (s = 'PoggermodeStore'),
-    (a = 'displayName') in (i = T)
+    (a = 'displayName') in (i = S)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -104,7 +104,7 @@ class T extends (r = o.ZP.Store) {
               writable: !0
           })
         : (i[a] = s);
-let y = new T(c.Z, {
+let y = new S(c.Z, {
     POGGERMODE_UPDATE_COMBO: function (e) {
         let { type: t, ...n } = e;
         if (!p.Z.isEnabled()) return !1;
@@ -161,7 +161,7 @@ let y = new T(c.Z, {
         } = e;
         if (!p.Z.isEnabled()) return !1;
         let o = d.default.getId();
-        if (!S(null == a ? void 0 : a.id, o, s, E)) return !1;
+        if (!T(null == a ? void 0 : a.id, o, s, E)) return !1;
         let l = v.get(
             I({
                 userId: null !== (t = null == a ? void 0 : a.id) && void 0 !== t ? t : '???',

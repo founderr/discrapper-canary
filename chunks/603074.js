@@ -22,7 +22,7 @@ var r = n(200651),
     v = n(526617),
     b = n(308377);
 function I(e) {
-    let { guildId: t, channel: n, containerWidth: a, onClose: I, onSelect: S, analyticsSource: T, suppressPlaySound: y, shouldValidateSelectedSound: A, shouldShowUpsell: N = !0, gridNotice: C, inExpressionPicker: R, soundButtonOverlay: O, listPadding: D, renderHeader: L, defaultSoundsOnly: x } = e,
+    let { guildId: t, channel: n, containerWidth: a, onClose: I, onSelect: T, analyticsSource: S, suppressPlaySound: y, shouldValidateSelectedSound: A, shouldShowUpsell: N = !0, gridNotice: C, inExpressionPicker: R, soundButtonOverlay: O, listPadding: D, renderHeader: L, defaultSoundsOnly: x } = e,
         w = (0, l.e7)([E.Z], () => E.Z.isFetchingSounds() || E.Z.isFetchingDefaultSounds()),
         M = (0, l.e7)([h.Z], () => h.Z.getMediaSessionId()),
         { analyticsLocations: P } = (0, d.ZP)(c.Z.SOUNDBOARD_POPOUT);
@@ -30,7 +30,7 @@ function I(e) {
         type: o.ImpressionTypes.POPOUT,
         name: o.ImpressionNames.SOUNDBOARD_POPOUT,
         properties: {
-            source: T,
+            source: S,
             guild_id: t,
             media_session_id: M
         }
@@ -53,7 +53,7 @@ function I(e) {
                       guildId: t,
                       channel: n,
                       onClose: I,
-                      onSelect: S,
+                      onSelect: T,
                       shouldValidateSelectedSound: A,
                       containerWidth: a,
                       suppressPlaySound: y,

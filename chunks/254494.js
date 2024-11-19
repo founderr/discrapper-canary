@@ -33,13 +33,13 @@ let d = (e) => {
 };
 t.Z = function (e) {
     let { categoryListRef: t, expressionsListRef: n, categories: a, store: u, children: f, className: _, listPadding: p, rowCount: h, getScrollOffsetForIndex: m, categoryHeight: g, onScroll: E, renderCategoryListItem: v, rowCountBySection: b, renderSection: I } = e,
-        S = u.useStore((e) => e.activeCategoryIndex);
+        T = u.useStore((e) => e.activeCategoryIndex);
     d({
-        activeIndex: S,
+        activeIndex: T,
         categoryListRef: t,
         getScrollOffsetForIndex: m
     });
-    let T = i.useCallback(
+    let S = i.useCallback(
             (e) => {
                 let { searchQuery: t } = l.Iu.getState();
                 if ((u.setActiveCategoryIndex(e), '' !== t)) (0, l.ql)('');
@@ -50,7 +50,7 @@ t.Z = function (e) {
             },
             [n, u]
         ),
-        y = i.useCallback((e) => v(a[e], e, () => T(e), S === e), [S, a, T, v]),
+        y = i.useCallback((e) => v(a[e], e, () => S(e), T === e), [T, a, S, v]),
         A = i.useMemo(() => ('function' == typeof g ? (e) => g(a[e], e) : g), [a, g]);
     return (0, r.jsxs)('div', {
         className: s()(c.wrapper, _),
@@ -66,7 +66,7 @@ t.Z = function (e) {
                 rowCountBySection: b,
                 renderSection: I
             }),
-            null == f ? void 0 : f(T)
+            null == f ? void 0 : f(S)
         ]
     });
 };

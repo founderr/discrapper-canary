@@ -18,8 +18,8 @@ var r = n(200651),
     v = n(430824),
     b = n(496675),
     I = n(979651),
-    S = n(617136),
-    T = n(113434),
+    T = n(617136),
+    S = n(113434),
     y = n(497505),
     A = n(475595),
     N = n(602667),
@@ -37,8 +37,8 @@ function k(e, t) {
 }
 t.Z = function (e) {
     var t, n, h;
-    let { quest: m, memberListItemRef: v, applicationStream: b, position: I, closePopout: U, updatePosition: G } = e,
-        B = (0, o.e7)([E.Z], () => {
+    let { quest: m, memberListItemRef: v, applicationStream: b, position: I, closePopout: U, updatePosition: B } = e,
+        G = (0, o.e7)([E.Z], () => {
             var e;
             return null !== (e = E.Z.getChannel(null == b ? void 0 : b.channelId)) && void 0 !== e ? e : null;
         }),
@@ -46,7 +46,7 @@ t.Z = function (e) {
             quest: m,
             location: y.jn.MEMBERS_LIST
         }),
-        F = (0, T.tP)(m),
+        F = (0, S.tP)(m),
         V = (null == m ? void 0 : null === (t = m.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
         j = (null == m ? void 0 : null === (n = m.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null,
         H = (null == m ? void 0 : null === (h = m.userStatus) || void 0 === h ? void 0 : h.completedAt) != null,
@@ -70,7 +70,7 @@ t.Z = function (e) {
             let e = $.current,
                 t = v.current;
             if (null == e || null == t) return;
-            let n = new MutationObserver(() => G());
+            let n = new MutationObserver(() => B());
             return (
                 n.observe(e, {
                     childList: !0,
@@ -80,7 +80,7 @@ t.Z = function (e) {
                     n.disconnect();
                 }
             );
-        }, [v, $, G]);
+        }, [v, $, B]);
     let ee = (0, u.useSpring)({
             from: { height: 0 },
             height: null != q ? q : 0,
@@ -104,24 +104,24 @@ t.Z = function (e) {
             J.dispatch(L.CkL.POPOUT_CLOSE);
         },
         er = 'top' === I ? ''.concat('4px', ' ').concat('4px', ' 0 0') : '0 0 '.concat('4px', ' ').concat('4px');
-    if (null == m || F || (V && !k(b, B))) return null;
+    if (null == m || F || (V && !k(b, G))) return null;
     let ei = () => {
-            (0, S._3)({
+            (0, T._3)({
                 questId: m.id,
                 questContent: y.jn.MEMBERS_LIST,
-                questContentCTA: S.jZ.OPEN_DISCLOSURE,
+                questContentCTA: T.jZ.OPEN_DISCLOSURE,
                 trackGuildAndChannelMetadata: !0
             }),
                 (0, O.openDisclosureModal)(m, {
                     content: y.jn.MEMBERS_LIST,
-                    ctaContent: S.jZ.OPEN_DISCLOSURE
+                    ctaContent: T.jZ.OPEN_DISCLOSURE
                 });
         },
         ea = () => {
-            (0, S._3)({
+            (0, T._3)({
                 questId: m.id,
                 questContent: y.jn.MEMBERS_LIST,
-                questContentCTA: S.jZ.LEARN_MORE,
+                questContentCTA: T.jZ.LEARN_MORE,
                 trackGuildAndChannelMetadata: !0
             }),
                 (0, O.navigateToQuestHome)(D.dr.MEMBERS_LIST, y.jn.MEMBERS_LIST, m.id);
@@ -130,15 +130,15 @@ t.Z = function (e) {
             e.stopPropagation(), ei();
         },
         eo = () => {
-            if (k(b, B) && null != B)
+            if (k(b, G) && null != G)
                 return (
-                    (0, S._3)({
+                    (0, T._3)({
                         questId: m.id,
                         questContent: y.jn.MEMBERS_LIST,
-                        questContentCTA: S.jZ.WATCH_STREAM,
+                        questContentCTA: T.jZ.WATCH_STREAM,
                         trackGuildAndChannelMetadata: !0
                     }),
-                    c.default.selectVoiceChannel(B.id),
+                    c.default.selectVoiceChannel(G.id),
                     (0, d.iV)(b)
                 );
             ea();
@@ -158,7 +158,7 @@ t.Z = function (e) {
                         handleClickCta: ea,
                         tileAssetType: 'reward'
                     }
-                  : k(b, B)
+                  : k(b, G)
                     ? {
                           headerText: w.intl.string(w.t.Bz6SkJ),
                           ctaText: w.intl.string(w.t.BXFP39),

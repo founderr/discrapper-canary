@@ -56,7 +56,7 @@ let v = {
         [v.LARGER]: [19, 19, 17, 17, 15, 13, 11],
         [v.XLARGE]: [20, 20, 18, 18, 16, 14, 12]
     };
-class S extends a.PureComponent {
+class T extends a.PureComponent {
     renderAcronym() {
         let { guild: e, iconSrc: t } = this.props;
         return null != e.icon || null != t
@@ -80,7 +80,7 @@ class S extends a.PureComponent {
     }
     renderIcon() {
         var e, t;
-        let { guild: n, className: r, showBadge: a, active: s, size: l, style: u = {}, textScale: c, showTooltip: f, tooltipPosition: _, onClick: p, to: h, badgeStrokeColor: E, animate: v, tabIndex: b, iconSrc: S, 'aria-hidden': T, ...y } = this.props,
+        let { guild: n, className: r, showBadge: a, active: s, size: l, style: u = {}, textScale: c, showTooltip: f, tooltipPosition: _, onClick: p, to: h, badgeStrokeColor: E, animate: v, tabIndex: b, iconSrc: T, 'aria-hidden': S, ...y } = this.props,
             A = I[l],
             N = null != p ? d.Clickable : 'div';
         return (0, i.jsxs)(N, {
@@ -89,7 +89,7 @@ class S extends a.PureComponent {
                 [g.iconInactive]: !s,
                 [g.noIcon]: null == n.icon
             }),
-            'aria-hidden': T,
+            'aria-hidden': S,
             style:
                 null == n.icon
                     ? {
@@ -130,7 +130,7 @@ class S extends a.PureComponent {
             : this.renderTooltip();
     }
 }
-let T = u.ZP.connectStores([p.Z], (e) => {
+let S = u.ZP.connectStores([p.Z], (e) => {
     let { guild: t, animate: n, iconSrc: r, style: i, size: a } = e;
     return {
         style: {
@@ -138,10 +138,10 @@ let T = u.ZP.connectStores([p.Z], (e) => {
             backgroundImage: (0, h.rv)(null != r ? r : t.getIconURL(b[a], n && p.Z.isFocused()))
         }
     };
-})((0, f.N)((e) => (0, i.jsx)(S, { ...e })));
+})((0, f.N)((e) => (0, i.jsx)(T, { ...e })));
 class y extends (r = a.PureComponent) {
     render() {
-        return (0, i.jsx)(T, { ...this.props });
+        return (0, i.jsx)(S, { ...this.props });
     }
 }
 E(y, 'Sizes', v),

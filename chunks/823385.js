@@ -18,8 +18,8 @@ var i,
     v = n(271383),
     b = n(430824),
     I = n(496675),
-    S = n(306680),
-    T = n(944486),
+    T = n(306680),
+    S = n(944486),
     y = n(914010),
     A = n(9156),
     N = n(483360),
@@ -46,8 +46,8 @@ let L = 'seenQSTutorial',
     P = !1,
     k = null,
     U = [],
-    G = null,
-    B = 0,
+    B = null,
+    G = 0,
     Z = [],
     F = [];
 function V() {
@@ -70,8 +70,8 @@ function H(e) {
                       frecencyBoosters: !0,
                       blacklist: s
                   })),
-        (G = null),
-        (B = n.length),
+        (B = null),
+        (G = n.length),
         (k = i),
         r.search(n);
 }
@@ -91,7 +91,7 @@ function Y(e, t) {
                     ? (function () {
                           var e, t;
                           let n = null !== (e = y.Z.getGuildId()) && void 0 !== e ? e : void 0,
-                              r = null !== (t = T.Z.getChannelId()) && void 0 !== t ? t : void 0;
+                              r = null !== (t = S.Z.getChannelId()) && void 0 !== t ? t : void 0;
                           switch (k) {
                               case c.h8.USER: {
                                   let e = h.default.getId();
@@ -149,7 +149,7 @@ function Y(e, t) {
                               );
                           })((e) => e === r || F.includes(e));
                           o.length > 0 && i.push((0, c.o6)(O.intl.string(O.t['4B63jY'])), ...o);
-                          let l = S.ZP.getMentionChannelIds()
+                          let l = T.ZP.getMentionChannelIds()
                               .filter((e) => e !== r && !F.includes(e))
                               .map((e) => j(e))
                               .filter(C.lm)
@@ -201,7 +201,7 @@ function Y(e, t) {
                     default:
                         U = e;
                 }
-                if (t !== G) (G = t), (B = Math.max(t.length, B)), (w = (0, c.gJ)(c.a8.DOWN, -1, U));
+                if (t !== B) (B = t), (G = Math.max(t.length, G)), (w = (0, c.gJ)(c.a8.DOWN, -1, U));
                 else {
                     let e = U[w];
                     null != e && e.type === c.h8.HEADER && (w = (0, c.gJ)(c.a8.DOWN, w, U));
@@ -210,7 +210,7 @@ function Y(e, t) {
             })(e, t);
 }
 function W() {
-    (G = null), (B = 0), (Z = []), null != r && (r.destroy(), (r = null));
+    (B = null), (G = 0), (Z = []), null != r && (r.destroy(), (r = null));
 }
 class K extends (i = o.ZP.PersistedStore) {
     initialize(e) {
@@ -247,7 +247,7 @@ class K extends (i = o.ZP.PersistedStore) {
             results: U,
             selectedIndex: w,
             seenTutorial: M,
-            maxQueryLength: B
+            maxQueryLength: G
         };
     }
 }

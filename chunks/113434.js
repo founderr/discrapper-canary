@@ -48,7 +48,7 @@ n.d(t, {
         return i;
     },
     eN: function () {
-        return G;
+        return B;
     },
     eQ: function () {
         return ec;
@@ -109,8 +109,8 @@ var r,
     v = n(63063),
     b = n(930153),
     I = n(358085),
-    S = n(617136),
-    T = n(272008),
+    T = n(617136),
+    S = n(272008),
     y = n(569984),
     A = n(497505),
     N = n(918701),
@@ -133,7 +133,7 @@ function P() {
         s = (0, C.cB)({ location: x.dr.USE_QUESTS });
     return (
         u.useEffect(() => {
-            if ('cache-only' !== e.fetchPolicy) ('cache-and-network' === e.fetchPolicy || ('cache-or-network' === e.fetchPolicy && 0 === a)) && s && !t && !i && (n(!0), (0, T.xw)(), (0, O.Z)({ location: x.dr.USE_QUESTS }) && (0, T.w)(A.Ok.DESKTOP_ACCOUNT_PANEL_AREA));
+            if ('cache-only' !== e.fetchPolicy) ('cache-and-network' === e.fetchPolicy || ('cache-or-network' === e.fetchPolicy && 0 === a)) && s && !t && !i && (n(!0), (0, S.xw)(), (0, O.Z)({ location: x.dr.USE_QUESTS }) && (0, S.w)(A.Ok.DESKTOP_ACCOUNT_PANEL_AREA));
         }, [e.fetchPolicy, s, t, i, a]),
         {
             quests: r,
@@ -208,13 +208,13 @@ function U(e) {
         isFetchingCurrentQuests: n
     };
 }
-function G() {
+function B() {
     let e = u.useRef(!1),
         t = (0, p.Wu)([y.Z], () => Array.from(y.Z.claimedQuests.values())),
         n = (0, p.e7)([y.Z], () => y.Z.isFetchingClaimedQuests);
     return (
         u.useEffect(() => {
-            !n && !e.current && ((e.current = !0), (0, T.Ag)());
+            !n && !e.current && ((e.current = !0), (0, S.Ag)());
         }, [n]),
         {
             claimedQuests: t,
@@ -222,7 +222,7 @@ function G() {
         }
     );
 }
-function B() {
+function G() {
     let { quests: e, isFetchingCurrentQuests: t } = P({ fetchPolicy: 'cache-only' }),
         [n, r] = u.useState(() => new Map(e.map((e) => [e.id, (0, N.zi)(e)])));
     return (
@@ -250,7 +250,7 @@ function B() {
     );
 }
 function Z(e) {
-    let t = B();
+    let t = G();
     return u.useMemo(() => {
         var n;
         return null != e && null !== (n = t.get(e.id)) && void 0 !== n && n;
@@ -311,14 +311,14 @@ let K = (e) => {
                   { quest: t },
                   {
                       content: n,
-                      ctaContent: S.jZ.CONNECT_CONSOLE_LINK
+                      ctaContent: T.jZ.CONNECT_CONSOLE_LINK
                   }
               )
             : (0, N.V$)(
                   { quest: t },
                   {
                       content: n,
-                      ctaContent: S.jZ.VIEW_CONSOLE_CONNECTIONS_LINK
+                      ctaContent: T.jZ.VIEW_CONSOLE_CONNECTIONS_LINK
                   }
               );
     };
@@ -359,7 +359,7 @@ function z(e, t, n) {
 }
 function q() {
     let { quests: e, isFetchingCurrentQuests: t } = P({ fetchPolicy: 'cache-or-network' }),
-        n = B();
+        n = G();
     return u.useMemo(() => {
         let r = [];
         if (t || 0 === e.length) return r;
@@ -398,11 +398,11 @@ function X(e) {
 function J(e) {
     return u.useMemo(
         () => ({
-            handleComplete: () => (0, T.Wf)(e),
-            handleProgress: (t) => (0, T.Wf)(e, t),
-            handleResetStatusClick: () => (0, T.eT)(e),
-            handleResetDismissibilityClick: () => (0, T.T0)(e),
-            handleOverrideDeliveryClick: () => (0, T.EW)(e)
+            handleComplete: () => (0, S.Wf)(e),
+            handleProgress: (t) => (0, S.Wf)(e, t),
+            handleResetStatusClick: () => (0, S.eT)(e),
+            handleResetDismissibilityClick: () => (0, S.T0)(e),
+            handleOverrideDeliveryClick: () => (0, S.EW)(e)
         }),
         [e]
     );
@@ -449,7 +449,7 @@ let ee = (e) => {
                     null == r || r(), l(!0);
                     let e = null;
                     try {
-                        (e = await (0, T.CS)(t, n)), s(e.errorHints);
+                        (e = await (0, S.CS)(t, n)), s(e.errorHints);
                     } finally {
                         var a;
                         l(!1), null == i || i(null !== (a = null == e ? void 0 : e.errorHints) && void 0 !== a ? a : []);
@@ -531,7 +531,7 @@ function ea(e) {
 function es(e, t) {
     let [n, r] = (function (e) {
             let t = (0, p.e7)([y.Z], () => y.Z.selectedTaskPlatform(e));
-            return [t, u.useCallback((t) => (0, T.OR)(e, t), [e])];
+            return [t, u.useCallback((t) => (0, S.OR)(e, t), [e])];
         })(e.id),
         i = u.useMemo(() => (0, N.yH)(e), [e]),
         a = i.includes(x.cd.DESKTOP),
@@ -635,7 +635,7 @@ function eu(e) {
     u.useEffect(() => {
         null != r &&
             i.current !== t &&
-            ((0, S.Ic)({
+            ((0, T.Ic)({
                 mode: t,
                 prevMode: i.current,
                 questContent: n,
@@ -646,7 +646,7 @@ function eu(e) {
         u.useEffect(() => {
             if (null != r)
                 return () => {
-                    (0, S.Ic)({
+                    (0, T.Ic)({
                         mode: null,
                         prevMode: i.current,
                         questContent: n,

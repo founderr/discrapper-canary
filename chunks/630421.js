@@ -27,16 +27,16 @@ function f(e) {
         v = e.offsets,
         b = e.position,
         I = e.gpuAcceleration,
-        S = e.adaptive,
-        T = e.roundOffsets,
+        T = e.adaptive,
+        S = e.roundOffsets,
         y = e.isFixed,
         A = v.x,
         N = void 0 === A ? 0 : A,
         C = v.y,
         R = void 0 === C ? 0 : C,
         O =
-            'function' == typeof T
-                ? T({
+            'function' == typeof S
+                ? S({
                       x: N,
                       y: R
                   })
@@ -50,16 +50,16 @@ function f(e) {
         x = r.t$,
         w = r.we,
         M = window;
-    if (S) {
+    if (T) {
         var P = (0, i.Z)(h),
             k = 'clientHeight',
             U = 'clientWidth';
         P === (0, a.Z)(h) && ((P = (0, s.Z)(h)), 'static' !== (0, o.Z)(P).position && 'absolute' === b && ((k = 'scrollHeight'), (U = 'scrollWidth')));
         (g === r.we || ((g === r.t$ || g === r.F2) && E === r.ut)) && ((w = r.I), (R -= (y && P === M && M.visualViewport ? M.visualViewport.height : P[k]) - m.height), (R *= I ? 1 : -1)), (g === r.t$ || ((g === r.we || g === r.I) && E === r.ut)) && ((x = r.F2), (N -= (y && P === M && M.visualViewport ? M.visualViewport.width : P[U]) - m.width), (N *= I ? 1 : -1));
     }
-    var G = Object.assign({ position: b }, S && d);
-    var B =
-        !0 === T
+    var B = Object.assign({ position: b }, T && d);
+    var G =
+        !0 === S
             ? ((t = {
                   x: N,
                   y: R
@@ -76,7 +76,7 @@ function f(e) {
                   x: N,
                   y: R
               };
-    return ((N = B.x), (R = B.y), I) ? Object.assign({}, G, (((p = {})[w] = L ? '0' : ''), (p[x] = D ? '0' : ''), (p.transform = 1 >= (M.devicePixelRatio || 1) ? 'translate(' + N + 'px, ' + R + 'px)' : 'translate3d(' + N + 'px, ' + R + 'px, 0)'), p)) : Object.assign({}, G, (((_ = {})[w] = L ? R + 'px' : ''), (_[x] = D ? N + 'px' : ''), (_.transform = ''), _));
+    return ((N = G.x), (R = G.y), I) ? Object.assign({}, B, (((p = {})[w] = L ? '0' : ''), (p[x] = D ? '0' : ''), (p.transform = 1 >= (M.devicePixelRatio || 1) ? 'translate(' + N + 'px, ' + R + 'px)' : 'translate3d(' + N + 'px, ' + R + 'px, 0)'), p)) : Object.assign({}, B, (((_ = {})[w] = L ? R + 'px' : ''), (_[x] = D ? N + 'px' : ''), (_.transform = ''), _));
 }
 t.Z = {
     name: 'computeStyles',

@@ -1,6 +1,6 @@
 n.d(t, {
     q0: function () {
-        return S;
+        return T;
     },
     xo: function () {
         return y;
@@ -99,8 +99,8 @@ let E = async (e, t) => {
             rejectWithError: !1
         });
     },
-    S = -1,
-    T = async function (e, t) {
+    T = -1,
+    S = async function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 200;
         if (u.Z.isFullServerPreview(e)) {
             (0, l.aq)(e, { memberOptions: { isPending: !1 } });
@@ -121,7 +121,7 @@ let E = async (e, t) => {
                     guildId: e,
                     request: a
                 }),
-                (0, h.YG)(t.formFields) && n !== S && setTimeout(y, n),
+                (0, h.YG)(t.formFields) && n !== T && setTimeout(y, n),
                 a
             );
         } catch (t) {
@@ -178,7 +178,7 @@ t.ZP = {
         });
     },
     enableVerificationForm: I,
-    submitVerificationForm: T,
+    submitVerificationForm: S,
     clearCoachmark: function () {
         i.Z.dispatch({ type: 'USER_GUILD_JOIN_REQUEST_COACHMARK_CLEAR' });
     },

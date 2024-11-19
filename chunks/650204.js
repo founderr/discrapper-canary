@@ -19,8 +19,8 @@ var d = n(616254),
     v = n(471638),
     b = n(585275),
     I = n(960048),
-    S = n(63063),
-    T = n(240849),
+    T = n(63063),
+    S = n(240849),
     y = n(998502),
     A = n(513566),
     N = n(534713),
@@ -36,10 +36,10 @@ n(916160);
 var P = n(857192),
     k = n(786882),
     U = n(44163),
-    G = n(710845),
-    B = n(70956);
+    B = n(710845),
+    G = n(70956);
 P.default.cssDebuggingEnabled && n.e('30592').then(n.bind(n, 623763));
-let Z = 5 * B.Z.Millis.MINUTE,
+let Z = 5 * G.Z.Millis.MINUTE,
     F = document.getElementById('app-mount');
 _()(null != F, 'Could not find app-mount'), (F.className = __OVERLAY__ ? '' : k.appMount);
 let V = (0, d.createRoot)(F),
@@ -66,7 +66,7 @@ if (null != x.Z) {
         .filter((e) => null != n[e])
         .map((e) => ''.concat(e, ': ').concat(n[e]))
         .join(', ');
-    new G.Z().log('[NATIVE INFO] host '.concat(e, ', modules: ').concat(c, ', build: ').concat(t));
+    new B.Z().log('[NATIVE INFO] host '.concat(e, ', modules: ').concat(c, ', build: ').concat(t));
     let d = null === (l = (u = x.Z.remoteApp).getReleaseChannel) || void 0 === l ? void 0 : l.call(u);
     ('canary' === d || 'development' === d) && y.ZP.pauseFrameEvictor(), y.ZP.initializeExitHook(), y.ZP.initializeWERHandler();
 }
@@ -74,7 +74,7 @@ if (((0, D.O)(window), __OVERLAY__)) H(p.Z.Overlay);
 else if (null != window.require && null == window.DiscordNative) H(p.Z.OutdatedClient);
 else {
     if ((document.addEventListener('scroll', (e) => e.preventDefault()), C.isPlatformEmbedded)) {
-        (window.onbeforeunload = () => y.ZP.beforeUnload()), y.ZP.on('HELP_OPEN', () => window.open(S.Z.getCommunityURL()));
+        (window.onbeforeunload = () => y.ZP.beforeUnload()), y.ZP.on('HELP_OPEN', () => window.open(T.Z.getCommunityURL()));
         let e = new L.sW(Z, () => y.ZP.purgeMemory());
         y.ZP.on('MAIN_WINDOW_BLUR', () => {
             e.delay(), y.ZP.setFocused(!1), (0, O.T_)(window, !1);
@@ -91,5 +91,5 @@ else {
                 (0, O.al)(window);
             });
     }
-    E.Z.initialize(), h.Z.initialize(), m.Z.init(), b.Z.init(), U.Z.init(), g.Z.initialize(), T.Z.initialize(), A.Z.initialize(), v.j(), H(p.Z.App);
+    E.Z.initialize(), h.Z.initialize(), m.Z.init(), b.Z.init(), U.Z.init(), g.Z.initialize(), S.Z.initialize(), A.Z.initialize(), v.j(), H(p.Z.App);
 }

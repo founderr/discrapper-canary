@@ -18,9 +18,9 @@ var r = n(200651),
     v = n(482133);
 t.Z = i.memo(function (e) {
     let { disabled: t, referralsRemaining: n, channel: b, isResending: I } = e,
-        { enabled: S } = d.Z.useExperiment({ location: 'ec41f5_1' }, { autoTrackExposure: !0 }),
-        T = S ? E.intl.format(E.t.z5AIsr, {}) : I ? E.intl.string(E.t.zzfBQk) : E.intl.string(E.t.ziPEBg),
-        y = S ? E.intl.string(E.t.nKUZur) : void 0,
+        { enabled: T } = d.Z.useExperiment({ location: 'ec41f5_1' }, { autoTrackExposure: !0 }),
+        S = T ? E.intl.format(E.t.z5AIsr, {}) : I ? E.intl.string(E.t.zzfBQk) : E.intl.string(E.t.ziPEBg),
+        y = T ? E.intl.string(E.t.nKUZur) : void 0,
         [A, N] = i.useState(!1),
         [C, R] = i.useState(!1),
         O = (0, o.Z)(null, () => R(!1)),
@@ -41,9 +41,9 @@ t.Z = i.memo(function (e) {
                       isResending: I
                   }),
                   (0, r.jsx)(a.u, {
-                      text: T,
+                      text: S,
                       shouldShow: !C,
-                      'aria-label': null != y ? y : T.toString(),
+                      'aria-label': null != y ? y : S.toString(),
                       children: (e) =>
                           (0, r.jsx)('div', {
                               onMouseEnter: () => {
@@ -63,7 +63,7 @@ t.Z = i.memo(function (e) {
                                   ...e,
                                   innerClassName: v.button,
                                   isActive: C,
-                                  'aria-label': null != y ? y : T.toString(),
+                                  'aria-label': null != y ? y : S.toString(),
                                   'aria-haspopup': 'dialog',
                                   onClick: () => {
                                       R((e) => !e),
@@ -77,7 +77,7 @@ t.Z = i.memo(function (e) {
                                       referralsRemaining: n,
                                       hovered: A,
                                       isResending: I,
-                                      shouldShowBirthdayUX: S,
+                                      shouldShowBirthdayUX: T,
                                       isLightTheme: (0, s.ap)(x)
                                   })
                               })

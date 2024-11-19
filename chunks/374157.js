@@ -156,13 +156,13 @@ function* u(e) {
         v = a.bN.richValue(e),
         b = p ? -1 : 1,
         I = null !== (r = null === (t = g.path) || void 0 === t ? void 0 : t[0]) && void 0 !== r ? r : 0,
-        S = null !== (i = null === (n = E.path) || void 0 === n ? void 0 : n[0]) && void 0 !== i ? i : v.length - 1,
-        T = p ? I : S,
-        y = p ? S : I;
+        T = null !== (i = null === (n = E.path) || void 0 === n ? void 0 : n[0]) && void 0 !== i ? i : v.length - 1,
+        S = p ? I : T,
+        y = p ? T : I;
     for (;;) {
         let t = v[y],
             n = null !== (u = y === I ? (null === (s = g.path) || void 0 === s ? void 0 : s[1]) : null) && void 0 !== u ? u : 0,
-            r = null !== (c = y === S ? (null === (o = E.path) || void 0 === o ? void 0 : o[1]) : null) && void 0 !== c ? c : t.children.length - 1,
+            r = null !== (c = y === T ? (null === (o = E.path) || void 0 === o ? void 0 : o[1]) : null) && void 0 !== c ? c : t.children.length - 1,
             i = p ? r : n,
             f = p ? n : r,
             _ = i;
@@ -198,7 +198,7 @@ function* u(e) {
             if (_ === f) break;
             _ += b;
         }
-        if (y === T) break;
+        if (y === S) break;
         y += b;
     }
 }

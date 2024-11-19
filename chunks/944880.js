@@ -28,7 +28,7 @@ function v(e) {
 }
 function b() {
     let { forceRefresh: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    S();
+    T();
     let t = u.Z.getForApplication(h.CL),
         n = (0, p.kG)(t),
         r = (0, p.MR)(Array.from(m.uv), t),
@@ -78,7 +78,7 @@ async function I() {
             (E = !1),
             a.Z.wait(() =>
                 (function () {
-                    if ((S(), _.Z.getFetchState() !== _.M.FETCHED || E)) return;
+                    if ((T(), _.Z.getFetchState() !== _.M.FETCHED || E)) return;
                     let e = (0, p.GT)();
                     if ((null == e ? void 0 : e.redeemable_at) == null) return;
                     let t = (null == e ? void 0 : e.redeemable_at) != null ? new Date(e.redeemable_at).getTime() - Date.now() : null;
@@ -86,11 +86,11 @@ async function I() {
                 })()
             );
 }
-function S() {
+function T() {
     clearTimeout(g), (g = null);
 }
-function T() {
-    S();
+function S() {
+    T();
 }
 function y() {
     b();
@@ -107,12 +107,12 @@ class A extends s.Z {
             (n = 'actions'),
             (r = {
                 POST_CONNECTION_OPEN: y,
-                CONNECTION_CLOSED: T,
+                CONNECTION_CLOSED: S,
                 ENTITLEMENT_FETCH_APPLICATION_SUCCESS: () => b(),
                 ENTITLEMENT_CREATE: v,
                 ENTITLEMENT_UPDATE: () => b(),
                 ENTITLEMENT_DELETE: () => b(),
-                LOGOUT: S
+                LOGOUT: T
             }),
             n in t
                 ? Object.defineProperty(t, n, {

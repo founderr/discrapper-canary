@@ -152,8 +152,8 @@ function _(e) {
                 }),
             [a]
         ),
-        S = i.useMemo(() => n.slice(0, E + 1), [n, E]),
-        T = i.useMemo(() => n.slice(E + 1), [n, E]);
+        T = i.useMemo(() => n.slice(0, E + 1), [n, E]),
+        S = i.useMemo(() => n.slice(E + 1), [n, E]);
     return (0, r.jsxs)('div', {
         className: s()(t, u.items),
         ref: m,
@@ -183,8 +183,8 @@ function _(e) {
                     })
                 ]
             }),
-            S.map(a),
-            T.length > 0 && (null != h ? h : I)(T)
+            T.map(a),
+            S.length > 0 && (null != h ? h : I)(S)
         ]
     });
 }

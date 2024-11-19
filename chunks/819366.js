@@ -22,8 +22,8 @@ var r = n(200651),
     v = n(271383),
     b = n(430824),
     I = n(699516),
-    S = n(594174),
-    T = n(5192),
+    T = n(594174),
+    S = n(5192),
     y = n(51144),
     A = n(377668);
 function N(e) {
@@ -55,7 +55,7 @@ function N(e) {
 function C(e) {
     let { className: t, userId: i, channelId: a, parsedUserId: p, content: C, inlinePreview: R = !1, viewingChannelId: O } = e,
         { analyticsLocations: D } = (0, f.ZP)(d.Z.USER_MENTION),
-        L = (0, l.e7)([S.default], () => S.default.getUser(i)),
+        L = (0, l.e7)([T.default], () => T.default.getUser(i)),
         x = (0, l.e7)([E.Z], () => E.Z.getChannel(a)),
         w = null != x ? x.getGuildId() : null,
         M =
@@ -76,27 +76,27 @@ function C(e) {
                           });
                   },
         P = y.ZP.useName(L),
-        k = (0, l.e7)([E.Z, v.ZP, I.Z], () => T.ZP.getNickname(w, a, L)),
+        k = (0, l.e7)([E.Z, v.ZP, I.Z], () => S.ZP.getNickname(w, a, L)),
         U = b.Z.getGuild(w),
-        G = (0, _.Ib)(U, x) && i === A.fL ? A.jM : null;
+        B = (0, _.Ib)(U, x) && i === A.fL ? A.jM : null;
     if (null == L)
         return (0, r.jsx)(N, {
             userId: p,
             className: t,
             children: C
         });
-    let B = (e) =>
+    let G = (e) =>
         (0, r.jsx)(h.Z, {
             className: t,
             onContextMenu: M,
-            color: G,
+            color: B,
             ...e,
             children: '@'.concat(null != k ? k : P)
         });
     return R
         ? (0, r.jsx)(f.Gt, {
               value: D,
-              children: B()
+              children: G()
           })
         : (0, r.jsx)(f.Gt, {
               value: D,
@@ -119,7 +119,7 @@ function C(e) {
                       })
                   ),
                   position: o.tq ? 'top' : 'right',
-                  children: (e) => B(e)
+                  children: (e) => G(e)
               })
           });
 }

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return S;
     }
 }),
     n(47120);
@@ -23,9 +23,9 @@ var r = n(200651),
     v = n(425637),
     b = n(895982),
     I = n(685741),
-    S = n(20818);
-function T(e) {
-    var t, n, T;
+    T = n(20818);
+function S(e) {
+    var t, n, S;
     let { sourceType: y, children: A, user: N } = e,
         { profileType: C } = (0, h.z)(),
         { avatarReactReplyEnabled: R, statusReactReplyEnabled: O } = (0, p.t)({ location: 'UserProfilePopoutInteractionCoachmark' }),
@@ -39,8 +39,8 @@ function T(e) {
         P = y === m.n_.AVATAR && L,
         k = y === m.n_.ACTIVITY && D && !L,
         U = !x && C === m.y0.BITE_SIZE && (w || M || P || k),
-        [G, B] = i.useState(!1);
-    (0, l.Z)(() => B(!0), U ? 200 : null);
+        [B, G] = i.useState(!1);
+    (0, l.Z)(() => G(!0), U ? 200 : null);
     let {
             asset: Z,
             assetClassName: F,
@@ -51,7 +51,7 @@ function T(e) {
             dismissibleContentType: W
         } = ((t = O),
         (n = R),
-        (T = D),
+        (S = D),
         L
             ? {
                   asset: I,
@@ -62,7 +62,7 @@ function T(e) {
                   spacing: 30,
                   dismissibleContentType: s.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK_ALL
               }
-            : T
+            : S
               ? {
                     asset: v,
                     assetClassName: void 0,
@@ -84,7 +84,7 @@ function T(e) {
                   }
                 : t
                   ? {
-                        asset: S,
+                        asset: T,
                         assetClassName: void 0,
                         className: E.statusCoachmark,
                         content: g.intl.string(g.t.MYYTWV),
@@ -102,7 +102,7 @@ function T(e) {
                         dismissibleContentType: s.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK_AVATAR
                     }),
         K = (0, u.N)(s.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK),
-        [z, q] = (0, c.US)(G && !K ? [W] : []);
+        [z, q] = (0, c.US)(B && !K ? [W] : []);
     return (0, r.jsx)(o.Popout, {
         align: 'center',
         position: y === m.n_.AVATAR ? 'left' : 'right',

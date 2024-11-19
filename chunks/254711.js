@@ -27,8 +27,8 @@ var r = n(512722),
     v = n(592125),
     b = n(496675),
     I = n(594174),
-    S = n(70956),
-    T = n(51144),
+    T = n(70956),
+    S = n(51144),
     y = n(895924),
     A = n(689079),
     N = n(981631),
@@ -404,7 +404,7 @@ let O = n(227419).Z,
                     var t;
                     let n = I.default.getUser(a);
                     if (null == n) throw Error();
-                    await c.Z.kickUser(r.id, a, null !== (t = D(e, 'reason')) && void 0 !== t ? t : ''), d.Z.sendBotMessage(i.id, R.intl.formatToPlainString(R.t['9wzHDQ'], { user: T.ZP.getUserTag(n) }));
+                    await c.Z.kickUser(r.id, a, null !== (t = D(e, 'reason')) && void 0 !== t ? t : ''), d.Z.sendBotMessage(i.id, R.intl.formatToPlainString(R.t['9wzHDQ'], { user: S.ZP.getUserTag(n) }));
                 })().catch(() => {
                     d.Z.sendBotMessage(i.id, R.intl.string(R.t.l0gNlp));
                 });
@@ -457,32 +457,32 @@ let O = n(227419).Z,
                             {
                                 name: R.intl.string(R.t.RKpitb),
                                 displayName: R.intl.string(R.t.RKpitb),
-                                value: S.Z.Seconds.HOUR
+                                value: T.Z.Seconds.HOUR
                             },
                             {
                                 name: R.intl.string(R.t['8WfJZ2']),
                                 displayName: R.intl.string(R.t['8WfJZ2']),
-                                value: 6 * S.Z.Seconds.HOUR
+                                value: 6 * T.Z.Seconds.HOUR
                             },
                             {
                                 name: R.intl.string(R.t.p1up7u),
                                 displayName: R.intl.string(R.t.p1up7u),
-                                value: 12 * S.Z.Seconds.HOUR
+                                value: 12 * T.Z.Seconds.HOUR
                             },
                             {
                                 name: R.intl.string(R.t.XuVkkJ),
                                 displayName: R.intl.string(R.t.XuVkkJ),
-                                value: S.Z.Seconds.DAY
+                                value: T.Z.Seconds.DAY
                             },
                             {
                                 name: R.intl.string(R.t.gMcDS0),
                                 displayName: R.intl.string(R.t.gMcDS0),
-                                value: 3 * S.Z.Seconds.DAY
+                                value: 3 * T.Z.Seconds.DAY
                             },
                             {
                                 name: R.intl.string(R.t.FA7IUl),
                                 displayName: R.intl.string(R.t.FA7IUl),
-                                value: 7 * S.Z.Seconds.DAY
+                                value: 7 * T.Z.Seconds.DAY
                             }
                         ];
                     }
@@ -519,7 +519,7 @@ let O = n(227419).Z,
                     let s = null !== (t = D(e, 'delete_messages')) && void 0 !== t ? t : 0,
                         o = null !== (n = D(e, 'reason')) && void 0 !== n ? n : '',
                         l = I.default.getUser(a);
-                    await c.Z.banUser(r.id, a, s, o), d.Z.sendBotMessage(i.id, R.intl.formatToPlainString(R.t.YflWdH, { user: null != l ? T.ZP.getUserTag(l) : a }));
+                    await c.Z.banUser(r.id, a, s, o), d.Z.sendBotMessage(i.id, R.intl.formatToPlainString(R.t.YflWdH, { user: null != l ? S.ZP.getUserTag(l) : a }));
                 })().catch(() => {
                     d.Z.sendBotMessage(i.id, R.intl.string(R.t.w2J6Qk));
                 });
@@ -611,7 +611,7 @@ let O = n(227419).Z,
                         d.Z.sendBotMessage(
                             r.id,
                             R.intl.formatToPlainString(R.t.BbRV6u, {
-                                user: T.ZP.getUserTag(u),
+                                user: S.ZP.getUserTag(u),
                                 duration: o
                             })
                         );

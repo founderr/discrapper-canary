@@ -216,7 +216,7 @@ var i = n(698091),
             t
         );
     })(v),
-    S = function (e, t) {
+    T = function (e, t) {
         return u.forwardRef(function (n, r) {
             var a = u.useRef(null),
                 s = !i.is.fun(e) || (e.prototype && e.prototype.isReactComponent),
@@ -258,7 +258,7 @@ var i = n(698091),
             );
         });
     },
-    T = Symbol.for('AnimatedComponent'),
+    S = Symbol.for('AnimatedComponent'),
     y = function (e) {
         return i.is.str(e) ? e : e && i.is.str(e.displayName) ? e.displayName : (i.is.fun(e) && e.name) || null;
     };
@@ -296,7 +296,7 @@ var i = n(698091),
             },
             u = function (e) {
                 var t = y(e) || 'Anonymous';
-                return ((e = i.is.str(e) ? S(e, l) : e[T] || (e[T] = S(e, l))).displayName = 'Animated(' + t + ')'), e;
+                return ((e = i.is.str(e) ? T(e, l) : e[S] || (e[S] = T(e, l))).displayName = 'Animated(' + t + ')'), e;
             };
         return (
             i.each(e, function (e, t) {

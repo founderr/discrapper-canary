@@ -56,7 +56,7 @@ var r,
     d = n(981631);
 async function f(e, t) {
     var n;
-    let r = S(e),
+    let r = T(e),
         i = await s.tn.get({
             url: d.ANM.GET_REPORT_MENU(r),
             query: (null == t ? void 0 : t.variant) != null ? { variant: t.variant } : void 0,
@@ -75,11 +75,11 @@ async function _(e, t) {
     return null !== (n = i.body) && void 0 !== n ? n : JSON.parse(i.text);
 }
 async function p(e, t) {
-    let n = S(e),
+    let n = T(e),
         r = await f(e, t);
     await s.tn.post({
         url: d.ANM.SUBMIT_REPORT_MENU(n),
-        body: T(r, e, [
+        body: S(r, e, [
             {
                 nodeRef: r.root_node_id,
                 destination: ['', r.success_node_id]
@@ -92,8 +92,8 @@ function h(e, t, n) {
     return u.ZP.get('iar_skip_api_report_submit')
         ? Promise.resolve()
         : s.tn.post({
-              url: d.ANM.SUBMIT_REPORT_MENU(S(t)),
-              body: T(e, t, n),
+              url: d.ANM.SUBMIT_REPORT_MENU(T(t)),
+              body: S(e, t, n),
               rejectWithError: !1
           });
 }
@@ -102,7 +102,7 @@ function m(e, t, n, r) {
     let i = I(t);
     return s.tn.post({
         url: d.ANM.SUBMIT_UNAUTHENTICATED_REPORT_MENU(i),
-        body: T(e, t, n, r),
+        body: S(e, t, n, r),
         rejectWithError: !1
     });
 }
@@ -149,12 +149,12 @@ function I(e) {
     if (!Object.values(c.BM).includes(t)) throw Error('Invalid report type '.concat(e.name));
     return t;
 }
-function S(e) {
+function T(e) {
     let t = e.name;
     if (!Object.values(c.b).includes(t)) throw Error('Invalid report type '.concat(e.name));
     return t;
 }
-let T = (e, t, n, r) => {
+let S = (e, t, n, r) => {
     let { version: i, variant: a, language: s } = e,
         o = {
             channel_id: void 0,

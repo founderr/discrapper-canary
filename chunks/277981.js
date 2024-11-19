@@ -23,7 +23,7 @@ let I = {
         isLoading: !1
     }
 };
-function S(e, t, n) {
+function T(e, t, n) {
     var r, i;
     let a;
     return (
@@ -34,14 +34,14 @@ function S(e, t, n) {
         }
     );
 }
-let T = {
+let S = {
     stores: [d.Z, h.Z],
     matches(e, t, n, r, i) {
         var a;
         return i.commands !== m.L8.DISABLED && (i.commands === m.L8.OLD_BUILT_INS ? n.startsWith(g.GI + 'gif') || n.startsWith(g.GI + 'tenor') : (null === (a = d.Z.getActiveCommand(e.id)) || void 0 === a ? void 0 : a.integrationType) === E.q9n.GIF && d.Z.getOptionStates(e.id).query.hasValue);
     },
     queryResults(e, t, n, r, i) {
-        let { command: a, query: o } = S(e, n, r);
+        let { command: a, query: o } = T(e, n, r);
         if (null == a) return I;
         let l = s().findKey(E.nkL, (e) => e.command === a);
         i && null != l && o.length > 0 && u.Z.search(l, o);
@@ -66,7 +66,7 @@ let T = {
                 onHover: c,
                 onClick: f
             } = e,
-            { command: h, query: g } = S(s, l, u);
+            { command: h, query: g } = T(s, l, u);
         if (null == h || 0 === g.length) return null;
         if (n)
             return (0, r.jsx)(o.Spinner, {
@@ -74,7 +74,7 @@ let T = {
                 type: o.Spinner.Type.SPINNING_CIRCLE
             });
         if (null != t) {
-            var I, T;
+            var I, S;
             let e = !1,
                 n = t.map((t, n) => {
                     if (t.type === E.q9n.GIF) {
@@ -99,7 +99,7 @@ let T = {
                         );
                     }
                 }),
-                o = u.commands === m.L8.OLD_BUILT_INS ? h : null !== (T = null === (I = d.Z.getActiveCommand(s.id)) || void 0 === I ? void 0 : I.integrationTitle) && void 0 !== T ? T : h,
+                o = u.commands === m.L8.OLD_BUILT_INS ? h : null !== (S = null === (I = d.Z.getActiveCommand(s.id)) || void 0 === I ? void 0 : I.integrationTitle) && void 0 !== S ? S : h,
                 l =
                     g.length > 0 && null != o
                         ? v.intl.format(v.t['3njXz8'], {
@@ -180,4 +180,4 @@ let T = {
 function y(e) {
     return e.meta.url;
 }
-t.Z = T;
+t.Z = S;

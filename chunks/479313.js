@@ -6,10 +6,10 @@ n.d(t, {
         return E;
     },
     JR: function () {
-        return S;
+        return T;
     },
     U$: function () {
-        return T;
+        return S;
     },
     e7: function () {
         return b;
@@ -110,14 +110,14 @@ function I(e, t) {
             summaryId: null != t ? t : null
         });
 }
-function S(e, t) {
+function T(e, t) {
     l.Z.dispatch({
         type: 'UPDATE_VISIBLE_MESSAGES',
         topVisibleMessage: null != e ? e : null,
         bottomVisibleMessage: null != t ? t : null
     });
 }
-function T(e, t) {
+function S(e, t) {
     l.Z.dispatch({
         type: 'SET_SUMMARY_FEEDBACK',
         summary: e,
@@ -218,8 +218,8 @@ async function N(e) {
     }
 }
 t.ZP = {
-    setSummaryFeedback: T,
-    updateVisibleMessages: S,
+    setSummaryFeedback: S,
+    updateVisibleMessages: T,
     setSelectedSummary: I,
     setGravitySelectedSummary: function (e, t) {
         l.Z.dispatch({

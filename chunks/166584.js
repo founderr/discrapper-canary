@@ -24,8 +24,8 @@ var r = n(200651),
     v = n(314172),
     b = n(981631),
     I = n(388032),
-    S = n(649915);
-let T = (e) => {
+    T = n(649915);
+let S = (e) => {
     if (null == e) return 0;
     let { width: t } = e.getBoundingClientRect();
     return t > 0 ? t + 4 : 0;
@@ -47,8 +47,8 @@ function y(e) {
     }, [d]),
         i.useLayoutEffect(() => {
             if (L) return;
-            let e = T(w.current),
-                t = T(M.current),
+            let e = S(w.current),
+                t = S(M.current),
                 n = [],
                 r = 268 - e - t;
             for (let e = 0; e < 2; e++) {
@@ -75,8 +75,8 @@ function y(e) {
             scrollToEnd: b.Cyb,
             wrap: !0
         }),
-        G = d.length,
-        B = 0 === G ? I.intl.string(I.t['vR7M+/']) : I.intl.formatToPlainString(I.t.PCs0oq, { numRoles: G }),
+        B = d.length,
+        G = 0 === B ? I.intl.string(I.t['vR7M+/']) : I.intl.formatToPlainString(I.t.PCs0oq, { numRoles: B }),
         Z = (L ? d : C).map((e, i) => {
             var a;
             return (0, r.jsx)(
@@ -106,8 +106,8 @@ function y(e) {
             children: (e) => {
                 let { ref: t, ...n } = e;
                 return (0, r.jsxs)('div', {
-                    className: S.root,
-                    'aria-label': B,
+                    className: T.root,
+                    'aria-label': G,
                     ref: t,
                     ...n,
                     children: [
@@ -118,7 +118,7 @@ function y(e) {
                                       text: I.intl.string(I.t.XnXtCg),
                                       children: (0, r.jsx)(u.Clickable, {
                                           onClick: j,
-                                          className: S.collapseButton,
+                                          className: T.collapseButton,
                                           children: (0, r.jsx)(h.Z, {
                                               direction: h.Z.Directions.LEFT,
                                               width: 12,
@@ -131,7 +131,7 @@ function y(e) {
                                       children: (0, r.jsx)(u.Clickable, {
                                           innerRef: w,
                                           onClick: V,
-                                          className: S.expandButton,
+                                          className: T.expandButton,
                                           children: (0, r.jsx)(u.Text, {
                                               variant: 'text-xs/medium',
                                               children: '+'.concat(d.length - C.length)
@@ -144,7 +144,7 @@ function y(e) {
                                   buttonRef: M,
                                   guild: l,
                                   guildMember: c,
-                                  numRoles: G,
+                                  numRoles: B,
                                   highestRole: f,
                                   onAddRole: p
                               })
@@ -177,7 +177,7 @@ function A(e) {
         ),
         v = m.e9(a, n.id),
         [I] = (0, l.Wu)([p.Z], () => [p.Z.can(b.Plq.MANAGE_ROLES, a), null != a ? p.Z.getGuildVersion(a.id) : null]),
-        S = i.useCallback(
+        T = i.useCallback(
             (e) => {
                 var n, r;
                 s({ action: 'REMOVE_ROLE' });
@@ -186,7 +186,7 @@ function A(e) {
             },
             [h, a.id, t.id, s]
         ),
-        T = i.useCallback(
+        S = i.useCallback(
             (e) => {
                 s({ action: 'ADD_ROLE' });
                 let n = null != h ? h : [];
@@ -204,8 +204,8 @@ function A(e) {
               roles: E,
               highestRole: v,
               canManageRoles: I,
-              onAddRole: T,
-              onRemoveRole: S
+              onAddRole: S,
+              onRemoveRole: T
           })
         : null;
 }

@@ -38,7 +38,7 @@ t.Z = function (e, t, n) {
     function I(e) {
         return ((f = void 0), g && l) ? E(e) : ((l = u = void 0), d);
     }
-    function S() {
+    function T() {
         var e,
             n = (0, i.Z)(),
             r = v(n);
@@ -51,12 +51,12 @@ t.Z = function (e, t, n) {
         return void 0 === f && (f = setTimeout(b, t)), d;
     }
     return (
-        (S.cancel = function () {
+        (T.cancel = function () {
             void 0 !== f && clearTimeout(f), (p = 0), (l = _ = u = f = void 0);
         }),
-        (S.flush = function () {
+        (T.flush = function () {
             return void 0 === f ? d : I((0, i.Z)());
         }),
-        S
+        T
     );
 };

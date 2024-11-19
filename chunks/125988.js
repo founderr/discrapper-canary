@@ -14,18 +14,18 @@ t.Z = (e) => {
         [E, v] = r.useState(!1),
         { canAnimate: b } = (0, a.j)(E, p),
         I = (0, i.e7)([o.ZP], () => (null != f && null != n ? o.ZP.getMember(f, n.id) : null)),
-        [S, T] = (0, i.Wu)([l.default], () => {
+        [T, S] = (0, i.Wu)([l.default], () => {
             var e;
             return [null === (e = l.default.getCurrentUser()) || void 0 === e ? void 0 : e.id, l.default.getUser(null == n ? void 0 : n.id)];
         }),
-        y = null == I ? (null == T ? void 0 : T.avatarDecoration) : null === I.avatarDecoration ? null : null !== (t = I.avatarDecoration) && void 0 !== t ? t : null == T ? void 0 : T.avatarDecoration,
+        y = null == I ? (null == S ? void 0 : S.avatarDecoration) : null === I.avatarDecoration ? null : null !== (t = I.avatarDecoration) && void 0 !== t ? t : null == S ? void 0 : S.avatarDecoration,
         { pendingAvatarDecoration: A } = (0, s.Z)({
             isTryItOut: m,
             guildId: f
         }),
-        N = h && void 0 !== A && void 0 !== S && S === (null == n ? void 0 : n.id),
+        N = h && void 0 !== A && void 0 !== T && T === (null == n ? void 0 : n.id),
         C = null != f && null === A,
-        R = (0, c.Z)(N ? (C ? (null == T ? void 0 : T.avatarDecoration) : null != A ? A : y) : null != y ? y : null == T ? void 0 : T.avatarDecoration),
+        R = (0, c.Z)(N ? (C ? (null == S ? void 0 : S.avatarDecoration) : null != A ? A : y) : null != y ? y : null == S ? void 0 : S.avatarDecoration),
         O = r.useMemo(
             () =>
                 (0, u.NZ)({

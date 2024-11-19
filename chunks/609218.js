@@ -25,8 +25,8 @@ var r,
     v = n(197115),
     b = n(302945),
     I = n(474936),
-    S = n(981631),
-    T = n(388032),
+    T = n(981631),
+    S = n(388032),
     y = n(869810);
 function A(e) {
     let { containerContext: t, image: n, title: r, description: i, enableSocialProof: o, analyticsLocationSection: A, upsellViewedTrackingData: N, onClose: C, onDisplay: R, onLearnMore: O } = e,
@@ -36,20 +36,20 @@ function A(e) {
         !L && o && d.MH();
     }, [L, o]),
         s.useEffect(() => {
-            h.default.track(S.rMx.PREMIUM_UPSELL_VIEWED, N), null == R || R();
+            h.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, N), null == R || R();
         }, [R, N]);
     let x = D.length > 1 && o,
         w = (0, E.N)(),
         M = s.useCallback(() => {
             var e;
-            return null !== (e = (0, m.fr)(w)) && void 0 !== e ? e : T.intl.string(T.t.pj0XBA);
+            return null !== (e = (0, m.fr)(w)) && void 0 !== e ? e : S.intl.string(S.t.pj0XBA);
         }, [w]);
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)(c.Backdrop, {
                 backdropStyle: c.BackdropStyles.DARK,
                 onClose: C,
-                'aria-label': T.intl.string(T.t.cpT0Cg),
+                'aria-label': S.intl.string(S.t.cpT0Cg),
                 isVisible: !0
             }),
             (0, a.jsxs)('div', {
@@ -91,23 +91,23 @@ function A(e) {
                                 color: c.Button.Colors.CUSTOM,
                                 look: c.Button.Looks.LINK,
                                 onClick: () => {
-                                    h.default.track(S.rMx.PREMIUM_PROMOTION_OPENED, {
+                                    h.default.track(T.rMx.PREMIUM_PROMOTION_OPENED, {
                                         location_section: A,
-                                        location_object: S.qAy.NAVIGATION_LINK
+                                        location_object: T.qAy.NAVIGATION_LINK
                                     }),
                                         null == O || O(),
                                         (0, _.Z)(),
                                         C(),
                                         (0, f.xf)(),
-                                        (0, p.uL)(S.Z5c.APPLICATION_STORE);
+                                        (0, p.uL)(T.Z5c.APPLICATION_STORE);
                                 },
-                                children: T.intl.string(T.t.ZnqyZ2)
+                                children: S.intl.string(S.t.ZnqyZ2)
                             }),
                             (0, a.jsx)(v.Z, {
                                 showGradient: !0,
                                 premiumModalAnalyticsLocation: {
                                     section: A,
-                                    object: S.qAy.BUTTON_CTA
+                                    object: T.qAy.BUTTON_CTA
                                 },
                                 subscriptionTier: I.Si.TIER_2,
                                 size: c.Button.Sizes.SMALL,

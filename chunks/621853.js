@@ -30,8 +30,8 @@ let E = Symbol('NO GUILD ID'),
     v = new Map(),
     b = new Set(),
     I = new Map(),
-    S = new Map(),
     T = new Map(),
+    S = new Map(),
     y = new Map(),
     A = new Map(),
     N = new Map(),
@@ -41,15 +41,15 @@ function O(e) {
     let t = I.get(e);
     if ((null == t ? void 0 : t.profileEffectExpiresAt) == null) return;
     let n = 1000 * t.profileEffectExpiresAt + h.Cm - Date.now();
-    if (n <= 0) (t.profileEffectId = void 0), (t.profileEffectExpiresAt = void 0), T.delete(e), q.emitChange();
+    if (n <= 0) (t.profileEffectId = void 0), (t.profileEffectExpiresAt = void 0), S.delete(e), q.emitChange();
     else {
-        let t = T.get(e);
+        let t = S.get(e);
         if (null == t) return;
         t.start(Math.min(2147483647, n), () => O(e));
     }
 }
 function D(e, t) {
-    let n = S.get(e);
+    let n = T.get(e);
     if (null == n) return;
     let r = n.get(t);
     if ((null == r ? void 0 : r.profileEffectExpiresAt) == null) return;
@@ -71,7 +71,7 @@ function D(e, t) {
     }
 }
 function L() {
-    v.clear(), b.clear(), I.clear(), S.clear(), A.clear(), N.clear(), C.clear(), (R = !1);
+    v.clear(), b.clear(), I.clear(), T.clear(), A.clear(), N.clear(), C.clear(), (R = !1);
 }
 function x(e) {
     let { userId: t } = e;
@@ -98,7 +98,7 @@ function P(e) {
     b.delete(e.userId), A.set(e.userId, M(e.mutualFriends)), N.set(e.userId, e.mutualFriends.length);
 }
 function k(e) {
-    var t, n, r, i, o, l, u, d, f, h, g, b, R, L, x, w, P, k, U, G, B, Z, F, V, j, H, Y;
+    var t, n, r, i, o, l, u, d, f, h, g, b, R, L, x, w, P, k, U, B, G, Z, F, V, j, H, Y;
     let W = null !== (x = null === (t = e.guild_member_profile) || void 0 === t ? void 0 : t.guild_id) && void 0 !== x ? x : E;
     if ((null === (n = v.get(e.user.id)) || void 0 === n || n.delete(W), null != e.mutual_guilds)) {
         let t = {};
@@ -187,7 +187,7 @@ function k(e) {
         (null === (L = e.user_profile) || void 0 === L ? void 0 : null === (R = L.profile_effect) || void 0 === R ? void 0 : R.expires_at) != null)
     ) {
         let t = new a.V7();
-        T.set(e.user.id, t), O(e.user.id);
+        S.set(e.user.id, t), O(e.user.id);
     }
     if (null != e.guild_member_profile) {
         let t = {
@@ -195,19 +195,19 @@ function k(e) {
                 guildId: e.guild_member_profile.guild_id,
                 banner: e.guild_member_profile.banner,
                 accentColor: e.guild_member_profile.accent_color,
-                themeColors: null === (G = e.guild_member_profile) || void 0 === G ? void 0 : G.theme_colors,
-                popoutAnimationParticleType: null === (B = e.guild_member_profile) || void 0 === B ? void 0 : B.popout_animation_particle_type,
+                themeColors: null === (B = e.guild_member_profile) || void 0 === B ? void 0 : B.theme_colors,
+                popoutAnimationParticleType: null === (G = e.guild_member_profile) || void 0 === G ? void 0 : G.popout_animation_particle_type,
                 profileEffectId: null === (F = e.guild_member_profile) || void 0 === F ? void 0 : null === (Z = F.profile_effect) || void 0 === Z ? void 0 : Z.id,
                 profileEffectExpiresAt: null === (j = e.guild_member_profile) || void 0 === j ? void 0 : null === (V = j.profile_effect) || void 0 === V ? void 0 : V.expires_at,
                 bio: e.guild_member_profile.bio,
                 pronouns: e.guild_member_profile.pronouns,
                 badges: e.guild_badges
             },
-            n = S.get(e.user.id);
+            n = T.get(e.user.id);
         if (null != n) n.set(e.guild_member_profile.guild_id, t);
         else {
             let n = new Map();
-            n.set(e.guild_member_profile.guild_id, t), S.set(e.user.id, n);
+            n.set(e.guild_member_profile.guild_id, t), T.set(e.user.id, n);
         }
         if ((null === (Y = e.guild_member_profile) || void 0 === Y ? void 0 : null === (H = Y.profile_effect) || void 0 === H ? void 0 : H.expires_at) != null) {
             let t = new a.V7(),
@@ -231,7 +231,7 @@ function U(e) {
         e.add(r), v.set(t, e);
     }
 }
-function G(e) {
+function B(e) {
     var t, n;
     let { userId: r, guildId: i, apiError: a } = e;
     null === (t = v.get(r)) || void 0 === t || t.delete(null != i ? i : E);
@@ -256,7 +256,7 @@ function G(e) {
               };
     (s.lastFetched = Date.now()), (s.fetchError = a), I.set(r, s);
 }
-function B(e) {
+function G(e) {
     R = !0;
 }
 function Z(e) {
@@ -264,7 +264,7 @@ function Z(e) {
         null != e.guild_id
             ? !(function (e) {
                   let { userId: t, guild_id: n, accent_color: r, banner: i, bio: s, pronouns: o, popout_animation_particle_type: l, theme_colors: u, profileEffectId: c, profileEffectExpiresAt: d } = e,
-                      f = S.get(t);
+                      f = T.get(t);
                   if (null == n || null == f) return !1;
                   let _ = f.get(n);
                   if (null == _) return !1;
@@ -311,7 +311,7 @@ function Z(e) {
                       null != c)
                   ) {
                       let e = new a.V7();
-                      T.set(t, e), O(t);
+                      S.set(t, e), O(t);
                   }
               })(e);
 }
@@ -342,7 +342,7 @@ function Y(e) {
     A.delete(t), N.delete(t), K(n);
 }
 function W() {
-    v.clear(), I.clear(), S.clear();
+    v.clear(), I.clear(), T.clear();
 }
 function K(e) {
     null != e && ((e.lastFetched = 0), (e.fetchError = void 0));
@@ -366,7 +366,7 @@ class z extends f.Z {
     }
     getGuildMemberProfile(e, t) {
         var n, r;
-        return null == t ? null : null !== (r = null === (n = S.get(e)) || void 0 === n ? void 0 : n.get(t)) && void 0 !== r ? r : null;
+        return null == t ? null : null !== (r = null === (n = T.get(e)) || void 0 === n ? void 0 : n.get(t)) && void 0 !== r ? r : null;
     }
     getMutualFriends(e) {
         return A.get(e);
@@ -399,9 +399,9 @@ class z extends f.Z {
         super({
             CACHE_LOADED_LAZY: () => this.loadCache(),
             USER_PROFILE_FETCH_START: U,
-            USER_PROFILE_FETCH_FAILURE: G,
+            USER_PROFILE_FETCH_FAILURE: B,
             USER_PROFILE_FETCH_SUCCESS: k,
-            USER_PROFILE_UPDATE_START: B,
+            USER_PROFILE_UPDATE_START: G,
             USER_PROFILE_UPDATE_SUCCESS: Z,
             USER_PROFILE_UPDATE_FAILURE: F,
             MUTUAL_FRIENDS_FETCH_START: x,

@@ -23,8 +23,8 @@ var i = n(693789),
     v = n(877565),
     b = n(590921),
     I = n(665692),
-    S = n(689079),
-    T = n(388032),
+    T = n(689079),
+    S = n(388032),
     y = n(346529);
 let A = { results: { entries: [] } };
 function N() {
@@ -51,7 +51,7 @@ let C = {
                     },
                     b.AQ
                 ),
-                o = l.Tm[S.bi.BUILT_IN];
+                o = l.Tm[T.bi.BUILT_IN];
             return 0 === a.length
                 ? A
                 : {
@@ -113,8 +113,8 @@ let C = {
             autocompletes: t,
             onHover: l,
             onClick: u,
-            titleWithQuery: T.t.HFRoZW,
-            titleWithoutQuery: T.intl.string(T.t['0hKkS0']),
+            titleWithQuery: S.t.HFRoZW,
+            titleWithoutQuery: S.intl.string(S.t['0hKkS0']),
             getQuery: (e) => ''.concat(I.GI).concat(e),
             Component: d ? m.ZP.Command : m.ZP.NewCommand,
             getProps: (e) => {
@@ -137,7 +137,7 @@ let C = {
                       color: i.zx.Colors.BRAND,
                       size: i.zx.Sizes.MIN,
                       onClick: N,
-                      children: T.intl.string(T.t['8a0P09'])
+                      children: S.intl.string(S.t['8a0P09'])
                   })
                 : null
         });

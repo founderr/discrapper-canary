@@ -1,9 +1,9 @@
 n.d(t, {
     C1: function () {
-        return S;
+        return T;
     },
     Mo: function () {
-        return T;
+        return S;
     },
     QG: function () {
         return y;
@@ -107,8 +107,8 @@ async function I(e, t) {
                 updates: t
             });
 }
-let S = (0, r.debounce)((e, t) => I(e, t), 1000);
-function T(e, t) {
+let T = (0, r.debounce)((e, t) => I(e, t), 1000);
+function S(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = arguments.length > 3 ? arguments[3] : void 0;
     if (null == e) return;

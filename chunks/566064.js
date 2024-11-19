@@ -24,16 +24,16 @@ function c(e) {
             },
             [g]
         ),
-        [I, S] = r.useReducer(b, {
+        [I, T] = r.useReducer(b, {
             focusedX: c,
             focusedY: d,
             columnCounts: n
         }),
-        { columnCounts: T, focusedX: y, focusedY: A } = I,
-        [N] = r.useState(() => (0, s.P2)(S, 16));
+        { columnCounts: S, focusedX: y, focusedY: A } = I,
+        [N] = r.useState(() => (0, s.P2)(T, 16));
     return (
         r.useEffect(() => {
-            S({
+            T({
                 type: i.s.UPDATE_COLUMN_COUNTS,
                 columnCounts: n
             });
@@ -43,7 +43,7 @@ function c(e) {
                 b = r.useRef();
             b.current = g;
             let I = u(l(t, c, d)),
-                [S, T] = r.useState(!1),
+                [T, S] = r.useState(!1),
                 [y, A] = r.useState(!1),
                 [N, C] = r.useState(!1),
                 [R] = r.useState(
@@ -51,7 +51,7 @@ function c(e) {
                         new s.$o((e) => {
                             let [t, n] = e.split(',').map(Number);
                             return () => {
-                                T(!0),
+                                S(!0),
                                     h({
                                         type: i.s.SET_FOCUSED_POSITION,
                                         x: t,
@@ -101,25 +101,25 @@ function c(e) {
                 ),
                 [x, w] = r.useState(!1);
             r.useEffect(() => {
-                if (!x || !S) return;
+                if (!x || !T) return;
                 w(!1);
                 let e = u(l(t, c, d));
                 if (null != e) {
                     O(e);
                     return;
                 }
-                T(!1);
+                S(!1);
                 let n = u(l(t));
                 null != n && O(n);
-            }, [t, x, S, O, c, d]);
+            }, [t, x, T, O, c, d]);
             let M = r.useCallback((e) => {
                 b.current && null == e && w(!0);
             }, []);
             r.useEffect(() => {
-                S && y && null != I && (O(I), A(!1));
+                T && y && null != I && (O(I), A(!1));
             }, [y, I]),
                 r.useEffect(() => {
-                    S && (!N && D(c, d), C(!1));
+                    T && (!N && D(c, d), C(!1));
                 }, [c, d]);
             let P = r.useCallback(
                     (e) => {
@@ -167,26 +167,26 @@ function c(e) {
                     },
                     [L, h, E, I, f, c, d]
                 ),
-                k = r.useCallback((e) => (e.currentTarget !== e.target ? (!S && (T(!0), C(!0)), !1) : S ? (L(!1), !1) : void (m && null != I ? D(c, d) : L(!0))), [S, m, I, L, D, c, d]),
+                k = r.useCallback((e) => (e.currentTarget !== e.target ? (!T && (S(!0), C(!0)), !1) : T ? (L(!1), !1) : void (m && null != I ? D(c, d) : L(!0))), [T, m, I, L, D, c, d]),
                 U = r.useCallback((e) => {
                     if (e.target !== e.currentTarget) {
                         if (e.currentTarget.contains(e.relatedTarget)) return !1;
-                        T(!1);
+                        S(!1);
                     }
                 }, []),
-                G = r.useMemo(() => Math.max(...n), [n]),
-                B = r.useCallback(
+                B = r.useMemo(() => Math.max(...n), [n]),
+                G = r.useCallback(
                     () => ({
                         role: 'grid',
                         'aria-rowcount': n.length,
-                        'aria-colcount': G,
-                        tabIndex: S && m ? -1 : 0,
+                        'aria-colcount': B,
+                        tabIndex: T && m ? -1 : 0,
                         'data-ref-id': t,
                         onKeyDown: P,
                         onFocus: k,
                         onBlur: U
                     }),
-                    [n.length, G, S, m, t, P, k, U]
+                    [n.length, B, T, m, t, P, k, U]
                 ),
                 Z = r.useCallback(
                     (e, n) => {
@@ -212,15 +212,15 @@ function c(e) {
             return r.useMemo(
                 () => ({
                     dispatch: h,
-                    getContainerProps: B,
+                    getContainerProps: G,
                     getItemProps: Z,
                     getRowProps: F
                 }),
-                [h, B, Z, F]
+                [h, G, Z, F]
             );
         })({
             navId: t,
-            columnCounts: T,
+            columnCounts: S,
             focusedX: y,
             focusedY: A,
             dispatch: N,

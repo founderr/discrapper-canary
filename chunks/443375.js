@@ -23,8 +23,8 @@ var i = n(120356),
     v = n(833858),
     b = n(769654),
     I = n(960870),
-    S = n(139793),
-    T = n(994746),
+    T = n(139793),
+    S = n(994746),
     y = n(273284),
     A = n(232174),
     N = n(510659),
@@ -39,8 +39,8 @@ var i = n(120356),
     P = n(373826),
     k = n(315324),
     U = n(582123),
-    G = n(262210),
-    B = n(103479),
+    B = n(262210),
+    G = n(103479),
     Z = n(290274),
     F = n(553375),
     V = n(228168),
@@ -77,18 +77,18 @@ function z(e) {
             entry: es,
             analyticsLocations: et
         }),
-        eu = (0, S.Z)({
+        eu = (0, T.Z)({
             userId: n.id,
             onAction: el
         }),
-        ec = (0, T.Z)(z),
+        ec = (0, S.Z)(z),
         { largeImage: ed, smallImage: ef } = (0, p.FO)(z, q),
         e_ = (0, s.EQ)(z)
             .when(c.Z, () => eo)
             .when(l.Z, () => {
                 if (n.id !== i.id)
                     return () =>
-                        (0, B.s)({
+                        (0, G.s)({
                             activity: z,
                             user: n,
                             index: 0
@@ -223,7 +223,7 @@ function z(e) {
         ev = () => {
             if (!(0, A.Z)(z)) return null;
             let { start: e, end: t } = z.timestamps;
-            return (0, r.jsx)(G.Z, {
+            return (0, r.jsx)(B.Z, {
                 start: e,
                 end: t
             });
@@ -255,7 +255,7 @@ function z(e) {
                           })
                       ]
                   }),
-        eS = () =>
+        eT = () =>
             n.id === i.id
                 ? null
                 : (0, r.jsx)('div', {
@@ -269,8 +269,8 @@ function z(e) {
                       })
                   });
     if (null === en) return null;
-    let eT = null !== (t = z.application_id) && void 0 !== t ? t : z.name,
-        ey = ei === V.n_.ACTIVITY && ea === eT;
+    let eS = null !== (t = z.application_id) && void 0 !== t ? t : z.name,
+        ey = ei === V.n_.ACTIVITY && ea === eS;
     return (0, r.jsx)(_.Gt, {
         value: et,
         children: (0, r.jsx)(L.Z, {
@@ -285,7 +285,7 @@ function z(e) {
                         user: n,
                         guildId: ee,
                         profileType: en,
-                        sourceId: eT,
+                        sourceId: eS,
                         sourceDetails: null == es ? (0, y.Z)(z) : null,
                         entry: es,
                         sourceType: V.n_.ACTIVITY,
@@ -296,7 +296,7 @@ function z(e) {
                                 children: (0, r.jsxs)(R.Z, {
                                     user: n,
                                     className: K.body,
-                                    interactionSourceId: eT,
+                                    interactionSourceId: eS,
                                     sourceType: V.n_.ACTIVITY,
                                     moreButton: (0, r.jsx)(Z.Z, {
                                         display: 'live',
@@ -329,13 +329,13 @@ function z(e) {
                                                                 ev()
                                                             ]
                                                         }),
-                                                        en === V.y0.FULL_SIZE && eS()
+                                                        en === V.y0.FULL_SIZE && eT()
                                                     ]
                                                 }),
                                                 eI()
                                             ]
                                         }),
-                                        en !== V.y0.FULL_SIZE && eS()
+                                        en !== V.y0.FULL_SIZE && eT()
                                     ]
                                 })
                             })

@@ -57,14 +57,14 @@ let E = new c.h((e) => {
     v = 0,
     b = [],
     I = 'SERIES',
-    S = {},
-    T = {};
+    T = {},
+    S = {};
 function y(e) {
     E.set(e.id, e), (v += 1);
 }
 function A(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    E.delete(e), delete S[e], t && delete T[e], (v += 1);
+    E.delete(e), delete T[e], t && delete S[e], (v += 1);
 }
 function N(e) {
     return null != e ? e : I;
@@ -73,15 +73,15 @@ function C(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
         r = e.guild_scheduled_event_id;
-    null == S[r] && (S[r] = {});
+    null == T[r] && (T[r] = {});
     let i = N(e.guild_scheduled_event_exception_id);
-    null == S[r][i] && (S[r][i] = {}),
-        (S[r][i][e.user_id] = e),
+    null == T[r][i] && (T[r][i] = {}),
+        (T[r][i][e.user_id] = e),
         t &&
             (function (e) {
                 var t, n;
                 let r = N(e.guild_scheduled_event_exception_id),
-                    i = null !== (n = null === (t = T[e.guild_scheduled_event_id]) || void 0 === t ? void 0 : t[r]) && void 0 !== n ? n : 0,
+                    i = null !== (n = null === (t = S[e.guild_scheduled_event_id]) || void 0 === t ? void 0 : t[r]) && void 0 !== n ? n : 0,
                     a = (null != e.guild_scheduled_event_exception_id && e.response === h.gv.UNINTERESTED) || (null == e.guild_scheduled_event_exception_id && e.response === h.gv.INTERESTED) ? 1 : -1;
                 O(e.guild_scheduled_event_id, e.guild_scheduled_event_exception_id, i + a);
             })(e),
@@ -91,14 +91,14 @@ function R(e) {
     var t, n, r, i;
     let a = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         s = N(e.guild_scheduled_event_exception_id),
-        o = (null === (n = S[e.guild_scheduled_event_id]) || void 0 === n ? void 0 : null === (t = n[s]) || void 0 === t ? void 0 : t[e.user_id]) != null,
+        o = (null === (n = T[e.guild_scheduled_event_id]) || void 0 === n ? void 0 : null === (t = n[s]) || void 0 === t ? void 0 : t[e.user_id]) != null,
         l = e.user_id === f.default.getId();
     (o || !l) &&
-        (null === (i = S[e.guild_scheduled_event_id]) || void 0 === i || null === (r = i[s]) || void 0 === r || delete r[e.user_id],
+        (null === (i = T[e.guild_scheduled_event_id]) || void 0 === i || null === (r = i[s]) || void 0 === r || delete r[e.user_id],
         (function (e) {
             var t, n;
             let r = N(e.guild_scheduled_event_exception_id),
-                i = null !== (n = null === (t = T[e.guild_scheduled_event_id]) || void 0 === t ? void 0 : t[r]) && void 0 !== n ? n : 0,
+                i = null !== (n = null === (t = S[e.guild_scheduled_event_id]) || void 0 === t ? void 0 : t[r]) && void 0 !== n ? n : 0,
                 a = (null != e.guild_scheduled_event_exception_id && e.response === h.gv.UNINTERESTED) || (null == e.guild_scheduled_event_exception_id && e.response === h.gv.INTERESTED) ? -1 : 1;
             O(e.guild_scheduled_event_id, e.guild_scheduled_event_exception_id, i + a);
         })(e),
@@ -106,7 +106,7 @@ function R(e) {
 }
 function O(e, t, n) {
     let r = N(t);
-    null == T[e] && (T[e] = {}), (T[e][r] = n);
+    null == S[e] && (S[e] = {}), (S[e][r] = n);
 }
 function D(e, t) {
     E.values(m.GUILD_EVENT(e)).forEach((e) => A(e.id, t));
@@ -163,7 +163,7 @@ class U extends (r = u.ZP.Store) {
         var r, i;
         if (null == e) return null;
         let a = N(t);
-        return null === (i = S[e]) || void 0 === i ? void 0 : null === (r = i[a]) || void 0 === r ? void 0 : r[n];
+        return null === (i = T[e]) || void 0 === i ? void 0 : null === (r = i[a]) || void 0 === r ? void 0 : r[n];
     }
     isInterestedInEventRecurrence(e, t) {
         let n = f.default.getId(),
@@ -177,13 +177,13 @@ class U extends (r = u.ZP.Store) {
     getUserCount(e, t) {
         var n, r, i, a;
         if (null == e) return 0;
-        let s = null !== (i = null === (n = T[e]) || void 0 === n ? void 0 : n[I]) && void 0 !== i ? i : 0;
-        return null == t ? s : s - (null !== (a = null === (r = T[e]) || void 0 === r ? void 0 : r[t]) && void 0 !== a ? a : 0);
+        let s = null !== (i = null === (n = S[e]) || void 0 === n ? void 0 : n[I]) && void 0 !== i ? i : 0;
+        return null == t ? s : s - (null !== (a = null === (r = S[e]) || void 0 === r ? void 0 : r[t]) && void 0 !== a ? a : 0);
     }
     hasUserCount(e, t) {
         var n;
         let r = N(t);
-        return (null === (n = T[e]) || void 0 === n ? void 0 : n[r]) != null;
+        return (null === (n = S[e]) || void 0 === n ? void 0 : n[r]) != null;
     }
     isActive(e) {
         return null != e && w(E.get(e));
@@ -195,7 +195,7 @@ class U extends (r = u.ZP.Store) {
         var n, r;
         if (null == e) return {};
         let i = N(t);
-        return null !== (r = null === (n = S[e]) || void 0 === n ? void 0 : n[i]) && void 0 !== r ? r : {};
+        return null !== (r = null === (n = T[e]) || void 0 === n ? void 0 : n[i]) && void 0 !== r ? r : {};
     }
 }
 (s = 'GuildScheduledEventStore'),
@@ -210,7 +210,7 @@ class U extends (r = u.ZP.Store) {
     (t.ZP = new U(d.Z, {
         CONNECTION_OPEN: function (e) {
             let { guilds: t } = e;
-            return E.clear(), (v = 0), (S = {}), (T = {}), b.forEach(y), t.forEach((e) => e.guild_scheduled_events.forEach((e) => y(e))), !0;
+            return E.clear(), (v = 0), (T = {}), (S = {}), b.forEach(y), t.forEach((e) => e.guild_scheduled_events.forEach((e) => y(e))), !0;
         },
         GUILD_CREATE: function (e) {
             let { guild: t } = e;
@@ -247,7 +247,7 @@ class U extends (r = u.ZP.Store) {
             var t, n;
             let { userId: r, guildEventId: i, guildId: a, guildEventExceptionId: s, response: o } = e,
                 l = N(s),
-                u = null === (n = S[i]) || void 0 === n ? void 0 : null === (t = n[l]) || void 0 === t ? void 0 : t[r];
+                u = null === (n = T[i]) || void 0 === n ? void 0 : null === (t = n[l]) || void 0 === t ? void 0 : t[r];
             null != u && R(u, !1);
             let c = _.ZP.getMember(a, r);
             return (

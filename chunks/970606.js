@@ -6,7 +6,7 @@ n.d(t, {
         return _;
     },
     Gh: function () {
-        return T;
+        return S;
     },
     Pq: function () {
         return g;
@@ -39,7 +39,7 @@ n.d(t, {
         return f;
     },
     r: function () {
-        return S;
+        return T;
     },
     r2: function () {
         return b;
@@ -174,14 +174,14 @@ function I(e) {
         application_status: r
     });
 }
-function S(e) {
+function T(e) {
     let { guildId: t, position: n } = e;
     o.default.track(u.rMx.GUILD_APPLICATION_INTENDS_TO_JOIN, {
         guild_id: t,
         position: n
     });
 }
-function T(e) {
+function S(e) {
     let { feature: t, guildId: n, position: r } = e;
     o.default.track(u.rMx.DISCOVERY_GUILD_CARD_INTERACTION, {
         guild_id: n,

@@ -40,8 +40,8 @@ function E(e) {
     let { settingsUpsells: t, channelId: n, onModalClose: i, reportId: u, reportType: E, reportSubType: v } = e,
         b = (0, a.e7)([d.Z], () => d.Z.getChannel(n)),
         I = (0, f.jc)(t, null == b ? void 0 : b.type),
-        S = (0, _.i_)(E, v, u),
-        T = (0, c._p)({ location: 'settings-upsells-element' });
+        T = (0, _.i_)(E, v, u),
+        S = (0, c._p)({ location: 'settings-upsells-element' });
     return 0 === I.length
         ? null
         : (0, r.jsxs)('div', {
@@ -62,7 +62,7 @@ function E(e) {
                                   title: i(),
                                   description: a(),
                                   onButtonClick: s,
-                                  trackSettingsUpsellsAction: S(t[n])
+                                  trackSettingsUpsellsAction: T(t[n])
                               },
                               n
                           );
@@ -71,7 +71,7 @@ function E(e) {
                   (0, r.jsx)(s.Button, {
                       className: m.navLinkButton,
                       onClick: () => {
-                          T ? o.Z.open(p.oAB.CONTENT_AND_SOCIAL) : o.Z.open(p.oAB.PRIVACY_AND_SAFETY),
+                          S ? o.Z.open(p.oAB.CONTENT_AND_SOCIAL) : o.Z.open(p.oAB.PRIVACY_AND_SAFETY),
                               i(),
                               l.ZP.trackWithMetadata(p.rMx.IAR_SETTINGS_UPSELLS_ACTION, {
                                   report_id: u,

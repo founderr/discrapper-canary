@@ -30,8 +30,8 @@ function m(e) {
             })
         ),
         I = m.isGuildStageVoice() ? a.StageIcon : a.VoiceNormalIcon,
-        S = v === _.y0.FULL_SIZE,
-        T = v === _.y0.PANEL;
+        T = v === _.y0.FULL_SIZE,
+        S = v === _.y0.PANEL;
     return (0, r.jsxs)('div', {
         className: p.voiceChannel,
         children: [
@@ -74,7 +74,7 @@ function m(e) {
                 maxUsers: h,
                 size: a.AvatarSizes.SIZE_16,
                 onClick: () => (null == g ? void 0 : g({ action: 'PRESS_VOICE_CHANNEL_AVATARS' })),
-                disableUserPopout: !!(!S && !T) || ((e) => e === t.id),
+                disableUserPopout: !!(!T && !S) || ((e) => e === t.id),
                 overflowCountVariant: 'text-xs/normal'
             })
         ]

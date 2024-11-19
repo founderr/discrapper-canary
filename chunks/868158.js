@@ -37,20 +37,20 @@ var r = n(512722),
     v = n(411198);
 let b = new _.Z('ReadyPayloadUtils'),
     I = {},
-    S = null,
-    T = {};
+    T = null,
+    S = {};
 function y(e, t) {
     var n;
     let { guilds: r, merged_members: i, merged_presences: a, ...s } = e,
-        o = O(T, null == a ? void 0 : a.friends),
+        o = O(S, null == a ? void 0 : a.friends),
         l =
             null !==
                 (n =
                     null == r
                         ? void 0
                         : r.map((e, t) => {
-                              let n = O(T, null == a ? void 0 : a.guilds[t]),
-                                  r = O(T, null == i ? void 0 : i[t]);
+                              let n = O(S, null == a ? void 0 : a.guilds[t]),
+                                  r = O(S, null == i ? void 0 : i[t]);
                               return {
                                   ...e,
                                   unavailable: void 0 === e.voice_states,
@@ -70,7 +70,7 @@ function y(e, t) {
         }));
     return (
         null != u && l.push(u),
-        (T = {}),
+        (S = {}),
         {
             ...s,
             presences: o,
@@ -112,16 +112,16 @@ function N(e, t, n) {
                 };
         }
     })(n);
-    let m = O((T = s().keyBy(a, (e) => e.id)), l);
+    let m = O((S = s().keyBy(a, (e) => e.id)), l);
     null == u ||
         u.forEach((e) => {
             let t = e.recipient_ids;
-            null != t && (e.recipients = t.map((e) => (i()(null != T[e], 'Missing user in compressed ready payload'), T[e]))), delete e.recipient_ids;
+            null != t && (e.recipients = t.map((e) => (i()(null != S[e], 'Missing user in compressed ready payload'), S[e]))), delete e.recipient_ids;
         });
-    let b = null !== (r = null == f ? void 0 : f.map((e, t) => (!0 === e.unavailable ? e : ((e.members = O(T, null == c ? void 0 : c[t])), L(e))))) && void 0 !== r ? r : [],
-        S = C(t, f, (e) => L(e));
+    let b = null !== (r = null == f ? void 0 : f.map((e, t) => (!0 === e.unavailable ? e : ((e.members = O(S, null == c ? void 0 : c[t])), L(e))))) && void 0 !== r ? r : [],
+        T = C(t, f, (e) => L(e));
     return (
-        null != S && b.push(S),
+        null != T && b.push(T),
         {
             ..._,
             users: a,
@@ -133,7 +133,7 @@ function N(e, t, n) {
     );
 }
 function C(e, t, n) {
-    return null == S || S.identifyTime !== e || (null != t && t.some((e) => e.id === S.guild.id)) ? null : n(S.guild);
+    return null == T || T.identifyTime !== e || (null != t && t.some((e) => e.id === T.guild.id)) ? null : n(T.guild);
 }
 function R(e, t) {
     var n, r, i;
@@ -151,7 +151,7 @@ function R(e, t) {
                   }
         );
     return (
-        (S = {
+        (T = {
             guild: e,
             identifyTime: t
         }),

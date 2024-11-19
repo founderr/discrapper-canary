@@ -9,8 +9,8 @@ var l = n(200651),
     u = n(908841),
     d = n(823379),
     m = n(5192),
-    x = n(561308),
-    h = n(319604),
+    h = n(561308),
+    x = n(319604),
     p = n(206295),
     C = n(278399),
     v = n(297781),
@@ -42,18 +42,18 @@ t.Z = (e) => {
         N = n.extra.artist.name,
         _ = (0, o.e7)([c.default], () => c.default.getUser(n.author_id)),
         { primaryColor: E, secondaryColor: S } = (0, p.Z)(T),
-        A = (0, x.Nq)(n),
+        A = (0, h.Nq)(n),
         M = a.useCallback(() => {
             if (null == t || null == _ || !(0, d.Hi)(A, C.y9)) return;
             let e = P(n, t, _, A);
-            return (0, h.CR)({
+            return (0, x.CR)({
                 user: _,
                 channel: t,
                 mediaImageSrc: T,
                 artist: N,
                 description: e,
                 colors: [E, S],
-                badges: (0, h.UU)(n)
+                badges: (0, x.UU)(n)
             });
         }, [T, N, t, n, E, A, S, _]);
     if (null == _ || !(0, d.Hi)(A, C.y9)) return null;

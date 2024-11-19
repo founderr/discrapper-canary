@@ -9,7 +9,7 @@ n.d(t, {
         return O;
     },
     IV: function () {
-        return S;
+        return T;
     },
     J0: function () {
         return A;
@@ -36,7 +36,7 @@ n.d(t, {
         return r;
     },
     iA: function () {
-        return T;
+        return S;
     },
     lb: function () {
         return g;
@@ -427,8 +427,8 @@ let g = 800,
         '1139323098370424932',
         '1144058844004233369'
     ],
-    S = 12,
-    T = 36,
+    T = 12,
+    S = 36,
     y = 1128,
     A = 518,
     N = '1285377810587979827',

@@ -116,8 +116,8 @@ function s(e, t) {
             return new Date(NaN);
     } else {
         var I = new Date(v + b),
-            S = new Date(0);
-        return S.setFullYear(I.getUTCFullYear(), I.getUTCMonth(), I.getUTCDate()), S.setHours(I.getUTCHours(), I.getUTCMinutes(), I.getUTCSeconds(), I.getUTCMilliseconds()), S;
+            T = new Date(0);
+        return T.setFullYear(I.getUTCFullYear(), I.getUTCMonth(), I.getUTCDate()), T.setHours(I.getUTCHours(), I.getUTCMinutes(), I.getUTCSeconds(), I.getUTCMilliseconds()), T;
     }
     return new Date(v + b + h);
 }

@@ -12,7 +12,7 @@ n.d(t, {
         return W;
     },
     KP: function () {
-        return B;
+        return G;
     },
     OP: function () {
         return H;
@@ -57,7 +57,7 @@ n.d(t, {
         return K;
     },
     zj: function () {
-        return G;
+        return B;
     }
 }),
     n(789020);
@@ -80,8 +80,8 @@ var r,
     v = n(699516),
     b = n(594174),
     I = n(626135),
-    S = n(630388),
-    T = n(948561),
+    T = n(630388),
+    S = n(948561),
     y = n(651530),
     A = n(719548),
     N = n(981631),
@@ -162,24 +162,24 @@ function U(e) {
     if (s.isDM() || s.isGroupDM()) return null != e.author && v.Z.getFriendIDs().includes(e.author.id) ? k(i) : k(a);
     return k(r);
 }
-let G = (e) => {
+let B = (e) => {
     let t = P();
     g.Sh.updateSetting({
         ...t,
         ...e
     });
 };
-function B(e, t) {
+function G(e, t) {
     var n, r, i, a;
     if (!t) return !1;
     if (_.ZP.get('obscure_blur_effect_enabled')) return !0;
     switch (e.type) {
         case 1:
-            return (0, S.yE)(null !== (n = e.media.flags) && void 0 !== n ? n : 0, N.xPJ.CONTAINS_EXPLICIT_MEDIA);
+            return (0, T.yE)(null !== (n = e.media.flags) && void 0 !== n ? n : 0, N.xPJ.CONTAINS_EXPLICIT_MEDIA);
         case 0:
-            return (0, S.yE)(null !== (r = e.media.flags) && void 0 !== r ? r : 0, N.J0y.CONTAINS_EXPLICIT_MEDIA);
+            return (0, T.yE)(null !== (r = e.media.flags) && void 0 !== r ? r : 0, N.J0y.CONTAINS_EXPLICIT_MEDIA);
         case 2:
-            return (0, S.yE)(null !== (a = null === (i = e.media.contentScanMetadata) || void 0 === i ? void 0 : i.flags) && void 0 !== a ? a : 0, p.Cb.EXPLICIT);
+            return (0, T.yE)(null !== (a = null === (i = e.media.contentScanMetadata) || void 0 === i ? void 0 : i.flags) && void 0 !== a ? a : 0, p.Cb.EXPLICIT);
         default:
             return !1;
     }
@@ -188,7 +188,7 @@ function Z(e) {
     return U(e)
         ? {
               obscuredAttachments: e.attachments.filter((e) =>
-                  B(
+                  G(
                       {
                           type: 0,
                           media: e
@@ -197,7 +197,7 @@ function Z(e) {
                   )
               ),
               obscuredEmbeds: e.embeds.filter((e) =>
-                  B(
+                  G(
                       {
                           type: 1,
                           media: e
@@ -248,7 +248,7 @@ function Y(e) {
         message_id: s,
         embed_ids: l,
         user_is_underage: (0, m.U)(),
-        scan_timeout_duration: T.b2,
+        scan_timeout_duration: S.b2,
         attachment_ids_v2: o
     }),
         h.Z.increment({

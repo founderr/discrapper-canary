@@ -3,7 +3,7 @@ n.d(t, {
         return N;
     },
     dY: function () {
-        return S;
+        return T;
     },
     eC: function () {
         return A;
@@ -12,7 +12,7 @@ n.d(t, {
         return b;
     },
     l3: function () {
-        return T;
+        return S;
     },
     o3: function () {
         return I;
@@ -165,11 +165,11 @@ function I(e) {
         n
     );
 }
-function S(e) {
+function T(e) {
     let { image: t, video: n, type: r, author: i, rawTitle: a } = e;
     return (null != t || null != n) && (r === d.hBH.GIFV || (r !== d.hBH.RICH && null == i && null == a));
 }
-function T(e) {
+function S(e) {
     return e.type === d.hBH.ARTICLE && null != e.url && (g.test(e.url) || m.test(e.url));
 }
 function y(e, t, n) {
