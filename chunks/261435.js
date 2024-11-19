@@ -47,13 +47,13 @@ var i,
 let Y = 5 * V.Z.Millis.SECOND,
     K = 8 * V.Z.Millis.SECOND,
     X = 30 * V.Z.Millis.SECOND,
-    Q = Object.freeze({
+    q = Object.freeze({
         priority: 0,
         duration: Y,
         expirationExternallyManaged: !1,
         type: 0
     }),
-    q = [],
+    Q = [],
     J = (e, t, n) => {
         let i = t ? W._1z.TIMED_OUT : W._1z.DISMISSED;
         return setTimeout(() => m.Z.updateNotificationStatus(e, i), null != n ? n : Y);
@@ -61,29 +61,29 @@ let Y = 5 * V.Z.Millis.SECOND,
 function $(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : W._1z.DISMISSED;
     if (null == e) return !1;
-    let n = q.findIndex((t) => t.id === e);
+    let n = Q.findIndex((t) => t.id === e);
     if (-1 === n) return !1;
-    let i = q[n];
+    let i = Q[n];
     clearTimeout(i.timerId),
-        (q = [...q]),
+        (Q = [...Q]),
         t === W._1z.DISMISSED
-            ? q.splice(n, 1)
-            : (q[n] = {
+            ? Q.splice(n, 1)
+            : (Q[n] = {
                   ...i,
                   status: t
               });
 }
 function ee(e) {
-    let t = q.length;
-    return (q = q.filter((t) => 1 !== t.type || t.channelId !== e || !1)).length !== t;
+    let t = Q.length;
+    return (Q = Q.filter((t) => 1 !== t.type || t.channelId !== e || !1)).length !== t;
 }
 function et(e) {
-    let t = q.find((t) => 2 === t.type && t.channelId === e);
+    let t = Q.find((t) => 2 === t.type && t.channelId === e);
     return null != t ? t.id : null;
 }
 function en(e, t) {
     let n = {
-        ...Q,
+        ...q,
         ...t
     };
     if (2 !== n.priority && !z.Z.isInstanceFocused()) return null;
@@ -95,8 +95,8 @@ function en(e, t) {
             props: e,
             ...n
         },
-        s = (q = [...q]).findIndex((e) => e.priority <= n.priority);
-    return -1 === s ? q.push(r) : q.splice(s, 0, r), q.length > 10 && clearTimeout(q.pop().timerId), i;
+        s = (Q = [...Q]).findIndex((e) => e.priority <= n.priority);
+    return -1 === s ? Q.push(r) : Q.splice(s, 0, r), Q.length > 10 && clearTimeout(Q.pop().timerId), i;
 }
 function ei(e) {
     let { channelId: t, ringing: n } = e,
@@ -105,7 +105,7 @@ function ei(e) {
     if (null != i) return !1;
     let r = j.Z.getChannel(t);
     if (null == r || !r.isPrivate() || w.Z.getStatus() === W.Skl.DND || O.QZ.getSetting()) return !1;
-    let s = q.find((e) => 1 === e.type && e.channelId === t && e.messageType === W.uaV.CALL);
+    let s = Q.find((e) => 1 === e.type && e.channelId === t && e.messageType === W.uaV.CALL);
     null != s && $(s.id),
         en((0, x.Z)(r), {
             priority: 1,
@@ -119,7 +119,7 @@ class er extends (s = f.ZP.Store) {
         this.waitFor(j.Z, D.default);
     }
     getNotifications() {
-        return q;
+        return Q;
     }
 }
 (d = 'OverlayNotificationsStore'),
@@ -162,7 +162,7 @@ class er extends (s = f.ZP.Store) {
                   OVERLAY_SET_INPUT_LOCKED: function (e) {
                       let { locked: t } = e;
                       if (t) return !1;
-                      q = q.map((e) =>
+                      Q = Q.map((e) =>
                           e.status === W._1z.ACTIVE
                               ? (clearTimeout(e.timerId),
                                 {

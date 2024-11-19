@@ -41,7 +41,7 @@ t.Z = (0, r.memo)(function (e) {
         V = x.config.rewards[H],
         F = (null == V ? void 0 : V.type) === s.w.COLLECTIBLE,
         { product: z } = (0, p.T)(F && null != V ? V.skuId : null),
-        Y = null == z ? void 0 : null === (l = z.items) || void 0 === l ? void 0 : l[0];
+        W = null == z ? void 0 : null === (l = z.items) || void 0 === l ? void 0 : l[0];
     (0, u.P)(j, (e) => {
         let { height: t } = e;
         if (!F || null == t || null == D.current || null == j.current || null == M.current) return;
@@ -50,7 +50,7 @@ t.Z = (0, r.memo)(function (e) {
             r = M.current.getBoundingClientRect();
         O((i.top - n.top - r.height) / 2);
     });
-    let W = (0, c.wj)(G),
+    let Y = (0, c.wj)(G),
         K = (0, r.useMemo)(() => (0, v.fh)(x, v.eC.LOGO_TYPE, 'dark'), [x]),
         q = (0, r.useMemo)(() => (0, v.fh)(x, v.eC.REWARD), [x]),
         X = Z ? U + 8 : 0,
@@ -89,7 +89,7 @@ t.Z = (0, r.memo)(function (e) {
                               className: S.decoWrapper,
                               style: { top: y },
                               children: (0, i.jsx)(m.Z, {
-                                  avatarDecorationOverride: Y,
+                                  avatarDecorationOverride: W,
                                   user: w,
                                   guildId: null
                               })
@@ -114,8 +114,8 @@ t.Z = (0, r.memo)(function (e) {
                             }),
                       (0, i.jsx)('div', {
                           className: a()(S.overlay, {
-                              [S.darkThemeGradient]: W,
-                              [S.lightThemeGradient]: !W
+                              [S.darkThemeGradient]: Y,
+                              [S.lightThemeGradient]: !Y
                           })
                       }),
                       (0, i.jsx)('div', {
@@ -140,8 +140,8 @@ t.Z = (0, r.memo)(function (e) {
                               }),
                               (0, i.jsx)(d.Text, {
                                   variant: 'text-sm/medium',
-                                  color: W ? 'text-muted' : 'always-white',
-                                  style: { opacity: W ? 1 : 0.75 },
+                                  color: Y ? 'text-muted' : 'always-white',
+                                  style: { opacity: Y ? 1 : 0.75 },
                                   children: N.intl.format(N.t.kXVcV1, {
                                       reward: V.name,
                                       claimedDate: B

@@ -51,8 +51,8 @@ var i = n(200651),
     Y = n(519591),
     K = n(906037),
     X = n(786906),
-    Q = n(518084),
-    q = n(987650),
+    q = n(518084),
+    Q = n(987650),
     J = n(981631),
     $ = n(388032),
     ee = n(786581);
@@ -69,7 +69,7 @@ function et(e, t, n) {
         e
     );
 }
-let en = q.wF.TOP;
+let en = Q.wF.TOP;
 class ei extends r.Component {
     componentDidUpdate(e) {
         e.channel.id !== this.props.channel.id && this.draftDidChange(this.props), (this.props.channel !== e.channel || (this.props.isTemporarilyActive && !e.isTemporarilyActive)) && this.setState({ focused: !0 });
@@ -245,7 +245,7 @@ class er extends r.PureComponent {
     getOpacity() {
         let e;
         let { locked: t, activated: n, opacity: i, isPreviewingInGame: r } = this.props;
-        return (e = (t && !n) || r ? i / 100 : n || !t ? Math.min(1, (i + 25) / 100) : Q.wB);
+        return (e = (t && !n) || r ? i / 100 : n || !t ? Math.min(1, (i + 25) / 100) : q.wB);
     }
     renderContent() {
         let e;
@@ -283,7 +283,7 @@ class er extends r.PureComponent {
                                 channel: t,
                                 guild: l
                             }),
-                        (0, i.jsx)(Q.ZP.Background, {
+                        (0, i.jsx)(q.ZP.Background, {
                             opacityOverride: o || h ? null : en,
                             children: (0, i.jsx)('div', {
                                 className: a()(ee.messagesContainer, {
@@ -297,7 +297,7 @@ class er extends r.PureComponent {
                             ? null
                             : (0, i.jsx)('div', {
                                   children: E
-                                      ? (0, i.jsx)(Q.ZP.Background, {
+                                      ? (0, i.jsx)(q.ZP.Background, {
                                             opacityOverride: o || h ? null : en,
                                             children: (0, i.jsxs)('div', {
                                                 className: ee.footerContent,
@@ -320,8 +320,8 @@ class er extends r.PureComponent {
                                         })
                                       : (0, i.jsx)('div', {
                                             className: ee.activateContainer,
-                                            children: (0, i.jsx)(Q.ZP.Background, {
-                                                opacityOverride: q.wF.LOWER,
+                                            children: (0, i.jsx)(q.ZP.Background, {
+                                                opacityOverride: Q.wF.LOWER,
                                                 children: (0, i.jsx)('div', {
                                                     className: a()(ee.activateKeybind, ee.__invalid_mediumBackgroundOpacity),
                                                     children:
@@ -349,7 +349,7 @@ class er extends r.PureComponent {
             u = n && r,
             h = n && c && !r,
             p = (0, Y.Z)(l);
-        return (0, i.jsx)(Q.ZP, {
+        return (0, i.jsx)(q.ZP, {
             className: a()(p, {
                 [ee.widgetWrapper]: !n,
                 [ee.widgetWrapperPinned]: n,

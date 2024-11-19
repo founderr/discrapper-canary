@@ -6,17 +6,17 @@ e.r(n),
     });
 var a = e(200651);
 e(192379);
-var r = e(481060),
-    o = e(600164),
-    i = e(313201),
-    l = e(988158),
+var l = e(481060),
+    r = e(600164),
+    o = e(313201),
+    i = e(988158),
     s = e(388032),
     c = e(437900);
 function d(t) {
     let { url: n, onClose: d, transitionState: u } = t,
-        x = (0, i.Dt)(),
-        { protocol: h, hostname: m, theRestOfTheUrl: b } = (0, l.h)(n);
-    return (0, a.jsxs)(r.ModalRoot, {
+        x = (0, o.Dt)(),
+        { protocol: h, hostname: m, theRestOfTheUrl: b } = (0, i.h)(n);
+    return (0, a.jsxs)(l.ModalRoot, {
         transitionState: u,
         'aria-labelledby': x,
         children: [
@@ -25,38 +25,38 @@ function d(t) {
                 src: e(902623),
                 alt: ''
             }),
-            (0, a.jsx)(r.ModalContent, {
-                children: (0, a.jsxs)(o.Z, {
-                    direction: o.Z.Direction.VERTICAL,
-                    justify: o.Z.Justify.CENTER,
+            (0, a.jsx)(l.ModalContent, {
+                children: (0, a.jsxs)(r.Z, {
+                    direction: r.Z.Direction.VERTICAL,
+                    justify: r.Z.Justify.CENTER,
                     children: [
-                        (0, a.jsx)(r.Heading, {
+                        (0, a.jsx)(l.Heading, {
                             id: x,
                             variant: 'heading-lg/semibold',
                             className: c.title,
                             children: s.intl.string(s.t['2B3wj4'])
                         }),
-                        (0, a.jsx)(r.Text, {
+                        (0, a.jsx)(l.Text, {
                             variant: 'text-md/normal',
                             className: c.body,
                             children: s.intl.format(s.t.jnHyYW, {})
                         }),
-                        (0, a.jsxs)(r.Scroller, {
+                        (0, a.jsxs)(l.Scroller, {
                             className: c.linkCalloutContainer,
                             children: [
-                                (0, a.jsxs)(r.Text, {
+                                (0, a.jsxs)(l.Text, {
                                     tag: 'span',
                                     variant: 'text-md/normal',
                                     color: 'text-muted',
                                     children: [h, '//']
                                 }),
-                                (0, a.jsx)(r.Text, {
+                                (0, a.jsx)(l.Text, {
                                     tag: 'span',
                                     variant: 'text-md/semibold',
                                     color: 'text-normal',
                                     children: m
                                 }),
-                                (0, a.jsx)(r.Text, {
+                                (0, a.jsx)(l.Text, {
                                     tag: 'span',
                                     variant: 'text-md/normal',
                                     color: 'text-muted',
@@ -67,11 +67,11 @@ function d(t) {
                     ]
                 })
             }),
-            (0, a.jsx)(r.ModalFooter, {
-                children: (0, a.jsx)(r.Button, {
+            (0, a.jsx)(l.ModalFooter, {
+                children: (0, a.jsx)(l.Button, {
                     type: 'button',
-                    size: r.Button.Sizes.MEDIUM,
-                    color: r.Button.Colors.BRAND,
+                    size: l.Button.Sizes.MEDIUM,
+                    color: l.Button.Colors.BRAND,
                     onClick: d,
                     children: s.intl.string(s.t['/g10LC'])
                 })

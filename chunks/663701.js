@@ -47,8 +47,8 @@ var i = n(200651),
     V = n(626135),
     F = n(814225),
     z = n(515753),
-    Y = n(831218),
-    W = n(339149),
+    W = n(831218),
+    Y = n(339149),
     K = n(981631),
     q = n(675654),
     X = n(474936),
@@ -128,7 +128,7 @@ let $ = (e) => {
             text: Q.intl.string(Q.t.cw57am),
             ...r,
             ...l,
-            children: (0, i.jsx)(W.Z, { className: a()(J.downloadProgressCircle, { [J.hideGameUpdateProgressIndicator]: n }) })
+            children: (0, i.jsx)(Y.Z, { className: a()(J.downloadProgressCircle, { [J.hideGameUpdateProgressIndicator]: n }) })
         });
     },
     et = () => {
@@ -244,7 +244,7 @@ let es = (e) => {
                     })
                 })
             }),
-            (0, i.jsxs)(Y.Z, {
+            (0, i.jsxs)(W.Z, {
                 ...e,
                 version: c,
                 selectedChannelId: o,

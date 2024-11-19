@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return L;
+        return w;
     }
 }),
     n(47120),
@@ -25,8 +25,8 @@ var i,
     x = n(607070),
     I = n(585483),
     b = n(557177),
-    E = n(264549),
-    S = n(981631),
+    S = n(264549),
+    E = n(981631),
     Z = n(388032),
     N = n(472591);
 function y(e, t, n) {
@@ -49,26 +49,26 @@ let T = {
     LEFT: h().throttle(() => (0, b.GN)('ddr-left'), 100),
     RIGHT: h().throttle(() => (0, b.GN)('ddr-right'), 100)
 };
-function j(e) {
+function A(e) {
     switch (e.keyCode) {
-        case S.yXg.ARROW_UP:
+        case E.yXg.ARROW_UP:
             return 'UP';
-        case S.yXg.ARROW_DOWN:
+        case E.yXg.ARROW_DOWN:
             return 'DOWN';
-        case S.yXg.ARROW_LEFT:
+        case E.yXg.ARROW_LEFT:
             return 'LEFT';
-        case S.yXg.ARROW_RIGHT:
+        case E.yXg.ARROW_RIGHT:
             return 'RIGHT';
         default:
             return null;
     }
 }
-let A = [C.Q2.MESSAGE, C.Q2.NAVIGATION, C.Q2.VOICE_AND_VIDEO, C.Q2.CHAT, C.Q2.MISCELLANEOUS];
-function P(e) {
+let P = [C.Q2.MESSAGE, C.Q2.NAVIGATION, C.Q2.VOICE_AND_VIDEO, C.Q2.CHAT, C.Q2.MISCELLANEOUS];
+function j(e) {
     let { showBackdrop: t } = e;
     return (0, r.jsx)('div', { className: s()(N.backdrop, { [N.show]: t }) });
 }
-function M() {
+function R() {
     let e = a.useMemo(
         () =>
             h()((0, C.Rv)())
@@ -78,7 +78,7 @@ function M() {
     );
     return (0, r.jsx)('div', {
         className: N.keyboardShortcutList,
-        children: A.map((t) => {
+        children: P.map((t) => {
             let n = e[t],
                 i = (0, C.UD)(t),
                 l = (0, C.U6)(t);
@@ -146,12 +146,12 @@ function M() {
         })
     });
 }
-class R extends a.PureComponent {
+class M extends a.PureComponent {
     componentDidMount() {
-        (this.lastInputedKeys = []), I.S.subscribe(S.CkL.SCROLL_PAGE_UP, this.scrollPageUp), I.S.subscribe(S.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), window.addEventListener('keydown', this.handleKeyDown, { capture: !0 }), window.addEventListener('keyup', this.handleKeyUp, { capture: !0 });
+        (this.lastInputedKeys = []), I.S.subscribe(E.CkL.SCROLL_PAGE_UP, this.scrollPageUp), I.S.subscribe(E.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), window.addEventListener('keydown', this.handleKeyDown, { capture: !0 }), window.addEventListener('keyup', this.handleKeyUp, { capture: !0 });
     }
     componentWillUnmount() {
-        I.S.unsubscribe(S.CkL.SCROLL_PAGE_UP, this.scrollPageUp), I.S.unsubscribe(S.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), window.removeEventListener('keydown', this.handleKeyDown, { capture: !0 }), window.removeEventListener('keyup', this.handleKeyUp, { capture: !0 });
+        I.S.unsubscribe(E.CkL.SCROLL_PAGE_UP, this.scrollPageUp), I.S.unsubscribe(E.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), window.removeEventListener('keydown', this.handleKeyDown, { capture: !0 }), window.removeEventListener('keyup', this.handleKeyUp, { capture: !0 });
     }
     render() {
         let { UP: e, DOWN: t, LEFT: n, RIGHT: i } = this.state;
@@ -176,25 +176,25 @@ class R extends a.PureComponent {
                 (0, r.jsxs)('div', {
                     className: N.ddrArrows,
                     children: [
-                        (0, r.jsx)(w, {
+                        (0, r.jsx)(L, {
                             arrow: 'LEFT',
                             isActive: n,
                             className: N.left,
                             children: 'left'
                         }),
-                        (0, r.jsx)(w, {
+                        (0, r.jsx)(L, {
                             arrow: 'DOWN',
                             isActive: t,
                             className: N.down,
                             children: 'down'
                         }),
-                        (0, r.jsx)(w, {
+                        (0, r.jsx)(L, {
                             arrow: 'UP',
                             isActive: e,
                             className: N.up,
                             children: 'up'
                         }),
-                        (0, r.jsx)(w, {
+                        (0, r.jsx)(L, {
                             arrow: 'RIGHT',
                             isActive: i,
                             className: N.right,
@@ -205,7 +205,7 @@ class R extends a.PureComponent {
                 (0, r.jsx)(g.AdvancedScrollerAuto, {
                     ref: this.scrollerRef,
                     fade: !0,
-                    children: (0, r.jsx)(g.HeadingLevel, { children: (0, r.jsx)(M, {}) })
+                    children: (0, r.jsx)(g.HeadingLevel, { children: (0, r.jsx)(R, {}) })
                 })
             ]
         });
@@ -277,13 +277,13 @@ class R extends a.PureComponent {
                 ]
             })),
             y(this, 'handleKeyDown', (e) => {
-                if ((this.lastInputedKeys.push(e.keyCode), (this.lastInputedKeys = this.lastInputedKeys.slice(-5)), this.lastInputedKeys[0] === S.yXg.H && this.lastInputedKeys[1] === S.yXg.H && this.lastInputedKeys[2] === S.yXg.ARROW_RIGHT && this.lastInputedKeys[3] === S.yXg.N && this.lastInputedKeys[4] === S.yXg.K && this.props.activateRagingDemon(), this.props.keyboardModeEnabled)) return;
-                let t = j(e);
+                if ((this.lastInputedKeys.push(e.keyCode), (this.lastInputedKeys = this.lastInputedKeys.slice(-5)), this.lastInputedKeys[0] === E.yXg.H && this.lastInputedKeys[1] === E.yXg.H && this.lastInputedKeys[2] === E.yXg.ARROW_RIGHT && this.lastInputedKeys[3] === E.yXg.N && this.lastInputedKeys[4] === E.yXg.K && this.props.activateRagingDemon(), this.props.keyboardModeEnabled)) return;
+                let t = A(e);
                 null !== t && (e.stopPropagation(), e.preventDefault(), this.arrowDown({ direction: t }));
             }),
             y(this, 'handleKeyUp', (e) => {
                 if (this.props.keyboardModeEnabled) return;
-                let t = j(e);
+                let t = A(e);
                 null !== t && (e.stopPropagation(), e.preventDefault(), this.arrowUp({ direction: t }));
             }),
             y(this, 'onArrowClick', (e) => {
@@ -291,7 +291,7 @@ class R extends a.PureComponent {
             });
     }
 }
-function w(e) {
+function L(e) {
     let { isActive: t, arrow: n, className: i, children: l } = e,
         [o, c] = a.useState(t),
         u = a.useCallback(() => {
@@ -311,7 +311,7 @@ function w(e) {
         })
     );
 }
-function L(e) {
+function w(e) {
     let { transitionState: t, onClose: n } = e,
         [i, l] = a.useState(!1),
         [o, c] = a.useState(!1),
@@ -322,7 +322,7 @@ function L(e) {
         }));
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(P, { showBackdrop: o }),
+            (0, r.jsx)(j, { showBackdrop: o }),
             (0, r.jsx)(g.ModalRoot, {
                 className: s()(N.noBackground, { [N.noShadow]: i }),
                 size: g.ModalSize.DYNAMIC,
@@ -332,7 +332,7 @@ function L(e) {
                     component: 'div',
                     children: i
                         ? (0, r.jsx)(
-                              E.Z,
+                              S.Z,
                               {
                                   handleDemonClose: function () {
                                       c(!1), setTimeout(n, 500);
@@ -341,7 +341,7 @@ function L(e) {
                               'raging-demo'
                           )
                         : (0, r.jsx)(
-                              R,
+                              M,
                               {
                                   content: u,
                                   keyboardModeEnabled: d,

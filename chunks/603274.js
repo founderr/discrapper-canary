@@ -27,16 +27,16 @@ var l = n(120356),
     x = n(853856),
     I = n(981631),
     b = n(388032),
-    E = n(479315),
-    S = n(455491);
+    S = n(479315),
+    E = n(455491);
 function Z(e, t) {
     return 0 === t.length
         ? null
         : (0, i.jsxs)('div', {
-              className: E.row,
+              className: S.row,
               children: [
                   (0, i.jsx)(e, {
-                      className: E.activityIcon,
+                      className: S.activityIcon,
                       color: 'currentColor'
                   }),
                   (0, i.jsx)(d.Z, {
@@ -69,7 +69,7 @@ function N() {
                 ),
             [r]
         ),
-        S = (0, s.Wu)([h.Z], () =>
+        E = (0, s.Wu)([h.Z], () =>
             o().flatMap(a, (e) =>
                 h.Z.getMutableParticipants(e, p.pV.SPEAKER)
                     .filter((e) => e.type === p.Ui.VOICE)
@@ -105,24 +105,24 @@ function N() {
             },
             [l]
         ),
-        j = (0, s.Wu)([g.default], () => T.map((e) => g.default.getUser(e)), [T]),
-        A = (0, s.Wu)([g.default], () => y.map((e) => g.default.getUser(e)), [y]),
-        P = Z(
+        A = (0, s.Wu)([g.default], () => T.map((e) => g.default.getUser(e)), [T]),
+        P = (0, s.Wu)([g.default], () => y.map((e) => g.default.getUser(e)), [y]),
+        j = Z(
             c.VoiceNormalIcon,
             b.filter((e) => !y.includes(e.id) && !T.includes(e.id))
         );
-    let M =
-            ((e = S),
+    let R =
+            ((e = E),
             (t = N),
             0 === e.length
                 ? null
                 : (0, i.jsxs)('div', {
-                      className: E.row,
+                      className: S.row,
                       children: [
                           (0, i.jsx)(c.StageIcon, {
                               size: 'lg',
                               color: 'currentColor',
-                              className: E.activityIcon
+                              className: S.activityIcon
                           }),
                           (0, i.jsx)(d.Z, {
                               guildId: void 0,
@@ -130,14 +130,14 @@ function N() {
                               max: 3
                           }),
                           (0, i.jsxs)('div', {
-                              className: E.stageListenerPill,
+                              className: S.stageListenerPill,
                               children: [
                                   (0, i.jsx)(c.HeadphonesIcon, {
                                       size: 'xs',
                                       color: 'currentColor'
                                   }),
                                   (0, i.jsx)(c.Text, {
-                                      className: E.stageListenerCount,
+                                      className: S.stageListenerCount,
                                       color: 'text-normal',
                                       variant: 'text-xs/medium',
                                       children: t
@@ -146,22 +146,22 @@ function N() {
                           })
                       ]
                   })),
-        R = Z(
+        M = Z(
             c.ScreenArrowIcon,
-            A.filter((e) => null != e && !T.includes(e.id))
+            P.filter((e) => null != e && !T.includes(e.id))
         ),
-        w = Z(c.ActivitiesIcon, j);
+        L = Z(c.ActivitiesIcon, A);
     return (0, i.jsxs)(i.Fragment, {
-        children: [M, P, R, w]
+        children: [R, j, M, L]
     });
 }
 function y() {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', {
-                className: r()(E.row, E.rowGuildName),
+                className: r()(S.row, S.rowGuildName),
                 children: (0, i.jsx)('span', {
-                    className: r()(E.guildNameText, E.guildNameTextLimitedSize),
+                    className: r()(S.guildNameText, S.guildNameTextLimitedSize),
                     children: b.intl.string(b.t.wMWycn)
                 })
             }),
@@ -177,7 +177,7 @@ function T(e) {
         position: 'right',
         text: (0, i.jsx)(y, {}),
         'aria-label': t,
-        tooltipClassName: S.listItemTooltip,
+        tooltipClassName: E.listItemTooltip,
         onTooltipShow: n,
         children: (e) =>
             (0, i.jsx)('div', {

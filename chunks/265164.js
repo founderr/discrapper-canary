@@ -54,8 +54,8 @@ let O = 1 * N.Z.Millis.DAY,
     V = {},
     F = {},
     z = {},
-    Y = 0,
-    W = !1,
+    W = 0,
+    Y = !1,
     K = !1,
     q = !1,
     X = null,
@@ -188,7 +188,7 @@ function ec() {
     } else $.splice(5, 0, i);
 }
 function ed(e) {
-    if ((M.length > 0 && ((R = M), (M = []), (U = [])), Y++, null != e)) ($ = e.newUnread), (ee = e.newRead);
+    if ((M.length > 0 && ((R = M), (M = []), (U = [])), W++, null != e)) ($ = e.newUnread), (ee = e.newRead);
     else {
         let [e, t] = eu(R);
         ($ = e), (ee = t);
@@ -274,7 +274,7 @@ class eI extends (i = l.ZP.PersistedStore) {
         }
     }
     getVersion() {
-        return Y;
+        return W;
     }
     getDehydratedItems() {
         return R;
@@ -364,7 +364,7 @@ y(eI, 'displayName', 'GravityStore'),
     y(eI, 'persistKey', 'GravityStore'),
     (t.Z = new eI(a.Z, {
         POST_CONNECTION_OPEN: function () {
-            if (R.length > 0 && (!q || 0 === Y)) {
+            if (R.length > 0 && (!q || 0 === W)) {
                 let [e, t] = eu(R);
                 ($ = e), (ee = t), eo(), (et = 0), (0, x.em)([...$, ...ee], 0, A.xy);
             }
@@ -416,12 +416,12 @@ y(eI, 'displayName', 'GravityStore'),
                     feed_item_ids: M.map((e) => e.id)
                 });
             let [l, a] = eu(M);
-            if (((U = eh(l)), q && 0 !== Y)) {
+            if (((U = eh(l)), q && 0 !== W)) {
                 let e = U.length > A.Lb;
                 !r && (K = e), e && (0, x.em)([...l, ...a], 0, A.xy);
             } else
-                (Y = 0),
-                    !q && ea(l) && ((K = !0), (W = !0)),
+                (W = 0),
+                    !q && ea(l) && ((K = !0), (Y = !0)),
                     ed({
                         newUnread: l,
                         newRead: a
@@ -520,7 +520,7 @@ y(eI, 'displayName', 'GravityStore'),
             ed(), (K = !1);
         },
         GRAVITY_TAB_OPENED: function () {
-            (q = !0), (D = Date.now()), W && ((W = !1), (K = !1)), J < 5 && J++;
+            (q = !0), (D = Date.now()), Y && ((Y = !1), (K = !1)), J < 5 && J++;
         },
         GRAVITY_FEEDBACK_GIVEN: function () {
             J = 6;

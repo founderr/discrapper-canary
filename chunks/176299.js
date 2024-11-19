@@ -47,8 +47,8 @@ var i = n(200651),
     V = n(270759),
     F = n(918701),
     z = n(905423),
-    Y = n(304445),
-    W = n(893607),
+    W = n(304445),
+    Y = n(893607),
     K = n(187819),
     q = n(210887),
     X = n(592125),
@@ -397,7 +397,7 @@ function eG() {
             return (
                 r.useEffect(
                     () =>
-                        Y.Z.addRouteChangeListener((e) => {
+                        W.Z.addRouteChangeListener((e) => {
                             t(e.pathname.startsWith(eu.Z5c.GUILD_MEMBER_VERIFICATION('')));
                         }),
                     []
@@ -410,7 +410,7 @@ function eG() {
             return (
                 r.useEffect(
                     () =>
-                        Y.Z.addRouteChangeListener((e) => {
+                        W.Z.addRouteChangeListener((e) => {
                             t(e.pathname.startsWith(eu.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB('')));
                         }),
                     []
@@ -421,7 +421,7 @@ function eG() {
         c = (function () {
             var e;
             let t = (0, s.TH)();
-            return (null === (e = (0, s.LX)(t.pathname, eu.Z5c.GUILD_BOOSTING_MARKETING(W.Hw.guildId()))) || void 0 === e ? void 0 : e.isExact) === !0;
+            return (null === (e = (0, s.LX)(t.pathname, eu.Z5c.GUILD_BOOSTING_MARKETING(Y.Hw.guildId()))) || void 0 === e ? void 0 : e.isExact) === !0;
         })(),
         h = (function () {
             var e;
@@ -429,7 +429,7 @@ function eG() {
             return (null === (e = (0, s.LX)(t.pathname, eu.Z5c.COLLECTIBLES_SHOP_FULLSCREEN)) || void 0 === e ? void 0 : e.isExact) === !0;
         })(),
         m = (0, u.e7)([B.Z], () => B.Z.getIsOpen()),
-        p = (0, s.$B)([eu.Z5c.CHANNEL(eu.ME, W.Hw.channelId()), eu.Z5c.CHANNEL(W.Hw.guildId(), W.Hw.channelId({ optional: !0 }), ':messageId?')]),
+        p = (0, s.$B)([eu.Z5c.CHANNEL(eu.ME, Y.Hw.channelId()), eu.Z5c.CHANNEL(Y.Hw.guildId(), Y.Hw.channelId({ optional: !0 }), ':messageId?')]),
         g = (null == p ? void 0 : null === (e = p.params) || void 0 === e ? void 0 : e.channelId) === eh.oC.GUILD_ONBOARDING,
         f = l || a || c || h || g,
         E = r.useCallback(() => G.Z.openSidebar(), []),
@@ -526,7 +526,7 @@ function eG() {
                                                     disableTrack: !0
                                                 }),
                                                 (0, i.jsx)(I.Z, {
-                                                    path: [eu.Z5c.CHANNEL_THREAD_VIEW(W.Hw.guildId(), W.Hw.channelId(), ':threadId', ':messageId?'), eu.Z5c.CHANNEL(eu.ME, W.Hw.channelId()), eu.Z5c.CHANNEL(W.Hw.guildId(), W.Hw.channelId({ optional: !0 }), ':messageId?')],
+                                                    path: [eu.Z5c.CHANNEL_THREAD_VIEW(Y.Hw.guildId(), Y.Hw.channelId(), ':threadId', ':messageId?'), eu.Z5c.CHANNEL(eu.ME, Y.Hw.channelId()), eu.Z5c.CHANNEL(Y.Hw.guildId(), Y.Hw.channelId({ optional: !0 }), ':messageId?')],
                                                     render: eb,
                                                     impressionName: o.ImpressionNames.GUILD_CHANNEL,
                                                     disableTrack: !0
@@ -563,13 +563,13 @@ function eG() {
                                                     disableTrack: !0
                                                 }),
                                                 (0, i.jsx)(I.Z, {
-                                                    path: eu.Z5c.GUILD_MEMBER_VERIFICATION(W.Hw.guildId(), ':inviteCode?'),
+                                                    path: eu.Z5c.GUILD_MEMBER_VERIFICATION(Y.Hw.guildId(), ':inviteCode?'),
                                                     render: eZ,
                                                     impressionName: o.ImpressionNames.GUILD_MEMBER_VERIFICATION,
                                                     disableTrack: !0
                                                 }),
                                                 (0, i.jsx)(I.Z, {
-                                                    path: eu.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(W.Hw.guildId(), ':inviteCode?'),
+                                                    path: eu.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(Y.Hw.guildId(), ':inviteCode?'),
                                                     render: eL,
                                                     impressionName: o.ImpressionNames.HUB_EMAIL_SIGNUP,
                                                     impressionProperties: (e) => {

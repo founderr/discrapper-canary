@@ -3,16 +3,16 @@ n.d(t, {
         return T;
     },
     ZP: function () {
-        return w;
+        return L;
     },
     eP: function () {
-        return P;
+        return j;
     },
     hR: function () {
-        return A;
+        return P;
     },
     jo: function () {
-        return j;
+        return A;
     }
 });
 var i,
@@ -35,20 +35,20 @@ var i,
     x = n(199902),
     I = n(430824),
     b = n(496675),
-    E = n(914010),
-    S = n(281029),
+    S = n(914010),
+    E = n(281029),
     Z = n(981631),
     N = n(388032),
     y = n(766075);
 function T(e, t, n) {
-    return null != t && !!t && !(0, S.ig)(n, e.type);
+    return null != t && !!t && !(0, E.ig)(n, e.type);
 }
-function j(e, t) {
+function A(e, t) {
     return null == t ? y.containerDefault : e > t ? y.containerDragAfter : y.containerDragBefore;
 }
-function A(e) {
+function P(e) {
     let { channel: t, disableManageChannels: n, tabIndex: i, forceShowButtons: l, hasChannelInfo: r = !1 } = e;
-    if ((0, d.e7)([b.Z, E.Z], () => n || E.Z.getGuildId() === Z.I_8 || (!b.Z.can(Z.Plq.MANAGE_CHANNELS, t) && !b.Z.can(Z.Plq.MANAGE_ROLES, t) && !b.Z.can(Z.Plq.MANAGE_WEBHOOKS, t)) || ((0, v.r8)(t.type) && !b.Z.can(Z.Plq.VIEW_CHANNEL, t)) || (t.isGuildVocal() && !b.Z.can(Z.Plq.CONNECT, t)) || !v.dF.has(t.type))) return null;
+    if ((0, d.e7)([b.Z, S.Z], () => n || S.Z.getGuildId() === Z.I_8 || (!b.Z.can(Z.Plq.MANAGE_CHANNELS, t) && !b.Z.can(Z.Plq.MANAGE_ROLES, t) && !b.Z.can(Z.Plq.MANAGE_WEBHOOKS, t)) || ((0, v.r8)(t.type) && !b.Z.can(Z.Plq.VIEW_CHANNEL, t)) || (t.isGuildVocal() && !b.Z.can(Z.Plq.CONNECT, t)) || !v.dF.has(t.type))) return null;
     function a() {
         p.ZP.open(t.id);
     }
@@ -74,15 +74,15 @@ function A(e) {
         }
     });
 }
-function P(e) {
+function j(e) {
     let { channel: t, isDefaultChannel: i = !1, locked: l, tabIndex: r, forceShowButtons: a, hasChannelInfo: s = !1 } = e,
         c = (0, d.e7)([I.Z], () => I.Z.getGuild(t.getGuildId())),
         p = (0, d.e7)([C.Z], () => C.Z.getStageInstanceByChannel(t.id), [t.id]),
         g = (0, d.e7)([m.ZP], () => m.ZP.getActiveEventByChannel(t.id), [t.id]),
         v = (0, d.e7)([b.Z], () => (0, f.b)(b.Z, c, t, p)),
-        E = (0, d.e7)([b.Z], () => (b.Z.can(Z.Plq.CREATE_INSTANT_INVITE, t) ? N.intl.string(N.t.zJrgTE) : N.intl.string(N.t.Sd8Ix8)));
+        S = (0, d.e7)([b.Z], () => (b.Z.can(Z.Plq.CREATE_INSTANT_INVITE, t) ? N.intl.string(N.t.zJrgTE) : N.intl.string(N.t.Sd8Ix8)));
     if (l || !v) return null;
-    function S() {
+    function E() {
         if (null != c) {
             let e = x.Z.getAllActiveStreams().filter((e) => e.state !== Z.jm8.ENDED && e.channelId === t.id);
             (0, h.openModalLazy)(async () => {
@@ -112,20 +112,20 @@ function P(e) {
                 children: (0, o.jsx)('div', { children: T })
             })),
         (0, o.jsx)(h.Tooltip, {
-            text: E,
+            text: S,
             children: (e) =>
                 (0, o.jsx)(h.Clickable, {
                     className: u()(y.iconItem, a ? y.alwaysShown : void 0, s ? y.iconWithChannelInfo : y.iconNoChannelInfo),
                     ...e,
-                    onClick: S,
+                    onClick: E,
                     tabIndex: r,
-                    'aria-label': E,
+                    'aria-label': S,
                     children: T
                 })
         })
     );
 }
-function M(e) {
+function R(e) {
     let { channel: t } = e,
         n = () => {
             (0, g._U)(t.guild_id, t.id);
@@ -146,7 +146,7 @@ function M(e) {
             })
     });
 }
-function R(e) {
+function M(e) {
     let { channel: t } = e,
         n = () => {
             (0, g.dM)(t.guild_id, t.id, !0, { section: Z.jXE.CHANNEL_LIST });
@@ -167,22 +167,22 @@ function R(e) {
             })
     });
 }
-class w extends (a = s.PureComponent) {
+class L extends (a = s.PureComponent) {
     renderEditButton() {
-        return (0, o.jsx)(A, { ...this.props });
-    }
-    renderInviteButton() {
         return (0, o.jsx)(P, { ...this.props });
     }
+    renderInviteButton() {
+        return (0, o.jsx)(j, { ...this.props });
+    }
     renderRemoveSuggestionButton() {
-        return (0, o.jsx)(M, { ...this.props });
+        return (0, o.jsx)(R, { ...this.props });
     }
     renderAcceptSuggestionButton() {
-        return (0, o.jsx)(R, { ...this.props });
+        return (0, o.jsx)(M, { ...this.props });
     }
     getClassName() {
         let { position: e, sortingPosition: t } = this.props;
-        return j(e, t);
+        return A(e, t);
     }
     isDisabled() {
         let { channel: e, sorting: t, sortingType: n } = this.props;
@@ -190,7 +190,7 @@ class w extends (a = s.PureComponent) {
     }
 }
 (r = { isDefaultChannel: !1 }),
-    (l = 'defaultProps') in (i = w)
+    (l = 'defaultProps') in (i = L)
         ? Object.defineProperty(i, l, {
               value: r,
               enumerable: !0,

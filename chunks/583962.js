@@ -1,9 +1,9 @@
 n.d(t, {
     PD: function () {
-        return A;
+        return P;
     },
     aR: function () {
-        return P;
+        return j;
     }
 }),
     n(47120);
@@ -27,13 +27,13 @@ var i = n(200651),
     x = n(624138),
     I = n(667815),
     b = n(531572),
-    E = n(26323),
-    S = n(30513),
+    S = n(26323),
+    E = n(30513),
     Z = n(981631),
     N = n(388032),
     y = n(183694);
 let T = (0, x.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
-    j = (e) => {
+    A = (e) => {
         let { guild: t, onSelect: n } = e,
             [r, a] = l.useState(t.premiumProgressBarEnabled),
             [o, s] = l.useState(!1),
@@ -55,9 +55,9 @@ let T = (0, x.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
             })
         });
     },
-    A = 57,
-    P = 57 + T,
-    M = {
+    P = 57,
+    j = 57 + T,
+    R = {
         tension: 180,
         friction: 80
     };
@@ -67,22 +67,22 @@ t.ZP = (e) => {
         { premiumSubscriberCount: u, id: g } = t,
         x = (0, v.rF)(u, g),
         T = (0, v.FZ)(x, t.id),
-        A = null == T,
-        P = null != T ? T : x,
-        R = (0, c.e7)([b.Z], () => {
+        P = null == T,
+        j = null != T ? T : x,
+        M = (0, c.e7)([b.Z], () => {
             var e;
             return null !== (e = b.Z.getCountForGuild(g)) && void 0 !== e ? e : 0;
         }),
-        w = (0, c.e7)([C.Z], () => C.Z.can(Z.Plq.MANAGE_GUILD, t));
+        L = (0, c.e7)([C.Z], () => C.Z.can(Z.Plq.MANAGE_GUILD, t));
     l.useEffect(() => {
-        R !== u && (0, I.v)(g, u);
-    }, [g, R, u]);
-    let L = ''.concat(Math.min(100, (u / (0, v.vn)(t.id)[P]) * 100), '%'),
-        { current: D } = l.useRef(L),
+        M !== u && (0, I.v)(g, u);
+    }, [g, M, u]);
+    let w = ''.concat(Math.min(100, (u / (0, v.vn)(t.id)[j]) * 100), '%'),
+        { current: D } = l.useRef(w),
         O = {
-            from: { width: R === u ? D : '0%' },
-            to: { width: L },
-            config: M
+            from: { width: M === u ? D : '0%' },
+            to: { width: w },
+            config: R
         },
         [k, U] = (0, d.useSpring)(() => O),
         G = () => {
@@ -91,7 +91,7 @@ t.ZP = (e) => {
                 guild_id: g,
                 location_stack: r
             }),
-                (0, E.Z)({
+                (0, S.Z)({
                     analyticsLocations: r,
                     analyticsSourceLocation: {
                         page: Z.ZY5.GUILD_CHANNEL,
@@ -99,20 +99,20 @@ t.ZP = (e) => {
                         object: Z.qAy.TOOLTIP
                     },
                     guild: t,
-                    perks: (0, S.VF)(),
+                    perks: (0, E.VF)(),
                     perkIntro: N.intl.string(N.t.ZhvSn5)
                 });
         },
-        B = N.intl.formatToPlainString(N.t['2oNfMT'], { levelName: (0, v.e9)(P) }),
+        B = N.intl.formatToPlainString(N.t['2oNfMT'], { levelName: (0, v.e9)(j) }),
         H = N.intl.format(N.t.dhKnYm, {
             numBoosts: u,
-            numTotal: (0, v.vn)(t.id)[P]
+            numTotal: (0, v.vn)(t.id)[j]
         });
-    A && ((B = (0, v.e9)(P)), (H = N.intl.format(N.t.B2byER, { numBoosts: u })));
+    P && ((B = (0, v.e9)(j)), (H = N.intl.format(N.t.B2byER, { numBoosts: u })));
     let V = (0, s.JA)('boosts-'.concat(t.id));
     return (0, i.jsx)('li', {
         children: (0, i.jsx)(d.Tooltip, {
-            text: A ? N.intl.string(N.t['Y+V9go']) : N.intl.formatToPlainString(N.t.UyDKl5, { levelName: (0, v.nW)(P) }),
+            text: P ? N.intl.string(N.t['Y+V9go']) : N.intl.formatToPlainString(N.t.UyDKl5, { levelName: (0, v.nW)(j) }),
             color: d.Tooltip.Colors.BLACK,
             position: 'top',
             delay: 200,
@@ -136,9 +136,9 @@ t.ZP = (e) => {
                     },
                     className: a()(y.container, { [y.containerWithMargin]: n }),
                     onContextMenu: (e) => {
-                        w &&
+                        L &&
                             (0, h.vq)(e, (e) =>
-                                (0, i.jsx)(j, {
+                                (0, i.jsx)(A, {
                                     ...e,
                                     guild: t
                                 })
@@ -177,13 +177,13 @@ t.ZP = (e) => {
                             ]
                         }),
                         (0, i.jsxs)('div', {
-                            className: a()(y.progressBarContainer, { [y.progressBarContainerComplete]: A }),
+                            className: a()(y.progressBarContainer, { [y.progressBarContainerComplete]: P }),
                             children: [
                                 (0, i.jsx)(o.animated.div, {
                                     className: y.progressBar,
                                     style: k
                                 }),
-                                A
+                                P
                                     ? (0, i.jsx)('span', {
                                           'aria-label': N.intl.string(N.t['7iL1q6']),
                                           role: 'img',

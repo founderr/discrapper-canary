@@ -19,19 +19,19 @@ var i,
     x = n(485267),
     I = n(82295),
     b = n(313201),
-    E = n(860144),
-    S = n(214852),
+    S = n(860144),
+    E = n(214852),
     Z = n(518311),
     N = n(355298),
     y = n(869404),
     T = n(333984),
-    j = n(249978),
-    A = n(210887),
-    P = n(592125),
-    M = n(158776),
-    R = n(55589),
-    w = n(515753),
-    L = n(981631),
+    A = n(249978),
+    P = n(210887),
+    j = n(592125),
+    R = n(158776),
+    M = n(55589),
+    L = n(515753),
+    w = n(981631),
     D = n(388032),
     O = n(470792);
 function k(e, t, n) {
@@ -298,10 +298,10 @@ class G extends (l = o.Component) {
                     c = n.some((e) => (0, v.Z)(e)),
                     u = {
                         num_users_visible: a.length,
-                        num_users_visible_with_mobile_indicator: s.filter((e) => null != e && M.Z.isMobileOnline(e)).length
+                        num_users_visible_with_mobile_indicator: s.filter((e) => null != e && R.Z.isMobileOnline(e)).length
                     };
                 (this.hasReportedAnalytics = !0),
-                    C.ZP.trackWithMetadata(L.rMx.DM_LIST_VIEWED, {
+                    C.ZP.trackWithMetadata(w.rMx.DM_LIST_VIEWED, {
                         ...u,
                         ...(0, _.X)(),
                         visible_user_ids: s.filter((e) => null != e),
@@ -318,7 +318,7 @@ class G extends (l = o.Component) {
                 c()(() => {
                     if (null != this._list) {
                         let e = this._list.getScrollerNode();
-                        null != e && f.Z.updateChannelListScroll(L.ME, e.scrollTop);
+                        null != e && f.Z.updateChannelListScroll(w.ME, e.scrollTop);
                     }
                 }, 100)
             ),
@@ -329,7 +329,7 @@ class G extends (l = o.Component) {
                 return null == s
                     ? null
                     : (0, a.jsx)(
-                          w.ZP,
+                          L.ZP,
                           {
                               channel: s,
                               selected: s.id === l,
@@ -391,25 +391,25 @@ k(G, 'defaultProps', { padding: 8 });
 t.Z = (e) => {
     let { version: t, theme: n, children: i, showDMHeader: l } = e,
         r = o.Children.count(i),
-        s = P.Z.getMutablePrivateChannels(),
+        s = j.Z.getMutablePrivateChannels(),
         c = (0, y.k1)(s),
         p = (0, h.Wu)(
-            [R.Z, N.Z, T.Z],
+            [M.Z, N.Z, T.Z],
             () => {
-                let e = R.Z.getPrivateChannelIds();
+                let e = M.Z.getPrivateChannelIds();
                 return (0, y.tU)(e, [N.Z, T.Z]);
             },
             []
         );
-    (0, S.z)(E.R);
-    let { recentActivityStatusEnabled: m } = (0, j.U)({ location: 'PrivateChannelsList' });
+    (0, E.z)(S.R);
+    let { recentActivityStatusEnabled: m } = (0, A.U)({ location: 'PrivateChannelsList' });
     o.useEffect(() => {
         m && (0, x.Jn)();
     }, [m]);
-    let f = (0, h.cj)([g.Z, A.Z, P.Z], () => ({
-            theme: A.Z.darkSidebar ? L.BRd.DARK : n,
+    let f = (0, h.cj)([g.Z, P.Z, j.Z], () => ({
+            theme: P.Z.darkSidebar ? w.BRd.DARK : n,
             keyboardModeEnabled: g.Z.keyboardModeEnabled,
-            version: null != t ? ''.concat(t, ':').concat(P.Z.getPrivateChannelsVersion()) : P.Z.getPrivateChannelsVersion()
+            version: null != t ? ''.concat(t, ':').concat(j.Z.getPrivateChannelsVersion()) : j.Z.getPrivateChannelsVersion()
         })),
         C = o.useRef(null),
         _ = o.useCallback((e) => {
@@ -450,7 +450,7 @@ t.Z = (e) => {
             []
         ),
         Z = (0, b.Dt)(),
-        M = (0, d.ZP)({
+        R = (0, d.ZP)({
             id: 'private-channels-'.concat(Z),
             isEnabled: f.keyboardModeEnabled,
             scrollToStart: v,
@@ -459,7 +459,7 @@ t.Z = (e) => {
             setFocus: _
         });
     return (0, a.jsx)(u.bG, {
-        navigator: M,
+        navigator: R,
         children: (0, a.jsx)(G, {
             channels: c,
             privateChannelIds: p,

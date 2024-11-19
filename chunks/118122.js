@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return S;
     }
 });
 var i = n(200651),
@@ -39,16 +39,16 @@ function b(e) {
         return (t) => (0, i.jsx)(e, { ...t });
     });
 }
-function E(e) {
+function S(e) {
     let { disableTooltip: t, lastTargetNode: n } = e,
         o = (0, r.e7)([p.Z], () => p.Z.getGuilds()),
-        E = l.useMemo(() => Object.values(o), [o]),
-        S = (0, r.e7)([m.default], () => m.default.getCurrentUser()),
-        Z = l.useMemo(() => E.some((e) => e.isOwner(S)), [E, S]),
+        S = l.useMemo(() => Object.values(o), [o]),
+        E = (0, r.e7)([m.default], () => m.default.getCurrentUser()),
+        Z = l.useMemo(() => S.some((e) => e.isOwner(E)), [S, E]),
         N = (0, a.useModalsStore)((e) => (0, a.hasModalOpenSelector)(e, _.PU)),
         { analyticsLocations: y } = (0, s.ZP)(),
         T = (0, a.useRedesignIconContext)().enabled,
-        j = (0, i.jsx)(g.Z, {
+        A = (0, i.jsx)(g.Z, {
             showPill: !1,
             id: 'create-join-button',
             onClick: () => {
@@ -69,7 +69,7 @@ function E(e) {
             icon: T ? a.PlusMediumIcon : a.PlusSmallIcon
         });
     return t
-        ? j
+        ? A
         : (0, i.jsx)('div', {
               className: x.tutorialContainer,
               children: (0, i.jsxs)(h.Z, {
@@ -77,7 +77,7 @@ function E(e) {
                   inlineSpecs: I,
                   position: 'right',
                   children: [
-                      j,
+                      A,
                       null != n &&
                           (0, i.jsx)(f.ZP, {
                               name: v.intl.string(v.t['45xjMz']),

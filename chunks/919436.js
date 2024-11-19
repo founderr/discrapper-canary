@@ -19,8 +19,8 @@ var i,
     x = n(594174),
     I = n(451478),
     b = n(276952),
-    E = n(682662),
-    S = n(662146),
+    S = n(682662),
+    E = n(662146),
     Z = n(674552),
     N = n(981631),
     y = n(410357);
@@ -37,25 +37,25 @@ function T(e, t, n) {
         e
     );
 }
-let j = {
+let A = {
     friction: 28,
     tension: 600
 };
-function A(e) {
+function P(e) {
     switch (e) {
         case 'height':
         case 'opacity':
             return {
                 duration: 150,
-                ...j
+                ...A
             };
         case 'scale':
-            return { ...j };
+            return { ...A };
         default:
             throw Error('DirectMessage: getSpringConfigs() - Invalid spring '.concat(String(e)));
     }
 }
-class P extends (i = r.PureComponent) {
+class j extends (i = r.PureComponent) {
     componentWillEnter(e) {
         let { controller: t } = this.state;
         e(),
@@ -65,7 +65,7 @@ class P extends (i = r.PureComponent) {
                     height: 1,
                     opacity: 1,
                     scale: 1,
-                    config: A
+                    config: P
                 })
                 .start()
                 .then(() => this.setState({ animating: !1 }));
@@ -77,7 +77,7 @@ class P extends (i = r.PureComponent) {
             scale: 1,
             opacity: 1,
             height: 1,
-            config: A
+            config: P
         })
             .start()
             .then(e);
@@ -91,7 +91,7 @@ class P extends (i = r.PureComponent) {
                     height: 0,
                     opacity: 0,
                     scale: 0,
-                    config: A
+                    config: P
                 })
                 .start()
                 .then(e)
@@ -120,7 +120,7 @@ class P extends (i = r.PureComponent) {
             C = e.isMultiUserDM() && null == e.icon && p;
         return (0, l.jsx)(a.animated.div, {
             style: this.getAnimatedStyle(),
-            children: (0, l.jsxs)(E.H, {
+            children: (0, l.jsxs)(S.H, {
                 children: [
                     (0, l.jsx)(b.Z, {
                         hovered: !g && m,
@@ -128,7 +128,7 @@ class P extends (i = r.PureComponent) {
                         unread: !g && h,
                         className: y.pill
                     }),
-                    (0, l.jsx)(S.Z, {
+                    (0, l.jsx)(E.Z, {
                         text: null != t ? t : '',
                         selected: n,
                         children: (0, l.jsx)(c.BlobMask, {
@@ -180,7 +180,7 @@ class P extends (i = r.PureComponent) {
                     scale: 0,
                     height: 0,
                     opacity: 0,
-                    config: A
+                    config: P
                 })
             }),
             T(this, 'handleContextMenu', (e) => {
@@ -208,7 +208,7 @@ class P extends (i = r.PureComponent) {
             });
     }
 }
-T(P, 'defaultProps', {
+T(j, 'defaultProps', {
     badge: 0,
     audio: !1,
     video: !1,
@@ -228,7 +228,7 @@ T(P, 'defaultProps', {
             I = !1;
         return (
             f && ((x = a === N.WtW.VOICE), (I = a === N.WtW.VIDEO)),
-            (0, l.jsx)(P, {
+            (0, l.jsx)(j, {
                 ...e,
                 ref: t,
                 channelName: i,

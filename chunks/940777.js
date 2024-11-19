@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return M;
+        return R;
     }
 }),
     n(47120),
@@ -26,33 +26,33 @@ var i = n(200651),
     x = n(944486),
     I = n(979651),
     b = n(709054),
-    E = n(853856),
-    S = n(593214),
+    S = n(853856),
+    E = n(593214),
     Z = n(919755),
     N = n(110977),
     y = n(603274),
     T = n(981631),
-    j = n(388032),
-    A = n(534977);
-let P = {
+    A = n(388032),
+    P = n(534977);
+let j = {
     analyticsSource: {
         page: T.ZY5.GUILD_CHANNEL,
         section: T.jXE.CHANNEL_LIST,
         object: T.qAy.CHANNEL
     }
 };
-function M() {
+function R() {
     let e = (0, o.Ie)('favorites'),
-        { favoriteAdded: t, clearFavoriteAdded: r } = (0, S.up)(),
-        [M, R] = l.useState(!1),
-        { favoriteServerMuted: w, favoriteChannels: L } = (0, s.cj)([E.Z], () => ({
-            favoriteChannels: E.Z.getFavoriteChannels(),
-            favoriteServerMuted: E.Z.favoriteServerMuted
+        { favoriteAdded: t, clearFavoriteAdded: r } = (0, E.up)(),
+        [R, M] = l.useState(!1),
+        { favoriteServerMuted: L, favoriteChannels: w } = (0, s.cj)([S.Z], () => ({
+            favoriteChannels: S.Z.getFavoriteChannels(),
+            favoriteServerMuted: S.Z.favoriteServerMuted
         })),
         D = (0, s.e7)([x.Z], () => x.Z.getChannelId(T.I_8)),
         O = (0, s.e7)([v.Z], () => v.Z.getChannel(D)),
         k = (0, C.Z)((e) => e.guildId) === T.I_8,
-        { badge: U, unread: G } = (0, Z.Z)(L),
+        { badge: U, unread: G } = (0, Z.Z)(w),
         B = (function (e) {
             let t = (0, s.e7)([x.Z], () => x.Z.getVoiceChannelId()),
                 n = null != t && null != e[t],
@@ -86,7 +86,7 @@ function M() {
                     activity: m
                 })
             );
-        })(L),
+        })(w),
         H = U > 0 ? (0, g.N)(U) : null,
         V = l.useCallback(() => {
             r();
@@ -95,30 +95,30 @@ function M() {
         children: [
             (0, i.jsx)(p.Z, {
                 selected: k,
-                hovered: M,
-                unread: G && !w,
-                className: A.pill
+                hovered: R,
+                unread: G && !L,
+                className: P.pill
             }),
             (0, i.jsx)(y.Z, {
                 onShow: V,
                 children: (0, i.jsx)(N.S, {
                     children: (0, i.jsx)(c.BlobMask, {
-                        selected: k || M,
+                        selected: k || R,
                         upperBadge: B,
                         lowerBadge: H,
                         children: (0, i.jsx)(c.NavItem, {
                             ...e,
-                            ariaLabel: j.intl.formatToPlainString(j.t['/uzRsr'], {
-                                guildName: j.intl.string(j.t.wMWycn),
+                            ariaLabel: A.intl.formatToPlainString(A.t['/uzRsr'], {
+                                guildName: A.intl.string(A.t.wMWycn),
                                 mentions: U
                             }),
                             to: {
                                 pathname: T.Z5c.CHANNEL(T.I_8, D),
-                                state: P
+                                state: j
                             },
-                            selected: k || M,
-                            onMouseEnter: () => R(!0),
-                            onMouseLeave: () => R(!1),
+                            selected: k || R,
+                            onMouseEnter: () => M(!0),
+                            onMouseLeave: () => M(!1),
                             onMouseDown: function () {
                                 if (null != O) u.Z.preload(O.guild_id, O.id);
                             },
@@ -129,11 +129,11 @@ function M() {
                                 });
                             },
                             children: (0, i.jsx)('div', {
-                                className: a()(A.ring, { [A.ringActive]: t }),
+                                className: a()(P.ring, { [P.ringActive]: t }),
                                 children: (0, i.jsx)(c.StarIcon, {
                                     size: 'custom',
                                     color: 'currentColor',
-                                    className: A.favoriteIcon,
+                                    className: P.favoriteIcon,
                                     width: 20,
                                     height: 20
                                 })

@@ -87,7 +87,7 @@ t.Z = function (e) {
     let V = [H],
         F = 0 === H.length && '' !== M[t],
         z = H.filter((e) => e.type === Z.OGo.PENDING_INCOMING).length,
-        Y = t === Z.pJs.PENDING && z > 0 && z >= x.yf;
+        W = t === Z.pJs.PENDING && z > 0 && z >= x.yf;
     return (0, i.jsx)(p.Gt, {
         value: O,
         children: (0, i.jsxs)(u.Z, {
@@ -120,7 +120,7 @@ t.Z = function (e) {
                                 }
                             })(t, H.length)
                         }),
-                        Y &&
+                        W &&
                             (0, i.jsx)(o.Button, {
                                 look: o.ButtonLooks.LINK,
                                 color: o.ButtonColors.LINK,

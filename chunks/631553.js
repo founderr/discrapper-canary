@@ -52,8 +52,8 @@ var T = n(594190),
     Y = n(998502),
     K = n(13140),
     X = n(145597),
-    Q = n(658785),
-    q = n(681603),
+    q = n(658785),
+    Q = n(681603),
     J = n(358446),
     $ = n(348733),
     ee = n(312178),
@@ -159,7 +159,7 @@ class eg extends s.Component {
             voice_widget_connected: e,
             text_widget_connected: G.Z.isPinned(es.Odu.TEXT)
         }),
-            Q.Z.trackExposure({ location: 'Overlay' });
+            q.Z.trackExposure({ location: 'Overlay' });
         let c = n && !i && null != a,
             d = e && null != r && null != s,
             u = { type: er.nc.WELCOME };
@@ -272,7 +272,7 @@ class eg extends s.Component {
                     locked: f,
                     keybind: t
                 }),
-                (0, r.jsx)(q.Z, {})
+                (0, r.jsx)(Q.Z, {})
             ]
         });
     }

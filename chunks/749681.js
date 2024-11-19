@@ -35,7 +35,7 @@ function u(e) {
             if (null != e.applicationId) return (0, a.uL)(l.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(e.applicationId));
             if (null != e.query) {
                 let t = new URLSearchParams();
-                return t.set('q', e.query), null != e.categoryId && t.set('category_id', e.categoryId.toString()), null != e.page && t.set('page', e.page.toString()), (0, a.uL)(l.Z5c.GLOBAL_DISCOVERY_APPS_SEARCH, { search: t.toString() });
+                return '' !== e.query && t.set('q', e.query), null != e.categoryId && t.set('category_id', e.categoryId.toString()), null != e.page && t.set('page', e.page.toString()), (0, a.uL)(l.Z5c.GLOBAL_DISCOVERY_APPS_SEARCH, { search: t.toString() });
             } else if (null != e.categoryId) return (0, a.uL)(l.Z5c.GLOBAL_DISCOVERY_APPS_CATEGORY(e.categoryId.toString()));
             else return (0, a.uL)(l.Z5c.GLOBAL_DISCOVERY_APPS);
         case c.F$.QUESTS:

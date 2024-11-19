@@ -20,19 +20,19 @@ var l = n(392711),
     x = n(74538),
     I = n(557457),
     b = n(970645),
-    E = n(30684),
-    S = n(514701),
+    S = n(30684),
+    E = n(514701),
     Z = n(6242),
     N = n(467721),
     y = n(757692),
     T = n(114064),
-    j = n(933843),
-    A = n(281494),
-    P = n(276444),
-    M = n(684259),
-    R = n(937579),
-    w = n(1163),
-    L = n(841174),
+    A = n(933843),
+    P = n(281494),
+    j = n(276444),
+    R = n(684259),
+    M = n(937579),
+    L = n(1163),
+    w = n(841174),
     D = n(522558),
     O = n(879463),
     k = n(822070),
@@ -77,10 +77,10 @@ class Y extends c.Z {
     }
     _getReferralIncentiveEligibility() {
         let e = C.default.getCurrentUser();
-        if (P.Z.getIsFetchingReferralIncentiveEligibility() || !(0, x.I5)(e)) return;
+        if (j.Z.getIsFetchingReferralIncentiveEligibility() || !(0, x.I5)(e)) return;
         let t = { location: 'PremiumManager' },
             n = { autoTrackExposure: !1 };
-        if (!!U.g.getCurrentConfig(t, n).enabled && !O.eP.getCurrentConfig(t, n).enabled) k.$.getCurrentConfig(t, n).enabled && (0, A.bq)();
+        if (!!U.g.getCurrentConfig(t, n).enabled && !O.eP.getCurrentConfig(t, n).enabled) k.$.getCurrentConfig(t, n).enabled && (0, P.bq)();
     }
     openPremiumPaymentModalInApp(e) {
         if (__OVERLAY__) throw Error('Should not use this function from the overlay, use ModalAPI.openModal instead');
@@ -109,7 +109,7 @@ class Y extends c.Z {
         });
     }
     maybeShowHDStreamingPerksDemoPostUpsellModal(e) {
-        let { enabled: t } = w.Z.getCurrentConfig({ location: 'PremiumManager' }, { autoTrackExposure: !1 });
+        let { enabled: t } = L.Z.getCurrentConfig({ location: 'PremiumManager' }, { autoTrackExposure: !1 });
         if (!t || e.state !== H.hes.DISCONNECTED || e.willReconnect) return;
         let n = f.Z.getChannel(e.channelId);
         if (null == n) return;
@@ -124,7 +124,7 @@ class Y extends c.Z {
         )
             return;
         let { resolution: l, fps: a } = m.Z.getState();
-        !(0, j.mc)(l, a) && (0, L.Z)(n.guild_id);
+        !(0, A.mc)(l, a) && (0, w.Z)(n.guild_id);
     }
     constructor(...e) {
         super(...e),
@@ -134,13 +134,13 @@ class Y extends c.Z {
                 let e = C.default.getCurrentUser();
                 if (null != e && e.verified) {
                     let t = !(0, x.I5)(e) && _.Z.shouldFetchOffer();
-                    await (0, R.T)('PremiumManager', t);
+                    await (0, M.T)('PremiumManager', t);
                 }
                 o.Z.dispatch({ type: 'PREMIUM_MARKETING_DATA_READY' });
             }),
             z(this, '_maybeFetchCheckoutRecovery', async () => {
                 let e = C.default.getCurrentUser();
-                null != e && e.verified && !(0, x.I5)(e) && E.Z.shouldFetchCheckoutRecovery() && (await (0, b.o)());
+                null != e && e.verified && !(0, x.I5)(e) && S.Z.shouldFetchCheckoutRecovery() && (await (0, b.o)());
             }),
             z(this, '_maybeFetchUserAffinities', () => {
                 let { enabled: e } = D.w.getCurrentConfig({ location: 'PremiumManager' }, { autoTrackExposure: !1 });
@@ -150,7 +150,7 @@ class Y extends c.Z {
                 G.Y.trackExposure({ location: 'PremiumManager' });
             }),
             z(this, '_trackSkyLoadExposure', () => {
-                M.Z.trackExposure({ location: 'PremiumManager' });
+                R.Z.trackExposure({ location: 'PremiumManager' });
             }),
             z(this, '_handlePremiumPaymentModalOpen', (e) => {
                 (0, h.Z)({
@@ -182,7 +182,7 @@ class Y extends c.Z {
                         { sendNitroMessage: o } = (0, Z.TD)(a),
                         c = null !== (l = null === (i = g.Z.getGuild(t)) || void 0 === i ? void 0 : i.premiumTier) && void 0 !== l ? l : H.Eu4.NONE;
                     if (N.Z.cooldownIsActive() || !o || c >= H.Eu4.TIER_2 || (null == r ? void 0 : r.type) !== V.fO.STREAM || (null == r ? void 0 : r.id) === (null == n ? void 0 : n.id) || null == r.maxResolution || null == r.maxFrameRate) return;
-                    S.I();
+                    E.I();
                     let u = W.intl.formatToPlainString(W.t.AbyeZG, {
                         nickname: r.userNick,
                         resolution: (0, F.o6)(r.maxResolution.height),

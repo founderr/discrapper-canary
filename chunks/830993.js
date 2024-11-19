@@ -25,8 +25,8 @@ var i = n(200651),
     x = n(135724),
     I = n(543432),
     b = n(981631),
-    E = n(388032),
-    S = n(208745);
+    S = n(388032),
+    E = n(208745);
 function Z(e) {
     var t, d;
     let { channel: h, guild: p, onAction: f, voiceStates: C, isChannelSelected: v, shouldShowSettingNudge: x } = e;
@@ -52,7 +52,7 @@ function Z(e) {
         Z = Array.from((0, s.uF)(I).values()),
         y = null !== (t = null == C ? void 0 : C.filter(g.lm)) && void 0 !== t ? t : [],
         T = (e) => (t) => ([b.IIU.PLAYING, b.IIU.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId)) || t.type === b.IIU.LISTENING,
-        j = (0, r.e7)(
+        A = (0, r.e7)(
             [m.Z],
             () => {
                 let e = {};
@@ -78,17 +78,17 @@ function Z(e) {
             [y],
             r.pF
         );
-    return j.length + Z.length === 0
+    return A.length + Z.length === 0
         ? null
         : (0, i.jsxs)(a.Scroller, {
-              className: S.container,
+              className: E.container,
               children: [
                   (0, i.jsx)(N, {
                       channel: h,
                       isChannelSelected: v,
                       voiceStatesCount: null !== (d = null == C ? void 0 : C.length) && void 0 !== d ? d : 0
                   }),
-                  (0, i.jsx)('div', { className: S.headerDivider }),
+                  (0, i.jsx)('div', { className: E.headerDivider }),
                   Z.map((e, t) => {
                       var n;
                       return (0, i.jsx)(
@@ -102,7 +102,7 @@ function Z(e) {
                           t
                       );
                   }),
-                  j.map((e, t) => {
+                  A.map((e, t) => {
                       let { members: n, activity: l } = e;
                       return (0, i.jsx)(
                           _.Z,
@@ -118,13 +118,13 @@ function Z(e) {
                   x &&
                       (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, i.jsx)('div', { className: S.headerDivider }),
+                              (0, i.jsx)('div', { className: E.headerDivider }),
                               (0, i.jsx)('div', {
-                                  className: S.settingNudgeText,
+                                  className: E.settingNudgeText,
                                   children: (0, i.jsx)(a.Text, {
                                       variant: 'text-xs/normal',
                                       tag: 'span',
-                                      children: E.intl.format(E.t.ePyoY2, {
+                                      children: S.intl.format(S.t.ePyoY2, {
                                           onClick: () => {
                                               (0, a.openModalLazy)(async () => {
                                                   let { default: e } = await Promise.all([n.e('23217'), n.e('33053'), n.e('8016'), n.e('76540'), n.e('15669'), n.e('17938'), n.e('22646'), n.e('25183'), n.e('30419'), n.e('48923'), n.e('18824'), n.e('8821'), n.e('57772'), n.e('42587'), n.e('37229'), n.e('28044'), n.e('26069'), n.e('1989')]).then(n.bind(n, 241420));
@@ -157,7 +157,7 @@ function N(e) {
     return null == (0, d.KS)(t, c)
         ? null
         : (0, i.jsxs)('div', {
-              className: S.popoutHeaderContainer,
+              className: E.popoutHeaderContainer,
               children: [
                   (0, i.jsx)(v.Z, { channel: t }),
                   s

@@ -46,8 +46,8 @@ var i = n(200651),
     V = n(695346),
     F = n(158776),
     z = n(246946),
-    Y = n(572004),
-    W = n(70956),
+    W = n(572004),
+    Y = n(70956),
     K = n(5192),
     q = n(111361),
     X = n(51144),
@@ -62,23 +62,23 @@ var i = n(200651),
     el = n(653134);
 let ea = [
     {
-        duration: 30 * W.Z.Millis.MINUTE,
+        duration: 30 * Y.Z.Millis.MINUTE,
         label: () => ei.intl.string(ei.t.RxJGbG)
     },
     {
-        duration: W.Z.Millis.HOUR,
+        duration: Y.Z.Millis.HOUR,
         label: () => ei.intl.string(ei.t.UMWBZm)
     },
     {
-        duration: 3 * W.Z.Millis.HOUR,
+        duration: 3 * Y.Z.Millis.HOUR,
         label: () => ei.intl.string(ei.t.QmYWtr)
     },
     {
-        duration: 8 * W.Z.Millis.HOUR,
+        duration: 8 * Y.Z.Millis.HOUR,
         label: () => ei.intl.string(ei.t.EpAXPD)
     },
     {
-        duration: W.Z.Millis.DAY,
+        duration: Y.Z.Millis.DAY,
         label: () => ei.intl.string(ei.t['755t4u'])
     },
     {
@@ -168,21 +168,21 @@ function eo(e, t, n) {
 }
 function ec(e) {
     var t;
-    let { currentUser: W, onClose: Q, setPopoutRef: ec } = e,
+    let { currentUser: Y, onClose: Q, setPopoutRef: ec } = e,
         ed = __OVERLAY__,
-        eu = (0, L.ZP)(W.id),
+        eu = (0, L.ZP)(Y.id),
         eh = (0, u.O)(),
         { analyticsLocations: em } = (0, g.ZP)(p.Z.ACCOUNT_PROFILE_POPOUT),
         ep = (0, b.ZB)({
             layout: 'SIMPLIFIED_ACCOUNT_POPOUT',
-            userId: W.id
+            userId: Y.id
         }),
         { ref: eg } = (0, h.Z)(),
         ef = (0, m.Z)(eg);
     r.useEffect(() => {
         null == ec || ec(eg.current);
     }, [eg, ec]);
-    let e_ = (0, o.e7)([F.Z], () => F.Z.getStatus(W.id)),
+    let e_ = (0, o.e7)([F.Z], () => F.Z.getStatus(Y.id)),
         eE = (0, o.e7)([z.Z], () => z.Z.hidePersonalInformation),
         eI = (0, C.p)(),
         eC = V.Sb.useSetting(),
@@ -303,7 +303,7 @@ function ec(e) {
         eN = (0, J.g)(Q),
         eS = (0, N.Z)({ analyticsLocations: em }),
         { customStatusBubbleEditEnabled: eA } = (0, Z.K)({ location: 'AccountProfilePopout' }),
-        eb = (0, q.I5)(W),
+        eb = (0, q.I5)(Y),
         ex = (e) => {
             null == Q || Q(),
                 (0, B.openUserProfileModal)({
@@ -332,10 +332,10 @@ function ec(e) {
             value: ep,
             children: (0, i.jsx)(c.Dialog, {
                 ref: eg,
-                'aria-label': W.username,
+                'aria-label': Y.username,
                 children: (0, i.jsxs)(M.Z, {
                     className: er.themeContainer,
-                    user: W,
+                    user: Y,
                     displayProfile: eu,
                     profileType: en.y0.BITE_SIZE,
                     children: [
@@ -343,7 +343,7 @@ function ec(e) {
                             (0, i.jsx)(k.Z, {
                                 profileType: en.y0.BITE_SIZE,
                                 children: (0, i.jsx)(G.Z, {
-                                    userId: W.id,
+                                    userId: Y.id,
                                     onClose: Q
                                 })
                             }),
@@ -351,18 +351,18 @@ function ec(e) {
                             className: el.header,
                             children: [
                                 (0, i.jsx)(P.Z, {
-                                    user: W,
+                                    user: Y,
                                     displayProfile: eu,
                                     profileType: en.y0.BITE_SIZE
                                 }),
                                 (0, i.jsx)(y.Z, {
-                                    user: W,
+                                    user: Y,
                                     displayProfile: eu,
                                     profileType: en.y0.BITE_SIZE,
                                     onOpenProfile: ed ? void 0 : ex
                                 }),
                                 (0, i.jsx)(R.Z, {
-                                    user: W,
+                                    user: Y,
                                     profileType: en.y0.BITE_SIZE,
                                     onCloseProfile: Q
                                 })
@@ -377,10 +377,10 @@ function ec(e) {
                             className: er.body,
                             children: [
                                 (0, i.jsx)(w.Z, {
-                                    user: W,
+                                    user: Y,
                                     className: er.username,
                                     profileType: en.y0.BITE_SIZE,
-                                    nickname: K.ZP.getName(null, null, W),
+                                    nickname: K.ZP.getName(null, null, Y),
                                     onOpenProfile: ed ? void 0 : ex,
                                     pronouns: null == eu ? void 0 : eu.pronouns,
                                     tags: (0, i.jsx)(O.Z, {
@@ -390,23 +390,23 @@ function ec(e) {
                                     }),
                                     nicknameIcons: (0, i.jsxs)(i.Fragment, {
                                         children: [
-                                            (0, i.jsx)(D.Z, { userId: W.id }),
+                                            (0, i.jsx)(D.Z, { userId: Y.id }),
                                             (0, i.jsx)(U.Z, {
-                                                user: W,
+                                                user: Y,
                                                 isHovering: ef
                                             })
                                         ]
                                     })
                                 }),
                                 (0, i.jsx)(H.Z, {
-                                    user: W,
+                                    user: Y,
                                     bio: null == eu ? void 0 : eu.bio,
                                     hidePersonalInformation: eE,
                                     onClose: Q
                                 }),
                                 (0, i.jsx)(j.Z, {
-                                    user: W,
-                                    currentUser: W,
+                                    user: Y,
+                                    currentUser: Y,
                                     onClose: Q
                                 }),
                                 (0, i.jsxs)('div', {
@@ -415,7 +415,7 @@ function ec(e) {
                                         (0, i.jsx)(M.Z.Overlay, {
                                             className: er.menuOverlay,
                                             children: (0, i.jsxs)($.PB, {
-                                                id: 'profile-'.concat(W.id),
+                                                id: 'profile-'.concat(Y.id),
                                                 children: [
                                                     eA &&
                                                         (0, i.jsxs)(i.Fragment, {
@@ -475,7 +475,7 @@ function ec(e) {
                                         (0, i.jsx)(M.Z.Overlay, {
                                             className: er.menuOverlay,
                                             children: (0, i.jsxs)($.PB, {
-                                                id: 'account-'.concat(W.id),
+                                                id: 'account-'.concat(Y.id),
                                                 children: [
                                                     (0, i.jsx)($.Mv, {
                                                         id: 'set-status',
@@ -600,19 +600,19 @@ function ec(e) {
                                             })
                                         }),
                                         !__OVERLAY__ &&
-                                            Y.wS &&
+                                            W.wS &&
                                             eC &&
                                             (0, i.jsx)(M.Z.Overlay, {
                                                 className: er.menuOverlay,
                                                 children: (0, i.jsx)($.PB, {
-                                                    id: 'dev-'.concat(W.id),
+                                                    id: 'dev-'.concat(Y.id),
                                                     children: (0, i.jsx)($.Mv, {
                                                         id: 'copy-user-id',
                                                         action: 'COPY_USER_ID',
                                                         icon: c.IdIcon,
                                                         label: ei.intl.string(ei.t['/AXYnJ']),
                                                         onClick: () => {
-                                                            (0, s.J)(W.id), Q();
+                                                            (0, s.J)(Y.id), Q();
                                                         }
                                                     })
                                                 })

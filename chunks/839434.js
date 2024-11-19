@@ -51,8 +51,8 @@ var i,
     Y = n(658785),
     K = n(244073),
     X = n(876205),
-    Q = n(906037),
-    q = n(518084),
+    q = n(906037),
+    Q = n(518084),
     J = n(981631),
     $ = n(65154),
     ee = n(388032),
@@ -158,7 +158,7 @@ class er extends (i = s.PureComponent) {
                     c.id
                 );
             });
-        return (0, r.jsx)(q.ZP.Body, {
+        return (0, r.jsx)(Q.ZP.Body, {
             className: l()({
                 [d.Z.VOICE_WIDGET_TOP_MARGIN]: s,
                 [et.bottomMargin]: s
@@ -171,10 +171,10 @@ class er extends (i = s.PureComponent) {
     }
     renderHeader() {
         let { pinned: e, title: t, isPreviewingInGame: n } = this.props;
-        return (0, r.jsxs)(q.ZP.Bar, {
+        return (0, r.jsxs)(Q.ZP.Bar, {
             className: l()(et.draggableStartArea, { [et.preview]: n }),
             children: [
-                (0, r.jsxs)(q.ZP.Content, {
+                (0, r.jsxs)(Q.ZP.Content, {
                     dynamicSize: !0,
                     className: l()(et.content, { [et.hidden]: n }),
                     children: [
@@ -201,7 +201,7 @@ class er extends (i = s.PureComponent) {
                 }),
                 n
                     ? null
-                    : (0, r.jsx)(q.ZP.Icon, {
+                    : (0, r.jsx)(Q.ZP.Icon, {
                           icon: u.SettingsIcon,
                           label: ee.intl.string(ee.t.NiTd0d),
                           onClick: this.handleOpenVoiceSettings,
@@ -210,7 +210,7 @@ class er extends (i = s.PureComponent) {
                       }),
                 n
                     ? null
-                    : (0, r.jsx)(q.ZP.Icon, {
+                    : (0, r.jsx)(Q.ZP.Icon, {
                           icon: e ? u.PinUprightSlashIcon : u.PinUprightIcon,
                           label: e ? ee.intl.string(ee.t.cSu80t) : ee.intl.string(ee.t.cM8Vnp),
                           onClick: this.handlePin,
@@ -226,12 +226,12 @@ class er extends (i = s.PureComponent) {
         let { locked: t, pinned: n, isPreviewingInGame: i, channel: s, application: a, streamMetadata: o, streamApplication: c, stream: d } = this.props;
         if (t || null == d || null == s) return null;
         let { sanitizedTitle: h, title: p } = (0, C.Z)(o);
-        return (0, r.jsx)(q.ZP.Bar, {
+        return (0, r.jsx)(Q.ZP.Bar, {
             className: l()(et.streamerControls, {
                 [et.hidden]: i,
                 [et.unpinned]: !n
             }),
-            children: (0, r.jsxs)(q.ZP.Content, {
+            children: (0, r.jsxs)(Q.ZP.Content, {
                 className: et.streamerContent,
                 dynamicSize: !0,
                 children: [
@@ -300,10 +300,10 @@ class er extends (i = s.PureComponent) {
         });
     }
     componentDidMount() {
-        (0, Q.m3)(this.props, this.shouldDisplay());
+        (0, q.m3)(this.props, this.shouldDisplay());
     }
     componentDidUpdate(e) {
-        (0, Q.CR)(e, this.props, this.shouldDisplay);
+        (0, q.CR)(e, this.props, this.shouldDisplay);
     }
     shouldDisplay() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.props,
@@ -318,7 +318,7 @@ class er extends (i = s.PureComponent) {
             i && (o = J.t_t.PINNED),
             s && (o = J.t_t.IN_GAME_PREVIEW),
             n && (o = J.t_t.IN_GAME),
-            (0, r.jsxs)(q.ZP, {
+            (0, r.jsxs)(Q.ZP, {
                 type: o,
                 width: 380,
                 children: [

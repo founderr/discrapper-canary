@@ -46,8 +46,8 @@ var i = n(200651),
     V = n(246946),
     F = n(572004),
     z = n(70956),
-    Y = n(5192),
-    W = n(74538),
+    W = n(5192),
+    Y = n(74538),
     K = n(51144),
     q = n(246133),
     X = n(474376),
@@ -302,7 +302,7 @@ function es(e) {
         eT = (0, C.Z)({ analyticsLocations: eu }),
         { customStatusBubbleEditEnabled: eN } = (0, S.K)({ location: 'AccountProfilePopout' }),
         { dimissibleUpsellsEnabled: eS } = (0, A.u)({ location: 'AccountProfilePopout' }),
-        eA = (0, W.I5)(z),
+        eA = (0, Y.I5)(z),
         eb = (e) => {
             null == q || q(),
                 (0, U.openUserProfileModal)({
@@ -376,7 +376,7 @@ function es(e) {
                                     user: z,
                                     className: en.username,
                                     profileType: ee.y0.BITE_SIZE,
-                                    nickname: Y.ZP.getName(null, null, z),
+                                    nickname: W.ZP.getName(null, null, z),
                                     onOpenProfile: eo ? void 0 : eb,
                                     pronouns: null == ec ? void 0 : ec.pronouns,
                                     tags: (0, i.jsx)(Z.Z, {

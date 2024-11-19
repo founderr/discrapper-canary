@@ -42,8 +42,8 @@ var i = n(200651),
     V = n(810788),
     F = n(160404),
     z = n(703656),
-    Y = n(917405),
-    W = n(641015),
+    W = n(917405),
+    Y = n(641015),
     K = n(848543),
     q = n(565799),
     X = n(501655),
@@ -175,7 +175,7 @@ function eG(e) {
         s = (0, ei.Z)(),
         o = (0, el.Z)(t),
         c = (0, d.cj)([S.ZP], () => null != S.ZP.getSelfEmbeddedActivityForChannel(t.id)),
-        u = (0, W.Z)(t),
+        u = (0, Y.Z)(t),
         { reachedLimit: h, limit: m } = (0, er.Z)(t),
         g = r.useCallback(() => {
             (0, es.Z)();
@@ -352,7 +352,7 @@ function eH(e) {
         h = (0, el.Z)(n),
         p = n.getGuildId(),
         g = (0, d.cj)([S.ZP], () => null != S.ZP.getSelfEmbeddedActivityForChannel(n.id)),
-        _ = (0, W.Z)(n),
+        _ = (0, Y.Z)(n),
         E = r.useCallback(() => {
             (0, ec.Z)(p, n.id, eO.jXE.ACTIVITY_PANEL);
         }, [p, n.id]),
@@ -431,7 +431,7 @@ class eV extends r.PureComponent {
         let o = (0, D.F6)(t, ev.default, eC.Z);
         return (
             null != n ? ((e = eO.Z5c.CHANNEL(n.id, t.id)), (o = ''.concat(o, ' / ').concat(n.name))) : (e = eO.Z5c.CHANNEL(eO.ME, t.id)),
-            (0, i.jsx)(Y.Z, {
+            (0, i.jsx)(W.Z, {
                 channelId: t.id,
                 quality: r,
                 state: l,
@@ -534,7 +534,7 @@ class eV extends r.PureComponent {
                                   enableActivities: r
                               })
                             : null,
-                        (0, W.Z)(e)
+                        (0, Y.Z)(e)
                             ? (0, i.jsx)(K.Z, {
                                   className: a()(ej.button, ej.buttonColor),
                                   innerClassName: ej.buttonContents,
