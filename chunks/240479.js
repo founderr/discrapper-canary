@@ -81,7 +81,10 @@ function A(e) {
         : (0, r.jsxs)(d.W_, {
               className: T.infoContainer,
               children: [
-                  !m && (0, r.jsx)(g.nA, {}),
+                  (0, r.jsx)(g.P6, {
+                      sound: t,
+                      forceShowBetaLabel: R === E.y.GET_NITRO
+                  }),
                   (0, r.jsxs)('div', {
                       className: T.infoExpandedSoundContainer,
                       children: [

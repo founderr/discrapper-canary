@@ -1,6 +1,7 @@
 e.exports = {
     sliderContainer: 'sliderContainer_dd5a70',
     slider: 'slider_dd5a70',
+    betaBadge: 'betaBadge_dd5a70',
     infoContainer: 'infoContainer_dd5a70',
     infoNitroContainer: 'infoNitroContainer_dd5a70',
     infoNitroBackground: 'infoNitroBackground_dd5a70',
