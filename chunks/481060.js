@@ -624,6 +624,12 @@ n.r(t),
         ExperimentalLootboxIcon: function () {
             return tC.Q4k;
         },
+        ExperimentalMicrophoneSparkleIcon: function () {
+            return tC.x8H;
+        },
+        ExperimentalMicrophoneSparkleMutedIcon: function () {
+            return tC.TYr;
+        },
         ExperimentalPineappleSpongebobIcon: function () {
             return tC.aW3;
         },
@@ -1139,9 +1145,6 @@ n.r(t),
         },
         MicrophoneSlashIcon: function () {
             return tC.nRN;
-        },
-        MicrophoneVoiceFilterIcon: function () {
-            return tC.Ng9;
         },
         MinimizeIcon: function () {
             return tC.dOc;
