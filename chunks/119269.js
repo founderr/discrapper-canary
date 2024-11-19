@@ -20,8 +20,7 @@ var n,
 ((n = r || (r = {}))[(n.NITRO_GEM = 0)] = 'NITRO_GEM'), (n[(n.NITRO_LOGO = 1)] = 'NITRO_LOGO'), (n[(n.AVATAR_DECO = 2)] = 'AVATAR_DECO');
 let _ = (e) => {
     let { avatarDecoAssetId: t, avatarDecoAssetDescription: s } = e,
-        n = (0, c.e7)([u.Z], () => u.Z.useReducedMotion),
-        r = o.useMemo(() => (0, p.Z)(t, d.AvatarSizes.SIZE_120, !n), [t, n]);
+        n = o.useMemo(() => (0, p.Z)(t, d.AvatarSizes.SIZE_120, !1), [t]);
     return (0, i.jsx)('div', {
         className: g.avatarDecoContainer,
         children: (0, i.jsx)('div', {
@@ -29,7 +28,7 @@ let _ = (e) => {
             children: (0, i.jsx)('img', {
                 className: g.avatarDecoImage,
                 alt: s,
-                src: r
+                src: n
             })
         })
     });
