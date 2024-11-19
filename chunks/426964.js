@@ -35,7 +35,7 @@ t.Z = i.memo(function (e) {
         k = null == L ? void 0 : L.identityGuildId,
         U = (0, b.Cc)(null != k ? k : null),
         B = null == L ? void 0 : L.tag,
-        G = (0, v.iN)('clan_guild_profile'),
+        G = (0, v.i)('clan_guild_profile'),
         { enabled: Z } = (0, l.I)(),
         { enabled: F } = S.w.useExperiment({ location: 'ClanGuildProfile' }, { autoTrackExposure: !1 }),
         [V, j] = i.useState(!1),
@@ -52,7 +52,7 @@ t.Z = i.memo(function (e) {
         J = (null == z ? void 0 : z.joinedAt) != null,
         $ = (0, T.Z4)(k, null == X ? void 0 : X.clan),
         ee = null != (0, d.Z)(k),
-        et = (0, v.iN)('ClanGuildProfile');
+        et = (0, v.i)('ClanGuildProfile');
     i.useEffect(() => {
         null != k &&
             (0, E.u0)({

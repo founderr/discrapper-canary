@@ -1,65 +1,65 @@
-i.d(n, {
+n.d(t, {
     KM: function () {
-        return S;
+        return T;
     },
     U0: function () {
-        return A;
+        return p;
     },
     YG: function () {
-        return E;
+        return A;
     },
     y9: function () {
-        return p;
+        return d;
     }
 });
-var e = i(192379),
-    a = i(442837),
-    l = i(709054),
-    o = i(103879),
-    s = i(364226),
-    c = i(48484),
-    r = i(531441),
-    u = i(236289),
-    _ = i(788080),
-    d = i(800530);
-function f() {
-    return (0, a.Wu)([u.Z], () => u.Z.getClassifications()).sort((t, n) => l.default.extractTimestamp(n.id) - l.default.extractTimestamp(t.id));
+var i = n(192379),
+    l = n(442837),
+    a = n(709054),
+    r = n(103879),
+    u = n(364226),
+    _ = n(48484),
+    o = n(531441),
+    E = n(236289),
+    s = n(788080),
+    c = n(800530);
+function S() {
+    return (0, l.Wu)([E.Z], () => E.Z.getClassifications()).sort((e, t) => a.default.extractTimestamp(t.id) - a.default.extractTimestamp(e.id));
 }
-function E(t) {
-    let n;
-    let i = (0, a.e7)([u.Z], () => u.Z.getClassification(t)),
-        l = (0, a.e7)([u.Z], () => u.Z.getClassificationRequestState(t)),
-        f = (0, a.e7)([u.Z], () => u.Z.getIsDsaEligible()),
-        E = (0, a.e7)([u.Z], () => u.Z.getIsAppealEligible()),
-        p = (0, s.A)('classification_detail'),
-        S = (0, c.V)('classification_detail');
-    if ((0, _.FB)(i)) {
-        var A;
-        n = (null === (A = i.guild_metadata) || void 0 === A ? void 0 : A.member_type) === r.wO.OWNER ? d.qS.GUILD_OWNER : d.qS.GUILD_MEMBER;
-    } else n = d.qS.USER;
+function A(e) {
+    let t;
+    let n = (0, l.e7)([E.Z], () => E.Z.getClassification(e)),
+        a = (0, l.e7)([E.Z], () => E.Z.getClassificationRequestState(e)),
+        S = (0, l.e7)([E.Z], () => E.Z.getIsDsaEligible()),
+        A = (0, l.e7)([E.Z], () => E.Z.getIsAppealEligible()),
+        d = (0, u.A)('classification_detail'),
+        T = (0, _.V)('classification_detail');
+    if ((0, s.FB)(n)) {
+        var p;
+        t = (null === (p = n.guild_metadata) || void 0 === p ? void 0 : p.member_type) === o.wO.OWNER ? c.qS.GUILD_OWNER : c.qS.GUILD_MEMBER;
+    } else t = c.qS.USER;
     return (
-        e.useEffect(() => {
-            void 0 === i && null == l && o.NA(t);
-        }, [t, i, l]),
+        i.useEffect(() => {
+            void 0 === n && null == a && r.NA(e);
+        }, [e, n, a]),
         {
-            classification: i,
-            classificationRequestState: l,
-            isDsaEligible: f,
-            isAppealEligible: (S || E) && null != i && null == i.appeal_status && (!(0, _.FB)(i) || p),
-            violationType: n
+            classification: n,
+            classificationRequestState: a,
+            isDsaEligible: S,
+            isAppealEligible: (T || A) && null != n && null == n.appeal_status && (!(0, s.FB)(n) || d),
+            violationType: t
         }
     );
 }
+function d() {
+    let e = S(),
+        t = new Date();
+    return e.filter((e) => new Date(e.max_expiration_time) > t);
+}
+function T() {
+    let e = S(),
+        t = new Date();
+    return e.filter((e) => new Date(e.max_expiration_time) <= t);
+}
 function p() {
-    let t = f(),
-        n = new Date();
-    return t.filter((t) => new Date(t.max_expiration_time) > n);
-}
-function S() {
-    let t = f(),
-        n = new Date();
-    return t.filter((t) => new Date(t.max_expiration_time) <= n);
-}
-function A() {
-    return (0, a.e7)([u.Z], () => u.Z.getAppealSignal());
+    return (0, l.e7)([E.Z], () => E.Z.getAppealSignal());
 }

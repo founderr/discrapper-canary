@@ -96,7 +96,7 @@ class z extends r.PureComponent {
         let { guild: e } = this.props;
         if (null != e) {
             (0, m.k)(e.id).then(() => {
-                (0, u.VP)(e.id);
+                (0, u.V)(e.id);
             }),
                 p.le(),
                 p.aC(e.id);

@@ -6,22 +6,22 @@ n.d(e, {
 var i = n(200651);
 n(192379);
 var a = n(481060),
-    l = n(38477),
-    s = n(660097);
+    s = n(38477),
+    l = n(660097);
 function r(t) {
     let { user: e, size: n } = t,
         r = (0, a.getAvatarSpecs)(n),
-        o = null != e ? e.getAvatarURL(null, r.size) : s;
+        c = null != e ? e.getAvatarURL(null, r.size) : l;
     return (0, i.jsx)('div', {
-        className: l.avatarBackground,
+        className: s.avatarBackground,
         children: (0, i.jsx)('div', {
-            className: l.avatar,
+            className: s.avatar,
             style: {
                 width: r.size,
                 height: r.size
             },
             children: (0, i.jsx)(a.Avatar, {
-                src: o,
+                src: c,
                 'aria-hidden': !0,
                 size: n
             })

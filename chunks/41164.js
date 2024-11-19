@@ -8,8 +8,8 @@ var a = t(481060),
     r = t(188879),
     c = t(981631),
     d = t(726985),
-    m = t(388032),
-    u = t(289178),
+    u = t(388032),
+    m = t(289178),
     h = t(170143);
 i.default = (e) => {
     let { transitionState: i, onClose: t, classificationId: p, source: x } = e,
@@ -19,25 +19,25 @@ i.default = (e) => {
             t(), g ? l.Z.open(c.oAB.ACCOUNT, d.s6.PRIVACY_AND_SAFETY_STANDING) : l.Z.open(c.oAB.PRIVACY_AND_SAFETY, d.s6.PRIVACY_ACCOUNT_STANDING);
         };
     return (0, n.jsxs)(a.ModalRoot, {
-        className: u.modalRoot,
+        className: m.modalRoot,
         transitionState: i,
         children: [
             (0, n.jsxs)('div', {
-                className: u.modalHeader,
+                className: m.modalHeader,
                 children: [
                     (0, n.jsx)('img', {
-                        className: u.image,
+                        className: m.image,
                         src: h,
                         alt: ''
                     }),
                     (0, n.jsx)(a.ModalCloseButton, {
-                        className: u.modalClose,
+                        className: m.modalClose,
                         onClick: t
                     })
                 ]
             }),
             (0, n.jsx)(a.ModalContent, {
-                className: u.modalContent,
+                className: m.modalContent,
                 children: f
                     ? (0, n.jsx)(a.Spinner, {})
                     : (0, n.jsx)(r.Z, {
@@ -48,11 +48,11 @@ i.default = (e) => {
             }),
             (0, n.jsx)(a.ModalFooter, {
                 children: (0, n.jsx)(a.Button, {
-                    className: u.__invalid_button,
+                    className: m.__invalid_button,
                     type: 'button',
                     color: a.Button.Colors.BRAND,
                     onClick: v,
-                    children: m.intl.string(m.t.elrEjI)
+                    children: u.intl.string(u.t.elrEjI)
                 })
             })
         ]

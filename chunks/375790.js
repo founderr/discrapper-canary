@@ -3,4 +3,4 @@ n.d(t, {
         return r;
     }
 });
-let r = ['block_users', 'leave_guild', 'delete_message', 'deauthorize_app'];
+let r = ['ignore_users', 'block_users', 'leave_guild', 'delete_message', 'deauthorize_app'];

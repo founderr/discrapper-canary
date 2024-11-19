@@ -1,10 +1,10 @@
-i.d(n, {
+n.d(t, {
     P: function () {
-        return l;
+        return a;
     }
 });
-var e = i(442837),
-    a = i(236289);
-function l() {
-    return (0, e.e7)([a.Z], () => a.Z.getAccountStanding());
+var i = n(442837),
+    l = n(236289);
+function a() {
+    return (0, i.e7)([l.Z], () => l.Z.getAccountStanding());
 }

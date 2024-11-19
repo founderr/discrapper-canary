@@ -181,7 +181,7 @@ function A(e) {
             gameActivity: Z
         } = n,
         F = (0, l.Z)(n.games),
-        V = (0, d.iN)('clan_discovery_card'),
+        V = (0, d.i)('clan_discovery_card'),
         [j, H] = i.useState(!1),
         Y = i.useRef(null),
         [W, K] = i.useState(!1),

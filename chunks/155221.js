@@ -110,7 +110,7 @@ let D = (0, h.Un)({
         name: 'Overlay'
     }),
     Y = (0, h.Un)({
-        createPromise: () => Promise.all([n.e('18824'), n.e('67411')]).then(n.bind(n, 430075)),
+        createPromise: () => Promise.all([n.e('34842'), n.e('18824'), n.e('67411')]).then(n.bind(n, 430075)),
         webpackId: 430075,
         name: 'SuspendedUserSafetyHubPage'
     }),

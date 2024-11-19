@@ -1,9 +1,9 @@
-i.d(n, {
+n.d(t, {
     B: function () {
-        return a;
+        return l;
     }
 });
-let e = (0, i(818083).B)({
+let i = (0, n(818083).B)({
     kind: 'user',
     id: '2024-01_safety_hub_display_guild_violations',
     label: 'Safety Hub Display Guild Violations',
@@ -16,6 +16,6 @@ let e = (0, i(818083).B)({
         }
     ]
 });
-function a(t) {
-    return !!e.useExperiment({ location: t }, { autoTrackExposure: !0 }).enabled;
+function l(e) {
+    return !!i.useExperiment({ location: e }, { autoTrackExposure: !0 }).enabled;
 }

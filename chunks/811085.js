@@ -1,38 +1,38 @@
 n.d(e, {
     Z: function () {
-        return f;
+        return v;
     }
 }),
     n(47120);
 var i = n(200651),
     a = n(192379),
-    l = n(392711),
-    s = n(442837),
+    s = n(392711),
+    l = n(442837),
     r = n(692547),
-    o = n(481060),
-    c = n(594174),
-    u = n(531441),
-    d = n(451284),
-    _ = n(959562),
-    E = n(800530),
-    g = n(388032),
-    S = n(370422);
-function f() {
-    let t = (0, d.P)(),
-        e = (0, s.e7)([c.default], () => c.default.getCurrentUser()),
-        [n, f] = a.useState(36),
-        p = a.useRef({
-            [u.Sn.ALL_GOOD]: null,
-            [u.Sn.LIMITED]: null,
-            [u.Sn.VERY_LIMITED]: null,
-            [u.Sn.AT_RISK]: null,
-            [u.Sn.SUSPENDED]: null
+    c = n(481060),
+    o = n(594174),
+    d = n(531441),
+    u = n(451284),
+    m = n(959562),
+    x = n(800530),
+    h = n(388032),
+    g = n(370422);
+function v() {
+    let t = (0, u.P)(),
+        e = (0, l.e7)([o.default], () => o.default.getCurrentUser()),
+        [n, v] = a.useState(36),
+        j = a.useRef({
+            [d.Sn.ALL_GOOD]: null,
+            [d.Sn.LIMITED]: null,
+            [d.Sn.VERY_LIMITED]: null,
+            [d.Sn.AT_RISK]: null,
+            [d.Sn.SUSPENDED]: null
         }),
-        m = a.useCallback(() => {
-            f(
+        N = a.useCallback(() => {
+            v(
                 Math.max(
                     Math.max(
-                        ...Object.values(p.current).map((t) => {
+                        ...Object.values(j.current).map((t) => {
                             var e;
                             return null !== (e = null == t ? void 0 : t.getBoundingClientRect().height) && void 0 !== e ? e : 36;
                         })
@@ -42,122 +42,122 @@ function f() {
             );
         }, []);
     a.useEffect(() => {
-        m();
-        let t = (0, l.debounce)(m, 100);
+        N();
+        let t = (0, s.debounce)(N, 100);
         window.addEventListener('resize', t);
-    }, [m]);
-    let h = {
-            [u.Sn.ALL_GOOD]: {
-                title: g.t.uaKrRk,
-                description: g.intl.format(g.t.pEdBDw, {
-                    termsOfService: E.sQ.TOS_LINK,
-                    communityGuidelines: E.sQ.COMMUNITY_GUIDELINES
+    }, [N]);
+    let f = {
+            [d.Sn.ALL_GOOD]: {
+                title: h.t.uaKrRk,
+                description: h.intl.format(h.t.pEdBDw, {
+                    termsOfService: x.sQ.TOS_LINK,
+                    communityGuidelines: x.sQ.COMMUNITY_GUIDELINES
                 }),
-                status: g.t['/Idfam'],
-                Icon: o.CircleCheckIcon,
+                status: h.t['/Idfam'],
+                Icon: c.CircleCheckIcon,
                 color: r.Z.colors.STATUS_POSITIVE
             },
-            [u.Sn.LIMITED]: {
-                title: g.t.epkcmZ,
-                description: g.intl.string(g.t['774jub']),
-                status: g.t.umleq6,
-                Icon: o.CircleWarningIcon,
+            [d.Sn.LIMITED]: {
+                title: h.t.epkcmZ,
+                description: h.intl.string(h.t['774jub']),
+                status: h.t.umleq6,
+                Icon: c.CircleWarningIcon,
                 color: r.Z.colors.STATUS_WARNING
             },
-            [u.Sn.VERY_LIMITED]: {
-                title: g.t.crzE2d,
-                description: g.intl.string(g.t['T/Ufh4']),
-                status: g.t.WBtMHR,
-                Icon: o.CircleWarningIcon,
+            [d.Sn.VERY_LIMITED]: {
+                title: h.t.crzE2d,
+                description: h.intl.string(h.t['T/Ufh4']),
+                status: h.t.WBtMHR,
+                Icon: c.CircleWarningIcon,
                 color: r.Z.unsafe_rawColors.ORANGE_345
             },
-            [u.Sn.AT_RISK]: {
-                title: g.t.XRNVzM,
-                description: g.intl.string(g.t['hbH+9f']),
-                status: g.t['7f+4Li'],
-                Icon: o.CircleWarningIcon,
+            [d.Sn.AT_RISK]: {
+                title: h.t.XRNVzM,
+                description: h.intl.string(h.t['hbH+9f']),
+                status: h.t['7f+4Li'],
+                Icon: c.CircleWarningIcon,
                 color: r.Z.colors.STATUS_DANGER
             },
-            [u.Sn.SUSPENDED]: {
-                title: g.t.MExFk5,
-                description: g.intl.string(g.t['2liUvr']),
-                status: g.t['0OONGB'],
-                Icon: o.CircleXIcon,
+            [d.Sn.SUSPENDED]: {
+                title: h.t.MExFk5,
+                description: h.intl.string(h.t['2liUvr']),
+                status: h.t['0OONGB'],
+                Icon: c.CircleXIcon,
                 color: r.Z.colors.ICON_MUTED
             }
         },
-        { title: T, description: A, color: x, Icon: I } = h[t.state],
-        v = Object.keys(h).length;
-    return (0, i.jsxs)(o.Card, {
-        className: S.container,
+        { title: p, description: S, color: T, Icon: I } = f[t.state],
+        E = Object.keys(f).length;
+    return (0, i.jsxs)(c.Card, {
+        className: g.container,
         outline: !1,
         children: [
             (0, i.jsx)('div', {
-                className: S.profile,
-                children: (0, i.jsx)(_.Z, {
+                className: g.profile,
+                children: (0, i.jsx)(m.Z, {
                     user: e,
-                    size: o.AvatarSizes.SIZE_80
+                    size: c.AvatarSizes.SIZE_80
                 })
             }),
             (0, i.jsxs)('div', {
-                className: S.status,
+                className: g.status,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: S.title,
+                        className: g.title,
                         children: [
-                            (0, i.jsx)(o.Heading, {
+                            (0, i.jsx)(c.Heading, {
                                 color: 'header-primary',
                                 variant: 'heading-lg/normal',
-                                children: g.intl.format(T, {
+                                children: h.intl.format(p, {
                                     hook: (t) =>
-                                        (0, i.jsx)(o.Text, {
-                                            style: { color: x.css },
+                                        (0, i.jsx)(c.Text, {
+                                            style: { color: T.css },
                                             variant: 'heading-lg/bold',
                                             tag: 'span',
                                             children: t
                                         })
                                 })
                             }),
-                            (0, i.jsx)(o.Text, {
+                            (0, i.jsx)(c.Text, {
                                 color: 'text-normal',
                                 variant: 'text-sm/normal',
-                                children: A
+                                children: S
                             })
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: S.health,
+                        className: g.health,
                         style: { height: n },
                         children: [
-                            (0, i.jsx)('div', { className: S.line }),
-                            Object.entries(h).map((e, n) => {
-                                let [a, l] = e,
-                                    s = parseInt(a) === t.state;
+                            (0, i.jsx)('div', { className: g.line }),
+                            Object.entries(f).map((e, n) => {
+                                let [a, s] = e,
+                                    l = parseInt(a) === t.state;
                                 return (0, i.jsxs)(
                                     'div',
                                     {
-                                        className: S.statusOption,
-                                        ref: (t) => (p.current[parseInt(a)] = t),
+                                        className: g.statusOption,
+                                        ref: (t) => (j.current[parseInt(a)] = t),
                                         children: [
-                                            s
+                                            l
                                                 ? (0, i.jsx)(I, {
-                                                      className: S.marker,
-                                                      color: l.color
+                                                      className: g.marker,
+                                                      color: s.color
                                                   })
                                                 : (0, i.jsx)('div', {
-                                                      className: S.marker,
+                                                      className: g.marker,
                                                       style: {
                                                           marginLeft: 0 === n ? -6 : 0,
-                                                          marginRight: n === v - 1 ? -6 : 0
+                                                          marginRight: n === E - 1 ? -6 : 0
                                                       },
-                                                      children: (0, i.jsx)('div', { className: S.empty })
+                                                      children: (0, i.jsx)('div', { className: g.empty })
                                                   }),
-                                            g.intl.format(l.status, {
+                                            h.intl.format(s.status, {
                                                 hook: (t) =>
-                                                    (0, i.jsx)(o.Text, {
+                                                    (0, i.jsx)(c.Text, {
                                                         color: 'text-normal',
                                                         variant: 'text-sm/normal',
-                                                        className: S.statusLabel,
+                                                        className: g.statusLabel,
                                                         children: t
                                                     })
                                             })

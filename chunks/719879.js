@@ -1,5 +1,5 @@
 n.d(t, {
-    VP: function () {
+    V: function () {
         return o;
     }
 }),
