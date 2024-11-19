@@ -20485,11 +20485,14 @@ h3.improved_f017d0:after {
     display: flex;
     height: -moz-max-content;
     height: max-content;
-    aspect-ratio: 1/1;
     align-items: center
 }
 
-.imagePosition_fa854f.aspectRatioCrunchyroll_fa854f {
+.aspectRatio_fa854f {
+    aspect-ratio: 1/1
+}
+
+.aspectRatio_fa854f.crunchyroll_fa854f {
     aspect-ratio: 2/3
 }
 
