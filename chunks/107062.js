@@ -9,8 +9,8 @@ var l = n(200651),
     u = n(499254),
     d = n(827498),
     m = n(541716),
-    x = n(706454),
-    h = n(823379),
+    h = n(706454),
+    x = n(823379),
     p = n(5192),
     C = n(379357),
     v = n(192918),
@@ -52,10 +52,13 @@ let T = (e, t) =>
     };
 t.ZP = (e) => {
     let { channel: t, entry: n, onReaction: p, onVoiceChannelPreview: E } = e,
-        { largeImage: S } = (0, C.rv)({ entry: n }),
-        { user: A, details: M, activity: k, embeddedActivity: R } = (0, Z.n)(n),
-        { primaryColor: w, secondaryColor: b } = (0, I.Z)(null == S ? void 0 : S.src),
-        H = (0, i.e7)([x.default], () => x.default.locale),
+        { largeImage: S } = (0, C.rv)({
+            entry: n,
+            showCoverImage: !1
+        }),
+        { user: A, details: M, activity: k, embeddedActivity: w } = (0, Z.n)(n),
+        { primaryColor: R, secondaryColor: b } = (0, I.Z)(null == S ? void 0 : S.src),
+        H = (0, i.e7)([h.default], () => h.default.locale),
         { displayParticipants: O, participant1: V, participant2: B, numOtherParticipants: U } = (0, v.Z)(n, 3),
         D = () => {
             u.__(d._b.TEXT, m.I.NORMAL, { applicationId: n.extra.application_id });
@@ -78,11 +81,11 @@ t.ZP = (e) => {
                     avatarSrcs: O.map((e) => e.getAvatarURL(t.guild_id, 128)),
                     description: l,
                     timestamp: (0, g.yh)(n, H),
-                    colors: [w, b],
+                    colors: [R, b],
                     channelId: e
                 });
             },
-            [null == S ? void 0 : S.src, t, O, n, H, U, V, B, w, b, A]
+            [null == S ? void 0 : S.src, t, O, n, H, U, V, B, R, b, A]
         );
     if (null == A) return null;
     let z = (0, l.jsx)(j.PZ, {
@@ -96,6 +99,7 @@ t.ZP = (e) => {
             subtitle: M,
             badges: z,
             entry: n,
+            showCoverImage: !1,
             onClickTitle: D,
             onClickSubtitle: D,
             onClickThumbnail: D
@@ -104,7 +108,7 @@ t.ZP = (e) => {
         Y = q
             ? (0, l.jsx)(c.Z, {
                   isEmbedded: (0, s.Z)(k),
-                  embeddedActivity: R,
+                  embeddedActivity: w,
                   activity: k,
                   user: A,
                   ButtonComponent: (e) =>
@@ -119,7 +123,7 @@ t.ZP = (e) => {
             IconComponent: r.AppsIcon,
             children: y.intl.string(y.t.GDWYR0)
         }),
-        J = [q ? Y : F].filter(h.lm);
+        J = [q ? Y : F].filter(x.lm);
     return (0, l.jsxs)(P.yR, {
         children: [
             W,

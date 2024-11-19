@@ -24,16 +24,16 @@ var t = a(120356),
     Z = a(91140),
     y = a(551228),
     S = a(278399),
-    N = a(555672),
-    I = a(335326),
+    I = a(555672),
+    N = a(335326),
     P = a(297781),
     R = a(797342),
     p = a(810568),
     C = a(168524),
     T = a(960870),
     O = a(139793),
-    b = a(502762),
-    g = a(652853),
+    g = a(502762),
+    b = a(652853),
     k = a(194811),
     L = a(373826),
     A = a(582123),
@@ -44,7 +44,7 @@ var t = a(120356),
     G = a(69035);
 function w(e) {
     let { user: s, entry: a, header: t, className: l } = e,
-        { profileType: d } = (0, g.z)(),
+        { profileType: d } = (0, b.z)(),
         x = { [G.fullSize]: d === f.y0.FULL_SIZE },
         { largeImage: m } = (0, h.rv)({
             entry: a,
@@ -69,9 +69,9 @@ function w(e) {
             userId: s.id,
             onAction: E
         }),
-        S = () => (a.content_type === r.s.TOP_GAME ? N.Hs.map((e, s) => (0, i.jsx)(e, { entry: a }, 'entry-'.concat(s))) : Z.W.map((e, s) => (0, i.jsx)(e, { entry: a }, 'entry-'.concat(s))));
+        S = () => (a.content_type === r.s.TOP_GAME ? I.Hs.map((e, s) => (0, i.jsx)(e, { entry: a }, 'entry-'.concat(s))) : Z.W.map((e, s) => (0, i.jsx)(e, { entry: a }, 'entry-'.concat(s))));
     return null == v
-        ? (0, i.jsxs)(b.Z.Overlay, {
+        ? (0, i.jsxs)(g.Z.Overlay, {
               className: n()(G.card, l),
               ref: y,
               children: [
@@ -106,7 +106,7 @@ function w(e) {
                   })
               ]
           })
-        : (0, i.jsxs)(b.Z.Overlay, {
+        : (0, i.jsxs)(g.Z.Overlay, {
               className: n()(G.card, l),
               ref: y,
               children: [
@@ -151,7 +151,7 @@ function w(e) {
 }
 function M(e) {
     let { user: s, entry: a, header: t, className: l } = e,
-        { profileType: r } = (0, g.z)(),
+        { profileType: r } = (0, b.z)(),
         d = { [G.fullSize]: r === f.y0.FULL_SIZE },
         { largeImage: x } = (0, h.rv)({ entry: a }),
         { url: m } = a.extra,
@@ -166,7 +166,7 @@ function M(e) {
             userId: s.id,
             onAction: v
         });
-    return (0, i.jsxs)(b.Z.Overlay, {
+    return (0, i.jsxs)(g.Z.Overlay, {
         className: n()(G.card, l),
         ref: E,
         children: [
@@ -222,7 +222,7 @@ function M(e) {
                                 (0, i.jsx)(P.Gk, {
                                     location: P.Gt.USER_PROFILE,
                                     className: G.badges,
-                                    children: I.t.map((e, s) => (0, i.jsx)(e, { entry: a }, 'entry-'.concat(s)))
+                                    children: N.t.map((e, s) => (0, i.jsx)(e, { entry: a }, 'entry-'.concat(s)))
                                 })
                             ]
                         })
@@ -235,7 +235,7 @@ function M(e) {
 function H(e) {
     var s, a;
     let { user: t, entry: l, header: r, className: c } = e,
-        { profileType: d } = (0, g.z)(),
+        { profileType: d } = (0, b.z)(),
         x = { [G.fullSize]: d === f.y0.FULL_SIZE },
         { largeImage: m } = (0, h.rv)({ entry: l }),
         { analyticsLocations: j } = (0, o.ZP)(),
@@ -252,7 +252,7 @@ function H(e) {
         Z = null === (s = l.extra.entries[0]) || void 0 === s ? void 0 : s.media;
     return null == Z
         ? null
-        : (0, i.jsxs)(b.Z.Overlay, {
+        : (0, i.jsxs)(g.Z.Overlay, {
               className: n()(G.card, c),
               ref: E,
               children: [
@@ -306,7 +306,7 @@ function H(e) {
 }
 function Y(e) {
     let { user: s, entry: a, header: t, className: l } = e,
-        { profileType: r } = (0, g.z)(),
+        { profileType: r } = (0, b.z)(),
         c = { [G.fullSize]: r === f.y0.FULL_SIZE },
         { largeImage: d } = (0, h.rv)({ entry: a }),
         { analyticsLocations: x } = (0, o.ZP)(),
@@ -320,7 +320,7 @@ function Y(e) {
             userId: s.id,
             onAction: m
         });
-    return (0, i.jsxs)(b.Z.Overlay, {
+    return (0, i.jsxs)(g.Z.Overlay, {
         className: n()(G.card, l),
         ref: j,
         children: [
@@ -373,9 +373,12 @@ function Y(e) {
 }
 function J(e) {
     let { user: s, entry: a, header: t, onClose: l, className: r } = e,
-        { profileType: c } = (0, g.z)(),
+        { profileType: c } = (0, b.z)(),
         d = { [G.fullSize]: c === f.y0.FULL_SIZE },
-        { largeImage: v } = (0, h.rv)({ entry: a }),
+        { largeImage: v } = (0, h.rv)({
+            entry: a,
+            showCoverImage: !1
+        }),
         { analyticsLocations: u } = (0, o.ZP)(),
         Z = (0, T.Z)({
             display: 'recent',
@@ -390,7 +393,7 @@ function J(e) {
         S = () => {
             null == l || l(), (0, x.__)(m._b.TEXT, j.I.NORMAL, { applicationId: a.extra.application_id });
         };
-    return (0, i.jsxs)(b.Z.Overlay, {
+    return (0, i.jsxs)(g.Z.Overlay, {
         className: n()(G.card, r),
         ref: y,
         children: [
