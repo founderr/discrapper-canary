@@ -1,24 +1,24 @@
 n.d(t, {
     En: function () {
-        return N;
+        return C;
     },
     dY: function () {
-        return T;
-    },
-    eC: function () {
-        return A;
-    },
-    kC: function () {
-        return b;
-    },
-    l3: function () {
         return S;
     },
-    o3: function () {
+    eC: function () {
+        return N;
+    },
+    kC: function () {
         return I;
     },
-    vP: function () {
+    l3: function () {
         return y;
+    },
+    o3: function () {
+        return T;
+    },
+    vP: function () {
+        return A;
     }
 }),
     n(789020),
@@ -35,21 +35,23 @@ var r = n(392711),
     s = n.n(a),
     o = n(866442),
     l = n(849727),
-    u = n(630388),
-    c = n(709054),
-    d = n(981631),
-    f = n(817384);
-let _ = /sketchfab/i,
-    p = /^https:\/\/sketchfab\.com/i,
-    h = /youtube|steam|imgur|vimeo|sketchfab|soundcloud|streamable|twitch|vid\.me|twitter/i,
-    m = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop$/,
-    g = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop\/([0-9]+)$/;
-function E(e) {
+    u = n(948141),
+    c = n(630388),
+    d = n(709054),
+    f = n(981631),
+    _ = n(817384);
+let p = /sketchfab/i,
+    h = /^https:\/\/sketchfab\.com/i,
+    m = /youtube|steam|imgur|vimeo|sketchfab|soundcloud|streamable|twitch|vid\.me|twitter/i,
+    g = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop$/,
+    E = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop\/([0-9]+)$/;
+function v(e) {
     let { width: t, height: n } = e;
     return t > 0 && n > 0;
 }
-function v(e) {
-    let { url: t, proxy_url: n, width: r, height: i, placeholder: a, placeholder_version: s, flags: o } = e;
+function b(e) {
+    let { url: t, proxy_url: n, width: r, height: i, placeholder: a, placeholder_version: s, flags: o } = e,
+        d = l.Z.getCurrentConfig({ location: 'embed_utils_sanitize_media' }).enabled || u.Z.getCurrentConfig({ location: 'embed_utils_sanitize_media' }).enabled;
     return {
         url: t,
         proxyURL: n,
@@ -57,10 +59,11 @@ function v(e) {
         height: i,
         placeholder: a,
         placeholderVersion: s,
-        srcIsAnimated: l.Z.getCurrentConfig({ location: 'embed_utils_sanitize_media' }).enabled && (0, u.yE)(null != o ? o : 0, d.J0y.IS_ANIMATED)
+        srcIsAnimated: d && (0, c.yE)(null != o ? o : 0, f.FoC.IS_ANIMATED),
+        flags: d ? (null != o ? o : 0) : (0, c.Ge)(null != o ? o : 0, f.FoC.IS_ANIMATED)
     };
 }
-function b(e, t, n) {
+function I(e, t, n) {
     let r = {
         id: i().uniqueId('embed_'),
         url: n.url,
@@ -94,22 +97,22 @@ function b(e, t, n) {
             }),
         null != n.timestamp && (r.timestamp = s()(new Date(n.timestamp))),
         null != n.color && (r.color = (0, o.ho)(n.color, !0)),
-        null != n.thumbnail && E(n.thumbnail))
+        null != n.thumbnail && v(n.thumbnail))
     )
         switch (r.type) {
-            case d.hBH.ARTICLE:
-            case d.hBH.IMAGE:
-                r.image = v(n.thumbnail);
+            case f.hBH.ARTICLE:
+            case f.hBH.IMAGE:
+                r.image = b(n.thumbnail);
                 break;
             default:
-                r.thumbnail = v(n.thumbnail);
+                r.thumbnail = b(n.thumbnail);
         }
     if (
-        (null != n.image && E(n.image) && (r.image = v(n.image)),
+        (null != n.image && v(n.image) && (r.image = b(n.image)),
         null != n.video &&
             (null == r.thumbnail &&
                 null != n.video.proxy_url &&
-                E(n.video) &&
+                v(n.video) &&
                 (r.thumbnail = {
                     width: n.video.width,
                     height: n.video.height,
@@ -124,14 +127,14 @@ function b(e, t, n) {
                     })(n.video.proxy_url, { format: 'webp' })
                 }),
             null != r.thumbnail &&
-                E(n.video) &&
+                v(n.video) &&
                 (function (e, t, n) {
-                    if ((null != t && _.test(t.name)) || p.test(n.url)) return !1;
+                    if ((null != t && p.test(t.name)) || h.test(n.url)) return !1;
                     let r = null != n.proxy_url || /^https:/i.test(n.url);
-                    return null != e && 1492472454139 > c.default.extractTimestamp(e) && (r = r && null != t && h.test(t.name)), r;
+                    return null != e && 1492472454139 > d.default.extractTimestamp(e) && (r = r && null != t && m.test(t.name)), r;
                 })(t, n.provider, n.video) &&
-                (r.video = v(n.video))),
-        f.k.has(r.type))
+                (r.video = b(n.video))),
+        _.k.has(r.type))
     ) {
         var a;
         let e = null !== (a = n.fields) && void 0 !== a ? a : [];
@@ -146,7 +149,7 @@ function b(e, t, n) {
     } else r.fields = [];
     return r;
 }
-function I(e) {
+function T(e) {
     let t = new Map(),
         n = [];
     return (
@@ -165,14 +168,14 @@ function I(e) {
         n
     );
 }
-function T(e) {
-    let { image: t, video: n, type: r, author: i, rawTitle: a } = e;
-    return (null != t || null != n) && (r === d.hBH.GIFV || (r !== d.hBH.RICH && null == i && null == a));
-}
 function S(e) {
-    return e.type === d.hBH.ARTICLE && null != e.url && (g.test(e.url) || m.test(e.url));
+    let { image: t, video: n, type: r, author: i, rawTitle: a } = e;
+    return (null != t || null != n) && (r === f.hBH.GIFV || (r !== f.hBH.RICH && null == i && null == a));
 }
-function y(e, t, n) {
+function y(e) {
+    return e.type === f.hBH.ARTICLE && null != e.url && (E.test(e.url) || g.test(e.url));
+}
+function A(e, t, n) {
     var r;
     return null != t && null != n
         ? {
@@ -189,9 +192,9 @@ function y(e, t, n) {
                 maxMediaHeight: 300
             };
 }
-function A(e, t) {
-    return e.isPrivate() ? !e.isManaged() : t.can(d.Plq.EMBED_LINKS, e);
+function N(e, t) {
+    return e.isPrivate() ? !e.isManaged() : t.can(f.Plq.EMBED_LINKS, e);
 }
-function N(e) {
+function C(e) {
     return '' !== e.content || e.messageSnapshots.some((e) => '' !== e.message.content || e.message.attachments.length > 0);
 }
