@@ -39,13 +39,13 @@ let N = (e) => {
                 children: [
                     (0, i.jsx)(d.Heading, {
                         variant: 'heading-lg/extrabold',
-                        color: 'currentColor',
+                        color: (null == o ? void 0 : o.revertTextColor) ? 'redesign-button-overlay-text' : 'currentColor',
                         className: _.title,
                         children: null !== (r = null == o ? void 0 : null === (t = o.title) || void 0 === t ? void 0 : t.call(o)) && void 0 !== r ? r : E.intl.string(E.t['4Emkur'])
                     }),
                     (0, i.jsx)(d.Text, {
                         variant: 'text-sm/normal',
-                        color: 'currentColor',
+                        color: (null == o ? void 0 : o.revertTextColor) ? 'redesign-button-overlay-text' : 'currentColor',
                         children: null !== (a = null == o ? void 0 : null === (n = o.description) || void 0 === n ? void 0 : n.call(o)) && void 0 !== a ? a : E.intl.string(E.t.gn7SZW)
                     })
                 ]
@@ -67,7 +67,8 @@ t.Z = () => {
                       artSrc: A.popoutAsset,
                       backgroundSrc: A.asset,
                       title: () => A.title,
-                      description: () => A.body
+                      description: () => A.body,
+                      revertTextColor: A.revertTextColor
                   }
                 : S.GX[f]),
         s.useEffect(() => {
