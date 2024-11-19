@@ -18,202 +18,198 @@ var r = n(200651),
     v = n(963202),
     b = n(645896),
     I = n(905362),
-    S = n(353093),
-    T = n(574410),
-    y = n(954138),
-    A = n(900681),
-    N = n(284019),
-    C = n(308083),
-    R = n(981631),
-    O = n(388032),
-    D = n(805697);
-function L(e) {
+    T = n(353093),
+    S = n(574410),
+    y = n(900681),
+    A = n(284019),
+    N = n(308083),
+    C = n(981631),
+    R = n(388032),
+    O = n(805697);
+function D(e) {
     e.stopPropagation();
 }
 t.Z = i.memo(function (e) {
     var t, n;
-    let { clan: x, isLoading: w, onClose: M, profileViewedAnalytics: P, userId: k } = e,
-        U = null == x ? void 0 : x.identityGuildId,
-        G = (0, b.Cc)(null != U ? U : null),
-        B = null == x ? void 0 : x.tag,
-        Z = (0, v.iN)('clan_guild_profile'),
-        { enabled: F } = (0, l.I)(),
-        { enabled: V } = T.w.useExperiment({ location: 'ClanGuildProfile' }, { autoTrackExposure: !1 }),
-        [j, H] = i.useState(!1),
-        [Y, W] = i.useState(''),
-        K = (0, s.e7)([m.default], () => m.default.getUser(k)),
-        z = (0, y.Z)('base_clan_tag_chiplet'),
-        q = (0, s.e7)([p.default], () => p.default.getId()),
-        Q = (0, s.e7)([h.ZP], () => (null != U ? h.ZP.getMember(U, q) : null), [U, q]),
-        X = (0, s.e7)([c.Z], () => {
+    let { clan: L, isLoading: x, onClose: w, profileViewedAnalytics: M, userId: P } = e,
+        k = null == L ? void 0 : L.identityGuildId,
+        U = (0, b.Cc)(null != k ? k : null),
+        B = null == L ? void 0 : L.tag,
+        G = (0, v.iN)('clan_guild_profile'),
+        { enabled: Z } = (0, l.I)(),
+        { enabled: F } = S.w.useExperiment({ location: 'ClanGuildProfile' }, { autoTrackExposure: !1 }),
+        [V, j] = i.useState(!1),
+        [H, Y] = i.useState(''),
+        W = (0, s.e7)([m.default], () => m.default.getUser(P)),
+        K = (0, s.e7)([p.default], () => p.default.getId()),
+        z = (0, s.e7)([h.ZP], () => (null != k ? h.ZP.getMember(k, K) : null), [k, K]),
+        q = (0, s.e7)([c.Z], () => {
             var e;
-            return (null == G ? void 0 : G.id) != null && (null === (e = c.Z.getRequest(G.id)) || void 0 === e ? void 0 : e.applicationStatus) === u.wB.SUBMITTED;
+            return (null == U ? void 0 : U.id) != null && (null === (e = c.Z.getRequest(U.id)) || void 0 === e ? void 0 : e.applicationStatus) === u.wB.SUBMITTED;
         }),
-        J = null != G && G.memberCount >= C.Du,
-        $ = (0, s.e7)([m.default], () => m.default.getUser(q), [q]),
-        ee = (null == Q ? void 0 : Q.joinedAt) != null,
-        et = (0, S.Z4)(U, null == $ ? void 0 : $.clan),
-        en = null != (0, d.Z)(U),
-        er = (0, v.iN)('ClanGuildProfile');
+        Q = null != U && U.memberCount >= N.Du,
+        X = (0, s.e7)([m.default], () => m.default.getUser(K), [K]),
+        J = (null == z ? void 0 : z.joinedAt) != null,
+        $ = (0, T.Z4)(k, null == X ? void 0 : X.clan),
+        ee = null != (0, d.Z)(k),
+        et = (0, v.iN)('ClanGuildProfile');
     i.useEffect(() => {
-        null != U &&
+        null != k &&
             (0, E.u0)({
-                guildId: U,
-                hasJoinRequest: en,
-                ...P,
+                guildId: k,
+                hasJoinRequest: ee,
+                ...M,
                 location: o.Z.CLAN_GUILD_PROFILE
             });
-    }, [U, en, P]);
-    let ei = i.useCallback(() => {
-            (0, E.hM)(U, E.UE.ASK_TO_JOIN), H(!j);
-        }, [U, j]),
-        ea = i.useCallback(async () => {
-            if (null != K)
+    }, [k, ee, M]);
+    let en = i.useCallback(() => {
+            (0, E.hM)(k, E.UE.ASK_TO_JOIN), j(!V);
+        }, [k, V]),
+        er = i.useCallback(async () => {
+            if (null != W)
                 try {
                     await (0, _.Z)({
-                        userId: K.id,
-                        content: Y,
+                        userId: W.id,
+                        content: H,
                         openChannel: !0,
                         location: 'guildProfilePopout'
                     });
                 } catch (e) {}
-        }, [K, Y]),
-        es = i.useCallback(
+        }, [W, H]),
+        ei = i.useCallback(
             (e) => {
-                if (null != U) e.stopPropagation(), e.preventDefault(), null == M || M(), (0, E.hM)(U, E.UE.TAG_ADOPTION), (0, I.SJ)(U);
+                if (null != k) e.stopPropagation(), e.preventDefault(), null == w || w(), (0, E.hM)(k, E.UE.TAG_ADOPTION), (0, I.SJ)(k);
             },
-            [U, M]
+            [k, w]
         ),
-        eo = i.useCallback(
+        ea = i.useCallback(
             (e) => {
-                if (null == G || null == U) return;
-                if ((e.stopPropagation(), e.preventDefault(), null == M || M(), !en))
-                    (0, E.hM)(U, E.UE.APPLY_FLOW),
-                        (0, I.qF)(U, G, {
-                            source: null == P ? void 0 : P.source,
-                            messageId: null == P ? void 0 : P.messageId,
-                            tagUserId: null == P ? void 0 : P.tagUserId,
+                if (null == U || null == k) return;
+                if ((e.stopPropagation(), e.preventDefault(), null == w || w(), !ee))
+                    (0, E.hM)(k, E.UE.APPLY_FLOW),
+                        (0, I.qF)(k, U, {
+                            source: null == M ? void 0 : M.source,
+                            messageId: null == M ? void 0 : M.messageId,
+                            tagUserId: null == M ? void 0 : M.tagUserId,
                             location: o.Z.CLAN_GUILD_PROFILE
                         });
             },
-            [G, U, en, M, P]
+            [U, k, ee, w, M]
         ),
-        el = i.useCallback(() => {
-            if (null != U) (0, E.hM)(U, E.UE.APPLICATION), (0, f.uL)(R.Z5c.GUILD_MEMBER_VERIFICATION(U));
-        }, [U]),
-        eu = i.useCallback(() => {
-            if (null != U) (0, E.hM)(U, E.UE.GUILD), (0, f.XU)(U);
-        }, [U]),
-        ec = i.useMemo(() => {
+        es = i.useCallback(() => {
+            if (null != k) (0, E.hM)(k, E.UE.APPLICATION), (0, f.uL)(C.Z5c.GUILD_MEMBER_VERIFICATION(k));
+        }, [k]),
+        eo = i.useCallback(() => {
+            if (null != k) (0, E.hM)(k, E.UE.GUILD), (0, f.XU)(k);
+        }, [k]),
+        el = i.useMemo(() => {
             var e, t;
             return {
                 color: a.Button.Colors.BRAND,
                 size: a.Button.Sizes.SMALL,
                 fullWidth: !0,
-                className: D.button,
-                themeColor: null !== (t = null == G ? void 0 : null === (e = G.branding) || void 0 === e ? void 0 : e.primaryColor) && void 0 !== t ? t : null
+                className: O.button,
+                themeColor: null !== (t = null == U ? void 0 : null === (e = U.branding) || void 0 === e ? void 0 : e.primaryColor) && void 0 !== t ? t : null
             };
-        }, [null == G ? void 0 : null === (t = G.branding) || void 0 === t ? void 0 : t.primaryColor]),
-        ed = i.useMemo(() => {
+        }, [null == U ? void 0 : null === (t = U.branding) || void 0 === t ? void 0 : t.primaryColor]),
+        eu = i.useMemo(() => {
             var e;
             switch (!0) {
-                case !z:
-                    return null;
-                case !ee && en:
-                    return (0, r.jsx)(N.Z, {
-                        onClick: el,
-                        ...ec,
-                        children: O.intl.string(O.t.dXvKgY)
-                    });
-                case !ee && (null == G ? void 0 : null === (e = G.discoveryProfileFeatures) || void 0 === e ? void 0 : e.has(R.oNc.CLAN_DISCOVERY_DISABLED)):
-                    return null;
-                case !ee && er:
-                    return (0, r.jsx)(N.Z, {
-                        onClick: eo,
-                        ...ec,
-                        children: O.intl.string(O.t.YfkjGh)
-                    });
-                case ee && !et:
-                    return (0, r.jsx)(N.Z, {
+                case !J && ee:
+                    return (0, r.jsx)(A.Z, {
                         onClick: es,
-                        ...ec,
-                        children: O.intl.string(O.t['1keBy8'])
+                        ...el,
+                        children: R.intl.string(R.t.dXvKgY)
                     });
-                case ee && et:
-                    return (0, r.jsx)(N.Z, {
-                        onClick: eu,
-                        ...ec,
-                        children: O.intl.string(O.t.muzrLS)
+                case !J && (null == U ? void 0 : null === (e = U.discoveryProfileFeatures) || void 0 === e ? void 0 : e.has(C.oNc.CLAN_DISCOVERY_DISABLED)):
+                    return null;
+                case !J && et:
+                    return (0, r.jsx)(A.Z, {
+                        onClick: ea,
+                        ...el,
+                        children: R.intl.string(R.t.YfkjGh)
+                    });
+                case J && !$:
+                    return (0, r.jsx)(A.Z, {
+                        onClick: ei,
+                        ...el,
+                        children: R.intl.string(R.t['1keBy8'])
+                    });
+                case J && $:
+                    return (0, r.jsx)(A.Z, {
+                        onClick: eo,
+                        ...el,
+                        children: R.intl.string(R.t.muzrLS)
                     });
                 default:
                     return null;
             }
-        }, [z, ee, en, null == G ? void 0 : G.discoveryProfileFeatures, er, et, el, ec, eo, es, eu]),
-        ef = i.useMemo(
+        }, [J, ee, null == U ? void 0 : U.discoveryProfileFeatures, et, $, es, el, ea, ei, eo]),
+        ec = i.useMemo(
             () => ({
-                className: D.container,
-                onClick: L
+                className: O.container,
+                onClick: D
             }),
             []
         );
-    if (null == B || null == G || null == U || w)
+    if (null == B || null == U || null == k || x)
         return (0, r.jsx)('div', {
-            ...ef,
+            ...ec,
             children: (0, r.jsx)(a.Spinner, {})
         });
-    let e_ = !ee && !Z && null != K && !en && V && !j,
-        ep = null != ed || (Z && F) || e_,
-        eh = null !== (n = g.ZP.getName(K)) && void 0 !== n ? n : '';
+    let ed = !J && !G && null != W && !ee && F && !V,
+        ef = null != eu || (G && Z) || ed,
+        e_ = null !== (n = g.ZP.getName(W)) && void 0 !== n ? n : '';
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {
-                ...ef,
+                ...ec,
                 children: [
-                    (0, r.jsx)(A.xV, {
-                        clan: G,
-                        className: D.cardContainer,
-                        isMember: ee,
-                        hasPendingJoinRequest: X,
-                        atMaxMemberCapacity: J
+                    (0, r.jsx)(y.xV, {
+                        clan: U,
+                        className: O.cardContainer,
+                        isMember: J,
+                        hasPendingJoinRequest: q,
+                        atMaxMemberCapacity: Q
                     }),
-                    ep &&
+                    ef &&
                         (0, r.jsxs)('div', {
-                            className: D.buttonGroupContainer,
+                            className: O.buttonGroupContainer,
                             children: [
-                                null != ed && ed,
-                                e_ &&
-                                    (0, r.jsx)(N.Z, {
-                                        onClick: ei,
-                                        ...ec,
-                                        children: O.intl.string(O.t.HzLAb2)
+                                null != eu && eu,
+                                ed &&
+                                    (0, r.jsx)(A.Z, {
+                                        onClick: en,
+                                        ...el,
+                                        children: R.intl.string(R.t.HzLAb2)
                                     })
                             ]
                         })
                 ]
             }),
-            j &&
+            V &&
                 (0, r.jsxs)(a.Dialog, {
-                    className: D.askToJoinInputWrapper,
+                    className: O.askToJoinInputWrapper,
                     children: [
                         (0, r.jsx)(a.Text, {
                             color: 'interactive-normal',
                             variant: 'text-xs/normal',
-                            children: O.intl.format(O.t.k5d4Wl, { username: eh })
+                            children: R.intl.format(R.t.k5d4Wl, { username: e_ })
                         }),
                         (0, r.jsxs)('div', {
-                            className: D.inputRow,
+                            className: O.inputRow,
                             children: [
                                 (0, r.jsx)(a.TextInput, {
-                                    inputClassName: D.input,
-                                    value: Y,
-                                    onChange: W,
-                                    placeholder: O.intl.formatToPlainString(O.t['4c+CAw'], { channel: eh })
+                                    inputClassName: O.input,
+                                    value: H,
+                                    onChange: Y,
+                                    placeholder: R.intl.formatToPlainString(R.t['4c+CAw'], { channel: e_ })
                                 }),
                                 (0, r.jsx)(a.Button, {
-                                    className: D.sendButton,
+                                    className: O.sendButton,
                                     color: a.Button.Colors.BRAND,
-                                    onClick: ea,
-                                    children: O.intl.string(O.t.TXNS7e)
+                                    onClick: er,
+                                    children: R.intl.string(R.t.TXNS7e)
                                 })
                             ]
                         })

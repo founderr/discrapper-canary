@@ -1,7 +1,4 @@
 n.d(t, {
-    It: function () {
-        return o;
-    },
     iN: function () {
         return a;
     }
@@ -23,25 +20,6 @@ let i = (0, r.B)({
 function a(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return i.useExperiment({ location: e }, { autoTrackExposure: t }).enableM3Experience;
-}
-let s = (0, r.B)({
-    kind: 'user',
-    id: '2024-05_clans_general',
-    label: 'Clans General',
-    defaultConfig: { clanTagsVisible: !1 },
-    treatments: [
-        {
-            id: 1,
-            label: 'Show clan tags',
-            config: { clanTagsVisible: !0 }
-        }
-    ]
-});
-function o(e) {
-    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        n = a(e, t),
-        r = s.useExperiment({ location: e }, { autoTrackExposure: t });
-    return n ? { clanTagsVisible: !0 } : r;
 }
 (0, r.B)({
     kind: 'user',

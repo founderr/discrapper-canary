@@ -1,30 +1,30 @@
 n.d(t, {
     EJ: function () {
-        return m;
+        return h;
     },
     XV: function () {
-        return p;
+        return _;
     },
     Z4: function () {
-        return E;
-    },
-    Zp: function () {
         return g;
     },
+    Zp: function () {
+        return m;
+    },
     f6: function () {
-        return v;
+        return E;
     },
     ky: function () {
-        return I;
+        return b;
     },
     p0: function () {
         return T;
     },
     pY: function () {
-        return S;
+        return I;
     },
     vh: function () {
-        return h;
+        return p;
     }
 });
 var r = n(108131),
@@ -33,13 +33,11 @@ var r = n(108131),
     s = n(607070),
     o = n(715903),
     l = n(271383),
-    u = n(594174);
-n(963202);
-var c = n(954138),
-    d = n(308083),
-    f = n(981631),
-    _ = n(388032);
-function p(e, t) {
+    u = n(594174),
+    c = n(308083),
+    d = n(981631),
+    f = n(388032);
+function _(e, t) {
     let n = Array.from(e);
     return (
         n.sort((e, n) => {
@@ -49,7 +47,7 @@ function p(e, t) {
         n
     );
 }
-function h(e) {
+function p(e) {
     return null != e && e.identityEnabled
         ? {
               guildId: e.identityGuildId,
@@ -58,28 +56,28 @@ function h(e) {
           }
         : {};
 }
-function m(e) {
-    return null != e && e.hasFeature(f.oNc.CLAN);
+function h(e) {
+    return null != e && e.hasFeature(d.oNc.CLAN);
 }
-function g(e, t) {
+function m(e, t) {
     var n, r;
     return null != t && t.identityGuildId === (null == e ? void 0 : e.id) && (((null == e ? void 0 : null === (n = e.clan) || void 0 === n ? void 0 : n.tag) != null && (null == e ? void 0 : null === (r = e.clan) || void 0 === r ? void 0 : r.tag) !== t.tag) || null == t.identityEnabled);
 }
-function E(e, t) {
+function g(e, t) {
     return (null != e && null != t && null != t.identityGuildId && t.identityGuildId === e && !!t.identityEnabled) || !1;
 }
-let v = (e, t) => {
+let E = (e, t) => {
         if (0 === e.length) return null;
         if (1 === e.length) return e[1];
         if (2 === e.length)
-            return _.intl.formatToPlainString(_.t['+v1gGx'], {
+            return f.intl.formatToPlainString(f.t['+v1gGx'], {
                 item1: e[0],
                 item2: e[1]
             });
         if (null != t && e.length > t) {
             let n = e.slice(0, t).join(', '),
-                r = _.intl.formatToPlainString(_.t['+E2fNj'], { n: e.length - t });
-            return _.intl.formatToPlainString(_.t.hZNSNz, {
+                r = f.intl.formatToPlainString(f.t['+E2fNj'], { n: e.length - t });
+            return f.intl.formatToPlainString(f.t.hZNSNz, {
                 items: n,
                 last: r
             });
@@ -87,28 +85,28 @@ let v = (e, t) => {
         {
             let t = e.slice(0, -1).join(', '),
                 n = e[e.length - 1];
-            return _.intl.formatToPlainString(_.t.hZNSNz, {
+            return f.intl.formatToPlainString(f.t.hZNSNz, {
                 items: t,
                 last: n
             });
         }
     },
-    b = {
-        [d.NC.SIZE_12]: 16,
-        [d.NC.SIZE_16]: 16,
-        [d.NC.SIZE_24]: 24,
-        [d.NC.SIZE_32]: 32,
-        [d.NC.SIZE_36]: 40
+    v = {
+        [c.NC.SIZE_12]: 16,
+        [c.NC.SIZE_16]: 16,
+        [c.NC.SIZE_24]: 24,
+        [c.NC.SIZE_32]: 32,
+        [c.NC.SIZE_36]: 40
     };
-function I(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.NC.SIZE_12;
+function b(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.NC.SIZE_12;
     if (null == t) return;
     let { CDN_HOST: r } = window.GLOBAL_ENV;
     if (null == r) return;
-    let i = b[n];
+    let i = v[n];
     return ''.concat(location.protocol, '//').concat(r, '/clan-badges/').concat(e, '/').concat(t, '.png?size=').concat(i);
 }
-function S(e, t) {
+function I(e, t) {
     if (null == t) return;
     let { CDN_HOST: n } = window.GLOBAL_ENV;
     if (null != n) return ''.concat(location.protocol, '//').concat(n, '/clan-banners/').concat(e, '/').concat(t, '.png?size=512');
@@ -125,8 +123,7 @@ function T(e, t) {
             },
             [t, e]
         ),
-        { tag: d, guildId: f } = h(null == r ? void 0 : r.clan),
-        _ = (0, c.Z)('clan_tag_chiplet');
-    return !n && !!_ && null != f && null != d && !i && !0;
+        { tag: c, guildId: d } = p(null == r ? void 0 : r.clan);
+    return !n && null != d && null != c && !i && !0;
 }
-d.NC.SIZE_12, d.NC.SIZE_16, d.NC.SIZE_24, d.NC.SIZE_32, d.NC.SIZE_36;
+c.NC.SIZE_12, c.NC.SIZE_16, c.NC.SIZE_24, c.NC.SIZE_32, c.NC.SIZE_36;

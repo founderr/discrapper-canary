@@ -1,6 +1,6 @@
 n.d(t, {
     h: function () {
-        return h;
+        return u;
     }
 }),
     n(47120);
@@ -11,11 +11,9 @@ var i = n(704215),
     s = n(430824),
     o = n(594174),
     c = n(353093),
-    d = n(954138),
-    u = n(981631);
-function h(e, t) {
-    let n = (0, d.Z)(t),
-        h = (0, l.e7)(
+    d = n(981631);
+function u(e) {
+    let t = (0, l.e7)(
             [o.default, s.Z, a.ZP],
             () =>
                 (function (e) {
@@ -35,6 +33,6 @@ function h(e, t) {
                 })(e, [o.default, s.Z, a.ZP]),
             [e]
         ),
-        p = (0, r.FT)(i.C.ADOPT_CLAN_IDENTITY_NOTICE, null != e ? e : u.lds);
-    return n && h && !p;
+        n = (0, r.FT)(i.C.ADOPT_CLAN_IDENTITY_NOTICE, null != e ? e : d.lds);
+    return t && !n;
 }
