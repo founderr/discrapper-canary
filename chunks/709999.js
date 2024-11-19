@@ -36,8 +36,8 @@ var r = n(200651),
     R = n(635552),
     H = n(905357),
     F = n(724994),
-    V = n(297651),
-    D = n(390698),
+    D = n(297651),
+    V = n(390698),
     M = n(813083),
     W = n(680942),
     U = n(558060),
@@ -107,7 +107,7 @@ t.Z = function (e) {
     let { product: t, user: n, category: i, onMount: l, isGiftEasterEggEnabled: I, isInFeedView: K } = e,
         { analyticsLocations: ei } = (0, _.ZP)([...(K ? [v.Z.COLLECTIBLES_SHOP_HOME_SCREEN] : []), v.Z.COLLECTIBLES_SHOP_CARD]),
         es = a.useRef(null),
-        { handleCardVisibilityChange: el } = (0, V.E)(t, K ? 'home' : 'full'),
+        { handleCardVisibilityChange: el } = (0, D.E)(t, K ? 'home' : 'full'),
         eo = (0, b.Z)(es),
         [ec, ed] = a.useState(!1),
         eu = eo || ec,
@@ -128,8 +128,10 @@ t.Z = function (e) {
         { hoverVariant: eN } = (0, O.E)('CollectiblesShopTallCard'),
         eB = i.skuId === u.T.STORM && '1268362891946627103' === t.skuId,
         ey = (0, A.h)('CollectiblesShopTallCard'),
-        eL = (0, Z.o0)(t),
-        eZ = (0, Z.i6)(t);
+        eL = (0, Z.ff)(t),
+        eZ = (0, Z.o0)(t),
+        eP = null !== eL ? eL : eZ,
+        eO = (0, Z.i6)(t);
     a.useEffect(() => {
         let { current: e } = es;
         if (null == e) return;
@@ -145,11 +147,11 @@ t.Z = function (e) {
         a.useEffect(() => {
             null == l || l(es);
         }, [l]);
-    let eP = (0, S.Z)({ analyticsLocations: ei }),
-        eO = a.useRef(null),
-        { handleUseNow: ew, isApplying: eA } = (0, R.W)({ product: t }),
-        eR = () => {
-            if (((0, C.xf)(), eP(), t.type === m.Z.AVATAR_DECORATION && null != em)) {
+    let ew = (0, S.Z)({ analyticsLocations: ei }),
+        eA = a.useRef(null),
+        { handleUseNow: eR, isApplying: eH } = (0, R.W)({ product: t }),
+        eF = () => {
+            if (((0, C.xf)(), ew(), t.type === m.Z.AVATAR_DECORATION && null != em)) {
                 o()(em.type === t.type, "product type is equivlant to first item's check for avatar deco"),
                     (0, k.ps)({
                         initialSelectedDecoration: em,
@@ -163,19 +165,19 @@ t.Z = function (e) {
                     analyticsLocations: ei
                 });
         },
-        eH = (e) => (n) => {
-            (eO.current = n.currentTarget),
+        eD = (e) => (n) => {
+            (eA.current = n.currentTarget),
                 (0, z.T)({
                     product: t,
                     category: i,
                     analyticsLocations: ei,
                     analyticsSource: e,
-                    returnRef: eO
+                    returnRef: eA
                 });
         },
-        eF = eH(v.Z.COLLECTIBLES_SHOP_CARD),
-        eV = eH(v.Z.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
-        eD = () =>
+        eV = eD(v.Z.COLLECTIBLES_SHOP_CARD),
+        eM = eD(v.Z.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
+        eW = () =>
             (0, r.jsx)('div', {
                 className: ee.hoverUpsellContainer,
                 children: (0, r.jsx)(E.Z, {
@@ -187,9 +189,9 @@ t.Z = function (e) {
                     subscriptionTier: Q.Si.TIER_2
                 })
             }),
-        eM = () =>
+        eU = () =>
             ev || e_
-                ? (0, r.jsx)(D.U, {
+                ? (0, r.jsx)(V.U, {
                       className: ee.priceTag,
                       isPartiallyPurchased: e_
                   })
@@ -205,21 +207,21 @@ t.Z = function (e) {
                         isPremiumUser: ef,
                         className: ee.priceTag
                     }),
-        eW = () =>
+        ez = () =>
             eb || d.tq
                 ? null
                 : ex
-                  ? (0, r.jsx)(en, { onClick: eV })
+                  ? (0, r.jsx)(en, { onClick: eM })
                   : (0, r.jsx)(W.Z, {
                         product: t,
-                        selectedVariantIndex: eL,
+                        selectedVariantIndex: eZ,
                         returnRef: es,
                         isGiftEasterEggEnabled: I,
                         disableCustomColor: !0,
                         tooltipDelay: 250
                     }),
-        eU = () => {
-            if (eb && !ef && !ex) return eD();
+        eG = () => {
+            if (eb && !ef && !ex) return eW();
             let e = eb
                 ? {
                       submitting: ek,
@@ -238,7 +240,7 @@ t.Z = function (e) {
                           (0, j.Z)({
                               skuId: (0, J.S)({
                                   product: t,
-                                  selectedVariantIndex: eL
+                                  selectedVariantIndex: eZ
                               }),
                               analyticsLocations: ei,
                               returnRef: es,
@@ -253,8 +255,8 @@ t.Z = function (e) {
                         : ev
                           ? (0, r.jsx)(et, {
                                 disabled: ej,
-                                onClick: eI ? ew : eR,
-                                submitting: eA,
+                                onClick: eI ? eR : eF,
+                                submitting: eH,
                                 children: X.intl.string(X.t.MAS7uL)
                             })
                           : (0, r.jsx)(et, {
@@ -263,7 +265,7 @@ t.Z = function (e) {
                                 ...e,
                                 children: eb ? X.intl.string(X.t.zp6caG) : X.intl.formatToPlainString(X.t['cNSL/v'], { price: eg })
                             }),
-                    eW()
+                    ez()
                 ]
             });
         };
@@ -282,7 +284,7 @@ t.Z = function (e) {
                           [ee.mysteryShopCard]: eB
                       }),
                       onBlur: () => ed(!1),
-                      onClick: eF,
+                      onClick: eV,
                       id: 'shop-item-'.concat(t.skuId),
                       children: [
                           eb &&
@@ -334,14 +336,14 @@ t.Z = function (e) {
                                   )
                                   .with(m.Z.VARIANTS_GROUP, () => {
                                       if (null == t.variants || 0 === t.variants.length) return null;
-                                      let e = t.variants[eL];
+                                      let e = t.variants[eP];
                                       return (0, c.EQ)(e.type)
                                           .with(m.Z.PROFILE_EFFECT, () => {
                                               let [t] = e.items;
                                               return (0, r.jsx)(er, {
                                                   isHighlighted: eu,
                                                   profileEffectId: t.id,
-                                                  isPurchased: ev && !eZ
+                                                  isPurchased: ev && !eO
                                               });
                                           })
                                           .with(m.Z.AVATAR_DECORATION, () => {
@@ -387,7 +389,7 @@ t.Z = function (e) {
                                   }),
                                   t.type === m.Z.VARIANTS_GROUP
                                       ? (0, r.jsx)(G.P, {
-                                            product: t,
+                                            variantGroupProduct: t,
                                             minimal: !eo
                                         })
                                       : null,
@@ -396,11 +398,11 @@ t.Z = function (e) {
                                       children: [
                                           (0, r.jsx)('div', {
                                               className: e_ ? void 0 : ee.innerBlur,
-                                              children: eM()
+                                              children: eU()
                                           }),
                                           (0, r.jsx)('div', {
                                               className: ee.innerHover,
-                                              children: eU()
+                                              children: eG()
                                           })
                                       ]
                                   })

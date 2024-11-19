@@ -1,56 +1,82 @@
 n.d(e, {
     $O: function () {
-        return l;
-    },
-    B2: function () {
-        return d;
-    },
-    i6: function () {
         return c;
     },
+    B2: function () {
+        return u;
+    },
+    ff: function () {
+        return g;
+    },
+    i6: function () {
+        return d;
+    },
     o0: function () {
-        return o;
+        return l;
+    },
+    tg: function () {
+        return f;
     }
 }),
     n(47120);
-var r = n(905837),
+var r = n(976649),
+    i = n(454000),
     a = n(979554);
-let i = (0, r.Ue)(() => ({ selectionStates: new Map() })),
-    s = () => ({
-        selectedVariant: 0,
+let s = (0, i.F)(() => ({ selectionStates: new Map() }), r.X),
+    o = () => ({
+        selectedVariantIndex: 0,
+        previewingVariantIndex: null,
         isHoveringOnSwitch: !1
     }),
-    o = (t) => {
+    l = (t) => {
         var e, n;
-        let r = i();
-        return t.type !== a.Z.VARIANTS_GROUP ? 0 : (null == r.selectionStates.get(t.storeListingId) && i.setState((e) => ({ selectionStates: new Map(e.selectionStates).set(t.storeListingId, s()) })), null !== (n = null === (e = r.selectionStates.get(t.storeListingId)) || void 0 === e ? void 0 : e.selectedVariant) && void 0 !== n ? n : 0);
+        let r = s();
+        return t.type !== a.Z.VARIANTS_GROUP ? 0 : (null == r.selectionStates.get(t.storeListingId) && s.setState((e) => ({ selectionStates: new Map(e.selectionStates).set(t.storeListingId, o()) })), null !== (n = null === (e = r.selectionStates.get(t.storeListingId)) || void 0 === e ? void 0 : e.selectedVariantIndex) && void 0 !== n ? n : 0);
     },
-    l = (t, e) => {
-        i.setState((n) => {
+    c = (t, e) => {
+        s.setState((n) => {
             var r;
-            let a = null !== (r = n.selectionStates.get(t.storeListingId)) && void 0 !== r ? r : s();
+            let i = null !== (r = n.selectionStates.get(t.storeListingId)) && void 0 !== r ? r : o();
             return {
                 selectionStates: new Map(n.selectionStates).set(t.storeListingId, {
-                    ...a,
-                    selectedVariant: e
+                    ...i,
+                    selectedVariantIndex: e
                 })
             };
         });
     },
-    c = (t) => {
+    d = (t) => {
         var e, n;
-        let r = i();
-        return t.type === a.Z.VARIANTS_GROUP && (null == r.selectionStates.get(t.storeListingId) && i.setState((e) => ({ selectionStates: new Map(e.selectionStates).set(t.storeListingId, s()) })), null !== (n = null === (e = r.selectionStates.get(t.storeListingId)) || void 0 === e ? void 0 : e.isHoveringOnSwitch) && void 0 !== n && n);
+        let r = s();
+        return t.type === a.Z.VARIANTS_GROUP && (null == r.selectionStates.get(t.storeListingId) && s.setState((e) => ({ selectionStates: new Map(e.selectionStates).set(t.storeListingId, o()) })), null !== (n = null === (e = r.selectionStates.get(t.storeListingId)) || void 0 === e ? void 0 : e.isHoveringOnSwitch) && void 0 !== n && n);
     },
-    d = (t, e) => {
-        i.setState((n) => {
+    u = (t, e) => {
+        s.setState((n) => {
             var r;
-            let a = null !== (r = n.selectionStates.get(t.storeListingId)) && void 0 !== r ? r : s();
+            let i = null !== (r = n.selectionStates.get(t.storeListingId)) && void 0 !== r ? r : o();
             return {
                 selectionStates: new Map(n.selectionStates).set(t.storeListingId, {
-                    ...a,
-                    isHoveringOnSwitch: e
+                    ...i,
+                    isHoveringOnSwitch: e,
+                    previewingVariantIndex: e ? i.selectedVariantIndex : null
                 })
             };
         });
+    },
+    f = (t, e) => {
+        s.setState((n) => {
+            var r;
+            let i = null !== (r = n.selectionStates.get(t.storeListingId)) && void 0 !== r ? r : o();
+            return {
+                selectionStates: new Map(n.selectionStates).set(t.storeListingId, {
+                    ...i,
+                    previewingVariantIndex: e
+                })
+            };
+        });
+    },
+    g = (t) => {
+        var e, n;
+        let r = s();
+        return (null == t ? void 0 : t.type) !== a.Z.VARIANTS_GROUP ? null : null !== (n = null === (e = r.selectionStates.get(t.storeListingId)) || void 0 === e ? void 0 : e.previewingVariantIndex) && void 0 !== n ? n : null;
     };
