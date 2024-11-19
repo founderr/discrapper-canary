@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return _;
     },
     y: function () {
         return r;
@@ -15,32 +15,42 @@ var r,
     l = n(594174),
     u = n(74538),
     c = n(125900),
-    d = n(710111);
-function f(e, t, n, r) {
+    d = n(710111),
+    f = n(388032);
+function _(e, t, n, r) {
     let i = e.guildId === d.X8,
-        f = (0, o.e7)([l.default], () => u.ZP.canUseSoundboardEverywhere(l.default.getCurrentUser())),
-        _ = (0, c.V)({ location: 'useSoundmojiGuildInfoData' }),
-        p = e.guildId !== (null == t ? void 0 : t.guild_id),
-        h = a.useMemo(() => (i || !_ ? 2 : _ && !f ? 1 : n || null == r ? 2 : 0), [i, f, _, n, r]);
+        _ = (0, o.e7)([l.default], () => u.ZP.canUseSoundboardEverywhere(l.default.getCurrentUser())),
+        p = (0, c.V)({ location: 'useSoundmojiGuildInfoData' }),
+        h = e.guildId !== (null == t ? void 0 : t.guild_id),
+        m = a.useMemo(() => (i || !p ? 2 : p && !_ ? 1 : n || null == r ? 2 : 0), [i, _, p, n, r]);
     return {
-        buttonType: h,
+        buttonType: m,
         description: a.useMemo(() => {
-            if (i) return 'A default soundmoji. You can use this soundmoji everywhere on Discord.';
             let e = null != r;
             return (0, s.EQ)({
-                hasSoundmojiPermissions: f,
+                hasSoundmojiPermissions: _,
                 isInGuild: n,
                 isGuildDiscoverable: e,
-                isSoundFromDifferentGuild: p,
-                canSendSoundmojis: _
+                isSoundFromDifferentGuild: h,
+                canSendSoundmojis: p,
+                isDefaultSound: i
             })
+                .with({ canSendSoundmojis: !1 }, () => f.intl.string(f.t.x2kyyM))
+                .with({ isDefaultSound: !0 }, () => f.intl.string(f.t.AabHen))
+                .with(
+                    {
+                        isInGuild: !1,
+                        isGuildDiscoverable: !1
+                    },
+                    () => f.intl.string(f.t.MRYt09)
+                )
                 .with(
                     {
                         hasSoundmojiPermissions: !0,
                         isInGuild: !0,
                         isSoundFromDifferentGuild: !1
                     },
-                    () => 'This soundmoji is from this server'
+                    () => f.intl.string(f.t.p17MQE)
                 )
                 .with(
                     {
@@ -48,14 +58,7 @@ function f(e, t, n, r) {
                         isInGuild: !0,
                         isSoundFromDifferentGuild: !0
                     },
-                    () => 'This soundmoji is from one of your servers'
-                )
-                .with(
-                    {
-                        isInGuild: !1,
-                        isGuildDiscoverable: !1
-                    },
-                    () => 'This soundmoji is from a server that is either invite-only or unavailable'
+                    () => f.intl.string(f.t.Lkbm5u)
                 )
                 .with(
                     {
@@ -63,43 +66,15 @@ function f(e, t, n, r) {
                         isInGuild: !1,
                         isGuildDiscoverable: !0
                     },
-                    () => 'Want to use this soundmoji everywhere? Join the server.'
-                )
-                .with(
-                    {
-                        hasSoundmojiPermissions: !1,
-                        isInGuild: !1,
-                        isGuildDiscoverable: !0,
-                        canSendSoundmojis: !0
-                    },
-                    () => 'Want to use this soundmoji everywhere? Get Nitro and join this server'
-                )
-                .with(
-                    {
-                        hasSoundmojiPermissions: !1,
-                        isInGuild: !1,
-                        isGuildDiscoverable: !0,
-                        canSendSoundmojis: !1
-                    },
-                    () => 'You can`t send soundmojis right now'
+                    () => f.intl.string(f.t.GTJmaW)
                 )
                 .with(
                     {
                         hasSoundmojiPermissions: !1,
                         isInGuild: !0,
-                        isSoundFromDifferentGuild: !1,
-                        canSendSoundmojis: !0
+                        isSoundFromDifferentGuild: !1
                     },
-                    () => 'The soundmoji is from this server. Get Nitro to use it everywhere.'
-                )
-                .with(
-                    {
-                        hasSoundmojiPermissions: !1,
-                        isInGuild: !0,
-                        isSoundFromDifferentGuild: !1,
-                        canSendSoundmojis: !1
-                    },
-                    () => 'You can`t send soundmojis right now'
+                    () => f.intl.string(f.t['sj/imZ'])
                 )
                 .with(
                     {
@@ -108,19 +83,18 @@ function f(e, t, n, r) {
                         isSoundFromDifferentGuild: !0,
                         canSendSoundmojis: !0
                     },
-                    () => 'This soundmoji is from one of your servers. Get Nitro to use it everywhere.'
+                    () => f.intl.string(f.t['3Ru2//'])
                 )
                 .with(
                     {
                         hasSoundmojiPermissions: !1,
-                        isInGuild: !0,
-                        isSoundFromDifferentGuild: !0,
-                        canSendSoundmojis: !1
+                        isInGuild: !1,
+                        isGuildDiscoverable: !0
                     },
-                    () => 'You can`t send soundmojis right now'
+                    () => f.intl.string(f.t.qRkWhY)
                 )
                 .exhaustive();
-        }, [i, r, f, n, p, _])
+        }, [i, r, _, n, h, p])
     };
 }
 ((i = r || (r = {}))[(i.JOIN_GUILD = 0)] = 'JOIN_GUILD'), (i[(i.GET_NITRO = 1)] = 'GET_NITRO'), (i[(i.NONE = 2)] = 'NONE');
