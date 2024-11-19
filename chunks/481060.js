@@ -189,6 +189,12 @@ n.r(t),
         BlockInteractionsContext: function () {
             return h.g;
         },
+        BlueskyBrandIcon: function () {
+            return tC.Sat;
+        },
+        BlueskyNeutralIcon: function () {
+            return tC.XRL;
+        },
         BluetoothIcon: function () {
             return tC.O7P;
         },
@@ -1068,6 +1074,12 @@ n.r(t),
         MasonryListThin: function () {
             return en.w;
         },
+        MastodonBrandIcon: function () {
+            return tC.SKI;
+        },
+        MastodonNeutralIcon: function () {
+            return tC.j4f;
+        },
         MaximizeIcon: function () {
             return tC.bJT;
         },
@@ -1130,9 +1142,6 @@ n.r(t),
         },
         MicrophoneVoiceFilterIcon: function () {
             return tC.Ng9;
-        },
-        MicrophoneVoiceFilterMutedIcon: function () {
-            return tC.IK5;
         },
         MinimizeIcon: function () {
             return tC.dOc;
