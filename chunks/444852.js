@@ -95,20 +95,21 @@ class O extends o.Z {
     updateStats(e) {
         var t, n, r, a, s, o, l, u, c, d, f, _, p;
         let h;
-        let g = !this.isOwner && (null === (t = this._goLiveQualityManager) || void 0 === t ? void 0 : t.getUserID()) != null;
-        let E = 'unknown',
-            v = null === (n = e.find((e) => e.connection === this._connection)) || void 0 === n ? void 0 : n.stats;
-        if (null != v && g) {
-            let e = v.transport.inboundBitrateEstimate;
-            null != e && e < 100000000 && (this._bandwidthSamples.push(e), this._bandwidthSamples.length > 10 && this._bandwidthSamples.shift(), 10 === this._bandwidthSamples.length && ((h = i().mean(this._bandwidthSamples)) > 1500000 ? (E = 'HQ') : h < 1500000 && (E = 'LQ')));
+        let m = !this.isOwner && (null === (t = this._goLiveQualityManager) || void 0 === t ? void 0 : t.getUserID()) != null;
+        let g = 'unknown',
+            E = null === (n = e.find((e) => e.connection === this._connection)) || void 0 === n ? void 0 : n.stats;
+        if (null != E && m) {
+            let e = E.transport.inboundBitrateEstimate;
+            null != e && e < 100000000 && (this._bandwidthSamples.push(e), this._bandwidthSamples.length > 10 && this._bandwidthSamples.shift(), 10 === this._bandwidthSamples.length && ((h = i().mean(this._bandwidthSamples)) > 1500000 ? (g = 'HQ') : h < 1500000 && (g = 'LQ')));
         }
-        let b = null !== (a = null === (r = this._goLiveQualityManager) || void 0 === r ? void 0 : r.isDowngraded()) && void 0 !== a && a;
-        if (('HQ' === E && b ? (this.logger.info('Attempting to upgrade to HQ simulcast stream, bandwidth estimate: '.concat(h)), null === (s = this._goLiveQualityManager) || void 0 === s || s.setGoLiveStreamDowngraded(!1)) : 'LQ' === E && !b && (this.logger.info('Attempting to downgrade to LQ simulcast stream, bandwidth estimate: '.concat(h)), null === (o = this._goLiveQualityManager) || void 0 === o || o.setGoLiveStreamDowngraded(!0)), g)) {
+        let v = null !== (a = null === (r = this._goLiveQualityManager) || void 0 === r ? void 0 : r.isDowngraded()) && void 0 !== a && a;
+        if (('HQ' === g && v ? (this.logger.info('Attempting to upgrade to HQ simulcast stream, bandwidth estimate: '.concat(h)), null === (s = this._goLiveQualityManager) || void 0 === s || s.setGoLiveStreamDowngraded(!1)) : 'LQ' === g && !v && (this.logger.info('Attempting to downgrade to LQ simulcast stream, bandwidth estimate: '.concat(h)), null === (o = this._goLiveQualityManager) || void 0 === o || o.setGoLiveStreamDowngraded(!0)), m)) {
             let e = !(null === (l = this._goLiveQualityManager) || void 0 === l ? void 0 : l.senderSupportsSimulcast()) || (null === (u = this._goLiveQualityManager) || void 0 === u ? void 0 : u.isDowngraded()) === !1;
             null === (c = this._videoQuality) || void 0 === c || c.setViewedSimulcastQuality(e);
             let t = null !== (p = null === (d = this._goLiveQualityManager) || void 0 === d ? void 0 : d.isOneToOneCall()) && void 0 !== p && p,
-                n = (!m.Z.goLiveSimulcastEnabled() || (null === (f = this._goLiveQualityManager) || void 0 === f ? void 0 : f.senderSupportsSimulcast())) && 'LQ' === E && !t;
-            null === (_ = this._videoQuality) || void 0 === _ || _.setEligibleSimulcastQuality(!n);
+                n = void 0 !== this._goliveCurrentMaxResolution && (this._goliveCurrentMaxResolution.height > 720 || 0 === this._goliveCurrentMaxResolution.height),
+                r = ((null === (f = this._goLiveQualityManager) || void 0 === f ? void 0 : f.senderSupportsSimulcast()) || n) && 'LQ' === g && !t;
+            null === (_ = this._videoQuality) || void 0 === _ || _.setEligibleSimulcastQuality(!r);
         }
     }
     _initializeEvents() {
@@ -186,17 +187,19 @@ class O extends o.Z {
                 if (s.guildId === t && s.channelId === n && s.ownerId === r) null != this.getMediaSessionId() && !e && (this._trackVideoStartStats(), (e = !0)), this._updateVideoStreamId(i, a);
             }),
             this.on(l.z.VideoSourceQualityChanged, (e, t, n, r, i, a) => {
-                s.Z.wait(() =>
-                    s.Z.dispatch({
-                        type: 'MEDIA_ENGINE_VIDEO_SOURCE_QUALITY_CHANGED',
-                        guildId: e,
-                        channelId: t,
-                        senderUserId: n,
-                        maxResolution: r,
-                        maxFrameRate: i,
-                        context: a
-                    })
-                );
+                var o;
+                n === (null === (o = this._goLiveQualityManager) || void 0 === o ? void 0 : o.getUserID()) && (this._goliveCurrentMaxResolution = r),
+                    s.Z.wait(() =>
+                        s.Z.dispatch({
+                            type: 'MEDIA_ENGINE_VIDEO_SOURCE_QUALITY_CHANGED',
+                            guildId: e,
+                            channelId: t,
+                            senderUserId: n,
+                            maxResolution: r,
+                            maxFrameRate: i,
+                            context: a
+                        })
+                    );
             }),
             this.on(l.z.SecureFramesUpdate, () => {
                 s.Z.wait(() => {
@@ -331,6 +334,7 @@ class O extends o.Z {
             C(this, '_isStreamer', void 0),
             C(this, '_updateVideoStreamId', void 0),
             C(this, '_bandwidthSamples', []),
+            C(this, '_goliveCurrentMaxResolution', void 0),
             (this._streamContext = u),
             (this._streamKey = t),
             (this._isStreamer = o),
