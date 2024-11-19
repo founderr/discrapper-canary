@@ -25,8 +25,8 @@ var i,
     C = n(809206),
     E = n(230711),
     _ = n(241420),
-    f = n(600164),
-    I = n(651530),
+    I = n(600164),
+    f = n(651530),
     N = n(247206),
     A = n(294602),
     b = n(778825),
@@ -737,7 +737,7 @@ class eE extends l.PureComponent {
                     })
                 })),
                 (a = null)),
-            null != a && (a = (0, r.jsx)(f.Z, { children: a })),
+            null != a && (a = (0, r.jsx)(I.Z, { children: a })),
             (0, r.jsxs)(l.Fragment, {
                 children: [
                     (0, r.jsx)(p.FormTitle, {
@@ -955,7 +955,7 @@ function e_() {
         })),
         n = (0, h.e7)([y.Z], () => y.Z.getFetchError()),
         i = (0, h.e7)([U.Z], () => U.Z.getSubsection()),
-        s = (0, I.yh)(),
+        s = (0, f.yh)(),
         l = (0, j.Xo)({ location: 'web_user_privacy_and_safety_settings' }),
         { hasSearchResults: a, searchResults: o } = (0, ee.E)(),
         c = (0, O.p)(),

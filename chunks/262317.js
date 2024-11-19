@@ -37,8 +37,8 @@ var i,
     y = n(979651),
     P = n(981631),
     M = n(927923),
-    R = n(70722),
-    L = n(388032),
+    L = n(70722),
+    R = n(388032),
     k = n(977478);
 function O(e, t, n) {
     return (
@@ -66,7 +66,7 @@ function D(e) {
 }
 function w(e) {
     let { numAudience: t, collapsed: n } = e,
-        i = n ? t : L.intl.formatToPlainString(L.t['+v2pNz'], { count: t });
+        i = n ? t : R.intl.formatToPlainString(R.t['+v2pNz'], { count: t });
     return (0, l.jsxs)('div', {
         className: s()(k.audienceContainer, { [k.audienceContainerCollapsed]: n }),
         children: [
@@ -153,7 +153,7 @@ class B extends (i = r.PureComponent) {
                 let { user: e, channel: t, isWatching: n, hidePreview: i } = this.props;
                 if (!this.canWatchStream) return;
                 let l = {
-                    streamType: R.lo.GUILD,
+                    streamType: L.lo.GUILD,
                     ownerId: e.id,
                     channelId: t.id,
                     guildId: t.guild_id
@@ -211,7 +211,7 @@ class B extends (i = r.PureComponent) {
             }),
             O(this, 'renderUser', (e) => {
                 let { isSelfOnOtherClient: t, otherClientSessionType: n, voicePlatform: i, shouldShowPreview: r, mute: a, localMute: o, localVideoDisabled: c, speaking: u, disconnected: h, user: p, deaf: m, priority: f, collapsed: g, isStreaming: C, isGuest: _, nick: v, video: I, serverMute: E, serverDeaf: b, tabIndex: Z, embeddedApplication: N, channel: T, hangStatusActivity: j, showHangStatus: A, isSelf: y, application: P } = this.props,
-                    { userPopoutOpen: R, isHoveringHangStatus: O } = this.state,
+                    { userPopoutOpen: L, isHoveringHangStatus: O } = this.state,
                     D = M.al.has(null != n ? n : ''),
                     w = {
                         user: p,
@@ -236,7 +236,7 @@ class B extends (i = r.PureComponent) {
                         embeddedApplication: N,
                         avatarContainerClass: s()({ [k.userAvatar]: !0 }),
                         disabled: t && !D,
-                        selected: R,
+                        selected: L,
                         onClick: D ? void 0 : this.handleClickUser,
                         onDoubleClick: this.handleWatchStream,
                         onContextMenu: this.handleUserContextMenu,
@@ -250,7 +250,7 @@ class B extends (i = r.PureComponent) {
                 if (t) {
                     var B;
                     return (0, l.jsx)(d.Tooltip, {
-                        text: null !== (B = (0, x.Z)(n)) && void 0 !== B ? B : L.intl.string(L.t.IyYqqa),
+                        text: null !== (B = (0, x.Z)(n)) && void 0 !== B ? B : R.intl.string(R.t.IyYqqa),
                         children: (e) => {
                             let { onClick: t, onContextMenu: n, ...i } = e;
                             return (0, l.jsx)(S.ZP, {
@@ -263,7 +263,7 @@ class B extends (i = r.PureComponent) {
                 return (0, l.jsx)(d.Popout, {
                     position: 'right',
                     renderPopout: (A && O) || !C ? this.renderHangStatusPopout : this.renderStreamPopout,
-                    shouldShow: r && !R,
+                    shouldShow: r && !L,
                     onRequestClose: this.handleHidePreview,
                     spacing: 0,
                     children: () =>

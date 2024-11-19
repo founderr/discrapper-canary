@@ -55,12 +55,12 @@ t.Z = (0, o.Z)((e) => {
         y = (0, s.e7)([d.Z], () => (null != I ? d.Z.getParticipant(i.id, I) : null)),
         P = (0, u.w8)(i.id, h.pV.SPEAKER),
         M = P.filter(T),
-        R = null != P.find((e) => e.type === h.Ui.STREAM),
-        L = S(l),
+        L = null != P.find((e) => e.type === h.Ui.STREAM),
+        R = S(l),
         k = N(l, b),
         O = {
             [h.pV.SPEAKER]: k,
-            [h.pV.AUDIENCE]: L,
+            [h.pV.AUDIENCE]: R,
             [h.pV.SELECTED]: 1
         },
         D = (0, p.Dx)(i.id),
@@ -88,7 +88,7 @@ t.Z = (0, o.Z)((e) => {
                               collapsed: z,
                               speakers: M,
                               channel: i,
-                              isStreamLive: R
+                              isStreamLive: L
                           },
                           'speaker-header-'.concat(t)
                       );
@@ -150,7 +150,7 @@ t.Z = (0, o.Z)((e) => {
                         {
                             channel: i,
                             participants: l,
-                            maxTiles: L
+                            maxTiles: R
                         },
                         'audience-'.concat(t, '-').concat(n)
                     );

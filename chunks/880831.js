@@ -71,10 +71,10 @@ function y(e) {
             leadingIconClass: j.messageContentLeadingIcon,
             iconSize: T.WW
         }),
-        R = (0, _.cv)(n),
-        L =
-            R.length > 0
-                ? R.map((e) =>
+        L = (0, _.cv)(n),
+        R =
+            L.length > 0
+                ? L.map((e) =>
                       (0, i.jsx)(
                           v.ZP,
                           {
@@ -99,7 +99,7 @@ function y(e) {
         children: [
             (0, i.jsxs)('div', {
                 className: a()(j.messageContentWrapper, { [j.mentioned]: n.mentioned }),
-                children: [null != L ? null : M, null !== (t = null != y ? y : L) && void 0 !== t ? t : (0, i.jsx)('span', { children: A }), null != L ? null : P]
+                children: [null != R ? null : M, null !== (t = null != y ? y : R) && void 0 !== t ? t : (0, i.jsx)('span', { children: A }), null != R ? null : P]
             }),
             (0, i.jsx)('img', {
                 alt: '',

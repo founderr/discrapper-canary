@@ -19,8 +19,8 @@ var i = n(200651),
 function g(e) {
     var t, n, g, p;
     let { transitionState: x, onSuccess: S, onClose: T, requirementsUpdated: C, noSkip: E = !1 } = e,
-        [_, f] = s.useState(''),
-        [I, N] = s.useState(''),
+        [_, I] = s.useState(''),
+        [f, N] = s.useState(''),
         [A, b] = s.useState(''),
         [v, j] = s.useState(null),
         [O, R] = s.useState(null),
@@ -30,10 +30,10 @@ function g(e) {
     async function B(e) {
         e.preventDefault(), (0, a.b9)();
         let t = !1;
-        if (('' === I ? (j(m.intl.string(m.t['/7/oPT'])), (t = !0)) : j(null), I !== A ? (R(m.intl.string(m.t.IEKYZ2)), (t = !0)) : R(null), t)) return;
+        if (('' === f ? (j(m.intl.string(m.t['/7/oPT'])), (t = !0)) : j(null), f !== A ? (R(m.intl.string(m.t.IEKYZ2)), (t = !0)) : R(null), t)) return;
         let n = await (0, a.Mn)({
             password: _,
-            newPassword: I
+            newPassword: f
         });
         if (null == n ? void 0 : n.ok) S();
         else {
@@ -86,7 +86,7 @@ function g(e) {
                                     children: (0, i.jsx)(l.TextInput, {
                                         type: 'password',
                                         value: _,
-                                        onChange: f,
+                                        onChange: I,
                                         inputRef: y
                                     })
                                 }),
@@ -96,7 +96,7 @@ function g(e) {
                                     error: null !== (p = null !== (g = null == P ? void 0 : null === (n = P.new_password) || void 0 === n ? void 0 : n[0]) && void 0 !== g ? g : v) && void 0 !== p ? p : void 0,
                                     children: (0, i.jsx)(l.TextInput, {
                                         type: 'password',
-                                        value: I,
+                                        value: f,
                                         onChange: N
                                     })
                                 }),

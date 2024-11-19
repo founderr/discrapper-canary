@@ -55,8 +55,8 @@ t.Z = (e) => {
     let P = l.useMemo(() => (null != T ? (0, _.v)(Object.values(T), S) : null), [T, S]),
         {
             mostRecentQuery: M,
-            searchFetching: R,
-            searchResults: L
+            searchFetching: L,
+            searchResults: R
         } = (0, r.cj)([m.Z], () => {
             let { mostRecentQuery: e, fetching: t } = m.Z.getSearchState(Z.id);
             return {
@@ -119,8 +119,8 @@ t.Z = (e) => {
               handleSearchKeyPress: U,
               handleClearSearch: H,
               handleCreateOrAddGuild: B,
-              searchResults: L,
-              searchFetching: R
+              searchResults: R,
+              searchFetching: L
           })
         : null == P && null == S
           ? (0, i.jsx)('div', {

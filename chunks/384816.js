@@ -15,8 +15,8 @@ var l = t(442837),
     u = t(785717),
     f = t(250822),
     m = t(771362),
-    I = t(280885),
-    x = t(819602),
+    x = t(280885),
+    I = t(819602),
     p = t(900927),
     h = t(678738),
     v = t(652853),
@@ -25,22 +25,22 @@ var l = t(442837),
     _ = t(388032),
     j = t(818695);
 function b(e) {
-    let { user: n, currentUser: t, displayProfile: b, subsection: E, onClose: T } = e,
-        { theme: N } = (0, v.z)(),
-        { trackUserProfileAction: S } = (0, u.KZ)(),
+    let { user: n, currentUser: t, displayProfile: b, subsection: E, onClose: N } = e,
+        { theme: S } = (0, v.z)(),
+        { trackUserProfileAction: T } = (0, u.KZ)(),
         y = null == b ? void 0 : b.guildId,
         P = (0, l.e7)([a.Z], () => (null != y ? a.Z.getGuild(y) : null)),
-        A = (0, l.e7)([d.Z], () => d.Z.getGuildId()),
-        C = (0, l.e7)([c.default], () => c.default.locale),
+        C = (0, l.e7)([d.Z], () => d.Z.getGuildId()),
+        A = (0, l.e7)([c.default], () => c.default.locale),
         L = (0, m.Z)(n.id),
-        M = (0, f.Z)(n.id);
+        O = (0, f.Z)(n.id);
     return (0, i.jsxs)(o.ScrollerThin, {
         fade: !0,
         className: j.scroller,
         children: [
             (null == b ? void 0 : b.bio) != null &&
                 (null == b ? void 0 : b.bio) !== '' &&
-                (0, i.jsx)(I.Z, {
+                (0, i.jsx)(x.Z, {
                     userBio: b.bio,
                     setLineClamp: !1
                 }),
@@ -64,28 +64,28 @@ function b(e) {
                 (0, i.jsx)(h.Z, {
                     heading: _.intl.string(_.t['3fe7U1']),
                     scrollIntoView: E === Z.Tb.CONNECTIONS,
-                    children: (0, i.jsx)(x.OA, {
+                    children: (0, i.jsx)(I.OA, {
                         connectedAccounts: L,
                         className: j.connections,
                         userId: n.id,
-                        theme: N,
-                        locale: C
+                        theme: S,
+                        locale: A
                     })
                 }),
-            M.length > 0 &&
+            O.length > 0 &&
                 (0, i.jsx)(h.Z, {
                     heading: _.intl.string(_.t.PHjkRE),
-                    children: M.map((e) =>
+                    children: O.map((e) =>
                         (0, i.jsx)(
-                            x.tH,
+                            I.tH,
                             {
                                 className: j.appsConnections,
                                 applicationRoleConnection: e,
-                                locale: C,
+                                locale: A,
                                 onApplicationClicked: () => {
-                                    S({ action: 'PRESS_APP_CONNECTION' }), T();
+                                    T({ action: 'PRESS_APP_CONNECTION' }), N();
                                 },
-                                selectedGuildId: null != A ? A : void 0
+                                selectedGuildId: null != C ? C : void 0
                             },
                             e.application.id
                         )
@@ -98,7 +98,7 @@ function b(e) {
                     userId: n.id,
                     className: j.note,
                     autoFocus: E === Z.Tb.NOTE,
-                    onUpdate: () => S({ action: 'SET_NOTE' })
+                    onUpdate: () => T({ action: 'SET_NOTE' })
                 })
             })
         ]

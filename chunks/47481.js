@@ -56,18 +56,18 @@ function u(e) {
                 P = null,
                 M = (0, o.DQ)(e);
             _ = _ || M;
-            let R = (function (e, t, n) {
+            let L = (function (e, t, n) {
                 if (i.V.NON_COLLAPSIBLE.has(t.type));
                 else if (t.blocked) return d.ys_.MESSAGE_GROUP_BLOCKED;
                 else if ((0, o.P1)(e) && n) return d.ys_.MESSAGE_GROUP_SPAMMER;
                 return null;
             })(h, e, M && f);
-            if (null !== R) {
+            if (null !== L) {
                 let t, n;
                 [P, y] =
                     ((E = x),
                     (b = e),
-                    (Z = R),
+                    (Z = L),
                     (n = N = y),
                     null == N || N.type !== Z
                         ? ((t = {
@@ -107,12 +107,12 @@ function u(e) {
                             unreadId: e.id
                         }),
                     (v = null));
-            let L = (0, c.f)(e, h);
-            null != L &&
+            let R = (0, c.f)(e, h);
+            null != R &&
                 x.push({
                     type: d.ys_.MESSAGE,
-                    content: L,
-                    groupId: L.id
+                    content: R,
+                    groupId: R.id
                 });
             let k = (null == y ? void 0 : y.type) === d.ys_.MESSAGE ? u : y;
             (0, s.J)(h, k, e) && (n = e.id);

@@ -38,13 +38,13 @@ function T(e) {
         y = null !== (s = null === (n = v[j.toString()]) || void 0 === n ? void 0 : n.description) && void 0 !== s ? s : '',
         P = E._o.has(j),
         M = E.Qn.includes(o),
-        R = g.length,
-        L = (0, c.e7)([x.Z], () => x.Z.can(b.Plq.MANAGE_ROLES, _), [_]),
+        L = g.length,
+        R = (0, c.e7)([x.Z], () => x.Z.can(b.Plq.MANAGE_ROLES, _), [_]),
         k = l.useCallback(
             async (e) => {
-                if (!!L) await m.Z.open(_.id, b.pNK.ROLES), await m.Z.selectRole(e);
+                if (!!R) await m.Z.open(_.id, b.pNK.ROLES), await m.Z.selectRole(e);
             },
-            [L, _.id]
+            [R, _.id]
         );
     return (0, i.jsxs)('div', {
         className: a()(S.permissionItemContainer, { [S.elevatedPermission]: P }),
@@ -128,7 +128,7 @@ function T(e) {
                     (0, i.jsx)(d.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-normal',
-                        children: Z.intl.format(Z.t.KmJI4O, { roleCount: R })
+                        children: Z.intl.format(Z.t.KmJI4O, { roleCount: L })
                     })
                 ]
             }),
@@ -163,7 +163,7 @@ function T(e) {
                         : (0, i.jsx)(
                               d.Clickable,
                               {
-                                  className: a()(S.roleTooltipItem, { [S.editable]: L && !(0, u.pM)(_.id, e) }),
+                                  className: a()(S.roleTooltipItem, { [S.editable]: R && !(0, u.pM)(_.id, e) }),
                                   onClick: () => k(e),
                                   children: (0, i.jsx)(p.Z, {
                                       role: T[e],
@@ -190,17 +190,17 @@ function A(e) {
         A = Object.keys(x).length,
         y = l.useMemo(() => (null != p ? v.Z.getGuildPermissionSpecMap(p) : null), [p]),
         P = l.useMemo(() => (null != p ? v.Z.generateGuildPermissionSpec(p) : null), [p]),
-        [M, R] = l.useState(''),
-        [L, k] = l.useState(''),
+        [M, L] = l.useState(''),
+        [R, k] = l.useState(''),
         O = l.useCallback(o()(k, 300), []),
         D = l.useCallback(
             (e) => {
-                R(e), O(e);
+                L(e), O(e);
             },
             [O]
         ),
         w = l.useCallback(() => {
-            R(''), k('');
+            L(''), k('');
         }, []),
         B = l.useMemo(() => {
             if (null == p || null == y || null == m) return null;
@@ -219,7 +219,7 @@ function A(e) {
                             if (null == a) return;
                             let s = x[a];
                             if (null != s) {
-                                if (L.length > 0) {
+                                if (R.length > 0) {
                                     var o, c, d, u, h;
                                     let e = null !== (u = null === (o = y[r.toString()]) || void 0 === o ? void 0 : o.title) && void 0 !== u ? u : (0, f.wt)(r),
                                         t = null !== (h = null === (d = y[r.toString()]) || void 0 === d ? void 0 : null === (c = d.description) || void 0 === c ? void 0 : c.toString()) && void 0 !== h ? h : '',
@@ -227,10 +227,10 @@ function A(e) {
                                         l = E._o.has(r),
                                         s = E.Qn.includes(a),
                                         p = l ? Z.intl.string(Z.t.k7Kqj4) : s ? Z.intl.string(Z.t.IfqUEB) : null,
-                                        m = j(L, e),
-                                        g = j(L, t),
-                                        C = j(L, i),
-                                        x = null != p && j(L, p);
+                                        m = j(R, e),
+                                        g = j(R, t),
+                                        C = j(R, i),
+                                        x = null != p && j(R, p);
                                     if (!m && !g && !C && !x) return;
                                 }
                                 e.push(
@@ -252,7 +252,7 @@ function A(e) {
                     }),
                 e
             );
-        }, [p, y, m, A, P, x, L, t]);
+        }, [p, y, m, A, P, x, R, t]);
     return null == h || null == m
         ? null
         : (0, i.jsxs)('div', {

@@ -37,8 +37,8 @@ var i,
     y = n(955843),
     P = n(868554),
     M = n(464792),
-    R = n(605236),
-    L = n(243778),
+    L = n(605236),
+    R = n(243778),
     k = n(258609),
     O = n(446226),
     D = n(569545),
@@ -104,7 +104,7 @@ function eT(e) {
         }, [I, t.id, l, i]),
         b = (0, V.x8)('GoLiveButton'),
         Z = (0, y.Zm)(t, 'GoLiveButton'),
-        N = (0, R.wE)(m.z.CONSUMABLE_HD_POTION_UPSELL),
+        N = (0, L.wE)(m.z.CONSUMABLE_HD_POTION_UPSELL),
         S = (Z && !N) || (t.isHDStreamSplashed && null == u),
         T = () => {
             if (l) {
@@ -155,7 +155,7 @@ function eT(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             Z
-                ? (0, r.jsx)(L.ZP, {
+                ? (0, r.jsx)(R.ZP, {
                       contentTypes: [m.z.CONSUMABLE_HD_POTION_UPSELL],
                       bypassAutoDismiss: !0,
                       children: (e) => {
@@ -185,7 +185,7 @@ function eT(e) {
                         }
                     })
                   : t.isHDStreamSplashed
-                    ? (0, r.jsx)(L.ZP, {
+                    ? (0, r.jsx)(R.ZP, {
                           contentTypes: [m.z.HD_STREAMING_POTION_BANNER],
                           bypassAutoDismiss: !0,
                           children: (e) => {
@@ -203,7 +203,7 @@ function eT(e) {
                           }
                       })
                     : b && 0 === d.length
-                      ? (0, r.jsx)(L.ZP, {
+                      ? (0, r.jsx)(R.ZP, {
                             contentTypes: [m.z.TRIAL_FOR_ALL_STREAM_POPOUT],
                             bypassAutoDismiss: !0,
                             children: (e) => {
@@ -449,11 +449,11 @@ t.ZP = function (e) {
             return (null !== (e = null == E ? void 0 : E.channelId) && void 0 !== e ? e : es.Z.getVoiceChannelId()) === n.id;
         }),
         M = (0, S.Z)(n, !0),
-        R = (0, p.e7)([I.ZP], () => {
+        L = (0, p.e7)([I.ZP], () => {
             let e = I.ZP.getSelfEmbeddedActivityForChannel(n.id);
             return null != e ? e.applicationId : null;
         }),
-        { reachedLimit: L, limit: D } = (0, eh.Z)(n),
+        { reachedLimit: R, limit: D } = (0, eh.Z)(n),
         { analyticsLocations: B } = (0, Z.ZP)(b.Z.VOICE_CONTROL_TRAY);
     if (!P)
         return (0, r.jsx)(Z.Gt, {
@@ -505,7 +505,7 @@ t.ZP = function (e) {
                                         cameraUnavailable: u,
                                         onChange: eS,
                                         onCameraUnavailable: ex.Z,
-                                        channelLimitReached: L,
+                                        channelLimitReached: R,
                                         channelLimit: D,
                                         popoutOpen: i,
                                         onPopoutClick: n
@@ -563,7 +563,7 @@ t.ZP = function (e) {
                               })
                             : null,
                         (0, r.jsx)(eA, {
-                            connectedActivityApplicationId: R,
+                            connectedActivityApplicationId: L,
                             currentUser: c,
                             channel: n,
                             onDisconnectCall: l

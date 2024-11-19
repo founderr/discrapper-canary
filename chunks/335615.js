@@ -35,8 +35,8 @@ var i = n(200651),
     y = n(313201),
     P = n(623624),
     M = n(518738),
-    R = n(155409),
-    L = n(184301),
+    L = n(155409),
+    R = n(184301),
     k = n(347475),
     O = n(439170),
     D = n(430824),
@@ -85,7 +85,7 @@ class J extends l.Component {
             _ = null != g ? new Date(g) : null;
         return (0, i.jsx)(m.Popout, {
             preload: () =>
-                (0, L.Z)(r, {
+                (0, R.Z)(r, {
                     channelId: d.id,
                     guildId: h
                 }),
@@ -342,7 +342,7 @@ class et extends l.Component {
                       })
                     : 0 === t
                       ? (0, i.jsx)(
-                            R.Z,
+                            L.Z,
                             {
                                 tutorialId: 'whos-online',
                                 position: 'left',

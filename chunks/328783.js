@@ -64,8 +64,8 @@ t.Z = s.memo(function (e) {
         ),
         E = s.useCallback((e) => (0, d.nE)(e, !0, h.Sbl.USER_SETTINGS), []),
         _ = s.useCallback((e) => e === a, [a]),
-        f = s.useCallback((e) => e, []),
-        I = s.useCallback(() => (0, d.nE)(null, !1), []);
+        I = s.useCallback((e) => e, []),
+        f = s.useCallback(() => (0, d.nE)(null, !1), []);
     return (0, i.jsxs)(o.Z, {
         title: g.intl.string(g.t.umdfaG),
         titleId: x,
@@ -83,8 +83,8 @@ t.Z = s.memo(function (e) {
                 select: E,
                 renderOptionValue: C,
                 renderOptionLabel: T,
-                serialize: f,
-                clear: I,
+                serialize: I,
+                clear: f,
                 clearable: null != a
             })
         ]

@@ -158,5 +158,5 @@ function R(e) {
             updateRule: t.updateRule,
             removeRule: t.removeRule
         };
-    });
+    }, i.X);
 }

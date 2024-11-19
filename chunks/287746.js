@@ -29,8 +29,8 @@ var i = n(200651),
     y = n(46332),
     P = n(533379),
     M = n(555573),
-    R = n(213459),
-    L = n(456007),
+    L = n(213459),
+    R = n(456007),
     k = n(10718),
     O = n(998698),
     D = n(895924),
@@ -83,8 +83,8 @@ var i = n(200651),
     ey = n(709054),
     eP = n(838440),
     eM = n(127654),
-    eR = n(979956),
-    eL = n(655687),
+    eL = n(979956),
+    eR = n(655687),
     ek = n(165540),
     eO = n(583027),
     eD = n(25007),
@@ -168,7 +168,7 @@ class eX extends l.PureComponent {
                 command: l,
                 section: e,
                 location: D.Vh.RECALL,
-                initialValues: (0, L.Dw)(l, null != i ? i : [])
+                initialValues: (0, R.Dw)(l, null != i ? i : [])
             });
         }
     }
@@ -341,8 +341,8 @@ class eX extends l.PureComponent {
                         if (
                             !(await (0, y.L)({
                                 applicationId: l.applicationId,
-                                userIndexState: R.ZP.getUserState(),
-                                guildIndexState: R.ZP.getGuildState(o.guild_id),
+                                userIndexState: L.ZP.getUserState(),
+                                guildIndexState: L.ZP.getGuildState(o.guild_id),
                                 location: t,
                                 sectionName: n,
                                 entrypoint: i
@@ -411,8 +411,8 @@ class eX extends l.PureComponent {
                             }
                         );
                     if (null != n && n.length > 0) {
-                        let e = (0, eR.KZ)(n);
-                        if ((0, eR.Bf)(e, null == s ? void 0 : s.id))
+                        let e = (0, eL.KZ)(n);
+                        if ((0, eL.Bf)(e, null == s ? void 0 : s.id))
                             return (
                                 (0, eM.G)(o, e),
                                 {
@@ -553,8 +553,8 @@ class eJ extends l.PureComponent {
                         : null
                 ]
             }),
-            R = Z && N,
-            L = R && N ? P : M,
+            L = Z && N,
+            R = L && N ? P : M,
             k = a()({
                 [ez.barWithAppLauncherButton]: b,
                 [ez.barWithAppsDMsUI]: Z
@@ -621,17 +621,17 @@ class eJ extends l.PureComponent {
                                                       : (0, i.jsxs)('form', {
                                                             ref: this.inputFormRef,
                                                             onSubmit: eK,
-                                                            className: a()(eV.form, { [eV.formWithLoadedChatInput]: !R }),
+                                                            className: a()(eV.form, { [eV.formWithLoadedChatInput]: !L }),
                                                             children: [
                                                                 x && (0, i.jsx)(ec.Z, { channelId: n.id }),
                                                                 n.isPrivate()
                                                                     ? (0, i.jsx)(eU.Z, {
                                                                           channel: n,
-                                                                          children: L
+                                                                          children: R
                                                                       })
                                                                     : (0, i.jsx)(eH.Z, {
                                                                           channel: n,
-                                                                          children: L
+                                                                          children: R
                                                                       }),
                                                                 (0, i.jsx)(_.Z, {
                                                                     channel: n,
@@ -739,7 +739,7 @@ function eQ(e) {
 }
 t.Z = l.memo(function (e) {
     let { channel: t, guild: n, chatInputType: r, filterAfterTimestamp: a } = e,
-        { placeholder: s, accessibilityLabel: o } = (0, eL.Z)(t),
+        { placeholder: s, accessibilityLabel: o } = (0, eR.Z)(t),
         c = (0, eu.S)(eN.default.getCurrentUser(), t),
         [d] = (0, Q.AB)(null == n ? void 0 : n.id),
         u = (0, q.Ux)(null == n ? void 0 : n.id),
@@ -765,8 +765,8 @@ t.Z = l.memo(function (e) {
         channelId: y,
         commands: M
     });
-    let R = l.useRef(null),
-        L = (0, h.e7)([j.Z], () => j.Z.appDMChannelsWithFailedLoads().has(t.id));
+    let L = l.useRef(null),
+        R = (0, h.e7)([j.Z], () => j.Z.appDMChannelsWithFailedLoads().has(t.id));
     return (0, i.jsx)(eJ, {
         channel: t,
         isEditing: null != (0, h.e7)([e_.Z], () => e_.Z.getEditingMessageId(t.id)),
@@ -788,7 +788,7 @@ t.Z = l.memo(function (e) {
         showAppDMsUI: v,
         isInitialLoading: I,
         showEntryPointAppCommandButton: null != E,
-        entryPointCommandButtonRef: R,
-        isFailedAppDMLoad: L
+        entryPointCommandButtonRef: L,
+        isFailedAppDMLoad: R
     });
 });

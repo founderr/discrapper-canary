@@ -15,8 +15,8 @@ var i = t(200651),
     u = t(271383),
     f = t(430824),
     m = t(496675),
-    I = t(700785),
-    x = t(785717),
+    x = t(700785),
+    I = t(785717),
     p = t(256226),
     h = t(678738),
     v = t(314172),
@@ -24,7 +24,7 @@ var i = t(200651),
     Z = t(388032),
     _ = t(9834);
 function j(e) {
-    let { user: n, currentUser: t, guild: c, guildMember: a, roles: d, highestRole: u, canManageRoles: f, onAddRole: m, onRemoveRole: x } = e,
+    let { user: n, currentUser: t, guild: c, guildMember: a, roles: d, highestRole: u, canManageRoles: f, onAddRole: m, onRemoveRole: I } = e,
         h = f && null != a,
         j = l.useMemo(() => 'roles-'.concat((0, o.Z)()), []),
         b = (0, r.ZP)({
@@ -35,8 +35,8 @@ function j(e) {
             wrap: !0
         }),
         E = d.length,
-        T = 0 === E ? Z.intl.string(Z.t['vR7M+/']) : Z.intl.formatToPlainString(Z.t.PCs0oq, { numRoles: E }),
-        N = d.map((e) => {
+        N = 0 === E ? Z.intl.string(Z.t['vR7M+/']) : Z.intl.formatToPlainString(Z.t.PCs0oq, { numRoles: E }),
+        S = d.map((e) => {
             var l;
             return (0, i.jsx)(
                 p.Z,
@@ -44,8 +44,8 @@ function j(e) {
                     role: e,
                     guildId: c.id,
                     disableBorderColor: !0,
-                    onRemove: () => x(e),
-                    canRemove: f ? I.r6(c, t.id, u, e) : (null === (l = e.tags) || void 0 === l ? void 0 : l.guild_connections) === null && n.id === t.id
+                    onRemove: () => I(e),
+                    canRemove: f ? x.r6(c, t.id, u, e) : (null === (l = e.tags) || void 0 === l ? void 0 : l.guild_connections) === null && n.id === t.id
                 },
                 e.id
             );
@@ -57,11 +57,11 @@ function j(e) {
                 let { ref: n, ...t } = e;
                 return (0, i.jsxs)('div', {
                     className: _.root,
-                    'aria-label': T,
+                    'aria-label': N,
                     ref: n,
                     ...t,
                     children: [
-                        N,
+                        S,
                         h &&
                             (0, i.jsx)(v.Z, {
                                 guild: c,
@@ -78,7 +78,7 @@ function j(e) {
 }
 function b(e) {
     let { user: n, currentUser: t, guild: o, scrollIntoView: r } = e,
-        { trackUserProfileAction: s } = (0, x.KZ)(),
+        { trackUserProfileAction: s } = (0, I.KZ)(),
         p = (0, c.e7)([u.ZP], () => u.ZP.getMember(o.id, n.id)),
         v = (0, c.e7)([f.Z], () => f.Z.getRoles(o.id)),
         _ = null == p ? void 0 : p.roles,
@@ -96,9 +96,9 @@ function b(e) {
                           }),
             [v, _]
         ),
-        E = I.e9(o, t.id),
-        [T] = (0, c.Wu)([m.Z], () => [m.Z.can(g.Plq.MANAGE_ROLES, o), null != o ? m.Z.getGuildVersion(o.id) : null]),
-        N = l.useCallback(
+        E = x.e9(o, t.id),
+        [N] = (0, c.Wu)([m.Z], () => [m.Z.can(g.Plq.MANAGE_ROLES, o), null != o ? m.Z.getGuildVersion(o.id) : null]),
+        S = l.useCallback(
             (e) => {
                 var t, i;
                 s({ action: 'REMOVE_ROLE' });
@@ -107,7 +107,7 @@ function b(e) {
             },
             [_, o.id, n.id, s]
         ),
-        S = l.useCallback(
+        T = l.useCallback(
             (e) => {
                 s({ action: 'ADD_ROLE' });
                 let t = null != _ ? _ : [];
@@ -115,7 +115,7 @@ function b(e) {
             },
             [_, o.id, n.id, s]
         ),
-        y = T && null != p;
+        y = N && null != p;
     return 0 !== b.length || y
         ? (0, i.jsx)(h.Z, {
               heading: Z.intl.string(Z.t.LPJmLy),
@@ -127,9 +127,9 @@ function b(e) {
                   guildMember: p,
                   roles: b,
                   highestRole: E,
-                  canManageRoles: T,
-                  onAddRole: S,
-                  onRemoveRole: N
+                  canManageRoles: N,
+                  onAddRole: T,
+                  onRemoveRole: S
               })
           })
         : null;

@@ -46,11 +46,11 @@ function A(e) {
                 (0, _.ad)(e, { source: N.on.VOICE_AUTO_OPEN }));
         }, [t, e]);
     })(y);
-    let R = l.useRef(!1);
+    let L = l.useRef(!1);
     if (
         (l.useEffect(() => {
-            if (null == y || R.current) return;
-            R.current = !0;
+            if (null == y || L.current) return;
+            L.current = !0;
             let e = (0, h.K)(v.Z.getChannel(y.id), !0);
             (0, u.yw)(S.rMx.CHANNEL_OPENED, {
                 ...e,
@@ -62,7 +62,7 @@ function A(e) {
         null == y || null == P)
     )
         return null;
-    let L = (0, i.jsx)(Z.Z, {
+    let R = (0, i.jsx)(Z.Z, {
         channel: y,
         baseChannelId: r
     });
@@ -73,7 +73,7 @@ function A(e) {
                 draftType: I.d.ChannelMessage
             }),
             (0, i.jsx)(C.ZP, {
-                toolbar: L,
+                toolbar: R,
                 'aria-label': T.intl.string(T.t.Pwe8tL),
                 children: (0, x.ud)({
                     channel: y,

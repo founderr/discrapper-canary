@@ -33,14 +33,14 @@ function T(e) {
         y = (0, d.e7)([x.default], () => x.default.getUser(s)),
         P = (0, d.e7)([x.default], () => x.default.getCurrentUser()),
         M = (0, d.e7)([v.Z], () => v.Z.getPreviousGoLiveSettings()),
-        R = (0, d.e7)([p.Z], () => p.Z.getChatOpen(r.id)),
-        L = T && null != M && M.resolution !== b.LY.RESOLUTION_1440 && M.frameRate !== b.ws.FPS_60,
+        L = (0, d.e7)([p.Z], () => p.Z.getChatOpen(r.id)),
+        R = T && null != M && M.resolution !== b.LY.RESOLUTION_1440 && M.frameRate !== b.ws.FPS_60,
         k = l.useContext(g.h9),
         O = l.useRef(0),
         [D, w] = l.useState('0');
     l.useEffect(() => {
         (O.current += 1), w(String(O.current));
-    }, [R]);
+    }, [L]);
     let B = l.useMemo(() => {
             let e = 30;
             return k && (e = -30), (O.current += 1), w(String(O.current)), e;
@@ -61,7 +61,7 @@ function T(e) {
             size: u.AvatarSizes.SIZE_48,
             animateOnHover: !0
         }),
-        F = T && !L,
+        F = T && !R,
         V = r.hdStreamingUntil;
     if (null == V || null == y || null == P) return null;
     let z = o()(V).diff(o()(), 'hours'),
@@ -83,10 +83,10 @@ function T(e) {
                     })
                   : Z.intl.formatToPlainString(Z.t.vNbVXF, { username: y.username });
         })(),
-        K = L ? Z.intl.string(Z.t.o7NIjY) : F ? Z.intl.string(Z.t.r6xhBw) : Z.intl.string(Z.t.yKw8Dg);
+        K = R ? Z.intl.string(Z.t.o7NIjY) : F ? Z.intl.string(Z.t.r6xhBw) : Z.intl.string(Z.t.yKw8Dg);
     if (null == y || null == P) return null;
     let Y = () => {
-        if (L) {
+        if (R) {
             let e = v.Z.getPreviousGoLiveSettings(),
                 t = C.Z.getGoLiveSource();
             if (null == e) {

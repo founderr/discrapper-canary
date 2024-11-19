@@ -36,8 +36,8 @@ var i = n(200651),
     y = n(944486),
     P = n(594174),
     M = n(55935),
-    R = n(70956),
-    L = n(709054),
+    L = n(70956),
+    R = n(709054),
     k = n(534091),
     O = n(900164),
     D = n(554838),
@@ -172,7 +172,7 @@ function et(e) {
                     )
                 );
             }
-            if (null != es && es > e.content.timestamp.getTime() * R.Z.Millis.SECOND) return;
+            if (null != es && es > e.content.timestamp.getTime() * L.Z.Millis.SECOND) return;
             let r = j.Z.can(X.Plq.CREATE_INSTANT_INVITE, s);
             if ((0, O.Z)(e.content, r)) return;
             e.type === X.ys_.MESSAGE && null == eb && (eb = e);
@@ -277,7 +277,7 @@ function et(e) {
     ) {
         let e, t;
         let l = A.ZP.getOldestUnreadTimestamp(s.id),
-            r = 0 !== l ? l : L.default.extractTimestamp(s.id),
+            r = 0 !== l ? l : R.default.extractTimestamp(s.id),
             a = (0, M.KC)(new Date(), new Date(r));
         if ((A.ZP.isEstimated(s.id) ? ((e = a ? Q.t.wvtbbG : Q.t.tHqbtr), (t = Q.t.vaPWFR)) : ((e = a ? Q.t.BctFHx : Q.t['3wXb9P']), (t = Q.t['4H8ldH'])), ef && (0, o.tW)(s) && e_.includes(Y.E.SUMMARIES))) {
             let l = A.ZP.ackMessageId(s.id),

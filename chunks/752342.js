@@ -16,8 +16,8 @@ var l = t(481060),
     u = t(648052),
     f = t(867176),
     m = t(438163),
-    I = t(681837),
-    x = t(502762),
+    x = t(681837),
+    I = t(502762),
     p = t(530),
     h = t(871604),
     v = t(952124),
@@ -27,12 +27,12 @@ var l = t(481060),
     j = t(740628),
     b = t(398145),
     E = t(228168),
-    T = t(981631),
-    N = t(388032),
-    S = t(37682);
+    N = t(981631),
+    S = t(388032),
+    T = t(37682);
 function y(e) {
-    let { user: n, currentUser: t, guildId: y, channelId: P, messageId: A, roleId: C, sessionId: L, initialSection: M, initialSubsection: R, transitionState: O, onClose: U, sourceAnalyticsLocations: B = [] } = e,
-        F = y === T.ME ? void 0 : y,
+    let { user: n, currentUser: t, guildId: y, channelId: P, messageId: C, roleId: A, sessionId: L, initialSection: O, initialSubsection: M, transitionState: R, onClose: U, sourceAnalyticsLocations: B = [] } = e,
+        F = y === N.ME ? void 0 : y,
         D = (0, a.ZP)(n.id, F),
         { analyticsLocations: G } = (0, r.ZP)([...B, o.Z.SIMPLIFIED_PROFILE_MODAL]),
         w = (0, c.ZB)({
@@ -41,8 +41,8 @@ function y(e) {
             sourceSessionId: L,
             guildId: F,
             channelId: P,
-            messageId: A,
-            roleId: C
+            messageId: C,
+            roleId: A
         }),
         k = (0, b.Z)(n);
     return (0, i.jsx)(r.Gt, {
@@ -50,11 +50,11 @@ function y(e) {
         children: (0, i.jsx)(c.Mt, {
             value: w,
             children: (0, i.jsx)(l.ModalRoot, {
-                transitionState: O,
-                className: S.root,
+                transitionState: R,
+                className: T.root,
                 hideShadow: !0,
-                'aria-label': N.intl.string(N.t['3N/J2t']),
-                children: (0, i.jsxs)(x.Z, {
+                'aria-label': S.intl.string(S.t['3N/J2t']),
+                children: (0, i.jsxs)(I.Z, {
                     user: n,
                     displayProfile: D,
                     profileType: E.y0.FULL_SIZE,
@@ -74,7 +74,7 @@ function y(e) {
                                     profileType: E.y0.FULL_SIZE
                                 }),
                                 (0, i.jsxs)('div', {
-                                    className: S.headerInner,
+                                    className: T.headerInner,
                                     children: [
                                         (0, i.jsx)(d.Z, {
                                             user: n,
@@ -86,21 +86,21 @@ function y(e) {
                                         (0, i.jsx)(m.Z, {
                                             user: n,
                                             profileType: E.y0.FULL_SIZE,
-                                            hasEntered: O === l.ModalTransitionState.ENTERED,
+                                            hasEntered: R === l.ModalTransitionState.ENTERED,
                                             onCloseProfile: U
                                         }),
                                         (0, i.jsxs)('div', {
-                                            className: S.headerButtons,
+                                            className: T.headerButtons,
                                             children: [
                                                 (0, i.jsx)(_.c, {
                                                     userId: n.id,
                                                     onClose: U,
-                                                    className: S.messageTextButton
+                                                    className: T.messageTextButton
                                                 }),
                                                 (0, i.jsx)(_.v, {
                                                     userId: n.id,
                                                     onClose: U,
-                                                    tooltipContainerClassName: S.messageIconButton
+                                                    tooltipContainerClassName: T.messageIconButton
                                                 }),
                                                 (0, i.jsx)(g.Z, {
                                                     user: n,
@@ -114,7 +114,7 @@ function y(e) {
                             ]
                         }),
                         (0, i.jsxs)('div', {
-                            className: S.body,
+                            className: T.body,
                             children: [
                                 (0, i.jsx)(p.Z, {
                                     user: n,
@@ -122,22 +122,22 @@ function y(e) {
                                     nickname: s.ZP.getName(F, P, n),
                                     pronouns: null == D ? void 0 : D.pronouns,
                                     nicknameVariant: 'heading-xl/bold',
-                                    nicknameIcons: (0, i.jsx)(I.Z, { userId: n.id }),
+                                    nicknameIcons: (0, i.jsx)(x.Z, { userId: n.id }),
                                     tags: (0, i.jsx)(u.Z, {
                                         displayProfile: D,
                                         profileType: E.y0.FULL_SIZE,
                                         onClose: U
                                     })
                                 }),
-                                (0, i.jsx)(x.Z.Overlay, {
-                                    className: S.overlay,
+                                (0, i.jsx)(I.Z.Overlay, {
+                                    className: T.overlay,
                                     children: (0, i.jsx)(j.Z, {
                                         user: n,
                                         currentUser: t,
                                         displayProfile: D,
                                         items: k,
-                                        initialSection: null != M ? M : E.oh.BOT_INFO,
-                                        initialSubsection: R,
+                                        initialSection: null != O ? O : E.oh.BOT_INFO,
+                                        initialSubsection: M,
                                         onClose: U
                                     })
                                 })

@@ -28,8 +28,8 @@ function E() {
         E = (0, l.e7)([g.Z], () => g.Z.theme),
         {
             canSetInputDevice: _,
-            canSetOutputDevice: f,
-            inputDeviceId: I,
+            canSetOutputDevice: I,
+            inputDeviceId: f,
             outputDeviceId: N
         } = (0, l.cj)([h.Z], () => ({
             canSetInputDevice: h.Z.supports(x.AN.AUDIO_INPUT_DEVICE),
@@ -45,7 +45,7 @@ function E() {
             className: C.marginTop8,
             children: S.intl.format(S.t['1iK6UV'], { onDownloadClick: () => (0, p.y)('Help Text Input Devices') })
         })),
-        !f &&
+        !I &&
             (t = (0, i.jsx)(o.FormText, {
                 type: o.FormText.Types.DESCRIPTION,
                 className: C.marginTop8,
@@ -96,7 +96,7 @@ function E() {
                         children: S.intl.string(S.t.hHMYbW)
                     }),
                     (0, i.jsx)(o.SingleSelect, {
-                        value: I,
+                        value: f,
                         onChange: (e) =>
                             c.Z.setInputDevice(e, {
                                 location: 'Settings',

@@ -76,7 +76,7 @@ function v(e) {
             },
             [T, P, j]
         ),
-        R = l.useCallback(
+        L = l.useCallback(
             (e) => () => {
                 null != j && (e !== C.AEg.FULL_SCREEN ? ((S.current = e), P(e, C.AEg.FULL_SCREEN), (0, g.Dj)(j)) : M(e));
             },
@@ -84,7 +84,7 @@ function v(e) {
         );
     return (l.useEffect(() => {
         let e = () => {
-            null != j && !(0, g.rB)(j, T) && b === C.AEg.FULL_SCREEN && R(b)();
+            null != j && !(0, g.rB)(j, T) && b === C.AEg.FULL_SCREEN && L(b)();
         };
         return (
             T.addEventListener(g.NO, e),
@@ -92,7 +92,7 @@ function v(e) {
                 T.removeEventListener(g.NO, e);
             }
         );
-    }, [T, b, R, j]),
+    }, [T, b, L, j]),
     l.useEffect(
         () => (
             p.default.track(C.rMx.VIDEO_LAYOUT_TOGGLED, {
@@ -117,7 +117,7 @@ function v(e) {
               node: j,
               guestWindow: d,
               className: x.rightTrayIcon,
-              onClick: R(b)
+              onClick: L(b)
           })
         : null;
 }

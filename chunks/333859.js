@@ -1,6 +1,6 @@
 n.d(t, {
     c: function () {
-        return f;
+        return I;
     }
 });
 var i = n(200651),
@@ -24,7 +24,7 @@ var i = n(200651),
 let _ = () => {
         (0, d.nJ)(), (0, a.xf)();
     },
-    f = () => {
+    I = () => {
         let { analyticsLocations: e } = (0, c.ZP)(o.Z.USER_SETTINGS),
             t = (0, r.e7)([u.Z], () => u.Z.isUpsellPreview),
             { enabled: n } = h.Z.getCurrentConfig(

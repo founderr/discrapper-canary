@@ -33,7 +33,7 @@ t.Z = function (e, t, n) {
         (y.current = n),
         i.useCallback(
             (n) => {
-                var i, P, M, R, L;
+                var i, P, M, L, R;
                 if (!y.current || n.target !== n.currentTarget) return;
                 let k = !n.altKey && !n.ctrlKey && !n.metaKey && !n.shiftKey,
                     O = n.altKey && !(n.ctrlKey || n.metaKey || n.shiftKey),
@@ -58,7 +58,7 @@ t.Z = function (e, t, n) {
                         break;
                     case 'p':
                         if (k || B) {
-                            if (((R = H), (L = U), !R.isSystemDM() && !(0, N.Z)(L) && (A(R) || R.isPrivate()))) n.preventDefault(), (0, T.rY)(H, U, n);
+                            if (((L = H), (R = U), !L.isSystemDM() && !(0, N.Z)(R) && (A(L) || L.isPrivate()))) n.preventDefault(), (0, T.rY)(H, U, n);
                         }
                         break;
                     case '+':

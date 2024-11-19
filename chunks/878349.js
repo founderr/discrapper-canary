@@ -25,7 +25,7 @@ function C(e) {
         A = (0, u.ZP)(),
         y = (0, o.wj)(A) || t ? g : f,
         { width: P = 0, ref: M } = (0, d.Z)(),
-        { width: R = 0, ref: L } = (0, d.Z)();
+        { width: L = 0, ref: R } = (0, d.Z)();
     return (0, i.jsxs)(c.TooltipContainer, {
         text: (0, i.jsx)(p.X, {
             textColor: 'always-white',
@@ -58,7 +58,7 @@ function C(e) {
                     [m.labelChecked]: t,
                     [m.labelUnchecked]: !t && !C
                 }),
-                style: b ? { width: t ? P : P + R } : void 0,
+                style: b ? { width: t ? P : P + L } : void 0,
                 children: [
                     t
                         ? (0, i.jsx)(c.Shine, {
@@ -72,7 +72,7 @@ function C(e) {
                         alt: x
                     }),
                     (0, i.jsx)('span', {
-                        ref: L,
+                        ref: R,
                         children: (0, i.jsx)(c.Text, {
                             className: a()(m.burstText, {
                                 [m.visuallyHidden]: t && b,

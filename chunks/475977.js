@@ -17,8 +17,8 @@ var i = n(200651),
     C = n(474936),
     E = n(388032),
     _ = n(768983),
-    f = n(786792),
-    I = n(161594);
+    I = n(786792),
+    f = n(161594);
 let N = (e) => {
     var t, n, s, r, a;
     let { displayOptions: o, marketingVariant: c } = e;
@@ -29,7 +29,7 @@ let N = (e) => {
                 'aria-hidden': !0,
                 role: 'presentation',
                 children: (0, i.jsx)('img', {
-                    src: null !== (s = null == o ? void 0 : o.artSrc) && void 0 !== s ? s : I,
+                    src: null !== (s = null == o ? void 0 : o.artSrc) && void 0 !== s ? s : f,
                     className: l()(_.art, { [_.tideArt]: null != c && c === x.C5.TIDE }),
                     alt: ''
                 })
@@ -58,7 +58,7 @@ t.Z = () => {
     let t;
     let { analyticsLocations: n } = (0, m.ZP)(u.Z.COLLECTIBLES_PROFILE_SETTINGS_UPSELL),
         r = s.useRef(null),
-        I = (0, x.ZP)('CollectiblesUpsellBanner'),
+        f = (0, x.ZP)('CollectiblesUpsellBanner'),
         A = (0, c.e7)([p.Z], () => p.Z.getMarketingBySurface(a.K.EDIT_PROFILE_SETTINGS));
     return (
         (t =
@@ -69,7 +69,7 @@ t.Z = () => {
                       title: () => A.title,
                       description: () => A.body
                   }
-                : S.GX[I]),
+                : S.GX[f]),
         s.useEffect(() => {
             h.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: C.cd.COLLECTIBLES_PROFILE_SETTINGS_UPSELL,
@@ -78,12 +78,12 @@ t.Z = () => {
         }, [n]),
         (0, i.jsxs)('div', {
             ref: r,
-            className: l()(_.container, { [_.robertContainer]: I === x.C5.ROBERT }),
-            style: { backgroundImage: 'url('.concat(null !== (e = null == t ? void 0 : t.backgroundSrc) && void 0 !== e ? e : f, ')') },
+            className: l()(_.container, { [_.robertContainer]: f === x.C5.ROBERT }),
+            style: { backgroundImage: 'url('.concat(null !== (e = null == t ? void 0 : t.backgroundSrc) && void 0 !== e ? e : I, ')') },
             children: [
                 (0, i.jsx)(N, {
                     displayOptions: t,
-                    marketingVariant: I
+                    marketingVariant: f
                 }),
                 (0, i.jsx)(d.Button, {
                     onClick: () => {

@@ -49,7 +49,7 @@ function N(e) {
         y = (0, s.useModalsStore)(s.hasAnyModalOpenSelector),
         P = (0, f.Z)(),
         M = P.filter((e) => e.twoWayLink),
-        [R, L] = l.useState(!1);
+        [L, R] = l.useState(!1);
     if (null == N && 0 === P.length) return null;
     let k = v.WtW.VOICE !== j && [v.AEg.NO_CHAT, v.AEg.FULL_SCREEN].includes(A) ? 'top' : 'bottom',
         O = [];
@@ -67,8 +67,8 @@ function N(e) {
                             position: k,
                             spacing: o ? 16 : void 0,
                             positionKey: ''.concat(j, ':').concat(A),
-                            onRequestClose: () => L(!1),
-                            shouldShow: (o || R) && !T && !y,
+                            onRequestClose: () => R(!1),
+                            shouldShow: (o || L) && !T && !y,
                             renderPopout: (e) => {
                                 let { closePopout: n } = e;
                                 return (0, i.jsx)(d.Z, {
@@ -77,7 +77,7 @@ function N(e) {
                                               popoutPosition: k,
                                               onDismiss: () => r(I.L.UNKNOWN),
                                               onAccept: () => {
-                                                  r(I.L.UNKNOWN), L(!0);
+                                                  r(I.L.UNKNOWN), R(!0);
                                               },
                                               gameConsoleAccounts: M
                                           })
@@ -94,7 +94,7 @@ function N(e) {
                                 return (0, i.jsx)(u.Z, {
                                     ...e,
                                     ...x,
-                                    onClick: () => L(!0),
+                                    onClick: () => R(!0),
                                     label: null != (t = S) ? (t === _.YE.XBOX ? E.intl.string(E.t.T0uYKy) : E.intl.string(E.t.FWAzS0)) : E.intl.string(E.t['mbi/fH']),
                                     iconComponent: (0, C.Z)(S)
                                 });
