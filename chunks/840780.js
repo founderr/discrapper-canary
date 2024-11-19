@@ -204,7 +204,7 @@ t.Z = (0, f.Z)(function (e) {
         m = (0, c.e7)([g.Z], () => g.Z.useReducedMotion),
         f = (0, c.e7)([_.ZP], () => (null != u ? _.ZP.getSelfEmbeddedActivityForChannel(u.id) : null)),
         C = (0, c.e7)([U.Z, B.Z, k.ZP], () => (null != o ? N.JL(o, U.Z, B.Z, !1) : null != n && N.h_(k.ZP.getChannels(n), U.Z, B.Z).length > 0)),
-        [v] = (0, x.Z)([
+        [b] = (0, x.Z)([
             null !==
                 (t = (function () {
                     if (null != p && null != p.id) return p.id;
@@ -214,28 +214,29 @@ t.Z = (0, f.Z)(function (e) {
                 ? t
                 : ''
         ]),
-        b = (0, c.e7)([G.Z], () => (0, y.Z)(G.Z) && (0, Y.isWindows)()),
-        S = (0, c.e7)([H.Z], () => (null != r ? H.Z.findActivity(r, (e) => e.type === J.IIU.PLAYING) : null)),
-        Z = null != h && h.ownerId === r && h.state !== J.jm8.ENDED,
-        T = (0, c.e7)([W.default, V.Z], () => (null != u ? (0, I.F6)(u, W.default, V.Z) : void 0)),
-        A = (0, R.Z)();
+        S = null != (0, c.e7)([_.ZP], () => _.ZP.getCurrentEmbeddedActivity()) && (0, v.Z)(),
+        Z = (0, c.e7)([G.Z], () => (0, y.Z)(G.Z) && (0, Y.isWindows)()),
+        T = (0, c.e7)([H.Z], () => (null != r ? H.Z.findActivity(r, (e) => e.type === J.IIU.PLAYING) : null)),
+        A = null != h && h.ownerId === r && h.state !== J.jm8.ENDED,
+        j = (0, c.e7)([W.default, V.Z], () => (null != u ? (0, I.F6)(u, W.default, V.Z) : void 0)),
+        M = (0, R.Z)();
     return (0, i.jsx)(en, {
         ...l,
         guildId: n,
-        canGoLive: b,
-        activity: S,
+        canGoLive: Z || S,
+        activity: T,
         embeddedActivity: f,
         userId: r,
         runningGame: a,
-        application: v,
+        application: b,
         useReducedMotion: m,
-        isStreaming: Z,
+        isStreaming: A,
         channel: u,
         canStream: C,
         stream: h,
         streamMetadata: p,
-        channelName: T,
+        channelName: j,
         guildForConnectedChannel: d,
-        streamQualityIndicator: A
+        streamQualityIndicator: M
     });
 });
