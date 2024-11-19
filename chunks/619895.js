@@ -1,40 +1,20 @@
 t.d(n, {
-    Qm: function () {
-        return E;
-    },
-    hR: function () {
-        return p;
-    },
-    yJ: function () {
+    Q: function () {
         return s;
+    },
+    h: function () {
+        return m;
     }
 });
 var i = t(192379),
     l = t(892814),
-    a = t(442837),
-    o = t(895924),
-    r = t(581364),
-    c = t(823379),
-    d = t(399654),
+    o = t(442837),
+    a = t(895924),
+    d = t(581364),
+    r = t(823379),
+    c = t(399654),
     u = t(844439);
-let s = {
-        '1181475143340539995': {
-            imageOption: 'image',
-            overrideSendCommandInfo: {
-                commandId: '1272485059353640963',
-                imageOption: 'image'
-            }
-        },
-        '991195178360635431': {
-            imageOption: 'image',
-            onlyAllowEdit: !0
-        },
-        '1091213298818613408': { imageOption: 'image' },
-        '1029794689932611625': { imageOption: 'image' },
-        '1238332854602043454': { imageOption: 'image' }
-    },
-    m = Object.keys(s);
-function E(e) {
+function s(e) {
     let { contentType: n } = e;
     switch (n) {
         case 'image/jpeg':
@@ -49,12 +29,12 @@ function E(e) {
             return '';
     }
 }
-function p(e) {
+function m(e) {
     let { channelId: n } = e,
-        { fetchState: t, recommendationsSections: E } = (function (e) {
+        { fetchState: t, recommendationsSections: s } = (function (e) {
             let { channelId: n } = e,
                 t = l.I.CONTEXTUAL_IMAGE,
-                o = i.useMemo(
+                a = i.useMemo(
                     () => ({
                         channelId: n,
                         location: t,
@@ -63,68 +43,80 @@ function p(e) {
                     [n, t]
                 );
             i.useEffect(() => {
-                (0, d.a)(o);
-            }, [o]);
-            let { fetchState: r, recommendationsSections: c } = (0, a.cj)([u.ZP], () => ({
-                fetchState: u.ZP.getFetchState(o),
-                recommendationsSections: u.ZP.getRecommendations(o)
+                (0, c.a)(a);
+            }, [a]);
+            let { fetchState: d, recommendationsSections: r } = (0, o.cj)([u.ZP], () => ({
+                fetchState: u.ZP.getFetchState(a),
+                recommendationsSections: u.ZP.getRecommendations(a)
             }));
             return {
-                fetchState: r,
-                recommendationsSections: c
+                fetchState: d,
+                recommendationsSections: r
             };
         })({ channelId: n });
     return {
         fetchState: t,
         imageRecCommandContexts: i.useMemo(() => {
-            let e = E.length > 0 ? E[0].items : void 0;
-            return void 0 === e
-                ? []
-                : m
-                      .map((n) => {
-                          var t, i, l, a;
-                          let c, d;
-                          let u = e.find((e) => {
-                              var t;
-                              return null != (c = null === (t = e.commands) || void 0 === t ? void 0 : t.find((e) => e.id === n));
-                          });
-                          if (null == u) return null;
-                          let { application: m } = u;
-                          if (null == c) return null;
-                          let E = (0, r.Z8)({
-                                  rootCommand: c,
-                                  command: c,
-                                  applicationId: m.id
-                              }),
-                              p = null === (t = s[n].overrideSendCommandInfo) || void 0 === t ? void 0 : t.commandId;
-                          if (null != p) {
-                              let e = null != p ? (null === (l = u.commands) || void 0 === l ? void 0 : l.find((e) => e.id === p)) : void 0;
-                              null != e &&
-                                  (d = (0, r.Z8)({
-                                      rootCommand: e,
-                                      command: e,
-                                      applicationId: m.id
-                                  }));
-                          }
-                          return {
-                              command: {
-                                  ...E,
-                                  displayName: E.displayName
-                                      .split(/[_ ]/)
-                                      .map((e) => e.charAt(0).toUpperCase() + e.slice(1))
-                                      .join(' ')
-                              },
-                              overrideSendCommand: d,
-                              section: {
-                                  type: o.Qi.APPLICATION,
-                                  id: m.id,
-                                  icon: m.icon,
-                                  name: null !== (a = null == m ? void 0 : null === (i = m.bot) || void 0 === i ? void 0 : i.username) && void 0 !== a ? a : m.name,
-                                  application: m
-                              }
-                          };
-                      })
-                      .filter(c.lm);
-        }, [E])
+            let e = s.length > 0 ? s[0].items : void 0;
+            if (void 0 === e) return [];
+            let n = {};
+            return (
+                e.forEach((e) => {
+                    var t;
+                    let i = null !== (t = e.command_metadata) && void 0 !== t ? t : {};
+                    Object.keys(i).forEach((e) => {
+                        n[e] = i[e];
+                    });
+                }),
+                Object.keys(n)
+                    .map((n) => {
+                        var t, i, l, o, r, c, u, s, m, E, p, v;
+                        let C, _;
+                        let f = e.find((e) => {
+                            var t;
+                            return null != (C = null === (t = e.commands) || void 0 === t ? void 0 : t.find((e) => e.id === n));
+                        });
+                        if (null == f) return null;
+                        let { application: h } = f;
+                        if (null == C) return null;
+                        let M = (0, d.Z8)({
+                                rootCommand: C,
+                                command: C,
+                                applicationId: h.id
+                            }),
+                            g = null === (l = f.command_metadata) || void 0 === l ? void 0 : null === (i = l[n]) || void 0 === i ? void 0 : null === (t = i.overrideSendCommandInfo) || void 0 === t ? void 0 : t.commandId;
+                        if (null != g) {
+                            let e = null != g ? (null === (p = f.commands) || void 0 === p ? void 0 : p.find((e) => e.id === g)) : void 0;
+                            null != e &&
+                                (_ = (0, d.Z8)({
+                                    rootCommand: e,
+                                    command: e,
+                                    applicationId: h.id
+                                }));
+                        }
+                        return {
+                            command: {
+                                ...M,
+                                displayName: M.displayName
+                                    .split(/[_ ]/)
+                                    .map((e) => e.charAt(0).toUpperCase() + e.slice(1))
+                                    .join(' ')
+                            },
+                            imageOption: null === (r = f.command_metadata) || void 0 === r ? void 0 : null === (o = r[n]) || void 0 === o ? void 0 : o.imageOption,
+                            overrideSendCommand: _,
+                            overrideSendCommandInfo: null === (u = f.command_metadata) || void 0 === u ? void 0 : null === (c = u[n]) || void 0 === c ? void 0 : c.overrideSendCommandInfo,
+                            onlyAllowEdit: null === (m = f.command_metadata) || void 0 === m ? void 0 : null === (s = m[n]) || void 0 === s ? void 0 : s.onlyAllowEdit,
+                            section: {
+                                type: a.Qi.APPLICATION,
+                                id: h.id,
+                                icon: h.icon,
+                                name: null !== (v = null == h ? void 0 : null === (E = h.bot) || void 0 === E ? void 0 : E.username) && void 0 !== v ? v : h.name,
+                                application: h
+                            }
+                        };
+                    })
+                    .filter(r.lm)
+            );
+        }, [s])
     };
 }
