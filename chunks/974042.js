@@ -82,6 +82,7 @@ class b {
                         ...N(t),
                         ...S(t),
                         spam: (0, h.A)({ location: 'friend-store' }) && _.Z.isSpam(t),
+                        ignoredUser: _.Z.isIgnored(t),
                         giftIntentType: e === I.OGo.FRIEND && u.Z.isTopAffinityFriendAnniversary({ userId: t }) ? C.hX.FRIEND_ANNIVERSARY : void 0
                     })
             ),
