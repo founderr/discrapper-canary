@@ -1,21 +1,45 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return l;
+    },
+    i: function () {
+        return u;
     }
 });
 var r = n(200651);
 n(192379);
-var i = n(481060),
-    a = n(197320);
-function s(e) {
+var i = n(442837),
+    a = n(481060),
+    s = n(699516),
+    o = n(197320);
+function l(e) {
     let { user: t, guildId: n } = e;
     return (0, r.jsx)('div', {
-        className: a.avatarHalo,
-        children: (0, r.jsx)(i.Avatar, {
-            className: a.avatar,
-            size: i.AvatarSizes.SIZE_40,
+        className: o.avatarHalo,
+        children: (0, r.jsx)(a.Avatar, {
+            className: o.avatar,
+            size: a.AvatarSizes.SIZE_40,
             src: t.getAvatarURL(n, 40),
             'aria-label': t.username
         })
+    });
+}
+function u(e) {
+    let { user: t, guildId: n } = e,
+        l = (0, i.e7)([s.Z], () => s.Z.isBlocked(t.id));
+    return (0, r.jsxs)('div', {
+        className: o.container,
+        children: [
+            (0, r.jsx)(a.Avatar, {
+                className: o.avatar,
+                size: a.AvatarSizes.SIZE_56,
+                src: t.getAvatarURL(n, 64),
+                'aria-label': t.username
+            }),
+            (0, r.jsx)('div', {
+                className: o.avatarIconContainer,
+                children: l ? (0, r.jsx)(a.DenyIcon, {}) : (0, r.jsx)(a.EyeSlashIcon, {})
+            })
+        ]
     });
 }

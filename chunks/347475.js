@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return m;
     }
 }),
     n(47120);
@@ -9,45 +9,57 @@ var r = n(200651),
     a = n(512722),
     s = n.n(a),
     o = n(442837),
-    l = n(699516),
-    u = n(594174),
-    c = n(971393),
-    d = n(614417),
-    f = n(601665),
-    _ = n(103113),
-    p = n(738953);
-function h(e) {
+    l = n(922611),
+    u = n(699516),
+    c = n(594174),
+    d = n(971393),
+    f = n(614417),
+    _ = n(601665),
+    p = n(103113),
+    h = n(738953);
+function m(e) {
     let { userId: t, user: n, ...a } = e,
-        h = (0, o.e7)([u.default], () => u.default.getUser(t), [t]),
-        m = null != n ? n : h;
-    s()(null != m, 'UserProfilePopoutWrapper: user cannot be undefined');
-    let g = (0, o.e7)([u.default], () => u.default.getCurrentUser());
-    s()(null != g, 'UserProfilePopoutWrapper: currentUser cannot be undefined');
-    let E = (0, o.e7)([l.Z], () => l.Z.isBlocked(m.id)),
-        [v, b] = i.useState(E),
-        I = (0, c.sS)({ location: 'UserProfilePopoutWrapper' });
-    return v && I
-        ? (0, r.jsx)(d.Z, {
+        m = (0, o.e7)([c.default], () => c.default.getUser(t), [t]),
+        g = null != n ? n : m;
+    s()(null != g, 'UserProfilePopoutWrapper: user cannot be undefined');
+    let E = (0, o.e7)([c.default], () => c.default.getCurrentUser());
+    s()(null != E, 'UserProfilePopoutWrapper: currentUser cannot be undefined');
+    let { isBlocked: v, isIgnored: b } = (0, o.cj)([u.Z], () => ({
+            isBlocked: u.Z.isBlocked(g.id),
+            isIgnored: u.Z.isIgnored(g.id)
+        })),
+        I = (0, l.Do)({ location: 'UserProfileModalWrapper' }),
+        [S, T] = i.useState(v || (I && (b || v))),
+        y = (0, d.sS)({ location: 'UserProfilePopoutWrapper' });
+    return S && y && !I
+        ? (0, r.jsx)(f.Z, {
               ...a,
-              user: m,
-              currentUser: g,
-              onViewBlockedProfileClick: () => b(!1)
+              user: g,
+              currentUser: E,
+              onViewBlockedProfileClick: () => T(!1)
           })
-        : m.isNonUserBot()
-          ? (0, r.jsx)(_.Z, {
+        : S && I
+          ? (0, r.jsx)(f.Y, {
                 ...a,
-                user: m,
-                currentUser: g
+                user: g,
+                currentUser: E,
+                onViewBlockedProfileClick: () => T(!1)
             })
-          : m.bot
-            ? (0, r.jsx)(f.Z, {
+          : g.isNonUserBot()
+            ? (0, r.jsx)(p.Z, {
                   ...a,
-                  user: m,
-                  currentUser: g
+                  user: g,
+                  currentUser: E
               })
-            : (0, r.jsx)(p.Z, {
-                  ...a,
-                  user: m,
-                  currentUser: g
-              });
+            : g.bot
+              ? (0, r.jsx)(_.Z, {
+                    ...a,
+                    user: g,
+                    currentUser: E
+                })
+              : (0, r.jsx)(h.Z, {
+                    ...a,
+                    user: g,
+                    currentUser: E
+                });
 }
