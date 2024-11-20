@@ -1,13 +1,14 @@
 n.d(t, {
     t: function () {
-        return o;
+        return l;
     }
 });
 var r = n(115434),
     i = n(704215),
     a = n(874703),
-    s = n(580130);
-function o(e) {
+    s = n(906690),
+    o = n(580130);
+function l(e) {
     switch (e) {
         case i.z.COLLECTIBLES_SHOP_ENTRY_MARKETING:
             var t, n;
@@ -16,10 +17,10 @@ function o(e) {
         case i.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK:
         case i.z.GIFTING_PROMOTION_MOBILE_FIRST_TIME_HALFSHEET:
         case i.z.GIFTING_PROMOTION_REMINDER:
-            return 1;
+            return s.JY;
         case i.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL:
-            let o = s.Z.getFractionalPremium(!1);
-            if ((null == o ? void 0 : o.length) > 0) return Number(o[0].id);
+            let l = o.Z.getFractionalPremium(!1);
+            if ((null == l ? void 0 : l.length) > 0) return Number(l[0].id);
             return 0;
         default:
             return 0;
