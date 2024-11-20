@@ -9,8 +9,8 @@ var r = n(200651),
     d = n(607070),
     u = n(70097),
     m = n(580747),
-    h = n(594174),
-    p = n(960048),
+    p = n(594174),
+    h = n(960048),
     f = n(381585),
     g = n(597688),
     C = n(884697),
@@ -37,7 +37,7 @@ t.Z = (e) => {
         { categories: M, isFetchingCategories: W, fetchCategoriesError: U, fetchPurchasesError: z, claimError: G, refreshCategories: K } = (0, _.Z)(),
         $ = null !== (t = null != U ? U : z) && void 0 !== t ? t : G,
         J = Array.from(M.values()),
-        Y = (0, o.e7)([h.default], () => h.default.getCurrentUser()),
+        Y = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
         q = a.createRef(),
         Q = (0, x.t)('CollectiblesFeedShop'),
         X = (0, b.m)('CollectiblesFeedShop'),
@@ -75,16 +75,16 @@ t.Z = (e) => {
         }, [K]),
         eu = X ? (null !== (A = null == ea ? void 0 : ea.heroRanking) && void 0 !== A ? A : []) : Q ? T.Ku : T.WC,
         em = a.useMemo(() => eu.map((e) => g.Z.getProduct(e)).filter((e) => null != e), [W, Q]),
-        eh = (0, k.l)(em).slice(0, 4),
-        ep = a.useMemo(() => T.yo.map((e) => g.Z.getProduct(e)).filter((e) => null != e), [W]),
-        ef = (0, k.l)(ep),
+        ep = (0, k.l)(em).slice(0, 4),
+        eh = a.useMemo(() => T.yo.map((e) => g.Z.getProduct(e)).filter((e) => null != e), [W]),
+        ef = (0, k.l)(eh),
         eg = (null == ea ? void 0 : ea.skuId) != null ? (0, T.ZS)(ea.skuId) : void 0;
     if (null == Y) return null;
     let eC = N.intl.formatToPlainString(N.t.wvKYCg, { category_name: null == ea ? void 0 : ea.name });
     if (null != $) {
         let e = [];
         null != U ? e.push('shop load fetch categories error: '.concat($.message)) : null != z ? e.push('shop load fetch purchase error: '.concat($.message)) : e.push('shop load claim error: '.concat($.message)),
-            p.Z.captureMessage(e.join('\n'), {
+            h.Z.captureMessage(e.join('\n'), {
                 tags: {
                     isStaff: Y.isStaff().toString(),
                     preloadEnabled: ee.toString(),
@@ -154,9 +154,8 @@ t.Z = (e) => {
                                                           alt: null == ea ? void 0 : ea.name
                                                       }),
                                                       (0, r.jsx)(c.Text, {
-                                                          color: null != eg && eg.showDarkBannerText ? 'status-warning-text' : 'always-white',
                                                           variant: 'text-md/normal',
-                                                          className: B.subHeaderText,
+                                                          className: null != eg && eg.showDarkBannerText ? B.subHeaderTextDark : B.subHeaderText,
                                                           children: null == ea ? void 0 : ea.summary
                                                       })
                                                   ]
@@ -182,7 +181,7 @@ t.Z = (e) => {
                                       children: [void 0, void 0, void 0, void 0].map((e, t) => (0, r.jsx)(S.K, {}, t))
                                   })
                                 : (0, r.jsx)(r.Fragment, {
-                                      children: eh.map((e, t) => {
+                                      children: ep.map((e, t) => {
                                           let n = g.Z.getCategoryForProduct(e.skuId);
                                           return null == e || null == n
                                               ? null
