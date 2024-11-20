@@ -10,8 +10,8 @@ var l,
     a = t(120356),
     s = t.n(a),
     o = t(512722),
-    d = t.n(o),
-    c = t(481060),
+    c = t.n(o),
+    d = t(481060),
     u = t(624138),
     m = t(813197),
     x = t(981631),
@@ -32,7 +32,7 @@ function v(e, n, t) {
 }
 function f(e) {
     let { className: n, icon: t = null } = e;
-    return (0, i.jsx)(c.ThemeProvider, {
+    return (0, i.jsx)(d.ThemeProvider, {
         theme: x.BRd.LIGHT,
         children: (e) =>
             (0, i.jsx)('div', {
@@ -43,21 +43,21 @@ function f(e) {
 }
 class j extends (l = r.PureComponent) {
     handleExternalFileChange(e) {
-        d()(null != this.inputRef.current, 'ImageInputRef asked to handleExternalFileChange when not mounted'), this.inputRef.current.handleFileChange(e);
+        c()(null != this.inputRef.current, 'ImageInputRef asked to handleExternalFileChange when not mounted'), this.inputRef.current.handleFileChange(e);
     }
     render() {
         var e;
         let n, t, l, r;
-        let { image: a, hint: o, name: d, makeURL: v, disabled: j, onChange: N, showIcon: I, showIconDisabled: p, className: C, imageClassName: E, iconClassName: S, iconWrapperClassName: T, icon: y, hideSize: Z, imageStyle: b, showRemoveButton: _, maxFileSizeBytes: R, onFileSizeError: k, onOpenImageSelectModal: A, 'aria-label': L } = this.props;
+        let { image: a, hint: o, name: c, makeURL: v, disabled: j, onChange: N, showIcon: I, showIconDisabled: p, className: C, imageClassName: E, iconClassName: S, iconWrapperClassName: T, icon: Z, hideSize: y, imageStyle: b, showRemoveButton: _, maxFileSizeBytes: R, onFileSizeError: A, onOpenImageSelectModal: k, 'aria-label': L } = this.props;
         if (
             (null != (n = null != a && /^data:/.test(a) ? a : v(a))
                 ? (t = 'url("'.concat(n, '")'))
-                : null != d &&
-                  (l = (0, i.jsx)(c.Heading, {
+                : null != c &&
+                  (l = (0, i.jsx)(d.Heading, {
                       variant: 'heading-xxl/normal',
                       color: 'always-white',
                       className: g.imageUploaderAcronym,
-                      children: (0, u.Zg)(d)
+                      children: (0, u.Zg)(c)
                   })),
             j)
         )
@@ -74,18 +74,18 @@ class j extends (l = r.PureComponent) {
                         p &&
                             (0, i.jsx)('div', {
                                 className: s()(g.imageUploaderIcon, g.imageUploaderIconDisabled, S),
-                                children: y
+                                children: Z
                             })
                     ]
                 })
             });
         null != a
-            ? (r = (0, i.jsx)(c.Anchor, {
+            ? (r = (0, i.jsx)(d.Anchor, {
                   className: g.removeButton,
                   onClick: this.handleRemove,
                   children: h.intl.string(h.t.N86XcH)
               }))
-            : !Z &&
+            : !y &&
               (r = (0, i.jsx)('small', {
                   className: g.sizeInfo,
                   children: h.intl.format(h.t.AH4c7e, { size: x.IXf })
@@ -94,7 +94,7 @@ class j extends (l = r.PureComponent) {
         return (0, i.jsxs)('div', {
             className: s()(g.imageUploader, C),
             children: [
-                (0, i.jsx)(c.FocusRing, {
+                (0, i.jsx)(d.FocusRing, {
                     within: !0,
                     children: (0, i.jsxs)('div', {
                         className: I ? s()(g.imageUploaderIconWrapper, T) : void 0,
@@ -110,11 +110,11 @@ class j extends (l = r.PureComponent) {
                                         'aria-hidden': !0,
                                         children: l
                                     }),
-                                    null != A
-                                        ? (0, i.jsx)(c.Clickable, {
+                                    null != k
+                                        ? (0, i.jsx)(d.Clickable, {
                                               className: g.imageUploaderFileInput,
                                               'aria-label': D,
-                                              onClick: A
+                                              onClick: k
                                           })
                                         : (0, i.jsx)(m.ZP, {
                                               ref: this.inputRef,
@@ -123,7 +123,7 @@ class j extends (l = r.PureComponent) {
                                               'aria-label': D,
                                               tabIndex: 0,
                                               maxFileSizeBytes: R,
-                                              onFileSizeError: k
+                                              onFileSizeError: A
                                           })
                                 ]
                             }),
@@ -136,7 +136,7 @@ class j extends (l = r.PureComponent) {
                             I &&
                                 (0, i.jsx)(f, {
                                     className: S,
-                                    icon: y
+                                    icon: Z
                                 })
                         ]
                     })

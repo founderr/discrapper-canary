@@ -72,7 +72,7 @@ function T(e) {
         }, []),
         E = (0, a.e7)([d.Z], () => d.Z.getUserExperimentDescriptor(r)),
         _ = (0, a.e7)([d.Z], () => d.Z.getLoadedUserExperiment(r)),
-        f = (0, a.Wu)([d.Z], () =>
+        I = (0, a.Wu)([d.Z], () =>
             l()
                 .sortBy(d.Z.getRecentExposures(g.xY.USER, r), (e) => {
                     let [t, n] = e;
@@ -83,7 +83,7 @@ function T(e) {
                     return ''.concat(new Date(n).toLocaleString(), ' (').concat(t, ')');
                 })
         ),
-        I = (0, i.jsx)(o.Clickable, {
+        f = (0, i.jsx)(o.Clickable, {
             onClick: C,
             children: (0, i.jsxs)(o.FormTitle, {
                 tag: o.FormTitleTags.H3,
@@ -112,7 +112,7 @@ function T(e) {
               children: [
                   (0, i.jsxs)(o.FormSection, {
                       children: [
-                          I,
+                          f,
                           (0, i.jsxs)('div', {
                               children: [
                                   (0, i.jsx)(o.FormItem, {
@@ -183,7 +183,7 @@ function T(e) {
                                         (0, i.jsx)(o.Text, {
                                             variant: 'code',
                                             className: p.pre,
-                                            children: 0 === f.length ? 'None' : f.join('\n')
+                                            children: 0 === I.length ? 'None' : I.join('\n')
                                         })
                                     ]
                                 })
@@ -201,7 +201,7 @@ function T(e) {
           })
         : (0, i.jsx)('div', {
               className: p.group,
-              children: (0, i.jsx)(o.FormSection, { children: I })
+              children: (0, i.jsx)(o.FormSection, { children: f })
           });
 }
 function C(e) {
@@ -223,7 +223,7 @@ function C(e) {
                     return ''.concat(new Date(n).toLocaleString(), ' (').concat(t, ')');
                 })
         ),
-        [f, I] = (0, a.Wu)([u.Z, d.Z], () => {
+        [I, f] = (0, a.Wu)([u.Z, d.Z], () => {
             let e = l().sortBy(l().values(u.Z.getGuilds()), (e) => e.name.toLowerCase()),
                 t = {},
                 i = [];
@@ -300,7 +300,7 @@ function C(e) {
                               children: [
                                   (0, i.jsxs)(o.FormText, {
                                       type: o.FormTextTypes.DESCRIPTION,
-                                      children: ['Current Assignments: ', I]
+                                      children: ['Current Assignments: ', f]
                                   }),
                                   null == E
                                       ? (0, i.jsx)(o.FormText, {
@@ -321,7 +321,7 @@ function C(e) {
                                         (0, i.jsx)(o.Text, {
                                             variant: 'code',
                                             className: p.pre,
-                                            children: f
+                                            children: I
                                         }),
                                         (0, i.jsx)(o.FormTitle, {
                                             tag: 'h5',

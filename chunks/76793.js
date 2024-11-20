@@ -3,7 +3,7 @@ n.d(t, {
         return N;
     },
     q: function () {
-        return f;
+        return I;
     }
 });
 var i = n(200651),
@@ -107,7 +107,7 @@ function _(e) {
         ]
     });
 }
-function f(e) {
+function I(e) {
     let { userId: t } = e,
         n = (0, m._)(t);
     return (0, i.jsxs)(i.Fragment, {
@@ -136,7 +136,7 @@ function f(e) {
         ]
     });
 }
-function I(e) {
+function f(e) {
     let { userIds: t } = e;
     return 0 === t.length
         ? null
@@ -161,7 +161,7 @@ function I(e) {
                           'div',
                           {
                               className: T.item,
-                              children: (0, i.jsx)(f, { userId: e })
+                              children: (0, i.jsx)(I, { userId: e })
                           },
                           e
                       )
@@ -201,7 +201,7 @@ function N() {
                     })
                 ]
             }),
-            (0, i.jsx)(I, { userIds: t })
+            (0, i.jsx)(f, { userIds: t })
         ]
     });
 }

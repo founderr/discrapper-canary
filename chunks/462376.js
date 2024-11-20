@@ -1,6 +1,6 @@
 n.d(t, {
     d: function () {
-        return N;
+        return f;
     },
     k: function () {
         return T;
@@ -24,7 +24,7 @@ var l = n(200651),
     p = n(51144),
     I = n(388032),
     S = n(696456);
-function f(e, t, n) {
+function N(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -38,7 +38,7 @@ function f(e, t, n) {
     );
 }
 let T = 44;
-class N extends i.Component {
+class f extends i.Component {
     shouldComponentUpdate(e, t) {
         return this.state.sending !== t.sending || this.state.invited !== t.invited || this.state.hovered !== t.hovered || this.props.user !== e.user || this.props.channel !== e.channel;
     }
@@ -117,23 +117,23 @@ class N extends i.Component {
     }
     constructor(...e) {
         super(...e),
-            f(this, 'state', {
+            N(this, 'state', {
                 sending: !1,
                 invited: !1,
                 hovered: !1
             }),
-            f(this, 'handleMouseEnter', () => {
+            N(this, 'handleMouseEnter', () => {
                 this.setState({ hovered: !0 });
             }),
-            f(this, 'handleMouseLeave', () => {
+            N(this, 'handleMouseLeave', () => {
                 this.setState({ hovered: !1 });
             }),
-            f(this, 'getSuggestedProps', () => {
+            N(this, 'getSuggestedProps', () => {
                 var e;
                 let { row: t } = this.props;
                 return null !== (e = null != t ? h.Z.getSelectedInviteMetadata(t) : null) && void 0 !== e ? e : null;
             }),
-            f(this, 'handleClickInvite', () => {
+            N(this, 'handleClickInvite', () => {
                 let { user: e, channel: t, inviteKey: n, location: l } = this.props;
                 if (null != n)
                     null != t

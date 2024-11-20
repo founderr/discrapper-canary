@@ -75,7 +75,7 @@ function b(e) {
                               variant: 'text-xs/medium',
                               color: 'always-white',
                               className: g.infoNitroText,
-                              children: 'Powered by nitro'
+                              children: m.intl.string(m.t['BMw+7O'])
                           }),
                           (0, r.jsx)(o.TextBadge, {
                               text: 'BETA',
@@ -114,7 +114,7 @@ function I(e) {
                         className: g.infoSoundInnerContainer,
                         children: (0, r.jsx)(o.Text, {
                             variant: 'text-sm/normal',
-                            children: 'Click to hear sound'
+                            children: m.intl.string(m.t.D6eYmZ)
                         })
                     })
                 ]
@@ -203,7 +203,7 @@ function S(e) {
                         channel: n,
                         ...e
                     }),
-                tooltipText: 'More Info',
+                tooltipText: m.intl.string(m.t.KVbJU1),
                 position: 'right',
                 children: (0, r.jsx)(o.CircleInformationIcon, {
                     size: 'md',

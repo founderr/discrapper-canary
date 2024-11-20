@@ -25,8 +25,8 @@ var i,
     C = n(653798),
     E = n(311821),
     _ = n(139255),
-    f = n(314884),
-    I = n(509545),
+    I = n(314884),
+    f = n(509545),
     N = n(78839),
     A = n(267642),
     b = n(74538),
@@ -93,7 +93,7 @@ async function B(e, t, n, i) {
         null != i
             ? i
             : (function () {
-                  let e = Object.values(f.Z.boostSlots),
+                  let e = Object.values(I.Z.boostSlots),
                       t = o().sortBy(
                           e.filter((e) => !(0, A.tl)(e)),
                           (e) => [null != e.premiumGuildSubscription, null != e.cooldownEndsAt ? new Date(e.cooldownEndsAt) : null]
@@ -106,7 +106,7 @@ async function B(e, t, n, i) {
 function L(e) {
     var t, n, i;
     let { premiumSubscription: s, guildBoostSlotId: a, onBack: o, onNext: u, onClose: m } = e,
-        [T, f] = l.useState(!1),
+        [T, I] = l.useState(!1),
         [N, A] = l.useMemo(() => {
             try {
                 return [(0, S.g)(s, -1), !1];
@@ -117,11 +117,11 @@ function L(e) {
     l.useEffect(() => {
         A && m();
     }, [A]);
-    let { premiumSubscriptionPlan: R, premiumGuildPlan: y } = (0, c.cj)([I.Z], () => {
-            let e = I.Z.get(s.planId);
+    let { premiumSubscriptionPlan: R, premiumGuildPlan: y } = (0, c.cj)([f.Z], () => {
+            let e = f.Z.get(s.planId);
             return {
                 premiumSubscriptionPlan: e,
-                premiumGuildPlan: null != e ? I.Z.getForSkuAndInterval((0, b.Wz)(O.Si.GUILD), e.interval, e.intervalCount) : null
+                premiumGuildPlan: null != e ? f.Z.getForSkuAndInterval((0, b.Wz)(O.Si.GUILD), e.interval, e.intervalCount) : null
             };
         }),
         { analyticsLocations: L } = (0, g.ZP)(),
@@ -201,9 +201,9 @@ function L(e) {
                         disabled: T,
                         onClick: async () => {
                             try {
-                                f(!0), await B(s, N, L, a), u();
+                                I(!0), await B(s, N, L, a), u();
                             } catch {
-                                f(!1);
+                                I(!1);
                             }
                         },
                         children: P.intl.string(P.t['/AS/gI'])

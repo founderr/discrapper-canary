@@ -22,8 +22,8 @@ var i = n(200651),
     C = n(388032),
     E = n(264228),
     _ = n(971436);
-let f = !x.isPlatformEmbedded,
-    I = (0, g.hQ)();
+let I = !x.isPlatformEmbedded,
+    f = (0, g.hQ)();
 function N(e) {
     return e >= 1000 ? ((e /= 1000), ''.concat(e.toFixed(2), 's')) : ''.concat(e.toFixed(0), ' ms');
 }
@@ -64,7 +64,7 @@ function A(e) {
                             children: (0, i.jsxs)(o.FormItem, {
                                 children: [
                                     (0, i.jsx)(o.FormTitle, {
-                                        id: I,
+                                        id: f,
                                         tag: o.FormTitleTags.H5,
                                         className: _.marginBottom8,
                                         children: C.intl.string(C.t.y0ShVl)
@@ -74,7 +74,7 @@ function A(e) {
                                         onValueChange: (e) => c.Z.setMode(n, { delay: e }),
                                         onValueRender: N,
                                         maxValue: T.qhL,
-                                        'aria-labelledby': I
+                                        'aria-labelledby': f
                                     })
                                 ]
                             })
@@ -96,14 +96,14 @@ function b() {
             },
             {
                 value: T.pM4.PUSH_TO_TALK,
-                name: f ? C.intl.string(C.t['1AINrK']) : C.intl.string(C.t.Q8gkVF)
+                name: I ? C.intl.string(C.t['1AINrK']) : C.intl.string(C.t.Q8gkVF)
             }
         ],
         l = s.useCallback(
             (t) => {
                 let { value: s } = t;
                 s === T.pM4.PUSH_TO_TALK &&
-                    f &&
+                    I &&
                     (0, o.openModalLazy)(async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 468026));
                         return (t) =>
