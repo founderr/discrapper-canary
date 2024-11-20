@@ -223,55 +223,50 @@ let P = {
 Z.displayName = 'PerkDiscoverabilityCard';
 let O = r.forwardRef((e, t) => {
     var n;
-    let { title: a, titleClassName: l = '', subtitle: o = '', description: c = '', descriptionCta: d = '', isPremiumGetCta: g, onCtaClick: m, onMouseEnter: f, className: p, perkComponent: _, cardVariant: E, cardType: x, onClick: C, backgroundImage: I, pillText: S, perkImage: R, imageOverlayText: A } = e,
-        P = x === v.R0.CARD_CAROUSEL_FIRST_ROW || x === v.R0.CARD_CAROUSEL_SECOND_ROW || x === v.R0.CARD_CAROUSEL_THIRD_ROW,
-        Z = '' !== c || '' !== d || ('' !== o && E === v.zW.REWARD),
-        O = (0, h.IB)(),
-        [M, B] = r.useState(E !== v.zW.REWARD || O);
-    r.useEffect(() => {
-        O && B(!0);
-    }, [O]);
-    let w = (0, b._)(E);
+    let { title: r, titleClassName: a = '', subtitle: l = '', description: o = '', descriptionCta: c = '', isPremiumGetCta: d, onCtaClick: g, onMouseEnter: m, className: f, perkComponent: p, cardVariant: _, cardType: h, onClick: E, backgroundImage: x, pillText: C, perkImage: I, imageOverlayText: S } = e,
+        R = h === v.R0.CARD_CAROUSEL_FIRST_ROW || h === v.R0.CARD_CAROUSEL_SECOND_ROW || h === v.R0.CARD_CAROUSEL_THIRD_ROW,
+        A = '' !== o || '' !== c || ('' !== l && _ === v.zW.REWARD),
+        P = (0, b._)(_);
     return (0, i.jsxs)(u.Clickable, {
-        className: s()(j.card, p, !0 === M ? (null === (n = w.cardContainer) || void 0 === n ? void 0 : n.className) : void 0, {
-            [j.clickable]: null != C,
-            [j.hideOverflow]: P
+        className: s()(j.card, f, null === (n = P.cardContainer) || void 0 === n ? void 0 : n.className, {
+            [j.clickable]: null != E,
+            [j.hideOverflow]: R
         }),
-        onMouseEnter: f,
-        style: { backgroundImage: null != I ? 'url('.concat(I, ')') : void 0 },
-        onClick: C,
+        onMouseEnter: m,
+        style: { backgroundImage: null != x ? 'url('.concat(x, ')') : void 0 },
+        onClick: E,
         children: [
-            null != S &&
+            null != C &&
                 (0, i.jsx)(u.Text, {
                     variant: 'text-xs/semibold',
                     className: j.pill,
-                    children: S
+                    children: C
                 }),
             (0, i.jsx)('div', { ref: t }),
             (0, i.jsx)(T.Z, {
-                title: a,
-                titleClassName: l,
-                subtitle: o,
-                perkImage: R,
-                isCarousel: P,
-                descriptionCta: d,
-                onCtaClick: m,
-                perkComponent: _,
+                title: r,
+                titleClassName: a,
+                subtitle: l,
+                perkImage: I,
+                isCarousel: R,
+                descriptionCta: c,
+                onCtaClick: g,
+                perkComponent: p,
                 subtitleClassName: j.cardSubtitle,
-                cardVariant: E,
-                imageOverlayText: A
+                cardVariant: _,
+                imageOverlayText: S
             }),
-            Z &&
+            A &&
                 (0, i.jsx)(N.Z, {
-                    title: a,
-                    titleClassName: l,
-                    subtitle: o,
-                    description: c,
-                    descriptionCta: d,
-                    isPremiumGetCta: g,
-                    onCtaClick: m,
-                    cardVariant: E,
-                    perkComponent: _
+                    title: r,
+                    titleClassName: a,
+                    subtitle: l,
+                    description: o,
+                    descriptionCta: c,
+                    isPremiumGetCta: d,
+                    onCtaClick: g,
+                    cardVariant: _,
+                    perkComponent: p
                 }),
             (0, i.jsx)('div', {
                 className: s()(j.cover, j.above),

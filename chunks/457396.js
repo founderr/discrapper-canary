@@ -148,9 +148,17 @@ let en = (e) => {
                     })),
                     (r = 4))
                   : null != eC
-                    ? ((i = (0, l.jsx)(H.Z, { copy: eC })), (r = 1))
+                    ? ((i = (0, l.jsx)(F.Z, {
+                          copy: eC,
+                          showStars: !1
+                      })),
+                      (r = 1))
                     : null != ev
-                      ? ((i = (0, l.jsx)(H.Z, { copy: ev })), (r = 1))
+                      ? ((i = (0, l.jsx)(F.Z, {
+                            copy: ev,
+                            showStars: !1
+                        })),
+                        (r = 1))
                       : null != ep
                         ? ((i = (0, l.jsx)(U.GN, {
                               userDiscount: ep,

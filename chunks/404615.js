@@ -1,43 +1,41 @@
 n.d(t, {
     _: function () {
-        return c;
+        return o;
     }
 });
 var i = n(442837),
     r = n(607070),
-    a = n(314684),
-    s = n(391110),
-    l = n(879930);
-let o = {
+    a = n(391110),
+    s = n(879930);
+let l = {
         subtitle: { onlyShowOnHover: !1 },
         description: {
             onlyShowOnHover: !0,
-            className: l.cardDescription
+            className: s.cardDescription
         },
         descriptionCta: { onlyShowOnHover: !0 }
     },
-    c = (e) => {
+    o = (e) => {
         let t = (0, i.e7)([r.Z], () => r.Z.useReducedMotion),
-            n = (0, a.IB)() && !t,
-            c = {
-                [s.zW.DEFAULT]: o,
-                [s.zW.REWARD]: {
+            n = {
+                [a.zW.DEFAULT]: l,
+                [a.zW.REWARD]: {
                     subtitle: {
                         onlyShowOnHover: !0,
                         textVariant: 'text-sm/semibold'
                     },
                     description: {
                         onlyShowOnHover: !0,
-                        className: l.cardDescriptionTenureReward
+                        className: s.cardDescriptionTenureReward
                     },
                     descriptionCta: {
                         onlyShowOnHover: !1,
                         hideOnHoverComponent: !0,
-                        className: l.descriptionCTATenureReward
+                        className: s.descriptionCTATenureReward
                     },
-                    cardContainer: { className: n ? l.glowingCardContainer : void 0 }
+                    cardContainer: { className: t ? void 0 : s.nitroGradientBorderHover }
                 },
-                [s.zW.NITRO_GRADIENT_HOVER_BORDER]: { cardContainer: { className: l.nitroGradientBorderHover } }
+                [a.zW.NITRO_GRADIENT_HOVER_BORDER]: { cardContainer: { className: s.nitroGradientBorderHover } }
             };
-        return null != e ? c[e] : c[s.zW.DEFAULT];
+        return null != e ? n[e] : n[a.zW.DEFAULT];
     };

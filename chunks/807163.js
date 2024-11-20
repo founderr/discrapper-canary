@@ -21,8 +21,8 @@ var r = t(200651),
     T = t(543241),
     v = t(906411),
     _ = t(565138),
-    b = t(822179),
-    E = t(419922),
+    E = t(822179),
+    b = t(419922),
     L = t(687158),
     A = t(484459),
     M = t(813549),
@@ -208,7 +208,7 @@ function ep(e) {
         n = (0, T.wC)(null)
             .filter((e) => e.type === v.B.GUILD && (e.animated || null != e.guildId))
             .slice(0, 3),
-        a = (0, d.Wu)([b.Z], () => b.Z.stickerFrecencyWithoutFetchingLatest.frequently.slice(0, 3 - n.length)),
+        a = (0, d.Wu)([E.Z], () => E.Z.stickerFrecencyWithoutFetchingLatest.frequently.slice(0, 3 - n.length)),
         i = ec().emojiStickersVisual,
         o = s === W.p9.TIER_1;
     return (0, r.jsx)(
@@ -246,7 +246,7 @@ function ep(e) {
                                   ? null
                                   : a.map((e) =>
                                         (0, r.jsx)(
-                                            E.ZP,
+                                            b.ZP,
                                             {
                                                 disableAnimation: t,
                                                 sticker: e,
@@ -524,7 +524,6 @@ s.Z = function (e) {
                                   h,
                                   (0, r.jsx)(x.Text, {
                                       variant: 'text-md/normal',
-                                      className: H.subtitle,
                                       children: a
                                   })
                               ]

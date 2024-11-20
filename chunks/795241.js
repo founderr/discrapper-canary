@@ -1,7 +1,6 @@
 e.exports = {
     body: 'body_f4a859',
     title: 'title_f4a859',
-    subtitle: 'subtitle_f4a859',
     whatYouLoseItemContainer: 'whatYouLoseItemContainer_f4a859',
     whatYouLoseItem: 'whatYouLoseItem_f4a859',
     whatYouLoseItemLeftColumn: 'whatYouLoseItemLeftColumn_f4a859',
