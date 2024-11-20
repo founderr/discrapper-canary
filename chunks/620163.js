@@ -98,7 +98,7 @@ var s = n(990547),
 let ew = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BADGE],
     eU = ev.Z,
     eV = (e) => {
-        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: eV, impressionSource: eG, numOfPendingFamilyRequests: eY, isOverlaySupported: eH, isClipsBetaTagShowing: ez = !1, shouldMergeGameSettings: eW, isUserSettingsSearchEnabled: eK, isKeywordFilteringEnabled: eq, isStaff: eQ, isInappropriateConversationWarningEnabled: eX, paymentsBlocked: eJ, isEligibleForQuests: e$, showGiftNitro: e0, isStricterMessageRequestsEnabled: e1, hasLibraryApplication: e6, hasTOTPEnabled: e2, developerMode: e3, isSafetySettingsV2Enabled: e4, isAdultUser: e8, hasSecureFramesVerifiedUserIds: e7, hypeSquadRemoved: e5, stealthRemediationEnabled: e9, hasIgnoredUsers: te, hasBlockedUsers: tt } = e;
+        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: eV, impressionSource: eG, numOfPendingFamilyRequests: eY, isOverlaySupported: eH, isClipsBetaTagShowing: ez = !1, shouldMergeGameSettings: eW, isUserSettingsSearchEnabled: eK, isKeywordFilteringEnabled: eq, isStaff: eQ, isInappropriateConversationWarningEnabled: eX, paymentsBlocked: eJ, isEligibleForQuests: e$, showGiftNitro: e0, isStricterMessageRequestsEnabled: e1, hasLibraryApplication: e6, hasTOTPEnabled: e2, developerMode: e3, isSafetySettingsV2Enabled: e4, isAdultUser: e8, hasSecureFramesVerifiedUserIds: e7, hypeSquadRemoved: e5, stealthRemediationEnabled: e9, hasIgnoredUsers: te, hasBlockedUsers: tt, showAppDMsQuickLauncher: tn } = e;
         return Object.freeze({
             [eB.s6.SEARCH_NO_RESULTS]: {
                 section: h.ID.CUSTOM,
@@ -1448,6 +1448,12 @@ let ew = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eM.intl.string(eM.t.erOqlp)],
                 parent: eB.s6.SETTINGS_ADVANCED,
                 predicate: () => e3
+            },
+            [eB.s6.SETTINGS_ADVANCED_SHOW_PLAY_AGAIN]: {
+                section: eL.oAB.ADVANCED,
+                searchableTitles: [eM.intl.string(eM.t.qDZryM)],
+                parent: eB.s6.SETTINGS_ADVANCED,
+                predicate: () => !0 === tn
             },
             [eB.s6.ACTIVITY_PRIVACY]: {
                 section: eL.oAB.ACTIVITY_PRIVACY,
