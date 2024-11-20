@@ -27,12 +27,12 @@ var r = n(200651),
     _ = n(602667),
     T = n(341907),
     I = n(881773),
-    j = n(355243),
-    N = n(106743),
+    N = n(355243),
+    j = n(106743),
     b = n(223418),
     D = n(604162),
-    y = n(747717),
-    A = n(281055),
+    A = n(747717),
+    y = n(281055),
     k = n(920393),
     B = n(981631),
     L = n(217702),
@@ -109,7 +109,7 @@ function Z(e) {
                         })
                     ]
                 }),
-                (0, r.jsx)(y.Z, { color: '#747783' }),
+                (0, r.jsx)(A.Z, { color: '#747783' }),
                 (0, r.jsx)(i, {
                     size: 'md',
                     color: c ? '#FFFFFF' : '#B5BAC1',
@@ -120,7 +120,7 @@ function Z(e) {
     });
 }
 function U(e) {
-    var t, n, i, c, f, _, y, U, V, q, G;
+    var t, n, i, c, f, _, A, U, V, q, G;
     let { quest: H, onOptimisticProgressUpdate: z, autoplay: Y, parentTransitionState: W } = e,
         Q = (0, E.km)((e) => e.transcriptEnabled),
         K = (0, E.km)((e) => e.setTranscriptEnabled),
@@ -128,8 +128,8 @@ function U(e) {
         J = (0, E.km)((e) => e.setCaptionEnabled),
         $ = (0, E.km)((e) => e.fullScreenEnabled),
         ee = (0, E.km)((e) => e.setFullScreenEnabled),
-        { focused: et, focusedChanged: en } = (0, A.xU)(),
-        { visible: er, visibleChanged: eo, targetRef: ei } = (0, A.Yy)(),
+        { focused: et, focusedChanged: en } = (0, y.xU)(),
+        { visible: er, visibleChanged: eo, targetRef: ei } = (0, y.Yy)(),
         [el, es] = o.useState(!0 === Y ? b.r.PLAYING : b.r.PAUSED),
         [ea, ec] = o.useState(!1),
         eu = (0, S.il)(H),
@@ -140,9 +140,9 @@ function U(e) {
         [eS, eE] = o.useState([]),
         [eh, e_] = o.useState(p.Z.getEffectiveConnectionSpeed()),
         [eT, eI] = o.useState(0),
-        [ej, eN] = o.useState(0),
+        [eN, ej] = o.useState(0),
         [eb, eD] = o.useState(!1),
-        [ey, eA] = o.useState(!1),
+        [eA, ey] = o.useState(!1),
         ek = (0, E.km)((e) => {
             var t;
             return null !== (t = e.videoProgress[H.id]) && void 0 !== t
@@ -165,7 +165,7 @@ function U(e) {
         [eq, eG] = o.useState(!1),
         [eH, ez] = o.useState(!1),
         [eY, eW] = o.useState(null),
-        eQ = eF ? (null !== (y = null === (n = eO.current) || void 0 === n ? void 0 : n.duration) && void 0 !== y ? y : 0) : Math.max(ek.maxTimestampSec, eu.progressSeconds),
+        eQ = eF ? (null !== (A = null === (n = eO.current) || void 0 === n ? void 0 : n.duration) && void 0 !== A ? A : 0) : Math.max(ek.maxTimestampSec, eu.progressSeconds),
         eK = o.useMemo(() => (O.has(eh) ? h.i.VIDEO_PLAYER_VIDEO : h.i.VIDEO_PLAYER_VIDEO_LOW_RES), [eh]),
         eX = o.useMemo(() => (null != eK ? (0, h.z)(eK, H) : null), [eK, H]),
         eJ = o.useCallback(
@@ -370,10 +370,10 @@ function U(e) {
             from: { controlBarAnimSpring: 0 },
             config: R,
             onStart: () => {
-                eA(!1);
+                ey(!1);
             },
             onRest: (e) => {
-                1 === e.value && eA(!0);
+                1 === e.value && ey(!0);
             }
         })),
         tl = (0, o.useRef)(null),
@@ -441,7 +441,7 @@ function U(e) {
                         poster: null == tu ? void 0 : tu.url,
                         disablePictureInPicture: !0,
                         onTimeUpdate: (e) => {
-                            null != eO.current && (eO.current.currentTime >= eT && (eI(eO.current.currentTime + 6 + 2 * Math.random()), e1(eO.current.currentTime)), eO.current.currentTime >= ej && (eN(eO.current.currentTime + 1), (0, g.qm)(H.id, eu.taskType, eO.current.currentTime), z(eO.current.currentTime)), eB(H.id, eO.current.currentTime, eO.current.duration), em((eO.current.currentTime / eO.current.duration) * 100));
+                            null != eO.current && (eO.current.currentTime >= eT && (eI(eO.current.currentTime + 6 + 2 * Math.random()), e1(eO.current.currentTime)), eO.current.currentTime >= eN && (ej(eO.current.currentTime + 1), (0, g.qm)(H.id, eu.taskType, eO.current.currentTime), z(eO.current.currentTime)), eB(H.id, eO.current.currentTime, eO.current.duration), em((eO.current.currentTime / eO.current.duration) * 100));
                         },
                         onEnded: (e) => {
                             null != eO.current && (e1(eO.current.duration + 1), eB(H.id, eO.current.duration, eO.current.duration)), e0(b.r.ENDED), ex(!1);
@@ -496,6 +496,7 @@ function U(e) {
                         ]
                     }),
                     (ev || eg) &&
+                        el === b.r.PLAYING &&
                         (0, r.jsx)(u.Spinner, {
                             type: u.Spinner.Type.WANDERING_CUBES,
                             className: M.loadingSpinner
@@ -515,7 +516,7 @@ function U(e) {
                                     style: {
                                         marginBottom: (0, s.to)([to, ts], (e, t) => ''.concat(50 * e + t, 'px'))
                                     },
-                                    children: (0, r.jsx)(N.K, {
+                                    children: (0, r.jsx)(j.K, {
                                         quest: H,
                                         onClose: () => {
                                             K(!1),
@@ -629,14 +630,14 @@ function U(e) {
                             )
                         },
                         children: [
-                            (0, r.jsx)(j.Z, {
+                            (0, r.jsx)(N.Z, {
                                 percent: ed,
                                 animate: !0 !== ew.current && !ef,
-                                interactionEnabled: eF && ey,
+                                interactionEnabled: eF && eA,
                                 backgroundColor: e7 ? void 0 : 'rgba(0, 0, 0, 0.0)',
                                 preloadedBuffers: e7 ? eS : void 0,
                                 duration: null !== (G = null === (_ = eO.current) || void 0 === _ ? void 0 : _.duration) && void 0 !== G ? G : 1,
-                                maxSeekableTime: e7 && ey ? eQ : void 0,
+                                maxSeekableTime: e7 && eA ? eQ : void 0,
                                 onClick: (e) => {
                                     e8(e), el === b.r.ENDED && e0(b.r.PLAYING);
                                 },
