@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return x;
+        return _;
     }
 }),
     n(47120),
@@ -16,15 +16,21 @@ var i = n(200651),
     u = n(243778),
     h = n(518950),
     p = n(594174),
-    m = n(997323),
-    f = n(955843),
-    g = n(388032),
-    C = n(44229);
-function x(e) {
+    m = n(955843),
+    f = n(133634),
+    g = n(921944),
+    C = n(388032),
+    x = n(114031);
+function _(e) {
     let { channel: t } = e,
         r = (0, s.e7)([p.default], () => p.default.getUser(t.hdStreamingBuyerId), [t.hdStreamingBuyerId]),
-        [a, d] = (0, l.useState)(!1);
-    (0, f.Uu)(t),
+        [a, d] = (0, l.useState)(!1),
+        [h, C] = (0, l.useState)(!1),
+        [x, _] = (0, l.useState)(!1);
+    (0, l.useEffect)(() => {
+        t.isHDStreamSplashed && _(!0);
+    }, []),
+        (0, m.Uu)(t),
         (function (e) {
             let t = (0, s.e7)([p.default], () => p.default.getCurrentUser()),
                 r = [];
@@ -46,91 +52,114 @@ function x(e) {
                 }
             }, [a, d, e]);
         })(t);
-    let h = () => {
-        d(!1), (0, m.ag)();
+    let I = () => {
+        d(!1);
     };
-    return ((0, f.J)(t, () => {
-        if ((0, f.QC)()) {
-            h();
+    (0, m.J)(t, () => {
+        if ((0, m.QC)()) {
+            C(!0), I();
             return;
         }
         d(!0);
-    }),
-    a && null != r)
-        ? (0, i.jsx)(_, {
-              buyer: r,
-              onEnd: h
-          })
-        : null;
-}
-function _(e) {
-    let { onEnd: t, buyer: n } = e,
-        r = (0, l.useRef)(null),
-        s = (0, l.useRef)(null),
-        [o, u] = (0, l.useState)(!1);
-    (0, l.useEffect)(() => {
-        let e = r.current;
-        if (null == e) return;
-        let n = () => {
-            e.currentTime >= 23 && !o && u(!0);
-        };
-        e.addEventListener('timeupdate', n);
-        let i = setInterval(() => {
-            e.currentTime >= e.duration && t();
-        }, 500);
-        return () => {
-            e.removeEventListener('timeupdate', n), clearInterval(i);
-        };
+        let e = setTimeout(() => {
+            C(!0);
+        }, 25000);
+        return () => clearTimeout(e);
     });
-    let [p, m] = (0, l.useState)(!1);
+    let E = x ? [o.z.HD_STREAMING_POTION_BANNER] : [],
+        [b, Z] = (0, u.US)(E);
+    return null == r
+        ? null
+        : (0, i.jsxs)(i.Fragment, {
+              children: [
+                  (0, i.jsx)(v, {
+                      play: a,
+                      buyer: r,
+                      onEnd: I
+                  }),
+                  '; (',
+                  (0, i.jsx)(f.Z, {
+                      channel: t,
+                      buyer: r,
+                      streaming: !0,
+                      onClose: () => {
+                          x ? Z(g.L.DISMISS) : C(!1);
+                      },
+                      render: h || b === o.z.HD_STREAMING_POTION_BANNER
+                  }),
+                  ')'
+              ]
+          });
+}
+function v(e) {
+    let { onEnd: t, buyer: n, play: r } = e,
+        s = (0, l.useRef)(null),
+        o = (0, l.useRef)(null),
+        [u, p] = (0, l.useState)(!1);
     (0, l.useEffect)(() => {
-        if (null != s.current) m(s.current.offsetWidth > 245);
+        let e = s.current;
+        if (null == e) return;
+        let t = () => {
+            e.currentTime >= 23 && !u && p(!0);
+        };
+        return (
+            e.addEventListener('timeupdate', t),
+            () => {
+                e.removeEventListener('timeupdate', t);
+            }
+        );
+    });
+    let [m, f] = (0, l.useState)(!1);
+    (0, l.useEffect)(() => {
+        if (null != o.current) f(o.current.offsetWidth > 245);
     }, []);
-    let { avatarSrc: f, eventHandlers: x } = (0, h.Z)({
+    let { avatarSrc: g, eventHandlers: _ } = (0, h.Z)({
         user: n,
         size: c.AvatarSizes.SIZE_32,
         animateOnHover: !0
     });
-    return (0, i.jsxs)('div', {
-        className: C.trigger,
-        children: [
-            (0, i.jsx)(d.Z, {
-                ref: r,
-                className: C.video,
-                autoPlay: !0,
-                onEnded: t,
-                children: (0, i.jsx)('source', {
-                    src: 'https://cdn.discordapp.com/assets/content/9f56bffb69fd37ec42b909d277c92d523a1c579075b9cb06880fc7cbc7f365f3.webm',
-                    type: 'video/webm'
-                })
-            }),
-            (0, i.jsxs)('div', {
-                ref: s,
-                className: a()(C.content, { [C.masked]: o }),
-                children: [
-                    (0, i.jsx)(c.Avatar, {
-                        src: f,
-                        'aria-label': n.username,
-                        size: c.AvatarSizes.SIZE_32,
-                        ...x
-                    }),
-                    (0, i.jsxs)('div', {
-                        className: C.text,
-                        children: [
-                            !p &&
-                                (0, i.jsx)(c.Text, {
-                                    variant: 'text-sm/normal',
-                                    children: g.intl.string(g.t['i/nliI'])
-                                }),
-                            (0, i.jsx)(c.Text, {
-                                className: C.premium,
-                                variant: 'text-sm/normal',
-                                children: g.intl.string(g.t['Fh/mk5'])
-                            })
-                        ]
-                    })
-                ]
-            })
-        ]
-    });
+    return r
+        ? (0, i.jsxs)('div', {
+              className: x.trigger,
+              children: [
+                  (0, i.jsx)(d.Z, {
+                      ref: s,
+                      className: x.video,
+                      autoPlay: !0,
+                      onEnded: t,
+                      children: (0, i.jsx)('source', {
+                          src: 'https://cdn.discordapp.com/assets/content/9f56bffb69fd37ec42b909d277c92d523a1c579075b9cb06880fc7cbc7f365f3.webm',
+                          type: 'video/webm'
+                      })
+                  }),
+                  (0, i.jsxs)('div', {
+                      ref: o,
+                      className: a()(x.content, { [x.masked]: u }),
+                      children: [
+                          (0, i.jsx)(c.Avatar, {
+                              src: g,
+                              'aria-label': n.username,
+                              size: c.AvatarSizes.SIZE_32,
+                              ..._
+                          }),
+                          (0, i.jsxs)('div', {
+                              className: x.text,
+                              children: [
+                                  !m &&
+                                      (0, i.jsx)(c.Text, {
+                                          variant: 'text-sm/normal',
+                                          children: C.intl.string(C.t['i/nliI'])
+                                      }),
+                                  (0, i.jsx)(c.Text, {
+                                      className: x.premium,
+                                      variant: 'text-sm/normal',
+                                      children: C.intl.string(C.t['Fh/mk5'])
+                                  })
+                              ]
+                          })
+                      ]
+                  })
+              ]
+          })
+        : null;
 }
