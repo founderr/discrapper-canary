@@ -16,4 +16,5 @@ n.d(t, {
     (i[(i.PACING_V2 = 12)] = 'PACING_V2'),
     (i[(i.DISMISSAL_SURVEY = 13)] = 'DISMISSAL_SURVEY'),
     (i[(i.MOBILE_QUEST_DOCK = 14)] = 'MOBILE_QUEST_DOCK'),
-    (i[(i.QUESTS_CDN = 15)] = 'QUESTS_CDN');
+    (i[(i.QUESTS_CDN = 15)] = 'QUESTS_CDN'),
+    (i[(i.PACING_CONTROLLER = 16)] = 'PACING_CONTROLLER');
