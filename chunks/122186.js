@@ -25,8 +25,8 @@ var l = n(200651),
     j = n(981631),
     C = n(474936),
     S = n(388032),
-    _ = n(477184);
-function Z(e) {
+    Z = n(477184);
+function _(e) {
     let { location: t, ...n } = e,
         r = (0, g.N)(),
         a = null != r,
@@ -45,8 +45,8 @@ function Z(e) {
             return S.intl.string(S.t.Y2WKTk);
         }, [o, r]);
     return (0, l.jsx)(p.Z, {
-        className: s()(_.enhancedCTA, _.ctaGradientBackground),
-        iconClassName: _.premiumIcon,
+        className: s()(Z.enhancedCTA, Z.ctaGradientBackground),
+        iconClassName: Z.premiumIcon,
         subscriptionTier: C.Si.TIER_2,
         buttonText: d(),
         size: c.Button.Sizes.TINY,
@@ -57,17 +57,17 @@ function Z(e) {
 function I() {
     let e = (0, m.Z)();
     return (0, l.jsxs)('div', {
-        className: _.extendedDemoContainer,
+        className: Z.extendedDemoContainer,
         children: [
             (0, l.jsxs)('div', {
                 children: [
                     (0, l.jsxs)('div', {
-                        className: _.extendedDemoContainer,
+                        className: Z.extendedDemoContainer,
                         children: [
                             (0, l.jsx)(c.Text, {
                                 variant: 'text-xs/bold',
                                 color: 'status-warning',
-                                className: _.extendedDemoDurationText,
+                                className: Z.extendedDemoDurationText,
                                 children: e.toUpperCase()
                             }),
                             (0, l.jsx)(c.Text, {
@@ -83,8 +83,8 @@ function I() {
                 ]
             }),
             (0, l.jsx)('div', {
-                className: _.extendedDemoButton,
-                children: (0, l.jsx)(Z, { size: c.Button.Sizes.SMALL })
+                className: Z.extendedDemoButton,
+                children: (0, l.jsx)(_, { size: c.Button.Sizes.SMALL })
             })
         ]
     });
@@ -92,10 +92,10 @@ function I() {
 function T() {
     let e = (0, o.e7)([d.Z], () => d.Z.useReducedMotion);
     return (0, l.jsxs)('div', {
-        className: s()(_.reverseTrialEducationBannerContainer, { [_.reducedMotion]: e }),
+        className: s()(Z.reverseTrialEducationBannerContainer, { [Z.reducedMotion]: e }),
         children: [
             (0, l.jsx)(c.LottieAnimation, {
-                className: s()(_.unlockAnimation, { [_.reducedMotion]: e }),
+                className: s()(Z.unlockAnimation, { [Z.reducedMotion]: e }),
                 loop: !1,
                 shouldAnimate: !e,
                 pauseAtFrame: e ? 149 : void 0,
@@ -103,7 +103,7 @@ function T() {
             }),
             (0, l.jsx)(c.Text, {
                 variant: 'text-xs/medium',
-                className: _.reverseTrialEducationText,
+                className: Z.reverseTrialEducationText,
                 children: S.intl.format(S.t.GimLpa, {})
             })
         ]
@@ -119,14 +119,14 @@ function N(e) {
         d = (0, f.So)(a.q.STREAM_HIGH_QUALITY),
         m = h.Z.useExperiment({ location: 'StreamSettingsUpsellBanner' }, { autoTrackExposure: !1 }).extendedDemoDuration;
     return (0, l.jsx)('div', {
-        className: s()(_.upsellBanner, _.enhancedBanner, { [_.gradientGlow]: r }),
+        className: s()(Z.upsellBanner, Z.enhancedBanner, { [Z.gradientGlow]: r }),
         children:
             d && m
                 ? (0, l.jsx)(I, {})
                 : (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsxs)('div', {
-                              className: _.iconTextContainer,
+                              className: Z.iconTextContainer,
                               children: [
                                   (0, l.jsx)(c.NitroWheelIcon, {
                                       size: 'md',
@@ -134,7 +134,7 @@ function N(e) {
                                   }),
                                   (0, l.jsx)(c.Text, {
                                       variant: 'text-sm/medium',
-                                      className: s()(_.upsellText, _.enhancedUpsellText),
+                                      className: s()(Z.upsellText, Z.enhancedUpsellText),
                                       children:
                                           null != t
                                               ? t
@@ -163,8 +163,8 @@ function N(e) {
                               ]
                           }),
                           (0, l.jsx)('div', {
-                              className: _.enhancedCTAs,
-                              children: (0, l.jsx)(Z, { location: o })
+                              className: Z.enhancedCTAs,
+                              children: (0, l.jsx)(_, { location: o })
                           })
                       ]
                   })

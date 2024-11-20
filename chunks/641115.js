@@ -23,8 +23,8 @@ var l = n(200651),
     j = n(1163),
     C = n(774026),
     S = n(592125),
-    _ = n(944486),
-    Z = n(594174),
+    Z = n(944486),
+    _ = n(594174),
     I = n(74538),
     T = n(451467),
     N = n(122186),
@@ -34,7 +34,7 @@ var l = n(200651),
     E = n(388032),
     R = n(507178),
     M = n(38960),
-    k = n(971436);
+    P = n(971436);
 function A(e) {
     let { analyticsLocation: t, onClose: i } = e;
     (0, u.openModalLazy)(async () => {
@@ -47,7 +47,7 @@ function A(e) {
             });
     });
 }
-function P() {
+function k() {
     return (0, l.jsxs)('div', {
         className: M.toolTipTextContainer,
         children: [
@@ -75,7 +75,7 @@ function L(e) {
                   tooltipClassName: M.tooltip,
                   spacing: 6,
                   'aria-label': E.intl.string(E.t.sEAnVF),
-                  text: (0, l.jsx)(P, {}),
+                  text: (0, l.jsx)(k, {}),
                   children: (0, l.jsx)('div', {
                       className: M.textContainer,
                       onMouseEnter: () => h(!0),
@@ -113,12 +113,12 @@ function L(e) {
     );
 }
 function B(e) {
-    let { onClose: t, selectedPreset: n, selectedResolution: r, selectedFPS: s, onResolutionChange: a, onFPSChange: g, onPresetChange: P, targetGuildPremiumTier: B, captureDeviceSelected: G } = e,
-        D = (0, d.e7)([Z.default], () => {
-            let e = Z.default.getCurrentUser();
+    let { onClose: t, selectedPreset: n, selectedResolution: r, selectedFPS: s, onResolutionChange: a, onFPSChange: g, onPresetChange: k, targetGuildPremiumTier: B, captureDeviceSelected: G } = e,
+        D = (0, d.e7)([_.default], () => {
+            let e = _.default.getCurrentUser();
             return o()(null != e, 'StreamSettings: user cannot be undefined'), e;
         }),
-        O = (0, d.e7)([_.Z, S.Z], () => S.Z.getChannel(_.Z.getVoiceChannelId())),
+        O = (0, d.e7)([Z.Z, S.Z], () => S.Z.getChannel(Z.Z.getVoiceChannelId())),
         U = I.ZP.canStreamQuality(I.U2.MID, D),
         { location: F } = (0, h.O)(),
         H = (0, m.Zq)({ autoTrackExposure: !1 }),
@@ -131,7 +131,7 @@ function B(e) {
         }
     );
     let V = (0, v.x8)('StreamSettings'),
-        z = Z.default.getUser(null == O ? void 0 : O.hdStreamingBuyerId),
+        z = _.default.getUser(null == O ? void 0 : O.hdStreamingBuyerId),
         K = null != O && null != O.hdStreamingUntil && new Date(O.hdStreamingUntil) > new Date() && null != z,
         Y = (0, p.So)(c.q.STREAM_HIGH_QUALITY),
         X = (!U && !H) || Y,
@@ -265,9 +265,9 @@ function B(e) {
                 children: [
                     (0, l.jsx)(u.SingleSelect, {
                         value: n,
-                        className: k.marginTop8,
+                        className: P.marginTop8,
                         options: en,
-                        onChange: (e) => P(e)
+                        onChange: (e) => k(e)
                     }),
                     el
                 ]

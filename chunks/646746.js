@@ -4,9 +4,9 @@ n.d(t, {
     }
 });
 var l = n(200651),
-    i = n(192379),
-    a = n(120356),
-    r = n.n(a),
+    a = n(192379),
+    i = n(120356),
+    r = n.n(i),
     s = n(392711),
     o = n(481060),
     c = n(686546),
@@ -18,18 +18,18 @@ var l = n(200651),
     g = n(388032),
     m = n(766177);
 function p(e) {
-    let { message: t, forwardOptions: n, channel: a } = e,
+    let { message: t, forwardOptions: n, channel: i } = e,
         {
             attachments: p,
             embeds: E,
             hasContent: I,
-            contentMessage: A
+            contentMessage: S
         } = (0, _.c)({
             message: t,
-            channel: a,
+            channel: i,
             forwardOptions: n
         }),
-        S = i.useMemo(
+        A = a.useMemo(
             () =>
                 I
                     ? (0, h.ZP)(t, {
@@ -38,10 +38,10 @@ function p(e) {
                           allowHeading: !0,
                           allowList: !0,
                           hideSimpleEmbedContent: !1,
-                          contentMessage: A
+                          contentMessage: S
                       }).content
                     : null,
-            [A, I, t]
+            [S, I, t]
         ),
         C = p.length,
         v = null,
@@ -130,7 +130,7 @@ function p(e) {
                             (0, l.jsx)(f.ZP, {
                                 className: r()(m.forwardPreviewMessage, C > 0 && m.hasAttachments),
                                 message: t,
-                                content: S
+                                content: A
                             }),
                         C > 0 &&
                             (0, l.jsxs)('div', {

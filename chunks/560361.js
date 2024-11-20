@@ -1,10 +1,10 @@
 n.d(t, {
     Z: function () {
-        return i;
+        return a;
     }
 });
 var l = n(192379);
-function i(e) {
+function a(e) {
     let t = l.useRef();
     (t.current = e),
         l.useEffect(

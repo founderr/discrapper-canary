@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(47120);
 var l = n(200651),
-    i = n(192379),
-    a = n(442837),
+    a = n(192379),
+    i = n(442837),
     r = n(481060),
     s = n(430742),
     o = n(541716),
@@ -21,18 +21,18 @@ var l = n(200651),
     p = n(388032),
     E = n(276496);
 function I(e) {
-    let { message: t, forwardOptions: n, sendLabel: I, canSend: A, selectedDestinations: S, isSending: C, onSend: v, showPreview: b } = e,
+    let { message: t, forwardOptions: n, sendLabel: I, canSend: S, selectedDestinations: A, isSending: C, onSend: v, showPreview: b } = e,
         L = (0, d.Z)(),
-        x = (0, f.nm)(S),
-        N = (0, f.y)(S),
+        x = (0, f.nm)(A),
+        N = (0, f.y)(A),
         T = (0, _.Ad)(),
-        P = (0, a.e7)([h.Z], () => h.Z.getDraft(t.channel_id, h.d.ForwardContextMessage)),
-        [y, Z] = i.useState(() => (0, c.eK)(P)),
+        P = (0, i.e7)([h.Z], () => h.Z.getDraft(t.channel_id, h.d.ForwardContextMessage)),
+        [y, Z] = a.useState(() => (0, c.eK)(P)),
         { textValue: w, richValue: R } = y,
-        [O, D] = i.useState(!1),
-        j = i.useCallback(() => D(!0), []),
-        M = i.useCallback(() => D(!1), []),
-        k = i.useCallback(
+        [O, D] = a.useState(!1),
+        j = a.useCallback(() => D(!0), []),
+        M = a.useCallback(() => D(!1), []),
+        k = a.useCallback(
             (e, n, l) => {
                 Z({
                     textValue: n,
@@ -43,12 +43,12 @@ function I(e) {
             },
             [T, t]
         ),
-        F = i.useCallback(() => {
+        F = a.useCallback(() => {
             s.Z.clearDraft(t.channel_id, h.d.ForwardContextMessage), v(w);
         }, [t.channel_id, v, w]),
-        U = i.useCallback(
+        U = a.useCallback(
             () =>
-                !A || w.length > L
+                !S || w.length > L
                     ? Promise.resolve({
                           shouldClear: !1,
                           shouldRefocus: !0
@@ -58,7 +58,7 @@ function I(e) {
                           shouldClear: !1,
                           shouldRefocus: !0
                       })),
-            [F, w, L, A]
+            [F, w, L, S]
         );
     return (0, l.jsxs)(r.ModalFooter, {
         className: E.footerWithMessage,
@@ -98,7 +98,7 @@ function I(e) {
                             (0, l.jsx)(r.Button, {
                                 className: E.sendWithMessage,
                                 submitting: C,
-                                disabled: !A || w.length > L,
+                                disabled: !S || w.length > L,
                                 onClick: F,
                                 children: I
                             })

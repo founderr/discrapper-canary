@@ -22,8 +22,8 @@ var l = n(200651),
     j = n(592125),
     C = n(650774),
     S = n(430824),
-    _ = n(131951),
-    Z = n(944486),
+    Z = n(131951),
+    _ = n(944486),
     I = n(594174),
     T = n(449224),
     N = n(626135),
@@ -33,9 +33,9 @@ var l = n(200651),
     E = n(653255),
     R = n(989941),
     M = n(618407),
-    k = n(586290),
+    P = n(586290),
     A = n(233037),
-    P = n(810013),
+    k = n(810013),
     L = n(537135),
     B = n(641115),
     G = n(143135),
@@ -212,21 +212,21 @@ function J(e) {
 }
 function q(e) {
     let { selectedSource: t, selectedFPS: n, selectedChannelId: r, selectedPreset: s, selectedResolution: o, sourceChanged: d, selectedGuildId: f, targetGuildPremiumTier: h, selectSource: m, selectGuild: x, sound: p, previewDisabled: C, onClose: S, onChangeSelectedFPS: T, onChangeSelectedResolution: N, onChangeSelectedPreset: b, onChangeSelectedChannelId: y, onChangeSource: R, onChangeAudioDevice: L, onChangeGuild: G, onChangeSound: D, onChangePreviewDisabled: W } = e,
-        q = (0, a.e7)([Z.Z, j.Z], () => j.Z.getChannel(Z.Z.getVoiceChannelId())),
+        q = (0, a.e7)([_.Z, j.Z], () => j.Z.getChannel(_.Z.getVoiceChannelId())),
         Q = (0, a.e7)([E.Z], () => E.Z.GPUDriversOutdated),
         $ = (0, a.e7)([E.Z], () => E.Z.problematicGPUDriver),
         ee = (0, a.e7)([I.default], () => I.default.getCurrentUser()),
         et = (0, M.Z)();
-    null != t && t.id.startsWith('screen') && !_.Z.supportsScreenSoundshare() && (et = F.intl.string(F.t['1b0Gm5']));
+    null != t && t.id.startsWith('screen') && !Z.Z.supportsScreenSoundshare() && (et = F.intl.string(F.t['1b0Gm5']));
     let en = !!(null == t ? void 0 : t.id.startsWith('camera')),
         el = null != ee && ee.verified && !ee.bot,
         ei = null != q && !(0, u.Yk)(q),
-        er = !(0, a.e7)([_.Z], () => _.Z.getHardwareEncoding()),
+        er = !(0, a.e7)([Z.Z], () => Z.Z.getHardwareEncoding()),
         { enabled: es } = (0, g.S)({ location: 'GoLiveModal_Confirm' });
     return (0, l.jsxs)(i.Fragment, {
         children: [
             en
-                ? (0, l.jsx)(k.Z, {
+                ? (0, l.jsx)(P.Z, {
                       selectedSource: t,
                       onChangeVideoDeviceSource: R,
                       onChangeAudioDevice: L
@@ -256,7 +256,7 @@ function q(e) {
                   })
                 : null,
             null != q
-                ? (0, l.jsx)(P.Z, { channel: q })
+                ? (0, l.jsx)(k.Z, { channel: q })
                 : (0, l.jsx)(A.Z, {
                       guildId: f,
                       selectedChannelId: r,

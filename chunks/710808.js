@@ -23,8 +23,8 @@ var i = n(200651),
     C = n(981631),
     E = n(65154),
     _ = n(388032),
-    I = n(971436);
-async function f() {
+    f = n(971436);
+async function I() {
     let e = await d.Z.fileManager.getLogPath();
     d.Z.fileManager.showItemInFolder(e);
 }
@@ -96,7 +96,7 @@ function A() {
         }
     }
     return (0, i.jsxs)(l.FormSection, {
-        className: I.marginBottom40,
+        className: f.marginBottom40,
         title: _.intl.string(_.t.OFpL3d),
         children: [
             (0, i.jsx)(h.F, {
@@ -129,7 +129,7 @@ function A() {
                     }),
                     (0, i.jsx)(l.FormItem, {
                         children: (0, i.jsx)(u.Z, {
-                            className: I.marginBottom20,
+                            className: f.marginBottom20,
                             children: (0, i.jsx)(u.Z.Child, {
                                 grow: 0,
                                 shrink: 0,
@@ -141,7 +141,7 @@ function A() {
                             })
                         })
                     }),
-                    (0, i.jsx)(l.FormDivider, { className: I.marginBottom20 })
+                    (0, i.jsx)(l.FormDivider, { className: f.marginBottom20 })
                 ]
             }),
             (0, i.jsxs)(h.F, {
@@ -172,7 +172,7 @@ function A() {
                                     shrink: 0,
                                     children: (0, i.jsx)(l.Button, {
                                         size: l.Button.Sizes.SMALL,
-                                        onClick: f,
+                                        onClick: I,
                                         children: _.intl.string(_.t.nuPtYm)
                                     })
                                 })

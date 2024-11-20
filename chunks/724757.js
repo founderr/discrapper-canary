@@ -4,11 +4,11 @@ n.d(t, {
     }
 });
 var l = n(192379),
-    i = n(924826),
-    a = n(442837),
+    a = n(924826),
+    i = n(442837),
     r = n(607070);
 function s(e, t, n) {
-    let s = (0, a.e7)([r.Z], () => r.Z.keyboardModeEnabled),
+    let s = (0, i.e7)([r.Z], () => r.Z.keyboardModeEnabled),
         o = l.useCallback(
             (e) => {
                 let n = document.querySelector(e),
@@ -47,7 +47,7 @@ function s(e, t, n) {
                 }),
             [t]
         );
-    return (0, i.ZP)({
+    return (0, a.ZP)({
         id: e,
         isEnabled: s,
         setFocus: o,

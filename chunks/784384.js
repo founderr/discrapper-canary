@@ -1,12 +1,12 @@
 n.d(t, {
     HY: function () {
-        return A;
+        return S;
     },
     nm: function () {
         return I;
     },
     pU: function () {
-        return S;
+        return A;
     },
     y: function () {
         return C;
@@ -15,8 +15,8 @@ n.d(t, {
     n(47120),
     n(390547);
 var l = n(192379),
-    i = n(106351),
-    a = n(442837),
+    a = n(106351),
+    i = n(442837),
     r = n(933557),
     s = n(987509),
     o = n(926491),
@@ -32,19 +32,19 @@ var l = n(192379),
     E = n(388032);
 function I(e) {
     let t = e.map(s.hl).find(m.lm),
-        n = (0, a.e7)([d.Z], () => d.Z.getChannel(t), [t]);
+        n = (0, i.e7)([d.Z], () => d.Z.getChannel(t), [t]);
     return l.useMemo(
         () =>
             null != n
                 ? n
                 : (0, u.kt)({
                       id: '1',
-                      type: i.d.DM
+                      type: a.d.DM
                   }),
         [n]
     );
 }
-function A(e, t, n) {
+function S(e, t, n) {
     let l = n instanceof u.Sf;
     if (t.isNSFW() && !(l && n.isNSFW())) return { label: E.intl.string(E.t.KgPx1N) };
     if (l && (0, u.Km)(n.type)) {
@@ -71,11 +71,11 @@ function A(e, t, n) {
         if ((e.hasFlag(p.iLy.IS_VOICE_MESSAGE) || e.messageSnapshots.some((e) => e.message.hasFlag(p.iLy.IS_VOICE_MESSAGE))) && !h.Z.can(p.Plq.SEND_VOICE_MESSAGES, n)) return { label: E.intl.string(E.t.quj4DQ) };
     }
 }
-function S(e, t) {
+function A(e, t) {
     return null != e.rateLimitPerUser && !!(e.rateLimitPerUser > 0) && !(t.can(p.Plq.MANAGE_CHANNELS, e) || t.can(p.Plq.MANAGE_MESSAGES, e));
 }
 function C(e) {
-    let t = (0, a.Wu)(
+    let t = (0, i.Wu)(
         [d.Z, h.Z],
         () =>
             e
@@ -84,8 +84,8 @@ function C(e) {
                     return 'channel' === t ? d.Z.getChannel(n) : null;
                 })
                 .filter(m.lm)
-                .filter((e) => S(e, h.Z)),
+                .filter((e) => A(e, h.Z)),
         [e]
     );
-    return (0, a.Wu)([_.default, f.Z], () => t.map((e) => (0, r.F6)(e, _.default, f.Z, !0)), [t]);
+    return (0, i.Wu)([_.default, f.Z], () => t.map((e) => (0, r.F6)(e, _.default, f.Z, !0)), [t]);
 }

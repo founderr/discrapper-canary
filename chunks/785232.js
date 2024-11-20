@@ -1,13 +1,13 @@
 var l = n(200651);
 n(192379);
-var i = n(442837),
-    a = n(481060),
+var a = n(442837),
+    i = n(481060),
     r = n(289823),
     s = n(594174);
 t.Z = function (e) {
     let { recipients: t, size: n, status: o, isTyping: c, className: u, ...d } = e,
-        h = a.AvatarSizeSpecs[n],
-        f = (0, i.Wu)(
+        h = i.AvatarSizeSpecs[n],
+        f = (0, a.Wu)(
             [s.default],
             () =>
                 t.slice(0, 2).map((e) => {

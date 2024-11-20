@@ -1,7 +1,7 @@
 var l = n(200651),
-    i = n(192379),
-    a = n(120356),
-    r = n.n(a),
+    a = n(192379),
+    i = n(120356),
+    r = n.n(i),
     s = n(974674),
     o = n(438784),
     c = n(481060),
@@ -29,8 +29,8 @@ function g(e) {
     });
 }
 function m(e) {
-    let { isTyping: t, statusCoords: n, status: i } = e,
-        a = (0, c.useStatusFillColor)(c.StatusTypes.ONLINE);
+    let { isTyping: t, statusCoords: n, status: a } = e,
+        i = (0, c.useStatusFillColor)(c.StatusTypes.ONLINE);
     return t
         ? (0, l.jsx)('div', {
               style: {
@@ -40,13 +40,13 @@ function m(e) {
               },
               children: (0, l.jsx)(g, {
                   height: n.height,
-                  fillColor: a
+                  fillColor: i
               })
           })
-        : null != i
+        : null != a
           ? (0, l.jsx)(c.Status, {
                 size: n.height,
-                status: i,
+                status: a,
                 style: {
                     position: 'absolute',
                     top: n.y,
@@ -113,40 +113,40 @@ let E = {
     }
 };
 t.Z = function (e) {
-    var t, n, a;
-    let { backSrc: o, frontSrc: _, size: g, isTyping: I, status: A, style: S, className: C, ...v } = e,
+    var t, n, i;
+    let { backSrc: o, frontSrc: _, size: g, isTyping: I, status: S, style: A, className: C, ...v } = e,
         { size: b } = c.AvatarSizeSpecs[g],
         {
             statusCoords: L,
             frontAvatarOffsetPx: x,
             frontAvatarSizePx: N,
             backAvatarSizePx: T
-        } = i.useMemo(() => {
+        } = a.useMemo(() => {
             var e;
             let t = ''.concat(b, '-').concat(I);
             return null !== (e = f[t]) && void 0 !== e
                 ? e
                 : (function (e, t, n) {
                       let l = c.AvatarSizeSpecs[e],
-                          i = l.size / (d.z3 + d.o),
-                          a = i * d.z3,
-                          r = i * d.o,
+                          a = l.size / (d.z3 + d.o),
+                          i = a * d.z3,
+                          r = a * d.o,
                           o = {
                               statusCoords: (0, s.Vq)(l, c.StatusTypes.ONLINE, !1, t),
-                              frontAvatarSizePx: a,
-                              backAvatarSizePx: i,
+                              frontAvatarSizePx: i,
+                              backAvatarSizePx: a,
                               frontAvatarOffsetPx: r,
-                              frontAvatarCenter: r + a / 2
+                              frontAvatarCenter: r + i / 2
                           };
                       return (f[n] = o), o;
                   })(g, I, t);
         }, [b, I, g]);
-    let P = ((t = null != A), (n = I), (a = g), n ? E[a].typing : t ? E[a].status : E[a].default);
+    let P = ((t = null != S), (n = I), (i = g), n ? E[i].typing : t ? E[i].status : E[i].default);
     return (0, l.jsxs)('div', {
         style: {
             width: b,
             height: b,
-            ...S
+            ...A
         },
         'aria-label': v['aria-label'],
         'aria-hidden': v['aria-hidden'],
@@ -173,14 +173,14 @@ t.Z = function (e) {
                             src: _,
                             size: N,
                             isTyping: I,
-                            status: A
+                            status: S
                         })
                     })
                 ]
             }),
             (0, l.jsx)(m, {
                 statusCoords: L,
-                status: A,
+                status: S,
                 isTyping: I
             })
         ]

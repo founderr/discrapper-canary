@@ -43,8 +43,8 @@ var l = n(200651),
     j = n(594190),
     C = n(569984),
     S = n(918701),
-    _ = n(977156),
-    Z = n(28798),
+    Z = n(977156),
+    _ = n(28798),
     I = n(131951),
     T = n(449224),
     N = n(358085),
@@ -54,9 +54,9 @@ var l = n(200651),
     E = n(960861),
     R = n(989941),
     M = n(958707),
-    k = n(152165),
+    P = n(152165),
     A = n(133179),
-    P = n(70722),
+    k = n(70722),
     L = n(46140),
     B = n(65154),
     G = n(388032),
@@ -159,12 +159,12 @@ function H(e) {
         [g, T] = i.useState(null),
         N = null != g && g.length > 0,
         [y, E] = i.useState(d.vA.WINDOW),
-        [R, k] = i.useState(!1),
-        P = i.useRef(null),
+        [R, P] = i.useState(!1),
+        k = i.useRef(null),
         U = i.useRef(new h.Xp()),
         H = (0, u.e7)([j.ZP], () => j.ZP.getRunningGames()),
         W = (function (e, t, n) {
-            let l = (0, _.Zy)({ location: L.dr.STREAM_SOURCE_SELECT });
+            let l = (0, Z.Zy)({ location: L.dr.STREAM_SOURCE_SELECT });
             return i.useMemo(() => {
                 if (null == n || !l) return null;
                 for (let l of n) {
@@ -203,7 +203,7 @@ function H(e) {
         );
     }, []);
     let z = i.useCallback((e) => {
-            null !== e && ((P.current = e), k(!e.isScrolledToTop()));
+            null !== e && ((k.current = e), P(!e.isScrolledToTop()));
         }, []),
         K = (function (e) {
             switch (e) {
@@ -243,8 +243,8 @@ function H(e) {
         );
     });
     function X() {
-        let e = P.current;
-        null != e && k(!e.isScrolledToTop());
+        let e = k.current;
+        null != e && P(!e.isScrolledToTop());
     }
     return (0, l.jsxs)(i.Fragment, {
         children: [
@@ -305,7 +305,7 @@ function H(e) {
                       className: D.sourceScroller,
                       onScroll: X,
                       children: [
-                          y === d.vA.WINDOW && null != W && (0, l.jsx)(Z.Z, { quest: W.quest }),
+                          y === d.vA.WINDOW && null != W && (0, l.jsx)(_.Z, { quest: W.quest }),
                           (0, l.jsx)(v.Z, {
                               layout: v.Z.Layout.WRAP,
                               columns: 2,
@@ -335,7 +335,7 @@ function W(e) {
         children: (0, l.jsxs)('div', {
             className: D.nativeSourceSingleTypeButtonInner,
             children: [
-                (0, l.jsx)(k.Z, { className: D.nativeSourceSingleTypeImage }),
+                (0, l.jsx)(P.Z, { className: D.nativeSourceSingleTypeImage }),
                 (0, l.jsx)(m.Text, {
                     variant: 'text-md/medium',
                     color: 'none',
@@ -416,7 +416,7 @@ function z(e) {
             },
             [t, a]
         ),
-        f = (0, N.isMac)() && o().satisfies(null === g.Z || void 0 === g.Z ? void 0 : g.Z.os.release, P.jR),
+        f = (0, N.isMac)() && o().satisfies(null === g.Z || void 0 === g.Z ? void 0 : g.Z.os.release, k.jR),
         x = (0, N.isMac)(),
         [p, v] = i.useState(!1),
         j = i.useCallback(() => {
@@ -522,7 +522,7 @@ function K(e) {
                   color: 'text-danger',
                   children: null != a && a.length > 0 ? a : G.intl.string(G.t.CKsXk5)
               })
-            : (0, l.jsx)(k.Z, {
+            : (0, l.jsx)(P.Z, {
                   animated: !0,
                   className: D.nativePickerGuide
               })

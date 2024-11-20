@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return Z;
     }
 }),
     n(390547);
@@ -55,7 +55,7 @@ function S(e) {
           })
         : null;
 }
-function _(e) {
+function Z(e) {
     let { onSelectGuild: t } = e,
         n = (0, o.e7)([m.ZP], () => m.ZP.getGuildFolders());
     return (0, l.jsx)(p.Z, {

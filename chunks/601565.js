@@ -5,16 +5,16 @@ n.d(t, {
 }),
     n(47120);
 var l = n(192379),
-    i = n(75124),
-    a = n(212819);
+    a = n(75124),
+    i = n(212819);
 function r(e) {
     let { searchOptions: t } = e,
         [n, r] = l.useState({
             results: [],
             query: ''
         }),
-        s = (0, i.Z)(() => {
-            let e = new a.ZP((e, t) => {
+        s = (0, a.Z)(() => {
+            let e = new i.ZP((e, t) => {
                 r({
                     results: e,
                     query: t
@@ -31,8 +31,8 @@ function r(e) {
             search: l.useCallback(
                 (e) => {
                     var t, n;
-                    let { query: l, resultTypes: i } = e;
-                    if (null == s.resultTypes || ((t = i), (n = s.resultTypes), !(t.length === n.size && t.every((e) => n.has(e))))) s.setResultTypes(i), s.setLimit(1 === i.length ? 50 : 20);
+                    let { query: l, resultTypes: a } = e;
+                    if (null == s.resultTypes || ((t = a), (n = s.resultTypes), !(t.length === n.size && t.every((e) => n.has(e))))) s.setResultTypes(a), s.setLimit(1 === a.length ? 50 : 20);
                     s.search('' === l.trim() ? '' : l);
                 },
                 [s]

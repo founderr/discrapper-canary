@@ -1,7 +1,7 @@
 let l;
 n(653041);
-var i,
-    a = n(442837),
+var a,
+    i = n(442837),
     r = n(570140);
 function s(e, t, n) {
     return (
@@ -20,7 +20,7 @@ let o = {
     hasAcceptedStoreTerms: !1,
     hasAcceptedEulaIds: []
 };
-class c extends (i = a.ZP.PersistedStore) {
+class c extends (a = i.ZP.PersistedStore) {
     initialize(e) {
         l = null != e ? e : o;
     }

@@ -3,10 +3,10 @@ n.d(t, {
         return _;
     },
     ZP: function () {
-        return f;
+        return I;
     },
     yo: function () {
-        return I;
+        return f;
     }
 }),
     n(47120);
@@ -161,7 +161,7 @@ function _() {
         listType: 'blocked'
     });
 }
-function I() {
+function f() {
     let e = (0, a.e7)([m.Z], () => m.Z.getIgnoredIDs());
     return (0, i.jsx)(E, {
         setting: p.s6.IGNORED_USERS,
@@ -169,7 +169,7 @@ function I() {
         listType: 'ignored'
     });
 }
-function f() {
+function I() {
     return (0, i.jsxs)(g.U, {
         setting: p.s6.RESTRICTED_USERS,
         children: [
@@ -178,7 +178,7 @@ function f() {
                 description: x.intl.format(x.t.dDvZy8, { helpArticle: '' })
             }),
             (0, i.jsx)(_, {}),
-            (0, i.jsx)(I, {})
+            (0, i.jsx)(f, {})
         ]
     });
 }

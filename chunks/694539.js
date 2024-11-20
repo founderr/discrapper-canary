@@ -29,7 +29,7 @@ t.Z = (e) => {
     let { effect: t, back: n } = e,
         { upsertConfig: r } = (0, g.E)(),
         _ = (0, o.e7)([m.default], () => m.default.getCurrentUser()),
-        [I, f] = s.useState(!0),
+        [f, I] = s.useState(!0),
         N = s.useRef(null),
         [A, b] = s.useState(!1),
         [v, j] = s.useState(!1),
@@ -77,7 +77,7 @@ t.Z = (e) => {
                                       alt: '',
                                       width: 450
                                   }),
-                                  I &&
+                                  f &&
                                       (0, i.jsx)(x.Z, {
                                           config: {
                                               type: a.Z.PROFILE_EFFECT,
@@ -216,7 +216,7 @@ t.Z = (e) => {
                                           (0, i.jsx)(c.Button, {
                                               color: c.ButtonColors.BRAND,
                                               onClick: () => {
-                                                  f(!1), setTimeout(() => f(!0), 100);
+                                                  I(!1), setTimeout(() => I(!0), 100);
                                               },
                                               children: 'Replay Animation'
                                           }),
