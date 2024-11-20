@@ -536,6 +536,7 @@ function eh(e) {
                               alt: null != b && d ? h : b,
                               autoPlay: c,
                               animated: r && !d && l,
+                              srcIsAnimated: s.srcIsAnimated,
                               containerClassName: Q.thumbnailContainer,
                               imageClassName: a()({ [Q.obscured]: d })
                           }),
