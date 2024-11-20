@@ -5,76 +5,80 @@ a.r(t),
         }
     });
 var s = a(200651),
-    o = a(192379),
-    n = a(990547),
-    i = a(481060),
+    n = a(192379),
+    i = a(990547),
+    o = a(481060),
     l = a(442837),
-    c = a(194359),
-    r = a(906732),
+    r = a(194359),
+    c = a(906732),
     d = a(321488),
-    u = a(417183),
-    m = a(170245),
+    m = a(417183),
+    u = a(170245),
     p = a(735778),
-    h = a(171368),
+    h = a(922611),
+    g = a(171368),
     N = a(974042),
     x = a(626135),
-    C = a(981631),
-    g = a(388032),
-    _ = a(438873);
-function I(e) {
-    let { user: t, status: a } = e,
-        n = o.useContext(x.AnalyticsContext),
-        { analyticsLocations: l } = (0, r.ZP)(),
-        p = (e) => {
-            e.stopPropagation(), c.Z.cancelFriendRequest(t.id, { location: 'Spam requests modal' });
-        },
+    I = a(981631),
+    _ = a(388032),
+    C = a(438873);
+function f(e) {
+    let { user: t, status: a, ignoredUser: i } = e,
+        l = n.useContext(x.AnalyticsContext),
+        { analyticsLocations: p } = (0, c.ZP)(),
         N = (e) => {
+            e.stopPropagation(), r.Z.cancelFriendRequest(t.id, { location: 'Spam requests modal' });
+        },
+        f = (e) => {
             e.stopPropagation(),
-                c.Z.addRelationship({
+                r.Z.addRelationship({
                     userId: t.id,
                     context: { location: 'Spam requests modal' }
                 });
         },
-        I = a === C.Skl.OFFLINE ? C.Skl.UNKNOWN : a;
+        k = a === I.Skl.OFFLINE ? I.Skl.UNKNOWN : a,
+        j = (function (e, t, a) {
+            return e ? (t ? _.intl.string(_.t.pO68Oz) : _.intl.string(_.t['gp+Yt7'])) : a.username;
+        })((0, h.JX)({ location: 'FriendRequestSpamModal' }), i, t);
     return (0, s.jsx)('div', {
-        className: _.spamRequest,
-        children: (0, s.jsx)(u.Z, {
+        className: C.spamRequest,
+        children: (0, s.jsx)(m.Z, {
             isFocused: !1,
             user: t,
-            className: _.listItem,
-            activeClassName: _.active,
+            className: C.listItem,
+            activeClassName: C.active,
             onClick: () =>
-                (0, h.openUserProfileModal)({
+                (0, g.openUserProfileModal)({
                     userId: t.id,
-                    sourceAnalyticsLocations: l,
-                    analyticsLocation: n.location
+                    sourceAnalyticsLocations: p,
+                    analyticsLocation: l.location
                 }),
             children: (e) =>
                 (0, s.jsxs)('div', {
-                    className: _.listItemContents,
+                    className: C.listItemContents,
                     children: [
-                        (0, s.jsx)(m.Z, {
+                        (0, s.jsx)(u.Z, {
                             user: t,
                             hovered: e,
-                            status: I,
-                            subText: t.username,
-                            className: _.userInfo
+                            status: k,
+                            subText: j,
+                            className: C.userInfo
                         }),
                         (0, s.jsxs)('div', {
-                            className: _.actions,
+                            className: C.actions,
                             children: [
                                 (0, s.jsx)(d.Z, {
-                                    icon: i.CheckmarkLargeIcon,
+                                    icon: o.CheckmarkLargeIcon,
                                     actionType: d.Z.ActionTypes.ACCEPT,
-                                    tooltip: g.intl.string(g.t.ZcibdX),
-                                    onClick: N,
+                                    tooltip: _.intl.string(_.t.ZcibdX),
+                                    onClick: f,
                                     shouldHighlight: e
                                 }),
                                 (0, s.jsx)(d.Z, {
-                                    icon: i.XSmallIcon,
+                                    icon: o.XSmallIcon,
                                     actionType: d.Z.ActionTypes.DENY,
-                                    tooltip: g.intl.string(g.t.xuio0N),
-                                    onClick: p,
+                                    tooltip: _.intl.string(_.t.xuio0N),
+                                    onClick: N,
                                     shouldHighlight: e
                                 })
                             ]
@@ -86,51 +90,66 @@ function I(e) {
 }
 function k(e) {
     let { transitionState: t, onClose: a } = e,
-        { rows: r } = (0, l.cj)([N.ZP], () => N.ZP.getState()),
-        d = r.filter(C.pJs.SPAM),
-        u = d.length;
-    return (o.useEffect(() => {
-        0 === u && a();
-    }, [u, a]),
+        c = (0, h.Do)({ location: 'FriendRequestSpamModal' }),
+        { rows: d } = (0, l.cj)([N.ZP], () => N.ZP.getState()),
+        m = d.filter(I.pJs.PENDING_IGNORED),
+        u = d.filter(I.pJs.SPAM),
+        g = u.length + m.length;
+    return (n.useEffect(() => {
+        0 === g && a();
+    }, [g, a]),
     (0, p.A)({ location: 'friend_request_spam_inbox' }))
-        ? (0, s.jsxs)(i.ModalRoot, {
+        ? (0, s.jsxs)(o.ModalRoot, {
               transitionState: t,
-              className: _.modal,
-              impression: { impressionName: n.ImpressionNames.FRIEND_REQUESTS_SPAM_INBOX },
+              className: C.modal,
+              impression: { impressionName: i.ImpressionNames.FRIEND_REQUESTS_SPAM_INBOX },
               children: [
-                  (0, s.jsxs)(i.ModalHeader, {
+                  (0, s.jsxs)(o.ModalHeader, {
                       separator: !1,
+                      className: C.modalHeader,
                       children: [
-                          (0, s.jsx)(i.Heading, {
+                          (0, s.jsx)(o.Heading, {
                               variant: 'heading-lg/bold',
-                              className: _.heading,
-                              children: g.intl.string(g.t['rIMT+v'])
+                              className: C.heading,
+                              children: c ? _.intl.string(_.t['tf6t+v']) : _.intl.string(_.t['rIMT+v'])
                           }),
-                          (0, s.jsx)(i.ModalCloseButton, {
-                              onClick: a,
-                              className: _.closeButton
-                          })
+                          c &&
+                              (0, s.jsx)(o.Text, {
+                                  variant: 'text-md/medium',
+                                  color: 'header-secondary',
+                                  children: _.intl.string(_.t.I6WMHh)
+                              })
                       ]
                   }),
-                  (0, s.jsx)(i.ModalContent, {
-                      className: _.modalContent,
-                      children: d.map((e) =>
-                          (0, o.createElement)(I, {
-                              ...e,
-                              isFocused: !1,
-                              key: e.key
-                          })
-                      )
+                  (0, s.jsxs)(o.ModalContent, {
+                      className: C.modalContent,
+                      children: [
+                          m.map((e) =>
+                              (0, n.createElement)(f, {
+                                  ...e,
+                                  isFocused: !1,
+                                  key: e.key,
+                                  ignoredUser: !0
+                              })
+                          ),
+                          u.map((e) =>
+                              (0, n.createElement)(f, {
+                                  ...e,
+                                  isFocused: !1,
+                                  key: e.key
+                              })
+                          )
+                      ]
                   }),
-                  u > 1 &&
+                  g > 1 &&
                       (0, s.jsx)('div', {
-                          className: _.modalFooter,
-                          children: (0, s.jsx)(i.Button, {
-                              className: _.clearAllButton,
+                          className: C.modalFooter,
+                          children: (0, s.jsx)(o.Button, {
+                              className: C.clearAllButton,
                               onClick: () => {
-                                  c.Z.clearPendingSpam(), a();
+                                  r.Z.clearPendingSpam(), a();
                               },
-                              children: g.intl.string(g.t.O8k7Oz)
+                              children: _.intl.string(_.t.O8k7Oz)
                           })
                       })
               ]

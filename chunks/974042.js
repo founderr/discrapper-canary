@@ -66,7 +66,7 @@ class A extends c.Z {
         return [this.type, null != this.giftIntentType ? 0 : 1, null !== (r = null !== (i = null === (e = this.nickname) || void 0 === e ? void 0 : e.toLowerCase()) && void 0 !== i ? i : null === (n = this.user) || void 0 === n ? void 0 : null === (t = n.globalName) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== r ? r : this.usernameLower];
     }
     constructor(e) {
-        super(), v(this, 'key', void 0), v(this, 'type', void 0), v(this, 'status', void 0), v(this, 'isMobile', void 0), v(this, 'activities', void 0), v(this, 'applicationStream', void 0), v(this, 'user', void 0), v(this, 'usernameLower', void 0), v(this, 'mutualGuildsLength', void 0), v(this, 'mutualGuilds', void 0), v(this, 'nickname', void 0), v(this, 'spam', void 0), v(this, 'giftIntentType', void 0), (this.key = e.key), (this.type = e.type), (this.status = e.status), (this.activities = e.activities), (this.applicationStream = e.applicationStream), (this.user = e.user), (this.isMobile = e.isMobile), (this.usernameLower = e.usernameLower), (this.mutualGuildsLength = e.mutualGuildsLength), (this.mutualGuilds = e.mutualGuilds), (this.nickname = e.nickname), (this.spam = e.spam), (this.giftIntentType = e.giftIntentType);
+        super(), v(this, 'key', void 0), v(this, 'type', void 0), v(this, 'status', void 0), v(this, 'isMobile', void 0), v(this, 'activities', void 0), v(this, 'applicationStream', void 0), v(this, 'user', void 0), v(this, 'usernameLower', void 0), v(this, 'mutualGuildsLength', void 0), v(this, 'mutualGuilds', void 0), v(this, 'nickname', void 0), v(this, 'spam', void 0), v(this, 'giftIntentType', void 0), v(this, 'ignoredUser', void 0), (this.key = e.key), (this.type = e.type), (this.status = e.status), (this.activities = e.activities), (this.applicationStream = e.applicationStream), (this.user = e.user), (this.isMobile = e.isMobile), (this.usernameLower = e.usernameLower), (this.mutualGuildsLength = e.mutualGuildsLength), (this.mutualGuilds = e.mutualGuilds), (this.nickname = e.nickname), (this.spam = e.spam), (this.giftIntentType = e.giftIntentType), (this.ignoredUser = e.ignoredUser);
     }
 }
 class b {
@@ -127,9 +127,11 @@ class b {
                     case I.pJs.ONLINE:
                         return t.type === I.OGo.FRIEND && t.status !== I.Skl.OFFLINE;
                     case I.pJs.PENDING:
-                        return (t.type === I.OGo.PENDING_INCOMING && (!(0, h.A)({ location: 'friends-store' }) || !t.spam)) || t.type === I.OGo.PENDING_OUTGOING;
+                        return (t.type === I.OGo.PENDING_INCOMING && (!(0, h.A)({ location: 'friends-store' }) || !t.spam) && !t.ignoredUser) || t.type === I.OGo.PENDING_OUTGOING;
                     case I.pJs.SPAM:
                         return t.type === I.OGo.PENDING_INCOMING && t.spam;
+                    case I.pJs.PENDING_IGNORED:
+                        return t.type === I.OGo.PENDING_INCOMING && t.ignoredUser;
                     case I.pJs.SUGGESTIONS:
                         return 99 === t.type;
                     case I.pJs.BLOCKED:
