@@ -54,31 +54,32 @@ function T(e) {
     });
 }
 function C(e) {
-    let { userId: t, last: n } = e,
-        r = (0, a.e7)([m.Z], () => m.Z.isBlocked(t)),
-        g = (0, a.e7)([h.default], () => h.default.getUser(t)),
-        [p, T] = s.useState(!1),
-        C = s.useCallback(() => {
-            T(!0),
-                r
-                    ? c.Z.unblockUser(t).catch(() => {
-                          T(!1);
+    var t;
+    let { userId: n, last: r } = e,
+        g = (0, a.e7)([m.Z], () => m.Z.isBlocked(n)),
+        p = (0, a.e7)([h.default], () => h.default.getUser(n)),
+        [T, C] = s.useState(!1),
+        E = s.useCallback(() => {
+            C(!0),
+                g
+                    ? c.Z.unblockUser(n).catch(() => {
+                          C(!1);
                       })
-                    : c.Z.unignoreUser(t, u.Z.USER_SETTINGS).catch(() => {
-                          T(!1);
+                    : c.Z.unignoreUser(n, u.Z.USER_SETTINGS).catch(() => {
+                          C(!1);
                       });
-        }, [r, t]);
-    return null == g
+        }, [g, n]);
+    return null == p
         ? null
         : (0, i.jsx)(i.Fragment, {
               children: (0, i.jsxs)('div', {
-                  className: l()(S.row, { [S.lastRow]: n }),
+                  className: l()(S.row, { [S.lastRow]: r }),
                   children: [
                       (0, i.jsxs)('div', {
                           className: S.userInfo,
                           children: [
                               (0, i.jsx)(d.Z, {
-                                  user: g,
+                                  user: p,
                                   size: o.AvatarSizes.SIZE_40
                               }),
                               (0, i.jsxs)('div', {
@@ -87,12 +88,12 @@ function C(e) {
                                       (0, i.jsx)(o.Text, {
                                           variant: 'text-md/semibold',
                                           color: 'header-primary',
-                                          children: g.username
+                                          children: null !== (t = p.globalName) && void 0 !== t ? t : p.username
                                       }),
                                       (0, i.jsx)(o.Text, {
                                           variant: 'text-sm/medium',
                                           color: 'header-secondary',
-                                          children: x.intl.string(r ? x.t['4bDptL'] : x.t.tFY5ZW)
+                                          children: null != p.globalName ? p.username : null
                                       })
                                   ]
                               })
@@ -100,9 +101,9 @@ function C(e) {
                       }),
                       (0, i.jsx)(o.Button, {
                           color: o.ButtonColors.PRIMARY,
-                          onClick: C,
-                          submitting: p,
-                          children: x.intl.string(r ? x.t.XyHpKC : x.t['8wXU9P'])
+                          onClick: E,
+                          submitting: T,
+                          children: x.intl.string(g ? x.t.XyHpKC : x.t['8wXU9P'])
                       })
                   ]
               })
