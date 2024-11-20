@@ -6,7 +6,7 @@ n.d(t, {
 var r = n(228624),
     i = n(388032);
 let a = (e) => {
-    let t = (0, r.e)('usePurchasedProductName');
+    let t = (0, r.ed)('usePurchasedProductName');
     if (null == e) return '';
     let n = i.intl.string(i.t.z7y5vL);
     return t && null != e.baseVariantName && e.variantLabel !== n

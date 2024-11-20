@@ -1,7 +1,7 @@
 e.exports = {
     modal: 'modal_e985aa',
+    modalHeader: 'modalHeader_e985aa',
     heading: 'heading_e985aa',
-    closeButton: 'closeButton_e985aa',
     modalContent: 'modalContent_e985aa',
     modalFooter: 'modalFooter_e985aa',
     clearAllButton: 'clearAllButton_e985aa',

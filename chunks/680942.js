@@ -80,7 +80,7 @@ t.Z = (e) => {
         E = a.useRef(null),
         S = (0, s.Z)(E),
         I = k ? p.BR.DARK : p.BR.LIGHT,
-        T = (0, u.h)('CollectiblesShopGiftButton');
+        T = (0, u.hv)('CollectiblesShopGiftButton');
     return (0, d.x6)(t)
         ? null
         : (0, r.jsx)(i.Tooltip, {

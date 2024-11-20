@@ -290,23 +290,23 @@ function z(e) {
                         entry: es,
                         sourceType: V.n_.ACTIVITY,
                         children: () =>
-                            (0, r.jsx)(O.Z.Overlay, {
-                                className: a()(K.card, J, { [K.hoisted]: ey }),
-                                ref: eu,
-                                children: (0, r.jsxs)(R.Z, {
+                            (0, r.jsx)(R.Z, {
+                                user: n,
+                                className: K.toolbarContainer,
+                                interactionSourceId: eS,
+                                sourceType: V.n_.ACTIVITY,
+                                moreButton: (0, r.jsx)(Z.Z, {
+                                    display: 'live',
                                     user: n,
-                                    className: K.body,
-                                    interactionSourceId: eS,
-                                    sourceType: V.n_.ACTIVITY,
-                                    moreButton: (0, r.jsx)(Z.Z, {
-                                        display: 'live',
-                                        user: n,
-                                        activity: z,
-                                        entry: es,
-                                        onClose: $,
-                                        onRequestOpen: t,
-                                        className: W.button
-                                    }),
+                                    activity: z,
+                                    entry: es,
+                                    onClose: $,
+                                    onRequestOpen: t,
+                                    className: W.button
+                                }),
+                                children: (0, r.jsxs)(O.Z.Overlay, {
+                                    className: a()(K.card, J, { [K.hoisted]: ey }),
+                                    ref: eu,
                                     children: [
                                         (0, r.jsx)(M.Z, { ...ec }),
                                         (0, r.jsxs)('div', {

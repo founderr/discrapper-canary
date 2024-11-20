@@ -179,7 +179,7 @@ let eC = (e) => {
                 product: A,
                 onSuccess: p
             }),
-            e_ = (0, H.h)('CollectiblesProductPreviewInfo'),
+            e_ = (0, H.hv)('CollectiblesProductPreviewInfo'),
             eb = (0, z.T)(A),
             ew = l.useCallback(() => {
                 if ((p(), (0, C.xf)(), B(), null != ec)) {

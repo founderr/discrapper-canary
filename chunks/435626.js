@@ -86,7 +86,7 @@ let O = () => ((0, v.Z)(), null);
 function R(e) {
     let { giftRecipient: t, analyticsObject: r, onClose: n } = e,
         { showBothNitroSkusInCategorySelect: o } = b.G.useExperiment({ location: 'gift-button' }, { autoTrackExposure: !1 }),
-        a = (0, _.h)('CategoryButtons'),
+        a = (0, _.hv)('CategoryButtons'),
         { analyticsLocations: s } = (0, u.ZP)(d.Z.GIFT_CATEGORY_SELECT_MODAL),
         f = (e) => {
             e && n();

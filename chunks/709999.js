@@ -127,7 +127,7 @@ t.Z = function (e) {
         eT = (0, P.Yq)(t.skuId),
         { hoverVariant: eN } = (0, O.E)('CollectiblesShopTallCard'),
         eB = i.skuId === u.T.STORM && '1268362891946627103' === t.skuId,
-        ey = (0, A.h)('CollectiblesShopTallCard'),
+        ey = (0, A.hv)('CollectiblesShopTallCard'),
         eL = (0, Z.ff)(t),
         eZ = (0, Z.o0)(t),
         eP = null !== eL ? eL : eZ,

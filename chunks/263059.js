@@ -152,23 +152,23 @@ function k(e) {
                         entry: W,
                         sourceType: w.n_.ACTIVITY,
                         children: () =>
-                            (0, r.jsx)(T.Z.Overlay, {
-                                className: s()(P.card, G, { [P.hoisted]: er }),
-                                ref: X,
-                                children: (0, r.jsxs)(I.Z, {
+                            (0, r.jsx)(I.Z, {
+                                user: n,
+                                className: P.toolbarContainer,
+                                sourceType: w.n_.ACTIVITY,
+                                interactionSourceId: en,
+                                moreButton: (0, r.jsx)(x.Z, {
+                                    display: 'live',
                                     user: n,
-                                    className: P.body,
-                                    sourceType: w.n_.ACTIVITY,
-                                    interactionSourceId: en,
-                                    moreButton: (0, r.jsx)(x.Z, {
-                                        display: 'live',
-                                        user: n,
-                                        activity: k,
-                                        entry: W,
-                                        onClose: Z,
-                                        onRequestOpen: t,
-                                        className: M.button
-                                    }),
+                                    activity: k,
+                                    entry: W,
+                                    onClose: Z,
+                                    onRequestOpen: t,
+                                    className: M.button
+                                }),
+                                children: (0, r.jsxs)(T.Z.Overlay, {
+                                    className: s()(P.card, G, { [P.hoisted]: er }),
+                                    ref: X,
                                     children: [
                                         (0, r.jsx)(N.Z, { ...K }),
                                         (0, r.jsxs)('div', {

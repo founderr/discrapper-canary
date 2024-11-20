@@ -23,7 +23,7 @@ function c(e) {
         });
     let n = (0, i.e7)([s.Z], () => s.Z.hasLoadedExperiments),
         c = null == e ? void 0 : e.includeBundles,
-        d = (0, u.h)('useMaybeFetchCollectiblesCategoriesShared'),
+        d = (0, u.hv)('useMaybeFetchCollectiblesCategoriesShared'),
         [f, _, p, h, m, g] = (0, i.Wu)([l.Z], () => {
             var e, t;
             return [l.Z.isFetchingCategories, l.Z.lastFetchOptions, l.Z.error, null !== (e = l.Z.lastErrorTimestamp) && void 0 !== e ? e : 0, null !== (t = l.Z.lastSuccessfulFetch) && void 0 !== t ? t : 0, l.Z.categories];

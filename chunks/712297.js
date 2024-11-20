@@ -44,7 +44,7 @@ function a(t) {
             },
             [I]
         ),
-        s = (0, S.h)('useSkus');
+        s = (0, S.hv)('useSkus');
     r.useEffect(() => {
         for (let t of I) !_.Z.isFetching(t) && null == _.Z.get(t) && (0, i.$N)(e, t, s);
     }, [e, I, s]);

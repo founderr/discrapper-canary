@@ -24,7 +24,7 @@ function c() {
             location: e + ' auto off',
             autoTrackExposure: !1
         });
-    let t = (0, l.h)('useFetchPurchases'),
+    let t = (0, l.hv)('useFetchPurchases'),
         [n, u, c, d, f, _] = (0, i.Wu)([o.Z], () => [o.Z.isFetching, o.Z.isClaiming, o.Z.fetchError, o.Z.claimError, o.Z.purchases, o.Z.hasPreviouslyFetched]);
     return (
         (0, r.useEffect)(() => {

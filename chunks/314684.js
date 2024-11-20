@@ -257,7 +257,7 @@ function U() {
 function D(e) {
     var t;
     let n = (0, v.oY)({ location: 'Home' }),
-        r = (0, g.h)('useCollectiblePurchaseForTenureReward'),
+        r = (0, g.hv)('useCollectiblePurchaseForTenureReward'),
         [a, l] = (0, s.Wu)([u.Z], () => [u.Z.purchases, u.Z.hasPreviouslyFetched]);
     return (
         i.useEffect(() => {

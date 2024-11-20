@@ -280,21 +280,21 @@ function $(e) {
                         sourceDetails: eO,
                         sourceType: Y.n_.ACTIVITY,
                         children: () =>
-                            (0, r.jsx)(k.Z.Overlay, {
-                                className: s()(q.card, $, { [q.hoisted]: eR }),
-                                ref: ed,
-                                children: (0, r.jsxs)(P.Z, {
+                            (0, r.jsx)(P.Z, {
+                                user: t,
+                                className: q.toolbarContainer,
+                                interactionSourceId: eE,
+                                sourceType: Y.n_.ACTIVITY,
+                                moreButton: (0, r.jsx)(H.Z, {
+                                    display: 'live',
                                     user: t,
-                                    className: q.body,
-                                    interactionSourceId: eE,
-                                    sourceType: Y.n_.ACTIVITY,
-                                    moreButton: (0, r.jsx)(H.Z, {
-                                        display: 'live',
-                                        user: t,
-                                        onClose: ee,
-                                        onRequestOpen: n,
-                                        className: z.button
-                                    }),
+                                    onClose: ee,
+                                    onRequestOpen: n,
+                                    className: z.button
+                                }),
+                                children: (0, r.jsxs)(k.Z.Overlay, {
+                                    className: s()(q.card, $, { [q.hoisted]: eR }),
+                                    ref: ed,
                                     children: [
                                         (0, r.jsx)(G.Z, {
                                             text: eO,

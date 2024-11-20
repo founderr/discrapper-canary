@@ -184,7 +184,7 @@ let V = (t) => {
             { confettiColors: V } = (0, Z.Z)(F.styles),
             U = (0, u.e7)([p.Z], () => p.Z.useReducedMotion),
             Y = (0, I.m)('CollectiblesCollectedModal'),
-            G = (0, A.e)('CollectiblesCollectedModal'),
+            G = (0, A.ed)('CollectiblesCollectedModal'),
             X = (0, w.k)(F),
             [W] = F.items,
             Q = i.useRef(null),
