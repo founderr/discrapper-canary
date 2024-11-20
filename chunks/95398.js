@@ -1,6 +1,6 @@
 n.d(t, {
     a: function () {
-        return I;
+        return b;
     }
 }),
     n(47120);
@@ -16,7 +16,7 @@ var r,
     f = n(169525),
     _ = n(823379),
     p = n(388032),
-    h = n(760585);
+    h = n(705418);
 function m(e, t, n) {
     return (
         t in e
@@ -81,7 +81,7 @@ let g = (e) => {
                 return (0, _.vE)(t);
         }
     },
-    b = (e) => {
+    I = (e) => {
         let { obscureReason: t, isVisible: n, handleToggleObscurity: r, obscurityControlClassName: i } = e;
         return t !== f.wk.EXPLICIT_CONTENT
             ? null
@@ -103,7 +103,7 @@ let g = (e) => {
                   })
               });
     },
-    I = o.createContext(!1);
+    b = o.createContext(!1);
 class T extends (i = o.PureComponent) {
     renderWithTooltip(e) {
         return (0, s.jsx)(d.Tooltip, {
@@ -121,7 +121,7 @@ class T extends (i = o.PureComponent) {
     renderObscuredAttachment() {
         let { children: e, inline: t, className: n, containerStyles: r, obscured: i = !0, reason: a = f.wk.SPOILER, isSingleMosaicItem: o = !1, obscurityControlClassName: l } = this.props,
             { visible: c } = this.state,
-            _ = (0, s.jsx)(I.Consumer, {
+            _ = (0, s.jsx)(b.Consumer, {
                 children: (_) => {
                     let p = _ || c || !i;
                     return [f.wk.EXPLICIT_CONTENT, f.wk.POTENTIAL_EXPLICIT_CONTENT].includes(a) && !t
@@ -147,7 +147,7 @@ class T extends (i = o.PureComponent) {
                                       className: h.spoilerInnerContainer,
                                       children: e(!p)
                                   }),
-                                  (0, s.jsx)(b, {
+                                  (0, s.jsx)(I, {
                                       obscureReason: a,
                                       isVisible: c,
                                       handleToggleObscurity: this.handleToggleObscurity,
@@ -187,7 +187,7 @@ class T extends (i = o.PureComponent) {
     renderObscuredEmbed() {
         let { children: e, className: t, containerStyles: n, isSingleMosaicItem: r, obscurityControlClassName: i, reason: a = f.wk.SPOILER } = this.props,
             { visible: o } = this.state;
-        return (0, s.jsx)(I.Consumer, {
+        return (0, s.jsx)(b.Consumer, {
             children: (l) => {
                 let c = l || o;
                 return [f.wk.EXPLICIT_CONTENT, f.wk.POTENTIAL_EXPLICIT_CONTENT].includes(a)
@@ -210,7 +210,7 @@ class T extends (i = o.PureComponent) {
                                   className: h.spoilerInnerContainer,
                                   children: e(!c)
                               }),
-                              (0, s.jsx)(b, {
+                              (0, s.jsx)(I, {
                                   obscureReason: a,
                                   isVisible: o,
                                   handleToggleObscurity: this.handleToggleObscurity,
@@ -245,7 +245,7 @@ class T extends (i = o.PureComponent) {
     renderObscuredText() {
         let { children: e, renderTextElement: t, className: n } = this.props,
             { visible: r } = this.state,
-            i = (0, s.jsx)(I.Consumer, {
+            i = (0, s.jsx)(b.Consumer, {
                 children: (i) => {
                     let a = i || r,
                         l = o.Children.toArray(e(a)),

@@ -26,8 +26,8 @@ var i = n(200651),
     T = n(221292),
     S = n(481046),
     A = n(816988),
-    b = n(687158),
-    x = n(899007),
+    x = n(687158),
+    b = n(899007),
     Z = n(648052),
     L = n(867176),
     y = n(438163),
@@ -56,8 +56,8 @@ var i = n(200651),
     $ = n(981631),
     ee = n(228168),
     et = n(388032),
-    en = n(165858),
-    ei = n(653134);
+    en = n(217593),
+    ei = n(451563);
 let er = [
     {
         duration: 30 * z.Z.Millis.MINUTE,
@@ -168,7 +168,7 @@ function es(e) {
     var t;
     let { currentUser: z, onClose: q, setPopoutRef: es } = e,
         eo = __OVERLAY__,
-        ec = (0, b.ZP)(z.id),
+        ec = (0, x.ZP)(z.id),
         ed = (0, u.O)(),
         { analyticsLocations: eu } = (0, g.ZP)(p.Z.ACCOUNT_PROFILE_POPOUT),
         eh = (0, N.ZB)({
@@ -303,7 +303,7 @@ function es(e) {
         { customStatusBubbleEditEnabled: eT } = (0, S.K)({ location: 'AccountProfilePopout' }),
         { dimissibleUpsellsEnabled: eS } = (0, A.u)({ location: 'AccountProfilePopout' }),
         eA = (0, Y.I5)(z),
-        eb = (e) => {
+        ex = (e) => {
             null == q || q(),
                 (0, U.openUserProfileModal)({
                     sourceAnalyticsLocations: eu,
@@ -311,7 +311,7 @@ function es(e) {
                     ...e
                 });
         },
-        ex = () => {
+        eb = () => {
             (0, c.openModalLazy)(async () => {
                 let { default: e } = await n.e('51714').then(n.bind(n, 211065));
                 return (t) =>
@@ -351,11 +351,11 @@ function es(e) {
                                     displayProfile: ec,
                                     profileType: ee.y0.BITE_SIZE
                                 }),
-                                (0, i.jsx)(x.Z, {
+                                (0, i.jsx)(b.Z, {
                                     user: z,
                                     displayProfile: ec,
                                     profileType: ee.y0.BITE_SIZE,
-                                    onOpenProfile: eo ? void 0 : eb
+                                    onOpenProfile: eo ? void 0 : ex
                                 }),
                                 (0, i.jsx)(y.Z, {
                                     user: z,
@@ -377,7 +377,7 @@ function es(e) {
                                     className: en.username,
                                     profileType: ee.y0.BITE_SIZE,
                                     nickname: W.ZP.getName(null, null, z),
-                                    onOpenProfile: eo ? void 0 : eb,
+                                    onOpenProfile: eo ? void 0 : ex,
                                     pronouns: null == ec ? void 0 : ec.pronouns,
                                     tags: (0, i.jsx)(Z.Z, {
                                         displayProfile: ec,
@@ -496,7 +496,7 @@ function es(e) {
                                                                           label: et.intl.string(et.t.ezAcPz),
                                                                           icon: () => (0, i.jsx)('div', { className: en.customEmojiPlaceholder }),
                                                                           onClick: () => {
-                                                                              q(), ex();
+                                                                              q(), eb();
                                                                           }
                                                                       })
                                                                     : (0, i.jsx)(Q.Mv, {
@@ -528,7 +528,7 @@ function es(e) {
                                                                               })
                                                                           }),
                                                                           onClick: () => {
-                                                                              q(), ex();
+                                                                              q(), eb();
                                                                           }
                                                                       })
                                                             ]

@@ -132,10 +132,10 @@ function E() {
 function v(e, t) {
     t && (g('Patches'), (e.u = []), (e.s = []), (e.v = t));
 }
-function b(e) {
-    I(e), e.p.forEach(S), (e.p = null);
-}
 function I(e) {
+    b(e), e.p.forEach(S), (e.p = null);
+}
+function b(e) {
     e === P && (P = e.l);
 }
 function T(e) {
@@ -155,7 +155,7 @@ function y(e, t) {
     t._ = t.p.length;
     var n = t.p[0],
         i = void 0 !== e && e !== n;
-    return t.h.O || g('ES5').S(t, e, i), i ? (n[V].P && (b(t), r(4)), a(e) && ((e = A(t, e)), t.l || C(t, e)), t.u && g('Patches').M(n[V].t, e, t.u, t.s)) : (e = A(t, n, [])), b(t), t.u && t.v(t.u, t.s), e !== Z ? e : void 0;
+    return t.h.O || g('ES5').S(t, e, i), i ? (n[V].P && (I(t), r(4)), a(e) && ((e = A(t, e)), t.l || C(t, e)), t.u && g('Patches').M(n[V].t, e, t.u, t.s)) : (e = A(t, n, [])), I(t), t.u && t.v(t.u, t.s), e !== Z ? e : void 0;
 }
 function A(e, t, n) {
     if (m(t)) return t;
@@ -398,7 +398,7 @@ var q = new ((function () {
                         try {
                             (s = n(u)), (c = !1);
                         } finally {
-                            c ? b(l) : I(l);
+                            c ? I(l) : b(l);
                         }
                         return 'undefined' != typeof Promise && s instanceof Promise
                             ? s.then(
@@ -406,7 +406,7 @@ var q = new ((function () {
                                       return v(l, i), y(e, l);
                                   },
                                   function (e) {
-                                      throw (b(l), e);
+                                      throw (I(l), e);
                                   }
                               )
                             : (v(l, i), y(s, l));
@@ -469,7 +469,7 @@ var q = new ((function () {
                 var t,
                     n = T(this),
                     l = x(this, e, void 0);
-                return (l[V].C = !0), I(n), l;
+                return (l[V].C = !0), b(n), l;
             }),
             (t.finishDraft = function (e, t) {
                 var n = (e && e[V]).A;

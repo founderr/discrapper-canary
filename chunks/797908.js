@@ -8,7 +8,7 @@ var i = n(200651),
     d = n(768581),
     u = n(956965),
     h = n(388032),
-    m = n(949914);
+    m = n(923592);
 let p = 28;
 t.Z = function (e) {
     var t, n, g, f, _;
@@ -28,8 +28,8 @@ t.Z = function (e) {
                 }),
             [E]
         ),
-        b = (null !== (f = null === (n = E.directory_entry) || void 0 === n ? void 0 : n.guild_count) && void 0 !== f ? f : 0) > 0 || v.length > 0,
-        x = (0, i.jsx)(s.Z, {
+        x = (null !== (f = null === (n = E.directory_entry) || void 0 === n ? void 0 : n.guild_count) && void 0 !== f ? f : 0) > 0 || v.length > 0,
+        b = (0, i.jsx)(s.Z, {
             application: E,
             textVariant: 'text-xs/medium',
             mutualGuilds: v,
@@ -121,10 +121,10 @@ t.Z = function (e) {
                             lineClamp: Z || T ? 2 : 3,
                             children: null !== (_ = null === (g = E.directory_entry) || void 0 === g ? void 0 : g.short_description) && void 0 !== _ ? _ : E.description
                         }),
-                        b
+                        x
                             ? (0, i.jsx)('div', {
                                   className: m.memberDetails,
-                                  children: x
+                                  children: b
                               })
                             : null
                     ]

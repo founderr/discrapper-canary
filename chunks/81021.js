@@ -182,13 +182,13 @@ var E = function e(t) {
         '%WeakMapPrototype%': ['WeakMap', 'prototype'],
         '%WeakSetPrototype%': ['WeakSet', 'prototype']
     },
-    b = n(390976),
-    I = n(706165),
-    T = b.call(Function.call, Array.prototype.concat),
-    S = b.call(Function.apply, Array.prototype.splice),
-    y = b.call(Function.call, String.prototype.replace),
-    A = b.call(Function.call, String.prototype.slice),
-    N = b.call(Function.call, RegExp.prototype.exec),
+    I = n(390976),
+    b = n(706165),
+    T = I.call(Function.call, Array.prototype.concat),
+    S = I.call(Function.apply, Array.prototype.splice),
+    y = I.call(Function.call, String.prototype.replace),
+    A = I.call(Function.call, String.prototype.slice),
+    N = I.call(Function.call, RegExp.prototype.exec),
     C = /[^%.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|%$))/g,
     R = /\\(\\)?/g,
     O = function (e) {
@@ -207,7 +207,7 @@ var E = function e(t) {
     D = function (e, t) {
         var n,
             r = e;
-        if ((I(v, r) && (r = '%' + (n = v[r])[0] + '%'), I(m, r))) {
+        if ((b(v, r) && (r = '%' + (n = v[r])[0] + '%'), b(m, r))) {
             var a = m[r];
             if ((a === p && (a = E(r)), void 0 === a && !t)) throw new s('intrinsic ' + e + ' exists, but is not available. Please file an issue!');
             return {
@@ -235,7 +235,7 @@ e.exports = function (e, t) {
             h = A(p, 0, 1),
             g = A(p, -1);
         if (('"' === h || "'" === h || '`' === h || '"' === g || "'" === g || '`' === g) && h !== g) throw new i('property names with quotes must have matching quotes');
-        if ((('constructor' === p || !_) && (c = !0), (r += '.' + p), I(m, (o = '%' + r + '%')))) u = m[o];
+        if ((('constructor' === p || !_) && (c = !0), (r += '.' + p), b(m, (o = '%' + r + '%')))) u = m[o];
         else if (null != u) {
             if (!(p in u)) {
                 if (!t) throw new s('base intrinsic for ' + e + ' exists, but the property is not available.');
@@ -244,7 +244,7 @@ e.exports = function (e, t) {
             if (l && f + 1 >= n.length) {
                 var E = l(u, p);
                 u = (_ = !!E) && 'get' in E && !('originalValue' in E.get) ? E.get : u[p];
-            } else (_ = I(u, p)), (u = u[p]);
+            } else (_ = b(u, p)), (u = u[p]);
             _ && !c && (m[o] = u);
         }
     }

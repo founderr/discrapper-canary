@@ -27,8 +27,8 @@ var i,
     T = n(854698),
     S = n(703656),
     A = n(922482),
-    b = n(565799),
-    x = n(501655),
+    x = n(565799),
+    b = n(501655),
     Z = n(427679),
     L = n(448206),
     y = n(184301),
@@ -39,7 +39,7 @@ var i,
     D = n(981631),
     M = n(765305),
     w = n(388032),
-    k = n(272064);
+    k = n(599293);
 ((r = i || (i = {}))[(r.STAGE = 0)] = 'STAGE'), (r[(r.EVENT_EXTERNAL = 1)] = 'EVENT_EXTERNAL'), (r[(r.EVENT_VOICE = 2)] = 'EVENT_VOICE'), (r[(r.STUDY_ROOM = 3)] = 'STUDY_ROOM');
 function U(e) {
     let { guild: t, isStudyRoomNotice: n = !1 } = e,
@@ -55,8 +55,8 @@ function U(e) {
             [s, r]
         ),
         B = null == i ? void 0 : i.id,
-        H = (0, c.Wu)([b.Z], () => [...new Set(b.Z.getMutableParticipants(B, x.pV.SPEAKER).map((e) => e.user))], [B]),
-        V = (0, c.e7)([b.Z], () => (null != B ? b.Z.getParticipantCount(B, x.pV.AUDIENCE) : 0), [B]),
+        H = (0, c.Wu)([x.Z], () => [...new Set(x.Z.getMutableParticipants(B, b.pV.SPEAKER).map((e) => e.user))], [B]),
+        V = (0, c.e7)([x.Z], () => (null != B ? x.Z.getParticipantCount(B, b.pV.AUDIENCE) : 0), [B]),
         F = (0, c.e7)([P.Z], () => P.Z.can(D.Plq.CONNECT, i)),
         z = (0, L.Z)(null == i ? void 0 : i.id),
         W = null == r ? void 0 : r.creator_id,

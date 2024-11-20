@@ -19,7 +19,7 @@ var i = n(120356),
     p = n(981631),
     h = n(474936),
     m = n(388032),
-    g = n(759385);
+    g = n(979274);
 let E = {
     [p.Eu4.NONE]: 0,
     [p.Eu4.TIER_1]: 1 / 3,
@@ -27,7 +27,7 @@ let E = {
     [p.Eu4.TIER_3]: 1
 };
 t.Z = function (e) {
-    let { children: t, confettiTriggerRef: n, guild: i, isProgressBarAnimationComplete: v, setConfettiCount: b, setShouldFireConfetti: I, tier: T, tierMarkerAnimationPosition: S } = e,
+    let { children: t, confettiTriggerRef: n, guild: i, isProgressBarAnimationComplete: v, setConfettiCount: I, setShouldFireConfetti: b, tier: T, tierMarkerAnimationPosition: S } = e,
         { analyticsLocations: y } = (0, l.ZP)(),
         A = (0, u.Z)(),
         N = p.oCV[T] - i.premiumSubscriberCount,
@@ -111,8 +111,8 @@ t.Z = function (e) {
                     R && T === p.Eu4.TIER_3
                         ? (0, r.jsx)(_.m, {
                               confettiTriggerRef: n,
-                              setConfettiCount: b,
-                              setShouldFireConfetti: I,
+                              setConfettiCount: I,
+                              setShouldFireConfetti: b,
                               children: x
                           })
                         : x,

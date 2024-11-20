@@ -15,8 +15,8 @@ var a,
     g = n(444852),
     E = n(569545),
     v = n(687516),
-    b = n(139656),
-    I = n(358085),
+    I = n(139656),
+    b = n(358085),
     T = n(199902),
     S = n(314897),
     y = n(131951),
@@ -58,7 +58,7 @@ function B() {
 }
 class G extends (a = _.ZP.Store) {
     getActiveStreamKey() {
-        return (0, b.Z)(y.Z) ? i : null;
+        return (0, I.Z)(y.Z) ? i : null;
     }
     getRTCConnections() {
         return M;
@@ -70,7 +70,7 @@ class G extends (a = _.ZP.Store) {
         return M[e];
     }
     getStatsHistory(e, t, n) {
-        if (!(0, b.Z)(y.Z) || null == t) return null;
+        if (!(0, I.Z)(y.Z) || null == t) return null;
         if (n) {
             let n = T.Z.getActiveStreamForUser(t, e);
             if (null == n || 0 === T.Z.getViewerIds(n).length) return null;
@@ -109,7 +109,7 @@ class G extends (a = _.ZP.Store) {
         );
     }
     getQuality() {
-        if (!(0, b.Z)(y.Z)) return C.IE4.UNKNOWN;
+        if (!(0, I.Z)(y.Z)) return C.IE4.UNKNOWN;
         let e = this.getActiveStreamKey(),
             t = null != e ? M[e] : null;
         return null != t ? t.quality : C.IE4.UNKNOWN;
@@ -245,7 +245,7 @@ class G extends (a = _.ZP.Store) {
                               streamSourceType: (function (e) {
                                   var t, n, r;
                                   if (null == e) return 'unknown';
-                                  if (I.isPlatformEmbedded || (null === (t = platform) || void 0 === t ? void 0 : t.name) === 'Chrome') {
+                                  if (b.isPlatformEmbedded || (null === (t = platform) || void 0 === t ? void 0 : t.name) === 'Chrome') {
                                       if (e.startsWith('web-contents-media-stream:')) return 'tab';
                                       if (e.startsWith('window:')) return 'window';
                                       else if (e.startsWith('screen:')) return 'screen';

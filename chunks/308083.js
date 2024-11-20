@@ -9,7 +9,7 @@ n.d(t, {
         return Y;
     },
     Du: function () {
-        return b;
+        return I;
     },
     Gh: function () {
         return Q;
@@ -51,7 +51,7 @@ n.d(t, {
         return y;
     },
     cG: function () {
-        return I;
+        return b;
     },
     cm: function () {
         return S;
@@ -116,8 +116,8 @@ var r,
     g = n(116175),
     E = n(137920),
     v = n(388032);
-let b = 200,
-    I = 4,
+let I = 200,
+    b = 4,
     T = 'ClanSettingsModal',
     S = 20,
     y = 30,

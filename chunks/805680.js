@@ -16,8 +16,8 @@ var r = n(200651),
     g = n(40851),
     E = n(367907),
     v = n(907040),
-    b = n(455708),
-    I = n(314910),
+    I = n(455708),
+    b = n(314910),
     T = n(125900),
     S = n(603074),
     y = n(453070),
@@ -33,7 +33,7 @@ var r = n(200651),
     M = n(185923),
     P = n(611480),
     k = n(388032),
-    U = n(215786);
+    U = n(226090);
 let B = L.Om + w.Su.MEDIUM,
     G = i.memo(function (e) {
         let { isActive: t, className: n, viewType: i, autoFocus: a = !1, 'aria-controls': o, ...l } = e;
@@ -192,7 +192,7 @@ t.Z = i.memo(function (e) {
         eg = null != z ? z : 'left' === K ? U.positionLayerDefaultAlignLeft : U.positionLayerDefaultAlignRight;
     return (0, r.jsx)(h.Z, {
         section: x.jXE.EXPRESSION_PICKER,
-        children: (0, r.jsx)(I.W5, {
+        children: (0, r.jsx)(b.W5, {
             className: s()(U.positionLayer, eg),
             targetRef: o,
             position: W,
@@ -290,7 +290,7 @@ t.Z = i.memo(function (e) {
                                                 })
                                               : null,
                                           er === L.X1.GIF && e_
-                                              ? (0, r.jsx)(b.Z, {
+                                              ? (0, r.jsx)(I.Z, {
                                                     onSelectGIF: C,
                                                     hideFavorites: l,
                                                     persistSearch: !0

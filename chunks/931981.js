@@ -1,6 +1,6 @@
 n.d(t, {
     V: function () {
-        return b;
+        return I;
     },
     e: function () {
         return E;
@@ -18,7 +18,7 @@ var a = n(442837),
     c = n(944486),
     d = n(594174),
     f = n(388032),
-    _ = n(716606);
+    _ = n(146263);
 function p(e, t, n) {
     return (
         t in e
@@ -61,7 +61,7 @@ let g = new m(s.Z, {}),
         let t = l.Z.getChannel(e);
         null != t && t.isPrivate() && !h.has(t.getRecipientId()) && (h.add(t.getRecipientId()), g.emitChange());
     },
-    b = () =>
+    I = () =>
         (0, i.jsxs)('div', {
             className: _.bar,
             children: [f.intl.string(f.t['2UvR1N']), (0, i.jsx)(o.B, { onClick: v })]

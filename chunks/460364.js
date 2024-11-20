@@ -8,14 +8,14 @@ var r = n(200651),
     a = n(539907),
     s = n(743236),
     o = n(218867),
-    l = n(7758);
+    l = n(667947);
 function u(e) {
     let { parentItem: t, isFocused: n, menuSubmenuProps: u, rows: c, rowHeight: d, onScroll: f, listClassName: _ } = e,
         p = i.useRef(null),
         h = i.useRef(null),
         m = i.useRef(null),
         g = i.useRef(null),
-        { isUsingKeyboardNavigation: E, focusIndex: v, ...b } = u;
+        { isUsingKeyboardNavigation: E, focusIndex: v, ...I } = u;
     i.useLayoutEffect(() => {
         var e;
         n && ((0, s.F)(p), null === (e = m.current) || void 0 === e || e.focus());
@@ -26,7 +26,7 @@ function u(e) {
                 null === (e = g.current) || void 0 === e || e.scrollRowIntoView(v);
             }
         }, [n, E, v]);
-    let I = i.useCallback((e) => c[e], [c]);
+    let b = i.useCallback((e) => c[e], [c]);
     return (0, r.jsxs)('div', {
         ref: p,
         className: l.__invalid_submenuContainer,
@@ -48,14 +48,14 @@ function u(e) {
                               className: l.submenuPaddingContainer,
                               children: (0, r.jsx)('div', {
                                   className: l.submenu,
-                                  ...b,
+                                  ...I,
                                   ref: m,
                                   children: (0, r.jsx)(o.Z, {
                                       ref: g,
                                       className: _,
                                       listPadding: [6, 0, 6, 8],
                                       onScroll: f,
-                                      renderRow: I,
+                                      renderRow: b,
                                       rowCount: c.length,
                                       rowHeight: d
                                   })

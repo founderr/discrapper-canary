@@ -21,14 +21,14 @@ var r = n(200651),
     g = n(648052),
     E = n(867176),
     v = n(280885),
-    b = n(502762),
-    I = n(530),
+    I = n(502762),
+    b = n(530),
     T = n(679332),
     S = n(544989),
     y = n(171368),
     A = n(228168),
     N = n(388032),
-    C = n(653134);
+    C = n(451563);
 function R(e) {
     let { user: t, guildId: n, channelId: R, messageId: O, roleId: D, setPopoutRef: L, closePopout: x, disableUserProfileLink: w = __OVERLAY__, newAnalyticsLocations: M = [] } = e,
         P = (0, h.ZP)(t.id, n),
@@ -62,7 +62,7 @@ function R(e) {
                 ref: B,
                 'aria-label': t.username,
                 children: [
-                    (0, r.jsxs)(b.Z, {
+                    (0, r.jsxs)(I.Z, {
                         user: t,
                         displayProfile: P,
                         profileType: A.y0.BITE_SIZE,
@@ -111,7 +111,7 @@ function R(e) {
                                 fade: !0,
                                 className: C.body,
                                 children: [
-                                    (0, r.jsx)(I.Z, {
+                                    (0, r.jsx)(b.Z, {
                                         user: t,
                                         profileType: A.y0.BITE_SIZE,
                                         nickname: f.ZP.getName(n, R, t),

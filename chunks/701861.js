@@ -20,7 +20,7 @@ var i = n(200651),
     v = n(981631),
     N = n(65154),
     T = n(388032),
-    S = n(251106);
+    S = n(642915);
 function A(e, t, n) {
     return (
         t in e
@@ -34,7 +34,7 @@ function A(e, t, n) {
         e
     );
 }
-function b(e) {
+function x(e) {
     let { user: t, onSelect: n } = e,
         r = () => {
             u.Z.removeFriend(t.id, { location: 'Friends' });
@@ -87,7 +87,7 @@ function b(e) {
         ]
     });
 }
-class x extends r.PureComponent {
+class b extends r.PureComponent {
     componentWillLeave(e) {
         null != this.peopleListItemRef.current && this.peopleListItemRef.current.componentWillLeave(e);
     }
@@ -165,7 +165,7 @@ class x extends r.PureComponent {
                 (0, d.vq)(
                     e,
                     (e) =>
-                        (0, i.jsx)(b, {
+                        (0, i.jsx)(x, {
                             ...e,
                             user: t
                         }),
@@ -179,4 +179,4 @@ class x extends r.PureComponent {
             });
     }
 }
-t.Z = x;
+t.Z = b;

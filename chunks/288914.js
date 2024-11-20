@@ -26,8 +26,8 @@ var i = n(200651),
     T = n(300284),
     S = n(680295),
     A = n(703656),
-    b = n(785717),
-    x = n(221292),
+    x = n(785717),
+    b = n(221292),
     Z = n(481046),
     L = n(687158),
     y = n(899007),
@@ -58,8 +58,8 @@ var i = n(200651),
     et = n(981631),
     en = n(228168),
     ei = n(388032),
-    er = n(165858),
-    el = n(653134);
+    er = n(217593),
+    el = n(451563);
 let ea = [
     {
         duration: 30 * Y.Z.Millis.MINUTE,
@@ -173,7 +173,7 @@ function ec(e) {
         eu = (0, L.ZP)(Y.id),
         eh = (0, u.O)(),
         { analyticsLocations: em } = (0, g.ZP)(p.Z.ACCOUNT_PROFILE_POPOUT),
-        ep = (0, b.ZB)({
+        ep = (0, x.ZB)({
             layout: 'SIMPLIFIED_ACCOUNT_POPOUT',
             userId: Y.id
         }),
@@ -303,8 +303,8 @@ function ec(e) {
         eT = (0, J.g)(Q),
         eS = (0, T.Z)({ analyticsLocations: em }),
         { customStatusBubbleEditEnabled: eA } = (0, Z.K)({ location: 'AccountProfilePopout' }),
-        eb = (0, q.I5)(Y),
-        ex = (e) => {
+        ex = (0, q.I5)(Y),
+        eb = (e) => {
             null == Q || Q(),
                 (0, B.openUserProfileModal)({
                     sourceAnalyticsLocations: em,
@@ -328,7 +328,7 @@ function ec(e) {
         };
     return (0, i.jsx)(g.Gt, {
         value: em,
-        children: (0, i.jsx)(b.Mt, {
+        children: (0, i.jsx)(x.Mt, {
             value: ep,
             children: (0, i.jsx)(c.Dialog, {
                 ref: eg,
@@ -359,7 +359,7 @@ function ec(e) {
                                     user: Y,
                                     displayProfile: eu,
                                     profileType: en.y0.BITE_SIZE,
-                                    onOpenProfile: ed ? void 0 : ex
+                                    onOpenProfile: ed ? void 0 : eb
                                 }),
                                 (0, i.jsx)(R.Z, {
                                     user: Y,
@@ -381,7 +381,7 @@ function ec(e) {
                                     className: er.username,
                                     profileType: en.y0.BITE_SIZE,
                                     nickname: K.ZP.getName(null, null, Y),
-                                    onOpenProfile: ed ? void 0 : ex,
+                                    onOpenProfile: ed ? void 0 : eb,
                                     pronouns: null == eu ? void 0 : eu.pronouns,
                                     tags: (0, i.jsx)(O.Z, {
                                         displayProfile: eu,
@@ -447,7 +447,7 @@ function ec(e) {
                                                         }
                                                     }),
                                                     (0, i.jsx)('div', { className: er.menuDivider }),
-                                                    eb
+                                                    ex
                                                         ? (0, i.jsx)($.Mv, {
                                                               id: 'view-premium-perks',
                                                               action: en.yM.VIEW_PREMIUM_PERKS,
@@ -560,7 +560,7 @@ function ec(e) {
                                                                               className: er.clearCustomStatusHint,
                                                                               onClick: (e) => {
                                                                                   e.stopPropagation(),
-                                                                                      (0, x.pQ)({
+                                                                                      (0, b.pQ)({
                                                                                           action: 'PRESS_CLEAR_CUSTOM_STATUS',
                                                                                           analyticsLocations: em
                                                                                       }),

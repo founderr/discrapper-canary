@@ -28,8 +28,8 @@ var i = n(200651),
     T = n(427679),
     S = n(695346),
     A = n(592125),
-    b = n(77498),
-    x = n(271383),
+    x = n(77498),
+    b = n(271383),
     Z = n(430824),
     L = n(131951),
     y = n(375954),
@@ -55,7 +55,7 @@ class W extends r.PureComponent {
     }
     componentDidUpdate(e) {
         var t, n, i;
-        let { voiceChannelId: r, voiceChannelGuildId: l, voiceChannelType: o, voiceChannelBitrate: E, videoEnabled: I, isScreenSharing: N, runningGame: x, runningGamePid: L, selectedChannelId: P, selectedGuildId: M, connected: w, homeLink: k, friendsTabSection: W, isNSFWChannel: Y, isMemberPending: K, hasPreviewEnabled: q, postableChannelCount: X, isTextInVoice: Q, numMessageRequests: J } = this.props;
+        let { voiceChannelId: r, voiceChannelGuildId: l, voiceChannelType: o, voiceChannelBitrate: E, videoEnabled: I, isScreenSharing: N, runningGame: b, runningGamePid: L, selectedChannelId: P, selectedGuildId: M, connected: w, homeLink: k, friendsTabSection: W, isNSFWChannel: Y, isMemberPending: K, hasPreviewEnabled: q, postableChannelCount: X, isTextInVoice: Q, numMessageRequests: J } = this.props;
         if (e.voiceChannelId !== r && null != e.voiceChannelId) {
             let t = _.ZP.getCurrentGameForAnalytics(),
                 n = null != t ? t.name : '',
@@ -100,26 +100,26 @@ class W extends r.PureComponent {
                     ...(0, c.kO)(l, r, I)
                 });
         }
-        if (e.runningGame !== x && null != x && !x.isLauncher) {
-            let e = b.Z.getGameByName(x.name),
-                t = _.ZP.getOverrideForGame(x),
+        if (e.runningGame !== b && null != b && !b.isLauncher) {
+            let e = x.Z.getGameByName(b.name),
+                t = _.ZP.getOverrideForGame(b),
                 n = Z.Z.getGuildIds(),
                 i = S.SE.getSetting(),
                 c = n.filter((e) => !i.includes(e)).slice(0, 200),
                 d = null;
             d = null != t ? 'custom_override' : null != e ? 'verified_game' : 'launcher';
-            let u = (0, _.jk)(x);
+            let u = (0, _.jk)(b);
             if (
                 (setTimeout(() => {
                     var t;
-                    let n = V.ZP.GetWindowFullscreenTypeByPid(x.pid, x.name, x.fullscreenType),
-                        { gameName: i, gameId: a, exe: h, distributor: m } = (0, f.G8)(x);
+                    let n = V.ZP.GetWindowFullscreenTypeByPid(b.pid, b.name, b.fullscreenType),
+                        { gameName: i, gameId: a, exe: h, distributor: m } = (0, f.G8)(b);
                     G.default.track(F.rMx.LAUNCH_GAME, {
                         game: i,
                         game_id: a,
                         verified: null != e && (0, f.vp)(h, null == e ? void 0 : e.executables),
-                        elevated: x.elevated,
-                        is_launcher: null !== (t = null == x ? void 0 : x.isLauncher) && void 0 !== t && t,
+                        elevated: b.elevated,
+                        is_launcher: null !== (t = null == b ? void 0 : b.isLauncher) && void 0 !== t && t,
                         game_platform: F.M7m.DESKTOP,
                         detection_method: d,
                         distributor: m,
@@ -131,7 +131,7 @@ class W extends r.PureComponent {
                         activity_status_enabled: S.G6.getSetting(),
                         activity_status_shared_guilds: c,
                         current_user_status: j.Z.getStatus(),
-                        game_detection_enabled: (0, _.ik)(x),
+                        game_detection_enabled: (0, _.ik)(b),
                         executable_path: h,
                         voice_channel_id: r,
                         voice_channel_type: o,
@@ -140,9 +140,9 @@ class W extends r.PureComponent {
                     }),
                         null != h && _.ZP.addExecutableTrackedByAnalytics(h);
                 }, 10000),
-                null != x.name && null != L && b.Z.shouldReport(x.name))
+                null != b.name && null != L && x.Z.shouldReport(b.name))
             ) {
-                let e = x.name;
+                let e = b.name;
                 a.Z.identifyGame(L, e)
                     .then((e) => a.Z.reportUnverifiedGame(e))
                     .catch((e) => new g.Z('AutoAnalytics').error('Cannot identify game', e));
@@ -244,10 +244,10 @@ function Y() {
         d = (0, l.e7)([Z.Z], () => Z.Z.getGuild(c), [c]),
         u = (0, l.e7)([M.default], () => M.default.getCurrentUser(), []),
         h = (0, l.e7)(
-            [x.ZP],
+            [b.ZP],
             () => {
                 var e, t;
-                return null != u && null != c && null !== (t = null === (e = x.ZP.getMember(c, u.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== t && t;
+                return null != u && null != c && null !== (t = null === (e = b.ZP.getMember(c, u.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== t && t;
             },
             [u, c]
         ),
@@ -257,7 +257,7 @@ function Y() {
         [C, v] = (0, l.Wu)([L.Z], () => [L.Z.isVideoEnabled(), L.Z.isScreenSharing()], []),
         T = (0, l.e7)([j.Z], () => j.Z.getPrimaryActivity(), []),
         S = (0, l.e7)([_.ZP], () => _.ZP.getCurrentGameForAnalytics(), []),
-        b = (0, I.Z)(c),
+        x = (0, I.Z)(c),
         y = (0, l.e7)([N.Z], () => N.Z.getMessageRequestsCount(), []),
         O = {
             selectedChannelId: t,
@@ -280,7 +280,7 @@ function Y() {
             gameExeName: null != S ? S.exeName : null,
             hasPreviewEnabled: null == d ? void 0 : d.features.has(F.oNc.PREVIEW_ENABLED),
             isMemberPending: h,
-            postableChannelCount: b,
+            postableChannelCount: x,
             isTextInVoice: r,
             numMessageRequests: y
         };

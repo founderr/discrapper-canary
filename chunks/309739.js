@@ -25,8 +25,8 @@ var i = n(200651),
     _ = n(726985),
     I = n(981631),
     f = n(388032),
-    N = n(893097),
-    A = n(971436);
+    N = n(313612),
+    A = n(113207);
 function b() {
     let e = E.G6.useSetting(),
         t = E.Wz.useSetting(),

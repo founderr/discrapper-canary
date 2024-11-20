@@ -23,10 +23,10 @@ var r,
     g = n(372900),
     E = n(477734),
     v = n(184301),
-    b = n(768581),
-    I = n(463396),
+    I = n(768581),
+    b = n(463396),
     T = n(981631),
-    S = n(12645);
+    S = n(825193);
 function y(e) {
     let { compact: t } = e;
     return (0, a.jsx)(h.Z, {
@@ -84,7 +84,7 @@ function A(e) {
                             return (0, v.Z)(
                                 e.id,
                                 null != r.guildMemberAvatar && null != k
-                                    ? (0, b.JM)({
+                                    ? (0, I.JM)({
                                           guildId: k,
                                           userId: e.id,
                                           avatar: r.guildMemberAvatar,
@@ -155,7 +155,7 @@ function A(e) {
                 }),
             null != z ? (0, a.jsx)(a.Fragment, { children: z }) : null,
             null == K || A ? null : K,
-            null != i && (0, I.f)(i) && j && w ? (0, a.jsx)(y, {}) : null
+            null != i && (0, b.f)(i) && j && w ? (0, a.jsx)(y, {}) : null
         ]
     });
 }

@@ -16,8 +16,8 @@ var r = n(200651),
     g = n(215016),
     E = n(981631),
     v = n(149203),
-    b = n(388032),
-    I = n(96431);
+    I = n(388032),
+    b = n(175705);
 function T(e, t, n) {
     return (
         t in e
@@ -52,24 +52,24 @@ class y extends i.PureComponent {
             case E.wI2.FAVORITES:
                 return (0, r.jsx)(u.FormTitle, {
                     tag: 'h5',
-                    className: I.searchHeader,
-                    children: b.intl.string(b.t.y3LQCA)
+                    className: b.searchHeader,
+                    children: I.intl.string(I.t.y3LQCA)
                 });
             case E.wI2.TRENDING_GIFS:
                 return (0, r.jsx)(u.FormTitle, {
                     tag: 'h5',
-                    className: I.searchHeader,
-                    children: b.intl.string(b.t.H6zNFx)
+                    className: b.searchHeader,
+                    children: I.intl.string(I.t.H6zNFx)
                 });
             default:
                 return (0, r.jsx)(u.SearchBar, {
-                    className: I.searchBar,
+                    className: b.searchBar,
                     size: u.SearchBar.Sizes.MEDIUM,
                     query: e,
                     onChange: this.handleChangeQuery,
                     onClear: this.handleClearQuery,
-                    placeholder: b.intl.string(b.t.TnYqkZ),
-                    'aria-label': b.intl.string(b.t.TnYqkZ),
+                    placeholder: I.intl.string(I.t.TnYqkZ),
+                    'aria-label': I.intl.string(I.t.TnYqkZ),
                     ref: this.props.searchBarRef,
                     autoFocus: !0
                 });
@@ -82,8 +82,8 @@ class y extends i.PureComponent {
             null != e &&
                 (t = (0, r.jsx)(u.Clickable, {
                     onClick: this.handleClearQuery,
-                    className: I.backButton,
-                    'aria-label': b.intl.string(b.t['13/7kZ']),
+                    className: b.backButton,
+                    'aria-label': I.intl.string(I.t['13/7kZ']),
                     children: (0, r.jsx)(u.ArrowSmallLeftIcon, {
                         size: 'md',
                         color: 'currentColor'
@@ -124,16 +124,16 @@ class y extends i.PureComponent {
             id: v.vO,
             role: 'tabpanel',
             'aria-labelledby': v._3,
-            className: s()(I.container, e),
+            className: s()(b.container, e),
             onClick: S,
             ref: t,
             children: [
                 (0, r.jsx)('div', {
-                    className: I.header,
+                    className: b.header,
                     children: this.renderHeader()
                 }),
                 (0, r.jsx)('div', {
-                    className: I.content,
+                    className: b.content,
                     children: this.renderContent()
                 })
             ]

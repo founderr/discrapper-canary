@@ -15,8 +15,8 @@ var r = 'function' == typeof Map && Map.prototype,
     g = String.prototype.match,
     E = String.prototype.slice,
     v = String.prototype.replace,
-    b = String.prototype.toUpperCase,
-    I = String.prototype.toLowerCase,
+    I = String.prototype.toUpperCase,
+    b = String.prototype.toLowerCase,
     T = RegExp.prototype.test,
     S = Array.prototype.concat,
     y = Array.prototype.join,
@@ -63,7 +63,7 @@ e.exports = function e(t, r, i, o) {
     if ('boolean' != typeof h && 'symbol' !== h) throw TypeError('option "customInspect", if provided, must be `true`, `false`, or `\'symbol\'`');
     if (j(l, 'indent') && null !== l.indent && '\t' !== l.indent && !(parseInt(l.indent, 10) === l.indent && l.indent > 0)) throw TypeError('option "indent" must be "\\t", an integer > 0, or `null`');
     if (j(l, 'numericSeparator') && 'boolean' != typeof l.numericSeparator) throw TypeError('option "numericSeparator", if provided, must be `true` or `false`');
-    var b = l.numericSeparator;
+    var I = l.numericSeparator;
     if (void 0 === t) return 'undefined';
     if (null === t) return 'null';
     if ('boolean' == typeof t) return t ? 'true' : 'false';
@@ -78,11 +78,11 @@ e.exports = function e(t, r, i, o) {
     if ('number' == typeof t) {
         if (0 === t) return 1 / 0 / t > 0 ? '0' : '-0';
         var T = String(t);
-        return b ? M(t, T) : T;
+        return I ? M(t, T) : T;
     }
     if ('bigint' == typeof t) {
         var N = String(t) + 'n';
-        return b ? M(t, N) : N;
+        return I ? M(t, N) : N;
     }
     var R = void 0 === l.depth ? 5 : l.depth;
     if ((void 0 === i && (i = 0), i >= R && R > 0 && 'object' == typeof t)) return G(t) ? '[Array]' : '[Object]';
@@ -125,7 +125,7 @@ e.exports = function e(t, r, i, o) {
             return !!e && 'object' == typeof e && (!!('undefined' != typeof HTMLElement && e instanceof HTMLElement) || ('string' == typeof e.nodeName && 'function' == typeof e.getAttribute));
         })(t)
     ) {
-        for (var et = '<' + I.call(String(t.nodeName)), en = t.attributes || [], er = 0; er < en.length; er++)
+        for (var et = '<' + b.call(String(t.nodeName)), en = t.attributes || [], er = 0; er < en.length; er++)
             et +=
                 ' ' +
                 en[er].name +
@@ -137,7 +137,7 @@ e.exports = function e(t, r, i, o) {
                     'double',
                     l
                 );
-        return (et += '>'), t.childNodes && t.childNodes.length && (et += '...'), (et += '</' + I.call(String(t.nodeName)) + '>');
+        return (et += '>'), t.childNodes && t.childNodes.length && (et += '...'), (et += '</' + b.call(String(t.nodeName)) + '>');
     }
     if (G(t)) {
         if (0 === t.length) return '[]';
@@ -337,7 +337,7 @@ function W(e) {
             12: 'f',
             13: 'r'
         }[t];
-    return n ? '\\' + n : '\\x' + (t < 16 ? '0' : '') + b.call(t.toString(16));
+    return n ? '\\' + n : '\\x' + (t < 16 ? '0' : '') + I.call(t.toString(16));
 }
 function K(e) {
     return 'Object(' + e + ')';

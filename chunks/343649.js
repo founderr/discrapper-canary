@@ -56,7 +56,7 @@ var o,
     z = t(474936),
     K = t(231338),
     q = t(388032),
-    $ = t(601343);
+    $ = t(312094);
 (o || (o = {})).PREMIUM = 'discord://app/settings/nitro';
 let J = z.Xh.NONE_MONTH,
     Q = [T.h8.PLAN_SELECT, T.h8.REVIEW, T.h8.CONFIRM],
@@ -197,13 +197,13 @@ function et(e) {
         (0, T.dZ)(eH, eX, ez);
     let e1 = i.useRef(null),
         [e8, e2] = (0, g.Z)(!1, 500),
-        [e7, e4] = i.useState(null),
-        [e9, e3] = i.useState([]),
+        [e7, e9] = i.useState(null),
+        [e4, e3] = i.useState([]),
         [e5, e6] = i.useState(!1);
     i.useEffect(() => {
         let e;
-        if (!!eZ) null != Z.Z.get(z.Xh.PREMIUM_MONTH_GUILD) && e3((e = (0, W.DE)(z.Xh.PREMIUM_MONTH_GUILD, eC, !1))), null == eC && null != eu && null != eu.paymentSourceId ? e4(eu.currency) : null != e && e4(e[0]);
-    }, [eC, eu, eZ, JSON.stringify(e9)]);
+        if (!!eZ) null != Z.Z.get(z.Xh.PREMIUM_MONTH_GUILD) && e3((e = (0, W.DE)(z.Xh.PREMIUM_MONTH_GUILD, eC, !1))), null == eC && null != eu && null != eu.paymentSourceId ? e9(eu.currency) : null != e && e9(e[0]);
+    }, [eC, eu, eZ, JSON.stringify(e4)]);
     let ne = (0, M.vP)({
         paymentModalArgs: eb,
         initialStep: T.h8.PAYMENT_TYPE,
@@ -445,7 +445,7 @@ function et(e) {
                           currentStep: eH,
                           paymentError: u,
                           purchaseErrorBlockRef: eM,
-                          hasCurrencies: e9.length > 1,
+                          hasCurrencies: e4.length > 1,
                           body: e,
                           footer:
                               eH !== T.h8.CONFIRM

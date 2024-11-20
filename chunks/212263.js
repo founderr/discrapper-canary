@@ -16,8 +16,8 @@ var r = n(200651),
     g = n(639119),
     E = n(165583),
     v = n(197115),
-    b = n(631771),
-    I = n(609218),
+    I = n(631771),
+    b = n(609218),
     T = n(210887),
     S = n(626135),
     y = n(176354),
@@ -28,7 +28,7 @@ var r = n(200651),
     O = n(185923),
     D = n(474936),
     L = n(388032),
-    x = n(368308);
+    x = n(145834);
 t.Z = (e) => {
     var t, a;
     let w,
@@ -45,7 +45,7 @@ t.Z = (e) => {
         q = null != K || null != z,
         Q = (0, f.Iu)((e) => e.searchQuery),
         { analyticsLocations: X } = (0, d.ZP)(c.Z.EMOJI_PICKER),
-        J = b.Gi.useExperiment(
+        J = I.Gi.useExperiment(
             { location: 'Premium Emoji Roadblock' },
             {
                 autoTrackExposure: !q,
@@ -88,7 +88,7 @@ t.Z = (e) => {
     }, [eo]);
     let el = es.length > 1 && et;
     return ee
-        ? (0, r.jsx)(I.Z, {
+        ? (0, r.jsx)(b.Z, {
               containerContext: Z,
               image: {
                   url: W,

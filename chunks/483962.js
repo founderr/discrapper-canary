@@ -2,15 +2,15 @@ var i = n(200651),
     r = n(192379),
     s = n(442837),
     a = n(831218),
-    l = n(840780),
-    o = n(51596),
+    o = n(840780),
+    l = n(51596),
     c = n(905423),
     d = n(237997),
     u = n(145597),
     h = n(981631),
     p = n(388032),
-    f = n(39904);
-let g = () => (0, o.$Z)('DM_SEARCH');
+    f = n(53800);
+let g = () => (0, l.$Z)('DM_SEARCH');
 t.Z = r.memo(function () {
     let e = (0, s.e7)([d.Z], () => (d.Z.isLocked((0, u.QF)()) ? 'true' : 'false')),
         t = (0, c.Z)((e) => {
@@ -38,7 +38,7 @@ t.Z = r.memo(function () {
             (0, i.jsx)('section', {
                 className: f.panels,
                 'aria-label': p.intl.string(p.t.StREWF),
-                children: (0, i.jsx)(l.Z, { guildId: null })
+                children: (0, i.jsx)(o.Z, { guildId: null })
             })
         ]
     });

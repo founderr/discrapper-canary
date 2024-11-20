@@ -17,7 +17,7 @@ var r = n(704215),
     m = n(981631),
     p = n(921944),
     g = n(388032),
-    f = n(498395);
+    f = n(338634);
 function _() {
     let e = u.Z.useIsEligible(),
         t = (0, c.wE)(r.z.HOLIDAY_COACHMARK_HALLOWEEN_2024),

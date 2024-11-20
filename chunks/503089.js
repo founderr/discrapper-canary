@@ -24,11 +24,11 @@ var i = n(200651),
     h = n(207874),
     m = n(585483),
     p = n(960048),
-    f = n(410575),
-    b = n(493544),
+    b = n(410575),
+    f = n(493544),
     v = n(981631),
     S = n(388032),
-    x = n(333265);
+    x = n(11377);
 function g(e, t, n) {
     return (
         t in e
@@ -50,7 +50,7 @@ let j = Object.freeze({
     N = 1.4,
     C = 15,
     y = 2;
-function T(e) {
+function P(e) {
     var t, n;
     let { section: l, setPreventNavigation: r, scrollerRef: o } = e;
     (0, a.Z)({
@@ -60,7 +60,7 @@ function T(e) {
     });
     let c = null !== (t = null == l ? void 0 : l.element) && void 0 !== t ? t : v.VqG,
         u = null !== (n = null == l ? void 0 : l.elementProps) && void 0 !== n ? n : {};
-    return (0, i.jsx)(f.Z, {
+    return (0, i.jsx)(b.Z, {
         section: l.section,
         children: (0, i.jsx)(c, {
             ...u,
@@ -69,7 +69,7 @@ function T(e) {
         })
     });
 }
-class P extends l.PureComponent {
+class T extends l.PureComponent {
     componentDidMount() {
         this.getPredicateSections().forEach((e) => {
             let { notice: t } = e;
@@ -128,11 +128,11 @@ class P extends l.PureComponent {
                         e.map((e, t) => {
                             if (null != e.tabPredicate && !e.tabPredicate()) return null;
                             switch (e.section) {
-                                case b.ID.HEADER:
+                                case f.ID.HEADER:
                                     return (0, i.jsx)(o.TabBar.Header, { children: e.label }, t);
-                                case b.ID.DIVIDER:
+                                case f.ID.DIVIDER:
                                     return (0, i.jsx)(o.TabBar.Separator, {}, t);
-                                case b.ID.CUSTOM:
+                                case f.ID.CUSTOM:
                                     var n;
                                     let l = null !== (n = e.element) && void 0 !== n ? n : v.VqG;
                                     return (0, i.jsx)(l, {}, t);
@@ -164,12 +164,12 @@ class P extends l.PureComponent {
                     location: l,
                     subsection: u
                 }),
-                (0, i.jsx)(b.ZP, {
+                (0, i.jsx)(f.ZP, {
                     sidebarTheme: t,
                     scrollerRef: this.scrollerRef,
                     section: n,
                     sidebar: this.renderSidebar(o),
-                    content: (0, i.jsx)(T, {
+                    content: (0, i.jsx)(P, {
                         section: a,
                         setPreventNavigation: this.setPreventNavigation,
                         scrollerRef: this.scrollerRef
@@ -236,7 +236,7 @@ class P extends l.PureComponent {
                 if (!this._unmounted) (this._intensity = N), this.forceUpdate();
             }),
             g(this, 'renderSettingsSectionTabBarItem', (e, t, n) => {
-                let { section: l, label: s = null, ariaLabel: a, onClick: c, color: u, icon: h, className: m, newIndicator: p, newIndicatorDismissibleContentTypes: f, badgeCount: b, searchFilterCount: g } = e,
+                let { section: l, label: s = null, ariaLabel: a, onClick: c, color: u, icon: h, className: m, newIndicator: p, newIndicatorDismissibleContentTypes: b, badgeCount: f, searchFilterCount: g } = e,
                     j = null;
                 null != g && g > 0
                     ? (j = (0, i.jsx)(o.NumberBadge, {
@@ -257,11 +257,11 @@ class P extends l.PureComponent {
                               color: 'text-muted',
                               children: e.decoration
                           }))
-                        : null != n && (null == f ? void 0 : f.includes(n)) && !t
+                        : null != n && (null == b ? void 0 : b.includes(n)) && !t
                           ? (j = null != p ? p : (0, i.jsx)(o.TextBadge, { text: S.intl.string(S.t.y2b7CA) }))
                           : null != h
                             ? (j = h)
-                            : null != b && b > 0 && (j = (0, i.jsx)(o.NumberBadge, { count: b }));
+                            : null != f && f > 0 && (j = (0, i.jsx)(o.NumberBadge, { count: f }));
                 let N =
                     l === v.oAB.PREMIUM
                         ? (0, i.jsx)(d.Z, {
@@ -290,4 +290,4 @@ class P extends l.PureComponent {
             });
     }
 }
-t.ZP = P;
+t.ZP = T;

@@ -15,7 +15,7 @@ var r = n(120356),
     u = n(981631),
     h = n(921944),
     m = n(388032),
-    p = n(118871);
+    p = n(886769);
 function g(e) {
     let { className: t, markAsDismissed: n } = e,
         r = (0, d._p)({ location: 'consent-card' });

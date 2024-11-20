@@ -15,7 +15,7 @@ function u(e, t) {
     return Array.from((null !== (n = t.current) && void 0 !== n ? n : document).querySelectorAll('['.concat(l.ie, '^="').concat(e, '"]')));
 }
 function c(e) {
-    let { id: t, defaultFocused: n, isEnabled: c, scrollToStart: d, scrollToEnd: f, onNavigatePreviousAtStart: _, onNavigateNextAtEnd: p, setFocus: h, setFocusOnList: m, preserveFocusPosition: g = !0, useVirtualFocus: E = !1, wrap: v = !1, orientation: b = o.hy.VERTICAL, disableClickOnSpace: I = !1 } = e,
+    let { id: t, defaultFocused: n, isEnabled: c, scrollToStart: d, scrollToEnd: f, onNavigatePreviousAtStart: _, onNavigateNextAtEnd: p, setFocus: h, setFocusOnList: m, preserveFocusPosition: g = !0, useVirtualFocus: E = !1, wrap: v = !1, orientation: I = o.hy.VERTICAL, disableClickOnSpace: b = !1 } = e,
         T = r.useRef(n ? (0, l.jb)(t, n) : null),
         S = r.useRef(!1),
         y = r.useRef(null),
@@ -145,8 +145,8 @@ function c(e) {
         B = r.useCallback(
             (e) => {
                 if (!A.current || (!E && !M.current)) return;
-                let n = b === o.hy.HORIZONTAL ? o.R8.RIGHT : o.R8.DOWN,
-                    r = b === o.hy.HORIZONTAL ? o.R8.LEFT : o.R8.UP;
+                let n = I === o.hy.HORIZONTAL ? o.R8.RIGHT : o.R8.DOWN,
+                    r = I === o.hy.HORIZONTAL ? o.R8.LEFT : o.R8.UP;
                 switch (e.key) {
                     case n:
                         e.stopPropagation(), e.preventDefault(), k();
@@ -175,7 +175,7 @@ function c(e) {
                         return;
                     case o.R8.SPACE:
                     case o.R8.ENTER: {
-                        if ((e.key === o.R8.SPACE && I) || e.repeat) return;
+                        if ((e.key === o.R8.SPACE && b) || e.repeat) return;
                         let t = T.current;
                         if (null != t) {
                             var i;
@@ -187,7 +187,7 @@ function c(e) {
                     }
                 }
             },
-            [k, U, t, b, f, d, D, E]
+            [k, U, t, I, f, d, D, E]
         ),
         G = r.useCallback(
             (e) => {
@@ -204,7 +204,7 @@ function c(e) {
                 ref: y,
                 tabIndex: x && g ? -1 : 0
             },
-            orientation: b,
+            orientation: I,
             setFocus: G,
             async focusLastVisibleItem() {
                 var e;
@@ -223,6 +223,6 @@ function c(e) {
                 return e ? (0, l.x3)(e) : null;
             }
         }),
-        [t, B, b, x, g, G, U, k, D]
+        [t, B, I, x, g, G, U, k, D]
     );
 }

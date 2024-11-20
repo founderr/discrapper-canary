@@ -15,17 +15,17 @@ var r = n(200651),
     m = n(981631),
     g = n(474936),
     E = n(388032),
-    v = n(482133);
+    v = n(703130);
 t.Z = i.memo(function (e) {
-    let { disabled: t, referralsRemaining: n, channel: b, isResending: I } = e,
+    let { disabled: t, referralsRemaining: n, channel: I, isResending: b } = e,
         { enabled: T } = d.Z.useExperiment({ location: 'ec41f5_1' }, { autoTrackExposure: !0 }),
-        S = T ? E.intl.format(E.t.z5AIsr, {}) : I ? E.intl.string(E.t.zzfBQk) : E.intl.string(E.t.ziPEBg),
+        S = T ? E.intl.format(E.t.z5AIsr, {}) : b ? E.intl.string(E.t.zzfBQk) : E.intl.string(E.t.ziPEBg),
         y = T ? E.intl.string(E.t.nKUZur) : void 0,
         [A, N] = i.useState(!1),
         [C, R] = i.useState(!1),
         O = (0, o.Z)(null, () => R(!1)),
         { analyticsLocations: D } = (0, c.ZP)(u.Z.REFERRAL_TRIALS_COMPOSER_BUTTON),
-        L = b.isDM() && void 0 !== b.recipients ? b.recipients[0] : null,
+        L = I.isDM() && void 0 !== I.recipients ? I.recipients[0] : null,
         x = (0, l.ZP)();
     return t
         ? null
@@ -36,9 +36,9 @@ t.Z = i.memo(function (e) {
                   (0, r.jsx)(f.Z, {
                       shouldShowPopout: C,
                       referralsRemaining: n,
-                      channel: b,
+                      channel: I,
                       onClose: () => R(!1),
-                      isResending: I
+                      isResending: b
                   }),
                   (0, r.jsx)(a.u, {
                       text: S,
@@ -76,7 +76,7 @@ t.Z = i.memo(function (e) {
                                   children: (0, r.jsx)(_.Z, {
                                       referralsRemaining: n,
                                       hovered: A,
-                                      isResending: I,
+                                      isResending: b,
                                       shouldShowBirthdayUX: T,
                                       isLightTheme: (0, s.ap)(x)
                                   })

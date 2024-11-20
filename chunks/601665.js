@@ -21,13 +21,13 @@ var r = n(200651),
     g = n(438163),
     E = n(502762),
     v = n(952124),
-    b = n(544989),
-    I = n(171368),
+    I = n(544989),
+    b = n(171368),
     T = n(895697),
     S = n(161572),
     y = n(228168),
     A = n(388032),
-    N = n(653134);
+    N = n(451563);
 function C(e) {
     let { user: t, currentUser: n, guildId: C, channelId: R, messageId: O, roleId: D, closePopout: L, setPopoutRef: x, disableUserProfileLink: w = __OVERLAY__, newAnalyticsLocations: M = [] } = e,
         { analyticsLocations: P } = (0, u.ZP)([...M, l.Z.BITE_SIZE_PROFILE_POPOUT]),
@@ -49,7 +49,7 @@ function C(e) {
     }, [Z, x]);
     let V = (e) => {
         null == L || L(),
-            (0, I.openUserProfileModal)({
+            (0, b.openUserProfileModal)({
                 sourceAnalyticsLocations: P,
                 ...k,
                 ...e
@@ -68,7 +68,7 @@ function C(e) {
                     displayProfile: U,
                     profileType: y.y0.BITE_SIZE,
                     children: [
-                        (0, r.jsx)(b.Z, {
+                        (0, r.jsx)(I.Z, {
                             profileType: y.y0.BITE_SIZE,
                             children: (0, r.jsx)(v.Z, {
                                 user: t,

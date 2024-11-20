@@ -22,15 +22,15 @@ var r = n(200651),
     g = n(823379),
     E = n(5192),
     v = n(354459),
-    b = n(981631),
-    I = n(388032),
-    T = n(884532);
+    I = n(981631),
+    b = n(388032),
+    T = n(526982);
 function S(e, t) {
     switch (e) {
         case v.fO.ACTIVITY:
-            return I.intl.formatToPlainString(I.t.TCM94e, { numUsers: t });
+            return b.intl.formatToPlainString(b.t.TCM94e, { numUsers: t });
         case v.fO.STREAM:
-            return I.intl.formatToPlainString(I.t.BR7Tnp, { numViewers: t });
+            return b.intl.formatToPlainString(b.t.BR7Tnp, { numViewers: t });
         default:
             throw Error('Unknown participant type.');
     }
@@ -107,7 +107,7 @@ function A(e) {
 }
 let N = [];
 function C(e) {
-    let { channelId: t, guildId: a, participant: o, className: p, compact: E = !1, disableInteraction: I = !1, maxVisibleUsers: S = 3 } = e,
+    let { channelId: t, guildId: a, participant: o, className: p, compact: E = !1, disableInteraction: b = !1, maxVisibleUsers: S = 3 } = e,
         [C, R] = i.useState(!1),
         O = i.useRef(new c.sW(150, () => R(!1))),
         D = (0, u.Wu)(
@@ -139,7 +139,7 @@ function C(e) {
                     (0, f.jW)(
                         e,
                         async () => {
-                            let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('44378')]).then(n.bind(n, 881351));
+                            let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('50261')]).then(n.bind(n, 881351));
                             return (n) =>
                                 (0, r.jsx)(e, {
                                     ...n,
@@ -187,7 +187,7 @@ function C(e) {
                 'overflow'
             )),
         (0, r.jsx)(_.Z, {
-            section: b.jXE.STREAM_VIEWER_POPOUT,
+            section: I.jXE.STREAM_VIEWER_POPOUT,
             children: (0, r.jsx)('div', {
                 onMouseEnter: L,
                 onMouseLeave: x,
@@ -199,7 +199,7 @@ function C(e) {
                             guildId: a,
                             channelId: t,
                             users: D,
-                            disableInteraction: I
+                            disableInteraction: b
                         }),
                     shouldShow: C,
                     position: 'top',

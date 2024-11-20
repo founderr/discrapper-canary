@@ -21,19 +21,19 @@ var r = n(200651),
     g = n(553393),
     E = n(518950),
     v = n(594174),
-    b = n(709586),
-    I = n(624138),
+    I = n(709586),
+    b = n(624138),
     T = n(51144),
     S = n(788307),
     y = n(981631),
     A = n(674563),
     N = n(524484),
     C = n(388032),
-    R = n(753629);
-let O = (0, I.Mg)(o.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING);
+    R = n(226686);
+let O = (0, b.Mg)(o.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING);
 t.Z = function (e) {
     var t;
-    let { selected: n = !1, colorString: a, colorRoleName: o, isOwner: I, ownerTooltipText: O, lostPermissionTooltipText: D, isTyping: L = !1, nick: x, user: w, currentUser: M, activities: P, applicationStream: k, status: U, shouldAnimateStatus: B = !1, isMobile: G, premiumSince: Z, channel: F, guildId: V, className: j, onMouseDown: H, onKeyDown: Y, onClick: W, onContextMenu: K, onClickPremiumGuildIcon: z, onFocus: q, 'aria-controls': Q, 'aria-expanded': X, 'aria-posinset': J, 'aria-setsize': $, id: ee, tabIndex: et, itemProps: en } = e,
+    let { selected: n = !1, colorString: a, colorRoleName: o, isOwner: b, ownerTooltipText: O, lostPermissionTooltipText: D, isTyping: L = !1, nick: x, user: w, currentUser: M, activities: P, applicationStream: k, status: U, shouldAnimateStatus: B = !1, isMobile: G, premiumSince: Z, channel: F, guildId: V, className: j, onMouseDown: H, onKeyDown: Y, onClick: W, onContextMenu: K, onClickPremiumGuildIcon: z, onFocus: q, 'aria-controls': Q, 'aria-expanded': X, 'aria-posinset': J, 'aria-setsize': $, id: ee, tabIndex: et, itemProps: en } = e,
         er = null == w ? void 0 : w.id,
         ei = T.ZP.useName(w),
         ea = (null === (t = v.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === er,
@@ -66,10 +66,10 @@ t.Z = function (e) {
         ev = () => {
             el(!0);
         },
-        eb = () => {
+        eI = () => {
             el(!1);
         },
-        eI = (e) => {
+        eb = (e) => {
             ec(e);
         },
         eT = () => {
@@ -89,7 +89,7 @@ t.Z = function (e) {
             });
         },
         eS = () =>
-            null != I && I && null == D
+            null != b && b && null == D
                 ? (0, r.jsx)(l.Tooltip, {
                       text: null != O ? O : C.intl.string(C.t.pclUFB),
                       children: (e) =>
@@ -110,7 +110,7 @@ t.Z = function (e) {
                           (0, r.jsx)(l.Clickable, {
                               onClick: z,
                               tabIndex: -1,
-                              children: (0, r.jsx)(b.Z, {
+                              children: (0, r.jsx)(I.Z, {
                                   ...e,
                                   className: R.premiumIcon
                               })
@@ -147,7 +147,7 @@ t.Z = function (e) {
                             'aria-label': e.username,
                             statusTooltip: !0,
                             avatarDecoration: ed,
-                            typingIndicatorRef: eI
+                            typingIndicatorRef: eb
                         }),
                         (0, r.jsx)(h.Z, {
                             confettiSpawnRef: eu,
@@ -209,7 +209,7 @@ t.Z = function (e) {
                       onMouseDown: H,
                       onContextMenu: K,
                       onMouseEnter: ev,
-                      onMouseLeave: eb,
+                      onMouseLeave: eI,
                       name:
                           null == D
                               ? (0, r.jsx)('span', {

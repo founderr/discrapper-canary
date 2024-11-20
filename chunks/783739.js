@@ -25,7 +25,7 @@ var i = n(200651),
     I = n(912152),
     f = n(615603),
     N = n(474936),
-    A = n(139842);
+    A = n(20154);
 function b(e) {
     let { premiumSubscription: t } = e,
         n = (0, r.e7)([p.Z], () => p.Z.boostSlots),
@@ -40,7 +40,7 @@ function b(e) {
         B = y.length > 0,
         L = b.length > y.length,
         Z = (0, r.e7)([u.Z], () => u.Z.getCurrentUserAppliedBoosts()),
-        { fractionalState: F } = (0, l.Z)(),
+        { fractionalState: F } = (0, l.Z)({ forceFetch: !0 }),
         M = (null == t ? void 0 : t.isPausedOrPausePending) === !0 && F === N.a$.NONE,
         k = (null == t ? void 0 : t.isPausedOrPausePending) !== !0 && F === N.a$.NONE,
         w = j && F === N.a$.FP_SUB_PAUSED;

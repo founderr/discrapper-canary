@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return b;
+            return I;
         },
         openQuestSurveyModal: function () {
             return T;
@@ -23,13 +23,13 @@ var r,
     h = n(569984),
     m = n(981631),
     g = n(388032),
-    E = n(949561),
+    E = n(950542),
     v = n(677486);
-function b(e) {
+function I(e) {
     let { questId: t, survey: n, transitionState: r, onClose: i, onSubmit: o } = e,
         l = (0, p.B4)(t),
         [_, h] = s.useState(0),
-        [b, T] = (0, c.useSpring)(() => ({
+        [I, T] = (0, c.useSpring)(() => ({
             from: { width: '0%' },
             config: { duration: 2500 }
         })),
@@ -92,7 +92,7 @@ function b(e) {
                                 className: E.modalContent,
                                 children: n.choices.map((e) =>
                                     (0, a.jsx)(
-                                        I,
+                                        b,
                                         {
                                             choice: e,
                                             onClick: y
@@ -135,7 +135,7 @@ function b(e) {
                                         }),
                                         (0, a.jsx)(u.animated.div, {
                                             className: E.progressOverlay,
-                                            style: b
+                                            style: I
                                         })
                                     ]
                                 })
@@ -147,7 +147,7 @@ function b(e) {
         })
     );
 }
-function I(e) {
+function b(e) {
     let { className: t, choice: n, onClick: r } = e;
     return (0, a.jsxs)(c.Clickable, {
         className: l()(E.choiceContainer, t),

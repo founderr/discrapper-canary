@@ -43,7 +43,7 @@ function E(e) {
     function L() {
         (0, a.openModalLazy)(
             async () => {
-                let { default: e } = await Promise.all([n.e('2668'), n.e('92134')]).then(n.bind(n, 542055));
+                let { default: e } = await Promise.all([n.e('2668'), n.e('32304')]).then(n.bind(n, 542055));
                 return (t) => (0, i.jsx)(e, { ...t });
             },
             { modalKey: _.Qr }

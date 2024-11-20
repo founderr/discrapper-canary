@@ -8,5 +8,5 @@ var r,
     a = n(803997),
     s = n.n(a),
     o = n(355336),
-    l = n(664435);
+    l = n(49505);
 let u = (0, o.$)(s()(l.auto, l.disableScrollAnchor), null !== (r = window.ResizeObserver) && void 0 !== r ? r : i.d);

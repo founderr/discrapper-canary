@@ -26,20 +26,20 @@ var i = n(200651),
     v = n(188493),
     N = n(294330),
     T = n(981631),
-    S = n(972477);
+    S = n(179596);
 let A = Object.freeze({
         top: 0,
         bottom: 0,
         left: 32,
         right: 202
     }),
-    b = Object.freeze({
+    x = Object.freeze({
         top: 0,
         bottom: 0,
         left: 32,
         right: 32
     }),
-    x = {
+    b = {
         page: T.ZY5.GUILD_DISCOVERY,
         object: T.qAy.CARD,
         section: T.jXE.DISCOVER_SEARCH
@@ -181,7 +181,7 @@ function L(e) {
                             style: n,
                             children: (0, i.jsx)(N.ZP, {
                                 guildId: e,
-                                onClick: async (e) => await Q(e, t, y, x),
+                                onClick: async (e) => await Q(e, t, y, b),
                                 onView: (e) => z(e)
                             })
                         },
@@ -230,7 +230,7 @@ function L(e) {
                     { leading: !0 }
                 );
         }, [O, L]),
-        ee = M ? A : b;
+        ee = M ? A : x;
     return (0, i.jsx)('div', {
         className: S.container,
         ref: F,

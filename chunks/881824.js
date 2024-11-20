@@ -6,7 +6,7 @@ n.d(t, {
         return p;
     },
     Gy: function () {
-        return b;
+        return I;
     },
     R5: function () {
         return v;
@@ -38,7 +38,7 @@ var i = n(952265),
 function _(e, t) {
     (0, i.ZD)(
         async () => {
-            let { default: t } = await Promise.all([n.e('99008'), n.e('87423')]).then(n.bind(n, 581355));
+            let { default: t } = await Promise.all([n.e('99008'), n.e('77425')]).then(n.bind(n, 581355));
             return (n) =>
                 (0, r.jsx)(t, {
                     ...n,
@@ -120,7 +120,7 @@ function v(e, t) {
                       })(e);
             })(e);
 }
-function b(e, t) {
+function I(e, t) {
     return (
         (0, i.ZD)(async () => {
             let { default: i } = await n.e('65045').then(n.bind(n, 143782));

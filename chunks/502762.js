@@ -7,23 +7,23 @@ var r = n(200651),
     u = n(213053),
     c = n(652853),
     d = n(228168),
-    f = n(165374);
+    f = n(320038);
 let _ = i.forwardRef(function (e, t) {
         let { user: n, displayProfile: i, profileType: a, className: _, pendingThemeColors: p, themeOverride: h, children: m, forceShowPremium: g = !1 } = e,
             {
                 theme: E,
                 primaryColor: v,
-                secondaryColor: b
+                secondaryColor: I
             } = (0, l.Z)({
                 user: n,
                 displayProfile: i,
                 pendingThemeColors: p,
                 isPreview: g
             }),
-            { profileThemeStyle: I, profileThemeClassName: T } = (0, u.Z)({
+            { profileThemeStyle: b, profileThemeClassName: T } = (0, u.Z)({
                 theme: null != h ? h : E,
                 primaryColor: v,
-                secondaryColor: b
+                secondaryColor: I
             }),
             S = {
                 [f.biteSize]: a === d.y0.BITE_SIZE,
@@ -32,7 +32,7 @@ let _ = i.forwardRef(function (e, t) {
             };
         return (0, r.jsx)('div', {
             className: s()(f.outer, T, S, _),
-            style: I,
+            style: b,
             ref: t,
             children: (0, r.jsx)('div', {
                 className: s()(f.inner, S),
@@ -42,7 +42,7 @@ let _ = i.forwardRef(function (e, t) {
                         profileType: a,
                         theme: null != h ? h : E,
                         primaryColor: v,
-                        secondaryColor: b,
+                        secondaryColor: I,
                         children: m
                     })
                 })

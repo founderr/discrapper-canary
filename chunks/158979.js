@@ -8,10 +8,10 @@ n(192379);
 var r = n(481060),
     s = n(13245),
     a = n(312839),
-    l = n(981631),
-    o = n(987650),
+    o = n(981631),
+    l = n(987650),
     c = n(388032),
-    d = n(735706);
+    d = n(57266);
 function u() {
     return (0, i.jsx)('div', {
         className: d.footer,
@@ -25,9 +25,9 @@ function u() {
 }
 function h(e) {
     switch (e.type) {
-        case o.nc.GO_LIVE_VOICE: {
+        case l.nc.GO_LIVE_VOICE: {
             let { game: t, voiceGuild: d } = e,
-                { trackView: h, trackClick: p } = (0, a.R)(o.n0.GoLiveNudge, { notif_type: o.n0.GoLiveNudge });
+                { trackView: h, trackClick: p } = (0, a.R)(l.n0.GoLiveNudge, { notif_type: l.n0.GoLiveNudge });
             return {
                 icon: n(847881),
                 title: null,
@@ -51,7 +51,7 @@ function h(e) {
                                     ...t,
                                     selectSource: !1,
                                     guildId: d.id,
-                                    analyticsLocation: l.Sbl.OVERLAY_NUDGE
+                                    analyticsLocation: o.Sbl.OVERLAY_NUDGE
                                 });
                         });
                 },
@@ -60,9 +60,9 @@ function h(e) {
                 }
             };
         }
-        case o.nc.GO_LIVE_NON_VOICE: {
+        case l.nc.GO_LIVE_NON_VOICE: {
             let { game: t } = e,
-                { trackView: d, trackClick: h } = (0, a.R)(o.n0.GoLiveNonVoiceNudge, { notif_type: o.n0.GoLiveNonVoiceNudge });
+                { trackView: d, trackClick: h } = (0, a.R)(l.n0.GoLiveNonVoiceNudge, { notif_type: l.n0.GoLiveNonVoiceNudge });
             return {
                 icon: n(847881),
                 title: null,
@@ -83,7 +83,7 @@ function h(e) {
                                     ...t,
                                     selectSource: !1,
                                     selectGuild: !0,
-                                    analyticsLocation: l.Sbl.OVERLAY_NUDGE
+                                    analyticsLocation: o.Sbl.OVERLAY_NUDGE
                                 });
                         });
                 },

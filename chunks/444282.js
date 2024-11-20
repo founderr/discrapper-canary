@@ -17,24 +17,24 @@ var r = n(200651),
     _ = n(859235),
     p = n(898463),
     h = n(981631),
-    m = n(465126),
+    m = n(52522),
     g = n(451328);
 function E(e) {
     let { channelId: t, option: n, keyboardModeEnabled: a } = e,
         E = i.useRef(null),
-        [v, b] = i.useState(!1),
-        I = f.Z.getUpload(t, n.name, d.d.SlashCommand),
+        [v, I] = i.useState(!1),
+        b = f.Z.getUpload(t, n.name, d.d.SlashCommand),
         T = i.useRef(null),
         S = i.useCallback(() => {
-            b(!0);
+            I(!0);
         }, []),
         y = i.useCallback(() => {
-            b(!1);
+            I(!1);
         }, []),
         A = i.useCallback(
             (e) => {
                 var r;
-                b(!1);
+                I(!1);
                 let i = {
                     id: n.name,
                     file: null === (r = e.dataTransfer) || void 0 === r ? void 0 : r.files[0],
@@ -52,16 +52,16 @@ function E(e) {
     return (i.useEffect(() => {
         let e = T.current;
         return (
-            null == I && (null == e || e.addEventListener('dragover', S, !1), null == e || e.addEventListener('dragleave', y, !1), null == e || e.addEventListener('drop', A, !1)),
+            null == b && (null == e || e.addEventListener('dragover', S, !1), null == e || e.addEventListener('dragleave', y, !1), null == e || e.addEventListener('drop', A, !1)),
             () => {
                 null == e || e.removeEventListener('dragover', S, !1), null == e || e.removeEventListener('dragleave', y, !1), null == e || e.removeEventListener('drop', A, !1);
             }
         );
-    }, [I, S, y, A]),
-    null != I)
+    }, [b, S, y, A]),
+    null != b)
         ? (0, r.jsx)(p.Z, {
               channelId: t,
-              upload: I,
+              upload: b,
               keyboardModeEnabled: a,
               draftType: d.d.SlashCommand,
               label: (0, r.jsxs)(i.Fragment, {
@@ -75,7 +75,7 @@ function E(e) {
                           tag: 'span',
                           variant: 'text-md/normal',
                           color: 'text-brand',
-                          children: I.filename
+                          children: b.filename
                       })
                   ]
               }),

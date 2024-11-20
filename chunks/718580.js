@@ -38,7 +38,7 @@ function g(e) {
 }
 function E(e) {
     var t, n, g, E, v;
-    let { contentDisplay: b, fadeInOut: I = !1, ...T } = e,
+    let { contentDisplay: I, fadeInOut: b = !1, ...T } = e,
         S = {},
         { analyticsLocations: y } = (0, _.ZP)();
     i.Children.forEach(T.children, (e, t) => {
@@ -123,7 +123,7 @@ function E(e) {
                     ref: t === A ? x : null,
                     style: {
                         position: 'absolute',
-                        display: b,
+                        display: I,
                         flexDirection: 'column',
                         backfaceVisibility: 'hidden',
                         width: o.tq ? '100%' : G,
@@ -133,7 +133,7 @@ function E(e) {
                             : {
                                   left: e.value.to(m('left', B)),
                                   right: e.value.to(m('right', B)),
-                                  ...(I && s)
+                                  ...(b && s)
                               })
                     },
                     children: S[t].children

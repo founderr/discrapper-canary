@@ -1,13 +1,13 @@
-var o = t(200651),
-    n = t(192379),
-    a = t(481060),
-    i = t(372900);
-r.Z = n.memo(function (e) {
-    var r, t, s, l;
-    let { user: c, size: d = a.AvatarSizes.SIZE_32, animate: u = !1, 'aria-hidden': f = !1, ...p } = e,
-        h = n.useContext(i.Z);
-    return (0, o.jsx)(a.Avatar, {
-        src: ((r = c), (t = (0, a.getAvatarSize)(d)), (s = u), (l = h), r.getAvatarURL(l, t, s)),
+var r = n(200651),
+    i = n(192379),
+    o = n(481060),
+    a = n(372900);
+t.Z = i.memo(function (e) {
+    var t, n, l, s;
+    let { user: c, size: d = o.AvatarSizes.SIZE_32, animate: u = !1, 'aria-hidden': f = !1, ...p } = e,
+        v = i.useContext(a.Z);
+    return (0, r.jsx)(o.Avatar, {
+        src: ((t = c), (n = (0, o.getAvatarSize)(d)), (l = u), (s = v), t.getAvatarURL(s, n, l)),
         size: d,
         'aria-label': f ? void 0 : c.username,
         'aria-hidden': f,

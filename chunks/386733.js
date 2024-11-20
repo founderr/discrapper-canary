@@ -20,7 +20,7 @@ var i = n(200651),
     v = n(938736),
     T = n(981631),
     N = n(388032),
-    I = n(781450),
+    I = n(837661),
     S = n(691766);
 let R = (e) => {
         let { userRecord: t, placement: n, trialStatus: r } = e,

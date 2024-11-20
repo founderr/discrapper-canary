@@ -21,8 +21,8 @@ var i = n(120356),
     g = n(810568),
     E = n(168524),
     v = n(833858),
-    b = n(769654),
-    I = n(960870),
+    I = n(769654),
+    b = n(960870),
     T = n(139793),
     S = n(994746),
     y = n(232174),
@@ -42,7 +42,7 @@ var i = n(120356),
     B = n(981631),
     G = n(701488),
     Z = n(388032),
-    F = n(69035);
+    F = n(676411);
 function V(e) {
     let { user: t, currentUser: n, activity: i, application: V, guild: j, channel: H, className: Y, onClose: W } = e,
         { analyticsLocations: K } = (0, _.ZP)(f.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
@@ -62,7 +62,7 @@ function V(e) {
                 entry: Q
             })
         }),
-        J = (0, I.Z)({
+        J = (0, b.Z)({
             display: 'live',
             user: t,
             activity: i,
@@ -146,7 +146,7 @@ function V(e) {
                         variant: 'text-xs/normal',
                         text: Z.intl.formatToPlainString(Z.t['hq/Qzc'], { guildName: j.name }),
                         onClick: () => {
-                            (0, b.X)(j.id), J({ action: 'OPEN_VOICE_GUILD' }), null == W || W();
+                            (0, I.X)(j.id), J({ action: 'OPEN_VOICE_GUILD' }), null == W || W();
                         }
                     })
                   : (0, c.Z)(i)

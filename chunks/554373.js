@@ -42,7 +42,7 @@ function f(e, t, n) {
 function _(e) {
     let t = (0, a.useMemo)(() => new r.CN(e.locale), [e.locale]),
         n = (0, a.useMemo)(() => t.resolvedOptions(), [t]),
-        { locale: _, createCalendar: h, visibleDuration: m = { months: 1 }, minValue: g, maxValue: E, selectionAlignment: v, isDateUnavailable: b, pageBehavior: I = 'visible' } = e,
+        { locale: _, createCalendar: h, visibleDuration: m = { months: 1 }, minValue: g, maxValue: E, selectionAlignment: v, isDateUnavailable: I, pageBehavior: b = 'visible' } = e,
         T = (0, a.useMemo)(() => h(n.calendar), [h, n.calendar]),
         [S, y] = (0, i.zk)(e.value, e.defaultValue, e.onChange),
         A = (0, a.useMemo)(() => (S ? (0, r.Mw)((0, r.WG)(S), T) : null), [S, T]),
@@ -74,12 +74,12 @@ function _(e) {
         D((e = d(e, g, E)));
     }
     function G(t) {
-        !e.isDisabled && !e.isReadOnly && (t = f((t = d(t, g, E)), L, b)) && ((t = (0, r.Mw)(t, (null == S ? void 0 : S.calendar) || new r.IQ())), S && 'hour' in S ? y(S.set(t)) : y(t));
+        !e.isDisabled && !e.isReadOnly && (t = f((t = d(t, g, E)), L, I)) && ((t = (0, r.Mw)(t, (null == S ? void 0 : S.calendar) || new r.IQ())), S && 'hour' in S ? y(S.set(t)) : y(t));
     }
     s(O, g, E) ? D(d(O, g, E)) : 0 > O.compare(L) ? x(u(O, m, _, g, E)) : O.compare(P) > 0 && x(l(O, m, _, g, E));
-    let Z = (0, a.useMemo)(() => !!A && (!!(b && b(A)) || s(A, g, E)), [A, b, g, E]),
+    let Z = (0, a.useMemo)(() => !!A && (!!(I && I(A)) || s(A, g, E)), [A, I, g, E]),
         F = e.isInvalid || 'invalid' === e.validationState || Z,
-        V = (0, a.useMemo)(() => ('visible' === I ? m : p(m)), [I, m]);
+        V = (0, a.useMemo)(() => ('visible' === b ? m : p(m)), [b, m]);
     return {
         isDisabled: e.isDisabled,
         isReadOnly: e.isReadOnly,
@@ -186,23 +186,23 @@ function p(e) {
     return t;
 }
 function h(e) {
-    let { value: t, defaultValue: n, onChange: l, createCalendar: u, locale: c, visibleDuration: p = { months: 1 }, minValue: h, maxValue: v, ...b } = e,
-        [I, T] = (0, i.zk)(t, n || null, l),
+    let { value: t, defaultValue: n, onChange: l, createCalendar: u, locale: c, visibleDuration: p = { months: 1 }, minValue: h, maxValue: v, ...I } = e,
+        [b, T] = (0, i.zk)(t, n || null, l),
         [S, y] = (0, a.useState)(null),
         A = 'center';
-    if (I && I.start && I.end) {
-        let e = o((0, r.WG)(I.start), p, c, h, v)
+    if (b && b.start && b.end) {
+        let e = o((0, r.WG)(b.start), p, c, h, v)
             .add(p)
             .subtract({ days: 1 });
-        I.end.compare(e) > 0 && (A = 'start');
+        b.end.compare(e) > 0 && (A = 'start');
     }
     let N = (0, a.useRef)(null),
         [C, R] = (0, a.useState)(null),
         O = (0, a.useMemo)(() => (0, r.l7)(h, null == C ? void 0 : C.start), [h, C]),
         D = (0, a.useMemo)(() => (0, r.Mb)(v, null == C ? void 0 : C.end), [v, C]),
         L = _({
-            ...b,
-            value: I && I.start,
+            ...I,
+            value: b && b.start,
             createCalendar: u,
             locale: c,
             visibleDuration: p,
@@ -224,15 +224,15 @@ function h(e) {
     let P = (e) => {
             e ? (y(e), x(e)) : (y(null), x(null));
         },
-        k = S ? m(S, L.focusedDate) : I && m(I.start, I.end),
+        k = S ? m(S, L.focusedDate) : b && m(b.start, b.end),
         U = (t) => {
             if (!e.isReadOnly) {
                 if ((t = f((t = d(t, O, D)), L.visibleRange.start, e.isDateUnavailable))) {
                     if (S) {
                         let e = m(S, t);
                         T({
-                            start: g(e.start, null == I ? void 0 : I.start),
-                            end: g(e.end, null == I ? void 0 : I.end)
+                            start: g(e.start, null == b ? void 0 : b.start),
+                            end: g(e.end, null == b ? void 0 : b.end)
                         }),
                             P(null);
                     } else P(t);
@@ -241,11 +241,11 @@ function h(e) {
         },
         [B, G] = (0, a.useState)(!1),
         { isDateUnavailable: Z } = e,
-        F = (0, a.useMemo)(() => !!I && !S && (!!(Z && (Z(I.start) || Z(I.end))) || s(I.start, h, v) || s(I.end, h, v)), [Z, I, S, h, v]),
+        F = (0, a.useMemo)(() => !!b && !S && (!!(Z && (Z(b.start) || Z(b.end))) || s(b.start, h, v) || s(b.end, h, v)), [Z, b, S, h, v]),
         V = e.isInvalid || 'invalid' === e.validationState || F;
     return {
         ...L,
-        value: I,
+        value: b,
         setValue: T,
         anchorDate: S,
         setAnchorDate: P,

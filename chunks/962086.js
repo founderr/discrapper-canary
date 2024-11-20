@@ -9,7 +9,7 @@ n.d(t, {
         return E;
     },
     mL: function () {
-        return b;
+        return I;
     },
     og: function () {
         return S;
@@ -45,7 +45,7 @@ function E(e, t) {
             guildId: e,
             data: t
         }),
-        I(e);
+        b(e);
 }
 function v(e, t) {
     let n = p.Z.getData(e);
@@ -64,15 +64,15 @@ function v(e, t) {
                 ...t
             }
         }),
-        I(e));
+        b(e));
 }
-function b(e) {
+function I(e) {
     r.Z.dispatch({
         type: 'IMPERSONATE_STOP',
         guildId: e
     });
 }
-function I(e) {
+function b(e) {
     let t = d.Z.getChannelId(e),
         n = s.Z.getChannel(t);
     if (!(null != t && (0, g.AB)(t)) && !c.Z.can(m.Plq.VIEW_CHANNEL, n)) {

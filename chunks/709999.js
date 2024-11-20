@@ -50,7 +50,7 @@ var r = n(200651),
     q = n(832149),
     Q = n(474936),
     X = n(388032),
-    ee = n(901698);
+    ee = n(352177);
 let et = (e) => {
         let { children: t, onClick: n, ...a } = e;
         return (0, r.jsx)(g.Button, {

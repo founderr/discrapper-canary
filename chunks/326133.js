@@ -16,10 +16,10 @@ var r = n(200651),
     g = n(430824),
     E = n(436896),
     v = n(590921),
-    b = n(606992),
-    I = n(51062),
+    I = n(606992),
+    b = n(51062),
     T = n(918559),
-    S = n(115672);
+    S = n(828021);
 t.Z = i.forwardRef(function (e, t) {
     var n, a, y, A, N;
     let { channel: C, type: R, editorHeight: O, onVisibilityChange: D } = e,
@@ -33,7 +33,7 @@ t.Z = i.forwardRef(function (e, t) {
             [C.guild_id]
         ),
         w = i.useRef(),
-        [M, P, k] = (0, I.Z)(
+        [M, P, k] = (0, b.Z)(
             {
                 ...e,
                 guild: x
@@ -45,7 +45,7 @@ t.Z = i.forwardRef(function (e, t) {
         B = (0, f.DJ)(M.selectedIndex);
     (0, _.KR)(L, M.isVisible, B), E.Z.trackExposure({ location: '6e9811_1' });
     let { usePopoutAutocomplete: G } = E.Z.useExperiment({ location: '6e9811_2' }, { autoTrackExposure: !1 }),
-        Z = (0, b.Z)({
+        Z = (0, I.Z)({
             editorHeight: O,
             type: R,
             state: M,

@@ -13,8 +13,8 @@ var r = n(200651),
     u = n(520315),
     c = n(688465),
     d = n(388032),
-    f = n(769657),
-    _ = n(882530),
+    f = n(517066),
+    _ = n(554034),
     p = n(413097);
 function h(e) {
     let { application: t, onSelect: n, onClose: u } = e,
@@ -210,7 +210,7 @@ function E(e) {
             isExpanded: a,
             ...m
         }),
-        b = a || E;
+        I = a || E;
     return (0, r.jsxs)('div', {
         className: f.descriptionContainer,
         children: [
@@ -222,8 +222,8 @@ function E(e) {
                     ref: c,
                     className: _.markup,
                     variant: 'text-sm/medium',
-                    lineClamp: b ? void 0 : 3,
-                    style: { maxHeight: b ? void 0 : m.minHeightOverride },
+                    lineClamp: I ? void 0 : 3,
+                    style: { maxHeight: I ? void 0 : m.minHeightOverride },
                     children: l
                 })
             }),
@@ -235,9 +235,9 @@ function E(e) {
                           (0, r.jsx)(s.Text, {
                               variant: 'text-sm/semibold',
                               color: 'text-brand',
-                              children: b ? d.intl.string(d.t.u4YJ8v) : d.intl.string(d.t['N/tajI'])
+                              children: I ? d.intl.string(d.t.u4YJ8v) : d.intl.string(d.t['N/tajI'])
                           }),
-                          b
+                          I
                               ? (0, r.jsx)(s.ChevronSmallUpIcon, {
                                     size: 'sm',
                                     color: s.tokens.colors.TEXT_BRAND

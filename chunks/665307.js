@@ -28,10 +28,10 @@ var i,
     T = n(626135),
     S = n(780570),
     A = n(624138),
-    b = n(645818),
-    x = n(981631),
+    x = n(645818),
+    b = n(981631),
     Z = n(388032),
-    L = n(705309);
+    L = n(96510);
 function y(e, t, n) {
     return (
         t in e
@@ -48,9 +48,9 @@ function y(e, t, n) {
 let O = (0, A.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
     P = (0, A.Mg)(u.Z.GAME_LIST_LINKED_TO_GLOW_DURATION),
     R = Object.freeze({
-        [x.iEv.PLATFORM]: 'Platform',
-        [x.iEv.LAST_PLAYED]: 'Last Played',
-        [x.iEv.NAME]: 'Name'
+        [b.iEv.PLATFORM]: 'Platform',
+        [b.iEv.LAST_PLAYED]: 'Last Played',
+        [b.iEv.NAME]: 'Name'
     }),
     j = (e) => {
         let { flag: t, icon: n, item: i, tooltip: l } = e,
@@ -66,7 +66,7 @@ let O = (0, A.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
     },
     D = [
         {
-            key: x.iEv.NAME,
+            key: b.iEv.NAME,
             renderHeader: () => Z.intl.string(Z.t.dBfWfX),
             sort: !0,
             cellClassName: L.nameCell,
@@ -87,7 +87,7 @@ let O = (0, A.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
                                     className: L.nameCellText,
                                     children: e.libraryApplication.getBranchedName(e.application)
                                 }),
-                                e.libraryApplication.hasFlag(x.eHb.PREMIUM)
+                                e.libraryApplication.hasFlag(b.eHb.PREMIUM)
                                     ? (0, r.jsx)(h.Tooltip, {
                                           text: Z.intl.string(Z.t.tG2SzM),
                                           children: (e) =>
@@ -105,7 +105,7 @@ let O = (0, A.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
                 })
         },
         {
-            key: x.iEv.PLATFORM,
+            key: b.iEv.PLATFORM,
             renderHeader: () => Z.intl.string(Z.t.YR4cHB),
             sort: !0,
             cellClassName: L.platformCell,
@@ -114,12 +114,12 @@ let O = (0, A.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
                 let t = e.libraryApplication.getDistributor();
                 return (0, r.jsx)(_.Z, {
                     align: _.Z.Align.CENTER,
-                    children: null != t ? x.EOG[t] : Z.intl.string(Z.t['F+l3Ji'])
+                    children: null != t ? b.EOG[t] : Z.intl.string(Z.t['F+l3Ji'])
                 });
             }
         },
         {
-            key: x.iEv.LAST_PLAYED,
+            key: b.iEv.LAST_PLAYED,
             renderHeader: () => Z.intl.string(Z.t.FDDyjY),
             sort: !0,
             cellClassName: L.lastPlayedCell,
@@ -146,7 +146,7 @@ let O = (0, A.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
             }
         },
         {
-            key: x.iEv.ACTIONS,
+            key: b.iEv.ACTIONS,
             renderHeader: () => null,
             cellClassName: L.actionsCell,
             render(e, t, n) {
@@ -159,18 +159,18 @@ let O = (0, A.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
                             className: L.settingIcons,
                             children: [
                                 (0, r.jsx)(j, {
-                                    flag: x.eHb.PRIVATE,
+                                    flag: b.eHb.PRIVATE,
                                     item: e,
                                     icon: h.EyeSlashIcon,
                                     tooltip: Z.intl.string(Z.t.NozAoq)
                                 }),
                                 (0, r.jsx)(j, {
-                                    flag: x.eHb.OVERLAY_DISABLED,
+                                    flag: b.eHb.OVERLAY_DISABLED,
                                     item: e,
                                     icon: h.ScreenSlashIcon,
                                     tooltip: Z.intl.string(Z.t.Az9eqq)
                                 }),
-                                (0, r.jsx)(b.Z, {
+                                (0, r.jsx)(x.Z, {
                                     className: s()(L.settingIcon, { [L.hidden]: !e.supportsCloudSync }),
                                     libraryApplication: e.libraryApplication
                                 })
@@ -178,12 +178,12 @@ let O = (0, A.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
                         }),
                         (0, S.Je)(e.libraryApplication)
                             ? (0, r.jsx)(f.Z, {
-                                  analyticsListSort: ((i = t.sortKey), (a = t.sortDirection), ''.concat(R[i], ' ').concat(a === x.sHY.ASCENDING ? 'ASC' : 'DESC')),
+                                  analyticsListSort: ((i = t.sortKey), (a = t.sortDirection), ''.concat(R[i], ' ').concat(a === b.sHY.ASCENDING ? 'ASC' : 'DESC')),
                                   analyticsListIndex: n,
-                                  source: x.Sbl.APPLICATION_LIBRARY,
+                                  source: b.Sbl.APPLICATION_LIBRARY,
                                   libraryApplication: e.libraryApplication,
                                   color: o ? h.Button.Colors.GREEN : h.Button.Colors.PRIMARY,
-                                  isPlayShiny: o && e.defaultAction === x.apO.PLAY,
+                                  isPlayShiny: o && e.defaultAction === b.apO.PLAY,
                                   size: L.actionButtonSize,
                                   hideProgress: null != e.defaultAction,
                                   onDropdownOpen: () => null != t && t.setActiveRowKey(e),
@@ -253,33 +253,33 @@ class w extends (i = l.PureComponent) {
             { analyticsContext: t, applicationViewItems: n } = this.props;
         for (let t of n) {
             switch (t.libraryApplication.getDistributor()) {
-                case x.GQo.DISCORD:
+                case b.GQo.DISCORD:
                     e.num_applications_discord++;
                     break;
-                case x.GQo.STEAM:
+                case b.GQo.STEAM:
                     e.num_applications_steam++;
                     break;
-                case x.GQo.BATTLENET:
+                case b.GQo.BATTLENET:
                     e.num_applications_battlenet++;
                     break;
-                case x.GQo.TWITCH:
+                case b.GQo.TWITCH:
                     e.num_applications_twitch++;
                     break;
-                case x.GQo.UPLAY:
+                case b.GQo.UPLAY:
                     e.num_applications_uplay++;
                     break;
-                case x.GQo.ORIGIN:
+                case b.GQo.ORIGIN:
                     e.num_applications_origin++;
                     break;
-                case x.GQo.GOG:
+                case b.GQo.GOG:
                     e.num_applications_gog++;
                     break;
-                case x.GQo.EPIC:
+                case b.GQo.EPIC:
                     e.num_applications_epic++;
             }
             e.num_applications_total++;
         }
-        T.default.track(x.rMx.LIBRARY_VIEWED, {
+        T.default.track(b.rMx.LIBRARY_VIEWED, {
             ...e,
             load_id: t.loadId
         });

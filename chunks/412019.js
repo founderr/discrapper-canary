@@ -11,7 +11,7 @@ var c = t(481060),
     i = t(237583),
     o = t(823379),
     l = t(619915),
-    f = t(620417);
+    f = t(267027);
 function r(e) {
     let { channel: n, users: t } = e,
         r = (0, l.ZP)(n);

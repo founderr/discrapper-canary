@@ -11,7 +11,7 @@ var r = n(200651),
     o = n(944486),
     l = n(745510),
     u = n(675654),
-    c = n(334545);
+    c = n(688478);
 function d(e) {
     let { children: t } = e,
         [n, d] = i.useState(null),
@@ -23,7 +23,7 @@ function d(e) {
             p.current.delete(e), m(p.current.size > 0);
         }, []),
         v = i.useCallback((e) => (p.current.add(e), m(!0), () => E(e)), [E]),
-        b = i.useCallback((e, t) => {
+        I = i.useCallback((e, t) => {
             for (let n of p.current) n(e, t);
         }, []);
     return (
@@ -44,7 +44,7 @@ function d(e) {
                     ref: _,
                     className: c.canvas,
                     environment: u.rq,
-                    onClick: h ? b : void 0
+                    onClick: h ? I : void 0
                 }),
                 (0, r.jsx)(a.Ji, {
                     ref: d,

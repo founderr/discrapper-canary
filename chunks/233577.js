@@ -21,14 +21,14 @@ let v = {
         stickers: []
     }
 };
-function b(e, t) {
+function I(e, t) {
     return (0, r.jsx)(_.ZP, {
         sticker: e,
         isInteracting: t,
         size: 40
     });
 }
-let I = {
+let b = {
     stores: [d.Z],
     matches(e, t, n, r, i) {
         var a;
@@ -70,7 +70,7 @@ let I = {
                 getProps: (e) => {
                     let { comparator: t, sticker: n } = e;
                     return {
-                        renderSticker: b,
+                        renderSticker: I,
                         queryMatch: t !== n.name.toLocaleLowerCase() ? t : void 0,
                         sticker: n,
                         key: n.id
@@ -133,4 +133,4 @@ let I = {
         );
     }
 };
-t.Z = I;
+t.Z = b;

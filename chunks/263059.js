@@ -20,8 +20,8 @@ var r = n(200651),
     g = n(994746),
     E = n(273284),
     v = n(510659),
-    b = n(287954),
-    I = n(660579),
+    I = n(287954),
+    b = n(660579),
     T = n(502762),
     S = n(652853),
     y = n(64621),
@@ -34,8 +34,8 @@ var r = n(200651),
     L = n(666984),
     x = n(290274),
     w = n(228168),
-    M = n(617114),
-    P = n(69035);
+    M = n(727747),
+    P = n(676411);
 function k(e) {
     var t;
     let { user: n, currentUser: a, activity: k, guild: U, channel: B, className: G, onClose: Z, profileGuildId: F } = e,
@@ -143,7 +143,7 @@ function k(e) {
                 onClose: Z,
                 children: (e) => {
                     let { onAutoDismiss: t } = e;
-                    return (0, r.jsx)(b.Z, {
+                    return (0, r.jsx)(I.Z, {
                         user: n,
                         guildId: F,
                         profileType: V,
@@ -152,7 +152,7 @@ function k(e) {
                         entry: W,
                         sourceType: w.n_.ACTIVITY,
                         children: () =>
-                            (0, r.jsx)(I.Z, {
+                            (0, r.jsx)(b.Z, {
                                 user: n,
                                 className: P.toolbarContainer,
                                 sourceType: w.n_.ACTIVITY,

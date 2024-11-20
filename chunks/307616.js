@@ -24,7 +24,7 @@ var r = n(200651),
     h = n(952265),
     m = n(602091),
     g = n(981631),
-    E = n(77793);
+    E = n(66904);
 function v(e, t, n) {
     return (
         t in e
@@ -38,8 +38,8 @@ function v(e, t, n) {
         e
     );
 }
-let b = [f.ZP, _.ZP];
-class I extends i.PureComponent {
+let I = [f.ZP, _.ZP];
+class b extends i.PureComponent {
     render() {
         let { render: e, LayerComponent: t, isTopModal: n, instant: i } = this.props,
             { transitionState: a } = this.state;
@@ -128,11 +128,11 @@ function y() {
             },
             [e]
         ),
-        d = b.map((e) => t.some((t) => t.Layer === e || (null == t.Layer && e === f.ZP)));
+        d = I.map((e) => t.some((t) => t.Layer === e || (null == t.Layer && e === f.ZP)));
     return (0, r.jsxs)(u.W, {
         component: i.Fragment,
         children: [
-            b.map((e, n) => {
+            I.map((e, n) => {
                 var i;
                 let a = l().findLast(t, (t) => t.Layer === e || (null == t.Layer && e === f.ZP));
                 return (0, r.jsx)(
@@ -150,7 +150,7 @@ function y() {
             t.map((e, n) => {
                 let { key: i, Layer: a, render: s, instant: l } = e;
                 return (0, r.jsx)(
-                    I,
+                    b,
                     {
                         modalKey: i,
                         LayerComponent: null != a ? a : f.ZP,

@@ -24,8 +24,8 @@ var i,
     g = n(658785),
     E = n(131951),
     v = n(626135),
-    b = n(358085),
-    I = n(998502),
+    I = n(358085),
+    b = n(998502),
     T = n(13140),
     S = n(808506),
     y = n(981631),
@@ -74,7 +74,7 @@ function Z(e) {
     t ? B() : G(!0);
 }
 function F(e) {
-    if (b.isPlatformEmbedded) I.ZP.inputEventUnregister(parseInt(e, 10));
+    if (I.isPlatformEmbedded) b.ZP.inputEventUnregister(parseInt(e, 10));
     else if (L[e]) {
         let t = x[e],
             n = P[t.action];
@@ -93,7 +93,7 @@ function V(e) {
         a = P[n].keyEvents;
     e.action === y.kg4.TOGGLE_MUTE && G(),
         !(function (e, t, n, r) {
-            if (b.isPlatformEmbedded) I.ZP.inputEventRegister(parseInt(e), t, n, r);
+            if (I.isPlatformEmbedded) b.ZP.inputEventRegister(parseInt(e), t, n, r);
             else {
                 F(e);
                 let i = l()(new (s())(document));
@@ -278,7 +278,7 @@ R(q, 'displayName', 'KeybindsStore'),
             return f().reduce(
                 t,
                 (e, t, n) => {
-                    if ((0, b.isLinux)() && t.action === y.kg4.SOUNDBOARD_HOLD) {
+                    if ((0, I.isLinux)() && t.action === y.kg4.SOUNDBOARD_HOLD) {
                         let n = t.shortcut.map((e) => e[1]),
                             r = (0, T.Kd)('`').map((e) => e[1]);
                         if (c()(n, r)) return e;

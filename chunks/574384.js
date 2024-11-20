@@ -11,7 +11,7 @@ var r = n(200651),
     o = n(481060),
     l = n(489863),
     u = n(388032),
-    c = n(111686);
+    c = n(507119);
 function d(e) {
     var t;
     let { selectedGuildId: n, selectedChannelId: d, onChannelChange: f, error: _ } = e,

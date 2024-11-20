@@ -8,7 +8,7 @@ var i = n(200651),
     c = n(481060),
     d = n(239091),
     u = n(687683),
-    h = n(766047);
+    h = n(454515);
 t.Z = function (e) {
     let { index: t, children: l, user: m, channel: p, onClick: g, isFocused: f, isActive: _, onOtherHover: E, className: I } = e,
         [C, v] = r.useState(!1),
@@ -19,13 +19,13 @@ t.Z = function (e) {
         A = () => {
             v(!1);
         },
-        b = (e, t) => {
+        x = (e, t) => {
             if (null != t)
                 T(!0),
                     (0, d.jW)(
                         e,
                         async () => {
-                            let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('32765')]).then(n.bind(n, 881351));
+                            let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('5901')]).then(n.bind(n, 881351));
                             return (n) =>
                                 (0, i.jsx)(e, {
                                     ...n,
@@ -52,7 +52,7 @@ t.Z = function (e) {
                         [h.active]: _ || N,
                         [h.firstItem]: 0 === t
                     }),
-                    onContextMenu: (e) => b(e, m),
+                    onContextMenu: (e) => x(e, m),
                     onMouseEnter: S,
                     onMouseLeave: A,
                     onClick: null != g ? g : void 0,

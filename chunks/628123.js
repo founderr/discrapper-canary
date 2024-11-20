@@ -16,11 +16,11 @@ var r = n(200651),
     g = n(797614),
     E = n(703656),
     v = n(626135),
-    b = n(960048),
-    I = n(998502),
+    I = n(960048),
+    b = n(998502),
     T = n(981631),
     S = n(388032),
-    y = n(624013);
+    y = n(584738);
 function A(e, t, n) {
     return (
         t in e
@@ -83,7 +83,7 @@ class R extends i.PureComponent {
             info: t
         });
         let r = (0, m.e)(),
-            i = b.Z.captureCrash(e, { extra: t });
+            i = I.Z.captureCrash(e, { extra: t });
         v.default.track(T.rMx.APP_CRASHED, {
             path: n.pathname,
             extra: t,
@@ -94,7 +94,7 @@ class R extends i.PureComponent {
             error_level: 'fatal'
         }),
             C(r),
-            I.ZP.cleanupDisplaySleep();
+            b.ZP.cleanupDisplaySleep();
     }
     _handleSubmitReport() {
         location.reload(!0);

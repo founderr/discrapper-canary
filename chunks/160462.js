@@ -24,5 +24,5 @@ var i = n(214629),
     v = n(91641),
     N = n(598984),
     T = n(987338);
-let S = [N.NR, N.ZI, N.Ob, N.uc, N.m1, o.J$, r.Kv, d.bb, f.g, g.O, p.w, r._f, l.Z, a.E, I.l, c.g, s.w, C.S2, h.m, m.Q, E.J, _.zv, u.Yu, i.Z],
+let S = [N.NR, N.ZI, N.Ob, N.uc, N.m1, o.J$, r.Kv, d.bb, f.g, g.O, p.w, r._f, l.Z, a.E, I.l, c.g, s.w, C.S2, h.m, m.Q, E.J, _.zv, u.Yu, i.ZP],
     A = new v.E(S, T.$P.CONNECTION_OPEN, { location: 'app open' });

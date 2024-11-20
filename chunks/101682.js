@@ -57,15 +57,15 @@ a(l, s),
         for (var t, n, r, a, s, o, l, u, c, d = this.n.ushrn(Math.floor(this.n.bitLength() / 2)), f = e, _ = this.n.clone(), p = new i(1), h = new i(0), m = new i(0), g = new i(1), E = 0; 0 !== f.cmpn(0); ) {
             var v = _.div(f);
             (u = _.sub(v.mul(f))), (c = m.sub(v.mul(p)));
-            var b = g.sub(v.mul(h));
+            var I = g.sub(v.mul(h));
             if (!r && 0 > u.cmp(d)) (t = l.neg()), (n = p), (r = u.neg()), (a = c);
             else if (r && 2 == ++E) break;
-            (l = u), (_ = f), (f = u), (m = p), (p = c), (g = h), (h = b);
+            (l = u), (_ = f), (f = u), (m = p), (p = c), (g = h), (h = I);
         }
         (s = u.neg()), (o = c);
-        var I = r.sqr().add(a.sqr());
+        var b = r.sqr().add(a.sqr());
         return (
-            s.sqr().add(o.sqr()).cmp(I) >= 0 && ((s = t), (o = n)),
+            s.sqr().add(o.sqr()).cmp(b) >= 0 && ((s = t), (o = n)),
             r.negative && ((r = r.neg()), (a = a.neg())),
             s.negative && ((s = s.neg()), (o = o.neg())),
             [

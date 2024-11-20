@@ -9,7 +9,7 @@ n.d(t, {
         return y;
     },
     Uu: function () {
-        return I;
+        return b;
     },
     _N: function () {
         return A;
@@ -56,8 +56,8 @@ var r = n(392711),
     g = n(5192),
     E = n(489887),
     v = n(981631),
-    b = n(388032);
-function I() {
+    I = n(388032);
+function b() {
     return {
         text: void 0,
         image: void 0,
@@ -136,7 +136,7 @@ function D(e) {
             let s = null !== (a = null === (i = e.embeds[0]) || void 0 === i ? void 0 : null === (r = i.fields) || void 0 === r ? void 0 : null === (n = r.find((e) => 'poll_question_text' === e.rawName)) || void 0 === n ? void 0 : n.rawValue) && void 0 !== a ? a : '';
             return null != t ? (0, o.aF)(s, t) : s;
         })(e, E.Dv);
-    return b.intl.format(b.t.Vn97KS, {
+    return I.intl.format(I.t.Vn97KS, {
         username: t.nick,
         title: n
     });
@@ -184,32 +184,32 @@ function x(e, t, n) {
               let n = Math.max(0, t - e.length);
               if (1 === e.length)
                   return n > 0
-                      ? b.intl.formatToPlainString(b.t['SV/iZm'], {
+                      ? I.intl.formatToPlainString(I.t['SV/iZm'], {
                             a: e[0],
                             n: n.toLocaleString()
                         })
                       : e[0];
               if (2 === e.length)
                   return n > 0
-                      ? b.intl.formatToPlainString(b.t.YBnZKy, {
+                      ? I.intl.formatToPlainString(I.t.YBnZKy, {
                             a: e[0],
                             b: e[1],
                             n: n.toLocaleString()
                         })
-                      : b.intl.formatToPlainString(b.t['O5+f5e'], {
+                      : I.intl.formatToPlainString(I.t['O5+f5e'], {
                             a: e[0],
                             b: e[1]
                         });
-              if (3 !== e.length) return b.intl.formatToPlainString(b.t.yVX6kJ, { n: n.toLocaleString() });
+              if (3 !== e.length) return I.intl.formatToPlainString(I.t.yVX6kJ, { n: n.toLocaleString() });
               else
                   return n > 0
-                      ? b.intl.formatToPlainString(b.t['ThXp+P'], {
+                      ? I.intl.formatToPlainString(I.t['ThXp+P'], {
                             a: e[0],
                             b: e[1],
                             c: e[2],
                             n: n.toLocaleString()
                         })
-                      : b.intl.formatToPlainString(b.t['0UzBMz'], {
+                      : I.intl.formatToPlainString(I.t['0UzBMz'], {
                             a: e[0],
                             b: e[1],
                             c: e[2]

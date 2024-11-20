@@ -6,7 +6,7 @@ n.d(t, {
         return A;
     },
     ZP: function () {
-        return b;
+        return x;
     }
 }),
     n(47120);
@@ -33,25 +33,25 @@ var i = n(200651),
     T = n(388032);
 let S = 'Email Verification',
     A = 'PHONE_THEN_EMAIL_INTERSTITIAL_MODAL_KEY';
-function b() {
+function x() {
     let { action: e, theme: t } = (0, a.cj)([E.Z, _.Z], () => ({
             action: E.Z.getAction(),
             theme: _.Z.theme
         })),
-        b = I.Z.getVerificationTypes(e),
-        [x, Z] = r.useState(0),
-        L = (0, h.Z)(b);
+        x = I.Z.getVerificationTypes(e),
+        [b, Z] = r.useState(0),
+        L = (0, h.Z)(x);
     (0, p.Z)(
         {
             type: l.ImpressionTypes.MODAL,
             name: l.ImpressionNames.USER_ACTION_REQUIRED,
             properties: {
-                verification_type: b[0],
-                verification_types: b
+                verification_type: x[0],
+                verification_types: x
             }
         },
         {},
-        [b.toString()]
+        [x.toString()]
     );
     let y = () => {
             (0, u.FD)(),
@@ -69,7 +69,7 @@ function b() {
         O = () => {
             (0, o.openModalLazy)(
                 async () => {
-                    let { default: e } = await Promise.all([n.e('76540'), n.e('43876')]).then(n.bind(n, 607018));
+                    let { default: e } = await Promise.all([n.e('76540'), n.e('55547')]).then(n.bind(n, 607018));
                     return (t) =>
                         (0, i.jsx)(e, {
                             reason: f.L.USER_ACTION_REQUIRED,
@@ -94,7 +94,7 @@ function b() {
         ),
         r.useEffect(() => {
             (null == L ? void 0 : L[0]) === v.PUi.PHONE &&
-                (null == b ? void 0 : b[0]) === v.PUi.EMAIL &&
+                (null == x ? void 0 : x[0]) === v.PUi.EMAIL &&
                 (0, o.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 468026));
@@ -112,10 +112,10 @@ function b() {
                         onCloseCallback: y
                     }
                 );
-        }, [b, L]),
+        }, [x, L]),
         (0, i.jsx)(C.Z, {
-            types: b,
-            captchaKey: x,
+            types: x,
+            captchaKey: b,
             onCaptchaVerify: (e) => {
                 s.tn
                     .post({

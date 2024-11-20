@@ -7,7 +7,7 @@ var i = n(120356),
     l = n(565138),
     u = n(474936),
     c = n(388032),
-    d = n(302931);
+    d = n(454416);
 let f = {
         XXSMALL: d.xxsmall,
         XSMALL: d.xsmall,
@@ -84,9 +84,9 @@ let f = {
                 className: a()(d.gameIcon, E, m)
             });
         let v = null == i ? void 0 : i.name,
-            b = null != v && '' !== v ? c.intl.formatToPlainString(c.t.tiKyYm, { applicationName: v }) : c.intl.string(c.t['2B/phI']);
+            I = null != v && '' !== v ? c.intl.formatToPlainString(c.t.tiKyYm, { applicationName: v }) : c.intl.string(c.t['2B/phI']);
         return (0, r.jsx)('img', {
-            alt: b,
+            alt: I,
             src: t,
             className: a()(d.gameIcon, E, m)
         });

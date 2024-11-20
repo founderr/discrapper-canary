@@ -5,10 +5,10 @@ n.r(t),
             return r;
         },
         getNativePlatform: function () {
-            return b;
+            return I;
         },
         getOS: function () {
-            return I;
+            return b;
         },
         getPlatform: function () {
             return E;
@@ -95,7 +95,7 @@ function E() {
 function v() {
     return o;
 }
-function b() {
+function I() {
     switch (o) {
         case 'ios':
         case 'android':
@@ -104,7 +104,7 @@ function b() {
             return 'web';
     }
 }
-function I() {
+function b() {
     let { userAgent: e } = window.navigator;
     if (/Windows/i.test(e)) return /Phone/.test(e) ? 'windows mobile' : 'windows';
     if (/(iPhone|iPad|iPod)/.test(e)) return 'ios';

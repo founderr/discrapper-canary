@@ -60,13 +60,13 @@ var t, n;
                                     for (var g = 0; g < m.length; g++) {
                                         var E = m[g],
                                             v = e[E],
-                                            b = v.order;
-                                        if (b > _) break;
-                                        var I = null == s.prevCapture ? '' : s.prevCapture[0],
-                                            T = v.match(t, s, I);
+                                            I = v.order;
+                                        if (I > _) break;
+                                        var b = null == s.prevCapture ? '' : s.prevCapture[0],
+                                            T = v.match(t, s, b);
                                         if (T) {
-                                            var S = v.quality ? v.quality(T, s, I) : 0;
-                                            (b < _ || S > f) && ((l = E), (c = v), (d = T), (f = S), (_ = b));
+                                            var S = v.quality ? v.quality(T, s, b) : 0;
+                                            (I < _ || S > f) && ((l = E), (c = v), (d = T), (f = S), (_ = I));
                                         }
                                     }
                             }
@@ -121,8 +121,8 @@ var t, n;
                 var o = '<' + e + i + '>';
                 return r ? o + t + '</' + e + '>' : o;
             },
-            b = {},
-            I = function (e) {
+            I = {},
+            b = function (e) {
                 if (null == e) return null;
                 try {
                     var t = new URL(e, 'https://localhost').protocol;
@@ -331,7 +331,7 @@ var t, n;
                     match: h(/^( *[-*_]){3,} *(?:\n *)+\n/),
                     parse: O,
                     react: function (e, t, n) {
-                        return E('hr', n.key, b);
+                        return E('hr', n.key, I);
                     },
                     html: function (e, t, n) {
                         return '<hr>';
@@ -654,14 +654,14 @@ var t, n;
                     },
                     react: function (e, t, n) {
                         return E('a', n.key, {
-                            href: I(e.target),
+                            href: b(e.target),
                             title: e.title,
                             children: t(e.content, n)
                         });
                     },
                     html: function (e, t, n) {
                         var r = {
-                            href: I(e.target),
+                            href: b(e.target),
                             title: e.title
                         };
                         return v('a', t(e.content, n), r);
@@ -679,7 +679,7 @@ var t, n;
                     },
                     react: function (e, t, n) {
                         return E('img', n.key, {
-                            src: I(e.target),
+                            src: b(e.target),
                             alt: e.alt,
                             title: e.title
                         });
@@ -689,7 +689,7 @@ var t, n;
                             'img',
                             '',
                             {
-                                src: I(e.target),
+                                src: b(e.target),
                                 alt: e.alt,
                                 title: e.title
                             },
@@ -799,7 +799,7 @@ var t, n;
                     match: m(/^ {2,}\n/),
                     parse: O,
                     react: function (e, t, n) {
-                        return E('br', n.key, b);
+                        return E('br', n.key, I);
                     },
                     html: function (e, t, n) {
                         return '<br>';
@@ -876,7 +876,7 @@ var t, n;
             defaultHtmlOutput: J,
             preprocess: d,
             sanitizeText: y,
-            sanitizeUrl: I,
+            sanitizeUrl: b,
             unescapeUrl: N,
             htmlTag: v,
             reactElement: E,

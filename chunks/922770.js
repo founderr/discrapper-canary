@@ -14,7 +14,7 @@ var r,
     l = n.n(o),
     u = n(186325),
     c = n(388032),
-    d = n(86901);
+    d = n(987454);
 ((r = i || (i = {})).WANDERING_CUBES = 'wanderingCubes'), (r.CHASING_DOTS = 'chasingDots'), (r.PULSING_ELLIPSIS = 'pulsingEllipsis'), (r.SPINNING_CIRCLE = 'spinningCircle'), (r.SPINNING_CIRCLE_SIMPLE = 'spinningCircleSimple'), (r.LOW_MOTION = 'lowMotion');
 function f(e) {
     let { type: t = 'wanderingCubes', animated: n = !0, className: r, itemClassName: i, 'aria-label': o, ...f } = e,

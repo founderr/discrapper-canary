@@ -79,18 +79,18 @@ function v(e) {
     return 'undefined' != typeof Set && (E.working ? E(e) : e instanceof Set);
 }),
     (v.working = 'undefined' != typeof WeakMap && v(new WeakMap()));
-function b(e) {
+function I(e) {
     return '[object WeakSet]' === c(e);
 }
 (t.isWeakMap = function (e) {
     return 'undefined' != typeof WeakMap && (v.working ? v(e) : e instanceof WeakMap);
 }),
-    (b.working = 'undefined' != typeof WeakSet && b(new WeakSet()));
-function I(e) {
+    (I.working = 'undefined' != typeof WeakSet && I(new WeakSet()));
+function b(e) {
     return '[object ArrayBuffer]' === c(e);
 }
 function T(e) {
-    return 'undefined' != typeof ArrayBuffer && (I.working ? I(e) : e instanceof ArrayBuffer);
+    return 'undefined' != typeof ArrayBuffer && (b.working ? b(e) : e instanceof ArrayBuffer);
 }
 function S(e) {
     return '[object DataView]' === c(e);
@@ -99,9 +99,9 @@ function y(e) {
     return 'undefined' != typeof DataView && (S.working ? S(e) : e instanceof DataView);
 }
 (t.isWeakSet = function (e) {
-    return b(e);
+    return I(e);
 }),
-    (I.working = 'undefined' != typeof ArrayBuffer && I(new ArrayBuffer())),
+    (b.working = 'undefined' != typeof ArrayBuffer && b(new ArrayBuffer())),
     (t.isArrayBuffer = T),
     (S.working = 'undefined' != typeof ArrayBuffer && 'undefined' != typeof DataView && S(new DataView(new ArrayBuffer(1), 0, 1))),
     (t.isDataView = y);

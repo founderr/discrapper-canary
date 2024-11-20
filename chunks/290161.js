@@ -3,8 +3,8 @@ var i = n(200651),
     r = n(192379),
     s = n(442837),
     a = n(481060),
-    l = n(490173),
-    o = n(735246),
+    o = n(490173),
+    l = n(735246),
     c = n(40851),
     d = n(503737),
     u = n(823453),
@@ -33,7 +33,7 @@ t.default = function () {
         (0, i.jsxs)(r.Fragment, {
             children: [
                 (0, i.jsx)(u.Z, {}),
-                (0, i.jsx)(o.T, {
+                (0, i.jsx)(l.T, {
                     children: (0, i.jsxs)(v.Z, {
                         children: [
                             (0, i.jsx)(p.Co, {}),
@@ -42,7 +42,7 @@ t.default = function () {
                                 appContext: E.IlC.OVERLAY,
                                 renderWindow: window,
                                 children: (0, i.jsxs)(f.yP, {
-                                    children: [(0, i.jsx)(_.Z, {}), (0, i.jsx)(a.Modals, {}), (0, i.jsx)(l.Z, {}), (0, i.jsx)(f.Un, {})]
+                                    children: [(0, i.jsx)(_.Z, {}), (0, i.jsx)(a.Modals, {}), (0, i.jsx)(o.Z, {}), (0, i.jsx)(f.Un, {})]
                                 })
                             })
                         ]

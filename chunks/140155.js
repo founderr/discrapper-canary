@@ -59,15 +59,15 @@ function v() {
         notifCenterTabFocused: !1
     };
 }
-function b(e) {
+function I(e) {
     return {
         ...e,
         kind: 'notification-center-item',
         message: null != e.message ? (0, o.e5)(e.message) : void 0
     };
 }
-function I(e) {
-    let t = 'NOTIFICATION_CENTER_ITEM_CREATE' === e.type ? b(e.item) : e.item;
+function b(e) {
+    let t = 'NOTIFICATION_CENTER_ITEM_CREATE' === e.type ? I(e.item) : e.item;
     if (!g.initialized || !E(t) || g.notifCenterIds.has(t.id)) return !1;
     g.notifCenterIds.add(t.id), (g.notifCenterItems = [t, ...g.notifCenterItems]), g.notifCenterItems.sort((e, t) => f.default.compare(t.id, e.id));
 }
@@ -209,13 +209,13 @@ let C = new N(a.Z, {
         let { guildScheduledEvent: t } = e;
         A(t);
     },
-    NOTIFICATION_CENTER_ITEM_CREATE: I,
+    NOTIFICATION_CENTER_ITEM_CREATE: b,
     NOTIFICATION_CENTER_ITEM_DELETE: function (e) {
         let { id: t } = e;
         if (!g.notifCenterIds.has(t)) return !1;
         g.notifCenterIds.delete(t), (g.notifCenterItems = g.notifCenterItems.filter((e) => e.id !== t));
     },
-    NOTIFICATION_CENTER_ITEM_DELETE_FAILURE: I,
+    NOTIFICATION_CENTER_ITEM_DELETE_FAILURE: b,
     LOAD_NOTIFICATION_CENTER_ITEMS: function () {
         g.loading = !0;
     },
@@ -224,7 +224,7 @@ let C = new N(a.Z, {
     },
     LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: function (e) {
         let { items: t, hasMore: n, cursor: r } = e;
-        if (!!g.loading) (g.loading = !1), (g.initialized = !0), (g.errored = !1), (g.isDataStale = !1), (null == r || !g.notifCenterIds.has(r)) && ((g.paginationHasMore = t.length > 0 && n), (g.paginationCursor = t.length > 0 ? r : void 0)), (g.notifCenterItems = [...g.notifCenterItems, ...t.map(b).filter((e) => !g.notifCenterIds.has(e.id))]), g.notifCenterItems.sort((e, t) => f.default.compare(t.id, e.id)), t.forEach((e) => g.notifCenterIds.add(e.id));
+        if (!!g.loading) (g.loading = !1), (g.initialized = !0), (g.errored = !1), (g.isDataStale = !1), (null == r || !g.notifCenterIds.has(r)) && ((g.paginationHasMore = t.length > 0 && n), (g.paginationCursor = t.length > 0 ? r : void 0)), (g.notifCenterItems = [...g.notifCenterItems, ...t.map(I).filter((e) => !g.notifCenterIds.has(e.id))]), g.notifCenterItems.sort((e, t) => f.default.compare(t.id, e.id)), t.forEach((e) => g.notifCenterIds.add(e.id));
     },
     RESET_NOTIFICATION_CENTER: v,
     NOTIFICATION_CENTER_SET_ACTIVE: function (e) {

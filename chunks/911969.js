@@ -1,4 +1,4 @@
-var r, i, a, s, o, l, u, c, d, f, _, p, h, m, g, E, v, b, I, T, S, y, A, N, C, R, O, D, L, x, w, M, P, k;
+var r, i, a, s, o, l, u, c, d, f, _, p, h, m, g, E, v, I, b, T, S, y, A, N, C, R, O, D, L, x, w, M, P, k;
 n.d(t, {
     B8: function () {
         return d;
@@ -52,11 +52,11 @@ n.d(t, {
         return c;
     }
 }),
-    ((b = r || (r = {}))[(b.ROLE = 0)] = 'ROLE'),
-    (b[(b.MEMBER = 1)] = 'MEMBER'),
-    ((I = i || (i = {})).IOS = 'ios'),
-    (I.ANDROID = 'android'),
-    (I.WEB = 'web'),
+    ((I = r || (r = {}))[(I.ROLE = 0)] = 'ROLE'),
+    (I[(I.MEMBER = 1)] = 'MEMBER'),
+    ((b = i || (i = {})).IOS = 'ios'),
+    (b.ANDROID = 'android'),
+    (b.WEB = 'web'),
     ((T = a || (a = {}))[(T.NONE = 0)] = 'NONE'),
     (T[(T.NEW = 1)] = 'NEW'),
     (T[(T.UPDATED = 2)] = 'UPDATED'),

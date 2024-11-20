@@ -20,8 +20,8 @@ var r = n(200651),
     g = n(409057),
     E = n(443375),
     v = n(128277),
-    b = n(263059),
-    I = n(981631);
+    I = n(263059),
+    b = n(981631);
 function T(e) {
     let { user: t, currentUser: n, activity: T, className: S, onClose: y, profileGuildId: A } = e,
         N = (0, a.e7)([p.Z, d.Z], () => {
@@ -35,8 +35,8 @@ function T(e) {
             },
             { autoTrackExposure: !1 }
         ),
-        R = C && _.Z.can(I.Plq.CONNECT, N),
-        O = (null == T ? void 0 : T.type) === I.IIU.HANG_STATUS && R ? N : null,
+        R = C && _.Z.can(b.Plq.CONNECT, N),
+        O = (null == T ? void 0 : T.type) === b.IIU.HANG_STATUS && R ? N : null,
         { activityReactReplyEnabled: D } = (0, m.F)({ location: 'UserProfileActivityCardWrapper' }),
         L = t.id === n.id,
         x = (0, a.e7)([f.Z, p.Z, d.Z], () => {
@@ -51,15 +51,15 @@ function T(e) {
     let w = (0, a.e7)([l.Z], () => ((null == T ? void 0 : T.application_id) != null ? l.Z.getApplication(T.application_id) : (null == T ? void 0 : T.name) != null ? l.Z.getApplicationByName(T.name) : null));
     if (
         (i.useEffect(() => {
-            (null == T ? void 0 : T.type) === I.IIU.HANG_STATUS &&
+            (null == T ? void 0 : T.type) === b.IIU.HANG_STATUS &&
                 R &&
-                h.default.track(I.rMx.VIEW_HANG_STATUS, {
+                h.default.track(b.rMx.VIEW_HANG_STATUS, {
                     source: 'UserProfilePopout',
                     guild_id: null == O ? void 0 : O.guild_id,
                     channel_id: null == O ? void 0 : O.id
                 });
         }, [null == T ? void 0 : T.type, R, O]),
-        (null == T ? void 0 : T.type) === I.IIU.HANG_STATUS && !R)
+        (null == T ? void 0 : T.type) === b.IIU.HANG_STATUS && !R)
     )
         return null;
     if ((0, o.Z)(T))
@@ -73,7 +73,7 @@ function T(e) {
                   className: S,
                   onClose: y
               })
-            : (0, r.jsx)(b.Z, {
+            : (0, r.jsx)(I.Z, {
                   user: t,
                   currentUser: n,
                   activity: T,

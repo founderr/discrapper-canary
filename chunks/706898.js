@@ -20,7 +20,7 @@ var r,
     p = n(1561),
     h = n(993365),
     m = n(981631),
-    g = n(900014);
+    g = n(176892);
 function E(e, t, n) {
     return (
         t in e
@@ -39,18 +39,18 @@ let v = {
         top: g.top,
         'top-pill': g.topPill
     },
-    b = l.forwardRef(function (e, t) {
+    I = l.forwardRef(function (e, t) {
         let { children: n, id: r, ...i } = e;
         return (0, o.jsx)('div', {
             ...i,
             ref: t,
             role: 'tabpanel',
-            id: I(r),
+            id: b(r),
             tabIndex: -1,
             children: n
         });
     });
-function I(e) {
+function b(e) {
     return ''.concat(e.replace(/\s+/g, '-').toLowerCase(), '-tab');
 }
 function T(e, t) {
@@ -107,7 +107,7 @@ class S extends (i = l.Component) {
             style: this.getStyle(),
             role: 'tab',
             'aria-selected': _,
-            'aria-controls': _ ? I(''.concat(n)) : void 0,
+            'aria-controls': _ ? b(''.concat(n)) : void 0,
             'aria-disabled': a,
             tabIndex: _ ? 0 : -1,
             onMouseEnter: null != i ? this.handleMouseOver : void 0,
@@ -243,4 +243,4 @@ E(y, 'Header', function (e) {
             style: t
         });
     }),
-    E(y, 'Panel', b);
+    E(y, 'Panel', I);

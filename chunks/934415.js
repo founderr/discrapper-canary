@@ -62,15 +62,15 @@ var r = n(149765),
     g = n(981631),
     E = n(474936),
     v = n(388032);
-let { GUILD_VOICE: b, GUILD_CATEGORY: I, GUILD_STAGE_VOICE: T } = g.d4z;
+let { GUILD_VOICE: I, GUILD_CATEGORY: b, GUILD_STAGE_VOICE: T } = g.d4z;
 function S(e, t) {
-    return e === t || e === I;
+    return e === t || e === b;
 }
 function y(e, t, n) {
     let i = h.Hn;
     return (
-        ((0, u.r8)(t) || t === I) && (i = r.IH(i, g.Plq.VIEW_CHANNEL)),
-        (S(t, b) || S(t, T)) && ((i = r.IH(i, g.Plq.VIEW_CHANNEL)), (i = r.IH(i, g.Plq.CONNECT))),
+        ((0, u.r8)(t) || t === b) && (i = r.IH(i, g.Plq.VIEW_CHANNEL)),
+        (S(t, I) || S(t, T)) && ((i = r.IH(i, g.Plq.VIEW_CHANNEL)), (i = r.IH(i, g.Plq.CONNECT))),
         {
             id: e,
             type: n,
@@ -90,8 +90,8 @@ function A(e, t, n) {
             (l = t),
             (c = i.BN.ROLE),
             (n = h.Hn),
-            ((0, u.r8)(l) || l === I) && (n = r.IH(n, g.Plq.VIEW_CHANNEL)),
-            S(l, b) && ((n = r.IH(n, g.Plq.VIEW_CHANNEL)), (n = r.IH(n, g.Plq.CONNECT))),
+            ((0, u.r8)(l) || l === b) && (n = r.IH(n, g.Plq.VIEW_CHANNEL)),
+            S(l, I) && ((n = r.IH(n, g.Plq.VIEW_CHANNEL)), (n = r.IH(n, g.Plq.CONNECT))),
             {
                 id: o,
                 type: c,

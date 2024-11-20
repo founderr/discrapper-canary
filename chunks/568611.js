@@ -97,8 +97,8 @@ E(function (e, t) {
         p = e.className,
         h = e.exact,
         v = e.isActive,
-        b = e.location,
-        I = e.sensitive,
+        I = e.location,
+        b = e.sensitive,
         T = e.strict,
         S = e.style,
         y = e.to,
@@ -106,7 +106,7 @@ E(function (e, t) {
         N = (0, l.Z)(e, ['aria-current', 'activeClassName', 'activeStyle', 'className', 'exact', 'isActive', 'location', 'sensitive', 'strict', 'style', 'to', 'innerRef']);
     return a.createElement(r.s6.Consumer, null, function (e) {
         e || (0, u.Z)(!1);
-        var n = b || e.location,
+        var n = I || e.location,
             s = f(d(y, n), n),
             l = s.pathname,
             C = l && l.replace(/([.+*?=^!:${}()[\]|/\\])/g, '\\$1'),
@@ -114,7 +114,7 @@ E(function (e, t) {
                 ? (0, r.LX)(n.pathname, {
                       path: C,
                       exact: h,
-                      sensitive: I,
+                      sensitive: b,
                       strict: T
                   })
                 : null,

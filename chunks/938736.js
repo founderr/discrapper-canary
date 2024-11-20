@@ -33,14 +33,14 @@ s.d(t, {
         return m;
     },
     wG: function () {
-        return A;
+        return j;
     }
 });
 var n = s(442837),
     r = s(704215),
     i = s(605236),
-    o = s(276444),
-    a = s(822070),
+    a = s(276444),
+    o = s(822070),
     l = s(520540),
     c = s(898997),
     d = s(981631),
@@ -65,7 +65,7 @@ let p = '40%',
     g = (e) => {
         let { enabled: t, eligibleToFetch: s } = l.g.useExperiment({ location: e }, { autoTrackExposure: !1 });
         (0, c.B)(e, !s);
-        let r = (0, n.e7)([o.Z], () => o.Z.getIsEligibleToSendReferrals());
+        let r = (0, n.e7)([a.Z], () => a.Z.getIsEligibleToSendReferrals());
         return t && r;
     },
     _ = (e) => {
@@ -75,7 +75,7 @@ let p = '40%',
     h = (e) => {
         let t = _(e),
             s = g('PremiumManagementSettings'),
-            r = (0, n.e7)([o.Z], () => o.Z.getRecipientStatus());
+            r = (0, n.e7)([a.Z], () => a.Z.getRecipientStatus());
         if (!t) return !1;
         if (!s) return !!(r.size > 0) || !1;
         return !0;
@@ -87,23 +87,23 @@ let p = '40%',
     },
     L = (e) => {
         let { enabled: t } = l.g.useExperiment({ location: e }, { autoTrackExposure: !1 }),
-            { enabled: s } = a.$.useExperiment({ location: e }, { autoTrackExposure: !0 }),
-            r = (0, n.e7)([o.Z], () => o.Z.getIsSenderEligibleForIncentive());
+            { enabled: s } = o.$.useExperiment({ location: e }, { autoTrackExposure: !0 }),
+            r = (0, n.e7)([a.Z], () => a.Z.getIsSenderEligibleForIncentive());
         return t && s && r;
     },
     v = (e) => {
         let { enabled: t } = l.g.useExperiment({ location: e }, { autoTrackExposure: !1 }),
-            { enabled: s } = a.$.useExperiment({ location: e }, { autoTrackExposure: !0 }),
-            r = (0, n.e7)([o.Z], () => o.Z.getIsFetchingReferralIncentiveEligibility()),
-            i = (0, n.e7)([o.Z], () => o.Z.getSenderIncentiveState());
+            { enabled: s } = o.$.useExperiment({ location: e }, { autoTrackExposure: !0 }),
+            r = (0, n.e7)([a.Z], () => a.Z.getIsFetchingReferralIncentiveEligibility()),
+            i = (0, n.e7)([a.Z], () => a.Z.getSenderIncentiveState());
         return r ? d.g2L.NOT_ELIGIBLE : s && t ? i : d.g2L.NOT_ELIGIBLE;
     },
-    j = (e) => {
+    A = (e) => {
         let t = v(e);
         return t === d.g2L.COOLDOWN || t === d.g2L.UNAPPLIED || t === d.g2L.QUALIFIED;
     },
-    A = (e) => {
-        let t = j(e),
+    j = (e) => {
+        let t = A(e),
             s = (0, i.wE)(r.z.REFERRAL_INCENTIVE_AWARDED_INFO);
         return t && !s;
     },

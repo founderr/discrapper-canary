@@ -234,7 +234,7 @@ var p = function () {
             t
         );
     })(h),
-    b = (function (e) {
+    I = (function (e) {
         function t(t, n, r, i, a, s) {
             var o = e.call(this, t) || this;
             (o.min = n), (o.max = r), (o.duration = i);
@@ -265,11 +265,11 @@ var p = function () {
             t
         );
     })(h);
-function I(e, t) {
+function b(e, t) {
     return e === t ? e : Math.random() * (t - e + 1) + e;
 }
 function T(e) {
-    var t = Math.floor(I(0, e.length - 1));
+    var t = Math.floor(b(0, e.length - 1));
     return [e[t], t];
 }
 function S(e, t) {
@@ -301,7 +301,7 @@ function N(e) {
             case 'static-random':
                 var n = y(e.minValue),
                     r = y(e.maxValue);
-                return new m(new E(I(n.x, r.x)), new E(I(n.y, r.y)));
+                return new m(new E(b(n.x, r.x)), new E(b(n.y, r.y)));
             case 'linear':
                 t = y(e.value);
                 var i = y(e.addValue);
@@ -310,14 +310,14 @@ function N(e) {
                 (n = y(e.minValue)), (r = y(e.maxValue));
                 var a = y(e.minAddValue),
                     s = y(e.maxAddValue);
-                return new m(new v(I(n.x, r.x), I(a.x, s.x)), new v(I(n.y, r.y), I(a.x, s.x)));
+                return new m(new v(b(n.x, r.x), b(a.x, s.x)), new v(b(n.y, r.y), b(a.x, s.x)));
             case 'oscillating':
                 t = y(e.value);
                 var o = y(e.start),
                     l = y(e.final),
                     u = y(e.duration),
                     c = y(e.direction);
-                return new m(new b(t.x, o.x, l.x, u.x, c.x, e.easingFunction), new b(t.y, o.y, l.y, u.x, c.y, e.easingFunction));
+                return new m(new I(t.x, o.x, l.x, u.x, c.x, e.easingFunction), new I(t.y, o.y, l.y, u.x, c.y, e.easingFunction));
             case 'oscillating-random':
                 (n = y(e.minValue)), (r = y(e.maxValue));
                 var d = y(e.minStart),
@@ -328,7 +328,7 @@ function N(e) {
                     g = y(e.maxDuration),
                     A = y(e.minDirection),
                     N = y(e.maxDirection);
-                return new m(new b(I(n.x, r.x), I(d.x, f.x), I(_.x, p.x), I(h.x, g.x), S(A.x, N.x), T(e.easingFunctions)[0]), new b(I(n.y, r.y), I(d.y, f.y), I(_.y, p.y), I(h.y, g.y), S(A.y, N.y), T(e.easingFunctions)[0]));
+                return new m(new I(b(n.x, r.x), b(d.x, f.x), b(_.x, p.x), b(h.x, g.x), S(A.x, N.x), T(e.easingFunctions)[0]), new I(b(n.y, r.y), b(d.y, f.y), b(_.y, p.y), b(h.y, g.y), S(A.y, N.y), T(e.easingFunctions)[0]));
         }
     })(p(p({}, e), { valueType: 'Vector2' }));
 }
@@ -436,7 +436,7 @@ var C = r.forwardRef(function (e, t) {
                                               return e === t;
                                           })
                                         : -1;
-                            return -1 !== i ? i : Math.floor(I(0, n.colors.length - 1));
+                            return -1 !== i ? i : Math.floor(b(0, n.colors.length - 1));
                         })(null != d ? d : C, f, l)),
                         new u({
                             id: s,
@@ -452,7 +452,7 @@ var C = r.forwardRef(function (e, t) {
                                         case 'static-random':
                                             var n = A(e.minValue),
                                                 r = A(e.maxValue);
-                                            return new g(new E(I(n.x, r.x)), new E(I(n.y, r.y)), new E(I(n.z, r.z)));
+                                            return new g(new E(b(n.x, r.x)), new E(b(n.y, r.y)), new E(b(n.z, r.z)));
                                         case 'linear':
                                             t = A(e.value);
                                             var i = A(e.addValue);
@@ -461,14 +461,14 @@ var C = r.forwardRef(function (e, t) {
                                             (n = A(e.minValue)), (r = A(e.maxValue));
                                             var a = A(e.minAddValue),
                                                 s = A(e.maxAddValue);
-                                            return new g(new v(I(n.x, r.x), I(a.x, s.x)), new v(I(n.y, r.y), I(a.y, s.y)), new v(I(n.z, r.z), I(a.z, s.z)));
+                                            return new g(new v(b(n.x, r.x), b(a.x, s.x)), new v(b(n.y, r.y), b(a.y, s.y)), new v(b(n.z, r.z), b(a.z, s.z)));
                                         case 'oscillating':
                                             t = A(e.value);
                                             var o = A(e.start),
                                                 l = A(e.final),
                                                 u = A(e.duration),
                                                 c = A(e.direction);
-                                            return new g(new b(t.x, o.x, l.x, u.x, c.x, e.easingFunction), new b(t.y, o.y, l.y, u.z, c.y, e.easingFunction), new b(t.z, o.z, l.z, u.z, c.z, e.easingFunction));
+                                            return new g(new I(t.x, o.x, l.x, u.x, c.x, e.easingFunction), new I(t.y, o.y, l.y, u.z, c.y, e.easingFunction), new I(t.z, o.z, l.z, u.z, c.z, e.easingFunction));
                                         case 'oscillating-random':
                                             (n = A(e.minValue)), (r = A(e.maxValue));
                                             var d = A(e.minStart),
@@ -479,7 +479,7 @@ var C = r.forwardRef(function (e, t) {
                                                 m = A(e.maxDuration),
                                                 y = A(e.minDirection),
                                                 N = A(e.maxDirection);
-                                            return new g(new b(I(n.x, r.x), I(d.x, f.x), I(_.x, p.x), I(h.x, m.x), S(y.x, N.x), T(e.easingFunctions)[0]), new b(I(n.y, r.y), I(d.y, f.y), I(_.y, p.y), I(h.y, m.y), S(y.y, N.y), T(e.easingFunctions)[0]), new b(I(n.z, r.z), I(d.z, f.z), I(_.z, p.z), I(h.z, m.z), S(y.z, N.z), T(e.easingFunctions)[0]));
+                                            return new g(new I(b(n.x, r.x), b(d.x, f.x), b(_.x, p.x), b(h.x, m.x), S(y.x, N.x), T(e.easingFunctions)[0]), new I(b(n.y, r.y), b(d.y, f.y), b(_.y, p.y), b(h.y, m.y), S(y.y, N.y), T(e.easingFunctions)[0]), new I(b(n.z, r.z), b(d.z, f.z), b(_.z, p.z), b(h.z, m.z), S(y.z, N.z), T(e.easingFunctions)[0]));
                                     }
                                 })(p(p({}, D), { valueType: 'Vector3' }))),
                             dragCoefficient: N(h.dragCoefficient),
@@ -491,15 +491,15 @@ var C = r.forwardRef(function (e, t) {
                                         case 'static':
                                             return new E(e.value);
                                         case 'static-random':
-                                            return new E(I(e.minValue, e.maxValue));
+                                            return new E(b(e.minValue, e.maxValue));
                                         case 'linear':
                                             return new v(e.value, e.addValue);
                                         case 'linear-random':
-                                            return new v(I(e.minValue, e.maxValue), I(e.minAddValue, e.maxAddValue));
+                                            return new v(b(e.minValue, e.maxValue), b(e.minAddValue, e.maxAddValue));
                                         case 'oscillating':
-                                            return new b(e.value, e.start, e.final, e.duration, e.direction, e.easingFunction);
+                                            return new I(e.value, e.start, e.final, e.duration, e.direction, e.easingFunction);
                                         case 'oscillating-random':
-                                            return new b(I(e.minValue, e.maxValue), I(e.minStart, e.maxStart), I(e.minFinal, e.maxFinal), I(e.minDuration, e.maxDuration), S(e.minDirection, e.maxDirection), T(e.easingFunctions)[0]);
+                                            return new I(b(e.minValue, e.maxValue), b(e.minStart, e.maxStart), b(e.minFinal, e.maxFinal), b(e.minDuration, e.maxDuration), S(e.minDirection, e.maxDirection), T(e.easingFunctions)[0]);
                                     }
                                 })(p(p({}, L), { valueType: 'number' }))),
                             airResistanceArea: N(h.airResistanceArea),

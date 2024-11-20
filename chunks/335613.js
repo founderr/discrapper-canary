@@ -77,8 +77,8 @@ i(_, a),
                 (g = p(m, 10)),
                 (m = h),
                 (h = t);
-        var b = (this._b + a + g) | 0;
-        (this._b = (this._c + d + E) | 0), (this._c = (this._d + f + _) | 0), (this._d = (this._e + r + h) | 0), (this._e = (this._a + i + m) | 0), (this._a = b);
+        var I = (this._b + a + g) | 0;
+        (this._b = (this._c + d + E) | 0), (this._c = (this._d + f + _) | 0), (this._d = (this._e + r + h) | 0), (this._e = (this._a + i + m) | 0), (this._a = I);
     }),
     (_.prototype._digest = function () {
         (this._block[this._blockOffset++] = 128), this._blockOffset > 56 && (this._block.fill(0, this._blockOffset, 64), this._update(), (this._blockOffset = 0)), this._block.fill(0, this._blockOffset, 56), this._block.writeUInt32LE(this._length[0], 56), this._block.writeUInt32LE(this._length[1], 60), this._update();

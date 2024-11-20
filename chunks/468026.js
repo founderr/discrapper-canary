@@ -12,12 +12,12 @@ var i = n(120356),
     f = n(600164),
     _ = n(540059),
     p = n(388032),
-    h = n(828046);
+    h = n(149536);
 t.default = (e) => {
     let t,
         n,
         i,
-        { body: m, cancelText: g, className: E, confirmColor: v, confirmText: b = p.intl.string(p.t.BddRzc), secondaryConfirmText: I, onCancel: T, onClose: S, onConfirm: y, onConfirmSecondary: A, title: N, transitionState: C, titleClassName: R } = e,
+        { body: m, cancelText: g, className: E, confirmColor: v, confirmText: I = p.intl.string(p.t.BddRzc), secondaryConfirmText: b, onCancel: T, onClose: S, onConfirm: y, onConfirmSecondary: A, title: N, transitionState: C, titleClassName: R } = e,
         O = (0, _.Q)('ConfirmModal'),
         D = O ? s.zx.Sizes.MEDIUM : s.zx.Sizes.LARGE;
     return (
@@ -34,8 +34,8 @@ t.default = (e) => {
                 grow: !O,
                 children: g
             })),
-        null != b &&
-            '' !== b &&
+        null != I &&
+            '' !== I &&
             (n = (0, r.jsx)(s.zx, {
                 type: 'submit',
                 color: v,
@@ -43,10 +43,10 @@ t.default = (e) => {
                 className: a()(h.primaryButton, null != t ? h.gutter : null),
                 autoFocus: !0,
                 grow: !O,
-                children: b
+                children: I
             })),
-        null != I &&
-            '' !== I &&
+        null != b &&
+            '' !== b &&
             (i = (0, r.jsx)(o.P, {
                 onClick: () => {
                     null == S || S(), null == A || A();
@@ -55,7 +55,7 @@ t.default = (e) => {
                 children: (0, r.jsx)(c.x, {
                     className: h.secondaryAction,
                     variant: 'text-xs/normal',
-                    children: I
+                    children: b
                 })
             })),
         (0, r.jsx)(u.Y0, {

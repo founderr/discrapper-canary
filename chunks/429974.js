@@ -23,7 +23,7 @@ function g(e, t) {
 }
 async function E(e) {
     var t, a, s, E;
-    let { userId: v, section: b, subsection: I, guildId: T, channelId: S, friendToken: y, analyticsLocation: A, showGuildProfile: N = !0, ...C } = e,
+    let { userId: v, section: I, subsection: b, guildId: T, channelId: S, friendToken: y, analyticsLocation: A, showGuildProfile: N = !0, ...C } = e,
         R = d.default.getUser(v);
     if (null == R) return;
     let O = _.Z.getUserProfile(v),
@@ -36,14 +36,14 @@ async function E(e) {
         B = L === p.Skl.ONLINE ? U : L;
     (m = await (0, i.openModalLazy)(
         async () => {
-            let { default: e } = await Promise.all([n.e('89943'), n.e('62880'), n.e('82412'), n.e('41921')]).then(n.bind(n, 533835));
+            let { default: e } = await Promise.all([n.e('89943'), n.e('62880'), n.e('82412'), n.e('8576')]).then(n.bind(n, 533835));
             return (t) =>
                 (0, r.jsx)(e, {
                     user: R,
                     guildId: T,
                     friendToken: y,
-                    initialSection: b,
-                    initialSubsection: I,
+                    initialSection: I,
+                    initialSubsection: b,
                     channelId: S,
                     showGuildProfile: N,
                     ...t,
@@ -75,7 +75,7 @@ async function E(e) {
 function v() {
     null != m && (0, i.closeModal)(m), (m = null);
 }
-class b extends s.Z {
+class I extends s.Z {
     _initialize() {
         a.Z.subscribe('USER_PROFILE_MODAL_OPEN', E), a.Z.subscribe('USER_PROFILE_MODAL_CLOSE', v);
     }
@@ -83,4 +83,4 @@ class b extends s.Z {
         a.Z.unsubscribe('USER_PROFILE_MODAL_OPEN', E), a.Z.unsubscribe('USER_PROFILE_MODAL_CLOSE', v);
     }
 }
-t.Z = new b();
+t.Z = new I();

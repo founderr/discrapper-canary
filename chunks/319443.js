@@ -22,10 +22,10 @@ var i = n(200651),
     T = n(569527),
     S = n(979007),
     A = n(388032),
-    b = n(327900);
+    x = n(842221);
 t.Z = function () {
     var e;
-    let { onScroll: t, scrollPosition: n, resetScrollPosition: x } = (0, d.M)(),
+    let { onScroll: t, scrollPosition: n, resetScrollPosition: b } = (0, d.M)(),
         Z = (0, E.Xh)(),
         L = (null == Z ? void 0 : Z.type) === E.m_.CATEGORY ? Z.categoryId : void 0,
         { applicationId: y, section: O } = (null == Z ? void 0 : Z.type) === E.m_.APPLICATION ? Z : {},
@@ -55,9 +55,9 @@ t.Z = function () {
         }),
         X = r.useCallback(
             (e) => {
-                U(e), B && F(), x();
+                U(e), B && F(), b();
             },
-            [B, F, U, x]
+            [B, F, U, b]
         ),
         Q = r.useCallback((e) => (0, I.ph)({ applicationId: e }), []),
         J = G || B,
@@ -65,10 +65,10 @@ t.Z = function () {
             null != (0, E.Uc)() ? (0, g.op)() : (0, I.Yp)();
         }, []);
     return (0, i.jsxs)('div', {
-        className: b.container,
+        className: x.container,
         children: [
             (0, i.jsxs)(h.ZP, {
-                className: B ? b.search : void 0,
+                className: B ? x.search : void 0,
                 children: [
                     !B && (0, i.jsx)(h.z6, { scrollPosition: n }),
                     J
@@ -84,7 +84,7 @@ t.Z = function () {
                           ? (0, i.jsx)(a.Heading, {
                                 variant: 'heading-lg/semibold',
                                 color: 'header-primary',
-                                className: b.alternateHeader,
+                                className: x.alternateHeader,
                                 children: null != P && '' !== P ? A.intl.formatToPlainString(A.t.zHdzqa, { query: P }) : A.intl.formatToPlainString(A.t.Qhj5Bg, { categoryName: null !== (e = null == M ? void 0 : M.name) && void 0 !== e ? e : A.intl.string(A.t.E407b2) })
                             })
                           : (0, i.jsx)(m.Z, {

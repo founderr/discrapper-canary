@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return x;
     }
 });
 var i = n(200651),
@@ -25,14 +25,14 @@ var i = n(200651),
     N = n(687683),
     T = n(981631),
     S = n(388032),
-    A = n(905152);
-function b() {
+    A = n(908120);
+function x() {
     let e = r.useRef(null),
         t = (0, E.Z)(),
         n = (0, I.w)(),
         l = (0, g.V)(),
-        b = (0, d.N)(),
-        x = (0, u.Z)('message-requests-spam-list'),
+        x = (0, d.N)(),
+        b = (0, u.Z)('message-requests-spam-list'),
         { channelId: Z } = (0, _._)(),
         L = r.useCallback(() => {
             (0, c.showToast)((0, c.createToast)(S.intl.string(S.t.EDYbS0), c.ToastType.FAILURE));
@@ -76,7 +76,7 @@ function b() {
                         className: A.sectionTitle,
                         children: [
                             S.intl.format(S.t.C79Edn, { count: n }),
-                            b && n > 0
+                            x && n > 0
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           (0, i.jsx)(c.Text, {
@@ -102,12 +102,12 @@ function b() {
                     },
                     'message-requests-spam-title'
                 ),
-            [n, O, b]
+            [n, O, x]
         );
     return 0 === t.length
         ? (0, i.jsx)(C.Z, { section: N.pS.SPAM })
         : (0, i.jsx)(s.bG, {
-              navigator: x,
+              navigator: b,
               children: (0, i.jsx)(s.SJ, {
                   children: (n) => {
                       let { ref: r, role: l, ...a } = n;

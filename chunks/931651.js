@@ -6,15 +6,15 @@ n.d(t, {
 var r = n(200651);
 n(192379);
 var i = n(907040),
-    u = n(185923);
+    a = n(185923);
 function l(e) {
-    let { channel: t, closePopout: n, analyticsOverride: l, onSelectEmoji: s, messageId: o } = e;
+    let { channel: t, closePopout: n, analyticsOverride: l, onSelectEmoji: o, messageId: s } = e;
     return (0, r.jsx)(i.Z, {
         closePopout: n,
         channel: t,
-        onSelectEmoji: s,
-        pickerIntention: u.Hz.REACTION,
+        onSelectEmoji: o,
+        pickerIntention: a.Hz.REACTION,
         analyticsOverride: l,
-        messageId: o
+        messageId: s
     });
 }

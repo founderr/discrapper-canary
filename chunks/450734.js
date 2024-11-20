@@ -16,7 +16,7 @@ var i = t(120356),
     f = t(445924),
     p = t(654904),
     A = t(486324),
-    b = t(563431);
+    b = t(529934);
 let m = u.ZP.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar;
 function v(e) {
     let { user: n, guild: t, displayProfile: i, canUsePremiumCustomization: u, previewAvatar: v, previewAvatarDecoration: Z, previewTheme: h, previewPrimaryColor: g, className: C, disabledInputs: E, isTryItOutFlow: P, onUpsellClick: N } = e,

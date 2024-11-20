@@ -24,13 +24,13 @@ n.d(t, {
         return M;
     },
     Xu: function () {
-        return b;
+        return I;
     },
     Y: function () {
         return P;
     },
     cD: function () {
-        return I;
+        return b;
     },
     ki: function () {
         return v;
@@ -93,13 +93,13 @@ function v(e, t) {
     let n = e.isForumLikeChannel() ? m.Plq.SEND_MESSAGES : a.$e(m.Plq.CREATE_PUBLIC_THREADS, m.Plq.READ_MESSAGE_HISTORY);
     return T(_.Z.can(n, e), e, t);
 }
-function b(e) {
+function I(e) {
     let t = (0, s.e7)([_.Z], () => _.Z.can(a.$e(m.Plq.CREATE_PRIVATE_THREADS), e), [e]);
     return e.type === m.d4z.GUILD_TEXT && T(t, e);
 }
-function I(e) {
+function b(e) {
     let t = E(e),
-        n = b(e);
+        n = I(e);
     return t || n;
 }
 function T(e, t, n) {

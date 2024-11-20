@@ -14,7 +14,7 @@ var l = t(120356),
     d = t(409813),
     c = t(474936),
     u = t(388032),
-    h = t(820130);
+    h = t(73913);
 function m(e) {
     let { step: n, onClose: t, giftingOrigin: l } = e,
         { enabled: m } = o.G.useExperiment({ location: 'CollectiblesGiftPaymentModalHeader' }, { autoTrackExposure: !1 }),

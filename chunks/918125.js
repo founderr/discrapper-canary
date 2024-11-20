@@ -10,7 +10,7 @@ var r = a(200651),
     o = a(481060),
     i = a(235449),
     l = a(300234),
-    d = a(141185);
+    d = a(77300);
 function h(e) {
     let { guildId: n, goToThread: a } = e,
         c = (0, i.nA)(n),

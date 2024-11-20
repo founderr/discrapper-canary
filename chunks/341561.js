@@ -14,7 +14,7 @@ var i = n(952265),
     h = n(665692),
     m = n(981631),
     g = n(388032),
-    E = n(15183);
+    E = n(438993);
 function v(e, t) {
     return (0, r.jsx)(c.ZP, {
         sticker: e,
@@ -22,7 +22,7 @@ function v(e, t) {
         size: 40
     });
 }
-let b = {
+let I = {
     sentinel: h.Iv,
     stores: [l.Z],
     matches: (e, t, n, r, i) => n.length > 1,
@@ -201,4 +201,4 @@ let b = {
         return { type: null };
     }
 };
-t.Z = b;
+t.Z = I;

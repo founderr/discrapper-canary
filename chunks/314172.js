@@ -16,12 +16,12 @@ var i = n(442837),
     f = n(475413),
     _ = n(981631),
     p = n(388032),
-    h = n(710606);
+    h = n(238493);
 function m(e) {
     let { guild: t, guildMember: n, numRoles: m, highestRole: g, onAddRole: E, buttonRef: v } = e,
-        b = (0, i.e7)([u.Z], () => u.Z.roleStyle);
+        I = (0, i.e7)([u.Z], () => u.Z.roleStyle);
     if (!(0, i.e7)([d.Z], () => d.Z.can(_.Plq.MANAGE_ROLES, t))) return null;
-    let I = (e) => (0, c.Gy)(t.id, e.id) && !e.managed && d.Z.isRoleHigher(t, g, e) && -1 === n.roles.indexOf(e.id);
+    let b = (e) => (0, c.Gy)(t.id, e.id) && !e.managed && d.Z.isRoleHigher(t, g, e) && -1 === n.roles.indexOf(e.id);
     return (0, r.jsx)(s.y, {
         position: 'bottom',
         align: 'center',
@@ -29,8 +29,8 @@ function m(e) {
             let { closePopout: n } = e;
             return (0, r.jsx)(l.Z, {
                 guild: t,
-                roleStyle: b,
-                roleFilter: I,
+                roleStyle: I,
+                roleFilter: b,
                 onSelect: E,
                 onClose: n
             });

@@ -20,7 +20,7 @@ var r = n(913527),
     h = n(360328),
     p = n(981631),
     g = n(388032),
-    C = n(660815);
+    C = n(866323);
 function _(e) {
     var t;
     let { guildJoinRequest: r, guild: _, guildJoinRequestUser: v } = e,

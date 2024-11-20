@@ -15,8 +15,8 @@ var r = n(302454),
     g = n(699450),
     E = n(594199),
     v = n(981631),
-    b = n(388032);
-let I = (e) => {
+    I = n(388032);
+let b = (e) => {
     let t = u.Z.getChannel(e);
     return null == t ? void 0 : t.getGuildId();
 };
@@ -127,7 +127,7 @@ function R(e, t, n, r, i) {
         content: [
             S(
                 {
-                    name: b.intl.string(b.t.zLZPmp).toLowerCase(),
+                    name: I.intl.string(I.t.zLZPmp).toLowerCase(),
                     type: v.d4z.UNKNOWN,
                     iconType: 'text'
                 },
@@ -141,7 +141,7 @@ function O(e, t, n, r) {
         return (function (e, t) {
             let n = {
                 type: 'channel',
-                content: [C(e.roleSubscriptionGated ? e.name : b.intl.string(b.t['/YzI6+']))],
+                content: [C(e.roleSubscriptionGated ? e.name : I.intl.string(I.t['/YzI6+']))],
                 channelType: e.roleSubscriptionGated ? e.type : v.d4z.UNKNOWN,
                 iconType: 'locked'
             };
@@ -172,7 +172,7 @@ function O(e, t, n, r) {
                 inContent: [S(e)],
                 content: [y(!1)]
             };
-        return null != (s = r) ? N(s) : C('#'.concat(b.intl.string(b.t.J90oLS)));
+        return null != (s = r) ? N(s) : C('#'.concat(I.intl.string(I.t.J90oLS)));
     }
     let o = e.guildId === n;
     return {
@@ -233,7 +233,7 @@ let D = {
                     id: r
                 };
             let i = A(r, n.mentionChannels);
-            return null == i ? R(null, r, null, I(n.channelId)) : O(i, null, I(n.channelId));
+            return null == i ? R(null, r, null, b(n.channelId)) : O(i, null, b(n.channelId));
         }
     },
     L = {
@@ -250,7 +250,7 @@ let D = {
                 s = e[3];
             if (null == a) return N(r);
             let o = A(a, null);
-            return null == o ? R(i, a, s, I(n.channelId), r) : O(o, s, I(n.channelId), r);
+            return null == o ? R(i, a, s, b(n.channelId), r) : O(o, s, b(n.channelId), r);
         }
     },
     x = {
@@ -265,9 +265,9 @@ let D = {
                 o = e[4];
             if (null == a || null == s) return N(r);
             let l = A(s, null);
-            if (null != l) return O(l, o, I(n.channelId), r);
+            if (null != l) return O(l, o, b(n.channelId), r);
             let u = A(a, null);
-            return null != u ? O(u, o, I(n.channelId), r) : R(i, a, o, I(n.channelId), r);
+            return null != u ? O(u, o, b(n.channelId), r) : R(i, a, o, b(n.channelId), r);
         }
     };
 t.Z = {

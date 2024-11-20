@@ -8,14 +8,14 @@ var r,
     d = n.n(a),
     c = n(481060),
     E = n(388032),
-    S = n(275906);
-let _ = {
+    S = n(720670);
+let f = {
     BLOCK: S.block,
     INLINE: S.inline
 };
-class f extends (l = o.PureComponent) {
+class _ extends (l = o.PureComponent) {
     render() {
-        let { children: e, className: t, textClassName: n, type: r = _.BLOCK, style: i } = this.props;
+        let { children: e, className: t, textClassName: n, type: r = f.BLOCK, style: i } = this.props;
         return (0, s.jsxs)('div', {
             className: d()(t, r),
             style: i,
@@ -36,9 +36,9 @@ class f extends (l = o.PureComponent) {
         });
     }
 }
-(r = f),
+(r = _),
     (i = 'Types'),
-    (u = _),
+    (u = f),
     i in r
         ? Object.defineProperty(r, i, {
               value: u,
@@ -47,4 +47,4 @@ class f extends (l = o.PureComponent) {
               writable: !0
           })
         : (r[i] = u),
-    (t.Z = f);
+    (t.Z = _);

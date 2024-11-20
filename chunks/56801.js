@@ -12,7 +12,7 @@ var r = n(200651),
     u = n(254494),
     c = n(895924),
     d = n(826298),
-    f = n(343635);
+    f = n(360557);
 let _ = [16, 12, 8, 12];
 function p(e) {
     let { className: t, channel: n, sections: a, activeCategoryIndex: p, filteredSectionId: h, onSectionClick: m, applicationCommandListRef: g } = e,
@@ -25,7 +25,7 @@ function p(e) {
             },
             [a]
         ),
-        b = i.useCallback(
+        I = i.useCallback(
             (e, t) => {
                 var n;
                 if (!t) return 0 === e ? 0 : 8;
@@ -33,7 +33,7 @@ function p(e) {
             },
             [a]
         ),
-        I = i.useCallback(
+        b = i.useCallback(
             (e, t) => {
                 let i = a[t];
                 if (null == i) return;
@@ -88,11 +88,11 @@ function p(e) {
                   store: l.Xn,
                   categories: a,
                   className: f.list,
-                  renderCategoryListItem: I,
+                  renderCategoryListItem: b,
                   rowCount: a.length,
                   categoryHeight: v,
                   listPadding: _,
-                  getScrollOffsetForIndex: b
+                  getScrollOffsetForIndex: I
               })
           });
 }

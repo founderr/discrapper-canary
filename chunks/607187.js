@@ -2,7 +2,7 @@ var r = n(200651),
     i = n(192379),
     a = n(120356),
     s = n.n(a),
-    o = n(447194);
+    o = n(866083);
 t.Z = i.forwardRef(function (e, t) {
     let { children: n, className: i, style: a, noBorder: l = !1, participantUserId: u } = e;
     return (0, r.jsx)('div', {

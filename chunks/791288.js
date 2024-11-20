@@ -8,8 +8,8 @@ var i = n(200651),
     r = n(192379),
     s = n(512722),
     a = n.n(s),
-    l = n(442837),
-    o = n(481060),
+    o = n(442837),
+    l = n(481060),
     c = n(493683),
     d = n(13245),
     u = n(99690),
@@ -32,7 +32,7 @@ var i = n(200651),
     b = n(701488),
     O = n(987650),
     A = n(388032),
-    j = n(629001);
+    j = n(810489);
 function L(e) {
     let { game: t } = e,
         n = (0, h.q)(t.id);
@@ -46,7 +46,7 @@ function L(e) {
                     src: r,
                     size: 32
                 }),
-                (0, i.jsx)(o.Text, {
+                (0, i.jsx)(l.Text, {
                     className: j.gameInfo,
                     variant: 'text-md/semibold',
                     color: 'header-primary',
@@ -58,13 +58,13 @@ function L(e) {
 }
 function P(e) {
     let { entry: t, idx: n } = e,
-        s = (0, l.e7)([C.default], () => C.default.getUser(t.author_id)),
+        s = (0, o.e7)([C.default], () => C.default.getUser(t.author_id)),
         h = (0, _.kr)(t),
-        f = h ? o.tokens.colors.TEXT_POSITIVE : o.tokens.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY,
+        f = h ? l.tokens.colors.TEXT_POSITIVE : l.tokens.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY,
         [E, N] = r.useState('unsent'),
         [b, O] = r.useState(!1),
-        L = (0, l.e7)([Z.Z], () => (null != s ? Z.Z.getAnyStreamForUser(s.id) : null), [s]),
-        { isMobileOnline: P, status: R } = (0, l.cj)(
+        L = (0, o.e7)([Z.Z], () => (null != s ? Z.Z.getAnyStreamForUser(s.id) : null), [s]),
+        { isMobileOnline: P, status: R } = (0, o.cj)(
             [I.Z],
             () =>
                 null == s
@@ -135,7 +135,7 @@ function P(e) {
                           (0, i.jsxs)('div', {
                               className: j.usernameWrapper,
                               children: [
-                                  (0, i.jsx)(o.Text, {
+                                  (0, i.jsx)(l.Text, {
                                       className: j.username,
                                       variant: 'text-md/medium',
                                       color: 'header-primary',
@@ -146,7 +146,7 @@ function P(e) {
                           }),
                           (0, i.jsxs)(g.m7, {
                               children: [
-                                  (0, i.jsx)(o.GameControllerIcon, {
+                                  (0, i.jsx)(l.GameControllerIcon, {
                                       size: 'xxs',
                                       color: f
                                   }),
@@ -161,22 +161,22 @@ function P(e) {
                   }),
                   (0, i.jsx)('div', {
                       className: j.inviteButtonWrapper,
-                      children: (0, i.jsx)(o.Button, {
+                      children: (0, i.jsx)(l.Button, {
                           submitting: 'sending' === E,
                           onClick: b ? M : w,
                           className: j.inviteButton,
-                          color: o.ButtonColors.PRIMARY,
-                          look: 'sent' === E ? o.ButtonLooks.OUTLINED : o.ButtonLooks.FILLED,
-                          size: o.ButtonSizes.MAX,
+                          color: l.ButtonColors.PRIMARY,
+                          look: 'sent' === E ? l.ButtonLooks.OUTLINED : l.ButtonLooks.FILLED,
+                          size: l.ButtonSizes.MAX,
                           children:
                               'sent' === E
                                   ? b
-                                      ? (0, i.jsx)(o.ChatIcon, { size: 'sm' })
-                                      : (0, i.jsx)(o.CheckmarkSmallBoldIcon, {
+                                      ? (0, i.jsx)(l.ChatIcon, { size: 'sm' })
+                                      : (0, i.jsx)(l.CheckmarkSmallBoldIcon, {
                                             size: 'sm',
-                                            color: o.tokens.colors.WHITE
+                                            color: l.tokens.colors.WHITE
                                         })
-                                  : (0, i.jsx)(o.SendMessageIcon, { size: 'sm' })
+                                  : (0, i.jsx)(l.SendMessageIcon, { size: 'sm' })
                       })
                   })
               ]
@@ -188,11 +188,11 @@ function R(e) {
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(E.iz, {}),
-            (0, i.jsxs)(o.Text, {
+            (0, i.jsxs)(l.Text, {
                 className: j.helpText,
                 variant: 'text-sm/medium',
                 color: 'header-secondary',
-                children: [(0, i.jsx)(o.ChatPlusIcon, { size: 'xxs' }), A.intl.string(A.t.y9eo7e)]
+                children: [(0, i.jsx)(l.ChatPlusIcon, { size: 'xxs' }), A.intl.string(A.t.y9eo7e)]
             }),
             n.map((e, t) =>
                 (0, i.jsx)(

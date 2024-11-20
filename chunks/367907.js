@@ -41,8 +41,8 @@ var r = n(392711),
     g = n(158776),
     E = n(19780),
     v = n(306680),
-    b = n(944486),
-    I = n(914010),
+    I = n(944486),
+    b = n(914010),
     T = n(9156),
     S = n(594174),
     y = n(979651),
@@ -130,8 +130,8 @@ function k(e) {
         o = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     if (A.default.isThrottled(e)) return;
     let l = !('location' in s) || s.location !== O.Sbl.GUILD_CREATE_INVITE_SUGGESTION,
-        u = 'guild_id' in s ? s.guild_id : l ? I.Z.getGuildId() : null,
-        d = 'channel_id' in s ? s.channel_id : l ? b.Z.getChannelId(u) : null,
+        u = 'guild_id' in s ? s.guild_id : l ? b.Z.getGuildId() : null,
+        d = 'channel_id' in s ? s.channel_id : l ? I.Z.getChannelId(u) : null,
         f = c.Z.getChannel(d);
     let _ = ((t = f), (n = u), null == t ? (null != n ? n : null) : t.isPrivate() ? null : null !== (i = null !== (r = t.getGuildId()) && void 0 !== r ? r : n) && void 0 !== i ? i : null);
     let p = {

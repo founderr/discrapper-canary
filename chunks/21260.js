@@ -19,7 +19,7 @@ var r = n(200651),
     s = n.n(a),
     o = n(481060),
     l = n(388032),
-    u = n(608790);
+    u = n(31894);
 function c(e) {
     let { itemGapPx: t, items: n, maxLines: r, containerWidth: a } = e,
         [s, o] = i.useState(0),
@@ -137,14 +137,14 @@ function _(e) {
         {
             lastVisibleIndex: E,
             onItemLayout: v,
-            overflowItemsRef: b
+            overflowItemsRef: I
         } = c({
             items: n,
             itemGapPx: _,
             maxLines: p,
             containerWidth: g
         }),
-        I = i.useCallback(
+        b = i.useCallback(
             (e) =>
                 (0, r.jsx)(d, {
                     items: e,
@@ -178,13 +178,13 @@ function _(e) {
                     }),
                     (0, r.jsx)('div', {
                         className: u.overflowMeasurement,
-                        ref: b,
+                        ref: I,
                         children: a(l.intl.formatToPlainString(l.t.vGclWl, { count: Number('1'.concat(n.length)) }))
                     })
                 ]
             }),
             T.map(a),
-            S.length > 0 && (null != h ? h : I)(S)
+            S.length > 0 && (null != h ? h : b)(S)
         ]
     });
 }

@@ -16,8 +16,8 @@ let f = {},
     g = (0, c.isMac)() || (0, c.isMacWeb)() ? 'opt' : 'alt',
     E = (0, c.isMac)() || (0, c.isMacWeb)() ? 'return' : 'enter',
     v = [...o.u.binds, 'mod+shift+[', 'mod+shift+]', 'mod+[', 'mod+]', 'alt+[', 'alt+]', 'ctrl+shift+tab', 'ctrl+tab', 'mod+n', 'mod+t', 'mod+shift+t', 'mod+plus', 'mod+minus', 'mod+0'].map((e) => e.replace('mod', m)),
-    b = () => [],
-    I = [];
+    I = () => [],
+    b = [];
 function T(e) {
     let t = [];
     for (let n of Object.values(e)) null != n && t.push(...n.binds);
@@ -29,7 +29,7 @@ function S(e, t) {
 function y(e) {
     for (let [t, n] of Object.entries(e)) {
         if (null == n) continue;
-        let e = b();
+        let e = I();
         !c.isPlatformEmbedded && (e = e.concat(v));
         let r = n.binds.filter((t) => ((t = t.replace('mod', m)), 0 > e.indexOf(t)));
         if (0 === r.length) continue;
@@ -39,7 +39,7 @@ function y(e) {
             -1 !== e &&
                 (!(function (e, t) {
                     let n = (e) => t(e, e.key);
-                    document.addEventListener(e, n), I.push(() => document.removeEventListener(e, n));
+                    document.addEventListener(e, n), b.push(() => document.removeEventListener(e, n));
                 })('keydown', n.keydown),
                 r.splice(e, 1)),
                 r.length > 0 && i.call(h, r, S(t, n.keydown), 'keydown');
@@ -54,7 +54,7 @@ function y(e) {
         altKey: g,
         returnKey: E,
         setGetKeybindList(e) {
-            b = e;
+            I = e;
         },
         checkDupes(e) {
             let t = new Set(),
@@ -76,7 +76,7 @@ function y(e) {
             null != e && (f = e), this.disable(), this.enable();
         },
         disable() {
-            if (!!p) (p = !1), I.forEach((e) => e()), (I = []), h.reset();
+            if (!!p) (p = !1), b.forEach((e) => e()), (b = []), h.reset();
         },
         validateKeybind(e) {
             if (!!p && !!this.hasBind(e)) h.unbind(e);

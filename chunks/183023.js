@@ -33,8 +33,8 @@ var r = n(200651),
     g = n(686546),
     E = n(111028),
     v = n(738774),
-    b = n(785896),
-    I = n(231053),
+    I = n(785896),
+    b = n(231053),
     T = n(944386),
     S = n(565138),
     y = n(372769),
@@ -58,7 +58,7 @@ var r = n(200651),
     V = n(176505),
     j = n(474936),
     H = n(388032),
-    Y = n(236327);
+    Y = n(507444);
 let W = () => ({
         page: null != (0, l.e7)([w.Z], () => w.Z.getGuildId()) ? F.ZY5.GUILD_CHANNEL : F.ZY5.DM_CHANNEL,
         section: F.jXE.EMOJI_UPSELL_POPOUT
@@ -224,7 +224,7 @@ let W = () => ({
                 joinedEmojiSourceGuildRecord: c,
                 emoji: d,
                 isFetching: f
-            } = (0, b.i)({
+            } = (0, I.i)({
                 emojiId: t.emojiId,
                 refreshPositionKey: i
             });
@@ -248,7 +248,7 @@ let W = () => ({
     },
     Q = (e) => {
         var t, n, a;
-        let { node: u, sourceType: g, expressionSourceApplication: b, expressionSourceGuild: S, joinedEmojiSourceGuildRecord: y, closePopout: R, onToggleShowMoreEmojis: L, guildEmoji: x, demoMode: k = !1, nonce: U } = e,
+        let { node: u, sourceType: g, expressionSourceApplication: I, expressionSourceGuild: S, joinedEmojiSourceGuildRecord: y, closePopout: R, onToggleShowMoreEmojis: L, guildEmoji: x, demoMode: k = !1, nonce: U } = e,
             K = (0, l.e7)([M.default], () => M.default.getCurrentUser()),
             q = (0, l.e7)([w.Z], () => w.Z.getGuildId()),
             Q = B.ZP.isPremium(K),
@@ -293,7 +293,7 @@ let W = () => ({
         let eo = w.Z.getGuildId(),
             el = (0, G.a)({
                 sourceType: g,
-                expressionSourceApplication: b,
+                expressionSourceApplication: I,
                 isPremium: Q,
                 hasJoinedEmojiSourceGuild: $,
                 isRoleSubscriptionEmoji: en,
@@ -417,7 +417,7 @@ let W = () => ({
                                     children: $ ? H.intl.string(H.t.ohTzZG) : H.intl.string(H.t['eLfh+f'])
                                 }),
                                 (0, r.jsx)(z, {
-                                    expressionSourceGuild: null != S ? S : I.JO.createFromGuildRecord(y),
+                                    expressionSourceGuild: null != S ? S : b.JO.createFromGuildRecord(y),
                                     hasJoinedExpressionSourceGuild: $,
                                     isDisplayingJoinGuildButtonInPopout: ef
                                 }),

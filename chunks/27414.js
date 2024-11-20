@@ -8,5 +8,5 @@ var r = n(928518),
     a = n(981631),
     s = n(501787);
 function o() {
-    return i.Z.isVisible() || r.Z.getWindowVisible(a.KJ3.CHANNEL_CALL_POPOUT) || r.Z.getWindowVisible(s.$J);
+    return i.Z.isVisible() || r.Z.getWindowVisible(a.KJ3.CHANNEL_CALL_POPOUT) || r.Z.getWindowVisible(a.KJ3.ACTIVITY_POPOUT) || r.Z.getWindowVisible(s.OVERLAY_V3_KEY);
 }

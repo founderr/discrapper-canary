@@ -21,7 +21,7 @@ var i = n(200651),
     p = n(676770),
     _ = n(981631),
     j = n(388032),
-    g = n(303758);
+    g = n(547193);
 function v(e) {
     let { guildId: t, transitionState: n, onClose: v, analyticsData: T } = e,
         N = (0, r.e7)([d.Z], () => d.Z.getGuild(t), [t]),

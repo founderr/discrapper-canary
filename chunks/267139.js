@@ -36,9 +36,9 @@ function v(e, t, n) {
         this.updater.enqueueForceUpdate(this, e, 'forceUpdate');
     }),
     (E.prototype = g.prototype);
-var b = (v.prototype = new E());
-(b.constructor = v), h(b, g.prototype), (b.isPureReactComponent = !0);
-var I = Array.isArray,
+var I = (v.prototype = new E());
+(I.constructor = v), h(I, g.prototype), (I.isPureReactComponent = !0);
+var b = Array.isArray,
     T = Object.prototype.hasOwnProperty,
     S = { current: null },
     y = {
@@ -117,7 +117,7 @@ function O(e, t, i) {
                 return (
                     (o = o((f = t))),
                     (t = '' === s ? '.' + R(f, 0) : s),
-                    I(o)
+                    b(o)
                         ? ((a = ''),
                           null != t && (a = t.replace(C, '$&/') + '/'),
                           e(o, i, a, '', function (e) {
@@ -139,7 +139,7 @@ function O(e, t, i) {
                     1
                 );
             }
-            if (((f = 0), (s = '' === s ? '.' : s + ':'), I(t)))
+            if (((f = 0), (s = '' === s ? '.' : s + ':'), b(t)))
                 for (var p = 0; p < t.length; p++) {
                     var h = s + R((d = t[p]), p);
                     f += e(d, i, a, h, o);

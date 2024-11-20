@@ -13,7 +13,7 @@ var i = n(120356),
     l = n(692547),
     u = n(481060),
     c = n(607070),
-    d = n(866636);
+    d = n(427788);
 function f(e) {
     let t,
         { color: n, size: i, forcedIconColor: f, className: _, iconClassName: p } = e,
@@ -22,7 +22,7 @@ function f(e) {
         E = (0, s._i)(null != n ? n : g),
         v = (0, s.ho)(E, !1, h ? m : null);
     t = null != f ? f : 0.3 > (0, s.Bd)(E) ? l.Z.unsafe_rawColors.PRIMARY_630.css : l.Z.unsafe_rawColors.WHITE_500.css;
-    let b = i / 8;
+    let I = i / 8;
     return (0, r.jsx)('div', {
         style: {
             background: v,
@@ -36,9 +36,9 @@ function f(e) {
             size: 'custom',
             color: t,
             className: a()(d.linkIcon, p),
-            width: i - 2 * b,
-            height: i - 2 * b,
-            style: { margin: b }
+            width: i - 2 * I,
+            height: i - 2 * I,
+            style: { margin: I }
         })
     });
 }

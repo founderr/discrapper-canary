@@ -3,9 +3,9 @@ var i = n(200651),
     r = n(192379),
     s = n(13245),
     a = n(593481),
-    l = n(692546),
-    o = n(981631),
-    c = n(145758);
+    o = n(692546),
+    l = n(981631),
+    c = n(668697);
 function d(e, t, n) {
     return (
         t in e
@@ -26,16 +26,16 @@ class u extends r.Component {
             props: { position: r, zIndex: s }
         } = this;
         switch (r) {
-            case o._vf.TOP_LEFT:
-            case o._vf.BOTTOM_LEFT:
+            case l._vf.TOP_LEFT:
+            case l._vf.BOTTOM_LEFT:
                 e = 0;
                 break;
             default:
                 t = 0;
         }
         switch (r) {
-            case o._vf.BOTTOM_LEFT:
-            case o._vf.BOTTOM_RIGHT:
+            case l._vf.BOTTOM_LEFT:
+            case l._vf.BOTTOM_RIGHT:
                 n = 0;
                 break;
             default:
@@ -55,7 +55,7 @@ class u extends r.Component {
                     locked: e,
                     index: t,
                     notification: {
-                        props: { renderFooter: n, onNotificationShow: r, onDismissClick: s, onNotificationClick: o, onConfirmClick: d, onCancelClick: u, ...h }
+                        props: { renderFooter: n, onNotificationShow: r, onDismissClick: s, onNotificationClick: l, onConfirmClick: d, onCancelClick: u, ...h }
                     }
                 }
             } = this,
@@ -65,7 +65,7 @@ class u extends r.Component {
                     ...h,
                     onNotificationShow: 0 === t ? this.handleNotificationShow : null,
                     onDismissClick: this.handleDismissClick,
-                    onNotificationClick: null != o ? this.handleNotificationClick : null,
+                    onNotificationClick: null != l ? this.handleNotificationClick : null,
                     onConfirmClick: null != d ? this.handleConfirmClick : null,
                     onCancelClick: null != u ? this.handleCancelClick : null,
                     renderFooter: this.renderFooter,
@@ -74,7 +74,7 @@ class u extends r.Component {
                 })
             });
         return 0 === t
-            ? (0, i.jsx)(l.Z, {
+            ? (0, i.jsx)(o.Z, {
                   observeInterval: 200,
                   children: p
               })

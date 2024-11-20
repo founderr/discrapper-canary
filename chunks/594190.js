@@ -34,9 +34,9 @@ var i,
     g = n(439849),
     E = n(710845),
     v = n(630699),
-    b = n(855403),
-    I = n(454991),
-    T = n(568963),
+    I = n(855403),
+    b = n(454991),
+    T = n(32300),
     S = n(77498),
     y = n(283595),
     A = n(417363),
@@ -236,7 +236,7 @@ function ed(e) {
                 overlayMethod: P.gl.Disabled
             };
     }
-    let n = (v.H() || (0, T.R)()) && (0, x.VS)() && !I.v.legacyEnabled,
+    let n = (v.H() || (0, T.R)()) && (0, x.VS)() && !b.v.legacyEnabled,
         r = n ? P.gl.OutOfProcess : P.gl.Hook,
         i = q.enableOverlay[ec(e)];
     if (null != i)
@@ -444,7 +444,7 @@ function ev() {
             }),
             eg();
     });
-class eb extends (i = f.ZP.Store) {
+class eI extends (i = f.ZP.Store) {
     initialize() {
         var e, t, n, r;
         let i =
@@ -548,7 +548,7 @@ class eb extends (i = f.ZP.Store) {
     }
     getObservedAppNameForWindow(e) {
         var t, n;
-        return null !== (n = null === (t = W.find((t) => (0, b.Z)(e, t.windowHandle))) || void 0 === t ? void 0 : t.name) && void 0 !== n ? n : null;
+        return null !== (n = null === (t = W.find((t) => (0, I.Z)(e, t.windowHandle))) || void 0 === t ? void 0 : t.name) && void 0 !== n ? n : null;
     }
     get canShowAdminWarning() {
         return Z;
@@ -562,7 +562,7 @@ class eb extends (i = f.ZP.Store) {
     }
 }
 (o = 'RunningGameStore'),
-    (s = 'displayName') in (a = eb)
+    (s = 'displayName') in (a = eI)
         ? Object.defineProperty(a, s, {
               value: o,
               enumerable: !0,
@@ -570,7 +570,7 @@ class eb extends (i = f.ZP.Store) {
               writable: !0
           })
         : (a[s] = o),
-    (t.ZP = new eb(p.Z, {
+    (t.ZP = new eI(p.Z, {
         RUNNING_GAMES_CHANGE: function (e) {
             eE(H);
         },

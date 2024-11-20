@@ -51,8 +51,8 @@ var v = n(392750),
     z = n(621060),
     V = n(388032),
     W = n(622331),
-    K = n(219299);
-function Y(e) {
+    Y = n(219299);
+function K(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: a } = e,
         l = (0, d.Z)({
             minDimension: b.h,
@@ -232,7 +232,7 @@ function X() {
         (0, r.jsxs)(Z.Gk, {
             children: [
                 (0, r.jsxs)(m.ZP, {
-                    className: K.headerBar,
+                    className: Y.headerBar,
                     toolbar: (0, r.jsx)(m.ZP.Icon, {
                         icon: s.XSmallIcon,
                         tooltip: V.intl.string(V.t.cpT0Cg),
@@ -271,7 +271,7 @@ function q() {
                   width: n
               },
               children: [
-                  (0, r.jsx)(Y, {
+                  (0, r.jsx)(K, {
                       resizableNode: e,
                       onResize: l,
                       onResizeEnd: o
@@ -298,7 +298,7 @@ function $() {
               children: (0, r.jsx)(s.Clickable, {
                   onClick: p.SO,
                   children: (0, r.jsxs)(m.ZP, {
-                      className: i()(K.headerBar, W.mobileHeaderCollapsed),
+                      className: i()(Y.headerBar, W.mobileHeaderCollapsed),
                       toolbar: (0, r.jsx)(f.Z, { direction: f.Z.Directions.UP }),
                       children: [
                           (0, r.jsx)(m.ZP.Icon, {

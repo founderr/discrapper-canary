@@ -27,12 +27,12 @@ var r = n(200651),
     m = n(981631),
     g = n(419061),
     E = n(388032),
-    v = n(300419);
-let b = {
+    v = n(859234);
+let I = {
     tension: 1200,
     friction: 70
 };
-function I(e) {
+function b(e) {
     let { size: t, isMobile: n, isTyping: i, ...a } = e,
         s = (0, h.UC)(t),
         o = s.status * (n && !i ? h.EW : 1),
@@ -116,13 +116,13 @@ function y(e) {
     };
 }
 function A(e) {
-    let { children: t, size: n, onClick: i, onMouseDown: a, onKeyDown: o, onContextMenu: u, onMouseEnter: c, onMouseLeave: d, className: f, tabIndex: m, ariaLabel: b, ariaHidden: I, status: T, isMobile: S = !1, isTyping: y = !1, avatarDecoration: A, typingOffset: N, specs: C } = e,
+    let { children: t, size: n, onClick: i, onMouseDown: a, onKeyDown: o, onContextMenu: u, onMouseEnter: c, onMouseLeave: d, className: f, tabIndex: m, ariaLabel: I, ariaHidden: b, status: T, isMobile: S = !1, isTyping: y = !1, avatarDecoration: A, typingOffset: N, specs: C } = e,
         R = {
             width: (0, h.px)(n),
             height: (0, h.px)(n)
         },
         O =
-            null == b || I
+            null == I || b
                 ? void 0
                 : (function (e, t) {
                       let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
@@ -132,7 +132,7 @@ function A(e) {
                                 status: (0, p.u5)(t, n)
                             })
                           : e;
-                  })(b, T, S),
+                  })(I, T, S),
         D = C.size * g.hs,
         L = (function (e, t, n, r) {
             if (null == e) return null;
@@ -231,7 +231,7 @@ function A(e) {
               onMouseEnter: null != c ? c : void 0,
               onMouseLeave: null != d ? d : void 0,
               'aria-label': O,
-              'aria-hidden': I,
+              'aria-hidden': b,
               children: [t, x]
           })
         : (0, r.jsxs)('div', {
@@ -242,7 +242,7 @@ function A(e) {
               onMouseLeave: null != d ? d : void 0,
               role: 'img',
               'aria-label': O,
-              'aria-hidden': I,
+              'aria-hidden': b,
               children: [t, x]
           });
 }
@@ -266,7 +266,7 @@ function N(e) {
     );
 }
 function C(e) {
-    let { src: t, status: n, size: i, statusColor: a, isMobile: o = !1, isTyping: l = !1, typingIndicatorRef: f, isSpeaking: g = !1, statusTooltip: E = !1, statusTooltipDelay: b, statusBackdropColor: I, 'aria-hidden': y = !1, 'aria-label': C, imageClassName: R } = e,
+    let { src: t, status: n, size: i, statusColor: a, isMobile: o = !1, isTyping: l = !1, typingIndicatorRef: f, isSpeaking: g = !1, statusTooltip: E = !1, statusTooltipDelay: I, statusBackdropColor: b, 'aria-hidden': y = !1, 'aria-label': C, imageClassName: R } = e,
         O = n !== m.Skl.UNKNOWN ? n : null,
         D = (0, h.UC)(i),
         L = null != O ? Math.ceil((D.status * h.D6 - D.status) / 2) : 0,
@@ -371,14 +371,14 @@ function C(e) {
                         className: R
                     })
                 }),
-                null != O && null != I ? S(I, o, D, O) : null,
+                null != O && null != b ? S(b, o, D, O) : null,
                 null != O
                     ? (0, r.jsx)(d.u, {
                           text: E ? (0, p.u5)(O) : null,
                           'aria-label': !1,
                           position: 'top',
                           spacing: 5 + 1.5 * D.stroke,
-                          delay: b,
+                          delay: I,
                           children: (e) =>
                               (0, r.jsxs)(r.Fragment, {
                                   children: [
@@ -441,7 +441,7 @@ function R(e) {
             ...W
         } = (0, f.useSpring)(
             {
-                config: b,
+                config: I,
                 from: B,
                 to: G
             },
@@ -540,7 +540,7 @@ function R(e) {
                                         })
                                     ]
                                 }),
-                                (0, r.jsx)(I, {
+                                (0, r.jsx)(b, {
                                     size: E,
                                     isMobile: l,
                                     isTyping: _,
@@ -563,12 +563,12 @@ let O = i.memo(function (e) {
         g = (0, c.vj)(u, l),
         E = i.useRef(g),
         v = i.useRef(!1);
-    let b = v.current || ((t = _), (n = u), (a = p.current), (s = f), (o = h.current), null != a && null != n && (!!t || n !== a || (n === m.Skl.ONLINE && s !== o) || !1));
+    let I = v.current || ((t = _), (n = u), (a = p.current), (s = f), (o = h.current), null != a && null != n && (!!t || n !== a || (n === m.Skl.ONLINE && s !== o) || !1));
     return (
         i.useLayoutEffect(() => {
-            (v.current = b), (p.current = u), (h.current = f), (E.current = g);
-        }, [u, f, g, b]),
-        null != u && null != p.current && b
+            (v.current = I), (p.current = u), (h.current = f), (E.current = g);
+        }, [u, f, g, I]),
+        null != u && null != p.current && I
             ? (0, r.jsx)(R, {
                   ...d,
                   status: u,

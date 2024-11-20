@@ -56,11 +56,11 @@ function f(e, t, n) {
         g = f || _ || p || h || m || e.type === a.uaV.THREAD_CREATED,
         E = f && e.content === e.embeds[0].url && e.embeds[0].type === a.hBH.GIFV,
         v = e.type !== a.uaV.DEFAULT || (!E && '' !== e.content),
-        b = (0, i.Z)(e),
-        I = !b && (null == n ? void 0 : n.hasTimestamp) !== !1,
+        I = (0, i.Z)(e),
+        b = !I && (null == n ? void 0 : n.hasTimestamp) !== !1,
         T = l(e, t),
         S = o(e),
-        y = b ? '' : ''.concat(c ? S : T, ' ').concat(r.Z0);
+        y = I ? '' : ''.concat(c ? S : T, ' ').concat(r.Z0);
     if (v) {
         let t = s(e);
         y += ' '.concat(t);
@@ -69,7 +69,7 @@ function f(e, t, n) {
         let t = d(e);
         y += ' '.concat(t);
     }
-    if (I) {
+    if (b) {
         let t = u(e);
         y += ' '.concat(r.fy, ' ').concat(t);
     }

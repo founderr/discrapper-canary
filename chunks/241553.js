@@ -22,8 +22,8 @@ var r = n(200651),
     g = n(646476),
     E = n(819640),
     v = n(594174),
-    b = n(965645),
-    I = n(362061),
+    I = n(965645),
+    b = n(362061),
     T = n(70956),
     S = n(709054),
     y = n(51144),
@@ -32,8 +32,8 @@ var r = n(200651),
     C = n(921944),
     R = n(474936),
     O = n(388032),
-    D = n(967850),
-    L = n(482133);
+    D = n(746734),
+    L = n(703130);
 let x = [
         {
             box: '#FFD89E',
@@ -96,8 +96,8 @@ let x = [
     ],
     M = 1 / 300,
     P = T.Z.Millis.DAYS_30,
-    k = (0, a.animated)(b.Z),
-    U = (0, a.animated)(I.Z),
+    k = (0, a.animated)(I.Z),
+    U = (0, a.animated)(b.Z),
     B = (0, a.animated)(u.GiftIcon);
 function G(e) {
     let {
@@ -156,10 +156,10 @@ t.Z = i.memo(function (e) {
     let { disabled: t, channel: n } = e,
         { analyticsLocations: a } = (0, _.ZP)(f.Z.GIFT_BUTTON),
         [l, d] = i.useState(!1),
-        b = (0, s.e7)([E.Z], () => !(null === E.Z || void 0 === E.Z ? void 0 : E.Z.hasLayers())),
-        I = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
-        T = null != I ? S.default.age(I.id) : 0,
-        x = !t && b && T >= P,
+        I = (0, s.e7)([E.Z], () => !(null === E.Z || void 0 === E.Z ? void 0 : E.Z.hasLayers())),
+        b = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
+        T = null != b ? S.default.age(b.id) : 0,
+        x = !t && I && T >= P,
         { enabled: w } = g.RO.useExperiment({ location: 'ChannelPremiumGiftButton' }, { autoTrackExposure: x }),
         M = [];
     w && x && M.push(o.z.SEASONAL_GIFTING_COACHMARK_2023);

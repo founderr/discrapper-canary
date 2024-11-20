@@ -22,7 +22,7 @@ var i = n(200651),
     p = n(295708),
     f = n(273504),
     C = n(388032),
-    v = n(420980);
+    v = n(15327);
 function _(e) {
     let { rule: t, triggerType: n } = e,
         l = r.useMemo(

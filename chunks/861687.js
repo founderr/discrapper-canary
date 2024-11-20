@@ -24,8 +24,8 @@ var r,
     g = n(668781),
     E = n(846027),
     v = n(304680),
-    b = n(547727),
-    I = n(710845),
+    I = n(547727),
+    b = n(710845),
     T = n(631053),
     S = n(42352),
     y = n(148959),
@@ -510,7 +510,7 @@ class es extends _.Z {
                 this.context === en.Yn.DEFAULT && E.Z.toggleSelfMute({ playSoundEffect: !1 });
             }),
             d.on(p.Sh.NativeMuteChanged, (e) => {
-                this.context === en.Yn.DEFAULT && b.Z.nativeMuteChanged(e);
+                this.context === en.Yn.DEFAULT && I.Z.nativeMuteChanged(e);
             }),
             d.on(p.Sh.Video, (e, t, n, r, i, a) => {
                 this._handleVideoStreamId({
@@ -1177,7 +1177,7 @@ class es extends _.Z {
                 null === (t = this.getOrCreateVideoQuality()) || void 0 === t || t.setWindowOcclusionState(!e);
             }),
             (this.context = i),
-            (this.logger = new I.Z('RTCConnection('.concat(null !== (l = null != a ? a : n) && void 0 !== l ? l : r, ', ').concat(this.context, ')'))),
+            (this.logger = new b.Z('RTCConnection('.concat(null !== (l = null != a ? a : n) && void 0 !== l ? l : r, ', ').concat(this.context, ')'))),
             this.logger.enableNativeLogger(!0),
             (this.userId = e),
             (this.sessionId = t),

@@ -16,12 +16,12 @@ var r = n(200651),
     g = n(453070),
     E = n(926491),
     v = n(373228),
-    b = n(378233),
-    I = n(419922),
+    I = n(378233),
+    b = n(419922),
     T = n(981631),
     S = n(957825),
     y = n(388032),
-    A = n(191299);
+    A = n(193599);
 let N = (0, m.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
     C = (0, m.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_SIZE),
     R = (0, m.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_MARGIN),
@@ -114,10 +114,10 @@ let N = (0, m.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                         let e = E.Z.getStickerPack(w.id);
                         null != e &&
                             ((U = e.name),
-                            (B = (0, r.jsx)(I.ZP, {
+                            (B = (0, r.jsx)(b.ZP, {
                                 disableAnimation: !x || m,
                                 size: C,
-                                sticker: (0, b.Zt)(e)
+                                sticker: (0, I.Zt)(e)
                             })));
                     }
                     return (0, r.jsxs)(
@@ -215,8 +215,8 @@ t.Z = (e) => {
         u(m >= 7);
     }, [m]);
     let {
-            renderCategoryListItem: b,
-            rowHeight: I,
+            renderCategoryListItem: I,
+            rowHeight: b,
             onScroll: T
         } = P({
             activeIndex: c,
@@ -239,10 +239,10 @@ t.Z = (e) => {
         store: d.ZN,
         listPadding: x,
         onScroll: T,
-        renderCategoryListItem: b,
+        renderCategoryListItem: I,
         rowCount: f.length,
         categories: f,
-        categoryHeight: I,
+        categoryHeight: b,
         children: (e) =>
             E &&
             o &&

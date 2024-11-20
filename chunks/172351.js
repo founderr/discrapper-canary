@@ -13,7 +13,7 @@ var r = n(200651),
     c = n(678738),
     d = n(981631),
     f = n(388032),
-    _ = n(234654);
+    _ = n(987352);
 function p(e) {
     let { applicationId: t, commandIds: n, guildId: p, channel: h, onClick: m } = e,
         { trackUserProfileAction: g } = (0, u.KZ)(),
@@ -29,7 +29,7 @@ function p(e) {
             [E]
         );
     if (null == v || 0 === v.length) return null;
-    let b = (e) => {
+    let I = (e) => {
         null == m || m(),
             g({ action: 'PRESS_APP_COMMAND' }),
             l.default.track(d.rMx.POPULAR_APPLICATION_COMMAND_CLICKED, {
@@ -51,7 +51,7 @@ function p(e) {
                             commandId: e.id,
                             commandName: e.displayName,
                             commandDescription: e.displayDescription,
-                            onClick: b,
+                            onClick: I,
                             guildId: p,
                             channelId: h.id,
                             applicationId: e.applicationId

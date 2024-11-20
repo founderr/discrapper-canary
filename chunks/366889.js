@@ -29,8 +29,8 @@ var r = n(806853),
     g = n(240880),
     E = n(873396),
     v = n(218465),
-    b = n(238824),
-    I = n(772629),
+    I = n(238824),
+    b = n(772629),
     T = n(435178),
     S = n(473626),
     y = n(667916),
@@ -74,8 +74,8 @@ H = {
     'it-IT': g.Z,
     'ja-JP': E.Z,
     'ko-KR': v.Z,
-    'lt-LT': b.Z,
-    'lv-LV': I.Z,
+    'lt-LT': I.Z,
+    'lv-LV': b.Z,
     'nb-NO': T.Z,
     'nl-NL': S.Z,
     'pl-PL': y.Z,
@@ -194,13 +194,13 @@ function q(e, t) {
     let [g, E] = (0, Z.useState)(!1),
         v = e.isDisabled || t.isPreviousVisibleRangeInvalid();
     v && g && (E(!1), t.setFocused(!0));
-    let b = (0, B.bE)({
+    let I = (0, B.bE)({
         id: e.id,
         'aria-label': [e['aria-label'], d].filter(Boolean).join(', '),
         'aria-labelledby': e['aria-labelledby']
     });
     return {
-        calendarProps: (0, B.dG)(u, b, {
+        calendarProps: (0, B.dG)(u, I, {
             role: 'application',
             'aria-describedby': e['aria-describedby'] || void 0
         }),
@@ -357,8 +357,8 @@ function $(e, t, n) {
     'anchorDate' in t && c && !t.isReadOnly && f && (g = t.anchorDate ? o.format('finishRangeSelectionPrompt') : o.format('startRangeSelectionPrompt'));
     let E = (0, B.PK)(g),
         v = (0, Z.useRef)(!1),
-        b = (0, Z.useRef)(!1),
-        I = (0, Z.useRef)(null),
+        I = (0, Z.useRef)(!1),
+        b = (0, Z.useRef)(null),
         { pressProps: T, isPressed: S } = (0, V.r7)({
             shouldCancelOnPointerExit: 'anchorDate' in t && !!t.anchorDate,
             preventFocusOnPress: !0,
@@ -371,29 +371,29 @@ function $(e, t, n) {
                 if ('highlightedRange' in t && !t.anchorDate && ('mouse' === e.pointerType || 'touch' === e.pointerType)) {
                     if (t.highlightedRange && !_) {
                         if ((0, F.KC)(r, t.highlightedRange.start)) {
-                            t.setAnchorDate(t.highlightedRange.end), t.setFocusedDate(r), t.setDragging(!0), (b.current = !0);
+                            t.setAnchorDate(t.highlightedRange.end), t.setFocusedDate(r), t.setDragging(!0), (I.current = !0);
                             return;
                         }
                         if ((0, F.KC)(r, t.highlightedRange.end)) {
-                            t.setAnchorDate(t.highlightedRange.start), t.setFocusedDate(r), t.setDragging(!0), (b.current = !0);
+                            t.setAnchorDate(t.highlightedRange.start), t.setFocusedDate(r), t.setDragging(!0), (I.current = !0);
                             return;
                         }
                     }
                     let n = () => {
-                        t.setDragging(!0), (I.current = null), t.selectDate(r), t.setFocusedDate(r), (v.current = !0);
+                        t.setDragging(!0), (b.current = null), t.selectDate(r), t.setFocusedDate(r), (v.current = !0);
                     };
-                    'touch' === e.pointerType ? (I.current = setTimeout(n, 200)) : n();
+                    'touch' === e.pointerType ? (b.current = setTimeout(n, 200)) : n();
                 }
             },
             onPressEnd() {
-                (b.current = !1), (v.current = !1), clearTimeout(I.current), (I.current = null);
+                (I.current = !1), (v.current = !1), clearTimeout(b.current), (b.current = null);
             },
             onPress() {
                 !('anchorDate' in t) && !t.isReadOnly && (t.selectDate(r), t.setFocusedDate(r));
             },
             onPressUp(e) {
-                if (!t.isReadOnly && ('anchorDate' in t && I.current && (t.selectDate(r), t.setFocusedDate(r)), 'anchorDate' in t)) {
-                    if (b.current) t.setAnchorDate(r);
+                if (!t.isReadOnly && ('anchorDate' in t && b.current && (t.selectDate(r), t.setFocusedDate(r)), 'anchorDate' in t)) {
+                    if (I.current) t.setAnchorDate(r);
                     else if (t.anchorDate && !v.current) t.selectDate(r), t.setFocusedDate(r);
                     else if ('keyboard' !== e.pointerType || t.anchorDate) 'virtual' === e.pointerType && (t.selectDate(r), t.setFocusedDate(r));
                     else {

@@ -7,7 +7,7 @@ var r,
     l = n(481060),
     u = n(540026),
     c = n(388032),
-    d = n(771517);
+    d = n(493464);
 function f(e, t, n) {
     return (
         t in e
@@ -35,10 +35,10 @@ class _ extends (r = a.PureComponent) {
     }
     render() {
         let { iconClassName: e, iconColor: t, className: n, sliderWrapperClassName: r, sliderClassName: a, currentWindow: s, muted: f, minValue: _, maxValue: p, value: h, onVolumeShow: m, onVolumeHide: g } = this.props,
-            { hovered: E, focused: v, dragging: b } = this.state,
-            I = l.VoiceNormalIcon;
+            { hovered: E, focused: v, dragging: I } = this.state,
+            b = l.VoiceNormalIcon;
         return (
-            f || h === _ ? (I = l.VoiceXIcon) : h < p / 2 && (I = l.VoiceLowIcon),
+            f || h === _ ? (b = l.VoiceXIcon) : h < p / 2 && (b = l.VoiceLowIcon),
             (0, i.jsxs)('div', {
                 className: o()(n, d.container),
                 onMouseEnter: () => {
@@ -55,7 +55,7 @@ class _ extends (r = a.PureComponent) {
                 onKeyDown: this.handleKeyDown,
                 children: [
                     (0, i.jsx)('div', {
-                        className: o()(d.volumeButtonSlider, r, { [d.sliderVisible]: E || v || b }),
+                        className: o()(d.volumeButtonSlider, r, { [d.sliderVisible]: E || v || I }),
                         onMouseEnter: () => {
                             clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 });
                         },
@@ -79,7 +79,7 @@ class _ extends (r = a.PureComponent) {
                         size: l.Button.Sizes.NONE,
                         look: l.Button.Looks.BLANK,
                         onClick: this.handleToggleMute,
-                        children: (0, i.jsx)(I, {
+                        children: (0, i.jsx)(b, {
                             color: t,
                             className: e
                         })

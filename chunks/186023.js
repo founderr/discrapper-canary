@@ -8,12 +8,12 @@ var r = n(200651),
     u = n(185625),
     c = n(255514),
     d = n(981631),
-    f = n(354221);
+    f = n(43255);
 t.Z = (e) => {
     let { reportType: t, menu: n, modalProps: _, onSubmit: p, onNavigate: h, emailToken: m, isAuthenticated: g = !0 } = e,
         E = (0, o.Dt)(),
-        { nodes: v, root_node_id: b, success_node_id: I, fail_node_id: T } = n,
-        [S, y] = i.useState(b),
+        { nodes: v, root_node_id: I, success_node_id: b, fail_node_id: T } = n,
+        [S, y] = i.useState(I),
         [A, N] = i.useState(void 0),
         [C, R] = i.useState(void 0),
         [O, D] = i.useState([]),
@@ -52,7 +52,7 @@ t.Z = (e) => {
             if (O.length < 1) return;
             let r = [...O],
                 i = r.pop(),
-                a = null !== (n = null == i ? void 0 : i.nodeRef) && void 0 !== n ? n : b;
+                a = null !== (n = null == i ? void 0 : i.nodeRef) && void 0 !== n ? n : I;
             if (t.name === l.b.MESSAGE || t.name === l.b.FIRST_DM) {
                 let e = t.record.id;
                 s.ZP.trackWithMetadata(d.rMx.IAR_NAVIGATE, {
@@ -71,7 +71,7 @@ t.Z = (e) => {
             for (let a in v) {
                 var n, r, i;
                 let s = v[a];
-                if (s.id !== I && s.id !== T && s.id !== b) {
+                if (s.id !== b && s.id !== T && s.id !== I) {
                     if (s.key.endsWith('_SUBMIT') || (null === (n = s.button) || void 0 === n ? void 0 : n.type) === 'submit') {
                         t.push(s);
                         continue;
@@ -83,8 +83,8 @@ t.Z = (e) => {
                     }
                 }
             }
-            return [v[b], ...e, ...t, v[I], v[T]];
-        }, [v, b, T, I]);
+            return [v[I], ...e, ...t, v[b], v[T]];
+        }, [v, I, T, b]);
     return (0, r.jsx)(a.ModalRoot, {
         transitionState: _.transitionState,
         'aria-labelledby': E,
@@ -109,7 +109,7 @@ t.Z = (e) => {
                                 onNavigateBack: U,
                                 multiSelect: A,
                                 textInput: C,
-                                successNodeId: I,
+                                successNodeId: b,
                                 failNodeId: T,
                                 onSubmit: k,
                                 reportId: L

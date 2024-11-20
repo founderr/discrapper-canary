@@ -2,7 +2,7 @@ var r = n(200651);
 n(192379);
 var i = n(481060),
     a = n(388032),
-    s = n(795777);
+    s = n(671414);
 t.Z = function () {
     return (0, r.jsx)(i.ChatIcon, {
         size: 'md',

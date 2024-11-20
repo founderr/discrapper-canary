@@ -10,7 +10,7 @@ var r = n(200651),
     o = n(481060),
     l = n(249458),
     u = n(388032),
-    c = n(945613);
+    c = n(917776);
 function d(e) {
     let { onPlay: t, className: n, inactive: a } = e,
         d = i.useRef(null),

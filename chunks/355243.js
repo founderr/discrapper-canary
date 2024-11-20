@@ -12,7 +12,7 @@ var r = n(200651),
     a = n(393903),
     c = n(604162),
     u = n(420212),
-    d = n(584448);
+    d = n(504446);
 function m(e, t, n) {
     return n * (Math.max(e - t.left, 0) / t.width);
 }
@@ -20,8 +20,8 @@ function f(e, t, n) {
     return n.left + (e / t) * n.width;
 }
 function p(e) {
-    let { percent: t, animate: n, interactionEnabled: i, backgroundColor: p, preloadedBuffers: v, duration: C, maxSeekableTime: g, onClick: x, onScrubBack: S, onScrubForward: E } = e,
-        [_, h] = o.useState(null),
+    let { percent: t, animate: n, interactionEnabled: i, backgroundColor: p, preloadedBuffers: v, duration: C, maxSeekableTime: g, onClick: x, onScrubBack: S, onScrubForward: _ } = e,
+        [E, h] = o.useState(null),
         [T, I] = o.useState(null),
         [N, b] = o.useState(null),
         [j, D] = o.useState(!1),
@@ -30,8 +30,8 @@ function p(e) {
             (A.current = e), h(e);
         };
     o.useEffect(() => {
-        null != _ && (null == g ? b(null) : b(f(g, C, _)));
-    }, [_, g, C]);
+        null != E && (null == g ? b(null) : b(f(g, C, E)));
+    }, [E, g, C]);
     let k = (0, a.y)(() => {
         if (null != k.current) y(k.current.getBoundingClientRect());
     });
@@ -50,15 +50,15 @@ function p(e) {
         L = o.useCallback(
             (e) => {
                 let { key: t } = e;
-                t === u.mR.ArrowLeft && null != S ? (e.preventDefault(), e.stopPropagation(), S()) : t === u.mR.ArrowRight && null != E && (e.preventDefault(), e.stopPropagation(), E());
+                t === u.mR.ArrowLeft && null != S ? (e.preventDefault(), e.stopPropagation(), S()) : t === u.mR.ArrowRight && null != _ && (e.preventDefault(), e.stopPropagation(), _());
             },
-            [S, E]
+            [S, _]
         ),
-        P = null != T && null != _ ? m(T, _, C) : 0,
+        P = null != T && null != E ? m(T, E, C) : 0,
         M = (0, c.yv)(P),
-        O = null != _ ? _.right - f((t / 100) * C, C, _) : null,
-        R = null != T && null != _ ? _.right - T : null,
-        w = null != N && null != _ ? _.right - N : null;
+        O = null != E ? E.right - f((t / 100) * C, C, E) : null,
+        R = null != T && null != E ? E.right - T : null,
+        w = null != N && null != E ? E.right - N : null;
     return (0, r.jsxs)('div', {
         className: d.cont,
         ref: k,

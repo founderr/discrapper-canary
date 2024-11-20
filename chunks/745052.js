@@ -22,8 +22,8 @@ var i = n(200651),
     T = n(243778),
     S = n(984370),
     A = n(797614),
-    b = n(359110),
-    x = n(6025),
+    x = n(359110),
+    b = n(6025),
     Z = n(897473),
     L = n(108427),
     y = n(970731),
@@ -50,8 +50,8 @@ var i = n(200651),
     Q = n(921944),
     J = n(526761),
     $ = n(388032),
-    ee = n(522292),
-    et = n(293914);
+    ee = n(74965),
+    et = n(784237);
 function en() {
     let e = r.useRef(null),
         t = (0, V.q)(),
@@ -255,7 +255,7 @@ let es = (0, p.Z)(function (e) {
         _ = (0, k.T)(g),
         E = (0, w.J)(g);
     r.useEffect(() => {
-        null != g && !_ && E && f && ((0, b.Kh)(g), x.Z.closeChannelSidebar(R.uZ));
+        null != g && !_ && E && f && ((0, x.Kh)(g), b.Z.closeChannelSidebar(R.uZ));
     }, [g, E, f, _]);
     let [I, C] = r.useState(q.pS.REQUESTS),
         N = (e) => {

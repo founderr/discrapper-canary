@@ -43,16 +43,16 @@ let p = {
         }
     };
 function v() {
-    b(), (h = !1);
+    I(), (h = !1);
 }
-function b() {
+function I() {
     m &&
         (p.client = {
             desktop: u.aH.DEFAULT,
             coachmarkImpressions: 2
         });
 }
-class I extends (r = i.ZP.PersistedStore) {
+class b extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         null != e && (p = e), this.waitFor(s.default), this.syncWith([s.default], g);
     }
@@ -70,9 +70,9 @@ class I extends (r = i.ZP.PersistedStore) {
         return null == p ? void 0 : null === (e = p.client) || void 0 === e ? void 0 : e.desktop;
     }
 }
-_(I, 'displayName', 'AppIconPersistedStoreState'),
-    _(I, 'persistKey', 'AppIconPersistedStoreState'),
-    (t.Z = new I(a.Z, {
+_(b, 'displayName', 'AppIconPersistedStoreState'),
+    _(b, 'persistKey', 'AppIconPersistedStoreState'),
+    (t.Z = new b(a.Z, {
         APP_ICON_UPDATED: function (e) {
             let { id: t } = e;
             null != t && E(t);
@@ -81,7 +81,7 @@ _(I, 'displayName', 'AppIconPersistedStoreState'),
             h = !0;
         },
         APP_ICON_EDITOR_CLOSE: v,
-        APP_ICON_EDITOR_RESET: b,
+        APP_ICON_EDITOR_RESET: I,
         APP_ICON_TRACK_IMPRESSION: function (e) {
             let { markAsDismissed: t } = e;
             (p.client.coachmarkImpressions += 1), p.client.coachmarkImpressions >= 2 && (null == t || t(d.L.UNKNOWN), v());

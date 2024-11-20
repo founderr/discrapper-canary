@@ -1,16 +1,16 @@
 n.d(t, {
     O: function () {
-        return r;
+        return a;
     }
 });
-var o = n(972959);
-let i = Object.freeze({
+var i = n(972959);
+let r = Object.freeze({
         selectedTab: null,
         isSearchVisible: !1,
         entrypoint: null
     }),
-    a = (0, o.H)(() => i);
-function r() {
-    a.setState(i);
+    s = (0, i.H)(() => r);
+function a() {
+    s.setState(r);
 }
-t.Z = a;
+t.Z = s;

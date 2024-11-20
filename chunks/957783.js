@@ -7,7 +7,7 @@ var s = i(200651),
     o = i(219369),
     c = i(981631),
     d = i(388032),
-    m = i(201221);
+    m = i(70047);
 t.Z = (e) => {
     let { headerId: t, guild: i, onAgreedChange: n } = e,
         [u, x] = a.useState(!1),

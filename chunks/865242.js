@@ -11,17 +11,17 @@ function s(e) {
         [h, m] = (0, r.zk)(u, isNaN(c) ? NaN : c, d),
         [g, E] = (0, a.useState)(() => (isNaN(h) ? '' : new (0, i.e)(f, l).format(h))),
         v = (0, a.useMemo)(() => new i.d(f, l), [f, l]),
-        b = (0, a.useMemo)(() => v.getNumberingSystem(g), [v, g]),
-        I = (0, a.useMemo)(
+        I = (0, a.useMemo)(() => v.getNumberingSystem(g), [v, g]),
+        b = (0, a.useMemo)(
             () =>
                 new i.e(f, {
                     ...l,
-                    numberingSystem: b
+                    numberingSystem: I
                 }),
-            [f, l, b]
+            [f, l, I]
         ),
-        T = (0, a.useMemo)(() => I.resolvedOptions(), [I]),
-        S = (0, a.useCallback)((e) => (isNaN(e) || null === e ? '' : I.format(e)), [I]),
+        T = (0, a.useMemo)(() => b.resolvedOptions(), [b]),
+        S = (0, a.useCallback)((e) => (isNaN(e) || null === e ? '' : b.format(e)), [b]),
         y = isNaN(s) ? 1 : s;
     'percent' === T.style && isNaN(s) && (y = 0.01);
     let [A, N] = (0, a.useState)(h),

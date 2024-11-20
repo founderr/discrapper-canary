@@ -17,8 +17,8 @@ var i = e(200651),
     _ = e(407383),
     I = e(981631),
     p = e(388032),
-    f = e(445964),
-    C = e(324394),
+    f = e(248807),
+    C = e(248296),
     N = e(617921);
 function b(t) {
     let { onClose: n, source: r = _.I.INAPPROPRIATE_CONVERSATION } = t,

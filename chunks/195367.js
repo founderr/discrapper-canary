@@ -21,7 +21,7 @@ var l = t(200651),
     f = t(765305),
     j = t(486324),
     N = t(388032),
-    I = t(371922);
+    I = t(351293);
 function p(e) {
     let { editBroadcastInfoData: n } = e,
         { broadcastInfo: t, broadcastToDirectoryChannels: i, setBroadcastToDirectoryChannels: r, canEveryoneRoleViewEvent: a } = n;
@@ -90,7 +90,7 @@ function C(e) {
                 return;
             }
             (0, s.openModalLazy)(async () => {
-                let { default: i } = await Promise.all([t.e('70687'), t.e('48017'), t.e('13242')]).then(t.bind(t, 850085));
+                let { default: i } = await Promise.all([t.e('70687'), t.e('48017'), t.e('47140')]).then(t.bind(t, 850085));
                 return (t) =>
                     (0, l.jsx)(i, {
                         imgURI: e,

@@ -29,7 +29,7 @@ var r = n(481060),
 async function M(e) {
     var t, n, r;
     let u,
-        { channelId: m, uploads: M, draftType: y, parsedMessage: O, options: L = {}, raiseEndpointErrors: R = !1 } = e,
+        { channelId: m, uploads: M, draftType: y, parsedMessage: L, options: O = {}, raiseEndpointErrors: R = !1 } = e,
         w = new p.Z(P.ANM.MESSAGES(m)),
         k = new j.o(),
         D = {
@@ -37,22 +37,22 @@ async function M(e) {
             nonce: '',
             channel_id: m,
             type: P.uaV.DEFAULT,
-            sticker_ids: null == L ? void 0 : L.stickerIds,
-            poll: null == L ? void 0 : L.poll
+            sticker_ids: null == O ? void 0 : O.stickerIds,
+            poll: null == O ? void 0 : O.poll
         };
-    null != O && (D.content = null == O ? void 0 : O.content), null != C.Z.getPendingReply(m) && ((D.type = P.uaV.REPLY), (D.message_reference = L.messageReference), (D.allowed_mentions = L.allowedMentions), (0, I.A6)(m));
+    null != L && (D.content = null == L ? void 0 : L.content), null != C.Z.getPendingReply(m) && ((D.type = P.uaV.REPLY), (D.message_reference = O.messageReference), (D.allowed_mentions = O.allowedMentions), (0, I.A6)(m));
     let [G, Z] = (0, A.Z)(D.content);
     G && ((D.content = Z), (D.flags = (0, T.pj)(null !== (t = D.flags) && void 0 !== t ? t : 0, P.iLy.SUPPRESS_NOTIFICATIONS)));
-    let K = null !== (n = L.nonce) && void 0 !== n ? n : (0, _.r)(),
+    let K = null !== (n = O.nonce) && void 0 !== n ? n : (0, _.r)(),
         U = (0, x.ZP)({
             channelId: m,
             content: D.content,
-            tts: null !== (r = null == O ? void 0 : O.tts) && void 0 !== r && r,
+            tts: null !== (r = null == L ? void 0 : L.tts) && void 0 !== r && r,
             type: D.type,
             messageReference: D.message_reference,
             flags: D.flags,
             nonce: K,
-            poll: (0, v.x9)(L.poll)
+            poll: (0, v.x9)(O.poll)
         });
     return (
         ((D.nonce = K),

@@ -3,8 +3,8 @@ var i = n(200651),
     r = n(192379),
     s = n(120356),
     a = n.n(s),
-    l = n(392711),
-    o = n.n(l),
+    o = n(392711),
+    l = n.n(o),
     c = n(818405),
     d = n(587158),
     u = n(286379),
@@ -23,7 +23,7 @@ var i = n(200651),
     C = n(987650),
     y = n(981631),
     N = n(388032),
-    T = n(618680);
+    T = n(372049);
 function b(e, t, n) {
     return (
         t in e
@@ -143,7 +143,7 @@ class j extends r.PureComponent {
             });
     }
 }
-let L = o().throttle(
+let L = l().throttle(
     () => {
         g.Z.increment(
             {

@@ -11,7 +11,7 @@ var l = n(120356),
     s = n(738672),
     o = n(447564),
     c = n(388032),
-    d = n(24464);
+    d = n(85932);
 function u(e) {
     let { channel: t, onClick: l, hidden: s, onDismiss: u } = e;
     return (0, i.jsxs)('div', {

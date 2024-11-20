@@ -25,9 +25,9 @@ var i = n(200651),
     N = n(474936),
     T = n(981631),
     S = n(388032),
-    A = n(611055),
-    b = n(626650);
-let x = {
+    A = n(756),
+    x = n(886733);
+let b = {
     width: 14,
     height: 14
 };
@@ -88,9 +88,9 @@ function Z(e) {
                 ? (0, i.jsx)(d.Clickable, {
                       'aria-label': k(),
                       onClick: M,
-                      className: a()(b.actionButton, A.popoutButton, {
-                          [b.highlight]: Z,
-                          [b.actionButtonMobile]: c.tq
+                      className: a()(x.actionButton, A.popoutButton, {
+                          [x.highlight]: Z,
+                          [x.actionButtonMobile]: c.tq
                       }),
                       onMouseEnter: D,
                       onMouseLeave: R,
@@ -108,8 +108,8 @@ function Z(e) {
                           children: [
                               (0, i.jsx)(d.GiftIcon, {
                                   size: 'custom',
-                                  width: x.width,
-                                  height: x.height,
+                                  width: b.width,
+                                  height: b.height,
                                   color: 'currentColor'
                               }),
                               (0, i.jsx)(d.Text, {

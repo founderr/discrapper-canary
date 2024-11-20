@@ -9,7 +9,7 @@ var i = n(120356),
     c = n(246946),
     d = n(51144),
     f = n(388032),
-    _ = n(514340);
+    _ = n(845286);
 let p = (e) => {
     let { primary: t, secondary: n, botType: i, botVerified: s, discriminatorClass: u, className: c, usernameClass: d, color: p, botClass: h, showStreamerModeTooltip: m } = e;
     return (0, r.jsxs)('div', {
@@ -55,9 +55,9 @@ t.Z = (e) => {
                   if (e.bot) return u.J.BOT;
                   return null;
               })(t),
-        b = t.isVerifiedBot(),
-        I = d.ZP.getName(t),
-        T = i ? E : null != n ? n : I,
+        I = t.isVerifiedBot(),
+        b = d.ZP.getName(t),
+        T = i ? E : null != n ? n : b,
         S = t.isPomelo() || l;
     if (S || T !== E) {
         let e = T === E && S && i ? d.ZP.getUserTag(t, { forcePomelo: l }) : T,
@@ -66,7 +66,7 @@ t.Z = (e) => {
             primary: e,
             secondary: n,
             botType: v,
-            botVerified: b,
+            botVerified: I,
             showStreamerModeTooltip: m && d.ZP.isNameConcealed(e),
             ...h
         });
@@ -74,7 +74,7 @@ t.Z = (e) => {
     return (0, r.jsx)(u.Z, {
         name: T,
         botType: v,
-        botVerified: b,
+        botVerified: I,
         discriminator: g || T !== E ? null : null != o ? o : t.discriminator,
         ...h
     });

@@ -10,8 +10,8 @@ var r = n(200651),
     o = n(696689),
     l = n.n(o),
     u = n(692547),
-    c = n(979253),
-    d = n(99094);
+    c = n(56077),
+    d = n(654165);
 let f = Object.fromEntries(Object.keys(u.Z.colors).map((e) => [l()(e), e])),
     _ = i.forwardRef(function (e, t) {
         let n,
@@ -40,10 +40,10 @@ let f = Object.fromEntries(Object.keys(u.Z.colors).map((e) => [l()(e), e])),
                     n = 'white';
                     break;
                 default:
-                    var b;
-                    n = null === (b = u.Z.colors[f[p]]) || void 0 === b ? void 0 : b.css;
+                    var I;
+                    n = null === (I = u.Z.colors[f[p]]) || void 0 === I ? void 0 : I.css;
             }
-        let I = {
+        let b = {
             color: n,
             ...v,
             ...g.style
@@ -62,7 +62,7 @@ let f = Object.fromEntries(Object.keys(u.Z.colors).map((e) => [l()(e), e])),
                 l
             ),
             ...g,
-            style: Object.values(I).filter(Boolean).length > 0 ? I : void 0,
+            style: Object.values(b).filter(Boolean).length > 0 ? b : void 0,
             'data-text-variant': i
         });
     });

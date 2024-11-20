@@ -12,14 +12,14 @@ var r = n(200651),
     u = n(555573),
     c = n(665692),
     d = n(388032),
-    f = n(438968);
+    f = n(735141);
 function _(e) {
     var t;
     let a,
         _,
         p,
         { className: h, activeCommand: m, activeOption: g, optionStates: E, channelId: v } = e,
-        b = i.useCallback(
+        I = i.useCallback(
             (e) => {
                 var t;
                 let i = null == m ? void 0 : null === (t = m.rootCommand) || void 0 === t ? void 0 : t.id;
@@ -39,7 +39,7 @@ function _(e) {
             },
             [null == m ? void 0 : null === (t = m.rootCommand) || void 0 === t ? void 0 : t.id]
         ),
-        I = i.useCallback(() => {
+        b = i.useCallback(() => {
             u.Po({
                 channelId: v,
                 command: null,
@@ -53,7 +53,7 @@ function _(e) {
     } else (a = ''.concat(c.GI).concat(m.displayName)), (_ = m.displayDescription), (p = null);
     return (0, r.jsxs)('div', {
         className: s()(h, f.bar),
-        onContextMenu: b,
+        onContextMenu: I,
         children: [
             (0, r.jsxs)('div', {
                 className: f.commandInfo,
@@ -75,7 +75,7 @@ function _(e) {
             }),
             (0, r.jsx)('div', {
                 className: f.actions,
-                children: (0, r.jsx)(l.B, { onClick: I })
+                children: (0, r.jsx)(l.B, { onClick: b })
             })
         ]
     });

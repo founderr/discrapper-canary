@@ -7,15 +7,15 @@ var i = n(26151),
     r = n(13245),
     s = n(43267),
     a = n(933557),
-    l = n(593481),
-    o = n(699516),
+    o = n(593481),
+    l = n(699516),
     c = n(594174),
     d = n(312839),
     u = n(981631),
     h = n(987650),
     p = n(388032);
 function f(e) {
-    let t = (0, a.F6)(e, c.default, o.Z),
+    let t = (0, a.F6)(e, c.default, l.Z),
         n = p.intl.string(p.t.ssrVzM),
         f = (0, s.x)(e),
         { trackView: g, trackClick: m } = (0, d.R)(h.n0.IncomingCall, {
@@ -29,7 +29,7 @@ function f(e) {
         icon: f,
         title: t,
         body: n,
-        hint: (e) => (0, l.QR)(e, (0, d.P)(), p.t['Odi54+']),
+        hint: (e) => (0, o.QR)(e, (0, d.P)(), p.t['Odi54+']),
         confirmText: p.intl.string(p.t['0D/6R0']),
         cancelText: p.intl.string(p.t.BVN4pK),
         onNotificationShow: () => {

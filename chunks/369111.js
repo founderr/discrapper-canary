@@ -27,8 +27,8 @@ function f(e) {
             pendingAvatarDecoration: t ? u.Z.getTryItOutAvatarDecoration() : null != f ? s.Z.getPendingAvatarDecoration() : u.Z.getPendingAvatarDecoration(),
             pendingErrors: null != f ? s.Z.getErrors().avatarDecoration : u.Z.getErrors().avatarDecoration
         })),
-        b = (0, r.useCallback)((e) => (0, o.Jw)(e, null == _ ? void 0 : _.avatar), [null == _ ? void 0 : _.avatar]),
-        I = (0, r.useCallback)(
+        I = (0, r.useCallback)((e) => (0, o.Jw)(e, null == _ ? void 0 : _.avatar), [null == _ ? void 0 : _.avatar]),
+        b = (0, r.useCallback)(
             (e) => {
                 (0, o.PO)(f, e), null != e && m(e);
             },
@@ -37,8 +37,8 @@ function f(e) {
     return {
         pendingAvatar: g,
         pendingAvatarDecoration: E,
-        setPendingAvatar: t ? d.c_ : b,
-        setPendingAvatarDecoration: t ? d.Xz : I,
+        setPendingAvatar: t ? d.c_ : I,
+        setPendingAvatarDecoration: t ? d.Xz : b,
         savedAvatarDecoration: h,
         pendingErrors: v
     };

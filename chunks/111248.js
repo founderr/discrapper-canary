@@ -16,8 +16,8 @@ var i = n(200651),
     h = n(27457),
     p = n(981631),
     m = n(354459),
-    f = n(682937),
-    g = n(152105);
+    f = n(824872),
+    g = n(852401);
 let C = 'CameraPreviewPosition';
 function x(e, t) {
     return e * t + 8 * (t - 1);

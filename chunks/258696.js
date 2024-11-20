@@ -16,8 +16,8 @@ var r = n(200651),
     g = n(117530),
     E = n(594174),
     v = n(74538),
-    b = n(94161),
-    I = n(9277),
+    I = n(94161),
+    b = n(9277),
     T = n(58995),
     S = n(897291),
     y = n(764794),
@@ -25,7 +25,7 @@ var r = n(200651),
     N = n(319417),
     C = n(728386),
     R = n(474936),
-    O = n(482133);
+    O = n(703130);
 function D(e) {
     let { disabled: t, channel: n } = e,
         { enabled: a } = _.ZP.useExperiment({ location: 'dc120b_1' }, { autoTrackExposure: !1 }),
@@ -117,7 +117,7 @@ t.Z = i.memo(function (e) {
             k &&
             H.push(
                 (0, r.jsx)(
-                    I.Z,
+                    b.Z,
                     {
                         disabled: x,
                         type: L
@@ -142,7 +142,7 @@ t.Z = i.memo(function (e) {
         (null == F || (null != V && V.type !== o.jw.ATTACHMENT)) &&
         H.push(
             (0, r.jsx)(
-                b.Z,
+                I.Z,
                 {
                     disabled: x,
                     type: L

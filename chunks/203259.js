@@ -9,7 +9,7 @@ var r = n(481060),
     l = n(39604),
     a = n(176127),
     o = n(388032),
-    s = n(265638);
+    s = n(516707);
 function c(e) {
     let { onOpenClipsGallery: t, clipIconRef: n, lastClipsSession: c } = e;
     return (0, i.jsxs)(r.TooltipLayer, {

@@ -6,21 +6,21 @@ var r = n(200651),
     a = n(481060),
     c = n(569379),
     u = n(642145),
-    d = n(937159);
+    d = n(808326);
 t.Z = o.forwardRef((e, t) => {
     let { quest: n, percentComplete: o, size: i = 42, strokeWidth: m = 3, glowBlur: f = 0.4, percentCompleteText: p, percentCompleteTextVariant: v = 'text-lg/medium', children: C } = e,
         g = (0, c.E)(n, o > 0),
         x = i / 2,
         S = i / 2 - m / 2,
-        E = 2 * Math.PI * S,
-        _ = E - o * E,
+        _ = 2 * Math.PI * S,
+        E = _ - o * _,
         h = {
-            strokeDasharray: ''.concat(E, ' ').concat(E),
-            strokeDashoffset: _
+            strokeDasharray: ''.concat(_, ' ').concat(_),
+            strokeDashoffset: E
         },
         T = {
-            strokeDasharray: ''.concat(E, ' ').concat(E),
-            strokeDashoffset: -o * E
+            strokeDasharray: ''.concat(_, ' ').concat(_),
+            strokeDashoffset: -o * _
         },
         I = { boxShadow: '0 0 30px 0px '.concat(g.glow) },
         { progressTextAnimation: N } = (0, a.useSpring)({

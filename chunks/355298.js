@@ -59,21 +59,21 @@ function v(e) {
     let { messageRequestChannelIds: t } = e;
     t.forEach((e) => o.add(e));
 }
-function b(e) {
+function I(e) {
     let { countryCode: t } = e;
     _(t);
 }
-class I extends a.Z {
+class b extends a.Z {
     initialize() {
         this.waitFor(i.Z);
     }
     loadCache() {
-        let e = this.readSnapshot(I.LATEST_SNAPSHOT_VERSION);
+        let e = this.readSnapshot(b.LATEST_SNAPSHOT_VERSION);
         null != e && (o = new Set(e));
     }
     takeSnapshot() {
         return {
-            version: I.LATEST_SNAPSHOT_VERSION,
+            version: b.LATEST_SNAPSHOT_VERSION,
             data: Array.from(o)
         };
     }
@@ -104,9 +104,9 @@ class I extends a.Z {
             CHANNEL_CREATE: m,
             CHANNEL_UPDATES: g,
             CHANNEL_DELETE: E,
-            SET_LOCATION_METADATA: b,
+            SET_LOCATION_METADATA: I,
             MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: h
         });
     }
 }
-s(I, 'displayName', 'MessageRequestStore'), s(I, 'LATEST_SNAPSHOT_VERSION', 1), (t.Z = new I());
+s(b, 'displayName', 'MessageRequestStore'), s(b, 'LATEST_SNAPSHOT_VERSION', 1), (t.Z = new b());

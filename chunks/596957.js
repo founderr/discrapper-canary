@@ -22,10 +22,10 @@ var i = n(200651),
     T = n(163417),
     S = n(492347),
     A = n(42575),
-    b = n(617015),
-    x = n(981631),
+    x = n(617015),
+    b = n(981631),
     Z = n(388032),
-    L = n(672293);
+    L = n(522756);
 t.Z = function (e) {
     let { sectionFilter: t, titleId: l } = e,
         { analyticsLocations: y } = (0, p.ZP)(m.Z.FRIENDS_LIST),
@@ -34,7 +34,7 @@ t.Z = function (e) {
         j = (0, s.e7)([f.Z], () => f.Z.getRelationshipCount()),
         [D, M] = r.useState(() => {
             let e = {};
-            for (let t of Object.values(x.pJs)) e[t] = '';
+            for (let t of Object.values(b.pJs)) e[t] = '';
             return e;
         }),
         w = () => {
@@ -58,11 +58,11 @@ t.Z = function (e) {
                 [t]: ''
             });
         }, [D, t]),
-        G = t === x.pJs.PENDING && (O.filter(x.pJs.SPAM).length > 0 || O.filter(x.pJs.PENDING_IGNORED).length > 0),
+        G = t === b.pJs.PENDING && (O.filter(b.pJs.SPAM).length > 0 || O.filter(b.pJs.PENDING_IGNORED).length > 0),
         B = O.filter(t, D[t]);
     if (
         (r.useEffect(() => {
-            t === x.pJs.ALL && (0, g.d$)();
+            t === b.pJs.ALL && (0, g.d$)();
         }, [t]),
         0 === B.length && '' === D[t])
     )
@@ -74,9 +74,9 @@ t.Z = function (e) {
                     type: t,
                     onClick: G
                         ? w
-                        : t !== x.pJs.PENDING
+                        : t !== b.pJs.PENDING
                           ? () => {
-                                c.Z.setSection(x.pJs.ADD_FRIEND);
+                                c.Z.setSection(b.pJs.ADD_FRIEND);
                             }
                           : void 0
                 },
@@ -85,12 +85,12 @@ t.Z = function (e) {
         });
     let H = [B],
         V = 0 === B.length && '' !== D[t],
-        F = B.filter((e) => e.type === x.OGo.PENDING_INCOMING).length,
-        z = t === x.pJs.PENDING && F > 0 && F >= b.yf;
+        F = B.filter((e) => e.type === b.OGo.PENDING_INCOMING).length,
+        z = t === b.pJs.PENDING && F > 0 && F >= x.yf;
     return (0, i.jsx)(p.Gt, {
         value: y,
         children: (0, i.jsxs)(u.Z, {
-            section: x.jXE.FRIENDS_LIST,
+            section: b.jXE.FRIENDS_LIST,
             children: [
                 (0, i.jsx)(o.SearchBar, {
                     className: a()(L.searchBar, V ? L.searchEmptyState : null),
@@ -106,13 +106,13 @@ t.Z = function (e) {
                             id: l,
                             title: (function (e, t) {
                                 switch (e) {
-                                    case x.pJs.ONLINE:
+                                    case b.pJs.ONLINE:
                                         return Z.intl.formatToPlainString(Z.t.BagU2d, { online: t.toString() });
-                                    case x.pJs.PENDING:
+                                    case b.pJs.PENDING:
                                         return Z.intl.formatToPlainString(Z.t.XIpar6, { count: t.toString() });
-                                    case x.pJs.SUGGESTIONS:
+                                    case b.pJs.SUGGESTIONS:
                                         return Z.intl.formatToPlainString(Z.t['DYMZ/v'], { count: t.toString() });
-                                    case x.pJs.BLOCKED:
+                                    case b.pJs.BLOCKED:
                                         return Z.intl.formatToPlainString(Z.t.M83kKy, { count: t.toString() });
                                     default:
                                         return Z.intl.formatToPlainString(Z.t.rHRrhI, { count: t.toString() });
@@ -143,23 +143,23 @@ t.Z = function (e) {
                           statusSections: H,
                           renderRow: function (e) {
                               switch (t) {
-                                  case x.pJs.BLOCKED:
+                                  case b.pJs.BLOCKED:
                                       return (0, i.jsx)(I.Z, {
                                           ...e,
                                           isFocused: R
                                       });
-                                  case x.pJs.PENDING:
+                                  case b.pJs.PENDING:
                                       return (0, i.jsx)(N.Z, {
                                           ...e,
                                           isFocused: R
                                       });
-                                  case x.pJs.SUGGESTIONS:
+                                  case b.pJs.SUGGESTIONS:
                                       return (0, i.jsx)(A.Z, {
                                           ...e,
                                           isFocused: R
                                       });
-                                  case x.pJs.ONLINE:
-                                  case x.pJs.ALL:
+                                  case b.pJs.ONLINE:
+                                  case b.pJs.ALL:
                                   default:
                                       let { key: n, ...r } = e;
                                       return (0, i.jsx)(

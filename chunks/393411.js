@@ -36,7 +36,7 @@ var s = n(120356),
     P = n(474936),
     D = n(981631),
     y = n(388032),
-    B = n(420695);
+    B = n(353740);
 let L = new g.Z('SubscriptionHeader.tsx'),
     Z = {
         page: D.ZY5.USER_SETTINGS,

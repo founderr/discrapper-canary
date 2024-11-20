@@ -53,7 +53,7 @@ var r = n(200651),
     ee = n(921944),
     et = n(420212),
     en = n(474936),
-    er = n(52694);
+    er = n(213731);
 function ea(e) {
     let { products: t, handleShopCardMount: n, header: a, category: i, isPremiumUser: s, isGiftEasterEggEnabled: l, showMysteryCard: o = !1 } = e,
         d = (0, c.e7)([I.default], () => I.default.getCurrentUser());

@@ -27,8 +27,8 @@ var i,
     T = n(594174),
     S = n(351402),
     A = n(78839),
-    b = n(626135),
-    x = n(74538),
+    x = n(626135),
+    b = n(74538),
     Z = n(502087),
     L = n(657041),
     y = n(769415),
@@ -50,7 +50,7 @@ var i,
     W = n(981631),
     Y = n(921944),
     K = n(388032),
-    q = n(825504),
+    q = n(618226),
     X = n(693988),
     Q = n(155357),
     J = n(513885),
@@ -69,7 +69,7 @@ let en = (e) => {
         es = (0, d.e7)([_.Z], () => _.Z.useReducedMotion),
         eo = (0, h.ap)((0, f.ZP)()),
         [ec, ed] = a.useState(!1),
-        eu = (0, x.Qo)(el, ea),
+        eu = (0, b.Qo)(el, ea),
         eh = (0, c.JA)('nitro'),
         em = (0, j.N)(),
         ep = (0, R.Ng)(),
@@ -85,9 +85,9 @@ let en = (e) => {
         eT = (0, V.vx)(ee),
         eS = (0, V.wG)(ee),
         eA = (0, d.e7)([Z.Z], () => Z.Z.getCreatedAtOverride()),
-        eb = (0, d.e7)([N.Z], () => N.Z.hasLayers()),
-        { fractionalState: ex, endsAt: eZ, currentEntitlementId: eL } = (0, I.Z)({ forceFetch: !0 }),
-        [ey, eO] = (0, v.XR)(ex !== z.a$.NONE ? u.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL : null, ex !== z.a$.NONE ? Number(eL) : 0),
+        ex = (0, d.e7)([N.Z], () => N.Z.hasLayers()),
+        { fractionalState: eb, endsAt: eZ, currentEntitlementId: eL } = (0, I.Z)({ forceFetch: !0 }),
+        [ey, eO] = (0, v.XR)(eb !== z.a$.NONE ? u.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL : null, eb !== z.a$.NONE ? Number(eL) : 0),
         eP = null != eA ? eA : null == el ? void 0 : el.createdAt,
         eR = s || null != em || null != ep || eE || eT || eS || null != eC || null != ev || eu,
         { enabled: ej } = O._.useExperiment({ location: ee }, { autoTrackExposure: !1 }),
@@ -102,7 +102,7 @@ let en = (e) => {
         [ew, ek] = (0, v.US)(eg ? [u.z.REVERSE_TRIAL_NITRO_TAB_BADGE] : [], void 0, !0);
     if (!(eR = eR || (null != el && null != eP && Date.now() - eP.getTime() > et))) return null;
     if (
-        (ex !== z.a$.NONE &&
+        (eb !== z.a$.NONE &&
             ((r = 9),
             (i = (0, l.jsx)(P.Z, {
                 className: '',
@@ -187,7 +187,7 @@ let en = (e) => {
         locationState: ei,
         onClick: () => {
             ey === u.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL && eO(Y.L.TAKE_ACTION),
-                b.default.track(W.rMx.NITRO_TAB_VISITED, {
+                x.default.track(W.rMx.NITRO_TAB_VISITED, {
                     badge_decorator: r,
                     has_premium: eu
                 }),
@@ -216,7 +216,7 @@ let en = (e) => {
                 variant: G.j$.REFERRAL_PROGRAM,
                 children: eH
             })
-          : eT && !eb
+          : eT && !ex
             ? (0, l.jsx)(G.A7, { children: () => eH })
             : eH;
 };

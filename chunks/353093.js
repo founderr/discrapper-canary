@@ -15,13 +15,13 @@ n.d(t, {
         return E;
     },
     ky: function () {
-        return b;
+        return I;
     },
     p0: function () {
         return T;
     },
     pY: function () {
-        return I;
+        return b;
     },
     vh: function () {
         return p;
@@ -98,7 +98,7 @@ let E = (e, t) => {
         [c.NC.SIZE_32]: 32,
         [c.NC.SIZE_36]: 40
     };
-function b(e, t) {
+function I(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.NC.SIZE_12;
     if (null == t) return;
     let { CDN_HOST: r } = window.GLOBAL_ENV;
@@ -106,7 +106,7 @@ function b(e, t) {
     let i = v[n];
     return ''.concat(location.protocol, '//').concat(r, '/clan-badges/').concat(e, '/').concat(t, '.png?size=').concat(i);
 }
-function I(e, t) {
+function b(e, t) {
     if (null == t) return;
     let { CDN_HOST: n } = window.GLOBAL_ENV;
     if (null != n) return ''.concat(location.protocol, '//').concat(n, '/clan-banners/').concat(e, '/').concat(t, '.png?size=512');

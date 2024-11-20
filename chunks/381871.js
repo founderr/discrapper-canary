@@ -36,7 +36,7 @@ var i = n(200651),
     M = n(474936),
     L = n(526761),
     R = n(388032),
-    k = n(885246);
+    k = n(742831);
 let O = P.Hz.CHAT,
     D = {
         section: A.jXE.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER,

@@ -16,8 +16,8 @@ var r,
     g = n(594190),
     E = n(314897),
     v = n(173747),
-    b = n(780570),
-    I = n(830168),
+    I = n(780570),
+    b = n(830168),
     T = n(358085),
     S = n(417363),
     y = n(981631),
@@ -47,21 +47,21 @@ function B() {
     if (null != e) {
         var t, n;
         let { comboId: r, action: i } = e,
-            { applicationId: a, branchId: s } = (0, b.CP)(r);
+            { applicationId: a, branchId: s } = (0, I.CP)(r);
         if (((t = a), (n = s), (null == L || L.applicationId !== t || L.branchId !== n) && (null == x || x.applicationId !== t || x.branchId !== n))) {
             let e = E.default.getToken(),
                 t = E.default.getId();
             if (null == e) throw Error('missing user token');
-            P = !I.Z.setCurrentTask(a, s, i, t, e);
+            P = !b.Z.setCurrentTask(a, s, i, t, e);
         }
     }
 }
 function G(e, t) {
-    let n = (0, b.Tu)(e, t);
+    let n = (0, I.Tu)(e, t);
     return R.findIndex((e) => e.comboId === n);
 }
 function Z(e, t, n, r) {
-    let i = (0, b.Tu)(e, t),
+    let i = (0, I.Tu)(e, t),
         a = {
             comboId: i,
             action: r
@@ -69,10 +69,10 @@ function Z(e, t, n, r) {
         s = O.indexOf(i);
     -1 !== s && O.splice(s, 1);
     let o = G(e, t);
-    0 !== o && (n ? -1 === o && (R.push(a), B()) : (o > 0 && R.splice(o, 1), R.unshift(a), B())), !n && D && I.Z.resume(), U();
+    0 !== o && (n ? -1 === o && (R.push(a), B()) : (o > 0 && R.splice(o, 1), R.unshift(a), B())), !n && D && b.Z.resume(), U();
 }
 function F(e, t) {
-    let n = (0, b.Tu)(e, t),
+    let n = (0, I.Tu)(e, t),
         r = O.indexOf(n);
     -1 !== r && O.splice(r, 1);
     let i = G(e, t);
@@ -84,14 +84,14 @@ function V(e) {
 }
 function j(e) {
     let { applicationId: t, branchId: n } = e,
-        r = (0, b.Tu)(t, n),
+        r = (0, I.Tu)(t, n),
         i = O.indexOf(r);
     -1 !== i && O.splice(i, 1);
 }
 function H() {
     let e = E.default.getToken(),
         t = E.default.getId();
-    if (null != e) I.Z.setCredentials(t, e);
+    if (null != e) b.Z.setCredentials(t, e);
 }
 function Y() {
     for (let e of g.ZP.getRunningDiscordApplicationIds()) m.al(e, e);
@@ -123,11 +123,11 @@ class W extends (a = _.ZP.Store) {
     get activeItems() {
         return R.map((e) => {
             let { comboId: t } = e;
-            return (0, b.CP)(t);
+            return (0, I.CP)(t);
         });
     }
     get finishedItems() {
-        return O.map(b.CP);
+        return O.map(I.CP);
     }
     get paused() {
         return D;
@@ -151,7 +151,7 @@ class W extends (a = _.ZP.Store) {
     (t.Z = new W(h.Z, {
         DISPATCH_APPLICATION_INSTALL: function (e) {
             let { applicationId: t, branchId: n } = e;
-            M.set((0, b.Tu)(t, n), 'Install'), Z(t, n, !1, 'Patch');
+            M.set((0, I.Tu)(t, n), 'Install'), Z(t, n, !1, 'Patch');
         },
         DISPATCH_APPLICATION_UPDATE: function (e) {
             let { applicationId: t, branchId: n, automatic: r } = e;
@@ -163,24 +163,24 @@ class W extends (a = _.ZP.Store) {
         DISPATCH_APPLICATION_CANCEL: V,
         DISPATCH_APPLICATION_REPAIR: function (e) {
             let { applicationId: t, branchId: n } = e;
-            M.set((0, b.Tu)(t, n), 'Repair'), Z(t, n, !1, 'Repair');
+            M.set((0, I.Tu)(t, n), 'Repair'), Z(t, n, !1, 'Repair');
         },
         DISPATCH_APPLICATION_MOVE_UP: function (e) {
             let { applicationId: t, branchId: n } = e,
                 r = G(t, n);
             if (r < 1) return !1;
-            R.splice(0, 0, R.splice(r, 1)[0]), B(), D && I.Z.resume(), U();
+            R.splice(0, 0, R.splice(r, 1)[0]), B(), D && b.Z.resume(), U();
         },
         DISPATCH_APPLICATION_REMOVE_FINISHED: j,
         DISPATCH_APPLICATION_STATE_UPDATE: function (e) {
             let { state: t } = e;
-            !w && ((w = !0), B(), !D && I.Z.resume());
+            !w && ((w = !0), B(), !D && b.Z.resume());
             let n = D;
             (D = t.paused), (L = t.currentTask), (x = t.nextTask);
             let r = !1;
             (R = R.filter((e) => {
                 let { comboId: t } = e,
-                    { applicationId: n, branchId: i } = (0, b.CP)(t),
+                    { applicationId: n, branchId: i } = (0, I.CP)(t),
                     a = S.Z.getState(n, i),
                     s = v.Z.getTargetBuildId(n, i),
                     o = v.Z.getTargetManifests(n, i);
@@ -220,6 +220,6 @@ class W extends (a = _.ZP.Store) {
             (0, T.isDesktop)() && H();
         },
         LOGOUT: function () {
-            p.K.remove(C), (0, T.isDesktop)() && I.Z.pause();
+            p.K.remove(C), (0, T.isDesktop)() && b.Z.pause();
         }
     }));

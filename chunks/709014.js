@@ -14,10 +14,10 @@ var r = n(200651),
     c = n(390507),
     d = n(679400),
     f = n(580747),
-    _ = n(529961);
+    _ = n(657375);
 let p = i.forwardRef(function (e, t) {
     let { color: a, src: o, size: p = 'md', width: h, height: m, className: g, initialAnimation: E, markers: v } = e,
-        [b, I] = i.useState(null),
+        [I, b] = i.useState(null),
         T = i.useRef(null),
         S = i.useRef(null),
         y = i.useRef(null),
@@ -55,8 +55,8 @@ let p = i.forwardRef(function (e, t) {
             [O, N, v]
         ),
         i.useEffect(() => {
-            null == b && o().then((e) => I(e.default));
-        }, [b, o]),
+            null == I && o().then((e) => b(e.default));
+        }, [I, o]),
         i.useEffect(
             () => (
                 n
@@ -77,7 +77,7 @@ let p = i.forwardRef(function (e, t) {
                                 renderer: 'svg',
                                 loop: !1,
                                 autoplay: !1,
-                                animationData: l()(b),
+                                animationData: l()(I),
                                 initialSegment: n
                             }));
                     }),
@@ -86,7 +86,7 @@ let p = i.forwardRef(function (e, t) {
                     null === (e = y.current) || void 0 === e || e.destroy();
                 }
             ),
-            [b, v]
+            [I, v]
         ),
         (0, r.jsx)('div', {
             style: {

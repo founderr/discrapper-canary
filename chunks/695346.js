@@ -57,7 +57,7 @@ n.d(t, {
         return eA;
     },
     SE: function () {
-        return eb;
+        return eI;
     },
     Sb: function () {
         return ep;
@@ -126,7 +126,7 @@ n.d(t, {
         return h;
     },
     fv: function () {
-        return b;
+        return I;
     },
     fz: function () {
         return E;
@@ -283,29 +283,29 @@ let E = (0, o.Zc)(
         },
         (e) => a.D5.create({ value: !!e })
     ),
-    b = (0, o.Zc)(
+    I = (0, o.Zc)(
         'notifications',
         'focusModeExpiresAtMs',
         (e) => (null != e ? e : '0'),
         (e) => e
     ),
-    I = [],
+    b = [],
     T = (0, o.Zc)(
         'textAndImages',
         'emojiPickerCollapsedSections',
-        (e) => (null != e ? e : I),
+        (e) => (null != e ? e : b),
         (e) => e
     ),
     S = (0, o.Zc)(
         'textAndImages',
         'stickerPickerCollapsedSections',
-        (e) => (null != e ? e : I),
+        (e) => (null != e ? e : b),
         (e) => e
     ),
     y = (0, o.Zc)(
         'textAndImages',
         'soundboardPickerCollapsedSections',
-        (e) => (null != e ? e : I),
+        (e) => (null != e ? e : b),
         (e) => e
     ),
     A = (0, o.Zc)(
@@ -805,17 +805,17 @@ let ep = (0, o.KM)(
             })
     ),
     ev = [],
-    eb = (0, o.Zc)(
+    eI = (0, o.Zc)(
         'privacy',
         'activityRestrictedGuildIds',
         (e) => (null != e ? e : ev),
         (e) => e
     ),
-    eI = [],
+    eb = [],
     eT = (0, o.Zc)(
         'privacy',
         'activityJoiningRestrictedGuildIds',
-        (e) => (null != e ? e : eI),
+        (e) => (null != e ? e : eb),
         (e) => e
     ),
     eS = (0, o.Zc)(

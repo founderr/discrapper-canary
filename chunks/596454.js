@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return b;
     }
 }),
     n(47120),
@@ -20,11 +20,11 @@ var r = n(200651),
     h = n(176354),
     m = n(506071),
     g = n(149203);
-n(837748);
+n(13585);
 let E = __OVERLAY__ ? () => (0, o.e7)([_.Z], () => _.Z.isInstanceFocused()) : m.n;
 function v(e) {
     var t, n;
-    let { src: a, alt: o, className: l, emojiId: d, emojiName: _, channelId: m, messageId: v, animated: b, size: I = 'default', isInteracting: T = !1, shouldAnimate: S, onMouseEnter: y, onMouseLeave: A, canSelect: N = !0, autoplay: C, registerAnimatedElementRef: R, ...O } = e,
+    let { src: a, alt: o, className: l, emojiId: d, emojiName: _, channelId: m, messageId: v, animated: I, size: b = 'default', isInteracting: T = !1, shouldAnimate: S, onMouseEnter: y, onMouseLeave: A, canSelect: N = !0, autoplay: C, registerAnimatedElementRef: R, ...O } = e,
         [D, L] = i.useState(!1),
         [x, w] = i.useState(void 0),
         M = i.useRef(),
@@ -32,7 +32,7 @@ function v(e) {
         k = f.Yk.useSetting(),
         U = E(),
         B = null == C ? k : C,
-        G = g.kV[I],
+        G = g.kV[b],
         Z = i.useRef(null),
         F = i.useMemo(() => {
             if (null != a) return a;
@@ -40,13 +40,13 @@ function v(e) {
                 let e = !0 === S && B;
                 return p.ZP.getEmojiURL({
                     id: d,
-                    animated: U && !0 === b && (e || D || !0 === T),
+                    animated: U && !0 === I && (e || D || !0 === T),
                     size: G
                 });
             }
             if (null != _) return h.ZP.getURL(_);
             throw Error('Unknown Src for Emoji');
-        }, [b, B, d, _, G, U, D, T, S, a]),
+        }, [I, B, d, _, G, U, D, T, S, a]),
         V = i.useCallback(() => {
             null != F &&
                 (M.current = (0, c.po)(F, (e) => {
@@ -55,23 +55,23 @@ function v(e) {
         }, [F]),
         j = i.useCallback(
             (e) => {
-                b && L(!0), null == d && P(_), null == y || y(e);
+                I && L(!0), null == d && P(_), null == y || y(e);
             },
-            [b, _, y, P, d]
+            [I, _, y, P, d]
         ),
         H = i.useCallback(
             (e) => {
-                b && L(!1), null == A || A(e);
+                I && L(!1), null == A || A(e);
             },
-            [b, A]
+            [I, A]
         ),
         Y = i.useMemo(() => {
             let e = null != d && '' !== d ? { 'data-id': d } : { 'data-name': _ };
             return {
                 ...O,
                 className: s()('emoji', l, {
-                    jumboable: 'jumbo' === I,
-                    reactionLarge: 'reactionLarge' === I
+                    jumboable: 'jumbo' === b,
+                    reactionLarge: 'reactionLarge' === b
                 }),
                 onError: V,
                 onMouseEnter: j,
@@ -79,7 +79,7 @@ function v(e) {
                 'data-type': 'emoji',
                 ...e
             };
-        }, [l, d, _, j, H, V, O, I]);
+        }, [l, d, _, j, H, V, O, b]);
     i.useEffect(
         () => () => {
             var e;
@@ -138,7 +138,7 @@ function v(e) {
               ]
           });
 }
-function b(e) {
+function I(e) {
     let { useThoughtfullyAnimated: t } = i.useContext(d.q),
         { animate: n, registerRef: a } = t(),
         { disableAnimations: s } = i.useContext(l.G);
@@ -148,6 +148,6 @@ function b(e) {
         shouldAnimate: n && !s
     });
 }
-function I(e) {
-    return null == e.emojiId && null == e.emojiName && null == e.src ? null : e.animated && void 0 === e.shouldAnimate ? (0, r.jsx)(b, { ...e }) : (0, r.jsx)(v, { ...e });
+function b(e) {
+    return null == e.emojiId && null == e.emojiName && null == e.src ? null : e.animated && void 0 === e.shouldAnimate ? (0, r.jsx)(I, { ...e }) : (0, r.jsx)(v, { ...e });
 }

@@ -16,8 +16,8 @@ var r,
     g = n(592125),
     E = n(944486),
     v = n(606304),
-    b = n(594174),
-    I = n(33039),
+    I = n(594174),
+    b = n(33039),
     T = n(979651),
     S = n(413523),
     y = n(354459),
@@ -186,7 +186,7 @@ function en(e) {
 }
 class er extends (r = l.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(p.Z, h.default, m.Z, g.Z, c.ZP, E.Z, v.Z, b.default, I.Z, T.Z), this.syncWith([c.ZP], Q), this.syncWith([f.Z], q), (null == e ? void 0 : e.voiceParticipantsHidden) !== void 0 && Object.assign(k, null == e ? void 0 : e.voiceParticipantsHidden);
+        this.waitFor(p.Z, h.default, m.Z, g.Z, c.ZP, E.Z, v.Z, I.default, b.Z, T.Z), this.syncWith([c.ZP], Q), this.syncWith([f.Z], q), (null == e ? void 0 : e.voiceParticipantsHidden) !== void 0 && Object.assign(k, null == e ? void 0 : e.voiceParticipantsHidden);
     }
     getState() {
         return { voiceParticipantsHidden: k };

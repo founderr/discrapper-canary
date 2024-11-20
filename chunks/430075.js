@@ -14,7 +14,7 @@ var E = n(442837),
     a = n(800530),
     S = n(981631),
     N = n(388032),
-    c = n(506486);
+    c = n(561306);
 function u() {
     return (0, i.jsxs)(r.Notice, {
         color: r.NoticeColors.DANGER,

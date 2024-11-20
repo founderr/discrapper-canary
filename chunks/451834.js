@@ -11,8 +11,8 @@ var i = n(120356),
     f = n(510659),
     _ = n(228168),
     p = n(388032),
-    h = n(119248),
-    m = n(608675);
+    h = n(866777),
+    m = n(482617);
 let g = (e) => {
         let { message: t, userId: n, onClose: i } = e,
             { trackUserProfileAction: s } = (0, d.KZ)();
@@ -65,7 +65,7 @@ t.Z = (e) => {
         { interactionTypeSent: u, showInteractionToast: d } = (0, f.Xo)(),
         m = u === _.P.REPLY ? p.intl.string(p.t.BPaiaW) : p.intl.string(p.t.Ry2EtL),
         v = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
-        b = (0, l.useTransition)(
+        I = (0, l.useTransition)(
             d,
             {
                 from: {
@@ -91,7 +91,7 @@ t.Z = (e) => {
             'animate-always'
         );
     return (0, r.jsx)(r.Fragment, {
-        children: b(
+        children: I(
             (e, o) =>
                 o &&
                 (0, r.jsx)(s.animated.div, {

@@ -11,8 +11,8 @@ var r = n(200651),
     f = n(259580),
     _ = n(424218),
     p = n(388032),
-    h = n(87559),
-    m = n(110933);
+    h = n(233454),
+    m = n(112864);
 function g(e) {
     let { text: t, language: i } = e,
         a = () =>
@@ -98,7 +98,7 @@ function v(e) {
         ]
     });
 }
-function b(e) {
+function I(e) {
     let { language: t, setLanguage: n } = e;
     return (0, r.jsx)(l.Popout, {
         position: 'left',
@@ -145,7 +145,7 @@ function b(e) {
             })
     });
 }
-function I(e) {
+function b(e) {
     return (0, r.jsx)(l.Tooltip, {
         text: p.intl.string(p.t['0PQYk5']),
         children: (t) =>
@@ -206,7 +206,7 @@ function T(e) {
                                       isWholeFile: C,
                                       numLines: A
                                   }),
-                                  (0, r.jsx)(I, {
+                                  (0, r.jsx)(b, {
                                       url: n,
                                       fileName: i,
                                       fileSize: a,
@@ -223,7 +223,7 @@ function T(e) {
                         fileName: i,
                         fileSize: a
                     }),
-                    (0, r.jsx)(b, {
+                    (0, r.jsx)(I, {
                         language: f,
                         setLanguage: m
                     })
@@ -267,7 +267,7 @@ function S(e) {
                                 fileName: n,
                                 fileSize: a
                             }),
-                            (0, r.jsx)(b, {
+                            (0, r.jsx)(I, {
                                 language: d,
                                 setLanguage: f
                             })

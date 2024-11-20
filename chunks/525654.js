@@ -46,7 +46,7 @@
         function v(e) {
             return String(e).replace(/^ +| +$/g, '');
         }
-        var b = (function e(t) {
+        var I = (function e(t) {
             var n,
                 r,
                 a,
@@ -58,12 +58,12 @@
             var d = l.navigator || {},
                 _ = d.userAgent || '';
             t || (t = _);
-            var b = c ? !!d.likeChrome : /\bChrome\b/.test(t) && !/internal|\n/i.test(f.toString()),
-                I = 'Object',
-                T = c ? I : 'ScriptBridgingProxyObject',
-                S = c ? I : 'Environment',
+            var I = c ? !!d.likeChrome : /\bChrome\b/.test(t) && !/internal|\n/i.test(f.toString()),
+                b = 'Object',
+                T = c ? b : 'ScriptBridgingProxyObject',
+                S = c ? b : 'Environment',
                 y = c && l.java ? 'JavaPackage' : m(l.java),
-                A = c ? I : 'RuntimeObject',
+                A = c ? b : 'RuntimeObject',
                 N = /\bJava/.test(y) && l.java,
                 C = N && m(l.environment) == S,
                 R = N ? 'a' : 'α',
@@ -426,7 +426,7 @@
                     M.unshift('embedded');
                 }
             else (/\bBlackBerry\b/.test(Z) || /\bBB10\b/.test(t)) && (s = (RegExp(Z.replace(/ +/g, ' *') + '/([.\\d]+)', 'i').exec(t) || 0)[1] || U) ? ((V = ((s = [s, /BB10/.test(t)])[1] ? ((Z = null), (F = 'BlackBerry')) : 'Device Software') + ' ' + s[0]), (U = null)) : this != h && 'Wii' != Z && ((k && L) || (/Opera/.test(G) && /\b(?:MSIE|Firefox)\b/i.test(t)) || ('Firefox' == G && /\bOS X (?:\d+\.){2,}/.test(V)) || ('IE' == G && ((V && !/^Win/.test(V) && U > 5.5) || (/\bWindows XP\b/.test(V) && U > 8) || (8 == U && !/\bTrident\b/.test(t))))) && !u.test((s = e.call(h, t.replace(u, '') + ';'))) && s.name && ((s = 'ing as ' + s.name + ((s = s.version) ? ' ' + s : '')), u.test(G) ? (/\bIE\b/.test(s) && 'Mac OS' == V && (V = null), (s = 'identify' + s)) : ((s = 'mask' + s), (G = x ? p(x.replace(/([a-z])([A-Z])/g, '$1 $2')) : 'Opera'), /\bIE\b/.test(s) && (V = null), !k && (U = null)), (B = ['Presto']), M.push(s));
-            (s = (/\bAppleWebKit\/([\d.]+\+?)/i.exec(t) || 0)[1]) && ((s = [parseFloat(s.replace(/\.(\d)$/, '.0$1')), s]), 'Safari' == G && '+' == s[1].slice(-1) ? ((G = 'WebKit Nightly'), (P = 'alpha'), (U = s[1].slice(0, -1))) : (U == s[1] || U == (s[2] = (/\bSafari\/([\d.]+\+?)/i.exec(t) || 0)[1])) && (U = null), (s[1] = (/\bChrome\/([\d.]+)/i.exec(t) || 0)[1]), 537.36 == s[0] && 537.36 == s[2] && parseFloat(s[1]) >= 28 && 'WebKit' == B && (B = ['Blink']), k && (b || s[1]) ? (B && (B[1] = 'like Chrome'), (s = s[1] || ((s = s[0]) < 530 ? 1 : s < 532 ? 2 : s < 532.05 ? 3 : s < 533 ? 4 : s < 534.03 ? 5 : s < 534.07 ? 6 : s < 534.1 ? 7 : s < 534.13 ? 8 : s < 534.16 ? 9 : s < 534.24 ? 10 : s < 534.3 ? 11 : s < 535.01 ? 12 : s < 535.02 ? '13+' : s < 535.07 ? 15 : s < 535.11 ? 16 : s < 535.19 ? 17 : s < 536.05 ? 18 : s < 536.1 ? 19 : s < 537.01 ? 20 : s < 537.11 ? '21+' : s < 537.13 ? 23 : s < 537.18 ? 24 : s < 537.24 ? 25 : s < 537.36 ? 26 : 'Blink' != B ? '27' : '28'))) : (B && (B[1] = 'like Safari'), (s = (s = s[0]) < 400 ? 1 : s < 500 ? 2 : s < 526 ? 3 : s < 533 ? 4 : s < 534 ? '4+' : s < 535 ? 5 : s < 537 ? 6 : s < 538 ? 7 : s < 601 ? 8 : '8')), B && (B[1] += ' ' + (s += 'number' == typeof s ? '.x' : /[.+]/.test(s) ? '' : '+')), 'Safari' == G && (!U || parseInt(U) > 45) && (U = s)),
+            (s = (/\bAppleWebKit\/([\d.]+\+?)/i.exec(t) || 0)[1]) && ((s = [parseFloat(s.replace(/\.(\d)$/, '.0$1')), s]), 'Safari' == G && '+' == s[1].slice(-1) ? ((G = 'WebKit Nightly'), (P = 'alpha'), (U = s[1].slice(0, -1))) : (U == s[1] || U == (s[2] = (/\bSafari\/([\d.]+\+?)/i.exec(t) || 0)[1])) && (U = null), (s[1] = (/\bChrome\/([\d.]+)/i.exec(t) || 0)[1]), 537.36 == s[0] && 537.36 == s[2] && parseFloat(s[1]) >= 28 && 'WebKit' == B && (B = ['Blink']), k && (I || s[1]) ? (B && (B[1] = 'like Chrome'), (s = s[1] || ((s = s[0]) < 530 ? 1 : s < 532 ? 2 : s < 532.05 ? 3 : s < 533 ? 4 : s < 534.03 ? 5 : s < 534.07 ? 6 : s < 534.1 ? 7 : s < 534.13 ? 8 : s < 534.16 ? 9 : s < 534.24 ? 10 : s < 534.3 ? 11 : s < 535.01 ? 12 : s < 535.02 ? '13+' : s < 535.07 ? 15 : s < 535.11 ? 16 : s < 535.19 ? 17 : s < 536.05 ? 18 : s < 536.1 ? 19 : s < 537.01 ? 20 : s < 537.11 ? '21+' : s < 537.13 ? 23 : s < 537.18 ? 24 : s < 537.24 ? 25 : s < 537.36 ? 26 : 'Blink' != B ? '27' : '28'))) : (B && (B[1] = 'like Safari'), (s = (s = s[0]) < 400 ? 1 : s < 500 ? 2 : s < 526 ? 3 : s < 533 ? 4 : s < 534 ? '4+' : s < 535 ? 5 : s < 537 ? 6 : s < 538 ? 7 : s < 601 ? 8 : '8')), B && (B[1] += ' ' + (s += 'number' == typeof s ? '.x' : /[.+]/.test(s) ? '' : '+')), 'Safari' == G && (!U || parseInt(U) > 45) && (U = s)),
                 'Opera' == G && (s = /\bzbov|zvav$/.exec(V)) ? ((G += ' '), M.unshift('desktop mode'), 'zvav' == s ? ((G += 'Mini'), (U = null)) : (G += 'Mobile'), (V = V.replace(RegExp(' *' + s + '$'), ''))) : 'Safari' == G && /\bChrome\b/.exec(B && B[1]) && (M.unshift('desktop mode'), (G = 'Chrome Mobile'), (U = null), /\bOS X\b/.test(V) ? ((F = 'Apple'), (V = 'iOS 4.3+')) : (V = null)),
                 U && 0 == U.indexOf((s = /[\d.]+$/.exec(V))) && t.indexOf('/' + s + '-') > -1 && (V = v(V.replace(s, ''))),
                 B && !/\b(?:Avant|Nook)\b/.test(G) && (/Browser|Lunascape|Maxthon/.test(G) || ('Safari' != G && /^iOS/.test(V) && /\bSafari\b/.test(B[1])) || (/^(?:Adobe|Arora|Breach|Midori|Opera|Phantom|Rekonq|Rock|Samsung Internet|Sleipnir|Web)/.test(G) && B[1])) && (s = B[B.length - 1]) && M.push(s),
@@ -476,13 +476,13 @@
             );
         })();
         'function' == typeof define && 'object' == typeof define.amd && define.amd
-            ? ((i.platform = b),
+            ? ((i.platform = I),
               define(function () {
-                  return b;
+                  return I;
               }))
             : a && s
-              ? h(b, function (e, t) {
+              ? h(I, function (e, t) {
                     a[t] = e;
                 })
-              : (i.platform = b);
+              : (i.platform = I);
     }.call(this);

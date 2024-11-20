@@ -61,7 +61,7 @@ function v(e, t, n) {
     else if (!n.isRetry) return t(), !1;
     return !0;
 }
-function b(e, t, n, r, i) {
+function I(e, t, n, r, i) {
     var a, s;
     o.Z.dispatch({
         type: e,
@@ -74,7 +74,7 @@ function b(e, t, n, r, i) {
         reactionType: (null == i ? void 0 : i.burst) ? u.O.BURST : u.O.NORMAL
     });
 }
-function I(e) {
+function b(e) {
     let { channelId: t, messageId: n, emoji: r, userId: i, useTypeEndpoint: a = !1, type: s = u.O.NORMAL } = e,
         o = null != r.id ? ''.concat(r.name, ':').concat(r.id) : r.name;
     return null == i ? g.ANM.REACTIONS(t, n, o) : a ? g.ANM.REACTION_WITH_TYPE(t, n, o, i, s) : g.ANM.REACTION(t, n, o, i);
@@ -89,7 +89,7 @@ async function T(e) {
                       let i = null !== (r = n.id) && void 0 !== r ? r : n.name;
                       return g.ANM.POLL_ANSWER_VOTERS(e, t, i);
                   })(t, n, r)
-                : I({
+                : b({
                       channelId: t,
                       messageId: n,
                       emoji: r
@@ -138,14 +138,14 @@ async function S(e, t, n) {
     }
     let _ = await R(n, o);
     return (
-        b('MESSAGE_REACTION_ADD', e, t, n, {
+        I('MESSAGE_REACTION_ADD', e, t, n, {
             burst: o,
             colors: _
         }),
         await c.Z.unarchiveThreadIfNecessary(e),
         a.tn
             .put({
-                url: I({
+                url: b({
                     channelId: e,
                     messageId: t,
                     emoji: n,
@@ -180,7 +180,7 @@ async function S(e, t, n) {
                             isRetry: !0
                         }),
                     { isRetry: d }
-                ) && (b('MESSAGE_REACTION_REMOVE', e, t, n, { burst: o }), o ? s.uv.announce(E.intl.formatToPlainString(E.t['fJeu8/'], { name: n.name })) : s.uv.announce(E.intl.formatToPlainString(E.t.UUn5V1, { name: n.name })));
+                ) && (I('MESSAGE_REACTION_REMOVE', e, t, n, { burst: o }), o ? s.uv.announce(E.intl.formatToPlainString(E.t['fJeu8/'], { name: n.name })) : s.uv.announce(E.intl.formatToPlainString(E.t.UUn5V1, { name: n.name })));
             })
     );
 }
@@ -225,14 +225,14 @@ async function C(e) {
     let { channelId: t, messageId: n, emoji: r, location: i = 'Message', userId: o, options: l } = e,
         d = null != l && !!l.burst,
         f = null != l && !!l.isRetry;
-    b('MESSAGE_REACTION_REMOVE', t, n, r, {
+    I('MESSAGE_REACTION_REMOVE', t, n, r, {
         userId: o,
         burst: d
     }),
         await c.Z.unarchiveThreadIfNecessary(t),
         a.tn
             .del({
-                url: I({
+                url: b({
                     channelId: t,
                     messageId: n,
                     emoji: r,
@@ -270,7 +270,7 @@ async function C(e) {
                     )
                 ) {
                     let e = await R(r, d);
-                    b('MESSAGE_REACTION_ADD', t, n, r, {
+                    I('MESSAGE_REACTION_ADD', t, n, r, {
                         userId: o,
                         burst: d,
                         colors: e

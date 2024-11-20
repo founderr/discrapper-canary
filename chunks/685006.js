@@ -18,7 +18,7 @@ var i = n(200651),
     f = n(61356),
     g = n(981631),
     C = n(314734),
-    x = n(902265);
+    x = n(589858);
 function _(e) {
     let { channel: t, entryPointCommandButtonRef: n, type: r } = e,
         { isInitialLoading: a, application: s, primaryEntryPointCommand: u } = (0, d.Z)({ channel: t }),

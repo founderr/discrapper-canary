@@ -10,7 +10,7 @@ var r = n(200651),
     o = n(1561),
     l = n(743236),
     u = n(939350),
-    c = n(7758);
+    c = n(667947);
 function d(e) {
     let { children: t, color: n = 'default', isFocused: a = !1, disabled: d = !1, keepItemStyles: f = !1, menuItemProps: _, action: p, dontCloseOnActionIfHoldingShiftKey: h, dontCloseOnAction: m, onClose: g } = e,
         E = i.useRef(null);
@@ -24,10 +24,10 @@ function d(e) {
             },
             [p, g, h, m]
         ),
-        b = f ? s()(c.item, u._[n], { [c.focused]: a }) : c.customItem;
+        I = f ? s()(c.item, u._[n], { [c.focused]: a }) : c.customItem;
     return (0, r.jsx)(o.P, {
         innerRef: E,
-        className: b,
+        className: I,
         onClick: d ? void 0 : v,
         'aria-disabled': d,
         ..._,

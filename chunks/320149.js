@@ -21,19 +21,19 @@ var i = n(200651),
     E = n(933557),
     I = n(287746),
     C = n(388032),
-    v = n(232514),
-    N = n(956586);
+    v = n(868912),
+    N = n(542348);
 function T(e) {
     let { channel: t, baseChannelId: n } = e,
         T = (0, E.ZP)(t),
         S = (0, h.K)(),
         A = (0, h.V)(),
-        b = (0, l.e7)([d.Z], () => d.Z.isMessageRequest(t.id)),
-        x = (0, l.e7)([u.Z], () => u.Z.isSpam(t.id)),
+        x = (0, l.e7)([d.Z], () => d.Z.isMessageRequest(t.id)),
+        b = (0, l.e7)([u.Z], () => u.Z.isSpam(t.id)),
         Z = (0, p.V)(t.id, t.getRecipientId()),
         L = r.useCallback(() => {
-            f.Z.closeChannelSidebar(_.uZ), b && S && (0, g.Kh)(t.id), x && A && (0, g.Kh)(t.id);
-        }, [t.id, x, A, b, S]),
+            f.Z.closeChannelSidebar(_.uZ), x && S && (0, g.Kh)(t.id), b && A && (0, g.Kh)(t.id);
+        }, [t.id, b, A, x, S]),
         y = r.useCallback(() => {
             (0, a.showToast)((0, a.createToast)(C.intl.string(C.t.pIQ3h4), a.ToastType.FAILURE));
         }, []),
@@ -64,7 +64,7 @@ function T(e) {
                     inSidebar: !0
                 })
             }),
-            x &&
+            b &&
                 (0, i.jsxs)('div', {
                     className: N.hamBanner,
                     children: [

@@ -29,8 +29,8 @@ var r = n(200651),
     g = n(946241),
     E = n(98278),
     v = n(869765),
-    b = n(243317),
-    I = n(621853),
+    I = n(243317),
+    b = n(621853),
     T = n(518950),
     S = n(484459),
     y = n(184301),
@@ -50,7 +50,7 @@ var r = n(200651),
     B = n(47930),
     G = n(981631),
     Z = n(388032),
-    F = n(12645),
+    F = n(825193),
     V = n(255963);
 function j(e) {
     let { avatarSrc: t, avatarDecorationSrc: n, compact: i, onClick: a, onContextMenu: o, onMouseDown: l, onMouseEnter: u, onMouseLeave: c, onKeyDown: d, showCommunicationDisabledStyles: f = !1, className: _ } = e;
@@ -169,9 +169,9 @@ let W = (e) => {
 };
 function K(e) {
     let { currentUserIsPremium: t, author: n } = e,
-        i = (0, l.e7)([I.Z], () => {
+        i = (0, l.e7)([b.Z], () => {
             var e;
-            return null === (e = I.Z.getUserProfile(n.id)) || void 0 === e ? void 0 : e.premiumSince;
+            return null === (e = b.Z.getUserProfile(n.id)) || void 0 === e ? void 0 : e.premiumSince;
         });
     return (0, r.jsx)(u.Tooltip, {
         tooltipClassName: F.nitroAuthorBadgeTootip,
@@ -193,7 +193,7 @@ function K(e) {
     });
 }
 function z(e) {
-    let { message: t, repliedMessage: n, compact: a = !1, renderPopout: f, showTimestampOnHover: E, roleIcon: I, subscribeToGroupId: S, hideTimestamp: k, className: V, channel: W } = e,
+    let { message: t, repliedMessage: n, compact: a = !1, renderPopout: f, showTimestampOnHover: E, roleIcon: b, subscribeToGroupId: S, hideTimestamp: k, className: V, channel: W } = e,
         z = i.useMemo(() => (null != f ? (e) => f(e, t) : void 0), [f, t]),
         [, q] = (0, h.ZP)(t.author.id, e.guildId),
         Q = (0, l.e7)([N.Z], () => N.Z.getGuild(e.guildId), [e.guildId]),
@@ -202,7 +202,7 @@ function z(e) {
         $ = (function (e) {
             var t, n;
             let { props: a, guildId: s, handleRenderPopout: f, showCommunicationDisabledStyles: _ = !1, className: p } = e,
-                { message: h, author: m, compact: g = !1, subscribeToGroupId: E, animate: v = !0, onContextMenu: b, onClickAvatar: I, onPopoutRequestClose: S, showAvatarPopout: N } = a,
+                { message: h, author: m, compact: g = !1, subscribeToGroupId: E, animate: v = !0, onContextMenu: I, onClickAvatar: b, onPopoutRequestClose: S, showAvatarPopout: N } = a,
                 [C, R] = i.useState(!1),
                 { analyticsLocations: L } = (0, d.ZP)(c.Z.AVATAR),
                 x = (0, l.e7)([A.ZP], () => {
@@ -277,8 +277,8 @@ function z(e) {
                                     avatarSrc: V,
                                     avatarDecorationSrc: B,
                                     compact: g,
-                                    onClick: I,
-                                    onContextMenu: b,
+                                    onClick: b,
+                                    onContextMenu: I,
                                     onMouseDown: e.onMouseDown,
                                     onKeyDown: e.onKeyDown,
                                     showCommunicationDisabledStyles: _,
@@ -293,8 +293,8 @@ function z(e) {
                             avatarSrc: V,
                             avatarDecorationSrc: B,
                             compact: g,
-                            onClick: I,
-                            onContextMenu: b,
+                            onClick: b,
+                            onContextMenu: I,
                             onMouseDown: void 0,
                             onKeyDown: void 0,
                             showCommunicationDisabledStyles: _,
@@ -312,7 +312,7 @@ function z(e) {
             return null !== (t = e.displayCompactAvatars) && void 0 !== t ? t : A.ZP.displayCompactAvatars;
         }),
         et =
-            (!a || ee) && null != I && null != Q
+            (!a || ee) && null != b && null != Q
                 ? (0, r.jsx)(
                       u.Popout,
                       {
@@ -323,13 +323,13 @@ function z(e) {
                           position: 'right',
                           renderPopout: () =>
                               (0, r.jsx)(U.Z, {
-                                  roleIcon: I,
+                                  roleIcon: b,
                                   guild: Q
                               }),
                           children: (e) => {
                               let { onClick: t } = e;
                               return (0, r.jsx)(p.Z, {
-                                  ...I,
+                                  ...b,
                                   className: F.roleIcon,
                                   onClick: t
                               });
@@ -337,11 +337,11 @@ function z(e) {
                       },
                       'role-icon-children'
                   )
-                : (!a || ee) && null != I
+                : (!a || ee) && null != b
                   ? (0, r.jsx)(
                         p.Z,
                         {
-                            ...I,
+                            ...b,
                             className: F.roleIcon
                         },
                         'role-icon-children'
@@ -359,7 +359,7 @@ function z(e) {
         ea = x.ZP.isPremium(t.author),
         es = x.ZP.isPremium(ei),
         eo = null == W ? void 0 : W.isPrivate();
-    (0, w.R)(null != I, 'Message Username') &&
+    (0, w.R)(null != b, 'Message Username') &&
         ea &&
         !a &&
         !eo &&
@@ -410,7 +410,7 @@ function z(e) {
                 )
             );
     let el = [];
-    (0, L.yE)(t.flags, G.iLy.SUPPRESS_NOTIFICATIONS) && el.push((0, r.jsx)(b.Z, {}, 'suppress-notifications'));
+    (0, L.yE)(t.flags, G.iLy.SUPPRESS_NOTIFICATIONS) && el.push((0, r.jsx)(I.Z, {}, 'suppress-notifications'));
     let eu = {};
     (eu[M.a.SYSTEM_TAG] = en), (eu[M.a.BADGES] = er);
     let ec = H(e, z, eu),

@@ -19,16 +19,16 @@ var r = n(200651),
     h = n(710867),
     m = n(312904),
     g = n(186917),
-    E = n(126268);
+    E = n(831748);
 let v = (e) => {
-        let { bannerAdjustment: t = 0, maxLoops: n, resetOnHover: a = !1, isHovering: o = !1, useOpacityOnHover: l = !0, autoPlay: u = !0, restartMethod: h, urlQueryString: g, profileEffectConfig: v, noBorderRadius: b = !1, introDelay: I = c.lG } = e,
+        let { bannerAdjustment: t = 0, maxLoops: n, resetOnHover: a = !1, isHovering: o = !1, useOpacityOnHover: l = !0, autoPlay: u = !0, restartMethod: h, urlQueryString: g, profileEffectConfig: v, noBorderRadius: I = !1, introDelay: b = c.lG } = e,
             T = i.useRef(null),
             [S, y] = i.useState([]);
         (0, m.Z)(v);
         let [A, N] = i.useState(0),
             [C, R] = i.useState(0),
             { accessibilityLabel: O } = v,
-            [D, L] = i.useState(-I),
+            [D, L] = i.useState(-b),
             {
                 stop: x,
                 reset: w,
@@ -37,7 +37,7 @@ let v = (e) => {
                 L((t) => t + e);
             });
         i.useEffect(() => {
-            L(-I), y((0, _.H)(v.effects));
+            L(-b), y((0, _.H)(v.effects));
         }, [v]),
             i.useEffect(() => {
                 let e = 0,
@@ -58,7 +58,7 @@ let v = (e) => {
                 ref: T,
                 className: s()(E.profileEffects, { [E.hovered]: o && l }),
                 children: (0, r.jsx)('div', {
-                    className: b ? E.innerNoRadius : E.inner,
+                    className: I ? E.innerNoRadius : E.inner,
                     children: S.map((e, i) => {
                         if (!M.current && v.animationType === d.Q.PERSISTENT && null != v.staticFrameSrc && 0 === i && !0 === u) {
                             var a, s, o, l;
@@ -99,7 +99,7 @@ let v = (e) => {
             })
         );
     },
-    b = (e) => {
+    I = (e) => {
         let { config: t, useThumbnail: n, bannerAdjustment: i = 0, noBorderRadius: a, isHovering: o = !1, useOpacityOnHover: l = !0 } = e,
             { reducedMotionSrc: u, thumbnailPreviewSrc: c, accessibilityLabel: d } = t;
         return (0, r.jsx)('div', {
@@ -123,7 +123,7 @@ t.Z = (e) => {
         f = (0, _.C)(null == c ? void 0 : c.config);
     return null != c && null != f && (t || e.shopPreview || c.config.animationType !== d.Q.INTERMITTENT)
         ? (!t && e.shopPreview) || (!t && c.config.animationType === d.Q.PERSISTENT) || n || (!1 === e.autoPlay && !1 === e.isHovering)
-            ? (0, r.jsx)(b, {
+            ? (0, r.jsx)(I, {
                   useThumbnail: e.useThumbnail,
                   config: f,
                   bannerAdjustment: e.bannerAdjustment,

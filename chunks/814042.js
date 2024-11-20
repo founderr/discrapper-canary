@@ -20,8 +20,8 @@ var r = n(200651),
     g = n(981631),
     E = n(474936),
     v = n(388032),
-    b = n(646159),
-    I = n(867250);
+    I = n(992798),
+    b = n(867250);
 let T = () => (0, h.f)(!1),
     S = (e) => {
         var t, n, a;
@@ -39,7 +39,7 @@ let T = () => (0, h.f)(!1),
             N = (null == y ? void 0 : null === (t = y.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === E.Si.TIER_0,
             C = null != y || null != A;
         return (0, r.jsxs)('div', {
-            className: s()(b.upsellWrapper, { [b.unifyTrialUpsell]: C }),
+            className: s()(I.upsellWrapper, { [I.unifyTrialUpsell]: C }),
             children: [
                 C
                     ? (0, r.jsx)(f.ZP, {
@@ -58,18 +58,18 @@ let T = () => (0, h.f)(!1),
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)('img', {
-                                  className: b.upsellImage,
-                                  src: I,
+                                  className: I.upsellImage,
+                                  src: b,
                                   alt: v.intl.string(v.t.do7AoK)
                               }),
                               (0, r.jsx)(o.Text, {
-                                  className: b.upsellTitle,
+                                  className: I.upsellTitle,
                                   color: 'header-primary',
                                   variant: 'text-lg/semibold',
                                   children: v.intl.string(v.t.jJG1pq)
                               }),
                               (0, r.jsx)(o.Text, {
-                                  className: b.upsellDescription,
+                                  className: I.upsellDescription,
                                   variant: 'text-md/normal',
                                   children: v.intl.format(v.t.jt7JX1, { onClick: h })
                               })
@@ -81,7 +81,7 @@ let T = () => (0, h.f)(!1),
                         buttonText: C ? (N ? v.intl.string(v.t.hz78hI) : v.intl.string(v.t['Gd/XHB'])) : void 0
                     }),
                 (0, r.jsx)(o.Clickable, {
-                    className: b.upsellClose,
+                    className: I.upsellClose,
                     onClick: T,
                     children: (0, r.jsx)(o.XSmallIcon, {
                         size: 'md',

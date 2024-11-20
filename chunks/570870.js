@@ -1,68 +1,68 @@
-var i = t(200651),
-    r = t(192379),
-    l = t(512722),
-    u = t.n(l),
-    a = t(442837),
-    o = t(481060),
-    d = t(10718),
-    c = t(667204),
-    s = t(826298),
-    f = t(276022),
-    _ = t(978983),
-    E = t(430824),
-    p = t(594174),
-    g = t(981631),
-    h = t(689079),
-    A = t(388032),
-    m = t(418776);
-e.Z = (n) => {
-    let e,
-        { commandType: t, commandTargetId: l, channel: M, guildId: I, onHeightUpdate: Z, context: T } = n,
-        v = (0, a.e7)([E.Z], () => E.Z.getGuild(null != I ? I : M.guild_id)),
-        b = (0, a.e7)([p.default], () => p.default.getUser(l)),
-        C = (0, f.Z)({
-            user: b,
+var r = e(200651),
+    i = e(192379),
+    u = e(512722),
+    l = e.n(u),
+    a = e(442837),
+    o = e(481060),
+    d = e(10718),
+    c = e(667204),
+    s = e(826298),
+    f = e(276022),
+    E = e(978983),
+    _ = e(430824),
+    p = e(594174),
+    m = e(981631),
+    N = e(689079),
+    h = e(388032),
+    A = e(62352);
+t.Z = (n) => {
+    let t,
+        { commandType: e, commandTargetId: u, channel: C, guildId: T, onHeightUpdate: I, context: g } = n,
+        v = (0, a.e7)([_.Z], () => _.Z.getGuild(null != T ? T : C.guild_id)),
+        O = (0, a.e7)([p.default], () => p.default.getUser(u)),
+        R = (0, f.Z)({
+            user: O,
             guildId: null == v ? void 0 : v.id,
-            context: T
+            context: g
         }),
         {
             commands: S,
-            sectionDescriptors: x,
-            loading: N
+            sectionDescriptors: P,
+            loading: Z
         } = d.wi({
-            channel: M,
-            filters: { commandTypes: [t] },
-            options: { limit: h.lr },
+            channel: C,
+            filters: { commandTypes: [e] },
+            options: { limit: N.lr },
             allowFetch: !0
         }),
-        { sections: y } = r.useMemo(() => {
+        { sections: M } = i.useMemo(() => {
             let n = {};
             return (
-                x.forEach((e) => {
-                    n[e.id] = e;
+                P.forEach((t) => {
+                    n[t.id] = t;
                 }),
                 { sections: n }
             );
-        }, [x]),
-        O = r.useRef(N.current);
-    r.useEffect(() => {
-        N.current !== O.current && ((O.current = N.current), null == Z || Z());
-    }, [N, Z]);
-    let P = r.useCallback(
+        }, [P]),
+        b = i.useRef(Z.current);
+    i.useEffect(() => {
+        Z.current !== b.current && ((b.current = Z.current), null == I || I());
+    }, [Z, I]);
+    let y = i.useCallback(
         (n) => {
-            u()(null != M, 'menu item should not show if channel is null');
-            let e = y[n.applicationId],
-                t = null != e ? (0, s.ky)(e) : void 0;
-            return (0, i.jsx)(
+            l()(null != C, 'menu item should not show if channel is null');
+            let t = M[n.applicationId],
+                e = null != t ? (0, s.ky)(t) : void 0;
+            return (0, r.jsx)(
                 o.MenuItem,
                 {
                     id: n.id,
                     label: n.displayName,
                     iconLeft: () =>
-                        null != t
-                            ? (0, i.jsx)(t, {
-                                  channel: M,
-                                  section: e,
+                        null != e
+                            ? (0, r.jsx)(e, {
+                                  channel: C,
+                                  section: t,
                                   width: 18,
                                   height: 18,
                                   selectable: !1
@@ -73,54 +73,54 @@ e.Z = (n) => {
                             command: n,
                             optionValues: {},
                             context: {
-                                channel: M,
+                                channel: C,
                                 guild: v
                             },
-                            commandTargetId: l
+                            commandTargetId: u
                         });
                     }
                 },
                 n.id
             );
         },
-        [M, v, l, y]
+        [C, v, u, M]
     );
     if (
-        (N.current
-            ? (e = (0, i.jsx)(
+        (Z.current
+            ? (t = (0, r.jsx)(
                   o.MenuItem,
                   {
                       id: 'menu-commands-placeholder',
-                      render: () => (0, i.jsx)(_.Z, {}),
+                      render: () => (0, r.jsx)(E.Z, {}),
                       disabled: !0
                   },
                   'menu-commands-placeholder'
               ))
-            : ((e =
+            : ((t =
                   0 === S.length
-                      ? (0, i.jsx)(
+                      ? (0, r.jsx)(
                             o.MenuItem,
                             {
                                 id: 'menu-commands-empty',
-                                label: A.intl.string(A.t.YSNlV1),
+                                label: h.intl.string(h.t.YSNlV1),
                                 disabled: !0
                             },
                             'menu-commands-empty'
                         )
-                      : S.map(P)),
-              null != C &&
-                  (e = (0, i.jsxs)(i.Fragment, {
-                      children: [e, (0, i.jsx)(o.MenuSeparator, {}, 'separator'), C]
+                      : S.map(y)),
+              null != R &&
+                  (t = (0, r.jsxs)(r.Fragment, {
+                      children: [t, (0, r.jsx)(o.MenuSeparator, {}, 'separator'), R]
                   }))),
-        !g.TPd.TEXTUAL.has(M.type))
+        !m.TPd.TEXTUAL.has(C.type))
     ) {
-        if (null == C) return null;
-        e = C;
+        if (null == R) return null;
+        t = R;
     }
-    return (0, i.jsx)(o.MenuItem, {
+    return (0, r.jsx)(o.MenuItem, {
         id: 'apps',
-        label: A.intl.string(A.t.PHjkRE),
-        listClassName: m.list,
-        children: e
+        label: h.intl.string(h.t.PHjkRE),
+        listClassName: A.list,
+        children: t
     });
 };

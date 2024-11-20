@@ -3,45 +3,45 @@ n.d(t, {
         return r;
     },
     M0: function () {
-        return a;
+        return l;
     },
     Od: function () {
         return o;
     },
     vG: function () {
-        return l;
+        return s;
     }
 });
 var i,
     r,
-    s = n(388032);
-let l = 'emails';
+    a = n(388032);
+let s = 'emails';
 ((i = r || (r = {})).COMMUNICATION = 'communication'), (i.SOCIAL = 'social'), (i.TIPS = 'tips'), (i.RECOMMENDATIONS_AND_EVENTS = 'recommendations_and_events'), (i.UPDATES_AND_ANNOUNCEMENTS = 'updates_and_announcements'), (i.FAMILY_CENTER_DIGEST = 'family_center_digest');
-let a = ['tips', 'recommendations_and_events', 'updates_and_announcements'],
+let l = ['tips', 'recommendations_and_events', 'updates_and_announcements'],
     o = [
         {
             category: 'communication',
-            label: () => s.intl.string(s.t['B75+xc']),
-            subLabel: () => s.intl.string(s.t.ZHg9TU)
+            label: () => a.intl.string(a.t['B75+xc']),
+            subLabel: () => a.intl.string(a.t.ZHg9TU)
         },
         {
             category: 'social',
-            label: () => s.intl.string(s.t.sxn7lZ),
-            subLabel: () => s.intl.string(s.t.l7sdzM)
+            label: () => a.intl.string(a.t.sxn7lZ),
+            subLabel: () => a.intl.string(a.t.l7sdzM)
         },
         {
             category: 'updates_and_announcements',
-            label: () => s.intl.string(s.t.EkxXhY),
-            subLabel: () => s.intl.string(s.t['8ba9Q0'])
+            label: () => a.intl.string(a.t.EkxXhY),
+            subLabel: () => a.intl.string(a.t['8ba9Q0'])
         },
         {
             category: 'tips',
-            label: () => s.intl.string(s.t.jNrkrK),
-            subLabel: () => s.intl.string(s.t['FF6/+P'])
+            label: () => a.intl.string(a.t.jNrkrK),
+            subLabel: () => a.intl.string(a.t['FF6/+P'])
         },
         {
             category: 'recommendations_and_events',
-            label: () => s.intl.string(s.t.E8g1l5),
-            subLabel: () => s.intl.string(s.t.X4JMt7)
+            label: () => a.intl.string(a.t.E8g1l5),
+            subLabel: () => a.intl.string(a.t.X4JMt7)
         }
     ];

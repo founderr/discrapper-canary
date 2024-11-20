@@ -9,7 +9,7 @@ var l = n(836560),
     u = n(857192),
     h = n(998502),
     m = n(996106),
-    p = n(80616),
+    p = n(901077),
     g = n(76238),
     f = n(852926),
     _ = n(186901),
@@ -42,7 +42,7 @@ let v = h.ZP.requireModule('discord_rpc').RPCWebSocket,
 function A(e) {
     return 'function' == typeof e ? e() : e;
 }
-function b() {
+function x() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
         t =
             e > 0
@@ -58,7 +58,7 @@ function b() {
                   };
     r.listen(E.V6Z + (e % E.frH), '127.0.0.1', t);
 }
-function x(e, t, n) {
+function b(e, t, n) {
     let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 200,
         r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
         l =
@@ -82,7 +82,7 @@ function x(e, t, n) {
 }
 function Z(e, t, n, i) {
     let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
-    x(
+    b(
         e,
         t,
         {
@@ -122,7 +122,7 @@ class O extends l.EventEmitter {
         let [n, i] = A(e.url).split('?'),
             r = A(e.method);
         if ('/rpc' === n && 'OPTIONS' === r) {
-            x(e, t, { body: '' });
+            b(e, t, { body: '' });
             return;
         }
         let l = 'POST' === r;
@@ -134,7 +134,7 @@ class O extends l.EventEmitter {
                     let { protocol: i, host: r } = o.parse(null !== (e = n.get('callback')) && void 0 !== e ? e : '');
                     i === location.protocol && r === location.host ? t.setHeader('Location', n.get('callback')) : t.setHeader('Location', N), t.writeHead(301), t.end();
                 },
-                c = new y(l ? x.bind(null, e, t) : s, l ? Z.bind(null, e, t, 400) : s, Number(n.get('v')), r);
+                c = new y(l ? b.bind(null, e, t) : s, l ? Z.bind(null, e, t, 400) : s, Number(n.get('v')), r);
             if (l)
                 (0, f.em)(c, A(e.headers).origin, n.get('client_id'))
                     .then(() => {
@@ -195,10 +195,10 @@ class O extends l.EventEmitter {
         super();
         let t = 0;
         (r = v.http.createServer()).on('error', (e) => {
-            T.error('Error: '.concat(e.message)), ('EADDRINUSE' === e.code || e.message.includes('EADDRINUSE')) && setTimeout(() => b(++t), 1000);
+            T.error('Error: '.concat(e.message)), ('EADDRINUSE' === e.code || e.message.includes('EADDRINUSE')) && setTimeout(() => x(++t), 1000);
         }),
             r.on('request', this.handleRequest.bind(this)),
-            b(t);
+            x(t);
         let n = {
             instanceId: null !== (e = r.instanceId) && void 0 !== e ? e : 0,
             server: r

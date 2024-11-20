@@ -22,8 +22,8 @@ var r,
     g = n(410575),
     E = n(2052),
     v = n(100527),
-    b = n(906732),
-    I = n(243778),
+    I = n(906732),
+    b = n(243778),
     T = n(339085),
     S = n(438332),
     y = n(664437),
@@ -57,7 +57,7 @@ var r,
     J = n(981631),
     $ = n(921944),
     ee = n(185923),
-    et = n(744924);
+    et = n(74353);
 let en = (0, B.Mg)(p.Z.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_HORIZONTAL),
     er = (0, B.Mg)(p.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
     ei = (e) => e.stopPropagation();
@@ -119,7 +119,7 @@ let ea = (e, t) => {
                 getRowProps: g,
                 gridContainerProps: E,
                 handleGridContainerKeyDown: v,
-                isUsingKeyboardNavigation: b
+                isUsingKeyboardNavigation: I
             } = (0, R.VO)({
                 columnCounts: r,
                 gridNavigatorId: X.Vr,
@@ -151,7 +151,7 @@ let ea = (e, t) => {
                 getRowProps: g,
                 gridContainerProps: E,
                 handleGridContainerKeyDown: v,
-                isUsingKeyboardNavigation: b
+                isUsingKeyboardNavigation: I
             }
         );
     },
@@ -185,7 +185,7 @@ t.Z = s.memo(
     s.forwardRef(function (e, t) {
         var n, r;
         let i,
-            { pickerIntention: o, channel: u, guildId: c, closePopout: d, emojiSize: p = X.Su.MEDIUM, hasTabWrapper: m = !1, containerContext: C = 0, includeCreateEmojiButton: D, onSelectEmoji: B, containerWidth: ea, onNavigateAway: ef, persistSearch: e_, className: ep, headerClassName: eh, analyticsOverride: em = ed, searchProps: eg = {}, wrapper: eE, shouldHidePickerActions: ev = !1, messageId: eb, renderHeader: eI, listHeaderClassName: eT, categoryListClassName: eS } = e,
+            { pickerIntention: o, channel: u, guildId: c, closePopout: d, emojiSize: p = X.Su.MEDIUM, hasTabWrapper: m = !1, containerContext: C = 0, includeCreateEmojiButton: D, onSelectEmoji: B, containerWidth: ea, onNavigateAway: ef, persistSearch: e_, className: ep, headerClassName: eh, analyticsOverride: em = ed, searchProps: eg = {}, wrapper: eE, shouldHidePickerActions: ev = !1, messageId: eI, renderHeader: eb, listHeaderClassName: eT, categoryListClassName: eS } = e,
             { onFocus: ey, onKeyDown: eA, autoFocus: eN = !0, accessory: eC } = eg,
             eR = (0, f.e7)([M.ZP], () => (null != c ? M.ZP.getDefaultChannel(c) : null), [c]),
             [eO, eD] = s.useState(null),
@@ -209,7 +209,7 @@ t.Z = s.memo(
                 }),
                 [eF, ej]
             ),
-            { analyticsLocations: eK } = (0, b.ZP)(v.Z.EMOJI_PICKER),
+            { analyticsLocations: eK } = (0, I.ZP)(v.Z.EMOJI_PICKER),
             { diversitySurrogate: ez } = (0, f.cj)([T.ZP], () => ({ diversitySurrogate: T.ZP.diversitySurrogate })),
             eq = (0, G.DV)(ex, u, o),
             eQ = null == eq ? 0 : eq.locked.length + eq.unlocked.length,
@@ -384,7 +384,7 @@ t.Z = s.memo(
                     var e;
                     eB(!eU), null === (e = eP.current) || void 0 === e || e.focus();
                 },
-                renderHeader: eI
+                renderHeader: eb
             }),
             to = [];
         o === ee.Hz.REACTION && to.push(_.z.SUPER_REACTIONS_NITRO_MARKETING), !T.ZP.hasFavoriteEmojis(ek) && to.push(_.z.EMOJI_PICKER_FAVORITE_EMOJIS_TIP);
@@ -413,7 +413,7 @@ t.Z = s.memo(
                                         channel: u,
                                         closePopout: d
                                     }),
-                                    (0, a.jsx)(I.ZP, {
+                                    (0, a.jsx)(b.ZP, {
                                         contentTypes: to,
                                         children: (e) => {
                                             let { visibleContent: t, markAsDismissed: n } = e;
@@ -449,7 +449,7 @@ t.Z = s.memo(
                                                         sectionDescriptors: e2,
                                                         setCollapsedSections: e$,
                                                         channelGuildId: ek,
-                                                        messageId: eb,
+                                                        messageId: eI,
                                                         isBurstReaction: eU,
                                                         listHeaderClassName: eT
                                                     })
@@ -479,7 +479,7 @@ t.Z = s.memo(
                 ]
             })
         });
-        return (0, a.jsx)(b.Gt, {
+        return (0, a.jsx)(I.Gt, {
             value: eK,
             children: tl
         });

@@ -33,14 +33,14 @@ t.Z = (e) => {
                 return p(e, null != i ? i : 0, null != r ? r : e);
             }
             let o = (0, l.throttle)(a, d),
-                b = (r) => {
+                I = (r) => {
                     if (null == n.current) return null;
                     let i = e(r),
                         a = t(i),
                         l = 1 === u(f) ? 'width' : 'height';
                     (n.current.style[l] = ''.concat(a, 'px')), !E.current && ((E.current = !0), null == s || s(a)), o(a, i);
                 },
-                I = (n) => {
+                b = (n) => {
                     m(!1);
                     let r = e(n),
                         i = t(r);
@@ -50,10 +50,10 @@ t.Z = (e) => {
                 S = _ ? 'pointermove' : 'mousemove',
                 y = n.current.ownerDocument;
             return (
-                y.addEventListener(T, I),
-                y.addEventListener(S, b),
+                y.addEventListener(T, b),
+                y.addEventListener(S, I),
                 () => {
-                    y.removeEventListener(T, I), y.removeEventListener(S, b), o.cancel();
+                    y.removeEventListener(T, b), y.removeEventListener(S, I), o.cancel();
                 }
             );
         }, [h, a, i, r, f, n, d, c, _, p, s]),

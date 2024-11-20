@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return h;
+        return P;
     }
 });
 var l = t(200651);
@@ -9,8 +9,8 @@ var i = t(866442),
     r = t(442837),
     a = t(481060),
     u = t(607070),
-    d = t(605436),
-    o = t(910693),
+    o = t(605436),
+    d = t(910693),
     s = t(434404),
     c = t(271383),
     Z = t(430824),
@@ -18,7 +18,7 @@ var i = t(866442),
     g = t(823379),
     m = t(981631),
     M = t(388032),
-    v = t(361916);
+    v = t(587525);
 function x(e, n) {
     var t, r;
     return (0, l.jsxs)('div', {
@@ -39,14 +39,14 @@ function x(e, n) {
         ]
     });
 }
-function h(e, n) {
+function P(e, n) {
     let t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
         v = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-        h = (0, r.e7)([Z.Z], () => Z.Z.getGuild(n)),
-        P = (0, r.e7)([Z.Z], () => Z.Z.getRoles(n)),
-        I = (0, r.e7)([u.Z], () => u.Z.roleStyle),
-        p = (0, o.sE)(n, {
+        P = (0, r.e7)([Z.Z], () => Z.Z.getGuild(n)),
+        h = (0, r.e7)([Z.Z], () => Z.Z.getRoles(n)),
+        p = (0, r.e7)([u.Z], () => u.Z.roleStyle),
+        I = (0, d.sE)(n, {
             location: i,
             targetUserId: e
         }),
@@ -61,18 +61,18 @@ function h(e, n) {
                 return {
                     userRoles: null != t ? t.roles : [],
                     isGuildMember: null != t,
-                    canManageRoles: null != h && f.Z.can(m.Plq.MANAGE_ROLES, h)
+                    canManageRoles: null != P && f.Z.can(m.Plq.MANAGE_ROLES, P)
                 };
             },
-            [e, n, h]
+            [e, n, P]
         );
-    if (__OVERLAY__ || null == b || null == h || !C) return null;
-    let j = f.Z.getHighestRole(h),
-        O = Object.values(P).filter((e) => !(0, d.pM)(h.id, e.id)),
+    if (__OVERLAY__ || null == b || null == P || !C) return null;
+    let j = f.Z.getHighestRole(P),
+        O = Object.values(h).filter((e) => !(0, o.pM)(P.id, e.id)),
         N =
             E && !v
                 ? O.map((t) => {
-                      let i = t.managed || !f.Z.isRoleHigher(h, j, t),
+                      let i = t.managed || !f.Z.isRoleHigher(P, j, t),
                           r = -1 !== b.indexOf(t.id);
                       return i && !r
                           ? null
@@ -80,7 +80,7 @@ function h(e, n) {
                                 a.MenuCheckboxItem,
                                 {
                                     id: t.id,
-                                    label: () => x(t, I),
+                                    label: () => x(t, p),
                                     disabled: i,
                                     action: () => {
                                         var l;
@@ -94,8 +94,8 @@ function h(e, n) {
                                                       [],
                                                       [l.id]
                                                   ),
-                                                  p(o.jQ.REMOVE_ROLE))
-                                                : (s.Z.updateMemberRoles(n, e, b.concat([l.id]), [l.id], []), p(o.jQ.ADD_ROLE)))
+                                                  I(d.jQ.REMOVE_ROLE))
+                                                : (s.Z.updateMemberRoles(n, e, b.concat([l.id]), [l.id], []), I(d.jQ.ADD_ROLE)))
                                         );
                                     },
                                     checked: r
@@ -104,13 +104,13 @@ function h(e, n) {
                             );
                   })
                 : O.filter((e) => -1 !== b.indexOf(e.id)).map((e) =>
-                      (0, d.pM)(h.id, e.id)
+                      (0, o.pM)(P.id, e.id)
                           ? null
                           : (0, l.jsx)(
                                 a.MenuItem,
                                 {
                                     id: e.id,
-                                    label: () => x(e, I)
+                                    label: () => x(e, p)
                                 },
                                 e.id
                             )

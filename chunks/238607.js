@@ -21,8 +21,8 @@ var r = n(200651),
     g = n(275920),
     E = n(906732),
     v = n(835473),
-    b = n(592745),
-    I = n(592125),
+    I = n(592745),
+    b = n(592125),
     T = n(757266),
     S = n(650774),
     y = n(430824),
@@ -53,13 +53,13 @@ function B(e) {
         }),
         z =
             (0, a.e7)(
-                [A.Z, b.Z, L.Z, T.Z],
+                [A.Z, I.Z, L.Z, T.Z],
                 () =>
                     null != Y &&
                     (0, w.t)({
                         applicationId: Y,
                         LibraryApplicationStore: A.Z,
-                        LaunchableGameStore: b.Z,
+                        LaunchableGameStore: I.Z,
                         DispatchApplicationStore: L.Z,
                         ConnectedAppsStore: T.Z
                     })
@@ -71,7 +71,7 @@ function B(e) {
             })
         ),
         Q = (0, a.e7)([D.Z], () => null != Y && D.Z.getState(Y, P.mFx.JOIN) === P.OcF.LOADING),
-        X = (0, a.e7)([I.Z, y.Z, S.Z, C.Z, R.Z, O.Z, N.Z], () =>
+        X = (0, a.e7)([b.Z, y.Z, S.Z, C.Z, R.Z, O.Z, N.Z], () =>
             (0, _.Z)({
                 user: t,
                 activity: B,
@@ -79,7 +79,7 @@ function B(e) {
                 channelId: K,
                 currentUser: n,
                 isEmbedded: H,
-                ChannelStore: I.Z,
+                ChannelStore: b.Z,
                 GuildStore: y.Z,
                 GuildMemberCountStore: S.Z,
                 RelationshipStore: C.Z,
@@ -110,7 +110,7 @@ function B(e) {
             if (X && null != Y && null != W) {
                 var e, n;
                 let r = R.Z.getVoiceChannelId(),
-                    i = I.Z.getChannel(r);
+                    i = b.Z.getChannel(r);
                 await l.Z.join({
                     userId: t.id,
                     sessionId: W,

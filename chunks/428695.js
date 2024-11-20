@@ -8,21 +8,21 @@ var i = n(200651),
     d = n(626135),
     u = n(981631),
     h = n(388032),
-    m = n(272064);
+    m = n(599293);
 let p = (0, s.debounce)(c.ZP.trackWithMetadata, 500);
 t.Z = function (e) {
-    let { guild: t, title: n, message: l, image: s, type: g, imageStyles: f, imageMarginX: _, imageMarginTop: E, trackingSource: I, undismissable: C, onDismissed: v, onClick: N, cta: T, ctaColor: S, centerText: A, className: b } = e;
+    let { guild: t, title: n, message: l, image: s, type: g, imageStyles: f, imageMarginX: _, imageMarginTop: E, trackingSource: I, undismissable: C, onDismissed: v, onClick: N, cta: T, ctaColor: S, centerText: A, className: x } = e;
     r.useEffect(() => {
         p(u.rMx.CHANNEL_NOTICE_VIEWED, {
             notice_type: g,
             guild_id: t.id
         });
     }, [t.id, g]);
-    let x = null;
+    let b = null;
     'function' == typeof T
-        ? (x = T())
+        ? (b = T())
         : null != T &&
-          (x = (0, i.jsx)(o.Button, {
+          (b = (0, i.jsx)(o.Button, {
               className: m.button,
               size: o.Button.Sizes.SMALL,
               onClick: () => {
@@ -60,7 +60,7 @@ t.Z = function (e) {
           }));
     let y = null != _ ? ''.concat(_, 'px') : '16px';
     return (0, i.jsxs)('div', {
-        className: a()(m.container, b),
+        className: a()(m.container, x),
         children: [
             !0 === C
                 ? null
@@ -93,7 +93,7 @@ t.Z = function (e) {
                 }),
             (0, i.jsxs)('div', {
                 className: m.message,
-                children: [Z, L, x]
+                children: [Z, L, b]
             })
         ]
     });

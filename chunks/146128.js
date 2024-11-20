@@ -6,7 +6,7 @@ n.d(t, {
         return m;
     },
     aO: function () {
-        return b;
+        return I;
     }
 }),
     n(47120);
@@ -77,7 +77,7 @@ function v(e) {
         null
     );
 }
-function b(e) {
+function I(e) {
     let { channelId: t, messageId: n, emojiName: i, disable: l, emojiRef: u } = e,
         c = (0, a.e7)([o.Z], () => o.Z.useReducedMotion),
         f = d.Z.useIsEligible(),

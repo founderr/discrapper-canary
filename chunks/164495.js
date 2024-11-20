@@ -1,6 +1,6 @@
 n.d(t, {
     i0: function () {
-        return E;
+        return _;
     },
     yD: function () {
         return h;
@@ -20,7 +20,7 @@ var o = n(120356),
     f = n(604162),
     p = n(46140),
     v = n(388032),
-    C = n(798020);
+    C = n(128220);
 function g(e) {
     let { quest: t, taskDetails: n } = e;
     return (0, r.jsx)(l.Button, {
@@ -64,7 +64,7 @@ let x = (e) => {
             children: v.intl.string(v.t.csptqa)
         });
     },
-    E = (e) => {
+    _ = (e) => {
         let { quest: t, useReducedMotion: n, isExpanded: o, className: s, ctaLabel: c, ...u } = e,
             m = (0, d.hf)({
                 quest: t,
@@ -81,19 +81,19 @@ let x = (e) => {
             children: null != c ? c : v.intl.string(v.t.cfY4PD)
         });
     },
-    _ = (e) => {
+    E = (e) => {
         var t;
         let { quest: n, useReducedMotion: o, isExpanded: i, awaitingConsoleConnections: l, hasMadeProgress: s, isProgressing: d, activeScreen: m, taskDetails: f } = e,
             v = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
             C = (0, u.P)({ location: p.dr.QUESTS_BAR }),
-            _ = (0, c.q8)(n);
+            E = (0, c.q8)(n);
         if (v)
-            return (0, r.jsx)(E, {
+            return (0, r.jsx)(_, {
                 quest: n,
                 useReducedMotion: o,
                 isExpanded: i
             });
-        if (_)
+        if (E)
             return (0, r.jsx)(g, {
                 quest: n,
                 taskDetails: f
@@ -117,7 +117,7 @@ function h(e) {
                     onClick: e.onBack,
                     children: (0, r.jsx)(l.ChevronSmallLeftIcon, { className: C.backIcon })
                 }),
-            (0, r.jsx)(_, { ...e })
+            (0, r.jsx)(E, { ...e })
         ]
     });
 }

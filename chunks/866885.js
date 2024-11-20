@@ -16,8 +16,8 @@ var r = n(200651),
     g = n(937995),
     E = n(366050),
     v = n(944486),
-    b = n(594174),
-    I = n(566620),
+    I = n(594174),
+    b = n(566620),
     T = n(317381),
     S = n(531826),
     y = n(175894),
@@ -30,9 +30,9 @@ var r = n(200651),
     L = n(918559),
     x = n(981631),
     w = n(354459),
-    M = n(207683),
-    P = n(957471),
-    k = n(152105);
+    M = n(938103),
+    P = n(497041),
+    k = n(852401);
 function U(e) {
     var t, n, a;
     let { channel: y, isLoading: A } = e,
@@ -86,7 +86,7 @@ function U(e) {
     }, [null == G ? void 0 : G.applicationId, ee]);
     if (null == G || null == V || (null == K && (0, C.Z)(y.id)) || null == F) return null;
     let ei = Array.from(G.userIds)
-            .map((e) => b.default.getUser(e))
+            .map((e) => I.default.getUser(e))
             .filter((e) => null != e),
         ea = {
             instance_id: null !== (a = null !== (n = G.compositeInstanceId) && void 0 !== n ? n : G.launchId) && void 0 !== a ? a : '',
@@ -143,7 +143,7 @@ function U(e) {
                                                     onMouseDown: i,
                                                     onMouseLeave: a,
                                                     onJumpToChannel: () => {
-                                                        en(), (0, I.tg)(L.Ez.PANEL);
+                                                        en(), (0, b.tg)(L.Ez.PANEL);
                                                     },
                                                     channel: y,
                                                     applicationId: G.applicationId,

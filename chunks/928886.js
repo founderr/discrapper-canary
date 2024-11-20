@@ -22,7 +22,7 @@ var i = n(200651),
     T = n(981631),
     E = n(474936),
     h = n(231338),
-    N = n(643985);
+    N = n(905994);
 function g(e) {
     var t;
     let { renderHeader: n, referralTrialOfferId: r, handleClose: g } = e,

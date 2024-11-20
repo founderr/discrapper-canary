@@ -16,8 +16,8 @@ var r = n(913527),
     g = n(474936),
     E = n(735825);
 let v = null,
-    b = !1;
-function I(e) {
+    I = !1;
+function b(e) {
     let t = u.Z.createFromServer(e.entitlement);
     (0, m._k)(t)
         ? T({ forceRefresh: !0 })
@@ -75,13 +75,13 @@ function T() {
         }
 }
 async function S() {
-    if (!b)
-        (b = !0),
+    if (!I)
+        (I = !0),
             await _.V(),
-            (b = !1),
+            (I = !1),
             a.Z.wait(() =>
                 (function () {
-                    if ((y(), h.Z.getFetchState() !== h.M.FETCHED || b)) return;
+                    if ((y(), h.Z.getFetchState() !== h.M.FETCHED || I)) return;
                     let e = (0, m.GT)();
                     if ((null == e ? void 0 : e.redeemable_at) == null) return;
                     let t = (null == e ? void 0 : e.redeemable_at) != null ? new Date(e.redeemable_at).getTime() - Date.now() : null;
@@ -112,7 +112,7 @@ class C extends s.Z {
                 POST_CONNECTION_OPEN: N,
                 CONNECTION_CLOSED: A,
                 ENTITLEMENT_FETCH_APPLICATION_SUCCESS: () => T(),
-                ENTITLEMENT_CREATE: I,
+                ENTITLEMENT_CREATE: b,
                 ENTITLEMENT_UPDATE: () => T(),
                 ENTITLEMENT_DELETE: () => T(),
                 LOGOUT: y

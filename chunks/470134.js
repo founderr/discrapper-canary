@@ -11,7 +11,7 @@ var i = n(200651),
     s = n(481060),
     o = n(923726),
     c = n(388032),
-    d = n(777893);
+    d = n(315353);
 function u(e) {
     let { text: t, hasScrolled: n } = e;
     return (0, i.jsxs)('div', {

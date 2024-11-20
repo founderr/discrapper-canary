@@ -27,7 +27,7 @@ var i = n(200651),
     I = n(133743),
     C = n(120549),
     v = n(979007),
-    N = n(870411);
+    N = n(463051);
 function T(e) {
     var t;
     let { onSelectApplication: n } = e,
@@ -35,8 +35,8 @@ function T(e) {
         S = r.useRef(null),
         {
             query: A,
-            page: b,
-            categoryId: x
+            page: x,
+            categoryId: b
         } = r.useMemo(() => {
             var e, t;
             let n = new URLSearchParams(T.search),
@@ -58,25 +58,25 @@ function T(e) {
             u.yC({
                 query: A,
                 options: {
-                    categoryId: x,
-                    page: b,
+                    categoryId: b,
+                    page: x,
                     pageSize: v.IV,
                     source: s.F.APP_DIRECTORY
                 }
             });
-    }, [x, b, A]);
+    }, [b, x, A]);
     let { fetchState: Z, searchResults: L } = (0, o.cj)([m.Z], () => ({
             fetchState: m.Z.getFetchState({
                 query: A,
-                categoryId: x,
-                page: b,
+                categoryId: b,
+                page: x,
                 pageSize: v.IV,
                 source: s.F.APP_DIRECTORY
             }),
             searchResults: m.Z.getSearchResults({
                 query: A,
-                categoryId: x,
-                page: b,
+                categoryId: b,
+                page: x,
                 pageSize: v.IV,
                 source: s.F.APP_DIRECTORY
             })
@@ -99,11 +99,11 @@ function T(e) {
             (e) => {
                 (0, I.pR)({
                     query: A,
-                    categoryId: x,
+                    categoryId: b,
                     page: e
                 });
             },
-            [x, A]
+            [b, A]
         ),
         j = r.useCallback(
             (e) => {
@@ -125,7 +125,7 @@ function T(e) {
                                 className: N.topFilterContainer,
                                 children: (0, i.jsx)(C.V, {
                                     countsByCategory: y,
-                                    selectedCategoryId: x,
+                                    selectedCategoryId: b,
                                     onSelectCategory: j
                                 })
                             }),
@@ -159,7 +159,7 @@ function T(e) {
                                 pageSize: v.IV,
                                 disablePaginationGap: !0,
                                 hideMaxPage: !0,
-                                currentPage: b,
+                                currentPage: x,
                                 onPageChange: R
                             })
                         ]
@@ -172,7 +172,7 @@ function T(e) {
                     className: N.sideFilterContent,
                     children: (0, i.jsx)(C.Z, {
                         countsByCategory: y,
-                        selectedCategoryId: x,
+                        selectedCategoryId: b,
                         onSelectCategory: j
                     })
                 })

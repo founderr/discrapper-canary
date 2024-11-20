@@ -13,7 +13,7 @@ var i = n(200651),
     d = n(486622),
     u = n(376191),
     h = n(388032),
-    m = n(209433);
+    m = n(970941);
 function p(e) {
     let { active: t, user: n, channel: p } = e,
         g = (0, c.K)(),
@@ -40,7 +40,7 @@ function p(e) {
             onRejectSuccess: _,
             onError: f
         }),
-        b = v || N || T || S || A;
+        x = v || N || T || S || A;
     return (0, i.jsxs)('div', {
         className: m.container,
         children: [
@@ -59,7 +59,7 @@ function p(e) {
                         onClick: (e) => {
                             e.stopPropagation(), C(p.id);
                         },
-                        disabled: b,
+                        disabled: x,
                         submitting: N || A,
                         children: h.intl.string(h.t.B2nygY)
                     }),
@@ -70,7 +70,7 @@ function p(e) {
                         onClick: (e) => {
                             e.stopPropagation(), I(p.id);
                         },
-                        disabled: b,
+                        disabled: x,
                         submitting: v || T || S,
                         children: h.intl.string(h.t.Kz8Pws)
                     })

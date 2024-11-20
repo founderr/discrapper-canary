@@ -16,8 +16,8 @@ var i,
     g = n(703558),
     E = n(984933),
     v = n(271383),
-    b = n(430824),
-    I = n(496675),
+    I = n(430824),
+    b = n(496675),
     T = n(306680),
     S = n(944486),
     y = n(914010),
@@ -51,7 +51,7 @@ let L = 'seenQSTutorial',
     Z = [],
     F = [];
 function V() {
-    (P = b.Z.getGuildCount() >= 3 || s().size(m.Z.getMutablePrivateChannels()) >= 20), (Z = []);
+    (P = I.Z.getGuildCount() >= 3 || s().size(m.Z.getMutablePrivateChannels()) >= 20), (Z = []);
 }
 function j(e) {
     let t = (0, d.Z)(e);
@@ -133,7 +133,7 @@ function Y(e, t) {
                               a = [];
                           for (let e = 1; e < F.length; e += 1) {
                               let t = j(F[e]);
-                              if (null != t) ((t.type !== c.h8.TEXT_CHANNEL && t.type !== c.h8.VOICE_CHANNEL) || I.Z.can(R.Plq.VIEW_CHANNEL, t.record)) && a.push(t);
+                              if (null != t) ((t.type !== c.h8.TEXT_CHANNEL && t.type !== c.h8.VOICE_CHANNEL) || b.Z.can(R.Plq.VIEW_CHANNEL, t.record)) && a.push(t);
                           }
                           a.length > 0 && i.push((0, c.o6)(O.intl.string(O.t['80lOZ2'])), ...a);
                           let o = (function (e) {
@@ -182,7 +182,7 @@ function Y(e, t) {
             !(function (e, t) {
                 switch (k) {
                     case c.h8.USER: {
-                        let t = b.Z.getGuild(y.Z.getGuildId());
+                        let t = I.Z.getGuild(y.Z.getGuildId());
                         e.unshift((0, c.o6)(null != t ? O.intl.formatToPlainString(O.t.FREzQk, { name: t.name }) : O.intl.string(O.t.XFYW1t))), (U = e);
                         break;
                     }
@@ -215,7 +215,7 @@ function W() {
 class K extends (i = o.ZP.PersistedStore) {
     initialize(e) {
         var t;
-        this.waitFor(v.ZP, b.Z, m.Z), this.syncWith([p.Z], () => !0), (M = l.K.get(L) || !1), (F = null !== (t = null == e ? void 0 : e.channelHistory) && void 0 !== t ? t : []);
+        this.waitFor(v.ZP, I.Z, m.Z), this.syncWith([p.Z], () => !0), (M = l.K.get(L) || !1), (F = null !== (t = null == e ? void 0 : e.channelHistory) && void 0 !== t ? t : []);
     }
     getState() {
         return { channelHistory: F };

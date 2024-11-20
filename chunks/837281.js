@@ -293,14 +293,14 @@ var t, n;
                         throw {
                             name: 'RetryError',
                             message: 'Unreachable hosts - your application id may be incorrect. If the error persists, contact support@algolia.com.',
-                            transporterStackTrace: I(f)
+                            transporterStackTrace: b(f)
                         };
                     var o = {
                             data: _,
                             headers: m,
                             method: g,
                             url: (function (e, t, n) {
-                                var r = b(n),
+                                var r = I(n),
                                     i = ''
                                         .concat(e.protocol, '://')
                                         .concat(e.url, '/')
@@ -362,7 +362,7 @@ var t, n;
                                             status: r,
                                             transporterStackTrace: t
                                         };
-                                    })(e, I(f)))
+                                    })(e, b(f)))
                                 );
                             }
                         };
@@ -487,7 +487,7 @@ var t, n;
                 };
             return d;
         }
-        function b(e) {
+        function I(e) {
             return Object.keys(e)
                 .map(function (t) {
                     var n;
@@ -495,7 +495,7 @@ var t, n;
                 })
                 .join('&');
         }
-        function I(e) {
+        function b(e) {
             return e.map(function (e) {
                 return T(e);
             });
@@ -954,7 +954,7 @@ var t, n;
             er = function (e) {
                 return function (n, r) {
                     var i = n.map(function (e) {
-                        return t(t({}, e), {}, { params: b(e.params || {}) });
+                        return t(t({}, e), {}, { params: I(e.params || {}) });
                     });
                     return e.transporter.read(
                         {
@@ -1331,7 +1331,7 @@ var t, n;
                     );
                 };
             },
-            eb = function (e) {
+            eI = function (e) {
                 return function (t) {
                     var r = t || {},
                         i = r.forwardToReplicas,
@@ -1353,7 +1353,7 @@ var t, n;
                     );
                 };
             },
-            eI = function (e) {
+            eb = function (e) {
                 return function (t) {
                     var r = t || {},
                         i = r.forwardToReplicas,
@@ -1666,7 +1666,7 @@ var t, n;
                             indexName: m
                         }),
                         v = [],
-                        b = p(
+                        I = p(
                             e.indexName,
                             m,
                             'copy',
@@ -1679,9 +1679,9 @@ var t, n;
                             )
                         );
                     return (
-                        v.push(b),
+                        v.push(I),
                         l(
-                            (u ? b.wait(_) : b)
+                            (u ? I.wait(_) : I)
                                 .then(function () {
                                     var e = E(
                                         a,
@@ -2077,8 +2077,8 @@ var t, n;
                 m,
                 g,
                 E,
-                b,
                 I,
+                b,
                 T,
                 D,
                 eE = {
@@ -2344,7 +2344,7 @@ var t, n;
                     };
                 };
             return (
-                (I = (b = t(
+                (b = (I = t(
                     t({}, e0),
                     {},
                     {
@@ -2419,7 +2419,7 @@ var t, n;
                                             searchSynonyms: eX,
                                             browseSynonyms: eg,
                                             deleteSynonym: eC,
-                                            clearSynonyms: eI,
+                                            clearSynonyms: eb,
                                             replaceAllObjects: eG,
                                             replaceAllSynonyms: eF,
                                             searchRules: eQ,
@@ -2429,7 +2429,7 @@ var t, n;
                                             saveRules: eY,
                                             replaceAllRules: eZ,
                                             browseRules: em,
-                                            clearRules: eb
+                                            clearRules: eI
                                         }
                                     });
                                 };
@@ -2489,7 +2489,7 @@ var t, n;
                         }
                     }
                 )).appId),
-                (T = s(void 0 !== b.authMode ? b.authMode : d.WithinHeaders, I, b.apiKey)),
+                (T = s(void 0 !== I.authMode ? I.authMode : d.WithinHeaders, b, I.apiKey)),
                 u(
                     {
                         transporter: (D = v(
@@ -2498,11 +2498,11 @@ var t, n;
                                     {
                                         hosts: [
                                             {
-                                                url: ''.concat(I, '-dsn.algolia.net'),
+                                                url: ''.concat(b, '-dsn.algolia.net'),
                                                 accept: _.Read
                                             },
                                             {
-                                                url: ''.concat(I, '.algolia.net'),
+                                                url: ''.concat(b, '.algolia.net'),
                                                 accept: _.Write
                                             }
                                         ].concat(
@@ -2513,19 +2513,19 @@ var t, n;
                                                     (e[t] = e[n]), (e[n] = r);
                                                 }
                                                 return e;
-                                            })([{ url: ''.concat(I, '-1.algolianet.com') }, { url: ''.concat(I, '-2.algolianet.com') }, { url: ''.concat(I, '-3.algolianet.com') }])
+                                            })([{ url: ''.concat(b, '-1.algolianet.com') }, { url: ''.concat(b, '-2.algolianet.com') }, { url: ''.concat(b, '-3.algolianet.com') }])
                                         )
                                     },
-                                    b
+                                    I
                                 ),
                                 {},
                                 {
-                                    headers: t(t(t({}, T.headers()), { 'content-type': 'application/x-www-form-urlencoded' }), b.headers),
-                                    queryParameters: t(t({}, T.queryParameters()), b.queryParameters)
+                                    headers: t(t(t({}, T.headers()), { 'content-type': 'application/x-www-form-urlencoded' }), I.headers),
+                                    queryParameters: t(t({}, T.queryParameters()), I.queryParameters)
                                 }
                             )
                         )),
-                        appId: I,
+                        appId: b,
                         addAlgoliaAgent: function (e, t) {
                             D.userAgent.add({
                                 segment: e,
@@ -2536,7 +2536,7 @@ var t, n;
                             return Promise.all([D.requestsCache.clear(), D.responsesCache.clear()]).then(function () {});
                         }
                     },
-                    b.methods
+                    I.methods
                 )
             );
         }

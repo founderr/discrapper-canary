@@ -22,8 +22,8 @@ var r = n(200651),
     g = n(475595),
     x = n(566078),
     S = n(164495),
-    E = n(472144),
-    _ = n(602667),
+    _ = n(472144),
+    E = n(602667),
     h = n(644646),
     T = n(604162),
     I = n(747717),
@@ -32,7 +32,7 @@ var r = n(200651),
     j = n(46140),
     D = n(981631),
     A = n(388032),
-    y = n(136880);
+    y = n(417575);
 function k(e) {
     var t;
     let { transitionState: n, onClose: i, quest: p, autoplay: k } = e,
@@ -70,7 +70,7 @@ function k(e) {
         transitionState: n,
         size: c.ModalSize.DYNAMIC,
         className: y.modalRoot,
-        children: (0, r.jsx)(_.A, {
+        children: (0, r.jsx)(E.A, {
             questOrQuests: p,
             questContent: v.jn.VIDEO_MODAL,
             minViewTimeSeconds: b.zw,
@@ -126,7 +126,7 @@ function k(e) {
                                                 (0, r.jsx)(c.Clickable, {
                                                     className: y.progressCont,
                                                     ...e,
-                                                    children: (0, r.jsx)(E.Z, {
+                                                    children: (0, r.jsx)(_.Z, {
                                                         quest: p,
                                                         size: 48,
                                                         percentComplete: Z,

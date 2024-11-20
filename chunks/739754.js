@@ -18,7 +18,7 @@ var r = n(200651),
     f = n(188597),
     _ = n(981631),
     p = n(388032),
-    h = n(238278);
+    h = n(875418);
 function m(e) {
     return {
         text: e,
@@ -88,11 +88,11 @@ t.ZP = i.memo(function (e) {
         null != e && (h = g(e));
     }
     if (null == h) return null;
-    let { text: v, icon: b, color: I } = h;
+    let { text: v, icon: I, color: b } = h;
     return (0, r.jsx)(E, {
-        icon: b,
+        icon: I,
         text: v,
         className: n,
-        color: I
+        color: b
     });
 });

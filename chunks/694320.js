@@ -20,8 +20,8 @@ var r = n(200651),
     g = n(626135),
     E = n(981631),
     v = n(474936),
-    b = n(388032),
-    I = n(438103);
+    I = n(388032),
+    b = n(228095);
 function T() {
     (0, l.openModalLazy)(async () => {
         let { default: e } = await n.e('3289').then(n.bind(n, 682609));
@@ -61,36 +61,36 @@ function S(e) {
               context: S,
               discountOffer: N,
               trialOffer: C,
-              children: b.intl.format(b.t.BNAIBQ, { onLearnMore: T })
+              children: I.intl.format(I.t.BNAIBQ, { onLearnMore: T })
           })
         : a
           ? (0, r.jsx)(l.Clickable, {
-                className: I.iconOnly,
+                className: b.iconOnly,
                 onClick: () => T(),
                 children: (0, r.jsx)(l.Tooltip, {
-                    text: b.intl.string(b.t['+eFIjY']),
+                    text: I.intl.string(I.t['+eFIjY']),
                     position: 'top',
                     children: (e) =>
                         (0, r.jsx)(l.NitroWheelIcon, {
                             size: 'md',
                             color: 'currentColor',
-                            className: I.premium,
+                            className: b.premium,
                             ...e
                         })
                 })
             })
           : (0, r.jsxs)('div', {
-                className: s()(I.root, n),
+                className: s()(b.root, n),
                 children: [
                     (0, r.jsx)(l.NitroWheelIcon, {
                         size: 'md',
-                        className: I.premium,
+                        className: b.premium,
                         color: d.JX.PREMIUM_TIER_2
                     }),
                     (0, r.jsx)(l.Text, {
-                        className: I.text,
+                        className: b.text,
                         variant: 'text-sm/normal',
-                        children: b.intl.format(b.t.BNAIBQ, { onLearnMore: T })
+                        children: I.intl.format(I.t.BNAIBQ, { onLearnMore: T })
                     })
                 ]
             });

@@ -27,8 +27,8 @@ var i = n(200651),
     T = n(118379),
     S = n(652515),
     A = n(544978),
-    b = n(540059),
-    x = n(724383),
+    x = n(540059),
+    b = n(724383),
     Z = n(135864),
     L = n(372900),
     y = n(6039),
@@ -69,7 +69,7 @@ var i = n(200651),
     eu = n(981631),
     eh = n(176505),
     em = n(290511),
-    ep = n(812040);
+    ep = n(530921);
 let eg = 'resizable-sidebar-width',
     ef = (0, c.Un)({
         createPromise: () => Promise.resolve().then(n.bind(n, 191741)),
@@ -87,7 +87,7 @@ let eg = 'resizable-sidebar-width',
         renderLoader: e_
     }),
     eI = (0, c.Un)({
-        createPromise: () => Promise.all([n.e('16114'), n.e('16514')]).then(n.bind(n, 998420)),
+        createPromise: () => Promise.all([n.e('16114'), n.e('30689')]).then(n.bind(n, 998420)),
         webpackId: 998420,
         name: 'GuildMemberApplicationReview',
         renderLoader: e_
@@ -105,13 +105,13 @@ let eg = 'resizable-sidebar-width',
         renderLoader: e_
     }),
     eN = (0, c.Un)({
-        createPromise: () => Promise.all([n.e('44156'), n.e('58227'), n.e('38359'), n.e('15023')]).then(n.bind(n, 603072)),
+        createPromise: () => Promise.all([n.e('44156'), n.e('58227'), n.e('38359'), n.e('66690')]).then(n.bind(n, 603072)),
         webpackId: 603072,
         name: 'ChannelsAndRolesPage',
         renderLoader: e_
     }),
     eT = (0, c.Un)({
-        createPromise: () => Promise.all([n.e('44156'), n.e('19878'), n.e('38359'), n.e('40942')]).then(n.bind(n, 599263)),
+        createPromise: () => Promise.all([n.e('44156'), n.e('19878'), n.e('38359'), n.e('65586')]).then(n.bind(n, 599263)),
         webpackId: 599263,
         name: 'GuildOnboardingPage',
         renderLoader: e_
@@ -214,8 +214,8 @@ let eg = 'resizable-sidebar-width',
                 )
               : (0, i.jsx)(eo.Z, {});
     }),
-    eb = (e) => (0, i.jsx)(eS, { ...e }),
-    ex = () => (0, i.jsx)(x.Z, {}),
+    ex = (e) => (0, i.jsx)(eS, { ...e }),
+    eb = () => (0, i.jsx)(b.Z, {}),
     eZ = (e) => {
         let { match: t } = e;
         return null != t.params.guildId
@@ -287,7 +287,7 @@ function eU(e) {
     let c = 'app view user trigger debugging';
     p.R6.useExperiment({ location: c }, { autoTrackExposure: !1 }), p.R6.trackExposure({ location: c });
     let _ = (0, u.e7)([C.Z], () => C.Z.isFullscreenInContext()),
-        E = (0, b.Q)('ChannelSidebar'),
+        E = (0, x.Q)('ChannelSidebar'),
         I = (0, er.useAppSidebarState)((e) => !e.isOpen);
     r.useLayoutEffect(() => {
         if (E) {
@@ -339,7 +339,7 @@ function eU(e) {
             orientation: f.y.HORIZONTAL_RIGHT,
             throttleDuration: 0
         }),
-        x = r.useCallback(() => {
+        b = r.useCallback(() => {
             er.useAppSidebarState.setState((e) => ({ isOpen: !e.isOpen }));
         }, []);
     if (
@@ -376,7 +376,7 @@ function eU(e) {
                     }),
                     E
                         ? (0, i.jsx)(m.Clickable, {
-                              onClick: x,
+                              onClick: b,
                               'aria-label': 'Resize Sidebar',
                               className: ep.sidebarResizeHandle,
                               onMouseDown: A
@@ -433,7 +433,7 @@ function eG() {
         g = (null == p ? void 0 : null === (e = p.params) || void 0 === e ? void 0 : e.channelId) === eh.oC.GUILD_ONBOARDING,
         f = l || a || c || h || g,
         E = r.useCallback(() => G.Z.openSidebar(), []),
-        C = (0, b.Q)('AppView');
+        C = (0, x.Q)('AppView');
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsxs)('div', {
             className: ep.container,
@@ -527,38 +527,38 @@ function eG() {
                                                 }),
                                                 (0, i.jsx)(I.Z, {
                                                     path: [eu.Z5c.CHANNEL_THREAD_VIEW(Y.Hw.guildId(), Y.Hw.channelId(), ':threadId', ':messageId?'), eu.Z5c.CHANNEL(eu.ME, Y.Hw.channelId()), eu.Z5c.CHANNEL(Y.Hw.guildId(), Y.Hw.channelId({ optional: !0 }), ':messageId?')],
-                                                    render: eb,
+                                                    render: ex,
                                                     impressionName: o.ImpressionNames.GUILD_CHANNEL,
                                                     disableTrack: !0
                                                 }),
                                                 (0, i.jsx)(I.Z, {
                                                     path: eu.Z5c.GLOBAL_DISCOVERY,
-                                                    render: ex,
+                                                    render: eb,
                                                     impressionName: o.ImpressionNames.GLOBAL_DISCOVERY,
                                                     disableTrack: !0,
                                                     exact: !0
                                                 }),
                                                 (0, i.jsx)(I.Z, {
                                                     path: eu.Z5c.GLOBAL_DISCOVERY_SERVERS,
-                                                    render: ex,
+                                                    render: eb,
                                                     impressionName: o.ImpressionNames.GLOBAL_DISCOVERY,
                                                     disableTrack: !0
                                                 }),
                                                 (0, i.jsx)(I.Z, {
                                                     path: eu.Z5c.GLOBAL_DISCOVERY_APPS,
-                                                    render: ex,
+                                                    render: eb,
                                                     impressionName: o.ImpressionNames.GLOBAL_DISCOVERY_APPS,
                                                     disableTrack: !0
                                                 }),
                                                 (0, i.jsx)(I.Z, {
                                                     path: eu.Z5c.QUEST_HOME,
-                                                    render: ex,
+                                                    render: eb,
                                                     impressionName: o.ImpressionNames.QUEST_HOME,
                                                     disableTrack: !0
                                                 }),
                                                 (0, i.jsx)(I.Z, {
                                                     path: eu.Z5c.GUILD_DISCOVERY,
-                                                    render: ex,
+                                                    render: eb,
                                                     impressionName: o.ImpressionNames.GUILD_DISCOVERY,
                                                     disableTrack: !0
                                                 }),

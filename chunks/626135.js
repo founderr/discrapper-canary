@@ -10,7 +10,7 @@ n.r(t),
             return d;
         },
         addExtraAnalyticsDecorator: function () {
-            return I;
+            return b;
         },
         clearAnalyticsEventsRecording: function () {
             return M;
@@ -62,9 +62,9 @@ var r = n(192379),
 let g = r.createContext({ location: {} }),
     E = {},
     v = performance.now(),
-    b = [];
-function I(e) {
-    b.push(e);
+    I = [];
+function b(e) {
+    I.push(e);
 }
 let T = {
     [p.rMx.APP_OPENED]: {
@@ -306,7 +306,7 @@ function C(e) {
     let o = f.Z.getProcessUptime();
     null != o && (s.uptime_process_renderer = Math.floor(o));
     let { utmSource: l, utmMedium: u, utmCampaign: c, utmContent: d } = E;
-    return (s.utm_source = null !== (t = s.utm_source) && void 0 !== t ? t : l), (s.utm_medium = null !== (n = s.utm_medium) && void 0 !== n ? n : u), (s.utm_campaign = null !== (r = s.utm_campaign) && void 0 !== r ? r : c), (s.utm_content = null !== (i = s.utm_content) && void 0 !== i ? i : d), b.forEach((e) => e(s)), s;
+    return (s.utm_source = null !== (t = s.utm_source) && void 0 !== t ? t : l), (s.utm_medium = null !== (n = s.utm_medium) && void 0 !== n ? n : u), (s.utm_campaign = null !== (r = s.utm_campaign) && void 0 !== r ? r : c), (s.utm_content = null !== (i = s.utm_content) && void 0 !== i ? i : d), I.forEach((e) => e(s)), s;
 }
 function R(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];

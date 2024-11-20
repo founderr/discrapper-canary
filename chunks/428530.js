@@ -11,7 +11,7 @@ var a = n(189223),
     i = n(410030),
     o = n(95398),
     c = n(981631),
-    s = n(986310);
+    s = n(219299);
 let d = {
     base00: l.Z.colors.BACKGROUND_SECONDARY.css,
     base03: l.Z.colors.TEXT_WARNING.css,

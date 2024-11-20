@@ -15,7 +15,7 @@ var i = n(200651),
     h = n(953989),
     m = n(981631),
     p = n(388032),
-    g = n(159172);
+    g = n(889280);
 function f(e) {
     let { className: t, application: n, onSelectCategory: f } = e,
         _ = (0, c.Z)({ application: n }),

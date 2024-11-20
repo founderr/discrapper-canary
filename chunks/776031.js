@@ -20,8 +20,8 @@ var r = n(200651),
     g = n(131951),
     E = n(944486),
     v = n(594174),
-    b = n(981631),
-    I = n(37113),
+    I = n(981631),
+    b = n(37113),
     T = n(65154),
     S = n(388032);
 function y(e, t) {
@@ -41,7 +41,7 @@ function y(e, t) {
                     if (null != C) {
                         let e = {
                             qualityOptions: {
-                                preset: I.tI.PRESET_CUSTOM,
+                                preset: b.tI.PRESET_CUSTOM,
                                 resolution: i,
                                 frameRate: a
                             },
@@ -65,7 +65,7 @@ function y(e, t) {
                     (u = t),
                         (c = {
                             ...D,
-                            object: b.qAy.RADIO_ITEM,
+                            object: I.qAy.RADIO_ITEM,
                             objectType: s
                         }),
                         (0, o.openModalLazy)(
@@ -77,17 +77,17 @@ function y(e, t) {
                                         analyticsSource: c
                                     });
                             },
-                            { contextKey: u === b.IlC.POPOUT ? o.POPOUT_MODAL_CONTEXT : o.DEFAULT_MODAL_CONTEXT }
+                            { contextKey: u === I.IlC.POPOUT ? o.POPOUT_MODAL_CONTEXT : o.DEFAULT_MODAL_CONTEXT }
                         );
                 }
             },
             [t, D, C, L]
         );
     if (null == e) return null;
-    let P = y === I.tI.PRESET_DOCUMENTS ? I.ws.FPS_30 : N,
-        k = I.af.map((e) => {
+    let P = y === b.tI.PRESET_DOCUMENTS ? b.ws.FPS_30 : N,
+        k = b.af.map((e) => {
             let { value: t, label: n } = e,
-                i = (0, c.Z)(I.tI.PRESET_CUSTOM, A, t, R, O, w);
+                i = (0, c.Z)(b.tI.PRESET_CUSTOM, A, t, R, O, w);
             return (0, r.jsx)(
                 o.MenuRadioItem,
                 {
@@ -95,14 +95,14 @@ function y(e, t) {
                     id: 'stream-settings-fps-'.concat(t),
                     label: n,
                     checked: t === N,
-                    action: () => M(i, A, t, b.Qqv.RESOLUTION)
+                    action: () => M(i, A, t, I.Qqv.RESOLUTION)
                 },
                 'stream-settings-fps-'.concat(t)
             );
         }),
-        U = I.km.map((e) => {
+        U = b.km.map((e) => {
             let { value: t, label: n } = e,
-                i = (0, c.Z)(I.tI.PRESET_CUSTOM, t, P, R, O, w);
+                i = (0, c.Z)(b.tI.PRESET_CUSTOM, t, P, R, O, w);
             return (
                 L && !x && (i = !1),
                 (0, r.jsx)(
@@ -112,7 +112,7 @@ function y(e, t) {
                         id: 'stream-settings-resolution-'.concat(t),
                         label: n,
                         checked: t === A,
-                        action: () => M(i, t, P, b.Qqv.RESOLUTION)
+                        action: () => M(i, t, P, I.Qqv.RESOLUTION)
                     },
                     'stream-settings-resolution-'.concat(t)
                 )

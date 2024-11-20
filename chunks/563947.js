@@ -32,8 +32,8 @@ var r = n(313921),
     g = n(223586),
     E = n(330718),
     v = n(199707),
-    b = n(106941),
-    I = n(414210),
+    I = n(106941),
+    b = n(414210),
     T = n(826768),
     S = n(447106),
     y = n(186699),
@@ -126,8 +126,8 @@ q = {
     'it-IT': g.Z,
     'ja-JP': E.Z,
     'ko-KR': v.Z,
-    'lt-LT': b.Z,
-    'lv-LV': I.Z,
+    'lt-LT': I.Z,
+    'lv-LV': b.Z,
     'nb-NO': T.Z,
     'nl-NL': S.Z,
     'pl-PL': y.Z,
@@ -181,14 +181,14 @@ function ee(e, t, n) {
         g = t.value ? p.format(h, { [m]: t.formatValue({ month: 'long' }) }) : '',
         E = (0, B.PK)(g),
         v = 'presentation' === e[J] ? u['aria-describedby'] : [E['aria-describedby'], u['aria-describedby']].filter(Boolean).join(' ') || void 0,
-        b = e[$],
-        I = (0, Z.useMemo)(() => b || (0, U.E7)(n), [b, n]),
+        I = e[$],
+        b = (0, Z.useMemo)(() => I || (0, U.E7)(n), [I, n]),
         T = Q(t, n, 'presentation' === e[J]);
     X.set(t, {
         ariaLabel: e['aria-label'],
         ariaLabelledBy: [l.id, e['aria-labelledby']].filter(Boolean).join(' ') || void 0,
         ariaDescribedBy: v,
-        focusManager: I
+        focusManager: b
     });
     let S = (0, Z.useRef)(e.autoFocus);
     (i =
@@ -200,14 +200,14 @@ function ee(e, t, n) {
                   'aria-describedby': v
               })),
         (0, Z.useEffect)(() => {
-            S.current && I.focusFirst(), (S.current = !1);
-        }, [I]),
+            S.current && b.focusFirst(), (S.current = !1);
+        }, [b]),
         (0, B.y$)(e.inputRef, t.value, t.setValue),
         (0, H.Q)(
             {
                 ...e,
                 focus() {
-                    I.focusFirst();
+                    b.focusFirst();
                 }
             },
             t,
@@ -224,7 +224,7 @@ function ee(e, t, n) {
         labelProps: {
             ...l,
             onClick: () => {
-                I.focusFirst();
+                b.focusFirst();
             }
         },
         fieldProps: (0, B.dG)(A, i, T, _, {
@@ -271,8 +271,8 @@ function en(e, t, n) {
         g = t.formatValue(m, { month: 'long' }),
         E = g ? s.format('selectedDateDescription', { date: g }) : '',
         v = (0, B.PK)(E),
-        b = [v['aria-describedby'], d['aria-describedby']].filter(Boolean).join(' ') || void 0,
-        I = (0, B.zL)(e),
+        I = [v['aria-describedby'], d['aria-describedby']].filter(Boolean).join(' ') || void 0,
+        b = (0, B.zL)(e),
         T = (0, Z.useMemo)(() => (0, U.E7)(n), [n]),
         { focusWithinProps: S } = (0, V.L_)({
             ...e,
@@ -282,11 +282,11 @@ function en(e, t, n) {
             onFocusWithinChange: e.onFocusChange
         });
     return {
-        groupProps: (0, B.dG)(I, p, d, v, S, {
+        groupProps: (0, B.dG)(b, p, d, v, S, {
             role: 'group',
             'aria-disabled': e.isDisabled || null,
             'aria-labelledby': h,
-            'aria-describedby': b,
+            'aria-describedby': I,
             onKeyDown(n) {
                 !t.isOpen && e.onKeyDown && e.onKeyDown(n);
             },
@@ -304,7 +304,7 @@ function en(e, t, n) {
             ...d,
             id: a,
             [J]: 'presentation',
-            'aria-describedby': b,
+            'aria-describedby': I,
             value: t.value,
             onChange: t.setValue,
             placeholderValue: e.placeholderValue,
@@ -328,7 +328,7 @@ function en(e, t, n) {
             'aria-haspopup': 'dialog',
             'aria-label': s.format('calendar'),
             'aria-labelledby': `${r} ${h}`,
-            'aria-describedby': b,
+            'aria-describedby': I,
             'aria-expanded': t.isOpen,
             isDisabled: e.isDisabled || e.isReadOnly,
             onPress: () => t.setOpen(!0)
@@ -439,11 +439,11 @@ function ei(e, t, n) {
             let e = new Date();
             return e.setHours(0), E.formatToParts(e).find((e) => 'dayPeriod' === e.type).value;
         }, [E]),
-        b = (0, Z.useMemo)(() => {
+        I = (0, Z.useMemo)(() => {
             let e = new Date();
             return e.setHours(12), E.formatToParts(e).find((e) => 'dayPeriod' === e.type).value;
         }, [E]),
-        I = (0, j.aQ)({
+        b = (0, j.aQ)({
             year: 'numeric',
             era: 'narrow',
             timeZone: 'UTC'
@@ -462,7 +462,7 @@ function ei(e, t, n) {
                         .toDate('UTC');
                     return {
                         era: e,
-                        formatted: I.formatToParts(t).find((e) => 'era' === e.type).value
+                        formatted: b.formatToParts(t).find((e) => 'era' === e.type).value
                     };
                 }),
                 i = (function (e) {
@@ -474,14 +474,14 @@ function ei(e, t, n) {
                 })(r.map((e) => e.formatted));
             if (i) for (let e of r) e.formatted = e.formatted.slice(i);
             return r;
-        }, [I, t.calendar, e.type]),
+        }, [b, t.calendar, e.type]),
         S = (n) => {
             if (t.isDisabled || t.isReadOnly) return;
             let i = r.current + n;
             switch (e.type) {
                 case 'dayPeriod':
                     if (g(v, n)) t.setSegment('dayPeriod', 0);
-                    else if (g(b, n)) t.setSegment('dayPeriod', 12);
+                    else if (g(I, n)) t.setSegment('dayPeriod', 12);
                     else break;
                     u.focusNext();
                     break;
@@ -532,7 +532,7 @@ function ei(e, t, n) {
     }),
         (0, B.zX)(n, 'input', (e) => {
             let { inputType: t, data: r } = e;
-            if ('insertCompositionText' === t) (n.current.textContent = y.current), (g(v, r) || g(b, r)) && S(r);
+            if ('insertCompositionText' === t) (n.current.textContent = y.current), (g(v, r) || g(I, r)) && S(r);
         }),
         (0, B.bt)(() => {
             let e = n.current;
@@ -630,11 +630,11 @@ function ea(e, t, n) {
             'aria-label': a.format('endDate'),
             'aria-labelledby': _
         },
-        b = (0, B.Me)(),
         I = (0, B.Me)(),
+        b = (0, B.Me)(),
         T = Q(t, n),
         S = [g['aria-describedby'], c['aria-describedby']].filter(Boolean).join(' ') || void 0,
-        y = (0, Z.useMemo)(() => (0, U.E7)(n, { accept: (e) => e.id !== b }), [n, b]),
+        y = (0, Z.useMemo)(() => (0, U.E7)(n, { accept: (e) => e.id !== I }), [n, I]),
         A = {
             [$]: y,
             [J]: 'presentation',
@@ -679,18 +679,18 @@ function ea(e, t, n) {
         },
         buttonProps: {
             ...g,
-            id: b,
+            id: I,
             'aria-haspopup': 'dialog',
             'aria-label': a.format('calendar'),
-            'aria-labelledby': `${b} ${_}`,
+            'aria-labelledby': `${I} ${_}`,
             'aria-describedby': S,
             'aria-expanded': t.isOpen,
             isDisabled: e.isDisabled || e.isReadOnly,
             onPress: () => t.setOpen(!0)
         },
         dialogProps: {
-            id: I,
-            'aria-labelledby': `${b} ${_}`
+            id: b,
+            'aria-labelledby': `${I} ${_}`
         },
         startFieldProps: {
             ...E,

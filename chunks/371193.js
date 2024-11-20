@@ -31,7 +31,7 @@ var p = n(549639),
                     c = l.y;
                 void 0 !== u && void 0 !== c && ((i[s] = u), (a[s] = c));
             }
-            return b([n(e.x, i), n(e.y, a)], { stopTogether: !1 });
+            return I([n(e.x, i), n(e.y, a)], { stopTogether: !1 });
         }
         return null;
     },
@@ -66,7 +66,7 @@ var p = n(549639),
             }
         };
     },
-    b = function (e, t) {
+    I = function (e, t) {
         var n = 0,
             r = {},
             i = !(t && !1 === t.stopTogether),
@@ -95,7 +95,7 @@ var p = n(549639),
             };
         return a;
     },
-    I = function (e) {
+    b = function (e) {
         return E(new s(0), {
             toValue: 0,
             delay: e,
@@ -143,13 +143,13 @@ e.exports = {
         for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
         return new d(e, n);
     },
-    delay: I,
+    delay: b,
     sequence: v,
-    parallel: b,
+    parallel: I,
     stagger: function (e, t) {
-        return b(
+        return I(
             t.map(function (t, n) {
-                return v([I(e * n), t]);
+                return v([b(e * n), t]);
             })
         );
     },

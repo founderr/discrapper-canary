@@ -8,27 +8,27 @@ n(192379);
 var r = n(120356),
     s = n.n(r),
     a = n(442837),
-    l = n(481060),
-    o = n(556296),
+    o = n(481060),
+    l = n(556296),
     c = n(13140),
     d = n(981631),
-    u = n(9077);
+    u = n(389439);
 let h = {
     [d.kg4.TOGGLE_MUTE]: {
         legacy: {
-            slash: l.MicrophoneSlashIcon,
-            default: l.MicrophoneIcon
+            slash: o.MicrophoneSlashIcon,
+            default: o.MicrophoneIcon
         },
         new: {
-            slash: l.MicrophoneSlashIcon,
-            default: l.MicrophoneIcon
+            slash: o.MicrophoneSlashIcon,
+            default: o.MicrophoneIcon
         }
     }
 };
 function p(e) {
     let { value: t, action: n, shouldShow: r } = e,
-        d = (0, a.e7)([o.Z], () => o.Z.getKeybindForAction(n, !1, !0)),
-        p = (0, l.useRedesignIconContext)().enabled;
+        d = (0, a.e7)([l.Z], () => l.Z.getKeybindForAction(n, !1, !0)),
+        p = (0, o.useRedesignIconContext)().enabled;
     if (null == d || !r) return null;
     let f = c.BB(d.shortcut),
         g = p ? h[n].new : h[n].legacy,
@@ -41,7 +41,7 @@ function p(e) {
                 size: 'xs',
                 color: 'currentColor'
             }),
-            (0, i.jsx)(l.Text, {
+            (0, i.jsx)(o.Text, {
                 variant: 'text-xxs/semibold',
                 className: s()(u.keybindIndicatorText),
                 children: f

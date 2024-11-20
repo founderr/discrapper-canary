@@ -1,23 +1,23 @@
 t.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var i = t(200651);
 t(192379);
-var r = t(481060),
-    o = t(267097),
+var l = t(481060),
+    r = t(267097),
     a = t(752053),
-    l = t(971653);
-function s(e) {
+    s = t(18678);
+function o(e) {
     let { onClose: n } = e,
-        { refreshCategories: t } = (0, o.Z)();
+        { refreshCategories: t } = (0, r.Z)();
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(r.ModalHeader, {
-                className: l.header,
-                children: (0, i.jsx)(r.ModalCloseButton, {
-                    className: l.closeButton,
+            (0, i.jsx)(l.ModalHeader, {
+                className: s.header,
+                children: (0, i.jsx)(l.ModalCloseButton, {
+                    className: s.closeButton,
                     onClick: n
                 })
             }),

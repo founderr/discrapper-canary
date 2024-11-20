@@ -18,18 +18,18 @@ var i = n(442837),
     d = n(938475),
     f = n(652853),
     _ = n(228168),
-    p = n(69035);
+    p = n(676411);
 let h = 3;
 function m(e) {
     let { user: t, guild: n, channel: m, onAction: g, onClose: E } = e,
         { profileType: v } = (0, f.z)(),
-        b = (0, i.Wu)([d.ZP], () =>
+        I = (0, i.Wu)([d.ZP], () =>
             d.ZP.getVoiceStatesForChannel(m).map((e) => {
                 let { user: t } = e;
                 return t;
             })
         ),
-        I = m.isGuildStageVoice() ? a.StageIcon : a.VoiceNormalIcon,
+        b = m.isGuildStageVoice() ? a.StageIcon : a.VoiceNormalIcon,
         T = v === _.y0.FULL_SIZE,
         S = v === _.y0.PANEL;
     return (0, r.jsxs)('div', {
@@ -48,7 +48,7 @@ function m(e) {
             (0, r.jsxs)('div', {
                 className: p.voiceChannelText,
                 children: [
-                    (0, r.jsx)(I, {
+                    (0, r.jsx)(b, {
                         size: 'xxs',
                         color: a.tokens.colors.INTERACTIVE_NORMAL,
                         className: p.voiceIcon
@@ -68,7 +68,7 @@ function m(e) {
                 ]
             }),
             (0, r.jsx)(l.Z, {
-                users: b,
+                users: I,
                 guildId: n.id,
                 channelId: m.id,
                 maxUsers: h,

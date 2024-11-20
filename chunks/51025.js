@@ -18,10 +18,10 @@ n.d(t, {
         return N;
     },
     cG: function () {
-        return b;
+        return I;
     },
     li: function () {
-        return I;
+        return b;
     },
     ob: function () {
         return E;
@@ -101,7 +101,7 @@ function v(e) {
             location: o
         });
 }
-function b(e, t, n) {
+function I(e, t, n) {
     (0, p.l)(e.id, t).then(() => {
         i.Z.dispatch({
             type: 'DISPATCH_APPLICATION_REPAIR',
@@ -116,7 +116,7 @@ function b(e, t, n) {
             location: n
         });
 }
-function I(e, t, n, r) {
+function b(e, t, n, r) {
     let a = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
     !(function (e, t, n, r) {
         if (s.ZP.getRunningDiscordApplicationIds().includes(e.id)) return;

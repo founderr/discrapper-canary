@@ -16,7 +16,7 @@ var r = n(200651),
     u = n(481060),
     c = n(600164),
     d = n(313201),
-    f = n(618765);
+    f = n(487760);
 function _(e, t, n) {
     return (
         t in e
@@ -106,7 +106,7 @@ function m(e) {
             async scrollToStart() {},
             async scrollToEnd() {}
         }),
-        { ref: v, ...b } = E.containerProps;
+        { ref: v, ...I } = E.containerProps;
     return (
         (0, u.useFocusLock)(v),
         (0, r.jsx)(o.bG, {
@@ -114,7 +114,7 @@ function m(e) {
             children: (0, r.jsx)('div', {
                 ref: v,
                 className: p,
-                ...b,
+                ...I,
                 role: 'listbox',
                 children: i
                     ? (0, r.jsx)(u.Scroller, {

@@ -21,8 +21,8 @@ var i = n(399606),
     g = n(13140),
     E = n(763296),
     v = n(981631),
-    b = n(388032),
-    I = n(883849);
+    I = n(388032),
+    b = n(298763);
 function T(e) {
     let { soundboardSound: t, closePicker: T } = e,
         S = (0, d.Iu)((e) => e.searchQuery),
@@ -38,12 +38,12 @@ function T(e) {
                     ? (0, r.jsx)(o.Z, {
                           emojiId: t.emojiId,
                           emojiName: t.emojiName,
-                          className: I.emoji
+                          className: b.emoji
                       })
                     : (0, r.jsx)(s.ImageIcon, {
                           size: 'md',
                           color: 'currentColor',
-                          className: I.emoji
+                          className: b.emoji
                       }),
             graphicSecondary:
                 null != A
@@ -66,7 +66,7 @@ function T(e) {
         D = (0, u.un)(a.z.SOUNDBOARD_KEYBIND_TIP),
         L =
             null != R && (0, m.isWindows)() && !D
-                ? b.intl.format(b.t.udMTtr, {
+                ? I.intl.format(I.t.udMTtr, {
                       keybind: (0, g.BB)(R.shortcut, !0),
                       openSettingsHook: (e, t) =>
                           (0, r.jsx)(
@@ -82,23 +82,23 @@ function T(e) {
     return null == L
         ? null
         : (0, r.jsxs)('div', {
-              className: I.keybindHint,
+              className: b.keybindHint,
               children: [
                   (0, r.jsx)(s.CircleWarningIcon, {
                       size: 'custom',
                       width: 20,
                       height: 20,
                       color: 'currentColor',
-                      className: I.warningIcon
+                      className: b.warningIcon
                   }),
                   (0, r.jsx)(s.Text, {
                       variant: 'text-sm/medium',
                       color: 'text-normal',
-                      className: I.keybindHintText,
+                      className: b.keybindHintText,
                       children: L
                   }),
                   (0, r.jsx)(s.Clickable, {
-                      className: I.closeButton,
+                      className: b.closeButton,
                       onClick: () => (0, u.EW)(a.z.SOUNDBOARD_KEYBIND_TIP),
                       children: (0, r.jsx)(s.XSmallIcon, {
                           size: 'xs',

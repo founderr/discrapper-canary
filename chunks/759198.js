@@ -8,7 +8,7 @@ t(192379);
 var c = t(120356),
     i = t.n(c),
     o = t(481060),
-    r = t(954614);
+    r = t(507815);
 function d(e) {
     let { className: n, color: t, ...c } = e;
     return (0, a.jsx)(o.Text, {

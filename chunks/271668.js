@@ -16,8 +16,8 @@ var r = n(200651),
     g = n(98528),
     E = n(551058),
     v = n(555573),
-    b = n(10718),
-    I = n(367790),
+    I = n(10718),
+    b = n(367790),
     T = n(895924),
     S = n(581364),
     y = n(56801),
@@ -26,7 +26,7 @@ var r = n(200651),
     C = n(689079),
     R = n(981631),
     O = n(388032),
-    D = n(48560),
+    D = n(590515),
     L = n(239840);
 let x = [8, 8, 0, 8],
     w = l().debounce(() => {
@@ -55,11 +55,11 @@ t.Z = i.forwardRef(function (e, t) {
             filteredSectionId: W,
             scrollDown: K,
             filterSection: z
-        } = b.wi({
+        } = I.wi({
             channel: n,
             filters: {
                 commandTypes: [c.yU.CHAT],
-                builtIns: a ? I.D.ONLY_TEXT : I.D.ALLOW,
+                builtIns: a ? b.D.ONLY_TEXT : b.D.ALLOW,
                 applicationCommands: !a
             },
             options: {

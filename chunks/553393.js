@@ -16,8 +16,8 @@ var r = n(200651),
     g = n(210887),
     E = n(592125),
     v = n(430824),
-    b = n(496675),
-    I = n(979651),
+    I = n(496675),
+    b = n(979651),
     T = n(617136),
     S = n(113434),
     y = n(497505),
@@ -30,17 +30,17 @@ var r = n(200651),
     L = n(981631),
     x = n(231338),
     w = n(388032),
-    M = n(6464);
+    M = n(242468);
 let P = '11px';
 function k(e, t) {
-    return null != e && null != t && (0, m.p9)(t, I.Z, v.Z, b.Z, h.Z)[0];
+    return null != e && null != t && (0, m.p9)(t, b.Z, v.Z, I.Z, h.Z)[0];
 }
 t.Z = function (e) {
     var t, n, h;
-    let { quest: m, memberListItemRef: v, applicationStream: b, position: I, closePopout: U, updatePosition: B } = e,
+    let { quest: m, memberListItemRef: v, applicationStream: I, position: b, closePopout: U, updatePosition: B } = e,
         G = (0, o.e7)([E.Z], () => {
             var e;
-            return null !== (e = E.Z.getChannel(null == b ? void 0 : b.channelId)) && void 0 !== e ? e : null;
+            return null !== (e = E.Z.getChannel(null == I ? void 0 : I.channelId)) && void 0 !== e ? e : null;
         }),
         Z = (0, R.hf)({
             quest: m,
@@ -103,8 +103,8 @@ t.Z = function (e) {
         en = () => {
             J.dispatch(L.CkL.POPOUT_CLOSE);
         },
-        er = 'top' === I ? ''.concat('4px', ' ').concat('4px', ' 0 0') : '0 0 '.concat('4px', ' ').concat('4px');
-    if (null == m || F || (V && !k(b, G))) return null;
+        er = 'top' === b ? ''.concat('4px', ' ').concat('4px', ' 0 0') : '0 0 '.concat('4px', ' ').concat('4px');
+    if (null == m || F || (V && !k(I, G))) return null;
     let ei = () => {
             (0, T._3)({
                 questId: m.id,
@@ -130,7 +130,7 @@ t.Z = function (e) {
             e.stopPropagation(), ei();
         },
         eo = () => {
-            if (k(b, G) && null != G)
+            if (k(I, G) && null != G)
                 return (
                     (0, T._3)({
                         questId: m.id,
@@ -139,7 +139,7 @@ t.Z = function (e) {
                         trackGuildAndChannelMetadata: !0
                     }),
                     c.default.selectVoiceChannel(G.id),
-                    (0, d.iV)(b)
+                    (0, d.iV)(I)
                 );
             ea();
         },
@@ -158,7 +158,7 @@ t.Z = function (e) {
                         handleClickCta: ea,
                         tileAssetType: 'reward'
                     }
-                  : k(b, G)
+                  : k(I, G)
                     ? {
                           headerText: w.intl.string(w.t.Bz6SkJ),
                           ctaText: w.intl.string(w.t.BXFP39),

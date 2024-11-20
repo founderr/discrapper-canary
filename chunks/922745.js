@@ -1,9 +1,9 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return b;
     },
     r: function () {
-        return b;
+        return I;
     }
 });
 var r = n(200651);
@@ -23,8 +23,8 @@ var i = n(120356),
     m = n(507675),
     g = n(273716),
     E = n(388032),
-    v = n(957471);
-function b(e) {
+    v = n(497041);
+function I(e) {
     let { title: t, onJumpToChannel: n, onHide: i, idle: a, preventIdleComponent: l } = e,
         c = (0, s.e7)([p.Z], () => p.Z.getChannelId()),
         _ =
@@ -68,8 +68,8 @@ function b(e) {
         ]
     });
 }
-function I(e) {
-    let { children: t, idle: n, onJumpToChannel: i, onHide: s, backgroundKey: o, onActive: u, onForceIdle: d, renderBottomLeftControls: f, renderBottomRightControls: p, screenMessage: h, hideControls: g = !1, className: E, innerClassName: I, ...T } = e;
+function b(e) {
+    let { children: t, idle: n, onJumpToChannel: i, onHide: s, backgroundKey: o, onActive: u, onForceIdle: d, renderBottomLeftControls: f, renderBottomRightControls: p, screenMessage: h, hideControls: g = !1, className: E, innerClassName: b, ...T } = e;
     return (0, r.jsxs)('div', {
         onMouseMove: u,
         onMouseDown: u,
@@ -81,7 +81,7 @@ function I(e) {
                 children: (0, r.jsx)(
                     _.B,
                     {
-                        className: I,
+                        className: b,
                         children: t
                     },
                     o
@@ -99,7 +99,7 @@ function I(e) {
                     children: [
                         (0, r.jsx)('div', {
                             className: v.topControls,
-                            children: (0, r.jsx)(b, {
+                            children: (0, r.jsx)(I, {
                                 idle: n,
                                 onJumpToChannel: i,
                                 onHide: s,

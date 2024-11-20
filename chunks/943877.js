@@ -9,7 +9,7 @@ n.d(t, {
         return S;
     },
     RM: function () {
-        return I;
+        return b;
     }
 });
 var r = n(387103),
@@ -86,31 +86,31 @@ function m(e) {
         g = null != u ? u.toDate(null != m ? m : 'UTC') : null,
         E = 'hour' === p || 'minute' === p || 'second' === p,
         v = null === (n = e.shouldCloseOnSelect) || void 0 === n || n,
-        [b, I] = (0, s.useState)(null),
+        [I, b] = (0, s.useState)(null),
         [T, S] = (0, s.useState)(null);
-    if ((u && ((b = u), 'hour' in u && (T = u)), _ && !(p in _))) throw Error('Invalid granularity ' + p + ' for value ' + _.toString());
+    if ((u && ((I = u), 'hour' in u && (T = u)), _ && !(p in _))) throw Error('Invalid granularity ' + p + ' for value ' + _.toString());
     let y = (e, t) => {
-            c('timeZone' in t ? t.set((0, r.WG)(e)) : (0, r.IO)(e, t)), I(null), S(null);
+            c('timeZone' in t ? t.set((0, r.WG)(e)) : (0, r.IO)(e, t)), b(null), S(null);
         },
         A = e.isInvalid || 'invalid' === e.validationState || l(u, e.minValue, e.maxValue) || (u && (null === (t = e.isDateUnavailable) || void 0 === t ? void 0 : t.call(e, u))),
         N = e.validationState || (A ? 'invalid' : null);
     return {
         value: u,
         setValue: c,
-        dateValue: b,
+        dateValue: I,
         timeValue: T,
         setDateValue: (t) => {
             let n = 'function' == typeof v ? v() : v;
-            E ? (T || n ? y(t, T || f(e.placeholderValue)) : I(t)) : c(t), n && o.setOpen(!1);
+            E ? (T || n ? y(t, T || f(e.placeholderValue)) : b(t)) : c(t), n && o.setOpen(!1);
         },
         setTimeValue: (e) => {
-            b && e ? y(b, e) : S(e);
+            I && e ? y(I, e) : S(e);
         },
         granularity: p,
         hasTime: E,
         ...o,
         setOpen(t) {
-            !t && !u && b && E && y(b, T || f(e.placeholderValue)), o.setOpen(t);
+            !t && !u && I && E && y(I, T || f(e.placeholderValue)), o.setOpen(t);
         },
         validationState: N,
         isInvalid: A,
@@ -525,14 +525,14 @@ let g = new o.J(
         minute: 15,
         second: 15
     },
-    b = { dayperiod: 'dayPeriod' };
-function I(e) {
+    I = { dayperiod: 'dayPeriod' };
+function b(e) {
     var t, n;
     let { locale: i, createCalendar: o, hideTimeZone: u, isDisabled: c, isReadOnly: f, isRequired: m } = e,
-        I = e.value || e.defaultValue || e.placeholderValue,
-        [T, S] = h(I, e.granularity),
+        b = e.value || e.defaultValue || e.placeholderValue,
+        [T, S] = h(b, e.granularity),
         y = S || 'UTC';
-    if (I && !(T in I)) throw Error('Invalid granularity ' + T + ' for value ' + I.toString());
+    if (b && !(T in b)) throw Error('Invalid granularity ' + T + ' for value ' + b.toString());
     let A = (0, s.useMemo)(() => new r.CN(i), [i]),
         N = (0, s.useMemo)(() => o(A.resolvedOptions().calendar), [o, A]),
         [C, R] = (0, a.zk)(e.value, e.defaultValue, e.onChange),
@@ -576,7 +576,7 @@ function I(e) {
             if (e.isDisabled || e.isReadOnly) return;
             let n = Object.keys(G),
                 i = Object.keys(B);
-            null == t ? (R(null), L(p(e.placeholderValue, T, N, S)), Z({})) : n.length >= i.length || (n.length === i.length - 1 && B.dayPeriod && !G.dayPeriod && 'dayPeriod' !== F.current) ? R((t = (0, r.Mw)(t, (null == I ? void 0 : I.calendar) || new r.IQ()))) : L(t), (F.current = null);
+            null == t ? (R(null), L(p(e.placeholderValue, T, N, S)), Z({})) : n.length >= i.length || (n.length === i.length - 1 && B.dayPeriod && !G.dayPeriod && 'dayPeriod' !== F.current) ? R((t = (0, r.Mw)(t, (null == b ? void 0 : b.calendar) || new r.IQ()))) : L(t), (F.current = null);
         },
         Y = (0, s.useMemo)(() => j.toDate(y), [j, y]),
         W = (0, s.useMemo)(
@@ -588,7 +588,7 @@ function I(e) {
                     let o = E[e.type] && !G[e.type];
                     let l = E[e.type] ? ((t = e.type), (n = e.value), (a = i), 'era' === t || 'dayPeriod' === t ? n : 'year' === t || 'month' === t || 'day' === t ? g.getStringForLocale(t, a) : '\u2013\u2013') : null;
                     return {
-                        type: b[e.type] || e.type,
+                        type: I[e.type] || e.type,
                         text: o ? l : e.value,
                         ...(function (e, t, n) {
                             switch (t) {
@@ -808,8 +808,8 @@ function T(e) {
             m(e), (null == e ? void 0 : e.start) && e.end ? _(e) : _(null);
         },
         [v] = h((null == g ? void 0 : g.start) || (null == g ? void 0 : g.end) || e.placeholderValue, e.granularity),
-        b = 'hour' === v || 'minute' === v || 'second' === v,
-        I = null === (o = e.shouldCloseOnSelect) || void 0 === o || o,
+        I = 'hour' === v || 'minute' === v || 'second' === v,
+        b = null === (o = e.shouldCloseOnSelect) || void 0 === o || o,
         [T, S] = (0, s.useState)(null),
         [y, A] = (0, s.useState)(null);
     g && g.start && g.end && ((T = g), 'hour' in g.start && (y = g));
@@ -822,8 +822,8 @@ function T(e) {
                 A(null);
         },
         C = (t) => {
-            let n = 'function' == typeof I ? I() : I;
-            b
+            let n = 'function' == typeof b ? b() : b;
+            I
                 ? n || (t.start && t.end && (null == y ? void 0 : y.start) && (null == y ? void 0 : y.end))
                     ? N(t, {
                           start: (null == y ? void 0 : y.start) || f(e.placeholderValue),
@@ -846,7 +846,7 @@ function T(e) {
         dateRange: T,
         timeRange: y,
         granularity: v,
-        hasTime: b,
+        hasTime: I,
         setDate(e, t) {
             C({
                 ...T,
@@ -873,7 +873,7 @@ function T(e) {
                 !((null == g ? void 0 : g.start) && (null == g ? void 0 : g.end)) &&
                 (null == T ? void 0 : T.start) &&
                 (null == T ? void 0 : T.end) &&
-                b &&
+                I &&
                 N(T, {
                     start: (null == y ? void 0 : y.start) || f(e.placeholderValue),
                     end: (null == y ? void 0 : y.end) || f(e.placeholderValue)
@@ -948,7 +948,7 @@ function S(e) {
         m = (0, s.useMemo)(() => (l && 'day' in l ? (0, r.ZB)(l) : l), [l]),
         g = (0, s.useMemo)(() => (null == l ? null : y(l)), [l]);
     return {
-        ...I({
+        ...b({
             ...e,
             value: g,
             defaultValue: void 0,

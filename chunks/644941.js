@@ -28,14 +28,14 @@ var r = n(200651),
     N = n(715318),
     M = n(38516),
     y = n(891949),
-    O = n(252547),
-    L = n(484527),
+    L = n(252547),
+    O = n(484527),
     R = n(131033),
     w = n(296768),
     k = n(978313),
     D = n(206583),
     G = n(388032),
-    Z = n(795144);
+    Z = n(51527);
 let K = () =>
     (0, r.jsxs)('div', {
         className: Z.gameBadge,
@@ -153,7 +153,7 @@ function H(e) {
     return (0, r.jsxs)('div', {
         className: Z.sections,
         children: [
-            (0, r.jsx)(O.Z, {
+            (0, r.jsx)(L.Z, {
                 entries: a,
                 viewId: d,
                 officialGuildId: null == l ? void 0 : null === (t = l.guild) || void 0 === t ? void 0 : t.id,
@@ -189,7 +189,7 @@ function B(e) {
                         detectedGame: t,
                         trackAction: i
                     }),
-                    (0, r.jsx)(L.Z, {
+                    (0, r.jsx)(O.Z, {
                         detectedGame: t,
                         trackClick: i,
                         onInviteResolved: n
@@ -217,10 +217,10 @@ t.default = (e) => {
         }),
         [P, N] = i.useState(null),
         M = (0, T.Ns)(n),
-        [y, O] = i.useState(null),
-        L = (0, g.q)(n),
+        [y, L] = i.useState(null),
+        O = (0, g.q)(n),
         R = (0, d.e7)([_.Z], () => _.Z.getGame(n)),
-        w = null !== (t = null == R ? void 0 : R.name) && void 0 !== t ? t : null == L ? void 0 : L.name,
+        w = null !== (t = null == R ? void 0 : R.name) && void 0 !== t ? t : null == O ? void 0 : O.name,
         k = (e, t) => {
             var r;
             (0, A.UE)({
@@ -281,7 +281,7 @@ t.default = (e) => {
             officialGuildId: null == y ? void 0 : null === (e = y.guild) || void 0 === e ? void 0 : e.id
         });
     }),
-    null == R || null == L)
+    null == R || null == O)
         ? null
         : (0, r.jsx)(u.ModalRoot, {
               transitionState: s,
@@ -292,7 +292,7 @@ t.default = (e) => {
                   children: [
                       (0, r.jsx)(U, {
                           detectedGame: R,
-                          application: L,
+                          application: O,
                           entries: M,
                           viewId: C,
                           trackAction: k
@@ -303,7 +303,7 @@ t.default = (e) => {
                               children: [
                                   (0, r.jsx)(H, {
                                       detectedGame: R,
-                                      application: L,
+                                      application: O,
                                       entries: M,
                                       officialGuildInvite: y,
                                       similarGames: j,
@@ -314,7 +314,7 @@ t.default = (e) => {
                                   }),
                                   (0, r.jsx)(B, {
                                       detectedGame: R,
-                                      setOfficialGuildInvite: O,
+                                      setOfficialGuildInvite: L,
                                       trackAction: k
                                   })
                               ]

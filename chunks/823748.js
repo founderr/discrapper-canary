@@ -112,7 +112,7 @@ var i = n(200651),
     e7 = n(440493),
     e6 = n(157925),
     e5 = n(388032),
-    e9 = n(293914);
+    e9 = n(784237);
 function e8(e, t, n) {
     return (
         t in e
@@ -173,7 +173,7 @@ class tt extends l.PureComponent {
         let l = ez.default.getUser(t.getRecipientId());
         o()(null != l, 'Missing user in Channel.openDMContextMenu'),
             (0, x.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e('79695'), n.e('70205'), n.e('92453'), n.e('56826'), n.e('2765')]).then(n.bind(n, 131404));
+                let { default: e } = await Promise.all([n.e('79695'), n.e('70205'), n.e('92453'), n.e('56826'), n.e('42517')]).then(n.bind(n, 131404));
                 return (n) =>
                     (0, i.jsx)(e, {
                         ...n,

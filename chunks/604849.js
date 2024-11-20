@@ -1,15 +1,15 @@
-n.d(t, {
+e.d(t, {
     c: function () {
-        return a;
+        return l;
     }
 });
-var i = n(442837),
-    r = n(581883),
-    l = n(981312);
-let a = () => {
-    let e = (0, i.e7)([r.Z], () => {
-        var e, t, n;
-        return null === (n = null === (t = r.Z.settings.privacy) || void 0 === t ? void 0 : null === (e = t.inappropriateConversationWarnings) || void 0 === e ? void 0 : e.value) || void 0 === n || n;
+var r = e(442837),
+    i = e(581883),
+    u = e(981312);
+let l = () => {
+    let n = (0, r.e7)([i.Z], () => {
+        var n, t, e;
+        return null === (e = null === (t = i.Z.settings.privacy) || void 0 === t ? void 0 : null === (n = t.inappropriateConversationWarnings) || void 0 === n ? void 0 : n.value) || void 0 === e || e;
     });
-    return (0, l.U)() && e;
+    return (0, u.U)() && n;
 };

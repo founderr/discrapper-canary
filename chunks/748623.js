@@ -1,22 +1,22 @@
 t.r(n),
     t.d(n, {
         default: function () {
-            return c;
+            return l;
         }
     });
 var i = t(200651),
-    a = t(238246),
-    r = t(952561),
-    o = t(701011),
-    l = t(388032);
-function c(e) {
+    o = t(238246),
+    a = t(952561),
+    r = t(701011),
+    c = t(388032);
+function l(e) {
     var n;
     let { windowKey: t } = e,
-        c = (0, r.Z)();
-    return (0, i.jsx)(a.Z, {
+        l = (0, a.Z)();
+    return (0, i.jsx)(o.Z, {
         withTitleBar: !0,
         windowKey: t,
-        title: null !== (n = null == c ? void 0 : c.name) && void 0 !== n ? n : l.intl.string(l.t.IC5Anp),
-        children: (0, i.jsx)(o.Z, {})
+        title: null !== (n = null == l ? void 0 : l.name) && void 0 !== n ? n : c.intl.string(c.t.IC5Anp),
+        children: (0, i.jsx)(r.Z, {})
     });
 }

@@ -20,7 +20,7 @@ var i = n(200651),
     v = n(843445),
     N = n(981631),
     T = n(388032),
-    S = n(84281);
+    S = n(144902);
 function A(e, t, n) {
     return (
         t in e
@@ -34,7 +34,7 @@ function A(e, t, n) {
         e
     );
 }
-class b extends r.PureComponent {
+class x extends r.PureComponent {
     renderMemberInfo() {
         let { approximateMemberCount: e, approximatePresenceCount: t } = this.props.guild;
         return null == e || null == t
@@ -155,5 +155,5 @@ t.Z = (0, h.Z)(
             isInGuild: null != C.Z.getGuild(t.id) && !n,
             isLurking: n
         };
-    })(b)
+    })(x)
 );

@@ -16,7 +16,7 @@ var i = n(120356),
     d = n(695346),
     f = n(785717),
     _ = n(388032),
-    p = n(429265);
+    p = n(332102);
 let h = (e) =>
     (0, o.openModalLazy)(async () => {
         let { default: t } = await n.e('51714').then(n.bind(n, 211065));
@@ -31,7 +31,7 @@ function m(e) {
         { analyticsLocations: m } = (0, u.ZP)(),
         { trackUserProfileAction: g } = (0, f.KZ)(),
         [E, v] = (0, s.Wu)([l.Z], () => [l.Z.useReducedMotion, l.Z.keyboardModeEnabled]),
-        b = !n || E || v ? 0 : 300;
+        I = !n || E || v ? 0 : 300;
     return (0, r.jsxs)(c.ZP, {
         className: a()(p.popover, {
             [p.visible]: t,
@@ -40,7 +40,7 @@ function m(e) {
         children: [
             (0, r.jsx)(o.TooltipContainer, {
                 text: _.intl.string(_.t.bt75u7),
-                delay: b,
+                delay: I,
                 'aria-label': !1,
                 children: (0, r.jsx)(c.zx, {
                     className: a()(p.button, p.left),
@@ -57,7 +57,7 @@ function m(e) {
             }),
             (0, r.jsx)(o.TooltipContainer, {
                 text: _.intl.string(_.t.VkKicX),
-                delay: b,
+                delay: I,
                 'aria-label': !1,
                 children: (0, r.jsx)(c.zx, {
                     className: a()(p.button, p.right),

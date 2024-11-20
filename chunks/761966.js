@@ -9,7 +9,7 @@ var i = n(120356),
     a = n.n(i),
     s = n(481060),
     o = n(549631),
-    l = n(42818);
+    l = n(13615);
 function u(e) {
     let { children: t, className: n, size: i = s.Button.Sizes.MEDIUM, onlyShineOnHover: u = !1, ...c } = e;
     return (0, r.jsx)(s.ShinyButton, {

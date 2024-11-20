@@ -21,8 +21,8 @@ var r = n(200651),
     g = n(981631),
     E = n(921944),
     v = n(185923),
-    b = n(388032),
-    I = n(120385);
+    I = n(388032),
+    b = n(427522);
 let T = {
         tension: 800,
         friction: 24
@@ -30,10 +30,10 @@ let T = {
     S = () => {
         let e = (0, l.e7)([d.Z], () => d.Z.useReducedMotion);
         return (0, r.jsxs)('div', {
-            className: I.premiumTooltipContainer,
+            className: b.premiumTooltipContainer,
             children: [
                 (0, r.jsx)(c.LottieAnimation, {
-                    className: s()(I.premiumUnlockAnimation, { [I.reducedMotion]: e }),
+                    className: s()(b.premiumUnlockAnimation, { [b.reducedMotion]: e }),
                     loop: !1,
                     shouldAnimate: !e,
                     pauseAtFrame: e ? 149 : void 0,
@@ -41,8 +41,8 @@ let T = {
                 }),
                 (0, r.jsx)(c.Text, {
                     variant: 'text-sm/medium',
-                    className: I.premiumTooltipText,
-                    children: b.intl.format(b.t['/7R4q6'], {})
+                    className: b.premiumTooltipText,
+                    children: I.intl.format(I.t['/7R4q6'], {})
                 })
             ]
         });
@@ -54,7 +54,7 @@ t.Z = function (e) {
         [L, x] = i.useState(50),
         w = (0, p.x8)('EmojiButton'),
         M = O || A,
-        P = (0, m.l)(I, 'emojiButton', M ? 'Hovered' : 'Normal');
+        P = (0, m.l)(b, 'emojiButton', M ? 'Hovered' : 'Normal');
     let k =
             ((t = L),
             {
@@ -76,11 +76,11 @@ t.Z = function (e) {
         j = (0, l.e7)([d.Z], () => d.Z.useReducedMotion);
     return (0, r.jsx)(c.Tooltip, {
         text: S(),
-        'aria-label': b.intl.formatToMarkdownString(b.t['/7R4q6'], {}),
+        'aria-label': I.intl.formatToMarkdownString(I.t['/7R4q6'], {}),
         position: 'top',
         shouldShow: w && !A && V,
-        tooltipClassName: I.premiumTooltip,
-        tooltipContentClassName: I.premiumTooltipContainer,
+        tooltipClassName: b.premiumTooltip,
+        tooltipContentClassName: b.premiumTooltipContainer,
         children: (e) =>
             (0, r.jsx)(c.Button, {
                 look: c.Button.Looks.BLANK,
@@ -101,7 +101,7 @@ t.Z = function (e) {
                     var n;
                     null == N || N(t), null === (n = e.onClick) || void 0 === n || n.call(e);
                 },
-                'aria-label': b.intl.string(b.t['59QgaG']),
+                'aria-label': I.intl.string(I.t['59QgaG']),
                 'aria-controls': C,
                 'aria-expanded': A,
                 'aria-haspopup': 'dialog',
@@ -116,12 +116,12 @@ t.Z = function (e) {
                               children: (e) => {
                                   let { value: t } = e;
                                   return (0, r.jsxs)(o.animated.div, {
-                                      className: I.spriteContainer,
+                                      className: b.spriteContainer,
                                       style: {
                                           ...k,
                                           transform: t.to([0, 1], [1, 1.14]).to((e) => 'scale('.concat(e, ')'))
                                       },
-                                      children: [(0, r.jsx)('div', { className: s()(I.sprite, I.spriteColored, M ? I.active : I.inactive) }), (0, r.jsx)('div', { className: s()(I.sprite, w && V ? I.spritePremiumColored : I.spriteGreyscale, M ? I.inactive : I.active, { [I.reducedMotion]: j }) })]
+                                      children: [(0, r.jsx)('div', { className: s()(b.sprite, b.spriteColored, M ? b.active : b.inactive) }), (0, r.jsx)('div', { className: s()(b.sprite, w && V ? b.spritePremiumColored : b.spriteGreyscale, M ? b.inactive : b.active, { [b.reducedMotion]: j }) })]
                                   });
                               }
                           })

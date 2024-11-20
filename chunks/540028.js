@@ -15,13 +15,13 @@ var i = n(442837),
     h = n(981631),
     m = n(354459),
     g = n(388032),
-    E = n(957471);
+    E = n(497041);
 function v(e) {
     let { closePopout: t, idle: n, pipWindows: a, voiceChannelId: p, onSelect: E } = e;
     n && t();
     let v = (0, i.e7)([u.ZP], () => u.ZP.getSelfEmbeddedActivityForChannel(p)),
-        b = (0, i.e7)([_.Z], () => _.Z.pipWindow),
-        I = (0, i.e7)([d.Z], () => d.Z.getSelectedParticipant(p)),
+        I = (0, i.e7)([_.Z], () => _.Z.pipWindow),
+        b = (0, i.e7)([d.Z], () => d.Z.getSelectedParticipant(p)),
         T = (0, i.e7)([d.Z], () => d.Z.getStreamParticipants(p));
     return (0, r.jsx)(s.Menu, {
         navId: 'pip-menu',
@@ -35,7 +35,7 @@ function v(e) {
                 null != t &&
                     T.forEach((n) => {
                         let r = f.Z.getActiveStreamForApplicationStream(n.stream),
-                            i = n.id === (null == I ? void 0 : I.id) && (null == b ? void 0 : b.id) === t.id;
+                            i = n.id === (null == b ? void 0 : b.id) && (null == I ? void 0 : I.id) === t.id;
                         null != r &&
                             !i &&
                             e.push({
@@ -66,7 +66,7 @@ function v(e) {
                     label: a,
                     action: () =>
                         (function (e) {
-                            (null == b ? void 0 : b.id) !== e.pipWindow.id && (0, l.k3)(e.pipWindow.id);
+                            (null == I ? void 0 : I.id) !== e.pipWindow.id && (0, l.k3)(e.pipWindow.id);
                             let t = e.participant;
                             null != t && t.type !== m.fO.ACTIVITY && o.Z.selectParticipant(p, t.id);
                         })(e)

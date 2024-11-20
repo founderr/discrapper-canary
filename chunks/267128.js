@@ -24,8 +24,8 @@ var r = n(200651),
     g = n(869765),
     E = n(403132),
     v = n(378233),
-    b = n(768581),
-    I = n(55935),
+    I = n(768581),
+    b = n(55935),
     T = n(823379),
     S = n(453687),
     y = n(930282),
@@ -34,7 +34,7 @@ var r = n(200651),
     C = n(217702),
     R = n(981631),
     O = n(388032),
-    D = n(12645);
+    D = n(825193);
 function L(e) {
     let { width: t = 12, height: n = 8, color: i = 'currentColor', className: a, foreground: s } = e;
     return (0, r.jsx)('svg', {
@@ -67,8 +67,8 @@ function w(e, t, n, i, a) {
     let s, o, l, c;
     let d = (0, p.Z)(e),
         { trailingIconClass: f, leadingIconClass: g, iconSize: E } = a,
-        b = null == t || '' === t || (Array.isArray(t) && 0 === t.length),
-        I = (0, v.cv)(d).length > 0,
+        I = null == t || '' === t || (Array.isArray(t) && 0 === t.length),
+        b = (0, v.cv)(d).length > 0,
         T = null != d.interaction,
         S = d.hasFlag(R.iLy.IS_VOICE_MESSAGE),
         A = d.isPoll(),
@@ -85,14 +85,14 @@ function w(e, t, n, i, a) {
     )
         s = O.intl.string(O.t.XAkOo6);
     else if (d.type === R.uaV.CHANNEL_PINNED_MESSAGE) s = O.intl.string(O.t.sCfDDg);
-    else if (b) {
+    else if (I) {
         if (A) {
             var C, D;
             o = null == d ? void 0 : null === (D = d.poll) || void 0 === D ? void 0 : null === (C = D.question) || void 0 === C ? void 0 : C.text;
         } else
             N
                 ? (s = (0, m.N4)(d))
-                : I
+                : b
                   ? (s = O.intl.string(O.t.kHdYCQ))
                   : T
                     ? (s = O.intl.string(O.t['E+6SSU']))
@@ -113,7 +113,7 @@ function w(e, t, n, i, a) {
             className: i
         });
     return (
-        I
+        b
             ? (l = (0, r.jsx)(u.StickerSmallIcon, {
                   size: 'custom',
                   color: 'currentColor',
@@ -200,7 +200,7 @@ function M(e) {
                         alt: '',
                         src:
                             (null == t ? void 0 : t.guildMemberAvatar) != null && null != n
-                                ? (0, b.JM)({
+                                ? (0, I.JM)({
                                       guildId: n,
                                       userId: e.id,
                                       avatar: t.guildMemberAvatar
@@ -307,7 +307,7 @@ function M(e) {
                     (0, T.vE)(a);
             }
         })(e, y, k),
-        Z = i.useMemo(() => (e.compact ? (0, N.Z)((0, I.vc)(l()(), 'LT')) : null), [e.compact]);
+        Z = i.useMemo(() => (e.compact ? (0, N.Z)((0, b.vc)(l()(), 'LT')) : null), [e.compact]);
     null != n &&
         null != a &&
         (t = O.intl.formatToPlainString(O.t.RhbQ2N, {

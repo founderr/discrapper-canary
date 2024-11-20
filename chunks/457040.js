@@ -16,8 +16,8 @@ var r = n(200651),
     g = n(98278),
     E = n(639119),
     v = n(695346),
-    b = n(594174),
-    I = n(626135),
+    I = n(594174),
+    b = n(626135),
     T = n(624138),
     S = n(45521),
     y = n(285651),
@@ -34,7 +34,7 @@ var r = n(200651),
     P = n(15350),
     k = n(611480),
     U = n(981631),
-    B = n(319796);
+    B = n(858260);
 let G = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
     Z = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
     F = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
@@ -71,7 +71,7 @@ let G = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             }),
             el = v._O.useSetting(),
             eu = i.useMemo(() => new Set(el), [el]),
-            ec = (0, l.e7)([b.default], () => b.default.getCurrentUser()),
+            ec = (0, l.e7)([I.default], () => I.default.getCurrentUser()),
             ed = i.useMemo(() => (0, P.S)(en, ec, u), [en, ec, u]),
             ef = (0, N.RJ)(),
             e_ = (0, N.LZ)(),
@@ -86,8 +86,8 @@ let G = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             ),
             ev = null != eo && eo > G,
             {
-                rowCount: eb,
-                rowCountBySection: eI,
+                rowCount: eI,
+                rowCountBySection: eb,
                 stickersGrid: eT,
                 gutterWidth: eS,
                 columnCounts: ey
@@ -105,12 +105,12 @@ let G = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                     let { location: i } = t;
                     switch (e.type) {
                         case R.al.CREATE_STICKER:
-                            I.default.track(U.rMx.OPEN_MODAL, {
+                            b.default.track(U.rMx.OPEN_MODAL, {
                                 type: U.jXE.CREATE_STICKER_MODAL,
                                 location: Y
                             }),
                                 (0, c.openModalLazy)(async () => {
-                                    let { default: t } = await Promise.all([n.e('93626'), n.e('25887')]).then(n.bind(n, 136735));
+                                    let { default: t } = await Promise.all([n.e('93626'), n.e('44600')]).then(n.bind(n, 136735));
                                     return (n) =>
                                         (0, r.jsx)(t, {
                                             guildId: e.guild_id,
@@ -171,7 +171,7 @@ let G = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 null === (e = ee.current) || void 0 === e || e.focus();
             }, []);
         let ex = i.useCallback(() => {
-            H(), I.default.track(U.rMx.PREMIUM_PROMOTION_OPENED, { location_section: U.jXE.STICKER_PICKER_UPSELL }), (0, g.z)();
+            H(), b.default.track(U.rMx.PREMIUM_PROMOTION_OPENED, { location_section: U.jXE.STICKER_PICKER_UPSELL }), (0, g.z)();
         }, [H]);
         return (0, r.jsxs)(_.Gt, {
             value: W,
@@ -210,8 +210,8 @@ let G = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                                 gutterWidth: eS,
                                                 isUsingKeyboardNavigation: eD,
                                                 onSelectSticker: eE,
-                                                rowCount: eb,
-                                                rowCountBySection: eI,
+                                                rowCount: eI,
+                                                rowCountBySection: eb,
                                                 stickersCategories: ea,
                                                 stickersGrid: eT,
                                                 channel: u

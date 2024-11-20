@@ -21,13 +21,13 @@ var i = n(442837),
     g = n(871604),
     E = n(53558),
     v = n(827313),
-    b = n(420654),
-    I = n(166584),
+    I = n(420654),
+    b = n(166584),
     T = n(915014),
     S = n(228168),
     y = n(388032),
-    A = n(330420),
-    N = n(653134);
+    A = n(800677),
+    N = n(451563);
 function C(e) {
     let { user: t, currentUser: n, displayProfile: C, guild: R, isHovering: O, onOpenProfile: D, channelId: L, onClose: x } = e,
         w = u.ZP.getName(null == R ? void 0 : R.id, L, t),
@@ -83,7 +83,7 @@ function C(e) {
                     })
                 ]
             }),
-            (0, r.jsx)(b.Z, {
+            (0, r.jsx)(I.Z, {
                 user: t,
                 bio: null == C ? void 0 : C.bio,
                 hidePersonalInformation: k,
@@ -107,7 +107,7 @@ function C(e) {
             null != R &&
                 (0, r.jsx)(h.Z, {
                     heading: y.intl.string(y.t.LPJmLy),
-                    children: (0, r.jsx)(I.Z, {
+                    children: (0, r.jsx)(b.Z, {
                         user: t,
                         currentUser: n,
                         guild: R

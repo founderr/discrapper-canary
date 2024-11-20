@@ -20,8 +20,8 @@ var r = n(200651),
     g = n(591759),
     E = n(135431),
     v = n(621853),
-    b = n(429974),
-    I = n(475413),
+    I = n(429974),
+    b = n(475413),
     T = n(981631),
     S = n(388032);
 function y(e) {
@@ -43,7 +43,7 @@ function y(e) {
                     let e = p.Z.getCurrentlySelectedChannelId(),
                         t = _.Z.getChannel(e),
                         r = null != f.ZP.getSidebarState(e) || (null == t ? void 0 : t.isGuildVocal()) ? d.I.SIDEBAR : d.I.NORMAL;
-                    l.__(u._b.TEXT, r, { applicationId: A.id }), (0, s.closeModal)((0, b.z)(O, C)), null == n || n(), h.default.track(T.rMx.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, { application_id: A.id });
+                    l.__(u._b.TEXT, r, { applicationId: A.id }), (0, s.closeModal)((0, I.z)(O, C)), null == n || n(), h.default.track(T.rMx.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, { application_id: A.id });
                 } else
                     (0, E.LO)({
                         applicationId: A.id,
@@ -76,7 +76,7 @@ function y(e) {
               },
               children: (e) => {
                   let { onClick: t, ...n } = e;
-                  return (0, r.jsx)(I.tG, {
+                  return (0, r.jsx)(b.tG, {
                       action: 'PRESS_ADD_APP',
                       text: L,
                       icon: M,
@@ -87,7 +87,7 @@ function y(e) {
                   });
               }
           })
-        : (0, r.jsx)(I.tG, {
+        : (0, r.jsx)(b.tG, {
               action: 'PRESS_ADD_APP',
               text: L,
               icon: M,

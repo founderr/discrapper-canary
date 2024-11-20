@@ -27,19 +27,19 @@ var i = n(200651),
     T = n(626135),
     S = n(823379),
     A = n(404295),
-    b = n(728345),
-    x = n(812206),
+    x = n(728345),
+    b = n(812206),
     Z = n(981631),
     L = n(388032),
-    y = n(762745),
-    O = n(470792);
+    y = n(508042),
+    O = n(156762);
 async function P(e, t, n) {
     t(e.id);
     let i = e.bot;
     if (null == i)
         try {
             var r, l, a;
-            i = null !== (a = null === (r = x.Z.getApplication(e.id)) || void 0 === r ? void 0 : r.bot) && void 0 !== a ? a : null === (l = v.Z.createFromServer(await (0, b.UM)(e.id))) || void 0 === l ? void 0 : l.bot;
+            i = null !== (a = null === (r = b.Z.getApplication(e.id)) || void 0 === r ? void 0 : r.bot) && void 0 !== a ? a : null === (l = v.Z.createFromServer(await (0, x.UM)(e.id))) || void 0 === l ? void 0 : l.bot;
         } catch (e) {
             t(void 0);
             return;

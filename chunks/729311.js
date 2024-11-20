@@ -35,7 +35,7 @@ var i = n(200651),
     R = n(353890),
     Z = n(716130),
     y = n(388032),
-    A = n(110447);
+    A = n(818304);
 function L(e) {
     let { guild: t } = e,
         l = (0, a.e7)([m.Z], () => m.Z.getEnabled(t.id)),
@@ -49,7 +49,7 @@ function L(e) {
     }, [t.id, s, l]);
     let T = (e) => {
         (0, o.openModalLazy)(async () => {
-            let { default: r } = await n.e('35641').then(n.bind(n, 89216));
+            let { default: r } = await n.e('35641').then(n.bind(n, 589279));
             return (n) =>
                 (0, i.jsx)(r, {
                     ...n,

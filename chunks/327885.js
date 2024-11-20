@@ -17,8 +17,8 @@ var s = n(512722),
     h = n(887278),
     g = n(630699),
     p = n(212632),
-    x = n(658785),
-    S = n(568963),
+    x = n(32300),
+    S = n(809357),
     T = n(556296),
     C = n(808506),
     E = n(237997),
@@ -27,7 +27,7 @@ n(63063);
 var I = n(13140),
     f = n(981631),
     N = n(388032),
-    A = n(366698);
+    A = n(301942);
 let b = v(null);
 function v(e) {
     var t;
@@ -76,9 +76,9 @@ function O(e) {
             shouldShowKeybindIndicators: E.Z.showKeybindIndicators
         })),
         B = (0, o.e7)([T.Z], () => T.Z.getOverlayKeybind()),
-        { showKeybindIndicators: L } = x.Z.useExperiment({ location: 'overlay_user_settings' }),
+        L = (0, S.Z)({ location: 'overlay_user_settings' }),
         Z = (0, h.$1)(),
-        { useOverlayV3: F } = S.Z.useExperiment({ location: 'overlay_user_settings' });
+        { useOverlayV3: F } = x.Z.useExperiment({ location: 'overlay_user_settings' });
     function M(e) {
         u.Z.setEnabled(e, l, !1),
             _.default.track(f.rMx.OVERLAY_TOGGLED, {

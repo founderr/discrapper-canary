@@ -18,15 +18,15 @@ var i = n(120356),
     p = n(981631),
     h = n(474936),
     m = n(388032),
-    g = n(187704);
+    g = n(507420);
 function E(e) {
     var t, n;
     let { onDismiss: i } = e,
         E = (0, s.e7)([l.Z], () => l.Z.useReducedMotion),
         v = m.intl.string(m.t['eikz4+']),
-        b = (0, d.N)(),
-        I = (0, c.Ng)(),
-        T = (null == b ? void 0 : b.subscription_trial) != null || null != I,
+        I = (0, d.N)(),
+        b = (0, c.Ng)(),
+        T = (null == I ? void 0 : I.subscription_trial) != null || null != b,
         S = {
             object: p.qAy.BUTTON_CTA,
             section: p.jXE.SUPER_REACTION_PICKER
@@ -60,11 +60,11 @@ function E(e) {
                     T
                         ? (0, r.jsx)(f.ZP, {
                               type: h.cd.BURST_REACTION_QUICK_ACTION_UPSELL,
-                              subscriptionTier: null !== (n = null == b ? void 0 : null === (t = b.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : h.Si.TIER_2,
+                              subscriptionTier: null !== (n = null == I ? void 0 : null === (t = I.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : h.Si.TIER_2,
                               headingText: m.intl.string(m.t.Wfl5zs),
                               analyticsLocationObject: S,
-                              discountOffer: I,
-                              trialOffer: b,
+                              discountOffer: b,
+                              trialOffer: I,
                               children: v
                           })
                         : (0, r.jsxs)(r.Fragment, {

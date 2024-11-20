@@ -5,7 +5,7 @@ var r = n(200651),
     o = n(218867),
     l = n(28546),
     u = n(981631),
-    c = n(606755);
+    c = n(2544);
 let d = (e) => {
     let { activeIndex: t, categoryListRef: n, getScrollOffsetForIndex: r } = e,
         a = i.useRef(u.xAR),
@@ -32,7 +32,7 @@ let d = (e) => {
     );
 };
 t.Z = function (e) {
-    let { categoryListRef: t, expressionsListRef: n, categories: a, store: u, children: f, className: _, listPadding: p, rowCount: h, getScrollOffsetForIndex: m, categoryHeight: g, onScroll: E, renderCategoryListItem: v, rowCountBySection: b, renderSection: I } = e,
+    let { categoryListRef: t, expressionsListRef: n, categories: a, store: u, children: f, className: _, listPadding: p, rowCount: h, getScrollOffsetForIndex: m, categoryHeight: g, onScroll: E, renderCategoryListItem: v, rowCountBySection: I, renderSection: b } = e,
         T = u.useStore((e) => e.activeCategoryIndex);
     d({
         activeIndex: T,
@@ -63,8 +63,8 @@ t.Z = function (e) {
                 rowCount: h,
                 rowHeight: A,
                 hideScrollbar: !0,
-                rowCountBySection: b,
-                renderSection: I
+                rowCountBySection: I,
+                renderSection: b
             }),
             null == f ? void 0 : f(S)
         ]

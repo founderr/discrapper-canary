@@ -23,8 +23,8 @@ var r,
     g = n(866960),
     E = n(181058),
     v = n(626135),
-    b = n(70956),
-    I = n(36703),
+    I = n(70956),
+    b = n(36703),
     T = n(228488),
     S = n(540026),
     y = n(455813),
@@ -33,8 +33,8 @@ var r,
     C = n(981631),
     R = n(217702),
     O = n(388032),
-    D = n(816912),
-    L = n(639944);
+    D = n(505261),
+    L = n(739017);
 function x(e, t, n) {
     return (
         t in e
@@ -570,7 +570,7 @@ class H extends (i = s.PureComponent) {
                 let e = r();
                 e !== this.state.muted && ((i.muted = e), (a.muted = e));
             }
-            this.setState(a), i.play(), null == t || t(e, i.currentTime * b.Z.Millis.SECOND, i.duration * b.Z.Millis.SECOND);
+            this.setState(a), i.play(), null == t || t(e, i.currentTime * I.Z.Millis.SECOND, i.duration * I.Z.Millis.SECOND);
         }
     }
     getWidth() {
@@ -662,13 +662,13 @@ class H extends (i = s.PureComponent) {
                 props: { type: t, autoPlay: n, playable: r = !0, onVolumeShow: i, onVolumeHide: s, onControlsHide: o, onControlsShow: l },
                 state: { buffers: u, currentTime: c, duration: d, hasClickedPlay: f, hideControls: _, muted: p, playing: h, fullscreen: g, volume: E, dragging: v }
             } = this,
-            b = this.getWidth();
+            I = this.getWidth();
         return f || n || t === P.AUDIO
             ? (0, a.jsx)(G, {
                   buffers: u,
                   currentTime: c,
                   duration: d,
-                  volume: (0, I.P)(E, 1),
+                  volume: (0, b.P)(E, 1),
                   hide: t === P.VIDEO && _,
                   muted: p,
                   autoPlay: n,
@@ -686,7 +686,7 @@ class H extends (i = s.PureComponent) {
                   dragging: v,
                   type: t,
                   ref: this.controlsRef,
-                  width: g ? window.screen.width : b,
+                  width: g ? window.screen.width : I,
                   disabled: !r,
                   children:
                       t === P.VIDEO
@@ -831,7 +831,7 @@ class H extends (i = s.PureComponent) {
                 let { current: n } = this.mediaRef;
                 if (t === S.Z.Types.DURATION) null != n && isFinite(n.duration) && this.setTime(n.duration * e, !1);
                 else if (t === S.Z.Types.VOLUME) {
-                    let t = (0, I.A)(e, 1);
+                    let t = (0, b.A)(e, 1);
                     0 === t
                         ? this.setState({
                               muted: !0,

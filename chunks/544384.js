@@ -23,8 +23,8 @@ var r = n(200651),
     g = n(594174),
     E = n(5192),
     v = n(358085),
-    b = n(521147),
-    I = n(981631),
+    I = n(521147),
+    b = n(981631),
     T = n(65154),
     S = n(388032);
 function y(e, t, n) {
@@ -46,19 +46,19 @@ function y(e, t, n) {
 }
 function A(e) {
     var t, n, c;
-    let { channel: h, currentUser: g, activeStreams: E, hideSelfOptions: A = !1, showReportOption: N = !1, handleGoLive: C, onClose: R, onSelect: O, appContext: D = I.IlC.APP, disableChangeWindows: L = !1 } = e,
+    let { channel: h, currentUser: g, activeStreams: E, hideSelfOptions: A = !1, showReportOption: N = !1, handleGoLive: C, onClose: R, onSelect: O, appContext: D = b.IlC.APP, disableChangeWindows: L = !1 } = e,
         x = (0, a.e7)([m.Z], () => m.Z.getGoLiveSource()),
         w = (0, a.e7)([p.Z], () => p.Z.getState().soundshareEnabled),
         M = m.Z.supports(T.AN.DESKTOP_CAPTURE_APPLICATIONS),
         P = null !== (c = E.find((e) => e.ownerId === (null == g ? void 0 : g.id))) && void 0 !== c ? c : null,
         k = y(h, g, E),
         U = (0, f.Z)(P, D),
-        B = (0, d.Z)(P, D, I.VqG),
+        B = (0, d.Z)(P, D, b.VqG),
         G = (0, a.e7)([m.Z], () => m.Z.supports(T.AN.SOUNDSHARE)),
         Z = (0, a.e7)([m.Z], () => m.Z.supportsScreenSoundshare()),
         F = (null == x ? void 0 : x.desktopSource) != null,
         V = null == x ? void 0 : null === (n = x.desktopSource) || void 0 === n ? void 0 : null === (t = n.id) || void 0 === t ? void 0 : t.startsWith('screen'),
-        j = b.Z.useExperiment(
+        j = I.Z.useExperiment(
             { location: 'ManageStreamsMenu' },
             {
                 disable: !(F && G && (!V || Z)),
@@ -141,7 +141,7 @@ function A(e) {
                       ]
                   });
     return (0, r.jsx)(u.Z, {
-        section: I.jXE.CONTEXT_MENU,
+        section: b.jXE.CONTEXT_MENU,
         children: (0, r.jsxs)(s.Menu, {
             onSelect: O,
             navId: 'manage-streams',

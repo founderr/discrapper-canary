@@ -39,8 +39,8 @@ var r = n(200651),
     g = n(920916),
     E = n(669041),
     v = n(341907),
-    b = n(604162),
-    I = n(46140),
+    I = n(604162),
+    b = n(46140),
     T = n(388032);
 function S(e) {
     let { quest: t, location: n, questContentPosition: r, questContentRowIndex: a } = e,
@@ -58,7 +58,7 @@ function S(e) {
                 questContentRowIndex: a
             }),
             o
-                ? (0, h.zK)(t, I.S7.FRACTIONS_QUEST)
+                ? (0, h.zK)(t, b.S7.FRACTIONS_QUEST)
                     ? (0, v.openQuestsNitroRewardModal)(t, n)
                     : (0, h.Xv)(t.config)
                       ? (0, g.openCollectibleRewardModal)(t, n)
@@ -175,7 +175,7 @@ function C(e) {
                     };
                 if (u)
                     return {
-                        text: (0, b.F9)(m),
+                        text: (0, I.F9)(m),
                         tooltipText: T.intl.string(T.t.hsbwjo),
                         onClick: () => (0, v.openVideoQuestModal)(t)
                     };

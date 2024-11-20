@@ -8,8 +8,8 @@ var i,
     r,
     s = n(200651),
     a = n(192379),
-    l = n(442837),
-    o = n(481060),
+    o = n(442837),
+    l = n(481060),
     c = n(13245),
     d = n(600164),
     u = n(212632),
@@ -18,11 +18,11 @@ var i,
     f = n(237997),
     g = n(998502),
     m = n(13140),
-    v = n(658785),
+    v = n(809357),
     _ = n(981631),
     E = n(388032),
-    x = n(150635),
-    Z = n(971436);
+    x = n(635958),
+    Z = n(113207);
 function S(e, t, n) {
     return (
         t in e
@@ -118,12 +118,12 @@ class T extends a.PureComponent {
             children: [
                 (0, s.jsxs)(d.Z, {
                     children: [
-                        (0, s.jsx)(o.FormTitle, {
+                        (0, s.jsx)(l.FormTitle, {
                             className: x.headerTitle,
                             tag: 'h1',
                             children: E.intl.string(E.t['35G2Mj'])
                         }),
-                        (0, s.jsx)(o.ModalCloseButton, {
+                        (0, s.jsx)(l.ModalCloseButton, {
                             className: x.headerClose,
                             onClick: this.props.onClose
                         })
@@ -136,24 +136,24 @@ class T extends a.PureComponent {
     renderTabBar() {
         let { selectedSection: e } = this.state,
             t = h.Z.isDeveloper
-                ? (0, s.jsx)(o.TabBar.Item, {
+                ? (0, s.jsx)(l.TabBar.Item, {
                       id: 'DEVELOPER',
                       className: x.tabBarItem,
                       children: 'Developer'
                   })
                 : null;
-        return (0, s.jsxs)(o.TabBar, {
+        return (0, s.jsxs)(l.TabBar, {
             selectedItem: e,
             type: 'top',
             className: x.__invalid_tabBar,
             onItemSelect: this.handleSelectSection,
             children: [
-                (0, s.jsx)(o.TabBar.Item, {
+                (0, s.jsx)(l.TabBar.Item, {
                     id: 'GENERAL',
                     className: x.tabBarItem,
                     children: E.intl.string(E.t['0FYxx8'])
                 }),
-                (0, s.jsx)(o.TabBar.Item, {
+                (0, s.jsx)(l.TabBar.Item, {
                     id: 'VOICE',
                     className: x.tabBarItem,
                     children: E.intl.string(E.t['3WeSiI'])
@@ -176,7 +176,7 @@ class T extends a.PureComponent {
                 e = this.renderGeneralSettings();
         }
         return (0, s.jsx)(
-            o.ModalContent,
+            l.ModalContent,
             {
                 className: x.content,
                 children: e
@@ -189,7 +189,7 @@ class T extends a.PureComponent {
             r = t !== _._vf.DISABLED;
         return (0, s.jsxs)(a.Fragment, {
             children: [
-                (0, s.jsx)(o.FormItem, {
+                (0, s.jsx)(l.FormItem, {
                     title: E.intl.string(E.t.IQv8Eh),
                     className: Z.marginBottom20,
                     children: (0, s.jsx)(u.Z, {
@@ -197,7 +197,7 @@ class T extends a.PureComponent {
                         onChange: this.handleChangeNotificationPositionMode
                     })
                 }),
-                (0, s.jsx)(o.FormSwitch, {
+                (0, s.jsx)(l.FormSwitch, {
                     value: r && e === _.Ypu.ENABLED,
                     onChange: this.handleToggleTextChatNotifications,
                     disabled: !r,
@@ -205,7 +205,7 @@ class T extends a.PureComponent {
                     children: E.intl.string(E.t.Fy5kPj)
                 }),
                 i &&
-                    (0, s.jsx)(o.FormSwitch, {
+                    (0, s.jsx)(l.FormSwitch, {
                         value: n,
                         onChange: (e) => c.Z.setShowKeybindIndicators(e),
                         hideBorder: !0,
@@ -218,34 +218,34 @@ class T extends a.PureComponent {
         let { avatarSizeMode: e, displayNameMode: t, displayUserMode: n } = this.props;
         return (0, s.jsxs)(a.Fragment, {
             children: [
-                (0, s.jsx)(o.FormItem, {
+                (0, s.jsx)(l.FormItem, {
                     title: E.intl.string(E.t.dnvZSk),
                     className: Z.marginBottom20,
-                    children: (0, s.jsx)(o.RadioGroup, {
+                    children: (0, s.jsx)(l.RadioGroup, {
                         onChange: this.handleChangeAvatarSizeMode,
                         options: I(),
                         value: e,
-                        size: o.RadioGroup.Sizes.SMALL
+                        size: l.RadioGroup.Sizes.SMALL
                     })
                 }),
-                (0, s.jsx)(o.FormItem, {
+                (0, s.jsx)(l.FormItem, {
                     title: E.intl.string(E.t.J0dpcH),
                     className: Z.marginBottom20,
-                    children: (0, s.jsx)(o.RadioGroup, {
+                    children: (0, s.jsx)(l.RadioGroup, {
                         onChange: this.handleChangeDisplayNameMode,
                         options: C(),
                         value: t,
-                        size: o.RadioGroup.Sizes.SMALL
+                        size: l.RadioGroup.Sizes.SMALL
                     })
                 }),
-                (0, s.jsx)(o.FormItem, {
+                (0, s.jsx)(l.FormItem, {
                     title: E.intl.string(E.t.swsWWF),
                     className: Z.marginBottom20,
-                    children: (0, s.jsx)(o.RadioGroup, {
+                    children: (0, s.jsx)(l.RadioGroup, {
                         onChange: this.handleChangeDisplayUserMode,
                         options: y(),
                         value: n,
-                        size: o.RadioGroup.Sizes.SMALL
+                        size: l.RadioGroup.Sizes.SMALL
                     })
                 })
             ]
@@ -253,10 +253,10 @@ class T extends a.PureComponent {
     }
     renderDeveloperSettings() {
         return (0, s.jsx)(a.Fragment, {
-            children: (0, s.jsx)(o.FormItem, {
+            children: (0, s.jsx)(l.FormItem, {
                 title: 'Crashes',
                 className: Z.marginBottom20,
-                children: (0, s.jsx)(o.SingleSelect, {
+                children: (0, s.jsx)(l.SingleSelect, {
                     value: void 0,
                     options: [
                         {
@@ -290,9 +290,9 @@ class T extends a.PureComponent {
         });
     }
     render() {
-        return (0, s.jsxs)(o.ModalRoot, {
+        return (0, s.jsxs)(l.ModalRoot, {
             'aria-label': E.intl.string(E.t['35G2Mj']),
-            transitionState: o.ModalTransitionState.ENTERED,
+            transitionState: l.ModalTransitionState.ENTERED,
             children: [this.renderHeader(), this.renderBody()]
         });
     }
@@ -316,9 +316,9 @@ function b(e) {
             displayNameMode: i,
             displayUserMode: r,
             notificationPositionMode: a,
-            textChatNotificationMode: o,
+            textChatNotificationMode: l,
             shouldShowKeybindIndicators: c
-        } = (0, l.cj)([f.Z], () => ({
+        } = (0, o.cj)([f.Z], () => ({
             avatarSizeMode: f.Z.getAvatarSizeMode(),
             displayNameMode: f.Z.getDisplayNameMode(),
             displayUserMode: f.Z.getDisplayUserMode(),
@@ -326,14 +326,14 @@ function b(e) {
             textChatNotificationMode: f.Z.getTextChatNotificationMode(),
             shouldShowKeybindIndicators: f.Z.showKeybindIndicators
         })),
-        { showKeybindIndicators: d } = v.Z.useExperiment({ location: 'Overlay Settings' });
+        d = (0, v.Z)({ location: 'Overlay Settings' });
     return (0, s.jsx)(T, {
         onClose: t,
         avatarSizeMode: n,
         displayNameMode: i,
         displayUserMode: r,
         notificationPositionMode: a,
-        textChatNotificationMode: o,
+        textChatNotificationMode: l,
         shouldShowKeybindIndicators: c,
         showKeybindIndicators: d
     });

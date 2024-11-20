@@ -8,8 +8,8 @@ var i = n(200651),
     r = n(192379),
     s = n(120356),
     a = n.n(s),
-    l = n(442837),
-    o = n(481060),
+    o = n(442837),
+    l = n(481060),
     c = n(13245),
     d = n(287734),
     u = n(933557),
@@ -24,7 +24,7 @@ var i = n(200651),
     x = n(707878),
     Z = n(518084),
     S = n(388032),
-    I = n(445439);
+    I = n(64437);
 function C(e, t, n) {
     return (
         t in e
@@ -46,12 +46,12 @@ class y extends r.Component {
         let e, t;
         let { channel: n, channelHasActiveCall: r, userIsInChannelCall: s, isBlocked: a } = this.props;
         if (!(0, f.hv)(n.type)) return null;
-        let l = o.PhoneCallIcon,
+        let o = l.PhoneCallIcon,
             c = !1;
         return (
-            r ? (s ? ((e = S.intl.string(S.t['4ry6ys'])), (l = o.PhoneHangUpIcon)) : (e = S.intl.string(S.t['0D/6R0']))) : a ? ((e = S.intl.string(S.t.PHzjvb)), (t = o.Tooltip.Colors.RED), (c = !0)) : (e = S.intl.string(S.t.focH1t)),
+            r ? (s ? ((e = S.intl.string(S.t['4ry6ys'])), (o = l.PhoneHangUpIcon)) : (e = S.intl.string(S.t['0D/6R0']))) : a ? ((e = S.intl.string(S.t.PHzjvb)), (t = l.Tooltip.Colors.RED), (c = !0)) : (e = S.intl.string(S.t.focH1t)),
             (0, i.jsx)(h.Z.Icon, {
-                icon: l,
+                icon: o,
                 tooltip: e,
                 onClick: this.handleClickCall,
                 tooltipColor: t,
@@ -60,7 +60,7 @@ class y extends r.Component {
         );
     }
     render() {
-        let { className: e, draggableClassName: t, locked: n, channel: r, channelName: s, guild: l, onMouseDown: c, onContextMenu: d, isPreviewingInGame: u, disableDragIndicator: f } = this.props,
+        let { className: e, draggableClassName: t, locked: n, channel: r, channelName: s, guild: o, onMouseDown: c, onContextMenu: d, isPreviewingInGame: u, disableDragIndicator: f } = this.props,
             { showOpacitySlider: g } = this.state;
         return g && !n
             ? (0, i.jsxs)(Z.ZP.Bar, {
@@ -68,7 +68,7 @@ class y extends r.Component {
                   children: [
                       (0, i.jsx)(x.Z, {}),
                       (0, i.jsx)(h.Z.Icon, {
-                          icon: o.XSmallIcon,
+                          icon: l.XSmallIcon,
                           onClick: this.handleCloseOpacitySettings,
                           tooltip: S.intl.string(S.t.cpT0Cg)
                       })
@@ -88,7 +88,7 @@ class y extends r.Component {
                           children: [
                               u || n || f
                                   ? null
-                                  : (0, i.jsx)(o.DragIcon, {
+                                  : (0, i.jsx)(l.DragIcon, {
                                         size: 'custom',
                                         color: 'currentColor',
                                         className: a()(I.dragIcon, t),
@@ -99,7 +99,7 @@ class y extends r.Component {
                                   channel: r,
                                   channelName: s
                               }),
-                              n ? null : (0, p.v0)(r, l)
+                              n ? null : (0, p.v0)(r, o)
                           ]
                       })
                   })
@@ -138,13 +138,13 @@ class y extends r.Component {
                               this.renderCallButton(),
                               n
                                   ? (0, i.jsx)(h.Z.Icon, {
-                                        icon: o.BrowserCheckeredIcon,
+                                        icon: l.BrowserCheckeredIcon,
                                         tooltip: S.intl.string(S.t.OVovCQ),
                                         onClick: this.handleOpenOpacitySettings
                                     })
                                   : null,
                               (0, i.jsx)(h.Z.Icon, {
-                                  icon: n ? o.PinUprightSlashIcon : o.PinUprightIcon,
+                                  icon: n ? l.PinUprightSlashIcon : l.PinUprightIcon,
                                   tooltip: s,
                                   selected: n,
                                   onClick: t
@@ -156,17 +156,17 @@ class y extends r.Component {
 }
 function N(e) {
     let { channel: t, ...n } = e,
-        r = (0, l.e7)([E.Z, m.Z], () => {
+        r = (0, o.e7)([E.Z, m.Z], () => {
             let e = E.Z.getVoiceChannelId();
             return m.Z.getChannel(e);
         }),
-        s = (0, l.e7)([v.Z], () => v.Z.getGuild(t.guild_id)),
-        a = (0, l.e7)([g.Z], () => g.Z.isCallActive(t.id)),
-        o = (0, u.ZP)(t),
-        c = (0, l.e7)([_.Z], () => !!t.isDM() && null != t.getRecipientId() && _.Z.isBlocked(t.getRecipientId()));
+        s = (0, o.e7)([v.Z], () => v.Z.getGuild(t.guild_id)),
+        a = (0, o.e7)([g.Z], () => g.Z.isCallActive(t.id)),
+        l = (0, u.ZP)(t),
+        c = (0, o.e7)([_.Z], () => !!t.isDM() && null != t.getRecipientId() && _.Z.isBlocked(t.getRecipientId()));
     return (0, i.jsx)(y, {
         channel: t,
-        channelName: o,
+        channelName: l,
         guild: s,
         channelHasActiveCall: a,
         userIsInChannelCall: null != r && r.id === t.id,

@@ -17,16 +17,16 @@ var r = n(200651),
     f = n(328187),
     _ = n(607889),
     p = n(94432),
-    h = n(557126);
+    h = n(724069);
 let m = p.e3 / 1000,
     g = 6,
     E = 2,
     v = [0, 0, 0, 0, 0];
-function b(e) {
+function I(e) {
     let { showAll: t, currentTime: n, duration: r, numSegments: i } = e;
     return t ? i : Math.max(0, Math.round((n / r) * i));
 }
-function I(e) {
+function b(e) {
     var t, n, r, i, a;
     let { context: s, devicePixelRatio: o, canvasHeight: l, segmentValue: u, segmentIndex: c, constrainMin: d } = e,
         f = d ? (24 - E) * u + E : 24 * u;
@@ -127,7 +127,7 @@ function y(e) {
             };
         })(E, y);
     i.useEffect(() => {
-        let e = b({
+        let e = I({
             showAll: !E,
             currentTime: a,
             duration: d,
@@ -138,7 +138,7 @@ function y(e) {
         i.useEffect(() => {
             let e = L.current;
             if (null == e) return;
-            let t = b({
+            let t = I({
                 showAll: !E,
                 currentTime: a,
                 duration: d,
@@ -168,7 +168,7 @@ function y(e) {
                     let [l, u] = S(U, B, n, P.current);
                     (s = s || u), (i.fillStyle = l);
                     for (let e = 0; e < x.length; e++)
-                        I({
+                        b({
                             context: i,
                             devicePixelRatio: k,
                             canvasHeight: o,
@@ -186,7 +186,7 @@ function y(e) {
                             n = Math.max(t.getCurrentValue(), x[e] - 0.1);
                         i.beginPath(),
                             (i.fillStyle = t.isReset ? c : f),
-                            I({
+                            b({
                                 context: i,
                                 devicePixelRatio: k,
                                 canvasHeight: o,

@@ -69,8 +69,8 @@ var r,
     g = n(794295),
     E = n(593472),
     v = n(110924),
-    b = n(858644),
-    I = n(249458),
+    I = n(858644),
+    b = n(249458),
     T = n(313201),
     S = n(688465),
     y = n(425886),
@@ -93,7 +93,7 @@ var r,
     F = n(420212),
     V = n(814249),
     j = n(388032),
-    H = n(338939);
+    H = n(650968);
 let Y = {
         delay: 300,
         position: 'top'
@@ -242,12 +242,12 @@ function $(e) {
     });
 }
 function ee(e) {
-    return (0, a.jsx)(b.Z, { ...e });
+    return (0, a.jsx)(I.Z, { ...e });
 }
 ((i = r || (r = {}))[(i.OLD_MESSAGES = 0)] = 'OLD_MESSAGES'), (i[(i.REPLY = 1)] = 'REPLY');
 let et = (e) => {
         let { type: t = 0, onClick: n, className: r } = e;
-        return (0, a.jsx)(I.G.Consumer, {
+        return (0, a.jsx)(b.G.Consumer, {
             children: (e) =>
                 e.disableInteractions
                     ? null
@@ -305,7 +305,7 @@ let et = (e) => {
     },
     en = (e) => {
         let { onClick: t, loading: n, className: r } = e;
-        return (0, a.jsx)(I.G.Consumer, {
+        return (0, a.jsx)(b.G.Consumer, {
             children: (e) =>
                 e.disableInteractions
                     ? null
@@ -361,7 +361,7 @@ function er(e) {
         o = s.useCallback(() => {
             (0, h.In)(n);
         }, [n]),
-        { disableInteractions: u } = s.useContext(I.G);
+        { disableInteractions: u } = s.useContext(b.G);
     return u
         ? null
         : (0, a.jsxs)('div', {
@@ -404,8 +404,8 @@ function er(e) {
 function ei(e) {
     var t, n, r;
     let { channel: i, content: o, scrollManager: u } = e,
-        { disableInteractions: m } = s.useContext(I.G),
-        [g, b] = s.useState(null),
+        { disableInteractions: m } = s.useContext(b.G),
+        [g, I] = s.useState(null),
         T = s.useRef(null),
         [y, A] = s.useState(null),
         N = s.useRef(null),
@@ -463,9 +463,9 @@ function ei(e) {
             () =>
                 c().debounce((e) => {
                     var t;
-                    b(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : null);
+                    I(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : null);
                 }, 64),
-            [b]
+            [I]
         ),
         W = s.useMemo(
             () =>
@@ -737,10 +737,10 @@ function ea(e, t) {
 function es(e) {
     var t, n, r;
     let { channel: i, scrollManager: o } = e,
-        { disableInteractions: u } = s.useContext(I.G),
+        { disableInteractions: u } = s.useContext(b.G),
         [h, m] = s.useState(null),
         g = s.useRef(null),
-        [b, T] = s.useState(null),
+        [I, T] = s.useState(null),
         y = s.useRef(null),
         A = (0, f.Wu)(
             [R.Z],
@@ -879,11 +879,11 @@ function es(e) {
             null != n && T(n);
         }, []);
     s.useEffect(() => {
-        if (null != b && W) {
+        if (null != I && W) {
             var e;
-            null === (e = y.current) || void 0 === e || e.scrollTo({ top: b });
+            null === (e = y.current) || void 0 === e || e.scrollTo({ top: I });
         }
-    }, [b, W]);
+    }, [I, W]);
     let $ = s.useCallback(
         (e) => {
             var t;

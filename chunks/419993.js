@@ -16,9 +16,9 @@ var r,
     f = n(993365),
     _ = n(179240),
     p = n(388032),
-    h = n(401662),
-    m = n(311133),
-    g = n(110933);
+    h = n(37823),
+    m = n(803636),
+    g = n(112864);
 function E(e, t, n) {
     return (
         t in e
@@ -33,8 +33,8 @@ function E(e, t, n) {
     );
 }
 let v = (0, l.Z)(),
-    b = (0, l.Z)(),
-    I = (0, l.Z)();
+    I = (0, l.Z)(),
+    b = (0, l.Z)();
 class T extends (r = a.Component) {
     getPaddingRight() {
         let { maxLength: e, showCharacterCountFullPadding: t } = this.props;
@@ -143,12 +143,12 @@ class T extends (r = a.Component) {
                         }),
                         null != l &&
                             (0, i.jsx)(d.n, {
-                                id: b,
+                                id: I,
                                 children: p.intl.format(p.t['bmQU//'], { minLength: l })
                             }),
                         null != c &&
                             (0, i.jsx)(d.n, {
-                                id: I,
+                                id: b,
                                 children: p.intl.format(p.t['+DFxLS'], { maxLength: c })
                             }),
                         this.renderCharacterCount(),
@@ -167,7 +167,7 @@ class T extends (r = a.Component) {
                 let { maxLength: t, minLength: n, error: r } = this.props,
                     i = [],
                     a = null === (e = this.context) || void 0 === e ? void 0 : e.errorId;
-                return null != a && i.push(a), null != r ? i.push(v) : (null != t && i.push(I), null != n && i.push(b)), i.length > 0 ? i.join(' ') : void 0;
+                return null != a && i.push(a), null != r ? i.push(v) : (null != t && i.push(b), null != n && i.push(I)), i.length > 0 ? i.join(' ') : void 0;
             }),
             E(this, 'onChange', (e) => {
                 let { onChange: t, name: n } = this.props;

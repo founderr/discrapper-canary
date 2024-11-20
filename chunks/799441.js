@@ -31,14 +31,14 @@ function _(e, t, n) {
             t,
             n
         ),
-        { typeSelectProps: b } = (0, a.ip)({
+        { typeSelectProps: I } = (0, a.ip)({
             keyboardDelegate: g,
             selectionManager: t.selectionManager,
             onTypeSelect(e) {
                 t.setSelectedKey(e);
             }
         }),
-        { isInvalid: I, validationErrors: T, validationDetails: S } = t.displayValidation,
+        { isInvalid: b, validationErrors: T, validationDetails: S } = t.displayValidation,
         {
             labelProps: y,
             fieldProps: A,
@@ -47,12 +47,12 @@ function _(e, t, n) {
         } = (0, l.U)({
             ...e,
             labelElementType: 'span',
-            isInvalid: I,
+            isInvalid: b,
             errorMessage: e.errorMessage || T
         });
-    (b.onKeyDown = b.onKeyDownCapture), delete b.onKeyDownCapture;
+    (I.onKeyDown = I.onKeyDownCapture), delete I.onKeyDownCapture;
     let R = (0, r.zL)(e, { labelable: !0 }),
-        O = (0, r.dG)(b, E, A),
+        O = (0, r.dG)(I, E, A),
         D = (0, r.Me)();
     return (
         f.set(t, {
@@ -114,7 +114,7 @@ function _(e, t, n) {
             },
             descriptionProps: N,
             errorMessageProps: C,
-            isInvalid: I,
+            isInvalid: b,
             validationErrors: T,
             validationDetails: S
         }

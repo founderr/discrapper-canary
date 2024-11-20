@@ -16,8 +16,8 @@ var c,
     g = n(433517),
     E = n(570140),
     v = n(57132),
-    b = n(703656),
-    I = n(131704),
+    I = n(703656),
+    b = n(131704),
     T = n(823379),
     S = n(314897),
     y = n(592125),
@@ -51,7 +51,7 @@ function U() {
                 .uniq()
                 .filter((e) => {
                     let t = y.Z.getBasicChannel(e);
-                    return P.has(e) || (null != t && I.Ec.has(t.type));
+                    return P.has(e) || (null != t && b.Ec.has(t.type));
                 })
                 .value()
         });
@@ -65,7 +65,7 @@ function B(e) {
 function G(e, t) {
     if (null == e || null == t || M[e] === t) return !1;
     let n = y.Z.getChannel(t),
-        r = null != n && (0, I.zi)(n.type),
+        r = null != n && (0, b.zi)(n.type),
         i = (null == n ? void 0 : n.getGuildId()) === e;
     return !!r && !!i && ((M[e] = t), !0);
 }
@@ -99,7 +99,7 @@ function V(e, t) {
     }
     let n = null != N.Z.getGuild(t) ? t : null,
         r = !1;
-    o === e && ((o = null), (r = !0)), !(0, v.cn)() && (x[k(n)] === e && ((x[k(n)] = B(k(n))), R.Z.getGuildId() === n && (0, b.dL)(O.Z5c.CHANNEL(t, x[k(n)])), (r = !0)), null != n && M[n] === e && (delete M[n], (r = !0))), r && U();
+    o === e && ((o = null), (r = !0)), !(0, v.cn)() && (x[k(n)] === e && ((x[k(n)] = B(k(n))), R.Z.getGuildId() === n && (0, I.dL)(O.Z5c.CHANNEL(t, x[k(n)])), (r = !0)), null != n && M[n] === e && (delete M[n], (r = !0))), r && U();
 }
 function j(e) {
     let {

@@ -1,20 +1,20 @@
-function i(e) {
+function r(e) {
     return new ResizeObserver(e);
 }
-function l(e, t) {
+function o(e, t) {
     e.observe(t);
 }
-function a(e, t) {
+function i(e, t) {
     e.unobserve(t);
 }
 n.d(t, {
     UC: function () {
-        return a;
+        return i;
     },
     YP: function () {
-        return l;
+        return o;
     },
     pP: function () {
-        return i;
+        return r;
     }
 });

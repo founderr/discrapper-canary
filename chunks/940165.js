@@ -13,7 +13,7 @@ var o = e(120356),
     l = e(552958),
     p = e(767157),
     C = e(388032),
-    d = e(659494);
+    d = e(618900);
 function u(t) {
     let { label: n, className: e, description: o, soundpack: u, location: _ } = t,
         { playSound: f, isPlaying: I } = (0, l.Z)();

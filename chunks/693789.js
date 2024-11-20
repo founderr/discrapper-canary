@@ -27,7 +27,7 @@ var r = n(200651),
     u = n(84735),
     c = n(922770),
     d = n(388032),
-    f = n(837105);
+    f = n(426950);
 let _ = {
         FILLED: f.lookFilled,
         OUTLINED: f.lookOutlined,
@@ -64,7 +64,7 @@ function m() {
     });
 }
 function g(e) {
-    let { look: t = _.FILLED, color: n = p.BRAND, size: a = h.MEDIUM, fullWidth: o = !1, grow: g = !0, disabled: E = !1, submitting: v = !1, type: b = 'button', style: I, wrapperClassName: T, className: S, innerClassName: y, onClick: A, onDoubleClick: N, onMouseDown: C, onMouseUp: R, onMouseEnter: O, onMouseLeave: D, onKeyDown: L, children: x, rel: w, buttonRef: M, focusProps: P, 'aria-label': k, submittingStartedLabel: U, submittingFinishedLabel: B, ...G } = e,
+    let { look: t = _.FILLED, color: n = p.BRAND, size: a = h.MEDIUM, fullWidth: o = !1, grow: g = !0, disabled: E = !1, submitting: v = !1, type: I = 'button', style: b, wrapperClassName: T, className: S, innerClassName: y, onClick: A, onDoubleClick: N, onMouseDown: C, onMouseUp: R, onMouseEnter: O, onMouseLeave: D, onKeyDown: L, children: x, rel: w, buttonRef: M, focusProps: P, 'aria-label': k, submittingStartedLabel: U, submittingFinishedLabel: B, ...G } = e,
         Z = E || v,
         F = Z && (null != O || null != D),
         V = (function (e, t) {
@@ -99,9 +99,9 @@ function g(e) {
             onMouseEnter: O,
             onMouseLeave: D,
             onKeyDown: E ? void 0 : L,
-            type: b,
+            type: I,
             disabled: E,
-            style: I,
+            style: b,
             rel: w,
             className: s()(
                 S,
@@ -149,7 +149,7 @@ function g(e) {
         : H;
 }
 function E(e) {
-    let { look: t = _.FILLED, color: n = p.BRAND, size: i = h.MEDIUM, fullWidth: a = !1, grow: l = !0, style: u, className: c, innerClassName: d, to: m, onClick: g, onMouseDown: E, onMouseUp: v, children: b, rel: I, ...T } = e;
+    let { look: t = _.FILLED, color: n = p.BRAND, size: i = h.MEDIUM, fullWidth: a = !1, grow: l = !0, style: u, className: c, innerClassName: d, to: m, onClick: g, onMouseDown: E, onMouseUp: v, children: I, rel: b, ...T } = e;
     return (0, r.jsx)(o.rU, {
         ...T,
         to: m,
@@ -157,14 +157,14 @@ function E(e) {
         onMouseUp: v,
         onMouseDown: E,
         style: u,
-        rel: I,
+        rel: b,
         className: s()(c, f.button, t, n, i, {
             [f.fullWidth]: a,
             [f.grow]: l
         }),
         children: (0, r.jsx)('span', {
             className: s()(f.contents, d),
-            children: b
+            children: I
         })
     });
 }

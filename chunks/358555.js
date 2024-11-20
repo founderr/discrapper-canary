@@ -19,7 +19,7 @@ var o = n(120356),
     _ = n(267642),
     h = n(981631),
     N = n(388032),
-    T = n(725741);
+    T = n(427542);
 function m(e) {
     let { guild: i, isBannerVisible: n, disableBoostClick: o } = e,
         r = (0, l.e7)([p.default, f.ZP], () => {

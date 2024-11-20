@@ -61,8 +61,8 @@ if (n(322499)() || n(882171)()) {
         };
     if (c || d) {
         var v = n(403006),
-            b = n(72859),
-            I = f('Map.prototype.forEach', !0),
+            I = n(72859),
+            b = f('Map.prototype.forEach', !0),
             T = f('Set.prototype.forEach', !0);
         if (void 0 === r || !r.versions || !r.versions.node) {
             var S = f('Map.prototype.iterator', !0),
@@ -74,17 +74,17 @@ if (n(322499)() || n(882171)()) {
                 if (v(e)) {
                     if (S) return a(S(e));
                     if (A) return A(e);
-                    if (I) {
+                    if (b) {
                         var t = [];
                         return (
-                            I(e, function (e, n) {
+                            b(e, function (e, n) {
                                 _(t, [n, e]);
                             }),
                             g(t)
                         );
                     }
                 }
-                if (b(e)) {
+                if (I(e)) {
                     if (y) return a(y(e));
                     if (N) return N(e);
                     if (T) {

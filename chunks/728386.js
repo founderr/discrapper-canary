@@ -10,15 +10,15 @@ var r = n(200651),
     d = n(443603),
     f = n(957825),
     _ = n(388032),
-    p = n(482133);
+    p = n(703130);
 t.Z = i.memo(
     i.forwardRef(function (e, t) {
         let { disabled: n, type: a } = e,
             [h, m] = (0, c.Iu)((e) => [e.activeView, e.pickerId], o.X),
             g = i.useContext(u.ZP),
             [E, v] = i.useState(!1),
-            b = h === f.X1.STICKER,
-            I = i.useCallback(() => {
+            I = h === f.X1.STICKER,
+            b = i.useCallback(() => {
                 (0, c.RO)(f.X1.STICKER, a);
             }, [a]);
         i.useEffect(() => {
@@ -47,14 +47,14 @@ t.Z = i.memo(
                   className: s()(f.CT, p.buttonContainer),
                   ref: t,
                   children: (0, r.jsx)(d.Z, {
-                      innerClassName: s()(p.button, p.stickerButton, { [p.stickerButtonTilted]: E && !b }),
+                      innerClassName: s()(p.button, p.stickerButton, { [p.stickerButtonTilted]: E && !I }),
                       ...S,
                       onClick: () => {
-                          I(), y();
+                          b(), y();
                       },
-                      isActive: b,
+                      isActive: I,
                       'aria-label': _.intl.string(_.t.rZpidX),
-                      'aria-expanded': b,
+                      'aria-expanded': I,
                       'aria-haspopup': 'dialog',
                       'aria-controls': m,
                       sparkle: !1,

@@ -20,12 +20,12 @@ var r = n(200651),
     g = n(639119),
     E = n(165583),
     v = n(197115),
-    b = n(302945),
-    I = n(631771),
+    I = n(302945),
+    b = n(631771),
     T = n(474936),
     S = n(981631),
     y = n(388032),
-    A = n(12087),
+    A = n(569548),
     N = n(769860);
 function C(e) {
     var t, n, a;
@@ -54,7 +54,7 @@ function C(e) {
                   }));
     }, [es, q, Q]);
     let ed = (0, o.e7)([h.Z], () => h.Z.affinities),
-        ef = ed.length > 1 && (0, I.YN)(R),
+        ef = ed.length > 1 && (0, b.YN)(R),
         e_ = (0, o.e7)([h.Z], () => h.Z.hasFetched);
     i.useEffect(() => {
         !e_ && u.MH();
@@ -120,7 +120,7 @@ function C(e) {
                                                         variant: 'heading-xl/bold',
                                                         children: C
                                                     }),
-                                                    ef ? (0, r.jsx)(b.Z, { affinities: ed }) : void 0,
+                                                    ef ? (0, r.jsx)(I.Z, { affinities: ed }) : void 0,
                                                     er,
                                                     (0, r.jsx)(l.Text, {
                                                         variant: 'text-md/normal',

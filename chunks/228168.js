@@ -6,7 +6,7 @@ n.d(t, {
         return h;
     },
     cm: function () {
-        return b;
+        return I;
     },
     jC: function () {
         return C;
@@ -24,7 +24,7 @@ n.d(t, {
         return m;
     },
     yM: function () {
-        return I;
+        return b;
     }
 });
 var r,
@@ -44,8 +44,8 @@ var r,
     g,
     E,
     v,
-    b,
     I,
+    b,
     T,
     S,
     y,
@@ -91,7 +91,7 @@ function C(e) {
     ((l = v || (v = {})).USER_SHEET = 'User Sheet'),
     (l.BLOCKED_USER_SHEET = 'Blocked User Sheet'),
     (l.IGNORED_USER_SHEET = 'Ignored User Sheet'),
-    ((u = b || (b = {}))[(u.NICKNAME = 0)] = 'NICKNAME'),
+    ((u = I || (I = {}))[(u.NICKNAME = 0)] = 'NICKNAME'),
     (u[(u.PRONOUNS = 1)] = 'PRONOUNS'),
     (u[(u.AVATAR = 2)] = 'AVATAR'),
     (u[(u.ANIMATED_AVATAR = 3)] = 'ANIMATED_AVATAR'),
@@ -101,7 +101,7 @@ function C(e) {
     (u[(u.THEME = 7)] = 'THEME'),
     (u[(u.AVATAR_DECORATION = 8)] = 'AVATAR_DECORATION'),
     (u[(u.PROFILE_EFFECT = 9)] = 'PROFILE_EFFECT'),
-    ((c = I || (I = {})).VIEW = 'VIEW'),
+    ((c = b || (b = {})).VIEW = 'VIEW'),
     (c.SEND_MESSAGE = 'SEND_MESSAGE'),
     (c.SEND_DIRECT_MESSAGE = 'SEND_DIRECT_MESSAGE'),
     (c.SEND_FRIEND_REQUEST = 'SEND_FRIEND_REQUEST'),

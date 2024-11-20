@@ -16,7 +16,7 @@ var i = n(200651),
     m = n(376191),
     p = n(86203),
     g = n(388032),
-    f = n(449328);
+    f = n(894639);
 function _(e) {
     let { active: t, user: n, channel: _ } = e,
         E = (0, u.V)(),
@@ -40,8 +40,8 @@ function _(e) {
             onRejectSuccess: C,
             onError: I
         }),
-        b = T || S,
-        x = b || A;
+        x = T || S,
+        b = x || A;
     return (0, i.jsxs)('div', {
         className: f.container,
         children: [
@@ -60,8 +60,8 @@ function _(e) {
                         onClick: (e) => {
                             N(_.id), e.stopPropagation();
                         },
-                        disabled: x,
-                        submitting: b,
+                        disabled: b,
+                        submitting: x,
                         children: g.intl.string(g.t.vicfl5)
                     }),
                     (0, i.jsx)(p.Z, {

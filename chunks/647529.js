@@ -12,7 +12,7 @@ var s = n(442837),
     r = n(63063),
     d = n(981631),
     c = n(388032),
-    u = n(436728),
+    u = n(583117),
     x = n(767688);
 function m(e) {
     let { guildId: t, title: n, transitionState: m, children: h, buttons: g, onClose: j } = e,

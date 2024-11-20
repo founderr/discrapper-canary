@@ -8,7 +8,7 @@ n(192379);
 var i = n(120356),
     a = n.n(i),
     s = n(481060),
-    o = n(348466);
+    o = n(266711);
 function l(e) {
     let { rank: t, hideInnerBorder: n = !1 } = e;
     return (0, r.jsx)('div', {

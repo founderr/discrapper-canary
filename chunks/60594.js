@@ -63,7 +63,7 @@ var l,
     el = n(921944),
     ei = n(761274),
     er = n(388032),
-    es = n(507178);
+    es = n(410894);
 ((i = l || (l = {}))[(i.GUILD = 0)] = 'GUILD'), (i[(i.NATIVE_PICKER_SOURCE = 1)] = 'NATIVE_PICKER_SOURCE'), (i[(i.SOURCE = 2)] = 'SOURCE'), (i[(i.CONFIRM = 3)] = 'CONFIRM');
 let ea = (e) => {
     let { visibleContent: t, markAsDismissed: n } = e;
@@ -192,7 +192,7 @@ function eo(e) {
         }),
             y.Z.trackExposure({ location: 'GoLiveModal' });
     }, [eu]);
-    let e8 = s.useCallback(
+    let e9 = s.useCallback(
             (e, t, n) => {
                 var l;
                 let i = (0, z.Z)(e, eI, eN),
@@ -209,17 +209,17 @@ function eo(e) {
             },
             [ev, eO, eI, eN, eJ, eY, ez]
         ),
-        [e9, e6] = s.useState(eR ? '' : void 0),
+        [e8, e6] = s.useState(eR ? '' : void 0),
         te = s.useCallback(
             (e) => {
-                (0, K.t)(), (0, K.T)(null != e ? e : e9);
+                (0, K.t)(), (0, K.T)(null != e ? e : e8);
             },
-            [e9]
+            [e8]
         );
     function tt(e) {
         if ((e.preventDefault(), 1 === eL)) return te();
         if (2 === eL) return eB(3);
-        if (null != e9) return eB(1);
+        if (null != e8) return eB(1);
         let t = (0, $.Z)(ej, eF, w.ZP.getRunningGames());
         W.ZP.supportsFeature(en.eRX.ELEVATED_HOOK) && (null == t ? void 0 : t.elevated)
             ? !(function () {
@@ -356,9 +356,9 @@ function eo(e) {
                                     previewDisabled: e1,
                                     sourceChanged: eG,
                                     selectSource: ec,
-                                    onChangeSelectedFPS: (e) => e8(ez, eY, e),
-                                    onChangeSelectedResolution: (e) => e8(ez, e, eJ),
-                                    onChangeSelectedPreset: (e) => e8(e, eY, eJ),
+                                    onChangeSelectedFPS: (e) => e9(ez, eY, e),
+                                    onChangeSelectedResolution: (e) => e9(ez, e, eJ),
+                                    onChangeSelectedPreset: (e) => e9(e, eY, eJ),
                                     onChangeSelectedChannelId: eU,
                                     onChangeSelectedSource: tn,
                                     onChangeSource: () => ta(),
@@ -380,7 +380,7 @@ function eo(e) {
                                 children: (0, r.jsx)(Q.Hu, {
                                     onSourceSelect: e4,
                                     onCancel: th,
-                                    pickerType: e9
+                                    pickerType: e8
                                 })
                             })
                         })
@@ -389,7 +389,7 @@ function eo(e) {
                 td && (0, r.jsx)(P.Z, { channel: ev })
             ]
         }),
-        tx = 1 === eL || (eR && 3 === eL) ? er.intl.string(er.t.FiBjwc) : eE && (3 !== eL || null != e9) ? er.intl.string(er.t.PDTjLC) : er.intl.string(er.t['UE/rPz']),
+        tx = 1 === eL || (eR && 3 === eL) ? er.intl.string(er.t.FiBjwc) : eE && (3 !== eL || null != e8) ? er.intl.string(er.t.PDTjLC) : er.intl.string(er.t['UE/rPz']),
         tg = (0, r.jsxs)(m.ModalFooter, {
             justify: null == tu ? T.Z.Justify.START : T.Z.Justify.BETWEEN,
             children: [

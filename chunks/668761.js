@@ -11,15 +11,15 @@ n(192379);
 var r = n(481060),
     s = n(312839),
     a = n(556296),
-    l = n(13140),
-    o = n(981631),
+    o = n(13140),
+    l = n(981631),
     c = n(987650),
     d = n(388032);
 function u() {
     let { trackView: e, trackClick: t } = (0, s.R)(c.n0.ClipsReminderNotification, { notif_type: c.n0.ClipsReminderNotification }),
-        n = a.Z.getKeybindForAction(o.kg4.SAVE_CLIP);
+        n = a.Z.getKeybindForAction(l.kg4.SAVE_CLIP);
     if (null == n) return null;
-    let u = l.BB(n.shortcut, !0);
+    let u = o.BB(n.shortcut, !0);
     return {
         title: d.intl.format(d.t.S5uhCA, {
             keybind: u,

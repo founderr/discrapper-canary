@@ -40,7 +40,7 @@ var i = t(200651),
     U = t(228168),
     B = t(981631),
     F = t(388032),
-    D = t(37682);
+    D = t(272216);
 function G(e) {
     let { user: n, currentUser: t, guildId: G, channelId: w, messageId: k, roleId: V, sessionId: W, friendToken: K, initialSection: z, initialSubsection: H, transitionState: Y, onClose: J, showGuildProfile: q = !0, sourceAnalyticsLocations: X = [] } = e,
         { analyticsLocations: Q } = (0, u.ZP)([...X, d.Z.SIMPLIFIED_PROFILE_MODAL]),

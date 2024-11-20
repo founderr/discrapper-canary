@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return b;
     }
 });
 var r = n(200651),
@@ -20,9 +20,9 @@ var r = n(200651),
     g = n(522811),
     E = n(763296),
     v = n(526617),
-    b = n(308377);
-function I(e) {
-    let { guildId: t, channel: n, containerWidth: a, onClose: I, onSelect: T, analyticsSource: S, suppressPlaySound: y, shouldValidateSelectedSound: A, shouldShowUpsell: N = !0, gridNotice: C, inExpressionPicker: R, soundButtonOverlay: O, listPadding: D, renderHeader: L, defaultSoundsOnly: x } = e,
+    I = n(126857);
+function b(e) {
+    let { guildId: t, channel: n, containerWidth: a, onClose: b, onSelect: T, analyticsSource: S, suppressPlaySound: y, shouldValidateSelectedSound: A, shouldShowUpsell: N = !0, gridNotice: C, inExpressionPicker: R, soundButtonOverlay: O, listPadding: D, renderHeader: L, defaultSoundsOnly: x } = e,
         w = (0, l.e7)([E.Z], () => E.Z.isFetchingSounds() || E.Z.isFetchingDefaultSounds()),
         M = (0, l.e7)([h.Z], () => h.Z.getMediaSessionId()),
         { analyticsLocations: P } = (0, d.ZP)(c.Z.SOUNDBOARD_POPOUT);
@@ -42,17 +42,17 @@ function I(e) {
     return (0, r.jsx)(d.Gt, {
         value: P,
         children: (0, r.jsx)(u.Dialog, {
-            className: s()(b.picker, {
-                [b.fetching]: w,
-                [b.inExpressionPicker]: R,
-                [b.refresh]: k
+            className: s()(I.picker, {
+                [I.fetching]: w,
+                [I.inExpressionPicker]: R,
+                [I.refresh]: k
             }),
             children: w
                 ? (0, r.jsx)(u.Spinner, {})
                 : (0, r.jsx)(v.Z, {
                       guildId: t,
                       channel: n,
-                      onClose: I,
+                      onClose: b,
                       onSelect: T,
                       shouldValidateSelectedSound: A,
                       containerWidth: a,

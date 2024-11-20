@@ -11,7 +11,7 @@ var r = n(358085),
 function l(e) {
     let { user: t, activity: n, application: l, channelId: u, currentUser: c, isEmbedded: d, ChannelStore: f, GuildStore: _, GuildMemberCountStore: p, RelationshipStore: h, SelectedChannelStore: m, VoiceStateStore: g, PermissionStore: E } = e,
         v = f.getChannel(u),
-        b = (0, i.a)(v);
+        I = (0, i.a)(v);
     if (null == t) return !1;
     if (d)
         return (
@@ -21,7 +21,7 @@ function l(e) {
                 channelId: u,
                 currentUser: c,
                 application: l,
-                isActivitiesEnabledForCurrentPlatform: b,
+                isActivitiesEnabledForCurrentPlatform: I,
                 ChannelStore: f,
                 VoiceStateStore: g,
                 PermissionStore: E,

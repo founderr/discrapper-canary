@@ -5,47 +5,47 @@ n.d(t, {
 });
 var i = n(278323),
     l = n(13245),
-    r = n(45114),
-    o = n(237997),
-    a = n(145597),
-    s = n(620954),
+    o = n(45114),
+    r = n(237997),
+    s = n(145597),
+    a = n(620954),
     u = n(987650),
-    c = n(981631),
-    d = n(388032);
+    d = n(981631),
+    c = n(388032);
 function h(e, t, n, h) {
     let f = t.username,
-        p = d.intl.format(d.t.VDODnp, {
+        p = c.intl.format(c.t.VDODnp, {
             username: '',
             game: n.name
         }),
         m = t.getAvatarURL(e.guild_id, 80),
-        { trackView: v, trackClick: g } = (0, s.R)(u.n0.ActivityInvite, {
+        { trackView: v, trackClick: g } = (0, a.R)(u.n0.ActivityInvite, {
             notif_type: u.n0.ActivityInvite,
             notif_user_id: t.id,
-            activity_type: c.mFx.JOIN_REQUEST,
+            activity_type: d.mFx.JOIN_REQUEST,
             activity_name: h.name
         });
     return {
         icon: m,
         title: f,
         body: p,
-        confirmText: d.intl.string(d.t['fgP/wc']),
-        cancelText: d.intl.string(d.t.tpXzJy),
+        confirmText: c.intl.string(c.t['fgP/wc']),
+        cancelText: c.intl.string(c.t.tpXzJy),
         onNotificationShow: () => {
             v();
         },
         onConfirmClick: (t, n) => {
             i.Z.sendActivityInvite({
                 channelId: e.id,
-                type: c.mFx.JOIN,
+                type: d.mFx.JOIN,
                 activity: h,
-                location: o.Z.isLocked((0, a.QF)()) ? c.Sbl.LOCKED_OVERLAY : c.Sbl.UNLOCKED_OVERLAY
+                location: r.Z.isLocked((0, s.QF)()) ? d.Sbl.LOCKED_OVERLAY : d.Sbl.UNLOCKED_OVERLAY
             }),
                 g('join'),
                 l.Z.updateNotificationStatus(n);
         },
         onCancelClick: (t, n) => {
-            (0, r.In)(e.id, !0, !0), l.Z.updateNotificationStatus(n), g('decline');
+            (0, o.In)(e.id, !0, !0), l.Z.updateNotificationStatus(n), g('decline');
         },
         onDismissClick: () => {
             g('dismiss');

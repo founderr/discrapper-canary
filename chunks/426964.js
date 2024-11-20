@@ -16,8 +16,8 @@ var r = n(200651),
     g = n(51144),
     E = n(970606),
     v = n(963202),
-    b = n(645896),
-    I = n(905362),
+    I = n(645896),
+    b = n(905362),
     T = n(353093),
     S = n(574410),
     y = n(900681),
@@ -25,7 +25,7 @@ var r = n(200651),
     N = n(308083),
     C = n(981631),
     R = n(388032),
-    O = n(805697);
+    O = n(469761);
 function D(e) {
     e.stopPropagation();
 }
@@ -33,7 +33,7 @@ t.Z = i.memo(function (e) {
     var t, n;
     let { clan: L, isLoading: x, onClose: w, profileViewedAnalytics: M, userId: P } = e,
         k = null == L ? void 0 : L.identityGuildId,
-        U = (0, b.Cc)(null != k ? k : null),
+        U = (0, I.Cc)(null != k ? k : null),
         B = null == L ? void 0 : L.tag,
         G = (0, v.i)('clan_guild_profile'),
         { enabled: Z } = (0, l.I)(),
@@ -78,7 +78,7 @@ t.Z = i.memo(function (e) {
         }, [W, H]),
         ei = i.useCallback(
             (e) => {
-                if (null != k) e.stopPropagation(), e.preventDefault(), null == w || w(), (0, E.hM)(k, E.UE.TAG_ADOPTION), (0, I.SJ)(k);
+                if (null != k) e.stopPropagation(), e.preventDefault(), null == w || w(), (0, E.hM)(k, E.UE.TAG_ADOPTION), (0, b.SJ)(k);
             },
             [k, w]
         ),
@@ -87,7 +87,7 @@ t.Z = i.memo(function (e) {
                 if (null == U || null == k) return;
                 if ((e.stopPropagation(), e.preventDefault(), null == w || w(), !ee))
                     (0, E.hM)(k, E.UE.APPLY_FLOW),
-                        (0, I.qF)(k, U, {
+                        (0, b.qF)(k, U, {
                             source: null == M ? void 0 : M.source,
                             messageId: null == M ? void 0 : M.messageId,
                             tagUserId: null == M ? void 0 : M.tagUserId,

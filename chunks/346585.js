@@ -1,41 +1,41 @@
 n.d(t, {
     IE: function () {
-        return y;
-    },
-    K9: function () {
-        return R;
-    },
-    NX: function () {
-        return C;
-    },
-    R_: function () {
-        return h;
-    },
-    e$: function () {
-        return m;
-    },
-    ti: function () {
         return I;
     },
+    K9: function () {
+        return C;
+    },
+    NX: function () {
+        return S;
+    },
+    R_: function () {
+        return m;
+    },
+    e$: function () {
+        return E;
+    },
+    ti: function () {
+        return g;
+    },
     zV: function () {
-        return c;
+        return _;
     }
 }),
     n(757143),
     n(47120),
     n(627341);
-var i = n(913527),
-    r = n.n(i),
-    o = n(278074),
-    a = n(768581),
-    s = n(709054),
-    f = n(624138),
-    d = n(219496),
-    u = n(801461),
-    l = n(388032);
-function c(e) {
+var r = n(913527),
+    i = n.n(r),
+    s = n(278074),
+    l = n(768581),
+    o = n(709054),
+    a = n(624138),
+    c = n(219496),
+    d = n(801461),
+    u = n(388032);
+function _(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return a.ZP.getUserAvatarURL(
+    return l.ZP.getUserAvatarURL(
         {
             id: e.id,
             avatar: e.avatar,
@@ -46,68 +46,68 @@ function c(e) {
         80
     );
 }
-function m(e) {
-    let t = (0, f._I)(e.username).replace(u.RN, '').replace(u.iF, '.').toLowerCase();
+function E(e) {
+    let t = (0, a._I)(e.username).replace(d.RN, '').replace(d.iF, '.').toLowerCase();
     return ''.concat(t).concat(e.discriminator).substring(0, 32);
 }
-let g = ['@', '#', ':'],
-    _ = ['```', 'discord', 'hypesquad', 'system message', 'system mesage', 'sustem message', 'sustem mesage', 'clyde'],
-    p = ['discordtag', 'everyone', 'here', 'discord nitro', 'discord', 'snowsgiving'];
-function C(e) {
+let h = ['@', '#', ':'],
+    p = ['```', 'discord', 'hypesquad', 'system message', 'system mesage', 'sustem message', 'sustem mesage', 'clyde'],
+    f = ['discordtag', 'everyone', 'here', 'discord nitro', 'discord', 'snowsgiving'];
+function S(e) {
     var t, n;
-    let i = e.username.toLowerCase();
+    let r = e.username.toLowerCase();
     if (
-        ((t = i),
-        (n = u.kt),
+        ((t = r),
+        (n = d.kt),
         t
             .split('')
             .filter((e) => !n.includes(e.charCodeAt(0)))
             .join('')).length < 2
     )
         return !0;
-    for (let e of g) if (i.includes(e)) return !0;
-    for (let e of p) if (i === e.toLowerCase()) return !0;
-    for (let e of _) if (i.includes(e.toLowerCase())) return !0;
+    for (let e of h) if (r.includes(e)) return !0;
+    for (let e of f) if (r === e.toLowerCase()) return !0;
+    for (let e of p) if (r.includes(e.toLowerCase())) return !0;
     return !1;
 }
-function h(e) {
+function m(e) {
     return e.toLowerCase().replace(/\s/g, '').replace('@', '');
 }
-function R(e) {
-    let t = s.default.extractTimestamp(e);
+function C(e) {
+    let t = o.default.extractTimestamp(e);
     try {
-        return r()(new Date(t)).format('MMM DD, YYYY');
+        return i()(new Date(t)).format('MMM DD, YYYY');
     } catch (e) {}
     return null;
 }
-function I(e) {
-    return (0, o.EQ)(e)
+function g(e) {
+    return (0, s.EQ)(e)
         .with({ rateLimited: !0 }, () => ({
-            type: d.K.RATE_LIMIT,
-            message: l.intl.string(l.t.T15lqq)
+            type: c.K.RATE_LIMIT,
+            message: u.intl.string(u.t.T15lqq)
         }))
-        .with({ error: o.P.not(o.P.nullish) }, (e) => {
+        .with({ error: s.P.not(s.P.nullish) }, (e) => {
             let { error: t } = e;
             return {
-                type: d.K.ERROR,
+                type: c.K.ERROR,
                 message: t
             };
         })
         .with({ taken: !1 }, () => ({
-            type: d.K.AVAILABLE,
-            message: l.intl.string(l.t.PgfBS0)
+            type: c.K.AVAILABLE,
+            message: u.intl.string(u.t.PgfBS0)
         }))
         .with({ taken: !0 }, () => ({
-            type: d.K.ERROR,
-            message: l.intl.string(l.t.mCrAUV)
+            type: c.K.ERROR,
+            message: u.intl.string(u.t.mCrAUV)
         }))
-        .with({ error: o.P.nullish }, () => ({
-            type: d.K.INTERNAL_ERROR,
+        .with({ error: s.P.nullish }, () => ({
+            type: c.K.INTERNAL_ERROR,
             message: ''
         }))
         .otherwise(() => void 0);
 }
-function y(e) {
+function I(e) {
     return new Date(2024, 2, 4).toLocaleDateString(e, {
         month: 'long',
         day: 'numeric',

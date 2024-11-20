@@ -21,16 +21,16 @@ var i = n(120356),
     g = n(82295),
     E = n(818083),
     v = n(480608),
-    b = n(124072),
-    I = n(184301),
+    I = n(124072),
+    b = n(184301),
     T = n(347475),
     S = n(592125),
     y = n(271383),
     A = n(430824),
     N = n(594174),
     C = n(388032),
-    R = n(882530),
-    O = n(8313);
+    R = n(554034),
+    O = n(63133);
 let D = (0, E.B)({
     kind: 'user',
     id: '2021-07_role_popout',
@@ -51,7 +51,7 @@ function L(e) {
         k = null != t && 0 !== t && !w,
         U = k && 'dot' === P,
         B = (e) =>
-            (0, r.jsxs)(b.Z, {
+            (0, r.jsxs)(I.Z, {
                 className: a()(R.roleMention),
                 color: 'username' === P && k ? t : null,
                 ...e,
@@ -96,7 +96,7 @@ function L(e) {
                                       c.Popout,
                                       {
                                           preload: () =>
-                                              (0, I.Z)(i.id, i.getAvatarURL(t.guild_id, 80), {
+                                              (0, b.Z)(i.id, i.getAvatarURL(t.guild_id, 80), {
                                                   guildId: t.guild_id,
                                                   channelId: t.id
                                               }),
@@ -125,7 +125,7 @@ function L(e) {
                                                       guildId: a.id,
                                                       onContextMenu: (e) => {
                                                           (0, d.jW)(e, async () => {
-                                                              let { default: e } = await Promise.all([n.e('50506'), n.e('79695'), n.e('51269'), n.e('13351'), n.e('33862'), n.e('92453'), n.e('13125'), n.e('80863')]).then(n.bind(n, 757387));
+                                                              let { default: e } = await Promise.all([n.e('50506'), n.e('79695'), n.e('51269'), n.e('13351'), n.e('50050'), n.e('92453'), n.e('13125'), n.e('13441')]).then(n.bind(n, 757387));
                                                               return (n) =>
                                                                   (0, r.jsx)(e, {
                                                                       ...n,

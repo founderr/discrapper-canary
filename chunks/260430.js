@@ -15,7 +15,7 @@ var i = n(120356),
     c = n(481060),
     d = n(713938),
     f = n(388032),
-    _ = n(381298);
+    _ = n(341772);
 function p(e) {
     let { text: t, error: n, isFake: i } = e;
     return (0, r.jsxs)('div', {
@@ -59,7 +59,7 @@ function h(e) {
     if (0 === i.length) return null;
     let E = g(),
         v = m ? f.t.PZpY9f : f.t['1Hz+Sk'],
-        b = u === o.Y.USER_INSTALL && a.includes(l.x.APPLICATIONS_COMMANDS);
+        I = u === o.Y.USER_INSTALL && a.includes(l.x.APPLICATIONS_COMMANDS);
     return (0, r.jsxs)('div', {
         className: _.scopes,
         children: [
@@ -83,7 +83,7 @@ function h(e) {
                     })
                 )
                 .flat(),
-            b && (0, r.jsx)(p, { text: f.intl.string(f.t.Ls2XRk) }),
+            I && (0, r.jsx)(p, { text: f.intl.string(f.t.Ls2XRk) }),
             (0, r.jsx)(p, {
                 text: E,
                 isFake: !0

@@ -41,14 +41,14 @@ var r;
     function v() {
         125 != _ && ((d = 7), (_ = 125), (f = 35), c && (c && (i && o(i), r && clearTimeout(r), (c = !1)), T())), E();
     }
-    function b() {
+    function I() {
         (i = null), (r = setTimeout(S, 0));
     }
-    function I() {
-        (r = null), s(b);
+    function b() {
+        (r = null), s(I);
     }
     function T() {
-        if (!c) (t = _ - (Date.now() - h)), (e = Date.now()), (c = !0), f && t < f && (t = f), t > 9 ? (r = setTimeout(I, t)) : ((t = 0), I());
+        if (!c) (t = _ - (Date.now() - h)), (e = Date.now()), (c = !0), f && t < f && (t = f), t > 9 ? (r = setTimeout(b, t)) : ((t = 0), b());
     }
     function S() {
         var n,

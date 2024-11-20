@@ -2,14 +2,14 @@ var n = s(200651);
 s(192379);
 var r = s(780384),
     i = s(410030),
-    o = s(325767);
-let a = (e, t) => (null != t ? t : e ? 0.5 : 0.2),
+    a = s(325767);
+let o = (e, t) => (null != t ? t : e ? 0.5 : 0.2),
     l = (e, t) => (null != t ? t : e ? 'url(#paint0_linear_1055_83268)' : 'url(#paint0_linear_1282_11557)');
 t.Z = (e) => {
     let { ellipseOpacity: t, circleColor: s, ...c } = e,
         d = (0, i.ZP)(),
         u = (0, r.ap)(d),
-        p = a(u, t),
+        p = o(u, t),
         f = l(u, s);
     return (0, n.jsxs)('svg', {
         style: { overflow: 'visible' },
@@ -18,7 +18,7 @@ t.Z = (e) => {
         viewBox: '0 0 100 100',
         fill: 'none',
         xmlns: 'http://www.w3.org/2000/svg',
-        ...(0, o.Z)({ ...c }),
+        ...(0, a.Z)({ ...c }),
         children: [
             (0, n.jsxs)('svg', {
                 width: '100',

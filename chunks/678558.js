@@ -16,9 +16,9 @@ var r = n(200651),
     g = n(981631),
     E = n(474936),
     v = n(388032),
-    b = n(817407);
+    I = n(459671);
 t.Z = (e) => {
-    let { analyticsLocation: t, analyticsSourceLocation: n, guild: a, buttonText: I, targetBoostedGuildTier: T, onClose: S = () => {}, closeLayer: y = () => {}, pauseAnimation: A = !1, applicationId: N, handleSubscribeModalClose: C, withHighlight: R = !1, ...O } = e,
+    let { analyticsLocation: t, analyticsSourceLocation: n, guild: a, buttonText: b, targetBoostedGuildTier: T, onClose: S = () => {}, closeLayer: y = () => {}, pauseAnimation: A = !1, applicationId: N, handleSubscribeModalClose: C, withHighlight: R = !1, ...O } = e,
         { analyticsLocations: D } = (0, c.ZP)(),
         L = (0, u.bp)() === g.IlC.POPOUT,
         [x, w] = i.useState(!1),
@@ -44,15 +44,15 @@ t.Z = (e) => {
                 w(!1);
         },
         G = p.ZP.getPremiumTypeSubscription(),
-        Z = (0, r.jsx)('span', { children: null != I ? I : v.intl.string(v.t.gKmQ1N) });
+        Z = (0, r.jsx)('span', { children: null != b ? b : v.intl.string(v.t.gKmQ1N) });
     return ((null == G ? void 0 : G.isPausedOrPausePending) &&
         (M === E.a$.NONE || 0 === P.length) &&
         ((Z = (0, r.jsxs)('div', {
-            className: b.pausedButton,
+            className: I.pausedButton,
             children: [
                 (0, r.jsx)(o.LockIcon, {
                     size: 'xs',
-                    className: b.lockIcon
+                    className: I.lockIcon
                 }),
                 ' ',
                 Z
@@ -76,7 +76,7 @@ t.Z = (e) => {
         : (0, r.jsx)(o.ShinyButton, {
               size: o.Button.Sizes.SMALL,
               ...O,
-              className: s()(O.className, { [b.buttonHighlighted]: R }),
+              className: s()(O.className, { [I.buttonHighlighted]: R }),
               submitting: x,
               onClick: B,
               pauseAnimation: A,

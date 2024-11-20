@@ -5,13 +5,13 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    o = n.n(r),
-    a = n(442837),
-    s = n(239091),
+    o = n(120356),
+    r = n.n(o),
+    s = n(442837),
+    a = n(239091),
     u = n(765250),
-    c = n(393238),
-    d = n(358221),
+    d = n(393238),
+    c = n(358221),
     h = n(933557),
     f = n(352978),
     p = n(27457),
@@ -19,14 +19,14 @@ var i = n(200651),
     v = n(592125),
     g = n(944486),
     E = n(906037),
-    _ = n(501787),
+    Z = n(501787),
     C = n(65154),
-    S = n(227002);
-function Z(e) {
-    let { context: t = C.Yn.DEFAULT, participants: r, locked: a, widget: u, channel: c, width: d, height: h, containerRef: m } = e,
+    x = n(253653);
+function S(e) {
+    let { context: t = C.Yn.DEFAULT, participants: o, locked: s, widget: u, channel: d, width: c, height: h, containerRef: m } = e,
         v = (e, l) => {
-            (0, s.jW)(l, async () => {
-                let { default: l } = await Promise.all([n.e('79695'), n.e('69220'), n.e('44378')]).then(n.bind(n, 881351));
+            (0, a.jW)(l, async () => {
+                let { default: l } = await Promise.all([n.e('79695'), n.e('69220'), n.e('50261')]).then(n.bind(n, 881351));
                 return (n) =>
                     (0, i.jsx)(l, {
                         ...n,
@@ -36,48 +36,48 @@ function Z(e) {
                     });
             });
         },
-        g = r.length > 0 && null != t && null != c && (!a || u.pinned);
+        g = o.length > 0 && null != t && null != d && (!s || u.pinned);
     l.useEffect(() => {
         (0, E.m3)(
             {
-                locked: a,
+                locked: s,
                 pinned: u.pinned,
                 widget: u.type,
                 isPreviewingInGame: !1
             },
             g
         );
-    }, [a, u, g]);
-    let _ = 'boolean' != typeof u.meta.horizontal || u.meta.horizontal;
+    }, [s, u, g]);
+    let Z = 'boolean' != typeof u.meta.horizontal || u.meta.horizontal;
     return g
         ? (0, i.jsx)('div', {
               ref: m,
-              className: o()({
-                  [S.videoList]: !0,
-                  [S.vertical]: !_
+              className: r()({
+                  [x.videoList]: !0,
+                  [x.vertical]: !Z
               }),
               style: { opacity: u.opacity },
-              children: r.map((e) => {
+              children: o.map((e) => {
                   let { user: n } = e;
-                  return null == n || null == c || null == t
+                  return null == n || null == d || null == t
                       ? null
                       : (0, i.jsx)(
                             p.ZP,
                             {
                                 participant: e,
-                                width: d,
-                                className: S.tile,
+                                width: c,
+                                className: x.tile,
                                 containerStyle: {
-                                    width: d,
+                                    width: c,
                                     height: h
                                 },
                                 fit: f.L.COVER,
-                                channel: c,
+                                channel: d,
                                 inPopout: !0,
                                 inCall: !0,
                                 noBorder: !0,
-                                onContextMenu: a ? void 0 : v,
-                                forceIdle: a
+                                onContextMenu: s ? void 0 : v,
+                                forceIdle: s
                             },
                             n.id
                         );
@@ -86,19 +86,19 @@ function Z(e) {
         : null;
 }
 function I(e) {
-    let t = (0, a.e7)([g.Z, v.Z], () => v.Z.getChannel(g.Z.getVoiceChannelId())),
+    let t = (0, s.e7)([g.Z, v.Z], () => v.Z.getChannel(g.Z.getVoiceChannelId())),
         n = (0, h.ZP)(t),
-        r = (0, a.Wu)([d.Z], () => (null != t ? d.Z.getVideoParticipants(t.id) : [])),
-        o = (0, a.e7)([d.Z], () => (null != t ? d.Z.getParticipantsVersion(t.id) : 0)),
-        s = 'boolean' != typeof e.widget.meta.horizontal || e.widget.meta.horizontal,
-        { width: f, height: p, ref: E } = (0, c.Z)(),
-        { visibleParticipants: C, participantTileWidth: S } = (0, m.ZB)(s ? (null != f ? f : e.width) : null != p ? p : e.height, r, {
-            tileWidth: _.vZ,
-            tileMinWidth: _.mo,
-            tileMargin: _.F$,
+        o = (0, s.Wu)([c.Z], () => (null != t ? c.Z.getVideoParticipants(t.id) : [])),
+        r = (0, s.e7)([c.Z], () => (null != t ? c.Z.getParticipantsVersion(t.id) : 0)),
+        a = 'boolean' != typeof e.widget.meta.horizontal || e.widget.meta.horizontal,
+        { width: f, height: p, ref: E } = (0, d.Z)(),
+        { visibleParticipants: C, participantTileWidth: x } = (0, m.ZB)(a ? (null != f ? f : e.width) : null != p ? p : e.height, o, {
+            tileWidth: Z.OVERLAY_TILE_WIDTH,
+            tileMinWidth: Z.OVERLAY_TILE_MIN_WIDTH,
+            tileMargin: Z.OVERLAY_TILE_MARGIN,
             limit: 8,
             cropSelfVideo: !0,
-            version: o
+            version: r
         }),
         I = {
             id: e.widget.id,
@@ -106,12 +106,12 @@ function I(e) {
             containerWidth: e.width,
             containerHeight: e.height
         },
-        x = l.useRef(I);
+        _ = l.useRef(I);
     return (
-        l.useLayoutEffect(() => void (x.current = I)),
+        l.useLayoutEffect(() => void (_.current = I)),
         l.useLayoutEffect(() => {
-            let { size: e, id: t, containerWidth: n, containerHeight: i } = x.current;
-            ((s && e.height > e.width) || (!s && e.width > e.height)) &&
+            let { size: e, id: t, containerWidth: n, containerHeight: i } = _.current;
+            ((a && e.height > e.width) || (!a && e.width > e.height)) &&
                 (0, u.nv)({
                     widgetId: t,
                     size: {
@@ -120,15 +120,15 @@ function I(e) {
                         height: n
                     }
                 });
-        }, [s]),
-        (0, i.jsx)(Z, {
+        }, [a]),
+        (0, i.jsx)(S, {
             ...e,
             channel: t,
             title: null != n ? n : '',
             participants: C,
-            participantsVersion: o,
-            width: s ? S : null != f ? f : e.width,
-            height: s ? (null != p ? p : e.height) : S,
+            participantsVersion: r,
+            width: a ? x : null != f ? f : e.width,
+            height: a ? (null != p ? p : e.height) : x,
             containerRef: E
         })
     );

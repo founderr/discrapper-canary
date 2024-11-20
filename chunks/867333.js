@@ -15,22 +15,22 @@ var r = n(200651),
     f = n(186523),
     _ = n(553826),
     p = n(939350),
-    h = n(7758);
+    h = n(667947);
 function m(e) {
-    let { color: t = 'default', label: n, checked: a, subtext: m, disabled: g, isFocused: E, menuItemProps: v, action: b } = e,
-        I = i.useRef(null),
+    let { color: t = 'default', label: n, checked: a, subtext: m, disabled: g, isFocused: E, menuItemProps: v, action: I } = e,
+        b = i.useRef(null),
         T = (0, d.Q)('MenuRadioItem');
     return (
         i.useEffect(() => {
-            E && (0, u.F)(I);
+            E && (0, u.F)(b);
         }, [E]),
         (0, r.jsxs)(o.P, {
-            innerRef: I,
+            innerRef: b,
             className: s()(h.item, h.labelContainer, p._[t], {
                 [h.disabled]: g,
                 [h.focused]: E
             }),
-            onClick: g ? void 0 : b,
+            onClick: g ? void 0 : I,
             ...v,
             'aria-checked': a,
             'aria-disabled': g,

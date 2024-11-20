@@ -7,7 +7,7 @@ var r = n(200651);
 n(192379);
 var i = n(481060),
     o = n(207126),
-    a = n(91783);
+    a = n(666956);
 function l(e) {
     let { channel: t } = e;
     return (0, r.jsxs)('div', {

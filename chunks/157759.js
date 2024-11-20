@@ -17,15 +17,15 @@ var r = n(200651),
     E = n(388032);
 t.Z = (e) => {
     let { application: t, reportId: n } = e,
-        [v, b] = i.useState(!1),
-        [I, T] = i.useState(!1),
+        [v, I] = i.useState(!1),
+        [b, T] = i.useState(!1),
         S = (0, a.e7)([h.Z, f.Z], () => {
             var e;
             return null === (e = f.Z.getChannel(h.Z.getChannelId())) || void 0 === e ? void 0 : e.guild_id;
         }),
         [y, A] = i.useState(null);
     i.useEffect(() => {
-        null != y && (b(!0), T(!0));
+        null != y && (I(!0), T(!0));
     }, [y]),
         i.useEffect(() => {
             if (null == S) return;
@@ -74,10 +74,10 @@ t.Z = (e) => {
               children: (0, r.jsx)(d.Z, {
                   title: E.intl.string(E.t['WV/CsL']),
                   description: E.intl.string(E.t['FlcC+/']),
-                  buttonText: I ? E.intl.string(E.t.aCJlq6) : E.intl.string(E.t['6I1F3t']),
-                  buttonDisabled: !I,
-                  buttonColor: I ? s.Button.Colors.RED : s.Button.Colors.WHITE,
-                  buttonLook: I ? s.Button.Looks.FILLED : s.Button.Looks.LINK,
+                  buttonText: b ? E.intl.string(E.t.aCJlq6) : E.intl.string(E.t['6I1F3t']),
+                  buttonDisabled: !b,
+                  buttonColor: b ? s.Button.Colors.RED : s.Button.Colors.WHITE,
+                  buttonLook: b ? s.Button.Looks.FILLED : s.Button.Looks.LINK,
                   onButtonPress: N
               })
           })

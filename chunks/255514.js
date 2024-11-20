@@ -16,8 +16,8 @@ var r = n(200651),
     g = n(822686),
     E = n(356110),
     v = n(730719),
-    b = n(996701),
-    I = n(320596),
+    I = n(996701),
+    b = n(320596),
     T = n(273514),
     S = n(995712),
     y = n(234937),
@@ -38,7 +38,7 @@ var r = n(200651),
     G = n(375790),
     Z = n(981631),
     F = n(388032),
-    V = n(980105);
+    V = n(133404);
 function j(e, t) {
     let { elements: n } = e;
     return n.find((e) => {
@@ -124,10 +124,10 @@ t.Z = (e) => {
                 destination: ['', t.id]
             }));
     }, [t.is_auto_submit, es, q, t.id]);
-    let eb = (0, l.fW)(Y),
-        eI = (0, u.A)({
+    let eI = (0, l.fW)(Y),
+        eb = (0, u.A)({
             location: 'web_iar_node_view',
-            settingsUpsells: null != eb ? eb : [],
+            settingsUpsells: null != eI ? eI : [],
             channelId: 'message' === n.name ? n.record.channel_id : void 0
         }),
         eT = (0, o.Do)({ location: 'web_iar_node_view' }) && null != j(t, 'ignore_users') && ('message' === n.name || 'first_dm' === n.name || 'user' === n.name);
@@ -206,10 +206,10 @@ t.Z = (e) => {
                         }),
                     null != j(t, 'settings_upsells') &&
                         'message' === n.name &&
-                        null != eb &&
-                        eI &&
+                        null != eI &&
+                        eb &&
                         (0, r.jsx)(M.Z, {
-                            settingsUpsells: eb,
+                            settingsUpsells: eI,
                             channelId: n.record.channel_id,
                             onModalClose: z,
                             reportId: X,
@@ -241,7 +241,7 @@ t.Z = (e) => {
                     ('user_urf' === n.name || 'message_urf' === n.name) &&
                         null != en &&
                         en.length > 0 &&
-                        (0, r.jsx)(I.Z, {
+                        (0, r.jsx)(b.Z, {
                             elements: en,
                             onChange: em,
                             state: ef
@@ -250,7 +250,7 @@ t.Z = (e) => {
                         node: t,
                         onSelectChild: eg
                     }),
-                    null != et && et.length > 0 ? (0, r.jsx)(b.Z, { elements: et }) : null,
+                    null != et && et.length > 0 ? (0, r.jsx)(I.Z, { elements: et }) : null,
                     (0, r.jsx)(v.Z, {
                         errorMessage: el,
                         onClose: () => {

@@ -16,8 +16,8 @@ var r,
     g = n(570220),
     E = n(686546),
     v = n(28546),
-    b = n(285651),
-    I = n(926491),
+    I = n(285651),
+    b = n(926491),
     T = n(373228),
     S = n(378233),
     y = n(419922),
@@ -29,7 +29,7 @@ var r,
     D = n(606301),
     L = n(981631),
     x = n(388032),
-    w = n(787040);
+    w = n(238268);
 let M = (0, f.Mg)(_.Z.EXPRESSION_SUGGESTIONS_CONTAINER_PADDING),
     P = (0, f.Mg)(_.Z.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_SIZE),
     k = 2 * P + (0, f.Mg)(_.Z.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_MARGIN) + 2 * M,
@@ -58,7 +58,7 @@ function B(e) {
                 sticker: s,
                 className: w.__invalid_sticker
             }),
-            r !== b.eb.SENDABLE && (0, a.jsx)(A.Z, { size: 14 })
+            r !== I.eb.SENDABLE && (0, a.jsx)(A.Z, { size: 14 })
         ]
     });
 }
@@ -172,11 +172,11 @@ t.Z = s.memo(function (e) {
                         sticker_id: e.id,
                         suggestion_trigger: Y
                     }),
-                    t === b.eb.SENDABLE)
+                    t === I.eb.SENDABLE)
                 )
                     P(!0), o(e, T.V0.EXPRESSION_SUGGESTIONS), ee.cancel(), H('');
                 else if ((0, S.jl)(e)) {
-                    let t = I.Z.getStickerPack(e.pack_id);
+                    let t = b.Z.getStickerPack(e.pack_id);
                     null != t &&
                         (0, N.Z)({
                             stickerPack: t,

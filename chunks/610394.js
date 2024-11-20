@@ -15,7 +15,7 @@ var r,
     m = n(998502),
     g = n(145597),
     E = n(454991),
-    v = n(568963),
+    v = n(32300),
     I = n(388627),
     b = n(987650),
     T = n(501787);
@@ -54,16 +54,16 @@ function M(e) {
 }
 async function P(e) {
     var t, n;
-    return await (0, I.fK)(), c.Z.window.setBackgroundThrottling(!1), (O = e), (0, g.tB)(O), null !== (n = await (null === c.Z || void 0 === c.Z ? void 0 : null === (t = c.Z.window) || void 0 === t ? void 0 : t.getNativeHandle(T.$J))) && void 0 !== n ? n : '';
+    return await (0, I.fK)(), c.Z.window.setBackgroundThrottling(!1), (O = e), (0, g.tB)(O), null !== (n = await (null === c.Z || void 0 === c.Z ? void 0 : null === (t = c.Z.window) || void 0 === t ? void 0 : t.getNativeHandle(T.OVERLAY_V3_KEY))) && void 0 !== n ? n : '';
 }
 function k() {
     var e;
-    null === c.Z || void 0 === c.Z || null === (e = c.Z.window) || void 0 === e || e.close(T.$J), (O = null), (0, g.tB)(null != O ? O : -1), c.Z.window.setBackgroundThrottling(!0);
+    null === c.Z || void 0 === c.Z || null === (e = c.Z.window) || void 0 === e || e.close(T.OVERLAY_V3_KEY), (O = null), (0, g.tB)(null != O ? O : -1), c.Z.window.setBackgroundThrottling(!0);
 }
 function U(e) {
     let t = _.ZP.getGameForPID(e);
     u.Z.setAssociatedGame(null != O ? O : -1, e, t), A.delete(null != O ? O : -1), (O = e), (0, g.tB)(null != O ? O : -1);
-    let n = p.Z.getWindow(T.$J),
+    let n = p.Z.getWindow(T.OVERLAY_V3_KEY),
         r = () =>
             new Promise((e) => {
                 null == n ||
@@ -82,7 +82,7 @@ function U(e) {
     a();
 }
 function B(e, t, n, r) {
-    let i = p.Z.getWindow(T.$J);
+    let i = p.Z.getWindow(T.OVERLAY_V3_KEY);
     if (null == i) return;
     let a = Math.ceil(n * i.innerWidth),
         s = Math.ceil(r * i.innerHeight),

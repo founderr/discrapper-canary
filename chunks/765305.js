@@ -24,7 +24,7 @@ n.d(t, {
         return o;
     },
     gG: function () {
-        return I;
+        return b;
     },
     gv: function () {
         return u;
@@ -51,7 +51,7 @@ n.d(t, {
         return a;
     },
     wm: function () {
-        return b;
+        return I;
     },
     zV: function () {
         return L;
@@ -78,8 +78,8 @@ var r,
     g = n(70956),
     E = n(981631);
 let v = 100,
-    b = 1000,
-    I = 100,
+    I = 1000,
+    b = 100,
     T = 'Guild Events Modal',
     S = '-1';
 ((c = r || (r = {}))[(c.SCHEDULED = 1)] = 'SCHEDULED'), (c[(c.ACTIVE = 2)] = 'ACTIVE'), (c[(c.COMPLETED = 3)] = 'COMPLETED'), (c[(c.CANCELED = 4)] = 'CANCELED');

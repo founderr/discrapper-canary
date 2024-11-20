@@ -3,8 +3,8 @@ var i,
     r,
     s,
     a,
-    l,
     o,
+    l,
     c,
     d,
     u = n(512722),
@@ -43,7 +43,7 @@ var i,
     W = n(981631),
     F = n(987650),
     H = n(388032);
-((a = i || (i = {}))[(a.GENERIC = 0)] = 'GENERIC'), (a[(a.TEXT = 1)] = 'TEXT'), (a[(a.INCOMING_CALL = 2)] = 'INCOMING_CALL'), ((l = r || (r = {}))[(l.NORMAL = 0)] = 'NORMAL'), (l[(l.HIGH = 1)] = 'HIGH'), (l[(l.URGENT = 2)] = 'URGENT');
+((a = i || (i = {}))[(a.GENERIC = 0)] = 'GENERIC'), (a[(a.TEXT = 1)] = 'TEXT'), (a[(a.INCOMING_CALL = 2)] = 'INCOMING_CALL'), ((o = r || (r = {}))[(o.NORMAL = 0)] = 'NORMAL'), (o[(o.HIGH = 1)] = 'HIGH'), (o[(o.URGENT = 2)] = 'URGENT');
 let Y = 5 * V.Z.Millis.SECOND,
     K = 8 * V.Z.Millis.SECOND,
     X = 30 * V.Z.Millis.SECOND,
@@ -123,14 +123,14 @@ class er extends (s = f.ZP.Store) {
     }
 }
 (d = 'OverlayNotificationsStore'),
-    (c = 'displayName') in (o = er)
-        ? Object.defineProperty(o, c, {
+    (c = 'displayName') in (l = er)
+        ? Object.defineProperty(l, c, {
               value: d,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (o[c] = d),
+        : (l[c] = d),
     (t.Z = new er(
         g.Z,
         __OVERLAY__
@@ -176,8 +176,8 @@ class er extends (s = f.ZP.Store) {
                       var t, n, i;
                       let { channelId: r, message: s } = e,
                           a = j.Z.getChannel(r),
-                          l = D.default.getUser(null === (t = s.author) || void 0 === t ? void 0 : t.id);
-                      if (null == a || null == l) return !1;
+                          o = D.default.getUser(null === (t = s.author) || void 0 === t ? void 0 : t.id);
+                      if (null == a || null == o) return !1;
                       if ((null === (n = s.activity) || void 0 === n ? void 0 : n.type) === W.mFx.JOIN || (null === (i = s.activity) || void 0 === i ? void 0 : i.type) === W.mFx.JOIN_REQUEST) {
                           if (!(0, U.eF)(s, r, !0, !0)) return !1;
                           let e = (function (e, t, n) {
@@ -201,12 +201,12 @@ class er extends (s = f.ZP.Store) {
                                   channelId: e.id
                               });
                               return null != a && J(a, !1, X), !0;
-                          })(a, s, l);
+                          })(a, s, o);
                           if (!1 !== e) return e;
                       }
                       if (((!z.Z.isInstanceLocked() || z.Z.isPinned(W.Odu.TEXT)) && r === R.Z.getChannelId()) || z.Z.getTextChatNotificationMode() === W.Ypu.DISABLED || M.Z.disableNotifications || !(0, U.eF)(s, r)) return !1;
-                      let o = !L.Z.isSoundDisabled(k.Ay);
-                      en((0, I.Z)(a, s, l, o), {
+                      let l = !L.Z.isSoundDisabled(k.Ay);
+                      en((0, I.Z)(a, s, o, l), {
                           type: 1,
                           channelId: a.id,
                           messageType: s.type

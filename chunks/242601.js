@@ -28,8 +28,8 @@ var i = n(200651),
     T = n(13228),
     S = n(1259),
     A = n(211644),
-    b = n(605236),
-    x = n(243778),
+    x = n(605236),
+    b = n(243778),
     Z = n(492162),
     L = n(818634),
     y = n(596557),
@@ -71,7 +71,7 @@ var i = n(200651),
     eh = n(921944),
     em = n(647086),
     ep = n(388032),
-    eg = n(114778);
+    eg = n(541194);
 function ef(e, t, n) {
     return (
         t in e
@@ -266,7 +266,7 @@ class eC extends r.PureComponent {
     }
     renderFooter() {
         let { selectedChannelId: e, shouldRenderClipsEducation: t } = this.props;
-        return (0, i.jsx)(x.ZP, {
+        return (0, i.jsx)(b.ZP, {
             contentTypes: [],
             children: (n) => {
                 let { visibleContent: r, markAsDismissed: l } = n;
@@ -350,7 +350,7 @@ class eC extends r.PureComponent {
                 let { guild: t } = this.props;
                 null != t &&
                     (0, p.jW)(e, async () => {
-                        let { default: e } = await Promise.all([n.e('33053'), n.e('15669'), n.e('7654'), n.e('44156'), n.e('16141'), n.e('85552'), n.e('58227'), n.e('16114'), n.e('28356'), n.e('33213'), n.e('41115')]).then(n.bind(n, 545135));
+                        let { default: e } = await Promise.all([n.e('33053'), n.e('15669'), n.e('7654'), n.e('44156'), n.e('44294'), n.e('85552'), n.e('58227'), n.e('16114'), n.e('28161'), n.e('33213'), n.e('75658')]).then(n.bind(n, 545135));
                         return (n) =>
                             (0, i.jsx)(e, {
                                 ...n,
@@ -363,9 +363,9 @@ class eC extends r.PureComponent {
             }),
             ef(this, 'handleCloseStudentHubPrivacySettingsTooltip', () => {
                 var e;
-                let t = (0, b.un)(d.z.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP),
+                let t = (0, x.un)(d.z.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP),
                     n = null === (e = this.props.guild) || void 0 === e ? void 0 : e.hasFeature(ed.oNc.HUB);
-                !t && n && (0, b.EW)(d.z.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP, { dismissAction: eh.L.AUTO });
+                !t && n && (0, x.EW)(d.z.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP, { dismissAction: eh.L.AUTO });
             }),
             ef(this, 'handleCloseSubscribeTooltip', () => {
                 this.showTimeout.stop(), this.state.shouldShowSubscribeTooltip && this.setState({ shouldShowSubscribeTooltip: !1 });
@@ -424,7 +424,7 @@ function ev(e) {
     let m = (0, Z.Z)(n),
         p = (0, c.e7)([W.Z], () => W.Z.getGuildDimensions(n).scrollTo),
         g = (0, c.e7)([ee.Z], () => ee.Z.getChannelId()),
-        [N, x, R] = (0, c.Wu)([J.Z], () => [J.Z.can(ed.Plq.MANAGE_GUILD, u), J.Z.can(ed.Plq.MANAGE_ROLES, u), J.Z.can(ed.Plq.MANAGE_THREADS, u)]),
+        [N, b, R] = (0, c.Wu)([J.Z], () => [J.Z.can(ed.Plq.MANAGE_GUILD, u), J.Z.can(ed.Plq.MANAGE_ROLES, u), J.Z.can(ed.Plq.MANAGE_THREADS, u)]),
         M = (0, c.e7)([Y.Z], () => Y.Z.isUnavailable(n)),
         U = (0, c.e7)([et.default], () => et.default.getCurrentUser()),
         B = (0, c.e7)([F.Z], () => (F.Z.darkSidebar ? ed.BRd.DARK : F.Z.theme)),
@@ -445,11 +445,11 @@ function ev(e) {
         eI = N && (null == u ? void 0 : u.premiumProgressBarEnabled) === !1 && !ei.s.isDisallowPopupsSet(),
         ev = (0, c.e7)([q.Z], () => q.Z.getMemberCount(n)),
         eN = N && null != ev && ev >= 30 && (null == u ? void 0 : u.premiumProgressBarEnabled) === !1 && !ei.s.isDisallowPopupsSet(),
-        eT = x && null != u && (u.hasFeature(ed.oNc.COMMUNITY) || (null != ev && ev > 50)),
+        eT = b && null != u && (u.hasFeature(ed.oNc.COMMUNITY) || (null != ev && ev > 50)),
         eS = (0, P.Z)(n),
         eA = (0, S._)(n),
-        eb = (null == u ? void 0 : u.hasFeature(ed.oNc.HUB)) === !0,
-        ex = N && (null == u ? void 0 : u.hasFeature(ed.oNc.DISCOVERABLE)) === !0,
+        ex = (null == u ? void 0 : u.hasFeature(ed.oNc.HUB)) === !0,
+        eb = N && (null == u ? void 0 : u.hasFeature(ed.oNc.DISCOVERABLE)) === !0,
         eZ = (0, C.Q)(),
         eL = (N || (null == u ? void 0 : u.premiumTier) === ed.Eu4.NONE) && !ei.s.isDisallowPopupsSet() && !eZ,
         ey = (0, c.e7)([j.Z, Q.Z], () => null != u && null != U && N && !Q.Z.hasLayers() && j.Z.shouldShowGuildTemplateDirtyTooltip(n)),
@@ -461,7 +461,7 @@ function ev(e) {
         eM = er && !eD,
         ew = (0, T.Z)(U);
     (0, y.Z)(u);
-    let ek = (0, b.wE)(d.z.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
+    let ek = (0, x.wE)(d.z.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
         eU = (0, w.Z)(n),
         eG = (0, O.Z)(n),
         eB = (0, c.e7)([ee.Z], () => ee.Z.getChannelId()),
@@ -486,12 +486,12 @@ function ev(e) {
         showGuildBoostingProgressBarUpsell: eI,
         showGuildBoostingProgressBarSizeUpsell: eN,
         showInviteSplashUpsell: eL,
-        showDiscoveryLandingPageSettingsUpsell: ex,
+        showDiscoveryLandingPageSettingsUpsell: eb,
         showGuildHeaderTutorial: e_,
         showGuildTemplateDirtyTooltip: ey,
         showRoleSubscriptionUpsell: eS,
         showDiscoveryTooltip: eA,
-        showHubPrivacySettingsTooltip: eb,
+        showHubPrivacySettingsTooltip: ex,
         showNewUnreadsBar: eR,
         showActiveThreadsNotice: R && null != ev && ev >= 200 && ej,
         showGuildSoundboardPermissionUpsell: eT,

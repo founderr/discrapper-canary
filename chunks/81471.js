@@ -16,13 +16,13 @@ var i = n(200651),
     E = n(981631),
     I = n(217702),
     C = n(388032),
-    v = n(684550),
-    N = n(882530);
+    v = n(877148),
+    N = n(554034);
 let T = r.memo(function (e) {
     let { channel: t } = e,
         { loaded: n, error: l, message: T } = (0, _.a)(t),
         S = (0, d.p)(),
-        { isBlocked: A, isIgnored: b } = (0, s.cj)(
+        { isBlocked: A, isIgnored: x } = (0, s.cj)(
             [f.Z],
             () => ({
                 isBlocked: null != T && f.Z.isBlockedForMessage(T),
@@ -30,7 +30,7 @@ let T = r.memo(function (e) {
             }),
             [T]
         ),
-        x = (0, s.e7)([g.Z], () => g.Z.can(E.Plq.MANAGE_MESSAGES, t)),
+        b = (0, s.e7)([g.Z], () => g.Z.can(E.Plq.MANAGE_MESSAGES, t)),
         Z = p.cC.useSetting(),
         { content: L } = r.useMemo(
             () =>
@@ -59,7 +59,7 @@ let T = r.memo(function (e) {
                 color: 'text-muted',
                 children: C.intl.string(C.t['WPe+xM'])
             });
-        else if (null != T && b)
+        else if (null != T && x)
             y = (0, i.jsx)(o.Text, {
                 className: v.messageReplacement,
                 variant: 'text-sm/normal',
@@ -96,7 +96,7 @@ let T = r.memo(function (e) {
             });
     } else y = null;
     return (0, i.jsx)(c.a.Provider, {
-        value: (0, u.Z)(Z, x),
+        value: (0, u.Z)(Z, b),
         children: (0, i.jsx)(o.FocusBlock, {
             className: v.messageFocusBlock,
             children: y

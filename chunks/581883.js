@@ -40,8 +40,8 @@ let g = {
         [h.yP.PRELOADED_USER_SETTINGS]: g,
         [h.yP.FRECENCY_AND_FAVORITES_SETTINGS]: E
     },
-    b = !1;
-function I() {
+    I = !1;
+function b() {
     T();
 }
 function T() {
@@ -62,7 +62,7 @@ function y(e) {
         resetEditInfo: i,
         local: s
     } = e;
-    b = !s;
+    I = !s;
     let o = v[n];
     i && S(o), r ? ((o.proto = (0, p.re)(o.ProtoClass, o.proto, t)), a()('string' != typeof o.proto, 'UserSettingsProto cannot be a string')) : ((o.proto = t), a()('string' != typeof o.proto, 'UserSettingsProto cannot be a string'), (o.editInfo.loaded = !0), (o.editInfo.loading = !1));
 }
@@ -105,7 +105,7 @@ class N extends (r = l.ZP.PersistedStore) {
         return E.proto;
     }
     get wasMostRecentUpdateFromServer() {
-        return b;
+        return I;
     }
     getFullState() {
         return v;
@@ -180,8 +180,8 @@ m(N, 'displayName', 'UserSettingsProtoStore'),
                 }),
                 T();
         },
-        CONNECTION_CLOSED: I,
-        CONNECTION_RESUMED: I,
+        CONNECTION_CLOSED: b,
+        CONNECTION_RESUMED: b,
         OVERLAY_INITIALIZE: function (e) {
             let { userSettingsProto: t } = e;
             (g.proto = (0, p.ac)(t)), a()('string' != typeof g.proto, 'UserSettingsProto cannot be a string');

@@ -10,7 +10,7 @@ var r = n(481060),
     a = n(934415),
     o = n(834129),
     s = n(981631),
-    c = n(577015);
+    c = n(163809);
 function u(e) {
     let { giftIntentType: t, recipientUser: n, giftIntentSecondaryAction: u, channel: d } = e;
     return (0, i.jsx)(o.Z, {

@@ -7,9 +7,9 @@ var n = s(200651);
 s(192379);
 var r = s(120356),
     i = s.n(r),
-    o = s(481060),
-    a = s(679768),
-    l = s(9642);
+    a = s(481060),
+    o = s(679768),
+    l = s(704448);
 function c(e) {
     let { copy: t, showStars: s = !0, className: r } = e;
     return (0, n.jsxs)('div', {
@@ -20,21 +20,21 @@ function c(e) {
                     children: [
                         (0, n.jsx)('span', {
                             className: i()(l.star, l.starLeft),
-                            children: (0, n.jsx)(a.Z, {
+                            children: (0, n.jsx)(o.Z, {
                                 width: '10',
                                 height: '10'
                             })
                         }),
                         (0, n.jsx)('span', {
                             className: i()(l.star, l.starRight),
-                            children: (0, n.jsx)(a.Z, {
+                            children: (0, n.jsx)(o.Z, {
                                 width: '14',
                                 height: '14'
                             })
                         })
                     ]
                 }),
-            (0, n.jsx)(o.Text, {
+            (0, n.jsx)(a.Text, {
                 variant: 'eyebrow',
                 className: l.newBadge,
                 children: t

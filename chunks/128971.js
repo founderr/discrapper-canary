@@ -5,8 +5,8 @@ var i = n(448730),
 e.exports = function (e) {
     return function (t) {
         var n = r((t = a(t))) ? s(t) : void 0,
-            l = n ? n[0] : t.charAt(0),
-            o = n ? i(n, 1).join('') : t.slice(1);
-        return l[e]() + o;
+            o = n ? n[0] : t.charAt(0),
+            l = n ? i(n, 1).join('') : t.slice(1);
+        return o[e]() + l;
     };
 };

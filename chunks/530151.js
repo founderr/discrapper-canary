@@ -22,8 +22,8 @@ var i = n(200651),
     T = n(925329),
     S = n(707409),
     A = n(210887),
-    b = n(283595),
-    x = n(417363),
+    x = n(283595),
+    b = n(417363),
     Z = n(941128),
     L = n(451478),
     y = n(424218),
@@ -32,7 +32,7 @@ var i = n(200651),
     R = n(86826),
     j = n(981631),
     D = n(388032),
-    M = n(166345);
+    M = n(734744);
 function w(e, t, n) {
     return (
         t in e
@@ -345,7 +345,7 @@ class K extends r.PureComponent {
     }
     renderProgressPatching() {
         return (0, i.jsx)(P.Z, {
-            getHistoricalTotalBytes: x.Z.getHistoricalTotalBytesWritten,
+            getHistoricalTotalBytes: b.Z.getHistoricalTotalBytesWritten,
             updateInterval: 5000,
             children: this.renderProgressPatchingBody
         });
@@ -531,14 +531,14 @@ class ee extends r.PureComponent {
                               (0, i.jsx)(R.Z, {
                                   className: a()(M.headerCell, M.networkProgress),
                                   title: D.intl.string(D.t.ytoXKi),
-                                  getHistoricalTotalBytes: x.Z.getHistoricalTotalBytesDownloaded,
+                                  getHistoricalTotalBytes: b.Z.getHistoricalTotalBytesDownloaded,
                                   color: j.Ilk.GREEN_360,
                                   animate: r
                               }),
                               (0, i.jsx)(R.Z, {
                                   className: a()(M.headerCell, M.diskProgress),
                                   title: D.intl.string(D.t.SjohhI),
-                                  getHistoricalTotalBytes: x.Z.getHistoricalTotalBytesWritten,
+                                  getHistoricalTotalBytes: b.Z.getHistoricalTotalBytesWritten,
                                   color: j.Ilk.BLUE_345,
                                   animate: r
                               })
@@ -610,7 +610,7 @@ function et(e, t, n, i) {
                     branchId: s,
                     state: c,
                     application: o,
-                    libraryApplication: b.Z.getLibraryApplication(a, s),
+                    libraryApplication: x.Z.getLibraryApplication(a, s),
                     finished: t,
                     index: l
                 }),
@@ -619,10 +619,10 @@ function et(e, t, n, i) {
     }, []);
 }
 t.Z = (0, E.Z)(
-    c.ZP.connectStores([I.Z, x.Z, Z.Z, A.Z, L.Z], () => {
-        let e = et(Z.Z.activeItems, !1, I.Z, x.Z);
+    c.ZP.connectStores([I.Z, b.Z, Z.Z, A.Z, L.Z], () => {
+        let e = et(Z.Z.activeItems, !1, I.Z, b.Z);
         return {
-            applications: [...e, ...et(Z.Z.finishedItems, !0, I.Z, x.Z)],
+            applications: [...e, ...et(Z.Z.finishedItems, !0, I.Z, b.Z)],
             paused: Z.Z.paused,
             isFocused: L.Z.isFocused(),
             theme: A.Z.theme

@@ -19,27 +19,27 @@ var i = n(200651),
     C = n(979007),
     v = n(981631),
     N = n(388032),
-    T = n(162064);
+    T = n(850258);
 t.Z = function (e) {
     let { applicationId: t, onSelectApplication: n, onScroll: S, initialTab: A } = e,
-        b = r.useRef(null),
-        x = (0, l.e7)([s.Z], () => s.Z.getApplication(t)),
+        x = r.useRef(null),
+        b = (0, l.e7)([s.Z], () => s.Z.getApplication(t)),
         Z = (0, l.e7)([s.Z], () => s.Z.getApplicationFetchState(t));
     r.useEffect(() => {
-        null != t && null == x && a.i6(t);
-    }, [t, x]);
-    let L = null == x ? void 0 : x.storefront_available,
+        null != t && null == b && a.i6(t);
+    }, [t, b]);
+    let L = null == b ? void 0 : b.storefront_available,
         [y, O] = r.useState(null != A ? A : C.Wc.ABOUT),
         P = r.useCallback(
             (e) => {
                 var t;
-                null === (t = b.current) || void 0 === t || t.scrollTo({ to: 0 }), O(C.Wc.ABOUT), n(e);
+                null === (t = x.current) || void 0 === t || t.scrollTo({ to: 0 }), O(C.Wc.ABOUT), n(e);
             },
             [n]
         );
     r.useEffect(() => {
-        (null == x ? void 0 : x.storefront_available) && null != t && (0, c.Z)(t);
-    }, [null == x ? void 0 : x.storefront_available, t]);
+        (null == b ? void 0 : b.storefront_available) && null != t && (0, c.Z)(t);
+    }, [null == b ? void 0 : b.storefront_available, t]);
     let R = r.useMemo(
             () => [
                 {
@@ -54,14 +54,14 @@ t.Z = function (e) {
             []
         ),
         j = r.useMemo(() => {
-            if (null == x) return null;
+            if (null == b) return null;
             switch (y) {
                 case C.Wc.ABOUT:
-                    return (0, i.jsx)(g.Z, { application: x });
+                    return (0, i.jsx)(g.Z, { application: b });
                 case C.Wc.STORE:
-                    return (0, i.jsx)(I.Z, { application: x });
+                    return (0, i.jsx)(I.Z, { application: b });
             }
-        }, [y, x]),
+        }, [y, b]),
         D = r.useCallback(
             (e) => {
                 O(e), e === C.Wc.ABOUT ? (0, p.Gp)(v.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(t)) : (0, p.Gp)(v.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t, e));
@@ -71,7 +71,7 @@ t.Z = function (e) {
         M = r.useCallback((e) => {
             (0, p.pR)({ categoryId: e });
         }, []);
-    if (null == x)
+    if (null == b)
         return Z === s.M.FETCHING
             ? (0, i.jsx)('div', {
                   className: T.centerContainer,
@@ -84,12 +84,12 @@ t.Z = function (e) {
     let w = y === C.Wc.ABOUT;
     return (0, i.jsx)(h.Z, {
         onScroll: S,
-        ref: b,
+        ref: x,
         children: (0, i.jsx)(d.Z, {
             children: (0, i.jsxs)('div', {
                 className: T.detailContainer,
                 children: [
-                    (0, i.jsx)(f.Z, { application: x }),
+                    (0, i.jsx)(f.Z, { application: b }),
                     (0, i.jsxs)('div', {
                         className: T.contentContainer,
                         children: [
@@ -107,7 +107,7 @@ t.Z = function (e) {
                                         }),
                                     j,
                                     (0, i.jsx)(E.Z, {
-                                        application: x,
+                                        application: b,
                                         onSelectApplication: P
                                     })
                                 ]
@@ -115,7 +115,7 @@ t.Z = function (e) {
                             w &&
                                 (0, i.jsx)(_.Z, {
                                     className: T.sidebar,
-                                    application: x,
+                                    application: b,
                                     onSelectCategory: M
                                 })
                         ]

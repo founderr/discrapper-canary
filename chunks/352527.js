@@ -2,11 +2,11 @@ var i,
     r,
     s,
     a,
-    l = n(442837),
-    o = n(570140);
+    o = n(442837),
+    l = n(570140);
 let c = !1,
     d = !1;
-class u extends (a = l.ZP.Store) {
+class u extends (a = o.ZP.Store) {
     get keepOpen() {
         return d;
     }
@@ -23,7 +23,7 @@ class u extends (a = l.ZP.Store) {
               writable: !0
           })
         : (i[r] = s),
-    (t.Z = new u(o.Z, {
+    (t.Z = new u(l.Z, {
         SOUNDBOARD_SET_OVERLAY_ENABLED: function (e) {
             if (((c = e.enabled), e.enabled)) {
                 var t;

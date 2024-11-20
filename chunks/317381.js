@@ -23,8 +23,8 @@ var i,
     g = n(316253),
     E = n(761122),
     v = n(917107),
-    b = n(701488),
-    I = n(918559),
+    I = n(701488),
+    b = n(918559),
     T = n(981631);
 function S(e, t, n) {
     return (
@@ -58,15 +58,15 @@ let y = {
     P = new Map(),
     k = new Map(),
     U = new Map();
-let B = I.Ez.DISCONNECTED,
-    G = I.MI.RESIZABLE,
-    Z = b.GM.NORMAL;
+let B = b.Ez.DISCONNECTED,
+    G = b.MI.RESIZABLE,
+    Z = I.GM.NORMAL;
 function F(e) {
     return null != e ? e : '0';
 }
 function V(e) {
     var t, n, i, a;
-    let { guildId: o, channelId: l, location: p, applicationId: E, launchId: b, compositeInstanceId: S, participants: y } = e,
+    let { guildId: o, channelId: l, location: p, applicationId: E, launchId: I, compositeInstanceId: S, participants: y } = e,
         N = (0, h.Z)(E);
     if (null == N) return;
     let D = null !== (n = O.get(l)) && void 0 !== n ? n : A,
@@ -83,7 +83,7 @@ function V(e) {
             channelId: l,
             guildId: o,
             location: p,
-            launchId: b,
+            launchId: I,
             compositeInstanceId: S,
             url: N,
             userIds: new Set(w),
@@ -102,7 +102,7 @@ function V(e) {
           k === u.default.getSessionId() &&
           (function (e) {
               var t, n;
-              let { channelId: i, applicationId: a, launchId: o, compositeInstanceId: l, location: p, participants: m, isFirstActivityInChannel: E, isStart: b } = e,
+              let { channelId: i, applicationId: a, launchId: o, compositeInstanceId: l, location: p, participants: m, isFirstActivityInChannel: E, isStart: I } = e,
                   S = (0, h.Z)(a),
                   y = u.default.getSessionId();
               if (null == S || null == y || (null === (t = C.get(a)) || void 0 === t ? void 0 : t.channelId) === i) return !1;
@@ -128,21 +128,21 @@ function V(e) {
                       channelId: i,
                       applicationId: a,
                       isFirstActivityInChannel: E,
-                      isStart: b,
+                      isStart: I,
                       participants: m,
                       embeddedActivity: O
                   }),
                   (0, g.Z)()
-                      ? ((B = I.Ez.ACTIVITY_POPOUT_WINDOW),
+                      ? ((B = b.Ez.ACTIVITY_POPOUT_WINDOW),
                         s.Z.wait(() => {
                             s.Z.dispatch({ type: 'ACTIVITY_POPOUT_WINDOW_OPEN' });
                         }))
-                      : (B = r !== d.Z.getChannelId() || (0, v.Z)(i) ? I.Ez.PIP : I.Ez.PANEL),
+                      : (B = r !== d.Z.getChannelId() || (0, v.Z)(i) ? b.Ez.PIP : b.Ez.PANEL),
                   U.set(W(i, a), Date.now());
           })({
               channelId: l,
               applicationId: E,
-              launchId: b,
+              launchId: I,
               compositeInstanceId: S,
               location: p,
               participants: y,
@@ -356,7 +356,7 @@ let z = new K(s.Z, {
             isLaunching: !0,
             componentId: r
         }),
-            (G = i === l.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON ? I.MI.NO_CHAT : I.MI.RESIZABLE);
+            (G = i === l.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON ? b.MI.NO_CHAT : b.MI.RESIZABLE);
     },
     EMBEDDED_ACTIVITY_LAUNCH_SUCCESS: function (e) {
         let { applicationId: t, channelId: n } = e;
@@ -483,11 +483,11 @@ let z = new K(s.Z, {
     },
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
-        r !== t && B === I.Ez.PANEL && (B = I.Ez.PIP);
+        r !== t && B === b.Ez.PANEL && (B = b.Ez.PIP);
     },
     POPOUT_WINDOW_CLOSE: function (e) {
         let { key: t } = e;
-        t === T.KJ3.ACTIVITY_POPOUT && (B = I.Ez.PIP);
+        t === T.KJ3.ACTIVITY_POPOUT && (B = b.Ez.PIP);
     }
 });
 t.ZP = z;

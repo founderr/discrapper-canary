@@ -18,7 +18,7 @@ var r = n(200651),
     d = n(898188),
     f = n(541716),
     _ = n(407661),
-    p = n(482133);
+    p = n(703130);
 function h(e) {
     let { channel: t, type: n, activeCommand: h, pendingReply: m } = e,
         { activeCommandOption: g, activeCommandOptionStates: E } = (0, a.cj)([s.Z], () => ({
@@ -26,7 +26,7 @@ function h(e) {
             activeCommandOptionStates: s.Z.getOptionStates(t.id)
         })),
         v = (0, c.e)(t),
-        b = (0, o.__)(h, t, { location: 'ChannelTextAreaBars' });
+        I = (0, o.__)(h, t, { location: 'ChannelTextAreaBars' });
     return i.useMemo(() => {
         let e = [],
             i = [];
@@ -41,7 +41,7 @@ function h(e) {
                     })
                 ),
             null != h &&
-                (b && e.push((0, r.jsx)(u.Z, { activeCommand: h })),
+                (I && e.push((0, r.jsx)(u.Z, { activeCommand: h })),
                 e.push(
                     (0, r.jsx)(l.Z, {
                         activeCommand: h,
@@ -63,7 +63,7 @@ function h(e) {
                 floating: i
             }
         );
-    }, [h, g, E, t, m, v, b, n]);
+    }, [h, g, E, t, m, v, I, n]);
 }
 function m(e) {
     let { bars: t } = e,

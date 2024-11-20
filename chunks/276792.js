@@ -16,7 +16,7 @@ var r = n(704215),
     h = n(474936),
     m = n(981631),
     p = n(388032),
-    g = n(801120),
+    g = n(566851),
     f = n(74316);
 function _(e) {
     var t, n;
@@ -25,7 +25,7 @@ function _(e) {
         { onClose: T } = E,
         S = null != _.button && '' !== _.button.copy ? _.button.copy : p.intl.string(p.t.YScQSE),
         A = (null === (t = _.button) || void 0 === t ? void 0 : t.buttonAction) === l.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button',
-        b =
+        x =
             (null === (n = _.button) || void 0 === n ? void 0 : n.buttonAction) === l.Wc.OPEN_MARKETING_PAGE
                 ? () => {
                       (0, o.uL)(m.Z5c.APPLICATION_STORE), T();
@@ -43,7 +43,7 @@ function _(e) {
                               e && T();
                           }
                       }),
-        x =
+        b =
             '' !== _.helpArticleId
                 ? () =>
                       (0, i.jsxs)(i.Fragment, {
@@ -87,7 +87,7 @@ function _(e) {
         header: _.header,
         modalTopExtra: y,
         subHeader: _.subheader,
-        subHeaderExtra: x,
+        subHeaderExtra: b,
         body: _.body,
         heroArt: Z,
         featureCards: _.featureCards.map((e) => ({
@@ -111,7 +111,7 @@ function _(e) {
                         seconds_open: Math.round((Date.now() - e) / 1000),
                         target: N
                     }),
-                        b();
+                        x();
                 },
                 children: [
                     (0, i.jsx)('img', {

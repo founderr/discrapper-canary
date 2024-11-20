@@ -12,7 +12,7 @@ n.d(t, {
         return g;
     },
     pV: function () {
-        return b;
+        return I;
     }
 }),
     n(47120);
@@ -164,7 +164,7 @@ function v(e) {
     let t = (0, r.useCallback)(() => h(e), [JSON.stringify(e)]);
     return m(e, t);
 }
-function b(e) {
+function I(e) {
     let t = e.subscriptionPlanPrice;
     return (
         e.discounts.forEach((n) => {

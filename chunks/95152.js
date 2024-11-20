@@ -25,9 +25,9 @@ var r = n(200651),
     h = n(998502),
     m = n(981631),
     g = n(388032),
-    E = n(516331),
-    v = n(971436);
-function b(e, t, n) {
+    E = n(570486),
+    v = n(113207);
+function I(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -40,7 +40,7 @@ function b(e, t, n) {
         e
     );
 }
-function I(e) {
+function b(e) {
     var t, n, a, o;
     let { file: l } = e,
         [u, c] = i.useState(),
@@ -99,7 +99,7 @@ class T extends i.Component {
     render() {
         var e;
         if (this.props.upload.item.platform !== u.ow.WEB) return null;
-        if (this.props.upload.isImage) return (0, r.jsx)(I, { file: this.props.upload.item.file });
+        if (this.props.upload.isImage) return (0, r.jsx)(b, { file: this.props.upload.item.file });
         return (0, r.jsx)('div', { className: s()(E.icon, { [E[null !== (e = this.props.upload.classification) && void 0 !== e ? e : '']]: !0 }) });
     }
 }
@@ -230,19 +230,19 @@ class S extends i.Component {
     constructor(e) {
         var t, n, r, i, a, s;
         super(e),
-            b(this, 'cancelAll', () => {
+            I(this, 'cancelAll', () => {
                 l.Z.clearAll(this.props.channelId, this.props.draftType), this.props.onClose();
             }),
-            b(this, 'cancel', () => {
+            I(this, 'cancel', () => {
                 this.props.onClose();
             }),
-            b(this, 'handleTextChange', (e, t, n) => {
+            I(this, 'handleTextChange', (e, t, n) => {
                 this.setState({
                     textValue: t,
                     richValue: n
                 });
             }),
-            b(this, 'handleSubmit', () => {
+            I(this, 'handleSubmit', () => {
                 let { upload: e, onClose: t, onSubmit: n } = this.props,
                     { filename: r, description: i, hasSpoiler: a } = this.state;
                 n({

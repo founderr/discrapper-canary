@@ -27,10 +27,10 @@ var i = n(200651),
     T = n(358924),
     S = n(292140),
     A = n(525296),
-    b = n(981631),
-    x = n(674563),
+    x = n(981631),
+    b = n(674563),
     Z = n(388032),
-    L = n(510768);
+    L = n(888816);
 let y = 15 * I.Z.Millis.MINUTE,
     O = (0, A.Z)(function (e) {
         let { party: t, onUserContextMenu: n, onChannelContextMenu: l, quest: a } = e,
@@ -52,10 +52,10 @@ let y = 15 * I.Z.Millis.MINUTE,
                 let e = m
                     .filter((e) => {
                         var t, n;
-                        return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === x.wW.GAME;
+                        return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === b.wW.GAME;
                     })
                     .map((e) => e.game.name);
-                E.default.track(b.rMx.NOW_PLAYING_CARD_HOVERED, {
+                E.default.track(x.rMx.NOW_PLAYING_CARD_HOVERED, {
                     num_users: g,
                     num_streams: f,
                     num_activities: _,

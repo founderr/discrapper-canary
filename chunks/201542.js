@@ -15,9 +15,9 @@ var r = n(200651),
     m = n(347312),
     g = n(981631),
     E = n(388032),
-    v = n(883113);
-let b = i.lazy(() => Promise.all([n.e('26460'), n.e('89792')]).then(n.bind(n, 711635)));
-function I(e) {
+    v = n(506574);
+let I = i.lazy(() => Promise.all([n.e('26460'), n.e('89792')]).then(n.bind(n, 711635)));
+function b(e) {
     let { played: t, duration: n, currentTime: i } = e,
         a = null == n ? '--:--' : t ? (0, d.yv)(Math.ceil(n - i)) : (0, d.yv)(Math.ceil(n));
     return (0, r.jsx)(l.Text, {
@@ -144,7 +144,7 @@ t.Z = i.memo(function (e) {
         e_ = j ? E.intl.string(E.t.ZcgDJS) : E.intl.string(E.t.RscU7O);
     'Safari' === platform.name
         ? (y = (0, r.jsx)(i.Suspense, {
-              children: (0, r.jsx)(b, {
+              children: (0, r.jsx)(I, {
                   ref: k,
                   className: v.audioElement,
                   src: A,
@@ -203,7 +203,7 @@ t.Z = i.memo(function (e) {
                 onDragStart: el,
                 onDragEnd: eu
             }),
-            (0, r.jsx)(I, {
+            (0, r.jsx)(b, {
                 played: K,
                 currentTime: U,
                 duration: G

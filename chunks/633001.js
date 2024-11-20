@@ -35,7 +35,7 @@ let b = (e) => ({
     }),
     g = (e, t) => e.find((e) => e.type === t);
 function v() {
-    let e = (0, o.Wu)([h.Z], () => h.Z.getWidgetsForLayout(x.$S)),
+    let e = (0, o.Wu)([h.Z], () => h.Z.getWidgetsForLayout(x.OVERLAY_V3_LAYOUT_ID)),
         t = (0, o.e7)([u.Z], () => u.Z.clickZoneDebugMode),
         n = () => {
             d.Z.setClickZoneDebugMode(!u.Z.clickZoneDebugMode);
@@ -44,7 +44,7 @@ function v() {
         i = () => {
             if (null != a) (0, s.E9)(a.id);
             else {
-                let e = b(x.$S);
+                let e = b(x.OVERLAY_V3_LAYOUT_ID);
                 (0, s.A4)(e);
             }
         };

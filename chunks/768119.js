@@ -42,13 +42,13 @@ function E(e) {
 function v(e) {
     return e === m.aib.DMS ? m.aib.DMS : e === m.I_8 ? m.aib.FAVORITES : null != h.Z.getGuild(e) ? m.aib.GUILD : null != p.Z.getChannel(e) ? m.aib.CHANNEL : null;
 }
-function b(e, t) {
+function I(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
     if (null == e) return n;
     let r = g[e];
     return null == r ? n : t(r);
 }
-let I = 'SearchStore',
+let b = 'SearchStore',
     T = !1,
     S = {},
     y = null;
@@ -58,7 +58,7 @@ function A(e) {
     if ('string' != typeof r || '' === (r = r.trim())) return;
     let i = (S[n] = null !== (t = S[n]) && void 0 !== t ? t : []),
         a = i.indexOf(r);
-    -1 !== a ? (i.splice(a, 1), i.unshift(r)) : null != i[0] && '' !== i[0] && r.startsWith(i[0]) ? (i[0] = r) : a < 0 && i.unshift(r), i.length > 5 && i.splice(5, i.length), c.K.set(I, { history: S });
+    -1 !== a ? (i.splice(a, 1), i.unshift(r)) : null != i[0] && '' !== i[0] && r.startsWith(i[0]) ? (i[0] = r) : a < 0 && i.unshift(r), i.length > 5 && i.splice(5, i.length), c.K.set(b, { history: S });
 }
 function N(e) {
     let { searchId: t } = e,
@@ -73,7 +73,7 @@ function C(e) {
 class R extends (r = u.ZP.Store) {
     initialize() {
         this.waitFor(h.Z, p.Z);
-        let e = c.K.get(I);
+        let e = c.K.get(b);
         if ((null == e ? void 0 : e.history) != null) {
             var t;
             Object.keys((t = e.history)).forEach((e) => {
@@ -94,63 +94,63 @@ class R extends (r = u.ZP.Store) {
         return T;
     }
     getSearchType(e) {
-        return b(null != e ? e : y, (e) => e.searchType);
+        return I(null != e ? e : y, (e) => e.searchType);
     }
     getRawResults(e) {
-        return b(e, (e) => e.rawResults);
+        return I(e, (e) => e.rawResults);
     }
     hasResults(e) {
-        return null != b(e, (e) => e.rawResults);
+        return null != I(e, (e) => e.rawResults);
     }
     isIndexing(e) {
-        return b(e, (e) => e.isIndexing) || !1;
+        return I(e, (e) => e.isIndexing) || !1;
     }
     isHistoricalIndexing(e) {
-        return b(e, (e) => e.isHistoricalIndexing) || !1;
+        return I(e, (e) => e.isHistoricalIndexing) || !1;
     }
     isSearching(e) {
-        return b(e, (e) => e.isSearching) || !1;
+        return I(e, (e) => e.isSearching) || !1;
     }
     getAnalyticsId(e) {
-        return b(e, (e) => e.analyticsId);
+        return I(e, (e) => e.analyticsId);
     }
     getResultsBlocked(e) {
-        return b(e, (e) => e.resultsBlocked);
+        return I(e, (e) => e.resultsBlocked);
     }
     getDocumentsIndexedCount(e) {
-        return b(e, (e) => e.documentsIndexed);
+        return I(e, (e) => e.documentsIndexed);
     }
     getSearchFetcher(e) {
-        return b(e, (e) => e.searchFetcher);
+        return I(e, (e) => e.searchFetcher);
     }
     getTotalResults(e) {
         var t;
-        return null !== (t = b(e, (e) => e.totalResults)) && void 0 !== t ? t : 0;
+        return null !== (t = I(e, (e) => e.totalResults)) && void 0 !== t ? t : 0;
     }
     getEditorState(e) {
-        return b(e, (e) => e.editorState);
+        return I(e, (e) => e.editorState);
     }
     getHistory(e) {
         return S[e];
     }
     getOffset(e) {
         var t;
-        return null !== (t = b(e, (e) => e.offset)) && void 0 !== t ? t : 0;
+        return null !== (t = I(e, (e) => e.offset)) && void 0 !== t ? t : 0;
     }
     getQuery(e) {
-        return b(e, (e) => e.query);
+        return I(e, (e) => e.query);
     }
     hasError(e) {
         var t;
-        return null !== (t = b(e, (e) => e.hasError)) && void 0 !== t && t;
+        return null !== (t = I(e, (e) => e.hasError)) && void 0 !== t && t;
     }
     shouldShowBlockedResults(e) {
         var t;
-        return null !== (t = b(e, (e) => e.showBlockedResults, !1)) && void 0 !== t && t;
+        return null !== (t = I(e, (e) => e.showBlockedResults, !1)) && void 0 !== t && t;
     }
     shouldShowNoResultsAlt(e) {
         var t;
-        return null !== (t = b(e, (e) => e.showNoResultsAlt, !1)) && void 0 !== t && t;
+        return null !== (t = I(e, (e) => e.showNoResultsAlt, !1)) && void 0 !== t && t;
     }
     getResultsState(e) {
         return {
@@ -272,15 +272,15 @@ class R extends (r = u.ZP.Store) {
         },
         SEARCH_CLEAR_HISTORY: function (e) {
             let { searchId: t } = e;
-            null == t ? (c.K.remove(I), (S = {})) : (delete S[t], c.K.set(I, { history: S }));
+            null == t ? (c.K.remove(b), (S = {})) : (delete S[t], c.K.set(b, { history: S }));
         },
         SEARCH_REMOVE_HISTORY: function (e) {
             let { searchId: t, query: n } = e;
-            null != S[t] && ((S[t] = S[t].filter((e) => e !== n)), c.K.set(I, { history: S }));
+            null != S[t] && ((S[t] = S[t].filter((e) => e !== n)), c.K.set(b, { history: S }));
         },
         SEARCH_ADD_HISTORY: A,
         LOGOUT: function () {
-            c.K.remove(I), (S = {});
+            c.K.remove(b), (S = {});
         },
         CONNECTION_OPEN: function () {
             Object.keys(g).forEach((e) => {

@@ -3,7 +3,7 @@ n(192379);
 var r = n(120356),
     l = n.n(r),
     a = n(481060),
-    s = n(204873);
+    s = n(371043);
 t.Z = function (e) {
     let { tabs: t, onTabSelect: n, selectedTab: r, className: o } = e;
     return (0, i.jsx)(a.TabBar, {

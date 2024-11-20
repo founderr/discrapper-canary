@@ -74,14 +74,14 @@ var r,
     g = n(823379),
     E = n(709054),
     v = n(719247),
-    b = n(26033),
-    I = n(22211),
+    I = n(26033),
+    b = n(22211),
     T = n(561308),
     S = n(797342),
     y = n(371991),
     A = n(206583),
     N = n(388032),
-    C = n(369312);
+    C = n(793440);
 let R = {
     [d.s.TOP_ARTIST]: [V],
     [d.s.PLAYED_GAME]: [M, P, w, H, U, Z, j, G, B],
@@ -129,7 +129,7 @@ function x(e) {
 }
 function w(e) {
     let { entry: t } = e,
-        { channel: n } = (0, I.Z)(t),
+        { channel: n } = (0, b.Z)(t),
         { location: r } = D();
     return null == n || (0, g.Hi)(r, [1, 2, 3, 4])
         ? null
@@ -143,8 +143,8 @@ function M(e) {
         { defaultTextColor: r, defaultIconColor: i, location: s } = D(),
         o = (0, T.Jg)(t) && (0, g.Hi)(s, [0, 4, 7]),
         l = o ? h.tokens.colors.TEXT_POSITIVE : i,
-        { streamPreviewUrl: u } = (0, I.Z)(t),
-        c = null != u ? h.ScreenArrowIcon : (0, b.Mq)(t) ? h.AppsIcon : h.GameControllerIcon;
+        { streamPreviewUrl: u } = (0, b.Z)(t),
+        c = null != u ? h.ScreenArrowIcon : (0, I.Mq)(t) ? h.AppsIcon : h.GameControllerIcon;
     return (0, a.jsxs)(L, {
         children: [
             (0, a.jsx)(c, {

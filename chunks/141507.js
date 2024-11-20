@@ -20,15 +20,15 @@ var r = n(200651),
     g = n(430824),
     E = n(451478),
     v = n(768581),
-    b = n(111846),
-    I = n(392552),
+    I = n(111846),
+    b = n(392552),
     T = n(543241),
     S = n(199257),
     y = n(880949),
     A = n(784222),
     N = n(149203),
     C = n(388032),
-    R = n(345687);
+    R = n(5772);
 function O(e) {
     return 'animated' in e;
 }
@@ -42,7 +42,7 @@ let D = (e) => {
             L,
             x,
             { className: w, emojiGrid: M, guildId: P, pickerIntention: k, channel: U } = e,
-            { enabled: B } = I.Z.useExperiment({ location: 'EmojiPicker' }, { autoTrackExposure: !1 }),
+            { enabled: B } = b.Z.useExperiment({ location: 'EmojiPicker' }, { autoTrackExposure: !1 }),
             G = _.kJ.useStore((e) => e.inspectedExpressionPosition),
             Z = i.useMemo(() => {
                 var e;
@@ -69,7 +69,7 @@ let D = (e) => {
                 };
         }
         let F = (0, a.e7)([g.Z], () => (null !== t && t.type === c.B.GUILD ? g.Z.getGuild(t.guildId) : null), [t]),
-            { useTransparentIcons: V } = b.Z.useExperiment({ location: 'EmojiPicker' }, { autoTrackExposure: !1 }),
+            { useTransparentIcons: V } = I.Z.useExperiment({ location: 'EmojiPicker' }, { autoTrackExposure: !1 }),
             j = (0, a.e7)([E.Z], () => E.Z.isFocused()),
             H = (0, a.e7)([l.Z], () => l.Z.useReducedMotion, []),
             Y = m.Yk.useSetting(),

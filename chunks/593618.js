@@ -25,8 +25,8 @@ var r = n(200651),
     g = n(523751),
     E = n(246364),
     v = n(746916),
-    b = n(965638),
-    I = n(160404),
+    I = n(965638),
+    b = n(160404),
     T = n(777861),
     S = n(565799),
     y = n(501655),
@@ -43,8 +43,8 @@ var r = n(200651),
     P = n(510601),
     k = n(981631),
     U = n(388032),
-    B = n(479315),
-    G = n(455491);
+    B = n(516126),
+    G = n(64056);
 function Z(e, t, n) {
     return 0 === t.length
         ? null
@@ -86,8 +86,8 @@ function V(e) {
             stageSpeakers: g,
             numStageListeners: E,
             streamUsersToShow: v,
-            embeddedActivitiesUsers: b,
-            gameUsers: I,
+            embeddedActivitiesUsers: I,
+            gameUsers: b,
             shouldShowGameBadge: T
         } = (function (e) {
             let t = e.id,
@@ -153,8 +153,8 @@ function V(e) {
                     return c ? (0, _.dq)(e, o) : e;
                 }),
                 v = (0, P.kM)('Guild Tooltip', !1),
-                b = v ? E.map((e) => e.id) : [],
-                I = (0, u.Wu)(
+                I = v ? E.map((e) => e.id) : [],
+                b = (0, u.Wu)(
                     [d.ZP],
                     () => {
                         let e = d.ZP.getEmbeddedActivitiesForGuild(t).flatMap((e) => Array.from(e.userIds));
@@ -165,15 +165,15 @@ function V(e) {
                 T = (0, u.Wu)(
                     [w.default],
                     () => {
-                        let e = I.map((e) => w.default.getUser(e));
+                        let e = b.map((e) => w.default.getUser(e));
                         return c ? (0, _.dq)(e) : e;
                     },
-                    [c, I]
+                    [c, b]
                 ),
                 x = (0, u.Wu)([w.default], () => g.map((e) => w.default.getUser(e)), [g]),
-                U = f.filter((e) => !g.includes(e.id) && !I.includes(e.id) && !b.includes(e.id)),
+                U = f.filter((e) => !g.includes(e.id) && !b.includes(e.id) && !I.includes(e.id)),
                 B = c ? (0, _.dq)(U) : U,
-                G = x.filter((e) => null != e && !I.includes(e.id)),
+                G = x.filter((e) => null != e && !b.includes(e.id)),
                 Z = h.length > 0 || U.length > 0 || G.length > 0 || T.length > 0;
             return {
                 voiceUsersToShow: B,
@@ -186,7 +186,7 @@ function V(e) {
                 hasActivity: Z
             };
         })(o),
-        U = Z(c.GameControllerIcon, I, h),
+        U = Z(c.GameControllerIcon, b, h),
         G = Z(c.VoiceNormalIcon, m, h);
     let V =
             ((t = h),
@@ -225,7 +225,7 @@ function V(e) {
                       ]
                   })),
         j = Z(c.ScreenArrowIcon, v, h),
-        H = Z(c.ActivitiesIcon, b, h),
+        H = Z(c.ActivitiesIcon, I, h),
         { isMuted: Y, muteConfig: W } = (0, u.cj)(
             [x.ZP],
             () => ({
@@ -279,8 +279,8 @@ function H(e) {
         a = (0, v.E)(t),
         o = null != a ? (0, r.jsx)(j, { guildJoinRequestStatus: a }) : null,
         l = n ? (0, r.jsx)(V, { guild: t }) : null,
-        d = (0, u.e7)([I.Z], () => I.Z.isViewingRoles(t.id)),
-        f = (0, b.I)(t);
+        d = (0, u.e7)([b.Z], () => b.Z.isViewingRoles(t.id)),
+        f = (0, I.I)(t);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {

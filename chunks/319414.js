@@ -7,31 +7,31 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(442837),
-    r = n(352527),
-    o = n(183584),
-    a = n(487029),
-    s = n(592125),
+    o = n(352527),
+    r = n(183584),
+    s = n(487029),
+    a = n(592125),
     u = n(944486),
-    c = n(554174),
-    d = n(710111),
-    h = n(625478);
+    d = n(554174),
+    c = n(710111),
+    h = n(555018);
 function f() {
-    let [e, t] = (0, l.Wu)([r.Z], () => [r.Z.enabled, r.Z.keepOpen]),
+    let [e, t] = (0, l.Wu)([o.Z], () => [o.Z.enabled, o.Z.keepOpen]),
         n = (0, l.e7)([u.Z], () => u.Z.getVoiceChannelId()),
-        f = (0, l.e7)([s.Z], () => s.Z.getChannel(n), [n]),
+        f = (0, l.e7)([a.Z], () => a.Z.getChannel(n), [n]),
         p = null == f ? void 0 : f.getGuildId();
     return e && null != f
         ? (0, i.jsx)('div', {
               className: h.container,
-              children: (0, i.jsx)(a.Z, {
-                  width: d.FW.width,
-                  height: d.FW.height,
+              children: (0, i.jsx)(s.Z, {
+                  width: c.FW.width,
+                  height: c.FW.height,
                   guildId: p,
                   channel: f,
                   keepOpen: t,
                   onClose: function () {
-                      let e = (0, c.Z)();
-                      null != e && (0, o.oZ)(e);
+                      let e = (0, d.Z)();
+                      null != e && (0, r.oZ)(e);
                   },
                   analyticsSource: 'overlay'
               })

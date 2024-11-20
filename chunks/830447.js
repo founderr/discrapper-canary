@@ -1,6 +1,6 @@
 n.d(t, {
     T: function () {
-        return b;
+        return I;
     },
     v: function () {
         return v;
@@ -26,10 +26,10 @@ var r = n(200651),
     h = n(828214),
     m = n(898560),
     g = n(788314),
-    E = n(7758);
+    E = n(667947);
 function v(e) {
     var t;
-    let { navId: n, variant: a = 'flexible', hideScroller: o = !1, className: f, children: v, onClose: b, onSelect: T } = e,
+    let { navId: n, variant: a = 'flexible', hideScroller: o = !1, className: f, children: v, onClose: I, onSelect: T } = e,
         S = (function e(t) {
             return (function e(t) {
                 return null == t
@@ -157,7 +157,7 @@ function v(e) {
             navId: n,
             items: A.current,
             initialFocusPath: p.Z.keyboardModeEnabled && null != N ? [N] : [],
-            closeMenu: b
+            closeMenu: I
         });
     i.useEffect(() => {
         C.isUsingKeyboardNavigation ? !p.Z.keyboardModeEnabled && (0, _.Qj)() : p.Z.keyboardModeEnabled && (0, _.rf)();
@@ -178,11 +178,11 @@ function v(e) {
                     0 === S.length &&
                         (0, r.jsx)(g.ck, {
                             disabled: !0,
-                            label: () => (0, r.jsx)(I, {}),
+                            label: () => (0, r.jsx)(b, {}),
                             menuItemProps: C.getItemProps({ path: ['empty'] }),
                             isFocused: !1,
                             onFocus: () => {},
-                            onClose: b
+                            onClose: I
                         }),
                     S.length > 0 &&
                         (function e(t, n, i, a) {
@@ -365,19 +365,19 @@ function v(e) {
                                 }
                                 return t;
                             }, []);
-                        })(S, C, [], b)
+                        })(S, C, [], I)
                 ]
             })
         })
     });
 }
-function b() {
+function I() {
     return (0, r.jsx)('div', {
         className: s()(E.menu, E.loader, E.flexible),
         children: (0, r.jsx)(f.$, {})
     });
 }
-function I() {
+function b() {
     let e = '\u266B (つ\uFF61\u25D5‿‿\u25D5\uFF61)つ \u266A',
         [t, n] = i.useState(e);
     return (

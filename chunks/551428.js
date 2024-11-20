@@ -24,16 +24,16 @@ function E(e) {
 function v(e, t) {
     return ''.concat(e, ':').concat(t);
 }
-function b() {
+function I() {
     (_ = {}), (m = {}), (h = {}), (p = {}), (g = new Set());
 }
-function I() {
+function b() {
     if (r === c.default.locale) return !1;
-    b(), (r = c.default.locale);
+    I(), (r = c.default.locale);
 }
 class T extends (i = l.ZP.Store) {
     initialize() {
-        this.waitFor(c.default), this.syncWith([c.default], I), (r = c.default.locale);
+        this.waitFor(c.default), this.syncWith([c.default], b), (r = c.default.locale);
     }
     get(e) {
         return _[e];
@@ -100,8 +100,8 @@ class T extends (i = l.ZP.Store) {
                 (p[v(n, e.skuId)] = e), (m[e.skuId] = e.id);
             } else E(t);
         },
-        USER_SETTINGS_PROTO_UPDATE: I,
-        APPLICATION_STORE_CLEAR_DATA: b,
+        USER_SETTINGS_PROTO_UPDATE: b,
+        APPLICATION_STORE_CLEAR_DATA: I,
         GIFT_CODE_RESOLVE_SUCCESS: function (e) {
             let { giftCode: t } = e;
             if (null == t.store_listing) return !1;

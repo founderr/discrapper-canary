@@ -8,8 +8,8 @@ n(192379);
 var l = n(481060),
     r = n(50493),
     a = n(388032),
-    s = n(174398),
-    o = n(466691);
+    s = n(659367),
+    o = n(194898);
 function c(e) {
     let { onNavigate: t, backPanel: n = r.k.INFO } = e;
     return (0, i.jsxs)('div', {

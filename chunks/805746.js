@@ -26,7 +26,7 @@ t.Z = (e) => {
             'NOT_FETCHED' === f.Z.getFetchState() && o.Z.fetch();
         }, []);
     let v = (0, a.e7)([l.ZP], () => l.ZP.getSelfEmbeddedActivities()),
-        b = i.useCallback(() => {
+        I = i.useCallback(() => {
             if (
                 (g(!1),
                 c.ZP.trackWithMetadata(p.rMx.IAR_DEAUTHORIZE_APP_BUTTON_CLICKED, {
@@ -54,6 +54,6 @@ t.Z = (e) => {
               buttonDisabled: !m,
               buttonColor: m ? s.Button.Colors.RED : s.Button.Colors.WHITE,
               buttonLook: m ? s.Button.Looks.FILLED : s.Button.Looks.LINK,
-              onButtonPress: b
+              onButtonPress: I
           });
 };

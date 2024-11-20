@@ -2,12 +2,12 @@ var i = n(200651),
     r = n(192379),
     s = n(120356),
     a = n.n(s),
-    l = n(442837),
-    o = n(261435),
+    o = n(442837),
+    l = n(261435),
     c = n(237997),
     d = n(438015),
     u = n(981631),
-    h = n(532043);
+    h = n(455178);
 class p extends r.Component {
     render() {
         let { keybind: e, notifications: t, position: n, locked: r } = this.props;
@@ -35,7 +35,7 @@ class p extends r.Component {
         });
     }
 }
-t.Z = l.ZP.connectStores([o.Z, c.Z], () => ({
-    notifications: o.Z.getNotifications(),
+t.Z = o.ZP.connectStores([l.Z, c.Z], () => ({
+    notifications: l.Z.getNotifications(),
     position: c.Z.getNotificationPositionMode()
 }))(p);

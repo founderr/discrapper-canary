@@ -22,12 +22,12 @@ var i = n(200651),
     I = n(128449),
     C = n(49898),
     v = n(388032),
-    N = n(491588);
+    N = n(636872);
 function T() {
     let e = r.useRef((0, m.PM)()),
         { onScroll: t, scrollPosition: n, resetScrollPosition: T } = (0, a.M)(),
-        { tabs: S, selectedTab: A, setSelectedTab: b } = (0, f.Y)(),
-        x = (0, m.lg)(A),
+        { tabs: S, selectedTab: A, setSelectedTab: x } = (0, f.Y)(),
+        b = (0, m.lg)(A),
         Z = !I.MU.has(A),
         { searchQuery: L, onSearchTextChange: y, onClearSearch: O, onSearchSubmit: P, isSearchVisible: R } = (0, g.H)({ loadId: e.current }),
         {
@@ -43,9 +43,9 @@ function T() {
         U = u.Z.useField('fetchedQuery'),
         G = r.useCallback(
             (e) => {
-                b(e), R && O();
+                x(e), R && O();
             },
-            [R, O, b]
+            [R, O, x]
         ),
         B = r.useMemo(
             () =>
@@ -57,7 +57,7 @@ function T() {
                     : S,
             [S, R]
         ),
-        H = r.useRef(new h.Z(x)),
+        H = r.useRef(new h.Z(b)),
         { onGuildCardSeen: V, onGuildCardClick: F } = (0, p.H)({
             guildDiscoveryCardSeenManager: H.current,
             loadId: e.current
@@ -65,7 +65,7 @@ function T() {
     return (
         r.useEffect(() => {
             H.current.flushSeenGuilds(e.current);
-        }, [x]),
+        }, [b]),
         r.useEffect(() => {
             T();
         }, [A, T]),

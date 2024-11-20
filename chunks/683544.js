@@ -12,7 +12,7 @@ var i = n(200651),
     m = n(797908),
     p = n(292191),
     g = n(979007),
-    f = n(53300);
+    f = n(854336);
 let _ = {
     results: [],
     totalPages: 0
@@ -49,8 +49,8 @@ t.Z = function (e) {
             return null !== (e = u.Z.getSearchResults(N)) && void 0 !== e ? e : _;
         }),
         A = null !== (t = (0, o.Z)(S)) && void 0 !== t ? t : _,
-        { results: b, totalPages: x } = r.useMemo(() => (T === d.M.FETCHING ? A : S), [T, A, S]),
-        Z = r.useMemo(() => (null == b ? void 0 : b.filter((e) => !(e.type !== l.s.APPLICATION))), [b]),
+        { results: x, totalPages: b } = r.useMemo(() => (T === d.M.FETCHING ? A : S), [T, A, S]),
+        Z = r.useMemo(() => (null == x ? void 0 : x.filter((e) => !(e.type !== l.s.APPLICATION))), [x]),
         L = r.useCallback((e) => {
             let { page: t, activeCategoryId: n, onSuccessCallback: i, guildId: r, fetchCounts: l } = e;
             l &&
@@ -106,7 +106,7 @@ t.Z = function (e) {
                   }),
                   (0, i.jsx)(s.Paginator, {
                       className: f.paginationInput,
-                      totalCount: Math.min(x * g.IV, g.Et * g.IV),
+                      totalCount: Math.min(b * g.IV, g.Et * g.IV),
                       pageSize: g.IV,
                       disablePaginationGap: !0,
                       hideMaxPage: !0,

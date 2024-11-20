@@ -21,7 +21,7 @@ var i = n(481060),
     p = n(981631);
 let h = 'apply-guild-boost-modal';
 async function m(e) {
-    let { analyticsLocations: t, analyticsLocation: m, analyticsSourceLocation: g, numberOfBoostsToAdd: E, onClose: v, closeLayer: b, onSubscriptionConfirmation: I, guild: T, handleSubscribeModalClose: S, disablePremiumUpsell: y, inPopout: A, applicationId: N } = e,
+    let { analyticsLocations: t, analyticsLocation: m, analyticsSourceLocation: g, numberOfBoostsToAdd: E, onClose: v, closeLayer: I, onSubscriptionConfirmation: b, guild: T, handleSubscribeModalClose: S, disablePremiumUpsell: y, inPopout: A, applicationId: N } = e,
         C = A ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT,
         R = l.default.getCurrentUser();
     if (null == R) return;
@@ -53,7 +53,7 @@ async function m(e) {
         1 === L ? (e = D.slice(0, 1)) : null != E && (e = D.slice(0, E)),
             await (0, i.openModalLazy)(
                 async () => {
-                    let { default: t } = await Promise.all([n.e('29549'), n.e('12013'), n.e('52249'), n.e('8016'), n.e('22646'), n.e('30419'), n.e('27133')]).then(n.bind(n, 760558));
+                    let { default: t } = await Promise.all([n.e('29549'), n.e('12013'), n.e('52249'), n.e('8016'), n.e('22646'), n.e('30419'), n.e('94872')]).then(n.bind(n, 760558));
                     return (n) => {
                         let { onClose: i, ...a } = n;
                         return (0, r.jsx)(t, {
@@ -83,7 +83,7 @@ async function m(e) {
             guildId: T.id,
             closeLayer: () => {
                 null == v || v(),
-                    null == b || b(),
+                    null == I || I(),
                     d.default.track(p.rMx.MODAL_DISMISSED, {
                         type: p.ZY5.PREMIUM_GUILD_USER_MODAL,
                         location_section: m.section
@@ -92,7 +92,7 @@ async function m(e) {
             totalNumberOfSlotsToAssign: null != E ? E : 1,
             onCloseModal: x,
             disablePremiumUpsell: y,
-            onSubscriptionConfirmation: I,
+            onSubscriptionConfirmation: b,
             inPopout: A,
             applicationId: N
         });

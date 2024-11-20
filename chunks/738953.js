@@ -21,8 +21,8 @@ var r = n(200651),
     g = n(687158),
     E = n(326094),
     v = n(510659),
-    b = n(113557),
-    I = n(867176),
+    I = n(113557),
+    b = n(867176),
     T = n(169979),
     S = n(451834),
     y = n(502762),
@@ -36,7 +36,7 @@ var r = n(200651),
     x = n(228168),
     w = n(981631),
     M = n(388032),
-    P = n(653134);
+    P = n(451563);
 function k(e) {
     let { user: t, currentUser: n, guildId: k, channelId: U, messageId: B, roleId: G, closePopout: Z, setPopoutRef: F, disableUserProfileLink: V = __OVERLAY__, newAnalyticsLocations: j = [] } = e,
         { analyticsLocations: H } = (0, d.ZP)([...j, c.Z.BITE_SIZE_PROFILE_POPOUT]),
@@ -136,7 +136,7 @@ function k(e) {
                                 (0, r.jsxs)('header', {
                                     className: P.header,
                                     children: [
-                                        (0, r.jsx)(I.Z, {
+                                        (0, r.jsx)(b.Z, {
                                             user: t,
                                             displayProfile: X,
                                             guildId: k,
@@ -147,7 +147,7 @@ function k(e) {
                                             className: P.toast,
                                             onClose: Z
                                         }),
-                                        (0, r.jsx)(b.Z, {
+                                        (0, r.jsx)(I.Z, {
                                             location: 'UserProfilePopout',
                                             user: t,
                                             displayProfile: X,

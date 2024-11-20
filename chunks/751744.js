@@ -7,7 +7,7 @@ var i = t(200651),
     s = t(236289),
     l = t(853178),
     d = t(800530),
-    h = t(586843);
+    h = t(937594);
 o.default = function (e) {
     let { onClose: o, transitionState: t } = e,
         x = (0, a.e7)([s.Z], () => s.Z.getAgeVerificationWebviewUrl()),

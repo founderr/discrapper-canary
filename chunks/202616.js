@@ -41,8 +41,8 @@ var r = n(425960),
     g = n(264341),
     E = n(267864),
     v = n(610963),
-    b = n(452801),
-    I = n(278891),
+    I = n(452801),
+    b = n(278891),
     T = n(543705),
     S = n(2778),
     y = n(219907),
@@ -342,14 +342,14 @@ function $(e, t, n) {
             },
             [c]
         ),
-        b = (0, Z.useMemo)(
+        I = (0, Z.useMemo)(
             () => ({
                 onBlur: h.onBlur,
                 onFocus: v
             }),
             [v, h.onBlur]
         ),
-        I = (0, V.pu)(n, { isDisabled: 0 !== t.collection.size }),
+        b = (0, V.pu)(n, { isDisabled: 0 !== t.collection.size }),
         T = (0, G.dG)(
             E,
             {
@@ -357,8 +357,8 @@ function $(e, t, n) {
                 id: m,
                 'aria-multiselectable': 'multiple' === c.selectionMode ? 'true' : void 0
             },
-            t.isKeyboardNavigationDisabled ? b : h,
-            0 === t.collection.size && { tabIndex: I ? -1 : 0 },
+            t.isKeyboardNavigationDisabled ? I : h,
+            0 === t.collection.size && { tabIndex: b ? -1 : 0 },
             g
         );
     return r && ((T['aria-rowcount'] = t.collection.size), (T['aria-colcount'] = t.collection.columnCount)), Q({ getRowText: o }, t), { gridProps: T };
@@ -524,8 +524,8 @@ q = {
     'it-IT': g.Z,
     'ja-JP': E.Z,
     'ko-KR': v.Z,
-    'lt-LT': b.Z,
-    'lv-LV': I.Z,
+    'lt-LT': I.Z,
+    'lv-LV': b.Z,
     'nb-NO': T.Z,
     'nl-NL': S.Z,
     'pl-PL': y.Z,

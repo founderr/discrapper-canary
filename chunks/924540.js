@@ -12,22 +12,22 @@ s.d(t, {
 var n = s(200651),
     r = s(192379),
     i = s(120356),
-    o = s.n(i),
-    a = s(481060),
+    a = s.n(i),
+    o = s(481060),
     l = s(774078),
     c = s(55935),
     d = s(74538),
     u = s(639119),
     p = s(474936),
     f = s(388032),
-    x = s(700706);
+    x = s(742774);
 function C(e) {
     let { isTabSelected: t, expiresAt: s, trialDuration: i, className: d } = e,
         u = r.useMemo(() => Date.parse(s), [s]),
         p = (0, l.Z)(u, 60000);
     return Object.values(p).every((e) => 0 === e)
         ? null
-        : (0, n.jsx)(a.Tooltip, {
+        : (0, n.jsx)(o.Tooltip, {
               text: (0, c.QX)(p, {
                   days: f.t.qVGNkZ,
                   hours: f.t.wyg9a2,
@@ -36,16 +36,16 @@ function C(e) {
               children: (e) =>
                   (0, n.jsxs)('div', {
                       ...e,
-                      className: o()(x.premiumTrialBadge, x.premiumTrialAcknowledgedBadge, d, { [x.premiumTrialBadgeSelected]: t }),
+                      className: a()(x.premiumTrialBadge, x.premiumTrialAcknowledgedBadge, d, { [x.premiumTrialBadgeSelected]: t }),
                       children: [
-                          (0, n.jsx)(a.ClockIcon, {
+                          (0, n.jsx)(o.ClockIcon, {
                               size: 'custom',
                               width: 20,
                               height: 20,
                               color: 'currentColor',
                               className: x.premiumTrialBadgeIcon
                           }),
-                          (0, n.jsxs)(a.Text, {
+                          (0, n.jsxs)(o.Text, {
                               variant: 'eyebrow',
                               children: [' ', i, ' ']
                           })
@@ -57,13 +57,13 @@ function g(e) {
     var t;
     let { isTabSelected: s, trialOffer: r } = e,
         i = null === (t = (0, u.N)()) || void 0 === t ? void 0 : t.subscription_trial,
-        o = (0, d.a5)({
+        a = (0, d.a5)({
             intervalType: null == i ? void 0 : i.interval,
             intervalCount: null == i ? void 0 : i.interval_count
         });
     return (0, n.jsx)(h, {
         isTabSelected: s,
-        badgeCopy: o,
+        badgeCopy: a,
         offerExpiresAt: r.expires_at,
         className: (null == i ? void 0 : i.sku_id) === p.Si.TIER_2 ? x.premiumTrialTier2UnacknowledgedBadge : x.premiumTrialTier0UnacknowledgedBadge
     });
@@ -88,8 +88,8 @@ function h(e) {
               trialDuration: s
           })
         : (0, n.jsx)('div', {
-              className: o()(x.premiumTrialBadge, i),
-              children: (0, n.jsx)(a.Text, {
+              className: a()(x.premiumTrialBadge, i),
+              children: (0, n.jsx)(o.Text, {
                   variant: 'eyebrow',
                   className: x.premiumOfferBadgeCopy,
                   children: s

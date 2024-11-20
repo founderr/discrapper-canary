@@ -16,7 +16,7 @@ var r,
     d = e(745982),
     E = e(463439),
     N = e(388032),
-    h = e(72540);
+    h = e(70119);
 ((i = r || (r = {}))[(i.INTRO = 0)] = 'INTRO'), (i[(i.SAFETY_TIPS = 1)] = 'SAFETY_TIPS'), (i[(i.TAKE_ACTION = 2)] = 'TAKE_ACTION');
 n.default = (t) => {
     let { warningId: n, warningType: e, senderId: r, modalProps: i, channelId: I } = t,

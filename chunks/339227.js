@@ -131,13 +131,13 @@ let g = {
     },
     E = new Set(['*', '_', '\\']),
     v = {},
-    b = {};
+    I = {};
 for (let e in d.Z.RULES) {
     if (!(e in g)) throw Error('Slate: Unknown markdown rule: '.concat(e, '.  If you have just added a new markdown rule ') + 'then you probably need to add it to this file so that the rich chat box understands it.');
     let t = g[e];
-    'skip' !== t.type && (v[e] = I(d.Z.RULES[e])), 'skip' !== t.type && 'inlineObject' !== t.type && (b[e] = I('text' === e ? f.ZP : d.Z.RULES[e]));
+    'skip' !== t.type && (v[e] = b(d.Z.RULES[e])), 'skip' !== t.type && 'inlineObject' !== t.type && (I[e] = b('text' === e ? f.ZP : d.Z.RULES[e]));
 }
-function I(e) {
+function b(e) {
     i()(null != e.parse, 'Slate: rule must have a parse function');
     let t = e.parse;
     return {
@@ -203,7 +203,7 @@ let T = {
     },
     S = /(-# +)/,
     y = (0, _.Z)([v, T]),
-    A = (0, _.Z)([b, T]),
+    A = (0, _.Z)([I, T]),
     N = l._p(y),
     C = l._p(A),
     R = {

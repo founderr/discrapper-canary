@@ -26,8 +26,8 @@ var r = n(200651),
     g = n(70097),
     E = n(454585),
     v = n(164946),
-    b = n(369111),
-    I = n(25990),
+    I = n(369111),
+    b = n(25990),
     T = n(594174),
     S = n(960048),
     y = n(272008),
@@ -39,9 +39,9 @@ var r = n(200651),
     D = n(46140),
     L = n(675654),
     x = n(388032),
-    w = n(894728);
+    w = n(837053);
 function M() {
-    let e = I.Z.getAllPending(),
+    let e = b.Z.getAllPending(),
         t = (0, v.ED)(e);
     return (0, d.Mn)(t).finally(d.si);
 }
@@ -49,8 +49,8 @@ function P(e) {
     var t;
     let { transitionState: n, onClose: a, quest: l, location: d, reward: _, decoration: p, onUseNow: h, preview: g } = e,
         E = i.useRef(null),
-        [v, b] = i.useState(null),
-        I = i.useRef(new o.qA()),
+        [v, I] = i.useState(null),
+        b = i.useRef(new o.qA()),
         S = (0, u.e7)([f.Z], () => f.Z.useReducedMotion),
         N = (0, u.e7)([T.default], () => T.default.getCurrentUser()),
         R = i.useMemo(() => (0, C.fh)(l, C.eC.HERO), [l]),
@@ -67,9 +67,9 @@ function P(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(o.O_, {
-                ref: b,
+                ref: I,
                 className: w.confettiCanvas,
-                environment: I.current
+                environment: b.current
             }),
             (0, r.jsx)('div', {
                 ref: E,
@@ -209,7 +209,7 @@ function B(e) {
         f = i.useMemo(() => (0, N.xn)(a.config), [a]),
         [p, m] = (function (e) {
             let { product: t, isFetching: n } = (0, h.T)(e),
-                {} = (0, b.Z)({}),
+                {} = (0, I.Z)({}),
                 r = i.useMemo(() => {
                     if (null == t || n) return null;
                     let e = t.items.find((e) => e.type === l.Z.AVATAR_DECORATION);

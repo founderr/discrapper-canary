@@ -9,11 +9,11 @@ var r = n(200651),
     d = n(484459),
     f = n(695346),
     _ = n(981631),
-    p = n(520696);
+    p = n(67996);
 t.Z = function (e) {
     let { style: t, src: n, backgroundSrc: h, userId: m, pulseSpeakingIndicator: g = !1, speaking: E = !1, ...v } = e,
-        b = null != h ? h : n,
-        I = (0, o.ZP)(b, a.Z.unsafe_rawColors.PRIMARY_800.css),
+        I = null != h ? h : n,
+        b = (0, o.ZP)(I, a.Z.unsafe_rawColors.PRIMARY_800.css),
         T = (0, l.c)(!0, 'VideoBackground-web').enabled,
         S = (0, c.ZP)(null != m ? m : _.lds),
         y =
@@ -37,7 +37,7 @@ t.Z = function (e) {
         }),
         N = {
             ...t,
-            backgroundColor: I
+            backgroundColor: b
         };
     return (
         null != y && E && T && ((N.backgroundImage = 'url('.concat(y, ')')), (N.backgroundSize = 'cover')),

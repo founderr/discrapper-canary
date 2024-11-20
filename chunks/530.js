@@ -15,9 +15,9 @@ var r = n(200651),
     f = n(979264),
     _ = n(228168),
     p = n(388032),
-    h = n(86975);
+    h = n(543337);
 function m(e) {
-    let { user: t, profileType: n, usernameIcon: a, tags: m, nickname: g, nicknameIcons: E, pronouns: v, className: b, isTryItOut: I, onOpenProfile: T, nicknameVariant: S = 'heading-lg/bold', pronounsVariant: y = 'text-sm/medium' } = e,
+    let { user: t, profileType: n, usernameIcon: a, tags: m, nickname: g, nicknameIcons: E, pronouns: v, className: I, isTryItOut: b, onOpenProfile: T, nicknameVariant: S = 'heading-lg/bold', pronounsVariant: y = 'text-sm/medium' } = e,
         { newestAnalyticsLocation: A } = (0, u.ZP)(),
         N = {
             [h.biteSize]: n === _.y0.BITE_SIZE,
@@ -42,7 +42,7 @@ function m(e) {
             [A, t.id]
         );
     return (0, r.jsxs)('div', {
-        className: s()(h.container, { [h.bot]: null != O }, b),
+        className: s()(h.container, { [h.bot]: null != O }, I),
         children: [
             (0, r.jsxs)('div', {
                 className: h.usernameRow,
@@ -77,7 +77,7 @@ function m(e) {
                             user: t,
                             usernameIcon: a,
                             forceUsername: !0,
-                            forcePomelo: I,
+                            forcePomelo: b,
                             className: h.userTag,
                             usernameClass: h.userTagUsername,
                             discriminatorClass: h.userTagDiscriminator,

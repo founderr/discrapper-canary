@@ -17,13 +17,13 @@ var r,
     p = n(43085),
     h = n(981631),
     m = n(388032),
-    g = n(882586);
+    g = n(57604);
 function E(e) {
     e.stopPropagation();
 }
 ((r = i || (i = {}))[(r.SMALL = 0)] = 'SMALL'), (r[(r.MEDIUM = 1)] = 'MEDIUM'), (r[(r.CLIP = 2)] = 'CLIP');
 t.Z = s.forwardRef(function (e, t) {
-    let { id: n, channelId: r, className: i, children: s, actions: o, handleEditModal: v, keyboardModeEnabled: b, onKeyDown: I, draftType: T, size: S = 1 } = e,
+    let { id: n, channelId: r, className: i, children: s, actions: o, handleEditModal: v, keyboardModeEnabled: I, onKeyDown: b, draftType: T, size: S = 1 } = e,
         { onFocus: y, ...A } = (0, u.JA)(n),
         { handleFocus: N, handleBlur: C } = (0, p.b)(y),
         R = 0 === S,
@@ -34,7 +34,7 @@ t.Z = s.forwardRef(function (e, t) {
             onFocus: N,
             onBlur: C,
             onKeyDown: (e) => {
-                if (!!b) {
+                if (!!I) {
                     switch (e.which) {
                         case h.yXg.D:
                             e.preventDefault(), d.Z.remove(r, n, T);
@@ -49,7 +49,7 @@ t.Z = s.forwardRef(function (e, t) {
                             if (e.shiftKey || e.altKey || e.ctrlKey || e.metaKey) return;
                             e.preventDefault(), _.S.dispatchToLastSubscribed(h.CkL.FOCUS_MESSAGES, { atEnd: !0 });
                     }
-                    null == I || I(e);
+                    null == b || b(e);
                 }
             },
             className: l()(g.upload, i, { [g.sizeClip]: 2 === S }),

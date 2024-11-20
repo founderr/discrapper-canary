@@ -9,7 +9,7 @@ var l = n(100621),
     r = n(481060),
     a = n(871499),
     s = n(388032),
-    o = n(646401);
+    o = n(305705);
 let c = (0, l.animated)((e) => {
     let { percentComplete: t } = e,
         n = 20;

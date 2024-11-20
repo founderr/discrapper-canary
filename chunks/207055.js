@@ -30,7 +30,7 @@ var i = n(200651),
     P = n(262317),
     M = n(981631),
     L = n(524484),
-    R = n(616457);
+    R = n(373372);
 let k = l.memo((e) => {
     var t;
     let { mute: n, deaf: l, user: r, channel: a, sessionId: o, nick: x } = e,

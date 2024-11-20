@@ -7,7 +7,7 @@ var i = n(200651);
 n(192379);
 var l = n(831209),
     r = n(481060),
-    a = n(184214);
+    a = n(494075);
 function o(e) {
     let { mentionsCount: t } = e;
     return (0, i.jsx)('div', {

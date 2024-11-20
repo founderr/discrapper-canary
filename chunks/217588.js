@@ -27,8 +27,8 @@ var i = n(200651),
     j = n(981631),
     Z = n(474936),
     R = n(388032),
-    P = n(281143),
-    L = n(236327);
+    P = n(174461),
+    L = n(507444);
 let y = (e, t) => (t ? R.intl.format(R.t.auckX1, { stickerPackName: e.name }) : R.intl.format(R.t.OzB6e3, { stickerPackName: e.name })),
     O = (e) => {
         let { sticker: t, stickerPack: n } = e;

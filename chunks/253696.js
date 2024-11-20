@@ -30,18 +30,18 @@ function g(e) {
     var t;
     let { intention: n, containerWidth: r, rowSize: m, isBurstReaction: g, analyticsObject: E } = e,
         v = l.Z.getChannel(u.Z.getChannelId()),
-        b = null == v ? void 0 : v.getGuildId(),
-        { canSplitFrecencyList: I } = s.Z.getCurrentConfig({ location: 'trackOnEmojiPickerOpened' }, { autoTrackExposure: !0 }),
+        I = null == v ? void 0 : v.getGuildId(),
+        { canSplitFrecencyList: b } = s.Z.getCurrentConfig({ location: 'trackOnEmojiPickerOpened' }, { autoTrackExposure: !0 }),
         T = (0, o.E2)({
             location: 'trackOnEmojiPickerOpened',
             autoTrackExposure: !0
         });
     o.Xb.trackExposure({ location: 'trackOnEmojiPickerOpened' });
-    let S = (I || T) && n === p.Hz.REACTION ? a.ZP.emojiReactionFrecencyWithoutFetchingLatest.frequently.slice() : a.ZP.emojiFrecencyWithoutFetchingLatest.frequently.slice(),
+    let S = (b || T) && n === p.Hz.REACTION ? a.ZP.emojiReactionFrecencyWithoutFetchingLatest.frequently.slice() : a.ZP.emojiFrecencyWithoutFetchingLatest.frequently.slice(),
         y = null != v ? a.ZP.getDisambiguatedEmojiContext(v.getGuildId()).favoriteEmojisWithoutFetchingLatest : [],
-        A = (I || T) && n === p.Hz.REACTION ? a.ZP.emojiReactionFrecencyWithoutFetchingLatest.numFrequentlyItems : a.ZP.emojiFrecencyWithoutFetchingLatest.numFrequentlyItems,
+        A = (b || T) && n === p.Hz.REACTION ? a.ZP.emojiReactionFrecencyWithoutFetchingLatest.numFrequentlyItems : a.ZP.emojiFrecencyWithoutFetchingLatest.numFrequentlyItems,
         N = S.slice(0, A),
-        C = null != b ? a.ZP.getGuildEmoji(b) : [],
+        C = null != I ? a.ZP.getGuildEmoji(I) : [],
         R = Object.values(null !== (t = a.ZP.getDisambiguatedEmojiContext(null == v ? void 0 : v.getGuildId()).groupedCustomEmojis) && void 0 !== t ? t : {}).reduce((e, t) => (e += t.length), 0),
         { topEmojis: O, newlyAddedEmojis: D } = (0, f._)({
             guildId: null == v ? void 0 : v.getGuildId(),

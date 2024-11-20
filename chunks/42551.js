@@ -24,8 +24,8 @@ var l = n(200651),
     g = n(527379),
     p = n(285173),
     H = n(388032),
-    j = n(759362),
-    v = n(799469);
+    j = n(522492),
+    v = n(352533);
 let N = new Set();
 function L(e) {
     let { guildId: t, onClose: n } = e,

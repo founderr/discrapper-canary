@@ -7,7 +7,7 @@ var l = n(200651);
 n(192379);
 var o = n(120356),
     t = n.n(o),
-    s = n(732364);
+    s = n(524994);
 function c(e) {
     let { icon: r, iconClassName: n, description: o, color: c } = e;
     return (0, l.jsxs)('div', {

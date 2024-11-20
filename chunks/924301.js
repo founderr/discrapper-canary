@@ -55,8 +55,8 @@ let E = new c.h((e) => {
         return null != n && i.push(n), i.push(m.GUILD_EVENT(t)), null != r && i.push(m.CHANNEL_EVENT(r)), w(e) && (i.push(m.EVENT_ACTIVE), i.push(m.GUILD_EVENT_ACTIVE(t)), null != r && i.push(m.CHANNEL_EVENT_ACTIVE(r))), M(e) && (i.push(m.EVENT_UPCOMING), i.push(m.GUILD_EVENT_UPCOMING(t)), null != r && i.push(m.CHANNEL_EVENT_UPCOMING(r))), i;
     }, g),
     v = 0,
-    b = [],
-    I = 'SERIES',
+    I = [],
+    b = 'SERIES',
     T = {},
     S = {};
 function y(e) {
@@ -67,7 +67,7 @@ function A(e) {
     E.delete(e), delete T[e], t && delete S[e], (v += 1);
 }
 function N(e) {
-    return null != e ? e : I;
+    return null != e ? e : b;
 }
 function C(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
@@ -177,7 +177,7 @@ class U extends (r = u.ZP.Store) {
     getUserCount(e, t) {
         var n, r, i, a;
         if (null == e) return 0;
-        let s = null !== (i = null === (n = S[e]) || void 0 === n ? void 0 : n[I]) && void 0 !== i ? i : 0;
+        let s = null !== (i = null === (n = S[e]) || void 0 === n ? void 0 : n[b]) && void 0 !== i ? i : 0;
         return null == t ? s : s - (null !== (a = null === (r = S[e]) || void 0 === r ? void 0 : r[t]) && void 0 !== a ? a : 0);
     }
     hasUserCount(e, t) {
@@ -210,7 +210,7 @@ class U extends (r = u.ZP.Store) {
     (t.ZP = new U(d.Z, {
         CONNECTION_OPEN: function (e) {
             let { guilds: t } = e;
-            return E.clear(), (v = 0), (T = {}), (S = {}), b.forEach(y), t.forEach((e) => e.guild_scheduled_events.forEach((e) => y(e))), !0;
+            return E.clear(), (v = 0), (T = {}), (S = {}), I.forEach(y), t.forEach((e) => e.guild_scheduled_events.forEach((e) => y(e))), !0;
         },
         GUILD_CREATE: function (e) {
             let { guild: t } = e;

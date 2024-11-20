@@ -19,8 +19,8 @@ var p = n(443551),
     g = n(531478).codes,
     E = g.ERR_INVALID_ARG_TYPE,
     v = g.ERR_STREAM_PUSH_AFTER_EOF,
-    b = g.ERR_METHOD_NOT_IMPLEMENTED,
-    I = g.ERR_STREAM_UNSHIFT_AFTER_END_EVENT;
+    I = g.ERR_METHOD_NOT_IMPLEMENTED,
+    b = g.ERR_STREAM_UNSHIFT_AFTER_END_EVENT;
 n(689118)(A, c);
 var T = h.errorOrDestroy,
     S = ['error', 'close', 'destroy', 'pause', 'resume'];
@@ -62,7 +62,7 @@ function N(e, t, n, r, a) {
         if ('string' != typeof t && !l.objectMode && Object.getPrototypeOf(t) !== d.prototype) {
             (s = t), (t = d.from(s));
         }
-        if (r) l.endEmitted ? T(e, new I()) : C(e, l, t, !0);
+        if (r) l.endEmitted ? T(e, new b()) : C(e, l, t, !0);
         else if (l.ended) T(e, new v());
         else {
             if (l.destroyed) return !1;
@@ -145,7 +145,7 @@ function x(e, t) {
     t.readingMore = !1;
 }
 (A.prototype._read = function (e) {
-    T(this, new b('_read()'));
+    T(this, new I('_read()'));
 }),
     (A.prototype.pipe = function (e, t) {
         var n = this,

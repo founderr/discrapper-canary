@@ -26,8 +26,8 @@ var r,
     g = n(160404),
     E = n(630388),
     v = n(823379),
-    b = n(709054),
-    I = n(314897),
+    I = n(709054),
+    b = n(314897),
     T = n(592125),
     S = n(430824),
     y = n(372897);
@@ -60,7 +60,7 @@ function B(e) {
     (L += 1), (w[e] = L);
 }
 function G(e) {
-    F(e) === I.default.getId() && (0, m.l)(V(e)), delete O[e];
+    F(e) === b.default.getId() && (0, m.l)(V(e)), delete O[e];
 }
 function Z(e, t) {
     let n = [];
@@ -122,13 +122,13 @@ function H(e) {
             flags: p
         };
     if (null == N[r]) return S;
-    if (t === I.default.getId()) {
+    if (t === b.default.getId()) {
         if (g.Z.isViewingRoles(r) || g.Z.isFullServerPreview(r)) {
             let e = g.Z.getViewingRoles(r);
             C[r] = {
                 ...S,
                 ...g.Z.getMemberOptions(r),
-                roles: null != e ? b.default.keys(e) : []
+                roles: null != e ? I.default.keys(e) : []
             };
         } else null != C[r] && delete C[r];
     }
@@ -267,8 +267,8 @@ function X(e) {
     if (null == t) return !1;
     let n = S.Z.getGuild(e.guildId);
     if (null == n) return A.warn('Guild '.concat(e.guildId, ' not found during ').concat(e.type, '.')), !1;
-    let r = I.default.getId();
-    for (let i of b.default.keys(t)) {
+    let r = b.default.getId();
+    for (let i of I.default.keys(t)) {
         let a = t[i];
         if ((null != a.roles && a.roles.length > 0) || null != a.colorString || null != a.hoistRoleId) {
             let s = i === r && 'GUILD_ROLE_DELETE' === e.type ? a.roles.filter((t) => t !== e.roleId) : a.roles;
@@ -296,7 +296,7 @@ function J(e) {
     if (null == n) return !1;
     let r = S.Z.getGuild(t);
     if (null == r) return A.warn('Guild '.concat(t, ' not found during IMPERSONATE_UPDATE.')), !1;
-    let i = I.default.getId(),
+    let i = b.default.getId(),
         a = n[i];
     n[i] = H({
         userId: i,
@@ -367,7 +367,7 @@ function et(e) {
 }
 class en extends (i = f.ZP.Store) {
     initialize() {
-        this.waitFor(S.Z, I.default, g.Z);
+        this.waitFor(S.Z, b.default, g.Z);
     }
     getMutableAllGuildsAndMembers() {
         return N;
@@ -410,7 +410,7 @@ class en extends (i = f.ZP.Store) {
     }
     isCurrentUserGuest(e) {
         if (null == e) return !1;
-        let t = I.default.getId(),
+        let t = b.default.getId(),
             n = N[e];
         if (null == n || null == n[t]) return !1;
         let r = n[t].flags;
@@ -419,7 +419,7 @@ class en extends (i = f.ZP.Store) {
     getMemberIds(e) {
         if (null == e) return [];
         let t = N[e];
-        return null == t ? [] : b.default.keys(t);
+        return null == t ? [] : I.default.keys(t);
     }
     getMembers(e) {
         if (null == e) return [];
@@ -432,14 +432,14 @@ class en extends (i = f.ZP.Store) {
     }
     getMember(e, t) {
         let n = this.getTrueMember(e, t);
-        if (null != n && t === I.default.getId() && (g.Z.isViewingRoles(e) || g.Z.isFullServerPreview(e))) {
+        if (null != n && t === b.default.getId() && (g.Z.isViewingRoles(e) || g.Z.isFullServerPreview(e))) {
             var r;
             return null !== (r = C[e]) && void 0 !== r ? r : n;
         }
         return n;
     }
     getSelfMember(e) {
-        return this.getMember(e, I.default.getId());
+        return this.getMember(e, b.default.getId());
     }
     getCachedSelfMember(e) {
         var t;
@@ -529,7 +529,7 @@ class en extends (i = f.ZP.Store) {
         GUILD_MEMBER_UPDATE_LOCAL: function (e) {
             var t, n, r;
             let { guildId: i, roles: a, addedRoleIds: s, removedRoleIds: o, flags: l } = e,
-                u = I.default.getId(),
+                u = b.default.getId(),
                 d = N[i],
                 f = null != d ? d[u] : null;
             if (null == f) return !1;

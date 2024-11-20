@@ -8,8 +8,8 @@ var i = n(200651),
     r = n(192379),
     s = n(120356),
     a = n.n(s),
-    l = n(512722),
-    o = n.n(l),
+    o = n(512722),
+    l = n.n(o),
     c = n(442837),
     d = n(481060),
     u = n(239091),
@@ -55,7 +55,7 @@ var i = n(200651),
     Q = n(987650),
     J = n(981631),
     $ = n(388032),
-    ee = n(786581);
+    ee = n(619267);
 function et(e, t, n) {
     return (
         t in e
@@ -79,7 +79,7 @@ class ei extends r.Component {
     }
     render() {
         let { channel: e, placeholder: t, ...n } = this.props,
-            { focused: r, textValue: s, contentWarningProps: a, richValue: l } = this.state,
+            { focused: r, textValue: s, contentWarningProps: a, richValue: o } = this.state,
             c = (0, i.jsx)(d.Popout, {
                 position: 'top',
                 onRequestClose: () => {
@@ -90,7 +90,7 @@ class ei extends r.Component {
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
                     return (
-                        o()(null != a, 'ConnectedChannelTextArea.render - renderPopout: contentWarningProps cannot be null'),
+                        l()(null != a, 'ConnectedChannelTextArea.render - renderPopout: contentWarningProps cannot be null'),
                         (0, i.jsx)(v.Z, {
                             onClose: t,
                             ...a
@@ -107,7 +107,7 @@ class ei extends r.Component {
                         onBlur: () => this.setState({ focused: !1 }),
                         placeholder: t,
                         textValue: s,
-                        richValue: l,
+                        richValue: o,
                         onSubmit: this.handleSendMessage,
                         onChange: this.handleTextareaChange,
                         onKeyDown: this.handleTextareaKeyDown,
@@ -187,8 +187,8 @@ class ei extends r.Component {
                                         shouldClear: !1,
                                         shouldRefocus: !1
                                     };
-                          let l = p.Z.getSendMessageOptionsForReply(i);
-                          return (p.Z.sendMessage(n.id, A.ZP.parse(n, t), !0, l), this.setState((0, y.H2)()), (0, L.A6)(n.id), r)
+                          let o = p.Z.getSendMessageOptionsForReply(i);
+                          return (p.Z.sendMessage(n.id, A.ZP.parse(n, t), !0, o), this.setState((0, y.H2)()), (0, L.A6)(n.id), r)
                               ? (f.Z.deactivateAllRegions(),
                                 {
                                     shouldClear: !1,
@@ -249,15 +249,15 @@ class er extends r.PureComponent {
     }
     renderContent() {
         let e;
-        let { channel: t, placeholder: n, nsfwAgree: s, guild: l, locked: o, activated: c, chatKeybind: d, pinned: u, isPreviewingInGame: h, dragging: p, pendingReply: f } = this.props;
+        let { channel: t, placeholder: n, nsfwAgree: s, guild: o, locked: l, activated: c, chatKeybind: d, pinned: u, isPreviewingInGame: h, dragging: p, pendingReply: f } = this.props;
         if (null == t) return null;
-        let g = o || h,
+        let g = l || h,
             v = !s && null != t && t.isNSFW(),
             E = !g || c;
         return (
             (e =
-                v && null != l
-                    ? (0, i.jsx)(_.Z, { guild: l })
+                v && null != o
+                    ? (0, i.jsx)(_.Z, { guild: o })
                     : (0, i.jsx)(
                           j.Z,
                           {
@@ -272,23 +272,23 @@ class er extends r.PureComponent {
                       )),
             (0, i.jsx)(b.G.Provider, {
                 value: {
-                    disableInteractions: u && o && !c,
+                    disableInteractions: u && l && !c,
                     disableAnimations: u && g && !c
                 },
                 children: (0, i.jsxs)(r.Fragment, {
                     children: [
-                        !o &&
+                        !l &&
                             !h &&
                             (0, i.jsx)(Z.Z, {
                                 channel: t,
-                                guild: l
+                                guild: o
                             }),
                         (0, i.jsx)(q.ZP.Background, {
-                            opacityOverride: o || h ? null : en,
+                            opacityOverride: l || h ? null : en,
                             children: (0, i.jsx)('div', {
                                 className: a()(ee.messagesContainer, {
                                     [ee.isDragging]: p,
-                                    [ee.disableHoverStates]: u && o && !c
+                                    [ee.disableHoverStates]: u && l && !c
                                 }),
                                 children: e
                             })
@@ -298,7 +298,7 @@ class er extends r.PureComponent {
                             : (0, i.jsx)('div', {
                                   children: E
                                       ? (0, i.jsx)(q.ZP.Background, {
-                                            opacityOverride: o || h ? null : en,
+                                            opacityOverride: l || h ? null : en,
                                             children: (0, i.jsxs)('div', {
                                                 className: ee.footerContent,
                                                 children: [
@@ -341,14 +341,14 @@ class er extends r.PureComponent {
         );
     }
     renderWidgetWrapper(e) {
-        let { locked: t, pinned: n, activated: r, isPreviewingInGame: s, opacity: l } = this.props,
-            o = J.t_t.UNPINNED;
-        r ? (o = J.t_t.IN_GAME_ACTIVE) : (n && t) || s ? (o = J.t_t.IN_GAME_TEXT) : n && (o = J.t_t.PINNED);
+        let { locked: t, pinned: n, activated: r, isPreviewingInGame: s, opacity: o } = this.props,
+            l = J.t_t.UNPINNED;
+        r ? (l = J.t_t.IN_GAME_ACTIVE) : (n && t) || s ? (l = J.t_t.IN_GAME_TEXT) : n && (l = J.t_t.PINNED);
         let c = (t && !r) || s,
             d = n && (c || r),
             u = n && r,
             h = n && c && !r,
-            p = (0, Y.Z)(l);
+            p = (0, Y.Z)(o);
         return (0, i.jsx)(q.ZP, {
             className: a()(p, {
                 [ee.widgetWrapper]: !n,
@@ -359,8 +359,8 @@ class er extends r.PureComponent {
                 [ee.pinned]: n,
                 'overlay-unlocked': !t
             }),
-            type: o,
-            opacity: l,
+            type: l,
+            opacity: o,
             children: e
         });
     }
@@ -377,7 +377,7 @@ class er extends r.PureComponent {
     render() {
         let { locked: e, channel: t, pinned: n, isPreviewingInGame: s, contained: a } = this.props;
         if (null == t || !this.shouldDisplay()) return null;
-        let l = (0, i.jsxs)(r.Fragment, {
+        let o = (0, i.jsxs)(r.Fragment, {
             children: [
                 (0, i.jsx)(X.Z, {
                     draggableClassName: ee.draggableStartArea,
@@ -400,7 +400,7 @@ class er extends r.PureComponent {
                       })
             ]
         });
-        return a ? this.renderContainedWrapper(l) : this.renderWidgetWrapper(l);
+        return a ? this.renderContainedWrapper(o) : this.renderWidgetWrapper(o);
     }
     constructor(...e) {
         super(...e),
@@ -421,7 +421,7 @@ class er extends r.PureComponent {
                 null != t &&
                     null != r &&
                     (0, u.jW)(e, async () => {
-                        let { default: e } = await Promise.all([n.e('79695'), n.e('92453'), n.e('56826'), n.e('12327')]).then(n.bind(n, 131404));
+                        let { default: e } = await Promise.all([n.e('79695'), n.e('92453'), n.e('56826'), n.e('29212')]).then(n.bind(n, 131404));
                         return (n) =>
                             (0, i.jsx)(e, {
                                 ...n,
@@ -446,8 +446,8 @@ function es(e) {
         r = (0, c.e7)([V.Z], () => V.Z.getGuildId()),
         s = (0, c.e7)([z.Z], () => z.Z.getChannelId(r)),
         a = (0, c.e7)([R.Z], () => R.Z.getChannel(s)),
-        l = (0, c.e7)([B.Z], () => B.Z.getOverlayChatKeybind()),
-        o = null != l ? (0, H.BB)(l.shortcut, !0) : ']',
+        o = (0, c.e7)([B.Z], () => B.Z.getOverlayChatKeybind()),
+        l = null != o ? (0, H.BB)(o.shortcut, !0) : ']',
         [d, u, h] = (0, c.Wu)([G.Z], () => [G.Z.getTextWidgetOpacity(), G.Z.getActiveRegions(), !t && G.Z.isPreviewingInGame()]),
         p = (0, c.e7)([D.Z], () => D.Z.getGuild(r)),
         f = (0, c.e7)([M.Z], () => null != r && M.Z.didAgree(r)),
@@ -463,7 +463,7 @@ function es(e) {
               user: v,
               opacity: d,
               nsfwAgree: f,
-              chatKeybind: o,
+              chatKeybind: l,
               activated: u.has(J.O0n.TEXT_WIDGET),
               isPreviewingInGame: h,
               pendingReply: m,

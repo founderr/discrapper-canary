@@ -11,7 +11,7 @@ var i = n(120356),
     o = n(111028),
     l = n(652853),
     u = n(228168),
-    c = n(69035);
+    c = n(676411);
 function d(e) {
     let { text: t, tags: n, platformIcon: i, contextMenu: d } = e,
         { profileType: f } = (0, l.z)();

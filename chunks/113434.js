@@ -107,8 +107,8 @@ var r,
     g = n(553795),
     E = n(70956),
     v = n(63063),
-    b = n(930153),
-    I = n(358085),
+    I = n(930153),
+    b = n(358085),
     T = n(617136),
     S = n(272008),
     y = n(569984),
@@ -502,7 +502,7 @@ function ei(e) {
         r = W(e),
         i = null != r ? r.completedRatio : n,
         a = 100 * i,
-        s = null != r ? ''.concat(null == r ? void 0 : r.progress, '/').concat(null == r ? void 0 : r.target) : (0, b.T3)(t, i, { roundingMode: 'floor' });
+        s = null != r ? ''.concat(null == r ? void 0 : r.progress, '/').concat(null == r ? void 0 : r.target) : (0, I.T3)(t, i, { roundingMode: 'floor' });
     return {
         completedRatio: i,
         percentComplete: a,
@@ -620,8 +620,8 @@ function eo(e) {
         u = d.T.DESKTOP.has(i.taskType),
         c = 0 === i.percentComplete,
         f = o && !l && !s && null == r && (u || (c && a === A.LI.DESKTOP)),
-        _ = (0, I.isWeb)() && f,
-        p = (0, I.isMac)() && i.taskType === d.X.STREAM_ON_DESKTOP && f,
+        _ = (0, b.isWeb)() && f,
+        p = (0, b.isMac)() && i.taskType === d.X.STREAM_ON_DESKTOP && f,
         h = [];
     return p && h.push(M.intl.string(M.t.MFGxFB)), _ && h.push(M.intl.string(M.t.BV6xDg)), h;
 }
@@ -663,7 +663,7 @@ function ec(e) {
         s = (0, R.pF)({ location: x.dr.QUESTS_BAR });
     if ((null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null) return M.intl.string(M.t['ij5E//']);
     if ((null === (n = e.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null && i.percentComplete > 0) {
-        let e = (0, b.T3)(r, i.percentComplete, { roundingMode: 'floor' });
+        let e = (0, I.T3)(r, i.percentComplete, { roundingMode: 'floor' });
         return M.intl.formatToPlainString(M.t.lVZaXF, { percent: e });
     }
     return s && a === A.LI.SELECT ? M.intl.string(M.t.EMrUHR) : (0, N.$J)(e) ? M.intl.string(M.t.mOrpXF) : M.intl.string(M.t['7e5k7O']);

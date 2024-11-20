@@ -3,12 +3,12 @@ var i = n(200651),
     r = n(149765),
     s = n(481060),
     a = n(570140),
-    l = n(700785);
+    o = n(700785);
 __OVERLAY__ &&
     a.Z.subscribe('OVERLAY_OAUTH2_AUTHORIZE_MODAL_OPEN', function (e) {
         let {
                 clientId: t,
-                authorizeProps: { authorizations: o, permissions: c, ...d }
+                authorizeProps: { authorizations: l, permissions: c, ...d }
             } = e,
             u = 'OAuth2Authorize_'.concat(t, '_').concat(d.guildId, '_').concat(d.channelId);
         function h(e) {
@@ -19,7 +19,7 @@ __OVERLAY__ &&
                 location: n
             });
         }
-        let p = l.Hn;
+        let p = o.Hn;
         try {
             p = r.vB(null != c ? c : 0);
         } catch (e) {}
@@ -30,7 +30,7 @@ __OVERLAY__ &&
                     (0, i.jsx)(e, {
                         ...t,
                         ...d,
-                        authorizations: new Map(o),
+                        authorizations: new Map(l),
                         permissions: p,
                         callback: h
                     });

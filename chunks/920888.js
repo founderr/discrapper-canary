@@ -13,8 +13,8 @@ var i = n(200651),
     f = n(434624),
     p = n(287151),
     _ = n(388032),
-    g = n(351821),
-    E = n(663517);
+    g = n(96042),
+    E = n(688236);
 let C = (e, t) => (null == e && null == t) || e === t,
     I = (e, t) => e.findIndex((e) => C(e.emoji.id, null == t ? void 0 : t.id) && C(e.emoji.name, null == t ? void 0 : t.name)),
     x = (e, t) => {

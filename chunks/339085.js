@@ -16,8 +16,8 @@ var r,
     g = n(188742),
     E = n(353926),
     v = n(973542),
-    b = n(889564),
-    I = n(687476),
+    I = n(889564),
+    b = n(687476),
     T = n(978519),
     S = n(706454),
     y = n(581883),
@@ -73,7 +73,7 @@ class Q {
     isUsable(e) {
         if (0 === e.roles.length) return !0;
         let t = A.ZP.getMember(this.id, this._userId);
-        return null != t && (!!(t.roles.some((t) => e.roles.includes(t)) || (0, b.yH)(e)) || !1);
+        return null != t && (!!(t.roles.some((t) => e.roles.includes(t)) || (0, I.yH)(e)) || !1);
     }
     get rawEmojis() {
         return this._emojis;
@@ -428,9 +428,9 @@ function ev(e) {
         eh(t, null == e ? void 0 : e.emojis), ep();
     }
 }
-class eb extends (i = d.ZP.PersistedStore) {
+class eI extends (i = d.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(p.Z, N.Z, A.ZP, C.Z, S.default, I.Z, Z.Z, O.default, E.Z), null != e && (null != e.pendingUsages && (q.pendingUsages = e.pendingUsages), null != e.emojiReactionPendingUsages && (q.emojiReactionPendingUsages = e.emojiReactionPendingUsages), null != e.expandedSectionsByGuildIds && (q.expandedSectionsByGuildIds = new Set(e.expandedSectionsByGuildIds))), this.syncWith([y.Z], em), this.syncWith([E.Z], eg);
+        this.waitFor(p.Z, N.Z, A.ZP, C.Z, S.default, b.Z, Z.Z, O.default, E.Z), null != e && (null != e.pendingUsages && (q.pendingUsages = e.pendingUsages), null != e.emojiReactionPendingUsages && (q.emojiReactionPendingUsages = e.emojiReactionPendingUsages), null != e.expandedSectionsByGuildIds && (q.expandedSectionsByGuildIds = new Set(e.expandedSectionsByGuildIds))), this.syncWith([y.Z], em), this.syncWith([E.Z], eg);
     }
     getState() {
         return q;
@@ -576,10 +576,10 @@ class eb extends (i = d.ZP.PersistedStore) {
         return null != t && t.favoriteEmojisWithoutFetchingLatest.length > 0;
     }
 }
-W(eb, 'displayName', 'EmojiStore'),
-    W(eb, 'persistKey', 'EmojiStoreV2'),
-    W(eb, 'migrations', [(e) => ({ ...e })]),
-    (t.ZP = new eb(f.Z, {
+W(eI, 'displayName', 'EmojiStore'),
+    W(eI, 'persistKey', 'EmojiStoreV2'),
+    W(eI, 'migrations', [(e) => ({ ...e })]),
+    (t.ZP = new eI(f.Z, {
         LOGOUT: function () {
             (q.pendingUsages = []), (q.emojiReactionPendingUsages = []);
         },

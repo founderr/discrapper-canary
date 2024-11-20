@@ -36,8 +36,8 @@ function g(e, t, n) {
 }
 let E = 'scientist:triggered',
     v = 'exerimentOverrides',
-    b = 'userExperimentOverrides',
-    I = 'guildExperimentOverrides',
+    I = 'userExperimentOverrides',
+    b = 'guildExperimentOverrides',
     T = new c.Z('ExperimentStore'),
     S = !1,
     y = {},
@@ -346,7 +346,7 @@ function Q() {
 function X(e) {
     let { isSwitchingAccount: t } = e;
     o.K.remove(E),
-        !t && (o.K.remove(v), o.K.remove(b), o.K.remove(I), (D = {}), (L = {})),
+        !t && (o.K.remove(v), o.K.remove(I), o.K.remove(b), (D = {}), (L = {})),
         (C = {}),
         (N = {
             ...N,
@@ -360,7 +360,7 @@ function J() {
 }
 function $() {
     try {
-        o.K.set(b, D);
+        o.K.set(I, D);
     } catch (e) {
         T.error('Error saving user experiment overrides, unsaved data will be lost', e),
             _.default.track(m.rMx.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
@@ -369,7 +369,7 @@ function $() {
             });
     }
     try {
-        o.K.set(I, L);
+        o.K.set(b, L);
     } catch (e) {
         T.error('Error saving guild experiment overrides, unsaved data will be lost', e),
             _.default.track(m.rMx.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
@@ -455,7 +455,7 @@ class ei extends f.Z {
         })()),
             !(function () {
                 var e, t, n;
-                let r = [null !== (e = o.K.get(v)) && void 0 !== e ? e : {}, null !== (t = o.K.get(b)) && void 0 !== t ? t : {}, null !== (n = o.K.get(I)) && void 0 !== n ? n : {}];
+                let r = [null !== (e = o.K.get(v)) && void 0 !== e ? e : {}, null !== (t = o.K.get(I)) && void 0 !== t ? t : {}, null !== (n = o.K.get(b)) && void 0 !== n ? n : {}];
                 (D = {}), (L = {});
                 let a = !i().isEmpty(r[0]);
                 for (let e of r)

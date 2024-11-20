@@ -21,8 +21,8 @@ var r = n(200651),
     g = n(194082),
     E = n(318374),
     v = n(102172),
-    b = n(359110),
-    I = n(769654),
+    I = n(359110),
+    b = n(769654),
     T = n(922482),
     S = n(543882),
     y = n(592125),
@@ -49,9 +49,9 @@ var r = n(200651),
     Y = n(228168),
     W = n(981631),
     K = n(388032),
-    z = n(617114),
-    q = n(69035),
-    Q = n(856120),
+    z = n(727747),
+    q = n(676411),
+    Q = n(380934),
     X = n(924482),
     J = n(774797);
 function $(e) {
@@ -89,7 +89,7 @@ function $(e) {
         {
             url: eE,
             isLoading: ev,
-            canSeePreview: eb
+            canSeePreview: eI
         } = (0, o.cj)([N.Z, S.Z], () => {
             let e = null != e_ && N.Z.canBasicChannel(W.S7T.CONNECT, e_);
             return e
@@ -104,7 +104,7 @@ function $(e) {
                       canSeePreview: e
                   };
         }),
-        eI = (0, o.e7)([R.Z], () => R.Z.getRelationshipType(t.id));
+        eb = (0, o.e7)([R.Z], () => R.Z.getRelationshipType(t.id));
     i.useEffect(() => {
         if (el) {
             var e;
@@ -112,11 +112,11 @@ function $(e) {
                 activity_user_id: t.id,
                 discoverable: null === (e = a.discoverable) || void 0 === e || e,
                 surface: 'user-profile-stream-activity-card',
-                relationship_type: eI,
+                relationship_type: eb,
                 treatment: eo && !1 === a.discoverable ? m.h9.HIDE : m.h9.SHOW
             });
         }
-    }, [t, eI, eo, el, a]);
+    }, [t, eb, eo, el, a]);
     let eT = (0, d.Z)(ev ? null : eE),
         eS = ev || null == eE ? eT : eE;
     if (null == ef || null == e_ || (eo && !1 === a.discoverable) || null === en) return null;
@@ -150,7 +150,7 @@ function $(e) {
                                         }),
                                         (0, r.jsx)(l.Text, {
                                             variant: 'text-sm/medium',
-                                            children: eb ? K.intl.string(K.t.uQZTBQ) : K.intl.string(K.t.pgUTZG)
+                                            children: eI ? K.intl.string(K.t.uQZTBQ) : K.intl.string(K.t.pgUTZG)
                                         })
                                     ]
                                 })
@@ -206,7 +206,7 @@ function $(e) {
                                     (0, r.jsx)(l.Clickable, {
                                         className: s()(q.clickable, q.inline),
                                         onClick: () => {
-                                            null == ec || ec({ action: 'OPEN_VOICE_CHANNEL' }), e ? (0, T.Cq)(e_) : (u.default.selectVoiceChannel(e_.id), (0, b.Kh)(e_.id)), null == ee || ee();
+                                            null == ec || ec({ action: 'OPEN_VOICE_CHANNEL' }), e ? (0, T.Cq)(e_) : (u.default.selectVoiceChannel(e_.id), (0, I.Kh)(e_.id)), null == ee || ee();
                                         },
                                         children: e_.name
                                     })
@@ -216,7 +216,7 @@ function $(e) {
                                 variant: 'text-xs/normal',
                                 text: K.intl.formatToPlainString(K.t['hq/Qzc'], { guildName: ef.name }),
                                 onClick: () => {
-                                    ec({ action: 'OPEN_VOICE_GUILD' }), (0, I.X)(ef.id), null == ee || ee();
+                                    ec({ action: 'OPEN_VOICE_GUILD' }), (0, b.X)(ef.id), null == ee || ee();
                                 }
                             })
                         ]

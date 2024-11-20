@@ -6,12 +6,12 @@ n.d(t, {
 var r = n(200651),
     i = n(192379),
     a = n(1561),
-    s = n(905249);
+    s = n(30215);
 function o(e) {
-    let { tag: t = 'div', children: n, className: o, style: l, focusProps: u, onClick: c, onDoubleClick: d, onContextMenu: f, onKeyDown: _, onFocus: p, onBlur: h, onMouseOver: m, onMouseDown: g, onMouseLeave: E, buttonProps: v, 'aria-label': b } = e,
-        I = i.useRef(null);
+    let { tag: t = 'div', children: n, className: o, style: l, focusProps: u, onClick: c, onDoubleClick: d, onContextMenu: f, onKeyDown: _, onFocus: p, onBlur: h, onMouseOver: m, onMouseDown: g, onMouseLeave: E, buttonProps: v, 'aria-label': I } = e,
+        b = i.useRef(null);
     return (0, r.jsxs)(t, {
-        ref: I,
+        ref: b,
         className: o,
         style: l,
         onClick: c,
@@ -23,11 +23,11 @@ function o(e) {
             (0, r.jsx)(a.P, {
                 ...v,
                 focusProps: {
-                    ringTarget: I,
+                    ringTarget: b,
                     ...u
                 },
                 className: s.focusTarget,
-                'aria-label': b,
+                'aria-label': I,
                 onClick: (e) => {
                     e.stopPropagation(), null == c || c(e);
                 },

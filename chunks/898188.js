@@ -21,8 +21,8 @@ var r = n(200651),
     g = n(655359),
     E = n(931261),
     v = n(216701),
-    b = n(388032),
-    I = n(699656);
+    I = n(388032),
+    b = n(80909);
 function T(e) {
     let { action: t } = e,
         n = (0, l.e7)([_.Z], () => _.Z.getChannel(t.channelId)),
@@ -31,12 +31,12 @@ function T(e) {
         ? (0, r.jsx)(u.Text, {
               variant: 'text-xxs/normal',
               color: 'header-secondary',
-              children: b.intl.format(b.t.MkzlDA, { channelName: b.intl.string(b.t.J90oLS) })
+              children: I.intl.format(I.t.MkzlDA, { channelName: I.intl.string(I.t.J90oLS) })
           })
         : (0, r.jsx)(u.Text, {
               variant: 'text-xxs/normal',
               color: 'header-secondary',
-              children: b.intl.format(b.t.MkzlDA, { channelName: i })
+              children: I.intl.format(I.t.MkzlDA, { channelName: i })
           });
 }
 function S(e) {
@@ -49,7 +49,7 @@ function S(e) {
         emojiId: i,
         emojiName: a,
         size: v.R.MEDIUM,
-        defaultComponent: (0, r.jsx)(o, { className: I.channelIcon })
+        defaultComponent: (0, r.jsx)(o, { className: b.channelIcon })
     });
 }
 function y(e) {
@@ -94,7 +94,7 @@ function y(e) {
     return null == E || (N && !R)
         ? null
         : (0, r.jsx)('div', {
-              className: s()(I.container, p),
+              className: s()(b.container, p),
               children:
                   R && null != y
                       ? (0, r.jsx)(o.Z.div, {
@@ -105,7 +105,7 @@ function y(e) {
                                 })
                             },
                             children: (0, r.jsxs)(u.Clickable, {
-                                className: s()(I.banner, I.clickable),
+                                className: s()(b.banner, b.clickable),
                                 onClick: x,
                                 children: [
                                     (0, r.jsx)(S, {
@@ -114,29 +114,29 @@ function y(e) {
                                         emojiName: null == y ? void 0 : null === (n = y.emoji) || void 0 === n ? void 0 : n.name
                                     }),
                                     (0, r.jsxs)('div', {
-                                        className: I.text,
+                                        className: b.text,
                                         children: [
                                             (0, r.jsx)(u.Text, {
                                                 variant: 'text-md/semibold',
                                                 color: 'header-primary',
-                                                children: b.intl.format(b.t['/beONz'], { step: y.title })
+                                                children: I.intl.format(I.t['/beONz'], { step: y.title })
                                             }),
                                             (0, r.jsx)(T, { action: y })
                                         ]
                                     }),
                                     (0, r.jsx)('div', {
-                                        className: I.iconCircle,
+                                        className: b.iconCircle,
                                         children: (0, r.jsx)(u.ArrowSmallRightIcon, {
                                             size: 'xs',
                                             color: C.hex(),
-                                            className: I.nextIcon
+                                            className: b.nextIcon
                                         })
                                     })
                                 ]
                             })
                         })
                       : (0, r.jsxs)(o.Z.div, {
-                            className: I.banner,
+                            className: b.banner,
                             style: {
                                 marginBottom: D.interpolate({
                                     inputRange: [0, 1],
@@ -150,7 +150,7 @@ function y(e) {
                                     emojiName: null == E ? void 0 : null === (d = E.emoji) || void 0 === d ? void 0 : d.name
                                 }),
                                 (0, r.jsxs)('div', {
-                                    className: I.text,
+                                    className: b.text,
                                     children: [
                                         (0, r.jsx)(u.Text, {
                                             variant: 'text-md/semibold',
@@ -160,7 +160,7 @@ function y(e) {
                                         (0, r.jsx)(u.Text, {
                                             variant: 'text-xxs/normal',
                                             color: 'text-muted',
-                                            children: b.intl.string(b.t['ElGg8/'])
+                                            children: I.intl.string(I.t['ElGg8/'])
                                         })
                                     ]
                                 }),
@@ -168,7 +168,7 @@ function y(e) {
                                     ? (0, r.jsx)(u.CircleCheckIcon, {
                                           size: 'custom',
                                           color: 'currentColor',
-                                          className: I.completed,
+                                          className: b.completed,
                                           secondaryColor: C.hex(),
                                           width: 20,
                                           height: 20

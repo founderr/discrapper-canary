@@ -20,8 +20,8 @@ var r = n(200651),
     g = n(347475),
     E = n(592125),
     v = n(271383),
-    b = n(430824),
-    I = n(699516),
+    I = n(430824),
+    b = n(699516),
     T = n(594174),
     S = n(5192),
     y = n(51144),
@@ -64,7 +64,7 @@ function C(e) {
                 : (e) => {
                       null != x &&
                           (0, c.jW)(e, async () => {
-                              let { default: e } = await Promise.all([n.e('50506'), n.e('79695'), n.e('51269'), n.e('13351'), n.e('33862'), n.e('92453'), n.e('13125'), n.e('80863')]).then(n.bind(n, 757387));
+                              let { default: e } = await Promise.all([n.e('50506'), n.e('79695'), n.e('51269'), n.e('13351'), n.e('50050'), n.e('92453'), n.e('13125'), n.e('13441')]).then(n.bind(n, 757387));
                               return (t) =>
                                   (0, r.jsx)(e, {
                                       ...t,
@@ -76,8 +76,8 @@ function C(e) {
                           });
                   },
         P = y.ZP.useName(L),
-        k = (0, l.e7)([E.Z, v.ZP, I.Z], () => S.ZP.getNickname(w, a, L)),
-        U = b.Z.getGuild(w),
+        k = (0, l.e7)([E.Z, v.ZP, b.Z], () => S.ZP.getNickname(w, a, L)),
+        U = I.Z.getGuild(w),
         B = (0, _.Ib)(U, x) && i === A.fL ? A.jM : null;
     if (null == L)
         return (0, r.jsx)(N, {

@@ -1,4 +1,4 @@
-n.d(e, {
+e.d(t, {
     B2: function () {
         return o;
     },
@@ -6,80 +6,80 @@ n.d(e, {
         return l;
     },
     hj: function () {
-        return c;
+        return d;
     },
     nh: function () {
         return a;
     }
 });
-var i = n(63063),
-    r = n(981631),
-    u = n(388032);
-function l(t) {
-    let { application: e, username: n, usernameHook: l = r.dG4, applicationNameHook: a = r.dG4 } = t;
-    return null != e
+var r = e(63063),
+    i = e(981631),
+    u = e(388032);
+function l(n) {
+    let { application: t, username: e, usernameHook: l = i.dG4, applicationNameHook: a = i.dG4 } = n;
+    return null != t
         ? u.intl.format(u.t.J8SaGx, {
-              username: n,
-              otherUsername: e.name,
+              username: e,
+              otherUsername: t.name,
               usernameHook: l,
               otherUsernameHook: a,
-              helpCenterLink: i.Z.getArticleURL(r.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
+              helpCenterLink: r.Z.getArticleURL(i.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
           })
         : u.intl.format(u.t['+6V2sb'], {
-              username: n,
+              username: e,
               usernameHook: l,
-              helpCenterLink: i.Z.getArticleURL(r.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
+              helpCenterLink: r.Z.getArticleURL(i.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
           });
 }
-function a(t) {
-    let { application: e, username: n, usernameHook: l = r.dG4, applicationNameHook: a = r.dG4 } = t;
-    return null != e
+function a(n) {
+    let { application: t, username: e, usernameHook: l = i.dG4, applicationNameHook: a = i.dG4 } = n;
+    return null != t
         ? u.intl.format(u.t.eGCDam, {
-              username: n,
-              otherUsername: e.name,
+              username: e,
+              otherUsername: t.name,
               usernameHook: l,
               otherUsernameHook: a,
-              helpCenterLink: i.Z.getArticleURL(r.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
+              helpCenterLink: r.Z.getArticleURL(i.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
           })
         : u.intl.format(u.t.sAX6rq, {
-              username: n,
+              username: e,
               usernameHook: l,
-              helpCenterLink: i.Z.getArticleURL(r.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
+              helpCenterLink: r.Z.getArticleURL(i.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
           });
 }
-function o(t) {
-    let { application: e, username: n, usernameOnClick: l, applicationNameOnClick: a, medium: o } = t;
-    return null != e
+function o(n) {
+    let { application: t, username: e, usernameOnClick: l, applicationNameOnClick: a, medium: o } = n;
+    return null != t
         ? u.intl.formatToParts(u.t['8r+Z+P'], {
-              username: n,
-              otherUsername: e.name,
+              username: e,
+              otherUsername: t.name,
               usernameOnClick: l,
               otherUsernameOnClick: a,
               medium: o,
-              helpCenterLink: { url: i.Z.getArticleURL(r.BhN.PRIVATE_CHANNEL_INTEGRATIONS) }
+              helpCenterLink: { url: r.Z.getArticleURL(i.BhN.PRIVATE_CHANNEL_INTEGRATIONS) }
           })
         : u.intl.formatToParts(u.t.ojysqa, {
-              username: n,
+              username: e,
               usernameOnClick: l,
               medium: o,
-              helpCenterLink: { url: i.Z.getArticleURL(r.BhN.PRIVATE_CHANNEL_INTEGRATIONS) }
+              helpCenterLink: { url: r.Z.getArticleURL(i.BhN.PRIVATE_CHANNEL_INTEGRATIONS) }
           });
 }
-function c(t) {
-    let { application: e, username: n, usernameOnClick: l, applicationNameOnClick: a, medium: o } = t;
-    return null != e
+function d(n) {
+    let { application: t, username: e, usernameOnClick: l, applicationNameOnClick: a, medium: o } = n;
+    return null != t
         ? u.intl.formatToParts(u.t.zmc0mp, {
-              username: n,
-              otherUsername: e.name,
+              username: e,
+              otherUsername: t.name,
               usernameOnClick: l,
               otherUsernameOnClick: a,
               medium: o,
-              helpCenterLink: { url: i.Z.getArticleURL(r.BhN.PRIVATE_CHANNEL_INTEGRATIONS) }
+              helpCenterLink: { url: r.Z.getArticleURL(i.BhN.PRIVATE_CHANNEL_INTEGRATIONS) }
           })
         : u.intl.formatToParts(u.t['x2CN/f'], {
-              username: n,
+              username: e,
               usernameOnClick: l,
               medium: o,
-              helpCenterLink: { url: i.Z.getArticleURL(r.BhN.PRIVATE_CHANNEL_INTEGRATIONS) }
+              helpCenterLink: { url: r.Z.getArticleURL(i.BhN.PRIVATE_CHANNEL_INTEGRATIONS) }
           });
 }

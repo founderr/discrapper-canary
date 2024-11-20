@@ -37,7 +37,7 @@ var i,
     P = n(182294),
     L = n(957825),
     y = n(388032),
-    O = n(747893);
+    O = n(17500);
 function M(e) {
     let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: i, onMouseEnter: r, onMouseLeave: o, popoutPosition: M, analyticsPage: k, analyticsSection: D, glow: B, giftIntentSecondaryAction: U } = e,
         w = (0, u.e7)([N.default], () => N.default.getCurrentUser()),

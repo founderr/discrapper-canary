@@ -13,7 +13,7 @@ n(192379);
 var s = n(120356),
     o = n.n(s),
     l = n(481060),
-    u = n(725222);
+    u = n(529652);
 ((r = i || (i = {}))[(r.WARNING = 0)] = 'WARNING'), (r[(r.INFO = 1)] = 'INFO'), (r[(r.ERROR = 2)] = 'ERROR'), (r[(r.POSITIVE = 3)] = 'POSITIVE');
 function c(e) {
     let { children: t, messageType: n, className: r, textColor: i = 'text-normal', textVariant: s = 'text-sm/medium' } = e,

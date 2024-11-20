@@ -13,7 +13,7 @@ var i = e(481060),
     l = e(955708),
     u = e(850165),
     d = e(388032),
-    E = e(324394),
+    E = e(248296),
     N = e(282668);
 function h(t) {
     let { senderId: n, trackAnalyticsEvent: e, onNavigate: h } = t,

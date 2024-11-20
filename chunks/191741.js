@@ -26,7 +26,7 @@ var i = n(200651),
     I = n(998502),
     C = n(981631),
     v = n(741764),
-    N = n(215820);
+    N = n(350133);
 let T = (0, l.Ue)(() => ({ isOpen: !0 }));
 function S(e) {
     e.stopPropagation();
@@ -40,12 +40,12 @@ function A() {
     r.useLayoutEffect(() => {
         I.ZP.setMinimumSize(v.J, v.N);
     }, []);
-    let x = r.useCallback(() => {
+    let b = r.useCallback(() => {
         (0, E.isMac)() && I.ZP.maximize();
     }, []);
     return (0, i.jsxs)('div', {
         className: N.bar,
-        onDoubleClick: x,
+        onDoubleClick: b,
         children: [
             (0, i.jsx)('div', {
                 className: N.left,
@@ -59,7 +59,7 @@ function A() {
                                 onClick: () => {
                                     T.setState({ isOpen: !T.getState().isOpen });
                                 },
-                                children: (0, i.jsx)(b, {})
+                                children: (0, i.jsx)(x, {})
                             }),
                             (0, i.jsx)(s.Clickable, {
                                 onClick: () => {
@@ -98,7 +98,7 @@ function A() {
         ]
     });
 }
-function b() {
+function x() {
     return (0, i.jsxs)('svg', {
         xmlns: 'http://www.w3.org/2000/svg',
         className: N.icon,

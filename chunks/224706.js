@@ -16,8 +16,8 @@ var r = n(664751),
     g = n(417363),
     E = n(626135),
     v = n(630388),
-    b = n(877481),
-    I = n(358085),
+    I = n(877481),
+    b = n(358085),
     T = n(573261),
     S = n(278323),
     y = n(58642),
@@ -36,8 +36,8 @@ function O(e) {
         locationObject: u,
         analyticsLocations: c
     })
-        .then(() => b.Z.waitConnected(t))
-        .then(() => Promise.race([b.Z.waitSubscribed(t, N.zMe.ACTIVITY_JOIN)]))
+        .then(() => I.Z.waitConnected(t))
+        .then(() => Promise.race([I.Z.waitSubscribed(t, N.zMe.ACTIVITY_JOIN)]))
         .then(() => {
             l.Z.dispatch({
                 type: 'ACTIVITY_JOIN',
@@ -75,18 +75,18 @@ async function D(e) {
         n = null != e ? e.branchId : t;
     }
     if (g.Z.isLaunchable(t, n)) {
-        var I;
+        var b;
         let e = g.Z.getState(t, n),
             i = m.Z.getActiveLaunchOptionId(t, n);
         if (null == e) throw Error('Missing dispatch game when launching');
         let o = m.Z.getLibraryApplication(t, n);
         if (null == o) throw Error('Missing library application when launching');
-        v = ((I = t),
+        v = ((b = t),
         s.tn
             .post({
                 url: N.ANM.OAUTH2_AUTHORIZE,
                 query: {
-                    client_id: I,
+                    client_id: b,
                     response_type: 'token',
                     scope: [a.x.IDENTIFY].join(' ')
                 },
@@ -110,10 +110,10 @@ async function D(e) {
                     if (404 === e.status) return null;
                     throw e;
                 }
-            )).then((t) => b.Z.launchDispatchApplication(e, t, _.default.locale, o.getBranchName(), i));
+            )).then((t) => I.Z.launchDispatchApplication(e, t, _.default.locale, o.getBranchName(), i));
     } else {
         let e = c.Z.getApplication(t);
-        v = null != e ? b.Z.launch(e) : b.Z.launchGame(t);
+        v = null != e ? I.Z.launch(e) : I.Z.launchGame(t);
     }
     let T = Error('game not found');
     return null != v
@@ -297,7 +297,7 @@ t.Z = {
                     url: N.ANM.UNVERIFIED_APPLICATIONS,
                     body: {
                         name: r,
-                        os: (0, I.getPlatformName)(),
+                        os: (0, b.getPlatformName)(),
                         icon: i,
                         distributor_application:
                             ((t = o),
