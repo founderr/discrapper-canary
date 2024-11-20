@@ -24,22 +24,22 @@ let T = 387,
 function E(e) {
     let { previewEnabled: t, onEnablePreview: n } = e,
         E = h.Z.getCameraComponent(),
-        [_, f] = s.useState((0, c.P)(g.default.getCurrentUser())),
-        I = s.useRef(!1),
+        [_, I] = s.useState((0, c.P)(g.default.getCurrentUser())),
+        f = s.useRef(!1),
         N = s.useRef(_),
         A = (0, o.O)(),
         b = (0, r.e7)([h.Z], () => Object.values(h.Z.getVideoDevices()).length > 0);
     return (
         s.useEffect(
             () => () => {
-                I.current && a.Z.wait(() => (0, d.Up)(N.current));
+                f.current && a.Z.wait(() => (0, d.Up)(N.current));
             },
             []
         ),
         (0, i.jsx)(m.Z, {
             selectedBackgroundOption: _,
             onSelectBackgroundOption: (e) => {
-                (I.current = !0), (N.current = e), f(e), (0, u.wG)(e, { location: A.location }).catch(p.dG4);
+                (f.current = !0), (N.current = e), I(e), (0, u.wG)(e, { location: A.location }).catch(p.dG4);
             },
             renderCamera: (e) =>
                 t

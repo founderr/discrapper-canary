@@ -21,17 +21,17 @@ function f(e, t, n) {
 }
 function p(e) {
     let { percent: t, animate: n, interactionEnabled: i, backgroundColor: p, preloadedBuffers: v, duration: C, maxSeekableTime: g, onClick: x, onScrubBack: S, onScrubForward: E } = e,
-        [h, _] = o.useState(null),
+        [_, h] = o.useState(null),
         [T, I] = o.useState(null),
-        [N, j] = o.useState(null),
-        [b, D] = o.useState(!1),
+        [N, b] = o.useState(null),
+        [j, D] = o.useState(!1),
         A = o.useRef(null),
         y = (e) => {
-            (A.current = e), _(e);
+            (A.current = e), h(e);
         };
     o.useEffect(() => {
-        null != h && (null == g ? j(null) : j(f(g, C, h)));
-    }, [h, g, C]);
+        null != _ && (null == g ? b(null) : b(f(g, C, _)));
+    }, [_, g, C]);
     let k = (0, a.y)(() => {
         if (null != k.current) y(k.current.getBoundingClientRect());
     });
@@ -54,11 +54,11 @@ function p(e) {
             },
             [S, E]
         ),
-        P = null != T && null != h ? m(T, h, C) : 0,
+        P = null != T && null != _ ? m(T, _, C) : 0,
         M = (0, c.yv)(P),
-        O = null != h ? h.right - f((t / 100) * C, C, h) : null,
-        R = null != T && null != h ? h.right - T : null,
-        w = null != N && null != h ? h.right - N : null;
+        O = null != _ ? _.right - f((t / 100) * C, C, _) : null,
+        R = null != T && null != _ ? _.right - T : null,
+        w = null != N && null != _ ? _.right - N : null;
     return (0, r.jsxs)('div', {
         className: d.cont,
         ref: k,
@@ -76,7 +76,7 @@ function p(e) {
                     if (!!i) D(!1), I(null);
                 },
                 onMouseMove: (e) => {
-                    if (!!i) b && B(e);
+                    if (!!i) j && B(e);
                 },
                 onKeyDown: L,
                 tabIndex: i ? void 0 : -1,
@@ -93,7 +93,7 @@ function p(e) {
                               (0, r.jsx)(
                                   'div',
                                   {
-                                      className: l()(d.buffer, { [d.bufferHovered]: b }),
+                                      className: l()(d.buffer, { [d.bufferHovered]: j }),
                                       style: {
                                           width: ''.concat(100 * e.size, '%'),
                                           left: ''.concat(100 * e.start, '%')
@@ -117,10 +117,10 @@ function p(e) {
                         percent: t,
                         foregroundColor: '#FFFFFF',
                         backgroundColor: null != p ? p : void 0,
-                        size: b ? s.Progress.Sizes.XSMALL : s.Progress.Sizes.XXSMALL,
+                        size: j ? s.Progress.Sizes.XSMALL : s.Progress.Sizes.XXSMALL,
                         animate: n
                     }),
-                    b &&
+                    j &&
                         null != M &&
                         (0, r.jsx)(s.Text, {
                             className: d.timeDisplay,
@@ -131,7 +131,7 @@ function p(e) {
                             },
                             children: M
                         }),
-                    b &&
+                    j &&
                         i &&
                         null != O &&
                         (0, r.jsx)('div', {

@@ -66,7 +66,7 @@ function g(e) {
                             (0, r.jsx)(o.ConfirmModal, {
                                 header: m.intl.formatToPlainString(m.t.x5pOn5, { name: t.username }),
                                 confirmText: m.intl.string(m.t.l4EmaW),
-                                cancelText: m.intl.string(m.t['ETE/oK']),
+                                cancelText: m.intl.string(m.t['eN6+rK']),
                                 onConfirm: () => {
                                     null == g || g(),
                                         l.Z.addRelationship({

@@ -13,10 +13,10 @@ t.Z = o.forwardRef((e, t) => {
         x = i / 2,
         S = i / 2 - m / 2,
         E = 2 * Math.PI * S,
-        h = E - o * E,
-        _ = {
+        _ = E - o * E,
+        h = {
             strokeDasharray: ''.concat(E, ' ').concat(E),
-            strokeDashoffset: h
+            strokeDashoffset: _
         },
         T = {
             strokeDasharray: ''.concat(E, ' ').concat(E),
@@ -107,7 +107,7 @@ t.Z = o.forwardRef((e, t) => {
                         cx: x,
                         cy: x,
                         stroke: g.foreground,
-                        style: _
+                        style: h
                     })
                 ]
             })

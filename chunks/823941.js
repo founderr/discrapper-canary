@@ -16,8 +16,8 @@ var r = n(200651),
     d = n(607070),
     u = n(906732),
     m = n(70097),
-    h = n(963249),
-    p = n(594174),
+    p = n(963249),
+    h = n(594174),
     f = n(754347),
     g = n(74538),
     C = n(884697),
@@ -35,7 +35,7 @@ let T = (0, C.IC)(96),
         let { category: t } = e,
             { analyticsLocations: n } = (0, u.ZP)(),
             i = a.useRef(null),
-            s = (0, o.e7)([p.default], () => p.default.getCurrentUser());
+            s = (0, o.e7)([h.default], () => h.default.getCurrentUser());
         return g.ZP.canUseCollectibles(s)
             ? (0, r.jsx)(r.Fragment, { children: t.summary })
             : (0, r.jsx)(r.Fragment, {
@@ -45,7 +45,7 @@ let T = (0, C.IC)(96),
                               innerRef: i,
                               className: I.getPremiumHook,
                               onClick: () => {
-                                  (0, h.Z)({
+                                  (0, p.Z)({
                                       subscriptionTier: E.Si.TIER_2,
                                       analyticsLocations: n,
                                       returnRef: i
@@ -80,20 +80,20 @@ let T = (0, C.IC)(96),
 function y(e) {
     var t, n, a;
     let { category: i, className: u, hideLimitedTimeBadge: m = !1 } = e,
-        { backgroundColors: h } = (0, b.Z)(i.styles),
-        p = (0, j.ZS)(i.skuId),
+        { backgroundColors: p } = (0, b.Z)(i.styles),
+        h = (0, j.ZS)(i.skuId),
         g = (0, o.e7)([d.Z], () => d.Z.useReducedMotion);
     if (i.skuId === l.T.CHANCE) return (0, r.jsx)(_.O, { category: i });
-    let E = !!(null == p ? void 0 : p.showDarkBannerText),
-        S = null == p ? void 0 : p.animatedBanner;
+    let E = !!(null == h ? void 0 : h.showDarkBannerText),
+        S = null == h ? void 0 : h.animatedBanner;
     return (0, r.jsxs)(x.Z, {
         asset: i.banner,
         className: s()(I.shopBanner, u),
         style:
-            null != h
+            null != p
                 ? {
-                      background: ''.concat((0, k.nH)(h), ' border-box border-box'),
-                      outlineColor: h.border.toHslString()
+                      background: ''.concat((0, k.nH)(p), ' border-box border-box'),
+                      outlineColor: p.border.toHslString()
                   }
                 : void 0,
         children: [

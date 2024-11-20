@@ -9,101 +9,101 @@ var r = n(200651),
     d = n(616066),
     u = n(215023),
     m = n(981579);
-let h = {
+let p = {
         x: 160,
         y: 160
     },
-    p = [
+    h = [
         {
             left: 0,
             top: 20,
             rotation: -32,
-            size: h,
+            size: p,
             skuId: '1212569433839636530'
         },
         {
             left: 110,
             top: 48,
             rotation: -24,
-            size: h,
+            size: p,
             skuId: '1144308439720394944'
         },
         {
             left: 230,
             top: 12,
             rotation: 8,
-            size: h,
+            size: p,
             skuId: '1228251144065777765'
         },
         {
             left: 354,
             top: 44,
             rotation: -48,
-            size: h,
+            size: p,
             skuId: '1262491137394868308'
         },
         {
             left: 470,
             top: 52,
             rotation: 12,
-            size: h,
+            size: p,
             skuId: '1157407831348228141'
         },
         {
             left: 600,
             top: 28,
             rotation: -4,
-            size: h,
+            size: p,
             skuId: '1197344326133502032'
         },
         {
             left: 740,
             top: 12,
             rotation: -32,
-            size: h,
+            size: p,
             skuId: '1232071712695386162'
         },
         {
             left: 870,
             top: 40,
             rotation: -20,
-            size: h,
+            size: p,
             skuId: '1220513977683935373'
         },
         {
             left: 1010,
             top: 30,
             rotation: 15,
-            size: h,
+            size: p,
             skuId: '1144046002110738634'
         },
         {
             left: 1140,
             top: 52,
             rotation: -18,
-            size: h,
+            size: p,
             skuId: '1271174324375519273'
         },
         {
             left: 1270,
             top: 32,
             rotation: 25,
-            size: h,
+            size: p,
             skuId: '1237653964582031400'
         },
         {
             left: 1400,
             top: 33,
             rotation: -5,
-            size: h,
+            size: p,
             skuId: '1217625794382401577'
         }
     ];
 t.Z = (e) => {
     let { peaking: t, transitioning: n, style: i } = e,
-        h = window.innerHeight,
+        p = window.innerHeight,
         [f, g] = a.useState(!1),
-        C = p.map((e) => {
+        C = h.map((e) => {
             let { skuId: t } = e;
             return c.Z.getProduct(t);
         });
@@ -120,9 +120,9 @@ t.Z = (e) => {
                 [m.peaking]: t,
                 [m.transitioned]: f
             }),
-            children: p.map((e, t) => {
+            children: h.map((e, t) => {
                 var a, i;
-                let { top: s, left: c, rotation: p, size: f, skuId: g } = e,
+                let { top: s, left: c, rotation: h, size: f, skuId: g } = e,
                     b = null === (a = C[t]) || void 0 === a ? void 0 : a.items[0],
                     x = null === (i = C[t]) || void 0 === i ? void 0 : i.type,
                     v = x === l.Z.AVATAR_DECORATION ? 384 : 512;
@@ -131,9 +131,9 @@ t.Z = (e) => {
                     {
                         className: m.asset,
                         style: {
-                            top: n ? -h - v : s,
+                            top: n ? -p - v : s,
                             left: n ? ''.concat(c - 75 - 350 * Math.random()) : c,
-                            transform: 'rotate('.concat(p, 'deg)'),
+                            transform: 'rotate('.concat(h, 'deg)'),
                             height: f.y,
                             width: f.x,
                             transitionDelay: ''.concat(Math.random() / 3, 's'),

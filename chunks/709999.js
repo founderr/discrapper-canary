@@ -9,8 +9,8 @@ var r = n(200651),
     d = n(873546),
     u = n(180650),
     m = n(979554),
-    h = n(399606),
-    p = n(622535),
+    p = n(399606),
+    h = n(622535),
     f = n(663002),
     g = n(481060),
     C = n(37234),
@@ -112,16 +112,16 @@ t.Z = function (e) {
         [ec, ed] = a.useState(!1),
         eu = eo || ec,
         em = (0, Y.o)(t),
-        eh = (0, H.k)(t),
-        ep = (0, h.e7)([x.Z], () => x.Z.useReducedMotion),
+        ep = (0, H.k)(t),
+        eh = (0, p.e7)([x.Z], () => x.Z.useReducedMotion),
         ef = B.ZP.canUseCollectibles(n),
         eg = (0, P.XM)(t, ef, !1),
         eC = a.useMemo(() => (0, P.BH)(t, ef), [t, ef]),
         eb = (0, P.G1)(t),
         ex = (0, P.rN)(t),
         { isPurchased: ev, isPartiallyPurchased: e_ } = (0, F.L)(t),
-        [ek, ej] = (0, h.Wu)([L.Z], () => [L.Z.isClaiming === t.skuId, null != L.Z.isClaiming && L.Z.isClaiming !== t.skuId]),
-        eE = (0, h.e7)([N.Z], () => (0, f.wj)(N.Z.theme)),
+        [ek, ej] = (0, p.Wu)([L.Z], () => [L.Z.isClaiming === t.skuId, null != L.Z.isClaiming && L.Z.isClaiming !== t.skuId]),
+        eE = (0, p.e7)([N.Z], () => (0, f.wj)(N.Z.theme)),
         eS = (0, w.m)('CollectiblesCollectedModal'),
         eI = (0, P.x6)(t) || eS,
         eT = (0, P.Yq)(t.skuId),
@@ -271,7 +271,7 @@ t.Z = function (e) {
         };
     return (0, P.x6)(t) && null != eC && eC.discountPercentage < 0
         ? null
-        : (0, r.jsx)(p.$, {
+        : (0, r.jsx)(h.$, {
               onChange: el,
               threshold: 0,
               children: (0, r.jsx)(g.FocusRing, {
@@ -279,7 +279,7 @@ t.Z = function (e) {
                       innerRef: es,
                       className: s()(eE ? ee.shopCardDark : ee.shopCard, {
                           [ee.partiallyOwned]: e_,
-                          [ee.shopCardAnimation]: !ep && eN !== O.D.NO_MOVEMENT,
+                          [ee.shopCardAnimation]: !eh && eN !== O.D.NO_MOVEMENT,
                           [eE ? ee.shopCardDarkHighlighted : ee.shopCardHighlighted]: eu,
                           [ee.mysteryShopCard]: eB
                       }),
@@ -385,7 +385,7 @@ t.Z = function (e) {
                                   (0, r.jsx)(g.Text, {
                                       variant: 'text-lg/bold',
                                       className: ee.productName,
-                                      children: eh
+                                      children: ep
                                   }),
                                   t.type === m.Z.VARIANTS_GROUP
                                       ? (0, r.jsx)(G.P, {

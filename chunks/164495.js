@@ -3,7 +3,7 @@ n.d(t, {
         return E;
     },
     yD: function () {
-        return _;
+        return h;
     }
 });
 var r = n(200651);
@@ -81,19 +81,19 @@ let x = (e) => {
             children: null != c ? c : v.intl.string(v.t.cfY4PD)
         });
     },
-    h = (e) => {
+    _ = (e) => {
         var t;
         let { quest: n, useReducedMotion: o, isExpanded: i, awaitingConsoleConnections: l, hasMadeProgress: s, isProgressing: d, activeScreen: m, taskDetails: f } = e,
             v = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
             C = (0, u.P)({ location: p.dr.QUESTS_BAR }),
-            h = (0, c.q8)(n);
+            _ = (0, c.q8)(n);
         if (v)
             return (0, r.jsx)(E, {
                 quest: n,
                 useReducedMotion: o,
                 isExpanded: i
             });
-        if (h)
+        if (_)
             return (0, r.jsx)(g, {
                 quest: n,
                 taskDetails: f
@@ -102,7 +102,7 @@ let x = (e) => {
         else if (m !== a.LI.SELECT && !s && !d) return (0, r.jsx)(x, { quest: n });
         return null;
     };
-function _(e) {
+function h(e) {
     return (0, r.jsxs)('div', {
         className: C.ctaButtons,
         children: [
@@ -117,7 +117,7 @@ function _(e) {
                     onClick: e.onBack,
                     children: (0, r.jsx)(l.ChevronSmallLeftIcon, { className: C.backIcon })
                 }),
-            (0, r.jsx)(h, { ...e })
+            (0, r.jsx)(_, { ...e })
         ]
     });
 }

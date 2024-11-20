@@ -14,8 +14,8 @@ var r = n(200651),
     d = n(774078),
     u = n(388032),
     m = n(865030),
-    h = n(781385),
-    p = n(585616);
+    p = n(781385),
+    h = n(585616);
 function f(e) {
     let { endDate: t } = e,
         { days: n, hours: a, minutes: i, seconds: s } = (0, d.Z)(t),
@@ -67,13 +67,13 @@ let g = a.memo(function (e) {
                 }),
             (0, r.jsx)(f, { endDate: t }),
             (0, r.jsx)('img', {
-                src: h.Z,
+                src: p.Z,
                 className: s()(m.sparkles, m.left),
                 alt: '',
                 'aria-hidden': !0
             }),
             (0, r.jsx)('img', {
-                src: p.Z,
+                src: h.Z,
                 className: s()(m.sparkles, m.right),
                 alt: '',
                 'aria-hidden': !0

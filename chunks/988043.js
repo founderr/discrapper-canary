@@ -38,7 +38,7 @@ function C() {
             applied_to_existing_guilds: t
         });
     }
-    let f = (e) => {
+    let I = (e) => {
         (0, g.V)({
             header: T.intl.string(T.t['uUr+GR']),
             body: T.intl.string(T.t.hjGJBg),
@@ -62,7 +62,7 @@ function C() {
                       note: T.intl.string(T.t.wbYDfX),
                       value: !C,
                       onChange: (e) => {
-                          f(!e);
+                          I(!e);
                       }
                   })
                 : (0, i.jsx)(h.Z, {

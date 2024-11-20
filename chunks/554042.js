@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return I;
     }
 }),
     n(47120);
@@ -52,13 +52,13 @@ let _ = [
         value: 'custom'
     }
 ];
-function f() {
+function I() {
     let [e, t] = s.useState(Math.round((window.outerWidth / window.innerWidth) * 100)),
         { platformZoom: n, theme: r } = (0, a.cj)([S.Z, h.Z], () => ({
             theme: S.Z.theme,
             platformZoom: h.Z.zoom
         })),
-        [f, I] = s.useState('upright'),
+        [I, f] = s.useState('upright'),
         N = ['normal', 'medium', 'semibold', 'bold', 'extrabold'],
         A = new Map([
             ['normal', 400],
@@ -93,8 +93,8 @@ function f() {
     return (0, i.jsx)('div', {
         className: E.fullscreen,
         style: {
-            '--playground-font-family': 'mono' === f ? 'gg mono' : 'gg sans',
-            '--playground-font-style': 'italic' === f ? 'italic' : 'normal'
+            '--playground-font-family': 'mono' === I ? 'gg mono' : 'gg sans',
+            '--playground-font-style': 'italic' === I ? 'italic' : 'normal'
         },
         children: (0, i.jsxs)(o.FormSection, {
             tag: o.FormTitleTags.H1,
@@ -183,9 +183,9 @@ function f() {
                                     }
                                 ],
                                 onChange: (e) => {
-                                    I(e.value);
+                                    f(e.value);
                                 },
-                                value: f
+                                value: I
                             })
                         }),
                         (0, i.jsx)(u.Z, {

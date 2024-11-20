@@ -23,13 +23,13 @@ var r = n(200651),
     x = n(566078),
     S = n(164495),
     E = n(472144),
-    h = n(602667),
-    _ = n(644646),
+    _ = n(602667),
+    h = n(644646),
     T = n(604162),
     I = n(747717),
     N = n(963123),
-    j = n(281055),
-    b = n(46140),
+    b = n(281055),
+    j = n(46140),
     D = n(981631),
     A = n(388032),
     y = n(136880);
@@ -70,10 +70,10 @@ function k(e) {
         transitionState: n,
         size: c.ModalSize.DYNAMIC,
         className: y.modalRoot,
-        children: (0, r.jsx)(h.A, {
+        children: (0, r.jsx)(_.A, {
             questOrQuests: p,
             questContent: v.jn.VIDEO_MODAL,
-            minViewTimeSeconds: j.zw,
+            minViewTimeSeconds: b.zw,
             trackGuildAndChannelMetadata: !0,
             children: (e) => {
                 var t, o;
@@ -132,12 +132,12 @@ function k(e) {
                                                         percentComplete: Z,
                                                         percentCompleteText: w ? U : void 0,
                                                         percentCompleteTextVariant: 'text-sm/medium',
-                                                        children: (0, r.jsx)(_.Z, {
+                                                        children: (0, r.jsx)(h.Z, {
                                                             className: y.questProgressRewardTile,
                                                             quest: p,
                                                             questContent: v.jn.VIDEO_MODAL,
                                                             autoplay: !1,
-                                                            location: b.dr.VIDEO_MODAL
+                                                            location: j.dr.VIDEO_MODAL
                                                         })
                                                     })
                                                 })
