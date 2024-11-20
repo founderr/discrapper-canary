@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return y;
+        return j;
     }
 });
 var i = n(200651);
@@ -8,78 +8,67 @@ n(192379);
 var l = n(120356),
     s = n.n(l),
     r = n(442837),
-    o = n(927359),
-    a = n(975298),
-    c = n(769415),
-    u = n(650032),
-    d = n(767870),
-    h = n(104494),
-    m = n(639119),
-    p = n(655525),
-    f = n(52188),
-    b = n(346497),
-    v = n(924540),
-    S = n(474486),
-    x = n(351402),
-    g = n(170671),
-    j = n(474936),
-    N = n(840468);
-let C = 'UserSettingsPremiumLabel';
-function y(e) {
+    o = n(769415),
+    a = n(650032),
+    c = n(104494),
+    u = n(639119),
+    d = n(655525),
+    h = n(52188),
+    m = n(346497),
+    p = n(924540),
+    b = n(474486),
+    f = n(351402),
+    v = n(170671),
+    S = n(474936),
+    x = n(655580);
+let g = 'UserSettingsPremiumLabel';
+function j(e) {
     let t,
-        { decoration: n, label: l, isSelected: y } = e,
-        { fractionalState: T, endsAt: P } = (0, a.Z)({ forceFetch: !0 }),
-        E = (0, m.N)(),
-        I = (0, h.Ng)(),
-        R = (0, b.Vi)(),
-        A = (0, r.e7)([x.Z], () => x.Z.isLocalizedPromoEnabled) && null == E && null == n,
-        { enabled: Z } = u._.useExperiment({ location: C }, { autoTrackExposure: !1 }),
-        O = Z && (null == E ? void 0 : E.trial_id) === j.a7,
-        _ = (null == E ? void 0 : E.trial_id) === j.jz,
-        { enabled: B } = c.Z.getCurrentConfig({ location: C }, { autoTrackExposure: _ });
+        { decoration: n, label: l, isSelected: j } = e,
+        N = (0, u.N)(),
+        C = (0, c.Ng)(),
+        y = (0, m.Vi)(),
+        P = (0, r.e7)([f.Z], () => f.Z.isLocalizedPromoEnabled) && null == N && null == n,
+        { enabled: T } = a._.useExperiment({ location: g }, { autoTrackExposure: !1 }),
+        E = T && (null == N ? void 0 : N.trial_id) === S.a7,
+        I = (null == N ? void 0 : N.trial_id) === S.jz,
+        { enabled: R } = o.Z.getCurrentConfig({ location: g }, { autoTrackExposure: I });
     return (
-        (t =
-            T !== j.a$.NONE
-                ? (0, i.jsx)(d.Z, {
-                      className: '',
-                      endsAt: P,
-                      messageStyle: o.a.SHORT_TIME_LEFT
+        (t = y
+            ? (0, i.jsx)(d.Z, {})
+            : null != C
+              ? (0, i.jsx)(p.GN, {
+                    isTabSelected: j,
+                    userDiscount: C,
+                    includesAmountOff: !1
+                })
+              : I
+                ? (0, i.jsx)(b.dX, {
+                      isSelected: j,
+                      trialOffer: N,
+                      q4MarketingEnabled: R
                   })
-                : R
-                  ? (0, i.jsx)(p.Z, {})
-                  : null != I
-                    ? (0, i.jsx)(v.GN, {
-                          isTabSelected: y,
-                          userDiscount: I,
-                          includesAmountOff: !1
-                      })
-                    : _
-                      ? (0, i.jsx)(S.dX, {
-                            isSelected: y,
-                            trialOffer: E,
-                            q4MarketingEnabled: B
-                        })
-                      : null == E || O
-                        ? null != n
-                            ? n
-                            : A
-                              ? (0, i.jsx)(f.k, { entryPoint: f.U.SettingsMenu })
-                              : (0, i.jsx)(g.Z, { isSelected: y })
-                        : (0, i.jsx)(v.$H, {
-                              isTabSelected: y,
-                              trialOffer: E
-                          })),
+                : null == N || E
+                  ? null != n
+                      ? n
+                      : P
+                        ? (0, i.jsx)(h.k, { entryPoint: h.U.SettingsMenu })
+                        : (0, i.jsx)(v.Z, { isSelected: j })
+                  : (0, i.jsx)(p.$H, {
+                        isTabSelected: j,
+                        trialOffer: N
+                    })),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)('div', {
-                    className: s()(N.premiumLabel, { [N.selected]: (y || A) && !R }),
+                    className: s()(x.premiumLabel, { [x.selected]: (j || P) && !y }),
                     children: [l, t]
                 }),
                 (0, i.jsx)('div', {
-                    className: s()(N.background, {
-                        [N.auPromo]: A && !y,
-                        [N.auPromoSelected]: A && y,
-                        [N.selectedBackground]: !A && !R && y
+                    className: s()(x.background, {
+                        [x.auPromo]: P && !j,
+                        [x.auPromoSelected]: P && j,
+                        [x.selectedBackground]: !P && !y && j
                     })
                 })
             ]
