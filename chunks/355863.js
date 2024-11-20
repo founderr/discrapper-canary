@@ -26,9 +26,9 @@ function E(e, t, n) {
         e
     );
 }
-((o = a || (a = {})).REQUIRED = 'REQUIRED'), (o.OPTIONAL = 'OPTIONAL'), (o.OPTIONAL_DEFAULT = 'OPTIONAL_DEFAULT');
+((o = a || (a = {})).DEBUG = 'DEBUG'), (o.REQUIRED = 'REQUIRED'), (o.OPTIONAL = 'OPTIONAL'), (o.OPTIONAL_DEFAULT = 'OPTIONAL_DEFAULT');
 let v = 'migrated',
-    b = {
+    I = {
         [g.Odu.GUILDS]: {
             minSize: {
                 width: 312,
@@ -266,9 +266,33 @@ let v = 'migrated',
                 pinned: !1
             },
             version: 1
+        },
+        [g.Odu.CLICK_ZONE_DEBUG]: {
+            minSize: {
+                width: 50,
+                height: 50
+            },
+            resizeX: !0,
+            resizeY: !0,
+            dragAnywhere: !0,
+            layoutPolicy: 'DEBUG',
+            defaultSettings: {
+                anchor: {
+                    left: void 0,
+                    top: 0.35,
+                    bottom: void 0,
+                    right: 0.35
+                },
+                size: {
+                    height: 'auto',
+                    width: 'auto'
+                },
+                pinned: !0
+            },
+            version: 1
         }
     };
-function I(e, t) {
+function b(e, t) {
     let n = i[e];
     if (null == n) return !1;
     let a = r[n.layoutId];
@@ -276,7 +300,7 @@ function I(e, t) {
 }
 function T(e) {
     var t;
-    return null === (t = b[e]) || void 0 === t ? void 0 : t.defaultSettings;
+    return null === (t = I[e]) || void 0 === t ? void 0 : t.defaultSettings;
 }
 class S extends (s = d.ZP.PersistedStore) {
     initialize(e) {
@@ -302,7 +326,7 @@ class S extends (s = d.ZP.PersistedStore) {
             : ((r = {}), (i = {}));
         let t = !1,
             n = [];
-        u().forEach(b, (e, t) => {
+        u().forEach(I, (e, t) => {
             'REQUIRED' === e.layoutPolicy && n.push(t);
         }),
             u().forEach(r, (e, a) => {
@@ -310,7 +334,7 @@ class S extends (s = d.ZP.PersistedStore) {
                     o = !1;
                 for (let r of n) {
                     let n = s.find((e) => e.type === r);
-                    if (null != n || b[r].version !== e.version) continue;
+                    if (null != n || I[r].version !== e.version) continue;
                     o = t = !0;
                     let l = (0, c.Z)();
                     (n = new h.Z({
@@ -373,7 +397,7 @@ class S extends (s = d.ZP.PersistedStore) {
               }, []);
     }
     getWidgetConfig(e) {
-        return b[e];
+        return I[e];
     }
     getWidgetDefaultSettings(e) {
         return T(e);
@@ -383,7 +407,7 @@ class S extends (s = d.ZP.PersistedStore) {
         return null != t ? t.type : '';
     }
     getRegisteredWidgets() {
-        return b;
+        return I;
     }
     getDefaultLayout(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
@@ -568,7 +592,7 @@ E(S, 'displayName', 'LayoutStore'),
         },
         LAYOUT_SET_PINNED: function (e) {
             let { widgetId: t } = e;
-            return I(t, (e, t) => {
+            return b(t, (e, t) => {
                 (function (e) {
                     i = {
                         ...i,
@@ -579,7 +603,7 @@ E(S, 'displayName', 'LayoutStore'),
         },
         LAYOUT_UPDATE_WIDGET: function (e) {
             let { widgetId: t, anchor: n, size: r, opacity: a } = e;
-            return I(t, (e, t) =>
+            return b(t, (e, t) =>
                 (function (e, t, n, r) {
                     i = {
                         ...i,
@@ -594,7 +618,7 @@ E(S, 'displayName', 'LayoutStore'),
         },
         LAYOUT_SET_TOP_WIDGET: function (e) {
             let { widgetId: t } = e;
-            return I(t, (e, t) =>
+            return b(t, (e, t) =>
                 (function (e, t) {
                     let n = (function (e) {
                         let t = [];
@@ -670,7 +694,7 @@ E(S, 'displayName', 'LayoutStore'),
         },
         LAYOUT_SET_WIDGET_META: function (e) {
             let { widgetId: t, meta: n } = e;
-            return I(t, (e, t) => {
+            return b(t, (e, t) => {
                 (function (e, t) {
                     i = {
                         ...i,

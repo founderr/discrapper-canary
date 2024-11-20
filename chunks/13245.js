@@ -41,6 +41,12 @@ let _ = {
             pid: t
         });
     },
+    setClickZoneDebugMode(e) {
+        i.Z.dispatch({
+            type: 'OVERLAY_CLICK_ZONE_DEBUG_MODE',
+            enabled: e
+        });
+    },
     setInstanceLocked(e) {
         if (!__OVERLAY__) throw Error('OverlayActionCreators.setInstanceLocked: Must be called within Overlay context');
         _.setInputLocked(e, (0, c.QF)());
