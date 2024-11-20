@@ -72,8 +72,14 @@ n.default = (0, d.Z)(
                 }),
                 q = (0, a.Z)(null, n),
                 J = (0, f.Z)(n),
-                Y = (0, M.Z)({ user: n }),
-                X = (0, h.Z)({ user: n }),
+                Y = (0, M.Z)({
+                    user: n,
+                    guildId: t
+                }),
+                X = (0, h.Z)({
+                    user: n,
+                    guildId: t
+                }),
                 K = (0, x.Z)(n, t),
                 z = (0, U.Z)(n.id, t),
                 Q = (0, j.Z)(n, t),

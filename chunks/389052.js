@@ -1,40 +1,36 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return _;
     }
 }),
     n(627341);
 var r = n(200651);
 n(192379);
 var i = n(278074),
-    a = n(990547),
-    s = n(442837),
-    o = n(481060),
-    l = n(194359),
-    u = n(843931),
-    c = n(1596),
-    d = n(922611),
-    f = n(699516),
-    _ = n(594174),
-    p = n(626135),
-    h = n(981631),
-    m = n(388032);
-function g(e) {
-    let { user: t, color: n, onBlock: g, onUnblock: E, location: v = 'ContextMenu' } = e,
-        { id: b } = t,
-        I = (0, s.e7)(
-            [_.default],
+    a = n(442837),
+    s = n(481060),
+    o = n(194359),
+    l = n(922611),
+    u = n(478923),
+    c = n(699516),
+    d = n(594174),
+    f = n(388032);
+function _(e) {
+    let { user: t, color: n, guildId: _, channelId: p, onBlock: h, onIgnore: m, onUnblock: g, location: E = 'ContextMenu' } = e,
+        { id: v } = t,
+        I = (0, a.e7)(
+            [d.default],
             () => {
                 var e;
-                return (null === (e = _.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === b;
+                return (null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === v;
             },
-            [b]
+            [v]
         ),
-        T = (0, s.e7)([f.Z], () => f.Z.isBlocked(b), [b]),
-        S = (0, d.Do)({ location: 'use-block-user-item-web' }),
-        y = (0, i.EQ)({
-            isStealthRemediationEnabled: S,
-            isBlocked: T
+        b = (0, a.e7)([c.Z], () => c.Z.isBlocked(v), [v]),
+        T = (0, l.Do)({ location: 'use-block-user-item-web' }),
+        S = (0, i.EQ)({
+            isStealthRemediationEnabled: T,
+            isBlocked: b
         })
             .with(
                 {
@@ -53,37 +49,24 @@ function g(e) {
             .otherwise(() => n);
     return I
         ? null
-        : (0, r.jsx)(o.MenuItem, {
+        : (0, r.jsx)(s.MenuItem, {
               id: 'block',
-              color: null != y ? y : 'default',
-              label: T ? m.intl.string(m.t.XyHpKC) : m.intl.string(m.t.l4EmaW),
-              action: T
+              color: null != S ? S : 'default',
+              label: b ? f.intl.string(f.t.XyHpKC) : f.intl.string(f.t.l4EmaW),
+              action: b
                   ? () => {
-                        null == E || E(), l.Z.unblockUser(b, { location: v });
+                        null == g || g(), o.Z.unblockUser(v, { location: E });
                     }
                   : () => {
-                        (0, o.openModal)((e) =>
-                            (0, r.jsx)(o.ConfirmModal, {
-                                header: m.intl.formatToPlainString(m.t.x5pOn5, { name: t.username }),
-                                confirmText: m.intl.string(m.t.l4EmaW),
-                                cancelText: m.intl.string(m.t['eN6+rK']),
-                                onConfirm: () => {
-                                    null == g || g(),
-                                        l.Z.addRelationship({
-                                            userId: b,
-                                            context: { location: v },
-                                            type: h.OGo.BLOCKED
-                                        }),
-                                        p.default.track(h.rMx.BLOCK_USER_CONFIRMED);
-                                },
-                                impression: { impressionName: a.ImpressionNames.BLOCK_USER_CONFIRMATION },
+                        (0, s.openModal)((e) =>
+                            (0, r.jsx)(u.Z, {
                                 ...e,
-                                children: (0, u.cC)({ location: 'confirm_block_modal' })
-                                    ? (0, r.jsx)(c.Z, {})
-                                    : (0, r.jsx)(o.Text, {
-                                          variant: 'text-md/normal',
-                                          children: m.intl.format(m.t.pegItL, { name: t.username })
-                                      })
+                                user: t,
+                                guildId: _,
+                                channelId: p,
+                                onBlock: h,
+                                onIgnore: m,
+                                location: E
                             })
                         );
                     }

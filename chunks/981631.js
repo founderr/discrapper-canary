@@ -5049,6 +5049,7 @@ let oa = Object.freeze({
     (nh.USER_VOICE_ACTIVITY_VIEWED = 'user_voice_activity_viewed'),
     (nh.PARTY_VOICE_ACTIVITY_VIEWED = 'party_voice_activity_viewed'),
     (nh.BLOCK_USER_CONFIRMED = 'block_user_confirmed'),
+    (nh.IGNORE_USER_CONFIRMED = 'ignore_user_confirmed'),
     ((nS = eX || (eX = {})).CANARY = 'canary'),
     (nS.PTB = 'ptb'),
     (nS.STABLE = 'stable'),

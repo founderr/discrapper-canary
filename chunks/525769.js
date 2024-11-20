@@ -137,6 +137,7 @@ n.d(t, {
     (a.ICYMI_ONBOARDING_OVERVIEW = 'impression_icymi_onboarding_overview'),
     (a.ICYMI_ONBOARDING_SELECT_GUILDS = 'impression_icymi_onboarding_select_guilds'),
     (a.ICYMI_ONBOARDING_TOPICS = 'impression_icymi_onboarding_topics'),
+    (a.IGNORE_USER_CONFIRMATION = 'impression_ignore_user_confirmation'),
     (a.INVITE_ACCEPT = 'impression_invite_accept'),
     (a.LOCALIZED_PRICING_UPSELL_VIEWED = 'impression_localized_pricing_upsell_viewed'),
     (a.MESSAGES_EMPTY_NUX = 'impression_messages_empty_nux'),

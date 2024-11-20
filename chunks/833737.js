@@ -64,11 +64,15 @@ t.default = (0, c.Z)(
                 }),
                 B = (0, N.Z)({
                     user: e,
-                    location: P
+                    guildId: o,
+                    location: P,
+                    channelId: c
                 }),
                 q = (0, T.Z)({
                     user: e,
-                    location: P
+                    guildId: o,
+                    location: P,
+                    channelId: c
                 }),
                 V = (0, O.Z)(e, o, null != c ? c : w, P),
                 H = (0, p.Z)(c, R),
