@@ -18384,7 +18384,8 @@ span.clanTag_a31c43 {
     gap: 4px;
     align-items: center;
     overflow: hidden;
-    flex-shrink: 0
+    flex-shrink: 0;
+    max-width: 100%
 }
 
 .badgeContainer_d60c6d svg {
