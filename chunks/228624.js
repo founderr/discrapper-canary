@@ -1,9 +1,12 @@
 n.d(t, {
-    e: function () {
-        return l;
+    ed: function () {
+        return u;
     },
-    h: function () {
+    hv: function () {
         return o;
+    },
+    oj: function () {
+        return l;
     }
 });
 var r = n(311570),
@@ -24,4 +27,5 @@ let s = (0, i.B)({
         commonTriggerPoint: a.$P.COLLECTIBLES_SHOP_OPEN
     }),
     o = (e) => s.useExperiment({ location: e }).variantsReturnStyle,
-    l = (e) => o(e) === r.v.VARIANTS_GROUP;
+    l = (e) => s.getCurrentConfig({ location: e }).variantsReturnStyle,
+    u = (e) => o(e) === r.v.VARIANTS_GROUP;

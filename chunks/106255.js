@@ -1,21 +1,21 @@
 n.d(t, {
     C3: function () {
-        return p;
+        return h;
     },
     Cl: function () {
-        return _;
+        return p;
     },
     GT: function () {
-        return g;
+        return E;
     },
     MR: function () {
-        return f;
+        return _;
     },
     Wb: function () {
-        return m;
+        return g;
     },
     Xs: function () {
-        return E;
+        return v;
     },
     YE: function () {
         return c;
@@ -24,10 +24,13 @@ n.d(t, {
         return u;
     },
     kG: function () {
+        return f;
+    },
+    km: function () {
         return d;
     },
     u7: function () {
-        return h;
+        return m;
     }
 }),
     n(580130);
@@ -44,22 +47,25 @@ function c(e) {
     return e.type === o.qc2.PREMIUM_PURCHASE && s.uv.has(e.skuId) && e.applicationId === a.CL && e.isValid(null, r.Z);
 }
 function d(e) {
+    return e.type === o.qc2.FREE_PURCHASE && e.skuId === s.qY && e.applicationId === o.XAJ && e.isValid(null, r.Z);
+}
+function f(e) {
     if (null != e) return Array.from(e).find((e) => u(e));
 }
-function f(e, t) {
+function _(e, t) {
     if (null != t) return Array.from(t).find((t) => t.type === o.qc2.PREMIUM_PURCHASE && e.includes(t.skuId) && t.applicationId === a.CL && t.isValid(null, r.Z));
 }
-function _(e, t) {
+function p(e, t) {
     if (null != t) return Array.from(t).find((t) => t.type === o.qc2.FREE_PURCHASE && t.skuId === e && t.applicationId === o.XAJ && t.isValid(null, r.Z));
 }
-function p(e, t) {
+function h(e, t) {
     var n;
     return null != t && (null === (n = t.avatarDecoration) || void 0 === n ? void 0 : n.skuId) === e;
 }
-function h(e) {
+function m(e) {
     return null != e.redeemable_at && null != e.next_tenure_reward_id;
 }
-function m(e) {
+function g(e) {
     switch (e) {
         case s.EB.PENDING:
             return l.intl.string(l.t.jyYgZ2);
@@ -70,10 +76,10 @@ function m(e) {
             return null;
     }
 }
-function g() {
+function E() {
     var e, t;
     return null !== (t = null !== (e = i.Z.getTenureRewardStatusForRewardId(s.Ft.FREE_AVATAR_DECO_1_MONTH)) && void 0 !== e ? e : i.Z.getTenureRewardStatusForRewardId(s.Ft.FREE_GUILD_BOOST_1_MONTH)) && void 0 !== t ? t : i.Z.getTenureRewardStatusForRewardId(s.Ft.FREE_GUILD_BOOST_3_MONTHS);
 }
-function E(e) {
+function v(e) {
     return e === s.Ft.FREE_AVATAR_DECO_1_MONTH ? s.nW.AVATAR_DECO : e === s.Ft.FREE_GUILD_BOOST_1_MONTH || e === s.Ft.FREE_GUILD_BOOST_3_MONTHS ? s.nW.SERVER_BOOST : void 0;
 }

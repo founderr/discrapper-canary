@@ -3,66 +3,69 @@ var r = n(913527),
     i = n.n(r),
     a = n(570140),
     s = n(147913),
-    o = n(959546),
-    l = n(594174),
-    u = n(580130),
-    c = n(111361),
-    d = n(470918),
-    f = n(595878),
-    _ = n(513785),
-    p = n(106255),
-    h = n(474936),
-    m = n(735825);
-let g = null,
-    E = !1;
-function v(e) {
-    let t = o.Z.createFromServer(e.entitlement);
-    (0, p._k)(t)
-        ? b({ forceRefresh: !0 })
-        : (0, p.YE)(t) &&
-          null != _.Z.getTenureRewardStatusForRewardId(t.skuId) &&
-          a.Z.dispatch({
-              type: 'USER_TENURE_REWARD_STATUS_DELETE',
-              tenureRewardIds: [t.skuId]
-          });
+    o = n(335131),
+    l = n(228624),
+    u = n(959546),
+    c = n(594174),
+    d = n(580130),
+    f = n(111361),
+    _ = n(470918),
+    p = n(595878),
+    h = n(513785),
+    m = n(106255),
+    g = n(474936),
+    E = n(735825);
+let v = null,
+    b = !1;
+function I(e) {
+    let t = u.Z.createFromServer(e.entitlement);
+    (0, m._k)(t)
+        ? T({ forceRefresh: !0 })
+        : (0, m.YE)(t)
+          ? null != h.Z.getTenureRewardStatusForRewardId(t.skuId) &&
+            a.Z.dispatch({
+                type: 'USER_TENURE_REWARD_STATUS_DELETE',
+                tenureRewardIds: [t.skuId]
+            })
+          : (0, m.km)(t) && (0, o.qg)({ variantsReturnStyle: (0, l.oj)('TenureRewardManager') });
 }
-function b() {
+function T() {
     let { forceRefresh: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    T();
-    let t = u.Z.getForApplication(h.CL),
-        n = (0, p.kG)(t),
-        r = (0, p.MR)(Array.from(m.uv), t),
-        s = l.default.getCurrentUser();
-    if (!(0, c.M5)(s, h.p9.TIER_2) && null == n) {
+    y();
+    let t = d.Z.getForApplication(g.CL),
+        n = (0, m.kG)(t),
+        r = (0, m.MR)(Array.from(E.uv), t),
+        s = c.default.getCurrentUser();
+    if (!(0, f.M5)(s, g.p9.TIER_2) && null == n) {
         null != s && a.Z.dispatch({ type: 'USER_TENURE_REWARD_STATUS_RESET' });
         return;
     }
-    if (!!(0, f.dR)({ location: 'tenure_reward_manager' }))
+    if (!!(0, p.dR)({ location: 'tenure_reward_manager' }))
         if (
             (!0 === e ||
                 (function (e) {
-                    if (_.Z.getFetchState() !== _.M.FETCHED) return !0;
-                    let t = (0, p.GT)();
+                    if (h.Z.getFetchState() !== h.M.FETCHED) return !0;
+                    let t = (0, m.GT)();
                     return (
                         (null != t && null != e && e.id !== t.user_id) ||
                         (function () {
-                            let e = _.Z.getState();
+                            let e = h.Z.getState();
                             return null != e.lastFetchTimeMs && Date.now() - e.lastFetchTimeMs > 1209600000;
                         })() ||
                         (function () {
-                            let e = (0, p.GT)();
+                            let e = (0, m.GT)();
                             return null != e && null != e.redeemable_at && 0 >= i()(e.redeemable_at).diff(i().utc(), 'seconds');
                         })()
                     );
                 })(s)) &&
             null == r
         )
-            I();
+            S();
         else {
-            let e = u.Z.getForApplication(h.CL);
+            let e = d.Z.getForApplication(g.CL);
             if (null == e) return;
             let t = Array.from(e)
-                .filter((e) => null != _.Z.getTenureRewardStatusForRewardId(e.skuId))
+                .filter((e) => null != h.Z.getTenureRewardStatusForRewardId(e.skuId))
                 .map((e) => e.skuId);
             t.length > 0 &&
                 a.Z.dispatch({
@@ -71,34 +74,34 @@ function b() {
                 });
         }
 }
-async function I() {
-    if (!E)
-        (E = !0),
-            await d.V(),
-            (E = !1),
+async function S() {
+    if (!b)
+        (b = !0),
+            await _.V(),
+            (b = !1),
             a.Z.wait(() =>
                 (function () {
-                    if ((T(), _.Z.getFetchState() !== _.M.FETCHED || E)) return;
-                    let e = (0, p.GT)();
+                    if ((y(), h.Z.getFetchState() !== h.M.FETCHED || b)) return;
+                    let e = (0, m.GT)();
                     if ((null == e ? void 0 : e.redeemable_at) == null) return;
                     let t = (null == e ? void 0 : e.redeemable_at) != null ? new Date(e.redeemable_at).getTime() - Date.now() : null;
-                    null != t && t > 0 && (g = setTimeout(b, t));
+                    null != t && t > 0 && (v = setTimeout(T, t));
                 })()
             );
 }
-function T() {
-    clearTimeout(g), (g = null);
+function y() {
+    clearTimeout(v), (v = null);
 }
-function S() {
+function A() {
+    y();
+}
+function N() {
     T();
 }
-function y() {
-    b();
-}
-class A extends s.Z {
+class C extends s.Z {
     forceRefreshIfOutdated() {
-        let e = _.Z.getState();
-        null != e.lastFetchTimeMs && Date.now() - e.lastFetchTimeMs > 86400000 && b({ forceRefresh: !0 });
+        let e = h.Z.getState();
+        null != e.lastFetchTimeMs && Date.now() - e.lastFetchTimeMs > 86400000 && T({ forceRefresh: !0 });
     }
     constructor(...e) {
         var t, n, r;
@@ -106,13 +109,13 @@ class A extends s.Z {
             (t = this),
             (n = 'actions'),
             (r = {
-                POST_CONNECTION_OPEN: y,
-                CONNECTION_CLOSED: S,
-                ENTITLEMENT_FETCH_APPLICATION_SUCCESS: () => b(),
-                ENTITLEMENT_CREATE: v,
-                ENTITLEMENT_UPDATE: () => b(),
-                ENTITLEMENT_DELETE: () => b(),
-                LOGOUT: T
+                POST_CONNECTION_OPEN: N,
+                CONNECTION_CLOSED: A,
+                ENTITLEMENT_FETCH_APPLICATION_SUCCESS: () => T(),
+                ENTITLEMENT_CREATE: I,
+                ENTITLEMENT_UPDATE: () => T(),
+                ENTITLEMENT_DELETE: () => T(),
+                LOGOUT: y
             }),
             n in t
                 ? Object.defineProperty(t, n, {
@@ -124,4 +127,4 @@ class A extends s.Z {
                 : (t[n] = r);
     }
 }
-t.Z = new A();
+t.Z = new C();
