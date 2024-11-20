@@ -1,64 +1,68 @@
 t.d(n, {
     Z: function () {
-        return f;
+        return h;
     }
 });
 var i = t(200651),
-    a = t(192379),
-    r = t(442837),
-    o = t(481060),
-    l = t(110924),
-    c = t(812206),
-    d = t(788983),
-    u = t(317381),
-    s = t(781780),
+    o = t(192379),
+    a = t(442837),
+    r = t(481060),
+    c = t(110924),
+    l = t(812206),
+    d = t(554370),
+    s = t(788983),
+    u = t(214629),
+    _ = t(317381),
+    f = t(781780),
     p = t(325749),
     v = t(981631),
-    m = t(965988);
-function f() {
+    b = t(466127);
+function h() {
     var e;
-    let { embeddedActivity: n, channelId: t } = (0, r.cj)([u.ZP], () => {
-            let e = u.ZP.getCurrentEmbeddedActivity(),
+    let { embeddedActivity: n, channelId: t } = (0, a.cj)([_.ZP], () => {
+            let e = _.ZP.getCurrentEmbeddedActivity(),
                 n = null == e ? void 0 : e.channelId;
             return {
                 embeddedActivity: e,
                 channelId: n
             };
         }),
-        f = (0, l.Z)(n);
-    a.useEffect(() => {
-        null != f && null == n && (0, d.xv)(v.KJ3.ACTIVITY_POPOUT);
-    }, [n, f]);
-    let h = (0, r.e7)([c.Z], () => {
-        let e = null == n ? void 0 : n.applicationId;
-        return null == e ? void 0 : c.Z.getApplication(e);
-    });
+        h = (0, c.Z)(n);
+    o.useEffect(() => {
+        null != h && null == n && (0, s.xv)(v.KJ3.ACTIVITY_POPOUT);
+    }, [n, h]);
+    let m = (0, a.e7)([l.Z], () => {
+            let e = null == n ? void 0 : n.applicationId;
+            return null == e ? void 0 : l.Z.getApplication(e);
+        }),
+        C = (0, u.PR)();
     return (0, i.jsx)('div', {
-        className: m.container,
+        className: b.container,
         children:
-            null == n || null == h || null == t
-                ? (0, i.jsx)(o.Spinner, { className: m.iframe })
+            null == n || null == m || null == t
+                ? (0, i.jsx)(r.Spinner, { className: b.iframe })
                 : (0, i.jsx)('div', {
-                      className: m.loadedContentContainer,
+                      className: b.loadedContentContainer,
                       children: (0, i.jsxs)('div', {
-                          className: m.iframeAndHeaderContainer,
+                          className: b.iframeAndHeaderContainer,
                           children: [
                               (0, i.jsx)('div', {
-                                  className: m.headerContainer,
+                                  className: b.headerContainer,
                                   children: (0, i.jsx)(p.Z, {
-                                      applicationId: h.id,
+                                      applicationId: m.id,
                                       channelId: t
                                   })
                               }),
                               (0, i.jsx)('div', {
-                                  className: m.iframeContainer,
-                                  children: (0, i.jsx)(s.Z, {
+                                  className: b.iframeContainer,
+                                  children: (0, i.jsx)(f.Z, {
                                       channelId: t,
                                       guildId: null !== (e = n.guildId) && void 0 !== e ? e : void 0,
                                       embeddedActivity: n,
-                                      application: h
+                                      application: m
                                   })
-                              })
+                              }),
+                              C ? (0, i.jsx)(d.Z, { isEmbeddedActivity: !0 }) : null
                           ]
                       })
                   })

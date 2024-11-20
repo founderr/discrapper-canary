@@ -1,30 +1,32 @@
 n.d(t, {
     f: function () {
-        return f;
+        return p;
     },
     y: function () {
-        return h;
+        return f;
     }
 });
 var i = n(200651);
 n(192379);
 var l = n(481060),
+    o = n(522474),
     r = n(556296),
-    o = n(13140),
+    s = n(13140),
     a = n(44359),
-    s = n(620954),
-    u = n(987650),
+    u = n(620954),
+    d = n(987650),
     c = n(981631),
-    d = n(388032);
-function h() {
-    let { trackView: e, trackClick: t } = (0, s.R)(u.n0.ClipsReminderNotification, { notif_type: u.n0.ClipsReminderNotification }),
+    h = n(388032);
+function f() {
+    if (o.Z.getWindowOpen(c.KJ3.ACTIVITY_POPOUT)) return null;
+    let { trackView: e, trackClick: t } = (0, u.R)(d.n0.ClipsReminderNotification, { notif_type: d.n0.ClipsReminderNotification }),
         n = r.Z.getKeybindForAction(c.kg4.SAVE_CLIP);
     if (null == n) return null;
-    let h = o.BB(n.shortcut, !0);
+    let f = s.BB(n.shortcut, !0);
     return {
-        title: d.intl.format(d.t.S5uhCA, {
-            keybind: h,
-            keybindHook: (e, t) => (0, i.jsx)(a.Z, { keybind: h.split('+') }, t)
+        title: h.intl.format(h.t.S5uhCA, {
+            keybind: f,
+            keybindHook: (e, t) => (0, i.jsx)(a.Z, { keybind: f.split('+') }, t)
         }),
         icon: (0, i.jsx)(l.ClipsIcon, {
             size: 'lg',
@@ -38,8 +40,8 @@ function h() {
         }
     };
 }
-function f(e) {
-    let { trackView: t, trackClick: n } = (0, s.R)(u.n0.ClipsNotification, { notif_type: u.n0.ClipsNotification });
+function p(e) {
+    let { trackView: t, trackClick: n } = (0, u.R)(d.n0.ClipsNotification, { notif_type: d.n0.ClipsNotification });
     return {
         title: e,
         icon: (0, i.jsx)(l.ClipsIcon, {

@@ -1,19 +1,23 @@
 n.d(t, {
     Z: function () {
-        return a;
+        return u;
     },
     i: function () {
-        return o;
+        return a;
     }
 });
 var i = n(442837),
-    l = n(928518),
-    r = n(501787);
-function o() {
-    var e;
-    let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l.Z;
-    return null !== (e = t.getWindow(r.$J)) && void 0 !== e ? e : window;
-}
+    l = n(214629),
+    o = n(928518),
+    r = n(501787),
+    s = n(981631);
 function a() {
-    return (0, i.e7)([l.Z], () => o(l.Z));
+    var e, t;
+    let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : o.Z,
+        i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : (0, l.e1)();
+    return null !== (t = null !== (e = n.getWindow(r.OVERLAY_V3_KEY)) && void 0 !== e ? e : i ? n.getWindow(s.KJ3.ACTIVITY_POPOUT) : void 0) && void 0 !== t ? t : window;
+}
+function u() {
+    let e = (0, l.PR)();
+    return (0, i.e7)([o.Z], () => a(o.Z, e));
 }
