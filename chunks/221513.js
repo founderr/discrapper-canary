@@ -8,12 +8,13 @@ var r = n(567198),
     i = n.n(r),
     a = n(231338);
 let s = function (e, t, n) {
-        let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-            { convertToMajorUnits: i = !0, ...a } = r;
+        let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+        if (t === a.pK.DISCORD_ORB) return e.toString();
+        let { convertToMajorUnits: i = !0, ...s } = r;
         return Intl.NumberFormat(n, {
             style: 'currency',
             currency: t,
-            ...a
+            ...s
         }).format(i ? l(e, t) : e);
     },
     o = {
@@ -198,7 +199,8 @@ let s = function (e, t, n) {
         [a.pK.YER]: 2,
         [a.pK.ZAR]: 2,
         [a.pK.ZMW]: 2,
-        [a.pK.ZWL]: 2
+        [a.pK.ZWL]: 2,
+        [a.pK.DISCORD_ORB]: 0
     },
     l = (e, t) => {
         let n = o[t];
