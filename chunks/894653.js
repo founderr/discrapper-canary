@@ -13,6 +13,9 @@ class d extends (s = o.ZP.Store) {
     getCategories() {
         return u;
     }
+    getCategory(e) {
+        return u.find((t) => t.id === e);
+    }
 }
 (a = 'ApplicationDirectoryCategoriesStore'),
     (i = 'displayName') in (r = d)
