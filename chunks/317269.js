@@ -28,8 +28,8 @@ var r = n(200651),
     h = n(474936),
     I = n(981631),
     T = n(388032),
-    b = n(359459);
-function N(t) {
+    N = n(359459);
+function b(t) {
     var e, n;
     let o,
         { planId: i, startingPremiumSubscriptionPlanId: s, paymentSourceType: u } = t,
@@ -75,7 +75,7 @@ function N(t) {
                 throw Error('Unexpected skuId: '.concat(d.skuId));
         }
     return (0, r.jsx)('div', {
-        className: b.text,
+        className: N.text,
         children: o
     });
 }
@@ -97,11 +97,11 @@ function g(t) {
     };
     if (null != v)
         e = (0, r.jsx)('div', {
-            className: b.text,
+            className: N.text,
             children: T.intl.format(T.t.tsQOs7, { skuName: v.name })
         });
     else if (null != d)
-        e = (0, r.jsx)(N, {
+        e = (0, r.jsx)(b, {
             planId: i,
             startingPremiumSubscriptionPlanId: d
         });
@@ -111,11 +111,11 @@ function g(t) {
             (e = (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)('div', {
-                        className: b.text,
+                        className: N.text,
                         children: S(t)
                     }),
                     (0, r.jsx)('div', {
-                        className: b.text,
+                        className: N.text,
                         children: T.intl.format(T.t['6aZ0NT'], { guildName: M.name })
                     })
                 ]
@@ -124,7 +124,7 @@ function g(t) {
         let t = m.Z.get(i);
         a()(null != t, 'Missing plan'),
             (e = (0, r.jsx)('div', {
-                className: b.text,
+                className: N.text,
                 children: S(t)
             }));
     }
@@ -133,10 +133,10 @@ function g(t) {
         a()(null != R, 'premium type should not be null in purchase confirmation'),
         (n = null != v ? T.intl.formatToPlainString(T.t['1qGgm5'], { skuName: v.name }) : E ? T.intl.string(T.t.QJ9EyM) : null != M ? T.intl.string(T.t.ta3cXV) : T.intl.string(T.t.TkTvBw)),
         (0, r.jsxs)('div', {
-            className: b.confirmation,
+            className: N.confirmation,
             children: [
                 (0, r.jsx)(p.C, {
-                    className: b.banner,
+                    className: N.banner,
                     theme: P,
                     premiumType: R,
                     type: I.X7u.has(null != y ? y : I.HeQ.UNKNOWN) ? p.C.Types.PREMIUM_PAYMENT_STARTED : null != d ? p.C.Types.PREMIUM_UPDATED : p.C.Types.PREMIUM_ACTIVATED
@@ -172,14 +172,14 @@ function E(t) {
 }
 function x() {
     return (0, r.jsxs)('div', {
-        className: b.redirectConfirmation,
+        className: N.redirectConfirmation,
         children: [
             (0, r.jsx)(s.Heading, {
                 variant: 'heading-xl/bold',
                 children: T.intl.string(T.t.Xtf9wM)
             }),
             (0, r.jsxs)('div', {
-                className: b.redirectBody,
+                className: N.redirectBody,
                 children: [
                     (0, r.jsx)(s.Text, {
                         variant: 'text-md/normal',

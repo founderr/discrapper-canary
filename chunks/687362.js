@@ -41,7 +41,7 @@ function g() {
             subtitle: (0, s.oo)(e.nitroTenureStatus),
             description: (0, s.Gw)(e.nitroTenureStatus),
             ctaDescription: (0, s.iG)(e.nitroTenureStatus, e.redeemableInDays),
-            pillText: e.nitroTenureStatus === c.EB.PENDING ? d.intl.string(d.t.jyYgZ2).toLocaleUpperCase() : void 0,
+            pillText: e.nitroTenureStatus === c.EB.PENDING || e.nitroTenureStatus === c.EB.REDEEMABLE ? d.intl.string(d.t.jyYgZ2).toLocaleUpperCase() : void 0,
             dismissibleContentType: e.nitroTenureStatus === c.EB.REDEEMABLE ? i.z.TENURE_REWARD_REDEEMABLE_CONFETTI : void 0
         };
 }

@@ -27,5 +27,5 @@ let s = (0, i.B)({
         commonTriggerPoint: a.$P.COLLECTIBLES_SHOP_OPEN
     }),
     o = (e) => s.useExperiment({ location: e }).variantsReturnStyle,
-    l = (e) => s.getCurrentConfig({ location: e }).variantsReturnStyle,
+    l = (e) => s.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).variantsReturnStyle,
     u = (e) => o(e) === r.v.VARIANTS_GROUP;

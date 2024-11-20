@@ -1,6 +1,6 @@
 n.d(t, {
     P: function () {
-        return p;
+        return h;
     }
 });
 var r = n(200651),
@@ -14,8 +14,8 @@ var r = n(200651),
     u = n(724806);
 let m = (e) => {
         let { variantGroupProduct: t, variant: n, variantIndex: i, selectedVariantIndex: d, minimal: m } = e,
-            { isPurchased: p } = (0, c.L)(n),
-            h = a.useCallback(() => {
+            { isPurchased: h } = (0, c.L)(n),
+            p = a.useCallback(() => {
                 (0, o.tg)(t, i);
             }, [t, i]),
             f = a.useCallback(() => {
@@ -29,7 +29,7 @@ let m = (e) => {
             );
         return (0, r.jsxs)(l.Clickable, {
             tag: 'li',
-            onMouseEnter: h,
+            onMouseEnter: p,
             onMouseLeave: f,
             onClick: g,
             className: s()(u.colorVariant, { [u.selectedVariant]: i === d }),
@@ -38,13 +38,13 @@ let m = (e) => {
                     className: s()(u.colorSwatch, { [u.mask]: m && 0 !== i }),
                     style: { backgroundColor: n.variantValue }
                 }),
-                !m && p ? (0, r.jsx)('span', { className: u.purchasedIndicator }) : null
+                !m && h ? (0, r.jsx)('span', { className: u.purchasedIndicator }) : null
             ]
         });
     },
-    p = (e) => {
+    h = (e) => {
         var t, n, i;
-        let { variantGroupProduct: c, className: p, minimal: h } = e,
+        let { variantGroupProduct: c, className: h, minimal: p } = e,
             f = (0, o.o0)(c),
             g = (0, o.ff)(c),
             C = null === (t = c.variants) || void 0 === t ? void 0 : t[f],
@@ -58,7 +58,7 @@ let m = (e) => {
         if (null == C) return null;
         let _ = null != b ? b.variantLabel : null == C ? void 0 : C.variantLabel;
         return (0, r.jsxs)('div', {
-            className: s()(u.variantsPanel, p, { [u.minimalState]: h }),
+            className: s()(u.variantsPanel, h, { [u.minimalState]: p }),
             onMouseEnter: x,
             onMouseLeave: v,
             children: [
@@ -75,7 +75,7 @@ let m = (e) => {
                                           variant: e,
                                           variantIndex: t,
                                           selectedVariantIndex: f,
-                                          minimal: h
+                                          minimal: p
                                       },
                                       t
                                   )
@@ -85,7 +85,7 @@ let m = (e) => {
                     variant: 'text-xs/medium',
                     color: 'text-secondary',
                     className: u.variantLabel,
-                    children: h ? d.intl.string(d.t.wbgaj4) : _
+                    children: p ? d.intl.string(d.t.wbgaj4) : _
                 })
             ]
         });

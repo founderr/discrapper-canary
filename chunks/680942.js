@@ -8,8 +8,8 @@ var r = n(200651),
     d = n(884697),
     u = n(228624),
     m = n(67409),
-    p = n(474936),
-    h = n(231338),
+    h = n(474936),
+    p = n(231338),
     f = n(388032),
     g = n(149158);
 let C = {
@@ -78,8 +78,8 @@ t.Z = (e) => {
     let { product: t, selectedVariantIndex: n, returnRef: b, onSuccess: x, tooltipDelay: v, isGiftEasterEggEnabled: _, disableCustomColor: k = !1 } = e,
         { analyticsLocations: j } = (0, l.ZP)(),
         E = a.useRef(null),
-        S = (0, s.Z)(E),
-        I = k ? h.BR.DARK : h.BR.LIGHT,
+        I = (0, s.Z)(E),
+        S = k ? p.BR.DARK : p.BR.LIGHT,
         T = (0, u.hv)('CollectiblesShopGiftButton');
     return (0, d.x6)(t)
         ? null
@@ -104,7 +104,7 @@ t.Z = (e) => {
                                       selectedVariantIndex: n
                                   }),
                                   isGift: !0,
-                                  giftingOrigin: p.Wt.SHOP_PAGE,
+                                  giftingOrigin: h.Wt.SHOP_PAGE,
                                   analyticsLocations: j,
                                   returnRef: b,
                                   variantsReturnStyle: T,
@@ -118,9 +118,9 @@ t.Z = (e) => {
                       },
                       children: _
                           ? (0, r.jsx)(o.e, {
-                                hovered: S,
+                                hovered: I,
                                 isContentDismissed: !0,
-                                themeOverride: I,
+                                themeOverride: S,
                                 boxColors: C
                             })
                           : (0, r.jsx)(i.GiftIcon, {

@@ -9,8 +9,8 @@ var r = n(200651),
     d = n(704215),
     u = n(952265),
     m = n(481060),
-    p = n(150063),
-    h = n(434650),
+    h = n(150063),
+    p = n(434650),
     f = n(100527),
     g = n(906732),
     C = n(702486),
@@ -21,8 +21,8 @@ var r = n(200651),
     k = n(981632),
     j = n(290026),
     E = n(819640),
-    S = n(594174),
-    I = n(626135),
+    I = n(594174),
+    S = n(626135),
     T = n(74538),
     N = n(335131),
     B = n(381585),
@@ -56,7 +56,7 @@ var r = n(200651),
     er = n(52694);
 function ea(e) {
     let { products: t, handleShopCardMount: n, header: a, category: i, isPremiumUser: s, isGiftEasterEggEnabled: l, showMysteryCard: o = !1 } = e,
-        d = (0, c.e7)([S.default], () => S.default.getCurrentUser());
+        d = (0, c.e7)([I.default], () => I.default.getCurrentUser());
     return null == d || 0 === t.length
         ? null
         : (0, r.jsxs)('div', {
@@ -122,9 +122,9 @@ function ei(e) {
 function es(e) {
     let { category: t, isPremiumUser: n, initialItemCardRef: i, isGiftEasterEggEnabled: l, setIsGiftEasterEggEnabled: o, showEasterEggToggle: c, isFullScreen: d } = e,
         u = a.useRef(10 + 70 * Math.random()),
-        [p, f] = a.useState(!1),
+        [h, f] = a.useState(!1),
         g = (0, q.M7)(t.skuId),
-        C = (0, h.O)(
+        C = (0, p.O)(
             (e) => {
                 f(e && null != g);
             },
@@ -158,7 +158,7 @@ function es(e) {
                 null != t.unpublishedAt &&
                 (0, r.jsx)(R.$, {
                     unpublishedAt: t.unpublishedAt,
-                    isVisible: p,
+                    isVisible: h,
                     displayOptions: g,
                     isFullScreen: d
                 })
@@ -170,8 +170,8 @@ t.default = function (e) {
     let { isFullScreen: n = !0 } = e;
     (0, v.z)(x.f);
     let i = (0, Z.u)('CollectiblesShop'),
-        { analyticsSource: l, analyticsLocations: h } = (0, c.cj)([L.Z], () => L.Z.getAnalytics()),
-        { analyticsLocations: _ } = (0, g.ZP)([...h, f.Z.COLLECTIBLES_SHOP]),
+        { analyticsSource: l, analyticsLocations: p } = (0, c.cj)([L.Z], () => L.Z.getAnalytics()),
+        { analyticsLocations: _ } = (0, g.ZP)([...p, f.Z.COLLECTIBLES_SHOP]),
         { sessionId: k, scrollerRef: w, scrollHandler: R } = (0, C._)(X.rMx.COLLECTIBLES_SHOP_SCROLLED, l),
         { feedState: F, catalogState: U, transitionToCatalog: G, transitionToFeed: K } = (0, A.B)(i, w),
         [q, ea] = a.useState(!1),
@@ -179,28 +179,28 @@ t.default = function (e) {
         [eo, ec] = a.useState(),
         [ed, eu] = a.useState(),
         em = (0, c.e7)([E.Z], () => E.Z.getLayers().includes(X.S9g.COLLECTIBLES_SHOP)),
-        ep = (0, u.f9)(),
-        { onClose: eh } = (0, M.Db)(),
-        ef = (0, c.e7)([S.default], () => S.default.getCurrentUser()),
+        eh = (0, u.f9)(),
+        { onClose: ep } = (0, M.Db)(),
+        ef = (0, c.e7)([I.default], () => I.default.getCurrentUser()),
         eg = T.ZP.canUseCollectibles(ef),
         { categories: eC, isFetchingCategories: eb, fetchCategoriesError: ex, fetchPurchasesError: ev, claimError: e_, refreshCategories: ek } = (0, P.Z)(),
         ej = null !== (t = null != ex ? ex : ev) && void 0 !== t ? t : e_;
     (0, j.P)();
     let eE = (0, O.O)(eC),
-        eS = a.useRef(null),
-        [eI, eT] = a.useState(!1);
+        eI = a.useRef(null),
+        [eS, eT] = a.useState(!1);
     (0, H.Kp)({
         categories: eC,
         isFetchingCategories: eb,
         isLayer: em,
-        initialItemCardRef: eS
+        initialItemCardRef: eI
     }),
         a.useEffect(() => {
             if (F === Q.f7.VISIBLE || U === Q.f7.VISIBLE) {
                 var e;
                 let t;
                 (t = i ? (U === Q.f7.VISIBLE ? ed : l) : l),
-                    I.default.track(X.rMx.COLLECTIBLES_SHOP_VIEWED, {
+                    S.default.track(X.rMx.COLLECTIBLES_SHOP_VIEWED, {
                         location_stack: _,
                         source: t,
                         page_session_id: k,
@@ -209,7 +209,7 @@ t.default = function (e) {
                     });
             }
             !eg &&
-                I.default.track(X.rMx.PREMIUM_UPSELL_VIEWED, {
+                S.default.track(X.rMx.PREMIUM_UPSELL_VIEWED, {
                     type: en.cd.COLLECTIBLES_SHOP,
                     location_stack: _
                 });
@@ -223,7 +223,7 @@ t.default = function (e) {
             });
     }, [eN]),
         a.useEffect(() => {
-            !n && (0, p.Y)(X.Z5c.COLLECTIBLES_SHOP);
+            !n && (0, h.Y)(X.Z5c.COLLECTIBLES_SHOP);
         }, [n]),
         a.useEffect(
             () => () => {
@@ -235,12 +235,12 @@ t.default = function (e) {
             [eC]
         ),
         a.useEffect(() => {
-            if (!n || em || ep) return;
+            if (!n || em || eh) return;
             let e = (e) => {
-                if (e.key === et.mR.Escape) eh();
+                if (e.key === et.mR.Escape) ep();
             };
             return window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e);
-        }, [n, em, ep, eh]);
+        }, [n, em, eh, ep]);
     let eB = a.useCallback(() => {
             ek();
         }, [ek]),
@@ -299,7 +299,7 @@ t.default = function (e) {
                                         (0, r.jsx)(V.I, {
                                             isFullScreen: n,
                                             isLayer: em,
-                                            onClose: eh,
+                                            onClose: ep,
                                             isCatalogView: !1,
                                             transparent: !0
                                         }),
@@ -320,7 +320,7 @@ t.default = function (e) {
                                         (0, r.jsx)(V.I, {
                                             isFullScreen: n,
                                             isLayer: em,
-                                            onClose: eh,
+                                            onClose: ep,
                                             isCatalogView: i,
                                             transparent: i,
                                             handleTransition: K
@@ -354,9 +354,9 @@ t.default = function (e) {
                                                                                 children: (0, r.jsx)(es, {
                                                                                     isPremiumUser: eg,
                                                                                     category: e,
-                                                                                    initialItemCardRef: eS,
+                                                                                    initialItemCardRef: eI,
                                                                                     setIsGiftEasterEggEnabled: eT,
-                                                                                    isGiftEasterEggEnabled: eI,
+                                                                                    isGiftEasterEggEnabled: eS,
                                                                                     isFullScreen: n
                                                                                 })
                                                                             })
@@ -372,7 +372,7 @@ t.default = function (e) {
                         ]
                     })
                 }),
-                eI && (0, r.jsx)(z.Z, {}),
+                eS && (0, r.jsx)(z.Z, {}),
                 !n &&
                     U !== Q.f7.VISIBLE &&
                     (0, r.jsxs)(r.Fragment, {

@@ -14,7 +14,7 @@ function s(e) {
     } catch (n) {
         t = Intl.DateTimeFormat(void 0, e).format;
     }
-    if ((null == e ? void 0 : e.hourCycle) == null)
+    if (null != r.s)
         try {
             let i = null === r.s || void 0 === r.s ? void 0 : (0, r.s)(n !== a.Z.getDefaultLocale() ? n : void 0, e);
             if (null != i)

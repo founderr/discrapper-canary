@@ -8,8 +8,8 @@ var r = n(200651),
     d = n(774078),
     u = n(727637),
     m = n(607070),
-    p = n(210887),
-    h = n(388032),
+    h = n(210887),
+    p = n(388032),
     f = n(901698),
     g = n(262278),
     C = n(458597);
@@ -17,12 +17,12 @@ t.Z = function () {
     let e = a.useRef(null),
         t = (0, u.Z)(e),
         n = (0, l.e7)([m.Z], () => m.Z.useReducedMotion),
-        i = (0, l.e7)([p.Z], () => (0, o.wj)(p.Z.theme)),
+        i = (0, l.e7)([h.Z], () => (0, o.wj)(h.Z.theme)),
         { days: b, hours: x } = (0, d.Z)(new Date('2024-08-23T08:15:00-07:00')),
         v = a.useMemo(() => {
-            if (0 === b && 0 === x) return h.intl.string(h.t.qAWS4O);
-            let e = ''.concat(b.toString().padStart(2, '0')).concat(h.intl.string(h.t.QJyuxc)),
-                t = ''.concat(x.toString().padStart(2, '0')).concat(h.intl.string(h.t['1LyF1t']));
+            if (0 === b && 0 === x) return p.intl.string(p.t.qAWS4O);
+            let e = ''.concat(b.toString().padStart(2, '0')).concat(p.intl.string(p.t.QJyuxc)),
+                t = ''.concat(x.toString().padStart(2, '0')).concat(p.intl.string(p.t['1LyF1t']));
             return ''.concat(e, ':').concat(t);
         }, [b, x]);
     return (0, r.jsxs)('div', {
@@ -50,7 +50,7 @@ t.Z = function () {
                     (0, r.jsx)(c.Text, {
                         variant: 'text-lg/bold',
                         className: g.productName,
-                        children: h.intl.string(h.t.ZDfl3d)
+                        children: p.intl.string(p.t.ZDfl3d)
                     })
                 ]
             }),

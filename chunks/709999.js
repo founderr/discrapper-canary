@@ -9,8 +9,8 @@ var r = n(200651),
     d = n(873546),
     u = n(180650),
     m = n(979554),
-    p = n(399606),
-    h = n(622535),
+    h = n(399606),
+    p = n(622535),
     f = n(663002),
     g = n(481060),
     C = n(37234),
@@ -21,8 +21,8 @@ var r = n(200651),
     k = n(1585),
     j = n(333867),
     E = n(197115),
-    S = n(300284),
-    I = n(876917),
+    I = n(300284),
+    S = n(876917),
     T = n(642619),
     N = n(210887),
     B = n(74538),
@@ -83,7 +83,7 @@ let et = (e) => {
         let { profileEffectId: t, isHighlighted: n, isPurchased: a } = e;
         return (0, r.jsx)('div', {
             className: ee.profileEffectShopPreview,
-            children: (0, r.jsx)(I.Z, {
+            children: (0, r.jsx)(S.Z, {
                 profileEffectId: t,
                 isHovering: n,
                 isPurchased: a,
@@ -104,7 +104,7 @@ let et = (e) => {
         });
     };
 t.Z = function (e) {
-    let { product: t, user: n, category: i, onMount: l, isGiftEasterEggEnabled: I, isInFeedView: K } = e,
+    let { product: t, user: n, category: i, onMount: l, isGiftEasterEggEnabled: S, isInFeedView: K } = e,
         { analyticsLocations: ei } = (0, _.ZP)([...(K ? [v.Z.COLLECTIBLES_SHOP_HOME_SCREEN] : []), v.Z.COLLECTIBLES_SHOP_CARD]),
         es = a.useRef(null),
         { handleCardVisibilityChange: el } = (0, D.E)(t, K ? 'home' : 'full'),
@@ -112,18 +112,18 @@ t.Z = function (e) {
         [ec, ed] = a.useState(!1),
         eu = eo || ec,
         em = (0, Y.o)(t),
-        ep = (0, H.k)(t),
-        eh = (0, p.e7)([x.Z], () => x.Z.useReducedMotion),
+        eh = (0, H.k)(t),
+        ep = (0, h.e7)([x.Z], () => x.Z.useReducedMotion),
         ef = B.ZP.canUseCollectibles(n),
         eg = (0, P.XM)(t, ef, !1),
         eC = a.useMemo(() => (0, P.BH)(t, ef), [t, ef]),
         eb = (0, P.G1)(t),
         ex = (0, P.rN)(t),
         { isPurchased: ev, isPartiallyPurchased: e_ } = (0, F.L)(t),
-        [ek, ej] = (0, p.Wu)([L.Z], () => [L.Z.isClaiming === t.skuId, null != L.Z.isClaiming && L.Z.isClaiming !== t.skuId]),
-        eE = (0, p.e7)([N.Z], () => (0, f.wj)(N.Z.theme)),
-        eS = (0, w.m)('CollectiblesCollectedModal'),
-        eI = (0, P.x6)(t) || eS,
+        [ek, ej] = (0, h.Wu)([L.Z], () => [L.Z.isClaiming === t.skuId, null != L.Z.isClaiming && L.Z.isClaiming !== t.skuId]),
+        eE = (0, h.e7)([N.Z], () => (0, f.wj)(N.Z.theme)),
+        eI = (0, w.m)('CollectiblesCollectedModal'),
+        eS = (0, P.x6)(t) || eI,
         eT = (0, P.Yq)(t.skuId),
         { hoverVariant: eN } = (0, O.E)('CollectiblesShopTallCard'),
         eB = i.skuId === u.T.STORM && '1268362891946627103' === t.skuId,
@@ -147,7 +147,7 @@ t.Z = function (e) {
         a.useEffect(() => {
             null == l || l(es);
         }, [l]);
-    let ew = (0, S.Z)({ analyticsLocations: ei }),
+    let ew = (0, I.Z)({ analyticsLocations: ei }),
         eA = a.useRef(null),
         { handleUseNow: eR, isApplying: eH } = (0, R.W)({ product: t }),
         eF = () => {
@@ -216,7 +216,7 @@ t.Z = function (e) {
                         product: t,
                         selectedVariantIndex: eZ,
                         returnRef: es,
-                        isGiftEasterEggEnabled: I,
+                        isGiftEasterEggEnabled: S,
                         disableCustomColor: !0,
                         tooltipDelay: 250
                     }),
@@ -255,7 +255,7 @@ t.Z = function (e) {
                         : ev
                           ? (0, r.jsx)(et, {
                                 disabled: ej,
-                                onClick: eI ? eR : eF,
+                                onClick: eS ? eR : eF,
                                 submitting: eH,
                                 children: X.intl.string(X.t.MAS7uL)
                             })
@@ -271,7 +271,7 @@ t.Z = function (e) {
         };
     return (0, P.x6)(t) && null != eC && eC.discountPercentage < 0
         ? null
-        : (0, r.jsx)(h.$, {
+        : (0, r.jsx)(p.$, {
               onChange: el,
               threshold: 0,
               children: (0, r.jsx)(g.FocusRing, {
@@ -279,7 +279,7 @@ t.Z = function (e) {
                       innerRef: es,
                       className: s()(eE ? ee.shopCardDark : ee.shopCard, {
                           [ee.partiallyOwned]: e_,
-                          [ee.shopCardAnimation]: !eh && eN !== O.D.NO_MOVEMENT,
+                          [ee.shopCardAnimation]: !ep && eN !== O.D.NO_MOVEMENT,
                           [eE ? ee.shopCardDarkHighlighted : ee.shopCardHighlighted]: eu,
                           [ee.mysteryShopCard]: eB
                       }),
@@ -385,7 +385,7 @@ t.Z = function (e) {
                                   (0, r.jsx)(g.Text, {
                                       variant: 'text-lg/bold',
                                       className: ee.productName,
-                                      children: ep
+                                      children: eh
                                   }),
                                   t.type === m.Z.VARIANTS_GROUP
                                       ? (0, r.jsx)(G.P, {
