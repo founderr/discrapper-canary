@@ -1,3 +1,4 @@
+n(627494), n(757143);
 var r = n(392711),
     i = n.n(r),
     a = n(692547),
@@ -55,6 +56,24 @@ let l = [
                 whiteSVG: n(929858)
             },
             enabled: !0
+        },
+        {
+            type: o.ABu.BLUESKY,
+            name: 'Bluesky',
+            icon: {
+                lightPNG: n(618780),
+                darkPNG: n(618780),
+                whitePNG: n(566961),
+                lightSVG: n(387793),
+                darkSVG: n(387793),
+                whiteSVG: n(148052)
+            },
+            enabled: !1,
+            getPlatformUserUrl: (e) => {
+                let { id: t } = e;
+                return 'https://bsky.app/profile/'.concat(encodeURIComponent(t).replaceAll('%3A', ':'));
+            },
+            isFederated: !0
         },
         {
             type: o.ABu.BUNGIE,
@@ -397,6 +416,24 @@ let l = [
                 let { name: t } = e;
                 return 'https://www.instagram.com/'.concat(encodeURIComponent(t));
             }
+        },
+        {
+            type: o.ABu.MASTODON,
+            name: 'Mastodon',
+            icon: {
+                lightPNG: n(913883),
+                darkPNG: n(913883),
+                whitePNG: n(744387),
+                lightSVG: n(692552),
+                darkSVG: n(692552),
+                whiteSVG: n(49722)
+            },
+            enabled: !1,
+            getPlatformUserUrl: (e) => {
+                let { id: t } = e;
+                return t;
+            },
+            isFederated: !0
         },
         {
             type: o.ABu.CRUNCHYROLL,
