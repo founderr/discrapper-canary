@@ -16,8 +16,8 @@ var a = n(481060),
     m = n(863362);
 function h(e) {
     var t;
-    let { user: n, guildId: h, channel: x, entry: p, onSelect: C, disableGameProfileLinks: v } = e,
-        g = (0, c.Z)({
+    let { user: n, guildId: h, channel: x, entry: p, onSelect: C, disableGameProfileLinks: g } = e,
+        v = (0, c.Z)({
             userId: n.id,
             guildId: h,
             channelId: null == x ? void 0 : x.id
@@ -29,7 +29,7 @@ function h(e) {
         I = (0, u.dX)(p),
         j = (0, s.Z)({
             location: 'ContentPopoutContextMenu',
-            applicationId: I && !0 !== v ? (null === (t = p.extra) || void 0 === t ? void 0 : t.application_id) : void 0,
+            applicationId: I && !0 !== g ? (null === (t = p.extra) || void 0 === t ? void 0 : t.application_id) : void 0,
             source: o.m1.ActivityCardContextMenu,
             trackEntryPointImpression: !0,
             sourceUserId: p.author_id
@@ -51,7 +51,7 @@ function h(e) {
                     children: [
                         (0, l.jsxs)(a.MenuGroup, {
                             children: [
-                                g,
+                                v,
                                 null != j &&
                                     (0, l.jsx)(a.MenuItem, {
                                         id: 'game-profile',

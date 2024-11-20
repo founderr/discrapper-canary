@@ -8,23 +8,23 @@ n.d(t, {
     n(653041);
 var i = n(392711),
     o = n.n(i),
-    a = n(697741);
-let l = new Set(['a', 'an', 'and', 'are', 'as', 'at', 'be', 'but', 'by', 'for', 'if', 'in', 'into', 'is', 'it', 'no', 'not', 'of', 'on', 'or', 'such', 'that', 'the', 'their', 'then', 'there', 'these', 'they', 'this', 'to', 'was', 'will', 'with']);
-function s(e) {
+    s = n(697741);
+let a = new Set(['a', 'an', 'and', 'are', 'as', 'at', 'be', 'but', 'by', 'for', 'if', 'in', 'into', 'is', 'it', 'no', 'not', 'of', 'on', 'or', 'such', 'that', 'the', 'their', 'then', 'there', 'these', 'they', 'this', 'to', 'was', 'will', 'with']);
+function l(e) {
     return e.replace(/('|\u2019|\uFF07)(s|S)$/, '');
 }
 function r(e) {
     return e.toLowerCase();
 }
 function c(e) {
-    return l.has(e);
+    return a.has(e);
 }
 function d(e) {
     return 0 === e.length;
 }
 function u(e) {
     var t;
-    let n = new Set(((t = e), o()(t.split(/\W+/)).map(s).reject(d).map(r).reject(c).map(a.$).value()));
+    let n = new Set(((t = e), o()(t.split(/\W+/)).map(l).reject(d).map(r).reject(c).map(s.$).value()));
     return (e) =>
         (function e(t, n) {
             if (Array.isArray(t)) t.forEach((t) => e(t, n));
@@ -32,8 +32,8 @@ function u(e) {
                 let e = [],
                     i = '';
                 t.content.split(/(\W+)/g).forEach((t) => {
-                    var o, l;
-                    if (((o = t), (l = n), !d((o = r(s(o)))) && !c(o) && l.has((0, a.$)(o))))
+                    var o, a;
+                    if (((o = t), (a = n), !d((o = r(l(o)))) && !c(o) && a.has((0, s.$)(o))))
                         i.length > 0 &&
                             e.push({
                                 type: 'text',

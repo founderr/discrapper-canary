@@ -13,8 +13,8 @@ var l = n(200651),
     x = n(823379),
     p = n(5192),
     C = n(379357),
-    v = n(192918),
-    g = n(561308),
+    g = n(192918),
+    v = n(561308),
     f = n(907152),
     I = n(206295),
     j = n(297781),
@@ -56,10 +56,10 @@ t.ZP = (e) => {
             entry: n,
             showCoverImage: !1
         }),
-        { user: A, details: M, activity: k, embeddedActivity: w } = (0, Z.n)(n),
-        { primaryColor: R, secondaryColor: b } = (0, I.Z)(null == S ? void 0 : S.src),
+        { user: A, details: M, activity: R, embeddedActivity: k } = (0, Z.n)(n),
+        { primaryColor: w, secondaryColor: b } = (0, I.Z)(null == S ? void 0 : S.src),
         H = (0, i.e7)([h.default], () => h.default.locale),
-        { displayParticipants: O, participant1: V, participant2: B, numOtherParticipants: U } = (0, v.Z)(n, 3),
+        { displayParticipants: O, participant1: V, participant2: B, numOtherParticipants: U } = (0, g.Z)(n, 3),
         D = () => {
             u.__(d._b.TEXT, m.I.NORMAL, { applicationId: n.extra.application_id });
         },
@@ -80,12 +80,12 @@ t.ZP = (e) => {
                     applicationImageSrc: null == S ? void 0 : S.src,
                     avatarSrcs: O.map((e) => e.getAvatarURL(t.guild_id, 128)),
                     description: l,
-                    timestamp: (0, g.yh)(n, H),
-                    colors: [R, b],
+                    timestamp: (0, v.yh)(n, H),
+                    colors: [w, b],
                     channelId: e
                 });
             },
-            [null == S ? void 0 : S.src, t, O, n, H, U, V, B, R, b, A]
+            [null == S ? void 0 : S.src, t, O, n, H, U, V, B, w, b, A]
         );
     if (null == A) return null;
     let z = (0, l.jsx)(j.PZ, {
@@ -94,7 +94,7 @@ t.ZP = (e) => {
         }),
         W = (0, l.jsx)(P.wG, {
             channel: t,
-            userDescription: (0, g.kr)(n) ? y.t.vPg1JS : y.t.rPqqtr,
+            userDescription: (0, v.kr)(n) ? y.t.vPg1JS : y.t.rPqqtr,
             title: n.extra.activity_name,
             subtitle: M,
             badges: z,
@@ -104,12 +104,12 @@ t.ZP = (e) => {
             onClickSubtitle: D,
             onClickThumbnail: D
         }),
-        q = (0, o.Z)(k, L.xjy.JOIN) || (0, s.Z)(k),
+        q = (0, o.Z)(R, L.xjy.JOIN) || (0, s.Z)(R),
         Y = q
             ? (0, l.jsx)(c.Z, {
-                  isEmbedded: (0, s.Z)(k),
-                  embeddedActivity: w,
-                  activity: k,
+                  isEmbedded: (0, s.Z)(R),
+                  embeddedActivity: k,
+                  activity: R,
                   user: A,
                   ButtonComponent: (e) =>
                       (0, l.jsx)(P.Ll, {

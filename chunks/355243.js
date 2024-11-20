@@ -23,24 +23,24 @@ function p(e) {
     let { percent: t, animate: n, interactionEnabled: i, backgroundColor: p, preloadedBuffers: v, duration: C, maxSeekableTime: g, onClick: x, onScrubBack: S, onScrubForward: E } = e,
         [h, _] = o.useState(null),
         [T, I] = o.useState(null),
-        [j, N] = o.useState(null),
+        [N, j] = o.useState(null),
         [b, D] = o.useState(!1),
-        y = o.useRef(null),
-        A = (e) => {
-            (y.current = e), _(e);
+        A = o.useRef(null),
+        y = (e) => {
+            (A.current = e), _(e);
         };
     o.useEffect(() => {
-        null != h && (null == g ? N(null) : N(f(g, C, h)));
+        null != h && (null == g ? j(null) : j(f(g, C, h)));
     }, [h, g, C]);
     let k = (0, a.y)(() => {
-        if (null != k.current) A(k.current.getBoundingClientRect());
+        if (null != k.current) y(k.current.getBoundingClientRect());
     });
     o.useLayoutEffect(() => {
-        null != k.current && A(k.current.getBoundingClientRect());
+        null != k.current && y(k.current.getBoundingClientRect());
     }, [k]),
         o.useEffect(() => {
             let e = () => {
-                null != k.current && A(k.current.getBoundingClientRect());
+                null != k.current && y(k.current.getBoundingClientRect());
             };
             return window.addEventListener('resize', e), () => window.removeEventListener('resize', e);
         }, [k]);
@@ -58,7 +58,7 @@ function p(e) {
         M = (0, c.yv)(P),
         O = null != h ? h.right - f((t / 100) * C, C, h) : null,
         R = null != T && null != h ? h.right - T : null,
-        w = null != j && null != h ? h.right - j : null;
+        w = null != N && null != h ? h.right - N : null;
     return (0, r.jsxs)('div', {
         className: d.cont,
         ref: k,
@@ -70,7 +70,7 @@ function p(e) {
                     if (!!i && null != x) x(m(e.clientX, e.currentTarget.getBoundingClientRect(), C));
                 },
                 onMouseEnter: (e) => {
-                    if (!!i) null != k.current && A(k.current.getBoundingClientRect()), D(!0), B(e);
+                    if (!!i) null != k.current && y(k.current.getBoundingClientRect()), D(!0), B(e);
                 },
                 onMouseLeave: (e) => {
                     if (!!i) D(!1), I(null);

@@ -13,8 +13,8 @@ var l = n(200651),
     x = n(319604),
     p = n(206295),
     C = n(278399),
-    v = n(297781),
-    g = n(591853),
+    g = n(297781),
+    v = n(591853),
     f = n(410441),
     I = n(616922),
     j = n(388032);
@@ -57,21 +57,21 @@ t.Z = (e) => {
             });
         }, [T, N, t, n, E, A, S, _]);
     if (null == _ || !(0, d.Hi)(A, C.y9)) return null;
-    let k = () => {
+    let R = () => {
         let e = I.Hw.ALBUM,
             t = s.Z.isProtocolRegistered() ? I.C7.PLAYER_OPEN(e, n.extra.media.external_parent_id) : I.C7.WEB_OPEN(e, n.extra.media.external_parent_id);
         window.open(t);
     };
-    return (0, l.jsxs)(g.yR, {
+    return (0, l.jsxs)(v.yR, {
         children: [
-            (0, l.jsx)(g.wG, {
-                onClickTitle: k,
+            (0, l.jsx)(v.wG, {
+                onClickTitle: R,
                 onClickSubtitle: () => {
                     let e = I.Hw.ARTIST,
                         t = s.Z.isProtocolRegistered() ? I.C7.PLAYER_OPEN(e, n.extra.artist.external_id) : I.C7.WEB_OPEN(e, n.extra.artist.external_id);
                     window.open(t);
                 },
-                onClickThumbnail: k,
+                onClickThumbnail: R,
                 channel: t,
                 entry: n,
                 headerIcons:
@@ -84,13 +84,13 @@ t.Z = (e) => {
                 userDescription: j.t.CcVI1d,
                 title: L,
                 subtitle: N,
-                badges: (0, l.jsx)(v.Gk, {
-                    location: v.Gt.POPOUT,
+                badges: (0, l.jsx)(g.Gk, {
+                    location: g.Gt.POPOUT,
                     children: C.Ho.map((e, t) => (0, l.jsx)(e, { entry: n }, t))
                 })
             }),
-            (0, l.jsx)(g.St, {
-                children: (0, l.jsx)(g.WT, {
+            (0, l.jsx)(v.St, {
+                children: (0, l.jsx)(v.WT, {
                     onReaction: i,
                     onVoiceChannelPreview: m,
                     user: _,

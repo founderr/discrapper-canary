@@ -21,8 +21,8 @@ var l = n(200651),
     x = n(318766),
     p = n(907040),
     C = n(633302),
-    v = n(806966),
-    g = n(176354),
+    g = n(806966),
+    v = n(176354),
     f = n(823379),
     I = n(354459),
     j = n(185923),
@@ -87,27 +87,27 @@ function _(e) {
         E = (0, m.Dt)(),
         [S, A] = a.useState(!1),
         M = (0, h.wC)(t.guild_id),
-        k = (0, o.uniqBy)([...M, ...y], 'name')
+        R = (0, o.uniqBy)([...M, ...y], 'name')
             .filter(
                 (e) =>
-                    !g.ZP.isEmojiFilteredOrLocked({
+                    !v.ZP.isEmojiFilteredOrLocked({
                         emoji: e,
                         channel: t,
                         intention: L
                     })
             )
             .slice(0, I.e5);
-    null != f && f.length > 0 && k.splice(k.length - 1, 1, f[0]);
-    let w = (e) => {
+    null != f && f.length > 0 && R.splice(R.length - 1, 1, f[0]);
+    let k = (e) => {
             A(e), null == x || x(e);
         },
-        R = (e, t) => {
+        w = (e, t) => {
             if (null == e && t) {
                 i();
                 return;
             }
             null != e && u(e);
-            w(!t), t && v.kJ.setSearchPlaceholder(null);
+            k(!t), t && g.kJ.setSearchPlaceholder(null);
         };
     return (0, l.jsxs)(c.Dialog, {
         'aria-labelledby': E,
@@ -130,7 +130,7 @@ function _(e) {
                         className: r()(Z.animatedPicker, { [Z.animatedPickerTall]: S }),
                         headerClassName: r()(Z.emojiPickerHeader, { [Z.emojiPickerHeaderExpanded]: S }),
                         closePopout: i,
-                        onSelectEmoji: S ? R : () => {},
+                        onSelectEmoji: S ? w : () => {},
                         shouldHidePickerActions: !S,
                         wrapper: 'div',
                         pickerIntention: L,
@@ -139,11 +139,11 @@ function _(e) {
                             accessory: (0, l.jsx)(N, {
                                 otherAccessories: null == C ? void 0 : C.accessory,
                                 isEmojiPickerExpanded: S,
-                                onSetExpanded: w,
+                                onSetExpanded: k,
                                 onFocus: s
                             }),
                             onKeyDown: (e) => {
-                                null != e && e.key !== P.vn.TAB && (e.key !== P.vn.ENTER || e.shiftKey ? w(!0) : w(!S));
+                                null != e && e.key !== P.vn.TAB && (e.key !== P.vn.ENTER || e.shiftKey ? k(!0) : k(!S));
                             }
                         }
                     }),
@@ -151,8 +151,8 @@ function _(e) {
                         className: Z.slotsContainer,
                         children: (0, l.jsx)('div', {
                             className: r()(Z.slots, Z.slotsWide),
-                            children: k.map((e) => {
-                                let n = g.ZP.isEmojiDisabled({
+                            children: R.map((e) => {
+                                let n = v.ZP.isEmojiDisabled({
                                     emoji: e,
                                     channel: t,
                                     intention: j.Hz.CHAT
@@ -171,7 +171,7 @@ function _(e) {
                                                 emoji: e,
                                                 isDisabled: n,
                                                 onClick: () => {
-                                                    n ? null == d || d(e) : R(e, !0);
+                                                    n ? null == d || d(e) : w(e, !0);
                                                 }
                                             })
                                         })

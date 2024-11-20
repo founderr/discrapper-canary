@@ -39,14 +39,14 @@ let T = '-:--',
             label: h.intl.string(h.t.hsvh0t)
         }
     },
-    j = (e, t) => {
+    N = (e, t) => {
         (0, f.dA)({
             questId: e,
             event: E.rMx.QUEST_VIDEO_VOLUME_CHANGED,
             properties: { volume_threshold: t > 0 && t < 1 ? 0.5 : t }
         });
     };
-function N(e) {
+function j(e) {
     let { current: t, duration: n } = e,
         o = null != t ? (0, S.yv)(t) : T,
         i = null != n ? (0, S.yv)(n) : T;
@@ -115,7 +115,7 @@ function b(e) {
 }
 function D(e) {
     var t, n;
-    let { videoRef: i, quest: f, playerState: S, animSpring: E, visible: T, seekForwardEnabled: D, hideCaptionBtn: y, handlePlaybackBtnClick: A, handleTranscriptBtnClick: k, handleCaptionBtnClick: B, handleFullScreenBtnClick: L, handleSeekBackBtnClick: P, handleSeekForwardBtnClick: M, handleControlBarPendingInteraction: O } = e,
+    let { videoRef: i, quest: f, playerState: S, animSpring: E, visible: T, seekForwardEnabled: D, hideCaptionBtn: A, handlePlaybackBtnClick: y, handleTranscriptBtnClick: k, handleCaptionBtnClick: B, handleFullScreenBtnClick: L, handleSeekBackBtnClick: P, handleSeekForwardBtnClick: M, handleControlBarPendingInteraction: O } = e,
         R = (0, p.km)((e) => e.volume),
         w = (0, p.km)((e) => e.setVolume),
         F = (0, p.km)((e) => e.muted),
@@ -169,7 +169,7 @@ function D(e) {
                         visible: T,
                         ariaLabel: eo,
                         tooltipLabel: eo,
-                        onClick: A
+                        onClick: y
                     }),
                     (0, r.jsx)(b, {
                         iconComponent: C.d,
@@ -217,7 +217,7 @@ function D(e) {
                                 animationTime: E,
                                 visible: T,
                                 onClick: () => {
-                                    if (null != i.current) 0 === H ? ($(R), Z(!1), j(f.id, R)) : (w(H), $(0), Z(!0), j(f.id, 0));
+                                    if (null != i.current) 0 === H ? ($(R), Z(!1), N(f.id, R)) : (w(H), $(0), Z(!0), N(f.id, 0));
                                 },
                                 ariaLabel: h.intl.string(h.t['eIl+AA']),
                                 tooltipLabel: h.intl.string(h.t['eIl+AA'])
@@ -260,7 +260,7 @@ function D(e) {
                                     minValue: 0,
                                     maxValue: 1,
                                     onValueChange: (e) => {
-                                        $(e), w(e), j(f.id, e), Q && (K(!1), O(!1)), F && e > 0 && Z(!1);
+                                        $(e), w(e), N(f.id, e), Q && (K(!1), O(!1)), F && e > 0 && Z(!1);
                                     },
                                     asValueChanges: (e) => {
                                         $(e), !Q && (K(!0), O(!0));
@@ -272,7 +272,7 @@ function D(e) {
                             })
                         ]
                     }),
-                    (0, r.jsx)(N, {
+                    (0, r.jsx)(j, {
                         current: null == i ? void 0 : null === (t = i.current) || void 0 === t ? void 0 : t.currentTime,
                         duration: null == i ? void 0 : null === (n = i.current) || void 0 === n ? void 0 : n.duration
                     })
@@ -291,7 +291,7 @@ function D(e) {
                         ariaLabel: h.intl.string(h.t.KCzjTk),
                         tooltipLabel: h.intl.string(h.t.KCzjTk)
                     }),
-                    !y &&
+                    !A &&
                         (0, r.jsx)(b, {
                             iconComponent: v.c,
                             animationTime: E,

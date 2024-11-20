@@ -23,8 +23,8 @@ var s = n(990547),
     C = n(574755),
     E = n(377171),
     _ = n(621628),
-    I = n(18438),
-    f = n(778825),
+    f = n(18438),
+    I = n(778825),
     N = n(665166),
     A = n(351780),
     b = n(231765),
@@ -77,8 +77,8 @@ var s = n(990547),
     eC = n(595242),
     eE = n(301121),
     e_ = n(463153),
-    eI = n(36192),
-    ef = n(889029),
+    ef = n(36192),
+    eI = n(889029),
     eN = n(400287),
     eA = n(554042),
     eb = n(936982),
@@ -241,12 +241,12 @@ let ew = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 element: O.Z,
                 newIndicator: (0, i.jsx)(a.PremiumBadge, { text: eM.intl.string(eM.t.y2b7CA) }),
                 notice: {
-                    stores: [F.Z, f.Z],
+                    stores: [F.Z, I.Z],
                     element: j.Z
                 },
                 onSettingsClose: () => {
                     o.Z.wait(() => {
-                        (0, I.It)(), (0, u.P6)(), m.Z.clearSubsection(eL.oAB.PROFILE_CUSTOMIZATION);
+                        (0, f.It)(), (0, u.P6)(), m.Z.clearSubsection(eL.oAB.PROFILE_CUSTOMIZATION);
                     });
                 }
             },
@@ -588,7 +588,7 @@ let ew = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eM.intl.string(eM.t['+1h0k5'])],
                 label: eM.intl.string(eM.t['+1h0k5']),
                 ariaLabel: eM.intl.string(eM.t['+1h0k5']),
-                element: eI.Z,
+                element: ef.Z,
                 newIndicatorDismissibleContentTypes: [r.z.AUTH_SESSIONS_NEW],
                 predicate: () => G.Z.getCurrentConfig({ location: '9f7d84_1' }, { autoTrackExposure: !1 }).showSettings
             },
@@ -1377,7 +1377,7 @@ let ew = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eM.intl.string(eM.t.S5GfOT)],
                 label: eM.intl.string(eM.t.S5GfOT),
                 ariaLabel: eM.intl.string(eM.t.S5GfOT),
-                element: ef.Z
+                element: eI.Z
             },
             [eB.s6.STREAMER_MODE_INTEGRATIONS]: {
                 section: eL.oAB.STREAMER_MODE,

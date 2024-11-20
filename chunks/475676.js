@@ -18,8 +18,8 @@ var l = n(200651),
     x = n(246627),
     p = n(709737),
     C = n(69589),
-    v = n(531501),
-    g = n(463031),
+    g = n(531501),
+    v = n(463031),
     f = n(981631),
     I = n(388032),
     j = n(827721);
@@ -37,19 +37,19 @@ function P() {
     });
 }
 function Z(e) {
-    var t, n, v, j;
+    var t, n, g, j;
     let Z,
         { selected: y, channel: T } = e,
         N = T.guild_id,
         _ = (0, h.Z)({
             guildId: N,
-            leaderboardId: g._,
+            leaderboardId: v._,
             intervalOffset: 0
         }),
         { rankChanges: E } = (0, x.Z)({
             guildId: N,
-            leaderboardId: g._,
-            intervalStart: null !== (v = null == _ ? void 0 : _.interval_start) && void 0 !== v ? v : ''
+            leaderboardId: v._,
+            intervalStart: null !== (g = null == _ ? void 0 : _.interval_start) && void 0 !== g ? g : ''
         }),
         S = (0, i.e7)([c.default], () => c.default.getId()),
         [A, M] = a.useMemo(() => {
@@ -59,8 +59,8 @@ function Z(e) {
                 l = null == _ ? void 0 : _.users.find((e) => e.user_id === (null == n ? void 0 : n.userId));
             return [n, l];
         }, [_, E, S]),
-        k = (0, i.e7)([u.default], () => u.default.getUser(null == A ? void 0 : A.userId)),
-        w = m.ZP.getName(N, void 0, k);
+        R = (0, i.e7)([u.default], () => u.default.getUser(null == A ? void 0 : A.userId)),
+        k = m.ZP.getName(N, void 0, R);
     if (
         (!(function (e) {
             let { leaderboard: t, guildId: n } = e,
@@ -79,9 +79,9 @@ function Z(e) {
         null == _)
     )
         return null;
-    if (0 === _.users.length || null == A || null == k) return (0, l.jsx)(L, { selected: y });
-    let { sort_by_statistic_id: R } = _.guild_settings,
-        b = null !== (j = null == M ? void 0 : null === (n = M.statistics) || void 0 === n ? void 0 : null === (t = n[R]) || void 0 === t ? void 0 : t.value) && void 0 !== j ? j : 0,
+    if (0 === _.users.length || null == A || null == R) return (0, l.jsx)(L, { selected: y });
+    let { sort_by_statistic_id: w } = _.guild_settings,
+        b = null !== (j = null == M ? void 0 : null === (n = M.statistics) || void 0 === n ? void 0 : null === (t = n[w]) || void 0 === t ? void 0 : t.value) && void 0 !== j ? j : 0,
         { currentRank: H } = A;
     return (
         (Z =
@@ -89,7 +89,7 @@ function Z(e) {
                 ? I.intl.formatToPlainString(I.t['eU+JxM'], { rank: H })
                 : I.intl.formatToPlainString(I.t['8BLSQ0'], {
                       rank: H,
-                      username: w
+                      username: k
                   })),
         (0, l.jsxs)(s.Zb, {
             selected: y,
@@ -103,13 +103,13 @@ function Z(e) {
                             location: o.Gt.CARD,
                             children: (0, l.jsx)(p.DC, {
                                 value: b,
-                                statisticId: R
+                                statisticId: w
                             })
                         })
                     ]
                 }),
                 (0, l.jsx)(C.Z, {
-                    user: k,
+                    user: R,
                     rank: H
                 })
             ]
@@ -132,7 +132,7 @@ function L(e) {
                     })
                 ]
             }),
-            (0, l.jsx)(v.Z, {
+            (0, l.jsx)(g.Z, {
                 color: '#5B5A56',
                 children: (0, l.jsx)('img', {
                     src: 'https://cdn.discordapp.com/assets/content/173a83bdbe0a455bf0d251f4cc9c2c027cd3da855384773916f3eb08298a880c.png',

@@ -94,7 +94,7 @@ t.Z = r.memo(function e(t) {
               channel: W,
               hasThread: !1
           })
-        : (g.Z.isBlockedForMessage(s) ? (r = M.t['+FcYMz']) : (0, I.DQ)(s) && V && (r = M.t.xfkfTE), void 0 !== r)
+        : (g.Z.isBlockedForMessage(s) ? (r = M.t['+FcYMz']) : g.Z.isIgnoredForMessage(s) ? (r = M.t.VFWjc3) : (0, I.DQ)(s) && V && (r = M.t.xfkfTE), void 0 !== r)
           ? (0, i.jsx)(B, {
                 className: k,
                 compact: y,

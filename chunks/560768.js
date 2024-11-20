@@ -1,15 +1,15 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return a;
     }
 }),
     n(789020);
 var i = n(630388),
     o = n(620662),
-    a = n(981631);
-function l(e, t, n, l) {
-    let s = null == t ? void 0 : t.application_id;
-    if (null == e || null == t || !(0, o.Z)(t, a.xjy.JOIN) || null == s) return !1;
-    let r = l.getApplication(s);
-    return !(null == r || (0, i.yE)(r.flags, a.udG.EMBEDDED)) && n.shouldShowEducation(s);
+    s = n(981631);
+function a(e, t, n, a) {
+    let l = null == t ? void 0 : t.application_id;
+    if (null == e || null == t || !(0, o.Z)(t, s.xjy.JOIN) || null == l) return !1;
+    let r = a.getApplication(l);
+    return !(null == r || (0, i.yE)(r.flags, s.udG.EMBEDDED)) && n.shouldShowEducation(l);
 }

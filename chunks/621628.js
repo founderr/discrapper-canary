@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return I;
     }
 }),
     n(47120),
@@ -58,7 +58,7 @@ function _(e) {
         })
     });
 }
-function I(e) {
+function f(e) {
     let { items: t, dismissedContents: n, handleChange: s } = e;
     return (0, i.jsx)(i.Fragment, {
         children: t
@@ -76,7 +76,7 @@ function I(e) {
             )
     });
 }
-function f() {
+function I() {
     var e;
     let t = (0, S.ZP)((e) => e.recentlyShown),
         {
@@ -89,7 +89,7 @@ function f() {
             newUserMinAgeRequiredOverridden: x.Z.newUserMinAgeRequiredOverridden
         })),
         [T, _] = s.useState(''),
-        f =
+        I =
             null !==
                 (e = (0, a.e7)([g.Z], () => {
                     var e;
@@ -193,9 +193,9 @@ function f() {
                                       className: E.marginBottom20,
                                       children: (0, i.jsx)(d.FormTitle, { children: 'Recently Shown' })
                                   }),
-                                  (0, i.jsx)(I, {
+                                  (0, i.jsx)(f, {
                                       items: v,
-                                      dismissedContents: f,
+                                      dismissedContents: I,
                                       handleChange: b
                                   })
                               ]
@@ -208,9 +208,9 @@ function f() {
                                       className: E.marginBottom20,
                                       children: (0, i.jsx)(d.FormTitle, { children: 'Recent Overrides' })
                                   }),
-                                  (0, i.jsx)(I, {
+                                  (0, i.jsx)(f, {
                                       items: j,
-                                      dismissedContents: f,
+                                      dismissedContents: I,
                                       handleChange: b
                                   })
                               ]
@@ -220,9 +220,9 @@ function f() {
                         className: l()(E.marginBottom20, E.marginTop20),
                         children: (0, i.jsx)(d.FormTitle, { children: 'Available Dismissible Contents' })
                     }),
-                    (0, i.jsx)(I, {
+                    (0, i.jsx)(f, {
                         items: O,
-                        dismissedContents: f,
+                        dismissedContents: I,
                         handleChange: b
                     })
                 ]

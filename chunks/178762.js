@@ -3,10 +3,10 @@ n.d(t, {
         return H;
     },
     YN: function () {
-        return k;
+        return R;
     },
     iZ: function () {
-        return w;
+        return k;
     }
 }),
     n(47120);
@@ -24,8 +24,8 @@ var l = n(200651),
     x = n(704041),
     p = n(475676),
     C = n(439170),
-    v = n(594174),
-    g = n(69259),
+    g = n(594174),
+    v = n(69259),
     f = n(370370),
     I = n(107062),
     j = n(91140),
@@ -40,11 +40,11 @@ var l = n(200651),
     S = n(268010),
     A = n(797342),
     M = n(206583);
-let k = 72;
-function w(e) {
-    return (null == e ? void 0 : e.type) === C.so.CONTENT_INVENTORY ? k : 0;
+let R = 72;
+function k(e) {
+    return (null == e ? void 0 : e.type) === C.so.CONTENT_INVENTORY ? R : 0;
 }
-let R = (e) => {
+let w = (e) => {
         let { entry: t, ...n } = e;
         switch (t.content_type) {
             case s.s.PLAYED_GAME:
@@ -157,7 +157,7 @@ t.ZP = a.memo((e) => {
     let { index: i, ...s } = e,
         [h, x] = a.useState('default'),
         p = (0, o.JA)(''.concat(i)),
-        C = null === (t = v.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(),
+        C = null === (t = g.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(),
         { isRich: f, appName: I } = (0, A.n)(s.entry),
         j = a.useMemo(
             () => ({
@@ -196,17 +196,17 @@ t.ZP = a.memo((e) => {
         S = a.useCallback(
             function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                (0, g.L)(e, {
+                (0, v.L)(e, {
                     ...j,
                     ...t
                 });
             },
             [j]
         ),
-        k = a.useCallback(
+        R = a.useCallback(
             r().throttle(
                 (e) => {
-                    (0, g.L)(M.xP.CARD_POPOUT_OPEN, e);
+                    (0, v.L)(M.xP.CARD_POPOUT_OPEN, e);
                 },
                 2000,
                 {
@@ -216,7 +216,7 @@ t.ZP = a.memo((e) => {
             ),
             []
         ),
-        w = () => {
+        k = () => {
             (P.current = !1),
                 setTimeout(() => {
                     !P.current && (L(!1), T(N));
@@ -226,10 +226,10 @@ t.ZP = a.memo((e) => {
         onMouseEnter: () => {
             (P.current = !0),
                 setTimeout(() => {
-                    P.current && L(!0), k(j);
+                    P.current && L(!0), R(j);
                 }, 100);
         },
-        onMouseLeave: w,
+        onMouseLeave: k,
         children: (0, l.jsx)(u.Popout, {
             renderPopout: (e) => {
                 let { closePopout: t } = e;
@@ -243,9 +243,9 @@ t.ZP = a.memo((e) => {
             position: 'left',
             shouldShow: Z,
             positionKey: h,
-            onRequestOpen: () => k(j),
+            onRequestOpen: () => R(j),
             onRequestClose: () => {
-                y && w();
+                y && k();
             },
             spacing: 8,
             children: (e, t) => {
@@ -265,7 +265,7 @@ t.ZP = a.memo((e) => {
                         !Z && L(!0);
                     },
                     onContextMenu: _,
-                    children: (0, l.jsx)(R, {
+                    children: (0, l.jsx)(w, {
                         ...s,
                         selected: n,
                         hovered: P.current

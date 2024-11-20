@@ -13,8 +13,8 @@ var l = n(200651),
     x = n(685270),
     p = n(206295),
     C = n(335326),
-    v = n(297781),
-    g = n(591853),
+    g = n(297781),
+    v = n(591853),
     f = n(410441),
     I = n(388032);
 let j = (e, t, n) => {
@@ -68,9 +68,9 @@ t.Z = (e) => {
         };
     return null == L
         ? null
-        : (0, l.jsxs)(g.yR, {
+        : (0, l.jsxs)(v.yR, {
               children: [
-                  (0, l.jsx)(g.wG, {
+                  (0, l.jsx)(v.wG, {
                       channel: t,
                       entry: n,
                       userDescription: (0, h.kr)(n) ? I.t['LH+Z39'] : I.t.YuKgmp,
@@ -80,15 +80,15 @@ t.Z = (e) => {
                           Icon: r.CrunchyrollNeutralIcon,
                           'aria-label': I.intl.string(I.t.jdJYX1)
                       }),
-                      badges: (0, l.jsx)(v.Gk, {
-                          location: v.Gt.POPOUT,
+                      badges: (0, l.jsx)(g.Gk, {
+                          location: g.Gt.POPOUT,
                           children: C.t.map((e, t) => (0, l.jsx)(e, { entry: n }, t))
                       }),
                       onClickTitle: A,
                       onClickThumbnail: A
                   }),
-                  (0, l.jsx)(g.St, {
-                      children: (0, l.jsx)(g.WT, {
+                  (0, l.jsx)(v.St, {
+                      children: (0, l.jsx)(v.WT, {
                           onReaction: u,
                           onVoiceChannelPreview: Z,
                           user: L,

@@ -20,8 +20,8 @@ var l = n(200651),
     x = n(314897),
     p = n(908841),
     C = n(5192),
-    v = n(379357),
-    g = n(561308),
+    g = n(379357),
+    v = n(561308),
     f = n(319604),
     I = n(206295),
     j = n(551228),
@@ -58,7 +58,7 @@ function A(e) {
                 o = Math.floor((Math.max(a - n, 0) / r) * 100);
             return {
                 seekBarStyles: { width: ''.concat(o, '%') },
-                durationTimestamp: (0, g.T_)({ start: 0 }, r)
+                durationTimestamp: (0, v.T_)({ start: 0 }, r)
             };
         }, [t, i]);
     return null == o
@@ -89,19 +89,19 @@ function M(e) {
     let Z,
         _,
         M,
-        { channel: k, entry: w, closePopout: R, onReaction: b, onVoiceChannelPreview: H } = e,
-        { largeImage: O } = (0, v.rv)({ entry: w }),
-        { activity: V, currentEntry: B, artist: U, title: D, user: G } = (0, j.pi)(w),
+        { channel: R, entry: k, closePopout: w, onReaction: b, onVoiceChannelPreview: H } = e,
+        { largeImage: O } = (0, g.rv)({ entry: k }),
+        { activity: V, currentEntry: B, artist: U, title: D, user: G } = (0, j.pi)(k),
         { primaryColor: z, secondaryColor: W } = (0, I.Z)(null == O ? void 0 : O.src),
         q = (0, r.e7)([u.Z, x.default], () => ((null == V ? void 0 : V.type) === y.IIU.LISTENING && null != G ? (0, m.Z)(u.Z, x.default, G, V) : void 0), [V, G], o.Z),
         Y = a.useCallback(() => {
             var e;
-            if (null == k || null == G) return;
+            if (null == R || null == G) return;
             let t = null === (e = V.timestamps) || void 0 === e ? void 0 : e.start,
-                n = (0, g.T_)(null != t ? { start: t } : w, Date.now());
+                n = (0, v.T_)(null != t ? { start: t } : k, Date.now());
             return (0, f.CR)({
                 user: G,
-                channel: k,
+                channel: R,
                 mediaImageSrc: null == O ? void 0 : O.src,
                 artist: U,
                 description: S(
@@ -109,13 +109,13 @@ function M(e) {
                         artist: U,
                         media: D
                     },
-                    k,
+                    R,
                     G
                 ),
                 colors: [z, W],
                 badges: (0, f.jE)({ timestamp: n })
             });
-        }, [V, U, k, w, null == O ? void 0 : O.src, z, W, D, G]);
+        }, [V, U, R, k, null == O ? void 0 : O.src, z, W, D, G]);
     if (null == V || null == B) return null;
     let F = U,
         J = [];
@@ -143,7 +143,7 @@ function M(e) {
                         P.Ll,
                         {
                             onClick: () => {
-                                (0, h.Z)(q, T.kG.USER_ACTIVITY_SYNC), R();
+                                (0, h.Z)(q, T.kG.USER_ACTIVITY_SYNC), w();
                             },
                             IconComponent: s.UserPlayIcon,
                             children: N.intl.string(N.t.eU3inJ)
@@ -154,8 +154,8 @@ function M(e) {
     }
     let K = (0, l.jsx)(P.wG, {
         onClickThumbnail: M,
-        channel: k,
-        entry: w,
+        channel: R,
+        entry: k,
         headerIcons:
             B.media.provider === i.p.SPOTIFY
                 ? (0, l.jsx)(L.Z, {
@@ -164,7 +164,7 @@ function M(e) {
                       Icon: p.Z
                   })
                 : null,
-        userDescription: (0, g.kr)(w) ? N.t.Tzx5Dw : N.t.CcVI1d,
+        userDescription: (0, v.kr)(k) ? N.t.Tzx5Dw : N.t.CcVI1d,
         title: D,
         onClickTitle: _,
         subtitle: F,
@@ -179,7 +179,7 @@ function M(e) {
                     onReaction: b,
                     onVoiceChannelPreview: H,
                     user: G,
-                    channel: k,
+                    channel: R,
                     generateReactionImage: Y,
                     reactionImageAltText:
                         ((n = U),
@@ -188,7 +188,7 @@ function M(e) {
                             username: C.username,
                             activity: n
                         })),
-                    entry: w,
+                    entry: k,
                     buttons: J
                 })
             })
