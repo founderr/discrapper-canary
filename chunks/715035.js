@@ -25,6 +25,9 @@ class o extends (i = r.ZP.DeviceSettingsStore) {
     negativeContentOnly() {
         return !0 === s.negativeContentOnly;
     }
+    filterStaffContent() {
+        return !0 === s.filterStaffContent;
+    }
     getState() {
         return s;
     }
