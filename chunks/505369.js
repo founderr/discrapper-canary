@@ -109,6 +109,13 @@ t.Z = {
                 l.Z.captureException(e);
             }
     },
+    fetchForStatusNotification(e) {
+        if (!!(0, s.rK)('fetchInitialStatus'))
+            r.Z.dispatch({
+                type: 'LOAD_GRAVITY_FROM_NOTIFICATION',
+                customStatusItem: e
+            });
+    },
     async fetchHydrated(e, t, n, a, c) {
         if (!!(0, s.rK)('fetchHydrated')) {
             if (0 === e.length && 0 === t.length && 0 === n.length) {
