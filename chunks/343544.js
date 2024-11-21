@@ -1,32 +1,34 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return u;
     }
 });
 var a = n(200651),
     i = n(192379),
-    s = n(481060),
-    r = n(511010),
-    o = n(126743),
-    l = n(444812);
-function d(e) {
-    let { headerText: t, secondaryHeaderText: n, descriptionText: d, infoRows: c, onDismissAndStay: u, onDismissAndLeave: x, leaveButtonText: _, stayButtonText: m, transitionState: h, impression: f } = e;
-    return (0, a.jsxs)(s.ModalRoot, {
-        transitionState: h,
-        impression: f,
+    s = n(120356),
+    r = n.n(s),
+    o = n(481060),
+    l = n(511010),
+    c = n(126743),
+    d = n(444812);
+function u(e) {
+    let { headerText: t, secondaryHeaderText: n, descriptionText: s, infoRows: u, onDismissAndStay: x, onDismissAndLeave: m, leaveButtonText: _, stayButtonText: h, transitionState: f, impression: g } = e;
+    return (0, a.jsxs)(o.ModalRoot, {
+        transitionState: f,
+        impression: g,
         children: [
             (0, a.jsx)('img', {
                 alt: '',
-                className: o.headerImage,
-                src: l
+                className: c.headerImage,
+                src: d
             }),
-            (0, a.jsxs)(s.ModalHeader, {
+            (0, a.jsxs)(o.ModalHeader, {
                 separator: !1,
-                className: o.header,
+                className: c.header,
                 children: [
-                    (0, a.jsxs)(s.Heading, {
+                    (0, a.jsxs)(o.Heading, {
                         variant: 'heading-lg/bold',
-                        className: o.title,
+                        className: c.title,
                         children: [
                             t,
                             null != n &&
@@ -35,35 +37,35 @@ function d(e) {
                                 })
                         ]
                     }),
-                    null != d &&
-                        (0, a.jsx)(s.Text, {
+                    null != s &&
+                        (0, a.jsx)(o.Text, {
                             variant: 'text-md/medium',
                             color: 'header-secondary',
-                            children: d
+                            children: s
                         })
                 ]
             }),
-            (0, a.jsxs)(s.ModalContent, {
-                className: o.content,
+            (0, a.jsxs)(o.ModalContent, {
+                className: c.content,
                 children: [
                     (0, a.jsx)('div', {
-                        className: o.infoGroup,
-                        children: c.map((e, t) =>
+                        className: c.infoGroup,
+                        children: u.map((e, t) =>
                             (0, a.jsxs)(
                                 i.Fragment,
                                 {
                                     children: [
                                         (0, a.jsxs)('div', {
-                                            className: o.infoRow,
+                                            className: r()(c.infoRow, e.className),
                                             children: [
                                                 e.icon,
-                                                (0, a.jsx)(s.Text, {
+                                                (0, a.jsx)(o.Text, {
                                                     variant: 'text-md/medium',
                                                     children: e.text
                                                 })
                                             ]
                                         }),
-                                        t < c.length - 1 && (0, a.jsx)(r.Z, {})
+                                        t < u.length - 1 && (0, a.jsx)(l.Z, {})
                                     ]
                                 },
                                 t
@@ -71,18 +73,18 @@ function d(e) {
                         )
                     }),
                     (0, a.jsxs)('div', {
-                        className: o.buttonGroup,
+                        className: c.buttonGroup,
                         children: [
-                            (0, a.jsx)(s.Button, {
-                                color: s.Button.Colors.PRIMARY,
-                                onClick: u,
-                                children: m
-                            }),
-                            (0, a.jsx)(s.Button, {
-                                color: s.Button.Colors.BRAND,
-                                size: s.Button.Sizes.MEDIUM,
+                            (0, a.jsx)(o.Button, {
+                                color: o.Button.Colors.PRIMARY,
                                 onClick: x,
-                                className: o.leave,
+                                children: h
+                            }),
+                            (0, a.jsx)(o.Button, {
+                                color: o.Button.Colors.BRAND,
+                                size: o.Button.Sizes.MEDIUM,
+                                onClick: m,
+                                className: c.leave,
                                 children: _
                             })
                         ]
