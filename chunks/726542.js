@@ -153,6 +153,7 @@ let l = [
                 whiteSVG: n(972428)
             },
             enabled: !0,
+            domains: ['reddit.com'],
             getPlatformUserUrl: (e) => {
                 let { name: t } = e;
                 return 'https://www.reddit.com/u/'.concat(encodeURIComponent(t));
@@ -171,6 +172,7 @@ let l = [
                 darkSVG: n(589232),
                 whiteSVG: n(318049)
             },
+            domains: ['facebook.com'],
             enabled: !0
         },
         {
@@ -395,6 +397,7 @@ let l = [
             },
             enabled: !0,
             hasMetadata: !0,
+            domains: ['tiktok.com'],
             getPlatformUserUrl: (e) => {
                 let { name: t } = e;
                 return 'https://www.tiktok.com/@'.concat(encodeURIComponent(t));
@@ -412,6 +415,7 @@ let l = [
                 whiteSVG: n(326720)
             },
             enabled: !1,
+            domains: ['instagram.com'],
             getPlatformUserUrl: (e) => {
                 let { name: t } = e;
                 return 'https://www.instagram.com/'.concat(encodeURIComponent(t));
