@@ -4,32 +4,36 @@ var r = n(200651),
     s = n(194359),
     o = n(367907),
     l = n(138201),
-    u = n(699516),
-    c = n(981631),
-    d = n(388032);
+    u = n(592125),
+    c = n(699516),
+    d = n(5192),
+    f = n(981631),
+    _ = n(388032);
 t.Z = (e) => {
-    let { user: t, reportId: n } = e,
-        { isIgnored: f, isBlocked: _ } = (0, a.cj)(
-            [u.Z],
+    let { user: t, channelId: n, reportId: p } = e,
+        { isIgnored: h, isBlocked: m } = (0, a.cj)(
+            [c.Z],
             () => ({
-                isIgnored: u.Z.isIgnored(t.id),
-                isBlocked: u.Z.isBlocked(t.id)
+                isIgnored: c.Z.isIgnored(t.id),
+                isBlocked: c.Z.isBlocked(t.id)
             }),
             [t]
         ),
-        p = i.useCallback(() => {
-            o.ZP.trackWithMetadata(c.rMx.IAR_IGNORE_USER_BUTTON_CLICKED, {
+        g = (0, a.e7)([u.Z], () => u.Z.getChannel(n), [n]),
+        E = i.useMemo(() => d.ZP.getName(null == g ? void 0 : g.guild_id, null == g ? void 0 : g.id, t), [g, t]),
+        v = i.useCallback(() => {
+            o.ZP.trackWithMetadata(f.rMx.IAR_IGNORE_USER_BUTTON_CLICKED, {
                 other_user_id: t.id,
-                report_id: n
+                report_id: p
             }),
-                s.Z.ignoreUser(t.id, 'web_iar_ignore_user_element');
-        }, [t, n]),
-        h = i.useMemo(() => f || _, [f, _]);
+                s.Z.ignoreUser(t.id, 'web_iar_ignore_user_element', n);
+        }, [t, p, n]),
+        b = i.useMemo(() => h || m, [h, m]);
     return (0, r.jsx)(l.Z, {
-        title: d.intl.formatToPlainString(d.t.U3yyFh, { username: t.username }),
-        description: d.intl.string(d.t.naWE6e),
-        buttonText: h ? d.intl.string(d.t.nDdxOD) : d.intl.string(d.t.ICYEfX),
-        buttonDisabled: h,
-        onButtonPress: p
+        title: _.intl.formatToPlainString(_.t.U3yyFh, { username: E }),
+        description: _.intl.string(_.t.naWE6e),
+        buttonText: b ? _.intl.string(_.t.nDdxOD) : _.intl.string(_.t.ICYEfX),
+        buttonDisabled: b,
+        onButtonPress: v
     });
 };

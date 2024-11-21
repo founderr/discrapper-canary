@@ -66,7 +66,8 @@ t.Z = (e) => {
         [ec, ed] = i.useState(() => ({})),
         [ef, e_] = i.useState(() => ({})),
         [ep, eh] = i.useState((0, c.VP)(en, er, $, J, Q)),
-        em = function (e, t) {
+        em = i.useMemo(() => ('message' === n.name ? n.record.channel_id : void 0), [n]),
+        eg = function (e, t) {
             let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
                 r = { ...ef };
             (r[e] = {
@@ -76,7 +77,7 @@ t.Z = (e) => {
                 e_(r),
                 eh((0, c.VP)(en, er, $, r, ec));
         },
-        eg = i.useMemo(
+        eE = i.useMemo(
             () => (e) => {
                 K({
                     nodeRef: t.id,
@@ -96,21 +97,21 @@ t.Z = (e) => {
     i.useEffect(() => {
         null != Q && ed(Q), null != J && e_(J);
     }, [Q, J]);
-    let eE = (e) => {
+    let ev = (e) => {
             if (e === Z.evJ.INVALID_FORM_BODY) eu(F.intl.string(F.t.VjAAuL));
             else eu(F.intl.string(F.t.h6D8V1));
         },
-        ev = () =>
+        eb = () =>
             q({
                 nodeRef: t.id,
                 destination: ['', e.successNodeId]
             })
                 .then(() => {
-                    eu(''), eg(['', e.successNodeId]);
+                    eu(''), eE(['', e.successNodeId]);
                 })
                 .catch((e) => {
                     var t;
-                    eE(null === (t = e.body) || void 0 === t ? void 0 : t.code);
+                    ev(null === (t = e.body) || void 0 === t ? void 0 : t.code);
                 })
                 .finally(() => {
                     ea(!1);
@@ -124,13 +125,13 @@ t.Z = (e) => {
                 destination: ['', t.id]
             }));
     }, [t.is_auto_submit, es, q, t.id]);
-    let eb = (0, l.fW)(Y),
-        eI = (0, u.A)({
+    let eI = (0, l.fW)(Y),
+        eT = (0, u.A)({
             location: 'web_iar_node_view',
-            settingsUpsells: null != eb ? eb : [],
-            channelId: 'message' === n.name ? n.record.channel_id : void 0
+            settingsUpsells: null != eI ? eI : [],
+            channelId: em
         }),
-        eT = (0, o.Do)({ location: 'web_iar_node_view' }) && null != j(t, 'ignore_users') && ('message' === n.name || 'first_dm' === n.name || 'user' === n.name);
+        eS = (0, o.Do)({ location: 'web_iar_node_view' }) && null != j(t, 'ignore_users') && ('message' === n.name || 'first_dm' === n.name || 'user' === n.name);
     return (0, r.jsxs)('div', {
         className: V.container,
         children: [
@@ -158,22 +159,25 @@ t.Z = (e) => {
                             children: [
                                 (0, r.jsxs)(x.Z, {
                                     children: [
-                                        eT &&
+                                        eS &&
                                             (0, r.jsx)(N.Z, {
                                                 user: 'user' === n.name ? n.record : n.record.author,
+                                                channelId: em,
                                                 reportId: X
                                             }),
                                         null != j(t, 'block_users') &&
                                             ('message' === n.name || 'first_dm' === n.name || 'user' === n.name || ('application' === n.name && null != n.record.bot)) &&
                                             (0, r.jsx)(_.Z, {
                                                 user: 'application' === n.name ? n.record.bot : 'user' === n.name ? n.record : n.record.author,
+                                                channelId: em,
                                                 reportId: X
                                             }),
-                                        !eT &&
+                                        !eS &&
                                             null != j(t, 'mute_users') &&
                                             ('message' === n.name || 'first_dm' === n.name || 'user' === n.name) &&
                                             (0, r.jsx)(L.Z, {
                                                 user: 'user' === n.name ? n.record : n.record.author,
+                                                channelId: em,
                                                 reportId: X
                                             }),
                                         null != j(t, 'delete_message') &&
@@ -206,10 +210,10 @@ t.Z = (e) => {
                         }),
                     null != j(t, 'settings_upsells') &&
                         'message' === n.name &&
-                        null != eb &&
-                        eI &&
+                        null != eI &&
+                        eT &&
                         (0, r.jsx)(M.Z, {
-                            settingsUpsells: eb,
+                            settingsUpsells: eI,
                             channelId: n.record.channel_id,
                             onModalClose: z,
                             reportId: X,
@@ -235,7 +239,7 @@ t.Z = (e) => {
                         er.length > 0 &&
                         (0, r.jsx)(E.Z, {
                             elements: er,
-                            onChange: em,
+                            onChange: eg,
                             state: ef
                         }),
                     ('user_urf' === n.name || 'message_urf' === n.name) &&
@@ -243,12 +247,12 @@ t.Z = (e) => {
                         en.length > 0 &&
                         (0, r.jsx)(I.Z, {
                             elements: en,
-                            onChange: em,
+                            onChange: eg,
                             state: ef
                         }),
                     (0, r.jsx)(h.Z, {
                         node: t,
-                        onSelectChild: eg
+                        onSelectChild: eE
                     }),
                     null != et && et.length > 0 ? (0, r.jsx)(b.Z, { elements: et }) : null,
                     (0, r.jsx)(v.Z, {
@@ -270,10 +274,10 @@ t.Z = (e) => {
                             z();
                             break;
                         case 'next':
-                            eg(['', e.target]);
+                            eE(['', e.target]);
                             break;
                         case 'submit':
-                            ea(!0), ev();
+                            ea(!0), eb();
                     }
                 },
                 onBackClicked: e.onNavigateBack,
