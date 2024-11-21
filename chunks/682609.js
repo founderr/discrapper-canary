@@ -4,33 +4,34 @@ e.r(n),
             return r;
         }
     });
-var a = e(200651);
+var i = e(200651);
 e(192379);
-var i = e(98278),
-    o = e(790527),
+var o = e(98278),
+    a = e(790527),
     c = e(474936),
     d = e(981631),
-    l = e(388032);
+    s = e(388032),
+    l = e(330226);
 function r(t) {
     var n;
-    let { channel: r, onClose: s, ...u } = t,
-        p = l.intl.format(l.t.AVVUsb, {
+    let { channel: e, onClose: r, ...u } = t,
+        p = s.intl.format(s.t.AVVUsb, {
             onLearnMore: function () {
-                s(), (0, i.z)(!0);
+                r(), (0, o.z)(!0);
             }
         });
-    return (0, a.jsx)(o.Z, {
-        artURL: e(330226),
+    return (0, i.jsx)(a.Z, {
+        artURL: l.Z,
         type: c.cd.MESSAGE_LENGTH_UPSELL,
-        title: l.intl.string(l.t.SeL3eX),
+        title: s.intl.string(s.t.SeL3eX),
         body: p,
         glowUp: p,
-        analyticsSource: { page: (null == (n = r) ? void 0 : n.getGuildId()) != null ? d.ZY5.GUILD_CHANNEL : (null == n ? void 0 : n.isGroupDM()) || (null == n ? void 0 : n.isPrivate()) ? d.ZY5.DM_CHANNEL : null },
+        analyticsSource: { page: (null == (n = e) ? void 0 : n.getGuildId()) != null ? d.ZY5.GUILD_CHANNEL : (null == n ? void 0 : n.isGroupDM()) || (null == n ? void 0 : n.isPrivate()) ? d.ZY5.DM_CHANNEL : null },
         analyticsLocation: {
             section: d.jXE.MESSAGE_LENGTH_UPSELL_MODAL,
             object: d.qAy.BUTTON_CTA
         },
-        onClose: s,
+        onClose: r,
         ...u
     });
 }

@@ -1,7 +1,7 @@
 e.r(n),
     e.d(n, {
         default: function () {
-            return S;
+            return p;
         }
     }),
     e(47120);
@@ -11,38 +11,39 @@ var s = e(120356),
     i = e.n(s),
     a = e(704215),
     o = e(100527),
-    u = e(906732),
-    c = e(243778),
+    c = e(906732),
+    u = e(243778),
     b = e(790527),
     d = e(474936),
     E = e(981631),
-    l = e(921944),
-    _ = e(388032),
-    L = e(114831);
-function S(t) {
+    _ = e(921944),
+    l = e(388032),
+    L = e(114831),
+    S = e(746458);
+function p(t) {
     let n,
+        e,
         s,
-        S,
         { upsellType: p, onClose: C, transitionState: g } = t,
         A = p === d.cd.REVERSE_TRIAL_FOLLOWUP_UPSELL,
-        [R, T] = (0, c.US)([a.z.REVERSE_TRIAL_ENDED_UPSELL]);
+        [R, T] = (0, u.US)([a.z.REVERSE_TRIAL_ENDED_UPSELL]);
     return (
-        (0, u.ZP)(o.Z.REVERSE_TRIAL_UPSELL_MODAL),
-        A ? ((n = _.intl.string(_.t.CCMEZW)), (s = _.intl.string(_.t.gFGZZG)), (S = _.intl.string(_.t.J61px8))) : ((n = _.intl.string(_.t.N1JBY2)), (s = _.intl.string(_.t['h5/w39'])), (S = _.intl.string(_.t['8x0jKS']))),
+        (0, c.ZP)(o.Z.REVERSE_TRIAL_UPSELL_MODAL),
+        A ? ((n = l.intl.string(l.t.CCMEZW)), (e = l.intl.string(l.t.gFGZZG)), (s = l.intl.string(l.t.J61px8))) : ((n = l.intl.string(l.t.N1JBY2)), (e = l.intl.string(l.t['h5/w39'])), (s = l.intl.string(l.t['8x0jKS']))),
         (0, r.jsx)(b.Z, {
-            artURL: e(746458),
+            artURL: S.Z,
             artContainerClassName: i()(L.artContainer, { [L.grayArt]: !A }),
             enableArtBoxShadow: !1,
             type: p,
             title: n,
-            body: s,
+            body: e,
             bodyClassName: L.subHeader,
-            glowUp: s,
+            glowUp: e,
             onSubscribeClick: () => {
-                T(l.L.TAKE_ACTION);
+                T(_.L.TAKE_ACTION);
             },
-            backButtonText: _.intl.string(_.t.cpT0Cg),
-            subscribeButtonText: S,
+            backButtonText: l.intl.string(l.t.cpT0Cg),
+            subscribeButtonText: s,
             subscribeButtonClassname: L.subscribeButton,
             useSubscribeButtonGradient: !0,
             hidePremiumOfferUpsell: !0,
@@ -51,7 +52,7 @@ function S(t) {
                 object: E.qAy.BUTTON_CTA
             },
             transitionState: g,
-            onClose: () => (T(l.L.USER_DISMISS), C())
+            onClose: () => (T(_.L.USER_DISMISS), C())
         })
     );
 }
