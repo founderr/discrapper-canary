@@ -63,94 +63,95 @@ function x(e) {
         })
     });
 }
-function w(e, t, n, i, a) {
-    let s, o, l, c;
-    let d = (0, p.Z)(e),
-        { trailingIconClass: f, leadingIconClass: g, iconSize: E } = a,
-        I = null == t || '' === t || (Array.isArray(t) && 0 === t.length),
-        b = (0, v.cv)(d).length > 0,
-        T = null != d.interaction,
-        S = d.hasFlag(R.iLy.IS_VOICE_MESSAGE),
-        A = d.isPoll(),
-        N = d.type === R.uaV.POLL_RESULT;
+function w(e, t, n, i, a, s) {
+    let o, l, c, d;
+    let f = (0, p.Z)(e),
+        { trailingIconClass: g, leadingIconClass: E, iconSize: I } = s,
+        b = null == t || '' === t || (Array.isArray(t) && 0 === t.length),
+        T = (0, v.cv)(f).length > 0,
+        S = null != f.interaction,
+        A = f.hasFlag(R.iLy.IS_VOICE_MESSAGE),
+        N = f.isPoll(),
+        C = f.type === R.uaV.POLL_RESULT;
     if (
         ((0, _.Z)(e) &&
-            (c = (0, r.jsx)(h.Z, {
+            (d = (0, r.jsx)(h.Z, {
                 size: 'custom',
-                className: g,
-                width: E,
-                height: E
+                className: E,
+                width: I,
+                height: I
             })),
         n)
     )
-        s = O.intl.string(O.t.XAkOo6);
-    else if (d.type === R.uaV.CHANNEL_PINNED_MESSAGE) s = O.intl.string(O.t.sCfDDg);
-    else if (I) {
-        if (A) {
-            var C, D;
-            o = null == d ? void 0 : null === (D = d.poll) || void 0 === D ? void 0 : null === (C = D.question) || void 0 === C ? void 0 : C.text;
+        o = O.intl.string(O.t.XAkOo6);
+    else if (i) o = O.intl.string(O.t.G7p6v7);
+    else if (f.type === R.uaV.CHANNEL_PINNED_MESSAGE) o = O.intl.string(O.t.sCfDDg);
+    else if (b) {
+        if (N) {
+            var D, L;
+            l = null == f ? void 0 : null === (L = f.poll) || void 0 === L ? void 0 : null === (D = L.question) || void 0 === D ? void 0 : D.text;
         } else
-            N
-                ? (s = (0, m.N4)(d))
-                : b
-                  ? (s = O.intl.string(O.t.kHdYCQ))
-                  : T
-                    ? (s = O.intl.string(O.t['E+6SSU']))
-                    : S
-                      ? (s = O.intl.string(O.t['XC3A5+']))
-                      : ((s = O.intl.string(O.t['6hGo0d'])),
-                        (l = (0, r.jsx)(u.ImageIcon, {
+            C
+                ? (o = (0, m.N4)(f))
+                : T
+                  ? (o = O.intl.string(O.t.kHdYCQ))
+                  : S
+                    ? (o = O.intl.string(O.t['E+6SSU']))
+                    : A
+                      ? (o = O.intl.string(O.t['XC3A5+']))
+                      : ((o = O.intl.string(O.t['6hGo0d'])),
+                        (c = (0, r.jsx)(u.ImageIcon, {
                             size: 'custom',
                             color: 'currentColor',
-                            className: f,
-                            width: E,
-                            height: E
+                            className: g,
+                            width: I,
+                            height: I
                         })));
     } else
-        o = (0, r.jsx)(y.ZP, {
-            message: d,
+        l = (0, r.jsx)(y.ZP, {
+            message: f,
             content: t,
-            className: i
+            className: a
         });
     return (
-        b
-            ? (l = (0, r.jsx)(u.StickerSmallIcon, {
+        T
+            ? (c = (0, r.jsx)(u.StickerSmallIcon, {
                   size: 'custom',
                   color: 'currentColor',
-                  className: f,
-                  width: E,
-                  height: E
+                  className: g,
+                  width: I,
+                  height: I
               }))
-            : T
-              ? (l = (0, r.jsx)(u.SlashBoxIcon, {
+            : S
+              ? (c = (0, r.jsx)(u.SlashBoxIcon, {
                     size: 'custom',
                     color: 'currentColor',
-                    className: f,
-                    width: E,
-                    height: E
+                    className: g,
+                    width: I,
+                    height: I
                 }))
-              : S
-                ? (l = (0, r.jsx)(u.MicrophoneIcon, {
+              : A
+                ? (c = (0, r.jsx)(u.MicrophoneIcon, {
                       size: 'custom',
                       color: 'currentColor',
-                      className: f,
-                      width: (19 / 24) * E,
-                      height: E
+                      className: g,
+                      width: (19 / 24) * I,
+                      height: I
                   }))
-                : (d.attachments.length > 0 || d.embeds.length > 0) &&
-                  !N &&
-                  (l = (0, r.jsx)(u.ImageIcon, {
+                : (f.attachments.length > 0 || f.embeds.length > 0) &&
+                  !C &&
+                  (c = (0, r.jsx)(u.ImageIcon, {
                       size: 'custom',
                       color: 'currentColor',
-                      className: f,
-                      width: E,
-                      height: E
+                      className: g,
+                      width: I,
+                      height: I
                   })),
         {
-            contentPlaceholder: s,
-            renderedContent: o,
-            trailingIcon: l,
-            leadingIcon: c
+            contentPlaceholder: o,
+            renderedContent: l,
+            trailingIcon: c,
+            leadingIcon: d
         }
     );
 }
@@ -250,46 +251,46 @@ function M(e) {
                   });
         })(e, P),
         B = (function (e, t, n) {
-            let { content: i, referencedMessage: a, isReplyAuthorBlocked: o, onClickReply: l } = e,
-                c = a.state !== g.Y.DELETED ? l : void 0;
+            let { content: i, referencedMessage: a, isReplyAuthorBlocked: o, isReplyAuthorIgnored: l, onClickReply: c } = e,
+                d = a.state !== g.Y.DELETED ? c : void 0;
             switch (a.state) {
                 case g.Y.LOADED: {
                     let {
                         contentPlaceholder: e,
-                        renderedContent: l,
-                        trailingIcon: d,
-                        leadingIcon: f
-                    } = w(a.message, i, o, D.repliedTextContent, {
+                        renderedContent: c,
+                        trailingIcon: f,
+                        leadingIcon: _
+                    } = w(a.message, i, o, l, D.repliedTextContent, {
                         trailingIconClass: D.repliedTextContentTrailingIcon,
                         leadingIconClass: D.repliedTextContentLeadingIcon,
                         iconSize: C.WW
                     });
                     return (0, r.jsxs)(r.Fragment, {
                         children: [
-                            f,
+                            _,
                             (0, r.jsx)(u.Clickable, {
                                 className: s()(D.repliedTextPreview, D.clickable, { [D.repliedMessageClickableSpineHovered]: t }),
-                                onClick: c,
+                                onClick: d,
                                 onMouseEnter: n,
                                 onMouseLeave: n,
                                 children: (0, r.jsx)(u.BlockInteractions, {
                                     children:
-                                        null != l
-                                            ? l
+                                        null != c
+                                            ? c
                                             : (0, r.jsx)('span', {
                                                   className: D.repliedTextPlaceholder,
                                                   children: e
                                               })
                                 })
                             }),
-                            d
+                            f
                         ]
                     });
                 }
                 case g.Y.NOT_LOADED:
                     return (0, r.jsx)(u.Clickable, {
                         className: s()(D.repliedTextPreview, D.clickable),
-                        onClick: c,
+                        onClick: d,
                         children: (0, r.jsx)('span', {
                             className: D.repliedTextPlaceholder,
                             children: O.intl.string(O.t['1i+hMj'])

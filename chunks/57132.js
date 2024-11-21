@@ -1,15 +1,7 @@
+function r() {}
 n.d(t, {
-    PP: function () {
-        return i;
-    },
-    cn: function () {
-        return a;
+    P: function () {
+        return r;
     }
-});
-var r = n(777639);
-function i() {
-    return a() ? (0, r.D)() : void 0;
-}
-function a() {
-    return arguments.length > 0 && void 0 !== arguments[0] && arguments[0], !1;
-}
+}),
+    n(777639);

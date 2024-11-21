@@ -1117,7 +1117,7 @@ let e0 = new e$(m.Z, {
                     manual: !1
                 })
             );
-        let d = (0, y.PP)();
+        let d = (0, y.P)();
         if ((null == d ? void 0 : d.isReady()) === !0) {
             let e = d.getCurrentRoute();
             if (E.Z.getChatOpen(o.channelId)) t = o.channelId;
@@ -1374,8 +1374,7 @@ let e0 = new e$(m.Z, {
             r = null === (t = et.default.getCurrentUser()) || void 0 === t ? void 0 : t.id;
         if (null == r) return !1;
         let i = eL.get(r, eo.W.NOTIFICATION_CENTER);
-        i.lastMessageId = n.id;
-        if ((0, O.Z.active)) {
+        if (((i.lastMessageId = n.id), O.Z.active)) {
             eJ(r, eo.W.NOTIFICATION_CENTER, n.id, !1);
             return;
         }
@@ -1386,9 +1385,8 @@ let e0 = new e$(m.Z, {
         if (null == t || null == e.relationship.since || (e.relationship.type !== er.OGo.PENDING_INCOMING && e.relationship.type !== er.OGo.FRIEND)) return !1;
         let n = eL.get(t.id, eo.W.NOTIFICATION_CENTER),
             r = e.relationship.type === er.OGo.FRIEND,
-            i = r ? new Date(Date.now()).getTime() : new Date(e.relationship.since).getTime(),
-            a = null != n.ackMessageId ? V.default.extractTimestamp(n.ackMessageId) : 0;
-        a < i && ((n.lastMessageId = V.default.fromTimestamp(i)), (0, O.Z.active) ? eJ(t.id, eo.W.NOTIFICATION_CENTER, void 0, !1) : r ? n.mentionCount-- : n.mentionCount++);
+            i = r ? new Date(Date.now()).getTime() : new Date(e.relationship.since).getTime();
+        (null != n.ackMessageId ? V.default.extractTimestamp(n.ackMessageId) : 0) < i && ((n.lastMessageId = V.default.fromTimestamp(i)), O.Z.active ? eJ(t.id, eo.W.NOTIFICATION_CENTER, void 0, !1) : r ? n.mentionCount-- : n.mentionCount++);
     },
     RELATIONSHIP_REMOVE: function (e) {
         let t = et.default.getCurrentUser();
