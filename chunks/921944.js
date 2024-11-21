@@ -15,6 +15,7 @@ n.d(t, {
     (a.TAKE_ACTION = 'take_action'),
     (a.USER_DISMISS = 'user_dismiss'),
     (a.USER_DISMISS_ALL = 'user_dismiss_all'),
+    (a.INDIRECT_ACTION = 'indirect_action'),
     (a.UNKNOWN = 'unknown'),
     ((s = i || (i = {})).GUILD_HEADER_TOOLTIPS = 'GUILD_HEADER_TOOLTIPS'),
     (s.CHANNEL_NOTICES = 'CHANNEL_NOTICES'),
