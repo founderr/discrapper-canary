@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return h;
+        return b;
     }
 });
 var i = t(200651),
@@ -16,8 +16,8 @@ var i = t(200651),
     f = t(781780),
     p = t(325749),
     v = t(981631),
-    b = t(466127);
-function h() {
+    h = t(466127);
+function b() {
     var e;
     let { embeddedActivity: n, channelId: t } = (0, a.cj)([_.ZP], () => {
             let e = _.ZP.getCurrentEmbeddedActivity(),
@@ -27,34 +27,34 @@ function h() {
                 channelId: n
             };
         }),
-        h = (0, c.Z)(n);
+        b = (0, c.Z)(n);
     o.useEffect(() => {
-        null != h && null == n && (0, s.xv)(v.KJ3.ACTIVITY_POPOUT);
-    }, [n, h]);
+        null != b && null == n && (0, s.xv)(v.KJ3.ACTIVITY_POPOUT);
+    }, [n, b]);
     let m = (0, a.e7)([l.Z], () => {
             let e = null == n ? void 0 : n.applicationId;
             return null == e ? void 0 : l.Z.getApplication(e);
         }),
         C = (0, u.PR)();
     return (0, i.jsx)('div', {
-        className: b.container,
+        className: h.container,
         children:
             null == n || null == m || null == t
-                ? (0, i.jsx)(r.Spinner, { className: b.iframe })
+                ? (0, i.jsx)(r.Spinner, { className: h.iframe })
                 : (0, i.jsx)('div', {
-                      className: b.loadedContentContainer,
+                      className: h.loadedContentContainer,
                       children: (0, i.jsxs)('div', {
-                          className: b.iframeAndHeaderContainer,
+                          className: h.iframeAndHeaderContainer,
                           children: [
                               (0, i.jsx)('div', {
-                                  className: b.headerContainer,
+                                  className: h.headerContainer,
                                   children: (0, i.jsx)(p.Z, {
                                       applicationId: m.id,
                                       channelId: t
                                   })
                               }),
                               (0, i.jsx)('div', {
-                                  className: b.iframeContainer,
+                                  className: h.iframeContainer,
                                   children: (0, i.jsx)(f.Z, {
                                       channelId: t,
                                       guildId: null !== (e = n.guildId) && void 0 !== e ? e : void 0,

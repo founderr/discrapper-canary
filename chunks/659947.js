@@ -29,10 +29,10 @@ function _(e) {
     let { height: t } = e;
     return (0, i.jsx)('div', { style: { height: t } });
 }
-function f() {
+function I() {
     return (0, i.jsx)(_, { height: 16 }, 'footer');
 }
-function I() {
+function f() {
     return (0, i.jsx)(_, { height: 8 }, 'header');
 }
 function N() {
@@ -254,8 +254,8 @@ function b(e) {
                                 s.id
                             );
                         },
-                        renderListHeader: I,
-                        renderFooter: f,
+                        renderListHeader: f,
+                        renderFooter: I,
                         sectionHeight: 0,
                         rowHeight: 34,
                         className: S.voiceChannelList,

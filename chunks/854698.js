@@ -3,7 +3,7 @@ n.d(t, {
         return H;
     },
     DK: function () {
-        return B;
+        return G;
     },
     G3: function () {
         return _;
@@ -21,7 +21,7 @@ n.d(t, {
         return U;
     },
     Rp: function () {
-        return G;
+        return B;
     },
     Uq: function () {
         return M;
@@ -228,13 +228,13 @@ function U(e, t, n) {
     }
     return i;
 }
-function B(e) {
+function G(e) {
     var t;
     if (null == e) return null;
     let n = null == (t = e).recurrence_rule ? null : new Date(t.scheduled_start_time);
     return null != n ? u.default.fromTimestamp(Math.floor(n.getTime() / l.Z.Millis.SECOND) * l.Z.Millis.SECOND) : null;
 }
-function G(e, t) {
+function B(e, t) {
     if (null == t || null == e) return !1;
     let n = new Date(e.start),
         r = new Date(u.default.extractTimestamp(t));

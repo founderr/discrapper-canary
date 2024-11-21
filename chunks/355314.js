@@ -52,21 +52,21 @@ function C(e) {
                   src: 'https://cdn.discordapp.com/assets/premium/roadblocks/file_upload_'.concat(k, '_v2.png')
               })
             : (0, r.jsx)(o.Z, { icons: y.J6 }),
-        B = i.useMemo(() => {
+        G = i.useMemo(() => {
             let e = m.ZP.getUserMaxFileSize(C);
             return (0, _.BU)(e / 1024, { useKibibytes: !0 });
         }, [C]),
-        G = i.useMemo(() => {
-            let e = A.intl.formatToPlainString(A.t.q5fTZm, { maxSize: B });
+        B = i.useMemo(() => {
+            let e = A.intl.formatToPlainString(A.t.q5fTZm, { maxSize: G });
             switch (O) {
                 case T.p9.TIER_0:
-                    e = A.intl.formatToPlainString(A.t['/DXKen'], { maxSize: B });
+                    e = A.intl.formatToPlainString(A.t['/DXKen'], { maxSize: G });
                     break;
                 case T.p9.TIER_1:
-                    e = A.intl.formatToPlainString(A.t['Kf/MPD'], { maxSize: B });
+                    e = A.intl.formatToPlainString(A.t['Kf/MPD'], { maxSize: G });
             }
             return e;
-        }, [O, B]),
+        }, [O, G]),
         Z = (0, _.BU)(T.Uq / 1024, { useKibibytes: !0 }),
         F = M ? A.intl.string(A.t['9C+41t']) : A.intl.string(A.t['/tGlcn']),
         V = P
@@ -90,7 +90,7 @@ function C(e) {
             : (0, r.jsxs)('div', {
                   className: N.body,
                   children: [
-                      (0, r.jsx)('span', { children: G }),
+                      (0, r.jsx)('span', { children: B }),
                       (0, r.jsx)(s.Text, {
                           variant: 'text-md/medium',
                           children: V
@@ -104,7 +104,7 @@ function C(e) {
         type: T.cd.UPLOAD_ERROR_UPSELL,
         title: F,
         body: j,
-        context: A.intl.formatToPlainString(A.t.q5fTZm, { maxSize: B }),
+        context: A.intl.formatToPlainString(A.t.q5fTZm, { maxSize: G }),
         glowUp: V,
         analyticsLocation: { section: S.jXE.FILE_UPLOAD_POPOUT },
         onClose: t,

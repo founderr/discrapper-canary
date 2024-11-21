@@ -42,8 +42,8 @@ var i,
     P = n(581883),
     k = n(131704),
     U = n(386438),
-    B = n(70956),
-    G = n(630388),
+    G = n(70956),
+    B = n(630388),
     Z = n(823379),
     F = n(931619),
     V = n(709054),
@@ -90,7 +90,7 @@ let ec = er.S7T.VIEW_CHANNEL | er.S7T.READ_MESSAGE_HISTORY,
     em = !1,
     eg = null,
     eE = {},
-    ev = 30 * B.Z.Millis.DAY;
+    ev = 30 * G.Z.Millis.DAY;
 function eI() {
     return V.default.fromTimestamp(Date.now() - ev);
 }
@@ -98,12 +98,12 @@ let eb = 0,
     eT = 0,
     eS = null;
 function ey() {
-    (eb = Date.now() - 7 * B.Z.Millis.DAY),
-        (eT = Date.now() - 3 * B.Z.Millis.DAY),
+    (eb = Date.now() - 7 * G.Z.Millis.DAY),
+        (eT = Date.now() - 3 * G.Z.Millis.DAY),
         clearTimeout(eS),
         (eS = setTimeout(() => {
             m.Z.dispatch({ type: 'DECAY_READ_STATES' });
-        }, 1 * B.Z.Millis.HOUR));
+        }, 1 * G.Z.Millis.HOUR));
 }
 function eA(e) {
     if (null == e) return 0;
@@ -662,7 +662,7 @@ class eL {
         return (this._isActiveThread !== n || this._isJoinedThread !== r) && ((this._isActiveThread = n), (this._isJoinedThread = r), !0);
     }
     recordLastViewedTime() {
-        let e = Math.ceil((Date.now() - V.DISCORD_EPOCH) / B.Z.Millis.DAY);
+        let e = Math.ceil((Date.now() - V.DISCORD_EPOCH) / G.Z.Millis.DAY);
         e !== this.lastViewed &&
             ((this.lastViewed = e),
             this.canTrackUnreads() &&
@@ -689,7 +689,7 @@ function ew(e) {
         if ((0, k.Em)(e.type)) {
             var t;
             let n = eL.get(e.id);
-            (n.lastMessageId = e.last_message_id), (n.lastPinTimestamp = eA(e.last_pin_timestamp)), (n._isResourceChannel = (0, G.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, ea.zZ.IS_GUILD_RESOURCE_CHANNEL)), k.Ec.has(e.type) && n.syncThreadSettings();
+            (n.lastMessageId = e.last_message_id), (n.lastPinTimestamp = eA(e.last_pin_timestamp)), (n._isResourceChannel = (0, B.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, ea.zZ.IS_GUILD_RESOURCE_CHANNEL)), k.Ec.has(e.type) && n.syncThreadSettings();
         }
     });
 }
@@ -759,12 +759,12 @@ function ek(e) {
 function eU(e, t) {
     return !!(e.mentionCount > 0) || (!(V.default.compare(e.channelId, t) > 0 || (null != e._ackMessageId && V.default.compare(e._ackMessageId, t) > 0) || (null != e._lastMessageId && V.default.compare(e._lastMessageId, t) > 0)) && !0);
 }
-function eB(e) {
+function eG(e) {
     if (null == e) return !1;
     let t = eL.get(e);
     return !!eD(t) && t.ack({});
 }
-function eG() {
+function eB() {
     null != eg && clearTimeout(eg);
 }
 let eZ = (0, u.throttle)((e) => {
@@ -813,7 +813,7 @@ function eW(e) {
 function eK() {
     let e = H.ZP.getCurrentSidebarChannelId(ed),
         t = !1;
-    return ef !== e ? ((t = eq(ef)), (ef = e)) : (t = eB(e) || t), t;
+    return ef !== e ? ((t = eq(ef)), (ef = e)) : (t = eG(e) || t), t;
 }
 function ez(e) {
     if (null != e) eL.get(e).isManualAck = !1;
@@ -1039,7 +1039,7 @@ let e0 = new e$(m.Z, {
         ex(a),
         r))
             ex(null !== (n = e.channels) && void 0 !== n ? n : []), eF(e), eM(e);
-        eG(),
+        eB(),
             (eg = setTimeout(
                 () =>
                     (function (e) {
@@ -1051,14 +1051,14 @@ let e0 = new e$(m.Z, {
                             i.shouldDeleteReadState(t) && eZ(i);
                         }
                     })(s.entries),
-                10 * B.Z.Millis.SECOND
+                10 * G.Z.Millis.SECOND
             ));
     },
     CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
         let { lazyPrivateChannels: t } = e;
         ex(t);
     },
-    LOGOUT: eG,
+    LOGOUT: eB,
     OVERLAY_INITIALIZE: function (e) {
         let { readStates: t, selectedChannelId: n } = e;
         ey(),
@@ -1195,7 +1195,7 @@ let e0 = new e$(m.Z, {
         }
         ez(ed), ez(ef);
         let a = !1;
-        return ed !== t && ((a = eq(ed) || a), (a = eq(ef) || a)), (ed === t || ((null == r ? void 0 : r.type) != null && er.TPd.GUILD_THREADS_ONLY.has(r.type))) && (a = eB(t) || a), ed === t && (a = eB(n) || a), (ed = t), (ef = n), a;
+        return ed !== t && ((a = eq(ed) || a), (a = eq(ef) || a)), (ed === t || ((null == r ? void 0 : r.type) != null && er.TPd.GUILD_THREADS_ONLY.has(r.type))) && (a = eG(t) || a), ed === t && (a = eG(n) || a), (ed = t), (ef = n), a;
     },
     VOICE_CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
@@ -1265,13 +1265,13 @@ let e0 = new e$(m.Z, {
                     (function (e, t) {
                         if (null == e) return !1;
                         let n = eL.get(e);
-                        return !t && !n.hasUnread() && (n.oldestUnreadMessageIdStale = !0), eB(e);
+                        return !t && !n.hasUnread() && (n.oldestUnreadMessageIdStale = !0), eG(e);
                     })(n, e.focused) || t);
         return t;
     },
     UPDATE_CHANNEL_DIMENSIONS: function (e) {
         let { channelId: t } = e;
-        return eB(t);
+        return eG(t);
     },
     CURRENT_USER_UPDATE: function () {
         e_ = null;
@@ -1284,7 +1284,7 @@ let e0 = new e$(m.Z, {
         return !1;
     },
     DRAWER_CLOSE: function () {
-        return eB(ed);
+        return eG(ed);
     },
     BULK_ACK: function (e) {
         var t, n, r;
@@ -1314,7 +1314,7 @@ let e0 = new e$(m.Z, {
     },
     ENABLE_AUTOMATIC_ACK: function (e) {
         let { channelId: t, windowId: n } = e;
-        return eE[t] !== n && (l()(void 0 === eE[t], 'handleEnableAutomaticAck: channel already visible in another window'), (eE[t] = n), eB(t));
+        return eE[t] !== n && (l()(void 0 === eE[t], 'handleEnableAutomaticAck: channel already visible in another window'), (eE[t] = n), eG(t));
     },
     DISABLE_AUTOMATIC_ACK: function (e) {
         let { channelId: t } = e;
@@ -1362,7 +1362,7 @@ let e0 = new e$(m.Z, {
     },
     RESORT_THREADS: function (e) {
         let { channelId: t } = e;
-        return eB(t);
+        return eG(t);
     },
     CHANNEL_RTC_UPDATE_CHAT_OPEN: function (e) {
         let { channelId: t, chatOpen: n } = e;
@@ -1429,7 +1429,7 @@ let e0 = new e$(m.Z, {
     },
     TRY_ACK: function (e) {
         let { channelId: t } = e;
-        return eB(t);
+        return eG(t);
     },
     MESSAGE_REQUEST_ACK: function (e) {
         var t;

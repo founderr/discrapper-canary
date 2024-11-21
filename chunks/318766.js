@@ -67,10 +67,10 @@ t.Z = function (e) {
             let e = Math.floor(77 * Math.random());
             D(!0), x(e), (0, _.x)(v.qR.EmojiButtonMouseEntered);
         }, [M, D, x]),
-        B = i.useCallback(() => {
+        G = i.useCallback(() => {
             D(!1);
         }, [D]),
-        G = i.useCallback(() => (0, _.x)(v.qR.EmojiButtonFocused), []),
+        B = i.useCallback(() => (0, _.x)(v.qR.EmojiButtonFocused), []),
         [Z, F] = (0, f.US)(w ? [u.z.TRIAL_FOR_ALL_EMOJI_BUTTON] : [], void 0, !0),
         V = Z === u.z.TRIAL_FOR_ALL_EMOJI_BUTTON,
         j = (0, l.e7)([d.Z], () => d.Z.useReducedMotion);
@@ -94,9 +94,9 @@ t.Z = function (e) {
                 onMouseOver: U,
                 onMouseLeave: () => {
                     var t;
-                    B(), null === (t = e.onMouseLeave) || void 0 === t || t.call(e), V && F(E.L.USER_DISMISS);
+                    G(), null === (t = e.onMouseLeave) || void 0 === t || t.call(e), V && F(E.L.USER_DISMISS);
                 },
-                onFocus: G,
+                onFocus: B,
                 onClick: (t) => {
                     var n;
                     null == N || N(t), null === (n = e.onClick) || void 0 === n || n.call(e);

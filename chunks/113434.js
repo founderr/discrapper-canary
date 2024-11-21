@@ -45,13 +45,13 @@ n.d(t, {
         return en;
     },
     bA: function () {
-        return B;
+        return G;
     },
     e5: function () {
         return i;
     },
     eN: function () {
-        return G;
+        return B;
     },
     eQ: function () {
         return ed;
@@ -149,7 +149,7 @@ function U(e, t, n) {
     return e.localeCompare(t) * (0 === n ? -1 : 1);
 }
 ((s = r || (r = {}))[(s.DESC = 0)] = 'DESC'), (s[(s.ASC = 1)] = 'ASC');
-function B(e) {
+function G(e) {
     let { quests: t, isFetchingCurrentQuests: n } = k({ fetchPolicy: 'cache-and-network' }),
         r = new Map(t.map((e) => [e.id, e])),
         i = (function (e) {
@@ -212,7 +212,7 @@ function B(e) {
         isFetchingCurrentQuests: n
     };
 }
-function G() {
+function B() {
     let e = u.useRef(!1),
         t = (0, p.Wu)([y.Z], () => Array.from(y.Z.claimedQuests.values())),
         n = (0, p.e7)([y.Z], () => y.Z.isFetchingClaimedQuests);

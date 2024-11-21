@@ -114,7 +114,7 @@ n.d(t, {
         return em;
     },
     he: function () {
-        return eB;
+        return eG;
     },
     if: function () {
         return eN;
@@ -205,8 +205,8 @@ let k = {
         PAYMENT_SOURCE_MANAGEMENT: 'https://play.google.com/store/paymentmethods',
         BILLING_HISTORY: 'https://play.google.com/store/account/orderhistory'
     },
-    B = new _.Z('PremiumUtils.tsx'),
-    G = {
+    G = new _.Z('PremiumUtils.tsx'),
+    B = {
         [w.Xh.NONE_MONTH]: [w.Xh.NONE_YEAR, w.Xh.PREMIUM_YEAR_TIER_2, w.Xh.PREMIUM_MONTH_TIER_2, w.Xh.PREMIUM_YEAR_TIER_1, w.Xh.PREMIUM_MONTH_TIER_1],
         [w.Xh.NONE_YEAR]: [w.Xh.PREMIUM_YEAR_TIER_2, w.Xh.PREMIUM_MONTH_TIER_2, w.Xh.PREMIUM_YEAR_TIER_1, w.Xh.PREMIUM_MONTH_TIER_1],
         [w.Xh.PREMIUM_MONTH_TIER_0]: [w.Xh.PREMIUM_YEAR_TIER_2, w.Xh.PREMIUM_MONTH_TIER_2, w.Xh.PREMIUM_YEAR_TIER_1, w.Xh.PREMIUM_MONTH_TIER_1, w.Xh.PREMIUM_YEAR_TIER_0],
@@ -242,7 +242,7 @@ function V(e) {
                     paymentSourceId: t,
                     purchaseType: n
                 });
-            return (0 === i.length && B.warn('No prices found for planId: '.concat(e, ', paymentSourceId: ').concat(t, ', purchaseType: ').concat(n)), null != r) ? i.find((e) => e.currency === r) : i[0];
+            return (0 === i.length && G.warn('No prices found for planId: '.concat(e, ', paymentSourceId: ').concat(t, ', purchaseType: ').concat(n)), null != r) ? i.find((e) => e.currency === r) : i[0];
         })(e, {
             paymentSourceId: i,
             purchaseType: r,
@@ -298,13 +298,13 @@ function j(e) {
             }
             if (null == n.prices) throw Error('No prices returned for '.concat(e, ', is your user in the experiment?'));
             let r = n.prices[t];
-            if (null == r) throw (B.info('Purchase types: '.concat(JSON.stringify(Object.keys(n.prices)))), Error('No prices returned for purchase type '.concat(t, ' for plan ').concat(e)));
+            if (null == r) throw (G.info('Purchase types: '.concat(JSON.stringify(Object.keys(n.prices)))), Error('No prices returned for purchase type '.concat(t, ' for plan ').concat(e)));
             return r;
         })(e, n);
     if (null != t) {
         let i = r.paymentSourcePrices[t];
         if (null == i) {
-            B.info('Payment sources IDs: '.concat(JSON.stringify(Object.keys(r.paymentSourcePrices)))), B.info('prices: '.concat(i));
+            G.info('Payment sources IDs: '.concat(JSON.stringify(Object.keys(r.paymentSourcePrices)))), G.info('prices: '.concat(i));
             let a = Error('Missing prices for payment source on subscription plan');
             (0, S.q2)(a, {
                 extra: { paymentSourceId: t },
@@ -316,7 +316,7 @@ function j(e) {
         } else if (0 !== i.length) return i;
     }
     if (null == r.countryPrices.prices) {
-        B.info('countryPrices: '.concat(JSON.stringify(r.countryPrices)));
+        G.info('countryPrices: '.concat(JSON.stringify(r.countryPrices)));
         let t = Error('Missing prices for country');
         throw (
             ((0, S.q2)(t, {
@@ -482,7 +482,7 @@ function $(e) {
     var t, n, r, i, a, s, o, l, u, d;
     let { subscription: _, planId: p, price: h, includePremiumGuilds: m, hasDiscountApplied: g, activeDiscountInfo: v, renewalInvoicePreview: I, hasFractionalPremiumWithSub: b } = e,
         T = w.GP[p],
-        S = eG(F(T.id), T.interval),
+        S = eB(F(T.id), T.interval),
         A = eE(_) || (null == _.paymentSourceId && !_.isPurchasedExternally && !(null === (t = E.default.getCurrentUser()) || void 0 === t ? void 0 : t.hasFreePremium())),
         N = null != h,
         C = _.status === L.O0b.UNPAID && null !== _.latestInvoice && (null === (n = _.latestInvoice) || void 0 === n ? void 0 : n.status) === L.hUK.OPEN,
@@ -543,11 +543,11 @@ function $(e) {
                 case L.O0b.UNPAID:
                     return P.intl.format(P.t.McIzws, {});
                 case L.O0b.PAUSE_PENDING:
-                    let B = null != _.pauseEndsAt ? c()(_.pauseEndsAt).diff(_.currentPeriodEnd, 'days') : null;
-                    return null != B
+                    let G = null != _.pauseEndsAt ? c()(_.pauseEndsAt).diff(_.currentPeriodEnd, 'days') : null;
+                    return null != G
                         ? P.intl.format(P.t.WUfODw, {
                               pauseDate: _.currentPeriodEnd,
-                              pauseDuration: B
+                              pauseDuration: G
                           })
                         : P.intl.format(P.t.VlWufn, { pauseDate: _.currentPeriodEnd });
                 case L.O0b.PAUSED:
@@ -595,11 +595,11 @@ function $(e) {
                 case L.O0b.UNPAID:
                     return P.intl.format(P.t['0HopYW'], { num: D });
                 case L.O0b.PAUSE_PENDING:
-                    let G = null != _.pauseEndsAt ? c()(_.pauseEndsAt).diff(_.currentPeriodEnd, 'days') : null;
-                    return null != G
+                    let B = null != _.pauseEndsAt ? c()(_.pauseEndsAt).diff(_.currentPeriodEnd, 'days') : null;
+                    return null != B
                         ? P.intl.format(P.t.WUfODw, {
                               pauseDate: _.currentPeriodEnd,
-                              pauseDuration: G
+                              pauseDuration: B
                           })
                         : P.intl.format(P.t.VlWufn, { pauseDate: _.currentPeriodEnd });
                 case L.O0b.PAUSED:
@@ -735,7 +735,7 @@ function er(e) {
 }
 function ei(e) {
     var t;
-    return null == e ? G.ALL : null !== (t = G[e]) && void 0 !== t ? t : [];
+    return null == e ? B.ALL : null !== (t = B[e]) && void 0 !== t ? t : [];
 }
 function ea(e) {
     let t = b.Z.getPlanIdsForSkus([eZ(w.Si.GUILD)]);
@@ -1137,13 +1137,13 @@ function eU(e) {
     let t = null != e ? Z(e) : null;
     return null != t ? er(t.planId) : null;
 }
-function eB(e) {
+function eG(e) {
     if (null != e) {
         let t = Z(e);
         if (null != t) return K(t.planId);
     }
 }
-function eG(e, t) {
+function eB(e, t) {
     let n = (0, D.T4)(e.amount, e.currency),
         r = W(t);
     return ''.concat(n, '/').concat(r);
@@ -1391,7 +1391,7 @@ t.ZP = Object.freeze({
         return null != e && null == Z(e) && null != ek(e);
     },
     getPremiumSkuIdForSubscription: eU,
-    getPremiumTypeFromSubscription: eB,
+    getPremiumTypeFromSubscription: eG,
     getPremiumTypeFromSubscriptionRenewalMutations: function (e) {
         if (null != e && null != e.renewalMutations) {
             let t = Z(e.renewalMutations);
@@ -1485,6 +1485,6 @@ t.ZP = Object.freeze({
     canUseCustomNotificationSounds: function (e) {
         return (0, h.ks)(h.qH, e);
     },
-    formatPriceString: eG,
+    formatPriceString: eB,
     StreamQuality: i
 });

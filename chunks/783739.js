@@ -22,8 +22,8 @@ var i = n(200651),
     C = n(901750),
     E = n(112863),
     _ = n(701157),
-    f = n(912152),
-    I = n(615603),
+    I = n(912152),
+    f = n(615603),
     N = n(474936),
     A = n(20154);
 function b(e) {
@@ -54,7 +54,7 @@ function b(e) {
                 canAddBoosts: k
             }),
             F === N.a$.NONE &&
-                (0, i.jsx)(f.Z, {
+                (0, i.jsx)(I.Z, {
                     hasAppliedGuildBoosts: B,
                     hasBoostPerk: w,
                     hasGuildAffinitiesOrInGuild: P,
@@ -75,7 +75,7 @@ function b(e) {
                       guildBoostSlots: n,
                       premiumSubscription: t
                   }),
-            (0, i.jsx)(I.Z, { guildBoostSlots: b }),
+            (0, i.jsx)(f.Z, { guildBoostSlots: b }),
             (0, i.jsx)(_.Z, {
                 canAddBoosts: B && k,
                 canApplyBoosts: L

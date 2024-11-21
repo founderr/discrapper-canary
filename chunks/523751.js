@@ -222,8 +222,8 @@ function D(e) {
         );
     if (k === T.Q.NONE) return null;
     if (k === T.Q.CLAN) {
-        var B;
-        let e = (0, d.ky)(a.id, null === (B = a.clan) || void 0 === B ? void 0 : B.badge, D);
+        var G;
+        let e = (0, d.ky)(a.id, null === (G = a.clan) || void 0 === G ? void 0 : G.badge, D);
         return null == e
             ? null
             : (0, r.jsx)(c.Tooltip, {
@@ -247,8 +247,8 @@ function D(e) {
                       })
               });
     }
-    let { IconComponent: G, backgroundDarkColor: Z, backgroundLightColor: F, foregroundDarkColor: V, foregroundLightColor: j, premiumBackgroundColor: H, premiumForegroundColor: Y, sizeAdjustment: W } = C[k];
-    if (null == G) return null;
+    let { IconComponent: B, backgroundDarkColor: Z, backgroundLightColor: F, foregroundDarkColor: V, foregroundLightColor: j, premiumBackgroundColor: H, premiumForegroundColor: Y, sizeAdjustment: W } = C[k];
+    if (null == B) return null;
     P.premium && ((t = Y), (n = H));
     let K = (0, u.wj)(M) ? V : j,
         z = (0, u.wj)(M) ? Z : F;
@@ -274,7 +274,7 @@ function D(e) {
                     color: null != n ? n : R,
                     stroke: A,
                     size: D,
-                    children: (0, r.jsx)(G, {
+                    children: (0, r.jsx)(B, {
                         size: 'custom',
                         width: q,
                         height: q,

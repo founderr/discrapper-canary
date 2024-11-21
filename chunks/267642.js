@@ -42,7 +42,7 @@ n.d(t, {
         return x;
     },
     gZ: function () {
-        return G;
+        return B;
     },
     ge: function () {
         return O;
@@ -108,7 +108,7 @@ Object.freeze({
 let v = [m.Eu4.NONE, m.Eu4.TIER_1, m.Eu4.TIER_2, m.Eu4.TIER_3],
     I = (e, t) => {
         var n;
-        return e === m.Eu4.NONE ? m.Eu4.TIER_1 : null === (n = B(t).find((t) => t.tier === e)) || void 0 === n ? void 0 : n.nextTier;
+        return e === m.Eu4.NONE ? m.Eu4.TIER_1 : null === (n = G(t).find((t) => t.tier === e)) || void 0 === n ? void 0 : n.nextTier;
     },
     b = (e, t) => (null != t && t.hasFeature(m.oNc.MORE_STICKERS) && e === m.Eu4.TIER_3 ? l.D.MAX_STICKER_SLOTS : g.$8[e]),
     T = (e) => g.pH[e],
@@ -328,7 +328,7 @@ let R = s().memoize((e) => (g.HO[m.Eu4.TIER_1].features.includes(e) ? m.Eu4.TIER
         return null;
     };
 function D(e, t) {
-    for (let n of B(t)) if (e >= n.amount) return n.tier;
+    for (let n of G(t)) if (e >= n.amount) return n.tier;
     return m.Eu4.NONE;
 }
 function L(e, t) {
@@ -410,7 +410,7 @@ function k(e, t) {
 function U(e) {
     return m.oCV;
 }
-function B(e) {
+function G(e) {
     let t = U(e);
     return [
         {
@@ -430,7 +430,7 @@ function B(e) {
         }
     ];
 }
-function G(e, t) {
+function B(e, t) {
     let n = k(e, t);
     if (n > 0) {
         let t = e.sort((e, t) => (null != e.endsAt && null != t.endsAt ? e.endsAt.getTime() - t.endsAt.getTime() : -1)).filter((e) => null != e.endsAt);

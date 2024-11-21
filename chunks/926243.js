@@ -68,7 +68,7 @@ let T = (e, t) => ''.concat(e, ':').concat(t),
     });
 function y(e) {
     let { descriptor: t, emojiItemKey: a, isInspected: s, rowIndex: f, channelGuildId: p, onInspect: g, onSelect: v, isScrolling: b, isUsingKeyboardNavigation: y, showEmojiFavoriteTooltip: A, surrogateCodePoint: N, selectedItemClassName: C, getEmojiItemProps: R, isMediumSize: O, isLargeSize: D, pulseItemKey: L, allowAnimatedEmoji: x, setPulseItemKey: w, messageId: M, isBurstReaction: P, rowPosition: k, inNitroLockedSection: U } = e,
-        [B, G] = i.useState(''),
+        [G, B] = i.useState(''),
         Z = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
         F = (0, o.e7)([d.ZP], () => d.ZP.getDisambiguatedEmojiContext(p), [p]),
         V = i.useRef(null),
@@ -103,7 +103,7 @@ function y(e) {
                     key: a,
                     ref: V
                 },
-                B !== T(W, f) &&
+                G !== T(W, f) &&
                     (0, r.jsx)(S, {
                         ref: o,
                         emoji: j,
@@ -122,7 +122,7 @@ function y(e) {
                             if (null != V.current && null != k && null != M && !e.shiftKey && null != j.name && P && !Z && x) {
                                 let e = null == j.id ? _.ZP.convertNameToSurrogate(j.name) : j.name,
                                     t = V.current.getBoundingClientRect();
-                                (t.x = k.x + (W + 1) * H), G(T(W, f)), (0, m.U)(M, e, j.id, t);
+                                (t.x = k.x + (W + 1) * H), B(T(W, f)), (0, m.U)(M, e, j.id, t);
                             }
                             K(e);
                         },

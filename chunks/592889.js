@@ -23,13 +23,13 @@ var i = n(200651),
     C = n(74538),
     E = n(937615),
     _ = n(388032),
-    f = n(569884);
-function I(e) {
+    I = n(569884);
+function f(e) {
     let { subscription: t, renewalMutations: n, transitionState: s, onClose: r, analyticsLocation: l } = e,
         a = (0, c.e7)([x.Z], () => x.Z.theme),
-        { analyticsLocations: I } = (0, g.ZP)(h.Z.SUBSCRIPTION_CANCEL_DOWNGRADE_MODAL);
+        { analyticsLocations: f } = (0, g.ZP)(h.Z.SUBSCRIPTION_CANCEL_DOWNGRADE_MODAL);
     async function N() {
-        await (0, m.dP)(t, t.planId, I, l), r();
+        await (0, m.dP)(t, t.planId, f, l), r();
     }
     let A = T.Z.get(t.planId);
     o()(null != A, 'Missing subscriptionPlan');
@@ -54,7 +54,7 @@ function I(e) {
                 ]
             }),
             (0, i.jsx)(u.ModalContent, {
-                className: f.modalBody,
+                className: I.modalBody,
                 children: (0, S.Q0)(t.planId)
                     ? _.intl.format(_.t.GMp54O, {
                           downgradedPlan: C.ZP.getDisplayName(n.planId),
@@ -87,17 +87,17 @@ function N(e) {
     let { subscription: t, renewalMutations: n, className: r, analyticsLocation: a } = e,
         [o, c] = s.useState(!1);
     return (0, i.jsxs)('div', {
-        className: l()(f.root, r),
+        className: l()(I.root, r),
         children: [
             (0, i.jsx)(u.CircleWarningIcon, {
                 size: 'custom',
                 width: 20,
                 height: 20,
                 color: 'currentColor',
-                className: f.infoIcon
+                className: I.infoIcon
             }),
             (0, i.jsx)('div', {
-                className: f.text,
+                className: I.text,
                 children: _.intl.format(_.t.ar1cPj, {
                     planName: t.hasExternalPlanChange ? (0, C.zL)(n) : C.ZP.getDisplayName(n.planId),
                     date: t.currentPeriodEnd
@@ -109,14 +109,14 @@ function N(e) {
                       onClick: (e) => {
                           c(!0), e.preventDefault();
                       },
-                      className: f.cancelLink,
+                      className: I.cancelLink,
                       children: _.intl.string(_.t['ETE/oK'])
                   }),
             o
                 ? (0, i.jsx)(u.Modal, {
                       renderModal: (e) => {
                           let { transitionState: s } = e;
-                          return (0, i.jsx)(I, {
+                          return (0, i.jsx)(f, {
                               subscription: t,
                               renewalMutations: n,
                               transitionState: s,

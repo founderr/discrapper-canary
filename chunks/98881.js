@@ -38,18 +38,18 @@ var r = n(288377),
     P = n(882645),
     k = n(788654),
     U = n(770003),
-    B = n(192379),
-    G = n(661763),
+    G = n(192379),
+    B = n(661763),
     Z = n(649859),
     F = {};
 function V(e) {
     var t;
-    let n = (0, B.useRef)(),
+    let n = (0, G.useRef)(),
         { value: r, textValue: i, minValue: a, maxValue: s, isDisabled: o, isReadOnly: l, isRequired: u, onIncrement: c, onIncrementPage: d, onDecrement: f, onDecrementPage: _, onDecrementToMin: p, onIncrementToMax: h } = e;
     let m = (0, Z.qb)((t = F) && t.__esModule ? t.default : t, '@react-aria/spinbutton'),
         g = () => clearTimeout(n.current);
-    (0, B.useEffect)(() => () => g(), []);
-    let E = (0, B.useRef)(!1),
+    (0, G.useEffect)(() => () => g(), []);
+    let E = (0, G.useRef)(!1),
         v = () => {
             E.current = !0;
         },
@@ -57,17 +57,17 @@ function V(e) {
             E.current = !1;
         };
     (i = '' === i ? m.format('Empty') : (i || `${r}`).replace('-', '\u2212')),
-        (0, B.useEffect)(() => {
+        (0, G.useEffect)(() => {
             E.current && ((0, U.gb)('assertive'), (0, U.xQ)(i, 'assertive'));
         }, [i]);
-    let b = (0, G.iW)((e) => {
+    let b = (0, B.iW)((e) => {
             g(),
                 c(),
                 (n.current = window.setTimeout(() => {
                     (isNaN(s) || isNaN(r) || r < s) && b(60);
                 }, e));
         }),
-        T = (0, G.iW)((e) => {
+        T = (0, B.iW)((e) => {
             g(),
                 f(),
                 (n.current = window.setTimeout(() => {
@@ -77,7 +77,7 @@ function V(e) {
         S = (e) => {
             e.preventDefault();
         },
-        { addGlobalListener: y, removeAllGlobalListeners: A } = (0, G.xi)();
+        { addGlobalListener: y, removeAllGlobalListeners: A } = (0, B.xi)();
     return {
         spinButtonProps: {
             role: 'spinbutton',

@@ -22,8 +22,8 @@ var s = n(442837),
     S = n(438578);
 function T(e) {
     var t;
-    let { app: n, currentSubscription: h, currentListing: p, alternativeListings: T, navigateToHome: E, subscriptionGroup: _, renewalSkuId: f } = e,
-        I = (0, l.y)(n, 100),
+    let { app: n, currentSubscription: h, currentListing: p, alternativeListings: T, navigateToHome: E, subscriptionGroup: _, renewalSkuId: I } = e,
+        f = (0, l.y)(n, 100),
         N = (0, m.KK)(_.flags),
         A = N ? r.ServerIcon : r.UserIcon,
         b = N ? x.intl.string(x.t['46YF2N']) : x.intl.string(x.t.fFyGiI),
@@ -32,9 +32,9 @@ function T(e) {
         O = (0, s.e7)(
             [u.Z],
             () => {
-                if (null != f) return u.Z.get(f);
+                if (null != I) return u.Z.get(I);
             },
-            [f]
+            [I]
         ),
         R = (0, g.p)(h.currentPeriodEnd);
     return (0, i.jsxs)('div', {
@@ -42,9 +42,9 @@ function T(e) {
             (0, i.jsxs)('div', {
                 className: S.header,
                 children: [
-                    null != I &&
+                    null != f &&
                         (0, i.jsx)(r.Image, {
-                            src: I.href,
+                            src: f.href,
                             imageClassName: S.appIcon,
                             width: 48,
                             height: 48
@@ -149,7 +149,7 @@ function T(e) {
                         })
                     }),
                     T.map((e) =>
-                        e.skuId === f
+                        e.skuId === I
                             ? (0, i.jsx)(
                                   o.Z,
                                   {

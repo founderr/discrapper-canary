@@ -114,7 +114,7 @@ function U(e) {
             .value();
     return null != a && (e.setData('channel', a), !0);
 }
-function B(e) {
+function G(e) {
     let t = {
         [S.intl.string(S.t.ZNR2fn)]: 'link',
         [S.intl.string(S.t['20uQR0'])]: 'embed',
@@ -128,14 +128,14 @@ function B(e) {
     }[e.getMatch(1)];
     return null != t && '' !== t && (e.setData('has', t), !0);
 }
-function G() {
+function B() {
     return [...Array.from(y()), ...Array.from(A()), ...Array.from(N()), ...Object.keys(D())];
 }
 function Z() {
-    return l().sample(G());
+    return l().sample(B());
 }
 function F(e, t, n) {
-    return V(e, t, G()).map((e) => ({
+    return V(e, t, B()).map((e) => ({
         ...e,
         group: n,
         key: ''.concat(n, '-').concat(e.text)
@@ -250,7 +250,7 @@ function z() {
                 [T.dCx.ANSWER_HAS]: {
                     regex: RegExp('(?:\\s*-?('.concat(n.map((e) => I.Z.escape(e)).join('|'), '))'), 'i'),
                     follows: [T.dCx.FILTER_HAS],
-                    validator: B,
+                    validator: G,
                     componentType: 'ANSWER',
                     queryKey: 'has'
                 },

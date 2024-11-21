@@ -31,10 +31,10 @@ function T() {
         _ = s.useCallback((e) => {
             e ? (0, l.openModal)((e) => (0, i.jsx)(g.Z, { ...e })) : a.mc();
         }, []),
-        f = s.useCallback((e) => {
+        I = s.useCallback((e) => {
             o.ZP.updatedUnsyncedSettings({ showPlayAgain: e });
         }, []),
-        I = s.useCallback((e) => {
+        f = s.useCallback((e) => {
             (0, l.openModal)((t) =>
                 (0, i.jsx)(l.ConfirmModal, {
                     header: S.intl.string(S.t.aqpAvr),
@@ -66,7 +66,7 @@ function T() {
                 setting: p.s6.SETTINGS_ADVANCED_HARDWARE_ACCELERATION,
                 children: (0, i.jsx)(l.FormSwitch, {
                     value: e,
-                    onChange: I,
+                    onChange: f,
                     note: S.intl.string(S.t.Afc7l5),
                     children: S.intl.string(S.t['eOC/Fx'])
                 })
@@ -94,7 +94,7 @@ function T() {
                 children: (0, i.jsx)(l.FormSwitch, {
                     value: C,
                     note: S.intl.string(S.t['B/qU4O']),
-                    onChange: f,
+                    onChange: I,
                     children: S.intl.string(S.t.qDZryM)
                 })
             })

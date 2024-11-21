@@ -46,8 +46,8 @@ let L = 'seenQSTutorial',
     P = !1,
     k = null,
     U = [],
-    B = null,
-    G = 0,
+    G = null,
+    B = 0,
     Z = [],
     F = [];
 function V() {
@@ -70,8 +70,8 @@ function H(e) {
                       frecencyBoosters: !0,
                       blacklist: s
                   })),
-        (B = null),
-        (G = n.length),
+        (G = null),
+        (B = n.length),
         (k = i),
         r.search(n);
 }
@@ -201,7 +201,7 @@ function Y(e, t) {
                     default:
                         U = e;
                 }
-                if (t !== B) (B = t), (G = Math.max(t.length, G)), (w = (0, c.gJ)(c.a8.DOWN, -1, U));
+                if (t !== G) (G = t), (B = Math.max(t.length, B)), (w = (0, c.gJ)(c.a8.DOWN, -1, U));
                 else {
                     let e = U[w];
                     null != e && e.type === c.h8.HEADER && (w = (0, c.gJ)(c.a8.DOWN, w, U));
@@ -210,7 +210,7 @@ function Y(e, t) {
             })(e, t);
 }
 function W() {
-    (B = null), (G = 0), (Z = []), null != r && (r.destroy(), (r = null));
+    (G = null), (B = 0), (Z = []), null != r && (r.destroy(), (r = null));
 }
 class K extends (i = o.ZP.PersistedStore) {
     initialize(e) {
@@ -247,7 +247,7 @@ class K extends (i = o.ZP.PersistedStore) {
             results: U,
             selectedIndex: w,
             seenTutorial: M,
-            maxQueryLength: G
+            maxQueryLength: B
         };
     }
 }

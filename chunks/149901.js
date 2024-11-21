@@ -38,8 +38,8 @@ var r = n(443704),
     P = n(40889),
     k = n(686949),
     U = n(661763),
-    B = n(192379),
-    G = n(969129),
+    G = n(192379),
+    B = n(969129),
     Z = n(921336),
     F = n(298397),
     V = n(649859),
@@ -58,12 +58,12 @@ function Y(e, t, n) {
             }
         }),
         P = (0, V.Ux)(h),
-        k = (0, B.useMemo)(() => P.resolvedOptions(), [P]),
+        k = (0, G.useMemo)(() => P.resolvedOptions(), [P]),
         Y = (0, V.Ux)({
             ...h,
             currencySign: void 0
         }),
-        W = (0, B.useMemo)(() => (isNaN(R) ? '' : Y.format(R)), [Y, R]),
+        W = (0, G.useMemo)(() => (isNaN(R) ? '' : Y.format(R)), [Y, R]),
         {
             spinButtonProps: K,
             incrementButtonProps: z,
@@ -81,12 +81,12 @@ function Y(e, t, n) {
             value: R,
             textValue: W
         }),
-        [Q, X] = (0, B.useState)(!1),
+        [Q, X] = (0, G.useState)(!1),
         { focusWithinProps: J } = (0, Z.L_)({
             isDisabled: l,
             onFocusWithinChange: X
         }),
-        $ = (0, B.useCallback)(
+        $ = (0, G.useCallback)(
             (e) => {
                 !(Math.abs(e.deltaY) <= Math.abs(e.deltaX)) && (e.deltaY > 0 ? y() : e.deltaY < 0 && N());
             },
@@ -105,7 +105,7 @@ function Y(e, t, n) {
         er = 'numeric';
     (0, U.IN)() ? (en ? (er = 'text') : et && (er = 'decimal')) : (0, U.Dt)() && (en ? (er = 'numeric') : et && (er = 'decimal'));
     let ei = (0, U.zL)(e),
-        ea = (0, B.useCallback)(
+        ea = (0, G.useCallback)(
             (e) => {
                 'Enter' === e.key ? (D(), L()) : e.continuePropagation();
             },
@@ -128,7 +128,7 @@ function Y(e, t, n) {
                 isReadOnly: u,
                 isRequired: c,
                 validate: void 0,
-                [G.tL]: t,
+                [B.tL]: t,
                 value: O,
                 defaultValue: void 0,
                 autoComplete: 'off',
@@ -143,7 +143,7 @@ function Y(e, t, n) {
                 onBlur: m,
                 onFocus: g,
                 onFocusChange: E,
-                onKeyDown: (0, B.useMemo)(() => (0, U.tS)(ea, v), [ea, v]),
+                onKeyDown: (0, G.useMemo)(() => (0, U.tS)(ea, v), [ea, v]),
                 onKeyUp: I,
                 description: b,
                 errorMessage: T

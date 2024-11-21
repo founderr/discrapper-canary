@@ -23,8 +23,8 @@ var s = n(512722),
     C = n(594174),
     E = n(74538),
     _ = n(51144),
-    f = n(18438),
-    I = n(778825),
+    I = n(18438),
+    f = n(778825),
     N = n(52597),
     A = n(430131),
     b = n(133484),
@@ -46,8 +46,8 @@ function O(e) {
             pendingThemeColors: F,
             errors: M,
             guild: k
-        } = (0, l.cj)([I.Z], () => {
-            let { pendingAvatar: e, pendingNickname: t, pendingBio: n, pendingPronouns: i, pendingBanner: s, pendingThemeColors: r } = I.Z.getAllPending();
+        } = (0, l.cj)([f.Z], () => {
+            let { pendingAvatar: e, pendingNickname: t, pendingBio: n, pendingPronouns: i, pendingBanner: s, pendingThemeColors: r } = f.Z.getAllPending();
             return {
                 pendingAvatar: e,
                 pendingNickname: t,
@@ -55,8 +55,8 @@ function O(e) {
                 pendingBio: n,
                 pendingPronouns: i,
                 pendingThemeColors: r,
-                errors: I.Z.getErrors(),
-                guild: I.Z.getGuild()
+                errors: f.Z.getErrors(),
+                guild: f.Z.getGuild()
             };
         }),
         w = null != R ? R : k;
@@ -123,7 +123,7 @@ function O(e) {
                                 ]
                             }),
                             showRemoveAvatarButton: H,
-                            onAvatarChange: (e) => Q(e, null == V ? void 0 : V.avatar, f.I5),
+                            onAvatarChange: (e) => Q(e, null == V ? void 0 : V.avatar, I.I5),
                             errors: null == M ? void 0 : M.avatar,
                             guildId: w.id,
                             disabled: !Y
@@ -181,7 +181,7 @@ function O(e) {
                         {
                             showRemoveBannerButton: z,
                             errors: null == M ? void 0 : M.banner,
-                            onBannerChange: (e) => Q(e, null == G ? void 0 : G.banner, f.g_),
+                            onBannerChange: (e) => Q(e, null == G ? void 0 : G.banner, I.g_),
                             guildId: null == w ? void 0 : w.id,
                             disabled: !Y
                         },

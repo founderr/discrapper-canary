@@ -22,12 +22,12 @@ var i = n(200651),
     T = n(982404),
     C = n(299156);
 function E(e) {
-    let { premiumSubscription: t, premiumType: n, onClose: E, confettiCanvas: _, userWasChurned: f = !1, userDiscountOffer: I } = e,
+    let { premiumSubscription: t, premiumType: n, onClose: E, confettiCanvas: _, userWasChurned: I = !1, userDiscountOffer: f } = e,
         N = (0, o.ZP)(),
         A = (0, l.wj)(N) ? T : C,
         b = s.useRef(null),
         [v, j] = s.useState(!1),
-        O = (0, h._)(t, p.Xh.PREMIUM_MONTH_TIER_2, I),
+        O = (0, h._)(t, p.Xh.PREMIUM_MONTH_TIER_2, f),
         R = (0, u.aS)(p.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
             currency: t.currency,
             paymentSourceId: t.paymentSourceId
@@ -38,11 +38,11 @@ function E(e) {
         (s.useEffect(() => {
             null != b.current && null != O && j(!0);
         }, [b, v, O]),
-        null == I || null == O)
+        null == f || null == O)
     )
         return null;
     let y = x.intl.format(x.t.gPzMHR, {
-            numMonths: I.discount.user_usage_limit,
+            numMonths: f.discount.user_usage_limit,
             discountedPrice: O,
             regularPrice: P
         }),
@@ -79,7 +79,7 @@ function E(e) {
                                               }),
                                               (0, i.jsx)(a.Heading, {
                                                   variant: 'heading-xl/bold',
-                                                  children: f ? x.intl.string(x.t.gOOPaG) : x.intl.string(x.t.PZSyRk)
+                                                  children: I ? x.intl.string(x.t.gOOPaG) : x.intl.string(x.t.PZSyRk)
                                               })
                                           ]
                                       }),

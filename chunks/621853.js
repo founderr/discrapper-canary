@@ -98,7 +98,7 @@ function P(e) {
     I.delete(e.userId), A.set(e.userId, M(e.mutualFriends)), N.set(e.userId, e.mutualFriends.length);
 }
 function k(e) {
-    var t, n, r, i, o, l, u, d, f, h, g, I, R, L, x, w, P, k, U, B, G, Z, F, V, j, H, Y;
+    var t, n, r, i, o, l, u, d, f, h, g, I, R, L, x, w, P, k, U, G, B, Z, F, V, j, H, Y;
     let W = null !== (x = null === (t = e.guild_member_profile) || void 0 === t ? void 0 : t.guild_id) && void 0 !== x ? x : E;
     if ((null === (n = v.get(e.user.id)) || void 0 === n || n.delete(W), null != e.mutual_guilds)) {
         let t = {};
@@ -195,8 +195,8 @@ function k(e) {
                 guildId: e.guild_member_profile.guild_id,
                 banner: e.guild_member_profile.banner,
                 accentColor: e.guild_member_profile.accent_color,
-                themeColors: null === (B = e.guild_member_profile) || void 0 === B ? void 0 : B.theme_colors,
-                popoutAnimationParticleType: null === (G = e.guild_member_profile) || void 0 === G ? void 0 : G.popout_animation_particle_type,
+                themeColors: null === (G = e.guild_member_profile) || void 0 === G ? void 0 : G.theme_colors,
+                popoutAnimationParticleType: null === (B = e.guild_member_profile) || void 0 === B ? void 0 : B.popout_animation_particle_type,
                 profileEffectId: null === (F = e.guild_member_profile) || void 0 === F ? void 0 : null === (Z = F.profile_effect) || void 0 === Z ? void 0 : Z.id,
                 profileEffectExpiresAt: null === (j = e.guild_member_profile) || void 0 === j ? void 0 : null === (V = j.profile_effect) || void 0 === V ? void 0 : V.expires_at,
                 bio: e.guild_member_profile.bio,
@@ -231,7 +231,7 @@ function U(e) {
         e.add(r), v.set(t, e);
     }
 }
-function B(e) {
+function G(e) {
     var t, n;
     let { userId: r, guildId: i, apiError: a } = e;
     null === (t = v.get(r)) || void 0 === t || t.delete(null != i ? i : E);
@@ -256,7 +256,7 @@ function B(e) {
               };
     (s.lastFetched = Date.now()), (s.fetchError = a), b.set(r, s);
 }
-function G(e) {
+function B(e) {
     R = !0;
 }
 function Z(e) {
@@ -399,9 +399,9 @@ class z extends f.Z {
         super({
             CACHE_LOADED_LAZY: () => this.loadCache(),
             USER_PROFILE_FETCH_START: U,
-            USER_PROFILE_FETCH_FAILURE: B,
+            USER_PROFILE_FETCH_FAILURE: G,
             USER_PROFILE_FETCH_SUCCESS: k,
-            USER_PROFILE_UPDATE_START: G,
+            USER_PROFILE_UPDATE_START: B,
             USER_PROFILE_UPDATE_SUCCESS: Z,
             USER_PROFILE_UPDATE_FAILURE: F,
             MUTUAL_FRIENDS_FETCH_START: x,

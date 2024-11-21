@@ -39,8 +39,8 @@ var i = n(120356),
     P = n(373826),
     k = n(315324),
     U = n(582123),
-    B = n(262210),
-    G = n(103479),
+    G = n(262210),
+    B = n(103479),
     Z = n(290274),
     F = n(553375),
     V = n(228168),
@@ -88,7 +88,7 @@ function z(e) {
             .when(l.Z, () => {
                 if (n.id !== i.id)
                     return () =>
-                        (0, G.s)({
+                        (0, B.s)({
                             activity: z,
                             user: n,
                             index: 0
@@ -223,7 +223,7 @@ function z(e) {
         ev = () => {
             if (!(0, A.Z)(z)) return null;
             let { start: e, end: t } = z.timestamps;
-            return (0, r.jsx)(B.Z, {
+            return (0, r.jsx)(G.Z, {
                 start: e,
                 end: t
             });

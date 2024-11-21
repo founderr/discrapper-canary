@@ -33,7 +33,7 @@ n.d(t, {
         return k;
     },
     gM: function () {
-        return G;
+        return B;
     },
     jl: function () {
         return P;
@@ -175,8 +175,8 @@ let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: 
         let t = e.guild_id;
         return void 0 !== s.Z.getGuild(t);
     },
-    B = [];
-function G(e) {
+    G = [];
+function B(e) {
     var t, n;
-    return (null !== (n = null === (t = a.Z.frecencyWithoutFetchingLatest.favoriteStickers) || void 0 === t ? void 0 : t.stickerIds) && void 0 !== n ? n : B).includes(e);
+    return (null !== (n = null === (t = a.Z.frecencyWithoutFetchingLatest.favoriteStickers) || void 0 === t ? void 0 : t.stickerIds) && void 0 !== n ? n : G).includes(e);
 }

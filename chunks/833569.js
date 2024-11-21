@@ -28,8 +28,8 @@ var i,
     C = n(211242),
     E = n(600164),
     _ = n(509545),
-    f = n(626135),
-    I = n(122289),
+    I = n(626135),
+    f = n(122289),
     N = n(63063),
     A = n(74538),
     b = n(937615),
@@ -73,18 +73,18 @@ function z(e) {
         [u, m] = l.useState(!1),
         [p, S] = l.useState(!1),
         _ = (0, x.ZP)(),
-        { analyticsLocations: f } = (0, T.ZP)(),
-        I = null;
+        { analyticsLocations: I } = (0, T.ZP)(),
+        f = null;
     switch (n.status) {
         case V.O0b.PAST_DUE:
         case V.O0b.PAUSED:
         case V.O0b.BILLING_RETRY:
-            I = G.intl.string(G.t.FClXh4);
+            f = G.intl.string(G.t.FClXh4);
             break;
         default:
             switch (i) {
                 case w.p9.TIER_0:
-                    I = d
+                    f = d
                         ? G.intl.format(G.t['l+A50N'], {
                               date: n.currentPeriodEnd,
                               helpdeskArticle: N.Z.getArticleURL(V.BhN.BLOCKED_PAYMENTS)
@@ -92,7 +92,7 @@ function z(e) {
                         : G.intl.format(G.t.Y6Wfa2, { date: n.currentPeriodEnd });
                     break;
                 case w.p9.TIER_1:
-                    I = d
+                    f = d
                         ? G.intl.format(G.t.QN7eIi, {
                               date: n.currentPeriodEnd,
                               helpdeskArticle: N.Z.getArticleURL(V.BhN.BLOCKED_PAYMENTS)
@@ -100,7 +100,7 @@ function z(e) {
                         : G.intl.format(G.t.X7i9Dw, { date: n.currentPeriodEnd });
                     break;
                 default:
-                    I = d
+                    f = d
                         ? G.intl.format(G.t.vuSNho, {
                               date: n.currentPeriodEnd,
                               helpdeskArticle: N.Z.getArticleURL(V.BhN.BLOCKED_PAYMENTS)
@@ -134,7 +134,7 @@ function z(e) {
                           onClose: a,
                           premiumSubscription: n,
                           setIsCancelling: m,
-                          analyticsLocations: f,
+                          analyticsLocations: I,
                           analyticsLocation: c
                       });
                   },
@@ -174,7 +174,7 @@ function z(e) {
                           })
                         : null,
                     (0, r.jsx)('div', { className: Y.cancelImage }),
-                    (0, r.jsx)('div', { children: I })
+                    (0, r.jsx)('div', { children: f })
                 ]
             }),
             (0, r.jsxs)(g.ModalFooter, {
@@ -311,7 +311,7 @@ function X(e) {
     u()(null != R, 'Should not be cancelling Nitro without premiumType');
     let L = (0, x.ZP)();
     l.useEffect(() => {
-        f.default.track(V.rMx.CANCELLATION_FLOW_STARTED, q(i));
+        I.default.track(V.rMx.CANCELLATION_FLOW_STARTED, q(i));
     }, [i]);
     let Z = R === w.p9.TIER_0 || R === w.p9.TIER_1 || R === w.p9.TIER_2;
     null == m && (m = Z ? 1 : 2);
@@ -322,7 +322,7 @@ function X(e) {
                 [o] = l.useState(Date.now()),
                 c = l.useCallback(
                     (e) => {
-                        f.default.track(V.rMx.CANCELLATION_FLOW_STEP, {
+                        I.default.track(V.rMx.CANCELLATION_FLOW_STEP, {
                             from_step: Q[i],
                             to_step: Q[e],
                             step_duration_ms: Date.now() - r,
@@ -341,7 +341,7 @@ function X(e) {
     (0, M.w)(i, a, !1);
     let et = (e) => {
             a(),
-                f.default.track(V.rMx.CANCELLATION_FLOW_STEP, {
+                I.default.track(V.rMx.CANCELLATION_FLOW_STEP, {
                     from_step: Q[e],
                     to_step: null,
                     step_duration_ms: Date.now() - X,
@@ -386,7 +386,7 @@ function X(e) {
             if (null == $) {
                 let e = Error('No pause duration to set');
                 throw (
-                    ((0, I.q2)(e, {
+                    ((0, f.q2)(e, {
                         extra: {
                             subscriptionId: i.id,
                             status: i.status

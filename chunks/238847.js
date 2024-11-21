@@ -18,8 +18,8 @@ var i = n(200651),
     C = n(330181),
     E = n(374649),
     _ = n(908951),
-    f = n(255078),
-    I = n(853872),
+    I = n(255078),
+    f = n(853872),
     N = n(171246),
     A = n(41959),
     b = n(650919),
@@ -69,7 +69,7 @@ let R = (e) => {
                 analyticsLocations: s,
                 analyticsLocation: h.Z.APP_SUBSCRIPTION_PAYMENT_SOURCE_WITH_INVOICE
             });
-        return (0, d.e7)([I.Z], () => I.Z.hasFetchedPaymentSources)
+        return (0, d.e7)([f.Z], () => f.Z.hasFetchedPaymentSources)
             ? null == r
                 ? null
                 : (0, i.jsxs)(i.Fragment, {
@@ -109,7 +109,7 @@ let R = (e) => {
 t.Z = (e) => {
     let { subscription: t } = e,
         { storeListing: r, groupListing: a, guild: d, expanded: h, handleToggleExpanded: p, subscriptionInfo: E, application: _ } = (0, b.Z)(t),
-        I = (0, x.Dt)(),
+        f = (0, x.Dt)(),
         [y, B] = s.useState(!1),
         { analyticsLocations: L } = (0, g.ZP)();
     if (null == a || null == r || null == E) return null;
@@ -137,7 +137,7 @@ t.Z = (e) => {
                         return (n) =>
                             (0, i.jsx)(t, {
                                 storeListing: r,
-                                subscription: f.Z.createFromServer(e),
+                                subscription: I.Z.createFromServer(e),
                                 ...n
                             });
                     });
@@ -223,7 +223,7 @@ t.Z = (e) => {
                             (0, i.jsx)(u.Clickable, {
                                 onClick: n(p),
                                 'aria-label': j.intl.string(j.t.hBUzy8),
-                                'aria-controls': I,
+                                'aria-controls': f,
                                 'aria-expanded': h,
                                 focusProps: { ringTarget: t },
                                 children: (0, i.jsx)(u.ChevronSmallDownIcon, {
@@ -238,7 +238,7 @@ t.Z = (e) => {
             }),
             h
                 ? (0, i.jsxs)('div', {
-                      id: I,
+                      id: f,
                       children: [
                           (0, i.jsx)('div', { className: O.divider }),
                           k

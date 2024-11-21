@@ -32,8 +32,8 @@ t.Z = i.memo(function (e) {
     let y,
         { src: A, volume: N = 1, onVolumeChange: C, onMute: R, waveform: O, durationSecs: D, onVolumeShow: L, onVolumeHide: x, onPlay: w, onPause: M, onError: P } = e,
         k = i.useRef(null),
-        [U, B] = i.useState(0),
-        [G, Z] = i.useState(D),
+        [U, G] = i.useState(0),
+        [B, Z] = i.useState(D),
         [F, V] = i.useState(!1),
         [j, H] = i.useState(!1),
         [Y, W] = i.useState(!1),
@@ -80,16 +80,16 @@ t.Z = i.memo(function (e) {
             W(!0);
         }, []),
         eu = i.useCallback(() => {
-            W(!1), U === G && er();
-        }, [U, G, er]),
+            W(!1), U === B && er();
+        }, [U, B, er]),
         ec = i.useCallback(
             (e) => {
                 let t = k.current;
-                if (null == G || null == t) return;
-                let n = e * G;
-                B(n), (t.currentTime = n), z(!0), clearTimeout($.current), ($.current = void 0);
+                if (null == B || null == t) return;
+                let n = e * B;
+                G(n), (t.currentTime = n), z(!0), clearTimeout($.current), ($.current = void 0);
             },
-            [G]
+            [B]
         );
     i.useEffect(() => {
         !K && j && z(!0);
@@ -109,7 +109,7 @@ t.Z = i.memo(function (e) {
     }, [j]),
         (t = k),
         (n = j),
-        (a = B),
+        (a = G),
         i.useEffect(() => {
             let e;
             return (
@@ -196,7 +196,7 @@ t.Z = i.memo(function (e) {
                 className: v.waveform,
                 waveform: O,
                 currentTime: U,
-                duration: null != G ? G : 1,
+                duration: null != B ? B : 1,
                 playing: j,
                 played: K,
                 onDrag: ec,
@@ -206,7 +206,7 @@ t.Z = i.memo(function (e) {
             (0, r.jsx)(b, {
                 played: K,
                 currentTime: U,
-                duration: G
+                duration: B
             }),
             (0, r.jsx)(f.Z, {
                 className: v.volumeButton,

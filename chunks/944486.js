@@ -56,13 +56,13 @@ function U() {
                 .value()
         });
 }
-function B(e) {
+function G(e) {
     if (null != e) {
         let t = A.ZP.getDefaultChannel(e);
         if (null != t) return t.id;
     }
 }
-function G(e, t) {
+function B(e, t) {
     if (null == e || null == t || M[e] === t) return !1;
     let n = y.Z.getChannel(t),
         r = null != n && (0, b.zi)(n.type),
@@ -86,7 +86,7 @@ function F() {
         }),
         h().each(t, (e) => {
             let t = x[e.id];
-            null == M[e.id] && G(e.id, t);
+            null == M[e.id] && B(e.id, t);
         }),
         null != l && Date.now() - l >= 300000 && ((o = null), (e = !0)),
         e
@@ -99,7 +99,7 @@ function V(e, t) {
     }
     let n = null != N.Z.getGuild(t) ? t : null,
         r = !1;
-    o === e && ((o = null), (r = !0)), !(0, v.cn)() && (x[k(n)] === e && ((x[k(n)] = B(k(n))), R.Z.getGuildId() === n && (0, I.dL)(O.Z5c.CHANNEL(t, x[k(n)])), (r = !0)), null != n && M[n] === e && (delete M[n], (r = !0))), r && U();
+    o === e && ((o = null), (r = !0)), !(0, v.cn)() && (x[k(n)] === e && ((x[k(n)] = G(k(n))), R.Z.getGuildId() === n && (0, I.dL)(O.Z5c.CHANNEL(t, x[k(n)])), (r = !0)), null != n && M[n] === e && (delete M[n], (r = !0))), r && U();
 }
 function j(e) {
     let {
@@ -139,7 +139,7 @@ class H extends (c = m.ZP.Store) {
         var t, n;
         let r = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
             i = k(e === O.ME ? null : null !== (t = null != e ? e : R.Z.getGuildId()) && void 0 !== t ? t : null);
-        return r ? (null !== (n = x[i]) && void 0 !== n ? n : B(i)) : x[i];
+        return r ? (null !== (n = x[i]) && void 0 !== n ? n : G(i)) : x[i];
     }
     getVoiceChannelId() {
         return C.Z.isSupported() ? o : null;
@@ -175,7 +175,7 @@ class H extends (c = m.ZP.Store) {
             (r = e.sessionId), null != o && null == y.Z.getChannel(o) && (o = null), F() && U();
         },
         OVERLAY_INITIALIZE: function (e) {
-            (r = e.sessionId), (o = e.selectedVoiceChannelId), (x = {}), (w = {}), (a = e.selectedChannelId), (x[e.selectedGuildId] = e.selectedChannelId), G(e.selectedGuildId, a), F();
+            (r = e.sessionId), (o = e.selectedVoiceChannelId), (x = {}), (w = {}), (a = e.selectedChannelId), (x[e.selectedGuildId] = e.selectedChannelId), B(e.selectedGuildId, a), F();
         },
         CONNECTION_CLOSED: function () {
             r = null;
@@ -183,7 +183,7 @@ class H extends (c = m.ZP.Store) {
         CHANNEL_SELECT: function (e) {
             let { guildId: t, channelId: n } = e;
             if (void 0 === t) return !1;
-            null == n && (n = B(t)), null != a && n !== a && (i = a), (a = n), G(t, n), x[k(t)] !== n && ((w[k(t)] = x[k(t)]), (x[k(t)] = a)), U();
+            null == n && (n = G(t)), null != a && n !== a && (i = a), (a = n), B(t, n), x[k(t)] !== n && ((w[k(t)] = x[k(t)]), (x[k(t)] = a)), U();
         },
         CHANNEL_CREATE: function (e) {
             let { channel: t } = e;
@@ -191,7 +191,7 @@ class H extends (c = m.ZP.Store) {
                 case O.d4z.GUILD_ANNOUNCEMENT:
                 case O.d4z.GUILD_TEXT:
                     let n = t.guild_id;
-                    if ((null != n && null == M[n] && (M[n] = t.id), null != n && null == x[n])) return (x[n] = B(n)), !0;
+                    if ((null != n && null == M[n] && (M[n] = t.id), null != n && null == x[n])) return (x[n] = G(n)), !0;
             }
             return !1;
         },
@@ -204,8 +204,8 @@ class H extends (c = m.ZP.Store) {
         GUILD_CREATE: function (e) {
             let { guild: t } = e;
             if (null == x[t.id]) {
-                let e = B(t.id);
-                (x[t.id] = e), G(t.id, e), U();
+                let e = G(t.id);
+                (x[t.id] = e), B(t.id, e), U();
             }
         },
         GUILD_DELETE: function (e) {
@@ -220,7 +220,7 @@ class H extends (c = m.ZP.Store) {
             if (null == t) {
                 let e = y.Z.getChannel(o),
                     t = null == e ? void 0 : e.guild_id;
-                null != t && t !== R.Z.getGuildId() && x[t] === o && (x[t] = B(t));
+                null != t && t !== R.Z.getGuildId() && x[t] === o && (x[t] = G(t));
             }
             (o = t), U();
         },

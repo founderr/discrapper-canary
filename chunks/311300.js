@@ -38,8 +38,8 @@ var r = n(513394),
     P = n(683384),
     k = n(373141),
     U = n(770003),
-    B = n(726983),
-    G = n(46670),
+    G = n(726983),
+    B = n(46670),
     Z = n(661763),
     F = n(192379),
     V = n(989103),
@@ -61,7 +61,7 @@ function q(e, t) {
             t,
             a
         );
-    (0, G.Oj).set(t, { id: h.id });
+    (0, B.Oj).set(t, { id: h.id });
     let m = (0, F.useMemo)(() => u || new j.dp(t.collection, t.disabledKeys, l), [u, t.collection, t.disabledKeys, l]),
         { collectionProps: g } = (0, j.gq)({
             selectionManager: t.selectionManager,
@@ -183,7 +183,7 @@ function q(e, t) {
             q.current = t.selectedKey;
         }),
         (0, F.useEffect)(() => {
-            if (t.isOpen) return (0, B.RP)([o.current, s.current]);
+            if (t.isOpen) return (0, G.RP)([o.current, s.current]);
         }, [t.isOpen, o, s]),
         {
             labelProps: T,
@@ -204,7 +204,7 @@ function q(e, t) {
                 'aria-expanded': p['aria-expanded'],
                 'aria-controls': t.isOpen ? h.id : void 0,
                 'aria-autocomplete': 'list',
-                'aria-activedescendant': O ? (0, G.x3)(t, O.key) : void 0,
+                'aria-activedescendant': O ? (0, B.x3)(t, O.key) : void 0,
                 onTouchEnd: (e) => {
                     if (f || d) return;
                     if (e.timeStamp - R.current < 500) {

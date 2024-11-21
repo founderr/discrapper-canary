@@ -46,8 +46,8 @@ var r = n(512722),
     P = n(581364),
     k = n(689079),
     U = n(981631),
-    B = n(959517),
-    G = n(388032);
+    G = n(959517),
+    B = n(388032);
 let Z = (e, t) => {
         var n;
         return null == e ? void 0 : null === (n = e.find((e) => e.displayName === t)) || void 0 === n ? void 0 : n.value;
@@ -67,9 +67,9 @@ let Z = (e, t) => {
     };
 async function j(e) {
     var t, n, r, s, l, c, d, p, h, m, g, E, v, I, S, A, N;
-    let { command: C, optionValues: R, context: D, commandTargetId: x, maxSizeCallback: k, commandOrigin: B = M.bB.CHAT, sectionName: G, interactionLifecycleOptionsFactory: j = z, source: Y } = e,
+    let { command: C, optionValues: R, context: D, commandTargetId: x, maxSizeCallback: k, commandOrigin: G = M.bB.CHAT, sectionName: B, interactionLifecycleOptionsFactory: j = z, source: Y } = e,
         K = null !== (r = w.Z.getSource(D.channel.id)) && void 0 !== r ? r : Y,
-        Q = null !== (s = w.Z.getCommandOrigin(D.channel.id)) && void 0 !== s ? s : B;
+        Q = null !== (s = w.Z.getCommandOrigin(D.channel.id)) && void 0 !== s ? s : G;
     null == D.autocomplete &&
         a.Z.dispatch({
             type: 'APPLICATION_COMMAND_USED',
@@ -239,7 +239,7 @@ async function j(e) {
                       H(R);
                   },
                   analytics_location: q(Q),
-                  sectionName: G,
+                  sectionName: B,
                   source: K,
                   interactionLifecycleOptions: await j(C, D, ee)
               }));
@@ -431,14 +431,14 @@ async function Q(e, t) {
 async function X(e, t, n, r) {
     let i = (0, N.dg)(n),
         a = (e) => {
-            null == r || r(i, e), g.yr(t, U.evJ.ENTITY_TOO_LARGE, G.intl.formatToPlainString(G.t.fxEKdX, { maxSize: (0, N.Ng)(i) }));
+            null == r || r(i, e), g.yr(t, U.evJ.ENTITY_TOO_LARGE, B.intl.formatToPlainString(B.t.fxEKdX, { maxSize: (0, N.Ng)(i) }));
         },
         { totalSize: s, largestUploadedFileSize: o } = await Q(e, !1);
-    if (o > Math.max(i, B.Y1) || s > R.zz) return a(o), !1;
+    if (o > Math.max(i, G.Y1) || s > R.zz) return a(o), !1;
     try {
         await (0, d.$)(e);
     } catch {
-        g.yr(t, void 0, G.intl.formatToPlainString(G.t['9h1/1t'], { count: e.length }));
+        g.yr(t, void 0, B.intl.formatToPlainString(B.t['9h1/1t'], { count: e.length }));
     }
     return ({ totalSize: s, largestUploadedFileSize: o } = await Q(e, !0)), (!e.some((e) => e.error === U.evJ.ENTITY_TOO_LARGE) && !(s > R.zz)) || (a(o), !1);
 }

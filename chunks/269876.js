@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return I;
     }
 }),
     n(47120);
@@ -23,10 +23,10 @@ var i = n(200651),
     C = n(739017),
     E = n(113207);
 let _ = (0, h.hQ)();
-function f() {
+function I() {
     let [e, t] = s.useState(-100),
         [n, r] = s.useState(!1),
-        { threshold: f, autoThreshold: I } = (0, a.cj)([g.Z], () => g.Z.getModeOptions()),
+        { threshold: I, autoThreshold: f } = (0, a.cj)([g.Z], () => g.Z.getModeOptions()),
         {
             inputMode: N,
             automaticVADSupported: A,
@@ -59,9 +59,9 @@ function f() {
     let O = (0, i.jsx)('section', {
         className: l()(S.inputSensitivityToggle, S.manual),
         children: (0, i.jsx)(u.Slider, {
-            initialValue: f + 100,
+            initialValue: I + 100,
             onValueRender: (e) => ''.concat((-((100 - e) * 1)).toFixed(0), 'dB'),
-            onValueChange: (e) => j(-((100 - e) * 1), I),
+            onValueChange: (e) => j(-((100 - e) * 1), f),
             barStyles: { background: d.Z.unsafe_rawColors.GREEN_360.css },
             fillStyles: { background: d.Z.unsafe_rawColors.YELLOW_300.css },
             'aria-labelledby': _,
@@ -78,7 +78,7 @@ function f() {
         })
     });
     return (
-        I &&
+        f &&
             (O = (0, i.jsxs)('section', {
                 className: S.inputSensitivityToggle,
                 children: [
@@ -120,8 +120,8 @@ function f() {
                                             }),
                                             (0, i.jsx)(u.Switch, {
                                                 id: e,
-                                                checked: I,
-                                                onChange: (e) => j(f, e)
+                                                checked: f,
+                                                onChange: (e) => j(I, e)
                                             })
                                         ]
                                     })

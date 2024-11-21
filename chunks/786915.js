@@ -17,14 +17,14 @@ var l = n(512722),
     p = n(388032);
 function m(e) {
     var t, l;
-    let { applicationId: m, stream: f, channel: g, exitFullScreen: C, appContext: x, analyticsLocation: _, guildScheduledEvent: v, ...I } = e,
-        E = (0, o.bp)(),
-        b = null == g ? void 0 : g.getGuildId(),
-        Z = (0, a.e7)([c.Z], () => (null != b ? c.Z.getGuild(b) : null), [b]);
-    return ((t = Z), (l = g), null != t && null != l && d.Z.can(h.Plq.CREATE_INSTANT_INVITE, l))
+    let { applicationId: m, stream: f, channel: g, exitFullScreen: C, appContext: x, analyticsLocation: _, guildScheduledEvent: v, shouldPrioritizeGroupPlusIcon: I = !1, ...E } = e,
+        b = (0, o.bp)(),
+        Z = null == g ? void 0 : g.getGuildId(),
+        N = (0, a.e7)([c.Z], () => (null != Z ? c.Z.getGuild(Z) : null), [Z]);
+    return ((t = N), (l = g), null != t && null != l && d.Z.can(h.Plq.CREATE_INSTANT_INVITE, l))
         ? (0, i.jsx)(u.Z, {
               onClick: () => {
-                  r()(null != Z, 'guild cannot be null'),
+                  r()(null != N, 'guild cannot be null'),
                       r()(null != g, 'channel cannot be null'),
                       !(function (e) {
                           let { guild: t, channel: l, streamUserId: r, applicationId: a, appContext: o, exitFullScreen: c, analyticsLocation: d, guildScheduledEvent: u } = e;
@@ -50,19 +50,19 @@ function m(e) {
                                   }
                               );
                       })({
-                          guild: Z,
+                          guild: N,
                           channel: g,
                           streamUserId: null == f ? void 0 : f.ownerId,
                           applicationId: m,
-                          appContext: null != x ? x : E,
+                          appContext: null != x ? x : b,
                           exitFullScreen: C,
                           analyticsLocation: _,
                           guildScheduledEvent: v
                       });
               },
-              iconComponent: null != m ? s.ActivitiesPlusIcon : s.GroupPlusIcon,
+              iconComponent: null == m || I ? s.GroupPlusIcon : s.ActivitiesPlusIcon,
               label: null != m ? p.intl.string(p.t['OzOM/v']) : p.intl.string(p.t['6F9ivr']),
-              ...I
+              ...E
           })
         : null;
 }

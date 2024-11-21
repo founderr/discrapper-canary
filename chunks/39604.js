@@ -1,6 +1,6 @@
 n.d(t, {
     C1: function () {
-        return G;
+        return B;
     },
     Gh: function () {
         return Z;
@@ -185,7 +185,7 @@ function U(e, t) {
         saved_at: t.savedAt
     };
 }
-async function B(e) {
+async function G(e) {
     let t = b.Z.getSettings().storageLocation,
         n = (0, S.Z)(e),
         r = ''.concat((0, T.Z)(n.applicationName.substring(0, 20)), '_').concat(n.id, '.mp4'),
@@ -254,7 +254,7 @@ async function B(e) {
         throw ((t.error_at = r.errorAt), (t.error_message = r.errorMessage), E.default.track(R.rMx.CLIP_SAVE_FAILURE, t), r.errorMessage);
     }
 }
-async function G(e) {
+async function B(e) {
     var t;
     let n = b.Z.isDecoupledGameClippingEnabled(),
         { enableViewerClipping: s } = c.Z.getCurrentConfig({ location: 'SaveClip' }, { autoTrackExposure: !1 });
@@ -292,7 +292,7 @@ async function G(e) {
     let y = (0, I.GN)('clip_save', 0.5),
         A = performance.now();
     try {
-        let e = await B(v);
+        let e = await G(v);
         a.Z.dispatch({
             type: 'CLIPS_SAVE_CLIP',
             clip: e

@@ -40,8 +40,8 @@ let T = (e) => {
         var t;
         let { transitionState: n, groupListing: s, guildId: r, listing: o, subscription: C, onClose: E } = e,
             _ = (0, u.Dt)(),
-            f = (0, h.YB)(r),
-            I = (null == f ? void 0 : null === (t = f.cover_image_asset) || void 0 === t ? void 0 : t.application_id) != null ? (0, m._W)(f.cover_image_asset.application_id, f.cover_image_asset, 440) : void 0,
+            I = (0, h.YB)(r),
+            f = (null == I ? void 0 : null === (t = I.cover_image_asset) || void 0 === t ? void 0 : t.application_id) != null ? (0, m._W)(I.cover_image_asset.application_id, I.cover_image_asset, 440) : void 0,
             { analyticsLocations: N } = (0, d.ZP)(c.Z.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL),
             { cancelSubscription: A, error: b, submitting: v } = T(N),
             j = async () => {
@@ -63,7 +63,7 @@ let T = (e) => {
                 (0, i.jsxs)('div', {
                     children: [
                         (0, i.jsx)('img', {
-                            src: I,
+                            src: f,
                             alt: '',
                             className: S.headerImage
                         }),

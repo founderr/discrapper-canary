@@ -23,8 +23,8 @@ var s = n(512722),
     C = n(610966),
     E = n(513901),
     _ = n(451392),
-    f = n(906364),
-    I = n(350327),
+    I = n(906364),
+    f = n(350327),
     N = n(621853),
     A = n(687158),
     b = n(25990),
@@ -85,11 +85,11 @@ function P() {
                 onGlobalNameChange: a.UZ
             }),
             (0, i.jsx)(
-                f.Z,
+                I.Z,
                 {
                     sectionTitle: O.intl.string(O.t['+T3RIy']),
                     errors: Y.pronouns,
-                    onPronounsChange: I.ID,
+                    onPronounsChange: f.ID,
                     pendingPronouns: U,
                     currentPronouns: null !== (y = null == Z ? void 0 : Z.pronouns) && void 0 !== y ? y : ''
                 },
@@ -130,7 +130,7 @@ function P() {
                               {
                                   showRemoveBannerButton: K,
                                   errors: Y.banner,
-                                  onBannerChange: I.g_,
+                                  onBannerChange: f.g_,
                                   forcedDivider: !0
                               },
                               'banner'
@@ -139,7 +139,7 @@ function P() {
                               user: L,
                               pendingAvatar: F,
                               pendingColors: G,
-                              onThemeColorsChange: I.z5,
+                              onThemeColorsChange: f.z5,
                               forcedDivider: !0
                           })
                       ]
@@ -150,7 +150,7 @@ function P() {
                           user: L,
                           savedUserColor: null == Z ? void 0 : Z.accentColor,
                           pendingColor: V,
-                          setPendingAccentColor: I.CM
+                          setPendingAccentColor: f.CM
                       },
                       'color'
                   ),

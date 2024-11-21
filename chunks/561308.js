@@ -48,7 +48,7 @@ n.d(t, {
         return P;
     },
     qy: function () {
-        return B;
+        return G;
     },
     vU: function () {
         return M;
@@ -249,7 +249,7 @@ function U(e) {
     var t;
     return null === (t = b(e, s.N.TRENDING_CONTENT)) || void 0 === t ? void 0 : t.trending;
 }
-function B(e) {
+function G(e) {
     let t = (0, o.e7)([_.Z], () => _.Z.getMatchingActivity(e)),
         [n, r] = (0, c.Z)([null == t ? void 0 : t.application_id, 'application_id' in e.extra ? e.extra.application_id : void 0]),
         i = (0, o.e7)([u.ZP], () => u.ZP.getEmbeddedActivityForUserId(e.author_id, null == n ? void 0 : n.id));

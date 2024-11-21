@@ -34,7 +34,7 @@ let M = (0, f.Mg)(_.Z.EXPRESSION_SUGGESTIONS_CONTAINER_PADDING),
     P = (0, f.Mg)(_.Z.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_SIZE),
     k = 2 * P + (0, f.Mg)(_.Z.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_MARGIN) + 2 * M,
     U = () => Promise.resolve();
-function B(e) {
+function G(e) {
     let { isFocused: t, isHidden: n, sendability: r, listIndex: i, sticker: s, onMouseOver: o, onSelectSticker: c } = e,
         { tabIndex: d, ...f } = (0, u.JA)(''.concat(i));
     return (0, a.jsxs)(p.Clickable, {
@@ -69,7 +69,7 @@ t.Z = s.memo(function (e) {
         E = s.useContext(g.ZP),
         [y, A] = s.useState(null),
         [M, P] = s.useState(!1),
-        [G, Z] = s.useState(null),
+        [B, Z] = s.useState(null),
         F = (0, v.Iu)((e) => null != e.activeView),
         V = s.useRef(null),
         [j, H] = s.useState(''),
@@ -230,9 +230,9 @@ t.Z = s.memo(function (e) {
                                         children: ec.map((e, t) => {
                                             let { sticker: n, sendability: r } = e;
                                             return (0, a.jsx)(
-                                                B,
+                                                G,
                                                 {
-                                                    isFocused: G === ''.concat(t),
+                                                    isFocused: B === ''.concat(t),
                                                     isHidden: eu,
                                                     sendability: r,
                                                     listIndex: t,
@@ -261,8 +261,8 @@ t.Z = s.memo(function (e) {
                                             style: { maxWidth: k },
                                             variant: 'text-sm/normal',
                                             children:
-                                                null != G
-                                                    ? x.intl.format(x.t['5gglIi'], { stickerName: null === (t = X[+G]) || void 0 === t ? void 0 : t.sticker.name })
+                                                null != B
+                                                    ? x.intl.format(x.t['5gglIi'], { stickerName: null === (t = X[+B]) || void 0 === t ? void 0 : t.sticker.name })
                                                     : x.intl.format(x.t['8DjNnJ'], {
                                                           upHook: (e, t) =>
                                                               (0, a.jsx)(

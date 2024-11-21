@@ -59,8 +59,8 @@ var r = n(889161),
     P = n(896002),
     k = n(155226),
     U = n(202616),
-    B = n(770003),
-    G = n(661763),
+    G = n(770003),
+    B = n(661763),
     Z = n(192379),
     F = n(448302),
     V = n(649859),
@@ -214,7 +214,7 @@ function $(e, t, n) {
                 }),
             [r, t.collection, t.disabledKeys, l, n, o, s, a]
         ),
-        c = (0, G.Me)(e.id);
+        c = (0, B.Me)(e.id);
     K.set(t, c);
     let { gridProps: d } = (0, U.Nm)(
         {
@@ -233,13 +233,13 @@ function $(e, t, n) {
             let n = null === (e = t.collection.columns.find((e) => e.key === f)) || void 0 === e ? void 0 : e.textValue;
             return _ && f ? p.format(`${_}Sort`, { columnName: n }) : void 0;
         }, [_, f, t.collection.columns]),
-        m = (0, G.PK)(h);
+        m = (0, B.PK)(h);
     return (
-        (0, G.rf)(() => {
-            (0, B.xQ)(h, 'assertive', 500);
+        (0, B.rf)(() => {
+            (0, G.xQ)(h, 'assertive', 500);
         }, [h]),
         {
-            gridProps: (0, G.dG)(d, m, {
+            gridProps: (0, B.dG)(d, m, {
                 'aria-describedby': [m['aria-describedby'], d['aria-describedby']].filter(Boolean).join(' ')
             })
         }
@@ -270,10 +270,10 @@ function ee(e, t, n) {
         f = null,
         _ = (null === (r = t.sortDescriptor) || void 0 === r ? void 0 : r.column) === s.key,
         p = null === (i = t.sortDescriptor) || void 0 === i ? void 0 : i.direction;
-    s.props.allowsSorting && !(0, G.Dt)() && (f = _ ? p : 'none');
+    s.props.allowsSorting && !(0, B.Dt)() && (f = _ ? p : 'none');
     let h = (0, V.qb)(W(X), '@react-aria/table');
-    o && ((a = `${h.format('sortable')}`), _ && p && (0, G.Dt)() && (a = `${a}, ${h.format(p)}`));
-    let m = (0, G.PK)(a),
+    o && ((a = `${h.format('sortable')}`), _ && p && (0, B.Dt)() && (a = `${a}, ${h.format(p)}`));
+    let m = (0, B.PK)(a),
         g = 0 === t.collection.size;
     return (
         (0, Z.useEffect)(() => {
@@ -281,7 +281,7 @@ function ee(e, t, n) {
         }, [g, t.selectionManager, s.key]),
         {
             columnHeaderProps: {
-                ...(0, G.dG)(l, c, d, m, g && { tabIndex: -1 }),
+                ...(0, B.dG)(l, c, d, m, g && { tabIndex: -1 }),
                 role: 'columnheader',
                 id: (function (e, t) {
                     let n = K.get(e);
@@ -326,10 +326,10 @@ function en(e, t, n) {
             };
         }
     }
-    let f = s.hasAction ? (0, G.ib)(r.props) : {};
+    let f = s.hasAction ? (0, B.ib)(r.props) : {};
     return {
         rowProps: {
-            ...(0, G.dG)(a, l, f),
+            ...(0, B.dG)(a, l, f),
             'aria-labelledby': Q(t, r.key)
         },
         ...s

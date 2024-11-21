@@ -180,14 +180,14 @@ function _(e, t) {
         ),
         k = (0, a.useRef)(void 0),
         U = (e) => {
-            O(), (k.current = e), t.setThumbDragging(f, !0), S(window, 'mouseup', B, !1), S(window, 'touchend', B, !1), S(window, 'pointerup', B, !1);
+            O(), (k.current = e), t.setThumbDragging(f, !0), S(window, 'mouseup', G, !1), S(window, 'touchend', G, !1), S(window, 'pointerup', G, !1);
         },
-        B = (e) => {
+        G = (e) => {
             var n, r;
-            (null !== (r = e.pointerId) && void 0 !== r ? r : null === (n = e.changedTouches) || void 0 === n ? void 0 : n[0].identifier) === k.current && (O(), t.setThumbDragging(f, !1), y(window, 'mouseup', B, !1), y(window, 'touchend', B, !1), y(window, 'pointerup', B, !1));
+            (null !== (r = e.pointerId) && void 0 !== r ? r : null === (n = e.changedTouches) || void 0 === n ? void 0 : n[0].identifier) === k.current && (O(), t.setThumbDragging(f, !1), y(window, 'mouseup', G, !1), y(window, 'touchend', G, !1), y(window, 'pointerup', G, !1));
         },
-        G = t.getThumbPercent(f);
-    (b || 'rtl' === T) && (G = 1 - G);
+        B = t.getThumbPercent(f);
+    (b || 'rtl' === T) && (B = 1 - B);
     let Z = I
         ? {}
         : (0, r.dG)(w, M, {
@@ -230,7 +230,7 @@ function _(e, t) {
                 ...Z,
                 style: {
                     position: 'absolute',
-                    [b ? 'top' : 'left']: `${100 * G}%`,
+                    [b ? 'top' : 'left']: `${100 * B}%`,
                     transform: 'translate(-50%, -50%)',
                     touchAction: 'none'
                 }

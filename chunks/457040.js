@@ -34,8 +34,8 @@ var r = n(200651),
     P = n(15350),
     k = n(611480),
     U = n(981631),
-    B = n(858260);
-let G = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
+    G = n(858260);
+let B = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
     Z = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
     F = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
     V = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN),
@@ -84,7 +84,7 @@ let G = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 },
                 [T, en, eg]
             ),
-            ev = null != eo && eo > G,
+            ev = null != eo && eo > B,
             {
                 rowCount: eI,
                 rowCountBySection: eb,
@@ -178,7 +178,7 @@ let G = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             children: [
                 !(X && es) &&
                     (0, r.jsx)('div', {
-                        className: B.header,
+                        className: G.header,
                         children: (0, r.jsx)(w.Z, {
                             ref: ee,
                             onKeyDown: eO,
@@ -188,14 +188,14 @@ let G = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                     }),
                 es
                     ? (0, r.jsx)(L.Z, {
-                          className: B.emptyState,
+                          className: G.emptyState,
                           onClose: H
                       })
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)('div', {
                                   ref: J,
-                                  className: B.listWrapper,
+                                  className: G.listWrapper,
                                   id: k.Vr,
                                   ...eR,
                                   children:
@@ -232,12 +232,12 @@ t.Z = i.forwardRef(
     (e, t) => (
         (0, N.fP)(),
         (0, r.jsx)('div', {
-            className: B.wrapper,
+            className: G.wrapper,
             id: k.nZ,
             'aria-labelledby': k.ED,
             role: 'tabpanel',
             children: e.isLoading
-                ? (0, r.jsx)(c.Spinner, { className: B.loadingIndicator })
+                ? (0, r.jsx)(c.Spinner, { className: G.loadingIndicator })
                 : (0, r.jsx)(X, {
                       ...e,
                       ref: t

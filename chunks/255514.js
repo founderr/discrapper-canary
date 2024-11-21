@@ -34,8 +34,8 @@ var r = n(200651),
     P = n(905434),
     k = n(196627),
     U = n(739319),
-    B = n(842401),
-    G = n(375790),
+    G = n(842401),
+    B = n(375790),
     Z = n(981631),
     F = n(388032),
     V = n(133404);
@@ -146,12 +146,12 @@ t.Z = (e) => {
                     null != ee ? (0, r.jsx)(U.Z, { element: ee }) : null,
                     null != j(t, 'breadcrumbs') && (0, r.jsx)(p.Z, { history: W }),
                     null != j(t, 'message_preview') && ('message' === n.name || 'first_dm' === n.name) && (0, r.jsx)(O.Z, { message: n.record }),
-                    null != j(t, 'user_preview') && 'user' === n.name ? (0, r.jsx)(B.Z, { user: n.record }) : null,
+                    null != j(t, 'user_preview') && 'user' === n.name ? (0, r.jsx)(G.Z, { user: n.record }) : null,
                     (function (e) {
                         let { elements: t } = e;
                         return t.some((e) => {
                             let { type: t } = e;
-                            return G.O.includes(t);
+                            return B.O.includes(t);
                         });
                     })(t) &&
                         (0, r.jsxs)(r.Fragment, {

@@ -176,8 +176,8 @@ function A(e) {
         {
             tag: P,
             badge: k,
-            branding: { primaryColor: U, secondaryColor: B },
-            bannerHash: G,
+            branding: { primaryColor: U, secondaryColor: G },
+            bannerHash: B,
             gameActivity: Z
         } = n,
         F = (0, l.Z)(n.games),
@@ -192,8 +192,8 @@ function A(e) {
             H(!1);
         }, []),
         Q = v.intl.formatToPlainString(v.t['0WHArK'], { count: n.memberCount }),
-        X = null != D ? D : (0, _.pY)(n.id, G),
-        J = null == a && null == X ? { background: 'linear-gradient(90deg, '.concat(U, ', ').concat(B, ')') } : void 0,
+        X = null != D ? D : (0, _.pY)(n.id, B),
+        J = null == a && null == X ? { background: 'linear-gradient(90deg, '.concat(U, ', ').concat(G, ')') } : void 0,
         $ =
             null != a
                 ? a
@@ -373,7 +373,7 @@ function A(e) {
             O &&
                 (0, r.jsx)('div', {
                     className: I.cardBrandingFooter,
-                    style: { background: 'linear-gradient(90deg, '.concat(U, ', ').concat(B, ')') }
+                    style: { background: 'linear-gradient(90deg, '.concat(U, ', ').concat(G, ')') }
                 }),
             M
         ]

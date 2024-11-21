@@ -58,8 +58,8 @@ let y = {
     P = new Map(),
     k = new Map(),
     U = new Map();
-let B = b.Ez.DISCONNECTED,
-    G = b.MI.RESIZABLE,
+let G = b.Ez.DISCONNECTED,
+    B = b.MI.RESIZABLE,
     Z = I.GM.NORMAL;
 function F(e) {
     return null != e ? e : '0';
@@ -76,7 +76,7 @@ function V(e) {
         M = u.default.getId(),
         P = w.some((e) => e === M),
         k = null === (t = y.find((e) => e.userId === M)) || void 0 === t ? void 0 : t.sessionId,
-        G = y.some((e) => (0, m.J)(e)),
+        B = y.some((e) => (0, m.J)(e)),
         Z = C.get(E),
         V = {
             applicationId: E,
@@ -95,7 +95,7 @@ function V(e) {
             ...Z,
             ...V
         });
-    null != Z && l === Z.channelId && E === (null == Z ? void 0 : Z.applicationId) && ((!P && Array.from(Z.userIds).some((e) => e === M)) || !G)
+    null != Z && l === Z.channelId && E === (null == Z ? void 0 : Z.applicationId) && ((!P && Array.from(Z.userIds).some((e) => e === M)) || !B)
         ? (C.delete(E), _.S.dispatch(T.CkL.RELEASE_ACTIVITY_WEB_VIEW))
         : P &&
           (null == Z || Z.applicationId !== E || Z.channelId !== l) &&
@@ -133,11 +133,11 @@ function V(e) {
                       embeddedActivity: O
                   }),
                   (0, g.Z)()
-                      ? ((B = b.Ez.ACTIVITY_POPOUT_WINDOW),
+                      ? ((G = b.Ez.ACTIVITY_POPOUT_WINDOW),
                         s.Z.wait(() => {
                             s.Z.dispatch({ type: 'ACTIVITY_POPOUT_WINDOW_OPEN' });
                         }))
-                      : (B = r !== d.Z.getChannelId() || (0, v.Z)(i) ? b.Ez.PIP : b.Ez.PANEL),
+                      : (G = r !== d.Z.getChannelId() || (0, v.Z)(i) ? b.Ez.PIP : b.Ez.PANEL),
                   U.set(W(i, a), Date.now());
           })({
               channelId: l,
@@ -265,10 +265,10 @@ class K extends (i = a.ZP.PersistedStore) {
         return r;
     }
     getActivityPanelMode() {
-        return B;
+        return G;
     }
     getFocusedLayout() {
-        return G;
+        return B;
     }
     getCurrentEmbeddedActivity() {
         var e;
@@ -356,7 +356,7 @@ let z = new K(s.Z, {
             isLaunching: !0,
             componentId: r
         }),
-            (G = i === l.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON ? b.MI.NO_CHAT : b.MI.RESIZABLE);
+            (B = i === l.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON ? b.MI.NO_CHAT : b.MI.RESIZABLE);
     },
     EMBEDDED_ACTIVITY_LAUNCH_SUCCESS: function (e) {
         let { applicationId: t, channelId: n } = e;
@@ -475,19 +475,19 @@ let z = new K(s.Z, {
     },
     EMBEDDED_ACTIVITY_SET_PANEL_MODE: function (e) {
         let { activityPanelMode: t } = e;
-        B = t;
+        G = t;
     },
     EMBEDDED_ACTIVITY_SET_FOCUSED_LAYOUT: function (e) {
         let { focusedActivityLayout: t } = e;
-        G = t;
+        B = t;
     },
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
-        r !== t && B === b.Ez.PANEL && (B = b.Ez.PIP);
+        r !== t && G === b.Ez.PANEL && (G = b.Ez.PIP);
     },
     POPOUT_WINDOW_CLOSE: function (e) {
         let { key: t } = e;
-        t === T.KJ3.ACTIVITY_POPOUT && (B = b.Ez.PIP);
+        t === T.KJ3.ACTIVITY_POPOUT && (G = b.Ez.PIP);
     }
 });
 t.ZP = z;

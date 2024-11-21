@@ -29,7 +29,7 @@ var r = n(200651),
     N = n(769860);
 function C(e) {
     var t, n, a;
-    let { title: C, type: R, guildBoostProps: O, analyticsSource: D, analyticsLocation: L, body: x, context: w, glowUp: M, modalClassName: P, modalContentClassName: k, artContainerClassName: U, headerClassName: B, bodyClassName: G, transitionState: Z, onClose: F, onSubscribeClick: V, onSubscribeFinish: j, onSecondaryClick: H, secondaryCTA: Y, subscribeButtonText: W, showNewBadge: K = !1, enableArtBoxShadow: z = !0, subscriptionTier: q = T.Si.TIER_2, isLoading: Q = !1, hideBackButton: X, backButtonText: J, showEnhancedUpsell: $, useSubscribeButtonGradient: ee, subscribeButtonClassname: et, hidePremiumOfferUpsell: en, children: er, LeadingComponent: ei, ...ea } = e,
+    let { title: C, type: R, guildBoostProps: O, analyticsSource: D, analyticsLocation: L, body: x, context: w, glowUp: M, modalClassName: P, modalContentClassName: k, artContainerClassName: U, headerClassName: G, bodyClassName: B, transitionState: Z, onClose: F, onSubscribeClick: V, onSubscribeFinish: j, onSecondaryClick: H, secondaryCTA: Y, subscribeButtonText: W, showNewBadge: K = !1, enableArtBoxShadow: z = !0, subscriptionTier: q = T.Si.TIER_2, isLoading: Q = !1, hideBackButton: X, backButtonText: J, showEnhancedUpsell: $, useSubscribeButtonGradient: ee, subscribeButtonClassname: et, hidePremiumOfferUpsell: en, children: er, LeadingComponent: ei, ...ea } = e,
         es = null != O,
         eo = (0, g.N)(),
         el = (0, m.Ng)(),
@@ -116,7 +116,7 @@ function C(e) {
                                                 className: A.bodyContent,
                                                 children: [
                                                     (0, r.jsx)(l.Heading, {
-                                                        className: s()(A.header, { [A.enhancedHeader]: $ }, B),
+                                                        className: s()(A.header, { [A.enhancedHeader]: $ }, G),
                                                         variant: 'heading-xl/bold',
                                                         children: C
                                                     }),
@@ -124,7 +124,7 @@ function C(e) {
                                                     er,
                                                     (0, r.jsx)(l.Text, {
                                                         variant: 'text-md/normal',
-                                                        className: s()(G, A.subHeader),
+                                                        className: s()(B, A.subHeader),
                                                         children: x
                                                     })
                                                 ]

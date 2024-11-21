@@ -410,7 +410,7 @@ function R(e) {
         P = (0, c.vj)(C, R),
         k = i.useId(),
         U = i.useId(),
-        [B] = i.useState(() => ({
+        [G] = i.useState(() => ({
             fill: a,
             ...y({
                 size: E,
@@ -419,7 +419,7 @@ function R(e) {
                 isTyping: !1
             })
         })),
-        G = i.useMemo(
+        B = i.useMemo(
             () => ({
                 fill: P,
                 ...y({
@@ -442,8 +442,8 @@ function R(e) {
         } = (0, f.useSpring)(
             {
                 config: I,
-                from: B,
-                to: G
+                from: G,
+                to: B
             },
             document.hasFocus() ? 'animate-always' : 'animate-never'
         ),
