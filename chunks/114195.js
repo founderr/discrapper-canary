@@ -7,6 +7,5 @@ e.exports = {
     avatar: 'avatar_c56579',
     userAvatars: 'userAvatars_c56579',
     dotSpacer: 'dotSpacer_c56579',
-    leaveIconContainer: 'leaveIconContainer_c56579',
     actionButtonsContainer: 'actionButtonsContainer_c56579'
 };
