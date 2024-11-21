@@ -13,13 +13,13 @@ var l = t(200651),
     c = t(813197),
     d = t(930180),
     u = t(46920),
-    m = t(924301),
-    x = t(236373),
+    x = t(924301),
+    m = t(236373),
     h = t(854698),
     g = t(405613),
     v = t(440371),
-    f = t(765305),
-    j = t(486324),
+    j = t(765305),
+    f = t(486324),
     N = t(388032),
     I = t(351293);
 function p(e) {
@@ -65,28 +65,29 @@ function p(e) {
         : null;
 }
 function C(e) {
-    let { guildEvent: n, guildEventId: r, guildId: C, editBroadcastInfoData: E, error: S, validationErrorMessage: T, onChange: Z, canSetFocus: y = !1 } = e,
-        { entityType: b, channelId: _, description: R, name: A, image: k, scheduledEndTime: L, scheduledStartTime: D, recurrenceRule: z } = n,
-        B = (0, d._d)(_),
-        M = null != n && (0, m.xt)(n),
-        G = i.useMemo(() => {
+    let { guildEvent: n, guildEventId: r, guildId: C, editBroadcastInfoData: E, error: T, validationErrorMessage: S, onChange: b, canSetFocus: y = !1 } = e,
+        { entityType: Z, channelId: _, description: k, name: R, image: A, scheduledEndTime: D, scheduledStartTime: L, recurrenceRule: B } = n,
+        z = (0, d._d)(_),
+        M = (0, d.K3)(_),
+        G = null != n && (0, x.xt)(n),
+        U = i.useMemo(() => {
             let e = (0, h.v1)(n);
-            return null != e ? e : { startDate: a()(D) };
-        }, [n, D]),
-        [P, U] = i.useState(() => (0, h.zi)(a()(D), z)),
-        V = i.useRef(null);
+            return null != e ? e : { startDate: a()(L) };
+        }, [n, L]),
+        [P, V] = i.useState(() => (0, h.zi)(a()(L), B)),
+        w = i.useRef(null);
     i.useEffect(() => {
         if (y) {
             var e;
-            null === (e = V.current) || void 0 === e || e.focus();
+            null === (e = w.current) || void 0 === e || e.focus();
         }
     }, [y]);
-    let w = (e) => {
-            Z({ image: e });
+    let F = (e) => {
+            b({ image: e });
         },
-        F = (e, n) => {
+        X = (e, n) => {
             if (null == e || void 0 === n) {
-                w(null);
+                F(null);
                 return;
             }
             (0, s.openModalLazy)(async () => {
@@ -95,8 +96,8 @@ function C(e) {
                     (0, l.jsx)(i, {
                         imgURI: e,
                         file: n,
-                        onCrop: w,
-                        uploadType: j.pC.SCHEDULED_EVENT_IMAGE,
+                        onCrop: F,
+                        uploadType: f.pC.SCHEDULED_EVENT_IMAGE,
                         allowSkip: !0,
                         ...t
                     });
@@ -106,7 +107,7 @@ function C(e) {
         children: [
             (0, l.jsx)('div', {
                 className: I.blockedUsersContainer,
-                children: null != _ && !M && B > 0 && (0, l.jsx)(u.mv, { channelId: _ })
+                children: null != _ && !G && (z > 0 || M > 0) && (0, l.jsx)(u.mv, { channelId: _ })
             }),
             (0, l.jsxs)('div', {
                 className: I.form,
@@ -119,20 +120,20 @@ function C(e) {
                             (0, l.jsx)(s.TextInput, {
                                 className: I.textInput,
                                 onChange: (e) => {
-                                    Z({ name: e });
+                                    b({ name: e });
                                 },
                                 placeholder: N.intl.string(N.t['6/yarq']),
-                                maxLength: f.p,
-                                value: A,
+                                maxLength: j.p,
+                                value: R,
                                 autoComplete: 'off',
-                                inputRef: V
+                                inputRef: w
                             }),
-                            null != S
+                            null != T
                                 ? (0, l.jsx)(s.Text, {
                                       color: 'text-danger',
                                       variant: 'text-xs/normal',
                                       className: I.warning,
-                                      children: S.getAnyErrorMessage()
+                                      children: T.getAnyErrorMessage()
                                   })
                                 : null
                         ]
@@ -145,25 +146,25 @@ function C(e) {
                                     scheduledStartTime: null == n ? void 0 : n.toISOString(),
                                     scheduledEndTime: null == t ? void 0 : t.toISOString()
                                 };
-                            null != n && null != L && (null == t ? void 0 : t.isBefore(n)) && (l.scheduledEndTime = n.add(1, 'hour').toISOString()), null != n && null != P && (l.recurrenceRule = (0, h.mF)(P, n)), Z(l);
+                            null != n && null != D && (null == t ? void 0 : t.isBefore(n)) && (l.scheduledEndTime = n.add(1, 'hour').toISOString()), null != n && null != P && (l.recurrenceRule = (0, h.mF)(P, n)), b(l);
                         },
                         onRecurrenceChange: (e) => {
-                            let n = G.startDate;
-                            if (null != n) Z({ recurrenceRule: (0, h.mF)(e, n) }), U(e);
+                            let n = U.startDate;
+                            if (null != n) b({ recurrenceRule: (0, h.mF)(e, n) }), V(e);
                         },
-                        schedule: G,
-                        recurrenceRule: z,
-                        showEndDate: b === f.WX.EXTERNAL,
-                        requireEndDate: b === f.WX.EXTERNAL,
-                        disableStartDateTime: M,
+                        schedule: U,
+                        recurrenceRule: B,
+                        showEndDate: Z === j.WX.EXTERNAL,
+                        requireEndDate: Z === j.WX.EXTERNAL,
+                        disableStartDateTime: G,
                         guildId: C
                     }),
-                    null != T
+                    null != S
                         ? (0, l.jsx)(s.Text, {
                               color: 'text-danger',
                               variant: 'text-xs/normal',
                               className: I.warning,
-                              children: T
+                              children: S
                           })
                         : null,
                     (0, l.jsx)(s.FormItem, {
@@ -172,11 +173,11 @@ function C(e) {
                         children: (0, l.jsx)(s.TextArea, {
                             className: I.__invalid_descriptionInput,
                             placeholder: N.intl.string(N.t['kWO/Ex']),
-                            value: R,
+                            value: k,
                             onChange: (e) => {
-                                Z({ description: e });
+                                b({ description: e });
                             },
-                            maxLength: f.wm,
+                            maxLength: j.wm,
                             autosize: !0
                         })
                     }),
@@ -190,35 +191,35 @@ function C(e) {
                                 className: I.addImageHint,
                                 children: N.intl.string(N.t.B9C9bW)
                             }),
-                            null != k
+                            null != A
                                 ? (0, l.jsxs)(l.Fragment, {
                                       children: [
                                           (0, l.jsx)(o.Z, {
                                               className: I.imagePreview,
                                               iconWrapperClassName: I.imagePreviewInner,
-                                              image: k,
+                                              image: A,
                                               makeURL: (e) => {
                                                   if (null == e) return null;
                                                   if (null != C) {
                                                       var t;
-                                                      return null !== (t = (0, g.Z)((0, x.Gb)(n, C, r))) && void 0 !== t ? t : null;
+                                                      return null !== (t = (0, g.Z)((0, m.Gb)(n, C, r))) && void 0 !== t ? t : null;
                                                   }
                                               },
-                                              onChange: F,
+                                              onChange: X,
                                               hint: N.intl.string(N.t.G44Xmp),
                                               showRemoveButton: !1,
                                               enabled: !0
                                           }),
                                           (0, l.jsx)(s.Button, {
                                               size: s.Button.Sizes.SMALL,
-                                              onClick: () => w(null),
+                                              onClick: () => F(null),
                                               children: N.intl.string(N.t.gmUvOz)
                                           })
                                       ]
                                   })
                                 : (0, l.jsxs)(s.Button, {
                                       size: s.Button.Sizes.SMALL,
-                                      children: [N.intl.string(N.t.vKCGYW), (0, l.jsx)(c.ZP, { onChange: F })]
+                                      children: [N.intl.string(N.t.vKCGYW), (0, l.jsx)(c.ZP, { onChange: X })]
                                   })
                         ]
                     }),

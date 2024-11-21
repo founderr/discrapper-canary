@@ -9,10 +9,10 @@ var l = n(27457),
     r = n(131951),
     a = n(464820);
 function s(e) {
-    let { aspectRatio: t, blocked: n, channel: s, className: o, focused: c, children: d, inCall: u, inPopout: h, noBorder: p, onClick: m, onContextMenu: f, onDoubleClick: g, onVideoResize: C, paused: x, pulseSpeakingIndicator: _, participant: v, width: I, ...E } = e,
-        b = r.Z.getVideoComponent();
+    let { aspectRatio: t, blocked: n, ignored: s, channel: o, className: c, focused: d, children: u, inCall: h, inPopout: p, noBorder: m, onClick: f, onContextMenu: g, onDoubleClick: C, onVideoResize: x, paused: _, pulseSpeakingIndicator: v, participant: I, width: E, ...b } = e,
+        Z = r.Z.getVideoComponent();
     return (0, i.jsx)('div', {
-        style: { width: I },
+        style: { width: E },
         className: a.spaceBetweenTiles,
         children: (0, i.jsxs)('div', {
             className: a.tileSizer,
@@ -20,24 +20,25 @@ function s(e) {
             children: [
                 (0, i.jsx)(l.ZP, {
                     blocked: n,
-                    channel: s,
-                    className: o,
-                    focused: c,
-                    inCall: u,
-                    inPopout: h,
-                    noBorder: p,
-                    onClick: m,
-                    onContextMenu: f,
-                    onDoubleClick: g,
-                    onVideoResize: C,
-                    participant: v,
-                    paused: x,
-                    pulseSpeakingIndicator: _,
-                    videoComponent: b,
-                    width: I,
-                    ...E
+                    ignored: s,
+                    channel: o,
+                    className: c,
+                    focused: d,
+                    inCall: h,
+                    inPopout: p,
+                    noBorder: m,
+                    onClick: f,
+                    onContextMenu: g,
+                    onDoubleClick: C,
+                    onVideoResize: x,
+                    participant: I,
+                    paused: _,
+                    pulseSpeakingIndicator: v,
+                    videoComponent: Z,
+                    width: E,
+                    ...b
                 }),
-                d
+                u
             ]
         })
     });

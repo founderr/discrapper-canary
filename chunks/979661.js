@@ -6,5 +6,6 @@ e.exports = {
     declineText: 'declineText_dc92e9',
     blocked: 'blocked_dc92e9',
     blockedIcon: 'blockedIcon_dc92e9',
-    blockedText: 'blockedText_dc92e9'
+    blockedText: 'blockedText_dc92e9',
+    noIcon: 'noIcon_dc92e9'
 };

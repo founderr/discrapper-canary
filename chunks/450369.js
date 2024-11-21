@@ -34,7 +34,7 @@ let y = 16 / 9,
     P = (e) => {
         let { stageParticipant: t, rtcParticipant: n, channel: r, guildId: a, user: s, width: c, isModerator: d, onContextMenu: u, inPopout: h } = e,
             { reducedMotion: p } = l.useContext(o.AccessibilityPreferencesContext),
-            { blocked: m, id: f } = t;
+            { blocked: m, ignored: f, id: g } = t;
         return (0, i.jsx)(o.Popout, {
             preload:
                 null == n
@@ -63,6 +63,7 @@ let y = 16 / 9,
                             participant: n,
                             aspectRatio: y,
                             blocked: m,
+                            ignored: f,
                             channel: r,
                             className: A.tile,
                             inCall: !0,
@@ -72,7 +73,7 @@ let y = 16 / 9,
                             width: c,
                             children: d && (0, i.jsx)(S.Z, {})
                         },
-                        f
+                        g
                     )
                 })
         });
@@ -80,21 +81,21 @@ let y = 16 / 9,
     M = (e) => {
         let { stageParticipant: t, rtcParticipant: n, channel: r, width: a, isModerator: d, onContextMenu: h, inPopout: x } = e,
             { reducedMotion: _ } = l.useContext(o.AccessibilityPreferencesContext),
-            { id: Z, blocked: P } = t,
-            M = (0, s.Wu)([v.Z], () => v.Z.getAllActiveStreams(), []),
-            { selectedParticipant: L, largeStream: R } = (0, s.cj)([p.Z], () => ({
+            { id: Z, blocked: P, ignored: M } = t,
+            L = (0, s.Wu)([v.Z], () => v.Z.getAllActiveStreams(), []),
+            { selectedParticipant: R, largeStream: k } = (0, s.cj)([p.Z], () => ({
                 selectedParticipant: null != r ? p.Z.getSelectedParticipant(r.id) : null,
                 largeStream: null != r && p.Z.getStageStreamSize(r.id)
             })),
-            k = l.useCallback(
+            O = l.useCallback(
                 (e, t) => {
-                    if (e.type === j.fO.STREAM && 0 === M.filter((t) => (0, f.V9)(t) === e.id && t.state !== T.jm8.ENDED).length) {
+                    if (e.type === j.fO.STREAM && 0 === L.filter((t) => (0, f.V9)(t) === e.id && t.state !== T.jm8.ENDED).length) {
                         if (!(0, g.p9)(r, b.Z, I.Z, E.Z, m.Z)[0]) return;
                         (0, u.rn)((0, f.my)(e.id), { forceMultiple: t.shiftKey });
                     }
-                    (null == L ? void 0 : L.id) === e.id ? (R ? (c.Z.selectParticipant(r.id, null), c.Z.updateStageStreamSize(r.id, !1)) : c.Z.updateStageStreamSize(r.id, !0)) : (c.Z.updateStageStreamSize(r.id, !1), c.Z.selectParticipant(r.id, e.id));
+                    (null == R ? void 0 : R.id) === e.id ? (k ? (c.Z.selectParticipant(r.id, null), c.Z.updateStageStreamSize(r.id, !1)) : c.Z.updateStageStreamSize(r.id, !0)) : (c.Z.updateStageStreamSize(r.id, !1), c.Z.selectParticipant(r.id, e.id));
                 },
-                [M, r, L, R]
+                [L, r, R, k]
             );
         return (0, i.jsx)(
             N.Z,
@@ -103,11 +104,12 @@ let y = 16 / 9,
                 aspectRatio: y,
                 fit: n.type === j.fO.USER ? C.L.COVER : void 0,
                 blocked: P,
+                ignored: M,
                 channel: r,
                 className: A.tile,
                 inCall: !0,
                 inPopout: x,
-                onClick: k,
+                onClick: O,
                 onContextMenu: h,
                 paused: !1,
                 pulseSpeakingIndicator: !_.enabled,

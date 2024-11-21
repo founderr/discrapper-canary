@@ -22,7 +22,7 @@ var i = n(200651),
     _ = n(590415),
     v = n(914648);
 let I = l.memo(function (e) {
-        let { guildId: t, channelId: n, user: l, isPremium: r, isBlocked: a } = e;
+        let { guildId: t, channelId: n, user: l, isPremium: r, isBlocked: a, isIgnored: s } = e;
         return (0, i.jsxs)('div', {
             className: v.textContainer,
             children: [
@@ -31,6 +31,12 @@ let I = l.memo(function (e) {
                           size: 'lg',
                           className: v.blockedIcon,
                           color: d.Z.unsafe_rawColors.RED_400.css
+                      })
+                    : null,
+                s
+                    ? (0, i.jsx)(u.EyeSlashIcon, {
+                          size: 'lg',
+                          className: v.blockedIcon
                       })
                     : null,
                 (0, i.jsx)(u.Text, {
@@ -51,25 +57,25 @@ let I = l.memo(function (e) {
     E = l.memo(function (e) {
         var t;
         let { participant: n, guildId: l, channel: r, isPremium: s } = e,
-            { user: o, blocked: c, rtsState: d } = n,
-            h = d === _.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK,
-            p = d === _.xO.REQUESTED_TO_SPEAK || h;
+            { user: o, blocked: c, ignored: d, rtsState: h } = n,
+            p = h === _.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK,
+            m = h === _.xO.REQUESTED_TO_SPEAK || p;
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)('div', {
                     className: v.avatarContainer,
                     children: [
-                        p &&
+                        m &&
                             (0, i.jsx)(u.HandRequestSpeakIcon, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: a()(v.icon, { [v.invited]: h })
+                                className: a()(v.icon, { [v.invited]: p })
                             }),
                         (0, i.jsx)('img', {
                             src: null !== (t = o.getAvatarURL(r.guild_id, 56, !1)) && void 0 !== t ? t : void 0,
                             alt: o.username,
                             'aria-label': o.username,
-                            className: a()(v.avatar, { [v.faded]: c })
+                            className: a()(v.avatar, { [v.faded]: c || d })
                         })
                     ]
                 }),
@@ -78,7 +84,8 @@ let I = l.memo(function (e) {
                     channelId: r.id,
                     user: o,
                     isPremium: s,
-                    isBlocked: c
+                    isBlocked: c,
+                    isIgnored: d
                 })
             ]
         });

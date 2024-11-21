@@ -1,75 +1,91 @@
 t.r(n),
     t.d(n, {
         default: function () {
-            return d;
+            return x;
         }
-    });
+    }),
+    t(47120);
 var r = t(200651);
 t(192379);
-var c = t(481060),
-    s = t(313201),
-    o = t(930180),
-    i = t(46920),
-    l = t(388032),
+var s = t(481060),
+    o = t(313201),
+    c = t(930180),
+    l = t(46920),
+    i = t(388032),
     a = t(511387);
 function d(e) {
-    let { channel: n, onAccept: t, transitionState: d, onClose: u, ...x } = e,
-        m = (0, s.Dt)(),
-        h = (0, o.z)(n.id);
-    return (0, r.jsxs)(c.ModalRoot, {
-        transitionState: d,
-        'aria-labelledby': m,
-        ...x,
-        size: c.ModalSize.SMALL,
+    let { blockedUsersCount: n, ignoredUsersCount: t } = e;
+    return n > 0 && t > 0 ? i.intl.format(i.t.Uzdyho, { number: n + t }) : t > 0 ? i.intl.format(i.t.wvygk5, { number: t }) : i.intl.format(i.t.HviVAw, { number: n });
+}
+function u(e) {
+    let { blockedUsersCount: n, ignoredUsersCount: t } = e;
+    return n > 0 && t > 0 ? i.intl.string(i.t['P/KFX1']) : t > 0 ? i.intl.format(i.t.Ri3o39, { number: t }) : i.intl.format(i.t['28qZMT'], { number: n });
+}
+function x(e) {
+    let { channel: n, onAccept: t, transitionState: x, onClose: m, ...h } = e,
+        j = (0, o.Dt)(),
+        b = (0, c.z)(n.id),
+        k = (0, c.bA)(n.id);
+    return (0, r.jsxs)(s.ModalRoot, {
+        transitionState: x,
+        'aria-labelledby': j,
+        ...h,
+        size: s.ModalSize.SMALL,
         children: [
-            (0, r.jsxs)(c.ModalHeader, {
+            (0, r.jsxs)(s.ModalHeader, {
                 className: a.header,
                 children: [
-                    (0, r.jsx)(c.Heading, {
+                    (0, r.jsx)(s.Heading, {
                         variant: 'heading-xl/semibold',
-                        children: l.intl.format(l.t.HviVAw, { number: h.length })
+                        children: (0, r.jsx)(d, {
+                            blockedUsersCount: b.length,
+                            ignoredUsersCount: k.length
+                        })
                     }),
-                    (0, r.jsx)(c.Text, {
+                    (0, r.jsx)(s.Text, {
                         color: 'header-secondary',
                         className: a.description,
                         variant: 'text-sm/normal',
-                        children: l.intl.format(l.t['28qZMT'], { number: h.length })
+                        children: (0, r.jsx)(u, {
+                            blockedUsersCount: b.length,
+                            ignoredUsersCount: k.length
+                        })
                     })
                 ]
             }),
-            (0, r.jsx)(c.ModalContent, {
+            (0, r.jsx)(s.ModalContent, {
                 className: a.content,
-                children: h.map((e) => {
-                    let { user: t, id: c, speaker: s } = e;
+                children: [...b, ...k].map((e) => {
+                    let { user: t, id: s, speaker: o } = e;
                     return (0, r.jsx)(
-                        i.Xd,
+                        l.Ie,
                         {
                             user: t,
-                            speaker: s,
+                            speaker: o,
                             showStatus: !0,
                             channelId: n.id
                         },
-                        c
+                        s
                     );
                 })
             }),
-            (0, r.jsxs)(c.ModalFooter, {
+            (0, r.jsxs)(s.ModalFooter, {
                 className: a.footer,
                 children: [
-                    (0, r.jsx)(c.Button, {
+                    (0, r.jsx)(s.Button, {
                         onClick: () => {
-                            t(n), u();
+                            t(n), m();
                         },
-                        color: c.Button.Colors.BRAND,
-                        children: l.intl.string(l.t.mbD50N)
+                        color: s.Button.Colors.BRAND,
+                        children: i.intl.string(i.t.mbD50N)
                     }),
-                    (0, r.jsx)(c.Button, {
+                    (0, r.jsx)(s.Button, {
                         onClick: () => {
-                            u();
+                            m();
                         },
-                        color: c.Button.Colors.PRIMARY,
-                        look: c.Button.Looks.LINK,
-                        children: l.intl.string(l.t.CZGqeX)
+                        color: s.Button.Colors.PRIMARY,
+                        look: s.Button.Looks.LINK,
+                        children: i.intl.string(i.t.CZGqeX)
                     })
                 ]
             })

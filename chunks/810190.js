@@ -37,6 +37,7 @@ e.exports = {
     absoluteFill: 'absoluteFill_ba4b17',
     videoWrapper: 'videoWrapper_ba4b17',
     blocked: 'blocked_ba4b17',
+    ignored: 'ignored_ba4b17',
     blockedIcon: 'blockedIcon_ba4b17',
     blockedAvatar: 'blockedAvatar_ba4b17',
     small: 'small_ba4b17',

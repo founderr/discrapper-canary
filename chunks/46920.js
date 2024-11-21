@@ -1,121 +1,203 @@
-e.d(t, {
-    Xd: function () {
-        return f;
+t.d(e, {
+    Ie: function () {
+        return I;
     },
     mv: function () {
-        return g;
+        return f;
     }
-});
-var r = e(200651);
-e(192379);
-var i = e(442837),
-    c = e(692547),
-    l = e(481060),
-    o = e(239091),
-    s = e(584511),
-    a = e(118012),
-    d = e(51144),
-    u = e(88751),
-    _ = e(930180),
-    h = e(388032),
-    m = e(578814);
-let g = (n) => {
-        let { channelId: t } = n,
-            e = (0, _._d)(t);
-        return 0 === e
-            ? null
-            : (0, r.jsxs)('div', {
-                  className: m.blockedNotice,
+}),
+    t(47120);
+var r = t(200651);
+t(192379);
+var i = t(442837),
+    l = t(692547),
+    c = t(481060),
+    s = t(239091),
+    o = t(584511),
+    a = t(118012),
+    d = t(922611),
+    u = t(699516),
+    h = t(51144),
+    _ = t(88751),
+    m = t(930180),
+    x = t(388032),
+    g = t(578814);
+let f = (n) => {
+        let { channelId: e } = n,
+            t = (0, m._d)(e);
+        return (0, d.Do)({ location: 'blocked-users-notice' })
+            ? (0, r.jsx)(E, { channelId: e })
+            : 0 === t
+              ? null
+              : (0, r.jsxs)('div', {
+                    className: g.blockedNotice,
+                    children: [
+                        (0, r.jsx)(c.DenyIcon, {
+                            size: 'lg',
+                            className: g.__invalid_blockedIcon,
+                            color: l.Z.unsafe_rawColors.RED_400.css
+                        }),
+                        (0, r.jsx)(c.Text, {
+                            variant: 'text-xs/normal',
+                            color: 'header-secondary',
+                            children: x.intl.format(x.t['6Tcdt7'], { number: t })
+                        }),
+                        (0, r.jsx)(c.Clickable, {
+                            className: g.blockedButton,
+                            onClick: (n) => {
+                                (0, s.vq)(
+                                    n,
+                                    (n) =>
+                                        (0, r.jsx)(T, {
+                                            ...n,
+                                            channelId: e
+                                        }),
+                                    {
+                                        position: 'left',
+                                        align: 'bottom'
+                                    }
+                                );
+                            },
+                            children: x.intl.string(x.t.rUEjBQ)
+                        })
+                    ]
+                });
+    },
+    E = (n) => {
+        let { channelId: e } = n,
+            t = (0, m._d)(e),
+            i = (0, m.K3)(e);
+        if (0 === t && 0 === i) return null;
+        let o = (n) => {
+            (0, s.vq)(
+                n,
+                (n) =>
+                    (0, r.jsx)(T, {
+                        ...n,
+                        channelId: e
+                    }),
+                {
+                    position: 'left',
+                    align: 'bottom'
+                }
+            );
+        };
+        return t > 0 && i > 0
+            ? (0, r.jsxs)('div', {
+                  className: g.blockedNotice,
                   children: [
-                      (0, r.jsx)(l.DenyIcon, {
+                      (0, r.jsx)(c.DenyIcon, {
                           size: 'lg',
-                          className: m.__invalid_blockedIcon,
-                          color: c.Z.unsafe_rawColors.RED_400.css
+                          color: l.Z.unsafe_rawColors.RED_400.css
                       }),
-                      (0, r.jsx)(l.Text, {
+                      (0, r.jsx)(c.Text, {
                           variant: 'text-xs/normal',
                           color: 'header-secondary',
-                          children: h.intl.format(h.t['6Tcdt7'], { number: e })
+                          children: x.intl.string(x.t['P/KFX1'])
                       }),
-                      (0, r.jsx)(l.Clickable, {
-                          className: m.blockedButton,
-                          onClick: (n) => {
-                              (0, o.vq)(
-                                  n,
-                                  (n) =>
-                                      (0, r.jsx)(E, {
-                                          ...n,
-                                          channelId: t
-                                      }),
-                                  {
-                                      position: 'left',
-                                      align: 'bottom'
-                                  }
-                              );
-                          },
-                          children: h.intl.string(h.t.rUEjBQ)
+                      (0, r.jsx)(c.Clickable, {
+                          className: g.blockedButton,
+                          onClick: o,
+                          children: x.intl.string(x.t.rUEjBQ)
                       })
                   ]
-              });
+              })
+            : i > 0
+              ? (0, r.jsxs)('div', {
+                    className: g.blockedNotice,
+                    children: [
+                        (0, r.jsx)(c.EyeSlashIcon, { size: 'lg' }),
+                        (0, r.jsx)(c.Text, {
+                            variant: 'text-xs/normal',
+                            color: 'header-secondary',
+                            children: x.intl.format(x.t.Ri3o39, { number: i })
+                        }),
+                        (0, r.jsx)(c.Clickable, {
+                            className: g.blockedButton,
+                            onClick: o,
+                            children: x.intl.string(x.t.rUEjBQ)
+                        })
+                    ]
+                })
+              : (0, r.jsxs)('div', {
+                    className: g.blockedNotice,
+                    children: [
+                        (0, r.jsx)(c.DenyIcon, {
+                            size: 'lg',
+                            color: l.Z.unsafe_rawColors.RED_400.css
+                        }),
+                        (0, r.jsx)(c.Text, {
+                            variant: 'text-xs/normal',
+                            color: 'header-secondary',
+                            children: x.intl.format(x.t['6Tcdt7'], { number: t })
+                        }),
+                        (0, r.jsx)(c.Clickable, {
+                            className: g.blockedButton,
+                            onClick: o,
+                            children: x.intl.string(x.t.rUEjBQ)
+                        })
+                    ]
+                });
     },
-    f = (n) => {
-        let { user: t, showStatus: e, speaker: c, channelId: o } = n,
-            _ = (0, i.e7)([u.ZP], () => u.ZP.isModerator(t.id, o)),
-            g = null;
+    I = (n) => {
+        let { user: e, showStatus: t, speaker: l, channelId: s } = n,
+            d = (0, i.e7)([_.ZP], () => _.ZP.isModerator(e.id, s)),
+            m = (0, i.e7)([u.Z], () => u.Z.isBlocked(e.id)),
+            f = null;
         return (
-            e && (g = c ? h.intl.string(h.t.LqMmGx) : _ ? h.intl.string(h.t.GMZqSk) : h.intl.string(h.t.suRAp6)),
+            t && (f = l ? x.intl.string(x.t.LqMmGx) : d ? x.intl.string(x.t.GMZqSk) : x.intl.string(x.t.suRAp6)),
             (0, r.jsxs)('div', {
-                className: m.user,
+                className: g.user,
                 children: [
                     (0, r.jsx)(
-                        s.Z,
+                        o.Z,
                         {
-                            src: t.getAvatarURL(null, 32),
-                            size: l.AvatarSizes.SIZE_32,
+                            src: e.getAvatarURL(null, 32),
+                            size: c.AvatarSizes.SIZE_32,
                             muted: !1,
                             deafen: !1,
                             speaking: !1,
                             ringing: !1,
-                            renderIcon: c
+                            renderIcon: l
                                 ? () =>
-                                      (0, r.jsx)(l.MicrophoneIcon, {
+                                      (0, r.jsx)(c.MicrophoneIcon, {
                                           size: 'md',
                                           color: 'currentColor',
-                                          className: m.icon
+                                          className: g.icon
                                       })
                                 : null
                         },
-                        t.id
+                        e.id
                     ),
                     (0, r.jsxs)('div', {
-                        className: m.userInfo,
+                        className: g.userInfo,
                         children: [
                             (0, r.jsxs)('div', {
-                                className: m.username,
+                                className: g.username,
                                 children: [
                                     (0, r.jsx)(a.Z, {
-                                        size: e ? a.Z.Sizes.SIZE_16 : a.Z.Sizes.SIZE_14,
-                                        children: d.ZP.getName(t)
+                                        size: t ? a.Z.Sizes.SIZE_16 : a.Z.Sizes.SIZE_14,
+                                        children: h.ZP.getName(e)
                                     }),
                                     (0, r.jsx)(a.Z, {
-                                        size: e ? a.Z.Sizes.SIZE_16 : a.Z.Sizes.SIZE_14,
+                                        size: t ? a.Z.Sizes.SIZE_16 : a.Z.Sizes.SIZE_14,
                                         color: a.Z.Colors.HEADER_SECONDARY,
-                                        children: '#'.concat(t.discriminator)
+                                        children: '#'.concat(e.discriminator)
                                     })
                                 ]
                             }),
                             (0, r.jsxs)('div', {
-                                className: m.username,
+                                className: g.username,
                                 children: [
-                                    (0, r.jsx)(l.Text, {
+                                    (0, r.jsx)(c.Text, {
                                         variant: 'text-xs/normal',
-                                        color: 'text-danger',
-                                        children: h.intl.string(h.t['4bDptL'])
+                                        color: m ? 'text-danger' : 'text-normal',
+                                        children: m ? x.intl.string(x.t['4bDptL']) : x.intl.string(x.t.tFY5ZW)
                                     }),
-                                    (0, r.jsxs)(l.Text, {
+                                    (0, r.jsxs)(c.Text, {
                                         variant: 'text-xs/normal',
                                         color: 'text-muted',
-                                        children: [' ', '| ', g]
+                                        children: ['| ', f]
                                     })
                                 ]
                             })
@@ -125,20 +207,21 @@ let g = (n) => {
             })
         );
     },
-    E = (n) => {
-        let { channelId: t } = n,
-            e = (0, _.z)(t);
-        return (0, r.jsx)(l.Scroller, {
-            className: m.container,
-            children: e.map((n) => {
-                let { user: e } = n;
+    T = (n) => {
+        let { channelId: e } = n,
+            t = (0, m.z)(e),
+            i = (0, m.bA)(e);
+        return (0, r.jsx)(c.Scroller, {
+            className: g.container,
+            children: [...t, ...i].map((n) => {
+                let { user: t } = n;
                 return (0, r.jsx)(
-                    f,
+                    I,
                     {
-                        user: e,
-                        channelId: t
+                        user: t,
+                        channelId: e
                     },
-                    e.id
+                    t.id
                 );
             })
         });

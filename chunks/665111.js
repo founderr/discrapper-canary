@@ -1,33 +1,34 @@
-e.r(t),
-    e.d(t, {
+t.r(e),
+    t.d(e, {
         default: function () {
-            return _;
+            return h;
         }
     });
-var r = e(200651);
-e(192379);
-var i = e(481060),
-    c = e(313201),
-    l = e(471253),
-    o = e(930180),
-    s = e(46920),
-    a = e(939863),
-    d = e(388032),
-    u = e(851836);
-function _(n) {
-    let { channel: t, transitionState: e, onClose: _, ...h } = n,
-        m = (0, c.Dt)(),
-        g = (0, o._d)(t.id),
+var r = t(200651);
+t(192379);
+var i = t(481060),
+    l = t(313201),
+    c = t(471253),
+    s = t(930180),
+    o = t(46920),
+    a = t(939863),
+    d = t(388032),
+    u = t(851836);
+function h(n) {
+    let { channel: e, transitionState: t, onClose: h, ..._ } = n,
+        m = (0, l.Dt)(),
+        x = (0, s._d)(e.id),
+        g = (0, s.K3)(e.id),
         f = async () => {
-            await (0, l.yi)(t), _();
+            await (0, c.yi)(e), h();
         },
         E = async () => {
-            await (0, l.RK)(t, !1), _();
+            await (0, c.RK)(e, !1), h();
         };
     return (0, r.jsx)(i.ModalRoot, {
-        transitionState: e,
+        transitionState: t,
         'aria-labelledby': m,
-        ...h,
+        ..._,
         size: i.ModalSize.SMALL,
         children: (0, r.jsxs)(i.ModalContent, {
             className: u.content,
@@ -57,7 +58,7 @@ function _(n) {
                     className: u.headerSubtitle,
                     children: d.intl.string(d.t.LQY4JS)
                 }),
-                g > 0 && (0, r.jsx)(s.mv, { channelId: t.id }),
+                (x > 0 || g > 0) && (0, r.jsx)(o.mv, { channelId: e.id }),
                 (0, r.jsxs)('div', {
                     className: u.buttonsContainer,
                     children: [
