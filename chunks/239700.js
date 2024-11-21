@@ -1,7 +1,4 @@
 n.d(t, {
-    N4: function () {
-        return s;
-    },
     uZ: function () {
         return a;
     },
@@ -38,18 +35,4 @@ function i(e, t, n) {
 }
 function a(e, t = -1 / 0, n = 1 / 0) {
     return Math.min(Math.max(e, t), n);
-}
-function s(e, t, n, r) {
-    (t = Number(t)), (n = Number(n));
-    let i = (e - (isNaN(t) ? 0 : t)) % r,
-        a = 2 * Math.abs(i) >= r ? e + Math.sign(i) * (r - Math.abs(i)) : e - i;
-    isNaN(t) ? !isNaN(n) && a > n && (a = Math.floor(n / r) * r) : a < t ? (a = t) : !isNaN(n) && a > n && (a = t + Math.floor((n - t) / r) * r);
-    let s = r.toString(),
-        o = s.indexOf('.'),
-        l = o >= 0 ? s.length - o : 0;
-    if (l > 0) {
-        let e = Math.pow(10, l);
-        a = Math.round(a * e) / e;
-    }
-    return a;
 }

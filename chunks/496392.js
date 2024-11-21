@@ -3,7 +3,7 @@ n.d(t, {
         return a;
     }
 });
-var r = n(781988),
+var r = n(704496),
     i = n(192379);
 function a(e) {
     let t = (0, r.d)(e),
@@ -24,11 +24,11 @@ function a(e) {
         close() {
             l();
         },
-        UNSTABLE_expandedKeysStack: s,
-        UNSTABLE_openSubmenu: (e, t) => {
+        expandedKeysStack: s,
+        openSubmenu: (e, t) => {
             o((n) => (t > n.length ? n : [...n.slice(0, t), e]));
         },
-        UNSTABLE_closeSubmenu: (e, t) => {
+        closeSubmenu: (e, t) => {
             o((n) => (n[t] === e ? n.slice(0, t) : n));
         }
     };

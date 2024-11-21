@@ -1,19 +1,13 @@
 n.d(t, {
-    gb: function () {
-        return a;
-    },
     xQ: function () {
         return i;
     }
 });
 let r = null;
 function i(e, t = 'assertive', n = 7000) {
-    !r && (r = new s()), r.announce(e, t, n);
+    !r && (r = new a()), r.announce(e, t, n);
 }
-function a(e) {
-    r && r.clear(e);
-}
-class s {
+class a {
     createLog(e) {
         let t = document.createElement('div');
         return t.setAttribute('role', 'log'), t.setAttribute('aria-live', e), t.setAttribute('aria-relevant', 'additions'), t;
