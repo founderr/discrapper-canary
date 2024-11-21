@@ -10,8 +10,8 @@ var i = n(200651),
     o = n(869765),
     s = n(699516),
     c = n(937889),
-    d = n(739566),
-    u = n(267128),
+    u = n(739566),
+    d = n(267128),
     m = n(981631);
 let h = r.memo(function (e) {
     let { baseMessage: t, channel: n, referencedMessage: m, compact: h = !1 } = e,
@@ -27,26 +27,18 @@ let h = r.memo(function (e) {
                     : null,
             [f, p]
         ),
-        { isReplyAuthorBlocked: g, isReplyAuthorIgnored: E } = (0, l.cj)(
-            [s.Z],
-            () => ({
-                isReplyAuthorBlocked: null != f && s.Z.isBlockedForMessage(f),
-                isReplyAuthorIgnored: null != f && s.Z.isIgnoredForMessage(f)
-            }),
-            [f]
-        ),
-        C = (0, d.Uj)(f),
-        I = (0, d.Uj)(t);
-    return (0, i.jsx)(u.Z, {
-        repliedAuthor: C,
-        baseAuthor: I,
+        g = (0, l.e7)([s.Z], () => null != f && s.Z.isBlockedForMessage(f), [f]),
+        E = (0, u.Uj)(f),
+        C = (0, u.Uj)(t);
+    return (0, i.jsx)(d.Z, {
+        repliedAuthor: E,
+        baseAuthor: C,
         baseMessage: t,
         channel: n,
         referencedMessage: m,
         content: _,
         compact: h,
         isReplyAuthorBlocked: g,
-        isReplyAuthorIgnored: E,
         isReplySpineClickable: !1,
         showReplySpine: !0
     });

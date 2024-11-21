@@ -22,30 +22,30 @@ var a = n(200651),
     j = n(51144),
     N = n(144140),
     T = n(91159),
-    I = n(217702),
-    C = n(388032),
+    C = n(217702),
+    I = n(388032),
     p = n(31812);
 function S(e) {
-    return e.isActiveThread() ? (0, a.jsx)(k, { channel: e }) : (0, a.jsx)(w, { channel: e });
+    return e.isActiveThread() ? (0, a.jsx)(b, { channel: e }) : (0, a.jsx)(w, { channel: e });
 }
-function k(e) {
+function b(e) {
     let { channel: t } = e,
         n = (0, r.e7)([N.Z], () => N.Z.getMostRecentMessage(t.id));
     return null == n
-        ? (0, a.jsx)(b, { channel: t })
+        ? (0, a.jsx)(k, { channel: t })
         : (0, a.jsx)(E, {
               channel: t,
               message: n
           });
 }
-function b(e) {
+function k(e) {
     let { channel: t } = e,
         n = (0, T.Ok)(t);
     return (0, a.jsxs)(s.Text, {
         className: p.subtext,
         variant: 'text-sm/normal',
         color: 'header-secondary',
-        children: [C.intl.string(C.t.Jmh6n5), '\xA0 \u2022 \xA0', (0, T.Ye)(n)]
+        children: [I.intl.string(I.t.Jmh6n5), '\xA0 \u2022 \xA0', (0, T.Ye)(n)]
     });
 }
 function E(e) {
@@ -56,21 +56,14 @@ function E(e) {
             return null !== (e = v.default.getUser(n.author.id)) && void 0 !== e ? e : n.author;
         }),
         { nick: g, colorString: f } = (0, h.ZP)(n),
-        { isBlocked: j, isIgnored: N } = (0, r.cj)(
-            [x.Z],
-            () => ({
-                isBlocked: x.Z.isBlockedForMessage(n),
-                isIgnored: x.Z.isIgnoredForMessage(n)
-            }),
-            [n]
-        ),
-        C = (0, d.p)(),
-        S = l.useMemo(() => {
+        j = (0, r.e7)([x.Z], () => x.Z.isBlockedForMessage(n)),
+        N = (0, d.p)(),
+        I = l.useMemo(() => {
             let e =
                     null != n.content && '' !== n.content
                         ? (0, u.ZP)(n, {
                               formatInline: !0,
-                              shouldFilterKeywords: C
+                              shouldFilterKeywords: N
                           }).content
                         : null,
                 {
@@ -78,15 +71,15 @@ function E(e) {
                     renderedContent: l,
                     trailingIcon: r,
                     leadingIcon: s
-                } = (0, m.f)(n, e, j, N, p.messageContent, {
+                } = (0, m.f)(n, e, j, p.messageContent, {
                     trailingIconClass: p.messageContentTrailingIcon,
                     leadingIconClass: p.messageContentLeadingIcon,
-                    iconSize: I.WW
+                    iconSize: C.WW
                 });
             return (0, a.jsxs)(a.Fragment, {
                 children: [s, null != l ? l : (0, a.jsx)('span', { children: t }), r]
             });
-        }, [n, j, N, C]);
+        }, [n, j, N]);
     return (0, a.jsxs)(s.Text, {
         className: p.subtext,
         variant: 'text-sm/normal',
@@ -103,7 +96,7 @@ function E(e) {
                 className: p.authorName
             }),
             ':\xA0',
-            S,
+            I,
             '\xA0 \u2022 \xA0',
             (0, T.Ye)(Z.default.extractTimestamp(n.id))
         ]
@@ -135,7 +128,7 @@ function w(e) {
                                   color: 'currentColor'
                               })
                           }),
-                          C.intl.format(C.t['5Wk9+v'], { time: (0, T.Ye)(h) })
+                          I.intl.format(I.t['5Wk9+v'], { time: (0, T.Ye)(h) })
                       ]
                   })
                 : (0, a.jsxs)(a.Fragment, {
@@ -145,7 +138,7 @@ function w(e) {
                               user: m,
                               size: s.AvatarSizes.SIZE_16
                           }),
-                          C.intl.format(C.t.GFDmd3, {
+                          I.intl.format(I.t.GFDmd3, {
                               authorHook(e, t) {
                                   var n, l;
                                   return (0, a.jsx)(
@@ -163,7 +156,7 @@ function w(e) {
                               className: p.bullet,
                               children: '\u2022'
                           }),
-                          C.intl.format(C.t['5Wk9+v'], { time: (0, T.Ye)(h) })
+                          I.intl.format(I.t['5Wk9+v'], { time: (0, T.Ye)(h) })
                       ]
                   })
     });

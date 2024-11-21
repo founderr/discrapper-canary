@@ -125,7 +125,6 @@ let b = l.memo(function (e) {
         content: k,
         compact: N,
         isReplyAuthorBlocked: O,
-        isReplyAuthorIgnored: D,
         showAvatarPopout: T,
         showUsernamePopout: S,
         renderPopout: _.Z,
