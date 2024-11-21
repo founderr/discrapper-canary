@@ -16,8 +16,8 @@ var r,
     g = n(131704),
     E = n(592125),
     v = n(271383),
-    I = n(430824),
-    b = n(594174),
+    b = n(430824),
+    I = n(594174),
     T = n(981631);
 let S = {},
     y = new Set();
@@ -30,7 +30,7 @@ function A(e) {
             (0, p.h)(null != n ? n : void 0) ||
             (function (e, t) {
                 if (null == e) return !1;
-                let n = b.default.getCurrentUser();
+                let n = I.default.getCurrentUser();
                 if (null == n) return !1;
                 let r = v.ZP.getMember(t, n.id);
                 return null != r && r.roles.includes(e.id);
@@ -43,7 +43,7 @@ function N(e, t) {
     if (!t.hasFeature(T.oNc.CREATOR_MONETIZABLE) && !t.hasFeature(T.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) return !1;
     let n = m.Z.isViewingServerShop(t.id);
     for (let r of Object.keys(e.permissionOverwrites)) {
-        let i = I.Z.getRole(t.id, r);
+        let i = b.Z.getRole(t.id, r);
         if (
             !A({
                 guildId: t.id,
@@ -55,11 +55,11 @@ function N(e, t) {
         let a = e.permissionOverwrites[r];
         if ((0, h.TG)(e, a)) return !0;
     }
-    let r = I.Z.getRole(t.id, t.getEveryoneRoleId()),
+    let r = b.Z.getRole(t.id, t.getEveryoneRoleId()),
         i = null != r && !o.e$(r.permissions, T.Plq.VIEW_CHANNEL),
         a = (0, h.wB)(e, e.permissionOverwrites[t.id]);
     if (i && !a) {
-        for (let e of Object.values(I.Z.getRoles(t.id)))
+        for (let e of Object.values(b.Z.getRoles(t.id)))
             if (
                 A({
                     guildId: t.id,
@@ -77,7 +77,7 @@ function C(e, t) {
     if (null == n) return !1;
     let r = E.Z.getChannel(t);
     if (null == r) return !1;
-    let i = I.Z.getGuild(r.getGuildId());
+    let i = b.Z.getGuild(r.getGuildId());
     if (null == i) return !1;
     let a = n.has(t),
         s = N(r, i);
@@ -100,7 +100,7 @@ function L(e) {
 }
 class x extends (r = l.ZP.Store) {
     initialize() {
-        this.waitFor(I.Z, E.Z, m.Z), f.Zo.subscribe({ location: '1' }, () => R());
+        this.waitFor(b.Z, E.Z, m.Z), f.Zo.subscribe({ location: '1' }, () => R());
     }
     isChannelGated(e, t) {
         if (null == e) return !1;
@@ -108,7 +108,7 @@ class x extends (r = l.ZP.Store) {
         return (
             null == n &&
                 (!(function (e) {
-                    let t = I.Z.getGuild(e);
+                    let t = b.Z.getGuild(e);
                     if (null == t) return;
                     let n = (S[e] = new Set());
                     if (!t.hasFeature(T.oNc.ROLE_SUBSCRIPTIONS_ENABLED) || (!(0, _.kT)(e) && !(0, c.Rw)(t))) return;

@@ -16,11 +16,11 @@ var i = n(120356),
 t.Z = function (e) {
     let { createdAt: t, participantIds: n, applicationId: i, title: s, guildId: g, className: E } = e,
         v = (0, c.q)(i),
-        I = (0, l.Wu)([_.default], () => {
+        b = (0, l.Wu)([_.default], () => {
             var e;
             return null !== (e = n.map((e) => _.default.getUser(e)).filter(p.lm)) && void 0 !== e ? e : [];
         }),
-        b = null == v ? void 0 : v.name,
+        I = null == v ? void 0 : v.name,
         T = o()(t).fromNow();
     return null == t
         ? null
@@ -46,7 +46,7 @@ t.Z = function (e) {
                               variant: 'text-xs/medium',
                               color: 'text-muted',
                               className: m.__invalid_subtitle,
-                              children: [null != b ? ''.concat(b, ' \u2022 ') : null, T]
+                              children: [null != I ? ''.concat(I, ' \u2022 ') : null, T]
                           }),
                           (0, r.jsx)(u.Text, {
                               variant: 'text-xs/medium',
@@ -55,11 +55,11 @@ t.Z = function (e) {
                           })
                       ]
                   }),
-                  null != I &&
-                      I.length > 0 &&
+                  null != b &&
+                      b.length > 0 &&
                       (0, r.jsx)(d.Z, {
                           maxUsers: 4,
-                          users: I,
+                          users: b,
                           className: m.__invalid_facePile,
                           guildId: g
                       })

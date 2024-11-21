@@ -16,8 +16,8 @@ var r = n(348327),
     g = n(944486),
     E = n(358085),
     v = n(998502),
-    I = n(981631),
-    b = n(388032);
+    b = n(981631),
+    I = n(388032);
 function T(e, t, n) {
     return (
         t in e
@@ -45,7 +45,7 @@ class S extends c.Z {
         super(...e),
             T(this, 'callbackActions', {
                 [v.tS.VIDEO]: () => {
-                    m.Z.isVideoEnabled() ? l.Z.setVideoEnabled(!1) : (0, p.Z)(() => l.Z.setVideoEnabled(!0), I.IlC.APP);
+                    m.Z.isVideoEnabled() ? l.Z.setVideoEnabled(!1) : (0, p.Z)(() => l.Z.setVideoEnabled(!0), b.IlC.APP);
                 },
                 [v.tS.MUTE]: () => l.Z.toggleSelfMute({ location: 'Thumbar' }),
                 [v.tS.DEAFEN]: () => l.Z.toggleSelfDeaf({ location: 'Thumbar' }),
@@ -101,17 +101,17 @@ class S extends c.Z {
                         {
                             name: v.tS.MUTE,
                             active: t,
-                            tooltip: t ? b.intl.string(b.t.YqAjX1) : b.intl.string(b.t['w4m94+'])
+                            tooltip: t ? I.intl.string(I.t.YqAjX1) : I.intl.string(I.t['w4m94+'])
                         },
                         {
                             name: v.tS.DEAFEN,
                             active: n,
-                            tooltip: n ? b.intl.string(b.t['2US87+']) : b.intl.string(b.t.wjcRFR)
+                            tooltip: n ? I.intl.string(I.t['2US87+']) : I.intl.string(I.t.wjcRFR)
                         },
                         {
                             name: v.tS.DISCONNECT,
                             active: !0,
-                            tooltip: b.intl.string(b.t['6vrfgo'])
+                            tooltip: I.intl.string(I.t['6vrfgo'])
                         }
                     ]);
                 }, 100)

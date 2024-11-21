@@ -14,8 +14,8 @@ var r = n(200651),
     c = n(696967),
     d = n(970952);
 function f(e) {
-    let { section: t, isSelected: n, width: a, height: f, className: _, selectable: p = !1, isSquircle: h, onFocus: m, onBlur: g, onMouseOver: E, onMouseLeave: v, ...I } = e,
-        [b, T] = i.useState(!1),
+    let { section: t, isSelected: n, width: a, height: f, className: _, selectable: p = !1, isSquircle: h, onFocus: m, onBlur: g, onMouseOver: E, onMouseLeave: v, ...b } = e,
+        [I, T] = i.useState(!1),
         S = i.useCallback(() => {
             T(!0), null == m || m();
         }, [m]),
@@ -42,7 +42,7 @@ function f(e) {
             return d;
         }, [t, a]);
     return (0, r.jsx)('div', {
-        ...I,
+        ...b,
         className: s()(c.wrapper, _, {
             [c.selectable]: p,
             [c.selected]: p && n
@@ -53,7 +53,7 @@ function f(e) {
         onMouseLeave: N,
         children: (0, r.jsx)(o.ZP, {
             className: c.mask,
-            mask: h || (p && (n || b)) ? o.QS.SQUIRCLE : o.QS.AVATAR_DEFAULT,
+            mask: h || (p && (n || I)) ? o.QS.SQUIRCLE : o.QS.AVATAR_DEFAULT,
             width: a,
             height: f,
             children: (0, r.jsx)('img', {

@@ -28,8 +28,8 @@ var r,
     g = n(70956),
     E = n(403182),
     v = n(651655),
-    I = n(861990),
-    b = n(141795),
+    b = n(861990),
+    I = n(141795),
     T = n(981631),
     S = n(959517);
 function y(e, t, n) {
@@ -179,7 +179,7 @@ class D extends v.Z {
             };
         if (null != d) {
             (g.data.attachments = []), (n = []);
-            g.data.attachments = d.map((e, t) => (l()(e.status === b.m.COMPLETED, 'Uploads must be staged before trying to send a message'), (0, I.B)(e, t)));
+            g.data.attachments = d.map((e, t) => (l()(e.status === I.m.COMPLETED, 'Uploads must be staged before trying to send a message'), (0, b.B)(e, t)));
         }
         let v = new AbortController();
         u.tn.post(

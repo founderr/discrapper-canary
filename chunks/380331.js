@@ -16,8 +16,8 @@ var r = n(200651),
     g = n(593618),
     E = n(451478),
     v = n(626135),
-    I = n(624138),
-    b = n(543241),
+    b = n(624138),
+    I = n(543241),
     T = n(883661),
     S = n(880949),
     y = n(784222),
@@ -26,14 +26,14 @@ var r = n(200651),
     C = n(957825),
     R = n(388032),
     O = n(932740);
-let D = (0, I.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_SIZE),
-    L = (0, I.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_MARGIN_VERICAL),
-    x = (0, I.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_SIZE),
-    w = (0, I.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_MARGIN_VERTICAL),
-    M = (0, I.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_PADDING),
-    P = (0, I.Mg)(O.__invalid_unicodeCategoryShortcutHeight),
-    k = (0, I.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
-    U = (0, I.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
+let D = (0, b.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_SIZE),
+    L = (0, b.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_MARGIN_VERICAL),
+    x = (0, b.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_SIZE),
+    w = (0, b.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_MARGIN_VERTICAL),
+    M = (0, b.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_PADDING),
+    P = (0, b.Mg)(O.__invalid_unicodeCategoryShortcutHeight),
+    k = (0, b.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
+    U = (0, b.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
     G = x + L + 2 * M,
     B = D + L,
     Z = B + (k + 2 * U),
@@ -44,9 +44,9 @@ function V(e) {
         h = l.type === A.En.GUILD ? null : l.id,
         m = t === n,
         E = l.type === A.En.GUILD ? l.guild : null,
-        I = (0, r.jsxs)(f.Clickable, {
+        b = (0, r.jsxs)(f.Clickable, {
             ...p,
-            'aria-label': (0, b.Nf)(l, E),
+            'aria-label': (0, I.Nf)(l, E),
             className: s()({
                 [O.categoryItemGuildCategory]: null != E,
                 [O.categoryItemDefaultCategory]: null == E,
@@ -90,12 +90,12 @@ function V(e) {
                   (0, r.jsx)(g.Z, {
                       guild: E,
                       includeActivity: !1,
-                      children: (0, r.jsx)('div', { children: I })
+                      children: (0, r.jsx)('div', { children: b })
                   }),
                   R ? (0, r.jsx)('hr', { className: O.guildCategorySeparator }, 'separator') : null
               ]
           })
-        : I;
+        : b;
 }
 t.Z = (e) => {
     let { className: t, emojiListRef: n, sectionDescriptors: a, intention: o, channel: u } = e,
@@ -105,21 +105,21 @@ t.Z = (e) => {
             emojiListRef: n
         }),
         v = (0, _.O)(),
-        I = (0, b.kI)(o, u),
+        b = (0, I.kI)(o, u),
         T = i.useRef(null),
         S = (0, c.e7)([E.Z], () => E.Z.isFocused()),
         N = (0, c.e7)([p.Z], () => p.Z.useReducedMotion, []),
         C = i.useMemo(
             () =>
                 l().memoize((e, t) => {
-                    let n = I[t];
+                    let n = b[t];
                     if (null != n)
                         return (0, r.jsx)(
                             V,
                             {
                                 activeIndex: d,
                                 analyticsContext: v,
-                                categories: I,
+                                categories: b,
                                 category: n,
                                 categoryIndex: t,
                                 handleCategorySelect: g,
@@ -129,20 +129,20 @@ t.Z = (e) => {
                             t
                         );
                 }),
-            [d, v, I, g, S, N]
+            [d, v, b, g, S, N]
         ),
         D = i.useMemo(() => [8, 8, 0, 8], []),
         M = i.useCallback(
             (e, t) => {
-                let n = I[t];
+                let n = b[t];
                 if (n.type === A.En.RECENT) return G;
                 if (n.type === A.En.GUILD) {
-                    let e = I[t + 1];
+                    let e = b[t + 1];
                     return null != e && e.type !== A.En.GUILD ? Z : B;
                 }
                 return F;
             },
-            [I]
+            [b]
         ),
         {
             nonUnicodeCategoryCount: j,
@@ -154,7 +154,7 @@ t.Z = (e) => {
                 t = 0,
                 n = 0,
                 r = 0;
-            I.forEach((i) => {
+            b.forEach((i) => {
                 i.type === A.En.GUILD ? ((t += 1), (n += 1)) : i.type === A.En.UNICODE ? (r += 1) : ((e += 1), (t += 1));
             });
             let i = G + t * B + Z;
@@ -164,7 +164,7 @@ t.Z = (e) => {
                 firstUnicodeCategoryOffsetTop: i,
                 rowCountBySection: [e, n, r]
             };
-        }, [I]),
+        }, [b]),
         [K, z] = i.useState(!0);
     i.useLayoutEffect(() => {
         z(j >= 7);
@@ -186,17 +186,17 @@ t.Z = (e) => {
         ),
         X = i.useCallback(
             (e, t) => {
-                let n = I[e];
+                let n = b[e];
                 if (null == n) return 0;
                 let r = K ? P : 0;
                 if (n.type === A.En.RECENT) return t ? 0 : w;
                 if (n.type === A.En.GUILD) {
-                    let n = I[e + 1];
+                    let n = b[e + 1];
                     return null != n && n.type !== A.En.GUILD ? (t ? k + -2 * U + L + r : L) : t ? r : L;
                 }
                 return t ? L + r : 2 * L;
             },
-            [I, K]
+            [b, K]
         ),
         J = i.useMemo(
             () =>
@@ -211,12 +211,12 @@ t.Z = (e) => {
         expressionsListRef: n,
         className: t,
         store: h.kJ,
-        categories: I,
+        categories: b,
         listPadding: D,
         onScroll: q,
         renderCategoryListItem: C,
         renderSection: J,
-        rowCount: I.length,
+        rowCount: b.length,
         categoryHeight: M,
         getScrollOffsetForIndex: X,
         rowCountBySection: W,

@@ -39,8 +39,8 @@ var r = n(200651),
     g = n(920916),
     E = n(669041),
     v = n(341907),
-    I = n(604162),
-    b = n(46140),
+    b = n(604162),
+    I = n(46140),
     T = n(388032);
 function S(e) {
     let { quest: t, location: n, questContentPosition: r, questContentRowIndex: a } = e,
@@ -58,7 +58,7 @@ function S(e) {
                 questContentRowIndex: a
             }),
             o
-                ? (0, h.zK)(t, b.S7.FRACTIONS_QUEST)
+                ? (0, h.zK)(t, I.S7.FRACTIONS_QUEST)
                     ? (0, v.openQuestsNitroRewardModal)(t, n)
                     : (0, h.Xv)(t.config)
                       ? (0, g.openCollectibleRewardModal)(t, n)
@@ -175,7 +175,7 @@ function C(e) {
                     };
                 if (u)
                     return {
-                        text: (0, I.F9)(m),
+                        text: (0, b.F9)(m),
                         tooltipText: T.intl.string(T.t.hsbwjo),
                         onClick: () => (0, v.openVideoQuestModal)(t)
                     };
@@ -213,7 +213,7 @@ function C(e) {
     }, [t, r, u, a, _, n, s, o, p, l, m]);
 }
 function R() {
-    let e = (0, m.ym)({ location: b.dr.QUESTS_BAR });
+    let e = (0, m.ym)({ location: I.dr.QUESTS_BAR });
     return (0, s.e7)([_.Z], () => {
         var t, n;
         return null !== (n = null !== (t = _.Z.questDeliveryOverride) && void 0 !== t ? t : (0, h.PM)(_.Z.quests, _.Z.questToDeliverForPlacement, p.Ok.DESKTOP_ACCOUNT_PANEL_AREA)) && void 0 !== n ? n : e ? null : (0, h._)(_.Z.quests, p.jn.QUEST_BAR);

@@ -6,7 +6,7 @@ n.d(t, {
         return g;
     },
     Oh: function () {
-        return I;
+        return b;
     },
     cP: function () {
         return m;
@@ -137,7 +137,7 @@ let m = async (e) => {
             }),
             (0, l.Kh)(t);
     },
-    I = (e, t) => {
+    b = (e, t) => {
         if (
             (i.Z.dispatch({
                 type: 'COMPLETE_NEW_MEMBER_ACTION',

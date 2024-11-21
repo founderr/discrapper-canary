@@ -3,7 +3,7 @@ n.d(t, {
         return T;
     },
     WW: function () {
-        return I;
+        return b;
     },
     bE: function () {
         return y;
@@ -15,7 +15,7 @@ n.d(t, {
         return S;
     },
     t$: function () {
-        return b;
+        return I;
     },
     xl: function () {
         return N;
@@ -41,10 +41,10 @@ var r = n(683860),
     g = n(981631),
     E = n(176505),
     v = n(124368);
-function I(e) {
+function b(e) {
     return m.Z.getForumChannelSessionId(e);
 }
-function b(e) {
+function I(e) {
     switch (e) {
         case r.z.CREATION_DATE:
             return v.SX.CREATION_DATE;
@@ -89,7 +89,7 @@ function N(e) {
               forum_channel_can_create_post: c.Z.can(g.Plq.SEND_MESSAGES, o),
               forum_channel_filter_tag_ids: p.Z.getFilterTagIdsAnalytics(),
               forum_channel_sort_order: p.Z.getSortOrderAnalytics(o.id),
-              forum_channel_session_id: null != s ? s : I(o.id),
+              forum_channel_session_id: null != s ? s : b(o.id),
               forum_channel_layout: p.Z.getLayoutAnalytics(o.id),
               forum_channel_default_sort_order: o.defaultSortOrder,
               forum_channel_default_layout: o.defaultForumLayout

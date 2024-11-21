@@ -57,7 +57,7 @@ function E(e) {
                   }),
                   (0, r.jsx)('div', { className: s()(g.divider, o) }),
                   !(null == i ? void 0 : i.disableBlockQuotes) &&
-                      (0, r.jsx)(I, {
+                      (0, r.jsx)(b, {
                           slateEditor: u,
                           blockType: 'blockQuote',
                           children: (0, r.jsx)(l.QuoteIcon, {
@@ -105,7 +105,7 @@ function v(e) {
         children: i
     });
 }
-function I(e) {
+function b(e) {
     let { blockType: t, slateEditor: n, children: i } = e,
         a = null != n ? h.bN.getCurrentBlock(n) : null,
         s = null != a && h.aj.isType(a[0], t);
@@ -118,7 +118,7 @@ function I(e) {
         children: i
     });
 }
-function b(e) {
+function I(e) {
     var t;
     let { slateEditor: n } = e,
         [r, a] = null !== (t = h.bN.getSelectedVoid(n)) && void 0 !== t ? t : [null, null],
@@ -141,22 +141,22 @@ t.Z = i.forwardRef(function (e, t) {
         [_, p] = i.useState(!1),
         m = i.useRef(),
         v = i.useContext(u.ZP),
-        I = i.useCallback(() => {
+        b = i.useCallback(() => {
             p(!1), clearTimeout(m.current);
         }, []),
         T = i.useCallback(
             (e) => {
                 var t;
                 let n = v.renderWindow;
-                !(e.target instanceof n.Node && (null === (t = f.current) || void 0 === t ? void 0 : t.contains(e.target))) && I();
+                !(e.target instanceof n.Node && (null === (t = f.current) || void 0 === t ? void 0 : t.contains(e.target))) && b();
             },
-            [v, I]
+            [v, b]
         ),
         S = i.useCallback(
             (e) => {
                 let t = v.renderWindow;
                 if (e.target instanceof t.Element) {
-                    if (0 !== e.button) I();
+                    if (0 !== e.button) b();
                     else {
                         var n;
                         let r = e.target instanceof t.Node && (null === (n = f.current) || void 0 === n ? void 0 : n.contains(e.target));
@@ -168,24 +168,24 @@ t.Z = i.forwardRef(function (e, t) {
                                 p(r || (null != n && null != i && i.contains(n)));
                             }, 100));
                     }
-                } else I();
+                } else b();
             },
-            [v, s, I]
+            [v, s, b]
         );
-    i.useImperativeHandle(t, () => ({ hide: I }), [I]),
+    i.useImperativeHandle(t, () => ({ hide: b }), [b]),
         i.useEffect(() => {
             let e = v.renderWindow;
             return (
-                e.document.addEventListener('keydown', I),
+                e.document.addEventListener('keydown', b),
                 e.document.addEventListener('mousedown', T),
                 e.document.addEventListener('mouseup', S),
-                e.addEventListener('focus', I),
-                e.addEventListener('blur', I),
+                e.addEventListener('focus', b),
+                e.addEventListener('blur', b),
                 () => {
-                    e.document.removeEventListener('keydown', I), e.document.removeEventListener('mousedown', T), e.document.removeEventListener('mouseup', S), e.removeEventListener('focus', I), e.removeEventListener('blur', I), clearTimeout(m.current);
+                    e.document.removeEventListener('keydown', b), e.document.removeEventListener('mousedown', T), e.document.removeEventListener('mouseup', S), e.removeEventListener('focus', b), e.removeEventListener('blur', b), clearTimeout(m.current);
                 }
             );
-        }, [v, I, T, S]);
+        }, [v, b, T, S]);
     let { x: y, y: A } = i.useMemo(() => {
             var e, t, n, r;
             let i = null === (e = a.current) || void 0 === e ? void 0 : e.getSlateEditor();
@@ -212,11 +212,11 @@ t.Z = i.forwardRef(function (e, t) {
             let g = m.getBoundingClientRect(),
                 E = d.x === p.x,
                 v = E ? g.x : Math.min(d.x, p.x),
-                I = E ? g.x + g.width : Math.max(d.x, p.x),
-                b = null !== (r = null === (n = s.current) || void 0 === n ? void 0 : null === (t = n.getBoundingClientRect()) || void 0 === t ? void 0 : t.y) && void 0 !== r ? r : 0;
+                b = E ? g.x + g.width : Math.max(d.x, p.x),
+                I = null !== (r = null === (n = s.current) || void 0 === n ? void 0 : null === (t = n.getBoundingClientRect()) || void 0 === t ? void 0 : t.y) && void 0 !== r ? r : 0;
             return {
-                x: v + (I - v) / 2,
-                y: Math.max(b, Math.min(p.y, d.y))
+                x: v + (b - v) / 2,
+                y: Math.max(I, Math.min(p.y, d.y))
             };
         }, [s, _, a]),
         [N, C] = i.useState(0),
@@ -249,7 +249,7 @@ t.Z = i.forwardRef(function (e, t) {
                       e.stopPropagation();
                   },
                   children: [
-                      (0, r.jsx)(b, { slateEditor: D }),
+                      (0, r.jsx)(I, { slateEditor: D }),
                       (0, r.jsx)(E, {
                           editorRef: a,
                           options: l

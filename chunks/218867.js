@@ -7,7 +7,7 @@ var r = n(200651),
     l = n(436599);
 let u = i.memo(
     i.forwardRef((e, t) => {
-        let { onScroll: n, onResize: a, listPadding: u = [0, 0, 0, 0], renderRow: c, renderSection: d, renderSectionHeader: f, renderSectionFooter: _, renderListHeader: p, rowCount: h, rowCountBySection: m, rowHeight: g, sectionMarginBottom: E, sectionHeaderHeight: v, sectionFooterHeight: I, listHeaderHeight: b, stickyHeaders: T = !1, className: S, hideScrollbar: y = !1, fade: A = !1, initialScrollTop: N = 0, role: C = 'list' } = e,
+        let { onScroll: n, onResize: a, listPadding: u = [0, 0, 0, 0], renderRow: c, renderSection: d, renderSectionHeader: f, renderSectionFooter: _, renderListHeader: p, rowCount: h, rowCountBySection: m, rowHeight: g, sectionMarginBottom: E, sectionHeaderHeight: v, sectionFooterHeight: b, listHeaderHeight: I, stickyHeaders: T = !1, className: S, hideScrollbar: y = !1, fade: A = !1, initialScrollTop: N = 0, role: C = 'list' } = e,
             [R, O] = i.useState(-1),
             [D, L] = i.useState(-1),
             x = i.useRef(null),
@@ -19,9 +19,9 @@ let u = i.memo(
             null != t && (t.scrollTop = N);
         }, []);
         let P = i.useCallback(() => {
-                let e = 'function' == typeof b ? b() : b;
+                let e = 'function' == typeof I ? I() : I;
                 return null == e ? 0 : e;
-            }, [b]),
+            }, [I]),
             k = i.useCallback(
                 (e, t, n) =>
                     'function' == typeof g
@@ -41,10 +41,10 @@ let u = i.memo(
             ),
             G = i.useCallback(
                 (e) => {
-                    let t = 'function' == typeof I ? I(e) : I;
+                    let t = 'function' == typeof b ? b(e) : b;
                     return null == t ? 0 : t;
                 },
-                [I]
+                [b]
             ),
             B = i.useCallback(
                 (e) => {
@@ -259,8 +259,8 @@ let u = i.memo(
                             (m += r), g++, t++;
                         }
                         let v = s + u + m,
-                            I = v + p >= R && v <= e;
-                        null != _ && I && o.push(_(i)), null != d ? r.push(d(i, o)) : (r = [...r, ...o]);
+                            b = v + p >= R && v <= e;
+                        null != _ && b && o.push(_(i)), null != d ? r.push(d(i, o)) : (r = [...r, ...o]);
                     } else break;
                 }
                 return {

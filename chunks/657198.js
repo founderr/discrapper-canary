@@ -57,8 +57,8 @@ let v = (e) => {
     let t,
         { channelId: n, element: a, attributes: _, children: E } = e,
         v = (0, o.vt)(),
-        I = (0, o.UE)(),
-        b = (0, o._7)(),
+        b = (0, o.UE)(),
+        I = (0, o._7)(),
         { optionType: T, errored: S } = (0, l.cj)(
             [c.Z],
             () => {
@@ -74,12 +74,12 @@ let v = (e) => {
         A = a.children[a.children.length - 1],
         N = null != A && h.LC.isText(A) && A.text.endsWith('\n'),
         C = s()(g.inlineElement, g.optionPill, {
-            [g.selectedPill]: I && v,
-            [g.erroredPill]: (!I || !v) && S
+            [g.selectedPill]: b && v,
+            [g.erroredPill]: (!b || !v) && S
         }),
         R = i.useCallback(() => {
-            !h.bN.isVoid(b, a) && p.Q.selectCommandOption(b, a.optionName, !0);
-        }, [b, a]);
+            !h.bN.isVoid(I, a) && p.Q.selectCommandOption(I, a.optionName, !0);
+        }, [I, a]);
     return (
         (t =
             T === u.jw.ATTACHMENT

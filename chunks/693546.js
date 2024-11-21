@@ -142,7 +142,7 @@ let p = async (e) => {
             n.body
         );
     },
-    I = async (e) => {
+    b = async (e) => {
         try {
             let { body: t } = await r.tn.post({
                 url: f.ANM.GUILD_MEMBER_REQUEST_TO_JOIN(e),
@@ -160,7 +160,7 @@ let p = async (e) => {
             throw e;
         }
     },
-    b = async () => {
+    I = async () => {
         let e = await r.tn.get({
             url: f.ANM.USER_JOIN_REQUEST_GUILDS,
             rejectWithError: !1
@@ -218,8 +218,8 @@ t.Z = {
     removeGuildJoinRequest: m,
     updateGuildJoinRequest: E,
     actionAllPendingJoinRequests: v,
-    resetGuildJoinRequest: I,
-    fetchRequestToJoinGuilds: b,
+    resetGuildJoinRequest: b,
+    fetchRequestToJoinGuilds: I,
     setSelectedApplicationTab: (e, t) => {
         i.Z.dispatch({
             type: 'GUILD_JOIN_REQUESTS_SET_APPLICATION_TAB',

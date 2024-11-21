@@ -15,8 +15,8 @@ var r = n(688619),
 let { Themes: m } = n(15202).V,
     { SemanticColors: g, RawColors: E } = c.V,
     { SemanticColorExperiments: v } = u.V,
-    { Shadows: I } = p.V,
-    { Spacing: b } = h.V,
+    { Shadows: b } = p.V,
+    { Spacing: I } = h.V,
     { Modules: T } = f.V,
     { Layout: S } = d.V,
     y = l()(E, (e) => i()(e)),
@@ -49,7 +49,7 @@ let { Themes: m } = n(15202).V,
                 resolve: (e) => N(n, e.saturation)
             };
         }),
-        shadows: l()(I, (e, t) => ({
+        shadows: l()(b, (e, t) => ({
             css: O(t),
             resolve: (t) => ({
                 boxShadow: e[t.theme].boxShadow,
@@ -58,7 +58,7 @@ let { Themes: m } = n(15202).V,
             })
         })),
         radii: _.w,
-        spacing: l()(b, (e) => ''.concat(e, 'px')),
+        spacing: l()(I, (e) => ''.concat(e, 'px')),
         layout: l()(S, (e) => ('number' == typeof e ? ''.concat(e, 'px') : e))
     };
 function N(e, t) {

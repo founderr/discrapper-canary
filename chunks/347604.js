@@ -27,7 +27,7 @@ t.Z = (e) => {
         m.z([j, b]);
     }, [j, b]);
     let [S, E] = (0, o.Wu)([h.Z], () => [h.Z.getGuild(j), h.Z.getGuild(b)], [j, b]),
-        { canEnableDiscovery: R, isPendingSuccess: Z } = (0, o.cj)(
+        { canEnableDiscovery: R, isPendingSuccess: y } = (0, o.cj)(
             [d.ZP],
             () => ({
                 canEnableDiscovery: d.ZP.passesChecklist(t.id),
@@ -35,13 +35,13 @@ t.Z = (e) => {
             }),
             [t.id]
         ),
-        [y, A] = (0, o.Wu)([p.Z], () => [null, p.Z.getMemberCount(t.id)], [t.id]),
+        [Z, A] = (0, o.Wu)([p.Z], () => [null, p.Z.getMemberCount(t.id)], [t.id]),
         L = r.useCallback(() => {
             null != n && n();
         }, [n]),
         D = null;
     return (
-        l ? (Z ? (D = v.intl.string(v.t.zP8DFx)) : !R && (D = v.intl.string(v.t.ABFu19))) : (D = v.intl.string(v.t['5VbUBw'])),
+        l ? (y ? (D = v.intl.string(v.t.zP8DFx)) : !R && (D = v.intl.string(v.t.ABFu19))) : (D = v.intl.string(v.t['5VbUBw'])),
         (0, i.jsxs)('div', {
             className: _.container,
             children: [
@@ -64,7 +64,7 @@ t.Z = (e) => {
                             className: _.previewCard,
                             guild: t,
                             description: v.intl.string(v.t['0k7fyM']),
-                            presenceCount: y,
+                            presenceCount: Z,
                             memberCount: A
                         }),
                         (0, i.jsx)(g.Z, {

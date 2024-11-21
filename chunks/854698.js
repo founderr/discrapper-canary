@@ -76,8 +76,8 @@ let _ = 365,
     g = [s.Ci.SU.weekday, s.Ci.MO.weekday, s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday],
     E = [s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday, s.Ci.FR.weekday, s.Ci.SA.weekday],
     v = [s.Ci.SA.weekday, s.Ci.SU.weekday],
-    I = [s.Ci.FR.weekday, s.Ci.SA.weekday],
-    b = [s.Ci.SU.weekday, s.Ci.MO.weekday],
+    b = [s.Ci.FR.weekday, s.Ci.SA.weekday],
+    I = [s.Ci.SU.weekday, s.Ci.MO.weekday],
     T = [s.Ci.SU.weekday, s.Ci.MO.weekday, s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday, s.Ci.FR.weekday, s.Ci.SA.weekday],
     S = new Set([0, 6]);
 function y(e) {
@@ -256,7 +256,7 @@ function Z(e) {
 function F(e) {
     let t = O(e.toDate().getDay()),
         n = O(e.toDate().getUTCDay());
-    return n.weekday - t.weekday > 0 ? b : n.weekday - t.weekday < 0 ? I : v;
+    return n.weekday - t.weekday > 0 ? I : n.weekday - t.weekday < 0 ? b : v;
 }
 function V(e, t) {
     let n = (function (e, t) {

@@ -20,8 +20,8 @@ var r = n(526167),
     g = n(910826),
     E = n(307244),
     v = n(669730),
-    I = n(666828),
-    b = n(131999),
+    b = n(666828),
+    I = n(131999),
     T = n(649272),
     S = n(241372),
     y = n(538387),
@@ -40,8 +40,8 @@ t.Z = {
     DEFAULT_GROUP_DM_AVATARS: [d, f, _, p, h, m, g, E],
     BOT_AVATARS: {
         clyde: R,
-        nitro: I,
-        nitro_wumpus: b
+        nitro: b,
+        nitro_wumpus: I
     },
     DEFAULT_CHANNEL_ICON: v,
     canUseWebp: function () {

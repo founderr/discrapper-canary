@@ -64,7 +64,7 @@ let b = (e, t) => (e < (0, p.A3)(N.Eu4.NONE) ? N.Eu4.NONE : e < (0, p.A3)(N.Eu4.
                 src: n(872732)
             })
         }),
-    Z = (e) => {
+    y = (e) => {
         let { guild: t } = e,
             { location: n } = (0, d.O)(),
             { canCreateExpressions: r } = (0, g.XJ)(t);
@@ -95,7 +95,7 @@ t.Z = (e) => {
         ),
         { analyticsLocations: x } = (0, u.ZP)(),
         E = t.hasFeature(N.oNc.MORE_STICKERS) ? N.Eu4.TIER_3 : t.premiumTier,
-        y = t.hasFeature(N.oNc.MORE_STICKERS) ? (0, p.vn)(t.id)[N.Eu4.TIER_3] : t.premiumSubscriberCount;
+        Z = t.hasFeature(N.oNc.MORE_STICKERS) ? (0, p.vn)(t.id)[N.Eu4.TIER_3] : t.premiumSubscriberCount;
     if (
         (r.useEffect(() => {
             let e = !1;
@@ -180,17 +180,17 @@ t.Z = (e) => {
                 D = d.slice(v, S),
                 O = D.length > 0,
                 k = E < c.tier,
-                M = b(d.length, t),
-                P = x && !k && M === c.tier && S !== D.length,
-                w = P || D.length > 0,
+                P = b(d.length, t),
+                M = x && !k && P === c.tier && S !== D.length,
+                w = M || D.length > 0,
                 B = S - v,
                 U = n(872732),
                 G = L - D.length,
-                F = P ? Math.min(5 - ((D.length + 0) % 5), G) : 0,
+                F = M ? Math.min(5 - ((D.length + 0) % 5), G) : 0,
                 H = [];
             for (let e = 0; e < F; e++) H.push((0, i.jsx)(R, {}, 'placeholder-'.concat(e)));
-            let z = M === h + 1 && M > E,
-                W = P || z || h > E;
+            let z = P === h + 1 && P > E,
+                W = M || z || h > E;
             return (
                 z
                     ? (r = (0, i.jsx)(m.Z, {
@@ -206,11 +206,11 @@ t.Z = (e) => {
                               objectType: (0, p.ge)(c.tier)
                           }
                       }))
-                    : P && (r = (0, i.jsx)(Z, { guild: t })),
+                    : M && (r = (0, i.jsx)(y, { guild: t })),
                 (0, i.jsxs)(
                     _.Z,
                     {
-                        subscriptionCount: y,
+                        subscriptionCount: Z,
                         tier: c,
                         onSetRef: a,
                         isAnimatedTo: l,
@@ -239,7 +239,7 @@ t.Z = (e) => {
                                     ]
                                 }),
                             !k &&
-                                !P &&
+                                !M &&
                                 0 === D.length &&
                                 (0, i.jsx)('div', {
                                     className: s()(j.emptyTierWrapper, j.unusedTierWrapper),

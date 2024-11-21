@@ -24,8 +24,8 @@ var r = n(200651),
     g = n(502762),
     E = n(475413),
     v = n(228168),
-    I = n(388032),
-    b = n(572046),
+    b = n(388032),
+    I = n(572046),
     T = n(609440);
 function S(e) {
     let { user: t, guildId: n, setPopoutRef: a, channelId: s, messageId: f, roleId: S, onViewBlockedProfileClick: y, newAnalyticsLocations: A = [] } = e,
@@ -58,16 +58,16 @@ function S(e) {
                         displayProfile: O,
                         profileType: v.y0.BITE_SIZE,
                         children: (0, r.jsxs)('div', {
-                            className: b.container,
+                            className: I.container,
                             children: [
                                 (0, r.jsx)('img', {
                                     alt: '',
                                     src: T,
-                                    className: b.previewForCollected,
+                                    className: I.previewForCollected,
                                     'aria-hidden': !0
                                 }),
                                 (0, r.jsxs)('div', {
-                                    className: b.body,
+                                    className: I.body,
                                     children: [
                                         (0, r.jsx)(m.Z, {
                                             user: t,
@@ -75,21 +75,21 @@ function S(e) {
                                         }),
                                         (0, r.jsx)(l.Heading, {
                                             variant: 'heading-lg/bold',
-                                            className: b.header,
-                                            children: I.intl.string(I.t.VNJ7UF)
+                                            className: I.header,
+                                            children: b.intl.string(b.t.VNJ7UF)
                                         }),
                                         (0, r.jsx)(l.Text, {
                                             variant: 'text-sm/medium',
-                                            children: I.intl.format(I.t.LXbngo, { username: t.username })
+                                            children: b.intl.format(b.t.LXbngo, { username: t.username })
                                         }),
                                         (0, r.jsx)(l.Text, {
                                             variant: 'text-sm/medium',
-                                            children: I.intl.string(I.t['20WzZ2'])
+                                            children: b.intl.string(b.t['20WzZ2'])
                                         }),
                                         (0, r.jsx)(E.tG, {
-                                            className: b.centeredButton,
+                                            className: I.centeredButton,
                                             action: 'VIEW_BLOCKED_PROFILE',
-                                            text: I.intl.string(I.t.iXAna2),
+                                            text: b.intl.string(b.t.iXAna2),
                                             autoFocus: !0,
                                             fullWidth: !1,
                                             onClick: () => {
@@ -143,19 +143,19 @@ function y(e) {
                     displayProfile: x,
                     profileType: v.y0.BITE_SIZE,
                     children: (0, r.jsxs)('div', {
-                        className: b.container,
+                        className: I.container,
                         children: [
                             (0, r.jsx)('img', {
                                 alt: '',
                                 src: T,
-                                className: b.previewForCollected,
+                                className: I.previewForCollected,
                                 'aria-hidden': !0
                             }),
                             (0, r.jsxs)('div', {
-                                className: s()(b.body, b.bodySpacing),
+                                className: s()(I.body, I.bodySpacing),
                                 children: [
                                     (0, r.jsxs)('div', {
-                                        className: b.headerContainer,
+                                        className: I.headerContainer,
                                         children: [
                                             (0, r.jsx)(m.i, {
                                                 user: t,
@@ -163,17 +163,17 @@ function y(e) {
                                             }),
                                             (0, r.jsx)(l.Heading, {
                                                 variant: 'heading-lg/bold',
-                                                children: I.intl.string(I.t.CCnxtr)
+                                                children: b.intl.string(b.t.CCnxtr)
                                             }),
                                             (0, r.jsx)(l.Text, {
                                                 variant: 'text-sm/medium',
-                                                children: I.intl.format(R ? I.t['4d+1oK'] : I.t['17zhY2'], { username: t.username })
+                                                children: b.intl.format(R ? b.t['4d+1oK'] : b.t['17zhY2'], { username: t.username })
                                             })
                                         ]
                                     }),
                                     (0, r.jsx)(E.tG, {
                                         action: M,
-                                        text: I.intl.string(I.t.HO0AxM),
+                                        text: b.intl.string(b.t.HO0AxM),
                                         autoFocus: !0,
                                         grow: !0,
                                         fullWidth: !1,

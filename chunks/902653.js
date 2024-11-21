@@ -1,10 +1,10 @@
 n.r(t),
     n.d(t, {
         WebAudioAPISound: function () {
-            return b;
+            return I;
         },
         WebAudioSound: function () {
-            return I;
+            return b;
         },
         playGiftSound: function () {
             return E;
@@ -69,7 +69,7 @@ function v() {
             });
 }
 d.isPlatformEmbedded && (c.Z.addChangeListener(v), v());
-class I {
+class b {
     get volume() {
         return this._volume;
     }
@@ -133,7 +133,7 @@ class I {
         f(this, 'name', void 0), f(this, '_volume', void 0), f(this, '_audio', void 0), (this.name = e), (this._volume = n);
     }
 }
-class b {
+class I {
     get volume() {
         return this._volume;
     }

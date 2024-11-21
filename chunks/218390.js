@@ -39,7 +39,7 @@ var i = n(200651),
     w = n(140465),
     y = n(599659),
     k = n(91802),
-    L = n(898997),
+    L = n(944345),
     U = n(197115),
     D = n(823188),
     H = n(504865),
@@ -312,7 +312,7 @@ t.Z = function () {
             autoTrackExposure: !1
         }),
         (0, L.B)('PremiumManagementSettings');
-    let Z = (0, V.bD)('PremiumManagementSettings'),
+    let Z = (0, L.b)('PremiumManagementSettings'),
         M = (0, V.pn)('PremiumManagementSettings');
     r.useEffect(() => {
         m.Z.wait(async () => {

@@ -15,7 +15,7 @@ n.d(t, {
         return x;
     },
     QW: function () {
-        return b;
+        return I;
     },
     U0: function () {
         return y;
@@ -24,7 +24,7 @@ n.d(t, {
         return A;
     },
     a$: function () {
-        return I;
+        return b;
     },
     lg: function () {
         return T;
@@ -96,7 +96,7 @@ function v(e) {
             throw Error('[getGlobalDiscoveryServerTabTitle] Unsupported tab: '.concat(e));
     }
 }
-function I(e) {
+function b(e) {
     switch (e) {
         case p.vf.FEATURED:
             return g.intl.string(g.t.SdMhrq);
@@ -116,7 +116,7 @@ function I(e) {
             throw Error('[getGlobalDiscoveryServerTabTitle] Unsupported tab: '.concat(e));
     }
 }
-function b(e) {
+function I(e) {
     switch (e) {
         case p.vf.FEATURED:
             return g.intl.string(g.t.crt84e);

@@ -57,7 +57,7 @@ function v(e, t) {
     } while ((t = f[t & c]) > l && 0 != --i);
     return s <= e.lookahead ? s : e.lookahead;
 }
-function I(e) {
+function b(e) {
     var t,
         n,
         r,
@@ -86,10 +86,10 @@ function I(e) {
             for (l = e.strstart - e.insert, e.ins_h = e.window[l], e.ins_h = ((e.ins_h << e.hash_shift) ^ e.window[l + 1]) & e.hash_mask; e.insert && ((e.ins_h = ((e.ins_h << e.hash_shift) ^ e.window[l + 3 - 1]) & e.hash_mask), (e.prev[l & e.w_mask] = e.head[e.ins_h]), (e.head[e.ins_h] = l), l++, e.insert--, !(e.lookahead + e.insert < 3)); );
     } while (e.lookahead < d && 0 !== e.strm.avail_in);
 }
-function b(e, t) {
+function I(e, t) {
     for (var n, r; ; ) {
         if (e.lookahead < d) {
-            if ((I(e), e.lookahead < d && 0 === t)) return 1;
+            if ((b(e), e.lookahead < d && 0 === t)) return 1;
             if (0 === e.lookahead) break;
         }
         if (((n = 0), e.lookahead >= 3 && ((e.ins_h = ((e.ins_h << e.hash_shift) ^ e.window[e.strstart + 3 - 1]) & e.hash_mask), (n = e.prev[e.strstart & e.w_mask] = e.head[e.ins_h]), (e.head[e.ins_h] = e.strstart)), 0 !== n && e.strstart - n <= e.w_size - d && (e.match_length = v(e, n)), e.match_length >= 3)) {
@@ -108,7 +108,7 @@ function b(e, t) {
 function T(e, t) {
     for (var n, r, i; ; ) {
         if (e.lookahead < d) {
-            if ((I(e), e.lookahead < d && 0 === t)) return 1;
+            if ((b(e), e.lookahead < d && 0 === t)) return 1;
             if (0 === e.lookahead) break;
         }
         if (((n = 0), e.lookahead >= 3 && ((e.ins_h = ((e.ins_h << e.hash_shift) ^ e.window[e.strstart + 3 - 1]) & e.hash_mask), (n = e.prev[e.strstart & e.w_mask] = e.head[e.ins_h]), (e.head[e.ins_h] = e.strstart)), (e.prev_length = e.match_length), (e.prev_match = e.match_start), (e.match_length = 2), 0 !== n && e.prev_length < e.max_lazy_match && e.strstart - n <= e.w_size - d && ((e.match_length = v(e, n)), e.match_length <= 5 && (1 === e.strategy || (3 === e.match_length && e.strstart - e.match_start > 4096)) && (e.match_length = 2)), e.prev_length >= 3 && e.match_length <= e.prev_length)) {
@@ -131,7 +131,7 @@ r = [
         var n = 65535;
         for (65535 > e.pending_buf_size - 5 && (n = e.pending_buf_size - 5); ; ) {
             if (e.lookahead <= 1) {
-                if ((I(e), 0 === e.lookahead && 0 === t)) return 1;
+                if ((b(e), 0 === e.lookahead && 0 === t)) return 1;
                 if (0 === e.lookahead) break;
             }
             (e.strstart += e.lookahead), (e.lookahead = 0);
@@ -141,9 +141,9 @@ r = [
         if (((e.insert = 0), 4 === t)) return (m(e, !0), 0 === e.strm.avail_out) ? 3 : 4;
         return e.strstart > e.block_start && (m(e, !1), e.strm.avail_out), 1;
     }),
-    new S(4, 4, 8, 4, b),
-    new S(4, 5, 16, 8, b),
-    new S(4, 6, 32, 32, b),
+    new S(4, 4, 8, 4, I),
+    new S(4, 5, 16, 8, I),
+    new S(4, 6, 32, 32, I),
     new S(4, 4, 16, 16, T),
     new S(8, 16, 32, 32, T),
     new S(8, 16, 128, 128, T),
@@ -241,7 +241,7 @@ function C(e, t, n, r, a, s) {
                 2 === i.strategy
                     ? (function (e, t) {
                           for (var n; ; ) {
-                              if (0 === e.lookahead && (I(e), 0 === e.lookahead)) {
+                              if (0 === e.lookahead && (b(e), 0 === e.lookahead)) {
                                   if (0 === t) return 1;
                                   break;
                               }
@@ -254,7 +254,7 @@ function C(e, t, n, r, a, s) {
                       ? (function (e, t) {
                             for (var n, r, i, s, o = e.window; ; ) {
                                 if (e.lookahead <= 258) {
-                                    if ((I(e), e.lookahead <= 258 && 0 === t)) return 1;
+                                    if ((b(e), e.lookahead <= 258 && 0 === t)) return 1;
                                     if (0 === e.lookahead) break;
                                 }
                                 if (((e.match_length = 0), e.lookahead >= 3 && e.strstart > 0 && (r = o[(i = e.strstart - 1)]) === o[++i] && r === o[++i] && r === o[++i])) {
@@ -289,11 +289,11 @@ function C(e, t, n, r, a, s) {
             d,
             f = t.length;
         if (!e || !e.state || 2 === (o = (n = e.state).wrap) || (1 === o && 42 !== n.status) || n.lookahead) return -2;
-        for (1 === o && (e.adler = s(e.adler, t, f, 0)), n.wrap = 0, f >= n.w_size && (0 === o && (p(n.head), (n.strstart = 0), (n.block_start = 0), (n.insert = 0)), (d = new i.Buf8(n.w_size)), i.arraySet(d, t, f - n.w_size, n.w_size, 0), (t = d), (f = n.w_size)), l = e.avail_in, u = e.next_in, c = e.input, e.avail_in = f, e.next_in = 0, e.input = t, I(n); n.lookahead >= 3; ) {
+        for (1 === o && (e.adler = s(e.adler, t, f, 0)), n.wrap = 0, f >= n.w_size && (0 === o && (p(n.head), (n.strstart = 0), (n.block_start = 0), (n.insert = 0)), (d = new i.Buf8(n.w_size)), i.arraySet(d, t, f - n.w_size, n.w_size, 0), (t = d), (f = n.w_size)), l = e.avail_in, u = e.next_in, c = e.input, e.avail_in = f, e.next_in = 0, e.input = t, b(n); n.lookahead >= 3; ) {
             (r = n.strstart), (a = n.lookahead - 2);
             do (n.ins_h = ((n.ins_h << n.hash_shift) ^ n.window[r + 3 - 1]) & n.hash_mask), (n.prev[r & n.w_mask] = n.head[n.ins_h]), (n.head[n.ins_h] = r), r++;
             while (--a);
-            (n.strstart = r), (n.lookahead = 2), I(n);
+            (n.strstart = r), (n.lookahead = 2), b(n);
         }
         return (n.strstart += n.lookahead), (n.block_start = n.strstart), (n.insert = n.lookahead), (n.lookahead = 0), (n.match_length = n.prev_length = 2), (n.match_available = 0), (e.next_in = u), (e.input = c), (e.avail_in = l), (n.wrap = o), 0;
     }),

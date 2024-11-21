@@ -23,8 +23,8 @@ var r = n(302454),
     g = n(881706),
     E = n(592125),
     v = n(430824),
-    I = n(20303),
-    b = n(902676),
+    b = n(20303),
+    I = n(902676),
     T = n(375954),
     S = n(699516),
     y = n(944486),
@@ -81,7 +81,7 @@ function O(e, t) {
             null != t &&
             t.hasFeature(N.oNc.DISCOVERABLE) &&
             A.default.track(N.rMx.URL_CLICKED, {
-                url_domain: (0, b.F)(P),
+                url_domain: (0, I.F)(P),
                 guild_id: t.id,
                 channel_id: e.id
             }),
@@ -132,9 +132,9 @@ function O(e, t) {
         return;
     }
     let W = 'function' == typeof y ? y() : y,
-        K = (0, b.E)(P),
+        K = (0, I.E)(P),
         z = !('http:' === K || 'https:' === K);
-    if ((!z && (W || I.Z.isTrustedDomain(P))) || (z && I.Z.isTrustedProtocol(P))) {
+    if ((!z && (W || b.Z.isTrustedDomain(P))) || (z && b.Z.isTrustedProtocol(P))) {
         null == t || (null != L && L)
             ? H()
             : U &&

@@ -19,7 +19,7 @@ n.r(t),
             return T;
         },
         openQuestsRewardCodeModal: function () {
-            return b;
+            return I;
         },
         openVideoQuestModal: function () {
             return R;
@@ -43,8 +43,8 @@ var i = n(481060),
     g = n(150560),
     E = n(46140),
     v = n(981631),
-    I = n(49898);
-function b(e) {
+    b = n(49898);
+function I(e) {
     let { questId: t, location: a, questContentPosition: s, preview: o = !1 } = e;
     (0, i.openModalLazy)(async () => {
         let { default: e } = await Promise.all([n.e('48923'), n.e('99393'), n.e('28044'), n.e('71740')]).then(n.bind(n, 985866));
@@ -106,7 +106,7 @@ function A(e, t, n) {
         utmContentCurrent: Object.keys(c.jn).find((e) => c.jn[e] === t)
     });
     let i = null != n ? '#'.concat(n) : '';
-    a.Z.setState({ selectedTab: I.F$.QUESTS }), (0, s.uL)(v.Z5c.QUEST_HOME + i);
+    a.Z.setState({ selectedTab: b.F$.QUESTS }), (0, s.uL)(v.Z5c.QUEST_HOME + i);
 }
 function N(e) {
     let t = (0, p.T)({ quest: e }),

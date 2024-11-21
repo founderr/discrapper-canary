@@ -25,8 +25,8 @@ var r,
     g = n(594174),
     E = n(981631),
     v = n(468788),
-    I = n(490897),
-    b = n(526761);
+    b = n(490897),
+    I = n(526761);
 function T(e, t, n) {
     return (
         t in e
@@ -97,7 +97,7 @@ function G(e, t) {
         (x[e] = q(S[e]));
     let l = a().filter(o.channel_overrides, (e) => {
         var t;
-        return _.yE(null !== (t = e.flags) && void 0 !== t ? t : 0, b.ic.OPT_IN_ENABLED);
+        return _.yE(null !== (t = e.flags) && void 0 !== t ? t : 0, I.ic.OPT_IN_ENABLED);
     });
     (w[e] = new Set(l.map((e) => e.channel_id))),
         (function (e) {
@@ -107,7 +107,7 @@ function G(e, t) {
                 r = null !== (t = k[e]) && void 0 !== t ? t : {};
             for (let e in r) {
                 let t = r[e];
-                _.yE(t.flags, b.ic.OPT_IN_ENABLED) ? n.add(e) : n.delete(e);
+                _.yE(t.flags, I.ic.OPT_IN_ENABLED) ? n.add(e) : n.delete(e);
             }
             Object.keys(r).length > 0 ? (U[e] = n) : delete U[e];
         })(e),
@@ -308,15 +308,15 @@ class J extends (r = s.ZP.PersistedStore) {
         return this.getMessageNotifications(e.guild_id);
     }
     resolveUnreadSetting(e) {
-        if (f.Ec.has(e.type) || (0, f.hv)(e.type) || !X()) return I.i.ALL_MESSAGES;
+        if (f.Ec.has(e.type) || (0, f.hv)(e.type) || !X()) return b.i.ALL_MESSAGES;
         let t = this.getChannelUnreadSetting(e.guild_id, e.id);
-        if (t !== I.i.UNSET) return t;
+        if (t !== b.i.UNSET) return t;
         if (null != e.parent_id) {
             let t = this.getChannelUnreadSetting(e.guild_id, e.parent_id);
-            if (t !== I.i.UNSET) return t;
+            if (t !== b.i.UNSET) return t;
         }
         let n = this.getGuildUnreadSetting(e.guild_id);
-        return n !== I.i.UNSET ? n : this.resolvedMessageNotifications(e) === E.bL.ALL_MESSAGES ? I.i.ALL_MESSAGES : I.i.ONLY_MENTIONS;
+        return n !== b.i.UNSET ? n : this.resolvedMessageNotifications(e) === E.bL.ALL_MESSAGES ? b.i.ALL_MESSAGES : b.i.ONLY_MENTIONS;
     }
     isGuildOrCategoryOrChannelMuted(e, t) {
         return this.isMuted(e) || this.isCategoryMuted(e, t) || this.isChannelMuted(e, t);
@@ -349,13 +349,13 @@ class J extends (r = s.ZP.PersistedStore) {
     getNewForumThreadsCreated(e) {
         let t = this.getChannelOverrides(e.guild_id)[e.id];
         if (null != t && null != t.flags) {
-            if (_.yE(t.flags, b.ic.NEW_FORUM_THREADS_ON)) return !0;
-            if (_.yE(t.flags, b.ic.NEW_FORUM_THREADS_OFF)) return !1;
+            if (_.yE(t.flags, I.ic.NEW_FORUM_THREADS_ON)) return !0;
+            if (_.yE(t.flags, I.ic.NEW_FORUM_THREADS_OFF)) return !1;
         }
         return this.resolvedMessageNotifications(e) === E.bL.ALL_MESSAGES;
     }
     isOptInEnabled(e) {
-        return null != e && (u.Z.isFullServerPreview(e) ? u.Z.isOptInEnabled(e) : _.yE(this.getGuildFlags(e), b.vc.OPT_IN_CHANNELS_ON));
+        return null != e && (u.Z.isFullServerPreview(e) ? u.Z.isOptInEnabled(e) : _.yE(this.getGuildFlags(e), I.vc.OPT_IN_CHANNELS_ON));
     }
     isChannelRecordOrParentOptedIn(e, t) {
         return null != e && null != e.guild_id && (this.isChannelOptedIn(e.guild_id, e.id, t) || (null != e.parent_id && this.isChannelOptedIn(e.guild_id, e.parent_id, t)));
@@ -370,7 +370,7 @@ class J extends (r = s.ZP.PersistedStore) {
         if (u.Z.isFullServerPreview(e)) return u.Z.isChannelOptedIn(e, t);
         if (i && null != U[e]) return U[e].has(t);
         let a = null !== (r = null === (n = this.getChannelOverrides(e)[t]) || void 0 === n ? void 0 : n.flags) && void 0 !== r ? r : 0;
-        return _.yE(a, b.ic.OPT_IN_ENABLED);
+        return _.yE(a, I.ic.OPT_IN_ENABLED);
     }
     getOptedInChannels(e) {
         var t, n;
@@ -387,7 +387,7 @@ class J extends (r = s.ZP.PersistedStore) {
         if (null == y[e]) {
             let t = a().filter(this.getChannelOverrides(e), (t) => {
                 var n, r;
-                return _.yE(null !== (r = t.flags) && void 0 !== r ? r : 0, b.ic.FAVORITED) && (null === (n = h.Z.getChannel(t.channel_id)) || void 0 === n ? void 0 : n.guild_id) === e;
+                return _.yE(null !== (r = t.flags) && void 0 !== r ? r : 0, I.ic.FAVORITED) && (null === (n = h.Z.getChannel(t.channel_id)) || void 0 === n ? void 0 : n.guild_id) === e;
             });
             y[e] = t.map((e) => e.channel_id);
         }
@@ -400,12 +400,12 @@ class J extends (r = s.ZP.PersistedStore) {
     isMessagesFavorite(e) {
         var t, n;
         let r = null !== (n = null === (t = this.getChannelOverrides(null)[e]) || void 0 === t ? void 0 : t.flags) && void 0 !== n ? n : 0;
-        return _.yE(r, b.ic.FAVORITED);
+        return _.yE(r, I.ic.FAVORITED);
     }
     isAddedToMessages(e) {
         var t, n;
         let r = null !== (n = null === (t = this.getChannelOverrides(null)[e]) || void 0 === t ? void 0 : t.flags) && void 0 !== n ? n : 0;
-        return _.yE(r, b.ic.OPT_IN_ENABLED);
+        return _.yE(r, I.ic.OPT_IN_ENABLED);
     }
     getAddedToMessages() {
         var e;
@@ -418,20 +418,20 @@ class J extends (r = s.ZP.PersistedStore) {
         return A;
     }
     getGuildUnreadSetting(e) {
-        if (!X()) return I.i.ALL_MESSAGES;
+        if (!X()) return b.i.ALL_MESSAGES;
         let t = this.getGuildFlags(e);
-        return _.yE(t, b.vc.UNREADS_ALL_MESSAGES) ? I.i.ALL_MESSAGES : _.yE(t, b.vc.UNREADS_ONLY_MENTIONS) ? I.i.ONLY_MENTIONS : I.i.UNSET;
+        return _.yE(t, I.vc.UNREADS_ALL_MESSAGES) ? b.i.ALL_MESSAGES : _.yE(t, I.vc.UNREADS_ONLY_MENTIONS) ? b.i.ONLY_MENTIONS : b.i.UNSET;
     }
     resolveGuildUnreadSetting(e) {
         let t = this.getGuildFlags(e.id);
-        return !X() || _.yE(t, b.vc.UNREADS_ALL_MESSAGES) ? I.i.ALL_MESSAGES : _.yE(t, b.vc.UNREADS_ONLY_MENTIONS) ? I.i.ONLY_MENTIONS : e.defaultMessageNotifications === E.bL.ALL_MESSAGES ? I.i.ALL_MESSAGES : I.i.ONLY_MENTIONS;
+        return !X() || _.yE(t, I.vc.UNREADS_ALL_MESSAGES) ? b.i.ALL_MESSAGES : _.yE(t, I.vc.UNREADS_ONLY_MENTIONS) ? b.i.ONLY_MENTIONS : e.defaultMessageNotifications === E.bL.ALL_MESSAGES ? b.i.ALL_MESSAGES : b.i.ONLY_MENTIONS;
     }
     getChannelRecordUnreadSetting(e) {
         return this.getChannelUnreadSetting(e.guild_id, e.id);
     }
     getChannelUnreadSetting(e, t) {
         let n = this.getChannelIdFlags(e, t);
-        return _.yE(n, b.ic.UNREADS_ALL_MESSAGES) ? I.i.ALL_MESSAGES : _.yE(n, b.ic.UNREADS_ONLY_MENTIONS) ? I.i.ONLY_MENTIONS : I.i.UNSET;
+        return _.yE(n, I.ic.UNREADS_ALL_MESSAGES) ? b.i.ALL_MESSAGES : _.yE(n, I.ic.UNREADS_ONLY_MENTIONS) ? b.i.ONLY_MENTIONS : b.i.UNSET;
     }
 }
 T(J, 'displayName', 'UserGuildSettingsStore'), T(J, 'persistKey', 'collapsedGuilds');
@@ -490,7 +490,7 @@ let $ = new J(o.Z, {
                 for (let t in e.channel_overrides) {
                     var i;
                     let a = e.channel_overrides[t];
-                    (0, l.m$)(a) && n.add(t), _.yE(null !== (i = a.flags) && void 0 !== i ? i : 0, b.ic.OPT_IN_ENABLED) && r.add(t);
+                    (0, l.m$)(a) && n.add(t), _.yE(null !== (i = a.flags) && void 0 !== i ? i : 0, I.ic.OPT_IN_ENABLED) && r.add(t);
                 }
                 (x[t] = n), (w[t] = r);
             }));

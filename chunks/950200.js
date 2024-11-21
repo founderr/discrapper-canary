@@ -160,8 +160,8 @@ var n = (function () {
                     g,
                     E,
                     v,
-                    I,
                     b,
+                    I,
                     T,
                     S,
                     y =
@@ -180,14 +180,14 @@ var n = (function () {
                         (p = y),
                         (E = 1000000),
                         (v = 0),
-                        (I = 1000000),
-                        (b = 0),
+                        (b = 1000000),
+                        (I = 0),
                         (T = 1000000),
                         (S = 0),
                         _.forEach(function (t) {
-                            (h = t[0] >> e), (m = t[1] >> e), (g = t[2] >> e), h < E ? (E = h) : h > v && (v = h), m < I ? (I = m) : m > b && (b = m), g < T ? (T = g) : g > S && (S = g);
+                            (h = t[0] >> e), (m = t[1] >> e), (g = t[2] >> e), h < E ? (E = h) : h > v && (v = h), m < b ? (b = m) : m > I && (I = m), g < T ? (T = g) : g > S && (S = g);
                         }),
-                        new i(E, v, I, b, T, S, p)),
+                        new i(E, v, b, I, T, S, p)),
                     C = new r(function (e, n) {
                         return t.naturalOrder(e.count(), n.count());
                     });

@@ -20,16 +20,16 @@ var i = n(120356),
     _ = n(388032),
     p = n(3910);
 function h(e) {
-    let { label: t, onClick: n, onKeyDown: i, onMouseEnter: o, onMouseLeave: l, onContextMenu: u, className: c, wrapperClassName: f, iconClassName: _, iconColor: h = 'currentColor', iconComponent: m, themeable: g = !1, disabled: E = !1, isActive: v = !1, tooltipPosition: I = 'top', shouldShowTooltip: b = !0, forceTooltipOpen: T = !1, buttonRef: S, grow: y, 'aria-label': A } = e;
+    let { label: t, onClick: n, onKeyDown: i, onMouseEnter: o, onMouseLeave: l, onContextMenu: u, className: c, wrapperClassName: f, iconClassName: _, iconColor: h = 'currentColor', iconComponent: m, themeable: g = !1, disabled: E = !1, isActive: v = !1, tooltipPosition: b = 'top', shouldShowTooltip: I = !0, forceTooltipOpen: T = !1, buttonRef: S, grow: y, 'aria-label': A } = e;
     return (0, r.jsx)(d.Z, {
         children: (0, r.jsx)(s.Tooltip, {
-            position: I,
+            position: b,
             text: t,
             'aria-label': A,
-            shouldShow: b,
+            shouldShow: I,
             forceOpen: T,
             children: (e) => {
-                let { onClick: t, onContextMenu: d, onMouseEnter: I, onMouseLeave: b, ...T } = e;
+                let { onClick: t, onContextMenu: d, onMouseEnter: b, onMouseLeave: I, ...T } = e;
                 return (0, r.jsx)(s.Button, {
                     look: s.Button.Looks.BLANK,
                     size: s.Button.Sizes.NONE,
@@ -40,19 +40,19 @@ function h(e) {
                         null == t || t(), null == n || n(e);
                     },
                     onMouseEnter: (e) => {
-                        null == I || I(), null == o || o(e);
+                        null == b || b(), null == o || o(e);
                     },
                     onMouseLeave: (e) => {
-                        null == b || b(), null == l || l(e);
+                        null == I || I(), null == l || l(e);
                     },
                     onContextMenu: (e) => {
                         null == d || d(), null == u || u(e);
                     },
                     onFocus: (e) => {
-                        null == I || I(), null == o || o(e);
+                        null == b || b(), null == o || o(e);
                     },
                     onBlur: (e) => {
-                        null == b || b(), null == l || l(e);
+                        null == I || I(), null == l || l(e);
                     },
                     disabled: E,
                     innerClassName: p.lineHeightReset,
@@ -84,11 +84,11 @@ let m = {
     activeLight: p.activeLight
 };
 function g(e) {
-    let { color: t, isActive: n = !1, className: i, iconClassName: g, onPopoutClick: E, popoutOpen: v = !1, premiumGlow: I = !1, ...b } = e,
+    let { color: t, isActive: n = !1, className: i, iconClassName: g, onPopoutClick: E, popoutOpen: v = !1, premiumGlow: b = !1, ...I } = e,
         T = (0, f.Z)(t, n),
         S = (0, o.Z)('(max-width: 456px)'),
         y = (0, r.jsx)(h, {
-            ...b,
+            ...I,
             grow: !1,
             onContextMenu: E,
             iconClassName: a()(g, p.centerIcon),
@@ -108,7 +108,7 @@ function g(e) {
                               height: 56,
                               children: y
                           }),
-                          I &&
+                          b &&
                               (0, r.jsx)('div', {
                                   className: p.glow,
                                   children: (0, r.jsx)(u.Z, {

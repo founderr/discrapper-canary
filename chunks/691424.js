@@ -21,8 +21,8 @@ var r = n(200651),
     g = n(692629),
     E = n(695503),
     v = n(628692),
-    I = n(590956),
-    b = n(703656),
+    b = n(590956),
+    I = n(703656),
     T = n(271383),
     S = n(430824),
     y = n(572004),
@@ -174,7 +174,7 @@ let U = {
                                   let r = S.Z.getGuild(e);
                                   if (null == e || null == r) return;
                                   let i = (t) => {
-                                      r.hasFeature(x.oNc.COMMUNITY) && (0, b.uL)(x.Z5c.CHANNEL(e, t));
+                                      r.hasFeature(x.oNc.COMMUNITY) && (0, I.uL)(x.Z5c.CHANNEL(e, t));
                                   };
                                   switch (t) {
                                       case 'home':
@@ -291,7 +291,7 @@ function G(e) {
                     let { key: s, channelId: o, messageId: l } = a;
                     return e.src
                         ? (0, r.jsx)(
-                              I.c,
+                              b.c,
                               {
                                   node: e,
                                   tooltipPosition: t,
@@ -319,7 +319,7 @@ function G(e) {
                         };
                     }
                     return (0, r.jsx)(
-                        I.Y,
+                        b.Y,
                         {
                             isInteracting: c,
                             node: e,

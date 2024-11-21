@@ -23,7 +23,7 @@ function g(e, t) {
 }
 async function E(e) {
     var t, a, s, E;
-    let { userId: v, section: I, subsection: b, guildId: T, channelId: S, friendToken: y, analyticsLocation: A, showGuildProfile: N = !0, ...C } = e,
+    let { userId: v, section: b, subsection: I, guildId: T, channelId: S, friendToken: y, analyticsLocation: A, showGuildProfile: N = !0, ...C } = e,
         R = d.default.getUser(v);
     if (null == R) return;
     let O = _.Z.getUserProfile(v),
@@ -42,8 +42,8 @@ async function E(e) {
                     user: R,
                     guildId: T,
                     friendToken: y,
-                    initialSection: I,
-                    initialSubsection: b,
+                    initialSection: b,
+                    initialSubsection: I,
                     channelId: S,
                     showGuildProfile: N,
                     ...t,
@@ -75,7 +75,7 @@ async function E(e) {
 function v() {
     null != m && (0, i.closeModal)(m), (m = null);
 }
-class I extends s.Z {
+class b extends s.Z {
     _initialize() {
         a.Z.subscribe('USER_PROFILE_MODAL_OPEN', E), a.Z.subscribe('USER_PROFILE_MODAL_CLOSE', v);
     }
@@ -83,4 +83,4 @@ class I extends s.Z {
         a.Z.unsubscribe('USER_PROFILE_MODAL_OPEN', E), a.Z.unsubscribe('USER_PROFILE_MODAL_CLOSE', v);
     }
 }
-t.Z = new I();
+t.Z = new b();

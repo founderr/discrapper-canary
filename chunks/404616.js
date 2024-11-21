@@ -277,7 +277,7 @@ let es = o.memo(function (e) {
                       contentPlaceholder: null,
                       renderedContent: null
                   }
-                : (0, y.f)(t, o, r, a()(Q.messageContent, ee.inlineFormat, ee.__invalid_smallFontSize), {
+                : (0, y.f)(t, o, r, c, a()(Q.messageContent, ee.inlineFormat, ee.__invalid_smallFontSize), {
                       leadingIconClass: Q.messageContentLeadingIcon,
                       trailingIconClass: Q.messageContentTrailingIcon,
                       iconSize: q.WW

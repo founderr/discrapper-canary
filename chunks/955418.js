@@ -25,8 +25,8 @@ function g(e) {
     let { user: t, guildId: n, channelId: u, onClose: _ } = e,
         { newestAnalyticsLocation: g } = (0, a.ZP)(),
         { trackUserProfileAction: E } = (0, d.KZ)(),
-        [v, I] = i.useState(''),
-        [b, T] = i.useState((0, o.JM)(v)),
+        [v, b] = i.useState(''),
+        [I, T] = i.useState((0, o.JM)(v)),
         S = i.useRef(!1);
     return (0, r.jsx)(l.Z, {
         innerClassName: h.inner,
@@ -35,9 +35,9 @@ function g(e) {
         placeholder: p.intl.formatToPlainString(p.t['0ZQw/f'], { name: c.ZP.getName(n, u, t) }),
         channel: m,
         textValue: v,
-        richValue: b,
+        richValue: I,
         onChange: (e, t, n) => {
-            if (t !== v) I(t), T(n);
+            if (t !== v) b(t), T(n);
         },
         focused: S.current,
         onFocus: () => {

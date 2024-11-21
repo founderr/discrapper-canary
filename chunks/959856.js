@@ -24,8 +24,8 @@ var r = n(512722),
     g = n(384136),
     E = n(740197),
     v = n(548820),
-    I = n(579237),
-    b = n(582168),
+    b = n(579237),
+    I = n(582168),
     T = n(825040),
     S = n(65154),
     y = n(436620);
@@ -227,7 +227,7 @@ class C extends l.Z {
     }
     setExperimentalAdm(e) {}
     setLoopback(e, t) {
-        e && null == this.loopback ? (this.enable(), (this.loopback = new I.Z(this.getAudioContext(), this.sourceId, this.sinkId)), this.loopback.setNoiseCancellation(t.noiseCancellation)) : !e && null != this.loopback && (this.loopback.stop(), (this.loopback = null));
+        e && null == this.loopback ? (this.enable(), (this.loopback = new b.Z(this.getAudioContext(), this.sourceId, this.sinkId)), this.loopback.setNoiseCancellation(t.noiseCancellation)) : !e && null != this.loopback && (this.loopback.stop(), (this.loopback = null));
     }
     getLoopback() {
         return null != this.loopback;
@@ -275,7 +275,7 @@ class C extends l.Z {
     constructor() {
         super(),
             A(this, 'Video', T.Z),
-            A(this, 'Camera', b.Z),
+            A(this, 'Camera', I.Z),
             A(this, '_audioContext', null),
             A(this, 'outputVolume', S.Qx),
             A(this, 'sourceId', S.w5),

@@ -24,8 +24,8 @@ var r = n(200651),
     g = n(768581),
     E = n(28660),
     v = n(462997),
-    I = n(431405);
-let b = (e) => {
+    b = n(431405);
+let I = (e) => {
     let { size: t, stroke: n } = (0, c.getAvatarSpecs)(e);
     return t / 2 + n;
 };
@@ -46,10 +46,10 @@ function T(e) {
         Z = n.getAvatarURL(v, (0, c.getAvatarSize)(A)),
         F = (0, o._i)((0, d.ZP)(Z, B, !1)),
         V = (0, f.Z)(null !== (t = null == a ? void 0 : a.primaryColor) && void 0 !== t ? t : F).hex,
-        j = b(A),
+        j = I(A),
         H = O - C - D;
     return (0, r.jsxs)('svg', {
-        className: I.mask,
+        className: b.mask,
         viewBox: '0 0 '.concat(R, ' ').concat(O),
         style: {
             minWidth: R,
@@ -84,7 +84,7 @@ function T(e) {
                 children: [
                     S,
                     (0, r.jsxs)('div', {
-                        className: s()(I.banner, y),
+                        className: s()(b.banner, y),
                         onMouseMove: () => M(!0),
                         onMouseLeave: () => M(!1),
                         style: {
@@ -93,7 +93,7 @@ function T(e) {
                             backgroundImage: null != U ? 'url('.concat(U, ')') : void 0,
                             backgroundColor: 'COMPLETE' !== G ? u.Z.unsafe_rawColors.PRIMARY_800.css : V
                         },
-                        children: [!k && (0, g.F8)(U) && (0, r.jsx)(p.Z, { className: I.gifTag }), S]
+                        children: [!k && (0, g.F8)(U) && (0, r.jsx)(p.Z, { className: b.gifTag }), S]
                     })
                 ]
             })

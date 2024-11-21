@@ -41,10 +41,10 @@ e.exports = function (e) {
         },
         E = '[0-9](_?[0-9])*',
         v = `\\.(${E})`,
-        I = '0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*',
-        b = {
+        b = '0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*',
+        I = {
             className: 'number',
-            variants: [{ begin: `(\\b(${I})((${v})|\\.)?|(${v}))[eE][+-]?(${E})\\b` }, { begin: `\\b(${I})\\b((${v})\\b|\\.)?|(${v})\\b` }, { begin: '\\b(0|[1-9](_?[0-9])*)n\\b' }, { begin: '\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b' }, { begin: '\\b0[bB][0-1](_?[0-1])*n?\\b' }, { begin: '\\b0[oO][0-7](_?[0-7])*n?\\b' }, { begin: '\\b0[0-7]+n?\\b' }],
+            variants: [{ begin: `(\\b(${b})((${v})|\\.)?|(${v}))[eE][+-]?(${E})\\b` }, { begin: `\\b(${b})\\b((${v})\\b|\\.)?|(${v})\\b` }, { begin: '\\b(0|[1-9](_?[0-9])*)n\\b' }, { begin: '\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b' }, { begin: '\\b0[bB][0-1](_?[0-1])*n?\\b' }, { begin: '\\b0[oO][0-7](_?[0-7])*n?\\b' }, { begin: '\\b0[0-7]+n?\\b' }],
             relevance: 0
         },
         T = {
@@ -120,7 +120,7 @@ e.exports = function (e) {
                 e.C_LINE_COMMENT_MODE
             ]
         },
-        C = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, S, y, A, { match: /\$\d+/ }, b];
+        C = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, S, y, A, { match: /\$\d+/ }, I];
     T.contains = C.concat({
         begin: /\{/,
         end: /\}/,
@@ -224,7 +224,7 @@ e.exports = function (e) {
             A,
             N,
             { match: /\$\d+/ },
-            b,
+            I,
             x,
             {
                 className: 'attr',

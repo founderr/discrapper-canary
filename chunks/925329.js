@@ -84,9 +84,9 @@ let f = {
                 className: a()(d.gameIcon, E, m)
             });
         let v = null == i ? void 0 : i.name,
-            I = null != v && '' !== v ? c.intl.formatToPlainString(c.t.tiKyYm, { applicationName: v }) : c.intl.string(c.t['2B/phI']);
+            b = null != v && '' !== v ? c.intl.formatToPlainString(c.t.tiKyYm, { applicationName: v }) : c.intl.string(c.t['2B/phI']);
         return (0, r.jsx)('img', {
-            alt: I,
+            alt: b,
             src: t,
             className: a()(d.gameIcon, E, m)
         });

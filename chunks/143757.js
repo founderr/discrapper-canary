@@ -32,8 +32,8 @@ var i = n(200651),
     Z = n(981631),
     L = n(388032),
     y = n(508042),
-    P = n(156762);
-async function O(e, t, n) {
+    O = n(156762);
+async function P(e, t, n) {
     t(e.id);
     let i = e.bot;
     if (null == i)
@@ -91,7 +91,7 @@ function R(e) {
         g = null != n;
     return (0, i.jsx)(o.Clickable, {
         className: a()(y.clickable, { [y.disabledClickable]: g }),
-        onClick: () => (m || g ? null : O(t, r, c)),
+        onClick: () => (m || g ? null : P(t, r, c)),
         'aria-label': L.intl.formatToPlainString(L.t['zLhr9/'], {
             applicationName: t.name,
             applicationDescription: t.description
@@ -176,7 +176,7 @@ function M() {
     }, [c, h, d]),
     c)
         ? (0, i.jsx)(I.Z, {
-              className: a()(y.headerContainer, P.privateChannelsHeaderContainer),
+              className: a()(y.headerContainer, O.privateChannelsHeaderContainer),
               children: (0, i.jsxs)('div', {
                   className: y.container,
                   onContextMenu: D,
@@ -184,7 +184,7 @@ function M() {
                       (0, i.jsx)('div', {
                           className: y.textContainer,
                           children: (0, i.jsx)('span', {
-                              className: P.headerText,
+                              className: O.headerText,
                               children: L.intl.string(L.t.vayAzs)
                           })
                       }),

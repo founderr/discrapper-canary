@@ -75,8 +75,8 @@ function x(e) {
             handleTagChangeEvent: S,
             handleSelectTag: E,
             handleUnselectTag: R,
-            handleResetTagSelections: Z,
-            handleInputBlurEvent: y
+            handleResetTagSelections: y,
+            handleInputBlurEvent: Z
         } = (0, u.Q)(_, {
             scrollerRef: v,
             mainInputRef: f,
@@ -85,11 +85,11 @@ function x(e) {
         {
             state: { value: A, tags: L, selections: D, isSelecting: O }
         } = _,
-        [k, M] = r.useState(!1),
-        P = r.useCallback(() => {
+        [k, P] = r.useState(!1),
+        M = r.useCallback(() => {
             var e;
-            M(!1), Z(), null === (e = f.current) || void 0 === e || e.focus({ preventScroll: !0 });
-        }, [Z]);
+            P(!1), y(), null === (e = f.current) || void 0 === e || e.focus({ preventScroll: !0 });
+        }, [y]);
     r.useEffect(() => {
         if (!k) l(L);
     }, [l, L, k]),
@@ -99,9 +99,9 @@ function x(e) {
     let w = r.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                e && P(), M(!1);
+                e && M(), P(!1);
             },
-            [P]
+            [M]
         ),
         B = r.useCallback(
             (e) => (t) => {
@@ -120,7 +120,7 @@ function x(e) {
                                           return null === (e = C.current) || void 0 === e ? void 0 : e.focus();
                                       }, 16);
                               }));
-                } else R(e, !0), M(!0);
+                } else R(e, !0), P(!0);
             },
             [E, R, D, L]
         );
@@ -132,7 +132,7 @@ function x(e) {
         children: [
             (0, i.jsxs)(g, {
                 ref: v,
-                onClick: P,
+                onClick: M,
                 children: [
                     L.map((e, t) =>
                         (0, i.jsx)(
@@ -157,7 +157,7 @@ function x(e) {
                         onChange: N,
                         onKeyDownCapture: T,
                         onPaste: I,
-                        onBlur: y,
+                        onBlur: Z,
                         placeholder: 0 === L.length ? h : void 0,
                         value: A
                     })

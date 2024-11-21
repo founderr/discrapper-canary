@@ -24,8 +24,8 @@ var r = n(200651),
     g = n(238302),
     E = n(703656),
     v = n(483444),
-    I = n(599250),
-    b = n(424218),
+    b = n(599250),
+    I = n(424218),
     T = n(74538),
     S = n(960048),
     y = n(861990),
@@ -71,7 +71,7 @@ function P(e) {
                         color: 'currentColor',
                         className: x.logoIcon
                     }),
-                    _ === O.Si.TIER_0 && (0, r.jsx)(I.Z, { className: x.logoWordmark }),
+                    _ === O.Si.TIER_0 && (0, r.jsx)(b.Z, { className: x.logoWordmark }),
                     _ === O.Si.TIER_2 && (0, r.jsx)(v.Z, { className: x.logoWordmark })
                 ]
             }),
@@ -215,10 +215,10 @@ function Z(e) {
     });
 }
 function F(e) {
-    let { headingText: t, context: i, children: a, onClose: o, type: u, subscriptionTier: c, analyticsLocationObject: v, trialOffer: I, discountOffer: A } = e,
+    let { headingText: t, context: i, children: a, onClose: o, type: u, subscriptionTier: c, analyticsLocationObject: v, trialOffer: b, discountOffer: A } = e,
         N = (0, d.e7)([m.Z], () => m.Z.useReducedMotion),
         C = (0, h.ZP)(),
-        R = (0, b.BU)(y.zz / b.XD, { useKibibytes: !0 });
+        R = (0, I.BU)(y.zz / I.XD, { useKibibytes: !0 });
     switch (u) {
         case O.cd.EMPTY_STICKER_PICKER_UPSELL:
             return (0, r.jsxs)(r.Fragment, {
@@ -245,7 +245,7 @@ function F(e) {
                                 children: L.intl.string(L.t.HEm04O)
                             }),
                             (0, r.jsx)(P, {
-                                trialOffer: I,
+                                trialOffer: b,
                                 discountOffer: A,
                                 children: L.intl.format(L.t['2HoFKC'], {
                                     planName: (0, T.jP)(c),
@@ -261,7 +261,7 @@ function F(e) {
                             section: D.jXE.EXPRESSION_PICKER,
                             object: D.qAy.BUTTON_CTA
                         },
-                        trialOffer: I,
+                        trialOffer: b,
                         discountOffer: A
                     })
                 ]
@@ -285,7 +285,7 @@ function F(e) {
                                     children: L.intl.string(L.t.jJG1pq)
                                 }),
                                 (0, r.jsx)(P, {
-                                    trialOffer: I,
+                                    trialOffer: b,
                                     discountOffer: A,
                                     children: L.intl.format(L.t['2HoFKC'], {
                                         planName: (0, T.jP)(c),
@@ -301,7 +301,7 @@ function F(e) {
                                 section: D.jXE.EXPRESSION_PICKER,
                                 object: D.qAy.BUTTON_CTA
                             },
-                            trialOffer: I,
+                            trialOffer: b,
                             discountOffer: A
                         })
                     ]
@@ -326,7 +326,7 @@ function F(e) {
                                 children: L.intl.string(L.t['1SsvhY'])
                             }),
                             (0, r.jsx)(P, {
-                                trialOffer: I,
+                                trialOffer: b,
                                 discountOffer: A,
                                 children: L.intl.format(L.t.md4nPz, {
                                     planName: (0, T.jP)(c),
@@ -342,7 +342,7 @@ function F(e) {
                             section: D.jXE.EMOJI_PICKER_POPOUT,
                             object: D.qAy.BUTTON_CTA
                         },
-                        trialOffer: I,
+                        trialOffer: b,
                         discountOffer: A
                     })
                 ]
@@ -401,7 +401,7 @@ function F(e) {
                                 children: i
                             }),
                             (0, r.jsx)(P, {
-                                trialOffer: I,
+                                trialOffer: b,
                                 discountOffer: A,
                                 children: U
                             })
@@ -423,7 +423,7 @@ function F(e) {
                         children: i
                     }),
                     (0, r.jsx)(P, {
-                        trialOffer: I,
+                        trialOffer: b,
                         discountOffer: A,
                         children: L.intl.format(L.t.poib9P, {
                             planName: (0, T.jP)(c),
@@ -435,7 +435,7 @@ function F(e) {
                         subscriptionTier: c,
                         analyticsLocationObject: v,
                         onClose: o,
-                        trialOffer: I,
+                        trialOffer: b,
                         discountOffer: A
                     })
                 ]
@@ -444,7 +444,7 @@ function F(e) {
             return (
                 l()(null != a, 'You must specify children for this upsell type'),
                 (0, r.jsx)(P, {
-                    trialOffer: I,
+                    trialOffer: b,
                     discountOffer: A,
                     children: L.intl.format(L.t['5KMAnJ'], {
                         onClick: () => {
@@ -470,7 +470,7 @@ function F(e) {
                     }),
                     (0, r.jsx)('div', { className: x.divider }),
                     (0, r.jsx)(P, {
-                        trialOffer: I,
+                        trialOffer: b,
                         discountOffer: A,
                         className: x.messageLengthBrandedContainer,
                         subscriptionTier: c,
@@ -485,7 +485,7 @@ function F(e) {
                         subscriptionTier: c,
                         analyticsLocationObject: v,
                         onClose: o,
-                        trialOffer: I,
+                        trialOffer: b,
                         discountOffer: A
                     })
                 ]
@@ -505,7 +505,7 @@ function F(e) {
         case O.cd.CLIENT_THEMES_UPSELL:
         case O.cd.TRY_IT_OUT_MODAL_UPSELL:
             return (0, r.jsx)(Z, {
-                trialOffer: I,
+                trialOffer: b,
                 discountOffer: A,
                 headingText: t,
                 context: i,
@@ -518,7 +518,7 @@ function F(e) {
                     headingText: t,
                     context: i,
                     children: a,
-                    trialOffer: I,
+                    trialOffer: b,
                     discountOffer: A
                 })
             );

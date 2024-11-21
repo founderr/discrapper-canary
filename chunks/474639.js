@@ -21,8 +21,8 @@ var r = n(46973),
     g = n(924557),
     E = n(435064),
     v = n(894694),
-    I = n(779618),
-    b = n(356659),
+    b = n(779618),
+    I = n(356659),
     T = n(981631),
     S = n(70722);
 class y extends a.Z {
@@ -78,12 +78,12 @@ class y extends a.Z {
         null === (e = f.Z.getUserIds()) || void 0 === e || e.forEach((e) => this.maybeShowClipsWarning(e));
     }
     handlePostConnectionOpen() {
-        if (!!(0, I.Z)(d.Z)) {
+        if (!!(0, b.Z)(d.Z)) {
             if ((this.applyNativeClipsSettings(), !(0, g.ln)())) {
                 E.Z.getSettings().clipsEnabled && this.disableClips();
                 return;
             }
-            (null == E.Z.getHardwareClassification() || null == E.Z.getHardwareClassificationForDecoupled() || E.Z.getHardwareClassificationVersion() !== b.WM) &&
+            (null == E.Z.getHardwareClassification() || null == E.Z.getHardwareClassificationForDecoupled() || E.Z.getHardwareClassificationVersion() !== I.WM) &&
                 this.classifyHardwareAndTrack().then((e) => {
                     i.Z.dispatch({
                         type: 'CLIPS_CLASSIFY_HARDWARE',
@@ -94,7 +94,7 @@ class y extends a.Z {
     }
     handleRTCConnectionVideo(e) {
         let { userId: t, context: n, channelId: i, guildId: a } = e;
-        if (n !== r.Yn.STREAM || !(0, I.Z)(d.Z)) return;
+        if (n !== r.Yn.STREAM || !(0, b.Z)(d.Z)) return;
         let s = _.Z.getRTCConnection(
             o.V9({
                 streamType: null != a ? S.lo.GUILD : S.lo.CALL,
@@ -132,7 +132,7 @@ class y extends a.Z {
             return (
                 h.default.track(T.rMx.CLIPS_HARDWARE_CLASSIFICATION, {
                     classification: t,
-                    version: b.WM,
+                    version: I.WM,
                     gpu_models: e
                 }),
                 t
@@ -143,8 +143,8 @@ class y extends a.Z {
     }
     classifyHardware(e) {
         if ((0, m.isWindows)()) {
-            let t = e.some((e) => b.mg.test(e)),
-                n = e.some((e) => b.nU.test(e));
+            let t = e.some((e) => I.mg.test(e)),
+                n = e.some((e) => I.nU.test(e));
             return t ? v.x.MEETS_AUTO_ENABLE : n ? v.x.MEETS_MINIMUM : v.x.BELOW_MINIMUM;
         }
         if ((0, m.isMac)()) {
@@ -154,7 +154,7 @@ class y extends a.Z {
         return v.x.UNKNOWN;
     }
     applyUserVoiceRecording(e) {
-        if (!(0, I.Z)(d.Z)) return;
+        if (!(0, b.Z)(d.Z)) return;
         let t = f.Z.getRTCConnection();
         if (null == t) return;
         if (e === c.default.getId()) {
@@ -165,7 +165,7 @@ class y extends a.Z {
         t.setClipRecordUser(e, 'audio', n);
     }
     applyStreamRecording(e, t) {
-        if (!(0, I.Z)(d.Z)) return;
+        if (!(0, b.Z)(d.Z)) return;
         if (c.default.getId() === e) {
             let { clipsEnabled: n } = E.Z.getSettings(),
                 r = (0, g.ln)();

@@ -24,9 +24,9 @@ function h(e) {
             var e;
             return (null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === n.id;
         }),
-        I = (0, i.e7)([c.Z], () => c.Z.hasConnectedAccount());
+        b = (0, i.e7)([c.Z], () => c.Z.hasConnectedAccount());
     if ('live' === m || !(0, u.AZ)(h)) return null;
-    if (!I)
+    if (!b)
         return (0, r.jsx)(a.MenuItem, {
             id: 'connect-spotify',
             label: p.intl.formatToPlainString(p.t.XWSHTU, { platform: _.ai }),
@@ -35,14 +35,14 @@ function h(e) {
             }
         });
     if (v) return null;
-    let b = (0, o.dU)(h) ? (null === (t = h.extra.entries[0]) || void 0 === t ? void 0 : t.media) : h.extra.media;
-    return null == b
+    let I = (0, o.dU)(h) ? (null === (t = h.extra.entries[0]) || void 0 === t ? void 0 : t.media) : h.extra.media;
+    return null == I
         ? null
         : (0, r.jsx)(a.MenuItem, {
               id: 'play-on-spotify',
               label: p.intl.string(p.t.rRffNz),
               action: () => {
-                  null == g || g({ action: 'PRESS_PLAY_ON_SPOTIFY_MENU_ITEM' }), (0, l.o)(_.Hw.TRACK, b.external_id);
+                  null == g || g({ action: 'PRESS_PLAY_ON_SPOTIFY_MENU_ITEM' }), (0, l.o)(_.Hw.TRACK, I.external_id);
               }
           });
 }

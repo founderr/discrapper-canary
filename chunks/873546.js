@@ -3,10 +3,10 @@ n.d(t, {
         return v;
     },
     eL: function () {
-        return b;
+        return I;
     },
     tq: function () {
-        return I;
+        return b;
     }
 }),
     n(47120);
@@ -27,6 +27,6 @@ let m = new Set(['iPad', 'Kindle', 'Kindle Fire', 'Nook', 'PlayBook']),
     g = new Set(['Android', 'iOS', 'Windows Phone']),
     E = (null === (i = window) || void 0 === i ? void 0 : null === (r = i.navigator) || void 0 === r ? void 0 : r.platform) === 'MacIntel' && void 0 !== (null === (s = window) || void 0 === s ? void 0 : null === (a = s.navigator) || void 0 === a ? void 0 : a.standalone) && (null === (l = window) || void 0 === l ? void 0 : null === (o = l.navigator) || void 0 === o ? void 0 : o.maxTouchPoints) > 1,
     v = m.has(null !== (f = h().product) && void 0 !== f ? f : '') || E,
-    I = !v && g.has(null !== (_ = null === h() || void 0 === h() ? void 0 : null === (u = h().os) || void 0 === u ? void 0 : u.family) && void 0 !== _ ? _ : '');
+    b = !v && g.has(null !== (_ = null === h() || void 0 === h() ? void 0 : null === (u = h().os) || void 0 === u ? void 0 : u.family) && void 0 !== _ ? _ : '');
 null === h() || void 0 === h() || null === (c = h().os) || void 0 === c || c.family;
-let b = (null === h() || void 0 === h() ? void 0 : null === (d = h().os) || void 0 === d ? void 0 : d.family) === 'Android';
+let I = (null === h() || void 0 === h() ? void 0 : null === (d = h().os) || void 0 === d ? void 0 : d.family) === 'Android';

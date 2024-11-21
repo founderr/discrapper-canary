@@ -34,8 +34,8 @@ let d = {
     g = c(o.Z.INLINE_REPLY_RULES, [(0, s.Z)(d)]),
     E = c(o.Z.GUILD_VERIFICATION_FORM_RULES, [(0, s.Z)(d)]),
     v = c(o.Z.GUILD_EVENT_RULES, [(0, s.Z)(d)]),
-    I = c(o.Z.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, [(0, s.Z)(d)]),
-    b = i().omit(c(o.Z.RULES, [(0, s.Z)(d)]), 'paragraph', 'newline', 'strong', 'codeBlock', 'inlineCode', 'u', 'link', 'url', 'autolink', 'list', 'heading', 'subtext'),
+    b = c(o.Z.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, [(0, s.Z)(d)]),
+    I = i().omit(c(o.Z.RULES, [(0, s.Z)(d)]), 'paragraph', 'newline', 'strong', 'codeBlock', 'inlineCode', 'u', 'link', 'url', 'autolink', 'list', 'heading', 'subtext'),
     T = { text: o.Z.RULES.text };
 t.Z = {
     combineAndInjectMentionRule: c,
@@ -43,7 +43,7 @@ t.Z = {
     defaultReactRuleOptions: d,
     defaultRules: f,
     guildEventRules: v,
-    notifCenterV2MessagePreviewRules: b,
+    notifCenterV2MessagePreviewRules: I,
     lockscreenWidgetMessageRules: T,
     astParserFor: a._p,
     reactParserFor: a.w4,
@@ -54,11 +54,11 @@ t.Z = {
     parseInlineReply: a.w4(g),
     parseGuildVerificationFormRule: a.w4(E),
     parseGuildEventDescription: a.w4(v),
-    parseAutoModerationSystemMessage: a.w4(I),
+    parseAutoModerationSystemMessage: a.w4(b),
     parseForumPostGuidelines: a.w4(_),
     parseToAST: a._p(f),
     parseTopicToAST: a._p(p),
     parseEmbedTitleToAST: a._p(m),
     parseInlineReplyToAST: a._p(g),
-    parseAutoModerationSystemMessageToAST: a._p(I)
+    parseAutoModerationSystemMessageToAST: a._p(b)
 };

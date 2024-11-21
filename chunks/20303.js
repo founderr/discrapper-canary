@@ -32,7 +32,7 @@ function v(e) {
     let t = (0, f.E)(e);
     return m.has(t);
 }
-class I extends (i = l.ZP.Store) {
+class b extends (i = l.ZP.Store) {
     initialize() {
         var e;
         let t = null !== (e = u.K.get(p)) && void 0 !== e ? e : {};
@@ -50,7 +50,7 @@ class I extends (i = l.ZP.Store) {
     }
 }
 (o = 'MaskedLinkStore'),
-    (s = 'displayName') in (a = I)
+    (s = 'displayName') in (a = b)
         ? Object.defineProperty(a, s, {
               value: o,
               enumerable: !0,
@@ -58,7 +58,7 @@ class I extends (i = l.ZP.Store) {
               writable: !0
           })
         : (a[s] = o),
-    (t.Z = new I(c.Z, {
+    (t.Z = new b(c.Z, {
         MASKED_LINK_ADD_TRUSTED_DOMAIN: function (e) {
             let { url: t } = e;
             if (E(t)) return !1;

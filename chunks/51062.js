@@ -21,7 +21,7 @@ var r = n(192379),
     g = n(377668),
     E = n(185923);
 function v(e, t, n) {
-    var v, I, b, T, S, y, A;
+    var v, b, I, T, S, y, A;
     let { channel: N, type: C } = e,
         [R, O] = r.useState(() => (0, p.P)()),
         D = (0, i.Z)(),
@@ -62,7 +62,7 @@ function v(e, t, n) {
             navigator: G,
             activeCommand: k,
             activeCommandOption: U,
-            canMentionUsers: null !== (S = null === (I = C.users) || void 0 === I ? void 0 : I.allowMentioning) && void 0 !== S && S,
+            canMentionUsers: null !== (S = null === (b = C.users) || void 0 === b ? void 0 : b.allowMentioning) && void 0 !== S && S,
             canMentionEveryone: M,
             canMentionClyde: x,
             hidePersonalInformation: P,
@@ -70,7 +70,7 @@ function v(e, t, n) {
             emojiIntention: C === l.I.RULES_INPUT ? E.Hz.COMMUNITY_CONTENT : E.Hz.CHAT,
             currentWord: null !== (y = null == B ? void 0 : B.word) && void 0 !== y ? y : '',
             currentWordIsAtStart: (null == B ? void 0 : B.isAtStart) === !0,
-            optionText: null != U ? (0, s.KF)({ [U.name]: null !== (A = null === (b = e.editorRef.current) || void 0 === b ? void 0 : b.getCurrentCommandOptionValue()) && void 0 !== A ? A : [] }, U.name) : ''
+            optionText: null != U ? (0, s.KF)({ [U.name]: null !== (A = null === (I = e.editorRef.current) || void 0 === I ? void 0 : I.getCurrentCommandOptionValue()) && void 0 !== A ? A : [] }, U.name) : ''
         },
         [F] = r.useState(() => new p.Z(Z));
     return (

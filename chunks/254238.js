@@ -6,7 +6,7 @@ n.d(t, {
         return S;
     },
     Vv: function () {
-        return b;
+        return I;
     },
     _: function () {
         return T;
@@ -15,7 +15,7 @@ n.d(t, {
         return N;
     },
     ef: function () {
-        return I;
+        return b;
     },
     s6: function () {
         return v;
@@ -72,13 +72,13 @@ async function v() {
         });
     }
 }
-function I(e) {
+function b(e) {
     s.Z.dispatch({
         type: 'REMOTE_SESSION_CONNECT',
         sessionId: e
     });
 }
-function b(e, t) {
+function I(e, t) {
     let { selfMute: n, selfDeaf: r } = t;
     s.Z.dispatch({
         type: 'REMOTE_COMMAND',

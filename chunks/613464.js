@@ -32,8 +32,8 @@ function N(e) {
         A = (0, s.e7)([v.default], () => v.default.getUser(t), [t]),
         y = (0, s.e7)([_.ZP], () => _.ZP.getMember(n, t), [n, t]),
         [P, M] = l.useState(null == A || null == y),
-        L = (0, d.Z)(y),
-        R = l.useRef(null),
+        R = (0, d.Z)(y),
+        L = l.useRef(null),
         { analyticsLocations: k } = (0, m.ZP)(p.Z.GUILD_MEMBER_MOD_VIEW),
         O = (0, g.ZP)(t, n),
         D = (0, u.ZP)();
@@ -41,17 +41,17 @@ function N(e) {
         !j && r();
     }, [j, r]),
     l.useEffect(() => {
-        null != L && null == y && !P && r();
-    }, [P, y, r, L]),
+        null != R && null == y && !P && r();
+    }, [P, y, r, R]),
     l.useEffect(() => {
         null != A && null != y && M(!1);
     }, [A, y]),
     l.useEffect(() => {
         let e = null == y;
         return (
-            !P && e && (R.current = window.setTimeout(r, 500)),
+            !P && e && (L.current = window.setTimeout(r, 500)),
             () => {
-                null != R.current && window.clearTimeout(R.current);
+                null != L.current && window.clearTimeout(L.current);
             }
         );
     }, [P, y, r]),

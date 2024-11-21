@@ -21,8 +21,8 @@ var r = n(200651),
     g = n(998502),
     E = n(151851),
     v = n(981631),
-    I = n(388032);
-let b = l.ZP.connectStores([_.Z], () => ({ focused: _.Z.isFocused() }))(E.Z);
+    b = n(388032);
+let I = l.ZP.connectStores([_.Z], () => ({ focused: _.Z.isFocused() }))(E.Z);
 class T extends i.PureComponent {
     getPlatform() {
         var e;
@@ -43,7 +43,7 @@ class T extends i.PureComponent {
         let e = (0, r.jsx)('div', {
                 children: (0, r.jsxs)('p', {
                     children: [
-                        I.intl.string(I.t['4tRjHB']),
+                        b.intl.string(b.t['4tRjHB']),
                         ' ',
                         (0, r.jsx)(d.Z, {
                             src: p.ZP.getURL(u.Z.convert.fromCodePoint('1f44c')),
@@ -56,14 +56,14 @@ class T extends i.PureComponent {
             t = (0, r.jsx)(c.Button, {
                 size: c.ButtonSizes.LARGE,
                 onClick: this.handleDownload,
-                children: I.intl.string(I.t['1WjMbG'])
+                children: b.intl.string(b.t['1WjMbG'])
             });
         return (0, r.jsxs)(i.Fragment, {
             children: [
                 (0, r.jsx)(o.ql, { children: (0, r.jsx)('html', { className: (0, c.getThemeClass)(v.BRd.DARK) }) }),
-                (0, r.jsx)(b, { type: this.getPlatform() }),
+                (0, r.jsx)(I, { type: this.getPlatform() }),
                 (0, r.jsx)(f.Z, {
-                    title: I.intl.string(I.t['3h+n+/']),
+                    title: b.intl.string(b.t['3h+n+/']),
                     note: e,
                     action: t
                 })

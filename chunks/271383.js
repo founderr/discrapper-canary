@@ -26,8 +26,8 @@ var r,
     g = n(134049),
     E = n(160404),
     v = n(630388),
-    I = n(823379),
-    b = n(709054),
+    b = n(823379),
+    I = n(709054),
     T = n(314897),
     S = n(592125),
     y = n(430824),
@@ -101,7 +101,7 @@ function H(e, t) {
 }
 function Y(e) {
     let { userId: t, nick: n, guildId: r, avatar: i, avatarDecoration: a, guildRoles: s, roles: o, premiumSince: l, isPending: u, joinedAt: c, communicationDisabledUntil: d, unusualDMActivityUntil: f, fullProfileLoadedTimestamp: _, flags: p } = e,
-        { colorString: h, colorRoleId: m, iconRoleId: g, hoistRoleId: v, highestRoleId: I } = H(s, o),
+        { colorString: h, colorRoleId: m, iconRoleId: g, hoistRoleId: v, highestRoleId: b } = H(s, o),
         S = {
             userId: t,
             nick: n,
@@ -113,7 +113,7 @@ function Y(e) {
             colorRoleId: m,
             iconRoleId: g,
             hoistRoleId: v,
-            highestRoleId: I,
+            highestRoleId: b,
             premiumSince: l,
             isPending: u,
             joinedAt: c,
@@ -129,7 +129,7 @@ function Y(e) {
             R[r] = {
                 ...S,
                 ...E.Z.getMemberOptions(r),
-                roles: null != e ? b.default.keys(e) : []
+                roles: null != e ? I.default.keys(e) : []
             };
         } else null != R[r] && delete R[r];
     }
@@ -269,7 +269,7 @@ function J(e) {
     let n = y.Z.getGuild(e.guildId);
     if (null == n) return N.warn('Guild '.concat(e.guildId, ' not found during ').concat(e.type, '.')), !1;
     let r = T.default.getId();
-    for (let i of b.default.keys(t)) {
+    for (let i of I.default.keys(t)) {
         let a = t[i];
         if ((null != a.roles && a.roles.length > 0) || null != a.colorString || null != a.hoistRoleId) {
             let s = i === r && 'GUILD_ROLE_DELETE' === e.type ? a.roles.filter((t) => t !== e.roleId) : a.roles;
@@ -420,7 +420,7 @@ class er extends (i = f.ZP.Store) {
     getMemberIds(e) {
         if (null == e) return [];
         let t = C[e];
-        return null == t ? [] : b.default.keys(t);
+        return null == t ? [] : I.default.keys(t);
     }
     getMembers(e) {
         if (null == e) return [];
@@ -569,11 +569,11 @@ class er extends (i = f.ZP.Store) {
         },
         THREAD_MEMBER_LIST_UPDATE: function (e) {
             let { guildId: t, members: n } = e;
-            return z(t, n.map((e) => e.member).filter(I.lm));
+            return z(t, n.map((e) => e.member).filter(b.lm));
         },
         THREAD_MEMBERS_UPDATE: function (e) {
             let { guildId: t, addedMembers: n } = e;
-            return null != n && z(t, n.map((e) => e.member).filter(I.lm));
+            return null != n && z(t, n.map((e) => e.member).filter(b.lm));
         },
         LOAD_ARCHIVED_THREADS_SUCCESS: function (e) {
             let { guildId: t, owners: n } = e;
@@ -585,7 +585,7 @@ class er extends (i = f.ZP.Store) {
                 t,
                 Object.values(n)
                     .map((e) => e.owner)
-                    .filter(I.lm)
+                    .filter(b.lm)
             );
         },
         GUILD_ROLE_UPDATE: J,

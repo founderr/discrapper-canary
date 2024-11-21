@@ -6,7 +6,7 @@ n.d(t, {
         return A;
     },
     Mg: function () {
-        return b;
+        return I;
     },
     Nl: function () {
         return R;
@@ -48,8 +48,8 @@ var r,
     E = n(436620);
 let v = new m.Yd('SDP');
 ((a = r || (r = {})).AUDIO = 'a'), (a.VIDEO = 'v'), ((s = i || (i = {})).SENDRECV = 'sendrecv'), (s.SENDONLY = 'sendonly'), (s.RECVONLY = 'recvonly'), (s.INACTIVE = 'inactive');
-let I = 'UDP/TLS/RTP/SAVPF';
-function b(e) {
+let b = 'UDP/TLS/RTP/SAVPF';
+function I(e) {
     switch (e) {
         case 'recvonly':
             return 'sendonly';
@@ -131,7 +131,7 @@ function y(e) {
             fmtp: [],
             payloads: o,
             port: 0,
-            protocol: I,
+            protocol: b,
             rtp: [
                 {
                     codec: 'NULL',
@@ -147,7 +147,7 @@ function y(e) {
     } = h.parse(a);
     if (
         ((m.type = n),
-        (m.protocol = I),
+        (m.protocol = b),
         (m.payloads = o),
         (m.setup = r),
         (m.mid = t),

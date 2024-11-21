@@ -12,7 +12,7 @@ n.d(t, {
         return h;
     },
     i7: function () {
-        return b;
+        return I;
     },
     kI: function () {
         return p;
@@ -24,7 +24,7 @@ n.d(t, {
         return y;
     },
     u0: function () {
-        return I;
+        return b;
     },
     uL: function () {
         return T;
@@ -78,12 +78,12 @@ function v(e, t, n) {
     for (let e in ((t = { ...t }), n)) delete t[e];
     return e.mergePartial(t, n), t;
 }
-function I(e, t, n) {
+function b(e, t, n) {
     return (null == t || 'null' === t) && (t = d.aIL), !(t in e.guilds) && (e.guilds[t] = l.C4.create()), n(e.guilds[t]);
 }
-function b(e, t, n, r) {
+function I(e, t, n, r) {
     var i, a, s;
-    return (i = e), (a = t), (s = (e) => T(e, n, r)), null == i.guilds && (i.guilds = l.os.create()), I(i.guilds, a, s);
+    return (i = e), (a = t), (s = (e) => T(e, n, r)), null == i.guilds && (i.guilds = l.os.create()), b(i.guilds, a, s);
 }
 function T(e, t, n) {
     return !(t in e.channels) && (e.channels[t] = l.p5.create()), n(e.channels[t]);

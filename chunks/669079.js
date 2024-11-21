@@ -74,9 +74,9 @@ var r,
     g = n(981631),
     E = n(474936),
     v = n(388032);
-let I = h.Z.escape(window.GLOBAL_ENV.GIFT_CODE_HOST),
-    b = [I, ...['discordapp.com/gifts', 'discord.com/gifts'].map((e) => h.Z.escape(e))].join('|'),
-    T = RegExp('(?: |^|https?://)(?:'.concat(b, ')/([a-z0-9-]+)'), 'gi'),
+let b = h.Z.escape(window.GLOBAL_ENV.GIFT_CODE_HOST),
+    I = [b, ...['discordapp.com/gifts', 'discord.com/gifts'].map((e) => h.Z.escape(e))].join('|'),
+    T = RegExp('(?: |^|https?://)(?:'.concat(I, ')/([a-z0-9-]+)'), 'gi'),
     S = [...['discord.com/billing/promotions', 'promos.discord.gg'].map((e) => h.Z.escape(e))].join('|'),
     y = RegExp('(?: |^|https?://)(?:'.concat(S, ')(/|(/)?\\?code=)([a-z0-9-]+)'), 'gi'),
     A = (e, t) =>

@@ -21,8 +21,8 @@ var r,
     g = n(388032),
     E = n(459127),
     v = n(167969),
-    I = n(557256);
-function b(e, t, n) {
+    b = n(557256);
+function I(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -38,13 +38,13 @@ function b(e, t, n) {
 class T extends (r = a.PureComponent) {
     render() {
         let e;
-        let { className: t, imageClassName: n, readyState: r, src: a, placeholder: s, placeholderVersion: l, alt: c, width: _, height: v, maxWidth: I = _, maxHeight: b = v, minWidth: T, minHeight: A, mediaLayoutType: N, limitResponsiveWidth: C = !0, accessory: R, zoomable: O, original: D, children: L, renderAccessory: x, onClick: w, tabIndex: M, dataSafeSrc: P, useFullWidth: k = !1, ...U } = this.props;
+        let { className: t, imageClassName: n, readyState: r, src: a, placeholder: s, placeholderVersion: l, alt: c, width: _, height: v, maxWidth: b = _, maxHeight: I = v, minWidth: T, minHeight: A, mediaLayoutType: N, limitResponsiveWidth: C = !0, accessory: R, zoomable: O, original: D, children: L, renderAccessory: x, onClick: w, tabIndex: M, dataSafeSrc: P, useFullWidth: k = !1, ...U } = this.props;
         if (1 === _ && 1 === v) return null;
         let G = (0, f.Tj)({
                 width: _,
                 height: v,
-                maxWidth: I,
-                maxHeight: b,
+                maxWidth: b,
+                maxHeight: I,
                 minWidth: T,
                 minHeight: A
             }),
@@ -141,7 +141,7 @@ class T extends (r = a.PureComponent) {
         );
     }
     constructor(...e) {
-        super(...e), b(this, '_containerRef', a.createRef()), b(this, '_clickableRef', a.createRef());
+        super(...e), I(this, '_containerRef', a.createRef()), I(this, '_clickableRef', a.createRef());
     }
 }
 function S(e) {
@@ -169,13 +169,13 @@ function S(e) {
             }
         })(t, n),
         children: (0, i.jsx)('img', {
-            src: (0, l.ap)(a) ? I : v,
+            src: (0, l.ap)(a) ? b : v,
             className: E.imageError,
             alt: null != r ? r : g.intl.string(g.t.X4IxWF)
         })
     });
 }
-b(T, 'defaultProps', {
+I(T, 'defaultProps', {
     readyState: h.zo9.READY,
     zoomable: !0,
     children: (e) => {

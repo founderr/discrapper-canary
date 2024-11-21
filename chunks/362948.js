@@ -219,8 +219,8 @@ function v(e) {
 t.Z = function (e) {
     let t = (0, u.ZP)(),
         [n, a] = i.useState(null),
-        { className: c, guild: d, hideHeading: _, hideTier0: I } = e;
-    function b() {
+        { className: c, guild: d, hideHeading: _, hideTier0: b } = e;
+    function I() {
         a(null);
     }
     return (0, r.jsxs)('div', {
@@ -249,7 +249,7 @@ t.Z = function (e) {
                                             className: h.tableRowHeading,
                                             children: p.intl.string(p.t.F5MY0t)
                                         }),
-                                        !I &&
+                                        !b &&
                                             (0, r.jsx)(g, {
                                                 tier: f.Eu4.NONE,
                                                 children: p.intl.string(p.t.mx8j2t)
@@ -288,9 +288,9 @@ t.Z = function (e) {
                                                           children: (0, r.jsx)(l.Clickable, {
                                                               className: s()(h.tableRowHeading, h.tableCell, h.tableCellInner),
                                                               onFocus: c,
-                                                              onBlur: b,
+                                                              onBlur: I,
                                                               onMouseEnter: c,
-                                                              onMouseLeave: b,
+                                                              onMouseLeave: I,
                                                               children: (0, r.jsx)(l.Popout, {
                                                                   align: 'center',
                                                                   disablePointerEvents: !0,
@@ -312,7 +312,7 @@ t.Z = function (e) {
                                                               })
                                                           })
                                                       }),
-                                                      !I &&
+                                                      !b &&
                                                           (0, r.jsx)(E, {
                                                               textVariant: 'text-md/normal',
                                                               value: e.getTier0Value()

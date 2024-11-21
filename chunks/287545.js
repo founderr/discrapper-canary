@@ -24,8 +24,8 @@ var i,
     g = n(695346),
     E = n(131704),
     v = n(314897),
-    I = n(592125),
-    b = n(19780),
+    b = n(592125),
+    I = n(19780),
     T = n(944486),
     S = n(594174),
     y = n(626135),
@@ -89,7 +89,7 @@ async function W(e) {
             rejectWithError: !1
         }));
     let c = V[i],
-        d = I.Z.getChannel(r),
+        d = b.Z.getChannel(r),
         f = S.default.getCurrentUser();
     if (null == c || null == d || null == f) return;
     let p = d.getGuildId(),
@@ -133,9 +133,9 @@ async function K(e) {
     let { channelId: a, applicationId: o, isFirstActivityInChannel: l, isStart: c, participants: d, embeddedActivity: p } = e,
         h = v.default.getId(),
         m = d.find((e) => e.userId === h),
-        g = I.Z.getChannel(a);
+        g = b.Z.getChannel(a);
     if ((c && null !== (i = null == g ? void 0 : g.isPrivate()) && void 0 !== i && i && l && null == m && u.Z.selectParticipant(a, null), null == m)) return;
-    let E = b.Z.getMediaSessionId(),
+    let E = I.Z.getMediaSessionId(),
         T = p.compositeInstanceId,
         A = null == E && (null == g ? void 0 : g.isVocal()) === !0 && (null == g ? void 0 : g.isPrivate()) === !1;
     if (null == T || A) return;
@@ -299,7 +299,7 @@ class q extends c.Z {
                             d = Z.intl.string(Z.t.uGDCc3);
                     }
                 this.showLaunchErrorModal(d);
-                let E = I.Z.getChannel(s),
+                let E = b.Z.getChannel(s),
                     v = await (0, _.Z)();
                 y.default.track(B.rMx.ACTIVITY_SESSION_JOIN_FAILED, {
                     channel_id: s,
@@ -349,7 +349,7 @@ class q extends c.Z {
             F(this, 'handleDeferredOpen', async (e) => {
                 var t, n, r;
                 let { channelId: i, applicationId: a, analyticsLocations: s, commandOrigin: o } = e,
-                    l = I.Z.getChannel(i);
+                    l = b.Z.getChannel(i);
                 if (void 0 === l || (E.tx.has(null == l ? void 0 : l.type) && T.Z.getVoiceChannelId() !== i)) return;
                 let u = L.ZP.getSelfEmbeddedActivityForChannel(i);
                 if ((null == u ? void 0 : u.applicationId) === a) return;

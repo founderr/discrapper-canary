@@ -15,7 +15,7 @@ var r = n(200651),
     f = n(89814);
 function _(e) {
     let { role: t = 'button', variant: n = 'default', textVariant: i = 'text-sm/medium', lineClamp: _ = 1, text: p, icon: h, iconPosition: m = 'end', external: g, focusProps: E, ...v } = e;
-    function I() {
+    function b() {
         if (null != h)
             return (0, r.jsx)(h, {
                 color: 'currentColor',
@@ -31,7 +31,7 @@ function _(e) {
                 className: a()(f.linkButton, f[n]),
                 ...v,
                 children: [
-                    null != h && 'start' === m && (0, r.jsx)(I, {}),
+                    null != h && 'start' === m && (0, r.jsx)(b, {}),
                     (0, r.jsx)(u.x, {
                         tag: 'span',
                         variant: i,
@@ -40,7 +40,7 @@ function _(e) {
                         className: f.text,
                         children: p
                     }),
-                    null != h && 'end' === m && (0, r.jsx)(I, {}),
+                    null != h && 'end' === m && (0, r.jsx)(b, {}),
                     g && (0, r.jsx)(l.n, { children: d.intl.string(c.Z.cgdAs7) })
                 ]
             })

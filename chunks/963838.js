@@ -35,8 +35,8 @@ var r = n(392711),
     g = n(90075),
     E = n(862666),
     v = n(252611),
-    I = n(136144),
-    b = n(316137),
+    b = n(136144),
+    I = n(316137),
     T = n(654123),
     S = n(660020),
     y = n(980084),
@@ -54,7 +54,7 @@ let M = {
         end: 15
     },
     P = [a],
-    k = [s, o, l, u, c, d, f, _, p, h, m, g, E, v, I, b, T, S, y, A, N],
+    k = [s, o, l, u, c, d, f, _, p, h, m, g, E, v, b, I, T, S, y, A, N],
     U = {
         [x.q.BASIC]: P,
         [x.q.PREMIUM]: k

@@ -44,8 +44,8 @@ var i = n(97290),
     g = n(176123),
     E = n(814010),
     v = n(48087),
-    I = n(787969),
-    b = n(43771),
+    b = n(787969),
+    I = n(43771),
     T = n(14046),
     S = n(287372),
     y = n(712139),
@@ -209,7 +209,7 @@ function ec(e) {
             placement: void 0
         }),
         v = [f, s, i.current, r.current, a.current, o, l, u, c, d, _, t, h, m, n],
-        I = (0, G.useCallback)(() => {
+        b = (0, G.useCallback)(() => {
             if (!1 === f || !_ || !i.current || !r.current || !a.current || !u) return;
             let e = (function (e) {
                 var t, n;
@@ -230,8 +230,8 @@ function ec(e) {
                     let { marginTop: e, marginLeft: t } = window.getComputedStyle(a);
                     (v.top += parseInt(e, 10) || 0), (v.left += parseInt(t, 10) || 0);
                 }
-                let I = ea(s);
-                let b =
+                let b = ea(s);
+                let I =
                     ((t = s),
                     {
                         top: parseInt((r = window.getComputedStyle(t)).marginTop, 10) || 0,
@@ -240,10 +240,10 @@ function ec(e) {
                         right: parseInt(r.marginRight, 10) || 0
                     });
                 return (
-                    (I.width += b.left + b.right),
-                    (I.height += b.top + b.bottom),
+                    (b.width += I.left + I.right),
+                    (b.height += I.top + I.bottom),
                     (function (e, t, n, r, i, a, s, o, l, u, c, d, f, _, p, h) {
-                        var m, g, E, v, I, b;
+                        var m, g, E, v, b, I;
                         let T = en(e),
                             { size: S, crossAxis: y, crossSize: A, placement: N, crossPlacement: C } = T,
                             R = er(t, o, n, T, c, d, u, f, p, h),
@@ -256,7 +256,7 @@ function ec(e) {
                         }
                         let L = et(y, R[y], n[A], o, l, a);
                         R[y] += L;
-                        let x = ((m = R), (g = o), (E = u), (v = t), (I = i), (b = a), null != m.top ? Math.max(0, g.height + g.top + g.scroll.top - (E.top + m.top) - (I.top + I.bottom + b)) : Math.max(0, v.top + E.top - (g.top + g.scroll.top) - (I.top + I.bottom + b)));
+                        let x = ((m = R), (g = o), (E = u), (v = t), (b = i), (I = a), null != m.top ? Math.max(0, g.height + g.top + g.scroll.top - (E.top + m.top) - (b.top + b.bottom + I)) : Math.max(0, v.top + E.top - (g.top + g.scroll.top) - (b.top + b.bottom + I)));
                         _ && _ < x && (x = _), (n.height = Math.min(n.height, x)), (L = et(y, (R = er(t, o, n, T, O, d, u, f, p, h))[y], n[A], o, l, a)), (R[y] += L);
                         let w = {},
                             M = t[y] + 0.5 * t[A] - n[y],
@@ -278,14 +278,14 @@ function ec(e) {
                     })(
                         i,
                         v,
-                        I,
+                        b,
                         {
                             top: (n = o).scrollTop,
                             left: n.scrollLeft,
                             width: n.scrollWidth,
                             height: n.scrollHeight
                         },
-                        b,
+                        I,
                         l,
                         u,
                         ee(c),
@@ -317,7 +317,7 @@ function ec(e) {
             });
             Object.keys(e.position).forEach((t) => (i.current.style[t] = e.position[t] + 'px')), (i.current.style.maxHeight = null != e.maxHeight ? e.maxHeight + 'px' : void 0), E(e);
         }, v);
-    (0, Z.bt)(I, v),
+    (0, Z.bt)(b, v),
         (function (e) {
             (0, Z.bt)(
                 () => (
@@ -328,21 +328,21 @@ function ec(e) {
                 ),
                 [e]
             );
-        })(I),
+        })(b),
         (0, Z.yU)({
             ref: i,
-            onResize: I
+            onResize: b
         });
-    let b = (0, G.useRef)(!1);
+    let I = (0, G.useRef)(!1);
     (0, Z.bt)(() => {
         let e;
         let t = () => {
-            (b.current = !0),
+            (I.current = !0),
                 clearTimeout(e),
                 (e = setTimeout(() => {
-                    b.current = !1;
+                    I.current = !1;
                 }, 500)),
-                I();
+                b();
         };
         return (
             null == eu || eu.addEventListener('resize', t),
@@ -351,10 +351,10 @@ function ec(e) {
                 null == eu || eu.removeEventListener('resize', t), null == eu || eu.removeEventListener('scroll', t);
             }
         );
-    }, [I]);
+    }, [b]);
     let T = (0, G.useCallback)(() => {
-        !b.current && p();
-    }, [p, b]);
+        !I.current && p();
+    }, [p, I]);
     return (
         !(function (e) {
             let { triggerRef: t, isOpen: n, onClose: r } = e;
@@ -396,7 +396,7 @@ function ec(e) {
                     top: g.arrowOffsetTop
                 }
             },
-            updatePosition: I
+            updatePosition: b
         }
     );
 }
@@ -529,7 +529,7 @@ function eg(e = {}) {
                                           'touchend',
                                           (e) => {
                                               let n = e.target;
-                                              eb(n) &&
+                                              eI(n) &&
                                                   n !== document.activeElement &&
                                                   (e.preventDefault(),
                                                   r(),
@@ -550,7 +550,7 @@ function eg(e = {}) {
                                           'focus',
                                           (e) => {
                                               let t = e.target;
-                                              eb(t) &&
+                                              eI(t) &&
                                                   (r(),
                                                   (t.style.transform = 'translateY(-2000px)'),
                                                   requestAnimationFrame(() => {
@@ -558,9 +558,9 @@ function eg(e = {}) {
                                                           ep &&
                                                               (ep.height < window.innerHeight
                                                                   ? requestAnimationFrame(() => {
-                                                                        eI(t);
+                                                                        eb(t);
                                                                     })
-                                                                  : ep.addEventListener('resize', () => eI(t), { once: !0 }));
+                                                                  : ep.addEventListener('resize', () => eb(t), { once: !0 }));
                                                   }));
                                           },
                                           !0
@@ -596,7 +596,7 @@ function ev(e, t, n, r) {
         }
     );
 }
-function eI(e) {
+function eb(e) {
     let t = document.scrollingElement || document.documentElement;
     for (; e && e !== t; ) {
         let t = (0, Z.rP)(e);
@@ -608,7 +608,7 @@ function eI(e) {
         e = t.parentElement;
     }
 }
-function eb(e) {
+function eI(e) {
     return (e instanceof HTMLInputElement && !eh.has(e.type)) || e instanceof HTMLTextAreaElement || (e instanceof HTMLElement && e.isContentEditable);
 }
 let eT = G.createContext(null);
@@ -695,8 +695,8 @@ eC = {
     'hu-HU': g.Z,
     'it-IT': E.Z,
     'ja-JP': v.Z,
-    'ko-KR': I.Z,
-    'lt-LT': b.Z,
+    'ko-KR': b.Z,
+    'lt-LT': I.Z,
     'lv-LV': T.Z,
     'nb-NO': S.Z,
     'nl-NL': y.Z,

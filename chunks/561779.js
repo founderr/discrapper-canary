@@ -23,7 +23,7 @@ var r,
     g = n(607070),
     E = n(540059),
     v = n(752325);
-function I(e, t, n) {
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,7 +36,7 @@ function I(e, t, n) {
         e
     );
 }
-function b(e, t) {
+function I(e, t) {
     let n = 0;
     for (let r = 0; r < t.length; r++) {
         let i = t[r];
@@ -67,7 +67,7 @@ function T(e) {
                     sortedMarkers: s,
                     markerPositions: o
                 };
-            let l = b(n, (s = t.sort((e, t) => e - t))),
+            let l = I(n, (s = t.sort((e, t) => e - t))),
                 u = s[0],
                 c = s[s.length - 1],
                 d = c - u;
@@ -108,7 +108,7 @@ class S extends (i = o.PureComponent) {
     render() {
         var e;
         let { value: t, active: n, focused: r, sortedMarkers: i, markerPositions: a, closestMarkerIndex: o, newClosestIndex: l, min: c, max: d } = this.state,
-            { disabled: _, stickToMarkers: p, className: E, children: I, barStyles: b, fillStyles: T, mini: S, hideBubble: A, defaultValue: N, orientation: C, onValueRender: R, renderMarker: O, getAriaValueText: D, barClassName: L, grabberClassName: x, grabberStyles: w = {}, markerPosition: M = 0, 'aria-hidden': P, 'aria-label': k, 'aria-labelledby': U, 'aria-describedby': G } = this.props,
+            { disabled: _, stickToMarkers: p, className: E, children: b, barStyles: I, fillStyles: T, mini: S, hideBubble: A, defaultValue: N, orientation: C, onValueRender: R, renderMarker: O, getAriaValueText: D, barClassName: L, grabberClassName: x, grabberStyles: w = {}, markerPosition: M = 0, 'aria-hidden': P, 'aria-label': k, 'aria-labelledby': U, 'aria-describedby': G } = this.props,
             B = 0;
         p ? null != a && (null != l ? (B = a[l]) : null != o && (B = a[o])) : (B = this.scaleValue(t));
         let Z = ''.concat(B, '%'),
@@ -191,7 +191,7 @@ class S extends (i = o.PureComponent) {
                             }),
                             (0, s.jsx)('div', {
                                 className: u()(v.bar, L),
-                                style: b,
+                                style: I,
                                 children: (0, s.jsx)('div', {
                                     className: v.barFill,
                                     style: {
@@ -200,7 +200,7 @@ class S extends (i = o.PureComponent) {
                                     }
                                 })
                             }),
-                            I,
+                            b,
                             (0, s.jsx)('div', {
                                 className: v.track,
                                 children: (0, s.jsx)(m.u, {
@@ -254,13 +254,13 @@ class S extends (i = o.PureComponent) {
         if (e.clientX <= l || e.clientX >= u) return;
         let c = e.clientX - r,
             d = a[i] + (c / (u - l)) * 100;
-        null != (t = this.props.equidistant ? b(d, a) : b(this.unscaleValue(d), s)) && (null == o || o(s[t])), this.setState({ newClosestIndex: t });
+        null != (t = this.props.equidistant ? I(d, a) : I(this.unscaleValue(d), s)) && (null == o || o(s[t])), this.setState({ newClosestIndex: t });
     }
     constructor(e) {
         super(e),
-            I(this, 'containerRef', o.createRef()),
-            I(this, 'grabberRef', o.createRef()),
-            I(this, 'moveGrabber', (e) => {
+            b(this, 'containerRef', o.createRef()),
+            b(this, 'grabberRef', o.createRef()),
+            b(this, 'moveGrabber', (e) => {
                 let { sortedMarkers: t, value: n, min: r, max: i } = this.state,
                     { asValueChanges: a, onValueChange: s, stickToMarkers: o } = this.props,
                     l = {};
@@ -274,7 +274,7 @@ class S extends (i = o.PureComponent) {
                 } else l.value = d().clamp(n + e, r, i);
                 this.setState(l), l.value !== this.state.value && (null == a || a(l.value), null == s || s(l.value));
             }),
-            I(this, 'handleContainerMouseDown', (e) => {
+            b(this, 'handleContainerMouseDown', (e) => {
                 let t;
                 let { disabled: n, maxValue: r, minValue: i, asValueChanges: a, onValueChange: s, stickToMarkers: o } = this.props,
                     { sortedMarkers: l, markerPositions: u } = this.state;
@@ -304,7 +304,7 @@ class S extends (i = o.PureComponent) {
                 } else (t = i + (r - i) * h), this.setState({ value: t }), this.handleMouseDown(e);
                 null != s && s(t), null != a && a(t);
             }),
-            I(this, 'handleKeyDown', (e) => {
+            b(this, 'handleKeyDown', (e) => {
                 let { disabled: t, orientation: n, keyboardStep: r = 1 } = this.props;
                 if (t) return;
                 let { key: i } = e,
@@ -322,7 +322,7 @@ class S extends (i = o.PureComponent) {
                 }
                 s.includes(i) ? (e.preventDefault(), e.stopPropagation(), this.moveGrabber(-r)) : a.includes(i) && (e.preventDefault(), e.stopPropagation(), this.moveGrabber(r));
             }),
-            I(this, 'handleMouseDown', (e) => {
+            b(this, 'handleMouseDown', (e) => {
                 var t, n;
                 if (this.props.disabled) return;
                 e.stopPropagation();
@@ -335,7 +335,7 @@ class S extends (i = o.PureComponent) {
                     newClosestIndex: this.state.closestMarkerIndex
                 });
             }),
-            I(this, 'handleMouseUp', (e) => {
+            b(this, 'handleMouseUp', (e) => {
                 e.stopPropagation(), this.reset();
                 let { onValueChange: t, stickToMarkers: n } = this.props,
                     { newClosestIndex: r } = this.state;
@@ -348,16 +348,16 @@ class S extends (i = o.PureComponent) {
                     : null == t || t(this.state.value),
                     this.setState({ active: !1 });
             }),
-            I(this, 'handleMouseMove', (e) => {
+            b(this, 'handleMouseMove', (e) => {
                 e.preventDefault(), this.props.stickToMarkers ? this.moveStaggered(e) : this.moveSmoothly(e);
             }),
-            I(this, 'onFocus', () => {
+            b(this, 'onFocus', () => {
                 this.setState({ focused: !0 });
             }),
-            I(this, 'onBlur', () => {
+            b(this, 'onBlur', () => {
                 this.setState({ focused: !1 });
             }),
-            I(this, 'moveSmoothly', (e) => {
+            b(this, 'moveSmoothly', (e) => {
                 let { minValue: t, maxValue: n, asValueChanges: r } = this.props,
                     { boundingRect: i } = this.state;
                 if (null == i) return;
@@ -392,7 +392,7 @@ function y(e) {
           })
         : r();
 }
-I(S, 'defaultProps', {
+b(S, 'defaultProps', {
     initialValue: 10,
     minValue: 0,
     maxValue: 100,

@@ -13,17 +13,17 @@ let _ = i.forwardRef(function (e, t) {
             {
                 theme: E,
                 primaryColor: v,
-                secondaryColor: I
+                secondaryColor: b
             } = (0, l.Z)({
                 user: n,
                 displayProfile: i,
                 pendingThemeColors: p,
                 isPreview: g
             }),
-            { profileThemeStyle: b, profileThemeClassName: T } = (0, u.Z)({
+            { profileThemeStyle: I, profileThemeClassName: T } = (0, u.Z)({
                 theme: null != h ? h : E,
                 primaryColor: v,
-                secondaryColor: I
+                secondaryColor: b
             }),
             S = {
                 [f.biteSize]: a === d.y0.BITE_SIZE,
@@ -32,7 +32,7 @@ let _ = i.forwardRef(function (e, t) {
             };
         return (0, r.jsx)('div', {
             className: s()(f.outer, T, S, _),
-            style: b,
+            style: I,
             ref: t,
             children: (0, r.jsx)('div', {
                 className: s()(f.inner, S),
@@ -42,7 +42,7 @@ let _ = i.forwardRef(function (e, t) {
                         profileType: a,
                         theme: null != h ? h : E,
                         primaryColor: v,
-                        secondaryColor: I,
+                        secondaryColor: b,
                         children: m
                     })
                 })

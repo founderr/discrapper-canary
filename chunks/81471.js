@@ -67,7 +67,7 @@ let T = r.memo(function (e) {
                 children: C.intl.string(C.t.uxrh1N)
             });
         else if (null != T) {
-            let { contentPlaceholder: e, renderedContent: t } = (0, m.f)(T, L, A, a()(v.messageContent, N.inlineFormat), {
+            let { contentPlaceholder: e, renderedContent: t } = (0, m.f)(T, L, A, x, a()(v.messageContent, N.inlineFormat), {
                 leadingIconClass: v.messageContentIcon,
                 trailingIconClass: v.messageContentIcon,
                 iconSize: I.WW

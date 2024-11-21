@@ -70,8 +70,8 @@ var r = n(46973),
     g = n(33039),
     E = n(626135),
     v = n(358085),
-    I = n(557177),
-    b = n(435064),
+    b = n(557177),
+    I = n(435064),
     T = n(61994),
     S = n(550351),
     y = n(659487),
@@ -173,7 +173,7 @@ function U(e, t) {
         frames_encoded_during_clip: t.framesEncodedDuringClip,
         frames_dropped: t.framesDropped,
         frames_dropped_during_clip: t.framesDroppedDuringClip,
-        clip_duration_setting: b.Z.getSettings().clipsLength,
+        clip_duration_setting: I.Z.getSettings().clipsLength,
         clip_duration: t.clipDuration,
         clip_resolution_width: t.clipResolutionWidth,
         clip_resolution_height: t.clipResolutionHeight,
@@ -186,7 +186,7 @@ function U(e, t) {
     };
 }
 async function G(e) {
-    let t = b.Z.getSettings().storageLocation,
+    let t = I.Z.getSettings().storageLocation,
         n = (0, S.Z)(e),
         r = ''.concat((0, T.Z)(n.applicationName.substring(0, 20)), '_').concat(n.id, '.mp4'),
         i = s.Z.fileManager.join(t, r),
@@ -256,11 +256,11 @@ async function G(e) {
 }
 async function B(e) {
     var t;
-    let n = b.Z.isDecoupledGameClippingEnabled(),
+    let n = I.Z.isDecoupledGameClippingEnabled(),
         { enableViewerClipping: s } = c.Z.getCurrentConfig({ location: 'SaveClip' }, { autoTrackExposure: !1 });
-    if (b.Z.getIsAtMaxSaveClipOperations()) return;
-    let o = b.Z.getSettings().clipsEnabled && null != _.Z.getCurrentUserActiveStream(),
-        d = n && b.Z.getSettings().decoupledClipsEnabled && (null === (t = l.ZP.getVisibleGame()) || void 0 === t ? void 0 : t.windowHandle) != null && h.Z.hasClipsSource(),
+    if (I.Z.getIsAtMaxSaveClipOperations()) return;
+    let o = I.Z.getSettings().clipsEnabled && null != _.Z.getCurrentUserActiveStream(),
+        d = n && I.Z.getSettings().decoupledClipsEnabled && (null === (t = l.ZP.getVisibleGame()) || void 0 === t ? void 0 : t.windowHandle) != null && h.Z.hasClipsSource(),
         f = null != e && null != _.Z.getActiveStreamForStreamKey(e) && s;
     if (!o && !d && !f) return;
     let m = _.Z.getCurrentUserActiveStream(),
@@ -289,7 +289,7 @@ async function B(e) {
         streamKey: v,
         thumbnail: S
     });
-    let y = (0, I.GN)('clip_save', 0.5),
+    let y = (0, b.GN)('clip_save', 0.5),
         A = performance.now();
     try {
         let e = await G(v);
@@ -298,9 +298,9 @@ async function B(e) {
             clip: e
         });
     } catch (e) {
-        C.jF.error('Clip Failed to Save', e), null == y || y.stop(), (0, I.GN)('clip_error', 0.5), a.Z.dispatch({ type: 'CLIPS_SAVE_CLIP_ERROR' });
+        C.jF.error('Clip Failed to Save', e), null == y || y.stop(), (0, b.GN)('clip_error', 0.5), a.Z.dispatch({ type: 'CLIPS_SAVE_CLIP_ERROR' });
     }
-    C.jF.info(''.concat(b.Z.getSettings().clipsLength / 1000, 's clip save took ').concat(Math.round(performance.now() - A), 'ms'));
+    C.jF.info(''.concat(I.Z.getSettings().clipsLength / 1000, 's clip save took ').concat(Math.round(performance.now() - A), 'ms'));
 }
 function Z(e, t) {
     a.Z.dispatch({
@@ -310,7 +310,7 @@ function Z(e, t) {
     });
 }
 async function F(e, t) {
-    let n = b.Z.getClips().find((t) => t.id === e);
+    let n = I.Z.getClips().find((t) => t.id === e);
     if (null == n) return;
     let r = {
         ...n,

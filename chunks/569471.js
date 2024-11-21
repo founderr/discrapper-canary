@@ -34,9 +34,9 @@ function v(e) {
             muteConfig: e.member.muteConfig,
             joinTimestamp: new Date(e.member.joinTimestamp)
         }),
-        I(e.id));
+        b(e.id));
 }
-function I(e) {
+function b(e) {
     let t = p[e];
     h.clearTimer(e),
         !0 === t.muted
@@ -46,7 +46,7 @@ function I(e) {
               }) && ((p[e].muted = !1), (m = new Set(m)).delete(e)))
             : (m = new Set(m)).delete(e);
 }
-function b(e) {
+function I(e) {
     let { guildId: t, members: n } = e;
     null != t &&
         null != n &&
@@ -59,7 +59,7 @@ function b(e) {
                 muteConfig: e.muteConfig,
                 joinTimestamp: new Date(e.joinTimestamp)
             }),
-                I(e.id);
+                b(e.id);
         });
 }
 class T extends (r = u.ZP.Store) {
@@ -128,11 +128,11 @@ let S = new T(c.Z, {
         let { channel: t } = e;
         v(t);
     },
-    THREAD_LIST_SYNC: b,
-    SEARCH_FINISH: b,
-    MOD_VIEW_SEARCH_FINISH: b,
-    LOAD_THREADS_SUCCESS: b,
-    LOAD_ARCHIVED_THREADS_SUCCESS: b,
+    THREAD_LIST_SYNC: I,
+    SEARCH_FINISH: I,
+    MOD_VIEW_SEARCH_FINISH: I,
+    LOAD_THREADS_SUCCESS: I,
+    LOAD_ARCHIVED_THREADS_SUCCESS: I,
     THREAD_DELETE: function (e) {
         let { channel: t } = e;
         if (!(t.id in p)) return !1;
@@ -148,7 +148,7 @@ let S = new T(c.Z, {
             muteConfig: e.muteConfig,
             joinTimestamp: new Date(e.joinTimestamp)
         }),
-            I(e.id);
+            b(e.id);
     },
     THREAD_MEMBER_LOCAL_UPDATE: function (e) {
         let { id: t, userId: n, guildId: r, isJoining: i } = e;
@@ -181,7 +181,7 @@ let S = new T(c.Z, {
                             muteConfig: t.muteConfig,
                             joinTimestamp: new Date(t.joinTimestamp)
                         }),
-                        I(e.id),
+                        b(e.id),
                         (r = !0));
                 }),
             r

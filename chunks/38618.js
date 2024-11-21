@@ -16,8 +16,8 @@ var r,
     g = n(592125),
     E = n(131951),
     v = n(19780),
-    I = n(936349),
-    b = n(944486),
+    b = n(936349),
+    I = n(944486),
     T = n(885110),
     S = n(959457),
     y = n(358085),
@@ -37,7 +37,7 @@ let x = new f.Z('ConnectionStore'),
 async function U(e) {
     (w = Date.now()), (M = e.sessionId), N.RR.handleConnectionOpen();
     let t = {},
-        n = b.Z.getVoiceChannelId();
+        n = I.Z.getVoiceChannelId();
     if (null != n) {
         var r, i, a, s, o, l, u, c;
         if ((null === (o = window) || void 0 === o ? void 0 : null === (s = o.performance) || void 0 === s ? void 0 : null === (a = s.getEntriesByType) || void 0 === a ? void 0 : null === (i = a.call(s, 'navigation')) || void 0 === i ? void 0 : null === (r = i[0]) || void 0 === r ? void 0 : r.type) === 'reload' || (null === (l = await (null == L ? void 0 : null === (c = L.processUtils) || void 0 === c ? void 0 : null === (u = c.getLastCrash) || void 0 === u ? void 0 : u.call(c))) || void 0 === l ? void 0 : l.rendererCrashReason) != null || !P) {
@@ -65,7 +65,7 @@ function F(e) {
 }
 class V extends (r = u.ZP.Store) {
     initialize() {
-        this.waitFor(h.default, b.Z, g.Z, m.Z, p.Z), this.syncWith([E.Z], B), this.syncWith([T.Z], Z);
+        this.waitFor(h.default, I.Z, g.Z, m.Z, p.Z), this.syncWith([E.Z], B), this.syncWith([T.Z], Z);
     }
     getSocket() {
         return N.Wb;
@@ -222,7 +222,7 @@ class V extends (r = u.ZP.Store) {
             if (N.Wb.isSessionEstablished()) {
                 var i, a;
                 let e = null != n ? (null === (i = g.Z.getChannel(r)) || void 0 === i ? void 0 : i.rtcRegion) : null === (a = m.Z.getCall(r)) || void 0 === a ? void 0 : a.region;
-                N.Wb.streamCreate(t, n, r, null != e ? e : I.Z.getPreferredRegion());
+                N.Wb.streamCreate(t, n, r, null != e ? e : b.Z.getPreferredRegion());
             }
             return !1;
         },

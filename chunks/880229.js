@@ -34,15 +34,15 @@ var i,
     S = n(259580),
     E = n(624138),
     R = n(817460),
-    Z = n(166803),
-    y = n(629262),
+    y = n(166803),
+    Z = n(629262),
     A = n(686807),
     L = n(981631),
     D = n(388032),
     O = n(954477);
 let k = (0, _.hQ)(),
-    M = (0, _.hQ)(),
-    P = (0, E.Mg)(g.Z.IMPORT_BENEFITS_MODAL_ROLE_ICON_SIZE);
+    P = (0, _.hQ)(),
+    M = (0, E.Mg)(g.Z.IMPORT_BENEFITS_MODAL_ROLE_ICON_SIZE);
 function w(e) {
     var t;
     let { emojiId: n, emojiName: i, className: r } = e,
@@ -167,7 +167,7 @@ function G(e) {
         c = n.role_benefits.benefits,
         [d, u] = s.useState(() => new Set(c)),
         m = s.useMemo(() => c.filter(R.rC), [c]),
-        g = (0, y.Z)(m),
+        g = (0, Z.Z)(m),
         p = s.useMemo(() => c.filter(R.lL), [c]),
         f = s.useMemo(() => new Set(g.filter((e) => i.some((t) => t.ref_id === e.ref_id))), [g, i]),
         C = s.useMemo(() => new Set(p.filter((e) => r.some((t) => (0, h.Z)(e, t)))), [r, p]),
@@ -251,7 +251,7 @@ function F(e) {
         a = (0, N.p9)({
             guildId: n,
             roleId: i.id,
-            size: P
+            size: M
         });
     return (0, l.jsxs)(x.Clickable, {
         className: O.roleRow,
@@ -317,7 +317,7 @@ function H(e) {
                 Object.values(i).flatMap((e) => {
                     var n;
                     if ((0, C.pM)(t.id, e.id) || (null === (n = e.tags) || void 0 === n ? void 0 : n.subscription_listing_id) != null || d.Db(e.permissions, L.TC2)) return [];
-                    let i = (0, Z.Z)(a, e).length;
+                    let i = (0, y.Z)(a, e).length;
                     return i > 0
                         ? {
                               role: e,
@@ -397,7 +397,7 @@ function W(e) {
                     })
             );
         }),
-        m = s.useMemo(() => (0, Z.Z)(u, d), [u, d]),
+        m = s.useMemo(() => (0, y.Z)(u, d), [u, d]),
         [h, g] = s.useState(() => new Set(m.map((e) => e.id)));
     function p(e, t) {
         g((n) => {
@@ -414,7 +414,7 @@ function W(e) {
             (0, l.jsxs)(x.ModalHeader, {
                 children: [
                     (0, l.jsx)(x.Heading, {
-                        id: M,
+                        id: P,
                         variant: 'heading-md/semibold',
                         children: D.intl.format(D.t.iuPodH, { roleName: d.name })
                     }),
@@ -500,7 +500,7 @@ function V(e) {
         [a, o] = s.useState();
     return (0, l.jsx)(x.ModalRoot, {
         transitionState: t,
-        'aria-labelledby': null == a ? k : M,
+        'aria-labelledby': null == a ? k : P,
         children: (0, l.jsxs)(x.Slides, {
             contentDisplay: 'flex',
             activeSlide: null == a ? 0 : 1,

@@ -78,8 +78,8 @@ var r,
     g = n(695346),
     E = n(592125),
     v = n(699516),
-    I = n(594174),
-    b = n(626135),
+    b = n(594174),
+    I = n(626135),
     T = n(630388),
     S = n(948561),
     y = n(651530),
@@ -110,7 +110,7 @@ let R = {
     x = (e) => {
         let { setting: t, isDm: n = !1, isFriend: r = !1 } = e;
         if (null != t && t !== f.Q4.UNSET_EXPLICIT_CONTENT_REDACTION) return t;
-        let i = I.default.getCurrentUser();
+        let i = b.default.getCurrentUser();
         return (null == i ? void 0 : i.nsfwAllowed) === !1
             ? M({
                   isDm: n,
@@ -154,7 +154,7 @@ function k(e) {
 function U(e) {
     var t;
     if (!(0, y.Kh)()) return !1;
-    let n = I.default.getCurrentUser();
+    let n = b.default.getCurrentUser();
     if (null == n || (null === (t = e.author) || void 0 === t ? void 0 : t.id) === n.id) return !1;
     let { explicitContentGuilds: r, explicitContentFriendDm: i, explicitContentNonFriendDm: a } = P(),
         s = E.Z.getChannel(e.channel_id);
@@ -221,7 +221,7 @@ function j(e) {
     let { action: t, channelId: n, messageId: r, context: i } = e;
     if (null == n || null == r) return;
     let a = E.Z.getChannel(n);
-    b.default.track(N.rMx.EXPLICIT_MEDIA_ACTION, {
+    I.default.track(N.rMx.EXPLICIT_MEDIA_ACTION, {
         action: t,
         guild_id: null == a ? void 0 : a.guild_id,
         channel_id: n,
@@ -242,7 +242,7 @@ function Y(e) {
     let { channelId: a, messageId: s, attachmentIds: o, embedIds: l } = e;
     if (null == a || null == s || ((null !== (t = null == o ? void 0 : o.length) && void 0 !== t ? t : 0) === 0 && (null !== (n = null == l ? void 0 : l.length) && void 0 !== n ? n : 0) === 0)) return;
     let u = E.Z.getChannel(a);
-    b.default.track(N.rMx.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT, {
+    I.default.track(N.rMx.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT, {
         channel_id: a,
         guild_id: null == u ? void 0 : u.guild_id,
         message_id: s,
@@ -261,7 +261,7 @@ function W(e) {
     let { channelId: t, numOfAttachments: n, numOfAttachmentsPendingScan: r, numOfEmbeds: i, numOfEmbedsPendingScan: a } = e;
     if (null == t) return;
     let s = E.Z.getChannel(t);
-    b.default.track(N.rMx.EXPLICIT_MEDIA_REDACTABLE_MESSAGES_LOADED, {
+    I.default.track(N.rMx.EXPLICIT_MEDIA_REDACTABLE_MESSAGES_LOADED, {
         channel_id: t,
         guild_id: null == s ? void 0 : s.guild_id,
         num_of_attachments: n,
@@ -276,7 +276,7 @@ function K(e) {
     let { messageId: t, channelId: n, numOfAttachments: r, numOfExplicitAttachments: i, numOfEmbeds: a, numOfExplicitEmbeds: s } = e;
     if (null == n) return;
     let o = E.Z.getChannel(n);
-    b.default.track(N.rMx.EXPLICIT_MEDIA_RETROACTIVE_SCAN_COMPLETE, {
+    I.default.track(N.rMx.EXPLICIT_MEDIA_RETROACTIVE_SCAN_COMPLETE, {
         message_id: t,
         channel_id: n,
         channel_type: null == o ? void 0 : o.type,

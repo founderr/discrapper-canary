@@ -7,10 +7,10 @@ var r = n(200651),
     u = n(440718);
 let c = i.forwardRef(function (e, t) {
     var n;
-    let { avatar: i, name: a, children: c, subText: d, decorators: f, onClick: _, selected: p, muted: h, to: m, avatarClassName: g, selectedClassName: E, innerClassName: v, wrapContent: I, highlighted: b, focusProps: T, ...S } = e;
+    let { avatar: i, name: a, children: c, subText: d, decorators: f, onClick: _, selected: p, muted: h, to: m, avatarClassName: g, selectedClassName: E, innerClassName: v, wrapContent: b, highlighted: I, focusProps: T, ...S } = e;
     (S.className = s()(S.className, u.container, {
         [u.selected]: p,
-        [u.highlighted]: b,
+        [u.highlighted]: I,
         [null != E ? E : '']: p,
         [u.clickable]: !p && (null != m || null != _)
     })),
@@ -18,7 +18,7 @@ let c = i.forwardRef(function (e, t) {
     let y = (0, r.jsxs)('div', {
         className: s()(v, u.layout, {
             [u.muted]: !p && h,
-            [u.wrappedLayout]: I
+            [u.wrappedLayout]: b
         }),
         children: [
             (0, r.jsx)('div', {
@@ -32,7 +32,7 @@ let c = i.forwardRef(function (e, t) {
                         className: u.nameAndDecorators,
                         children: [
                             (0, r.jsx)('div', {
-                                className: s()(u.name, { [u.wrappedName]: I }),
+                                className: s()(u.name, { [u.wrappedName]: b }),
                                 children: a
                             }),
                             f

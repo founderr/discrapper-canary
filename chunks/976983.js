@@ -30,8 +30,8 @@ function C(e) {
         E = a().findIndex(C.options, (e) => e.id === I.id),
         {
             drag: R,
-            dragSourcePosition: Z,
-            drop: y,
+            dragSourcePosition: y,
+            drop: Z,
             setIsDraggable: A
         } = (0, d.Z)({
             type: 'ONBOARDING_PROMPT_OPTION_CARD-'.concat(C.id),
@@ -47,8 +47,8 @@ function C(e) {
         (0, i.jsxs)(o.Clickable, {
             className: l()(f.optionCard, {
                 [f.hasError]: N || null != S,
-                [f.dropIndicatorBefore]: null != Z && E < Z,
-                [f.dropIndicatorAfter]: null != Z && E > Z,
+                [f.dropIndicatorBefore]: null != y && E < y,
+                [f.dropIndicatorAfter]: null != y && E > y,
                 [f.singleColumn]: v
             }),
             onClick: () =>
@@ -71,7 +71,7 @@ function C(e) {
                 }),
             onMouseEnter: () => A(!0),
             onMouseLeave: () => A(!1),
-            innerRef: (e) => R(y(e)),
+            innerRef: (e) => R(Z(e)),
             children: [
                 (0, i.jsx)('div', {
                     className: f.dragContainer,

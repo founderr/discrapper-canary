@@ -21,8 +21,8 @@ var r = n(200651),
     g = n(388032),
     E = n(671511),
     v = n(425637),
-    I = n(895982),
-    b = n(685741),
+    b = n(895982),
+    I = n(685741),
     T = n(20818);
 function S(e) {
     var t, n, S;
@@ -54,7 +54,7 @@ function S(e) {
         (S = D),
         L
             ? {
-                  asset: b,
+                  asset: I,
                   assetClassName: E.profileImage,
                   className: E.profileCoachmark,
                   content: g.intl.string(g.t.HEGlIC),
@@ -74,7 +74,7 @@ function S(e) {
                 }
               : t && n
                 ? {
-                      asset: b,
+                      asset: I,
                       assetClassName: E.profileImage,
                       className: E.profileCoachmark,
                       content: g.intl.string(g.t['yzj+dn']),
@@ -93,7 +93,7 @@ function S(e) {
                         dismissibleContentType: s.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK_STATUS
                     }
                   : {
-                        asset: I,
+                        asset: b,
                         assetClassName: E.avatarImage,
                         className: E.avatarCoachmark,
                         content: g.intl.string(g.t['65191t']),

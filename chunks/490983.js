@@ -16,8 +16,8 @@ var r,
     g = n(592745),
     E = n(706454),
     v = n(757266),
-    I = n(77498),
-    b = n(283595),
+    b = n(77498),
+    I = n(283595),
     T = n(246946),
     S = n(230307),
     y = n(799777),
@@ -70,10 +70,10 @@ function z() {
         t = {},
         n = new Set(),
         r = m.ZP.getGamesSeen(!1, !1).map((e) => {
-            let n = I.Z.getGameByGameData(e);
+            let n = b.Z.getGameByGameData(e);
             return null != n ? ((t[n.id] = e.lastFocused * C.Z.Millis.SECOND), n.id) : null;
         }),
-        i = Object.values(b.Z.getAllLibraryApplications())
+        i = Object.values(I.Z.getAllLibraryApplications())
             .map((r) =>
                 (function (e, t, n, r, i) {
                     var a, s;
@@ -92,14 +92,14 @@ function z() {
                         isLaunching: g.Z.launchingGames.has(e.id),
                         isRunning: r.has(e.id),
                         isLaunchable: (0, w.t)({
-                            LibraryApplicationStore: b.Z,
+                            LibraryApplicationStore: I.Z,
                             LaunchableGameStore: g.Z,
                             DispatchApplicationStore: A.Z,
                             ConnectedAppsStore: v.Z,
                             applicationId: e.id,
                             branchId: e.branchId
                         }),
-                        isUpdatingFlags: b.Z.isUpdatingFlags(e.id, e.branchId),
+                        isUpdatingFlags: I.Z.isUpdatingFlags(e.id, e.branchId),
                         shouldShowInLibrary: (0, D.d0)(o, e, T.Z),
                         defaultAction: (0, M.i)(e, A.Z, N.Z)
                     };
@@ -124,7 +124,7 @@ function z() {
                                 isLaunching: g.Z.launchingGames.has(e),
                                 isRunning: r.has(e),
                                 isLaunchable: (0, w.t)({
-                                    LibraryApplicationStore: b.Z,
+                                    LibraryApplicationStore: I.Z,
                                     LaunchableGameStore: g.Z,
                                     DispatchApplicationStore: A.Z,
                                     ConnectedAppsStore: v.Z,
@@ -143,7 +143,7 @@ function z() {
             ...i
         ].sort((e, t) => (e.lastPlayed === t.lastPlayed ? 0 : e.lastPlayed > t.lastPlayed ? -1 : 1));
     return (
-        (B = null != I.Z.lastFetched && b.Z.fetched),
+        (B = null != b.Z.lastFetched && I.Z.fetched),
         !c().isEqual(a, U) &&
             ((U = a),
             L.isPlatformEmbedded &&
@@ -157,7 +157,7 @@ function z() {
 }
 class q extends (r = _.ZP.Store) {
     initialize() {
-        this.syncWith([h.Z, I.Z, g.Z, m.ZP, A.Z, N.Z, b.Z, S.Z, T.Z, v.Z], z, 200), this.syncWith([y.Z, E.default], () => !0);
+        this.syncWith([h.Z, b.Z, g.Z, m.ZP, A.Z, N.Z, I.Z, S.Z, T.Z, v.Z], z, 200), this.syncWith([y.Z, E.default], () => !0);
     }
     get applicationFilterQuery() {
         return G;

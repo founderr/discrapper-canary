@@ -21,10 +21,10 @@ n.d(t, {
         return u;
     },
     W3: function () {
-        return I;
+        return b;
     },
     b9: function () {
-        return b;
+        return I;
     },
     cV: function () {
         return d;
@@ -161,9 +161,9 @@ function E() {
 function v() {
     i.Z.dispatch({ type: 'GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES' });
 }
-function I() {
+function b() {
     i.Z.dispatch({ type: 'GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING' });
 }
-function b() {
+function I() {
     i.Z.dispatch({ type: 'GUILD_IDENTITY_SETTINGS_CLEAR_ERRORS' });
 }

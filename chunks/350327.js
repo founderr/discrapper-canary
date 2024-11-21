@@ -1,6 +1,6 @@
 n.d(t, {
     CM: function () {
-        return I;
+        return b;
     },
     Cf: function () {
         return E;
@@ -36,7 +36,7 @@ n.d(t, {
         return N;
     },
     z5: function () {
-        return b;
+        return I;
     }
 });
 var r = n(544891),
@@ -131,13 +131,13 @@ function v(e) {
         pronouns: e
     });
 }
-function I(e) {
+function b(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_ACCENT_COLOR',
         color: e
     });
 }
-function b(e) {
+function I(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_THEME_COLORS',
         themeColors: e

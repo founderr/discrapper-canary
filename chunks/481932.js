@@ -21,17 +21,17 @@ function m(e) {
     let { user: t, friendToken: n, profileType: m, shouldShowTooltip: g } = e,
         { newestAnalyticsLocation: E } = (0, o.ZP)(),
         { trackUserProfileAction: v } = (0, d.KZ)(),
-        I = (0, i.e7)([u.default], () => u.default.getId() === (null == t ? void 0 : t.id)),
-        b = (0, i.e7)([c.Z], () => (null != t ? c.Z.getRelationshipType(t.id) : p.OGo.NONE)),
+        b = (0, i.e7)([u.default], () => u.default.getId() === (null == t ? void 0 : t.id)),
+        I = (0, i.e7)([c.Z], () => (null != t ? c.Z.getRelationshipType(t.id) : p.OGo.NONE)),
         T = (0, l.Z)({
             user: t,
             color: 'danger',
             location: E,
             onAction: () => v({ action: 'REMOVE_FRIEND' })
         });
-    return null == t || t.bot || I || b === p.OGo.BLOCKED
+    return null == t || t.bot || b || I === p.OGo.BLOCKED
         ? null
-        : b === p.OGo.FRIEND
+        : I === p.OGo.FRIEND
           ? (0, r.jsx)(a.Popout, {
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
@@ -51,7 +51,7 @@ function m(e) {
                         ...e
                     })
             })
-          : b === p.OGo.PENDING_INCOMING || b === p.OGo.PENDING_OUTGOING
+          : I === p.OGo.PENDING_INCOMING || I === p.OGo.PENDING_OUTGOING
             ? m === _.y0.FULL_SIZE
                 ? null
                 : (0, r.jsx)(f.oY, {

@@ -16,8 +16,8 @@ var r,
     g = n(918701),
     E = n(432945),
     v = n(5881),
-    I = n(566078),
-    b = n(46140),
+    b = n(566078),
+    I = n(46140),
     T = n(70722);
 function S(e, t, n) {
     return (
@@ -34,7 +34,7 @@ function S(e, t, n) {
 }
 let y = 1 * p.Z.Millis.MINUTE,
     A = 1 * p.Z.Millis.SECOND,
-    N = (0, v.T)({ location: b.dr.QUESTS_MANAGER }),
+    N = (0, v.T)({ location: I.dr.QUESTS_MANAGER }),
     C = (e) =>
         (0, u.V9)({
             streamType: T.lo.CALL,
@@ -63,7 +63,7 @@ function L(e) {
     };
     if (
         !(0, E.S)({
-            location: b.dr.QUESTS_MANAGER,
+            location: I.dr.QUESTS_MANAGER,
             autoTrackExposure: !1
         })
     )
@@ -103,7 +103,7 @@ class x extends s.Z {
                             o = m.Z.quests.get(n);
                         if (null == o || !D(o)) return 'STOP';
                         let d = null === (t = R()) || void 0 === t ? void 0 : t.config,
-                            f = null != c.Z.getRTCStream(r) && null != d && I.r.build(d).application.id === i && s,
+                            f = null != c.Z.getRTCStream(r) && null != d && b.r.build(d).application.id === i && s,
                             { quest: _, activity: p } = L(),
                             h = null != (null == _ ? void 0 : _.config) && (null == _ ? void 0 : _.id) === n && (0, g.UZ)(i, _) && (null == p ? void 0 : p.channelId) === a,
                             E = l.ZP.getRunningGames().map((e) => e.id),
@@ -182,7 +182,7 @@ class x extends s.Z {
                     N.log('handleEnrollmentSuccess - initiating heartbeat for stream'),
                         this.initiateHeartbeat({
                             streamKey: (0, u.V9)(n),
-                            applicationId: I.r.build(r.config).application.id,
+                            applicationId: b.r.build(r.config).application.id,
                             questId: r.id
                         });
                     return;
@@ -192,7 +192,7 @@ class x extends s.Z {
                     N.log('handleEnrollmentSuccess - initiating heartbeat for activity'),
                         this.initiateHeartbeat({
                             streamKey: C(a.channelId),
-                            applicationId: I.r.build(i.config).application.id,
+                            applicationId: b.r.build(i.config).application.id,
                             questId: i.id
                         });
                     return;
@@ -205,7 +205,7 @@ class x extends s.Z {
                         let e = C(t.id);
                         this.initiateHeartbeat({
                             streamKey: e,
-                            applicationId: I.r.build(t.config).application.id,
+                            applicationId: b.r.build(t.config).application.id,
                             questId: t.id
                         });
                     }
@@ -231,7 +231,7 @@ class x extends s.Z {
                 t.forEach((e) => {
                     if (D(e) && (0, g.$H)(e)) {
                         let t = C(e.id),
-                            r = n.includes(I.r.build(e.config).application.id),
+                            r = n.includes(b.r.build(e.config).application.id),
                             i = !this.streamKeyToHeartbeatState.has(t) && r;
                         this.streamKeyToHeartbeatState.has(t) && !r
                             ? this.terminateHeartbeat({
@@ -242,7 +242,7 @@ class x extends s.Z {
                               (N.log('handleQuestsFetchCurrentQuestsSuccess - initiating heartbeat for playtime task'),
                               this.initiateHeartbeat({
                                   streamKey: t,
-                                  applicationId: I.r.build(e.config).application.id,
+                                  applicationId: b.r.build(e.config).application.id,
                                   questId: e.id
                               }));
                     }
@@ -267,7 +267,7 @@ class x extends s.Z {
                             (N.log('handleRunningGamesChange - initiating heartbeat for playtime task'),
                             this.initiateHeartbeat({
                                 streamKey: n,
-                                applicationId: I.r.build(t.config).application.id,
+                                applicationId: b.r.build(t.config).application.id,
                                 questId: t.id
                             }));
                     }),
@@ -308,7 +308,7 @@ class x extends s.Z {
                       (N.log('handleVoiceStateChange - initiating heartbeat for stream task'),
                       this.initiateHeartbeat({
                           streamKey: t,
-                          applicationId: I.r.build(r.config).application.id,
+                          applicationId: b.r.build(r.config).application.id,
                           questId: r.id
                       }));
             }),
@@ -328,7 +328,7 @@ class x extends s.Z {
                       (N.log('handleEmbeddedActivityUpdate - initiating heartbeat for activity task'),
                       this.initiateHeartbeat({
                           streamKey: r,
-                          applicationId: I.r.build(t.config).application.id,
+                          applicationId: b.r.build(t.config).application.id,
                           questId: t.id
                       }));
             }),
@@ -352,7 +352,7 @@ class x extends s.Z {
                     (N.log('handleStreamCreate - initiating heartbeat for stream task'),
                     this.initiateHeartbeat({
                         streamKey: t,
-                        applicationId: I.r.build(i.config).application.id,
+                        applicationId: b.r.build(i.config).application.id,
                         questId: i.id
                     }));
             }),
@@ -378,7 +378,7 @@ class x extends s.Z {
                       (N.log('handleStreamStart - initiating heartbeat for stream task'),
                       this.initiateHeartbeat({
                           streamKey: a,
-                          applicationId: I.r.build(i.config).application.id,
+                          applicationId: b.r.build(i.config).application.id,
                           questId: i.id
                       }));
             }),

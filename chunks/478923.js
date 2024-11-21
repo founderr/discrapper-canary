@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return I;
     }
 });
 var r = n(200651);
@@ -21,11 +21,11 @@ var i = n(990547),
     g = n(981631),
     E = n(388032),
     v = n(973230);
-function I(e) {
+function b(e) {
     let { user: t, onBlock: n, onIgnore: i, location: o, disallowIgnore: c, guildId: _, channelId: g } = e,
-        I = (0, h.Do)({ location: 'confirm_block_modal_body' }),
-        b = (0, a.e7)([f.Z], () => f.Z.isIgnored(t.id));
-    return I
+        b = (0, h.Do)({ location: 'confirm_block_modal_body' }),
+        I = (0, a.e7)([f.Z], () => f.Z.isIgnored(t.id));
+    return b
         ? (0, r.jsxs)('div', {
               className: v.container,
               children: [
@@ -63,7 +63,7 @@ function I(e) {
                       ]
                   }),
                   (0, r.jsx)(u.Z, {}),
-                  c || b
+                  c || I
                       ? null
                       : (0, r.jsxs)('div', {
                             className: v.otherOptions,
@@ -114,7 +114,7 @@ function I(e) {
                 children: E.intl.format(E.t.pegItL, { name: t.username })
             });
 }
-function b(e) {
+function I(e) {
     let { user: t, onBlock: n, onCancel: a, onIgnore: l, location: u = 'ContextMenu', disallowIgnore: d, guildId: f, channelId: p, ...m } = e,
         v = (0, h.Do)({ location: 'block-confirm-modal' });
     return (0, r.jsx)(s.ConfirmModal, {
@@ -134,7 +134,7 @@ function b(e) {
         },
         impression: { impressionName: i.ImpressionNames.BLOCK_USER_CONFIRMATION },
         ...m,
-        children: (0, r.jsx)(I, {
+        children: (0, r.jsx)(b, {
             user: t,
             guildId: f,
             channelId: p,

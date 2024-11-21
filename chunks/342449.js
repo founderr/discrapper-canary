@@ -20,7 +20,7 @@ function m(e) {
         { threadIds: v, canLoadMore: Z, loading: j, loadMore: N } = (0, i.qQ)(t, r.z.LATEST_ACTIVITY, h),
         T = l.useRef(null);
     (0, i.r7)();
-    let C = l.useCallback(
+    let I = l.useCallback(
             (e) => {
                 let t = 0 === e.section ? f : 1 === e.section ? x : v;
                 return (0, a.jsx)(
@@ -34,7 +34,7 @@ function m(e) {
             },
             [v, f, x, m]
         ),
-        I = l.useCallback((e) => (0 === e.section ? (0, a.jsx)(g, { text: d.intl.formatToPlainString(d.t['4E27f3'], { count: f.length }) }, e.section) : 1 === e.section ? (0, a.jsx)(g, { text: d.intl.formatToPlainString(d.t.csPc4O, { count: x.length }) }, e.section) : (0, a.jsx)(g, { text: d.intl.string(d.t['wUNQ+/']) }, e.section)), [f.length, x.length]),
+        C = l.useCallback((e) => (0 === e.section ? (0, a.jsx)(g, { text: d.intl.formatToPlainString(d.t['4E27f3'], { count: f.length }) }, e.section) : 1 === e.section ? (0, a.jsx)(g, { text: d.intl.formatToPlainString(d.t.csPc4O, { count: x.length }) }, e.section) : (0, a.jsx)(g, { text: d.intl.string(d.t['wUNQ+/']) }, e.section)), [f.length, x.length]),
         p = l.useCallback((e) => (1 === e && f.length > 0 ? 64 : 2 === e && (f.length > 0 || x.length > 0) ? 64 : 32), [f.length, x.length]),
         S = l.useCallback(() => {
             var e;
@@ -64,8 +64,8 @@ function m(e) {
         sections: [f.length, x.length, v.length],
         sectionHeight: p,
         rowHeight: 80,
-        renderRow: C,
-        renderSection: I,
+        renderRow: I,
+        renderSection: C,
         chunkSize: 20,
         onScroll: Z ? S : void 0
     });

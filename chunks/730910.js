@@ -30,24 +30,24 @@ var i = n(200651),
     S = n(84658),
     E = n(142961),
     R = n(232764),
-    Z = n(729311),
-    y = n(850864),
+    y = n(729311),
+    Z = n(850864),
     A = n(966301),
     L = n(981631),
     D = n(388032),
     O = n(693310);
 function k() {
     let e = (0, o.e7)([C.Z], () => C.Z.getGuild());
-    return null == e ? null : (0, i.jsx)(M, { guild: e });
+    return null == e ? null : (0, i.jsx)(P, { guild: e });
 }
-function M(e) {
+function P(e) {
     let { guild: t } = e,
         l = t.id,
         C = (0, o.e7)([b.Z], () => b.Z.getCurrentPage()),
         k = (0, E.Z)(l),
         {
-            hasChanges: M,
-            hasConfiguredAnythingForCurrentStep: P,
+            hasChanges: P,
+            hasConfiguredAnythingForCurrentStep: M,
             hasErrors: w
         } = (0, o.cj)([b.Z], () => ({
             hasChanges: b.Z.hasChanges(),
@@ -92,14 +92,14 @@ function M(e) {
             output: [V, (0, m.useToken)(c.Z.colors.STATUS_DANGER).hex()]
         });
     if (k) {
-        if (C === S.PG.DEFAULT_CHANNELS) return (0, i.jsx)(Z.j, {});
+        if (C === S.PG.DEFAULT_CHANNELS) return (0, i.jsx)(y.j, {});
         if (C === S.PG.CUSTOMIZATION_QUESTIONS) return (0, i.jsx)(A.Zm, {});
-        else if (C === S.PG.HOME_SETTINGS) return (0, i.jsx)(y.T, {});
+        else if (C === S.PG.HOME_SETTINGS) return (0, i.jsx)(Z.T, {});
     }
     let q = C === S.xh[S.xh.length - 1],
         X = async () => {
             let e = j.Z.advancedMode;
-            if (M)
+            if (P)
                 try {
                     if (C === S.PG.DEFAULT_CHANNELS) await (0, v.DO)(t).then(() => (e ? (0, T.rS)(t, { ignoreDefaultPrompt: !0 }) : Promise.resolve()));
                     else if (C === S.PG.CUSTOMIZATION_QUESTIONS) await (0, T.rS)(t, { ignoreDefaultPrompt: !0 });
@@ -117,7 +117,7 @@ function M(e) {
                 ...(0, g.hH)(l),
                 step: S.PG[C],
                 back: !1,
-                skip: !M
+                skip: !P
             }),
                 (0, _.Nb)((0, S.lg)(C)),
                 (await X()) && (0, _.IG)(l, C);
@@ -153,7 +153,7 @@ function M(e) {
         }),
         et = (0, i.jsx)(m.Button, {
             className: O.button,
-            color: P ? m.Button.Colors.BRAND : m.Button.Colors.PRIMARY,
+            color: M ? m.Button.Colors.BRAND : m.Button.Colors.PRIMARY,
             look: m.Button.Looks.FILLED,
             size: m.Button.Sizes.SMALL,
             onClick: Q,
@@ -162,7 +162,7 @@ function M(e) {
                 className: O.button,
                 style: { color: Y },
                 children: [
-                    P ? D.intl.string(D.t.PDTjLC) : D.intl.string(D.t['5WxrcX']),
+                    M ? D.intl.string(D.t.PDTjLC) : D.intl.string(D.t['5WxrcX']),
                     (0, i.jsx)(x.Z, {
                         className: O.arrow,
                         direction: x.Z.Directions.RIGHT

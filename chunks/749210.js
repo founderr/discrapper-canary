@@ -22,8 +22,8 @@ var r = n(990547),
     g = n(944486),
     E = n(914010),
     v = n(594174),
-    I = n(626135),
-    b = n(700785),
+    b = n(626135),
+    I = n(700785),
     T = n(74538),
     S = n(573261),
     y = n(668781),
@@ -51,14 +51,14 @@ async function D(e) {
     var t, r, i, o, l;
     let u = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { source: d, loadId: p, lurkLocation: h } = u,
-        I = null !== (t = u.lurker) && void 0 !== t && t,
-        b = v.default.getCurrentUser();
-    if (null !== (r = null == b ? void 0 : b.hasFlag(A.xW$.QUARANTINED)) && void 0 !== r && r) return (0, c.default)(), new Promise((e, t) => t(Error()));
+        b = null !== (t = u.lurker) && void 0 !== t && t,
+        I = v.default.getCurrentUser();
+    if (null !== (r = null == I ? void 0 : I.hasFlag(A.xW$.QUARANTINED)) && void 0 !== r && r) return (0, c.default)(), new Promise((e, t) => t(Error()));
     s.Z.wait(() =>
         s.Z.dispatch({
             type: 'GUILD_JOIN',
             guildId: e,
-            lurker: I,
+            lurker: b,
             source: d,
             loadId: p
         })
@@ -69,10 +69,10 @@ async function D(e) {
             i = await a.tn.put({
                 url: A.ANM.GUILD_JOIN(e),
                 query: {
-                    lurker: I,
-                    session_id: I ? _.default.getSessionId() : null,
+                    lurker: b,
+                    session_id: b ? _.default.getSessionId() : null,
                     recommendation_load_id: p,
-                    location: I && null != h ? h : null
+                    location: b && null != h ? h : null
                 },
                 context: { source: d },
                 oldFormErrors: !0,
@@ -102,7 +102,7 @@ async function D(e) {
                     guildId: i.body.id,
                     count: i.body.approximate_presence_count
                 }),
-            !I)
+            !b)
         ) {
             let { default: t } = await Promise.resolve().then(n.bind(n, 17181));
             await t({
@@ -116,7 +116,7 @@ async function D(e) {
             let e = v.default.getCurrentUser();
             T.ZP.canUseIncreasedGuildCap(e) || (null == e ? void 0 : e.isStaff()) ? C(A.tHP) : C(A.DZw);
         }
-        throw ((null === (o = t.body) || void 0 === o ? void 0 : o.code) === A.evJ.GUILD_AT_CAPACITY && O(), I && (null === (l = t.body) || void 0 === l ? void 0 : l.code) === A.evJ.UNKNOWN_GUILD && R(e), t);
+        throw ((null === (o = t.body) || void 0 === o ? void 0 : o.code) === A.evJ.GUILD_AT_CAPACITY && O(), b && (null === (l = t.body) || void 0 === l ? void 0 : l.code) === A.evJ.UNKNOWN_GUILD && R(e), t);
     }
 }
 function L(e) {
@@ -240,7 +240,7 @@ t.Z = {
         let r = {
             name: null != t && '' !== t ? t : N.intl.string(N.t.QBMHvL),
             color: null != n ? n : 0,
-            permissions: b.Hn
+            permissions: I.Hn
         };
         try {
             let t = await a.tn.post({
@@ -367,7 +367,7 @@ t.Z = {
         });
     },
     createGuildFolderLocal(e, t) {
-        I.default.track(A.rMx.GUILD_FOLDER_CREATED),
+        b.default.track(A.rMx.GUILD_FOLDER_CREATED),
             s.Z.dispatch({
                 type: 'GUILD_FOLDER_CREATE_LOCAL',
                 sourceIds: e,
@@ -390,7 +390,7 @@ t.Z = {
     },
     toggleGuildFolderExpand(e) {
         let t = p.Z.isFolderExpanded(e);
-        I.default.track(A.rMx.GUILD_FOLDER_CLICKED, {
+        b.default.track(A.rMx.GUILD_FOLDER_CLICKED, {
             source: 'sidebar',
             action: t ? 'collapsed' : 'expanded'
         }),

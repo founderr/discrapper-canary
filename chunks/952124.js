@@ -21,8 +21,8 @@ function m(e) {
     let { user: t, guildId: n, viewProfileItem: m } = e,
         { trackUserProfileAction: g } = (0, f.KZ)(),
         { analyticsLocations: E, newestAnalyticsLocation: v } = (0, o.ZP)(s.Z.USER_PROFILE_OVERFLOW_MENU),
-        I = (0, i.e7)([_.Z], () => _.Z.getUserProfile(t.id)),
-        b = null == I ? void 0 : I.application,
+        b = (0, i.e7)([_.Z], () => _.Z.getUserProfile(t.id)),
+        I = null == b ? void 0 : b.application,
         T = (0, u.Z)({
             user: t,
             guildId: n,
@@ -70,7 +70,7 @@ function m(e) {
             [S, T, y],
             [
                 (0, l.Z)({
-                    id: null == b ? void 0 : b.id,
+                    id: null == I ? void 0 : I.id,
                     label: h.intl.string(h.t['+NP/b2']),
                     onSuccess: () =>
                         g({

@@ -30,8 +30,8 @@ var r = n(392711),
     g = n(892880),
     E = n(591759),
     v = n(279779),
-    I = n(620490),
-    b = n(727785),
+    b = n(620490),
+    I = n(727785),
     T = n(981631);
 function S(e, t, n) {
     return (
@@ -58,26 +58,26 @@ function A(e, t) {
         }, 0),
         s = [];
     switch (e) {
-        case b.h8.GUILD:
+        case I.h8.GUILD:
             s = i.filter((e) => e instanceof u.ZP);
             break;
-        case b.h8.USER:
+        case I.h8.USER:
             s = i.filter((e) => e instanceof l.Sf && e.type === T.d4z.DM);
             break;
-        case b.h8.GROUP_DM:
+        case I.h8.GROUP_DM:
             s = i.filter((e) => e instanceof l.Sf && e.isMultiUserDM());
             break;
-        case b.h8.TEXT_CHANNEL:
+        case I.h8.TEXT_CHANNEL:
             s = i.filter((e) => e instanceof l.Sf && (0, l.r8)(e.type));
             break;
-        case b.h8.VOICE_CHANNEL:
+        case I.h8.VOICE_CHANNEL:
             s = i.filter((e) => e instanceof l.Sf && e.isGuildVocal());
     }
     let o = {};
     for (let t of s) {
         let { id: n } = t,
             r = f.Z.getScoreWithoutFetchingLatest(n);
-        if (e === b.h8.USER && t instanceof l.mn) {
+        if (e === I.h8.USER && t instanceof l.mn) {
             if (t.type === T.d4z.DM) o[(n = t.getRecipientId())] = 1 + r / a;
             else if (t.type === T.d4z.GROUP_DM) {
                 let e = t.recipients.length;
@@ -98,13 +98,13 @@ class N {
         (this._limit = e), null != t && t.setLimit(e), this._userResults.length > this._limit && (this._userResults.length = this._limit), this._groupDMResults.length > this._limit && (this._groupDMResults.length = this._limit), this._textChannelResults.length > this._limit && (this._textChannelResults.length = this._limit), this._voiceChannelResults.length > this._limit && (this._voiceChannelResults.length = this._limit), this._guildResults.length > this._limit && (this._guildResults.length = this._limit), this._applicationResults.length > this._limit && (this._applicationResults.length = this._limit), this._linkResults.length > this._limit && (this._linkResults.length = this._limit), this._inAppNavigations.length > this._limit && (this._inAppNavigations.length = this._limit);
     }
     setResultTypes(e) {
-        (this.resultTypes = null != e ? new Set(e) : null), (this._userResults = this._include(b.h8.USER) ? this._userResults : []), (this._groupDMResults = this._include(b.h8.GROUP_DM) ? this._groupDMResults : []), (this._textChannelResults = this._include(b.h8.TEXT_CHANNEL) ? this._textChannelResults : []), (this._voiceChannelResults = this._include(b.h8.VOICE_CHANNEL) ? this._voiceChannelResults : []), (this._guildResults = this._include(b.h8.GUILD) ? this._guildResults : []), (this._applicationResults = this._include(b.h8.APPLICATION) ? this._applicationResults : []), (this._linkResults = this._include(b.h8.LINK) ? this._linkResults : []), (this._inAppNavigations = this._include(b.h8.IN_APP_NAVIGATION) ? this._inAppNavigations : []);
+        (this.resultTypes = null != e ? new Set(e) : null), (this._userResults = this._include(I.h8.USER) ? this._userResults : []), (this._groupDMResults = this._include(I.h8.GROUP_DM) ? this._groupDMResults : []), (this._textChannelResults = this._include(I.h8.TEXT_CHANNEL) ? this._textChannelResults : []), (this._voiceChannelResults = this._include(I.h8.VOICE_CHANNEL) ? this._voiceChannelResults : []), (this._guildResults = this._include(I.h8.GUILD) ? this._guildResults : []), (this._applicationResults = this._include(I.h8.APPLICATION) ? this._applicationResults : []), (this._linkResults = this._include(I.h8.LINK) ? this._linkResults : []), (this._inAppNavigations = this._include(I.h8.IN_APP_NAVIGATION) ? this._inAppNavigations : []);
     }
     _include(e) {
         return null == this.resultTypes || this.resultTypes.has(e);
     }
     _isAsyncSearch() {
-        return this._include(b.h8.USER);
+        return this._include(I.h8.USER);
     }
     setOptions(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
@@ -150,8 +150,8 @@ class N {
         null != e && (e.destroy(), (this.userSearchContext = null));
     }
     queryTextChannels(e, t) {
-        if (!this._include(b.h8.TEXT_CHANNEL)) return [];
-        let n = A(b.h8.TEXT_CHANNEL, this.options),
+        if (!this._include(I.h8.TEXT_CHANNEL)) return [];
+        let n = A(I.h8.TEXT_CHANNEL, this.options),
             { blacklist: r } = this.options,
             i = null != r ? (e) => !r.has('channel:'.concat(e.id)) : void 0;
         return m.ZP.queryChannels({
@@ -164,9 +164,9 @@ class N {
         });
     }
     queryVoiceChannels(e, t) {
-        if (!this._include(b.h8.VOICE_CHANNEL)) return [];
+        if (!this._include(I.h8.VOICE_CHANNEL)) return [];
         let { voiceChannelGuildFilter: n } = this.options,
-            r = A(b.h8.VOICE_CHANNEL, this.options);
+            r = A(I.h8.VOICE_CHANNEL, this.options);
         return m.ZP.queryChannels({
             query: e,
             guildId: n,
@@ -177,8 +177,8 @@ class N {
         });
     }
     queryGuilds(e, t) {
-        if (!this._include(b.h8.GUILD)) return [];
-        let n = A(b.h8.GUILD, this.options),
+        if (!this._include(I.h8.GUILD)) return [];
+        let n = A(I.h8.GUILD, this.options),
             { blacklist: r } = this.options,
             i = null != r ? (e) => !r.has('guild:'.concat(e.id)) : void 0;
         return m.ZP.queryGuilds({
@@ -191,14 +191,14 @@ class N {
     }
     queryUsers(e, t, n) {
         let { userSearchContext: r } = this;
-        if (null == r || !this._include(b.h8.USER)) return;
+        if (null == r || !this._include(I.h8.USER)) return;
         let { userFilters: i } = this.options;
-        void 0 !== t && g.Z.requestMembers(t, e, 100), r.setLimit(n), r.setQuery(e, i, this._userBlacklist, A(b.h8.USER, this.options));
+        void 0 !== t && g.Z.requestMembers(t, e, 100), r.setLimit(n), r.setQuery(e, i, this._userBlacklist, A(I.h8.USER, this.options));
     }
     queryGroupDMs(e, t) {
-        if (!this._include(b.h8.GROUP_DM)) return [];
+        if (!this._include(I.h8.GROUP_DM)) return [];
         let { blacklist: n } = this.options,
-            r = A(b.h8.GROUP_DM, this.options),
+            r = A(I.h8.GROUP_DM, this.options),
             i = null != n ? (e) => !n.has('channel:'.concat(e.id)) : void 0;
         return m.ZP.queryGroupDMs({
             query: e,
@@ -209,7 +209,7 @@ class N {
         });
     }
     queryApplications(e, t) {
-        return this._include(b.h8.APPLICATION)
+        return this._include(I.h8.APPLICATION)
             ? m.ZP.queryApplications({
                   query: e,
                   limit: t,
@@ -219,7 +219,7 @@ class N {
     }
     queryLink(e, t) {
         let n;
-        if (!this._include(b.h8.LINK)) return [];
+        if (!this._include(I.h8.LINK)) return [];
         let r = s().sanitizeUrl(e);
         try {
             n = new URL(r);
@@ -231,7 +231,7 @@ class N {
         return null !== i && l && E.Z.isAppRoute(i)
             ? [
                   {
-                      type: b.h8.LINK,
+                      type: I.h8.LINK,
                       record: c.Z.fromPath(i),
                       score: 1
                   }
@@ -239,7 +239,7 @@ class N {
             : [];
     }
     queryInAppNavigations(e, t) {
-        return this._include(b.h8.IN_APP_NAVIGATION)
+        return this._include(I.h8.IN_APP_NAVIGATION)
             ? m.ZP.queryInAppNavigations({
                   query: e,
                   limit: t,
@@ -267,12 +267,12 @@ class N {
             S(this, '_limit', void 0),
             S(this, 'parseUserResults', (e) => {
                 let { results: t } = e;
-                if (!!this._include(b.h8.USER)) {
+                if (!!this._include(I.h8.USER)) {
                     for (let { id: e, score: n, comparator: r } of ((this._userResults = []), t)) {
                         let t = h.default.getUser(e);
                         if (null != t)
                             this._userResults.push({
-                                type: b.h8.USER,
+                                type: I.h8.USER,
                                 record: t,
                                 score: (function () {
                                     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
@@ -289,7 +289,7 @@ class N {
                 clearTimeout(this._asyncTimeout),
                     (this.results = i()([...this._userResults, ...this._groupDMResults, ...this._textChannelResults, ...this._voiceChannelResults, ...this._guildResults, ...this._linkResults, ...this._inAppNavigations])
                         .uniqBy((e) => ''.concat(e.type, '-').concat(e.record.id))
-                        .sort(I.Z)
+                        .sort(b.Z)
                         .value()),
                     this.onResultsChange(this.results, this.query);
             }),

@@ -16,8 +16,8 @@ var r = n(147018),
     g = n(740362),
     E = n(566885),
     v = n(974971),
-    I = n(24033),
-    b = n(622281),
+    b = n(24033),
+    I = n(622281),
     T = n(714050),
     S = n(803938),
     y = n(879),
@@ -111,7 +111,7 @@ var r = n(147018),
         !0
     ),
     ec = function (e) {
-        (this.entries = []), (this.url = null), void 0 !== e && (b(e) ? this.parseObject(e) : this.parseQuery('string' == typeof e ? ('?' === K(e, 0) ? ee(e, 1) : e) : T(e)));
+        (this.entries = []), (this.url = null), void 0 !== e && (I(e) ? this.parseObject(e) : this.parseQuery('string' == typeof e ? ('?' === K(e, 0) ? ee(e, 1) : e) : T(e)));
     };
 ec.prototype = {
     type: L,
@@ -129,7 +129,7 @@ ec.prototype = {
             u = N(e);
         if (u)
             for (n = (t = A(e, u)).next; !(r = a(n, t)).done; ) {
-                if ((o = a((s = (i = A(I(r.value))).next), i)).done || (l = a(s, i)).done || !a(s, i).done) throw H('Expected sequence with length 2');
+                if ((o = a((s = (i = A(b(r.value))).next), i)).done || (l = a(s, i)).done || !a(s, i).done) throw H('Expected sequence with length 2');
                 q(this.entries, {
                     key: T(o.value),
                     value: T(l.value)
@@ -280,7 +280,7 @@ if (
     var e_ = s(V.has),
         ep = s(V.set),
         eh = function (e) {
-            if (b(e)) {
+            if (I(e)) {
                 var t,
                     n = e.body;
                 if (v(n) === L)

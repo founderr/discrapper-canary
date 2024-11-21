@@ -1,9 +1,9 @@
 n.d(t, {
     Dp: function () {
-        return b;
+        return I;
     },
     P6: function () {
-        return I;
+        return b;
     },
     ZP: function () {
         return S;
@@ -46,7 +46,7 @@ function v() {
         ]
     });
 }
-function I(e) {
+function b(e) {
     let { sound: t, forceShowBetaLabel: n = !1 } = e,
         i = (0, _.V)({ location: 'SoundmojiBanner' }),
         l = (0, s.e7)([d.default], () => f.ZP.canUseSoundboardEverywhere(d.default.getCurrentUser())),
@@ -87,12 +87,12 @@ function I(e) {
               ]
           });
 }
-function b(e) {
+function I(e) {
     let { sound: t } = e;
     return (0, r.jsxs)('div', {
         className: g.infoContainer,
         children: [
-            (0, r.jsx)(I, { sound: t }),
+            (0, r.jsx)(b, { sound: t }),
             (0, r.jsxs)('div', {
                 className: g.infoSoundContainer,
                 children: [

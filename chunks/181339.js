@@ -3,7 +3,7 @@ n.d(t, {
         return R;
     },
     w: function () {
-        return Z;
+        return y;
     }
 }),
     n(47120);
@@ -181,7 +181,7 @@ function R(e) {
         })
     });
 }
-function Z(e) {
+function y(e) {
     var t, n;
     let { guild: l } = e,
         s = null !== (t = l.safetyAlertsChannelId) && void 0 !== t ? t : null,

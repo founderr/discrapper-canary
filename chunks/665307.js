@@ -45,8 +45,8 @@ function y(e, t, n) {
         e
     );
 }
-let P = (0, A.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
-    O = (0, A.Mg)(u.Z.GAME_LIST_LINKED_TO_GLOW_DURATION),
+let O = (0, A.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
+    P = (0, A.Mg)(u.Z.GAME_LIST_LINKED_TO_GLOW_DURATION),
     R = Object.freeze({
         [b.iEv.PLATFORM]: 'Platform',
         [b.iEv.LAST_PLAYED]: 'Last Played',
@@ -226,15 +226,15 @@ class w extends (i = l.PureComponent) {
         let t = this.props.activeRowKey;
         if (null != t && e.activeRowKey !== t && this.props.isNavigatingByKeyboard) {
             let e = this._rowRefs[t];
-            null != e && (m.Z.wait(p.Zy), this.props.scrollToRow(e, P));
+            null != e && (m.Z.wait(p.Zy), this.props.scrollToRow(e, O));
         }
     }
     handleHighlightedApplicationKey() {
         let { highlightedApplicationKey: e } = this.state;
         null != e &&
             null != this._rowRefs[e] &&
-            (this.props.scrollToRow(this._rowRefs[e], P),
-            new d.V7().start(O, () => {
+            (this.props.scrollToRow(this._rowRefs[e], O),
+            new d.V7().start(P, () => {
                 !this._didUnmount && this.setState({ highlightedApplicationKey: null });
             }));
     }

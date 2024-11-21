@@ -21,8 +21,8 @@ var r = n(200651),
     g = n(706667),
     E = n(409673),
     v = n(981631),
-    I = n(474936),
-    b = n(388032),
+    b = n(474936),
+    I = n(388032),
     T = n(383052),
     S = n(145834);
 function y(e) {
@@ -48,14 +48,14 @@ function y(e) {
         P = (0, o.ap)(C) ? n(537381) : n(341048);
     i.useEffect(() => {
         h.default.track(v.rMx.PREMIUM_UPSELL_VIEWED, {
-            type: I.cd.SOUND_PICKER_SOUND_CLICKED,
+            type: b.cd.SOUND_PICKER_SOUND_CLICKED,
             is_external: !0,
             location: {
                 ...L,
                 object: v.qAy.SOUNDBOARD_SOUND
             },
             location_stack: x,
-            sku_id: m.ZP.getSkuIdForPremiumType(I.p9.TIER_2)
+            sku_id: m.ZP.getSkuIdForPremiumType(b.p9.TIER_2)
         });
     }, [x, L]);
     let k = i.useCallback(() => {
@@ -67,7 +67,7 @@ function y(e) {
             (0, r.jsx)(l.Clickable, {
                 className: S.premiumPromoClose,
                 onClick: a,
-                children: b.intl.string(b.t.cpT0Cg)
+                children: I.intl.string(I.t.cpT0Cg)
             }),
             (0, r.jsx)('img', {
                 'aria-hidden': !0,
@@ -79,13 +79,13 @@ function y(e) {
                 variant: 'heading-lg/normal',
                 color: 'header-primary',
                 className: S.premiumPromoTitle,
-                children: b.intl.string(b.t['/a5qY2'])
+                children: I.intl.string(I.t['/a5qY2'])
             }),
             (0, r.jsx)(l.Text, {
                 variant: 'text-md/normal',
                 color: 'header-secondary',
                 className: S.premiumPromoDescription,
-                children: b.intl.format(b.t.lcSxhI, { onClick: k })
+                children: I.intl.format(I.t.lcSxhI, { onClick: k })
             }),
             (0, r.jsxs)('div', {
                 className: T.buttonContainer,
@@ -95,7 +95,7 @@ function y(e) {
                         children: M
                     }),
                     (0, r.jsx)(p.Z, {
-                        subscriptionTier: I.Si.TIER_2,
+                        subscriptionTier: b.Si.TIER_2,
                         submitting: R,
                         premiumModalAnalyticsLocation: {
                             section: v.jXE.SOUNDBOARD_SOUND_PICKER,

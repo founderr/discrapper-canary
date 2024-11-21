@@ -22,14 +22,14 @@ var i = n(120356),
     E = n(766905);
 function v(e) {
     var t, n, i, v;
-    let { type: I, textValue: b, maxCharacterCount: T, showRemainingCharsAfterCount: S, className: y } = e,
+    let { type: b, textValue: I, maxCharacterCount: T, showRemainingCharsAfterCount: S, className: y } = e,
         A = (0, s.e7)([f.default], () => _.ZP.canUseIncreasedMessageLength(f.default.getCurrentUser())),
         N = (0, c.Z)(),
         C = null != T ? T : N,
         R = null !== (v = null != S ? S : T) && void 0 !== v ? v : N / 10,
-        O = b.length,
-        D = null != I.upsellLongMessages && (null != O ? O : 0) > h.J6R && A,
-        L = null != I.upsellLongMessages && !A,
+        O = I.length,
+        D = null != b.upsellLongMessages && (null != O ? O : 0) > h.J6R && A,
+        L = null != b.upsellLongMessages && !A,
         x = (null === (n = (0, d.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === m.Si.TIER_2,
         w = C - O,
         M = w > R,
@@ -76,7 +76,7 @@ function v(e) {
                       L && !M
                           ? (0, r.jsx)(p.Z, {
                                 className: E.upsell,
-                                iconOnly: (null === (i = I.upsellLongMessages) || void 0 === i ? void 0 : i.iconOnly) || !1,
+                                iconOnly: (null === (i = b.upsellLongMessages) || void 0 === i ? void 0 : i.iconOnly) || !1,
                                 remaining: w
                             })
                           : null

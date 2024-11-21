@@ -16,16 +16,16 @@ var r,
     g = n(239091),
     E = n(981631),
     v = n(388032);
-function I(e) {
+function b(e) {
     (0, g.Zy)(), m.Z.show(e);
 }
-function b(e, t, n) {
+function I(e, t, n) {
     let { status: r, body: i } = e,
         a = i && i.code;
     switch (r) {
         case 429:
             0 === t &&
-                I({
+                b({
                     title: v.intl.string(v.t['3D5eo6']),
                     body: v.intl.string(v.t.TuJriI),
                     confirmText: v.intl.string(v.t.DppXIy)
@@ -33,7 +33,7 @@ function b(e, t, n) {
             break;
         case 403:
             if (a === E.evJ.EMAIL_VERIFICATION_REQUIRED) {
-                I({
+                b({
                     title: v.intl.string(v.t.Gqf33N),
                     body: v.intl.string(v.t.GHOBd3),
                     confirmText: v.intl.string(v.t.HbTSEx),
@@ -48,7 +48,7 @@ function b(e, t, n) {
             else if ((0, f.b)(r, a)) break;
             else if (0 === t) {
                 let e = null != n ? (0, p.NF)(a || 0, n) : v.intl.string(v.t.paDJBA);
-                I({
+                b({
                     title: v.intl.string(v.t['6moJ8v']),
                     body: e,
                     confirmText: v.intl.string(v.t.BddRzc)
@@ -75,7 +75,7 @@ let T = {
                 rejectWithError: !1
             })
             .catch((e) => {
-                b(e, i, t);
+                I(e, i, t);
             });
     },
     addRelationship(e, t) {
@@ -99,7 +99,7 @@ let T = {
                 null == t || t();
             })
             .catch((e) => {
-                b(e, u, h.ZP.getUserTag(c));
+                I(e, u, h.ZP.getUserTag(c));
             });
     },
     acceptFriendRequest: (e) =>

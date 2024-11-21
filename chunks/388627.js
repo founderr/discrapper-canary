@@ -6,13 +6,13 @@ n.d(t, {
         return g;
     },
     II: function () {
-        return b;
+        return I;
     },
     fK: function () {
         return m;
     },
     pL: function () {
-        return I;
+        return b;
     },
     yp: function () {
         return v;
@@ -60,7 +60,7 @@ function E(e, t) {
 function v(e, t) {
     return e.participantsVersion === t.participantsVersion;
 }
-function I() {
+function b() {
     var e, t;
     let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.ZP,
         r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _.Z,
@@ -87,7 +87,7 @@ function I() {
               name: null !== (t = null == g ? void 0 : g.name) && void 0 !== t ? t : null == E ? void 0 : E.name
           };
 }
-function b() {
+function I() {
     let e = (0, o.PR)();
-    return (0, i.e7)([c.ZP, _.Z, l.ZP, u.Z], () => I(c.ZP, _.Z, l.ZP, u.Z, e), [e], a.Z);
+    return (0, i.e7)([c.ZP, _.Z, l.ZP, u.Z], () => b(c.ZP, _.Z, l.ZP, u.Z, e), [e], a.Z);
 }

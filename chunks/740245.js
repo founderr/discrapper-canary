@@ -62,8 +62,8 @@ r.inherits(v, g),
             g = this.h[6],
             E = this.h[7],
             v = this.h[8],
-            I = this.h[9],
-            b = this.h[10],
+            b = this.h[9],
+            I = this.h[10],
             T = this.h[11],
             S = this.h[12],
             y = this.h[13],
@@ -76,19 +76,19 @@ r.inherits(v, g),
                 D = (function (e, t) {
                     var n = s(e, t, 14) ^ s(e, t, 18) ^ s(t, e, 9);
                     return n < 0 && (n += 4294967296), n;
-                })(v, I),
+                })(v, b),
                 L = (function (e, t) {
                     var n = o(e, t, 14) ^ o(e, t, 18) ^ o(t, e, 9);
                     return n < 0 && (n += 4294967296), n;
-                })(v, I),
+                })(v, b),
                 x = (function (e, t, n, r, i) {
                     var a = (e & n) ^ (~e & i);
                     return a < 0 && (a += 4294967296), a;
-                })(v, I, b, T, S, y),
+                })(v, b, I, T, S, y),
                 w = (function (e, t, n, r, i, a) {
                     var s = (t & r) ^ (~t & a);
                     return s < 0 && (s += 4294967296), s;
-                })(v, I, b, T, S, y),
+                })(v, b, I, T, S, y),
                 M = this.k[C],
                 P = this.k[C + 1],
                 k = n[C],
@@ -117,9 +117,9 @@ r.inherits(v, g),
                     })(r, i, l, u, _, p))
                 ),
                 F = f(R, O, D, L);
-            (A = S), (N = y), (S = b), (y = T), (b = v), (T = I), (v = d(g, E, G, B)), (I = f(E, E, G, B)), (g = _), (E = p), (_ = l), (p = u), (l = r), (u = i), (r = d(G, B, Z, F)), (i = f(G, B, Z, F));
+            (A = S), (N = y), (S = I), (y = T), (I = v), (T = b), (v = d(g, E, G, B)), (b = f(E, E, G, B)), (g = _), (E = p), (_ = l), (p = u), (l = r), (u = i), (r = d(G, B, Z, F)), (i = f(G, B, Z, F));
         }
-        c(this.h, 0, r, i), c(this.h, 2, l, u), c(this.h, 4, _, p), c(this.h, 6, g, E), c(this.h, 8, v, I), c(this.h, 10, b, T), c(this.h, 12, S, y), c(this.h, 14, A, N);
+        c(this.h, 0, r, i), c(this.h, 2, l, u), c(this.h, 4, _, p), c(this.h, 6, g, E), c(this.h, 8, v, b), c(this.h, 10, I, T), c(this.h, 12, S, y), c(this.h, 14, A, N);
     }),
     (v.prototype._digest = function (e) {
         return 'hex' === e ? r.toHex32(this.h, 'big') : r.split32(this.h, 'big');

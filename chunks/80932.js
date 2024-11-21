@@ -3,7 +3,7 @@ n.d(t, {
         return C;
     },
     OQ: function () {
-        return b;
+        return I;
     },
     RE: function () {
         return S;
@@ -18,7 +18,7 @@ n.d(t, {
         return T;
     },
     t0: function () {
-        return I;
+        return b;
     }
 }),
     n(47120),
@@ -40,7 +40,7 @@ var r = n(392711),
     g = n(981631),
     E = n(526761),
     v = n(388032);
-function I(e) {
+function b(e) {
     _.hW.updateAsync(
         'textAndImages',
         (t) => {
@@ -49,7 +49,7 @@ function I(e) {
         E.fy.FREQUENT_USER_ACTION
     );
 }
-function b(e) {
+function I(e) {
     o.Z.dispatch({
         type: 'EMOJI_FETCH',
         guildId: e

@@ -3,7 +3,7 @@ t.d(n, {
         return b;
     },
     B8: function () {
-        return N;
+        return P;
     },
     F4: function () {
         return j;
@@ -36,7 +36,7 @@ t.d(n, {
         return D;
     },
     rY: function () {
-        return P;
+        return N;
     },
     ts: function () {
         return G;
@@ -89,10 +89,10 @@ function b(e, n, t) {
 function A(e, n) {
     l.Z.startEditMessage(e.id, n.id, n.content);
 }
-function N(e, n) {
+function P(e, n) {
     (0, M.Z)(e.id, n.id);
 }
-function P(e, n, t) {
+function N(e, n, t) {
     if (!1 === n.pinned) {
         t.shiftKey ? i.Z.pinMessage(e, n.id) : r.Z.confirmPin(e, n);
         return;

@@ -21,8 +21,8 @@ var i = n(442837),
     g = n(871604),
     E = n(53558),
     v = n(827313),
-    I = n(420654),
-    b = n(166584),
+    b = n(420654),
+    I = n(166584),
     T = n(915014),
     S = n(228168),
     y = n(388032),
@@ -83,7 +83,7 @@ function C(e) {
                     })
                 ]
             }),
-            (0, r.jsx)(I.Z, {
+            (0, r.jsx)(b.Z, {
                 user: t,
                 bio: null == C ? void 0 : C.bio,
                 hidePersonalInformation: k,
@@ -107,7 +107,7 @@ function C(e) {
             null != R &&
                 (0, r.jsx)(h.Z, {
                     heading: y.intl.string(y.t.LPJmLy),
-                    children: (0, r.jsx)(b.Z, {
+                    children: (0, r.jsx)(I.Z, {
                         user: t,
                         currentUser: n,
                         guild: R

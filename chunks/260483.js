@@ -55,7 +55,7 @@ function v(e) {
     }
     return !1;
 }
-class I extends (r = u.ZP.Store) {
+class b extends (r = u.ZP.Store) {
     initialize() {
         this.waitFor(f.Z);
     }
@@ -72,7 +72,7 @@ class I extends (r = u.ZP.Store) {
     }
 }
 (s = 'ThreadMembersStore'),
-    (a = 'displayName') in (i = I)
+    (a = 'displayName') in (i = b)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -80,7 +80,7 @@ class I extends (r = u.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new I(c.Z, {
+    (t.Z = new b(c.Z, {
         CONNECTION_OPEN: function (e) {
             (_ = {}), e.guilds.forEach(p);
         },

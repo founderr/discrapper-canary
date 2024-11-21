@@ -22,7 +22,7 @@ n.d(t, {
         return Z;
     },
     gT: function () {
-        return I;
+        return b;
     },
     ov: function () {
         return S;
@@ -73,13 +73,13 @@ function v(e) {
     let p = {};
     return null != o && (p.size = (0, l.oO)(o * (0, l.x_)())), null != c && (p.keep_aspect_ratio = c), t + '?'.concat(s.stringify(p));
 }
-function I(e) {
+function b(e) {
     let { id: t, animated: n, size: r, forcePNG: i = !1 } = e,
         a = i ? 'png' : n ? (g ? 'webp' : 'gif') : g ? 'webp' : 'png',
         s = 'size='.concat((0, l.oO)(r * (0, l.x_)(), E));
     return null != window.GLOBAL_ENV.CDN_HOST ? ''.concat(location.protocol, '//').concat(window.GLOBAL_ENV.CDN_HOST, '/emojis/').concat(t, '.').concat(a) + '?'.concat(s).concat(g && n ? '&animated=true' : '') : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.ANM.EMOJI(t, a);
 }
-function b(e, t) {
+function I(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = n ? m : h;
     if (null == e && null == t) return r[0];
@@ -111,7 +111,7 @@ function S(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : f.IXf,
         i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-    return null !== (t = T(e, n, r, i)) && void 0 !== t ? t : b(e.id, e.discriminator, e.isProvisional);
+    return null !== (t = T(e, n, r, i)) && void 0 !== t ? t : I(e.id, e.discriminator, e.isProvisional);
 }
 function y(e) {
     let t,
@@ -318,7 +318,7 @@ function V(e) {
 }
 t.ZP = {
     getUserAvatarURL: S,
-    getDefaultAvatarURL: b,
+    getDefaultAvatarURL: I,
     getGuildMemberAvatarURL: A,
     getGuildMemberAvatarURLSimple: y,
     getGuildMemberAvatarSource: function (e, t) {
@@ -373,7 +373,7 @@ t.ZP = {
     },
     getGuildTemplateIconURL: M,
     getChannelIconURL: G,
-    getEmojiURL: I,
+    getEmojiURL: b,
     getApplicationIconURL: P,
     getGameAssetURL: k,
     getVideoFilterAssetURL: U,

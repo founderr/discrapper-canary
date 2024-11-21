@@ -21,8 +21,8 @@ var r = n(200651),
     g = n(448197),
     E = n(698305),
     v = n(510659),
-    I = n(810097),
-    b = n(652853),
+    b = n(810097),
+    I = n(652853),
     T = n(228168),
     S = n(420212),
     y = n(388032),
@@ -37,14 +37,14 @@ let N = (0, f.kt)({
             case T.n_.ACTIVITY:
                 let a = y.intl.formatToPlainString(y.t.WmvMCg, { username: n }),
                     s = '\n> '.concat(i);
-                return null != i ? ''.concat(I.jd).concat(a, '*').concat(s, '\n').concat(t) : ''.concat(I.jd).concat(a, '*\n').concat(t);
+                return null != i ? ''.concat(b.jd).concat(a, '*').concat(s, '\n').concat(t) : ''.concat(b.jd).concat(a, '*\n').concat(t);
             case T.n_.AVATAR:
                 let o = y.intl.formatToPlainString(y.t.lpaBsL, { username: n });
-                return ''.concat(I.jd).concat(o, '*\n').concat(t);
+                return ''.concat(b.jd).concat(o, '*\n').concat(t);
             case T.n_.STATUS:
                 let l = y.intl.formatToPlainString(y.t.lFXgFR, { username: n }),
                     u = '\n> '.concat(i);
-                return null != i ? ''.concat(I.jd).concat(l, '*').concat(u, '\n').concat(t) : ''.concat(I.jd).concat(l, '*\n').concat(t);
+                return null != i ? ''.concat(b.jd).concat(l, '*').concat(u, '\n').concat(t) : ''.concat(b.jd).concat(l, '*\n').concat(t);
             default:
                 (0, _.vE)(r);
         }
@@ -62,11 +62,11 @@ let N = (0, f.kt)({
         }
     };
 function O(e) {
-    let { user: t, guildId: n, channelId: a, profileType: o, sourceType: f, sourceDetails: _, setPopoutRef: I, modalKey: O, onClose: D, entry: L } = e,
+    let { user: t, guildId: n, channelId: a, profileType: o, sourceType: f, sourceDetails: _, setPopoutRef: b, modalKey: O, onClose: D, entry: L } = e,
         { trackUserProfileAction: x } = (0, m.KZ)(),
         { sendReply: w } = (0, g.Q)(f),
         { resetInteraction: M, setInteractionToast: P } = (0, v.Xo)(),
-        { primaryColor: k } = (0, b.z)(),
+        { primaryColor: k } = (0, I.z)(),
         [U, G] = i.useState(''),
         [B, Z] = i.useState((0, c.JM)(U)),
         F = i.useRef(!1),
@@ -78,8 +78,8 @@ function O(e) {
             [M]
         );
     i.useEffect(() => {
-        null == I || I(null == V ? void 0 : V.current);
-    }, [V, I]);
+        null == b || b(null == V ? void 0 : V.current);
+    }, [V, b]);
     let H = async (e) => {
             if (null == e) return;
             x({ action: w });

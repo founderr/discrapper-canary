@@ -36,7 +36,7 @@ n.d(t, {
         return l;
     },
     zo: function () {
-        return I;
+        return b;
     }
 });
 var r,
@@ -109,7 +109,7 @@ function g() {
 }
 let E = 40,
     v = 20,
-    I = {
+    b = {
         facebook: {
             presentation: 'Facebook',
             baseUrl: 'https://facebook.com'

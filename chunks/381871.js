@@ -34,8 +34,8 @@ var i = n(200651),
     y = n(354459),
     P = n(185923),
     M = n(474936),
-    L = n(526761),
-    R = n(388032),
+    R = n(526761),
+    L = n(388032),
     k = n(742831);
 let O = P.Hz.CHAT,
     D = {
@@ -112,27 +112,27 @@ function B(e) {
                 r = P && t === s.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP;
             return (0, i.jsx)(o.Popout, {
                 position: 'left',
-                'aria-label': R.intl.string(R.t.RLHsHx),
+                'aria-label': L.intl.string(L.t.RLHsHx),
                 shouldShow: r,
                 renderPopout: () =>
                     (0, i.jsx)('div', {
                         onMouseEnter: _,
                         children: (0, i.jsx)(g.ZP, {
                             className: k.reducedMotionTooltip,
-                            header: R.intl.string(R.t['6gGHnZ']),
-                            content: R.intl.string(R.t.S2RGUF),
+                            header: L.intl.string(L.t['6gGHnZ']),
+                            content: L.intl.string(L.t.S2RGUF),
                             onClick: () => {
-                                d.Z.open(A.oAB.ACCESSIBILITY, null, { scrollPosition: L.rP.REDUCED_MOTION }), f();
+                                d.Z.open(A.oAB.ACCESSIBILITY, null, { scrollPosition: R.rP.REDUCED_MOTION }), f();
                             },
                             markAsDismissed: l,
-                            buttonCTA: R.intl.string(R.t.fgVzkJ),
-                            secondaryButtonCTA: R.intl.string(R.t.VzO6Oj),
+                            buttonCTA: L.intl.string(L.t.fgVzkJ),
+                            secondaryButtonCTA: L.intl.string(L.t.VzO6Oj),
                             caretPosition: g.DF.RIGHT_CENTER
                         })
                     }),
                 children: () =>
                     (0, i.jsx)(T.Z, {
-                        title: R.intl.string(R.t.Nn8lPz),
+                        title: L.intl.string(L.t.Nn8lPz),
                         channel: n,
                         closePopout: f,
                         onSelectEmoji: K,
@@ -142,7 +142,7 @@ function B(e) {
                         analyticsOverride: D,
                         emojiSearchProps: {
                             accessory: (0, i.jsx)(N.Z, {
-                                labelText: R.intl.string(R.t['ktEv/v']),
+                                labelText: L.intl.string(L.t['ktEv/v']),
                                 value: $,
                                 onChange: () => {
                                     if (U)

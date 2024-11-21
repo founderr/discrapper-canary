@@ -24,8 +24,8 @@ function a(e, t) {
             E = n[6],
             v = n[7];
         o && (r.push(o), (o = ''));
-        var I = null != p && null != _ && _ !== p,
-            b = '+' === E || '*' === E,
+        var b = null != p && null != _ && _ !== p,
+            I = '+' === E || '*' === E,
             T = '?' === E || '*' === E,
             S = n[2] || u,
             y = m || g;
@@ -34,8 +34,8 @@ function a(e, t) {
             prefix: p || '',
             delimiter: S,
             optional: T,
-            repeat: b,
-            partial: I,
+            repeat: I,
+            partial: b,
             asterisk: !!v,
             pattern: y
                 ? (function (e) {

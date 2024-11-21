@@ -24,8 +24,8 @@ var r,
     g = n(481060),
     E = n(540059),
     v = n(981631),
-    I = n(766581);
-function b(e, t, n) {
+    b = n(766581);
+function I(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -40,13 +40,13 @@ function b(e, t, n) {
 }
 ((s = r || (r = {})).DEFAULT = 'default'), (s.INVERTED = 'inverted'), (s.GHOST = 'ghost'), (s.ROW = 'row'), ((o = i || (i = {})).TOP = 'top'), (o.CENTER = 'center');
 let T = {
-        BOX: I.box,
-        ROUND: I.round,
-        SMALL_BOX: I.smallBox
+        BOX: b.box,
+        ROUND: b.round,
+        SMALL_BOX: b.smallBox
     },
     S = {
-        top: I.alignTop,
-        center: I.alignCenter
+        top: b.alignTop,
+        center: b.alignCenter
     };
 class y extends (a = u.PureComponent) {
     render() {
@@ -54,16 +54,16 @@ class y extends (a = u.PureComponent) {
             p =
                 null != s
                     ? (0, l.jsx)('div', {
-                          className: d()(I.label, e ? I.labelDisabled : I.labelClickable, u ? I.labelReversed : I.labelForward),
+                          className: d()(b.label, e ? b.labelDisabled : b.labelClickable, u ? b.labelReversed : b.labelForward),
                           style: { lineHeight: ''.concat(o, 'px') },
                           children: s
                       })
                     : null,
-            h = this.props.disabled ? I.inputDisabled : this.props.readOnly ? I.inputReadonly : I.inputDefault;
+            h = this.props.disabled ? b.inputDisabled : this.props.readOnly ? b.inputReadonly : b.inputDefault;
         return (0, l.jsxs)(c ? 'span' : 'label', {
-            className: d()(e ? I.checkboxWrapperDisabled : I.checkboxWrapper, S[r], i, {
-                [I.row]: 'row' === f,
-                [I.checked]: n
+            className: d()(e ? b.checkboxWrapperDisabled : b.checkboxWrapper, S[r], i, {
+                [b.row]: 'row' === f,
+                [b.checked]: n
             }),
             children: [
                 u ? p : null,
@@ -88,16 +88,16 @@ class y extends (a = u.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            b(this, 'handleChange', (e) => {
+            I(this, 'handleChange', (e) => {
                 let { onChange: t } = this.props;
                 null == t || t(e, e.currentTarget.checked);
             });
     }
 }
-b(y, 'Types', r),
-    b(y, 'Shapes', T),
-    b(y, 'Aligns', i),
-    b(y, 'defaultProps', {
+I(y, 'Types', r),
+    I(y, 'Shapes', T),
+    I(y, 'Aligns', i),
+    I(y, 'defaultProps', {
         size: 24,
         disabled: !1,
         readOnly: !1,
@@ -149,9 +149,9 @@ function A(e) {
         })(e, t),
         g = u.useMemo(() => (r ? (t ? h.Z.colors.WHITE.css : 'inverted' === o || 'row' === o ? h.Z.colors.WHITE.css : null != c ? c : h.Z.unsafe_rawColors.BRAND_500.css) : h.Z.unsafe_rawColors.TRANSPARENT.css), [r, o, c, t]);
     return (0, l.jsx)('div', {
-        className: d()(I.checkbox, a, n, {
-            [I.checked]: r,
-            [I.checkboxDisabled]: f
+        className: d()(b.checkbox, a, n, {
+            [b.checked]: r,
+            [b.checkboxDisabled]: f
         }),
         style: {
             width: i,

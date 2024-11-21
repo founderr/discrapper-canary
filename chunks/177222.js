@@ -33,8 +33,8 @@ var i = n(200651),
     y = n(179142),
     P = n(228168),
     M = n(981631),
-    L = n(388032),
-    R = n(337319);
+    R = n(388032),
+    L = n(337319);
 function k(e) {
     let { user: t, currentUser: n, channel: k } = e,
         O = __OVERLAY__,
@@ -81,7 +81,7 @@ function k(e) {
                         null != V.interactionType &&
                             (0, i.jsx)(r.animated.div, {
                                 style: z,
-                                className: R.backdrop
+                                className: L.backdrop
                             }),
                         (0, i.jsxs)(a.u2, {
                             children: [
@@ -96,18 +96,18 @@ function k(e) {
                                     ]
                                 }),
                                 (0, i.jsxs)('header', {
-                                    className: R.header,
+                                    className: L.header,
                                     children: [
                                         (0, i.jsx)(v.Z, {
                                             user: t,
                                             displayProfile: D,
                                             profileType: P.y0.PANEL,
                                             animateOnHover: !F,
-                                            className: R.banner
+                                            className: L.banner
                                         }),
                                         (0, i.jsx)(E.Z, {
                                             userId: t.id,
-                                            className: R.toast
+                                            className: L.toast
                                         }),
                                         (0, i.jsx)(_.Z, {
                                             location: 'UserProfilePanel',
@@ -123,7 +123,7 @@ function k(e) {
                                             channelId: k.id,
                                             profileType: P.y0.PANEL
                                         }),
-                                        t.isClyde() && (0, i.jsx)(h.Z, { className: R.headerTag })
+                                        t.isClyde() && (0, i.jsx)(h.Z, { className: L.headerTag })
                                     ]
                                 }),
                                 (0, i.jsx)(A.Z, {
@@ -139,12 +139,12 @@ function k(e) {
                         }),
                         !O &&
                             (0, i.jsx)('footer', {
-                                className: R.footer,
+                                className: L.footer,
                                 children: (0, i.jsx)(s.Button, {
                                     fullWidth: !0,
                                     size: s.Button.Sizes.LARGE,
                                     look: s.Button.Looks.BLANK,
-                                    color: R.footerButtonColor,
+                                    color: L.footerButtonColor,
                                     onClick: () => {
                                         W(),
                                             (0, f.pQ)({
@@ -153,7 +153,7 @@ function k(e) {
                                                 ...U
                                             });
                                     },
-                                    children: L.intl.string(L.t['+Xp3ho'])
+                                    children: R.intl.string(R.t['+Xp3ho'])
                                 })
                             }),
                         (null == D ? void 0 : D.profileEffectId) != null &&

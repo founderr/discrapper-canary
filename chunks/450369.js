@@ -82,20 +82,20 @@ let y = 16 / 9,
         let { stageParticipant: t, rtcParticipant: n, channel: r, width: a, isModerator: d, onContextMenu: h, inPopout: x } = e,
             { reducedMotion: _ } = l.useContext(o.AccessibilityPreferencesContext),
             { id: Z, blocked: P, ignored: M } = t,
-            L = (0, s.Wu)([v.Z], () => v.Z.getAllActiveStreams(), []),
-            { selectedParticipant: R, largeStream: k } = (0, s.cj)([p.Z], () => ({
+            R = (0, s.Wu)([v.Z], () => v.Z.getAllActiveStreams(), []),
+            { selectedParticipant: L, largeStream: k } = (0, s.cj)([p.Z], () => ({
                 selectedParticipant: null != r ? p.Z.getSelectedParticipant(r.id) : null,
                 largeStream: null != r && p.Z.getStageStreamSize(r.id)
             })),
             O = l.useCallback(
                 (e, t) => {
-                    if (e.type === j.fO.STREAM && 0 === L.filter((t) => (0, f.V9)(t) === e.id && t.state !== T.jm8.ENDED).length) {
+                    if (e.type === j.fO.STREAM && 0 === R.filter((t) => (0, f.V9)(t) === e.id && t.state !== T.jm8.ENDED).length) {
                         if (!(0, g.p9)(r, b.Z, I.Z, E.Z, m.Z)[0]) return;
                         (0, u.rn)((0, f.my)(e.id), { forceMultiple: t.shiftKey });
                     }
-                    (null == R ? void 0 : R.id) === e.id ? (k ? (c.Z.selectParticipant(r.id, null), c.Z.updateStageStreamSize(r.id, !1)) : c.Z.updateStageStreamSize(r.id, !0)) : (c.Z.updateStageStreamSize(r.id, !1), c.Z.selectParticipant(r.id, e.id));
+                    (null == L ? void 0 : L.id) === e.id ? (k ? (c.Z.selectParticipant(r.id, null), c.Z.updateStageStreamSize(r.id, !1)) : c.Z.updateStageStreamSize(r.id, !0)) : (c.Z.updateStageStreamSize(r.id, !1), c.Z.selectParticipant(r.id, e.id));
                 },
-                [L, r, R, k]
+                [R, r, L, k]
             );
         return (0, i.jsx)(
             N.Z,

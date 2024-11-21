@@ -16,8 +16,8 @@ var r,
     g = n(160404),
     E = n(786761),
     v = n(418476),
-    I = n(739566),
-    b = n(995774),
+    b = n(739566),
+    I = n(995774),
     T = n(706454),
     S = n(630388),
     y = n(709054),
@@ -61,7 +61,7 @@ function V() {
 function j(e) {
     let { type: t, channelId: n, messageId: r, userId: i, emoji: a, reactionType: s } = e,
         o = f.Z.get(n);
-    if (null == o || !(0, b.sm)(e)) return !1;
+    if (null == o || !(0, I.sm)(e)) return !1;
     let l = A.default.getId() === i;
     (o = o.update(r, (n) => ('MESSAGE_REACTION_ADD' === t ? n.addReaction(a, l, e.colors, s) : n.removeReaction(a, l, s)))), f.Z.commit(o);
 }

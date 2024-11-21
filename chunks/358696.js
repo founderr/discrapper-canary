@@ -47,8 +47,8 @@ function h(e) {
 function m(e) {
     var t, n;
     let { image: r, smallImage: i, aspectRatio: s, onClick: m, size: g } = e,
-        { imageSize: E, smallImageSize: v, mask: I } = p[g],
-        b = (0, a.jsx)(c.f, {
+        { imageSize: E, smallImageSize: v, mask: b } = p[g],
+        I = (0, a.jsx)(c.f, {
             src: null == r ? void 0 : r.src,
             alt: null !== (n = null !== (t = null == r ? void 0 : r.alt) && void 0 !== t ? t : null == r ? void 0 : r.text) && void 0 !== n ? n : d.intl.string(d.t['2B/phI']),
             size: E,
@@ -56,7 +56,7 @@ function m(e) {
             constrain: 'width'
         });
     return null == r
-        ? b
+        ? I
         : (0, a.jsxs)('div', {
               className: f.imagePosition,
               children: [
@@ -70,15 +70,15 @@ function m(e) {
                                       ? (0, a.jsx)(u.ZP, {
                                             ...e,
                                             className: f.imageContainer,
-                                            mask: I,
+                                            mask: b,
                                             width: E,
                                             height: E,
-                                            children: b
+                                            children: I
                                         })
                                       : (0, a.jsx)('div', {
                                             ...e,
                                             className: f.imageContainer,
-                                            children: b
+                                            children: I
                                         })
                           })
                   }),

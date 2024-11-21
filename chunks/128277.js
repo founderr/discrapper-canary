@@ -20,8 +20,8 @@ var r = n(200651),
     g = n(994746),
     E = n(502762),
     v = n(652853),
-    I = n(448980),
-    b = n(194811),
+    b = n(448980),
+    I = n(194811),
     T = n(373826),
     S = n(315324),
     y = n(582123),
@@ -133,7 +133,7 @@ function D(e) {
                     className: s()(O.card, x),
                     ref: F,
                     children: [
-                        (0, r.jsx)(b.Z, {
+                        (0, r.jsx)(I.Z, {
                             ...U,
                             contextMenu: (0, r.jsx)(C.Z, {
                                 display: 'live',
@@ -172,7 +172,7 @@ function D(e) {
                                                         V()
                                                     ]
                                                 }),
-                                                (0, r.jsx)(I.Z, {
+                                                (0, r.jsx)(b.Z, {
                                                     user: t,
                                                     activity: a,
                                                     className: O.badges

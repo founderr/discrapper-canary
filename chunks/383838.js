@@ -27,7 +27,7 @@ function _(e) {
     let t,
         n,
         { type: i = s.Z.Types.DANGER, imageData: d, button: _, className: p, iconClassName: h, title: m, body: g, style: E, align: v = o.Z.Align.START } = e,
-        I = o.Z.Direction.HORIZONTAL;
+        b = o.Z.Direction.HORIZONTAL;
     if (null != d) {
         let { position: e, ...n } = d;
         (t = (0, r.jsx)(o.Z.Child, {
@@ -39,17 +39,17 @@ function _(e) {
                 ...n
             })
         })),
-            e === f.RIGHT && (I = o.Z.Direction.HORIZONTAL_REVERSE);
+            e === f.RIGHT && (b = o.Z.Direction.HORIZONTAL_REVERSE);
     } else null != _ && (n = _);
-    let b = !0;
+    let I = !0;
     return (
-        i === s.Z.Types.PRIMARY && (b = !1),
+        i === s.Z.Types.PRIMARY && (I = !1),
         (0, r.jsx)(s.Z, {
             className: a()(c.formNotice, p),
             type: i,
             style: E,
             children: (0, r.jsxs)(o.Z, {
-                direction: I,
+                direction: b,
                 align: v,
                 children: [
                     t,
@@ -58,13 +58,13 @@ function _(e) {
                             null != m && '' !== m
                                 ? (0, r.jsx)(u.v, {
                                       tag: u.R.H5,
-                                      className: a()(c.formNoticeTitle, { [c.whiteText]: b }),
+                                      className: a()(c.formNoticeTitle, { [c.whiteText]: I }),
                                       faded: !0,
                                       children: m
                                   })
                                 : null,
                             (0, r.jsx)(l.R, {
-                                className: a()(c.formNoticeBody, { [c.whiteText]: b }),
+                                className: a()(c.formNoticeBody, { [c.whiteText]: I }),
                                 children: g
                             }),
                             n

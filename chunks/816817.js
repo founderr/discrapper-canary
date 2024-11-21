@@ -20,7 +20,7 @@ t.Z = function (e) {
     var t, n;
     let { guild: l, disabled: _, small: I, loading: N = !1, description: T, memberCount: j, presenceCount: b, className: S } = e,
         E = (0, c.ZP)(),
-        [R, Z] = r.useState(!1);
+        [R, y] = r.useState(!1);
     if (null == l || N)
         return (0, i.jsx)('div', {
             className: s()(S, p.card, p.cardPlaceholder, {
@@ -28,7 +28,7 @@ t.Z = function (e) {
                 [p.cardDisabled]: _
             })
         });
-    let { name: y } = l,
+    let { name: Z } = l,
         A =
             null != l.discoverySplash && /^data:/.test(l.discoverySplash)
                 ? l.discoverySplash
@@ -49,17 +49,17 @@ t.Z = function (e) {
                 : void 0,
         O = null != l.description ? l.description : T,
         k = null != j ? j : null == l ? void 0 : l.memberCount,
-        M = null != b ? b : null == l ? void 0 : l.presenceCount,
-        P = null;
+        P = null != b ? b : null == l ? void 0 : l.presenceCount,
+        M = null;
     if (null != D)
-        P = (0, i.jsx)('img', {
+        M = (0, i.jsx)('img', {
             src: D,
             alt: '',
             className: p.avatar
         });
     else {
         let e = (0, g.Zg)(l.name);
-        P = (0, i.jsx)('div', {
+        M = (0, i.jsx)('div', {
             className: p.defaultIcon,
             children: (0, i.jsx)(o.Text, {
                 className: p.acronym,
@@ -85,7 +85,7 @@ t.Z = function (e) {
                             src: null != A ? A : L,
                             alt: '',
                             className: p.splashImage,
-                            onLoad: () => Z(!0)
+                            onLoad: () => y(!0)
                         })
                     }),
                     (0, i.jsx)('div', {
@@ -100,7 +100,7 @@ t.Z = function (e) {
                                     mask: d.ZP.Masks.SQUIRCLE,
                                     width: 40,
                                     height: 40,
-                                    children: null != P ? P : null
+                                    children: null != M ? M : null
                                 })
                             })
                         })
@@ -121,7 +121,7 @@ t.Z = function (e) {
                             (0, i.jsx)(o.Text, {
                                 className: p.guildName,
                                 variant: 'text-md/normal',
-                                children: (0, i.jsx)('span', { children: y })
+                                children: (0, i.jsx)('span', { children: Z })
                             })
                         ]
                     }),
@@ -133,14 +133,14 @@ t.Z = function (e) {
                     (0, i.jsxs)('div', {
                         className: p.memberInfo,
                         children: [
-                            null != M &&
+                            null != P &&
                                 (0, i.jsxs)('div', {
                                     className: p.memberCount,
                                     children: [
                                         (0, i.jsx)('div', { className: p.dotOnline }),
                                         (0, i.jsx)(o.Text, {
                                             variant: 'text-xs/normal',
-                                            children: I ? x.intl.formatToPlainString(x.t.YMor7u, { count: M }) : x.intl.formatToPlainString(x.t['LC+S+v'], { membersOnline: M })
+                                            children: I ? x.intl.formatToPlainString(x.t.YMor7u, { count: P }) : x.intl.formatToPlainString(x.t['LC+S+v'], { membersOnline: P })
                                         })
                                     ]
                                 }),

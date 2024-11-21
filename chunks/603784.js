@@ -44,7 +44,7 @@ class R extends r.PureComponent {
         });
     }
 }
-class Z extends r.PureComponent {
+class y extends r.PureComponent {
     hasChangesToRender() {
         let { log: e } = this.props,
             { changes: t } = e;
@@ -234,4 +234,4 @@ class Z extends r.PureComponent {
         });
     }
 }
-t.Z = o.ZP.connectStores([p.Z], () => ({ theme: p.Z.theme }))(Z);
+t.Z = o.ZP.connectStores([p.Z], () => ({ theme: p.Z.theme }))(y);

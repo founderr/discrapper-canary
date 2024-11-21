@@ -138,8 +138,8 @@ var r,
     g,
     E,
     v,
-    I,
-    b = n(911969),
+    b,
+    I = n(911969),
     T = n(981631);
 let S = 160,
     y = /^https?:\/\/(?:www\.)?(twitch\.tv\/(.+)|youtube.com\/watch\?v=)/,
@@ -179,7 +179,7 @@ let J = 'activity-shelf',
     ee = new Set([C, R, M]);
 ((E = u || (u = {}))[(E.PORTRAIT = 0)] = 'PORTRAIT'), (E[(E.LANDSCAPE = 1)] = 'LANDSCAPE'), ((v = c || (c = {}))[(v.FOCUSED = 0)] = 'FOCUSED'), (v[(v.PIP = 1)] = 'PIP'), (v[(v.GRID = 2)] = 'GRID');
 let et = {
-        label_type: b.ww.NONE,
+        label_type: I.ww.NONE,
         release_phase: '',
         label_until: null
     },
@@ -189,15 +189,15 @@ let et = {
         legacy_responsive_aspect_ratio: !1,
         default_orientation_lock_state: 1,
         tablet_default_orientation_lock_state: 1,
-        supported_platforms: [b.C3.WEB],
+        supported_platforms: [I.C3.WEB],
         client_platform_config: {
-            [b.C3.WEB]: et,
-            [b.C3.IOS]: et,
-            [b.C3.ANDROID]: et
+            [I.C3.WEB]: et,
+            [I.C3.IOS]: et,
+            [I.C3.ANDROID]: et
         },
         has_csp_exception: !1,
         displays_advertisements: !1
     },
     er = [T.d4z.GUILD_TEXT, T.d4z.DM, T.d4z.GROUP_DM],
     ei = 'https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety';
-((I = d || (d = {})).NORMAL = 'normal'), (I.FULL_SCREEN = 'full-screen');
+((b = d || (d = {})).NORMAL = 'normal'), (b.FULL_SCREEN = 'full-screen');

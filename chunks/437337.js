@@ -35,8 +35,8 @@ let h = {
         }
     },
     g = function (e) {
-        let { id: t, onChange: n, checked: a, disabled: g, className: E, focusProps: v, innerRef: I } = e,
-            { reducedMotion: b } = i.useContext(u.S),
+        let { id: t, onChange: n, checked: a, disabled: g, className: E, focusProps: v, innerRef: b } = e,
+            { reducedMotion: I } = i.useContext(u.S),
             T = i.useRef(null),
             [S, y] = i.useState(!1),
             A = (0, _.Q)('Switch'),
@@ -127,14 +127,14 @@ let h = {
                                         })
                                     ]
                                 });
-                            })(R, N, C, b.enabled)
+                            })(R, N, C, I.enabled)
                         ]
                     }),
                     (0, r.jsx)('input', {
                         id: t,
                         type: 'checkbox',
                         ref: (e) => {
-                            (T.current = e), null != I && (I.current = e);
+                            (T.current = e), null != b && (b.current = e);
                         },
                         className: p.input,
                         tabIndex: g ? -1 : 0,

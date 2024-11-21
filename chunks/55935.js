@@ -1,6 +1,6 @@
 n.d(t, {
     Hg: function () {
-        return I;
+        return b;
     },
     KC: function () {
         return _;
@@ -75,7 +75,7 @@ function E(e) {
 function v(e) {
     return i().isMoment(e) ? e.toDate() : e;
 }
-function I(e) {
+function b(e) {
     let t;
     let n = i().localeData(),
         r = new Date(),
@@ -85,7 +85,7 @@ function I(e) {
 s.default.addChangeListener(() => {
     c = Object.create(null);
 });
-let b = [
+let I = [
     {
         key: 'days',
         millisecondsInUnit: 86400000
@@ -114,7 +114,7 @@ function T(e, t) {
     if (e > t || (n && Number(e) + 1200 > Number(t))) return r;
     let i = Number(t) - Number(e);
     return (
-        b.forEach((e) => {
+        I.forEach((e) => {
             let { key: t, millisecondsInUnit: n } = e;
             (r[t] = Math.floor(i / n)), (i -= r[t] * n);
         }),

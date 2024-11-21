@@ -25,8 +25,8 @@ var a = n(442837),
     g = n(48481),
     E = n(131704),
     v = n(209747),
-    I = n(598077),
-    b = n(592125),
+    b = n(598077),
+    I = n(592125),
     T = n(271383),
     S = n(819640),
     y = n(594174),
@@ -50,7 +50,7 @@ let x = new d.Z('ConnectionStore'),
                           channels: []
                       };
             let r = (0, E.q_)(t),
-                i = b.Z.getChannel(t.id),
+                i = I.Z.getChannel(t.id),
                 a =
                     null == i
                         ? void 0
@@ -197,7 +197,7 @@ function Y(e) {
 }
 B(
     ['INITIAL_GUILD'],
-    (e) => ('full' === e.data_mode ? null : b.o.loadGuildIds([e.id])),
+    (e) => ('full' === e.data_mode ? null : I.o.loadGuildIds([e.id])),
     (e) => {
         m.Z.initialGuild.measure(() => {
             a.ZP.Emitter.batched(() => {
@@ -303,7 +303,7 @@ B(
                         return !e.unavailable && 'partial' === e.data_mode && (!!((null !== (t = e.partial_updates.channels) && void 0 !== t ? t : []).length > 0) || !!((null !== (n = e.partial_updates.deleted_channel_ids) && void 0 !== n ? n : []).length > 0) || void 0);
                     })
                     .map((e) => e.id);
-            return Promise.all([n, null !== (t = b.o.loadGuildIds(r)) && void 0 !== t ? t : Promise.resolve()]).then((e) => {
+            return Promise.all([n, null !== (t = I.o.loadGuildIds(r)) && void 0 !== t ? t : Promise.resolve()]).then((e) => {
                 let [t] = e;
                 return t;
             });
@@ -401,7 +401,7 @@ B(
     }),
     B(
         ['MESSAGE_CREATE'],
-        (e) => b.o.loadGuildIds([e.guild_id]),
+        (e) => I.o.loadGuildIds([e.guild_id]),
         (e) => {
             j(e),
                 null != e.author &&
@@ -417,7 +417,7 @@ B(
     ),
     B(
         ['MESSAGE_UPDATE'],
-        (e) => b.o.loadGuildIds([e.guild_id]),
+        (e) => I.o.loadGuildIds([e.guild_id]),
         (e) => {
             j(e),
                 F({
@@ -429,7 +429,7 @@ B(
     ),
     B(
         ['MESSAGE_DELETE'],
-        (e) => b.o.loadGuildIds([e.guild_id]),
+        (e) => I.o.loadGuildIds([e.guild_id]),
         (e) => {
             F({
                 type: 'MESSAGE_DELETE',
@@ -441,7 +441,7 @@ B(
     ),
     B(
         ['MESSAGE_DELETE_BULK'],
-        (e) => b.o.loadGuildIds([e.guild_id]),
+        (e) => I.o.loadGuildIds([e.guild_id]),
         (e) => {
             F({
                 type: 'MESSAGE_DELETE_BULK',
@@ -453,7 +453,7 @@ B(
     ),
     B(
         ['MESSAGE_ACK'],
-        (e) => b.o.loadGuildFromChannelId(e.channel_id),
+        (e) => I.o.loadGuildFromChannelId(e.channel_id),
         (e) => {
             F({
                 type: 'MESSAGE_ACK',
@@ -482,7 +482,7 @@ B(
     }),
     B(
         ['CHANNEL_PINS_ACK'],
-        (e) => b.o.loadGuildIds([e.guild_id]),
+        (e) => I.o.loadGuildIds([e.guild_id]),
         (e) => {
             F({
                 type: 'CHANNEL_PINS_ACK',
@@ -494,7 +494,7 @@ B(
     ),
     B(
         ['CHANNEL_PINS_UPDATE'],
-        (e) => b.o.loadGuildIds([e.guild_id]),
+        (e) => I.o.loadGuildIds([e.guild_id]),
         (e) => {
             F({
                 type: 'CHANNEL_PINS_UPDATE',
@@ -505,7 +505,7 @@ B(
     ),
     B(
         ['CHANNEL_CREATE', 'CHANNEL_DELETE'],
-        (e) => b.o.loadGuildIds([e.guild_id]),
+        (e) => I.o.loadGuildIds([e.guild_id]),
         (e, t) => {
             F({
                 type: t,
@@ -530,14 +530,14 @@ B(
     }),
     B(
         ['CHANNEL_UPDATE'],
-        (e) => b.o.loadGuildIds([e.guild_id]),
+        (e) => I.o.loadGuildIds([e.guild_id]),
         (e) => {
             w.add(e);
         }
     ),
     B(
         ['THREAD_CREATE', 'THREAD_UPDATE', 'THREAD_DELETE'],
-        (e) => b.o.loadGuildIds([e.guild_id]),
+        (e) => I.o.loadGuildIds([e.guild_id]),
         (e, t) => {
             let { newly_created: n, ...r } = e;
             F({
@@ -549,13 +549,13 @@ B(
     ),
     B(
         ['THREAD_LIST_SYNC'],
-        (e) => b.o.loadGuildIds([e.guild_id]),
+        (e) => I.o.loadGuildIds([e.guild_id]),
         (e) => {
             F({
                 type: 'THREAD_LIST_SYNC',
                 guildId: e.guild_id,
                 threads: e.threads.map((e) => {
-                    let t = b.Z.getChannel(e.parent_id);
+                    let t = I.Z.getChannel(e.parent_id);
                     return null != t && ((e.nsfw = t.nsfw), (e.parentChannelThreadType = t.type)), (0, E.q_)(e);
                 }),
                 mostRecentMessages: e.most_recent_messages,
@@ -613,7 +613,7 @@ B(
         M.add(e);
     }),
     G(['CHANNEL_RECIPIENT_ADD', 'CHANNEL_RECIPIENT_REMOVE'], (e, t) => {
-        let n = b.Z.getBasicChannel(e.channel_id);
+        let n = I.Z.getBasicChannel(e.channel_id);
         F({
             type: t,
             channelId: e.channel_id,
@@ -624,7 +624,7 @@ B(
     }),
     B(
         ['GUILD_CREATE'],
-        (e) => ('full' === e.data_mode ? null : b.o.loadGuildIds([e.id])),
+        (e) => ('full' === e.data_mode ? null : I.o.loadGuildIds([e.id])),
         (e) => {
             if (e.unavailable)
                 F({
@@ -749,7 +749,7 @@ B(
     }),
     B(
         ['GUILD_ROLE_CREATE', 'GUILD_ROLE_UPDATE'],
-        (e) => b.o.loadGuildIds([e.guild_id]),
+        (e) => I.o.loadGuildIds([e.guild_id]),
         (e, t) => {
             F({
                 type: t,
@@ -760,7 +760,7 @@ B(
     ),
     B(
         ['GUILD_ROLE_DELETE'],
-        (e) => b.o.loadGuildIds([e.guild_id]),
+        (e) => I.o.loadGuildIds([e.guild_id]),
         (e) => {
             F({
                 type: 'GUILD_ROLE_DELETE',
@@ -1504,7 +1504,7 @@ B(
                 guildId: e.guild_id,
                 name: e.name,
                 soundId: e.sound_id,
-                user: new I.Z(e.user),
+                user: new b.Z(e.user),
                 userId: e.user_id,
                 volume: e.volume,
                 emojiId: e.emoji_id,
@@ -1520,7 +1520,7 @@ B(
                 guildId: e.guild_id,
                 name: e.name,
                 soundId: e.sound_id,
-                user: new I.Z(e.user),
+                user: new b.Z(e.user),
                 userId: e.user_id,
                 volume: e.volume,
                 emojiId: e.emoji_id,
@@ -1554,7 +1554,7 @@ B(
     }),
     B(
         ['EMBEDDED_ACTIVITY_UPDATE_V2'],
-        (e) => b.o.loadGuildIds([e.guild_id]),
+        (e) => I.o.loadGuildIds([e.guild_id]),
         (e) => {
             F({
                 type: 'EMBEDDED_ACTIVITY_UPDATE_V2',
@@ -1597,7 +1597,7 @@ B(
     }),
     B(
         ['CHANNEL_SYNC'],
-        (e) => b.o.loadGuildIds([e.guild_id]),
+        (e) => I.o.loadGuildIds([e.guild_id]),
         (e) => {
             e.channels.forEach((e) => {
                 w.add(e);
@@ -1620,7 +1620,7 @@ B(
     }),
     B(
         ['PASSIVE_UPDATE_V2'],
-        (e) => b.o.loadGuildIds([e.guild_id]),
+        (e) => I.o.loadGuildIds([e.guild_id]),
         (e) => {
             F({
                 type: 'PASSIVE_UPDATE_V2',

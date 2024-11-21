@@ -55,8 +55,8 @@ var r = n(990547),
     g = n(812206),
     E = n(358221),
     v = n(233764),
-    I = n(375824),
-    b = n(48854),
+    b = n(375824),
+    I = n(48854),
     T = n(835873),
     S = n(973616),
     y = n(314897),
@@ -100,7 +100,7 @@ async function q(e) {
         E = A.Z.getChannel(r),
         T = null !== (t = null == E ? void 0 : E.getGuildId()) && void 0 !== t ? t : void 0;
     if (null == T && !(null !== (n = null == E ? void 0 : E.isPrivate()) && void 0 !== n && n)) return !1;
-    let S = (0, b.r)();
+    let S = (0, I.r)();
     try {
         a.Z.dispatch({
             type: 'EMBEDDED_ACTIVITY_LAUNCH_START',
@@ -177,7 +177,7 @@ async function q(e) {
                 applicationId: i,
                 channelId: r,
                 isStart: s,
-                error: e instanceof v.Z || e instanceof d.Z || e instanceof I.Z ? e : new d.Z(e)
+                error: e instanceof v.Z || e instanceof d.Z || e instanceof b.Z ? e : new d.Z(e)
             }),
             !1
         );
@@ -244,9 +244,9 @@ async function Q(e) {
                                           }
                                       })
                                   )
-                                : null != i && i in I.Z.ReasonCodes
-                                  ? t(new I.Z(i))
-                                  : t(new I.Z(I.Z.ReasonCodes.UNKNOWN));
+                                : null != i && i in b.Z.ReasonCodes
+                                  ? t(new b.Z(i))
+                                  : t(new b.Z(b.Z.ReasonCodes.UNKNOWN));
                     }
                 })
             });

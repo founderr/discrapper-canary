@@ -25,8 +25,8 @@ var i = n(200651),
     S = n(999382),
     E = n(909746),
     R = n(501801),
-    Z = n(603784),
-    y = n(981631),
+    y = n(603784),
+    Z = n(981631),
     A = n(388032),
     L = n(315185),
     D = n(156725),
@@ -44,12 +44,12 @@ function k(e, t, n) {
         e
     );
 }
-class M extends r.PureComponent {
+class P extends r.PureComponent {
     render() {
         let { onHeaderClick: e, guildId: t, guild: n, ...r } = this.props;
         return null == t
             ? null
-            : (0, i.jsx)(Z.Z, {
+            : (0, i.jsx)(y.Z, {
                   ...r,
                   guildId: t,
                   guild: n,
@@ -100,8 +100,8 @@ class M extends r.PureComponent {
             k(this, 'handleTargetContextMenu', (e) => {
                 let { log: t, guildId: r } = this.props;
                 switch (t.targetType) {
-                    case y.KFR.CHANNEL:
-                    case y.KFR.CHANNEL_OVERWRITE:
+                    case Z.KFR.CHANNEL:
+                    case Z.KFR.CHANNEL_OVERWRITE:
                         let l = v.Z.getChannel(t.targetId),
                             s = _.Z.getGuild(r);
                         if (null != l && null != s)
@@ -122,7 +122,7 @@ class M extends r.PureComponent {
                                     label: A.intl.string(A.t.rCaznZ)
                                 });
                         });
-                    case y.KFR.USER:
+                    case Z.KFR.USER:
                         let a = N.default.getUser(t.targetId);
                         if (null != a && null != r)
                             return (0, h.jW)(e, async () => {
@@ -139,7 +139,7 @@ class M extends r.PureComponent {
             });
     }
 }
-function P(e) {
+function M(e) {
     let { logs: t, guildId: n, guild: l, expandedId: s, lastExpandedId: a, scroller: c, setExpandedRef: d, setLastExpandedRef: u, onHeaderClick: m, onContentClick: h } = e,
         g = r.useRef(c);
     r.useEffect(() => {
@@ -158,7 +158,7 @@ function P(e) {
                         let t = s === e.id,
                             r = a === e.id;
                         return (0, i.jsx)(
-                            M,
+                            P,
                             {
                                 guildId: n,
                                 guild: l,
@@ -271,7 +271,7 @@ class w extends r.PureComponent {
                 ]
             });
         }
-        return (0, i.jsx)(P, {
+        return (0, i.jsx)(M, {
             logs: r,
             guildId: d,
             guild: m,
@@ -333,7 +333,7 @@ class w extends r.PureComponent {
                         children: [
                             (0, i.jsx)(u.ComboboxItem.Icon, {
                                 children: (0, i.jsx)(R.mp, {
-                                    themeOverride: a ? y.BRd.DARK : null,
+                                    themeOverride: a ? Z.BRd.DARK : null,
                                     actionType: l,
                                     targetType: s,
                                     action: e.value

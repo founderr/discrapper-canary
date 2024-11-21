@@ -24,8 +24,8 @@ var a = n(200651),
 function N(e) {
     let { channel: t, className: n, onClose: r } = e,
         N = (0, i.e7)([c.Z], () => c.Z.can(v.Plq.READ_MESSAGE_HISTORY, t)),
-        C = (0, u.cD)(t),
-        I = () => {
+        I = (0, u.cD)(t),
+        C = () => {
             r(), (0, f.R6)(t, void 0, 'Thread Browser Empty State');
         },
         p = l.useCallback(
@@ -89,7 +89,7 @@ function N(e) {
                               })
                             : null,
                         (0, a.jsx)('div', { className: j.spacer }),
-                        C
+                        I
                             ? (0, a.jsx)(o.Button, {
                                   size: o.Button.Sizes.MIN,
                                   className: j.createButton,
@@ -113,13 +113,13 @@ function N(e) {
                 children: S.hasResults
                     ? (0, a.jsx)(m.Z, {
                           channel: t,
-                          startThread: I,
+                          startThread: C,
                           goToThread: p,
                           threadIds: S.results
                       })
                     : (0, a.jsx)(g.Z, {
                           channel: t,
-                          startThread: I,
+                          startThread: C,
                           goToThread: p
                       })
             })

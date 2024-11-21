@@ -44,8 +44,8 @@ var p = function () {
               }
             : null),
     v = {},
-    I = 'undefined' != typeof Uint8Array && E ? E(Uint8Array) : r,
-    b = {
+    b = 'undefined' != typeof Uint8Array && E ? E(Uint8Array) : r,
+    I = {
         __proto__: null,
         '%AggregateError%': 'undefined' == typeof AggregateError ? r : AggregateError,
         '%Array%': Array,
@@ -103,7 +103,7 @@ var p = function () {
         '%Symbol%': m ? Symbol : r,
         '%SyntaxError%': l,
         '%ThrowTypeError%': h,
-        '%TypedArray%': I,
+        '%TypedArray%': b,
         '%TypeError%': u,
         '%Uint8Array%': 'undefined' == typeof Uint8Array ? r : Uint8Array,
         '%Uint8ClampedArray%': 'undefined' == typeof Uint8ClampedArray ? r : Uint8ClampedArray,
@@ -119,7 +119,7 @@ if (E)
         null.error;
     } catch (e) {
         var T = E(E(e));
-        b['%Error.prototype%'] = T;
+        I['%Error.prototype%'] = T;
     }
 var S = function e(t) {
         var n;
@@ -133,7 +133,7 @@ var S = function e(t) {
             var i = e('%AsyncGenerator%');
             i && E && (n = E(i.prototype));
         }
-        return (b[t] = n), n;
+        return (I[t] = n), n;
     },
     y = {
         __proto__: null,
@@ -214,8 +214,8 @@ var S = function e(t) {
     P = function (e, t) {
         var n,
             r = e;
-        if ((N(y, r) && (r = '%' + (n = y[r])[0] + '%'), N(b, r))) {
-            var i = b[r];
+        if ((N(y, r) && (r = '%' + (n = y[r])[0] + '%'), N(I, r))) {
+            var i = I[r];
             if ((i === v && (i = S(r)), void 0 === i && !t)) throw new u('intrinsic ' + e + ' exists, but is not available. Please file an issue!');
             return {
                 alias: n,
@@ -242,7 +242,7 @@ e.exports = function (e, t) {
             h = D(p, 0, 1),
             m = D(p, -1);
         if (('"' === h || "'" === h || '`' === h || '"' === m || "'" === m || '`' === m) && h !== m) throw new l('property names with quotes must have matching quotes');
-        if ((('constructor' === p || !f) && (o = !0), (r += '.' + p), N(b, (a = '%' + r + '%')))) s = b[a];
+        if ((('constructor' === p || !f) && (o = !0), (r += '.' + p), N(I, (a = '%' + r + '%')))) s = I[a];
         else if (null != s) {
             if (!(p in s)) {
                 if (!t) throw new u('base intrinsic for ' + e + ' exists, but the property is not available.');
@@ -252,7 +252,7 @@ e.exports = function (e, t) {
                 var g = _(s, p);
                 s = (f = !!g) && 'get' in g && !('originalValue' in g.get) ? g.get : s[p];
             } else (f = N(s, p)), (s = s[p]);
-            f && !o && (b[a] = s);
+            f && !o && (I[a] = s);
         }
     }
     return s;

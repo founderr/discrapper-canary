@@ -33,8 +33,8 @@ var l = t(374470),
     _ = t(168405),
     b = t(536639),
     A = t(720904),
-    N = t(88791),
-    P = t(385302),
+    P = t(88791),
+    N = t(385302),
     T = t(873699),
     y = t(134323),
     C = t(429260),
@@ -93,10 +93,10 @@ function k(e) {
         }),
         ea = (0, L.Z)(n, t),
         eo = (0, _.Z)(n, t),
-        es = (0, N.Z)(n),
+        es = (0, P.Z)(n),
         eu = (0, v.Z)(n, t),
         ed = (0, p.Z)(n, t),
-        ec = (0, P.Z)(n, t),
+        ec = (0, N.Z)(n, t),
         eg = (0, T.Z)(n, t),
         ef = (0, Z.Z)(n, t),
         em = (0, C.Z)(n),
@@ -123,8 +123,8 @@ function k(e) {
             guildId: void 0,
             onHeightUpdate: V
         }),
-        eN = (0, O.Z)(n),
-        eP = (0, f.Z)(n);
+        eP = (0, O.Z)(n),
+        eN = (0, f.Z)(n);
     return (0, i.jsxs)(r.Menu, {
         navId: W,
         onClose: J,
@@ -140,7 +140,7 @@ function k(e) {
                 children: [ei, eZ, ex, eS]
             }),
             (0, i.jsxs)(r.MenuGroup, {
-                children: [eb, el, e_, eA, ea, eo, eu, ed, eE, eP, eN]
+                children: [eb, el, e_, eA, ea, eo, eu, ed, eE, eN, eP]
             }),
             (0, i.jsxs)(r.MenuGroup, {
                 children: [eg, ec, ef, X && em, X && eh]

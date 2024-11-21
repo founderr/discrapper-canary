@@ -16,8 +16,8 @@ var r,
     g = n(998502),
     E = n(145597),
     v = n(451478),
-    I = n(981631),
-    b = n(987650);
+    b = n(981631),
+    I = n(987650);
 function T(e, t, n) {
     return (
         t in e
@@ -34,15 +34,15 @@ function T(e, t, n) {
 let S = Object.freeze({
         selectedGuildId: null,
         selectedChannelId: null,
-        displayUserMode: I.OYC.ALWAYS,
-        displayNameMode: I.wC$.ALWAYS,
-        avatarSizeMode: I.ipw.LARGE,
-        notificationPositionMode: I._vf.TOP_LEFT,
-        textChatNotifications: I.Ypu.ENABLED,
+        displayUserMode: b.OYC.ALWAYS,
+        displayNameMode: b.wC$.ALWAYS,
+        avatarSizeMode: b.ipw.LARGE,
+        notificationPositionMode: b._vf.TOP_LEFT,
+        textChatNotifications: b.Ypu.ENABLED,
         disableExternalLinkAlert: !1,
         disablePinTutorial: !1,
         showKeybindIndicators: !0,
-        textWidgetOpacity: b.wF.LOWER
+        textWidgetOpacity: I.wF.LOWER
     }),
     y = null,
     A = {},
@@ -75,10 +75,10 @@ function Z(e) {
     let t = (0, E.QF)();
     if (null == e.pid || e.pid === t)
         switch (e.type) {
-            case I.BmY.STORAGE_SYNC:
+            case b.BmY.STORAGE_SYNC:
                 i.ZP.PersistedStore.initializeAll(e.states);
                 break;
-            case I.BmY.DISPATCH:
+            case b.BmY.DISPATCH:
                 null != e.payloads &&
                     ((D = !0),
                     e.payloads.forEach((e) =>
@@ -207,7 +207,7 @@ class F extends (r = i.ZP.PersistedStore) {
         return P.notificationPositionMode;
     }
     getTextChatNotificationMode() {
-        return P.notificationPositionMode === I._vf.DISABLED ? I.Ypu.DISABLED : P.textChatNotifications;
+        return P.notificationPositionMode === b._vf.DISABLED ? b.Ypu.DISABLED : P.textChatNotifications;
     }
     get showKeybindIndicators() {
         return null == P.showKeybindIndicators || P.showKeybindIndicators;
@@ -267,15 +267,15 @@ T(F, 'displayName', 'OverlayStore'),
                     return (
                         null != n &&
                         ((0, l.lW)({
-                            type: I.BmY.DISPATCH,
+                            type: b.BmY.DISPATCH,
                             pid: (0, E.QF)(),
                             token: (0, E.Ht)(),
                             payloads: [
                                 {
                                     type: 'CHANNEL_PRELOAD',
-                                    guildId: t === I.ME ? null : t,
+                                    guildId: t === b.ME ? null : t,
                                     channelId: n,
-                                    context: I.e3s
+                                    context: b.e3s
                                 },
                                 {
                                     type: 'OVERLAY_SELECT_CHANNEL',
@@ -289,7 +289,7 @@ T(F, 'displayName', 'OverlayStore'),
                 }
                 return (
                     (0, l.lW)({
-                        type: I.BmY.DISPATCH,
+                        type: b.BmY.DISPATCH,
                         pid: (0, E.QF)(),
                         token: (0, E.Ht)(),
                         payloads: [e]
@@ -300,7 +300,7 @@ T(F, 'displayName', 'OverlayStore'),
                 (0, l.Ty)(Z, (0, E.Ht)()),
                 (0, l.$j)(),
                 (0, l.lW)({
-                    type: I.BmY.CONNECT,
+                    type: b.BmY.CONNECT,
                     pid: (0, E.QF)(),
                     token: (0, E.Ht)()
                 });

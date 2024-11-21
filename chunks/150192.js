@@ -1,41 +1,41 @@
 n.d(t, {
     j: function () {
-        return h;
+        return m;
     }
 }),
     n(653041),
     n(47120);
 var r,
     i,
-    o,
     a,
-    l = n(392711),
-    s = n.n(l),
+    o,
+    s = n(392711),
+    l = n.n(s),
     c = n(442837),
     u = n(570140),
     d = n(823379),
     _ = n(731455),
-    m = n(388032);
-function h(e, t) {
-    return s().isEqual(
+    h = n(388032);
+function m(e, t) {
+    return l().isEqual(
         e.map((e) => [e.categoryId, e.name]),
         t.map((e) => [e.categoryId, e.name])
     );
 }
-let E = null,
-    p = [],
+let p = null,
+    E = [],
     I = [],
-    f = {};
+    T = {};
 class C extends (r = c.ZP.Store) {
     getPrimaryCategories() {
-        return p;
+        return E;
     }
     getDiscoveryCategories() {
         let e = _.L3.map((e) => I.find((t) => t.categoryId === e)).filter(d.lm);
         return [
             {
                 categoryId: _.Hk,
-                name: m.intl.string(m.t.Ym2Ri4)
+                name: h.intl.string(h.t.Ym2Ri4)
             },
             ...e
         ];
@@ -45,7 +45,7 @@ class C extends (r = c.ZP.Store) {
         return [
             {
                 categoryId: _.Hk,
-                name: m.intl.string(m.t.QToH29)
+                name: h.intl.string(h.t.QToH29)
             },
             ...e
         ];
@@ -54,32 +54,32 @@ class C extends (r = c.ZP.Store) {
         return I;
     }
     getFetchedLocale() {
-        return E;
+        return p;
     }
     getCategoryName(e) {
-        return e === _.Hk ? m.intl.string(m.t.Ym2Ri4) : f[e];
+        return e === _.Hk ? h.intl.string(h.t.Ym2Ri4) : T[e];
     }
 }
-(a = 'GuildDiscoveryCategoryStore'),
-    (o = 'displayName') in (i = C)
-        ? Object.defineProperty(i, o, {
-              value: a,
+(o = 'GuildDiscoveryCategoryStore'),
+    (a = 'displayName') in (i = C)
+        ? Object.defineProperty(i, a, {
+              value: o,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[o] = a),
+        : (i[a] = o),
     (t.Z = new C(u.Z, {
         GUILD_DISCOVERY_CATEGORY_FETCH_SUCCESS: function (e) {
             let t,
                 { categories: n, locale: r } = e,
                 i = [],
-                o = [];
+                a = [];
             if (
                 (n
                     .sort((e, t) => (e.name < t.name ? -1 : 1))
                     .forEach((e) => {
-                        let { id: n, name: r, is_primary: a } = e;
+                        let { id: n, name: r, is_primary: o } = e;
                         if (n !== _.o3) {
                             if (n === _.dc) {
                                 t = {
@@ -88,16 +88,16 @@ class C extends (r = c.ZP.Store) {
                                 };
                                 return;
                             }
-                            !0 === a &&
+                            !0 === o &&
                                 i.push({
                                     categoryId: n,
                                     name: r
                                 }),
-                                o.push({
+                                a.push({
                                     categoryId: n,
                                     name: r
                                 }),
-                                (f[n] = r);
+                                (T[n] = r);
                         }
                     }),
                 null != t)
@@ -107,8 +107,8 @@ class C extends (r = c.ZP.Store) {
                     categoryId: e,
                     name: n
                 }),
-                    (f[e] = n);
+                    (T[e] = n);
             }
-            (E = r), (p = i), (I = o);
+            (p = r), (E = i), (I = a);
         }
     }));

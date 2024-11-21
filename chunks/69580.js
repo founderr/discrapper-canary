@@ -43,8 +43,8 @@ var r,
     g = n(693789),
     E = n(952265),
     v = n(21340),
-    I = n(922770),
-    b = n(481060),
+    b = n(922770),
+    I = n(481060),
     T = n(893776),
     S = n(384275),
     y = n(596454),
@@ -140,7 +140,7 @@ function ed() {
                           ]
                       })
                     : (0, a.jsxs)(a.Fragment, {
-                          children: [(0, a.jsx)(L.Dx, { children: el.intl.string(el.t['Z+hCVV']) }), (0, a.jsx)(I.$, {})]
+                          children: [(0, a.jsx)(L.Dx, { children: el.intl.string(el.t['Z+hCVV']) }), (0, a.jsx)(b.$, {})]
                       })),
             (0, a.jsx)(en.G, {
                 removeChildWrapper: !0,
@@ -154,7 +154,7 @@ function ed() {
     return (0, a.jsx)(en.G, {
         removeChildWrapper: !0,
         children: (0, a.jsx)(ef, {
-            transitionState: b.ModalTransitionState.ENTERED,
+            transitionState: I.ModalTransitionState.ENTERED,
             ...t,
             showLogout: !0
         })
@@ -193,7 +193,7 @@ function e_(e) {
         C,
         R,
         L,
-        { clientId: x, responseType: M, redirectUri: B, codeChallenge: en, codeChallengeMethod: eo, state: ed, nonce: ef, prompt: e_, authorizations: ep, scopes: eh, permissions: em, guildId: eg, channelId: eE, integrationType: ev, disableGuildSelect: eI = !1, showLogout: eb = !1, cancelCompletesFlow: eT = !0, isTrustedName: eS = !1, isEmbeddedFlow: ey = !1, callback: eA, callbackWithoutPost: eN, onClose: eC, disclosures: eR } = e,
+        { clientId: x, responseType: M, redirectUri: B, codeChallenge: en, codeChallengeMethod: eo, state: ed, nonce: ef, prompt: e_, authorizations: ep, scopes: eh, permissions: em, guildId: eg, channelId: eE, integrationType: ev, disableGuildSelect: eb = !1, showLogout: eI = !1, cancelCompletesFlow: eT = !0, isTrustedName: eS = !1, isEmbeddedFlow: ey = !1, callback: eA, callbackWithoutPost: eN, onClose: eC, disclosures: eR } = e,
         eO = null != ev ? (null == ep ? void 0 : ep.get(ev)) : void 0,
         eD = (0, u.TH)(),
         eL = (0, h.e7)([w.Z], () => w.Z.hasLoadedExperiments);
@@ -425,9 +425,9 @@ function e_(e) {
         t_ = !1;
     switch (eM) {
         case null:
-            return { body: (0, a.jsx)(I.$, { className: eu.spinner }) };
+            return { body: (0, a.jsx)(b.$, { className: eu.spinner }) };
         case 'SELECT_INSTALL_TYPE':
-            if (null == e0) return { body: (0, a.jsx)(I.$, { className: eu.spinner }) };
+            if (null == e0) return { body: (0, a.jsx)(b.$, { className: eu.spinner }) };
             (d = (0, a.jsx)(et.Z, {
                 application: e0,
                 onSelect: (e) => {
@@ -441,7 +441,7 @@ function e_(e) {
                 (t_ = !0);
             break;
         case 'AUTHORIZE_SCOPES':
-            if (null == ex || null == eq || null == eX) return { body: (0, a.jsx)(I.$, { className: eu.spinner }) };
+            if (null == ex || null == eq || null == eX) return { body: (0, a.jsx)(b.$, { className: eu.spinner }) };
             let tp = null == ek || ek instanceof Error ? {} : ek,
                 th = null == eV ? void 0 : eV.sort((e, t) => e.name.toLowerCase().localeCompare(t.name.toLowerCase())),
                 tm = eX === f.Y.GUILD_INSTALL && e3.includes(_.x.WEBHOOK_INCOMING),
@@ -467,7 +467,7 @@ function e_(e) {
                               selectedGuildId: ej,
                               onGuildChange: eH,
                               guilds: null != th ? th : [],
-                              disabled: '' !== ej && null != ej && !0 === eI
+                              disabled: '' !== ej && null != ej && !0 === eb
                           })
                         : null,
                     tm
@@ -486,7 +486,7 @@ function e_(e) {
                 (tl = !0);
             break;
         case 'AUTHORIZE_BOT_PERMISSIONS':
-            if (null == ex) return { body: (0, a.jsx)(I.$, { className: eu.spinner }) };
+            if (null == ex) return { body: (0, a.jsx)(b.$, { className: eu.spinner }) };
             (d = (0, a.jsx)(J.Z, {
                 application: ex.application,
                 permissions: e6,
@@ -528,7 +528,7 @@ function e_(e) {
                 application: ex.application,
                 bot: ex.bot,
                 accountScopes: e4,
-                showLogout: eb || !1,
+                showLogout: eI || !1,
                 location: eD
             })),
         tf &&
@@ -561,7 +561,7 @@ function e_(e) {
                               })
                             : (0, a.jsx)('div', {
                                   className: eu.action,
-                                  children: (0, a.jsx)(b.Tooltip, {
+                                  children: (0, a.jsx)(I.Tooltip, {
                                       text: el.intl.string(el.t['7UiwCw']),
                                       children: (e) =>
                                           (0, a.jsx)('div', {

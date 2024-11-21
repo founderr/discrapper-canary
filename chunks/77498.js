@@ -28,8 +28,8 @@ let p = 'GameStoreReportedGames',
     g = {},
     E = null !== (i = o.K.get(p)) && void 0 !== i ? i : {},
     v = '';
-let I = null;
-function b(e) {
+let b = null;
+function I(e) {
     return {
         id: e.id,
         name: e.name,
@@ -43,7 +43,7 @@ function b(e) {
     };
 }
 function T(e) {
-    let t = e instanceof d.Z ? b(e) : e;
+    let t = e instanceof d.Z ? I(e) : e;
     for (let n of (h.set(e.id, t), (m[e.name.toLowerCase()] = t), e.aliases)) m[n.toLowerCase()] = t;
     if ((0, f.isDesktop)()) for (let n of e.executables) g[n.name] = t;
 }
@@ -84,7 +84,7 @@ class S extends (a = s.ZP.PersistedStore) {
         return v;
     }
     get lastFetched() {
-        return I;
+        return b;
     }
     getGameByExecutable(e) {
         return g[e];
@@ -124,7 +124,7 @@ _(S, 'displayName', 'GameStore'),
                 };
             return {
                 detectableGamesEtag: e.detectableGamesEtag,
-                detectableGames: null !== (n = null === (t = e.detectableGames) || void 0 === t ? void 0 : t.map((e) => b(new d.Z(e)))) && void 0 !== n ? n : []
+                detectableGames: null !== (n = null === (t = e.detectableGames) || void 0 === t ? void 0 : t.map((e) => I(new d.Z(e)))) && void 0 !== n ? n : []
             };
         },
         (e) =>
@@ -165,6 +165,6 @@ _(S, 'displayName', 'GameStore'),
                         };
                     })(e)
                 );
-            (r = void 0), (I = Date.now());
+            (r = void 0), (b = Date.now());
         }
     }));

@@ -9,7 +9,7 @@ n.d(t, {
         return R;
     },
     lX: function () {
-        return I;
+        return b;
     },
     ob: function () {
         return f;
@@ -120,7 +120,7 @@ function v() {
         return {};
     }
 }
-function I(e) {
+function b(e) {
     void 0 === e && (e = {}), h || (0, s.Z)(!1);
     var t,
         n = window.history;
@@ -128,9 +128,9 @@ function I(e) {
         a = -1 !== window.navigator.userAgent.indexOf('Trident'),
         l = e,
         _ = l.forceRefresh,
-        I = void 0 !== _ && _,
-        b = l.getUserConfirmation,
-        T = void 0 === b ? m : b,
+        b = void 0 !== _ && _,
+        I = l.getUserConfirmation,
+        T = void 0 === I ? m : I,
         S = l.keyLength,
         y = void 0 === S ? 6 : S,
         A = e.basename ? c(o(e.basename)) : '';
@@ -212,7 +212,7 @@ function I(e) {
                                     null,
                                     t
                                 ),
-                                I)
+                                b)
                             )
                                 window.location.href = t;
                             else {
@@ -247,7 +247,7 @@ function I(e) {
                                     null,
                                     t
                                 ),
-                                I)
+                                b)
                             )
                                 window.location.replace(t);
                             else {
@@ -291,7 +291,7 @@ function I(e) {
         };
     return F;
 }
-var b = 'hashchange',
+var I = 'hashchange',
     T = {
         hashbang: {
             encodePath: function (e) {
@@ -334,7 +334,7 @@ function N(e) {
         g = T[void 0 === l ? 'slash' : l],
         E = g.encodePath,
         v = g.decodePath;
-    function I() {
+    function b() {
         var e = v(y());
         return _ && (e = u(e, _)), f(e);
     }
@@ -351,7 +351,7 @@ function N(e) {
         else {
             var n,
                 r,
-                i = I(),
+                i = b(),
                 s = B.location;
             if ((!R && ((n = s), (r = i), n.pathname === r.pathname && n.search === r.search && n.hash === r.hash)) || O === d(i)) return;
             (O = null),
@@ -380,14 +380,14 @@ function N(e) {
     var L = y(),
         x = E(L);
     L !== x && A(x);
-    var w = I(),
+    var w = b(),
         M = [d(w)];
     function P(e) {
         t.go(e);
     }
     var k = 0;
     function U(e) {
-        1 === (k += e) && 1 === e ? window.addEventListener(b, D) : 0 === k && window.removeEventListener(b, D);
+        1 === (k += e) && 1 === e ? window.addEventListener(I, D) : 0 === k && window.removeEventListener(I, D);
     }
     var G = !1,
         B = {

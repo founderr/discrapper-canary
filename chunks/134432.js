@@ -1,6 +1,6 @@
 n.d(t, {
     Q4: function () {
-        return I;
+        return b;
     },
     Vv: function () {
         return g;
@@ -112,7 +112,7 @@ function v(e) {
     }
     return null !== (t = _.find((t) => e <= t)) && void 0 !== t ? t : _[_.length - 1];
 }
-function I(e) {
+function b(e) {
     let { src: t, width: n, height: r, maxWidth: a, maxHeight: s, ratio: l = 1, format: u = null, quality: d = null, animated: _ = !1, srcIsAnimated: p = !1 } = e,
         h = n,
         m = r;

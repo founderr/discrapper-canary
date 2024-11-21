@@ -17,8 +17,8 @@ var d = n(616254),
     g = n(485359),
     E = n(395727),
     v = n(471638),
-    I = n(585275),
-    b = n(960048),
+    b = n(585275),
+    I = n(960048),
     T = n(63063),
     S = n(240849),
     y = n(998502),
@@ -50,18 +50,18 @@ if (null != x.Z) {
         void 0 === r ||
         r.call(x.Z, (e, t) => {
             setImmediate(() => {
-                throw (b.Z.captureCrash(e), e);
+                throw (I.Z.captureCrash(e), e);
             });
         });
     let e = null === (i = (a = x.Z.remoteApp).getVersion) || void 0 === i ? void 0 : i.call(a),
         t = null === (s = (o = x.Z.remoteApp).getBuildNumber) || void 0 === s ? void 0 : s.call(o),
         n = {};
     null != x.Z.remoteApp.getModuleVersions && (n = x.Z.remoteApp.getModuleVersions()),
-        b.Z.setExtra({
+        I.Z.setExtra({
             hostVersion: e,
             moduleVersions: n
         }),
-        b.Z.setTags({ nativeBuildNumber: null == t ? void 0 : t.toString() });
+        I.Z.setTags({ nativeBuildNumber: null == t ? void 0 : t.toString() });
     let c = Object.keys(n)
         .filter((e) => null != n[e])
         .map((e) => ''.concat(e, ': ').concat(n[e]))
@@ -91,5 +91,5 @@ else {
                 (0, O.al)(window);
             });
     }
-    E.Z.initialize(), h.Z.initialize(), m.Z.init(), I.Z.init(), U.Z.init(), g.Z.initialize(), S.Z.initialize(), A.Z.initialize(), v.j(), H(p.Z.App);
+    E.Z.initialize(), h.Z.initialize(), m.Z.init(), b.Z.init(), U.Z.init(), g.Z.initialize(), S.Z.initialize(), A.Z.initialize(), v.j(), H(p.Z.App);
 }

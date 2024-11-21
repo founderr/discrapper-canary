@@ -56,7 +56,7 @@ function v(e) {
     for (let e of ['ex', 'is', 'hm']) t.searchParams.delete(e);
     return t;
 }
-function I(e) {
+function b(e) {
     let t = (function (e) {
         let t = e.searchParams.get('ex'),
             n = parseInt(null != t ? t : '', 16);
@@ -64,21 +64,21 @@ function I(e) {
     })(e);
     return null == t || t <= Date.now() + p;
 }
-function b(e) {
+function I(e) {
     let t = l.Z.toURLSafe(e.url);
-    return null != t && I(t);
+    return null != t && b(t);
 }
 function T(e) {
     if (null == e) return !1;
     let t = l.Z.toURLSafe(e.url);
-    return !!(null != t && g(t)) && I(t);
+    return !!(null != t && g(t)) && b(t);
 }
 function S(e) {
     var t;
     return T(e.image) || (null === (t = e.images) || void 0 === t ? void 0 : t.some(T)) || T(e.video);
 }
 function y(e) {
-    return e.attachments.some(b) || e.embeds.some(S);
+    return e.attachments.some(I) || e.embeds.some(S);
 }
 async function A(e) {
     let t = await s.tn.post({
@@ -90,7 +90,7 @@ async function A(e) {
 }
 async function N(e) {
     let t = l.Z.toURLSafe(e);
-    if (null == t || !I(t)) return e;
+    if (null == t || !b(t)) return e;
     let n = await A(e);
     return null != n ? n : e;
 }

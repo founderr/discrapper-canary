@@ -1,9 +1,9 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return I;
     },
     r: function () {
-        return I;
+        return b;
     }
 });
 var r = n(200651);
@@ -24,7 +24,7 @@ var i = n(120356),
     g = n(273716),
     E = n(388032),
     v = n(497041);
-function I(e) {
+function b(e) {
     let { title: t, onJumpToChannel: n, onHide: i, idle: a, preventIdleComponent: l } = e,
         c = (0, s.e7)([p.Z], () => p.Z.getChannelId()),
         _ =
@@ -68,8 +68,8 @@ function I(e) {
         ]
     });
 }
-function b(e) {
-    let { children: t, idle: n, onJumpToChannel: i, onHide: s, backgroundKey: o, onActive: u, onForceIdle: d, renderBottomLeftControls: f, renderBottomRightControls: p, screenMessage: h, hideControls: g = !1, className: E, innerClassName: b, ...T } = e;
+function I(e) {
+    let { children: t, idle: n, onJumpToChannel: i, onHide: s, backgroundKey: o, onActive: u, onForceIdle: d, renderBottomLeftControls: f, renderBottomRightControls: p, screenMessage: h, hideControls: g = !1, className: E, innerClassName: I, ...T } = e;
     return (0, r.jsxs)('div', {
         onMouseMove: u,
         onMouseDown: u,
@@ -81,7 +81,7 @@ function b(e) {
                 children: (0, r.jsx)(
                     _.B,
                     {
-                        className: b,
+                        className: I,
                         children: t
                     },
                     o
@@ -99,7 +99,7 @@ function b(e) {
                     children: [
                         (0, r.jsx)('div', {
                             className: v.topControls,
-                            children: (0, r.jsx)(I, {
+                            children: (0, r.jsx)(b, {
                                 idle: n,
                                 onJumpToChannel: i,
                                 onHide: s,

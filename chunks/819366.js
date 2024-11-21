@@ -20,8 +20,8 @@ var r = n(200651),
     g = n(347475),
     E = n(592125),
     v = n(271383),
-    I = n(430824),
-    b = n(699516),
+    b = n(430824),
+    I = n(699516),
     T = n(594174),
     S = n(5192),
     y = n(51144),
@@ -76,8 +76,8 @@ function C(e) {
                           });
                   },
         P = y.ZP.useName(L),
-        k = (0, l.e7)([E.Z, v.ZP, b.Z], () => S.ZP.getNickname(w, a, L)),
-        U = I.Z.getGuild(w),
+        k = (0, l.e7)([E.Z, v.ZP, I.Z], () => S.ZP.getNickname(w, a, L)),
+        U = b.Z.getGuild(w),
         G = (0, _.Ib)(U, x) && i === A.fL ? A.jM : null;
     if (null == L)
         return (0, r.jsx)(N, {

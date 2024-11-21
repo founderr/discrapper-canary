@@ -24,7 +24,7 @@ n.d(t, {
         return g;
     },
     dA: function () {
-        return b;
+        return I;
     },
     uw: function () {
         return h;
@@ -132,7 +132,7 @@ async function v(e, t, n) {
         subscriptionTrial: r
     });
 }
-async function I(e, t) {
+async function b(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         r = await c.K5(e, t, n);
     return (
@@ -143,7 +143,7 @@ async function I(e, t) {
         r
     );
 }
-async function b(e) {
+async function I(e) {
     let { guildId: t, groupListingId: n, data: r, analyticsContext: a, onBeforeDispatchNewListing: s } = e,
         u = await c.aG(t, n, r);
     return (
@@ -154,7 +154,7 @@ async function b(e) {
             has_change_from_template: a.hasChangeFromTemplate,
             ...(0, o.hH)(t)
         }),
-        await I(t, n, { includeArchivedListings: !0 }),
+        await b(t, n, { includeArchivedListings: !0 }),
         null == s || s(u),
         i.Z.dispatch({
             type: 'GUILD_ROLE_SUBSCRIPTIONS_UPDATE_LISTING',
@@ -171,7 +171,7 @@ async function T(e) {
             type: 'GUILD_ROLE_SUBSCRIPTIONS_UPDATE_LISTING',
             listing: s
         }),
-        await I(t, r, { includeArchivedListings: !0 }),
+        await b(t, r, { includeArchivedListings: !0 }),
         s
     );
 }

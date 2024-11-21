@@ -53,8 +53,8 @@ var r = n(512722),
     g = n(979651),
     E = n(934415),
     v = n(70956),
-    I = n(557457),
-    b = n(573261);
+    b = n(557457),
+    I = n(573261);
 n(26151), n(493683);
 var T = n(475179);
 n(287734);
@@ -167,7 +167,7 @@ async function w(e, t, n) {
 }
 async function M(e) {
     try {
-        await b.Z.post({
+        await I.Z.post({
             url: S.ANM.STREAM_NOTIFY(e),
             oldFormErrors: !0,
             trackedActionData: { event: a.NetworkActionNames.STREAM_NOTIFY },
@@ -176,7 +176,7 @@ async function M(e) {
     } catch (e) {}
 }
 function P(e) {
-    (0, I.Ye)(e.preset, e.resolution, e.frameRate),
+    (0, b.Ye)(e.preset, e.resolution, e.frameRate),
         o.Z.dispatch({
             type: 'STREAM_UPDATE_SETTINGS',
             ...e

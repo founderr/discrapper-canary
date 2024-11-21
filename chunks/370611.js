@@ -21,8 +21,8 @@ var r = n(200651),
     g = n(5192),
     E = n(358085),
     v = n(998502),
-    I = n(528567),
-    b = n(371583),
+    b = n(528567),
+    I = n(371583),
     T = n(246627),
     S = n(249268),
     y = n(864138),
@@ -58,7 +58,7 @@ function L(e) {
                 };
             });
         }, [t, p]),
-        g = (0, b.K)(t),
+        g = (0, I.K)(t),
         { primaryColor: E } = (0, c.Z)(g),
         v = i.useMemo(() => {
             let e = (0, m.oo)(E),
@@ -108,7 +108,7 @@ function L(e) {
                                       (0, r.jsx)(l.Text, {
                                           variant: 'text-xxs/medium',
                                           className: D.headerValue,
-                                          children: (0, I.s)({
+                                          children: (0, b.s)({
                                               statisticId: A,
                                               sortDesc: C,
                                               aggregationType: null == R ? void 0 : R.aggregation_type
@@ -140,7 +140,7 @@ function L(e) {
 }
 function x(e) {
     let { leaderboard: t } = e,
-        n = (0, b.K)(t);
+        n = (0, I.K)(t);
     return (0, r.jsx)(y.z, {
         imageUrl: n,
         children: (0, r.jsxs)('span', {
@@ -165,8 +165,8 @@ function x(e) {
 function w(e) {
     let { userId: t, rank: n, value: a, guildId: s, previousRank: c, locale: d, leaderboard: f, trackRankingItemInteraction: _ } = e,
         m = (0, o.e7)([h.default], () => h.default.getUser(t)),
-        I = g.ZP.getName(s, void 0, m),
-        b = null != c && c > n,
+        b = g.ZP.getName(s, void 0, m),
+        I = null != c && c > n,
         [T, S] = i.useState('default'),
         y = (0, o.e7)([p.Z], () => {
             let e = p.Z.getPrimaryActivity(t);
@@ -219,7 +219,7 @@ function w(e) {
     return (0, r.jsxs)('div', {
         className: D.userRow,
         children: [
-            b ? (0, r.jsx)('div', { className: D.rankChangeIndicator }) : null,
+            I ? (0, r.jsx)('div', { className: D.rankChangeIndicator }) : null,
             (0, r.jsx)('div', {
                 className: D.userRank,
                 children:
@@ -247,7 +247,7 @@ function w(e) {
                     (0, r.jsx)(l.Heading, {
                         variant: 'heading-sm/medium',
                         color: 'header-primary',
-                        children: I
+                        children: b
                     }),
                     1 === n
                         ? (0, r.jsxs)(r.Fragment, {
@@ -264,7 +264,7 @@ function w(e) {
                               ]
                           })
                         : null,
-                    b ? (0, r.jsx)(P, { rankChange: c - n }) : null
+                    I ? (0, r.jsx)(P, { rankChange: c - n }) : null
                 ]
             }),
             (0, r.jsxs)('div', {

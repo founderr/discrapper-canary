@@ -23,8 +23,8 @@ var r = n(310644),
 function v(e, t, n) {
     (0, d.Z)(2, arguments);
     var v,
-        I,
         b,
+        I,
         T,
         S,
         y,
@@ -42,8 +42,8 @@ function v(e, t, n) {
         k,
         U = String(t),
         G = (0, f.j)(),
-        B = null !== (v = null !== (I = null == n ? void 0 : n.locale) && void 0 !== I ? I : G.locale) && void 0 !== v ? v : _.Z,
-        Z = (0, c.Z)(null !== (b = null !== (T = null !== (S = null !== (y = null == n ? void 0 : n.firstWeekContainsDate) && void 0 !== y ? y : null == n ? void 0 : null === (A = n.locale) || void 0 === A ? void 0 : null === (N = A.options) || void 0 === N ? void 0 : N.firstWeekContainsDate) && void 0 !== S ? S : G.firstWeekContainsDate) && void 0 !== T ? T : null === (C = G.locale) || void 0 === C ? void 0 : null === (R = C.options) || void 0 === R ? void 0 : R.firstWeekContainsDate) && void 0 !== b ? b : 1);
+        B = null !== (v = null !== (b = null == n ? void 0 : n.locale) && void 0 !== b ? b : G.locale) && void 0 !== v ? v : _.Z,
+        Z = (0, c.Z)(null !== (I = null !== (T = null !== (S = null !== (y = null == n ? void 0 : n.firstWeekContainsDate) && void 0 !== y ? y : null == n ? void 0 : null === (A = n.locale) || void 0 === A ? void 0 : null === (N = A.options) || void 0 === N ? void 0 : N.firstWeekContainsDate) && void 0 !== S ? S : G.firstWeekContainsDate) && void 0 !== T ? T : null === (C = G.locale) || void 0 === C ? void 0 : null === (R = C.options) || void 0 === R ? void 0 : R.firstWeekContainsDate) && void 0 !== I ? I : 1);
     if (!(Z >= 1 && Z <= 7)) throw RangeError('firstWeekContainsDate must be between 1 and 7 inclusively');
     var F = (0, c.Z)(null !== (O = null !== (D = null !== (L = null !== (x = null == n ? void 0 : n.weekStartsOn) && void 0 !== x ? x : null == n ? void 0 : null === (w = n.locale) || void 0 === w ? void 0 : null === (M = w.options) || void 0 === M ? void 0 : M.weekStartsOn) && void 0 !== L ? L : G.weekStartsOn) && void 0 !== D ? D : null === (P = G.locale) || void 0 === P ? void 0 : null === (k = P.options) || void 0 === k ? void 0 : k.weekStartsOn) && void 0 !== O ? O : 0);
     if (!(F >= 0 && F <= 6)) throw RangeError('weekStartsOn must be between 0 and 6 inclusively');

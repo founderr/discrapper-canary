@@ -52,8 +52,8 @@ var r = n(863714),
                       };
             }),
     v = f(null),
-    I = Math.random(),
-    b = f(null, {
+    b = Math.random(),
+    I = f(null, {
         narrow: {},
         short: {},
         long: {}
@@ -474,8 +474,8 @@ function x(e, t, n, r, i) {
     for (var h = '-u', m = 0, g = r.length; m < g; ) {
         var E = r[m],
             v = i[s][E],
-            I = v['0'],
-            b = '';
+            b = v['0'],
+            I = '';
         if (void 0 !== f) {
             var T = d.call(f, E);
             if (-1 !== T) {
@@ -483,19 +483,19 @@ function x(e, t, n, r, i) {
                     var S = f[T + 1],
                         y = d.call(v, S);
                     if (-1 !== y)
-                        var I = S,
-                            b = '-' + E + '-' + I;
+                        var b = S,
+                            I = '-' + E + '-' + b;
                 } else {
                     var y = d(v, 'true');
-                    if (-1 !== y) var I = 'true';
+                    if (-1 !== y) var b = 'true';
                 }
             }
         }
         if (u.call(n, '[[' + E + ']]')) {
             var A = n['[[' + E + ']]'];
-            -1 !== d.call(v, A) && A !== I && ((I = A), (b = ''));
+            -1 !== d.call(v, A) && A !== b && ((b = A), (I = ''));
         }
-        (p['[[' + E + ']]'] = I), (h += b), m++;
+        (p['[[' + E + ']]'] = b), (h += I), m++;
     }
     if (h.length > 2) var s = s.substring(0, l) + h + s.substring(l);
     return (p['[[locale]]'] = s), p;
@@ -535,7 +535,7 @@ function U(e, t, n) {
     if (!0 === i['[[initializedIntlObject]]']) throw TypeError('`this` object has already been initialized as an Intl object');
     c(e, '__getInternalProperties', {
         value: function () {
-            if (arguments[0] === I) return i;
+            if (arguments[0] === b) return i;
         }
     }),
         (i['[[initializedIntlObject]]'] = !0);
@@ -563,10 +563,10 @@ function U(e, t, n) {
     'currency' === p && (i['[[currencyDisplay]]'] = g);
     var E = P(n, 'minimumIntegerDigits', 1, 21, 1);
     i['[[minimumIntegerDigits]]'] = E;
-    var b = P(n, 'minimumFractionDigits', 0, 20, 'currency' === p ? m : 0);
-    i['[[minimumFractionDigits]]'] = b;
-    var T = 'currency' === p ? Math.max(b, m) : 'percent' === p ? Math.max(b, 0) : Math.max(b, 3),
-        S = P(n, 'maximumFractionDigits', b, 20, T);
+    var I = P(n, 'minimumFractionDigits', 0, 20, 'currency' === p ? m : 0);
+    i['[[minimumFractionDigits]]'] = I;
+    var T = 'currency' === p ? Math.max(I, m) : 'percent' === p ? Math.max(I, 0) : Math.max(I, 3),
+        S = P(n, 'maximumFractionDigits', I, 20, T);
     i['[[maximumFractionDigits]]'] = S;
     var A = n.minimumSignificantDigits,
         N = n.maximumSignificantDigits;
@@ -654,11 +654,11 @@ function B(e, t) {
                 g = o.patterns.secondaryGroupSize || p;
             if (_.length > p) {
                 var E = new J(),
-                    I = _.length - p,
-                    b = I % g,
-                    T = _.slice(0, b);
-                for (T.length && h.call(E, T); b < I; ) h.call(E, _.slice(b, b + g)), (b += g);
-                h.call(E, _.slice(I)), (f[0] = m.call(E, l.group));
+                    b = _.length - p,
+                    I = b % g,
+                    T = _.slice(0, I);
+                for (T.length && h.call(E, T); I < b; ) h.call(E, _.slice(I, I + g)), (I += g);
+                h.call(E, _.slice(b)), (f[0] = m.call(E, l.group));
             }
             n = m.call(f, l.decimal);
         }
@@ -723,7 +723,7 @@ function V(e, t, n) {
     if (!0 === r['[[initializedIntlObject]]']) throw TypeError('`this` object has already been initialized as an Intl object');
     c(e, '__getInternalProperties', {
         value: function () {
-            if (arguments[0] === I) return r;
+            if (arguments[0] === b) return r;
         }
     }),
         (r['[[initializedIntlObject]]'] = !0);
@@ -744,12 +744,12 @@ function V(e, t, n) {
             o['[[' + m + ']]'] = g;
         }
     var E,
-        b = f[p],
+        I = f[p],
         T = (function (e) {
             return '[object Array]' === Object.prototype.toString.call(e) ? e : i.createDateTimeFormats(e);
-        })(b.formats),
+        })(I.formats),
         S = M(n, 'formatMatcher', 'string', new J('basic', 'best fit'), 'best fit');
-    for (var m in ((b.formats = T),
+    for (var m in ((I.formats = T),
     (E =
         'basic' === S
             ? (function (e, t) {
@@ -766,8 +766,8 @@ function V(e, t, n) {
     var A,
         N = M(n, 'hour12', 'boolean');
     if (r['[[hour]]']) {
-        if (((N = void 0 === N ? b.hour12 : N), (r['[[hour12]]'] = N), !0 === N)) {
-            var C = b.hourNo0;
+        if (((N = void 0 === N ? I.hour12 : N), (r['[[hour12]]'] = N), !0 === N)) {
+            var C = I.hourNo0;
             (r['[[hourNo0]]'] = C), (A = E.pattern12);
         } else A = E.pattern;
     } else A = E.pattern;
@@ -855,7 +855,7 @@ function W() {
 }
 function K(e, t) {
     if (!isFinite(t)) throw RangeError('Invalid valid date passed to format');
-    var n = e.__getInternalProperties(I),
+    var n = e.__getInternalProperties(b),
         r = $(),
         i = n['[[locale]]'],
         a = new s.NumberFormat([i], { useGrouping: !1 }),
@@ -890,7 +890,7 @@ function K(e, t) {
                 E = l['[[' + p + ']]'];
             if (('year' === p && E <= 0 ? (E = 1 - E) : 'month' === p ? E++ : 'hour' === p && !0 === n['[[hour12]]'] && ((E %= 12), (h = E !== l['[[' + p + ']]']), 0 === E && !0 === n['[[hourNo0]]'] && (E = 12)), 'numeric' === g)) m = B(a, E);
             else if ('2-digit' === g) (m = B(o, E)).length > 2 && (m = m.slice(-2));
-            else if (g in b)
+            else if (g in I)
                 switch (p) {
                     case 'month':
                         m = Q(f, _, 'months', g, l['[[' + p + ']]']);
@@ -1092,6 +1092,6 @@ function et(e) {
     return Object(e);
 }
 function en(e) {
-    return u.call(e, '__getInternalProperties') ? e.__getInternalProperties(I) : f(null);
+    return u.call(e, '__getInternalProperties') ? e.__getInternalProperties(b) : f(null);
 }
 (X.prototype = f(null)), (J.prototype = f(null)), (t.default = s);

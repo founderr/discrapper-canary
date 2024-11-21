@@ -34,8 +34,8 @@ var i = n(200651),
     y = n(719296),
     P = n(651612),
     M = n(918559),
-    L = n(981631),
-    R = n(388032),
+    R = n(981631),
+    L = n(388032),
     k = n(735299);
 let O = A.u.SIZE_32,
     D = {
@@ -162,7 +162,7 @@ function w(e) {
         );
     };
     return (0, i.jsx)(c.ThemeProvider, {
-        theme: L.BRd.DARK,
+        theme: R.BRd.DARK,
         children: (e) =>
             (0, i.jsxs)('div', {
                 className: a()(k.wrapper, D[K], e),
@@ -228,7 +228,7 @@ function w(e) {
                                                       })
                                                   }),
                                                   (0, i.jsx)(f.d, {
-                                                      label: R.intl.string(R.t.brPQ5e),
+                                                      label: L.intl.string(L.t.brPQ5e),
                                                       onClick: z,
                                                       iconComponent: c.MinimizeIcon,
                                                       themeable: !0,
@@ -248,10 +248,10 @@ function w(e) {
                               maxHeight: r,
                               resizableNode: W,
                               onResize: (e) => {
-                                  I.S.dispatch(L.CkL.MANUAL_IFRAME_RESIZING, { resizing: !0 }), X(e);
+                                  I.S.dispatch(R.CkL.MANUAL_IFRAME_RESIZING, { resizing: !0 }), X(e);
                               },
                               onResizeEnd: (e) => {
-                                  I.S.dispatch(L.CkL.MANUAL_IFRAME_RESIZING, { resizing: !1 }), J(e);
+                                  I.S.dispatch(R.CkL.MANUAL_IFRAME_RESIZING, { resizing: !1 }), J(e);
                               }
                           })
                         : null

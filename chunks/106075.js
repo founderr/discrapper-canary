@@ -29,7 +29,7 @@ function T() {
         { tabs: S, selectedTab: A, setSelectedTab: x } = (0, f.Y)(),
         b = (0, m.lg)(A),
         Z = !I.MU.has(A),
-        { searchQuery: L, onSearchTextChange: y, onClearSearch: P, onSearchSubmit: O, isSearchVisible: R } = (0, g.H)({ loadId: e.current }),
+        { searchQuery: L, onSearchTextChange: y, onClearSearch: O, onSearchSubmit: P, isSearchVisible: R } = (0, g.H)({ loadId: e.current }),
         {
             searchBarState: j,
             onTabsAvailableWidthChange: D,
@@ -43,9 +43,9 @@ function T() {
         U = u.Z.useField('fetchedQuery'),
         G = r.useCallback(
             (e) => {
-                x(e), R && P();
+                x(e), R && O();
             },
-            [R, P, x]
+            [R, O, x]
         ),
         B = r.useMemo(
             () =>
@@ -82,7 +82,7 @@ function T() {
                         R
                             ? (0, i.jsx)(o.Cm, {
                                   icon: l.ArrowLargeLeftIcon,
-                                  onClick: P
+                                  onClick: O
                               })
                             : (0, i.jsx)(o.aV, { icon: l.ServerIcon }),
                         !R &&
@@ -105,8 +105,8 @@ function T() {
                                 query: L,
                                 placeholder: v.intl.string(v.t['5h0QOD']),
                                 onTextChange: y,
-                                onClear: P,
-                                onSubmit: O,
+                                onClear: O,
+                                onSubmit: P,
                                 onCollapsedClick: M,
                                 state: R ? C.WB.DEFAULT : j,
                                 onBlur: w

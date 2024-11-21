@@ -21,8 +21,8 @@ var i = n(120356),
     g = n(810568),
     E = n(168524),
     v = n(833858),
-    I = n(769654),
-    b = n(960870),
+    b = n(769654),
+    I = n(960870),
     T = n(139793),
     S = n(994746),
     y = n(273284),
@@ -70,7 +70,7 @@ function z(e) {
                 entry: es
             })
         }),
-        el = (0, b.Z)({
+        el = (0, I.Z)({
             display: 'live',
             user: n,
             activity: z,
@@ -154,7 +154,7 @@ function z(e) {
                         variant: 'text-xs/normal',
                         text: Y.intl.formatToPlainString(Y.t['hq/Qzc'], { guildName: Q.name }),
                         onClick: () => {
-                            (0, I.X)(Q.id), el({ action: 'OPEN_VOICE_GUILD' }), null == $ || $();
+                            (0, b.X)(Q.id), el({ action: 'OPEN_VOICE_GUILD' }), null == $ || $();
                         }
                     })
                   : (0, c.Z)(z)
@@ -228,7 +228,7 @@ function z(e) {
                 end: t
             });
         },
-        eI = () =>
+        eb = () =>
             null == e_
                 ? (0, r.jsxs)('div', {
                       children: [eh(), em(), eg()]
@@ -240,7 +240,7 @@ function z(e) {
                       },
                       children: [eh(), em(), eg()]
                   }),
-        eb = () =>
+        eI = () =>
             null == Q || null == X
                 ? null
                 : (0, r.jsxs)(r.Fragment, {
@@ -319,7 +319,7 @@ function z(e) {
                                                         (0, r.jsxs)('div', {
                                                             className: K.details,
                                                             children: [
-                                                                eI(),
+                                                                eb(),
                                                                 !n.bot &&
                                                                     (0, r.jsx)(w.Z, {
                                                                         user: n,
@@ -332,7 +332,7 @@ function z(e) {
                                                         en === V.y0.FULL_SIZE && eT()
                                                     ]
                                                 }),
-                                                eb()
+                                                eI()
                                             ]
                                         }),
                                         en !== V.y0.FULL_SIZE && eT()

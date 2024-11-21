@@ -15,8 +15,8 @@ var a,
 let g = 5 * h.Z.Millis.MINUTE,
     E = 10 * h.Z.Millis.SECOND,
     v = {},
-    I = {},
-    b = {};
+    b = {},
+    I = {};
 let T = {};
 function S(e) {
     var t;
@@ -32,9 +32,9 @@ function y(e) {
     }
     let t = v[e];
     delete v[e];
-    let n = b[e];
-    null != n && delete I[n],
-        delete b[e],
+    let n = I[e];
+    null != n && delete b[n],
+        delete I[e],
         (T[e] = {
             insertedAt: Date.now(),
             nonce: e,
@@ -44,19 +44,19 @@ function y(e) {
 }
 class A extends (a = u.ZP.Store) {
     getInteraction(e) {
-        let t = I[e.id];
+        let t = b[e.id];
         return null != t ? v[t] : null;
     }
     getMessageInteractionStates() {
         let e = {};
         for (let [t, n] of Object.entries(v)) {
-            let r = b[t];
+            let r = I[t];
             null != r && (e[r] = n.state);
         }
         return e;
     }
     canQueueInteraction(e, t) {
-        let n = I[e];
+        let n = b[e];
         return (null == n || null == v[n] || v[n].state === m.F.FAILED) && (null == v[t] || v[t].state === m.F.FAILED) && !0;
     }
     getIFrameModalApplicationId() {
@@ -78,8 +78,8 @@ class A extends (a = u.ZP.Store) {
     (t.ZP = new A(c.Z, {
         LOGOUT: function () {
             (v = {}),
-                (I = {}),
                 (b = {}),
+                (I = {}),
                 (T = {}),
                 setInterval(() => {
                     let e = Date.now();
@@ -88,7 +88,7 @@ class A extends (a = u.ZP.Store) {
         },
         INTERACTION_QUEUE: function (e) {
             let { nonce: t, messageId: n, data: r, onCreate: i, onCancel: a, onSuccess: s, onFailure: o } = e;
-            null != n && ((I[n] = t), (b[t] = n)),
+            null != n && ((b[n] = t), (I[t] = n)),
                 (v[t] = {
                     state: m.F.QUEUED,
                     data: r,
@@ -165,6 +165,6 @@ class A extends (a = u.ZP.Store) {
                 s = r.find((e) => e.user_id === a && e.session_id === i);
             if (null == s || null == s.nonce) return;
             let o = T[s.nonce];
-            if ((null == o ? ((t = b[s.nonce]), (n = v[s.nonce])) : ((t = o.messageId), (n = o.interaction)), null != n && null != t)) y(s.nonce), null != t && 'channelId' in n.data && d.Z.deleteMessage(n.data.channelId, t, !0);
+            if ((null == o ? ((t = I[s.nonce]), (n = v[s.nonce])) : ((t = o.messageId), (n = o.interaction)), null != n && null != t)) y(s.nonce), null != t && 'channelId' in n.data && d.Z.deleteMessage(n.data.channelId, t, !0);
         }
     }));

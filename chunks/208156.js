@@ -24,11 +24,11 @@ var r = n(200651),
     m = n(981631),
     g = n(336259);
 function E(e) {
-    let { url: t, className: n, style: a, onLoad: s, shouldRefocus: g, queryParams: E, allowPopups: v = !1, referrerPolicy: I = 'origin' } = e,
-        b = (0, f.sU)({}),
+    let { url: t, className: n, style: a, onLoad: s, shouldRefocus: g, queryParams: E, allowPopups: v = !1, referrerPolicy: b = 'origin' } = e,
+        I = (0, f.sU)({}),
         T = (0, o.useMemoOne)(() => (0, l.Z)(), [t]),
         S = i.useRef(null),
-        y = (0, _.Z)(S, g, null == b ? window : b),
+        y = (0, _.Z)(S, g, null == I ? window : I),
         A = {
             ...E,
             frame_id: T,
@@ -65,7 +65,7 @@ function E(e) {
             ? (0, r.jsx)('iframe', {
                   style: O,
                   allow: 'autoplay; encrypted-media',
-                  referrerPolicy: I,
+                  referrerPolicy: b,
                   onLoad: function (e) {
                       var n;
                       null == s || s(e.target), (S.current = e.target), y(!0), null === (n = e.target.contentWindow) || void 0 === n || n.postMessage([u.Z.HELLO, A], null != t ? t : '');

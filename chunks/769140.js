@@ -21,8 +21,8 @@ var r = n(200651),
     g = n(194082),
     E = n(318374),
     v = n(102172),
-    I = n(359110),
-    b = n(769654),
+    b = n(359110),
+    I = n(769654),
     T = n(922482),
     S = n(543882),
     y = n(592125),
@@ -200,7 +200,7 @@ function z(e) {
                                     (0, r.jsx)(l.Clickable, {
                                         className: s()(H.clickable, H.inline),
                                         onClick: () => {
-                                            null == en || en({ action: 'OPEN_VOICE_CHANNEL' }), e ? (0, T.Cq)(ea) : (u.default.selectVoiceChannel(ea.id), (0, I.Kh)(ea.id)), null == q || q();
+                                            null == en || en({ action: 'OPEN_VOICE_CHANNEL' }), e ? (0, T.Cq)(ea) : (u.default.selectVoiceChannel(ea.id), (0, b.Kh)(ea.id)), null == q || q();
                                         },
                                         children: ea.name
                                     })
@@ -210,7 +210,7 @@ function z(e) {
                                 variant: 'text-xs/normal',
                                 text: j.intl.formatToPlainString(j.t['hq/Qzc'], { guildName: ei.name }),
                                 onClick: () => {
-                                    en({ action: 'OPEN_VOICE_GUILD' }), (0, b.X)(ei.id), null == q || q();
+                                    en({ action: 'OPEN_VOICE_GUILD' }), (0, I.X)(ei.id), null == q || q();
                                 }
                             })
                         ]

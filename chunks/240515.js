@@ -43,7 +43,7 @@ function h(e) {
         confirmText: f.intl.string(f.t.ytCpKi),
         cancelText: f.intl.string(f.t['ETE/oK']),
         onConfirm: () => {
-            null == m || m(), s.Z.ignoreUser(t.id, E), l.default.track(d.rMx.IGNORE_USER_CONFIRMED);
+            null == m || m(), s.Z.ignoreUser(t.id, E, null != h ? h : void 0), l.default.track(d.rMx.IGNORE_USER_CONFIRMED);
         },
         impression: { impressionName: i.ImpressionNames.IGNORE_USER_CONFIRMATION },
         confirmButtonColor: a.Button.Colors.BRAND,

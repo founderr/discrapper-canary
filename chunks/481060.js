@@ -160,7 +160,7 @@ n.r(t),
             return tv.Dv;
         },
         BasePopout: function () {
-            return eb.H;
+            return eI.H;
         },
         BeakerIcon: function () {
             return tR.uOV;
@@ -370,10 +370,10 @@ n.r(t),
             return tR.ics;
         },
         Checkbox: function () {
-            return I.X;
+            return b.X;
         },
         CheckboxIndicator: function () {
-            return I.F;
+            return b.F;
         },
         CheckmarkLargeBoldIcon: function () {
             return tR.sV5;
@@ -484,7 +484,7 @@ n.r(t),
             return tR.gZW;
         },
         Collapsible: function () {
-            return b.z;
+            return I.z;
         },
         ColorPicker: function () {
             return tl.zH;
@@ -1426,7 +1426,7 @@ n.r(t),
             return tR.qDn;
         },
         QuickSelect: function () {
-            return tI.n;
+            return tb.n;
         },
         QuoteIcon: function () {
             return tR.PEf;
@@ -1528,7 +1528,7 @@ n.r(t),
             return tm.Z;
         },
         SearchableQuickSelect: function () {
-            return tb.E;
+            return tI.E;
         },
         SearchableSelect: function () {
             return eG.V;
@@ -1693,7 +1693,7 @@ n.r(t),
             return z.Kq;
         },
         StackedProgress: function () {
-            return eI.y;
+            return eb.y;
         },
         StaffBadgeIcon: function () {
             return tR.Ymb;
@@ -2316,8 +2316,8 @@ var r = n(680732),
     g = n(276513),
     E = n(374558),
     v = n(49800),
-    I = n(178940),
-    b = n(57260),
+    b = n(178940),
+    I = n(57260),
     T = n(1561),
     S = n(605578),
     y = n(838331),
@@ -2370,8 +2370,8 @@ var r = n(680732),
     eg = n(4738),
     eE = n(694743),
     ev = n(278126),
-    eI = n(507173),
-    eb = n(930295),
+    eb = n(507173),
+    eI = n(930295),
     eT = n(920676),
     eS = n(235874),
     ey = n(126306),
@@ -2434,8 +2434,8 @@ var r = n(680732),
     tg = n(327496),
     tE = n(225779),
     tv = n(801729),
-    tI = n(683976),
-    tb = n(488164),
+    tb = n(683976),
+    tI = n(488164),
     tT = n(226690),
     tS = n(912494),
     ty = n(300033),

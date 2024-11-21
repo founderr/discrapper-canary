@@ -25,15 +25,15 @@ function d(e, t, n) {
             scrollLeft: 0,
             scrollTop: 0
         },
-        I = {
+        b = {
             x: 0,
             y: 0
         };
     return (
-        (h || (!h && !n)) && (('body' !== (0, a.Z)(t) || (0, u.Z)(g)) && (v = (0, i.Z)(t)), (0, s.Re)(t) ? ((I = (0, r.Z)(t, !0)), (I.x += t.clientLeft), (I.y += t.clientTop)) : g && (I.x = (0, o.Z)(g))),
+        (h || (!h && !n)) && (('body' !== (0, a.Z)(t) || (0, u.Z)(g)) && (v = (0, i.Z)(t)), (0, s.Re)(t) ? ((b = (0, r.Z)(t, !0)), (b.x += t.clientLeft), (b.y += t.clientTop)) : g && (b.x = (0, o.Z)(g))),
         {
-            x: E.left + v.scrollLeft - I.x,
-            y: E.top + v.scrollTop - I.y,
+            x: E.left + v.scrollLeft - b.x,
+            y: E.top + v.scrollTop - b.y,
             width: E.width,
             height: E.height
         }

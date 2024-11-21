@@ -22,8 +22,8 @@ var r = n(729594),
     g = n(754688),
     E = n(336197),
     v = n(977156),
-    I = n(341907),
-    b = n(540709),
+    b = n(341907),
+    I = n(540709),
     T = n(881706),
     S = n(701190),
     y = n(944486),
@@ -199,5 +199,5 @@ function M(e) {
                 !0
             );
     }
-    return k && (null == S ? void 0 : S.startsWith('/discovery/quests')) ? (e) => (null == e || e.preventDefault(), (0, I.navigateToQuestHome)(D.dr.BADGE, a.j.QUEST_BADGE), !0) : t || null == (0, T.v)(e) ? void 0 : (t) => (null == t || t.preventDefault(), b.Z.show(e), !0);
+    return k && (null == S ? void 0 : S.startsWith('/discovery/quests')) ? (e) => (null == e || e.preventDefault(), (0, b.navigateToQuestHome)(D.dr.BADGE, a.j.QUEST_BADGE), !0) : t || null == (0, T.v)(e) ? void 0 : (t) => (null == t || t.preventDefault(), I.Z.show(e), !0);
 }

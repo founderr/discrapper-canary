@@ -25,8 +25,8 @@ var r,
     g = n(539873),
     E = n(207164),
     v = n(238302),
-    I = n(514361),
-    b = n(572397),
+    b = n(514361),
+    I = n(572397),
     T = n(705262),
     S = n(436774),
     y = n(768762),
@@ -38,7 +38,7 @@ var r,
     D = n(388032),
     L = n(396088);
 function x() {
-    let e = (0, b.q)();
+    let e = (0, I.q)();
     return (
         s.useEffect(() => ((0, v.Kq)(), e(C.rMx.CLIENT_THEME_PREVIEW_VIEWED), () => e(C.rMx.CLIENT_THEME_PREVIEW_CLOSED)), [e]),
         (0, a.jsx)(T.ZP, {
@@ -155,10 +155,10 @@ function P(e) {
             ],
             []
         ),
-        l = (0, c.e7)([I.Z], () => I.Z.isPreview),
+        l = (0, c.e7)([b.Z], () => b.Z.isPreview),
         u = (0, c.e7)([m.Z], () => m.Z.isUpsellPreview),
         f = l || u,
-        p = (0, b.J)(),
+        p = (0, I.J)(),
         g = s.useCallback(() => {
             l && p(), u && (0, h.O7)();
         }, [l, u, p]),

@@ -24,10 +24,10 @@ function d(e) {
             },
             [p, g, h, m]
         ),
-        I = f ? s()(c.item, u._[n], { [c.focused]: a }) : c.customItem;
+        b = f ? s()(c.item, u._[n], { [c.focused]: a }) : c.customItem;
     return (0, r.jsx)(o.P, {
         innerRef: E,
-        className: I,
+        className: b,
         onClick: d ? void 0 : v,
         'aria-disabled': d,
         ..._,

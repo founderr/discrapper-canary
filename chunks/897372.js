@@ -16,8 +16,8 @@ var r,
     g = n(700312).codeAt,
     E = n(233591),
     v = n(714050),
-    I = n(865312),
-    b = n(202934),
+    b = n(865312),
+    I = n(202934),
     T = n(320273),
     S = n(644659),
     y = S.set,
@@ -205,8 +205,8 @@ var r,
     },
     eE = {},
     ev = {},
-    eI = {},
     eb = {},
+    eI = {},
     eT = {},
     eS = {},
     ey = {},
@@ -252,7 +252,7 @@ eB.prototype = {
                     if (d && M(z, d)) (s += j(d)), (i = ev);
                     else {
                         if (t) return Y;
-                        i = eI;
+                        i = eb;
                         continue;
                     }
                     break;
@@ -264,14 +264,14 @@ eB.prototype = {
                             this.isSpecial() && eh[this.scheme] === this.port && (this.port = null);
                             return;
                         }
-                        (s = ''), 'file' === this.scheme ? (i = eL) : this.isSpecial() && n && n.scheme === this.scheme ? (i = eb) : this.isSpecial() ? (i = eA) : '/' === c[a + 1] ? ((i = eT), a++) : ((this.cannotBeABaseURL = !0), G(this.path, ''), (i = ek));
+                        (s = ''), 'file' === this.scheme ? (i = eL) : this.isSpecial() && n && n.scheme === this.scheme ? (i = eI) : this.isSpecial() ? (i = eA) : '/' === c[a + 1] ? ((i = eT), a++) : ((this.cannotBeABaseURL = !0), G(this.path, ''), (i = ek));
                     } else {
                         if (t) return Y;
-                        (s = ''), (i = eI), (a = 0);
+                        (s = ''), (i = eb), (a = 0);
                         continue;
                     }
                     break;
-                case eI:
+                case eb:
                     if (!n || (n.cannotBeABaseURL && '#' !== d)) return Y;
                     if (n.cannotBeABaseURL && '#' === d) {
                         (this.scheme = n.scheme), (this.path = m(n.path)), (this.query = n.query), (this.fragment = ''), (this.cannotBeABaseURL = !0), (i = eG);
@@ -279,7 +279,7 @@ eB.prototype = {
                     }
                     i = 'file' === n.scheme ? eL : eS;
                     continue;
-                case eb:
+                case eI:
                     if ('/' === d && '/' === c[a + 1]) (i = eN), a++;
                     else {
                         i = eS;
@@ -324,13 +324,13 @@ eB.prototype = {
                 case eC:
                     if ('@' === d) {
                         o && (s = '%40' + s), (o = !0), (f = h(s));
-                        for (var c, d, f, p, g, E, I = 0; I < f.length; I++) {
-                            var b = f[I];
-                            if (':' === b && !u) {
+                        for (var c, d, f, p, g, E, b = 0; b < f.length; b++) {
+                            var I = f[b];
+                            if (':' === I && !u) {
                                 u = !0;
                                 continue;
                             }
-                            var T = ep(b, e_);
+                            var T = ep(I, e_);
                             u ? (this.password += T) : (this.username += T);
                         }
                         s = '';
@@ -587,7 +587,7 @@ eB.prototype = {
 };
 var eZ = function (e) {
         var t = f(this, eF),
-            n = b(arguments.length, 1) > 1 ? arguments[1] : void 0,
+            n = I(arguments.length, 1) > 1 ? arguments[1] : void 0,
             r = y(t, new eB(e, !1, n));
         !a && ((t.href = r.serialize()), (t.origin = r.getOrigin()), (t.protocol = r.getProtocol()), (t.username = r.getUsername()), (t.password = r.getPassword()), (t.host = r.getHost()), (t.hostname = r.getHostname()), (t.port = r.getPort()), (t.pathname = r.getPathname()), (t.search = r.getSearch()), (t.searchParams = r.getSearchParams()), (t.hash = r.getHash()));
     },
@@ -630,7 +630,7 @@ if (
         eH = R.revokeObjectURL;
     ej && c(eZ, 'createObjectURL', l(ej, R)), eH && c(eZ, 'revokeObjectURL', l(eH, R));
 }
-I(eZ, 'URL'),
+b(eZ, 'URL'),
     i(
         {
             global: !0,

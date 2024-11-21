@@ -74,7 +74,7 @@ let E = async (e, t) => {
             }
         });
     },
-    I = async (e, t) => {
+    b = async (e, t) => {
         let { body: n } = await r.tn.patch({
             url: m.ANM.GUILD_MEMBER_VERIFICATION(e),
             body: { description: t },
@@ -91,7 +91,7 @@ let E = async (e, t) => {
             }
         });
     },
-    b = async (e, t) => {
+    I = async (e, t) => {
         await r.tn.patch({
             url: m.ANM.GUILD_MEMBER_VERIFICATION(e),
             body: { enabled: t },
@@ -168,7 +168,7 @@ t.ZP = {
             isLocalUpdate: !0
         });
     },
-    updateVerificationFormDescription: I,
+    updateVerificationFormDescription: b,
     updateVerificationFormDescriptionLocal: (e, t) => {
         i.Z.dispatch({
             type: 'MEMBER_VERIFICATION_FORM_UPDATE',
@@ -177,7 +177,7 @@ t.ZP = {
             isLocalUpdate: !0
         });
     },
-    enableVerificationForm: b,
+    enableVerificationForm: I,
     submitVerificationForm: S,
     clearCoachmark: function () {
         i.Z.dispatch({ type: 'USER_GUILD_JOIN_REQUEST_COACHMARK_CLEAR' });

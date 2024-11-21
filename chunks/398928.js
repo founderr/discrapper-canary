@@ -6,7 +6,7 @@ n.d(t, {
         return o;
     }
 });
-var r = n(239700),
+var r = n(608167),
     i = n(192379),
     a = n(989103);
 class s extends Set {
@@ -23,20 +23,20 @@ function o(e) {
         [, p] = (0, i.useState)(null),
         h = (0, i.useMemo)(() => l(e.selectedKeys), [e.selectedKeys]),
         m = (0, i.useMemo)(() => l(e.defaultSelectedKeys, new s()), [e.defaultSelectedKeys]),
-        [g, E] = (0, r.zk)(h, m, e.onSelectionChange),
+        [g, E] = (0, r.z)(h, m, e.onSelectionChange),
         v = (0, i.useMemo)(() => (e.disabledKeys ? new Set(e.disabledKeys) : new Set()), [e.disabledKeys]),
-        [I, b] = (0, i.useState)(o);
-    'replace' === o && 'toggle' === I && 'object' == typeof g && 0 === g.size && b('replace');
+        [b, I] = (0, i.useState)(o);
+    'replace' === o && 'toggle' === b && 'object' == typeof g && 0 === g.size && I('replace');
     let T = (0, i.useRef)(o);
     return (
         (0, i.useEffect)(() => {
-            o !== T.current && (b(o), (T.current = o));
+            o !== T.current && (I(o), (T.current = o));
         }, [o]),
         {
             selectionMode: t,
             disallowEmptySelection: n,
-            selectionBehavior: I,
-            setSelectionBehavior: b,
+            selectionBehavior: b,
+            setSelectionBehavior: I,
             get isFocused() {
                 return c.current;
             },

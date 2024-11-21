@@ -15,8 +15,8 @@ var r,
     g = n(531460),
     E = n(391673),
     v = o.setImmediate,
-    I = o.clearImmediate,
-    b = o.process,
+    b = o.clearImmediate,
+    I = o.process,
     T = o.Dispatch,
     S = o.Function,
     y = o.MessageChannel,
@@ -44,7 +44,7 @@ var O = function (e) {
     x = function (e) {
         o.postMessage(A(e), r.protocol + '//' + r.host);
     };
-(!v || !I) &&
+(!v || !b) &&
     ((v = function (e) {
         m(arguments.length, 1);
         var t = c(e) ? e : S(e),
@@ -57,12 +57,12 @@ var O = function (e) {
             N
         );
     }),
-    (I = function (e) {
+    (b = function (e) {
         delete C[e];
     }),
     E
         ? (i = function (e) {
-              b.nextTick(D(e));
+              I.nextTick(D(e));
           })
         : T && T.now
           ? (i = function (e) {
@@ -84,5 +84,5 @@ var O = function (e) {
                           })),
     (e.exports = {
         set: v,
-        clear: I
+        clear: b
     });

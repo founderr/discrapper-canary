@@ -21,8 +21,8 @@ var r = n(200651),
     g = n(438163),
     E = n(502762),
     v = n(952124),
-    I = n(544989),
-    b = n(171368),
+    b = n(544989),
+    I = n(171368),
     T = n(895697),
     S = n(161572),
     y = n(228168),
@@ -49,7 +49,7 @@ function C(e) {
     }, [Z, x]);
     let V = (e) => {
         null == L || L(),
-            (0, b.openUserProfileModal)({
+            (0, I.openUserProfileModal)({
                 sourceAnalyticsLocations: P,
                 ...k,
                 ...e
@@ -68,7 +68,7 @@ function C(e) {
                     displayProfile: U,
                     profileType: y.y0.BITE_SIZE,
                     children: [
-                        (0, r.jsx)(I.Z, {
+                        (0, r.jsx)(b.Z, {
                             profileType: y.y0.BITE_SIZE,
                             children: (0, r.jsx)(v.Z, {
                                 user: t,

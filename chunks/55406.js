@@ -79,14 +79,14 @@ let E = (e) => {
             ...('function' == typeof r.customRules.paragraph ? r.customRules.paragraph(e) : r.customRules.paragraph)
         }
     }),
-    I = (e) => ({
+    b = (e) => ({
         lheading: {
             ...u,
             parse: E({ transformUpperCase: !1 }),
             ...('function' == typeof r.customRules.lheading ? r.customRules.lheading(e) : r.customRules.lheading)
         }
     }),
-    b = (e) => ({
+    I = (e) => ({
         ...v(e),
         newline: { ...a().defaultRules.newline },
         text: l.ZP,
@@ -97,7 +97,7 @@ t.Z = {
     getDefaultRules: (e) => ({ ...v(e) }),
     getSpecialRules: (e) => ({
         ...v(e),
-        ...I(e)
+        ...b(e)
     }),
-    getMessageRules: (e) => ({ ...b(e) })
+    getMessageRules: (e) => ({ ...I(e) })
 };

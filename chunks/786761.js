@@ -38,9 +38,9 @@ n(51144);
 var E = n(572804);
 n(739566);
 var v = n(959517),
-    I = n(981631);
+    b = n(981631);
 n(388032);
-let b = new d.Z({
+let I = new d.Z({
     id: '???',
     username: '???'
 });
@@ -53,7 +53,7 @@ function T(e) {
         attachments: N(e),
         embeds: R(e),
         components: (0, s.uZ)(null !== (t = e.components) && void 0 !== t ? t : [], { includeEmojiSrc: !1 }),
-        codedLinks: e.type === I.uaV.THREAD_CREATED ? [] : (0, a.ZP)(e.content)
+        codedLinks: e.type === b.uaV.THREAD_CREATED ? [] : (0, a.ZP)(e.content)
     });
 }
 function S(e) {
@@ -65,14 +65,14 @@ function S(e) {
         x = null !== (a = e.mention_roles) && void 0 !== a ? a : [],
         w = null !== (s = e.mention_channels) && void 0 !== s ? s : [],
         M = e.message_reference;
-    let P = null == (h = e).author ? b : null != h.webhook_id ? new d.Z(h.author) : null !== (v = p.default.getUser(h.author.id)) && void 0 !== v ? v : new d.Z(h.author),
+    let P = null == (h = e).author ? I : null != h.webhook_id ? new d.Z(h.author) : null !== (v = p.default.getUser(h.author.id)) && void 0 !== v ? v : new d.Z(h.author),
         k = null == e ? void 0 : e.gift_info,
         U = e.gifting_prompt,
         G = null != e.interaction ? u.Z.createFromServer(e.interaction) : null,
-        B = e.type === I.uaV.THREAD_STARTER_MESSAGE ? (null === (r = e.referenced_message) || void 0 === r ? void 0 : null === (n = r.author) || void 0 === n ? void 0 : n.id) : void 0;
+        B = e.type === b.uaV.THREAD_STARTER_MESSAGE ? (null === (r = e.referenced_message) || void 0 === r ? void 0 : null === (n = r.author) || void 0 === n ? void 0 : n.id) : void 0;
     let Z = e.content;
     return (
-        e.type === I.uaV.PREMIUM_REFERRAL && ((y = g.default.isProbablyAValidSnowflake(e.content) ? e.content : void 0), (Z = '')),
+        e.type === b.uaV.PREMIUM_REFERRAL && ((y = g.default.isProbablyAValidSnowflake(e.content) ? e.content : void 0), (Z = '')),
         (S = 0),
         new c.ZP({
             ...e,
@@ -220,5 +220,5 @@ function D(e) {
 }
 let L = (e) => 0 === (0, l.cv)(e).length || '' !== e.content;
 function x(e) {
-    return e.hasFlag(I.iLy.EPHEMERAL) && e.type !== I.uaV.IN_GAME_MESSAGE_NUX;
+    return e.hasFlag(b.iLy.EPHEMERAL) && e.type !== b.uaV.IN_GAME_MESSAGE_NUX;
 }

@@ -41,13 +41,13 @@ var r = n(392711),
     E = n(823379);
 n(358085);
 var v = n(709054),
-    I = n(981631);
+    b = n(981631);
 n(388032), l().shim();
-let b = !u.tq && !u.Em && -1 !== (0, m.vu)();
+let I = !u.tq && !u.Em && -1 !== (0, m.vu)();
 function T(e, t) {
     let { analyticsSource: n, analyticsProperties: r, storeListingId: i, slug: a, channelId: s, guildId: o } = t;
     return {
-        pathname: null != s && null != o ? I.Z5c.CHANNEL(o, s, e) : I.Z5c.APPLICATION_STORE_LISTING_SKU(e, a),
+        pathname: null != s && null != o ? b.Z5c.CHANNEL(o, s, e) : b.Z5c.APPLICATION_STORE_LISTING_SKU(e, a),
         state: {
             analyticsSource: n,
             analyticsProperties: r
@@ -71,7 +71,7 @@ function S(e, t, n, r) {
             default:
                 r = 'webp';
         }
-    'webp' === r && !b && (r = 'png');
+    'webp' === r && !I && (r = 'png');
     let o = 'string' == typeof t ? t : t.id,
         l = ((i = 'https:'), 'https:');
     return (
@@ -81,7 +81,7 @@ function S(e, t, n, r) {
                 : ''
                       .concat(l)
                       .concat(window.GLOBAL_ENV.API_ENDPOINT)
-                      .concat(I.ANM.STORE_ASSET(e, o, r))),
+                      .concat(b.ANM.STORE_ASSET(e, o, r))),
         null != n && (a += '?size='.concat((0, f.oO)(n * (0, f.x_)()))),
         a
     );
@@ -159,7 +159,7 @@ function C(e, t, n, r, a) {
             return 0 === a.length
                 ? null
                 : {
-                      type: I.AzA.NOW_PLAYING,
+                      type: b.AzA.NOW_PLAYING,
                       userInfo: a
                   };
         })(o, n, r);
@@ -191,7 +191,7 @@ function C(e, t, n, r, a) {
                 return 0 === i.length
                     ? null
                     : {
-                          type: I.AzA.EVER_PLAYED,
+                          type: b.AzA.EVER_PLAYED,
                           userInfo: i
                       };
             })(o, n, a);
@@ -206,23 +206,23 @@ function O(e, t, n) {
         i = n.getForSKU(e);
     if (null == r || null == i) return R;
     let a = [];
-    (0, g.yE)(r.flags, I.l4R.HAS_FREE_PREMIUM_CONTENT) && a.push({ type: I.AzA.HAS_FREE_PREMIUM_CONTENT });
+    (0, g.yE)(r.flags, b.l4R.HAS_FREE_PREMIUM_CONTENT) && a.push({ type: b.AzA.HAS_FREE_PREMIUM_CONTENT });
     let o = r.releaseDate;
     return (
         null != o &&
             3 > s()().diff(o, 'months') &&
-            (r.accessType === I.kGb.EARLY_ACCESS
+            (r.accessType === b.kGb.EARLY_ACCESS
                 ? a.push({
-                      type: I.AzA.EARLY_ACCESS,
+                      type: b.AzA.EARLY_ACCESS,
                       releaseDate: o
                   })
                 : a.push({
-                      type: I.AzA.RECENT_RELEASE_DATE,
+                      type: b.AzA.RECENT_RELEASE_DATE,
                       releaseDate: o
                   })),
         null != i.flavorText &&
             a.push({
-                type: I.AzA.FLAVOR_TEXT,
+                type: b.AzA.FLAVOR_TEXT,
                 flavorText: i.flavorText
             }),
         a

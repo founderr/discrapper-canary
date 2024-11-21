@@ -21,7 +21,7 @@ t.Z = (e) => {
         }),
         E = null !== (n = h.getIconURL(64)) && void 0 !== n ? n : p,
         v = (0, s.Z)({ application: h }),
-        I = null != g ? d.default.extractTimestamp(g.id) : void 0;
+        b = null != g ? d.default.extractTimestamp(g.id) : void 0;
     return (0, r.jsxs)('div', {
         className: _.container,
         children: [
@@ -76,11 +76,11 @@ t.Z = (e) => {
                                                   variant: 'text-xs/normal',
                                                   children: null === (t = h.bot) || void 0 === t ? void 0 : t.tag
                                               }),
-                                              null != I &&
+                                              null != b &&
                                                   (0, r.jsx)(a.Text, {
                                                       color: 'text-normal',
                                                       variant: 'text-xs/normal',
-                                                      children: f.intl.formatToPlainString(f.t.C9rUOz, { authorizedAt: I })
+                                                      children: f.intl.formatToPlainString(f.t.C9rUOz, { authorizedAt: b })
                                                   })
                                           ]
                                       })

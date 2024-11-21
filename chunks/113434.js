@@ -110,8 +110,8 @@ var r,
     g = n(583434),
     E = n(706454),
     v = n(553795),
-    I = n(70956),
-    b = n(63063),
+    b = n(70956),
+    I = n(63063),
     T = n(930153),
     S = n(358085),
     y = n(617136),
@@ -297,7 +297,7 @@ let z = (e) => {
             }
             let s = window.setInterval(() => {
                 i();
-            }, 1 * I.Z.Millis.SECOND);
+            }, 1 * b.Z.Millis.SECOND);
             return () => {
                 clearInterval(s), i();
             };
@@ -477,8 +477,8 @@ let er = (e) => {
         let { xboxAccounts: e, playstationAccounts: t } = en(),
             n = e.length > 0,
             r = t.length > 0,
-            i = b.Z.getArticleURL(k.BhN.QUEST_HOW_TO_PLAYSTATION),
-            a = b.Z.getArticleURL(k.BhN.QUEST_HOW_TO_XBOX),
+            i = I.Z.getArticleURL(k.BhN.QUEST_HOW_TO_PLAYSTATION),
+            a = I.Z.getArticleURL(k.BhN.QUEST_HOW_TO_XBOX),
             s = U.intl.format(U.t.beN4DA, {
                 psHelpdeskArticle: i,
                 xboxHelpdeskArticle: a

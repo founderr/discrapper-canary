@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return y;
+        return Z;
     }
 }),
     n(47120),
@@ -34,7 +34,7 @@ let E = (0, h.hQ)();
 function R(e, t) {
     return t !== m.O1.AND ? Object.values(o().groupBy(e, (e) => ''.concat(e.connectionType, ':').concat(e.applicationId))) : 0 === e.length ? [] : [[...e]];
 }
-function Z(e) {
+function y(e) {
     let { handleAddVerificationClicked: t, locked: n } = e;
     return (0, i.jsxs)('div', {
         className: b.headerNoConfigContainer,
@@ -61,9 +61,9 @@ function Z(e) {
         ]
     });
 }
-function y(e) {
+function Z(e) {
     let { guild: t, role: n, locked: l, setSelectedSection: a, integrations: o } = e,
-        { headerHeight: h, headerRef: y } = (0, C.Z)(0),
+        { headerHeight: h, headerRef: Z } = (0, C.Z)(0),
         { scrolledToTop: A, handleScroll: L } = (0, _.V)(),
         D = (0, c.e7)(
             [x.Z],
@@ -78,11 +78,11 @@ function y(e) {
             return null !== (e = f.Z.getEditedRoleConnectionConfigurationsMap().get(n.id)) && void 0 !== e ? e : [];
         }),
         k = O.length > 1 ? m.O1.OR : m.O1.AND,
-        M = r.useMemo(() => (k === m.O1.OR ? O.flat() : null != O && O.length > 0 ? O[0] : []), [k, O]),
-        P = r.useMemo(() => new Set(M.map((e) => e.connectionType)), [M]);
+        P = r.useMemo(() => (k === m.O1.OR ? O.flat() : null != O && O.length > 0 ? O[0] : []), [k, O]),
+        M = r.useMemo(() => new Set(P.map((e) => e.connectionType)), [P]);
     function w(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
-            i = [...M];
+            i = [...P];
         i.push({
             connectionType: e,
             connectionMetadataField: void 0,
@@ -96,21 +96,21 @@ function y(e) {
         u.Z.dispatch({
             type: 'CONNECTIONS_GRID_MODAL_SHOW',
             onComplete: (e) => w(e),
-            excludedPlatformTypes: P,
+            excludedPlatformTypes: M,
             integrations: o,
             onCompleteApplication: (e) => w(T.Kt, e)
         });
     }
     let U = null;
-    if (0 === M.length)
-        U = (0, i.jsx)(Z, {
+    if (0 === P.length)
+        U = (0, i.jsx)(y, {
             handleAddVerificationClicked: B,
             locked: l
         });
-    else if (M.length > 0) {
+    else if (P.length > 0) {
         var G, F;
         let e = null;
-        M.length < 10 &&
+        P.length < 10 &&
             (e = (0, i.jsx)(d.Button, {
                 className: s()(b.addVerificationButton, b.addVerificationButtonAppend),
                 size: d.Button.Sizes.LARGE,
@@ -184,7 +184,7 @@ function y(e) {
                                 'aria-labelledby': E
                             })
                         });
-                    })(l, n.id, k, M, (e, t) => (0, p.d_)(n.id, R(e, t))),
+                    })(l, n.id, k, P, (e, t) => (0, p.d_)(n.id, R(e, t))),
                     (function (e, t, n, r, l) {
                         function s(n, i) {
                             let r = [];
@@ -248,7 +248,7 @@ function y(e) {
                                 )
                             )
                         });
-                    })(M, (e) => (0, p.d_)(n.id, R(e, k)), l, n.id, o),
+                    })(P, (e) => (0, p.d_)(n.id, R(e, k)), l, n.id, o),
                     e
                 ]
             }));
@@ -262,7 +262,7 @@ function y(e) {
             children: [
                 (0, i.jsx)('div', {
                     className: s()(S.header, S.stickyHeader, { [S.stickyHeaderElevated]: !A }),
-                    ref: y,
+                    ref: Z,
                     children: (0, i.jsx)(_.Z, {
                         guild: t,
                         role: n,

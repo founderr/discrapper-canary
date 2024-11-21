@@ -21,8 +21,8 @@ var r = n(200651),
     g = n(228168),
     E = n(921944),
     v = n(388032),
-    I = n(398813),
-    b = n(881828);
+    b = n(398813),
+    I = n(881828);
 let T = 32;
 function S(e) {
     let { user: t, children: n, onClose: S } = e,
@@ -57,11 +57,11 @@ function S(e) {
                 children: (0, r.jsx)(f.ZP, {
                     header: v.intl.string(v.t.ZQJ629),
                     content: v.intl.string(v.t['mU+JXF']),
-                    className: I.tooltip,
+                    className: b.tooltip,
                     asset: (0, r.jsx)('img', {
                         alt: '',
-                        src: b,
-                        className: I.asset
+                        src: I,
+                        className: b.asset
                     }),
                     buttonCTA: v.intl.string(v.t.RzWDqa),
                     secondaryButtonCTA: v.intl.string(v.t.om7Ovr),

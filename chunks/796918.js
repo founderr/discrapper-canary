@@ -24,11 +24,11 @@ t.Z = (e) => {
         S = [...b[N], ...b[(N + 1) % b.length]],
         E = r.useMemo(() => Array.from(v), [v]),
         R = r.useMemo(() => E.filter((e) => !g.WZ.has(e) && !g.gh.has(e)), [E]),
-        Z = (e) => {
+        y = (e) => {
             let t = new Set(v);
             t.delete(e), n({ interests: t });
         },
-        y = r.useCallback(
+        Z = r.useCallback(
             (e) => {
                 if (v.size === g.c4) return;
                 let t = null != e ? e : _.trim();
@@ -43,10 +43,10 @@ t.Z = (e) => {
                 switch (e.key) {
                     case 'Enter':
                     case 'Tab':
-                        e.preventDefault(), e.stopPropagation(), y();
+                        e.preventDefault(), e.stopPropagation(), Z();
                 }
             },
-            [y]
+            [Z]
         ),
         L = r.useCallback(() => {
             T((e) => (e + 1) % b.length);
@@ -99,7 +99,7 @@ t.Z = (e) => {
                                     }),
                                     _.length > 0 &&
                                         (0, i.jsx)(o.Clickable, {
-                                            onClick: () => y(_.trim()),
+                                            onClick: () => Z(_.trim()),
                                             className: s()(f.plusIcon, f.clickable),
                                             children: (0, i.jsx)(o.PlusSmallIcon, {
                                                 size: 'md',
@@ -132,7 +132,7 @@ t.Z = (e) => {
                                             color: 'interactive-normal',
                                             text: e,
                                             selected: v.has(e),
-                                            onClick: v.has(e) ? Z : y
+                                            onClick: v.has(e) ? y : Z
                                         },
                                         e
                                     ),
@@ -171,7 +171,7 @@ t.Z = (e) => {
                                 progress: l,
                                 traitsToHighlight: R,
                                 maskDescription: !0,
-                                onTraitClick: Z
+                                onTraitClick: y
                             })
                     })
                 ]

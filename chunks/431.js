@@ -42,7 +42,7 @@ function v() {
     let e = u.default.getCurrentUser();
     !(0, c.I5)(e) && Object.keys(h.userDiscountOffers).length > 0 && (0, o.T)('UserOfferStore', !0);
 }
-function I() {
+function b() {
     var e;
     let t = null === (e = u.default.getCurrentUser()) || void 0 === e ? void 0 : e.id;
     if (null == t) return !1;
@@ -58,9 +58,9 @@ function I() {
     }
     return !1;
 }
-class b extends (r = i.ZP.PersistedStore) {
+class I extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        (h = null != e ? e : p), this.waitFor(u.default), this.syncWith([u.default], g), this.syncWith([d.ZP], E), this.syncWith([s.Z], I);
+        (h = null != e ? e : p), this.waitFor(u.default), this.syncWith([u.default], g), this.syncWith([d.ZP], E), this.syncWith([s.Z], b);
     }
     getUserTrialOffer(e) {
         if (null !== e) return h.userTrialOffers[e];
@@ -120,9 +120,9 @@ class b extends (r = i.ZP.PersistedStore) {
         m();
     }
 }
-_(b, 'displayName', 'UserOfferStore'),
-    _(b, 'persistKey', 'UserOfferStore'),
-    _(b, 'migrations', [
+_(I, 'displayName', 'UserOfferStore'),
+    _(I, 'persistKey', 'UserOfferStore'),
+    _(I, 'migrations', [
         (e) => {
             let t = null == e ? void 0 : e.userDiscounts;
             if (null != t)
@@ -150,7 +150,7 @@ _(b, 'displayName', 'UserOfferStore'),
                     : e;
         }
     ]),
-    (t.Z = new b(a.Z, {
+    (t.Z = new I(a.Z, {
         BILLING_USER_OFFER_FETCH_START: function () {
             h.isFetching = !0;
         },

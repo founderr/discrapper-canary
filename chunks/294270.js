@@ -19,8 +19,8 @@ let _ = 15 * l.Z.Millis.SECOND,
     },
     E = new a.V7(),
     v = [],
-    I = {},
-    b = (0, u.tu)('highfive_whistle', 'highfive_whistle', 0.6),
+    b = {},
+    I = (0, u.tu)('highfive_whistle', 'highfive_whistle', 0.6),
     T = (0, u.tu)('highfive_clap', 'highfive_clap', 0.6);
 function S(e) {
     let { emoji: t, channelId: n, userId: r } = e,
@@ -34,35 +34,35 @@ function S(e) {
                 if (null != d.Z.getWaitingHighFive(n, t)) return;
                 let [s, o] =
                     null !==
-                        (r = Object.entries(I).find((e) => {
+                        (r = Object.entries(b).find((e) => {
                             let [t] = e;
                             return t !== i;
                         })) && void 0 !== r
                         ? r
                         : [];
-                if (null != s && null != o) o.cancel(), T.play(), delete I[s], (0, c.Ym)(s.split(':')[0], t, n, e);
+                if (null != s && null != o) o.cancel(), T.play(), delete b[s], (0, c.Ym)(s.split(':')[0], t, n, e);
                 else {
-                    (0, c._g)(e, t, n), b.play();
+                    (0, c._g)(e, t, n), I.play();
                     let r = new a.sW(p, () => {
-                        delete I[t], (0, c.Gd)(t, n);
+                        delete b[t], (0, c.Gd)(t, n);
                     });
-                    (I[t] = r), r.delay();
+                    (b[t] = r), r.delay();
                 }
             })(t.name, r, n);
-        r === s && ((v = [...v, t.name].slice(-1 * m)), i().isEqual(v, h) ? (b.play(), E.stop(), (v = []), (0, c.ME)(!l)) : E.start(_, () => (v = [])));
+        r === s && ((v = [...v, t.name].slice(-1 * m)), i().isEqual(v, h) ? (I.play(), E.stop(), (v = []), (0, c.ME)(!l)) : E.start(_, () => (v = [])));
     }
 }
 function y(e) {
     let { completingUserId: t, waitingUserId: n, channelId: r } = e,
         i = g(''.concat(t).concat(n), r, !0);
-    (I[i] = new a.sW(550, () => {
-        delete I[i], (0, c.hu)(t, n, r);
+    (b[i] = new a.sW(550, () => {
+        delete b[i], (0, c.hu)(t, n, r);
     })),
-        I[i].delay();
+        b[i].delay();
 }
 class A extends s.Z {
     _terminate() {
-        Object.values(I).forEach((e) => e.cancel()), (I = {});
+        Object.values(b).forEach((e) => e.cancel()), (b = {});
     }
     constructor(...e) {
         var t, n, r;

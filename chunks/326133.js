@@ -16,8 +16,8 @@ var r = n(200651),
     g = n(430824),
     E = n(436896),
     v = n(590921),
-    I = n(606992),
-    b = n(51062),
+    b = n(606992),
+    I = n(51062),
     T = n(918559),
     S = n(828021);
 t.Z = i.forwardRef(function (e, t) {
@@ -33,7 +33,7 @@ t.Z = i.forwardRef(function (e, t) {
             [C.guild_id]
         ),
         w = i.useRef(),
-        [M, P, k] = (0, b.Z)(
+        [M, P, k] = (0, I.Z)(
             {
                 ...e,
                 guild: x
@@ -45,7 +45,7 @@ t.Z = i.forwardRef(function (e, t) {
         G = (0, f.DJ)(M.selectedIndex);
     (0, _.KR)(L, M.isVisible, G), E.Z.trackExposure({ location: '6e9811_1' });
     let { usePopoutAutocomplete: B } = E.Z.useExperiment({ location: '6e9811_2' }, { autoTrackExposure: !1 }),
-        Z = (0, I.Z)({
+        Z = (0, b.Z)({
             editorHeight: O,
             type: R,
             state: M,

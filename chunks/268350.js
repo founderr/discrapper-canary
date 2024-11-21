@@ -1,12 +1,12 @@
 n.d(t, {
     $p: function () {
-        return I;
+        return b;
     },
     FQ: function () {
         return v;
     },
     Il: function () {
-        return b;
+        return I;
     },
     Jf: function () {
         return A;
@@ -65,7 +65,7 @@ let v = async (e, t) => {
             n
         );
     },
-    I = async function () {
+    b = async function () {
         let { locale: e = u.default.locale } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
         if (h.Z.isFetchingStickerPacks || h.Z.hasLoadedStickerPacks) return;
         s.Z.wait(() => {
@@ -83,7 +83,7 @@ let v = async (e, t) => {
             packs: t
         });
     },
-    b = async (e) => {
+    I = async (e) => {
         let { body: t } = await a.tn.get({
             url: m.ANM.STICKER(e),
             rejectWithError: !1

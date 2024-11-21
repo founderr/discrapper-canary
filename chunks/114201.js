@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return b;
     }
 });
 var r = n(200651);
@@ -21,17 +21,17 @@ var i = n(99815),
     g = n(981631),
     E = n(388032),
     v = n(288984);
-function I(e) {
-    let { guildId: t, leaderboardId: I } = e,
-        b = (0, a.e7)([l.default], () => l.default.getId()),
+function b(e) {
+    let { guildId: t, leaderboardId: b } = e,
+        I = (0, a.e7)([l.default], () => l.default.getId()),
         T = (0, a.e7)([u.Z], () => u.Z.getAccount(null, g.ABu.RIOT_GAMES)),
         S = (0, a.e7)([u.Z], () => u.Z.getAccount(null, g.ABu.LEAGUE_OF_LEGENDS)),
-        { leaderboardsDisabled: y } = (0, h.O)(t, I),
+        { leaderboardsDisabled: y } = (0, h.O)(t, b),
         A =
             null != S && null != T
                 ? () => {
                       f.default.track(g.rMx.LEADERBOARD_USER_DATA_REFRESH_REQUESTED, {
-                          leaderboard_id: I,
+                          leaderboard_id: b,
                           guild_id: t
                       }),
                           (0, p._7)({
@@ -42,9 +42,9 @@ function I(e) {
                 : g.dG4,
         N = null == T || y ? E.intl.string(E.t['0yRXHx']) : E.intl.string(E.t['KWpU6+']),
         { lastUpdateRequested: C, statisticLastUpdatedDate: R } = (0, m.Z)({
-            userId: b,
+            userId: I,
             guildId: t,
-            leaderboardId: I,
+            leaderboardId: b,
             statisticId: i.E.LOL_TOTAL_KILLS
         }),
         { disabled: O, subtext: D } = (function (e, t) {
@@ -144,7 +144,7 @@ function I(e) {
                                                   (0, r.jsx)(e, {
                                                       ...n,
                                                       guildId: t,
-                                                      leaderboardId: I
+                                                      leaderboardId: b
                                                   });
                                           }),
                                               null == i || i();

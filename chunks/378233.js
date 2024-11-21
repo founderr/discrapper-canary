@@ -59,9 +59,9 @@ var r = n(606301),
     _ = n(981631);
 let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: g, CDN_HOST: E } = window.GLOBAL_ENV,
     v = Object.values(d.og),
-    I = decodeURIComponent(_.ANM.STICKER_ASSET('[\\d]+', '('.concat(v.join('|'), ')'))),
-    b = RegExp('('.concat(location.protocol).concat(g, '|').concat(location.protocol).concat(h, ')(').concat(I, ')'), 'ig'),
-    T = RegExp(''.concat(location.protocol).concat(p, '(').concat(I, ')'), 'ig'),
+    b = decodeURIComponent(_.ANM.STICKER_ASSET('[\\d]+', '('.concat(v.join('|'), ')'))),
+    I = RegExp('('.concat(location.protocol).concat(g, '|').concat(location.protocol).concat(h, ')(').concat(b, ')'), 'ig'),
+    T = RegExp(''.concat(location.protocol).concat(p, '(').concat(b, ')'), 'ig'),
     S = (e) => {
         if (null != e.cover_sticker_id) {
             let t = e.stickers.find((t) => t.id === e.cover_sticker_id);
@@ -138,7 +138,7 @@ let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: 
             n
         );
     },
-    O = (e) => null != e.match('development' !== m ? b : T),
+    O = (e) => null != e.match('development' !== m ? I : T),
     D = (e) =>
         e.stickers.some((e) => {
             let { format_type: t } = e;

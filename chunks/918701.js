@@ -187,9 +187,9 @@ var p = n(572004),
     g = n(823379),
     E = n(49012),
     v = n(960048),
-    I = n(617136);
+    b = n(617136);
 n(272008);
-var b = n(569984),
+var I = n(569984),
     T = n(497505),
     S = n(566078),
     y = n(312046),
@@ -507,7 +507,7 @@ function eh(e, t) {
     (0, E.q)({
         href: n,
         onConfirm: () => {
-            (0, I._3)({
+            (0, b._3)({
                 questId: e.id,
                 questContent: t.content,
                 questContentCTA: t.ctaContent,
@@ -518,7 +518,7 @@ function eh(e, t) {
     });
 }
 let em = (e, t) => {
-        (0, I._3)({
+        (0, b._3)({
             questId: e,
             questContent: t.content,
             questContentCTA: t.ctaContent,
@@ -527,7 +527,7 @@ let em = (e, t) => {
             (0, p.JG)(K(e));
     },
     eg = (e, t) => (e > 0 ? (0, i.floor)(Math.min(t / e, 1), 4) : 0),
-    eE = (e) => ew(e) || b.Z.isProgressingOnDesktop(e.id),
+    eE = (e) => ew(e) || I.Z.isProgressingOnDesktop(e.id),
     ev = (e, t) => {
         var n, r, a, s;
         let o = null === (s = e.userStatus) || void 0 === s ? void 0 : null === (a = s.progress) || void 0 === a ? void 0 : null === (r = a[t.eventName]) || void 0 === r ? void 0 : null === (n = r.heartbeat) || void 0 === n ? void 0 : n.lastBeatAt;
@@ -535,21 +535,21 @@ let em = (e, t) => {
         let l = Date.now() - new Date(o).valueOf();
         return (0, i.floor)(l / h.Z.Millis.SECOND, 2);
     },
-    eI = (e, t) => {
+    eb = (e, t) => {
         var n, r, i, a, s;
         let o = null === (r = e.userStatus) || void 0 === r ? void 0 : null === (n = r.progress) || void 0 === n ? void 0 : n[t.eventName],
             l = null !== (s = null !== (a = null == o ? void 0 : o.value) && void 0 !== a ? a : null === (i = e.userStatus) || void 0 === i ? void 0 : i.streamProgressSeconds) && void 0 !== s ? s : 0;
         if (eD(e)) {
-            let n = b.Z.getOptimisticProgress(e.id, t.eventName);
+            let n = I.Z.getOptimisticProgress(e.id, t.eventName);
             return null == n || n < l ? l : n;
         }
         return l + ev(e, t);
     },
-    eb = (e, t) => {
+    eI = (e, t) => {
         var n;
         let r = t.target;
         if ((null === (n = e.userStatus) || void 0 === n ? void 0 : n.completedAt) != null) return r;
-        let a = Math.min(0.99 * r, eI(e, t));
+        let a = Math.min(0.99 * r, eb(e, t));
         return Math.max((0, i.floor)(a, 2), 0);
     },
     eT = (e) => {
@@ -561,7 +561,7 @@ let em = (e, t) => {
             c = null !== (n = o.tasks[l]) && void 0 !== n ? n : o.tasks[s.X.STREAM_ON_DESKTOP];
         if (null == c) throw Error('No task with type '.concat(i, ' found for quest ').concat(r.id, '!'));
         let d = c.target,
-            f = eb(r, c);
+            f = eI(r, c);
         return {
             progressSeconds: f,
             targetSeconds: d,
@@ -679,7 +679,7 @@ function eM(e) {
 }
 function eP(e, t) {
     let { platformType: n, quest: r } = e;
-    (0, I._3)({
+    (0, b._3)({
         questId: r.id,
         questContent: t.content,
         questContentCTA: t.ctaContent
@@ -691,7 +691,7 @@ function eP(e, t) {
 }
 function ek(e, t) {
     let { quest: n } = e;
-    (0, I._3)({
+    (0, b._3)({
         questId: n.id,
         questContent: t.content,
         questContentPosition: t.position,
@@ -720,7 +720,7 @@ function ek(e, t) {
 }
 function eU(e, t) {
     let { quest: n } = e;
-    (0, I._3)({
+    (0, b._3)({
         questId: n.id,
         questContent: t.content,
         questContentPosition: t.position,

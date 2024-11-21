@@ -6,7 +6,7 @@ n.d(t, {
         return T;
     },
     qQ: function () {
-        return C;
+        return I;
     },
     r7: function () {
         return j;
@@ -93,7 +93,7 @@ function T(e) {
         [t]
     );
 }
-function C(e, t, n) {
+function I(e, t, n) {
     let {
             canLoadMore: l,
             loading: d,

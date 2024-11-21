@@ -16,7 +16,7 @@ var r = n(200651),
     E = n(388032),
     v = n(962219);
 t.Z = i.forwardRef(function (e, t) {
-    var a, I, b;
+    var a, b, I;
     let T;
     let { canRemove: S, className: y, role: A, onRemove: N, guildId: C, disableBorderColor: R, onMouseDown: O } = e,
         { tabIndex: D, ...L } = (0, o.JA)(A.id),
@@ -42,8 +42,8 @@ t.Z = i.forwardRef(function (e, t) {
             [A.id]
         ),
         k = (0, d.useToken)(c.Z.unsafe_rawColors.PRIMARY_300).hsl(),
-        U = null !== (I = A.colorString) && void 0 !== I ? I : k,
-        G = null !== (b = (0, l.wK)(U, 0.6)) && void 0 !== b ? b : void 0,
+        U = null !== (b = A.colorString) && void 0 !== b ? b : k,
+        G = null !== (I = (0, l.wK)(U, 0.6)) && void 0 !== I ? I : void 0,
         B = c.Z.unsafe_rawColors.WHITE_500.css,
         Z = (0, l._i)(U);
     null != Z && 0.3 > (0, l.Bd)(Z) && (B = c.Z.unsafe_rawColors.PRIMARY_630.css),

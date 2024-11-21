@@ -21,8 +21,8 @@ var i = n(120356),
     g = n(82295),
     E = n(818083),
     v = n(480608),
-    I = n(124072),
-    b = n(184301),
+    b = n(124072),
+    I = n(184301),
     T = n(347475),
     S = n(592125),
     y = n(271383),
@@ -51,7 +51,7 @@ function L(e) {
         k = null != t && 0 !== t && !w,
         U = k && 'dot' === P,
         G = (e) =>
-            (0, r.jsxs)(I.Z, {
+            (0, r.jsxs)(b.Z, {
                 className: a()(R.roleMention),
                 color: 'username' === P && k ? t : null,
                 ...e,
@@ -96,7 +96,7 @@ function L(e) {
                                       c.Popout,
                                       {
                                           preload: () =>
-                                              (0, b.Z)(i.id, i.getAvatarURL(t.guild_id, 80), {
+                                              (0, I.Z)(i.id, i.getAvatarURL(t.guild_id, 80), {
                                                   guildId: t.guild_id,
                                                   channelId: t.id
                                               }),

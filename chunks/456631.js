@@ -28,8 +28,8 @@ let h = [],
             });
     },
     v = [],
-    I = 10 * f.Z.Millis.SECOND,
-    b = (0, l.debounce)(() => {
+    b = 10 * f.Z.Millis.SECOND,
+    I = (0, l.debounce)(() => {
         let e = (0, _.cX)(g);
         c.uv.announce(e, 'polite'), (g = []);
     }, 500);
@@ -81,14 +81,14 @@ class T extends (i = u.ZP.Store) {
                         userId: n
                     }
                 ]),
-                b());
+                I());
         },
         VOICE_CHANNEL_EFFECT_SENT_LOCAL: () => {
             let e = new Date();
             if ((v = [e, ...v].slice(0, 20)).length >= 20) {
                 let t = v[v.length - 1],
                     n = e.getTime() - t.getTime();
-                n < I && (r = new Date(e.getTime() + I - n));
+                n < b && (r = new Date(e.getTime() + b - n));
             }
         },
         VOICE_CHANNEL_EFFECT_UPDATE_TIME_STAMP: (e) => {

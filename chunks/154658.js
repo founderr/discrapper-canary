@@ -19,9 +19,9 @@ var i = n(120356),
     h = n(98518);
 function m(e) {
     var t, i, m, g, E;
-    let { guildId: v, leaderboard: I, className: b } = e,
-        T = null == I ? void 0 : null === (t = I.users) || void 0 === t ? void 0 : t[0],
-        { sort_by_statistic_id: S } = I.guild_settings,
+    let { guildId: v, leaderboard: b, className: I } = e,
+        T = null == b ? void 0 : null === (t = b.users) || void 0 === t ? void 0 : t[0],
+        { sort_by_statistic_id: S } = b.guild_settings,
         y = null !== (E = null == T ? void 0 : null === (m = T.statistics) || void 0 === m ? void 0 : null === (i = m[S]) || void 0 === i ? void 0 : i.value) && void 0 !== E ? E : 0,
         A = p.intl.formatToPlainString(p.t.yhdo8v, {
             value: y,
@@ -34,7 +34,7 @@ function m(e) {
     if (null == D) return null;
     let L = f.ZP.getName(v, void 0, D);
     return (0, r.jsxs)('div', {
-        className: a()(h.container, b),
+        className: a()(h.container, I),
         style: { backgroundImage: 'linear-gradient(90deg, '.concat(O, ' 0%, ').concat(R, ' 100%)') },
         children: [
             (0, r.jsx)(u.Text, {
@@ -51,7 +51,7 @@ function m(e) {
                         default:
                             return p.intl.string(p.t['4N67JS']);
                     }
-                })(I.settings.interval_type)
+                })(b.settings.interval_type)
             }),
             (0, r.jsx)(u.Avatar, {
                 src: D.getAvatarURL(v, 16),

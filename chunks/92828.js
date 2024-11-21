@@ -68,7 +68,7 @@ function _(e, t, n) {
         { onAction: m, linkBehavior: g } = c.get(t),
         E = (0, r.mp)(),
         v = (0, l.useRef)(null),
-        { itemProps: I, ...b } = (0, s.Cs)({
+        { itemProps: b, ...I } = (0, s.Cs)({
             selectionManager: t.selectionManager,
             key: i.key,
             ref: n,
@@ -80,8 +80,8 @@ function _(e, t, n) {
             },
             linkBehavior: g
         }),
-        T = b.hasAction ? (0, r.ib)(i.props) : {},
-        S = (0, r.dG)(I, T, {
+        T = I.hasAction ? (0, r.ib)(i.props) : {},
+        S = (0, r.dG)(b, T, {
             role: 'row',
             onKeyDownCapture: (e) => {
                 if (!e.currentTarget.contains(e.target)) return;
@@ -135,7 +135,7 @@ function _(e, t, n) {
                 'aria-colindex': 1
             },
             descriptionProps: { id: E },
-            ...b
+            ...I
         }
     );
 }

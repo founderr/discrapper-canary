@@ -16,8 +16,8 @@ var r = n(392711),
     g = n(984933),
     E = n(271383),
     v = n(430824),
-    I = n(496675),
-    b = n(699516),
+    b = n(496675),
+    I = n(699516),
     T = n(246946),
     S = n(594174),
     y = n(483360),
@@ -256,7 +256,7 @@ let w = c.Z.RULES,
             match: s().anyScopeRegex(U),
             parse(e) {
                 let t = m.Z.getChannel(e[1]);
-                return { content: null == t ? e[0] : (0, o.F6)(t, S.default, b.Z, !0, !0) };
+                return { content: null == t ? e[0] : (0, o.F6)(t, S.default, I.Z, !0, !0) };
             }
         },
         emoji: {
@@ -340,7 +340,7 @@ function Y(e) {
     let t;
     let n = null == e ? void 0 : e.getGuildId(),
         r = null != n ? v.Z.getGuild(n) : null,
-        a = I.Z.can(C.Plq.MENTION_EVERYONE, e);
+        a = b.Z.can(C.Plq.MENTION_EVERYONE, e);
     t = (null == e ? void 0 : e.isPrivate())
         ? e.recipients.map((e) => ({
               userId: e,

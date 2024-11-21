@@ -16,8 +16,8 @@ var r = n(200651),
     g = n(819758),
     E = n(626135),
     v = n(111846),
-    I = n(392552),
-    b = n(784222),
+    b = n(392552),
+    I = n(784222),
     T = n(926243),
     S = n(149203),
     y = n(981631),
@@ -25,7 +25,7 @@ var r = n(200651),
     N = n(886028);
 t.Z = (e) => {
     let { emojiDescriptors: t, emojiSize: a, onSelect: C, onInspect: R, surrogateCodePoint: O, getEmojiItemProps: D, getEmojiRowProps: L, isScrolling: x, isUsingKeyboardNavigation: w, rowIndex: M, allowAnimatedEmoji: P, showEmojiFavoriteTooltip: k, channelGuildId: U, category: G, selectedItemClassName: B, messageId: Z, isBurstReaction: F, inNitroLockedSection: V, handleScrollUpOnSectionCollapse: j } = e,
-        { enabled: H } = I.Z.useExperiment({ location: 'EmojiPicker' }, { autoTrackExposure: !1 }),
+        { enabled: H } = b.Z.useExperiment({ location: 'EmojiPicker' }, { autoTrackExposure: !1 }),
         { useTransparentIcons: Y } = v.Z.useExperiment({ location: 'EmojiPicker' }, { autoTrackExposure: !1 }),
         W = Y ? n(187119) : n(137321),
         K = Y ? n(39874) : n(233892),
@@ -61,7 +61,7 @@ t.Z = (e) => {
                         { visibleRowIndex: _, columnIndex: p } = e,
                         { ref: h, tabIndex: m, onFocus: g, ...E } = null !== (n = D(p, M)) && void 0 !== n ? n : {},
                         v = en.rowIndex === _ && en.columnIndex === p,
-                        I = () => {
+                        b = () => {
                             !x.current && !w.current && R(e);
                         };
                     return (0, i.createElement)(
@@ -82,8 +82,8 @@ t.Z = (e) => {
                                     [null != B ? B : '']: v,
                                     [N.showPulse]: ei === t
                                 }),
-                                onFocus: null != g ? g : I,
-                                onMouseOver: I,
+                                onFocus: null != g ? g : b,
+                                onMouseOver: b,
                                 onMouseEnter: a,
                                 onMouseLeave: o,
                                 onClick: u,
@@ -94,7 +94,7 @@ t.Z = (e) => {
                     );
                 };
             switch (e.type) {
-                case b.ld.EXPAND_OR_COLLAPSE_EMOJIS: {
+                case I.ld.EXPAND_OR_COLLAPSE_EMOJIS: {
                     let t, i;
                     let { visibleRowIndex: a, columnIndex: s } = e,
                         l = en.rowIndex === a && en.columnIndex === s;
@@ -148,7 +148,7 @@ t.Z = (e) => {
                         })
                     );
                 }
-                case b.ld.CREATE_EMOJI: {
+                case I.ld.CREATE_EMOJI: {
                     let t = (0, r.jsx)(l.CirclePlusIcon, {
                         size: 'md',
                         color: 'currentColor',
@@ -171,7 +171,7 @@ t.Z = (e) => {
                         shouldShowRoundHighlight: !1
                     });
                 }
-                case b.ld.EMOJI: {
+                case I.ld.EMOJI: {
                     var a;
                     let { columnIndex: n, visibleRowIndex: i } = e,
                         s = en.rowIndex === i && en.columnIndex === n;
@@ -217,7 +217,7 @@ t.Z = (e) => {
                 children: e.map(eu)
             });
     if (G !== S.En.TOP_GUILD_EMOJI) return ec(t);
-    let ed = t.filter((e) => (!!H && e.type === b.ld.CREATE_EMOJI) || e.subCategory === S.t0.TOP_GUILD_EMOJI || (e.subCategory === S.t0.NEWLY_ADDED_EMOJI && e.emoji.type === f.B.GUILD && !_.Z.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id))),
+    let ed = t.filter((e) => (!!H && e.type === I.ld.CREATE_EMOJI) || e.subCategory === S.t0.TOP_GUILD_EMOJI || (e.subCategory === S.t0.NEWLY_ADDED_EMOJI && e.emoji.type === f.B.GUILD && !_.Z.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id))),
         ef = t.filter((e) => e.subCategory === S.t0.NEWLY_ADDED_EMOJI && e.emoji.type === f.B.GUILD && _.Z.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id));
     return 0 === ef.length
         ? ec(t)

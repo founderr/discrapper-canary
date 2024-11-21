@@ -32,8 +32,8 @@ function I(e) {
         [N, T] = g._T(n),
         [j, b] = g.mR(n),
         [S, E] = g.PK(n),
-        [R, Z] = g.d9(n, 1024),
-        { imageCTA: y, imageAriaLabel: A, setFilename: L } = (0, x.Z)(I),
+        [R, y] = g.d9(n, 1024),
+        { imageCTA: Z, imageAriaLabel: A, setFilename: L } = (0, x.Z)(I),
         D = r.useMemo(() => {
             var e;
             return null !==
@@ -48,11 +48,11 @@ function I(e) {
                 : [];
         }, [t]);
     function O(e, t) {
-        null != t && L(t.name), Z(e);
+        null != t && L(t.name), y(e);
     }
     let k = (0, m.mY)(),
-        M = (0, a.Dt)(),
         P = (0, a.Dt)(),
+        M = (0, a.Dt)(),
         w = (0, a.Dt)();
     return (0, i.jsxs)(p.Z, {
         title: C.intl.string(C.t.iHU439),
@@ -65,14 +65,14 @@ function I(e) {
                         className: _.formSplitHalf,
                         children: (0, i.jsx)(s.FormSection, {
                             title: C.intl.string(C.t.grbGJy),
-                            titleId: M,
+                            titleId: P,
                             disabled: k,
                             children: (0, i.jsx)(s.TextInput, {
                                 placeholder: C.intl.string(C.t['So2/xM']),
                                 value: N,
                                 inputClassName: v.formInput,
                                 onChange: T,
-                                'aria-labelledby': M,
+                                'aria-labelledby': P,
                                 disabled: k
                             })
                         })
@@ -81,7 +81,7 @@ function I(e) {
                         className: _.formSplitHalf,
                         children: (0, i.jsx)(s.FormSection, {
                             title: C.intl.string(C.t.Ibl4BQ),
-                            titleId: P,
+                            titleId: M,
                             disabled: k,
                             children: (0, i.jsx)(s.SingleSelect, {
                                 options: D,
@@ -92,7 +92,7 @@ function I(e) {
                                 onChange: b,
                                 maxVisibleItems: 5,
                                 look: s.SelectLooks.CUSTOM,
-                                'aria-labelledby': P
+                                'aria-labelledby': M
                             })
                         })
                     })
@@ -131,7 +131,7 @@ function I(e) {
                             }),
                             (0, i.jsx)(o.Z, {
                                 onChange: O,
-                                buttonCTA: y,
+                                buttonCTA: Z,
                                 'aria-label': A,
                                 disabled: k,
                                 look: s.Button.Looks.OUTLINED,
@@ -141,7 +141,7 @@ function I(e) {
                     }),
                     (0, i.jsx)(c.Z, {
                         image: R,
-                        hint: y,
+                        hint: Z,
                         showIcon: !0,
                         showRemoveButton: !1,
                         hideSize: !0,

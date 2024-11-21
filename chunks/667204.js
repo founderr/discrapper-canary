@@ -28,8 +28,8 @@ var r = n(512722),
     g = n(603721),
     E = n(188597),
     v = n(3148),
-    I = n(48854),
-    b = n(346479),
+    b = n(48854),
+    I = n(346479),
     T = n(706454),
     S = n(430824),
     y = n(117530),
@@ -66,7 +66,7 @@ let Z = (e, t) => {
         return t || n ? t : null;
     };
 async function j(e) {
-    var t, n, r, s, l, c, d, p, h, m, g, E, v, I, S, A, N;
+    var t, n, r, s, l, c, d, p, h, m, g, E, v, b, S, A, N;
     let { command: C, optionValues: R, context: D, commandTargetId: x, maxSizeCallback: k, commandOrigin: G = M.bB.CHAT, sectionName: B, interactionLifecycleOptionsFactory: j = z, source: Y } = e,
         K = null !== (r = w.Z.getSource(D.channel.id)) && void 0 !== r ? r : Y,
         Q = null !== (s = w.Z.getCommandOrigin(D.channel.id)) && void 0 !== s ? s : G;
@@ -77,7 +77,7 @@ async function j(e) {
             command: C,
             commandOrigin: Q
         }),
-        await b.Z.unarchiveThreadIfNecessary(D.channel.id);
+        await I.Z.unarchiveThreadIfNecessary(D.channel.id);
     let X = [],
         J = [],
         $ = (0, P.D7)(Q);
@@ -160,7 +160,7 @@ async function j(e) {
                     else if ('text' === a.type) {
                         if ((0, P.BH)(a.text)) n = a.text.trim();
                         else {
-                            let e = (0, _.K)(a.text, null === (I = D.guild) || void 0 === I ? void 0 : I.id, D.channel.id);
+                            let e = (0, _.K)(a.text, null === (b = D.guild) || void 0 === b ? void 0 : b.id, D.channel.id);
                             (null == e ? void 0 : e.type) === 'userMention' ? (n = e.userId) : (null == e ? void 0 : e.type) === 'roleMention' ? (n = e.roleId) : (null == e ? void 0 : e.type) === 'textMention' && '@everyone' === e.text ? (n = null === (S = D.guild) || void 0 === S ? void 0 : S.id) : i()(!1, 'Failed to resolve '.concat(a.text));
                         }
                     }
@@ -291,7 +291,7 @@ let H = (e) => {
                 channelId: h,
                 guildId: m,
                 data: r,
-                nonce: null !== (t = f.nonce) && void 0 !== t ? t : (0, I.r)(),
+                nonce: null !== (t = f.nonce) && void 0 !== t ? t : (0, b.r)(),
                 attachments: a,
                 maxSizeCallback: s,
                 analytics_location: l,

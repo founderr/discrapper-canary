@@ -28,11 +28,11 @@ function M(e, n) {
         { createNewEditingRule: S } = (0, c.V)(),
         [j, _] = l.useState(!1),
         [b, A] = (0, s.I2)(n),
-        { rulesByTriggerType: N, updateRule: P } = (0, s.pH)(n),
+        { rulesByTriggerType: P, updateRule: N } = (0, s.pH)(n),
         T = l.useMemo(() => {
             var e;
-            return null !== (e = N[p]) && void 0 !== e ? e : [];
-        }, [N]),
+            return null !== (e = P[p]) && void 0 !== e ? e : [];
+        }, [P]),
         y = 0 === T.length,
         C = t > T.length && !y;
     if (!l.useMemo(() => (0, d.ze)(n), [n]) || null == e || 0 === e.length || null == n) return null;
@@ -67,7 +67,7 @@ function M(e, n) {
                     keywordFilter: [...(null !== (i = null === (t = n.triggerMetadata) || void 0 === t ? void 0 : t.keywordFilter) && void 0 !== i ? i : []), e]
                 }
             };
-            await Z(l, T), P(l), null != x ? (0, r.showToast)((0, r.createToast)(I.intl.string(I.t.wH6L0t), r.ToastType.FAILURE)) : (0, r.showToast)((0, r.createToast)(I.intl.string(I.t['0rdYm5']), r.ToastType.SUCCESS));
+            await Z(l, T), N(l), null != x ? (0, r.showToast)((0, r.createToast)(I.intl.string(I.t.wH6L0t), r.ToastType.FAILURE)) : (0, r.showToast)((0, r.createToast)(I.intl.string(I.t['0rdYm5']), r.ToastType.SUCCESS));
         },
         G = (0, i.jsx)(i.Fragment, {
             children: (0, i.jsx)(r.MenuItem, {

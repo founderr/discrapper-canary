@@ -16,8 +16,8 @@ var r = n(200651),
     g = n(98528),
     E = n(551058),
     v = n(555573),
-    I = n(10718),
-    b = n(367790),
+    b = n(10718),
+    I = n(367790),
     T = n(895924),
     S = n(581364),
     y = n(56801),
@@ -55,11 +55,11 @@ t.Z = i.forwardRef(function (e, t) {
             filteredSectionId: W,
             scrollDown: K,
             filterSection: z
-        } = I.wi({
+        } = b.wi({
             channel: n,
             filters: {
                 commandTypes: [c.yU.CHAT],
-                builtIns: a ? b.D.ONLY_TEXT : b.D.ALLOW,
+                builtIns: a ? I.D.ONLY_TEXT : I.D.ALLOW,
                 applicationCommands: !a
             },
             options: {

@@ -24,8 +24,8 @@ var r = n(200651),
     g = n(223135),
     E = n(695346),
     v = n(314897),
-    I = n(592125),
-    b = n(496675),
+    b = n(592125),
+    I = n(496675),
     T = n(699516),
     S = n(979651),
     y = n(6074),
@@ -96,9 +96,9 @@ t.ZP = (e) => {
         M = null != t ? t.find((e) => e.type === N.IIU.CUSTOM_STATUS) : null,
         P = (0, o.e7)([v.default], () => v.default.getId() === (null == x ? void 0 : x.id)),
         k = (0, o.e7)([m.Z], () => (P ? m.Z.getHangStatusActivity() : null != t ? t.find((e) => e.type === N.IIU.HANG_STATUS) : null)),
-        U = (0, o.e7)([S.Z, I.Z], () => {
+        U = (0, o.e7)([S.Z, b.Z], () => {
             var e;
-            return null != k && null != x ? I.Z.getChannel(null === (e = S.Z.getVoiceStateForUser(x.id)) || void 0 === e ? void 0 : e.channelId) : null;
+            return null != k && null != x ? b.Z.getChannel(null === (e = S.Z.getVoiceStateForUser(x.id)) || void 0 === e ? void 0 : e.channelId) : null;
         }),
         { enableHangStatus: G } = h.n.useExperiment(
             {
@@ -109,7 +109,7 @@ t.ZP = (e) => {
         ),
         B = (0, _.Sl)(N.Ilk.BRAND_345),
         Z = null,
-        F = G && null != k && b.Z.can(N.Plq.CONNECT, U);
+        F = G && null != k && I.Z.can(N.Plq.CONNECT, U);
     F
         ? (Z = (0, r.jsx)(g.Z, {
               className: u,

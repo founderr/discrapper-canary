@@ -77,7 +77,7 @@ function p(e) {
         let { toAST: s = !1, hideSimpleEmbedContent: l = !0, formatInline: f = !1, postProcessor: _, shouldFilterKeywords: p, contentMessage: h } = n,
             g = !1,
             v = (null != h ? h : t).content,
-            I = e(
+            b = e(
                 p
                     ? (0, i.N)(v, {
                           escapeReplacement: !0,
@@ -128,7 +128,7 @@ function p(e) {
             );
         return {
             hasSpoilerEmbeds: g,
-            content: I
+            content: b
         };
     })(t.formatInline ? a.Z.parseInlineReply : a.Z.parse, e, t);
 }

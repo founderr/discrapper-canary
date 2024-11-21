@@ -34,15 +34,15 @@ var i = n(200651),
     S = n(600164),
     E = n(688465),
     R = n(807582),
-    Z = n(48217),
-    y = n(26323),
+    y = n(48217),
+    Z = n(26323),
     A = n(35125),
     L = n(536442),
     D = n(142497),
     O = n(884858),
     k = n(516129),
-    M = n(813197),
-    P = n(208567),
+    P = n(813197),
+    M = n(208567),
     w = n(592125),
     B = n(324067),
     U = n(650774),
@@ -198,7 +198,7 @@ class eC extends r.PureComponent {
                         (0, i.jsxs)(S.Z.Child, {
                             wrap: !0,
                             children: [
-                                (0, i.jsx)(P.Z, {
+                                (0, i.jsx)(M.Z, {
                                     showIcon: !0,
                                     name: e.name,
                                     image: e.icon,
@@ -244,7 +244,7 @@ class eC extends r.PureComponent {
                                     onClick: this.handleUploadImage,
                                     children: [
                                         en.intl.string(en.t['MsUY/f']),
-                                        (0, i.jsx)(M.ZP, {
+                                        (0, i.jsx)(P.ZP, {
                                             ref: this._imageInputRef,
                                             onChange: this.handleOpenImageCroppingModal,
                                             disabled: !n
@@ -612,7 +612,7 @@ class eC extends r.PureComponent {
                                           className: ei.marginTop16,
                                           children: [
                                               en.intl.string(en.t.yG2pUl),
-                                              (0, i.jsx)(M.ZP, {
+                                              (0, i.jsx)(P.ZP, {
                                                   disabled: !r,
                                                   onChange: this.handleSplashChange,
                                                   maxFileSizeBytes: et.B,
@@ -871,7 +871,7 @@ class eC extends r.PureComponent {
                     if ('image/gif' !== r || n.hasFeature(J.oNc.ANIMATED_BANNER)) {
                         if (!n.hasFeature(J.oNc.BANNER)) {
                             (l.object = J.qAy.IMAGE_CROPPING_MODAL),
-                                (0, Z.c)({
+                                (0, y.c)({
                                     guild: n,
                                     analyticsLocations: i,
                                     analyticsLocation: l,
@@ -882,7 +882,7 @@ class eC extends r.PureComponent {
                         }
                     } else {
                         (l.object = J.qAy.GIF_CROPPING_MODAL),
-                            (0, Z.c)({
+                            (0, y.c)({
                                 guild: n,
                                 analyticsLocations: i,
                                 analyticsLocation: l,
@@ -905,7 +905,7 @@ class eC extends r.PureComponent {
                     guild_id: null == r ? void 0 : r.id,
                     location_stack: l
                 }),
-                    (0, y.Z)({
+                    (0, Z.Z)({
                         analyticsLocations: l,
                         analyticsSourceLocation: {
                             section: t,

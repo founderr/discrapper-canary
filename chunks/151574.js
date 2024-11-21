@@ -16,8 +16,8 @@ var r,
     g = n(570220),
     E = n(686546),
     v = n(28546),
-    I = n(285651),
-    b = n(926491),
+    b = n(285651),
+    I = n(926491),
     T = n(373228),
     S = n(378233),
     y = n(419922),
@@ -58,7 +58,7 @@ function G(e) {
                 sticker: s,
                 className: w.__invalid_sticker
             }),
-            r !== I.eb.SENDABLE && (0, a.jsx)(A.Z, { size: 14 })
+            r !== b.eb.SENDABLE && (0, a.jsx)(A.Z, { size: 14 })
         ]
     });
 }
@@ -172,11 +172,11 @@ t.Z = s.memo(function (e) {
                         sticker_id: e.id,
                         suggestion_trigger: Y
                     }),
-                    t === I.eb.SENDABLE)
+                    t === b.eb.SENDABLE)
                 )
                     P(!0), o(e, T.V0.EXPRESSION_SUGGESTIONS), ee.cancel(), H('');
                 else if ((0, S.jl)(e)) {
-                    let t = b.Z.getStickerPack(e.pack_id);
+                    let t = I.Z.getStickerPack(e.pack_id);
                     null != t &&
                         (0, N.Z)({
                             stickerPack: t,

@@ -32,8 +32,8 @@ var i,
     Z = n(502087),
     L = n(657041),
     y = n(769415),
-    P = n(650032),
-    O = n(767870),
+    O = n(650032),
+    P = n(767870),
     R = n(104494),
     j = n(639119),
     D = n(655525),
@@ -87,10 +87,10 @@ let en = (e) => {
         eA = (0, d.e7)([Z.Z], () => Z.Z.getCreatedAtOverride()),
         ex = (0, d.e7)([N.Z], () => N.Z.hasLayers()),
         { fractionalState: eb, endsAt: eZ, currentEntitlementId: eL } = (0, I.Z)({ forceFetch: !0 }),
-        [ey, eP] = (0, v.XR)(eb !== z.a$.NONE ? u.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL : null, eb !== z.a$.NONE ? Number(eL) : 0),
-        eO = null != eA ? eA : null == el ? void 0 : el.createdAt,
+        [ey, eO] = (0, v.XR)(eb !== z.a$.NONE ? u.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL : null, eb !== z.a$.NONE ? Number(eL) : 0),
+        eP = null != eA ? eA : null == el ? void 0 : el.createdAt,
         eR = s || null != em || null != ep || eE || eT || eS || null != eC || null != ev || eu,
-        { enabled: ej } = P._.useExperiment({ location: ee }, { autoTrackExposure: !1 }),
+        { enabled: ej } = O._.useExperiment({ location: ee }, { autoTrackExposure: !1 }),
         { enabled: eD } = y.Z.useExperiment(
             { location: ee },
             {
@@ -100,11 +100,11 @@ let en = (e) => {
         ),
         eM = ej && (null == em ? void 0 : em.trial_id) === z.a7,
         [ew, ek] = (0, v.US)(eg ? [u.z.REVERSE_TRIAL_NITRO_TAB_BADGE] : [], void 0, !0);
-    if (!(eR = eR || (null != el && null != eO && Date.now() - eO.getTime() > et))) return null;
+    if (!(eR = eR || (null != el && null != eP && Date.now() - eP.getTime() > et))) return null;
     if (
         (eb !== z.a$.NONE &&
             ((r = 9),
-            (i = (0, l.jsx)(O.Z, {
+            (i = (0, l.jsx)(P.Z, {
                 className: '',
                 endsAt: eZ,
                 messageStyle: E.a.SHORT_TIME,
@@ -186,7 +186,7 @@ let en = (e) => {
         text: K.intl.string(K.t.Ipxkoq),
         locationState: ei,
         onClick: () => {
-            ey === u.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL && eP(Y.L.TAKE_ACTION),
+            ey === u.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL && eO(Y.L.TAKE_ACTION),
                 x.default.track(W.rMx.NITRO_TAB_VISITED, {
                     badge_decorator: r,
                     has_premium: eu

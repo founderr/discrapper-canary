@@ -6,7 +6,7 @@ n.d(t, {
         return E;
     },
     ZP: function () {
-        return Z;
+        return y;
     }
 }),
     n(47120);
@@ -96,7 +96,7 @@ function R() {
         onSave: n
     });
 }
-function Z() {
+function y() {
     return (0, r.jsx)(m.FormSection, {
         className: j.marginBottom4,
         children: (0, r.jsxs)(m.HeadingLevel, {
@@ -112,12 +112,12 @@ function Z() {
                 }),
                 (0, r.jsx)(A, {}),
                 (0, r.jsx)(m.FormDivider, { className: T.divider }),
-                (0, r.jsx)(y, {})
+                (0, r.jsx)(Z, {})
             ]
         })
     });
 }
-function y() {
+function Z() {
     let { guild: e } = _.Z.getProps();
     c()(null != e, 'guild cannot be null');
     let t = (0, d.e7)([E], () => E.error),
@@ -354,14 +354,14 @@ function O(e) {
                       className: a()(j.marginTop20, T.buttonContainer),
                       children: [
                           n.isDirty &&
-                              (0, r.jsx)(M, {
+                              (0, r.jsx)(P, {
                                   guild: t,
                                   guildTemplate: n
                               }),
                           (0, r.jsxs)('div', {
                               className: T.rightButtonContainer,
                               children: [
-                                  (0, r.jsx)(P, {
+                                  (0, r.jsx)(M, {
                                       guild: t,
                                       guildTemplate: n
                                   }),
@@ -400,7 +400,7 @@ function k(e) {
         children: N.intl.string(N.t.Wxdi8P)
     });
 }
-function M(e) {
+function P(e) {
     let { guild: t, guildTemplate: n } = e,
         [i, s] = l.useState(!1),
         a = async () => {
@@ -419,7 +419,7 @@ function M(e) {
         children: N.intl.string(N.t['Nw+0Y2'])
     });
 }
-function P(e) {
+function M(e) {
     let { guild: t, guildTemplate: n } = e,
         [i, s] = l.useState(!1),
         a = async () => {

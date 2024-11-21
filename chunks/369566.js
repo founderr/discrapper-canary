@@ -23,7 +23,7 @@ function E(e) {
     let t = (0, a.e7)([f.Z], () => f.Z.getActivities(e)),
         n = (0, a.e7)([o.Z], () => o.Z.getUserOutbox(e)),
         { enabled: E, analyticsEligible: v } = (0, s.R4)('use-user-profile-activity'),
-        { stream: I, nonExperimentStream: b } = (0, a.cj)(
+        { stream: b, nonExperimentStream: I } = (0, a.cj)(
             [d.Z],
             () => {
                 let t = d.Z.getAnyStreamForUser(e);
@@ -41,17 +41,17 @@ function E(e) {
         ),
         T = (0, a.e7)([_.Z], () => _.Z.getRelationshipType(e));
     (0, r.useEffect)(() => {
-        if (v && null != b) {
+        if (v && null != I) {
             var t;
             p.default.track(h.rMx.USER_VOICE_ACTIVITY_VIEWED, {
                 activity_user_id: e,
-                discoverable: null === (t = null == b ? void 0 : b.discoverable) || void 0 === t || t,
+                discoverable: null === (t = null == I ? void 0 : I.discoverable) || void 0 === t || t,
                 surface: 'user-profile-activity',
                 relationship_type: T,
-                treatment: E && (null == b ? void 0 : b.discoverable) === !1 ? s.h9.HIDE : s.h9.SHOW
+                treatment: E && (null == I ? void 0 : I.discoverable) === !1 ? s.h9.HIDE : s.h9.SHOW
             });
         }
-    }, [b, E, v, e, T]);
+    }, [I, E, v, e, T]);
     let { live: S, recent: y } = (0, r.useMemo)(() => {
         let e = (0, i.uniqWith)(
                 t.filter((e) => {
@@ -69,7 +69,7 @@ function E(e) {
     return {
         live: S,
         recent: y,
-        stream: I,
+        stream: b,
         outbox: n
     };
 }

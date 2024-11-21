@@ -29,7 +29,7 @@ let h = 10 * u.Z.Millis.SECOND,
 function v(e) {
     return e.some((e) => 'League of Legends' === e.name);
 }
-function I() {
+function b() {
     let e = o.Z.getAccount(null, _.ABu.RIOT_GAMES),
         t = o.Z.getAccount(null, _.ABu.LEAGUE_OF_LEGENDS);
     return null == e || null == t
@@ -39,7 +39,7 @@ function I() {
               lolConnection: t
           };
 }
-async function b(e) {
+async function I(e) {
     let { riotConnectionId: t, lolConnectionId: n, onlyUpdateIfStale: r } = e;
     if (E) return;
     g.stop(), (E = !0);
@@ -73,7 +73,7 @@ function T() {
 class S extends s.Z {
     handleRunningGameChange(e) {
         let { added: t, removed: n } = e,
-            a = I();
+            a = b();
         if (null != a && !!T())
             v(t) &&
                 (null != i && clearInterval(i),
@@ -86,20 +86,20 @@ class S extends s.Z {
                 }, m)),
                 v(n) &&
                     a.riotConnection.name === r &&
-                    b({
+                    I({
                         riotConnectionId: a.riotConnection.id,
                         lolConnectionId: a.lolConnection.id
                     });
     }
     handleDependantStoreChanges() {
-        let e = I(),
+        let e = b(),
             t = null != e,
             n = T() && t;
         g.isStarted() && !n
             ? g.stop()
             : !g.isStarted() &&
               n &&
-              b({
+              I({
                   riotConnectionId: e.riotConnection.id,
                   lolConnectionId: e.lolConnection.id,
                   onlyUpdateIfStale: !0

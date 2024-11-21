@@ -16,8 +16,8 @@ let _ = null,
     g = new Set(),
     E = !1,
     v = new Set(),
-    I = new Set(),
-    b = {},
+    b = new Set(),
+    I = {},
     T = 0,
     S = null,
     y = [],
@@ -40,7 +40,7 @@ function P(e) {
 function k(e) {
     let t = e.type === o.u.PREMIUM_REFERRAL ? e.content : null;
     if (null == t) return !1;
-    if (!I.has(t) && !v.has(t)) {
+    if (!b.has(t) && !v.has(t)) {
         var n;
         (n = t), v.add(n), u.Z.wait(() => (0, d.IB)(t).catch(f.VqG));
     }
@@ -68,7 +68,7 @@ class U extends (r = l.ZP.Store) {
         return void 0 === p[e] && !g.has(e) && (0, d.Ve)(e), p[e];
     }
     getRelevantUserTrialOffer(e) {
-        return b[e];
+        return I[e];
     }
     isResolving(e) {
         return v.has(e);
@@ -89,7 +89,7 @@ class U extends (r = l.ZP.Store) {
         return R;
     }
     getRelevantReferralTrialOffers() {
-        return b;
+        return I;
     }
     getRecipientStatus() {
         return m;
@@ -160,19 +160,19 @@ class U extends (r = l.ZP.Store) {
         },
         BILLING_CREATE_REFERRAL_SUCCESS: function (e) {
             let { userTrialOffer: t } = e;
-            (0, d.C$)(), (b[t.id] = t), (h = [...h, t.user_id]);
+            (0, d.C$)(), (I[t.id] = t), (h = [...h, t.user_id]);
         },
         CREATE_REFERRALS_SUCCESS: function (e) {
             let { userTrialOffers: t } = e;
-            for (let e of ((0, d.C$)(), t)) (b[e.id] = e), (h = [...h, e.user_id]);
+            for (let e of ((0, d.C$)(), t)) (I[e.id] = e), (h = [...h, e.user_id]);
         },
         BILLING_REFERRAL_RESOLVE_SUCCESS: function (e) {
             let { userTrialOffer: t } = e;
-            null != t && (v.delete(t.id), I.add(t.id), (b[t.id] = t));
+            null != t && (v.delete(t.id), b.add(t.id), (I[t.id] = t));
         },
         BILLING_REFERRAL_RESOLVE_FAIL: function (e) {
             let { userTrialOfferId: t } = e;
-            v.delete(t), I.add(t);
+            v.delete(t), b.add(t);
         },
         REFERRALS_FETCH_ELIGIBLE_USER_START: function () {
             A = !0;
@@ -191,6 +191,6 @@ class U extends (r = l.ZP.Store) {
         },
         LOAD_MESSAGES_AROUND_SUCCESS: P,
         LOGOUT: function () {
-            (_ = null), (p = {}), (h = []), (g = new Set()), (E = !1), (v = new Set()), (I = new Set()), (b = {}), (T = 0), (S = null), (y = []), (A = !1), (N = 0), (C = !1), (R = null), (m = new Map()), (O = !1), (D = !1), (L = !1), (x = f.g2L.NOT_ELIGIBLE);
+            (_ = null), (p = {}), (h = []), (g = new Set()), (E = !1), (v = new Set()), (b = new Set()), (I = {}), (T = 0), (S = null), (y = []), (A = !1), (N = 0), (C = !1), (R = null), (m = new Map()), (O = !1), (D = !1), (L = !1), (x = f.g2L.NOT_ELIGIBLE);
         }
     }));

@@ -15,8 +15,8 @@ var a,
     g = n(911969),
     E = n(109728),
     v = n(670890),
-    I = n(569611),
-    b = n(710845),
+    b = n(569611),
+    I = n(710845),
     T = n(703656),
     S = n(786213),
     y = n(626135),
@@ -26,7 +26,7 @@ var a,
     R = n(412788),
     O = n(981631),
     D = n(723359);
-let L = new b.Z('AuthenticationStore'),
+let L = new I.Z('AuthenticationStore'),
     x = 'fingerprint',
     w = 'email_cache',
     M = 'user_id_cache',
@@ -144,7 +144,7 @@ function eg(e) {
             type: (null == e ? void 0 : e.isSwitchingAccount) ? 'user-data-only' : 'all'
         }),
         R.Z.clearAll();
-    I.ZH(), N.Z.clearUser(), h.K.remove(M), (P = null), (U = null), (j = (null == e ? void 0 : e.isSwitchingAccount) ? O.u34.LOGGING_IN : O.u34.NONE), (H = O.$ib.NONE), (K = ''), (J = ''), (q = null), (z = !1), ($ = !1), (ee = !1), (et = {}), (en = {}), (eo = !1), (el = !1);
+    b.ZH(), N.Z.clearUser(), h.K.remove(M), (P = null), (U = null), (j = (null == e ? void 0 : e.isSwitchingAccount) ? O.u34.LOGGING_IN : O.u34.NONE), (H = O.$ib.NONE), (K = ''), (J = ''), (q = null), (z = !1), ($ = !1), (ee = !1), (et = {}), (en = {}), (eo = !1), (el = !1);
 }
 class eE extends (a = _.ZP.Store) {
     initialize() {

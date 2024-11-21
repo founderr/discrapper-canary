@@ -17,19 +17,19 @@ function u(e) {
 }
 function c(e) {
     let { navId: t, columnCounts: n, focusedX: c = 0, focusedY: d = 0, onSelect: f, prepareFocus: _, getNewFocusPosition: p, maintainFocusPosition: h = !0, enabled: m = !0, onDispatch: g, autoFocusElement: E = !0, useVirtualFocus: v = !1 } = e,
-        I = r.useCallback(
+        b = r.useCallback(
             (e, t) => {
                 let n = (0, i.Z)(e, t);
                 return null != g && g(e, n, t), n;
             },
             [g]
         ),
-        [b, T] = r.useReducer(I, {
+        [I, T] = r.useReducer(b, {
             focusedX: c,
             focusedY: d,
             columnCounts: n
         }),
-        { columnCounts: S, focusedX: y, focusedY: A } = b,
+        { columnCounts: S, focusedX: y, focusedY: A } = I,
         [N] = r.useState(() => (0, s.P2)(T, 16));
     return (
         r.useEffect(() => {
@@ -40,9 +40,9 @@ function c(e) {
         }, [n]),
         (function (e) {
             let { navId: t, columnCounts: n, focusedX: c, focusedY: d, onSelect: f, prepareFocus: _, getNewFocusPosition: p, dispatch: h, maintainFocusPosition: m, enabled: g, autoFocusElement: E, useVirtualFocus: v } = e,
-                I = r.useRef();
-            I.current = g;
-            let b = u(l(t, c, d)),
+                b = r.useRef();
+            b.current = g;
+            let I = u(l(t, c, d)),
                 [T, S] = r.useState(!1),
                 [y, A] = r.useState(!1),
                 [N, C] = r.useState(!1),
@@ -63,7 +63,7 @@ function c(e) {
             r.useEffect(() => () => R.clean(), [R]);
             let O = r.useCallback(
                     (e) => {
-                        if (!I.current || !E) return !1;
+                        if (!b.current || !E) return !1;
                         e.focus();
                     },
                     [E]
@@ -113,17 +113,17 @@ function c(e) {
                 null != n && O(n);
             }, [t, x, T, O, c, d]);
             let M = r.useCallback((e) => {
-                I.current && null == e && w(!0);
+                b.current && null == e && w(!0);
             }, []);
             r.useEffect(() => {
-                T && y && null != b && (O(b), A(!1));
-            }, [y, b]),
+                T && y && null != I && (O(I), A(!1));
+            }, [y, I]),
                 r.useEffect(() => {
                     T && (!N && D(c, d), C(!1));
                 }, [c, d]);
             let P = r.useCallback(
                     (e) => {
-                        if (!I.current) return;
+                        if (!b.current) return;
                         if (!v && o.includes(e.key) && !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) && e.currentTarget === e.target) {
                             e.preventDefault(), e.stopPropagation(), L();
                             return;
@@ -161,13 +161,13 @@ function c(e) {
                                 return;
                             case a.Us.SELECT_FOCUSED_ITEM:
                                 var r;
-                                if ((E && (null == (r = b) ? void 0 : r.ownerDocument.activeElement) !== r) || e.repeat) return;
-                                e.preventDefault(), e.stopPropagation(), h({ type: t }), null != f ? f(c, d, e) : null != b && b.click();
+                                if ((E && (null == (r = I) ? void 0 : r.ownerDocument.activeElement) !== r) || e.repeat) return;
+                                e.preventDefault(), e.stopPropagation(), h({ type: t }), null != f ? f(c, d, e) : null != I && I.click();
                         }
                     },
-                    [L, h, E, b, f, c, d]
+                    [L, h, E, I, f, c, d]
                 ),
-                k = r.useCallback((e) => (e.currentTarget !== e.target ? (!T && (S(!0), C(!0)), !1) : T ? (L(!1), !1) : void (m && null != b ? D(c, d) : L(!0))), [T, m, b, L, D, c, d]),
+                k = r.useCallback((e) => (e.currentTarget !== e.target ? (!T && (S(!0), C(!0)), !1) : T ? (L(!1), !1) : void (m && null != I ? D(c, d) : L(!0))), [T, m, I, L, D, c, d]),
                 U = r.useCallback((e) => {
                     if (e.target !== e.currentTarget) {
                         if (e.currentTarget.contains(e.relatedTarget)) return !1;

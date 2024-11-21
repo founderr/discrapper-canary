@@ -52,10 +52,10 @@ let N = (e) => {
             M = (e, t) => {
                 e.stopPropagation(), (0, g.Zx)(t, !0), P();
             },
-            L = (e, t) => {
+            R = (e, t) => {
                 e.stopPropagation(), (0, g._s)(t.status, t.emoji, !0), P();
             },
-            R = l.useCallback((e) => {
+            L = l.useCallback((e) => {
                 e.stopPropagation(), (0, g.Sc)(!0);
             }, []),
             k = (e) => {
@@ -169,7 +169,7 @@ let N = (e) => {
                                 }),
                                 (0, i.jsx)(u.Clickable, {
                                     'aria-label': b.intl.string(b.t.S90Fub),
-                                    onClick: R,
+                                    onClick: L,
                                     onMouseEnter: () => A(null),
                                     children: (0, i.jsx)(N, {
                                         className: Z.optionButton,
@@ -196,7 +196,7 @@ let N = (e) => {
                                         {
                                             'aria-label': e.status,
                                             onMouseEnter: () => D(e),
-                                            onClick: s ? void 0 : (t) => L(t, e),
+                                            onClick: s ? void 0 : (t) => R(t, e),
                                             className: Z.statusOptionContainer,
                                             children: [
                                                 (0, i.jsx)(N, {

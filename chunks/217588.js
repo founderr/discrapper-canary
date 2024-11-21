@@ -6,8 +6,8 @@ var i = n(200651),
     o = n(442837),
     s = n(481060),
     c = n(749210),
-    u = n(367907),
-    d = n(600164),
+    d = n(367907),
+    u = n(600164),
     m = n(111028),
     h = n(231053),
     f = n(697568),
@@ -43,16 +43,16 @@ function M(e) {
 }
 function k(e) {
     let { sticker: t, description: n } = e;
-    return (0, i.jsxs)(d.Z, {
+    return (0, i.jsxs)(u.Z, {
         children: [
             (0, i.jsx)(A.ZP, {
                 sticker: t,
                 size: 48,
                 isInteracting: !0
             }),
-            (0, i.jsxs)(d.Z, {
-                direction: d.Z.Direction.VERTICAL,
-                justify: d.Z.Justify.CENTER,
+            (0, i.jsxs)(u.Z, {
+                direction: u.Z.Direction.VERTICAL,
+                justify: u.Z.Justify.CENTER,
                 className: L.truncatingText,
                 children: [
                     (0, i.jsx)(s.Text, {
@@ -72,7 +72,7 @@ function k(e) {
 }
 let D = (e) => {
         let { closePopout: t, sticker: n, channel: l, refreshPositionKey: a } = e,
-            [c, d, m] = (0, o.Wu)([T.Z], () => [T.Z.getStickerPack(n.pack_id), !T.Z.hasLoadedStickerPacks, T.Z.isPremiumPack(n.pack_id)], [n]),
+            [c, u, m] = (0, o.Wu)([T.Z], () => [T.Z.getStickerPack(n.pack_id), !T.Z.hasLoadedStickerPacks, T.Z.isPremiumPack(n.pack_id)], [n]),
             h = O({
                 sticker: n,
                 stickerPack: c
@@ -81,16 +81,16 @@ let D = (e) => {
         let f = (0, v.Sd)(l);
         return (r.useEffect(() => {
             a();
-        }, [d]),
+        }, [u]),
         r.useEffect(() => {
             x.default.track(j.rMx.OPEN_POPOUT, {
                 type: j.jXE.STICKER_POPOUT,
                 guild_id: l.getGuildId(),
                 sticker_pack_id: n.pack_id,
-                ...(0, u.v_)(l)
+                ...(0, d.v_)(l)
             });
         }, [n.pack_id]),
-        d || null == c)
+        u || null == c)
             ? (0, i.jsx)(_.SE, { className: P.popoutLoader })
             : (0, i.jsxs)(_.W_, {
                   className: P.popoutContent,
@@ -161,7 +161,7 @@ let D = (e) => {
             ),
             { current: H } = r.useRef({
                 guild_id: l.getGuildId(),
-                ...(0, u.v_)(l)
+                ...(0, d.v_)(l)
             });
         r.useEffect(() => {
             (async () => {
@@ -265,7 +265,7 @@ let D = (e) => {
                                                           g(), w(!U);
                                                       },
                                                       className: L.showMoreEmojis,
-                                                      children: (0, i.jsxs)(d.Z, {
+                                                      children: (0, i.jsxs)(u.Z, {
                                                           children: [
                                                               (0, i.jsx)(s.Text, {
                                                                   className: L.__invalid_showMoreEmojisLabel,
@@ -282,10 +282,10 @@ let D = (e) => {
                                                       })
                                                   }),
                                                   U &&
-                                                      (0, i.jsx)(d.Z, {
-                                                          wrap: d.Z.Wrap.WRAP,
-                                                          align: d.Z.Align.START,
-                                                          justify: d.Z.Justify.START,
+                                                      (0, i.jsx)(u.Z, {
+                                                          wrap: u.Z.Wrap.WRAP,
+                                                          align: u.Z.Align.START,
+                                                          justify: u.Z.Justify.START,
                                                           className: L.otherEmojisContainer,
                                                           children: t.map((e) =>
                                                               (0, i.jsx)(

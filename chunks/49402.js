@@ -13,27 +13,27 @@ function u(e, t, n) {
     let a = (0, l.G6)(e);
     return i.forwardRef(function (u, c) {
         let { children: d, className: f, dir: _ = 'ltr', orientation: p = 'vertical', fade: h = !1, customTheme: m = !1, paddingFix: g = !0, style: E, ...v } = u,
-            { scrollerRef: I, getScrollerState: b } = (0, l.Ke)(),
-            T = (0, l.t2)(I, p);
+            { scrollerRef: b, getScrollerState: I } = (0, l.Ke)(),
+            T = (0, l.t2)(b, p);
         i.useImperativeHandle(
             c,
             () => ({
-                getScrollerNode: () => I.current,
-                getScrollerState: b,
-                ...(0, l.Ue)(I, b, T, p)
+                getScrollerNode: () => b.current,
+                getScrollerState: I,
+                ...(0, l.Ue)(b, I, T, p)
             }),
-            [I, b, p, T]
+            [b, I, p, T]
         );
         let S = (0, l.tT)({
             paddingFix: g,
             orientation: p,
             dir: _,
             className: f,
-            scrollerRef: I,
+            scrollerRef: b,
             specs: a
         });
         return (0, r.jsx)('div', {
-            ref: I,
+            ref: b,
             className: s()(f, {
                 [e]: !0,
                 [t]: h,
@@ -43,7 +43,7 @@ function u(e, t, n) {
             dir: _,
             ...v,
             children: (0, r.jsxs)(o.Jc, {
-                containerRef: I,
+                containerRef: b,
                 children: [d, S]
             })
         });

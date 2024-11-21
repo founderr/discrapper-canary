@@ -31,20 +31,20 @@ let S = 'vc-activities-'.concat((0, s.Z)()),
     T = l.forwardRef(function (e, t) {
         let { channel: n, isHovered: r, closePopout: s, onMouseEnter: T, onMouseLeave: j, onClick: A, className: y } = e,
             P = (0, o.e7)([h.Z], () => h.Z.useReducedMotion),
-            { id: M, guild_id: L } = n;
+            { id: M, guild_id: R } = n;
         l.useEffect(() => {
             C.default.track(b.rMx.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, {
                 channel_id: M,
-                guild_id: L
+                guild_id: R
             });
-        }, [M, L]),
+        }, [M, R]),
             l.useEffect(() => {
                 !r && s();
             }, [s, r]);
-        let R = (0, u.bp)(),
+        let L = (0, u.bp)(),
             { analyticsLocations: k } = (0, m.ZP)(p.Z.ACTIVITIES_MINI_SHELF),
             { analyticsLocations: O } = (0, m.ZP)([...k, p.Z.ACTIVITIES_MINI_SHELF_BANNER]),
-            D = R === b.IlC.POPOUT,
+            D = L === b.IlC.POPOUT,
             w = (0, d.O)(),
             B = (function (e) {
                 return (0, _.Z)({ guildId: e }).slice(0, 5);

@@ -22,8 +22,8 @@ var r = n(525654),
     g = n(625128),
     E = n(972830),
     v = n(305325),
-    I = n(281956),
-    b = n(931261),
+    b = n(281956),
+    I = n(931261),
     T = n(15274),
     S = n(924301),
     y = n(82085),
@@ -84,7 +84,7 @@ function er(e) {
         g = (function (e, t, n) {
             var r, i;
             if ((null == n ? void 0 : n.targetType) === J.Iq.ROLE_SUBSCRIPTIONS_PURCHASE) return Q.oC.ROLE_SUBSCRIPTIONS;
-            if ((null == n ? void 0 : n.targetType) == null && !L.tx.has(t.type) && (0, b.s)(e)) return Q.oC.GUILD_HOME;
+            if ((null == n ? void 0 : n.targetType) == null && !L.tx.has(t.type) && (0, I.s)(e)) return Q.oC.GUILD_HOME;
             let a = w.Z.getChannel(t.id);
             return B.Z.can(q.Plq.VIEW_CHANNEL, a) ? t.id : null !== (i = null === (r = M.ZP.getDefaultChannel(e, !0, q.Plq.CREATE_INSTANT_INVITE)) || void 0 === r ? void 0 : r.id) && void 0 !== i ? i : t.id;
         })(t, r, i),
@@ -112,7 +112,7 @@ function er(e) {
                                       }),
                                   u === J.Iq.EMBEDDED_APPLICATION && null != c && ((0, O.uL)(q.Z5c.CHANNEL(null != t ? t : q.ME, g)), (0, h.Z)(g, c, a, null == i ? void 0 : i.intent, m.bB.CHAT));
                           };
-                      !d && (0, I.n)(t, [k.Z, U.Z, F.default, P.ZP]) ? (0, v.hk)(t, s) : s();
+                      !d && (0, b.n)(t, [k.Z, U.Z, F.default, P.ZP]) ? (0, v.hk)(t, s) : s();
                   });
           })
         : (0, p.l5)(_) && u === J.Iq.EMBEDDED_APPLICATION && null != c && ((0, O.uL)(q.Z5c.CHANNEL(null != t ? t : q.ME, g)), (0, h.Z)(g, c, a, null == i ? void 0 : i.intent, m.bB.CHAT)),

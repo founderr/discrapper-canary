@@ -118,8 +118,8 @@ let E = RegExp('^dev://branch/([\\w-./]+)$', 'i');
 function v(e) {
     return null != e && E.test(e);
 }
-let I = new Set(['canary.discord.com', 'ptb.discord.com', 'discord.com', 'canary.discordapp.com', 'ptb.discordapp.com', 'discordapp.com']),
-    b = new Set(['/__development/link', '/__development/link/']);
+let b = new Set(['canary.discord.com', 'ptb.discord.com', 'discord.com', 'canary.discordapp.com', 'ptb.discordapp.com', 'discordapp.com']),
+    I = new Set(['/__development/link', '/__development/link/']);
 function T(e) {
     if (v(e))
         return {
@@ -127,7 +127,7 @@ function T(e) {
             url: e
         };
     let t = o.Z.safeParseWithQuery(e);
-    if (null == t || !I.has(t.hostname) || !('s' in t.query) || !b.has(t.pathname)) return null;
+    if (null == t || !b.has(t.hostname) || !('s' in t.query) || !I.has(t.pathname)) return null;
     for (let e in t.query) 's' !== e && delete t.query[e];
     return {
         payload: t.query.s,

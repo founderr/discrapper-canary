@@ -45,8 +45,8 @@ var r,
     g = n(675478),
     E = n(314897),
     v = n(592125),
-    I = n(430824),
-    b = n(594174),
+    b = n(430824),
+    I = n(594174),
     T = n(626135),
     S = n(254711),
     y = n(700089),
@@ -167,7 +167,7 @@ async function Q(e) {
 function X(e) {
     var t, n;
     let { target: r, index: i } = e,
-        a = null === (t = b.default.getCurrentUser()) || void 0 === t ? void 0 : t.id;
+        a = null === (t = I.default.getCurrentUser()) || void 0 === t ? void 0 : t.id;
     if (null == a) return !j && H.push(e), !1;
     let s = {},
         o = {},
@@ -175,7 +175,7 @@ function X(e) {
     for (let e of i.applications) {
         if (null == e.bot && null != e.bot_id) {
             o[e.bot_id] = e.id;
-            let t = b.default.getUser(e.bot_id);
+            let t = I.default.getUser(e.bot_id);
             null != t ? (e.bot = t) : l.add(e.bot_id);
         } else null != e.bot && (o[e.bot.id] = e.id);
         let t = {
@@ -288,7 +288,7 @@ class $ extends (r = c.ZP.Store) {
         return e in this.indices;
     }
     query(e, t, n) {
-        if (null == b.default.getCurrentUser()) return B;
+        if (null == I.default.getCurrentUser()) return B;
         let r = this.getContextState(e),
             i = this.getUserState(),
             a = this.getApplicationState(n.applicationId),
@@ -663,7 +663,7 @@ function es(e, t, n) {
 }
 function eo(e) {
     var t, n, r, i, a, s, o;
-    let { permissionContext: u, contextState: c, userState: d, applicationStates: f, text: _, builtIns: h = C.D.ALLOW, allowApplicationCommands: m = !0, singleApplicationId: E, allowEmptySections: v = !1, scoreMethod: b = C.p.NONE, sortOptions: T = ea, installOnDemand: y = !1 } = e,
+    let { permissionContext: u, contextState: c, userState: d, applicationStates: f, text: _, builtIns: h = C.D.ALLOW, allowApplicationCommands: m = !0, singleApplicationId: E, allowEmptySections: v = !1, scoreMethod: I = C.p.NONE, sortOptions: T = ea, installOnDemand: y = !1 } = e,
         { commandTypes: N } = u,
         R = null == _ ? void 0 : _.toLowerCase(),
         O = null == R ? void 0 : R.split(' '),
@@ -675,7 +675,7 @@ function eo(e) {
             query: R,
             splitQuery: O,
             allowEmptySections: v,
-            scoreMethod: b,
+            scoreMethod: I,
             installOnDemand: y
         },
         P = null !== (i = null === (t = c.result) || void 0 === t ? void 0 : t.sections) && void 0 !== i ? i : {},
@@ -723,7 +723,7 @@ function eo(e) {
     if (
         (T.applications.useFrecency && g.DZ.loadIfNecessary(),
         w.sort((e, t) => {
-            if (T.applications.useScore && b === C.p.APPLICATION_ONLY) {
+            if (T.applications.useScore && I === C.p.APPLICATION_ONLY) {
                 var n, r, i, a;
                 let s = null !== (i = null === (n = e.data[0]) || void 0 === n ? void 0 : n.score) && void 0 !== i ? i : Number.MAX_VALUE,
                     o = null !== (a = null === (r = t.data[0]) || void 0 === r ? void 0 : r.score) && void 0 !== a ? a : Number.MAX_VALUE;
@@ -747,9 +747,9 @@ function eo(e) {
             section: e.section
         }))
     );
-    if (b === C.p.COMMAND_ONLY || b === C.p.COMMAND_OR_APPLICATION) {
+    if (I === C.p.COMMAND_ONLY || I === C.p.COMMAND_OR_APPLICATION) {
         let e = u.context,
-            t = I.Z.getGuild(null == u ? void 0 : null === (o = u.context) || void 0 === o ? void 0 : o.guild_id);
+            t = b.Z.getGuild(null == u ? void 0 : null === (o = u.context) || void 0 === o ? void 0 : o.guild_id);
         T.commands.useFrecency && g.DZ.loadIfNecessary();
         let n =
             null != e
@@ -852,7 +852,7 @@ function el(e, t, n, r, i) {
 }
 function eu(e) {
     var t;
-    return (null == e ? void 0 : e.guild_id) != null || (e.type === w.d4z.DM && (null === (t = b.default.getUser(e.getRecipientId())) || void 0 === t ? void 0 : t.bot) === !0);
+    return (null == e ? void 0 : e.guild_id) != null || (e.type === w.d4z.DM && (null === (t = I.default.getUser(e.getRecipientId())) || void 0 === t ? void 0 : t.bot) === !0);
 }
 function ec(e) {
     return (

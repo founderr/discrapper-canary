@@ -35,8 +35,8 @@ var l = n(120356),
     y = n(613548),
     P = n(221888),
     M = n(339340),
-    L = n(354459),
-    R = n(981631),
+    R = n(354459),
+    L = n(981631),
     k = n(231338),
     O = n(388032),
     D = n(652807),
@@ -52,7 +52,7 @@ function B(e) {
             maxVisibleUsers: 5,
             guildId: n.getGuildId(),
             channelId: n.id,
-            disableInteraction: l === R.IlC.POPOUT || r === R.AEg.FULL_SCREEN
+            disableInteraction: l === L.IlC.POPOUT || r === L.AEg.FULL_SCREEN
         })
     });
 }
@@ -85,7 +85,7 @@ function H(e) {
         o = (0, g.qY)(r.id),
         c = null != o ? (0, C.DK)(o) : null,
         u = null != o;
-    if ((null == l ? void 0 : l.type) === L.fO.ACTIVITY)
+    if ((null == l ? void 0 : l.type) === R.fO.ACTIVITY)
         null != n &&
             (t = (0, i.jsxs)(i.Fragment, {
                 children: [
@@ -107,7 +107,7 @@ function H(e) {
                         })
                 ]
             }));
-    else if ((null == l ? void 0 : l.type) === L.fO.STREAM) {
+    else if ((null == l ? void 0 : l.type) === R.fO.STREAM) {
         let e = l.user,
             n = l.stream;
         t = (0, i.jsxs)(i.Fragment, {
@@ -149,7 +149,7 @@ function G(e) {
         ),
         C = (0, p.ZP)(t),
         x = (0, m.KS)(t),
-        [N] = (0, u.Z)((null == g ? void 0 : g.type) === L.fO.ACTIVITY ? [g.id] : []),
+        [N] = (0, u.Z)((null == g ? void 0 : g.type) === R.fO.ACTIVITY ? [g.id] : []),
         S = O.intl.string(O.t.BVZqJi);
     t.isDM() ? (S = O.intl.string(O.t.jN2DfX)) : t.isGroupDM() && (S = O.intl.string(O.t['e5y+go']));
     let A = (0, a.e7)([h.Z], () => h.Z.getChannelStatus(t)),
@@ -213,7 +213,7 @@ function G(e) {
                         className: e,
                         childrenBottom: U,
                         toolbar: (0, i.jsx)(y.Z, {
-                            inPopout: o === R.IlC.POPOUT,
+                            inPopout: o === L.IlC.POPOUT,
                             channel: t,
                             appContext: o,
                             inCall: c,

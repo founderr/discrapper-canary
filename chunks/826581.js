@@ -16,21 +16,21 @@ var r,
     g = n(937111),
     E = n(981631);
 let v = new Map(),
-    I = {};
-function b(e) {
-    return I[e];
+    b = {};
+function I(e) {
+    return b[e];
 }
 function T(e, t) {
-    (I[e] = t), v.set(e, l()());
+    (b[e] = t), v.set(e, l()());
 }
 function S(e, t, n) {
     if (t !== n && null != t) {
         if (t === m.wB.SUBMITTED) {
-            let t = I[e];
+            let t = b[e];
             T(e, t + 1);
         }
         if (n === m.wB.SUBMITTED) {
-            let t = I[e];
+            let t = b[e];
             T(e, Math.max(0, t - 1));
         }
     }
@@ -74,7 +74,7 @@ class B extends (r = u.ZP.Store) {
         return (0, h.bk)(t) ? D.values(n) : (0, h.Nd)(t) ? O.values(n) : R.values(n);
     }
     getSubmittedGuildJoinRequestTotal(e) {
-        return I[e];
+        return b[e];
     }
     isFetching() {
         return y;

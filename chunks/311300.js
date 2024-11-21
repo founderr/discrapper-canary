@@ -20,8 +20,8 @@ var r = n(513394),
     g = n(551885),
     E = n(321531),
     v = n(685995),
-    I = n(478638),
-    b = n(578163),
+    b = n(478638),
+    I = n(578163),
     T = n(595048),
     S = n(762120),
     y = n(670598),
@@ -73,7 +73,7 @@ function q(e, t) {
             isVirtualized: !0
         }),
         E = (0, Z.tv)(),
-        { isInvalid: v, validationErrors: I, validationDetails: b } = t.displayValidation,
+        { isInvalid: v, validationErrors: b, validationDetails: I } = t.displayValidation,
         {
             labelProps: T,
             inputProps: S,
@@ -230,8 +230,8 @@ function q(e, t) {
             descriptionProps: y,
             errorMessageProps: A,
             isInvalid: v,
-            validationErrors: I,
-            validationDetails: b
+            validationErrors: b,
+            validationDetails: I
         }
     );
 }
@@ -253,8 +253,8 @@ z = {
     'it-IT': g.Z,
     'ja-JP': E.Z,
     'ko-KR': v.Z,
-    'lt-LT': I.Z,
-    'lv-LV': b.Z,
+    'lt-LT': b.Z,
+    'lv-LV': I.Z,
     'nb-NO': T.Z,
     'nl-NL': S.Z,
     'pl-PL': y.Z,

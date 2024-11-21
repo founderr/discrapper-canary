@@ -31,9 +31,9 @@ t.Z = (e) => {
         y = (0, s.e7)([f.default], () => f.default.getUser(r)),
         P = (0, s.e7)([m.Z], () => m.Z.getChannelId() === S.id),
         M = (0, s.e7)([p.Z], () => p.Z.can(b.Plq.CONNECT, S)),
-        L = (null == t ? void 0 : t.emoji) == null || (0, v.K)(t.emoji, S),
-        R = (0, s.e7)([h.ZP], () => (null != S.guild_id && null != y ? h.ZP.getMember(S.guild_id, r) : null)),
-        k = l.useMemo(() => (null != y ? (0, d.SG)(void 0, R, y, { size: 40 }) : void 0), [R, y]);
+        R = (null == t ? void 0 : t.emoji) == null || (0, v.K)(t.emoji, S),
+        L = (0, s.e7)([h.ZP], () => (null != S.guild_id && null != y ? h.ZP.getMember(S.guild_id, r) : null)),
+        k = l.useMemo(() => (null != y ? (0, d.SG)(void 0, L, y, { size: 40 }) : void 0), [L, y]);
     return (l.useEffect(() => {
         (0, C.UP)();
     }, []),
@@ -124,7 +124,7 @@ t.Z = (e) => {
                                       children: Z.intl.string(Z.t['B/dHXF'])
                                   })
                                 : null,
-                            P && L
+                            P && R
                                 ? (0, i.jsx)(o.Button, {
                                       className: N.cta,
                                       size: o.Button.Sizes.SMALL,

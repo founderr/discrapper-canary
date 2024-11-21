@@ -31,14 +31,14 @@ async function g(e, t, n) {
         E = Object.keys(h).map((e) => ''.concat(e).concat(h[e]));
     r !== _.Hk && E.push('(primary_category_id='.concat(r, ' OR categories.id=').concat(r, ')'));
     let v = E.join(' AND '),
-        I = null != i ? i : (0, f.Xp)();
+        b = null != i ? i : (0, f.Xp)();
     try {
         let { hits: t, nbHits: n } = await p.search(e, {
             filters: v,
-            optionalFilters: ['preferred_locale: '.concat(I)],
+            optionalFilters: ['preferred_locale: '.concat(b)],
             length: s,
             offset: a,
-            restrictSearchableAttributes: ['name', 'description', 'keywords', 'categories.name', 'categories.name_localizations.'.concat(I), 'primary_category.name', 'primary_category.name_localizations.'.concat(I), 'vanity_url_code']
+            restrictSearchableAttributes: ['name', 'description', 'keywords', 'categories.name', 'categories.name_localizations.'.concat(b), 'primary_category.name', 'primary_category.name_localizations.'.concat(b), 'vanity_url_code']
         });
         l.Z.dispatch({
             type: 'GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS',
@@ -54,9 +54,9 @@ async function g(e, t, n) {
             total: n
         });
     } catch (f) {
-        var b;
+        var I;
         let a = new o.Hx(f),
-            s = null !== (b = null == n ? void 0 : n.isRetry) && void 0 !== b && b;
+            s = null !== (I = null == n ? void 0 : n.isRetry) && void 0 !== I && I;
         f.body.retry_after > 0 && p === d.Z.getAlgoliaSearchIndex()
             ? (c.m9({
                   categoryId: r,

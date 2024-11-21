@@ -6,13 +6,13 @@ n.d(t, {
 var r = n(989103),
     i = n(155263),
     a = n(192379),
-    s = n(239700),
-    o = n(932143);
+    s = n(608167),
+    o = n(496392);
 function l(e) {
     var t, n, l, u, c, d, f, _;
     let { defaultFilter: p, menuTrigger: h = 'input', allowsEmptyCollection: m = !1, allowsCustomValue: g, shouldCloseOnBlur: E = !0 } = e,
-        [v, I] = (0, a.useState)(!1),
-        [b, T] = (0, a.useState)(!1),
+        [v, b] = (0, a.useState)(!1),
+        [I, T] = (0, a.useState)(!1),
         {
             collection: S,
             selectionManager: y,
@@ -27,7 +27,7 @@ function l(e) {
             },
             items: null !== (l = e.items) && void 0 !== l ? l : e.defaultItems
         }),
-        [O, D] = (0, s.zk)(e.inputValue, null !== (c = null !== (u = e.defaultInputValue) && void 0 !== u ? u : null === (t = S.getItem(A)) || void 0 === t ? void 0 : t.textValue) && void 0 !== c ? c : '', e.onInputChange),
+        [O, D] = (0, s.z)(e.inputValue, null !== (c = null !== (u = e.defaultInputValue) && void 0 !== u ? u : null === (t = S.getItem(A)) || void 0 === t ? void 0 : t.textValue) && void 0 !== c ? c : '', e.onInputChange),
         L = (0, a.useMemo)(
             () =>
                 null == e.items && p
@@ -63,7 +63,7 @@ function l(e) {
         }),
         k = (t, n) => {
             let r = 'manual' === n || ('focus' === n && 'focus' === h);
-            (m || L.size > 0 || (r && S.size > 0) || e.items) && (r && !P.isOpen && void 0 === e.items && I(!0), (M.current = n), P.open(t));
+            (m || L.size > 0 || (r && S.size > 0) || e.items) && (r && !P.isOpen && void 0 === e.items && b(!0), (M.current = n), P.open(t));
         },
         U = (0, a.useCallback)(
             (e) => {
@@ -84,9 +84,9 @@ function l(e) {
         V = (0, a.useRef)(null !== (_ = null === (n = S.getItem(A)) || void 0 === n ? void 0 : n.textValue) && void 0 !== _ ? _ : '');
     (0, a.useEffect)(() => {
         var t, n;
-        b && (L.size > 0 || m) && !P.isOpen && O !== B.current && 'manual' !== h && k(null, 'input'), !v && !m && P.isOpen && 0 === L.size && G(), null != A && A !== F.current && G(), O !== B.current && (y.setFocusedKey(null), I(!1), '' === O && (void 0 === e.inputValue || void 0 === e.selectedKey) && N(null)), A !== F.current && (void 0 === e.inputValue || void 0 === e.selectedKey) ? Z() : (B.current = O);
+        I && (L.size > 0 || m) && !P.isOpen && O !== B.current && 'manual' !== h && k(null, 'input'), !v && !m && P.isOpen && 0 === L.size && G(), null != A && A !== F.current && G(), O !== B.current && (y.setFocusedKey(null), b(!1), '' === O && (void 0 === e.inputValue || void 0 === e.selectedKey) && N(null)), A !== F.current && (void 0 === e.inputValue || void 0 === e.selectedKey) ? Z() : (B.current = O);
         let r = null !== (n = null === (t = S.getItem(A)) || void 0 === t ? void 0 : t.textValue) && void 0 !== n ? n : '';
-        !b && null != A && void 0 === e.inputValue && A === F.current && V.current !== r && ((B.current = r), D(r)), (F.current = A), (V.current = r);
+        !I && null != A && void 0 === e.inputValue && A === F.current && V.current !== r && ((B.current = r), D(r)), (F.current = A), (V.current = r);
     });
     let j = () => {
             (F.current = null), N(null), G();
@@ -110,7 +110,7 @@ function l(e) {
         ...P,
         toggle: (t, n) => {
             let r = 'manual' === n || ('focus' === n && 'focus' === h);
-            (m || L.size > 0 || (r && S.size > 0) || e.items || P.isOpen) && (r && !P.isOpen && void 0 === e.items && I(!0), !P.isOpen && (M.current = n), U(t));
+            (m || L.size > 0 || (r && S.size > 0) || e.items || P.isOpen) && (r && !P.isOpen && void 0 === e.items && b(!0), !P.isOpen && (M.current = n), U(t));
         },
         open: k,
         close: Y,
@@ -118,7 +118,7 @@ function l(e) {
         selectedKey: A,
         setSelectedKey: N,
         disabledKeys: R,
-        isFocused: b,
+        isFocused: I,
         setFocused: (e) => {
             e ? 'focus' === h && k(null, 'focus') : E && Y(), T(e);
         },

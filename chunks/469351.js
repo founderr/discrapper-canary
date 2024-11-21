@@ -1,6 +1,6 @@
 n.d(t, {
     t: function () {
-        return y;
+        return Z;
     }
 }),
     n(47120),
@@ -31,13 +31,13 @@ var i,
     S = n(981631),
     E = n(176505),
     R = n(388032),
-    Z = n(85490);
-function y(e) {
+    y = n(85490);
+function Z(e) {
     let { guildId: t, hasValidApplication: n } = e,
         { listingsLoaded: i } = (0, N.eD)(t),
         r = (0, o.e7)([v.Z], () => v.Z.getGuild(t)),
-        y = (0, o.e7)([_.default], () => _.default.getCurrentUser()),
-        A = (null == r ? void 0 : r.isOwner(y)) === !0,
+        Z = (0, o.e7)([_.default], () => _.default.getCurrentUser()),
+        A = (null == r ? void 0 : r.isOwner(Z)) === !0,
         { loading: L } = (0, d.H)(t),
         [D, O] = s.useState(n ? 'manage_listings' : 'payment');
     (0, h.P)(r);
@@ -57,7 +57,7 @@ function y(e) {
     }, [r]);
     if (!i || L) return (0, l.jsx)(c.Spinner, {});
     if (null == r) return null;
-    let M = (0, l.jsxs)(l.Fragment, {
+    let P = (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(c.FormTitle, {
                     tag: c.FormTitleTags.H1,
@@ -72,10 +72,10 @@ function y(e) {
                 })
             ]
         }),
-        P = (0, l.jsxs)(c.TabBar, {
+        M = (0, l.jsxs)(c.TabBar, {
             type: 'top',
             look: 'brand',
-            className: Z.tabBar,
+            className: y.tabBar,
             'aria-label': R.intl.string(R.t.X6h2g4),
             selectedItem: D,
             onItemSelect: O,
@@ -95,13 +95,13 @@ function y(e) {
                 A
                     ? (0, l.jsx)(c.TabBar.Item, {
                           id: 'payment',
-                          className: Z.tabBarItem,
+                          className: y.tabBarItem,
                           children: R.intl.string(R.t.YBrFe3)
                       })
                     : null,
                 n
                     ? (0, l.jsx)('div', {
-                          className: Z.previewButton,
+                          className: y.previewButton,
                           children: (0, l.jsx)(c.Button, {
                               onClick: k,
                               color: c.Button.Colors.PRIMARY,
@@ -127,11 +127,11 @@ function y(e) {
     return (0, l.jsxs)(u.AL, {
         guildId: t,
         children: [
-            M,
+            P,
             (0, l.jsx)(g.Z, { guild: r }),
             (0, l.jsx)('div', {
-                className: Z.tabBarContainer,
-                children: P
+                className: y.tabBarContainer,
+                children: M
             }),
             B
         ]

@@ -16,8 +16,8 @@ var r = n(200651),
     g = n(463031),
     E = n(981631),
     v = n(231338),
-    I = n(388032),
-    b = n(304818);
+    b = n(388032),
+    I = n(304818);
 function T(e) {
     let { children: t } = e;
     return (0, r.jsx)(s.ThemeProvider, {
@@ -34,7 +34,7 @@ function S(e) {
     let { leaderboard: t } = e,
         n = i.useMemo(() => (0, f.n)(c.default.extractTimestamp(t.interval_end)), [t]);
     return (0, r.jsxs)('div', {
-        className: b.header,
+        className: I.header,
         children: [
             (0, r.jsx)(s.LeagueOfLegendsBrandIcon, { size: 'md' }),
             (0, r.jsx)(s.Spacer, {
@@ -43,8 +43,8 @@ function S(e) {
             }),
             (0, r.jsx)(s.Heading, {
                 variant: 'text-xs/normal',
-                className: b.leaderboardTitle,
-                children: I.intl.format(I.t['MlT4+P'], {
+                className: I.leaderboardTitle,
+                children: b.intl.format(b.t['MlT4+P'], {
                     leaderboardName: 'League of Legends',
                     timeLeft: n,
                     leaderboardNameHook: (e, t) =>
@@ -52,7 +52,7 @@ function S(e) {
                             s.Text,
                             {
                                 variant: 'text-sm/medium',
-                                className: b.leaderboardName,
+                                className: I.leaderboardName,
                                 children: e
                             },
                             t
@@ -72,9 +72,9 @@ function y(e) {
     return null == (0, a.e7)([l.Z], () => l.Z.getAccount(null, E.ABu.RIOT_GAMES)) || u
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(o.Z, { className: b.divider }),
+                  (0, r.jsx)(o.Z, { className: I.divider }),
                   (0, r.jsx)(s.Button, {
-                      className: b.joinLeaderboardButton,
+                      className: I.joinLeaderboardButton,
                       onClick: function () {
                           (0, s.openModalLazy)(async () => {
                               let { default: e } = await n.e('73217').then(n.bind(n, 139964));
@@ -85,7 +85,7 @@ function y(e) {
                                   });
                           });
                       },
-                      children: I.intl.string(I.t['0yRXHx'])
+                      children: b.intl.string(b.t['0yRXHx'])
                   })
               ]
           })
@@ -155,11 +155,11 @@ t.Z = (e) => {
         ? null
         : (0, r.jsx)(T, {
               children: (0, r.jsxs)('div', {
-                  className: b.popout,
+                  className: I.popout,
                   ref: f,
                   children: [
                       (0, r.jsxs)('div', {
-                          className: b.content,
+                          className: I.content,
                           children: [
                               (0, r.jsx)(S, { leaderboard: p }),
                               (0, r.jsx)(m.Z, {
@@ -173,7 +173,7 @@ t.Z = (e) => {
                                         children: [
                                             null != v &&
                                                 (0, r.jsx)(h.Z, {
-                                                    className: b.previousChampion,
+                                                    className: I.previousChampion,
                                                     guildId: t,
                                                     leaderboard: v
                                                 }),
@@ -190,11 +190,11 @@ t.Z = (e) => {
                                 children: (0, r.jsx)(s.Clickable, {
                                     onClick: () => d(!1),
                                     children: (0, r.jsx)('div', {
-                                        className: b.exitPreviewModeButton,
+                                        className: I.exitPreviewModeButton,
                                         children: (0, r.jsx)(s.Text, {
                                             variant: 'text-sm/medium',
-                                            className: b.exitPreviewModeText,
-                                            children: I.intl.string(I.t.GLeQe3)
+                                            className: I.exitPreviewModeText,
+                                            children: b.intl.string(b.t.GLeQe3)
                                         })
                                     })
                                 })

@@ -63,16 +63,16 @@ function E(e, t, n) {
 function v(e, t) {
     return ''.concat(e, ':').concat(t);
 }
-class I {
+class b {
     static empty() {
-        return new I({});
+        return new b({});
     }
     put(e, t, n, r) {
         if ('' === r) {
             let r = { ...this.state };
-            return delete r[E(e, t, n)], new I(r);
+            return delete r[E(e, t, n)], new b(r);
         }
-        return new I({
+        return new b({
             [E(e, t, n)]: r,
             ...this.state
         });
@@ -85,7 +85,7 @@ class I {
         f(this, 'state', void 0), (this.state = e);
     }
 }
-let b = I.empty(),
+let I = b.empty(),
     T = !1,
     S = null;
 function y(e, t, n) {
@@ -146,7 +146,7 @@ class R extends (r = i.ZP.Store) {
         return Object.values(h[e]);
     }
     getVideoStreams() {
-        return b;
+        return I;
     }
     shouldRecordNextConnection() {
         return T;
@@ -233,7 +233,7 @@ f(R, 'displayName', 'RTCDebugStore'),
                 s.Z.wait(() => o.bA()));
         },
         RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT: function (e) {
-            b = b.put(e.mediaEngineConnectionId, e.userId, e.videoSsrc, e.streamId);
+            I = I.put(e.mediaEngineConnectionId, e.userId, e.videoSsrc, e.streamId);
         },
         RTC_DEBUG_SET_RECORDING_FLAG: function (e) {
             let { value: t } = e;

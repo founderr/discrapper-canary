@@ -413,8 +413,8 @@ var v = function (e) {
         }
         return o || 1;
     },
-    I = /\s/,
-    b = /[\u0021-\u0023\u0025-\u002A\u002C-\u002F\u003A\u003B\u003F\u0040\u005B-\u005D\u005F\u007B\u007D\u00A1\u00A7\u00AB\u00B6\u00B7\u00BB\u00BF\u037E\u0387\u055A-\u055F\u0589\u058A\u05BE\u05C0\u05C3\u05C6\u05F3\u05F4\u0609\u060A\u060C\u060D\u061B\u061E\u061F\u066A-\u066D\u06D4\u0700-\u070D\u07F7-\u07F9\u0830-\u083E\u085E\u0964\u0965\u0970\u0AF0\u0DF4\u0E4F\u0E5A\u0E5B\u0F04-\u0F12\u0F14\u0F3A-\u0F3D\u0F85\u0FD0-\u0FD4\u0FD9\u0FDA\u104A-\u104F\u10FB\u1360-\u1368\u1400\u166D\u166E\u169B\u169C\u16EB-\u16ED\u1735\u1736\u17D4-\u17D6\u17D8-\u17DA\u1800-\u180A\u1944\u1945\u1A1E\u1A1F\u1AA0-\u1AA6\u1AA8-\u1AAD\u1B5A-\u1B60\u1BFC-\u1BFF\u1C3B-\u1C3F\u1C7E\u1C7F\u1CC0-\u1CC7\u1CD3\u2010-\u2027\u2030-\u2043\u2045-\u2051\u2053-\u205E\u207D\u207E\u208D\u208E\u2329\u232A\u2768-\u2775\u27C5\u27C6\u27E6-\u27EF\u2983-\u2998\u29D8-\u29DB\u29FC\u29FD\u2CF9-\u2CFC\u2CFE\u2CFF\u2D70\u2E00-\u2E2E\u2E30-\u2E3B\u3001-\u3003\u3008-\u3011\u3014-\u301F\u3030\u303D\u30A0\u30FB\uA4FE\uA4FF\uA60D-\uA60F\uA673\uA67E\uA6F2-\uA6F7\uA874-\uA877\uA8CE\uA8CF\uA8F8-\uA8FA\uA92E\uA92F\uA95F\uA9C1-\uA9CD\uA9DE\uA9DF\uAA5C-\uAA5F\uAADE\uAADF\uAAF0\uAAF1\uABEB\uFD3E\uFD3F\uFE10-\uFE19\uFE30-\uFE52\uFE54-\uFE61\uFE63\uFE68\uFE6A\uFE6B\uFF01-\uFF03\uFF05-\uFF0A\uFF0C-\uFF0F\uFF1A\uFF1B\uFF1F\uFF20\uFF3B-\uFF3D\uFF3F\uFF5B\uFF5D\uFF5F-\uFF65]/,
+    b = /\s/,
+    I = /[\u0021-\u0023\u0025-\u002A\u002C-\u002F\u003A\u003B\u003F\u0040\u005B-\u005D\u005F\u007B\u007D\u00A1\u00A7\u00AB\u00B6\u00B7\u00BB\u00BF\u037E\u0387\u055A-\u055F\u0589\u058A\u05BE\u05C0\u05C3\u05C6\u05F3\u05F4\u0609\u060A\u060C\u060D\u061B\u061E\u061F\u066A-\u066D\u06D4\u0700-\u070D\u07F7-\u07F9\u0830-\u083E\u085E\u0964\u0965\u0970\u0AF0\u0DF4\u0E4F\u0E5A\u0E5B\u0F04-\u0F12\u0F14\u0F3A-\u0F3D\u0F85\u0FD0-\u0FD4\u0FD9\u0FDA\u104A-\u104F\u10FB\u1360-\u1368\u1400\u166D\u166E\u169B\u169C\u16EB-\u16ED\u1735\u1736\u17D4-\u17D6\u17D8-\u17DA\u1800-\u180A\u1944\u1945\u1A1E\u1A1F\u1AA0-\u1AA6\u1AA8-\u1AAD\u1B5A-\u1B60\u1BFC-\u1BFF\u1C3B-\u1C3F\u1C7E\u1C7F\u1CC0-\u1CC7\u1CD3\u2010-\u2027\u2030-\u2043\u2045-\u2051\u2053-\u205E\u207D\u207E\u208D\u208E\u2329\u232A\u2768-\u2775\u27C5\u27C6\u27E6-\u27EF\u2983-\u2998\u29D8-\u29DB\u29FC\u29FD\u2CF9-\u2CFC\u2CFE\u2CFF\u2D70\u2E00-\u2E2E\u2E30-\u2E3B\u3001-\u3003\u3008-\u3011\u3014-\u301F\u3030\u303D\u30A0\u30FB\uA4FE\uA4FF\uA60D-\uA60F\uA673\uA67E\uA6F2-\uA6F7\uA874-\uA877\uA8CE\uA8CF\uA8F8-\uA8FA\uA92E\uA92F\uA95F\uA9C1-\uA9CD\uA9DE\uA9DF\uAA5C-\uAA5F\uAADE\uAADF\uAAF0\uAAF1\uABEB\uFD3E\uFD3F\uFE10-\uFE19\uFE30-\uFE52\uFE54-\uFE61\uFE63\uFE68\uFE6A\uFE6B\uFF01-\uFF03\uFF05-\uFF0A\uFF0C-\uFF0F\uFF1A\uFF1B\uFF1F\uFF20\uFF3B-\uFF3D\uFF3F\uFF5B\uFF5D\uFF5F-\uFF65]/,
     T = /['\u2018\u2019]/,
     S = function (e) {
         for (var t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1], n = 0, r = !1; e.length > 0; ) {
@@ -436,13 +436,13 @@ var v = function (e) {
     },
     A = function e(t, n) {
         var r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        if (I.test(t)) return !1;
+        if (b.test(t)) return !1;
         if (T.test(t)) {
             var i = v(n, r),
                 [a, s] = y(n, i, r);
             if (e(a, s, r)) return !0;
         }
-        return !b.test(t) && !0;
+        return !I.test(t) && !0;
     },
     N = function* (e) {
         for (var t = e.length - 1, n = 0; n < e.length; n++) {
@@ -979,10 +979,10 @@ var X = new WeakMap(),
                         }
                     }
                     if (ey.isText(h)) {
-                        var I = eo.equals(m, u.path);
+                        var b = eo.equals(m, u.path);
                         for (
-                            I ? ((_ = i ? u.offset : h.text.length - u.offset), (p = u.offset)) : ((_ = h.text.length), (p = i ? _ : 0)),
-                                (I || c || 'offset' === r) &&
+                            b ? ((_ = i ? u.offset : h.text.length - u.offset), (p = u.offset)) : ((_ = h.text.length), (p = i ? _ : 0)),
+                                (b || c || 'offset' === r) &&
                                     (yield {
                                         path: m,
                                         offset: p
@@ -1812,8 +1812,8 @@ var eh = {
         for (var o in t) if (void 0 === e[o] && void 0 !== t[o]) return !1;
         return !0;
     },
-    eI = ['text'],
-    eb = ['anchor', 'focus'];
+    eb = ['text'],
+    eI = ['anchor', 'focus'];
 function eT(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
@@ -1846,9 +1846,9 @@ var ey = {
         var n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
             { loose: r = !1 } = n;
         function i(e) {
-            return E(e, eI);
+            return E(e, eb);
         }
-        return ev(r ? E(e, eI) : e, r ? E(t, eI) : t);
+        return ev(r ? E(e, eb) : e, r ? E(t, eb) : t);
     },
     isText: (e) => (0, a.P)(e) && 'string' == typeof e.text,
     isTextList: (e) => Array.isArray(e) && e.every((e) => ey.isText(e)),
@@ -1864,7 +1864,7 @@ var ey = {
     decorations(e, t) {
         var n = [eS({}, e)];
         for (var r of t) {
-            var i = E(r, eb),
+            var i = E(r, eI),
                 [a, s] = eh.edges(r),
                 o = [],
                 l = 0,
@@ -1947,13 +1947,13 @@ var eC = (e, t, n) => {
                 var { path: g } = n,
                     E = er.get(e, g),
                     v = eo.previous(g),
-                    I = er.get(e, v),
-                    b = er.parent(e, g),
+                    b = er.get(e, v),
+                    I = er.parent(e, g),
                     T = g[g.length - 1];
-                if (ey.isText(E) && ey.isText(I)) I.text += E.text;
-                else if (ey.isText(E) || ey.isText(I)) throw Error('Cannot apply a "merge_node" operation at path ['.concat(g, '] to nodes of different interfaces: ').concat(eE.stringify(E), ' ').concat(eE.stringify(I)));
-                else I.children.push(...E.children);
-                if ((b.children.splice(T, 1), t)) for (var [S, y] of eh.points(t)) t[y] = ed.transform(S, n);
+                if (ey.isText(E) && ey.isText(b)) b.text += E.text;
+                else if (ey.isText(E) || ey.isText(b)) throw Error('Cannot apply a "merge_node" operation at path ['.concat(g, '] to nodes of different interfaces: ').concat(eE.stringify(E), ' ').concat(eE.stringify(b)));
+                else b.children.push(...E.children);
+                if ((I.children.splice(T, 1), t)) for (var [S, y] of eh.points(t)) t[y] = ed.transform(S, n);
                 break;
             case 'move_node':
                 var { path: A, newPath: N } = n;
@@ -2030,17 +2030,17 @@ var eC = (e, t, n) => {
                 if (0 === e_.length) throw Error('Cannot apply a "split_node" operation at path ['.concat(e_, '] because the root node cannot be split.'));
                 var eg = er.get(e, e_),
                     ev = er.parent(e, e_),
-                    eI = e_[e_.length - 1];
+                    eb = e_[e_.length - 1];
                 if (ey.isText(eg)) {
-                    var eb = eg.text.slice(0, ep),
+                    var eI = eg.text.slice(0, ep),
                         eT = eg.text.slice(ep);
-                    (eg.text = eb), (ef = eN(eN({}, em), {}, { text: eT }));
+                    (eg.text = eI), (ef = eN(eN({}, em), {}, { text: eT }));
                 } else {
                     var eS = eg.children.slice(0, ep),
                         eA = eg.children.slice(ep);
                     (eg.children = eS), (ef = eN(eN({}, em), {}, { children: eA }));
                 }
-                if ((ev.children.splice(eI + 1, 0, ef), t)) for (var [eC, eR] of eh.points(t)) t[eR] = ed.transform(eC, n);
+                if ((ev.children.splice(eb + 1, 0, ef), t)) for (var [eC, eR] of eh.points(t)) t[eR] = ed.transform(eC, n);
         }
         return t;
     },
@@ -2200,18 +2200,18 @@ var eB = eG(
                             E = s[s.length - 1];
                         if (!(!i && J.void(e, { at: g }))) {
                             for (var v of t) {
-                                var I = g.concat(E);
+                                var b = g.concat(E);
                                 E++,
                                     e.apply({
                                         type: 'insert_node',
-                                        path: I,
+                                        path: b,
                                         node: v
                                     }),
                                     (s = eo.next(s));
                             }
                             if (((s = eo.previous(s)), l)) {
-                                var b = J.end(e, s);
-                                b && eB.select(e, b);
+                                var I = J.end(e, s);
+                                I && eB.select(e, I);
                             }
                         }
                     });
@@ -2318,13 +2318,13 @@ var eB = eG(
                             [m, g] = _;
                         if (0 !== h.length && 0 !== g.length) {
                             var v = eo.next(g),
-                                I = eo.common(h, g),
-                                b = eo.isSibling(h, g),
+                                b = eo.common(h, g),
+                                I = eo.isSibling(h, g),
                                 T = Array.from(J.levels(e, { at: h }), (e) => {
                                     var [t] = e;
                                     return t;
                                 })
-                                    .slice(I.length)
+                                    .slice(b.length)
                                     .slice(0, -1),
                                 S = J.above(e, {
                                     at: h,
@@ -2339,7 +2339,7 @@ var eB = eG(
                                 var A = E(p, eO);
                                 (r = m.children.length), (n = A);
                             } else throw Error('Cannot merge the node at path ['.concat(h, '] with the previous sibling because it is not the same kind: ').concat(eE.stringify(p), ' ').concat(eE.stringify(m)));
-                            !b &&
+                            !I &&
                                 eB.moveNodes(e, {
                                     at: h,
                                     to: v,
@@ -2468,18 +2468,18 @@ var eB = eG(
                                 voids: c
                             }))) {
                                 var v = {},
-                                    I = {};
+                                    b = {};
                                 if (0 !== E.length) {
-                                    var b = !1;
+                                    var I = !1;
                                     for (var T in t) {
-                                        if ('children' !== T && 'text' !== T) a(t[T], g[T]) && ((b = !0), g.hasOwnProperty(T) && (v[T] = g[T]), s ? null != t[T] && (I[T] = s(g[T], t[T])) : null != t[T] && (I[T] = t[T]));
+                                        if ('children' !== T && 'text' !== T) a(t[T], g[T]) && ((I = !0), g.hasOwnProperty(T) && (v[T] = g[T]), s ? null != t[T] && (b[T] = s(g[T], t[T])) : null != t[T] && (b[T] = t[T]));
                                     }
-                                    b &&
+                                    I &&
                                         e.apply({
                                             type: 'set_node',
                                             path: E,
                                             properties: v,
-                                            newProperties: I
+                                            newProperties: b
                                         });
                                 }
                             }
@@ -2534,17 +2534,17 @@ var eB = eG(
                                     (l = o.path.length - g.length + 1), (u = !0);
                                 }
                                 n = J.pointRef(e, o);
-                                var I = o.path.length - l,
-                                    [, b] = p,
-                                    T = o.path.slice(0, I),
-                                    S = 0 === l ? o.offset : o.path[I] + 0;
+                                var b = o.path.length - l,
+                                    [, I] = p,
+                                    T = o.path.slice(0, b),
+                                    S = 0 === l ? o.offset : o.path[b] + 0;
                                 for (var [y, A] of J.levels(e, {
                                     at: T,
                                     reverse: !0,
                                     voids: a
                                 })) {
                                     var N = !1;
-                                    if (A.length < b.length || 0 === A.length || (!a && W.isElement(y) && J.isVoid(e, y))) break;
+                                    if (A.length < I.length || 0 === A.length || (!a && W.isElement(y) && J.isVoid(e, y))) break;
                                     var C = _.current,
                                         R = J.isEnd(e, C, A);
                                     if (u || !_ || !J.isEdge(e, C, A)) {
@@ -2831,8 +2831,8 @@ var eB = eG(
                             at: g,
                             voids: s
                         }),
-                        I = E && v && !eo.equals(E[1], v[1]),
-                        b = eo.equals(m.path, g.path),
+                        b = E && v && !eo.equals(E[1], v[1]),
+                        I = eo.equals(m.path, g.path),
                         T = s
                             ? null
                             : J.void(e, {
@@ -2868,7 +2868,7 @@ var eB = eG(
                         L = J.pointRef(e, m),
                         x = J.pointRef(e, g),
                         w = '';
-                    if (!b && !T) {
+                    if (!I && !T) {
                         var M = L.current,
                             [P] = J.leaf(e, M),
                             { path: k } = M,
@@ -2898,7 +2898,7 @@ var eB = eG(
                         var B = x.current,
                             [Z] = J.leaf(e, B),
                             { path: F } = B,
-                            V = b ? m.offset : 0,
+                            V = I ? m.offset : 0,
                             j = Z.text.slice(V, g.offset);
                         j.length > 0 &&
                             (e.apply({
@@ -2909,8 +2909,8 @@ var eB = eG(
                             }),
                             (w = j));
                     }
-                    !b &&
-                        I &&
+                    !I &&
+                        b &&
                         x.current &&
                         L.current &&
                         eB.mergeNodes(e, {
@@ -2967,11 +2967,11 @@ var eB = eG(
                         [, g] = er.first({ children: t }, []),
                         [, E] = er.last({ children: t }, []),
                         v = [],
-                        I = (t) => {
+                        b = (t) => {
                             var [n, r] = t;
                             return 0 !== r.length && (!!p || (!((h && eo.isAncestor(r, g) && W.isElement(n) && !e.isVoid(n) && !e.isInline(n)) || (m && eo.isAncestor(r, E) && W.isElement(n) && !e.isVoid(n) && !e.isInline(n))) && !0));
                         };
-                    for (var b of er.nodes({ children: t }, { pass: I })) I(b) && v.push(b);
+                    for (var I of er.nodes({ children: t }, { pass: b })) b(I) && v.push(I);
                     var T = [],
                         S = [],
                         y = [],

@@ -29,8 +29,8 @@ var r,
     g = n(594174),
     E = n(33039),
     v = n(979651),
-    I = n(5192),
-    b = n(933546),
+    b = n(5192),
+    I = n(933546),
     T = n(354459),
     S = n(981631),
     y = n(65154);
@@ -54,11 +54,11 @@ function C(e) {
             return '\0'.concat(e.sortKey);
         case T.fO.HIDDEN_STREAM:
         case T.fO.STREAM:
-            return ''.concat(e.userVideo ? '\x01' : '\x02').concat((0, b.Z)(e.userNick, e.user), '\x02');
+            return ''.concat(e.userVideo ? '\x01' : '\x02').concat((0, I.Z)(e.userNick, e.user), '\x02');
         case T.fO.USER:
             var t, n;
             let r = '\x04';
-            return (null === (t = e.voiceState) || void 0 === t ? void 0 : t.selfVideo) ? (r = '\x02') : (null === (n = e.voiceState) || void 0 === n ? void 0 : n.selfStream) && (r = '\x03'), ''.concat(r).concat((0, b.Z)(e.userNick, e.user));
+            return (null === (t = e.voiceState) || void 0 === t ? void 0 : t.selfVideo) ? (r = '\x02') : (null === (n = e.voiceState) || void 0 === n ? void 0 : n.selfStream) && (r = '\x03'), ''.concat(r).concat((0, I.Z)(e.userNick, e.user));
     }
 }
 ((i = r || (r = {})).VIDEO = 'VIDEO'), (i.STREAM = 'STREAM'), (i.FILTERED = 'FILTERED'), (i.SPEAKING = 'SPEAKING'), (i.ACTIVITY = 'ACTIVITY');
@@ -199,8 +199,8 @@ class R {
         var t, n, r, i, a, s;
         let l, u;
         let _ = [],
-            b = g.default.getUser(e);
-        if (null == b) return _;
+            I = g.default.getUser(e);
+        if (null == I) return _;
         let S = v.Z.getVoiceStateForChannel(this.channelId, e),
             A = v.Z.getVoicePlatformForChannel(this.channelId, e),
             N = p.Z.getChannel(this.channelId),
@@ -209,8 +209,8 @@ class R {
             ((l = {
                 type: T.fO.USER,
                 ...E.Z.getUserStreamData(e, null == N ? void 0 : N.getGuildId()),
-                user: b,
-                id: b.id,
+                user: I,
+                id: I.id,
                 voiceState: S,
                 voicePlatform: A,
                 speaking: (0, o.O)({
@@ -220,8 +220,8 @@ class R {
                 lastSpoke: null !== (i = this.lastSpoke[e]) && void 0 !== i ? i : 0,
                 soundsharing: m.Z.isSoundSharing(e),
                 ringing: C,
-                userNick: I.ZP.getName(null == N ? void 0 : N.getGuildId(), this.channelId, b),
-                localVideoDisabled: h.Z.isLocalVideoDisabled(b.id)
+                userNick: b.ZP.getName(null == N ? void 0 : N.getGuildId(), this.channelId, I),
+                localVideoDisabled: h.Z.isLocalVideoDisabled(I.id)
             }),
             _.push(l));
         let R = null !== (a = d.Z.getStreamForUser(e, null == N ? void 0 : N.getGuildId())) && void 0 !== a ? a : d.Z.getActiveStreamForUser(e, null == N ? void 0 : N.getGuildId());
@@ -242,8 +242,8 @@ class R {
                 type: r ? T.fO.HIDDEN_STREAM : T.fO.STREAM,
                 id: t,
                 userVideo: null !== (s = null == S ? void 0 : S.selfVideo) && void 0 !== s && s,
-                user: b,
-                userNick: I.ZP.getName(null == N ? void 0 : N.getGuildId(), this.channelId, b),
+                user: I,
+                userNick: b.ZP.getName(null == N ? void 0 : N.getGuildId(), this.channelId, I),
                 stream: R
             }),
                 _.push(u);

@@ -55,9 +55,9 @@ t.Z = (e) => {
                   if (e.bot) return u.J.BOT;
                   return null;
               })(t),
-        I = t.isVerifiedBot(),
-        b = d.ZP.getName(t),
-        T = i ? E : null != n ? n : b,
+        b = t.isVerifiedBot(),
+        I = d.ZP.getName(t),
+        T = i ? E : null != n ? n : I,
         S = t.isPomelo() || l;
     if (S || T !== E) {
         let e = T === E && S && i ? d.ZP.getUserTag(t, { forcePomelo: l }) : T,
@@ -66,7 +66,7 @@ t.Z = (e) => {
             primary: e,
             secondary: n,
             botType: v,
-            botVerified: I,
+            botVerified: b,
             showStreamerModeTooltip: m && d.ZP.isNameConcealed(e),
             ...h
         });
@@ -74,7 +74,7 @@ t.Z = (e) => {
     return (0, r.jsx)(u.Z, {
         name: T,
         botType: v,
-        botVerified: I,
+        botVerified: b,
         discriminator: g || T !== E ? null : null != o ? o : t.discriminator,
         ...h
     });

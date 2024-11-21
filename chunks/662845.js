@@ -103,10 +103,10 @@ function u(e) {
                         if (!n) return;
                         i.currentNode = n;
                         let a = t.shiftKey ? i.previousNode() : i.nextNode();
-                        !a && ((i.currentNode = t.shiftKey ? r[r.length - 1].nextElementSibling : r[0].previousElementSibling), (a = t.shiftKey ? i.previousNode() : i.nextNode())), t.preventDefault(), a && I(a, !0);
+                        !a && ((i.currentNode = t.shiftKey ? r[r.length - 1].nextElementSibling : r[0].previousElementSibling), (a = t.shiftKey ? i.previousNode() : i.nextNode())), t.preventDefault(), a && b(a, !0);
                     },
                     u = (t) => {
-                        (!l || v(l, e)) && m(t.target, e.current) ? ((l = e), (n.current = t.target)) : p(e) && !g(t.target, e) ? (n.current ? n.current.focus() : l && l.current && b(l.current)) : p(e) && (n.current = t.target);
+                        (!l || v(l, e)) && m(t.target, e.current) ? ((l = e), (n.current = t.target)) : p(e) && !g(t.target, e) ? (n.current ? n.current.focus() : l && l.current && I(l.current)) : p(e) && (n.current = t.target);
                     },
                     c = (t) => {
                         a.current && cancelAnimationFrame(a.current),
@@ -115,7 +115,7 @@ function u(e) {
                                     if (((l = e), s.body.contains(t.target))) {
                                         var r;
                                         (n.current = t.target), null === (r = n.current) || void 0 === r || r.focus();
-                                    } else l.current && b(l.current);
+                                    } else l.current && I(l.current);
                                 }
                             }));
                     };
@@ -170,8 +170,8 @@ function u(e) {
                             s.currentNode = a;
                             do o = t.shiftKey ? s.previousNode() : s.nextNode();
                             while (m(o, e.current));
-                            if ((t.preventDefault(), t.stopPropagation(), o)) I(o, !0);
-                            else if (g(a)) I(a, !0);
+                            if ((t.preventDefault(), t.stopPropagation(), o)) b(o, !0);
+                            else if (g(a)) b(a, !0);
                             else n.blur();
                         }
                     };
@@ -214,14 +214,14 @@ function u(e) {
                                             let n = t.getTreeNode(e);
                                             for (; n; ) {
                                                 if (n.nodeToRestore && n.nodeToRestore.isConnected) {
-                                                    I(n.nodeToRestore);
+                                                    b(n.nodeToRestore);
                                                     return;
                                                 }
                                                 n = n.parent;
                                             }
                                             for (n = t.getTreeNode(e); n; ) {
                                                 if (n.scopeRef && n.scopeRef.current && C.getTreeNode(n.scopeRef)) {
-                                                    b(n.scopeRef.current, !0);
+                                                    I(n.scopeRef.current, !0);
                                                     return;
                                                 }
                                                 n = n.parent;
@@ -236,7 +236,7 @@ function u(e) {
         (function (e, t) {
             let n = i.useRef(t);
             (0, i.useEffect)(() => {
-                n.current && ((l = e), !m((0, r.r3)(e.current ? e.current[0] : void 0).activeElement, l.current) && e.current && b(e.current)), (n.current = !1);
+                n.current && ((l = e), !m((0, r.r3)(e.current ? e.current[0] : void 0).activeElement, l.current) && e.current && I(e.current)), (n.current = !1);
             }, [e]);
         })(d, s),
         (0, i.useEffect)(() => {
@@ -274,7 +274,7 @@ function u(e) {
                                 );
                             c.currentNode = m(l, n) ? l : u;
                             let d = c.nextNode();
-                            return !d && s && ((c.currentNode = u), (d = c.nextNode())), d && I(d, !0), d;
+                            return !d && s && ((c.currentNode = u), (d = c.nextNode())), d && b(d, !0), d;
                         },
                         focusPrevious(t = {}) {
                             let n = e.current,
@@ -291,7 +291,7 @@ function u(e) {
                                 );
                             c.currentNode = m(l, n) ? l : u;
                             let d = c.previousNode();
-                            return !d && s && ((c.currentNode = u), (d = c.previousNode())), d && I(d, !0), d;
+                            return !d && s && ((c.currentNode = u), (d = c.previousNode())), d && b(d, !0), d;
                         },
                         focusFirst(t = {}) {
                             let n = e.current,
@@ -306,7 +306,7 @@ function u(e) {
                                 );
                             a.currentNode = n[0].previousElementSibling;
                             let s = a.nextNode();
-                            return s && I(s, !0), s;
+                            return s && b(s, !0), s;
                         },
                         focusLast(t = {}) {
                             let n = e.current,
@@ -321,7 +321,7 @@ function u(e) {
                                 );
                             a.currentNode = n[n.length - 1].nextElementSibling;
                             let s = a.previousNode();
-                            return s && I(s, !0), s;
+                            return s && b(s, !0), s;
                         }
                     };
                 })(d),
@@ -388,7 +388,7 @@ function v(e, t) {
     }
     return !1;
 }
-function I(e, t = !1) {
+function b(e, t = !1) {
     if (null == e || t) {
         if (null != e)
             try {
@@ -399,13 +399,13 @@ function I(e, t = !1) {
             s(e);
         } catch (e) {}
 }
-function b(e, t = !0) {
+function I(e, t = !0) {
     let n = e[0].previousElementSibling,
         r = _(e),
         i = T(r, { tabbable: t }, e);
     i.currentNode = n;
     let a = i.nextNode();
-    t && !a && (((i = T((r = _(e)), { tabbable: !1 }, e)).currentNode = n), (a = i.nextNode())), I(a);
+    t && !a && (((i = T((r = _(e)), { tabbable: !1 }, e)).currentNode = n), (a = i.nextNode())), b(a);
 }
 function T(e, t, n) {
     let i = (null == t ? void 0 : t.tabbable) ? f : d,
@@ -456,7 +456,7 @@ function S(e, t = {}) {
                 });
             i.contains(u) && (c.currentNode = u);
             let d = c.nextNode();
-            return !d && o && ((c.currentNode = i), (d = c.nextNode())), d && I(d, !0), d;
+            return !d && o && ((c.currentNode = i), (d = c.nextNode())), d && b(d, !0), d;
         },
         focusPrevious(n = t) {
             let i = e.current;
@@ -470,7 +470,7 @@ function S(e, t = {}) {
             if (i.contains(u)) c.currentNode = u;
             else {
                 let e = y(c);
-                return e && I(e, !0), null != e ? e : null;
+                return e && b(e, !0), null != e ? e : null;
             }
             let d = c.previousNode();
             if (!d && o) {
@@ -479,7 +479,7 @@ function S(e, t = {}) {
                 if (!e) return null;
                 d = e;
             }
-            return d && I(d, !0), null != d ? d : null;
+            return d && b(d, !0), null != d ? d : null;
         },
         focusFirst(n = t) {
             let r = e.current;
@@ -489,7 +489,7 @@ function S(e, t = {}) {
                     tabbable: i,
                     accept: a
                 }).nextNode();
-            return s && I(s, !0), s;
+            return s && b(s, !0), s;
         },
         focusLast(n = t) {
             let r = e.current;
@@ -501,7 +501,7 @@ function S(e, t = {}) {
                         accept: a
                     })
                 );
-            return s && I(s, !0), null != s ? s : null;
+            return s && b(s, !0), null != s ? s : null;
         }
     };
 }

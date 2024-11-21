@@ -14,10 +14,10 @@ var i = n(481060),
 function c(e) {
     var t, n;
     let { user: c, guildId: d, channelId: f, profileType: _, sourceType: p, sourceDetails: h, sourceId: m, onClose: g, children: E, entry: v } = e,
-        { interactionType: I, interactionSource: b, resetInteraction: T, interactionSourceId: S } = (0, a.Xo)(),
+        { interactionType: b, interactionSource: I, resetInteraction: T, interactionSourceId: S } = (0, a.Xo)(),
         y = _ === u.y0.FULL_SIZE ? (0, l.z)(c.id, d) : void 0,
-        A = b === p && I === u.P.REACT,
-        N = b === p && I === u.P.REPLY;
+        A = I === p && b === u.P.REACT,
+        N = I === p && b === u.P.REPLY;
     return (0, r.jsx)(i.Popout, {
         renderPopout: (e) => {
             let { setPopoutRef: t } = e,
@@ -39,7 +39,7 @@ function c(e) {
             T(), null == g || g();
         },
         shouldShow: (A || N) && S === m,
-        ...((t = I),
+        ...((t = b),
         (n = _),
         t === u.P.REACT
             ? {

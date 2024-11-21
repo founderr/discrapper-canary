@@ -55,12 +55,12 @@ t.default = (function () {
                         description: '"}"'
                     },
                     v = 'number',
-                    I = {
+                    b = {
                         type: 'literal',
                         value: 'number',
                         description: '"number"'
                     },
-                    b = 'date',
+                    I = 'date',
                     T = {
                         type: 'literal',
                         value: 'date',
@@ -245,7 +245,7 @@ t.default = (function () {
                                                         return (
                                                             (e = (function () {
                                                                 var e, n, r, i, a, s, o;
-                                                                if (((e = J), t.substr(J, 6) === v ? ((n = v), (J += 6)) : ((n = c), 0 === er && ei(I)), n === c && (t.substr(J, 4) === b ? ((n = b), (J += 4)) : ((n = c), 0 === er && ei(T)), n === c && (t.substr(J, 4) === S ? ((n = S), (J += 4)) : ((n = c), 0 === er && ei(y)))), n !== c)) {
+                                                                if (((e = J), t.substr(J, 6) === v ? ((n = v), (J += 6)) : ((n = c), 0 === er && ei(b)), n === c && (t.substr(J, 4) === I ? ((n = I), (J += 4)) : ((n = c), 0 === er && ei(T)), n === c && (t.substr(J, 4) === S ? ((n = S), (J += 4)) : ((n = c), 0 === er && ei(y)))), n !== c)) {
                                                                     if (ed() !== c) {
                                                                         if (((r = J), 44 === t.charCodeAt(J) ? ((i = ','), J++) : ((i = c), 0 === er && ei(g)), i !== c && (a = ed()) !== c && (s = em()) !== c ? (r = i = [i, a, s]) : ((J = r), (r = c)), r === c && (r = null), r !== c)) {
                                                                             e = n = {

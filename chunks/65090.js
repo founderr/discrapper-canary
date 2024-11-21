@@ -62,7 +62,7 @@ let _ = {
                     e.user.id
                 )
             ),
-            I = o.map((e, t) =>
+            b = o.map((e, t) =>
                 (0, r.jsx)(
                     a.ZP.Generic,
                     {
@@ -77,7 +77,7 @@ let _ = {
                     e.text
                 )
             ),
-            b = l.map((e, t) =>
+            I = l.map((e, t) =>
                 (0, r.jsx)(
                     a.ZP.Role,
                     {
@@ -105,9 +105,9 @@ let _ = {
                         }),
                         v,
                         s.length > 0 && o.length > 0 ? (0, r.jsx)(a.ZP.Divider, {}) : null,
-                        I,
+                        b,
                         (s.length > 0 && l.length > 0) || (o.length > 0 && l.length > 0) ? (0, r.jsx)(a.ZP.Divider, {}) : null,
-                        b
+                        I
                     ]
                 },
                 'mentions'

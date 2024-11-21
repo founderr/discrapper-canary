@@ -67,10 +67,10 @@ var m = {
         name: ['robots', 'description'],
         property: ['og:type', 'og:title', 'og:url', 'og:image', 'og:image:alt', 'og:description', 'twitter:url', 'twitter:title', 'twitter:description', 'twitter:image', 'twitter:image:alt', 'twitter:card', 'twitter:site']
     },
-    I = Object.keys(m).map(function (e) {
+    b = Object.keys(m).map(function (e) {
         return m[e];
     }),
-    b = {
+    I = {
         accesskey: 'accessKey',
         charset: 'charSet',
         class: 'className',
@@ -80,8 +80,8 @@ var m = {
         itemprop: 'itemProp',
         tabindex: 'tabIndex'
     },
-    T = Object.keys(b).reduce(function (e, t) {
-        return (e[b[t]] = t), e;
+    T = Object.keys(I).reduce(function (e, t) {
+        return (e[I[t]] = t), e;
     }, {}),
     S = function (e, t) {
         for (var n = e.length - 1; n >= 0; n -= 1) {
@@ -195,7 +195,7 @@ var m = {
         return (
             void 0 === t && (t = {}),
             Object.keys(e).reduce(function (t, n) {
-                return (t[b[n] || n] = e[n]), t;
+                return (t[I[n] || n] = e[n]), t;
             }, t)
         );
     },
@@ -205,7 +205,7 @@ var m = {
                 a = (((i = { key: n })['data-rh'] = !0), i);
             return (
                 Object.keys(t).forEach(function (e) {
-                    var n = b[e] || e;
+                    var n = I[e] || e;
                     'innerHTML' === n || 'cssText' === n ? (a.dangerouslySetInnerHTML = { __html: t.innerHTML || t.cssText }) : (a[n] = t[e]);
                 }),
                 r.createElement(e, a)
@@ -286,27 +286,27 @@ var m = {
             var _,
                 p,
                 h,
-                I,
                 b,
+                I,
                 T,
                 S,
                 y =
                     ((p = (_ = e).linkTags),
                     (h = _.scriptTags),
-                    (I = _.encode),
-                    (b = O(_.metaTags, v)),
+                    (b = _.encode),
+                    (I = O(_.metaTags, v)),
                     (T = O(p, g)),
                     (S = O(h, E)),
                     {
                         priorityMethods: {
                             toComponent: function () {
-                                return [].concat(P(m.META, b.priority), P(m.LINK, T.priority), P(m.SCRIPT, S.priority));
+                                return [].concat(P(m.META, I.priority), P(m.LINK, T.priority), P(m.SCRIPT, S.priority));
                             },
                             toString: function () {
-                                return k(m.META, b.priority, I) + ' ' + k(m.LINK, T.priority, I) + ' ' + k(m.SCRIPT, S.priority, I);
+                                return k(m.META, I.priority, b) + ' ' + k(m.LINK, T.priority, b) + ' ' + k(m.SCRIPT, S.priority, b);
                             }
                         },
-                        metaTags: b.default,
+                        metaTags: I.default,
                         linkTags: T.default,
                         scriptTags: S.default
                     });
@@ -622,10 +622,10 @@ var q = ['children'],
             (n.warnOnInvalidChildren = function (e, t) {
                 return (
                     u()(
-                        I.some(function (t) {
+                        b.some(function (t) {
                             return e.type === t;
                         }),
-                        'function' == typeof e.type ? 'You may be attempting to nest <Helmet> components within each other, which is not allowed. Refer to our API for more information.' : 'Only elements types ' + I.join(', ') + ' are allowed. Helmet does not support rendering <' + e.type + '> elements. Refer to our API for more information.'
+                        'function' == typeof e.type ? 'You may be attempting to nest <Helmet> components within each other, which is not allowed. Refer to our API for more information.' : 'Only elements types ' + b.join(', ') + ' are allowed. Helmet does not support rendering <' + e.type + '> elements. Refer to our API for more information.'
                     ),
                     u()(
                         !t ||

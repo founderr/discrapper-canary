@@ -3,35 +3,35 @@ e.d(n, {
         return s;
     }
 });
-var r = e(200651);
+var o = e(200651);
 e(192379);
-var i = e(481060),
-    o = e(248296);
+var r = e(481060),
+    i = e(248296);
 function s(t) {
     let { heroImageSrc: n, heroImageAlt: e, children: s, header: a, description: c } = t;
-    return (0, r.jsxs)(r.Fragment, {
+    return (0, o.jsxs)(o.Fragment, {
         children: [
-            (0, r.jsx)('img', {
+            (0, o.jsx)('img', {
                 src: n,
                 alt: e,
-                className: o.heroImage
+                className: i.heroImage
             }),
-            (0, r.jsxs)(i.ModalContent, {
-                className: o.body,
+            (0, o.jsxs)(r.ModalContent, {
+                className: i.body,
                 children: [
-                    (0, r.jsxs)('div', {
-                        className: o.textContainer,
+                    (0, o.jsxs)('div', {
+                        className: i.textContainer,
                         children: [
-                            (0, r.jsx)(i.Heading, {
+                            (0, o.jsx)(r.Heading, {
                                 variant: 'heading-xl/semibold',
                                 color: 'header-primary',
                                 children: a
                             }),
                             null != c &&
-                                (0, r.jsx)(i.Text, {
+                                (0, o.jsx)(r.Text, {
                                     variant: 'text-md/medium',
                                     color: 'header-secondary',
-                                    className: o.description,
+                                    className: i.description,
                                     children: c
                                 })
                         ]

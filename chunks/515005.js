@@ -16,8 +16,8 @@ var r = n(200651),
     g = n(378233),
     E = n(419922),
     v = n(490095),
-    I = n(981631),
-    b = n(388032),
+    b = n(981631),
+    I = n(388032),
     T = n(911038);
 let S = (0, l.Mg)(T.__invalid_stickerPickerPreviewDimensions),
     y = (0, l.Mg)(T.__invalid_stickerPickerPreviewPadding),
@@ -70,8 +70,8 @@ let S = (0, l.Mg)(T.__invalid_stickerPickerPreviewDimensions),
                                     onMouseMove: y,
                                     onClick: () => {
                                         e.type === m.al.CREATE_STICKER &&
-                                            (p.default.track(I.rMx.OPEN_MODAL, {
-                                                type: I.jXE.CREATE_STICKER_MODAL,
+                                            (p.default.track(b.rMx.OPEN_MODAL, {
+                                                type: b.jXE.CREATE_STICKER_MODAL,
                                                 location: V
                                             }),
                                             (0, u.openModalLazy)(async () => {
@@ -97,7 +97,7 @@ let S = (0, l.Mg)(T.__invalid_stickerPickerPreviewDimensions),
                                         (0, r.jsx)(u.Text, {
                                             color: 'interactive-active',
                                             variant: 'text-xs/normal',
-                                            children: b.intl.string(b.t['+nEuqq'])
+                                            children: I.intl.string(I.t['+nEuqq'])
                                         })
                                     ]
                                 })

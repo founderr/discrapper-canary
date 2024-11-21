@@ -305,9 +305,9 @@ class v {
         return t;
     }
 }
-let I = new v();
-'u' > typeof window && I.setContainer(document.body);
-let b = o.createContext(I);
+let b = new v();
+'u' > typeof window && b.setContainer(document.body);
+let I = o.createContext(b);
 var T = function (e, t, n, r) {
     var i = n ? n.call(r, e, t) : void 0;
     if (void 0 !== i) return !!i;
@@ -390,14 +390,14 @@ function w(e) {
         o.useEffect(() => {
             i.current.setContainer(t.current), i.current.setThemeOptions(r);
         }, [t.current]),
-        x(b.Provider, {
+        x(I.Provider, {
             value: i.current,
             children: [n, L(M, {})]
         })
     );
 }
 function M() {
-    let e = o.useContext(b),
+    let e = o.useContext(I),
         [, t] = o.useState({});
     return (
         o.useEffect(
@@ -423,9 +423,9 @@ function k(e) {
     null != a && _(null != s, 'FocusRing was given a focusTarget but the required ringTarget was not provided. A ringTarget is required to avoid ambiguity of where the ring will be applied.'), null != r && _(null != s, 'FocusRing was given a controlled focused prop but no ringTarget to apply the ring to. A ringTarget is required since it cannot be inferred through regular focus events.');
     let p = o.useRef(!1),
         [h, m] = o.useState(!1),
-        g = o.useContext(b),
+        g = o.useContext(I),
         E = o.Children.only(d),
-        { onBlur: v, onFocus: I, ...T } = E.props,
+        { onBlur: v, onFocus: b, ...T } = E.props,
         S = o.useMemo(
             () => ({
                 className: l,
@@ -483,9 +483,9 @@ function k(e) {
         A = o.useCallback(
             (e) => {
                 let n = null == s ? void 0 : s.current;
-                e.currentTarget === e.target ? ((p.current = !0), g.showElement(null != n ? n : e.currentTarget, S)) : (m(!0), t && g.showElement(null != n ? n : e.currentTarget, S)), null == I || I(e);
+                e.currentTarget === e.target ? ((p.current = !0), g.showElement(null != n ? n : e.currentTarget, S)) : (m(!0), t && g.showElement(null != n ? n : e.currentTarget, S)), null == b || b(e);
             },
-            [s, t, I, g, S]
+            [s, t, b, g, S]
         );
     return n && null == a && null == r
         ? o.cloneElement(E, {

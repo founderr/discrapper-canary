@@ -88,11 +88,11 @@ t.ZP = i.memo(function (e) {
         null != e && (h = g(e));
     }
     if (null == h) return null;
-    let { text: v, icon: I, color: b } = h;
+    let { text: v, icon: b, color: I } = h;
     return (0, r.jsx)(E, {
-        icon: I,
+        icon: b,
         text: v,
         className: n,
-        color: b
+        color: I
     });
 });

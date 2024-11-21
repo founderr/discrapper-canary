@@ -31,8 +31,8 @@ var r,
     g = n(246946),
     E = n(594174),
     v = n(483360),
-    I = n(226951),
-    b = n(51144),
+    b = n(226951),
+    I = n(51144),
     T = n(981631),
     S = n(388032);
 function y() {
@@ -186,7 +186,7 @@ function j(e, t) {
         .map((e) => {
             let { record: t } = e;
             return {
-                text: b.ZP.getUserTag(t),
+                text: I.ZP.getUserTag(t),
                 user: t
             };
         });
@@ -248,7 +248,7 @@ function z() {
                     getAutocompletions: (e, t, r) => V(e, r, n)
                 },
                 [T.dCx.ANSWER_HAS]: {
-                    regex: RegExp('(?:\\s*-?('.concat(n.map((e) => I.Z.escape(e)).join('|'), '))'), 'i'),
+                    regex: RegExp('(?:\\s*-?('.concat(n.map((e) => b.Z.escape(e)).join('|'), '))'), 'i'),
                     follows: [T.dCx.FILTER_HAS],
                     validator: G,
                     componentType: 'ANSWER',

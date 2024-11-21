@@ -24,7 +24,7 @@ function f(e) {
             },
             [g]
         ),
-        { isIgnored: v, isBlocked: I } = (0, i.cj)(
+        { isIgnored: v, isBlocked: b } = (0, i.cj)(
             [u.Z],
             () => ({
                 isIgnored: u.Z.isIgnored(g),
@@ -32,7 +32,7 @@ function f(e) {
             }),
             [g]
         );
-    return !(0, o.Do)({ location: 'use-block-user-item-web' }) || E || I
+    return !(0, o.Do)({ location: 'use-block-user-item-web' }) || E || b
         ? null
         : (0, r.jsx)(a.MenuItem, {
               id: 'ignore',
@@ -40,7 +40,7 @@ function f(e) {
               label: v ? d.intl.string(d.t['8wXU9P']) : d.intl.string(d.t.ytCpKi),
               action: v
                   ? () => {
-                        null == h || h(), s.Z.unignoreUser(g, null != m ? m : 'use-ignore-user-item-web');
+                        null == h || h(), s.Z.unignoreUser(g, null != m ? m : 'use-ignore-user-item-web', null != f ? f : void 0);
                     }
                   : () => {
                         (0, a.openModal)((e) =>

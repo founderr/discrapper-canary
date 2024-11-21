@@ -312,10 +312,10 @@
             return (this._r = n._r), (this._g = n._g), (this._b = n._b), this.setAlpha(n._a), this;
         },
         lighten: function () {
-            return this._applyModification(I, arguments);
+            return this._applyModification(b, arguments);
         },
         brighten: function () {
-            return this._applyModification(b, arguments);
+            return this._applyModification(I, arguments);
         },
         darken: function () {
             return this._applyModification(T, arguments);
@@ -437,12 +437,12 @@
     function v(e) {
         return f(e).desaturate(100);
     }
-    function I(e, t) {
+    function b(e, t) {
         t = 0 === t ? 0 : t || 10;
         var n = f(e).toHsl();
         return (n.l += t / 100), (n.l = M(n.l)), f(n);
     }
-    function b(e, t) {
+    function I(e, t) {
         t = 0 === t ? 0 : t || 10;
         var n = f(e).toRgb();
         return (n.r = c(0, u(255, n.r - l(-((t / 100) * 255))))), (n.g = c(0, u(255, n.g - l(-((t / 100) * 255))))), (n.b = c(0, u(255, n.b - l(-((t / 100) * 255))))), f(n);

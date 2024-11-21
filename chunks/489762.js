@@ -16,8 +16,8 @@ var r = n(200651),
     g = n(691251),
     E = n(98528),
     v = n(551058),
-    I = n(695346),
-    b = n(430824),
+    b = n(695346),
+    I = n(430824),
     T = n(594174),
     S = n(626135),
     y = n(624138),
@@ -146,7 +146,7 @@ let V = (0, y.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             }),
             [k, F] = i.useState(!1),
             H = i.useCallback((e) => {
-                I._O.updateSetting(Array.from(e));
+                b._O.updateSetting(Array.from(e));
             }, []),
             Y = i.useCallback(
                 (e) => {
@@ -258,7 +258,7 @@ let V = (0, y.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                             );
                         case D.Ih.GUILD:
                         case D.Ih.EMPTY_GUILD_UPSELL: {
-                            let e = b.Z.getGuild(n.id);
+                            let e = I.Z.getGuild(n.id);
                             if (null == e) return null;
                             return (0, r.jsx)(
                                 v.Z,
@@ -348,7 +348,7 @@ let V = (0, y.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
         };
     },
     ec = i.forwardRef(function (e, t) {
-        let { collapsedStickersCategories: n, gridWidth: o, filteredStickers: l, getStickerItemProps: c, getStickerRowProps: p, gutterWidth: g, isUsingKeyboardNavigation: v, onSelectSticker: I, rowCount: b, rowCountBySection: T, stickersCategories: S, stickersGrid: y, channel: A } = e,
+        let { collapsedStickersCategories: n, gridWidth: o, filteredStickers: l, getStickerItemProps: c, getStickerRowProps: p, gutterWidth: g, isUsingKeyboardNavigation: v, onSelectSticker: b, rowCount: I, rowCountBySection: T, stickersCategories: S, stickersGrid: y, channel: A } = e,
             N = i.useRef(!1),
             C = i.useRef(null),
             [R, D] = h.ZN.useStore((e) => [e.activeCategoryIndex, e.inspectedExpressionPosition], a.X),
@@ -369,7 +369,7 @@ let V = (0, y.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 stickersGrid: y,
                 isScrolling: N,
                 isUsingKeyboardNavigation: v,
-                onSelectSticker: I,
+                onSelectSticker: b,
                 getStickerItemProps: c,
                 getStickerRowProps: p,
                 gutterWidth: g,
@@ -455,7 +455,7 @@ let V = (0, y.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                   renderSection: null == l ? k : void 0,
                                   renderSectionHeader: j,
                                   renderSectionFooter: U,
-                                  rowCount: b,
+                                  rowCount: I,
                                   rowCountBySection: T,
                                   rowHeight: o > V ? et : en,
                                   sectionHeaderHeight: H,

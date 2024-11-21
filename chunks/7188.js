@@ -20,7 +20,7 @@ var r = n(200651),
     g = n(474936),
     E = n(388032),
     v = n(157380);
-function I(e) {
+function b(e) {
     let { className: t } = e;
     return (0, r.jsx)(s.SettingsIcon, {
         size: 'md',
@@ -28,14 +28,14 @@ function I(e) {
         className: t
     });
 }
-function b(e) {
+function I(e) {
     let { className: t } = e;
     return (0, r.jsxs)(i.Fragment, {
         children: [
             (0, r.jsx)(o.ZP, {
                 className: t,
                 mask: o.ZP.Masks.HEADER_BAR_BADGE_BOTTOM,
-                children: (0, r.jsx)(I, {})
+                children: (0, r.jsx)(b, {})
             }),
             (0, r.jsx)(f.Z, { className: v.badgeUpgrade })
         ]
@@ -50,9 +50,9 @@ function T(e) {
             null != v && (0, u.Z)(v.getGuildId(), v.id, m.jXE.STREAM_SETTINGS);
         }, [v]);
     if (null == n || null == v) return null;
-    let y = I;
+    let y = b;
     return (
-        !t && !f && (y = b),
+        !t && !f && (y = I),
         (0, r.jsx)(s.Popout, {
             position: 'top',
             renderPopout: (e) => {

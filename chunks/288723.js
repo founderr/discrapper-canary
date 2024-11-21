@@ -24,14 +24,14 @@ t.Z = {
                     g = n.boundary,
                     E = n.rootBoundary,
                     v = n.altBoundary,
-                    I = n.flipVariations,
-                    b = void 0 === I || I,
+                    b = n.flipVariations,
+                    I = void 0 === b || b,
                     T = n.allowedAutoPlacements,
                     S = t.options.placement,
                     y = (0, i.Z)(S) === S,
                     A =
                         h ||
-                        (y || !b
+                        (y || !I
                             ? [(0, r.Z)(S)]
                             : (function (e) {
                                   if ((0, i.Z)(e) === l.d7) return [];
@@ -46,7 +46,7 @@ t.Z = {
                                       boundary: g,
                                       rootBoundary: E,
                                       padding: m,
-                                      flipVariations: b,
+                                      flipVariations: I,
                                       allowedAutoPlacements: T
                                   })
                                 : n
@@ -91,7 +91,7 @@ t.Z = {
             }
             if (D) {
                 for (
-                    var V = b ? 3 : 1,
+                    var V = I ? 3 : 1,
                         j = function (e) {
                             var t = N.find(function (t) {
                                 var n = O.get(t);

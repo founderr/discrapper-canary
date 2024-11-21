@@ -28,8 +28,8 @@ var r,
     g = n(5192),
     E = n(88751),
     v = n(427679),
-    I = n(590415),
-    b = n(974609);
+    b = n(590415),
+    I = n(974609);
 function T(e, t, n) {
     return (
         t in e
@@ -64,12 +64,12 @@ function y(e) {
     return null == r ? t.id : ''.concat(Date.parse(r)).concat(t.id);
 }
 function A(e) {
-    return e === I.xO.REQUESTED_TO_SPEAK || e === I.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+    return e === b.xO.REQUESTED_TO_SPEAK || e === b.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
 }
 function N(e) {
     let { speaker: t, role: n, rtsState: r, blocked: i, ignored: a, isFriend: s } = e,
         o = [];
-    return A(r) && o.push('ALL_REQUESTED_TO_SPEAK'), r === I.xO.REQUESTED_TO_SPEAK && o.push('REQUESTED_TO_SPEAK_ONLY'), t ? o.push('SPEAKER') : (null != n ? o.push(n.id) : o.push('NO_ROLE'), o.push('AUDIENCE')), i ? o.push('BLOCKED') : a && o.push('IGNORED'), s && o.push('FRIEND'), o;
+    return A(r) && o.push('ALL_REQUESTED_TO_SPEAK'), r === b.xO.REQUESTED_TO_SPEAK && o.push('REQUESTED_TO_SPEAK_ONLY'), t ? o.push('SPEAKER') : (null != n ? o.push(n.id) : o.push('NO_ROLE'), o.push('AUDIENCE')), i ? o.push('BLOCKED') : a && o.push('IGNORED'), s && o.push('FRIEND'), o;
 }
 ((a = r || (r = {})).SPEAKER = 'SPEAKER'), (a.AUDIENCE = 'AUDIENCE'), (a.NO_ROLE = 'NO_ROLE'), (a.ALL_REQUESTED_TO_SPEAK = 'ALL_REQUESTED_TO_SPEAK'), (a.REQUESTED_TO_SPEAK_ONLY = 'REQUESTED_TO_SPEAK_ONLY'), (a.BLOCKED = 'BLOCKED'), (a.IGNORED = 'IGNORED'), (a.FRIEND = 'FRIEND'), (a.SELECTED = 'SELECTED'), (a.MEDIA = 'MEDIA'), ((s = i || (i = {})).VOICE = 'VOICE'), (s.STREAM = 'STREAM');
 class C {
@@ -86,7 +86,7 @@ class C {
                 user: o,
                 userNick: g.ZP.getName(this.guildId, this.channelId, o),
                 voiceState: s,
-                role: (0, b.H)(this.guildId, e),
+                role: (0, I.H)(this.guildId, e),
                 speaker: E.ZP.isSpeaker(e, this.channelId),
                 member: null != this.guildId ? _.ZP.getMember(this.guildId, e) : null,
                 blocked: p.Z.isBlocked(o.id),
@@ -98,7 +98,7 @@ class C {
                 ...d,
                 type: 'VOICE',
                 id: o.id,
-                rtsState: (0, I.gf)(s)
+                rtsState: (0, b.gf)(s)
             };
         a.push(T);
         let S = null !== (r = c.Z.getStreamForUser(e, this.guildId)) && void 0 !== r ? r : c.Z.getActiveStreamForUser(e, this.guildId);
@@ -108,7 +108,7 @@ class C {
                 ...d,
                 id: e,
                 type: 'STREAM',
-                rtsState: I.xO.NONE
+                rtsState: b.xO.NONE
             }),
                 a.push(i);
         }

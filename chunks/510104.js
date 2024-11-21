@@ -23,15 +23,15 @@ function f(e, t) {
         g = void 0 === m ? l.zV : m,
         E = n.rootBoundary,
         v = void 0 === E ? l.Pj : E,
-        I = n.elementContext,
-        b = void 0 === I ? l.k5 : I,
+        b = n.elementContext,
+        I = void 0 === b ? l.k5 : b,
         T = n.altBoundary,
         S = n.padding,
         y = void 0 === S ? 0 : S,
         A = (0, c.Z)('number' != typeof y ? y : (0, d.Z)(y, l.mv)),
-        N = b === l.k5 ? l.YP : l.k5,
+        N = I === l.k5 ? l.YP : l.k5,
         C = e.rects.popper,
-        R = e.elements[void 0 !== T && T ? N : b],
+        R = e.elements[void 0 !== T && T ? N : I],
         O = (0, r.Z)((0, u.kK)(R) ? R : R.contextElement || (0, i.Z)(e.elements.popper), g, v, h),
         D = (0, a.Z)(e.elements.reference),
         L = (0, s.Z)({
@@ -41,7 +41,7 @@ function f(e, t) {
             placement: _
         }),
         x = (0, o.Z)(Object.assign({}, C, L)),
-        w = b === l.k5 ? x : D,
+        w = I === l.k5 ? x : D,
         M = {
             top: O.top - w.top + A.top,
             bottom: w.bottom - O.bottom + A.bottom,
@@ -49,7 +49,7 @@ function f(e, t) {
             right: w.right - O.right + A.right
         },
         P = e.modifiersData.offset;
-    if (b === l.k5 && P) {
+    if (I === l.k5 && P) {
         var k = P[_];
         Object.keys(M).forEach(function (e) {
             var t = [l.F2, l.I].indexOf(e) >= 0 ? 1 : -1,

@@ -168,10 +168,10 @@ class c {
     getPeriodicStats() {
         let e = [];
         for (let [h, m] of Object.entries(this.periodicInboundStats)) {
-            let { previous: g, current: E, currentTimestampMs: v, previousTimestampMs: I, numRateSamples: b } = m;
-            if (void 0 !== I && v > I) {
+            let { previous: g, current: E, currentTimestampMs: v, previousTimestampMs: b, numRateSamples: I } = m;
+            if (void 0 !== b && v > b) {
                 var t, n, r, i, a, s, o, l, u, c, d, f, _, p;
-                let T = v - I,
+                let T = v - b,
                     S = {
                         userId: h,
                         silent: null !== (n = E.silent) && void 0 !== n ? n : 0 - (null !== (t = g.silent) && void 0 !== t ? t : 0),
@@ -181,10 +181,10 @@ class c {
                         accelerated: null !== (c = E.accelerated) && void 0 !== c ? c : 0 - (null !== (u = g.accelerated) && void 0 !== u ? u : 0),
                         preemptiveExpanded: null !== (f = E.preemptiveExpanded) && void 0 !== f ? f : 0 - (null !== (d = g.preemptiveExpanded) && void 0 !== d ? d : 0),
                         cng: null !== (p = E.cng) && void 0 !== p ? p : 0 - (null !== (_ = g.cng) && void 0 !== _ ? _ : 0),
-                        accelerateRate: m.accelerateRateSum / b,
-                        expandRate: m.expandRateSum / b,
-                        preemptiveExpandRate: m.preemptiveExpandRateSum / b,
-                        speechExpandRate: m.speechExpandRateSum / b,
+                        accelerateRate: m.accelerateRateSum / I,
+                        expandRate: m.expandRateSum / I,
+                        preemptiveExpandRate: m.preemptiveExpandRateSum / I,
+                        speechExpandRate: m.speechExpandRateSum / I,
                         durationMs: T
                     };
                 S.normal + S.merged + S.expanded + S.accelerated + S.preemptiveExpanded > 0 && e.push(S);
@@ -236,8 +236,8 @@ class c {
                     i().forEach(e.rtp.inbound, (t, n) => {
                         i().forEach(t, (t) => {
                             if ('audio' === t.type) {
-                                var r, a, s, o, l, u, c, d, f, _, p, h, m, g, E, v, I;
-                                let b = null !== (r = e.transport.ping) && void 0 !== r ? r : 0,
+                                var r, a, s, o, l, u, c, d, f, _, p, h, m, g, E, v, b;
+                                let I = null !== (r = e.transport.ping) && void 0 !== r ? r : 0,
                                     T = t.packetsReceived,
                                     S = t.packetsLost,
                                     y = t.bytesReceived,
@@ -272,7 +272,7 @@ class c {
                                         r = S - this.inboundStats[n].packetsLost,
                                         a = 0,
                                         s = this.inboundStats[n].mosBuckets;
-                                    e > 0 && r >= 0 && ((a = this.calculateMos(b + C, i().clamp(r / (e + r), 0, 1))), s[Math.floor(a)]++),
+                                    e > 0 && r >= 0 && ((a = this.calculateMos(I + C, i().clamp(r / (e + r), 0, 1))), s[Math.floor(a)]++),
                                         (this.inboundStats[n] = {
                                             packetsReceived: T,
                                             bytesReceived: y,
@@ -321,7 +321,7 @@ class c {
                                             accelerateRateSum: null !== (g = t.accelerateRate) && void 0 !== g ? g : 0,
                                             expandRateSum: null !== (E = t.expandRate) && void 0 !== E ? E : 0,
                                             preemptiveExpandRateSum: null !== (v = t.preemptiveExpandRate) && void 0 !== v ? v : 0,
-                                            speechExpandRateSum: null !== (I = t.speechExpandRate) && void 0 !== I ? I : 0,
+                                            speechExpandRateSum: null !== (b = t.speechExpandRate) && void 0 !== b ? b : 0,
                                             numRateSamples: 1
                                         });
                             }

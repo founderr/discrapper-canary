@@ -34,22 +34,22 @@ var r = n(512722),
 function u(e, t) {
     var n, r, o, u, c, d, f, _, p, h, m, g, E;
     let v = null != e.joined_at ? new Date(e.joined_at) : null == t ? void 0 : t.joinedAt,
-        I = null !== (n = e.premium_subscription_count) && void 0 !== n ? n : 0;
+        b = null !== (n = e.premium_subscription_count) && void 0 !== n ? n : 0;
     if (null == e.properties) {
         i()(null != t, 'If guild.properties is null, existingGuild must be passed in');
         let e = t.joinedAt instanceof Date ? t.joinedAt.getTime() : t.joinedAt,
             n = v instanceof Date ? v.getTime() : v;
-        return I === t.premiumSubscriberCount && e === n
+        return b === t.premiumSubscriberCount && e === n
             ? t
             : t.merge({
                   joinedAt: v,
-                  premiumSubscriberCount: I
+                  premiumSubscriberCount: b
               });
     }
-    let b = {
+    let I = {
         id: e.id,
         joinedAt: v,
-        premiumSubscriberCount: I,
+        premiumSubscriberCount: b,
         name: null !== (r = e.properties.name) && void 0 !== r ? r : '',
         description: e.properties.description,
         icon: e.properties.icon,
@@ -83,7 +83,7 @@ function u(e, t) {
         latestOnboardingQuestionId: e.properties.latest_onboarding_question_id,
         clan: e.properties.clan
     };
-    return null == t ? (0, a.gh)(b, s.ZP) : t.merge(b);
+    return null == t ? (0, a.gh)(I, s.ZP) : t.merge(I);
 }
 function c(e, t) {
     return new s.Bg({

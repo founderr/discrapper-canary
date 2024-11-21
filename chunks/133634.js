@@ -34,8 +34,8 @@ function j(e) {
         y = (0, d.Wu)([f.Z], () => f.Z.getAllActiveStreams()),
         P = (0, d.e7)([C.default], () => C.default.getCurrentUser()),
         M = null != y.find((e) => e.ownerId === (null == P ? void 0 : P.id)),
-        L = (0, d.e7)([v.Z], () => v.Z.getPreviousGoLiveSettings()),
-        R = M && null != L && L.resolution !== b.LY.RESOLUTION_1440 && L.frameRate !== b.ws.FPS_60,
+        R = (0, d.e7)([v.Z], () => v.Z.getPreviousGoLiveSettings()),
+        L = M && null != R && R.resolution !== b.LY.RESOLUTION_1440 && R.frameRate !== b.ws.FPS_60,
         [k, O] = (0, l.useState)(!1);
     (0, l.useEffect)(() => {
         O(!0);
@@ -64,7 +64,7 @@ function j(e) {
             animateOnHover: !0
         }),
         H = _.ZP.getName(t.guild_id, t.id, r),
-        G = M && !R,
+        G = M && !L,
         F = t.hdStreamingUntil;
     if (null == F || null == r || null == P) return null;
     let V = o()(F).diff(o()(), 'hours');
@@ -83,7 +83,7 @@ function j(e) {
                       helpCenterLink: x.Z.getArticleURL(E.BhN.HD_STREAMING_POTION)
                   })
                 : Z.intl.formatToPlainString(Z.t.vNbVXF, { username: H }),
-        W = R ? Z.intl.string(Z.t.o7NIjY) : G ? Z.intl.string(Z.t.r6xhBw) : Z.intl.string(Z.t.yKw8Dg);
+        W = L ? Z.intl.string(Z.t.o7NIjY) : G ? Z.intl.string(Z.t.r6xhBw) : Z.intl.string(Z.t.yKw8Dg);
     return null == r || null == P
         ? null
         : (0, i.jsxs)(c.animated.div, {
@@ -114,7 +114,7 @@ function j(e) {
                       children: [
                           (0, i.jsx)(u.Button, {
                               onClick: () => {
-                                  if (R) {
+                                  if (L) {
                                       let e = v.Z.getPreviousGoLiveSettings(),
                                           t = g.Z.getGoLiveSource();
                                       if (null == e) {

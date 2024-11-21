@@ -38,9 +38,9 @@ function E(e) {
         y = (0, l.e7)([h.Z], () => h.Z.hidden),
         P = (0, l.e7)([c.Z], () => c.Z.isFocused()),
         M = (0, l.e7)([s.Z], () => s.Z.getChannel(E)),
-        L = (0, l.e7)([o.Z], () => o.Z.getGuild(b), [b]),
-        R = (0, p.E)(L),
-        k = null != R && R && (null == M ? void 0 : M.isForumChannel()) === !1,
+        R = (0, l.e7)([o.Z], () => o.Z.getGuild(b), [b]),
+        L = (0, p.E)(R),
+        k = null != L && L && (null == M ? void 0 : M.isForumChannel()) === !1,
         [O, D, w, B] = i.useMemo(() => {
             let e;
             if (null == T || 0 === T.length || null == S || !k) return [t, n, I];

@@ -26,7 +26,7 @@ t.Z = (0, r.memo)(function (e) {
     var t, n, l, x, b;
     let { quest: Z } = e,
         [L, y] = (0, r.useState)(!1),
-        [P, O] = (0, r.useState)(24),
+        [O, P] = (0, r.useState)(24),
         [R, j] = (0, r.useState)(!1),
         D = (0, r.useRef)(null),
         M = (0, r.useRef)(null),
@@ -49,7 +49,7 @@ t.Z = (0, r.memo)(function (e) {
         let n = D.current.getBoundingClientRect(),
             i = M.current.getBoundingClientRect(),
             r = w.current.getBoundingClientRect();
-        O((i.top - n.top - r.height) / 2);
+        P((i.top - n.top - r.height) / 2);
     });
     let K = (0, c.wj)(B),
         q = (0, r.useMemo)(() => null != Z.config.cosponsorMetadata, [Z]),
@@ -88,7 +88,7 @@ t.Z = (0, r.memo)(function (e) {
                           (0, i.jsx)('div', {
                               ref: w,
                               className: A.decoWrapper,
-                              style: { top: P },
+                              style: { top: O },
                               children: (0, i.jsx)(m.Z, {
                                   avatarDecorationOverride: Y,
                                   user: k,

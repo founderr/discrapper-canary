@@ -37,8 +37,8 @@ var i,
     y = n(955843),
     P = n(464792),
     M = n(605236),
-    L = n(243778),
-    R = n(258609),
+    R = n(243778),
+    L = n(258609),
     k = n(446226),
     O = n(569545),
     D = n(74299),
@@ -116,7 +116,7 @@ function eS(e) {
             (0, w.Z)(u);
         },
         A = V.pM,
-        R = a.useCallback(() => {
+        L = a.useCallback(() => {
             eo.default.track(eI.rMx.PERK_DEMO_OFFER_DISMISSED, {
                 guild_id: t.guild_id,
                 channel_id: t.id,
@@ -150,7 +150,7 @@ function eS(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             Z
-                ? (0, r.jsx)(L.ZP, {
+                ? (0, r.jsx)(R.ZP, {
                       contentTypes: [m.z.CONSUMABLE_HD_POTION_UPSELL],
                       bypassAutoDismiss: !0,
                       children: (e) => {
@@ -170,7 +170,7 @@ function eS(e) {
                       }
                   })
                 : b && 0 === d.length
-                  ? (0, r.jsx)(L.ZP, {
+                  ? (0, r.jsx)(R.ZP, {
                         contentTypes: [m.z.TRIAL_FOR_ALL_STREAM_POPOUT],
                         bypassAutoDismiss: !0,
                         children: (e) => {
@@ -193,7 +193,7 @@ function eS(e) {
                           channel: t,
                           buttonRef: _,
                           dismissed: C.hqStreamingOptInPopoutDismissed,
-                          onDismiss: R
+                          onDismiss: L
                       }),
             (0, r.jsx)(Y.Z, {
                 children: (0, r.jsx)(f.Popout, {
@@ -409,14 +409,14 @@ t.ZP = function (e) {
         { suppress: g, selfMute: C, mute: x } = (0, ep.Z)(n),
         { canGoLive: v } = (0, p.cj)([er.Z], () => ({ canGoLive: (0, D.Z)(er.Z) })),
         E = (0, k.Z)(),
-        N = (0, p.e7)([R.Z], () => null != R.Z.getAwaitingRemoteSessionInfo()),
+        N = (0, p.e7)([L.Z], () => null != L.Z.getAwaitingRemoteSessionInfo()),
         y = null != E,
         P = (0, p.e7)([ea.Z], () => {
             var e;
             return (null !== (e = null == E ? void 0 : E.channelId) && void 0 !== e ? e : ea.Z.getVoiceChannelId()) === n.id;
         }),
         M = (0, S.Z)(n, !0),
-        L = (0, p.e7)([I.ZP], () => {
+        R = (0, p.e7)([I.ZP], () => {
             let e = I.ZP.getSelfEmbeddedActivityForChannel(n.id);
             return null != e ? e.applicationId : null;
         }),
@@ -530,7 +530,7 @@ t.ZP = function (e) {
                               })
                             : null,
                         (0, r.jsx)(ej, {
-                            connectedActivityApplicationId: L,
+                            connectedActivityApplicationId: R,
                             currentUser: c,
                             channel: n,
                             onDisconnectCall: l

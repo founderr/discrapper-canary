@@ -37,8 +37,8 @@ var a,
     g = n(13245),
     E = n(287734),
     v = n(579806),
-    I = n(887278),
-    b = n(490029),
+    b = n(887278),
+    I = n(490029),
     T = n(710845),
     S = n(594190),
     y = n(454991),
@@ -136,11 +136,11 @@ async function ei(e) {
         if (Z.size > 0) {
             ee = 'reconcile.getOverlayURL';
             let t = await eu();
-            (ee = 'reconcile.createHostProcess'), e.createHostProcess(t, eI, eg);
+            (ee = 'reconcile.createHostProcess'), e.createHostProcess(t, eb, eg);
         } else (ee = 'reconcile.destroyHostProcess'), e.destroyHostProcess();
     } else if (j) {
         let t = await eu();
-        e.createHostProcess(t, eI, eg);
+        e.createHostProcess(t, eb, eg);
     } else e.destroyHostProcess();
 }
 async function ea(e) {
@@ -153,7 +153,7 @@ async function ea(e) {
     ee = 'attach.getOverlayModule';
     let n = await ec();
     (ee = 'attach.transitionOverlayPIDStatus'), er(e, 'ATTACHING'), (ee = 'attach.attachToProcess');
-    let r = await I.YT(e);
+    let r = await b.YT(e);
     null == r ? ((ee = 'attach.transitionOverlayPIDStatus (CONNECTING)'), er(e, 'CONNECTING', 'ATTACHING'), (ee = 'attach.reconcileHostProcess'), await ei(n), n.connectProcess(e)) : ((ee = 'attach.transitionOverlayPIDStatus (HOOK_FAILED)'), er(e, 'HOOK_FAILED', 'ATTACHING'), $.warn('Could not hook to pid='.concat(e, ', error=').concat(r)));
 }
 async function es(e) {
@@ -163,7 +163,7 @@ async function es(e) {
     }
     ee = 'detach.getOverlayModule';
     let t = await ec();
-    (ee = 'detach.transitionOverlayPIDStatus'), er(e, null), e !== k.Js && ((ee = 'detach.cancelAttachToProcess'), I.pn(e), (ee = 'detach.disconnectProcess'), t.disconnectProcess(e)), (ee = 'detach.reconcileHostProcess'), await ei(t);
+    (ee = 'detach.transitionOverlayPIDStatus'), er(e, null), e !== k.Js && ((ee = 'detach.cancelAttachToProcess'), b.pn(e), (ee = 'detach.disconnectProcess'), t.disconnectProcess(e)), (ee = 'detach.reconcileHostProcess'), await ei(t);
 }
 async function eo(e) {
     var t;
@@ -320,7 +320,7 @@ function eE(e) {
 function ev(e) {
     g.Z.successfullyShown(e);
 }
-function eI(e, t, n) {
+function eb(e, t, n) {
     var r;
     let i = null === (r = S.ZP.getGameForPID(e)) || void 0 === r ? void 0 : r.name,
         a = O.Z.getGameByName(i),
@@ -338,11 +338,11 @@ function eI(e, t, n) {
         $.info('Overlay connection to '.concat(e, ' ').concat(t ? 'succeeded' : 'failed'), s),
         t ? er(e, 'CONNECTED', 'CONNECTING') : er(e, 'CONNECT_FAILED', 'CONNECTING');
 }
-function eb() {
+function eI() {
     let e = R.default.getToken(),
         t = R.default.getId();
     if (null != e)
-        b.lW({
+        I.lW({
             type: U.BmY.DISPATCH,
             pid: null,
             token: null,
@@ -417,7 +417,7 @@ function eR() {
         return;
     }
     V.size > 0 &&
-        (b.lW({
+        (I.lW({
             type: U.BmY.DISPATCH,
             pid: null,
             token: null,
@@ -437,13 +437,13 @@ function eD(e) {
                 Promise.all([(0, A.Z)(t, e.pid), f.ZP.PersistedStore.getAllStates()]).then((t) => {
                     let [n, r] = t,
                         { pid: i, token: a } = e;
-                    b.lW({
+                    I.lW({
                         type: U.BmY.STORAGE_SYNC,
                         pid: i,
                         token: a,
                         states: r
                     }),
-                        b.lW({
+                        I.lW({
                             type: U.BmY.DISPATCH,
                             pid: i,
                             token: a,
@@ -465,7 +465,7 @@ function eD(e) {
 }
 class eL extends (s = f.ZP.Store) {
     initialize() {
-        if (!(!G.iP || __OVERLAY__)) this.waitFor(S.ZP, R.default, N.Z), b.sr(eD, eO), R.default.addChangeListener(eb), em(y.v.enabled, y.v.legacyEnabled, y.v.global), _.Z.addInterceptor(eC);
+        if (!(!G.iP || __OVERLAY__)) this.waitFor(S.ZP, R.default, N.Z), I.sr(eD, eO), R.default.addChangeListener(eI), em(y.v.enabled, y.v.legacyEnabled, y.v.global), _.Z.addInterceptor(eC);
     }
     isInputLocked(e) {
         return N.Z.isOverlayV3Enabled() ? N.Z.isInputLocked(e) : !q.has(e);
@@ -574,7 +574,7 @@ let ex = new eL(
                   let { port: t } = e;
                   z = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
                   let n = new URLSearchParams();
-                  n.append('build_id', '4ce01d3dc0291f264e55db387135643cdd174e16'), n.append('rpc', String(t)), n.append('rpc_auth_token', z), (r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString()));
+                  n.append('build_id', '4c8d1ccd41081c0799cc26eea7b55cc64a51e232'), n.append('rpc', String(t)), n.append('rpc_auth_token', z), (r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString()));
               },
               OVERLAY_CALL_PRIVATE_CHANNEL: function (e) {
                   let { channelId: t, ring: n } = e;

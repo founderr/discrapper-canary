@@ -20,8 +20,8 @@ var r = n(200651),
     g = n(271383),
     E = n(594174),
     v = n(665786),
-    I = n(697725),
-    b = n(267642),
+    b = n(697725),
+    I = n(267642),
     T = n(284363),
     S = n(854218),
     y = n(981631),
@@ -87,7 +87,7 @@ function R(e) {
             (0, r.jsxs)('div', {
                 className: s()(N.tooltipPremiumFooterSegment, N.tooltipPremiumFooterTierSegment),
                 children: [
-                    (0, r.jsx)(I.Z, {
+                    (0, r.jsx)(b.Z, {
                         width: 18,
                         height: 18,
                         className: N.gemIcon
@@ -95,7 +95,7 @@ function R(e) {
                     (0, r.jsx)(c.Text, {
                         variant: 'text-xs/semibold',
                         color: 'always-white',
-                        children: b.nW(t.premiumTier)
+                        children: I.nW(t.premiumTier)
                     })
                 ]
             }),
@@ -195,7 +195,7 @@ function O(e) {
 function D(e) {
     let t,
         n,
-        { guild: a, tooltipColor: l = c.Tooltip.Colors.BRAND, tooltipPosition: _, className: v, flowerStarClassName: I, iconClassName: b, badgeStrokeColor: A, badgeColor: R, size: D = 16, disableBoostClick: L, 'aria-label': x = !1 } = e,
+        { guild: a, tooltipColor: l = c.Tooltip.Colors.BRAND, tooltipPosition: _, className: v, flowerStarClassName: b, iconClassName: I, badgeStrokeColor: A, badgeColor: R, size: D = 16, disableBoostClick: L, 'aria-label': x = !1 } = e,
         w = (0, o.e7)([E.default, g.ZP], () => {
             let e = E.default.getCurrentUser();
             return g.ZP.isMember(null == a ? void 0 : a.id, null == e ? void 0 : e.id);
@@ -269,7 +269,7 @@ function D(e) {
                 children: (0, r.jsx)(h.Z, {
                     ...e,
                     className: v,
-                    flowerStarClassName: I,
+                    flowerStarClassName: b,
                     allowFullSizedIcon: !0,
                     color: null != n ? n : R,
                     stroke: A,
@@ -278,7 +278,7 @@ function D(e) {
                         size: 'custom',
                         width: q,
                         height: q,
-                        className: b,
+                        className: I,
                         color: null != t ? t : 'currentColor'
                     })
                 })

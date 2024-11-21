@@ -21,8 +21,8 @@ var r = n(200651),
     g = n(997945),
     E = n(401460),
     v = n(441319),
-    I = n(981631),
-    b = n(526761),
+    b = n(981631),
+    I = n(526761),
     T = n(388032),
     S = n(243132);
 function y(e) {
@@ -36,7 +36,7 @@ function y(e) {
             }
         ),
         O = i.useRef(null);
-    (0, h.Z)(O, b.h1.CUSTOM_APP_ICONS);
+    (0, h.Z)(O, I.h1.CUSTOM_APP_ICONS);
     let D = (0, d.Dt)(),
         L = (0, l.useRadioGroup)({
             orientation: 'horizontal',
@@ -50,8 +50,8 @@ function y(e) {
                         (0, r.jsx)(e, {
                             analyticsSource: c.Z.APP_ICON_SELECTOR,
                             analyticsLocation: {
-                                section: I.jXE.SETTINGS_APPEARANCE_APP_ICON_PICKER,
-                                object: I.qAy.BUTTON_ICON
+                                section: b.jXE.SETTINGS_APPEARANCE_APP_ICON_PICKER,
+                                object: b.qAy.BUTTON_ICON
                             },
                             ...t
                         });

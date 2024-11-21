@@ -21,8 +21,8 @@ var r = n(200651),
     g = n(554608),
     E = n(83949),
     v = n(137412),
-    I = n(893607),
-    b = n(314897),
+    b = n(893607),
+    I = n(314897),
     T = n(626135),
     S = n(361207),
     y = n(690032),
@@ -78,7 +78,7 @@ let D = (0, h.Un)({
         name: 'ActivateDevice'
     }),
     B = (0, h.Un)({
-        createPromise: () => Promise.all([n.e('63288'), n.e('77298'), n.e('23357'), n.e('50506'), n.e('23755'), n.e('96211'), n.e('48835'), n.e('99152'), n.e('35535'), n.e('34981'), n.e('29549'), n.e('12013'), n.e('52249'), n.e('99783'), n.e('31605'), n.e('26182'), n.e('95900'), n.e('32776'), n.e('6380'), n.e('18543'), n.e('87624'), n.e('51269'), n.e('60691'), n.e('90508'), n.e('72181'), n.e('13351'), n.e('57674'), n.e('65840'), n.e('74891'), n.e('95393'), n.e('50050'), n.e('38902'), n.e('18101'), n.e('56602'), n.e('25788'), n.e('46097'), n.e('8739'), n.e('58059'), n.e('18895'), n.e('42309'), n.e('73974'), n.e('99393'), n.e('70205'), n.e('37229'), n.e('99008'), n.e('7590'), n.e('75343'), n.e('39333'), n.e('42471'), n.e('28044'), n.e('1187'), n.e('60178'), n.e('89943'), n.e('85030'), n.e('9540'), n.e('93375'), n.e('64679'), n.e('69057'), n.e('77564'), n.e('93936'), n.e('62880'), n.e('90346'), n.e('31915'), n.e('47321'), n.e('20011'), n.e('73747'), n.e('84804'), n.e('37220'), n.e('61447'), n.e('80026'), n.e('82158'), n.e('91315'), n.e('11794'), n.e('77803'), n.e('91458'), n.e('54109'), n.e('60673'), n.e('64525'), n.e('86609'), n.e('95468'), n.e('4028')]).then(n.bind(n, 457094)),
+        createPromise: () => Promise.all([n.e('63288'), n.e('77298'), n.e('23357'), n.e('50506'), n.e('23755'), n.e('96211'), n.e('48835'), n.e('99152'), n.e('35535'), n.e('34981'), n.e('29549'), n.e('12013'), n.e('52249'), n.e('99783'), n.e('31605'), n.e('26182'), n.e('95900'), n.e('32776'), n.e('6380'), n.e('18543'), n.e('87624'), n.e('51269'), n.e('60691'), n.e('90508'), n.e('72181'), n.e('13351'), n.e('57674'), n.e('65840'), n.e('74891'), n.e('95393'), n.e('50050'), n.e('38902'), n.e('18101'), n.e('56602'), n.e('25788'), n.e('46097'), n.e('8739'), n.e('58059'), n.e('18895'), n.e('42309'), n.e('73974'), n.e('99393'), n.e('70205'), n.e('37229'), n.e('99008'), n.e('7590'), n.e('75343'), n.e('39333'), n.e('42471'), n.e('28044'), n.e('1187'), n.e('60178'), n.e('89943'), n.e('85030'), n.e('9540'), n.e('93375'), n.e('64679'), n.e('69057'), n.e('77564'), n.e('93936'), n.e('62880'), n.e('90346'), n.e('31915'), n.e('47321'), n.e('20011'), n.e('84804'), n.e('92905'), n.e('37220'), n.e('61447'), n.e('80026'), n.e('82158'), n.e('91315'), n.e('11794'), n.e('77803'), n.e('91458'), n.e('54109'), n.e('60673'), n.e('64525'), n.e('86609'), n.e('95468'), n.e('4028')]).then(n.bind(n, 457094)),
         webpackId: 457094,
         name: 'ViewsWithMainInterface',
         memo: !0,
@@ -172,7 +172,7 @@ class $ extends i.Component {
                                         component: Z
                                     }),
                                     (0, r.jsx)(p.Z, {
-                                        path: C.Z5c.INVITE_PROXY(I.Hw.channelId()),
+                                        path: C.Z5c.INVITE_PROXY(b.Hw.channelId()),
                                         component: x
                                     }),
                                     (0, r.jsx)(s.l_, {
@@ -206,7 +206,7 @@ class $ extends i.Component {
                                     t
                                         ? null
                                         : (0, r.jsx)(s.AW, {
-                                              path: C.Z5c.CHANNEL(I.Hw.guildId(), I.Hw.channelId({ optional: !0 }), ':messageId?'),
+                                              path: C.Z5c.CHANNEL(b.Hw.guildId(), b.Hw.channelId({ optional: !0 }), ':messageId?'),
                                               component: Z
                                           }),
                                     (0, r.jsx)(s.l_, {
@@ -214,7 +214,7 @@ class $ extends i.Component {
                                         to: C.Z5c.LOGIN
                                     }),
                                     (0, r.jsx)(p.Z, {
-                                        path: C.Z5c.INVITE_PROXY(I.Hw.channelId()),
+                                        path: C.Z5c.INVITE_PROXY(b.Hw.channelId()),
                                         component: x
                                     }),
                                     (0, r.jsx)(s.l_, {
@@ -354,9 +354,9 @@ class $ extends i.Component {
     }
 }
 t.Z = d.ZP.connectStores(
-    [b.default, g.Z],
+    [I.default, g.Z],
     () => ({
-        isAuthenticated: b.default.isAuthenticated(),
+        isAuthenticated: I.default.isAuthenticated(),
         migrationStatus: g.Z.getMigrationStatus()
     }),
     { forwardRef: !0 }

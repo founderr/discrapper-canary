@@ -16,8 +16,8 @@ var r = n(200651),
     g = n(117530),
     E = n(594174),
     v = n(74538),
-    I = n(94161),
-    b = n(9277),
+    b = n(94161),
+    I = n(9277),
     T = n(58995),
     S = n(897291),
     y = n(764794),
@@ -117,7 +117,7 @@ t.Z = i.memo(function (e) {
             k &&
             H.push(
                 (0, r.jsx)(
-                    b.Z,
+                    I.Z,
                     {
                         disabled: x,
                         type: L
@@ -142,7 +142,7 @@ t.Z = i.memo(function (e) {
         (null == F || (null != V && V.type !== o.jw.ATTACHMENT)) &&
         H.push(
             (0, r.jsx)(
-                I.Z,
+                b.Z,
                 {
                     disabled: x,
                     type: L

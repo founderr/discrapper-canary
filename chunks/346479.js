@@ -16,8 +16,8 @@ var r = n(697988),
     g = n(91159),
     E = n(952537),
     v = n(981631),
-    I = n(176505),
-    b = n(388032);
+    b = n(176505),
+    I = n(388032);
 function T(e, t) {
     return i.tn
         .patch({
@@ -86,22 +86,22 @@ t.Z = {
             throw (
                 ((null === (i = e.body) || void 0 === i ? void 0 : i.code) === v.evJ.TOO_MANY_THREADS
                     ? s.Z.show({
-                          title: r ? b.intl.string(b.t.kwyWNT) : b.intl.string(b.t['PeIE/v']),
-                          body: r ? b.intl.string(b.t.KGaiEB) : b.intl.string(b.t.P0wT5e)
+                          title: r ? I.intl.string(I.t.kwyWNT) : I.intl.string(I.t['PeIE/v']),
+                          body: r ? I.intl.string(I.t.KGaiEB) : I.intl.string(I.t.P0wT5e)
                       })
                     : (null === (a = e.body) || void 0 === a ? void 0 : a.code) === v.evJ.TOO_MANY_ANNOUNCEMENT_THREADS
                       ? s.Z.show({
-                            title: b.intl.string(b.t['PeIE/v']),
-                            body: b.intl.string(b.t.jDMxz8)
+                            title: I.intl.string(I.t['PeIE/v']),
+                            body: I.intl.string(I.t.jDMxz8)
                         })
                       : 429 === e.status
                         ? s.Z.show({
-                              title: r ? b.intl.string(b.t.kwyWNT) : b.intl.string(b.t['PeIE/v']),
-                              body: b.intl.string(b.t['Whhv4+'])
+                              title: r ? I.intl.string(I.t.kwyWNT) : I.intl.string(I.t['PeIE/v']),
+                              body: I.intl.string(I.t['Whhv4+'])
                           })
                         : s.Z.show({
-                              title: b.intl.string(b.t.j2d6Ki),
-                              body: b.intl.string(b.t.fEptJC)
+                              title: I.intl.string(I.t.j2d6Ki),
+                              body: I.intl.string(I.t.fEptJC)
                           }),
                 e)
             );
@@ -127,13 +127,13 @@ t.Z = {
             if ((null === (n = t.body) || void 0 === n ? void 0 : n.code) === v.evJ.TOO_MANY_THREAD_MEMBERS) {
                 let t = e.isForumPost();
                 s.Z.show({
-                    title: t ? b.intl.string(b.t.EMYJFh) : b.intl.string(b.t.gtdVcn),
-                    body: t ? b.intl.string(b.t.QYyad3) : b.intl.string(b.t.abMwgo)
+                    title: t ? I.intl.string(I.t.EMYJFh) : I.intl.string(I.t.gtdVcn),
+                    body: t ? I.intl.string(I.t.QYyad3) : I.intl.string(I.t.abMwgo)
                 });
             } else
                 s.Z.show({
-                    title: b.intl.string(b.t.j2d6Ki),
-                    body: b.intl.string(b.t.fEptJC)
+                    title: I.intl.string(I.t.j2d6Ki),
+                    body: I.intl.string(I.t.fEptJC)
                 });
             e.isForumPost() && S(e, !1);
         }
@@ -150,13 +150,13 @@ t.Z = {
             if ((null === (r = t.body) || void 0 === r ? void 0 : r.code) === v.evJ.TOO_MANY_THREAD_MEMBERS) {
                 let t = e.isForumPost();
                 s.Z.show({
-                    title: t ? b.intl.string(b.t['0yAqqK']) : b.intl.string(b.t.YErysL),
-                    body: t ? b.intl.string(b.t.QYyad3) : b.intl.string(b.t.abMwgo)
+                    title: t ? I.intl.string(I.t['0yAqqK']) : I.intl.string(I.t.YErysL),
+                    body: t ? I.intl.string(I.t.QYyad3) : I.intl.string(I.t.abMwgo)
                 });
             } else
                 s.Z.show({
-                    title: b.intl.string(b.t.j2d6Ki),
-                    body: b.intl.string(b.t.fEptJC)
+                    title: I.intl.string(I.t.j2d6Ki),
+                    body: I.intl.string(I.t.fEptJC)
                 });
         }
     },
@@ -181,11 +181,11 @@ t.Z = {
             rejectWithError: !1
         }),
     pin(e) {
-        let t = e.flags | I.zZ.PINNED;
+        let t = e.flags | b.zZ.PINNED;
         this.updateFlags(e, t, e.isArchivedThread());
     },
     unpin(e) {
-        let t = e.flags & ~I.zZ.PINNED;
+        let t = e.flags & ~b.zZ.PINNED;
         this.updateFlags(e, t);
     },
     async updateFlags(e, t) {
@@ -210,8 +210,8 @@ t.Z = {
         }
     },
     async replacePin(e, t) {
-        let n = e.merge({ flags: e.flags & ~I.zZ.PINNED }),
-            r = t.merge({ flags: t.flags | I.zZ.PINNED });
+        let n = e.merge({ flags: e.flags & ~b.zZ.PINNED }),
+            r = t.merge({ flags: t.flags | b.zZ.PINNED });
         a.Z.dispatch({
             type: 'THREAD_UPDATE',
             channel: n
@@ -225,7 +225,7 @@ t.Z = {
         try {
             await i.tn.patch({
                 url: v.ANM.CHANNEL(e.id),
-                body: { flags: e.flags & ~I.zZ.PINNED },
+                body: { flags: e.flags & ~b.zZ.PINNED },
                 rejectWithError: !0
             });
         } catch {
@@ -242,7 +242,7 @@ t.Z = {
         try {
             await i.tn.patch({
                 url: v.ANM.CHANNEL(t.id),
-                body: { flags: t.flags | I.zZ.PINNED },
+                body: { flags: t.flags | b.zZ.PINNED },
                 rejectWithError: !0
             });
         } catch {

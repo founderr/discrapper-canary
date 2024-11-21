@@ -21,8 +21,8 @@ var i,
     g = n(306680),
     E = n(944486),
     v = n(823379),
-    I = n(709054),
-    b = n(882252);
+    b = n(709054),
+    I = n(882252);
 let T = [],
     S = null,
     y = null,
@@ -42,10 +42,10 @@ function P(e) {
 }
 function k(e) {
     return function (t, n) {
-        if ((0, b.yv)(t)) return -1;
-        if ((0, b.yv)(n)) return 1;
-        if (e === c.z.LATEST_ACTIVITY) return I.default.compare(P(n), P(t));
-        else return I.default.compare(n, t);
+        if ((0, I.yv)(t)) return -1;
+        if ((0, I.yv)(n)) return 1;
+        if (e === c.z.LATEST_ACTIVITY) return b.default.compare(P(n), P(t));
+        else return b.default.compare(n, t);
     };
 }
 function U() {
@@ -161,7 +161,7 @@ class F extends (i = d.ZP.Store) {
         THREAD_UPDATE: function (e) {
             let { channel: t } = e;
             if (null == t.parent_id || t.parent_id !== y) return !1;
-            let n = (0, b.yv)(t.id),
+            let n = (0, I.yv)(t.id),
                 r = M.has(t.id);
             if (n && !r) M.add(t.id), Z({ sortThreadIds: !0 });
             else {

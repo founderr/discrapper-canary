@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return R;
+        return L;
     }
 }),
     n(47120);
@@ -34,9 +34,9 @@ var i = n(200651),
     y = n(981631),
     P = n(388032),
     M = n(314251),
-    L = n(96042);
-function R(e) {
-    let { postId: t, isFirstMessage: n, isLastItem: r = !1, parentChannelId: R } = e,
+    R = n(96042);
+function L(e) {
+    let { postId: t, isFirstMessage: n, isLastItem: r = !1, parentChannelId: L } = e,
         { ref: k, width: O } = (0, p.Z)(),
         [D, w] = l.useState(3),
         [B, U] = l.useState(!n),
@@ -45,7 +45,7 @@ function R(e) {
         { firstMessage: V } = (0, j.cl)(F),
         z = (0, o.e7)([b.Z], () => b.Z.hasJoined(t)),
         { disableReactionUpdates: W, disableReactionCreates: K, isLurking: Y, isGuest: q, isPendingMember: X } = (0, x.Z)(F),
-        J = (0, o.e7)([N.Z], () => N.Z.getChannel(R)),
+        J = (0, o.e7)([N.Z], () => N.Z.getChannel(L)),
         Q = (0, T.Bs)(J),
         $ = (0, o.e7)([f.Z], () => f.Z.shouldDisplayPrompt(t) && !0 === n, [t, n]),
         ee = l.useCallback(
@@ -112,7 +112,7 @@ function R(e) {
                                 !K &&
                                 null != Q &&
                                 (0, i.jsx)('div', {
-                                    className: L.reactions,
+                                    className: R.reactions,
                                     children: (0, i.jsx)(E.le, {
                                         message: V,
                                         readOnly: !1,

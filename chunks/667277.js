@@ -92,8 +92,8 @@ function g(e, t) {
 }
 var E = /[yYQqMLwIdDecihHKkms]o|(\w)\1*|''|'(''|[^'])+('|$)|./g,
     v = /P+p+|P+|p+|''|'(''|[^'])+('|$)|./g,
-    I = /^'([^]*?)'?$/,
-    b = /''/g,
+    b = /^'([^]*?)'?$/,
+    I = /''/g,
     T = /\S/,
     S = /[a-zA-Z]/;
 function y(e, t, n, g) {
@@ -171,7 +171,7 @@ function y(e, t, n, g) {
                             ? (t = "'")
                             : "'" === n &&
                               (t = (function (e) {
-                                  return e.match(I)[1].replace(b, "'");
+                                  return e.match(b)[1].replace(I, "'");
                               })(t)),
                         0 !== y.indexOf(t))
                     )

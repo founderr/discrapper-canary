@@ -7,7 +7,7 @@ n.d(t, {
         return S;
     },
     Vf: function () {
-        return b;
+        return I;
     },
     YR: function () {
         return ek;
@@ -185,7 +185,7 @@ function p(e, t) {
     return (t = L(t, e.calendar)), e.era === t.era && e.year === t.year && e.month === t.month && e.day === t.day;
 }
 function h(e, t) {
-    return (t = L(t, e.calendar)), (e = I(e)), (t = I(t)), e.era === t.era && e.year === t.year && e.month === t.month;
+    return (t = L(t, e.calendar)), (e = b(e)), (t = b(t)), e.era === t.era && e.year === t.year && e.month === t.month;
 }
 function m(e, t) {
     return e.calendar.toJulianDay(e) - t.calendar.toJulianDay(t);
@@ -197,10 +197,10 @@ let E = null;
 function v() {
     return null == E && (E = new Intl.DateTimeFormat().resolvedOptions().timeZone), E;
 }
-function I(e) {
+function b(e) {
     return e.subtract({ days: e.day - 1 });
 }
-function b(e) {
+function I(e) {
     return e.add({ days: e.calendar.getDaysInMonth(e) - e.day });
 }
 let T = new Map();
@@ -209,7 +209,7 @@ function S(e, t) {
     let i,
         a = e.calendar.getDaysInMonth(e);
     return Math.ceil(
-        ((n = I(e)),
+        ((n = b(e)),
         (r = t),
         (i =
             Math.ceil(
@@ -858,7 +858,7 @@ function eE(e, t) {
 function ev(e) {
     return i[e + 1 - 1300] - i[e - 1300];
 }
-class eI extends ep {
+class eb extends ep {
     fromJulianDay(e) {
         let t = e - 1948440,
             n = em(1300),
@@ -904,8 +904,8 @@ class eI extends ep {
         }
     }
 }
-let eb = 25920,
-    eT = 29 * eb + 13753;
+let eI = 25920,
+    eT = 29 * eI + 13753;
 function eS(e) {
     return 7 > s(7 * e + 1, 19);
 }
@@ -940,7 +940,7 @@ function eC(e, t) {
 class eR {
     fromJulianDay(e) {
         let t = e - 347997,
-            n = Math.floor((((t * eb) / eT) * 19 + 234) / 235) + 1,
+            n = Math.floor((((t * eI) / eT) * 19 + 234) / 235) + 1,
             r = eA(n),
             i = Math.floor(t - r);
         for (; i < 1; ) i = Math.floor(t - (r = eA(--n)));
@@ -1085,7 +1085,7 @@ function ek(e) {
         case 'islamic-tbla':
             return new eh();
         case 'islamic-umalqura':
-            return new eI();
+            return new eb();
         case 'japanese':
             return new ee();
         case 'persian':

@@ -32,8 +32,8 @@ function C(e) {
         b = 0 === j,
         S = null == N,
         E = null !== (t = null == I ? void 0 : I.archived) && void 0 !== t && t,
-        { deleteSubscriptionListing: R, submitting: Z } = (0, d.r4)(),
-        { archiveSubscriptionListing: y, submitting: A } = (0, d._1)(),
+        { deleteSubscriptionListing: R, submitting: y } = (0, d.r4)(),
+        { archiveSubscriptionListing: Z, submitting: A } = (0, d._1)(),
         L = () => {
             let e = async () => {
                 if (!!S || (s()(null != _, 'group listing doesnt exist'), s()(null != N, 'subscription listing doesnt exist'), !!(await R(v, _, N)))) null == l || l();
@@ -82,7 +82,7 @@ function C(e) {
                                         wrapperClassName: f.deleteListingButton,
                                         color: o.Button.Colors.RED,
                                         onClick: L,
-                                        submitting: Z,
+                                        submitting: y,
                                         disabled: !D || !b,
                                         children: x.intl.string(x.t.GMtG6u)
                                     })
@@ -113,7 +113,7 @@ function C(e) {
                                                     confirmText: x.intl.string(x.t.RL0wjo),
                                                     cancelText: x.intl.string(x.t['ETE/oK']),
                                                     onConfirm: () => {
-                                                        y(v, _, N);
+                                                        Z(v, _, N);
                                                     },
                                                     confirmButtonColor: o.Button.Colors.RED,
                                                     ...t,

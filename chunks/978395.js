@@ -21,8 +21,8 @@ var i = n(442837),
     g = n(502762),
     E = n(530),
     v = n(827313),
-    I = n(420654),
-    b = n(116854),
+    b = n(420654),
+    I = n(116854),
     T = n(166584),
     S = n(915014),
     y = n(228168),
@@ -46,7 +46,7 @@ function C(e) {
                 onOpenProfile: D,
                 usernameIcon:
                     t.hasAvatarForGuild(null == R ? void 0 : R.id) &&
-                    (0, r.jsx)(b.Z, {
+                    (0, r.jsx)(I.Z, {
                         user: t,
                         nickname: w
                     }),
@@ -84,7 +84,7 @@ function C(e) {
                 }),
             t.isProvisional
                 ? (0, r.jsx)(s.Z, { look: 'profile' })
-                : (0, r.jsx)(I.Z, {
+                : (0, r.jsx)(b.Z, {
                       user: t,
                       bio: null == C ? void 0 : C.bio,
                       hidePersonalInformation: P,

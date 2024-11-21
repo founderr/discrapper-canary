@@ -16,8 +16,8 @@ var r = n(200651),
     g = n(937995),
     E = n(366050),
     v = n(944486),
-    I = n(594174),
-    b = n(566620),
+    b = n(594174),
+    I = n(566620),
     T = n(317381),
     S = n(531826),
     y = n(175894),
@@ -86,7 +86,7 @@ function U(e) {
     }, [null == B ? void 0 : B.applicationId, ee]);
     if (null == B || null == V || (null == K && (0, C.Z)(y.id)) || null == F) return null;
     let ei = Array.from(B.userIds)
-            .map((e) => I.default.getUser(e))
+            .map((e) => b.default.getUser(e))
             .filter((e) => null != e),
         ea = {
             instance_id: null !== (a = null !== (n = B.compositeInstanceId) && void 0 !== n ? n : B.launchId) && void 0 !== a ? a : '',
@@ -143,7 +143,7 @@ function U(e) {
                                                     onMouseDown: i,
                                                     onMouseLeave: a,
                                                     onJumpToChannel: () => {
-                                                        en(), (0, b.tg)(L.Ez.PANEL);
+                                                        en(), (0, I.tg)(L.Ez.PANEL);
                                                     },
                                                     channel: y,
                                                     applicationId: B.applicationId,

@@ -21,8 +21,8 @@ var r = n(200651),
     g = n(687158),
     E = n(326094),
     v = n(510659),
-    I = n(113557),
-    b = n(867176),
+    b = n(113557),
+    I = n(867176),
     T = n(169979),
     S = n(451834),
     y = n(502762),
@@ -136,7 +136,7 @@ function k(e) {
                                 (0, r.jsxs)('header', {
                                     className: P.header,
                                     children: [
-                                        (0, r.jsx)(b.Z, {
+                                        (0, r.jsx)(I.Z, {
                                             user: t,
                                             displayProfile: X,
                                             guildId: k,
@@ -147,7 +147,7 @@ function k(e) {
                                             className: P.toast,
                                             onClose: Z
                                         }),
-                                        (0, r.jsx)(I.Z, {
+                                        (0, r.jsx)(b.Z, {
                                             location: 'UserProfilePopout',
                                             user: t,
                                             displayProfile: X,
