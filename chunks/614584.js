@@ -28,8 +28,8 @@ let b = l.memo(function (e) {
     let { baseMessage: n, referencedMessage: b, channel: Z, compact: N = !1, referencedUsernameProfile: S, referencedAvatarProfile: T, setPopout: j, isReplySpineClickable: A, showReplySpine: y } = e,
         P = b.state === p.Y.LOADED ? b.message : void 0,
         M = (0, C.Uj)(P),
-        L = (0, c.p)(),
-        R = (0, d.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()),
+        R = (0, c.p)(),
+        L = (0, d.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()),
         k = l.useMemo(() => {
             if (null == P) return null;
             let e = (0, s.Z)(P);
@@ -76,7 +76,7 @@ let b = l.memo(function (e) {
                 let t = {
                         formatInline: !0,
                         allowLinks: !0,
-                        shouldFilterKeywords: L
+                        shouldFilterKeywords: R
                     },
                     n = e.isFirstMessageInForumPost(Z)
                         ? {
@@ -88,19 +88,26 @@ let b = l.memo(function (e) {
                         : {
                               ...t,
                               formatInline: !0,
-                              allowHeading: R,
-                              allowList: R
+                              allowHeading: L,
+                              allowList: L
                           };
                 return (0, g.ZP)(e, n).content;
             }
             return null;
-        }, [P, M, Z, R, L]),
-        O = (0, r.e7)([m.Z], () => null != P && m.Z.isBlockedForMessage(P), [P]),
-        D = (0, v.wq)(null == P ? void 0 : P.author.id, Z.id),
-        w = (0, v.$3)(n, P, O),
-        B = (0, v.Wl)(P, Z, S, j),
-        U = (0, v.rY)(T, j),
-        H = l.useCallback(
+        }, [P, M, Z, L, R]),
+        { isReplyAuthorBlocked: O, isReplyAuthorIgnored: D } = (0, r.cj)(
+            [m.Z],
+            () => ({
+                isReplyAuthorBlocked: null != P && m.Z.isBlockedForMessage(P),
+                isReplyAuthorIgnored: null != P && m.Z.isIgnoredForMessage(P)
+            }),
+            [P]
+        ),
+        w = (0, v.wq)(null == P ? void 0 : P.author.id, Z.id),
+        B = (0, v.$3)(n, P, O, D),
+        U = (0, v.Wl)(P, Z, S, j),
+        H = (0, v.rY)(T, j),
+        G = l.useCallback(
             () =>
                 j({
                     referencedUsernameProfile: !1,
@@ -108,24 +115,25 @@ let b = l.memo(function (e) {
                 }),
             [j]
         ),
-        G = (0, C.Uj)(n);
+        F = (0, C.Uj)(n);
     return (0, i.jsx)(x.Z, {
         repliedAuthor: M,
         baseMessage: n,
         channel: Z,
-        baseAuthor: G,
+        baseAuthor: F,
         referencedMessage: b,
         content: k,
         compact: N,
         isReplyAuthorBlocked: O,
+        isReplyAuthorIgnored: D,
         showAvatarPopout: T,
         showUsernamePopout: S,
         renderPopout: _.Z,
-        onClickAvatar: U,
-        onClickUsername: B,
-        onClickReply: w,
-        onContextMenu: D,
-        onPopoutRequestClose: H,
+        onClickAvatar: H,
+        onClickUsername: U,
+        onClickReply: B,
+        onContextMenu: w,
+        onPopoutRequestClose: G,
         isReplySpineClickable: A,
         showReplySpine: y
     });

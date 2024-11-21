@@ -134,6 +134,7 @@ class j extends (i = u.ZP.Store) {
         THREAD_DELETE: x,
         RELATIONSHIP_ADD: S,
         RELATIONSHIP_REMOVE: S,
+        RELATIONSHIP_UPDATE: S,
         MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: function (e) {
             let { messageId: n, channelId: t } = e,
                 i = M[t];

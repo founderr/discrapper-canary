@@ -37,12 +37,19 @@ let A = 10 * Z.Z.Millis.SECOND;
 function y(e) {
     var t;
     let { message: n } = e,
-        r = (0, c.e7)([E.Z], () => E.Z.isBlockedForMessage(n)),
-        s = (0, C.Uj)(n),
-        o = l.useContext(m.Z),
-        [u, I] = l.useState(!1),
-        Z = (0, f.p)(),
-        N = l.useCallback(
+        { isBlocked: r, isIgnored: s } = (0, c.cj)(
+            [E.Z],
+            () => ({
+                isBlocked: E.Z.isBlockedForMessage(n),
+                isIgnored: E.Z.isIgnoredForMessage(n)
+            }),
+            [n]
+        ),
+        o = (0, C.Uj)(n),
+        u = l.useContext(m.Z),
+        [I, Z] = l.useState(!1),
+        N = (0, f.p)(),
+        S = l.useCallback(
             (e) => {
                 if ('A' !== e.target.nodeName)
                     h.Z.updateChatOpen(n.channel_id, !0),
@@ -54,25 +61,25 @@ function y(e) {
             },
             [n.channel_id, n.id]
         ),
-        S =
+        A =
             null != n.content && '' !== n.content
                 ? (0, g.ZP)(n, {
-                      isInteracting: u,
-                      shouldFilterKeywords: Z
+                      isInteracting: I,
+                      shouldFilterKeywords: N
                   }).content
                 : null,
         {
-            contentPlaceholder: A,
-            renderedContent: y,
-            trailingIcon: P,
-            leadingIcon: M
-        } = (0, x.f)(n, S, r, j.messageContent, {
+            contentPlaceholder: y,
+            renderedContent: P,
+            trailingIcon: M,
+            leadingIcon: R
+        } = (0, x.f)(n, A, r, s, j.messageContent, {
             trailingIconClass: j.messageContentTrailingIcon,
             leadingIconClass: j.messageContentLeadingIcon,
             iconSize: T.WW
         }),
         L = (0, _.cv)(n),
-        R =
+        k =
             L.length > 0
                 ? L.map((e) =>
                       (0, i.jsx)(
@@ -81,7 +88,7 @@ function y(e) {
                               className: j.sticker,
                               size: 128,
                               sticker: e,
-                              isInteracting: u
+                              isInteracting: I
                           },
                           e.id
                       )
@@ -90,27 +97,27 @@ function y(e) {
     return (0, i.jsxs)(d.Clickable, {
         className: j.toast,
         onMouseEnter: () => {
-            I(!0);
+            Z(!0);
         },
         onMouseLeave: () => {
-            I(!1);
+            Z(!1);
         },
-        onClick: N,
+        onClick: S,
         children: [
             (0, i.jsxs)('div', {
                 className: a()(j.messageContentWrapper, { [j.mentioned]: n.mentioned }),
-                children: [null != R ? null : M, null !== (t = null != y ? y : R) && void 0 !== t ? t : (0, i.jsx)('span', { children: A }), null != R ? null : P]
+                children: [null != k ? null : R, null !== (t = null != P ? P : k) && void 0 !== t ? t : (0, i.jsx)('span', { children: y }), null != k ? null : M]
             }),
             (0, i.jsx)('img', {
                 alt: '',
                 src:
-                    (null == s ? void 0 : s.guildMemberAvatar) != null && null != o
+                    (null == o ? void 0 : o.guildMemberAvatar) != null && null != u
                         ? (0, b.JM)({
-                              guildId: o,
+                              guildId: u,
                               userId: n.author.id,
-                              avatar: s.guildMemberAvatar
+                              avatar: o.guildMemberAvatar
                           })
-                        : n.author.getAvatarURL(o, 32),
+                        : n.author.getAvatarURL(u, 32),
                 className: j.avatar
             })
         ]
