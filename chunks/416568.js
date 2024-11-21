@@ -38,8 +38,8 @@ var i = n(200651),
     U = n(602147),
     G = n(529474),
     B = n(222059),
-    H = n(751277),
-    V = n(65721),
+    V = n(751277),
+    H = n(65721),
     F = n(843343),
     W = n(654142),
     z = n(695301),
@@ -317,12 +317,12 @@ function el(e) {
                                 children: [
                                     (0, i.jsx)(B.u, {}),
                                     eE ? (0, i.jsx)(b.Z, {}) : null,
-                                    (0, i.jsx)(H.Z, { isOnHubVerificationRoute: ex }),
+                                    (0, i.jsx)(V.Z, { isOnHubVerificationRoute: ex }),
                                     (0, i.jsx)(w.Z, {}),
                                     eZ,
                                     C.map((e) => (0, i.jsx)(K.Z, { guildId: e }, e)),
                                     (0, i.jsx)(Y.Z, { onActivate: eI }),
-                                    (0, i.jsx)(V.Z, {}),
+                                    (0, i.jsx)(H.Z, {}),
                                     (0, i.jsx)('div', {
                                         'aria-label': Q.intl.string(Q.t['7hB4kp']),
                                         children: eS.map(eb)
@@ -338,7 +338,7 @@ function el(e) {
                                     t
                                         ? null
                                         : (0, i.jsxs)(i.Fragment, {
-                                              children: [(0, i.jsx)(V.Z, {}), (0, i.jsx)(D.Z, {})]
+                                              children: [(0, i.jsx)(H.Z, {}), (0, i.jsx)(D.Z, {})]
                                           })
                                 ]
                             }),

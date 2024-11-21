@@ -1,63 +1,63 @@
-var r,
-    a = n(200651),
-    o = n(192379),
-    i = n(120356),
-    s = n.n(i),
-    l = n(846519),
-    d = n(481060),
-    c = n(572004),
-    u = n(388032),
-    p = n(681130);
-function f(e, t, n) {
+var n,
+    o = r(200651),
+    a = r(192379),
+    s = r(120356),
+    i = r.n(s),
+    l = r(846519),
+    d = r(481060),
+    c = r(572004),
+    u = r(388032),
+    p = r(681130);
+function m(e, t, r) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: n,
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[t] = r),
         e
     );
 }
-class _ extends (r = o.PureComponent) {
+class f extends (n = a.PureComponent) {
     componentWillUnmount() {
         this._timeout.stop();
     }
     render() {
-        let { isVertical: e, value: t, text: n, className: r, inputClassName: o } = this.props,
-            { mode: i } = this.state,
-            l = i === d.CopyInput.Modes.SUCCESS ? u.intl.string(u.t['t5VZ8/']) : n;
+        let { isVertical: e, value: t, text: r, className: n, inputClassName: a } = this.props,
+            { mode: s } = this.state,
+            l = s === d.CopyInput.Modes.SUCCESS ? u.intl.string(u.t['t5VZ8/']) : r;
         return e
-            ? (0, a.jsxs)('div', {
-                  className: s()(r, i),
+            ? (0, o.jsxs)('div', {
+                  className: i()(n, s),
                   children: [
-                      (0, a.jsx)(d.TextInput, {
+                      (0, o.jsx)(d.TextInput, {
                           value: t,
-                          inputClassName: o
+                          inputClassName: a
                       }),
-                      (0, a.jsx)(d.Button, {
+                      (0, o.jsx)(d.Button, {
                           className: p.button,
                           onClick: this.handleCopy,
                           size: d.Button.Sizes.MIN,
-                          color: this.getVerticalButtonColor(i),
+                          color: this.getVerticalButtonColor(s),
                           look: d.Button.Looks.FILLED,
                           children: l
                       })
                   ]
               })
-            : (0, a.jsx)(d.CopyInput, {
+            : (0, o.jsx)(d.CopyInput, {
                   ...this.props,
                   onCopy: this.handleCopy,
-                  mode: i,
+                  mode: s,
                   text: l
               });
     }
     handleCopy() {
-        let { onCopy: e, value: t, delay: n } = this.props,
-            r = (0, c.JG)(t);
-        this.setState({ mode: r ? d.CopyInput.Modes.SUCCESS : d.CopyInput.Modes.ERROR }), this._timeout.start(n, () => this.setState({ mode: d.CopyInput.Modes.DEFAULT })), null == e || e();
+        let { onCopy: e, value: t, delay: r } = this.props,
+            n = (0, c.JG)(t);
+        this.setState({ mode: n ? d.CopyInput.Modes.SUCCESS : d.CopyInput.Modes.ERROR }), this._timeout.start(r, () => this.setState({ mode: d.CopyInput.Modes.DEFAULT })), null == e || e();
     }
     getVerticalButtonColor(e) {
         switch (e) {
@@ -70,11 +70,11 @@ class _ extends (r = o.PureComponent) {
         }
     }
     constructor(e) {
-        super(e), f(this, '_timeout', void 0), (this.state = { mode: d.CopyInput.Modes.DEFAULT }), (this._timeout = new l.V7()), (this.handleCopy = this.handleCopy.bind(this));
+        super(e), m(this, '_timeout', void 0), (this.state = { mode: d.CopyInput.Modes.DEFAULT }), (this._timeout = new l.V7()), (this.handleCopy = this.handleCopy.bind(this));
     }
 }
-f(_, 'defaultProps', {
+m(f, 'defaultProps', {
     isVertical: !1,
     delay: 300
 }),
-    (t.Z = _);
+    (t.Z = f);

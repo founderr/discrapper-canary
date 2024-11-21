@@ -23,8 +23,8 @@ var i,
     C = n(955204),
     E = n(64078),
     _ = n(351780),
-    I = n(954794),
-    f = n(112843),
+    f = n(954794),
+    I = n(112843),
     N = n(524484),
     A = n(981631),
     b = n(388032),
@@ -392,7 +392,7 @@ function Y(e) {
             x: 0,
             y: 0
         }),
-        l = (0, f.Z)();
+        l = (0, I.Z)();
     function c(e, t, n, i) {
         return (null != t ? t : e) && (null != i ? i : n);
     }
@@ -468,7 +468,7 @@ let H = (e, t, n) => {
                     setShowEnableAnimation: n
                 });
             case 1:
-                return (0, a.jsx)(I.Z, { onBackClick: i(0) });
+                return (0, a.jsx)(f.Z, { onBackClick: i(0) });
             default:
                 return null;
         }

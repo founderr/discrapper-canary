@@ -22,8 +22,8 @@ var i = n(200651),
     C = n(779618),
     E = n(39604),
     _ = n(442334),
-    I = n(356659),
-    f = n(981631),
+    f = n(356659),
+    I = n(981631),
     N = n(37113),
     A = n(526761),
     b = n(388032),
@@ -34,7 +34,7 @@ function R() {
     let e = (0, a.e7)([g.Z], () => g.Z.getHardwareEncoding()),
         { clipsEnabled: t, remindersEnabled: n, decoupledClipsEnabled: r, clipsLength: R, clipsQuality: P } = (0, a.cj)([S.Z], () => S.Z.getSettings()),
         D = (0, a.e7)([S.Z], () => S.Z.getHardwareClassification()),
-        y = (0, a.e7)([p.Z], () => p.Z.getKeybindForAction(f.kg4.SAVE_CLIP, !0)),
+        y = (0, a.e7)([p.Z], () => p.Z.getKeybindForAction(I.kg4.SAVE_CLIP, !0)),
         B = S.Z.isDecoupledGameClippingEnabled(),
         L = (0, C.Z)(g.Z),
         { showClipsHeaderEntrypoint: Z } = x.NV.useExperiment({ location: 'clips_recording_settings' }, { autoTrackExposure: !1 });
@@ -43,15 +43,15 @@ function R() {
         M = s.useMemo(
             () => [
                 {
-                    value: I.OT.SECONDS_30,
+                    value: f.OT.SECONDS_30,
                     label: b.intl.formatToPlainString(b.t['bTFv//'], { count: 30 })
                 },
                 {
-                    value: I.OT.MINUTES_1,
+                    value: f.OT.MINUTES_1,
                     label: b.intl.formatToPlainString(b.t.ICo9Nj, { count: 1 })
                 },
                 {
-                    value: I.OT.MINUTES_2,
+                    value: f.OT.MINUTES_2,
                     label: b.intl.formatToPlainString(b.t.ICo9Nj, { count: 2 })
                 }
             ],
@@ -117,7 +117,7 @@ function R() {
                         (0, i.jsx)(h.Z, {
                             look: h.z.WARNING,
                             className: j.formItem,
-                            children: b.intl.format(b.t.kiaF4e, { onClick: () => d.Z.open(f.oAB.VOICE, null, { scrollPosition: A.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION }) })
+                            children: b.intl.format(b.t.kiaF4e, { onClick: () => d.Z.open(I.oAB.VOICE, null, { scrollPosition: A.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION }) })
                         }),
                     D === T.x.BELOW_MINIMUM
                         ? (0, i.jsx)(h.Z, {

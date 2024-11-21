@@ -24,7 +24,7 @@ var o = n(200651),
 let _ = async () => await n.e('67963').then(n.t.bind(n, 145193, 19));
 function b(e) {
     var t, n, s;
-    let { quest: b, questContent: E, isHovering: N, contentPosition: B, rowIndex: T, onReceiveErrorHints: S } = e,
+    let { quest: b, questContent: E, isHovering: N, contentPosition: B, rowIndex: S, onReceiveErrorHints: T } = e,
         A = m.r.build(b.config),
         y = A.defaultReward.messages.name,
         R = A.defaultReward.messages.nameWithArticle,
@@ -39,8 +39,8 @@ function b(e) {
             }
         }),
         M = (null === (n = b.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-        O = (null === (s = b.userStatus) || void 0 === s ? void 0 : s.claimedAt) != null,
-        { completedRatio: W, completedRatioDisplay: L } = (0, p.I)(b),
+        W = (null === (s = b.userStatus) || void 0 === s ? void 0 : s.claimedAt) != null,
+        { completedRatio: O, completedRatioDisplay: L } = (0, p.I)(b),
         Q = (0, p.Bd)(b),
         Z = r.useCallback(
             (e) =>
@@ -53,7 +53,7 @@ function b(e) {
                 }),
             []
         ),
-        D = r.useMemo(() => (O ? Z(y) : v.intl.format(v.t['0IUT4e'], { rewardWithArticleHook: () => Z(R) })), [y, R, O, Z]),
+        D = r.useMemo(() => (W ? Z(y) : v.intl.format(v.t['0IUT4e'], { rewardWithArticleHook: () => Z(R) })), [y, R, W, Z]),
         V = r.useMemo(() => {
             if (null != Q)
                 return (0, o.jsx)(c.Text, {
@@ -76,8 +76,8 @@ function b(e) {
                     (0, o.jsxs)('div', {
                         className: j.assetWrapper,
                         children: [
-                            !O && M && (0, o.jsx)('div', { className: j.completionAnimation }),
-                            w && !O
+                            !W && M && (0, o.jsx)('div', { className: j.completionAnimation }),
+                            w && !W
                                 ? (0, o.jsxs)('div', {
                                       className: j.progressWrapper,
                                       children: [
@@ -92,7 +92,7 @@ function b(e) {
                                           (0, o.jsx)(x.Z, {
                                               quest: b,
                                               size: 76,
-                                              percentComplete: W,
+                                              percentComplete: O,
                                               percentCompleteText: N ? L : void 0,
                                               children: (0, o.jsx)('div', {
                                                   className: j.circularRewardTileWrapper,
@@ -147,8 +147,8 @@ function b(e) {
                 quest: b,
                 location: E,
                 contentPosition: B,
-                rowIndex: T,
-                onReceiveErrorHints: S
+                rowIndex: S,
+                onReceiveErrorHints: T
             })
         ]
     });

@@ -9,7 +9,7 @@ n.d(t, {
         return o;
     },
     Z$: function () {
-        return c;
+        return d;
     },
     Z0: function () {
         return h;
@@ -21,7 +21,7 @@ n.d(t, {
         return x;
     },
     jc: function () {
-        return d;
+        return c;
     },
     uq: function () {
         return r;
@@ -43,8 +43,8 @@ function a(e) {
 }
 ((i = s || (s = {}))[(i.FOR_YOU = 0)] = 'FOR_YOU'), (i[(i.OTHER = 1)] = 'OTHER');
 let u = 100,
-    d = 20,
-    c = 32,
+    c = 20,
+    d = 32,
     m = 1000,
     x = 460,
     h = 280;

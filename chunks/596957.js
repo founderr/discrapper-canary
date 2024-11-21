@@ -29,7 +29,7 @@ var i = n(200651),
 t.Z = function (e) {
     let { sectionFilter: t, titleId: l } = e,
         { analyticsLocations: y } = (0, p.ZP)(m.Z.FRIENDS_LIST),
-        { rows: O, section: P } = (0, s.cj)([_.ZP], () => _.ZP.getState()),
+        { rows: P, section: O } = (0, s.cj)([_.ZP], () => _.ZP.getState()),
         R = (0, s.e7)([E.Z], () => E.Z.isFocused()),
         j = (0, s.e7)([f.Z], () => f.Z.getRelationshipCount()),
         [D, M] = r.useState(() => {
@@ -58,8 +58,8 @@ t.Z = function (e) {
                 [t]: ''
             });
         }, [D, t]),
-        G = t === b.pJs.PENDING && (O.filter(b.pJs.SPAM).length > 0 || O.filter(b.pJs.PENDING_IGNORED).length > 0),
-        B = O.filter(t, D[t]);
+        G = t === b.pJs.PENDING && (P.filter(b.pJs.SPAM).length > 0 || P.filter(b.pJs.PENDING_IGNORED).length > 0),
+        B = P.filter(t, D[t]);
     if (
         (r.useEffect(() => {
             t === b.pJs.ALL && (0, g.d$)();
@@ -80,7 +80,7 @@ t.Z = function (e) {
                             }
                           : void 0
                 },
-                P
+                O
             )
         });
     let H = [B],
@@ -136,7 +136,7 @@ t.Z = function (e) {
                 V
                     ? (0, i.jsx)('div', {
                           className: L.emptyStateContainer,
-                          children: (0, i.jsx)(v.Z, { type: v.j.SECTION_NO_RESULTS }, P)
+                          children: (0, i.jsx)(v.Z, { type: v.j.SECTION_NO_RESULTS }, O)
                       })
                     : (0, i.jsx)(T.Z, {
                           relationshipCount: j,

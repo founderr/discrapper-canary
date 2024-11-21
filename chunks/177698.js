@@ -26,8 +26,8 @@ t.Z = (0, p.Z)(
                     let { clientId: r, location: a } = i;
                     if (null == r || r === n) s.lock(), l.Z.unsubscribe('OVERLAY_OAUTH2_AUTHORIZE_MODAL_CLOSE', L), null != location ? e(a) : t(new m.Z({ errorCode: f.lTL.OAUTH2_ERROR }, 'User cancelled authorization'));
                 },
-                O = (0, c.R)();
-            if (s.context === f.IlC.OVERLAY && !O) {
+                P = (0, c.R)();
+            if (s.context === f.IlC.OVERLAY && !P) {
                 l.Z.subscribe('OVERLAY_OAUTH2_AUTHORIZE_MODAL_CLOSE', L),
                     l.Z.dispatch({
                         type: 'OVERLAY_OAUTH2_AUTHORIZE_MODAL_OPEN',

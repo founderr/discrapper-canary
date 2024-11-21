@@ -46,12 +46,12 @@ var i = n(200651),
     U = n(9156),
     G = n(594174),
     B = n(709054),
-    H = n(998502),
-    V = n(788307),
+    V = n(998502),
+    H = n(788307),
     F = n(981631),
     W = n(388032),
     z = n(931450);
-let Y = H.ZP.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar,
+let Y = V.ZP.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar,
     K = {
         offset: {
             top: 2,
@@ -133,7 +133,7 @@ class J extends l.Component {
 }
 function $(e) {
     let { channel: t, isGDMFacepileEnabled: r, selected: o = !1, user: d, activities: E, applicationStream: A, entry: R, isTyping: L, status: w, isMobile: k, 'aria-posinset': G, 'aria-setsize': B } = e,
-        [H, J] = l.useState(!1),
+        [V, J] = l.useState(!1),
         $ = l.useRef(null),
         ee = l.useRef(null),
         {
@@ -143,7 +143,7 @@ function $(e) {
         } = (0, M.Z)({
             user: d,
             size: p.AvatarSizes.SIZE_32,
-            animateOnHover: !(o || H)
+            animateOnHover: !(o || V)
         }),
         el = (0, h.e7)([U.ZP], () => U.ZP.isChannelMuted(t.getGuildId(), t.id)),
         er = (0, h.e7)([O.Z], () => O.Z.isIgnored(t.getRecipientId())),
@@ -231,11 +231,11 @@ function $(e) {
                         children: W.intl.format(W.t.CxSA5O, { members: t.recipients.length + 1 })
                     })
                   : w !== F.Skl.OFFLINE && w !== F.Skl.INVISIBLE && null != E && E.length > 0
-                    ? (0, i.jsx)(V.ZP, {
+                    ? (0, i.jsx)(H.ZP, {
                           ...e,
                           activities: E,
                           applicationStream: A,
-                          animate: H,
+                          animate: V,
                           hideTooltip: !0,
                           user: d
                       })

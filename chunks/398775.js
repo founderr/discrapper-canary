@@ -113,7 +113,7 @@ function _(e) {
     let { premiumSubscription: t, premiumType: n, onClose: r, pauseDuration: a, analyticsLocation: d } = e,
         [g, E] = s.useState(!1),
         { analyticsLocations: _ } = (0, m.ZP)(),
-        [I, f] = s.useState(!1),
+        [f, I] = s.useState(!1),
         N = (0, u.ZP)(),
         A = null,
         b = null,
@@ -177,12 +177,12 @@ function _(e) {
                         children: [
                             (0, i.jsx)(c.Button, {
                                 color: c.Button.Colors.RED,
-                                disabled: I || null == a,
+                                disabled: f || null == a,
                                 onClick: async () => {
                                     await C({
                                         premiumSubscription: t,
                                         pauseDuration: a,
-                                        setIsCancelling: f,
+                                        setIsCancelling: I,
                                         setHasError: E,
                                         onClose: r,
                                         analyticsLocations: _,

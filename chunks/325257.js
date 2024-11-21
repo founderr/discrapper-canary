@@ -46,9 +46,9 @@ function R(e, t) {
 }
 t.Z = l.memo(function (e) {
     var t, n, r, p, M;
-    let { guildNode: L, setRef: w, onDragStart: D, onDragEnd: O, route: k, guild: U, animatable: G, selected: B = !1, unread: H = !1, mediaState: V, unavailable: F = !1, badge: W = 0, contextMenu: z = R, draggable: Y = !1, sorting: K = !1, preloadOnClick: q = !0, guildJoinRequestStatus: Q } = e,
+    let { guildNode: L, setRef: w, onDragStart: D, onDragEnd: O, route: k, guild: U, animatable: G, selected: B = !1, unread: V = !1, mediaState: H, unavailable: F = !1, badge: W = 0, contextMenu: z = R, draggable: Y = !1, sorting: K = !1, preloadOnClick: q = !0, guildJoinRequestStatus: Q } = e,
         { id: X, parentId: J } = L,
-        $ = null !== (t = e.upperBadge) && void 0 !== t ? t : F ? (0, y.Ny)() : null != V ? (0, y.Or)(V) : void 0,
+        $ = null !== (t = e.upperBadge) && void 0 !== t ? t : F ? (0, y.Ny)() : null != H ? (0, y.Or)(H) : void 0,
         ee = null !== (n = e.lowerBadge) && void 0 !== n ? n : void 0;
     null == ee && W > 0 ? (ee = null !== (r = (0, y.Ne)(W)) && void 0 !== r ? r : void 0) : null == ee && null != Q && (ee = null !== (p = (0, y.jt)({ guildJoinRequestStatus: Q })) && void 0 !== p ? p : void 0);
     let et = null !== (M = e.lowerBadgeSize) && void 0 !== M ? M : { width: (0, d.getBadgeWidthForValue)(W) },
@@ -178,7 +178,7 @@ t.Z = l.memo(function (e) {
             (0, i.jsx)(I.Z, {
                 hovered: !en && eo,
                 selected: !en && B,
-                unread: !en && H,
+                unread: !en && V,
                 className: P.pill
             }),
             (0, i.jsx)(E.Z, {

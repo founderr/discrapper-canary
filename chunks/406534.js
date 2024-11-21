@@ -155,10 +155,10 @@ function et(e) {
                     },
                     'forum-post-action-bar-'.concat(s.id)
                 );
-            if (e.type === X.ys_.MESSAGE_GROUP_BLOCKED || e.type === X.ys_.MESSAGE_GROUP_SPAMMER) {
+            if (e.type === X.ys_.MESSAGE_GROUP_BLOCKED || e.type === X.ys_.MESSAGE_GROUP_IGNORED || e.type === X.ys_.MESSAGE_GROUP_SPAMMER) {
                 let t;
                 return (
-                    (t = e.type === X.ys_.MESSAGE_GROUP_BLOCKED ? Q.t['+FcYMz'] : Q.t.xfkfTE),
+                    (t = e.type === X.ys_.MESSAGE_GROUP_BLOCKED ? Q.t['+FcYMz'] : e.type === X.ys_.MESSAGE_GROUP_IGNORED ? Q.t.VFWjc3 : Q.t.xfkfTE),
                     (0, i.jsx)(
                         G.Z,
                         {

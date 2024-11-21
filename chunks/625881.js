@@ -19,7 +19,7 @@ var i = n(200651),
     E = n(982404),
     _ = n(299156);
 t.Z = function (e) {
-    let { premiumSubscription: t, premiumType: n, onClose: r, onConfirm: I, userDiscountOffer: f } = e,
+    let { premiumSubscription: t, premiumType: n, onClose: r, onConfirm: f, userDiscountOffer: I } = e,
         [N, A] = s.useState(!1),
         [b, v] = s.useState(!1),
         j = async (e) => {
@@ -31,7 +31,7 @@ t.Z = function (e) {
                         body: { user_discount_offer_id: e },
                         rejectWithError: !0
                     }),
-                    I();
+                    f();
             } catch (e) {
                 A(!0);
             }
@@ -39,13 +39,13 @@ t.Z = function (e) {
         },
         O = (0, d.ZP)(),
         R = (0, o.wj)(O) ? E : _,
-        P = (0, g._)(t, x.Xh.PREMIUM_MONTH_TIER_2, f),
+        P = (0, g._)(t, x.Xh.PREMIUM_MONTH_TIER_2, I),
         D = (0, m.aS)(x.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
             currency: t.currency,
             paymentSourceId: t.paymentSourceId
         }),
         y = (0, h.T4)(D.amount, D.currency);
-    return null == f
+    return null == I
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
@@ -60,7 +60,7 @@ t.Z = function (e) {
                           children: [
                               (0, i.jsx)(c.Heading, {
                                   variant: 'heading-xl/bold',
-                                  children: T.intl.format(T.t.q9Vxu7, { percent: f.discount.amount })
+                                  children: T.intl.format(T.t.q9Vxu7, { percent: I.discount.amount })
                               }),
                               (0, i.jsxs)('div', {
                                   className: C.confirmDiscountDescription,
@@ -73,8 +73,8 @@ t.Z = function (e) {
                                       (0, i.jsx)(c.Text, {
                                           variant: 'text-sm/medium',
                                           children: T.intl.format(T.t.Eq1RHB, {
-                                              percent: f.discount.amount,
-                                              numMonths: f.discount.user_usage_limit,
+                                              percent: I.discount.amount,
+                                              numMonths: I.discount.user_usage_limit,
                                               price: y
                                           })
                                       })
@@ -87,8 +87,8 @@ t.Z = function (e) {
                                       className: C.confirmDiscountLegaleseText,
                                       children: T.intl.format(T.t.hrGTjI, {
                                           discountedPrice: P,
-                                          billingPeriod: (0, m.JP)(f.discount.user_usage_limit_interval),
-                                          numMonths: f.discount.user_usage_limit,
+                                          billingPeriod: (0, m.JP)(I.discount.user_usage_limit_interval),
+                                          numMonths: I.discount.user_usage_limit,
                                           fullPrice: y,
                                           helpdeskArticle: u.Z.getArticleURL(S.BhN.PAID_TERMS)
                                       })
@@ -117,7 +117,7 @@ t.Z = function (e) {
                                       (0, i.jsx)(c.Button, {
                                           size: c.ButtonSizes.SMALL,
                                           submitting: b,
-                                          onClick: () => j(f.id),
+                                          onClick: () => j(I.id),
                                           children: T.intl.string(T.t.CKSuZG)
                                       })
                                   ]

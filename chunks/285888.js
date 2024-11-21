@@ -175,22 +175,22 @@ class m extends (i = l.Component) {
     render() {
         let e;
         let { className: t, selectClassName: n, error: r, valueRenderer: i, optionRenderer: o, multiValueRenderer: l, options: s, value: f, autofocus: h, disabled: m, clearable: _, searchable: g, styleOverrides: x, isMulti: C, placeholder: I, filterOption: S, closeMenuOnSelect: E = !0, ...w } = this.props,
-            A = { ...w };
-        null != h && (A.autoFocus = h), null != m && (A.isDisabled = m), null != _ && (A.isClearable = _), null != g && (A.isSearchable = g);
-        let j = { IndicatorSeparator: () => null };
+            j = { ...w };
+        null != h && (j.autoFocus = h), null != m && (j.isDisabled = m), null != _ && (j.isClearable = _), null != g && (j.isSearchable = g);
+        let A = { IndicatorSeparator: () => null };
         null != o &&
-            (j.Option = (e) =>
+            (A.Option = (e) =>
                 (0, a.jsx)(d.wx.Option, {
                     ...e,
                     children: o(e.data)
                 })),
             null != i &&
-                (j.SingleValue = (e) =>
+                (A.SingleValue = (e) =>
                     (0, a.jsx)(d.wx.SingleValue, {
                         ...e,
                         children: i(e.data)
                     })),
-            null != l && (j.MultiValue = (e) => l(e.data));
+            null != l && (A.MultiValue = (e) => l(e.data));
         if (C && Array.isArray(f)) {
             let t = {};
             s.forEach((e) => {
@@ -206,11 +206,11 @@ class m extends (i = l.Component) {
                 ref: this._containerRef,
                 children: [
                     (0, a.jsx)(d.ZP, {
-                        ...A,
+                        ...j,
                         className: n,
                         ref: this._selectRef,
                         isMulti: C,
-                        components: j,
+                        components: A,
                         options: s,
                         styles: null != x ? x : b,
                         onFocus: this.handleFocus,

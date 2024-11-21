@@ -27,7 +27,7 @@ var i,
     Z = n(207205),
     L = n(981631),
     y = n(206583);
-function O(e, t, n) {
+function P(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -40,7 +40,7 @@ function O(e, t, n) {
         e
     );
 }
-let P = 1 * T.Z.Millis.DAY,
+let O = 1 * T.Z.Millis.DAY,
     R = 3 * T.Z.Millis.DAY,
     j = [],
     D = null,
@@ -183,7 +183,7 @@ function eu() {
     let e = 'recommendedGuilds',
         t = Object.values(_.Z.getGuilds()).filter((e) => e.isCommunity()).length >= 5,
         n = b.Z.getReadTimestamp(e);
-    if (t && null != n && Date.now() - er > P && Date.now() - n < R) return;
+    if (t && null != n && Date.now() - er > O && Date.now() - n < R) return;
     let i = {
         id: e,
         type: x.Rr.RECOMMENDED_GUILDS,
@@ -369,8 +369,8 @@ class ev extends (i = l.ZP.PersistedStore) {
         };
     }
 }
-O(ev, 'displayName', 'GravityStore'),
-    O(ev, 'persistKey', 'GravityStore'),
+P(ev, 'displayName', 'GravityStore'),
+    P(ev, 'persistKey', 'GravityStore'),
     (t.Z = new ev(a.Z, {
         POST_CONNECTION_OPEN: function () {
             if (j.length > 0 && (!X || 0 === Y)) {

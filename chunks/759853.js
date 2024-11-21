@@ -21,8 +21,8 @@ t.Z = (e) => {
         { completionSpring: b, startCompletionAnimation: E } = (0, x.G)(),
         N = (null === (t = v.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
         B = r.useRef(!1),
-        T = (0, d.e7)([p.Z], () => p.Z.useReducedMotion),
-        S = r.useRef(null),
+        S = (0, d.e7)([p.Z], () => p.Z.useReducedMotion),
+        T = r.useRef(null),
         A = (0, d.e7)([m.Z], () => m.Z.hasLayers()),
         y = (0, u.Z)(A),
         [R, w] = r.useState(null),
@@ -35,9 +35,9 @@ t.Z = (e) => {
         ),
         P = (0, i.uR)(R, I),
         M = r.useCallback(() => {
-            if (T) return;
+            if (S) return;
             let e = j.current,
-                t = S.current;
+                t = T.current;
             if (null != t && null != e && P.isReady) {
                 var n, o, r, s;
                 let { x: a, y: i } = e.getBoundingClientRect(),
@@ -89,11 +89,11 @@ t.Z = (e) => {
                     100
                 );
             }
-        }, [j, S, P, T]),
-        O = (0, u.Z)(_);
+        }, [j, T, P, S]),
+        W = (0, u.Z)(_);
     return (r.useEffect(() => {
-        N && _ && !O && (E(), M());
-    }, [_, N, E, M, O]),
+        N && _ && !W && (E(), M());
+    }, [_, N, E, M, W]),
     r.useEffect(() => {
         N &&
             !A &&
@@ -105,12 +105,12 @@ t.Z = (e) => {
     r.useEffect(() => {
         if (!!P.isReady) !B.current && N && (E(), M()), (B.current = N);
     }, [N, B, M, E, P]),
-    T)
+    S)
         ? null
         : (0, o.jsxs)('div', {
               className: f.wrapper,
               'aria-hidden': 'true',
-              ref: S,
+              ref: T,
               children: [
                   (0, o.jsx)(c.animated.div, {
                       className: f.background,

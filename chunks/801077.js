@@ -38,8 +38,8 @@ var i,
     U = n(979651),
     G = n(626135),
     B = n(823379),
-    H = n(981631);
-let V = !1,
+    V = n(981631);
+let H = !1,
     F = !1,
     W = [],
     z = [],
@@ -49,10 +49,10 @@ let V = !1,
     Q = new Set();
 function X() {
     let e = O.Z.getFriendIDs();
-    return j.Z.hasConsented(H.pjP.PERSONALIZATION) ? new Set([...Z.Z.getUserAffinitiesUserIds(), ...e]) : new Set(e);
+    return j.Z.hasConsented(V.pjP.PERSONALIZATION) ? new Set([...Z.Z.getUserAffinitiesUserIds(), ...e]) : new Set(e);
 }
 function J(e) {
-    return D.Z.findActivity(e, (e) => e.type !== H.IIU.CUSTOM_STATUS);
+    return D.Z.findActivity(e, (e) => e.type !== V.IIU.CUSTOM_STATUS);
 }
 function $(e) {
     return (
@@ -84,7 +84,7 @@ function en(e) {
 }
 function ei(e) {
     let t = U.Z.getVoiceStateForUser(e);
-    return (null == t ? void 0 : t.channelId) != null && w.Z.canWithPartialContext(H.Plq.VIEW_CHANNEL, { channelId: t.channelId }) ? t.channelId : null;
+    return (null == t ? void 0 : t.channelId) != null && w.Z.canWithPartialContext(V.Plq.VIEW_CHANNEL, { channelId: t.channelId }) ? t.channelId : null;
 }
 function el(e) {
     return O.Z.isFriend(e.id);
@@ -169,14 +169,14 @@ function er(e, t, n) {
     }
     let O = 1 === C.length,
         G = [],
-        H = new Set(),
-        V = new Set();
+        V = new Set(),
+        H = new Set();
     for (let e of t) {
         let n = ei(e.id),
             i = P.Z.getChannel(n),
             l = null != i ? i.getGuildId() : null,
             r = L.Z.getGuild(l);
-        if ((V.has(l) && H.has(n)) || null == i || null == r || i.id === r.afkChannelId) null == i && ((u = null), (O = !0));
+        if ((H.has(l) && V.has(n)) || null == i || null == r || i.id === r.afkChannelId) null == i && ((u = null), (O = !0));
         else {
             let e = U.Z.getVoiceStatesForChannel(i.id),
                 a = s()(e)
@@ -188,9 +188,9 @@ function er(e, t, n) {
                     .orderBy([el], ['desc'])
                     .value();
             a.filter((e) => !g.includes(e.id)).forEach((e) => t.push(e)),
-                O ? !V.has(l) && (u = null) : ((u = r), (O = !0)),
-                V.add(l),
-                H.add(n),
+                O ? !H.has(l) && (u = null) : ((u = r), (O = !0)),
+                H.add(l),
+                V.add(n),
                 G.push({
                     channel: i,
                     guild: r,
@@ -243,7 +243,7 @@ function es(e) {
     return !!(0, x.sb)('now-playing-view-store') && e.partiedMembers.some((e) => O.Z.isBlocked(e.id));
 }
 function ec() {
-    return V && b.Z.isConnected();
+    return H && b.Z.isConnected();
 }
 let eu = s().throttle(() => {
     !(function () {
@@ -305,7 +305,7 @@ let eu = s().throttle(() => {
                         l = s().map(n, 'userId'),
                         r = s().map(n, 'discoverable'),
                         a = s().map(n, (e) => O.Z.getRelationshipType(e.userId));
-                    G.default.track(H.rMx.PARTY_VOICE_ACTIVITY_VIEWED, {
+                    G.default.track(V.rMx.PARTY_VOICE_ACTIVITY_VIEWED, {
                         activity_user_ids: l,
                         discoverable: r,
                         relationship_types: a,
@@ -321,7 +321,7 @@ let eu = s().throttle(() => {
                     l = t && eo(e);
                 return (e.voiceChannels.length >= 1 || e.currentActivities.length > 0 || e.applicationStreams.length > 0) && !i && !l;
             })).map((e) => ({
-                type: H.GOo.USER,
+                type: V.GOo.USER,
                 party: e
             }))),
             !(function () {
@@ -348,7 +348,7 @@ class eh extends (i = u.ZP.Store) {
         return z;
     }
     get isMounted() {
-        return V;
+        return H;
     }
     get loaded() {
         return F;
@@ -365,13 +365,13 @@ class eh extends (i = u.ZP.Store) {
         : (l[r] = a);
 let ep = new eh(d.Z, {
     LOGOUT: function () {
-        (V = !1), (W = []), (z = []), q.clear();
+        (H = !1), (W = []), (z = []), q.clear();
     },
     NOW_PLAYING_MOUNTED: function () {
-        (V = !0), eu();
+        (H = !0), eu();
     },
     NOW_PLAYING_UNMOUNTED: function () {
-        V = !1;
+        H = !1;
     }
 });
 t.Z = ep;

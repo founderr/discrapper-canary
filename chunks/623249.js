@@ -32,14 +32,14 @@ function E(e) {
     let { questId: t, errorHints: n, transitionState: s, onClose: E } = e,
         B = (0, x.B4)(t);
     null == B && E();
-    let [T, S] = (0, r.useState)(n),
+    let [S, T] = (0, r.useState)(n),
         A = (0, x.KX)(),
         y = (0, i.e7)([d.Z], () => d.Z.useReducedMotion),
         R = (0, C.g2)({
             useReducedMotion: y,
             className: _.colorTransition
         }),
-        w = T.filter((e) => ['xbox', 'playstation'].includes(e.connected_account_type)),
+        w = S.filter((e) => ['xbox', 'playstation'].includes(e.connected_account_type)),
         I = (0, f.Bz)(B),
         k = (0, i.e7)([p.Z], () => p.Z.getState().theme),
         q = (0, l.wj)(k) ? v.BRd.DARK : v.BRd.LIGHT,
@@ -54,7 +54,7 @@ function E(e) {
                     });
             },
             afterRequest: (e) => {
-                R.stopAnimation(), S(e);
+                R.stopAnimation(), T(e);
             }
         });
     return (0, o.jsxs)(c.ModalRoot, {

@@ -97,7 +97,7 @@ function I(e) {
     }
     return (0, r.jsx)(S, {
         onClick: i,
-        tooltipText: _.intl.string(_.t['1WjMbG']),
+        tooltipText: _.intl.string('VIDEO' === n.type ? _.t.JVuuz8 : _.t['S/xNKS']),
         children: (0, r.jsx)(l.DownloadIcon, {})
     });
 }
@@ -108,7 +108,7 @@ function y(e) {
     let i = (0, d.s$)(null !== (n = t.original) && void 0 !== n ? n : t.url);
     return (0, r.jsx)(S, {
         onClick: () => (0, m.q)({ href: i }),
-        tooltipText: _.intl.string(_.t.wuRE8P),
+        tooltipText: _.intl.string(_.t.q5jLJC),
         children: (0, r.jsx)(l.WindowLaunchIcon, {})
     });
 }

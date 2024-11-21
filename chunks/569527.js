@@ -93,8 +93,8 @@ function T(e) {
                   }
                 : {};
         }),
-        O = (0, d.Z)(L),
-        P = r.useMemo(() => (Z === h.M.FETCHING ? O : L), [Z, O, L]),
+        P = (0, d.Z)(L),
+        O = r.useMemo(() => (Z === h.M.FETCHING ? P : L), [Z, P, L]),
         R = r.useCallback(
             (e) => {
                 (0, I.pR)({
@@ -134,9 +134,9 @@ function T(e) {
                                 children: (0, i.jsx)('div', {
                                     className: N.content,
                                     children:
-                                        null == P
+                                        null == O
                                             ? void 0
-                                            : P.results.map((e) => {
+                                            : O.results.map((e) => {
                                                   if (e.type === a.s.APPLICATION) {
                                                       let t = e.data;
                                                       return (0, i.jsx)(
@@ -155,7 +155,7 @@ function T(e) {
                             }),
                             (0, i.jsx)(c.Paginator, {
                                 className: N.paginationInput,
-                                totalCount: Math.min((null !== (t = null == P ? void 0 : P.totalPages) && void 0 !== t ? t : 0) * v.IV, v.Et * v.IV),
+                                totalCount: Math.min((null !== (t = null == O ? void 0 : O.totalPages) && void 0 !== t ? t : 0) * v.IV, v.Et * v.IV),
                                 pageSize: v.IV,
                                 disablePaginationGap: !0,
                                 hideMaxPage: !0,

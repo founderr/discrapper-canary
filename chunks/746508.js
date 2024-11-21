@@ -27,8 +27,8 @@ var i = n(200651),
     Z = n(451576),
     L = n(119315),
     y = n(403404),
-    O = n(100527),
-    P = n(906732),
+    P = n(100527),
+    O = n(906732),
     R = n(424602),
     j = n(793865),
     D = n(933557),
@@ -81,8 +81,8 @@ var i = n(200651),
     eZ = n(345243),
     eL = n(594117),
     ey = n(226323),
-    eO = n(981631),
-    eP = n(190378),
+    eP = n(981631),
+    eO = n(190378),
     eR = n(388032),
     ej = n(663031),
     eD = n(113207);
@@ -101,17 +101,17 @@ function eM(e, t, n) {
 }
 function ew(e) {
     let t = e.currentTarget;
-    eS.default.track(eO.rMx.NOISE_CANCELLATION_LINK_CLICKED, {
+    eS.default.track(eP.rMx.NOISE_CANCELLATION_LINK_CLICKED, {
         text: t.text,
         href: t.href,
-        location: { section: eO.jXE.NOISE_CANCELLATION_POPOUT }
+        location: { section: eP.jXE.NOISE_CANCELLATION_POPOUT }
     });
 }
 function ek() {
     let e = r.useRef(null);
     (0, f.useFocusLock)(e),
         r.useEffect(() => {
-            eS.default.track(eO.rMx.OPEN_POPOUT, { type: eO.jXE.NOISE_CANCELLATION_POPOUT });
+            eS.default.track(eP.rMx.OPEN_POPOUT, { type: eP.jXE.NOISE_CANCELLATION_POPOUT });
         }, []);
     let t = (0, d.e7)([e_.Z], () => e_.Z.getNoiseCancellation());
     return (0, i.jsxs)('div', {
@@ -122,7 +122,7 @@ function ek() {
                 hideBorder: !0,
                 className: eD.marginBottom4,
                 value: t,
-                onChange: () => _.Z.setNoiseCancellation(!t, { section: eO.jXE.NOISE_CANCELLATION_POPOUT }),
+                onChange: () => _.Z.setNoiseCancellation(!t, { section: eP.jXE.NOISE_CANCELLATION_POPOUT }),
                 note: eR.intl.string(eR.t.uKdWn5),
                 children: eR.intl.string(eR.t.WGWHv7)
             }),
@@ -133,7 +133,7 @@ function ek() {
                 buttonStop: eR.intl.string(eR.t.Yp3SbG),
                 buttonClassName: ej.micTestButton,
                 buttonColor: f.Button.Colors.PRIMARY,
-                location: { section: eO.jXE.NOISE_CANCELLATION_POPOUT }
+                location: { section: eP.jXE.NOISE_CANCELLATION_POPOUT }
             }),
             (0, i.jsx)(f.FormTitle, {
                 tag: f.FormTitleTags.H5,
@@ -145,12 +145,12 @@ function ek() {
                 className: ej.__invalid_footer,
                 children: [
                     (0, i.jsx)(f.Anchor, {
-                        href: eO.EYA.KRISP,
+                        href: eP.EYA.KRISP,
                         onClick: (e) => ew(e),
                         children: (0, i.jsx)('div', { className: ej.krispLogo })
                     }),
                     (0, i.jsx)(f.Anchor, {
-                        href: eA.Z.getArticleURL(eO.BhN.NOISE_SUPPRESSION),
+                        href: eA.Z.getArticleURL(eP.BhN.NOISE_SUPPRESSION),
                         className: ej.krispLink,
                         onClick: (e) => ew(e),
                         children: eR.intl.string(eR.t.hvVgAQ)
@@ -186,7 +186,7 @@ function eG(e) {
                 if (e_.Z.isVideoEnabled() === e) return;
                 let n = () => {
                     var n;
-                    _.Z.setVideoEnabled(e), e && (0, z.uL)(eO.Z5c.CHANNEL(null !== (n = t.getGuildId()) && void 0 !== n ? n : eO.ME, t.id));
+                    _.Z.setVideoEnabled(e), e && (0, z.uL)(eP.Z5c.CHANNEL(null !== (n = t.getGuildId()) && void 0 !== n ? n : eP.ME, t.id));
                 };
                 e ? (0, ed.Z)(n, E) : n();
             },
@@ -273,8 +273,8 @@ function eB(e) {
         n,
         { channel: r, enableActivities: l } = e,
         s = (0, T.bp)(),
-        { analyticsLocations: o } = (0, P.ZP)(),
-        c = s === eO.IlC.POPOUT,
+        { analyticsLocations: o } = (0, O.ZP)(),
+        c = s === eP.IlC.POPOUT,
         m = (0, b.KF)(r.id),
         p = (0, b.g5)(m),
         { userInActivity: g } = (0, d.cj)([S.ZP], () => ({ userInActivity: null != S.ZP.getSelfEmbeddedActivityForChannel(r.id) })),
@@ -283,7 +283,7 @@ function eB(e) {
         I = m !== b.jy.CAN_LAUNCH,
         { enabled: C } = R.nS.useExperiment({ location: 'RTCConnection' }, { autoTrackExposure: !0 }),
         { Component: v, events: A, play: Z } = (0, u.s)(),
-        { Component: O, events: j, play: D } = (0, h.w)();
+        { Component: P, events: j, play: D } = (0, h.w)();
     return (C ? ((t = j), (n = D)) : ((t = A), (n = Z)), l)
         ? (0, i.jsx)(f.Tooltip, {
               text: p,
@@ -329,7 +329,7 @@ function eB(e) {
                                 })
                               : null,
                           C
-                              ? (0, i.jsx)(O, {
+                              ? (0, i.jsx)(P, {
                                     size: 'sm',
                                     color: 'currentColor',
                                     className: ej.buttonIcon
@@ -354,7 +354,7 @@ function eH(e) {
         g = (0, d.cj)([S.ZP], () => null != S.ZP.getSelfEmbeddedActivityForChannel(n.id)),
         _ = (0, Y.Z)(n),
         E = r.useCallback(() => {
-            (0, ec.Z)(p, n.id, eO.jXE.ACTIVITY_PANEL);
+            (0, ec.Z)(p, n.id, eP.jXE.ACTIVITY_PANEL);
         }, [p, n.id]),
         I = u.find((e) => e.ownerId === (null == c ? void 0 : c.id)),
         C = (0, ea.E)(n, c, u);
@@ -430,7 +430,7 @@ class eV extends r.PureComponent {
         if (null == t) return null;
         let o = (0, D.F6)(t, ev.default, eC.Z);
         return (
-            null != n ? ((e = eO.Z5c.CHANNEL(n.id, t.id)), (o = ''.concat(o, ' / ').concat(n.name))) : (e = eO.Z5c.CHANNEL(eO.ME, t.id)),
+            null != n ? ((e = eP.Z5c.CHANNEL(n.id, t.id)), (o = ''.concat(o, ' / ').concat(n.name))) : (e = eP.Z5c.CHANNEL(eP.ME, t.id)),
             (0, i.jsx)(W.Z, {
                 channelId: t.id,
                 quality: r,
@@ -591,24 +591,24 @@ class eV extends r.PureComponent {
             }),
             eM(this, 'handleNoiseCancellationClicked', () => {
                 let { noiseCancellationActive: e } = this.props;
-                _.Z.setNoiseCancellation(!e, { section: eO.jXE.NOISE_CANCELLATION_POPOUT });
+                _.Z.setNoiseCancellation(!e, { section: eP.jXE.NOISE_CANCELLATION_POPOUT });
             }),
             eM(this, 'handleGoLive', () => {
                 let { guild: e, channel: t } = this.props,
                     n = null != t ? t.getGuildId() : null != e ? e.id : null;
-                if (null != n) (0, ec.Z)(n, t.id, eO.Sbl.VOICE_PANEL);
+                if (null != n) (0, ec.Z)(n, t.id, eP.Sbl.VOICE_PANEL);
             }),
             eM(this, 'handleChannelLinkClick', (e) => {
                 var t;
                 let { guild: n, channel: i } = this.props;
-                o()(null != i, 'Channel is null during navigation click'), e.stopPropagation(), I.Z.channelListScrollTo(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : eO.ME, i.id);
+                o()(null != i, 'Channel is null during navigation click'), e.stopPropagation(), I.Z.channelListScrollTo(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : eP.ME, i.id);
             }),
             eM(this, 'handleChannelLinkContextMenu', (e) => {
                 let { channel: t, analyticsLocations: r } = this.props;
                 (0, E.jW)(e, async () => {
                     let { default: e } = await n.e('56944').then(n.bind(n, 600830));
                     return (n) =>
-                        (0, i.jsx)(P.Gt, {
+                        (0, i.jsx)(O.Gt, {
                             value: r,
                             children: (0, i.jsx)(e, {
                                 ...n,
@@ -618,7 +618,7 @@ class eV extends r.PureComponent {
                 });
             }),
             eM(this, 'handleCloseVoicePanelIntroduction', () => {
-                H.Kw(eP.v.VOICE_PANEL_INTRODUCTION);
+                H.Kw(eO.v.VOICE_PANEL_INTRODUCTION);
             }),
             eM(this, 'renderVoicePanelIntroduction', () =>
                 (0, i.jsxs)('div', {
@@ -673,8 +673,8 @@ t.Z = (0, v.Z)(function (e) {
             null != t
                 ? {
                       channelId: t.channelId,
-                      rtcConnectionQuality: eO.IE4.FINE,
-                      rtcConnectionState: eO.hes.RTC_CONNECTED,
+                      rtcConnectionQuality: eP.IE4.FINE,
+                      rtcConnectionState: eP.hes.RTC_CONNECTED,
                       rtcConnectionLastPing: 0
                   }
                 : {
@@ -693,12 +693,12 @@ t.Z = (0, v.Z)(function (e) {
             noiseCancellationError: e_.Z.isNoiseCancellationError(),
             canGoLive: (0, G.Z)(e_.Z)
         })),
-        m = (0, d.e7)([e_.Z, V.Z], () => V.Z.hasHotspot(eP.v.VOICE_PANEL_INTRODUCTION) && (0, ex.EO)(l) && !e_.Z.isInteractionRequired() && !(null == o ? void 0 : o.isGuildStageVoice())),
+        m = (0, d.e7)([e_.Z, V.Z], () => V.Z.hasHotspot(eO.v.VOICE_PANEL_INTRODUCTION) && (0, ex.EO)(l) && !e_.Z.isInteractionRequired() && !(null == o ? void 0 : o.isGuildStageVoice())),
         p = (0, d.e7)([eN.Z], () => null != a && eN.Z.hasVideo(a), [a]),
         g = (0, d.e7)([eh.Z], () => eh.Z.getCurrentUserActiveStream()),
         _ = (0, d.e7)([ef.Z], () => ef.Z.hasLayers()),
         E = (0, d.e7)([F.Z], () => F.Z.isViewingRoles(c)),
-        I = (0, d.e7)([eE.Z], () => E && !eE.Z.can(eO.Plq.VIEW_CHANNEL, o), [E, o]),
+        I = (0, d.e7)([eE.Z], () => E && !eE.Z.can(eP.Plq.VIEW_CHANNEL, o), [E, o]),
         C = en.Fg.useSetting(),
         [v, N, T] = (0, d.Wu)([eT.ZP, q.Z], () => ((null == o ? void 0 : o.isGuildStageVoice()) ? [q.Z.getMutableParticipants(o.id, X.pV.SPEAKER), q.Z.getParticipantsVersion(o.id), null] : [null, null, null != o ? eT.ZP.getVoiceStatesForChannel(o) : null]), [o]),
         S = r.useMemo(() => {
@@ -726,10 +726,10 @@ t.Z = (0, v.Z)(function (e) {
     r.useEffect(() => {
         (E || I) && b(!1);
     }, [E, I, b]);
-    let { analyticsLocations: L } = (0, P.ZP)(O.Z.RTC_PANEL),
-        y = (0, A.Z)(null != c ? c : eO.lds, null == o ? void 0 : o.id),
+    let { analyticsLocations: L } = (0, O.ZP)(P.Z.RTC_PANEL),
+        y = (0, A.Z)(null != c ? c : eP.lds, null == o ? void 0 : o.id),
         R = (0, Z.Z)(null == o ? void 0 : o.id);
-    return (0, i.jsx)(P.Gt, {
+    return (0, i.jsx)(O.Gt, {
         value: L,
         children: (0, i.jsxs)('div', {
             className: ej.wrapper,

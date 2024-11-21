@@ -68,10 +68,10 @@ let T = (0, g.Un)({
         friction: 10,
         tension: 100
     };
-function O() {
+function P() {
     return l.useEffect(() => (p.Z.enable(), p.Z.enableTemp(m.u), () => p.Z.disableTemp()), []), null;
 }
-class P extends (i = l.PureComponent) {
+class O extends (i = l.PureComponent) {
     static getDerivedStateFromProps(e, t) {
         return e.mode !== t.mode
             ? {
@@ -184,7 +184,7 @@ class P extends (i = l.PureComponent) {
             });
     }
 }
-N(P, 'defaultProps', { baseLayer: !1 }), N(P, 'contextType', u.AccessibilityPreferencesContext);
+N(O, 'defaultProps', { baseLayer: !1 }), N(O, 'contextType', u.AccessibilityPreferencesContext);
 class R extends l.PureComponent {
     componentDidMount() {
         I.S.subscribe(C.CkL.LAYER_POP_ESCAPE_KEY, h.xf);
@@ -199,7 +199,7 @@ class R extends l.PureComponent {
         return (
             l.push(
                 (0, r.jsx)(
-                    P,
+                    O,
                     {
                         mode: 0 !== i || n ? L : Z,
                         baseLayer: !0,
@@ -217,10 +217,10 @@ class R extends l.PureComponent {
         return (
             (i = 'string' == typeof e ? b[e]() : (0, r.jsx)(e, {})),
             (0, r.jsxs)(
-                P,
+                O,
                 {
                     mode: t === n - 1 ? Z : L,
-                    children: [(0, r.jsx)(O, {}), i]
+                    children: [(0, r.jsx)(P, {}), i]
                 },
                 'layer-'.concat(t)
             )

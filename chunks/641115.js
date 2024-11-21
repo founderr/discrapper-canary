@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return B;
+        return L;
     }
 }),
     n(47120);
@@ -30,12 +30,12 @@ var l = n(200651),
     N = n(122186),
     b = n(37113),
     w = n(981631),
-    y = n(474936),
-    E = n(388032),
+    E = n(474936),
+    y = n(388032),
     R = n(410894),
     M = n(13458),
     P = n(113207);
-function A(e) {
+function k(e) {
     let { analyticsLocation: t, onClose: i } = e;
     (0, u.openModalLazy)(async () => {
         let { default: e } = await n.e('28479').then(n.bind(n, 78865));
@@ -47,7 +47,7 @@ function A(e) {
             });
     });
 }
-function k() {
+function A() {
     return (0, l.jsxs)('div', {
         className: M.toolTipTextContainer,
         children: [
@@ -59,12 +59,12 @@ function k() {
             (0, l.jsx)(u.Text, {
                 className: M.upsellText,
                 variant: 'text-sm/medium',
-                children: E.intl.string(E.t.sEAnVF)
+                children: y.intl.string(y.t.sEAnVF)
             })
         ]
     });
 }
-function L(e) {
+function B(e) {
     let t,
         n,
         { type: i, selected: r, needsPremium: a, needsDemo: o, analyticsLocation: c, onClick: d, onClose: f, setIsHovering: h } = e,
@@ -74,8 +74,8 @@ function L(e) {
             ? ((t = (0, l.jsx)(u.TooltipContainer, {
                   tooltipClassName: M.tooltip,
                   spacing: 6,
-                  'aria-label': E.intl.string(E.t.sEAnVF),
-                  text: (0, l.jsx)(k, {}),
+                  'aria-label': y.intl.string(y.t.sEAnVF),
+                  text: (0, l.jsx)(A, {}),
                   children: (0, l.jsx)('div', {
                       className: M.textContainer,
                       onMouseEnter: () => h(!0),
@@ -88,7 +88,7 @@ function L(e) {
                   })
               })),
               (n = () =>
-                  A({
+                  k({
                       analyticsLocation: c,
                       onClose: f
                   })))
@@ -112,8 +112,8 @@ function L(e) {
         }
     );
 }
-function B(e) {
-    let { onClose: t, selectedPreset: n, selectedResolution: r, selectedFPS: s, onResolutionChange: a, onFPSChange: g, onPresetChange: k, targetGuildPremiumTier: B, captureDeviceSelected: G } = e,
+function L(e) {
+    let { onClose: t, selectedPreset: n, selectedResolution: r, selectedFPS: s, onResolutionChange: a, onFPSChange: g, onPresetChange: A, targetGuildPremiumTier: L, captureDeviceSelected: G } = e,
         D = (0, d.e7)([_.default], () => {
             let e = _.default.getCurrentUser();
             return o()(null != e, 'StreamSettings: user cannot be undefined'), e;
@@ -122,7 +122,7 @@ function B(e) {
         U = I.ZP.canStreamQuality(I.U2.MID, D),
         { location: F } = (0, h.O)(),
         H = (0, m.Zq)({ autoTrackExposure: !1 }),
-        W = (0, I.I5)(D, y.p9.TIER_1);
+        W = (0, I.I5)(D, E.p9.TIER_1);
     j.Z.useExperiment(
         { location: 'Go Live Modal' },
         {
@@ -143,10 +143,10 @@ function B(e) {
         },
         ee = (0, l.jsx)(u.ButtonGroup, {
             buttons: Q.map((e) =>
-                L({
+                B({
                     type: e,
                     selected: e.value === r,
-                    needsPremium: !(0, T.Z)(n, e.value, s, D, B, O),
+                    needsPremium: !(0, T.Z)(n, e.value, s, D, L, O),
                     needsDemo: (Y || V) && e.value !== b.LY.RESOLUTION_720,
                     analyticsLocation: $,
                     onClick: () => a(e.value),
@@ -157,10 +157,10 @@ function B(e) {
         }),
         et = (0, l.jsx)(u.ButtonGroup, {
             buttons: b.k0.map((e) =>
-                L({
+                B({
                     type: e,
                     selected: e.value === s,
-                    needsPremium: !(0, T.Z)(n, r, e.value, D, B, O),
+                    needsPremium: !(0, T.Z)(n, r, e.value, D, L, O),
                     needsDemo: (Y || V) && e.value === b.ws.FPS_60,
                     analyticsLocation: $,
                     onClick: () => g(e.value),
@@ -172,19 +172,19 @@ function B(e) {
         en = [
             {
                 value: b.tI.PRESET_VIDEO,
-                label: E.intl.string(E.t.HcwHc3)
+                label: y.intl.string(y.t.HcwHc3)
             },
             ...(G
                 ? []
                 : [
                       {
                           value: b.tI.PRESET_DOCUMENTS,
-                          label: E.intl.string(E.t['/RfohI'])
+                          label: y.intl.string(y.t['/RfohI'])
                       }
                   ]),
             {
                 value: b.tI.PRESET_CUSTOM,
-                label: E.intl.string(E.t['+eOtrK'])
+                label: y.intl.string(y.t['+eOtrK'])
             }
         ],
         el =
@@ -193,20 +193,20 @@ function B(e) {
                       children: [
                           (0, l.jsx)(x.Z, {
                               children: (0, l.jsx)(u.FormItem, {
-                                  title: E.intl.string(E.t.rHyPXl),
+                                  title: y.intl.string(y.t.rHyPXl),
                                   titleClassName: R.formItemTitleSlim,
                                   className: M.documentModeGroup,
                                   children: (0, l.jsx)(u.Text, {
                                       variant: 'text-xs/normal',
-                                      children: E.intl.format(E.t['U+hmam'], { fps: s })
+                                      children: y.intl.format(y.t['U+hmam'], { fps: s })
                                   })
                               })
                           }),
                           X
                               ? (0, l.jsx)(N.Z, {
-                                    message: E.intl.string(E.t.deDogI),
+                                    message: y.intl.string(y.t.deDogI),
                                     onClose: t,
-                                    openStreamUpsellModal: A
+                                    openStreamUpsellModal: k
                                 })
                               : null,
                           V && (0, l.jsx)(N.c, {}),
@@ -224,13 +224,13 @@ function B(e) {
                           (0, l.jsxs)(x.Z, {
                               children: [
                                   (0, l.jsx)(u.FormItem, {
-                                      title: E.intl.string(E.t.rHyPXl),
+                                      title: y.intl.string(y.t.rHyPXl),
                                       className: M.settingsGroup,
                                       titleClassName: R.formItemTitleSlim,
                                       children: ee
                                   }),
                                   (0, l.jsx)(u.FormItem, {
-                                      title: E.intl.string(E.t.SkkeIi),
+                                      title: y.intl.string(y.t.SkkeIi),
                                       className: M.settingsGroup,
                                       titleClassName: R.formItemTitleSlim,
                                       children: et
@@ -240,7 +240,7 @@ function B(e) {
                           X
                               ? (0, l.jsx)(N.Z, {
                                     onClose: t,
-                                    openStreamUpsellModal: A,
+                                    openStreamUpsellModal: k,
                                     glow: J
                                 })
                               : null,
@@ -257,7 +257,7 @@ function B(e) {
     return (0, l.jsx)(f.Z, {
         ...$,
         children: (0, l.jsx)(u.FormItem, {
-            title: E.intl.string(E.t.ax4FnZ),
+            title: y.intl.string(y.t.ax4FnZ),
             titleClassName: R.formItemTitle,
             className: R.modalContent,
             children: (0, l.jsxs)('div', {
@@ -267,7 +267,7 @@ function B(e) {
                         value: n,
                         className: P.marginTop8,
                         options: en,
-                        onChange: (e) => k(e)
+                        onChange: (e) => A(e)
                     }),
                     el
                 ]

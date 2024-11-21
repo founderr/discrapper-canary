@@ -25,8 +25,8 @@ var i,
     C = n(78839),
     E = n(74538),
     _ = n(388032),
-    I = n(946839);
-async function f(e, t, n, i) {
+    f = n(946839);
+async function I(e, t, n, i) {
     await (0, h.bG)(n), await (0, m.Mg)(e, { items: (0, E.MY)(e, t) }, i);
 }
 function N(e) {
@@ -47,7 +47,7 @@ function N(e) {
                 ]
             }),
             (0, r.jsx)(u.ModalContent, {
-                className: I.body,
+                className: f.body,
                 children: _.intl.string(_.t.DY2CXl)
             }),
             (0, r.jsxs)(u.ModalFooter, {
@@ -58,7 +58,7 @@ function N(e) {
                             try {
                                 m(!0);
                                 let e = (0, S.g)(t, 1);
-                                o()((0, E.uV)(e) <= (0, E.uV)(t.additionalPlans), 'Uncanceling should not increase the number of guild subscriptions'), await f(t, e, n, g), i();
+                                o()((0, E.uV)(e) <= (0, E.uV)(t.additionalPlans), 'Uncanceling should not increase the number of guild subscriptions'), await I(t, e, n, g), i();
                             } catch (e) {
                                 m(!1);
                             }
@@ -93,8 +93,8 @@ function A(e) {
                 ]
             }),
             (0, r.jsxs)(u.ModalContent, {
-                className: I.body,
-                children: [(0, r.jsx)('div', { className: I.uncancelImage }), (0, r.jsx)('div', { children: _.intl.string(_.t.G27uHR) })]
+                className: f.body,
+                children: [(0, r.jsx)('div', { className: f.uncancelImage }), (0, r.jsx)('div', { children: _.intl.string(_.t.G27uHR) })]
             }),
             (0, r.jsx)(u.ModalFooter, {
                 children: (0, r.jsx)(u.Button, {

@@ -24,15 +24,15 @@ var s = n(512722),
     E = n(237997),
     _ = n(626135);
 n(63063);
-var I = n(13140),
-    f = n(981631),
+var f = n(13140),
+    I = n(981631),
     N = n(388032),
     A = n(301942);
 let b = v(null);
 function v(e) {
     var t;
     let n = E.Z.getNotificationPositionMode(),
-        i = n !== f._vf.DISABLED,
+        i = n !== I._vf.DISABLED,
         s = T.Z.getOverlayKeybind(),
         r = T.Z.getOverlayChatKeybind();
     return {
@@ -40,8 +40,8 @@ function v(e) {
         notifications_enabled: i,
         notifications_position: i ? n : null,
         text_notifications_mode: E.Z.getTextChatNotificationMode(),
-        hotkey: null != s ? (0, I.BB)(s.shortcut) : null,
-        text_activation_hotkey: null != r ? (0, I.BB)(r.shortcut) : null,
+        hotkey: null != s ? (0, f.BB)(s.shortcut) : null,
+        text_activation_hotkey: null != r ? (0, f.BB)(r.shortcut) : null,
         text_opacity_slider: E.Z.getTextWidgetOpacity(),
         old_enabled: null !== (t = null == e ? void 0 : e.enabled) && void 0 !== t ? t : C.Z.enabled
     };
@@ -61,7 +61,7 @@ function O(e) {
             legacyEnabled: C.Z.legacyEnabled
         })),
         {
-            avatarSizeMode: I,
+            avatarSizeMode: f,
             displayNameMode: O,
             displayUserMode: R,
             notificationPositionMode: P,
@@ -81,14 +81,14 @@ function O(e) {
         { useOverlayV3: F } = x.Z.useExperiment({ location: 'overlay_user_settings' });
     function M(e) {
         u.Z.setEnabled(e, l, !1),
-            _.default.track(f.rMx.OVERLAY_TOGGLED, {
+            _.default.track(I.rMx.OVERLAY_TOGGLED, {
                 enabled: e,
                 setting_type: 'overlay toggled - global'
             });
     }
     function k(e) {
         u.Z.setEnabled(s, e, !1),
-            _.default.track(f.rMx.OVERLAY_TOGGLED, {
+            _.default.track(I.rMx.OVERLAY_TOGGLED, {
                 enabled: e,
                 setting_type: 'overlay toggled - legacy'
             });
@@ -96,7 +96,7 @@ function O(e) {
     return (
         !(function () {
             let e = v(b);
-            !a().isEqual(e, b) && (_.default.track(f.rMx.OVERLAY_SETTINGS_UPDATED, e), (b = e));
+            !a().isEqual(e, b) && (_.default.track(I.rMx.OVERLAY_SETTINGS_UPDATED, e), (b = e));
         })(),
         (0, i.jsxs)(i.Fragment, {
             children: [
@@ -168,18 +168,18 @@ function O(e) {
                                 options: [
                                     {
                                         name: N.intl.string(N.t.YcOxtr),
-                                        value: f.ipw.LARGE
+                                        value: I.ipw.LARGE
                                     },
                                     {
                                         name: N.intl.string(N.t.BKIKq6),
-                                        value: f.ipw.SMALL
+                                        value: I.ipw.SMALL
                                     }
                                 ],
                                 onChange: (e) => {
                                     let { value: t } = e;
                                     return u.Z.setAvatarSizeMode(t);
                                 },
-                                value: I
+                                value: f
                             })
                         }),
                         (0, i.jsx)(j, {
@@ -188,15 +188,15 @@ function O(e) {
                                 options: [
                                     {
                                         name: N.intl.string(N.t.nBmDra),
-                                        value: f.wC$.ALWAYS
+                                        value: I.wC$.ALWAYS
                                     },
                                     {
                                         name: N.intl.string(N.t['2OvIZW']),
-                                        value: f.wC$.ONLY_WHILE_SPEAKING
+                                        value: I.wC$.ONLY_WHILE_SPEAKING
                                     },
                                     {
                                         name: N.intl.string(N.t.ekjlPD),
-                                        value: f.wC$.NEVER
+                                        value: I.wC$.NEVER
                                     }
                                 ],
                                 onChange: (e) => {
@@ -212,11 +212,11 @@ function O(e) {
                                 options: [
                                     {
                                         name: N.intl.string(N.t.nBmDra),
-                                        value: f.OYC.ALWAYS
+                                        value: I.OYC.ALWAYS
                                     },
                                     {
                                         name: N.intl.string(N.t['2OvIZW']),
-                                        value: f.OYC.ONLY_WHILE_SPEAKING
+                                        value: I.OYC.ONLY_WHILE_SPEAKING
                                     }
                                 ],
                                 onChange: (e) => {
@@ -256,10 +256,10 @@ function O(e) {
                               }),
                         (0, i.jsx)(j, {
                             children: (0, i.jsx)(c.FormSwitch, {
-                                value: P !== f._vf.DISABLED && D === f.Ypu.ENABLED,
-                                disabled: P === f._vf.DISABLED,
+                                value: P !== I._vf.DISABLED && D === I.Ypu.ENABLED,
+                                disabled: P === I._vf.DISABLED,
                                 onChange: function () {
-                                    let { ENABLED: e, DISABLED: t } = f.Ypu;
+                                    let { ENABLED: e, DISABLED: t } = I.Ypu;
                                     u.Z.setTextChatNotificationMode(D === e ? t : e);
                                 },
                                 hideBorder: !0,

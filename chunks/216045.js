@@ -23,8 +23,8 @@ var i = n(200651),
     C = n(53691),
     E = n(267717),
     _ = n(296810),
-    I = n(921813),
-    f = n(610794),
+    f = n(921813),
+    I = n(610794),
     N = n(935147),
     A = n(246946),
     b = n(25990),
@@ -73,7 +73,7 @@ function F() {
               children: [
                   (0, i.jsx)(S.Z, {}),
                   (0, i.jsx)(_.Z, {
-                      profilePreview: (0, i.jsx)(I.Z, {
+                      profilePreview: (0, i.jsx)(f.Z, {
                           user: e,
                           canUsePremiumCustomization: k,
                           onUpsellClick: D.Z,
@@ -82,7 +82,7 @@ function F() {
                       }),
                       children: (0, i.jsx)(y.Z, {})
                   }),
-                  Y && (0, i.jsx)(f.Z, {}),
+                  Y && (0, i.jsx)(I.Z, {}),
                   (0, i.jsx)(o.$, {
                       onChange: (e) => G(e),
                       threshold: 0.25,

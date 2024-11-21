@@ -23,8 +23,8 @@ var i,
     C = n(239827),
     E = n(818035),
     _ = n(509545),
-    I = n(78839),
-    f = n(74538),
+    f = n(78839),
+    I = n(74538),
     N = n(807160),
     A = n(474936),
     b = n(231338),
@@ -120,7 +120,7 @@ class D extends (i = r.PureComponent) {
                         className: j.externalRowBody,
                         children: v.intl.format(v.t.eG0uZG, {
                             paymentGatewayName: b.Vz[e.paymentGateway],
-                            billingHistoryLink: (0, f.JE)(e.paymentGateway, 'BILLING_HISTORY')
+                            billingHistoryLink: (0, I.JE)(e.paymentGateway, 'BILLING_HISTORY')
                         })
                     })
                 ]
@@ -182,11 +182,11 @@ function y(e) {
     var t;
     let n = e.skuId,
         i = null === (t = e.subscription) || void 0 === t ? void 0 : t.items[0].planId;
-    return !(null == n || null == i || Object.values(A.Si).includes(n) || (0, f.PV)(i));
+    return !(null == n || null == i || Object.values(A.Si).includes(n) || (0, I.PV)(i));
 }
 function B(e) {
     let t = (0, u.e7)([E.Z], () => E.Z.getPayments()),
-        n = (0, u.e7)([I.ZP], () => I.ZP.getPremiumTypeSubscription()),
+        n = (0, u.e7)([f.ZP], () => f.ZP.getPremiumTypeSubscription()),
         i = r.useMemo(
             () =>
                 new Set(

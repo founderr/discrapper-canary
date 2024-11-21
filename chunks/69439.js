@@ -57,7 +57,7 @@ function b(e) {
 }
 function E(e) {
     var t, n, s, E;
-    let { quest: N, location: B, onReceiveErrorHints: T, contentPosition: S, rowIndex: A } = e,
+    let { quest: N, location: B, onReceiveErrorHints: S, contentPosition: T, rowIndex: A } = e,
         y = (0, i.e7)([c.Z], () => c.Z.useReducedMotion),
         R = (0, g.g2)({ useReducedMotion: y }),
         w = (0, u._s)({ quest: N }),
@@ -71,8 +71,8 @@ function E(e) {
             isEnrolling: p.Z.isEnrolling(N.id)
         })),
         M = (null === (t = N.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-        O = (null === (n = N.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-        W = O && (null === (s = N.userStatus) || void 0 === s ? void 0 : s.claimedAt) == null,
+        W = (null === (n = N.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
+        O = W && (null === (s = N.userStatus) || void 0 === s ? void 0 : s.claimedAt) == null,
         L = (0, x.iQ)(N),
         Q = !(0, x.zi)(N),
         Z = (0, u._Q)(N),
@@ -85,16 +85,16 @@ function E(e) {
         K = G && !Y && z.length > 1,
         X = r.useCallback(
             (e) => {
-                F(e), e === C.cd.DESKTOP && T([]);
+                F(e), e === C.cd.DESKTOP && S([]);
             },
-            [F, T]
+            [F, S]
         ),
         { text: J, onClick: $ } = (0, g.Ks)({
             progressState: Z,
             quest: N,
             location: B,
             isCollectibleQuest: D,
-            questContentPosition: S,
+            questContentPosition: T,
             questContentRowIndex: A,
             inGiftInventory: !0,
             isVideoQuest: V
@@ -107,17 +107,17 @@ function E(e) {
                         questId: N.id,
                         questContent: B,
                         questContentCTA: d.jZ.DEFIBRILLATOR,
-                        questContentPosition: S,
+                        questContentPosition: T,
                         questContentRowIndex: A
                     });
             },
             afterRequest: (e) => {
-                R.stopAnimation(), T(e);
+                R.stopAnimation(), S(e);
             }
         }),
         en = (null === (E = N.userStatus) || void 0 === E ? void 0 : E.claimedAt) != null,
         eo = null;
-    return (L && W
+    return (L && O
         ? (eo = (0, o.jsx)(l.Button, {
               color: l.ButtonColors.BRAND,
               submitting: q,
@@ -125,7 +125,7 @@ function E(e) {
               className: j.button,
               children: J
           }))
-        : O
+        : W
           ? (eo = V
                 ? (0, o.jsxs)(o.Fragment, {
                       children: [
@@ -162,7 +162,7 @@ function E(e) {
                       children: J
                   }))
           : Q
-            ? Q && W
+            ? Q && O
                 ? (eo = (0, o.jsx)(l.Button, {
                       color: l.ButtonColors.BRAND,
                       submitting: q,

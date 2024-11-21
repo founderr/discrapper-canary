@@ -23,20 +23,20 @@ var i = n(200651),
     C = n(918257),
     E = n(726985),
     _ = n(981631),
-    I = n(710111),
-    f = n(388032),
+    f = n(710111),
+    I = n(388032),
     N = n(919929),
     A = n(113207);
 function b(e) {
     return (0, r.e7)([h.Z], () => {
         if (null == e) return null;
         let { guildId: t, soundId: n } = e;
-        return h.Z.getSound(t === I.hY ? I.X8 : t, n);
+        return h.Z.getSound(t === f.hY ? f.X8 : t, n);
     });
 }
 function v() {
     let { analyticsLocations: e } = (0, o.ZP)(),
-        [t, n] = s.useState(I.hY),
+        [t, n] = s.useState(f.hY),
         a = (0, p.tT)(t),
         T = b(a),
         v = (0, r.e7)([h.Z], () => h.Z.hasFetchedAllSounds()),
@@ -56,7 +56,7 @@ function v() {
         className: N.container,
         tag: l.FormTitleTags.H1,
         titleClassName: A.__invalid_marginBottom16,
-        title: f.intl.string(f.t.ABjMWF),
+        title: I.intl.string(I.t.ABjMWF),
         children: [
             (0, i.jsx)(u.F, {
                 setting: E.s6.VOICE_AND_VIDEO_SOUNDBOARD,
@@ -70,27 +70,27 @@ function v() {
                         variant: 'text-md/medium',
                         color: 'header-primary',
                         className: N.callSoundsTitle,
-                        children: f.intl.string(f.t.nzUc3N)
+                        children: I.intl.string(I.t.nzUc3N)
                     }),
                     (0, i.jsx)(l.Text, {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
-                        children: f.intl.format(f.t.u9RWmp, { helpdeskArticle: S.Z.getArticleURL(_.BhN.SOUNDBOARD) })
+                        children: I.intl.format(I.t.u9RWmp, { helpdeskArticle: S.Z.getArticleURL(_.BhN.SOUNDBOARD) })
                     }),
                     (0, i.jsx)(c.Z, {
                         guildId: t,
                         className: N.guildSelector,
                         globalOption: {
-                            label: f.intl.string(f.t.CpEUPz),
-                            value: I.hY
+                            label: I.intl.string(I.t.CpEUPz),
+                            value: f.hY
                         },
-                        onChange: (e) => n(null == e ? I.hY : e.id),
+                        onChange: (e) => n(null == e ? f.hY : e.id),
                         renderOptionSuffix: P,
                         hideDivider: !0
                     }),
                     (0, i.jsxs)(d.Z, {
                         className: A.marginTop20,
-                        title: f.intl.format(f.t.I2TsYG, {
+                        title: I.intl.format(I.t.I2TsYG, {
                             nitroWheelHook: () =>
                                 (0, i.jsx)(l.NitroWheelIcon, {
                                     size: 'md',
@@ -111,7 +111,7 @@ function v() {
                                 (0, i.jsx)(l.HelpMessage, {
                                     className: N.notice,
                                     messageType: l.HelpMessageTypes.WARNING,
-                                    children: f.intl.string(f.t.WkPsFR)
+                                    children: I.intl.string(I.t.WkPsFR)
                                 })
                         ]
                     })

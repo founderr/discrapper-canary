@@ -40,7 +40,7 @@ t.Z = function () {
             }
         });
     }, [t]);
-    let O = r.useCallback(() => {
+    let P = r.useCallback(() => {
         window.open(f.Z.getArticleURL(S.BhN.QUESTS_LEARN_MORE));
     }, []);
     return (
@@ -59,7 +59,7 @@ t.Z = function () {
                             description: A.intl.string(A.t.oWCrBg),
                             button: (0, i.jsx)(d.u, {
                                 text: A.intl.string(A.t.hvVgAQ),
-                                onClick: O
+                                onClick: P
                             }),
                             className: x.bannerContainer,
                             children: (0, i.jsx)('div', {

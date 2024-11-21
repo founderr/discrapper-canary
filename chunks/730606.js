@@ -67,7 +67,7 @@ function A(e) {
     let { items: t, onIndexChange: a, startIndex: o = 0, shouldRedactExplicitContent: l = !1, shouldHideMediaOptions: m = !1 } = e,
         [p, I] = i.useState(o),
         A = i.useRef(o),
-        [R, j] = i.useState([]),
+        [j, R] = i.useState([]),
         { zoomed: M, setZoomed: O } = (0, _.Y)();
     i.useEffect(() => {
         var e, n;
@@ -79,7 +79,7 @@ function A(e) {
         (e) => {
             var n;
             let r = e - A.current;
-            I((e = ((e % (n = t.length)) + n) % n)), (A.current = e), j((e) => [...e, r]), null == a || a(e), O(!1);
+            I((e = ((e % (n = t.length)) + n) % n)), (A.current = e), R((e) => [...e, r]), null == a || a(e), O(!1);
         },
         [a, t, O]
     );
@@ -115,7 +115,7 @@ function A(e) {
             if (0 === e) return ['translateX(0)'];
             let n = ['translateX(100px)', 'translateX(-100px)'];
             return e > 0 ? n : n.toReversed();
-        })(null !== (n = R[R.length - 1]) && void 0 !== n ? n : 0),
+        })(null !== (n = j[j.length - 1]) && void 0 !== n ? n : 0),
         N = (0, d.useTransition)(T, {
             key: T.url,
             from: {

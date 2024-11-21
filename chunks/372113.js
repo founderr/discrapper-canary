@@ -6,14 +6,14 @@ var s = n(120356),
     o = n(481060),
     a = n(607070),
     u = n(706454),
-    d = n(63063),
-    c = n(930153),
+    c = n(63063),
+    d = n(930153),
     m = n(617136),
     x = n(113434),
     h = n(569984),
     C = n(497505),
-    g = n(918701),
-    p = n(566078),
+    p = n(918701),
+    g = n(566078),
     E = n(340100),
     j = n(644646),
     T = n(667105),
@@ -49,21 +49,21 @@ function I(e) {
           });
 }
 function M(e) {
-    let { quest: t, progressState: n, isCollectibleQuest: s, location: l, questContentPosition: u, inGiftInventory: d } = e,
-        c = n >= x.OH.COMPLETED,
+    let { quest: t, progressState: n, isCollectibleQuest: s, location: l, questContentPosition: u, inGiftInventory: c } = e,
+        d = n >= x.OH.COMPLETED,
         m = (0, r.e7)([a.Z], () => a.Z.useReducedMotion),
         C = (0, r.e7)([h.Z], () => h.Z.isEnrolling(t.id)),
-        p = (0, g.q8)(t),
+        g = (0, p.q8)(t),
         E = (0, T.Ks)({
             progressState: n,
             quest: t,
             location: l,
             isCollectibleQuest: s,
             questContentPosition: u,
-            inGiftInventory: d,
-            isVideoQuest: p
+            inGiftInventory: c,
+            isVideoQuest: g
         }),
-        j = c && !m ? o.ShinyButton : o.Button;
+        j = d && !m ? o.ShinyButton : o.Button;
     return (0, i.jsx)(
         o.Tooltip,
         {
@@ -89,23 +89,23 @@ function M(e) {
     );
 }
 t.Z = (e) => {
-    let { quest: t, location: n, size: s, isFocused: a, isQuestExpired: h, isExpanded: T, isAnimating: Z, contentPosition: L } = e,
+    let { quest: t, location: n, size: s, isFocused: a, isQuestExpired: h, isExpanded: T, isAnimating: L, contentPosition: Z } = e,
         y = (0, x._Q)(t),
         B = y >= x.OH.ACCEPTED,
         P = y >= x.OH.COMPLETED,
-        D = y >= x.OH.CLAIMED,
-        U = (0, g.Xv)(t.config),
+        U = y >= x.OH.CLAIMED,
+        D = (0, p.Xv)(t.config),
         w = (0, S.uq)(n),
         Q = n === C.jn.QUESTS_EMBED,
-        k = T || Z,
-        O = B && !D && w,
+        k = T || L,
+        O = B && !U && w,
         H = (0, x.t5)(t, q.dr.QUESTS_CARD, n),
-        { xboxAndPlaystationAccounts: z } = (0, x.z6)(),
+        { xboxAndPlaystationAccounts: W } = (0, x.z6)(),
         G = (0, r.e7)([u.default], () => u.default.locale),
-        W = (0, x.z)(t),
-        F = w && U,
+        z = (0, x.z)(t),
+        F = w && D,
         V = h && !P,
-        X = z.length > 0 && w && (0, g.$J)(t) && B && !P && !W,
+        X = W.length > 0 && w && (0, p.$J)(t) && B && !P && !z,
         Y = (0, i.jsx)(j.Z, {
             autoplay: a,
             className: l()(R.gridImg, {
@@ -118,7 +118,7 @@ t.Z = (e) => {
             location: q.dr.QUESTS_CARD,
             quest: t,
             questContent: n,
-            questContentPosition: L
+            questContentPosition: Z
         });
     return (0, i.jsxs)('div', {
         className: R.root,
@@ -177,13 +177,13 @@ t.Z = (e) => {
                                             month: 'long',
                                             day: 'numeric'
                                         }),
-                                        E = (0, g.oo)({ quest: o }),
-                                        j = p.r.build(o.config).defaultReward.messages.nameWithArticle,
-                                        T = (0, g.Kr)(o.config),
-                                        f = (0, g.b7)(o);
+                                        E = (0, p.oo)({ quest: o }),
+                                        j = g.r.build(o.config).defaultReward.messages.nameWithArticle,
+                                        T = (0, p.Kr)(o.config),
+                                        f = (0, p.b7)(o);
                                     if (h) {
                                         let e = E
-                                                ? (0, g.o9)({
+                                                ? (0, p.o9)({
                                                       quest: o,
                                                       idx: null === (s = o.userStatus) || void 0 === s ? void 0 : s.claimedTier
                                                   })
@@ -207,7 +207,7 @@ t.Z = (e) => {
                                                   date: C
                                               });
                                     let v = E
-                                        ? (0, g.o9)({
+                                        ? (0, p.o9)({
                                               quest: o,
                                               idx: 0
                                           })
@@ -217,8 +217,8 @@ t.Z = (e) => {
                                         : null != v && null != v.approximateCount
                                           ? A.intl.format(A.t['4bMK19'], {
                                                 maxReward: v.messages.nameWithArticle,
-                                                maxRewardCount: (0, c.Bs)(v.approximateCount, a),
-                                                helpCenterLink: d.Z.getArticleURL(_.BhN.QUESTS_LEARN_MORE)
+                                                maxRewardCount: (0, d.Bs)(v.approximateCount, a),
+                                                helpCenterLink: c.Z.getArticleURL(_.BhN.QUESTS_LEARN_MORE)
                                             })
                                           : null != T
                                             ? A.intl.formatToPlainString(A.t.Pu5eyM, {
@@ -247,7 +247,7 @@ t.Z = (e) => {
                                             (0, m._3)({
                                                 questId: t.id,
                                                 questContent: n,
-                                                questContentPosition: L,
+                                                questContentPosition: Z,
                                                 questContentCTA: m.jZ.LEARN_MORE
                                             });
                                     },
@@ -258,7 +258,7 @@ t.Z = (e) => {
                                 : (0, i.jsx)(M, {
                                       quest: t,
                                       progressState: y,
-                                      isCollectibleQuest: U,
+                                      isCollectibleQuest: D,
                                       location: n,
                                       inGiftInventory: w
                                   })

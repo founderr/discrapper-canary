@@ -73,7 +73,7 @@ function N(e) {
             },
             afterRequest: d.stopAnimation
         }),
-        { header: B, renderBody: T } = r.useMemo(() => {
+        { header: B, renderBody: S } = r.useMemo(() => {
             let e = v.length > 0,
                 n = h.r.build(t.config).application.name;
             return {
@@ -146,7 +146,7 @@ function N(e) {
             }),
             (0, o.jsxs)('div', {
                 className: a()({ [_.opacity_50]: b }),
-                children: [T(), 0 === v.length ? null : (0, o.jsx)(E, { children: l })]
+                children: [S(), 0 === v.length ? null : (0, o.jsx)(E, { children: l })]
             })
         ]
     });

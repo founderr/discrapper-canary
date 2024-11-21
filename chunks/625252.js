@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return f;
     }
 });
 var i = n(200651),
@@ -22,7 +22,7 @@ var i = n(200651),
     C = n(388032),
     E = n(936598),
     _ = n(66094);
-function I() {
+function f() {
     let e = (0, o.wj)((0, u.ZP)()),
         t = s.useMemo(() => ({ backgroundImage: 'url('.concat('https://cdn.discordapp.com/assets/discovery/quests-wumpus-hikes-mountain-transparent-background.png', ')') }), []),
         n = s.useCallback(() => {

@@ -23,7 +23,7 @@ var r = t(200651),
 function C(e) {
     let { onClose: n, items: t, startingIndex: a, onIndexChange: C, shouldRedactExplicitContent: x, shouldHideMediaOptions: S = !1, className: v, transitionState: E, ...I } = e,
         [y, L] = i.useState(null != a ? a : 0),
-        [A, R] = i.useState(!1);
+        [A, j] = i.useState(!1);
     i.useEffect(() => {
         if (null != n)
             return (
@@ -43,7 +43,7 @@ function C(e) {
             ),
             [E]
         );
-    let j = i.useCallback(
+    let R = i.useCallback(
             (e) => {
                 L(e), null == C || C(e);
             },
@@ -52,7 +52,7 @@ function C(e) {
         M = i.useMemo(
             () => ({
                 zoomed: A,
-                setZoomed: R
+                setZoomed: j
             }),
             [A]
         ),
@@ -79,7 +79,7 @@ function C(e) {
                         (0, r.jsx)(h.Z, {
                             items: t,
                             startIndex: y,
-                            onIndexChange: j,
+                            onIndexChange: R,
                             shouldRedactExplicitContent: x,
                             shouldHideMediaOptions: S
                         }),

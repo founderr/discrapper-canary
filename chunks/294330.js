@@ -1,6 +1,6 @@
 n.d(t, {
     Eo: function () {
-        return P;
+        return O;
     },
     VD: function () {
         return y;
@@ -38,7 +38,7 @@ function y(e) {
     let { guild: t, onClick: l, onView: s } = e,
         [f, _] = r.useState(!1),
         [N, y] = r.useState(!1),
-        [O, P] = r.useState(!1),
+        [P, O] = r.useState(!1),
         R = r.useCallback(async () => {
             y(!0);
             try {
@@ -125,12 +125,12 @@ function y(e) {
                             className: x.header,
                             children: [
                                 (0, i.jsx)('div', {
-                                    className: a()(x.banner, { [x.loaded]: O }),
+                                    className: a()(x.banner, { [x.loaded]: P }),
                                     children: (0, i.jsx)('img', {
                                         src: k,
                                         alt: '',
                                         className: x.bannerImage,
-                                        onLoad: () => P(!0)
+                                        onLoad: () => O(!0)
                                     })
                                 }),
                                 G &&
@@ -224,7 +224,7 @@ function y(e) {
         ]
     });
 }
-function O(e) {
+function P(e) {
     let { guildId: t, onClick: n, onView: r } = e,
         l = (0, s.e7)([N.Z], () => N.Z.getGuild(t));
     return null == l
@@ -235,7 +235,7 @@ function O(e) {
               onView: r
           });
 }
-function P(e) {
+function O(e) {
     let { guildId: t, index: n, onClick: l, onView: a } = e,
         s = r.useRef(null == t),
         o = r.useCallback(
@@ -256,7 +256,7 @@ function P(e) {
                               state: n,
                               cleanUp: r,
                               animate: s.current,
-                              children: (0, i.jsx)(O, {
+                              children: (0, i.jsx)(P, {
                                   guildId: t.guildId,
                                   onClick: l,
                                   onView: a
@@ -288,4 +288,4 @@ function P(e) {
         })
     });
 }
-t.ZP = r.memo(O);
+t.ZP = r.memo(P);

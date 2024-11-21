@@ -479,7 +479,7 @@ t.Z = () => {
                 children: (0, a.jsx)(P.ZP, {
                     progressCircleVariation: P.Qo.AVATAR_DECO,
                     avatarDecoAssetId: y.VA,
-                    avatarDecoAssetDescription: 'Gear Spin',
+                    avatarDecoAssetDescription: D.intl.string(D.t['9o4F4+']),
                     showAnimations: !0,
                     percentage: eS,
                     initialPercentage: eI

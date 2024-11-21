@@ -74,8 +74,8 @@ t.Z = l.memo(function (e) {
             [t.id]
         ),
         G = null == R ? 0 : R.length,
-        { role: B, ...H } = (0, o.JA)(t.id),
-        V = l.useRef(null),
+        { role: B, ...V } = (0, o.JA)(t.id),
+        H = l.useRef(null),
         F =
             w > 0
                 ? Z.intl.formatToPlainString(Z.t['ZL7+Iy'], {
@@ -97,8 +97,8 @@ t.Z = l.memo(function (e) {
                       style: { transform: 'rotateX(180deg) translateY(-9px)' }
                   }),
             (0, i.jsx)(c.FocusRing, {
-                focusTarget: V,
-                ringTarget: V,
+                focusTarget: H,
+                ringTarget: H,
                 offset: {
                     top: 2,
                     bottom: 2,
@@ -116,8 +116,8 @@ t.Z = l.memo(function (e) {
                     children: [
                         !L || D || r ? null : (0, i.jsx)('div', { className: a()(y.unread, y.unreadImportant) }),
                         (0, i.jsx)(c.Clickable, {
-                            ...H,
-                            innerRef: V,
+                            ...V,
+                            innerRef: H,
                             className: y.link,
                             onClick: O,
                             'aria-label': F,

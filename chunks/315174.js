@@ -109,20 +109,20 @@ t.ZP = l.memo(function (e) {
         [k, U] = l.useState(!1),
         G = l.useRef(),
         B = l.useRef(null),
-        H = l.useRef(),
-        V = d.QK.getSetting();
+        V = l.useRef(),
+        H = d.QK.getSetting();
     l.useEffect(() => {
-        if (O && t && !G.current && V)
+        if (O && t && !G.current && H)
             return (
                 U(!0),
-                (H.current = setTimeout(() => {
+                (V.current = setTimeout(() => {
                     U(!1);
                 }, 5000)),
                 () => {
-                    clearTimeout(H.current);
+                    clearTimeout(V.current);
                 }
             );
-    }, [O, t, V]),
+    }, [O, t, H]),
         l.useEffect(() => {
             G.current = t;
         }, [t]);
@@ -210,7 +210,7 @@ t.ZP = l.memo(function (e) {
                         ? (0, i.jsx)('div', {
                               className: C.animatedBannerHoverLayer,
                               onMouseEnter: () => {
-                                  U(!0), clearTimeout(H.current);
+                                  U(!0), clearTimeout(V.current);
                               },
                               onMouseLeave: () => U(!1),
                               style: { height: T }

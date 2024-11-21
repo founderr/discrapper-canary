@@ -7,14 +7,14 @@ var s = n(120356),
     o = n(442837),
     a = n(481060),
     u = n(607070),
-    d = n(553795),
-    c = n(358085),
+    c = n(553795),
+    d = n(358085),
     m = n(617136),
     x = n(111382),
     h = n(113434),
     C = n(918701),
-    g = n(566078),
-    p = n(667105),
+    p = n(566078),
+    g = n(667105),
     E = n(388032),
     j = n(727526);
 let T = (e) => (0 === e.length ? j.warning : j.danger),
@@ -28,12 +28,12 @@ let T = (e) => (0 === e.length ? j.warning : j.danger),
                 children: E.intl.format(E.t.GXqvCw, { gameTitle: l })
             });
         let x = [];
-        (0, C.Nj)({ quest: t }) && x.push((0, c.isWeb)() ? E.intl.string(E.t['0UTkPz']) : E.intl.string(E.t.XGRUho));
+        (0, C.Nj)({ quest: t }) && x.push((0, d.isWeb)() ? E.intl.string(E.t['0UTkPz']) : E.intl.string(E.t.XGRUho));
         let h = [
             ...x,
             ...s.map((e) => {
                 if (e.type !== r.K.EXPIRED_CREDENTIAL || !u) return e.message;
-                let i = d.Z.getAccount(e.connected_account_id, e.connected_account_type),
+                let i = c.Z.getAccount(e.connected_account_id, e.connected_account_type),
                     s = (0, C.C9)(e),
                     l = (0, C._j)(e);
                 return E.intl.format(s, {
@@ -61,29 +61,29 @@ let T = (e) => (0 === e.length ? j.warning : j.danger),
         });
     };
 t.Z = function (e) {
-    let t = g.r.build(e.quest.config).application.name,
+    let t = p.r.build(e.quest.config).application.name,
         n = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
-        s = (0, p.k3)(e.quest.id, e.location),
+        s = (0, g.k3)(e.quest.id, e.location),
         r = (0, x.n)(),
-        d = (0, p.g2)({
+        c = (0, g.g2)({
             useReducedMotion: n,
             className: j.refreshIcon
         }),
         {
-            errorHints: c,
+            errorHints: d,
             startingConsoleQuest: C,
             startConsoleQuest: S
         } = (0, h.GI)({
             questId: e.quest.id,
             beforeRequest: () => {
-                d.startAnimation(),
+                c.startAnimation(),
                     (0, m._3)({
                         questId: e.quest.id,
                         questContent: e.location,
                         questContentCTA: m.jZ.DEFIBRILLATOR
                     });
             },
-            afterRequest: d.stopAnimation
+            afterRequest: c.stopAnimation
         });
     return (0, i.jsxs)('div', {
         className: l()(j.container, { [j.inFlight]: C }),
@@ -95,7 +95,7 @@ t.Z = function (e) {
                         className: j.header,
                         children: [
                             (0, i.jsx)(a.CircleWarningIcon, {
-                                className: l()(j.headerIcon, T(c)),
+                                className: l()(j.headerIcon, T(d)),
                                 size: 'custom',
                                 color: 'currentColor',
                                 width: 16,
@@ -103,13 +103,13 @@ t.Z = function (e) {
                             }),
                             (0, i.jsx)(a.Text, {
                                 variant: 'text-sm/semibold',
-                                children: f(c, t)
+                                children: f(d, t)
                             })
                         ]
                     }),
                     v({
                         quest: e.quest,
-                        errors: c,
+                        errors: d,
                         gameTitle: t,
                         location: e.location,
                         consoleHelpArticle: s,
@@ -125,7 +125,7 @@ t.Z = function (e) {
                     disabled: C,
                     children: (0, i.jsxs)('div', {
                         className: j.ctaInner,
-                        children: [d.render(), E.intl.string(E.t.nPThNT)]
+                        children: [c.render(), E.intl.string(E.t.nPThNT)]
                     })
                 })
             })

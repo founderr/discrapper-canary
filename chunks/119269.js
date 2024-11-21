@@ -38,7 +38,7 @@ t.ZP = (e) => {
         O = (0, c.e7)([u.Z], () => u.Z.useReducedMotion),
         T = t && !O;
     return (0, i.jsx)('div', {
-        className: l()(g.progressCircle, s, { [g.progressCricleBottomMargin]: 0 === h || 2 === h }),
+        className: l()(g.progressCircle, s),
         children: (0, i.jsx)(C.Z, {
             animationClassName: l()(g.activeProgressCircle, {
                 [g.activeProgressCircleAnimation]: T,

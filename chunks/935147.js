@@ -23,8 +23,8 @@ var i = n(200651),
     C = n(629654),
     E = n(53691),
     _ = n(165583),
-    I = n(267717),
-    f = n(350327),
+    f = n(267717),
+    I = n(350327),
     N = n(996073),
     A = n(25990),
     b = n(626135),
@@ -71,7 +71,7 @@ function U(e) {
         [en, ei] = s.useState(Math.floor(Math.random() * T.J2.length)),
         es = (e) => {
             if (e) {
-                if (((0, a.I5)(K), (0, f.z5)(W), (0, f.ho)(q), null != X)) {
+                if (((0, a.I5)(K), (0, I.z5)(W), (0, I.ho)(q), null != X)) {
                     let e = m.Z.getProduct(X.skuId);
                     null != e && (0, g.G1)(e) ? (0, u.fK)(e.skuId).then(() => (0, a.cV)(X)) : null != h.Z.getPurchase(X.skuId) && (0, a.cV)(X);
                 }
@@ -150,7 +150,7 @@ function U(e) {
                                       user: U,
                                       pendingAvatar: null != K ? K : H,
                                       pendingColors: null != W ? W : z,
-                                      onThemeColorsChange: f.rf,
+                                      onThemeColorsChange: I.rf,
                                       showPremiumIcon: !1,
                                       preventDisabled: !0
                                   }),
@@ -158,13 +158,13 @@ function U(e) {
                                       className: w.customizationSection,
                                       isTryItOutFlow: !0,
                                       showRemoveBannerButton: null != q,
-                                      onBannerChange: f.f4,
+                                      onBannerChange: I.f4,
                                       showPremiumIcon: !1
                                   }),
                                   (0, i.jsx)(R.Z, {
                                       className: w.customizationSection,
                                       isTryItOutFlow: !0,
-                                      onAvatarChange: f.c_,
+                                      onAvatarChange: I.c_,
                                       showRemoveAvatarButton: !1,
                                       changeAvatarButtonText: k.intl.string(k.t['7z0D1d']),
                                       sectionTitle: k.intl.string(k.t.vtFfPT)
@@ -203,7 +203,7 @@ function U(e) {
                               onSubscribeModalClose: es,
                               className: w.floatingUpsell,
                               showUpsell: !0,
-                              text: k.intl.format(k.t.TmfgIy, { onClick: () => (0, I.openPremiumTryItOutProfileUpsell)(es) }),
+                              text: k.intl.format(k.t.TmfgIy, { onClick: () => (0, f.openPremiumTryItOutProfileUpsell)(es) }),
                               button: Y ? k.intl.string(k.t.AfRWIy) : ea ? k.intl.formatToPlainString(k.t.bkQ4bG, { percent: null == el ? void 0 : el.discount.amount }) : k.intl.string(k.t.pj0XBA),
                               position: 'inline',
                               showShadow: !1

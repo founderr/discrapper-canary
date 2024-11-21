@@ -66,7 +66,7 @@ t.Z = function (e) {
                     : (0, o.jsxs)('div', {
                           className: f.brandingWrapper,
                           children: [
-                              (0, o.jsx)(d.Z, {
+                              (0, o.jsx)(d.ZP, {
                                   className: f.partnerBranding,
                                   quest: v
                               }),

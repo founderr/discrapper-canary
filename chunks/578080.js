@@ -21,8 +21,8 @@ var o = n(200651),
     E = n(475595),
     N = n(566078),
     B = n(340100),
-    T = n(611855),
-    S = n(644646),
+    S = n(611855),
+    T = n(644646),
     A = n(78826),
     y = n(670638),
     R = n(667105),
@@ -33,7 +33,7 @@ var o = n(200651),
     P = n(609706);
 let M = r.forwardRef(function (e, t) {
     var n, s;
-    let { children: _, className: M, collapsedHeight: W, expansionSpring: L, isExpanded: Q, isExpansionAnimationComplete: Z, onCtxMenuOpen: D, onCtxMenuClose: V, onCtxMenuSelect: H, quest: U, useReducedMotion: z } = e,
+    let { children: _, className: M, collapsedHeight: O, expansionSpring: L, isExpanded: Q, isExpansionAnimationComplete: Z, onCtxMenuOpen: D, onCtxMenuClose: V, onCtxMenuSelect: H, quest: U, useReducedMotion: z } = e,
         F = (0, l.e7)([C.Z], () => C.Z.isEnrolling(U.id), [U]),
         G = (0, h.B6)(U.config.expiresAt),
         Y = N.r.build(U.config),
@@ -100,7 +100,7 @@ let M = r.forwardRef(function (e, t) {
                           }),
                           L.to({
                               range: [0, 1],
-                              output: [0, W]
+                              output: [0, O]
                           })
                       ],
                       (e, t) => 'translateY(calc('.concat(e, '% + ').concat(t, 'px))')
@@ -121,7 +121,7 @@ let M = r.forwardRef(function (e, t) {
                                       (0, o.jsxs)('div', {
                                           className: P.questAcceptedContentHeading,
                                           children: [
-                                              (0, o.jsx)(S.Z, {
+                                              (0, o.jsx)(T.Z, {
                                                   className: P.questProgressRewardTile,
                                                   learnMoreStyle: 'icon',
                                                   quest: U,
@@ -188,7 +188,7 @@ let M = r.forwardRef(function (e, t) {
                                         children: ep
                                     }),
                               (0, o.jsx)(B.Z, { quest: U }),
-                              !em && !ei && !J && er && (0, o.jsx)(O, { onClick: eu ? eo : void 0 })
+                              !em && !ei && !J && er && (0, o.jsx)(W, { onClick: eu ? eo : void 0 })
                           ]
                       })
                     : (0, o.jsxs)('div', {
@@ -200,7 +200,7 @@ let M = r.forwardRef(function (e, t) {
                                       (0, o.jsxs)('div', {
                                           className: P.utils,
                                           children: [
-                                              (0, o.jsx)(T.Z, { color: 'always-white' }),
+                                              (0, o.jsx)(S.Z, { color: 'always-white' }),
                                               (0, o.jsx)(y.r, {
                                                   onOpen: D,
                                                   onClose: V,
@@ -226,7 +226,7 @@ let M = r.forwardRef(function (e, t) {
                                       (0, o.jsxs)('div', {
                                           className: P.details,
                                           children: [
-                                              (0, o.jsx)(S.Z, {
+                                              (0, o.jsx)(T.Z, {
                                                   className: P.rewardTile,
                                                   learnMoreStyle: 'text',
                                                   quest: U,
@@ -299,7 +299,7 @@ let M = r.forwardRef(function (e, t) {
         ]
     });
 });
-function O(e) {
+function W(e) {
     let { style: t, onClick: n } = e;
     return (0, _.O)({
         location: w.dr.QUESTS_BAR,

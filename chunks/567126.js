@@ -50,15 +50,15 @@ var l = n(200651),
     N = n(449224),
     b = n(358085),
     w = n(463727),
-    y = n(855403),
-    E = n(299570),
+    E = n(855403),
+    y = n(299570),
     R = n(960861),
     M = n(989941),
     P = n(958707),
-    A = n(152165),
-    k = n(133179),
-    L = n(70722),
-    B = n(761274),
+    k = n(152165),
+    A = n(133179),
+    B = n(70722),
+    L = n(761274),
     G = n(46140),
     D = n(65154),
     O = n(388032),
@@ -150,7 +150,7 @@ async function H() {
 function W(e) {
     let t = (0, b.isWindows)() ? (0, M.Z)(j.ZP, N.Z) : null,
         n = j.ZP.getRunningGames();
-    return null != t && (0, y.Z)(e.id, t.windowHandle) ? 2 : null != n.find((t) => (0, y.Z)(e.id, t.windowHandle)) ? 1 : 0;
+    return null != t && (0, E.Z)(e.id, t.windowHandle) ? 2 : null != n.find((t) => (0, E.Z)(e.id, t.windowHandle)) ? 1 : 0;
 }
 function V(e) {
     let { selectedSource: t, onChangeSelectedSource: n } = e,
@@ -160,9 +160,9 @@ function V(e) {
         [f, x] = i.useState(null),
         [g, N] = i.useState(null),
         b = null != g && g.length > 0,
-        [E, R] = i.useState(d.vA.WINDOW),
-        [M, A] = i.useState(!1),
-        L = i.useRef(null),
+        [y, R] = i.useState(d.vA.WINDOW),
+        [M, k] = i.useState(!1),
+        B = i.useRef(null),
         H = i.useRef(new h.Xp()),
         V = (0, u.e7)([j.ZP], () => j.ZP.getRunningGames()),
         z = (function (e, t, n) {
@@ -171,7 +171,7 @@ function V(e) {
                 if (null == n || !l) return null;
                 for (let l of n) {
                     var i, r;
-                    let n = t.find((e) => (0, y.Z)(l.id, e.windowHandle));
+                    let n = t.find((e) => (0, E.Z)(l.id, e.windowHandle));
                     if ((null == n ? void 0 : n.id) == null) continue;
                     let s = (0, Z.lQ)(e, n.id);
                     if (null != s && (null === (i = s.userStatus) || void 0 === i ? void 0 : i.enrolledAt) != null && (null === (r = s.userStatus) || void 0 === r ? void 0 : r.completedAt) == null)
@@ -205,11 +205,11 @@ function V(e) {
         );
     }, []);
     let Y = i.useCallback((e) => {
-            null !== e && ((L.current = e), A(!e.isScrolledToTop()));
+            null !== e && ((B.current = e), k(!e.isScrolledToTop()));
         }, []),
         [X, J] = i.useState(void 0);
     i.useEffect(() => {
-        C.Z.hasPermission(B.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }).then(J);
+        C.Z.hasPermission(L.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }).then(J);
     }, []);
     let q = (function (e) {
         switch (e) {
@@ -220,7 +220,7 @@ function V(e) {
             case d.vA.CAMERA:
                 return g;
         }
-    })(E);
+    })(y);
     if (null == q)
         return !1 === X
             ? (0, l.jsxs)(m.Text, {
@@ -244,7 +244,7 @@ function V(e) {
                 className: s()(U.tile, { [U.selected]: r }),
                 onClick: () => n(e, null),
                 children: (0, l.jsx)(
-                    k.Z,
+                    A.Z,
                     {
                         source: e,
                         selectedSource: t
@@ -256,8 +256,8 @@ function V(e) {
         );
     });
     function $() {
-        let e = L.current;
-        null != e && A(!e.isScrolledToTop());
+        let e = B.current;
+        null != e && k(!e.isScrolledToTop());
     }
     return (0, l.jsxs)(i.Fragment, {
         children: [
@@ -288,7 +288,7 @@ function V(e) {
                                 e
                             );
                         })(),
-                        value: E,
+                        value: y,
                         onChange: (e) => {
                             let { value: t } = e;
                             return R(t);
@@ -298,7 +298,7 @@ function V(e) {
                     })
                 ]
             }),
-            E === d.vA.CAMERA
+            y === d.vA.CAMERA
                 ? (0, l.jsx)('div', {
                       className: U.sourceContainer,
                       children: (0, l.jsx)(m.AdvancedScroller, {
@@ -318,7 +318,7 @@ function V(e) {
                       className: U.sourceScroller,
                       onScroll: $,
                       children: [
-                          E === d.vA.WINDOW && null != z && (0, l.jsx)(I.Z, { quest: z.quest }),
+                          y === d.vA.WINDOW && null != z && (0, l.jsx)(I.Z, { quest: z.quest }),
                           (0, l.jsx)(v.Z, {
                               layout: v.Z.Layout.WRAP,
                               columns: 2,
@@ -348,7 +348,7 @@ function z(e) {
         children: (0, l.jsxs)('div', {
             className: U.nativeSourceSingleTypeButtonInner,
             children: [
-                (0, l.jsx)(A.Z, { className: U.nativeSourceSingleTypeImage }),
+                (0, l.jsx)(k.Z, { className: U.nativeSourceSingleTypeImage }),
                 (0, l.jsx)(m.Text, {
                     variant: 'text-md/medium',
                     color: 'none',
@@ -429,7 +429,7 @@ function Y(e) {
             },
             [t, a]
         ),
-        f = (0, b.isMac)() && o().satisfies(null === g.Z || void 0 === g.Z ? void 0 : g.Z.os.release, L.jR),
+        f = (0, b.isMac)() && o().satisfies(null === g.Z || void 0 === g.Z ? void 0 : g.Z.os.release, B.jR),
         x = (0, b.isMac)(),
         [p, v] = i.useState(!1),
         j = i.useCallback(() => {
@@ -523,10 +523,10 @@ function X(e) {
     return (
         (0, R.kE)(),
         i.useEffect(() => {
-            '' === r ? (0, E.T)(r) : (0, E.t)();
+            '' === r ? (0, y.T)(r) : (0, y.t)();
         }, [r]),
         i.useEffect(() => {
-            o ? (s === R.Uc.Update ? t() : s === R.Uc.Cancel && ((0, E.t)(), n())) : (null == s || s === R.Uc.Present) && c(!0);
+            o ? (s === R.Uc.Update ? t() : s === R.Uc.Cancel && ((0, y.t)(), n())) : (null == s || s === R.Uc.Present) && c(!0);
         }, [o, s, t, n]),
         s === R.Uc.Error
             ? (0, l.jsx)(m.Text, {
@@ -535,7 +535,7 @@ function X(e) {
                   color: 'text-danger',
                   children: null != a && a.length > 0 ? a : O.intl.string(O.t.CKsXk5)
               })
-            : (0, l.jsx)(A.Z, {
+            : (0, l.jsx)(k.Z, {
                   animated: !0,
                   className: U.nativePickerGuide
               })

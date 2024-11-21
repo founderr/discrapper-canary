@@ -29,15 +29,15 @@ var l = n(200651),
     N = n(626135),
     b = n(823379),
     w = n(63063),
-    y = n(358085),
-    E = n(653255),
+    E = n(358085),
+    y = n(653255),
     R = n(989941),
     M = n(618407),
     P = n(586290),
-    A = n(233037),
-    k = n(810013),
-    L = n(537135),
-    B = n(641115),
+    k = n(233037),
+    A = n(810013),
+    B = n(537135),
+    L = n(641115),
     G = n(143135),
     D = n(70722),
     O = n(981631),
@@ -47,7 +47,7 @@ var l = n(200651),
     W = n(410894);
 function V(e) {
     let { selectedSource: t, selectSource: n, sourceChanged: i, onChangeSource: r } = e,
-        s = (0, a.e7)([h.ZP, T.Z], () => ((0, y.isWindows)() ? (0, R.Z)(h.ZP, T.Z) : null)),
+        s = (0, a.e7)([h.ZP, T.Z], () => ((0, E.isWindows)() ? (0, R.Z)(h.ZP, T.Z) : null)),
         c = (0, a.e7)([d.Z], () => ((null == s ? void 0 : s.id) != null ? d.Z.getApplication(s.id) : null)),
         u = (0, a.e7)([h.ZP], () => h.ZP.getRunningGames()),
         f = (0, a.Wu)([d.Z], () => u.map((e) => (null != e.id ? d.Z.getApplication(e.id) : null)).filter(b.lm), [u]),
@@ -65,7 +65,7 @@ function V(e) {
         title: F.intl.string(F.t.TC7Ev7),
         className: W.modalContent,
         titleClassName: W.formItemTitleVerySlim,
-        children: (0, l.jsxs)(L.Z, {
+        children: (0, l.jsxs)(B.Z, {
             children: [
                 null != p
                     ? (0, l.jsx)(m.Z, {
@@ -100,7 +100,7 @@ function z(e) {
               title: F.intl.string(F.t.WC3u3t),
               className: W.modalContent,
               titleClassName: W.formItemTitle,
-              children: (0, l.jsxs)(L.Z, {
+              children: (0, l.jsxs)(B.Z, {
                   children: [
                       (0, l.jsx)(x.Z, {
                           guild: i,
@@ -211,10 +211,10 @@ function J(e) {
     });
 }
 function q(e) {
-    let { selectedSource: t, selectedFPS: n, selectedChannelId: r, selectedPreset: s, selectedResolution: o, sourceChanged: d, selectedGuildId: f, targetGuildPremiumTier: h, selectSource: m, selectGuild: x, sound: p, previewDisabled: C, onClose: S, onChangeSelectedFPS: T, onChangeSelectedResolution: N, onChangeSelectedPreset: b, onChangeSelectedChannelId: y, onChangeSource: R, onChangeAudioDevice: L, onChangeGuild: G, onChangeSound: D, onChangePreviewDisabled: W } = e,
+    let { selectedSource: t, selectedFPS: n, selectedChannelId: r, selectedPreset: s, selectedResolution: o, sourceChanged: d, selectedGuildId: f, targetGuildPremiumTier: h, selectSource: m, selectGuild: x, sound: p, previewDisabled: C, onClose: S, onChangeSelectedFPS: T, onChangeSelectedResolution: N, onChangeSelectedPreset: b, onChangeSelectedChannelId: E, onChangeSource: R, onChangeAudioDevice: B, onChangeGuild: G, onChangeSound: D, onChangePreviewDisabled: W } = e,
         q = (0, a.e7)([_.Z, j.Z], () => j.Z.getChannel(_.Z.getVoiceChannelId())),
-        Q = (0, a.e7)([E.Z], () => E.Z.GPUDriversOutdated),
-        $ = (0, a.e7)([E.Z], () => E.Z.problematicGPUDriver),
+        Q = (0, a.e7)([y.Z], () => y.Z.GPUDriversOutdated),
+        $ = (0, a.e7)([y.Z], () => y.Z.problematicGPUDriver),
         ee = (0, a.e7)([I.default], () => I.default.getCurrentUser()),
         et = (0, M.Z)();
     null != t && t.id.startsWith('screen') && !Z.Z.supportsScreenSoundshare() && (et = F.intl.string(F.t['1b0Gm5']));
@@ -229,7 +229,7 @@ function q(e) {
                 ? (0, l.jsx)(P.Z, {
                       selectedSource: t,
                       onChangeVideoDeviceSource: R,
-                      onChangeAudioDevice: L
+                      onChangeAudioDevice: B
                   })
                 : (0, l.jsxs)('div', {
                       children: [
@@ -256,11 +256,11 @@ function q(e) {
                   })
                 : null,
             null != q
-                ? (0, l.jsx)(k.Z, { channel: q })
-                : (0, l.jsx)(A.Z, {
+                ? (0, l.jsx)(A.Z, { channel: q })
+                : (0, l.jsx)(k.Z, {
                       guildId: f,
                       selectedChannelId: r,
-                      onChangeSelectedChannelId: y
+                      onChangeSelectedChannelId: E
                   }),
             null != f && el && ei ? (0, l.jsx)(Y, { guildId: f }) : null,
             Q ? (0, l.jsx)(K, { text: F.intl.string(F.t.q65tS0) }) : null,
@@ -275,7 +275,7 @@ function q(e) {
                         }
                     })
                 }),
-            (0, l.jsx)(B.Z, {
+            (0, l.jsx)(L.Z, {
                 selectedPreset: s,
                 selectedFPS: n,
                 selectedResolution: o,

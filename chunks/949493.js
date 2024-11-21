@@ -23,10 +23,10 @@ var s = n(921801),
     C = n(988043),
     E = n(919539),
     _ = n(726985),
-    I = n(388032);
-let f = () =>
+    f = n(388032);
+let I = () =>
         (0, i.jsx)(g.Z, {
-            title: I.intl.string(I.t['y62Z/f']),
+            title: f.intl.string(f.t['y62Z/f']),
             webSetting: _.s6.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_CATEGORY,
             children: (0, i.jsxs)(h.Z, {
                 children: [
@@ -43,19 +43,19 @@ let f = () =>
         }),
     N = () =>
         (0, i.jsxs)(g.Z, {
-            title: I.intl.string(I.t.xVRG4O),
+            title: f.intl.string(f.t.xVRG4O),
             webSetting: _.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
             children: [(0, i.jsx)(c.P, {}), (0, i.jsx)(o.Z, {}), (0, i.jsx)(u.Z, {}), (0, i.jsx)(a.Z, {}), (0, i.jsx)(l.Z, {}), (0, i.jsx)(x.Z, {})]
         }),
     A = () =>
         (0, i.jsxs)(g.Z, {
-            title: I.intl.string(I.t['1Qn8iY']),
+            title: f.intl.string(f.t['1Qn8iY']),
             webSetting: _.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS_CATEGORY,
             children: [(0, i.jsx)(d.Z, {}), (0, i.jsx)(p.ZP, {})]
         });
 function b() {
     return (0, i.jsxs)(r.N, {
-        header: I.intl.string(I.t['+o1pDQ']),
-        children: [(0, i.jsx)(N, {}), (0, i.jsx)(f, {}), (0, i.jsx)(A, {})]
+        header: f.intl.string(f.t['+o1pDQ']),
+        children: [(0, i.jsx)(N, {}), (0, i.jsx)(I, {}), (0, i.jsx)(A, {})]
     });
 }

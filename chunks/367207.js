@@ -39,8 +39,8 @@ var l = n(392711),
     U = n(520540),
     G = n(11352),
     B = n(474936),
-    H = n(981631),
-    V = n(354459),
+    V = n(981631),
+    H = n(354459),
     F = n(37113),
     W = n(388032);
 function z(e, t, n) {
@@ -110,7 +110,7 @@ class Y extends c.Z {
     }
     maybeShowHDStreamingPerksDemoPostUpsellModal(e) {
         let { enabled: t } = L.Z.getCurrentConfig({ location: 'PremiumManager' }, { autoTrackExposure: !1 });
-        if (!t || e.state !== H.hes.DISCONNECTED || e.willReconnect) return;
+        if (!t || e.state !== V.hes.DISCONNECTED || e.willReconnect) return;
         let n = f.Z.getChannel(e.channelId);
         if (null == n) return;
         let i = T.Z.hasActiveDemo(r.q.STREAM_HIGH_QUALITY);
@@ -180,8 +180,8 @@ class Y extends c.Z {
                     let r = d.Z.getSelectedParticipant(e),
                         a = (0, y.o)(r, n),
                         { sendNitroMessage: o } = (0, Z.TD)(a),
-                        c = null !== (l = null === (i = g.Z.getGuild(t)) || void 0 === i ? void 0 : i.premiumTier) && void 0 !== l ? l : H.Eu4.NONE;
-                    if (N.Z.cooldownIsActive() || !o || c >= H.Eu4.TIER_2 || (null == r ? void 0 : r.type) !== V.fO.STREAM || (null == r ? void 0 : r.id) === (null == n ? void 0 : n.id) || null == r.maxResolution || null == r.maxFrameRate) return;
+                        c = null !== (l = null === (i = g.Z.getGuild(t)) || void 0 === i ? void 0 : i.premiumTier) && void 0 !== l ? l : V.Eu4.NONE;
+                    if (N.Z.cooldownIsActive() || !o || c >= V.Eu4.TIER_2 || (null == r ? void 0 : r.type) !== H.fO.STREAM || (null == r ? void 0 : r.id) === (null == n ? void 0 : n.id) || null == r.maxResolution || null == r.maxFrameRate) return;
                     E.I();
                     let u = W.intl.formatToPlainString(W.t.AbyeZG, {
                         nickname: r.userNick,
@@ -189,10 +189,10 @@ class Y extends c.Z {
                         fps: (0, I.bp)(r.maxFrameRate)
                     });
                     s.Z.sendNitroSystemMessage(e, u),
-                        v.default.track(H.rMx.PREMIUM_UPSELL_MESSAGE_SENT, {
+                        v.default.track(V.rMx.PREMIUM_UPSELL_MESSAGE_SENT, {
                             type: B.cd.HD_STREAMING_VIEWER_UPSELL,
-                            location_section: null != t ? H.jXE.TEXT_IN_VOICE : H.jXE.CHANNEL_TEXT_AREA,
-                            location_object: H.qAy.MESSAGE,
+                            location_section: null != t ? V.jXE.TEXT_IN_VOICE : V.jXE.CHANNEL_TEXT_AREA,
+                            location_object: V.qAy.MESSAGE,
                             guild_id: t
                         });
                 }, 200)
