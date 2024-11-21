@@ -1,90 +1,93 @@
 n.d(t, {
     B4: function () {
-        return el;
+        return eu;
     },
     B6: function () {
-        return F;
+        return V;
     },
     Bd: function () {
-        return ea;
+        return es;
     },
     DU: function () {
-        return X;
+        return J;
     },
     Fr: function () {
-        return Q;
+        return X;
     },
     GI: function () {
-        return ee;
+        return et;
+    },
+    Gd: function () {
+        return e_;
     },
     I: function () {
-        return ei;
+        return ea;
     },
     J2: function () {
-        return P;
+        return k;
     },
     Jf: function () {
-        return W;
+        return K;
     },
     KX: function () {
-        return en;
+        return er;
     },
     OH: function () {
         return a;
     },
     Rf: function () {
-        return Y;
+        return W;
     },
     _Q: function () {
-        return er;
+        return ei;
     },
     _s: function () {
-        return et;
+        return en;
     },
     bA: function () {
-        return U;
+        return B;
     },
     e5: function () {
         return i;
     },
     eN: function () {
-        return B;
+        return G;
     },
     eQ: function () {
-        return ec;
-    },
-    iO: function () {
-        return q;
-    },
-    kJ: function () {
-        return J;
-    },
-    me: function () {
-        return es;
-    },
-    qI: function () {
-        return eu;
-    },
-    qb: function () {
-        return eo;
-    },
-    t5: function () {
-        return z;
-    },
-    tP: function () {
-        return Z;
-    },
-    uA: function () {
-        return K;
-    },
-    vf: function () {
         return ed;
     },
+    iO: function () {
+        return Q;
+    },
+    kJ: function () {
+        return $;
+    },
+    me: function () {
+        return eo;
+    },
+    qI: function () {
+        return ec;
+    },
+    qb: function () {
+        return el;
+    },
+    t5: function () {
+        return q;
+    },
+    tP: function () {
+        return F;
+    },
+    uA: function () {
+        return z;
+    },
+    vf: function () {
+        return ef;
+    },
     z: function () {
-        return H;
+        return Y;
     },
     z6: function () {
-        return $;
+        return ee;
     }
 }),
     n(47120),
@@ -118,11 +121,12 @@ var r,
     R = n(665430),
     O = n(569743),
     D = n(585500),
-    L = n(566078),
-    x = n(46140),
-    w = n(981631),
-    M = n(388032);
-function P() {
+    L = n(475595),
+    x = n(566078),
+    w = n(46140),
+    M = n(981631),
+    P = n(388032);
+function k() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : { fetchPolicy: 'cache-only' },
         [t, n] = u.useState(!1),
         r = (0, p.Wu)([y.Z], () => [...y.Z.quests.values()]),
@@ -130,10 +134,10 @@ function P() {
             isFetchingCurrentQuests: y.Z.isFetchingCurrentQuests,
             lastFetchedCurrentQuests: y.Z.lastFetchedCurrentQuests
         })),
-        s = (0, C.cB)({ location: x.dr.USE_QUESTS });
+        s = (0, C.cB)({ location: w.dr.USE_QUESTS });
     return (
         u.useEffect(() => {
-            if ('cache-only' !== e.fetchPolicy) ('cache-and-network' === e.fetchPolicy || ('cache-or-network' === e.fetchPolicy && 0 === a)) && s && !t && !i && (n(!0), (0, S.xw)(), (0, O.Z)({ location: x.dr.USE_QUESTS }) && (0, S.w)(A.Ok.DESKTOP_ACCOUNT_PANEL_AREA));
+            if ('cache-only' !== e.fetchPolicy) ('cache-and-network' === e.fetchPolicy || ('cache-or-network' === e.fetchPolicy && 0 === a)) && s && !t && !i && (n(!0), (0, S.xw)(), (0, O.Z)({ location: w.dr.USE_QUESTS }) && (0, S.w)(A.Ok.DESKTOP_ACCOUNT_PANEL_AREA));
         }, [e.fetchPolicy, s, t, i, a]),
         {
             quests: r,
@@ -141,12 +145,12 @@ function P() {
         }
     );
 }
-function k(e, t, n) {
+function U(e, t, n) {
     return e.localeCompare(t) * (0 === n ? -1 : 1);
 }
 ((s = r || (r = {}))[(s.DESC = 0)] = 'DESC'), (s[(s.ASC = 1)] = 'ASC');
-function U(e) {
-    let { quests: t, isFetchingCurrentQuests: n } = P({ fetchPolicy: 'cache-and-network' }),
+function B(e) {
+    let { quests: t, isFetchingCurrentQuests: n } = k({ fetchPolicy: 'cache-and-network' }),
         r = new Map(t.map((e) => [e.id, e])),
         i = (function (e) {
             let t = u.useRef([]);
@@ -164,7 +168,7 @@ function U(e) {
                             _ = (0, N.Mi)(t, A.jn.GIFT_INVENTORY_FOR_YOU),
                             p = (null === (n = e.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null,
                             h = (null === (r = t.userStatus) || void 0 === r ? void 0 : r.enrolledAt) != null;
-                        return l !== u ? (l ? -1 : 1) : c !== d && l && u ? (c ? -1 : 1) : f !== _ ? (f ? -1 : 1) : p !== h ? (p ? -1 : 1) : l && u ? k(null === (s = e.config) || void 0 === s ? void 0 : s.expiresAt, null === (o = t.config) || void 0 === o ? void 0 : o.expiresAt, 1) : k(null === (i = e.config) || void 0 === i ? void 0 : i.expiresAt, null === (a = t.config) || void 0 === a ? void 0 : a.expiresAt, 0);
+                        return l !== u ? (l ? -1 : 1) : c !== d && l && u ? (c ? -1 : 1) : f !== _ ? (f ? -1 : 1) : p !== h ? (p ? -1 : 1) : l && u ? U(null === (s = e.config) || void 0 === s ? void 0 : s.expiresAt, null === (o = t.config) || void 0 === o ? void 0 : o.expiresAt, 1) : U(null === (i = e.config) || void 0 === i ? void 0 : i.expiresAt, null === (a = t.config) || void 0 === a ? void 0 : a.expiresAt, 0);
                     })
                     .map((e) => e.id);
                 return (t.current = n), n;
@@ -190,8 +194,8 @@ function U(e) {
                         var n, r;
                         let i = (null === (n = e.userStatus) || void 0 === n ? void 0 : n.claimedAt) == null;
                         if (i !== ((null === (r = t.userStatus) || void 0 === r ? void 0 : r.claimedAt) == null)) return i ? -1 : 1;
-                        let a = L.r.build(e.config).rewardsExpireAt;
-                        return k(a, L.r.build(t.config).rewardsExpireAt, 0);
+                        let a = x.r.build(e.config).rewardsExpireAt;
+                        return U(a, x.r.build(t.config).rewardsExpireAt, 0);
                     })
                     .map((e) => e.id);
                 return (n.current = e), e;
@@ -208,7 +212,7 @@ function U(e) {
         isFetchingCurrentQuests: n
     };
 }
-function B() {
+function G() {
     let e = u.useRef(!1),
         t = (0, p.Wu)([y.Z], () => Array.from(y.Z.claimedQuests.values())),
         n = (0, p.e7)([y.Z], () => y.Z.isFetchingClaimedQuests);
@@ -222,8 +226,8 @@ function B() {
         }
     );
 }
-function G() {
-    let { quests: e, isFetchingCurrentQuests: t } = P({ fetchPolicy: 'cache-only' }),
+function Z() {
+    let { quests: e, isFetchingCurrentQuests: t } = k({ fetchPolicy: 'cache-only' }),
         [n, r] = u.useState(() => new Map(e.map((e) => [e.id, (0, N.zi)(e)])));
     return (
         u.useEffect(() => {
@@ -249,39 +253,39 @@ function G() {
         n
     );
 }
-function Z(e) {
-    let t = G();
+function F(e) {
+    let t = Z();
     return u.useMemo(() => {
         var n;
         return null != e && null !== (n = t.get(e.id)) && void 0 !== n && n;
     }, [e, t]);
 }
-function F(e) {
+function V(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { dateStyle: 'short' },
         n = (0, p.e7)([m.default], () => m.default.locale);
     return u.useMemo(() => (null == e ? '' : new Date(e).toLocaleDateString(n, t)), [e, t, n]);
 }
-function V(e) {
+function j(e) {
     return (0, p.e7)([y.Z], () => y.Z.isProgressingOnDesktop(e.id));
 }
-function j(e) {
+function H(e) {
     return u.useMemo(() => (0, N.Bz)(e), [e]);
 }
 ((o = i || (i = {})).ALL = 'all'), (o.CLAIMED = 'claimed');
-function H(e) {
-    let t = V(e),
-        n = j(e),
+function Y(e) {
+    let t = j(e),
+        n = H(e),
         r = (function (e) {
             let t = (0, p.e7)([y.Z], () => y.Z.getOptimisticProgress(e.id, d.X.WATCH_VIDEO));
             return u.useMemo(() => (0, N.BM)(e), [e, t]);
         })(e);
     return t || n || r;
 }
-let Y = (e) => {
+let W = (e) => {
     let t = u.useCallback(() => (0, N.il)(e), [e]),
         [n, r] = u.useState(t()),
         i = u.useCallback(() => r(t()), [t]),
-        a = H(e);
+        a = Y(e);
     return (
         u.useEffect(() => {
             var t, n, r;
@@ -299,12 +303,12 @@ let Y = (e) => {
         n
     );
 };
-function W(e) {
+function K(e) {
     return u.useMemo(() => (0, N.b7)(e), [e]);
 }
-let K = (e) => {
+let z = (e) => {
     let { quest: t, questContent: n } = e,
-        r = et({ quest: t });
+        r = en({ quest: t });
     return () => {
         r
             ? (0, N.gI)(
@@ -323,43 +327,43 @@ let K = (e) => {
               );
     };
 };
-function z(e, t, n) {
-    let { targetMinutes: r } = Y(e),
-        i = W(e),
-        a = K({
+function q(e, t, n) {
+    let { targetMinutes: r } = W(e),
+        i = K(e),
+        a = z({
             quest: e,
             questContent: n
         });
     if ((0, N.$J)(e) && !(0, N.Nj)({ quest: e }))
-        return M.intl.format(M.t['l4S+cX'], {
+        return P.intl.format(P.t['l4S+cX'], {
             minutes: r,
             onClick: a,
-            gameTitle: L.r.build(e.config).application.name
+            gameTitle: x.r.build(e.config).application.name
         });
     if ((0, N.$J)(e))
-        return M.intl.format(M.t.Ajlcd3, {
+        return P.intl.format(P.t.Ajlcd3, {
             minutes: r,
             onClick: a,
-            gameTitle: L.r.build(e.config).application.name
+            gameTitle: x.r.build(e.config).application.name
         });
     if ((0, N.q8)(e)) {
         var s;
         let t = null === (s = e.config.videoMetadata) || void 0 === s ? void 0 : s.messages.videoTitle;
-        return null == t ? M.intl.string(M.t['o+e9ys']) : M.intl.formatToPlainString(M.t['9m9MnZ'], { videoTitle: t });
+        return null == t ? P.intl.string(P.t['o+e9ys']) : P.intl.formatToPlainString(P.t['9m9MnZ'], { videoTitle: t });
     }
     if (null != i) return i.title;
-    let o = M.t['6zWtV1'];
+    let o = P.t['6zWtV1'];
     return (
-        (0, N.Nj)({ quest: e }) && (o = M.t['wmOh/v']),
-        M.intl.format(o, {
+        (0, N.Nj)({ quest: e }) && (o = P.t['wmOh/v']),
+        P.intl.format(o, {
             minutes: r,
             gameTitle: e.config.messages.gameTitle
         })
     );
 }
-function q() {
-    let { quests: e, isFetchingCurrentQuests: t } = P({ fetchPolicy: 'cache-or-network' }),
-        n = G();
+function Q() {
+    let { quests: e, isFetchingCurrentQuests: t } = k({ fetchPolicy: 'cache-or-network' }),
+        n = Z();
     return u.useMemo(() => {
         let r = [];
         if (t || 0 === e.length) return r;
@@ -380,22 +384,22 @@ function q() {
         return r;
     }, [e, n, t]);
 }
-function Q(e) {
+function X(e) {
     let t = (0, p.e7)([y.Z], () => y.Z.quests),
         n = u.useMemo(() => (0, N.Jg)(t, e), [e, t]);
-    return Z(n) ? null : n;
+    return F(n) ? null : n;
 }
-function X(e) {
+function J(e) {
     var t;
     let n = (0, N.Xv)(e),
-        { product: r, isFetching: i } = (0, h.T)(L.r.build(e).defaultReward.skuId);
+        { product: r, isFetching: i } = (0, h.T)(x.r.build(e).defaultReward.skuId);
     return {
         hasQuestCollectibles: n,
         avatarDecoration: null == r ? void 0 : null === (t = r.items) || void 0 === t ? void 0 : t[0],
         isFetching: i
     };
 }
-function J(e) {
+function $(e) {
     return u.useMemo(
         () => ({
             handleComplete: () => (0, S.Wf)(e),
@@ -407,7 +411,7 @@ function J(e) {
         [e]
     );
 }
-function $() {
+function ee() {
     let { fetching: e, accounts: t } = (0, p.cj)([g.Z], () => ({
             fetching: g.Z.isFetching(),
             accounts: g.Z.getAccounts()
@@ -418,8 +422,8 @@ function $() {
             xboxAndPlaystationAccounts: i
         } = u.useMemo(() => {
             let e = t.filter((e) => !1 === e.revoked),
-                n = e.filter((e) => e.type === w.ABu.XBOX),
-                r = e.filter((e) => e.type === w.ABu.PLAYSTATION),
+                n = e.filter((e) => e.type === M.ABu.XBOX),
+                r = e.filter((e) => e.type === M.ABu.PLAYSTATION),
                 i = n.concat(r);
             return {
                 xboxAccounts: n,
@@ -434,7 +438,7 @@ function $() {
         xboxAndPlaystationAccounts: i
     };
 }
-let ee = (e) => {
+let et = (e) => {
         let { questId: t, preview: n, beforeRequest: r, afterRequest: i } = e,
             [a, s] = u.useState([]),
             [o, l] = u.useState(!1),
@@ -460,46 +464,46 @@ let ee = (e) => {
             }
         );
     },
-    et = (e) => {
+    en = (e) => {
         let { quest: t } = e,
-            { xboxAndPlaystationAccounts: n } = $(),
-            r = H(t),
+            { xboxAndPlaystationAccounts: n } = ee(),
+            r = Y(t),
             i = 0 === n.length;
         return (0, N.$J)(t) && i && !r;
     },
-    en = () => {
-        let { xboxAccounts: e, playstationAccounts: t } = $(),
+    er = () => {
+        let { xboxAccounts: e, playstationAccounts: t } = ee(),
             n = e.length > 0,
             r = t.length > 0,
-            i = v.Z.getArticleURL(w.BhN.QUEST_HOW_TO_PLAYSTATION),
-            a = v.Z.getArticleURL(w.BhN.QUEST_HOW_TO_XBOX),
-            s = M.intl.format(M.t.beN4DA, {
+            i = v.Z.getArticleURL(M.BhN.QUEST_HOW_TO_PLAYSTATION),
+            a = v.Z.getArticleURL(M.BhN.QUEST_HOW_TO_XBOX),
+            s = P.intl.format(P.t.beN4DA, {
                 psHelpdeskArticle: i,
                 xboxHelpdeskArticle: a
             }),
-            o = M.intl.format(M.t.HVS7np, { helpdeskArticle: r ? i : a });
+            o = P.intl.format(P.t.HVS7np, { helpdeskArticle: r ? i : a });
         return {
             message: (n && !r) || (!n && r) ? o : s,
             xboxURL: a,
             playstationURL: i
         };
     };
-function er(e) {
+function ei(e) {
     var t, n, r;
     let i = (null === (t = e.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
         a = (null === (n = e.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
         s = (null === (r = e.userStatus) || void 0 === r ? void 0 : r.claimedAt) != null,
-        o = Y(e).percentComplete > 0;
+        o = W(e).percentComplete > 0;
     if (s) return 4;
     if (a) return 3;
     if (o) return 2;
     else if (i) return 1;
     else return 0;
 }
-function ei(e) {
+function ea(e) {
     let t = (0, p.e7)([m.default], () => m.default.locale),
-        { percentComplete: n } = Y(e),
-        r = W(e),
+        { percentComplete: n } = W(e),
+        r = K(e),
         i = null != r ? r.completedRatio : n,
         a = 100 * i,
         s = null != r ? ''.concat(null == r ? void 0 : r.progress, '/').concat(null == r ? void 0 : r.target) : (0, I.T3)(t, i, { roundingMode: 'floor' });
@@ -509,51 +513,51 @@ function ei(e) {
         completedRatioDisplay: s
     };
 }
-function ea(e) {
+function es(e) {
     var t, n;
-    let r = Y(e),
+    let r = W(e),
         i = (0, N.b7)(e),
         a = (0, D.D)({
             quest: e,
             taskDetails: r,
-            location: x.dr.QUEST_HOME_DESKTOP,
+            location: w.dr.QUEST_HOME_DESKTOP,
             questContent: A.jn.QUEST_HOME_DESKTOP,
             useV2Variants: !0
         }),
         s = (null === (t = e.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
-        o = F(null === (n = e.userStatus) || void 0 === n ? void 0 : n.claimedAt);
-    if (s) return M.intl.formatToPlainString(M.t.lOVr0N, { claimDate: o });
+        o = V(null === (n = e.userStatus) || void 0 === n ? void 0 : n.claimedAt);
+    if (s) return P.intl.formatToPlainString(P.t.lOVr0N, { claimDate: o });
     if (null != i) return i.description;
     if (null != a) return a;
     return null;
 }
 ((l = a || (a = {}))[(l.UNACCEPTED = 0)] = 'UNACCEPTED'), (l[(l.ACCEPTED = 1)] = 'ACCEPTED'), (l[(l.IN_PROGRESS = 2)] = 'IN_PROGRESS'), (l[(l.COMPLETED = 3)] = 'COMPLETED'), (l[(l.CLAIMED = 4)] = 'CLAIMED');
-function es(e, t) {
+function eo(e, t) {
     let [n, r] = (function (e) {
             let t = (0, p.e7)([y.Z], () => y.Z.selectedTaskPlatform(e));
             return [t, u.useCallback((t) => (0, S.OR)(e, t), [e])];
         })(e.id),
         i = u.useMemo(() => (0, N.yH)(e), [e]),
-        a = i.includes(x.cd.DESKTOP),
-        s = i.includes(x.cd.CONSOLE),
-        o = V(e),
-        l = j(e),
-        f = (0, R.pF)({ location: x.dr.QUESTS_BAR }),
+        a = i.includes(w.cd.DESKTOP),
+        s = i.includes(w.cd.CONSOLE),
+        o = j(e),
+        l = H(e),
+        f = (0, R.pF)({ location: w.dr.QUESTS_BAR }),
         _ = u.useMemo(
             () =>
                 (0, c.EQ)(t)
                     .with({ percentComplete: 0 }, () => null)
-                    .with({ taskType: d.X.PLAY_ON_DESKTOP }, () => x.cd.DESKTOP)
-                    .with({ taskType: d.X.PLAY_ON_DESKTOP_V2 }, () => x.cd.DESKTOP)
-                    .with({ taskType: d.X.PLAY_ACTIVITY }, () => x.cd.DESKTOP)
-                    .with({ taskType: d.X.WATCH_VIDEO }, () => x.cd.DESKTOP)
-                    .with({ taskType: d.X.STREAM_ON_DESKTOP }, () => x.cd.DESKTOP)
-                    .with({ taskType: d.X.PLAY_ON_XBOX }, () => x.cd.CONSOLE)
-                    .with({ taskType: d.X.PLAY_ON_PLAYSTATION }, () => x.cd.CONSOLE)
+                    .with({ taskType: d.X.PLAY_ON_DESKTOP }, () => w.cd.DESKTOP)
+                    .with({ taskType: d.X.PLAY_ON_DESKTOP_V2 }, () => w.cd.DESKTOP)
+                    .with({ taskType: d.X.PLAY_ACTIVITY }, () => w.cd.DESKTOP)
+                    .with({ taskType: d.X.WATCH_VIDEO }, () => w.cd.DESKTOP)
+                    .with({ taskType: d.X.STREAM_ON_DESKTOP }, () => w.cd.DESKTOP)
+                    .with({ taskType: d.X.PLAY_ON_XBOX }, () => w.cd.CONSOLE)
+                    .with({ taskType: d.X.PLAY_ON_PLAYSTATION }, () => w.cd.CONSOLE)
                     .exhaustive(),
             [t]
         ),
-        h = o ? x.cd.DESKTOP : l ? x.cd.CONSOLE : null;
+        h = o ? w.cd.DESKTOP : l ? w.cd.CONSOLE : null;
     return [
         u.useMemo(
             () =>
@@ -562,19 +566,19 @@ function es(e, t) {
                     currentProgressingPlatform: h,
                     selectedPlatform: n
                 })
-                    .with({ currentProgressingPlatform: x.cd.CONSOLE }, () => A.LI.CONSOLE)
-                    .with({ currentProgressingPlatform: x.cd.DESKTOP }, () => A.LI.DESKTOP)
+                    .with({ currentProgressingPlatform: w.cd.CONSOLE }, () => A.LI.CONSOLE)
+                    .with({ currentProgressingPlatform: w.cd.DESKTOP }, () => A.LI.DESKTOP)
                     .with(
                         {
                             currentProgressingPlatform: null,
-                            lastPlatformProgress: x.cd.CONSOLE
+                            lastPlatformProgress: w.cd.CONSOLE
                         },
                         () => A.LI.CONSOLE
                     )
                     .with(
                         {
                             currentProgressingPlatform: null,
-                            lastPlatformProgress: x.cd.DESKTOP
+                            lastPlatformProgress: w.cd.DESKTOP
                         },
                         () => A.LI.DESKTOP
                     )
@@ -582,7 +586,7 @@ function es(e, t) {
                         {
                             currentProgressingPlatform: null,
                             lastPlatformProgress: null,
-                            selectedPlatform: x.cd.CONSOLE
+                            selectedPlatform: w.cd.CONSOLE
                         },
                         () => A.LI.CONSOLE
                     )
@@ -590,7 +594,7 @@ function es(e, t) {
                         {
                             currentProgressingPlatform: null,
                             lastPlatformProgress: null,
-                            selectedPlatform: x.cd.DESKTOP
+                            selectedPlatform: w.cd.DESKTOP
                         },
                         () => A.LI.DESKTOP
                     )
@@ -609,12 +613,12 @@ function es(e, t) {
         r
     ];
 }
-function eo(e) {
+function el(e) {
     var t, n;
-    let r = W(e),
-        i = Y(e),
-        [a] = es(e, i),
-        s = Z(e),
+    let r = K(e),
+        i = W(e),
+        [a] = eo(e, i),
+        s = F(e),
         o = (null === (t = e.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
         l = (null === (n = e.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
         u = d.T.DESKTOP.has(i.taskType),
@@ -623,13 +627,13 @@ function eo(e) {
         _ = (0, b.isWeb)() && f,
         p = (0, b.isMac)() && i.taskType === d.X.STREAM_ON_DESKTOP && f,
         h = [];
-    return p && h.push(M.intl.string(M.t.MFGxFB)), _ && h.push(M.intl.string(M.t.BV6xDg)), h;
+    return p && h.push(P.intl.string(P.t.MFGxFB)), _ && h.push(P.intl.string(P.t.BV6xDg)), h;
 }
-function el(e) {
+function eu(e) {
     var t;
     return null !== (t = (0, p.e7)([y.Z], () => y.Z.quests).get(e)) && void 0 !== t ? t : null;
 }
-function eu(e) {
+function ec(e) {
     let { mode: t, questContent: n, questId: r } = e,
         i = u.useRef(null);
     u.useEffect(() => {
@@ -655,41 +659,55 @@ function eu(e) {
                 };
         }, [r, n]);
 }
-function ec(e) {
+function ed(e) {
     var t, n;
     let r = (0, p.e7)([m.default], () => m.default.locale),
-        i = Y(e),
-        [a] = es(e, i),
-        s = (0, R.pF)({ location: x.dr.QUESTS_BAR });
-    if ((null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null) return M.intl.string(M.t['ij5E//']);
+        i = W(e),
+        [a] = eo(e, i),
+        s = (0, R.pF)({ location: w.dr.QUESTS_BAR });
+    if ((null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null) return P.intl.string(P.t['ij5E//']);
     if ((null === (n = e.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null && i.percentComplete > 0) {
         let e = (0, I.T3)(r, i.percentComplete, { roundingMode: 'floor' });
-        return M.intl.formatToPlainString(M.t.lVZaXF, { percent: e });
+        return P.intl.formatToPlainString(P.t.lVZaXF, { percent: e });
     }
-    return s && a === A.LI.SELECT ? M.intl.string(M.t.EMrUHR) : (0, N.$J)(e) ? M.intl.string(M.t.mOrpXF) : M.intl.string(M.t['7e5k7O']);
+    return s && a === A.LI.SELECT ? P.intl.string(P.t.EMrUHR) : (0, N.$J)(e) ? P.intl.string(P.t.mOrpXF) : P.intl.string(P.t['7e5k7O']);
 }
-function ed(e, t, n) {
+function ef(e, t, n) {
     var r;
-    let i = F(u.useMemo(() => L.r.build(e.config).rewardsExpireAt, [e.config])),
-        a = Y(e),
+    let i = V(u.useMemo(() => x.r.build(e.config).rewardsExpireAt, [e.config])),
+        a = W(e),
         s = (null === (r = e.userStatus) || void 0 === r ? void 0 : r.completedAt) != null,
-        o = H(e),
+        o = Y(e),
         l = (0, D.D)({
             quest: e,
-            location: x.dr.QUESTS_BAR,
+            location: w.dr.QUESTS_BAR,
             questContent: A.jn.QUEST_BAR_V2,
             taskDetails: a,
             useV2Variants: !0
         });
-    if (s) return M.intl.formatToPlainString(M.t.APddvL, { expirationDate: i });
-    if (t) return n === A.LI.SELECT ? M.intl.string(M.t.sWUpNz) : l;
-    if ((0, N.q8)(e)) return M.intl.string(M.t['o+e9ys']);
+    if (s) return P.intl.formatToPlainString(P.t.APddvL, { expirationDate: i });
+    if (t) return n === A.LI.SELECT ? P.intl.string(P.t.sWUpNz) : l;
+    if ((0, N.q8)(e)) return P.intl.string(P.t['o+e9ys']);
     if (a.percentComplete > 0)
         return o
             ? (0, N.AV)({
                   quest: e,
                   taskDetails: a
               })
-            : M.intl.string(M.t.mOrpXF);
-    return M.intl.string(M.t.S6UUc3);
+            : P.intl.string(P.t.mOrpXF);
+    return P.intl.string(P.t.S6UUc3);
+}
+function e_(e, t) {
+    let n = (0, p.e7)([y.Z], () => y.Z.getQuest(e), [e]),
+        r = u.useMemo(() => (null == n ? void 0 : n.config.features.includes(w.S7.QUESTS_CDN)) === !0, [n]);
+    return u.useMemo(
+        () =>
+            (null == n ? void 0 : n.config.cosponsorMetadata) == null
+                ? null
+                : (0, L.Rt)(e, n.config.cosponsorMetadata.logotype, {
+                      theme: t,
+                      newCdn: r
+                  }),
+        [t, e, null == n ? void 0 : n.config.cosponsorMetadata, r]
+    );
 }

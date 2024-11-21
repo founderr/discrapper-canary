@@ -9,6 +9,7 @@ e.exports = {
     details: 'details_e2fc00',
     logoContainer: 'logoContainer_e2fc00',
     logo: 'logo_e2fc00',
+    logoWithCosponsor: 'logoWithCosponsor_e2fc00',
     title: 'title_e2fc00',
     hovered: 'hovered_e2fc00'
 };

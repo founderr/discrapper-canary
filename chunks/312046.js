@@ -1,6 +1,9 @@
 n.d(t, {
     Q: function () {
         return s;
+    },
+    s: function () {
+        return o;
     }
 });
 var r = n(418793),
@@ -36,5 +39,14 @@ let s = (e) => ({
     },
     taskConfig: (0, i.f)(e.task_config),
     rewardsConfig: (0, r.v)(e.rewards_config),
-    videoMetadata: (0, a.F)(e.video_metadata)
+    videoMetadata: (0, a.F)(e.video_metadata),
+    cosponsorMetadata: o(e.cosponsor_metadata)
 });
+function o(e) {
+    if (null != e)
+        return {
+            name: e.name,
+            logotype: e.logotype,
+            redemptionInstructions: e.redemption_instructions
+        };
+}

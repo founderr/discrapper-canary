@@ -1,18 +1,21 @@
 n.d(t, {
     Dm: function () {
-        return f;
+        return _;
     },
     N0: function () {
         return l;
     },
     Q2: function () {
-        return d;
+        return f;
+    },
+    Rt: function () {
+        return u;
     },
     eC: function () {
         return r;
     },
     fh: function () {
-        return c;
+        return d;
     }
 }),
     n(571269),
@@ -29,24 +32,33 @@ var r,
     s = n(46140);
 let o = /\.([a-zA-Z0-9]+)$/,
     l = ['video/mp4', 'video/webm'];
-((i = r || (r = {})).HERO = 'hero'), (i.QUEST_BAR_HERO = 'quest_bar_hero'), (i.REWARD = 'reward'), (i.GAME_TILE = 'game_tile'), (i.LOGO_TYPE = 'logo_type');
-function u(e, t) {
+function u(e, t, n) {
+    let r = f(e, t, n),
+        i = _(t),
+        a = null != i && l.includes(i);
+    return {
+        url: r,
+        mimetype: i,
+        isAnimated: a
+    };
+}
+function c(e, t) {
     return null == e || a.tq ? t : e;
 }
-function c(e, t, n) {
+function d(e, t, n) {
     let r;
     switch (t) {
         case 'hero':
-            r = u(e.config.assets.heroVideo, e.config.assets.hero);
+            r = c(e.config.assets.heroVideo, e.config.assets.hero);
             break;
         case 'quest_bar_hero':
-            r = u(e.config.assets.questBarHeroVideo, e.config.assets.questBarHero);
+            r = c(e.config.assets.questBarHeroVideo, e.config.assets.questBarHero);
             break;
         case 'reward': {
             var i, a;
             let t = null !== (a = null === (i = e.userStatus) || void 0 === i ? void 0 : i.claimedTier) && void 0 !== a ? a : 0,
                 n = 'rewardsConfig' in e.config ? e.config.rewardsConfig.rewards[t] : e.config.rewards[t];
-            r = u(n.assetVideo, n.asset);
+            r = c(n.assetVideo, n.asset);
             break;
         }
         case 'game_tile':
@@ -56,21 +68,13 @@ function c(e, t, n) {
             r = e.config.assets.logotype;
     }
     let o = e.config.features.includes(s.S7.QUESTS_CDN);
-    return (function (e, t, n) {
-        let r = d(e, t, n),
-            i = f(t),
-            a = null != i && l.includes(i);
-        return {
-            url: r,
-            mimetype: i,
-            isAnimated: a
-        };
-    })(e.id, r, {
+    return u(e.id, r, {
         theme: n,
         newCdn: o
     });
 }
-function d(e, t, n) {
+((i = r || (r = {})).HERO = 'hero'), (i.QUEST_BAR_HERO = 'quest_bar_hero'), (i.REWARD = 'reward'), (i.GAME_TILE = 'game_tile'), (i.LOGO_TYPE = 'logo_type');
+function f(e, t, n) {
     if (t.startsWith('blob:')) {
         var r, i;
         return null !== (i = (r = t).split('?', 1).at(0)) && void 0 !== i ? i : r;
@@ -82,7 +86,7 @@ function d(e, t, n) {
         .concat((null == n ? void 0 : n.theme) != null ? '/'.concat(n.theme) : '', '/')
         .concat(t);
 }
-function f(e) {
+function _(e) {
     var t, n, r;
     if (e.startsWith('blob:')) {
         let t = null !== (r = new URL(e).searchParams.get('mimetype')) && void 0 !== r ? r : void 0;

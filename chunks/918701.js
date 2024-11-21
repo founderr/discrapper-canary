@@ -326,7 +326,8 @@ function j(e) {
                 primary: t.colors.primary,
                 secondary: t.colors.secondary
             },
-            rewards: t.rewards.map(V)
+            rewards: t.rewards.map(V),
+            cosponsorMetadata: (0, y.s)(t.cosponsor_metadata)
         },
         userStatus: null == e.user_status ? null : Z(e.user_status)
     };

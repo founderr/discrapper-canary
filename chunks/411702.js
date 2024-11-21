@@ -13,6 +13,7 @@ e.exports = {
     utilButtonWrapper: 'utilButtonWrapper_f2bc91',
     utilButtonIcon: 'utilButtonIcon_f2bc91',
     partnerBranding: 'partnerBranding_f2bc91',
+    partnerLogotypes: 'partnerLogotypes_f2bc91',
     bottomRow: 'bottomRow_f2bc91',
     hints: 'hints_f2bc91',
     hintsContainer: 'hintsContainer_f2bc91',

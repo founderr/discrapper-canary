@@ -6,14 +6,14 @@ var i = n(200651),
     o = n(100621),
     a = n(722770),
     u = n(442837),
-    d = n(846519),
-    c = n(481060),
+    c = n(846519),
+    d = n(481060),
     m = n(393238),
     x = n(607070),
     h = n(70097),
     C = n(210887),
-    g = n(572004),
-    p = n(617136),
+    p = n(572004),
+    g = n(617136),
     E = n(113434),
     j = n(497505),
     T = n(918701),
@@ -27,12 +27,12 @@ var i = n(200651),
     R = n(46140),
     b = n(388032),
     I = n(128175);
-let M = (0, o.animated)(c.ChevronSmallDownIcon),
-    Z = (0, o.animated)(h.Z),
-    L = (e) => {
+let M = (0, o.animated)(d.ChevronSmallDownIcon),
+    L = (0, o.animated)(h.Z),
+    Z = (e) => {
         let { quest: t, location: n, questContentPosition: l, ...r } = e,
             [o, a] = s.useState(!1),
-            u = s.useRef(new d.V7());
+            u = s.useRef(new c.V7());
         s.useEffect(() => {
             let e = u.current;
             return function () {
@@ -40,27 +40,27 @@ let M = (0, o.animated)(c.ChevronSmallDownIcon),
             };
         }, []);
         let m = () => {
-            (0, p._3)({
+            (0, g._3)({
                 questId: t.id,
                 questContent: n,
-                questContentCTA: p.jZ.COPY_QUEST_URL,
+                questContentCTA: g.jZ.COPY_QUEST_URL,
                 questContentPosition: l
             }),
-                (0, g.JG)((0, T.Rs)(t.id)),
+                (0, p.JG)((0, T.Rs)(t.id)),
                 a(!0),
                 u.current.start(1000, () => a(!1));
         };
-        return (0, i.jsx)(c.Tooltip, {
+        return (0, i.jsx)(d.Tooltip, {
             forceOpen: o,
             shouldShow: o,
-            color: c.Tooltip.Colors.GREEN,
+            color: d.Tooltip.Colors.GREEN,
             text: b.intl.string(b.t.MSaeTU),
             children: () =>
-                (0, i.jsx)(c.Button, {
+                (0, i.jsx)(d.Button, {
                     ...r,
                     className: I.shareButton,
-                    color: c.Button.Colors.PRIMARY,
-                    size: c.Button.Sizes.SMALL,
+                    color: d.Button.Colors.PRIMARY,
+                    size: d.Button.Sizes.SMALL,
                     onClick: m,
                     children: b.intl.string(b.t['5Z6rz8'])
                 })
@@ -68,16 +68,16 @@ let M = (0, o.animated)(c.ChevronSmallDownIcon),
     };
 t.Z = (e) => {
     var t, n;
-    let { isFocused: l, isQuestExpired: d, quest: h, location: g, size: T, expansionSpring: y, isAnimating: B, isExpanded: P, isInConcurrentQuestExperiment: D, contentPosition: U, toggleExpanded: w } = e,
+    let { isFocused: l, isQuestExpired: c, quest: h, location: p, size: T, expansionSpring: y, isAnimating: B, isExpanded: P, isInConcurrentQuestExperiment: U, contentPosition: D, toggleExpanded: w } = e,
         { ref: Q, height: k } = (0, m.Z)(),
-        { ref: O, width: H, scrollWidth: z } = (0, m.Z)(),
+        { ref: O, width: H, scrollWidth: W } = (0, m.Z)(),
         G = (0, u.e7)([C.Z], () => C.Z.getState().theme),
-        W = (0, u.e7)([x.Z], () => x.Z.useReducedMotion),
+        z = (0, u.e7)([x.Z], () => x.Z.useReducedMotion),
         F = s.useMemo(() => (0, f.fh)(h, f.eC.HERO), [h]),
         V = s.useRef(null),
-        X = (0, A.uq)(g),
-        Y = g === j.jn.QUESTS_EMBED,
-        K = (0, E.t5)(h, R.dr.QUESTS_CARD, g),
+        X = (0, A.uq)(p),
+        Y = p === j.jn.QUESTS_EMBED,
+        K = (0, E.t5)(h, R.dr.QUESTS_CARD, p),
         J = (null === (t = h.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
         $ = (0, E.B6)(h.config.expiresAt, {
             year: 'numeric',
@@ -89,240 +89,232 @@ t.Z = (e) => {
             month: 'long',
             day: 'numeric'
         }),
-        et = (e) => {
+        et = s.useMemo(() => null != h.config.cosponsorMetadata, [h]),
+        en = (e) => {
             e.stopPropagation(),
                 e.currentTarget.blur(),
                 w(),
-                (0, p._3)({
+                (0, g._3)({
                     questId: h.id,
-                    questContent: g,
-                    questContentCTA: P ? p.jZ.COLLAPSE : p.jZ.EXPAND,
-                    questContentPosition: U
+                    questContent: p,
+                    questContentCTA: P ? g.jZ.COLLAPSE : g.jZ.EXPAND,
+                    questContentPosition: D
                 });
         };
-    return (
-        s.useEffect(() => {
-            F.isAnimated && null != V.current && (l ? V.current.play() : !l && (V.current.pause(), (V.current.currentTime = 0)));
-        }, [l, F]),
-        (0, i.jsxs)('div', {
-            className: r()(I.outerContainer, {
-                [I.outerContainerGiftInventory]: X,
-                [I.outerContainerEmbed]: Y,
-                [I.outerContainerXs]: 'xs' === T
+    s.useEffect(() => {
+        F.isAnimated && null != V.current && (l ? V.current.play() : !l && (V.current.pause(), (V.current.currentTime = 0)));
+    }, [l, F]);
+    let ei = (0, i.jsx)(S.ZP, {
+        className: I.partnerBranding,
+        logotypeClassName: et ? I.partnerBrandingLogotypes : void 0,
+        gameTileSize: S.fF.MEDIUM,
+        quest: h,
+        separatorSpacing: S.US.MEDIUM,
+        theme: G,
+        withGameTile: !Y || null == h.config.cosponsorMetadata
+    });
+    return (0, i.jsxs)('div', {
+        className: r()(I.outerContainer, {
+            [I.outerContainerGiftInventory]: X,
+            [I.outerContainerEmbed]: Y,
+            [I.outerContainerXs]: 'xs' === T
+        }),
+        'aria-label': b.intl.string(b.t.dcl9MT),
+        style: { height: X ? k : void 0 },
+        children: [
+            (0, i.jsx)(L, {
+                style: {
+                    opacity: y.to({
+                        range: [0, 1],
+                        output: [0.25, 1]
+                    })
+                },
+                autoPlay: !1,
+                loop: !1,
+                muted: !0,
+                playsInline: !0,
+                className: I.questSplash,
+                controls: !1,
+                poster: F.url,
+                ref: V,
+                children:
+                    !z &&
+                    F.isAnimated &&
+                    (0, i.jsx)('source', {
+                        src: F.url,
+                        type: null !== (n = F.mimetype) && void 0 !== n ? n : void 0
+                    })
             }),
-            'aria-label': b.intl.string(b.t.dcl9MT),
-            style: { height: X ? k : void 0 },
-            children: [
-                (0, i.jsx)(Z, {
-                    style: {
-                        opacity: y.to({
-                            range: [0, 1],
-                            output: [0.25, 1]
-                        })
-                    },
-                    autoPlay: !1,
-                    loop: !1,
-                    muted: !0,
-                    playsInline: !0,
-                    className: I.questSplash,
-                    controls: !1,
-                    poster: F.url,
-                    ref: V,
-                    children:
-                        !W &&
-                        F.isAnimated &&
-                        (0, i.jsx)('source', {
-                            src: F.url,
-                            type: null !== (n = F.mimetype) && void 0 !== n ? n : void 0
-                        })
-                }),
-                (0, i.jsxs)('div', {
-                    className: I.header,
-                    'aria-expanded': P,
-                    children: [
-                        (0, i.jsxs)(o.animated.div, {
-                            className: r()(I.headerContent, { [I.headerContentEmbed]: Y }),
-                            style: {
-                                y: X
-                                    ? y.to({
-                                          range: [0, 1],
-                                          output: [A.DJ, 0]
-                                      })
-                                    : void 0
-                            },
-                            children: [
-                                X &&
-                                    (0, i.jsx)(o.animated.div, {
-                                        className: I.headerCollapsedContent,
-                                        style: {
-                                            opacity: y.to({
-                                                range: [0, 1],
-                                                output: [1, 0]
-                                            }),
-                                            visibility: B || !P ? 'inherit' : 'hidden'
-                                        },
-                                        'aria-hidden': !B && P,
-                                        children: (0, i.jsxs)(c.ClickableContainer, {
-                                            'aria-label': b.intl.string(b.t.dcl9MT),
-                                            onClick: et,
-                                            className: I.headerCollapsedClickableContainer,
-                                            children: [
-                                                (0, i.jsx)('div', {
-                                                    className: I.headerCollapsedContentRewardWrapper,
-                                                    children: (0, i.jsx)(q.Z, {
-                                                        quest: h,
-                                                        questContent: g,
-                                                        className: I.headerCollapsedRewardTile,
-                                                        location: R.dr.QUESTS_CARD
-                                                    })
-                                                }),
-                                                (0, i.jsxs)('div', {
-                                                    className: I.headerCollapsedContentCopyWrapper,
-                                                    children: [
-                                                        (0, i.jsxs)('div', {
-                                                            className: I.headerCollapsedContentCopyLogos,
-                                                            children: [
-                                                                (0, i.jsx)(S.Z, {
-                                                                    className: I.partnerBranding,
-                                                                    gameTileSize: S.f.MEDIUM,
-                                                                    quest: h,
-                                                                    theme: G
-                                                                }),
-                                                                (0, i.jsx)(N.Z, { color: 'always-white' })
-                                                            ]
-                                                        }),
-                                                        (0, i.jsx)(c.Text, {
-                                                            variant: 'text-xs/medium',
-                                                            children: K
-                                                        })
-                                                    ]
-                                                })
-                                            ]
-                                        })
-                                    }),
-                                (0, i.jsxs)(o.animated.div, {
-                                    ref: (e) => {
-                                        Q.current = e;
-                                    },
-                                    className: r()(I.headerExpandedContent, {
-                                        [I.outerContainerGiftInventory]: X,
-                                        [I.outerContainerEmbed]: Y
-                                    }),
+            (0, i.jsxs)('div', {
+                className: I.header,
+                'aria-expanded': P,
+                children: [
+                    (0, i.jsxs)(o.animated.div, {
+                        className: r()(I.headerContent, { [I.headerContentEmbed]: Y }),
+                        style: {
+                            y: X
+                                ? y.to({
+                                      range: [0, 1],
+                                      output: [A.DJ, 0]
+                                  })
+                                : void 0
+                        },
+                        children: [
+                            X &&
+                                (0, i.jsx)(o.animated.div, {
+                                    className: I.headerCollapsedContent,
                                     style: {
                                         opacity: y.to({
                                             range: [0, 1],
-                                            output: [0, 1]
+                                            output: [1, 0]
                                         }),
-                                        visibility: B || P ? 'inherit' : 'hidden'
+                                        visibility: B || !P ? 'inherit' : 'hidden'
                                     },
-                                    'aria-hidden': !B && !P,
-                                    children: [
-                                        (0, i.jsxs)('div', {
-                                            className: I.headerExpandedWrapper,
-                                            children: [
-                                                (0, i.jsxs)('div', {
-                                                    className: I.iconLogotypeContainer,
-                                                    children: [
-                                                        (0, i.jsx)(S.Z, {
-                                                            className: I.partnerBranding,
-                                                            gameTileSize: S.f.MEDIUM,
-                                                            quest: h,
-                                                            theme: G
-                                                        }),
-                                                        Y ? null : (0, i.jsx)(N.Z, { color: 'always-white' })
-                                                    ]
-                                                }),
-                                                (0, i.jsxs)('div', {
-                                                    className: I.questInfo,
-                                                    children: [
-                                                        (0, i.jsx)(c.Tooltip, {
-                                                            text: h.config.messages.questName,
-                                                            shouldShow: null != H && null != z && H < z,
-                                                            children: (e) =>
-                                                                (0, i.jsx)(c.Heading, {
-                                                                    ref: O,
-                                                                    variant: 'lg' === T ? 'heading-xxl/bold' : 'sm' === T ? 'heading-xl/bold' : 'heading-lg/bold',
-                                                                    className: I.heading,
-                                                                    ...e,
-                                                                    children: b.intl.format(b.t.EAYZAg, { questName: h.config.messages.questName })
-                                                                })
-                                                        }),
-                                                        (0, i.jsx)(c.Text, {
-                                                            variant: 'text-xs/normal',
-                                                            children: J ? b.intl.formatToPlainString(b.t.APddvL, { expirationDate: ee }) : d ? b.intl.formatToPlainString(b.t.v7xMw8, { expirationDate: $ }) : b.intl.formatToPlainString(b.t['pX+fmp'], { expirationDate: $ })
-                                                        })
-                                                    ]
+                                    'aria-hidden': !B && P,
+                                    children: (0, i.jsxs)(d.ClickableContainer, {
+                                        'aria-label': b.intl.string(b.t.dcl9MT),
+                                        onClick: en,
+                                        className: I.headerCollapsedClickableContainer,
+                                        children: [
+                                            (0, i.jsx)('div', {
+                                                className: I.headerCollapsedContentRewardWrapper,
+                                                children: (0, i.jsx)(q.Z, {
+                                                    quest: h,
+                                                    questContent: p,
+                                                    className: I.headerCollapsedRewardTile,
+                                                    location: R.dr.QUESTS_CARD
                                                 })
-                                            ]
-                                        }),
-                                        !d &&
-                                            X &&
-                                            (0, i.jsx)(L, {
-                                                quest: h,
-                                                location: g,
-                                                questContentPosition: U
+                                            }),
+                                            (0, i.jsxs)('div', {
+                                                className: I.headerCollapsedContentCopyWrapper,
+                                                children: [
+                                                    (0, i.jsxs)('div', {
+                                                        className: I.headerCollapsedContentCopyLogos,
+                                                        children: [ei, (0, i.jsx)(N.Z, { color: 'always-white' })]
+                                                    }),
+                                                    (0, i.jsx)(d.Text, {
+                                                        variant: 'text-xs/medium',
+                                                        children: K
+                                                    })
+                                                ]
                                             })
-                                    ]
-                                })
-                            ]
-                        }),
-                        (0, i.jsxs)(o.animated.div, {
-                            className: I.iconsContainer,
-                            style: {
-                                top: X
-                                    ? y.to({
-                                          range: [0, 1],
-                                          output: [A.DJ / 2 - A.Z$ / 2, A.jc]
-                                      })
-                                    : A.jc
-                            },
-                            children: [
-                                (0, i.jsx)(_.r, {
-                                    questContent: g,
-                                    quest: h,
-                                    questContentPosition: U,
-                                    shouldShowDisclosure: !0,
-                                    hideLearnMore: X,
-                                    showShareLink: !d && Y,
-                                    children: (e) =>
-                                        (0, i.jsx)(o.animated.div, {
-                                            style: {
-                                                opacity: y,
-                                                visibility: B || P ? 'inherit' : 'hidden'
-                                            },
-                                            'aria-hidden': !B && !P,
-                                            children: (0, i.jsx)(c.Clickable, {
-                                                ...e,
-                                                className: I.iconWrapper,
-                                                'aria-label': b.intl.string(b.t.DEoVWV),
-                                                children: (0, i.jsx)(c.MoreHorizontalIcon, {
-                                                    size: 'md',
-                                                    color: a.Z.WHITE
-                                                })
-                                            })
-                                        })
+                                        ]
+                                    })
                                 }),
-                                D &&
-                                    !(0, A.W_)(g) &&
-                                    (0, i.jsx)(c.Clickable, {
-                                        onClick: et,
-                                        className: I.iconWrapper,
-                                        'aria-label': P ? b.intl.string(b.t.iTcumZ) : b.intl.string(b.t.dcl9MT),
-                                        children: (0, i.jsx)(M, {
-                                            style: {
-                                                rotate: y.to({
-                                                    range: [0, 1],
-                                                    output: [0, 180]
-                                                })
-                                            },
-                                            color: a.Z.WHITE
+                            (0, i.jsxs)(o.animated.div, {
+                                ref: (e) => {
+                                    Q.current = e;
+                                },
+                                className: r()(I.headerExpandedContent, {
+                                    [I.outerContainerGiftInventory]: X,
+                                    [I.outerContainerEmbed]: Y
+                                }),
+                                style: {
+                                    opacity: y.to({
+                                        range: [0, 1],
+                                        output: [0, 1]
+                                    }),
+                                    visibility: B || P ? 'inherit' : 'hidden'
+                                },
+                                'aria-hidden': !B && !P,
+                                children: [
+                                    (0, i.jsxs)('div', {
+                                        className: I.headerExpandedWrapper,
+                                        children: [
+                                            (0, i.jsxs)('div', {
+                                                className: I.iconLogotypeContainer,
+                                                children: [ei, Y ? null : (0, i.jsx)(N.Z, { color: 'always-white' })]
+                                            }),
+                                            (0, i.jsxs)('div', {
+                                                className: I.questInfo,
+                                                children: [
+                                                    (0, i.jsx)(d.Tooltip, {
+                                                        text: h.config.messages.questName,
+                                                        shouldShow: null != H && null != W && H < W,
+                                                        children: (e) =>
+                                                            (0, i.jsx)(d.Heading, {
+                                                                ref: O,
+                                                                variant: 'lg' === T ? 'heading-xxl/bold' : 'sm' === T ? 'heading-xl/bold' : 'heading-lg/bold',
+                                                                className: I.heading,
+                                                                ...e,
+                                                                children: b.intl.format(b.t.EAYZAg, { questName: h.config.messages.questName })
+                                                            })
+                                                    }),
+                                                    (0, i.jsx)(d.Text, {
+                                                        variant: 'text-xs/normal',
+                                                        children: J ? b.intl.formatToPlainString(b.t.APddvL, { expirationDate: ee }) : c ? b.intl.formatToPlainString(b.t.v7xMw8, { expirationDate: $ }) : b.intl.formatToPlainString(b.t['pX+fmp'], { expirationDate: $ })
+                                                    })
+                                                ]
+                                            })
+                                        ]
+                                    }),
+                                    !c &&
+                                        X &&
+                                        (0, i.jsx)(Z, {
+                                            quest: h,
+                                            location: p,
+                                            questContentPosition: D
+                                        })
+                                ]
+                            })
+                        ]
+                    }),
+                    (0, i.jsxs)(o.animated.div, {
+                        className: I.iconsContainer,
+                        style: {
+                            top: X
+                                ? y.to({
+                                      range: [0, 1],
+                                      output: [A.DJ / 2 - A.Z$ / 2, A.jc]
+                                  })
+                                : A.jc
+                        },
+                        children: [
+                            (0, i.jsx)(_.r, {
+                                questContent: p,
+                                quest: h,
+                                questContentPosition: D,
+                                shouldShowDisclosure: !0,
+                                hideLearnMore: X,
+                                showShareLink: !c && Y,
+                                children: (e) =>
+                                    (0, i.jsx)(o.animated.div, {
+                                        style: {
+                                            opacity: y,
+                                            visibility: B || P ? 'inherit' : 'hidden'
+                                        },
+                                        'aria-hidden': !B && !P,
+                                        children: (0, i.jsx)(d.Clickable, {
+                                            ...e,
+                                            className: I.iconWrapper,
+                                            'aria-label': b.intl.string(b.t.DEoVWV),
+                                            children: (0, i.jsx)(d.MoreHorizontalIcon, {
+                                                size: 'md',
+                                                color: a.Z.WHITE
+                                            })
                                         })
                                     })
-                            ]
-                        })
-                    ]
-                })
-            ]
-        })
-    );
+                            }),
+                            U &&
+                                !(0, A.W_)(p) &&
+                                (0, i.jsx)(d.Clickable, {
+                                    onClick: en,
+                                    className: I.iconWrapper,
+                                    'aria-label': P ? b.intl.string(b.t.iTcumZ) : b.intl.string(b.t.dcl9MT),
+                                    children: (0, i.jsx)(M, {
+                                        style: {
+                                            rotate: y.to({
+                                                range: [0, 1],
+                                                output: [0, 180]
+                                            })
+                                        },
+                                        color: a.Z.WHITE
+                                    })
+                                })
+                        ]
+                    })
+                ]
+            })
+        ]
+    });
 };

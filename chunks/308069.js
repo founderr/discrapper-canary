@@ -17,8 +17,8 @@ var o = n(200651),
     v = n(388032),
     j = n(404846);
 t.Z = (e) => {
-    let { quest: t, expansionSpring: s, onCtxMenuSelect: _, onCtxMenuOpen: b, onCtxMenuClose: E, useReducedMotion: N, isExpanded: B, isExpansionAnimationComplete: T } = e,
-        S = r.useCallback(() => {
+    let { quest: t, expansionSpring: s, onCtxMenuSelect: _, onCtxMenuOpen: b, onCtxMenuClose: E, useReducedMotion: N, isExpanded: B, isExpansionAnimationComplete: S } = e,
+        T = r.useCallback(() => {
             (0, g.openDisclosureModal)(t, {
                 content: d.jn.QUEST_BAR_V2,
                 ctaContent: c.jZ.OPEN_DISCLOSURE
@@ -30,12 +30,12 @@ t.Z = (e) => {
                 ctaContent: c.jZ.OPEN_GAME_LINK
             });
         }, [t]),
-        y = B && T,
+        y = B && S,
         R = (0, p.vI)(t, C.dr.QUESTS_BAR, !0),
         w = (0, o.jsx)(l.Clickable, {
             onClick: A,
-            className: a()({ [j.logo]: y }),
-            children: (0, o.jsx)(m.Z, {
+            className: a()(j.clickable, { [j.logo]: y }),
+            children: (0, o.jsx)(m.ZP, {
                 quest: t,
                 withGameTile: !1
             })
@@ -113,10 +113,6 @@ t.Z = (e) => {
                           }),
                           (0, o.jsx)(i.animated.div, {
                               style: {
-                                  opacity: s.to({
-                                      range: [0, 1],
-                                      output: [1, y ? 1 : 0.8]
-                                  }),
                                   transform: (0, i.to)(
                                       [
                                           s.to({
@@ -170,7 +166,7 @@ t.Z = (e) => {
                 children: [
                     (0, o.jsxs)(l.Clickable, {
                         className: j.promotedBadge,
-                        onClick: S,
+                        onClick: T,
                         children: [
                             (0, o.jsx)(l.Text, {
                                 color: 'always-white',

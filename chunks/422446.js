@@ -16,5 +16,9 @@ e.exports = {
     rewardSubheadingIcon: 'rewardSubheadingIcon_c631eb',
     platformSelectionOptionLabelContainer: 'platformSelectionOptionLabelContainer_c631eb',
     platformSelectionOptionIcon: 'platformSelectionOptionIcon_c631eb',
-    confettiCanvas: 'confettiCanvas_c631eb'
+    confettiCanvas: 'confettiCanvas_c631eb',
+    cosponsorFooter: 'cosponsorFooter_c631eb',
+    cosponsorLogotype: 'cosponsorLogotype_c631eb',
+    cosponsorName: 'cosponsorName_c631eb',
+    cosponsorRedemptionInstructions: 'cosponsorRedemptionInstructions_c631eb'
 };

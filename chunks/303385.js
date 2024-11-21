@@ -17,20 +17,7 @@ t.Z = (e) => {
         ? null
         : (0, o.jsxs)(o.Fragment, {
               children: [
-                  (0, o.jsx)(r.animated.div, {
-                      className: u.rewardTileSpacer,
-                      style: {
-                          transform: (0, r.to)(
-                              [
-                                  n.to({
-                                      range: [0, 1],
-                                      output: [1, 24 / 38]
-                                  })
-                              ],
-                              (e) => 'scale('.concat(e, ')')
-                          )
-                      }
-                  }),
+                  (0, o.jsx)('div', { className: u.rewardTileSpacer }),
                   (0, o.jsx)(r.animated.div, {
                       className: u.rewardTileContainer,
                       style: {
@@ -60,30 +47,26 @@ t.Z = (e) => {
                           autoplay: p && !x
                       })
                   }),
-                  (0, o.jsxs)('div', {
+                  (0, o.jsxs)(r.animated.div, {
                       className: u.rewardHighlightLogoCTA,
-                      children: [
-                          (0, o.jsx)(r.animated.div, {
-                              className: u.partnerBranding,
-                              style: {
-                                  opacity: n.to({
+                      style: {
+                          transform: (0, r.to)(
+                              [
+                                  n.to({
                                       range: [0, 1],
-                                      output: [1, p ? 1 : 0.8]
+                                      output: [0, -48]
                                   }),
-                                  transform: (0, r.to)(
-                                      [
-                                          n.to({
-                                              range: [0, 1],
-                                              output: [0, -48]
-                                          }),
-                                          n.to({
-                                              range: [0, 1],
-                                              output: [0, 8]
-                                          })
-                                      ],
-                                      (e, t) => 'translate('.concat(e, 'px, ').concat(t, 'px)')
-                                  )
-                              },
+                                  n.to({
+                                      range: [0, 1],
+                                      output: [0, 8]
+                                  })
+                              ],
+                              (e, t) => 'translate('.concat(e, 'px, ').concat(t, 'px)')
+                          )
+                      },
+                      children: [
+                          (0, o.jsx)('div', {
+                              className: u.partnerBranding,
                               children: m
                           }),
                           (0, o.jsx)(r.animated.div, {

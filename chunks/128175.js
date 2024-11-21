@@ -17,6 +17,7 @@ e.exports = {
     headerCollapsedContentCopyLogos: 'headerCollapsedContentCopyLogos_af8856',
     iconLogotypeContainer: 'iconLogotypeContainer_af8856',
     partnerBranding: 'partnerBranding_af8856',
+    partnerBrandingLogotypes: 'partnerBrandingLogotypes_af8856',
     questInfo: 'questInfo_af8856',
     heading: 'heading_af8856',
     iconsContainer: 'iconsContainer_af8856',
