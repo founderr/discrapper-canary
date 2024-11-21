@@ -65,6 +65,9 @@ class D extends (r = u.ZP.Store) {
         } else if (this.isIgnored(null === (n = e.interaction_metadata) || void 0 === n ? void 0 : null === (t = n.user) || void 0 === t ? void 0 : t.id)) return !0;
         return !1;
     }
+    isUnfilteredPendingIncoming(e) {
+        return g[e] === m.OGo.PENDING_INCOMING && !this.isSpam(e) && !this.isIgnored(e);
+    }
     getPendingCount() {
         return S;
     }
