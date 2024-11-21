@@ -121,7 +121,7 @@ function h(e) {
                         (0, r.jsx)(a.Text, {
                             variant: 'text-sm/medium',
                             className: _.featureGuide,
-                            children: f.intl.format(f.t.HRppnJ, { articleLink: '' })
+                            children: f.intl.format(f.t.Hjvqr6, { articleLink: '' })
                         })
                     ]
                 })

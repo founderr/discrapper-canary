@@ -54,14 +54,14 @@ function M(e) {
 ((i = r || (r = {}))[(i.InteractionUser = 0)] = 'InteractionUser'), (i[(i.InteractionTarget = 1)] = 'InteractionTarget');
 function k(e, t, n, i, r) {
     var a, o, c;
-    let { message: u, compact: d, channel: m, isInteractionUserBlocked: f, showAvatarPopout: p, showTargetAvatarPopout: _, onClickAvatar: g, onUserContextMenu: E, onClickTargetAvatar: C, onTargetUserContextMenu: I, onPopoutRequestClose: x } = e;
+    let { message: u, compact: d, channel: m, isInteractionUserBlocked: f, isInteractionUserIgnored: p, showAvatarPopout: _, showTargetAvatarPopout: g, onClickAvatar: E, onUserContextMenu: C, onClickTargetAvatar: I, onTargetUserContextMenu: x, onPopoutRequestClose: N } = e;
     if (d && 1 === n) return null;
-    if ((d && null == u.activityInstance) || f)
+    if ((d && null == u.activityInstance) || f || p)
         return (0, l.jsx)('div', {
             className: O.replyBadge,
             children: (0, l.jsx)(M, { className: O.commandIcon })
         });
-    let N =
+    let v =
             null !==
                 (c = S.ZP.getGuildMemberAvatarURL({
                     avatar: null !== (a = i.guildMemberAvatar) && void 0 !== a ? a : void 0,
@@ -70,7 +70,7 @@ function k(e, t, n, i, r) {
                 })) && void 0 !== c
                 ? c
                 : void 0,
-        v = () =>
+        T = () =>
             (function (e) {
                 let { user: t, guildId: n, guildAvatar: i, onClick: r, onContextMenu: a, onMouseDown: o } = e;
                 return (0, l.jsx)('img', {
@@ -87,20 +87,20 @@ function k(e, t, n, i, r) {
             })({
                 user: t,
                 guildId: m.guild_id,
-                guildAvatar: N,
-                onClick: 1 === n ? C : g,
-                onContextMenu: 1 === n ? I : E
+                guildAvatar: v,
+                onClick: 1 === n ? I : E,
+                onContextMenu: 1 === n ? x : C
             }),
-        T = 1 === n ? _ : p;
-    return null != r && null != T
+        A = 1 === n ? g : _;
+    return null != r && null != A
         ? (0, l.jsx)(h.Popout, {
               renderPopout: r,
-              shouldShow: T,
+              shouldShow: A,
               position: 'right',
-              onRequestClose: x,
-              children: v
+              onRequestClose: N,
+              children: T
           })
-        : v();
+        : T();
 }
 function D(e, t, n, i, r) {
     let { message: a, channel: o, showUsernamePopout: s, showTargetUsernamePopout: c, onClickUsername: u, onUserContextMenu: d, onClickTargetUsername: m, onTargetUserContextMenu: h, onPopoutRequestClose: f } = e;

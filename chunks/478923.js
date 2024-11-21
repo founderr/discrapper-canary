@@ -102,7 +102,7 @@ function b(e) {
                                 (0, r.jsx)(s.Text, {
                                     variant: 'text-sm/medium',
                                     className: I.featureGuide,
-                                    children: v.intl.format(v.t.SHvsn5, { articleLink: '' })
+                                    children: v.intl.format(v.t.DJN6eX, { articleLink: '' })
                                 })
                             ]
                         })
