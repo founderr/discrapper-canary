@@ -374,26 +374,17 @@ function ev() {
             };
         }
         [...n, ...G].forEach((n) => {
-            var r;
-            let i =
-                    null != n.executables
-                        ? null === (r = n.executables) || void 0 === r
-                            ? void 0
-                            : r.filter((e) => {
-                                  let { os: t } = e;
-                                  return t === (0, D.getPlatformName)();
-                              })
-                        : [],
-                a = {};
-            i.forEach((e) => {
+            let r = null != n.executables ? n.executables : [],
+                i = {};
+            r.forEach((e) => {
                 let n = null != e.arguments && e.arguments.length > 0 ? e.arguments : 'null';
-                null == a[n] && (a[n] = []), a[n].push(e.name), e.isLauncher && t.add(e.name);
+                null == i[n] && (i[n] = []), i[n].push(e.name), e.isLauncher && t.add(e.name);
             }),
-                Object.keys(a).forEach((t) =>
+                Object.keys(i).forEach((t) =>
                     e.push({
                         name: n.name,
                         id: n.id,
-                        executables: a[t],
+                        executables: i[t],
                         cmdLine: 'null' !== t ? t : null
                     })
                 );
