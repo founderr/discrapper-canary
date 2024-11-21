@@ -308,6 +308,7 @@ class Y extends (r = u.ZP.Store) {
         THREAD_DELETE: F,
         GUILD_DELETE: F,
         RELATIONSHIP_ADD: V,
+        RELATIONSHIP_UPDATE: V,
         RELATIONSHIP_REMOVE: V,
         GUILD_MEMBERS_CHUNK_BATCH: function (e) {},
         THREAD_MEMBER_LIST_UPDATE: function (e) {},

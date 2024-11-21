@@ -1,36 +1,38 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return m;
     }
 }),
     n(627341);
-var r = n(200651);
-n(192379);
-var i = n(278074),
-    a = n(442837),
-    s = n(481060),
-    o = n(194359),
-    l = n(922611),
-    u = n(478923),
-    c = n(699516),
-    d = n(594174),
-    f = n(388032);
-function _(e) {
-    let { user: t, color: n, guildId: _, channelId: p, onBlock: h, onIgnore: m, onUnblock: g, location: E = 'ContextMenu' } = e,
-        { id: v } = t,
-        I = (0, a.e7)(
-            [d.default],
+var r = n(200651),
+    i = n(192379),
+    a = n(278074),
+    s = n(442837),
+    o = n(481060),
+    l = n(194359),
+    u = n(760030),
+    c = n(922611),
+    d = n(478923),
+    f = n(699516),
+    _ = n(594174),
+    p = n(51144),
+    h = n(388032);
+function m(e) {
+    let { user: t, color: n, guildId: m, channelId: g, onBlock: E, onIgnore: v, onUnblock: I, location: b = 'ContextMenu' } = e,
+        { id: T } = t,
+        S = (0, s.e7)(
+            [_.default],
             () => {
                 var e;
-                return (null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === v;
+                return (null === (e = _.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === T;
             },
-            [v]
+            [T]
         ),
-        b = (0, a.e7)([c.Z], () => c.Z.isBlocked(v), [v]),
-        T = (0, l.Do)({ location: 'use-block-user-item-web' }),
-        S = (0, i.EQ)({
-            isStealthRemediationEnabled: T,
-            isBlocked: b
+        y = (0, s.e7)([f.Z], () => f.Z.isBlocked(T), [T]),
+        A = (0, c.Do)({ location: 'use-block-user-item-web' }),
+        N = (0, a.EQ)({
+            isStealthRemediationEnabled: A,
+            isBlocked: y
         })
             .with(
                 {
@@ -46,27 +48,28 @@ function _(e) {
                 },
                 () => 'danger'
             )
-            .otherwise(() => n);
-    return I
+            .otherwise(() => n),
+        C = i.useMemo(() => p.ZP.getUserTag(t), [t]);
+    return S
         ? null
-        : (0, r.jsx)(s.MenuItem, {
+        : (0, r.jsx)(o.MenuItem, {
               id: 'block',
-              color: null != S ? S : 'default',
-              label: b ? f.intl.string(f.t.XyHpKC) : f.intl.string(f.t.l4EmaW),
-              action: b
+              color: null != N ? N : 'default',
+              label: y ? h.intl.string(h.t.XyHpKC) : h.intl.string(h.t.l4EmaW),
+              action: y
                   ? () => {
-                        null == g || g(), o.Z.unblockUser(v, { location: E });
+                        null == I || I(), l.Z.unblockUser(T, { location: b }), u.Z.showUnblockSuccessToast(C);
                     }
                   : () => {
-                        (0, s.openModal)((e) =>
-                            (0, r.jsx)(u.Z, {
+                        (0, o.openModal)((e) =>
+                            (0, r.jsx)(d.Z, {
                                 ...e,
                                 user: t,
-                                guildId: _,
-                                channelId: p,
-                                onBlock: h,
-                                onIgnore: m,
-                                location: E
+                                guildId: m,
+                                channelId: g,
+                                onBlock: E,
+                                onIgnore: v,
+                                location: b
                             })
                         );
                     }

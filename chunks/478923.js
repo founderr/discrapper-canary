@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return T;
     }
 });
 var r = n(200651);
@@ -15,24 +15,26 @@ var i = n(990547),
     d = n(699516),
     f = n(626135),
     _ = n(5192),
-    p = n(922611),
-    h = n(240515),
-    m = n(981631),
-    g = n(388032),
-    E = n(973230);
-function v(e) {
-    let { user: t, onBlock: n, onIgnore: i, location: o, disallowIgnore: f, guildId: m, channelId: v } = e,
-        I = (0, p.Do)({ location: 'confirm_block_modal_body' }),
+    p = n(51144),
+    h = n(760030),
+    m = n(922611),
+    g = n(240515),
+    E = n(981631),
+    v = n(388032),
+    I = n(973230);
+function b(e) {
+    let { user: t, onBlock: n, onIgnore: i, location: o, disallowIgnore: f, guildId: p, channelId: h } = e,
+        E = (0, m.Do)({ location: 'confirm_block_modal_body' }),
         b = (0, a.e7)([d.Z], () => d.Z.isIgnored(t.id));
-    return I
+    return E
         ? (0, r.jsxs)('div', {
-              className: E.container,
+              className: I.container,
               children: [
                   (0, r.jsxs)('div', {
-                      className: E.confirmationHeader,
+                      className: I.confirmationHeader,
                       children: [
                           (0, r.jsxs)('div', {
-                              className: E.iconContainer,
+                              className: I.iconContainer,
                               children: [
                                   (0, r.jsx)(s.Avatar, {
                                       size: s.AvatarSizes.SIZE_56,
@@ -40,7 +42,7 @@ function v(e) {
                                       'aria-hidden': !0
                                   }),
                                   (0, r.jsx)('div', {
-                                      className: E.icon,
+                                      className: I.icon,
                                       children: (0, r.jsx)(s.DenyIcon, { size: 'sm' })
                                   })
                               ]
@@ -50,12 +52,12 @@ function v(e) {
                                   (0, r.jsx)(s.Heading, {
                                       variant: 'heading-xl/bold',
                                       color: 'header-primary',
-                                      children: g.intl.format(g.t.CIbzHR, { username: _.ZP.getName(m, v, t) })
+                                      children: v.intl.format(v.t.CIbzHR, { username: _.ZP.getName(p, h, t) })
                                   }),
                                   (0, r.jsx)(s.Text, {
                                       variant: 'text-md/medium',
                                       color: 'header-secondary',
-                                      children: g.intl.string(g.t.S70joq)
+                                      children: v.intl.string(v.t.S70joq)
                                   })
                               ]
                           })
@@ -65,30 +67,30 @@ function v(e) {
                   f || b
                       ? null
                       : (0, r.jsxs)('div', {
-                            className: E.otherOptions,
+                            className: I.otherOptions,
                             children: [
                                 (0, r.jsx)(s.Text, {
                                     variant: 'text-sm/semibold',
                                     color: 'header-secondary',
-                                    children: g.intl.string(g.t['+BJTcH'])
+                                    children: v.intl.string(v.t['+BJTcH'])
                                 }),
                                 (0, r.jsx)('div', {
-                                    className: E.row,
+                                    className: I.row,
                                     children: (0, r.jsx)(c.Z, {
-                                        title: g.intl.string(g.t.hC8tcX),
-                                        description: g.intl.string(g.t.If89rK),
+                                        title: v.intl.string(v.t.hC8tcX),
+                                        description: v.intl.string(v.t.If89rK),
                                         titleVariant: 'text-md/medium',
                                         descriptionVariant: 'text-xs/medium',
-                                        buttonText: g.intl.string(g.t.mxJOd3),
+                                        buttonText: v.intl.string(v.t.mxJOd3),
                                         buttonColor: s.ButtonColors.PRIMARY,
                                         onButtonPress: () => {
                                             (0, s.closeAllModals)(),
                                                 (0, s.openModal)((e) =>
-                                                    (0, r.jsx)(h.Z, {
+                                                    (0, r.jsx)(g.Z, {
                                                         ...e,
                                                         user: t,
-                                                        guildId: m,
-                                                        channelId: v,
+                                                        guildId: p,
+                                                        channelId: h,
                                                         onIgnore: i,
                                                         onBlock: n,
                                                         location: o
@@ -99,8 +101,8 @@ function v(e) {
                                 }),
                                 (0, r.jsx)(s.Text, {
                                     variant: 'text-sm/medium',
-                                    className: E.featureGuide,
-                                    children: g.intl.format(g.t.SHvsn5, { articleLink: '' })
+                                    className: I.featureGuide,
+                                    children: v.intl.format(v.t.SHvsn5, { articleLink: '' })
                                 })
                             ]
                         })
@@ -110,29 +112,30 @@ function v(e) {
           ? (0, r.jsx)(u.Z, {})
           : (0, r.jsx)(s.Text, {
                 variant: 'text-md/normal',
-                children: g.intl.format(g.t.pegItL, { name: t.username })
+                children: v.intl.format(v.t.pegItL, { name: t.username })
             });
 }
-function I(e) {
-    let { user: t, onBlock: n, onCancel: a, onIgnore: l, location: u = 'ContextMenu', disallowIgnore: c, guildId: d, channelId: _, ...h } = e,
-        E = (0, p.Do)({ location: 'block-confirm-modal' });
+function T(e) {
+    let { user: t, onBlock: n, onCancel: a, onIgnore: l, location: u = 'ContextMenu', disallowIgnore: c, guildId: d, channelId: _, ...g } = e,
+        I = (0, m.Do)({ location: 'block-confirm-modal' });
     return (0, r.jsx)(s.ConfirmModal, {
-        header: E ? null : g.intl.formatToPlainString(g.t.x5pOn5, { name: t.username }),
-        confirmText: g.intl.string(g.t.l4EmaW),
-        cancelText: E ? g.intl.string(g.t['ETE/oK']) : g.intl.string(g.t['eN6+rK']),
+        header: I ? null : v.intl.formatToPlainString(v.t.x5pOn5, { name: t.username }),
+        confirmText: v.intl.string(v.t.l4EmaW),
+        cancelText: I ? v.intl.string(v.t['ETE/oK']) : v.intl.string(v.t['eN6+rK']),
         onCancel: a,
         onConfirm: () => {
             null == n || n(),
                 o.Z.addRelationship({
                     userId: t.id,
                     context: { location: u },
-                    type: m.OGo.BLOCKED
+                    type: E.OGo.BLOCKED
                 }),
-                f.default.track(m.rMx.BLOCK_USER_CONFIRMED);
+                f.default.track(E.rMx.BLOCK_USER_CONFIRMED),
+                h.Z.showBlockSuccessToast(p.ZP.getUserTag(t));
         },
         impression: { impressionName: i.ImpressionNames.BLOCK_USER_CONFIRMATION },
-        ...h,
-        children: (0, r.jsx)(v, {
+        ...g,
+        children: (0, r.jsx)(b, {
             user: t,
             guildId: d,
             channelId: _,

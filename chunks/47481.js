@@ -59,6 +59,7 @@ function u(e) {
             let L = (function (e, t, n) {
                 if (i.V.NON_COLLAPSIBLE.has(t.type));
                 else if (t.blocked) return d.ys_.MESSAGE_GROUP_BLOCKED;
+                else if (t.ignored) return d.ys_.MESSAGE_GROUP_IGNORED;
                 else if ((0, o.P1)(e) && n) return d.ys_.MESSAGE_GROUP_SPAMMER;
                 return null;
             })(h, e, M && f);
