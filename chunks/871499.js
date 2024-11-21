@@ -1,38 +1,39 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return g;
     },
     d: function () {
-        return g;
+        return v;
     }
 });
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    a = n.n(i),
-    s = n(481060),
-    o = n(131388),
-    l = n(686546),
-    u = n(70097),
-    c = n(259580),
-    d = n(618158),
-    f = n(362267),
-    _ = n(388032),
-    p = n(3910);
-function h(e) {
-    let { label: t, onClick: n, onKeyDown: i, onMouseEnter: o, onMouseLeave: l, onContextMenu: u, className: c, wrapperClassName: f, iconClassName: _, iconColor: h = 'currentColor', iconComponent: m, themeable: g = !1, disabled: E = !1, isActive: v = !1, tooltipPosition: b = 'top', shouldShowTooltip: I = !0, forceTooltipOpen: T = !1, buttonRef: S, grow: y, 'aria-label': A } = e;
-    return (0, r.jsx)(d.Z, {
-        children: (0, r.jsx)(s.Tooltip, {
+var r = n(200651),
+    i = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(481060),
+    l = n(131388),
+    u = n(686546),
+    c = n(70097),
+    d = n(259580),
+    f = n(937995),
+    _ = n(618158),
+    p = n(362267),
+    h = n(388032),
+    m = n(3910);
+function g(e) {
+    let { label: t, onClick: n, onKeyDown: i, onMouseEnter: a, onMouseLeave: l, onContextMenu: u, className: c, wrapperClassName: d, iconClassName: f, iconColor: p = 'currentColor', iconComponent: h, themeable: g = !1, disabled: E = !1, isActive: v = !1, tooltipPosition: b = 'top', shouldShowTooltip: I = !0, forceTooltipOpen: T = !1, buttonRef: S, grow: y, 'aria-label': A } = e;
+    return (0, r.jsx)(_.Z, {
+        children: (0, r.jsx)(o.Tooltip, {
             position: b,
             text: t,
             'aria-label': A,
             shouldShow: I,
             forceOpen: T,
             children: (e) => {
-                let { onClick: t, onContextMenu: d, onMouseEnter: b, onMouseLeave: I, ...T } = e;
-                return (0, r.jsx)(s.Button, {
-                    look: s.Button.Looks.BLANK,
-                    size: s.Button.Sizes.NONE,
+                let { onClick: t, onContextMenu: _, onMouseEnter: b, onMouseLeave: I, ...T } = e;
+                return (0, r.jsx)(o.Button, {
+                    look: o.Button.Looks.BLANK,
+                    size: o.Button.Sizes.NONE,
                     onKeyDown: (e) => {
                         null == i || i(e);
                     },
@@ -40,81 +41,87 @@ function h(e) {
                         null == t || t(), null == n || n(e);
                     },
                     onMouseEnter: (e) => {
-                        null == b || b(), null == o || o(e);
+                        null == b || b(), null == a || a(e);
                     },
                     onMouseLeave: (e) => {
                         null == I || I(), null == l || l(e);
                     },
                     onContextMenu: (e) => {
-                        null == d || d(), null == u || u(e);
+                        null == _ || _(), null == u || u(e);
                     },
                     onFocus: (e) => {
-                        null == b || b(), null == o || o(e);
+                        null == b || b(), null == a || a(e);
                     },
                     onBlur: (e) => {
                         null == I || I(), null == l || l(e);
                     },
                     disabled: E,
-                    innerClassName: p.lineHeightReset,
-                    className: a()({ [p.active]: v }, c),
-                    wrapperClassName: f,
+                    innerClassName: m.lineHeightReset,
+                    className: s()({ [m.active]: v }, c),
+                    wrapperClassName: d,
                     buttonRef: S,
                     grow: y,
                     'aria-label': A,
                     ...T,
-                    children: (0, r.jsx)(m, {
-                        className: a()(p.controlIcon, _, {
-                            [p.themeable]: g,
-                            [p.active]: v
+                    children: (0, r.jsx)(h, {
+                        className: s()(m.controlIcon, f, {
+                            [m.themeable]: g,
+                            [m.active]: v
                         }),
-                        color: h
+                        color: p
                     })
                 });
             }
         })
     });
 }
-let m = {
-    red: p.red,
-    white: p.white,
-    green: p.green,
-    yellow: p.yellow,
-    primaryDark: p.primaryDark,
-    primaryLight: p.primaryLight,
-    activeLight: p.activeLight
+let E = {
+    red: m.red,
+    white: m.white,
+    green: m.green,
+    yellow: m.yellow,
+    primaryDark: m.primaryDark,
+    primaryLight: m.primaryLight,
+    activeLight: m.activeLight
 };
-function g(e) {
-    let { color: t, isActive: n = !1, className: i, iconClassName: g, onPopoutClick: E, popoutOpen: v = !1, premiumGlow: b = !1, ...I } = e,
-        T = (0, f.Z)(t, n),
-        S = (0, o.Z)('(max-width: 456px)'),
-        y = (0, r.jsx)(h, {
-            ...I,
-            grow: !1,
-            onContextMenu: E,
-            iconClassName: a()(g, p.centerIcon),
-            className: a()(S ? i : null, p.staticButton, p.centerButton, m[T])
-        });
-    return S
-        ? y
+function v(e) {
+    let { color: t, isActive: n = !1, className: a, iconClassName: v, onPopoutClick: b, popoutOpen: I = !1, premiumGlow: T = !1, ...S } = e,
+        y = (0, p.Z)(t, n),
+        A = (0, l.Z)('(max-width: 456px)'),
+        N = i.useRef(null),
+        C = i.useContext(f.h9);
+    i.useEffect(() => {
+        null != N.current && (C ? N.current.pause() : N.current.play());
+    }, [C]);
+    let R = (0, r.jsx)(g, {
+        ...S,
+        grow: !1,
+        onContextMenu: b,
+        iconClassName: s()(v, m.centerIcon),
+        className: s()(A ? a : null, m.staticButton, m.centerButton, E[y])
+    });
+    return A
+        ? R
         : (0, r.jsxs)('div', {
-              className: a()(i, p.contextMenuContainer),
+              className: s()(a, m.contextMenuContainer),
               children: [
                   (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, r.jsx)(l.ZP, {
-                              className: a()(p.buttonMask),
-                              mask: null == E ? null : l.QS.CHANNEL_CALL_CONTROL_BUTTON,
+                          (0, r.jsx)(u.ZP, {
+                              className: s()(m.buttonMask),
+                              mask: null == b ? null : u.QS.CHANNEL_CALL_CONTROL_BUTTON,
                               width: 56,
                               height: 56,
-                              children: y
+                              children: R
                           }),
-                          b &&
+                          T &&
                               (0, r.jsx)('div', {
-                                  className: p.glow,
-                                  children: (0, r.jsx)(u.Z, {
+                                  className: m.glow,
+                                  children: (0, r.jsx)(c.Z, {
+                                      ref: N,
                                       loop: !0,
                                       autoPlay: !0,
-                                      className: p.glowVideo,
+                                      className: m.glowVideo,
                                       children: (0, r.jsx)('source', {
                                           src: 'https://cdn.discordapp.com/assets/content/3988d11030317ce331a0b327cac18a9c02a693041f9a7695bb13b3d4cb486e11.webm',
                                           type: 'video/webm'
@@ -123,14 +130,14 @@ function g(e) {
                               })
                       ]
                   }),
-                  null != E
-                      ? (0, r.jsx)(d.Z, {
-                            children: (0, r.jsx)(s.Clickable, {
-                                'aria-label': _.intl.string(_.t.PdRCRk),
-                                onClick: E,
-                                onContextMenu: E,
-                                className: a()(p.contextMenuNub, m[T], { [p.active]: v }),
-                                children: (0, r.jsx)(c.Z, { className: a()(p.contextMenuCaret, { [p.open]: v }) })
+                  null != b
+                      ? (0, r.jsx)(_.Z, {
+                            children: (0, r.jsx)(o.Clickable, {
+                                'aria-label': h.intl.string(h.t.PdRCRk),
+                                onClick: b,
+                                onContextMenu: b,
+                                className: s()(m.contextMenuNub, E[y], { [m.active]: I }),
+                                children: (0, r.jsx)(d.Z, { className: s()(m.contextMenuCaret, { [m.open]: I }) })
                             })
                         })
                       : null
