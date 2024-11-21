@@ -77,7 +77,6 @@ function _(e) {
                       buyer: r,
                       onEnd: I
                   }),
-                  '; (',
                   (0, i.jsx)(f.Z, {
                       channel: t,
                       buyer: r,
@@ -86,8 +85,7 @@ function _(e) {
                           x ? Z(g.L.DISMISS) : C(!1);
                       },
                       render: h || b === o.z.HD_STREAMING_POTION_BANNER
-                  }),
-                  ')'
+                  })
               ]
           });
 }
