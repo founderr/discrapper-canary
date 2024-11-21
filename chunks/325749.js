@@ -16,53 +16,52 @@ var i = t(200651),
     _ = t(665149),
     f = t(726721),
     p = t(610394),
-    v = t(788983),
-    h = t(390322),
-    b = t(961048),
-    m = t(871499),
-    C = t(786915),
-    x = t(592125),
-    g = t(271383),
-    I = t(594174),
-    k = t(51144),
-    Z = t(145597),
-    j = t(214629),
-    N = t(317381),
-    S = t(574952),
-    y = t(884338),
-    z = t(473179),
-    A = t(981631),
-    E = t(388032),
-    W = t(114195);
-let P = y.u.SIZE_24;
+    v = t(390322),
+    h = t(961048),
+    b = t(871499),
+    m = t(786915),
+    C = t(592125),
+    x = t(271383),
+    g = t(594174),
+    I = t(51144),
+    k = t(145597),
+    Z = t(214629),
+    j = t(317381),
+    N = t(574952),
+    S = t(884338),
+    y = t(473179),
+    z = t(981631),
+    A = t(388032),
+    E = t(114195);
+let W = S.u.SIZE_24;
 function B(e) {
     let { applicationId: n, channelId: t } = e,
         a = (0, c.e7)([u.Z], () => u.Z.getApplication(n)),
-        B = (0, c.e7)([N.ZP], () => N.ZP.getSelfEmbeddedActivities().get(n)),
-        w = (0, c.e7)([x.Z], () => x.Z.getChannel(t)),
-        L = (0, c.Wu)(
-            [g.ZP],
+        B = (0, c.e7)([j.ZP], () => j.ZP.getSelfEmbeddedActivities().get(n)),
+        P = (0, c.e7)([C.Z], () => C.Z.getChannel(t)),
+        w = (0, c.Wu)(
+            [x.ZP],
             () => {
                 var e;
-                return null == w || null == B ? [] : Array.from(null !== (e = B.userIds) && void 0 !== e ? e : []).map((e) => g.ZP.getMember(w.guild_id, e));
+                return null == P || null == B ? [] : Array.from(null !== (e = B.userIds) && void 0 !== e ? e : []).map((e) => x.ZP.getMember(P.guild_id, e));
             },
-            [B, w]
+            [B, P]
         ),
-        T = o.useMemo(() => {
+        L = o.useMemo(() => {
             let e = new Map();
             return (
-                L.forEach((n) => {
+                w.forEach((n) => {
                     null != n && void 0 !== n && e.set(n.userId, n);
                 }),
                 e
             );
-        }, [L]),
+        }, [w]),
         R = o.useCallback(
             (e, n) => {
                 var t;
                 if (null == e || void 0 === e || void 0 === n) return null;
-                let o = T.get(e.id),
-                    a = null !== (t = null == o ? void 0 : o.nick) && void 0 !== t ? t : k.ZP.getName(e);
+                let o = L.get(e.id),
+                    a = null !== (t = null == o ? void 0 : o.nick) && void 0 !== t ? t : I.ZP.getName(e);
                 return (0, i.jsx)(
                     l.TooltipContainer,
                     {
@@ -71,9 +70,9 @@ function B(e) {
                         children: (0, i.jsx)(
                             'img',
                             {
-                                src: e.getAvatarURL(n.guild_id, P),
+                                src: e.getAvatarURL(n.guild_id, W),
                                 alt: a,
-                                className: W.avatar
+                                className: E.avatar
                             },
                             e.id
                         )
@@ -81,53 +80,52 @@ function B(e) {
                     e.id
                 );
             },
+            [L]
+        ),
+        T = null == B ? void 0 : B.userIds,
+        O = (0, c.Wu)(
+            [g.default],
+            () =>
+                Array.from(null != T ? T : [])
+                    .map((e) => g.default.getUser(e))
+                    .filter((e) => null != e && void 0 !== e),
             [T]
         ),
-        O = null == B ? void 0 : B.userIds,
-        U = (0, c.Wu)(
-            [I.default],
-            () =>
-                Array.from(null != O ? O : [])
-                    .map((e) => I.default.getUser(e))
-                    .filter((e) => null != e && void 0 !== e),
-            [O]
-        ),
         D = o.useCallback(() => {
-            (0, S.Z)().leaveActivity({
+            (0, N.Z)().leaveActivity({
                 channelId: t,
                 applicationId: n
-            }),
-                (0, v.xv)(A.KJ3.ACTIVITY_POPOUT);
+            });
         }, [t, n]),
-        M = f.Z.useExperiment({ location: 'activity_popout_overflow_menu' }, { autoTrackExposure: !1 }).enabled,
-        F = o.useCallback(() => {
-            let e = (0, Z.QF)();
+        U = f.Z.useExperiment({ location: 'activity_popout_overflow_menu' }, { autoTrackExposure: !1 }).enabled,
+        M = o.useCallback(() => {
+            let e = (0, k.QF)();
             d.Z.setInputLocked(!p.Z.isInputLocked(e), e);
         }, []),
-        K = (0, j.PR)();
-    return null == a || null == t || null == w
+        F = (0, Z.PR)();
+    return null == a || null == t || null == P
         ? null
         : (0, i.jsx)(l.ThemeProvider, {
-              theme: A.BRd.DARK,
+              theme: z.BRd.DARK,
               children: (e) =>
                   (0, i.jsxs)('div', {
-                      className: r()(W.container, e),
+                      className: r()(E.container, e),
                       children: [
                           (0, i.jsxs)('div', {
-                              className: r()(W.headerSection, W.headerSectionLeft),
+                              className: r()(E.headerSection, E.headerSectionLeft),
                               children: [
                                   (0, i.jsx)('div', {
-                                      className: W.leaveIconContainer,
+                                      className: E.leaveIconContainer,
                                       children: (0, i.jsx)(_.ZP.Icon, {
                                           onClick: D,
                                           icon: l.XSmallIcon,
-                                          tooltip: E.intl.string(E.t['R/FK4O'])
+                                          tooltip: A.intl.string(A.t['R/FK4O'])
                                       })
                                   }),
                                   (0, i.jsx)(s.Z, {
                                       application: a,
                                       size: 24,
-                                      className: W.appIcon
+                                      className: E.appIcon
                                   }),
                                   (0, i.jsx)(l.Text, {
                                       variant: 'text-md/normal',
@@ -135,50 +133,50 @@ function B(e) {
                                       children: a.name
                                   }),
                                   (0, i.jsx)('div', {
-                                      className: W.dotSpacer,
+                                      className: E.dotSpacer,
                                       children: (0, i.jsx)(l.Text, {
                                           variant: 'text-md/normal',
                                           color: 'text-muted',
                                           children: '.'
                                       })
                                   }),
-                                  (0, i.jsx)(y.Z, {
+                                  (0, i.jsx)(S.Z, {
                                       renderIcon: !1,
-                                      users: U,
-                                      size: P,
+                                      users: O,
+                                      size: W,
                                       max: 6,
-                                      className: W.userAvatars,
-                                      renderUser: (e) => R(e, w)
+                                      className: E.userAvatars,
+                                      renderUser: (e) => R(e, P)
                                   })
                               ]
                           }),
                           (0, i.jsx)('div', {
-                              className: r()(W.headerSection, W.headerSectionRight),
+                              className: r()(E.headerSection, E.headerSectionRight),
                               children: (0, i.jsxs)('div', {
-                                  className: W.actionButtonsContainer,
+                                  className: E.actionButtonsContainer,
                                   children: [
-                                      (0, i.jsx)(C.Z, {
-                                          appContext: A.IlC.POPOUT,
+                                      (0, i.jsx)(m.Z, {
+                                          appContext: z.IlC.POPOUT,
                                           applicationId: n,
-                                          channel: w,
+                                          channel: P,
                                           shouldPrioritizeGroupPlusIcon: !0
                                       }),
-                                      K
-                                          ? (0, i.jsx)(m.Z, {
-                                                onClick: F,
+                                      F
+                                          ? (0, i.jsx)(b.Z, {
+                                                onClick: M,
                                                 iconComponent: l.WindowTopOutlineIcon,
-                                                label: E.intl.string(E.t.mseZsL)
+                                                label: A.intl.string(A.t.mseZsL)
                                             })
                                           : null,
-                                      M &&
+                                      U &&
                                           (0, i.jsx)(
                                               l.Popout,
                                               {
                                                   position: 'bottom',
                                                   renderPopout: (e) => {
                                                       let { closePopout: n } = e;
-                                                      return (0, i.jsx)(h.Z, {
-                                                          children: (0, i.jsx)(z.Z, {
+                                                      return (0, i.jsx)(v.Z, {
+                                                          children: (0, i.jsx)(y.Z, {
                                                               application: a,
                                                               onClose: n
                                                           })
@@ -186,7 +184,7 @@ function B(e) {
                                                   },
                                                   children: (e, n) => {
                                                       let { isShown: t } = n;
-                                                      return (0, o.createElement)(b.Z, {
+                                                      return (0, o.createElement)(h.Z, {
                                                           ...e,
                                                           key: 'more-options',
                                                           isActive: t
