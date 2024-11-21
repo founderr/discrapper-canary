@@ -1,4 +1,7 @@
 n.d(t, {
+    X: function () {
+        return u;
+    },
     j: function () {
         return i;
     }
@@ -21,4 +24,5 @@ let r = (0, n(818083).B)({
             }
         ]
     }),
-    i = (e) => r.useExperiment({ location: e }).enabled;
+    i = (e) => r.useExperiment({ location: e }).enabled,
+    u = (e) => r.getCurrentConfig({ location: e }).enabled;

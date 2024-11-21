@@ -1,24 +1,27 @@
 n.d(t, {
     J: function () {
-        return y;
+        return M;
     },
     QC: function () {
-        return R;
+        return O;
     },
     R2: function () {
-        return N;
-    },
-    T$: function () {
-        return g;
-    },
-    Uu: function () {
         return L;
     },
-    Zm: function () {
+    T$: function () {
         return v;
     },
-    t6: function () {
+    Uu: function () {
+        return R;
+    },
+    Zm: function () {
         return A;
+    },
+    mx: function () {
+        return b;
+    },
+    t6: function () {
+        return y;
     }
 }),
     n(47120);
@@ -35,13 +38,15 @@ var r = n(192379),
     S = n(158776),
     f = n(959457),
     _ = n(594174),
-    p = n(997323),
-    C = n(120619),
-    T = n(215339),
-    h = n(578976),
-    m = n(37113);
-let I = new l.Yd('HDStreamingConsumableModal'),
-    g = (e) => {
+    p = n(626135),
+    C = n(997323),
+    T = n(120619),
+    h = n(215339),
+    m = n(578976),
+    I = n(981631),
+    g = n(37113);
+let N = new l.Yd('HDStreamingConsumableModal'),
+    v = (e) => {
         let t = (0, s.e7)([c.Z], () => c.Z.getGuild(e.guild_id)),
             n = (0, s.e7)([_.default], () => {
                 var e;
@@ -64,7 +69,7 @@ let I = new l.Yd('HDStreamingConsumableModal'),
                             r = f.Z.getRTCConnection(n);
                         return null == r ? void 0 : null === (t = r.getVideoStats()) || void 0 === t ? void 0 : t.inbound_bitrate_estimate_percentile99;
                     });
-                    I.info('Setting bitrates', e), p(e), o(Date.now());
+                    N.info('Setting bitrates', e), p(e), o(Date.now());
                 }
             },
             [l, i]
@@ -72,21 +77,21 @@ let I = new l.Yd('HDStreamingConsumableModal'),
         let C = (0, r.useMemo)(() => 0 === E.length || (!E.some((e) => null == e || e < 3500000) && !0), [E]);
         return null != t && 0 === t.premiumTier && C && !u;
     },
-    v = (e, t) => {
+    A = (e, t) => {
         let n = (0, s.e7)([_.default], () => {
                 var e;
                 return null === (e = _.default.getCurrentUser()) || void 0 === e ? void 0 : e.id;
             }),
             r = (0, s.Wu)([d.Z], () => d.Z.getAllActiveStreamsForChannel(e.id).filter((e) => e.ownerId !== n)),
-            i = (0, T.j)(t),
-            u = g(e);
+            i = (0, h.j)(t),
+            u = v(e);
         return i && u && r.length > 0;
     };
-function N(e) {
-    let [t, n, i] = (0, s.Wu)([C.Z], () => [C.Z.isFetchingPrice(e), C.Z.getPrice(e), C.Z.getErrored(e)]);
+function L(e) {
+    let [t, n, i] = (0, s.Wu)([T.Z], () => [T.Z.isFetchingPrice(e), T.Z.getPrice(e), T.Z.getErrored(e)]);
     return (
         (0, r.useEffect)(() => {
-            !t && null == n && !i && (0, p.Gq)(e);
+            !t && null == n && !i && (0, C.Gq)(e);
         }, [t, n, i, e]),
         {
             price: n,
@@ -95,11 +100,11 @@ function N(e) {
         }
     );
 }
-function A(e) {
-    let [t, n, i, u] = (0, s.Wu)([C.Z], () => [C.Z.isEntitlementFetched(e), C.Z.isEntitlementFetching(e), C.Z.getEntitlement(e), C.Z.getErrored(e)]);
+function y(e) {
+    let [t, n, i, u] = (0, s.Wu)([T.Z], () => [T.Z.isEntitlementFetched(e), T.Z.isEntitlementFetching(e), T.Z.getEntitlement(e), T.Z.getErrored(e)]);
     return (
         (0, r.useEffect)(() => {
-            !t && !n && (0, p.gA)(e);
+            !t && !n && (0, C.gA)(e);
         }, [t, n, e]),
         {
             entitlement: i,
@@ -108,7 +113,7 @@ function A(e) {
         }
     );
 }
-function y(e, t) {
+function M(e, t) {
     let n = (0, r.useRef)(!0),
         i = e.hdStreamingUntil;
     (0, r.useEffect)(() => {
@@ -119,18 +124,21 @@ function y(e, t) {
         if (null != i && new Date(i) > new Date()) return t();
     }, [i]);
 }
-function L(e) {
-    y(e, () => {
+function R(e) {
+    M(e, () => {
         let t = d.Z.getCurrentUserActiveStream();
         if (null != t && t.channelId === e.id) {
             let e = E.Z.getState().goLiveSource;
-            (0, p.x8)(null == e ? void 0 : e.quality);
-            let t = (0, h.s)(m.LY.RESOLUTION_1440, m.ws.FPS_60, e);
+            (0, C.x8)(null == e ? void 0 : e.quality);
+            let t = (0, m.s)(g.LY.RESOLUTION_1440, g.ws.FPS_60, e);
             o.Z.setGoLiveSource(t);
         }
     });
 }
-function R() {
+function O() {
     var e;
     return 'safari' === (null !== (e = u().name) && void 0 !== e ? e : 'unknown').toLowerCase();
+}
+function b(e) {
+    p.default.track(I.rMx.CONSUMABLE_HD_STREAMING_ENTRYPOINT, { location: e });
 }

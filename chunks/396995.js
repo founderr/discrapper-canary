@@ -28,19 +28,7 @@ function u(e) {
                 ]
             }),
             (0, l.jsxs)(i.Clickable, {
-                onClick: () => {
-                    (0, i.openModalLazy)(
-                        async () => {
-                            let { default: e } = await Promise.resolve().then(n.bind(n, 447564));
-                            return (n) =>
-                                (0, l.jsx)(e, {
-                                    channel: t,
-                                    ...n
-                                });
-                        },
-                        { modalKey: a.HD_STREAMING_POTION_MODAL_KEY }
-                    );
-                },
+                onClick: () => (0, a.openHDPotionModal)(t, 'HDStreamingPotionGoLiveModalBar'),
                 className: d.button,
                 children: [
                     (0, l.jsxs)('div', {

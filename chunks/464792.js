@@ -13,9 +13,9 @@ var l = n(120356),
     c = n(388032),
     d = n(85932);
 function u(e) {
-    let { channel: t, onClick: l, hidden: s, onDismiss: u } = e;
+    let { channel: t, onClick: n, hidden: l, onDismiss: s } = e;
     return (0, i.jsxs)('div', {
-        className: r()(d.popoutContainer, { [d.hidden]: s }),
+        className: r()(d.popoutContainer, { [d.hidden]: l }),
         children: [
             (0, i.jsx)('img', {
                 className: d.image,
@@ -28,7 +28,7 @@ function u(e) {
                 look: a.Button.Looks.BLANK,
                 size: a.Button.Sizes.NONE,
                 onClick: () => {
-                    u();
+                    s();
                 },
                 children: (0, i.jsx)(a.XSmallIcon, {
                     size: 'xs',
@@ -56,18 +56,7 @@ function u(e) {
                         className: d.buttonContainer,
                         children: (0, i.jsx)(a.Button, {
                             onClick: () => {
-                                (0, a.openModalLazy)(
-                                    async () => {
-                                        let { default: e } = await Promise.resolve().then(n.bind(n, 447564));
-                                        return (n) =>
-                                            (0, i.jsx)(e, {
-                                                channel: t,
-                                                ...n
-                                            });
-                                    },
-                                    { modalKey: o.HD_STREAMING_POTION_MODAL_KEY }
-                                ),
-                                    l();
+                                (0, o.openHDPotionModal)(t, 'HDStreamingPotionUpsellPopout'), n();
                             },
                             color: a.ButtonColors.WHITE,
                             className: d.button,

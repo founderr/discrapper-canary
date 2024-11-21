@@ -1,9 +1,12 @@
 n.r(t),
     n.d(t, {
         HD_STREAMING_POTION_MODAL_KEY: function () {
-            return w;
+            return j;
         },
         default: function () {
+            return w;
+        },
+        openHDPotionModal: function () {
             return E;
         }
     }),
@@ -29,7 +32,21 @@ var r,
     C = n(388032),
     I = n(912568),
     S = n(99713);
-function E(e) {
+let E = (e, t) => {
+    (0, p.mx)(t),
+        (0, c.openModalLazy)(
+            async () => {
+                let { default: t } = await Promise.resolve().then(n.bind(n, 447564));
+                return (n) =>
+                    (0, o.jsx)(t, {
+                        channel: e,
+                        ...n
+                    });
+            },
+            { modalKey: j }
+        );
+};
+function w(e) {
     let { transitionState: t, channel: n } = e;
     return (0, o.jsx)(c.ModalRoot, {
         size: c.ModalSize.DYNAMIC,
@@ -37,7 +54,7 @@ function E(e) {
         children: (0, o.jsx)(A, { channel: n })
     });
 }
-let w = 'HD_STREAMING_POTION_MODAL_KEY';
+let j = 'HD_STREAMING_POTION_MODAL_KEY';
 function A(e) {
     let { channel: t } = e,
         n = (0, p.T$)(t),
@@ -66,37 +83,37 @@ function A(e) {
                 }),
             [S]
         ),
-        A = (0, a.useMemo)(
+        j = (0, a.useMemo)(
             () => () => {
                 (0, f.Zu)(t.id, x.FX), (0, c.closeAllModals)();
             },
             [t.id]
         ),
-        y = (0, a.useMemo)(() => () => (t.isHDStreamSplashed ? 4 : n ? ((null == m ? void 0 : m.type) === g.qc2.DEVELOPER_GIFT ? 1 : E ? 2 : 0) : 3), [t.isHDStreamSplashed, n, null == m ? void 0 : m.type, E]),
-        N = (0, a.useMemo)(() => y(), [y]);
-    return (0, o.jsx)(j, {
+        A = (0, a.useMemo)(() => () => (t.isHDStreamSplashed ? 4 : n ? ((null == m ? void 0 : m.type) === g.qc2.DEVELOPER_GIFT ? 1 : E ? 2 : 0) : 3), [t.isHDStreamSplashed, n, null == m ? void 0 : m.type, E]),
+        N = (0, a.useMemo)(() => A(), [A]);
+    return (0, o.jsx)(y, {
         channel: t,
         buttonState: N,
         price: s,
         onActionClick: () => {
-            i(!0), (E ? A : w)();
+            i(!0), (E ? j : w)();
         },
         loading: v || !_
     });
 }
-let j = (e) => {
+let y = (e) => {
         let { channel: t, buttonState: n, price: r, onActionClick: i, loading: a } = e;
         return a
-            ? (0, o.jsx)(O, {})
+            ? (0, o.jsx)(R, {})
             : null == r
-              ? (0, o.jsx)(M, {})
+              ? (0, o.jsx)(O, {})
               : (0, o.jsxs)(o.Fragment, {
                     children: [
                         (0, o.jsxs)('div', {
                             className: I.modal,
-                            children: [(0, o.jsx)(y, {}), (0, o.jsx)(N, { channel: t })]
+                            children: [(0, o.jsx)(N, {}), (0, o.jsx)(P, { channel: t })]
                         }),
-                        (0, o.jsx)(P, {
+                        (0, o.jsx)(T, {
                             buttonState: n,
                             price: r,
                             onActionClick: i
@@ -104,13 +121,13 @@ let j = (e) => {
                     ]
                 });
     },
-    y = () =>
+    N = () =>
         (0, o.jsx)('img', {
             className: I.image,
             src: 'https://cdn.discordapp.com/assets/premium/roadblocks/hd_streaming.png',
             alt: C.intl.string(C.t.DdigcX)
         }),
-    N = (e) => {
+    P = (e) => {
         let { channel: t } = e;
         return (0, o.jsxs)(o.Fragment, {
             children: [
@@ -158,19 +175,19 @@ let j = (e) => {
         });
     };
 ((i = r || (r = {}))[(i.BUY = 0)] = 'BUY'), (i[(i.REDEEM = 1)] = 'REDEEM'), (i[(i.ACTIVATE = 2)] = 'ACTIVATE'), (i[(i.INELIGIBLE = 3)] = 'INELIGIBLE'), (i[(i.ALREADY_ACTIVE = 4)] = 'ALREADY_ACTIVE');
-let P = (e) => {
+let T = (e) => {
         let { buttonState: t, price: n, onActionClick: r } = e;
         return (0, o.jsxs)('div', {
             className: I.footer,
             children: [
                 (0, o.jsx)(c.Button, {
                     onClick: () => {
-                        (0, c.closeModal)(w);
+                        (0, c.closeModal)(j);
                     },
                     color: c.Button.Colors.PRIMARY,
                     children: C.intl.string(C.t.Avt5KS)
                 }),
-                (0, o.jsx)(T, {
+                (0, o.jsx)(M, {
                     buttonState: t,
                     price: n,
                     onActionClick: r
@@ -178,7 +195,7 @@ let P = (e) => {
             ]
         });
     },
-    T = (e) => {
+    M = (e) => {
         let { buttonState: t, price: n, onActionClick: r } = e,
             i = C.intl.formatToPlainString(C.t.S9LAdX, { price: (0, m.T4)(n.amount, n.currency) });
         if (3 === t || 4 === t) {
@@ -216,7 +233,7 @@ let P = (e) => {
             })
         });
     },
-    M = () =>
+    O = () =>
         (0, o.jsx)('div', {
             className: I.anomaly,
             children: (0, o.jsxs)('div', {
@@ -234,7 +251,7 @@ let P = (e) => {
                 ]
             })
         }),
-    O = () =>
+    R = () =>
         (0, o.jsx)('div', {
             className: I.anomaly,
             children: (0, o.jsx)('div', {

@@ -4,73 +4,62 @@ a.r(t),
             return r;
         }
     });
-var s = a(200651);
+var i = a(200651);
 a(192379);
-var i = a(481060),
-    e = a(447564),
-    o = a(921944),
-    d = a(388032),
+var s = a(481060),
+    o = a(447564),
+    d = a(921944),
+    e = a(388032),
     l = a(30833);
 function r(n) {
-    let { transitionState: t, channel: a, markAsDismissed: e } = n;
-    return (0, s.jsx)(i.ModalRoot, {
-        size: i.ModalSize.DYNAMIC,
+    let { transitionState: t, channel: a, markAsDismissed: o } = n;
+    return (0, i.jsx)(s.ModalRoot, {
+        size: s.ModalSize.DYNAMIC,
         transitionState: t,
-        children: (0, s.jsx)(c, {
-            markAsDismissed: e,
+        children: (0, i.jsx)(c, {
+            markAsDismissed: o,
             channel: a
         })
     });
 }
 function c(n) {
-    let { channel: t, markAsDismissed: r } = n;
-    return (0, s.jsxs)('div', {
+    let { channel: t, markAsDismissed: a } = n;
+    return (0, i.jsxs)('div', {
         className: l.modal,
         children: [
-            (0, s.jsx)('img', {
+            (0, i.jsx)('img', {
                 className: l.img,
                 src: 'https://cdn.discordapp.com/assets/content/28f991389d76cad2f134080324967f70d380d072bca7ac88595287fd7f8f45e5.png',
-                alt: d.intl.string(d.t.UygxRk)
+                alt: e.intl.string(e.t.UygxRk)
             }),
-            (0, s.jsxs)('div', {
+            (0, i.jsxs)('div', {
                 className: l.body,
                 children: [
-                    (0, s.jsx)(i.Heading, {
+                    (0, i.jsx)(s.Heading, {
                         variant: 'heading-lg/bold',
-                        children: d.intl.string(d.t.DSyT5O)
+                        children: e.intl.string(e.t.DSyT5O)
                     }),
-                    (0, s.jsx)(i.Text, {
+                    (0, i.jsx)(s.Text, {
                         variant: 'text-sm/normal',
-                        children: d.intl.format(d.t['0n58Li'], { channel_name: t.name })
+                        children: e.intl.format(e.t['0n58Li'], { channel_name: t.name })
                     })
                 ]
             }),
-            (0, s.jsxs)('div', {
+            (0, i.jsxs)('div', {
                 className: l.footer,
                 children: [
-                    (0, s.jsx)(i.Button, {
+                    (0, i.jsx)(s.Button, {
                         onClick: () => {
-                            r(o.L.USER_DISMISS), (0, i.closeAllModals)();
+                            a(d.L.USER_DISMISS), (0, s.closeAllModals)();
                         },
-                        color: i.ButtonColors.PRIMARY,
-                        children: d.intl.string(d.t.i5lSbW)
+                        color: s.ButtonColors.PRIMARY,
+                        children: e.intl.string(e.t.i5lSbW)
                     }),
-                    (0, s.jsx)(i.Button, {
+                    (0, i.jsx)(s.Button, {
                         onClick: () => {
-                            r(o.L.TAKE_ACTION),
-                                (0, i.openModalLazy)(
-                                    async () => {
-                                        let { default: n } = await Promise.resolve().then(a.bind(a, 447564));
-                                        return (a) =>
-                                            (0, s.jsx)(n, {
-                                                channel: t,
-                                                ...a
-                                            });
-                                    },
-                                    { modalKey: e.HD_STREAMING_POTION_MODAL_KEY }
-                                );
+                            a(d.L.TAKE_ACTION), (0, o.openHDPotionModal)(t, 'HDStreamingPotionUpsellModal');
                         },
-                        children: d.intl.string(d.t.w1qPc3)
+                        children: e.intl.string(e.t.w1qPc3)
                     })
                 ]
             })

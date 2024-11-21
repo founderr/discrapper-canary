@@ -2616,7 +2616,7 @@ let _f = 10,
     _S = /^\|\|([\s\S]+?)\|\|/,
     _D = /^<id:(home|browse|customize|guide|linked-roles)(?::(\d+))?>/,
     _C = /^\d{17,19}$/;
-((rF = en || (en = {})).MESSAGE = 'MESSAGE'), (rF.MESSAGE_GROUP_BLOCKED = 'MESSAGE_GROUP_BLOCKED'), (rF.MESSAGE_GROUP_SPAMMER = 'MESSAGE_GROUP_SPAMMER'), (rF.THREAD_STARTER_MESSAGE = 'THREAD_STARTER_MESSAGE'), (rF.DIVIDER = 'DIVIDER'), (rF.JUMP_TARGET = 'JUMP_TARGET'), (rF.FORUM_POST_ACTION_BAR = 'FORUM_POST_ACTION_BAR'), (rF.MESSAGE_GROUP = 'MESSAGE_GROUP'), (rF.DIVIDER_TIME_STAMP = 'DIVIDER_TIME_STAMP'), (rF.DIVIDER_NEW_MESSAGES = 'DIVIDER_NEW_MESSAGES'), ((rX = ea || (ea = {})).VIDEO = 'video'), (rX.VOICE = 'voice'), ((rj = e_ || (e_ = {}))[(rj.PLAYING = 0)] = 'PLAYING'), (rj[(rj.STREAMING = 1)] = 'STREAMING'), (rj[(rj.LISTENING = 2)] = 'LISTENING'), (rj[(rj.WATCHING = 3)] = 'WATCHING'), (rj[(rj.CUSTOM_STATUS = 4)] = 'CUSTOM_STATUS'), (rj[(rj.COMPETING = 5)] = 'COMPETING'), (rj[(rj.HANG_STATUS = 6)] = 'HANG_STATUS'), ((r$ = eo || (eo = {})).GAME = 'game'), (r$.USER = 'user'), (r$.GROUP = 'group'), ((rq = ei || (ei = {})).LOADING = 'LOADING'), (rq.COMPLETE = 'COMPLETE'), (rq.FAILED = 'FAILED'), ((rJ = eE || (eE = {})).FEATURED = 'featured'), (rJ.GAMES_YOU_PLAY = 'gamesYouPlay'), (rJ.SEARCH = 'search'), (rJ.MISC = 'misc');
+((rF = en || (en = {})).MESSAGE = 'MESSAGE'), (rF.MESSAGE_GROUP_BLOCKED = 'MESSAGE_GROUP_BLOCKED'), (rF.MESSAGE_GROUP_IGNORED = 'MESSAGE_GROUP_IGNORED'), (rF.MESSAGE_GROUP_SPAMMER = 'MESSAGE_GROUP_SPAMMER'), (rF.THREAD_STARTER_MESSAGE = 'THREAD_STARTER_MESSAGE'), (rF.DIVIDER = 'DIVIDER'), (rF.JUMP_TARGET = 'JUMP_TARGET'), (rF.FORUM_POST_ACTION_BAR = 'FORUM_POST_ACTION_BAR'), (rF.MESSAGE_GROUP = 'MESSAGE_GROUP'), (rF.DIVIDER_TIME_STAMP = 'DIVIDER_TIME_STAMP'), (rF.DIVIDER_NEW_MESSAGES = 'DIVIDER_NEW_MESSAGES'), ((rX = ea || (ea = {})).VIDEO = 'video'), (rX.VOICE = 'voice'), ((rj = e_ || (e_ = {}))[(rj.PLAYING = 0)] = 'PLAYING'), (rj[(rj.STREAMING = 1)] = 'STREAMING'), (rj[(rj.LISTENING = 2)] = 'LISTENING'), (rj[(rj.WATCHING = 3)] = 'WATCHING'), (rj[(rj.CUSTOM_STATUS = 4)] = 'CUSTOM_STATUS'), (rj[(rj.COMPETING = 5)] = 'COMPETING'), (rj[(rj.HANG_STATUS = 6)] = 'HANG_STATUS'), ((r$ = eo || (eo = {})).GAME = 'game'), (r$.USER = 'user'), (r$.GROUP = 'group'), ((rq = ei || (ei = {})).LOADING = 'LOADING'), (rq.COMPLETE = 'COMPLETE'), (rq.FAILED = 'FAILED'), ((rJ = eE || (eE = {})).FEATURED = 'featured'), (rJ.GAMES_YOU_PLAY = 'gamesYouPlay'), (rJ.SEARCH = 'search'), (rJ.MISC = 'misc');
 let _g = 128,
     _U = 1024,
     _P = 2000,
@@ -4912,6 +4912,7 @@ let oa = Object.freeze({
     (nh.COLLECTIBLES_SHOP_SCROLLED = 'collectibles_shop_scrolled'),
     (nh.COLLECTIBLES_EXPIRY_MODAL_CLOSED = 'collectibles_expiry_modal_closed'),
     (nh.COLLECTIBLES_TILE_IMPRESSION = 'collectibles_tile_impression'),
+    (nh.CONSUMABLE_HD_STREAMING_ENTRYPOINT = 'consumable_hd_streaming_entrypoint'),
     (nh.SLIDE_CAROUSEL_ITEM_VIEWED = 'slide_carousel_item_viewed'),
     (nh.SLIDE_CAROUSEL_PAGINATION_CLICKED = 'slide_carousel_pagination_clicked'),
     (nh.SHOP_HEADER_CAROUSEL_CTA_CLICKED = 'shop_header_carousel_cta_clicked'),
