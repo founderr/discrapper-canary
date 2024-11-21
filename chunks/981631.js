@@ -4296,6 +4296,7 @@ let oa = Object.freeze({
     (nh.GIFT_INTENT_BADGE_CLICKED = 'gift_intent_badge_clicked'),
     (nh.GIFT_INTENT_ACTION_BUTTON_CLICKED = 'gift_intent_action_button_clicked'),
     (nh.GIFT_INTENT_CARD_SECONDARY_CTA_CLICKED = 'gift_intent_card_secondary_cta_clicked'),
+    (nh.GIFT_PROMOTION_REWARD_SELECTED = 'gift_promotion_reward_selected'),
     (nh.SLASH_COMMAND_USED = 'slash_command_used'),
     (nh.KEYBOARD_SHORTCUT_USED = 'keyboard_shortcut_used'),
     (nh.KEYBOARD_MODE_TOGGLED = 'keyboard_mode_toggled'),
