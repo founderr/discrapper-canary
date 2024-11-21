@@ -2,6 +2,9 @@ n.d(t, {
     PR: function () {
         return l;
     },
+    Z0: function () {
+        return u;
+    },
     e1: function () {
         return o;
     }
@@ -15,7 +18,8 @@ let s = (0, r.B)({
     label: 'Activity Popout Window Experiment',
     defaultConfig: {
         enabled: !1,
-        enableOverlayInActivityPopoutWindow: !1
+        enableOverlayInActivityPopoutWindow: !1,
+        enableGoLiveFromActivityCard: !1
     },
     commonTriggerPoint: a.$P.CONNECTION_OPEN,
     treatments: [
@@ -24,7 +28,8 @@ let s = (0, r.B)({
             label: 'Enable activity popout window',
             config: {
                 enabled: !0,
-                enableOverlayInActivityPopoutWindow: !1
+                enableOverlayInActivityPopoutWindow: !1,
+                enableGoLiveFromActivityCard: !1
             }
         },
         {
@@ -32,7 +37,17 @@ let s = (0, r.B)({
             label: 'Enable activity popout window with overlay',
             config: {
                 enabled: !0,
-                enableOverlayInActivityPopoutWindow: !0
+                enableOverlayInActivityPopoutWindow: !0,
+                enableGoLiveFromActivityCard: !1
+            }
+        },
+        {
+            id: 3,
+            label: 'Enable activity popout window with overlay and GoLive from activity card',
+            config: {
+                enabled: !0,
+                enableOverlayInActivityPopoutWindow: !0,
+                enableGoLiveFromActivityCard: !0
             }
         }
     ]
@@ -43,5 +58,8 @@ function o() {
 function l() {
     let e = i.Z.useExperiment({ location: 'useIsActivityPopoutOverlayEnabled' }).useOverlayV3;
     return s.useExperiment({ location: 'useIsActivityPopoutOverlayEnabled' }).enableOverlayInActivityPopoutWindow && e;
+}
+function u() {
+    return s.useExperiment({ location: 'useCanGoLiveActivityFromActivityCard' }).enableGoLiveFromActivityCard;
 }
 t.ZP = s;
