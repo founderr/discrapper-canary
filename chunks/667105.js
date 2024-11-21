@@ -213,9 +213,10 @@ function C(e) {
     }, [t, r, u, a, _, n, s, o, p, l, m]);
 }
 function R() {
+    let e = (0, m.ym)({ location: b.dr.QUESTS_BAR });
     return (0, s.e7)([_.Z], () => {
-        var e, t;
-        return null !== (t = null !== (e = _.Z.questDeliveryOverride) && void 0 !== e ? e : (0, h.PM)(_.Z.quests, _.Z.questToDeliverForPlacement, p.Ok.DESKTOP_ACCOUNT_PANEL_AREA)) && void 0 !== t ? t : (0, h._)(_.Z.quests, p.jn.QUEST_BAR);
+        var t, n;
+        return null !== (n = null !== (t = _.Z.questDeliveryOverride) && void 0 !== t ? t : (0, h.PM)(_.Z.quests, _.Z.questToDeliverForPlacement, p.Ok.DESKTOP_ACCOUNT_PANEL_AREA)) && void 0 !== n ? n : e ? null : (0, h._)(_.Z.quests, p.jn.QUEST_BAR);
     });
 }
 function O(e) {
