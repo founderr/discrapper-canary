@@ -3,9 +3,8 @@ n.d(t, {
         return m;
     }
 });
-var i = n(924301);
-n(57132);
-var r = n(430824),
+var i = n(924301),
+    r = n(430824),
     l = n(699516),
     a = n(594174),
     o = n(624138),
@@ -33,21 +32,20 @@ function m(e) {
             let R = null !== (I = null === (C = e.local_id) || void 0 === C ? void 0 : C.split('_').pop()) && void 0 !== I ? I : 'unknown';
             return 'Update to build '.concat(R, ' available!');
         case c.DY.FRIEND_SUGGESTION_CREATED:
-            let P = l.Z.getRelationshipType(S) === u.OGo.PENDING_OUTGOING;
-            return null !== (x = e.body) && void 0 !== x ? x : '';
+            return l.Z.getRelationshipType(S), u.OGo.PENDING_OUTGOING, null !== (x = e.body) && void 0 !== x ? x : '';
         case c.DY.GUILD_SCHEDULED_EVENT_STARTED:
-            let L = e.guild_scheduled_event_id,
-                y = null != L ? i.ZP.getGuildScheduledEvent(L) : null,
-                O = null == y ? void 0 : y.name,
-                M = null === (N = r.Z.getGuild(null == y ? void 0 : y.guild_id)) || void 0 === N ? void 0 : N.name,
-                k = (0, i.Z2)(null != y ? y : void 0);
-            return (0, o.Ew)(M) || (0, o.Ew)(O) || !k
+            let P = e.guild_scheduled_event_id,
+                L = null != P ? i.ZP.getGuildScheduledEvent(P) : null,
+                y = null == L ? void 0 : L.name,
+                O = null === (N = r.Z.getGuild(null == L ? void 0 : L.guild_id)) || void 0 === N ? void 0 : N.name,
+                M = (0, i.Z2)(null != L ? L : void 0);
+            return (0, o.Ew)(O) || (0, o.Ew)(y) || !M
                 ? null !== (v = e.body) && void 0 !== v
                     ? v
                     : ''
                 : d.intl.format(d.t.AyvfXV, {
-                      event_name: O,
-                      guild_name: M
+                      event_name: y,
+                      guild_name: O
                   });
         case c.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED:
             return d.intl.format(d.t['5Uzkdn'], { username: A });
