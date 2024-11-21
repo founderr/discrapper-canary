@@ -82,7 +82,7 @@ function _(e) {
                       buyer: r,
                       streaming: !0,
                       onClose: () => {
-                          x ? Z(g.L.DISMISS) : C(!1);
+                          C(!1), x && Z(g.L.DISMISS);
                       },
                       render: h || b === o.z.HD_STREAMING_POTION_BANNER
                   })
