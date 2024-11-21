@@ -23,9 +23,8 @@ t.Z = {
         let N = s.Z.getRemoteSessionId(),
             C = p.Z.getVoiceStateForSession(f.default.getId(), N),
             R = (null == C ? void 0 : C.channelId) === t.id || _.Z.getChannelId() === p.Z.getCurrentClientVoiceChannelId(t.guild_id),
-            O = u.Z.getBlockedUsersForVoiceChannel(t.id),
-            D = u.Z.getIgnoredUsersForVoiceChannel(t.id);
-        return ((0, l.B)(t.id) && (y = !0), y || b || v || (!(O.size > 0) && !(D.size > 0)))
+            O = u.Z.getBlockedUsersForVoiceChannel(t.id);
+        return ((0, l.B)(t.id) && (y = !0), y || b || v || !(O.size > 0))
             ? !S && !b && (0, m._)(t)
                 ? new Promise((e) => {
                       (0, i.openModalLazy)(async () => {
@@ -67,7 +66,6 @@ t.Z = {
                               return (0, r.jsx)(i, {
                                   channelId: t.id,
                                   blockedUserIds: O,
-                                  ignoredUserIds: D,
                                   transitionState: s,
                                   onClose: a,
                                   onJoin: () =>
@@ -91,7 +89,6 @@ t.Z = {
                                   action: E.q.DISMISS,
                                   channel_id: t.id,
                                   blocked_user_ids: Array.from(O),
-                                  ignored_user_ids: Array.from(D),
                                   warning_surface: E.fz.PRE_JOIN_MODAL
                               });
                           }
