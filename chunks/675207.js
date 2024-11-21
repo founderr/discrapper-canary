@@ -1,10 +1,10 @@
 t.r(n),
     t.d(n, {
         VerifyAccountDeekLink: function () {
-            return b;
+            return R;
         },
         VerifyAccountLoading: function () {
-            return R;
+            return b;
         },
         default: function () {
             return m;
@@ -42,7 +42,7 @@ function m() {
         N = t.get('loading'),
         { type: _ } = (0, l.UO)(),
         g = (0, E.vJ)(_),
-        [m, h] = i.useState(!1),
+        [m, T] = i.useState(!1),
         [y, I] = i.useState(!1),
         w = (0, d.Z)(),
         x = null == c ? (null != r ? r : '') : c;
@@ -66,7 +66,7 @@ function m() {
                         n.replace(S.Z5c.CONNECTIONS_SUCCESS(r)), v && window.close();
                         return;
                     }
-                    null != o.code && t.append('error-code', o.code), n.replace(''.concat(S.Z5c.CONNECTIONS_ERROR(r), '?').concat(t.toString()));
+                    (null == o ? void 0 : o.code) != null && t.append('error-code', o.code), n.replace(''.concat(S.Z5c.CONNECTIONS_ERROR(r), '?').concat(t.toString()));
                 }
             }
             if (
@@ -79,9 +79,9 @@ function m() {
                 })
             )
                 return;
-            let o = await D(r, s, x, e);
+            let o = await h(r, s, x, e);
             if (0 === o) {
-                h(!0);
+                T(!0);
                 return;
             }
             if (1 === o) {
@@ -96,7 +96,7 @@ function m() {
                 n.replace(''.concat(S.Z5c.CONNECTIONS_ERROR(r), '?').concat(t.toString()));
                 return;
             }
-            T({
+            D({
                 platformType: r,
                 state: s,
                 handleCallbackResponse: c,
@@ -137,17 +137,17 @@ function m() {
     }, [g, t]);
     return null != g && C.Z.isSupported(g)
         ? y
-            ? (0, o.jsx)(b, {
+            ? (0, o.jsx)(R, {
                   platformType: g,
                   deeplink: L,
                   onClick: () => {
-                      I(!1), h(!0);
+                      I(!1), T(!0);
                   }
               })
-            : (0, o.jsx)(R, { platformType: g })
+            : (0, o.jsx)(b, { platformType: g })
         : null;
 }
-function R(e) {
+function b(e) {
     let { platformType: n } = e,
         t = C.Z.get(n);
     return (0, o.jsxs)(E.UV, {
@@ -168,7 +168,7 @@ function R(e) {
         ]
     });
 }
-function b(e) {
+function R(e) {
     let { deeplink: n, onClick: t, platformType: r } = e,
         c = C.Z.get(r);
     return (0, o.jsx)(E.UV, {
@@ -210,11 +210,10 @@ async function A(e) {
             });
         return o(e), !0;
     } catch (e) {
-        if ((null == e ? void 0 : e.code) !== S.lTL.BAD_REQUEST_FOR_PROVIDER) return !1;
-        return o(e), !0;
+        return !1;
     }
 }
-async function D(e, n, t, r) {
+async function h(e, n, t, r) {
     try {
         return await f.Z.sessionHandoff(e, n, t, r), 0;
     } catch (e) {
@@ -224,7 +223,7 @@ async function D(e, n, t, r) {
         return 1;
     }
 }
-async function T(e) {
+async function D(e) {
     let { platformType: n, state: t, handleCallbackResponse: r, handleCallbackError: c, openidParams: o, code: i } = e;
     try {
         let e = await f.Z.callback(
