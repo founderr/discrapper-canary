@@ -317,10 +317,7 @@ function M(e) {
     let F = o.type === R.uaV.CONTEXT_MENU_COMMAND;
     return (0, r.jsxs)('div', {
         id: (0, S.Gq)(o),
-        className: s()(D.repliedMessage, Z, {
-            [D.messageSpine]: !v || (!h && m),
-            [D.contextCommandMessage]: F
-        }),
+        className: s()(D.repliedMessage, Z, F ? D.contextCommandMessage : { [D.messageSpine]: !v || (!h && m) }),
         'aria-label': t,
         children: [
             v &&
