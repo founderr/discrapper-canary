@@ -4,34 +4,33 @@ var i = n(200651),
     s = n.n(a),
     l = n(442837),
     o = n(481060),
-    c = n(232567),
-    d = n(100527),
-    u = n(906732),
-    g = n(518950),
-    m = n(598077),
-    f = n(594174),
-    p = n(626135),
-    _ = n(63063),
-    h = n(281494),
-    E = n(276444),
-    b = n(520540),
-    x = n(197115),
-    C = n(119269),
-    v = n(938736),
-    T = n(981631),
-    N = n(388032),
-    I = n(837661),
-    S = n(691766);
-let R = (e) => {
+    c = n(100527),
+    d = n(906732),
+    u = n(518950),
+    g = n(598077),
+    m = n(626135),
+    f = n(63063),
+    p = n(281494),
+    _ = n(276444),
+    h = n(520540),
+    E = n(705864),
+    b = n(197115),
+    x = n(119269),
+    C = n(938736),
+    v = n(981631),
+    T = n(388032),
+    N = n(837661),
+    I = n(691766);
+let S = (e) => {
         let { userRecord: t, placement: n, trialStatus: r } = e,
-            { avatarSrc: a, eventHandlers: l } = (0, g.Z)({
+            { avatarSrc: a, eventHandlers: l } = (0, u.Z)({
                 user: t,
                 size: o.AvatarSizes.SIZE_32,
                 animateOnHover: !0
             }),
-            c = (0, v.TW)('UserAvatarProgressBarUnit'),
+            c = (0, C.TW)('UserAvatarProgressBarUnit'),
             d = null != t,
-            u = d
+            g = d
                 ? (0, i.jsx)(o.Avatar, {
                       src: a,
                       'aria-label': t.username,
@@ -40,74 +39,74 @@ let R = (e) => {
                   })
                 : (0, i.jsx)(o.Heading, {
                       variant: 'heading-md/semibold',
-                      className: I.userAvatarProgressBarUnitNum,
+                      className: N.userAvatarProgressBarUnitNum,
                       children: n
                   });
         return (0, i.jsx)(o.Tooltip, {
-            text: N.intl.string(N.t.UnKHdn),
+            text: T.intl.string(T.t.UnKHdn),
             shouldShow: !d,
-            tooltipContentClassName: I.unsentTooltipContent,
+            tooltipContentClassName: N.unsentTooltipContent,
             children: (e) =>
                 (0, i.jsx)('div', {
                     className: s()({
-                        [I.redeemedCircle]: c && (r === h.Fe.REDEEMED || r === h.Fe.CONVERTED),
-                        [I.convertedCircleGlow]: c && r === h.Fe.CONVERTED,
-                        [I.standardCircle]: c && (r === h.Fe.PENDING || null == r)
+                        [N.redeemedCircle]: c && (r === p.Fe.REDEEMED || r === p.Fe.CONVERTED),
+                        [N.convertedCircleGlow]: c && r === p.Fe.CONVERTED,
+                        [N.standardCircle]: c && (r === p.Fe.PENDING || null == r)
                     }),
                     children: (0, i.jsx)('div', {
-                        className: c ? I.content : void 0,
+                        className: c ? N.content : void 0,
                         children: (0, i.jsx)('div', {
-                            className: I.userAvatarProgressBarUnit,
+                            className: N.userAvatarProgressBarUnit,
                             ...e,
-                            children: u
+                            children: g
                         })
                     })
                 })
         });
     },
-    A = (e) => {
+    R = (e) => {
         let { numSentReferrals: t, placement: n } = e;
         return (0, i.jsxs)('div', {
-            className: I.avatarProgressBarUnitConnectorContainer,
+            className: N.avatarProgressBarUnitConnectorContainer,
             children: [
-                (0, i.jsx)('div', { className: I.avatarProgressBarUnitConnectorBase }),
+                (0, i.jsx)('div', { className: N.avatarProgressBarUnitConnectorBase }),
                 (0, i.jsx)('div', {
                     className: s()({
-                        [I.fullHighlight]: t > n,
-                        [I.halfHighlight]: t === n
+                        [N.fullHighlight]: t > n,
+                        [N.halfHighlight]: t === n
                     })
                 })
             ]
         });
     },
-    j = (e) => {
+    A = (e) => {
         let { userRecords: t, recipientStatus: n } = e,
             r = t.length,
             a = r < 1 ? null : t[0],
             s = r < 2 ? null : t[1],
             l = r < 3 ? null : t[2];
         return (0, i.jsxs)('div', {
-            className: I.userAvatarProgressBarContainer,
+            className: N.userAvatarProgressBarContainer,
             children: [
-                (0, i.jsx)(R, {
+                (0, i.jsx)(S, {
                     userRecord: a,
                     placement: 1,
                     trialStatus: (null == a ? void 0 : a.id) != null ? n.get(null == a ? void 0 : a.id) : void 0
                 }),
-                (0, i.jsx)(A, {
+                (0, i.jsx)(R, {
                     numSentReferrals: r,
                     placement: 1
                 }),
-                (0, i.jsx)(R, {
+                (0, i.jsx)(S, {
                     userRecord: s,
                     placement: 2,
                     trialStatus: (null == s ? void 0 : s.id) != null ? n.get(null == s ? void 0 : s.id) : void 0
                 }),
-                (0, i.jsx)(A, {
+                (0, i.jsx)(R, {
                     numSentReferrals: r,
                     placement: 2
                 }),
-                (0, i.jsx)(R, {
+                (0, i.jsx)(S, {
                     userRecord: l,
                     placement: 3,
                     trialStatus: (null == l ? void 0 : l.id) != null ? n.get(null == l ? void 0 : l.id) : void 0
@@ -118,128 +117,121 @@ let R = (e) => {
 t.Z = (e) => {
     let t,
         a,
-        { isInSettings: g = !1 } = e,
-        R = (0, l.Wu)([E.Z], () => E.Z.getSentUserIds()),
-        A = (0, l.e7)([E.Z], () => E.Z.getRecipientStatus()),
-        P = (0, v.uv)('ReferralProgramProgressBar'),
-        Z = (0, v.TW)('ReferralProgramProgressBar'),
-        O = (0, l.Wu)([f.default], () => R.map((e) => f.default.getUser(e)).filter((e) => null != e)),
-        M = r.useMemo(() => O.map((e) => new m.Z(e)), [O]),
-        B = (0, l.e7)([E.Z], () => E.Z.getRefreshAt()),
-        { subscriberHomeVariant: w } = b.g.useExperiment({ location: 'ReferralProgramProgressBar' }, { autoTrackExposure: !1 }),
-        y = P === T.g2L.UNAPPLIED || P === T.g2L.QUALIFIED,
-        k = w === b.p.VARIANT_2;
-    r.useEffect(() => {
-        R.forEach((e) => {
-            (0, c.PR)(e);
-        });
-    }, [R]);
-    let L = {
-        redeemed: 0,
-        converted: 0,
-        sent: A.size
-    };
-    A.forEach((e) => {
-        e === h.Fe.REDEEMED && L.redeemed++, e === h.Fe.CONVERTED && (L.redeemed++, L.converted++);
+        { isInSettings: u = !1 } = e,
+        S = (0, l.e7)([_.Z], () => _.Z.getRecipientStatus()),
+        R = (0, C.uv)('ReferralProgramProgressBar'),
+        j = (0, C.TW)('ReferralProgramProgressBar'),
+        { referralSentUsers: P, hasSentAllReferrals: Z, refreshAt: O } = (0, E.G)(),
+        M = r.useMemo(() => P.map((e) => new g.Z(e)), [P]),
+        { subscriberHomeVariant: B } = h.g.useExperiment({ location: 'ReferralProgramProgressBar' }, { autoTrackExposure: !1 }),
+        w = R === v.g2L.UNAPPLIED || R === v.g2L.QUALIFIED,
+        y = B === h.p.VARIANT_2,
+        k = {
+            redeemed: 0,
+            converted: 0,
+            sent: S.size
+        };
+    S.forEach((e) => {
+        e === p.Fe.REDEEMED && k.redeemed++, e === p.Fe.CONVERTED && (k.redeemed++, k.converted++);
     });
-    let U = L.sent === v.Q_,
-        D = _.Z.getArticleURL(T.BhN.REFERRAL_PROGRAM),
-        { analyticsLocations: H } = (0, u.ZP)(d.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
-        G = r.useRef(null),
-        V = (L.sent / v.Q_) * 100,
-        F = !1;
-    Z && null != B && ((F = 0 < (t = Math.ceil((new Date(B).getTime() - new Date().getTime()) / 86400000)) && t < v.AV), (a = (100 * (v.AV - t)) / v.AV));
-    let W = F && null != t,
-        z = (0, i.jsxs)('div', {
-            className: I.referralInfoContent,
+    let L = k.sent === E.Q,
+        U = f.Z.getArticleURL(v.BhN.REFERRAL_PROGRAM),
+        { analyticsLocations: D } = (0, d.ZP)(c.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
+        H = r.useRef(null),
+        G = (k.sent / E.Q) * 100,
+        V = !1;
+    j && null != O && ((V = 0 < (t = Math.ceil((new Date(O).getTime() - new Date().getTime()) / 86400000)) && t < C.AV), (a = (100 * (C.AV - t)) / C.AV));
+    let F = V && null != t,
+        W = (0, i.jsxs)('div', {
+            className: N.referralInfoContent,
             children: [
-                (0, i.jsx)(C.ZP, {
-                    percentage: W ? 0 : V,
-                    progressCircleVariation: C.Qo.NITRO_LOGO,
+                (0, i.jsx)(x.ZP, {
+                    percentage: F ? 0 : G,
+                    progressCircleVariation: x.Qo.NITRO_LOGO,
                     iconClassName: s()({
-                        [I.referralProgressBarIcon]: !g,
-                        [I.referralProgressBarIconSettings]: g
+                        [N.referralProgressBarIcon]: !u,
+                        [N.referralProgressBarIconSettings]: u
                     })
                 }),
                 (0, i.jsxs)('div', {
-                    className: I.expandedProgressBarContent,
+                    className: N.expandedProgressBarContent,
                     children: [
                         (0, i.jsx)(o.Heading, {
-                            variant: g ? 'heading-xl/extrabold' : 'heading-xxl/extrabold',
-                            className: I.expandedProgressBarHeader,
-                            children: (0, v.$s)({
-                                referralIncentiveLifecycleState: P,
-                                hasSentAll: U,
-                                referralsStatuses: L
+                            variant: u ? 'heading-xl/extrabold' : 'heading-xxl/extrabold',
+                            className: N.expandedProgressBarHeader,
+                            children: (0, C.$s)({
+                                referralIncentiveLifecycleState: R,
+                                hasSentAll: L,
+                                referralsStatuses: k
                             })
                         }),
-                        W
+                        F
                             ? (0, i.jsxs)(i.Fragment, {
                                   children: [
                                       (0, i.jsx)('div', {
-                                          className: I.progressBar,
+                                          className: N.progressBar,
                                           children: (0, i.jsx)('div', {
                                               style: { width: ''.concat(a, '%') },
-                                              className: I.fill
+                                              className: N.fill
                                           })
                                       }),
                                       (0, i.jsx)(o.Heading, {
                                           variant: 'heading-sm/semibold',
-                                          className: I.referralCountdownDays,
-                                          children: N.intl.format(N.t.eq39am, { days: t })
+                                          className: N.referralCountdownDays,
+                                          children: T.intl.format(T.t.eq39am, { days: t })
                                       })
                                   ]
                               })
-                            : (0, i.jsx)(j, {
+                            : (0, i.jsx)(A, {
                                   userRecords: M,
-                                  recipientStatus: A
+                                  recipientStatus: S
                               }),
                         (0, i.jsx)(o.Text, {
-                            variant: g ? 'text-sm/normal' : 'text-lg/medium',
-                            children: (0, v.Hg)({
-                                helpdeskArticle: D,
-                                referralIncentiveLifecycleState: P,
-                                referralsStatuses: L,
-                                isWithinCountdownRange: F
+                            variant: u ? 'text-sm/normal' : 'text-lg/medium',
+                            children: (0, C.Hg)({
+                                helpdeskArticle: U,
+                                referralIncentiveLifecycleState: R,
+                                referralsStatuses: k,
+                                isWithinCountdownRange: V
                             })
                         }),
                         (0, i.jsxs)('div', {
-                            className: s()(I.expandedProgressBarButtonContainer, { [I.expandedProgressBarButtonContainerLayout]: !g }),
+                            className: s()(N.expandedProgressBarButtonContainer, { [N.expandedProgressBarButtonContainerLayout]: !u }),
                             children: [
-                                !g &&
-                                    !k &&
-                                    (0, i.jsx)(x.Z, {
+                                !u &&
+                                    !y &&
+                                    (0, i.jsx)(b.Z, {
                                         color: o.ButtonColors.CUSTOM,
-                                        buttonText: N.intl.string(N.t.Ve9Ge3),
-                                        className: s()(I.expandedProgressBarGiftingCTA, { [I.expandedProgressBarGiftingCTALayout]: !g }),
+                                        buttonText: T.intl.string(T.t.Ve9Ge3),
+                                        className: s()(N.expandedProgressBarGiftingCTA, { [N.expandedProgressBarGiftingCTALayout]: !u }),
                                         look: o.ButtonLooks.OUTLINED,
                                         isGift: !0
                                     }),
-                                !W &&
+                                !F &&
                                     (0, i.jsx)(o.ShinyButton, {
-                                        className: I.expandedProgressBarSelectFriendsCTA,
+                                        className: N.expandedProgressBarSelectFriendsCTA,
                                         color: o.ButtonColors.CUSTOM,
                                         onClick: () => {
-                                            p.default.track(T.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: H }),
+                                            m.default.track(v.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: D }),
                                                 (0, o.openModalLazy)(async () => {
                                                     let { default: e } = await n.e('47435').then(n.bind(n, 204387));
                                                     return (t) =>
                                                         (0, i.jsx)(e, {
                                                             ...t,
-                                                            sourceAnalyticsLocations: H
+                                                            sourceAnalyticsLocations: D
                                                         });
                                                 });
                                         },
                                         onlyShineOnHover: !0,
                                         children: (0, i.jsxs)('div', {
-                                            className: I.expandedProgressBarSelectFriendsCTAInner,
+                                            className: N.expandedProgressBarSelectFriendsCTAInner,
                                             children: [
                                                 (0, i.jsx)('img', {
-                                                    src: S,
+                                                    src: I,
                                                     alt: '',
-                                                    className: I.expandedProgressBarSelectFriendsIcon
+                                                    className: N.expandedProgressBarSelectFriendsIcon
                                                 }),
-                                                U ? N.intl.string(N.t.SY9tyM) : N.intl.string(N.t.Lm2nFR)
+                                                L ? T.intl.string(T.t.SY9tyM) : T.intl.string(T.t.Lm2nFR)
                                             ]
                                         })
                                     })
@@ -249,48 +241,47 @@ t.Z = (e) => {
                 })
             ]
         }),
-        Y = R.length === v.Q_,
-        K = L.redeemed === v.Q_;
-    return (0, i.jsx)(u.Gt, {
-        value: H,
+        z = k.redeemed === E.Q;
+    return (0, i.jsx)(d.Gt, {
+        value: D,
         children: (0, i.jsx)('div', {
             className: s()({
-                [I.containerWithGlowWithoutBanner]: !W && K && !y,
-                [I.containerWithGlowWithBanner]: !W && K && y,
-                [I.containerWithoutGlow]: W || !K,
-                [I.containerWithMargins]: !g,
-                [I.marginWithBanner]: y,
-                [I.containerWithGlowOnSettingsPage]: !W && K && g
+                [N.containerWithGlowWithoutBanner]: !F && z && !w,
+                [N.containerWithGlowWithBanner]: !F && z && w,
+                [N.containerWithoutGlow]: F || !z,
+                [N.containerWithMargins]: !u,
+                [N.marginWithBanner]: w,
+                [N.containerWithGlowOnSettingsPage]: !F && z && u
             }),
             children: (0, i.jsxs)('div', {
-                ref: G,
+                ref: H,
                 className: s()({
-                    [I.expandedProgressBarContainer]: !g,
-                    [I.expandedProgressBarContainerSettingsPage]: g,
-                    [I.expandedProgressBarContainerVariant1]: !k && !g,
-                    [I.expandedProgressBarContainerVariant2]: k && !g,
-                    [I.allReferralsSentBorder]: !W && K,
-                    [I.containerWithBanner]: !W && y
+                    [N.expandedProgressBarContainer]: !u,
+                    [N.expandedProgressBarContainerSettingsPage]: u,
+                    [N.expandedProgressBarContainerVariant1]: !y && !u,
+                    [N.expandedProgressBarContainerVariant2]: y && !u,
+                    [N.allReferralsSentBorder]: !F && z,
+                    [N.containerWithBanner]: !F && w
                 }),
                 children: [
-                    y &&
-                        !W &&
+                    w &&
+                        !F &&
                         (0, i.jsx)('div', {
-                            className: s()(I.banner, {
-                                [I.bannerWithContainerOutline]: Y,
-                                [I.settingsBanner]: g && !Y,
-                                [I.settingsBannerAllRedeemed]: g && Y
+                            className: s()(N.banner, {
+                                [N.bannerWithContainerOutline]: Z,
+                                [N.settingsBanner]: u && !Z,
+                                [N.settingsBannerAllRedeemed]: u && Z
                             }),
                             children: (0, i.jsx)(o.Heading, {
                                 color: 'always-white',
                                 variant: 'heading-md/extrabold',
-                                children: N.intl.format(N.t['7GMtc3'], {
-                                    discountRate: v.Nq,
-                                    subscriptionInterval: N.intl.string(N.t.FPybU1)
+                                children: T.intl.format(T.t['7GMtc3'], {
+                                    discountRate: C.Nq,
+                                    subscriptionInterval: T.intl.string(T.t.FPybU1)
                                 })
                             })
                         }),
-                    z
+                    W
                 ]
             })
         })

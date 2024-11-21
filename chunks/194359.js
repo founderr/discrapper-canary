@@ -7,7 +7,7 @@ var r,
     l = n(391650),
     u = n(877215),
     c = n(895886),
-    d = n(760030),
+    d = n(681678),
     f = n(397550),
     _ = n(594174),
     p = n(657682),
@@ -187,37 +187,31 @@ let T = {
             .catch(() => {
                 s.uv.announce(v.intl.string(v.t.n6Jo3N));
             }),
-    ignoreUser(e, t) {
-        let n = _.default.getUser(e),
-            r = h.ZP.getUserTag(n);
-        return a.tn
+    ignoreUser: (e, t, n) =>
+        a.tn
             .put({
                 url: E.ANM.IGNORE_USER(e),
                 context: { location: t },
                 rejectWithError: !1
             })
             .then(() => {
-                d.Z.showIgnoreSuccessToast(r);
+                d.Z.showIgnoreSuccessToast(e, n);
             })
             .catch(() => {
                 d.Z.showFailedToast();
-            });
-    },
-    unignoreUser(e, t) {
-        let n = _.default.getUser(e),
-            r = h.ZP.getUserTag(n);
-        return a.tn
+            }),
+    unignoreUser: (e, t, n) =>
+        a.tn
             .del({
                 url: E.ANM.IGNORE_USER(e),
                 context: { location: t },
                 rejectWithError: !1
             })
             .then(() => {
-                d.Z.showUnignoreSuccessToast(r);
+                d.Z.showUnignoreSuccessToast(e, n);
             })
             .catch(() => {
                 d.Z.showFailedToast();
-            });
-    }
+            })
 };
 t.Z = T;

@@ -1,76 +1,77 @@
 e.r(o),
     e.d(o, {
         default: function () {
-            return m;
+            return x;
         }
     });
 var n = e(200651),
     s = e(192379),
     r = e(399606),
-    a = e(481060),
-    i = e(194359),
-    l = e(726521),
-    c = e(594174),
-    d = e(51144),
-    u = e(650408),
+    l = e(481060),
+    a = e(194359),
+    i = e(726521),
+    c = e(681678),
+    d = e(594174),
+    u = e(51144),
+    h = e(650408),
     C = e(134612),
-    h = e(981631),
+    k = e(981631),
     p = e(388032),
-    k = e(872612);
-function m(t) {
-    let { userId: o, channelId: e, transitionState: m, onBlock: g, onBlockAndReport: x, onClose: M, onCancel: B } = t,
-        f = (0, u.q)(e),
-        j = s.useCallback(() => {
-            i.Z.addRelationship({
+    m = e(872612);
+function x(t) {
+    let { userId: o, channelId: e, transitionState: x, onBlock: B, onBlockAndReport: M, onClose: g, onCancel: f } = t,
+        j = (0, h.q)(e),
+        z = s.useCallback(() => {
+            a.Z.addRelationship({
                 userId: o,
                 context: { location: C.zr },
-                type: h.OGo.BLOCKED
+                type: k.OGo.BLOCKED
             }),
-                (0, a.showToast)((0, a.createToast)(p.intl.string(p.t.YVFRoK), a.ToastType.SUCCESS));
+                c.Z.showBlockSuccessToast(o);
         }, [o]),
-        z = s.useCallback(() => {
-            j(), g(), M();
-        }, [j, g, M]),
         D = s.useCallback(() => {
-            j(), (0, l.wk)(f), x(), M();
-        }, [f, j, x, M]),
-        b = (0, r.e7)([c.default], () => c.default.getUser(o)),
-        R = d.ZP.useName(b);
-    return (0, n.jsx)(a.ModalRoot, {
-        transitionState: m,
-        children: (0, n.jsx)(a.Scroller, {
+            z(), B(), g();
+        }, [z, B, g]),
+        b = s.useCallback(() => {
+            z(), (0, i.wk)(j), M(), g();
+        }, [j, z, M, g]),
+        v = (0, r.e7)([d.default], () => d.default.getUser(o)),
+        I = u.ZP.useName(v);
+    return (0, n.jsx)(l.ModalRoot, {
+        transitionState: x,
+        children: (0, n.jsx)(l.Scroller, {
             style: { overflow: 'hidden auto' },
-            children: (0, n.jsxs)(a.ModalContent, {
-                className: k.modalContent,
+            children: (0, n.jsxs)(l.ModalContent, {
+                className: m.modalContent,
                 children: [
-                    (0, n.jsx)(a.Heading, {
+                    (0, n.jsx)(l.Heading, {
                         variant: 'heading-lg/bold',
                         color: 'header-primary',
-                        children: p.intl.format(p.t.x5pOn5, { name: R })
+                        children: p.intl.format(p.t.x5pOn5, { name: I })
                     }),
-                    (0, n.jsx)(a.Text, {
+                    (0, n.jsx)(l.Text, {
                         variant: 'text-md/medium',
                         color: 'header-secondary',
-                        className: k.modalDescription,
+                        className: m.modalDescription,
                         children: p.intl.string(p.t.aedksr)
                     }),
-                    (0, n.jsx)(a.Button, {
-                        onClick: z,
-                        color: a.ButtonColors.BRAND,
-                        size: a.ButtonSizes.MEDIUM,
+                    (0, n.jsx)(l.Button, {
+                        onClick: D,
+                        color: l.ButtonColors.BRAND,
+                        size: l.ButtonSizes.MEDIUM,
                         children: p.intl.string(p.t.MzsUsr)
                     }),
-                    (0, n.jsx)(a.Button, {
-                        onClick: D,
-                        color: a.ButtonColors.PRIMARY,
-                        size: a.ButtonSizes.MEDIUM,
+                    (0, n.jsx)(l.Button, {
+                        onClick: b,
+                        color: l.ButtonColors.PRIMARY,
+                        size: l.ButtonSizes.MEDIUM,
                         children: p.intl.string(p.t['3pzuj4'])
                     }),
-                    (0, n.jsx)(a.Button, {
-                        onClick: B,
-                        color: a.ButtonColors.PRIMARY,
-                        look: a.ButtonLooks.OUTLINED,
-                        size: a.ButtonSizes.MEDIUM,
+                    (0, n.jsx)(l.Button, {
+                        onClick: f,
+                        color: l.ButtonColors.PRIMARY,
+                        look: l.ButtonLooks.OUTLINED,
+                        size: l.ButtonSizes.MEDIUM,
                         children: p.intl.string(p.t.okuCoa)
                     })
                 ]

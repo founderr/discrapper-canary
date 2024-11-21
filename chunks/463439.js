@@ -1,12 +1,12 @@
 e.d(n, {
     Z: function () {
-        return m;
+        return S;
     }
 }),
     e(47120);
-var r,
-    i,
-    o = e(200651),
+var o,
+    r,
+    i = e(200651),
     s = e(192379),
     a = e(481060),
     c = e(442837),
@@ -14,130 +14,132 @@ var r,
     u = e(782568),
     d = e(726521),
     E = e(485664),
-    N = e(699516),
-    h = e(863653),
-    I = e(473092),
-    _ = e(650408),
-    f = e(850165),
+    N = e(681678),
+    h = e(699516),
+    I = e(863653),
+    _ = e(473092),
+    f = e(650408),
+    C = e(850165),
     T = e(134612),
-    C = e(981631),
-    g = e(388032),
-    p = e(248296),
-    A = e(149355);
-function m(t) {
-    let { senderId: n, channelId: e, hasReported: r, onReport: i, trackAnalyticsEvent: m } = t,
-        S = (0, c.e7)([N.Z], () => N.Z.isBlocked(n)),
-        [b, x] = s.useState(S),
-        R = (0, E.o)(),
-        M = (0, h.zF)('ic-take-action-web'),
-        [L, j] = s.useState(!1),
-        v = (0, _.q)(e),
-        O = s.useMemo(() => (R ? 0 : M ? 2 : 1), [R, M]),
-        B = () => {
-            x(!0),
+    p = e(981631),
+    A = e(388032),
+    g = e(248296),
+    m = e(149355);
+function S(t) {
+    let { senderId: n, channelId: e, hasReported: o, onReport: r, trackAnalyticsEvent: S } = t,
+        b = (0, c.e7)([h.Z], () => h.Z.isBlocked(n)),
+        [x, R] = s.useState(b),
+        M = (0, E.o)(),
+        L = (0, I.zF)('ic-take-action-web'),
+        [j, v] = s.useState(!1),
+        O = (0, f.q)(e),
+        B = s.useMemo(() => (M ? 0 : L ? 2 : 1), [M, L]),
+        D = () => {
+            R(!0),
                 l.Z.addRelationship({
                     userId: n,
                     context: { location: T.DL },
-                    type: C.OGo.BLOCKED
+                    type: p.OGo.BLOCKED
                 }),
-                m(I.NM.USER_TAKEOVER_MODAL_BLOCK);
+                S(_.NM.USER_TAKEOVER_MODAL_BLOCK),
+                N.Z.showBlockSuccessToast(n);
         },
-        D = () => {
-            x(!1), l.Z.unblockUser(n, { location: T.DL }), m(I.NM.USER_TAKEOVER_MODAL_UNBLOCK);
+        Z = () => {
+            R(!1), l.Z.unblockUser(n, { location: T.DL }), S(_.NM.USER_TAKEOVER_MODAL_UNBLOCK), N.Z.showUnblockSuccessToast(n);
         },
-        y = async () => {
-            if (null != v)
-                j(!0),
+        k = async () => {
+            if (null != O)
+                v(!0),
                     await (0, d.J7)(
-                        v,
+                        O,
                         () => {
-                            (0, a.showToast)((0, a.createToast)(g.intl.string(g.t.gn2c6e), a.ToastType.SUCCESS)), i();
+                            N.Z.showReportSuccessToast(n), r();
                         },
                         () => {
-                            (0, a.showToast)((0, a.createToast)(g.intl.string(g.t['0YV04+']), a.ToastType.FAILURE));
+                            N.Z.showFailedToast();
                         }
                     ),
-                    j(!1),
-                    m(I.NM.USER_TAKEOVER_MODAL_REPORT);
+                    v(!1),
+                    S(_.NM.USER_TAKEOVER_MODAL_REPORT);
         },
-        k = (t) => {
-            0 === t ? ((0, u.Z)(T.EI), m(I.NM.USER_TAKEOVER_MODAL_CTL)) : 2 === t ? ((0, u.Z)(T.$l), m(I.NM.USER_TAKEOVER_MODAL_THROUGHLINE)) : ((0, u.Z)(T.n4), m(I.NM.USER_TAKEOVER_MODAL_NO_FILTR));
+        y = (t) => {
+            0 === t ? ((0, u.Z)(T.EI), S(_.NM.USER_TAKEOVER_MODAL_CTL)) : 2 === t ? ((0, u.Z)(T.$l), S(_.NM.USER_TAKEOVER_MODAL_THROUGHLINE)) : ((0, u.Z)(T.n4), S(_.NM.USER_TAKEOVER_MODAL_NO_FILTR));
         },
-        Z = s.useMemo(() => {
-            switch (O) {
+        w = s.useMemo(() => {
+            switch (B) {
                 case 0:
-                    return g.intl.string(g.t.sZf6c3);
+                    return A.intl.string(A.t.sZf6c3);
                 case 2:
-                    return g.intl.string(g.t.HQ2nKi);
+                    return A.intl.string(A.t.HQ2nKi);
                 default:
-                    return g.intl.string(g.t['65XQam']);
+                    return A.intl.string(A.t['65XQam']);
             }
-        }, [O]);
-    return (0, o.jsx)(f.Z, {
-        heroImageSrc: A,
-        heroImageAlt: g.intl.string(g.t.RVyYCA),
-        header: g.intl.string(g.t['mWO+ys']),
-        description: g.intl.string(g.t.S0XtKC),
-        children: (0, o.jsxs)('div', {
-            className: p.buttonContainer,
+        }, [B]);
+    return (0, i.jsx)(C.Z, {
+        heroImageSrc: m,
+        heroImageAlt: A.intl.string(A.t.RVyYCA),
+        header: A.intl.string(A.t['mWO+ys']),
+        description: A.intl.string(A.t.S0XtKC),
+        children: (0, i.jsxs)('div', {
+            className: g.buttonContainer,
             children: [
-                (0, o.jsxs)(a.Button, {
+                (0, i.jsxs)(a.Button, {
                     color: a.Button.Colors.BRAND,
                     size: a.Button.Sizes.LARGE,
-                    className: p.button,
-                    innerClassName: p.buttonInner,
+                    className: g.button,
+                    innerClassName: g.buttonInner,
                     onClick: () => {
-                        b ? D() : B();
+                        x ? Z() : D();
                     },
                     children: [
-                        (0, o.jsx)(a.CircleXIcon, {
+                        (0, i.jsx)(a.CircleXIcon, {
                             size: 'custom',
                             height: 20,
                             width: 20,
                             color: a.tokens.colors.WHITE,
-                            className: p.buttonIcon
+                            className: g.buttonIcon
                         }),
-                        b ? g.intl.string(g.t.XyHpKC) : g.intl.string(g.t.l4EmaW)
+                        x ? A.intl.string(A.t.XyHpKC) : A.intl.string(A.t.l4EmaW)
                     ]
                 }),
-                (0, o.jsxs)(a.Button, {
+                (0, i.jsxs)(a.Button, {
                     color: a.Button.Colors.PRIMARY,
                     size: a.Button.Sizes.LARGE,
-                    className: p.button,
-                    innerClassName: p.buttonInner,
-                    onClick: y,
-                    submitting: L,
-                    disabled: r,
+                    className: g.button,
+                    innerClassName: g.buttonInner,
+                    onClick: k,
+                    submitting: j,
+                    disabled: o,
                     children: [
-                        (0, o.jsx)(a.FlagIcon, {
+                        (0, i.jsx)(a.FlagIcon, {
                             size: 'custom',
                             height: 20,
                             width: 20,
                             color: a.tokens.colors.WHITE,
-                            className: p.buttonIcon
+                            className: g.buttonIcon
                         }),
-                        r ? g.intl.string(g.t.QvwOJy) : g.intl.string(g.t['7fHyEx'])
+                        o ? A.intl.string(A.t.QvwOJy) : A.intl.string(A.t['7fHyEx'])
                     ]
                 }),
-                (0, o.jsxs)(a.Button, {
+                (0, i.jsxs)(a.Button, {
                     color: a.Button.Colors.PRIMARY,
                     size: a.Button.Sizes.LARGE,
-                    className: p.button,
-                    innerClassName: p.buttonInner,
-                    onClick: () => k(O),
+                    className: g.button,
+                    innerClassName: g.buttonInner,
+                    onClick: () => y(B),
                     children: [
-                        (0, o.jsx)(a.ChatIcon, {
+                        (0, i.jsx)(a.ChatIcon, {
                             size: 'custom',
                             height: 20,
                             width: 20,
                             color: a.tokens.colors.WHITE,
-                            className: p.buttonIcon
+                            className: g.buttonIcon
                         }),
-                        Z
+                        w
                     ]
                 })
             ]
         })
     });
 }
-((i = r || (r = {}))[(i.CTL = 0)] = 'CTL'), (i[(i.NO_FILTR = 1)] = 'NO_FILTR'), (i[(i.THROUGHLINE = 2)] = 'THROUGHLINE');
+((r = o || (o = {}))[(r.CTL = 0)] = 'CTL'), (r[(r.NO_FILTR = 1)] = 'NO_FILTR'), (r[(r.THROUGHLINE = 2)] = 'THROUGHLINE');
