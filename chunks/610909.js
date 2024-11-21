@@ -1,30 +1,27 @@
-t.r(e);
-var a = t(200651);
-t(192379);
-var i = t(442837),
-    r = t(481060),
-    c = t(239091),
-    l = t(153867),
-    u = t(108843),
-    s = t(100527),
-    o = t(740492),
-    d = t(388032);
-e.default = (0, u.Z)(
+a.r(t);
+var e = a(200651);
+a(192379);
+var i = a(481060),
+    r = a(239091),
+    u = a(153867),
+    l = a(108843),
+    s = a(100527),
+    c = a(388032);
+t.default = (0, l.Z)(
     function (n) {
-        let e = (0, i.e7)([o.ZP], () => o.ZP.showPlayAgain);
-        return (0, a.jsx)(r.Menu, {
+        return (0, e.jsx)(i.Menu, {
             navId: 'play-again-context',
-            onClose: c.Zy,
-            'aria-label': d.intl.string(d.t.qDZryM),
+            onClose: r.Zy,
+            'aria-label': c.intl.string(c.t.qDZryM),
             onSelect: n.onSelect,
-            children: (0, a.jsx)(
-                r.MenuGroup,
+            children: (0, e.jsx)(
+                i.MenuGroup,
                 {
-                    children: (0, a.jsx)(r.MenuCheckboxItem, {
+                    children: (0, e.jsx)(i.MenuItem, {
                         id: 'show-play-again',
-                        label: d.intl.string(d.t.qDZryM),
-                        action: () => l.ZP.updatedUnsyncedSettings({ showPlayAgain: !e }),
-                        checked: e
+                        label: c.intl.string(c.t.AHtm4O),
+                        action: () => u.ZP.updatedUnsyncedSettings({ showPlayAgain: !1 }),
+                        subtext: c.intl.format(c.t['Wz/nKi'], {})
                     })
                 },
                 'play-again'
