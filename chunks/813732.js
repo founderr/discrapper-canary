@@ -99,23 +99,22 @@ t.Z = function () {
         E = (0, a.e7)([O.Z], () => (null != r && null != r.paymentSourceId ? O.Z.getPaymentSource(r.paymentSourceId) : null), [r]),
         B = (0, a.e7)([R.ZP], () => R.ZP.hasFetchedSubscriptions()),
         Z = (0, a.e7)([j.Z], () => j.Z.isBusy),
-        k = (0, T.V)(),
-        H = (0, a.e7)([v.Z], () => v.Z.getSubsection()),
-        K = (0, a.e7)([R.ZP], () => {
+        H = (0, T.V)(),
+        K = (0, a.e7)([v.Z], () => v.Z.getSubsection()),
+        q = (0, a.e7)([R.ZP], () => {
             var e, t;
             return null !== (t = null === (e = R.ZP.getActiveApplicationSubscriptions()) || void 0 === e ? void 0 : e.length) && void 0 !== t ? t : 0;
         }),
-        q = (0, a.e7)([R.ZP], () => {
+        Q = (0, a.e7)([R.ZP], () => {
             var e;
             return Object.values(null !== (e = R.ZP.getSubscriptions()) && void 0 !== e ? e : {})
                 .filter((e) => e.type === w.NYc.GUILD)
                 .filter((e) => e.status !== w.O0b.ENDED).length;
         }),
-        Q = (0, x.Z)({ forceFetch: !0 }),
-        X = (0, a.e7)([P.Z], () => P.Z.getFractionalPremium(!1)),
+        X = (0, x.Z)({ forceFetch: !0 }),
         J = (0, a.Wu)([P.Z], () => P.Z.getUnactivatedFractionalPremiumUnits()),
         $ = null !== r ? r.currentPeriodEnd : void 0,
-        ee = X.length > 0 || J.length > 0;
+        ee = X.fractionalState !== k.a$.NONE || J.length > 0;
     if (
         (s.useEffect(
             () => (
@@ -131,13 +130,13 @@ t.Z = function () {
         b.Z.enabled)
     )
         return (0, i.jsx)(p.Z, {});
-    if (!B || !k)
+    if (!B || !H)
         return (0, i.jsx)('div', {
             className: l()(Y.container, Y.loading),
             children: (0, i.jsx)(o.Spinner, {})
         });
-    if (H === U.cP) return (0, i.jsx)(I.Z, { onGoBack: () => g.Z.clearSubsection() });
-    if (H === U.XZ) return (0, i.jsx)(N.Z, { onGoBack: () => g.Z.clearSubsection() });
+    if (K === U.cP) return (0, i.jsx)(I.Z, { onGoBack: () => g.Z.clearSubsection() });
+    if (K === U.XZ) return (0, i.jsx)(N.Z, { onGoBack: () => g.Z.clearSubsection() });
     return (0, i.jsx)('div', {
         className: Y.container,
         children: (0, i.jsxs)('div', {
@@ -153,7 +152,7 @@ t.Z = function () {
                       })
                     : (0, i.jsx)(M.MM, {}),
                 ee &&
-                    ((e = Q),
+                    ((e = X),
                     (t = J),
                     (n = $),
                     (0, i.jsxs)('section', {
@@ -180,22 +179,22 @@ t.Z = function () {
                     setting: V.s6.SUBSCRIPTIONS_CREDITS,
                     children: (0, i.jsx)(z, {})
                 }),
-                q > 0 &&
+                Q > 0 &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsx)(W, {}),
                             (0, i.jsx)(_.Z, {
-                                count: q,
+                                count: Q,
                                 onClickManageSubscription: () => g.Z.setSection(w.oAB.SUBSCRIPTIONS, U.cP)
                             })
                         ]
                     }),
-                K > 0 &&
+                q > 0 &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsx)(W, {}),
                             (0, i.jsx)(f.Z, {
-                                count: K,
+                                count: q,
                                 onClickManageSubscription: () => {
                                     g.Z.setSection(w.oAB.SUBSCRIPTIONS, U.XZ), D.default.track(w.rMx.PREMIUM_APPLICATION_SUBSCRIPTION_MANAGE_CTA_CLICKED);
                                 }
