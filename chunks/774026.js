@@ -26,28 +26,30 @@ function m(e) {
             messageId: void 0
         })(x),
         p = r()(n).diff(r()(), 'hours');
-    return (0, l.jsxs)('div', {
-        className: h.attribution,
-        children: [
-            (0, l.jsx)(a.Z, { className: h.img }),
-            (0, l.jsxs)('div', {
-                children: [
-                    (0, l.jsx)(s.X6, {
-                        variant: 'heading-sm/bold',
-                        children: f.intl.string(f.t.K04rOD)
-                    }),
-                    (0, l.jsx)(s.xv, {
-                        color: 'text-muted',
-                        variant: 'text-sm/medium',
-                        children: f.intl.format(f.t.NZDuBg, {
-                            actorName: null !== (t = i.globalName) && void 0 !== t ? t : i.username,
-                            actorHook: g,
-                            num: p,
-                            helpCenterLink: d.Z.getArticleURL(u.BhN.HD_STREAMING_POTION)
-                        })
-                    })
-                ]
-            })
-        ]
-    });
+    return p <= 0
+        ? null
+        : (0, l.jsxs)('div', {
+              className: h.attribution,
+              children: [
+                  (0, l.jsx)(a.Z, { className: h.img }),
+                  (0, l.jsxs)('div', {
+                      children: [
+                          (0, l.jsx)(s.X6, {
+                              variant: 'heading-sm/bold',
+                              children: f.intl.string(f.t.K04rOD)
+                          }),
+                          (0, l.jsx)(s.xv, {
+                              color: 'text-muted',
+                              variant: 'text-sm/medium',
+                              children: f.intl.format(f.t.NZDuBg, {
+                                  actorName: null !== (t = i.globalName) && void 0 !== t ? t : i.username,
+                                  actorHook: g,
+                                  num: p,
+                                  helpCenterLink: d.Z.getArticleURL(u.BhN.HD_STREAMING_POTION)
+                              })
+                          })
+                      ]
+                  })
+              ]
+          });
 }
