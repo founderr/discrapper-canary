@@ -13,35 +13,35 @@ var i = t(120356),
     c = t(44315),
     d = t(208567),
     u = t(981631),
-    m = t(686550);
-let x = u.Ilk.PRIMARY_400,
+    x = t(686550);
+let m = u.Ilk.PRIMARY_400,
     h = u.Ilk.PRIMARY_500;
 function g(e) {
     let { enabled: n, imageClassName: t, iconWrapperClassName: i, ...u } = e,
         g = (0, o.ZP)(),
-        v = (0, a.wj)(g) ? x : h,
-        f = {
+        v = (0, a.wj)(g) ? m : h,
+        j = {
             height: 18,
             width: 18,
             color: (0, c.Lq)(v)
         };
     return (0, l.jsx)(d.Z, {
         className: r()({
-            [m.avatarUploader]: n,
-            [m.avatarUploaderDisabled]: !n
+            [x.avatarUploader]: n,
+            [x.avatarUploaderDisabled]: !n
         }),
-        imageClassName: r()(t, m.avatarUploaderInnerSquare, { [m.avatarUploaderInnerSquareDisabled]: !n }),
+        imageClassName: r()(t, x.avatarUploaderInnerSquare, { [x.avatarUploaderInnerSquareDisabled]: !n }),
         icon:
             null != u.image && '' !== u.image
                 ? (0, l.jsx)(s.PencilIcon, {
                       size: 'custom',
-                      ...f
+                      ...j
                   })
                 : (0, l.jsx)(s.ImagePlusIcon, {
                       size: 'custom',
-                      ...f
+                      ...j
                   }),
-        iconClassName: r()(m.avatarUploadIcon, m.hideDefaultIcon),
+        iconClassName: r()(x.avatarUploadIcon, x.hideDefaultIcon),
         iconWrapperClassName: i,
         showIcon: !0,
         showIconDisabled: !0,

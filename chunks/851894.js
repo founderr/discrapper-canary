@@ -20,10 +20,10 @@ var i = n(200651),
     S = n(246946),
     T = n(594174),
     C = n(63063),
-    E = n(74538),
-    _ = n(18438),
-    I = n(778825),
-    f = n(856607),
+    _ = n(74538),
+    E = n(18438),
+    f = n(778825),
+    I = n(856607),
     N = n(594496),
     A = n(856768),
     b = n(981631),
@@ -50,11 +50,11 @@ function O(e) {
         }),
         O = (0, a.e7)([x.Z], () => !x.Z.isFetchingProfile(r.id, null == t ? void 0 : t.id)),
         R = (0, a.e7)([S.Z], () => S.Z.hidePersonalInformation),
-        { source: P, ...D } = (0, a.cj)([I.Z], () => ({
-            ...I.Z.getAllPending(),
-            source: I.Z.getSource()
+        { source: P, ...D } = (0, a.cj)([f.Z], () => ({
+            ...f.Z.getAllPending(),
+            source: f.Z.getSource()
         }));
-    return (s.useEffect(() => () => c.Z.wait(_.W3), []),
+    return (s.useEffect(() => () => c.Z.wait(E.W3), []),
     s.useEffect(() => {
         null != P &&
             m.ZP.trackWithMetadata(b.rMx.SETTINGS_PANE_VIEWED, {
@@ -79,7 +79,7 @@ function O(e) {
                                   (0, i.jsx)(A.Z, {
                                       guildId: t.id,
                                       onChange: (e) => {
-                                          null != e && (0, _.HP)(e);
+                                          null != e && (0, E.HP)(e);
                                       }
                                   }),
                                   (0, i.jsx)(g.Z, {
@@ -87,7 +87,7 @@ function O(e) {
                                       profilePreview: (0, i.jsx)(p.Z, {
                                           user: r,
                                           guild: t,
-                                          canUsePremiumCustomization: E.ZP.canUsePremiumProfileCustomization(r),
+                                          canUsePremiumCustomization: _.ZP.canUsePremiumProfileCustomization(r),
                                           onUpsellClick: j,
                                           ...D
                                       }),
@@ -95,7 +95,7 @@ function O(e) {
                                   })
                               ]
                           })
-                        : (0, i.jsx)(f.Z, {})
+                        : (0, i.jsx)(I.Z, {})
                 ]
             })
           : (0, i.jsx)(o.Spinner, {});

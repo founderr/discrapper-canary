@@ -26,10 +26,10 @@ var i,
     S = n(159351),
     T = n(600164),
     C = n(563132),
-    E = n(409813),
-    _ = n(3409),
-    I = n(351402),
-    f = n(975060),
+    _ = n(409813),
+    E = n(3409),
+    f = n(351402),
+    I = n(975060),
     N = n(505649),
     A = n(358085),
     b = n(622999),
@@ -549,23 +549,23 @@ class z extends l.PureComponent {
             });
     }
 }
-let W = m.ZP.connectStores([f.Z, I.Z, N.Z], () => ({
-    braintreeEmail: f.Z.braintreeEmail,
-    braintreeNonce: f.Z.braintreeNonce,
-    stripePaymentMethod: f.Z.stripePaymentMethod,
-    creditCardInfo: f.Z.getCreditCardInfo(),
-    isCreditCardInfoValid: f.Z.isCardInfoValid,
-    billingAddressInfo: f.Z.getBillingAddressInfo(),
-    isBillingAddressInfoValid: f.Z.isBillingAddressInfoValid,
-    error: f.Z.error,
-    popupCallbackCalled: f.Z.popupCallbackCalled,
-    submitting: I.Z.isBusy,
+let W = m.ZP.connectStores([I.Z, f.Z, N.Z], () => ({
+    braintreeEmail: I.Z.braintreeEmail,
+    braintreeNonce: I.Z.braintreeNonce,
+    stripePaymentMethod: I.Z.stripePaymentMethod,
+    creditCardInfo: I.Z.getCreditCardInfo(),
+    isCreditCardInfoValid: I.Z.isCardInfoValid,
+    billingAddressInfo: I.Z.getBillingAddressInfo(),
+    isBillingAddressInfoValid: I.Z.isBillingAddressInfoValid,
+    error: I.Z.error,
+    popupCallbackCalled: I.Z.popupCallbackCalled,
+    submitting: f.Z.isBusy,
     isAuthenticating: N.Z.isAwaitingAuthentication
 }))(z);
 function K(e) {
-    let { transitionState: t, analyticsLocation: n, onClose: i, onAddPaymentSource: s, toastContent: l, initialStep: a = E.h8.PAYMENT_TYPE, overwriteSubscriptionPaymentSource: o = !1 } = e,
-        d = (0, _.fL)(),
-        m = (0, _.vP)({
+    let { transitionState: t, analyticsLocation: n, onClose: i, onAddPaymentSource: s, toastContent: l, initialStep: a = _.h8.PAYMENT_TYPE, overwriteSubscriptionPaymentSource: o = !1 } = e,
+        d = (0, E.fL)(),
+        m = (0, E.vP)({
             paymentModalArgs: d,
             initialStep: a,
             prependSteps: [],

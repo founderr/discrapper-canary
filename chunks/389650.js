@@ -22,10 +22,10 @@ var i = n(200651),
     S = n(714338),
     T = n(924557),
     C = n(600164),
-    E = n(74299),
-    _ = n(131951),
-    I = n(556296),
-    f = n(808506),
+    _ = n(74299),
+    E = n(131951),
+    f = n(556296),
+    I = n(808506),
     N = n(63063),
     A = n(358085),
     b = n(13140),
@@ -236,7 +236,7 @@ class w extends s.PureComponent {
                     label: P.intl.string(P.t.hurHWl)
                 })),
             t &&
-                ((0, A.isWindows)() || _.Z.getUseSystemScreensharePicker()) &&
+                ((0, A.isWindows)() || E.Z.getUseSystemScreensharePicker()) &&
                 s.push({
                     value: O.kg4.TOGGLE_GO_LIVE_STREAMING,
                     label: P.intl.string(P.t.ybdjJC)
@@ -469,9 +469,9 @@ class w extends s.PureComponent {
     }
 }
 function U() {
-    let e = (0, c.e7)([I.Z], () => I.Z.getState()),
-        t = (0, c.e7)([_.Z], () => (0, E.Z)(_.Z)),
-        n = (0, c.e7)([f.Z], () => f.Z.isSupported()),
+    let e = (0, c.e7)([f.Z], () => f.Z.getState()),
+        t = (0, c.e7)([E.Z], () => (0, _.Z)(E.Z)),
+        n = (0, c.e7)([I.Z], () => I.Z.isSupported()),
         s = (0, T.Go)();
     return (0, i.jsx)(w, {
         keybinds: e,

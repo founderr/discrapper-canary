@@ -1,12 +1,12 @@
 n.d(t, {
     GF: function () {
-        return _;
+        return E;
     },
     ZP: function () {
-        return f;
+        return I;
     },
     yo: function () {
-        return I;
+        return f;
     }
 }),
     n(47120);
@@ -59,7 +59,7 @@ function C(e) {
         g = (0, a.e7)([m.Z], () => m.Z.isBlocked(n)),
         p = (0, a.e7)([h.default], () => h.default.getUser(n)),
         [T, C] = s.useState(!1),
-        E = s.useCallback(() => {
+        _ = s.useCallback(() => {
             C(!0),
                 g
                     ? c.Z.unblockUser(n).catch(() => {
@@ -101,7 +101,7 @@ function C(e) {
                       }),
                       (0, i.jsx)(o.Button, {
                           color: o.ButtonColors.PRIMARY,
-                          onClick: E,
+                          onClick: _,
                           submitting: T,
                           children: x.intl.string(g ? x.t.XyHpKC : x.t['8wXU9P'])
                       })
@@ -109,7 +109,7 @@ function C(e) {
               })
           });
 }
-function E(e) {
+function _(e) {
     let { setting: t, userIds: n, listType: r } = e,
         [l, a] = s.useState(5);
     return (0, i.jsx)(g.U, {
@@ -154,23 +154,23 @@ function E(e) {
         })
     });
 }
-function _() {
+function E() {
     let e = (0, a.e7)([m.Z], () => m.Z.getBlockedIDs());
-    return (0, i.jsx)(E, {
+    return (0, i.jsx)(_, {
         setting: p.s6.BLOCKED_USERS,
         userIds: e,
         listType: 'blocked'
     });
 }
-function I() {
+function f() {
     let e = (0, a.e7)([m.Z], () => m.Z.getIgnoredIDs());
-    return (0, i.jsx)(E, {
+    return (0, i.jsx)(_, {
         setting: p.s6.IGNORED_USERS,
         userIds: e,
         listType: 'ignored'
     });
 }
-function f() {
+function I() {
     return (0, i.jsxs)(g.U, {
         setting: p.s6.RESTRICTED_USERS,
         children: [
@@ -178,8 +178,8 @@ function f() {
                 header: x.intl.string(x.t['3wRorq']),
                 description: x.intl.format(x.t.dDvZy8, { helpArticle: '' })
             }),
-            (0, i.jsx)(_, {}),
-            (0, i.jsx)(I, {})
+            (0, i.jsx)(E, {}),
+            (0, i.jsx)(f, {})
         ]
     });
 }

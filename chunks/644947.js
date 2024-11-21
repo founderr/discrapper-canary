@@ -10,11 +10,11 @@ c.d(t, {
     }
 }),
     c(47120);
-var r = c(905837),
+var r = c(196136),
     n = c(286379),
     a = c(731965),
     o = c(797614);
-let u = (0, r.Ue)((e) => ({ captchaServeVolume: {} }));
+let u = (0, r.U)((e) => ({ captchaServeVolume: {} }));
 function i() {
     return 0 === Object.keys(u.getState().captchaServeVolume).length;
 }

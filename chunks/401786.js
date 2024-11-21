@@ -23,10 +23,10 @@ var i,
     S = n(600164),
     T = n(374649),
     C = n(431369),
-    E = n(55610),
-    _ = n(653798),
-    I = n(311821),
-    f = n(42818),
+    _ = n(55610),
+    E = n(653798),
+    f = n(311821),
+    I = n(42818),
     N = n(314884),
     A = n(509545),
     b = n(78839),
@@ -67,7 +67,7 @@ function L(e) {
                                   ? y.intl.format(y.t.gXSnur, { endDate: t.currentPeriodEnd })
                                   : y.intl.format(y.t.otHdfX, { endDate: t.currentPeriodEnd })
                     }),
-                    (0, r.jsx)(E.Z, { fromBoostCancelModal: !0 })
+                    (0, r.jsx)(_.Z, { fromBoostCancelModal: !0 })
                 ]
             }),
             t.isPurchasedExternally
@@ -108,7 +108,7 @@ async function Z(e, t, n, i) {
 function F(e) {
     var t, n, i;
     let { premiumSubscription: s, guildBoostSlotId: a, onBack: o, onNext: u, onClose: m } = e,
-        [E, N] = l.useState(!1),
+        [_, N] = l.useState(!1),
         [b, v] = l.useState(null),
         [D, L] = l.useMemo(() => {
             try {
@@ -175,11 +175,11 @@ function F(e) {
                             children: b
                         }),
                     (0, r.jsx)('div', { children: y.intl.format(y.t['0W23cn'], { endDate: V.subscriptionPeriodStart }) }),
-                    (0, r.jsxs)(_.PO, {
+                    (0, r.jsxs)(E.PO, {
                         className: B.invoiceTable,
                         children: [
-                            (0, r.jsx)(_.q9, { children: y.intl.string(y.t.iqhIp6) }),
-                            (0, r.jsx)(_.R$, {
+                            (0, r.jsx)(E.q9, { children: y.intl.string(y.t.iqhIp6) }),
+                            (0, r.jsx)(E.R$, {
                                 label: y.intl.format(y.t['Vg+LRk'], { subscriptionCount: 1 }),
                                 value: (0, O.og)((0, O.T4)(H, s.currency), z, W),
                                 className: B.invoiceCancelRow
@@ -187,8 +187,8 @@ function F(e) {
                             null != U && U.length > 0
                                 ? (0, r.jsxs)('div', {
                                       children: [
-                                          (0, r.jsx)(_.KU, {}),
-                                          (0, r.jsx)(f.nd, {
+                                          (0, r.jsx)(E.KU, {}),
+                                          (0, r.jsx)(I.nd, {
                                               premiumSubscription: s,
                                               renewalInvoice: V,
                                               isUpdate: !0
@@ -206,7 +206,7 @@ function F(e) {
                 children: [
                     (0, r.jsx)(d.Button, {
                         color: d.Button.Colors.RED,
-                        disabled: E,
+                        disabled: _,
                         onClick: async () => {
                             try {
                                 N(!0), v(null), await Z(s, D, k, a), u();
@@ -217,7 +217,7 @@ function F(e) {
                         },
                         children: y.intl.string(y.t['/AS/gI'])
                     }),
-                    (0, r.jsx)(I.Z, { onClick: o })
+                    (0, r.jsx)(f.Z, { onClick: o })
                 ]
             })
         ]

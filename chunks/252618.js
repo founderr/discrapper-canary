@@ -17,8 +17,8 @@ n.d(t, {
 }),
     n(47120);
 var r = n(192379),
-    i = n(976649),
-    a = n(454000),
+    i = n(515643),
+    a = n(37050),
     s = n(731965);
 let o = { base: n(358085).isPlatformEmbedded ? void 0 : 'Discord' },
     l = 0,

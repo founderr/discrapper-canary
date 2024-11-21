@@ -10,9 +10,9 @@ n.d(t, {
     }
 }),
     n(47120);
-var r = n(905837),
+var r = n(196136),
     i = n(731965);
-let a = (0, r.Ue)(() => ({
+let a = (0, r.U)(() => ({
     currentToast: null,
     queuedToasts: []
 }));

@@ -445,7 +445,7 @@ let W = o.memo(function (e) {
         });
     }),
     J = 18,
-    Q = ['sourceInviteCode', 'joinSourceType', 'inviterId', 'integrationType', 'joinedAt', 'joinedAtTimestamp'];
+    X = ['sourceInviteCode', 'joinSourceType', 'inviterId', 'integrationType', 'joinedAt', 'joinedAtTimestamp'];
 t.Z = o.memo(function (e) {
     let { userId: t, guildId: n, style: a, onSelect: s, rowSelected: d, isLoading: u = !1, isHoldingAdvancedInfoKey: m = !1, compact: h = !1 } = e,
         x = (0, C.e7)([v.ZP], () => v.ZP.getGuildSidebarState(n), [n]),
@@ -472,7 +472,7 @@ t.Z = o.memo(function (e) {
             },
             [f, s]
         ),
-        _ = o.useCallback((e, t) => c()((0, r.omit)(e, Q), (0, r.omit)(t, Q)), []);
+        _ = o.useCallback((e, t) => c()((0, r.omit)(e, X), (0, r.omit)(t, X)), []);
     return null == f
         ? null
         : (0, l.jsx)(w.Z, {

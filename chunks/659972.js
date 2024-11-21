@@ -17,40 +17,40 @@ var r = t(120356),
     d = t(372769),
     u = t(857395),
     m = t(131154),
-    h = t(38981),
-    x = t(142664);
+    x = t(38981),
+    h = t(142664);
 function g(e) {
-    let { guild: n, stageInstance: t, showGuildPopout: l, setShowGuildPopout: i, handleGuildNameClick: r, source: g, speakers: f, speakerCount: v, audienceCount: _, channelName: I } = e,
-        N = n.id;
+    let { guild: n, stageInstance: t, showGuildPopout: l, setShowGuildPopout: i, handleGuildNameClick: r, source: g, speakers: f, speakerCount: v, audienceCount: _, channelName: j } = e,
+        I = n.id;
     return (0, a.jsx)('div', {
-        className: x.contentContainer,
+        className: h.contentContainer,
         children: (0, a.jsxs)('div', {
-            className: x.headerContainer,
+            className: h.headerContainer,
             children: [
                 (0, a.jsxs)('div', {
-                    className: x.guildInfoContainer,
+                    className: h.guildInfoContainer,
                     children: [
                         (0, a.jsx)(u.Z, {
-                            guildId: N,
+                            guildId: I,
                             shouldShow: l,
                             onRequestClose: () => i(!1),
                             children: () =>
                                 (0, a.jsxs)(s.Clickable, {
-                                    className: x.flexContainerRow,
+                                    className: h.flexContainerRow,
                                     onClick: r,
                                     children: [
                                         (0, a.jsx)(c.Z, {
                                             guild: n,
                                             size: c.Z.Sizes.MINI,
-                                            className: x.guildIcon
+                                            className: h.guildIcon
                                         }),
                                         (0, a.jsxs)('div', {
-                                            className: x.flexContainerRow,
+                                            className: h.flexContainerRow,
                                             children: [
                                                 (0, a.jsx)(s.Text, {
                                                     color: 'header-secondary',
                                                     variant: 'text-sm/normal',
-                                                    className: o()(x.guildName, { [x.disabled]: null == r }),
+                                                    className: o()(h.guildName, { [h.disabled]: null == r }),
                                                     children: n.name
                                                 }),
                                                 (0, a.jsx)(d.Z, { guild: n })
@@ -60,20 +60,20 @@ function g(e) {
                                 })
                         }),
                         (0, a.jsxs)('div', {
-                            className: x.rightJustifiedContent,
+                            className: h.rightJustifiedContent,
                             children: [
                                 6 === g &&
                                     (0, a.jsx)('div', {
-                                        className: x.featuredTag,
+                                        className: h.featuredTag,
                                         children: (0, a.jsx)(s.Text, {
                                             variant: 'text-sm/normal',
-                                            className: x.featuredTagText,
+                                            className: h.featuredTagText,
                                             children: 'Featured'
                                         })
                                     }),
-                                (0, a.jsx)(h.Z, {
+                                (0, a.jsx)(x.Z, {
                                     count: _,
-                                    className: x.__invalid_audienceCount
+                                    className: h.__invalid_audienceCount
                                 })
                             ]
                         })
@@ -82,12 +82,12 @@ function g(e) {
                 (0, a.jsx)(s.Text, {
                     color: 'header-primary',
                     variant: 'text-lg/semibold',
-                    className: x.topicText,
+                    className: h.topicText,
                     children: t.topic
                 }),
                 (0, a.jsx)(s.Text, {
                     color: 'header-secondary',
-                    className: x.description,
+                    className: h.description,
                     variant: 'text-sm/normal',
                     children: t.description
                 }),
@@ -95,27 +95,27 @@ function g(e) {
                     guild: n,
                     speakers: f,
                     speakerCount: v,
-                    className: x.speakers
+                    className: h.speakers
                 }),
-                null != I &&
+                null != j &&
                     (0, a.jsxs)(a.Fragment, {
                         children: [
-                            (0, a.jsx)('hr', { className: x.divider }),
+                            (0, a.jsx)('hr', { className: h.divider }),
                             (0, a.jsxs)('div', {
-                                className: x.footer,
+                                className: h.footer,
                                 children: [
                                     (0, a.jsx)(s.StageIcon, {
                                         size: 'custom',
                                         color: 'currentColor',
                                         width: 20,
                                         height: 20,
-                                        className: x.icon
+                                        className: h.icon
                                     }),
                                     (0, a.jsx)(s.Text, {
                                         color: 'header-secondary',
-                                        className: x.__invalid_label,
+                                        className: h.__invalid_label,
                                         variant: 'text-sm/normal',
-                                        children: I
+                                        children: j
                                     })
                                 ]
                             })

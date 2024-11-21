@@ -4,7 +4,7 @@ n.d(t, {
     }
 });
 var i,
-    s = n(905837),
+    s = n(196136),
     r = n(731965),
     l = n(433517);
 let a = '__DEBUG_PROFILE_EFFECTS_STORE',
@@ -12,7 +12,7 @@ let a = '__DEBUG_PROFILE_EFFECTS_STORE',
     c = (e) => {
         l.K.set(a, e.profileEffects);
     },
-    d = (0, s.Ue)((e) => ({
+    d = (0, s.U)((e) => ({
         ...o,
         upsertConfig: (t) =>
             (0, r.j)(() => {

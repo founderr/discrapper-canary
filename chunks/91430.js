@@ -30,10 +30,10 @@ var i = n(200651),
     S = n(17894),
     T = n(975298),
     C = n(600164),
-    E = n(925329),
-    _ = n(963249),
-    I = n(301766),
-    f = n(594174),
+    _ = n(925329),
+    E = n(963249),
+    f = n(301766),
+    I = n(594174),
     N = n(580130),
     A = n(626135),
     b = n(63063),
@@ -51,8 +51,8 @@ var i = n(200651),
 function M(e) {
     let t,
         { subscription: n, renewalInvoicePreview: s, fromStandaloneBillingPage: r = !0, className: a } = e,
-        c = (0, u.e7)([f.default], () => {
-            let e = f.default.getCurrentUser();
+        c = (0, u.e7)([I.default], () => {
+            let e = I.default.getCurrentUser();
             return o()(null != e, 'GuildBoostingHeader: currentUser cannot be undefined'), e;
         });
     if (0 === (0, v.uV)(n.additionalPlans)) return null;
@@ -181,7 +181,7 @@ function U(e) {
                     children: Z.intl.format(Z.t['0nbf/P'], {
                         daysPastDue: t,
                         paymentModalRedirect: () => {
-                            (0, _.Z)({
+                            (0, E.Z)({
                                 initialPlanId: n.planIdFromItems,
                                 openInvoiceId: r,
                                 analyticsLocations: l
@@ -226,9 +226,9 @@ function G() {
                 children: (0, i.jsxs)(C.Z, {
                     align: C.Z.Align.CENTER,
                     children: [
-                        (0, i.jsx)(E.Z, {
+                        (0, i.jsx)(_.Z, {
                             game: null,
-                            size: E.Z.Sizes.SMALL,
+                            size: _.Z.Sizes.SMALL,
                             className: F.noItemsIcon
                         }),
                         (0, i.jsx)('span', {
@@ -265,10 +265,10 @@ function Y(e) {
                       analyticsLocations: m,
                       analyticsLocation: n
                   },
-        [E] = (0, O.ED)(C);
-    E = null != u ? u : E;
-    let _ = (0, T.Z)();
-    return null == S || null == E
+        [_] = (0, O.ED)(C);
+    _ = null != u ? u : _;
+    let E = (0, T.Z)();
+    return null == S || null == _
         ? (0, i.jsx)(h.Spinner, {})
         : (0, i.jsxs)(i.Fragment, {
               children: [
@@ -301,9 +301,9 @@ function Y(e) {
                               children: [
                                   (0, i.jsx)(V, {
                                       subscription: t,
-                                      renewalInvoicePreview: E,
+                                      renewalInvoicePreview: _,
                                       className: F.detailsBlock,
-                                      fractionalPremiumInfo: _
+                                      fractionalPremiumInfo: E
                                   }),
                                   (0, i.jsxs)('div', {
                                       className: l()(F.detailsBlock, { [F.redBorder]: o }),
@@ -375,17 +375,17 @@ function W(e) {
             analyticsLocation: c
         }),
         C = null == l ? void 0 : l.invalid,
-        E = (0, u.e7)([f.default], () => {
+        _ = (0, u.e7)([I.default], () => {
             var e;
-            return null === (e = f.default.getCurrentUser()) || void 0 === e ? void 0 : e.hasFreePremium();
+            return null === (e = I.default.getCurrentUser()) || void 0 === e ? void 0 : e.hasFreePremium();
         }),
-        _ = d()(s.currentPeriodEnd),
+        E = d()(s.currentPeriodEnd),
         N = null != s.paymentSourceId,
         A = null !== (t = null == T ? void 0 : T.total) && void 0 !== t ? t : 0,
-        b = !N && A > 0 && (7 >= _.diff(d()(), 'days') || s.status === L.O0b.PAST_DUE) && !E && !s.isPurchasedExternally,
-        v = C && s.status === L.O0b.PAST_DUE && !E && !s.isPurchasedExternally,
+        b = !N && A > 0 && (7 >= E.diff(d()(), 'days') || s.status === L.O0b.PAST_DUE) && !_ && !s.isPurchasedExternally,
+        v = C && s.status === L.O0b.PAST_DUE && !_ && !s.isPurchasedExternally,
         j = (0, R.U)(),
-        P = !E && j,
+        P = !_ && j,
         D = (null == s ? void 0 : s.status) === L.O0b.PAST_DUE ? d()().diff(d()(s.currentPeriodStart), 'days') : 0,
         [y] = (0, O.Ox)({
             subscriptionId: s.id,
@@ -394,7 +394,7 @@ function W(e) {
     return null == S || null == T
         ? (0, i.jsx)(h.Spinner, {})
         : (null != s.renewalMutations &&
-              ((s.renewalMutations.planId !== s.planId && !(0, I.Q0)(s.renewalMutations.planId)) || s.hasExternalPlanChange) &&
+              ((s.renewalMutations.planId !== s.planId && !(0, f.Q0)(s.renewalMutations.planId)) || s.hasExternalPlanChange) &&
               (n = (0, i.jsx)(B.Z, {
                   subscription: s,
                   renewalMutations: s.renewalMutations,

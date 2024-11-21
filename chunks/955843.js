@@ -115,7 +115,7 @@ function y(e) {
 }
 function M(e, t) {
     let n = (0, r.useRef)(!0),
-        i = e.hdStreamingUntil;
+        i = null == e ? void 0 : e.hdStreamingUntil;
     (0, r.useEffect)(() => {
         if (n.current) {
             n.current = !1;

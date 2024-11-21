@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return j;
+        return f;
     }
 });
 var l = t(200651),
@@ -12,37 +12,37 @@ var l = t(200651),
     c = t(592125),
     d = t(430824),
     u = t(594174),
-    m = t(236373),
-    x = t(230900),
+    x = t(236373),
+    m = t(230900),
     h = t(405613),
     g = t(460838),
     v = t(388032),
-    f = t(26940);
-function j(e) {
-    var n, t, j;
+    j = t(26940);
+function f(e) {
+    var n, t, f;
     let { guildId: N, guildEvent: I, guildEventId: p, error: C } = e,
-        E = i.useMemo(() => (0, m.Gb)(I, N), [I, N]),
-        { channel_id: S, name: T, image: Z, description: y } = E,
-        b = (0, r.e7)([c.Z], () => c.Z.getChannel(S), [S]),
+        E = i.useMemo(() => (0, x.Gb)(I, N), [I, N]),
+        { channel_id: T, name: S, image: b, description: y } = E,
+        Z = (0, r.e7)([c.Z], () => c.Z.getChannel(T), [T]),
         _ = (0, r.e7)([d.Z], () => d.Z.getGuild(N), [N]),
-        R = (0, x.cS)(E),
-        A = (0, r.e7)([u.default], () => (null != I.creatorId ? u.default.getUser(I.creatorId) : u.default.getCurrentUser()), [I.creatorId]),
-        k = (0, r.e7)([o.Z], () => o.Z.isLurking(N), [N]),
-        L = (0, s.KS)(b, _);
+        k = (0, m.cS)(E),
+        R = (0, r.e7)([u.default], () => (null != I.creatorId ? u.default.getUser(I.creatorId) : u.default.getCurrentUser()), [I.creatorId]),
+        A = (0, r.e7)([o.Z], () => o.Z.isLurking(N), [N]),
+        D = (0, s.KS)(Z, _);
     return (0, l.jsxs)('div', {
-        className: f.content,
+        className: j.content,
         children: [
             (0, l.jsx)(g.Z, {
-                className: f.previewCard,
+                className: j.previewCard,
                 guild: _,
-                channel: b,
-                location: null != R ? R : void 0,
-                creator: A,
-                name: T,
+                channel: Z,
+                location: null != k ? k : void 0,
+                creator: R,
+                name: S,
                 description: y,
-                imageSource: ((t = (0, m.Gb)(I, N, p)), null == (j = Z) && null == t.image ? null : null != j && /^data:/.test(j) ? j : (0, h.Z)(t)),
+                imageSource: ((t = (0, x.Gb)(I, N, p)), null == (f = b) && null == t.image ? null : null != f && /^data:/.test(f) ? f : (0, h.Z)(t)),
                 isActive: !1,
-                isUserLurking: k,
+                isUserLurking: A,
                 speakers: [],
                 speakerCount: 0,
                 rsvped: !0,
@@ -50,7 +50,7 @@ function j(e) {
                 eventPreview: E
             }),
             (0, l.jsxs)('div', {
-                className: f.textContainer,
+                className: j.textContainer,
                 children: [
                     (0, l.jsx)(a.Heading, {
                         variant: 'heading-xl/semibold',
@@ -59,33 +59,33 @@ function j(e) {
                     (0, l.jsx)(a.Text, {
                         color: 'header-secondary',
                         variant: 'text-md/normal',
-                        className: f.subheader,
+                        className: j.subheader,
                         children:
                             null != location
                                 ? v.intl.string(v.t.KDPFi4)
                                 : v.intl.format(v.t.f55NX1, {
-                                      channelName: null !== (n = null == b ? void 0 : b.name) && void 0 !== n ? n : '',
+                                      channelName: null !== (n = null == Z ? void 0 : Z.name) && void 0 !== n ? n : '',
                                       channelHook: () => {
                                           var e;
                                           return (0, l.jsxs)('div', {
-                                              className: f.channelName,
+                                              className: j.channelName,
                                               children: [
-                                                  null != L
-                                                      ? (0, l.jsx)(L, {
+                                                  null != D
+                                                      ? (0, l.jsx)(D, {
                                                             size: 'custom',
                                                             color: 'currentColor',
                                                             width: 20,
                                                             height: 20,
-                                                            className: f.icon
+                                                            className: j.icon
                                                         })
                                                       : (0, l.jsx)(a.LocationIcon, {
                                                             size: 'custom',
                                                             color: 'currentColor',
                                                             height: 18,
                                                             width: 18,
-                                                            className: f.locationIcon
+                                                            className: j.locationIcon
                                                         }),
-                                                  null !== (e = null == b ? void 0 : b.name) && void 0 !== e ? e : R
+                                                  null !== (e = null == Z ? void 0 : Z.name) && void 0 !== e ? e : k
                                               ]
                                           });
                                       }
@@ -95,7 +95,7 @@ function j(e) {
                         (0, l.jsx)(a.Text, {
                             color: 'text-danger',
                             variant: 'text-xs/normal',
-                            className: f.subheader,
+                            className: j.subheader,
                             children: C.getAnyErrorMessage()
                         })
                 ]

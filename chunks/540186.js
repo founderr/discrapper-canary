@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return N;
+        return I;
     }
 }),
     t(653041);
@@ -15,8 +15,8 @@ var i = t(442837),
     d = t(431328),
     u = t(501655),
     m = t(659972),
-    h = t(981631),
-    x = t(765305),
+    x = t(981631),
+    h = t(765305),
     g = t(388032),
     f = t(537889);
 function v(e) {
@@ -47,17 +47,17 @@ function _(e) {
         ]
     });
 }
-function I(e) {
+function j(e) {
     var n;
     let { guild: t, channel: a, stageData: o } = e,
         s = (0, i.e7)([r.default], () => r.default.getCurrentUser(), []),
-        h = {
+        x = {
             id: '1337',
             guild_id: t.id,
             channel_id: a.id,
             topic: o.topic,
             description: o.description,
-            privacy_level: null !== (n = o.privacyLevel) && void 0 !== n ? n : x.j8.PUBLIC
+            privacy_level: null !== (n = o.privacyLevel) && void 0 !== n ? n : h.j8.PUBLIC
         },
         g = (0, d.w8)(a.id, u.pV.SPEAKER),
         v = (0, d.Rk)(a.id, u.pV.AUDIENCE),
@@ -78,7 +78,7 @@ function I(e) {
                 className: f.previewCard,
                 children: (0, l.jsx)(m.Z, {
                     guild: t,
-                    stageInstance: h,
+                    stageInstance: x,
                     showGuildPopout: !1,
                     setShowGuildPopout: () => {},
                     source: m.k.UNSPECIFIED,
@@ -91,13 +91,13 @@ function I(e) {
         })
     );
 }
-function N(e) {
+function I(e) {
     let { guild: n, channel: t, stageData: i, headerId: r, loading: c, onNext: d, onCancel: u, onBack: m } = e;
     return null == n || null == t || null == i
         ? null
         : (0, l.jsxs)(l.Fragment, {
               children: [
-                  (0, l.jsx)(I, {
+                  (0, l.jsx)(j, {
                       guild: n,
                       channel: t,
                       stageData: i
@@ -144,7 +144,7 @@ function N(e) {
                                           width: 40,
                                           height: 40
                                       }),
-                                      text: g.intl.format(g.t.qLmNLC, { articleURL: s.Z.getArticleURL(h.BhN.STAGE_CHANNEL_GUIDELINES) })
+                                      text: g.intl.format(g.t.qLmNLC, { articleURL: s.Z.getArticleURL(x.BhN.STAGE_CHANNEL_GUIDELINES) })
                                   })
                               ]
                           })

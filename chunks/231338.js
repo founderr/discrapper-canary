@@ -874,7 +874,7 @@ let ek = Object.freeze({
     (Q.ZAR = 'zar'),
     (Q.ZMW = 'zmw'),
     (Q.ZWL = 'zwl'),
-    (Q.DISCORD_ORB = 'discord orb');
+    (Q.DISCORD_ORB = 'discord_orb');
 let eF = 'US';
 ((Z = D || (D = {})).COUNTRY = 'US'),
     (Z.CURRENCY = 'usd'),

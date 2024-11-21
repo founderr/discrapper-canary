@@ -22,30 +22,30 @@ let T = {
     512412940897484800: 'http://jameslantz.net/smilebot'
 };
 ((r = i || (i = {})).NORMAL = 'NORMAL'), (r.CLAN = 'CLAN');
-let I = () => [C.t['0cuj7u'], C.t['MuW+CA'], C.t.osqpHR, C.t['5ToSh4'], C.t.JEB8pq, C.t.pkOV5e, C.t.kRb1Jy, C.t.EmKLY2, C.t.rPtBnZ, C.t['5B/ekZ'], C.t.ESNC3d, C.t['Iw6d8/'], C.t.WecSZ2],
-    g = () => [C.t.Jm6e09, C.t.MGRnRU, C.t.EXOEGh, C.t['5uCTFB'], C.t.rl45Qk, C.t.Bh9zpa, C.t.RdEy1N, C.t.qcdp09, C.t.F7w2Rk, C.t.gSyOgI, C.t.uYgqv7, C.t['b/1SBQ'], C.t.LhebZG],
+let g = () => [C.t['0cuj7u'], C.t['MuW+CA'], C.t.osqpHR, C.t['5ToSh4'], C.t.JEB8pq, C.t.pkOV5e, C.t.kRb1Jy, C.t.EmKLY2, C.t.rPtBnZ, C.t['5B/ekZ'], C.t.ESNC3d, C.t['Iw6d8/'], C.t.WecSZ2],
+    I = () => [C.t.Jm6e09, C.t.MGRnRU, C.t.EXOEGh, C.t['5uCTFB'], C.t.rl45Qk, C.t.Bh9zpa, C.t.RdEy1N, C.t.qcdp09, C.t.F7w2Rk, C.t.gSyOgI, C.t.uYgqv7, C.t['b/1SBQ'], C.t.LhebZG],
     v = () => [C.t['20E/ys'], C.t['oa8+kp'], C.t.zoKkXl, C.t.FP9aS0, C.t.E5Zj1d, C.t['6Anmws'], C.t.sR78HR, C.t.gA9qPz, C.t.Hkiyp6, C.t.w1HMho],
-    O = () => [C.t['8fy3DQ'], C.t.UproUV, C.t['7l3EyM'], C.t.GToyaG, C.t['DUs+Zm'], C.t.yLkbfn, C.t.oWdvws, C.t.tOoKTE, C.t['VM7+Oj'], C.t['hJx/u7']],
-    R = (n) => {
-        switch (n) {
-            case 'NORMAL':
-            default:
-                return I();
-            case 'CLAN':
-                return v();
-        }
-    },
+    R = () => [C.t['8fy3DQ'], C.t.UproUV, C.t['7l3EyM'], C.t.GToyaG, C.t['DUs+Zm'], C.t.yLkbfn, C.t.oWdvws, C.t.tOoKTE, C.t['VM7+Oj'], C.t['hJx/u7']],
     S = (n) => {
         switch (n) {
             case 'NORMAL':
             default:
                 return g();
             case 'CLAN':
-                return O();
+                return v();
+        }
+    },
+    O = (n) => {
+        switch (n) {
+            case 'NORMAL':
+            default:
+                return I();
+            case 'CLAN':
+                return R();
         }
     };
 function P(n, t) {
-    let e = S(t),
+    let e = O(t),
         r = h.default.extractTimestamp(n) % e.length;
     return e[r];
 }
@@ -76,24 +76,24 @@ t.Z = {
     stringify: function (n, t) {
         var e, r, i, h;
         let T = null === (e = n.mentions) || void 0 === e ? void 0 : e[0],
-            I = null != T && 'string' != typeof T ? m.default.getUser(T.id) : void 0,
-            g = n.channel_id,
-            v = N.ZP.getName(null, g, n.author);
+            g = null != T && 'string' != typeof T ? m.default.getUser(T.id) : void 0,
+            I = n.channel_id,
+            v = N.ZP.getName(null, I, n.author);
         switch (n.type) {
             case A.uaV.RECIPIENT_ADD:
-                if (null == I) return;
+                if (null == g) return;
                 return (0, u.Rp)(
                     C.intl.formatToParts(C.t['7/Xl0d'], {
                         username: v,
                         usernameOnClick: A.dG4,
-                        otherUsername: N.ZP.getName(null, g, I),
+                        otherUsername: N.ZP.getName(null, I, g),
                         otherUsernameOnClick: A.dG4
                     })
                 );
             case A.uaV.RECIPIENT_REMOVE:
-                if (null == I) return;
-                let O = n.author;
-                if (null == O || O.id === I.id)
+                if (null == g) return;
+                let R = n.author;
+                if (null == R || R.id === g.id)
                     return (0, u.Rp)(
                         C.intl.formatToParts(C.t['Qn5+LS'], {
                             username: v,
@@ -104,13 +104,13 @@ t.Z = {
                     C.intl.formatToParts(C.t.QtZ0RE, {
                         username: v,
                         usernameOnClick: A.dG4,
-                        otherUsername: N.ZP.getName(null, g, I),
+                        otherUsername: N.ZP.getName(null, I, g),
                         otherUsernameOnClick: A.dG4
                     })
                 );
             case A.uaV.CALL:
-                let { call: R } = n;
-                if (null != R && -1 === R.participants.indexOf(E.default.getId()))
+                let { call: S } = n;
+                if (null != S && -1 === S.participants.indexOf(E.default.getId()))
                     return (0, u.Rp)(
                         C.intl.formatToParts(C.t.DbgSAw, {
                             username: v,
@@ -141,9 +141,9 @@ t.Z = {
                     })
                 );
             case A.uaV.USER_JOIN:
-                let S = b(t.guild_id);
+                let O = b(t.guild_id);
                 return (0, u.Rp)(
-                    C.intl.formatToParts(P(n.id, S), {
+                    C.intl.formatToParts(P(n.id, O), {
                         username: v,
                         usernameOnClick: A.dG4
                     })
@@ -153,7 +153,7 @@ t.Z = {
             case A.uaV.GUILD_BOOST_TIER_1:
             case A.uaV.GUILD_BOOST_TIER_2:
             case A.uaV.GUILD_BOOST_TIER_3:
-                return M(v, g);
+                return M(v, I);
             case A.uaV.GUILD_INVITE_REMINDER:
                 return C.intl.string(C.t.gxyKvr);
             case A.uaV.THREAD_STARTER_MESSAGE:
@@ -217,7 +217,7 @@ t.Z = {
                         if (null == t) return null;
                         let e = p.Z.getGuild(t.getGuildId());
                         return null == e ? null : (0, u.Rp)(C.intl.formatToParts(C.t['a+lJKi'], { guildName: e.name }));
-                    })(g);
+                    })(I);
                 return n.content;
             case A.uaV.GUILD_INCIDENT_ALERT_MODE_ENABLED:
                 return (function (n, t, e) {
@@ -239,7 +239,7 @@ t.Z = {
                                           : ''
                               })
                           );
-                })(v, g, n.content);
+                })(v, I, n.content);
             case A.uaV.GUILD_INCIDENT_ALERT_MODE_DISABLED:
                 return (function (n, t) {
                     let e = _.Z.getChannel(t);
@@ -253,13 +253,13 @@ t.Z = {
                                   guildName: r.name
                               })
                           );
-                })(v, g);
+                })(v, I);
             default:
                 return n.content;
         }
     },
     getSystemMessageUserJoin: function (n, t) {
-        let e = R(t),
+        let e = S(t),
             r = h.default.extractTimestamp(n) % e.length;
         return e[r];
     },

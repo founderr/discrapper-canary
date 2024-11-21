@@ -7,11 +7,11 @@ n.d(t, {
     }
 });
 var r = n(200651),
-    i = n(905837),
+    i = n(196136),
     a = n(442837),
     s = n(857192),
     o = n(90362);
-let l = (0, i.Ue)((e) => ({
+let l = (0, i.U)((e) => ({
     horizontalSpacing: 8,
     verticalSpacing: 8,
     maxHorizontalSpacing: 64,

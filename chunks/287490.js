@@ -70,9 +70,9 @@ function T(e) {
         C = s.useCallback(() => {
             h((e) => !e);
         }, []),
-        E = (0, a.e7)([d.Z], () => d.Z.getUserExperimentDescriptor(r)),
-        _ = (0, a.e7)([d.Z], () => d.Z.getLoadedUserExperiment(r)),
-        I = (0, a.Wu)([d.Z], () =>
+        _ = (0, a.e7)([d.Z], () => d.Z.getUserExperimentDescriptor(r)),
+        E = (0, a.e7)([d.Z], () => d.Z.getLoadedUserExperiment(r)),
+        f = (0, a.Wu)([d.Z], () =>
             l()
                 .sortBy(d.Z.getRecentExposures(g.xY.USER, r), (e) => {
                     let [t, n] = e;
@@ -83,7 +83,7 @@ function T(e) {
                     return ''.concat(new Date(n).toLocaleString(), ' (').concat(t, ')');
                 })
         ),
-        f = (0, i.jsx)(o.Clickable, {
+        I = (0, i.jsx)(o.Clickable, {
             onClick: C,
             children: (0, i.jsxs)(o.FormTitle, {
                 tag: o.FormTitleTags.H3,
@@ -112,7 +112,7 @@ function T(e) {
               children: [
                   (0, i.jsxs)(o.FormSection, {
                       children: [
-                          f,
+                          I,
                           (0, i.jsxs)('div', {
                               children: [
                                   (0, i.jsx)(o.FormItem, {
@@ -142,9 +142,9 @@ function T(e) {
                               children: [
                                   (0, i.jsxs)(o.FormText, {
                                       type: o.FormTextTypes.DESCRIPTION,
-                                      children: ['Current assigned to bucket ', null !== (t = null == E ? void 0 : E.bucket) && void 0 !== t ? t : g.NZ.NOT_ELIGIBLE]
+                                      children: ['Current assigned to bucket ', null !== (t = null == _ ? void 0 : _.bucket) && void 0 !== t ? t : g.NZ.NOT_ELIGIBLE]
                                   }),
-                                  null == _
+                                  null == E
                                       ? (0, i.jsx)(o.FormText, {
                                             type: o.FormTextTypes.DESCRIPTION,
                                             children: 'Warning: Server did not send any experiment config. You may need to check the "Send to Client" box in the admin UI.'
@@ -163,7 +163,7 @@ function T(e) {
                                         (0, i.jsx)(o.Text, {
                                             variant: 'code',
                                             className: p.pre,
-                                            children: null == _ ? 'None' : JSON.stringify(_, void 0, 2)
+                                            children: null == E ? 'None' : JSON.stringify(E, void 0, 2)
                                         }),
                                         (0, i.jsx)(o.FormTitle, {
                                             tag: 'h5',
@@ -183,7 +183,7 @@ function T(e) {
                                         (0, i.jsx)(o.Text, {
                                             variant: 'code',
                                             className: p.pre,
-                                            children: 0 === I.length ? 'None' : I.join('\n')
+                                            children: 0 === f.length ? 'None' : f.join('\n')
                                         })
                                     ]
                                 })
@@ -201,7 +201,7 @@ function T(e) {
           })
         : (0, i.jsx)('div', {
               className: p.group,
-              children: (0, i.jsx)(o.FormSection, { children: f })
+              children: (0, i.jsx)(o.FormSection, { children: I })
           });
 }
 function C(e) {
@@ -211,8 +211,8 @@ function C(e) {
         C = s.useCallback(() => {
             h((e) => !e);
         }, []),
-        E = (0, a.e7)([d.Z], () => d.Z.getLoadedGuildExperiment(n)),
-        _ = (0, a.Wu)([d.Z], () =>
+        _ = (0, a.e7)([d.Z], () => d.Z.getLoadedGuildExperiment(n)),
+        E = (0, a.Wu)([d.Z], () =>
             l()
                 .sortBy(d.Z.getRecentExposures(g.xY.GUILD, n), (e) => {
                     let [t, n] = e;
@@ -223,7 +223,7 @@ function C(e) {
                     return ''.concat(new Date(n).toLocaleString(), ' (').concat(t, ')');
                 })
         ),
-        [I, f] = (0, a.Wu)([u.Z, d.Z], () => {
+        [f, I] = (0, a.Wu)([u.Z, d.Z], () => {
             let e = l().sortBy(l().values(u.Z.getGuilds()), (e) => e.name.toLowerCase()),
                 t = {},
                 i = [];
@@ -300,9 +300,9 @@ function C(e) {
                               children: [
                                   (0, i.jsxs)(o.FormText, {
                                       type: o.FormTextTypes.DESCRIPTION,
-                                      children: ['Current Assignments: ', f]
+                                      children: ['Current Assignments: ', I]
                                   }),
-                                  null == E
+                                  null == _
                                       ? (0, i.jsx)(o.FormText, {
                                             type: o.FormTextTypes.DESCRIPTION,
                                             children: 'Warning: Server did not send any experiment config. You may need to check the "Send to Client" box in the admin UI.'
@@ -321,7 +321,7 @@ function C(e) {
                                         (0, i.jsx)(o.Text, {
                                             variant: 'code',
                                             className: p.pre,
-                                            children: I
+                                            children: f
                                         }),
                                         (0, i.jsx)(o.FormTitle, {
                                             tag: 'h5',
@@ -331,7 +331,7 @@ function C(e) {
                                         (0, i.jsx)(o.Text, {
                                             variant: 'code',
                                             className: p.pre,
-                                            children: null == E ? 'None' : JSON.stringify(E, void 0, 2)
+                                            children: null == _ ? 'None' : JSON.stringify(_, void 0, 2)
                                         }),
                                         (0, i.jsx)(o.FormTitle, {
                                             tag: 'h5',
@@ -351,7 +351,7 @@ function C(e) {
                                         (0, i.jsx)(o.Text, {
                                             variant: 'code',
                                             className: p.pre,
-                                            children: 0 === _.length ? 'None' : _.join('\n')
+                                            children: 0 === E.length ? 'None' : E.join('\n')
                                         })
                                     ]
                                 })

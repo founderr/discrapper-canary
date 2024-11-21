@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return _;
     }
 }),
     n(47120);
@@ -21,25 +21,25 @@ var i = n(200651),
     S = n(205058);
 let T = 387,
     C = 218;
-function E(e) {
+function _(e) {
     let { previewEnabled: t, onEnablePreview: n } = e,
-        E = h.Z.getCameraComponent(),
-        [_, I] = s.useState((0, c.P)(g.default.getCurrentUser())),
-        f = s.useRef(!1),
-        N = s.useRef(_),
+        _ = h.Z.getCameraComponent(),
+        [E, f] = s.useState((0, c.P)(g.default.getCurrentUser())),
+        I = s.useRef(!1),
+        N = s.useRef(E),
         A = (0, o.O)(),
         b = (0, r.e7)([h.Z], () => Object.values(h.Z.getVideoDevices()).length > 0);
     return (
         s.useEffect(
             () => () => {
-                f.current && a.Z.wait(() => (0, d.Up)(N.current));
+                I.current && a.Z.wait(() => (0, d.Up)(N.current));
             },
             []
         ),
         (0, i.jsx)(m.Z, {
-            selectedBackgroundOption: _,
+            selectedBackgroundOption: E,
             onSelectBackgroundOption: (e) => {
-                (f.current = !0), (N.current = e), I(e), (0, u.wG)(e, { location: A.location }).catch(p.dG4);
+                (I.current = !0), (N.current = e), f(e), (0, u.wG)(e, { location: A.location }).catch(p.dG4);
             },
             renderCamera: (e) =>
                 t
@@ -48,7 +48,7 @@ function E(e) {
                           children: (0, i.jsxs)('div', {
                               className: S.camera,
                               children: [
-                                  (0, i.jsx)(E, {
+                                  (0, i.jsx)(_, {
                                       deviceId: e,
                                       width: T,
                                       height: C,

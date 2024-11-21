@@ -15,22 +15,22 @@ var l = t(192379),
     u = t(190378);
 function m(e, n) {
     let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-        [m, h] = l.useState(!1),
-        [x, g] = l.useState(null),
+        [m, x] = l.useState(!1),
+        [h, g] = l.useState(null),
         f = l.useMemo(() => d.Z.getStageInstanceByChannel(null == e ? void 0 : e.id), [null == e ? void 0 : e.id]),
         v = (0, s.J)(e);
     return {
         loading: m,
-        error: x,
+        error: h,
         onSave: async (l) => {
             let { topic: s, privacyLevel: d, sendStartNotification: m } = l;
             if (null != e && '' !== s && null != d) {
-                h(!0), g(null), null != t && (i.Z.selectGuild(t), a.default.selectVoiceChannel(e.id));
+                x(!0), g(null), null != t && (i.Z.selectGuild(t), a.default.selectVoiceChannel(e.id));
                 try {
                     let t;
                     null != f ? (t = await c.Ef(e, s, d)) : ((t = await c.HO(e, s, d, null != m && m)), v && o.Kw(u.v.LIVE_STAGE_NOTIFICATION_BADGE)), n(t);
                 } catch (e) {
-                    g(new r.Hx(e)), h(!1);
+                    g(new r.Hx(e)), x(!1);
                 }
             }
         }

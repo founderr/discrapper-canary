@@ -1,6 +1,6 @@
 n.d(t, {
     D: function () {
-        return E;
+        return _;
     }
 }),
     n(47120);
@@ -21,13 +21,13 @@ var i = n(200651),
     S = n(265791),
     T = n(982404),
     C = n(299156);
-function E(e) {
-    let { premiumSubscription: t, premiumType: n, onClose: E, confettiCanvas: _, userWasChurned: I = !1, userDiscountOffer: f } = e,
+function _(e) {
+    let { premiumSubscription: t, premiumType: n, onClose: _, confettiCanvas: E, userWasChurned: f = !1, userDiscountOffer: I } = e,
         N = (0, o.ZP)(),
         A = (0, l.wj)(N) ? T : C,
         b = s.useRef(null),
         [v, j] = s.useState(!1),
-        O = (0, h._)(t, p.Xh.PREMIUM_MONTH_TIER_2, f),
+        O = (0, h._)(t, p.Xh.PREMIUM_MONTH_TIER_2, I),
         R = (0, u.aS)(p.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
             currency: t.currency,
             paymentSourceId: t.paymentSourceId
@@ -38,11 +38,11 @@ function E(e) {
         (s.useEffect(() => {
             null != b.current && null != O && j(!0);
         }, [b, v, O]),
-        null == f || null == O)
+        null == I || null == O)
     )
         return null;
     let y = x.intl.format(x.t.gPzMHR, {
-            numMonths: f.discount.user_usage_limit,
+            numMonths: I.discount.user_usage_limit,
             discountedPrice: O,
             regularPrice: P
         }),
@@ -50,7 +50,7 @@ function E(e) {
             className: S.whatYouLoseButtonContainer,
             children: (0, i.jsx)(a.Button, {
                 color: a.Button.Colors.BRAND,
-                onClick: E,
+                onClick: _,
                 children: x.intl.string(x.t['/r8g/v'])
             })
         });
@@ -59,7 +59,7 @@ function E(e) {
             (0, i.jsx)(g.Z, {
                 premiumType: n,
                 className: S.cancellationHeader,
-                onClose: E
+                onClose: _
             }),
             (0, i.jsx)('div', {
                 ref: b,
@@ -79,7 +79,7 @@ function E(e) {
                                               }),
                                               (0, i.jsx)(a.Heading, {
                                                   variant: 'heading-xl/bold',
-                                                  children: I ? x.intl.string(x.t.gOOPaG) : x.intl.string(x.t.PZSyRk)
+                                                  children: f ? x.intl.string(x.t.gOOPaG) : x.intl.string(x.t.PZSyRk)
                                               })
                                           ]
                                       }),
@@ -97,7 +97,7 @@ function E(e) {
                 v &&
                 (0, i.jsx)(d.Z, {
                     confettiTarget: b.current,
-                    confettiCanvas: _,
+                    confettiCanvas: E,
                     confettiVelocityMultiplier: 0.75
                 })
         ]

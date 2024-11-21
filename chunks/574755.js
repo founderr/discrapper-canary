@@ -20,10 +20,10 @@ var i = n(200651),
     S = n(703288),
     T = n(491758),
     C = n(233685),
-    E = n(388032),
-    _ = n(590288),
-    I = n(595362),
-    f = n(113207);
+    _ = n(388032),
+    E = n(590288),
+    f = n(595362),
+    I = n(113207);
 function N(e) {
     let { className: t, showHeader: n = !0 } = e,
         N = u.tU.useSetting(),
@@ -45,8 +45,8 @@ function N(e) {
                         tag: a.FormTitleTags.H1,
                         title: n
                             ? (0, i.jsxs)('div', {
-                                  className: _.headerContainer,
-                                  children: [E.intl.string(E.t.z2jK6e), (0, i.jsx)(S.Z, {})]
+                                  className: E.headerContainer,
+                                  children: [_.intl.string(_.t.z2jK6e), (0, i.jsx)(S.Z, {})]
                               })
                             : null,
                         children:
@@ -58,29 +58,29 @@ function N(e) {
                     }),
                 v && (0, i.jsx)(a.FormDivider, {}),
                 (0, i.jsxs)(a.FormSection, {
-                    className: n || v ? f.marginTop20 : t,
+                    className: n || v ? I.marginTop20 : t,
                     children: [
                         (0, i.jsx)(a.FormSwitch, {
                             hideBorder: !0,
-                            className: I.formItem,
+                            className: f.formItem,
                             value: N,
-                            note: E.intl.string(E.t['wW9/zc']),
+                            note: _.intl.string(_.t['wW9/zc']),
                             onChange: (e) => x.yg({ allowVoiceRecording: e }),
-                            children: E.intl.string(E.t.AGDDkJ)
+                            children: _.intl.string(_.t.AGDDkJ)
                         }),
                         A &&
                             O &&
                             (0, i.jsx)(a.FormSwitch, {
                                 hideBorder: !0,
-                                className: I.formItem,
+                                className: f.formItem,
                                 value: j,
-                                note: E.intl.string(E.t['0vjy8P']),
+                                note: _.intl.string(_.t['0vjy8P']),
                                 onChange: (e) =>
                                     x.yl({
                                         enabled: e,
                                         trackAnalytics: !0
                                     }),
-                                children: E.intl.string(E.t.NWw7kZ)
+                                children: _.intl.string(_.t.NWw7kZ)
                             })
                     ]
                 })

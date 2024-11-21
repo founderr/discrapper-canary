@@ -23,10 +23,10 @@ function g(e) {
         S = (0, c.useToken)(g).spring({ opacity: 0.1 }),
         T = (0, c.useToken)(g).spring({ opacity: 0 }),
         C = (0, c.useToken)(g).spring({ opacity: 1 }),
-        E = (e) => {
+        _ = (e) => {
             e.finished && (null == r || r());
         },
-        [_, I] = (0, c.useSpring)(
+        [E, f] = (0, c.useSpring)(
             () => ({
                 from: {
                     backgroundColor: x,
@@ -35,11 +35,11 @@ function g(e) {
             }),
             'animate-never'
         ),
-        f = m + 200 + 200,
+        I = m + 200 + 200,
         N = p ? 0 : 200;
     return (
         s.useEffect(() => {
-            I({
+            f({
                 reset: !0,
                 immediate: !1,
                 to: {
@@ -51,7 +51,7 @@ function g(e) {
                     easing: o.Z.Easing.ease
                 }
             }),
-                I({
+                f({
                     delay: m,
                     immediate: p,
                     to: [
@@ -65,8 +65,8 @@ function g(e) {
                         easing: o.Z.Easing.ease
                     }
                 }),
-                I({
-                    delay: f,
+                f({
+                    delay: I,
                     immediate: p,
                     to: [
                         {
@@ -78,11 +78,11 @@ function g(e) {
                         duration: N,
                         easing: o.Z.Easing.ease
                     },
-                    onRest: E
+                    onRest: _
                 });
-        }, [I]),
+        }, [f]),
         (0, i.jsx)(a.animated.div, {
-            style: _,
+            style: E,
             className: l()(h.settingsItemHighlight, n),
             children: t
         })

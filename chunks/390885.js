@@ -1,5 +1,5 @@
-var o = n(905837),
-    l = n(280836),
+var o = n(196136),
+    l = n(10040),
     s = n(731965),
     r = n(433517),
     i = n(710845),
@@ -16,7 +16,7 @@ function f(t) {
     return 1 !== n ? null : o;
 }
 new i.Z('UserFlowAnalytics');
-let _ = (0, o.Ue)()(
+let _ = (0, o.U)()(
     (0, l.XR)((t, e) => ({
         flows: {},
         currentFlow: null,

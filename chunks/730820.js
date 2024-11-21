@@ -21,10 +21,10 @@ var i = n(200651),
     S = n(607018),
     T = n(778764),
     C = n(314897),
-    E = n(325067),
-    _ = n(594174),
-    I = n(572004),
-    f = n(287880),
+    _ = n(325067),
+    E = n(594174),
+    f = n(572004),
+    I = n(287880),
     N = n(714565),
     A = n(202858),
     b = n(726985),
@@ -54,9 +54,9 @@ function y(e) {
         l = s.useRef(null),
         a = s.useCallback(
             (e) => {
-                if ('c' === e.key && e.metaKey && I.wS) {
+                if ('c' === e.key && e.metaKey && f.wS) {
                     var t;
-                    e.preventDefault(), e.stopPropagation(), (0, I.JG)(r), null == l || null === (t = l.current) || void 0 === t || t.focus();
+                    e.preventDefault(), e.stopPropagation(), (0, f.JG)(r), null == l || null === (t = l.current) || void 0 === t || t.focus();
                 }
             },
             [r]
@@ -288,7 +288,7 @@ class B extends s.PureComponent {
     }
     render() {
         let { currentUser: e } = this.props;
-        return f.uZ
+        return I.uZ
             ? e.verified
                 ? e.mfaEnabled
                     ? this.renderEnabled()
@@ -338,7 +338,7 @@ class B extends s.PureComponent {
                 });
             }),
             D(this, 'generateBackupCodes', async () => {
-                let e = E.Z.getVerificationKey();
+                let e = _.Z.getVerificationKey();
                 await c.Z.confirmViewBackupCodes(e, !0);
             }),
             D(this, 'sendMFABackupCodesVerificationKeyEmail', () => {
@@ -413,10 +413,10 @@ class B extends s.PureComponent {
     }
 }
 function L(e) {
-    let t = (0, a.e7)([_.default], () => _.default.getCurrentUser());
+    let t = (0, a.e7)([E.default], () => E.default.getCurrentUser());
     l()(null != t, 'TwoFactorAuth: currentUser cannot be undefined');
-    let n = (0, a.cj)([E.Z, C.default], () => ({
-        togglingSMS: E.Z.togglingSMS,
+    let n = (0, a.cj)([_.Z, C.default], () => ({
+        togglingSMS: _.Z.togglingSMS,
         hasTOTPEnabled: C.default.hasTOTPEnabled()
     }));
     return (0, i.jsx)(B, {

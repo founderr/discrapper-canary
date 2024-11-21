@@ -16,10 +16,10 @@ var i = n(200651),
     S = n(600164),
     T = n(690221),
     C = n(346585),
-    E = n(347649),
-    _ = n(332473),
-    I = n(303172),
-    f = n(518560),
+    _ = n(347649),
+    E = n(332473),
+    f = n(303172),
+    I = n(518560),
     N = n(921801),
     A = n(484459),
     b = n(430824),
@@ -122,7 +122,7 @@ class Q extends s.PureComponent {
                       '',
                       (0, i.jsx)(T.Z, {
                           className: K.noticeTextButton,
-                          onClick: () => (0, I.Z)(z.Kq.USER_SETTINGS),
+                          onClick: () => (0, f.Z)(z.Kq.USER_SETTINGS),
                           children: W.intl.string(W.t.LhlgY2)
                       })
                   ]
@@ -310,7 +310,7 @@ class Q extends s.PureComponent {
                     },
                     {
                         title: W.intl.string(W.t['Vov/9v']),
-                        component: f.Z,
+                        component: I.Z,
                         setting: Y.s6.PRIVACY_AND_SAFETY_STANDING
                     }
                 ]
@@ -392,8 +392,8 @@ t.Z = () => {
         t = (0, c.e7)([v.Z], () => v.Z.getBackupCodes()),
         n = (0, c.e7)([j.Z], () => j.Z.hidePersonalInformation),
         s = (0, c.e7)([L.Z], () => L.Z.theme),
-        r = (0, _.b)(),
-        l = (0, E.CC)(),
+        r = (0, E.b)(),
+        l = (0, _.CC)(),
         a = (0, c.e7)([y.default], () => y.default.locale),
         d = (0, B._p)({ location: 'UserSettingsAccount' }),
         u = (0, c.e7)([O.Z], () => O.Z.getSubsection());

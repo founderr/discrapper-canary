@@ -21,10 +21,10 @@ var i,
     S = n(557177),
     T = n(57562),
     C = n(955204),
-    E = n(64078),
-    _ = n(351780),
-    I = n(954794),
-    f = n(112843),
+    _ = n(64078),
+    E = n(351780),
+    f = n(954794),
+    I = n(112843),
     N = n(524484),
     A = n(981631),
     b = n(388032),
@@ -387,12 +387,12 @@ let G = () =>
         });
 function Y(e) {
     let { onChangePage: t, setShowEnableAnimation: n } = e,
-        i = (0, d.cj)([_.Z], () => _.Z.getState()),
+        i = (0, d.cj)([E.Z], () => E.Z.getState()),
         [s, r] = o.useState({
             x: 0,
             y: 0
         }),
-        l = (0, f.Z)();
+        l = (0, I.Z)();
     function c(e, t, n, i) {
         return (null != t ? t : e) && (null != i ? i : n);
     }
@@ -408,7 +408,7 @@ function Y(e) {
             }
         },
         h = (e, t) => {
-            if ((u(e), (0, E.AI)(e), null == t)) return;
+            if ((u(e), (0, _.AI)(e), null == t)) return;
             let n = c(i.confettiEnabled, e.confettiEnabled, i.enabled, e.enabled);
             0 === t && n && l.fire(s.x, s.y, { settings: e });
             let r = c(i.screenshakeEnabled, e.screenshakeEnabled, i.enabled, e.enabled);
@@ -468,7 +468,7 @@ let H = (e, t, n) => {
                     setShowEnableAnimation: n
                 });
             case 1:
-                return (0, a.jsx)(I.Z, { onBackClick: i(0) });
+                return (0, a.jsx)(f.Z, { onBackClick: i(0) });
             default:
                 return null;
         }

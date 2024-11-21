@@ -1,4 +1,4 @@
-e.exports = {
+n.exports = {
     rootContainer: 'rootContainer_e45ea8',
     headerContainer: 'headerContainer_e45ea8',
     text: 'text_e45ea8',

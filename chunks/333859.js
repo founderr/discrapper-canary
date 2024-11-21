@@ -1,6 +1,6 @@
 n.d(t, {
     c: function () {
-        return I;
+        return f;
     }
 });
 var i = n(200651),
@@ -20,11 +20,11 @@ var i = n(200651),
     S = n(474936),
     T = n(388032),
     C = n(444298),
-    E = n(113207);
-let _ = () => {
+    _ = n(113207);
+let E = () => {
         (0, d.nJ)(), (0, a.xf)();
     },
-    I = () => {
+    f = () => {
         let { analyticsLocations: e } = (0, c.ZP)(o.Z.USER_SETTINGS),
             t = (0, r.e7)([u.Z], () => u.Z.isUpsellPreview),
             { enabled: n } = h.Z.getCurrentConfig(
@@ -53,7 +53,7 @@ let _ = () => {
                                 children: [
                                     (0, i.jsx)(l.Button, {
                                         color: !n && t ? l.Button.Colors.PRIMARY : l.Button.Colors.BRAND,
-                                        onClick: () => _(),
+                                        onClick: () => E(),
                                         children: n ? T.intl.string(T.t.SKNnqq) : T.intl.string(T.t['hb/wEx'])
                                     }),
                                     t
@@ -66,7 +66,7 @@ let _ = () => {
                                 ]
                             })
                     }),
-                    (0, i.jsx)(l.FormDivider, { className: E.marginTop20 })
+                    (0, i.jsx)(l.FormDivider, { className: _.marginTop20 })
                 ]
             })
         );

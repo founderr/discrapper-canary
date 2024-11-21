@@ -1,63 +1,63 @@
-t.d(n, {
+e.d(t, {
     Mt: function () {
-        return g;
+        return p;
     },
     li: function () {
-        return m;
+        return f;
     },
     s4: function () {
-        return h;
+        return E;
     },
     up: function () {
-        return v;
+        return m;
     },
     zv: function () {
-        return f;
+        return _;
     }
 }),
-    t(47120),
-    t(653041);
-var i = t(192379),
-    r = t(106351),
-    o = t(442837);
-t(592125);
-var l = t(984933),
-    a = t(914010);
-t(709054);
-var d = t(853856),
-    c = t(362658),
-    u = t(434065),
-    s = t(981631);
-function m(e) {
-    let { favoritesEnabled: n, hasStaffPrivileges: t } = (0, c.z)('useCanFavoriteChannel'),
-        i = (0, o.e7)([d.Z], () => d.Z.isFavorite(e.id)),
-        r = e.isDM() || e.isThread();
-    return n && !__OVERLAY__ && !i && (!r || t);
+    e(47120),
+    e(653041);
+var r = e(192379),
+    i = e(106351),
+    u = e(442837);
+e(592125);
+var l = e(984933),
+    a = e(914010);
+e(709054);
+var o = e(853856),
+    d = e(362658),
+    c = e(434065),
+    s = e(981631);
+function f(n) {
+    let { favoritesEnabled: t, hasStaffPrivileges: e } = (0, d.z)('useCanFavoriteChannel'),
+        r = (0, u.e7)([o.Z], () => o.Z.isFavorite(n.id)),
+        i = n.isDM() || n.isThread();
+    return t && !__OVERLAY__ && !r && (!i || e);
 }
-function h(e) {
-    return (0, o.e7)([d.Z], () => d.Z.getFavorite(e));
+function E(n) {
+    return (0, u.e7)([o.Z], () => o.Z.getFavorite(n));
 }
-function f() {
-    return (0, o.e7)([l.ZP], () => l.ZP.getChannels(s.I_8))[r.d.GUILD_CATEGORY].map((e) => ({
-        id: 'null' === e.channel.id ? null : e.channel.id,
-        name: e.channel.name
+function _() {
+    return (0, u.e7)([l.ZP], () => l.ZP.getChannels(s.I_8))[i.d.GUILD_CATEGORY].map((n) => ({
+        id: 'null' === n.channel.id ? null : n.channel.id,
+        name: n.channel.name
     }));
 }
-function g() {
-    return (0, o.e7)([a.Z], () => a.Z.getGuildId()) === s.I_8;
+function p() {
+    return (0, u.e7)([a.Z], () => a.Z.getGuildId()) === s.I_8;
 }
-function v() {
-    let { isFavoritesPerk: e } = (0, c.z)('useFavoriteAdded'),
-        n = (0, u.r)(),
-        t = i.useCallback(() => {
-            e && n.notifyFavoriteAdded();
-        }, [n, e]),
-        r = i.useCallback(() => {
-            e && n.clearFavoriteAdded();
-        }, [n, e]);
+function m() {
+    let { isFavoritesPerk: n } = (0, d.z)('useFavoriteAdded'),
+        t = (0, c.r)(),
+        e = r.useCallback(() => {
+            n && t.notifyFavoriteAdded();
+        }, [t, n]),
+        i = r.useCallback(() => {
+            n && t.clearFavoriteAdded();
+        }, [t, n]);
     return {
-        favoriteAdded: n.favoriteAdded,
-        notifyFavoriteAdded: t,
-        clearFavoriteAdded: r
+        favoriteAdded: t.favoriteAdded,
+        notifyFavoriteAdded: e,
+        clearFavoriteAdded: i
     };
 }

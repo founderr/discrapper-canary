@@ -1,7 +1,7 @@
 t.r(n),
     t.d(n, {
         default: function () {
-            return I;
+            return j;
         }
     });
 var l = t(200651),
@@ -14,13 +14,13 @@ var l = t(200651),
     d = t(939863),
     u = t(540186),
     m = t(609776),
-    h = t(289584),
-    x = t(180899),
+    x = t(289584),
+    h = t(180899),
     g = t(157925),
     f = t(388032),
     v = t(639879);
 function _(e) {
-    let { guild: n, channel: t, stageInstance: i, headerId: a, onClose: o, loading: s, error: c, onSave: u, defaultOptions: h, isSlideReady: x } = e;
+    let { guild: n, channel: t, stageInstance: i, headerId: a, onClose: o, loading: s, error: c, onSave: u, defaultOptions: x, isSlideReady: h } = e;
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsxs)('div', {
@@ -60,36 +60,36 @@ function _(e) {
                 error: c,
                 loading: s,
                 onClose: o,
-                defaultOptions: h,
-                isSlideReady: x
+                defaultOptions: x,
+                isSlideReady: h
             })
         ]
     });
 }
-function I(e) {
+function j(e) {
     let { channel: n, onClose: t, transitionState: d, ...m } = e,
         f = (0, o.Dt)(),
-        I = (0, a.e7)([s.Z], () => s.Z.getGuild(n.guild_id)),
-        N = i.useMemo(() => c.Z.getStageInstanceByChannel(n.id), [n.id]),
-        { loading: j, error: C, onSave: p } = (0, h.Z)(n, t),
+        j = (0, a.e7)([s.Z], () => s.Z.getGuild(n.guild_id)),
+        I = i.useMemo(() => c.Z.getStageInstanceByChannel(n.id), [n.id]),
+        { loading: N, error: C, onSave: p } = (0, x.Z)(n, t),
         {
             modalStep: S,
-            setModalStep: T,
-            readySlide: b,
-            handleSlideReady: E,
-            savedOptions: k,
+            setModalStep: b,
+            readySlide: T,
+            handleSlideReady: k,
+            savedOptions: E,
             handleSettingsSave: Z,
             handleDelayedSave: B
-        } = (0, x.Z)({
-            stageInstance: N,
+        } = (0, h.Z)({
+            stageInstance: I,
             defaultStep: g.lv.STAGE_CHANNEL_SETTINGS,
             error: C,
             onSave: p
         });
     return (i.useEffect(() => {
-        null == I && t();
-    }, [I, t]),
-    null == I)
+        null == j && t();
+    }, [j, t]),
+    null == j)
         ? null
         : (0, l.jsx)(r.ModalRoot, {
               transitionState: d,
@@ -99,23 +99,23 @@ function I(e) {
               children: (0, l.jsxs)(r.Slides, {
                   activeSlide: S,
                   width: 440,
-                  onSlideReady: E,
+                  onSlideReady: k,
                   children: [
                       (0, l.jsx)(r.Slide, {
                           id: g.lv.STAGE_CHANNEL_SETTINGS,
                           children: (0, l.jsx)('div', {
                               className: v.slideContainer,
                               children: (0, l.jsx)(_, {
-                                  guild: I,
+                                  guild: j,
                                   channel: n,
-                                  stageInstance: N,
+                                  stageInstance: I,
                                   headerId: f,
                                   onClose: t,
-                                  loading: j,
+                                  loading: N,
                                   error: C,
                                   onSave: Z,
-                                  defaultOptions: k,
-                                  isSlideReady: b === g.lv.STAGE_CHANNEL_SETTINGS
+                                  defaultOptions: E,
+                                  isSlideReady: T === g.lv.STAGE_CHANNEL_SETTINGS
                               })
                           })
                       }),
@@ -125,13 +125,13 @@ function I(e) {
                               className: v.slideContainer,
                               children: (0, l.jsx)(u.Z, {
                                   headerId: f,
-                                  guild: I,
+                                  guild: j,
                                   channel: n,
-                                  stageData: k,
-                                  loading: j,
+                                  stageData: E,
+                                  loading: N,
                                   onNext: B,
                                   onCancel: t,
-                                  onBack: () => T(g.lv.STAGE_CHANNEL_SETTINGS)
+                                  onBack: () => b(g.lv.STAGE_CHANNEL_SETTINGS)
                               })
                           })
                       })

@@ -20,14 +20,14 @@ var i = n(200651),
 function S(e) {
     let { cta: t, storeListing: n, className: r } = e,
         { applicationId: S, benefits: T, description: C } = n,
-        E = s.useMemo(() => (null == n.thumbnail ? null : (0, g.q)(S, n.thumbnail, 256)), [S, n.thumbnail]),
-        { data: _ } = (0, d.X)(n.skuId),
-        I = s.useMemo(() => {
-            if (null == _ || 0 === _.length) return null;
-            let e = _[0];
+        _ = s.useMemo(() => (null == n.thumbnail ? null : (0, g.q)(S, n.thumbnail, 256)), [S, n.thumbnail]),
+        { data: E } = (0, d.X)(n.skuId),
+        f = s.useMemo(() => {
+            if (null == E || 0 === E.length) return null;
+            let e = E[0];
             return (0, m.xg)(e);
-        }, [_]);
-    return null == I
+        }, [E]);
+    return null == f
         ? null
         : (0, i.jsxs)(a.l, {
               className: l()(x.wrapper, r),
@@ -36,9 +36,9 @@ function S(e) {
                       (0, i.jsxs)('div', {
                           className: x.headerTitle,
                           children: [
-                              null != E &&
+                              null != _ &&
                                   (0, i.jsx)(c.Image, {
-                                      src: E.href,
+                                      src: _.href,
                                       imageClassName: x.subscriptionImg,
                                       width: 48,
                                       height: 48
@@ -51,7 +51,7 @@ function S(e) {
                                       }),
                                       (0, i.jsx)(c.Text, {
                                           variant: 'text-md/medium',
-                                          children: I
+                                          children: f
                                       })
                                   ]
                               })

@@ -14,8 +14,8 @@ function d(e) {
     let { startDate: n, recurrenceRule: t, onRecurrenceChange: d } = e,
         u = i.useMemo(() => (0, o.zi)(n, t), [t, n]),
         m = (0, o.P8)(n),
-        h = (e) => e.toString(),
-        x = (0, l.jsxs)('div', {
+        x = (e) => e.toString(),
+        h = (0, l.jsxs)('div', {
             className: c.title,
             children: [
                 s.intl.string(s.t['59TVxM']),
@@ -26,14 +26,14 @@ function d(e) {
             ]
         });
     return (0, l.jsx)(a.FormItem, {
-        title: x,
+        title: h,
         required: !0,
         children: (0, l.jsx)(a.Select, {
             placeholder: 'gaming',
             options: m,
             select: d,
-            serialize: h,
-            isSelected: (e) => null != u && h(e) === h(u)
+            serialize: x,
+            isSelected: (e) => null != u && x(e) === x(u)
         })
     });
 }
