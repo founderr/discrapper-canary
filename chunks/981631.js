@@ -3977,6 +3977,7 @@ let oa = Object.freeze({
     (nh.NOTIFICATION_MIGRATION_COMPLETED = 'notification_migration_completed'),
     (nh.NOTIFICATION_MIGRATION_GUILD_CHANGED = 'notification_migration_guild_changed'),
     (nh.NOTIFICATION_MIGRATION_OPTOUT = 'notification_migration_optout'),
+    (nh.CALLKIT_CLICKED = 'callkit_clicked'),
     (nh.NOTIFICATION_REPORT_SUBMITTED = 'notification_report_submitted'),
     (nh.NOTIFICATION_PERMISSION_PREPROMPT_ACKED = 'notification_permission_preprompt_acked'),
     (nh.MOBILE_APP_DOWNLOAD_MODAL_ACKED = 'mobile_app_download_modal_acked'),
