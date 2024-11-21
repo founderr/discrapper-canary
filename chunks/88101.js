@@ -1,19 +1,23 @@
-n.d(t, {
+e.d(t, {
     P: function () {
-        return c;
+        return s;
     }
 });
-var i = n(385956),
-    l = n(15701),
-    r = n(359119),
-    a = n(897769),
-    s = n(981312),
-    o = n(403485);
-function c(e) {
-    let t = (0, l.G)(e),
-        n = (0, i.v)(e),
-        c = (0, a.S)(e, r.pj.STRANGER_DANGER),
-        d = (0, s.U)(),
-        u = (0, o.h)(e).length > 0;
-    if (!!d && !t && !n && !u) return c;
+var r = e(442837),
+    i = e(385956),
+    u = e(15701),
+    l = e(594174),
+    a = e(359119),
+    o = e(897769),
+    d = e(981312),
+    c = e(403485);
+function s(n) {
+    let t = (0, r.e7)([l.default], () => l.default.getCurrentUser()),
+        e = (0, u.G)(n),
+        s = (0, i.v)(n),
+        f = (0, o.S)(n, a.pj.STRANGER_DANGER),
+        E = (0, d.U)(),
+        _ = (null == t ? void 0 : t.isStaff()) !== !0,
+        p = (0, c.h)(n).length > 0;
+    if ((!!E || !_) && !e && !s && !p) return f;
 }
