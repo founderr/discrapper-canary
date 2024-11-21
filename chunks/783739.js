@@ -75,7 +75,10 @@ function b(e) {
                       guildBoostSlots: n,
                       premiumSubscription: t
                   }),
-            (0, i.jsx)(f.Z, { guildBoostSlots: b }),
+            (0, i.jsx)(f.Z, {
+                guildBoostSlots: b,
+                fractionalPremiumState: F
+            }),
             (0, i.jsx)(_.Z, {
                 canAddBoosts: B && k,
                 canApplyBoosts: L

@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return F;
+            return k;
         }
     }),
     n(411104),
@@ -16,27 +16,29 @@ var i,
     d = n(481060),
     u = n(355467),
     m = n(179360),
-    h = n(100527),
-    g = n(906732),
-    p = n(600164),
-    x = n(374649),
-    S = n(431369),
-    T = n(55610),
-    C = n(653798),
-    E = n(311821),
-    _ = n(42818),
-    I = n(314884),
-    f = n(509545),
-    N = n(78839),
-    A = n(267642),
-    b = n(74538),
-    v = n(937615),
-    j = n(518062),
-    O = n(474936),
-    R = n(231338),
-    P = n(388032),
-    D = n(340875);
-function y(e) {
+    h = n(881052),
+    g = n(128069),
+    p = n(100527),
+    x = n(906732),
+    S = n(600164),
+    T = n(374649),
+    C = n(431369),
+    E = n(55610),
+    _ = n(653798),
+    I = n(311821),
+    f = n(42818),
+    N = n(314884),
+    A = n(509545),
+    b = n(78839),
+    v = n(267642),
+    j = n(74538),
+    O = n(937615),
+    R = n(518062),
+    P = n(474936),
+    D = n(231338),
+    y = n(388032),
+    B = n(340875);
+function L(e) {
     let { premiumSubscription: t, isInventory: n, onNext: i, onClose: s } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -45,42 +47,42 @@ function y(e) {
                 children: [
                     (0, r.jsx)(d.FormTitle, {
                         tag: d.FormTitleTags.H4,
-                        children: n ? P.intl.string(P.t.iIoSd3) : P.intl.string(P.t.Skzv0t)
+                        children: n ? y.intl.string(y.t.iIoSd3) : y.intl.string(y.t.Skzv0t)
                     }),
                     (0, r.jsx)(d.ModalCloseButton, { onClick: s })
                 ]
             }),
             (0, r.jsxs)(d.ModalContent, {
-                className: D.body,
+                className: B.body,
                 children: [
-                    (0, r.jsx)('div', { className: D.cancelImage }),
+                    (0, r.jsx)('div', { className: B.cancelImage }),
                     (0, r.jsx)('div', {
                         children:
                             t.isPurchasedExternally && null != t.paymentGateway
-                                ? P.intl.format(P.t.HbpFLi, {
-                                      paymentGatewayName: R.Vz[t.paymentGateway],
-                                      subscriptionManagementLink: (0, b.JE)(t.paymentGateway, 'SUBSCRIPTION_MANAGEMENT')
+                                ? y.intl.format(y.t.HbpFLi, {
+                                      paymentGatewayName: D.Vz[t.paymentGateway],
+                                      subscriptionManagementLink: (0, j.JE)(t.paymentGateway, 'SUBSCRIPTION_MANAGEMENT')
                                   })
                                 : n
-                                  ? P.intl.format(P.t.gXSnur, { endDate: t.currentPeriodEnd })
-                                  : P.intl.format(P.t.otHdfX, { endDate: t.currentPeriodEnd })
+                                  ? y.intl.format(y.t.gXSnur, { endDate: t.currentPeriodEnd })
+                                  : y.intl.format(y.t.otHdfX, { endDate: t.currentPeriodEnd })
                     }),
-                    (0, r.jsx)(T.Z, { fromBoostCancelModal: !0 })
+                    (0, r.jsx)(E.Z, { fromBoostCancelModal: !0 })
                 ]
             }),
             t.isPurchasedExternally
                 ? null
                 : (0, r.jsxs)(d.ModalFooter, {
-                      justify: p.Z.Justify.START,
+                      justify: S.Z.Justify.START,
                       children: [
                           (0, r.jsx)(d.Button, {
                               onClick: i,
-                              children: P.intl.string(P.t.PDTjLC)
+                              children: y.intl.string(y.t.PDTjLC)
                           }),
                           (0, r.jsx)(d.Button, {
                               look: d.Button.Looks.LINK,
                               onClick: s,
-                              children: P.intl.string(P.t['ETE/oK'])
+                              children: y.intl.string(y.t['ETE/oK'])
                           })
                       ]
                   })
@@ -88,101 +90,107 @@ function y(e) {
     });
 }
 ((s = i || (i = {}))[(s.START = 1)] = 'START'), (s[(s.PREVIEW = 2)] = 'PREVIEW'), (s[(s.CONFIRM = 3)] = 'CONFIRM');
-async function B(e, t, n, i) {
+async function Z(e, t, n, i) {
     let s =
         null != i
             ? i
             : (function () {
-                  let e = Object.values(I.Z.boostSlots),
+                  let e = Object.values(N.Z.boostSlots),
                       t = o().sortBy(
-                          e.filter((e) => !(0, A.tl)(e)),
+                          e.filter((e) => !(0, v.tl)(e)),
                           (e) => [null != e.premiumGuildSubscription, null != e.cooldownEndsAt ? new Date(e.cooldownEndsAt) : null]
                       )[0];
                   return null != t ? t.id : null;
               })();
     if (null == s) throw Error('No slot to cancel');
-    await (0, m.pD)(s), await (0, u.Mg)(e, { items: (0, b.MY)(e, t) }, n);
+    await (0, m.pD)(s), await (0, u.Mg)(e, { items: (0, j.MY)(e, t) }, n);
 }
-function L(e) {
+function F(e) {
     var t, n, i;
     let { premiumSubscription: s, guildBoostSlotId: a, onBack: o, onNext: u, onClose: m } = e,
-        [T, I] = l.useState(!1),
-        [N, A] = l.useMemo(() => {
+        [E, N] = l.useState(!1),
+        [b, v] = l.useState(null),
+        [D, L] = l.useMemo(() => {
             try {
-                return [(0, S.g)(s, -1), !1];
+                return [(0, C.g)(s, -1), !1];
             } catch {
                 return [[], !0];
             }
         }, [s]);
     l.useEffect(() => {
-        A && m();
-    }, [A]);
-    let { premiumSubscriptionPlan: R, premiumGuildPlan: y } = (0, c.cj)([f.Z], () => {
-            let e = f.Z.get(s.planId);
+        L && m();
+    }, [L]);
+    let { premiumSubscriptionPlan: F, premiumGuildPlan: M } = (0, c.cj)([A.Z], () => {
+            let e = A.Z.get(s.planId);
             return {
                 premiumSubscriptionPlan: e,
-                premiumGuildPlan: null != e ? f.Z.getForSkuAndInterval((0, b.Wz)(O.Si.GUILD), e.interval, e.intervalCount) : null
+                premiumGuildPlan: null != e ? A.Z.getForSkuAndInterval((0, j.Wz)(P.Si.GUILD), e.interval, e.intervalCount) : null
             };
         }),
-        { analyticsLocations: L } = (0, g.ZP)(),
-        [Z] = (0, x.ED)({
+        { analyticsLocations: k } = (0, x.ZP)(),
+        [w] = (0, T.ED)({
             subscriptionId: s.id,
             renewal: !0,
             currency: s.currency,
             paymentSourceId: s.paymentSourceId,
-            analyticsLocations: L,
-            analyticsLocation: h.Z.GUILD_BOOST_SLOT_CANCELLATION_MODAL_CURRENT_INVOICE_PREVIEW
+            analyticsLocations: k,
+            analyticsLocation: p.Z.GUILD_BOOST_SLOT_CANCELLATION_MODAL_CURRENT_INVOICE_PREVIEW
         }),
-        F = null != y ? (0, b.Zx)(s, null !== (i = null === (t = N[0]) || void 0 === t ? void 0 : t.quantity) && void 0 !== i ? i : 0, y.id) : null,
-        [M] = (0, x.ED)({
+        U = null != M ? (0, j.Zx)(s, null !== (i = null === (t = D[0]) || void 0 === t ? void 0 : t.quantity) && void 0 !== i ? i : 0, M.id) : null,
+        [V] = (0, T.ED)({
             subscriptionId: s.id,
-            items: F,
+            items: U,
             renewal: !0,
-            analyticsLocations: L,
-            analyticsLocation: h.Z.GUILD_BOOST_SLOT_CANCELLATION_MODAL_RENEWAL_INVOICE_PREVIEW
+            analyticsLocations: k,
+            analyticsLocation: p.Z.GUILD_BOOST_SLOT_CANCELLATION_MODAL_RENEWAL_INVOICE_PREVIEW
         });
-    if (null == M || null == R || null == y || null == Z) return (0, r.jsx)(d.Spinner, {});
-    let k =
+    if (null == V || null == F || null == M || null == w) return (0, r.jsx)(d.Spinner, {});
+    let G =
             (s.items.some((e) => {
                 let { planId: t } = e;
-                return !O.Z1.has(t);
+                return !P.Z1.has(t);
             }) &&
                 null == s.renewalMutations) ||
             (null === (n = s.renewalMutations) || void 0 === n
                 ? void 0
                 : n.items.find((e) => {
                       let { planId: t } = e;
-                      return !O.Z1.has(t);
+                      return !P.Z1.has(t);
                   })) != null,
-        w = N.some((e) => {
+        Y = D.some((e) => {
             let { planId: t } = e;
-            return O.Z1.has(t);
+            return P.Z1.has(t);
         }),
-        U = k || w ? M.total - Z.total : -Z.total,
-        { interval: V, intervalCount: G } = R;
+        H = G || Y ? V.total - w.total : -w.total,
+        { interval: z, intervalCount: W } = F;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(j.Z, { onClose: m }),
+            (0, r.jsx)(R.Z, { onClose: m }),
             (0, r.jsxs)(d.ModalContent, {
-                className: D.body,
+                className: B.body,
                 children: [
-                    (0, r.jsx)('div', { children: P.intl.format(P.t['0W23cn'], { endDate: M.subscriptionPeriodStart }) }),
-                    (0, r.jsxs)(C.PO, {
-                        className: D.invoiceTable,
+                    null !== b &&
+                        (0, r.jsx)(d.FormErrorBlock, {
+                            className: B.error,
+                            children: b
+                        }),
+                    (0, r.jsx)('div', { children: y.intl.format(y.t['0W23cn'], { endDate: V.subscriptionPeriodStart }) }),
+                    (0, r.jsxs)(_.PO, {
+                        className: B.invoiceTable,
                         children: [
-                            (0, r.jsx)(C.q9, { children: P.intl.string(P.t.iqhIp6) }),
-                            (0, r.jsx)(C.R$, {
-                                label: P.intl.format(P.t['Vg+LRk'], { subscriptionCount: 1 }),
-                                value: (0, v.og)((0, v.T4)(U, s.currency), V, G),
-                                className: D.invoiceCancelRow
+                            (0, r.jsx)(_.q9, { children: y.intl.string(y.t.iqhIp6) }),
+                            (0, r.jsx)(_.R$, {
+                                label: y.intl.format(y.t['Vg+LRk'], { subscriptionCount: 1 }),
+                                value: (0, O.og)((0, O.T4)(H, s.currency), z, W),
+                                className: B.invoiceCancelRow
                             }),
-                            null != F && F.length > 0
+                            null != U && U.length > 0
                                 ? (0, r.jsxs)('div', {
                                       children: [
-                                          (0, r.jsx)(C.KU, {}),
-                                          (0, r.jsx)(_.nd, {
+                                          (0, r.jsx)(_.KU, {}),
+                                          (0, r.jsx)(f.nd, {
                                               premiumSubscription: s,
-                                              renewalInvoice: M,
+                                              renewalInvoice: V,
                                               isUpdate: !0
                                           })
                                       ]
@@ -193,28 +201,29 @@ function L(e) {
                 ]
             }),
             (0, r.jsxs)(d.ModalFooter, {
-                align: p.Z.Align.CENTER,
-                justify: p.Z.Justify.BETWEEN,
+                align: S.Z.Align.CENTER,
+                justify: S.Z.Justify.BETWEEN,
                 children: [
                     (0, r.jsx)(d.Button, {
                         color: d.Button.Colors.RED,
-                        disabled: T,
+                        disabled: E,
                         onClick: async () => {
                             try {
-                                I(!0), await B(s, N, L, a), u();
-                            } catch {
-                                I(!1);
+                                N(!0), v(null), await Z(s, D, k, a), u();
+                            } catch (t) {
+                                let e = t instanceof h.HF ? t : new h.HF(t, t.code);
+                                v(y.intl.string(e.code === g.SM.BILLING_PAUSE_INVALID_UPDATE ? y.t.dq4vq6 : y.t['5mlOCQ'])), N(!1);
                             }
                         },
-                        children: P.intl.string(P.t['/AS/gI'])
+                        children: y.intl.string(y.t['/AS/gI'])
                     }),
-                    (0, r.jsx)(E.Z, { onClick: o })
+                    (0, r.jsx)(I.Z, { onClick: o })
                 ]
             })
         ]
     });
 }
-function Z(e) {
+function M(e) {
     let { premiumSubscription: t, onClose: n } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -223,38 +232,38 @@ function Z(e) {
                 children: [
                     (0, r.jsx)(d.FormTitle, {
                         tag: d.FormTitleTags.H4,
-                        children: P.intl.string(P.t['fZzV/P'])
+                        children: y.intl.string(y.t['fZzV/P'])
                     }),
                     (0, r.jsx)(d.ModalCloseButton, { onClick: n })
                 ]
             }),
             (0, r.jsxs)(d.ModalContent, {
-                className: D.body,
-                children: [(0, r.jsx)('div', { className: D.cancelImage }), (0, r.jsx)('div', { children: P.intl.format(P.t['H+z0np'], { endDate: t.currentPeriodEnd }) })]
+                className: B.body,
+                children: [(0, r.jsx)('div', { className: B.cancelImage }), (0, r.jsx)('div', { children: y.intl.format(y.t['H+z0np'], { endDate: t.currentPeriodEnd }) })]
             }),
             (0, r.jsx)(d.ModalFooter, {
                 children: (0, r.jsx)(d.Button, {
                     onClick: n,
-                    children: P.intl.string(P.t.BddRzc)
+                    children: y.intl.string(y.t.BddRzc)
                 })
             })
         ]
     });
 }
-function F(e) {
+function k(e) {
     let t,
         { guildBoostSlot: n, transitionState: i, onClose: s } = e;
     l.useEffect(() => {
-        !N.ZP.hasFetchedSubscriptions() && (0, u.jg)();
+        !b.ZP.hasFetchedSubscriptions() && (0, u.jg)();
     }, []);
-    let a = (0, c.e7)([N.ZP], () => N.ZP.getPremiumTypeSubscription()),
+    let a = (0, c.e7)([b.ZP], () => b.ZP.getPremiumTypeSubscription()),
         [o, m] = l.useState(1),
-        { analyticsLocations: p } = (0, g.ZP)(h.Z.GUILD_BOOST_CANCELLATION_MODAL);
+        { analyticsLocations: h } = (0, x.ZP)(p.Z.GUILD_BOOST_CANCELLATION_MODAL);
     if (null == a) t = (0, r.jsx)(d.ModalContent, { children: (0, r.jsx)(d.Spinner, {}) });
     else
         switch (o) {
             case 1:
-                t = (0, r.jsx)(y, {
+                t = (0, r.jsx)(L, {
                     premiumSubscription: a,
                     isInventory: null == n.premiumGuildSubscription,
                     onNext: () => m(2),
@@ -262,7 +271,7 @@ function F(e) {
                 });
                 break;
             case 2:
-                t = (0, r.jsx)(L, {
+                t = (0, r.jsx)(F, {
                     premiumSubscription: a,
                     guildBoostSlotId: n.id,
                     onBack: () => m(1),
@@ -271,7 +280,7 @@ function F(e) {
                 });
                 break;
             case 3:
-                t = (0, r.jsx)(Z, {
+                t = (0, r.jsx)(M, {
                     premiumSubscription: a,
                     onClose: s
                 });
@@ -279,8 +288,8 @@ function F(e) {
             default:
                 throw Error('Unexpected step: '.concat(o));
         }
-    return (0, r.jsx)(g.Gt, {
-        value: p,
+    return (0, r.jsx)(x.Gt, {
+        value: h,
         children: (0, r.jsx)(d.ModalRoot, {
             transitionState: i,
             children: t

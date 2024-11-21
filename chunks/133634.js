@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return j;
     }
 }),
     n(47120);
@@ -20,28 +20,29 @@ var i = n(200651),
     g = n(131951),
     C = n(594174),
     x = n(63063),
-    _ = n(120619),
-    v = n(578976),
-    I = n(981631),
-    E = n(37113),
-    b = n(388032),
-    Z = n(277865),
-    N = n(454120);
-let S = (e) => 1 - Math.pow(1 - e, 3);
-function T(e) {
-    let { channel: t, buyer: r, onClose: s, render: T, dismissibleContent: j } = e,
-        A = (0, d.Wu)([f.Z], () => f.Z.getAllActiveStreams()),
-        y = (0, d.e7)([C.default], () => C.default.getCurrentUser()),
-        P = null != A.find((e) => e.ownerId === (null == y ? void 0 : y.id)),
-        M = (0, d.e7)([_.Z], () => _.Z.getPreviousGoLiveSettings()),
-        L = P && null != M && M.resolution !== E.LY.RESOLUTION_1440 && M.frameRate !== E.ws.FPS_60,
-        [R, k] = (0, l.useState)(!1);
+    _ = n(5192),
+    v = n(120619),
+    I = n(578976),
+    E = n(981631),
+    b = n(37113),
+    Z = n(388032),
+    N = n(277865),
+    S = n(454120);
+let T = (e) => 1 - Math.pow(1 - e, 3);
+function j(e) {
+    let { channel: t, buyer: r, onClose: s, render: j, dismissibleContent: A } = e,
+        y = (0, d.Wu)([f.Z], () => f.Z.getAllActiveStreams()),
+        P = (0, d.e7)([C.default], () => C.default.getCurrentUser()),
+        M = null != y.find((e) => e.ownerId === (null == P ? void 0 : P.id)),
+        L = (0, d.e7)([v.Z], () => v.Z.getPreviousGoLiveSettings()),
+        R = M && null != L && L.resolution !== b.LY.RESOLUTION_1440 && L.frameRate !== b.ws.FPS_60,
+        [k, O] = (0, l.useState)(!1);
     (0, l.useEffect)(() => {
-        k(!0);
+        O(!0);
     }, []);
-    let O = (0, l.useContext)(m.h9),
-        D = (0, u.useSpring)({
-            from: R
+    let D = (0, l.useContext)(m.h9),
+        w = (0, u.useSpring)({
+            from: k
                 ? {
                       opacity: 0,
                       transform: 'translateX(-50%) translateY(30px) scale(0.9)'
@@ -49,85 +50,82 @@ function T(e) {
                 : {},
             to: {
                 opacity: 1,
-                transform: O ? 'translateX(-50%) translateY(0px) scale(1)' : 'translateX(-50%) translateY(-66px) scale(1)'
+                transform: D ? 'translateX(-50%) translateY(0px) scale(1)' : 'translateX(-50%) translateY(-66px) scale(1)'
             },
             config: {
                 duration: 250,
-                easing: S,
-                immediate: !R
+                easing: T,
+                immediate: !k
             }
         }),
-        { avatarSrc: w, eventHandlers: B } = (0, p.Z)({
+        { avatarSrc: B, eventHandlers: U } = (0, p.Z)({
             user: r,
             size: u.AvatarSizes.SIZE_48,
             animateOnHover: !0
         }),
-        U = P && !L,
-        H = t.hdStreamingUntil;
-    if (null == H || null == r || null == y) return null;
-    let G = o()(H).diff(o()(), 'hours');
-    if (!T) return null;
-    let F = (() => {
-            if (j) {
-                var e;
-                return b.intl.format(b.t['6LrV9f'], {
-                    username: null !== (e = r.globalName) && void 0 !== e ? e : r.username,
-                    num: G,
-                    helpCenterLink: x.Z.getArticleURL(I.BhN.HD_STREAMING_POTION)
-                });
-            }
-            return r.id === y.id
-                ? b.intl.string(b.t.IjKvNT)
-                : !0 === P
-                  ? b.intl.format(b.t.JkWoqK, {
-                        username: r.username,
-                        helpCenterLink: x.Z.getArticleURL(I.BhN.HD_STREAMING_POTION)
-                    })
-                  : b.intl.formatToPlainString(b.t.vNbVXF, { username: r.username });
-        })(),
-        V = L ? b.intl.string(b.t.o7NIjY) : U ? b.intl.string(b.t.r6xhBw) : b.intl.string(b.t.yKw8Dg);
-    return null == r || null == y
+        H = _.ZP.getName(t.guild_id, t.id, r),
+        G = M && !R,
+        F = t.hdStreamingUntil;
+    if (null == F || null == r || null == P) return null;
+    let V = o()(F).diff(o()(), 'hours');
+    if (!j) return null;
+    let z = A
+            ? Z.intl.format(Z.t['6LrV9f'], {
+                  username: H,
+                  num: V,
+                  helpCenterLink: x.Z.getArticleURL(E.BhN.HD_STREAMING_POTION)
+              })
+            : r.id === P.id
+              ? Z.intl.string(Z.t.IjKvNT)
+              : !0 === M
+                ? Z.intl.format(Z.t.JkWoqK, {
+                      username: H,
+                      helpCenterLink: x.Z.getArticleURL(E.BhN.HD_STREAMING_POTION)
+                  })
+                : Z.intl.formatToPlainString(Z.t.vNbVXF, { username: H }),
+        W = R ? Z.intl.string(Z.t.o7NIjY) : G ? Z.intl.string(Z.t.r6xhBw) : Z.intl.string(Z.t.yKw8Dg);
+    return null == r || null == P
         ? null
         : (0, i.jsxs)(c.animated.div, {
-              style: D,
-              className: Z.banner,
+              style: w,
+              className: N.banner,
               children: [
                   (0, i.jsxs)('div', {
                       children: [
                           (0, i.jsx)(u.Avatar, {
-                              src: w,
+                              src: B,
                               'aria-label': r.username,
                               size: u.AvatarSizes.SIZE_48,
-                              ...B
+                              ...U
                           }),
                           (0, i.jsx)('img', {
-                              className: Z.potion,
-                              src: N,
+                              className: N.potion,
+                              src: S,
                               alt: ''
                           })
                       ]
                   }),
                   (0, i.jsx)(u.Heading, {
                       variant: 'heading-sm/medium',
-                      children: F
+                      children: z
                   }),
                   (0, i.jsxs)('div', {
-                      className: Z.subsection,
+                      className: N.subsection,
                       children: [
                           (0, i.jsx)(u.Button, {
                               onClick: () => {
-                                  if (L) {
-                                      let e = _.Z.getPreviousGoLiveSettings(),
+                                  if (R) {
+                                      let e = v.Z.getPreviousGoLiveSettings(),
                                           t = g.Z.getGoLiveSource();
                                       if (null == e) {
                                           s();
                                           return;
                                       }
-                                      let n = (0, v.s)(e.resolution, e.frameRate, t);
+                                      let n = (0, I.s)(e.resolution, e.frameRate, t);
                                       h.Z.setGoLiveSource(n), s();
                                       return;
                                   }
-                                  if (U) {
+                                  if (G) {
                                       s();
                                       return;
                                   }
@@ -141,12 +139,12 @@ function T(e) {
                                   }),
                                       s();
                               },
-                              className: a()({ [Z.actionButton]: !0 !== P }),
-                              children: V
+                              className: a()({ [N.actionButton]: !0 !== M }),
+                              children: W
                           }),
-                          !U &&
+                          !G &&
                               (0, i.jsx)(u.Clickable, {
-                                  className: Z.x,
+                                  className: N.x,
                                   onClick: s,
                                   children: (0, i.jsx)(u.XSmallIcon, { name: 'close' })
                               })
