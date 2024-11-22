@@ -782,9 +782,14 @@ function eY(e) {
     return null != c ? f[c] : void 0;
 }
 function eW(e) {
-    let { isTargetedDisclosure: t, gamePublisher: n, gameTitle: r } = e;
+    let { isTargetedDisclosure: t, gamePublisher: n, gameTitle: r, cosponsorName: i } = e;
     return t
-        ? R.intl.formatToPlainString(R.t.Piihy8, { gamePublisher: n })
+        ? null == i
+            ? R.intl.formatToPlainString(R.t.Piihy8, { gamePublisher: n })
+            : R.intl.formatToPlainString(R.t.DV47Gx, {
+                  gamePublisher: n,
+                  cosponsorName: i
+              })
         : R.intl.formatToPlainString(R.t.tOWwxM, {
               gamePublisher: n,
               gameTitle: r
