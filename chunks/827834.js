@@ -115,8 +115,8 @@ t.default = (function () {
                         type: 'other',
                         description: 'optionalWhitespace'
                     },
-                    G = /^[0-9]/,
-                    B = {
+                    B = /^[0-9]/,
+                    G = {
                         type: 'class',
                         value: '[0-9]',
                         description: '[0-9]'
@@ -412,7 +412,7 @@ t.default = (function () {
                 }
                 function ef() {
                     var e;
-                    return G.test(t.charAt(J)) ? ((e = t.charAt(J)), J++) : ((e = c), 0 === er && ei(B)), e;
+                    return B.test(t.charAt(J)) ? ((e = t.charAt(J)), J++) : ((e = c), 0 === er && ei(G)), e;
                 }
                 function e_() {
                     var e;

@@ -15,38 +15,38 @@ var r = n(200651),
     g = n(906732),
     C = n(702486),
     b = n(605236),
-    x = n(977395),
-    v = n(214852),
+    v = n(977395),
+    x = n(214852),
     _ = n(479446),
     k = n(981632),
-    j = n(290026),
-    E = n(819640),
-    I = n(594174),
+    I = n(290026),
+    j = n(819640),
+    E = n(594174),
     S = n(626135),
     T = n(74538),
     N = n(335131),
     B = n(381585),
     y = n(597688),
     L = n(328347),
-    Z = n(307043),
-    P = n(223143),
+    P = n(307043),
+    Z = n(223143),
     O = n(298228),
     w = n(937510),
     A = n(309956),
     R = n(853748),
     H = n(426171),
     F = n(823941),
-    D = n(752053),
-    V = n(963102),
+    V = n(752053),
+    D = n(963102),
     M = n(508498),
     W = n(38900),
     U = n(709999),
-    z = n(373113),
-    G = n(802022),
+    G = n(373113),
+    z = n(802022),
     K = n(558117),
     $ = n(141594),
-    J = n(566564),
-    Y = n(531864),
+    Y = n(566564),
+    J = n(531864),
     q = n(302800),
     Q = n(215023),
     X = n(981631),
@@ -56,7 +56,7 @@ var r = n(200651),
     er = n(213731);
 function ea(e) {
     let { products: t, handleShopCardMount: n, header: a, category: i, isPremiumUser: s, isGiftEasterEggEnabled: l, showMysteryCard: o = !1 } = e,
-        d = (0, c.e7)([I.default], () => I.default.getCurrentUser());
+        d = (0, c.e7)([E.default], () => E.default.getCurrentUser());
     return null == d || 0 === t.length
         ? null
         : (0, r.jsxs)('div', {
@@ -89,7 +89,7 @@ function ea(e) {
                                           },
                                           e.skuId
                                       ),
-                                      1 === t && o && (0, r.jsx)(G.Z, {})
+                                      1 === t && o && (0, r.jsx)(z.Z, {})
                                   ]
                               },
                               e.skuId
@@ -168,32 +168,32 @@ function es(e) {
 t.default = function (e) {
     var t;
     let { isFullScreen: n = !0 } = e;
-    (0, v.z)(x.f);
-    let i = (0, Z.u)('CollectiblesShop'),
+    (0, x.z)(v.f);
+    let i = (0, P.u)('CollectiblesShop'),
         { analyticsSource: l, analyticsLocations: p } = (0, c.cj)([L.Z], () => L.Z.getAnalytics()),
         { analyticsLocations: _ } = (0, g.ZP)([...p, f.Z.COLLECTIBLES_SHOP]),
         { sessionId: k, scrollerRef: w, scrollHandler: R } = (0, C._)(X.rMx.COLLECTIBLES_SHOP_SCROLLED, l),
-        { feedState: F, catalogState: U, transitionToCatalog: G, transitionToFeed: K } = (0, A.B)(i, w),
+        { feedState: F, catalogState: U, transitionToCatalog: z, transitionToFeed: K } = (0, A.B)(i, w),
         [q, ea] = a.useState(!1),
         [ei, el] = a.useState(Q.IV),
         [eo, ec] = a.useState(),
         [ed, eu] = a.useState(),
-        em = (0, c.e7)([E.Z], () => E.Z.getLayers().includes(X.S9g.COLLECTIBLES_SHOP)),
+        em = (0, c.e7)([j.Z], () => j.Z.getLayers().includes(X.S9g.COLLECTIBLES_SHOP)),
         eh = (0, u.f9)(),
         { onClose: ep } = (0, M.Db)(),
-        ef = (0, c.e7)([I.default], () => I.default.getCurrentUser()),
+        ef = (0, c.e7)([E.default], () => E.default.getCurrentUser()),
         eg = T.ZP.canUseCollectibles(ef),
-        { categories: eC, isFetchingCategories: eb, fetchCategoriesError: ex, fetchPurchasesError: ev, claimError: e_, refreshCategories: ek } = (0, P.Z)(),
-        ej = null !== (t = null != ex ? ex : ev) && void 0 !== t ? t : e_;
-    (0, j.P)();
-    let eE = (0, O.O)(eC),
-        eI = a.useRef(null),
+        { categories: eC, isFetchingCategories: eb, fetchCategoriesError: ev, fetchPurchasesError: ex, claimError: e_, refreshCategories: ek } = (0, Z.Z)(),
+        eI = null !== (t = null != ev ? ev : ex) && void 0 !== t ? t : e_;
+    (0, I.P)();
+    let ej = (0, O.O)(eC),
+        eE = a.useRef(null),
         [eS, eT] = a.useState(!1);
     (0, H.Kp)({
         categories: eC,
         isFetchingCategories: eb,
         isLayer: em,
-        initialItemCardRef: eI
+        initialItemCardRef: eE
     }),
         a.useEffect(() => {
             if (F === Q.f7.VISIBLE || U === Q.f7.VISIBLE) {
@@ -245,10 +245,10 @@ t.default = function (e) {
             ek();
         }, [ek]),
         { setCategoryRef: ey, handleScrollToCategory: eL } = (0, H.xV)(w.current),
-        { reducedMotion: eZ } = a.useContext(m.AccessibilityPreferencesContext),
-        eP = a.useRef(null),
+        { reducedMotion: eP } = a.useContext(m.AccessibilityPreferencesContext),
+        eZ = a.useRef(null),
         eO = a.useRef(null);
-    (0, m.useFocusLock)(eP),
+    (0, m.useFocusLock)(eZ),
         a.useEffect(() => {
             if (!n) {
                 var e;
@@ -257,10 +257,10 @@ t.default = function (e) {
         }, [n]);
     let ew = a.useCallback(
             async (e, t, r) => {
-                let a = r && !n && !eZ.enabled;
-                eu(e), ec(t), await G(a), t && eL(t);
+                let a = r && !n && !eP.enabled;
+                eu(e), ec(t), await z(a), t && eL(t);
             },
-            [G, eL, n, eZ]
+            [z, eL, n, eP]
         ),
         eA = (0, c.e7)([y.Z], () => {
             var e;
@@ -276,7 +276,7 @@ t.default = function (e) {
             children: [
                 (0, r.jsx)('div', {
                     className: er.shop,
-                    ref: n ? eP : eO,
+                    ref: n ? eZ : eO,
                     tabIndex: -1,
                     children: (0, r.jsxs)(m.AdvancedScroller, {
                         className: er.shopScroll,
@@ -296,14 +296,14 @@ t.default = function (e) {
                                         [er.out]: F === Q.f7.OUT
                                     }),
                                     children: [
-                                        (0, r.jsx)(V.I, {
+                                        (0, r.jsx)(D.I, {
                                             isFullScreen: n,
                                             isLayer: em,
                                             onClose: ep,
                                             isCatalogView: !1,
                                             transparent: !0
                                         }),
-                                        (0, r.jsx)(J.Z, {
+                                        (0, r.jsx)(Y.Z, {
                                             handleTransition: ew,
                                             numVisibleItems: ei
                                         })
@@ -317,7 +317,7 @@ t.default = function (e) {
                                         [er.out]: U === Q.f7.OUT
                                     }),
                                     children: [
-                                        (0, r.jsx)(V.I, {
+                                        (0, r.jsx)(D.I, {
                                             isFullScreen: n,
                                             isLayer: em,
                                             onClose: ep,
@@ -331,14 +331,14 @@ t.default = function (e) {
                                                 className: s()(er.page, { [er.pageFullscreen]: n }),
                                                 children: eb
                                                     ? (0, r.jsx)(W.Z, {})
-                                                    : null != ej
-                                                      ? (0, r.jsx)(D.Z, {
+                                                    : null != eI
+                                                      ? (0, r.jsx)(V.Z, {
                                                             onRetry: eB,
-                                                            errorOrigin: D.i.SHOP_PAGE
+                                                            errorOrigin: V.i.SHOP_PAGE
                                                         })
                                                       : (0, r.jsx)('div', {
                                                             className: er.categories,
-                                                            children: eE
+                                                            children: ej
                                                                 .filter((e) => null == e.unpublishedAt || e.unpublishedAt > new Date())
                                                                 .filter((e) => {
                                                                     let { products: t } = e;
@@ -354,7 +354,7 @@ t.default = function (e) {
                                                                                 children: (0, r.jsx)(es, {
                                                                                     isPremiumUser: eg,
                                                                                     category: e,
-                                                                                    initialItemCardRef: eI,
+                                                                                    initialItemCardRef: eE,
                                                                                     setIsGiftEasterEggEnabled: eT,
                                                                                     isGiftEasterEggEnabled: eS,
                                                                                     isFullScreen: n
@@ -372,16 +372,16 @@ t.default = function (e) {
                         ]
                     })
                 }),
-                eS && (0, r.jsx)(z.Z, {}),
+                eS && (0, r.jsx)(G.Z, {}),
                 !n &&
                     U !== Q.f7.VISIBLE &&
                     (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsx)(Y.Z, {
+                            (0, r.jsx)(J.Z, {
                                 peaking: q,
                                 transitioning: F === Q.f7.OUT
                             }),
-                            (0, r.jsx)(Y.Z, {
+                            (0, r.jsx)(J.Z, {
                                 style: { left: 1850 },
                                 peaking: q,
                                 transitioning: F === Q.f7.OUT

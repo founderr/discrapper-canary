@@ -130,14 +130,14 @@ let b = (e, t, n, i) => {
             children: null != t ? t : '-'
         });
     },
-    y = (e) => {
+    Z = (e) => {
         let { children: t } = e;
         return (0, l.jsx)(S, {
             className: j.periodCell,
             children: d()(t).utc().format('MMMM YYYY')
         });
     },
-    Z = (e) => {
+    y = (e) => {
         var t;
         let { listingId: n } = e,
             i = (0, u.e7)([p.Z], () => p.Z.getSubscriptionListing(n)),
@@ -215,8 +215,8 @@ let b = (e, t, n, i) => {
             renderHeader: () => T.intl.string(T.t.fThnXV),
             render(e, t) {
                 let { expandedRows: n } = t,
-                    i = [(0, l.jsx)(y, { children: e.periodStartingAt }, e.key)];
-                if (n.has(e.key)) for (let t in e.ppgs) i.push((0, l.jsx)(Z, { listingId: t }, t));
+                    i = [(0, l.jsx)(Z, { children: e.periodStartingAt }, e.key)];
+                if (n.has(e.key)) for (let t in e.ppgs) i.push((0, l.jsx)(y, { listingId: t }, t));
                 return i;
             }
         },

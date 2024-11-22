@@ -1,6 +1,6 @@
 n.d(t, {
     T: function () {
-        return Z;
+        return y;
     },
     Z: function () {
         return L;
@@ -34,7 +34,7 @@ var i = n(200651),
     S = n(30513),
     E = n(388032),
     R = n(279404);
-function y(e, t, n) {
+function Z(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -47,7 +47,7 @@ function y(e, t, n) {
         e
     );
 }
-let Z = a.ZP.connectStores([I.Z, T.Z], () => {
+let y = a.ZP.connectStores([I.Z, T.Z], () => {
     let e = T.Z.vanityURLCode,
         t = I.Z.getGuildId();
     return {
@@ -194,8 +194,8 @@ class A extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            y(this, 'state', { isRemoving: !1 }),
-            y(this, 'handleShowModalUpsell', (e, t, n, i, r) => {
+            Z(this, 'state', { isRemoving: !1 }),
+            Z(this, 'handleShowModalUpsell', (e, t, n, i, r) => {
                 e.preventDefault(), e.stopPropagation();
                 let { guild: l, analyticsLocations: s } = this.props;
                 null != l &&
@@ -219,10 +219,10 @@ class A extends r.PureComponent {
                         perks: r
                     }));
             }),
-            y(this, 'handleVanityUrlUpsellIndicator', (e) => {
+            Z(this, 'handleVanityUrlUpsellIndicator', (e) => {
                 this.handleShowModalUpsell(e, b.Eu4.TIER_3, b.jXE.GUILD_SETTINGS_VANITY_URL, b.qAy.BADGE, (0, S.WW)());
             }),
-            y(this, 'handleVanityUrlUpsellButton', (e) => {
+            Z(this, 'handleVanityUrlUpsellButton', (e) => {
                 this.handleShowModalUpsell(e, b.Eu4.TIER_3, b.jXE.GUILD_SETTINGS_VANITY_URL, b.qAy.BUTTON_CTA, (0, S.WW)());
             });
     }

@@ -1,6 +1,6 @@
 n.d(e, {
     m: function () {
-        return i;
+        return a;
     }
 });
 let r = (0, n(818083).B)({
@@ -16,4 +16,4 @@ let r = (0, n(818083).B)({
             }
         ]
     }),
-    i = (t) => r.useExperiment({ location: t }).realtimeUseNowEnabled;
+    a = (t) => r.useExperiment({ location: t }).realtimeUseNowEnabled;

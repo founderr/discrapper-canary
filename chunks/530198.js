@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return y;
+        return Z;
     }
 }),
     n(47120);
@@ -566,7 +566,7 @@ function R(e) {
     });
     return (0, i.jsx)(i.Fragment, { children: s });
 }
-function y(e) {
+function Z(e) {
     let t,
         { configurationItems: n, onConfigurationChange: r, locked: l, integrations: s } = e,
         a = (0, m.ZP)();

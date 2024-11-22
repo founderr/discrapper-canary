@@ -34,8 +34,8 @@ var i = n(200651),
     S = n(874993),
     E = n(745752),
     R = n(45966),
-    y = n(637853),
-    Z = n(526120),
+    Z = n(637853),
+    y = n(526120),
     A = n(621923),
     L = n(352981),
     D = n(610403),
@@ -88,8 +88,8 @@ var i = n(200651),
     eS = n(497666),
     eE = n(324330),
     eR = n(495300),
-    ey = n(312397),
-    eZ = n(651780),
+    eZ = n(312397),
+    ey = n(651780),
     eA = n(279542),
     eL = n(413335),
     eD = n(665324),
@@ -121,7 +121,7 @@ function eV(e, t) {
 }
 function eY(e) {
     var t;
-    let { guild: r, isGuildAdmin: s, canManageGuild: d, canViewAuditLog: m, canManageRoles: h, canManageGuildExpressions: g, canManageWebhooks: N, canUnlinkChannels: E, canManageBans: R, canAccessMembersPage: Z, canViewGuildAnalytics: A, isOwner: B, isOwnerWithRequiredMfaLevel: U, showDirtyGuildTemplateIndicator: F, memberCount: z, showAccessRate: W, onboardingStep: V, onboardingEnabled: K, welcomeScreenEmpty: X, guildMetadata: Q, section: J, canAccessClanSettings: et } = e,
+    let { guild: r, isGuildAdmin: s, canManageGuild: d, canViewAuditLog: m, canManageRoles: h, canManageGuildExpressions: g, canManageWebhooks: N, canUnlinkChannels: E, canManageBans: R, canAccessMembersPage: y, canViewGuildAnalytics: A, isOwner: B, isOwnerWithRequiredMfaLevel: U, showDirtyGuildTemplateIndicator: F, memberCount: z, showAccessRate: W, onboardingStep: V, onboardingEnabled: K, welcomeScreenEmpty: X, guildMetadata: Q, section: J, canAccessClanSettings: et } = e,
         er = es.$.getCurrentConfig({
             guildId: r.id,
             location: 'generateSections'
@@ -277,7 +277,7 @@ function eY(e) {
                 }
             ],
             t =
-                h || Z || d
+                h || y || d
                     ? [
                           { section: u.ID.DIVIDER },
                           {
@@ -304,7 +304,7 @@ function eY(e) {
                               ariaLabel: eH.intl.string(eH.t['9Oq93t']),
                               element: eE.Z,
                               type: u.bT.CUSTOM,
-                              predicate: () => Z
+                              predicate: () => y
                           },
                           {
                               section: eB.pNK.INSTANT_INVITES,
@@ -372,7 +372,7 @@ function eY(e) {
                           }
                       ]
                     : [],
-            I = (0, y.wC)(r.id),
+            I = (0, Z.wC)(r.id),
             T = n && A,
             k = d && (r.hasFeature(eB.oNc.DISCOVERABLE) || !!(null == Q ? void 0 : Q.isPublished)),
             B = d && !X && !r.hasFeature(eB.oNc.GUILD_SERVER_GUIDE),
@@ -574,10 +574,10 @@ function eY(e) {
                 impressionName: l.ImpressionNames.GUILD_SETTINGS_OVERVIEW,
                 label: eH.intl.string(eH.t['/dp6yc']),
                 ariaLabel: eH.intl.string(eH.t['/dp6yc']),
-                element: ey.Z,
+                element: eZ.Z,
                 notice: {
                     stores: [ec.Z],
-                    element: ey.O
+                    element: eZ.O
                 }
             },
             ...e,
@@ -591,7 +591,7 @@ function eY(e) {
                 impressionName: l.ImpressionNames.GUILD_SETTINGS_BOOST_STATUS,
                 label: eH.intl.string(eH.t['8+VX4+']),
                 ariaLabel: eH.intl.string(eH.t['8+VX4+']),
-                element: eZ.Z,
+                element: ey.Z,
                 className: ez.serverBoostTabItem,
                 icon: (0, i.jsx)(eL.Z, { className: ez.icon })
             },
@@ -613,10 +613,10 @@ function eY(e) {
             impressionName: l.ImpressionNames.GUILD_SETTINGS_OVERVIEW,
             label: eH.intl.string(eH.t['/dp6yc']),
             ariaLabel: eH.intl.string(eH.t['/dp6yc']),
-            element: ey.Z,
+            element: eZ.Z,
             notice: {
                 stores: [ec.Z],
-                element: ey.O
+                element: eZ.O
             }
         },
         {
@@ -824,7 +824,7 @@ function eY(e) {
                 stores: [em.Z],
                 element: ex.Z
             },
-            predicate: () => (0, y.wC)(r.id),
+            predicate: () => (0, Z.wC)(r.id),
             decoration: eV(r.id, V)
         },
         {
@@ -916,7 +916,7 @@ function eY(e) {
             impressionName: l.ImpressionNames.GUILD_SETTINGS_BOOST_STATUS,
             label: eH.intl.string(eH.t['8+VX4+']),
             ariaLabel: eH.intl.string(eH.t['8+VX4+']),
-            element: eZ.Z,
+            element: ey.Z,
             className: ez.serverBoostTabItem,
             icon: (0, i.jsx)(eL.Z, { className: ez.icon })
         },
@@ -932,7 +932,7 @@ function eY(e) {
             ariaLabel: eH.intl.string(eH.t['9Oq93t']),
             element: eE.Z,
             type: u.bT.CUSTOM,
-            predicate: () => Z
+            predicate: () => y
         },
         {
             section: eB.pNK.INSTANT_INVITES,
@@ -1006,9 +1006,9 @@ class eQ extends r.PureComponent {
     }
     render() {
         var e, t;
-        let { theme: n, sidebarTheme: r, section: l, guild: s, channels: a, isGuildAdmin: o, canManageGuild: u, canViewAuditLog: m, canManageRoles: h, canManageGuildExpressions: g, canManageWebhooks: x, canUnlinkChannels: p, canManageBans: f, canAccessMembersPage: C, canViewGuildAnalytics: v, isOwner: _, isOwnerWithRequiredMfaLevel: I, showDirtyGuildTemplateIndicator: N, memberCount: T, showAccessRate: j, onboardingStep: b, onboardingEnabled: S, welcomeScreenEmpty: E, guildMetadata: R, canAccessClanSettings: y } = this.props;
+        let { theme: n, sidebarTheme: r, section: l, guild: s, channels: a, isGuildAdmin: o, canManageGuild: u, canViewAuditLog: m, canManageRoles: h, canManageGuildExpressions: g, canManageWebhooks: x, canUnlinkChannels: p, canManageBans: f, canAccessMembersPage: C, canViewGuildAnalytics: v, isOwner: _, isOwnerWithRequiredMfaLevel: I, showDirtyGuildTemplateIndicator: N, memberCount: T, showAccessRate: j, onboardingStep: b, onboardingEnabled: S, welcomeScreenEmpty: E, guildMetadata: R, canAccessClanSettings: Z } = this.props;
         if (null == s) return null;
-        let Z = eY({
+        let y = eY({
                 guild: s,
                 channels: a,
                 isGuildAdmin: o,
@@ -1031,9 +1031,9 @@ class eQ extends r.PureComponent {
                 welcomeScreenEmpty: E,
                 guildMetadata: R,
                 section: l,
-                canAccessClanSettings: y
+                canAccessClanSettings: Z
             }),
-            A = (null === (t = Z.find((e) => e.section === l)) || void 0 === t ? void 0 : null === (e = t.predicate) || void 0 === e ? void 0 : e.call(t)) !== !1;
+            A = (null === (t = y.find((e) => e.section === l)) || void 0 === t ? void 0 : null === (e = t.predicate) || void 0 === e ? void 0 : e.call(t)) !== !1;
         return (0, i.jsxs)('div', {
             children: [
                 (0, i.jsx)(d.ZP, {
@@ -1043,7 +1043,7 @@ class eQ extends r.PureComponent {
                     onSetSection: ei.Z.setSection,
                     onClose: c.xf,
                     title: eW(s),
-                    sections: Z
+                    sections: y
                 }),
                 (0, i.jsx)(F.d, { guildId: s.id })
             ]
@@ -1079,10 +1079,10 @@ function eJ() {
     }, [p, j]);
     let { homeSettingsEnabled: b } = (0, A.kZ)(null != p ? p : eB.lds);
     r.useEffect(() => {
-        null != p && b && (0, Z.cP)(p);
+        null != p && b && (0, y.cP)(p);
     }, [b, p]);
     let { showAccessRate: S } = (0, et.eA)(null == t ? void 0 : t.id, !T || !_ || !v),
-        y = x.isGuildAdmin && (null == t ? void 0 : t.hasFeature(eB.oNc.CLAN)),
+        Z = x.isGuildAdmin && (null == t ? void 0 : t.hasFeature(eB.oNc.CLAN)),
         L = (0, s.e7)(
             [U.Z],
             () => {
@@ -1121,7 +1121,7 @@ function eJ() {
             onboardingEnabled: k,
             welcomeScreenEmpty: P,
             guildMetadata: a,
-            canAccessClanSettings: y
+            canAccessClanSettings: Z
         })
     });
 }

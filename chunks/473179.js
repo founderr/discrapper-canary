@@ -5,16 +5,16 @@ t.d(n, {
 });
 var i = t(200651),
     o = t(481060),
-    a = t(870745),
-    r = t(388032);
+    r = t(870745),
+    a = t(388032);
 function c(e) {
     let { onClose: n, onSelect: t, application: c } = e,
-        l = (0, a.Z)(c);
+        l = (0, r.Z)(c);
     return (0, i.jsx)(o.Menu, {
         navId: 'activity-popout-overflow-popout',
         onClose: n,
         onSelect: t,
-        'aria-label': r.intl.string(r.t.SS9Y6O),
+        'aria-label': a.intl.string(a.t.SS9Y6O),
         children: l
     });
 }

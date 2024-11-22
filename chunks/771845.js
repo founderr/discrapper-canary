@@ -187,8 +187,8 @@ let P = (0, d.oH)((e, t) => e.sortedGuildNodes().map((e) => e.id)),
             n
         );
     }),
-    G = (0, d.oH)((e, t) => e.root.children.map(T));
-class B extends g.Z {
+    B = (0, d.oH)((e, t) => e.root.children.map(T));
+class G extends g.Z {
     initialize() {
         this.waitFor(m.Z, E.ZP, c.Z, p.Z, u.Z, _.Z);
     }
@@ -208,14 +208,14 @@ class B extends g.Z {
         return U(I, I.version);
     }
     getCompatibleGuildFolders() {
-        return G(I, I.version);
+        return B(I, I.version);
     }
     getFastListGuildFolders() {
         return I.getRoots();
     }
     takeSnapshot() {
         return {
-            version: B.LATEST_SNAPSHOT_VERSION,
+            version: G.LATEST_SNAPSHOT_VERSION,
             data: { tree: I.getSnapshot() }
         };
     }
@@ -237,10 +237,10 @@ class B extends g.Z {
             GUILD_FOLDER_COLLAPSE: w
         }),
             b(this, 'loadCache', () => {
-                let e = this.readSnapshot(B.LATEST_SNAPSHOT_VERSION),
+                let e = this.readSnapshot(G.LATEST_SNAPSHOT_VERSION),
                     t = null == e ? void 0 : e.tree;
                 if (null != t) for (let e of ((I = new l.g8()).loadSnapshot(t), I.allNodes())) e.type === l.eD.FOLDER && (e.expanded = _.Z.isFolderExpanded(e.id));
             });
     }
 }
-b(B, 'displayName', 'SortedGuildStore'), b(B, 'LATEST_SNAPSHOT_VERSION', 2), (t.ZP = new B());
+b(G, 'displayName', 'SortedGuildStore'), b(G, 'LATEST_SNAPSHOT_VERSION', 2), (t.ZP = new G());

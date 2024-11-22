@@ -124,14 +124,14 @@ t.Z = (e) => {
                 var a, i;
                 let { top: s, left: c, rotation: p, size: f, skuId: g } = e,
                     b = null === (a = C[t]) || void 0 === a ? void 0 : a.items[0],
-                    x = null === (i = C[t]) || void 0 === i ? void 0 : i.type,
-                    v = x === l.Z.AVATAR_DECORATION ? 384 : 512;
+                    v = null === (i = C[t]) || void 0 === i ? void 0 : i.type,
+                    x = v === l.Z.AVATAR_DECORATION ? 384 : 512;
                 return (0, r.jsxs)(
                     'div',
                     {
                         className: m.asset,
                         style: {
-                            top: n ? -h - v : s,
+                            top: n ? -h - x : s,
                             left: n ? ''.concat(c - 75 - 350 * Math.random()) : c,
                             transform: 'rotate('.concat(p, 'deg)'),
                             height: f.y,
@@ -140,9 +140,9 @@ t.Z = (e) => {
                             transitionDuration: ''.concat(u.lb - 200 * Math.random(), 'ms')
                         },
                         children: [
-                            null != b && x === l.Z.AVATAR_DECORATION && (0, r.jsx)(d.R, { item: b }),
+                            null != b && v === l.Z.AVATAR_DECORATION && (0, r.jsx)(d.R, { item: b }),
                             null != b &&
-                                x === l.Z.PROFILE_EFFECT &&
+                                v === l.Z.PROFILE_EFFECT &&
                                 (0, r.jsx)(o.Z, {
                                     profileEffectId: b.id,
                                     isPurchased: !1,

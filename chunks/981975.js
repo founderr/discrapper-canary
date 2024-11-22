@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return Z;
+        return y;
     }
 }),
     n(47120),
@@ -34,7 +34,7 @@ let E = (0, h.hQ)();
 function R(e, t) {
     return t !== m.O1.AND ? Object.values(o().groupBy(e, (e) => ''.concat(e.connectionType, ':').concat(e.applicationId))) : 0 === e.length ? [] : [[...e]];
 }
-function y(e) {
+function Z(e) {
     let { handleAddVerificationClicked: t, locked: n } = e;
     return (0, i.jsxs)('div', {
         className: b.headerNoConfigContainer,
@@ -61,9 +61,9 @@ function y(e) {
         ]
     });
 }
-function Z(e) {
+function y(e) {
     let { guild: t, role: n, locked: l, setSelectedSection: a, integrations: o } = e,
-        { headerHeight: h, headerRef: Z } = (0, C.Z)(0),
+        { headerHeight: h, headerRef: y } = (0, C.Z)(0),
         { scrolledToTop: A, handleScroll: L } = (0, _.V)(),
         D = (0, c.e7)(
             [x.Z],
@@ -103,7 +103,7 @@ function Z(e) {
     }
     let U = null;
     if (0 === P.length)
-        U = (0, i.jsx)(y, {
+        U = (0, i.jsx)(Z, {
             handleAddVerificationClicked: B,
             locked: l
         });
@@ -262,7 +262,7 @@ function Z(e) {
             children: [
                 (0, i.jsx)('div', {
                     className: s()(S.header, S.stickyHeader, { [S.stickyHeaderElevated]: !A }),
-                    ref: Z,
+                    ref: y,
                     children: (0, i.jsx)(_.Z, {
                         guild: t,
                         role: n,

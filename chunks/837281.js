@@ -700,12 +700,12 @@ var t, n;
                     return P(e)(n, r, t(t({}, i), {}, { scope: [e1.Settings] }));
                 };
             },
-            G = function (e) {
+            B = function (e) {
                 return function (n, r, i) {
                     return P(e)(n, r, t(t({}, i), {}, { scope: [e1.Synonyms] }));
                 };
             },
-            B = function (e) {
+            G = function (e) {
                 return function (t, n) {
                     return 'GET' === t.method ? e.transporter.read(t, n) : e.transporter.write(t, n);
                 };
@@ -1612,7 +1612,7 @@ var t, n;
             eU = function (e) {
                 return function (t, n) {
                     return l(
-                        eG(e)([t], n).then(function (e) {
+                        eB(e)([t], n).then(function (e) {
                             return {
                                 objectID: e.objectIDs[0],
                                 taskID: e.taskIDs[0]
@@ -1624,7 +1624,7 @@ var t, n;
                     );
                 };
             },
-            eG = function (e) {
+            eB = function (e) {
                 return function (t, r) {
                     var i = r || {},
                         a = i.createIfNotExists,
@@ -1633,7 +1633,7 @@ var t, n;
                     return eE(e)(t, o, s);
                 };
             },
-            eB = function (e) {
+            eG = function (e) {
                 return function (a, s) {
                     var o = s || {},
                         u = o.safe,
@@ -2356,7 +2356,7 @@ var t, n;
                             multipleQueries: er,
                             copyIndex: P,
                             copySettings: U,
-                            copySynonyms: G,
+                            copySynonyms: B,
                             copyRules: k,
                             moveIndex: ee,
                             listIndices: J,
@@ -2386,7 +2386,7 @@ var t, n;
                             searchDictionaryEntries: eu,
                             setDictionarySettings: ed,
                             waitAppTask: e_,
-                            customRequest: B,
+                            customRequest: G,
                             initIndex: function (e) {
                                 return function (t) {
                                     return q(e)(t, {
@@ -2404,7 +2404,7 @@ var t, n;
                                             setSettings: eJ,
                                             getSettings: eP,
                                             partialUpdateObject: eU,
-                                            partialUpdateObjects: eG,
+                                            partialUpdateObjects: eB,
                                             deleteObject: ey,
                                             deleteObjects: eA,
                                             deleteBy: eT,
@@ -2420,7 +2420,7 @@ var t, n;
                                             browseSynonyms: eg,
                                             deleteSynonym: eC,
                                             clearSynonyms: eI,
-                                            replaceAllObjects: eB,
+                                            replaceAllObjects: eG,
                                             replaceAllSynonyms: eF,
                                             searchRules: eQ,
                                             getRule: eM,

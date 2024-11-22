@@ -23,7 +23,8 @@ n.d(t, {
         return r;
     }
 }),
-    n(47120);
+    n(47120),
+    n(411104);
 let s = 50035,
     o = '__root_errors';
 function l(e) {
@@ -33,7 +34,7 @@ function l(e) {
     }));
 }
 ((i = r || (r = {})).HCAPTCHA = 'hcaptcha'), (i.RECAPTCHA = 'recaptcha'), (i.RECAPTCHA_ENTERPRISE = 'recaptcha_enterprise');
-class u {
+class u extends Error {
     hasFieldErrors() {
         return null != this.errors && Object.keys(this.errors).length > 0;
     }
@@ -85,7 +86,6 @@ class u {
         return null;
     }
     constructor(e, t, n = 'An unexpected error occurred.') {
-        a(this, 'message', void 0), a(this, 'code', void 0), a(this, 'retryAfter', void 0), a(this, 'errors', void 0), a(this, 'status', void 0), a(this, 'captchaFields', void 0);
         let {
             message: r,
             code: i,
@@ -133,6 +133,6 @@ class u {
                       status: e.status
                   };
         })(e, t);
-        (this.message = null != r ? r : n), (this.code = null != i ? i : -1), (this.retryAfter = o), (this.errors = u), (this.status = c), (this.captchaFields = null != d ? d : {});
+        super(null != r ? r : n), a(this, 'code', void 0), a(this, 'retryAfter', void 0), a(this, 'errors', void 0), a(this, 'status', void 0), a(this, 'captchaFields', void 0), (this.code = null != i ? i : -1), (this.retryAfter = o), (this.errors = u), (this.status = c), (this.captchaFields = null != d ? d : {}), (this.cause = e);
     }
 }

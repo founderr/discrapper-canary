@@ -21,7 +21,7 @@ var r,
     d = n(100527),
     u = n(906732),
     f = n(997323),
-    p = n(955843),
+    p = n(324085),
     v = n(688465),
     h = n(333867),
     b = n(63063),
@@ -66,7 +66,7 @@ function A(e) {
         E = null != m && !m.consumed;
     (0, a.useEffect)(
         () => (
-            null != m && !1 === m.consumed && r && (0, f.Zu)(t.id, x.FX),
+            null != m && !1 === m.consumed && r && m.type !== g.qc2.DEVELOPER_GIFT && (0, f.Zu)(t.id, x.FX),
             () => {
                 I && (0, f.SN)(x.FX);
             }

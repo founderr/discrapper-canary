@@ -75,21 +75,21 @@ let C = {
     ]
 };
 t.Z = (e) => {
-    let { product: t, selectedVariantIndex: n, returnRef: b, onSuccess: x, tooltipDelay: v, isGiftEasterEggEnabled: _, disableCustomColor: k = !1 } = e,
-        { analyticsLocations: j } = (0, l.ZP)(),
-        E = a.useRef(null),
-        I = (0, s.Z)(E),
+    let { product: t, selectedVariantIndex: n, returnRef: b, onSuccess: v, tooltipDelay: x, isGiftEasterEggEnabled: _, disableCustomColor: k = !1 } = e,
+        { analyticsLocations: I } = (0, l.ZP)(),
+        j = a.useRef(null),
+        E = (0, s.Z)(j),
         S = k ? p.BR.DARK : p.BR.LIGHT,
         T = (0, u.hv)('CollectiblesShopGiftButton');
     return (0, d.x6)(t)
         ? null
         : (0, r.jsx)(i.Tooltip, {
               text: f.intl.string(f.t['JCFN//']),
-              delay: v,
+              delay: x,
               children: (e) =>
                   (0, r.jsx)(i.Button, {
                       ...e,
-                      buttonRef: E,
+                      buttonRef: j,
                       className: g.giftButton,
                       color: k ? i.ButtonColors.BRAND : i.ButtonColors.CUSTOM,
                       look: i.Button.Looks.FILLED,
@@ -105,20 +105,20 @@ t.Z = (e) => {
                                   }),
                                   isGift: !0,
                                   giftingOrigin: h.Wt.SHOP_PAGE,
-                                  analyticsLocations: j,
+                                  analyticsLocations: I,
                                   returnRef: b,
                                   variantsReturnStyle: T,
                                   onClose:
-                                      null != x
+                                      null != v
                                           ? (e) => {
-                                                e && x();
+                                                e && v();
                                             }
                                           : void 0
                               });
                       },
                       children: _
                           ? (0, r.jsx)(o.e, {
-                                hovered: I,
+                                hovered: E,
                                 isContentDismissed: !0,
                                 themeOverride: S,
                                 boxColors: C

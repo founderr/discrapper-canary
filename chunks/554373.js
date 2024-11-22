@@ -64,12 +64,12 @@ function m(e) {
             }
         }),
         [k, U] = (0, l.useState)(e.autoFocus || !1),
-        G = (0, l.useMemo)(() => {
+        B = (0, l.useMemo)(() => {
             let e = { ...v };
             return e.days ? e.days-- : (e.days = -1), M.add(e);
         }, [M, v]),
-        [B, Z] = (0, l.useState)(A.identifier);
-    if (A.identifier !== B) {
+        [G, Z] = (0, l.useState)(A.identifier);
+    if (A.identifier !== G) {
         let e = (0, i.Mw)(x, A);
         P(c(e, v, m, b, I)), w(e), Z(A.identifier);
     }
@@ -79,7 +79,7 @@ function m(e) {
     function V(t) {
         !e.isDisabled && !e.isReadOnly && (t = h((t = p(t, b, I)), M, S)) && ((t = (0, i.Mw)(t, (null == N ? void 0 : N.calendar) || new s.IQ())), N && 'hour' in N ? C(N.set(t)) : C(t));
     }
-    u(x, b, I) ? w(p(x, b, I)) : 0 > x.compare(M) ? P(f(x, v, m, b, I)) : x.compare(G) > 0 && P(d(x, v, m, b, I));
+    u(x, b, I) ? w(p(x, b, I)) : 0 > x.compare(M) ? P(f(x, v, m, b, I)) : x.compare(B) > 0 && P(d(x, v, m, b, I));
     let j = (0, l.useMemo)(() => !!R && (!!(S && S(R)) || u(R, b, I)), [R, S, b, I]),
         H = e.isInvalid || 'invalid' === e.validationState || j,
         Y = (0, l.useMemo)(() => ('visible' === y ? v : g(v)), [y, v]);
@@ -90,7 +90,7 @@ function m(e) {
         setValue: V,
         visibleRange: {
             start: M,
-            end: G
+            end: B
         },
         minValue: b,
         maxValue: I,
@@ -125,7 +125,7 @@ function m(e) {
             v.days ? F(M) : v.weeks ? F((0, r.zJ)(x, m)) : (v.months || v.years) && F((0, r.Nm)(x));
         },
         focusSectionEnd() {
-            v.days ? F(G) : v.weeks ? F((0, r.vV)(x, m)) : (v.months || v.years) && F((0, r.Vf)(x));
+            v.days ? F(B) : v.weeks ? F((0, r.vV)(x, m)) : (v.months || v.years) && F((0, r.Vf)(x));
         },
         focusNextSection(e) {
             if (!e && !v.days) {
@@ -155,7 +155,7 @@ function m(e) {
         },
         isCellFocused: (e) => k && x && (0, r.KC)(e, x),
         isCellDisabled(t) {
-            return e.isDisabled || 0 > t.compare(M) || t.compare(G) > 0 || this.isInvalid(t, b, I);
+            return e.isDisabled || 0 > t.compare(M) || t.compare(B) > 0 || this.isInvalid(t, b, I);
         },
         isCellUnavailable: (t) => e.isDateUnavailable && e.isDateUnavailable(t),
         isPreviousVisibleRangeInvalid() {
@@ -163,8 +163,8 @@ function m(e) {
             return (0, r.KC)(e, M) || this.isInvalid(e, b, I);
         },
         isNextVisibleRangeInvalid() {
-            let e = G.add({ days: 1 });
-            return (0, r.KC)(e, G) || this.isInvalid(e, b, I);
+            let e = B.add({ days: 1 });
+            return (0, r.KC)(e, B) || this.isInvalid(e, b, I);
         },
         getDatesInWeek(e, t = M) {
             let n = t.add({ weeks: e }),
@@ -228,7 +228,7 @@ function E(e) {
             e ? (A(e), w(e)) : (A(null), w(null));
         },
         U = y ? v(y, x.focusedDate) : T && v(T.start, T.end),
-        G = (t) => {
+        B = (t) => {
             if (!e.isReadOnly) {
                 if ((t = h((t = p(t, D, L)), x.visibleRange.start, e.isDateUnavailable))) {
                     if (y) {
@@ -242,7 +242,7 @@ function E(e) {
                 }
             }
         },
-        [B, Z] = (0, l.useState)(!1),
+        [G, Z] = (0, l.useState)(!1),
         { isDateUnavailable: F } = e,
         V = (0, l.useMemo)(() => !!T && !y && (!!(F && (F(T.start) || F(T.end))) || u(T.start, _, g) || u(T.end, _, g)), [F, T, y, _, g]),
         j = e.isInvalid || 'invalid' === e.validationState || V;
@@ -256,9 +256,9 @@ function E(e) {
         validationState: j ? 'invalid' : null,
         isValueInvalid: j,
         selectFocusedDate() {
-            G(x.focusedDate);
+            B(x.focusedDate);
         },
-        selectDate: G,
+        selectDate: B,
         highlightDate(e) {
             y && x.setFocusedDate(e);
         },
@@ -267,7 +267,7 @@ function E(e) {
             var t, n;
             return x.isInvalid(e) || u(e, null === (t = C.current) || void 0 === t ? void 0 : t.start, null === (n = C.current) || void 0 === n ? void 0 : n.end);
         },
-        isDragging: B,
+        isDragging: G,
         setDragging: Z
     };
 }

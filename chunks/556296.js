@@ -61,17 +61,17 @@ let O = new m.Z('KeybindsStore'),
     P = {},
     k = !1,
     U = [y.kg4.PUSH_TO_TALK, y.kg4.TOGGLE_OVERLAY_INPUT_LOCK, y.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET];
-function G() {
+function B() {
     let { showKeybindIndicators: e } = g.Z.getCurrentConfig({ location: 'KeybindsStore' });
     null == f().find(x, (e) => D.action === e.action && e.enabled && e.shortcut.length > 0) && !__OVERLAY__ && !k && M && e && (V(D), (k = !0));
 }
-function B() {
+function G() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     (k || e) && (F(D.id), (k = !1));
 }
 function Z(e) {
     let { showKeybindIndicators: t } = e;
-    t ? G() : B(!0);
+    t ? B() : G(!0);
 }
 function F(e) {
     if (b.isPlatformEmbedded) I.ZP.inputEventUnregister(parseInt(e, 10));
@@ -91,7 +91,7 @@ function V(e) {
     }
     let i = e.id,
         a = P[n].keyEvents;
-    e.action === y.kg4.TOGGLE_MUTE && B(),
+    e.action === y.kg4.TOGGLE_MUTE && G(),
         !(function (e, t, n, r) {
             if (b.isPlatformEmbedded) I.ZP.inputEventRegister(parseInt(e), t, n, r);
             else {
@@ -137,7 +137,7 @@ function j(e) {
     );
 }
 function H(e) {
-    F(e.id), (x = { ...x }), delete x[e.id], e.action === y.kg4.TOGGLE_MUTE && G();
+    F(e.id), (x = { ...x }), delete x[e.id], e.action === y.kg4.TOGGLE_MUTE && B();
 }
 function Y(e) {
     let { keybind: t } = e;
@@ -222,7 +222,7 @@ let K = [
     }
 ];
 function z() {
-    return G(), K.reduce((e, t) => t() || e, !1);
+    return B(), K.reduce((e, t) => t() || e, !1);
 }
 h.Z.setGetKeybindList(() => {
     let e = [];
@@ -346,7 +346,7 @@ R(q, 'displayName', 'KeybindsStore'),
         KEYBINDS_SET_KEYBIND: Y,
         KEYBINDS_ENABLE_ALL_KEYBINDS: function (e) {
             let { enable: t } = e;
-            (M = t), t ? (h.Z.enable(), f().forEach(x, V), G()) : (h.Z.disable(), f().forEach(x, (e) => F(e.id)), B());
+            (M = t), t ? (h.Z.enable(), f().forEach(x, V), B()) : (h.Z.disable(), f().forEach(x, (e) => F(e.id)), G());
         },
         KEYBINDS_REGISTER_GLOBAL_KEYBIND_ACTIONS: function (e) {
             let { keybinds: t } = e;

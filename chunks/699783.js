@@ -27,8 +27,8 @@ function x(t) {
                 context: { location: C.zr },
                 type: k.OGo.BLOCKED
             }),
-                c.Z.showBlockSuccessToast(o);
-        }, [o]),
+                c.Z.showBlockSuccessToast(o, e);
+        }, [o, e]),
         D = s.useCallback(() => {
             z(), B(), g();
         }, [z, B, g]),

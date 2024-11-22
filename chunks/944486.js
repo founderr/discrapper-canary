@@ -1,7 +1,7 @@
 let r, i, a, s, o, l, u;
 n.d(t, {
     C: function () {
-        return B;
+        return G;
     }
 }),
     n(47120),
@@ -61,14 +61,14 @@ function U(e) {
         if (null != t) return t.id;
     }
 }
-function G(e, t) {
+function B(e, t) {
     if (null == e || null == t || w[e] === t) return !1;
     let n = S.Z.getChannel(t),
         r = null != n && (0, b.zi)(n.type),
         i = (null == n ? void 0 : n.getGuildId()) === e;
     return !!r && !!i && ((w[e] = t), !0);
 }
-function B(e) {
+function G(e) {
     let t = S.Z.getMutableBasicGuildChannelsForGuild(e),
         n = h().find(t, (e) => e.type === R.d4z.GUILD_VOICE);
     return null == n ? void 0 : n.id;
@@ -85,7 +85,7 @@ function Z() {
         }),
         h().each(t, (e) => {
             let t = L[e.id];
-            null == w[e.id] && G(e.id, t);
+            null == w[e.id] && B(e.id, t);
         }),
         null != l && Date.now() - l >= 300000 && ((o = null), (e = !0)),
         e
@@ -175,7 +175,7 @@ class j extends (c = m.ZP.Store) {
             (r = e.sessionId), null != o && null == S.Z.getChannel(o) && (o = null), Z() && k();
         },
         OVERLAY_INITIALIZE: function (e) {
-            (r = e.sessionId), (o = e.selectedVoiceChannelId), (L = {}), (x = {}), (a = e.selectedChannelId), (L[e.selectedGuildId] = e.selectedChannelId), G(e.selectedGuildId, a), Z();
+            (r = e.sessionId), (o = e.selectedVoiceChannelId), (L = {}), (x = {}), (a = e.selectedChannelId), (L[e.selectedGuildId] = e.selectedChannelId), B(e.selectedGuildId, a), Z();
         },
         CONNECTION_CLOSED: function () {
             r = null;
@@ -183,7 +183,7 @@ class j extends (c = m.ZP.Store) {
         CHANNEL_SELECT: function (e) {
             let { guildId: t, channelId: n } = e;
             if (void 0 === t) return !1;
-            null == n && (n = U(t)), null != a && n !== a && (i = a), (a = n), G(t, n), L[P(t)] !== n && ((x[P(t)] = L[P(t)]), (L[P(t)] = a)), k();
+            null == n && (n = U(t)), null != a && n !== a && (i = a), (a = n), B(t, n), L[P(t)] !== n && ((x[P(t)] = L[P(t)]), (L[P(t)] = a)), k();
         },
         CHANNEL_CREATE: function (e) {
             let { channel: t } = e;
@@ -205,7 +205,7 @@ class j extends (c = m.ZP.Store) {
             let { guild: t } = e;
             if (null == L[t.id]) {
                 let e = U(t.id);
-                (L[t.id] = e), G(t.id, e), k();
+                (L[t.id] = e), B(t.id, e), k();
             }
         },
         GUILD_DELETE: function (e) {

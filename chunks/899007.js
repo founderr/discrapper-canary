@@ -39,8 +39,8 @@ function A(e) {
             status: (0, u.Z)(P) ? I.Skl.STREAMING : _.Z.getStatus(t.id),
             isMobileOnline: _.Z.isMobileOnline(t.id)
         })),
-        G = A === b.y0.FULL_SIZE ? l.AvatarSizes.SIZE_120 : l.AvatarSizes.SIZE_80,
-        B = s()(
+        B = A === b.y0.FULL_SIZE ? l.AvatarSizes.SIZE_120 : l.AvatarSizes.SIZE_80,
+        G = s()(
             S.avatar,
             {
                 [S.biteSize]: A === b.y0.BITE_SIZE,
@@ -56,13 +56,13 @@ function A(e) {
         } = (0, E.Z)({
             user: t,
             guildId: null != n ? n.guildId : a,
-            size: G,
+            size: B,
             animateOnHover: N
         }),
         j = (0, r.jsx)(y, {
             src: F,
             avatarDecoration: Z,
-            size: G,
+            size: B,
             'aria-label': t.username,
             imageClassName: null != C ? S.overlay : void 0,
             status: w ? I.Skl.UNKNOWN : k,
@@ -74,12 +74,12 @@ function A(e) {
     return null == C
         ? (0, r.jsx)('div', {
               ...V,
-              className: B,
+              className: G,
               children: j
           })
         : (0, r.jsx)(l.Clickable, {
               ...V,
-              className: s()(B, S.clickable),
+              className: s()(G, S.clickable),
               focusProps: { ringClassName: S.focusRing },
               onClick: () => {
                   L({

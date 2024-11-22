@@ -22,13 +22,13 @@ var r = n(200651),
     g = n(74538),
     C = n(884697),
     b = n(624377),
-    x = n(141011),
-    v = n(813083),
+    v = n(141011),
+    x = n(813083),
     _ = n(67938),
     k = n(372654),
-    j = n(215023),
-    E = n(474936),
-    I = n(388032),
+    I = n(215023),
+    j = n(474936),
+    E = n(388032),
     S = n(462972);
 let T = (0, C.IC)(96),
     N = (e) => {
@@ -39,14 +39,14 @@ let T = (0, C.IC)(96),
         return g.ZP.canUseCollectibles(s)
             ? (0, r.jsx)(r.Fragment, { children: t.summary })
             : (0, r.jsx)(r.Fragment, {
-                  children: I.intl.format(I.t['9hafRk'], {
+                  children: E.intl.format(E.t['9hafRk'], {
                       getPremium: (e) =>
                           (0, r.jsx)(c.Clickable, {
                               innerRef: i,
                               className: S.getPremiumHook,
                               onClick: () => {
                                   (0, h.Z)({
-                                      subscriptionTier: E.Si.TIER_2,
+                                      subscriptionTier: j.Si.TIER_2,
                                       analyticsLocations: n,
                                       returnRef: i
                                   });
@@ -81,12 +81,12 @@ function y(e) {
     var t, n, a;
     let { category: i, className: u, hideLimitedTimeBadge: m = !1 } = e,
         { backgroundColors: h } = (0, b.Z)(i.styles),
-        p = (0, j.ZS)(i.skuId),
+        p = (0, I.ZS)(i.skuId),
         g = (0, o.e7)([d.Z], () => d.Z.useReducedMotion);
     if (i.skuId === l.T.CHANCE) return (0, r.jsx)(_.O, { category: i });
-    let E = !!(null == p ? void 0 : p.showDarkBannerText),
-        I = null == p ? void 0 : p.animatedBanner;
-    return (0, r.jsxs)(x.Z, {
+    let j = !!(null == p ? void 0 : p.showDarkBannerText),
+        E = null == p ? void 0 : p.animatedBanner;
+    return (0, r.jsxs)(v.Z, {
         asset: i.banner,
         className: s()(S.shopBanner, u),
         style:
@@ -97,8 +97,8 @@ function y(e) {
                   }
                 : void 0,
         children: [
-            !g && void 0 !== I && (0, r.jsx)(B, { src: I }),
-            (null === (t = j.Ve[i.skuId]) || void 0 === t ? void 0 : t.addAttributionLogo)
+            !g && void 0 !== E && (0, r.jsx)(B, { src: E }),
+            (null === (t = I.Ve[i.skuId]) || void 0 === t ? void 0 : t.addAttributionLogo)
                 ? (0, r.jsxs)('div', {
                       className: S.discordLogo,
                       children: [
@@ -113,21 +113,21 @@ function y(e) {
                       ]
                   })
                 : (0, r.jsx)(c.Spacer, { size: 28 }),
-            (null === (n = j.Ve[i.skuId]) || void 0 === n ? void 0 : n.addLogo)
+            (null === (n = I.Ve[i.skuId]) || void 0 === n ? void 0 : n.addLogo)
                 ? (0, r.jsx)('img', {
                       className: S.categoryLogo,
                       src: (0, C.uV)(i.logo, { size: T }),
                       alt: i.name,
-                      style: { maxWidth: null === (a = j.Ve[i.skuId]) || void 0 === a ? void 0 : a.logoMaxWidth }
+                      style: { maxWidth: null === (a = I.Ve[i.skuId]) || void 0 === a ? void 0 : a.logoMaxWidth }
                   })
                 : (0, r.jsx)(c.Spacer, { size: 96 }),
             (0, r.jsx)(c.Text, {
-                className: s()(S.summary, { [S.blackSummary]: E }),
+                className: s()(S.summary, { [S.blackSummary]: j }),
                 variant: 'text-md/normal',
                 children: i.skuId === l.T.DISXCORE ? (0, r.jsx)(N, { category: i }) : i.summary
             }),
             !m &&
-                (0, r.jsx)(v.Z, {
+                (0, r.jsx)(x.Z, {
                     category: i,
                     className: S.limitedTimeBadge,
                     display: 'banner'

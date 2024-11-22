@@ -71,7 +71,7 @@ let m = ''.concat('#').concat('itemSkuId', '='),
             f = r.useRef(null),
             C = (0, a.TH)(),
             b = C.pathname === u.Z5c.COLLECTIBLES_SHOP ? l.Z.HOME_PAGE_SHOP_TAB : C.pathname === u.Z5c.COLLECTIBLES_SHOP_FULLSCREEN ? l.Z.COLLECTIBLES_SHOP_FULLSCREEN : l.Z.COLLECTIBLES_SHOP,
-            { analyticsLocations: x } = (0, o.ZP)(b);
+            { analyticsLocations: v } = (0, o.ZP)(b);
         r.useEffect(() => {
             if (d) return;
             let e = h.exec(C.hash);
@@ -80,17 +80,17 @@ let m = ''.concat('#').concat('itemSkuId', '='),
                 f.current = t;
             }
         }, []);
-        let v = (0, i.e7)([c.Z], () => c.Z.initialProductSkuId);
+        let x = (0, i.e7)([c.Z], () => c.Z.initialProductSkuId);
         r.useEffect(() => {
             if (n) return;
             let e = null;
-            if ((d && null != v && (e = v), !d && null != f.current && (e = f.current), null != e)) {
+            if ((d && null != x && (e = x), !d && null != f.current && (e = f.current), null != e)) {
                 let n = [],
                     r = setTimeout(() => {
                         let r = g({
                             categories: t,
                             productSkuId: e,
-                            analyticsLocations: x,
+                            analyticsLocations: v,
                             analyticsSource: b,
                             initialItemCardRef: m,
                             reducedMotion: p
@@ -104,7 +104,7 @@ let m = ''.concat('#').concat('itemSkuId', '='),
                     }
                 );
             }
-        }, [d, x, b, t, n, v, m, p]);
+        }, [d, v, b, t, n, x, m, p]);
     },
     b = (e) => {
         let t = r.useRef({}),

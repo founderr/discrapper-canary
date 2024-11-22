@@ -47,8 +47,8 @@ var r = n(200651),
     P = n(453687),
     k = n(318713),
     U = n(304176),
-    G = n(47930),
-    B = n(981631),
+    B = n(47930),
+    G = n(981631),
     Z = n(388032),
     F = n(825193),
     V = n(255963);
@@ -118,7 +118,7 @@ function Y(e) {
     let { message: t, avatar: n, username: i, usernameSpanId: a, usernameClassName: o, compact: l, showTimestamp: c, showTimestampOnHover: d, ariaLabelledBy: _, ariaDescribedBy: p, className: h, messageClassname: m, badges: g } = e,
         E = (0, f.q)(t.applicationId);
     return (
-        null != E && !(0, L.yE)(E.flags, B.udG.SOCIAL_LAYER_INTEGRATION) && (E = null),
+        null != E && !(0, L.yE)(E.flags, G.udG.SOCIAL_LAYER_INTEGRATION) && (E = null),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 !l && n,
@@ -197,7 +197,7 @@ function z(e) {
         z = i.useMemo(() => (null != f ? (e) => f(e, t) : void 0), [f, t]),
         [, q] = (0, h.ZP)(t.author.id, e.guildId),
         Q = (0, l.e7)([N.Z], () => N.Z.getGuild(e.guildId), [e.guildId]),
-        X = null != t.author && null != Q && C.Z.canManageUser(B.Plq.MODERATE_MEMBERS, t.author, Q),
+        X = null != t.author && null != Q && C.Z.canManageUser(G.Plq.MODERATE_MEMBERS, t.author, Q),
         J = q && X,
         $ = (function (e) {
             var t, n;
@@ -209,13 +209,13 @@ function z(e) {
                     var e;
                     return null !== (e = a.displayCompactAvatars) && void 0 !== e ? e : A.ZP.displayCompactAvatars;
                 }),
-                w = null != h.messageReference && null != h.webhookId && h.hasFlag(B.iLy.IS_CROSSPOST),
+                w = null != h.messageReference && null != h.webhookId && h.hasFlag(G.iLy.IS_CROSSPOST),
                 M = h.author,
                 { id: P } = M,
                 k = g ? 32 : 80,
                 {
                     avatarSrc: U,
-                    avatarDecorationSrc: G,
+                    avatarDecorationSrc: B,
                     eventHandlers: Z
                 } = (0, T.Z)({
                     user: M,
@@ -240,7 +240,7 @@ function z(e) {
                         : U;
                 }, [F, null === (t = h.application) || void 0 === t ? void 0 : t.icon, null === (n = h.application) || void 0 === n ? void 0 : n.id, M.avatar, k, U]);
             return (i.useEffect(() => {
-                if (null != E) return D.S.subscribeKeyed(B.LPv.ANIMATE_CHAT_AVATAR, ''.concat(E, ':').concat(P), R), () => void D.S.unsubscribeKeyed(B.LPv.ANIMATE_CHAT_AVATAR, ''.concat(E, ':').concat(P), R);
+                if (null != E) return D.S.subscribeKeyed(G.LPv.ANIMATE_CHAT_AVATAR, ''.concat(E, ':').concat(P), R), () => void D.S.unsubscribeKeyed(G.LPv.ANIMATE_CHAT_AVATAR, ''.concat(E, ':').concat(P), R);
             }, [P, E]),
             g && !x)
                 ? void 0
@@ -275,7 +275,7 @@ function z(e) {
                                 j({
                                     ...Z,
                                     avatarSrc: V,
-                                    avatarDecorationSrc: G,
+                                    avatarDecorationSrc: B,
                                     compact: g,
                                     onClick: I,
                                     onContextMenu: b,
@@ -291,7 +291,7 @@ function z(e) {
                         children: j({
                             ...Z,
                             avatarSrc: V,
-                            avatarDecorationSrc: G,
+                            avatarDecorationSrc: B,
                             compact: g,
                             onClick: I,
                             onContextMenu: b,
@@ -347,7 +347,7 @@ function z(e) {
                         'role-icon-children'
                     )
                   : null,
-        en = (0, G.x)({
+        en = (0, B.x)({
             message: t,
             channel: W,
             user: null == t ? void 0 : t.author,
@@ -410,7 +410,7 @@ function z(e) {
                 )
             );
     let el = [];
-    (0, L.yE)(t.flags, B.iLy.SUPPRESS_NOTIFICATIONS) && el.push((0, r.jsx)(b.Z, {}, 'suppress-notifications'));
+    (0, L.yE)(t.flags, G.iLy.SUPPRESS_NOTIFICATIONS) && el.push((0, r.jsx)(b.Z, {}, 'suppress-notifications'));
     let eu = {};
     (eu[M.a.SYSTEM_TAG] = en), (eu[M.a.BADGES] = er);
     let ec = H(e, z, eu),

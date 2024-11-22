@@ -33,7 +33,7 @@ function E(e) {
         { analyticsLocations: l } = (0, d.ZP)(c.Z.GUILD_SETTINGS_MEMBERS_PAGE),
         E = !1 == !!(null == n ? void 0 : n.hasFeature(j.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
         R = (0, a.e7)([g.Z], () => g.Z.getEstimatedMemberSearchCountByGuildId(t), [t]),
-        y = r.useCallback(
+        Z = r.useCallback(
             (e) => {
                 if (null != e)
                     (0, m.openUserProfileModal)({
@@ -45,10 +45,10 @@ function E(e) {
             },
             [l]
         ),
-        Z = r.useRef(null),
+        y = r.useRef(null),
         A = r.useCallback(() => {
             var e;
-            null === (e = Z.current) || void 0 === e || e.resetSearchText();
+            null === (e = y.current) || void 0 === e || e.resetSearchText();
         }, []);
     if (null == n) return null;
     let L = (0, v.xb)(!1, !1, R);
@@ -89,13 +89,13 @@ function E(e) {
                                                       children: [
                                                           (0, i.jsx)(N.Z, {
                                                               guild: n,
-                                                              ref: Z
+                                                              ref: y
                                                           }),
                                                           (0, i.jsx)(_.Z, {
                                                               guild: n,
                                                               searchState: L,
                                                               compact: !0,
-                                                              onSelectRow: y,
+                                                              onSelectRow: Z,
                                                               onResetForNewMembers: A
                                                           }),
                                                           L !== v.po.SUCCESS_STILL_INDEXING && (0, i.jsx)(I.Z, { guildId: n.id })

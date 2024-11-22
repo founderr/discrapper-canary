@@ -20,7 +20,7 @@ t.Z = function (e) {
     var t, n;
     let { guild: l, disabled: _, small: I, loading: N = !1, description: T, memberCount: j, presenceCount: b, className: S } = e,
         E = (0, c.ZP)(),
-        [R, y] = r.useState(!1);
+        [R, Z] = r.useState(!1);
     if (null == l || N)
         return (0, i.jsx)('div', {
             className: s()(S, p.card, p.cardPlaceholder, {
@@ -28,7 +28,7 @@ t.Z = function (e) {
                 [p.cardDisabled]: _
             })
         });
-    let { name: Z } = l,
+    let { name: y } = l,
         A =
             null != l.discoverySplash && /^data:/.test(l.discoverySplash)
                 ? l.discoverySplash
@@ -85,7 +85,7 @@ t.Z = function (e) {
                             src: null != A ? A : L,
                             alt: '',
                             className: p.splashImage,
-                            onLoad: () => y(!0)
+                            onLoad: () => Z(!0)
                         })
                     }),
                     (0, i.jsx)('div', {
@@ -121,7 +121,7 @@ t.Z = function (e) {
                             (0, i.jsx)(o.Text, {
                                 className: p.guildName,
                                 variant: 'text-md/normal',
-                                children: (0, i.jsx)('span', { children: Z })
+                                children: (0, i.jsx)('span', { children: y })
                             })
                         ]
                     }),

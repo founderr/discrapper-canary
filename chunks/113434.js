@@ -24,7 +24,7 @@ n.d(t, {
         return eo;
     },
     J2: function () {
-        return G;
+        return B;
     },
     Jf: function () {
         return q;
@@ -128,7 +128,7 @@ var r,
     P = n(46140),
     k = n(981631),
     U = n(388032);
-function G() {
+function B() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : { fetchPolicy: 'cache-only' },
         [t, n] = u.useState(!1),
         r = (0, h.Wu)([N.Z], () => [...N.Z.quests.values()]),
@@ -147,12 +147,12 @@ function G() {
         }
     );
 }
-function B(e, t, n) {
+function G(e, t, n) {
     return e.localeCompare(t) * (0 === n ? -1 : 1);
 }
 ((s = r || (r = {}))[(s.DESC = 0)] = 'DESC'), (s[(s.ASC = 1)] = 'ASC');
 function Z(e) {
-    let { quests: t, isFetchingCurrentQuests: n } = G({ fetchPolicy: 'cache-and-network' }),
+    let { quests: t, isFetchingCurrentQuests: n } = B({ fetchPolicy: 'cache-and-network' }),
         r = new Map(t.map((e) => [e.id, e])),
         i = (function (e) {
             let t = u.useRef([]);
@@ -170,7 +170,7 @@ function Z(e) {
                             _ = (0, R.Mi)(t, C.jn.GIFT_INVENTORY_FOR_YOU),
                             p = (null === (n = e.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null,
                             h = (null === (r = t.userStatus) || void 0 === r ? void 0 : r.enrolledAt) != null;
-                        return l !== u ? (l ? -1 : 1) : c !== d && l && u ? (c ? -1 : 1) : f !== _ ? (f ? -1 : 1) : p !== h ? (p ? -1 : 1) : l && u ? B(null === (s = e.config) || void 0 === s ? void 0 : s.expiresAt, null === (o = t.config) || void 0 === o ? void 0 : o.expiresAt, 1) : B(null === (i = e.config) || void 0 === i ? void 0 : i.expiresAt, null === (a = t.config) || void 0 === a ? void 0 : a.expiresAt, 0);
+                        return l !== u ? (l ? -1 : 1) : c !== d && l && u ? (c ? -1 : 1) : f !== _ ? (f ? -1 : 1) : p !== h ? (p ? -1 : 1) : l && u ? G(null === (s = e.config) || void 0 === s ? void 0 : s.expiresAt, null === (o = t.config) || void 0 === o ? void 0 : o.expiresAt, 1) : G(null === (i = e.config) || void 0 === i ? void 0 : i.expiresAt, null === (a = t.config) || void 0 === a ? void 0 : a.expiresAt, 0);
                     })
                     .map((e) => e.id);
                 return (t.current = n), n;
@@ -197,7 +197,7 @@ function Z(e) {
                         let i = (null === (n = e.userStatus) || void 0 === n ? void 0 : n.claimedAt) == null;
                         if (i !== ((null === (r = t.userStatus) || void 0 === r ? void 0 : r.claimedAt) == null)) return i ? -1 : 1;
                         let a = M.r.build(e.config).rewardsExpireAt;
-                        return B(a, M.r.build(t.config).rewardsExpireAt, 0);
+                        return G(a, M.r.build(t.config).rewardsExpireAt, 0);
                     })
                     .map((e) => e.id);
                 return (n.current = e), e;
@@ -229,7 +229,7 @@ function F() {
     );
 }
 function V() {
-    let { quests: e, isFetchingCurrentQuests: t } = G({ fetchPolicy: 'cache-only' }),
+    let { quests: e, isFetchingCurrentQuests: t } = B({ fetchPolicy: 'cache-only' }),
         [n, r] = u.useState(() => new Map(e.map((e) => [e.id, (0, R.zi)(e)])));
     return (
         u.useEffect(() => {
@@ -364,7 +364,7 @@ function X(e, t, n) {
     );
 }
 function J() {
-    let { quests: e, isFetchingCurrentQuests: t } = G({ fetchPolicy: 'cache-or-network' }),
+    let { quests: e, isFetchingCurrentQuests: t } = B({ fetchPolicy: 'cache-or-network' }),
         n = V();
     return u.useMemo(() => {
         let r = [];

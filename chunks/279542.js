@@ -143,7 +143,7 @@ async function R(e, t) {
     let n = e.features;
     return t ? n.add(T.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) : n.delete(T.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY), await v.Z.saveGuild(e.id, { features: n });
 }
-function y(e) {
+function Z(e) {
     let { guild: t } = e,
         n = (0, o.e7)([g.Z], () => null != t && g.Z.can(T.Plq.MANAGE_GUILD, t), [t]),
         l = t.hasFeature(T.oNc.COMMUNITY),
@@ -195,7 +195,7 @@ function y(e) {
               ]
           });
 }
-function Z(e) {
+function y(e) {
     let { guild: t, mfaLevel: n } = e,
         l = (0, o.e7)([g.Z], () => null != t && g.Z.can(T.Plq.MANAGE_GUILD, t), [t]),
         s = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
@@ -278,9 +278,9 @@ function A() {
                 tag: c.FormTitleTags.H1,
                 titleClassName: b.headerContainer,
                 children: [
-                    (0, i.jsx)(y, { guild: e }),
+                    (0, i.jsx)(Z, { guild: e }),
                     (0, i.jsx)(S, { guild: e }),
-                    (0, i.jsx)(Z, {
+                    (0, i.jsx)(y, {
                         guild: e,
                         mfaLevel: t
                     }),

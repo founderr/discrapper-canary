@@ -59,8 +59,8 @@ var r = n(425960),
     P = n(500946),
     k = n(611333),
     U = n(989103),
-    G = n(803069),
-    B = n(152867),
+    B = n(803069),
+    G = n(152867),
     Z = n(741662),
     F = n(334066),
     V = n(735674),
@@ -193,7 +193,7 @@ class ei {
         var t;
         if (this.layout) return null === (t = this.layout.getLayoutInfo(e)) || void 0 === t ? void 0 : t.rect;
         let n = this.getItem(e);
-        if (n) return new G.UL(n.offsetLeft, n.offsetTop, n.offsetWidth, n.offsetHeight);
+        if (n) return new B.UL(n.offsetLeft, n.offsetTop, n.offsetWidth, n.offsetHeight);
     }
     getPageHeight() {
         var e, t, n;
@@ -257,7 +257,7 @@ function eo(e, t) {
         r = (0, K.q)(er(es), '@react-aria/grid'),
         i = t.selectionManager.rawSelection,
         a = (0, W.useRef)(i);
-    (0, B.r)(() => {
+    (0, G.r)(() => {
         var e;
         if (!t.selectionManager.isFocused) {
             a.current = i;

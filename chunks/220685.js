@@ -30,24 +30,24 @@ var i = n(200651),
     S = n(842976);
 let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 2196594, 4752414, 13064760, 13058360, 12401000, 12933021, 5659039, 4092591, 5868359, 6586142, 8876063, 8484432, 9979976, 5269106, 3421236],
     R = /^(https?:\/\/)?(?:m\.|www\.)?(youtu\.be|youtube\.com)\/(embed\/|v\/|watch\?v=|watch\?.+&v=)?((\w|-){11})(?:\S+)?$/,
-    y = E[4],
-    Z = (e) => {
+    Z = E[4],
+    y = (e) => {
         var t, n;
         let { guild: l, canEnable: a } = e,
             c = (0, T.YB)(l.id),
             { loading: u, updateSubscriptionsSettings: _ } = (0, T.QV)(),
-            [N, Z] = r.useState(l.hasFeature(j.oNc.CREATOR_STORE_PAGE)),
-            [A, L] = r.useState(null !== (t = null == c ? void 0 : c.store_page_primary_color) && void 0 !== t ? t : y),
+            [N, y] = r.useState(l.hasFeature(j.oNc.CREATOR_STORE_PAGE)),
+            [A, L] = r.useState(null !== (t = null == c ? void 0 : c.store_page_primary_color) && void 0 !== t ? t : Z),
             [D, O] = r.useState(null == c ? void 0 : c.store_page_trailer_url),
             k = null == D || null != D.match(R),
             [P, M] = r.useState(null !== (n = null == c ? void 0 : c.store_page_show_subscriber_count) && void 0 !== n && n),
             w = r.useRef(null == c ? void 0 : c.store_page_slug).current,
-            B = N !== l.hasFeature(j.oNc.CREATOR_STORE_PAGE) || ((null == c ? void 0 : c.store_page_primary_color) == null && A !== y) || ((null == c ? void 0 : c.store_page_primary_color) != null && A !== (null == c ? void 0 : c.store_page_primary_color)) || D !== (null == c ? void 0 : c.store_page_trailer_url) || (null != P && P !== (null == c ? void 0 : c.store_page_show_subscriber_count)),
+            B = N !== l.hasFeature(j.oNc.CREATOR_STORE_PAGE) || ((null == c ? void 0 : c.store_page_primary_color) == null && A !== Z) || ((null == c ? void 0 : c.store_page_primary_color) != null && A !== (null == c ? void 0 : c.store_page_primary_color)) || D !== (null == c ? void 0 : c.store_page_trailer_url) || (null != P && P !== (null == c ? void 0 : c.store_page_show_subscriber_count)),
             U = async () => {
                 o()(null != c, 'Settings must be defined');
                 let e = {};
                 N !== l.hasFeature(j.oNc.CREATOR_STORE_PAGE) && (e.store_page_enabled = N),
-                    (((null == c ? void 0 : c.store_page_primary_color) == null && A !== y) || ((null == c ? void 0 : c.store_page_primary_color) != null && A !== (null == c ? void 0 : c.store_page_primary_color))) && (e.store_page_primary_color = A),
+                    (((null == c ? void 0 : c.store_page_primary_color) == null && A !== Z) || ((null == c ? void 0 : c.store_page_primary_color) != null && A !== (null == c ? void 0 : c.store_page_primary_color))) && (e.store_page_primary_color = A),
                     D !== (null == c ? void 0 : c.store_page_trailer_url) && (e.store_page_trailer_url = D),
                     P !== (null == c ? void 0 : c.store_page_show_subscriber_count) && (e.store_page_show_subscriber_count = P),
                     !d().isEmpty(e) &&
@@ -78,7 +78,7 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                     disabled: H || (!N && !a),
                     tooltipNote: N || a ? void 0 : b.intl.string(b.t.mIgfEh),
                     hideBorder: !0,
-                    onChange: (e) => Z(e),
+                    onChange: (e) => y(e),
                     children: (0, i.jsx)(g.Text, {
                         variant: 'text-md/semibold',
                         color: 'header-primary',
@@ -124,7 +124,7 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                                 (0, i.jsx)(g.ColorPicker, {
                                     colors: E,
                                     customColor: null,
-                                    defaultColor: y,
+                                    defaultColor: Z,
                                     value: A,
                                     onChange: (e) => L(e),
                                     renderDefaultButton: () => null,
@@ -225,7 +225,7 @@ let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                                 submitting: u,
                                 onReset: () => {
                                     var e, t;
-                                    Z(l.hasFeature(j.oNc.CREATOR_STORE_PAGE)), L(null !== (e = null == c ? void 0 : c.store_page_primary_color) && void 0 !== e ? e : y), O(null == c ? void 0 : c.store_page_trailer_url), M(null !== (t = null == c ? void 0 : c.store_page_show_subscriber_count) && void 0 !== t && t);
+                                    y(l.hasFeature(j.oNc.CREATOR_STORE_PAGE)), L(null !== (e = null == c ? void 0 : c.store_page_primary_color) && void 0 !== e ? e : Z), O(null == c ? void 0 : c.store_page_trailer_url), M(null !== (t = null == c ? void 0 : c.store_page_show_subscriber_count) && void 0 !== t && t);
                                 },
                                 onSave: U,
                                 disabled: z
@@ -240,7 +240,7 @@ function A() {
         t = (0, N.f)(),
         n = (0, T.qi)(null == e ? void 0 : e.id).some((e) => e.published);
     return null != e && t
-        ? (0, i.jsx)(Z, {
+        ? (0, i.jsx)(y, {
               guild: e,
               canEnable: n
           })

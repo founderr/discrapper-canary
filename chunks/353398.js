@@ -6,7 +6,7 @@ n.d(t, {
         return E;
     },
     ZP: function () {
-        return y;
+        return Z;
     }
 }),
     n(47120);
@@ -96,7 +96,7 @@ function R() {
         onSave: n
     });
 }
-function y() {
+function Z() {
     return (0, r.jsx)(m.FormSection, {
         className: j.marginBottom4,
         children: (0, r.jsxs)(m.HeadingLevel, {
@@ -112,12 +112,12 @@ function y() {
                 }),
                 (0, r.jsx)(A, {}),
                 (0, r.jsx)(m.FormDivider, { className: T.divider }),
-                (0, r.jsx)(Z, {})
+                (0, r.jsx)(y, {})
             ]
         })
     });
 }
-function Z() {
+function y() {
     let { guild: e } = _.Z.getProps();
     c()(null != e, 'guild cannot be null');
     let t = (0, d.e7)([E], () => E.error),

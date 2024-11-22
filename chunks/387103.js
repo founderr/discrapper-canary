@@ -407,13 +407,13 @@ function k(e) {
 function U(e) {
     e.calendar.constrainDate && e.calendar.constrainDate(e), (e.year = Math.max(1, Math.min(e.calendar.getYearsInEra(e), e.year))), k(e);
 }
-function G(e) {
+function B(e) {
     let t = {};
     for (let n in e) 'number' == typeof e[n] && (t[n] = -e[n]);
     return t;
 }
-function B(e, t) {
-    return w(e, G(t));
+function G(e, t) {
+    return w(e, B(t));
 }
 function Z(e, t) {
     let n = e.copy();
@@ -541,7 +541,7 @@ class X {
     }
     subtract(e) {
         var t;
-        return (t = this), w(t, G(e));
+        return (t = this), w(t, B(e));
     }
     set(e) {
         return Z(this, e);
@@ -577,7 +577,7 @@ class $ {
     }
     subtract(e) {
         var t;
-        return (t = this), w(t, G(e));
+        return (t = this), w(t, B(e));
     }
     set(e) {
         return Z(F(this, e), e);
@@ -626,7 +626,7 @@ class et {
     }
     subtract(e) {
         var t;
-        return (t = this), W(t, G(e));
+        return (t = this), W(t, B(e));
     }
     set(e, t) {
         var n, r, i;

@@ -19,35 +19,35 @@ var r = n(200651),
     g = n(388032),
     C = n(454801);
 function b(e) {
-    let { isFullScreen: t, isLayer: n, onClose: i, isCatalogView: b, handleTransition: x, transparent: v } = e,
+    let { isFullScreen: t, isLayer: n, onClose: i, isCatalogView: b, handleTransition: v, transparent: x } = e,
         _ = (0, u.ZP)(),
         k = (0, l.e7)([h.default], () => h.default.getCurrentUser()),
-        j = (null == k ? void 0 : k.isStaff()) || (null == k ? void 0 : k.isStaffPersonal()) || !1;
+        I = (null == k ? void 0 : k.isStaff()) || (null == k ? void 0 : k.isStaffPersonal()) || !1;
     return (0, r.jsx)(c.ThemeProvider, {
         theme: _,
         children: (e) =>
             (0, r.jsxs)(m.Z, {
                 className: s()(e, C.headerBar, {
                     [C.fullscreenHeaderBar]: t,
-                    [C.headerBarRegularBackground]: !v,
-                    [C.headerBarTransparentLightBackground]: v && !(0, o.wj)(_),
-                    [C.headerBarTransparentDarkBackground]: v && (0, o.wj)(_)
+                    [C.headerBarRegularBackground]: !x,
+                    [C.headerBarTransparentLightBackground]: x && !(0, o.wj)(_),
+                    [C.headerBarTransparentDarkBackground]: x && (0, o.wj)(_)
                 }),
-                transparent: v,
-                toolbar: t || !j ? null : (0, r.jsx)(a.Fragment, {}),
+                transparent: x,
+                toolbar: t || !I ? null : (0, r.jsx)(a.Fragment, {}),
                 children: [
                     (0, r.jsxs)(r.Fragment, {
                         children: [
                             b &&
-                                null != x &&
+                                null != v &&
                                 (0, r.jsx)(c.Clickable, {
-                                    onClick: x,
+                                    onClick: v,
                                     className: C.back,
                                     'aria-label': g.intl.string(g.t['13/7kZ']),
                                     children: (0, r.jsx)(c.ArrowLargeLeftIcon, {})
                                 }),
                             (0, r.jsx)(p.Z, {
-                                color: v ? ((0, o.wj)(_) ? 'white' : 'black') : void 0,
+                                color: x ? ((0, o.wj)(_) ? 'white' : 'black') : void 0,
                                 className: C.discordLogo
                             })
                         ]

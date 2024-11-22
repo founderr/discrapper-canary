@@ -66,8 +66,8 @@ function T(e) {
             }
             return (0, u.l)(t, e.ref), e;
         })(e),
-        [U, G] = (0, E.useState)(!1),
-        B = (0, E.useRef)({
+        [U, B] = (0, E.useState)(!1),
+        G = (0, E.useRef)({
             isPressed: !1,
             ignoreEmulatedMouseEvents: !1,
             ignoreClickAfterPress: !1,
@@ -80,17 +80,17 @@ function T(e) {
         }),
         { addGlobalListener: Z, removeAllGlobalListeners: F } = (0, c.x)(),
         V = (0, d.i)((e, t) => {
-            let r = B.current;
+            let r = G.current;
             if (v || r.didFirePressStart) return !1;
             let i = !0;
             if (((r.isTriggeringEvent = !0), a)) {
                 let n = new b('pressstart', t, e);
                 a(n), (i = n.shouldStopPropagation);
             }
-            return n && n(!0), (r.isTriggeringEvent = !1), (r.didFirePressStart = !0), G(!0), i;
+            return n && n(!0), (r.isTriggeringEvent = !1), (r.didFirePressStart = !0), B(!0), i;
         }),
         j = (0, d.i)((e, r, i = !0) => {
-            let a = B.current;
+            let a = G.current;
             if (!a.didFirePressStart) return !1;
             (a.ignoreClickAfterPress = !0), (a.didFirePressStart = !1), (a.isTriggeringEvent = !0);
             let o = !0;
@@ -98,14 +98,14 @@ function T(e) {
                 let t = new b('pressend', r, e);
                 s(t), (o = t.shouldStopPropagation);
             }
-            if ((n && n(!1), G(!1), t && i && !v)) {
+            if ((n && n(!1), B(!1), t && i && !v)) {
                 let n = new b('press', r, e);
                 t(n), o && (o = n.shouldStopPropagation);
             }
             return (a.isTriggeringEvent = !1), o;
         }),
         H = (0, d.i)((e, t) => {
-            let n = B.current;
+            let n = G.current;
             if (v) return !1;
             if (o) {
                 n.isTriggeringEvent = !0;
@@ -115,14 +115,14 @@ function T(e) {
             return !0;
         }),
         Y = (0, d.i)((e) => {
-            let t = B.current;
+            let t = G.current;
             t.isPressed && t.target && (t.isOverTarget && null != t.pointerType && j(C(t.target, e), t.pointerType, !1), (t.isPressed = !1), (t.isOverTarget = !1), (t.activePointerId = null), (t.pointerType = null), F(), !M && (0, r.A)(t.target));
         }),
         W = (0, d.i)((e) => {
             w && Y(e);
         }),
         K = (0, E.useMemo)(() => {
-            let e = B.current,
+            let e = G.current,
                 t = {
                     onKeyDown(t) {
                         if (y(t.nativeEvent, t.currentTarget) && t.currentTarget.contains(t.target)) {
@@ -285,7 +285,7 @@ function T(e) {
         (0, E.useEffect)(
             () => () => {
                 var e;
-                !M && (0, r.A)(null !== (e = B.current.target) && void 0 !== e ? e : void 0);
+                !M && (0, r.A)(null !== (e = G.current.target) && void 0 !== e ? e : void 0);
             },
             [M]
         ),

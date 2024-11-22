@@ -144,7 +144,7 @@ function j(e) {
                           N
                       ]
                   }),
-                  (0, i.jsx)(y, { guildId: t })
+                  (0, i.jsx)(Z, { guildId: t })
               ]
           });
 }
@@ -297,7 +297,7 @@ function R(e) {
         ]
     });
 }
-function y(e) {
+function Z(e) {
     let { guildId: t } = e,
         n = (0, r.e7)([m.Z], () => m.Z.getGuild(t));
     return null == n || n.verificationLevel < I.sFg.VERY_HIGH

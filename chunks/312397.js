@@ -34,8 +34,8 @@ var i = n(200651),
     S = n(600164),
     E = n(688465),
     R = n(807582),
-    y = n(48217),
-    Z = n(26323),
+    Z = n(48217),
+    y = n(26323),
     A = n(35125),
     L = n(536442),
     D = n(142497),
@@ -871,7 +871,7 @@ class eC extends r.PureComponent {
                     if ('image/gif' !== r || n.hasFeature(J.oNc.ANIMATED_BANNER)) {
                         if (!n.hasFeature(J.oNc.BANNER)) {
                             (l.object = J.qAy.IMAGE_CROPPING_MODAL),
-                                (0, y.c)({
+                                (0, Z.c)({
                                     guild: n,
                                     analyticsLocations: i,
                                     analyticsLocation: l,
@@ -882,7 +882,7 @@ class eC extends r.PureComponent {
                         }
                     } else {
                         (l.object = J.qAy.GIF_CROPPING_MODAL),
-                            (0, y.c)({
+                            (0, Z.c)({
                                 guild: n,
                                 analyticsLocations: i,
                                 analyticsLocation: l,
@@ -905,7 +905,7 @@ class eC extends r.PureComponent {
                     guild_id: null == r ? void 0 : r.id,
                     location_stack: l
                 }),
-                    (0, Z.Z)({
+                    (0, y.Z)({
                         analyticsLocations: l,
                         analyticsSourceLocation: {
                             section: t,

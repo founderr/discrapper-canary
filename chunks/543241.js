@@ -6,7 +6,7 @@ n.d(t, {
         return j;
     },
     DV: function () {
-        return B;
+        return G;
     },
     Gn: function () {
         return M;
@@ -30,7 +30,7 @@ n.d(t, {
         return D;
     },
     Y1: function () {
-        return G;
+        return B;
     },
     fe: function () {
         return P;
@@ -342,7 +342,7 @@ let U = (e, t) => {
         if (e.type === T.En.GUILD) return null != t ? t.toString() : '';
         return e.id;
     },
-    G = (e, t) => {
+    B = (e, t) => {
         switch (e) {
             case T.UX.TOP_GUILD_EMOJI:
                 return C.intl.formatToPlainString(C.t.W6Wi1d, { guildName: t });
@@ -372,7 +372,7 @@ let U = (e, t) => {
                 return null != t ? t : e;
         }
     };
-function B(e, t, n) {
+function G(e, t, n) {
     r.useEffect(() => {
         f.DZ.loadIfNecessary();
     }, []);

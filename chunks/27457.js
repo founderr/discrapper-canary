@@ -20,8 +20,8 @@ var i = n(200651),
     g = n(414910),
     v = n(415635),
     S = n(578976),
-    I = n(955843),
-    _ = n(332487),
+    I = n(332487),
+    _ = n(324085),
     x = n(925329),
     E = n(649739),
     Z = n(574176),
@@ -142,9 +142,9 @@ let ep = l.memo((e) => {
     let e0 = (0, M.So)(s.q.STREAM_HIGH_QUALITY),
         { hqStreamingState: e1 } = (0, R.k)(s.q.STREAM_HIGH_QUALITY),
         e2 = (0, L.Z)(),
-        e9 = e0 && e$ && null != e2,
-        e3 = (0, P.o)(C, eW),
-        e7 = (0, j.lL)('CallTile', !0, eW, e3),
+        e3 = e0 && e$ && null != e2,
+        e9 = (0, P.o)(C, eW),
+        e7 = (0, j.lL)('CallTile', !0, eW, e9),
         e8 = (0, o.e7)([F.Z], () => (C.type === eo.fO.USER && null != eB ? F.Z.getEffectForUserId(eB) : null)),
         e4 = (0, o.e7)([q.Z], () => q.Z.getVoicePlatformForChannel(eI.id, null != eB ? eB : es.lds)),
         { enableHangStatus: e6 } = Z.n.useExperiment({
@@ -181,7 +181,7 @@ let ep = l.memo((e) => {
         tu = l.useCallback(() => {
             !f.Z.useReducedMotion && tc(!0);
         }, []);
-    (0, I.J)(eI, tu);
+    (0, _.J)(eI, tu);
     let td = l.useCallback(() => {
             null != eB && d.Z.toggleLocalMute(eB, ed.Yn.STREAM);
         }, [eB]),
@@ -207,7 +207,7 @@ let ep = l.memo((e) => {
             [X, C]
         ),
         tg = eM;
-    e9 && (tg = !1);
+    e3 && (tg = !1);
     let tv = null,
         tS = null,
         tI = '';
@@ -229,7 +229,7 @@ let ep = l.memo((e) => {
                     width: e_,
                     focused: eT,
                     idle: tg,
-                    premiumIndicator: e9 || e7.enabled
+                    premiumIndicator: e3 || e7.enabled
                 })),
                 (tI = em.intl.formatToPlainString(em.t.gHPz3d, { streamerName: C.user.username }));
             break;
@@ -292,7 +292,7 @@ let ep = l.memo((e) => {
             children: [
                 to &&
                     C.type === eo.fO.STREAM &&
-                    (0, i.jsx)(_.Z, {
+                    (0, i.jsx)(I.Z, {
                         baseTileRef: t_.current,
                         cleanup: () => tc(!1)
                     }),
@@ -343,7 +343,7 @@ let ep = l.memo((e) => {
                                           })
                                         : null,
                                     tv,
-                                    e9
+                                    e3
                                         ? (0, i.jsx)(k.W, {
                                               onPlayed: tm,
                                               played: e1.hqStreamingFrameAnimationPlayed

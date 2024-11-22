@@ -89,7 +89,7 @@ let j = [
 t.Z = (e) => {
     var t;
     let { handleUpdate: n, progress: l, guildId: a } = e,
-        { banner: S, brandPrimaryColor: E, brandSecondaryColor: R, badgePrimaryColor: y, badgeSecondaryColor: Z } = l,
+        { banner: S, brandPrimaryColor: E, brandSecondaryColor: R, badgePrimaryColor: Z, badgeSecondaryColor: y } = l,
         A = (0, u.e7)([g.Z], () => g.Z.getGuild(a)),
         L = null !== (t = (0, u.e7)([h.Z], () => h.Z.getMemberCount(a))) && void 0 !== t ? t : 0,
         D = r.useMemo(
@@ -100,10 +100,10 @@ t.Z = (e) => {
             [E, R]
         ),
         O = r.useMemo(() => {
-            if (E === y && R === Z) return 1;
+            if (E === Z && R === y) return 1;
             for (let e = 0; e < _.ym.length; e++) if (_.ym[e].primary === l.brandPrimaryColor && _.ym[e].secondary === l.brandSecondaryColor) return 2 + e;
             return 0;
-        }, [E, R, y, Z, l.brandPrimaryColor, l.brandSecondaryColor]),
+        }, [E, R, Z, y, l.brandPrimaryColor, l.brandSecondaryColor]),
         [k, P] = r.useState(!1),
         M = 0 === O,
         w = 1 === O,
@@ -111,8 +111,8 @@ t.Z = (e) => {
             if (M) return D;
             if (w)
                 return {
-                    primary: null != y ? y : v.Nh,
-                    secondary: null != Z ? Z : v.vY
+                    primary: null != Z ? Z : v.Nh,
+                    secondary: null != y ? y : v.vY
                 };
             {
                 let e = _.ym[O - 2];
@@ -121,7 +121,7 @@ t.Z = (e) => {
                     secondary: e.secondary
                 };
             }
-        }, [D, w, M, y, Z, O]),
+        }, [D, w, M, Z, y, O]),
         U = r.useCallback(() => {
             let e = j[Math.floor(Math.random() * j.length)].bannerKind,
                 t = s().random().hex();
@@ -151,8 +151,8 @@ t.Z = (e) => {
             banner: S,
             badge: {
                 badgeKind: l.badgeKind,
-                primaryColor: null != y ? y : _.OH,
-                secondaryColor: null != Z ? Z : _.K_
+                primaryColor: null != Z ? Z : _.OH,
+                secondaryColor: null != y ? y : _.K_
             },
             branding: {
                 primaryColor: null !== (t = B.primary) && void 0 !== t ? t : _.OH,
@@ -169,7 +169,7 @@ t.Z = (e) => {
                 {}
             )
         };
-    }, [l, a, A, L, S, y, Z, B]);
+    }, [l, a, A, L, S, Z, y, B]);
     return (0, i.jsxs)('div', {
         className: T.slideContent,
         children: [
@@ -231,15 +231,15 @@ t.Z = (e) => {
                                                 (0, i.jsx)(m.Clickable, {
                                                     onClick: () => {
                                                         n({
-                                                            brandPrimaryColor: null != y ? y : _.OH,
-                                                            brandSecondaryColor: null != Z ? Z : _.K_
+                                                            brandPrimaryColor: null != Z ? Z : _.OH,
+                                                            brandSecondaryColor: null != y ? y : _.K_
                                                         });
                                                     },
                                                     className: o()(N.brandItemContainer, { [N.brandItemContainerSelected]: 1 === O }),
                                                     children: (0, i.jsx)(b, {
                                                         name: I.intl.string(I.t['1Pvr/v']),
-                                                        primaryColor: y,
-                                                        secondaryColor: Z
+                                                        primaryColor: Z,
+                                                        secondaryColor: y
                                                     })
                                                 }),
                                                 _.ym.map((e, t) =>

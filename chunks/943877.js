@@ -556,15 +556,15 @@ function A(e) {
             }),
             [e.maxGranularity, A, e.hourCycle, e.shouldForceLeadingZeros, N, d, k]
         ),
-        G = (0, c.useMemo)(() => h({}, U), [U]),
-        B = (0, c.useMemo)(() => new s.C(r, G), [r, G]),
-        Z = (0, c.useMemo)(() => B.resolvedOptions(), [B]),
+        B = (0, c.useMemo)(() => h({}, U), [U]),
+        G = (0, c.useMemo)(() => new s.C(r, B), [r, B]),
+        Z = (0, c.useMemo)(() => G.resolvedOptions(), [G]),
         F = (0, c.useMemo)(
             () =>
-                B.formatToParts(new Date())
+                G.formatToParts(new Date())
                     .filter((e) => T[e.type])
                     .reduce((e, t) => ((e[t.type] = !0), e), {}),
-            [B]
+            [G]
         ),
         [V, j] = (0, c.useState)(() => (e.value || e.defaultValue ? { ...F } : {})),
         H = (0, c.useRef)(),
@@ -584,7 +584,7 @@ function A(e) {
         z = (0, c.useMemo)(() => W.toDate(C), [W, C]),
         q = (0, c.useMemo)(
             () =>
-                B.formatToParts(z).map((e) => {
+                G.formatToParts(z).map((e) => {
                     var t, n, i;
                     let s = T[e.type];
                     'era' === e.type && 1 === O.getEras().length && (s = !1);
@@ -664,7 +664,7 @@ function A(e) {
                         isEditable: s
                     };
                 }),
-            [z, V, B, Z, W, O, r]
+            [z, V, G, Z, W, O, r]
         );
     F.era && V.year && !V.era ? ((V.era = !0), j({ ...V })) : !F.era && V.era && (delete V.era, j({ ...V }));
     let Q = (e) => {
@@ -711,7 +711,7 @@ function A(e) {
         calendar: O,
         setValue: K,
         segments: q,
-        dateFormatter: B,
+        dateFormatter: G,
         validationState: e.validationState || (J ? 'invalid' : null),
         isInvalid: J,
         granularity: A,

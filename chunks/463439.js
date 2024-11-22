@@ -42,10 +42,10 @@ function S(t) {
                     type: p.OGo.BLOCKED
                 }),
                 S(_.NM.USER_TAKEOVER_MODAL_BLOCK),
-                N.Z.showBlockSuccessToast(n);
+                N.Z.showBlockSuccessToast(n, e);
         },
         Z = () => {
-            R(!1), l.Z.unblockUser(n, { location: T.DL }), S(_.NM.USER_TAKEOVER_MODAL_UNBLOCK), N.Z.showUnblockSuccessToast(n);
+            R(!1), l.Z.unblockUser(n, { location: T.DL }), S(_.NM.USER_TAKEOVER_MODAL_UNBLOCK), N.Z.showUnblockSuccessToast(n, e);
         },
         k = async () => {
             if (null != O)
@@ -53,7 +53,7 @@ function S(t) {
                     await (0, d.J7)(
                         O,
                         () => {
-                            N.Z.showReportSuccessToast(n), r();
+                            N.Z.showReportSuccessToast(n, e), r();
                         },
                         () => {
                             N.Z.showFailedToast();

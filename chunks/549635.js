@@ -19,7 +19,7 @@ function h(e) {
 }
 n.Z = i.memo(function (e) {
     let { media: n, obscured: t = !1, onContextMenu: i } = e,
-        { width: d, height: f, url: p, proxyUrl: g, alt: _, type: C, maxWidth: x, maxHeight: S, ...v } = n,
+        { width: d, height: f, url: p, proxyUrl: g, alt: _, type: C, maxWidth: S, maxHeight: x, ...v } = n,
         { width: E, height: I } = (0, u.zp)(null != d ? d : 0, null != f ? f : 0),
         y = (0, s.q)({
             proxyURL: g,

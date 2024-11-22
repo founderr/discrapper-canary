@@ -268,7 +268,7 @@ function w(e) {
             let r = null !== (t = n.pathname.split('/').pop()) && void 0 !== t ? t : 'unknown',
                 i = await L(e),
                 a = T.from(i);
-            S.fileManager.saveWithDialog(a, r);
+            return S.fileManager.saveWithDialog(a, r);
         },
         async saveFile(e, t) {
             var n;
@@ -278,7 +278,7 @@ function w(e) {
             let i = null !== (n = null != t ? t : r.pathname.split('/').pop()) && void 0 !== n ? n : 'unknown',
                 a = await L(e),
                 s = T.from(a);
-            S.fileManager.saveWithDialog(s, i);
+            return S.fileManager.saveWithDialog(s, i);
         },
         canCopyImage() {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : void 0;

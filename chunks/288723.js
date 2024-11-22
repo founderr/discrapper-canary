@@ -66,20 +66,20 @@ t.Z = {
                     P = (0, u.Z)(w) === l.BL,
                     k = [l.we, l.I].indexOf(M) >= 0,
                     U = k ? 'width' : 'height',
-                    G = (0, s.Z)(t, {
+                    B = (0, s.Z)(t, {
                         placement: w,
                         boundary: g,
                         rootBoundary: E,
                         altBoundary: v,
                         padding: m
                     }),
-                    B = k ? (P ? l.F2 : l.t$) : P ? l.I : l.we;
-                C[U] > R[U] && (B = (0, r.Z)(B));
-                var Z = (0, r.Z)(B),
+                    G = k ? (P ? l.F2 : l.t$) : P ? l.I : l.we;
+                C[U] > R[U] && (G = (0, r.Z)(G));
+                var Z = (0, r.Z)(G),
                     F = [];
                 if (
-                    (f && F.push(G[M] <= 0),
-                    p && F.push(G[B] <= 0, G[Z] <= 0),
+                    (f && F.push(B[M] <= 0),
+                    p && F.push(B[G] <= 0, B[Z] <= 0),
                     F.every(function (e) {
                         return e;
                     }))

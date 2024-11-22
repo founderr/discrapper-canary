@@ -37,8 +37,8 @@ function k(e, t) {
 }
 t.Z = function (e) {
     var t, n, h;
-    let { quest: m, memberListItemRef: v, applicationStream: b, position: I, closePopout: U, updatePosition: G } = e,
-        B = (0, o.e7)([E.Z], () => {
+    let { quest: m, memberListItemRef: v, applicationStream: b, position: I, closePopout: U, updatePosition: B } = e,
+        G = (0, o.e7)([E.Z], () => {
             var e;
             return null !== (e = E.Z.getChannel(null == b ? void 0 : b.channelId)) && void 0 !== e ? e : null;
         }),
@@ -70,7 +70,7 @@ t.Z = function (e) {
             let e = $.current,
                 t = v.current;
             if (null == e || null == t) return;
-            let n = new MutationObserver(() => G());
+            let n = new MutationObserver(() => B());
             return (
                 n.observe(e, {
                     childList: !0,
@@ -80,7 +80,7 @@ t.Z = function (e) {
                     n.disconnect();
                 }
             );
-        }, [v, $, G]);
+        }, [v, $, B]);
     let ee = (0, u.useSpring)({
             from: { height: 0 },
             height: null != q ? q : 0,
@@ -104,7 +104,7 @@ t.Z = function (e) {
             J.dispatch(L.CkL.POPOUT_CLOSE);
         },
         er = 'top' === I ? ''.concat('4px', ' ').concat('4px', ' 0 0') : '0 0 '.concat('4px', ' ').concat('4px');
-    if (null == m || F || (V && !k(b, B))) return null;
+    if (null == m || F || (V && !k(b, G))) return null;
     let ei = () => {
             (0, T._3)({
                 questId: m.id,
@@ -130,7 +130,7 @@ t.Z = function (e) {
             e.stopPropagation(), ei();
         },
         eo = () => {
-            if (k(b, B) && null != B)
+            if (k(b, G) && null != G)
                 return (
                     (0, T._3)({
                         questId: m.id,
@@ -138,7 +138,7 @@ t.Z = function (e) {
                         questContentCTA: T.jZ.WATCH_STREAM,
                         trackGuildAndChannelMetadata: !0
                     }),
-                    c.default.selectVoiceChannel(B.id),
+                    c.default.selectVoiceChannel(G.id),
                     (0, d.iV)(b)
                 );
             ea();
@@ -158,7 +158,7 @@ t.Z = function (e) {
                         handleClickCta: ea,
                         tileAssetType: 'reward'
                     }
-                  : k(b, B)
+                  : k(b, G)
                     ? {
                           headerText: w.intl.string(w.t.Bz6SkJ),
                           ctaText: w.intl.string(w.t.BXFP39),

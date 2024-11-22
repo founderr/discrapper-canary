@@ -21,8 +21,8 @@ var r = t(200651),
     g = t(585483),
     _ = t(212459),
     C = t(683528),
-    x = t(549635),
-    S = t(981631),
+    S = t(549635),
+    x = t(981631),
     v = t(388032),
     E = t(193889);
 function I(e, n) {
@@ -67,37 +67,37 @@ function A(e) {
     let { items: t, onIndexChange: a, startIndex: o = 0, shouldRedactExplicitContent: l = !1, shouldHideMediaOptions: m = !1 } = e,
         [p, I] = i.useState(o),
         A = i.useRef(o),
-        [j, R] = i.useState([]),
-        { zoomed: M, setZoomed: O } = (0, _.Y)();
+        [j, M] = i.useState([]),
+        { zoomed: O, setZoomed: b } = (0, _.Y)();
     i.useEffect(() => {
         var e, n;
         let r = (((p + 1) % (e = t.length)) + e) % e;
         let i = (((p - 1) % (n = t.length)) + n) % n;
         y(t[r]) && (0, f.po)(t[r].url), y(t[i]) && (0, f.po)(t[i].url);
     }, [p, t]);
-    let b = i.useCallback(
+    let R = i.useCallback(
         (e) => {
             var n;
             let r = e - A.current;
-            I((e = ((e % (n = t.length)) + n) % n)), (A.current = e), R((e) => [...e, r]), null == a || a(e), O(!1);
+            I((e = ((e % (n = t.length)) + n) % n)), (A.current = e), M((e) => [...e, r]), null == a || a(e), b(!1);
         },
-        [a, t, O]
+        [a, t, b]
     );
     i.useEffect(() => {
         let e = s()(() => {
-                b(A.current + 1);
+                R(A.current + 1);
             }, 300),
             n = s()(() => {
-                b(A.current - 1);
+                R(A.current - 1);
             }, 300);
         return (
-            g.S.subscribe(S.CkL.MODAL_CAROUSEL_NEXT, e),
-            g.S.subscribe(S.CkL.MODAL_CAROUSEL_PREV, n),
+            g.S.subscribe(x.CkL.MODAL_CAROUSEL_NEXT, e),
+            g.S.subscribe(x.CkL.MODAL_CAROUSEL_PREV, n),
             () => {
-                g.S.unsubscribe(S.CkL.MODAL_CAROUSEL_NEXT, e), g.S.unsubscribe(S.CkL.MODAL_CAROUSEL_PREV, n);
+                g.S.unsubscribe(x.CkL.MODAL_CAROUSEL_NEXT, e), g.S.unsubscribe(x.CkL.MODAL_CAROUSEL_PREV, n);
             }
         );
-    }, [b, O]);
+    }, [R, b]);
     let T = t[p],
         P = (0, h.KP)(
             {
@@ -146,7 +146,7 @@ function A(e) {
                               className: E.navPrev,
                               size: d.CircleIconButtonSizes.SIZE_36,
                               onClick: (e) => {
-                                  e.stopPropagation(), g.S.dispatch(S.CkL.MODAL_CAROUSEL_PREV);
+                                  e.stopPropagation(), g.S.dispatch(x.CkL.MODAL_CAROUSEL_PREV);
                               },
                               icon: (0, r.jsx)(c.j, {}),
                               tooltip: v.intl.string(v.t.vgfxaG),
@@ -163,13 +163,13 @@ function A(e) {
                                         style: e,
                                         className: E.mediaWrapper,
                                         children: (0, r.jsx)(L, {
-                                            isObscured: !M && P,
+                                            isObscured: !O && P,
                                             src: n.url,
                                             children: (e) =>
                                                 (0, r.jsx)(r.Fragment, {
                                                     children: (0, r.jsx)('div', {
                                                         onClick: (e) => e.stopPropagation(),
-                                                        children: (0, r.jsx)(x.Z, {
+                                                        children: (0, r.jsx)(S.Z, {
                                                             media: n,
                                                             obscured: e,
                                                             onContextMenu: k
@@ -188,7 +188,7 @@ function A(e) {
                               className: E.navNext,
                               size: d.CircleIconButtonSizes.SIZE_36,
                               onClick: (e) => {
-                                  e.stopPropagation(), g.S.dispatch(S.CkL.MODAL_CAROUSEL_NEXT);
+                                  e.stopPropagation(), g.S.dispatch(x.CkL.MODAL_CAROUSEL_NEXT);
                               },
                               icon: (0, r.jsx)(d.ArrowLargeRightIcon, {}),
                               tooltip: v.intl.string(v.t.XiOHRU),
@@ -201,7 +201,7 @@ function A(e) {
                 (0, r.jsx)(C.Z, {
                     items: t,
                     currentIndex: p,
-                    onGalleryItemClick: b
+                    onGalleryItemClick: R
                 })
         ]
     });

@@ -52,7 +52,7 @@ var i,
     P = n(987650);
 let k = new E.Z('RunningGameStore'),
     U = 'RunningGameStore',
-    G = [
+    B = [
         {
             executables: [
                 {
@@ -157,7 +157,7 @@ let k = new E.Z('RunningGameStore'),
             name: m.Z.get(M.ABu.SPOTIFY).name
         }
     ],
-    B = [],
+    G = [],
     Z = !0,
     F = new Set(),
     V = [],
@@ -191,7 +191,7 @@ function eo(e, t) {
     null != t.lastLaunched ? (e.lastLaunched = t.lastLaunched) : null != t.start && (e.lastLaunched = t.start);
 }
 function el(e) {
-    return G.some((t) => t.name === e.name && !0 === t.streamerTool);
+    return B.some((t) => t.name === e.name && !0 === t.streamerTool);
 }
 function eu() {
     if (H.length > 0) {
@@ -373,7 +373,7 @@ function ev() {
                 supportsOutOfProcessOverlay: e.supportsOutOfProcessOverlay
             };
         }
-        [...n, ...G].forEach((n) => {
+        [...n, ...B].forEach((n) => {
             let r = null != n.executables ? n.executables : [],
                 i = {};
             r.forEach((e) => {
@@ -415,7 +415,7 @@ function ev() {
                             return '0' === t ? null : t;
                         })(e.pid, e.windowHandle)),
                         null ==
-                            G.find((t) => {
+                            B.find((t) => {
                                 let { name: n } = t;
                                 return n === e.name;
                             }) || (n.push(e), !1)
@@ -692,13 +692,13 @@ class eb extends (i = f.ZP.Store) {
                 })
                 .filter((e) => {
                     if (en.has(e.pid) || er.has(e.cleanedExePath)) return !1;
-                    let t = B.some((t) => e.cleanedExePath.includes(t));
+                    let t = G.some((t) => e.cleanedExePath.includes(t));
                     return t && en.add(e.pid), t;
                 })
                 .map((e) => e.cleanedExePath);
             t.length > 0 &&
                 N.default.track(M.rMx.GAME_DETECTION_DEBUGGING_KEYWORD_MATCH, {
-                    keywords: B,
+                    keywords: G,
                     paths: t,
                     debugging_level: ei,
                     interval_seconds: ea

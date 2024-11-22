@@ -30,8 +30,8 @@ var i = n(200651),
     S = n(84658),
     E = n(142961),
     R = n(232764),
-    y = n(729311),
-    Z = n(850864),
+    Z = n(729311),
+    y = n(850864),
     A = n(966301),
     L = n(981631),
     D = n(388032),
@@ -92,9 +92,9 @@ function P(e) {
             output: [V, (0, m.useToken)(c.Z.colors.STATUS_DANGER).hex()]
         });
     if (k) {
-        if (C === S.PG.DEFAULT_CHANNELS) return (0, i.jsx)(y.j, {});
+        if (C === S.PG.DEFAULT_CHANNELS) return (0, i.jsx)(Z.j, {});
         if (C === S.PG.CUSTOMIZATION_QUESTIONS) return (0, i.jsx)(A.Zm, {});
-        else if (C === S.PG.HOME_SETTINGS) return (0, i.jsx)(Z.T, {});
+        else if (C === S.PG.HOME_SETTINGS) return (0, i.jsx)(y.T, {});
     }
     let q = C === S.xh[S.xh.length - 1],
         X = async () => {

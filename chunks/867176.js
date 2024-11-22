@@ -36,15 +36,15 @@ function T(e) {
         [w, M] = i.useState(!1),
         P = (0, l.e7)([m.Z], () => m.Z.isFocused()),
         k = h.QK.getSetting(),
-        { bannerSrc: U, status: G } = (0, E.Z)({
+        { bannerSrc: U, status: B } = (0, E.Z)({
             displayProfile: a,
             pendingBanner: T,
             size: R,
             canAnimate: L || !k ? w : P
         }),
-        B = (0, c.useToken)(u.Z.unsafe_rawColors.PRIMARY_800).hex(),
+        G = (0, c.useToken)(u.Z.unsafe_rawColors.PRIMARY_800).hex(),
         Z = n.getAvatarURL(v, (0, c.getAvatarSize)(A)),
-        F = (0, o._i)((0, d.ZP)(Z, B, !1)),
+        F = (0, o._i)((0, d.ZP)(Z, G, !1)),
         V = (0, f.Z)(null !== (t = null == a ? void 0 : a.primaryColor) && void 0 !== t ? t : F).hex,
         j = I(A),
         H = O - C - D;
@@ -91,7 +91,7 @@ function T(e) {
                             height: O,
                             minHeight: O,
                             backgroundImage: null != U ? 'url('.concat(U, ')') : void 0,
-                            backgroundColor: 'COMPLETE' !== G ? u.Z.unsafe_rawColors.PRIMARY_800.css : V
+                            backgroundColor: 'COMPLETE' !== B ? u.Z.unsafe_rawColors.PRIMARY_800.css : V
                         },
                         children: [!k && (0, g.F8)(U) && (0, r.jsx)(p.Z, { className: b.gifTag }), S]
                     })

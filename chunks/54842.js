@@ -139,7 +139,7 @@ let S = () => [
             ]
         });
     },
-    y = (e) => {
+    Z = (e) => {
         let { iconSrc: t, name: n, position: r, faded: l, rightAlign: a, imageCoordinates: o } = e,
             d = {
                 [a ? 'right' : 'left']: o[0] + r[0],
@@ -191,7 +191,7 @@ t.Z = (e) => {
                 children: [
                     E.map((e) =>
                         (0, i.jsx)(
-                            y,
+                            Z,
                             {
                                 ...e,
                                 imageCoordinates: [n, s]

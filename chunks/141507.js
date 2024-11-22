@@ -42,13 +42,13 @@ let D = (e) => {
             L,
             x,
             { className: w, emojiGrid: M, guildId: P, pickerIntention: k, channel: U } = e,
-            { enabled: G } = I.Z.useExperiment({ location: 'EmojiPicker' }, { autoTrackExposure: !1 }),
-            B = _.kJ.useStore((e) => e.inspectedExpressionPosition),
+            { enabled: B } = I.Z.useExperiment({ location: 'EmojiPicker' }, { autoTrackExposure: !1 }),
+            G = _.kJ.useStore((e) => e.inspectedExpressionPosition),
             Z = i.useMemo(() => {
                 var e;
-                let { rowIndex: t, columnIndex: n } = B;
+                let { rowIndex: t, columnIndex: n } = G;
                 return null === (e = M[t]) || void 0 === e ? void 0 : e[n];
-            }, [M, B]);
+            }, [M, G]);
         switch (null == Z ? void 0 : Z.type) {
             case A.ld.EMOJI:
                 t = null == Z ? void 0 : Z.emoji;
@@ -86,7 +86,7 @@ let D = (e) => {
                         O(t) &&
                         Q !== N.t0.NONE &&
                         (Q === N.t0.NEWLY_ADDED_EMOJI && null !== t && t.type === c.B.GUILD && (0, f.Zg)(t.guildId, z[0].id),
-                        null != B.source &&
+                        null != G.source &&
                             (0, T.Gn)({
                                 emoji: t,
                                 subCategory: Q,
@@ -153,9 +153,9 @@ let D = (e) => {
                       shouldAnimate: !H && j
                   })
                 : null;
-        x = G && 'CREATE_EMOJI' === t.type ? C.intl.string(C.t.XCmLfH) : 'EXPAND_OR_COLLAPSE_EMOJI' === t.type ? (K.has(t.guildId) ? C.intl.string(C.t['/K2RDA']) : C.intl.string(C.t.NZI2Zm)) : t.allNamesString;
+        x = B && 'CREATE_EMOJI' === t.type ? C.intl.string(C.t.XCmLfH) : 'EXPAND_OR_COLLAPSE_EMOJI' === t.type ? (K.has(t.guildId) ? C.intl.string(C.t['/K2RDA']) : C.intl.string(C.t.NZI2Zm)) : t.allNamesString;
         let ee =
-            G && 'CREATE_EMOJI' === t.type
+            B && 'CREATE_EMOJI' === t.type
                 ? C.intl.string(C.t['Z/r7IS'])
                 : D({
                       inspectedEmoji: t,

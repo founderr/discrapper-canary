@@ -18,13 +18,13 @@ t.Z = function () {
         t = (0, u.Z)(e),
         n = (0, l.e7)([m.Z], () => m.Z.useReducedMotion),
         i = (0, l.e7)([h.Z], () => (0, o.wj)(h.Z.theme)),
-        { days: b, hours: x } = (0, d.Z)(new Date('2024-08-23T08:15:00-07:00')),
-        v = a.useMemo(() => {
-            if (0 === b && 0 === x) return p.intl.string(p.t.qAWS4O);
+        { days: b, hours: v } = (0, d.Z)(new Date('2024-08-23T08:15:00-07:00')),
+        x = a.useMemo(() => {
+            if (0 === b && 0 === v) return p.intl.string(p.t.qAWS4O);
             let e = ''.concat(b.toString().padStart(2, '0')).concat(p.intl.string(p.t.QJyuxc)),
-                t = ''.concat(x.toString().padStart(2, '0')).concat(p.intl.string(p.t['1LyF1t']));
+                t = ''.concat(v.toString().padStart(2, '0')).concat(p.intl.string(p.t['1LyF1t']));
             return ''.concat(e, ':').concat(t);
-        }, [b, x]);
+        }, [b, v]);
     return (0, r.jsxs)('div', {
         ref: e,
         className: s()(i ? f.shopCardDark : f.shopCard, g.notInteractive, {
@@ -55,7 +55,7 @@ t.Z = function () {
                 ]
             }),
             (0, r.jsx)(c.TextBadge, {
-                text: v,
+                text: x,
                 disableColor: !0,
                 className: f.newBadge
             })

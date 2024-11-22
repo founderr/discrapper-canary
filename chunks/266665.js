@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return Z;
+        return y;
     }
 }),
     n(47120);
@@ -30,13 +30,13 @@ var i = n(200651),
     S = n(388032),
     E = n(100161);
 let R = 'DRAGGABLE_ROLE';
-function y(e) {
+function Z(e) {
     var t, r;
     let l,
         { guild: d, role: h, highestRole: g, selectedItem: f, onClick: C, currentPosition: v, onDragStart: _, onDragReset: N, onDragComplete: T, roleStyle: j } = e,
         S = (0, I.T)(d, g, h),
-        y = (0, x.pM)(d.id, h.id),
-        Z = null == S && !y,
+        Z = (0, x.pM)(d.id, h.id),
+        y = null == S && !Z,
         A = (null === (t = h.tags) || void 0 === t ? void 0 : t.guild_connections) !== void 0,
         [, L] = (0, a.c)({
             type: R,
@@ -47,7 +47,7 @@ function y(e) {
                     position: v
                 }
             ),
-            canDrag: () => Z,
+            canDrag: () => y,
             end: (e, t) => {
                 let n = t.getDropResult();
                 if (null == n) {
@@ -59,7 +59,7 @@ function y(e) {
         }),
         [{ dragSourcePosition: D }, O] = (0, o.L)({
             accept: R,
-            canDrop: () => Z,
+            canDrop: () => y,
             collect: (e) => {
                 let t = e.getItem();
                 return null != t && e.isOver() && e.canDrop() ? { dragSourcePosition: t.position } : { dragSourcePosition: null };
@@ -116,7 +116,7 @@ function y(e) {
                     : null,
                 (0, i.jsx)(u.Text, {
                     variant: 'text-sm/medium',
-                    color: y ? 'header-primary' : 'interactive-active',
+                    color: Z ? 'header-primary' : 'interactive-active',
                     lineClamp: 1,
                     children: h.name
                 })
@@ -124,14 +124,14 @@ function y(e) {
         })
     );
 }
-function Z(e) {
+function y(e) {
     let { guild: t, currentRoleId: n, setCurrentRoleId: l, setSelectedSection: a } = e,
         o = (0, d.e7)([_.Z], () => _.Z.roles),
         c = (0, d.e7)([C.Z], () => C.Z.getHighestRole(t)),
         m = (0, d.e7)([g.Z], () => g.Z.roleStyle),
         [x, p] = r.useState(o.length),
         { scrolledToTop: I, handleScroll: b } = (0, T.V)(),
-        { handleDragStart: R, handleDragReset: Z, handleDragComplete: A } = (0, N.Z)(o),
+        { handleDragStart: R, handleDragReset: y, handleDragComplete: A } = (0, N.Z)(o),
         L = r.useRef(null),
         D = r.useCallback(
             (e) => {
@@ -204,7 +204,7 @@ function Z(e) {
                         orientation: 'vertical',
                         children: o.map((e, r) =>
                             (0, i.jsx)(
-                                y,
+                                Z,
                                 {
                                     guild: t,
                                     role: e,
@@ -213,7 +213,7 @@ function Z(e) {
                                     onClick: () => l(e.id),
                                     currentPosition: r,
                                     onDragStart: R,
-                                    onDragReset: Z,
+                                    onDragReset: y,
                                     onDragComplete: A,
                                     roleStyle: m
                                 },

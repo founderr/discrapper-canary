@@ -100,16 +100,16 @@ t.ZP = (e) => {
             var e;
             return null != k && null != x ? b.Z.getChannel(null === (e = S.Z.getVoiceStateForUser(x.id)) || void 0 === e ? void 0 : e.channelId) : null;
         }),
-        { enableHangStatus: G } = h.n.useExperiment(
+        { enableHangStatus: B } = h.n.useExperiment(
             {
                 guildId: null == U ? void 0 : U.guild_id,
                 location: 'ActivityStatus'
             },
             { autoTrackExposure: !1 }
         ),
-        B = (0, _.Sl)(N.Ilk.BRAND_345),
+        G = (0, _.Sl)(N.Ilk.BRAND_345),
         Z = null,
-        F = G && null != k && I.Z.can(N.Plq.CONNECT, U);
+        F = B && null != k && I.Z.can(N.Plq.CONNECT, U);
     F
         ? (Z = (0, r.jsx)(g.Z, {
               className: u,
@@ -158,7 +158,7 @@ t.ZP = (e) => {
                           className: C.questsIcon,
                           height: R,
                           width: R,
-                          color: B.hex
+                          color: G.hex
                       }),
                   null != t && t.some((e) => (0, c.Z)(e, F))
                       ? (0, r.jsx)(y.Z, {

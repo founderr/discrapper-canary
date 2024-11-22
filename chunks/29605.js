@@ -33,8 +33,8 @@ var i = n(200651),
     S = n(626135),
     E = n(768581),
     R = n(176354),
-    y = n(267642),
-    Z = n(51144),
+    Z = n(267642),
+    y = n(51144),
     A = n(434404),
     L = n(471613),
     D = n(999382),
@@ -56,7 +56,7 @@ let B = d().throttle(x.OQ, 1000),
                 animated: n.animated,
                 size: 32
             }),
-            u = Z.ZP.useUserTag(n.user);
+            u = y.ZP.useUserTag(n.user);
         return (0, i.jsxs)('div', {
             className: s()(M.emojiRow, w.card),
             children: [
@@ -262,7 +262,7 @@ let B = d().throttle(x.OQ, 1000),
             o = a.getMaxEmojiSlots(),
             c = Math.min(o - l, o - s),
             d = a.premiumTier,
-            u = (0, y.FZ)(d, a.id);
+            u = (0, Z.FZ)(d, a.id);
         return null == u || d === O.Eu4.TIER_3 || c > 0
             ? null
             : (c > o ? ((t = P.intl.formatToPlainString(P.t.j0UH0t, { level: u })), (n = P.intl.formatToPlainString(P.t.VQeyKy, { level: u })), (r = O.qAy.BOOST_UPSELL_BANNER_LOST_LEVEL)) : ((t = P.intl.string(P.t.zT9Sxc)), (n = P.intl.formatToPlainString(P.t.dBZ1RU, { level: u })), (r = O.qAy.BOOST_UPSELL_BANNER_SLOTS_FULL)),
@@ -274,7 +274,7 @@ let B = d().throttle(x.OQ, 1000),
                       page: O.ZY5.GUILD_SETTINGS,
                       section: O.jXE.GUILD_SETTINGS_STICKERS,
                       object: r,
-                      objectType: (0, y.ge)(u)
+                      objectType: (0, Z.ge)(u)
                   }
               }));
     };
@@ -291,7 +291,7 @@ t.ZP = () => {
         x = (0, C.Z)(c),
         [p, I] = r.useState(!1),
         [E, R] = r.useState(!1),
-        y = r.useRef(null);
+        Z = r.useRef(null);
     r.useEffect(() => {
         p && V();
     }, [p]),
@@ -301,13 +301,13 @@ t.ZP = () => {
         r.useEffect(() => {
             null != x && x < c && B(e.id);
         }, [c, x, e.id]);
-    let [Z, w] = r.useMemo(() => {
+    let [y, w] = r.useMemo(() => {
             let t = null == g ? void 0 : g.filter((t) => !(0, N.Kt)(t, e.id)),
                 [n, i] = d().partition(t, (e) => !e.animated);
             return [n, i];
         }, [g, e.id]),
         U = e.getMaxEmojiSlots(),
-        G = Math.max(U - Z.length, U - w.length),
+        G = Math.max(U - y.length, U - w.length),
         H = (n, i, r) =>
             (0, _.G)({
                 data: n,
@@ -327,10 +327,10 @@ t.ZP = () => {
                 I(!0);
         },
         V = () => {
-            null !== y.current && ((0, h.closeModal)(y.current), (y.current = null));
+            null !== Z.current && ((0, h.closeModal)(Z.current), (Z.current = null));
         },
         Y = async (e) => {
-            y.current = await (0, h.openModalLazy)(async () => {
+            Z.current = await (0, h.openModalLazy)(async () => {
                 let { default: t } = await n.e('16169').then(n.bind(n, 935333));
                 return (n) =>
                     (0, i.jsx)(t, {
@@ -355,7 +355,7 @@ t.ZP = () => {
                 children: [
                     (0, i.jsx)(W, {
                         guild: e,
-                        staticEmojiCount: Z.length,
+                        staticEmojiCount: y.length,
                         animatedEmojiCount: w.length
                     }),
                     (0, i.jsxs)(h.FormSection, {
@@ -439,7 +439,7 @@ t.ZP = () => {
                     }),
                     (0, i.jsx)(F, {
                         isLoading: null == g,
-                        staticEmojis: Z,
+                        staticEmojis: y,
                         animatedEmojis: w,
                         guild: e,
                         theme: s

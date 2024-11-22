@@ -87,8 +87,8 @@ var r,
     P = n(626135),
     k = n(823379),
     U = n(589530),
-    G = n(709054),
-    B = n(217702),
+    B = n(709054),
+    G = n(217702),
     Z = n(981631),
     F = n(420212),
     V = n(814249),
@@ -167,7 +167,7 @@ function Q(e) {
 }
 function X(e) {
     let { alt: t, hiddenSpoilers: n, renderAdjacentContent: r, containerClassName: i, imageContainerClassName: o, disableAltTextDisplay: u = !1, mediaLayoutType: c, imageContainerStyle: d } = e,
-        f = c === B.hV.MOSAIC,
+        f = c === G.hV.MOSAIC,
         p = !u && D.H1.getSetting() && null != t && '' !== t && !0 !== n,
         h = (e) => {
             let { altText: t } = e;
@@ -353,7 +353,7 @@ function er(e) {
                   })
                 : p.Z.jumpToMessage({
                       channelId: n,
-                      messageId: G.default.castChannelIdAsMessageId(n),
+                      messageId: B.default.castChannelIdAsMessageId(n),
                       offset: 1,
                       context: 'Mark As Read'
                   });
@@ -456,8 +456,8 @@ function ei(e) {
             [D],
             ea
         ),
-        B = null !== (n = (0, f.e7)([R.Z], () => R.Z.visibleSummaryIndex())) && void 0 !== n ? n : -1,
-        F = null == D ? void 0 : null === (t = D[B]) || void 0 === t ? void 0 : t.topic;
+        G = null !== (n = (0, f.e7)([R.Z], () => R.Z.visibleSummaryIndex())) && void 0 !== n ? n : -1,
+        F = null == D ? void 0 : null === (t = D[G]) || void 0 === t ? void 0 : t.topic;
     null == F && null == g && (null == D ? void 0 : D.length) >= 1 && (F = null === (r = D[0]) || void 0 === r ? void 0 : r.topic);
     let Y = s.useMemo(
             () =>
@@ -606,7 +606,7 @@ function ei(e) {
                   })
                 : p.Z.jumpToMessage({
                       channelId: i.id,
-                      messageId: G.default.castChannelIdAsMessageId(i.id),
+                      messageId: B.default.castChannelIdAsMessageId(i.id),
                       offset: 1,
                       context: 'Mark As Read'
                   });
@@ -793,8 +793,8 @@ function es(e) {
         x = null == A ? void 0 : null === (t = A[L]) || void 0 === t ? void 0 : t.topic;
     null == x && null == h && (null == A ? void 0 : A.length) >= 1 && (x = null === (r = A[0]) || void 0 === r ? void 0 : r.topic);
     let U = s.useMemo(() => c().get(A, L - 1), [L, A]),
-        G = s.useMemo(() => c().get(A, L + 1), [L, A]),
-        B = s.useMemo(
+        B = s.useMemo(() => c().get(A, L + 1), [L, A]),
+        G = s.useMemo(
             () =>
                 c().debounce((e) => {
                     var t;
@@ -815,9 +815,9 @@ function es(e) {
         ),
         Y = s.useCallback(
             (e) => {
-                F(), B(e);
+                F(), G(e);
             },
-            [B, F]
+            [G, F]
         ),
         [W, K] = s.useState(!1),
         z = s.useCallback(() => {
@@ -984,7 +984,7 @@ function es(e) {
                                       (0, a.jsx)(_.Clickable, {
                                           'aria-label': j.intl.string(j.t['4huCnJ']),
                                           onClick: X,
-                                          className: l()(H.topicsPillCaret, H.topicsCaretLeft, { [H.topicsPillCaretDisabled]: null == G }),
+                                          className: l()(H.topicsPillCaret, H.topicsCaretLeft, { [H.topicsPillCaretDisabled]: null == B }),
                                           children: (0, a.jsx)(M.Z, {
                                               width: 16,
                                               height: 16,

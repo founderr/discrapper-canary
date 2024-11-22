@@ -75,8 +75,8 @@ function y(e) {
             scrollToEnd: b.Cyb,
             wrap: !0
         }),
-        G = d.length,
-        B = 0 === G ? I.intl.string(I.t['vR7M+/']) : I.intl.formatToPlainString(I.t.PCs0oq, { numRoles: G }),
+        B = d.length,
+        G = 0 === B ? I.intl.string(I.t['vR7M+/']) : I.intl.formatToPlainString(I.t.PCs0oq, { numRoles: B }),
         Z = (L ? d : C).map((e, i) => {
             var a;
             return (0, r.jsx)(
@@ -107,7 +107,7 @@ function y(e) {
                 let { ref: t, ...n } = e;
                 return (0, r.jsxs)('div', {
                     className: T.root,
-                    'aria-label': B,
+                    'aria-label': G,
                     ref: t,
                     ...n,
                     children: [
@@ -144,7 +144,7 @@ function y(e) {
                                   buttonRef: M,
                                   guild: l,
                                   guildMember: c,
-                                  numRoles: G,
+                                  numRoles: B,
                                   highestRole: f,
                                   onAddRole: p
                               })

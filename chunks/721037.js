@@ -102,9 +102,9 @@ t.Z = a.ZP.connectStores([_.Z, o.ZP, b.Z, p.Z, g.Z, v.Z, E.Z, d.Z, h.ZP], (e) =>
         P = v.Z.getVoiceChannelId(),
         k = v.Z.getChannelId() === P,
         U = null != P && d.Z.getChatOpen(P),
-        G = N || C,
-        B = G && null != f && (0, l.q)(f.applicationId),
-        Z = !G && null != a && k;
+        B = N || C,
+        G = B && null != f && (0, l.q)(f.applicationId),
+        Z = !B && null != a && k;
     return {
         selectedPIPWindow: a,
         pipWindows: w,
@@ -114,6 +114,6 @@ t.Z = a.ZP.connectStores([_.Z, o.ZP, b.Z, p.Z, g.Z, v.Z, E.Z, d.Z, h.ZP], (e) =>
         theme: p.Z.theme,
         dockedRect: E.Z.getDockedRect(null !== (i = null == a ? void 0 : a.id) && void 0 !== i ? i : ''),
         appContext: O,
-        roundCorners: !B
+        roundCorners: !G
     };
 })(R);

@@ -85,12 +85,12 @@ function c(e) {
         (T['data-key'] = n),
         (P.preventFocusOnPress = p);
     let { pressProps: k, isPressed: U } = (0, o.r)(P),
-        G = R
+        B = R
             ? (e) => {
                   'mouse' === D.current && (e.stopPropagation(), e.preventDefault(), M(e));
               }
             : void 0,
-        { longPressProps: B } = (0, l.T)({
+        { longPressProps: G } = (0, l.T)({
             isDisabled: !L,
             onLongPress(e) {
                 'touch' === e.pointerType && (I(e), t.setSelectionBehavior('toggle'));
@@ -102,8 +102,8 @@ function c(e) {
               }
             : void 0;
     return {
-        itemProps: (0, s.d)(T, A || C ? k : {}, L ? B : {}, {
-            onDoubleClick: G,
+        itemProps: (0, s.d)(T, A || C ? k : {}, L ? G : {}, {
+            onDoubleClick: B,
             onDragStartCapture: (e) => {
                 'touch' === D.current && x.current && e.preventDefault();
             },

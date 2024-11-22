@@ -156,13 +156,13 @@ function S(e) {
             N(e), a(e);
         };
     if (null == o) return null;
-    let { headerText: S, headerSubtext: E, descriptionText: R, icon: y } = o,
-        Z = !(0, d.Vb)(t);
+    let { headerText: S, headerSubtext: E, descriptionText: R, icon: Z } = o,
+        y = !(0, d.Vb)(t);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', {
                 className: v.ruleIconContainer,
-                children: (0, i.jsx)(y, {
+                children: (0, i.jsx)(Z, {
                     size: 'md',
                     color: 'currentColor',
                     className: v.ruleIcon
@@ -187,7 +187,7 @@ function S(e) {
                             })
                         ]
                     }),
-                    Z &&
+                    y &&
                         (0, i.jsx)(s.Text, {
                             className: v.ruleTextDescription,
                             variant: 'text-sm/normal',

@@ -64,7 +64,7 @@ t.Z = (e) => {
                         range: [0, 1],
                         output: [0, 1]
                     }),
-                    backdropFilter: s.to([0, 1], [0, 1]).to((e) => 'blur('.concat(10 * e, 'px) brightness(').concat(1 - e / 5, ')'))
+                    backdropFilter: s.to([0, 1], [0, 1]).to((e) => 'blur('.concat(10 * e, 'px) brightness(').concat(1 - e / 4, ')'))
                 }
             }),
             (0, o.jsx)(i.animated.div, {

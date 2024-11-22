@@ -45,16 +45,16 @@ function b(e) {
     let { guildId: t, priceTiers: l, groupListingId: p } = e,
         j = (0, x._k)(p),
         { editStateIds: b, addNewEditStateId: S, addNewEditStateFromTemplate: E, removeEditStateId: R } = C.B7(p, t, { includeSoftDeleted: !0 }),
-        [y, Z] = r.useState({}),
+        [Z, y] = r.useState({}),
         A = r.useMemo(() => {
             let e = b.map((e) => {
                 var t;
-                return null !== (t = y[e]) && void 0 !== t ? t : e;
+                return null !== (t = Z[e]) && void 0 !== t ? t : e;
             });
             return (0, a.uniq)(e);
-        }, [b, y]),
+        }, [b, Z]),
         L = (e, t) => {
-            Z((n) => ({
+            y((n) => ({
                 ...n,
                 [e]: t
             }));
