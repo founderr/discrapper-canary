@@ -24,11 +24,11 @@ let u = i.createContext({
     isLoading: !0
 });
 function c(e) {
-    return (0, a.k)(e, HTMLImageElement) ? e.complete : !(0, a.k)(e, HTMLVideoElement) || e.readyState >= 2;
+    return (0, a.k)(e, HTMLImageElement) ? e.complete : (0, a.k)(e, HTMLVideoElement) ? e.readyState >= 2 : !!(0, a.k)(e, HTMLDivElement) || !0;
 }
 function d(e) {
     var t, n;
-    return (0, a.k)(e, HTMLImageElement) ? e.getAttribute('src') : (0, a.k)(e, HTMLVideoElement) ? (null !== (n = null === (t = e.querySelectorAll('source')[0]) || void 0 === t ? void 0 : t.getAttribute('src')) && void 0 !== n ? n : 'video') : e.tagName;
+    return (0, a.k)(e, HTMLImageElement) ? e.getAttribute('src') : (0, a.k)(e, HTMLVideoElement) ? (null !== (n = null === (t = e.querySelectorAll('source')[0]) || void 0 === t ? void 0 : t.getAttribute('src')) && void 0 !== n ? n : 'video') : (0, a.k)(e, HTMLDivElement) ? e.tagName : e.tagName;
 }
 function f(e) {
     let { children: t, isPreview: n = !1, source: f, questId: _ } = e,
@@ -79,7 +79,7 @@ function f(e) {
                     let n = new Set(t);
                     return n.add(e), n;
                 });
-                let r = ((n = e), (0, a.k)(n, HTMLImageElement) ? 'load' : (0, a.k)(n, HTMLVideoElement) ? 'canplaythrough' : 'load');
+                let r = ((n = e), (0, a.k)(n, HTMLImageElement) ? 'load' : (0, a.k)(n, HTMLVideoElement) ? 'canplaythrough' : (0, a.k)(n, HTMLDivElement) ? 'load' : 'load');
                 e.addEventListener(r, function t() {
                     T(e), e.removeEventListener(r, t);
                 });
