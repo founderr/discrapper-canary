@@ -29,10 +29,24 @@ function u() {
         dsn: 'https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984',
         autoSessionTracking: !1,
         environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-        release: 'discord_web-efaa3ce403cd78c5b00abc497e0a6e77dcaadad8',
+        release: 'discord_web-10d02d6753a7ecdd678260ad598c455f08d704d1',
         beforeSend: function (e, t) {
             var r, n;
-            return !((null != (r = e).exception && null != r.exception.values && r.exception.values.every((e) => null == e.stacktrace || (null != e.stacktrace.frames && 1 === e.stacktrace.frames.length)) && 'canary' !== window.GLOBAL_ENV.RELEASE_CHANNEL) || c.some((e) => window.navigator.appVersion.toLowerCase().indexOf(e) >= 0)) && !s() && !('Aborted' === (n = e).message || 'cancel captcha' === n.message) && l() ? e : null;
+            return !(
+                (null != (r = e).exception &&
+                    null != r.exception.values &&
+                    r.exception.values.every((e) => {
+                        var t;
+                        return (null === (t = e.mechanism) || void 0 === t ? void 0 : t.type) !== 'onunhandledrejection' && (null == e.stacktrace || (null != e.stacktrace.frames && 1 === e.stacktrace.frames.length));
+                    }) &&
+                    'canary' !== window.GLOBAL_ENV.RELEASE_CHANNEL) ||
+                c.some((e) => window.navigator.appVersion.toLowerCase().indexOf(e) >= 0)
+            ) &&
+                !s() &&
+                !('Aborted' === (n = e).message || 'cancel captcha' === n.message) &&
+                l()
+                ? e
+                : null;
         },
         integrations: [
             a.k({
@@ -51,8 +65,8 @@ function u() {
         ignoreErrors: ['EADDRINUSE', 'BetterDiscord', 'EnhancedDiscord', 'Powercord', 'RecipeWebview', 'jQuery', 'localStorage', 'has already been declared', 'Cannot call hover while not dragging.', 'Cannot call beginDrag while dragging.', 'getHostNode', 'setupCSS', 'on missing remote object', 'ChunkLoadError', "Cannot find module 'discord_utils'", 'Failed to setup Krisp module', "Error invoking remote method 'DISCORD_NATIVE_MODULES_INSTALL': Error: Module updater is not available!", 'Non-Error promise rejection captured with keys:', 'Request has been terminated', 'Cannot resolve a Slate point from DOM point', 'Failed to fetch', 'no suitable image found', 'ResizeObserver loop limit exceeded', 'ResizeObserver loop completed with undelivered notifications.', 'The play() request was interrupted', 'could not play audio', 'notosans-400-normalitalic'],
         denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//]
     }),
-        o.YA('buildNumber', ((e = '347083'), '347083'));
-    o.YA('builtAt', String('1732230754997'));
+        o.YA('buildNumber', ((e = '347124'), '347124'));
+    o.YA('builtAt', String('1732233166055'));
     let t = window.GLOBAL_ENV.SENTRY_TAGS;
     if (null != t && 'object' == typeof t) for (let e in t) o.YA(e, t[e]);
     return i;
