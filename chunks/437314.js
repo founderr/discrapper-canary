@@ -11,11 +11,12 @@ var i,
     a = n(748780),
     s = n(442837),
     o = n(481060),
-    c = n(210887),
-    d = n(981631),
-    u = n(388032),
-    h = n(176075);
-function m(e, t, n) {
+    c = n(922611),
+    d = n(210887),
+    u = n(981631),
+    h = n(388032),
+    m = n(176075);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,7 +30,7 @@ function m(e, t, n) {
     );
 }
 (i || (i = {})).SECTION_NO_RESULTS = 'SECTION_NO_RESULTS';
-let p = Object.freeze({
+let g = Object.freeze({
         SECTION_ALL: {
             lightSrc: n(900933),
             darkSrc: n(67764),
@@ -38,11 +39,11 @@ let p = Object.freeze({
             renderContent: (e) =>
                 (0, r.jsxs)(l.Fragment, {
                     children: [
-                        (0, r.jsx)(o.EmptyStateText, { note: u.intl.string(u.t['oi+B4u']) }),
+                        (0, r.jsx)(o.EmptyStateText, { note: h.intl.string(h.t['oi+B4u']) }),
                         (0, r.jsx)(o.Button, {
-                            className: h.button,
+                            className: m.button,
                             onClick: e,
-                            children: u.intl.string(u.t.w5uwoK)
+                            children: h.intl.string(h.t.w5uwoK)
                         })
                     ]
                 })
@@ -52,36 +53,36 @@ let p = Object.freeze({
             darkSrc: n(917847),
             width: 421,
             height: 218,
-            renderContent: () => (0, r.jsx)(o.EmptyStateText, { note: u.intl.string(u.t['1ESycn']) })
+            renderContent: () => (0, r.jsx)(o.EmptyStateText, { note: h.intl.string(h.t['1ESycn']) })
         },
         SECTION_BLOCKED: {
             lightSrc: n(459505),
             darkSrc: n(356634),
             width: 433,
             height: 232,
-            renderContent: () => (0, r.jsx)(o.EmptyStateText, { note: u.intl.string(u.t.eC6imZ) })
+            renderContent: () => (0, r.jsx)(o.EmptyStateText, { note: h.intl.string(h.t.eC6imZ) })
         },
         SECTION_PENDING: {
             lightSrc: n(979770),
             darkSrc: n(138715),
             width: 415,
             height: 200,
-            renderContent: (e) =>
+            renderContent: (e, t) =>
                 (0, r.jsxs)('div', {
-                    className: h.emptyStateContainer,
+                    className: m.emptyStateContainer,
                     children: [
-                        (0, r.jsx)(o.EmptyStateText, { note: u.intl.string(u.t['7uvAKS']) }),
+                        (0, r.jsx)(o.EmptyStateText, { note: h.intl.string(h.t['7uvAKS']) }),
                         null != e &&
                             (0, r.jsx)(o.Button, {
                                 color: o.Button.Colors.PRIMARY,
                                 look: o.Button.Looks.OUTLINED,
                                 size: o.Button.Sizes.TINY,
                                 onClick: e,
-                                className: h.spamButton,
+                                className: m.spamButton,
                                 children: (0, r.jsx)(o.Text, {
                                     variant: 'text-xs/medium',
                                     color: 'text-muted',
-                                    children: u.intl.string(u.t.rXl8fn)
+                                    children: t ? h.intl.string(h.t.R40bU1) : h.intl.string(h.t.rXl8fn)
                                 })
                             })
                     ]
@@ -92,20 +93,20 @@ let p = Object.freeze({
             darkSrc: n(138715),
             width: 415,
             height: 200,
-            renderContent: () => (0, r.jsx)(o.EmptyStateText, { note: u.intl.string(u.t['1AUTCA']) })
+            renderContent: () => (0, r.jsx)(o.EmptyStateText, { note: h.intl.string(h.t['1AUTCA']) })
         },
         SECTION_NO_RESULTS: {
             lightSrc: n(55346),
             darkSrc: n(917847),
             width: 421,
             height: 218,
-            renderContent: () => (0, r.jsx)(o.EmptyStateText, { note: u.intl.string(u.t['+Zg0lZ']) })
+            renderContent: () => (0, r.jsx)(o.EmptyStateText, { note: h.intl.string(h.t['+Zg0lZ']) })
         }
     }),
-    g = (e) => {
+    f = (e) => {
         let { theme: t } = e,
-            n = u.intl.string(u.t['oi+B4u']),
-            i = p.SECTION_ALL;
+            n = h.intl.string(h.t['oi+B4u']),
+            i = g.SECTION_ALL;
         return (0, r.jsx)(l.Fragment, {
             children: (0, r.jsxs)(o.EmptyState, {
                 theme: t,
@@ -121,37 +122,37 @@ let p = Object.freeze({
             })
         });
     };
-class f extends l.PureComponent {
+class _ extends l.PureComponent {
     render() {
         let { type: e, onClick: t, theme: n } = this.props,
             i = { opacity: this.state.opacity },
             l = (function (e) {
                 switch (e) {
-                    case d.pJs.ADD_FRIEND:
-                    case d.pJs.ALL:
-                        return p.SECTION_ALL;
-                    case d.pJs.ONLINE:
-                        return p.SECTION_ONLINE;
-                    case d.pJs.PENDING:
-                        return p.SECTION_PENDING;
-                    case d.pJs.SUGGESTIONS:
-                        return p.SECTION_SUGGESTIONS;
-                    case d.pJs.BLOCKED:
-                        return p.SECTION_BLOCKED;
+                    case u.pJs.ADD_FRIEND:
+                    case u.pJs.ALL:
+                        return g.SECTION_ALL;
+                    case u.pJs.ONLINE:
+                        return g.SECTION_ONLINE;
+                    case u.pJs.PENDING:
+                        return g.SECTION_PENDING;
+                    case u.pJs.SUGGESTIONS:
+                        return g.SECTION_SUGGESTIONS;
+                    case u.pJs.BLOCKED:
+                        return g.SECTION_BLOCKED;
                     case 'SECTION_NO_RESULTS':
-                        return p.SECTION_NO_RESULTS;
+                        return g.SECTION_NO_RESULTS;
                     default:
                         throw Error('FriendsEmptyState: Invalid empty state');
                 }
             })(e);
-        return e === d.pJs.ADD_FRIEND
+        return e === u.pJs.ADD_FRIEND
             ? (0, r.jsx)(a.Z.div, {
-                  className: h.friendsEmpty,
+                  className: m.friendsEmpty,
                   style: i,
-                  children: (0, r.jsx)(g, { theme: n })
+                  children: (0, r.jsx)(f, { theme: n })
               })
             : (0, r.jsx)(a.Z.div, {
-                  className: h.friendsEmpty,
+                  className: m.friendsEmpty,
                   style: i,
                   children: (0, r.jsxs)(o.EmptyState, {
                       theme: n,
@@ -162,22 +163,23 @@ class f extends l.PureComponent {
                               lightSrc: l.lightSrc,
                               darkSrc: l.darkSrc
                           }),
-                          l.renderContent(t)
+                          l.renderContent(t, this.isStealthRemediationEnabled)
                       ]
                   })
               });
     }
     constructor(...e) {
         super(...e),
-            m(this, 'state', { opacity: new a.Z.Value(1) }),
-            m(this, 'componentWillEnter', (e) => {
+            p(this, 'isStealthRemediationEnabled', (0, c.Do)({ location: 'FriendsEmptyState' })),
+            p(this, 'state', { opacity: new a.Z.Value(1) }),
+            p(this, 'componentWillEnter', (e) => {
                 this.state.opacity.setValue(0),
                     a.Z.timing(this.state.opacity, {
                         toValue: 1,
                         duration: 250
                     }).start(e);
             }),
-            m(this, 'componentWillLeave', (e) => {
+            p(this, 'componentWillLeave', (e) => {
                 a.Z.timing(this.state.opacity, {
                     toValue: 0,
                     duration: 250
@@ -185,4 +187,4 @@ class f extends l.PureComponent {
             });
     }
 }
-t.Z = s.ZP.connectStores([c.Z], () => ({ theme: c.Z.theme }), { forwardRef: !0 })(f);
+t.Z = s.ZP.connectStores([d.Z], () => ({ theme: d.Z.theme }), { forwardRef: !0 })(_);
