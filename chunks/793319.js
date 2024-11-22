@@ -105,19 +105,27 @@ function eS(e) {
         Z = (0, P.Zm)(t, 'GoLiveButton'),
         N = (0, M.wE)(m.z.CONSUMABLE_HD_POTION_UPSELL),
         S = (0, P.bK)(),
-        T = ((Z && !N) || (t.isHDStreamSplashed && null == u)) && !S,
-        j = () => {
+        [T, j] = a.useState(!1);
+    a.useEffect(() => {
+        if ((j(((Z && !N) || (t.isHDStreamSplashed && null == u)) && S), t.isHDStreamSplashed)) {
+            let e = setTimeout(() => {
+                j(!1);
+            }, 300000);
+            return () => clearTimeout(e);
+        }
+    }, [t.isHDStreamSplashed, N, u, Z, S]);
+    let A = () => {
             if (l) {
                 E();
                 return;
             }
             (0, ex.Z)();
         },
-        A = () => {
+        L = () => {
             (0, w.Z)(u);
         },
-        L = V.pM,
-        k = a.useCallback(() => {
+        k = V.pM,
+        O = a.useCallback(() => {
             eo.default.track(eI.rMx.PERK_DEMO_OFFER_DISMISSED, {
                 guild_id: t.guild_id,
                 channel_id: t.id,
@@ -125,7 +133,7 @@ function eS(e) {
             }),
                 (0, V.qA)();
         }, [t.guild_id, t.id]),
-        O = (e, t) => {
+        D = (e, t) => {
             let { onClick: n, ...i } = null != e ? e : { onClick: void 0 },
                 l = null != u;
             return (0, r.jsx)(et.O, {
@@ -138,14 +146,14 @@ function eS(e) {
                 isSelfStream: !0,
                 onPopoutClick: l
                     ? function (e) {
-                          C.hqStreamingIsEnabled && !C.hqStreamingPopoutDismissed && L(), null == n || n(e);
+                          C.hqStreamingIsEnabled && !C.hqStreamingPopoutDismissed && k(), null == n || n(e);
                       }
                     : null,
                 popoutOpen: t,
                 shouldShowTooltip: !t,
                 premiumGlow: T,
                 buttonRef: _,
-                onClick: null != u ? A : j
+                onClick: null != u ? L : A
             });
         };
     return (0, r.jsxs)(r.Fragment, {
@@ -188,13 +196,13 @@ function eS(e) {
                     ? (0, r.jsx)(W.$, {
                           buttonRef: _,
                           dismissed: C.hqStreamingPopoutDismissed,
-                          onDismiss: L
+                          onDismiss: k
                       })
                     : (0, r.jsx)(z.b, {
                           channel: t,
                           buttonRef: _,
                           dismissed: C.hqStreamingOptInPopoutDismissed,
-                          onDismiss: k
+                          onDismiss: O
                       }),
             (0, r.jsx)(Y.Z, {
                 children: (0, r.jsx)(f.Popout, {
@@ -217,7 +225,7 @@ function eS(e) {
                     children: (e, t) => {
                         let { ...n } = e,
                             { isShown: i } = t;
-                        return (0, r.jsx)('div', { children: O(n, i) });
+                        return (0, r.jsx)('div', { children: D(n, i) });
                     }
                 })
             })
