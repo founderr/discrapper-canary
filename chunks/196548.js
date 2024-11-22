@@ -48,6 +48,22 @@ let r = {
         SIZE_MD: 'var(--size-md)',
         SIZE_LG: 'var(--size-lg)',
         SIZE_XL: 'var(--size-xl)',
-        SIZE_XXL: 'var(--size-xxl)'
+        SIZE_XXL: 'var(--size-xxl)',
+        BREAKPOINT_480: 480,
+        BREAKPOINT_640: 640,
+        BREAKPOINT_768: 768,
+        BREAKPOINT_1024: 1024,
+        BREAKPOINT_1280: 1280,
+        BREAKPOINT_1536: 1536,
+        BREAKPOINT_1800: 1800,
+        BREAKPOINT_2500: 2500,
+        BREAKPOINT_XXS: 'var(--breakpoint-xxs)',
+        BREAKPOINT_XS: 'var(--breakpoint-xs)',
+        BREAKPOINT_SM: 'var(--breakpoint-sm)',
+        BREAKPOINT_MD: 'var(--breakpoint-md)',
+        BREAKPOINT_LG: 'var(--breakpoint-lg)',
+        BREAKPOINT_XL: 'var(--breakpoint-xl)',
+        BREAKPOINT_XXL: 'var(--breakpoint-xxl)',
+        BREAKPOINT_MAX: 'var(--breakpoint-max)'
     }
 };
