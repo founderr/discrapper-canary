@@ -23,8 +23,9 @@ function h(e) {
     if (null == t) return;
     let n = i.Z.getChannel(t);
     if (null != n && n.isGroupDM()) {
-        let e = n.recipients.filter((e) => s.Z.isBlocked(e));
-        e.length > 0 &&
+        let e = n.recipients.filter((e) => s.Z.isBlocked(e)),
+            r = n.recipients.filter((e) => s.Z.isIgnored(e));
+        (e.length > 0 || r.length > 0) &&
             l.E.getCurrentConfig({ location: 'channel_select' }, { autoTrackExposure: !0 }).showAsModal &&
             !n.blockedUserWarningDismissed &&
             !(function (e) {
@@ -32,7 +33,8 @@ function h(e) {
             })(t) &&
             (0, d.O)({
                 channelId: t,
-                blockedUserIds: e
+                blockedUserIds: e,
+                ignoredUserIds: r
             });
     }
 }

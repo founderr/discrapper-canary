@@ -11,7 +11,7 @@ var i = n(481060),
     o = n(110223),
     l = n(981631);
 function u(e) {
-    let { channelId: t, blockedUserIds: u } = e;
+    let { channelId: t, blockedUserIds: u, ignoredUserIds: c } = e;
     (0, i.openModalLazy)(
         async () => {
             let { default: e } = await n.e('87337').then(n.bind(n, 164375));
@@ -20,6 +20,7 @@ function u(e) {
                 return (0, r.jsx)(e, {
                     channelId: t,
                     blockedUserIds: u,
+                    ignoredUserIds: c,
                     transitionState: i,
                     onClose: a
                 });
@@ -32,7 +33,8 @@ function u(e) {
                         action: o.q.DISMISS,
                         channel_id: t,
                         warning_medium: o.WR.MODAL,
-                        blocked_user_ids: u
+                        blocked_user_ids: u,
+                        ignored_user_ids: c
                     });
             }
         }

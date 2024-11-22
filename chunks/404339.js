@@ -15,8 +15,8 @@ var i = n(990547),
     o = n(592125),
     c = n(594174),
     u = n(626135),
-    _ = n(33194),
-    d = n(807031),
+    d = n(33194),
+    _ = n(807031),
     A = n(343544),
     I = n(14251),
     m = n(110223),
@@ -60,8 +60,8 @@ let N = (e) => {
                     text: E.intl.string(E.t['7jN3FB'])
                 }
             ];
-        let _ = o.Z.getChannel(t),
-            d = n.size > 0,
+        let d = o.Z.getChannel(t),
+            _ = n.size > 0,
             A = i.size > 0,
             m = [
                 {
@@ -73,28 +73,29 @@ let N = (e) => {
                     className: f.row
                 }
             ];
-        if (d && A) {
-            let e = [...n, ...i].slice(0, 2);
+        if (_ && A) {
+            let e = [...n, ...i],
+                l = e.slice(0, 2);
             m.unshift({
                 icon: (0, s.jsx)('div', {
                     className: f.icon,
                     children: (0, s.jsx)(r.Z, {
-                        recipients: e,
+                        recipients: l,
                         size: a.AvatarSizes.SIZE_32
                     })
                 }),
-                text: E.intl.string(E.t.aTORmJ),
+                text: (0, I.a)(l, e.length, null == d ? void 0 : d.guild_id, t),
                 className: f.row
             });
         } else {
-            let e = d ? [...n].slice(0, 2) : [...i].slice(0, 2),
-                a = d ? n.size : i.size;
+            let e = _ ? [...n].slice(0, 2) : [...i].slice(0, 2),
+                a = _ ? n.size : i.size;
             m.unshift({
                 icon: (0, s.jsx)('div', {
                     className: f.icon,
-                    children: (0, I.r)(e, null == _ ? void 0 : _.guild_id)
+                    children: (0, I.r)(e, null == d ? void 0 : d.guild_id)
                 }),
-                text: (0, I.a)(e, a, null == _ ? void 0 : _.guild_id, t),
+                text: (0, I.a)(e, a, null == d ? void 0 : d.guild_id, t),
                 className: f.row
             });
         }
@@ -102,7 +103,7 @@ let N = (e) => {
     };
 function x(e) {
     let { channelId: t, blockedUserIds: n, ignoredUserIds: a, transitionState: r, onClose: o, onJoin: c } = e,
-        I = (0, d.KR)({ location: 'warning_modal' }),
+        I = (0, _.KR)({ location: 'warning_modal' }),
         f = (0, l.Do)({ location: 'blocked_user_in_voice_channel_modal' });
     if (!I) return null;
     let x = n.size > 1;
@@ -122,7 +123,7 @@ function x(e) {
         onDismissAndStay: () => {
             c(),
                 o(),
-                (0, _.g6)(t),
+                (0, d.g6)(t),
                 u.default.track(S.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
                     action: m.q.CLICK_TO_JOIN,
                     channel_id: t,
