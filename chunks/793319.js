@@ -34,8 +34,8 @@ var i,
     T = n(659580),
     j = n(793865),
     A = n(575175),
-    y = n(955843),
-    P = n(464792),
+    y = n(464792),
+    P = n(324085),
     M = n(605236),
     R = n(243778),
     L = n(258609),
@@ -102,21 +102,22 @@ function eS(e) {
             (0, e_.Z)(I, t.id, eI.ZY5.GUILD_CHANNEL);
         }, [I, t.id, l, i]),
         b = (0, F.x8)('GoLiveButton'),
-        Z = (0, y.Zm)(t, 'GoLiveButton'),
+        Z = (0, P.Zm)(t, 'GoLiveButton'),
         N = (0, M.wE)(m.z.CONSUMABLE_HD_POTION_UPSELL),
-        S = ((Z && !N) || (t.isHDStreamSplashed && null == u)) && !(0, y.QC)(),
-        T = () => {
+        S = (0, P.bK)(),
+        T = ((Z && !N) || (t.isHDStreamSplashed && null == u)) && !S,
+        j = () => {
             if (l) {
                 E();
                 return;
             }
             (0, ex.Z)();
         },
-        j = () => {
+        A = () => {
             (0, w.Z)(u);
         },
-        A = V.pM,
-        L = a.useCallback(() => {
+        L = V.pM,
+        k = a.useCallback(() => {
             eo.default.track(eI.rMx.PERK_DEMO_OFFER_DISMISSED, {
                 guild_id: t.guild_id,
                 channel_id: t.id,
@@ -124,7 +125,7 @@ function eS(e) {
             }),
                 (0, V.qA)();
         }, [t.guild_id, t.id]),
-        k = (e, t) => {
+        O = (e, t) => {
             let { onClick: n, ...i } = null != e ? e : { onClick: void 0 },
                 l = null != u;
             return (0, r.jsx)(et.O, {
@@ -137,14 +138,14 @@ function eS(e) {
                 isSelfStream: !0,
                 onPopoutClick: l
                     ? function (e) {
-                          C.hqStreamingIsEnabled && !C.hqStreamingPopoutDismissed && A(), null == n || n(e);
+                          C.hqStreamingIsEnabled && !C.hqStreamingPopoutDismissed && L(), null == n || n(e);
                       }
                     : null,
                 popoutOpen: t,
                 shouldShowTooltip: !t,
-                premiumGlow: S,
+                premiumGlow: T,
                 buttonRef: _,
-                onClick: null != u ? j : T
+                onClick: null != u ? A : j
             });
         };
     return (0, r.jsxs)(r.Fragment, {
@@ -156,7 +157,7 @@ function eS(e) {
                       children: (e) => {
                           let { visibleContent: n, markAsDismissed: i } = e;
                           if (n === m.z.CONSUMABLE_HD_POTION_UPSELL)
-                              return (0, r.jsx)(P.Z, {
+                              return (0, r.jsx)(y.Z, {
                                   channel: t,
                                   buttonRef: _,
                                   dismissed: !1,
@@ -187,13 +188,13 @@ function eS(e) {
                     ? (0, r.jsx)(W.$, {
                           buttonRef: _,
                           dismissed: C.hqStreamingPopoutDismissed,
-                          onDismiss: A
+                          onDismiss: L
                       })
                     : (0, r.jsx)(z.b, {
                           channel: t,
                           buttonRef: _,
                           dismissed: C.hqStreamingOptInPopoutDismissed,
-                          onDismiss: L
+                          onDismiss: k
                       }),
             (0, r.jsx)(Y.Z, {
                 children: (0, r.jsx)(f.Popout, {
@@ -216,7 +217,7 @@ function eS(e) {
                     children: (e, t) => {
                         let { ...n } = e,
                             { isShown: i } = t;
-                        return (0, r.jsx)('div', { children: k(n, i) });
+                        return (0, r.jsx)('div', { children: O(n, i) });
                     }
                 })
             })

@@ -1,25 +1,28 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var i = n(200651),
-    l = n(70097),
-    a = n(955843),
-    r = n(590558);
-function s(e) {
-    let { baseTileRef: t, cleanup: n } = e;
-    return null == t || 0 === t.offsetHeight || (0, a.QC)()
+    l = n(192379),
+    a = n(70097),
+    r = n(324085),
+    s = n(590558);
+function o(e) {
+    let { baseTileRef: t, cleanup: n } = e,
+        o = (0, r.bK)(),
+        c = (0, l.useRef)(o);
+    return null == t || 0 === t.offsetHeight || c.current
         ? null
         : (0, i.jsx)('div', {
               style: {
                   width: 1.22 * t.offsetWidth,
                   height: 1.22 * t.offsetHeight
               },
-              className: r.demoEffectOverlay,
-              children: (0, i.jsx)(l.Z, {
+              className: s.demoEffectOverlay,
+              children: (0, i.jsx)(a.Z, {
                   autoPlay: !0,
-                  className: r.demoEffectImg,
+                  className: s.demoEffectImg,
                   onEnded: n,
                   children: (0, i.jsx)('source', {
                       src: 'https://cdn.discordapp.com/assets/content/165a5256895e59f96fdfae485b1a4fdc3810995ac694302ca4692aefa97d49dc.webm',

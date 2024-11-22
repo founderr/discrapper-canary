@@ -30,19 +30,19 @@ var i = n(200651),
     S = n(454120);
 let T = (e) => 1 - Math.pow(1 - e, 3);
 function j(e) {
-    let { channel: t, buyer: r, onClose: s, render: j, dismissibleContent: A } = e,
-        y = (0, d.Wu)([f.Z], () => f.Z.getAllActiveStreams()),
-        P = (0, d.e7)([C.default], () => C.default.getCurrentUser()),
-        M = null != y.find((e) => e.ownerId === (null == P ? void 0 : P.id)),
-        R = (0, d.e7)([v.Z], () => v.Z.getPreviousGoLiveSettings()),
-        L = M && null != R && R.resolution !== b.LY.RESOLUTION_1440 && R.frameRate !== b.ws.FPS_60,
-        [k, O] = (0, l.useState)(!1);
+    let { channel: t, buyer: r, onClose: s, dismissibleContent: j } = e,
+        A = (0, d.Wu)([f.Z], () => f.Z.getAllActiveStreams()),
+        y = (0, d.e7)([C.default], () => C.default.getCurrentUser()),
+        P = null != A.find((e) => e.ownerId === (null == y ? void 0 : y.id)),
+        M = (0, d.e7)([v.Z], () => v.Z.getPreviousGoLiveSettings()),
+        R = P && null != M && M.resolution !== b.LY.RESOLUTION_1440 && M.frameRate !== b.ws.FPS_60,
+        [L, k] = (0, l.useState)(!1);
     (0, l.useEffect)(() => {
-        O(!0);
+        k(!0);
     }, []);
-    let D = (0, l.useContext)(m.h9),
-        w = (0, u.useSpring)({
-            from: k
+    let O = (0, l.useContext)(m.h9),
+        D = (0, u.useSpring)({
+            from: L
                 ? {
                       opacity: 0,
                       transform: 'translateX(-50%) translateY(30px) scale(0.9)'
@@ -50,53 +50,52 @@ function j(e) {
                 : {},
             to: {
                 opacity: 1,
-                transform: D ? 'translateX(-50%) translateY(0px) scale(1)' : 'translateX(-50%) translateY(-66px) scale(1)'
+                transform: O ? 'translateX(-50%) translateY(0px) scale(1)' : 'translateX(-50%) translateY(-66px) scale(1)'
             },
             config: {
                 duration: 250,
                 easing: T,
-                immediate: !k
+                immediate: !L
             }
         }),
-        { avatarSrc: B, eventHandlers: U } = (0, p.Z)({
+        { avatarSrc: w, eventHandlers: B } = (0, p.Z)({
             user: r,
             size: u.AvatarSizes.SIZE_48,
             animateOnHover: !0
         }),
-        H = _.ZP.getName(t.guild_id, t.id, r),
-        G = M && !L,
-        F = t.hdStreamingUntil;
-    if (null == F || null == r || null == P) return null;
-    let V = o()(F).diff(o()(), 'hours');
-    if (!j) return null;
-    let z = A
+        U = _.ZP.getName(t.guild_id, t.id, r),
+        H = P && !R,
+        G = t.hdStreamingUntil;
+    if (null == G || null == r || null == y) return null;
+    let F = o()(G).diff(o()(), 'hours'),
+        V = j
             ? Z.intl.format(Z.t['6LrV9f'], {
-                  username: H,
-                  num: V,
+                  username: U,
+                  num: F,
                   helpCenterLink: x.Z.getArticleURL(E.BhN.HD_STREAMING_POTION)
               })
-            : r.id === P.id
+            : r.id === y.id
               ? Z.intl.string(Z.t.IjKvNT)
-              : !0 === M
+              : !0 === P
                 ? Z.intl.format(Z.t.JkWoqK, {
-                      username: H,
+                      username: U,
                       helpCenterLink: x.Z.getArticleURL(E.BhN.HD_STREAMING_POTION)
                   })
-                : Z.intl.formatToPlainString(Z.t.vNbVXF, { username: H }),
-        W = L ? Z.intl.string(Z.t.o7NIjY) : G ? Z.intl.string(Z.t.r6xhBw) : Z.intl.string(Z.t.yKw8Dg);
-    return null == r || null == P
+                : Z.intl.formatToPlainString(Z.t.vNbVXF, { username: U }),
+        z = R ? Z.intl.string(Z.t.o7NIjY) : H ? Z.intl.string(Z.t.r6xhBw) : Z.intl.string(Z.t.yKw8Dg);
+    return null == r || null == y
         ? null
         : (0, i.jsxs)(c.animated.div, {
-              style: w,
+              style: D,
               className: N.banner,
               children: [
                   (0, i.jsxs)('div', {
                       children: [
                           (0, i.jsx)(u.Avatar, {
-                              src: B,
+                              src: w,
                               'aria-label': r.username,
                               size: u.AvatarSizes.SIZE_48,
-                              ...U
+                              ...B
                           }),
                           (0, i.jsx)('img', {
                               className: N.potion,
@@ -107,14 +106,14 @@ function j(e) {
                   }),
                   (0, i.jsx)(u.Heading, {
                       variant: 'heading-sm/medium',
-                      children: z
+                      children: V
                   }),
                   (0, i.jsxs)('div', {
                       className: N.subsection,
                       children: [
                           (0, i.jsx)(u.Button, {
                               onClick: () => {
-                                  if (L) {
+                                  if (R) {
                                       let e = v.Z.getPreviousGoLiveSettings(),
                                           t = g.Z.getGoLiveSource();
                                       if (null == e) {
@@ -125,7 +124,7 @@ function j(e) {
                                       h.Z.setGoLiveSource(n), s();
                                       return;
                                   }
-                                  if (G) {
+                                  if (H) {
                                       s();
                                       return;
                                   }
@@ -139,10 +138,10 @@ function j(e) {
                                   }),
                                       s();
                               },
-                              className: a()({ [N.actionButton]: !0 !== M }),
-                              children: W
+                              className: a()({ [N.actionButton]: !0 !== P }),
+                              children: z
                           }),
-                          !G &&
+                          !H &&
                               (0, i.jsx)(u.Clickable, {
                                   className: N.x,
                                   onClick: s,
