@@ -449,23 +449,26 @@ t.ZP = {
                 queryLower: i
             },
             s = {
-                [l.Ky.SHOP]: K.intl.string(K.t.pWG4zc),
-                [l.Ky.NITRO_HOME]: K.intl.string(K.t.Ipxkoq),
-                [l.Ky.QUEST_HOME]: K.intl.string(K.t.JALI2N)
+                [l.Ky.SHOP]: [K.intl.string(K.t.pWG4zc)],
+                [l.Ky.NITRO_HOME]: [K.intl.string(K.t.Ipxkoq)],
+                [l.Ky.QUEST_HOME]: [K.intl.string(K.t.JALI2N)],
+                [l.Ky.APPS_HOME]: [K.intl.string(K.t.PHjkRE), K.intl.string(K.t.AKcFUl)]
             },
             o = [];
         for (let e in s) {
-            let t = l.Ky[e],
-                n = s[t].toLocaleLowerCase(),
-                i = er(n, a, r);
-            i > 0 &&
-                o.push({
-                    type: Y.h8.IN_APP_NAVIGATION,
-                    record: l.FL.fromType(t),
-                    score: et(i),
-                    comparator: n,
-                    sortable: n
-                });
+            let t = l.Ky[e];
+            for (let e of s[t]) {
+                let n = e.toLocaleLowerCase(),
+                    i = er(n, a, r);
+                i > 0 &&
+                    o.push({
+                        type: Y.h8.IN_APP_NAVIGATION,
+                        record: l.FL.fromType(t),
+                        score: et(i),
+                        comparator: n,
+                        sortable: n
+                    });
+            }
         }
         return o.sort(u.Z), o.length > n && (o.length = n), o;
     },

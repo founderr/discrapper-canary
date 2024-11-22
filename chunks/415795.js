@@ -18,10 +18,10 @@ t.d(n, {
         return D;
     },
     rU: function () {
-        return _;
+        return A;
     },
     s8: function () {
-        return A;
+        return _;
     }
 }),
     t(47120);
@@ -40,8 +40,8 @@ var s,
     x = t(754688),
     f = t(237583),
     C = t(430824),
-    g = t(699516),
-    j = t(594174),
+    j = t(699516),
+    g = t(594174),
     N = t(51144),
     v = t(388032),
     b = t(30352);
@@ -200,14 +200,14 @@ class M extends (s = i.Component) {
             null != s &&
                 (n = (0, r.jsx)('span', {
                     className: b.note,
-                    children: (0, c.F6)(s, j.default, g.Z)
+                    children: (0, c.F6)(s, g.default, j.Z)
                 })),
             (0, r.jsxs)('div', {
                 className: b.name,
                 children: [
                     (0, r.jsx)('span', {
                         className: b.match,
-                        children: (0, c.F6)(i, j.default, g.Z)
+                        children: (0, c.F6)(i, g.default, j.Z)
                     }),
                     e,
                     this.renderVoiceStates(),
@@ -249,7 +249,7 @@ class M extends (s = i.Component) {
         var e;
         let { channel: n } = this.props,
             t = null === (e = C.Z.getGuild(this.props.channel.guild_id)) || void 0 === e ? void 0 : e.name,
-            s = (0, c.F6)(n, j.default, g.Z),
+            s = (0, c.F6)(n, g.default, j.Z),
             r = (0, u.Z)(n);
         return v.intl.formatToPlainString(v.t['Vw/da2'], {
             name: s,
@@ -300,7 +300,7 @@ class Z extends i.Component {
                 children: [
                     (0, r.jsx)('span', {
                         className: b.match,
-                        children: (0, c.F6)(t, j.default, g.Z)
+                        children: (0, c.F6)(t, g.default, j.Z)
                     }),
                     e
                 ]
@@ -323,7 +323,7 @@ class Z extends i.Component {
     }
     getAccessibilityLabel() {
         let { channel: e, mentions: n } = this.props,
-            t = (0, c.F6)(e, j.default, g.Z);
+            t = (0, c.F6)(e, g.default, j.Z);
         return null != n && n > 0
             ? v.intl.formatToPlainString(v.t.LYdVfH, {
                   name: t,
@@ -361,7 +361,7 @@ class D extends i.Component {
     getDisplayNickname() {
         let e;
         let { user: n, comparator: t } = this.props,
-            s = g.Z.getNickname(n.id);
+            s = j.Z.getNickname(n.id);
         return ((e = t === n.tag || null == t || '' === t ? n.username : t) === n.username || e === n.id) && (e = null != s ? s : N.ZP.getName(n)), e;
     }
     renderName() {
@@ -484,7 +484,7 @@ class P extends i.Component {
         });
     }
 }
-class _ extends i.Component {
+class A extends i.Component {
     renderContent() {
         let e, n;
         let { link: t, children: s } = this.props,
@@ -537,7 +537,7 @@ class _ extends i.Component {
         });
     }
 }
-class A extends i.Component {
+class _ extends i.Component {
     renderContent() {
         let e, n;
         let { navigationRecord: t, children: s } = this.props;
@@ -559,6 +559,13 @@ class A extends i.Component {
             case a.Ky.QUEST_HOME:
                 (e = v.intl.string(v.t.JALI2N)),
                     (n = (0, r.jsx)(l.QuestsIcon, {
+                        size: 'xs',
+                        color: 'currentColor'
+                    }));
+                break;
+            case a.Ky.APPS_HOME:
+                (e = v.intl.string(v.t.PHjkRE)),
+                    (n = (0, r.jsx)(l.AppsIcon, {
                         size: 'xs',
                         color: 'currentColor'
                     }));
