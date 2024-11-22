@@ -117,9 +117,8 @@ async function v(e) {
                 connections_role_id: s,
                 join_request_id: c
             },
-            oldFormErrors: !0,
             signal: d,
-            rejectWithError: !1
+            rejectWithError: !0
         });
         return (
             null == f || f(u.body, a),
