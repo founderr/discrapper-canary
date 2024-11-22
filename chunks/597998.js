@@ -292,10 +292,7 @@ class w extends (i = a.Component) {
                 isOverlay: u,
                 disableTooltip: !0,
                 className: s()(y.clanTag, u && y.isOverlay),
-                profileViewedAnalytics: {
-                    source: u ? x.jXE.OVERLAY : x.Sbl.VOICE_PANEL,
-                    tagUserId: t.id
-                }
+                profileViewedAnalytics: { source: u ? x.jXE.OVERLAY : x.Sbl.VOICE_PANEL }
             };
         return !n || u
             ? (0, l.jsx)(l.Fragment, {

@@ -1,116 +1,106 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return p;
     }
 });
-var r = n(200651),
-    i = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    o = n(481060),
-    l = n(129861),
-    u = n(906732),
-    c = n(406943),
-    d = n(385499),
-    f = n(979264),
-    _ = n(228168),
-    p = n(388032),
-    h = n(543337);
-function m(e) {
-    let { user: t, profileType: n, usernameIcon: a, tags: m, nickname: g, nicknameIcons: E, pronouns: v, className: b, isTryItOut: I, onOpenProfile: T, nicknameVariant: S = 'heading-lg/bold', pronounsVariant: y = 'text-sm/medium' } = e,
-        { newestAnalyticsLocation: A } = (0, u.ZP)(),
-        N = {
-            [h.biteSize]: n === _.y0.BITE_SIZE,
-            [h.fullSize]: n === _.y0.FULL_SIZE,
-            [h.panel]: n === _.y0.PANEL
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    a = n.n(i),
+    s = n(481060),
+    o = n(129861),
+    l = n(406943),
+    u = n(385499),
+    c = n(979264),
+    d = n(228168),
+    f = n(388032),
+    _ = n(543337);
+function p(e) {
+    let { user: t, profileType: n, usernameIcon: i, tags: p, nickname: h, nicknameIcons: m, pronouns: g, className: E, isTryItOut: v, onOpenProfile: b, nicknameVariant: I = 'heading-lg/bold', pronounsVariant: T = 'text-sm/medium' } = e,
+        S = {
+            [_.biteSize]: n === d.y0.BITE_SIZE,
+            [_.fullSize]: n === d.y0.FULL_SIZE,
+            [_.panel]: n === d.y0.PANEL
         },
-        C = (e) =>
-            null == T
+        y = (e) =>
+            null == b
                 ? e
-                : (0, r.jsx)(o.Clickable, {
-                      onClick: T,
-                      className: h.clickableUsername,
+                : (0, r.jsx)(s.Clickable, {
+                      onClick: b,
+                      className: _.clickableUsername,
                       children: e
                   }),
-        R = null != v && v.length > 0,
-        O = (0, c.D)(t),
-        D = i.useMemo(
-            () => ({
-                source: A,
-                tagUserId: t.id
-            }),
-            [A, t.id]
-        );
+        A = null != g && g.length > 0,
+        N = (0, l.D)(t);
     return (0, r.jsxs)('div', {
-        className: s()(h.container, { [h.bot]: null != O }, b),
+        className: a()(_.container, { [_.bot]: null != N }, E),
         children: [
             (0, r.jsxs)('div', {
-                className: h.usernameRow,
+                className: _.usernameRow,
                 children: [
-                    C(
-                        (0, r.jsx)(o.Heading, {
-                            className: s()(h.nickname, N),
-                            variant: S,
-                            children: g
+                    y(
+                        (0, r.jsx)(s.Heading, {
+                            className: a()(_.nickname, S),
+                            variant: I,
+                            children: h
                         })
                     ),
-                    null != O &&
-                        (0, r.jsx)(d.Z, {
-                            type: O,
+                    null != N &&
+                        (0, r.jsx)(u.Z, {
+                            type: N,
                             verified: t.isVerifiedBot()
                         }),
-                    null != E &&
+                    null != m &&
                         (0, r.jsx)('div', {
-                            className: s()(h.nicknameIcons, N),
-                            children: E
+                            className: a()(_.nicknameIcons, S),
+                            children: m
                         })
                 ]
             }),
             (0, r.jsxs)('div', {
-                className: s()(h.tags, N, {
-                    [h.pronouns]: R,
-                    [h.bot]: null != O
+                className: a()(_.tags, S, {
+                    [_.pronouns]: A,
+                    [_.bot]: null != N
                 }),
                 children: [
-                    C(
-                        (0, r.jsx)(l.Z, {
+                    y(
+                        (0, r.jsx)(o.Z, {
                             user: t,
-                            usernameIcon: a,
+                            usernameIcon: i,
                             forceUsername: !0,
-                            forcePomelo: I,
-                            className: h.userTag,
-                            usernameClass: h.userTagUsername,
-                            discriminatorClass: h.userTagDiscriminator,
+                            forcePomelo: v,
+                            className: _.userTag,
+                            usernameClass: _.userTagUsername,
+                            discriminatorClass: _.userTagDiscriminator,
                             hideBotTag: !0
                         })
                     ),
-                    R &&
+                    A &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)('div', {
                                     'aria-hidden': 'true',
-                                    className: h.dotSpacer
+                                    className: _.dotSpacer
                                 }),
-                                (0, r.jsx)(o.TooltipContainer, {
-                                    className: h.pronounsTooltip,
-                                    text: p.intl.string(p.t.GI2A8P),
-                                    delay: _.vB,
-                                    children: (0, r.jsx)(o.Text, {
-                                        variant: y,
-                                        className: h.pronounsText,
+                                (0, r.jsx)(s.TooltipContainer, {
+                                    className: _.pronounsTooltip,
+                                    text: f.intl.string(f.t.GI2A8P),
+                                    delay: d.vB,
+                                    children: (0, r.jsx)(s.Text, {
+                                        variant: T,
+                                        className: _.pronounsText,
                                         color: 'header-primary',
-                                        children: v
+                                        children: g
                                     })
                                 })
                             ]
                         }),
-                    (0, r.jsx)(f.ZP, {
+                    (0, r.jsx)(c.ZP, {
                         userId: t.id,
-                        profileViewedAnalytics: D,
-                        containerClassName: h.clanTagContainer,
-                        className: h.clanTag
+                        containerClassName: _.clanTagContainer,
+                        className: _.clanTag
                     }),
-                    m
+                    p
                 ]
             })
         ]

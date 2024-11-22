@@ -50,29 +50,22 @@ t.Z = function (e) {
             animateOnHover: !(n || eo),
             guildId: V
         }),
-        ep = i.useMemo(
-            () => ({
-                source: y.jXE.MEMBER_LIST,
-                tagUserId: er
-            }),
-            [er]
-        ),
-        [eh, em] = i.useState(!1);
+        [ep, eh] = i.useState(!1);
     i.useEffect(() => {
-        n && em(!1);
+        n && eh(!1);
     }, [n]);
-    let eg = (0, m.Fr)(P),
-        eE = null != eg && !ea && n && !eh,
-        ev = () => {
+    let em = (0, m.Fr)(P),
+        eg = null != em && !ea && n && !ep,
+        eE = () => {
             el(!0);
         },
-        eb = () => {
+        ev = () => {
             el(!1);
         },
-        eI = (e) => {
+        eb = (e) => {
             ec(e);
         },
-        eT = () => {
+        eI = () => {
             let e = null != P ? P.find((e) => e.type === y.IIU.CUSTOM_STATUS) : null,
                 t = null != e && null != w && (0, p.Z)(e, w, F);
             return (0, r.jsx)(S.ZP, {
@@ -85,10 +78,10 @@ t.Z = function (e) {
                 hideEmoji: !t,
                 hideTooltip: !0,
                 user: w,
-                hasQuest: null != eg
+                hasQuest: null != em
             });
         },
-        eS = () =>
+        eT = () =>
             null != I && I && null == D
                 ? (0, r.jsx)(l.Tooltip, {
                       text: null != O ? O : C.intl.string(C.t.pclUFB),
@@ -101,7 +94,7 @@ t.Z = function (e) {
                           })
                   })
                 : null,
-        ey = () =>
+        eS = () =>
             null == Z
                 ? null
                 : (0, r.jsx)(l.Tooltip, {
@@ -116,7 +109,7 @@ t.Z = function (e) {
                               })
                           })
                   }),
-        eA = () => {
+        ey = () => {
             let e = (null == w ? void 0 : w.isClyde()) ? A.Hb.AI : A.Hb.BOT;
             return null != w && w.bot
                 ? (0, r.jsx)(c.Z, {
@@ -126,11 +119,11 @@ t.Z = function (e) {
                   })
                 : null;
         },
-        eN = () =>
+        eA = () =>
             (0, r.jsxs)(r.Fragment, {
-                children: [eA(), eS(), ey()]
+                children: [ey(), eT(), eS()]
             }),
-        eC = (e, t) => {
+        eN = (e, t) => {
             let n = G ? l.AnimatedAvatar : l.Avatar,
                 i = (0, u.Z)(P) ? y.Skl.STREAMING : U;
             return (
@@ -147,7 +140,7 @@ t.Z = function (e) {
                             'aria-label': e.username,
                             statusTooltip: !0,
                             avatarDecoration: ed,
-                            typingIndicatorRef: eI
+                            typingIndicatorRef: eb
                         }),
                         (0, r.jsx)(h.Z, {
                             confettiSpawnRef: eu,
@@ -158,6 +151,7 @@ t.Z = function (e) {
                 })
             );
         },
+        eC = i.useMemo(() => ({ source: y.jXE.MEMBER_LIST }), []),
         eR = () =>
             (0, r.jsxs)(r.Fragment, {
                 children: [
@@ -173,7 +167,7 @@ t.Z = function (e) {
                         contextGuildId: V,
                         disableGuildProfile: !0,
                         className: R.clanTag,
-                        profileViewedAnalytics: ep
+                        profileViewedAnalytics: eC
                     })
                 ]
             }),
@@ -186,14 +180,14 @@ t.Z = function (e) {
         : (0, r.jsx)(l.Popout, {
               renderPopout: (e) =>
                   (0, r.jsx)(g.Z, {
-                      quest: eg,
+                      quest: em,
                       memberListItemRef: es,
                       applicationStream: k,
                       ...e,
-                      closePopout: () => em(!0)
+                      closePopout: () => eh(!0)
                   }),
               position: 'bottom',
-              shouldShow: eE,
+              shouldShow: eg,
               nudgeAlignIntoViewport: !1,
               useRawTargetDimensions: !0,
               animation: l.Popout.Animation.NONE,
@@ -208,8 +202,8 @@ t.Z = function (e) {
                       onKeyDown: Y,
                       onMouseDown: H,
                       onContextMenu: K,
-                      onMouseEnter: ev,
-                      onMouseLeave: eb,
+                      onMouseEnter: eE,
+                      onMouseLeave: ev,
                       name:
                           null == D
                               ? (0, r.jsx)('span', {
@@ -225,9 +219,9 @@ t.Z = function (e) {
                                             children: eR()
                                         })
                                 }),
-                      avatar: eC(w, eO),
-                      subText: eT(),
-                      decorators: eN(),
+                      avatar: eN(w, eO),
+                      subText: eI(),
+                      decorators: eA(),
                       'aria-controls': Q,
                       'aria-expanded': X,
                       'aria-setsize': $,
