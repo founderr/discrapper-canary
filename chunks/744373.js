@@ -13,34 +13,33 @@ var a = e(990547),
     s = e(1596),
     c = e(922611),
     m = e(478923),
-    d = e(594174),
-    u = e(626135),
+    u = e(594174),
+    d = e(626135),
     f = e(51144),
     C = e(981631),
     p = e(388032);
 function _(n) {
     let { transitionState: t, onClose: e, userId: _, onCancel: x, confirmBlock: h } = n,
-        k = (0, i.e7)([d.default], () => d.default.getUser(_)),
-        g = f.ZP.useName(k),
-        E = (0, c.Do)({ location: 'confirm_block_user_modal' }),
-        I = () => {
-            h(), u.default.track(C.rMx.BLOCK_USER_CONFIRMED);
+        k = (0, i.e7)([u.default], () => u.default.getUser(_)),
+        E = f.ZP.useName(k),
+        N = (0, c.Do)({ location: 'confirm_block_user_modal' }),
+        O = () => {
+            h(), d.default.track(C.rMx.BLOCK_USER_CONFIRMED);
         };
     if (null != k)
-        return E
+        return N
             ? (0, o.jsx)(m.Z, {
                   transitionState: t,
                   user: k,
-                  onBlock: I,
+                  onBlock: O,
                   onClose: e,
-                  onCancel: x,
-                  disallowIgnore: !0
+                  onCancel: x
               })
             : (0, o.jsx)(r.ConfirmModal, {
-                  header: p.intl.formatToPlainString(p.t.x5pOn5, { name: g }),
+                  header: p.intl.formatToPlainString(p.t.x5pOn5, { name: E }),
                   confirmText: p.intl.string(p.t.l4EmaW),
                   cancelText: p.intl.string(p.t['ETE/oK']),
-                  onConfirm: I,
+                  onConfirm: O,
                   onClose: e,
                   onCancel: x,
                   transitionState: t,
@@ -49,7 +48,7 @@ function _(n) {
                       ? (0, o.jsx)(s.Z, {})
                       : (0, o.jsx)(r.Text, {
                             variant: 'text-md/normal',
-                            children: p.intl.format(p.t.pegItL, { name: g })
+                            children: p.intl.format(p.t.pegItL, { name: E })
                         })
               });
 }
