@@ -28,16 +28,16 @@ var r = n(200651),
     B = n(74538),
     y = n(335131),
     L = n(1870),
-    P = n(429368),
-    Z = n(884697),
+    Z = n(429368),
+    P = n(884697),
     O = n(664018),
     w = n(890249),
     A = n(228624),
     R = n(635552),
     H = n(905357),
     F = n(724994),
-    V = n(297651),
-    D = n(390698),
+    D = n(297651),
+    V = n(390698),
     M = n(813083),
     W = n(680942),
     U = n(558060),
@@ -88,7 +88,7 @@ let er = (e) => {
             children: (0, r.jsx)(S.Z, {
                 profileEffectId: t,
                 isHovering: n,
-                isPurchased: a,
+                isPurchased: a && !n,
                 removeSetHeight: !0
             })
         });
@@ -109,7 +109,7 @@ t.Z = function (e) {
     let { product: t, user: n, category: i, onMount: l, isGiftEasterEggEnabled: S, isInFeedView: K } = e,
         { analyticsLocations: el } = (0, _.ZP)([...(K ? [x.Z.COLLECTIBLES_SHOP_HOME_SCREEN] : []), x.Z.COLLECTIBLES_SHOP_CARD]),
         eo = a.useRef(null),
-        { handleCardVisibilityChange: ec } = (0, V.E)(t, K ? 'home' : 'full'),
+        { handleCardVisibilityChange: ec } = (0, D.E)(t, K ? 'home' : 'full'),
         ed = (0, b.Z)(eo),
         [eu, em] = a.useState(!1),
         eh = ed || eu,
@@ -118,24 +118,24 @@ t.Z = function (e) {
         eg = (0, H.k)(t),
         eC = (0, h.e7)([v.Z], () => v.Z.useReducedMotion),
         eb = B.ZP.canUseCollectibles(n),
-        ev = (0, Z.XM)(t, eb, !1),
-        ex = a.useMemo(() => (0, Z.BH)(t, eb), [t, eb]),
-        e_ = (0, Z.G1)(t),
-        ek = (0, Z.rN)(t),
+        ev = (0, P.XM)(t, eb, !1),
+        ex = a.useMemo(() => (0, P.BH)(t, eb), [t, eb]),
+        e_ = (0, P.G1)(t),
+        ek = (0, P.rN)(t),
         [eI, ej, eE] = (0, h.Wu)([L.Z], () => [L.Z.isClaiming === t.skuId, null != L.Z.isClaiming && L.Z.isClaiming !== t.skuId, L.Z.purchases]),
         eS = (0, q.o)(t, eE, ef),
         eT = (0, h.e7)([N.Z], () => (0, f.wj)(N.Z.theme)),
         eN = (0, w.m)('CollectiblesCollectedModal'),
-        eB = (0, Z.x6)(t) || eN,
-        ey = (0, Z.Yq)(t.skuId),
+        eB = (0, P.x6)(t) || eN,
+        ey = (0, P.Yq)(t.skuId),
         { hoverVariant: eL } = (0, O.E)('CollectiblesShopTallCard'),
-        eP = i.skuId === u.T.STORM && '1268362891946627103' === t.skuId,
-        eZ = (0, A.hv)('CollectiblesShopTallCard'),
-        eO = (0, P.o)(t, eE),
+        eZ = i.skuId === u.T.STORM && '1268362891946627103' === t.skuId,
+        eP = (0, A.hv)('CollectiblesShopTallCard'),
+        eO = (0, Z.o)(t, eE),
         ew = (0, J.W)(t, eO),
         { isPurchased: eA, isPartiallyOwnedBundle: eR } = (0, F.L)(ew),
         eH = null !== ef ? ef : eO,
-        [eF, eV] = a.useState(!1);
+        [eF, eD] = a.useState(!1);
     a.useEffect(() => {
         let { current: e } = eo;
         if (null == e) return;
@@ -151,11 +151,11 @@ t.Z = function (e) {
         a.useEffect(() => {
             null == l || l(eo);
         }, [l]);
-    let eD = (0, E.Z)({ analyticsLocations: el }),
+    let eV = (0, E.Z)({ analyticsLocations: el }),
         eM = a.useRef(null),
         { handleUseNow: eW, isApplying: eU } = (0, R.W)({ product: ew }),
         eG = () => {
-            if (((0, C.xf)(), eD(), t.type === m.Z.AVATAR_DECORATION && null != eS)) {
+            if (((0, C.xf)(), eV(), t.type === m.Z.AVATAR_DECORATION && null != eS)) {
                 o()(eS.type === t.type, "product type is equivlant to first item's check for avatar deco"),
                     (0, k.ps)({
                         initialSelectedDecoration: eS,
@@ -195,7 +195,7 @@ t.Z = function (e) {
             }),
         eJ = () =>
             eA || eR
-                ? (0, r.jsx)(D.U, {
+                ? (0, r.jsx)(V.U, {
                       className: en.priceTag,
                       isPartiallyPurchased: eR
                   })
@@ -248,7 +248,7 @@ t.Z = function (e) {
                               }),
                               analyticsLocations: el,
                               returnRef: eo,
-                              variantsReturnStyle: eZ
+                              variantsReturnStyle: eP
                           })
                   };
             return (0, r.jsxs)('div', {
@@ -273,7 +273,7 @@ t.Z = function (e) {
                 ]
             });
         };
-    return (0, Z.x6)(t) && null != ex && ex.discountPercentage < 0
+    return (0, P.x6)(t) && null != ex && ex.discountPercentage < 0
         ? null
         : (0, r.jsx)(p.$, {
               onChange: ec,
@@ -282,10 +282,10 @@ t.Z = function (e) {
                   children: (0, r.jsxs)(g.Clickable, {
                       innerRef: eo,
                       className: s()(eT ? en.shopCardDark : en.shopCard, {
-                          [en.partiallyOwned]: eR,
+                          [en.partiallyOwned]: eR && !eh,
                           [en.shopCardAnimation]: !eC && eL !== O.D.NO_MOVEMENT,
                           [eT ? en.shopCardDarkHighlighted : en.shopCardHighlighted]: eh,
-                          [en.mysteryShopCard]: eP
+                          [en.mysteryShopCard]: eZ
                       }),
                       onBlur: () => em(!1),
                       onClick: eK,
@@ -324,7 +324,7 @@ t.Z = function (e) {
                                           (0, r.jsx)(es, {
                                               item: eS,
                                               user: n,
-                                              isStormMysteryItem: eP,
+                                              isStormMysteryItem: eZ,
                                               isHighlighted: eh,
                                               isPurchased: eA
                                           })
@@ -341,29 +341,31 @@ t.Z = function (e) {
                                   .with(m.Z.VARIANTS_GROUP, () => {
                                       if (null == t.variants || 0 === t.variants.length) return null;
                                       let e = t.variants[eH];
-                                      return (0, c.EQ)(e.type)
-                                          .with(m.Z.PROFILE_EFFECT, () => {
-                                              let [t] = e.items;
-                                              return (0, r.jsx)(ei, {
-                                                  isHighlighted: eh,
-                                                  profileEffectId: t.id,
-                                                  isPurchased: eA && !eF
-                                              });
-                                          })
-                                          .with(m.Z.AVATAR_DECORATION, () => {
-                                              let [t] = e.items;
-                                              return (
-                                                  o()(t.type === m.Z.AVATAR_DECORATION, 'ts-match already checked the type'),
-                                                  (0, r.jsx)(es, {
-                                                      item: t,
-                                                      user: n,
-                                                      isStormMysteryItem: eP,
-                                                      isHighlighted: eh,
-                                                      isPurchased: eA
-                                                  })
-                                              );
-                                          })
-                                          .otherwise(() => null);
+                                      return null == e
+                                          ? null
+                                          : (0, c.EQ)(e.type)
+                                                .with(m.Z.PROFILE_EFFECT, () => {
+                                                    let [t] = e.items;
+                                                    return (0, r.jsx)(ei, {
+                                                        isHighlighted: eh,
+                                                        profileEffectId: t.id,
+                                                        isPurchased: eA && !eF
+                                                    });
+                                                })
+                                                .with(m.Z.AVATAR_DECORATION, () => {
+                                                    let [t] = e.items;
+                                                    return (
+                                                        o()(t.type === m.Z.AVATAR_DECORATION, 'ts-match already checked the type'),
+                                                        (0, r.jsx)(es, {
+                                                            item: t,
+                                                            user: n,
+                                                            isStormMysteryItem: eZ,
+                                                            isHighlighted: eh,
+                                                            isPurchased: eA
+                                                        })
+                                                    );
+                                                })
+                                                .otherwise(() => null);
                                   })
                                   .otherwise(() => null)
                           }),
@@ -395,7 +397,7 @@ t.Z = function (e) {
                                       ? (0, r.jsx)(z.P, {
                                             variantGroupProduct: t,
                                             previewingVariantIndexProps: ep,
-                                            setIsHoveringOnSwitch: eV,
+                                            setIsHoveringOnSwitch: eD,
                                             purchases: eE,
                                             minimal: !ed
                                         })
