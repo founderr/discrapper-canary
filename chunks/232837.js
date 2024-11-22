@@ -1,67 +1,58 @@
-i.r(n),
-    i.d(n, {
+n.r(e),
+    n.d(e, {
         default: function () {
-            return E;
+            return L;
         }
     }),
-    i(627341);
-var t = i(200651);
-i(192379);
-var s = i(278074),
-    a = i(990547),
-    r = i(442837),
-    o = i(481060),
-    l = i(287734),
-    d = i(922611),
-    c = i(592125),
-    u = i(699516),
-    _ = i(594174),
-    h = i(626135),
-    m = i(5192),
-    g = i(33194),
-    x = i(807031),
-    N = i(343544),
-    f = i(110223),
-    p = i(981631),
-    j = i(388032),
-    v = i(724076);
-function E(e) {
-    let { channelId: n, userId: i, transitionState: E, onClose: C } = e,
-        I = (0, x.KR)({ location: 'warning_modal' }),
-        w = (0, r.e7)([u.Z], () => u.Z.isBlocked(i)),
-        A = (0, d.Do)({ location: 'BlockedUserJoinedVoiceChannelModal' }),
-        R = (0, r.e7)([c.Z], () => c.Z.getChannel(n));
-    if (!I) return null;
-    let O = _.default.getUser(i),
-        b = [
+    n(627341);
+var a = n(200651);
+n(192379);
+var s = n(278074),
+    i = n(990547),
+    r = n(442837),
+    o = n(481060),
+    l = n(287734),
+    d = n(922611),
+    u = n(592125),
+    _ = n(699516),
+    c = n(594174),
+    A = n(626135),
+    I = n(33194),
+    S = n(807031),
+    E = n(343544),
+    h = n(14251),
+    g = n(110223),
+    N = n(981631),
+    m = n(388032),
+    f = n(724076);
+function L(t) {
+    let { channelId: e, userId: n, transitionState: L, onClose: x } = t,
+        p = (0, S.KR)({ location: 'warning_modal' }),
+        C = (0, r.e7)([_.Z], () => _.Z.isBlocked(n)),
+        v = (0, d.Do)({ location: 'BlockedUserJoinedVoiceChannelModal' }),
+        G = (0, r.e7)([u.Z], () => u.Z.getChannel(e));
+    if (!p) return null;
+    let O = c.default.getUser(n),
+        T = [
             {
-                icon: A
-                    ? (0, t.jsx)('div', {
-                          className: v.icon,
-                          children: (0, t.jsx)(o.Avatar, {
-                              size: o.AvatarSizes.SIZE_32,
-                              src: null == O ? void 0 : O.getAvatarURL(null == R ? void 0 : R.guild_id, 32),
-                              'aria-hidden': !0
-                          })
-                      })
-                    : (0, t.jsx)(o.UserIcon, {}),
-                text: A ? j.intl.formatToPlainString(j.t.V5mxhY, { username: m.ZP.getName(null == R ? void 0 : R.guild_id, n, O) }) : j.intl.formatToPlainString(j.t.w0YvUl, { userName: null == O ? void 0 : O.username }),
-                className: A ? v.row : void 0
+                icon: v ? (0, h.r)([n], null == G ? void 0 : G.guild_id) : (0, a.jsx)(o.UserIcon, {}),
+                text: v ? (0, h.a)([n], 1, null == G ? void 0 : G.guild_id, e) : m.intl.formatToPlainString(m.t.w0YvUl, { userName: null == O ? void 0 : O.username }),
+                className: v ? f.row : void 0
             },
             {
-                icon: A
-                    ? (0, t.jsx)('div', {
-                          className: v.icon,
-                          children: (0, t.jsx)(o.WarningIcon, {})
+                icon: v
+                    ? (0, a.jsx)('div', {
+                          className: f.icon,
+                          children: (0, a.jsx)(o.WarningIcon, {})
                       })
-                    : (0, t.jsx)(o.MicrophoneIcon, {}),
-                text: j.intl.string(j.t['+4O9nZ']),
-                className: A ? v.row : void 0
+                    : (0, a.jsx)(o.MicrophoneIcon, {}),
+                text: m.intl.string(m.t['+4O9nZ']),
+                className: v ? f.row : void 0
             }
         ],
-        T = (0, s.EQ)({
-            stealthRemediationEnabled: A,
-            isBlocked: w
+        j = (0, s.EQ)({
+            stealthRemediationEnabled: v,
+            isBlocked: C
         })
             .with(
                 {
@@ -69,8 +60,8 @@ function E(e) {
                     isBlocked: !0
                 },
                 () =>
-                    (0, t.jsxs)(t.Fragment, {
-                        children: [j.intl.string(j.t.cpgfFh), (0, t.jsx)('br', {}), j.intl.string(j.t.UKQ4Cg)]
+                    (0, a.jsxs)(a.Fragment, {
+                        children: [m.intl.string(m.t.cpgfFh), (0, a.jsx)('br', {}), m.intl.string(m.t.UKQ4Cg)]
                     })
             )
             .with(
@@ -79,49 +70,49 @@ function E(e) {
                     isBlocked: !1
                 },
                 () =>
-                    (0, t.jsxs)(t.Fragment, {
-                        children: [j.intl.string(j.t['xj3j4+']), (0, t.jsx)('br', {}), j.intl.string(j.t.wWueRU)]
+                    (0, a.jsxs)(a.Fragment, {
+                        children: [m.intl.string(m.t['xj3j4+']), (0, a.jsx)('br', {}), m.intl.string(m.t.wWueRU)]
                     })
             )
-            .otherwise(() => j.intl.string(j.t.K8YIgY));
-    return (0, t.jsx)(N.Z, {
-        headerText: A ? j.intl.string(j.t['1/gpFh']) : j.intl.string(j.t.LGnmpa),
-        secondaryHeaderText: A ? void 0 : j.intl.string(j.t['1/gpFh']),
-        descriptionText: T,
-        infoRows: b,
+            .otherwise(() => m.intl.string(m.t.K8YIgY));
+    return (0, a.jsx)(E.Z, {
+        headerText: v ? m.intl.string(m.t['1/gpFh']) : m.intl.string(m.t.LGnmpa),
+        secondaryHeaderText: v ? void 0 : m.intl.string(m.t['1/gpFh']),
+        descriptionText: j,
+        infoRows: T,
         onDismissAndStay: () => {
-            C(),
-                (0, g.g6)(n),
-                h.default.track(p.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
-                    action: f.q.CLICK_TO_STAY,
-                    channel_id: n,
-                    blocked_user_ids: w ? [i] : [],
-                    ignored_user_ids: w ? [] : [i],
-                    warning_surface: f.fz.POST_JOIN_MODAL
+            x(),
+                (0, I.g6)(e),
+                A.default.track(N.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                    action: g.q.CLICK_TO_STAY,
+                    channel_id: e,
+                    blocked_user_ids: C ? [n] : [],
+                    ignored_user_ids: C ? [] : [n],
+                    warning_surface: g.fz.POST_JOIN_MODAL
                 });
         },
         onDismissAndLeave: () => {
-            C(),
+            x(),
                 l.default.disconnect(),
-                h.default.track(p.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
-                    action: f.q.CLICK_TO_LEAVE,
-                    channel_id: n,
-                    blocked_user_ids: w ? [i] : [],
-                    ignored_user_ids: w ? [] : [i],
-                    warning_surface: f.fz.POST_JOIN_MODAL
+                A.default.track(N.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                    action: g.q.CLICK_TO_LEAVE,
+                    channel_id: e,
+                    blocked_user_ids: C ? [n] : [],
+                    ignored_user_ids: C ? [] : [n],
+                    warning_surface: g.fz.POST_JOIN_MODAL
                 });
         },
-        leaveButtonText: j.intl.string(j.t['Y56/oK']),
-        stayButtonText: j.intl.string(j.t['Z+/hfX']),
-        transitionState: E,
-        onClose: C,
+        leaveButtonText: m.intl.string(m.t['Y56/oK']),
+        stayButtonText: m.intl.string(m.t['Z+/hfX']),
+        transitionState: L,
+        onClose: x,
         impression: {
-            impressionName: a.ImpressionNames.VOICE_CHANNEL_BLOCKED_USER_WARNING,
+            impressionName: i.ImpressionNames.VOICE_CHANNEL_BLOCKED_USER_WARNING,
             impressionProperties: {
-                channel_id: n,
-                blocked_user_ids: w ? [i] : [],
-                ignored_user_ids: w ? [] : [i],
-                warning_surface: f.fz.POST_JOIN_MODAL
+                channel_id: e,
+                blocked_user_ids: C ? [n] : [],
+                ignored_user_ids: C ? [] : [n],
+                warning_surface: g.fz.POST_JOIN_MODAL
             }
         }
     });
