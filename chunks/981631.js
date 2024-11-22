@@ -4976,6 +4976,7 @@ let oa = Object.freeze({
     (nh.LEADERBOARD_POPOUT_VIEWED = 'leaderboard_popout_viewed'),
     (nh.LEADERBOARD_USER_DATA_REFRESH_REQUESTED = 'leaderboard_user_data_refresh_requested'),
     (nh.LEADERBOARD_USER_OPT_OUT_UPDATED = 'leaderboard_user_opt_out_updated'),
+    (nh.LEAGUE_OF_LEGENDS_MATCH_DATA_NOT_FETCHING = 'league_of_legends_match_data_not_fetching'),
     (nh.GAME_PROFILE_ACTION = 'game_profile_action'),
     (nh.GAME_PROFILE_OPEN = 'game_profile_open'),
     (nh.GAME_PROFILE_CLOSE = 'game_profile_close'),
