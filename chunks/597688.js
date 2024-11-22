@@ -14,48 +14,50 @@ var s,
     g = n(215023);
 let E = new Map(),
     v = new Map(),
-    b = [],
-    I = E,
-    T = v,
-    S = b,
-    y = null,
-    A = !1,
-    N = new Set();
-let C = {},
-    R = (e, t) => {
+    b = new Map(),
+    I = [],
+    T = E,
+    S = v,
+    y = b,
+    A = I,
+    N = null,
+    C = !1,
+    R = new Set();
+let O = {},
+    D = (e, t) => {
         if (0 === e.length) {
-            S = b;
+            A = I;
             return;
         }
-        switch (y) {
+        switch (N) {
             case p.u.POPULAR:
-                S = g.HU;
+                A = g.HU;
                 break;
             case p.u.RECENT:
-                S = (0, m.x0)(e, t);
+                A = (0, m.x0)(e, t);
                 break;
             case p.u.NONE:
             default:
-                S = b;
+                A = I;
         }
     },
-    O = () => {
-        (I = E), (T = v), (S = b), (i = void 0), (A = !1), (N = new Set()), (r = void 0), (a = void 0), (C = {});
+    L = () => {
+        (T = E), (S = v), (A = I), (i = void 0), (C = !1), (R = new Set()), (r = void 0), (a = void 0), (O = {});
     },
-    D = () => {
+    x = () => {
         if (!_.Z.hasLoadedExperiments) return;
         let { giftRecommendationAlgorithm: e } = p.G.getCurrentConfig({ location: 'CollectiblesCategoryStore handleExperimentChange' }, { autoTrackExposure: !1 });
-        e !== y && (i = void 0), (y = e);
+        e !== N && (i = void 0), (N = e);
     };
-class L extends (s = d.ZP.Store) {
+class w extends (s = d.ZP.Store) {
     initialize() {
-        this.syncWith([h.default], O), this.syncWith([_.Z], D);
+        this.syncWith([h.default], L), this.syncWith([_.Z], x);
     }
     get isFetchingCategories() {
-        return A;
+        return C;
     }
     isFetchingProduct(e) {
-        return null != e && N.has(e);
+        return null != e && R.has(e);
     }
     get error() {
         return r;
@@ -67,22 +69,25 @@ class L extends (s = d.ZP.Store) {
         return i;
     }
     get lastFetchOptions() {
-        return C;
+        return O;
     }
     get categories() {
-        return I;
-    }
-    get products() {
         return T;
     }
-    get recommendedGiftSkuIds() {
+    get products() {
         return S;
     }
+    get recommendedGiftSkuIds() {
+        return A;
+    }
     getCategory(e) {
-        return null != e ? I.get(e) : void 0;
+        return null != e ? T.get(e) : void 0;
     }
     getProduct(e) {
-        return null != e ? T.get(e) : void 0;
+        return null != e ? S.get(e) : void 0;
+    }
+    getProductByStoreListingId(e) {
+        return null != e ? y.get(e) : void 0;
     }
     getCategoryForProduct(e) {
         let t = this.getProduct(e);
@@ -90,7 +95,7 @@ class L extends (s = d.ZP.Store) {
     }
 }
 (u = 'CollectiblesCategoryStore'),
-    (l = 'displayName') in (o = L)
+    (l = 'displayName') in (o = w)
         ? Object.defineProperty(o, l, {
               value: u,
               enumerable: !0,
@@ -98,28 +103,28 @@ class L extends (s = d.ZP.Store) {
               writable: !0
           })
         : (o[l] = u),
-    (t.Z = new L(f.Z, {
+    (t.Z = new w(f.Z, {
         COLLECTIBLES_CATEGORIES_FETCH: (e) => {
-            (A = !0), (r = void 0), (a = void 0), (C = e.options);
+            (C = !0), (r = void 0), (a = void 0), (O = e.options);
         },
         COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: (e) => {
-            0 === e.categories.length ? ((I = E), (T = v)) : !(0, c.isEqual)([...I.values()], e.categories) && ((I = new Map(e.categories.map((e) => [e.skuId, e]))), (T = new Map((0, m.Cs)(I).map((e) => [e.skuId, e])))), R(e.categories, T), (i = Date.now()), (A = !1), (r = void 0), (a = void 0);
+            0 === e.categories.length ? ((T = E), (S = v)) : !(0, c.isEqual)([...T.values()], e.categories) && ((T = new Map(e.categories.map((e) => [e.skuId, e]))), (S = new Map((0, m.Cs)(T, !0).map((e) => [e.skuId, e]))), (y = new Map((0, m.Cs)(T, !1).map((e) => [e.storeListingId, e])))), D(e.categories, S), (i = Date.now()), (C = !1), (r = void 0), (a = void 0);
         },
         COLLECTIBLES_CATEGORIES_FETCH_FAILURE: (e) => {
             let { error: t } = e;
-            (I = E), (T = v), (S = b), (A = !1), (N = new Set()), (r = t), (a = Date.now());
+            (T = E), (S = v), (A = I), (C = !1), (R = new Set()), (r = t), (a = Date.now());
         },
         COLLECTIBLES_PRODUCT_FETCH: (e) => {
             let { skuId: t } = e;
-            (N = new Set(N)).add(t), (r = void 0), (a = void 0);
+            (R = new Set(R)).add(t), (r = void 0), (a = void 0);
         },
         COLLECTIBLES_PRODUCT_FETCH_SUCCESS: (e) => {
             let { skuId: t, product: n } = e;
-            T.set(t, n), (N = new Set(N)).delete(t), (r = void 0), (a = void 0);
+            S.set(t, n), (R = new Set(R)).delete(t), (r = void 0), (a = void 0);
         },
         COLLECTIBLES_PRODUCT_FETCH_FAILURE: (e) => {
             let { skuId: t, error: n } = e;
-            (N = new Set(N)).delete(t), (r = n), (a = Date.now());
+            (R = new Set(R)).delete(t), (r = n), (a = Date.now());
         },
-        LOGOUT: O
+        LOGOUT: L
     }));

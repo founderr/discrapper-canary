@@ -126,15 +126,16 @@ let d = (e) => (null == e ? void 0 : e.premiumType) != null,
                     e,
                     t.variants.map((e) => ({
                         ...e,
-                        prices: n
+                        prices: n,
+                        variantGroupStoreListingId: t.storeListingId
                     }))
                 );
             }
             return e.push(t), e;
         }, []),
-    I = (e) => {
-        let t = (0, r.flatMap)([...e.values()], 'products');
-        return (0, r.uniqBy)(b(t), 'storeListingId');
+    I = (e, t) => {
+        let n = (0, r.flatMap)([...e.values()], 'products');
+        return (0, r.uniqBy)(t ? b(n) : n, 'storeListingId');
     },
     T = (e, t) => {
         if (t === i.Z.AVATAR_DECORATION) {
@@ -147,7 +148,7 @@ let d = (e) => (null == e ? void 0 : e.premiumType) != null,
         }
     },
     S = (e, t) => {
-        let n = I(e);
+        let n = I(e, !0);
         if (t === i.Z.AVATAR_DECORATION) {
             let e = (0, r.flatMap)(n, 'items').filter(o.M);
             return (0, r.uniqBy)(e, 'id');
