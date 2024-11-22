@@ -28,15 +28,14 @@ let o = () => ({
 function p() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     if (!e && Date.now() < d) return;
-    l.itemImpressions.length > 1000 && (l.itemImpressions = []);
     let t = 0,
-        n = Date.now() - 259200000;
+        n = Date.now() - 2592000000;
     for (let e = 0; e < l.itemImpressions.length; e++) {
         let [r, i] = l.itemImpressions[e];
         if (i < n) t = e + 1;
         else break;
     }
-    t > 0 && (l.itemImpressions = l.itemImpressions.slice(t));
+    t > 0 && (l.itemImpressions = l.itemImpressions.slice(t)), l.itemImpressions.length > 2048 && (l.itemImpressions = l.itemImpressions.slice(-2048));
     let r = _ ? 1000 : 57600000,
         i = new Set(),
         a = new Set(),
