@@ -49,7 +49,6 @@ t.Z = function () {
             className: x.container,
             children: [
                 (0, i.jsxs)(p.ZP, {
-                    variant: p._6.OVERLAY,
                     children: [(0, i.jsx)('div', { className: x.dragRegion }), (0, i.jsx)(p.z6, { scrollPosition: Z }), (0, i.jsx)(p.aV, { icon: a.QuestsIcon })]
                 }),
                 (0, i.jsxs)(g.Z, {

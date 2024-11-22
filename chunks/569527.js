@@ -114,13 +114,12 @@ function T(e) {
             },
             [A]
         );
-    return (0, i.jsxs)('div', {
-        className: N.container,
+    return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(_.Z, {
                 children: (0, i.jsx)(f.Z, {
                     children: (0, i.jsxs)('div', {
-                        className: N.contentContainer,
+                        className: N.container,
                         children: [
                             (0, i.jsx)('div', {
                                 className: N.topFilterContainer,
