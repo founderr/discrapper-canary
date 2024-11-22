@@ -118,7 +118,20 @@ let d = (e) => (null == e ? void 0 : e.premiumType) != null,
         var t;
         return (null === (t = m(e, c.tuJ.DEFAULT)) || void 0 === t ? void 0 : t.amount) === 0;
     },
-    b = (e) => e.reduce((e, t) => (t.type === i.Z.VARIANTS_GROUP && null != t.variants ? (0, r.concat)(e, t.variants) : (e.push(t), e)), []),
+    b = (e) =>
+        e.reduce((e, t) => {
+            if (t.type === i.Z.VARIANTS_GROUP && null != t.variants) {
+                let n = t.prices;
+                return (0, r.concat)(
+                    e,
+                    t.variants.map((e) => ({
+                        ...e,
+                        prices: n
+                    }))
+                );
+            }
+            return e.push(t), e;
+        }, []),
     I = (e) => {
         let t = (0, r.flatMap)([...e.values()], 'products');
         return (0, r.uniqBy)(b(t), 'storeListingId');

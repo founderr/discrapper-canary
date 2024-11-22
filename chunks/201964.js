@@ -5,9 +5,8 @@ n.d(t, {
 });
 var r = n(979554),
     a = n(429368);
-let i = (e) => {
-    let t = (0, a.ff)(e),
-        n = (0, a.o0)(e),
-        i = null !== t ? t : n;
-    return e.type === r.Z.VARIANTS_GROUP && null != e.variants && e.variants.length > i ? e.variants[i].items[0] : e.items[0];
+let i = (e, t, n) => {
+    let i = (0, a.o)(e, t),
+        s = null != n ? n : i;
+    return e.type === r.Z.VARIANTS_GROUP && null != e.variants && e.variants.length > s ? e.variants[s].items[0] : e.items[0];
 };

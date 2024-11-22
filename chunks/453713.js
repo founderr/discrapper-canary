@@ -1,6 +1,6 @@
 n.d(t, {
     P: function () {
-        return h;
+        return p;
     }
 });
 var r = n(200651),
@@ -13,69 +13,59 @@ var r = n(200651),
     d = n(388032),
     u = n(591014);
 let m = (e) => {
-        let { variantGroupProduct: t, variant: n, variantIndex: i, selectedVariantIndex: d, minimal: m } = e,
-            { isPurchased: h } = (0, c.L)(n),
-            p = a.useCallback(() => {
-                (0, o.tg)(t, i);
-            }, [t, i]),
-            f = a.useCallback(() => {
-                (0, o.tg)(t, null);
-            }, [t]),
+        let { variantGroupProduct: t, variant: n, variantIndex: i, selectedVariantIndex: d, onEnter: m, onLeave: p, minimal: h } = e,
+            { isPurchased: f } = (0, c.L)(n),
             g = a.useCallback(
                 (e) => {
-                    e.preventDefault(), e.stopPropagation(), (0, o.$O)(t, i);
+                    e.preventDefault(), e.stopPropagation(), (0, o.$)(t, i);
                 },
                 [t, i]
             );
         return (0, r.jsxs)(l.Clickable, {
             tag: 'li',
-            onMouseEnter: p,
-            onMouseLeave: f,
+            onMouseEnter: m,
+            onMouseLeave: p,
             onClick: g,
             className: s()(u.colorVariant, { [u.selectedVariant]: i === d }),
             children: [
                 (0, r.jsx)('div', {
-                    className: s()(u.colorSwatch, { [u.mask]: m && 0 !== i }),
+                    className: s()(u.colorSwatch, { [u.mask]: h && 0 !== i }),
                     style: { backgroundColor: n.variantValue }
                 }),
-                !m && h ? (0, r.jsx)('span', { className: u.purchasedIndicator }) : null
+                !h && f ? (0, r.jsx)('span', { className: u.purchasedIndicator }) : null
             ]
         });
     },
-    h = (e) => {
-        var t, n, i;
-        let { variantGroupProduct: c, className: h, minimal: p } = e,
-            f = (0, o.o0)(c),
-            g = (0, o.ff)(c),
-            C = null === (t = c.variants) || void 0 === t ? void 0 : t[f],
-            b = null !== g ? (null === (n = c.variants) || void 0 === n ? void 0 : n[g]) : void 0,
-            x = a.useCallback(() => {
-                (0, o.B2)(c, !0);
-            }, [c]),
-            v = a.useCallback(() => {
-                (0, o.B2)(c, !1);
-            }, [c]);
-        if (null == C) return null;
-        let _ = null != b ? b.variantLabel : null == C ? void 0 : C.variantLabel;
+    p = (e) => {
+        var t, n, a;
+        let { variantGroupProduct: i, className: c, previewingVariantIndexProps: p, setIsHoveringOnSwitch: h, minimal: f, purchases: g } = e,
+            C = (0, o.o)(i, g),
+            b = p.previewingVariantIndex,
+            v = null === (t = i.variants) || void 0 === t ? void 0 : t[C],
+            x = null !== b ? (null === (n = i.variants) || void 0 === n ? void 0 : n[b]) : void 0;
+        if (null == v) return null;
+        let _ = null != x ? x.variantLabel : null == v ? void 0 : v.variantLabel;
         return (0, r.jsxs)('div', {
-            className: s()(u.variantsPanel, h, { [u.minimalState]: p }),
-            onMouseEnter: x,
-            onMouseLeave: v,
+            className: s()(u.variantsPanel, c, { [u.minimalState]: f }),
+            onMouseEnter: () => (null == h ? void 0 : h(!0)),
+            onMouseLeave: () => (null == h ? void 0 : h(!1)),
             children: [
                 (0, r.jsx)('ol', {
                     className: u.variantsList,
                     children:
-                        null === (i = c.variants) || void 0 === i
+                        null === (a = i.variants) || void 0 === a
                             ? void 0
-                            : i.map((e, t) =>
+                            : a.map((e, t) =>
                                   (0, r.jsx)(
                                       m,
                                       {
-                                          variantGroupProduct: c,
+                                          variantGroupProduct: i,
                                           variant: e,
                                           variantIndex: t,
-                                          selectedVariantIndex: f,
-                                          minimal: p
+                                          selectedVariantIndex: C,
+                                          onEnter: () => p.handleEntering(t),
+                                          onLeave: p.handleLeaving,
+                                          minimal: f
                                       },
                                       t
                                   )
@@ -85,7 +75,7 @@ let m = (e) => {
                     variant: 'text-xs/medium',
                     color: 'text-secondary',
                     className: u.variantLabel,
-                    children: p ? d.intl.string(d.t.wbgaj4) : _
+                    children: f ? d.intl.string(d.t.wbgaj4) : _
                 })
             ]
         });
