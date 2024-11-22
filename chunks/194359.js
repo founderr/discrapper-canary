@@ -15,28 +15,29 @@ var r,
     m = n(668781),
     g = n(239091),
     E = n(981631),
-    v = n(388032);
-function b(e) {
+    v = n(858380),
+    b = n(388032);
+function I(e) {
     (0, g.Zy)(), m.Z.show(e);
 }
-function I(e, t, n) {
+function T(e, t, n) {
     let { status: r, body: i } = e,
         a = i && i.code;
     switch (r) {
         case 429:
             0 === t &&
-                b({
-                    title: v.intl.string(v.t['3D5eo6']),
-                    body: v.intl.string(v.t.TuJriI),
-                    confirmText: v.intl.string(v.t.DppXIy)
+                I({
+                    title: b.intl.string(b.t['3D5eo6']),
+                    body: b.intl.string(b.t.TuJriI),
+                    confirmText: b.intl.string(b.t.DppXIy)
                 });
             break;
         case 403:
             if (a === E.evJ.EMAIL_VERIFICATION_REQUIRED) {
-                b({
-                    title: v.intl.string(v.t.Gqf33N),
-                    body: v.intl.string(v.t.GHOBd3),
-                    confirmText: v.intl.string(v.t.HbTSEx),
+                I({
+                    title: b.intl.string(b.t.Gqf33N),
+                    body: b.intl.string(b.t.GHOBd3),
+                    confirmText: b.intl.string(b.t.HbTSEx),
                     onConfirm: () => {
                         l.j();
                     }
@@ -47,18 +48,18 @@ function I(e, t, n) {
             if (a === E.evJ.USER_QUARANTINED) (0, g.Zy)(), (0, c.default)();
             else if ((0, f.b)(r, a)) break;
             else if (0 === t) {
-                let e = null != n ? (0, p.NF)(a || 0, n) : v.intl.string(v.t.paDJBA);
-                b({
-                    title: v.intl.string(v.t['6moJ8v']),
+                let e = null != n ? (0, p.NF)(a || 0, n) : b.intl.string(b.t.paDJBA);
+                I({
+                    title: b.intl.string(b.t['6moJ8v']),
                     body: e,
-                    confirmText: v.intl.string(v.t.BddRzc)
+                    confirmText: b.intl.string(b.t.BddRzc)
                 });
             }
     }
     throw e;
 }
 ((i = r || (r = {}))[(i.SHOW_ALWAYS = 0)] = 'SHOW_ALWAYS'), (i[(i.SHOW_ONLY_IF_ACTION_NEEDED = 1)] = 'SHOW_ONLY_IF_ACTION_NEEDED');
-let T = {
+let S = {
     sendRequest(e) {
         let { discordTag: t, context: n, captchaPayload: r, errorUxConfig: i = 0 } = e,
             [s, o] = t.split('#');
@@ -75,7 +76,7 @@ let T = {
                 rejectWithError: !1
             })
             .catch((e) => {
-                I(e, i, t);
+                T(e, i, t);
             });
     },
     addRelationship(e, t) {
@@ -99,25 +100,25 @@ let T = {
                 null == t || t();
             })
             .catch((e) => {
-                I(e, u, h.ZP.getUserTag(c));
+                T(e, u, h.ZP.getUserTag(c));
             });
     },
     acceptFriendRequest: (e) =>
-        T.addRelationship(e, function () {
-            s.uv.announce(v.intl.string(v.t['3goNa2']));
+        S.addRelationship(e, function () {
+            s.uv.announce(b.intl.string(b.t['3goNa2']));
         }),
     cancelFriendRequest: (e, t) =>
-        T.removeRelationship(e, t, function () {
-            s.uv.announce(v.intl.string(v.t.pLUaxc));
+        S.removeRelationship(e, t, function () {
+            s.uv.announce(b.intl.string(b.t.pLUaxc));
         }),
     removeFriend(e, t) {
-        T.removeRelationship(e, t, function () {
-            s.uv.announce(v.intl.string(v.t.vGSLa2));
+        S.removeRelationship(e, t, function () {
+            s.uv.announce(b.intl.string(b.t.vGSLa2));
         });
     },
     unblockUser: (e, t) =>
-        T.removeRelationship(e, t, function () {
-            s.uv.announce(v.intl.string(v.t['9t1au7']));
+        S.removeRelationship(e, t, function () {
+            s.uv.announce(b.intl.string(b.t['9t1au7']));
         }),
     removeRelationship: (e, t, n) =>
         a.tn
@@ -131,7 +132,7 @@ let T = {
                 null == n || n();
             })
             .catch(() => {
-                s.uv.announce(v.intl.string(v.t.n6Jo3N));
+                s.uv.announce(b.intl.string(b.t.n6Jo3N));
             }),
     updateRelationship: (e, t) =>
         a.tn.patch({
@@ -169,15 +170,15 @@ let T = {
                 o.Z.dispatch({ type: 'RELATIONSHIP_PENDING_INCOMING_REMOVED' });
             })
             .catch(() => {
-                s.uv.announce(v.intl.string(v.t.n6Jo3N));
+                s.uv.announce(b.intl.string(b.t.n6Jo3N));
             }),
-    clearPendingSpam: () =>
+    clearPendingSpamAndIgnored: () =>
         a.tn
             .del({
                 url: E.ANM.USER_RELATIONSHIPS(),
-                query: {
-                    relationship_type: E.OGo.PENDING_INCOMING,
-                    only_spam: !0
+                query: { relationship_type: E.OGo.PENDING_INCOMING },
+                body: {
+                    filters: [v.G.SPAM, v.G.IGNORED]
                 },
                 rejectWithError: !1
             })
@@ -185,7 +186,7 @@ let T = {
                 o.Z.dispatch({ type: 'RELATIONSHIP_PENDING_INCOMING_REMOVED' });
             })
             .catch(() => {
-                s.uv.announce(v.intl.string(v.t.n6Jo3N));
+                s.uv.announce(b.intl.string(b.t.n6Jo3N));
             }),
     ignoreUser: (e, t, n) =>
         a.tn
@@ -214,4 +215,4 @@ let T = {
                 d.Z.showFailedToast();
             })
 };
-t.Z = T;
+t.Z = S;

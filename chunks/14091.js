@@ -259,19 +259,20 @@ class A extends l.PureComponent {
                 })
             ),
             S(this, 'renderContent', () => {
-                let { searchResults: e, blockCount: t } = this.props,
-                    { totalResults: n, isSearching: l, isIndexing: r, hasError: a } = this.props.search;
-                return a
+                let { searchResults: e, blockCount: t, ignoreCount: n } = this.props,
+                    { totalResults: l, isSearching: r, isIndexing: a, hasError: s } = this.props.search;
+                return s
                     ? this.renderError()
-                    : r
+                    : a
                       ? this.renderIndexing()
-                      : l
+                      : r
                         ? null
-                        : n > 0
+                        : l > 0
                           ? (0, i.jsx)(E.Z, {
                                 search: this.props.search,
                                 searchResults: e,
                                 blockCount: t,
+                                ignoreCount: n,
                                 searchId: this.props.searchId,
                                 renderEmbeds: this.props.renderEmbeds,
                                 scrollTo: this.scrollTo

@@ -50,18 +50,21 @@ function u(e) {
             [e, t],
             i.pF
         ),
-        [u, h] = (0, i.e7)(
+        [u, h, p] = (0, i.e7)(
             [c.Z],
             () => {
-                let e = 0;
+                let e = 0,
+                    t = 0;
                 return [
-                    n.map((t) =>
-                        t.filter((t) => {
-                            let n = c.Z.isBlockedForMessage(t);
-                            return n && t.isSearchHit && e++, !n || t.isSearchHit;
+                    n.map((n) =>
+                        n.filter((n) => {
+                            let i = c.Z.isBlockedForMessage(n),
+                                l = c.Z.isIgnoredForMessage(n);
+                            return i && n.isSearchHit ? e++ : l && n.isSearchHit && t++, (!i && !l) || n.isSearchHit;
                         })
                     ),
-                    e
+                    e,
+                    t
                 ];
             },
             [n],
@@ -69,6 +72,7 @@ function u(e) {
         );
     return {
         searchResults: u,
-        blockCount: h
+        blockCount: h,
+        ignoreCount: p
     };
 }

@@ -150,6 +150,24 @@ function f(e) {
                               t
                           );
                 })(t, d);
+            else if ((0, i.pO)(t))
+                return (function (e) {
+                    let { quest: t, taskDetails: n, withoutMarkdown: r } = e,
+                        i = n.targetMinutes,
+                        a = o.r.build(t.config).defaultReward.messages.nameWithArticle;
+                    return c(
+                        l.t.VYwSSk,
+                        {
+                            streamingDurationRequirement: i,
+                            questReward: a
+                        },
+                        r
+                    );
+                })({
+                    quest: t,
+                    taskDetails: n,
+                    withoutMarkdown: d
+                });
             return null != u
                 ? u.description
                 : c(

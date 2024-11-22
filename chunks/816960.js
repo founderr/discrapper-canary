@@ -1,195 +1,259 @@
-n.r(e),
-    n.d(e, {
+n.r(t),
+    n.d(t, {
         default: function () {
-            return p;
+            return y;
         }
     });
 var s = n(200651),
-    a = n(192379),
-    i = n(286379),
+    i = n(192379),
+    a = n(286379),
     o = n(399606),
     r = n(481060),
     l = n(87051),
-    d = n(661824),
-    c = n(797614),
-    u = n(9156),
-    x = n(621600),
-    m = n(359119),
-    h = n(473092),
-    g = n(222914),
-    N = n(134612),
-    T = n(981631),
-    _ = n(388032),
-    b = n(899014);
-function p(t) {
-    let { transitionState: e, onClose: n, handleBlock: p, channelId: v, warningId: j, senderId: A } = t,
-        C = () => {
+    d = n(194359),
+    c = n(661824),
+    u = n(797614),
+    x = n(922611),
+    m = n(681678),
+    g = n(699516),
+    _ = n(9156),
+    h = n(621600),
+    N = n(359119),
+    b = n(473092),
+    v = n(222914),
+    j = n(134612),
+    p = n(981631),
+    T = n(388032),
+    A = n(899014);
+function y(e) {
+    let { transitionState: t, onClose: n, handleBlock: y, channelId: B, warningId: E, senderId: k } = e,
+        R = (0, x.Do)({ location: 'web_stranger_danger_more' }),
+        { isIgnored: C, isBlocked: S } = (0, o.cj)(
+            [g.Z],
+            () => ({
+                isIgnored: g.Z.isIgnored(k),
+                isBlocked: g.Z.isBlocked(k)
+            }),
+            [k]
+        ),
+        f = () => {
             n();
         },
-        B = (0, N.C2)();
-    a.useEffect(() => {
-        (0, h.MC)(T.rMx.SAFETY_WARNING_MODAL_VIEWED, {
-            channelId: v,
-            warningId: j,
-            senderId: A,
-            warningType: m.pj.STRANGER_DANGER
+        M = i.useCallback(() => {
+            (0, b.qc)({
+                channelId: B,
+                warningId: E,
+                senderId: k,
+                warningType: N.pj.STRANGER_DANGER,
+                cta: b.NM.USER_MODAL_IGNORE
+            }),
+                d.Z.ignoreUser(k, 'web_stranger_danger_more', B);
+        }, [B, E, k]),
+        I = i.useCallback(() => {
+            (0, b.qc)({
+                channelId: B,
+                warningId: E,
+                senderId: k,
+                warningType: N.pj.STRANGER_DANGER,
+                cta: b.NM.USER_MODAL_UNIGNORE
+            }),
+                d.Z.unignoreUser(k, 'web_stranger_danger_more', B);
+        }, [B, E, k]),
+        O = (0, j.C2)();
+    i.useEffect(() => {
+        (0, b.MC)(p.rMx.SAFETY_WARNING_MODAL_VIEWED, {
+            channelId: B,
+            warningId: E,
+            senderId: k,
+            warningType: N.pj.STRANGER_DANGER
         }),
-            c.Z.increment({ name: i.V.SAFETY_WARNING_MODAL_VIEW });
-    }, [v, j, A]);
-    let y = (0, o.e7)([u.ZP], () => u.ZP.isChannelMuted(null, v));
+            u.Z.increment({ name: a.V.SAFETY_WARNING_MODAL_VIEW });
+    }, [B, E, k]);
+    let D = (0, o.e7)([_.ZP], () => _.ZP.isChannelMuted(null, B));
     return (0, s.jsx)(r.ModalRoot, {
-        transitionState: e,
+        transitionState: t,
         children: (0, s.jsxs)(r.Scroller, {
             style: { overflow: 'hidden auto' },
             children: [
                 (0, s.jsxs)(r.ModalHeader, {
-                    className: b.modalHeader,
+                    className: A.modalHeader,
                     children: [
                         (0, s.jsxs)('div', {
-                            className: b.modalHeaderText,
+                            className: A.modalHeaderText,
                             children: [
                                 (0, s.jsx)(r.Text, {
                                     variant: 'eyebrow',
                                     color: 'status-positive-text',
-                                    children: _.intl.string(_.t.lyt43N)
+                                    children: T.intl.string(T.t.lyt43N)
                                 }),
                                 (0, s.jsx)(r.Heading, {
                                     variant: 'heading-xl/bold',
                                     color: 'status-positive-text',
-                                    children: _.intl.string(_.t.DJMZX1)
+                                    children: T.intl.string(T.t.DJMZX1)
                                 })
                             ]
                         }),
                         (0, s.jsx)(r.Button, {
-                            'aria-label': _.intl.string(_.t.cpT0Cg),
+                            'aria-label': T.intl.string(T.t.cpT0Cg),
                             look: r.Button.Looks.BLANK,
                             size: r.Button.Sizes.NONE,
                             onClick: n,
-                            innerClassName: b.closeButtonInner,
-                            className: b.closeButton,
+                            innerClassName: A.closeButtonInner,
+                            className: A.closeButton,
                             children: (0, s.jsx)(r.XSmallIcon, {
                                 size: 'sm',
                                 color: 'currentColor',
-                                className: b.closeIcon
+                                className: A.closeIcon
                             })
                         })
                     ]
                 }),
                 (0, s.jsxs)(r.ModalContent, {
-                    className: b.modalContent,
+                    className: A.modalContent,
                     children: [
                         (0, s.jsx)('div', {
-                            className: b.tipsSection,
-                            children: B.map((t, e) =>
+                            className: A.tipsSection,
+                            children: O.map((e, t) =>
                                 (0, s.jsxs)(
                                     'div',
                                     {
-                                        className: b.tipRow,
+                                        className: A.tipRow,
                                         children: [
                                             (0, s.jsx)(r.Heading, {
                                                 variant: 'heading-md/semibold',
                                                 color: 'text-brand',
-                                                className: b.tipNumber,
-                                                children: e + 1
+                                                className: A.tipNumber,
+                                                children: t + 1
                                             }),
                                             (0, s.jsx)(r.Text, {
                                                 variant: 'text-sm/medium',
                                                 color: 'header-secondary',
-                                                children: t
+                                                children: e
                                             })
                                         ]
                                     },
-                                    e
+                                    t
                                 )
                             )
                         }),
                         (0, s.jsxs)('div', {
                             children: [
                                 (0, s.jsx)(r.Text, {
-                                    className: b.moreHeading,
+                                    className: A.moreHeading,
                                     variant: 'eyebrow',
                                     color: 'header-secondary',
-                                    children: _.intl.string(_.t.K5FKtb)
+                                    children: T.intl.string(T.t.K5FKtb)
                                 }),
                                 (0, s.jsxs)('div', {
-                                    className: b.tipsSection,
+                                    className: A.tipsSection,
                                     children: [
+                                        R &&
+                                            (0, s.jsxs)('div', {
+                                                className: A.safetyAction,
+                                                children: [
+                                                    (0, s.jsxs)('div', {
+                                                        className: A.safetyActionText,
+                                                        children: [
+                                                            (0, s.jsx)(r.Text, {
+                                                                variant: 'text-md/semibold',
+                                                                color: 'header-primary',
+                                                                children: T.intl.string(T.t.avyV7O)
+                                                            }),
+                                                            (0, s.jsx)(r.Text, {
+                                                                variant: 'text-xs/medium',
+                                                                color: 'header-secondary',
+                                                                children: T.intl.string(T.t.naWE6e)
+                                                            })
+                                                        ]
+                                                    }),
+                                                    (0, s.jsx)(r.Button, {
+                                                        size: r.Button.Sizes.SMALL,
+                                                        color: r.Button.Colors.PRIMARY,
+                                                        'aria-label': C ? T.intl.string(T.t['3SrzRU']) : T.intl.string(T.t.avyV7O),
+                                                        onClick: C ? I : M,
+                                                        disabled: S,
+                                                        children: C ? T.intl.string(T.t['3SrzRU']) : T.intl.string(T.t.avyV7O)
+                                                    })
+                                                ]
+                                            }),
+                                        !R &&
+                                            (0, s.jsxs)('div', {
+                                                className: A.safetyAction,
+                                                children: [
+                                                    (0, s.jsxs)('div', {
+                                                        className: A.safetyActionText,
+                                                        children: [
+                                                            (0, s.jsx)(r.Text, {
+                                                                variant: 'text-md/semibold',
+                                                                color: 'header-primary',
+                                                                children: T.intl.string(T.t['UVp+4+'])
+                                                            }),
+                                                            (0, s.jsx)(r.Text, {
+                                                                variant: 'text-xs/medium',
+                                                                color: 'header-secondary',
+                                                                children: T.intl.string(T.t.VS47BA)
+                                                            })
+                                                        ]
+                                                    }),
+                                                    (0, s.jsx)(r.Button, {
+                                                        size: r.Button.Sizes.SMALL,
+                                                        color: r.Button.Colors.PRIMARY,
+                                                        'aria-label': D ? T.intl.string(T.t['6QK4Hx']) : T.intl.string(T.t['UVp+4+']),
+                                                        onClick: D
+                                                            ? () => {
+                                                                  l.Z.updateChannelOverrideSettings(null, B, { muted: !1 }, h.ZB.Unmuted),
+                                                                      m.Z.showUnmuteSuccessToast(k, B),
+                                                                      (0, b.qc)({
+                                                                          channelId: B,
+                                                                          warningId: E,
+                                                                          senderId: k,
+                                                                          warningType: N.pj.STRANGER_DANGER,
+                                                                          cta: b.NM.USER_MODAL_UNMUTE
+                                                                      });
+                                                              }
+                                                            : () => {
+                                                                  l.Z.updateChannelOverrideSettings(null, B, { muted: !0 }, h.ZB.Muted),
+                                                                      m.Z.showMuteSuccessToast(k, B),
+                                                                      (0, b.qc)({
+                                                                          channelId: B,
+                                                                          warningId: E,
+                                                                          senderId: k,
+                                                                          warningType: N.pj.STRANGER_DANGER,
+                                                                          cta: b.NM.USER_MODAL_MUTE
+                                                                      });
+                                                              },
+                                                        children: D ? T.intl.string(T.t['6QK4Hx']) : T.intl.string(T.t['UVp+4+'])
+                                                    })
+                                                ]
+                                            }),
+                                        (0, s.jsx)(c.Z, {}),
                                         (0, s.jsxs)('div', {
-                                            className: b.safetyAction,
+                                            className: A.safetyAction,
                                             children: [
                                                 (0, s.jsxs)('div', {
-                                                    className: b.safetyActionText,
+                                                    className: A.safetyActionText,
                                                     children: [
                                                         (0, s.jsx)(r.Text, {
                                                             variant: 'text-md/semibold',
                                                             color: 'header-primary',
-                                                            children: _.intl.string(_.t['UVp+4+'])
+                                                            children: T.intl.string(T.t['5QYPOz'])
                                                         }),
                                                         (0, s.jsx)(r.Text, {
                                                             variant: 'text-xs/medium',
                                                             color: 'header-secondary',
-                                                            children: _.intl.string(_.t.VS47BA)
-                                                        })
-                                                    ]
-                                                }),
-                                                (0, s.jsx)(r.Button, {
-                                                    size: r.Button.Sizes.SMALL,
-                                                    color: r.Button.Colors.PRIMARY,
-                                                    'aria-label': _.intl.string(_.t['UVp+4+']),
-                                                    onClick: y
-                                                        ? () => {
-                                                              l.Z.updateChannelOverrideSettings(null, v, { muted: !1 }, x.ZB.Unmuted),
-                                                                  (0, r.showToast)((0, r.createToast)(_.intl.string(_.t['A+N6lJ']), r.ToastType.SUCCESS)),
-                                                                  (0, h.qc)({
-                                                                      channelId: v,
-                                                                      warningId: j,
-                                                                      senderId: A,
-                                                                      warningType: m.pj.STRANGER_DANGER,
-                                                                      cta: h.NM.USER_MODAL_UNMUTE
-                                                                  });
-                                                          }
-                                                        : () => {
-                                                              l.Z.updateChannelOverrideSettings(null, v, { muted: !0 }, x.ZB.Muted),
-                                                                  (0, r.showToast)((0, r.createToast)(_.intl.string(_.t.u3XBOD), r.ToastType.SUCCESS)),
-                                                                  (0, h.qc)({
-                                                                      channelId: v,
-                                                                      warningId: j,
-                                                                      senderId: A,
-                                                                      warningType: m.pj.STRANGER_DANGER,
-                                                                      cta: h.NM.USER_MODAL_MUTE
-                                                                  });
-                                                          },
-                                                    children: y ? _.intl.string(_.t['6QK4Hx']) : _.intl.string(_.t['UVp+4+'])
-                                                })
-                                            ]
-                                        }),
-                                        (0, s.jsx)(d.Z, {}),
-                                        (0, s.jsxs)('div', {
-                                            className: b.safetyAction,
-                                            children: [
-                                                (0, s.jsxs)('div', {
-                                                    className: b.safetyActionText,
-                                                    children: [
-                                                        (0, s.jsx)(r.Text, {
-                                                            variant: 'text-md/semibold',
-                                                            color: 'header-primary',
-                                                            children: _.intl.string(_.t['5QYPOz'])
-                                                        }),
-                                                        (0, s.jsx)(r.Text, {
-                                                            variant: 'text-xs/medium',
-                                                            color: 'header-secondary',
-                                                            children: _.intl.string(_.t.OWoSUV)
+                                                            children: T.intl.string(T.t.G08MKi)
                                                         })
                                                     ]
                                                 }),
                                                 (0, s.jsx)(r.Button, {
                                                     size: r.Button.Sizes.SMALL,
                                                     color: r.Button.Colors.RED,
-                                                    'aria-label': _.intl.string(_.t.ie0QdH),
+                                                    'aria-label': T.intl.string(T.t.ie0QdH),
                                                     onClick: () => {
-                                                        C(), p();
+                                                        f(), y();
                                                     },
-                                                    children: _.intl.string(_.t.ie0QdH)
+                                                    disabled: S,
+                                                    children: S ? T.intl.string(T.t.ot2tSk) : T.intl.string(T.t.ie0QdH)
                                                 })
                                             ]
                                         })
@@ -197,10 +261,10 @@ function p(t) {
                                 })
                             ]
                         }),
-                        (0, s.jsx)(g.Z, {
-                            channelId: v,
-                            warningId: j,
-                            senderId: A
+                        (0, s.jsx)(v.Z, {
+                            channelId: B,
+                            warningId: E,
+                            senderId: k
                         })
                     ]
                 })

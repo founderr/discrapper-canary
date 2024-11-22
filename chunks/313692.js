@@ -159,6 +159,7 @@ function Z(e) {
                           searchId: r,
                           renderEmbeds: !0,
                           blockCount: 0,
+                          ignoreCount: 0,
                           scrollTo: () => {},
                           onChangePage: w
                       })

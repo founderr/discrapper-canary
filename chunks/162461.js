@@ -1,23 +1,27 @@
 n.d(t, {
     DG: function () {
-        return a;
-    },
-    Dy: function () {
-        return u;
-    },
-    nP: function () {
-        return d;
-    },
-    sA: function () {
         return s;
     },
-    wm: function () {
+    Dy: function () {
+        return c;
+    },
+    kt: function () {
+        return _;
+    },
+    nP: function () {
+        return f;
+    },
+    sA: function () {
         return o;
+    },
+    wm: function () {
+        return l;
     }
 });
 var r = n(818083),
-    i = n(109911);
-let a = (0, r.B)({
+    i = n(109911),
+    a = n(987338);
+let s = (0, r.B)({
     kind: 'user',
     id: '2024-03_content_inventory_memberlist_and_ranker',
     label: 'Enables the memberlist content feed',
@@ -38,16 +42,16 @@ let a = (0, r.B)({
         }
     ]
 });
-function s(e) {
-    let { enabled: t } = a.getCurrentConfig({ location: e }, { autoTrackExposure: !0 }),
+function o(e) {
+    let { enabled: t } = s.getCurrentConfig({ location: e }, { autoTrackExposure: !0 }),
         n = (0, i.Ji)(e, !1);
     return t || n;
 }
-function o(e) {
-    let { enabled: t, impressionCappingEnabled: n } = a.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
+function l(e) {
+    let { enabled: t, impressionCappingEnabled: n } = s.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
     return t && !0 === n;
 }
-let l = (0, r.B)({
+let u = (0, r.B)({
     kind: 'user',
     id: '2024-04_content_inventory_listened_media',
     label: 'Content Inventory: LISTENED_MEDIA',
@@ -60,11 +64,11 @@ let l = (0, r.B)({
         }
     ]
 });
-function u(e) {
-    let { enabled: t } = l.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
+function c(e) {
+    let { enabled: t } = u.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
     return t;
 }
-let c = (0, r.B)({
+let d = (0, r.B)({
     kind: 'user',
     id: '2024-08_content_inventory_analytics_sampling',
     label: 'Content Inventory Analytics Sampling',
@@ -77,6 +81,40 @@ let c = (0, r.B)({
         }
     ]
 });
-function d(e) {
-    return c.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
+function f(e) {
+    return d.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
 }
+let _ = (0, r.B)({
+    kind: 'user',
+    id: '2024-11_hotwheels_activity_feed_ml_model',
+    label: 'Hotwheels Activity Feed ML Model',
+    commonTriggerPoint: a.$P.CONNECTION_OPEN,
+    defaultConfig: {},
+    treatments: [
+        {
+            id: 3,
+            label: 'Control (Noteworthy)',
+            config: {}
+        },
+        {
+            id: 5,
+            label: 'ML model (lowest threshold, most % positives)',
+            config: {}
+        },
+        {
+            id: 6,
+            label: 'ML model (medium threshold, match % positives to heuristic)',
+            config: {}
+        },
+        {
+            id: 7,
+            label: 'ML model (highest threshold, highest f1 score but fewer positives)',
+            config: {}
+        },
+        {
+            id: 8,
+            label: 'Randomized',
+            config: {}
+        }
+    ]
+});

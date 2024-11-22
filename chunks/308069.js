@@ -10,47 +10,46 @@ var o = n(200651),
     p = n(302245),
     m = n(685613),
     x = n(670638),
-    g = n(341907),
-    f = n(303385),
-    h = n(788284),
-    C = n(46140),
-    v = n(388032),
-    j = n(404846);
+    f = n(341907),
+    g = n(303385),
+    h = n(46140),
+    C = n(388032),
+    v = n(404846);
 t.Z = (e) => {
-    let { quest: t, expansionSpring: s, onCtxMenuSelect: _, onCtxMenuOpen: b, onCtxMenuClose: E, useReducedMotion: N, isExpanded: B, isExpansionAnimationComplete: S } = e,
-        T = r.useCallback(() => {
-            (0, g.openDisclosureModal)(t, {
+    let { quest: t, expansionSpring: s, onCtxMenuSelect: j, onCtxMenuOpen: _, onCtxMenuClose: E, useReducedMotion: b, isExpanded: N, isExpansionAnimationComplete: B } = e,
+        S = r.useCallback(() => {
+            (0, f.openDisclosureModal)(t, {
                 content: d.jn.QUEST_BAR_V2,
                 ctaContent: c.jZ.OPEN_DISCLOSURE
             });
         }, [t]),
-        A = r.useCallback(() => {
+        T = r.useCallback(() => {
             (0, u.FE)(t, {
                 content: d.jn.QUEST_BAR_V2,
                 ctaContent: c.jZ.OPEN_GAME_LINK
             });
         }, [t]),
-        y = B && S,
-        R = (0, p.vI)(t, C.dr.QUESTS_BAR, !0),
-        w = (0, o.jsx)(l.Clickable, {
-            onClick: A,
-            className: a()(j.clickable, { [j.logo]: y }),
+        A = N && B,
+        y = (0, p.vI)(t, h.dr.QUESTS_BAR, !0),
+        R = (0, o.jsx)(l.Clickable, {
+            onClick: T,
+            className: a()(v.clickable, { [v.logo]: A }),
             children: (0, o.jsx)(m.ZP, {
                 quest: t,
                 withGameTile: !1
             })
         });
     return (0, o.jsxs)(i.animated.div, {
-        className: a()(j.wrapper, {
-            [j.interactable]: y,
-            [j.rewardHighlightWrapper]: R
+        className: a()(v.wrapper, {
+            [v.interactable]: A,
+            [v.rewardHighlightWrapper]: y
         }),
         style: {
             transform: (0, i.to)(
                 [
                     s.to({
                         range: [0, 1],
-                        output: [R ? 8 : 4, 0]
+                        output: [y ? 8 : 4, 0]
                     })
                 ],
                 (e) => 'translateY('.concat(e, 'px')
@@ -58,7 +57,7 @@ t.Z = (e) => {
         },
         children: [
             (0, o.jsx)(i.animated.div, {
-                className: j.opaqueExpandedBackground,
+                className: v.opaqueExpandedBackground,
                 style: {
                     opacity: s.to({
                         range: [0, 1],
@@ -67,42 +66,19 @@ t.Z = (e) => {
                     backdropFilter: s.to([0, 1], [0, 1]).to((e) => 'blur('.concat(10 * e, 'px) brightness(').concat(1 - e / 4, ')'))
                 }
             }),
-            (0, o.jsx)(i.animated.div, {
-                className: j.backgroundWrapper,
-                style: {
-                    opacity: s.to({
-                        range: [0, 1],
-                        output: [0.5, 0]
-                    }),
-                    borderBottomLeftRadius: s.to({
-                        range: [0, 1],
-                        output: [0, 8]
-                    }),
-                    borderBottomRightRadius: s.to({
-                        range: [0, 1],
-                        output: [0, 8]
-                    })
-                },
-                children: (0, o.jsx)(h.Z, {
-                    className: j.background,
-                    animationClassName: j.backgroundAnimation,
-                    quest: t,
-                    useReducedMotion: N
-                })
-            }),
-            R
-                ? (0, o.jsx)(f.Z, {
+            y
+                ? (0, o.jsx)(g.Z, {
                       quest: t,
                       expansionSpring: s,
-                      isFullyExpanded: y,
-                      partnerBranding: w,
-                      useReducedMotion: N
+                      isFullyExpanded: A,
+                      partnerBranding: R,
+                      useReducedMotion: b
                   })
                 : (0, o.jsxs)(o.Fragment, {
                       children: [
                           (0, o.jsx)(i.animated.img, {
                               alt: '',
-                              className: j.wreathIcon,
+                              className: v.wreathIcon,
                               style: {
                                   opacity: s.to({
                                       range: [0, 1],
@@ -127,10 +103,10 @@ t.Z = (e) => {
                                       (e, t) => 'translate('.concat(e, 'px, ').concat(t, 'px)')
                                   )
                               },
-                              children: w
+                              children: R
                           }),
                           (0, o.jsx)(i.animated.div, {
-                              className: j.questAvailable,
+                              className: v.questAvailable,
                               style: {
                                   opacity: s.to({
                                       range: [0, 1],
@@ -149,14 +125,14 @@ t.Z = (e) => {
                               children: (0, o.jsx)(l.Text, {
                                   color: 'always-white',
                                   variant: 'text-xs/medium',
-                                  className: j.questAvailableText,
-                                  children: v.intl.string(v.t.g8zcER)
+                                  className: v.questAvailableText,
+                                  children: C.intl.string(C.t.g8zcER)
                               })
                           })
                       ]
                   }),
             (0, o.jsxs)(i.animated.div, {
-                className: j.promotedBadgeWrapper,
+                className: v.promotedBadgeWrapper,
                 style: {
                     opacity: s.to({
                         range: [0, 1],
@@ -165,24 +141,24 @@ t.Z = (e) => {
                 },
                 children: [
                     (0, o.jsxs)(l.Clickable, {
-                        className: j.promotedBadge,
-                        onClick: T,
+                        className: v.promotedBadge,
+                        onClick: S,
                         children: [
                             (0, o.jsx)(l.Text, {
                                 color: 'always-white',
                                 variant: 'text-xs/normal',
-                                children: v.intl.string(v.t.o6FLcH)
+                                children: C.intl.string(C.t.o6FLcH)
                             }),
                             (0, o.jsx)(l.CircleQuestionIcon, {
                                 color: l.tokens.colors.WHITE,
-                                className: j.promotedBadgeIcon
+                                className: v.promotedBadgeIcon
                             })
                         ]
                     }),
                     (0, o.jsx)(x.r, {
-                        onOpen: b,
+                        onOpen: _,
                         onClose: E,
-                        onSelect: _,
+                        onSelect: j,
                         questContent: d.jn.QUEST_BAR_V2,
                         quest: t,
                         shouldShowDisclosure: !0,
@@ -190,12 +166,12 @@ t.Z = (e) => {
                         children: (e) =>
                             (0, o.jsx)(l.Clickable, {
                                 ...e,
-                                className: j.submenuWrapper,
-                                'aria-label': v.intl.string(v.t.DEoVWV),
+                                className: v.submenuWrapper,
+                                'aria-label': C.intl.string(C.t.DEoVWV),
                                 children: (0, o.jsx)(l.MoreHorizontalIcon, {
                                     size: 'md',
                                     color: 'currentColor',
-                                    className: a()(j.submenuIcon, j.white)
+                                    className: a()(v.submenuIcon, v.white)
                                 })
                             })
                     })

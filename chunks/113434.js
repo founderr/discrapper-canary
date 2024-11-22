@@ -354,6 +354,7 @@ function X(e, t, n) {
         return null == t ? U.intl.string(U.t['o+e9ys']) : U.intl.formatToPlainString(U.t['9m9MnZ'], { videoTitle: t });
     }
     if (null != i) return i.title;
+    if ((0, R.pO)(e) && (0, R.KM)(e)) return U.intl.format(U.t['1NaRSk'], { minutes: r });
     let o = U.t['6zWtV1'];
     return (
         (0, R.Nj)({ quest: e }) && (o = U.t['wmOh/v']),
@@ -626,7 +627,7 @@ function ec(e) {
         u = d.T.DESKTOP.has(i.taskType),
         c = 0 === i.percentComplete,
         f = o && !l && !s && null == r && (u || (c && a === C.LI.DESKTOP)),
-        _ = (0, S.isWeb)() && f,
+        _ = (0, S.isWeb)() && f && !(0, R.Gd)(e),
         p = (0, S.isMac)() && i.taskType === d.X.STREAM_ON_DESKTOP && f,
         h = [];
     return p && h.push(U.intl.string(U.t.MFGxFB)), _ && h.push(U.intl.string(U.t.BV6xDg)), h;

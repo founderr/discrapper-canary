@@ -3,7 +3,7 @@ e.d(n, {
         return a;
     },
     C2: function () {
-        return u;
+        return d;
     },
     DL: function () {
         return c;
@@ -12,10 +12,13 @@ e.d(n, {
         return i;
     },
     Nn: function () {
-        return d;
+        return E;
     },
     X_: function () {
         return l;
+    },
+    cH: function () {
+        return u;
     },
     n4: function () {
         return s;
@@ -31,5 +34,6 @@ let r = 'SAFETY_WARNING_BANNER_WEB',
     a = 'https://discord.findahelpline.com/',
     c = 'InappropriateConversationModal-web',
     l = 'PRIVATE_DM_SAFETY_TOOLS_MODAL',
-    u = () => [o.intl.string(o.t['26fDv7']), o.intl.string(o.t.togDfn), o.intl.string(o.t.O4LjcX)],
-    d = () => [o.intl.string(o.t.bCWw8v), o.intl.string(o.t.mzSuc3), o.intl.string(o.t.ZkmC7u)];
+    u = 'SafetyToolsActionSheet-web',
+    d = () => [o.intl.string(o.t['26fDv7']), o.intl.string(o.t.togDfn), o.intl.string(o.t.O4LjcX)],
+    E = () => [o.intl.string(o.t.bCWw8v), o.intl.string(o.t.mzSuc3), o.intl.string(o.t.ZkmC7u)];

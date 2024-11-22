@@ -2,8 +2,11 @@ n.d(t, {
     ZP: function () {
         return f;
     },
-    sU: function () {
+    jA: function () {
         return _;
+    },
+    sU: function () {
+        return p;
     }
 }),
     n(789020);
@@ -27,6 +30,17 @@ function f(e) {
     }
 }
 function _(e) {
+    let { applicationId: t } = e,
+        n = o.ZP.getCurrentEmbeddedActivity();
+    if (null == n || n.applicationId !== t) return;
+    let r = i.Z.getApplication(t);
+    if (null != r)
+        return f({
+            application: r,
+            channelId: n.channelId
+        });
+}
+function p(e) {
     let { channelId: t } = e;
     return (0, r.e7)([a.Z, o.ZP, i.Z], () => {
         let e = (function (e) {
