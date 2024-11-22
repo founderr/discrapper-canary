@@ -43,7 +43,7 @@ function C(e) {
                       onboarding_prompts_seen: o,
                       onboarding_responses_seen: l
                   },
-                  rejectWithError: !1
+                  rejectWithError: !0
               })
               .then((t) => {
                   null != t.body &&

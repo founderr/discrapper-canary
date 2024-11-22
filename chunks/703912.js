@@ -38,7 +38,7 @@ async function S(e, t, n) {
         c,
         d,
         v,
-        { client_id: T, response_type: S = 'code', redirect_uri: A, code_challenge: x, code_challenge_method: b, state: Z, nonce: L, scope: y, permissions: O, guild_id: P, channel_id: R, prompt: j, disable_guild_select: D, integration_type: M, pid: w, signal: k } = e;
+        { client_id: T, response_type: S = 'code', redirect_uri: A, code_challenge: x, code_challenge_method: b, state: Z, nonce: L, scope: y, permissions: P, guild_id: O, channel_id: R, prompt: j, disable_guild_select: D, integration_type: M, pid: w, signal: k } = e;
     if (null == k ? void 0 : k.aborted) throw new C.Z({ errorCode: N.lTL.UNKNOWN_ERROR }, 'Request aborted');
     if (null == T) throw new C.Z({ errorCode: N.lTL.OAUTH2_ERROR }, 'No Client ID provided');
     if (null != A) throw new C.Z({ errorCode: N.lTL.OAUTH2_ERROR }, 'Redirect URI cannot be used in the RPC OAuth2 Authorization flow');
@@ -99,7 +99,7 @@ async function S(e, t, n) {
     null == n || n(c.application, R, w);
     let H = I.Hn;
     try {
-        H = a.vB(null != O ? O : 0);
+        H = a.vB(null != P ? P : 0);
     } catch (e) {}
     return (
         null != c.integration_type && Object.values(r.Y).includes(c.integration_type) && (s = new Map()).set(c.integration_type, c),
@@ -113,7 +113,7 @@ async function S(e, t, n) {
             codeChallenge: x,
             codeChallengeMethod: b,
             state: Z,
-            guildId: P,
+            guildId: O,
             channelId: R,
             prompt: j,
             disableGuildSelect: D,

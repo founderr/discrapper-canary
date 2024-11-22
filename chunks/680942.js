@@ -8,8 +8,8 @@ var r = n(200651),
     d = n(884697),
     u = n(228624),
     m = n(67409),
-    h = n(474936),
-    p = n(231338),
+    p = n(474936),
+    h = n(231338),
     f = n(388032),
     g = n(65297);
 let C = {
@@ -79,7 +79,7 @@ t.Z = (e) => {
         { analyticsLocations: I } = (0, l.ZP)(),
         j = a.useRef(null),
         E = (0, s.Z)(j),
-        S = k ? p.BR.DARK : p.BR.LIGHT,
+        S = k ? h.BR.DARK : h.BR.LIGHT,
         T = (0, u.hv)('CollectiblesShopGiftButton');
     return (0, d.x6)(t)
         ? null
@@ -104,7 +104,7 @@ t.Z = (e) => {
                                       selectedVariantIndex: n
                                   }),
                                   isGift: !0,
-                                  giftingOrigin: h.Wt.SHOP_PAGE,
+                                  giftingOrigin: p.Wt.SHOP_PAGE,
                                   analyticsLocations: I,
                                   returnRef: b,
                                   variantsReturnStyle: T,

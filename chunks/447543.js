@@ -207,7 +207,7 @@ t.Z = {
                 url: q.ANM.INSTANT_INVITES(e),
                 body: t,
                 context: { location: n },
-                rejectWithError: !1
+                rejectWithError: !0
             });
             return (
                 d.Z.dispatch({

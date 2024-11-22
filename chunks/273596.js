@@ -50,8 +50,8 @@ let A = Object.freeze({
     });
 function L(e) {
     let { loadId: t, onGuildCardSeen: n, onGuildCardClick: l } = e,
-        { guildIds: o, loading: m, searchResultsQuery: T, loadMore: L, searchCategoryId: y, isBlockedSearchQuery: O } = (0, _.f)({ loadId: t }),
-        P = 0 === o.length && !m,
+        { guildIds: o, loading: m, searchResultsQuery: T, loadMore: L, searchCategoryId: y, isBlockedSearchQuery: P } = (0, _.f)({ loadId: t }),
+        O = 0 === o.length && !m,
         R = r.useContext(u.AnalyticsContext),
         [j, D] = r.useState((0, f.PM)()),
         [M, w] = r.useState(!0),
@@ -62,11 +62,11 @@ function L(e) {
         V = r.useCallback(
             (e) => {
                 var t;
-                if (O) return;
+                if (P) return;
                 let n = null === (t = H.current) || void 0 === t ? void 0 : t.getScrollerState();
                 null != n && null != e && n.scrollHeight < e.height && L();
             },
-            [O, L]
+            [P, L]
         ),
         F = (0, d.y)((e) => {
             let t = null == e ? void 0 : e.getBoundingClientRect();
@@ -95,7 +95,7 @@ function L(e) {
             });
         }, [R, o, t, y, j, T]);
     let z = r.useCallback((e) => n(e, y), [n, y]),
-        W = r.useMemo(() => (m && !O ? [o.length, 0] : [o.length]), [o.length, O, m]),
+        W = r.useMemo(() => (m && !P ? [o.length, 0] : [o.length]), [o.length, P, m]),
         Y = r.useCallback(
             (e, n, r) => {
                 switch (e) {
@@ -107,14 +107,14 @@ function L(e) {
                                     paddingLeft: n.left,
                                     width: n.width - 16
                                 },
-                                className: a()({ [S.heading]: !M || P }),
+                                className: a()({ [S.heading]: !M || O }),
                                 children: [
                                     !M &&
                                         (0, i.jsxs)('div', {
                                             className: S.headingFilters,
                                             children: [(0, i.jsx)(I.Z, { loadId: t }), (0, i.jsx)(v.Z, { loadId: t })]
                                         }),
-                                    (P || O) && (0, i.jsx)(C.Z, { loadId: t })
+                                    (O || P) && (0, i.jsx)(C.Z, { loadId: t })
                                 ]
                             },
                             r
@@ -123,21 +123,21 @@ function L(e) {
                         return (0, i.jsx)(c.Spinner, { className: a()(S.spinner, { [S.spinnerWithSidebar]: M }) }, r);
                 }
             },
-            [O, P, M, t]
+            [P, O, M, t]
         ),
         K = r.useCallback(
             (e) => {
                 switch (e) {
                     case 0:
                         let t = M ? 16 : 50;
-                        return P ? t + 448 : t;
+                        return O ? t + 448 : t;
                     case 1:
                         return 120;
                     default:
                         throw Error('[getSectionHeight] Failed for section: '.concat(e));
                 }
             },
-            [P, M]
+            [O, M]
         ),
         q = r.useCallback(
             (e, t) => {
@@ -217,7 +217,7 @@ function L(e) {
                 });
         }, []);
     let $ = r.useMemo(() => {
-            if (!O)
+            if (!P)
                 return (0, s.debounce)(
                     () => {
                         var e;
@@ -229,7 +229,7 @@ function L(e) {
                     100,
                     { leading: !0 }
                 );
-        }, [O, L]),
+        }, [P, L]),
         ee = M ? A : x;
     return (0, i.jsx)('div', {
         className: S.container,

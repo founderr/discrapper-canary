@@ -10,14 +10,14 @@ var a = n(481060),
     r = n(299206),
     o = n(810568),
     s = n(168524),
-    c = n(37258),
-    u = n(26033),
+    u = n(37258),
+    c = n(26033),
     d = n(388032),
     m = n(301698);
 function h(e) {
     var t;
-    let { user: n, guildId: h, channel: x, entry: p, onSelect: C, disableGameProfileLinks: g } = e,
-        v = (0, c.Z)({
+    let { user: n, guildId: h, channel: x, entry: C, onSelect: p, disableGameProfileLinks: v } = e,
+        g = (0, u.Z)({
             userId: n.id,
             guildId: h,
             channelId: null == x ? void 0 : x.id
@@ -26,13 +26,13 @@ function h(e) {
             id: n.id,
             label: d.intl.string(d.t['/AXYnJ'])
         }),
-        I = (0, u.dX)(p),
+        I = (0, c.dX)(C),
         j = (0, s.Z)({
             location: 'ContentPopoutContextMenu',
-            applicationId: I && !0 !== g ? (null === (t = p.extra) || void 0 === t ? void 0 : t.application_id) : void 0,
+            applicationId: I && !0 !== v ? (null === (t = C.extra) || void 0 === t ? void 0 : t.application_id) : void 0,
             source: o.m1.ActivityCardContextMenu,
             trackEntryPointImpression: !0,
-            sourceUserId: p.author_id
+            sourceUserId: C.author_id
         });
     return (0, l.jsx)(a.Popout, {
         align: 'top',
@@ -46,12 +46,12 @@ function h(e) {
                     (0, i.Zy)(), t();
                 },
                 'aria-label': d.intl.string(d.t.liqwPD),
-                onSelect: C,
+                onSelect: p,
                 children: (0, l.jsxs)(l.Fragment, {
                     children: [
                         (0, l.jsxs)(a.MenuGroup, {
                             children: [
-                                v,
+                                g,
                                 null != j &&
                                     (0, l.jsx)(a.MenuItem, {
                                         id: 'game-profile',

@@ -1,94 +1,94 @@
-n.d(t, {
+n.d(e, {
     Z: function () {
         return _;
     }
 });
-var a = n(200651),
-    i = n(192379),
-    o = n(120356),
-    s = n.n(o),
-    r = n(481060),
-    l = n(511010),
+var i = n(200651),
+    s = n(192379),
+    a = n(120356),
+    r = n.n(a),
+    l = n(481060),
+    o = n(511010),
     d = n(922611),
     c = n(126743),
     u = n(444812);
-function _(e) {
-    let { headerText: t, secondaryHeaderText: n, descriptionText: o, infoRows: _, onDismissAndStay: m, onDismissAndLeave: x, leaveButtonText: h, stayButtonText: g, transitionState: f, impression: j } = e,
-        p = (0, d.Do)({ location: 'blocked_user_warning_modal' });
-    return (0, a.jsxs)(r.ModalRoot, {
-        transitionState: f,
-        impression: j,
+function _(t) {
+    let { headerText: e, secondaryHeaderText: n, descriptionText: a, infoRows: _, onDismissAndStay: A, onDismissAndLeave: I, leaveButtonText: S, stayButtonText: h, transitionState: m, impression: g } = t,
+        x = (0, d.Do)({ location: 'blocked_user_warning_modal' });
+    return (0, i.jsxs)(l.ModalRoot, {
+        transitionState: m,
+        impression: g,
         children: [
-            (0, a.jsx)('img', {
+            (0, i.jsx)('img', {
                 alt: '',
                 className: c.headerImage,
                 src: u
             }),
-            (0, a.jsxs)(r.ModalHeader, {
+            (0, i.jsxs)(l.ModalHeader, {
                 separator: !1,
                 className: c.header,
                 children: [
-                    (0, a.jsxs)(r.Heading, {
-                        variant: p ? 'heading-xl/bold' : 'heading-lg/bold',
-                        color: p ? 'header-primary' : void 0,
+                    (0, i.jsxs)(l.Heading, {
+                        variant: x ? 'heading-xl/bold' : 'heading-lg/bold',
+                        color: x ? 'header-primary' : void 0,
                         className: c.title,
                         children: [
-                            t,
+                            e,
                             null != n &&
-                                (0, a.jsxs)(a.Fragment, {
-                                    children: [(0, a.jsx)('br', {}), n]
+                                (0, i.jsxs)(i.Fragment, {
+                                    children: [(0, i.jsx)('br', {}), n]
                                 })
                         ]
                     }),
-                    null != o &&
-                        (0, a.jsx)(r.Text, {
+                    null != a &&
+                        (0, i.jsx)(l.Text, {
                             variant: 'text-md/medium',
                             color: 'header-secondary',
-                            children: o
+                            children: a
                         })
                 ]
             }),
-            (0, a.jsxs)(r.ModalContent, {
+            (0, i.jsxs)(l.ModalContent, {
                 className: c.content,
                 children: [
-                    (0, a.jsx)('div', {
+                    (0, i.jsx)('div', {
                         className: c.infoGroup,
-                        children: _.map((e, t) =>
-                            (0, a.jsxs)(
-                                i.Fragment,
+                        children: _.map((t, e) =>
+                            (0, i.jsxs)(
+                                s.Fragment,
                                 {
                                     children: [
-                                        (0, a.jsxs)('div', {
-                                            className: s()(c.infoRow, e.className),
+                                        (0, i.jsxs)('div', {
+                                            className: r()(c.infoRow, t.className),
                                             children: [
-                                                e.icon,
-                                                (0, a.jsx)(r.Text, {
+                                                t.icon,
+                                                (0, i.jsx)(l.Text, {
                                                     variant: 'text-md/medium',
-                                                    children: e.text
+                                                    children: t.text
                                                 })
                                             ]
                                         }),
-                                        t < _.length - 1 && (0, a.jsx)(l.Z, {})
+                                        e < _.length - 1 && (0, i.jsx)(o.Z, {})
                                     ]
                                 },
-                                t
+                                e
                             )
                         )
                     }),
-                    (0, a.jsxs)('div', {
+                    (0, i.jsxs)('div', {
                         className: c.buttonGroup,
                         children: [
-                            (0, a.jsx)(r.Button, {
-                                color: r.Button.Colors.PRIMARY,
-                                onClick: m,
-                                children: g
-                            }),
-                            (0, a.jsx)(r.Button, {
-                                color: r.Button.Colors.BRAND,
-                                size: r.Button.Sizes.MEDIUM,
-                                onClick: x,
-                                className: c.leave,
+                            (0, i.jsx)(l.Button, {
+                                color: l.Button.Colors.PRIMARY,
+                                onClick: A,
                                 children: h
+                            }),
+                            (0, i.jsx)(l.Button, {
+                                color: l.Button.Colors.BRAND,
+                                size: l.Button.Sizes.MEDIUM,
+                                onClick: I,
+                                className: c.leave,
+                                children: S
                             })
                         ]
                     })

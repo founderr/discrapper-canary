@@ -9,8 +9,8 @@ var r = n(200651),
     d = n(704215),
     u = n(952265),
     m = n(481060),
-    h = n(150063),
-    p = n(434650),
+    p = n(150063),
+    h = n(434650),
     f = n(100527),
     g = n(906732),
     C = n(702486),
@@ -122,9 +122,9 @@ function ei(e) {
 function es(e) {
     let { category: t, isPremiumUser: n, initialItemCardRef: i, isGiftEasterEggEnabled: l, setIsGiftEasterEggEnabled: o, showEasterEggToggle: c, isFullScreen: d } = e,
         u = a.useRef(10 + 70 * Math.random()),
-        [h, f] = a.useState(!1),
+        [p, f] = a.useState(!1),
         g = (0, q.M7)(t.skuId),
-        C = (0, p.O)(
+        C = (0, h.O)(
             (e) => {
                 f(e && null != g);
             },
@@ -158,7 +158,7 @@ function es(e) {
                 null != t.unpublishedAt &&
                 (0, r.jsx)(R.$, {
                     unpublishedAt: t.unpublishedAt,
-                    isVisible: h,
+                    isVisible: p,
                     displayOptions: g,
                     isFullScreen: d
                 })
@@ -170,8 +170,8 @@ t.default = function (e) {
     let { isFullScreen: n = !0 } = e;
     (0, x.z)(v.f);
     let i = (0, Z.u)('CollectiblesShop'),
-        { analyticsSource: l, analyticsLocations: p } = (0, c.cj)([L.Z], () => L.Z.getAnalytics()),
-        { analyticsLocations: _ } = (0, g.ZP)([...p, f.Z.COLLECTIBLES_SHOP]),
+        { analyticsSource: l, analyticsLocations: h } = (0, c.cj)([L.Z], () => L.Z.getAnalytics()),
+        { analyticsLocations: _ } = (0, g.ZP)([...h, f.Z.COLLECTIBLES_SHOP]),
         { sessionId: k, scrollerRef: w, scrollHandler: R } = (0, C._)(X.rMx.COLLECTIBLES_SHOP_SCROLLED, l),
         { feedState: F, catalogState: U, transitionToCatalog: z, transitionToFeed: K } = (0, A.B)(i, w),
         [q, ea] = a.useState(!1),
@@ -179,8 +179,8 @@ t.default = function (e) {
         [eo, ec] = a.useState(),
         [ed, eu] = a.useState(),
         em = (0, c.e7)([j.Z], () => j.Z.getLayers().includes(X.S9g.COLLECTIBLES_SHOP)),
-        eh = (0, u.f9)(),
-        { onClose: ep } = (0, M.Db)(),
+        ep = (0, u.f9)(),
+        { onClose: eh } = (0, M.Db)(),
         ef = (0, c.e7)([E.default], () => E.default.getCurrentUser()),
         eg = T.ZP.canUseCollectibles(ef),
         { categories: eC, isFetchingCategories: eb, fetchCategoriesError: ev, fetchPurchasesError: ex, claimError: e_, refreshCategories: ek } = (0, P.Z)(),
@@ -223,7 +223,7 @@ t.default = function (e) {
             });
     }, [eN]),
         a.useEffect(() => {
-            !n && (0, h.Y)(X.Z5c.COLLECTIBLES_SHOP);
+            !n && (0, p.Y)(X.Z5c.COLLECTIBLES_SHOP);
         }, [n]),
         a.useEffect(
             () => () => {
@@ -235,12 +235,12 @@ t.default = function (e) {
             [eC]
         ),
         a.useEffect(() => {
-            if (!n || em || eh) return;
+            if (!n || em || ep) return;
             let e = (e) => {
-                if (e.key === et.mR.Escape) ep();
+                if (e.key === et.mR.Escape) eh();
             };
             return window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e);
-        }, [n, em, eh, ep]);
+        }, [n, em, ep, eh]);
     let eB = a.useCallback(() => {
             ek();
         }, [ek]),
@@ -299,7 +299,7 @@ t.default = function (e) {
                                         (0, r.jsx)(V.I, {
                                             isFullScreen: n,
                                             isLayer: em,
-                                            onClose: ep,
+                                            onClose: eh,
                                             isCatalogView: !1,
                                             transparent: !0
                                         }),
@@ -320,7 +320,7 @@ t.default = function (e) {
                                         (0, r.jsx)(V.I, {
                                             isFullScreen: n,
                                             isLayer: em,
-                                            onClose: ep,
+                                            onClose: eh,
                                             isCatalogView: i,
                                             transparent: i,
                                             handleTransition: K

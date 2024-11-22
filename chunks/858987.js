@@ -41,7 +41,7 @@ function T(e, n) {
 }
 function g(e) {
     var n;
-    let { legalTermsNodeRef: t, invoiceError: i, planError: a, disablePurchase: d, flashLegalTerms: p, isSubmitting: b, premiumSubscription: g, isGift: y, planGroup: E, isPrepaid: I, isTrial: x, makePurchase: _, needsPaymentSource: N, inReverseTrial: C, onNext: R } = e,
+    let { legalTermsNodeRef: t, invoiceError: i, planError: a, disablePurchase: d, flashLegalTerms: p, isSubmitting: b, premiumSubscription: g, isGift: y, planGroup: E, isPrepaid: I, isTrial: x, makePurchase: N, needsPaymentSource: _, inReverseTrial: C, onNext: R } = e,
         { application: S, selectedPlan: M, hasAcceptedTerms: j, purchaseType: L, paymentSourceId: k, activeSubscription: U, devShelfFetchState: O } = (0, c.usePaymentContext)(),
         B = A({
             purchaseType: L,
@@ -59,7 +59,7 @@ function g(e) {
             disabled: !0,
             children: B
         });
-    if (N)
+    if (_)
         return (0, r.jsx)(l.Tooltip, {
             text: v.intl.string(v.t.L7jbQU),
             children: (e) =>
@@ -89,7 +89,7 @@ function g(e) {
         return (0, r.jsxs)(l.ShinyButton, {
             innerClassName: h.innerButton,
             'data-testid': j ? 'purchase' : 'submitButton',
-            onClick: j ? _ : () => T(t, p),
+            onClick: j ? N : () => T(t, p),
             color: l.Button.Colors.GREEN,
             submitting: b,
             children: [
@@ -126,7 +126,7 @@ function g(e) {
     else
         return (0, r.jsx)(l.Button, {
             'data-testid': 'purchase',
-            onClick: _,
+            onClick: N,
             color: l.Button.Colors.GREEN,
             submitting: b,
             children: B

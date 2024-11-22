@@ -15,8 +15,8 @@ var l = t(442837),
     u = t(681837),
     f = t(91433),
     m = t(502762),
-    x = t(530),
-    I = t(740628),
+    I = t(530),
+    x = t(740628),
     p = t(643518),
     h = t(228168),
     v = t(981631),
@@ -31,11 +31,11 @@ function Z(e) {
         }),
         P = t.id === Z.id,
         { dimissibleUpsellsEnabled: C } = (0, c.u)({ location: 'UserProfileModalBody' }),
-        A = (0, s.I5)(Z);
+        L = (0, s.I5)(Z);
     return (0, i.jsxs)('div', {
         className: g.body,
         children: [
-            (0, i.jsx)(x.Z, {
+            (0, i.jsx)(I.Z, {
                 user: t,
                 profileType: h.y0.FULL_SIZE,
                 nickname: r.ZP.getName(null == j ? void 0 : j.guildId, _, t),
@@ -62,12 +62,12 @@ function Z(e) {
             C &&
                 P &&
                 (0, i.jsx)(d.Z, {
-                    isPremiumUser: A,
+                    isPremiumUser: L,
                     onInteraction: S
                 }),
             (0, i.jsx)(m.Z.Overlay, {
                 className: g.overlay,
-                children: (0, i.jsx)(I.Z, {
+                children: (0, i.jsx)(x.Z, {
                     user: t,
                     currentUser: Z,
                     displayProfile: j,

@@ -16,8 +16,8 @@ var r = n(200651),
     d = n(607070),
     u = n(906732),
     m = n(70097),
-    h = n(963249),
-    p = n(594174),
+    p = n(963249),
+    h = n(594174),
     f = n(451478),
     g = n(754347),
     C = n(74538),
@@ -36,7 +36,7 @@ let N = (0, b.IC)(96),
         let { category: t } = e,
             { analyticsLocations: n } = (0, u.ZP)(),
             i = a.useRef(null),
-            s = (0, o.e7)([p.default], () => p.default.getCurrentUser());
+            s = (0, o.e7)([h.default], () => h.default.getCurrentUser());
         return C.ZP.canUseCollectibles(s)
             ? (0, r.jsx)(r.Fragment, { children: t.summary })
             : (0, r.jsx)(r.Fragment, {
@@ -46,7 +46,7 @@ let N = (0, b.IC)(96),
                               innerRef: i,
                               className: T.getPremiumHook,
                               onClick: () => {
-                                  (0, h.Z)({
+                                  (0, p.Z)({
                                       subscriptionTier: E.Si.TIER_2,
                                       analyticsLocations: n,
                                       returnRef: i
@@ -81,21 +81,21 @@ let N = (0, b.IC)(96),
 function L(e) {
     var t, n, a;
     let { category: i, className: u, hideLimitedTimeBadge: m = !1 } = e,
-        { backgroundColors: h } = (0, v.Z)(i.styles),
-        p = (0, j.ZS)(i.skuId),
+        { backgroundColors: p } = (0, v.Z)(i.styles),
+        h = (0, j.ZS)(i.skuId),
         C = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
         E = (0, o.e7)([f.Z], () => f.Z.isFocused());
     if (i.skuId === l.T.CHANCE) return (0, r.jsx)(k.O, { category: i });
-    let S = !!(null == p ? void 0 : p.showDarkBannerText),
-        L = null == p ? void 0 : p.animatedBanner;
+    let S = !!(null == h ? void 0 : h.showDarkBannerText),
+        L = null == h ? void 0 : h.animatedBanner;
     return (0, r.jsxs)(x.Z, {
         asset: i.banner,
         className: s()(T.shopBanner, u),
         style:
-            null != h
+            null != p
                 ? {
-                      background: ''.concat((0, I.nH)(h), ' border-box border-box'),
-                      outlineColor: h.border.toHslString()
+                      background: ''.concat((0, I.nH)(p), ' border-box border-box'),
+                      outlineColor: p.border.toHslString()
                   }
                 : void 0,
         children: [

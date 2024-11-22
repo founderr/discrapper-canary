@@ -16,7 +16,7 @@ var i = t(697927),
 function f(e) {
     var n, t;
     let { user: f, currentUser: m } = e,
-        { live: x, recent: I, stream: p } = (0, o.Z)(f.id),
+        { live: I, recent: x, stream: p } = (0, o.Z)(f.id),
         h = null === (n = (0, i.Z)(f.id, f.id !== (null == m ? void 0 : m.id)).mutualFriends) || void 0 === n ? void 0 : n.length,
         v = null === (t = (0, l.Z)(f.id, f.id !== (null == m ? void 0 : m.id)).mutualGuilds) || void 0 === t ? void 0 : t.length,
         g = f.id === (null == m ? void 0 : m.id),
@@ -32,7 +32,7 @@ function f(e) {
             }
         ];
     return (
-        (x.length > 0 || (g && I.length > 0) || null != p) &&
+        (I.length > 0 || (g && x.length > 0) || null != p) &&
             _.push({
                 section: a.oh.ACTIVITY,
                 text: u.intl.string(u.t.chq59f)

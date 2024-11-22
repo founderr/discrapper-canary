@@ -1,6 +1,6 @@
 n.d(t, {
     SO: function () {
-        return v;
+        return g;
     }
 }),
     n(653041),
@@ -14,28 +14,28 @@ n(220082);
 var o = n(693824),
     s = n(690725);
 n(706454), n(594174);
-var c = n(70956),
-    u = n(709054),
+var u = n(70956),
+    c = n(709054),
     d = n(561308);
 n(206295);
 var m = n(737583);
 n(438226);
 var h = n(169040),
     x = n(388032);
-let p = (e, t) => ({
+let C = (e, t) => ({
         AvatarImage1: e[0],
         ...(null != e[1] && { AvatarImage2: e[1] }),
         ...(null != e[2] && { AvatarImage3: e[2] }),
         ...(null != t && { ApplicationImage: t })
     }),
-    C = (e, t) => {
+    p = (e, t) => {
         let n = [
                 {
                     iconPath: h.NM,
                     text: t
                 }
             ],
-            l = u.default.extractTimestamp(e.extra.application_id);
+            l = c.default.extractTimestamp(e.extra.application_id);
         if (
             (7 >= a()().diff(a()(l), 'days') &&
                 n.push({
@@ -79,7 +79,7 @@ let p = (e, t) => ({
         if ((0, d.Jd)(e)) {
             let t = (0, d.yA)(e);
             if (null != t) {
-                let e = x.intl.formatToPlainString(x.t.C0Axoa, { hours: Math.round(t / c.Z.Seconds.HOUR) });
+                let e = x.intl.formatToPlainString(x.t.C0Axoa, { hours: Math.round(t / u.Z.Seconds.HOUR) });
                 return [
                     {
                         iconPath: h.eF,
@@ -90,9 +90,9 @@ let p = (e, t) => ({
         }
         return n;
     },
-    g = (e, t) => {
+    v = (e, t) => {
         let { timestamp: n, colors: l, description: a, entry: i, numAvatars: s } = t,
-            c = l.map((e, t) => ({
+            u = l.map((e, t) => ({
                 color: e,
                 stop: t
             }));
@@ -104,7 +104,7 @@ let p = (e, t) => ({
             4
         ),
             e.drawRoundedGradientRect(
-                c,
+                u,
                 {
                     x: 0,
                     y: h.bg
@@ -169,22 +169,22 @@ let p = (e, t) => ({
                 },
                 !0
             );
-        let u = C(i, n);
+        let c = p(i, n);
         (0, m.J)({
             canvas: e,
-            badges: u,
+            badges: c,
             startPosition: h.Iq,
             maxWidth: h.kC
         });
     },
-    v = async (e) => {
-        let { applicationImageSrc: t, entry: n, avatarSrcs: l, description: a, timestamp: i, colors: r, channelId: c } = e,
-            u = n.extra.game_name,
-            d = p(l, t);
+    g = async (e) => {
+        let { applicationImageSrc: t, entry: n, avatarSrcs: l, description: a, timestamp: i, colors: r, channelId: u } = e,
+            c = n.extra.game_name,
+            d = C(l, t);
         return await (0, s.f)({
             assetsToLoad: d,
             drawImage: (e) =>
-                g(e, {
+                v(e, {
                     timestamp: i,
                     colors: r,
                     description: a,
@@ -194,9 +194,9 @@ let p = (e, t) => ({
             exportConfigs: {
                 format: o.kH.CloudUpload,
                 quality: 1,
-                fileName: 'user-reacting-to-'.concat(u, '.png').toLowerCase(),
+                fileName: 'user-reacting-to-'.concat(c, '.png').toLowerCase(),
                 fileType: 'png',
-                channelId: c
+                channelId: u
             }
         });
     };

@@ -28,8 +28,8 @@ t.Z = function () {
     let { onScroll: t, scrollPosition: n, resetScrollPosition: b } = (0, d.M)(),
         Z = (0, E.Xh)(),
         L = (null == Z ? void 0 : Z.type) === E.m_.CATEGORY ? Z.categoryId : void 0,
-        { applicationId: y, section: O } = (null == Z ? void 0 : Z.type) === E.m_.APPLICATION ? Z : {},
-        { query: P, categoryId: R } = (null == Z ? void 0 : Z.type) === E.m_.SEARCH ? Z : {},
+        { applicationId: y, section: P } = (null == Z ? void 0 : Z.type) === E.m_.APPLICATION ? Z : {},
+        { query: O, categoryId: R } = (null == Z ? void 0 : Z.type) === E.m_.SEARCH ? Z : {},
         j = (0, l.e7)([o.Z], () => o.Z.getCategories()),
         D = r.useMemo(() => [(0, c.KQ)(), ...j], [j]),
         M = r.useMemo(() => D.find((e) => e.id === Number(R)), [D, R]),
@@ -43,7 +43,7 @@ t.Z = function () {
         r.useEffect(() => E.aQ.setState({ lastItem: Z }), [Z]);
     let G = null != y,
         B = (null == Z ? void 0 : Z.type) === E.m_.SEARCH,
-        { searchQuery: H, onSearchTextChange: V, onClearSearch: F, onSearchSubmit: z } = (0, f.M)({ initialQuery: null != P ? P : '' }),
+        { searchQuery: H, onSearchTextChange: V, onClearSearch: F, onSearchSubmit: z } = (0, f.M)({ initialQuery: null != O ? O : '' }),
         {
             searchBarState: W,
             onTabsAvailableWidthChange: Y,
@@ -85,7 +85,7 @@ t.Z = function () {
                                 variant: 'heading-lg/semibold',
                                 color: 'header-primary',
                                 className: x.alternateHeader,
-                                children: null != P && '' !== P ? A.intl.formatToPlainString(A.t.zHdzqa, { query: P }) : A.intl.formatToPlainString(A.t.Qhj5Bg, { categoryName: null !== (e = null == M ? void 0 : M.name) && void 0 !== e ? e : A.intl.string(A.t.E407b2) })
+                                children: null != O && '' !== O ? A.intl.formatToPlainString(A.t.zHdzqa, { query: O }) : A.intl.formatToPlainString(A.t.Qhj5Bg, { categoryName: null !== (e = null == M ? void 0 : M.name) && void 0 !== e ? e : A.intl.string(A.t.E407b2) })
                             })
                           : (0, i.jsx)(m.Z, {
                                 tabs: w,
@@ -111,7 +111,7 @@ t.Z = function () {
                       onScroll: t,
                       onSelectApplication: Q,
                       applicationId: y,
-                      initialTab: O
+                      initialTab: P
                   })
                 : B
                   ? (0, i.jsx)(T.Z, { onSelectApplication: Q })

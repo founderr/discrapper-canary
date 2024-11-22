@@ -133,7 +133,7 @@ async function g(e, t) {
                 brand_color_secondary: t.brandSecondaryColor,
                 wildcard_descriptors: t.wildcardDescriptors
             },
-            rejectWithError: !1
+            rejectWithError: !0
         });
         return i.Z.dispatch({ type: 'CLAN_SETTINGS_SUBMIT_SUCCESS' }), a.body;
     } catch (e) {
@@ -150,7 +150,7 @@ async function E(e) {
     try {
         await r.tn.post({
             url: c.ANM.DISABLE_CLAN(e),
-            rejectWithError: !1
+            rejectWithError: !0
         });
     } catch (e) {
         throw e;

@@ -11,8 +11,8 @@ var i = n(200651),
     o = n(782568),
     s = n(31336),
     c = n(906467),
-    u = n(63063),
-    d = n(665149),
+    d = n(63063),
+    u = n(665149),
     m = n(388032);
 function h() {
     let e = (0, l.e7)([c.Z], () => c.Z.isDeveloper),
@@ -69,7 +69,7 @@ function h() {
                                     id: 'staff-help-center',
                                     label: 'Go to Help Center',
                                     icon: a.WindowLaunchIcon,
-                                    action: () => (0, o.Z)(u.w)
+                                    action: () => (0, o.Z)(d.w)
                                 })
                             ]
                         })
@@ -80,7 +80,7 @@ function h() {
                 }),
             children: (e, t) => {
                 let { isShown: n } = t;
-                return (0, i.jsx)(d.JO, {
+                return (0, i.jsx)(u.JO, {
                     ...e,
                     icon: a.BugIcon,
                     'aria-label': m.intl.string(m.t.cqEoj4),

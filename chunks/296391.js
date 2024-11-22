@@ -14,8 +14,8 @@ var i = t(200651),
     u = t(151545),
     f = t(527790),
     m = t(493043),
-    x = t(981631),
-    I = t(921944),
+    I = t(981631),
+    x = t(921944),
     p = t(388032),
     h = t(505865);
 function v(e) {
@@ -27,7 +27,7 @@ function v(e) {
         l.useEffect(() => {
             if (!!b && !E)
                 (0, s.EW)(o.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP, {
-                    dismissAction: I.L.AUTO_DISMISS,
+                    dismissAction: x.L.AUTO_DISMISS,
                     forceTrack: !0
                 });
         }, [b, E]),
@@ -70,7 +70,7 @@ function v(e) {
                                 (0, i.jsx)(
                                     r.Anchor,
                                     {
-                                        href: c.Z.getArticleURL(x.BhN.ACTIVITY_STATUS_SETTINGS),
+                                        href: c.Z.getArticleURL(I.BhN.ACTIVITY_STATUS_SETTINGS),
                                         children: e
                                     },
                                     n

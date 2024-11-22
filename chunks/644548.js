@@ -5,23 +5,23 @@ var l = n(200651),
     r = n(70956),
     o = n(5192),
     s = n(379357),
-    c = n(561308),
-    u = n(919394),
+    u = n(561308),
+    c = n(919394),
     d = n(206295),
     m = n(227172),
     h = n(555672),
     x = n(297781),
-    p = n(591853),
-    C = n(410441),
-    g = n(797342),
-    v = n(388032);
+    C = n(591853),
+    p = n(410441),
+    v = n(797342),
+    g = n(388032);
 let f = (e, t, n, l) => {
         let a = (function (e) {
-                if (e === i._.WEEK) return v.t['7TXfc3'];
+                if (e === i._.WEEK) return g.t['7TXfc3'];
             })(l),
             r = o.ZP.getName(t.guild_id, t.id, n),
             s = e.extra.game_name;
-        return v.intl
+        return g.intl
             .formatToMarkdownString(a, {
                 gameName: s,
                 userName: r
@@ -29,48 +29,48 @@ let f = (e, t, n, l) => {
             .replaceAll('*', '');
     },
     I = (e, t) =>
-        v.intl.formatToPlainString(v.t.tAwI1t, {
+        g.intl.formatToPlainString(g.t.tAwI1t, {
             username: t.username,
             activity: e.extra.game_name
         });
 t.Z = (e) => {
     let { channel: t, entry: n, disableGameProfileLinks: i, onReaction: o, onVoiceChannelPreview: j } = e,
-        { largeImage: P } = (0, s.rv)({ entry: n }),
-        { user: Z, details: L, appName: y } = (0, g.n)(n),
-        { primaryColor: T, secondaryColor: N } = (0, d.Z)(null == P ? void 0 : P.src),
-        _ = (0, c.yA)(n),
-        E = (0, c.Nq)(n),
-        S = a.useCallback(
+        { largeImage: Z } = (0, s.rv)({ entry: n }),
+        { user: P, details: L, appName: T } = (0, v.n)(n),
+        { primaryColor: y, secondaryColor: N } = (0, d.Z)(null == Z ? void 0 : Z.src),
+        _ = (0, u.yA)(n),
+        S = (0, u.Nq)(n),
+        A = a.useCallback(
             (e) => {
-                if (null != t && null != Z && null != _ && null != E && !!(0, h.qy)(E))
-                    return (0, u.SO)({
+                if (null != t && null != P && null != _ && null != S && !!(0, h.qy)(S))
+                    return (0, c.SO)({
                         entry: n,
-                        applicationImageSrc: null == P ? void 0 : P.src,
-                        avatarSrcs: [Z.getAvatarURL(null == t ? void 0 : t.guild_id, 128)],
-                        description: f(n, t, Z, E),
-                        timestamp: v.intl.formatToPlainString(v.t.YL7UEx, { hours: Math.round(_ / r.Z.Seconds.HOUR) }),
-                        colors: [T, N],
+                        applicationImageSrc: null == Z ? void 0 : Z.src,
+                        avatarSrcs: [P.getAvatarURL(null == t ? void 0 : t.guild_id, 128)],
+                        description: f(n, t, P, S),
+                        timestamp: g.intl.formatToPlainString(g.t.YL7UEx, { hours: Math.round(_ / r.Z.Seconds.HOUR) }),
+                        colors: [y, N],
                         channelId: e
                     });
             },
-            [null == P ? void 0 : P.src, t, _, n, T, E, N, Z]
+            [null == Z ? void 0 : Z.src, t, _, n, y, S, N, P]
         );
-    if (null == Z || null == _ || null == E || !(0, h.qy)(E)) return null;
-    let A = null != n.extra.platform ? m.v[n.extra.platform] : null;
-    return (0, l.jsxs)(p.yR, {
+    if (null == P || null == _ || null == S || !(0, h.qy)(S)) return null;
+    let E = null != n.extra.platform ? m.v[n.extra.platform] : null;
+    return (0, l.jsxs)(C.yR, {
         children: [
-            (0, l.jsx)(p.wG, {
+            (0, l.jsx)(C.wG, {
                 channel: t,
                 headerIcons:
-                    null == A
+                    null == E
                         ? null
-                        : (0, l.jsx)(C.Z, {
-                              Icon: A,
-                              'aria-label': v.intl.string(v.t.YR4cHB)
+                        : (0, l.jsx)(p.Z, {
+                              Icon: E,
+                              'aria-label': g.intl.string(g.t.YR4cHB)
                           }),
                 entry: n,
-                userDescription: v.t.rPqqtr,
-                title: y,
+                userDescription: g.t.rPqqtr,
+                title: T,
                 subtitle: L,
                 badges: (0, l.jsx)(x.Gk, {
                     location: x.Gt.POPOUT,
@@ -78,14 +78,14 @@ t.Z = (e) => {
                 }),
                 disableGameProfileLinks: i
             }),
-            (0, l.jsx)(p.St, {
-                children: (0, l.jsx)(p.WT, {
+            (0, l.jsx)(C.St, {
+                children: (0, l.jsx)(C.WT, {
                     onReaction: o,
                     onVoiceChannelPreview: j,
-                    user: Z,
+                    user: P,
                     channel: t,
-                    generateReactionImage: S,
-                    reactionImageAltText: I(n, Z),
+                    generateReactionImage: A,
+                    reactionImageAltText: I(n, P),
                     entry: n
                 })
             })

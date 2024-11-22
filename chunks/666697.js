@@ -29,11 +29,11 @@ t.Z = function (e) {
         null != t && null == b && a.i6(t);
     }, [t, b]);
     let L = null == b ? void 0 : b.storefront_available,
-        [y, O] = r.useState(null != A ? A : C.Wc.ABOUT),
-        P = r.useCallback(
+        [y, P] = r.useState(null != A ? A : C.Wc.ABOUT),
+        O = r.useCallback(
             (e) => {
                 var t;
-                null === (t = x.current) || void 0 === t || t.scrollTo({ to: 0 }), O(C.Wc.ABOUT), n(e);
+                null === (t = x.current) || void 0 === t || t.scrollTo({ to: 0 }), P(C.Wc.ABOUT), n(e);
             },
             [n]
         );
@@ -64,7 +64,7 @@ t.Z = function (e) {
         }, [y, b]),
         D = r.useCallback(
             (e) => {
-                O(e), e === C.Wc.ABOUT ? (0, p.Gp)(v.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(t)) : (0, p.Gp)(v.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t, e));
+                P(e), e === C.Wc.ABOUT ? (0, p.Gp)(v.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(t)) : (0, p.Gp)(v.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t, e));
             },
             [t]
         ),
@@ -108,7 +108,7 @@ t.Z = function (e) {
                                     j,
                                     (0, i.jsx)(E.Z, {
                                         application: b,
-                                        onSelectApplication: P
+                                        onSelectApplication: O
                                     })
                                 ]
                             }),

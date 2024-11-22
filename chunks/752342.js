@@ -16,8 +16,8 @@ var l = t(481060),
     u = t(648052),
     f = t(867176),
     m = t(438163),
-    x = t(681837),
-    I = t(502762),
+    I = t(681837),
+    x = t(502762),
     p = t(530),
     h = t(871604),
     v = t(952124),
@@ -31,18 +31,18 @@ var l = t(481060),
     S = t(388032),
     T = t(272216);
 function y(e) {
-    let { user: n, currentUser: t, guildId: y, channelId: P, messageId: C, roleId: A, sessionId: L, initialSection: O, initialSubsection: M, transitionState: R, onClose: U, sourceAnalyticsLocations: B = [] } = e,
+    let { user: n, currentUser: t, guildId: y, channelId: P, messageId: C, roleId: L, sessionId: A, initialSection: O, initialSubsection: M, transitionState: R, onClose: U, sourceAnalyticsLocations: B = [] } = e,
         F = y === N.ME ? void 0 : y,
         D = (0, a.ZP)(n.id, F),
         { analyticsLocations: G } = (0, r.ZP)([...B, o.Z.SIMPLIFIED_PROFILE_MODAL]),
         w = (0, c.ZB)({
             layout: 'SIMPLIFIED_MODAL',
             userId: n.id,
-            sourceSessionId: L,
+            sourceSessionId: A,
             guildId: F,
             channelId: P,
             messageId: C,
-            roleId: A
+            roleId: L
         }),
         k = (0, b.Z)(n);
     return (0, i.jsx)(r.Gt, {
@@ -54,7 +54,7 @@ function y(e) {
                 className: T.root,
                 hideShadow: !0,
                 'aria-label': S.intl.string(S.t['3N/J2t']),
-                children: (0, i.jsxs)(I.Z, {
+                children: (0, i.jsxs)(x.Z, {
                     user: n,
                     displayProfile: D,
                     profileType: E.y0.FULL_SIZE,
@@ -122,14 +122,14 @@ function y(e) {
                                     nickname: s.ZP.getName(F, P, n),
                                     pronouns: null == D ? void 0 : D.pronouns,
                                     nicknameVariant: 'heading-xl/bold',
-                                    nicknameIcons: (0, i.jsx)(x.Z, { userId: n.id }),
+                                    nicknameIcons: (0, i.jsx)(I.Z, { userId: n.id }),
                                     tags: (0, i.jsx)(u.Z, {
                                         displayProfile: D,
                                         profileType: E.y0.FULL_SIZE,
                                         onClose: U
                                     })
                                 }),
-                                (0, i.jsx)(I.Z.Overlay, {
+                                (0, i.jsx)(x.Z.Overlay, {
                                     className: T.overlay,
                                     children: (0, i.jsx)(j.Z, {
                                         user: n,

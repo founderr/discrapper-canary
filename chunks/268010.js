@@ -41,8 +41,8 @@ t.Z = (e) => {
         y = (0, i.e7)([s.default], () => s.default.getUser(n.author_id)),
         { largeImage: N } = (0, m.rv)({ entry: n }),
         { primaryColor: _, secondaryColor: S } = (0, p.Z)(null == N ? void 0 : N.src),
-        E = (0, i.e7)([o.default], () => o.default.locale),
-        A = (0, C.Z)(j.ABu.CRUNCHYROLL),
+        A = (0, i.e7)([o.default], () => o.default.locale),
+        E = (0, C.Z)(j.ABu.CRUNCHYROLL),
         M = (0, h.ap)(n.extra.media_assets_large_text),
         k = a.useCallback(
             (e) => {
@@ -52,13 +52,13 @@ t.Z = (e) => {
                         mediaImageSrc: null == N ? void 0 : N.src,
                         avatarSrc: y.getAvatarURL(null == t ? void 0 : t.guild_id, 128),
                         description: P(n, t, y),
-                        timestamp: (0, h.yh)(n, E),
+                        timestamp: (0, h.yh)(n, A),
                         episodeDescription: M,
                         colors: [_, S],
                         channelId: e
                     });
             },
-            [t, n, M, E, null == N ? void 0 : N.src, _, S, y]
+            [t, n, M, A, null == N ? void 0 : N.src, _, S, y]
         ),
         R = () => {
             if (null == n.extra.url) return;
@@ -80,7 +80,7 @@ t.Z = (e) => {
                       title: n.extra.media_title,
                       subtitle: n.extra.media_subtitle,
                       headerIcons: (0, l.jsx)(I.Z, {
-                          onClick: A,
+                          onClick: E,
                           Icon: r.CrunchyrollNeutralIcon,
                           'aria-label': Z.intl.string(Z.t.jdJYX1)
                       }),

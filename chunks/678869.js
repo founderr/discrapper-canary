@@ -33,8 +33,8 @@ var l = n(200651),
     N = n(616922),
     _ = n(388032),
     S = n(290500),
-    E = n(738127);
-let A = (e, t, n) => {
+    A = n(738127);
+let E = (e, t, n) => {
     let { artist: l, media: a } = e,
         i = _.t['6iNxrq'],
         r = p.ZP.getName(t.guild_id, t.id, n);
@@ -106,7 +106,7 @@ function k(e) {
                 channel: R,
                 mediaImageSrc: null == V ? void 0 : V.src,
                 artist: D,
-                description: A(
+                description: E(
                     {
                         artist: D,
                         media: G
@@ -135,7 +135,7 @@ function k(e) {
         (X = (0, l.jsx)(d.Z, {
             artists: D,
             canOpen: null != B.sync_id,
-            linkClassName: E.popoutTextSecondary,
+            linkClassName: A.popoutTextSecondary,
             onOpenSpotifyArtist: (e) => {
                 (0, u.d$)(B, z.id, e);
             }

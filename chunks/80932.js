@@ -132,7 +132,7 @@ async function y(e) {
                 roles: i
             },
             oldFormErrors: !0,
-            rejectWithError: !1
+            rejectWithError: !0
         });
     } catch (e) {
         throw new l.Z(e);

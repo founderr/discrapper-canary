@@ -176,7 +176,7 @@ function I() {
         children: [
             (0, i.jsx)(g.H, {
                 header: x.intl.string(x.t['3wRorq']),
-                description: x.intl.format(x.t.dDvZy8, { helpArticle: '' })
+                description: x.intl.format(x.t['0aNQo6'], { helpArticle: '' })
             }),
             (0, i.jsx)(E, {}),
             (0, i.jsx)(f, {})

@@ -331,7 +331,7 @@ async function X(e) {
             },
             retries: 3,
             oldFormErrors: !0,
-            rejectWithError: !1
+            rejectWithError: !0
         }),
         !0
     );
@@ -388,7 +388,7 @@ async function ee(e, t, n) {
                     file: n
                 }
             ],
-            rejectWithError: !1
+            rejectWithError: !0
         });
         return (
             a.Z.dispatch({

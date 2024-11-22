@@ -13,15 +13,15 @@ var r = n(200651),
     d = n(425493),
     u = n(410030),
     m = n(984370),
-    h = n(594174),
-    p = n(471731),
+    p = n(594174),
+    h = n(471731),
     f = n(335131),
     g = n(388032),
     C = n(454801);
 function b(e) {
     let { isFullScreen: t, isLayer: n, onClose: i, isCatalogView: b, handleTransition: v, transparent: x } = e,
         _ = (0, u.ZP)(),
-        k = (0, l.e7)([h.default], () => h.default.getCurrentUser()),
+        k = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
         I = (null == k ? void 0 : k.isStaff()) || (null == k ? void 0 : k.isStaffPersonal()) || !1;
     return (0, r.jsx)(c.ThemeProvider, {
         theme: _,
@@ -46,7 +46,7 @@ function b(e) {
                                     'aria-label': g.intl.string(g.t['13/7kZ']),
                                     children: (0, r.jsx)(c.ArrowLargeLeftIcon, {})
                                 }),
-                            (0, r.jsx)(p.Z, {
+                            (0, r.jsx)(h.Z, {
                                 color: x ? ((0, o.wj)(_) ? 'white' : 'black') : void 0,
                                 className: C.discordLogo
                             })

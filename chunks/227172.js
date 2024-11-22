@@ -30,8 +30,8 @@ var l = n(200651),
     N = n(591853),
     _ = n(410441),
     S = n(797342),
-    E = n(981631),
-    A = n(388032);
+    A = n(981631),
+    E = n(388032);
 let M = {
     [i.z.DESKTOP]: null,
     [i.z.LINUX]: null,
@@ -52,7 +52,7 @@ t.Z = (e) => {
         { displayParticipants: W, participant1: q, participant2: F, numOtherParticipants: J } = (0, g.Z)(n, 3),
         X = n.extra.platform,
         K = null != X ? M[X] : null,
-        $ = X === i.z.XBOX ? E.ABu.XBOX : X === i.z.PLAYSTATION ? E.ABu.PLAYSTATION : void 0,
+        $ = X === i.z.XBOX ? A.ABu.XBOX : X === i.z.PLAYSTATION ? A.ABu.PLAYSTATION : void 0,
         Q = (0, P.Z)($),
         ee = a.useCallback(
             (e) => {
@@ -93,9 +93,9 @@ t.Z = (e) => {
                               : (0, l.jsx)(_.Z, {
                                     onClick: Q,
                                     Icon: K,
-                                    'aria-label': A.intl.string(A.t.YR4cHB)
+                                    'aria-label': E.intl.string(E.t.YR4cHB)
                                 }),
-                      userDescription: (0, I.kr)(n) ? A.t.vPg1JS : A.t.rPqqtr,
+                      userDescription: (0, I.kr)(n) ? E.t.vPg1JS : E.t.rPqqtr,
                       title: V,
                       subtitle: H,
                       badges: et,
@@ -110,14 +110,14 @@ t.Z = (e) => {
                       title: n.extra.game_name,
                       subtitle: H,
                       badges: et,
-                      userDescription: A.t['6oWFUF'],
+                      userDescription: E.t['6oWFUF'],
                       entry: n,
                       stream: Y,
                       onUserPopoutClosed: R,
                       trackRankingItemInteraction: w
                   }),
         el =
-            (0, s.Z)(B, E.xjy.JOIN) || (0, u.Z)(B)
+            (0, s.Z)(B, A.xjy.JOIN) || (0, u.Z)(B)
                 ? (0, l.jsx)(d.Z, {
                       activity: B,
                       user: b,

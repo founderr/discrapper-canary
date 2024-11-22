@@ -15,8 +15,8 @@ var i = t(200651),
     u = t(785717),
     f = t(687158),
     m = t(899007),
-    x = t(648052),
-    I = t(867176),
+    I = t(648052),
+    x = t(867176),
     p = t(280885),
     h = t(900927),
     v = t(678738),
@@ -31,18 +31,18 @@ var i = t(200651),
     T = t(11633),
     y = t(722849);
 function P(e) {
-    let { user: n, guildId: t, channelId: P, messageId: C, roleId: A, sessionId: L, transitionState: O, onClose: M, sourceAnalyticsLocations: R = [] } = e,
+    let { user: n, guildId: t, channelId: P, messageId: C, roleId: L, sessionId: A, transitionState: O, onClose: M, sourceAnalyticsLocations: R = [] } = e,
         U = t === E.ME ? void 0 : t,
         B = (0, f.ZP)(n.id, U),
         { analyticsLocations: F } = (0, c.ZP)([...R, s.Z.SIMPLIFIED_PROFILE_MODAL]),
         D = (0, u.ZB)({
             layout: 'SIMPLIFIED_MODAL',
             userId: n.id,
-            sourceSessionId: L,
+            sourceSessionId: A,
             guildId: U,
             channelId: P,
             messageId: C,
-            roleId: A
+            roleId: L
         }),
         G = l.createRef(),
         w = (0, r.Z)(G);
@@ -68,7 +68,7 @@ function P(e) {
                             }),
                             (0, i.jsxs)('header', {
                                 children: [
-                                    (0, i.jsx)(I.Z, {
+                                    (0, i.jsx)(x.Z, {
                                         user: n,
                                         displayProfile: B,
                                         profileType: b.y0.FULL_SIZE
@@ -94,7 +94,7 @@ function P(e) {
                                         nickname: d.ZP.getName(U, P, n),
                                         pronouns: null == B ? void 0 : B.pronouns,
                                         nicknameVariant: 'heading-xl/bold',
-                                        tags: (0, i.jsx)(x.Z, {
+                                        tags: (0, i.jsx)(I.Z, {
                                             displayProfile: B,
                                             profileType: b.y0.FULL_SIZE,
                                             onClose: M

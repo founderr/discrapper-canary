@@ -29,7 +29,7 @@ function u() {
         dsn: 'https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984',
         autoSessionTracking: !1,
         environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-        release: 'discord_web-1ea9903f7280f6a30039b7ac73564202a799c6fa',
+        release: 'discord_web-172d343167bddaa00bc59f7c7bf217c1804e5d64',
         beforeSend: function (e, t) {
             var r, n;
             return !(
@@ -65,8 +65,8 @@ function u() {
         ignoreErrors: ['EADDRINUSE', 'BetterDiscord', 'EnhancedDiscord', 'Powercord', 'RecipeWebview', 'jQuery', 'localStorage', 'has already been declared', 'Cannot call hover while not dragging.', 'Cannot call beginDrag while dragging.', 'getHostNode', 'setupCSS', 'on missing remote object', 'ChunkLoadError', "Cannot find module 'discord_utils'", 'Failed to setup Krisp module', "Error invoking remote method 'DISCORD_NATIVE_MODULES_INSTALL': Error: Module updater is not available!", 'Non-Error promise rejection captured with keys:', 'Request has been terminated', 'Cannot resolve a Slate point from DOM point', 'Failed to fetch', 'no suitable image found', 'ResizeObserver loop limit exceeded', 'ResizeObserver loop completed with undelivered notifications.', 'The play() request was interrupted', 'could not play audio', 'notosans-400-normalitalic'],
         denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//]
     }),
-        o.YA('buildNumber', ((e = '347414'), '347414'));
-    o.YA('builtAt', String('1732299878735'));
+        o.YA('buildNumber', ((e = '347480'), '347480'));
+    o.YA('builtAt', String('1732304360647'));
     let t = window.GLOBAL_ENV.SENTRY_TAGS;
     if (null != t && 'object' == typeof t) for (let e in t) o.YA(e, t[e]);
     return i;

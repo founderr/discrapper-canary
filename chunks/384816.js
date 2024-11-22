@@ -15,8 +15,8 @@ var l = t(442837),
     u = t(785717),
     f = t(250822),
     m = t(771362),
-    x = t(280885),
-    I = t(819602),
+    I = t(280885),
+    x = t(819602),
     p = t(900927),
     h = t(678738),
     v = t(652853),
@@ -31,8 +31,8 @@ function b(e) {
         y = null == b ? void 0 : b.guildId,
         P = (0, l.e7)([a.Z], () => (null != y ? a.Z.getGuild(y) : null)),
         C = (0, l.e7)([d.Z], () => d.Z.getGuildId()),
-        A = (0, l.e7)([c.default], () => c.default.locale),
-        L = (0, m.Z)(n.id),
+        L = (0, l.e7)([c.default], () => c.default.locale),
+        A = (0, m.Z)(n.id),
         O = (0, f.Z)(n.id);
     return (0, i.jsxs)(o.ScrollerThin, {
         fade: !0,
@@ -40,7 +40,7 @@ function b(e) {
         children: [
             (null == b ? void 0 : b.bio) != null &&
                 (null == b ? void 0 : b.bio) !== '' &&
-                (0, i.jsx)(x.Z, {
+                (0, i.jsx)(I.Z, {
                     userBio: b.bio,
                     setLineClamp: !1
                 }),
@@ -60,16 +60,16 @@ function b(e) {
                     tooltipDelay: Z.vB
                 })
             }),
-            L.length > 0 &&
+            A.length > 0 &&
                 (0, i.jsx)(h.Z, {
                     heading: _.intl.string(_.t['3fe7U1']),
                     scrollIntoView: E === Z.Tb.CONNECTIONS,
-                    children: (0, i.jsx)(I.OA, {
-                        connectedAccounts: L,
+                    children: (0, i.jsx)(x.OA, {
+                        connectedAccounts: A,
                         className: j.connections,
                         userId: n.id,
                         theme: S,
-                        locale: A
+                        locale: L
                     })
                 }),
             O.length > 0 &&
@@ -77,11 +77,11 @@ function b(e) {
                     heading: _.intl.string(_.t.PHjkRE),
                     children: O.map((e) =>
                         (0, i.jsx)(
-                            I.tH,
+                            x.tH,
                             {
                                 className: j.appsConnections,
                                 applicationRoleConnection: e,
-                                locale: A,
+                                locale: L,
                                 onApplicationClicked: () => {
                                     T({ action: 'PRESS_APP_CONNECTION' }), N();
                                 },

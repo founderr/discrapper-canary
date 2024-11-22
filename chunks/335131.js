@@ -85,7 +85,7 @@ let g = (e) => {
             let e = await s.tn.get({
                 url: m.ANM.COLLECTIBLES_CATEGORIES,
                 query: t,
-                rejectWithError: !1
+                rejectWithError: !0
             });
             o.Z.dispatch({
                 type: 'COLLECTIBLES_CATEGORIES_FETCH_SUCCESS',
@@ -107,7 +107,7 @@ let g = (e) => {
             try {
                 let t = {
                     url: m.ANM.COLLECTIBLES_PURCHASES,
-                    rejectWithError: !1
+                    rejectWithError: !0
                 };
                 (null == e ? void 0 : e.variantsReturnStyle) === a.v.VARIANTS_GROUP && (t.query = { variants_return_style: a.v.VARIANTS_GROUP });
                 let n = await s.tn.get(t);
@@ -137,7 +137,7 @@ let g = (e) => {
             let r = await s.tn.get({
                 url: m.ANM.COLLECTIBLES_PRODUCTS(e),
                 query: n,
-                rejectWithError: !1
+                rejectWithError: !0
             });
             o.Z.dispatch({
                 type: 'COLLECTIBLES_PRODUCT_FETCH_SUCCESS',
@@ -165,7 +165,7 @@ let g = (e) => {
             let n = await s.tn.put({
                 url: m.ANM.COLLECTIBLES_CLAIM,
                 body: { sku_id: e },
-                rejectWithError: !1
+                rejectWithError: !0
             });
             o.Z.dispatch({
                 type: 'COLLECTIBLES_CLAIM_SUCCESS',
@@ -192,7 +192,7 @@ let g = (e) => {
                         sku_id: t,
                         recipient_id: e
                     },
-                    rejectWithError: !1
+                    rejectWithError: !0
                 })
             ).body.valid;
         } catch (e) {
@@ -214,7 +214,7 @@ let g = (e) => {
             let e = await s.tn.get({
                 url: m.ANM.COLLECTIBLES_MARKETING,
                 query: n,
-                rejectWithError: !1
+                rejectWithError: !0
             });
             o.Z.dispatch({
                 type: 'COLLECTIBLES_MARKETING_FETCH_SUCCESS',
