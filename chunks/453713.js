@@ -1,6 +1,6 @@
 n.d(t, {
     P: function () {
-        return p;
+        return h;
     }
 });
 var r = n(200651),
@@ -13,42 +13,59 @@ var r = n(200651),
     d = n(388032),
     u = n(591014);
 let m = (e) => {
-        let { variantGroupProduct: t, variant: n, variantIndex: i, selectedVariantIndex: d, onEnter: m, onLeave: p, minimal: h } = e,
-            { isPurchased: f } = (0, c.L)(n),
-            g = a.useCallback(
+        let { variantGroupProduct: t, variant: n, variantIndex: i, selectedVariantIndex: m, onEnter: h, onLeave: p, minimal: f } = e,
+            { isPurchased: g } = (0, c.L)(n),
+            C = a.useCallback(
                 (e) => {
                     e.preventDefault(), e.stopPropagation(), (0, o.$)(t, i);
                 },
                 [t, i]
             );
-        return (0, r.jsxs)(l.Clickable, {
-            tag: 'li',
-            onMouseEnter: m,
-            onMouseLeave: p,
-            onClick: g,
-            className: s()(u.colorVariant, { [u.selectedVariant]: i === d }),
-            children: [
-                (0, r.jsx)('div', {
-                    className: s()(u.colorSwatch, { [u.mask]: h && 0 !== i }),
-                    style: { backgroundColor: n.variantValue }
-                }),
-                !h && f ? (0, r.jsx)('span', { className: u.purchasedIndicator }) : null
-            ]
+        return (0, r.jsx)(l.Tooltip, {
+            text: d.intl.string(d.t['/bUsx8']),
+            'aria-label': !1,
+            shouldShow: !f && g,
+            children: (e) =>
+                (0, r.jsxs)(l.Clickable, {
+                    tag: 'li',
+                    onMouseEnter: () => {
+                        var t;
+                        h(), null === (t = e.onMouseEnter) || void 0 === t || t.call(e);
+                    },
+                    onMouseLeave: () => {
+                        var t;
+                        p(), null === (t = e.onMouseLeave) || void 0 === t || t.call(e);
+                    },
+                    onClick: C,
+                    className: s()(u.colorVariant, { [u.selectedVariant]: i === m }),
+                    children: [
+                        (0, r.jsx)('div', {
+                            className: s()(u.colorSwatch, { [u.mask]: f && 0 !== i }),
+                            style: { backgroundColor: n.variantValue }
+                        }),
+                        !f && g
+                            ? (0, r.jsx)(l.CheckmarkSmallBoldIcon, {
+                                  className: u.purchasedIndicator,
+                                  color: l.tokens.colors.BACKGROUND_TERTIARY
+                              })
+                            : null
+                    ]
+                })
         });
     },
-    p = (e) => {
+    h = (e) => {
         var t, n, a;
-        let { variantGroupProduct: i, className: c, previewingVariantIndexProps: p, setIsHoveringOnSwitch: h, minimal: f, purchases: g } = e,
+        let { variantGroupProduct: i, className: c, previewingVariantIndexProps: h, setIsHoveringOnSwitch: p, minimal: f, purchases: g } = e,
             C = (0, o.o)(i, g),
-            b = p.previewingVariantIndex,
+            b = h.previewingVariantIndex,
             v = null === (t = i.variants) || void 0 === t ? void 0 : t[C],
             x = null !== b ? (null === (n = i.variants) || void 0 === n ? void 0 : n[b]) : void 0;
         if (null == v) return null;
         let _ = null != x ? x.variantLabel : null == v ? void 0 : v.variantLabel;
         return (0, r.jsxs)('div', {
             className: s()(u.variantsPanel, c, { [u.minimalState]: f }),
-            onMouseEnter: () => (null == h ? void 0 : h(!0)),
-            onMouseLeave: () => (null == h ? void 0 : h(!1)),
+            onMouseEnter: () => (null == p ? void 0 : p(!0)),
+            onMouseLeave: () => (null == p ? void 0 : p(!1)),
             children: [
                 (0, r.jsx)('ol', {
                     className: u.variantsList,
@@ -63,8 +80,8 @@ let m = (e) => {
                                           variant: e,
                                           variantIndex: t,
                                           selectedVariantIndex: C,
-                                          onEnter: () => p.handleEntering(t),
-                                          onLeave: p.handleLeaving,
+                                          onEnter: () => h.handleEntering(t),
+                                          onLeave: h.handleLeaving,
                                           minimal: f
                                       },
                                       t
