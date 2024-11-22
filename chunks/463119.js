@@ -45,8 +45,7 @@ let L = (e) => {
             { analyticsLocations: _ } = (0, f.ZP)(p),
             E = r.useCallback(
                 () =>
-                    (0, v.mK)({
-                        openInLayer: !1,
+                    (0, v.Sm)({
                         analyticsSource: p,
                         analyticsLocations: _
                     }),
