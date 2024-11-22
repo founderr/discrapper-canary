@@ -382,7 +382,8 @@ function W(e) {
                         }
                     };
             }
-        })(e.tenant_metadata)
+        })(e.tenant_metadata),
+        consumed: e.consumed
     };
 }
 function K(e) {
