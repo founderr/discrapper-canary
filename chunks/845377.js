@@ -141,8 +141,8 @@ t.Z = (e) => {
                 (0, i.jsx)(h.Spinner, { className: I.__invalid_spinner })
             ]
         });
-    let y = S ? _.t['WH+1Y2'] : _.t.a4MYDA,
-        Z = [
+    let Z = S ? _.t['WH+1Y2'] : _.t.a4MYDA,
+        y = [
             {
                 name: _.intl.string(_.t.yvk9p6),
                 failingName: _.intl.string(_.t['IY/UT0']),
@@ -157,7 +157,7 @@ t.Z = (e) => {
                 name: _.intl.formatToPlainString(_.t.NYovAw, { minMembers: m.minimumGuildSize }),
                 failingName: _.intl.formatToPlainString(_.t.wvJwYm, { minMembers: m.minimumGuildSize.toLocaleString() }),
                 description: null,
-                failingDescription: _.intl.format(y, { minMembers: m.minimumGuildSize.toLocaleString() }),
+                failingDescription: _.intl.format(Z, { minMembers: m.minimumGuildSize.toLocaleString() }),
                 checked: null == m ? void 0 : m.size
             },
             {
@@ -360,15 +360,17 @@ t.Z = (e) => {
                           ]
                       });
             })(),
-            Z.filter((e) => !c || null == e.checked || !e.checked).map((e, t) =>
-                (0, i.jsxs)(
-                    r.Fragment,
-                    {
-                        children: [(0, i.jsx)(N, { ...e }), t < Z.length - 1 ? (0, i.jsx)('hr', { className: I.separator }) : null]
-                    },
-                    ''.concat(e.name)
+            y
+                .filter((e) => !c || null == e.checked || !e.checked)
+                .map((e, t) =>
+                    (0, i.jsxs)(
+                        r.Fragment,
+                        {
+                            children: [(0, i.jsx)(N, { ...e }), t < y.length - 1 ? (0, i.jsx)('hr', { className: I.separator }) : null]
+                        },
+                        ''.concat(e.name)
+                    )
                 )
-            )
         ]
     });
 };
