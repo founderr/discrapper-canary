@@ -17,8 +17,8 @@ t.Z = (e) => {
         g = c.Z.getDMFromUserId(t.id),
         E = (0, a.e7)([c.Z], () => c.Z.getChannel(n), [n]),
         v = i.useMemo(() => f.ZP.getName(null == E ? void 0 : E.guild_id, null == E ? void 0 : E.id, t), [E, t]),
-        b = (0, a.e7)([d.ZP], () => (null == g ? null : d.ZP.isChannelMuted(null, g))),
-        [I, T] = i.useState(null != b && b),
+        I = (0, a.e7)([d.ZP], () => (null == g ? null : d.ZP.isChannelMuted(null, g))),
+        [b, T] = i.useState(null != I && I),
         S = i.useCallback(() => {
             null != g &&
                 (T(!0),
@@ -32,8 +32,8 @@ t.Z = (e) => {
     return (0, r.jsx)(u.Z, {
         title: h.intl.formatToPlainString(h.t.TRp5wc, { username: v }),
         description: h.intl.string(h.t['yM/+AA']),
-        buttonText: I ? h.intl.string(h.t.E8x4Nj) : h.intl.string(h.t.HITUcX),
-        buttonDisabled: I,
+        buttonText: b ? h.intl.string(h.t.E8x4Nj) : h.intl.string(h.t.HITUcX),
+        buttonDisabled: b,
         onButtonPress: S
     });
 };

@@ -39,7 +39,7 @@ n.d(t, {
         return k;
     },
     m0: function () {
-        return I;
+        return b;
     },
     nE: function () {
         return N;
@@ -54,7 +54,7 @@ n.d(t, {
         return M;
     },
     xw: function () {
-        return b;
+        return I;
     }
 }),
     n(411104);
@@ -124,7 +124,7 @@ async function v(e) {
         rejectWithError: !1
     });
 }
-async function b() {
+async function I() {
     if (!c.Z.isFetchingCurrentQuests) {
         a.Z.dispatch({ type: 'QUESTS_FETCH_CURRENT_QUESTS_BEGIN' }), u.Z.recordQuestRequestAttempt(m.ANM.QUESTS_CURRENT_QUESTS);
         try {
@@ -154,7 +154,7 @@ async function b() {
         }
     }
 }
-async function I(e) {
+async function b(e) {
     let { questId: t, streamKey: n, terminal: i = !1 } = e;
     try {
         var l;

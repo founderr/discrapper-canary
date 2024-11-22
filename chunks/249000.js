@@ -181,8 +181,8 @@ class E extends (a = u.PureComponent) {
                 let { clientX: t, clientY: n } = e,
                     { current: r } = this.draggableRef,
                     { maxX: i, maxY: a, flipVertical: s, flipHorizontal: o, onDragStart: l, onDrag: u, onFlip: c, snapOrientation: d } = this.props,
-                    { dragging: g, dragging: E, verticalOrientation: v, horizontalOrientation: b } = this.state,
-                    I = !1;
+                    { dragging: g, dragging: E, verticalOrientation: v, horizontalOrientation: I } = this.state,
+                    b = !1;
                 if (
                     null == r ||
                     (!g &&
@@ -210,22 +210,22 @@ class E extends (a = u.PureComponent) {
                     );
                 if (d) {
                     let e = p((A = h(A)));
-                    (v = e[0]), (b = e[1]);
+                    (v = e[0]), (I = e[1]);
                 } else
                     A = {
                         top: A.top,
                         left: A.left
                     };
-                2 === o && b !== this.state.horizontalOrientation && ((this._offsetX = T - this._offsetX), (I = !0)),
-                    2 === s && v !== this.state.verticalOrientation && ((this._offsetY = S - this._offsetY), (I = !0)),
+                2 === o && I !== this.state.horizontalOrientation && ((this._offsetX = T - this._offsetX), (b = !0)),
+                    2 === s && v !== this.state.verticalOrientation && ((this._offsetY = S - this._offsetY), (b = !0)),
                     this.setDOMPositions(A),
                     !E && (null == l || l(A, r)),
                     null == u || u(A, r),
-                    I && (null == c || c([v, b])),
+                    b && (null == c || c([v, I])),
                     this.setState({
                         dragging: g,
                         verticalOrientation: v,
-                        horizontalOrientation: b,
+                        horizontalOrientation: I,
                         atTopEdge: 0 === A.top
                     });
             }),

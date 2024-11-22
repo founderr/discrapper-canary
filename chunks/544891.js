@@ -106,7 +106,7 @@ function h(e, t, n, r, s) {
                 var n;
                 null === (n = t.onRequestProgress) || void 0 === n || n.call(t, e);
             });
-    let b = () => {
+    let I = () => {
         (t.backoff = null != t.backoff ? t.backoff : new a.Z()), (t.retried = (null != t.retried ? t.retried : 0) + 1), t.backoff.fail(() => D(t.url).then(() => h(e, t, n, r, s)));
     };
     null == R || null === (f = R.prepareRequest) || void 0 === f || f.call(R, v),
@@ -114,7 +114,7 @@ function h(e, t, n, r, s) {
         v.then(
             (i) => {
                 var a, u, c;
-                if (null != t.retries && t.retries-- > 0 && _.has(i.status)) return b();
+                if (null != t.retries && t.retries-- > 0 && _.has(i.status)) return I();
                 let d = {
                     ok: i.ok,
                     headers: i.headers,
@@ -174,7 +174,7 @@ function h(e, t, n, r, s) {
             },
             (e) => {
                 null != t.retries && t.retries-- > 0 && 'ABORTED' !== e.code
-                    ? b()
+                    ? I()
                     : (E(t),
                       r(e),
                       null != s &&
@@ -234,7 +234,7 @@ let v = (e, t) => {
         }
     });
 };
-function b(e, t, n) {
+function I(e, t, n) {
     return new Promise((r, i) => {
         'string' == typeof t &&
             (t = {
@@ -246,13 +246,13 @@ function b(e, t, n) {
         null != a ? (f.verbose('makeRequest: queueing request for ', t.url), a.queue.push(h.bind(null, e, t, r, i, n))) : h(e, t, r, i, n);
     });
 }
-let I = b.bind(null, 'get'),
-    T = b.bind(null, 'post'),
-    S = b.bind(null, 'put'),
-    y = b.bind(null, 'patch'),
-    A = b.bind(null, 'del'),
+let b = I.bind(null, 'get'),
+    T = I.bind(null, 'post'),
+    S = I.bind(null, 'put'),
+    y = I.bind(null, 'patch'),
+    A = I.bind(null, 'del'),
     N = {
-        get: I,
+        get: b,
         post: T,
         put: S,
         patch: y,
@@ -267,7 +267,7 @@ if (n.g.isServerRendering) {
             body: null,
             text: ''
         });
-    (I = e), (T = e), (S = e), (y = e), (A = e);
+    (b = e), (T = e), (S = e), (y = e), (A = e);
 }
 function C() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];

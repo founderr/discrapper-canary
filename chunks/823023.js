@@ -52,7 +52,7 @@ function p(e) {
         m = t === l.zo9.LOADING,
         [g] = i.useState(m),
         [E, v] = i.useState(!1),
-        b = (0, o.L)(c, d, g);
+        I = (0, o.L)(c, d, g);
     i.useEffect(() => {
         let e = setTimeout(() => {
             v(!0);
@@ -61,19 +61,19 @@ function p(e) {
             clearTimeout(e);
         };
     }, [g]);
-    let I = (0, s.useTransition)(m && E, f);
+    let b = (0, s.useTransition)(m && E, f);
     return (0, r.jsxs)('div', {
         className: u.loadingOverlay,
         style: { aspectRatio: n },
         children: [
             h,
-            null != b &&
+            null != I &&
                 (0, r.jsx)(_, {
                     readyState: t,
-                    placeholderImg: b,
+                    placeholderImg: I,
                     placeholderStyle: p
                 }),
-            I(
+            b(
                 (e, t) =>
                     t &&
                     (0, r.jsx)(a.animated.div, {

@@ -18,11 +18,11 @@ function d(e) {
         [p, h] = i.useState(!0),
         [m, g] = i.useState(!1),
         E = null != d ? d : f,
-        { ref: v, height: b = 0 } = (0, u.Z)(),
-        { ref: I, height: T = 0 } = (0, u.Z)(),
+        { ref: v, height: I = 0 } = (0, u.Z)(),
+        { ref: b, height: T = 0 } = (0, u.Z)(),
         S = (0, l.useSpring)(
             {
-                height: E ? b + T : T,
+                height: E ? I + T : T,
                 config: o.config.stiff,
                 onRest: () => g(!0)
             },
@@ -45,7 +45,7 @@ function d(e) {
                 style: S,
                 children: [
                     (0, r.jsx)('div', {
-                        ref: I,
+                        ref: b,
                         className: s()(c.header, { [c.toggled]: E }),
                         children: t({ onClick: y })
                     }),

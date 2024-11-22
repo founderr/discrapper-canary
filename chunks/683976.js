@@ -106,7 +106,7 @@ function m(e) {
             async scrollToStart() {},
             async scrollToEnd() {}
         }),
-        { ref: v, ...b } = E.containerProps;
+        { ref: v, ...I } = E.containerProps;
     return (
         (0, u.useFocusLock)(v),
         (0, r.jsx)(o.bG, {
@@ -114,7 +114,7 @@ function m(e) {
             children: (0, r.jsx)('div', {
                 ref: v,
                 className: p,
-                ...b,
+                ...I,
                 role: 'listbox',
                 children: i
                     ? (0, r.jsx)(u.Scroller, {

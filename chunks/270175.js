@@ -28,8 +28,8 @@ var r = n(192379),
             g = e.renderers,
             E = e.styles,
             v = void 0 === E ? {} : E,
-            b = e.className,
-            I = (0, s.default)(
+            I = e.className,
+            b = (0, s.default)(
                 (0, o.Z)(
                     {
                         default: d(
@@ -106,14 +106,14 @@ var r = n(192379),
         return r.createElement(
             'div',
             {
-                style: I.picker,
-                className: 'sketch-picker ' + (void 0 === b ? '' : b)
+                style: b.picker,
+                className: 'sketch-picker ' + (void 0 === I ? '' : I)
             },
             r.createElement(
                 'div',
-                { style: I.saturation },
+                { style: b.saturation },
                 r.createElement(l.OQ, {
-                    style: I.Saturation,
+                    style: b.Saturation,
                     hsl: f,
                     hsv: a,
                     onChange: _
@@ -122,26 +122,26 @@ var r = n(192379),
             r.createElement(
                 'div',
                 {
-                    style: I.controls,
+                    style: b.controls,
                     className: 'flexbox-fix'
                 },
                 r.createElement(
                     'div',
-                    { style: I.sliders },
+                    { style: b.sliders },
                     r.createElement(
                         'div',
-                        { style: I.hue },
+                        { style: b.hue },
                         r.createElement(l.PS, {
-                            style: I.Hue,
+                            style: b.Hue,
                             hsl: f,
                             onChange: _
                         })
                     ),
                     r.createElement(
                         'div',
-                        { style: I.alpha },
+                        { style: b.alpha },
                         r.createElement(l.xV, {
-                            style: I.Alpha,
+                            style: b.Alpha,
                             rgb: n,
                             hsl: f,
                             renderers: g,
@@ -149,7 +149,7 @@ var r = n(192379),
                         })
                     )
                 ),
-                r.createElement('div', { style: I.color }, r.createElement(l.QN, null), r.createElement('div', { style: I.activeColor }))
+                r.createElement('div', { style: b.color }, r.createElement(l.QN, null), r.createElement('div', { style: b.activeColor }))
             ),
             r.createElement(u.Z, {
                 rgb: n,

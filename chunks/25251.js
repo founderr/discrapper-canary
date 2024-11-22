@@ -24,10 +24,10 @@ let E = 0,
         }),
             (m = t);
     },
-    b = () => {
+    I = () => {
         v(f), (g = null), (i = void 0), (p = !1);
     };
-class I extends (l = c.ZP.Store) {
+class b extends (l = c.ZP.Store) {
     get isFetching() {
         return p;
     }
@@ -51,7 +51,7 @@ class I extends (l = c.ZP.Store) {
     }
 }
 (o = 'ProfileEffectStore'),
-    (s = 'displayName') in (a = I)
+    (s = 'displayName') in (a = b)
         ? Object.defineProperty(a, s, {
               value: o,
               enumerable: !0,
@@ -59,7 +59,7 @@ class I extends (l = c.ZP.Store) {
               writable: !0
           })
         : (a[s] = o),
-    (t.Z = new I(d.Z, {
+    (t.Z = new b(d.Z, {
         USER_PROFILE_EFFECTS_FETCH: () => {
             p = !0;
         },
@@ -76,6 +76,6 @@ class I extends (l = c.ZP.Store) {
             g = t;
         },
         LOGOUT: (e) => {
-            b();
+            I();
         }
     }));

@@ -1,9 +1,9 @@
 n.d(t, {
     A3: function () {
-        return I;
+        return b;
     },
     FZ: function () {
-        return b;
+        return I;
     },
     Je: function () {
         return y;
@@ -42,7 +42,7 @@ n.d(t, {
         return x;
     },
     gZ: function () {
-        return G;
+        return B;
     },
     ge: function () {
         return O;
@@ -106,11 +106,11 @@ Object.freeze({
 });
 ((i = r || (r = {}))[(i.EMOJI = 1)] = 'EMOJI'), (i[(i.AUDIO = 2)] = 'AUDIO'), (i[(i.ANIMATED = 3)] = 'ANIMATED'), (i[(i.CUSTOMIZATION = 4)] = 'CUSTOMIZATION'), (i[(i.UPLOAD = 5)] = 'UPLOAD'), (i[(i.VANITY = 6)] = 'VANITY'), (i[(i.STREAM = 7)] = 'STREAM'), (i[(i.STICKER = 8)] = 'STICKER'), (i[(i.CUSTOM_ROLE_ICON = 11)] = 'CUSTOM_ROLE_ICON'), (i[(i.STAGE_VIDEO = 12)] = 'STAGE_VIDEO'), (i[(i.SOUNDBOARD = 13)] = 'SOUNDBOARD');
 let v = [m.Eu4.NONE, m.Eu4.TIER_1, m.Eu4.TIER_2, m.Eu4.TIER_3],
-    b = (e, t) => {
+    I = (e, t) => {
         var n;
-        return e === m.Eu4.NONE ? m.Eu4.TIER_1 : null === (n = B(t).find((t) => t.tier === e)) || void 0 === n ? void 0 : n.nextTier;
+        return e === m.Eu4.NONE ? m.Eu4.TIER_1 : null === (n = G(t).find((t) => t.tier === e)) || void 0 === n ? void 0 : n.nextTier;
     },
-    I = (e, t) => (null != t && t.hasFeature(m.oNc.MORE_STICKERS) && e === m.Eu4.TIER_3 ? l.D.MAX_STICKER_SLOTS : g.$8[e]),
+    b = (e, t) => (null != t && t.hasFeature(m.oNc.MORE_STICKERS) && e === m.Eu4.TIER_3 ? l.D.MAX_STICKER_SLOTS : g.$8[e]),
     T = (e) => g.pH[e],
     S = (e, t) => (null != t && t.hasFeature(m.oNc.MORE_SOUNDBOARD) ? 96 : g._k[e]),
     y = (e) => {
@@ -134,7 +134,7 @@ let v = [m.Eu4.NONE, m.Eu4.TIER_1, m.Eu4.TIER_2, m.Eu4.TIER_3],
                 {
                     title: E.intl.formatToPlainString(E.t['/9p2/v'], {
                         adding: T(m.Eu4.TIER_1),
-                        total: I(m.Eu4.TIER_1)
+                        total: b(m.Eu4.TIER_1)
                     }),
                     description: E.intl.string(E.t.JfsnDQ),
                     icon: 8
@@ -184,7 +184,7 @@ let v = [m.Eu4.NONE, m.Eu4.TIER_1, m.Eu4.TIER_2, m.Eu4.TIER_3],
                 {
                     title: E.intl.formatToPlainString(E.t['/9p2/v'], {
                         adding: T(m.Eu4.TIER_2),
-                        total: I(m.Eu4.TIER_2)
+                        total: b(m.Eu4.TIER_2)
                     }),
                     description: E.intl.string(E.t.t4TM29),
                     icon: 8
@@ -246,7 +246,7 @@ let v = [m.Eu4.NONE, m.Eu4.TIER_1, m.Eu4.TIER_2, m.Eu4.TIER_3],
                 {
                     title: E.intl.formatToPlainString(E.t['/9p2/v'], {
                         adding: T(m.Eu4.TIER_3),
-                        total: I(m.Eu4.TIER_3)
+                        total: b(m.Eu4.TIER_3)
                     }),
                     description: E.intl.string(E.t['+ZI4QU']),
                     icon: 8
@@ -328,7 +328,7 @@ let R = s().memoize((e) => (g.HO[m.Eu4.TIER_1].features.includes(e) ? m.Eu4.TIER
         return null;
     };
 function D(e, t) {
-    for (let n of B(t)) if (e >= n.amount) return n.tier;
+    for (let n of G(t)) if (e >= n.amount) return n.tier;
     return m.Eu4.NONE;
 }
 function L(e, t) {
@@ -410,7 +410,7 @@ function k(e, t) {
 function U(e) {
     return m.oCV;
 }
-function B(e) {
+function G(e) {
     let t = U(e);
     return [
         {
@@ -430,7 +430,7 @@ function B(e) {
         }
     ];
 }
-function G(e, t) {
+function B(e, t) {
     let n = k(e, t);
     if (n > 0) {
         let t = e.sort((e, t) => (null != e.endsAt && null != t.endsAt ? e.endsAt.getTime() - t.endsAt.getTime() : -1)).filter((e) => null != e.endsAt);
@@ -443,8 +443,8 @@ function Z(e, t) {
         r = v.indexOf(t);
     if (-1 === r) return 0;
     let i = v[r - 1],
-        a = null != i ? I(i) : 0,
-        s = I(t);
+        a = null != i ? b(i) : 0,
+        s = b(t);
     return Math.max(0, n - e.slice(a, s).length);
 }
 function F(e, t, n) {

@@ -16,8 +16,8 @@ var r = n(200651),
     g = n(362948),
     E = n(245004),
     v = n(383881),
-    b = n(981631),
-    I = n(388032),
+    I = n(981631),
+    b = n(388032),
     T = n(429905);
 t.Z = function (e) {
     let { analyticsLocation: t, guild: n, onClose: S } = e,
@@ -27,8 +27,8 @@ t.Z = function (e) {
         { analyticsLocations: R } = (0, u.ZP)(),
         O = i.useCallback(() => {
             S(),
-                c.default.track(b.rMx.MODAL_DISMISSED, {
-                    type: b.ZY5.PREMIUM_GUILD_USER_MODAL,
+                c.default.track(I.rMx.MODAL_DISMISSED, {
+                    type: I.ZY5.PREMIUM_GUILD_USER_MODAL,
                     location_stack: R,
                     location_section: t.section,
                     location_object: t.object,
@@ -40,8 +40,8 @@ t.Z = function (e) {
             (e) => {
                 e &&
                     !N.current &&
-                    (c.default.track(b.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
-                        type: b.ZY5.PREMIUM_GUILD_USER_MODAL,
+                    (c.default.track(I.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+                        type: I.ZY5.PREMIUM_GUILD_USER_MODAL,
                         location_stack: R,
                         location_section: t.section,
                         location_object: t.object,
@@ -53,8 +53,8 @@ t.Z = function (e) {
         );
     return (
         i.useEffect(() => {
-            c.default.track(b.rMx.OPEN_MODAL, {
-                type: b.ZY5.PREMIUM_GUILD_USER_MODAL,
+            c.default.track(I.rMx.OPEN_MODAL, {
+                type: I.ZY5.PREMIUM_GUILD_USER_MODAL,
                 location_stack: R,
                 location_section: t.section,
                 location_object: t.object,
@@ -96,7 +96,7 @@ t.Z = function (e) {
                                             className: T.heading,
                                             color: 'always-white',
                                             variant: 'display-lg',
-                                            children: I.intl.string(I.t.N4sqzM)
+                                            children: b.intl.string(b.t.N4sqzM)
                                         }),
                                         (0, r.jsx)(f.Z, {
                                             guild: n,

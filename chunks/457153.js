@@ -2,15 +2,15 @@ var o = n(200651),
     r = n(192379),
     s = n(120356),
     a = n.n(s),
-    i = n(100621),
-    l = n(95985),
+    l = n(100621),
+    i = n(95985),
     c = n(183004);
 let d = r.forwardRef(function (e, t) {
     var n;
     let { className: s, expansionSpring: d, isExpanded: u, isExpansionAnimationComplete: p, quest: m, taskDetails: x } = e,
         f = r.useRef(null),
         g = (null === (n = m.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null;
-    return (0, o.jsx)(i.animated.div, {
+    return (0, o.jsx)(l.animated.div, {
         ref: t,
         'aria-hidden': u && p,
         className: a()(s, c.contentCollapsed, {
@@ -26,7 +26,7 @@ let d = r.forwardRef(function (e, t) {
         children: (0, o.jsx)('div', {
             className: c.contentCollapsedWrapper,
             children: g
-                ? (0, o.jsx)(l.Z, {
+                ? (0, o.jsx)(i.Z, {
                       contentLocation: 'collapsed',
                       quest: m,
                       progressBarRef: f,

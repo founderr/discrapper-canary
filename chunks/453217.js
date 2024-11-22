@@ -3,8 +3,8 @@ n(192379);
 var r = n(120356),
     s = n.n(r),
     a = n(100621),
-    i = n(481060),
-    l = n(113434),
+    l = n(481060),
+    i = n(113434),
     c = n(497505),
     d = n(685613),
     u = n(340100),
@@ -17,9 +17,9 @@ t.Z = function (e) {
     var t;
     let { className: n, expansionSpring: r, isExpanded: h, isExpansionAnimationComplete: C, quest: v, useReducedMotion: j } = e,
         _ = (null === (t = v.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-        { percentComplete: E } = (0, l.Rf)(v),
-        b = (0, l.Jf)(v),
-        N = null != b ? b.completedRatio > 0 : E > 0;
+        { percentComplete: b } = (0, i.Rf)(v),
+        E = (0, i.Jf)(v),
+        N = null != E ? E.completedRatio > 0 : b > 0;
     return (0, o.jsxs)(a.animated.div, {
         'aria-hidden': h && C,
         className: s()(n, g.contentCollapsed, {
@@ -55,7 +55,7 @@ t.Z = function (e) {
                                         className: g.questProgressBar,
                                         quest: v
                                     })
-                                  : (0, o.jsx)(i.Text, {
+                                  : (0, o.jsx)(l.Text, {
                                         className: g.questProgressHint,
                                         color: 'always-white',
                                         variant: 'text-sm/semibold',
@@ -70,7 +70,7 @@ t.Z = function (e) {
                                   className: g.partnerBranding,
                                   quest: v
                               }),
-                              (0, o.jsx)(i.Heading, {
+                              (0, o.jsx)(l.Heading, {
                                   color: 'always-white',
                                   variant: 'heading-sm/medium',
                                   className: g.questName,

@@ -20,8 +20,8 @@ var r = n(200651),
     g = n(994746),
     E = n(273284),
     v = n(510659),
-    b = n(287954),
-    I = n(660579),
+    I = n(287954),
+    b = n(660579),
     T = n(502762),
     S = n(652853),
     y = n(64621),
@@ -38,7 +38,7 @@ var r = n(200651),
     P = n(676411);
 function k(e) {
     var t;
-    let { user: n, currentUser: a, activity: k, guild: U, channel: B, className: G, onClose: Z, profileGuildId: F } = e,
+    let { user: n, currentUser: a, activity: k, guild: U, channel: G, className: B, onClose: Z, profileGuildId: F } = e,
         { profileType: V } = (0, S.z)(),
         j = { [P.fullSize]: V === w.y0.FULL_SIZE },
         { interactionSource: H, interactionSourceId: Y } = (0, v.Xo)(),
@@ -105,7 +105,7 @@ function k(e) {
                   });
         },
         ee = () =>
-            null == U || null == B
+            null == U || null == G
                 ? null
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
@@ -113,7 +113,7 @@ function k(e) {
                           (0, r.jsx)(R.Z, {
                               user: n,
                               guild: U,
-                              channel: B,
+                              channel: G,
                               onAction: Q,
                               onClose: Z
                           })
@@ -143,7 +143,7 @@ function k(e) {
                 onClose: Z,
                 children: (e) => {
                     let { onAutoDismiss: t } = e;
-                    return (0, r.jsx)(b.Z, {
+                    return (0, r.jsx)(I.Z, {
                         user: n,
                         guildId: F,
                         profileType: V,
@@ -152,7 +152,7 @@ function k(e) {
                         entry: W,
                         sourceType: w.n_.ACTIVITY,
                         children: () =>
-                            (0, r.jsx)(I.Z, {
+                            (0, r.jsx)(b.Z, {
                                 user: n,
                                 className: P.toolbarContainer,
                                 sourceType: w.n_.ACTIVITY,
@@ -167,7 +167,7 @@ function k(e) {
                                     className: M.button
                                 }),
                                 children: (0, r.jsxs)(T.Z.Overlay, {
-                                    className: s()(P.card, G, { [P.hoisted]: er }),
+                                    className: s()(P.card, B, { [P.hoisted]: er }),
                                     ref: X,
                                     children: [
                                         (0, r.jsx)(N.Z, { ...K }),

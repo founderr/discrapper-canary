@@ -46,8 +46,8 @@ var h = n(592125),
     g = n(246946),
     E = n(594174),
     v = n(934415),
-    b = n(5192),
-    I = n(51144),
+    I = n(5192),
+    b = n(51144),
     T = n(377668),
     S = n(388032),
     y = n(124158),
@@ -96,7 +96,7 @@ function O(e) {
     let { id: t, guildId: n, channelId: s } = e,
         l = (0, i.e7)([E.default], () => E.default.getUser(t)),
         u = (0, i.e7)([g.Z], () => g.Z.hidePersonalInformation),
-        c = b.ZP.useName(n, s, l),
+        c = I.ZP.useName(n, s, l),
         d = (0, r.jsx)(_.Z, { children: null == c ? '<@'.concat(t, '>') : '@'.concat(c) });
     if (null != l) {
         let e = u || l.isPomelo() ? null : '#'.concat(l.discriminator);
@@ -110,7 +110,7 @@ function O(e) {
                         size: a.AvatarSizes.SIZE_16,
                         className: y.avatar
                     }),
-                    I.ZP.getUserTag(l, {
+                    b.ZP.getUserTag(l, {
                         mode: 'username',
                         identifiable: u ? 'never' : 'always'
                     }),
@@ -122,7 +122,7 @@ function O(e) {
             }),
             delay: 750,
             position: 'top',
-            'aria-label': I.ZP.getUserTag(l, { decoration: 'never' }),
+            'aria-label': b.ZP.getUserTag(l, { decoration: 'never' }),
             children: (e) =>
                 (0, r.jsx)(a.Clickable, {
                     tag: 'span',

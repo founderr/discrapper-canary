@@ -16,8 +16,8 @@ var r,
     g = n(592125),
     E = n(430824),
     v = n(496675),
-    b = n(699516),
-    I = n(606304),
+    I = n(699516),
+    b = n(606304),
     T = n(594174),
     S = n(979651),
     y = n(938475),
@@ -71,17 +71,17 @@ function U(e) {
         return e(r)
             ? (!(function (e, t) {
                   let n = g.Z.getChannel(e);
-                  null != n && n.isGuildStageVoice() ? (0 === t.size() ? G(n.id) : null == O.get(n.id) && O.set(n.id, n)) : G(e);
+                  null != n && n.isGuildStageVoice() ? (0 === t.size() ? B(n.id) : null == O.get(n.id) && O.set(n.id, n)) : B(e);
               })(n, r),
               !0)
             : t;
     }, !1);
 }
-function B(e) {
+function G(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : x();
     return U((t) => t.updateParticipant(e), t);
 }
-function G(e) {
+function B(e) {
     return null != e && (delete L[e], O.delete(e), !0);
 }
 function Z() {
@@ -94,11 +94,11 @@ function F(e, t, n) {
 }
 function V(e) {
     let { user: t } = e;
-    return B(t.id);
+    return G(t.id);
 }
 function j(e) {
     let { relationship: t } = e;
-    return B(t.id);
+    return G(t.id);
 }
 function H(e) {
     let { guild: t } = e;
@@ -110,12 +110,12 @@ function H(e) {
 function Y(e) {
     let { streamKey: t } = e,
         { channelId: n, guildId: r, ownerId: i } = (0, p.my)(t);
-    return !!(null != r && D.has(r)) && B(i, [n]);
+    return !!(null != r && D.has(r)) && G(i, [n]);
 }
 let W = [];
 class K extends (r = d.ZP.Store) {
     initialize() {
-        this.waitFor(m.default, T.default, g.Z, I.Z, S.Z, v.Z, y.ZP, E.Z, N.ZP, b.Z, C.Z, h.Z);
+        this.waitFor(m.default, T.default, g.Z, b.Z, S.Z, v.Z, y.ZP, E.Z, N.ZP, I.Z, C.Z, h.Z);
     }
     getParticipantsVersion(e) {
         var t, n;
@@ -166,19 +166,19 @@ class K extends (r = d.ZP.Store) {
             return t.reduce((e, t) => {
                 if (null == t.guildId || !D.has(t.guildId)) return e;
                 let r = new Set();
-                return (F(n, r, t.oldChannelId), F(n, r, t.channelId), 0 === r.size) ? e : B(t.userId, Array.from(r)) || e;
+                return (F(n, r, t.oldChannelId), F(n, r, t.channelId), 0 === r.size) ? e : G(t.userId, Array.from(r)) || e;
             }, !1);
         },
         CHANNEL_DELETE: function (e) {
             let {
                 channel: { id: t }
             } = e;
-            return G(t);
+            return B(t);
         },
         GUILD_MEMBERS_CHUNK_BATCH: function (e) {
             let { chunks: t } = e,
                 n = !1;
-            for (let e of t) for (let t of e.members) n = B(t.user.id) || n;
+            for (let e of t) for (let t of e.members) n = G(t.user.id) || n;
             return n;
         },
         USER_UPDATE: V,
@@ -199,7 +199,7 @@ class K extends (r = d.ZP.Store) {
         },
         RTC_CONNECTION_VIDEO: function (e) {
             let { channelId: t, guildId: n, userId: r } = e;
-            return !!(null != n && D.has(n)) && B(r, [t]);
+            return !!(null != n && D.has(n)) && G(r, [t]);
         },
         STREAM_CLOSE: Y,
         STREAM_DELETE: Y,

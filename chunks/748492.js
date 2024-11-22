@@ -30,8 +30,8 @@ var i = n(120356),
     g = n(922745),
     E = n(871499),
     v = n(402113),
-    b = n(800965),
-    I = n(157813),
+    I = n(800965),
+    b = n(157813),
     T = n(25827),
     S = n(131951),
     y = n(316253),
@@ -53,21 +53,21 @@ function x(e) {
 }
 function w(e) {
     var t, n;
-    let { channel: i, applicationId: a, onMouseDown: o, onMouseMove: E, onMouseLeave: I, onJumpToChannel: A, idle: O, selectedParticipant: x } = e,
+    let { channel: i, applicationId: a, onMouseDown: o, onMouseMove: E, onMouseLeave: b, onJumpToChannel: A, idle: O, selectedParticipant: x } = e,
         w = (0, u.bp)() === C.IlC.POPOUT,
         M = (0, s.e7)([S.Z], () => S.Z.isVideoEnabled()),
         P = (0, s.e7)([S.Z], () => Object.values(S.Z.getVideoDevices())[0]),
         k = !1 === (null === (t = null == P ? void 0 : P.disabled) || void 0 === t || t),
         U = (0, c.Z)([a])[0],
-        B = (0, p.Z)(i),
-        G = (e) => {
+        G = (0, p.Z)(i),
+        B = (e) => {
             l.Z.setVideoEnabled(e);
         };
     return (0, r.jsxs)('div', {
         className: L.videoControls,
         onMouseMove: E,
         onMouseDown: o,
-        onMouseLeave: I,
+        onMouseLeave: b,
         children: [
             (0, r.jsx)('div', {
                 className: L.topControls,
@@ -91,10 +91,10 @@ function w(e) {
                                 className: D.leftPipIcon,
                                 enabled: M,
                                 cameraUnavailable: !k,
-                                hasPermission: B,
-                                onChange: G,
+                                hasPermission: G,
+                                onChange: B,
                                 onCameraUnavailable: () => {
-                                    k ? G(!0) : (0, h.Z)();
+                                    k ? B(!0) : (0, h.Z)();
                                 }
                             }),
                             (0, r.jsx)(m.Z, {
@@ -117,7 +117,7 @@ function w(e) {
                         children: [
                             w || (0, y.Z)()
                                 ? null
-                                : (0, r.jsx)(b.Z, {
+                                : (0, r.jsx)(I.Z, {
                                       className: D.rightPipIcon,
                                       popoutOpen: !1,
                                       onOpenPopout: () => {
@@ -181,7 +181,7 @@ function M(e) {
 function P(e) {
     let { channelId: t, participantsOpen: n, showToggleParticipants: i } = e;
     return i
-        ? (0, r.jsx)(I.Z, {
+        ? (0, r.jsx)(b.Z, {
               channelId: t,
               isParticipantsOpen: n,
               className: D.participantsButton

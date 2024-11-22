@@ -65,7 +65,7 @@ t.Z = (e) => {
         { interactionTypeSent: u, showInteractionToast: d } = (0, f.Xo)(),
         m = u === _.P.REPLY ? p.intl.string(p.t.BPaiaW) : p.intl.string(p.t.Ry2EtL),
         v = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
-        b = (0, l.useTransition)(
+        I = (0, l.useTransition)(
             d,
             {
                 from: {
@@ -91,7 +91,7 @@ t.Z = (e) => {
             'animate-always'
         );
     return (0, r.jsx)(r.Fragment, {
-        children: b(
+        children: I(
             (e, o) =>
                 o &&
                 (0, r.jsx)(s.animated.div, {

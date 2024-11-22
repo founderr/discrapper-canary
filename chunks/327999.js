@@ -15,7 +15,7 @@ n.d(t, {
         return i;
     },
     nf: function () {
-        return I;
+        return b;
     }
 }),
     n(653041);
@@ -43,12 +43,12 @@ function v(e) {
     return e.split('-')[1];
 }
 ((s = r || (r = {}))[(s.FAILED = 0)] = 'FAILED'), (s[(s.UNFETCHED = 1)] = 'UNFETCHED'), (s[(s.PENDING = 2)] = 'PENDING'), (s[(s.SUCCEEDED = 3)] = 'SUCCEEDED'), (s[(s.FAILED_NO_RETRY = 4)] = 'FAILED_NO_RETRY');
-function b(e, t) {
+function I(e, t) {
     e.forEach((e) => {
         m[e] = t;
     });
 }
-function I(e, t) {
+function b(e, t) {
     t.forEach((t) =>
         (function (e, t, n) {
             m[e + t] = 3;
@@ -108,14 +108,14 @@ async function N(e, t) {
     let n = E(e, t),
         r = n.filter((e) => m[e] <= 1).map(v);
     if (0 === r.length) return [];
-    b(n, 2);
+    I(n, 2);
     try {
         let t = await u.tn.post({
             url: p.ANM.MEMBER_SAFETY_SUPPLEMENTAL(e),
             body: { user_ids: r },
             rejectWithError: !0
         });
-        if (!Array.isArray(t.body)) return b(n, 0), [];
+        if (!Array.isArray(t.body)) return I(n, 0), [];
         let i = t.body.map(A),
             a = [];
         i.forEach((e) => {
@@ -125,9 +125,9 @@ async function N(e, t) {
         let s = E(e, a),
             o = r.filter((e) => !a.includes(e)),
             l = E(e, o);
-        return b(s, 3), b(l, 0), i;
+        return I(s, 3), I(l, 0), i;
     } catch (e) {
-        b(n, 0);
+        I(n, 0);
     }
     return [];
 }

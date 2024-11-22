@@ -1,7 +1,7 @@
 n(47120);
 var r = n(200651),
     i = n(192379),
-    a = n(515643),
+    a = n(232713),
     s = n(260866),
     o = n(461745),
     l = n(806966),
@@ -11,8 +11,8 @@ let d = i.forwardRef(function (e, t) {
     let { store: n, hasSendableExpressions: d, onKeyDown: f, gridNavigatorId: _, expressionsListRef: p, defaultSearchPlaceholder: h, emptySearchPlaceholder: m } = e,
         g = i.useRef(null),
         [E, v] = (0, u.Iu)((e) => [e.searchQuery, e.isSearchSuggestion], a.X),
-        b = n.useStore((e) => e.searchPlaceholder),
-        I = n.useStore((e) => e.inspectedExpressionPosition, a.X),
+        I = n.useStore((e) => e.searchPlaceholder),
+        b = n.useStore((e) => e.inspectedExpressionPosition, a.X),
         T = i.useCallback(
             (e) => {
                 var t;
@@ -44,7 +44,7 @@ let d = i.forwardRef(function (e, t) {
                 query: E,
                 ref: g,
                 size: o.ZP.Sizes.MEDIUM,
-                placeholder: null != b ? b : d || null == m ? h : m,
+                placeholder: null != I ? I : d || null == m ? h : m,
                 onClear: S,
                 onKeyDown: f,
                 onQueryChange: T,
@@ -55,7 +55,7 @@ let d = i.forwardRef(function (e, t) {
                     'aria-haspopup': 'grid',
                     'aria-controls': _,
                     'aria-expanded': !0,
-                    'aria-activedescendant': (0, s.NE)(_, I.columnIndex, I.rowIndex)
+                    'aria-activedescendant': (0, s.NE)(_, b.columnIndex, b.rowIndex)
                 }
             })
         })

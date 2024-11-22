@@ -43,8 +43,8 @@ let f = 1500,
     g = () => Promise.resolve({ sessionId: void 0 }),
     E = (e) => {
         var t;
-        let { dispatcher: n, actionHandler: s, getFingerprint: c, getSessionId: E = g, TRACKING_URL: v, drainTimeoutOverride: b, waitFor: I } = e;
-        f = null != b ? b : 1500;
+        let { dispatcher: n, actionHandler: s, getFingerprint: c, getSessionId: E = g, TRACKING_URL: v, drainTimeoutOverride: I, waitFor: b } = e;
+        f = null != I ? I : 1500;
         function T() {
             return 0 !== m.length && (null != i ? null != r : null != c());
         }
@@ -126,7 +126,7 @@ let f = 1500,
             });
         class N extends (t = l.ZP.Store) {
             initialize() {
-                null != I && this.waitFor(...I);
+                null != b && this.waitFor(...b);
             }
             constructor(...e) {
                 super(...e), d(this, 'submitEventsImmediately', A);

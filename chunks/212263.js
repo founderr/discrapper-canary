@@ -16,8 +16,8 @@ var r = n(200651),
     g = n(639119),
     E = n(165583),
     v = n(197115),
-    b = n(631771),
-    I = n(609218),
+    I = n(631771),
+    b = n(609218),
     T = n(210887),
     S = n(626135),
     y = n(176354),
@@ -32,7 +32,7 @@ var r = n(200651),
 t.Z = (e) => {
     var t, a;
     let w,
-        { onLearnMore: M, onClose: P, channel: k, emojiDescriptor: U, pickerIntention: B, analyticsLocation: G, containerContext: Z } = e,
+        { onLearnMore: M, onClose: P, channel: k, emojiDescriptor: U, pickerIntention: G, analyticsLocation: B, containerContext: Z } = e,
         F = (0, o.e7)([T.Z], () => T.Z.theme) === R.BRd.LIGHT ? 'light' : 'dark',
         [V, j] = i.useState(!1),
         H = () => {
@@ -45,7 +45,7 @@ t.Z = (e) => {
         q = null != K || null != z,
         Q = (0, f.Iu)((e) => e.searchQuery),
         { analyticsLocations: X } = (0, d.ZP)(c.Z.EMOJI_PICKER),
-        J = b.Gi.useExperiment(
+        J = I.Gi.useExperiment(
             { location: 'Premium Emoji Roadblock' },
             {
                 autoTrackExposure: !q,
@@ -61,7 +61,7 @@ t.Z = (e) => {
         ),
         ee = J.enabled || $.enabled,
         et = J.addSocialProof;
-    w = B === O.Hz.REACTION ? D.cd.EMOJI_PICKER_REACTION_EMOJI_CLICKED : null == U ? D.cd.EMOJI_PICKER_FLOATING_UPSELL : U.subCategory === C.t0.TOP_GUILD_EMOJI ? D.cd.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED : U.subCategory === C.t0.NEWLY_ADDED_EMOJI ? D.cd.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED : D.cd.EMOJI_PICKER_EMOJI_CLICKED;
+    w = G === O.Hz.REACTION ? D.cd.EMOJI_PICKER_REACTION_EMOJI_CLICKED : null == U ? D.cd.EMOJI_PICKER_FLOATING_UPSELL : U.subCategory === C.t0.TOP_GUILD_EMOJI ? D.cd.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED : U.subCategory === C.t0.NEWLY_ADDED_EMOJI ? D.cd.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED : D.cd.EMOJI_PICKER_EMOJI_CLICKED;
     let en = null != U ? U.emoji : void 0,
         er = null != en && en.animated,
         ei = null != en && !y.ZP.isInternalEmojiForGuildId(en, null == k ? void 0 : k.getGuildId()),
@@ -74,13 +74,13 @@ t.Z = (e) => {
                 is_external: ei,
                 has_search_query: null != Q && '' !== Q,
                 location: {
-                    ...G,
+                    ...B,
                     object: ea
                 },
                 location_stack: X,
                 sku_id: (0, A.Wz)(A.ZP.getSkuIdForPremiumType(D.p9.TIER_2))
             });
-    }, [G, X, Q, er, ei, w, ea, ee]);
+    }, [B, X, Q, er, ei, w, ea, ee]);
     let es = (0, o.e7)([_.Z], () => _.Z.affinities),
         eo = (0, o.e7)([_.Z], () => _.Z.hasFetched);
     i.useEffect(() => {
@@ -88,7 +88,7 @@ t.Z = (e) => {
     }, [eo]);
     let el = es.length > 1 && et;
     return ee
-        ? (0, r.jsx)(I.Z, {
+        ? (0, r.jsx)(b.Z, {
               containerContext: Z,
               image: {
                   url: W,
@@ -104,7 +104,7 @@ t.Z = (e) => {
                   type: w,
                   is_external: ei,
                   location: {
-                      ...G,
+                      ...B,
                       object: ea
                   },
                   location_stack: X,

@@ -74,8 +74,8 @@ function d(e, t, n) {
         g = l.get(t),
         E = null !== (c = e.isDisabled) && void 0 !== c ? c : t.disabledKeys.has(m),
         v = null !== (d = e.isSelected) && void 0 !== d ? d : t.selectionManager.isSelected(m),
-        b = null !== (f = e.shouldSelectOnPressUp) && void 0 !== f ? f : null == g ? void 0 : g.shouldSelectOnPressUp,
-        I = null !== (_ = e.shouldFocusOnHover) && void 0 !== _ ? _ : null == g ? void 0 : g.shouldFocusOnHover,
+        I = null !== (f = e.shouldSelectOnPressUp) && void 0 !== f ? f : null == g ? void 0 : g.shouldSelectOnPressUp,
+        b = null !== (_ = e.shouldFocusOnHover) && void 0 !== _ ? _ : null == g ? void 0 : g.shouldFocusOnHover,
         T = null !== (p = e.shouldUseVirtualFocus) && void 0 !== p ? p : null == g ? void 0 : g.shouldUseVirtualFocus,
         S = null !== (h = e.isVirtualized) && void 0 !== h ? h : null == g ? void 0 : g.isVirtualized,
         y = (0, r.mp)(),
@@ -101,8 +101,8 @@ function d(e, t, n) {
             selectionManager: t.selectionManager,
             key: m,
             ref: n,
-            shouldSelectOnPressUp: b,
-            allowsDifferentPressOrigin: b && I,
+            shouldSelectOnPressUp: I,
+            allowsDifferentPressOrigin: I && b,
             isVirtualized: S,
             shouldUseVirtualFocus: T,
             isDisabled: E,
@@ -115,7 +115,7 @@ function d(e, t, n) {
             linkBehavior: null == g ? void 0 : g.linkBehavior
         }),
         { hoverProps: w } = (0, i.XI)({
-            isDisabled: E || !I,
+            isDisabled: E || !b,
             onHoverStart() {
                 !(0, i.E)() && (t.selectionManager.setFocused(!0), t.selectionManager.setFocusedKey(m));
             }

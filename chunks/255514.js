@@ -16,8 +16,8 @@ var r = n(200651),
     g = n(822686),
     E = n(356110),
     v = n(730719),
-    b = n(996701),
-    I = n(320596),
+    I = n(996701),
+    b = n(320596),
     T = n(273514),
     S = n(995712),
     y = n(234937),
@@ -34,8 +34,8 @@ var r = n(200651),
     P = n(905434),
     k = n(196627),
     U = n(739319),
-    B = n(842401),
-    G = n(375790),
+    G = n(842401),
+    B = n(375790),
     Z = n(981631),
     F = n(388032),
     V = n(133404);
@@ -101,7 +101,7 @@ t.Z = (e) => {
             if (e === Z.evJ.INVALID_FORM_BODY) eu(F.intl.string(F.t.VjAAuL));
             else eu(F.intl.string(F.t.h6D8V1));
         },
-        eb = () =>
+        eI = () =>
             q({
                 nodeRef: t.id,
                 destination: ['', e.successNodeId]
@@ -125,10 +125,10 @@ t.Z = (e) => {
                 destination: ['', t.id]
             }));
     }, [t.is_auto_submit, es, q, t.id]);
-    let eI = (0, l.fW)(Y),
+    let eb = (0, l.fW)(Y),
         eT = (0, u.A)({
             location: 'web_iar_node_view',
-            settingsUpsells: null != eI ? eI : [],
+            settingsUpsells: null != eb ? eb : [],
             channelId: em
         }),
         eS = (0, o.Do)({ location: 'web_iar_node_view' }) && null != j(t, 'ignore_users') && ('message' === n.name || 'first_dm' === n.name || 'user' === n.name);
@@ -147,12 +147,12 @@ t.Z = (e) => {
                     null != ee ? (0, r.jsx)(U.Z, { element: ee }) : null,
                     null != j(t, 'breadcrumbs') && (0, r.jsx)(p.Z, { history: W }),
                     null != j(t, 'message_preview') && ('message' === n.name || 'first_dm' === n.name) && (0, r.jsx)(O.Z, { message: n.record }),
-                    null != j(t, 'user_preview') && 'user' === n.name ? (0, r.jsx)(B.Z, { user: n.record }) : null,
+                    null != j(t, 'user_preview') && 'user' === n.name ? (0, r.jsx)(G.Z, { user: n.record }) : null,
                     (function (e) {
                         let { elements: t } = e;
                         return t.some((e) => {
                             let { type: t } = e;
-                            return G.O.includes(t);
+                            return B.O.includes(t);
                         });
                     })(t) &&
                         (0, r.jsxs)(r.Fragment, {
@@ -210,10 +210,10 @@ t.Z = (e) => {
                         }),
                     null != j(t, 'settings_upsells') &&
                         'message' === n.name &&
-                        null != eI &&
+                        null != eb &&
                         eT &&
                         (0, r.jsx)(M.Z, {
-                            settingsUpsells: eI,
+                            settingsUpsells: eb,
                             channelId: n.record.channel_id,
                             onModalClose: z,
                             reportId: X,
@@ -245,7 +245,7 @@ t.Z = (e) => {
                     ('user_urf' === n.name || 'message_urf' === n.name) &&
                         null != en &&
                         en.length > 0 &&
-                        (0, r.jsx)(I.Z, {
+                        (0, r.jsx)(b.Z, {
                             elements: en,
                             onChange: eg,
                             state: ef
@@ -254,7 +254,7 @@ t.Z = (e) => {
                         node: t,
                         onSelectChild: eE
                     }),
-                    null != et && et.length > 0 ? (0, r.jsx)(b.Z, { elements: et }) : null,
+                    null != et && et.length > 0 ? (0, r.jsx)(I.Z, { elements: et }) : null,
                     (0, r.jsx)(v.Z, {
                         errorMessage: el,
                         onClose: () => {
@@ -277,7 +277,7 @@ t.Z = (e) => {
                             eE(['', e.target]);
                             break;
                         case 'submit':
-                            ea(!0), eb();
+                            ea(!0), eI();
                     }
                 },
                 onBackClicked: e.onNavigateBack,

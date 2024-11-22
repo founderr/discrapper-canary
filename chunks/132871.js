@@ -22,7 +22,7 @@ n.r(t),
             return E;
         },
         setTrackedOpenedFromExternalEntrypoint: function () {
-            return b;
+            return I;
         },
         useApplicationDirectoryHistory: function () {
             return p;
@@ -33,7 +33,7 @@ var r,
     a,
     s,
     o = n(512969),
-    l = n(196136),
+    l = n(15729),
     u = n(731965),
     c = n(703656),
     d = n(264043),
@@ -95,6 +95,6 @@ function v() {
         });
     });
 }
-function b(e) {
+function I(e) {
     (0, u.j)(() => _.setState({ trackedOpenedFromExternalEntrypoint: e }));
 }

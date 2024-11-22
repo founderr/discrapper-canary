@@ -16,8 +16,8 @@ var r,
     g = n(998502),
     E = n(145597),
     v = n(830917),
-    b = n(554174),
-    I = n(938038),
+    I = n(554174),
+    b = n(938038),
     T = n(981631),
     S = n(987650);
 function y(e, t, n) {
@@ -215,8 +215,8 @@ class O {
             a = parseInt(i[0], 10),
             s = isNaN(a) ? l.Jx.UNKNOWN : a;
         isNaN(a) && A.error('ScreenTypeAnalytics: Unknown most used screen type: '.concat(i), r);
-        let o = I.c.getGameDisplayMode(null !== (e = this.game.name) && void 0 !== e ? e : this.game.id);
-        I.c.setGameDisplayMode(null !== (t = this.game.name) && void 0 !== t ? t : this.game.id, s);
+        let o = b.c.getGameDisplayMode(null !== (e = this.game.name) && void 0 !== e ? e : this.game.id);
+        b.c.setGameDisplayMode(null !== (t = this.game.name) && void 0 !== t ? t : this.game.id, s);
         let u = {
             screentype_unknown_duration: r[l.Jx.UNKNOWN],
             screentype_windowed_duration: r[l.Jx.WINDOWED],
@@ -465,14 +465,14 @@ function U(e) {
             ++n.overlayMessageCreateCount;
     }
 }
-function B(e) {
+function G(e) {
     A.verbose('MESSAGE_ACKED', e), D.desktopMessageEvent('ack');
 }
-function G(e) {
+function B(e) {
     e.message.state === T.yb.SENDING && D.desktopMessageEvent('created');
 }
 function Z(e) {
-    let t = (0, b.Z)();
+    let t = (0, I.Z)();
     null != t && t !== E.Js && (A.verbose('AUDIO_TOGGLE_SELF_MUTE', e), D.handleMuteToggled());
 }
 function F(e) {
@@ -566,8 +566,8 @@ class Y extends u.Z {
                           OVERLAY_MESSAGE_EVENT_ACTION: U,
                           RUNNING_GAMES_CHANGE: L,
                           SOUNDBOARD_SET_OVERLAY_ENABLED: k,
-                          MESSAGE_ACKED: B,
-                          MESSAGE_CREATE: G,
+                          MESSAGE_ACKED: G,
+                          MESSAGE_CREATE: B,
                           WINDOW_FOCUS: F,
                           RTC_CONNECTION_STATE: j.handleRTCConnectionState,
                           AUDIO_TOGGLE_SELF_MUTE: Z,

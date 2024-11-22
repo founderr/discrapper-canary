@@ -7,8 +7,8 @@ n.d(t, {
     }
 });
 var i = n(192379),
-    l = n(515643),
-    r = n(37050),
+    l = n(232713),
+    r = n(65400),
     a = n(731965);
 let o = (0, r.F)((e) => ({ upsellsByGuildId: {} }));
 function s(e) {

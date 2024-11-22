@@ -3,7 +3,7 @@ var r = n(200651),
     i = n(192379),
     a = n(954955),
     s = n.n(a),
-    o = n(515643),
+    o = n(232713),
     l = n(442837),
     u = n(477690),
     c = n(481060),
@@ -16,8 +16,8 @@ var r = n(200651),
     g = n(98278),
     E = n(639119),
     v = n(695346),
-    b = n(594174),
-    I = n(626135),
+    I = n(594174),
+    b = n(626135),
     T = n(624138),
     S = n(45521),
     y = n(285651),
@@ -34,8 +34,8 @@ var r = n(200651),
     P = n(15350),
     k = n(611480),
     U = n(981631),
-    B = n(858260);
-let G = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
+    G = n(858260);
+let B = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
     Z = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
     F = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
     V = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN),
@@ -71,7 +71,7 @@ let G = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             }),
             el = v._O.useSetting(),
             eu = i.useMemo(() => new Set(el), [el]),
-            ec = (0, l.e7)([b.default], () => b.default.getCurrentUser()),
+            ec = (0, l.e7)([I.default], () => I.default.getCurrentUser()),
             ed = i.useMemo(() => (0, P.S)(en, ec, u), [en, ec, u]),
             ef = (0, N.RJ)(),
             e_ = (0, N.LZ)(),
@@ -84,10 +84,10 @@ let G = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 },
                 [T, en, eg]
             ),
-            ev = null != eo && eo > G,
+            ev = null != eo && eo > B,
             {
-                rowCount: eb,
-                rowCountBySection: eI,
+                rowCount: eI,
+                rowCountBySection: eb,
                 stickersGrid: eT,
                 gutterWidth: eS,
                 columnCounts: ey
@@ -105,7 +105,7 @@ let G = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                     let { location: i } = t;
                     switch (e.type) {
                         case R.al.CREATE_STICKER:
-                            I.default.track(U.rMx.OPEN_MODAL, {
+                            b.default.track(U.rMx.OPEN_MODAL, {
                                 type: U.jXE.CREATE_STICKER_MODAL,
                                 location: Y
                             }),
@@ -171,14 +171,14 @@ let G = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 null === (e = ee.current) || void 0 === e || e.focus();
             }, []);
         let ex = i.useCallback(() => {
-            H(), I.default.track(U.rMx.PREMIUM_PROMOTION_OPENED, { location_section: U.jXE.STICKER_PICKER_UPSELL }), (0, g.z)();
+            H(), b.default.track(U.rMx.PREMIUM_PROMOTION_OPENED, { location_section: U.jXE.STICKER_PICKER_UPSELL }), (0, g.z)();
         }, [H]);
         return (0, r.jsxs)(_.Gt, {
             value: W,
             children: [
                 !(X && es) &&
                     (0, r.jsx)('div', {
-                        className: B.header,
+                        className: G.header,
                         children: (0, r.jsx)(w.Z, {
                             ref: ee,
                             onKeyDown: eO,
@@ -188,14 +188,14 @@ let G = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                     }),
                 es
                     ? (0, r.jsx)(L.Z, {
-                          className: B.emptyState,
+                          className: G.emptyState,
                           onClose: H
                       })
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)('div', {
                                   ref: J,
-                                  className: B.listWrapper,
+                                  className: G.listWrapper,
                                   id: k.Vr,
                                   ...eR,
                                   children:
@@ -210,8 +210,8 @@ let G = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                                 gutterWidth: eS,
                                                 isUsingKeyboardNavigation: eD,
                                                 onSelectSticker: eE,
-                                                rowCount: eb,
-                                                rowCountBySection: eI,
+                                                rowCount: eI,
+                                                rowCountBySection: eb,
                                                 stickersCategories: ea,
                                                 stickersGrid: eT,
                                                 channel: u
@@ -232,12 +232,12 @@ t.Z = i.forwardRef(
     (e, t) => (
         (0, N.fP)(),
         (0, r.jsx)('div', {
-            className: B.wrapper,
+            className: G.wrapper,
             id: k.nZ,
             'aria-labelledby': k.ED,
             role: 'tabpanel',
             children: e.isLoading
-                ? (0, r.jsx)(c.Spinner, { className: B.loadingIndicator })
+                ? (0, r.jsx)(c.Spinner, { className: G.loadingIndicator })
                 : (0, r.jsx)(X, {
                       ...e,
                       ref: t

@@ -21,8 +21,8 @@ var i = n(442837),
     g = n(502762),
     E = n(530),
     v = n(827313),
-    b = n(420654),
-    I = n(116854),
+    I = n(420654),
+    b = n(116854),
     T = n(166584),
     S = n(915014),
     y = n(228168),
@@ -35,7 +35,7 @@ function C(e) {
         P = (0, i.e7)([l.Z], () => l.Z.hidePersonalInformation),
         k = t.id === n.id,
         { dimissibleUpsellsEnabled: U } = (0, d.u)({ location: 'UserProfilePopoutBody' }),
-        B = (0, c.I5)(n);
+        G = (0, c.I5)(n);
     return (0, r.jsxs)(a.Scroller, {
         fade: !0,
         className: N.body,
@@ -46,7 +46,7 @@ function C(e) {
                 onOpenProfile: D,
                 usernameIcon:
                     t.hasAvatarForGuild(null == R ? void 0 : R.id) &&
-                    (0, r.jsx)(I.Z, {
+                    (0, r.jsx)(b.Z, {
                         user: t,
                         nickname: w
                     }),
@@ -84,7 +84,7 @@ function C(e) {
                 }),
             t.isProvisional
                 ? (0, r.jsx)(s.Z, { look: 'profile' })
-                : (0, r.jsx)(b.Z, {
+                : (0, r.jsx)(I.Z, {
                       user: t,
                       bio: null == C ? void 0 : C.bio,
                       hidePersonalInformation: P,
@@ -93,7 +93,7 @@ function C(e) {
             U &&
                 k &&
                 (0, r.jsx)(_.Z, {
-                    isPremiumUser: B,
+                    isPremiumUser: G,
                     onInteraction: x,
                     className: N.upsell
                 }),

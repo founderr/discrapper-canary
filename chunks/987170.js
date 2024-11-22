@@ -109,7 +109,7 @@ function f(e) {
                 h = c(e.kind, e.id, t),
                 m = null == o.trackExposureOptions ? void 0 : (0, i.Z)(null !== (a = o.trackExposureOptions) && void 0 !== a ? a : {}),
                 E = null !== (s = null == h ? void 0 : h.triggerDebuggingEnabled) && void 0 !== s && s,
-                [[v, b, I], T] = (0, r.useState)(() => {
+                [[v, I, b], T] = (0, r.useState)(() => {
                     let t = null == h || l ? u.NZ.NOT_ELIGIBLE : h.bucket;
                     return [d(e, t, f, h), t, null == h ? -1 : h.revision];
                 }),
@@ -117,7 +117,7 @@ function f(e) {
             return (
                 (0, r.useEffect)(() => {
                     if (!l && (!!_ || !!E) && null == e.commonTriggerPoint) p(S, m, !1 === _);
-                }, [l, _, S, m, b, I, E]),
+                }, [l, _, S, m, I, b, E]),
                 (0, r.useEffect)(
                     () =>
                         g(

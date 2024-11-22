@@ -2,8 +2,8 @@ var o = n(200651),
     r = n(192379),
     s = n(120356),
     a = n.n(s),
-    i = n(959078),
-    l = n(442837),
+    l = n(959078),
+    i = n(442837),
     c = n(481060),
     d = n(607070),
     u = n(553795),
@@ -17,7 +17,7 @@ var o = n(200651),
     v = n(585857),
     j = n(388032),
     _ = n(161548);
-function E(e) {
+function b(e) {
     let { children: t, isComplete: n, hasNextStep: r } = e;
     return (0, o.jsxs)('li', {
         className: a()(_.stepWrapper, { [_.stepWrapperComplete]: n }, { [_.stepWrapperWithNextStep]: r }),
@@ -44,7 +44,7 @@ function E(e) {
         ]
     });
 }
-function b(e) {
+function E(e) {
     return (0, o.jsx)(c.Text, {
         className: _.microphoneUnitBodyText,
         color: 'text-muted',
@@ -55,11 +55,11 @@ function b(e) {
 function N(e) {
     let { quest: t, useReducedMotion: n } = e,
         s = (0, m.n)(),
-        l = (0, C.k3)(t.id, f.jn.QUEST_BAR_V2),
+        i = (0, C.k3)(t.id, f.jn.QUEST_BAR_V2),
         d = (0, C.g2)({ useReducedMotion: n }),
         {
             errorHints: v,
-            startingConsoleQuest: E,
+            startingConsoleQuest: b,
             startConsoleQuest: N
         } = (0, x.GI)({
             questId: t.id,
@@ -73,7 +73,7 @@ function N(e) {
             },
             afterRequest: d.stopAnimation
         }),
-        { header: B, renderBody: S } = r.useMemo(() => {
+        { header: T, renderBody: B } = r.useMemo(() => {
             let e = v.length > 0,
                 n = h.r.build(t.config).application.name;
             return {
@@ -82,12 +82,12 @@ function N(e) {
                     ? () =>
                           (0, o.jsx)(o.Fragment, {
                               children: v.map((e, n) => {
-                                  if (e.type === i.K.EXPIRED_CREDENTIAL && s) {
+                                  if (e.type === l.K.EXPIRED_CREDENTIAL && s) {
                                       let r = u.Z.getAccount(e.connected_account_id, e.connected_account_type),
                                           s = (0, g.C9)(e),
                                           a = (0, g._j)(e);
                                       return (0, o.jsx)(
-                                          b,
+                                          E,
                                           {
                                               children: j.intl.format(s, {
                                                   account_name: null == r ? void 0 : r.name,
@@ -108,7 +108,7 @@ function N(e) {
                                           n
                                       );
                                   }
-                                  return (0, o.jsx)(b, { children: e.message }, n);
+                                  return (0, o.jsx)(E, { children: e.message }, n);
                               })
                           })
                     : () =>
@@ -135,23 +135,23 @@ function N(e) {
                     }),
                     (0, o.jsx)(c.Text, {
                         variant: 'text-xs/medium',
-                        children: B
+                        children: T
                     }),
                     (0, o.jsx)(c.Clickable, {
-                        className: a()(_.microphoneUnitRefreshIconWrapper, { [_.disabled]: E }),
+                        className: a()(_.microphoneUnitRefreshIconWrapper, { [_.disabled]: b }),
                         onClick: () => N(),
                         children: d.render()
                     })
                 ]
             }),
             (0, o.jsxs)('div', {
-                className: a()({ [_.opacity_50]: E }),
-                children: [S(), 0 === v.length ? null : (0, o.jsx)(b, { children: l })]
+                className: a()({ [_.opacity_50]: b }),
+                children: [B(), 0 === v.length ? null : (0, o.jsx)(E, { children: i })]
             })
         ]
     });
 }
-function B(e) {
+function T(e) {
     let { text: t } = e;
     return (0, o.jsx)(c.Text, {
         color: 'text-muted',
@@ -161,10 +161,10 @@ function B(e) {
 }
 t.Z = function (e) {
     let { quest: t, taskDetails: n } = e,
-        s = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
+        s = (0, i.e7)([d.Z], () => d.Z.useReducedMotion),
         a = (0, x.z6)(),
         {
-            steps: i,
+            steps: l,
             hasConnectedAccounts: u,
             isProgressingQuestForLaunchedGame: p,
             isQuestComplete: m
@@ -172,8 +172,8 @@ t.Z = function (e) {
             var e;
             let r = a.xboxAndPlaystationAccounts.length > 0,
                 s = r && (0, g.Bz)(t),
-                i = h.r.build(t.config).application.name,
-                l = (null === (e = t.userStatus) || void 0 === e ? void 0 : e.completedAt) != null;
+                l = h.r.build(t.config).application.name,
+                i = (null === (e = t.userStatus) || void 0 === e ? void 0 : e.completedAt) != null;
             return {
                 steps: [
                     {
@@ -182,20 +182,20 @@ t.Z = function (e) {
                                 ...a,
                                 quest: t
                             }),
-                        isComplete: r || s || l
+                        isComplete: r || s || i
                     },
                     {
-                        renderContent: () => (0, o.jsx)(B, { text: j.intl.formatToPlainString(j.t['+8JB6e'], { gameTitle: i }) }),
-                        isComplete: s || l
+                        renderContent: () => (0, o.jsx)(T, { text: j.intl.formatToPlainString(j.t['+8JB6e'], { gameTitle: l }) }),
+                        isComplete: s || i
                     },
                     {
-                        renderContent: () => (0, o.jsx)(B, { text: j.intl.formatToPlainString(j.t.HhfrYW, { numMinutes: n.targetMinutes }) }),
-                        isComplete: l
+                        renderContent: () => (0, o.jsx)(T, { text: j.intl.formatToPlainString(j.t.HhfrYW, { numMinutes: n.targetMinutes }) }),
+                        isComplete: i
                     }
                 ],
                 hasConnectedAccounts: r,
                 isProgressingQuestForLaunchedGame: s,
-                isQuestComplete: l
+                isQuestComplete: i
             };
         }, [a, t, n]);
     return (0, o.jsxs)('div', {
@@ -213,12 +213,12 @@ t.Z = function (e) {
                 className: _.stepsWrapper,
                 children: [
                     (0, o.jsx)('ul', {
-                        children: i.map((e, t) =>
+                        children: l.map((e, t) =>
                             (0, o.jsx)(
-                                E,
+                                b,
                                 {
                                     isComplete: e.isComplete,
-                                    hasNextStep: t < i.length - 1,
+                                    hasNextStep: t < l.length - 1,
                                     children: e.renderContent()
                                 },
                                 t

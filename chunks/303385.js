@@ -3,17 +3,17 @@ n(192379);
 var r = n(100621),
     s = n(481060),
     a = n(497505),
-    i = n(302245),
-    l = n(644646),
+    l = n(302245),
+    i = n(644646),
     c = n(46140),
     d = n(388032),
     u = n(437567);
 t.Z = (e) => {
     let { quest: t, expansionSpring: n, isFullyExpanded: p, partnerBranding: m, useReducedMotion: x } = e,
-        { enabled: f, variant: g } = i.Hp.useExperiment({ location: c.dr.QUESTS_BAR });
+        { enabled: f, variant: g } = l.Hp.useExperiment({ location: c.dr.QUESTS_BAR });
     if (!f) return null;
     let h = null;
-    return (g === i.PW.REWARD_AVAILABLE ? (h = d.intl.string(d.t['2BD0CQ'])) : g === i.PW.EARN_A_REWARD ? (h = d.intl.string(d.t.mETI3N)) : g === i.PW.EARN_A_REWARD_EXCLAMATION && (h = d.intl.string(d.t.LCpIZG)), null == h)
+    return (g === l.PW.REWARD_AVAILABLE ? (h = d.intl.string(d.t['2BD0CQ'])) : g === l.PW.EARN_A_REWARD ? (h = d.intl.string(d.t.mETI3N)) : g === l.PW.EARN_A_REWARD_EXCLAMATION && (h = d.intl.string(d.t.LCpIZG)), null == h)
         ? null
         : (0, o.jsxs)(o.Fragment, {
               children: [
@@ -39,7 +39,7 @@ t.Z = (e) => {
                               (e, t, n) => 'translate('.concat(e, 'px, ').concat(t, 'px) scale(').concat(n, ')')
                           )
                       },
-                      children: (0, o.jsx)(l.Z, {
+                      children: (0, o.jsx)(i.Z, {
                           learnMoreStyle: 'text',
                           quest: t,
                           questContent: a.jn.QUEST_BAR_V2,

@@ -16,8 +16,8 @@ var r = n(200651),
     g = n(703558),
     E = n(117530),
     v = n(459273),
-    b = n(444282),
-    I = n(898463),
+    I = n(444282),
+    b = n(898463),
     T = n(981631),
     S = n(989796),
     y = n(112864);
@@ -101,7 +101,7 @@ function N(e) {
                                   children: R
                                       ? L.map((e) =>
                                             (0, r.jsx)(
-                                                b.Z,
+                                                I.Z,
                                                 {
                                                     channelId: t,
                                                     keyboardModeEnabled: a,
@@ -112,7 +112,7 @@ function N(e) {
                                         )
                                       : C.map((e) =>
                                             (0, r.jsx)(
-                                                I.Z,
+                                                b.Z,
                                                 {
                                                     channelId: t,
                                                     draftType: n.drafts.type,

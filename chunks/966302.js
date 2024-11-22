@@ -21,8 +21,8 @@ var r = n(200651),
     g = n(932724),
     E = n(672339),
     v = n(898531),
-    b = n(923973),
-    I = n(189771),
+    I = n(923973),
+    b = n(189771),
     T = n(560688),
     S = n(871499),
     y = n(136995),
@@ -42,11 +42,11 @@ let U = {
         width: 232,
         height: 315
     },
-    B = {
+    G = {
         width: 232,
         height: 267
     },
-    G = 475,
+    B = 475,
     Z = 267;
 function F(e) {
     let { header: t } = e,
@@ -70,7 +70,7 @@ function F(e) {
                     children: (0, r.jsx)(n, {
                         disabled: !1,
                         deviceId: a,
-                        width: G,
+                        width: B,
                         height: Z
                     })
                 }),
@@ -84,8 +84,8 @@ function F(e) {
 }
 function V(e) {
     let { canVideo: t, channel: n, numVideoDevices: i } = e,
-        { cameraUnavailable: a, enabled: o } = (0, b.Z)(),
-        l = (0, I.Z)(n);
+        { cameraUnavailable: a, enabled: o } = (0, I.Z)(),
+        l = (0, b.Z)(n);
     return (0, r.jsxs)('div', {
         className: P.actions,
         children: [
@@ -140,7 +140,7 @@ function j(e) {
         [m, g] = i.useState(!1),
         E = (0, p.x)(f),
         v = (0, h.ZP)(f),
-        [b, I] = (0, l.Wu)([N.Z], () => [N.Z.supports(w.AN.VIDEO), Object.keys(N.Z.getVideoDevices()).length]),
+        [I, b] = (0, l.Wu)([N.Z], () => [N.Z.supports(w.AN.VIDEO), Object.keys(N.Z.getVideoDevices()).length]),
         T = (0, l.e7)([R.Z], () => R.Z.isFocused()),
         S = (0, l.e7)([O.Z], () => O.Z.getMode(f.id)),
         y = i.useCallback((e) => {
@@ -162,7 +162,7 @@ function j(e) {
         };
         return window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e);
     }, [f]);
-    let C = S === x.WtW.VIDEO && b && I > 0,
+    let C = S === x.WtW.VIDEO && I && b > 0,
         L = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(D.Z, {
@@ -191,7 +191,7 @@ function j(e) {
                 })
             ]
         }),
-        j = C ? U : B,
+        j = C ? U : G,
         H = (0, l.e7)([R.Z], () => R.Z.windowSize());
     return (0, r.jsx)(_.Z, {
         className: P.wrapper,
@@ -211,9 +211,9 @@ function j(e) {
                     className: s()(P.root, k.elevationHigh, { [P.previewCamera]: m }, e),
                     style: {
                         ...t,
-                        width: A.value.interpolate([0, 1], [j.width, G]),
+                        width: A.value.interpolate([0, 1], [j.width, B]),
                         minHeight: A.value.interpolate([0, 1], [j.height, Z]),
-                        translateX: A.value.interpolate([0, 1], [0, (-1 * Math.abs(G - j.width)) / 2])
+                        translateX: A.value.interpolate([0, 1], [0, (-1 * Math.abs(B - j.width)) / 2])
                     },
                     children: [
                         m
@@ -225,7 +225,7 @@ function j(e) {
                         (0, r.jsx)(V, {
                             canVideo: C,
                             channel: f,
-                            numVideoDevices: I
+                            numVideoDevices: b
                         }),
                         C && !m
                             ? (0, r.jsx)(u.Button, {

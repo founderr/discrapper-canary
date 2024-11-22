@@ -20,8 +20,8 @@ var r = n(200651),
     g = n(594174),
     E = n(626135),
     v = n(74538),
-    b = n(94795),
-    I = n(327943),
+    I = n(94795),
+    b = n(327943),
     T = n(539873),
     S = n(981631),
     y = n(921944),
@@ -49,7 +49,7 @@ let R = () => {
     O = (e) => {
         let { markAsDismissed: t } = e,
             n = () => {
-                null == t || t(y.L.DISMISS), (0, b.G8)();
+                null == t || t(y.L.DISMISS), (0, I.G8)();
             };
         return (0, r.jsxs)('div', {
             className: C.editorHeader,
@@ -78,7 +78,7 @@ let R = () => {
     },
     D = (e) => {
         let { isCoachmark: t, markAsDismissed: n } = e,
-            i = (0, o.e7)([I.Z], () => I.Z.isUpsellPreview);
+            i = (0, o.e7)([b.Z], () => b.Z.isUpsellPreview);
         return (0, r.jsxs)('div', {
             className: C.editorFooter,
             children: [
@@ -86,7 +86,7 @@ let R = () => {
                 (0, r.jsx)(l.Button, {
                     className: C.footerButton,
                     onClick: () => {
-                        null == n || n(y.L.DISMISS), (0, b.G8)(), !t && u.Z.open();
+                        null == n || n(y.L.DISMISS), (0, I.G8)(), !t && u.Z.open();
                     },
                     color: l.Button.Colors.PRIMARY,
                     size: l.Button.Sizes.MEDIUM,
@@ -103,9 +103,9 @@ function L(e) {
             isUpsellPreview: p,
             isEditorOpen: h,
             shouldEditorAnimate: m
-        } = (0, o.cj)([I.Z, d.Z], () => ({
-            isUpsellPreview: I.Z.isUpsellPreview,
-            isEditorOpen: I.Z.isEditorOpen,
+        } = (0, o.cj)([b.Z, d.Z], () => ({
+            isUpsellPreview: b.Z.isUpsellPreview,
+            isEditorOpen: b.Z.isEditorOpen,
             shouldEditorAnimate: t && !d.Z.useReducedMotion
         }));
     i.useEffect(() => {
@@ -115,9 +115,9 @@ function L(e) {
                 location_stack: a
             });
     }, [p, a]);
-    let v = (0, c.Z)(null, p ? b.O7 : S.dG4);
+    let v = (0, c.Z)(null, p ? I.O7 : S.dG4);
     return (i.useEffect(() => {
-        if (!!p && !h) return b.O7;
+        if (!!p && !h) return I.O7;
     }, [p, h]),
     null == u)
         ? null

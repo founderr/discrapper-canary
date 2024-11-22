@@ -23,8 +23,8 @@ var r,
     g = n(357355),
     E = n(639119),
     v = n(197115),
-    b = n(302945),
-    I = n(474936),
+    I = n(302945),
+    b = n(474936),
     T = n(981631),
     S = n(388032),
     y = n(739626);
@@ -74,7 +74,7 @@ function A(e) {
                                 variant: 'heading-xl/bold',
                                 children: r
                             }),
-                            x && (0, a.jsx)(b.Z, { affinities: D }),
+                            x && (0, a.jsx)(I.Z, { affinities: D }),
                             (0, a.jsx)(c.Text, {
                                 variant: 'text-sm/medium',
                                 className: y.body,
@@ -109,7 +109,7 @@ function A(e) {
                                     section: A,
                                     object: T.qAy.BUTTON_CTA
                                 },
-                                subscriptionTier: I.Si.TIER_2,
+                                subscriptionTier: b.Si.TIER_2,
                                 size: c.Button.Sizes.SMALL,
                                 color: c.Button.Colors.CUSTOM,
                                 onClick: () => {

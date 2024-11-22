@@ -18,8 +18,8 @@ e.exports = function (e, t, n) {
         g,
         E,
         v,
-        b,
         I,
+        b,
         T,
         S = n && n.that,
         y = !!(n && n.AS_ENTRIES),
@@ -38,18 +38,18 @@ e.exports = function (e, t, n) {
     else {
         if (!(g = d(e))) throw _(s(e) + ' is not iterable');
         if (o(g)) {
-            for (E = 0, v = l(e); v > E; E++) if ((b = D(e[E])) && u(h, b)) return b;
+            for (E = 0, v = l(e); v > E; E++) if ((I = D(e[E])) && u(h, I)) return I;
             return new p(!1);
         }
         m = c(e, g);
     }
-    for (I = A ? e.next : m.next; !(T = i(I, m)).done; ) {
+    for (b = A ? e.next : m.next; !(T = i(b, m)).done; ) {
         try {
-            b = D(T.value);
+            I = D(T.value);
         } catch (e) {
             f(m, 'throw', e);
         }
-        if ('object' == typeof b && b && u(h, b)) return b;
+        if ('object' == typeof I && I && u(h, I)) return I;
     }
     return new p(!1);
 };

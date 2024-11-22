@@ -18,8 +18,8 @@ var i = n(985445),
     g = r(n(449686)),
     E = r(n(102386)),
     v = n(179237),
-    b = n(467568),
-    I = {
+    I = n(467568),
+    b = {
         default: {
             tension: 170,
             friction: 26
@@ -46,7 +46,7 @@ var i = n(985445),
         }
     },
     T = s(
-        s({}, I.default),
+        s({}, b.default),
         {},
         {
             mass: 1,
@@ -201,7 +201,7 @@ function U(e) {
               })(1)
             : e;
 }
-function B(e, t) {
+function G(e, t) {
     var n = t.key,
         r = t.props,
         i = t.state,
@@ -240,7 +240,7 @@ function B(e, t) {
         f ? h() : ((u = O(r.delay || 0, n)), (d = D(r.pause, n)) ? (i.resumeQueue.add(p), o.pause()) : (o.resume(), p()));
     });
 }
-var G = function (e, t) {
+var B = function (e, t) {
         return 1 == t.length
             ? t[0]
             : t.some(function (e) {
@@ -326,7 +326,7 @@ function Y() {
                                 'return',
                                 (r.promise = u(
                                     l.mark(function e() {
-                                        var h, m, g, E, v, b, I, T, S;
+                                        var h, m, g, E, v, I, b, T, S;
                                         return l.wrap(
                                             function (e) {
                                                 for (;;)
@@ -351,13 +351,13 @@ function Y() {
                                                                         }
                                                                     };
                                                                 }),
-                                                                (b = function (e) {
+                                                                (I = function (e) {
                                                                     var t = (o <= (r.cancelId || 0) && V(i)) || (o !== r.asyncId && F(i, !1));
                                                                     if (t) throw ((e.result = t), e);
                                                                 }),
-                                                                (I = v(function (e, t) {
+                                                                (b = v(function (e, t) {
                                                                     var n = new K();
-                                                                    b(n);
+                                                                    I(n);
                                                                     var c = a.is.obj(e) ? s({}, e) : s(s({}, t), {}, { to: e });
                                                                     return (
                                                                         (c.parentId = o),
@@ -372,7 +372,7 @@ function Y() {
                                                                                             for (;;)
                                                                                                 switch ((e.prev = e.next)) {
                                                                                                     case 0:
-                                                                                                        if ((b(n), !i.is('PAUSED'))) {
+                                                                                                        if ((I(n), !i.is('PAUSED'))) {
                                                                                                             e.next = 4;
                                                                                                             break;
                                                                                                         }
@@ -439,7 +439,7 @@ function Y() {
                                                                                                       e.next = 7;
                                                                                                       break;
                                                                                                   }
-                                                                                                  return (i = r.value), (e.next = 5), I(i);
+                                                                                                  return (i = r.value), (e.next = 5), b(i);
                                                                                               case 5:
                                                                                                   e.next = 1;
                                                                                                   break;
@@ -454,7 +454,7 @@ function Y() {
                                                                               return e.apply(this, arguments);
                                                                           };
                                                                       })()(t))
-                                                                    : a.is.fun(t) && (S = Promise.resolve(t(I, i.stop.bind(i)))),
+                                                                    : a.is.fun(t) && (S = Promise.resolve(t(b, i.stop.bind(i)))),
                                                                 (e.next = 11),
                                                                 Promise.all([S.then(m), E])
                                                             );
@@ -659,7 +659,7 @@ var K = (function (e) {
                                         (_ = h + (m / (1 - g)) * (1 - E)), (f = 0.1 > Math.abs(u.lastPosition - _)), (v = m * E);
                                     } else {
                                         v = null == u.lastVelocity ? m : u.lastVelocity;
-                                        for (var v, b = s.precision || (h == d ? 0.005 : Math.min(1, 0.001 * Math.abs(d - h))), I = s.restVelocity || b / 10, T = s.clamp ? 0 : s.bounce, S = !a.is.und(T), y = h == d ? u.v0 > 0 : h < d, A = !1, N = Math.ceil(e / 1), C = 0; C < N && !(!(Math.abs(v) > I) && (f = Math.abs(d - _) <= b)); ++C) {
+                                        for (var v, I = s.precision || (h == d ? 0.005 : Math.min(1, 0.001 * Math.abs(d - h))), b = s.restVelocity || I / 10, T = s.clamp ? 0 : s.bounce, S = !a.is.und(T), y = h == d ? u.v0 > 0 : h < d, A = !1, N = Math.ceil(e / 1), C = 0; C < N && !(!(Math.abs(v) > b) && (f = Math.abs(d - _) <= I)); ++C) {
                                             S && (A = _ == d || _ > d == y) && ((v = -v * T), (_ = d));
                                             var R = (-(0.000001 * s.tension) * (_ - d) + -(0.001 * s.friction) * v) / s.mass;
                                             (v += 1 * R), (_ += 1 * v);
@@ -744,7 +744,7 @@ var K = (function (e) {
                                                 )
                                             );
                                         case 4:
-                                            return (i = e.sent), e.abrupt('return', G(this, i));
+                                            return (i = e.sent), e.abrupt('return', B(this, i));
                                         case 6:
                                         case 'end':
                                             return e.stop();
@@ -821,7 +821,7 @@ var K = (function (e) {
                     };
                 i('cancel'), i('pause');
                 var s = this._prepareNode(e);
-                return B(++this._lastCallId, {
+                return G(++this._lastCallId, {
                     key: this.key,
                     props: e,
                     state: this._state,
@@ -861,11 +861,11 @@ var K = (function (e) {
                     E = e.from,
                     v = void 0 === E ? h : E;
                 if ((u && !l && (g = v), t.reverse)) {
-                    var b = [v, g];
-                    (g = b[0]), (v = b[1]);
+                    var I = [v, g];
+                    (g = I[0]), (v = I[1]);
                 }
-                var I = !a.isEqual(v, h);
-                I && (i.from = v);
+                var b = !a.isEqual(v, h);
+                b && (i.from = v);
                 var S = !a.isEqual(g, p);
                 S && this._focus(g);
                 var A = a.getFluidConfig(g),
@@ -888,11 +888,11 @@ var K = (function (e) {
                 if (!M || a.is.und(g)) return n(F(this, !0));
                 var P = a.is.und(t.reset) ? u && !t.default : !a.is.und(v) && D(t.reset, r),
                     k = P ? v : this.get(),
-                    B = U(g),
-                    G = a.is.num(B) || a.is.arr(B) || a.isAnimatedString(B),
-                    j = !C && (!G || D(o.immediate || t.immediate, r));
+                    G = U(g),
+                    B = a.is.num(G) || a.is.arr(G) || a.isAnimatedString(G),
+                    j = !C && (!B || D(o.immediate || t.immediate, r));
                 if (S) {
-                    if (j) M = this._updateNode(B);
+                    if (j) M = this._updateNode(G);
                     else {
                         var Y = this._getNodeType(g);
                         if (Y !== M.constructor) throw Error('Cannot animate between ' + M.constructor.name + ' and ' + Y.name + ', as the "to" prop suggests');
@@ -902,11 +902,11 @@ var K = (function (e) {
                     K = !!A,
                     z = !1;
                 if (!K) {
-                    var q = P || (this.is(X) && I);
-                    (S || q) && (K = !(z = a.isEqual(U(k), B))), (!a.isEqual(R.decay, L) || !a.isEqual(R.velocity, x)) && (K = !0);
+                    var q = P || (this.is(X) && b);
+                    (S || q) && (K = !(z = a.isEqual(U(k), G))), (!a.isEqual(R.decay, L) || !a.isEqual(R.velocity, x)) && (K = !0);
                 }
                 if ((z && this.is($) && (i.changed && !P ? (K = !0) : !K && this._stop()), !C)) {
-                    (K || a.getFluidConfig(p)) && ((i.values = M.getPayload()), (i.toValues = A ? null : W == f.AnimatedString ? [1] : a.toArray(B))), (i.immediate = j), (i.onStart = ei(c('onStart'), r)), (i.onChange = ei(c('onChange'), r));
+                    (K || a.getFluidConfig(p)) && ((i.values = M.getPayload()), (i.toValues = A ? null : W == f.AnimatedString ? [1] : a.toArray(G))), (i.immediate = j), (i.onStart = ei(c('onStart'), r)), (i.onChange = ei(c('onChange'), r));
                     var Q = i.onRest,
                         ee = P && !t.onRest ? Q[0] || a.noop : ea(ei(c('onRest'), r), this);
                     if (K) {
@@ -1248,7 +1248,7 @@ function ef(e, t) {
                 return (
                     l
                         ? u.push(
-                              B(++t._lastAsyncId, {
+                              G(++t._lastAsyncId, {
                                   props: n,
                                   state: c,
                                   actions: {
@@ -1265,7 +1265,7 @@ function ef(e, t) {
                           )
                         : !n.keys && !0 === n.cancel && W(c, t._lastAsyncId),
                     Promise.all(u).then(function (a) {
-                        var o = G(t, a);
+                        var o = B(t, a);
                         if (s && o.finished && !(r && o.noop)) {
                             var l = es(n, s, i);
                             if (l) return eg(t, [l]), e(t, l, !0);
@@ -1276,7 +1276,7 @@ function ef(e, t) {
             })(e, t);
         })
     ).then(function (t) {
-        return G(e, t);
+        return B(e, t);
     });
 }
 function e_(e, t) {
@@ -1330,10 +1330,10 @@ var eE = o.createContext({}),
         return o.createElement(i, { value: n }, t);
     };
 (ev.Provider = eE.Provider), (ev.Consumer = eE.Consumer);
-var eb = function () {
+var eI = function () {
         return o.useContext(eE);
     },
-    eI = {
+    eb = {
         create: function (e) {
             return {
                 get controllers() {
@@ -1457,14 +1457,14 @@ function eT(e, t, n) {
             m(0, Math.min(p, e));
         }, n);
     var g = o.useMemo(function () {
-            return eI.create(function () {
+            return eb.create(function () {
                 return c.ctrls;
             });
         }, []),
         E = f.map(function (e, t) {
             return e_(e, _[t]);
         }),
-        v = eb();
+        v = eI();
     i.useLayoutEffect(function () {
         l.current++, (c.ctrls = f), d.current && (d.current.current = g);
         var e = c.queue;
@@ -1489,10 +1489,10 @@ function eT(e, t, n) {
                 });
             };
         });
-    var b = E.map(function (e) {
+    var I = E.map(function (e) {
         return s({}, e);
     });
-    return r || 3 == arguments.length ? [b, g.start, g.stop] : b;
+    return r || 3 == arguments.length ? [I, g.start, g.stop] : I;
 }
 function eS(e, t) {
     var n = a.is.fun(e),
@@ -1586,17 +1586,17 @@ function eO(e, t, n) {
         }),
         v.length)
     ) {
-        var b = -1;
+        var I = -1;
         a.each(v, function (e, n) {
             var r = E[n];
-            ~e ? ((b = h.indexOf(r)), (h[b] = s(s({}, r), {}, { item: p[e] }))) : t.leave && h.splice(++b, 0, r);
+            ~e ? ((I = h.indexOf(r)), (h[I] = s(s({}, r), {}, { item: p[e] }))) : t.leave && h.splice(++I, 0, r);
         });
     }
     a.is.fun(u) &&
         h.sort(function (e, t) {
             return u(e.item, t.item);
         });
-    var I = -d,
+    var b = -d,
         T = a.useForceUpdate(),
         S = w(t),
         y = new Map();
@@ -1627,7 +1627,7 @@ function eO(e, t, n) {
             s({}, S),
             {},
             {
-                delay: (I += d),
+                delay: (b += d),
                 reset: !1
             },
             r
@@ -1676,7 +1676,7 @@ function eO(e, t, n) {
             payload: f
         });
     });
-    var A = eb();
+    var A = eI();
     i.useLayoutEffect(
         function () {
             a.each(h, function (e) {
@@ -1686,7 +1686,7 @@ function eO(e, t, n) {
         [A]
     );
     var N = o.useMemo(function () {
-        return eI.create(function () {
+        return eb.create(function () {
             return g.current.map(function (e) {
                 return e.ctrl;
             });
@@ -1806,12 +1806,12 @@ a.Globals.assign({
         return new eD(e, t);
     }
 });
-Object.keys(b).forEach(function (e) {
+Object.keys(I).forEach(function (e) {
     'default' !== e &&
         Object.defineProperty(t, e, {
             enumerable: !0,
             get: function () {
-                return b[e];
+                return I[e];
             }
         });
 }),
@@ -1841,7 +1841,7 @@ Object.keys(b).forEach(function (e) {
         return (0, e.children)(eS(g(e, ['children'])));
     }),
     (t.SpringContext = ev),
-    (t.SpringHandle = eI),
+    (t.SpringHandle = eb),
     (t.SpringValue = en),
     (t.Trail = function (e) {
         var t = e.items,
@@ -1859,7 +1859,7 @@ Object.keys(b).forEach(function (e) {
             r = g(e, ['items', 'children']);
         return o.createElement(o.Fragment, null, eO(t, r)(n));
     }),
-    (t.config = I),
+    (t.config = b),
     (t.inferTo = k),
     (t.interpolate = function (e) {
         for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];

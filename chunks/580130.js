@@ -16,15 +16,15 @@ var r,
     g = n(474936);
 let E = {},
     v = {},
-    b = {},
     I = {},
+    b = {},
     T = !1,
     S = !1,
     y = new Set(),
     A = new Set(),
     N = {};
 function C(e) {
-    (E[e.id] = f.Z.createFromServer(e)), null == b[e.sku_id] && (b[e.sku_id] = new Set()), null == I[e.application_id] && (I[e.application_id] = new Set()), null != e.subscription_id && (null == N[e.subscription_id] && (N[e.subscription_id] = new Set()), N[e.subscription_id].add(e.id)), I[e.application_id].add(e.id), b[e.sku_id].add(e.id);
+    (E[e.id] = f.Z.createFromServer(e)), null == I[e.sku_id] && (I[e.sku_id] = new Set()), null == b[e.application_id] && (b[e.application_id] = new Set()), null != e.subscription_id && (null == N[e.subscription_id] && (N[e.subscription_id] = new Set()), N[e.subscription_id].add(e.id)), b[e.application_id].add(e.id), I[e.sku_id].add(e.id);
 }
 function R(e) {
     v[e.id] = f.Z.createFromServer(e);
@@ -47,14 +47,14 @@ class L extends (r = c.yh) {
         return l().values(v);
     }
     getForApplication(e) {
-        let t = I[e];
+        let t = b[e];
         if (null == t) return null;
         let n = new Set();
         for (let e of t) n.add(E[e]);
         return n;
     }
     getForSku(e) {
-        let t = b[e];
+        let t = I[e];
         if (null == t) return null;
         let n = new Set();
         for (let e of t) n.add(E[e]);
@@ -87,7 +87,7 @@ class L extends (r = c.yh) {
     }
     isEntitledToSku(e, t, n) {
         let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-            i = b[t];
+            i = I[t];
         if (null != i)
             for (let t of i) {
                 let n = E[t];
@@ -159,9 +159,9 @@ class L extends (r = c.yh) {
         ENTITLEMENT_DELETE: function (e) {
             return (function (e) {
                 delete E[e.id];
-                let t = I[e.application_id];
+                let t = b[e.application_id];
                 null != t && t.delete(e.id);
-                let n = b[e.sku_id];
+                let n = I[e.sku_id];
                 if ((null != n && n.delete(e.id), null != e.subscription_id)) {
                     let t = N[e.subscription_id];
                     null != t && t.delete(e.id);
@@ -169,7 +169,7 @@ class L extends (r = c.yh) {
             })(e.entitlement);
         },
         LOGOUT: function () {
-            (E = {}), (b = {}), (I = {}), (T = !1), (S = !1), (y = new Set()), (A = new Set());
+            (E = {}), (I = {}), (b = {}), (T = !1), (S = !1), (y = new Set()), (A = new Set());
         },
         ENTITLEMENTS_FETCH_FOR_USER_START: function () {
             T = !0;

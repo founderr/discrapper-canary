@@ -36,23 +36,23 @@ function h(e) {
         g = (0, _.fq)(t),
         E = (0, _.wu)(t, n, m),
         v = (0, _.lM)(t, n),
-        b = (0, _.e4)(t, i),
-        I = m ? (null == g ? void 0 : g.overlaySyncedWithUserTheme) : null == g ? void 0 : g.overlay;
+        I = (0, _.e4)(t, i),
+        b = m ? (null == g ? void 0 : g.overlaySyncedWithUserTheme) : null == g ? void 0 : g.overlay;
     return {
         profileThemeStyle: (0, r.useMemo)(() => {
-            if (null == n || null == i || null == g || null == E || null == v || null == b || null == I) return p;
+            if (null == n || null == i || null == g || null == E || null == v || null == I || null == b) return p;
             let e = (e, t) => (0, s.ho)(e, h, null, t);
             return {
                 '--profile-gradient-primary-color': e(n),
                 '--profile-gradient-secondary-color': e(i),
-                '--profile-gradient-overlay-color': I,
+                '--profile-gradient-overlay-color': b,
                 '--profile-gradient-button-color': e((0, _.ZB)(n)),
                 '--profile-avatar-border-color': e(E),
                 '--profile-body-background-color': g.sectionBox,
                 '--profile-body-background-hover': g.profileBodyBackgroundHover,
                 '--profile-body-divider-color': e(v, g.dividerOpacity),
                 '--profile-body-border-color': e(v, 0.12),
-                '--profile-message-input-border-color': e(b),
+                '--profile-message-input-border-color': e(I),
                 '--profile-note-background-color': g.noteBackgroundColor,
                 '--profile-role-pill-background-color': g.rolePillBackgroundColor,
                 '--profile-role-pill-border-color': g.rolePillBorderColor,
@@ -64,7 +64,7 @@ function h(e) {
                     textMixAmount: 25
                 })
             };
-        }, [n, i, g, E, v, b, I, t, h]),
+        }, [n, i, g, E, v, I, b, t, h]),
         profileThemeClassName: a()((0, u.getThemeClass)(t), {
             [f.e3]: null != n,
             'custom-profile-theme': null != n

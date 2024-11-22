@@ -25,7 +25,7 @@ function p(e) {
             },
             [a]
         ),
-        b = i.useCallback(
+        I = i.useCallback(
             (e, t) => {
                 var n;
                 if (!t) return 0 === e ? 0 : 8;
@@ -33,7 +33,7 @@ function p(e) {
             },
             [a]
         ),
-        I = i.useCallback(
+        b = i.useCallback(
             (e, t) => {
                 let i = a[t];
                 if (null == i) return;
@@ -88,11 +88,11 @@ function p(e) {
                   store: l.Xn,
                   categories: a,
                   className: f.list,
-                  renderCategoryListItem: I,
+                  renderCategoryListItem: b,
                   rowCount: a.length,
                   categoryHeight: v,
                   listPadding: _,
-                  getScrollOffsetForIndex: b
+                  getScrollOffsetForIndex: I
               })
           });
 }

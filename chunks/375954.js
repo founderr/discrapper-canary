@@ -16,8 +16,8 @@ var r,
     g = n(160404),
     E = n(786761),
     v = n(418476),
-    b = n(739566),
-    I = n(995774),
+    I = n(739566),
+    b = n(995774),
     T = n(706454),
     S = n(630388),
     y = n(709054),
@@ -34,8 +34,8 @@ var r,
     P = n(594174),
     k = n(981631);
 let U = new Set(),
-    B = new p.Z('MessageStore'),
-    G = !1;
+    G = new p.Z('MessageStore'),
+    B = !1;
 function Z() {
     f.Z.forEach((e) => {
         f.Z.commit(
@@ -61,7 +61,7 @@ function V() {
 function j(e) {
     let { type: t, channelId: n, messageId: r, userId: i, emoji: a, reactionType: s } = e,
         o = f.Z.get(n);
-    if (null == o || !(0, I.sm)(e)) return !1;
+    if (null == o || !(0, b.sm)(e)) return !1;
     let l = A.default.getId() === i;
     (o = o.update(r, (n) => ('MESSAGE_REACTION_ADD' === t ? n.addReaction(a, l, e.colors, s) : n.removeReaction(a, l, s)))), f.Z.commit(o);
 }
@@ -146,7 +146,7 @@ class Y extends (r = u.ZP.Store) {
         return null != this.getMessages(e).findNewest((e) => e.author.id === (null == t ? void 0 : t.id));
     }
     hasCurrentUserSentMessageSinceAppStart() {
-        return G;
+        return B;
     }
 }
 (s = 'MessageStore'),
@@ -224,19 +224,19 @@ class Y extends (r = u.ZP.Store) {
         },
         TRUNCATE_MESSAGES: function (e) {
             let { channelId: t, truncateBottom: n, truncateTop: r } = e;
-            B.log('Truncating messages for '.concat(t, ' bottom:').concat(n, ' top:').concat(r));
+            G.log('Truncating messages for '.concat(t, ' bottom:').concat(n, ' top:').concat(r));
             let i = f.Z.getOrCreate(t);
             (i = i.truncate(n, r)), f.Z.commit(i);
         },
         CLEAR_MESSAGES: function (e) {
             let { channelId: t } = e;
-            B.log('Clearing messages for '.concat(t)), f.Z.clear(t), U.clear();
+            G.log('Clearing messages for '.concat(t)), f.Z.clear(t), U.clear();
         },
         MESSAGE_CREATE: function (e) {
             let { channelId: t, message: n, isPushNotification: r } = e,
                 i = f.Z.getOrCreate(t);
             if (r) {
-                B.log('Inserting message tapped on from a push notification', n.id, n.channel_id), f.Z.commit(i.receivePushNotification(n));
+                G.log('Inserting message tapped on from a push notification', n.id, n.channel_id), f.Z.commit(i.receivePushNotification(n));
                 return;
             }
             if (!i.ready) return !1;
@@ -359,6 +359,6 @@ class Y extends (r = u.ZP.Store) {
         LOCAL_MESSAGE_CREATE: function (e) {
             let { message: t } = e,
                 n = P.default.getCurrentUser();
-            null != t && null != t.author && null != n && t.author.id === n.id && (G = !0);
+            null != t && null != t.author && null != n && t.author.id === n.id && (B = !0);
         }
     }));

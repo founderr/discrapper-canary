@@ -16,8 +16,8 @@ var r,
     g = n(417363),
     E = n(391690),
     v = n(70956),
-    b = n(780570),
-    I = n(804739);
+    I = n(780570),
+    b = n(804739);
 let T = new Set(),
     S = {},
     y = new Set(),
@@ -32,7 +32,7 @@ function x(e) {
     L.start(e + Math.random() * R, f.o);
 }
 function w() {
-    if (!(0, I.Q)()) return !1;
+    if (!(0, b.Q)()) return !1;
     let e = m.Z.entitledBranchIds,
         t = [];
     for (let n of e) !C.hasOwnProperty(n) && ((C[n] = null), t.push(n));
@@ -49,7 +49,7 @@ function M(e, t) {
             (i.buildId !== n.id || !l().isEqual(i.manifestIds, r)) &&
             d.Z.wait(() => {
                 let i = h.Z.getApplication(e);
-                null != i ? (N.delete((0, b.Tu)(e, t)), (0, p.li)(i, t, n.id, r, !0)) : N.add((0, b.Tu)(e, t));
+                null != i ? (N.delete((0, I.Tu)(e, t)), (0, p.li)(i, t, n.id, r, !0)) : N.add((0, I.Tu)(e, t));
             });
     }
 }
@@ -93,9 +93,9 @@ class k extends (r = u.ZP.Store) {
             return x(O), w();
         },
         GAMES_DATABASE_UPDATE: function () {
-            if (!(0, I.Q)()) return !1;
+            if (!(0, b.Q)()) return !1;
             for (let e of N) {
-                let { applicationId: t, branchId: n } = (0, b.CP)(e);
+                let { applicationId: t, branchId: n } = (0, I.CP)(e);
                 null != h.Z.getApplication(t) && (N.delete(e), M(t, n));
             }
         },
@@ -161,12 +161,12 @@ class k extends (r = u.ZP.Store) {
         LOGOUT: P,
         SKU_PURCHASE_SUCCESS: function (e) {
             let { entitlements: t } = e;
-            if (!(0, I.Q)()) return !1;
+            if (!(0, b.Q)()) return !1;
             let n = new Set();
             for (let e of t) n.add(e.application_id);
             for (let e in m.Z.libraryApplications) {
                 let t = m.Z.libraryApplications[e];
-                n.has(t.id) && (0, b.Je)(t) && d.Z.wait(() => _.l(t.id, t.branchId));
+                n.has(t.id) && (0, I.Je)(t) && d.Z.wait(() => _.l(t.id, t.branchId));
             }
         }
     }));

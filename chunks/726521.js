@@ -6,7 +6,7 @@ n.d(t, {
         return T;
     },
     JM: function () {
-        return b;
+        return I;
     },
     Jw: function () {
         return _;
@@ -21,7 +21,7 @@ n.d(t, {
         return h;
     },
     eE: function () {
-        return I;
+        return b;
     },
     ic: function () {
         return p;
@@ -180,7 +180,7 @@ function v(e, t, n) {
             !1
         );
 }
-function b(e, t) {
+function I(e, t) {
     let n = new s.Z({});
     A(o.BM.USER, { reported_user_id: n.id }),
         (0, u.m)(
@@ -196,7 +196,7 @@ function b(e, t) {
             e
         );
 }
-function I(e, t) {
+function b(e, t) {
     let n = new a.ZP({});
     A(o.BM.MESSAGE, {
         message_id: void 0,

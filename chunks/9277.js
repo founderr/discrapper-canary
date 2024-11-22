@@ -3,7 +3,7 @@ var r = n(200651),
     i = n(192379),
     a = n(120356),
     s = n.n(a),
-    o = n(515643),
+    o = n(232713),
     l = n(442837),
     u = n(114101),
     c = n(481060),
@@ -18,18 +18,18 @@ var r = n(200651),
 t.Z = i.memo(
     i.forwardRef(function (e, t) {
         let { disabled: n, type: a } = e,
-            [v, b] = i.useState(!1),
-            I = (0, l.e7)([f.Z], () => {
+            [v, I] = i.useState(!1),
+            b = (0, l.e7)([f.Z], () => {
                 var e, t;
                 return v && Object.values(null !== (t = null === (e = f.Z.frecencyWithoutFetchingLatest.favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : {}).length <= 2;
             }),
             [T, S, y] = (0, d.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], o.X),
             A = i.useRef(0),
             N = i.useCallback(() => {
-                b(!0),
+                I(!0),
                     clearTimeout(A.current),
                     (A.current = setTimeout(() => {
-                        b(!1), (A.current = 0);
+                        I(!1), (A.current = 0);
                     }, 2000));
             }, []);
         (0, _.yp)({
@@ -43,7 +43,7 @@ t.Z = i.memo(
         if (n) return null;
         let L = T === m.X1.GIF && S === a;
         return (0, r.jsx)(c.Tooltip, {
-            text: I ? g.intl.string(g.t.mE2e8P) : null,
+            text: b ? g.intl.string(g.t.mE2e8P) : null,
             forceOpen: !0,
             children: (e) =>
                 (0, r.jsx)('div', {

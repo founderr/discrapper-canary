@@ -7,7 +7,7 @@ n.d(t, {
         return S;
     },
     Vf: function () {
-        return I;
+        return b;
     },
     YR: function () {
         return ek;
@@ -185,7 +185,7 @@ function p(e, t) {
     return (t = L(t, e.calendar)), e.era === t.era && e.year === t.year && e.month === t.month && e.day === t.day;
 }
 function h(e, t) {
-    return (t = L(t, e.calendar)), (e = b(e)), (t = b(t)), e.era === t.era && e.year === t.year && e.month === t.month;
+    return (t = L(t, e.calendar)), (e = I(e)), (t = I(t)), e.era === t.era && e.year === t.year && e.month === t.month;
 }
 function m(e, t) {
     return e.calendar.toJulianDay(e) - t.calendar.toJulianDay(t);
@@ -197,10 +197,10 @@ let E = null;
 function v() {
     return null == E && (E = new Intl.DateTimeFormat().resolvedOptions().timeZone), E;
 }
-function b(e) {
+function I(e) {
     return e.subtract({ days: e.day - 1 });
 }
-function I(e) {
+function b(e) {
     return e.add({ days: e.calendar.getDaysInMonth(e) - e.day });
 }
 let T = new Map();
@@ -209,7 +209,7 @@ function S(e, t) {
     let i,
         a = e.calendar.getDaysInMonth(e);
     return Math.ceil(
-        ((n = b(e)),
+        ((n = I(e)),
         (r = t),
         (i =
             Math.ceil(
@@ -344,7 +344,7 @@ function x(e, t) {
                       var n;
                       let r;
                       (e.hour += t.hours || 0), (e.minute += t.minutes || 0), (e.second += t.seconds || 0), (e.millisecond += t.milliseconds || 0);
-                      return (n = e), (n.second += Math.floor(n.millisecond / 1000)), (n.millisecond = G(n.millisecond, 1000)), (n.minute += Math.floor(n.second / 60)), (n.second = G(n.second, 60)), (n.hour += Math.floor(n.minute / 60)), (n.minute = G(n.minute, 60)), (r = Math.floor(n.hour / 24)), (n.hour = G(n.hour, 24)), r;
+                      return (n = e), (n.second += Math.floor(n.millisecond / 1000)), (n.millisecond = B(n.millisecond, 1000)), (n.minute += Math.floor(n.second / 60)), (n.second = B(n.second, 60)), (n.hour += Math.floor(n.minute / 60)), (n.minute = B(n.minute, 60)), (r = Math.floor(n.hour / 24)), (n.hour = B(n.hour, 24)), r;
                   })(n, t)
                 : 0;
     w(n, t.years || 0),
@@ -396,11 +396,11 @@ function U(e, t) {
         })(t)
     );
 }
-function B(e, t) {
+function G(e, t) {
     let n = e.copy();
     return null != t.era && (n.era = t.era), null != t.year && (n.year = t.year), null != t.month && (n.month = t.month), null != t.day && (n.day = t.day), k(n), n;
 }
-function G(e, t) {
+function B(e, t) {
     let n = e % t;
     return n < 0 && (n += t), n;
 }
@@ -463,7 +463,7 @@ class Y {
         return U(this, e);
     }
     set(e) {
-        return B(this, e);
+        return G(this, e);
     }
     cycle(e, t, n) {
         return Z(this, e, t, n);
@@ -500,7 +500,7 @@ class K {
     set(e) {
         var t, n;
         let r;
-        return B(
+        return G(
             ((t = this),
             (n = e),
             (r = t.copy()),
@@ -858,7 +858,7 @@ function eE(e, t) {
 function ev(e) {
     return i[e + 1 - 1300] - i[e - 1300];
 }
-class eb extends ep {
+class eI extends ep {
     fromJulianDay(e) {
         let t = e - 1948440,
             n = em(1300),
@@ -904,8 +904,8 @@ class eb extends ep {
         }
     }
 }
-let eI = 25920,
-    eT = 29 * eI + 13753;
+let eb = 25920,
+    eT = 29 * eb + 13753;
 function eS(e) {
     return 7 > s(7 * e + 1, 19);
 }
@@ -940,7 +940,7 @@ function eC(e, t) {
 class eR {
     fromJulianDay(e) {
         let t = e - 347997,
-            n = Math.floor((((t * eI) / eT) * 19 + 234) / 235) + 1,
+            n = Math.floor((((t * eb) / eT) * 19 + 234) / 235) + 1,
             r = eA(n),
             i = Math.floor(t - r);
         for (; i < 1; ) i = Math.floor(t - (r = eA(--n)));
@@ -1085,7 +1085,7 @@ function ek(e) {
         case 'islamic-tbla':
             return new eh();
         case 'islamic-umalqura':
-            return new eb();
+            return new eI();
         case 'japanese':
             return new ee();
         case 'persian':

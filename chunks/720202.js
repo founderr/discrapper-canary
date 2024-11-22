@@ -41,7 +41,7 @@ function v(e) {
     let { guildId: t, messages: n } = e;
     return null != t && g(t, l().flatten(n));
 }
-class b extends (r = u.ZP.Store) {
+class I extends (r = u.ZP.Store) {
     initialize() {
         this.waitFor(f.Z, _.ZP);
     }
@@ -50,7 +50,7 @@ class b extends (r = u.ZP.Store) {
     }
 }
 (s = 'GuildMemberRequesterStore'),
-    (a = 'displayName') in (i = b)
+    (a = 'displayName') in (i = I)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -58,7 +58,7 @@ class b extends (r = u.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new b(c.Z, {
+    (t.Z = new I(c.Z, {
         CONNECTION_CLOSED: h,
         CONNECTION_OPEN: h,
         CONNECTION_RESUMED: function () {

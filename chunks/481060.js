@@ -160,7 +160,7 @@ n.r(t),
             return tv.Dv;
         },
         BasePopout: function () {
-            return eI.H;
+            return eb.H;
         },
         BeakerIcon: function () {
             return tR.uOV;
@@ -370,10 +370,10 @@ n.r(t),
             return tR.ics;
         },
         Checkbox: function () {
-            return b.X;
+            return I.X;
         },
         CheckboxIndicator: function () {
-            return b.F;
+            return I.F;
         },
         CheckmarkLargeBoldIcon: function () {
             return tR.sV5;
@@ -484,7 +484,7 @@ n.r(t),
             return tR.gZW;
         },
         Collapsible: function () {
-            return I.z;
+            return b.z;
         },
         ColorPicker: function () {
             return tl.zH;
@@ -721,13 +721,13 @@ n.r(t),
             return U.ol;
         },
         FormDivider: function () {
-            return B.$;
+            return G.$;
         },
         FormErrorBlock: function () {
-            return G.k;
+            return B.k;
         },
         FormErrorBlockColors: function () {
-            return G.m;
+            return B.m;
         },
         FormItem: function () {
             return Z.x;
@@ -901,7 +901,7 @@ n.r(t),
             return tv.G2;
         },
         IconSelectOption: function () {
-            return eG.Z;
+            return eB.Z;
         },
         IdIcon: function () {
             return tR.VuL;
@@ -1426,7 +1426,7 @@ n.r(t),
             return tR.qDn;
         },
         QuickSelect: function () {
-            return tb.n;
+            return tI.n;
         },
         QuoteIcon: function () {
             return tR.PEf;
@@ -1528,13 +1528,13 @@ n.r(t),
             return tm.Z;
         },
         SearchableQuickSelect: function () {
-            return tI.E;
+            return tb.E;
         },
         SearchableSelect: function () {
-            return eB.V;
+            return eG.V;
         },
         SearchableSelectRef: function () {
-            return eB.SearchableSelectRef;
+            return eG.SearchableSelectRef;
         },
         SegmentedControl: function () {
             return ek.s;
@@ -1693,7 +1693,7 @@ n.r(t),
             return z.Kq;
         },
         StackedProgress: function () {
-            return eb.y;
+            return eI.y;
         },
         StaffBadgeIcon: function () {
             return tR.Ymb;
@@ -2316,8 +2316,8 @@ var r = n(680732),
     g = n(276513),
     E = n(374558),
     v = n(49800),
-    b = n(178940),
-    I = n(57260),
+    I = n(178940),
+    b = n(57260),
     T = n(1561),
     S = n(605578),
     y = n(838331),
@@ -2334,8 +2334,8 @@ var r = n(680732),
     P = n(84735),
     k = n(347016),
     U = n(15127),
-    B = n(770102),
-    G = n(434333),
+    G = n(770102),
+    B = n(434333),
     Z = n(540863),
     F = n(722187),
     V = n(383838),
@@ -2370,8 +2370,8 @@ var r = n(680732),
     eg = n(4738),
     eE = n(694743),
     ev = n(278126),
-    eb = n(507173),
-    eI = n(930295),
+    eI = n(507173),
+    eb = n(930295),
     eT = n(920676),
     eS = n(235874),
     ey = n(126306),
@@ -2388,8 +2388,8 @@ var r = n(680732),
     eP = n(21340),
     ek = n(189283),
     eU = n(619307),
-    eB = n(921349),
-    eG = n(119757),
+    eG = n(921349),
+    eB = n(119757),
     eZ = n(748585),
     eF = n(263953),
     eV = n(503145),
@@ -2434,8 +2434,8 @@ var r = n(680732),
     tg = n(327496),
     tE = n(225779),
     tv = n(801729),
-    tb = n(683976),
-    tI = n(488164),
+    tI = n(683976),
+    tb = n(488164),
     tT = n(226690),
     tS = n(912494),
     ty = n(300033),

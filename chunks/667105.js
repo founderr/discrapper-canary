@@ -39,8 +39,8 @@ var r = n(200651),
     g = n(918701),
     E = n(977156),
     v = n(920916),
-    b = n(669041),
-    I = n(341907),
+    I = n(669041),
+    b = n(341907),
     T = n(604162),
     S = n(46140),
     y = n(981631),
@@ -62,17 +62,17 @@ function N(e) {
             }),
             o
                 ? (0, g.zK)(t, S.S7.FRACTIONS_QUEST)
-                    ? (0, I.openQuestsNitroRewardModal)(t, n)
+                    ? (0, b.openQuestsNitroRewardModal)(t, n)
                     : (0, g.Xv)(t.config)
                       ? (0, v.openCollectibleRewardModal)(t, n)
                       : (0, g.vQ)(t.config)
-                        ? (0, I.openQuestInGameRewardModal)(t, n)
-                        : (0, I.openQuestsRewardCodeModal)({
+                        ? (0, b.openQuestInGameRewardModal)(t, n)
+                        : (0, b.openQuestsRewardCodeModal)({
                               questId: t.id,
                               location: n,
                               questContentPosition: r
                           })
-                : (0, b.openRewardModalUnverified)());
+                : (0, I.openRewardModalUnverified)());
     }, [t, n, r, o, a]);
 }
 function C(e) {
@@ -143,7 +143,7 @@ function D(e) {
         m = (0, p.Rf)(t),
         E = (0, p.GU)(t),
         v = E.length > 0 ? E[0] : null,
-        b = i.useCallback(() => {
+        I = i.useCallback(() => {
             l.Z.open(y.oAB.PREMIUM, null, {});
         }, []);
     return i.useMemo(() => {
@@ -167,7 +167,7 @@ function D(e) {
                             questContentPosition: s,
                             questContentRowIndex: o
                         }),
-                            c && (0, I.openVideoQuestModal)(t);
+                            c && (0, b.openVideoQuestModal)(t);
                     }
                 };
             case p.OH.ACCEPTED:
@@ -191,7 +191,7 @@ function D(e) {
                     return {
                         text: (0, T.F9)(m),
                         tooltipText: A.intl.string(A.t.hsbwjo),
-                        onClick: () => (0, I.openVideoQuestModal)(t)
+                        onClick: () => (0, b.openVideoQuestModal)(t)
                     };
                 return {
                     text: A.intl.string(A.t.cfY4PD),
@@ -222,7 +222,7 @@ function D(e) {
                 else if ((0, g.Bg)(t.config))
                     return {
                         tooltipText: null,
-                        onClick: b,
+                        onClick: I,
                         text: A.intl.string(A.t['eQX+go'])
                     };
                 return {
@@ -230,7 +230,7 @@ function D(e) {
                     text: A.intl.string(A.t.bAGFz8)
                 };
         }
-    }, [t, r, b, c, a, d, n, s, o, h, u, m, v]);
+    }, [t, r, I, c, a, d, n, s, o, h, u, m, v]);
 }
 function L() {
     let e = (0, E.ym)({ location: S.dr.QUESTS_BAR });

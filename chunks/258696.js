@@ -16,8 +16,8 @@ var r = n(200651),
     g = n(117530),
     E = n(594174),
     v = n(74538),
-    b = n(94161),
-    I = n(9277),
+    I = n(94161),
+    b = n(9277),
     T = n(58995),
     S = n(897291),
     y = n(764794),
@@ -54,8 +54,8 @@ t.Z = i.memo(function (e) {
     var t, n, i, _, p, T, S, A;
     let { type: L, disabled: x, channel: w, handleSubmit: M, isEmpty: P, showAllButtons: k } = e,
         U = (0, s.e7)([l.Z], () => l.Z.isSubmitButtonEnabled),
-        B = (0, s.e7)([m.Z], () => m.Z.getStickerPreview(w.id, L.drafts.type)),
-        G = null != B && B.length > 0,
+        G = (0, s.e7)([m.Z], () => m.Z.getStickerPreview(w.id, L.drafts.type)),
+        B = null != G && G.length > 0,
         Z = (0, s.e7)([g.Z], () => g.Z.getUploads(w.id, L.drafts.type)),
         { activeCommand: F, activeCommandOption: V } = (0, s.cj)([u.Z], () => ({
             activeCommand: u.Z.getActiveCommand(w.id),
@@ -117,7 +117,7 @@ t.Z = i.memo(function (e) {
             k &&
             H.push(
                 (0, r.jsx)(
-                    I.Z,
+                    b.Z,
                     {
                         disabled: x,
                         type: L
@@ -142,7 +142,7 @@ t.Z = i.memo(function (e) {
         (null == F || (null != V && V.type !== o.jw.ATTACHMENT)) &&
         H.push(
             (0, r.jsx)(
-                b.Z,
+                I.Z,
                 {
                     disabled: x,
                     type: L
@@ -157,7 +157,7 @@ t.Z = i.memo(function (e) {
                 N.Z,
                 {
                     onClick: M,
-                    disabled: x || (0 === Z.length && P && !G)
+                    disabled: x || (0 === Z.length && P && !B)
                 },
                 'submit'
             )

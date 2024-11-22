@@ -1,6 +1,6 @@
 n.d(t, {
     U: function () {
-        return l;
+        return i;
     }
 });
 var o = n(200651);
@@ -8,12 +8,12 @@ n(192379);
 var r = n(481060),
     s = n(46140),
     a = n(388032);
-function i(e) {
-    let { onClose: t, onSelect: n, quest: i } = e;
+function l(e) {
+    let { onClose: t, onSelect: n, quest: l } = e;
     return (0, o.jsx)(r.Menu, {
         variant: 'fixed',
         onSelect: t,
-        navId: 'quest-home-platform-select-'.concat(i.id),
+        navId: 'quest-home-platform-select-'.concat(l.id),
         'aria-label': a.intl.string(a.t.ogxXGh),
         onClose: t,
         children: (0, o.jsxs)(
@@ -38,14 +38,14 @@ function i(e) {
         )
     });
 }
-function l(e) {
+function i(e) {
     let { children: t, ...n } = e;
     return (0, o.jsx)(r.Popout, {
         position: 'bottom',
         align: 'right',
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, o.jsx)(i, {
+            return (0, o.jsx)(l, {
                 ...n,
                 onClose: t
             });

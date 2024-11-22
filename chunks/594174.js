@@ -47,7 +47,7 @@ function m(e, t, n) {
 let g = {},
     E = 0,
     v = '47835198259242069';
-function b(e, t, n) {
+function I(e, t, n) {
     let r = g[e];
     if (null == r) return !1;
     let i = r;
@@ -55,7 +55,7 @@ function b(e, t, n) {
     let a = r !== i;
     return a && E++, a;
 }
-function I(e, t) {
+function b(e, t) {
     let n = g[e];
     return !(null == n || (0, p.Dd)(n.clan, t.clan)) && (null == n.clan || null != t.clan) && ((n.clan = (0, p.yi)(t.clan)), (g[n.id] = n), E++, !0);
 }
@@ -162,7 +162,7 @@ function C(e) {
         }),
         r.forEach((e) => {
             e.members.forEach((t) => {
-                b(t.user.id, e.id, t.avatar), I(t.user.id, t.user);
+                I(t.user.id, e.id, t.avatar), b(t.user.id, t.user);
             });
         }),
         null != g[d.default.getId()] &&
@@ -178,7 +178,7 @@ function R(e) {
     let { guilds: t, lazyPrivateChannels: n } = e;
     t.forEach((e) => {
         e.members.forEach((t) => {
-            b(t.user.id, e.id, t.avatar), I(t.user.id, t.user);
+            I(t.user.id, e.id, t.avatar), b(t.user.id, t.user);
         });
     }),
         null == n ||
@@ -228,14 +228,14 @@ function U(e) {
     let { firstMessages: t, owners: n } = e;
     null != t && t.forEach((e) => N(e, !0)), null != n && n.forEach((e) => y(e.user, !0));
 }
-function B(e) {
+function G(e) {
     let { threads: t } = e;
     Object.values(t).forEach((e) => {
         let { first_message: t, most_recent_message: n, owner: r } = e;
         null != t && N(t, !0), null != n && N(n, !0), null != r && null != r.user && y(r.user, !0);
     });
 }
-function G(e) {
+function B(e) {
     let { supplementalData: t } = e;
     Object.values(t).forEach((e) => {
         let { message_preview: t } = e;
@@ -249,7 +249,7 @@ function Z(e) {
         if (null == t) return;
         y(t);
         let i = null == r ? void 0 : r.avatar;
-        null != i && b(t.id, n, i);
+        null != i && I(t.id, n, i);
     });
 }
 function F(e) {
@@ -315,7 +315,7 @@ function X(e) {
 }
 function J(e) {
     let t = y(e.user);
-    return b(e.user.id, e.guildId, e.avatar) || t;
+    return I(e.user.id, e.guildId, e.avatar) || t;
 }
 function $(e) {
     let { ops: t } = e;
@@ -324,7 +324,7 @@ function $(e) {
             var n;
             let t = null === (n = e.item.member) || void 0 === n ? void 0 : n.user;
             if (null == t) continue;
-            I(t.id, t);
+            b(t.id, t);
         }
     return !1;
 }
@@ -335,13 +335,13 @@ function ee(e) {
         n =
             e.members.reduce((t, n) => {
                 let r = y(n.user);
-                return b(n.user.id, e.guildId, n.avatar) || r || t;
+                return I(n.user.id, e.guildId, n.avatar) || r || t;
             }, !1) || n;
     return n;
 }
 function et(e) {
     let t = !1;
-    for (let n of e.members) y(n.user) && (t = !0), b(n.user.id, e.guildId, n.avatar) && (t = !0);
+    for (let n of e.members) y(n.user) && (t = !0), I(n.user.id, e.guildId, n.avatar) && (t = !0);
     return t;
 }
 function en(e) {
@@ -386,7 +386,7 @@ function ea(e) {
                 discriminator: a,
                 bot: s
             }),
-            b(n, t.id, o);
+            I(n, t.id, o);
     });
 }
 function es(e) {
@@ -455,13 +455,13 @@ function ev(e) {
         n = d.default.getId();
     return t.reduce((e, t) => (t.member.user.id === n ? e : y(t.member.user) || e), !1);
 }
-function eb(e) {
+function eI(e) {
     let { messageItems: t } = e;
     t.forEach((e) => {
         null != e.message && N(e.message, !0);
     }, !1);
 }
-function eI(e) {
+function eb(e) {
     let { participants: t } = e;
     return t.reduce((e, t) => ((0, i.Z)(t) && y(t.member.user)) || e, !1);
 }
@@ -566,11 +566,11 @@ class eT extends f.Z {
             GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: ef,
             LOAD_THREADS_SUCCESS: U,
             LOAD_ARCHIVED_THREADS_SUCCESS: U,
-            LOAD_FORUM_POSTS: B,
+            LOAD_FORUM_POSTS: G,
             GUILD_SCHEDULED_EVENT_USERS_FETCH_SUCCESS: Z,
             LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: F,
             NOTIFICATION_CENTER_ITEM_CREATE: V,
-            LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS: G,
+            LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS: B,
             PASSIVE_UPDATE_V2: et,
             LOCAL_MESSAGES_LOADED: en,
             FAMILY_CENTER_INITIAL_LOAD: ep,
@@ -579,8 +579,8 @@ class eT extends f.Z {
             FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: eE,
             FAMILY_CENTER_REQUEST_LINK_SUCCESS: em,
             MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: ev,
-            LOAD_GRAVITY_HYDRATED: eb,
-            EMBEDDED_ACTIVITY_UPDATE_V2: eI
+            LOAD_GRAVITY_HYDRATED: eI,
+            EMBEDDED_ACTIVITY_UPDATE_V2: eb
         });
     }
 }

@@ -63,10 +63,10 @@ n.d(t, {
                 }
                 if ((0, a.HI)(h)) {
                     var v = h.children,
-                        b = h.value,
-                        I = u[b];
-                    if (!o(I)) throw new s.YR(b, 'function', d);
-                    var T = I(
+                        I = h.value,
+                        b = u[I];
+                    if (!o(b)) throw new s.YR(I, 'function', d);
+                    var T = b(
                         e(v, n, r, l, u, c).map(function (e) {
                             return e.value;
                         })

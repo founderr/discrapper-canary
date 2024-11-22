@@ -15,8 +15,8 @@ var r = n(990547),
     g = n(573261),
     E = n(999382),
     v = n(981631),
-    b = n(308083),
-    I = n(388032);
+    I = n(308083),
+    b = n(388032);
 let T = new o.Z('GuildSettingsActionCreators'),
     S = {
         init(e, t, n, r) {
@@ -100,8 +100,8 @@ let T = new o.Z('GuildSettingsActionCreators'),
                     }),
                 {
                     modalProps: {
-                        title: I.intl.string(I.t.Wi9LER),
-                        actionText: r ? I.intl.string(I.t.MP0Ho6) : I.intl.string(I.t.yZcYGR)
+                        title: b.intl.string(b.t.Wi9LER),
+                        actionText: r ? b.intl.string(b.t.MP0Ho6) : b.intl.string(b.t.yZcYGR)
                     },
                     checkEnabled: !1
                 }
@@ -158,7 +158,7 @@ let T = new o.Z('GuildSettingsActionCreators'),
                 });
         },
         saveGuild(e, t) {
-            let { name: n, description: r, icon: s, splash: o, banner: u, homeHeader: c, afkChannelId: d, afkTimeout: f, systemChannelId: _, verificationLevel: p, defaultMessageNotifications: h, explicitContentFilter: m, features: g, systemChannelFlags: E, preferredLocale: I, rulesChannelId: S, safetyAlertsChannelId: y, discoverySplash: A, publicUpdatesChannelId: N, premiumProgressBarEnabled: C, clan: R } = t,
+            let { name: n, description: r, icon: s, splash: o, banner: u, homeHeader: c, afkChannelId: d, afkTimeout: f, systemChannelId: _, verificationLevel: p, defaultMessageNotifications: h, explicitContentFilter: m, features: g, systemChannelFlags: E, preferredLocale: b, rulesChannelId: S, safetyAlertsChannelId: y, discoverySplash: A, publicUpdatesChannelId: N, premiumProgressBarEnabled: C, clan: R } = t,
                 O = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
                 D = {
                     name: n,
@@ -168,7 +168,7 @@ let T = new o.Z('GuildSettingsActionCreators'),
                     banner: u,
                     home_header: c,
                     features: g,
-                    preferred_locale: I,
+                    preferred_locale: b,
                     afk_channel_id: d,
                     afk_timeout: f,
                     system_channel_id: _,
@@ -181,7 +181,7 @@ let T = new o.Z('GuildSettingsActionCreators'),
                     public_updates_channel_id: N,
                     safety_alerts_channel_id: y,
                     ...(null != C ? { premium_progress_bar_enabled: C } : null),
-                    clan: null != R ? (0, b.A9)(R) : R
+                    clan: null != R ? (0, I.A9)(R) : R
                 };
             return (
                 a.Z.dispatch({ type: 'GUILD_SETTINGS_SUBMIT' }),
@@ -251,8 +251,8 @@ let T = new o.Z('GuildSettingsActionCreators'),
                     }),
                 {
                     modalProps: {
-                        title: I.intl.string(I.t.Z5s7PD),
-                        actionText: I.intl.string(I.t.Z5s7PD)
+                        title: b.intl.string(b.t.Z5s7PD),
+                        actionText: b.intl.string(b.t.Z5s7PD)
                     },
                     checkEnabled: !1
                 }
@@ -284,8 +284,8 @@ let T = new o.Z('GuildSettingsActionCreators'),
                     }),
                 {
                     modalProps: {
-                        title: I.intl.formatToPlainString(I.t.us7mCw, { name: t }),
-                        actionText: I.intl.string(I.t.l3hWPz),
+                        title: b.intl.formatToPlainString(b.t.us7mCw, { name: t }),
+                        actionText: b.intl.string(b.t.l3hWPz),
                         disallowBackupCodes: !0
                     },
                     checkEnabled: !1

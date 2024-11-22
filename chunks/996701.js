@@ -38,8 +38,8 @@ let l = (e) => {
                               })
                       ]
                   }),
-                  (0, r.jsx)(i.WindowLaunchIcon, {
-                      size: 'md',
+                  (0, r.jsx)(i.LinkExternalSmallIcon, {
+                      size: 'sm',
                       color: 'currentColor',
                       className: o.linkIcon
                   })

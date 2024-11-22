@@ -8,7 +8,7 @@ var r = n(200651),
     i = n(192379),
     a = n(120356),
     s = n.n(a),
-    o = n(515643),
+    o = n(232713),
     l = n(442837),
     u = n(481060),
     c = n(314910),
@@ -29,14 +29,14 @@ function g() {
         n = (0, l.e7)([f.default], () => f.default.isAnalyticsDebuggerEnabled),
         a = (0, l.e7)([d.Z], () => d.Z.isDeveloper),
         [g, E] = i.useState(!1),
-        { name: v, ...b } = null != e ? e : {},
-        I = null != v;
+        { name: v, ...I } = null != e ? e : {},
+        b = null != v;
     return a && n
         ? (0, r.jsx)(c.ZP, {
               children: (0, r.jsxs)('div', {
                   className: s()(m.container, {
                       [m.containerMinimized]: g,
-                      [m.notTracked]: !I
+                      [m.notTracked]: !b
                   }),
                   children: [
                       (0, r.jsx)(u.Clickable, {
@@ -50,10 +50,10 @@ function g() {
                           className: s()(m.content, { [m.contentMinimized]: g }),
                           children: [
                               (0, r.jsxs)(u.Text, {
-                                  className: s()(m.label, { [m.notTracked]: !I }),
+                                  className: s()(m.label, { [m.notTracked]: !b }),
                                   variant: 'text-xxs/normal',
                                   children: [
-                                      I
+                                      b
                                           ? (0, r.jsx)(u.CircleCheckIcon, {
                                                 size: 'md',
                                                 color: 'currentColor',
@@ -69,10 +69,10 @@ function g() {
                               }),
                               (0, r.jsx)('div', {
                                   className: m.current,
-                                  children: JSON.stringify(b, void 0, 2)
+                                  children: JSON.stringify(I, void 0, 2)
                               }),
                               (0, r.jsx)(u.Text, {
-                                  className: s()(m.label, { [m.notTracked]: !I }),
+                                  className: s()(m.label, { [m.notTracked]: !b }),
                                   variant: 'text-xxs/normal',
                                   children: 'impressions stack'
                               }),

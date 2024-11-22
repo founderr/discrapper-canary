@@ -110,11 +110,11 @@ let v = [
         ['TAB', '\u21E5'],
         ['SPACE', '\u2423']
     ],
-    b = (e) => {
+    I = (e) => {
         for (let [t, n] of v) if (t === e.toUpperCase()) return n;
         return e;
     },
-    I = (e) => {
+    b = (e) => {
         for (let [t, n] of v) if (n === e.toUpperCase()) return t.toLowerCase();
         return e;
     },
@@ -157,7 +157,7 @@ function y(e) {
         .split('+')
         .map((e) => e.trim().replace('plus', '+'))
         .reduce((e, r) => {
-            let i = E(I(r), t, n);
+            let i = E(b(r), t, n);
             return null != i && e.push([n, i, t]), e;
         }, []);
 }
@@ -175,5 +175,5 @@ function A(e) {
                 else return 'dev'.concat(t, ',').concat(n);
             })
             .filter(l.lm);
-    return t ? (-1 !== n.g.navigator.appVersion.indexOf('Mac OS X') ? r.map(b) : r).join(' + ').toUpperCase() : r.join('+');
+    return t ? (-1 !== n.g.navigator.appVersion.indexOf('Mac OS X') ? r.map(I) : r).join(' + ').toUpperCase() : r.join('+');
 }

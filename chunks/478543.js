@@ -71,7 +71,7 @@ function v(e) {
 }
 t.Z = (e) => {
     var t, n, a;
-    let { loading: o = !1, currentOverrides: d, linkMeta: b, url: I, applyBuildOverride: T, clearBuildOverride: S } = e,
+    let { loading: o = !1, currentOverrides: d, linkMeta: I, url: b, applyBuildOverride: T, clearBuildOverride: S } = e,
         [y, A] = i.useState(!1),
         N = i.useCallback(() => {
             if (!y) A(!0), T().catch(() => A(!1));
@@ -82,8 +82,8 @@ t.Z = (e) => {
     return (0, r.jsxs)('div', {
         className: g.wrapper,
         children: [
-            ((t = b),
-            (n = I),
+            ((t = I),
+            (n = b),
             (a = o),
             (0, r.jsxs)(u.Text, {
                 variant: 'text-xs/normal',
@@ -140,13 +140,13 @@ t.Z = (e) => {
                                       });
                                   })(g.reason);
                               l()(null != o, 'BuildOverrideEmbed.renderResolved: linkMeta should never be null if resolved');
-                              let { discord_web: E, discord_developers: b } = o.targetBuildOverride,
-                                  I = null != E ? E : b;
-                              if ((l()(null != I, 'BuildOverrideEmbed.renderResolved: linkMeta.targetBuildOverride.discord_web or linkMeta.targetBuildOverride.discord_developers should never be null if resolved'), (t = I), null == (n = s) || null == n.discord_web ? 1 : t.id !== n.discord_web.id || t.type !== n.discord_web.type)) (i = m.intl.string(m.t.nOunHB)), (r = c), (a = u.Button.Colors.GREEN);
+                              let { discord_web: E, discord_developers: I } = o.targetBuildOverride,
+                                  b = null != E ? E : I;
+                              if ((l()(null != b, 'BuildOverrideEmbed.renderResolved: linkMeta.targetBuildOverride.discord_web or linkMeta.targetBuildOverride.discord_developers should never be null if resolved'), (t = b), null == (n = s) || null == n.discord_web ? 1 : t.id !== n.discord_web.id || t.type !== n.discord_web.type)) (i = m.intl.string(m.t.nOunHB)), (r = c), (a = u.Button.Colors.GREEN);
                               else (i = m.intl.string(m.t.tX4xrq)), (r = d), (a = u.Button.Colors.RED);
                               return v({
                                   subHead: m.intl.string(m.t.RCYGoq),
-                                  buildDetails: I.id,
+                                  buildDetails: b.id,
                                   buttonClick: r,
                                   buttonText: i,
                                   buttonColor: a,
@@ -154,7 +154,7 @@ t.Z = (e) => {
                               });
                           })({
                               currentOverrides: d,
-                              linkMeta: b,
+                              linkMeta: I,
                               applyBuildOverride: N,
                               clearBuildOverride: C,
                               submitting: y

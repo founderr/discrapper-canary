@@ -1,6 +1,6 @@
 n.d(t, {
     Yy: function () {
-        return I;
+        return b;
     },
     ZP: function () {
         return A;
@@ -28,7 +28,7 @@ var r,
     g = n(798681),
     E = n(981631),
     v = n(65154);
-function b(e, t, n) {
+function I(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,7 +41,7 @@ function b(e, t, n) {
         e
     );
 }
-let I = { any: 100 },
+let b = { any: 100 },
     T = 30 * h.Z.Millis.SECOND,
     S = 120 * h.Z.Millis.SECOND,
     y = -1 !== (0, p.hY)();
@@ -107,7 +107,7 @@ class A extends o.Z {
         return delete this.audioSsrcs[e], delete this.videoSsrcs[e], this.participants.delete(e), delete this.streamPixelCounts[this.streamIds[e]], delete this.streamIds[e], this.update(Array.from(this.participants));
     }
     reset() {
-        this.setConnection(null, !1), (this.audioSsrcs = {}), (this.videoSsrcs = {}), (this.remoteVideoSsrcs = {}), (this.framesReceived = {}), (this.streamIds = {}), (this.streamPixelCounts = {}), (this.latestWants = I), g.w.off(g.e.IncomingVideoEnabledChanged, this.incomingVideoEnabledChanged);
+        this.setConnection(null, !1), (this.audioSsrcs = {}), (this.videoSsrcs = {}), (this.remoteVideoSsrcs = {}), (this.framesReceived = {}), (this.streamIds = {}), (this.streamPixelCounts = {}), (this.latestWants = b), g.w.off(g.e.IncomingVideoEnabledChanged, this.incomingVideoEnabledChanged);
     }
     setSelectedParticipant(e) {
         if (e === this.selectedParticipantId) return this.latestWants;
@@ -156,35 +156,35 @@ class A extends o.Z {
         var i;
         super(),
             (i = this),
-            b(this, 'userId', void 0),
-            b(this, 'isStageChannel', void 0),
-            b(this, 'supportsSeamless', void 0),
-            b(this, 'ladder', void 0),
-            b(this, 'connection', void 0),
-            b(this, 'audioSsrcs', void 0),
-            b(this, 'videoSsrcs', void 0),
-            b(this, 'remoteVideoSsrcs', void 0),
-            b(this, 'framesReceived', void 0),
-            b(this, 'streamIds', void 0),
-            b(this, 'offscreenUsers', void 0),
-            b(this, 'offscreenDisabledUsers', void 0),
-            b(this, 'streamPixelCounts', void 0),
-            b(this, 'latestWants', void 0),
-            b(this, 'participants', void 0),
-            b(this, 'selectedParticipantId', void 0),
-            b(this, 'delayedCall', void 0),
-            b(this, 'offscreenTimeout', void 0),
-            b(this, 'pipOpen', void 0),
-            b(this, 'simulcastDebugOverrides', void 0),
-            b(this, 'videoHealthManager', void 0),
-            b(this, 'otherUsers', void 0),
-            b(this, 'delayedUpdate', void 0),
-            b(this, 'addLru', void 0),
-            b(this, 'updateOffscreenUsers', void 0),
-            b(this, 'handleLocalVideoDisabled', void 0),
-            b(this, 'handleLocalMute', void 0),
-            b(this, 'update', void 0),
-            b(this, 'incomingVideoEnabledChanged', void 0),
+            I(this, 'userId', void 0),
+            I(this, 'isStageChannel', void 0),
+            I(this, 'supportsSeamless', void 0),
+            I(this, 'ladder', void 0),
+            I(this, 'connection', void 0),
+            I(this, 'audioSsrcs', void 0),
+            I(this, 'videoSsrcs', void 0),
+            I(this, 'remoteVideoSsrcs', void 0),
+            I(this, 'framesReceived', void 0),
+            I(this, 'streamIds', void 0),
+            I(this, 'offscreenUsers', void 0),
+            I(this, 'offscreenDisabledUsers', void 0),
+            I(this, 'streamPixelCounts', void 0),
+            I(this, 'latestWants', void 0),
+            I(this, 'participants', void 0),
+            I(this, 'selectedParticipantId', void 0),
+            I(this, 'delayedCall', void 0),
+            I(this, 'offscreenTimeout', void 0),
+            I(this, 'pipOpen', void 0),
+            I(this, 'simulcastDebugOverrides', void 0),
+            I(this, 'videoHealthManager', void 0),
+            I(this, 'otherUsers', void 0),
+            I(this, 'delayedUpdate', void 0),
+            I(this, 'addLru', void 0),
+            I(this, 'updateOffscreenUsers', void 0),
+            I(this, 'handleLocalVideoDisabled', void 0),
+            I(this, 'handleLocalMute', void 0),
+            I(this, 'update', void 0),
+            I(this, 'incomingVideoEnabledChanged', void 0),
             (this.userId = e),
             (this.isStageChannel = t),
             (this.supportsSeamless = n),
@@ -198,7 +198,7 @@ class A extends o.Z {
             (this.offscreenUsers = {}),
             (this.offscreenDisabledUsers = {}),
             (this.streamPixelCounts = {}),
-            (this.latestWants = I),
+            (this.latestWants = b),
             (this.participants = new Set()),
             (this.selectedParticipantId = null),
             (this.pipOpen = !1),

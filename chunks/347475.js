@@ -24,21 +24,21 @@ function m(e) {
     s()(null != g, 'UserProfilePopoutWrapper: user cannot be undefined');
     let E = (0, o.e7)([c.default], () => c.default.getCurrentUser());
     s()(null != E, 'UserProfilePopoutWrapper: currentUser cannot be undefined');
-    let { isBlocked: v, isIgnored: b } = (0, o.cj)([u.Z], () => ({
+    let { isBlocked: v, isIgnored: I } = (0, o.cj)([u.Z], () => ({
             isBlocked: u.Z.isBlocked(g.id),
             isIgnored: u.Z.isIgnored(g.id)
         })),
-        I = (0, l.Do)({ location: 'UserProfileModalWrapper' }),
-        [T, S] = i.useState(v || (I && (b || v))),
+        b = (0, l.Do)({ location: 'UserProfileModalWrapper' }),
+        [T, S] = i.useState(v || (b && (I || v))),
         y = (0, d.sS)({ location: 'UserProfilePopoutWrapper' });
-    return T && y && !I
+    return T && y && !b
         ? (0, r.jsx)(f.Z, {
               ...a,
               user: g,
               currentUser: E,
               onViewBlockedProfileClick: () => S(!1)
           })
-        : T && I
+        : T && b
           ? (0, r.jsx)(f.Y, {
                 ...a,
                 user: g,

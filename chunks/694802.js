@@ -4,8 +4,8 @@ n(192379);
 var r = n(481060),
     s = n(113434),
     a = n(665430),
-    i = n(26650),
-    l = n(46140),
+    l = n(26650),
+    i = n(46140),
     c = n(388032),
     d = n(587311);
 function u(e) {
@@ -41,7 +41,7 @@ function u(e) {
 }
 t.Z = function (e) {
     let { quest: t } = e,
-        n = (0, a.pF)({ location: l.dr.QUESTS_BAR }),
+        n = (0, a.pF)({ location: i.dr.QUESTS_BAR }),
         r = (0, s.qb)(t);
     if (0 === r.length) return null;
     let d = r.at(0);
@@ -57,5 +57,5 @@ t.Z = function (e) {
                     children: c.intl.string(c.t.MFGxFB)
                 })
               : null
-        : (0, o.jsx)(i.Z, { children: d });
+        : (0, o.jsx)(l.Z, { children: d });
 };

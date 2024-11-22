@@ -47,21 +47,21 @@ t.Z = {
         let i;
         let { toValueMin: a, toValueMax: s, tension: o = 0, friction: l = 0, loop: u, reverse: c, invert: d, callback: f, type: p = 'spring', shouldLoop: h, durationMin: m, durationMax: g, ...E } = n,
             v = t._value,
-            b = _(n.duration, m, g),
-            I = _(n.toValue, a, s),
+            I = _(n.duration, m, g),
+            b = _(n.toValue, a, s),
             T = r[p](t, {
                 ...E,
-                toValue: I,
+                toValue: b,
                 tension: o,
                 friction: l,
-                duration: b
+                duration: I
             }),
             S = T;
         if (c || d) {
             let e = _(n.duration, m, g);
             (i = r[p](t, {
                 ...E,
-                toValue: c ? v : -I,
+                toValue: c ? v : -b,
                 tension: o,
                 friction: l,
                 duration: e

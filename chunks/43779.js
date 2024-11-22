@@ -1,14 +1,14 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return b;
     }
 });
 var o = n(200651),
     r = n(192379),
     s = n(120356),
     a = n.n(s),
-    i = n(100621),
-    l = n(442837),
+    l = n(100621),
+    i = n(442837),
     c = n(481060),
     d = n(393238),
     u = n(607070),
@@ -22,13 +22,13 @@ var o = n(200651),
     v = n(388032),
     j = n(684688);
 let _ = async () => await n.e('67963').then(n.t.bind(n, 145193, 19));
-function E(e) {
+function b(e) {
     var t, n, s;
-    let { quest: E, questContent: b, isHovering: N, contentPosition: B, rowIndex: S, onReceiveErrorHints: T } = e,
-        A = m.r.build(E.config),
+    let { quest: b, questContent: E, isHovering: N, contentPosition: T, rowIndex: B, onReceiveErrorHints: S } = e,
+        A = m.r.build(b.config),
         y = A.defaultReward.messages.name,
         R = A.defaultReward.messages.nameWithArticle,
-        w = (null === (t = E.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
+        w = (null === (t = b.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
         { ref: I, scrollHeight: k } = (0, d.Z)(),
         q = 104 !== k,
         { expansionSpring: P } = (0, c.useSpring)({
@@ -38,10 +38,10 @@ function E(e) {
                 clamp: !0
             }
         }),
-        M = (null === (n = E.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-        O = (null === (s = E.userStatus) || void 0 === s ? void 0 : s.claimedAt) != null,
-        { completedRatio: W, completedRatioDisplay: L } = (0, p.I)(E),
-        Q = (0, p.Bd)(E),
+        M = (null === (n = b.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
+        O = (null === (s = b.userStatus) || void 0 === s ? void 0 : s.claimedAt) != null,
+        { completedRatio: W, completedRatioDisplay: L } = (0, p.I)(b),
+        Q = (0, p.Bd)(b),
         Z = r.useCallback(
             (e) =>
                 (0, o.jsx)(c.Text, {
@@ -63,11 +63,11 @@ function E(e) {
                     children: Q
                 });
         }, [Q]),
-        H = (0, l.e7)([u.Z], () => u.Z.useReducedMotion);
+        H = (0, i.e7)([u.Z], () => u.Z.useReducedMotion);
     return (0, o.jsxs)('div', {
         className: a()(j.container),
         children: [
-            (0, o.jsxs)(i.animated.div, {
+            (0, o.jsxs)(l.animated.div, {
                 style: {
                     maxHeight: P.to([0, 1], [104, (null != k ? k : 0) + 12])
                 },
@@ -90,15 +90,15 @@ function E(e) {
                                                   shouldAnimate: !H
                                               }),
                                           (0, o.jsx)(x.Z, {
-                                              quest: E,
+                                              quest: b,
                                               size: 76,
                                               percentComplete: W,
                                               percentCompleteText: N ? L : void 0,
                                               children: (0, o.jsx)('div', {
                                                   className: j.circularRewardTileWrapper,
                                                   children: (0, o.jsx)(f.Z, {
-                                                      quest: E,
-                                                      questContent: b,
+                                                      quest: b,
+                                                      questContent: E,
                                                       className: j.circularQuestRewardTileAsset,
                                                       location: h.dr.QUEST_HOME_DESKTOP
                                                   })
@@ -107,9 +107,9 @@ function E(e) {
                                       ]
                                   })
                                 : (0, o.jsx)(f.Z, {
-                                      quest: E,
+                                      quest: b,
                                       autoplay: N,
-                                      questContent: b,
+                                      questContent: E,
                                       className: j.questRewardTileAsset,
                                       location: h.dr.QUEST_HOME_DESKTOP
                                   })
@@ -123,7 +123,7 @@ function E(e) {
                                 variant: 'eyebrow',
                                 color: 'text-brand',
                                 className: j.questName,
-                                children: v.intl.format(v.t.EAYZAg, { questName: E.config.messages.questName })
+                                children: v.intl.format(v.t.EAYZAg, { questName: b.config.messages.questName })
                             }),
                             (0, o.jsx)(c.Text, {
                                 variant: 'text-md/semibold',
@@ -135,7 +135,7 @@ function E(e) {
                         ]
                     }),
                     q &&
-                        (0, o.jsx)(i.animated.div, {
+                        (0, o.jsx)(l.animated.div, {
                             style: {
                                 opacity: P.to([0, 1], [1, 0])
                             },
@@ -144,11 +144,11 @@ function E(e) {
                 ]
             }),
             (0, o.jsx)(g.Z, {
-                quest: E,
-                location: b,
-                contentPosition: B,
-                rowIndex: S,
-                onReceiveErrorHints: T
+                quest: b,
+                location: E,
+                contentPosition: T,
+                rowIndex: B,
+                onReceiveErrorHints: S
             })
         ]
     });

@@ -14,19 +14,19 @@ var s,
     g = n(215023);
 let E = new Map(),
     v = new Map(),
-    b = new Map(),
-    I = [],
+    I = new Map(),
+    b = [],
     T = E,
     S = v,
-    y = b,
-    A = I,
+    y = I,
+    A = b,
     N = null,
     C = !1,
     R = new Set();
 let O = {},
     D = (e, t) => {
         if (0 === e.length) {
-            A = I;
+            A = b;
             return;
         }
         switch (N) {
@@ -38,11 +38,11 @@ let O = {},
                 break;
             case p.u.NONE:
             default:
-                A = I;
+                A = b;
         }
     },
     L = () => {
-        (T = E), (S = v), (A = I), (i = void 0), (C = !1), (R = new Set()), (r = void 0), (a = void 0), (O = {});
+        (T = E), (S = v), (A = b), (i = void 0), (C = !1), (R = new Set()), (r = void 0), (a = void 0), (O = {});
     },
     x = () => {
         if (!_.Z.hasLoadedExperiments) return;
@@ -112,7 +112,7 @@ class w extends (s = d.ZP.Store) {
         },
         COLLECTIBLES_CATEGORIES_FETCH_FAILURE: (e) => {
             let { error: t } = e;
-            (T = E), (S = v), (A = I), (C = !1), (R = new Set()), (r = t), (a = Date.now());
+            (T = E), (S = v), (A = b), (C = !1), (R = new Set()), (r = t), (a = Date.now());
         },
         COLLECTIBLES_PRODUCT_FETCH: (e) => {
             let { skuId: t } = e;

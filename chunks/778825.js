@@ -5,11 +5,11 @@ var p,
     g,
     E = n(442837),
     v = n(570140),
-    b = n(981631);
-let I = b.QZA.CLOSED,
+    I = n(981631);
+let b = I.QZA.CLOSED,
     T = {};
 function S() {
-    y(), A(), (T = {}), (I = b.QZA.OPEN);
+    y(), A(), (T = {}), (b = I.QZA.OPEN);
 }
 function y() {
     (r = void 0), (u = void 0), (i = void 0);
@@ -19,7 +19,7 @@ function A() {
 }
 class N extends (g = E.ZP.Store) {
     getFormState() {
-        return I;
+        return b;
     }
     getErrors() {
         return T;
@@ -28,7 +28,7 @@ class N extends (g = E.ZP.Store) {
         return void 0 !== r || void 0 !== i || void 0 !== a || void 0 !== s || void 0 !== o || void 0 !== l || void 0 !== u || void 0 !== c;
     }
     getIsSubmitDisabled() {
-        return void 0 !== o && o.length > b.tPV;
+        return void 0 !== o && o.length > I.tPV;
     }
     getPendingAvatar() {
         return r;
@@ -90,24 +90,24 @@ class N extends (g = E.ZP.Store) {
         : (p[h] = m),
     (t.Z = new N(v.Z, {
         GUILD_IDENTITY_SETTINGS_INIT: function (e) {
-            (d = e.guild), (I = b.QZA.OPEN), (T = {}), (f = e.source), (_ = e.analyticsLocations);
+            (d = e.guild), (b = I.QZA.OPEN), (T = {}), (f = e.source), (_ = e.analyticsLocations);
         },
         GUILD_IDENTITY_SETTINGS_RESET_AND_CLOSE_FORM: function () {
-            S(), (I = b.QZA.CLOSED), (T = {}), (f = void 0), (_ = []);
+            S(), (b = I.QZA.CLOSED), (T = {}), (f = void 0), (_ = []);
         },
         GUILD_IDENTITY_SETTINGS_SET_GUILD: function (e) {
             (d = e.guild), (T = {});
         },
         GUILD_IDENTITY_SETTINGS_SUBMIT: function () {
-            (I = b.QZA.SUBMITTING), (T = {});
+            (b = I.QZA.SUBMITTING), (T = {});
         },
         GUILD_IDENTITY_SETTINGS_SUBMIT_FAILURE: function (e) {
             var t;
-            if (I !== b.QZA.SUBMITTING) return !1;
-            (I = b.QZA.OPEN), (T = null !== (t = e.errors) && void 0 !== t ? t : {});
+            if (b !== I.QZA.SUBMITTING) return !1;
+            (b = I.QZA.OPEN), (T = null !== (t = e.errors) && void 0 !== t ? t : {});
         },
         USER_PROFILE_UPDATE_FAILURE: function (e) {
-            (I = b.QZA.OPEN), (T = e.errors);
+            (b = I.QZA.OPEN), (T = e.errors);
         },
         GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR: function (e) {
             let { avatar: t } = e;

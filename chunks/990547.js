@@ -80,8 +80,8 @@ var f = n(627420),
     g = n(699407),
     E = n(20281),
     v = n(525769);
-let b = 'deviceProperties',
-    I = 'referralProperties',
+let I = 'deviceProperties',
+    b = 'referralProperties',
     T = {},
     S = {},
     y = window.DiscordNative;
@@ -199,7 +199,7 @@ function L(e) {
 if (null == r)
     try {
         let e, t, n;
-        (e = _.K.get(b)),
+        (e = _.K.get(I)),
             null == e &&
                 ((e = (function () {
                     let e = {},
@@ -228,16 +228,16 @@ if (null == r)
                         e
                     );
                 })()),
-                _.K.set(b, e)),
-            (t = _.K.get(I)),
-            null == t && ((t = D()), _.K.set(I, t)),
-            (n = p.x.get(I)),
+                _.K.set(I, e)),
+            (t = _.K.get(b)),
+            null == t && ((t = D()), _.K.set(b, t)),
+            (n = p.x.get(b)),
             null == n &&
                 ((n = (function (e, t) {
                     let n = {};
                     return Object.keys(e).map((r) => (n[''.concat(r).concat(t)] = e[r])), n;
                 })(D(), '_current')),
-                p.x.set(I, n)),
+                p.x.set(b, n)),
             (r = {
                 ...e,
                 ...(function () {
@@ -270,7 +270,7 @@ x(
         let r = {},
             i = window.GLOBAL_ENV.RELEASE_CHANNEL;
         i && (r.release_channel = i.split('-')[0]);
-        let a = parseInt(((n = '347480'), '347480'), 10);
+        let a = parseInt(((n = '347538'), '347538'), 10);
         !isNaN(a) && (r.client_build_number = a);
         let s = null == y ? void 0 : null === (e = (t = y.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(t);
         return (

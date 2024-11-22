@@ -3,7 +3,7 @@ n.d(t, {
         return y;
     },
     QN: function () {
-        return I;
+        return b;
     },
     Qf: function () {
         return A;
@@ -54,7 +54,7 @@ let g = (e) => {
         return t === m.Sk.ONLINE && n ? ''.concat(t, '-mobile') : t === m.Sk.ONLINE ? ''.concat(t, '-desktop') : t;
     },
     v = (e) => (null == e ? e : 'VOICE' === e ? 'VOICE' : Object.keys(h.IIU)[Object.values(h.IIU).indexOf(e)]),
-    b = (e) => {
+    I = (e) => {
         var t, n;
         let { layout: r, userId: i, guildId: a, sessionId: l, sourceSessionId: c, showGuildProfile: d = !0 } = e,
             f = u.default.getUser(i);
@@ -95,7 +95,7 @@ let g = (e) => {
             is_bot_profile: f.bot
         };
     },
-    I = (e) => {
+    b = (e) => {
         var t, n;
         let { userId: r } = e;
         return null == r
@@ -114,8 +114,8 @@ let g = (e) => {
         c.default.track(h.rMx.USER_PROFILE_ACTION, {
             ...(0, r.hH)(t),
             ...(0, r.JS)(n),
-            ...b(e),
             ...I(e),
+            ...b(e),
             location_stack: s,
             profile_action: o,
             profile_section: l,
@@ -128,8 +128,8 @@ let g = (e) => {
         c.default.track(h.rMx.USER_PROFILE_ACTIVITY_ACTION, {
             ...(0, r.hH)(t),
             ...(0, r.JS)(n),
-            ...b(e),
             ...I(e),
+            ...b(e),
             location_stack: i,
             activity_action: a,
             activity_display: s,
@@ -161,8 +161,8 @@ let g = (e) => {
         c.default.track(h.rMx.USER_PROFILE_BADGE_PRESSED, {
             ...(0, r.hH)(t),
             ...(0, r.JS)(n),
-            ...b(e),
             ...I(e),
+            ...b(e),
             location_stack: i,
             badge: a
         });
@@ -172,8 +172,8 @@ let g = (e) => {
         c.default.track(h.rMx.USER_PROFILE_BADGE_HOVERED, {
             ...(0, r.hH)(t),
             ...(0, r.JS)(n),
-            ...b(e),
             ...I(e),
+            ...b(e),
             location_stack: i,
             badge: a
         });

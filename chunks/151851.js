@@ -21,14 +21,14 @@ var i = n(120356),
     g = n(835225),
     E = n(939039),
     v = n(117795),
-    b = n(358085),
-    I = n(998502),
+    I = n(358085),
+    b = n(998502),
     T = n(388032),
     S = n(211149);
-let y = (e) => I.ZP.close(e),
-    A = (e) => I.ZP.minimize(e),
+let y = (e) => b.ZP.close(e),
+    A = (e) => b.ZP.minimize(e),
     N = (e, t) => {
-        (0, b.isMac)() && !t.altKey ? I.ZP.fullscreen(e) : I.ZP.maximize(e);
+        (0, I.isMac)() && !t.altKey ? b.ZP.fullscreen(e) : b.ZP.maximize(e);
     },
     C = (e) => {
         let { children: t, windowKey: n, themeOverride: i, hasOpenLayer: s, isRefreshEnabled: l } = e,
@@ -84,7 +84,7 @@ let y = (e) => I.ZP.close(e),
             children: (e) =>
                 (0, r.jsxs)(o.Clickable, {
                     className: a()(i ? S.typeMacOSWithFrame : S.typeMacOS, t ? S.focused : S.unfocused, e, { [S.withBackgroundOverride]: !l }),
-                    onDoubleClick: () => I.ZP.maximize(n),
+                    onDoubleClick: () => b.ZP.maximize(n),
                     tabIndex: -1,
                     children: [
                         u.Z.window.USE_OSX_NATIVE_TRAFFIC_LIGHTS
@@ -133,14 +133,14 @@ function O(e) {
         h = (0, f.Q)('AppPanels');
     if (_) return null;
     switch (n) {
-        case b.PlatformTypes.WINDOWS:
+        case I.PlatformTypes.WINDOWS:
             return (0, r.jsx)(C, {
                 windowKey: i,
                 themeOverride: o,
                 hasOpenLayer: p,
                 isRefreshEnabled: h
             });
-        case b.PlatformTypes.OSX:
+        case I.PlatformTypes.OSX:
             return (0, r.jsx)(R, {
                 focused: t,
                 windowKey: i,

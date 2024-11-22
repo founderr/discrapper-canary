@@ -28,12 +28,12 @@ t.Z = (e) => {
             }),
                 s.Z.ignoreUser(t.id, 'web_iar_ignore_user_element', n);
         }, [t, p, n]),
-        b = i.useMemo(() => h || m, [h, m]);
+        I = i.useMemo(() => h || m, [h, m]);
     return (0, r.jsx)(l.Z, {
         title: _.intl.formatToPlainString(_.t.U3yyFh, { username: E }),
         description: _.intl.string(_.t.naWE6e),
-        buttonText: b ? _.intl.string(_.t.nDdxOD) : _.intl.string(_.t.ICYEfX),
-        buttonDisabled: b,
+        buttonText: I ? _.intl.string(_.t.nDdxOD) : _.intl.string(_.t.ICYEfX),
+        buttonDisabled: I,
         onButtonPress: v
     });
 };

@@ -14,8 +14,8 @@ t.Z = i.memo(function (e) {
     let { width: t, height: n, src: a, url: p, format: h, className: m } = e,
         [g, E] = i.useState(!1),
         v = (0, u.hb)((0, l.iy)(p)),
-        b = v ? f.intl.string(f.t['5/NS7+']) : f.intl.string(f.t.nIH0v7),
-        I = v ? o.StarIcon : o.StarOutlineIcon;
+        I = v ? f.intl.string(f.t['5/NS7+']) : f.intl.string(f.t.nIH0v7),
+        b = v ? o.StarIcon : o.StarOutlineIcon;
     i.useEffect(() => {
         if (!g) return;
         let e = setTimeout(() => {
@@ -39,7 +39,7 @@ t.Z = i.memo(function (e) {
                   c.S.dispatch(d.CkL.FAVORITE_GIF));
     };
     return (0, r.jsx)(o.Tooltip, {
-        text: b,
+        text: I,
         children: (e) =>
             (0, r.jsx)(o.Clickable, {
                 ...e,
@@ -50,7 +50,7 @@ t.Z = i.memo(function (e) {
                 onMouseDown: (e) => e.preventDefault(),
                 onClick: T,
                 onDoubleClick: (e) => e.preventDefault(),
-                children: (0, r.jsx)(I, {
+                children: (0, r.jsx)(b, {
                     color: 'currentColor',
                     className: _.icon
                 })

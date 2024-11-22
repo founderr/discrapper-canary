@@ -3,7 +3,7 @@ n.d(t, {
         return H;
     },
     $e: function () {
-        return G;
+        return B;
     },
     GJ: function () {
         return E;
@@ -21,7 +21,7 @@ n.d(t, {
         return Y;
     },
     W: function () {
-        return b;
+        return I;
     },
     Wx: function () {
         return C;
@@ -36,10 +36,10 @@ n.d(t, {
         return F;
     },
     _A: function () {
-        return B;
+        return G;
     },
     aq: function () {
-        return I;
+        return b;
     },
     cR: function () {
         return P;
@@ -99,12 +99,12 @@ function v(e) {
         tags: e.tags
     };
 }
-function b(e, t) {
+function I(e, t) {
     let n = E(e) ? 0 : 1,
         r = E(t) ? 0 : 1;
     return n !== r ? n - r : t.position - e.position;
 }
-function I() {
+function b() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : g.intl.string(g.t.gnsna2);
     return [
         {
@@ -136,20 +136,20 @@ function N(e, t, n, r) {
     let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
     return Object.values(t)
         .filter((t) => !E(t) && T(n, t.id, r) && A(e, t) && i(t.name))
-        .sort(b)
+        .sort(I)
         .map((e) => v(e));
 }
 function C(e, t, n, i) {
     let a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
     return Object.values(t)
         .filter((t) => !E(t) && T(n, t.id, i) && A(e, t) && a(t.name))
-        .sort(b)
+        .sort(I)
         .map((e) => v(e, r.e$(e.permissions, i)));
 }
 function R(e, t, n, r, i) {
     var a, s, o, l, u;
     let c = [];
-    return 0 === (c = ((a = e), (s = t), (o = n), (l = r), (u = i), Object.values(s).filter((e) => E(e) || (!T(o, e.id, l, u) && A(a, e)))).sort(b).map((e) => v(e))).length ? I(g.intl.string(g.t.nZfHsb)) : c;
+    return 0 === (c = ((a = e), (s = t), (o = n), (l = r), (u = i), Object.values(s).filter((e) => E(e) || (!T(o, e.id, l, u) && A(a, e)))).sort(I).map((e) => v(e))).length ? b(g.intl.string(g.t.nZfHsb)) : c;
 }
 function O(e, t, n, i, a) {
     var s, o, l, u, c;
@@ -164,9 +164,9 @@ function O(e, t, n, i, a) {
             var t;
             return E(e) || (!T(l, e.id, u, c) && A(s, e)) || r.e$(r.$e(e.permissions, null === (t = l.permissionOverwrites[e.id]) || void 0 === t ? void 0 : t.allow), u);
         }))
-            .sort(b)
+            .sort(I)
             .map((e) => v(e, r.e$(e.permissions, i)))).length
-        ? I(g.intl.string(g.t.nZfHsb))
+        ? b(g.intl.string(g.t.nZfHsb))
         : d;
 }
 function D(e, t) {
@@ -254,14 +254,14 @@ function U(e) {
             return null;
     }
 }
-function B(e, t, n) {
+function G(e, t, n) {
     let i = e.permissionOverwrites[e.guild_id];
     null == i && (i = f.we(e.guild_id));
     let a = { ...i };
     return (a.deny = r.Od(a.deny, t)), (a.allow = r.Od(a.allow, t)), !n && (a.deny = r.IH(a.deny, t)), a;
 }
-function G(e, t, n) {
-    let r = B(e, t, n);
+function B(e, t, n) {
+    let r = G(e, t, n);
     (0, a.kY)(e, r.id, r.allow, r.deny);
 }
 function Z(e, t) {

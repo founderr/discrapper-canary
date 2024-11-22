@@ -21,8 +21,8 @@ var r,
     g = n(388032),
     E = n(459127),
     v = n(167969),
-    b = n(557256);
-function I(e, t, n) {
+    I = n(557256);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -38,37 +38,37 @@ function I(e, t, n) {
 class T extends (r = a.PureComponent) {
     render() {
         let e;
-        let { className: t, imageClassName: n, readyState: r, src: a, placeholder: s, placeholderVersion: l, alt: c, width: _, height: v, maxWidth: b = _, maxHeight: I = v, minWidth: T, minHeight: A, mediaLayoutType: N, limitResponsiveWidth: C = !0, accessory: R, zoomable: O, original: D, children: L, renderAccessory: x, onClick: w, tabIndex: M, dataSafeSrc: P, useFullWidth: k = !1, ...U } = this.props;
+        let { className: t, imageClassName: n, readyState: r, src: a, placeholder: s, placeholderVersion: l, alt: c, width: _, height: v, maxWidth: I = _, maxHeight: b = v, minWidth: T, minHeight: A, mediaLayoutType: N, limitResponsiveWidth: C = !0, accessory: R, zoomable: O, original: D, children: L, renderAccessory: x, onClick: w, tabIndex: M, dataSafeSrc: P, useFullWidth: k = !1, ...U } = this.props;
         if (1 === _ && 1 === v) return null;
-        let B = (0, f.Tj)({
+        let G = (0, f.Tj)({
                 width: _,
                 height: v,
-                maxWidth: b,
-                maxHeight: I,
+                maxWidth: I,
+                maxHeight: b,
                 minWidth: T,
                 minHeight: A
             }),
-            G = 0 !== B.width ? B.width / B.height : 1;
+            B = 0 !== G.width ? G.width / G.height : 1;
         '' !== a && r !== h.zo9.ERROR
             ? (e = L({
                   src: a,
-                  size: B,
+                  size: G,
                   alt: c,
                   className: n,
                   mediaLayoutType: N
               }))
             : r !== h.zo9.LOADING &&
               (e = (0, i.jsx)(S, {
-                  size: B,
+                  size: G,
                   mediaLayoutType: N,
                   alt: c
               })),
             (e = (0, i.jsx)(p.N, {
                 readyState: r,
-                aspectRatio: G,
+                aspectRatio: B,
                 placeholder: s,
                 placeholderVersion: l,
-                placeholderStyle: y(B, N),
+                placeholderStyle: y(G, N),
                 children: e
             }));
         let Z = null != x ? x() : null;
@@ -103,7 +103,7 @@ class T extends (r = a.PureComponent) {
                                     aspectRatio: ''.concat(e.width, ' / ').concat(e.height)
                                 }
                               : e;
-                    })(B, C, k, N),
+                    })(G, C, k, N),
                     ...U,
                     children: [
                         null != D &&
@@ -141,7 +141,7 @@ class T extends (r = a.PureComponent) {
         );
     }
     constructor(...e) {
-        super(...e), I(this, '_containerRef', a.createRef()), I(this, '_clickableRef', a.createRef());
+        super(...e), b(this, '_containerRef', a.createRef()), b(this, '_clickableRef', a.createRef());
     }
 }
 function S(e) {
@@ -169,13 +169,13 @@ function S(e) {
             }
         })(t, n),
         children: (0, i.jsx)('img', {
-            src: (0, l.ap)(a) ? b : v,
+            src: (0, l.ap)(a) ? I : v,
             className: E.imageError,
             alt: null != r ? r : g.intl.string(g.t.X4IxWF)
         })
     });
 }
-I(T, 'defaultProps', {
+b(T, 'defaultProps', {
     readyState: h.zo9.READY,
     zoomable: !0,
     children: (e) => {

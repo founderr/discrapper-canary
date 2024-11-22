@@ -21,8 +21,8 @@ var r = n(200651),
     g = n(369566),
     E = n(518950),
     v = n(652853),
-    b = n(228168),
-    I = n(981631),
+    I = n(228168),
+    b = n(981631),
     T = n(474936),
     S = n(8621);
 let y = h.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
@@ -36,16 +36,16 @@ function A(e) {
         { live: M } = (0, g.Z)(t.id),
         [P] = M,
         { status: k, isMobileOnline: U } = (0, o.cj)([_.Z], () => ({
-            status: (0, u.Z)(P) ? I.Skl.STREAMING : _.Z.getStatus(t.id),
+            status: (0, u.Z)(P) ? b.Skl.STREAMING : _.Z.getStatus(t.id),
             isMobileOnline: _.Z.isMobileOnline(t.id)
         })),
-        B = A === b.y0.FULL_SIZE ? l.AvatarSizes.SIZE_120 : l.AvatarSizes.SIZE_80,
-        G = s()(
+        G = A === I.y0.FULL_SIZE ? l.AvatarSizes.SIZE_120 : l.AvatarSizes.SIZE_80,
+        B = s()(
             S.avatar,
             {
-                [S.biteSize]: A === b.y0.BITE_SIZE,
-                [S.fullSize]: A === b.y0.FULL_SIZE,
-                [S.panel]: A === b.y0.PANEL
+                [S.biteSize]: A === I.y0.BITE_SIZE,
+                [S.fullSize]: A === I.y0.FULL_SIZE,
+                [S.panel]: A === I.y0.PANEL
             },
             R
         ),
@@ -56,30 +56,30 @@ function A(e) {
         } = (0, E.Z)({
             user: t,
             guildId: null != n ? n.guildId : a,
-            size: B,
+            size: G,
             animateOnHover: N
         }),
         j = (0, r.jsx)(y, {
             src: F,
             avatarDecoration: Z,
-            size: B,
+            size: G,
             'aria-label': t.username,
             imageClassName: null != C ? S.overlay : void 0,
-            status: w ? I.Skl.UNKNOWN : k,
+            status: w ? b.Skl.UNKNOWN : k,
             statusBackdropColor: x && !w ? (0, l.getStatusBackdropColor)(O) : void 0,
             isMobile: U,
             statusTooltip: !0,
-            statusTooltipDelay: b.vB
+            statusTooltipDelay: I.vB
         });
     return null == C
         ? (0, r.jsx)('div', {
               ...V,
-              className: G,
+              className: B,
               children: j
           })
         : (0, r.jsx)(l.Clickable, {
               ...V,
-              className: s()(G, S.clickable),
+              className: s()(B, S.clickable),
               focusProps: { ringClassName: S.focusRing },
               onClick: () => {
                   L({

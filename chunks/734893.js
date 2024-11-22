@@ -27,7 +27,7 @@ n.d(t, {
         return N;
     },
     cq: function () {
-        return b;
+        return I;
     },
     j: function () {
         return s;
@@ -57,7 +57,7 @@ n.d(t, {
         return C;
     },
     vD: function () {
-        return I;
+        return b;
     },
     x3: function () {
         return v;
@@ -80,7 +80,7 @@ let d = 7,
     g = 30,
     E = 200,
     v = 7;
-function b(e) {
+function I(e) {
     var t;
     return {
         channelId: e.channel_id,
@@ -98,7 +98,7 @@ function b(e) {
         icon: null !== (t = e.icon) && void 0 !== t ? t : null
     };
 }
-function I(e) {
+function b(e) {
     var t, n;
     return {
         channelId: e.channel_id,
@@ -122,11 +122,11 @@ function T(e) {
             authorIds: t.author_ids,
             message: t.message
         },
-        s = n.filter((e) => (0, l.lm)(o.Z.getChannel(e.channel_id))).map(b);
+        s = n.filter((e) => (0, l.lm)(o.Z.getChannel(e.channel_id))).map(I);
     return {
         welcomeMessage: a,
         newMemberActions: s,
-        resourceChannels: r.filter((e) => (0, l.lm)(o.Z.getChannel(e.channel_id))).map(I),
+        resourceChannels: r.filter((e) => (0, l.lm)(o.Z.getChannel(e.channel_id))).map(b),
         enabled: i
     };
 }

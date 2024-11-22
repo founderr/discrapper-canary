@@ -254,7 +254,7 @@
         },
         toHex8: function (e) {
             return (function (e, t, n, r, i) {
-                var a = [k(l(e).toString(16)), k(l(t).toString(16)), k(l(n).toString(16)), k(B(r))];
+                var a = [k(l(e).toString(16)), k(l(t).toString(16)), k(l(n).toString(16)), k(G(r))];
                 return i && a[0].charAt(0) == a[0].charAt(1) && a[1].charAt(0) == a[1].charAt(1) && a[2].charAt(0) == a[2].charAt(1) && a[3].charAt(0) == a[3].charAt(1) ? a[0].charAt(0) + a[1].charAt(0) + a[2].charAt(0) + a[3].charAt(0) : a.join('');
             })(this._r, this._g, this._b, this._a, e);
         },
@@ -312,10 +312,10 @@
             return (this._r = n._r), (this._g = n._g), (this._b = n._b), this.setAlpha(n._a), this;
         },
         lighten: function () {
-            return this._applyModification(b, arguments);
+            return this._applyModification(I, arguments);
         },
         brighten: function () {
-            return this._applyModification(I, arguments);
+            return this._applyModification(b, arguments);
         },
         darken: function () {
             return this._applyModification(T, arguments);
@@ -422,7 +422,7 @@
         return r && i[0].charAt(0) == i[0].charAt(1) && i[1].charAt(0) == i[1].charAt(1) && i[2].charAt(0) == i[2].charAt(1) ? i[0].charAt(0) + i[1].charAt(0) + i[2].charAt(0) : i.join('');
     }
     function m(e, t, n, r) {
-        return [k(B(r)), k(l(e).toString(16)), k(l(t).toString(16)), k(l(n).toString(16))].join('');
+        return [k(G(r)), k(l(e).toString(16)), k(l(t).toString(16)), k(l(n).toString(16))].join('');
     }
     function g(e, t) {
         t = 0 === t ? 0 : t || 10;
@@ -437,12 +437,12 @@
     function v(e) {
         return f(e).desaturate(100);
     }
-    function b(e, t) {
+    function I(e, t) {
         t = 0 === t ? 0 : t || 10;
         var n = f(e).toHsl();
         return (n.l += t / 100), (n.l = M(n.l)), f(n);
     }
-    function I(e, t) {
+    function b(e, t) {
         t = 0 === t ? 0 : t || 10;
         var n = f(e).toRgb();
         return (n.r = c(0, u(255, n.r - l(-((t / 100) * 255))))), (n.g = c(0, u(255, n.g - l(-((t / 100) * 255))))), (n.b = c(0, u(255, n.b - l(-((t / 100) * 255))))), f(n);
@@ -798,10 +798,10 @@
     function U(e) {
         return e <= 1 && (e = 100 * e + '%'), e;
     }
-    function B(e) {
+    function G(e) {
         return t.round(255 * parseFloat(e)).toString(16);
     }
-    function G(e) {
+    function B(e) {
         return P(e) / 255;
     }
     var Z =

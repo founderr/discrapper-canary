@@ -24,8 +24,8 @@ var r = n(200651),
     g = n(471879),
     E = n(502762),
     v = n(475413),
-    b = n(228168),
-    I = n(388032),
+    I = n(228168),
+    b = n(388032),
     T = n(572046),
     S = n(609440);
 function y(e) {
@@ -57,7 +57,7 @@ function y(e) {
                     children: (0, r.jsx)(E.Z, {
                         user: t,
                         displayProfile: O,
-                        profileType: b.y0.BITE_SIZE,
+                        profileType: I.y0.BITE_SIZE,
                         children: (0, r.jsxs)('div', {
                             className: T.container,
                             children: [
@@ -77,20 +77,20 @@ function y(e) {
                                         (0, r.jsx)(l.Heading, {
                                             variant: 'heading-lg/bold',
                                             className: T.header,
-                                            children: I.intl.string(I.t.VNJ7UF)
+                                            children: b.intl.string(b.t.VNJ7UF)
                                         }),
                                         (0, r.jsx)(l.Text, {
                                             variant: 'text-sm/medium',
-                                            children: I.intl.format(I.t.LXbngo, { username: t.username })
+                                            children: b.intl.format(b.t.LXbngo, { username: t.username })
                                         }),
                                         (0, r.jsx)(l.Text, {
                                             variant: 'text-sm/medium',
-                                            children: I.intl.string(I.t['20WzZ2'])
+                                            children: b.intl.string(b.t['20WzZ2'])
                                         }),
                                         (0, r.jsx)(v.tG, {
                                             className: T.centeredButton,
                                             action: 'VIEW_BLOCKED_PROFILE',
-                                            text: I.intl.string(I.t.iXAna2),
+                                            text: b.intl.string(b.t.iXAna2),
                                             autoFocus: !0,
                                             fullWidth: !1,
                                             onClick: () => {
@@ -142,7 +142,7 @@ function A(e) {
                 children: (0, r.jsx)(E.Z, {
                     user: t,
                     displayProfile: w,
-                    profileType: b.y0.BITE_SIZE,
+                    profileType: I.y0.BITE_SIZE,
                     children: (0, r.jsxs)('div', {
                         className: T.container,
                         children: [
@@ -164,17 +164,17 @@ function A(e) {
                                             }),
                                             (0, r.jsx)(l.Heading, {
                                                 variant: 'heading-lg/bold',
-                                                children: I.intl.string(I.t.b33pLC)
+                                                children: b.intl.string(b.t.b33pLC)
                                             }),
                                             (0, r.jsx)(l.Text, {
                                                 variant: 'text-sm/medium',
-                                                children: I.intl.format(O ? I.t['8F+WNz'] : I.t['/cZp5u'], { username: _.ZP.getName(n, y, t) })
+                                                children: b.intl.format(O ? b.t['8F+WNz'] : b.t['/cZp5u'], { username: _.ZP.getName(n, y, t) })
                                             })
                                         ]
                                     }),
                                     (0, r.jsx)(v.tG, {
                                         action: P,
-                                        text: I.intl.string(I.t['UJKH/v']),
+                                        text: b.intl.string(b.t['UJKH/v']),
                                         autoFocus: !0,
                                         grow: !0,
                                         fullWidth: !1,

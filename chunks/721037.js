@@ -16,8 +16,8 @@ var r = n(200651),
     g = n(592125),
     E = n(366050),
     v = n(944486),
-    b = n(451478),
-    I = n(823379),
+    I = n(451478),
+    b = n(823379),
     T = n(981631),
     S = n(918559),
     y = n(354459);
@@ -71,7 +71,7 @@ class R extends i.PureComponent {
             });
     }
 }
-t.Z = a.ZP.connectStores([_.Z, o.ZP, b.Z, p.Z, g.Z, v.Z, E.Z, d.Z, h.ZP], (e) => {
+t.Z = a.ZP.connectStores([_.Z, o.ZP, I.Z, p.Z, g.Z, v.Z, E.Z, d.Z, h.ZP], (e) => {
     var t, n, r, i;
     let a,
         { inPopoutWindow: s = !1 } = e,
@@ -81,7 +81,7 @@ t.Z = a.ZP.connectStores([_.Z, o.ZP, b.Z, p.Z, g.Z, v.Z, E.Z, d.Z, h.ZP], (e) =>
         A = o.ZP.getActivityPanelMode(),
         N = m && A === S.Ez.PANEL,
         C = null != f && (null === (t = d.Z.getSelectedParticipant(f.channelId)) || void 0 === t ? void 0 : t.type) === y.fO.ACTIVITY,
-        R = b.Z.windowSize();
+        R = I.Z.windowSize();
     if (s) {
         let e = _.Z.getWindow(T.KJ3.CHANNEL_CALL_POPOUT);
         R =
@@ -97,14 +97,14 @@ t.Z = a.ZP.connectStores([_.Z, o.ZP, b.Z, p.Z, g.Z, v.Z, E.Z, d.Z, h.ZP], (e) =>
     let D = Array.from(E.Z.pipWindows.values()),
         L = E.Z.pipWidth(y.cL.VIDEO),
         x = D.find((e) => e.component === T.NYg.VIDEO),
-        w = [x, D.find((e) => e.component === T.NYg.EMBED_IFRAME)].filter(I.lm),
+        w = [x, D.find((e) => e.component === T.NYg.EMBED_IFRAME)].filter(b.lm),
         M = h.ZP.callChatSidebarWidth,
         P = v.Z.getVoiceChannelId(),
         k = v.Z.getChannelId() === P,
         U = null != P && d.Z.getChatOpen(P),
-        B = N || C,
-        G = B && null != f && (0, l.q)(f.applicationId),
-        Z = !B && null != a && k;
+        G = N || C,
+        B = G && null != f && (0, l.q)(f.applicationId),
+        Z = !G && null != a && k;
     return {
         selectedPIPWindow: a,
         pipWindows: w,
@@ -114,6 +114,6 @@ t.Z = a.ZP.connectStores([_.Z, o.ZP, b.Z, p.Z, g.Z, v.Z, E.Z, d.Z, h.ZP], (e) =>
         theme: p.Z.theme,
         dockedRect: E.Z.getDockedRect(null !== (i = null == a ? void 0 : a.id) && void 0 !== i ? i : ''),
         appContext: O,
-        roundCorners: !G
+        roundCorners: !B
     };
 })(R);

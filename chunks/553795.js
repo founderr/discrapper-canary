@@ -16,8 +16,8 @@ let p = new Set([_.ABu.CONTACTS]),
     g = [],
     E = {},
     v = new Set(),
-    b = {},
     I = {},
+    b = {},
     T = (e) => {
         (m = e.filter((e) => !p.has(e.type) && c.Z.isSupported(e.type))), (g = e.filter((e) => p.has(e.type))), (h = !1);
     };
@@ -26,7 +26,7 @@ class S extends (r = o.ZP.Store) {
         return E[e] || !1;
     }
     joinErrorMessage(e) {
-        return I[e];
+        return b[e];
     }
     isFetching() {
         return h;
@@ -44,7 +44,7 @@ class S extends (r = o.ZP.Store) {
         return g.find((t) => t.type === e);
     }
     isSuggestedAccountType(e) {
-        return b[e] || !1;
+        return I[e] || !1;
     }
     addPendingAuthorizedState(e) {
         v.add(e);
@@ -95,7 +95,7 @@ class S extends (r = o.ZP.Store) {
             null != r && (a.revoked = r), null != i && (a.accessToken = i);
         },
         USER_CONNECTIONS_INTEGRATION_JOINING_ERROR: function (e) {
-            I[e.integrationId] = void 0 !== e.error ? e.error : '';
+            b[e.integrationId] = void 0 !== e.error ? e.error : '';
         },
         USER_CONNECTIONS_CALLBACK: function (e) {
             let { code: t, state: n, openid_params: r, provider: i } = e;

@@ -3,7 +3,7 @@ n.d(t, {
         return v;
     },
     Gm: function () {
-        return I;
+        return b;
     },
     T4: function () {
         return h;
@@ -385,7 +385,7 @@ class E extends o.C {
     }
 }
 let v = new E();
-class b extends o.C {
+class I extends o.C {
     internalJsonWrite(e, t) {
         return e.value;
     }
@@ -434,7 +434,7 @@ class b extends o.C {
         ]);
     }
 }
-let I = new b();
+let b = new I();
 class T extends o.C {
     internalJsonWrite(e, t) {
         return this.refJsonWriter.scalar(12, e.value, 'value', !1, !0);

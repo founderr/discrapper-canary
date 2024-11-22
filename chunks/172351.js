@@ -29,7 +29,7 @@ function p(e) {
             [E]
         );
     if (null == v || 0 === v.length) return null;
-    let b = (e) => {
+    let I = (e) => {
         null == m || m(),
             g({ action: 'PRESS_APP_COMMAND' }),
             l.default.track(d.rMx.POPULAR_APPLICATION_COMMAND_CLICKED, {
@@ -51,7 +51,7 @@ function p(e) {
                             commandId: e.id,
                             commandName: e.displayName,
                             commandDescription: e.displayDescription,
-                            onClick: b,
+                            onClick: I,
                             guildId: p,
                             channelId: h.id,
                             applicationId: e.applicationId

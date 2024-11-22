@@ -16,8 +16,8 @@ let h = new Set(),
     g = new Map(),
     E = new Map(),
     v = new Map(),
-    b = null;
-function I(e) {
+    I = null;
+function b(e) {
     let t = f.default.getCurrentUser(),
         n = d.Z.getGuild(e);
     if (null == n || null == t) return !1;
@@ -37,46 +37,46 @@ function I(e) {
     return m.set(e, r), E.set(e, a), g.set(e, i), !0;
 }
 function T() {
-    m.clear(), E.clear(), g.clear(), v.clear(), (b = null);
+    m.clear(), E.clear(), g.clear(), v.clear(), (I = null);
 }
 function S(e) {
     let {
         guild: { id: t }
     } = e;
-    if (null == b) return !1;
+    if (null == I) return !1;
     let n = d.Z.getGuild(t);
     if (null == n) return !1;
     let r = n.hasFeature(p.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE);
-    if (r && !b.has(t)) {
-        let e = new Set(b);
-        return e.add(t), (b = e), !0;
+    if (r && !I.has(t)) {
+        let e = new Set(I);
+        return e.add(t), (I = e), !0;
     }
-    if (!r && b.has(t)) {
-        let e = new Set(b);
-        return e.delete(t), (b = e), !0;
+    if (!r && I.has(t)) {
+        let e = new Set(I);
+        return e.delete(t), (I = e), !0;
     }
     return !1;
 }
 function y(e) {
     let { guildId: t } = e;
-    return !!m.has(t) && I(t);
+    return !!m.has(t) && b(t);
 }
 class A extends (r = l.ZP.Store) {
     initialize() {
         this.waitFor(d.Z);
     }
     getGuildIdsWithPurchasableRoles() {
-        return null == b
+        return null == I
             ? (function () {
                   let e = d.Z.getGuilds(),
                       t = new Set();
                   for (let n in e) e[n].hasFeature(p.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE) && t.add(n);
-                  return (b = t), t;
+                  return (I = t), t;
               })()
-            : b;
+            : I;
     }
     buildRoles(e) {
-        !m.has(e) && I(e);
+        !m.has(e) && b(e);
     }
     getSubscriptionRoles(e) {
         var t;
@@ -112,9 +112,9 @@ class A extends (r = l.ZP.Store) {
             let {
                 guild: { id: t }
             } = e;
-            if ((null == b ? void 0 : b.has(t)) !== !0) return !1;
-            let n = new Set(b);
-            n.delete(t), (b = n);
+            if ((null == I ? void 0 : I.has(t)) !== !0) return !1;
+            let n = new Set(I);
+            n.delete(t), (I = n);
         },
         GUILD_UPDATE: S,
         GUILD_ROLE_CREATE: y,
@@ -123,6 +123,6 @@ class A extends (r = l.ZP.Store) {
         GUILD_MEMBER_UPDATE: function (e) {
             let { guildId: t, user: n } = e,
                 r = f.default.getCurrentUser();
-            return !!(n.id === (null == r ? void 0 : r.id) && m.has(t)) && I(t);
+            return !!(n.id === (null == r ? void 0 : r.id) && m.has(t)) && b(t);
         }
     }));

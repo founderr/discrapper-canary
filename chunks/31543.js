@@ -1,6 +1,6 @@
 var r = n(200651),
     i = n(192379),
-    a = n(515643),
+    a = n(232713),
     s = n(260866),
     o = n(461745),
     l = n(806966),
@@ -20,8 +20,8 @@ let p = i.forwardRef(function (e, t) {
             }),
             a.X
         ),
-        b = l.ZN.useStore((e) => e.searchPlaceholder),
-        I = l.ZN.useStore((e) => e.inspectedExpressionPosition, a.X),
+        I = l.ZN.useStore((e) => e.searchPlaceholder),
+        b = l.ZN.useStore((e) => e.inspectedExpressionPosition, a.X),
         T = i.useCallback(
             (e) => {
                 var t;
@@ -53,7 +53,7 @@ let p = i.forwardRef(function (e, t) {
                 query: E,
                 ref: g,
                 size: o.ZP.Sizes.MEDIUM,
-                placeholder: null != b ? b : m ? f.intl.string(f.t.dt5h1N) : f.intl.string(f.t['Pck/4e']),
+                placeholder: null != I ? I : m ? f.intl.string(f.t.dt5h1N) : f.intl.string(f.t['Pck/4e']),
                 onClear: S,
                 onKeyDown: n,
                 onQueryChange: T,
@@ -64,7 +64,7 @@ let p = i.forwardRef(function (e, t) {
                     'aria-haspopup': 'grid',
                     'aria-controls': d.Vr,
                     'aria-expanded': !0,
-                    'aria-activedescendant': (0, s.NE)(d.Vr, I.columnIndex, I.rowIndex)
+                    'aria-activedescendant': (0, s.NE)(d.Vr, b.columnIndex, b.rowIndex)
                 }
             })
         })

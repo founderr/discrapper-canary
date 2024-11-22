@@ -42,8 +42,8 @@ var r = n(399606),
     g = n(763296),
     E = n(697426),
     v = n(641015),
-    b = n(893663),
-    I = n(710111),
+    I = n(893663),
+    b = n(710111),
     T = n(981631);
 function S() {
     var e;
@@ -51,11 +51,11 @@ function S() {
     return null !== (e = null == t ? void 0 : t.volume) && void 0 !== e ? e : 100;
 }
 function y(e, t) {
-    return (null == t ? void 0 : t.guild_id) == null || d.Z.can(T.Plq.USE_EXTERNAL_SOUNDS, t) || e.guildId === I.X8 || e.guildId === (null == t ? void 0 : t.guild_id);
+    return (null == t ? void 0 : t.guild_id) == null || d.Z.can(T.Plq.USE_EXTERNAL_SOUNDS, t) || e.guildId === b.X8 || e.guildId === (null == t ? void 0 : t.guild_id);
 }
 function A(e, t, n) {
     let r = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
-    return (p.ZP.canUseSoundboardEverywhere(e) || t.guildId === (null == n ? void 0 : n.guild_id) || t.guildId === I.X8) && y(t, n) && (!r || t.available);
+    return (p.ZP.canUseSoundboardEverywhere(e) || t.guildId === (null == n ? void 0 : n.guild_id) || t.guildId === b.X8) && y(t, n) && (!r || t.available);
 }
 function N(e, t, n) {
     (0, m.XE)(t, e, E.YQ.SOUNDBOARD), (0, u.kq)(t, e, __OVERLAY__, n);
@@ -63,10 +63,10 @@ function N(e, t, n) {
 async function C(e) {
     let t = f.default.getCurrentUser(),
         n = (0, a.Z)(),
-        r = (0, b.k9)(e);
+        r = (0, I.k9)(e);
     if (null == n || c.Lr.has(n.type) || null == r || !p.ZP.canUseCustomCallSounds(t) || !(0, v.D)()) return;
     await (0, m.w)();
-    let i = r.guildId === I.hY ? I.X8 : r.guildId,
+    let i = r.guildId === b.hY ? b.X8 : r.guildId,
         s = g.Z.getSound(i, r.soundId);
     if (null != s) {
         var o, l;
@@ -105,12 +105,12 @@ function D(e, t, n) {
     (0, o.PS)(
         e,
         (r) => {
-            let i = t.guildId === I.X8,
+            let i = t.guildId === b.X8,
                 a = i ? E.H$.DEFAULT : E.H$.CUSTOM,
                 s = null != r.joinSound ? E.MW.UPDATED : E.MW.ADDED;
             (r.joinSound = {
                 soundId: t.soundId,
-                guildId: i ? I.hY : t.guildId
+                guildId: i ? b.hY : t.guildId
             }),
                 L({
                     guildId: e,

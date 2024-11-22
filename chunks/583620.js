@@ -27,20 +27,20 @@ function c(e, t, n) {
         }),
         { focusableProps: E } = (0, i.kc)((0, r.dG)(e, { onFocus: () => t.setLastFocusedValue(o) }), n),
         v = (0, r.dG)(p, E),
-        b = (0, r.zL)(e, { labelable: !0 }),
-        I = -1;
-    null != t.selectedValue ? t.selectedValue === o && (I = 0) : (t.lastFocusedValue === o || null == t.lastFocusedValue) && (I = 0), f && (I = void 0);
+        I = (0, r.zL)(e, { labelable: !0 }),
+        b = -1;
+    null != t.selectedValue ? t.selectedValue === o && (b = 0) : (t.lastFocusedValue === o || null == t.lastFocusedValue) && (b = 0), f && (b = void 0);
     let { name: T, descriptionId: S, errorMessageId: y, validationBehavior: A } = u.get(t);
     return (
         (0, r.y$)(n, t.selectedValue, t.setSelectedValue),
         (0, a.Q)({ validationBehavior: A }, t, n),
         {
             labelProps: (0, r.dG)(m, { onClick: (e) => e.preventDefault() }),
-            inputProps: (0, r.dG)(b, {
+            inputProps: (0, r.dG)(I, {
                 ...v,
                 type: 'radio',
                 name: T,
-                tabIndex: I,
+                tabIndex: b,
                 disabled: f,
                 required: t.isRequired && 'native' === A,
                 checked: _,
@@ -63,8 +63,8 @@ function d(e, t) {
         {
             labelProps: E,
             fieldProps: v,
-            descriptionProps: b,
-            errorMessageProps: I
+            descriptionProps: I,
+            errorMessageProps: b
         } = (0, o.U)({
             ...e,
             labelElementType: 'span',
@@ -84,8 +84,8 @@ function d(e, t) {
     return (
         u.set(t, {
             name: y,
-            descriptionId: b.id,
-            errorMessageId: I.id,
+            descriptionId: I.id,
+            errorMessageId: b.id,
             validationBehavior: _
         }),
         {
@@ -123,8 +123,8 @@ function d(e, t) {
                 ...S
             }),
             labelProps: E,
-            descriptionProps: b,
-            errorMessageProps: I,
+            descriptionProps: I,
+            errorMessageProps: b,
             isInvalid: h,
             validationErrors: m,
             validationDetails: g

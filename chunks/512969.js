@@ -124,8 +124,8 @@ var v = (function (e) {
             t
         );
     })(s.Component),
-    b = {},
-    I = 0;
+    I = {},
+    b = 0;
 function T(e, t) {
     return (
         void 0 === e && (e = '/'),
@@ -133,9 +133,9 @@ function T(e, t) {
         '/' === e
             ? e
             : (function (e) {
-                  if (b[e]) return b[e];
+                  if (I[e]) return I[e];
                   var t = f().compile(e);
-                  return I < 10000 && ((b[e] = t), I++), t;
+                  return b < 10000 && ((I[e] = t), b++), t;
               })(e)(t, { pretty: !0 })
     );
 }

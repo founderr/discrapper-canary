@@ -22,7 +22,7 @@ var r,
     g = n(675654),
     E = n(10257);
 let v = [];
-function b(e) {
+function I(e) {
     let t = [];
     return (
         e.forEach((e) => {
@@ -48,12 +48,12 @@ function b(e) {
     );
 }
 ((a = r || (r = {})).JACK_O_LANTERN = 'jack_o_lantern'), (a.NOSE = 'nose');
-let I = new Set(['jack_o_lantern', 'nose']),
+let b = new Set(['jack_o_lantern', 'nose']),
     T = {
         jack_o_lantern: {
-            sprites: b(['chocolate_bar', 'lollipop', 'candy'])
+            sprites: I(['chocolate_bar', 'lollipop', 'candy'])
         },
-        nose: { sprites: b(['foot']) }
+        nose: { sprites: I(['foot']) }
     };
 ((s = i || (i = {})).ENTER = 'enter'), (s.CONFETTI = 'confetti'), (s.EXIT = 'exit');
 let S = {
@@ -159,7 +159,7 @@ function N(e) {
                 if (!u) {
                     let t = (function (e) {
                         if (null == e) return null;
-                        for (let t of I) if (null != e.match(new RegExp(':'.concat(t, '(_tone[1-9])?')))) return t;
+                        for (let t of b) if (null != e.match(new RegExp(':'.concat(t, '(_tone[1-9])?')))) return t;
                         return null;
                     })(e);
                     null != t && ((_.current = t), f(!0), i(null));
@@ -167,7 +167,7 @@ function N(e) {
             },
             [u]
         ),
-        b = l.useMemo(() => ({ triggerAnimation: v }), [v]),
+        I = l.useMemo(() => ({ triggerAnimation: v }), [v]),
         N = l.useCallback((e) => {
             i(e);
         }, []),
@@ -190,7 +190,7 @@ function N(e) {
     g !== m.IlC.APP)
         ? (0, o.jsx)(o.Fragment, { children: t })
         : (0, o.jsxs)(h.Rm.Provider, {
-              value: b,
+              value: I,
               children: [
                   t,
                   Object.keys(T).map((e) => {

@@ -31,8 +31,8 @@ var r,
     g = n(246946),
     E = n(594174),
     v = n(483360),
-    b = n(226951),
-    I = n(51144),
+    I = n(226951),
+    b = n(51144),
     T = n(981631),
     S = n(388032);
 function y() {
@@ -114,7 +114,7 @@ function U(e) {
             .value();
     return null != a && (e.setData('channel', a), !0);
 }
-function B(e) {
+function G(e) {
     let t = {
         [S.intl.string(S.t.ZNR2fn)]: 'link',
         [S.intl.string(S.t['20uQR0'])]: 'embed',
@@ -128,14 +128,14 @@ function B(e) {
     }[e.getMatch(1)];
     return null != t && '' !== t && (e.setData('has', t), !0);
 }
-function G() {
+function B() {
     return [...Array.from(y()), ...Array.from(A()), ...Array.from(N()), ...Object.keys(D())];
 }
 function Z() {
-    return l().sample(G());
+    return l().sample(B());
 }
 function F(e, t, n) {
-    return V(e, t, G()).map((e) => ({
+    return V(e, t, B()).map((e) => ({
         ...e,
         group: n,
         key: ''.concat(n, '-').concat(e.text)
@@ -186,7 +186,7 @@ function j(e, t) {
         .map((e) => {
             let { record: t } = e;
             return {
-                text: I.ZP.getUserTag(t),
+                text: b.ZP.getUserTag(t),
                 user: t
             };
         });
@@ -248,9 +248,9 @@ function z() {
                     getAutocompletions: (e, t, r) => V(e, r, n)
                 },
                 [T.dCx.ANSWER_HAS]: {
-                    regex: RegExp('(?:\\s*-?('.concat(n.map((e) => b.Z.escape(e)).join('|'), '))'), 'i'),
+                    regex: RegExp('(?:\\s*-?('.concat(n.map((e) => I.Z.escape(e)).join('|'), '))'), 'i'),
                     follows: [T.dCx.FILTER_HAS],
-                    validator: B,
+                    validator: G,
                     componentType: 'ANSWER',
                     queryKey: 'has'
                 },

@@ -3,8 +3,8 @@ n(192379);
 var r = n(481060),
     s = n(113434),
     a = n(497505),
-    i = n(644646),
-    l = n(613087),
+    l = n(644646),
+    i = n(613087),
     c = n(472144),
     d = n(46140),
     u = n(183004);
@@ -16,7 +16,7 @@ t.Z = (e) => {
     return (0, o.jsxs)('div', {
         className: u.questProgressWrapper,
         children: [
-            (0, o.jsx)(l.l7, {
+            (0, o.jsx)(i.l7, {
                 inState: t,
                 id: 'progress-bar',
                 ref: p,
@@ -27,7 +27,7 @@ t.Z = (e) => {
                         percentComplete: g,
                         size: 42,
                         strokeWidth: 3,
-                        children: (0, o.jsx)(i.Z, {
+                        children: (0, o.jsx)(l.Z, {
                             className: u.questProgressRewardTile,
                             quest: n,
                             questContent: a.jn.QUEST_BAR_V2,
@@ -39,7 +39,7 @@ t.Z = (e) => {
             (0, o.jsxs)('div', {
                 className: u.questProgressCopy,
                 children: [
-                    (0, o.jsx)(l.l7, {
+                    (0, o.jsx)(i.l7, {
                         inState: t,
                         id: 'progress-title',
                         children: (e) =>
@@ -51,7 +51,7 @@ t.Z = (e) => {
                                 children: h
                             })
                     }),
-                    (0, o.jsx)(l.l7, {
+                    (0, o.jsx)(i.l7, {
                         inState: t,
                         id: 'progress-subtitle',
                         isTextTransition: !0,

@@ -12,10 +12,10 @@ n.d(t, {
         return S;
     },
     e7: function () {
-        return b;
+        return I;
     },
     wv: function () {
-        return I;
+        return b;
     },
     yK: function () {
         return v;
@@ -99,10 +99,10 @@ function v(e, t) {
         summaryId: null != t ? t : null
     });
 }
-function b() {
+function I() {
     l.Z.dispatch({ type: 'TOGGLE_TOPICS_BAR' });
 }
-function I(e, t) {
+function b(e, t) {
     null != e && null != t && g(e, t),
         l.Z.dispatch({
             type: 'SET_SELECTED_SUMMARY',
@@ -220,7 +220,7 @@ async function N(e) {
 t.ZP = {
     setSummaryFeedback: S,
     updateVisibleMessages: T,
-    setSelectedSummary: I,
+    setSelectedSummary: b,
     setGravitySelectedSummary: function (e, t) {
         l.Z.dispatch({
             type: 'SET_GRAVITY_SELECTED_SUMMARY',

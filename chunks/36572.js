@@ -13,15 +13,15 @@ var r = n(525425),
     h = n(556868),
     m = n(292065),
     g = n(662506);
-e.exports = function (e, t, n, E, v, b, I) {
+e.exports = function (e, t, n, E, v, I, b) {
     var T = m(e, n),
         S = m(t, n),
-        y = I.get(S);
+        y = b.get(S);
     if (y) {
         r(e, n, y);
         return;
     }
-    var A = b ? b(T, S, n + '', e, t, I) : void 0,
+    var A = I ? I(T, S, n + '', e, t, b) : void 0,
         N = void 0 === A;
     if (N) {
         var C = u(S),
@@ -29,5 +29,5 @@ e.exports = function (e, t, n, E, v, b, I) {
             O = !C && !R && h(S);
         (A = S), C || R || O ? (u(T) ? (A = T) : c(T) ? (A = s(T)) : R ? ((N = !1), (A = i(S, !0))) : O ? ((N = !1), (A = a(S, !0))) : (A = [])) : p(S) || l(S) ? ((A = T), l(T) ? (A = g(T)) : (!_(T) || f(T)) && (A = o(S))) : (N = !1);
     }
-    N && (I.set(S, A), v(A, S, E, b, I), I.delete(S)), r(e, n, A);
+    N && (b.set(S, A), v(A, S, E, I, b), b.delete(S)), r(e, n, A);
 };

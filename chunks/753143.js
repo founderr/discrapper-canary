@@ -24,8 +24,8 @@ function l(e) {
         E = (0, r.useRef)(o),
         [v] = (0, r.useState)(() => new i.Z()),
         {
-            dirty: b,
-            chunkStart: I,
+            dirty: I,
+            chunkStart: b,
             chunkEnd: T,
             forceUpdateOnChunkChange: S
         } = (0, s.Z)({
@@ -51,12 +51,12 @@ function l(e) {
         }
     }
     let C = (0, r.useMemo)(() => {
-            let e = Math.max(0, I * f);
+            let e = Math.max(0, b * f);
             return null != c && e < c;
-        }, [f, I, c]),
+        }, [f, b, c]),
         R = (0, r.useMemo)(
             () =>
-                b > 0
+                I > 0
                     ? E.current
                     : (v.mergeProps({
                           sectionHeight: n,
@@ -68,8 +68,8 @@ function l(e) {
                           sections: t,
                           getAnchorId: m
                       }),
-                      v.compute(Math.max(0, I * f), T * f)),
-            [b, I, T, n, l, u, d, p, _, t, v, f, m]
+                      v.compute(Math.max(0, b * f), T * f)),
+            [I, b, T, n, l, u, d, p, _, t, v, f, m]
         );
     return (
         (0, r.useLayoutEffect)(() => void (E.current = R)),

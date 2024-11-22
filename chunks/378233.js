@@ -33,7 +33,7 @@ n.d(t, {
         return k;
     },
     gM: function () {
-        return G;
+        return B;
     },
     jl: function () {
         return P;
@@ -59,9 +59,9 @@ var r = n(606301),
     _ = n(981631);
 let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: g, CDN_HOST: E } = window.GLOBAL_ENV,
     v = Object.values(d.og),
-    b = decodeURIComponent(_.ANM.STICKER_ASSET('[\\d]+', '('.concat(v.join('|'), ')'))),
-    I = RegExp('('.concat(location.protocol).concat(g, '|').concat(location.protocol).concat(h, ')(').concat(b, ')'), 'ig'),
-    T = RegExp(''.concat(location.protocol).concat(p, '(').concat(b, ')'), 'ig'),
+    I = decodeURIComponent(_.ANM.STICKER_ASSET('[\\d]+', '('.concat(v.join('|'), ')'))),
+    b = RegExp('('.concat(location.protocol).concat(g, '|').concat(location.protocol).concat(h, ')(').concat(I, ')'), 'ig'),
+    T = RegExp(''.concat(location.protocol).concat(p, '(').concat(I, ')'), 'ig'),
     S = (e) => {
         if (null != e.cover_sticker_id) {
             let t = e.stickers.find((t) => t.id === e.cover_sticker_id);
@@ -138,7 +138,7 @@ let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: 
             n
         );
     },
-    O = (e) => null != e.match('development' !== m ? I : T),
+    O = (e) => null != e.match('development' !== m ? b : T),
     D = (e) =>
         e.stickers.some((e) => {
             let { format_type: t } = e;
@@ -175,8 +175,8 @@ let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: 
         let t = e.guild_id;
         return void 0 !== s.Z.getGuild(t);
     },
-    B = [];
-function G(e) {
+    G = [];
+function B(e) {
     var t, n;
-    return (null !== (n = null === (t = a.Z.frecencyWithoutFetchingLatest.favoriteStickers) || void 0 === t ? void 0 : t.stickerIds) && void 0 !== n ? n : B).includes(e);
+    return (null !== (n = null === (t = a.Z.frecencyWithoutFetchingLatest.favoriteStickers) || void 0 === t ? void 0 : t.stickerIds) && void 0 !== n ? n : G).includes(e);
 }

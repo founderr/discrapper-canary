@@ -16,7 +16,7 @@ t.Z = (e) => {
         g = (0, a.e7)([f.Z], () => f.Z.isBlocked(t.id), [t.id]),
         E = (0, a.e7)([d.Z], () => d.Z.getChannel(n), [n]),
         v = i.useMemo(() => _.ZP.getName(null == E ? void 0 : E.guild_id, null == E ? void 0 : E.id, t), [E, t]),
-        b = i.useCallback(() => {
+        I = i.useCallback(() => {
             l.ZP.trackWithMetadata(p.rMx.IAR_BLOCK_USER_BUTTON_CLICKED, {
                 other_user_id: t.id,
                 report_id: m
@@ -33,7 +33,7 @@ t.Z = (e) => {
         description: h.intl.string(h.t.G08MKi),
         buttonText: g ? h.intl.string(h.t.ot2tSk) : h.intl.string(h.t['l+7PZW']),
         buttonDisabled: g,
-        onButtonPress: b,
+        onButtonPress: I,
         buttonColor: s.Button.Colors.RED
     });
 };

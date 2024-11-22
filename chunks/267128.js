@@ -24,8 +24,8 @@ var r = n(200651),
     g = n(869765),
     E = n(403132),
     v = n(378233),
-    b = n(768581),
-    I = n(55935),
+    I = n(768581),
+    b = n(55935),
     T = n(823379),
     S = n(453687),
     y = n(930282),
@@ -66,8 +66,8 @@ function x(e) {
 function w(e, t, n, i, a, s) {
     let o, l, c, d;
     let f = (0, p.Z)(e),
-        { trailingIconClass: g, leadingIconClass: E, iconSize: b } = s,
-        I = null == t || '' === t || (Array.isArray(t) && 0 === t.length),
+        { trailingIconClass: g, leadingIconClass: E, iconSize: I } = s,
+        b = null == t || '' === t || (Array.isArray(t) && 0 === t.length),
         T = (0, v.cv)(f).length > 0,
         S = null != f.interaction,
         A = f.hasFlag(R.iLy.IS_VOICE_MESSAGE),
@@ -78,15 +78,15 @@ function w(e, t, n, i, a, s) {
             (d = (0, r.jsx)(h.Z, {
                 size: 'custom',
                 className: E,
-                width: b,
-                height: b
+                width: I,
+                height: I
             })),
         n)
     )
         o = O.intl.string(O.t.XAkOo6);
     else if (i) o = O.intl.string(O.t.G7p6v7);
     else if (f.type === R.uaV.CHANNEL_PINNED_MESSAGE) o = O.intl.string(O.t.sCfDDg);
-    else if (I) {
+    else if (b) {
         if (N) {
             var D, L;
             l = null == f ? void 0 : null === (L = f.poll) || void 0 === L ? void 0 : null === (D = L.question) || void 0 === D ? void 0 : D.text;
@@ -104,8 +104,8 @@ function w(e, t, n, i, a, s) {
                             size: 'custom',
                             color: 'currentColor',
                             className: g,
-                            width: b,
-                            height: b
+                            width: I,
+                            height: I
                         })));
     } else
         l = (0, r.jsx)(y.ZP, {
@@ -119,24 +119,24 @@ function w(e, t, n, i, a, s) {
                   size: 'custom',
                   color: 'currentColor',
                   className: g,
-                  width: b,
-                  height: b
+                  width: I,
+                  height: I
               }))
             : S
               ? (c = (0, r.jsx)(u.SlashBoxIcon, {
                     size: 'custom',
                     color: 'currentColor',
                     className: g,
-                    width: b,
-                    height: b
+                    width: I,
+                    height: I
                 }))
               : A
                 ? (c = (0, r.jsx)(u.MicrophoneIcon, {
                       size: 'custom',
                       color: 'currentColor',
                       className: g,
-                      width: (19 / 24) * b,
-                      height: b
+                      width: (19 / 24) * I,
+                      height: I
                   }))
                 : (f.attachments.length > 0 || f.embeds.length > 0) &&
                   !C &&
@@ -144,8 +144,8 @@ function w(e, t, n, i, a, s) {
                       size: 'custom',
                       color: 'currentColor',
                       className: g,
-                      width: b,
-                      height: b
+                      width: I,
+                      height: I
                   })),
         {
             contentPlaceholder: o,
@@ -201,7 +201,7 @@ function M(e) {
                         alt: '',
                         src:
                             (null == t ? void 0 : t.guildMemberAvatar) != null && null != n
-                                ? (0, b.JM)({
+                                ? (0, I.JM)({
                                       guildId: n,
                                       userId: e.id,
                                       avatar: t.guildMemberAvatar
@@ -232,7 +232,7 @@ function M(e) {
                       children: v()
                   });
         })(e, P, o.type),
-        B = (function (e, t) {
+        G = (function (e, t) {
             let { baseMessage: n, channel: i, referencedMessage: a, showUsernamePopout: s, onClickUsername: o, onContextMenu: l, onPopoutRequestClose: u } = e,
                 c = (null == a ? void 0 : a.state) === g.Y.LOADED ? a.message : void 0;
             return null == c || c.type === R.uaV.USER_JOIN || c.type === R.uaV.ROLE_SUBSCRIPTION_PURCHASE || c.type === R.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION || c.type === R.uaV.GUILD_DEADCHAT_REVIVE_PROMPT || c.type === R.uaV.GUILD_GAMING_STATS_PROMPT || c.type === R.uaV.POLL_RESULT
@@ -250,7 +250,7 @@ function M(e) {
                       isRepliedMessage: !0
                   });
         })(e, P),
-        G = (function (e, t, n) {
+        B = (function (e, t, n) {
             let { content: i, referencedMessage: a, isReplyAuthorBlocked: o, isReplyAuthorIgnored: l, onClickReply: c } = e,
                 d = a.state !== g.Y.DELETED ? c : void 0;
             switch (a.state) {
@@ -308,7 +308,7 @@ function M(e) {
                     (0, T.vE)(a);
             }
         })(e, y, k),
-        Z = i.useMemo(() => (e.compact ? (0, N.Z)((0, I.vc)(l()(), 'LT')) : null), [e.compact]);
+        Z = i.useMemo(() => (e.compact ? (0, N.Z)((0, b.vc)(l()(), 'LT')) : null), [e.compact]);
     null != n &&
         null != a &&
         (t = O.intl.formatToPlainString(O.t.RhbQ2N, {
@@ -333,8 +333,8 @@ function M(e) {
                     onMouseLeave: k
                 }),
             U,
-            B,
-            G
+            G,
+            B
         ]
     });
 }

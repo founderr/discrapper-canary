@@ -209,7 +209,7 @@ var r;
                     })
                 );
             },
-            b = function (e, t, n) {
+            I = function (e, t, n) {
                 return g(e)
                     ? Object.keys(e).reduce(function (i, s) {
                           var o = !g(t) || !v(e[s], t[s]);
@@ -217,16 +217,16 @@ var r;
                       }, null)
                     : null;
             },
-            I = 'Invalid prop `stripe` supplied to `Elements`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.',
+            b = 'Invalid prop `stripe` supplied to `Elements`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.',
             T = function (e) {
                 var t,
-                    n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : I;
+                    n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : b;
                 if (null === e || (g((t = e)) && 'function' == typeof t.elements && 'function' == typeof t.createToken && 'function' == typeof t.createPaymentMethod && 'function' == typeof t.confirmCardPayment)) return e;
                 throw Error(n);
             },
             S = function (e) {
                 var t,
-                    n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : I;
+                    n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : b;
                 if (g((t = e)) && 'function' == typeof t.then)
                     return {
                         tag: 'async',
@@ -319,7 +319,7 @@ var r;
                     t.useEffect(
                         function () {
                             if (!!l.elements) {
-                                var e = b(r, d, ['clientSecret', 'fonts']);
+                                var e = I(r, d, ['clientSecret', 'fonts']);
                                 e && l.elements.update(e);
                             }
                         },
@@ -470,13 +470,13 @@ var r;
                         },
                         [d.stripe]
                     );
-                var b = t.useMemo(
+                var I = t.useMemo(
                     function () {
                         return M(d.customCheckoutSdk, l);
                     },
                     [d.customCheckoutSdk, l]
                 );
-                return d.customCheckoutSdk ? t.createElement(L.Provider, { value: d }, t.createElement(w.Provider, { value: b }, i)) : null;
+                return d.customCheckoutSdk ? t.createElement(L.Provider, { value: d }, t.createElement(w.Provider, { value: I }, i)) : null;
             };
         P.propTypes = {
             stripe: p.any,
@@ -518,7 +518,7 @@ var r;
                                   g = n.onClick,
                                   E = n.onLoadError,
                                   v = n.onLoaderStart,
-                                  I = n.onNetworksChange,
+                                  b = n.onNetworksChange,
                                   T = n.onConfirm,
                                   S = n.onCancel,
                                   y = n.onShippingAddressChange,
@@ -537,7 +537,7 @@ var r;
                                   h(D, 'click', g),
                                   h(D, 'loaderror', E),
                                   h(D, 'loaderstart', v),
-                                  h(D, 'networkschange', I),
+                                  h(D, 'networkschange', b),
                                   h(D, 'confirm', T),
                                   h(D, 'cancel', S),
                                   h(D, 'shippingaddresschange', y),
@@ -565,7 +565,7 @@ var r;
                                   t.useEffect(
                                       function () {
                                           if (!!x.current) {
-                                              var e = b(u, M, ['paymentRequest']);
+                                              var e = I(u, M, ['paymentRequest']);
                                               e && x.current.update(e);
                                           }
                                       },
@@ -610,15 +610,15 @@ var r;
                     a
                 );
             },
-            B = 'undefined' == typeof window,
-            G = t.createContext(null);
-        G.displayName = 'EmbeddedCheckoutProviderContext';
+            G = 'undefined' == typeof window,
+            B = t.createContext(null);
+        B.displayName = 'EmbeddedCheckoutProviderContext';
         var Z = function () {
-                var e = t.useContext(G);
+                var e = t.useContext(B);
                 if (!e) throw Error('<EmbeddedCheckout> must be used within <EmbeddedCheckoutProvider>');
                 return e;
             },
-            F = B
+            F = G
                 ? function (e) {
                       var n = e.id,
                           r = e.className;
@@ -658,25 +658,25 @@ var r;
                           })
                       );
                   },
-            V = U('auBankAccount', B),
-            j = U('card', B),
-            H = U('cardNumber', B),
-            Y = U('cardExpiry', B),
-            W = U('cardCvc', B),
-            K = U('fpxBank', B),
-            z = U('iban', B),
-            q = U('idealBank', B),
-            Q = U('p24Bank', B),
-            X = U('epsBank', B),
-            J = U('payment', B),
-            $ = U('expressCheckout', B),
-            ee = U('paymentRequestButton', B),
-            et = U('linkAuthentication', B),
-            en = U('address', B),
-            er = U('shippingAddress', B),
-            ei = U('paymentMethodMessaging', B),
-            ea = U('affirmMessage', B),
-            es = U('afterpayClearpayMessage', B);
+            V = U('auBankAccount', G),
+            j = U('card', G),
+            H = U('cardNumber', G),
+            Y = U('cardExpiry', G),
+            W = U('cardCvc', G),
+            K = U('fpxBank', G),
+            z = U('iban', G),
+            q = U('idealBank', G),
+            Q = U('p24Bank', G),
+            X = U('epsBank', G),
+            J = U('payment', G),
+            $ = U('expressCheckout', G),
+            ee = U('paymentRequestButton', G),
+            et = U('linkAuthentication', G),
+            en = U('address', G),
+            er = U('shippingAddress', G),
+            ei = U('paymentMethodMessaging', G),
+            ea = U('affirmMessage', G),
+            es = U('afterpayClearpayMessage', G);
         (e.AddressElement = en),
             (e.AffirmMessageElement = ea),
             (e.AfterpayClearpayMessageElement = es),
@@ -764,7 +764,7 @@ var r;
                         },
                         [_, r]
                     ),
-                    t.createElement(G.Provider, { value: c }, i)
+                    t.createElement(B.Provider, { value: c }, i)
                 );
             }),
             (e.EpsBankElement = X),

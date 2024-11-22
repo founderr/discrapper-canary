@@ -16,8 +16,8 @@ var r = n(278074),
     g = n(830121),
     E = n(710845),
     v = n(247206),
-    b = n(38618),
-    I = n(687516),
+    I = n(38618),
+    b = n(687516),
     T = n(539573),
     S = n(826581),
     y = n(409059),
@@ -34,8 +34,8 @@ var r = n(278074),
     P = n(64078),
     k = n(351780),
     U = n(79390),
-    B = n(643266),
-    G = n(617136);
+    G = n(643266),
+    B = n(617136);
 n(807092);
 var Z = n(869765),
     F = n(926491),
@@ -102,7 +102,7 @@ function em(e) {
             let r = Y.Z.getLastActiveStream();
             if (null != r && r.channelId === t.id) {
                 (e = el.dAT.STREAM), (n.destination_user_id = r.ownerId);
-                let t = (0, I.L2)(r, X.Z);
+                let t = (0, b.L2)(r, X.Z);
                 n.application_id = null != t ? t.id : null;
             }
         }
@@ -374,7 +374,7 @@ let eg = {
         fetchMessages(e) {
             let { channelId: t, before: n, after: r, limit: a, jump: l, focus: u, isPreload: c, skipLocalFetch: d, truncate: f } = e,
                 _ = K.Z.getChannel(t),
-                p = b.Z.isConnectedOrOverlay(),
+                p = I.Z.isConnectedOrOverlay(),
                 h = Date.now();
             if (null != _ && _.type === el.d4z.GUILD_STORE) return !1;
             if (t === eu.V) return;
@@ -453,7 +453,7 @@ let eg = {
                                         hasMoreAfter: _,
                                         limit: a,
                                         jump: l,
-                                        isStale: !p || b.Z.lastTimeConnectedChanged() >= h,
+                                        isStale: !p || I.Z.lastTimeConnectedChanged() >= h,
                                         truncate: f
                                     });
                             }),
@@ -488,7 +488,7 @@ let eg = {
                 return;
             }
             if ((ef.log('fetched '.concat(_.messages.length, ' messages from local database (channel_id: ').concat(e, ', remote_fetch_completed: ').concat(i.completed, ')')), H.Z.addLocalMessages(e, _.messages.length), !i.completed && _.messages.length > 0)) {
-                let t = _.messages.length >= r && _.connectionId === b.Z.lastTimeConnectedChanged();
+                let t = _.messages.length >= r && _.connectionId === I.Z.lastTimeConnectedChanged();
                 s.Z.dispatch({
                     type: 'LOCAL_MESSAGES_LOADED',
                     guildId: a.guild_id,
@@ -595,7 +595,7 @@ let eg = {
             let r = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
                 i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
             if (t.reaction) return Promise.resolve();
-            let a = await (0, B.Z)(e);
+            let a = await (0, G.Z)(e);
             if (null != a) return eE.sendMessage(a, t, r, i);
             let s = C.ZP.backgroundify(() => eE._sendMessage(e, t, i), void 0),
                 o = null !== (n = i.nonce) && void 0 !== n ? n : (0, x.r)();
@@ -735,7 +735,7 @@ let eg = {
         },
         _sendMessage(e, t, n) {
             var r, i, a;
-            let o = (0, B.Z)(e);
+            let o = (0, G.Z)(e);
             if (null != o)
                 return (
                     e_.info('Converting channel to a private channel'),
@@ -745,7 +745,7 @@ let eg = {
                 );
             let c = t.content,
                 { invalidEmojis: d, validNonShortcutEmojis: f, tts: E = !1 } = t,
-                { activityAction: v, location: b, suggestedInvite: I, stickerIds: A, messageReference: N, allowedMentions: C, poll: R, contentInventoryEntry: M } = n,
+                { activityAction: v, location: I, suggestedInvite: b, stickerIds: A, messageReference: N, allowedMentions: C, poll: R, contentInventoryEntry: M } = n,
                 Z = null !== (i = n.flags) && void 0 !== i ? i : 0,
                 [j, H] = (0, V.Z)(c);
             j && ((c = H), (Z = (0, en.pj)(Z, el.iLy.SUPPRESS_NOTIFICATIONS)));
@@ -889,7 +889,7 @@ let eg = {
                                                 else if (t === m.g.GUILD_PRODUCT);
                                                 else if (t === m.g.SERVER_SHOP);
                                                 else if (t === m.g.QUESTS_EMBED)
-                                                    (0, G.dA)({
+                                                    (0, B.dA)({
                                                         questId: o,
                                                         event: el.rMx.QUEST_LINK_SHARED,
                                                         trackGuildAndChannelMetadata: !0
@@ -901,8 +901,8 @@ let eg = {
                                             content: c,
                                             channelId: e,
                                             messageId: o.body.id,
-                                            location: null != b ? b : 'chat_input',
-                                            suggested: I
+                                            location: null != I ? I : 'chat_input',
+                                            suggested: b
                                         }),
                                         !(function (e, t, n, r, i) {
                                             (0, er.Q_)(e).forEach((e) => {
@@ -918,7 +918,7 @@ let eg = {
                                                         automatic_send: i
                                                     });
                                             });
-                                        })(c, e, o.body.id, null != b ? b : 'chat_input', !!n.isGiftLinkSentOnBehalfOfUser),
+                                        })(c, e, o.body.id, null != I ? I : 'chat_input', !!n.isGiftLinkSentOnBehalfOfUser),
                                         t(o);
                                 } else {
                                     var E;

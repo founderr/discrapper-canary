@@ -18,7 +18,7 @@ n.d(t, {
         return S;
     },
     PJ: function () {
-        return I;
+        return b;
     },
     T_: function () {
         return g;
@@ -48,7 +48,7 @@ n.d(t, {
         return P;
     },
     qy: function () {
-        return B;
+        return G;
     },
     vU: function () {
         return M;
@@ -57,7 +57,7 @@ n.d(t, {
         return N;
     },
     yh: function () {
-        return b;
+        return I;
     },
     zo: function () {
         return k;
@@ -138,21 +138,21 @@ let h = (e) => {
         let l = Math.round(o / d.Z.Seconds.DAYS_30);
         return r.monthsAgo(l);
     },
-    b = function (e, t) {
+    I = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now(),
             r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
         return T(e) ? g(e, n) : v(e, t, n, r);
     };
-function I(e, t) {
+function b(e, t) {
     return e.traits.find((e) => e.type === t);
 }
 function T(e) {
     var t, n;
-    return null !== (n = null === (t = I(e, s.N.IS_LIVE)) || void 0 === t ? void 0 : t.is_live) && void 0 !== n && n;
+    return null !== (n = null === (t = b(e, s.N.IS_LIVE)) || void 0 === t ? void 0 : t.is_live) && void 0 !== n && n;
 }
 function S(e) {
     var t, n;
-    return null !== (n = null === (t = I(e, s.N.FIRST_TIME)) || void 0 === t ? void 0 : t.first_time) && void 0 !== n && n;
+    return null !== (n = null === (t = b(e, s.N.FIRST_TIME)) || void 0 === t ? void 0 : t.first_time) && void 0 !== n && n;
 }
 function y(e) {
     return null != e.expires_at && new Date(e.expires_at) < new Date();
@@ -162,18 +162,18 @@ function A(e) {
 }
 function N(e) {
     var t;
-    return null === (t = I(e, s.N.DURATION_SECONDS)) || void 0 === t ? void 0 : t.duration_seconds;
+    return null === (t = b(e, s.N.DURATION_SECONDS)) || void 0 === t ? void 0 : t.duration_seconds;
 }
 function C(e) {
     var t;
-    return null === (t = I(e, s.N.AGGREGATE_RANGE)) || void 0 === t ? void 0 : t.range;
+    return null === (t = b(e, s.N.AGGREGATE_RANGE)) || void 0 === t ? void 0 : t.range;
 }
 function R(e) {
     var t;
-    return null === (t = I(e, s.N.MARATHON)) || void 0 === t ? void 0 : t.marathon;
+    return null === (t = b(e, s.N.MARATHON)) || void 0 === t ? void 0 : t.marathon;
 }
 function O(e) {
-    let t = I(e, s.N.RESURRECTED);
+    let t = b(e, s.N.RESURRECTED);
     return (null == t ? void 0 : t.resurrected_last_played) != null ? new Date(t.resurrected_last_played) : void 0;
 }
 function D(e) {
@@ -219,7 +219,7 @@ function w(e) {
 }
 function M(e) {
     var t;
-    return null === (t = I(e, s.N.STREAK_DAYS)) || void 0 === t ? void 0 : t.streak_count_days;
+    return null === (t = b(e, s.N.STREAK_DAYS)) || void 0 === t ? void 0 : t.streak_count_days;
 }
 function P(e) {
     let t = M(e);
@@ -247,9 +247,9 @@ function k(e) {
 }
 function U(e) {
     var t;
-    return null === (t = I(e, s.N.TRENDING_CONTENT)) || void 0 === t ? void 0 : t.trending;
+    return null === (t = b(e, s.N.TRENDING_CONTENT)) || void 0 === t ? void 0 : t.trending;
 }
-function B(e) {
+function G(e) {
     let t = (0, o.e7)([_.Z], () => _.Z.getMatchingActivity(e)),
         [n, r] = (0, c.Z)([null == t ? void 0 : t.application_id, 'application_id' in e.extra ? e.extra.application_id : void 0]),
         i = (0, o.e7)([u.ZP], () => u.ZP.getEmbeddedActivityForUserId(e.author_id, null == n ? void 0 : n.id));

@@ -25,9 +25,9 @@ function l(e, t) {
     if (!(E >= 1 && E <= 7)) throw RangeError('firstWeekContainsDate must be between 1 and 7 inclusively');
     var v = new Date(0);
     v.setUTCFullYear(m + 1, 0, E), v.setUTCHours(0, 0, 0, 0);
-    var b = (0, a.Z)(v, t),
-        I = new Date(0);
-    I.setUTCFullYear(m, 0, E), I.setUTCHours(0, 0, 0, 0);
-    var T = (0, a.Z)(I, t);
-    return h.getTime() >= b.getTime() ? m + 1 : h.getTime() >= T.getTime() ? m : m - 1;
+    var I = (0, a.Z)(v, t),
+        b = new Date(0);
+    b.setUTCFullYear(m, 0, E), b.setUTCHours(0, 0, 0, 0);
+    var T = (0, a.Z)(b, t);
+    return h.getTime() >= I.getTime() ? m + 1 : h.getTime() >= T.getTime() ? m : m - 1;
 }

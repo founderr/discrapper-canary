@@ -1,4 +1,4 @@
-let r = (0, n(196136).U)((e) => ({
+let r = (0, n(15729).U)((e) => ({
     utmSourceCurrent: void 0,
     utmMediumCurrent: void 0,
     utmCampaignCurrent: void 0,

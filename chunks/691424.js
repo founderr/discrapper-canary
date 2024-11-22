@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return B;
+        return G;
     }
 }),
     n(47120);
@@ -21,8 +21,8 @@ var r = n(200651),
     g = n(692629),
     E = n(695503),
     v = n(628692),
-    b = n(590956),
-    I = n(703656),
+    I = n(590956),
+    b = n(703656),
     T = n(271383),
     S = n(430824),
     y = n(572004),
@@ -174,7 +174,7 @@ let U = {
                                   let r = S.Z.getGuild(e);
                                   if (null == e || null == r) return;
                                   let i = (t) => {
-                                      r.hasFeature(x.oNc.COMMUNITY) && (0, I.uL)(x.Z5c.CHANNEL(e, t));
+                                      r.hasFeature(x.oNc.COMMUNITY) && (0, b.uL)(x.Z5c.CHANNEL(e, t));
                                   };
                                   switch (t) {
                                       case 'home':
@@ -279,7 +279,7 @@ let U = {
     },
     silentPrefix: { react: (e, t, n) => ('string' == typeof e.content ? (0, r.jsx)('span', { children: e.content }, n.key) : (0, r.jsx)('span', { children: t(e.content, n) }, n.key)) }
 };
-function B(e) {
+function G(e) {
     return {
         ...U,
         link: (0, L.Z)(e),
@@ -291,7 +291,7 @@ function B(e) {
                     let { key: s, channelId: o, messageId: l } = a;
                     return e.src
                         ? (0, r.jsx)(
-                              b.c,
+                              I.c,
                               {
                                   node: e,
                                   tooltipPosition: t,
@@ -319,7 +319,7 @@ function B(e) {
                         };
                     }
                     return (0, r.jsx)(
-                        b.Y,
+                        I.Y,
                         {
                             isInteracting: c,
                             node: e,

@@ -50,8 +50,8 @@ var r = n(192379),
     g = n(926491),
     E = n(373228),
     v = n(378233),
-    b = n(981631),
-    I = n(388032);
+    I = n(981631),
+    b = n(388032);
 let T = (e) => {
         N();
         let t = (0, i.e7)([g.Z], () => g.Z.hasLoadedStickerPacks);
@@ -73,7 +73,7 @@ let T = (e) => {
                 h = [],
                 m = 0,
                 g = 0,
-                b = 0;
+                I = 0;
             if (0 !== s) {
                 let r = function (t, n) {
                     let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -96,7 +96,7 @@ let T = (e) => {
                                 gridSectionIndex: g,
                                 rowIndex: m,
                                 columnIndex: t,
-                                visibleRowIndex: b,
+                                visibleRowIndex: I,
                                 category: n
                             }));
                         g > T &&
@@ -106,13 +106,13 @@ let T = (e) => {
                             l.push({
                                 type: E.al.CREATE_STICKER,
                                 guild_id: i.id,
-                                name: I.intl.string(I.t['UwF+Cw']),
+                                name: b.intl.string(b.t['UwF+Cw']),
                                 gridSectionIndex: g,
                                 rowIndex: m,
                                 columnIndex: l.length,
-                                visibleRowIndex: b
+                                visibleRowIndex: I
                             }),
-                            !r && (b++, h.push(l), _.push(l.length)),
+                            !r && (I++, h.push(l), _.push(l.length)),
                             m++;
                     }
                     g++;
@@ -192,7 +192,7 @@ let T = (e) => {
                       }),
                     null != s &&
                         !_.BT({
-                            permission: b.Plq.USE_EXTERNAL_EMOJIS,
+                            permission: I.Plq.USE_EXTERNAL_EMOJIS,
                             user: s,
                             context: e
                         }) &&
@@ -237,7 +237,7 @@ let x = (e) => {
                 l = {
                     type: E.Ih.FAVORITE,
                     id: E.Ih.FAVORITE,
-                    name: I.intl.string(I.t.y3LQCA),
+                    name: b.intl.string(b.t.y3LQCA),
                     stickers: t
                 };
             return [
@@ -245,7 +245,7 @@ let x = (e) => {
                 {
                     type: E.Ih.RECENT,
                     id: E.Ih.RECENT,
-                    name: I.intl.string(I.t['6hjpXV']),
+                    name: b.intl.string(b.t['6hjpXV']),
                     stickers:
                         null !==
                             (r =

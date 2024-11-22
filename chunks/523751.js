@@ -20,8 +20,8 @@ var r = n(200651),
     g = n(271383),
     E = n(594174),
     v = n(665786),
-    b = n(697725),
-    I = n(267642),
+    I = n(697725),
+    b = n(267642),
     T = n(284363),
     S = n(854218),
     y = n(981631),
@@ -87,7 +87,7 @@ function R(e) {
             (0, r.jsxs)('div', {
                 className: s()(N.tooltipPremiumFooterSegment, N.tooltipPremiumFooterTierSegment),
                 children: [
-                    (0, r.jsx)(b.Z, {
+                    (0, r.jsx)(I.Z, {
                         width: 18,
                         height: 18,
                         className: N.gemIcon
@@ -95,7 +95,7 @@ function R(e) {
                     (0, r.jsx)(c.Text, {
                         variant: 'text-xs/semibold',
                         color: 'always-white',
-                        children: I.nW(t.premiumTier)
+                        children: b.nW(t.premiumTier)
                     })
                 ]
             }),
@@ -195,7 +195,7 @@ function O(e) {
 function D(e) {
     let t,
         n,
-        { guild: a, tooltipColor: l = c.Tooltip.Colors.BRAND, tooltipPosition: _, className: v, flowerStarClassName: b, iconClassName: I, badgeStrokeColor: A, badgeColor: R, size: D = 16, disableBoostClick: L, 'aria-label': x = !1 } = e,
+        { guild: a, tooltipColor: l = c.Tooltip.Colors.BRAND, tooltipPosition: _, className: v, flowerStarClassName: I, iconClassName: b, badgeStrokeColor: A, badgeColor: R, size: D = 16, disableBoostClick: L, 'aria-label': x = !1 } = e,
         w = (0, o.e7)([E.default, g.ZP], () => {
             let e = E.default.getCurrentUser();
             return g.ZP.isMember(null == a ? void 0 : a.id, null == e ? void 0 : e.id);
@@ -222,8 +222,8 @@ function D(e) {
         );
     if (k === T.Q.NONE) return null;
     if (k === T.Q.CLAN) {
-        var B;
-        let e = (0, d.ky)(a.id, null === (B = a.clan) || void 0 === B ? void 0 : B.badge, D);
+        var G;
+        let e = (0, d.ky)(a.id, null === (G = a.clan) || void 0 === G ? void 0 : G.badge, D);
         return null == e
             ? null
             : (0, r.jsx)(c.Tooltip, {
@@ -247,8 +247,8 @@ function D(e) {
                       })
               });
     }
-    let { IconComponent: G, backgroundDarkColor: Z, backgroundLightColor: F, foregroundDarkColor: V, foregroundLightColor: j, premiumBackgroundColor: H, premiumForegroundColor: Y, sizeAdjustment: W } = C[k];
-    if (null == G) return null;
+    let { IconComponent: B, backgroundDarkColor: Z, backgroundLightColor: F, foregroundDarkColor: V, foregroundLightColor: j, premiumBackgroundColor: H, premiumForegroundColor: Y, sizeAdjustment: W } = C[k];
+    if (null == B) return null;
     P.premium && ((t = Y), (n = H));
     let K = (0, u.wj)(M) ? V : j,
         z = (0, u.wj)(M) ? Z : F;
@@ -269,16 +269,16 @@ function D(e) {
                 children: (0, r.jsx)(h.Z, {
                     ...e,
                     className: v,
-                    flowerStarClassName: b,
+                    flowerStarClassName: I,
                     allowFullSizedIcon: !0,
                     color: null != n ? n : R,
                     stroke: A,
                     size: D,
-                    children: (0, r.jsx)(G, {
+                    children: (0, r.jsx)(B, {
                         size: 'custom',
                         width: q,
                         height: q,
-                        className: I,
+                        className: b,
                         color: null != t ? t : 'currentColor'
                     })
                 })

@@ -15,8 +15,8 @@ var r,
     g = n(501655),
     E = n(750154),
     v = n(427679),
-    b = n(368442),
-    I = n(157925),
+    I = n(368442),
+    b = n(157925),
     T = n(981631);
 let S = null;
 function y() {
@@ -38,9 +38,9 @@ function y() {
             R = m.Z.getParticipantCount(o) - N,
             O = (null == y ? void 0 : null === (t = y.party) || void 0 === t ? void 0 : t.size) != null ? y.party.size[1] : 0;
         return {
-            application_id: I.gD,
+            application_id: b.gD,
             name: null !== (i = null !== (r = l.topic) && void 0 !== r ? r : u.topic) && void 0 !== i ? i : u.name,
-            type: (0, b.xJ)(u.id) ? T.IIU.WATCHING : T.IIU.LISTENING,
+            type: (0, I.xJ)(u.id) ? T.IIU.WATCHING : T.IIU.LISTENING,
             timestamps: { start: null !== (a = null == y ? void 0 : null === (n = y.timestamps) || void 0 === n ? void 0 : n.start) && void 0 !== a ? a : new Date().getTime() },
             assets: {
                 small_image: null !== (s = c.icon) && void 0 !== s ? s : void 0,

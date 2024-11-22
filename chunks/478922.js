@@ -24,8 +24,8 @@ function d(e, t, n) {
         });
     return (0, i.forwardRef)(function (n, _) {
         var p;
-        let { onScroll: h, dir: m = 'ltr', sections: g, columns: E, getItemKey: v, getItemHeight: b, getSectionHeight: I, chunkSize: T, renderSection: S, renderItem: y, getSectionProps: A, itemGutter: N, removeEdgeItemGutters: C, sectionGutter: R, padding: O, paddingVertical: D, paddingHorizontal: L, fade: x = !1, className: w, style: M, maxContentWidth: P, renderAccessory: k, onItemVisibilityChange: U, ...B } = n,
-            G = i.useRef(null),
+        let { onScroll: h, dir: m = 'ltr', sections: g, columns: E, getItemKey: v, getItemHeight: I, getSectionHeight: b, chunkSize: T, renderSection: S, renderItem: y, getSectionProps: A, itemGutter: N, removeEdgeItemGutters: C, sectionGutter: R, padding: O, paddingVertical: D, paddingHorizontal: L, fade: x = !1, className: w, style: M, maxContentWidth: P, renderAccessory: k, onItemVisibilityChange: U, ...G } = n,
+            B = i.useRef(null),
             Z = i.useRef(null),
             F = i.useRef({}),
             [V, j] = i.useState(!1),
@@ -49,8 +49,8 @@ function d(e, t, n) {
             sections: g,
             columns: E,
             getItemKey: v,
-            getItemHeight: b,
-            getSectionHeight: I,
+            getItemHeight: I,
+            getSectionHeight: b,
             chunkSize: T,
             itemGutter: N,
             removeEdgeItemGutters: C,
@@ -97,9 +97,9 @@ function d(e, t, n) {
         let ea = (0, i.useCallback)(
             (e) => {
                 ee(1),
-                    null == G.current ? j(!0) : clearTimeout(G.current),
-                    (G.current = setTimeout(() => {
-                        (G.current = null), j(!1);
+                    null == B.current ? j(!0) : clearTimeout(B.current),
+                    (B.current = setTimeout(() => {
+                        (B.current = null), j(!1);
                     }, 200)),
                     null != h && h(e);
             },
@@ -118,7 +118,7 @@ function d(e, t, n) {
                     [c.scrolling]: V
                 }),
                 style: (0, u.uT)(M),
-                ...B,
+                ...G,
                 children: [
                     null !== (p = null == k ? void 0 : k(X)) && void 0 !== p ? p : null,
                     (0, i.useMemo)(

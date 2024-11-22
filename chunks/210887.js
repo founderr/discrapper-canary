@@ -16,8 +16,8 @@ var h = n(12647),
     g = n(238514),
     E = n(740492),
     v = n(581883),
-    b = n(874893),
-    I = n(981631),
+    I = n(874893),
+    b = n(981631),
     T = n(469115);
 function S(e, t, n) {
     return (
@@ -32,32 +32,32 @@ function S(e, t, n) {
         e
     );
 }
-let y = null !== (i = (0, p.Z)()) && void 0 !== i ? i : I.BRd.DARK,
+let y = null !== (i = (0, p.Z)()) && void 0 !== i ? i : b.BRd.DARK,
     A = null,
     N = !1;
 function C() {
     let e = (function () {
         var e, t;
-        if (__OVERLAY__) return I.BRd.DARK;
+        if (__OVERLAY__) return b.BRd.DARK;
         if (d.Z.syncForcedColors && 'active' === d.Z.systemForcedColors && null != r) return r;
         let n = E.ZP.useSystemTheme;
-        if (n === b.K.ON && null != r) return r;
+        if (n === I.K.ON && null != r) return r;
         let i = null === (e = g.Z.getAppearanceSettings()) || void 0 === e ? void 0 : e.theme;
         if (null != i) return i;
         let a = null === (t = v.Z.settings.appearance) || void 0 === t ? void 0 : t.theme;
         if (null == a) return y;
-        if (!_.i.getCurrentConfig({ location: 'ThemeStore' }).enabled) return a === o.Q2.LIGHT ? I.BRd.LIGHT : I.BRd.DARK;
+        if (!_.i.getCurrentConfig({ location: 'ThemeStore' }).enabled) return a === o.Q2.LIGHT ? b.BRd.LIGHT : b.BRd.DARK;
         switch (a) {
             case o.Q2.LIGHT:
-                return I.BRd.LIGHT;
+                return b.BRd.LIGHT;
             case o.Q2.DARK:
-                return I.BRd.DARK;
+                return b.BRd.DARK;
             case o.Q2.DARKER:
-                return I.BRd.DARKER;
+                return b.BRd.DARKER;
             case o.Q2.MIDNIGHT:
-                return I.BRd.MIDNIGHT;
+                return b.BRd.MIDNIGHT;
             default:
-                return I.BRd.DARK;
+                return b.BRd.DARK;
         }
     })();
     return e;
@@ -115,8 +115,8 @@ S(L, 'displayName', 'ThemeStore'),
         LOGOUT: function (e) {
             return (
                 !e.isSwitchingAccount &&
-                y !== I.BRd.DARK &&
-                ((y = I.BRd.DARK),
+                y !== b.BRd.DARK &&
+                ((y = b.BRd.DARK),
                 (function () {
                     !__OVERLAY__ && m.isPlatformEmbedded && h.Z.setApplicationBackgroundColor((0, u.wj)(C()) ? l.Z.unsafe_rawColors.PRIMARY_700.resolve({ saturation: d.Z.saturation }).hsl() : l.Z.unsafe_rawColors.WHITE_500.resolve({ saturation: d.Z.saturation }).hsl());
                 })(),

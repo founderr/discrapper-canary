@@ -16,8 +16,8 @@ var r = n(200651),
     g = n(937995),
     E = n(366050),
     v = n(944486),
-    b = n(594174),
-    I = n(566620),
+    I = n(594174),
+    b = n(566620),
     T = n(317381),
     S = n(531826),
     y = n(175894),
@@ -36,11 +36,11 @@ var r = n(200651),
 function U(e) {
     var t, n, a;
     let { channel: y, isLoading: A } = e,
-        [U, B] = i.useState(!1),
-        G = (0, o.e7)([T.ZP], () => T.ZP.getSelfEmbeddedActivityForChannel(y.id)),
+        [U, G] = i.useState(!1),
+        B = (0, o.e7)([T.ZP], () => T.ZP.getSelfEmbeddedActivityForChannel(y.id)),
         Z = (0, o.e7)([T.ZP], () => T.ZP.getActivityPanelMode()),
-        F = (0, _.q)(null == G ? void 0 : G.applicationId),
-        V = null == G ? void 0 : G.launchId,
+        F = (0, _.q)(null == B ? void 0 : B.applicationId),
+        V = null == B ? void 0 : B.launchId,
         j = (0, o.e7)([v.Z], () => v.Z.getChannelId() === y.id),
         { dockedRect: H, isHidden: Y } = (0, o.cj)([E.Z], () => {
             let e = E.Z.pipWindow;
@@ -55,7 +55,7 @@ function U(e) {
             selectedParticipant: z,
             participantsOpen: q
         } = (0, o.cj)([p.Z], () => ({
-            activityParticipant: null != G ? p.Z.getParticipant(y.id, G.applicationId) : null,
+            activityParticipant: null != B ? p.Z.getParticipant(y.id, B.applicationId) : null,
             selectedParticipant: p.Z.getSelectedParticipant(y.id),
             participantsOpen: p.Z.getParticipantsOpen(y.id)
         })),
@@ -67,32 +67,32 @@ function U(e) {
         et = ee && null != E.Z.pipVideoWindow && null != E.Z.pipActivityWindow;
     function en() {
         var e;
-        null != G && c.Z.selectParticipant(y.id, G.applicationId);
+        null != B && c.Z.selectParticipant(y.id, B.applicationId);
         let t = null !== (e = y.getGuildId()) && void 0 !== e ? e : x.ME;
         d.Z.channelListScrollTo(t, y.id), (0, h.XU)(t, y.id), null == W && (0, f.Ou)();
     }
     function er() {
-        B(!U);
+        G(!U);
     }
     i.useEffect(() => {
-        if ((null == G ? void 0 : G.applicationId) != null) {
+        if ((null == B ? void 0 : B.applicationId) != null) {
             let e = ee ? D.cE.PIP : D.cE.FOCUSED;
             u.Z.dispatch({
                 type: 'ACTIVITY_LAYOUT_MODE_UPDATE',
                 layoutMode: e,
-                applicationId: G.applicationId
+                applicationId: B.applicationId
             });
         }
-    }, [null == G ? void 0 : G.applicationId, ee]);
-    if (null == G || null == V || (null == K && (0, C.Z)(y.id)) || null == F) return null;
-    let ei = Array.from(G.userIds)
-            .map((e) => b.default.getUser(e))
+    }, [null == B ? void 0 : B.applicationId, ee]);
+    if (null == B || null == V || (null == K && (0, C.Z)(y.id)) || null == F) return null;
+    let ei = Array.from(B.userIds)
+            .map((e) => I.default.getUser(e))
             .filter((e) => null != e),
         ea = {
-            instance_id: null !== (a = null !== (n = G.compositeInstanceId) && void 0 !== n ? n : G.launchId) && void 0 !== a ? a : '',
+            instance_id: null !== (a = null !== (n = B.compositeInstanceId) && void 0 !== n ? n : B.launchId) && void 0 !== a ? a : '',
             channel_id: y.id,
-            location_id: null === (t = G.location) || void 0 === t ? void 0 : t.id,
-            launch_id: G.launchId
+            location_id: null === (t = B.location) || void 0 === t ? void 0 : t.id,
+            launch_id: B.launchId
         };
     return (
         null != y.guild_id && '' !== y.guild_id && (ea.guild_id = y.guild_id),
@@ -105,7 +105,7 @@ function U(e) {
                     className: s()(M.root, {
                         [M.pipMode]: ee,
                         [k.elevationHigh]: ee,
-                        [P.idle]: f && !(null === (t = G.config) || void 0 === t ? void 0 : t.useInteractivePIP),
+                        [P.idle]: f && !(null === (t = B.config) || void 0 === t ? void 0 : t.useInteractivePIP),
                         [M.pipModeShort]: ee && !U,
                         [M.pipModeTall]: ee && U,
                         [M.hidden]: Y,
@@ -121,11 +121,11 @@ function U(e) {
                                 (o = f),
                                 (u = $),
                                 (c = ei),
-                                ee && null != G && ((null == K ? void 0 : K.type) === w.fO.ACTIVITY || u)
-                                    ? (null === (d = G.config) || void 0 === d ? void 0 : d.useInteractivePIP)
+                                ee && null != B && ((null == K ? void 0 : K.type) === w.fO.ACTIVITY || u)
+                                    ? (null === (d = B.config) || void 0 === d ? void 0 : d.useInteractivePIP)
                                         ? (0, r.jsx)(O.of, {
                                               onJumpToChannel: en,
-                                              applicationId: G.applicationId,
+                                              applicationId: B.applicationId,
                                               channel: y,
                                               showControls: !o,
                                               onMouseDown: i,
@@ -143,10 +143,10 @@ function U(e) {
                                                     onMouseDown: i,
                                                     onMouseLeave: a,
                                                     onJumpToChannel: () => {
-                                                        en(), (0, I.tg)(L.Ez.PANEL);
+                                                        en(), (0, b.tg)(L.Ez.PANEL);
                                                     },
                                                     channel: y,
-                                                    applicationId: G.applicationId,
+                                                    applicationId: B.applicationId,
                                                     users: c
                                                 })
                                             })
@@ -168,7 +168,7 @@ function U(e) {
                                                           onMouseLeave: a,
                                                           onJumpToChannel: en,
                                                           channel: y,
-                                                          applicationId: G.applicationId,
+                                                          applicationId: B.applicationId,
                                                           selectedParticipant: K
                                                       })
                                                   ]
@@ -184,13 +184,13 @@ function U(e) {
                               })
                             : (0, r.jsx)(R.J, {
                                   allowPopups: (0, N.h)(F),
-                                  referrerPolicy: D.um.has(G.applicationId) ? 'no-referrer' : 'origin',
-                                  url: G.url,
+                                  referrerPolicy: D.um.has(B.applicationId) ? 'no-referrer' : 'origin',
+                                  url: B.url,
                                   queryParams: ea,
                                   className: s()(M.iframe, {
                                       [M.pipModeShort]: ee && !U,
                                       [M.pipModeTall]: ee && U,
-                                      [M.pipNonInteractive]: ee && !(null === (n = G.config) || void 0 === n ? void 0 : n.useInteractivePIP)
+                                      [M.pipNonInteractive]: ee && !(null === (n = B.config) || void 0 === n ? void 0 : n.useInteractivePIP)
                                   }),
                                   shouldRefocus: !ee && j
                               }),

@@ -29,7 +29,7 @@ function v(e, t, n) {
         e
     );
 }
-class b extends a.Z {
+class I extends a.Z {
     constructor(...e) {
         super(...e),
             v(this, 'onboardingCompleteGuilds', new Set()),
@@ -123,4 +123,4 @@ class b extends a.Z {
             });
     }
 }
-t.Z = new b();
+t.Z = new I();

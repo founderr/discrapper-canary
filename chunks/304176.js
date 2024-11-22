@@ -15,15 +15,15 @@ var r = n(200651),
     g = n(709586),
     E = n(626135),
     v = n(524444),
-    b = n(981631),
-    I = n(176505),
+    I = n(981631),
+    b = n(176505),
     T = n(388032),
     S = n(118151);
 t.Z = (e) => {
     let { roleIcon: t, guild: n } = e,
         { name: y } = t;
     i.useEffect(() => {
-        E.default.track(b.rMx.OPEN_POPOUT, {
+        E.default.track(I.rMx.OPEN_POPOUT, {
             type: 'Role Icon Popout',
             guild_id: n.id,
             ...(0, o.v_)(p.Z.getChannel(m.Z.getChannelId(n.id)))
@@ -39,12 +39,12 @@ t.Z = (e) => {
         },
         O = N
             ? () => {
-                  (0, _.uL)(b.Z5c.CHANNEL(n.id, I.oC.ROLE_SUBSCRIPTIONS));
+                  (0, _.uL)(I.Z5c.CHANNEL(n.id, b.oC.ROLE_SUBSCRIPTIONS));
               }
             : () => {
                   (0, d.f)({
                       guildId: n.id,
-                      location: { section: b.jXE.ROLE_ICON_POPOUT }
+                      location: { section: I.jXE.ROLE_ICON_POPOUT }
                   });
               };
     return (0, r.jsx)(s.Dialog, {

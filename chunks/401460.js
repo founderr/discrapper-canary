@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return I;
     }
 }),
     n(47120);
@@ -26,22 +26,22 @@ let g = () => [h.intl.string(h.t.EgWTY2), h.intl.string(h.t.umBn5e), h.intl.stri
 function v(e) {
     let { id: t, className: n, onSelect: a, isSelected: o = !1, tabIndex: l, children: f, locked: h = !1 } = e,
         [g, v] = i.useState((0, _.aW)(t).name),
-        b = t === d.Ru.PIRATE,
-        I = (0, u.useRadioItem)({
+        I = t === d.Ru.PIRATE,
+        b = (0, u.useRadioItem)({
             label: g,
             isSelected: o
         });
     return (0, r.jsx)(u.Tooltip, {
         text: g,
-        onTooltipShow: () => b && v(E()),
+        onTooltipShow: () => I && v(E()),
         children: (e) =>
             (0, r.jsxs)('div', {
                 className: m.appIconSelectionContainer,
                 children: [
                     (0, r.jsx)(u.Clickable, {
                         ...e,
-                        ...I,
-                        tabIndex: null != l ? l : I.tabIndex,
+                        ...b,
+                        tabIndex: null != l ? l : b.tabIndex,
                         className: s()(m.appIconSelection, { [m.selected]: o }, n),
                         onClick: o ? p.dG4 : () => (null == a ? void 0 : a(t)),
                         children: f
@@ -59,7 +59,7 @@ function v(e) {
             })
     });
 }
-function b(e) {
+function I(e) {
     let { icon: t, isSelected: n, disabled: i, tabIndex: a, onSelect: s, locked: o } = e;
     return (0, r.jsx)(v, {
         onSelect: i ? void 0 : s,

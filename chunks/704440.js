@@ -22,8 +22,8 @@ var r = n(200651),
     g = n(281494),
     E = n(790368),
     v = n(474936),
-    b = n(981631),
-    I = n(388032),
+    I = n(981631),
+    b = n(388032),
     T = n(776222),
     S = n(751599),
     y = n(397293),
@@ -65,13 +65,13 @@ let C = async (e, t, n) => {
                             variant: 'heading-xl/bold',
                             color: 'interactive-active',
                             className: T.confirmationHeading,
-                            children: I.intl.string(I.t.dF5azM)
+                            children: b.intl.string(b.t.dF5azM)
                         }),
                         (0, r.jsx)(c.Text, {
                             className: T.confirmationBodyCopy,
                             variant: 'text-md/medium',
                             color: 'header-primary',
-                            children: f > 0 ? I.intl.formatToPlainString(I.t['J/tYnp'], { count: f }) : I.intl.string(I.t.vVnRxc)
+                            children: f > 0 ? b.intl.formatToPlainString(b.t['J/tYnp'], { count: f }) : b.intl.string(b.t.vVnRxc)
                         }),
                         (0, r.jsx)('hr', { className: T.confirmationBodySeparator })
                     ]
@@ -84,13 +84,13 @@ let C = async (e, t, n) => {
                             submitting: u,
                             onClick: () => {
                                 C(a, t, d),
-                                    p.default.track(b.rMx.SHARE_NITRO_FLOW_STEPS, {
+                                    p.default.track(I.rMx.SHARE_NITRO_FLOW_STEPS, {
                                         location_stack: o,
                                         step: v.fz.FLOW_COMPLETED,
                                         other_user_id: Number(a)
                                     });
                             },
-                            children: I.intl.string(I.t['zxlx6+'])
+                            children: b.intl.string(b.t['zxlx6+'])
                         }),
                         (0, r.jsx)('div', {
                             className: T.confirmationCancelButtonContainer,
@@ -99,7 +99,7 @@ let C = async (e, t, n) => {
                                 children: (0, r.jsx)(c.Text, {
                                     variant: 'text-sm/medium',
                                     className: T.confirmationCancelCopy,
-                                    children: I.intl.string(I.t['ETE/oK'])
+                                    children: b.intl.string(b.t['ETE/oK'])
                                 })
                             })
                         })
@@ -147,7 +147,7 @@ function O(e) {
                                     (0, r.jsx)(c.Heading, {
                                         className: T.generalHeading,
                                         variant: 'heading-xl/bold',
-                                        children: o ? I.intl.string(I.t.yCN5Qk) : I.intl.string(I.t.c1wxcX)
+                                        children: o ? b.intl.string(b.t.yCN5Qk) : b.intl.string(b.t.c1wxcX)
                                     }),
                                     (0, r.jsxs)(c.Text, {
                                         className: T.generalBodyCopy,
@@ -155,15 +155,15 @@ function O(e) {
                                         children: [
                                             (0, r.jsx)(c.Anchor, {
                                                 className: s()(T.learnMore, { [T.learnMoreResendUnderlinedText]: o }),
-                                                href: m.Z.getArticleURL(b.BhN.SHARE_NITRO_FAQ),
-                                                children: o ? I.intl.string(I.t.yJfqPT) : I.intl.format(I.t['+Z4ey8'], { count: t })
+                                                href: m.Z.getArticleURL(I.BhN.SHARE_NITRO_FAQ),
+                                                children: o ? b.intl.string(b.t.yJfqPT) : b.intl.format(b.t['+Z4ey8'], { count: t })
                                             }),
                                             o
                                                 ? (0, r.jsx)('div', {
                                                       className: T.shareNitroResendCopySuffix,
-                                                      children: I.intl.string(I.t['b0B69/'])
+                                                      children: b.intl.string(b.t['b0B69/'])
                                                   })
-                                                : (0, r.jsx)('div', { children: I.intl.format(I.t['58lPt7'], { date: (0, h.vc)(l()(x), 'LL') }) })
+                                                : (0, r.jsx)('div', { children: b.intl.format(b.t['58lPt7'], { date: (0, h.vc)(l()(x), 'LL') }) })
                                         ]
                                     })
                                 ]
@@ -185,13 +185,13 @@ function O(e) {
                                 o
                                     ? C(O, a, A)
                                     : (d(!0),
-                                      p.default.track(b.rMx.SHARE_NITRO_FLOW_STEPS, {
+                                      p.default.track(I.rMx.SHARE_NITRO_FLOW_STEPS, {
                                           location_stack: D,
                                           step: v.fz.FLOW_STARTED,
                                           other_user_id: Number(O)
                                       }));
                             },
-                            children: o ? I.intl.string(I.t.awsERE) : I.intl.string(I.t.Ago7Zm)
+                            children: o ? b.intl.string(b.t.awsERE) : b.intl.string(b.t.Ago7Zm)
                         })
                     })
                 ]

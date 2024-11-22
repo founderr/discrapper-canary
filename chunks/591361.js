@@ -121,7 +121,7 @@ function _(e, t, n) {
     (0, r.useEffect)(g);
     let E = t.realtimeValidation.isInvalid ? t.realtimeValidation : h,
         v = 'native' === p ? t.displayValidation : E,
-        b = c(
+        I = c(
             {
                 ...e,
                 isReadOnly: e.isReadOnly || t.isReadOnly,
@@ -143,9 +143,9 @@ function _(e, t, n) {
             n
         );
     return {
-        ...b,
+        ...I,
         inputProps: {
-            ...b.inputProps,
+            ...I.inputProps,
             'aria-describedby': [e['aria-describedby'], t.isInvalid ? _ : null, f].filter(Boolean).join(' ') || void 0
         }
     };

@@ -114,12 +114,12 @@ function E(e) {
                                                 if (null != n && null != r.Z.getLanguage(n)) {
                                                     let r = (function (e, t) {
                                                         let n = ''.concat(e, '-').concat(t),
-                                                            r = I.get(n);
+                                                            r = b.get(n);
                                                         if (null != r) return r;
                                                         let i = o.default.highlight(t, e, !1);
                                                         if (null == i || i.illegal) return null;
                                                         let a = i.value.split('\n');
-                                                        return I.set(n, a), a;
+                                                        return b.set(n, a), a;
                                                     })(e, n);
                                                     if (null != r && r.length === t.length) {
                                                         let e = [];
@@ -195,12 +195,12 @@ function E(e) {
     );
 }
 let v = /(?:<span class="([^"]*)">)|(?:<\/span>)/g,
-    b = {
+    I = {
         max: 1 / 0,
         maxAge: 1 * s.Z.Millis.MINUTE,
         updateAgeOnGet: !0
     },
-    I = new (a())(b);
+    b = new (a())(I);
 function T(e, t) {
     let n = 0;
     for (let i of d.bN.nodes(e, {

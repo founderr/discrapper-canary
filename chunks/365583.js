@@ -36,7 +36,7 @@ function v(e) {
         })
     )
         return null;
-    let b = (function (e) {
+    let I = (function (e) {
         let { activity: t, entry: n, onOpenGameSettings: r } = e;
         return null != n
             ? E({
@@ -57,13 +57,13 @@ function v(e) {
         entry: s,
         onOpenGameSettings: v
     });
-    return null == b
+    return null == I
         ? null
         : (0, r.jsx)(a.MenuItem, {
               id: 'manage-privacy',
               label: m.intl.string(m.t.anfNPT),
               action: () => {
-                  null == f || f({ action: 'PRESS_MANAGE_PRIVACY_MENU_ITEM' }), b(), null == h || h();
+                  null == f || f({ action: 'PRESS_MANAGE_PRIVACY_MENU_ITEM' }), I(), null == h || h();
               }
           });
 }

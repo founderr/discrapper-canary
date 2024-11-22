@@ -21,8 +21,8 @@ var r = n(200651),
     g = n(648052),
     E = n(867176),
     v = n(280885),
-    b = n(502762),
-    I = n(530),
+    I = n(502762),
+    b = n(530),
     T = n(679332),
     S = n(544989),
     y = n(171368),
@@ -41,11 +41,11 @@ function R(e) {
             messageId: O,
             roleId: D
         }),
-        B = i.useRef(null),
-        G = (0, s.Z)(B);
+        G = i.useRef(null),
+        B = (0, s.Z)(G);
     i.useEffect(() => {
-        null == L || L(null == B ? void 0 : B.current);
-    }, [B, L]);
+        null == L || L(null == G ? void 0 : G.current);
+    }, [G, L]);
     let Z = () => {
             null == x || x(),
                 (0, y.openUserProfileModal)({
@@ -59,10 +59,10 @@ function R(e) {
         children: (0, r.jsx)(_.Mt, {
             value: U,
             children: (0, r.jsxs)(a.Dialog, {
-                ref: B,
+                ref: G,
                 'aria-label': t.username,
                 children: [
-                    (0, r.jsxs)(b.Z, {
+                    (0, r.jsxs)(I.Z, {
                         user: t,
                         displayProfile: P,
                         profileType: A.y0.BITE_SIZE,
@@ -111,7 +111,7 @@ function R(e) {
                                 fade: !0,
                                 className: C.body,
                                 children: [
-                                    (0, r.jsx)(I.Z, {
+                                    (0, r.jsx)(b.Z, {
                                         user: t,
                                         profileType: A.y0.BITE_SIZE,
                                         nickname: f.ZP.getName(n, R, t),
@@ -136,7 +136,7 @@ function R(e) {
                     (null == P ? void 0 : P.profileEffectId) != null &&
                         (0, r.jsx)(d.Z, {
                             profileEffectId: null == P ? void 0 : P.profileEffectId,
-                            isHovering: G
+                            isHovering: B
                         })
                 ]
             })

@@ -17,9 +17,9 @@ function f(e) {
     let { src: t, size: n, constrain: a = 'height', className: f, alt: _, fallbackSrc: p, 'aria-hidden': h, showTooltip: m = !1 } = e,
         g = (0, u.ZP)(),
         E = ''.concat(n, 'px'),
-        [v, b] = i.useState(!1),
-        [I, T] = i.useState(!1),
-        S = null == p || I;
+        [v, I] = i.useState(!1),
+        [b, T] = i.useState(!1),
+        S = null == p || b;
     if (null == t || (v && S))
         return (0, r.jsx)(l.UnknownGameIcon, {
             size: 'custom',
@@ -53,7 +53,7 @@ function f(e) {
                     src: v && null != p ? p : t,
                     'aria-hidden': h,
                     alt: null != _ ? _ : h ? void 0 : c.intl.string(c.t['2B/phI']),
-                    onError: (e) => (v ? T(!0) : b(!0))
+                    onError: (e) => (v ? T(!0) : I(!0))
                 })
         },
         'content-image'

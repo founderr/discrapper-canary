@@ -29,7 +29,7 @@ function o(e) {
     let { focusPath: h } = f,
         [m, g] = r.useState(!1),
         [E, v] = r.useState(!1),
-        [{ onItemFocusMemoizer: b, onItemMouseEnterMemoizer: I }] = r.useState(() => ({
+        [{ onItemFocusMemoizer: I, onItemMouseEnterMemoizer: b }] = r.useState(() => ({
             onItemFocusMemoizer: new s.$o((e) => () => {
                 g(!0),
                     _({
@@ -144,11 +144,11 @@ function o(e) {
                     role: a,
                     id: (0, s.qR)(t, o),
                     tabIndex: -1,
-                    onFocus: i ? b.get(o) : () => {},
-                    onMouseEnter: i ? I.get(o) : () => {}
+                    onFocus: i ? I.get(o) : () => {},
+                    onMouseEnter: i ? b.get(o) : () => {}
                 };
             },
-            [t, N, b, I]
+            [t, N, I, b]
         );
     return r.useMemo(
         () => ({

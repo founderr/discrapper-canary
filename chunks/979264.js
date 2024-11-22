@@ -67,10 +67,10 @@ let m = i.memo(function (e) {
         let { clan: a, userId: d, className: _, children: p, profileViewedAnalytics: m } = e,
             g = (0, o.e7)([u.default], () => u.default.getUser(d), [d]),
             E = null !== (t = null == g ? void 0 : g.clan) && void 0 !== t ? t : a,
-            [v, b] = (0, c.L_)(null !== (n = null == E ? void 0 : E.identityGuildId) && void 0 !== n ? n : null),
-            I = i.useCallback(() => {
-                b();
-            }, [b]);
+            [v, I] = (0, c.L_)(null !== (n = null == E ? void 0 : E.identityGuildId) && void 0 !== n ? n : null),
+            b = i.useCallback(() => {
+                I();
+            }, [I]);
         return (0, r.jsx)(l.Popout, {
             renderPopout: (e) => {
                 let { closePopout: t } = e;
@@ -96,7 +96,7 @@ let m = i.memo(function (e) {
                     },
                     onMouseEnter: () => {
                         var t;
-                        I(), null === (t = e.onMouseEnter) || void 0 === t || t.call(e);
+                        b(), null === (t = e.onMouseEnter) || void 0 === t || t.call(e);
                     },
                     children: p
                 })
@@ -104,9 +104,9 @@ let m = i.memo(function (e) {
     });
 t.ZP = i.memo(function (e) {
     var t;
-    let { clan: n, userId: i, contextGuildId: a, className: l, containerClassName: c, textVariant: f, textColor: _, badgeSize: p, disableGuildProfile: m = !1, inline: v = !0, profileViewedAnalytics: b } = e,
-        I = (0, o.e7)([u.default], () => u.default.getUser(i), [i]),
-        T = null !== (t = null == I ? void 0 : I.clan) && void 0 !== t ? t : n,
+    let { clan: n, userId: i, contextGuildId: a, className: l, containerClassName: c, textVariant: f, textColor: _, badgeSize: p, disableGuildProfile: m = !1, inline: v = !0, profileViewedAnalytics: I } = e,
+        b = (0, o.e7)([u.default], () => u.default.getUser(i), [i]),
+        T = null !== (t = null == b ? void 0 : b.clan) && void 0 !== t ? t : n,
         { tag: S, badge: y, guildId: A } = (0, d.vh)(T);
     return (0, d.p0)(i, a) && null != A
         ? m
@@ -123,7 +123,7 @@ t.ZP = i.memo(function (e) {
             : (0, r.jsx)(E, {
                   clan: T,
                   userId: i,
-                  profileViewedAnalytics: b,
+                  profileViewedAnalytics: I,
                   className: c,
                   children: (0, r.jsx)(g, {
                       guildId: A,

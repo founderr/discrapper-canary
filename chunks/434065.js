@@ -3,7 +3,7 @@ e.d(t, {
         return u;
     }
 });
-var r = e(196136),
+var r = e(15729),
     i = e(731965);
 let u = (0, r.U)((n) => ({
     favoriteAdded: !1,

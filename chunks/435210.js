@@ -76,7 +76,7 @@ function u(e, n) {
         seen: [],
         stylize: d
     };
-    return arguments.length >= 3 && (r.depth = arguments[2]), arguments.length >= 4 && (r.colors = arguments[3]), m(n) ? (r.showHidden = n) : n && t._extend(r, n), b(r.showHidden) && (r.showHidden = !1), b(r.depth) && (r.depth = 2), b(r.colors) && (r.colors = !1), b(r.customInspect) && (r.customInspect = !0), r.colors && (r.stylize = c), f(r, e, r.depth);
+    return arguments.length >= 3 && (r.depth = arguments[2]), arguments.length >= 4 && (r.colors = arguments[3]), m(n) ? (r.showHidden = n) : n && t._extend(r, n), I(r.showHidden) && (r.showHidden = !1), I(r.depth) && (r.depth = 2), I(r.colors) && (r.colors = !1), I(r.customInspect) && (r.customInspect = !0), r.colors && (r.stylize = c), f(r, e, r.depth);
 }
 function c(e, t) {
     var n = u.styles[t];
@@ -131,7 +131,7 @@ function f(e, n, r) {
         return !v(s) && (s = f(e, s, r)), s;
     }
     var o = (function (e, t) {
-        if (b(t)) return e.stylize('undefined', 'undefined');
+        if (I(t)) return e.stylize('undefined', 'undefined');
         if (v(t)) {
             var n = "'" + JSON.stringify(t).replace(/^"|"$/g, '').replace(/'/g, "\\'").replace(/\\"/g, '"') + "'";
             return e.stylize(n, 'string');
@@ -152,15 +152,15 @@ function f(e, n, r) {
             var c = n.name ? ': ' + n.name : '';
             return e.stylize('[Function' + c + ']', 'special');
         }
-        if (I(n)) return e.stylize(RegExp.prototype.toString.call(n), 'regexp');
+        if (b(n)) return e.stylize(RegExp.prototype.toString.call(n), 'regexp');
         if (S(n)) return e.stylize(Date.prototype.toString.call(n), 'date');
         if (y(n)) return _(n);
     }
     var d = '',
         T = !1,
         N = ['{', '}'];
-    if ((h(n) && ((T = !0), (N = ['[', ']'])), A(n) && (d = ' [Function' + (n.name ? ': ' + n.name : '') + ']'), I(n) && (d = ' ' + RegExp.prototype.toString.call(n)), S(n) && (d = ' ' + Date.prototype.toUTCString.call(n)), y(n) && (d = ' ' + _(n)), 0 === l.length && (!T || 0 == n.length))) return N[0] + d + N[1];
-    if (r < 0) return I(n) ? e.stylize(RegExp.prototype.toString.call(n), 'regexp') : e.stylize('[Object]', 'special');
+    if ((h(n) && ((T = !0), (N = ['[', ']'])), A(n) && (d = ' [Function' + (n.name ? ': ' + n.name : '') + ']'), b(n) && (d = ' ' + RegExp.prototype.toString.call(n)), S(n) && (d = ' ' + Date.prototype.toUTCString.call(n)), y(n) && (d = ' ' + _(n)), 0 === l.length && (!T || 0 == n.length))) return N[0] + d + N[1];
+    if (r < 0) return b(n) ? e.stylize(RegExp.prototype.toString.call(n), 'regexp') : e.stylize('[Object]', 'special');
     return (
         e.seen.push(n),
         (a = T
@@ -214,7 +214,7 @@ function p(e, t, n, r, i, a) {
                             })
                             .join('\n'))
                 : (o = e.stylize('[Circular]', 'special'))),
-        b(s))
+        I(s))
     ) {
         if (a && i.match(/^\d+$/)) return o;
         (s = JSON.stringify('' + i)).match(/^"([a-zA-Z_][a-zA-Z_0-9]*)"$/)
@@ -248,10 +248,10 @@ function v(e) {
 }),
     (t.isNumber = E),
     (t.isString = v);
-function b(e) {
+function I(e) {
     return void 0 === e;
 }
-function I(e) {
+function b(e) {
     return T(e) && '[object RegExp]' === N(e);
 }
 function T(e) {
@@ -269,9 +269,9 @@ function A(e) {
 (t.isSymbol = function (e) {
     return 'symbol' == typeof e;
 }),
-    (t.isUndefined = b),
-    (t.isRegExp = I),
-    (t.types.isRegExp = I),
+    (t.isUndefined = I),
+    (t.isRegExp = b),
+    (t.types.isRegExp = b),
     (t.isObject = T),
     (t.isDate = S),
     (t.types.isDate = S),

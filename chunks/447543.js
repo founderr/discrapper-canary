@@ -22,8 +22,8 @@ var r = n(525654),
     g = n(625128),
     E = n(972830),
     v = n(305325),
-    b = n(281956),
-    I = n(931261),
+    I = n(281956),
+    b = n(931261),
     T = n(15274),
     S = n(924301),
     y = n(82085),
@@ -40,8 +40,8 @@ var r = n(525654),
     P = n(271383),
     k = n(430824),
     U = n(607744),
-    B = n(341165),
-    G = n(496675),
+    G = n(341165),
+    B = n(496675),
     Z = n(914010),
     F = n(594174),
     V = n(626135),
@@ -84,9 +84,9 @@ function er(e) {
         g = (function (e, t, n) {
             var r, i;
             if ((null == n ? void 0 : n.targetType) === J.Iq.ROLE_SUBSCRIPTIONS_PURCHASE) return Q.oC.ROLE_SUBSCRIPTIONS;
-            if ((null == n ? void 0 : n.targetType) == null && !L.tx.has(t.type) && (0, I.s)(e)) return Q.oC.GUILD_HOME;
+            if ((null == n ? void 0 : n.targetType) == null && !L.tx.has(t.type) && (0, b.s)(e)) return Q.oC.GUILD_HOME;
             let a = w.Z.getChannel(t.id);
-            return G.Z.can(q.Plq.VIEW_CHANNEL, a) ? t.id : null !== (i = null === (r = M.ZP.getDefaultChannel(e, !0, q.Plq.CREATE_INSTANT_INVITE)) || void 0 === r ? void 0 : r.id) && void 0 !== i ? i : t.id;
+            return B.Z.can(q.Plq.VIEW_CHANNEL, a) ? t.id : null !== (i = null === (r = M.ZP.getDefaultChannel(e, !0, q.Plq.CREATE_INSTANT_INVITE)) || void 0 === r ? void 0 : r.id) && void 0 !== i ? i : t.id;
         })(t, r, i),
         T = f === q.d4z.GUILD_STAGE_VOICE,
         S = q.Z5c.CHANNEL(t, g);
@@ -112,7 +112,7 @@ function er(e) {
                                       }),
                                   u === J.Iq.EMBEDDED_APPLICATION && null != c && ((0, O.uL)(q.Z5c.CHANNEL(null != t ? t : q.ME, g)), (0, h.Z)(g, c, a, null == i ? void 0 : i.intent, m.bB.CHAT));
                           };
-                      !d && (0, b.n)(t, [k.Z, U.Z, F.default, P.ZP]) ? (0, v.hk)(t, s) : s();
+                      !d && (0, I.n)(t, [k.Z, U.Z, F.default, P.ZP]) ? (0, v.hk)(t, s) : s();
                   });
           })
         : (0, p.l5)(_) && u === J.Iq.EMBEDDED_APPLICATION && null != c && ((0, O.uL)(q.Z5c.CHANNEL(null != t ? t : q.ME, g)), (0, h.Z)(g, c, a, null == i ? void 0 : i.intent, m.bB.CHAT)),
@@ -228,14 +228,14 @@ t.Z = {
         }
     },
     async mobileCreateInvite(e, t) {
-        let n = B.Z.getInvite(e.id);
+        let n = G.Z.getInvite(e.id);
         if (null != n && !n.isExpired()) return n.code;
         let r = { max_age: j.Z.Seconds.DAY },
             i = await this.createInvite(e.id, r, t).catch(() => d.Z.dispatch({ type: 'NATIVE_APP_INSTANT_INVITE_GDM_SHARE_FAILED' }));
         return null == i ? void 0 : i.code;
     },
     async getAllFriendInvites(e) {
-        if ((await new Promise((e) => d.Z.wait(() => e(null))), B.Z.getFriendInvitesFetching())) return null != et ? et.then((e) => e.body) : Promise.reject(Error('Invalid friend invite fetch request'));
+        if ((await new Promise((e) => d.Z.wait(() => e(null))), G.Z.getFriendInvitesFetching())) return null != et ? et.then((e) => e.body) : Promise.reject(Error('Invalid friend invite fetch request'));
         (et = c.tn.get({
             url: q.ANM.FRIEND_INVITES,
             context: { location: e },

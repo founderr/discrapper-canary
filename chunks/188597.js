@@ -9,7 +9,7 @@ n.d(t, {
         return S;
     },
     ow: function () {
-        return b;
+        return I;
     },
     rQ: function () {
         return r;
@@ -18,7 +18,7 @@ n.d(t, {
         return y;
     },
     tM: function () {
-        return I;
+        return b;
     }
 }),
     n(47120);
@@ -39,10 +39,10 @@ var r,
     g = n(96989),
     E = n(981631),
     v = n(388032);
-function b(e) {
+function I(e) {
     return null == e || '' === e || Number.isNaN(e) ? Date.now() : _.default.extractTimestamp(e) + 900000;
 }
-let I = async (e) => {
+let b = async (e) => {
         let { componentType: t, messageId: n, messageFlags: r, customId: i, componentId: s, applicationId: o, channelId: u, guildId: c, localState: m } = e,
             g = _.default.fromTimestamp(Date.now());
         if (!h.ZP.canQueueInteraction(n, g)) return;
@@ -126,7 +126,7 @@ let I = async (e) => {
 let y = (e, t) => {
     var n;
     let r = null == t ? void 0 : t.state,
-        i = e.state === E.yb.SENT && b(e.id) < Date.now();
+        i = e.state === E.yb.SENT && I(e.id) < Date.now();
     let a = e.state === E.yb.SEND_FAILED && (null == (n = e.id) || '' === n || Number.isNaN(n) ? Date.now() : _.default.extractTimestamp(n) + 3000) < Date.now(),
         s = (null == t ? void 0 : t.data.interactionType) === l.B8.APPLICATION_COMMAND,
         o = e.isCommandType();

@@ -12,10 +12,10 @@ n.d(t, {
         return h.Z;
     },
     ZJ: function () {
-        return I;
+        return b;
     },
     q: function () {
-        return b;
+        return I;
     }
 }),
     n(789020);
@@ -44,10 +44,10 @@ function v() {
         location_section: e
     });
 }
-function b() {
+function I() {
     c.default.track(g.rMx.OPEN_POPOUT, { type: 'Active Threads Popout' });
 }
-function I(e, t) {
+function b(e, t) {
     var n, r;
     let i = (0, o.K)(e);
     if (null == i) return;
@@ -63,8 +63,8 @@ function I(e, t) {
         h = null !== (n = p.Z.flags(e.id)) && void 0 !== n ? n : 0,
         E = _(h),
         v = p.Z.isMuted(e.id),
-        b = (0, f.sK)(p.Z.getMuteConfig(e.id)),
-        { can_send_message: I, ...T } = i,
+        I = (0, f.sK)(p.Z.getMuteConfig(e.id)),
+        { can_send_message: b, ...T } = i,
         S = {
             ...T,
             channel_id: e.id,
@@ -78,8 +78,8 @@ function I(e, t) {
             parent_notification_setting: l.channel_message_notification_settings,
             old_thread_is_muted: v,
             new_thread_is_muted: null !== (r = t.muted) && void 0 !== r ? r : v,
-            old_thread_muted_until: b,
-            new_thread_muted_until: null != t.mute_config ? (0, f.sK)(t.mute_config) : b
+            old_thread_muted_until: I,
+            new_thread_muted_until: null != t.mute_config ? (0, f.sK)(t.mute_config) : I
         };
     c.default.track(g.rMx.THREAD_NOTIFICATION_SETTINGS_UPDATED, S);
 }

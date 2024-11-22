@@ -24,8 +24,8 @@ var i = n(658722),
     g = n(285651),
     E = n(822179),
     v = n(926491),
-    b = n(373228),
-    I = n(601070),
+    I = n(373228),
+    b = n(601070),
     T = n(675478),
     S = n(131704),
     y = n(598077),
@@ -42,8 +42,8 @@ var i = n(658722),
     P = n(594174),
     k = n(55563),
     U = n(823379),
-    B = n(892880),
-    G = n(700785),
+    G = n(892880),
+    B = n(700785),
     Z = n(226951),
     F = n(709054),
     V = n(624138),
@@ -101,7 +101,7 @@ function ea(e) {
         h = 0,
         m = 0;
     for (; h < p; ) {
-        var g, E, v, b, I, T, S, A, N;
+        var g, E, v, I, b, T, S, A, N;
         let e, r;
         let u = n[h];
         u instanceof y.Z ? ((r = u), (e = null === (E = C.ZP.getNick(l, r.id)) || void 0 === E ? void 0 : E.toLocaleLowerCase())) : ((e = null === (v = u.nick) || void 0 === v ? void 0 : v.toLocaleLowerCase()), (r = o[u.userId]));
@@ -119,8 +119,8 @@ function ea(e) {
                       type: Y.h8.USER,
                       record: r,
                       score: 10,
-                      comparator: null !== (b = null != p ? p : e) && void 0 !== b ? b : n,
-                      sortable: null !== (I = null != h ? h : l) && void 0 !== I ? I : i
+                      comparator: null !== (I = null != p ? p : e) && void 0 !== I ? I : n,
+                      sortable: null !== (b = null != h ? h : l) && void 0 !== b ? b : i
                   })
                 : o.substring(0, d.length) === d || (null == u ? void 0 : u.substring(0, d.length)) === d || (null == g ? void 0 : g.substring(0, d.length)) === d
                   ? f.push({
@@ -231,7 +231,7 @@ t.ZP = {
                 let e = eo(l.id, i);
                 if (e.length > 0) return e;
             }
-            (t = C.ZP.getMembers(c.guild_id).filter(ei)), a && B.Z.requestMembers(c.guild_id, r, i);
+            (t = C.ZP.getMembers(c.guild_id).filter(ei)), a && G.Z.requestMembers(c.guild_id, r, i);
         }
         return ea({
             query: r,
@@ -239,7 +239,7 @@ t.ZP = {
             limit: i,
             filter: (e) =>
                 c.isPrivate() ||
-                G.BT({
+                B.BT({
                     permission: H.Plq.VIEW_CHANNEL,
                     user: e,
                     context: c
@@ -256,7 +256,7 @@ t.ZP = {
         }
         let l = C.ZP.getMembers(t).filter(ei);
         return (
-            i && n.length > 0 && B.Z.requestMembers(t, n, r),
+            i && n.length > 0 && G.Z.requestMembers(t, n, r),
             ea({
                 query: n,
                 members: l,
@@ -271,7 +271,7 @@ t.ZP = {
             n = (arguments.length > 2 && void 0 !== arguments[2] && arguments[2], !(arguments.length > 3) || void 0 === arguments[3] || arguments[3]),
             r = arguments.length > 4 ? arguments[4] : void 0;
         return (
-            n && e.length > 0 && B.Z.requestMembers(null, e, t),
+            n && e.length > 0 && G.Z.requestMembers(null, e, t),
             ea({
                 query: e,
                 members: o()(P.default.getUsers()).values().value(),
@@ -312,14 +312,14 @@ t.ZP = {
             null != r
                 ? o()(N.ZP.getChannels(r)[l])
                       .map((e) => e.channel)
-                      .concat(I.Z.computeAllActiveJoinedThreads(r))
+                      .concat(b.Z.computeAllActiveJoinedThreads(r))
                       .value()
-                : o()(A.Z.loadAllGuildAndPrivateChannelsFromDisk()).values().concat(I.Z.computeAllActiveJoinedThreads()).value();
+                : o()(A.Z.loadAllGuildAndPrivateChannelsFromDisk()).values().concat(b.Z.computeAllActiveJoinedThreads()).value();
         let m = {},
             g = [];
         for (let e of t) {
-            var E, v, b, T, y;
-            if (((E = l), (v = e.type), (b = null != r), !(E === v || ((b || (0, S.Km)(v)) && (E === N.sH ? (0, S.r8)(v) || (0, S.bw)(v) : E === N.Zb && (0, S.bw)(v)))) || ((0, S.Km)(e.type) && !D.Z.can(f ? e.accessPermissions : H.Plq.VIEW_CHANNEL, e)) || !s(e))) continue;
+            var E, v, I, T, y;
+            if (((E = l), (v = e.type), (I = null != r), !(E === v || ((I || (0, S.Km)(v)) && (E === N.sH ? (0, S.r8)(v) || (0, S.bw)(v) : E === N.Zb && (0, S.bw)(v)))) || ((0, S.Km)(e.type) && !D.Z.can(f ? e.accessPermissions : H.Plq.VIEW_CHANNEL, e)) || !s(e))) continue;
             let t = [...h],
                 i = e.name.toLocaleLowerCase(),
                 o = p && n === e.id,
@@ -755,21 +755,21 @@ t.ZP = {
                     let { type: r, value: i } = n,
                         a = (function (e) {
                             switch (e) {
-                                case b.MO.STICKER_NAME:
+                                case I.MO.STICKER_NAME:
                                     return 11;
-                                case b.MO.CORRELATED_EMOJI:
+                                case I.MO.CORRELATED_EMOJI:
                                     return 6;
-                                case b.MO.TAG:
+                                case I.MO.TAG:
                                     return 1;
-                                case b.MO.GUILD_NAME:
-                                case b.MO.PACK_NAME:
+                                case I.MO.GUILD_NAME:
+                                case I.MO.PACK_NAME:
                                     return 8;
                                 default:
                                     return 1;
                             }
                         })(r),
                         s = 0;
-                    t ? (i === e ? (s = 10 * a) : c.test(i) ? (s = 7 * a) : (r === b.MO.GUILD_NAME || r === b.MO.PACK_NAME || r === b.MO.STICKER_NAME) && d.test(i) && (s = 5 * a)) : i === e && ((s = 10 * a), (f = i)), s > u && ((u = s), (f = i));
+                    t ? (i === e ? (s = 10 * a) : c.test(i) ? (s = 7 * a) : (r === I.MO.GUILD_NAME || r === I.MO.PACK_NAME || r === I.MO.STICKER_NAME) && d.test(i) && (s = 5 * a)) : i === e && ((s = 10 * a), (f = i)), s > u && ((u = s), (f = i));
                 }
                 let p = E.Z.stickerFrecencyWithoutFetchingLatest.getScore(o);
                 null != p && (u *= p / 100),

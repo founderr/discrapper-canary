@@ -13,8 +13,8 @@ var o,
     g = n(592125),
     E = n(430824),
     v = n(131951),
-    b = n(496675),
-    I = n(19780),
+    I = n(496675),
+    b = n(19780),
     T = n(944486),
     S = n(979651),
     y = n(981631),
@@ -64,16 +64,16 @@ function w(e) {
 }
 function M(e, t) {
     let n = g.Z.getBasicChannel(t);
-    return e === A.lo.CALL || (null != n && b.Z.canBasicChannel(y.S7T.VIEW_CHANNEL, n));
+    return e === A.lo.CALL || (null != n && I.Z.canBasicChannel(y.S7T.VIEW_CHANNEL, n));
 }
 function P(e) {
     if (M(e.streamType, e.channelId)) return !0;
     let t = g.Z.getBasicChannel(e.channelId);
-    return null != t && (0, _.p9)(t, S.Z, E.Z, b.Z, c.Z)[0];
+    return null != t && (0, _.p9)(t, S.Z, E.Z, I.Z, c.Z)[0];
 }
 class k extends (o = l.ZP.PersistedStore) {
     initialize(e) {
-        this.syncWith([b.Z], () => !0), this.waitFor(d.ZP, b.Z), (null == e ? void 0 : e.selfStreamParticipantsHidden) !== void 0 && Object.assign(R, null == e ? void 0 : e.selfStreamParticipantsHidden);
+        this.syncWith([I.Z], () => !0), this.waitFor(d.ZP, I.Z), (null == e ? void 0 : e.selfStreamParticipantsHidden) !== void 0 && Object.assign(R, null == e ? void 0 : e.selfStreamParticipantsHidden);
     }
     getState() {
         return { selfStreamParticipantsHidden: R };
@@ -212,7 +212,7 @@ N(k, 'displayName', 'ApplicationStreamingStore'),
                 }
                 {
                     let t = m.default.getSessionId();
-                    return n === m.default.getId() && s !== t && null != I.Z.getChannelId()
+                    return n === m.default.getId() && s !== t && null != b.Z.getChannelId()
                         ? e
                         : (function (e, t) {
                               var n;

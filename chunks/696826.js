@@ -1,6 +1,6 @@
 n.d(t, {
     Dk: function () {
-        return I;
+        return b;
     },
     P5: function () {
         return S;
@@ -82,10 +82,10 @@ function v(e, t, n, r) {
         .concat(0.5625 * e + r, ' ')
         .concat(0.75 * e + n, ')');
 }
-function b(e, t, n) {
+function I(e, t, n) {
     return ''.concat(0.5625 * e + n, 'px ').concat(0.75 * e + t, 'px');
 }
-function I(e) {
+function b(e) {
     let { size: t, status: n, isMobile: r, isTyping: i, topOffset: a = 0, leftOffset: s = 0 } = e,
         o = (a / 8) * t,
         l = (s / 8) * t;
@@ -102,7 +102,7 @@ function I(e) {
             cutoutHeight: 0,
             cutoutRadius: 0,
             polygonScale: v(t, 0, o, l),
-            polygonOrigin: b(t, o, l),
+            polygonOrigin: I(t, o, l),
             dotY: 0.75 * t + o,
             dotX: 0.5 * t + l,
             dotRadius: 0
@@ -122,7 +122,7 @@ function I(e) {
                     cutoutHeight: 0.75 * t,
                     cutoutRadius: 0,
                     polygonScale: v(t, 0, o, l),
-                    polygonOrigin: b(t, o, l),
+                    polygonOrigin: I(t, o, l),
                     dotY: 1.25 * t,
                     dotX: 0.5 * t + l,
                     dotRadius: 0.125 * t
@@ -139,7 +139,7 @@ function I(e) {
                 cutoutHeight: 0,
                 cutoutRadius: 0,
                 polygonScale: v(t, 0, o, l),
-                polygonOrigin: b(t, o, l),
+                polygonOrigin: I(t, o, l),
                 dotY: 0.75 * t + o,
                 dotX: 0.5 * t + l,
                 dotRadius: 0
@@ -157,7 +157,7 @@ function I(e) {
                 cutoutHeight: 0.75 * t,
                 cutoutRadius: 0.375 * t,
                 polygonScale: v(t, 0, o, l),
-                polygonOrigin: b(t, o, l),
+                polygonOrigin: I(t, o, l),
                 dotY: 0.75 * t + o,
                 dotX: 0.5 * t + l,
                 dotRadius: 0
@@ -175,7 +175,7 @@ function I(e) {
                 cutoutHeight: 0.25 * t,
                 cutoutRadius: 0.125 * t,
                 polygonScale: v(t, 0, o, l),
-                polygonOrigin: b(t, o, l),
+                polygonOrigin: I(t, o, l),
                 dotY: 0.75 * t + o,
                 dotX: 0.5 * t + l,
                 dotRadius: 0
@@ -193,7 +193,7 @@ function I(e) {
                 cutoutHeight: 0,
                 cutoutRadius: 0.25 * t,
                 polygonScale: v(t, 1, o, l),
-                polygonOrigin: b(t, o, l),
+                polygonOrigin: I(t, o, l),
                 dotY: 0.75 * t + o,
                 dotX: 0.5 * t + l,
                 dotRadius: 0
@@ -214,7 +214,7 @@ function I(e) {
                 cutoutHeight: 0.5 * t,
                 cutoutRadius: 0.25 * t,
                 polygonScale: v(t, 0, o, l),
-                polygonOrigin: b(t, o, l),
+                polygonOrigin: I(t, o, l),
                 dotY: 0.75 * t + o,
                 dotX: 0.5 * t + l,
                 dotRadius: 0
@@ -223,7 +223,7 @@ function I(e) {
 }
 function T(e, t, n) {
     var i;
-    let { bgRadius: a, bgY: s, bgX: l, bgHeight: u, bgWidth: c, cutoutX: d, cutoutY: f, cutoutWidth: _, cutoutHeight: p, cutoutRadius: h, polygonScale: m, polygonOrigin: g, dotY: E, dotX: v, dotRadius: b } = e;
+    let { bgRadius: a, bgY: s, bgX: l, bgHeight: u, bgWidth: c, cutoutX: d, cutoutY: f, cutoutWidth: _, cutoutHeight: p, cutoutRadius: h, polygonScale: m, polygonOrigin: g, dotY: E, dotX: v, dotRadius: I } = e;
     return (0, r.jsxs)('mask', {
         id: n,
         children: [
@@ -262,7 +262,7 @@ function T(e, t, n) {
                 fill: 'black',
                 cx: v,
                 cy: E,
-                r: b
+                r: I
             })
         ]
     });
@@ -273,14 +273,14 @@ function S(e) {
         E = t === f.Skl.ONLINE && n,
         v = i.useMemo(
             () =>
-                I({
+                b({
                     size: a,
                     status: t,
                     isMobile: E
                 }),
             [a, t, E]
         ),
-        b = (0, u.useSpring)(
+        I = (0, u.useSpring)(
             {
                 config: h,
                 to: v
@@ -304,7 +304,7 @@ function S(e) {
         className: s()(p.mask, c),
         style: d,
         children: [
-            T(b, a, g),
+            T(I, a, g),
             (0, r.jsx)(o.animated.rect, {
                 x: 0,
                 y: 0,

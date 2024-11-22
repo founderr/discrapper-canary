@@ -3,7 +3,7 @@ n.d(t, {
         return h;
     },
     UV: function () {
-        return b;
+        return I;
     },
     WR: function () {
         return v;
@@ -15,7 +15,7 @@ n.d(t, {
         return m;
     },
     x8: function () {
-        return I;
+        return b;
     }
 }),
     n(47120);
@@ -126,14 +126,14 @@ let m = () => {
             }
         );
     },
-    b = () => {
+    I = () => {
         let e = (0, s.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription()),
             t = m(),
             n = null !== e && e.hasPremiumNitroMonthly,
             r = null != e && null != e.trialId;
         return n && !r && !t;
     },
-    I = (e) => {
+    b = (e) => {
         let t = (0, s.e7)([l.ZP], () => l.ZP.inReverseTrial()),
             n = (0, s.e7)([l.ZP], () => {
                 var e;

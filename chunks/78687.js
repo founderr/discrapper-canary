@@ -90,7 +90,7 @@ e.exports = function (e) {
                     t = {};
                 return (t.position = e.position), (t.width = l.offsetWidth), (t.height = l.offsetHeight), (t.top = e.top), (t.right = e.right), (t.bottom = e.bottom), (t.left = e.left), (t.widthCSS = e.width), (t.heightCSS = e.height), t;
             }
-            function b() {
+            function I() {
                 if ((g('storeStyle invoked.'), !i(l))) {
                     g('Aborting because element has been uninstalled');
                     return;
@@ -98,7 +98,7 @@ e.exports = function (e) {
                 var e = v();
                 i(l).style = e;
             }
-            function I(e, t, n) {
+            function b(e, t, n) {
                 (i(e).lastWidth = t), (i(e).lastHeight = n);
             }
             function T() {
@@ -162,8 +162,8 @@ e.exports = function (e) {
                 var m = u(['position: absolute', 'flex: none', 'overflow: hidden', 'z-index: -1', 'visibility: hidden'].concat(((n = -(1 + _)), (r = -(1 + p)), (a = -p), ['left: ' + (n = n ? n + 'px' : '0'), 'top: ' + (r = r ? r + 'px' : '0'), 'right: ' + (d = (d = -_) ? d + 'px' : '0'), 'bottom: ' + (a = a ? a + 'px' : '0')]))),
                     E = u(['position: absolute', 'flex: none', 'overflow: scroll', 'z-index: -1', 'visibility: hidden', 'width: 100%', 'height: 100%']),
                     v = u(['position: absolute', 'flex: none', 'overflow: scroll', 'z-index: -1', 'visibility: hidden', 'width: 100%', 'height: 100%']),
-                    b = u(['position: absolute', 'left: 0', 'top: 0']),
-                    I = u(['position: absolute', 'width: 200%', 'height: 200%']),
+                    I = u(['position: absolute', 'left: 0', 'top: 0']),
+                    b = u(['position: absolute', 'width: 200%', 'height: 200%']),
                     T = document.createElement('div'),
                     S = document.createElement('div'),
                     y = document.createElement('div'),
@@ -178,7 +178,7 @@ e.exports = function (e) {
                     var e = i(l);
                     e && e.onShrink ? e.onShrink() : g('Aborting shrink scroll handler: element has been uninstalled');
                 }
-                (T.dir = 'ltr'), (T.style.cssText = h), (T.className = o), (S.className = o), (S.style.cssText = m), (y.style.cssText = E), (A.style.cssText = b), (N.style.cssText = v), (R.style.cssText = I), y.appendChild(A), N.appendChild(R), S.appendChild(y), S.appendChild(N), T.appendChild(S), f.appendChild(T), c(y, 'scroll', O), c(N, 'scroll', D), (i(l).onExpandScroll = O), (i(l).onShrinkScroll = D);
+                (T.dir = 'ltr'), (T.style.cssText = h), (T.className = o), (S.className = o), (S.style.cssText = m), (y.style.cssText = E), (A.style.cssText = I), (N.style.cssText = v), (R.style.cssText = b), y.appendChild(A), N.appendChild(R), S.appendChild(y), S.appendChild(N), T.appendChild(S), f.appendChild(T), c(y, 'scroll', O), c(N, 'scroll', D), (i(l).onExpandScroll = O), (i(l).onShrinkScroll = D);
             }
             function O() {
                 function s(t, n, r) {
@@ -192,7 +192,7 @@ e.exports = function (e) {
                         c = l.offsetHeight,
                         d = o !== i(l).lastWidth || c !== i(l).lastHeight;
                     g('Storing current size', o, c),
-                        I(l, o, c),
+                        b(l, o, c),
                         n.add(0, function () {
                             if (!!d) {
                                 if (!i(l)) {
@@ -285,7 +285,7 @@ e.exports = function (e) {
                     return;
                 }
                 var e = i(l).style;
-                I(l, e.width, e.height), N(l, e.width, e.height);
+                b(l, e.width, e.height), N(l, e.width, e.height);
             }
             function L() {
                 d(l);
@@ -300,7 +300,7 @@ e.exports = function (e) {
                         height: e.height
                     }),
                     g('Element start size', i(l).startSize),
-                    n.add(0, b),
+                    n.add(0, I),
                     n.add(1, R),
                     n.add(2, O),
                     n.add(3, D),

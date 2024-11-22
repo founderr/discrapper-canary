@@ -2,8 +2,8 @@ var o = n(200651),
     r = n(192379),
     s = n(120356),
     a = n.n(s),
-    i = n(100621),
-    l = n(442837),
+    l = n(100621),
+    i = n(442837),
     c = n(950104),
     d = n(780384),
     u = n(481060),
@@ -17,12 +17,12 @@ var o = n(200651),
     v = n(497505),
     j = n(918701),
     _ = n(865364),
-    E = n(585500),
-    b = n(475595),
+    b = n(585500),
+    E = n(475595),
     N = n(566078),
-    B = n(340100),
-    S = n(611855),
-    T = n(644646),
+    T = n(340100),
+    B = n(611855),
+    S = n(644646),
     A = n(78826),
     y = n(670638),
     R = n(667105),
@@ -34,11 +34,11 @@ var o = n(200651),
 let M = r.forwardRef(function (e, t) {
     var n, s;
     let { children: _, className: M, collapsedHeight: W, expansionSpring: L, isExpanded: Q, isExpansionAnimationComplete: Z, onCtxMenuOpen: D, onCtxMenuClose: V, onCtxMenuSelect: H, quest: U, useReducedMotion: z } = e,
-        F = (0, l.e7)([C.Z], () => C.Z.isEnrolling(U.id), [U]),
+        F = (0, i.e7)([C.Z], () => C.Z.isEnrolling(U.id), [U]),
         G = (0, h.B6)(U.config.expiresAt),
         Y = N.r.build(U.config),
         K = (0, h.B6)(Y.rewardsExpireAt),
-        X = r.useMemo(() => (0, b.fh)(U, b.eC.HERO), [U]),
+        X = r.useMemo(() => (0, E.fh)(U, E.eC.HERO), [U]),
         J = (0, R.tP)(Y.application.id),
         $ = Y.features.has(w.S7.START_QUEST_CTA) ? f.jZ.START_QUEST : f.jZ.ACCEPT_QUEST,
         ee = Y.features.has(w.S7.START_QUEST_CTA) ? q.intl.string(q.t.E80Bdn) : q.intl.string(q.t.l7E81t),
@@ -62,12 +62,12 @@ let M = r.forwardRef(function (e, t) {
         er = Y.features.has(w.S7.POST_ENROLLMENT_CTA),
         es = (0, h.Rf)(U),
         ea = (0, h.Jf)(U),
-        ei = null != ea ? ea.progress > 0 : es.progressSeconds > 0,
-        el = (null === (n = U.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null,
+        el = null != ea ? ea.progress > 0 : es.progressSeconds > 0,
+        ei = (null === (n = U.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null,
         ec = (null === (s = U.userStatus) || void 0 === s ? void 0 : s.completedAt) != null,
         ed = r.useMemo(() => (0, j.Xv)(U.config), [U.config]),
         eu = Q && Z,
-        ep = (0, E.D)({
+        ep = (0, b.D)({
             quest: U,
             taskDetails: es,
             location: w.dr.QUESTS_BAR,
@@ -86,13 +86,13 @@ let M = r.forwardRef(function (e, t) {
                 '--custom-cta-color-active': (0, c.r5)(e, 0.35)
             };
         }, [U.config.colors.primary]);
-    return (0, o.jsxs)(i.animated.div, {
+    return (0, o.jsxs)(l.animated.div, {
         className: a()(M, P.contentExpanded, { [P.contentInteractable]: eu }),
         style: {
             backgroundColor: U.config.colors.secondary,
             transform: ec
                 ? void 0
-                : (0, i.to)(
+                : (0, l.to)(
                       [
                           L.to({
                               range: [0, 1],
@@ -110,7 +110,7 @@ let M = r.forwardRef(function (e, t) {
             _,
             (0, o.jsx)('div', {
                 'aria-hidden': !eu,
-                children: el
+                children: ei
                     ? (0, o.jsxs)('div', {
                           className: P.questAcceptedContent,
                           ref: t,
@@ -121,7 +121,7 @@ let M = r.forwardRef(function (e, t) {
                                       (0, o.jsxs)('div', {
                                           className: P.questAcceptedContentHeading,
                                           children: [
-                                              (0, o.jsx)(T.Z, {
+                                              (0, o.jsx)(S.Z, {
                                                   className: P.questProgressRewardTile,
                                                   learnMoreStyle: 'icon',
                                                   quest: U,
@@ -187,8 +187,8 @@ let M = r.forwardRef(function (e, t) {
                                         variant: 'text-xs/normal',
                                         children: ep
                                     }),
-                              (0, o.jsx)(B.Z, { quest: U }),
-                              !em && !ei && !J && er && (0, o.jsx)(O, { onClick: eu ? eo : void 0 })
+                              (0, o.jsx)(T.Z, { quest: U }),
+                              !em && !el && !J && er && (0, o.jsx)(O, { onClick: eu ? eo : void 0 })
                           ]
                       })
                     : (0, o.jsxs)('div', {
@@ -200,7 +200,7 @@ let M = r.forwardRef(function (e, t) {
                                       (0, o.jsxs)('div', {
                                           className: P.utils,
                                           children: [
-                                              (0, o.jsx)(S.Z, { color: 'always-white' }),
+                                              (0, o.jsx)(B.Z, { color: 'always-white' }),
                                               (0, o.jsx)(y.r, {
                                                   onOpen: D,
                                                   onClose: V,
@@ -226,7 +226,7 @@ let M = r.forwardRef(function (e, t) {
                                       (0, o.jsxs)('div', {
                                           className: P.details,
                                           children: [
-                                              (0, o.jsx)(T.Z, {
+                                              (0, o.jsx)(S.Z, {
                                                   className: P.rewardTile,
                                                   learnMoreStyle: 'text',
                                                   quest: U,

@@ -15,8 +15,8 @@ var r = n(200651),
     g = n(566078),
     E = n(78826),
     v = n(341907),
-    b = n(46140),
-    I = n(388032),
+    I = n(46140),
+    b = n(388032),
     T = n(141533);
 t.Z = function (e) {
     let t;
@@ -38,7 +38,7 @@ t.Z = function (e) {
             },
             [a.id, e]
         ),
-        R = (0, h.vI)(a, b.dr.QUESTS_BAR),
+        R = (0, h.vI)(a, I.dr.QUESTS_BAR),
         O = i.useRef(null),
         D = i.useRef(S),
         L = (0, p.Bg)(a.config);
@@ -126,7 +126,7 @@ t.Z = function (e) {
                               color: 'always-white',
                               variant: 'text-xs/normal',
                               className: T.questRewardTileDetailsLearnMore,
-                              children: I.intl.format(I.t.DYAleX, {})
+                              children: b.intl.format(b.t.DYAleX, {})
                           }),
                       'icon' === y &&
                           (0, r.jsx)('div', {

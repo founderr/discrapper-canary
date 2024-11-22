@@ -9,7 +9,7 @@ n.d(t, {
         return $;
     },
     BM: function () {
-        return eB;
+        return eG;
     },
     Bg: function () {
         return ei;
@@ -102,10 +102,10 @@ n.d(t, {
         return eD;
     },
     f2: function () {
-        return eb;
+        return eI;
     },
     fY: function () {
-        return eG;
+        return eB;
     },
     gI: function () {
         return eZ;
@@ -114,7 +114,7 @@ n.d(t, {
         return H;
     },
     iQ: function () {
-        return G;
+        return B;
     },
     il: function () {
         return eO;
@@ -174,7 +174,7 @@ n.d(t, {
         return eg;
     },
     zi: function () {
-        return B;
+        return G;
     }
 }),
     n(627341),
@@ -202,9 +202,9 @@ var p = n(572004),
     g = n(823379),
     E = n(49012),
     v = n(960048),
-    b = n(617136);
+    I = n(617136);
 n(272008);
-var I = n(569984),
+var b = n(569984),
     T = n(497505),
     S = n(566078),
     y = n(312046),
@@ -231,7 +231,7 @@ function x(e, t) {
     return D(e) || L(e) ? n === r : null != e.application_id && M(e.application_id, t);
 }
 function w(e, t) {
-    for (let [n, r] of e) if (x(t, r) && !B(r)) return r;
+    for (let [n, r] of e) if (x(t, r) && !G(r)) return r;
 }
 function M(e, t) {
     return null != S.r.build(t.config).application.ids.find((t) => t === e);
@@ -239,7 +239,7 @@ function M(e, t) {
 function P(e, t) {
     let n;
     for (let [r, i] of e)
-        if (M(t, i) && !B(i)) {
+        if (M(t, i) && !G(i)) {
             n = i;
             break;
         }
@@ -248,16 +248,16 @@ function P(e, t) {
 function k(e, t) {
     let n = P(e, t.applicationId);
     if (null != n) return n;
-    for (let [t, n] of e) if (!B(n) && em(n)) return n;
+    for (let [t, n] of e) if (!G(n) && em(n)) return n;
 }
 function U(e, t) {
-    return Array.from(e.values()).find((e) => M(t, e) && !B(e) && ef({ quest: e }));
-}
-function B(e) {
-    return new Date(e.config.expiresAt).valueOf() <= Date.now();
+    return Array.from(e.values()).find((e) => M(t, e) && !G(e) && ef({ quest: e }));
 }
 function G(e) {
-    if (!B(e)) return !1;
+    return new Date(e.config.expiresAt).valueOf() <= Date.now();
+}
+function B(e) {
+    if (!G(e)) return !1;
     let t = Date.now() - 2592000000,
         n = new Date(e.config.expiresAt).valueOf();
     return null != e.config.expiresAt && !(n <= t) && !0;
@@ -397,10 +397,10 @@ function q(e, t, n) {
     let r = t.get(n);
     if (null == r) return;
     let i = e.get(r.id);
-    if (null != i && !B(i)) return i;
+    if (null != i && !G(i)) return i;
 }
 function Q(e, t) {
-    for (let [n, r] of e) if (!B(r) && r.targetedContent.includes(t)) return r;
+    for (let [n, r] of e) if (!G(r) && r.targetedContent.includes(t)) return r;
     return null;
 }
 function X(e, t) {
@@ -537,7 +537,7 @@ function ev(e, t) {
     (0, E.q)({
         href: n,
         onConfirm: () => {
-            (0, b._3)({
+            (0, I._3)({
                 questId: e.id,
                 questContent: t.content,
                 questContentCTA: t.ctaContent,
@@ -547,8 +547,8 @@ function ev(e, t) {
         }
     });
 }
-let eb = (e, t) => {
-        (0, b._3)({
+let eI = (e, t) => {
+        (0, I._3)({
             questId: e,
             questContent: t.content,
             questContentCTA: t.ctaContent,
@@ -556,8 +556,8 @@ let eb = (e, t) => {
         }),
             (0, p.JG)(z(e));
     },
-    eI = (e, t) => (e > 0 ? (0, i.floor)(Math.min(t / e, 1), 4) : 0),
-    eT = (e) => eU(e) || I.Z.isProgressingOnDesktop(e.id),
+    eb = (e, t) => (e > 0 ? (0, i.floor)(Math.min(t / e, 1), 4) : 0),
+    eT = (e) => eU(e) || b.Z.isProgressingOnDesktop(e.id),
     eS = (e, t) => {
         var n, r, a, s;
         let o = null === (s = e.userStatus) || void 0 === s ? void 0 : null === (a = s.progress) || void 0 === a ? void 0 : null === (r = a[t.eventName]) || void 0 === r ? void 0 : null === (n = r.heartbeat) || void 0 === n ? void 0 : n.lastBeatAt;
@@ -570,7 +570,7 @@ let eb = (e, t) => {
         let o = null === (r = e.userStatus) || void 0 === r ? void 0 : null === (n = r.progress) || void 0 === n ? void 0 : n[t.eventName],
             l = null !== (s = null !== (a = null == o ? void 0 : o.value) && void 0 !== a ? a : null === (i = e.userStatus) || void 0 === i ? void 0 : i.streamProgressSeconds) && void 0 !== s ? s : 0;
         if (eM(e)) {
-            let n = I.Z.getOptimisticProgress(e.id, t.eventName);
+            let n = b.Z.getOptimisticProgress(e.id, t.eventName);
             return null == n || n < l ? l : n;
         }
         return l + eS(e, t);
@@ -596,7 +596,7 @@ let eb = (e, t) => {
             progressSeconds: f,
             targetSeconds: d,
             targetMinutes: Math.round(d / h.Z.Seconds.MINUTE),
-            percentComplete: eI(d, f),
+            percentComplete: eb(d, f),
             taskType: l
         };
     },
@@ -671,7 +671,7 @@ function eD(e) {
     let a = Object.keys(e.config.taskConfig.tasks)[0],
         s = e.config.taskConfig.tasks[a],
         o = null !== (i = null === (r = e.userStatus) || void 0 === r ? void 0 : null === (n = r.progress) || void 0 === n ? void 0 : null === (t = n[a]) || void 0 === t ? void 0 : t.value) && void 0 !== i ? i : 0,
-        l = eI(s.target, o);
+        l = eb(s.target, o);
     return {
         title: s.title,
         description: s.description,
@@ -703,12 +703,12 @@ let ek = (e, t) => {
 function eU(e) {
     return null != e.userStatus && (ek(e.userStatus, s.X.PLAY_ON_XBOX) || ek(e.userStatus, s.X.PLAY_ON_PLAYSTATION));
 }
-function eB(e) {
+function eG(e) {
     return !!eM(e) && (0, n(952265).nf)(ez(e.id));
 }
-function eG(e, t) {
+function eB(e, t) {
     let { platformType: n, quest: r } = e;
-    (0, b._3)({
+    (0, I._3)({
         questId: r.id,
         questContent: t.content,
         questContentCTA: t.ctaContent
@@ -720,7 +720,7 @@ function eG(e, t) {
 }
 function eZ(e, t) {
     let { quest: n } = e;
-    (0, b._3)({
+    (0, I._3)({
         questId: n.id,
         questContent: t.content,
         questContentPosition: t.position,
@@ -749,7 +749,7 @@ function eZ(e, t) {
 }
 function eF(e, t) {
     let { quest: n } = e;
-    (0, b._3)({
+    (0, I._3)({
         questId: n.id,
         questContent: t.content,
         questContentPosition: t.position,

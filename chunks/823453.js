@@ -16,8 +16,8 @@ var r = n(200651),
     g = n(451478),
     E = n(597952),
     v = n(252618),
-    b = n(80006),
-    I = n(587061),
+    I = n(80006),
+    b = n(587061),
     T = n(392358),
     S = n(981631);
 n(81693);
@@ -34,11 +34,11 @@ t.Z = i.memo(function (e) {
                     n = (0, c.e7)([g.Z], () => g.Z.isFocused(), []),
                     { theme: a, density: o } = (0, f.useThemeContext)(),
                     { reducedMotion: d } = i.useContext(f.AccessibilityPreferencesContext),
-                    { accessibilitySettings: _, appWrapperClassName: v } = (0, b.I)(),
+                    { accessibilitySettings: _, appWrapperClassName: v } = (0, I.I)(),
                     { fontScale: S, fontScaleClass: A, saturation: N, desaturateUserColors: C, useForcedColors: R, systemForcedColors: O } = _,
                     D = (0, l.TH)(),
                     L = i.useMemo(() => y.has(D.pathname), [D.pathname]);
-                (0, I.Z)(window, L);
+                (0, b.Z)(window, L);
                 let x = (0, T.Z)(window, __OVERLAY__ || n),
                     w = (0, c.e7)([h.Z], () => h.Z.sidebarWidth),
                     M = (0, f.useRedesignIconContext)().enabled,

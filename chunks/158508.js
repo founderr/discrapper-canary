@@ -24,7 +24,7 @@ function f(e) {
             },
             [g]
         ),
-        { isIgnored: v, isBlocked: b } = (0, i.cj)(
+        { isIgnored: v, isBlocked: I } = (0, i.cj)(
             [u.Z],
             () => ({
                 isIgnored: u.Z.isIgnored(g),
@@ -32,7 +32,7 @@ function f(e) {
             }),
             [g]
         );
-    return !(0, o.Do)({ location: 'use-block-user-item-web' }) || E || b
+    return !(0, o.Do)({ location: 'use-block-user-item-web' }) || E || I
         ? null
         : (0, r.jsx)(a.MenuItem, {
               id: 'ignore',

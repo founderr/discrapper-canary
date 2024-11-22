@@ -9,7 +9,7 @@ n.d(t, {
         return A;
     },
     yn: function () {
-        return b;
+        return I;
     }
 }),
     n(47120);
@@ -44,7 +44,7 @@ function v(e) {
         }, [])
     ];
 }
-function b(e) {
+function I(e) {
     let [t, n] = i.useState(() => new Set(null != e ? [e] : void 0));
     return [
         t,
@@ -53,17 +53,17 @@ function b(e) {
         }, [])
     ];
 }
-function I(e) {
+function b(e) {
     return String(e);
 }
 let T = i.createContext({
     activeDescendant: null,
     selected: new Set(),
     setSelected: () => null,
-    itemToString: I
+    itemToString: b
 });
 function S(e) {
-    let { placeholder: t, children: n, value: a, onChange: u, className: c, listClassName: E, 'aria-label': v, multiSelect: b = !1, autoFocus: S = !1, maxVisibleItems: y = 5, itemToString: A = I, showScrollbar: N = !1 } = e,
+    let { placeholder: t, children: n, value: a, onChange: u, className: c, listClassName: E, 'aria-label': v, multiSelect: I = !1, autoFocus: S = !1, maxVisibleItems: y = 5, itemToString: A = b, showScrollbar: N = !1 } = e,
         [C, R] = i.useState(''),
         [O] = i.useState(!0),
         [D, L] = i.useState(null),
@@ -91,7 +91,7 @@ function S(e) {
                 }),
             []
         ),
-        B = i.useCallback(
+        G = i.useCallback(
             () =>
                 new Promise((e) => {
                     let t = w.current;
@@ -100,7 +100,7 @@ function S(e) {
                 }),
             []
         ),
-        G = i.useCallback((e, t) => {
+        B = i.useCallback((e, t) => {
             L(t);
             let n = document.querySelector(e),
                 r = w.current;
@@ -111,8 +111,8 @@ function S(e) {
             isEnabled: !0,
             useVirtualFocus: !0,
             scrollToStart: U,
-            scrollToEnd: B,
-            setFocus: G
+            scrollToEnd: G,
+            setFocus: B
         }),
         F = N ? d.Tv : d.lW;
     return (0, r.jsx)(l.bG, {
@@ -173,7 +173,7 @@ function S(e) {
                                           children: (0, r.jsx)(F, {
                                               ...o,
                                               style: { maxHeight: 46 * y },
-                                              'aria-multiselectable': b,
+                                              'aria-multiselectable': I,
                                               id: x,
                                               ref: w,
                                               className: s()(m.list, E, { [m.scroller]: N }),
@@ -200,8 +200,8 @@ function A(e) {
     let { value: n, children: a, disabled: o = !1, selectedColor: u = E.STANDARD, ...d } = e,
         { activeDescendant: f, selected: _, setSelected: p, itemToString: h } = i.useContext(T),
         v = h(n),
-        b = f === v,
-        I = null !== (t = null == d ? void 0 : d.selected) && void 0 !== t ? t : _.has(n),
+        I = f === v,
+        b = null !== (t = null == d ? void 0 : d.selected) && void 0 !== t ? t : _.has(n),
         S = (0, l.JA)(v);
     return (0, r.jsx)(c.P, {
         tag: 'li',
@@ -209,13 +209,13 @@ function A(e) {
         onClick: () => (o ? null : p(n)),
         [g]: n,
         className: s()(m.item, {
-            [m.focused]: b,
-            [u]: I,
+            [m.focused]: I,
+            [u]: b,
             [m.disabled]: o
         }),
         ...S,
         role: 'option',
-        'aria-selected': I,
+        'aria-selected': b,
         'aria-disabled': o,
         children: (0, r.jsx)(y.Provider, {
             value: n,

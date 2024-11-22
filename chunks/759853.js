@@ -3,8 +3,8 @@ var o = n(200651),
     r = n(192379),
     s = n(120356),
     a = n.n(s),
-    i = n(703533),
-    l = n(995295),
+    l = n(703533),
+    i = n(995295),
     c = n(100621),
     d = n(442837),
     u = n(110924),
@@ -18,33 +18,33 @@ let C = ['#51BC9D'];
 t.Z = (e) => {
     var t;
     let { expansionSpring: n, overlayRef: s, quest: v, progressBarRef: j, isExpanded: _ } = e,
-        { completionSpring: E, startCompletionAnimation: b } = (0, x.G)(),
+        { completionSpring: b, startCompletionAnimation: E } = (0, x.G)(),
         N = (null === (t = v.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
-        B = r.useRef(!1),
-        S = (0, d.e7)([p.Z], () => p.Z.useReducedMotion),
-        T = r.useRef(null),
+        T = r.useRef(!1),
+        B = (0, d.e7)([p.Z], () => p.Z.useReducedMotion),
+        S = r.useRef(null),
         A = (0, d.e7)([m.Z], () => m.Z.hasLayers()),
         y = (0, u.Z)(A),
         [R, w] = r.useState(null),
         [I, k] = r.useState(null),
         q = r.useRef(
-            new i.qA({
+            new l.qA({
                 gravity: 0,
                 wind: 0
             })
         ),
-        P = (0, i.uR)(R, I),
+        P = (0, l.uR)(R, I),
         M = r.useCallback(() => {
-            if (S) return;
+            if (B) return;
             let e = j.current,
-                t = T.current;
+                t = S.current;
             if (null != t && null != e && P.isReady) {
                 var n, o, r, s;
-                let { x: a, y: i } = e.getBoundingClientRect(),
-                    { x: l, y: c } = t.getBoundingClientRect();
+                let { x: a, y: l } = e.getBoundingClientRect(),
+                    { x: i, y: c } = t.getBoundingClientRect();
                 P.createMultipleConfetti(
-                    ((n = a - l),
-                    (o = i - c),
+                    ((n = a - i),
+                    (o = l - c),
                     (r = e.clientHeight),
                     (s = e.clientWidth),
                     {
@@ -89,36 +89,36 @@ t.Z = (e) => {
                     100
                 );
             }
-        }, [j, T, P, S]),
+        }, [j, S, P, B]),
         O = (0, u.Z)(_);
     return (r.useEffect(() => {
-        N && _ && !O && (b(), M());
-    }, [_, N, b, M, O]),
+        N && _ && !O && (E(), M());
+    }, [_, N, E, M, O]),
     r.useEffect(() => {
         N &&
             !A &&
             y &&
             setTimeout(() => {
-                b(), M();
+                E(), M();
             }, 200);
-    }, [N, y, A, b, M]),
+    }, [N, y, A, E, M]),
     r.useEffect(() => {
-        if (!!P.isReady) !B.current && N && (b(), M()), (B.current = N);
-    }, [N, B, M, b, P]),
-    S)
+        if (!!P.isReady) !T.current && N && (E(), M()), (T.current = N);
+    }, [N, T, M, E, P]),
+    B)
         ? null
         : (0, o.jsxs)('div', {
               className: g.wrapper,
               'aria-hidden': 'true',
-              ref: T,
+              ref: S,
               children: [
                   (0, o.jsx)(c.animated.div, {
                       className: g.background,
-                      style: { opacity: E }
+                      style: { opacity: b }
                   }),
                   (0, o.jsx)(c.animated.div, {
                       className: a()(g.borders, g.bordersTopLeft),
-                      style: { opacity: E }
+                      style: { opacity: b }
                   }),
                   (0, o.jsxs)(c.animated.div, {
                       className: g.confettiWrapper,
@@ -131,12 +131,12 @@ t.Z = (e) => {
                               .to((e) => 'translateY('.concat(e, 'px)'))
                       },
                       children: [
-                          (0, o.jsx)(i.O_, {
+                          (0, o.jsx)(l.O_, {
                               ref: w,
                               className: g.confetti,
                               environment: q.current
                           }),
-                          (0, o.jsx)(i.Ji, {
+                          (0, o.jsx)(l.Ji, {
                               ref: k,
                               sprites: [h],
                               colors: C,
@@ -144,10 +144,10 @@ t.Z = (e) => {
                               spriteHeight: f.Ko
                           }),
                           null != s.current &&
-                              (0, l.createPortal)(
+                              (0, i.createPortal)(
                                   (0, o.jsx)(c.animated.div, {
                                       className: a()(g.borders, g.bordersBottom),
-                                      style: { opacity: E }
+                                      style: { opacity: b }
                                   }),
                                   s.current
                               )

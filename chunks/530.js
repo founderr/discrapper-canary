@@ -16,17 +16,17 @@ var i = n(120356),
     f = n(388032),
     _ = n(543337);
 function p(e) {
-    let { user: t, profileType: n, usernameIcon: i, tags: p, nickname: h, nicknameIcons: m, pronouns: g, className: E, isTryItOut: v, onOpenProfile: b, nicknameVariant: I = 'heading-lg/bold', pronounsVariant: T = 'text-sm/medium' } = e,
+    let { user: t, profileType: n, usernameIcon: i, tags: p, nickname: h, nicknameIcons: m, pronouns: g, className: E, isTryItOut: v, onOpenProfile: I, nicknameVariant: b = 'heading-lg/bold', pronounsVariant: T = 'text-sm/medium' } = e,
         S = {
             [_.biteSize]: n === d.y0.BITE_SIZE,
             [_.fullSize]: n === d.y0.FULL_SIZE,
             [_.panel]: n === d.y0.PANEL
         },
         y = (e) =>
-            null == b
+            null == I
                 ? e
                 : (0, r.jsx)(s.Clickable, {
-                      onClick: b,
+                      onClick: I,
                       className: _.clickableUsername,
                       children: e
                   }),
@@ -41,7 +41,7 @@ function p(e) {
                     y(
                         (0, r.jsx)(s.Heading, {
                             className: a()(_.nickname, S),
-                            variant: I,
+                            variant: b,
                             children: h
                         })
                     ),

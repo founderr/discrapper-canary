@@ -20,8 +20,8 @@ var r = n(200651),
     g = n(347475),
     E = n(592125),
     v = n(271383),
-    b = n(430824),
-    I = n(699516),
+    I = n(430824),
+    b = n(699516),
     T = n(594174),
     S = n(5192),
     y = n(51144),
@@ -76,27 +76,27 @@ function C(e) {
                           });
                   },
         P = y.ZP.useName(L),
-        k = (0, l.e7)([E.Z, v.ZP, I.Z], () => S.ZP.getNickname(w, a, L)),
-        U = b.Z.getGuild(w),
-        B = (0, _.Ib)(U, x) && i === A.fL ? A.jM : null;
+        k = (0, l.e7)([E.Z, v.ZP, b.Z], () => S.ZP.getNickname(w, a, L)),
+        U = I.Z.getGuild(w),
+        G = (0, _.Ib)(U, x) && i === A.fL ? A.jM : null;
     if (null == L)
         return (0, r.jsx)(N, {
             userId: p,
             className: t,
             children: C
         });
-    let G = (e) =>
+    let B = (e) =>
         (0, r.jsx)(h.Z, {
             className: t,
             onContextMenu: M,
-            color: B,
+            color: G,
             ...e,
             children: '@'.concat(null != k ? k : P)
         });
     return R
         ? (0, r.jsx)(f.Gt, {
               value: D,
-              children: G()
+              children: B()
           })
         : (0, r.jsx)(f.Gt, {
               value: D,
@@ -119,7 +119,7 @@ function C(e) {
                       })
                   ),
                   position: o.tq ? 'top' : 'right',
-                  children: (e) => G(e)
+                  children: (e) => B(e)
               })
           });
 }

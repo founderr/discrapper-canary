@@ -16,8 +16,8 @@ var r,
     g = n(592125),
     E = n(131951),
     v = n(19780),
-    b = n(936349),
-    I = n(944486),
+    I = n(936349),
+    b = n(944486),
     T = n(885110),
     S = n(959457),
     y = n(358085),
@@ -37,7 +37,7 @@ let x = new f.Z('ConnectionStore'),
 async function U(e) {
     (w = Date.now()), (M = e.sessionId), N.RR.handleConnectionOpen();
     let t = {},
-        n = I.Z.getVoiceChannelId();
+        n = b.Z.getVoiceChannelId();
     if (null != n) {
         var r, i, a, s, o, l, u, c;
         if ((null === (o = window) || void 0 === o ? void 0 : null === (s = o.performance) || void 0 === s ? void 0 : null === (a = s.getEntriesByType) || void 0 === a ? void 0 : null === (i = a.call(s, 'navigation')) || void 0 === i ? void 0 : null === (r = i[0]) || void 0 === r ? void 0 : r.type) === 'reload' || (null === (l = await (null == L ? void 0 : null === (c = L.processUtils) || void 0 === c ? void 0 : null === (u = c.getLastCrash) || void 0 === u ? void 0 : u.call(c))) || void 0 === l ? void 0 : l.rendererCrashReason) != null || !P) {
@@ -51,10 +51,10 @@ async function U(e) {
     }
     N.GC.update(t, !0), (P = !1);
 }
-function B() {
+function G() {
     N.GC.update();
 }
-function G() {
+function B() {
     return N.GC.update(), !1;
 }
 function Z() {
@@ -65,7 +65,7 @@ function F(e) {
 }
 class V extends (r = u.ZP.Store) {
     initialize() {
-        this.waitFor(h.default, I.Z, g.Z, m.Z, p.Z), this.syncWith([E.Z], G), this.syncWith([T.Z], Z);
+        this.waitFor(h.default, b.Z, g.Z, m.Z, p.Z), this.syncWith([E.Z], B), this.syncWith([T.Z], Z);
     }
     getSocket() {
         return N.Wb;
@@ -216,13 +216,13 @@ class V extends (r = u.ZP.Store) {
                 !1
             );
         },
-        STREAM_CREATE: B,
+        STREAM_CREATE: G,
         STREAM_START: function (e) {
             let { streamType: t, guildId: n, channelId: r } = e;
             if (N.Wb.isSessionEstablished()) {
                 var i, a;
                 let e = null != n ? (null === (i = g.Z.getChannel(r)) || void 0 === i ? void 0 : i.rtcRegion) : null === (a = m.Z.getCall(r)) || void 0 === a ? void 0 : a.region;
-                N.Wb.streamCreate(t, n, r, null != e ? e : b.Z.getPreferredRegion());
+                N.Wb.streamCreate(t, n, r, null != e ? e : I.Z.getPreferredRegion());
             }
             return !1;
         },
@@ -245,7 +245,7 @@ class V extends (r = u.ZP.Store) {
         },
         STREAM_STOP: function (e) {
             let { streamKey: t } = e;
-            return F(t), B(), !1;
+            return F(t), G(), !1;
         },
         STREAM_SET_PAUSED: function (e) {
             let { streamKey: t, paused: n } = e;
@@ -269,10 +269,10 @@ class V extends (r = u.ZP.Store) {
         RESET_SOCKET: function (e) {
             if (N.Wb.connectionState !== A.Z.WILL_RECONNECT) N.Wb.resetSocketOnError(e.args);
         },
-        CLIPS_SETTINGS_UPDATE: B,
-        RUNNING_GAMES_CHANGE: B,
+        CLIPS_SETTINGS_UPDATE: G,
+        RUNNING_GAMES_CHANGE: G,
         USER_SETTINGS_PROTO_UPDATE: function (e) {
             var t;
-            e.settings.type === D.yP.PRELOADED_USER_SETTINGS && (null === (t = e.settings.proto.clips) || void 0 === t ? void 0 : t.allowVoiceRecording) != null && B();
+            e.settings.type === D.yP.PRELOADED_USER_SETTINGS && (null === (t = e.settings.proto.clips) || void 0 === t ? void 0 : t.allowVoiceRecording) != null && G();
         }
     }));

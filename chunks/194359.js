@@ -16,8 +16,8 @@ var r,
     g = n(239091),
     E = n(981631),
     v = n(858380),
-    b = n(388032);
-function I(e) {
+    I = n(388032);
+function b(e) {
     (0, g.Zy)(), m.Z.show(e);
 }
 function T(e, t, n) {
@@ -26,18 +26,18 @@ function T(e, t, n) {
     switch (r) {
         case 429:
             0 === t &&
-                I({
-                    title: b.intl.string(b.t['3D5eo6']),
-                    body: b.intl.string(b.t.TuJriI),
-                    confirmText: b.intl.string(b.t.DppXIy)
+                b({
+                    title: I.intl.string(I.t['3D5eo6']),
+                    body: I.intl.string(I.t.TuJriI),
+                    confirmText: I.intl.string(I.t.DppXIy)
                 });
             break;
         case 403:
             if (a === E.evJ.EMAIL_VERIFICATION_REQUIRED) {
-                I({
-                    title: b.intl.string(b.t.Gqf33N),
-                    body: b.intl.string(b.t.GHOBd3),
-                    confirmText: b.intl.string(b.t.HbTSEx),
+                b({
+                    title: I.intl.string(I.t.Gqf33N),
+                    body: I.intl.string(I.t.GHOBd3),
+                    confirmText: I.intl.string(I.t.HbTSEx),
                     onConfirm: () => {
                         l.j();
                     }
@@ -48,11 +48,11 @@ function T(e, t, n) {
             if (a === E.evJ.USER_QUARANTINED) (0, g.Zy)(), (0, c.default)();
             else if ((0, f.b)(r, a)) break;
             else if (0 === t) {
-                let e = null != n ? (0, p.NF)(a || 0, n) : b.intl.string(b.t.paDJBA);
-                I({
-                    title: b.intl.string(b.t['6moJ8v']),
+                let e = null != n ? (0, p.NF)(a || 0, n) : I.intl.string(I.t.paDJBA);
+                b({
+                    title: I.intl.string(I.t['6moJ8v']),
                     body: e,
-                    confirmText: b.intl.string(b.t.BddRzc)
+                    confirmText: I.intl.string(I.t.BddRzc)
                 });
             }
     }
@@ -105,20 +105,20 @@ let S = {
     },
     acceptFriendRequest: (e) =>
         S.addRelationship(e, function () {
-            s.uv.announce(b.intl.string(b.t['3goNa2']));
+            s.uv.announce(I.intl.string(I.t['3goNa2']));
         }),
     cancelFriendRequest: (e, t) =>
         S.removeRelationship(e, t, function () {
-            s.uv.announce(b.intl.string(b.t.pLUaxc));
+            s.uv.announce(I.intl.string(I.t.pLUaxc));
         }),
     removeFriend(e, t) {
         S.removeRelationship(e, t, function () {
-            s.uv.announce(b.intl.string(b.t.vGSLa2));
+            s.uv.announce(I.intl.string(I.t.vGSLa2));
         });
     },
     unblockUser: (e, t) =>
         S.removeRelationship(e, t, function () {
-            s.uv.announce(b.intl.string(b.t['9t1au7']));
+            s.uv.announce(I.intl.string(I.t['9t1au7']));
         }),
     removeRelationship: (e, t, n) =>
         a.tn
@@ -132,7 +132,7 @@ let S = {
                 null == n || n();
             })
             .catch(() => {
-                s.uv.announce(b.intl.string(b.t.n6Jo3N));
+                s.uv.announce(I.intl.string(I.t.n6Jo3N));
             }),
     updateRelationship: (e, t) =>
         a.tn.patch({
@@ -170,7 +170,7 @@ let S = {
                 o.Z.dispatch({ type: 'RELATIONSHIP_PENDING_INCOMING_REMOVED' });
             })
             .catch(() => {
-                s.uv.announce(b.intl.string(b.t.n6Jo3N));
+                s.uv.announce(I.intl.string(I.t.n6Jo3N));
             }),
     clearPendingSpamAndIgnored: () =>
         a.tn
@@ -186,7 +186,7 @@ let S = {
                 o.Z.dispatch({ type: 'RELATIONSHIP_PENDING_INCOMING_REMOVED' });
             })
             .catch(() => {
-                s.uv.announce(b.intl.string(b.t.n6Jo3N));
+                s.uv.announce(I.intl.string(I.t.n6Jo3N));
             }),
     ignoreUser: (e, t, n) =>
         a.tn

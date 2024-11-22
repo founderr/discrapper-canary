@@ -1,10 +1,10 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return b;
+            return E;
         },
         openConsoleConnectionErrorsModal: function () {
-            return B;
+            return T;
         }
     }),
     n(47120);
@@ -12,8 +12,8 @@ var o = n(200651),
     r = n(192379),
     s = n(120356),
     a = n.n(s),
-    i = n(442837),
-    l = n(780384),
+    l = n(442837),
+    i = n(780384),
     c = n(481060),
     d = n(607070),
     u = n(600164),
@@ -27,34 +27,34 @@ var o = n(200651),
     v = n(981631),
     j = n(388032),
     _ = n(24444),
-    E = n(708901);
-function b(e) {
-    let { questId: t, errorHints: n, transitionState: s, onClose: b } = e,
-        B = (0, x.B4)(t);
-    null == B && b();
-    let [S, T] = (0, r.useState)(n),
+    b = n(708901);
+function E(e) {
+    let { questId: t, errorHints: n, transitionState: s, onClose: E } = e,
+        T = (0, x.B4)(t);
+    null == T && E();
+    let [B, S] = (0, r.useState)(n),
         A = (0, x.KX)(),
-        y = (0, i.e7)([d.Z], () => d.Z.useReducedMotion),
+        y = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         R = (0, C.g2)({
             useReducedMotion: y,
             className: _.colorTransition
         }),
-        w = S.filter((e) => ['xbox', 'playstation'].includes(e.connected_account_type)),
-        I = (0, g.Bz)(B),
-        k = (0, i.e7)([p.Z], () => p.Z.getState().theme),
-        q = (0, l.wj)(k) ? v.BRd.DARK : v.BRd.LIGHT,
+        w = B.filter((e) => ['xbox', 'playstation'].includes(e.connected_account_type)),
+        I = (0, g.Bz)(T),
+        k = (0, l.e7)([p.Z], () => p.Z.getState().theme),
+        q = (0, i.wj)(k) ? v.BRd.DARK : v.BRd.LIGHT,
         { startConsoleQuest: P, startingConsoleQuest: M } = (0, x.GI)({
-            questId: B.id,
+            questId: T.id,
             beforeRequest: () => {
                 R.startAnimation(),
                     (0, m._3)({
-                        questId: B.id,
+                        questId: T.id,
                         questContent: f.jn.CONNECTIONS_MODAL,
                         questContentCTA: m.jZ.DEFIBRILLATOR
                     });
             },
             afterRequest: (e) => {
-                R.stopAnimation(), T(e);
+                R.stopAnimation(), S(e);
             }
         });
     return (0, o.jsxs)(c.ModalRoot, {
@@ -75,12 +75,12 @@ function b(e) {
                                 children: (0, o.jsx)('img', {
                                     className: _.icon,
                                     alt: '',
-                                    src: E
+                                    src: b
                                 })
                             }),
                             (0, o.jsx)(c.ModalCloseButton, {
                                 className: _.closeBtn,
-                                onClick: b
+                                onClick: E
                             })
                         ]
                     }),
@@ -135,14 +135,14 @@ function b(e) {
                                 errors: I ? void 0 : w.map((e) => e.message),
                                 gameTile: I
                                     ? (0, o.jsx)(c.Tooltip, {
-                                          'aria-label': B.config.messages.gameTitle,
+                                          'aria-label': T.config.messages.gameTitle,
                                           text: () =>
                                               (0, o.jsxs)('div', {
                                                   className: _.tooltip,
                                                   children: [
                                                       (0, o.jsx)(c.Text, {
                                                           variant: 'text-sm/medium',
-                                                          children: B.config.messages.gameTitle
+                                                          children: T.config.messages.gameTitle
                                                       }),
                                                       (0, o.jsx)(c.Text, {
                                                           variant: 'text-xs/normal',
@@ -155,8 +155,8 @@ function b(e) {
                                               (0, o.jsx)('img', {
                                                   ...e,
                                                   className: _.gameTile,
-                                                  alt: B.config.messages.gameTitle,
-                                                  src: (0, h.fh)(B, h.eC.GAME_TILE, q).url
+                                                  alt: T.config.messages.gameTitle,
+                                                  src: (0, h.fh)(T, h.eC.GAME_TILE, q).url
                                               })
                                       })
                                     : null
@@ -170,7 +170,7 @@ function b(e) {
                 children: [
                     (0, o.jsx)(c.Button, {
                         size: c.ButtonSizes.MIN,
-                        onClick: b,
+                        onClick: E,
                         className: _.footerCloseButton,
                         children: j.intl.string(j.t.cpT0Cg)
                     }),
@@ -178,9 +178,9 @@ function b(e) {
                         look: c.ButtonLooks.LINK,
                         color: c.ButtonColors.PRIMARY,
                         onClick: () => {
-                            b(),
+                            E(),
                                 (0, g.V$)(
-                                    { quest: B },
+                                    { quest: T },
                                     {
                                         content: f.jn.CONNECTIONS_MODAL,
                                         ctaContent: m.jZ.VIEW_CONSOLE_CONNECTIONS_LINK
@@ -196,13 +196,13 @@ function b(e) {
 }
 function N(e) {
     let { icon: t, text: n, errors: r = [], gameTile: s } = e,
-        i = r.length > 0,
-        l = i ? c.ConnectionUnknownIcon : c.ConnectionFineIcon;
+        l = r.length > 0,
+        i = l ? c.ConnectionUnknownIcon : c.ConnectionFineIcon;
     return (0, o.jsxs)('div', {
         className: _.connectionRow,
         children: [
             (0, o.jsxs)('div', {
-                className: a()(_.connectionRowHeader, { [_.connectionRowHeaderError]: i }),
+                className: a()(_.connectionRowHeader, { [_.connectionRowHeaderError]: l }),
                 children: [
                     (0, o.jsxs)('div', {
                         className: _.connectionRowHeaderContent,
@@ -219,12 +219,12 @@ function N(e) {
                         className: _.connectionRowHeaderContent,
                         children: [
                             s,
-                            (0, o.jsx)(l, {
+                            (0, o.jsx)(i, {
                                 color: 'currentColor',
                                 size: 'sm',
                                 className: a()({
-                                    [_.success]: !i,
-                                    [_.error]: i
+                                    [_.success]: !l,
+                                    [_.error]: l
                                 })
                             })
                         ]
@@ -258,7 +258,7 @@ function N(e) {
         ]
     });
 }
-function B(e) {
+function T(e) {
     (0, c.openModalLazy)(async () => {
         let { default: t } = await Promise.resolve().then(n.bind(n, 623249));
         return (n) =>

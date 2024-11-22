@@ -15,8 +15,8 @@ var r = 'function' == typeof Map && Map.prototype,
     g = String.prototype.match,
     E = String.prototype.slice,
     v = String.prototype.replace,
-    b = String.prototype.toUpperCase,
-    I = String.prototype.toLowerCase,
+    I = String.prototype.toUpperCase,
+    b = String.prototype.toLowerCase,
     T = RegExp.prototype.test,
     S = Array.prototype.concat,
     y = Array.prototype.join,
@@ -51,7 +51,7 @@ function M(e, t) {
 var P = n(771673),
     k = P.custom,
     U = F(k) ? k : null;
-function B(e, t, n) {
+function G(e, t, n) {
     var r = 'double' === (n.quoteStyle || t) ? '"' : "'";
     return r + e + r;
 }
@@ -63,7 +63,7 @@ e.exports = function e(t, r, i, o) {
     if ('boolean' != typeof h && 'symbol' !== h) throw TypeError('option "customInspect", if provided, must be `true`, `false`, or `\'symbol\'`');
     if (j(l, 'indent') && null !== l.indent && '\t' !== l.indent && !(parseInt(l.indent, 10) === l.indent && l.indent > 0)) throw TypeError('option "indent" must be "\\t", an integer > 0, or `null`');
     if (j(l, 'numericSeparator') && 'boolean' != typeof l.numericSeparator) throw TypeError('option "numericSeparator", if provided, must be `true` or `false`');
-    var b = l.numericSeparator;
+    var I = l.numericSeparator;
     if (void 0 === t) return 'undefined';
     if (null === t) return 'null';
     if ('boolean' == typeof t) return t ? 'true' : 'false';
@@ -73,19 +73,19 @@ e.exports = function e(t, r, i, o) {
                 var r = t.length - n.maxStringLength;
                 return e(E.call(t, 0, n.maxStringLength), n) + ('... ' + r + ' more character') + (r > 1 ? 's' : '');
             }
-            return B(v.call(v.call(t, /(['\\])/g, '\\$1'), /[\x00-\x1f]/g, W), 'single', n);
+            return G(v.call(v.call(t, /(['\\])/g, '\\$1'), /[\x00-\x1f]/g, W), 'single', n);
         })(t, l);
     if ('number' == typeof t) {
         if (0 === t) return 1 / 0 / t > 0 ? '0' : '-0';
         var T = String(t);
-        return b ? M(t, T) : T;
+        return I ? M(t, T) : T;
     }
     if ('bigint' == typeof t) {
         var N = String(t) + 'n';
-        return b ? M(t, N) : N;
+        return I ? M(t, N) : N;
     }
     var R = void 0 === l.depth ? 5 : l.depth;
-    if ((void 0 === i && (i = 0), i >= R && R > 0 && 'object' == typeof t)) return G(t) ? '[Array]' : '[Object]';
+    if ((void 0 === i && (i = 0), i >= R && R > 0 && 'object' == typeof t)) return B(t) ? '[Array]' : '[Object]';
     var k = (function (e, t) {
         var n;
         if ('\t' === e.indent) n = '\t';
@@ -125,21 +125,21 @@ e.exports = function e(t, r, i, o) {
             return !!e && 'object' == typeof e && (!!('undefined' != typeof HTMLElement && e instanceof HTMLElement) || ('string' == typeof e.nodeName && 'function' == typeof e.getAttribute));
         })(t)
     ) {
-        for (var et = '<' + I.call(String(t.nodeName)), en = t.attributes || [], er = 0; er < en.length; er++)
+        for (var et = '<' + b.call(String(t.nodeName)), en = t.attributes || [], er = 0; er < en.length; er++)
             et +=
                 ' ' +
                 en[er].name +
                 '=' +
-                B(
+                G(
                     (function (e) {
                         return v.call(String(e), /"/g, '&quot;');
                     })(en[er].value),
                     'double',
                     l
                 );
-        return (et += '>'), t.childNodes && t.childNodes.length && (et += '...'), (et += '</' + I.call(String(t.nodeName)) + '>');
+        return (et += '>'), t.childNodes && t.childNodes.length && (et += '...'), (et += '</' + b.call(String(t.nodeName)) + '>');
     }
-    if (G(t)) {
+    if (B(t)) {
         if (0 === t.length) return '[]';
         var ei = X(t, V);
         return k &&
@@ -297,7 +297,7 @@ e.exports = function e(t, r, i, o) {
     }
     return String(t);
 };
-function G(e) {
+function B(e) {
     return '[object Array]' === H(e) && (!L || !('object' == typeof e && L in e));
 }
 function Z(e) {
@@ -337,7 +337,7 @@ function W(e) {
             12: 'f',
             13: 'r'
         }[t];
-    return n ? '\\' + n : '\\x' + (t < 16 ? '0' : '') + b.call(t.toString(16));
+    return n ? '\\' + n : '\\x' + (t < 16 ? '0' : '') + I.call(t.toString(16));
 }
 function K(e) {
     return 'Object(' + e + ')';
@@ -355,7 +355,7 @@ function Q(e, t) {
 }
 function X(e, t) {
     var n,
-        r = G(e),
+        r = B(e),
         i = [];
     if (r) {
         i.length = e.length;

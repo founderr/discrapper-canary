@@ -33,13 +33,13 @@ function m(e, t, n) {
 let g = 80,
     E = 132,
     v = 80,
-    b = {
+    I = {
         [_.VD2.TOP_RIGHT]: h.resizeHandleTopRight,
         [_.VD2.TOP_LEFT]: h.resizeHandleTopLeft,
         [_.VD2.BOTTOM_LEFT]: h.resizeHandleBottomLeft,
         [_.VD2.BOTTOM_RIGHT]: h.resizeHandleBottomRight
     },
-    I = {
+    b = {
         [_.VD2.TOP_RIGHT]: c.y.HORIZONTAL_LEFT,
         [_.VD2.TOP_LEFT]: c.y.HORIZONTAL_RIGHT,
         [_.VD2.BOTTOM_LEFT]: c.y.HORIZONTAL_RIGHT,
@@ -57,7 +57,7 @@ function S(e) {
             resizableDomNodeRef: t,
             onElementResize: n,
             onElementResizeEnd: r,
-            orientation: I[l],
+            orientation: b[l],
             usePointerEvents: !0
         }),
         d = a.useCallback(
@@ -68,7 +68,7 @@ function S(e) {
         );
     return (0, i.jsx)('div', {
         onMouseDown: d,
-        className: o()(h.resizeHandle, b[l])
+        className: o()(h.resizeHandle, I[l])
     });
 }
 class y extends (r = a.PureComponent) {

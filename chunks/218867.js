@@ -7,7 +7,7 @@ var r = n(200651),
     l = n(436599);
 let u = i.memo(
     i.forwardRef((e, t) => {
-        let { onScroll: n, onResize: a, listPadding: u = [0, 0, 0, 0], renderRow: c, renderSection: d, renderSectionHeader: f, renderSectionFooter: _, renderListHeader: p, rowCount: h, rowCountBySection: m, rowHeight: g, sectionMarginBottom: E, sectionHeaderHeight: v, sectionFooterHeight: b, listHeaderHeight: I, stickyHeaders: T = !1, className: S, hideScrollbar: y = !1, fade: A = !1, initialScrollTop: N = 0, role: C = 'list' } = e,
+        let { onScroll: n, onResize: a, listPadding: u = [0, 0, 0, 0], renderRow: c, renderSection: d, renderSectionHeader: f, renderSectionFooter: _, renderListHeader: p, rowCount: h, rowCountBySection: m, rowHeight: g, sectionMarginBottom: E, sectionHeaderHeight: v, sectionFooterHeight: I, listHeaderHeight: b, stickyHeaders: T = !1, className: S, hideScrollbar: y = !1, fade: A = !1, initialScrollTop: N = 0, role: C = 'list' } = e,
             [R, O] = i.useState(-1),
             [D, L] = i.useState(-1),
             x = i.useRef(null),
@@ -19,9 +19,9 @@ let u = i.memo(
             null != t && (t.scrollTop = N);
         }, []);
         let P = i.useCallback(() => {
-                let e = 'function' == typeof I ? I() : I;
+                let e = 'function' == typeof b ? b() : b;
                 return null == e ? 0 : e;
-            }, [I]),
+            }, [b]),
             k = i.useCallback(
                 (e, t, n) =>
                     'function' == typeof g
@@ -39,14 +39,14 @@ let u = i.memo(
                 },
                 [v]
             ),
-            B = i.useCallback(
+            G = i.useCallback(
                 (e) => {
-                    let t = 'function' == typeof b ? b(e) : b;
+                    let t = 'function' == typeof I ? I(e) : I;
                     return null == t ? 0 : t;
                 },
-                [b]
+                [I]
             ),
-            G = i.useCallback(
+            B = i.useCallback(
                 (e) => {
                     let t = 'function' == typeof E ? E(e) : E;
                     return null == t ? 0 : t;
@@ -91,14 +91,14 @@ let u = i.memo(
                             (r = n),
                             e++;
                     }
-                    (r += B(s) + G(s)), (a[s].offset.bottom = r);
+                    (r += G(s) + B(s)), (a[s].offset.bottom = r);
                 }
                 return {
                     totalHeight: (r += u[2]),
                     rowDescriptors: i,
                     sectionDescriptors: a
                 };
-            }, [k, B, U, G, u, h, m, P]);
+            }, [k, G, U, B, u, h, m, P]);
         (Z.current = H), (F.current = j);
         let Y = i.useCallback(() => {
             var e;
@@ -234,8 +234,8 @@ let u = i.memo(
                         l = o - s;
                     if (0 === l) continue;
                     let u = U(i),
-                        p = B(i),
-                        h = G(i);
+                        p = G(i),
+                        h = B(i);
                     if (o <= R) n = o;
                     else if (o > R && s < e) {
                         t = a;
@@ -259,15 +259,15 @@ let u = i.memo(
                             (m += r), g++, t++;
                         }
                         let v = s + u + m,
-                            b = v + p >= R && v <= e;
-                        null != _ && b && o.push(_(i)), null != d ? r.push(d(i, o)) : (r = [...r, ...o]);
+                            I = v + p >= R && v <= e;
+                        null != _ && I && o.push(_(i)), null != d ? r.push(d(i, o)) : (r = [...r, ...o]);
                     } else break;
                 }
                 return {
                     visibleItems: r,
                     listOffset: n
                 };
-            }, [k, B, U, G, u, c, d, _, f, R, H, T, p, P, D]),
+            }, [k, G, U, B, u, c, d, _, f, R, H, T, p, P, D]),
             q = i.useMemo(() => {
                 var e, t, n;
                 return {

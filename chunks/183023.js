@@ -33,8 +33,8 @@ var r = n(200651),
     g = n(686546),
     E = n(111028),
     v = n(738774),
-    b = n(785896),
-    I = n(231053),
+    I = n(785896),
+    b = n(231053),
     T = n(944386),
     S = n(565138),
     y = n(372769),
@@ -51,8 +51,8 @@ var r = n(200651),
     P = n(626135),
     k = n(768581),
     U = n(900849),
-    B = n(74538),
-    G = n(886132),
+    G = n(74538),
+    B = n(886132),
     Z = n(524444),
     F = n(981631),
     V = n(176505),
@@ -224,7 +224,7 @@ let W = () => ({
                 joinedEmojiSourceGuildRecord: c,
                 emoji: d,
                 isFetching: f
-            } = (0, b.i)({
+            } = (0, I.i)({
                 emojiId: t.emojiId,
                 refreshPositionKey: i
             });
@@ -248,10 +248,10 @@ let W = () => ({
     },
     Q = (e) => {
         var t, n, a;
-        let { node: u, sourceType: g, expressionSourceApplication: b, expressionSourceGuild: S, joinedEmojiSourceGuildRecord: y, closePopout: R, onToggleShowMoreEmojis: L, guildEmoji: x, demoMode: k = !1, nonce: U } = e,
+        let { node: u, sourceType: g, expressionSourceApplication: I, expressionSourceGuild: S, joinedEmojiSourceGuildRecord: y, closePopout: R, onToggleShowMoreEmojis: L, guildEmoji: x, demoMode: k = !1, nonce: U } = e,
             K = (0, l.e7)([M.default], () => M.default.getCurrentUser()),
             q = (0, l.e7)([w.Z], () => w.Z.getGuildId()),
-            Q = B.ZP.isPremium(K),
+            Q = G.ZP.isPremium(K),
             J = null != q && (q === (null == S ? void 0 : S.id) || q === (null == y ? void 0 : y.id)),
             $ = null != y,
             ee = null !== (t = null == S ? void 0 : S.isDiscoverable()) && void 0 !== t && t;
@@ -291,9 +291,9 @@ let W = () => ({
             { disableTrack: !en }
         );
         let eo = w.Z.getGuildId(),
-            el = (0, G.a)({
+            el = (0, B.a)({
                 sourceType: g,
-                expressionSourceApplication: b,
+                expressionSourceApplication: I,
                 isPremium: Q,
                 hasJoinedEmojiSourceGuild: $,
                 isRoleSubscriptionEmoji: en,
@@ -321,8 +321,8 @@ let W = () => ({
                 nonce: U,
                 demoMode: k
             }),
-            ef = el.type === G.$.JOIN_GUILD,
-            e_ = el.type === G.$.GET_PREMIUM,
+            ef = el.type === B.$.JOIN_GUILD,
+            e_ = el.type === B.$.GET_PREMIUM,
             [ep, eh] = i.useState(!1),
             em = ee || ($ && !J) || null != S;
         return (0, r.jsxs)(Z.W_, {
@@ -417,7 +417,7 @@ let W = () => ({
                                     children: $ ? H.intl.string(H.t.ohTzZG) : H.intl.string(H.t['eLfh+f'])
                                 }),
                                 (0, r.jsx)(z, {
-                                    expressionSourceGuild: null != S ? S : I.JO.createFromGuildRecord(y),
+                                    expressionSourceGuild: null != S ? S : b.JO.createFromGuildRecord(y),
                                     hasJoinedExpressionSourceGuild: $,
                                     isDisplayingJoinGuildButtonInPopout: ef
                                 }),
@@ -496,7 +496,7 @@ let W = () => ({
                           )
                       ),
                 !l &&
-                    (d === G.$.GET_PREMIUM
+                    (d === B.$.GET_PREMIUM
                         ? (0, r.jsxs)(r.Fragment, {
                               children: [
                                   (0, r.jsx)(D.Z, {
@@ -517,7 +517,7 @@ let W = () => ({
                                       })
                               ]
                           })
-                        : d === G.$.JOIN_GUILD
+                        : d === B.$.JOIN_GUILD
                           ? (0, r.jsx)(c.Button, {
                                 size: c.Button.Sizes.SMALL,
                                 className: Y.ctaButton,

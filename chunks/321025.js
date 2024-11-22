@@ -1,19 +1,19 @@
 n.d(t, {
     Z: function () {
-        return i;
+        return l;
     }
 });
 var o = n(200651),
     r = n(192379),
     s = n(100621),
     a = n(613087);
-function i(e) {
+function l(e) {
     let { expansionSpring: t, isExpanded: n } = e,
-        { animatedComponentProps: i, recalculateAnimationPositions: l, mountPoints: c } = r.useContext(a.B$);
+        { animatedComponentProps: l, recalculateAnimationPositions: i, mountPoints: c } = r.useContext(a.B$);
     return (
         r.useEffect(() => {
-            l();
-        }, [l, n]),
+            i();
+        }, [i, n]),
         (0, o.jsx)('div', {
             style: {
                 overflow: 'hidden',
@@ -25,8 +25,8 @@ function i(e) {
                 height: '100%',
                 zIndex: 5
             },
-            children: i.map((e) => {
-                let { id: n, collapsedLeft: r, expandedLeft: a, collapsedTop: i, expandedTop: l, width: d } = e,
+            children: l.map((e) => {
+                let { id: n, collapsedLeft: r, expandedLeft: a, collapsedTop: l, expandedTop: i, width: d } = e,
                     u = c.get(n);
                 return (0, o.jsx)(
                     s.animated.div,
@@ -46,7 +46,7 @@ function i(e) {
                                     }),
                                     t.to({
                                         range: [0, 1],
-                                        output: [i, l]
+                                        output: [l, i]
                                     })
                                 ],
                                 (e, t) => 'translate('.concat(e, 'px, ').concat(t, 'px)')

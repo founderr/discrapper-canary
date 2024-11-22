@@ -9,13 +9,13 @@ n.d(t, {
         return Y;
     },
     Du: function () {
-        return b;
+        return I;
     },
     Gh: function () {
         return Q;
     },
     HR: function () {
-        return G;
+        return B;
     },
     K_: function () {
         return H;
@@ -51,7 +51,7 @@ n.d(t, {
         return y;
     },
     cG: function () {
-        return I;
+        return b;
     },
     cm: function () {
         return S;
@@ -63,7 +63,7 @@ n.d(t, {
         return z;
     },
     gh: function () {
-        return B;
+        return G;
     },
     i1: function () {
         return F;
@@ -116,8 +116,8 @@ var r,
     g = n(116175),
     E = n(137920),
     v = n(388032);
-let b = 200,
-    I = 4,
+let I = 200,
+    b = 4,
     T = 'ClanSettingsModal',
     S = 20,
     y = 30,
@@ -179,15 +179,15 @@ let w = ['Server: NA', 'Server: EU', 'Server: LATAM', 'Server: KR', 'Server: AP'
     P = ['20+', '30+', '40+', 'All Ages'],
     k = ['Recurring Events', 'Beginner Friendly', 'PUGs', 'Inclusive', 'Parent Friendly', 'Work-life Balance', 'Competitive', 'Streamer', 'Esports'],
     U = new Set([...w, ...P, ...k]),
-    B = new Set(['Bulgarian', 'Chinese (Simplified)', 'Chinese (Traditional)', 'Croatian', 'Czech', 'Danish', 'Dutch', 'English', 'Finnish', 'French', 'German', 'Greek', 'Hindi', 'Hungarian', 'Italian', 'Japanese', 'Korean', 'Lithuanian', 'Norwegian', 'Polish', 'Portuguese', 'Romanian', 'Russian', 'Spanish', 'Swedish', 'Thai', 'Turkish', 'Ukrainian', 'Vietnamese']);
-function G(e, t) {
+    G = new Set(['Bulgarian', 'Chinese (Simplified)', 'Chinese (Traditional)', 'Croatian', 'Czech', 'Danish', 'Dutch', 'English', 'Finnish', 'French', 'German', 'Greek', 'Hindi', 'Hungarian', 'Italian', 'Japanese', 'Korean', 'Lithuanian', 'Norwegian', 'Polish', 'Portuguese', 'Romanian', 'Russian', 'Spanish', 'Swedish', 'Thai', 'Turkish', 'Ukrainian', 'Vietnamese']);
+function B(e, t) {
     var n;
     return p().sortBy(
         e,
         ((n = t),
         (e) => {
             var t;
-            return -((((null == n ? void 0 : n.includes(e)) ? 1 : 0) << 4) | ((((t = e), U.has(t) || Z.has(t) || B.has(t)) ? 0 : 1) << 3) | ((M.has(e) ? 1 : 0) << 2) | ((P.includes(e) ? 1 : 0) << 1) | ((k.includes(e) ? 1 : 0) << 0));
+            return -((((null == n ? void 0 : n.includes(e)) ? 1 : 0) << 4) | ((((t = e), U.has(t) || Z.has(t) || G.has(t)) ? 0 : 1) << 3) | ((M.has(e) ? 1 : 0) << 2) | ((P.includes(e) ? 1 : 0) << 1) | ((k.includes(e) ? 1 : 0) << 0));
         })
     );
 }

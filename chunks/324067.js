@@ -21,8 +21,8 @@ function v() {
         null: []
     };
 }
-let b = v();
-function I(e, t) {
+let I = v();
+function b(e, t) {
     e.index = t;
 }
 function T(e) {
@@ -47,7 +47,7 @@ function T(e) {
         }),
         t[_.sH].forEach(r),
         t[_.Zb].forEach(r),
-        (0, u.Z)(n._categories, n).forEach(I),
+        (0, u.Z)(n._categories, n).forEach(b),
         (g[e] = n),
         n
     );
@@ -90,7 +90,7 @@ class O extends (r = o.ZP.Store) {
                   let t = g[e];
                   return null != t ? t : T(e);
               })(e)
-            : b;
+            : I;
     }
 }
 (s = 'GuildCategoryStore'),

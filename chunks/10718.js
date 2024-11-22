@@ -3,7 +3,7 @@ n.d(t, {
         return E;
     },
     JT: function () {
-        return b;
+        return I;
     },
     Nk: function () {
         return m;
@@ -18,7 +18,7 @@ n.d(t, {
         return p;
     },
     YZ: function () {
-        return I;
+        return b;
     },
     wi: function () {
         return v;
@@ -138,21 +138,21 @@ function v(e) {
             allowFetch: u
         }),
         [E, v] = r.useState(null),
-        b = r.useRef(!1);
-    b.current = g;
-    let I = r.useMemo(() => {
+        I = r.useRef(!1);
+    I.current = g;
+    let b = r.useMemo(() => {
         var e;
         return y(null !== (e = s.placeholderCount) && void 0 !== e ? e : 0, n.commandTypes[0]);
     }, [n.commandTypes, s.placeholderCount]);
     return r.useMemo(() => {
         let e = {
-            loading: b,
+            loading: I,
             commands: h,
             activeSections: p,
             commandsByActiveSection: m,
             filteredSectionId: E,
             hasMoreAfter: !1,
-            placeholders: g ? I : [],
+            placeholders: g ? b : [],
             sectionDescriptors: p,
             filterSection: (e) => {
                 v(e);
@@ -169,7 +169,7 @@ function v(e) {
                 e.commandsByActiveSection = [
                     {
                         section: t.section,
-                        data: [...t.data, ...I]
+                        data: [...t.data, ...b]
                     },
                     ...m.slice(1)
                 ];
@@ -179,16 +179,16 @@ function v(e) {
                     (e.commandsByActiveSection = [
                         {
                             section: t,
-                            data: I
+                            data: b
                         }
                     ]);
             }
-            e.commands = [...h, ...I];
+            e.commands = [...h, ...b];
         }
         return e;
-    }, [h, p, E, m, g, I]);
+    }, [h, p, E, m, g, b]);
 }
-function b(e, t, n) {
+function I(e, t, n) {
     var r;
     let { descriptors: i, commands: a, loading: s } = l.ZP.query(e, t, n),
         u = y(s && null !== (r = n.placeholderCount) && void 0 !== r ? r : 0, t.commandTypes[0]);
@@ -197,7 +197,7 @@ function b(e, t, n) {
         sections: s && 0 === i.length ? [o.Tm[f.bi.BUILT_IN]] : i
     };
 }
-function I(e, t) {
+function b(e, t) {
     let n = (0, l.PL)(!0, !0),
         i = (0, l.em)(e, !0, !0);
     return r.useMemo(() => {

@@ -149,7 +149,7 @@ var i = n(698091),
             t
         );
     })(h),
-    b = (function (e) {
+    I = (function (e) {
         function t(t, n) {
             var r;
             return ((r = e.call(this, null) || this).source = void 0), e.prototype.setValue.call(s(r), r._makeAnimated(t, n)), r;
@@ -186,7 +186,7 @@ var i = n(698091),
             t
         );
     })(v),
-    I = (function (e) {
+    b = (function (e) {
         function t(t) {
             var n;
             return ((n = e.call(this, null) || this).update = t), (n.dirty = !1), n;
@@ -221,7 +221,7 @@ var i = n(698091),
             var a = u.useRef(null),
                 s = !i.is.fun(e) || (e.prototype && e.prototype.isReactComponent),
                 l = i.useForceUpdate(),
-                d = new I(function () {
+                d = new b(function () {
                     var e = a.current;
                     if (!s || !!e) !1 === (!!e && t.applyAnimatedValues(e, d.getValue(!0))) && l();
                 }),
@@ -263,9 +263,9 @@ var i = n(698091),
         return i.is.str(e) ? e : e && i.is.str(e.displayName) ? e.displayName : (i.is.fun(e) && e.name) || null;
     };
 (t.Animated = h),
-    (t.AnimatedArray = b),
+    (t.AnimatedArray = I),
     (t.AnimatedObject = v),
-    (t.AnimatedProps = I),
+    (t.AnimatedProps = b),
     (t.AnimatedString = g),
     (t.AnimatedValue = m),
     (t.createHost = function (e, t) {

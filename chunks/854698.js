@@ -3,7 +3,7 @@ n.d(t, {
         return H;
     },
     DK: function () {
-        return B;
+        return G;
     },
     G3: function () {
         return _;
@@ -21,7 +21,7 @@ n.d(t, {
         return U;
     },
     Rp: function () {
-        return G;
+        return B;
     },
     Uq: function () {
         return M;
@@ -76,8 +76,8 @@ let _ = 365,
     g = [s.Ci.SU.weekday, s.Ci.MO.weekday, s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday],
     E = [s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday, s.Ci.FR.weekday, s.Ci.SA.weekday],
     v = [s.Ci.SA.weekday, s.Ci.SU.weekday],
-    b = [s.Ci.FR.weekday, s.Ci.SA.weekday],
-    I = [s.Ci.SU.weekday, s.Ci.MO.weekday],
+    I = [s.Ci.FR.weekday, s.Ci.SA.weekday],
+    b = [s.Ci.SU.weekday, s.Ci.MO.weekday],
     T = [s.Ci.SU.weekday, s.Ci.MO.weekday, s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday, s.Ci.FR.weekday, s.Ci.SA.weekday],
     S = new Set([0, 6]);
 function y(e) {
@@ -228,13 +228,13 @@ function U(e, t, n) {
     }
     return i;
 }
-function B(e) {
+function G(e) {
     var t;
     if (null == e) return null;
     let n = null == (t = e).recurrence_rule ? null : new Date(t.scheduled_start_time);
     return null != n ? u.default.fromTimestamp(Math.floor(n.getTime() / l.Z.Millis.SECOND) * l.Z.Millis.SECOND) : null;
 }
-function G(e, t) {
+function B(e, t) {
     if (null == t || null == e) return !1;
     let n = new Date(e.start),
         r = new Date(u.default.extractTimestamp(t));
@@ -256,7 +256,7 @@ function Z(e) {
 function F(e) {
     let t = O(e.toDate().getDay()),
         n = O(e.toDate().getUTCDay());
-    return n.weekday - t.weekday > 0 ? I : n.weekday - t.weekday < 0 ? b : v;
+    return n.weekday - t.weekday > 0 ? b : n.weekday - t.weekday < 0 ? I : v;
 }
 function V(e, t) {
     let n = (function (e, t) {

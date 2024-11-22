@@ -78,11 +78,11 @@ let o = 'currentColor',
 function _(e) {
     var t;
     let { width: n = 31, height: u = 22, referralsRemaining: _, isResending: p, hovered: h, shouldShowBirthdayUX: m, isLightTheme: g, ...E } = e,
-        [v, b] = i.useState(o),
-        I = null !== (t = l.get(v)) && void 0 !== t ? t : null;
+        [v, I] = i.useState(o),
+        b = null !== (t = l.get(v)) && void 0 !== t ? t : null;
     return (
         i.useEffect(() => {
-            h ? b((e) => f(h, m, g, p, e)) : p && b(o);
+            h ? I((e) => f(h, m, g, p, e)) : p && I(o);
         }, [h, m, g, p]),
         (0, r.jsxs)('svg', {
             width: n,
@@ -95,7 +95,7 @@ function _(e) {
                     : (0, r.jsx)(c, {
                           referralsRemaining: _,
                           fillColor: h ? v : o,
-                          secondaryFillColor: h ? I : null
+                          secondaryFillColor: h ? b : null
                       }),
                 (0, r.jsxs)('defs', {
                     children: [

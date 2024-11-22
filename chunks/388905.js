@@ -9,7 +9,7 @@ n.d(t, {
         return O;
     },
     Ee: function () {
-        return b;
+        return I;
     },
     Hh: function () {
         return R;
@@ -39,7 +39,7 @@ n.d(t, {
         return L;
     },
     zx: function () {
-        return I;
+        return b;
     }
 }),
     n(536091);
@@ -79,7 +79,7 @@ let E = (e) => {
             children: n
         });
     },
-    b = (e) => {
+    I = (e) => {
         let { className: t, src: n } = e;
         return (0, r.jsx)('img', {
             alt: '',
@@ -87,7 +87,7 @@ let E = (e) => {
             className: a()(m.image, t)
         });
     },
-    I = (e) => {
+    b = (e) => {
         let { className: t, ...n } = e,
             i = n.look === s.Button.Looks.LINK;
         return (0, r.jsx)(s.Button, {
@@ -100,7 +100,7 @@ let E = (e) => {
             ...n
         });
     };
-(I.Looks = s.Button.Looks), (I.Colors = s.Button.Colors), (I.Sizes = s.Button.Sizes);
+(b.Looks = s.Button.Looks), (b.Colors = s.Button.Colors), (b.Sizes = s.Button.Sizes);
 let T = (e) => {
         let { className: t, src: n, size: i } = e;
         return (0, r.jsx)(g, {
@@ -132,13 +132,13 @@ let y = (e) => {
 };
 y.Sizes = s.AvatarSizes;
 let A = (e) => {
-        let { label: t, error: n, placeholder: i, value: o, className: l, inputClassName: u, setRef: d, type: f = 'text', onChange: _, autoComplete: p, autoFocus: h, maxLength: g, spellCheck: E, name: v, description: b, required: I, onFocus: T, onBlur: S } = e,
+        let { label: t, error: n, placeholder: i, value: o, className: l, inputClassName: u, setRef: d, type: f = 'text', onChange: _, autoComplete: p, autoFocus: h, maxLength: g, spellCheck: E, name: v, description: I, required: b, onFocus: T, onBlur: S } = e,
             y = (0, c.Dt)();
         return (0, r.jsxs)(s.FormItem, {
             title: t,
             error: n,
             className: l,
-            required: I,
+            required: b,
             tag: 'label',
             htmlFor: y,
             children: [
@@ -159,11 +159,11 @@ let A = (e) => {
                     onFocus: T,
                     onBlur: S
                 }),
-                null != b
+                null != I
                     ? (0, r.jsx)(s.FormText, {
                           type: s.FormText.Types.DESCRIPTION,
                           className: m.description,
-                          children: b
+                          children: I
                       })
                     : null
             ]
@@ -266,7 +266,7 @@ let A = (e) => {
         return (0, r.jsxs)(N, {
             className: t,
             children: [
-                (0, r.jsx)(I, {
+                (0, r.jsx)(b, {
                     onClick: () => window.open((0, f.t3)()),
                     children: h.intl.format(h.t.JoS1i4, { platform: (0, f.DW)() })
                 }),

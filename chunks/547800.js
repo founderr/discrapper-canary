@@ -26,19 +26,19 @@ function f(e) {
         g = i.useMemo(() => (null == a ? void 0 : a.toDate()), [a]),
         E = i.useMemo(() => (null == n ? void 0 : n.toDate()), [n]),
         v = (0, u.e7)([c.default], () => c.default.locale),
-        b = i.useRef(null),
-        I = i.useCallback((e) => {
+        I = i.useRef(null),
+        b = i.useCallback((e) => {
             let t = e.currentTarget;
             if (!!t.classList.contains('react-datepicker__day'))
                 setTimeout(() => {
                     var e, n;
-                    if (null === (e = b.current) || void 0 === e ? void 0 : e.contains(t)) return;
-                    let r = null === (n = b.current) || void 0 === n ? void 0 : n.querySelector('.react-datepicker__day[tabindex="0"]');
+                    if (null === (e = I.current) || void 0 === e ? void 0 : e.contains(t)) return;
+                    let r = null === (n = I.current) || void 0 === n ? void 0 : n.querySelector('.react-datepicker__day[tabindex="0"]');
                     if (null != r) r.focus();
                 }, 100);
         }, []);
     return (0, r.jsx)('div', {
-        ref: b,
+        ref: I,
         className: d.calendarPicker,
         children: (0, r.jsx)(l(), {
             calendarClassName: f,
@@ -50,7 +50,7 @@ function f(e) {
             locale: v,
             maxDate: g,
             minDate: E,
-            onKeyDown: I,
+            onKeyDown: b,
             onClickOutside: p
         })
     });

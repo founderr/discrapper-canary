@@ -31,8 +31,8 @@ var r,
     g = n(481060),
     E = n(607070),
     v = n(314910),
-    b = n(185349);
-function I(e, t, n) {
+    I = n(185349);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -48,21 +48,21 @@ function I(e, t, n) {
 ((a = r || (r = {})).PRIMARY = 'primary'), (a.NESTED = 'nested'), (a.BLACK = 'black'), (a.GREY = 'grey'), (a.BRAND = 'brand'), (a.GREEN = 'green'), (a.YELLOW = 'yellow'), (a.RED = 'red'), (a.PREMIUM = 'premium');
 let T = Object.freeze({}),
     S = Object.freeze({
-        top: b.tooltipTop,
-        bottom: b.tooltipBottom,
-        left: b.tooltipLeft,
-        right: b.tooltipRight,
-        center: b.tooltipCenter,
-        window_center: b.tooltipCenter,
-        primary: b.tooltipPrimary,
-        nested: b.tooltipNested,
-        black: b.tooltipBlack,
-        grey: b.tooltipGrey,
-        brand: b.tooltipBrand,
-        green: b.tooltipGreen,
-        yellow: b.tooltipYellow,
-        red: b.tooltipRed,
-        premium: b.tooltipPremium
+        top: I.tooltipTop,
+        bottom: I.tooltipBottom,
+        left: I.tooltipLeft,
+        right: I.tooltipRight,
+        center: I.tooltipCenter,
+        window_center: I.tooltipCenter,
+        primary: I.tooltipPrimary,
+        nested: I.tooltipNested,
+        black: I.tooltipBlack,
+        grey: I.tooltipGrey,
+        brand: I.tooltipBrand,
+        green: I.tooltipGreen,
+        yellow: I.tooltipYellow,
+        red: I.tooltipRed,
+        premium: I.tooltipPremium
     });
 function y(e, t, n) {
     let r = 'left' === e || 'right' === e,
@@ -86,22 +86,22 @@ let A = (e) => {
                 let { position: t, nudge: _ } = e;
                 return (0, s.jsxs)(d.animated.div, {
                     onClick: o,
-                    className: u()(b.tooltip, S[null != t ? t : r], S[i], { [b.tooltipDisablePointerEvents]: h }, l),
+                    className: u()(I.tooltip, S[null != t ? t : r], S[i], { [I.tooltipDisablePointerEvents]: h }, l),
                     style: {
                         ...p,
                         ...c
                     },
                     children: [
                         (0, s.jsx)('div', {
-                            className: u()(b.tooltipPointer, b.tooltipPointerBg, g),
+                            className: u()(I.tooltipPointer, I.tooltipPointerBg, g),
                             style: y(null != t ? t : r, n, _)
                         }),
                         (0, s.jsx)('div', {
-                            className: u()(b.tooltipPointer, g),
+                            className: u()(I.tooltipPointer, g),
                             style: y(null != t ? t : r, n, _)
                         }),
                         (0, s.jsx)('div', {
-                            className: u()(b.tooltipContent, { [b.tooltipContentAllowOverflow]: m }, f),
+                            className: u()(I.tooltipContent, { [I.tooltipContentAllowOverflow]: m }, f),
                             children: a
                         })
                     ]
@@ -238,33 +238,33 @@ class D extends (i = o.Component) {
     }
     constructor(...e) {
         super(...e),
-            I(this, 'showTimeout', new p.V7()),
-            I(this, 'domElementRef', o.createRef()),
-            I(this, 'hasDomElement', !1),
-            I(this, 'state', { shouldShowTooltip: !1 }),
-            I(this, 'handleMouseEnter', () => {
+            b(this, 'showTimeout', new p.V7()),
+            b(this, 'domElementRef', o.createRef()),
+            b(this, 'hasDomElement', !1),
+            b(this, 'state', { shouldShowTooltip: !1 }),
+            b(this, 'handleMouseEnter', () => {
                 !((f.tq || f.Em) && !0 === this.props.clickableOnMobile) && this.show();
             }),
-            I(this, 'handleMouseLeave', () => {
+            b(this, 'handleMouseLeave', () => {
                 !((f.tq || f.Em) && !0 === this.props.clickableOnMobile) && this.hide();
             }),
-            I(this, 'handleFocus', () => {
+            b(this, 'handleFocus', () => {
                 E.Z.keyboardModeEnabled && this.show();
             }),
-            I(this, 'handleBlur', () => {
+            b(this, 'handleBlur', () => {
                 this.hide();
             }),
-            I(this, 'handleClick', () => {
+            b(this, 'handleClick', () => {
                 let e = this.hasDomElement;
                 e && this.props.hideOnClick ? this.hide() : !e && (f.tq || f.Em) && !0 === this.props.clickableOnMobile && this.show();
             }),
-            I(this, 'handleContextMenu', () => {
+            b(this, 'handleContextMenu', () => {
                 this.hide();
             });
     }
 }
-I(D, 'Colors', r),
-    I(D, 'defaultProps', {
+b(D, 'Colors', r),
+    b(D, 'defaultProps', {
         hideOnClick: !0,
         position: 'top',
         color: 'primary',

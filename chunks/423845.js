@@ -15,8 +15,8 @@ var r = n(620014),
     g = n(671660),
     E = n(402428),
     v = n(207757),
-    b = n(397985),
-    I = n(706627),
+    I = n(397985),
+    b = n(706627),
     T = n(822480),
     S = n(58834),
     y = n(453342),
@@ -31,19 +31,19 @@ e.exports = function e(t, n, O, D, L, x) {
         P = 2 & n,
         k = 4 & n;
     if ((O && (w = L ? O(t, D, L, x) : O(t)), void 0 !== w)) return w;
-    if (!I(t)) return t;
+    if (!b(t)) return t;
     var U = E(t);
     if (U) {
         if (((w = h(t)), !M)) return u(t, w);
     } else {
-        var B = p(t),
-            G = B == N || '[object GeneratorFunction]' == B;
+        var G = p(t),
+            B = G == N || '[object GeneratorFunction]' == G;
         if (v(t)) return l(t, M);
-        if (B == C || B == A || (G && !L)) {
-            if (((w = P || G ? {} : g(t)), !M)) return P ? d(t, o(w, t)) : c(t, s(w, t));
+        if (G == C || G == A || (B && !L)) {
+            if (((w = P || B ? {} : g(t)), !M)) return P ? d(t, o(w, t)) : c(t, s(w, t));
         } else {
-            if (!R[B]) return L ? t : {};
-            w = m(t, B, M);
+            if (!R[G]) return L ? t : {};
+            w = m(t, G, M);
         }
     }
     x || (x = new r());
@@ -54,7 +54,7 @@ e.exports = function e(t, n, O, D, L, x) {
             ? t.forEach(function (r) {
                   w.add(e(r, n, O, r, t, x));
               })
-            : b(t) &&
+            : I(t) &&
               t.forEach(function (r, i) {
                   w.set(i, e(r, n, O, i, t, x));
               });

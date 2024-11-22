@@ -22,8 +22,8 @@ var r = n(200651),
     g = n(998698),
     E = n(710845),
     v = n(117530),
-    b = n(459273),
-    I = n(403182),
+    I = n(459273),
+    b = n(403182),
     T = n(541716),
     S = n(752305),
     y = n(30465),
@@ -162,20 +162,20 @@ class M extends i.Component {
     }
     render() {
         var e, t, n, i, a, o;
-        let { textValue: l, richValue: u, disabled: c, onChange: d, onKeyDown: _, onResize: p, onSubmit: h, channel: m, type: g, fontSize: E, useSlate: v, spellcheckEnabled: I, useNewSlashCommands: y, canOnlyUseTextCommands: C, className: O, id: L, required: x, maxCharacterCount: M, allowNewLines: P, 'aria-describedby': k, 'aria-labelledby': U, accessibilityLabel: B } = this.props,
-            { submitting: G, popup: Z } = this.state,
+        let { textValue: l, richValue: u, disabled: c, onChange: d, onKeyDown: _, onResize: p, onSubmit: h, channel: m, type: g, fontSize: E, useSlate: v, spellcheckEnabled: b, useNewSlashCommands: y, canOnlyUseTextCommands: C, className: O, id: L, required: x, maxCharacterCount: M, allowNewLines: P, 'aria-describedby': k, 'aria-labelledby': U, accessibilityLabel: G } = this.props,
+            { submitting: B, popup: Z } = this.state,
             F = {
                 channel: m,
                 className: s()(O, D.textArea, {
                     [D.textAreaSlate]: v,
-                    [D.textAreaDisabled]: c || G
+                    [D.textAreaDisabled]: c || B
                 }),
                 id: L,
                 placeholder: this.getPlaceholder(),
                 required: x,
-                accessibilityLabel: B,
+                accessibilityLabel: G,
                 disabled: c || !1,
-                submitting: G,
+                submitting: B,
                 isEdit: g === T.I.EDIT,
                 onFocus: this.handleFocus,
                 onBlur: this.handleBlur,
@@ -197,7 +197,7 @@ class M extends i.Component {
                     [D.textAreaForUserProfile]: g === T.I.USER_PROFILE,
                     [D.textAreaForOverlayInlineReply]: g === T.I.OVERLAY_INLINE_REPLY
                 }),
-                spellcheckEnabled: I,
+                spellcheckEnabled: b,
                 useNewSlashCommands: y,
                 disableAutoFocus: f.tq || (null !== (n = g.disableAutoFocus) && void 0 !== n && n),
                 disableEnterToSubmit: null !== (i = null === (e = g.submit) || void 0 === e ? void 0 : e.disableEnterToSubmit) && void 0 !== i && i,
@@ -226,11 +226,11 @@ class M extends i.Component {
                   });
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(b.d9, {
+                (0, r.jsx)(I.d9, {
                     event: R.CkL.INSERT_TEXT,
                     handler: this.handleInsertText
                 }),
-                (0, r.jsx)(b.d9, {
+                (0, r.jsx)(I.d9, {
                     event: R.CkL.CLEAR_TEXT,
                     handler: this.handleClearText
                 }),
@@ -344,7 +344,7 @@ class M extends i.Component {
                                         })(e.getData(a.type))) && void 0 !== s
                                         ? s
                                         : t.name;
-                            return { files: [(0, I.dp)(t, n, t.type)] };
+                            return { files: [(0, b.dp)(t, n, t.type)] };
                         }
                         return { files: r };
                     }
@@ -353,7 +353,7 @@ class M extends i.Component {
                         if (n.length > t) {
                             let e = new Blob([n], { type: 'text/plain' });
                             return {
-                                files: [(0, I.dp)(e, 'message.txt')],
+                                files: [(0, b.dp)(e, 'message.txt')],
                                 convertedStringToFile: !0
                             };
                         }

@@ -7,8 +7,8 @@ n.d(e, {
     }
 }),
     n(47120);
-var r = n(515643),
-    a = n(37050),
+var r = n(232713),
+    a = n(65400),
     i = n(979554);
 let o = (0, a.F)(() => ({ selectionStates: new Map() }), r.X),
     s = () => ({ selectedVariantIndex: 0 }),

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return I;
     }
 }),
     n(47120);
@@ -55,11 +55,11 @@ function v(e) {
         ]
     });
 }
-function b(e) {
+function I(e) {
     let { checked: t, onClick: n, id: a = 'burst-reaction-toggle-button' } = e,
-        b = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
-        I = _.default.getCurrentUser(),
-        T = null == I || (0, p.I5)(I) ? [u.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
+        I = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
+        b = _.default.getCurrentUser(),
+        T = null == b || (0, p.I5)(b) ? [u.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
         [S, y] = (0, f.US)(T),
         [A, N] = i.useState(!1),
         [C, R] = (0, c.useSpring)(() => ({})),
@@ -104,11 +104,11 @@ function b(e) {
                     t
                         ? (0, r.jsx)(c.Shine, {
                               className: g.shine,
-                              shinePaused: b
+                              shinePaused: I
                           })
                         : null,
                     (0, r.jsx)(O, {
-                        style: b ? void 0 : C,
+                        style: I ? void 0 : C,
                         size: 'custom',
                         width: 20,
                         height: 20,
