@@ -1,6 +1,6 @@
 n.d(t, {
     u: function () {
-        return d;
+        return u;
     }
 }),
     n(610138),
@@ -15,24 +15,31 @@ var i = n(859921),
     a = n(836768),
     o = n(49898),
     l = n(981631),
-    c = n(128449);
-function d(e) {
+    c = n(979007),
+    d = n(128449);
+function u(e) {
     let t = e.tab;
     switch ((a.Z.setState({ selectedTab: t }), t)) {
         case o.F$.SERVERS:
-            var n, d;
-            let u = e.selectedServersTab;
+            var n, u;
+            let h = e.selectedServersTab;
             return (
-                null != u
+                null != h
                     ? i.Z.setState({
-                          selectedTab: u,
-                          entrypoint: null !== (n = e.entrypoint) && void 0 !== n ? n : c.Qq.UNKNOWN
+                          selectedTab: h,
+                          entrypoint: null !== (n = e.entrypoint) && void 0 !== n ? n : d.Qq.UNKNOWN
                       })
-                    : i.Z.setState({ entrypoint: null !== (d = e.entrypoint) && void 0 !== d ? d : c.Qq.UNKNOWN }),
+                    : i.Z.setState({ entrypoint: null !== (u = e.entrypoint) && void 0 !== u ? u : d.Qq.UNKNOWN }),
                 (0, s.uL)(l.Z5c.GLOBAL_DISCOVERY_SERVERS, e.extra)
             );
         case o.F$.APPS:
-            if (null != e.applicationId) return (0, s.uL)(l.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(e.applicationId));
+            if (null != e.applicationId) {
+                if (e.section === c.Wc.STORE) {
+                    if (null != e.skuId) return (0, s.uL)(l.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(e.applicationId, e.skuId));
+                    return (0, s.uL)(l.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(e.applicationId, c.Wc.STORE));
+                }
+                return (0, s.uL)(l.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(e.applicationId));
+            }
             if (null != e.query) {
                 let t = new URLSearchParams();
                 return '' !== e.query && t.set('q', e.query), null != e.categoryId && t.set('category_id', e.categoryId.toString()), null != e.page && t.set('page', e.page.toString()), (0, s.uL)(l.Z5c.GLOBAL_DISCOVERY_APPS_SEARCH, { search: t.toString() });
