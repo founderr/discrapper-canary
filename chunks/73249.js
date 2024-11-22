@@ -15,10 +15,10 @@ var r = t(200651),
     g = t(701865),
     _ = t(388032),
     C = t(92718);
-function x() {
+function S() {
     (0, l.closeModal)(g.U);
 }
-function S(e) {
+function x(e) {
     let { onClick: n, tooltipText: t, children: i, selected: a, ...s } = e;
     return (0, r.jsx)(l.Tooltip, {
         text: t,
@@ -40,7 +40,7 @@ function S(e) {
 }
 function v() {
     let { zoomed: e, setZoomed: n } = (0, p.Y)();
-    return (0, r.jsx)(S, {
+    return (0, r.jsx)(x, {
         onClick: () => n(!e),
         tooltipText: e ? _.intl.string(_.t.vOFof3) : _.intl.string(_.t.Kt4gZ2),
         children: e ? (0, r.jsx)(l.MagnifyingGlassMinusIcon, {}) : (0, r.jsx)(l.MagnifyingGlassPlusIcon, {})
@@ -60,7 +60,7 @@ function E(e) {
                         message: o,
                         source: 'media-viewer',
                         forwardOptions: { onlyEmbedIndices: [d.embedIndex] },
-                        onRequestSent: x
+                        onRequestSent: S
                     });
                     return;
                 }
@@ -70,13 +70,13 @@ function E(e) {
                     message: o,
                     source: 'media-viewer',
                     forwardOptions: { onlyAttachmentIds: [d.attachmentId] },
-                    onRequestSent: x
+                    onRequestSent: S
                 });
             }
         }, [o, d]),
         { canForwardMessages: h } = (0, s.yk)({ location: 'ForwardLink' }, { autoTrackExposure: !1 });
     return null != o && h && (0, u.h)(o)
-        ? (0, r.jsx)(S, {
+        ? (0, r.jsx)(x, {
               onClick: m,
               tooltipText: _.intl.string(_.t.I3ltXF),
               children: (0, r.jsx)(l.ArrowAngleRightUpIcon, {})
@@ -90,12 +90,12 @@ function I(e) {
     async function i() {
         if (('VIDEO' === n.type && (0, m.q)({ href: t }), 'IMAGE' === n.type))
             try {
-                await f.ZP.saveImage(t);
+                await f.ZP.saveImage(t), (0, l.showToast)((0, l.createToast)(_.intl.string(_.t.cqpdJS), l.ToastType.SUCCESS));
             } catch (e) {
-                (0, l.showToast)((0, l.createToast)(_.intl.string(_.t.R0RpRU), l.ToastType.FAILURE));
+                (0, l.showToast)((0, l.createToast)(_.intl.string(_.t['8Ve/S0']), l.ToastType.FAILURE));
             }
     }
-    return (0, r.jsx)(S, {
+    return (0, r.jsx)(x, {
         onClick: i,
         tooltipText: _.intl.string('VIDEO' === n.type ? _.t.JVuuz8 : _.t['S/xNKS']),
         children: (0, r.jsx)(l.DownloadIcon, {})
@@ -106,7 +106,7 @@ function y(e) {
     let { item: t } = e;
     if (!(0, d.Jj)(t.url)) return null;
     let i = (0, d.s$)(null !== (n = t.original) && void 0 !== n ? n : t.url);
-    return (0, r.jsx)(S, {
+    return (0, r.jsx)(x, {
         onClick: () => (0, m.q)({ href: i }),
         tooltipText: _.intl.string(_.t.q5jLJC),
         children: (0, r.jsx)(l.WindowLaunchIcon, {})
@@ -117,9 +117,9 @@ function L(e) {
     async function s() {
         let e = (0, d.s$)(n.url);
         try {
-            await f.ZP.copyImage(e), (0, l.showToast)((0, l.createToast)(_.intl.string(_.t['t5VZ8/']), l.ToastType.SUCCESS));
+            await f.ZP.copyImage(e), (0, l.showToast)((0, l.createToast)(_.intl.string(_.t.bhUpvL), l.ToastType.SUCCESS));
         } catch (e) {
-            (0, l.showToast)((0, l.createToast)(_.intl.string(_.t.R0RpRU), l.ToastType.FAILURE));
+            (0, l.showToast)((0, l.createToast)(_.intl.string(_.t.PTPbj4), l.ToastType.FAILURE));
         }
     }
     return (0, r.jsx)(l.Menu, {
@@ -148,11 +148,7 @@ function L(e) {
                             action: function () {
                                 var e;
                                 let t = (0, d.s$)(null !== (e = n.original) && void 0 !== e ? e : n.url);
-                                try {
-                                    h.isPlatformEmbedded ? f.ZP.copy(t) : window.navigator.clipboard.writeText(t), (0, l.showToast)((0, l.createToast)(_.intl.string(_.t['L/PwZW']), l.ToastType.SUCCESS));
-                                } catch (e) {
-                                    (0, l.showToast)((0, l.createToast)(_.intl.string(_.t.R0RpRU), l.ToastType.FAILURE));
-                                }
+                                h.isPlatformEmbedded ? f.ZP.copy(t) : window.navigator.clipboard.writeText(t), (0, l.showToast)((0, l.createToast)(_.intl.string(_.t['L/PwZW']), l.ToastType.SUCCESS));
                             }
                         },
                         'media-viewer-copy-link'
@@ -182,7 +178,7 @@ function A(e) {
                   }),
               children: (e) => {
                   let { onClick: n } = e;
-                  return (0, r.jsx)(S, {
+                  return (0, r.jsx)(x, {
                       tooltipText: _.intl.string(_.t.UKOtz8),
                       onClick: () => a(!t),
                       selected: t,
