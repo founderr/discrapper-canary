@@ -1,6 +1,6 @@
 n.d(t, {
-    DL: function () {
-        return x;
+    D: function () {
+        return A;
     }
 }),
     n(411104);
@@ -19,34 +19,32 @@ var i = n(433517),
 let g = 'LATEST_HEARTBEAST_EVENT_TIMESTAMP',
     f = null,
     _ = null,
-    E = null,
-    I = !1;
-async function C() {
-    if (I) return;
-    (I = !0), (0, m.fr)(!0), h.Z.addBreadcrumb({ message: 'Start Analytics Heartbeat' });
+    E = !1;
+async function I() {
+    if (E) return;
+    (E = !0), (0, m.fr)(!0), h.Z.addBreadcrumb({ message: 'Start Analytics Heartbeat' });
     let e = await i.K.getAfterRefresh(g).then(m.Hg);
-    if (!I) return;
+    if (!E) return;
     let t = Date.now(),
         n = 15 * d.Z.Millis.MINUTE + e - t;
     n > d.Z.Millis.HOUR && h.Z.addBreadcrumb({ message: 'Received invalid Date.now() when generating a heartbeat. Date.now() = '.concat(t, ', timeUntilNextHeartbeat = ').concat(n, ', latestHeartbeatEventTimestamp = ').concat(e) }),
         e > t && (n = 0),
         h.Z.addBreadcrumb({ message: 'Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: '.concat(n / 1000, ' seconds. Scheduling Heartbeat') }),
-        v(!1),
+        C(),
         (_ = setTimeout(
             () => {
-                N(),
+                v(),
                     (f = setInterval(() => {
-                        N();
+                        v();
                     }, 15 * d.Z.Millis.MINUTE));
             },
             Math.max(n, 0)
         ));
 }
-function v() {
-    let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    null != _ && (clearTimeout(_), (_ = null)), null != f && (clearInterval(f), (f = null)), null != E && e && (h.Z.addBreadcrumb({ message: 'Heartbeat correctly scheduled. Clearing 10s check timeout' }), clearTimeout(E), (E = null));
+function C() {
+    null != _ && (clearTimeout(_), (_ = null)), null != f && (clearInterval(f), (f = null));
 }
-async function N() {
+async function v() {
     let e = Date.now(),
         t = await (0, m.Gg)(),
         n = Date.now();
@@ -54,8 +52,8 @@ async function N() {
         h.Z.captureException(Error('Null session when tracking session heartbeat. Waited '.concat(n - e, 'ms')));
         return;
     }
-    if (!I) {
-        h.Z.captureException(Error('Heartbeat scheduler not started when tracking session heartbeat.')), v();
+    if (!E) {
+        h.Z.captureException(Error('Heartbeat scheduler not started when tracking session heartbeat.')), C();
         return;
     }
     h.Z.addBreadcrumb({
@@ -76,35 +74,35 @@ async function N() {
     }
     c.default.track(p.rMx.CLIENT_HEARTBEAT, r), i.K.set(g, Date.now().toString()), (0, l.Z)();
 }
-let T = null,
-    S = !0;
-function A() {
-    if (S || (null != T && T !== p.hes.DISCONNECTED && T !== p.hes.RTC_DISCONNECTED))
+let N = null,
+    T = !0;
+function S() {
+    if (T || (null != N && N !== p.hes.DISCONNECTED && N !== p.hes.RTC_DISCONNECTED))
         try {
-            C();
+            I();
         } catch (e) {
             h.Z.captureException(e);
         }
     else
         !(function () {
-            if (!!I) (I = !1), h.Z.addBreadcrumb({ message: 'Stopping Analytics Heartbeat' }), (0, m.fr)(!1), v(), (0, l.Z)();
+            if (!!E) (E = !1), h.Z.addBreadcrumb({ message: 'Stopping Analytics Heartbeat' }), (0, m.fr)(!1), C(), (0, l.Z)();
         })();
 }
+function A() {
+    h.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), o.Z.addChangeListener(b), r.Z.subscribe('WINDOW_FOCUS', Z), r.Z.subscribe('APP_STATE_UPDATE', L), r.Z.subscribe('LOGIN_SUCCESS', x), S();
+}
 function x() {
-    h.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), o.Z.addChangeListener(Z), r.Z.subscribe('WINDOW_FOCUS', L), r.Z.subscribe('APP_STATE_UPDATE', y), r.Z.subscribe('LOGIN_SUCCESS', b), A();
+    v();
 }
 function b() {
-    N();
-}
-function Z() {
     let e = o.Z.getState();
-    T !== e && ((T = e), A());
+    N !== e && ((N = e), S());
+}
+function Z(e) {
+    let { focused: t } = e;
+    (T = t), S();
 }
 function L(e) {
-    let { focused: t } = e;
-    (S = t), A();
-}
-function y(e) {
     let { state: t } = e;
-    (S = t === p.$7l.ACTIVE), A();
+    (T = t === p.$7l.ACTIVE), S();
 }
