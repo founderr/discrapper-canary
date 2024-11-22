@@ -41,25 +41,25 @@ let L = (e, t, n, l) => {
 t.Z = (e) => {
     let { channel: t, entry: n, onReaction: i, onVoiceChannelPreview: m } = e,
         { parent_title: y, provider: N, image_url: _ } = n.extra.media,
-        S = n.extra.artist.name,
-        A = (0, o.e7)([u.default], () => u.default.getUser(n.author_id)),
-        { primaryColor: E, secondaryColor: M } = (0, p.Z)(_),
-        k = (0, h.Nq)(n),
-        R = a.useCallback(() => {
-            if (null == t || null == A || !(0, d.Hi)(k, v.y9)) return;
-            let e = L(n, t, A, k);
+        A = n.extra.artist.name,
+        E = (0, o.e7)([u.default], () => u.default.getUser(n.author_id)),
+        { primaryColor: S, secondaryColor: R } = (0, p.Z)(_),
+        M = (0, h.Nq)(n),
+        k = a.useCallback(() => {
+            if (null == t || null == E || !(0, d.Hi)(M, v.y9)) return;
+            let e = L(n, t, E, M);
             return (0, x.CR)({
-                user: A,
+                user: E,
                 channel: t,
                 mediaImageSrc: _,
-                artist: S,
+                artist: A,
                 description: e,
-                colors: [E, M],
+                colors: [S, R],
                 badges: (0, x.UU)(n)
             });
-        }, [_, S, t, n, E, k, M, A]),
+        }, [_, A, t, n, S, M, R, E]),
         w = (0, C.Z)(j.ABu.SPOTIFY);
-    if (null == A || !(0, d.Hi)(k, v.y9)) return null;
+    if (null == E || !(0, d.Hi)(M, v.y9)) return null;
     let O = () => {
         let e = Z.Hw.ALBUM,
             t = s.Z.isProtocolRegistered() ? Z.C7.PLAYER_OPEN(e, n.extra.media.external_parent_id) : Z.C7.WEB_OPEN(e, n.extra.media.external_parent_id);
@@ -87,7 +87,7 @@ t.Z = (e) => {
                         : null,
                 userDescription: P.t.CcVI1d,
                 title: y,
-                subtitle: S,
+                subtitle: A,
                 badges: (0, l.jsx)(g.Gk, {
                     location: g.Gt.POPOUT,
                     children: v.Ho.map((e, t) => (0, l.jsx)(e, { entry: n }, t))
@@ -97,10 +97,10 @@ t.Z = (e) => {
                 children: (0, l.jsx)(f.WT, {
                     onReaction: i,
                     onVoiceChannelPreview: m,
-                    user: A,
+                    user: E,
                     channel: t,
-                    generateReactionImage: R,
-                    reactionImageAltText: T(n, A),
+                    generateReactionImage: k,
+                    reactionImageAltText: T(n, E),
                     entry: n
                 })
             })

@@ -62,11 +62,11 @@ function L(e) {
         V = r.useCallback(
             (e) => {
                 var t;
-                if (P) return;
+                if (P || O || m) return;
                 let n = null === (t = H.current) || void 0 === t ? void 0 : t.getScrollerState();
-                null != n && null != e && n.scrollHeight < e.height && L();
+                null != n && null != e && n.scrollHeight <= e.height && L();
             },
-            [P, L]
+            [P, L, m, O]
         ),
         F = (0, d.y)((e) => {
             let t = null == e ? void 0 : e.getBoundingClientRect();
@@ -224,7 +224,7 @@ function L(e) {
                         let t = null === (e = H.current) || void 0 === e ? void 0 : e.getScrollerState();
                         if (null == t) return;
                         let n = t.scrollTop + t.offsetHeight;
-                        t.scrollHeight - n < 300 && L();
+                        t.scrollHeight - n < 240 && L();
                     },
                     100,
                     { leading: !0 }

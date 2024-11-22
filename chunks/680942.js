@@ -78,8 +78,8 @@ t.Z = (e) => {
     let { product: t, selectedVariantIndex: n, returnRef: b, onSuccess: v, tooltipDelay: x, isGiftEasterEggEnabled: _, disableCustomColor: k = !1 } = e,
         { analyticsLocations: I } = (0, l.ZP)(),
         j = a.useRef(null),
-        E = (0, s.Z)(j),
-        S = k ? h.BR.DARK : h.BR.LIGHT,
+        S = (0, s.Z)(j),
+        E = k ? h.BR.DARK : h.BR.LIGHT,
         T = (0, u.hv)('CollectiblesShopGiftButton');
     return (0, d.x6)(t)
         ? null
@@ -118,9 +118,9 @@ t.Z = (e) => {
                       },
                       children: _
                           ? (0, r.jsx)(o.e, {
-                                hovered: E,
+                                hovered: S,
                                 isContentDismissed: !0,
-                                themeOverride: S,
+                                themeOverride: E,
                                 boxColors: C
                             })
                           : (0, r.jsx)(i.GiftIcon, {

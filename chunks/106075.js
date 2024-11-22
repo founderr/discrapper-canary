@@ -76,7 +76,7 @@ function T() {
             className: N.container,
             children: [
                 (0, i.jsxs)(o.ZP, {
-                    className: R ? N.search : void 0,
+                    variant: R ? o._6.RELATIVE : o._6.OVERLAY,
                     children: [
                         !R && (0, i.jsx)(o.z6, { scrollPosition: n }),
                         R

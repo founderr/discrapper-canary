@@ -28,8 +28,8 @@ var r = n(200651),
     k = n(67938),
     I = n(372654),
     j = n(215023),
-    E = n(474936),
-    S = n(388032),
+    S = n(474936),
+    E = n(388032),
     T = n(462972);
 let N = (0, b.IC)(96),
     B = (e) => {
@@ -40,14 +40,14 @@ let N = (0, b.IC)(96),
         return C.ZP.canUseCollectibles(s)
             ? (0, r.jsx)(r.Fragment, { children: t.summary })
             : (0, r.jsx)(r.Fragment, {
-                  children: S.intl.format(S.t['9hafRk'], {
+                  children: E.intl.format(E.t['9hafRk'], {
                       getPremium: (e) =>
                           (0, r.jsx)(c.Clickable, {
                               innerRef: i,
                               className: T.getPremiumHook,
                               onClick: () => {
                                   (0, p.Z)({
-                                      subscriptionTier: E.Si.TIER_2,
+                                      subscriptionTier: S.Si.TIER_2,
                                       analyticsLocations: n,
                                       returnRef: i
                                   });
@@ -84,9 +84,9 @@ function L(e) {
         { backgroundColors: p } = (0, v.Z)(i.styles),
         h = (0, j.ZS)(i.skuId),
         C = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
-        E = (0, o.e7)([f.Z], () => f.Z.isFocused());
+        S = (0, o.e7)([f.Z], () => f.Z.isFocused());
     if (i.skuId === l.T.CHANCE) return (0, r.jsx)(k.O, { category: i });
-    let S = !!(null == h ? void 0 : h.showDarkBannerText),
+    let E = !!(null == h ? void 0 : h.showDarkBannerText),
         L = null == h ? void 0 : h.animatedBanner;
     return (0, r.jsxs)(x.Z, {
         asset: i.banner,
@@ -99,7 +99,7 @@ function L(e) {
                   }
                 : void 0,
         children: [
-            !C && void 0 !== L && E && (0, r.jsx)(y, { src: L }),
+            !C && void 0 !== L && S && (0, r.jsx)(y, { src: L }),
             (null === (t = j.Ve[i.skuId]) || void 0 === t ? void 0 : t.addAttributionLogo)
                 ? (0, r.jsxs)('div', {
                       className: T.discordLogo,
@@ -124,7 +124,7 @@ function L(e) {
                   })
                 : (0, r.jsx)(c.Spacer, { size: 96 }),
             (0, r.jsx)(c.Text, {
-                className: s()(T.summary, { [T.blackSummary]: S }),
+                className: s()(T.summary, { [T.blackSummary]: E }),
                 variant: 'text-md/normal',
                 children: i.skuId === l.T.DISXCORE ? (0, r.jsx)(B, { category: i }) : i.summary
             }),

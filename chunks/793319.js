@@ -107,7 +107,7 @@ function eS(e) {
         S = (0, P.bK)(),
         [T, j] = a.useState(!1);
     a.useEffect(() => {
-        if ((j(((Z && !N) || (t.isHDStreamSplashed && null == u)) && S), t.isHDStreamSplashed)) {
+        if ((j(((Z && !N) || (t.isHDStreamSplashed && null == u)) && !S), t.isHDStreamSplashed)) {
             let e = setTimeout(() => {
                 j(!1);
             }, 300000);

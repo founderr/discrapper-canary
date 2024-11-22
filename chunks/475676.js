@@ -46,21 +46,21 @@ function P(e) {
             leaderboardId: g._,
             intervalOffset: 0
         }),
-        { rankChanges: S } = (0, x.Z)({
+        { rankChanges: A } = (0, x.Z)({
             guildId: N,
             leaderboardId: g._,
             intervalStart: null !== (v = null == _ ? void 0 : _.interval_start) && void 0 !== v ? v : ''
         }),
-        A = (0, i.e7)([u.default], () => u.default.getId()),
-        [E, M] = a.useMemo(() => {
-            let e = S.find((e) => e.userId === A),
-                t = S[0],
+        E = (0, i.e7)([u.default], () => u.default.getId()),
+        [S, R] = a.useMemo(() => {
+            let e = A.find((e) => e.userId === E),
+                t = A[0],
                 n = null != e ? e : t,
                 l = null == _ ? void 0 : _.users.find((e) => e.user_id === (null == n ? void 0 : n.userId));
             return [n, l];
-        }, [_, S, A]),
-        k = (0, i.e7)([c.default], () => c.default.getUser(null == E ? void 0 : E.userId)),
-        R = m.ZP.getName(N, void 0, k);
+        }, [_, A, E]),
+        M = (0, i.e7)([c.default], () => c.default.getUser(null == S ? void 0 : S.userId)),
+        k = m.ZP.getName(N, void 0, M);
     if (
         (!(function (e) {
             let { leaderboard: t, guildId: n } = e,
@@ -79,17 +79,17 @@ function P(e) {
         null == _)
     )
         return null;
-    if (0 === _.users.length || null == E || null == k) return (0, l.jsx)(L, { selected: T });
+    if (0 === _.users.length || null == S || null == M) return (0, l.jsx)(L, { selected: T });
     let { sort_by_statistic_id: w } = _.guild_settings,
-        O = null !== (j = null == M ? void 0 : null === (n = M.statistics) || void 0 === n ? void 0 : null === (t = n[w]) || void 0 === t ? void 0 : t.value) && void 0 !== j ? j : 0,
-        { currentRank: b } = E;
+        O = null !== (j = null == R ? void 0 : null === (n = R.statistics) || void 0 === n ? void 0 : null === (t = n[w]) || void 0 === t ? void 0 : t.value) && void 0 !== j ? j : 0,
+        { currentRank: b } = S;
     return (
         (P =
-            E.userId === A
+            S.userId === E
                 ? I.intl.formatToPlainString(I.t['eU+JxM'], { rank: b })
                 : I.intl.formatToPlainString(I.t['8BLSQ0'], {
                       rank: b,
-                      username: R
+                      username: k
                   })),
         (0, l.jsxs)(s.Zb, {
             selected: T,
@@ -109,7 +109,7 @@ function P(e) {
                     ]
                 }),
                 (0, l.jsx)(p.Z, {
-                    user: k,
+                    user: M,
                     rank: b
                 })
             ]

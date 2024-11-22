@@ -51,33 +51,33 @@ let y = (e, t) =>
             .replaceAll('*', '');
     };
 t.ZP = (e) => {
-    let { channel: t, entry: n, onReaction: C, onVoiceChannelPreview: S } = e,
-        { largeImage: A } = (0, p.rv)({
+    let { channel: t, entry: n, onReaction: C, onVoiceChannelPreview: A } = e,
+        { largeImage: E } = (0, p.rv)({
             entry: n,
             showCoverImage: !1
         }),
-        { user: E, details: M, activity: k, embeddedActivity: R } = (0, P.n)(n),
-        { primaryColor: w, secondaryColor: O } = (0, I.Z)(null == A ? void 0 : A.src),
+        { user: S, details: R, activity: M, embeddedActivity: k } = (0, P.n)(n),
+        { primaryColor: w, secondaryColor: O } = (0, I.Z)(null == E ? void 0 : E.src),
         b = (0, i.e7)([h.default], () => h.default.locale),
-        { displayParticipants: H, participant1: V, participant2: B, numOtherParticipants: U } = (0, v.Z)(n, 3),
-        D = () => {
+        { displayParticipants: H, participant1: V, participant2: B, numOtherParticipants: D } = (0, v.Z)(n, 3),
+        U = () => {
             c.__(d._b.TEXT, m.I.NORMAL, { applicationId: n.extra.application_id });
         },
-        G = a.useCallback(
+        z = a.useCallback(
             (e) => {
-                if ((null == A ? void 0 : A.src) == null || null == t || null == E) return;
+                if ((null == E ? void 0 : E.src) == null || null == t || null == S) return;
                 let l =
-                    U > 0
+                    D > 0
                         ? _({
                               entry: n,
                               channel: t,
                               users: [V, B],
-                              countOthers: U
+                              countOthers: D
                           })
-                        : N(n, t, E);
+                        : N(n, t, S);
                 return (0, f.C4)({
                     entry: n,
-                    applicationImageSrc: null == A ? void 0 : A.src,
+                    applicationImageSrc: null == E ? void 0 : E.src,
                     avatarSrcs: H.map((e) => e.getAvatarURL(t.guild_id, 128)),
                     description: l,
                     timestamp: (0, g.yh)(n, b),
@@ -85,10 +85,10 @@ t.ZP = (e) => {
                     channelId: e
                 });
             },
-            [null == A ? void 0 : A.src, t, H, n, b, U, V, B, w, O, E]
+            [null == E ? void 0 : E.src, t, H, n, b, D, V, B, w, O, S]
         );
-    if (null == E) return null;
-    let z = (0, l.jsx)(j.PZ, {
+    if (null == S) return null;
+    let G = (0, l.jsx)(j.PZ, {
             location: j.Gt.POPOUT,
             entry: n
         }),
@@ -96,21 +96,21 @@ t.ZP = (e) => {
             channel: t,
             userDescription: (0, g.kr)(n) ? T.t.vPg1JS : T.t.rPqqtr,
             title: n.extra.activity_name,
-            subtitle: M,
-            badges: z,
+            subtitle: R,
+            badges: G,
             entry: n,
             showCoverImage: !1,
-            onClickTitle: D,
-            onClickSubtitle: D,
-            onClickThumbnail: D
+            onClickTitle: U,
+            onClickSubtitle: U,
+            onClickThumbnail: U
         }),
-        W = (0, o.Z)(k, L.xjy.JOIN) || (0, s.Z)(k),
+        W = (0, o.Z)(M, L.xjy.JOIN) || (0, s.Z)(M),
         q = W
             ? (0, l.jsx)(u.Z, {
-                  isEmbedded: (0, s.Z)(k),
-                  embeddedActivity: R,
-                  activity: k,
-                  user: E,
+                  isEmbedded: (0, s.Z)(M),
+                  embeddedActivity: k,
+                  activity: M,
+                  user: S,
                   ButtonComponent: (e) =>
                       (0, l.jsx)(Z.Ll, {
                           IconComponent: r.DoorEnterIcon,
@@ -119,7 +119,7 @@ t.ZP = (e) => {
               })
             : null,
         F = (0, l.jsx)(Z.Ll, {
-            onClick: D,
+            onClick: U,
             IconComponent: r.AppsIcon,
             children: T.intl.string(T.t.GDWYR0)
         }),
@@ -130,11 +130,11 @@ t.ZP = (e) => {
             (0, l.jsx)(Z.St, {
                 children: (0, l.jsx)(Z.WT, {
                     onReaction: C,
-                    onVoiceChannelPreview: S,
-                    user: E,
+                    onVoiceChannelPreview: A,
+                    user: S,
                     channel: t,
-                    generateReactionImage: G,
-                    reactionImageAltText: y(n, E),
+                    generateReactionImage: z,
+                    reactionImageAltText: y(n, S),
                     entry: n,
                     buttons: J
                 })

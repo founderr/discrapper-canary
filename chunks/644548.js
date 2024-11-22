@@ -39,33 +39,33 @@ t.Z = (e) => {
         { user: P, details: L, appName: T } = (0, v.n)(n),
         { primaryColor: y, secondaryColor: N } = (0, d.Z)(null == Z ? void 0 : Z.src),
         _ = (0, u.yA)(n),
-        S = (0, u.Nq)(n),
-        A = a.useCallback(
+        A = (0, u.Nq)(n),
+        E = a.useCallback(
             (e) => {
-                if (null != t && null != P && null != _ && null != S && !!(0, h.qy)(S))
+                if (null != t && null != P && null != _ && null != A && !!(0, h.qy)(A))
                     return (0, c.SO)({
                         entry: n,
                         applicationImageSrc: null == Z ? void 0 : Z.src,
                         avatarSrcs: [P.getAvatarURL(null == t ? void 0 : t.guild_id, 128)],
-                        description: f(n, t, P, S),
+                        description: f(n, t, P, A),
                         timestamp: g.intl.formatToPlainString(g.t.YL7UEx, { hours: Math.round(_ / r.Z.Seconds.HOUR) }),
                         colors: [y, N],
                         channelId: e
                     });
             },
-            [null == Z ? void 0 : Z.src, t, _, n, y, S, N, P]
+            [null == Z ? void 0 : Z.src, t, _, n, y, A, N, P]
         );
-    if (null == P || null == _ || null == S || !(0, h.qy)(S)) return null;
-    let E = null != n.extra.platform ? m.v[n.extra.platform] : null;
+    if (null == P || null == _ || null == A || !(0, h.qy)(A)) return null;
+    let S = null != n.extra.platform ? m.v[n.extra.platform] : null;
     return (0, l.jsxs)(C.yR, {
         children: [
             (0, l.jsx)(C.wG, {
                 channel: t,
                 headerIcons:
-                    null == E
+                    null == S
                         ? null
                         : (0, l.jsx)(p.Z, {
-                              Icon: E,
+                              Icon: S,
                               'aria-label': g.intl.string(g.t.YR4cHB)
                           }),
                 entry: n,
@@ -84,7 +84,7 @@ t.Z = (e) => {
                     onVoiceChannelPreview: j,
                     user: P,
                     channel: t,
-                    generateReactionImage: A,
+                    generateReactionImage: E,
                     reactionImageAltText: I(n, P),
                     entry: n
                 })

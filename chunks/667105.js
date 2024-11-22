@@ -61,7 +61,7 @@ function N(e) {
                 questContentRowIndex: a
             }),
             o
-                ? (0, g.zK)(t, S.S7.FRACTIONS_QUEST)
+                ? (0, g.Bg)(t.config)
                     ? (0, b.openQuestsNitroRewardModal)(t, n)
                     : (0, g.Xv)(t.config)
                       ? (0, v.openCollectibleRewardModal)(t, n)

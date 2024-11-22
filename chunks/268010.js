@@ -40,11 +40,11 @@ t.Z = (e) => {
     let { channel: t, entry: n, onReaction: c, onVoiceChannelPreview: T } = e,
         y = (0, i.e7)([s.default], () => s.default.getUser(n.author_id)),
         { largeImage: N } = (0, m.rv)({ entry: n }),
-        { primaryColor: _, secondaryColor: S } = (0, p.Z)(null == N ? void 0 : N.src),
-        A = (0, i.e7)([o.default], () => o.default.locale),
-        E = (0, C.Z)(j.ABu.CRUNCHYROLL),
-        M = (0, h.ap)(n.extra.media_assets_large_text),
-        k = a.useCallback(
+        { primaryColor: _, secondaryColor: A } = (0, p.Z)(null == N ? void 0 : N.src),
+        E = (0, i.e7)([o.default], () => o.default.locale),
+        S = (0, C.Z)(j.ABu.CRUNCHYROLL),
+        R = (0, h.ap)(n.extra.media_assets_large_text),
+        M = a.useCallback(
             (e) => {
                 if (null != y && (null == N ? void 0 : N.src) != null)
                     return (0, x.B)({
@@ -52,15 +52,15 @@ t.Z = (e) => {
                         mediaImageSrc: null == N ? void 0 : N.src,
                         avatarSrc: y.getAvatarURL(null == t ? void 0 : t.guild_id, 128),
                         description: P(n, t, y),
-                        timestamp: (0, h.yh)(n, A),
-                        episodeDescription: M,
-                        colors: [_, S],
+                        timestamp: (0, h.yh)(n, E),
+                        episodeDescription: R,
+                        colors: [_, A],
                         channelId: e
                     });
             },
-            [t, n, M, A, null == N ? void 0 : N.src, _, S, y]
+            [t, n, R, E, null == N ? void 0 : N.src, _, A, y]
         ),
-        R = () => {
+        k = () => {
             if (null == n.extra.url) return;
             let e = d.Z.safeParseWithQuery(n.extra.url);
             if (null != e && null != e.protocol && null != e.hostname)
@@ -80,7 +80,7 @@ t.Z = (e) => {
                       title: n.extra.media_title,
                       subtitle: n.extra.media_subtitle,
                       headerIcons: (0, l.jsx)(I.Z, {
-                          onClick: E,
+                          onClick: S,
                           Icon: r.CrunchyrollNeutralIcon,
                           'aria-label': Z.intl.string(Z.t.jdJYX1)
                       }),
@@ -88,8 +88,8 @@ t.Z = (e) => {
                           location: g.Gt.POPOUT,
                           children: v.t.map((e, t) => (0, l.jsx)(e, { entry: n }, t))
                       }),
-                      onClickTitle: R,
-                      onClickThumbnail: R
+                      onClickTitle: k,
+                      onClickThumbnail: k
                   }),
                   (0, l.jsx)(f.St, {
                       children: (0, l.jsx)(f.WT, {
@@ -97,7 +97,7 @@ t.Z = (e) => {
                           onVoiceChannelPreview: T,
                           user: y,
                           channel: t,
-                          generateReactionImage: k,
+                          generateReactionImage: M,
                           reactionImageAltText: L(n, y),
                           entry: n
                       })
