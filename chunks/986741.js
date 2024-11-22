@@ -1,55 +1,51 @@
-a.r(t), a(47120);
-var r = a(200651),
-    o = a(192379),
-    n = a(481060),
-    i = a(277021),
-    s = a(180511);
+o.r(t), o(47120);
+var n = o(200651),
+    a = o(192379),
+    r = o(481060),
+    i = o(955522),
+    s = o(277021),
+    c = o(180511);
 t.default = function (e) {
-    let { onClose: t, transitionState: a } = e,
-        [c, d] = o.useState(''),
-        [l, u] = o.useState(''),
-        f = async () => {
-            u('');
+    let { onClose: t, transitionState: o } = e,
+        [l, d] = a.useState(''),
+        u = a.useCallback(() => {
+            console.log('Scan complete');
+        }, []),
+        b = async () => {
+            d('');
             try {
-                let e = await (0, i.Q)();
-                d(e.verification_webview_url);
+                let e = await (0, s.Q)();
+                (0, i.F)({
+                    webviewUrl: e.verification_webview_url,
+                    onComplete: u
+                });
             } catch (e) {
-                d(''), u(e.message);
+                d(e.message);
             }
         };
-    return (0, r.jsxs)(n.ModalRoot, {
-        transitionState: a,
-        className: s.root,
+    return (0, n.jsxs)(r.ModalRoot, {
+        transitionState: o,
+        className: c.root,
         children: [
-            (0, r.jsxs)(n.ModalHeader, {
-                className: s.header,
+            (0, n.jsxs)(r.ModalHeader, {
+                className: c.header,
                 children: [
-                    (0, r.jsx)(n.Heading, {
+                    (0, n.jsx)(r.Heading, {
                         variant: 'heading-lg/semibold',
                         children: 'Age Verification Test Tool'
                     }),
-                    (0, r.jsx)(n.ModalCloseButton, { onClick: t })
+                    (0, n.jsx)(r.ModalCloseButton, { onClick: t })
                 ]
             }),
-            (0, r.jsx)(n.ModalContent, {
-                className: s.content,
-                children:
-                    '' !== c &&
-                    (0, r.jsx)('iframe', {
-                        id: 'frame',
-                        src: c,
-                        className: s.iframe,
-                        allow: 'camera; microphone'
-                    })
-            }),
-            (0, r.jsxs)(n.ModalFooter, {
-                className: s.footer,
+            (0, n.jsx)(r.ModalContent, { className: c.content }),
+            (0, n.jsxs)(r.ModalFooter, {
+                className: c.footer,
                 children: [
-                    (0, r.jsx)(n.Button, {
-                        onClick: f,
+                    (0, n.jsx)(r.Button, {
+                        onClick: b,
                         children: 'Trigger Age Verification Test'
                     }),
-                    '' !== l && (0, r.jsx)(n.InputError, { error: l })
+                    '' !== l && (0, n.jsx)(r.InputError, { error: l })
                 ]
             })
         ]
