@@ -26,4 +26,5 @@ function l(e, t) {
         );
     }
     if ('embed' === n && null != l) return { onlyEmbedIndices: [l] };
+    if ('shortcut' === n) return {};
 }
