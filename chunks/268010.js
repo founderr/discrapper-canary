@@ -5,23 +5,25 @@ var l = n(200651),
     r = n(481060),
     o = n(706454),
     s = n(594174),
-    c = n(49012),
-    u = n(5192),
+    u = n(49012),
+    c = n(5192),
     d = n(591759),
     m = n(379357),
     h = n(561308),
     x = n(685270),
+    C = n(31074),
     p = n(206295),
-    C = n(335326),
+    v = n(335326),
     g = n(297781),
-    v = n(591853),
-    f = n(410441),
-    I = n(388032);
-let j = (e, t, n) => {
-        let l = I.t.LHF6Dw,
-            a = u.ZP.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, n),
+    f = n(591853),
+    I = n(410441),
+    j = n(981631),
+    Z = n(388032);
+let P = (e, t, n) => {
+        let l = Z.t.LHF6Dw,
+            a = c.ZP.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, n),
             i = e.extra.media_title;
-        return I.intl
+        return Z.intl
             .formatToMarkdownString(l, {
                 mediaTitle: i,
                 userName: a,
@@ -29,72 +31,74 @@ let j = (e, t, n) => {
             })
             .replaceAll('*', '');
     },
-    P = (e, t) =>
-        I.intl.formatToPlainString(I.t.kCbfbG, {
+    L = (e, t) =>
+        Z.intl.formatToPlainString(Z.t.kCbfbG, {
             username: t.username,
             activity: e.extra.media_title
         });
 t.Z = (e) => {
-    let { channel: t, entry: n, onReaction: u, onVoiceChannelPreview: Z } = e,
-        L = (0, i.e7)([s.default], () => s.default.getUser(n.author_id)),
-        { largeImage: y } = (0, m.rv)({ entry: n }),
-        { primaryColor: T, secondaryColor: N } = (0, p.Z)(null == y ? void 0 : y.src),
-        _ = (0, i.e7)([o.default], () => o.default.locale),
-        E = (0, h.ap)(n.extra.media_assets_large_text),
-        S = a.useCallback(
+    let { channel: t, entry: n, onReaction: c, onVoiceChannelPreview: T } = e,
+        y = (0, i.e7)([s.default], () => s.default.getUser(n.author_id)),
+        { largeImage: N } = (0, m.rv)({ entry: n }),
+        { primaryColor: _, secondaryColor: S } = (0, p.Z)(null == N ? void 0 : N.src),
+        E = (0, i.e7)([o.default], () => o.default.locale),
+        A = (0, C.Z)(j.ABu.CRUNCHYROLL),
+        M = (0, h.ap)(n.extra.media_assets_large_text),
+        k = a.useCallback(
             (e) => {
-                if (null != L && (null == y ? void 0 : y.src) != null)
+                if (null != y && (null == N ? void 0 : N.src) != null)
                     return (0, x.B)({
                         entry: n,
-                        mediaImageSrc: null == y ? void 0 : y.src,
-                        avatarSrc: L.getAvatarURL(null == t ? void 0 : t.guild_id, 128),
-                        description: j(n, t, L),
-                        timestamp: (0, h.yh)(n, _),
-                        episodeDescription: E,
-                        colors: [T, N],
+                        mediaImageSrc: null == N ? void 0 : N.src,
+                        avatarSrc: y.getAvatarURL(null == t ? void 0 : t.guild_id, 128),
+                        description: P(n, t, y),
+                        timestamp: (0, h.yh)(n, E),
+                        episodeDescription: M,
+                        colors: [_, S],
                         channelId: e
                     });
             },
-            [t, n, E, _, null == y ? void 0 : y.src, T, N, L]
+            [t, n, M, E, null == N ? void 0 : N.src, _, S, y]
         ),
-        A = () => {
+        R = () => {
             if (null == n.extra.url) return;
             let e = d.Z.safeParseWithQuery(n.extra.url);
             if (null != e && null != e.protocol && null != e.hostname)
-                (0, c.q)({
+                (0, u.q)({
                     href: d.Z.format(e),
                     trusted: !1
                 });
         };
-    return null == L
+    return null == y
         ? null
-        : (0, l.jsxs)(v.yR, {
+        : (0, l.jsxs)(f.yR, {
               children: [
-                  (0, l.jsx)(v.wG, {
+                  (0, l.jsx)(f.wG, {
                       channel: t,
                       entry: n,
-                      userDescription: (0, h.kr)(n) ? I.t['LH+Z39'] : I.t.YuKgmp,
+                      userDescription: (0, h.kr)(n) ? Z.t['LH+Z39'] : Z.t.YuKgmp,
                       title: n.extra.media_title,
                       subtitle: n.extra.media_subtitle,
-                      headerIcons: (0, l.jsx)(f.Z, {
+                      headerIcons: (0, l.jsx)(I.Z, {
+                          onClick: A,
                           Icon: r.CrunchyrollNeutralIcon,
-                          'aria-label': I.intl.string(I.t.jdJYX1)
+                          'aria-label': Z.intl.string(Z.t.jdJYX1)
                       }),
                       badges: (0, l.jsx)(g.Gk, {
                           location: g.Gt.POPOUT,
-                          children: C.t.map((e, t) => (0, l.jsx)(e, { entry: n }, t))
+                          children: v.t.map((e, t) => (0, l.jsx)(e, { entry: n }, t))
                       }),
-                      onClickTitle: A,
-                      onClickThumbnail: A
+                      onClickTitle: R,
+                      onClickThumbnail: R
                   }),
-                  (0, l.jsx)(v.St, {
-                      children: (0, l.jsx)(v.WT, {
-                          onReaction: u,
-                          onVoiceChannelPreview: Z,
-                          user: L,
+                  (0, l.jsx)(f.St, {
+                      children: (0, l.jsx)(f.WT, {
+                          onReaction: c,
+                          onVoiceChannelPreview: T,
+                          user: y,
                           channel: t,
-                          generateReactionImage: S,
-                          reactionImageAltText: P(n, L),
+                          generateReactionImage: k,
+                          reactionImageAltText: L(n, y),
                           entry: n
                       })
                   })
