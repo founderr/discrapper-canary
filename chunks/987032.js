@@ -170,15 +170,18 @@ let l = new Map([
     ['abn_amro', 'ABN AMRO'],
     ['asn_bank', 'ASN Bank'],
     ['bunq', 'Bunq'],
-    ['handelsbanken', 'Handelsbanken'],
     ['ing ', 'ING'],
     ['knab', 'Knab'],
+    ['n26', 'N26'],
+    ['nn', 'Nationale-Nederlanden'],
     ['rabobank', 'Rabobank'],
     ['revolut', 'Revolut'],
     ['regiobank', 'RegioBank'],
     ['sns_bank', 'SNS Bank (De Volksbank)'],
     ['triodos_bank', 'Triodos Bank'],
-    ['van_lanschot', 'Van Lanschot']
+    ['van_lanschot', 'Van Lanschot'],
+    ['yoursafe', 'Yoursafe'],
+    ['handelsbanken', 'Handelsbanken']
 ]);
 function s(e) {
     return void 0 !== e && l.has(e) ? l.get(e) : a.intl.string(a.t.jdPblp);
