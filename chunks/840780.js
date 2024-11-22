@@ -19,8 +19,8 @@ var i = n(200651),
     x = n(316253),
     I = n(835473),
     b = n(933557),
-    S = n(194082),
-    E = n(436774),
+    E = n(194082),
+    S = n(436774),
     Z = n(594190),
     N = n(925329),
     y = n(102172),
@@ -91,9 +91,9 @@ class ei extends l.PureComponent {
             children: [
                 e
                     ? (0, i.jsx)(P.Z, { title: r })
-                    : (0, i.jsx)(S.ZP, {
-                          look: S.ZP.Looks.GRAY,
-                          size: S.ZP.Sizes.SMALL,
+                    : (0, i.jsx)(E.ZP, {
+                          look: E.ZP.Looks.GRAY,
+                          size: E.ZP.Sizes.SMALL,
                           className: et.liveIndicator
                       }),
                 (0, i.jsxs)('div', {
@@ -106,7 +106,7 @@ class ei extends l.PureComponent {
                                 children: [
                                     (0, i.jsx)(u.NitroWheelIcon, {
                                         size: 'xxs',
-                                        color: E.JX.PREMIUM_TIER_2
+                                        color: S.JX.PREMIUM_TIER_2
                                     }),
                                     (0, i.jsx)(L.Z, {
                                         className: et.perksDemoText,
@@ -205,7 +205,7 @@ t.Z = (0, f.Z)(function (e) {
         m = (0, c.e7)([g.Z], () => g.Z.useReducedMotion),
         f = (0, c.e7)([v.ZP], () => (null != u ? v.ZP.getSelfEmbeddedActivityForChannel(u.id) : null)),
         _ = (0, c.e7)([G.Z, V.Z, U.ZP], () => (null != o ? y.JL(o, G.Z, V.Z, !1) : null != n && y.h_(U.ZP.getChannels(n), G.Z, V.Z).length > 0)),
-        [S] = (0, I.Z)([
+        [E] = (0, I.Z)([
             null !==
                 (t = (function () {
                     if (null != p && null != p.id) return p.id;
@@ -215,8 +215,8 @@ t.Z = (0, f.Z)(function (e) {
                 ? t
                 : ''
         ]),
-        E = (0, c.e7)([v.ZP], () => v.ZP.getCurrentEmbeddedActivity()),
-        N = (0, C.Z0)() && null != E && (0, x.Z)(),
+        S = (0, c.e7)([v.ZP], () => v.ZP.getCurrentEmbeddedActivity()),
+        N = (0, C.Z0)() && null != S && (0, x.Z)(),
         A = (0, c.e7)([B.Z], () => (0, T.Z)(B.Z) && (0, K.isWindows)()),
         P = (0, c.e7)([H.Z], () => (null != r ? H.Z.findActivity(r, (e) => e.type === $.IIU.PLAYING) : null)),
         R = null != h && h.ownerId === r && h.state !== $.jm8.ENDED,
@@ -230,7 +230,7 @@ t.Z = (0, f.Z)(function (e) {
         embeddedActivity: f,
         userId: r,
         runningGame: a,
-        application: S,
+        application: E,
         useReducedMotion: m,
         isStreaming: R,
         channel: u,

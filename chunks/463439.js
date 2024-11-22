@@ -17,12 +17,12 @@ var o,
     N = e(681678),
     h = e(699516),
     I = e(863653),
-    _ = e(473092),
-    f = e(650408),
+    f = e(473092),
+    _ = e(650408),
     C = e(850165),
     T = e(134612),
-    p = e(981631),
-    A = e(388032),
+    A = e(981631),
+    p = e(388032),
     g = e(248296),
     m = e(149355);
 function S(t) {
@@ -32,22 +32,22 @@ function S(t) {
         M = (0, E.o)(),
         L = (0, I.zF)('ic-take-action-web'),
         [j, v] = s.useState(!1),
-        O = (0, f.q)(e),
+        O = (0, _.q)(e),
         B = s.useMemo(() => (M ? 0 : L ? 2 : 1), [M, L]),
         D = () => {
             R(!0),
                 l.Z.addRelationship({
                     userId: n,
                     context: { location: T.DL },
-                    type: p.OGo.BLOCKED
+                    type: A.OGo.BLOCKED
                 }),
-                S(_.NM.USER_TAKEOVER_MODAL_BLOCK),
+                S(f.NM.USER_TAKEOVER_MODAL_BLOCK),
                 N.Z.showBlockSuccessToast(n, e);
         },
         Z = () => {
-            R(!1), l.Z.unblockUser(n, { location: T.DL }), S(_.NM.USER_TAKEOVER_MODAL_UNBLOCK), N.Z.showUnblockSuccessToast(n, e);
+            R(!1), l.Z.unblockUser(n, { location: T.DL }), S(f.NM.USER_TAKEOVER_MODAL_UNBLOCK), N.Z.showUnblockSuccessToast(n, e);
         },
-        k = async () => {
+        y = async () => {
             if (null != O)
                 v(!0),
                     await (0, d.J7)(
@@ -60,26 +60,26 @@ function S(t) {
                         }
                     ),
                     v(!1),
-                    S(_.NM.USER_TAKEOVER_MODAL_REPORT);
+                    S(f.NM.USER_TAKEOVER_MODAL_REPORT);
         },
-        y = (t) => {
-            0 === t ? ((0, u.Z)(T.EI), S(_.NM.USER_TAKEOVER_MODAL_CTL)) : 2 === t ? ((0, u.Z)(T.$l), S(_.NM.USER_TAKEOVER_MODAL_THROUGHLINE)) : ((0, u.Z)(T.n4), S(_.NM.USER_TAKEOVER_MODAL_NO_FILTR));
+        k = (t) => {
+            0 === t ? ((0, u.Z)(T.EI), S(f.NM.USER_TAKEOVER_MODAL_CTL)) : 2 === t ? ((0, u.Z)(T.$l), S(f.NM.USER_TAKEOVER_MODAL_THROUGHLINE)) : ((0, u.Z)(T.n4), S(f.NM.USER_TAKEOVER_MODAL_NO_FILTR));
         },
         w = s.useMemo(() => {
             switch (B) {
                 case 0:
-                    return A.intl.string(A.t.sZf6c3);
+                    return p.intl.string(p.t.sZf6c3);
                 case 2:
-                    return A.intl.string(A.t.HQ2nKi);
+                    return p.intl.string(p.t.HQ2nKi);
                 default:
-                    return A.intl.string(A.t['65XQam']);
+                    return p.intl.string(p.t['65XQam']);
             }
         }, [B]);
     return (0, i.jsx)(C.Z, {
         heroImageSrc: m,
-        heroImageAlt: A.intl.string(A.t.RVyYCA),
-        header: A.intl.string(A.t['mWO+ys']),
-        description: A.intl.string(A.t.S0XtKC),
+        heroImageAlt: p.intl.string(p.t.RVyYCA),
+        header: p.intl.string(p.t['mWO+ys']),
+        description: p.intl.string(p.t.S0XtKC),
         children: (0, i.jsxs)('div', {
             className: g.buttonContainer,
             children: [
@@ -99,7 +99,7 @@ function S(t) {
                             color: a.tokens.colors.WHITE,
                             className: g.buttonIcon
                         }),
-                        x ? A.intl.string(A.t.XyHpKC) : A.intl.string(A.t.l4EmaW)
+                        x ? p.intl.string(p.t.XyHpKC) : p.intl.string(p.t.l4EmaW)
                     ]
                 }),
                 (0, i.jsxs)(a.Button, {
@@ -107,7 +107,7 @@ function S(t) {
                     size: a.Button.Sizes.LARGE,
                     className: g.button,
                     innerClassName: g.buttonInner,
-                    onClick: k,
+                    onClick: y,
                     submitting: j,
                     disabled: o,
                     children: [
@@ -118,7 +118,7 @@ function S(t) {
                             color: a.tokens.colors.WHITE,
                             className: g.buttonIcon
                         }),
-                        o ? A.intl.string(A.t.QvwOJy) : A.intl.string(A.t['7fHyEx'])
+                        o ? p.intl.string(p.t.QvwOJy) : p.intl.string(p.t['7fHyEx'])
                     ]
                 }),
                 (0, i.jsxs)(a.Button, {
@@ -126,7 +126,7 @@ function S(t) {
                     size: a.Button.Sizes.LARGE,
                     className: g.button,
                     innerClassName: g.buttonInner,
-                    onClick: () => y(B),
+                    onClick: () => k(B),
                     children: [
                         (0, i.jsx)(a.ChatIcon, {
                             size: 'custom',

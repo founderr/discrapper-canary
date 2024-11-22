@@ -31,7 +31,7 @@ let c = r.createContext({
     d = r.forwardRef(function (e, t) {
         var n;
         let { children: l, id: d, inState: u, isTextTransition: p = !1 } = e,
-            { recalculateAnimationPositions: m, registerComponent: x, unregisterComponent: g, expansionSpring: f, mountPoints: h } = r.useContext(c),
+            { recalculateAnimationPositions: m, registerComponent: x, unregisterComponent: f, expansionSpring: g, mountPoints: h } = r.useContext(c),
             C = r.useRef(null),
             v = r.useRef(null),
             j = r.useRef();
@@ -43,10 +43,10 @@ let c = r.createContext({
                 return (
                     null != e && x(e, d, u),
                     () => {
-                        null != e && g(d, u);
+                        null != e && f(d, u);
                     }
                 );
-            }, [d, u, x, g]);
+            }, [d, u, x, f]);
         let _ = r.useCallback(
             (e) => {
                 let { height: t } = e;
@@ -55,49 +55,49 @@ let c = r.createContext({
             [m]
         );
         (0, i.P)(C, _);
-        let b = null === (n = h.get(d)) || void 0 === n ? void 0 : n.current,
-            E = null;
+        let E = null === (n = h.get(d)) || void 0 === n ? void 0 : n.current,
+            b = null;
         return (
-            null == b
-                ? (E = null)
-                : p && null != f
-                  ? (E = (0, o.jsxs)(o.Fragment, {
+            null == E
+                ? (b = null)
+                : p && null != g
+                  ? (b = (0, o.jsxs)(o.Fragment, {
                         children: [
                             'collapsed' === u &&
                                 (0, s.createPortal)(
                                     (0, o.jsx)(a.animated.div, {
                                         style: {
                                             position: 'absolute',
-                                            opacity: f.to({
+                                            opacity: g.to({
                                                 range: [0, 1],
                                                 output: [1, 0]
                                             })
                                         },
                                         children: l(v)
                                     }),
-                                    b
+                                    E
                                 ),
                             'expanded' === u &&
                                 (0, s.createPortal)(
                                     (0, o.jsx)(a.animated.div, {
                                         style: {
                                             position: 'absolute',
-                                            opacity: f.to({
+                                            opacity: g.to({
                                                 range: [0, 1],
                                                 output: [0, 1]
                                             })
                                         },
                                         children: l(v)
                                     }),
-                                    b
+                                    E
                                 )
                         ]
                     }))
-                  : 'collapsed' === u && (E = (0, s.createPortal)(l(v), b)),
+                  : 'collapsed' === u && (b = (0, s.createPortal)(l(v), E)),
             (0, o.jsxs)('div', {
-                style: { opacity: (null == E && 'collapsed' === u) || null == b ? 1 : 0 },
+                style: { opacity: (null == b && 'collapsed' === u) || null == E ? 1 : 0 },
                 ref: t,
-                children: [l(C), E]
+                children: [l(C), b]
             })
         );
     }),
@@ -106,7 +106,7 @@ let c = r.createContext({
             [i, d] = r.useState({}),
             [u, p] = r.useState([]),
             [m, x] = r.useState(() => new Map()),
-            g = r.useCallback((e, t, n) => {
+            f = r.useCallback((e, t, n) => {
                 d((o) => {
                     var r;
                     let s =
@@ -129,7 +129,7 @@ let c = r.createContext({
                         return n.set(t, r.createRef()), n;
                     });
             }, []),
-            f = r.useCallback((e, t) => {
+            g = r.useCallback((e, t) => {
                 let n = !1;
                 d((o) => {
                     var r;
@@ -169,15 +169,15 @@ let c = r.createContext({
                         p = a.top - c.top + l.Li,
                         m = d.top - u.top,
                         x = a.left - c.left + l.Li,
-                        g = d.left - u.left,
-                        f = -a.right + c.right + l.Li,
+                        f = d.left - u.left,
+                        g = -a.right + c.right + l.Li,
                         h = -d.right + u.right;
                     e.push({
                         id: t,
-                        collapsedLeft: g,
+                        collapsedLeft: f,
                         expandedLeft: x,
                         collapsedRight: h,
-                        expandedRight: f,
+                        expandedRight: g,
                         collapsedTop: m,
                         expandedTop: p,
                         width: a.width
@@ -187,8 +187,8 @@ let c = r.createContext({
             }, [i, n, s, p]);
         return (0, o.jsx)(c.Provider, {
             value: {
-                registerComponent: g,
-                unregisterComponent: f,
+                registerComponent: f,
+                unregisterComponent: g,
                 animatedComponents: i,
                 expandedContentRef: n,
                 collapsedContentRef: s,

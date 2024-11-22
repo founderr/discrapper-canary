@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return E;
     }
 });
 var o = n(200651),
@@ -15,20 +15,20 @@ var o = n(200651),
     p = n(113434),
     m = n(566078),
     x = n(472144),
-    g = n(644646),
-    f = n(69439),
+    f = n(644646),
+    g = n(69439),
     h = n(46140),
     C = n(642145),
     v = n(388032),
     j = n(684688);
 let _ = async () => await n.e('67963').then(n.t.bind(n, 145193, 19));
-function b(e) {
+function E(e) {
     var t, n, s;
-    let { quest: b, questContent: E, isHovering: N, contentPosition: B, rowIndex: S, onReceiveErrorHints: T } = e,
-        A = m.r.build(b.config),
+    let { quest: E, questContent: b, isHovering: N, contentPosition: B, rowIndex: S, onReceiveErrorHints: T } = e,
+        A = m.r.build(E.config),
         y = A.defaultReward.messages.name,
         R = A.defaultReward.messages.nameWithArticle,
-        w = (null === (t = b.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
+        w = (null === (t = E.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
         { ref: I, scrollHeight: k } = (0, d.Z)(),
         q = 104 !== k,
         { expansionSpring: P } = (0, c.useSpring)({
@@ -38,10 +38,10 @@ function b(e) {
                 clamp: !0
             }
         }),
-        M = (null === (n = b.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-        W = (null === (s = b.userStatus) || void 0 === s ? void 0 : s.claimedAt) != null,
-        { completedRatio: O, completedRatioDisplay: L } = (0, p.I)(b),
-        Q = (0, p.Bd)(b),
+        M = (null === (n = E.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
+        O = (null === (s = E.userStatus) || void 0 === s ? void 0 : s.claimedAt) != null,
+        { completedRatio: W, completedRatioDisplay: L } = (0, p.I)(E),
+        Q = (0, p.Bd)(E),
         Z = r.useCallback(
             (e) =>
                 (0, o.jsx)(c.Text, {
@@ -53,7 +53,7 @@ function b(e) {
                 }),
             []
         ),
-        D = r.useMemo(() => (W ? Z(y) : v.intl.format(v.t['0IUT4e'], { rewardWithArticleHook: () => Z(R) })), [y, R, W, Z]),
+        D = r.useMemo(() => (O ? Z(y) : v.intl.format(v.t['0IUT4e'], { rewardWithArticleHook: () => Z(R) })), [y, R, O, Z]),
         V = r.useMemo(() => {
             if (null != Q)
                 return (0, o.jsx)(c.Text, {
@@ -76,8 +76,8 @@ function b(e) {
                     (0, o.jsxs)('div', {
                         className: j.assetWrapper,
                         children: [
-                            !W && M && (0, o.jsx)('div', { className: j.completionAnimation }),
-                            w && !W
+                            !O && M && (0, o.jsx)('div', { className: j.completionAnimation }),
+                            w && !O
                                 ? (0, o.jsxs)('div', {
                                       className: j.progressWrapper,
                                       children: [
@@ -90,15 +90,15 @@ function b(e) {
                                                   shouldAnimate: !H
                                               }),
                                           (0, o.jsx)(x.Z, {
-                                              quest: b,
+                                              quest: E,
                                               size: 76,
-                                              percentComplete: O,
+                                              percentComplete: W,
                                               percentCompleteText: N ? L : void 0,
                                               children: (0, o.jsx)('div', {
                                                   className: j.circularRewardTileWrapper,
-                                                  children: (0, o.jsx)(g.Z, {
-                                                      quest: b,
-                                                      questContent: E,
+                                                  children: (0, o.jsx)(f.Z, {
+                                                      quest: E,
+                                                      questContent: b,
                                                       className: j.circularQuestRewardTileAsset,
                                                       location: h.dr.QUEST_HOME_DESKTOP
                                                   })
@@ -106,10 +106,10 @@ function b(e) {
                                           })
                                       ]
                                   })
-                                : (0, o.jsx)(g.Z, {
-                                      quest: b,
+                                : (0, o.jsx)(f.Z, {
+                                      quest: E,
                                       autoplay: N,
-                                      questContent: E,
+                                      questContent: b,
                                       className: j.questRewardTileAsset,
                                       location: h.dr.QUEST_HOME_DESKTOP
                                   })
@@ -123,7 +123,7 @@ function b(e) {
                                 variant: 'eyebrow',
                                 color: 'text-brand',
                                 className: j.questName,
-                                children: v.intl.format(v.t.EAYZAg, { questName: b.config.messages.questName })
+                                children: v.intl.format(v.t.EAYZAg, { questName: E.config.messages.questName })
                             }),
                             (0, o.jsx)(c.Text, {
                                 variant: 'text-md/semibold',
@@ -143,9 +143,9 @@ function b(e) {
                         })
                 ]
             }),
-            (0, o.jsx)(f.Z, {
-                quest: b,
-                location: E,
+            (0, o.jsx)(g.Z, {
+                quest: E,
+                location: b,
                 contentPosition: B,
                 rowIndex: S,
                 onReceiveErrorHints: T

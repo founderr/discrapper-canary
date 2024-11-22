@@ -30,13 +30,13 @@ var r = n(200651),
     N = n(600164);
 n(70097);
 var T = n(594190),
-    b = n(567409),
-    O = n(74299),
+    O = n(567409),
+    b = n(74299),
     A = n(989941),
-    j = n(377400),
-    L = n(329557),
-    P = n(199902),
-    R = n(314897),
+    L = n(377400),
+    P = n(329557),
+    R = n(199902),
+    j = n(314897),
     w = n(592125),
     M = n(430824),
     D = n(131951),
@@ -45,8 +45,8 @@ var T = n(594190),
     V = n(449224),
     U = n(574254),
     B = n(556296),
-    G = n(237997),
-    W = n(451478),
+    W = n(237997),
+    G = n(451478),
     F = n(70956),
     H = n(358085),
     Y = n(998502),
@@ -134,7 +134,7 @@ class eg extends s.Component {
         _.Z.deactivateAllRegions();
     }
     componentDidMount() {
-        _.Z.startSession(), j.Z.initialize(), S.Z.initialize(), L.Z.initialize();
+        _.Z.startSession(), L.Z.initialize(), S.Z.initialize(), P.Z.initialize();
     }
     componentDidUpdate(e) {
         let { initialized: t } = this.props;
@@ -148,7 +148,7 @@ class eg extends s.Component {
                     let e = Date.now() - ed;
                     _.Z.track(es.rMx.OVERLAY_LOCKED, { unlocked_duration: e }), (ed = null);
                 }
-                Z.Z.disable(), (this.activeKeyEventShapes = []), G.Z.isPinned(es.Odu.TEXT) && (Z.Z.setLayout(x.Xq), Z.Z.enable());
+                Z.Z.disable(), (this.activeKeyEventShapes = []), W.Z.isPinned(es.Odu.TEXT) && (Z.Z.setLayout(x.Xq), Z.Z.enable());
             } else e.locked && !this.props.locked && (window.removeEventListener('contextmenu', eu, !1), null == ed && ((ed = Date.now()), _.Z.track(es.rMx.OVERLAY_UNLOCKED)), Z.Z.disable(), (this.activeKeyEventShapes = []), Z.Z.setLayout(x.Sr), Z.Z.enable());
             e.keybindKeyCodes !== this.props.keybindKeyCodes && (this.lockEventShape = (0, K.d2)(this.props.keybindKeyCodes)), !e.hasFetchedContentInventory && this.props.hasFetchedContentInventory && _.Z.notifyContentInventoryReady(this.props.contentInventoryEntries);
         }
@@ -157,7 +157,7 @@ class eg extends s.Component {
         let { connectedToVoice: e, locked: t, canGoLive: n, isStreaming: i, voiceGuild: r, voiceChannelId: s, game: a, showKeybindNotification: o, dismissKeybindNotification: l } = this.props;
         _.Z.track(es.rMx.OVERLAY_INITIALIZED, {
             voice_widget_connected: e,
-            text_widget_connected: G.Z.isPinned(es.Odu.TEXT)
+            text_widget_connected: W.Z.isPinned(es.Odu.TEXT)
         }),
             q.Z.trackExposure({ location: 'Overlay' });
         let c = n && !i && null != a,
@@ -196,7 +196,7 @@ class eg extends s.Component {
                     interval: 15 * F.Z.Millis.MINUTE
                 })),
                 Y.ZP.on('REQUEST_OPEN_EXTERNAL_URL', (e, t) => {
-                    G.Z.getDisableExternalLinkAlert() || t === z.Z.getLastURL()
+                    W.Z.getDisableExternalLinkAlert() || t === z.Z.getLastURL()
                         ? Y.ZP.send('OPEN_EXTERNAL_URL', t)
                         : m.Z.show({
                               title: eo.intl.string(eo.t.WLx4Fx),
@@ -214,7 +214,7 @@ class eg extends s.Component {
         window.addEventListener('keydown', this.onKeyDownGlobal, !0), window.addEventListener('keyup', this.onKeyUpGlobal, !0);
     }
     componentWillUnmount() {
-        window.removeEventListener('resize', this.handleWindowResize), window.removeEventListener('keydown', this.onKeyDownGlobal, !0), window.removeEventListener('keyup', this.onKeyUpGlobal, !0), this.props.locked && window.removeEventListener('contextmenu', eu, !1), j.Z.terminate(), S.Z.terminate(), L.Z.terminate();
+        window.removeEventListener('resize', this.handleWindowResize), window.removeEventListener('keydown', this.onKeyDownGlobal, !0), window.removeEventListener('keyup', this.onKeyUpGlobal, !0), this.props.locked && window.removeEventListener('contextmenu', eu, !1), L.Z.terminate(), S.Z.terminate(), P.Z.terminate();
     }
     renderInvalidSizeMessage() {
         return (0, r.jsx)(N.Z, {
@@ -232,7 +232,7 @@ class eg extends s.Component {
             { width: h, height: p } = c;
         if (0 === h || 0 === p || n || !s) return null;
         let f = e || a,
-            g = R.default.getId();
+            g = j.default.getId();
         return (0, r.jsxs)('div', {
             className: el.overlay,
             children: [
@@ -301,7 +301,7 @@ class eg extends s.Component {
                     n = this.getActiveKeyEventIndex(t);
                 n > -1 && this.activeKeyEventShapes.splice(n, 1);
             });
-        let t = e.locked && G.Z.isPinned(es.Odu.TEXT);
+        let t = e.locked && W.Z.isPinned(es.Odu.TEXT);
         Z.Z.setLayout(t ? x.Xq : x.Sr), t && Z.Z.enable();
     }
 }
@@ -312,23 +312,23 @@ function em() {
             incompatibleApp: n,
             activeRegions: i,
             isPreviewingInGame: s
-        } = (0, f.cj)([G.Z], () => ({
-            locked: G.Z.isLocked((0, X.QF)()),
-            initialized: G.Z.initialized,
-            incompatibleApp: G.Z.incompatibleApp,
-            activeRegions: G.Z.getActiveRegions(),
-            isPreviewingInGame: G.Z.isPreviewingInGame()
+        } = (0, f.cj)([W.Z], () => ({
+            locked: W.Z.isLocked((0, X.QF)()),
+            initialized: W.Z.initialized,
+            incompatibleApp: W.Z.incompatibleApp,
+            activeRegions: W.Z.getActiveRegions(),
+            isPreviewingInGame: W.Z.isPreviewingInGame()
         })),
-        a = (0, f.e7)([W.Z], () => W.Z.windowSize()),
+        a = (0, f.e7)([G.Z], () => G.Z.windowSize()),
         o = (0, f.e7)([B.Z], () => B.Z.getOverlayKeybind()),
         l = (0, f.e7)([k.Z], () => k.Z.getVoiceChannelId()),
         c = (0, f.e7)([w.Z], () => w.Z.getChannel(l)),
         d = (0, f.e7)([M.Z], () => (null != c ? M.Z.getGuild(c.guild_id) : null)),
         u = (0, f.e7)([T.ZP, V.Z], () => (0, A.Z)(T.ZP, V.Z)),
-        h = (0, b.Ns)(null == u ? void 0 : u.id),
+        h = (0, O.Ns)(null == u ? void 0 : u.id),
         p = (0, f.e7)([y.Z], () => null != y.Z.getLastFeedFetchDate(ea.YN.GAME_PROFILE_FEED)),
-        m = (0, f.e7)([D.Z], () => (0, O.Z)(D.Z)),
-        v = (0, f.e7)([P.Z], () => null != P.Z.getCurrentUserActiveStream()),
+        m = (0, f.e7)([D.Z], () => (0, b.Z)(D.Z)),
+        v = (0, f.e7)([R.Z], () => null != R.Z.getCurrentUserActiveStream()),
         { analyticsLocations: _ } = (0, C.ZP)(I.Z.OVERLAY),
         { showKeybindIndicators: E, dismissKeybindNotification: x } = (0, J.K)();
     return (0, r.jsx)(C.Gt, {

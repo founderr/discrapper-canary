@@ -33,11 +33,11 @@ if (b && !g) {
     v = parseInt(e) > 10 || parseInt(t) >= 15063;
 }
 let C = (b && v) || ('Chrome' === o().name && 47 > parseFloat(o().version)) || ('Firefox' === o().name && 52 > parseFloat(o().version)),
-    j = l().throttle(m.GN, 1000, { leading: !0 });
-function _() {
+    _ = l().throttle(m.GN, 1000, { leading: !0 });
+function j() {
     x.ZP.flashFrame(!1);
 }
-b && (window.addEventListener('focus', _), x.ZP.on('MAIN_WINDOW_FOCUS', _));
+b && (window.addEventListener('focus', j), x.ZP.on('MAIN_WINDOW_FOCUS', j));
 let T = window.Notification;
 g &&
     (x.ZP.on('NOTIFICATION_CLICK', (e, t) => {
@@ -82,7 +82,7 @@ function S() {
 function y(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
         n = arguments.length > 2 ? arguments[2] : void 0;
-    e.includes('message') ? j(e, t, void 0, n) : (0, m.GN)(e, t);
+    e.includes('message') ? _(e, t, void 0, n) : (0, m.GN)(e, t);
 }
 function N(e) {
     return (d.Z.disableNotifications && null == e.overrideStreamerMode) || !S() || (h.isPlatformEmbedded && !x.ZP.shouldDisplayNotifications());

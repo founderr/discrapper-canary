@@ -73,32 +73,32 @@ t.Z = (e) => {
         r,
         l,
         { invite: c, disableUser: I = !1, error: y, flatActivityCount: N = !1, isRegister: T = !1 } = e,
-        { currentUser: b, multiAccounts: O } = (0, s.cj)([u.Z, m.default], () => ({
+        { currentUser: O, multiAccounts: b } = (0, s.cj)([u.Z, m.default], () => ({
             currentUser: m.default.getCurrentUser(),
             multiAccounts: u.Z.getUsers()
         }));
     if (null == c) return null;
     let A = null != c.guild ? new f.ZP(c.guild) : null,
-        j = null != c.channel ? (0, p.jD)(c.channel) : null,
-        L = null != c.target_application ? new h.Z(c.target_application) : null,
-        P = I || null == c.inviter ? null : new g.Z(c.inviter),
-        R = !((null != c.approximate_member_count && c.approximate_member_count > 100) || (null != A && A.hasFeature(_.oNc.COMMUNITY))) && null != P,
+        L = null != c.channel ? (0, p.jD)(c.channel) : null,
+        P = null != c.target_application ? new h.Z(c.target_application) : null,
+        R = I || null == c.inviter ? null : new g.Z(c.inviter),
+        j = !((null != c.approximate_member_count && c.approximate_member_count > 100) || (null != A && A.hasFeature(_.oNc.COMMUNITY))) && null != R,
         w = null,
         M = !1;
     if (null != A)
-        (w = null == P ? Z.intl.string(Z.t['3rE1Pz']) : Z.intl.formatToPlainString(Z.t['5u47vb'], { username: v.ZP.getFormattedName(P) })),
+        (w = null == R ? Z.intl.string(Z.t['3rE1Pz']) : Z.intl.formatToPlainString(Z.t['5u47vb'], { username: v.ZP.getFormattedName(R) })),
             c.target_type === x.Iq.STREAM && null != c.target_user && (w = Z.intl.formatToPlainString(Z.t.x2L32d, { username: v.ZP.getFormattedName(c.target_user) })),
-            c.target_type === x.Iq.EMBEDDED_APPLICATION && null != c.target_application && (w = null != P ? Z.intl.formatToPlainString(Z.t.UW1Cam, { username: v.ZP.getFormattedName(P) }) : Z.intl.string(Z.t.ENSuNz)),
-            R &&
-                null == L &&
+            c.target_type === x.Iq.EMBEDDED_APPLICATION && null != c.target_application && (w = null != R ? Z.intl.formatToPlainString(Z.t.UW1Cam, { username: v.ZP.getFormattedName(R) }) : Z.intl.string(Z.t.ENSuNz)),
+            j &&
+                null == P &&
                 (n = (0, i.jsx)(o.Vj, {
                     className: S.icon,
                     guild: A,
                     size: o.Vj.Sizes.SMALL
                 })),
             (r = A.name),
-            null != L &&
-                ((r = L.name),
+            null != P &&
+                ((r = P.name),
                 (l = (0, i.jsxs)('div', {
                     children: [
                         (0, i.jsx)(o.DK, {
@@ -123,20 +123,20 @@ t.Z = (e) => {
                         })
                     ]
                 })));
-    else if (null != j) {
-        if (null == P) throw Error('no inviter in group DM invite');
-        let e = v.ZP.getFormattedName(P);
-        null != j.name && '' !== j.name
+    else if (null != L) {
+        if (null == R) throw Error('no inviter in group DM invite');
+        let e = v.ZP.getFormattedName(R);
+        null != L.name && '' !== L.name
             ? ((w = Z.intl.formatToPlainString(Z.t['5u47vb'], { username: e })),
-              (r = j.name),
-              null != j.icon &&
+              (r = L.name),
+              null != L.icon &&
                   (n = (0, i.jsx)(o.MC, {
-                      channel: j,
+                      channel: L,
                       size: a.AvatarSizes.SIZE_32
                   })))
             : ((w = Z.intl.string(Z.t.OsdY8P)), (r = e));
-    } else if (null != P) {
-        let e = v.ZP.getFormattedName(P, !0);
+    } else if (null != R) {
+        let e = v.ZP.getFormattedName(R, !0);
         (r = Z.intl.formatToPlainString(Z.t['4aF92d'], { username: e })),
             (M = !0),
             (l =
@@ -151,9 +151,9 @@ t.Z = (e) => {
         className: S.container,
         children: [
             (0, i.jsx)(C, {
-                application: L,
+                application: P,
                 guild: A,
-                user: R ? P : null,
+                user: j ? R : null,
                 compact: M
             }),
             null != y
@@ -180,7 +180,7 @@ t.Z = (e) => {
                       ]
                   }),
             l,
-            null != L || M || (null == c ? void 0 : null === (t = c.guild) || void 0 === t ? void 0 : t.id) === E.fQ
+            null != P || M || (null == c ? void 0 : null === (t = c.guild) || void 0 === t ? void 0 : t.id) === E.fQ
                 ? null
                 : (0, i.jsx)(o.EJ, {
                       className: S.activityCount,
@@ -188,7 +188,7 @@ t.Z = (e) => {
                       total: c.approximate_member_count,
                       flat: N
                   }),
-            O.length > 1 ? (0, i.jsx)(o.jQ, { user: b }) : null
+            b.length > 1 ? (0, i.jsx)(o.jQ, { user: O }) : null
         ]
     });
 };

@@ -70,7 +70,7 @@ let b = {
 function v(e) {
     var t, n, l;
     let { subscription: v, onUpdated: C } = e,
-        [j, _] = a.useState(!1),
+        [_, j] = a.useState(!1),
         [T, S] = a.useState(!1),
         y = (e) => ((null == e && (e = v.status), e in b) ? b[e] : 'Unknown status '.concat(e)),
         N = (e) => {
@@ -92,8 +92,8 @@ function v(e) {
                 C();
         },
         k = (null === (t = x.GP[v.planIdFromItems]) || void 0 === t ? void 0 : t.premiumType) === x.p9.TIER_0,
-        w = null === (n = v.metadata) || void 0 === n ? void 0 : n.ended_at,
-        E = null != w ? new Date(w).toISOString().substring(0, 10) : '';
+        E = null === (n = v.metadata) || void 0 === n ? void 0 : n.ended_at,
+        w = null != E ? new Date(E).toISOString().substring(0, 10) : '';
     return (0, r.jsx)(r.Fragment, {
         children: (0, r.jsxs)('div', {
             className: i()(p.card, k ? p.gradientWrapperTier0 : p.gradientWrapperTier2),
@@ -129,7 +129,7 @@ function v(e) {
                         children: [
                             (0, r.jsxs)(c.Clickable, {
                                 onClick: () => {
-                                    _(!j);
+                                    j(!_);
                                 },
                                 className: f.collapsablePaneHeader,
                                 children: [
@@ -139,10 +139,10 @@ function v(e) {
                                             children: 'Metadata'
                                         })
                                     }),
-                                    (0, r.jsx)(s.Z, { direction: j ? s.Z.Directions.UP : s.Z.Directions.DOWN })
+                                    (0, r.jsx)(s.Z, { direction: _ ? s.Z.Directions.UP : s.Z.Directions.DOWN })
                                 ]
                             }),
-                            j &&
+                            _ &&
                                 (0, r.jsx)('ul', {
                                     style: { marginBottom: '15px' },
                                     children: Object.entries(v.metadata).map((e) => {
@@ -217,7 +217,7 @@ function v(e) {
                                         className: f.formSection,
                                         children: (0, r.jsx)('input', {
                                             type: 'date',
-                                            value: E,
+                                            value: w,
                                             onChange: (e) => I({ endedAt: e.target.value })
                                         })
                                     })

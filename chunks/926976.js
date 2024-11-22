@@ -22,8 +22,8 @@ var r = n(200651),
     g = n(31336),
     v = n(257785),
     C = n(484036),
-    j = n(681619),
-    _ = n(621060),
+    _ = n(681619),
+    j = n(621060),
     T = n(388032),
     S = n(574001),
     y = n(219299);
@@ -67,7 +67,7 @@ function k(e) {
         ]
     });
 }
-let w = [
+let E = [
         {
             id: 'details',
             name: 'Details',
@@ -144,11 +144,11 @@ let w = [
             }
         }
     ],
-    E = {
+    w = {
         events: {
             label: 'Events',
             filter: (e) =>
-                Object.entries(E)
+                Object.entries(w)
                     .filter((e) => {
                         let [t] = e;
                         return 'events' !== t;
@@ -176,7 +176,7 @@ function Z() {
     let e = a.useRef(null),
         [t, n] = a.useState(''),
         l = (0, d.e7)([b.Z], () => b.Z.loggedEvents),
-        [c, s] = a.useState(Object.keys(E)),
+        [c, s] = a.useState(Object.keys(w)),
         [h, m] = a.useState(l),
         f = a.useRef(null),
         p = a.useCallback(
@@ -206,7 +206,7 @@ function Z() {
         v = a.useMemo(
             () =>
                 h.filter((e) => {
-                    for (let t of c) if (E[t].filter(e)) return !0;
+                    for (let t of c) if (w[t].filter(e)) return !0;
                     return !1;
                 }),
             [h, c]
@@ -216,7 +216,7 @@ function Z() {
     }, [t, p, l]);
     let [I, k] = a.useState(void 0),
         Z = v.find((e) => e.key === I),
-        { TabBar: R, renderSelectedTab: O } = (0, _.Z)({ tabs: w }, []);
+        { TabBar: R, renderSelectedTab: O } = (0, j.Z)({ tabs: E }, []);
     return (0, r.jsxs)('div', {
         ref: e,
         className: i()(y.panel, S.panel),
@@ -241,7 +241,7 @@ function Z() {
                     (0, r.jsx)('div', { className: S.toolbarDivider }),
                     (0, r.jsx)('div', {
                         className: S.filters,
-                        children: Object.entries(E).map((e) => {
+                        children: Object.entries(w).map((e) => {
                             let [t, n] = e;
                             return (0, r.jsx)(
                                 u.Clickable,
@@ -269,7 +269,7 @@ function Z() {
                     placeholder: 'Search by event name'
                 })
             }),
-            (0, r.jsx)(j.Z, {
+            (0, r.jsx)(_.Z, {
                 columns: N,
                 data: v,
                 selectedRowKey: I,

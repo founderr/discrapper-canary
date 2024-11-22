@@ -33,7 +33,7 @@ let p = d.ZP.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar,
             avatarDecoration: b,
             src: a ? (null == n ? void 0 : n.getAvatarURL(void 0, 152, !0)) : null != v ? v : x,
             imageClassName: a ? f.fadeInAvatarImg : void 0,
-            className: i()(f.avatar, { [f.avatarPurchased]: d }),
+            className: i()(f.avatar, { [f.avatarPurchased]: d && !a }),
             size: g,
             'aria-label': u.intl.string(u.t.lqaIxM)
         });

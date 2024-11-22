@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return b;
     }
 }),
     n(47120);
@@ -16,8 +16,8 @@ var o = n(200651),
     p = n(569984),
     m = n(497505),
     x = n(918701),
-    g = n(667105),
-    f = n(341907),
+    f = n(667105),
+    g = n(341907),
     h = n(284851),
     C = n(46140),
     v = n(388032),
@@ -36,7 +36,7 @@ let _ = [
         }
     }
 ];
-function b(e) {
+function E(e) {
     let t,
         n,
         { value: r } = e;
@@ -55,11 +55,11 @@ function b(e) {
         children: [n, t]
     });
 }
-function E(e) {
-    var t, n, s, E;
+function b(e) {
+    var t, n, s, b;
     let { quest: N, location: B, onReceiveErrorHints: S, contentPosition: T, rowIndex: A } = e,
         y = (0, i.e7)([c.Z], () => c.Z.useReducedMotion),
-        R = (0, g.g2)({ useReducedMotion: y }),
+        R = (0, f.g2)({ useReducedMotion: y }),
         w = (0, u._s)({ quest: N }),
         I = (0, u.z)(N),
         k = (0, u.B6)(N.config.expiresAt, {
@@ -71,8 +71,8 @@ function E(e) {
             isEnrolling: p.Z.isEnrolling(N.id)
         })),
         M = (null === (t = N.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-        W = (null === (n = N.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-        O = W && (null === (s = N.userStatus) || void 0 === s ? void 0 : s.claimedAt) == null,
+        O = (null === (n = N.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
+        W = O && (null === (s = N.userStatus) || void 0 === s ? void 0 : s.claimedAt) == null,
         L = (0, x.iQ)(N),
         Q = !(0, x.zi)(N),
         Z = (0, u._Q)(N),
@@ -89,7 +89,7 @@ function E(e) {
             },
             [F, S]
         ),
-        { text: J, onClick: $ } = (0, g.Ks)({
+        { text: J, onClick: $ } = (0, f.Ks)({
             progressState: Z,
             quest: N,
             location: B,
@@ -115,9 +115,9 @@ function E(e) {
                 R.stopAnimation(), S(e);
             }
         }),
-        en = (null === (E = N.userStatus) || void 0 === E ? void 0 : E.claimedAt) != null,
+        en = (null === (b = N.userStatus) || void 0 === b ? void 0 : b.claimedAt) != null,
         eo = null;
-    return (L && O
+    return (L && W
         ? (eo = (0, o.jsx)(l.Button, {
               color: l.ButtonColors.BRAND,
               submitting: q,
@@ -125,7 +125,7 @@ function E(e) {
               className: j.button,
               children: J
           }))
-        : W
+        : O
           ? (eo = V
                 ? (0, o.jsxs)(o.Fragment, {
                       children: [
@@ -134,7 +134,7 @@ function E(e) {
                               className: j.button,
                               style: { flex: 1 },
                               onClick: () => {
-                                  (0, f.openVideoQuestModal)(N);
+                                  (0, g.openVideoQuestModal)(N);
                               },
                               children: (0, o.jsxs)('div', {
                                   className: j.ctaInner,
@@ -162,7 +162,7 @@ function E(e) {
                       children: J
                   }))
           : Q
-            ? Q && O
+            ? Q && W
                 ? (eo = (0, o.jsx)(l.Button, {
                       color: l.ButtonColors.BRAND,
                       submitting: q,
@@ -177,7 +177,7 @@ function E(e) {
                               isSelected: () => !1,
                               options: _,
                               placeholder: v.intl.string(v.t.drVw4e),
-                              renderOptionLabel: b,
+                              renderOptionLabel: E,
                               select: X,
                               serialize: (e) => {
                                   switch (e) {

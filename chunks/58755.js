@@ -103,7 +103,7 @@ function b(e) {
 }
 function g(e) {
     let { scale: t, setState: n, onClose: a } = e,
-        { name: s, base: p, darkness: b, lightness: g, showColumnarPalettePreview: v, colorSpace: j, easingStrength: _ = 1, useP3ColorSpace: T, steps: S = 26 } = t,
+        { name: s, base: p, darkness: b, lightness: g, showColumnarPalettePreview: v, colorSpace: _, easingStrength: j = 1, useP3ColorSpace: T, steps: S = 26 } = t,
         y = (0, m.XM)(t),
         N = (0, m.W6)(y, s);
     return (0, r.jsxs)(d.FormSection, {
@@ -165,7 +165,7 @@ function g(e) {
                     }),
                     (0, r.jsx)(d.SingleSelect, {
                         options: f,
-                        value: j,
+                        value: _,
                         onChange: (e) => (0, m.t4)(s, e, n),
                         popoutLayerContext: h.O$
                     })
@@ -218,7 +218,7 @@ function g(e) {
             (0, r.jsx)(d.FormSection, {
                 title: 'Easing',
                 children: (0, r.jsxs)(d.FormItem, {
-                    title: 'Easing Strength ('.concat(_.toFixed(2), ')'),
+                    title: 'Easing Strength ('.concat(j.toFixed(2), ')'),
                     children: [
                         (0, r.jsx)(d.FormText, {
                             type: d.FormTextTypes.DESCRIPTION,
@@ -226,7 +226,7 @@ function g(e) {
                         }),
                         (0, r.jsx)(d.Slider, {
                             onValueRender: () => null,
-                            initialValue: _,
+                            initialValue: j,
                             minValue: 1,
                             maxValue: 5,
                             onValueChange: (e) => (0, m.rd)(s, e, n),

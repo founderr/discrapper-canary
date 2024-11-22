@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return L;
+        return P;
     }
 }),
     n(47120);
@@ -29,8 +29,8 @@ var i = n(200651),
     y = n(518084),
     N = n(981631),
     T = n(388032),
-    b = n(945768),
-    O = n(663031);
+    O = n(945768),
+    b = n(663031);
 function A(e, t, n) {
     return (
         t in e
@@ -44,7 +44,7 @@ function A(e, t, n) {
         e
     );
 }
-class j extends r.PureComponent {
+class L extends r.PureComponent {
     handleDisconnect() {
         h.default.selectVoiceChannel(null);
     }
@@ -59,7 +59,7 @@ class j extends r.PureComponent {
                 t.stopPropagation(), u.Z.channelListScrollTo(s, e.id);
             },
             children: (0, i.jsx)(m.Z, {
-                className: O.channel,
+                className: b.channel,
                 children: r
             })
         });
@@ -69,13 +69,13 @@ class j extends r.PureComponent {
         return null == s
             ? null
             : (0, i.jsx)(y.ZP.Bar, {
-                  className: a()(e, b.controls, { [b.unpinned]: !n }),
+                  className: a()(e, O.controls, { [O.unpinned]: !n }),
                   children: (0, i.jsxs)(y.ZP.Content, {
-                      className: a()(t, b.content),
+                      className: a()(t, O.content),
                       dynamicSize: !0,
                       children: [
                           (0, i.jsx)('div', {
-                              className: O.inner,
+                              className: b.inner,
                               children: (0, i.jsx)(c.Popout, {
                                   renderPopout: () => this.renderPopout(s.id),
                                   position: 'top',
@@ -99,14 +99,14 @@ class j extends r.PureComponent {
                                   (0, i.jsx)(g.Z, {
                                       tooltipText: p ? T.intl.string(T.t.YqAjX1) : T.intl.string(T.t['w4m94+']),
                                       icon: p ? c.MicrophoneSlashIcon : c.MicrophoneIcon,
-                                      iconForeground: p ? b.strikethrough : null,
+                                      iconForeground: p ? O.strikethrough : null,
                                       onClick: this.handleToggleSelfMute
                                   }),
                                   (0, i.jsx)(g.Z, {
                                       tooltipText: h ? T.intl.string(T.t['2US87+']) : T.intl.string(T.t.wjcRFR),
                                       icon: h ? c.HeadphonesSlashIcon : c.HeadphonesIcon,
                                       onClick: this.handleToggleSelfDeaf,
-                                      iconForeground: h ? b.strikethrough : null
+                                      iconForeground: h ? O.strikethrough : null
                                   }),
                                   null == r &&
                                       (0, i.jsx)(g.Z, {
@@ -146,13 +146,13 @@ class j extends r.PureComponent {
             });
     }
 }
-function L(e) {
+function P(e) {
     let { context: t, lobbyId: n, channel: r, ...s } = e,
         a = (0, l.e7)([E.Z], () => E.Z.getGuild(null == r ? void 0 : r.getGuildId())),
         o = (0, l.e7)([I.Z], () => null != r && I.Z.hasVideo(r.id)),
         [c, d] = (0, l.Wu)([x.Z], () => [x.Z.isSelfMute(t) || x.Z.isSelfMutedTemporarily(t), x.Z.isSelfDeaf(t)]),
         [u, h, p] = (0, l.Wu)([C.Z], () => [C.Z.getConnectionState(n), C.Z.getLastPing(n), C.Z.getQuality(n)]);
-    return (0, i.jsx)(j, {
+    return (0, i.jsx)(L, {
         ...s,
         context: t,
         lobbyId: n,

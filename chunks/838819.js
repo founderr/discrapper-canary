@@ -28,16 +28,16 @@ var r = n(200651),
     B = n(381585),
     y = n(597688),
     L = n(328347),
-    P = n(307043),
-    Z = n(223143),
+    Z = n(307043),
+    P = n(223143),
     O = n(298228),
     w = n(937510),
     A = n(309956),
     R = n(853748),
     H = n(426171),
     F = n(823941),
-    V = n(752053),
-    D = n(963102),
+    D = n(752053),
+    V = n(963102),
     M = n(508498),
     W = n(38900),
     U = n(709999),
@@ -169,7 +169,7 @@ t.default = function (e) {
     var t;
     let { isFullScreen: n = !0 } = e;
     (0, x.z)(v.f);
-    let i = (0, P.u)('CollectiblesShop'),
+    let i = (0, Z.u)('CollectiblesShop'),
         { analyticsSource: l, analyticsLocations: p } = (0, c.cj)([L.Z], () => L.Z.getAnalytics()),
         { analyticsLocations: _ } = (0, g.ZP)([...p, f.Z.COLLECTIBLES_SHOP]),
         { sessionId: k, scrollerRef: w, scrollHandler: R } = (0, C._)(X.rMx.COLLECTIBLES_SHOP_SCROLLED, l),
@@ -183,7 +183,7 @@ t.default = function (e) {
         { onClose: ep } = (0, M.Db)(),
         ef = (0, c.e7)([E.default], () => E.default.getCurrentUser()),
         eg = T.ZP.canUseCollectibles(ef),
-        { categories: eC, isFetchingCategories: eb, fetchCategoriesError: ev, fetchPurchasesError: ex, claimError: e_, refreshCategories: ek } = (0, Z.Z)(),
+        { categories: eC, isFetchingCategories: eb, fetchCategoriesError: ev, fetchPurchasesError: ex, claimError: e_, refreshCategories: ek } = (0, P.Z)(),
         eI = null !== (t = null != ev ? ev : ex) && void 0 !== t ? t : e_;
     (0, I.P)();
     let ej = (0, O.O)(eC),
@@ -245,10 +245,10 @@ t.default = function (e) {
             ek();
         }, [ek]),
         { setCategoryRef: ey, handleScrollToCategory: eL } = (0, H.xV)(w.current),
-        { reducedMotion: eP } = a.useContext(m.AccessibilityPreferencesContext),
-        eZ = a.useRef(null),
+        { reducedMotion: eZ } = a.useContext(m.AccessibilityPreferencesContext),
+        eP = a.useRef(null),
         eO = a.useRef(null);
-    (0, m.useFocusLock)(eZ),
+    (0, m.useFocusLock)(eP),
         a.useEffect(() => {
             if (!n) {
                 var e;
@@ -257,10 +257,10 @@ t.default = function (e) {
         }, [n]);
     let ew = a.useCallback(
             async (e, t, r) => {
-                let a = r && !n && !eP.enabled;
+                let a = r && !n && !eZ.enabled;
                 eu(e), ec(t), await z(a), t && eL(t);
             },
-            [z, eL, n, eP]
+            [z, eL, n, eZ]
         ),
         eA = (0, c.e7)([y.Z], () => {
             var e;
@@ -276,7 +276,7 @@ t.default = function (e) {
             children: [
                 (0, r.jsx)('div', {
                     className: er.shop,
-                    ref: n ? eZ : eO,
+                    ref: n ? eP : eO,
                     tabIndex: -1,
                     children: (0, r.jsxs)(m.AdvancedScroller, {
                         className: er.shopScroll,
@@ -296,7 +296,7 @@ t.default = function (e) {
                                         [er.out]: F === Q.f7.OUT
                                     }),
                                     children: [
-                                        (0, r.jsx)(D.I, {
+                                        (0, r.jsx)(V.I, {
                                             isFullScreen: n,
                                             isLayer: em,
                                             onClose: ep,
@@ -317,7 +317,7 @@ t.default = function (e) {
                                         [er.out]: U === Q.f7.OUT
                                     }),
                                     children: [
-                                        (0, r.jsx)(D.I, {
+                                        (0, r.jsx)(V.I, {
                                             isFullScreen: n,
                                             isLayer: em,
                                             onClose: ep,
@@ -332,9 +332,9 @@ t.default = function (e) {
                                                 children: eb
                                                     ? (0, r.jsx)(W.Z, {})
                                                     : null != eI
-                                                      ? (0, r.jsx)(V.Z, {
+                                                      ? (0, r.jsx)(D.Z, {
                                                             onRetry: eB,
-                                                            errorOrigin: V.i.SHOP_PAGE
+                                                            errorOrigin: D.i.SHOP_PAGE
                                                         })
                                                       : (0, r.jsx)('div', {
                                                             className: er.categories,

@@ -16,15 +16,15 @@ var o = n(200651),
     p = n(819640),
     m = n(617136),
     x = n(113434),
-    g = n(497505),
-    f = n(302245),
+    f = n(497505),
+    g = n(302245),
     h = n(977156),
     C = n(5881),
     v = n(602667),
     j = n(78826),
     _ = n(667105),
-    b = n(693900),
-    E = n(617889),
+    E = n(693900),
+    b = n(617889),
     N = n(130653),
     B = n(46140),
     S = n(981631),
@@ -34,7 +34,7 @@ function A(e) {
     return (
         (0, x.qI)({
             mode: t ? B.NH.EXPANDED : B.NH.COLLAPSED,
-            questContent: g.jn.QUEST_BAR_V2,
+            questContent: f.jn.QUEST_BAR_V2,
             questId: n
         }),
         null
@@ -58,11 +58,11 @@ function y(e) {
         q = (0, d.Z)(k),
         P = (null === (n = s.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
         M = (0, d.Z)(P),
-        { hasError: W, isLoading: O } = (0, j.d7)(),
-        L = r.useContext(N.T) || (y && R && !O),
+        { hasError: O, isLoading: W } = (0, j.d7)(),
+        L = r.useContext(N.T) || (y && R && !W),
         Q = r.useRef(L),
-        Z = (0, E.B)(s, L && !W),
-        D = (0, f.vI)(s, B.dr.QUESTS_BAR) ? f.WV : Z.collapsedHeight,
+        Z = (0, b.B)(s, L && !O),
+        D = (0, g.vI)(s, B.dr.QUESTS_BAR) ? g.WV : Z.collapsedHeight,
         V = r.useRef(-1),
         H = r.useRef(!1),
         [U, z] = r.useState(!1),
@@ -109,7 +109,7 @@ function y(e) {
             (0, m.dA)({
                 questId: s.id,
                 event: S.rMx.QUEST_HOVER,
-                properties: (0, m.mH)(g.jn.QUEST_BAR)
+                properties: (0, m.mH)(f.jn.QUEST_BAR)
             }),
                 (H.current = !0),
                 el({ withDelay: !0 });
@@ -118,7 +118,7 @@ function y(e) {
             (0, m.dA)({
                 questId: s.id,
                 event: S.rMx.QUEST_HOVER_OFF,
-                properties: (0, m.mH)(g.jn.QUEST_BAR)
+                properties: (0, m.mH)(f.jn.QUEST_BAR)
             }),
                 (H.current = !1),
                 ed();
@@ -136,7 +136,7 @@ function y(e) {
             L !== Q.current && J(!1), (Q.current = L);
         }, [L]);
     let em = k ? B.XZ : B.R4,
-        [{ expansionSpring: ex }, eg] = (0, c.useSpring)(() => ({
+        [{ expansionSpring: ex }, ef] = (0, c.useSpring)(() => ({
             from: { expansionSpring: 0 },
             config: em,
             onRest: () => {
@@ -147,12 +147,12 @@ function y(e) {
             }
         }));
     r.useEffect(() => {
-        eg({
+        ef({
             expansionSpring: F ? 1 : 0,
             immediate: w
         });
-    }, [F, eg, w]);
-    let { visibilitySpring: ef } = (0, c.useSpring)({
+    }, [F, ef, w]);
+    let { visibilitySpring: eg } = (0, c.useSpring)({
         from: { visibilitySpring: 0 },
         to: { visibilitySpring: L ? 1 : 0 },
         config: {
@@ -171,12 +171,12 @@ function y(e) {
         P && !M && Z.canCollapseOnBlur && eo();
     }, [P, er, Z.canCollapseOnBlur, eo, M]),
     r.useEffect(() => {
-        W &&
+        O &&
             (0, m.dA)({
                 questId: s.id,
                 event: S.rMx.QUEST_CONTENT_RENDERING_FAILURE,
                 properties: {
-                    ...(0, m.mH)(g.jn.QUEST_BAR),
+                    ...(0, m.mH)(f.jn.QUEST_BAR),
                     reason: 'asset_loading_error'
                 }
             }),
@@ -185,12 +185,12 @@ function y(e) {
                     questId: s.id,
                     event: S.rMx.QUEST_CONTENT_RENDERING_FAILURE,
                     properties: {
-                        ...(0, m.mH)(g.jn.QUEST_BAR),
+                        ...(0, m.mH)(f.jn.QUEST_BAR),
                         reason: 'not_eligible_for_quest'
                     }
                 });
-    }, [W, y, s.id]),
-    y && (L || !X || O) && !W)
+    }, [O, y, s.id]),
+    y && (L || !X || W) && !O)
         ? (0, o.jsx)(v.A, {
               questOrQuests: s,
               questContent: Z.trackingCtx.content,
@@ -217,7 +217,7 @@ function y(e) {
                               }),
                               style: {
                                   color: s.config.colors.secondary,
-                                  height: ef.to({
+                                  height: eg.to({
                                       range: [0, 1],
                                       output: [0, !Z.canCollapseOnBlur && F ? $ : D]
                                   })
@@ -231,7 +231,7 @@ function y(e) {
                                       backgroundColor: Z.preEnrollmentBackgroundColor,
                                       backgroundImage: k ? Z.postEnrollmentBackgroundImage : void 0
                                   },
-                                  children: (0, o.jsx)(b.t, {
+                                  children: (0, o.jsx)(E.t, {
                                       springConfig: em,
                                       isExpanded: F,
                                       children: (0, o.jsx)(e, {
@@ -253,7 +253,7 @@ function y(e) {
                   });
               }
           })
-        : (W ? x.log('Not rendered due to asset error') : !y && x.log('Not rendered due to ineligibility'), null);
+        : (O ? x.log('Not rendered due to asset error') : !y && x.log('Not rendered due to ineligibility'), null);
 }
 t.Z =
     12633 == n.j

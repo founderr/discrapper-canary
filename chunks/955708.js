@@ -20,7 +20,7 @@ var o,
 ((r = o || (o = {}))[(r.INTRO = 0)] = 'INTRO'), (r[(r.SAFETY_TIPS = 1)] = 'SAFETY_TIPS'), (r[(r.TAKE_ACTION = 2)] = 'TAKE_ACTION');
 n.default = (t) => {
     let { warningId: n, warningType: e, senderId: o, modalProps: r, channelId: I } = t,
-        [_, f] = s.useState(0),
+        [f, _] = s.useState(0),
         C = s.useMemo(
             () => ({
                 channelId: I,
@@ -46,9 +46,9 @@ n.default = (t) => {
             },
             [C]
         ),
-        [p, A] = s.useState(!1);
+        [A, p] = s.useState(!1);
     function g(t) {
-        f(t);
+        _(t);
     }
     return (0, i.jsxs)(a.ModalRoot, {
         transitionState: r.transitionState,
@@ -57,7 +57,7 @@ n.default = (t) => {
                 className: h.container,
                 children: (0, i.jsxs)(a.Slides, {
                     width: 440,
-                    activeSlide: _,
+                    activeSlide: f,
                     centered: !1,
                     overflow: 'visible',
                     contentDisplay: 'flex',
@@ -86,9 +86,9 @@ n.default = (t) => {
                                 senderId: o,
                                 trackAnalyticsEvent: T,
                                 channelId: I,
-                                hasReported: p,
+                                hasReported: A,
                                 onReport: function () {
-                                    A(!0);
+                                    p(!0);
                                 }
                             })
                         })
@@ -108,7 +108,7 @@ n.default = (t) => {
                         },
                         children: N.intl.string(N.t.cpT0Cg)
                     }),
-                    0 !== _ &&
+                    0 !== f &&
                         (0, i.jsx)(a.Button, {
                             className: h.footerButton,
                             look: a.Button.Looks.LINK,

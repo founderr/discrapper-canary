@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return E;
+            return b;
         },
         openConsoleConnectionErrorsModal: function () {
             return B;
@@ -20,18 +20,18 @@ var o = n(200651),
     p = n(210887),
     m = n(617136),
     x = n(113434),
-    g = n(497505),
-    f = n(918701),
+    f = n(497505),
+    g = n(918701),
     h = n(475595),
     C = n(667105),
     v = n(981631),
     j = n(388032),
     _ = n(24444),
-    b = n(708901);
-function E(e) {
-    let { questId: t, errorHints: n, transitionState: s, onClose: E } = e,
+    E = n(708901);
+function b(e) {
+    let { questId: t, errorHints: n, transitionState: s, onClose: b } = e,
         B = (0, x.B4)(t);
-    null == B && E();
+    null == B && b();
     let [S, T] = (0, r.useState)(n),
         A = (0, x.KX)(),
         y = (0, i.e7)([d.Z], () => d.Z.useReducedMotion),
@@ -40,7 +40,7 @@ function E(e) {
             className: _.colorTransition
         }),
         w = S.filter((e) => ['xbox', 'playstation'].includes(e.connected_account_type)),
-        I = (0, f.Bz)(B),
+        I = (0, g.Bz)(B),
         k = (0, i.e7)([p.Z], () => p.Z.getState().theme),
         q = (0, l.wj)(k) ? v.BRd.DARK : v.BRd.LIGHT,
         { startConsoleQuest: P, startingConsoleQuest: M } = (0, x.GI)({
@@ -49,7 +49,7 @@ function E(e) {
                 R.startAnimation(),
                     (0, m._3)({
                         questId: B.id,
-                        questContent: g.jn.CONNECTIONS_MODAL,
+                        questContent: f.jn.CONNECTIONS_MODAL,
                         questContentCTA: m.jZ.DEFIBRILLATOR
                     });
             },
@@ -75,12 +75,12 @@ function E(e) {
                                 children: (0, o.jsx)('img', {
                                     className: _.icon,
                                     alt: '',
-                                    src: b
+                                    src: E
                                 })
                             }),
                             (0, o.jsx)(c.ModalCloseButton, {
                                 className: _.closeBtn,
-                                onClick: E
+                                onClick: b
                             })
                         ]
                     }),
@@ -170,7 +170,7 @@ function E(e) {
                 children: [
                     (0, o.jsx)(c.Button, {
                         size: c.ButtonSizes.MIN,
-                        onClick: E,
+                        onClick: b,
                         className: _.footerCloseButton,
                         children: j.intl.string(j.t.cpT0Cg)
                     }),
@@ -178,11 +178,11 @@ function E(e) {
                         look: c.ButtonLooks.LINK,
                         color: c.ButtonColors.PRIMARY,
                         onClick: () => {
-                            E(),
-                                (0, f.V$)(
+                            b(),
+                                (0, g.V$)(
                                     { quest: B },
                                     {
-                                        content: g.jn.CONNECTIONS_MODAL,
+                                        content: f.jn.CONNECTIONS_MODAL,
                                         ctaContent: m.jZ.VIEW_CONSOLE_CONNECTIONS_LINK
                                     }
                                 );

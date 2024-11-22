@@ -3,10 +3,10 @@ n.d(t, {
         return P;
     },
     OA: function () {
-        return R;
+        return L;
     },
     tH: function () {
-        return L;
+        return R;
     }
 }),
     n(653041);
@@ -23,14 +23,14 @@ var c = n(200651),
     E = n(132871),
     A = n(147890),
     p = n(122021),
-    m = n(275759),
-    _ = n(888496),
+    _ = n(275759),
+    m = n(888496),
     I = n(753194),
-    N = n(598077),
-    h = n(671533),
+    O = n(598077),
+    N = n(671533),
     f = n(49012),
-    C = n(981631),
-    O = n(856651),
+    h = n(981631),
+    C = n(856651),
     v = n(388032),
     x = n(962586);
 function P(e) {
@@ -38,35 +38,35 @@ function P(e) {
     let l,
         r,
         s,
-        { connectedAccount: E, theme: A, locale: N, userId: P, className: L, showMetadata: R, showInvisibleIcon: g } = e;
-    null == R && (R = !0);
-    let S = null !== (n = E.metadata) && void 0 !== n ? n : {},
-        b = R ? (0, m.FI)(S[O.PC.CREATED_AT], N) : null,
-        D = (0, u.useToken)(o.Z.unsafe_rawColors.TWITTER).hex(),
+        { connectedAccount: E, theme: A, locale: O, userId: P, className: R, showMetadata: L, showInvisibleIcon: S } = e;
+    null == L && (L = !0);
+    let g = null !== (n = E.metadata) && void 0 !== n ? n : {},
+        D = L ? (0, _.FI)(g[C.PC.CREATED_AT], O) : null,
+        b = (0, u.useToken)(o.Z.unsafe_rawColors.TWITTER).hex(),
         y = v.intl.string(v.t['6H6h1t']);
-    if (R)
+    if (L)
         switch (E.type) {
-            case C.ABu.REDDIT:
-                l = (0, _.oP)(S);
+            case h.ABu.REDDIT:
+                l = (0, m.oP)(g);
                 break;
-            case C.ABu.STEAM:
-                l = (0, _.Dq)(S);
+            case h.ABu.STEAM:
+                l = (0, m.Dq)(g);
                 break;
-            case C.ABu.TWITTER:
-                (l = (0, _.rJ)(S)), '1' === S[O.PC.TWITTER_VERIFIED] && ((r = D), (y = v.intl.string(v.t.Jebrw8)));
+            case h.ABu.TWITTER:
+                (l = (0, m.rJ)(g)), '1' === g[C.PC.TWITTER_VERIFIED] && ((r = b), (y = v.intl.string(v.t.Jebrw8)));
                 break;
-            case C.ABu.PAYPAL:
-                l = (0, _.li)(S);
+            case h.ABu.PAYPAL:
+                l = (0, m.li)(g);
                 break;
-            case C.ABu.EBAY:
-                l = (0, _.ul)(S);
+            case h.ABu.EBAY:
+                l = (0, m.ul)(g);
                 break;
-            case C.ABu.TIKTOK:
-                l = (0, _.hf)(S);
+            case h.ABu.TIKTOK:
+                l = (0, m.hf)(g);
         }
     let j = d.Z.get((0, p.rR)(E.type)),
         U = null == j ? void 0 : null === (t = j.getPlatformUserUrl) || void 0 === t ? void 0 : t.call(j, E);
-    null != g && g
+    null != S && S
         ? (s = (0, c.jsx)(u.EyeSlashIcon, {
               size: 'md',
               color: 'currentColor',
@@ -79,21 +79,21 @@ function P(e) {
                   var t, n;
                   (t = E.type),
                       (n = P),
-                      (0, T.yw)(C.rMx.CONNECTED_ACCOUNT_VIEWED, {
+                      (0, T.yw)(h.rMx.CONNECTED_ACCOUNT_VIEWED, {
                           platform_type: t,
                           other_user_id: n
                       }),
                       (0, f.q)(
                           {
                               href: U,
-                              trusted: (null == j ? void 0 : j.type) !== C.ABu.DOMAIN
+                              trusted: (null == j ? void 0 : j.type) !== h.ABu.DOMAIN
                           },
                           e
                       );
               },
-              children: (0, c.jsx)(h.Z, {
+              children: (0, c.jsx)(N.Z, {
                   className: x.connectedAccountOpenIcon,
-                  direction: h.Z.Directions.RIGHT
+                  direction: N.Z.Directions.RIGHT
               })
           }));
     let w = (0, u.useToken)(o.Z.colors.INTERACTIVE_MUTED).hex(),
@@ -108,7 +108,7 @@ function P(e) {
               })
             : null;
     return (0, c.jsxs)('div', {
-        className: a()(x.connectedAccountContainer, (null != l && l.length > 0) || null != b ? x.connectedAccountContainerWithMetadata : null, L),
+        className: a()(x.connectedAccountContainer, (null != l && l.length > 0) || null != D ? x.connectedAccountContainerWithMetadata : null, R),
         children: [
             (0, c.jsxs)('div', {
                 className: x.connectedAccount,
@@ -150,11 +150,11 @@ function P(e) {
                                     s
                                 ]
                             }),
-                            null != b
+                            null != D
                                 ? (0, c.jsx)(u.Text, {
                                       variant: 'text-xs/normal',
                                       color: 'header-secondary',
-                                      children: v.intl.format(v.t['9rfonp'], { date: b })
+                                      children: v.intl.format(v.t['9rfonp'], { date: D })
                                   })
                                 : null
                         ]
@@ -170,9 +170,9 @@ function P(e) {
         ]
     });
 }
-function L(e) {
+function R(e) {
     let { applicationRoleConnection: t, className: n, locale: l, onApplicationClicked: r, selectedGuildId: o } = e,
-        i = (0, _.rm)(t, void 0, l),
+        i = (0, m.rm)(t, void 0, l),
         d = () => {
             null == r || r(),
                 (0, A.goToAppDirectory)({
@@ -235,7 +235,7 @@ function L(e) {
                                     children: [
                                         null != t.application.bot
                                             ? (0, c.jsx)(s.Z, {
-                                                  user: new N.Z(t.application.bot),
+                                                  user: new O.Z(t.application.bot),
                                                   size: u.AvatarSizes.SIZE_16
                                               })
                                             : null,
@@ -253,7 +253,7 @@ function L(e) {
         ]
     });
 }
-let R = l.forwardRef(function (e, t) {
+let L = l.forwardRef(function (e, t) {
     let { connectedAccounts: n, theme: l, locale: r, className: o, userId: i } = e;
     if (null == n || 0 === n.length) return null;
     let u = n

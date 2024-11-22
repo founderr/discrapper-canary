@@ -25,16 +25,16 @@ var r = n(200651),
 n(381996);
 var v = n(392750),
     C = n(926976),
-    j = n(592197),
-    _ = n(806240),
+    _ = n(592197),
+    j = n(806240),
     T = n(789654),
     S = n(691867),
     y = n(916790),
     N = n(645973),
     I = n(903502),
     k = n(912072),
-    w = n(272193),
-    E = n(735959),
+    E = n(272193),
+    w = n(735959),
     Z = n(246992),
     R = n(496025),
     O = n(442954),
@@ -112,7 +112,7 @@ function X() {
                     e.push({
                         id: 'clans',
                         name: 'Clans',
-                        render: () => (0, r.jsx)(_.Z, {})
+                        render: () => (0, r.jsx)(j.Z, {})
                     }),
                     e.push({
                         id: 'performance',
@@ -132,7 +132,7 @@ function X() {
                 e.push({
                     id: 'intl',
                     name: 'Intl',
-                    render: () => (0, r.jsx)(E.Z, {})
+                    render: () => (0, r.jsx)(w.Z, {})
                 }),
                 e.push({
                     id: 'colors',
@@ -199,12 +199,12 @@ function X() {
                     e.push({
                         id: 'billing',
                         name: 'Billing',
-                        render: () => (0, r.jsx)(j.Z, {})
+                        render: () => (0, r.jsx)(_.Z, {})
                     })),
                 e.push({
                     id: 'gifting_intent',
                     name: 'Gifting Intent',
-                    render: () => (0, r.jsx)(w.Z, {})
+                    render: () => (0, r.jsx)(E.Z, {})
                 }),
                 e
             );

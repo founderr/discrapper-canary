@@ -32,7 +32,7 @@ let C = async () => {
             return [];
         }
     },
-    j = async (e, t) => {
+    _ = async (e, t) => {
         try {
             await o.tn.post({
                 url: p.ANM.CREATE_USER_OFFER(e, t),
@@ -43,7 +43,7 @@ let C = async () => {
             await (0, d.T)();
         }
     },
-    _ = async (e, t) => {
+    j = async (e, t) => {
         try {
             await o.tn.del({
                 url: p.ANM.DELETE_USER_OFFER(e, t),
@@ -95,25 +95,25 @@ function N(e) {
     let { offer: c, offerOptions: u, forceRefetch: h } = e,
         [f, p] = a.useState(!1),
         [g, C] = a.useState(!1),
-        [j, S] = a.useState(!1),
+        [_, S] = a.useState(!1),
         [y, N] = a.useState(!1);
     a.useEffect(() => {
-        j && N(!0);
+        _ && N(!0);
         let e = setTimeout(() => {
             N(!1);
         }, 500);
         return () => {
             clearTimeout(e);
         };
-    }, [j]);
-    let { id: I, expires_at: k, redeemed_at: w, trial_id: E, subscription_trial: Z, referrer: R } = c,
+    }, [_]);
+    let { id: I, expires_at: k, redeemed_at: E, trial_id: w, subscription_trial: Z, referrer: R } = c,
         O =
             null !==
                 (n =
                     null ===
                         (t = u.find((e) => {
                             let { value: t } = e;
-                            return t === E;
+                            return t === w;
                         })) || void 0 === t
                         ? void 0
                         : t.label) && void 0 !== n
@@ -161,7 +161,7 @@ function N(e) {
                         }),
                         (0, r.jsx)(s.Clickable, {
                             onClick: async () => {
-                                S(!0), await _(I, 'trial'), h(), S(!1);
+                                S(!0), await j(I, 'trial'), h(), S(!1);
                             },
                             children: (0, r.jsx)(s.TrashIcon, {
                                 size: 'md',
@@ -198,13 +198,13 @@ function N(e) {
                 (0, r.jsxs)(s.Clickable, {
                     className: i()(v.row, v.idRow),
                     onClick: () => {
-                        (0, m.JG)(E), C(!0);
+                        (0, m.JG)(w), C(!0);
                     },
                     children: [
                         (0, r.jsxs)(s.Text, {
                             variant: 'eyebrow',
                             color: 'always-white',
-                            children: ['Trial: ', E]
+                            children: ['Trial: ', w]
                         }),
                         g
                             ? (0, r.jsx)(s.CheckmarkLargeIcon, {
@@ -249,7 +249,7 @@ function N(e) {
                                 children: D
                             })
                         }),
-                        null != w &&
+                        null != E &&
                             (0, r.jsx)('div', {
                                 className: i()(v.badge, v.__invalid_badgeBottom, v.redeemed),
                                 children: (0, r.jsx)(s.Text, {
@@ -261,7 +261,7 @@ function N(e) {
                     ]
                 }),
                 (0, r.jsx)('div', {
-                    className: i()(v.loadingContainer, { [v.isLoading]: j || y }),
+                    className: i()(v.loadingContainer, { [v.isLoading]: _ || y }),
                     children: (0, r.jsx)(s.Spinner, {})
                 })
             ]
@@ -284,7 +284,7 @@ function I(e) {
             clearTimeout(e);
         };
     }, [p]);
-    let { id: j, expires_at: S, applied_at: y, discount_id: N, discount: I } = l,
+    let { id: _, expires_at: S, applied_at: y, discount_id: N, discount: I } = l,
         k =
             null !==
                 (n =
@@ -297,10 +297,10 @@ function I(e) {
                         : t.label) && void 0 !== n
                 ? n
                 : 'Unknown',
-        w = null != S,
-        E = null != S && new Date(S).getTime() < Date.now(),
+        E = null != S,
+        w = null != S && new Date(S).getTime() < Date.now(),
         Z = async () => {
-            b(!0), w ? await T(j, 'discount') : await (0, d.a)(void 0, l), c(), b(!1);
+            b(!0), E ? await T(_, 'discount') : await (0, d.a)(void 0, l), c(), b(!1);
         };
     a.useEffect(() => {
         if (u) {
@@ -322,8 +322,8 @@ function I(e) {
     }, [u, x]);
     let R = 'Active';
     return (
-        E && (R = 'Expired'),
-        w && (R = 'Acknowledged'),
+        w && (R = 'Expired'),
+        E && (R = 'Acknowledged'),
         (0, r.jsxs)('div', {
             className: i()(v.card, v.discount),
             children: [
@@ -337,7 +337,7 @@ function I(e) {
                         }),
                         (0, r.jsx)(s.Clickable, {
                             onClick: async () => {
-                                b(!0), await _(j, 'discount'), c(), b(!1);
+                                b(!0), await j(_, 'discount'), c(), b(!1);
                             },
                             children: (0, r.jsx)(s.TrashIcon, {
                                 size: 'md',
@@ -350,13 +350,13 @@ function I(e) {
                 (0, r.jsxs)(s.Clickable, {
                     className: i()(v.row, v.idRow),
                     onClick: () => {
-                        (0, m.JG)(j), h(!0);
+                        (0, m.JG)(_), h(!0);
                     },
                     children: [
                         (0, r.jsxs)(s.Text, {
                             variant: 'eyebrow',
                             color: 'text-normal',
-                            children: ['Offer: ', j]
+                            children: ['Offer: ', _]
                         }),
                         u
                             ? (0, r.jsx)(s.CheckmarkLargeIcon, {
@@ -408,8 +408,8 @@ function I(e) {
                         (0, r.jsx)(s.Clickable, {
                             onClick: Z,
                             className: i()(v.badge, v.clickable, {
-                                [v.acked]: w,
-                                [v.expired]: E
+                                [v.acked]: E,
+                                [v.expired]: w
                             }),
                             children: (0, r.jsx)(s.Text, {
                                 variant: 'eyebrow',
@@ -441,11 +441,11 @@ function k() {
         [n, l] = a.useState([]),
         [o, m] = a.useState(),
         [x, p] = a.useState(),
-        [b, _] = a.useState([]),
+        [b, j] = a.useState([]),
         [T, k] = a.useState([]),
-        [w, E] = a.useState(!0);
+        [E, w] = a.useState(!0);
     a.useEffect(() => {
-        (0 === e.length || 0 === n.length || w) &&
+        (0 === e.length || 0 === n.length || E) &&
             C().then((e) => {
                 let n = Object.keys(e.trial).map((t) => ({
                         label: t,
@@ -457,24 +457,24 @@ function k() {
                     }));
                 t(n), l(r), null == o && m(n[0].value), null == x && p(r[0].value);
             });
-    }, [e, n, o, x, w]),
+    }, [e, n, o, x, E]),
         a.useEffect(() => {
-            w &&
-                (E(!1),
+            E &&
+                (w(!1),
                 h.Z.forceReset(),
                 (0, d.T)(),
                 S().then((e) => {
-                    _(e.trial.sort((e, t) => e.id.localeCompare(t.id))), k(e.discount.sort((e, t) => e.id.localeCompare(t.id)));
+                    j(e.trial.sort((e, t) => e.id.localeCompare(t.id))), k(e.discount.sort((e, t) => e.id.localeCompare(t.id)));
                 }));
-        }, [w]);
+        }, [E]);
     let Z = async () => {
-            null != o && (await j(o, 'trial'), E(!0));
+            null != o && (await _(o, 'trial'), w(!0));
         },
         R = async () => {
-            null != x && (await j(x, 'discount'), E(!0));
+            null != x && (await _(x, 'discount'), w(!0));
         },
         O = async () => {
-            await y(), E(!0);
+            await y(), w(!0);
         };
     return (0, r.jsx)(s.ScrollerThin, {
         className: i()(g.panel),
@@ -503,7 +503,7 @@ function k() {
                                 }),
                                 (0, r.jsx)(s.Button, {
                                     size: s.Button.Sizes.SMALL,
-                                    onClick: () => E(!0),
+                                    onClick: () => w(!0),
                                     children: 'Refresh DevTools'
                                 })
                             ]
@@ -578,7 +578,7 @@ function k() {
                                     {
                                         offer: t,
                                         offerOptions: e,
-                                        forceRefetch: () => E(!0)
+                                        forceRefetch: () => w(!0)
                                     },
                                     t.id
                                 )
@@ -599,7 +599,7 @@ function k() {
                                     {
                                         offer: e,
                                         offerOptions: n,
-                                        forceRefetch: () => E(!0)
+                                        forceRefetch: () => w(!0)
                                     },
                                     e.id
                                 )

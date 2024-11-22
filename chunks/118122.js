@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return E;
     }
 });
 var i = n(200651),
@@ -39,12 +39,12 @@ function b(e) {
         return (t) => (0, i.jsx)(e, { ...t });
     });
 }
-function S(e) {
+function E(e) {
     let { disableTooltip: t, lastTargetNode: n } = e,
         o = (0, r.e7)([p.Z], () => p.Z.getGuilds()),
-        S = l.useMemo(() => Object.values(o), [o]),
-        E = (0, r.e7)([m.default], () => m.default.getCurrentUser()),
-        Z = l.useMemo(() => S.some((e) => e.isOwner(E)), [S, E]),
+        E = l.useMemo(() => Object.values(o), [o]),
+        S = (0, r.e7)([m.default], () => m.default.getCurrentUser()),
+        Z = l.useMemo(() => E.some((e) => e.isOwner(S)), [E, S]),
         N = (0, a.useModalsStore)((e) => (0, a.hasModalOpenSelector)(e, _.PU)),
         { analyticsLocations: y } = (0, s.ZP)(),
         T = (0, a.useRedesignIconContext)().enabled,

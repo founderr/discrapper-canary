@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return w;
     }
 }),
     n(47120);
@@ -22,8 +22,8 @@ var r = n(200651),
     g = n(168524),
     v = n(77498),
     C = n(823379),
-    j = n(71585),
-    _ = n(146282),
+    _ = n(71585),
+    j = n(146282),
     T = n(650613),
     S = n(789086),
     y = n(206583),
@@ -59,14 +59,14 @@ let k = [
         cellClassName: N.cell,
         render(e) {
             let { type: t } = e;
-            return (0, r.jsx)(w, { type: t });
+            return (0, r.jsx)(E, { type: t });
         }
     }
 ];
-function w(e) {
+function E(e) {
     var t, n;
     let { type: a } = e,
-        l = (0, d.e7)([_.Z], () => _.Z.getFilters()),
+        l = (0, d.e7)([j.Z], () => j.Z.getFilters()),
         i = null !== (n = null == l ? void 0 : null === (t = l.types) || void 0 === t ? void 0 : t.has(a)) && void 0 !== n && n;
     return (0, r.jsx)(h.Checkbox, {
         value: i,
@@ -83,11 +83,11 @@ function w(e) {
         }
     });
 }
-function E() {
+function w() {
     var e, t;
-    let n = (0, d.e7)([_.Z], () => _.Z.getFeed(y.YN.GLOBAL_FEED)),
-        l = (0, d.e7)([_.Z], () => _.Z.getDebugImpressionCappingDisabled()),
-        o = (0, d.e7)([j.Z], () => j.Z.getDebugFastImpressionCappingEnabled()),
+    let n = (0, d.e7)([j.Z], () => j.Z.getFeed(y.YN.GLOBAL_FEED)),
+        l = (0, d.e7)([j.Z], () => j.Z.getDebugImpressionCappingDisabled()),
+        o = (0, d.e7)([_.Z], () => _.Z.getDebugFastImpressionCappingEnabled()),
         s = (function (e) {
             let t = c().groupBy(e, (e) => e.content_type);
             return Object.keys(t).map((e) => {
@@ -99,18 +99,18 @@ function E() {
                 };
             });
         })(null == n ? void 0 : null === (e = n.entries) || void 0 === e ? void 0 : e.map((e) => e.content)),
-        w = (0, d.e7)([_.Z], () => {
+        E = (0, d.e7)([j.Z], () => {
             var e;
-            return (null === (e = _.Z.getFeedState(y.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.loading) === !0;
+            return (null === (e = j.Z.getFeedState(y.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.loading) === !0;
         }),
-        [E, R] = a.useState(''),
+        [w, R] = a.useState(''),
         O = (0, d.e7)(
             [v.Z, x.Z],
             () => {
                 var e, t, n;
-                return parseInt(E) > 0 ? E : null !== (n = null === (e = v.Z.getGameByName(E)) || void 0 === e ? void 0 : e.id) && void 0 !== n ? n : null === (t = x.Z.getApplicationByName(E)) || void 0 === t ? void 0 : t.id;
+                return parseInt(w) > 0 ? w : null !== (n = null === (e = v.Z.getGameByName(w)) || void 0 === e ? void 0 : e.id) && void 0 !== n ? n : null === (t = x.Z.getApplicationByName(w)) || void 0 === t ? void 0 : t.id;
             },
-            [E]
+            [w]
         ),
         A = (0, g.Z)({
             applicationId: O,
@@ -150,7 +150,7 @@ function E() {
                                     feedId: y.YN.GLOBAL_FEED
                                 });
                             },
-                            submitting: w,
+                            submitting: E,
                             children: 'Refresh Now'
                         })
                     ]
@@ -200,9 +200,9 @@ function E() {
                             placeholder: 'App ID or full name',
                             onChange: (e) => (0 === e.length || e.length >= 18) && R(e),
                             onKeyDown: (e) => {
-                                'Enter' === e.key && (E === e.currentTarget.value ? null == A || A(e) : R(e.currentTarget.value));
+                                'Enter' === e.key && (w === e.currentTarget.value ? null == A || A(e) : R(e.currentTarget.value));
                             },
-                            error: E.length > 0 && null == A ? 'No game profile for '.concat(null != O ? O : E + ' - try by id', '.') : void 0,
+                            error: w.length > 0 && null == A ? 'No game profile for '.concat(null != O ? O : w + ' - try by id', '.') : void 0,
                             style: null != A ? { border: '1px solid green' } : {}
                         }),
                         (0, r.jsx)('ul', { children: P.map((e) => (0, r.jsx)('li', { children: (0, r.jsx)(Z, { application: e }) }, 'follow-game-'.concat(e.id))) })

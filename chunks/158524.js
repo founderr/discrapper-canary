@@ -147,7 +147,7 @@ function k(e) {
                           children: (0, s.jsx)(o.Button, {
                               className: C.clearAllButton,
                               onClick: () => {
-                                  r.Z.clearPendingSpam(), a();
+                                  r.Z.clearPendingSpamAndIgnored(), a();
                               },
                               children: _.intl.string(_.t.O8k7Oz)
                           })

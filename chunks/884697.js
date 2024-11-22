@@ -120,7 +120,7 @@ let d = (e) => (null == e ? void 0 : e.premiumType) != null,
     },
     b = (e) =>
         e.reduce((e, t) => {
-            if (t.type === i.Z.VARIANTS_GROUP && null != t.variants) {
+            if (null != t && t.type === i.Z.VARIANTS_GROUP && null != t.variants) {
                 let n = t.prices;
                 return (0, r.concat)(
                     e,

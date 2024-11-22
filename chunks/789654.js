@@ -44,10 +44,10 @@ var r = n(200651),
     g = n(500949),
     v = n(806714);
 let { SemanticColors: C } = d.V;
-function j(e) {
+function _(e) {
     return e.replaceAll(/_|\./g, '-').toLowerCase();
 }
-function _(e) {
+function j(e) {
     return e.replaceAll(/_|-/g, '.').toLowerCase();
 }
 function T(e, t) {
@@ -65,16 +65,16 @@ function T(e, t) {
 function S() {
     let e = (0, m.Fg)(),
         [t, n, l, o, d, u] = (0, g.zn)(),
-        { semanticColorOverrides: b, rawColorOverrides: C, tab: _, scales: S } = t,
+        { semanticColorOverrides: b, rawColorOverrides: C, tab: j, scales: S } = t,
         N = a.useMemo(() => {
             let t = Object.entries(b).map((t) => {
                     let [n, r] = t,
                         { colors: a, highlight: l } = r,
                         i = a[e];
                     if (null == i) return '';
-                    let o = j(n);
+                    let o = _(n);
                     if (l) return '--'.concat(o, ': magenta !important;');
-                    let c = j(i.color),
+                    let c = _(i.color),
                         s = i.opacity,
                         d = s < 1 ? 'hsl(var(--'.concat(c, '-hsl) / ').concat(s, ')') : 'var(--'.concat(c, ')');
                     return '--'.concat(o, ': color-mix(\n        in oklab,\n        ').concat(d, ' 100%,\n        var(--theme-base-color, black) var(--theme-base-color-amount, 0%)\n      );');
@@ -128,7 +128,7 @@ function S() {
                         className: v.tabBar,
                         type: 'top',
                         look: 'brand',
-                        selectedItem: _,
+                        selectedItem: j,
                         onItemSelect: (e) => {
                             n((t) => ({
                                 ...t,
@@ -216,7 +216,7 @@ function S() {
             }),
             (0, r.jsx)('div', {
                 className: v.tab,
-                hidden: _ !== g.H8.TOKENS,
+                hidden: j !== g.H8.TOKENS,
                 children: (0, r.jsx)(y, {
                     state: t,
                     setState: n
@@ -224,7 +224,7 @@ function S() {
             }),
             (0, r.jsx)('div', {
                 className: v.tab,
-                hidden: _ !== g.H8.PALETTES,
+                hidden: j !== g.H8.PALETTES,
                 children: (0, r.jsx)(p.P, {
                     state: t,
                     setState: n
@@ -330,7 +330,7 @@ function y(e) {
         ),
         p = Object.keys(C).map((e) => ({
             value: e,
-            label: j(e)
+            label: _(e)
         })),
         T = Object.keys(u.b).map((e) => ({
             value: e,
@@ -363,14 +363,14 @@ function y(e) {
                     let [t, a] = e,
                         i = a.colors[l];
                     if (null == i) return null;
-                    let o = _(i.color),
+                    let o = j(i.color),
                         s = i.opacity,
                         d = g.jC[t][l];
                     return (0, r.jsx)(
                         N,
                         {
-                            title: j(t),
-                            subtitle: 1 === d.opacity ? _(d.raw) : ''.concat(_(d.raw), ' @ ').concat(100 * d.opacity, '%'),
+                            title: _(t),
+                            subtitle: 1 === d.opacity ? j(d.raw) : ''.concat(j(d.raw), ' @ ').concat(100 * d.opacity, '%'),
                             highlight: a.highlight,
                             onReset: () => {
                                 n((e) => {

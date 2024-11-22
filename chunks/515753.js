@@ -27,8 +27,8 @@ var i = n(200651),
     x = n(201895),
     I = n(43267),
     b = n(933557),
-    S = n(979264),
-    E = n(322614),
+    E = n(979264),
+    S = n(322614),
     Z = n(961556),
     N = n(163889),
     y = n(111028),
@@ -132,7 +132,7 @@ class J extends l.Component {
     }
 }
 function $(e) {
-    let { channel: t, isGDMFacepileEnabled: r, selected: o = !1, user: d, activities: E, applicationStream: A, entry: R, isTyping: L, status: w, isMobile: k, 'aria-posinset': G, 'aria-setsize': B } = e,
+    let { channel: t, isGDMFacepileEnabled: r, selected: o = !1, user: d, activities: S, applicationStream: A, entry: R, isTyping: L, status: w, isMobile: k, 'aria-posinset': G, 'aria-setsize': B } = e,
         [V, J] = l.useState(!1),
         $ = l.useRef(null),
         ee = l.useRef(null),
@@ -230,10 +230,10 @@ function $(e) {
                         className: z.subtext,
                         children: W.intl.format(W.t.CxSA5O, { members: t.recipients.length + 1 })
                     })
-                  : w !== F.Skl.OFFLINE && w !== F.Skl.INVISIBLE && null != E && E.length > 0
+                  : w !== F.Skl.OFFLINE && w !== F.Skl.INVISIBLE && null != S && S.length > 0
                     ? (0, i.jsx)(H.ZP, {
                           ...e,
-                          activities: E,
+                          activities: S,
                           applicationStream: A,
                           animate: V,
                           hideTooltip: !0,
@@ -268,7 +268,7 @@ function $(e) {
             s()(null != d, 'PrivateChannel.renderAvatar: Invalid prop configuration - no user or channel');
             let n = null;
             return (
-                !d.isSystemUser() && (n = (0, g.Z)(E) ? F.Skl.STREAMING : w),
+                !d.isSystemUser() && (n = (0, g.Z)(S) ? F.Skl.STREAMING : w),
                 (0, i.jsx)(Y, {
                     ...ei,
                     size: p.AvatarSizes.SIZE_32,
@@ -286,13 +286,13 @@ function $(e) {
         ex = t.isSystemDM(),
         eI = (0, j.Q)(),
         eb = !ev && !ex && t.type === F.d4z.DM,
-        eS = eb && (null == d ? void 0 : d.clan) != null,
-        eE = eb && er,
-        eZ = eS
+        eE = eb && (null == d ? void 0 : d.clan) != null,
+        eS = eb && er,
+        eZ = eE
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
                       eo,
-                      (0, i.jsx)(S.ZP, {
+                      (0, i.jsx)(E.ZP, {
                           clan: null == d ? void 0 : d.clan,
                           userId: null == d ? void 0 : d.id,
                           inline: !0,
@@ -329,7 +329,7 @@ function $(e) {
                     }),
                     as: 'div',
                     onClick: em,
-                    muted: el || eE,
+                    muted: el || eS,
                     selected: o,
                     children: [
                         (0, i.jsx)(c.rU, {
@@ -345,7 +345,7 @@ function $(e) {
                                 avatar: e_(),
                                 selected: o,
                                 highlighted: ea,
-                                muted: null !== (n = el || eE) && void 0 !== n && n,
+                                muted: null !== (n = el || eS) && void 0 !== n && n,
                                 subText: eC(),
                                 name: (0, i.jsx)(y.Z, {
                                     tooltipClassName: z.overflowTooltip,
@@ -361,7 +361,7 @@ function $(e) {
                             })
                         }),
                         es ? (0, i.jsx)(Q, {}) : null,
-                        eE ? (0, i.jsx)(X, {}) : null,
+                        eS ? (0, i.jsx)(X, {}) : null,
                         (0, i.jsx)(q, {
                             'aria-label': ev ? W.intl.string(W.t['26C4oq']) : W.intl.string(W.t.jsvgc3),
                             onClick: ev ? eg : ed,
@@ -414,7 +414,7 @@ t.ZP = (e) => {
             [t, r, o]
         ),
         { recentActivityStatusEnabled: p } = (0, R.U)({ location: 'PrivateChannel' }),
-        m = (0, E.Z)(null == r ? void 0 : r.id);
+        m = (0, S.Z)(null == r ? void 0 : r.id);
     return t.isMultiUserDM()
         ? (0, i.jsx)($, {
               channel: t,

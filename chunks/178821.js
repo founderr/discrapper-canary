@@ -80,7 +80,7 @@ function p(e) {
                 onResetFrameData: u
             };
         })(n, l),
-        [C, j, _] = (function (e) {
+        [C, _, j] = (function (e) {
             let t = a.useRef(Array(f).fill(0)),
                 n = a.useRef(performance.now()),
                 r = a.useRef(0),
@@ -134,7 +134,7 @@ function p(e) {
             ];
         })(C, v),
         y = performance.now() - i.current < 5000,
-        N = j(s, g.current);
+        N = _(s, g.current);
     a.useEffect(
         () => (
             T(),
@@ -145,8 +145,8 @@ function p(e) {
         []
     );
     let I = a.useCallback(() => {
-        m(), _(), T();
-    }, [m, _, T]);
+        m(), j(), T();
+    }, [m, j, T]);
     return (0, r.jsxs)('div', {
         className: d.panelGroup,
         children: [

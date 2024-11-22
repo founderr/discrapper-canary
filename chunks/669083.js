@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return O;
     }
 }),
     n(47120);
@@ -309,7 +309,7 @@ class T extends a.PureComponent {
             });
     }
 }
-function b(e) {
+function O(e) {
     let { onClose: t } = e,
         {
             avatarSizeMode: n,

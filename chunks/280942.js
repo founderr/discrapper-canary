@@ -37,7 +37,7 @@ function m(e) {
             break;
         case o.O0b.PAUSE_PENDING:
         case o.O0b.PAUSED:
-            (S.transfer.disabled = !0), (S.transfer.subtext = d.intl.string(d.t.LiLRRU)), (S.cancel.subtext = d.intl.string(d.t['1ywaWF'])), (S.cancel.disabled = !0), (S.uncancel.disabled = !0);
+            x === c.a$.NONE && ((S.transfer.disabled = !0), (S.transfer.subtext = d.intl.string(d.t.LiLRRU))), (S.cancel.subtext = d.intl.string(d.t['1ywaWF'])), (S.cancel.disabled = !0), (S.uncancel.disabled = !0);
     }
     x !== c.a$.NONE && ((S.cancel.subtext = d.intl.string(d.t.dq4vq6)), (S.cancel.disabled = !0), (S.uncancel.disabled = !0));
     let T = s.useMemo(

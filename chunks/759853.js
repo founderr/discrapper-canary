@@ -11,14 +11,14 @@ var o = n(200651),
     p = n(607070),
     m = n(819640),
     x = n(569379),
-    g = n(675654),
-    f = n(435616),
+    f = n(675654),
+    g = n(435616),
     h = n(197857);
 let C = ['#51BC9D'];
 t.Z = (e) => {
     var t;
     let { expansionSpring: n, overlayRef: s, quest: v, progressBarRef: j, isExpanded: _ } = e,
-        { completionSpring: b, startCompletionAnimation: E } = (0, x.G)(),
+        { completionSpring: E, startCompletionAnimation: b } = (0, x.G)(),
         N = (null === (t = v.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
         B = r.useRef(!1),
         S = (0, d.e7)([p.Z], () => p.Z.useReducedMotion),
@@ -48,7 +48,7 @@ t.Z = (e) => {
                     (r = e.clientHeight),
                     (s = e.clientWidth),
                     {
-                        ...g.We,
+                        ...f.We,
                         position: {
                             type: 'static-random',
                             minValue: {
@@ -90,38 +90,38 @@ t.Z = (e) => {
                 );
             }
         }, [j, T, P, S]),
-        W = (0, u.Z)(_);
+        O = (0, u.Z)(_);
     return (r.useEffect(() => {
-        N && _ && !W && (E(), M());
-    }, [_, N, E, M, W]),
+        N && _ && !O && (b(), M());
+    }, [_, N, b, M, O]),
     r.useEffect(() => {
         N &&
             !A &&
             y &&
             setTimeout(() => {
-                E(), M();
+                b(), M();
             }, 200);
-    }, [N, y, A, E, M]),
+    }, [N, y, A, b, M]),
     r.useEffect(() => {
-        if (!!P.isReady) !B.current && N && (E(), M()), (B.current = N);
-    }, [N, B, M, E, P]),
+        if (!!P.isReady) !B.current && N && (b(), M()), (B.current = N);
+    }, [N, B, M, b, P]),
     S)
         ? null
         : (0, o.jsxs)('div', {
-              className: f.wrapper,
+              className: g.wrapper,
               'aria-hidden': 'true',
               ref: T,
               children: [
                   (0, o.jsx)(c.animated.div, {
-                      className: f.background,
-                      style: { opacity: b }
+                      className: g.background,
+                      style: { opacity: E }
                   }),
                   (0, o.jsx)(c.animated.div, {
-                      className: a()(f.borders, f.bordersTopLeft),
-                      style: { opacity: b }
+                      className: a()(g.borders, g.bordersTopLeft),
+                      style: { opacity: E }
                   }),
                   (0, o.jsxs)(c.animated.div, {
-                      className: f.confettiWrapper,
+                      className: g.confettiWrapper,
                       style: {
                           transform: n
                               .to({
@@ -133,21 +133,21 @@ t.Z = (e) => {
                       children: [
                           (0, o.jsx)(i.O_, {
                               ref: w,
-                              className: f.confetti,
+                              className: g.confetti,
                               environment: q.current
                           }),
                           (0, o.jsx)(i.Ji, {
                               ref: k,
                               sprites: [h],
                               colors: C,
-                              spriteWidth: g.Ko,
-                              spriteHeight: g.Ko
+                              spriteWidth: f.Ko,
+                              spriteHeight: f.Ko
                           }),
                           null != s.current &&
                               (0, l.createPortal)(
                                   (0, o.jsx)(c.animated.div, {
-                                      className: a()(f.borders, f.bordersBottom),
-                                      style: { opacity: b }
+                                      className: a()(g.borders, g.bordersBottom),
+                                      style: { opacity: E }
                                   }),
                                   s.current
                               )

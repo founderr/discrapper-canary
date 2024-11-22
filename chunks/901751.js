@@ -71,7 +71,7 @@ function L(e) {
     for (let r of o.ZP.getSelfEmbeddedActivities().values()) {
         var n;
         if (null != e && r.channelId !== e) continue;
-        let i = null !== (n = (0, g.lQ)(m.Z.quests, r.applicationId)) && void 0 !== n ? n : null;
+        let i = null !== (n = (0, g.tF)(m.Z.quests, r)) && void 0 !== n ? n : null;
         if (null != i && D(i))
             return {
                 quest: i,

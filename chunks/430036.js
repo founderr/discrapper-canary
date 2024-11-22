@@ -29,13 +29,13 @@ var i = n(200651),
     y = n(752305),
     N = n(974251),
     T = n(893718),
-    b = n(249458),
-    O = n(552062),
+    O = n(249458),
+    b = n(552062),
     A = n(957730),
-    j = n(400023),
-    L = n(623292),
-    P = n(807092),
-    R = n(592125),
+    L = n(400023),
+    P = n(623292),
+    R = n(807092),
+    j = n(592125),
     w = n(703558),
     M = n(731290),
     D = n(430824),
@@ -44,8 +44,8 @@ var i = n(200651),
     V = n(914010),
     U = n(594174),
     B = n(556296),
-    G = n(237997),
-    W = n(585483),
+    W = n(237997),
+    G = n(585483),
     F = n(838440),
     H = n(13140),
     Y = n(519591),
@@ -75,7 +75,7 @@ class ei extends r.Component {
         e.channel.id !== this.props.channel.id && this.draftDidChange(this.props), (this.props.channel !== e.channel || (this.props.isTemporarilyActive && !e.isTemporarilyActive)) && this.setState({ focused: !0 });
     }
     componentWillUnmount() {
-        w.Z.removeChangeListener(this.draftDidChange), W.S.unsubscribe(J.CkL.TEXTAREA_FOCUS, this.focusInput), W.S.unsubscribe(J.CkL.TEXTAREA_BLUR, this.blurInput);
+        w.Z.removeChangeListener(this.draftDidChange), G.S.unsubscribe(J.CkL.TEXTAREA_FOCUS, this.focusInput), G.S.unsubscribe(J.CkL.TEXTAREA_BLUR, this.blurInput);
     }
     render() {
         let { channel: e, placeholder: t, ...n } = this.props,
@@ -178,7 +178,7 @@ class ei extends r.Component {
                           let { valid: s, failureReason: a } = e;
                           if (!s)
                               return a === J.zYc.SLOWMODE_COOLDOWN
-                                  ? (W.S.dispatch(J.CkL.EMPHASIZE_SLOWMODE_COOLDOWN),
+                                  ? (G.S.dispatch(J.CkL.EMPHASIZE_SLOWMODE_COOLDOWN),
                                     {
                                         shouldClear: !1,
                                         shouldRefocus: !0
@@ -188,7 +188,7 @@ class ei extends r.Component {
                                         shouldRefocus: !1
                                     };
                           let o = p.Z.getSendMessageOptionsForReply(i);
-                          return (p.Z.sendMessage(n.id, A.ZP.parse(n, t), !0, o), this.setState((0, y.H2)()), (0, L.A6)(n.id), r)
+                          return (p.Z.sendMessage(n.id, A.ZP.parse(n, t), !0, o), this.setState((0, y.H2)()), (0, P.A6)(n.id), r)
                               ? (f.Z.deactivateAllRegions(),
                                 {
                                     shouldClear: !1,
@@ -223,8 +223,8 @@ class ei extends r.Component {
             focused: !1,
             contentWarningProps: null
         }),
-            W.S.subscribe(J.CkL.TEXTAREA_FOCUS, this.focusInput),
-            W.S.subscribe(J.CkL.TEXTAREA_BLUR, this.blurInput);
+            G.S.subscribe(J.CkL.TEXTAREA_FOCUS, this.focusInput),
+            G.S.subscribe(J.CkL.TEXTAREA_BLUR, this.blurInput);
     }
 }
 class er extends r.PureComponent {
@@ -259,7 +259,7 @@ class er extends r.PureComponent {
                 v && null != o
                     ? (0, i.jsx)(_.Z, { guild: o })
                     : (0, i.jsx)(
-                          j.Z,
+                          L.Z,
                           {
                               channel: t,
                               className: ee.messages,
@@ -270,7 +270,7 @@ class er extends r.PureComponent {
                           },
                           t.id
                       )),
-            (0, i.jsx)(b.G.Provider, {
+            (0, i.jsx)(O.G.Provider, {
                 value: {
                     disableInteractions: u && l && !c,
                     disableAnimations: u && g && !c
@@ -433,11 +433,11 @@ class er extends r.PureComponent {
             }),
             et(this, 'moveDragStart', (e) => {
                 let { dragStart: t } = this.props;
-                t(O.B.MOVE, e.clientX, e.clientY);
+                t(b.B.MOVE, e.clientX, e.clientY);
             }),
             et(this, 'resizeDragStart', (e) => {
                 let { dragStart: t } = this.props;
-                t(O.B.RESIZE_SOUTH_EAST, e.clientX, e.clientY);
+                t(b.B.RESIZE_SOUTH_EAST, e.clientX, e.clientY);
             });
     }
 }
@@ -445,14 +445,14 @@ function es(e) {
     let { contained: t = !1, ...n } = e,
         r = (0, c.e7)([V.Z], () => V.Z.getGuildId()),
         s = (0, c.e7)([z.Z], () => z.Z.getChannelId(r)),
-        a = (0, c.e7)([R.Z], () => R.Z.getChannel(s)),
+        a = (0, c.e7)([j.Z], () => j.Z.getChannel(s)),
         o = (0, c.e7)([B.Z], () => B.Z.getOverlayChatKeybind()),
         l = null != o ? (0, H.BB)(o.shortcut, !0) : ']',
-        [d, u, h] = (0, c.Wu)([G.Z], () => [G.Z.getTextWidgetOpacity(), G.Z.getActiveRegions(), !t && G.Z.isPreviewingInGame()]),
+        [d, u, h] = (0, c.Wu)([W.Z], () => [W.Z.getTextWidgetOpacity(), W.Z.getActiveRegions(), !t && W.Z.isPreviewingInGame()]),
         p = (0, c.e7)([D.Z], () => D.Z.getGuild(r)),
         f = (0, c.e7)([M.Z], () => null != r && M.Z.didAgree(r)),
         g = null != a && a.isPrivate() ? a.getRecipientId() : null,
-        m = (0, c.e7)([P.Z], () => (null != s ? P.Z.getPendingReply(s) : void 0)),
+        m = (0, c.e7)([R.Z], () => (null != s ? R.Z.getPendingReply(s) : void 0)),
         v = (0, c.e7)([U.default], () => (null != g ? U.default.getUser(g) : null)),
         { placeholder: _ } = (0, E.Z)(a);
     return null != a && null != p && J.TPd.GUILD_THREADS_ONLY.has(a.type)

@@ -26,8 +26,8 @@ var l = n(120356),
     x = n(431328),
     I = n(501655),
     b = n(427679),
-    S = n(368442),
-    E = n(201469),
+    E = n(368442),
+    S = n(201469),
     Z = n(680089),
     N = n(592125),
     y = n(430824),
@@ -93,7 +93,7 @@ class F extends L.ZP {
         let { channel: e, selected: t, connected: n, locked: l, connectChannelDropTarget: a, connectChannelDragSource: s, connectUserDropTarget: c, connectDragPreview: u, canReorderChannel: d, canMoveMembers: p, stageInstance: m, isSubscriptionGated: f, needSubscriptionToAccess: g, unread: C, resolvedUnreadSetting: _, mentionCount: v, isFavoriteSuggestion: x } = this.props,
             { shouldShowGuildVerificationPopout: I } = this.state,
             b = this.getVoiceStatesCount(),
-            S = (0, i.jsxs)('li', {
+            E = (0, i.jsxs)('li', {
                 className: r()(this.getModeClass(), { [B.disabled]: this.isDisabled() }),
                 'data-dnd-name': e.name,
                 children: [
@@ -144,7 +144,7 @@ class F extends L.ZP {
                     this.renderVoiceUsers()
                 ]
             });
-        return p && (S = c(S)), d && (S = a(s(S))), S;
+        return p && (E = c(E)), d && (E = a(s(E))), E;
     }
     constructor(...e) {
         super(...e),
@@ -244,12 +244,12 @@ function z(e) {
             };
         }),
         h = (0, a.e7)([Z.Z], () => Z.Z.isCollapsed(n.parent_id)),
-        p = (0, E.ZP)(n.id),
+        p = (0, S.ZP)(n.id),
         m = (0, a.e7)([b.Z], () => b.Z.getStageInstanceByChannel(n.id), [n.id]),
         f = (0, x.Rk)(n.id, I.pV.AUDIENCE),
         { isSubscriptionGated: C, needSubscriptionToAccess: _ } = (0, g.Z)(n.id),
         v = (0, a.e7)([j.ZP], () => j.ZP.isFavorite(t.id, n.id)),
-        y = (0, S.xJ)(n.id),
+        y = (0, E.xJ)(n.id),
         R = (0, w.Z)({
             channel: n,
             isChannelSelected: !1,

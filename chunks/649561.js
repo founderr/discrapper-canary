@@ -24,7 +24,7 @@ var i = n(200651),
     y = n(981631),
     N = n(388032),
     T = n(372049);
-function b(e, t, n) {
+function O(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,7 +37,7 @@ function b(e, t, n) {
         e
     );
 }
-let O = 10 * E.Z.Millis.SECOND;
+let b = 10 * E.Z.Millis.SECOND;
 function A() {
     let e = (0, Z.QF)(),
         t = (0, Z.Ht)();
@@ -54,9 +54,9 @@ function A() {
         ]
     });
 }
-class j extends r.PureComponent {
+class L extends r.PureComponent {
     componentDidMount() {
-        (this.notificationTimer = setTimeout(this.hideNotification, O)), p.Z.track(y.rMx.NOTIFICATION_VIEWED, { notif_type: C.n0.OverlayCrashed });
+        (this.notificationTimer = setTimeout(this.hideNotification, b)), p.Z.track(y.rMx.NOTIFICATION_VIEWED, { notif_type: C.n0.OverlayCrashed });
     }
     componentWillUnmount() {
         let { notificationTimer: e } = this;
@@ -112,17 +112,17 @@ class j extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            b(this, 'state', {
+            O(this, 'state', {
                 showTrace: !1,
                 busy: !1
             }),
-            b(this, 'notificationTimer', void 0),
-            b(this, 'hideNotification', () => {
+            O(this, 'notificationTimer', void 0),
+            O(this, 'hideNotification', () => {
                 A();
                 let { notificationTimer: e } = this;
                 null != e && clearTimeout(e), (this.notificationTimer = null);
             }),
-            b(this, 'handleReload', (e) => {
+            O(this, 'handleReload', (e) => {
                 this.setState({ busy: !0 }),
                     A(),
                     p.Z.track(
@@ -136,14 +136,14 @@ class j extends r.PureComponent {
                     e.stopPropagation(),
                     setTimeout(() => location.reload(!0), 200);
             }),
-            b(this, 'handleNotificationClick', (e) => {
+            O(this, 'handleNotificationClick', (e) => {
                 e.stopPropagation();
                 let { notificationTimer: t } = this;
                 null != t && clearTimeout(t), e.shiftKey && this.setState({ showTrace: !0 });
             });
     }
 }
-let L = l().throttle(
+let P = l().throttle(
     () => {
         g.Z.increment(
             {
@@ -156,7 +156,7 @@ let L = l().throttle(
     100,
     { trailing: !1 }
 );
-class P extends r.PureComponent {
+class R extends r.PureComponent {
     componentDidCatch(e, t) {
         let n = (0, v.s1)().location;
         this.setState({
@@ -191,13 +191,13 @@ class P extends r.PureComponent {
             sentry_issue_id: s,
             error_level: 'fatal'
         }),
-            L();
+            P();
     }
     render() {
         let { children: e, className: t } = this.props,
             { error: n, info: r } = this.state;
         return null != n
-            ? (0, i.jsx)(j, {
+            ? (0, i.jsx)(L, {
                   error: n,
                   info: r
               })
@@ -208,10 +208,10 @@ class P extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            b(this, 'state', {
+            O(this, 'state', {
                 error: null,
                 info: null
             });
     }
 }
-t.Z = P;
+t.Z = R;

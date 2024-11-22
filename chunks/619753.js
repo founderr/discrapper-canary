@@ -41,17 +41,17 @@ var i = n(200651),
     k = n(652553);
 function O(e) {
     var t;
-    let { search: n, searchId: r, renderEmbeds: a, scrollTo: m, searchResults: f, blockCount: g, onChangePage: C } = e,
-        { offset: x, totalResults: _, isSearching: I, showBlockedResults: E } = n,
-        b = l.useCallback(
-            (e) => {
-                if (I) return;
-                let t = e - 1;
-                null == C || C(t), u.oO(r, t);
-            },
-            [r, I, C]
-        ),
+    let { search: n, searchId: r, renderEmbeds: a, scrollTo: m, searchResults: f, blockCount: g, ignoreCount: C, onChangePage: x } = e,
+        { offset: _, totalResults: I, isSearching: E, showBlockedResults: b } = n,
         N = l.useCallback(
+            (e) => {
+                if (E) return;
+                let t = e - 1;
+                null == x || x(t), u.oO(r, t);
+            },
+            [r, E, x]
+        ),
+        S = l.useCallback(
             (e) => {
                 if (e.blocked)
                     c.Z.show({
@@ -73,13 +73,13 @@ function O(e) {
             },
             [r]
         ),
-        S = l.useMemo(() => {
+        A = l.useMemo(() => {
             let e;
             if (null == f) return [];
             let t = 0;
             return f.reduce((n, i) => {
                 let l = i.find((e) => e.isSearchHit);
-                if (!E && null != l && T.Z.isBlockedForMessage(l)) return n;
+                if (!b && null != l && (T.Z.isBlockedForMessage(l) || T.Z.isIgnoredForMessage(l))) return n;
                 let r = Z.Z.getChannel(i[0].channel_id);
                 return null == r
                     ? n
@@ -94,13 +94,13 @@ function O(e) {
                       (e = null == r ? void 0 : r.id),
                       n);
             }, []);
-        }, [f, E]),
-        A = l.useRef([]),
-        y = S.reduce((e, t) => e + 1 + t.results.length, 0),
-        M = l.useCallback(
+        }, [f, b]),
+        y = l.useRef([]),
+        M = A.reduce((e, t) => e + 1 + t.results.length, 0),
+        O = l.useCallback(
             (e, t) => {
                 if (!p.Z.keyboardModeEnabled) return;
-                let n = A.current,
+                let n = y.current,
                     i = null != t ? n[t] : void 0;
                 if (null == i || null == i.hitRef.current) return;
                 let l = i.hitRef.current.getClientRects()[0];
@@ -111,78 +111,78 @@ function O(e) {
             },
             [m]
         ),
-        O = l.useCallback((e) => {
-            let t = A.current[e];
+        D = l.useCallback((e) => {
+            let t = y.current[e];
             null == t || t.jumpTo();
         }, []),
-        D = (0, s.ZP)({
+        B = (0, s.ZP)({
             navId: 'search-results',
-            itemCount: y,
+            itemCount: M,
             focusedIndex: 0,
-            setFocus: M,
-            onSelect: O
+            setFocus: O,
+            onSelect: D
         }),
-        B = j.Z.getQuery(r),
-        U = j.Z.getSearchType(r) === R.aib.FAVORITES,
-        H = (0, h.nC)(null !== (t = null == B ? void 0 : B.content) && void 0 !== t ? t : ''),
-        G = S.map((e) => {
+        U = j.Z.getQuery(r),
+        H = j.Z.getSearchType(r) === R.aib.FAVORITES,
+        G = (0, h.nC)(null !== (t = null == U ? void 0 : U.content) && void 0 !== t ? t : ''),
+        F = A.map((e) => {
             let { channel: t, results: n, startIndex: l } = e;
             return (0, i.jsx)(
                 w,
                 {
                     channel: t,
                     results: n,
-                    highlighter: H,
+                    highlighter: G,
                     startIndex: l,
-                    resultRefs: A,
-                    totalResults: _,
+                    resultRefs: y,
+                    totalResults: I,
                     scrollTo: m,
                     searchId: r,
                     renderEmbeds: a,
-                    offset: x,
-                    jumpToMessage: N,
-                    listNavigator: D,
-                    favoriteSearch: U
+                    offset: _,
+                    jumpToMessage: S,
+                    listNavigator: B,
+                    favoriteSearch: H
                 },
                 ''.concat(t.id, '-').concat(l)
             );
         });
-    G.push();
-    let F = l.useRef(null);
+    F.push();
+    let V = l.useRef(null);
     l.useLayoutEffect(() => {
         var e;
-        null === (e = F.current) || void 0 === e || e.focus();
+        null === (e = V.current) || void 0 === e || e.focus();
     }, [f]);
-    let V = (0, o.useFocusJumpSection)();
+    let z = (0, o.useFocusJumpSection)();
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', {
-                ref: F,
-                ...D.getContainerProps(),
-                ...V,
-                'aria-busy': I,
-                children: G
+                ref: V,
+                ...B.getContainerProps(),
+                ...z,
+                'aria-busy': E,
+                children: F
             }),
-            g > 0
+            g > 0 || C > 0
                 ? (0, i.jsxs)(o.Clickable, {
                       tag: 'div',
                       className: k.resultsBlocked,
-                      onClick: () => u.QY(r, !E),
+                      onClick: () => u.QY(r, !b),
                       children: [
                           (0, i.jsx)('div', { className: k.resultsBlockedImage }),
                           (0, i.jsx)('div', {
                               className: k.__invalid_resultsBlockedText,
-                              children: E ? L.intl.formatToPlainString(L.t['n/1QFR'], { count: g }) : L.intl.formatToPlainString(L.t.HTE8JC, { count: g })
+                              children: b ? (g > 0 && C > 0 ? L.intl.formatToPlainString(L.t['OvJs9/'], { count: g + C }) : g > 0 ? L.intl.formatToPlainString(L.t['n/1QFR'], { count: g }) : L.intl.formatToPlainString(L.t.ypezTE, { count: C })) : g > 0 && C > 0 ? L.intl.formatToPlainString(L.t.EJHRcX, { count: g + C }) : g > 0 ? L.intl.formatToPlainString(L.t.HTE8JC, { count: g }) : L.intl.formatToPlainString(L.t.e7f8r6, { count: C })
                           })
                       ]
                   })
                 : null,
-            !I &&
-                !U &&
+            !E &&
+                !H &&
                 (0, i.jsx)(P.Z, {
-                    changePage: b,
-                    offset: x,
-                    totalResults: _,
+                    changePage: N,
+                    offset: _,
+                    totalResults: I,
                     pageLength: R.vpv
                 })
         ]
