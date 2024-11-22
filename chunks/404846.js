@@ -13,5 +13,6 @@ e.exports = {
     logo: 'logo_efa999',
     clickable: 'clickable_efa999',
     promotedBadge: 'promotedBadge_efa999',
-    promotedBadgeIcon: 'promotedBadgeIcon_efa999'
+    promotedBadgeIcon: 'promotedBadgeIcon_efa999',
+    rewardHighlightLogotype: 'rewardHighlightLogotype_efa999'
 };

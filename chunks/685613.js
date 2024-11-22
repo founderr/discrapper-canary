@@ -18,31 +18,28 @@ var a = n(120356),
     d = n(469244),
     m = n(780384),
     x = n(113434),
-    h = n(302245),
-    C = n(475595),
-    p = n(78826),
-    g = n(46140),
-    E = n(981631),
-    j = n(789935);
+    h = n(475595),
+    C = n(78826),
+    p = n(981631),
+    g = n(789935);
 ((i = l || (l = {}))[(i.SMALL = 24)] = 'SMALL'), (i[(i.MEDIUM = 32)] = 'MEDIUM'), ((s = r || (r = {}))[(s.SMALL = 2)] = 'SMALL'), (s[(s.MEDIUM = 8)] = 'MEDIUM');
 t.ZP = function (e) {
-    let { className: t, logotypeClassName: n, gameTileSize: i = 24, quest: s, separatorSpacing: l = 2, theme: r = E.BRd.DARK, withCosponsor: a = !0, withGameTile: T = !0 } = e,
-        f = (0, m.wj)(r) ? E.BRd.DARK : E.BRd.LIGHT,
-        v = (0, h.vI)(s, g.dr.QUESTS_BAR),
-        S = (0, x.Gd)(s.id, f),
-        N = a && null != s.config.cosponsorMetadata && null != S;
+    let { className: t, logotypeClassName: n, gameTileSize: i = 24, quest: s, separatorSpacing: l = 2, theme: r = p.BRd.DARK, withCosponsor: a = !0, withGameTile: E = !0 } = e,
+        j = (0, m.wj)(r) ? p.BRd.DARK : p.BRd.LIGHT,
+        T = (0, x.Gd)(s.id, j),
+        f = a && null != s.config.cosponsorMetadata && null != T;
     return (0, o.jsxs)('div', {
-        className: u()(j.partnerBranding, t),
+        className: u()(g.partnerBranding, t),
         children: [
-            T &&
-                (0, o.jsx)(p.Fl, {
+            E &&
+                (0, o.jsx)(C.Fl, {
                     id: 'QuestPartnerBranding_gameTile',
                     children: (e) =>
                         (0, o.jsx)('img', {
                             ref: e,
-                            className: j.partnerBrandingGameTile,
+                            className: g.partnerBrandingGameTile,
                             alt: '',
-                            src: (0, C.fh)(s, C.eC.GAME_TILE, f).url,
+                            src: (0, h.fh)(s, h.eC.GAME_TILE, j).url,
                             style: {
                                 borderRadius: (function (e) {
                                     switch (e) {
@@ -57,39 +54,36 @@ t.ZP = function (e) {
                             }
                         })
                 }),
-            (0, o.jsx)(p.Fl, {
+            (0, o.jsx)(C.Fl, {
                 id: 'QuestPartnerBranding_gameLogotype',
                 children: (e) =>
                     (0, o.jsx)('img', {
                         ref: e,
-                        className: u()(j.partnerBrandingLogotype, n, {
-                            [j.rewardHighlightLogotype]: v,
-                            [j.partnerBrandingLogotypeWithCosponsor]: N
-                        }),
+                        className: u()(g.partnerBrandingLogotype, n, { [g.partnerBrandingLogotypeWithCosponsor]: f }),
                         alt: s.config.messages.gameTitle,
-                        src: (0, C.fh)(s, C.eC.LOGO_TYPE, f).url
+                        src: (0, h.fh)(s, h.eC.LOGO_TYPE, j).url
                     })
             }),
-            N &&
+            f &&
                 (0, o.jsxs)(o.Fragment, {
                     children: [
                         (0, o.jsx)('div', {
-                            className: j.cosponsorBrandSeparatorWrapper,
+                            className: g.cosponsorBrandSeparatorWrapper,
                             style: { margin: '0 '.concat(l, 'px') },
                             children: (0, o.jsx)(d.P, {
-                                className: j.cosponsorBrandSeparator,
+                                className: g.cosponsorBrandSeparator,
                                 color: c.Z.colors.WHITE
                             })
                         }),
-                        (0, o.jsx)(p.Fl, {
+                        (0, o.jsx)(C.Fl, {
                             id: 'QuestPartnerBranding_cosponsorLogotype',
                             children: (e) => {
                                 var t, i;
                                 return (0, o.jsx)('img', {
                                     ref: e,
-                                    className: u()(j.partnerBrandingLogotype, j.partnerBrandingLogotypeWithCosponsor, n, { [j.rewardHighlightLogotype]: v }),
+                                    className: u()(g.partnerBrandingLogotype, g.partnerBrandingLogotypeWithCosponsor, n),
                                     alt: null !== (i = null === (t = s.config.cosponsorMetadata) || void 0 === t ? void 0 : t.name) && void 0 !== i ? i : '',
-                                    src: S.url
+                                    src: T.url
                                 });
                             }
                         })

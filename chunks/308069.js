@@ -10,15 +10,15 @@ var o = n(200651),
     p = n(302245),
     m = n(685613),
     x = n(670638),
-    f = n(341907),
-    g = n(303385),
+    g = n(341907),
+    f = n(303385),
     h = n(46140),
     C = n(388032),
     v = n(404846);
 t.Z = (e) => {
     let { quest: t, expansionSpring: s, onCtxMenuSelect: j, onCtxMenuOpen: _, onCtxMenuClose: b, useReducedMotion: E, isExpanded: N, isExpansionAnimationComplete: T } = e,
         B = r.useCallback(() => {
-            (0, f.openDisclosureModal)(t, {
+            (0, g.openDisclosureModal)(t, {
                 content: d.jn.QUEST_BAR_V2,
                 ctaContent: c.jZ.OPEN_DISCLOSURE
             });
@@ -36,6 +36,7 @@ t.Z = (e) => {
             className: a()(v.clickable, { [v.logo]: A }),
             children: (0, o.jsx)(m.ZP, {
                 quest: t,
+                logotypeClassName: a()({ [v.rewardHighlightLogotype]: y }),
                 withGameTile: !1
             })
         });
@@ -67,7 +68,7 @@ t.Z = (e) => {
                 }
             }),
             y
-                ? (0, o.jsx)(g.Z, {
+                ? (0, o.jsx)(f.Z, {
                       quest: t,
                       expansionSpring: s,
                       isFullyExpanded: A,
