@@ -13,19 +13,28 @@ var r = n(200651),
     c = n(49274),
     d = n(904141);
 function f(e) {
-    let { user: t, rank: n, rankBadgeVisibility: f = 'visible', avatarClassName: _ } = e;
+    let { user: t, rank: n, rankBadgeVisibility: f = 'visible', avatarClassName: _, avatarSize: p = i.AvatarSizes.SIZE_40 } = e,
+        h = (0, i.getAvatarSize)(p);
     return (0, r.jsxs)('div', {
         className: o.container,
+        style: {
+            width: ''.concat(h, 'px'),
+            height: ''.concat(h, 'px')
+        },
         children: [
             (0, r.jsx)('img', {
                 className: o.frame,
                 src: 1 === n ? l : 2 === n ? u : 3 === n ? c : d,
+                style: {
+                    width: h + 8,
+                    height: h + 8
+                },
                 alt: ''
             }),
             (0, r.jsx)(a.Z, {
                 className: _,
                 user: t,
-                size: i.AvatarSizes.SIZE_40
+                size: p
             }),
             'hidden' !== f &&
                 (0, r.jsx)('div', {

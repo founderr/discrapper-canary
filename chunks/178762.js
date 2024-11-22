@@ -1,12 +1,12 @@
 n.d(t, {
     J: function () {
-        return b;
+        return B;
     },
     YN: function () {
-        return k;
+        return O;
     },
     iZ: function () {
-        return R;
+        return b;
     }
 }),
     n(47120);
@@ -17,38 +17,41 @@ var l = n(200651),
     o = n(91192),
     s = n(876215),
     u = n(442837),
-    c = n(481060),
-    d = n(239091),
-    m = n(607070),
-    h = n(100527),
-    x = n(704041),
-    C = n(475676),
-    p = n(439170),
-    v = n(594174),
-    g = n(69259),
-    f = n(370370),
-    I = n(107062),
-    j = n(91140),
-    Z = n(227172),
-    P = n(551228),
-    L = n(678869),
-    T = n(278399),
-    y = n(886217),
-    N = n(555672),
-    _ = n(644548),
+    c = n(704215),
+    d = n(481060),
+    m = n(239091),
+    h = n(607070),
+    x = n(100527),
+    C = n(605236),
+    p = n(704041),
+    v = n(475676),
+    g = n(439170),
+    f = n(594174),
+    I = n(69259),
+    j = n(370370),
+    Z = n(107062),
+    P = n(91140),
+    L = n(227172),
+    T = n(551228),
+    y = n(678869),
+    N = n(278399),
+    _ = n(886217),
+    A = n(555672),
+    E = n(644548),
     S = n(335326),
-    A = n(268010),
-    E = n(797342),
-    M = n(206583);
-let k = 72;
-function R(e) {
-    return (null == e ? void 0 : e.type) === p.so.CONTENT_INVENTORY ? k : 0;
+    R = n(268010),
+    M = n(797342),
+    k = n(206583),
+    w = n(921944);
+let O = 72;
+function b(e) {
+    return (null == e ? void 0 : e.type) === g.so.CONTENT_INVENTORY ? O : 0;
 }
-let w = (e) => {
+let H = (e) => {
         let { entry: t, ...n } = e;
         switch (t.content_type) {
             case s.s.PLAYED_GAME:
-                return (0, l.jsx)(j.Z, {
+                return (0, l.jsx)(P.Z, {
                     ...n,
                     entry: t
                 });
@@ -58,27 +61,27 @@ let w = (e) => {
                     entry: t
                 });
             case s.s.TOP_GAME:
-                return (0, l.jsx)(N.ZP, {
+                return (0, l.jsx)(A.ZP, {
                     ...n,
                     entry: t
                 });
             case s.s.TOP_ARTIST:
-                return (0, l.jsx)(T.ZP, {
+                return (0, l.jsx)(N.ZP, {
                     ...n,
                     entry: t
                 });
             case s.s.LISTENED_SESSION:
-                return (0, l.jsx)(P.ZP, {
+                return (0, l.jsx)(T.ZP, {
                     ...n,
                     entry: t
                 });
             case s.s.LAUNCHED_ACTIVITY:
-                return (0, l.jsx)(f.Z, {
+                return (0, l.jsx)(j.Z, {
                     ...n,
                     entry: t
                 });
             case s.s.LEADERBOARD:
-                return (0, l.jsx)(C.Z, {
+                return (0, l.jsx)(v.Z, {
                     ...n,
                     entry: t
                 });
@@ -86,9 +89,9 @@ let w = (e) => {
                 return null;
         }
     },
-    O = (e) => {
+    V = (e) => {
         let { closePopout: t, ...n } = e;
-        return (0, l.jsx)(b, {
+        return (0, l.jsx)(B, {
             onReaction: (e, l) => {
                 n.trackRankingItemInteraction(e, {
                     destinationChannelId: l.id,
@@ -98,7 +101,7 @@ let w = (e) => {
             },
             closePopout: t,
             onVoiceChannelPreview: (e) => {
-                n.trackRankingItemInteraction(M.xP.VOICE_CHANNEL_PREVIEWED, {
+                n.trackRankingItemInteraction(k.xP.VOICE_CHANNEL_PREVIEWED, {
                     destinationChannelId: e.id,
                     destinationGuildId: e.guild_id
                 });
@@ -106,45 +109,45 @@ let w = (e) => {
             ...n
         });
     },
-    b = (e) => {
+    B = (e) => {
         let { entry: t, ...n } = e;
         switch (t.content_type) {
             case s.s.PLAYED_GAME:
-                return (0, l.jsx)(Z.Z, {
-                    ...n,
-                    entry: t
-                });
-            case s.s.WATCHED_MEDIA:
-                return (0, l.jsx)(A.Z, {
-                    ...n,
-                    entry: t
-                });
-            case s.s.TOP_GAME:
-                return (0, l.jsx)(_.Z, {
-                    ...n,
-                    entry: t
-                });
-            case s.s.TOP_ARTIST:
-                return (0, l.jsx)(y.Z, {
-                    ...n,
-                    entry: t
-                });
-            case s.s.LISTENED_SESSION:
                 return (0, l.jsx)(L.Z, {
                     ...n,
                     entry: t
                 });
+            case s.s.WATCHED_MEDIA:
+                return (0, l.jsx)(R.Z, {
+                    ...n,
+                    entry: t
+                });
+            case s.s.TOP_GAME:
+                return (0, l.jsx)(E.Z, {
+                    ...n,
+                    entry: t
+                });
+            case s.s.TOP_ARTIST:
+                return (0, l.jsx)(_.Z, {
+                    ...n,
+                    entry: t
+                });
+            case s.s.LISTENED_SESSION:
+                return (0, l.jsx)(y.Z, {
+                    ...n,
+                    entry: t
+                });
             case s.s.LAUNCHED_ACTIVITY:
-                return (0, l.jsx)(I.ZP, {
+                return (0, l.jsx)(Z.ZP, {
                     ...n,
                     entry: t
                 });
             case s.s.LEADERBOARD:
                 var a;
                 return (null === (a = n.channel) || void 0 === a ? void 0 : a.guild_id) != null
-                    ? (0, l.jsx)(x.Z, {
+                    ? (0, l.jsx)(p.Z, {
                           guildId: n.channel.guild_id,
-                          source: h.Z.MEMBER_LIST,
+                          source: x.Z.MEMBER_LIST,
                           trackRankingItemInteraction: n.trackRankingItemInteraction
                       })
                     : null;
@@ -154,59 +157,59 @@ let w = (e) => {
     };
 t.ZP = a.memo((e) => {
     var t;
-    let { index: i, ...s } = e,
-        [h, x] = a.useState('default'),
-        C = (0, o.JA)(''.concat(i)),
-        p = null === (t = v.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(),
-        { isRich: f, appName: I } = (0, E.n)(s.entry),
-        j = a.useMemo(
+    let { index: i, ...x } = e,
+        [p, v] = a.useState('default'),
+        g = (0, o.JA)(''.concat(i)),
+        j = null === (t = f.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(),
+        { isRich: Z, appName: P } = (0, M.n)(x.entry),
+        L = a.useMemo(
             () => ({
-                entry: s.entry,
-                channelId: s.channel.id,
-                guildId: s.channel.guild_id,
-                requestId: s.requestId,
-                richPresenceName: f ? I : void 0
+                entry: x.entry,
+                channelId: x.channel.id,
+                guildId: x.channel.guild_id,
+                requestId: x.requestId,
+                richPresenceName: Z ? P : void 0
             }),
-            [I, s.channel.guild_id, s.channel.id, s.entry, s.requestId, f]
+            [P, x.channel.guild_id, x.channel.id, x.entry, x.requestId, Z]
         ),
-        Z = a.useRef(!1),
-        [P, L] = a.useState(!1),
-        [T, y] = a.useState(!1),
-        N = (0, u.e7)([m.Z], () => m.Z.keyboardModeEnabled);
+        T = a.useRef(!1),
+        [y, N] = a.useState(!1),
+        [_, A] = a.useState(!1),
+        E = (0, u.e7)([h.Z], () => h.Z.keyboardModeEnabled);
     a.useEffect(() => {
-        P && N && y(!0);
-    }, [P, N]);
-    let _ = a.useCallback(
+        y && E && A(!0);
+    }, [y, E]);
+    let S = a.useCallback(
             (e) => {
-                if (!!p)
-                    (0, d.jW)(e, async () => {
+                if (!!j)
+                    (0, m.jW)(e, async () => {
                         let { default: e } = await n.e('153').then(n.bind(n, 330150));
                         return () =>
                             (0, l.jsx)(e, {
-                                entry: s.entry,
-                                requestId: s.requestId
+                                entry: x.entry,
+                                requestId: x.requestId
                             });
                     });
             },
-            [s, p]
+            [x, j]
         ),
-        S = a.useCallback(() => {
-            x(String(Date.now()));
+        R = a.useCallback(() => {
+            v(String(Date.now()));
         }, []),
-        A = a.useCallback(
+        O = a.useCallback(
             function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                (0, g.L)(e, {
-                    ...j,
+                (0, I.L)(e, {
+                    ...L,
                     ...t
                 });
             },
-            [j]
+            [L]
         ),
-        k = a.useCallback(
+        b = a.useCallback(
             r().throttle(
                 (e) => {
-                    (0, g.L)(M.xP.CARD_POPOUT_OPEN, e);
+                    (0, I.L)(k.xP.CARD_POPOUT_OPEN, e);
                 },
                 2000,
                 {
@@ -216,43 +219,44 @@ t.ZP = a.memo((e) => {
             ),
             []
         ),
-        R = () => {
-            (Z.current = !1),
+        B = () => {
+            (T.current = !1),
                 setTimeout(() => {
-                    !Z.current && (L(!1), y(N));
+                    !T.current && (N(!1), A(E));
                 }, 100);
         };
     return (0, l.jsx)('div', {
         onMouseEnter: () => {
-            (Z.current = !0),
+            x.entry.content_type === s.s.LEADERBOARD && !(0, C.un)(c.z.LEADERBOARD_NUX_COACHMARK) && (0, C.EW)(c.z.LEADERBOARD_NUX_COACHMARK, { dismissAction: w.L.SECONDARY }),
+                (T.current = !0),
                 setTimeout(() => {
-                    Z.current && L(!0), k(j);
+                    T.current && N(!0), b(L);
                 }, 100);
         },
-        onMouseLeave: R,
-        children: (0, l.jsx)(c.Popout, {
+        onMouseLeave: B,
+        children: (0, l.jsx)(d.Popout, {
             renderPopout: (e) => {
                 let { closePopout: t } = e;
-                return (0, l.jsx)(O, {
+                return (0, l.jsx)(V, {
                     closePopout: t,
-                    updatePopoutPosition: S,
-                    trackRankingItemInteraction: A,
-                    ...s
+                    updatePopoutPosition: R,
+                    trackRankingItemInteraction: O,
+                    ...x
                 });
             },
             position: 'left',
-            shouldShow: P,
-            positionKey: h,
-            onRequestOpen: () => k(j),
+            shouldShow: y,
+            positionKey: p,
+            onRequestOpen: () => b(L),
             onRequestClose: () => {
-                T && R();
+                _ && B();
             },
             spacing: 8,
             children: (e, t) => {
                 let { isShown: n } = t;
-                return (0, l.jsx)(c.Clickable, {
+                return (0, l.jsx)(d.Clickable, {
                     ...e,
-                    ...C,
+                    ...g,
                     focusProps: {
                         offset: {
                             top: 4,
@@ -262,13 +266,13 @@ t.ZP = a.memo((e) => {
                         }
                     },
                     onClick: () => {
-                        !P && L(!0);
+                        !y && N(!0);
                     },
-                    onContextMenu: _,
-                    children: (0, l.jsx)(w, {
-                        ...s,
+                    onContextMenu: S,
+                    children: (0, l.jsx)(H, {
+                        ...x,
                         selected: n,
-                        hovered: Z.current
+                        hovered: T.current
                     })
                 });
             }
