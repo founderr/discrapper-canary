@@ -13,9 +13,9 @@ var r = n(200651),
     d = n(388032),
     u = n(591014);
 let m = (e) => {
-        let { variantGroupProduct: t, variant: n, variantIndex: i, selectedVariantIndex: m, onEnter: h, onLeave: p, minimal: f } = e,
-            { isPurchased: g } = (0, c.L)(n),
-            C = a.useCallback(
+        let { variantGroupProduct: t, variant: n, variantIndex: i, totalVariants: m, selectedVariantIndex: h, onEnter: p, onLeave: f, minimal: g } = e,
+            { isPurchased: C } = (0, c.L)(n),
+            b = a.useCallback(
                 (e) => {
                     e.preventDefault(), e.stopPropagation(), (0, o.$)(t, i);
                 },
@@ -24,32 +24,36 @@ let m = (e) => {
         return (0, r.jsx)(l.Tooltip, {
             text: d.intl.string(d.t['/bUsx8']),
             'aria-label': !1,
-            shouldShow: !f && g,
+            shouldShow: !g && C,
             children: (e) =>
-                (0, r.jsxs)(l.Clickable, {
+                (0, r.jsx)(l.Clickable, {
                     tag: 'li',
                     onMouseEnter: () => {
                         var t;
-                        h(), null === (t = e.onMouseEnter) || void 0 === t || t.call(e);
+                        p(), null === (t = e.onMouseEnter) || void 0 === t || t.call(e);
                     },
                     onMouseLeave: () => {
                         var t;
-                        p(), null === (t = e.onMouseLeave) || void 0 === t || t.call(e);
+                        f(), null === (t = e.onMouseLeave) || void 0 === t || t.call(e);
                     },
-                    onClick: C,
-                    className: s()(u.colorVariant, { [u.selectedVariant]: i === m }),
-                    children: [
-                        (0, r.jsx)('div', {
-                            className: s()(u.colorSwatch, { [u.mask]: f && 0 !== i }),
-                            style: { backgroundColor: n.variantValue }
+                    onClick: b,
+                    className: u.colorVariant,
+                    children: (0, r.jsx)('div', {
+                        className: s()(u.colorSwatch, {
+                            [u.open]: !g,
+                            [u.selected]: i === h
                         }),
-                        !f && g
+                        style: {
+                            backgroundColor: n.variantValue,
+                            zIndex: m - i
+                        },
+                        children: C
                             ? (0, r.jsx)(l.CheckmarkSmallBoldIcon, {
                                   className: u.purchasedIndicator,
                                   color: l.tokens.colors.BACKGROUND_TERTIARY
                               })
                             : null
-                    ]
+                    })
                 })
         });
     },
@@ -72,21 +76,23 @@ let m = (e) => {
                     children:
                         null === (a = i.variants) || void 0 === a
                             ? void 0
-                            : a.map((e, t) =>
-                                  (0, r.jsx)(
+                            : a.map((e, t) => {
+                                  var n, a;
+                                  return (0, r.jsx)(
                                       m,
                                       {
                                           variantGroupProduct: i,
                                           variant: e,
                                           variantIndex: t,
                                           selectedVariantIndex: C,
+                                          totalVariants: null !== (a = null === (n = i.variants) || void 0 === n ? void 0 : n.length) && void 0 !== a ? a : 0,
                                           onEnter: () => h.handleEntering(t),
                                           onLeave: h.handleLeaving,
                                           minimal: f
                                       },
                                       t
-                                  )
-                              )
+                                  );
+                              })
                 }),
                 (0, r.jsx)(l.Text, {
                     variant: 'text-xs/medium',
