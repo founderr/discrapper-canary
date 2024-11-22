@@ -1,104 +1,115 @@
 n.d(t, {
     P: function () {
-        return p;
+        return C;
     }
 });
 var r = n(200651),
     a = n(192379),
     i = n(120356),
     s = n.n(i),
-    l = n(481060),
-    o = n(429368),
-    c = n(724994),
-    d = n(388032),
-    u = n(591014);
-let m = (e) => {
-        let { variantGroupProduct: t, variant: n, variantIndex: i, totalVariants: m, selectedVariantIndex: p, onEnter: h, onLeave: f, minimal: g } = e,
-            { isPurchased: C } = (0, c.L)(n),
-            b = a.useCallback(
+    l = n(404759),
+    o = n.n(l),
+    c = n(866442),
+    d = n(481060),
+    u = n(429368),
+    m = n(724994),
+    p = n(388032),
+    h = n(591014);
+let f = o()((e) => {
+        let t = !1;
+        if (null != e && (0, c.FX)(e)) {
+            let n = (0, c._i)(e);
+            null != n && (t = 0.3 >= (0, c.Bd)(n));
+        }
+        return t ? d.tokens.unsafe_rawColors.PRIMARY_700.css : d.tokens.unsafe_rawColors.PRIMARY_200.css;
+    }),
+    g = (e) => {
+        let { variantGroupProduct: t, variant: n, variantIndex: i, totalVariants: l, selectedVariantIndex: o, onEnter: c, onLeave: g, minimal: C } = e,
+            { isPurchased: b } = (0, m.L)(n),
+            v = a.useCallback(
                 (e) => {
-                    e.preventDefault(), e.stopPropagation(), (0, o.$)(t, i);
+                    e.preventDefault(), e.stopPropagation(), (0, u.$)(t, i);
                 },
                 [t, i]
             );
-        return (0, r.jsx)(l.Tooltip, {
-            text: d.intl.string(d.t['/bUsx8']),
+        return (0, r.jsx)(d.Tooltip, {
+            text: p.intl.string(p.t['/bUsx8']),
             'aria-label': !1,
-            shouldShow: !g && C,
+            shouldShow: !C && b,
             children: (e) =>
-                (0, r.jsx)(l.Clickable, {
+                (0, r.jsx)(d.Clickable, {
                     tag: 'li',
                     onMouseEnter: () => {
                         var t;
-                        h(), null === (t = e.onMouseEnter) || void 0 === t || t.call(e);
+                        c(), null === (t = e.onMouseEnter) || void 0 === t || t.call(e);
                     },
                     onMouseLeave: () => {
                         var t;
-                        f(), null === (t = e.onMouseLeave) || void 0 === t || t.call(e);
+                        g(), null === (t = e.onMouseLeave) || void 0 === t || t.call(e);
                     },
-                    onClick: b,
-                    className: u.colorVariant,
+                    onClick: v,
+                    className: h.colorVariant,
                     children: (0, r.jsx)('div', {
-                        className: s()(u.colorSwatch, {
-                            [u.open]: !g,
-                            [u.selected]: i === p
+                        className: s()(h.colorSwatch, {
+                            [h.open]: !C,
+                            [h.selected]: i === o
                         }),
                         style: {
                             backgroundColor: n.variantValue,
-                            zIndex: m - i
+                            zIndex: l - i
                         },
-                        children: C
-                            ? (0, r.jsx)(l.CheckmarkSmallBoldIcon, {
-                                  className: u.purchasedIndicator,
-                                  color: l.tokens.colors.BACKGROUND_TERTIARY
+                        children: b
+                            ? (0, r.jsx)(d.CheckmarkSmallBoldIcon, {
+                                  className: h.purchasedIndicator,
+                                  color: f(n.variantValue)
                               })
                             : null
                     })
                 })
         });
     },
-    p = (e) => {
+    C = (e) => {
         var t, n, a;
-        let { variantGroupProduct: i, className: c, previewingVariantIndexProps: p, setIsHoveringOnSwitch: h, minimal: f, purchases: g } = e,
-            C = (0, o.o)(i, g),
-            b = p.previewingVariantIndex,
+        let { variantGroupProduct: i, className: l, previewingVariantIndexProps: o, setIsHoveringOnSwitch: c, minimal: m, purchases: f } = e,
+            C = (0, u.o)(i, f),
+            b = o.previewingVariantIndex,
             v = null === (t = i.variants) || void 0 === t ? void 0 : t[C],
             x = null !== b ? (null === (n = i.variants) || void 0 === n ? void 0 : n[b]) : void 0;
         if (null == v) return null;
         let _ = null != x ? x.variantLabel : null == v ? void 0 : v.variantLabel;
         return (0, r.jsxs)('div', {
-            className: s()(u.variantsPanel, c, { [u.minimalState]: f }),
-            onMouseEnter: () => (null == h ? void 0 : h(!0)),
-            onMouseLeave: () => (null == h ? void 0 : h(!1)),
+            className: s()(h.variantsPanel, l, { [h.minimalState]: m }),
+            onMouseEnter: () => (null == c ? void 0 : c(!0)),
+            onMouseLeave: () => (null == c ? void 0 : c(!1)),
             children: [
                 (0, r.jsx)('ol', {
-                    className: u.variantsList,
+                    className: h.variantsList,
                     children:
                         null === (a = i.variants) || void 0 === a
                             ? void 0
                             : a.map((e, t) => {
                                   var n, a;
                                   return (0, r.jsx)(
-                                      m,
+                                      g,
                                       {
                                           variantGroupProduct: i,
                                           variant: e,
                                           variantIndex: t,
                                           selectedVariantIndex: C,
                                           totalVariants: null !== (a = null === (n = i.variants) || void 0 === n ? void 0 : n.length) && void 0 !== a ? a : 0,
-                                          onEnter: () => p.handleEntering(t),
-                                          onLeave: p.handleLeaving,
-                                          minimal: f
+                                          onEnter: () => o.handleEntering(t),
+                                          onLeave: o.handleLeaving,
+                                          minimal: m
                                       },
                                       t
                                   );
                               })
                 }),
-                (0, r.jsx)(l.Text, {
+                (0, r.jsx)(d.Text, {
                     variant: 'text-xs/medium',
                     color: 'text-secondary',
-                    className: u.variantLabel,
-                    children: f ? d.intl.string(d.t.wbgaj4) : _
+                    className: h.variantLabel,
+                    children: m ? p.intl.string(p.t.wbgaj4) : _
                 })
             ]
         });
