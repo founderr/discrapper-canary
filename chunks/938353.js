@@ -290,6 +290,7 @@ class e2 extends (i = l.Component) {
                                 i
                             );
                   } else if (n === v.g.APP_OAUTH2_LINK) return (0, r.jsx)(I.Z, { applicationId: i }, i);
+                  else if (n === v.g.COLLECTIBLES_SHOP) return null;
                   else throw Error('Unknown coded link type: '.concat(n));
               });
     }

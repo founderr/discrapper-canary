@@ -32,6 +32,7 @@ function c(e) {
             else if (t === o.g.APP_DIRECTORY_STOREFRONT);
             else if (t === o.g.APP_DIRECTORY_STOREFRONT_SKU);
             else if (t === o.g.APP_OAUTH2_LINK);
+            else if (t === o.g.COLLECTIBLES_SHOP);
             else throw Error('Unknown coded link type: '.concat(t));
         });
 }

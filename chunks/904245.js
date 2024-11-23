@@ -895,6 +895,7 @@ let eg = {
                                                         trackGuildAndChannelMetadata: !0
                                                     });
                                                 else if (t === m.g.APP_OAUTH2_LINK) u.ZP.trackWithMetadata(el.rMx.APP_OAUTH2_LINK_EMBED_URL_SENT, { application_id: o });
+                                                else if (t === m.g.COLLECTIBLES_SHOP);
                                                 else throw Error('Unknown coded link type: '.concat(t));
                                             });
                                         })({
