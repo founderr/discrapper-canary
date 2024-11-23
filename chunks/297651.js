@@ -1,61 +1,65 @@
 n.d(t, {
     E: function () {
-        return u;
+        return h;
     }
 }),
     n(47120);
 var r = n(192379),
-    a = n(626135),
-    i = n(74538),
+    a = n(442837),
+    i = n(626135),
+    l = n(74538),
     s = n(381585),
-    l = n(884697),
-    o = n(819490),
-    c = n(82892),
-    d = n(981631);
-function u(e, t) {
-    let n = (0, s.sp)(),
-        u = (0, c.x)(),
-        m = i.ZP.canUseCollectibles(u),
-        p = r.useRef(null),
-        [h, f] = r.useState(!1),
-        [g, C] = r.useState(!1),
-        b = (0, o.B)('shop_product_card');
+    o = n(597688),
+    c = n(884697),
+    d = n(819490),
+    u = n(82892),
+    m = n(981631);
+function h(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 'product',
+        h = (0, s.sp)(),
+        p = (0, a.e7)([o.Z], () => o.Z.getProduct(e)),
+        f = (0, u.x)(),
+        g = l.ZP.canUseCollectibles(f),
+        C = r.useRef(null),
+        [v, b] = r.useState(!1),
+        [x, _] = r.useState(!1),
+        k = (0, d.B)('shop_product_card');
     return (
         r.useEffect(
             () => (
-                h && null === p.current
-                    ? (p.current = setTimeout(() => {
-                          C(!0);
+                v && null === C.current
+                    ? (C.current = setTimeout(() => {
+                          _(!0);
                       }, 1000))
-                    : !h && (null !== p.current && (clearTimeout(p.current), (p.current = null)), C(!1)),
+                    : !v && (null !== C.current && (clearTimeout(C.current), (C.current = null)), _(!1)),
                 () => {
-                    null !== p.current && (clearTimeout(p.current), (p.current = null));
+                    null !== C.current && (clearTimeout(C.current), (C.current = null));
                 }
             ),
-            [h]
+            [v]
         ),
         r.useEffect(() => {
-            if (g && b) {
-                let r = (0, l.Vw)(e, m, !1),
-                    i = (0, l.eu)(e, m, !1);
-                a.default.track(d.rMx.COLLECTIBLES_TILE_IMPRESSION, {
-                    collectibles_shop_session_id: null == n ? void 0 : n.sessionId,
-                    sku_id: e.skuId,
+            if (x && k) {
+                let r = null != p ? (0, c.Vw)(p, g, !1) : null,
+                    a = null != p ? (0, c.eu)(p, g, !1) : void 0;
+                i.default.track(m.rMx.COLLECTIBLES_TILE_IMPRESSION, {
+                    collectibles_shop_session_id: null == h ? void 0 : h.sessionId,
+                    sku_id: e,
                     display_price: null == r ? void 0 : r.amount,
                     display_price_currency: null == r ? void 0 : r.currency.toString(),
-                    display_price_strikethrough: i,
-                    position: null == n ? void 0 : n.tilePosition,
+                    display_price_strikethrough: a,
+                    position: null == h ? void 0 : h.tilePosition,
                     page_type: t,
-                    page_category: null == n ? void 0 : n.pageCategory,
-                    page_section: null == n ? void 0 : n.pageSection,
-                    type: 'product',
-                    category_position: null == n ? void 0 : n.categoryPosition
+                    page_category: null == h ? void 0 : h.pageCategory,
+                    page_section: null == h ? void 0 : h.pageSection,
+                    type: n,
+                    category_position: null == h ? void 0 : h.categoryPosition
                 });
             }
-        }, [null == n ? void 0 : n.sessionId, null == n ? void 0 : n.categoryPosition, null == n ? void 0 : n.pageCategory, null == n ? void 0 : n.pageSection, null == n ? void 0 : n.tilePosition, g, m, b, t, e]),
+        }, [null == h ? void 0 : h.sessionId, null == h ? void 0 : h.categoryPosition, null == h ? void 0 : h.pageCategory, null == h ? void 0 : h.pageSection, null == h ? void 0 : h.tilePosition, x, g, k, t, p, e, n]),
         {
             handleCardVisibilityChange: (e) => {
-                f(e);
+                b(e);
             }
         }
     );
