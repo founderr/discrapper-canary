@@ -10,8 +10,8 @@ var o = n(200651),
     p = n(70097),
     m = n(703656),
     x = n(358085),
-    f = n(617136),
-    g = n(272008),
+    g = n(617136),
+    f = n(272008),
     h = n(113434),
     C = n(569984),
     v = n(497505),
@@ -33,17 +33,17 @@ var o = n(200651),
     P = n(609706);
 let M = r.forwardRef(function (e, t) {
     var n, s;
-    let { children: _, className: M, collapsedHeight: W, expansionSpring: L, isExpanded: Q, isExpansionAnimationComplete: Z, onCtxMenuOpen: D, onCtxMenuClose: V, onCtxMenuSelect: H, quest: U, useReducedMotion: z } = e,
+    let { children: _, className: M, collapsedHeight: W, expansionSpring: L, isExpanded: Q, isExpansionAnimationComplete: Z, onCtxMenuOpen: D, onCtxMenuClose: H, onCtxMenuSelect: V, quest: U, useReducedMotion: z } = e,
         F = (0, i.e7)([C.Z], () => C.Z.isEnrolling(U.id), [U]),
         G = (0, h.B6)(U.config.expiresAt),
         Y = N.r.build(U.config),
         K = (0, h.B6)(Y.rewardsExpireAt),
         X = r.useMemo(() => (0, E.fh)(U, E.eC.HERO), [U]),
         J = (0, R.tP)(Y.application.id),
-        $ = Y.features.has(w.S7.START_QUEST_CTA) ? f.jZ.START_QUEST : f.jZ.ACCEPT_QUEST,
+        $ = Y.features.has(w.S7.START_QUEST_CTA) ? g.jZ.START_QUEST : g.jZ.ACCEPT_QUEST,
         ee = Y.features.has(w.S7.START_QUEST_CTA) ? q.intl.string(q.t.E80Bdn) : q.intl.string(q.t.l7E81t),
         et = r.useCallback(() => {
-            (0, g.AH)(U.id, {
+            (0, f.AH)(U.id, {
                 questContent: v.jn.QUEST_BAR,
                 questContentCTA: $
             }),
@@ -56,7 +56,7 @@ let M = r.forwardRef(function (e, t) {
         eo = r.useCallback(() => {
             (0, j.FE)(U, {
                 content: v.jn.QUEST_BAR,
-                ctaContent: f.jZ.OPEN_GAME_LINK
+                ctaContent: g.jZ.OPEN_GAME_LINK
             });
         }, [U]),
         er = Y.features.has(w.S7.POST_ENROLLMENT_CTA),
@@ -151,8 +151,8 @@ let M = r.forwardRef(function (e, t) {
                                       }),
                                       (0, o.jsx)(y.r, {
                                           onOpen: D,
-                                          onClose: V,
-                                          onSelect: H,
+                                          onClose: H,
+                                          onSelect: V,
                                           questContent: v.jn.QUEST_BAR,
                                           quest: U,
                                           shouldShowDisclosure: !1,
@@ -203,8 +203,8 @@ let M = r.forwardRef(function (e, t) {
                                               (0, o.jsx)(B.Z, { color: 'always-white' }),
                                               (0, o.jsx)(y.r, {
                                                   onOpen: D,
-                                                  onClose: V,
-                                                  onSelect: H,
+                                                  onClose: H,
+                                                  onSelect: V,
                                                   questContent: v.jn.QUEST_BAR,
                                                   quest: U,
                                                   shouldShowDisclosure: !0,

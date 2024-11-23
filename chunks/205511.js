@@ -10,8 +10,8 @@ var o = n(200651),
     p = n(617136),
     m = n(111382),
     x = n(113434),
-    f = n(497505),
-    g = n(918701),
+    g = n(497505),
+    f = n(918701),
     h = n(566078),
     C = n(667105),
     v = n(585857),
@@ -55,7 +55,7 @@ function E(e) {
 function N(e) {
     let { quest: t, useReducedMotion: n } = e,
         s = (0, m.n)(),
-        i = (0, C.k3)(t.id, f.jn.QUEST_BAR_V2),
+        i = (0, C.k3)(t.id, g.jn.QUEST_BAR_V2),
         d = (0, C.g2)({ useReducedMotion: n }),
         {
             errorHints: v,
@@ -66,7 +66,7 @@ function N(e) {
             beforeRequest: () => {
                 (0, p._3)({
                     questId: t.id,
-                    questContent: f.jn.QUEST_BAR_V2,
+                    questContent: g.jn.QUEST_BAR_V2,
                     questContentCTA: p.jZ.DEFIBRILLATOR
                 }),
                     d.startAnimation();
@@ -84,21 +84,21 @@ function N(e) {
                               children: v.map((e, n) => {
                                   if (e.type === l.K.EXPIRED_CREDENTIAL && s) {
                                       let r = u.Z.getAccount(e.connected_account_id, e.connected_account_type),
-                                          s = (0, g.C9)(e),
-                                          a = (0, g._j)(e);
+                                          s = (0, f.C9)(e),
+                                          a = (0, f._j)(e);
                                       return (0, o.jsx)(
                                           E,
                                           {
                                               children: j.intl.format(s, {
                                                   account_name: null == r ? void 0 : r.name,
                                                   onClick: () => {
-                                                      (0, g.fY)(
+                                                      (0, f.fY)(
                                                           {
                                                               quest: t,
                                                               platformType: a
                                                           },
                                                           {
-                                                              content: f.jn.QUEST_BAR,
+                                                              content: g.jn.QUEST_BAR,
                                                               ctaContent: p.jZ.DEFIBRILLATOR_RECONNECT_CONSOLE
                                                           }
                                                       );
@@ -171,7 +171,7 @@ t.Z = function (e) {
         } = r.useMemo(() => {
             var e;
             let r = a.xboxAndPlaystationAccounts.length > 0,
-                s = r && (0, g.Bz)(t),
+                s = r && (0, f.Bz)(t),
                 l = h.r.build(t.config).application.name,
                 i = (null === (e = t.userStatus) || void 0 === e ? void 0 : e.completedAt) != null;
             return {

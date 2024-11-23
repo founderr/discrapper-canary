@@ -11,8 +11,8 @@ var i = n(200651),
     o = n(399606),
     s = n(481060),
     c = n(434650),
-    d = n(778569),
-    u = n(182906),
+    u = n(778569),
+    d = n(182906),
     m = n(367907),
     h = n(213609),
     f = n(783097),
@@ -51,7 +51,7 @@ function O(e) {
         : null;
 }
 function M(e) {
-    var t, n, d, u;
+    var t, n, u, d;
     let { application: E } = e,
         T = (0, o.e7)([v.Z], () => {
             var e;
@@ -83,8 +83,8 @@ function M(e) {
                 properties: { application_id: E.id }
             });
     }, [D, E]);
-    let F = E.id in (null !== (d = null === (t = (0, p.PL)(!0, !1).result) || void 0 === t ? void 0 : t.sections) && void 0 !== d ? d : {}),
-        G = E.id in (null !== (u = null === (n = (0, p.LD)(T, !1).result) || void 0 === n ? void 0 : n.sections) && void 0 !== u ? u : {}),
+    let F = E.id in (null !== (u = null === (t = (0, p.PL)(!0, !1).result) || void 0 === t ? void 0 : t.sections) && void 0 !== u ? u : {}),
+        G = E.id in (null !== (d = null === (n = (0, p.LD)(T, !1).result) || void 0 === n ? void 0 : n.sections) && void 0 !== d ? d : {}),
         V = F || G,
         H = E.isVerified && E.isDiscoverable,
         z = (0, o.e7)([N.Z, I.Z], () => I.Z.getChannel(N.Z.getChannelId())),
@@ -171,7 +171,7 @@ function M(e) {
 }
 function k(e) {
     let { application: t, iconUrl: n } = e,
-        r = (0, d.Z)({
+        r = (0, u.Z)({
             applicationId: t.id,
             size: 280,
             names: ['embedded_cover']
@@ -181,7 +181,7 @@ function k(e) {
         o = null,
         s = {};
     if ((0, f.ye)(t))
-        o = (0, i.jsx)(u.Z, {
+        o = (0, i.jsx)(d.Z, {
             imageBackground: r,
             applicationName: t.name,
             imageClassName: P.bannerImage,

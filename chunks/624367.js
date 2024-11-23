@@ -13,8 +13,8 @@ var r = n(568611),
     o = n(481060),
     s = n(668781),
     c = n(2052),
-    d = n(100527),
-    u = n(906732),
+    u = n(100527),
+    d = n(906732),
     m = n(895924),
     h = n(835473),
     f = n(523746),
@@ -39,7 +39,7 @@ let L = (0, C.Mg)(a.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
 function y(e) {
     var t, n, a, C;
     let { applicationId: y, message: O } = e,
-        { analyticsLocations: M } = (0, u.ZP)(d.Z.ACTIVITY_BOOKMARK),
+        { analyticsLocations: M } = (0, d.ZP)(u.Z.ACTIVITY_BOOKMARK),
         k = (0, c.O)(),
         D = O.channel_id,
         B = (0, l.e7)([p.Z], () => p.Z.getChannel(D), [D]),
@@ -103,7 +103,7 @@ function y(e) {
                 });
         };
     return null != V && (0, g.yE)(V.flags, Z.udG.EMBEDDED)
-        ? (0, i.jsx)(u.Gt, {
+        ? (0, i.jsx)(d.Gt, {
               value: M,
               children: (0, i.jsxs)('div', {
                   className: P.container,

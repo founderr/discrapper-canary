@@ -11,8 +11,8 @@ var o = n(200651),
     p = n(70097),
     m = n(617136),
     x = n(272008),
-    f = n(113434),
-    g = n(569984),
+    g = n(113434),
+    f = n(569984),
     h = n(497505),
     C = n(918701),
     v = n(184299),
@@ -42,13 +42,13 @@ function D(e) {
     var t;
     let { quest: n, onClick: s, containerClassName: l, imgClassName: i, reducedMotion: c } = e,
         [m, x] = r.useState(!1),
-        f = r.useRef(null),
-        g = (0, T.z)(T.i.QUEST_BAR_PREVIEW_VIDEO, n),
+        g = r.useRef(null),
+        f = (0, T.z)(T.i.QUEST_BAR_PREVIEW_VIDEO, n),
         h = (0, T.z)(T.i.VIDEO_PLAYER_THUMBNAIL, n),
         C = (0, v.km)((e) => e.getVideoProgressState);
     r.useEffect(() => {
-        null != f.current && (c && m && (f.current.currentTime = 0), f.current.play());
-    }, [f, m, c]);
+        null != g.current && (c && m && (g.current.currentTime = 0), g.current.play());
+    }, [g, m, c]);
     let j = C(n.id),
         _ = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null && j === v.iw.COMPLETED,
         b = !_ && (!c || m);
@@ -68,9 +68,9 @@ function D(e) {
                     src: h.url,
                     className: a()(Z.assetBodyVideoPreviewMedia, i)
                 }),
-            null != g
+            null != f
                 ? (0, o.jsx)(p.Z, {
-                      ref: f,
+                      ref: g,
                       autoPlay: !0,
                       poster: null == h ? void 0 : h.url,
                       loop: !0,
@@ -79,8 +79,8 @@ function D(e) {
                       className: a()(Z.assetBodyVideoPreviewMedia, Z.assetBodyVideoPreviewVideo, { [Z.assetBodyVideoPreviewVisible]: b }),
                       controls: !1,
                       children: (0, o.jsx)('source', {
-                          src: g.url,
-                          type: g.mimetype
+                          src: f.url,
+                          type: f.mimetype
                       })
                   })
                 : null,
@@ -99,7 +99,7 @@ function D(e) {
         ]
     });
 }
-function V(e) {
+function H(e) {
     let { quest: t, isHighlightedReward: n } = e;
     return (0, o.jsx)(B.Z, {
         className: a()(Z.rewardTile, { [Z.hiddenRewardTile]: n }),
@@ -109,9 +109,9 @@ function V(e) {
         location: W.dr.QUESTS_BAR
     });
 }
-function H(e) {
+function V(e) {
     let { quest: t, taskDetails: n, expansionSpring: s, isInteractable: a, reducedMotion: i, containerRef: d, isExpanded: m, onAcceptQuest: x } = e,
-        f = (0, c.e7)([g.Z], () => g.Z.isEnrolling(t.id), [t]),
+        g = (0, c.e7)([f.Z], () => f.Z.isEnrolling(t.id), [t]),
         v = r.useMemo(() => (0, N.fh)(t, N.eC.QUEST_BAR_HERO), [t]),
         b = (0, _.vI)(t, W.dr.QUESTS_BAR, !0),
         T = r.useRef(null),
@@ -137,7 +137,7 @@ function H(e) {
                         (0, o.jsxs)('div', {
                             className: Z.details,
                             children: [
-                                (0, o.jsx)(V, {
+                                (0, o.jsx)(H, {
                                     quest: t,
                                     isHighlightedReward: b
                                 }),
@@ -159,7 +159,7 @@ function H(e) {
                             fullWidth: !0,
                             onClick: a ? x : void 0,
                             size: u.Button.Sizes.SMALL,
-                            submitting: f,
+                            submitting: g,
                             children: y
                         })
                     ]
@@ -235,15 +235,15 @@ function H(e) {
 }
 function U(e) {
     var t;
-    let { quest: n, taskDetails: s, expansionSpring: c, overlayRef: d, isExpanded: p, reducedMotion: m, containerRef: x, onCtxMenuOpen: g, onCtxMenuClose: v, onCtxMenuSelect: j } = e,
+    let { quest: n, taskDetails: s, expansionSpring: c, overlayRef: d, isExpanded: p, reducedMotion: m, containerRef: x, onCtxMenuOpen: f, onCtxMenuClose: v, onCtxMenuSelect: j } = e,
         _ = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
         E = s.percentComplete > 0,
-        N = (0, f.z)(n),
-        [T, B, S] = (0, f.me)(n, s),
+        N = (0, g.z)(n),
+        [T, B, S] = (0, g.me)(n, s),
         O = (0, b.pF)({ location: W.dr.QUESTS_BAR }),
-        V = r.useRef(null),
-        H = (0, f.B6)(n.config.expiresAt),
-        U = (0, f._s)({ quest: n }),
+        H = r.useRef(null),
+        V = (0, g.B6)(n.config.expiresAt),
+        U = (0, g._s)({ quest: n }),
         z = (0, C.q8)(n),
         F = r.useCallback(() => {
             (0, y.openVideoQuestModal)(n);
@@ -270,10 +270,10 @@ function U(e) {
                             (0, o.jsx)(u.Text, {
                                 variant: 'text-xxs/medium',
                                 className: a()(Z.flex, Z.headerText),
-                                children: Q.intl.format(Q.t['pX+fmp'], { expirationDate: H })
+                                children: Q.intl.format(Q.t['pX+fmp'], { expirationDate: V })
                             }),
                             (0, o.jsx)(A.r, {
-                                onOpen: g,
+                                onOpen: f,
                                 onClose: v,
                                 onSelect: j,
                                 questContent: h.jn.QUEST_BAR_V2,
@@ -298,14 +298,14 @@ function U(e) {
                     (0, o.jsx)(I.Z, {
                         expansionSpring: c,
                         overlayRef: d,
-                        progressBarRef: V,
+                        progressBarRef: H,
                         quest: n,
                         isExpanded: p
                     }),
                     (0, o.jsx)(P.Z, {
                         contentLocation: 'expanded',
                         quest: n,
-                        progressBarRef: V,
+                        progressBarRef: H,
                         isExpanded: !0,
                         taskDetails: s,
                         activeScreen: T
@@ -365,7 +365,7 @@ function U(e) {
 }
 let z = r.forwardRef(function (e, t) {
     var n;
-    let { children: s, className: i, collapsedHeight: c, isExpanded: d, isExpansionAnimationComplete: u, expansionSpring: p, onCtxMenuOpen: f, onCtxMenuClose: g, onCtxMenuSelect: v, overlayRef: j, quest: _, useReducedMotion: b, taskDetails: E } = e,
+    let { children: s, className: i, collapsedHeight: c, isExpanded: d, isExpansionAnimationComplete: u, expansionSpring: p, onCtxMenuOpen: g, onCtxMenuClose: f, onCtxMenuSelect: v, overlayRef: j, quest: _, useReducedMotion: b, taskDetails: E } = e,
         N = (0, C.q8)(_),
         T = r.useCallback(() => {
             (0, x.AH)(_.id, {
@@ -409,12 +409,12 @@ let z = r.forwardRef(function (e, t) {
                           overlayRef: j,
                           isExpanded: d,
                           reducedMotion: b,
-                          onCtxMenuOpen: f,
-                          onCtxMenuClose: g,
+                          onCtxMenuOpen: g,
+                          onCtxMenuClose: f,
                           onCtxMenuSelect: v,
                           containerRef: t
                       })
-                    : (0, o.jsx)(H, {
+                    : (0, o.jsx)(V, {
                           quest: _,
                           taskDetails: E,
                           expansionSpring: p,

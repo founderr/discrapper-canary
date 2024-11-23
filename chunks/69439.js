@@ -16,8 +16,8 @@ var o = n(200651),
     p = n(569984),
     m = n(497505),
     x = n(918701),
-    f = n(667105),
-    g = n(341907),
+    g = n(667105),
+    f = n(341907),
     h = n(284851),
     C = n(46140),
     v = n(388032),
@@ -59,7 +59,7 @@ function E(e) {
     var t, n, s, E;
     let { quest: N, location: T, onReceiveErrorHints: B, contentPosition: S, rowIndex: A } = e,
         y = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
-        R = (0, f.g2)({ useReducedMotion: y }),
+        R = (0, g.g2)({ useReducedMotion: y }),
         w = (0, u._s)({ quest: N }),
         I = (0, u.z)(N),
         k = (0, u.B6)(N.config.expiresAt, {
@@ -77,8 +77,8 @@ function E(e) {
         Q = !(0, x.zi)(N),
         Z = (0, u._Q)(N),
         D = (0, x.Xv)(N.config),
-        V = (0, x.q8)(N),
-        H = (0, u.GU)(N),
+        H = (0, x.q8)(N),
+        V = (0, u.GU)(N),
         U = (0, u.Rf)(N),
         [z, F, G] = (0, u.me)(N, U),
         Y = Q && Z === u.OH.ACCEPTED,
@@ -94,7 +94,7 @@ function E(e) {
             text: $,
             onClick: ee,
             tooltipText: et
-        } = (0, f.Ks)({
+        } = (0, g.Ks)({
             progressState: Z,
             quest: N,
             location: T,
@@ -102,7 +102,7 @@ function E(e) {
             questContentPosition: S,
             questContentRowIndex: A,
             inGiftInventory: !0,
-            isVideoQuest: V
+            isVideoQuest: H
         }),
         { startingConsoleQuest: en, startConsoleQuest: eo } = (0, u.GI)({
             questId: N.id,
@@ -131,7 +131,7 @@ function E(e) {
               children: $
           }))
         : O
-          ? (es = V
+          ? (es = H
                 ? (0, o.jsxs)(o.Fragment, {
                       children: [
                           (0, o.jsx)(i.Button, {
@@ -139,7 +139,7 @@ function E(e) {
                               className: j.button,
                               style: { flex: 1 },
                               onClick: () => {
-                                  (0, g.openVideoQuestModal)(N);
+                                  (0, f.openVideoQuestModal)(N);
                               },
                               children: (0, o.jsxs)('div', {
                                   className: j.ctaInner,
@@ -167,7 +167,7 @@ function E(e) {
                       children: $
                   }))
           : Q
-            ? H.length > 0
+            ? V.length > 0
                 ? (es = (0, o.jsx)(
                       i.TooltipContainer,
                       {
@@ -226,7 +226,7 @@ function E(e) {
                                           children: [R.render(), v.intl.string(v.t.nPThNT)]
                                       })
                                   })
-                            : V
+                            : H
                               ? (0, o.jsx)(i.Button, {
                                     color: i.ButtonColors.BRAND,
                                     onClick: null != ee ? ee : void 0,

@@ -24,8 +24,8 @@ var l = n(442837),
     x = n(687352),
     I = n(135724),
     b = n(25601),
-    E = n(981631),
-    S = n(490897),
+    S = n(981631),
+    E = n(490897),
     Z = n(388032),
     N = n(718317);
 function y(e) {
@@ -33,7 +33,7 @@ function y(e) {
     let { channel: n, isChannelSelected: y, isChannelCollapsed: T, voiceStates: A, enableConnectedUserLimit: P, enableActivities: j, isSubscriptionGated: R, needSubscriptionToAccess: M, isNewChannel: L, muted: w, resolvedUnreadSetting: D } = e,
         O = (0, l.e7)([m.ZP], () => m.ZP.getMentionCount(n.id)),
         k = (0, o.ZP)(n),
-        U = (0, l.e7)([p.Z], () => !p.Z.can(E.Plq.CONNECT, n)),
+        U = (0, l.e7)([p.Z], () => !p.Z.can(S.Plq.CONNECT, n)),
         G = (0, l.e7)([f.Z], () => f.Z.hasVideo(n.id)),
         B = (0, u.PK)(n.id) && n.isGuildStageVoice(),
         V = (0, v.ZP)({
@@ -46,7 +46,7 @@ function y(e) {
         F = (0, s.n2)(n.guild_id, n.id),
         W = (0, l.e7)([h.Z], () => {
             var e, t;
-            return null !== (t = null === (e = h.Z.getGuild(n.guild_id)) || void 0 === e ? void 0 : e.hasFeature(E.oNc.COMMUNITY)) && void 0 !== t && t;
+            return null !== (t = null === (e = h.Z.getGuild(n.guild_id)) || void 0 === e ? void 0 : e.hasFeature(S.oNc.COMMUNITY)) && void 0 !== t && t;
         });
     if ((0, _.Z)(O)) return (0, i.jsx)(b.Z, { mentionsCount: O });
     if ((0, c.O)(R)) return (0, i.jsx)(c.Z, { locked: M });
@@ -56,7 +56,7 @@ function y(e) {
             color: r.Z.unsafe_rawColors.BRAND_260.css,
             className: N.newChannel
         });
-    if (!w && D === S.i.ALL_MESSAGES && n.isForumLikeChannel() && null != H && H > 0)
+    if (!w && D === E.i.ALL_MESSAGES && n.isForumLikeChannel() && null != H && H > 0)
         return (0, i.jsx)(a.Text, {
             variant: 'text-xs/semibold',
             color: 'text-brand',

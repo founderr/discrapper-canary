@@ -15,8 +15,8 @@ var o = n(200651),
     p = n(113434),
     m = n(566078),
     x = n(472144),
-    f = n(644646),
-    g = n(69439),
+    g = n(644646),
+    f = n(69439),
     h = n(46140),
     C = n(642145),
     v = n(388032),
@@ -54,7 +54,7 @@ function b(e) {
             []
         ),
         D = r.useMemo(() => (O ? Z(y) : v.intl.format(v.t['0IUT4e'], { rewardWithArticleHook: () => Z(R) })), [y, R, O, Z]),
-        V = r.useMemo(() => {
+        H = r.useMemo(() => {
             if (null != Q)
                 return (0, o.jsx)(c.Text, {
                     variant: 'text-sm/medium',
@@ -63,7 +63,7 @@ function b(e) {
                     children: Q
                 });
         }, [Q]),
-        H = (0, i.e7)([u.Z], () => u.Z.useReducedMotion);
+        V = (0, i.e7)([u.Z], () => u.Z.useReducedMotion);
     return (0, o.jsxs)('div', {
         className: a()(j.container),
         children: [
@@ -87,7 +87,7 @@ function b(e) {
                                                   className: j.confetti,
                                                   loop: !1,
                                                   autoplay: !1,
-                                                  shouldAnimate: !H
+                                                  shouldAnimate: !V
                                               }),
                                           (0, o.jsx)(x.Z, {
                                               quest: b,
@@ -96,7 +96,7 @@ function b(e) {
                                               percentCompleteText: N ? L : void 0,
                                               children: (0, o.jsx)('div', {
                                                   className: j.circularRewardTileWrapper,
-                                                  children: (0, o.jsx)(f.Z, {
+                                                  children: (0, o.jsx)(g.Z, {
                                                       quest: b,
                                                       questContent: E,
                                                       className: j.circularQuestRewardTileAsset,
@@ -106,7 +106,7 @@ function b(e) {
                                           })
                                       ]
                                   })
-                                : (0, o.jsx)(f.Z, {
+                                : (0, o.jsx)(g.Z, {
                                       quest: b,
                                       autoplay: N,
                                       questContent: E,
@@ -131,7 +131,7 @@ function b(e) {
                                 className: j.header,
                                 children: D
                             }),
-                            V
+                            H
                         ]
                     }),
                     q &&
@@ -143,7 +143,7 @@ function b(e) {
                         })
                 ]
             }),
-            (0, o.jsx)(g.Z, {
+            (0, o.jsx)(f.Z, {
                 quest: b,
                 location: E,
                 contentPosition: T,

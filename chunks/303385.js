@@ -10,10 +10,10 @@ var r = n(100621),
     u = n(437567);
 t.Z = (e) => {
     let { quest: t, expansionSpring: n, isFullyExpanded: p, partnerBranding: m, useReducedMotion: x } = e,
-        { enabled: f, variant: g } = l.Hp.useExperiment({ location: c.dr.QUESTS_BAR });
-    if (!f) return null;
+        { enabled: g, variant: f } = l.Hp.useExperiment({ location: c.dr.QUESTS_BAR });
+    if (!g) return null;
     let h = null;
-    return (g === l.PW.REWARD_AVAILABLE ? (h = d.intl.string(d.t['2BD0CQ'])) : g === l.PW.EARN_A_REWARD ? (h = d.intl.string(d.t.mETI3N)) : g === l.PW.EARN_A_REWARD_EXCLAMATION && (h = d.intl.string(d.t.LCpIZG)), null == h)
+    return (f === l.PW.REWARD_AVAILABLE ? (h = d.intl.string(d.t['2BD0CQ'])) : f === l.PW.EARN_A_REWARD ? (h = d.intl.string(d.t.mETI3N)) : f === l.PW.EARN_A_REWARD_EXCLAMATION && (h = d.intl.string(d.t.LCpIZG)), null == h)
         ? null
         : (0, o.jsxs)(o.Fragment, {
               children: [

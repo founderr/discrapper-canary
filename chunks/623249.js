@@ -20,8 +20,8 @@ var o = n(200651),
     p = n(210887),
     m = n(617136),
     x = n(113434),
-    f = n(497505),
-    g = n(918701),
+    g = n(497505),
+    f = n(918701),
     h = n(475595),
     C = n(667105),
     v = n(981631),
@@ -40,7 +40,7 @@ function E(e) {
             className: _.colorTransition
         }),
         w = B.filter((e) => ['xbox', 'playstation'].includes(e.connected_account_type)),
-        I = (0, g.Bz)(T),
+        I = (0, f.Bz)(T),
         k = (0, l.e7)([p.Z], () => p.Z.getState().theme),
         q = (0, i.wj)(k) ? v.BRd.DARK : v.BRd.LIGHT,
         { startConsoleQuest: P, startingConsoleQuest: M } = (0, x.GI)({
@@ -49,7 +49,7 @@ function E(e) {
                 R.startAnimation(),
                     (0, m._3)({
                         questId: T.id,
-                        questContent: f.jn.CONNECTIONS_MODAL,
+                        questContent: g.jn.CONNECTIONS_MODAL,
                         questContentCTA: m.jZ.DEFIBRILLATOR
                     });
             },
@@ -179,10 +179,10 @@ function E(e) {
                         color: c.ButtonColors.PRIMARY,
                         onClick: () => {
                             E(),
-                                (0, g.V$)(
+                                (0, f.V$)(
                                     { quest: T },
                                     {
-                                        content: f.jn.CONNECTIONS_MODAL,
+                                        content: g.jn.CONNECTIONS_MODAL,
                                         ctaContent: m.jZ.VIEW_CONSOLE_CONNECTIONS_LINK
                                     }
                                 );

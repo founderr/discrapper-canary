@@ -20,8 +20,8 @@ var l = n(392711),
     x = n(74538),
     I = n(557457),
     b = n(970645),
-    E = n(30684),
-    S = n(514701),
+    S = n(30684),
+    E = n(514701),
     Z = n(6242),
     N = n(467721),
     y = n(757692),
@@ -140,7 +140,7 @@ class Y extends c.Z {
             }),
             z(this, '_maybeFetchCheckoutRecovery', async () => {
                 let e = C.default.getCurrentUser();
-                null != e && e.verified && !(0, x.I5)(e) && E.Z.shouldFetchCheckoutRecovery() && (await (0, b.o)());
+                null != e && e.verified && !(0, x.I5)(e) && S.Z.shouldFetchCheckoutRecovery() && (await (0, b.o)());
             }),
             z(this, '_maybeFetchUserAffinities', () => {
                 let { enabled: e } = D.w.getCurrentConfig({ location: 'PremiumManager' }, { autoTrackExposure: !1 });
@@ -182,7 +182,7 @@ class Y extends c.Z {
                         { sendNitroMessage: o } = (0, Z.TD)(a),
                         c = null !== (l = null === (i = g.Z.getGuild(t)) || void 0 === i ? void 0 : i.premiumTier) && void 0 !== l ? l : V.Eu4.NONE;
                     if (N.Z.cooldownIsActive() || !o || c >= V.Eu4.TIER_2 || (null == r ? void 0 : r.type) !== H.fO.STREAM || (null == r ? void 0 : r.id) === (null == n ? void 0 : n.id) || null == r.maxResolution || null == r.maxFrameRate) return;
-                    S.I();
+                    E.I();
                     let u = W.intl.formatToPlainString(W.t.AbyeZG, {
                         nickname: r.userNick,
                         resolution: (0, F.o6)(r.maxResolution.height),

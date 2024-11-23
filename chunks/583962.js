@@ -27,8 +27,8 @@ var i = n(200651),
     x = n(624138),
     I = n(667815),
     b = n(531572),
-    E = n(26323),
-    S = n(30513),
+    S = n(26323),
+    E = n(30513),
     Z = n(981631),
     N = n(388032),
     y = n(402723);
@@ -91,7 +91,7 @@ t.ZP = (e) => {
                 guild_id: g,
                 location_stack: r
             }),
-                (0, E.Z)({
+                (0, S.Z)({
                     analyticsLocations: r,
                     analyticsSourceLocation: {
                         page: Z.ZY5.GUILD_CHANNEL,
@@ -99,7 +99,7 @@ t.ZP = (e) => {
                         object: Z.qAy.TOOLTIP
                     },
                     guild: t,
-                    perks: (0, S.VF)(),
+                    perks: (0, E.VF)(),
                     perkIntro: N.intl.string(N.t.ZhvSn5)
                 });
         },

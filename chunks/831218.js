@@ -19,8 +19,8 @@ var i,
     x = n(485267),
     I = n(82295),
     b = n(313201),
-    E = n(860144),
-    S = n(214852),
+    S = n(860144),
+    E = n(214852),
     Z = n(518311),
     N = n(355298),
     y = n(869404),
@@ -401,7 +401,7 @@ t.Z = (e) => {
             },
             []
         );
-    (0, S.z)(E.R);
+    (0, E.z)(S.R);
     let { recentActivityStatusEnabled: m } = (0, A.U)({ location: 'PrivateChannelsList' });
     o.useEffect(() => {
         m && (0, x.Jn)();

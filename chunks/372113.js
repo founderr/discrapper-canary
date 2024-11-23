@@ -26,7 +26,7 @@ var s = n(120356),
     A = n(388032),
     R = n(389444);
 let b = (e, t, n) => ((0, S.uq)(e) && !n && 'lg' === t ? 'text-lg/medium' : 'lg' === t ? 'text-md/medium' : 'sm' === t ? 'text-sm/medium' : 'text-xs/medium');
-function I(e) {
+function M(e) {
     let { containerSize: t, onClick: n, children: s, tabIndex: l } = e;
     return 'xs' === t
         ? (0, i.jsx)(o.Clickable, {
@@ -48,7 +48,7 @@ function I(e) {
               children: s
           });
 }
-function M(e) {
+function I(e) {
     let { quest: t, progressState: n, isCollectibleQuest: s, location: l, questContentPosition: u, inGiftInventory: c } = e,
         d = n >= x.OH.COMPLETED,
         m = (0, r.e7)([a.Z], () => a.Z.useReducedMotion),
@@ -91,21 +91,21 @@ function M(e) {
 t.Z = (e) => {
     let { quest: t, location: n, size: s, isFocused: a, isQuestExpired: h, isExpanded: T, isAnimating: L, contentPosition: Z } = e,
         y = (0, x._Q)(t),
-        B = y >= x.OH.ACCEPTED,
-        P = y >= x.OH.COMPLETED,
+        P = y >= x.OH.ACCEPTED,
+        B = y >= x.OH.COMPLETED,
         U = y >= x.OH.CLAIMED,
         D = (0, p.Xv)(t.config),
         w = (0, S.uq)(n),
         Q = n === C.jn.QUESTS_EMBED,
         k = T || L,
-        O = B && !U && w,
+        O = P && !U && w,
         H = (0, x.t5)(t, q.dr.QUESTS_CARD, n),
         { xboxAndPlaystationAccounts: W } = (0, x.z6)(),
         G = (0, r.e7)([u.default], () => u.default.locale),
         z = (0, x.z)(t),
         F = w && D,
-        V = h && !P,
-        X = W.length > 0 && w && (0, p.$J)(t) && B && !P && !z,
+        V = h && !B,
+        X = W.length > 0 && w && (0, p.$J)(t) && P && !B && !z,
         Y = (0, i.jsx)(j.Z, {
             autoplay: a,
             className: l()(R.gridImg, {
@@ -160,7 +160,7 @@ t.Z = (e) => {
                         className: l()(R.gridText, R.taskDetails),
                         children: [
                             (0, i.jsx)(o.Text, {
-                                variant: b(n, s, B),
+                                variant: b(n, s, P),
                                 className: R.taskInstructions,
                                 children: h ? A.intl.formatToPlainString(A.t['ge+AJi'], { questName: t.config.messages.questName }) : H
                             }),
@@ -240,7 +240,7 @@ t.Z = (e) => {
                         className: l()(R.ctaButtonContainer, R.gridCtaButtons),
                         children: [
                             !w &&
-                                (0, i.jsx)(I, {
+                                (0, i.jsx)(M, {
                                     containerSize: s,
                                     onClick: () => {
                                         (0, f.navigateToQuestHome)(q.dr.QUESTS_CARD, n, t.id),
@@ -253,9 +253,9 @@ t.Z = (e) => {
                                     },
                                     children: A.intl.string(A.t.LLLLPD)
                                 }),
-                            h && !P
+                            h && !B
                                 ? null
-                                : (0, i.jsx)(M, {
+                                : (0, i.jsx)(I, {
                                       quest: t,
                                       progressState: y,
                                       isCollectibleQuest: D,
@@ -267,7 +267,7 @@ t.Z = (e) => {
                     O &&
                         (0, i.jsx)(E.Z, {
                             className: R.gridProgressBar,
-                            color: P ? o.tokens.colors.TEXT_POSITIVE : o.tokens.colors.BG_BRAND,
+                            color: B ? o.tokens.colors.TEXT_POSITIVE : o.tokens.colors.BG_BRAND,
                             quest: t,
                             isInventory: w
                         })

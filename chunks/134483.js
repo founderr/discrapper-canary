@@ -26,13 +26,13 @@ var i = n(200651),
     A = n(340100),
     R = n(611855),
     b = n(644646),
-    I = n(670638),
-    M = n(667105),
+    M = n(670638),
+    I = n(667105),
     L = n(860151),
     Z = n(341907),
     y = n(46140),
-    B = n(981631),
-    P = n(354459),
+    P = n(981631),
+    B = n(354459),
     U = n(388032),
     D = n(869630);
 t.Z = function (e) {
@@ -44,7 +44,7 @@ t.Z = function (e) {
         z = s.useContext(h.h9),
         F = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
         V = (0, o.e7)([x.Z], () => x.Z.getState().theme),
-        X = (0, a.wj)(V) ? B.BRd.DARK : B.BRd.LIGHT,
+        X = (0, a.wj)(V) ? P.BRd.DARK : P.BRd.LIGHT,
         { isCurrentUserStreamingQuestApplication: Y, quest: K } = (0, o.cj)(
             [C.Z, c.Z, T.Z],
             () => {
@@ -56,13 +56,13 @@ t.Z = function (e) {
                             : (function (e, t, n) {
                                   for (let r of e) {
                                       var i, s, l;
-                                      if (r.type === P.fO.STREAM) {
+                                      if (r.type === B.fO.STREAM) {
                                           let e = null !== (s = (0, m.Um)(r.stream, n)) && void 0 !== s ? s : null,
                                               l = (0, v.ZZ)(t, e);
                                           if (null != l && (null === (i = l.userStatus) || void 0 === i ? void 0 : i.claimedAt) == null) return l;
                                       }
                                       for (let i of e) {
-                                          if (!(0, P.I)(i))
+                                          if (!(0, B.I)(i))
                                               for (let e of n.getActivities(i.user.id)) {
                                                   let n = (0, v.ZZ)(t, e);
                                                   if (null != n && (null === (l = n.userStatus) || void 0 === l ? void 0 : l.claimedAt) == null && ((0, v.Nj)({ quest: n }) || (0, v.$J)(n))) return n;
@@ -80,7 +80,7 @@ t.Z = function (e) {
                         (n = F),
                         (i = C.Z),
                         e.some((e) => {
-                            if (e.type !== P.fO.STREAM || e.user.id !== n.id) return !1;
+                            if (e.type !== B.fO.STREAM || e.user.id !== n.id) return !1;
                             let s = (0, m.Um)(e.stream, i);
                             return null != s && (0, v._D)(s, t);
                         })),
@@ -97,7 +97,7 @@ t.Z = function (e) {
                 if (null == K) return !1;
                 let e = d.ZP.getRunningGames().map((e) => e.id);
                 if ((0, v.$H)(K) && e.includes($)) return !0;
-                let t = null != F ? C.Z.findActivity(F.id, (e) => e.type !== B.IIU.CUSTOM_STATUS) : null;
+                let t = null != F ? C.Z.findActivity(F.id, (e) => e.type !== P.IIU.CUSTOM_STATUS) : null;
                 return !!(null != t && (0, v.$J)(K) && (0, v._D)(t, K)) || !1;
             },
             [K, $, F]
@@ -132,7 +132,7 @@ t.Z = function (e) {
                 }),
                 (0, Z.navigateToQuestHome)(y.dr.QUEST_CHANNEL_CALL_HEADER, f.jn.QUEST_LIVE_STREAM, K.id));
         }, [K]),
-        eu = (0, M.hf)({
+        eu = (0, I.hf)({
             quest: K,
             location: f.jn.QUEST_LIVE_STREAM
         }),
@@ -220,7 +220,7 @@ t.Z = function (e) {
                                                               })
                                                             : U.intl.formatToPlainString(U.t.EQa7oq, { questName: K.config.messages.questName })
                                                     }),
-                                                    (0, i.jsx)(I.r, {
+                                                    (0, i.jsx)(M.r, {
                                                         questContent: f.jn.QUEST_LIVE_STREAM,
                                                         quest: K,
                                                         preventIdle: !0,

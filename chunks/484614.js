@@ -1,37 +1,37 @@
-var n,
-    o = r(200651),
-    a = r(192379),
-    s = r(120356),
-    i = r.n(s),
-    l = r(846519),
-    d = r(481060),
-    c = r(572004),
-    u = r(388032),
-    p = r(681130);
-function m(e, t, r) {
+var r,
+    o = n(200651),
+    a = n(192379),
+    s = n(120356),
+    i = n.n(s),
+    l = n(846519),
+    d = n(481060),
+    c = n(572004),
+    u = n(388032),
+    p = n(681130);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: r,
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = r),
+            : (e[t] = n),
         e
     );
 }
-class f extends (n = a.PureComponent) {
+class f extends (r = a.PureComponent) {
     componentWillUnmount() {
         this._timeout.stop();
     }
     render() {
-        let { isVertical: e, value: t, text: r, className: n, inputClassName: a } = this.props,
+        let { isVertical: e, value: t, text: n, className: r, inputClassName: a } = this.props,
             { mode: s } = this.state,
-            l = s === d.CopyInput.Modes.SUCCESS ? u.intl.string(u.t['t5VZ8/']) : r;
+            l = s === d.CopyInput.Modes.SUCCESS ? u.intl.string(u.t['t5VZ8/']) : n;
         return e
             ? (0, o.jsxs)('div', {
-                  className: i()(n, s),
+                  className: i()(r, s),
                   children: [
                       (0, o.jsx)(d.TextInput, {
                           value: t,
@@ -55,9 +55,9 @@ class f extends (n = a.PureComponent) {
               });
     }
     handleCopy() {
-        let { onCopy: e, value: t, delay: r } = this.props,
-            n = (0, c.JG)(t);
-        this.setState({ mode: n ? d.CopyInput.Modes.SUCCESS : d.CopyInput.Modes.ERROR }), this._timeout.start(r, () => this.setState({ mode: d.CopyInput.Modes.DEFAULT })), null == e || e();
+        let { onCopy: e, value: t, delay: n } = this.props,
+            r = (0, c.JG)(t);
+        this.setState({ mode: r ? d.CopyInput.Modes.SUCCESS : d.CopyInput.Modes.ERROR }), this._timeout.start(n, () => this.setState({ mode: d.CopyInput.Modes.DEFAULT })), null == e || e();
     }
     getVerticalButtonColor(e) {
         switch (e) {

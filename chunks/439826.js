@@ -17,8 +17,8 @@ var o,
     p = n(481060),
     m = n(393238),
     x = n(410030),
-    f = n(44315),
-    g = n(70097),
+    g = n(44315),
+    f = n(70097),
     h = n(617136),
     C = n(272008),
     v = n(113434),
@@ -41,7 +41,7 @@ function k(e) {
         { ref: i, height: d = 0 } = (0, m.Z)([o]),
         u = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
         x = (0, v.z)(n),
-        { type: g, hints: h } = a.useMemo(
+        { type: f, hints: h } = a.useMemo(
             () =>
                 u || x
                     ? {
@@ -64,15 +64,15 @@ function k(e) {
                           },
             [o, u, x, r]
         ),
-        C = 2 !== g,
+        C = 2 !== f,
         j = (0, p.useSpring)({
             opacity: C ? 1 : 0,
             height: C ? d : 0,
             config: y.Y
         }),
-        _ = 0 === g ? p.CircleWarningIcon : p.CircleInformationIcon,
-        b = (0, f.Lq)(R.Ilk.RED_345),
-        E = 0 === g ? b : l ? p.tokens.colors.TEXT_NORMAL : p.tokens.colors.WHITE;
+        _ = 0 === f ? p.CircleWarningIcon : p.CircleInformationIcon,
+        b = (0, g.Lq)(R.Ilk.RED_345),
+        E = 0 === f ? b : l ? p.tokens.colors.TEXT_NORMAL : p.tokens.colors.WHITE;
     return (0, s.jsx)(s.Fragment, {
         children: (0, s.jsx)(c.animated.div, {
             style: j,
@@ -94,7 +94,7 @@ function k(e) {
                             })
                         ]
                     }),
-                    0 === g &&
+                    0 === f &&
                         (0, s.jsx)(p.Button, {
                             onClick: () =>
                                 (0, N.openConsoleConnectionErrorsModal)({
@@ -104,7 +104,7 @@ function k(e) {
                             size: p.ButtonSizes.MIN,
                             look: p.ButtonLooks.LINK,
                             color: p.ButtonColors.CUSTOM,
-                            style: { color: (0, f.Lq)(R.Ilk.BLUE_345) },
+                            style: { color: (0, g.Lq)(R.Ilk.BLUE_345) },
                             children: 'See Details'
                         })
                 ]
@@ -120,7 +120,7 @@ function q(e) {
         a.useEffect(() => {
             null != l.current && r && l.current.play();
         }, [r]),
-        (0, s.jsx)(g.Z, {
+        (0, s.jsx)(f.Z, {
             ref: l,
             autoPlay: !o,
             loop: !0,
@@ -137,15 +137,15 @@ function q(e) {
 }
 function P(e) {
     var t, n, o, r, l;
-    let { quest: c, isHovering: m, errorHints: f, warningHints: N, onCtxMenuClose: y, onCtxMenuOpen: P, onCtxMenuSelect: M } = e,
+    let { quest: c, isHovering: m, errorHints: g, warningHints: N, onCtxMenuClose: y, onCtxMenuOpen: P, onCtxMenuSelect: M } = e,
         O = (0, _.q8)(c),
         W = a.useMemo(() => (0, b.fh)(c, b.eC.HERO), [c]),
         L = (0, x.ZP)(),
         Q = ((0, u.wj)(L) ? R.BRd.DARK : R.BRd.LIGHT) === R.BRd.DARK,
         Z = a.useContext(d.S).reducedMotion.enabled,
         D = (0, _.Mi)(c, j.jn.GIFT_INVENTORY_FOR_YOU),
-        V = (0, v.tP)(c),
-        H = (null === (t = c.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
+        H = (0, v.tP)(c),
+        V = (null === (t = c.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
         U = a.useRef(m),
         z = a.useRef(null),
         F = (0, v.B6)(c.config.expiresAt, {
@@ -187,7 +187,7 @@ function P(e) {
                                   var t;
                                   return (
                                       null != e.current && (z.current = e.current),
-                                      (0, s.jsx)(g.Z, {
+                                      (0, s.jsx)(f.Z, {
                                           ref: e,
                                           autoPlay: !Z && m,
                                           loop: !0,
@@ -239,8 +239,8 @@ function P(e) {
                                 className: I.topRow,
                                 children: [
                                     D &&
-                                        !V &&
                                         !H &&
+                                        !V &&
                                         (0, s.jsx)('div', {
                                             className: I.pill,
                                             children: (0, s.jsx)(p.Text, {
@@ -300,7 +300,7 @@ function P(e) {
                                         color: Q ? 'text-muted' : 'always-white',
                                         children: w.intl.format(w.t.buEvBw, { brandName: null !== (l = null === (r = c.config.cosponsorMetadata) || void 0 === r ? void 0 : r.name) && void 0 !== l ? l : c.config.messages.gamePublisher })
                                     }),
-                                    V || H
+                                    H || V
                                         ? null
                                         : (0, s.jsx)(p.Text, {
                                               variant: 'text-sm/medium',
@@ -313,7 +313,7 @@ function P(e) {
                     }),
                     (0, s.jsx)(k, {
                         quest: c,
-                        errorHints: f,
+                        errorHints: g,
                         warningHints: N,
                         isDarkTheme: Q
                     })

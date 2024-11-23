@@ -4,8 +4,8 @@ n.r(e),
             return T;
         }
     });
-var s = n(200651),
-    o = n(192379),
+var o = n(200651),
+    s = n(192379),
     a = n(481060),
     i = n(600164),
     r = n(63063),
@@ -29,76 +29,76 @@ let j = (t, e) => {
 };
 function T(t) {
     var e;
-    let { transitionState: n, onClose: T, questContent: b, quest: h } = t,
-        f = (0, d.Mi)(h, c.jn.GIFT_INVENTORY_FOR_YOU),
-        E = (0, l.tP)(h),
-        p = (null === (e = h.userStatus) || void 0 === e ? void 0 : e.claimedAt) != null,
-        S = j(b, f && !E && !p),
-        C = o.useMemo(
-            () =>
-                (0, d.Fs)({
-                    isTargetedDisclosure: S,
-                    gamePublisher: h.config.messages.gamePublisher,
-                    gameTitle: h.config.messages.gameTitle
-                }),
-            [h, S]
-        );
-    return (0, s.jsxs)(a.ModalRoot, {
+    let { transitionState: n, onClose: T, questContent: b, quest: f } = t,
+        h = (0, d.Mi)(f, c.jn.GIFT_INVENTORY_FOR_YOU),
+        p = (0, l.tP)(f),
+        E = (null === (e = f.userStatus) || void 0 === e ? void 0 : e.claimedAt) != null,
+        S = j(b, h && !p && !E),
+        v = s.useMemo(() => {
+            var t;
+            return (0, d.Fs)({
+                isTargetedDisclosure: S,
+                gamePublisher: f.config.messages.gamePublisher,
+                gameTitle: f.config.messages.gameTitle,
+                cosponsorName: null === (t = f.config.cosponsorMetadata) || void 0 === t ? void 0 : t.name
+            });
+        }, [f, S]);
+    return (0, o.jsxs)(a.ModalRoot, {
         transitionState: n,
         size: a.ModalSize.DYNAMIC,
         className: x.modalRoot,
         children: [
-            (0, s.jsxs)(a.ModalHeader, {
+            (0, o.jsxs)(a.ModalHeader, {
                 direction: i.Z.Direction.VERTICAL,
                 separator: !1,
                 className: x.modalHeader,
                 children: [
-                    (0, s.jsxs)('div', {
+                    (0, o.jsxs)('div', {
                         className: x.modalTop,
                         children: [
-                            (0, s.jsx)('div', {
+                            (0, o.jsx)('div', {
                                 className: x.iconFrame,
-                                children: (0, s.jsx)('img', {
+                                children: (0, o.jsx)('img', {
                                     className: x.icon,
                                     alt: '',
                                     src: _
                                 })
                             }),
-                            (0, s.jsx)(a.ModalCloseButton, {
+                            (0, o.jsx)(a.ModalCloseButton, {
                                 className: x.closeBtn,
                                 onClick: T
                             })
                         ]
                     }),
-                    (0, s.jsx)(a.Heading, {
+                    (0, o.jsx)(a.Heading, {
                         variant: 'heading-xl/bold',
                         children: u.intl.string(u.t.GcsZKC)
                     })
                 ]
             }),
-            (0, s.jsxs)(a.ModalContent, {
+            (0, o.jsxs)(a.ModalContent, {
                 className: x.modalContent,
                 children: [
-                    (0, s.jsx)(a.Text, {
+                    (0, o.jsx)(a.Text, {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
                         className: x.upperBodyText,
-                        children: C
+                        children: v
                     }),
-                    (0, s.jsx)(g, {
-                        quest: h,
+                    (0, o.jsx)(g, {
+                        quest: f,
                         questContent: b
                     }),
-                    (0, s.jsx)(a.Text, {
+                    (0, o.jsx)(a.Text, {
                         variant: 'text-xs/medium',
                         color: 'text-muted',
                         children: u.intl.format(u.t.tzq9WV, { privacySettingsUrl: r.Z.getArticleURL(m.BhN.QUESTS_PRIVACY_CONTROLS) })
                     })
                 ]
             }),
-            (0, s.jsx)(a.ModalFooter, {
+            (0, o.jsx)(a.ModalFooter, {
                 className: x.footer,
-                children: (0, s.jsx)(a.Button, {
+                children: (0, o.jsx)(a.Button, {
                     onClick: T,
                     children: u.intl.string(u.t.cpT0Cg)
                 })
@@ -107,22 +107,22 @@ function T(t) {
     });
 }
 function b(t) {
-    let { location: e, age: n, activity: o } = t;
-    return (0, s.jsxs)('ul', {
+    let { location: e, age: n, activity: s } = t;
+    return (0, o.jsxs)('ul', {
         className: x.targetList,
         children: [
             e &&
-                (0, s.jsx)(h, {
+                (0, o.jsx)(f, {
                     icon: a.GlobeEarthIcon,
                     children: u.intl.string(u.t.xQSdPj)
                 }),
             n &&
-                (0, s.jsx)(h, {
+                (0, o.jsx)(f, {
                     icon: a.UserIcon,
                     children: u.intl.string(u.t.mYt7hY)
                 }),
-            o &&
-                (0, s.jsx)(h, {
+            s &&
+                (0, o.jsx)(f, {
                     icon: a.GameControllerIcon,
                     children: u.intl.string(u.t.XAsWxc)
                 })
@@ -131,28 +131,28 @@ function b(t) {
 }
 function g(t) {
     var e;
-    let { questContent: n, quest: o } = t,
-        a = (0, d.Mi)(o, c.jn.GIFT_INVENTORY_FOR_YOU),
-        i = (0, l.tP)(o),
-        r = (null === (e = o.userStatus) || void 0 === e ? void 0 : e.claimedAt) != null;
+    let { questContent: n, quest: s } = t,
+        a = (0, d.Mi)(s, c.jn.GIFT_INVENTORY_FOR_YOU),
+        i = (0, l.tP)(s),
+        r = (null === (e = s.userStatus) || void 0 === e ? void 0 : e.claimedAt) != null;
     return n !== c.jn.QUEST_BAR && n !== c.jn.QUEST_BAR_V2 && (n !== c.jn.QUEST_HOME_DESKTOP || !a || i || r)
         ? n === c.jn.ACTIVITY_PANEL || n === c.jn.QUESTS_EMBED || n === c.jn.QUEST_LIVE_STREAM
-            ? (0, s.jsx)(b, { activity: !0 })
+            ? (0, o.jsx)(b, { activity: !0 })
             : null
-        : (0, s.jsx)(b, {
+        : (0, o.jsx)(b, {
               location: !0,
               age: !0,
               activity: !0
           });
 }
-function h(t) {
+function f(t) {
     let { icon: e, children: n } = t;
-    return (0, s.jsxs)(a.Text, {
+    return (0, o.jsxs)(a.Text, {
         variant: 'text-sm/medium',
         tag: 'li',
         className: x.targetItem,
         children: [
-            (0, s.jsx)(e, {
+            (0, o.jsx)(e, {
                 size: 'xs',
                 color: 'currentColor'
             }),

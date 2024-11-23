@@ -16,8 +16,8 @@ var o = n(200651),
     p = n(819640),
     m = n(617136),
     x = n(113434),
-    f = n(497505),
-    g = n(302245),
+    g = n(497505),
+    f = n(302245),
     h = n(977156),
     C = n(5881),
     v = n(602667),
@@ -34,7 +34,7 @@ function A(e) {
     return (
         (0, x.qI)({
             mode: t ? T.NH.EXPANDED : T.NH.COLLAPSED,
-            questContent: f.jn.QUEST_BAR_V2,
+            questContent: g.jn.QUEST_BAR_V2,
             questId: n
         }),
         null
@@ -62,9 +62,9 @@ function y(e) {
         L = r.useContext(N.T) || (y && R && !W),
         Q = r.useRef(L),
         Z = (0, E.B)(s, L && !O),
-        D = (0, g.vI)(s, T.dr.QUESTS_BAR) ? g.WV : Z.collapsedHeight,
-        V = r.useRef(-1),
-        H = r.useRef(!1),
+        D = (0, f.vI)(s, T.dr.QUESTS_BAR) ? f.WV : Z.collapsedHeight,
+        H = r.useRef(-1),
+        V = r.useRef(!1),
         [U, z] = r.useState(!1),
         [F, G] = r.useState(!1),
         [Y, K] = r.useState(!0),
@@ -85,17 +85,17 @@ function y(e) {
             z(!0);
         }, []),
         ea = r.useCallback(() => {
-            z(!1), !H.current && !P && en(!1);
+            z(!1), !V.current && !P && en(!1);
         }, [P, en]),
         el = r.useCallback(() => {
-            z(!1), !P && en(!1), (H.current = !1);
+            z(!1), !P && en(!1), (V.current = !1);
         }, [P, en]),
         ei = r.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
                 if (F) return;
                 let { withDelay: t = !1 } = e;
-                t ? (V.current = window.setTimeout(er, 75)) : er();
+                t ? (H.current = window.setTimeout(er, 75)) : er();
             },
             [er, F]
         ),
@@ -103,40 +103,40 @@ function y(e) {
             ei();
         }, [ei]),
         ed = r.useCallback(() => {
-            if ((window.clearTimeout(V.current), !!Z.canCollapseOnBlur && !U)) !H.current && en(!1);
+            if ((window.clearTimeout(H.current), !!Z.canCollapseOnBlur && !U)) !V.current && en(!1);
         }, [U, Z, en]),
         eu = r.useCallback(() => {
             (0, m.dA)({
                 questId: s.id,
                 event: B.rMx.QUEST_HOVER,
-                properties: (0, m.mH)(f.jn.QUEST_BAR)
+                properties: (0, m.mH)(g.jn.QUEST_BAR)
             }),
-                (H.current = !0),
+                (V.current = !0),
                 ei({ withDelay: !0 });
         }, [ei, s]),
         ep = r.useCallback(() => {
             (0, m.dA)({
                 questId: s.id,
                 event: B.rMx.QUEST_HOVER_OFF,
-                properties: (0, m.mH)(f.jn.QUEST_BAR)
+                properties: (0, m.mH)(g.jn.QUEST_BAR)
             }),
-                (H.current = !1),
+                (V.current = !1),
                 ed();
         }, [ed, s]);
     r.useLayoutEffect(() => {
         P && Z.shouldExpandOnQuestComplete && er();
     }, [er, P, Z.shouldExpandOnQuestComplete]),
         r.useLayoutEffect(() => {
-            k && !q && H.current && er();
+            k && !q && V.current && er();
         }, [er, k, q]),
         r.useLayoutEffect(() => {
-            !P && k && !q && !H.current && en(!1);
+            !P && k && !q && !V.current && en(!1);
         }, [k, P, q, en]),
         r.useLayoutEffect(() => {
             L !== Q.current && J(!1), (Q.current = L);
         }, [L]);
     let em = k ? T.XZ : T.R4,
-        [{ expansionSpring: ex }, ef] = (0, c.useSpring)(() => ({
+        [{ expansionSpring: ex }, eg] = (0, c.useSpring)(() => ({
             from: { expansionSpring: 0 },
             config: em,
             onRest: () => {
@@ -147,12 +147,12 @@ function y(e) {
             }
         }));
     r.useEffect(() => {
-        ef({
+        eg({
             expansionSpring: F ? 1 : 0,
             immediate: w
         });
-    }, [F, ef, w]);
-    let { visibilitySpring: eg } = (0, c.useSpring)({
+    }, [F, eg, w]);
+    let { visibilitySpring: ef } = (0, c.useSpring)({
         from: { visibilitySpring: 0 },
         to: { visibilitySpring: L ? 1 : 0 },
         config: {
@@ -176,7 +176,7 @@ function y(e) {
                 questId: s.id,
                 event: B.rMx.QUEST_CONTENT_RENDERING_FAILURE,
                 properties: {
-                    ...(0, m.mH)(f.jn.QUEST_BAR),
+                    ...(0, m.mH)(g.jn.QUEST_BAR),
                     reason: 'asset_loading_error'
                 }
             }),
@@ -185,7 +185,7 @@ function y(e) {
                     questId: s.id,
                     event: B.rMx.QUEST_CONTENT_RENDERING_FAILURE,
                     properties: {
-                        ...(0, m.mH)(f.jn.QUEST_BAR),
+                        ...(0, m.mH)(g.jn.QUEST_BAR),
                         reason: 'not_eligible_for_quest'
                     }
                 });
@@ -217,7 +217,7 @@ function y(e) {
                               }),
                               style: {
                                   color: s.config.colors.secondary,
-                                  height: eg.to({
+                                  height: ef.to({
                                       range: [0, 1],
                                       output: [0, !Z.canCollapseOnBlur && F ? $ : D]
                                   })

@@ -26,8 +26,8 @@ var l = n(120356),
     x = n(215339),
     I = n(832382),
     b = n(446226),
-    E = n(305325),
-    S = n(281956),
+    S = n(305325),
+    E = n(281956),
     Z = n(66999),
     N = n(554747),
     y = n(378844),
@@ -151,7 +151,7 @@ class $ extends V.ZP {
               });
     }
     render() {
-        let { channel: e, selected: t, connected: n, unread: l, resolvedUnreadSetting: a, mentionCount: o, locked: c, sorting: u, isUserOver: d, connectChannelDropTarget: h, connectChannelDragSource: p, connectUserDropTarget: m, connectDragPreview: C, canReorderChannel: _, canMoveMembers: v, showTutorial: x, hasActiveEvent: b, embeddedApps: E, isSubscriptionGated: S, isFavoriteSuggestion: Z, withGuildIcon: N } = this.props,
+        let { channel: e, selected: t, connected: n, unread: l, resolvedUnreadSetting: a, mentionCount: o, locked: c, sorting: u, isUserOver: d, connectChannelDropTarget: h, connectChannelDragSource: p, connectUserDropTarget: m, connectDragPreview: C, canReorderChannel: _, canMoveMembers: v, showTutorial: x, hasActiveEvent: b, embeddedApps: S, isSubscriptionGated: E, isFavoriteSuggestion: Z, withGuildIcon: N } = this.props,
             { shouldShowActivities: y, shouldShowGuildVerificationPopout: T } = this.state,
             A = this.getVoiceStatesCount(),
             j = (0, i.jsxs)('li', {
@@ -198,12 +198,12 @@ class $ extends V.ZP {
                                                     unread: l,
                                                     mentionCount: o,
                                                     userCount: A,
-                                                    embeddedActivitiesCount: E.length,
-                                                    isSubscriptionGated: S
+                                                    embeddedActivitiesCount: S.length,
+                                                    isSubscriptionGated: E
                                                 }),
                                                 'aria-describedby': (0, g.Z)({
                                                     channel: e,
-                                                    embeddedApps: E
+                                                    embeddedApps: S
                                                 }),
                                                 withGuildIcon: N,
                                                 ...h,
@@ -286,7 +286,7 @@ class $ extends V.ZP {
             J(this, 'handleClick', () => {
                 let { channel: e } = this.props,
                     t = e.getGuildId();
-                null != t && (0, S.n)(t) && (0, E.hk)(t), this.handleVoiceConnect();
+                null != t && (0, E.n)(t) && (0, S.hk)(t), this.handleVoiceConnect();
             }),
             J(this, 'handleVoiceStatusClick', (e) => {
                 let { connected: t, channel: l } = this.props;
@@ -384,8 +384,8 @@ function et(e) {
         _ = (0, N.qY)(n.id),
         { isSubscriptionGated: v, needSubscriptionToAccess: x } = (0, Z.Z)(n.id),
         I = (0, b.Z)(),
-        E = (0, a.e7)([k.ZP], () => k.ZP.isFavorite(t.id, n.id)),
-        S = e.connected || (null == I ? void 0 : I.channelId) === n.id,
+        S = (0, a.e7)([k.ZP], () => k.ZP.isFavorite(t.id, n.id)),
+        E = e.connected || (null == I ? void 0 : I.channelId) === n.id,
         { enableHangStatus: y, allowChannelTopic: A } = T.n.useExperiment(
             {
                 guildId: n.guild_id,
@@ -403,7 +403,7 @@ function et(e) {
             enableConnectedUserLimit: !0,
             enableActivities: !0
         }),
-        j = S && null == P;
+        j = E && null == P;
     return (0, i.jsx)(ee, {
         channelName: g,
         embeddedApps: f,
@@ -415,8 +415,8 @@ function et(e) {
         ...u,
         ...h,
         ...e,
-        connected: S,
-        isFavoriteSuggestion: r && !E,
+        connected: E,
+        isFavoriteSuggestion: r && !S,
         forceShowButtons: j,
         channelInfo: P,
         enableHangStatus: y,

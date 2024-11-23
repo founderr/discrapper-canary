@@ -19,8 +19,8 @@ var i = n(200651),
     x = n(727258),
     I = n(276952),
     b = n(249792),
-    E = n(40153),
-    S = n(593618),
+    S = n(40153),
+    E = n(593618),
     Z = n(252686),
     N = n(682662),
     y = n(674552),
@@ -155,7 +155,7 @@ t.Z = l.memo(function (e) {
                       role: 'treeitem'
                   }),
         eI = en
-            ? (0, i.jsx)(E.OG, { children: (0, i.jsx)(Z.Z, {}) })
+            ? (0, i.jsx)(S.OG, { children: (0, i.jsx)(Z.Z, {}) })
             : (0, i.jsx)('div', {
                   ref: Y ? ei : void 0,
                   'data-dnd-name': U.toString(),
@@ -181,14 +181,14 @@ t.Z = l.memo(function (e) {
                 unread: !en && V,
                 className: P.pill
             }),
-            (0, i.jsx)(S.Z, {
+            (0, i.jsx)(E.Z, {
                 guild: U,
                 disabled: K,
                 isDragging: en,
                 children: eI
             }),
             Y
-                ? (0, i.jsx)(E.ZP, {
+                ? (0, i.jsx)(S.ZP, {
                       name: U.name,
                       targetNode: L,
                       onDragOverChanged: e_
