@@ -23,10 +23,10 @@ var r,
     y = n(419922),
     A = n(490095),
     N = n(652136),
-    C = n(695346),
-    R = n(626135),
-    O = n(280930),
-    D = n(606301),
+    C = n(626135),
+    R = n(280930),
+    O = n(606301),
+    D = n(278754),
     L = n(981631),
     x = n(388032),
     w = n(238268);
@@ -76,9 +76,9 @@ t.Z = s.memo(function (e) {
         [Y, W] = s.useState(''),
         [K, z] = s.useState(!1),
         [q, Q] = s.useState(!1),
-        X = (0, O.Z)(j, M, r),
+        X = (0, R.Z)(j, M, r),
         { analyticsLocations: J } = (0, m.ZP)(h.Z.EXPRESSION_SUGGESTIONS),
-        { handleTextChange: $, debouncedSetTextInputValue: ee } = (0, O.m)({
+        { handleTextChange: $, debouncedSetTextInputValue: ee } = (0, R.m)({
             setTextInputValue: H,
             setHasDismissed: P,
             setHasSelection: Q,
@@ -168,7 +168,7 @@ t.Z = s.memo(function (e) {
         es = (e, t) => {
             if (ei) {
                 if (
-                    (R.default.track(L.rMx.AUTO_SUGGEST_EXPRESSION_SELECTED, {
+                    (C.default.track(L.rMx.AUTO_SUGGEST_EXPRESSION_SELECTED, {
                         sticker_id: e.id,
                         suggestion_trigger: Y
                     }),
@@ -189,7 +189,7 @@ t.Z = s.memo(function (e) {
         eo = s.useRef([]),
         el = s.useRef(!1);
     s.useEffect(() => {
-        ei && (eo.current = X), ei !== el.current && (E.emit(ei ? 'sticker-suggestions-shown' : 'sticker-suggestions-hidden'), ei && ((0, D.Tk)(j), W(j))), (el.current = ei);
+        ei && (eo.current = X), ei !== el.current && (E.emit(ei ? 'sticker-suggestions-shown' : 'sticker-suggestions-hidden'), ei && ((0, O.Tk)(j), W(j))), (el.current = ei);
     }, [E, ei, X, j]);
     let eu = !ei,
         ec = ei ? X : eo.current;
@@ -277,11 +277,11 @@ t.Z = s.memo(function (e) {
                                         }),
                                         (0, a.jsx)(p.Clickable, {
                                             onClick: () => {
-                                                R.default.track(L.rMx.STICKER_SUGGESTIONS_ENABLED_TOGGLED, {
+                                                C.default.track(L.rMx.STICKER_SUGGESTIONS_ENABLED_TOGGLED, {
                                                     enabled: !1,
                                                     location: { section: L.jXE.EXPRESSION_PICKER }
                                                 }),
-                                                    C.up.updateSetting(!1);
+                                                    (0, D.AW)(!1);
                                             },
                                             children: (0, a.jsx)(p.Tooltip, {
                                                 text: x.intl.string(x.t.XNMs5u),

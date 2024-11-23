@@ -1,26 +1,26 @@
 n.d(e, {
     D0: function () {
-        return u;
+        return c;
     },
     kY: function () {
-        return l;
+        return i;
     },
     lE: function () {
-        return c;
+        return r;
     }
 });
-var i = n(570140);
-function l() {
-    i.Z.dispatch({ type: 'SPELLCHECK_TOGGLE' });
+var l = n(570140);
+function i() {
+    l.Z.dispatch({ type: 'SPELLCHECK_TOGGLE' });
 }
-function u(t) {
-    i.Z.dispatch({
+function c(t) {
+    l.Z.dispatch({
         type: 'SPELLCHECK_LEARN_WORD',
         word: t
     });
 }
-function c(t) {
-    i.Z.dispatch({
+function r(t) {
+    l.Z.dispatch({
         type: 'SPELLCHECK_UNLEARN_WORD',
         word: t
     });
