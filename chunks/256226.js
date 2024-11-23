@@ -43,10 +43,10 @@ t.Z = i.forwardRef(function (e, t) {
         ),
         k = (0, d.useToken)(c.Z.unsafe_rawColors.PRIMARY_300).hsl(),
         U = null !== (I = A.colorString) && void 0 !== I ? I : k,
-        G = null !== (b = (0, l.wK)(U, 0.6)) && void 0 !== b ? b : void 0,
-        B = c.Z.unsafe_rawColors.WHITE_500.css,
+        B = null !== (b = (0, l.wK)(U, 0.6)) && void 0 !== b ? b : void 0,
+        G = c.Z.unsafe_rawColors.WHITE_500.css,
         Z = (0, l._i)(U);
-    null != Z && 0.3 > (0, l.Bd)(Z) && (B = c.Z.unsafe_rawColors.PRIMARY_630.css),
+    null != Z && 0.3 > (0, l.Bd)(Z) && (G = c.Z.unsafe_rawColors.PRIMARY_630.css),
         (T = M
             ? (0, r.jsx)(p.Z, {
                   className: v.roleFlowerStar,
@@ -68,10 +68,10 @@ t.Z = i.forwardRef(function (e, t) {
     let F = i.useMemo(() => {
         var t;
         return {
-            borderColor: R ? void 0 : G,
+            borderColor: R ? void 0 : B,
             ...(null !== (t = e.style) && void 0 !== t ? t : {})
         };
-    }, [G, R, e.style]);
+    }, [B, R, e.style]);
     return (0, r.jsx)(d.FocusRing, {
         children: (0, r.jsxs)('div', {
             ref: t,
@@ -97,7 +97,7 @@ t.Z = i.forwardRef(function (e, t) {
                                   T,
                                   (0, r.jsx)(d.XSmallIcon, {
                                       size: 'md',
-                                      color: B,
+                                      color: G,
                                       className: v.roleRemoveIcon,
                                       'aria-hidden': !0
                                   })

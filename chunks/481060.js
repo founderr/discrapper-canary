@@ -721,13 +721,13 @@ n.r(t),
             return U.ol;
         },
         FormDivider: function () {
-            return G.$;
+            return B.$;
         },
         FormErrorBlock: function () {
-            return B.k;
+            return G.k;
         },
         FormErrorBlockColors: function () {
-            return B.m;
+            return G.m;
         },
         FormItem: function () {
             return Z.x;
@@ -901,7 +901,7 @@ n.r(t),
             return tv.G2;
         },
         IconSelectOption: function () {
-            return eB.Z;
+            return eG.Z;
         },
         IdIcon: function () {
             return tR.VuL;
@@ -1531,10 +1531,10 @@ n.r(t),
             return tb.E;
         },
         SearchableSelect: function () {
-            return eG.V;
+            return eB.V;
         },
         SearchableSelectRef: function () {
-            return eG.SearchableSelectRef;
+            return eB.SearchableSelectRef;
         },
         SegmentedControl: function () {
             return ek.s;
@@ -2334,8 +2334,8 @@ var r = n(680732),
     P = n(84735),
     k = n(347016),
     U = n(15127),
-    G = n(770102),
-    B = n(434333),
+    B = n(770102),
+    G = n(434333),
     Z = n(540863),
     F = n(722187),
     V = n(383838),
@@ -2388,8 +2388,8 @@ var r = n(680732),
     eP = n(21340),
     ek = n(189283),
     eU = n(619307),
-    eG = n(921349),
-    eB = n(119757),
+    eB = n(921349),
+    eG = n(119757),
     eZ = n(748585),
     eF = n(263953),
     eV = n(503145),

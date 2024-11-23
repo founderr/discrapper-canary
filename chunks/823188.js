@@ -63,8 +63,8 @@ var f = n(120356),
     P = n(515593),
     k = n(104494),
     U = n(639119),
-    G = n(230916),
-    B = n(346497),
+    B = n(230916),
+    G = n(346497),
     Z = n(504865),
     F = n(63802),
     V = n(318990),
@@ -192,7 +192,7 @@ function X(e) {
 function J(e) {
     var t;
     let { defaultPriceString: n, subscriptionPlan: r, discountOffer: i } = e,
-        a = (0, G.A)(r);
+        a = (0, B.A)(r);
     return (0, d.jsx)(d.Fragment, {
         children: Y.intl.format(Y.t.sJTwHR, {
             numMonths: null !== (t = i.discount.user_usage_limit) && void 0 !== t ? t : j.rt,
@@ -505,11 +505,11 @@ function er(e) {
         S = (0, k.Ng)(),
         y = (0, w.t7)(),
         C = null != g || null != b ? 0 : null != S || y ? 1 : null,
-        O = (0, B.Vi)(),
+        O = (0, G.Vi)(),
         D = !o && T,
-        L = (0, B.W1)(),
+        L = (0, G.W1)(),
         x = (0, E.ap)((0, I.ZP)()),
-        G = x ? 5 : 2,
+        B = x ? 5 : 2,
         { enabled: Z } = M._.useExperiment({ location: 'Tier2Card' }, { autoTrackExposure: !1 }),
         V = Y.intl.string(Y.t.IBYG5e);
     Z && (null == h ? void 0 : h.trial_id) === j.a7 && (V = Y.intl.string(Y.t.gtNqJS));
@@ -527,7 +527,7 @@ function er(e) {
                           (0, d.jsx)(Q, {
                               text: y ? Y.intl.string(Y.t.EyjDRE) : Y.intl.formatToPlainString(Y.t.iiLbvr, { percent: S.discount.amount }),
                               className: W.topRimPill,
-                              colorOptions: G
+                              colorOptions: B
                           }),
                           (0, d.jsx)('div', { className: K })
                       ]
@@ -540,7 +540,7 @@ function er(e) {
                           (0, d.jsx)(Q, {
                               text: V,
                               className: W.topRimPill,
-                              colorOptions: G
+                              colorOptions: B
                           }),
                           (0, d.jsx)('div', { className: K })
                       ]
@@ -552,7 +552,7 @@ function er(e) {
                           (0, d.jsx)(Q, {
                               text: Y.intl.string(Y.t.qYKftb),
                               className: W.topRimPill,
-                              colorOptions: G
+                              colorOptions: B
                           }),
                           (0, d.jsx)('div', { className: K })
                       ]
@@ -564,7 +564,7 @@ function er(e) {
                         (0, d.jsx)(Q, {
                             text: Y.intl.string(Y.t.EyjDRE),
                             className: W.topRimPill,
-                            colorOptions: G
+                            colorOptions: B
                         }),
                         (0, d.jsx)('div', { className: K })
                     ]

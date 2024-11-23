@@ -53,8 +53,8 @@ var r = n(198453),
     P = n(599542),
     k = n(192379),
     U = n(430370),
-    G = n(995295),
-    B = n(969710),
+    B = n(995295),
+    G = n(969710),
     Z = n(903646),
     F = n(554373),
     V = n(959125),
@@ -353,11 +353,11 @@ function ep(e, t) {
     let n = (0, k.useMemo)(() => new ec(t || new eu()), [t]),
         i = (0, k.useCallback)((e) => n.subscribe(e), [n]),
         a = (0, k.useCallback)(() => n.getCollection(), [n]),
-        s = (0, B.useSyncExternalStore)(i, a, a),
+        s = (0, G.useSyncExternalStore)(i, a, a),
         o = ef(e),
         l = (0, k.useMemo)(() => k.createElement(e_.Provider, { value: !0 }, o), [o]);
     return {
-        portal: (0, r.Av)() ? null : (0, G.createPortal)(l, n),
+        portal: (0, r.Av)() ? null : (0, B.createPortal)(l, n),
         collection: s
     };
 }
@@ -467,7 +467,7 @@ function eR(e, t, n) {
                     let t = (i) => {
                             i.target === e.current &&
                                 (r.removeEventListener('animationend', t),
-                                G.flushSync(() => {
+                                B.flushSync(() => {
                                     n();
                                 }));
                         },
@@ -518,8 +518,8 @@ let eM = new Set(['form', 'formAction', 'formEncType', 'formMethod', 'formNoVali
     eP = (0, k.createContext)({}),
     ek = (0, k.createContext)({}),
     eU = (0, k.createContext)({}),
-    eG = (0, k.createContext)({}),
-    eB = (0, k.createContext)(null),
+    eB = (0, k.createContext)({}),
+    eG = (0, k.createContext)(null),
     eZ = (0, k.createContext)(null),
     eF = (0, k.forwardRef)(function (e, t) {
         let { children: n, style: r, className: i } = e,
@@ -555,7 +555,7 @@ let eM = new Set(['form', 'formAction', 'formEncType', 'formMethod', 'formNoVali
     }),
     ej = (0, k.forwardRef)(function (e, t) {
         let { children: n, style: r, className: i } = e,
-            a = (0, k.useContext)(eB),
+            a = (0, k.useContext)(eG),
             { startDate: s } = (0, k.useContext)(eZ),
             { locale: o } = (0, c.bU)(),
             l = (0, Z.Rn)(s, o);
@@ -1491,8 +1491,8 @@ let tR = (0, k.createContext)(null),
     tP = (0, k.createContext)(null),
     tk = (0, k.createContext)(null),
     tU = (0, k.createContext)(null),
-    tG = (0, k.createContext)(null),
-    tB = Symbol.iterator;
+    tB = (0, k.createContext)(null),
+    tG = Symbol.iterator;
 class tZ extends eu {
     addNode(e) {
         super.addNode(e), this.columnsDirty || (this.columnsDirty = 'column' === e.type), 'tableheader' === e.type && (this.head = e), 'tablebody' === e.type && (this.body = e);
@@ -1517,7 +1517,7 @@ class tZ extends eu {
     get rows() {
         return [...this.getChildren(this.body.key)];
     }
-    *[tB]() {
+    *[tG]() {
         yield* this.getChildren(this.body.key);
     }
     get size() {

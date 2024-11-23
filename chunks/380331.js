@@ -34,9 +34,9 @@ let D = (0, I.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_SIZE),
     P = (0, I.Mg)(O.__invalid_unicodeCategoryShortcutHeight),
     k = (0, I.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
     U = (0, I.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
-    G = x + L + 2 * M,
-    B = D + L,
-    Z = B + (k + 2 * U),
+    B = x + L + 2 * M,
+    G = D + L,
+    Z = G + (k + 2 * U),
     F = x + w + 2 * M;
 function V(e) {
     let { activeIndex: t, categoryIndex: n, analyticsContext: a, categories: o, category: l, handleCategorySelect: c, isWindowFocused: d, useReducedMotion: _ } = e,
@@ -135,10 +135,10 @@ t.Z = (e) => {
         M = i.useCallback(
             (e, t) => {
                 let n = I[t];
-                if (n.type === A.En.RECENT) return G;
+                if (n.type === A.En.RECENT) return B;
                 if (n.type === A.En.GUILD) {
                     let e = I[t + 1];
-                    return null != e && e.type !== A.En.GUILD ? Z : B;
+                    return null != e && e.type !== A.En.GUILD ? Z : G;
                 }
                 return F;
             },
@@ -157,7 +157,7 @@ t.Z = (e) => {
             I.forEach((i) => {
                 i.type === A.En.GUILD ? ((t += 1), (n += 1)) : i.type === A.En.UNICODE ? (r += 1) : ((e += 1), (t += 1));
             });
-            let i = G + t * B + Z;
+            let i = B + t * G + Z;
             return {
                 nonUnicodeCategoryCount: t,
                 firstUnicodeCategoryIndex: t,

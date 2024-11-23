@@ -7,11 +7,11 @@ n.d(t, {
 var r = n(192379),
     a = n(979554),
     i = n(442837),
-    s = n(597688),
-    l = n(365943),
+    l = n(597688),
+    s = n(365943),
     o = n(25251);
 let c = () => {
-    let e = (0, i.e7)([s.Z], () => s.Z.products);
+    let e = (0, i.e7)([l.Z], () => l.Z.products);
     r.useEffect(() => {
         let t = [...e.values()]
             .filter((e) => e.type === a.Z.PROFILE_EFFECT)
@@ -19,6 +19,6 @@ let c = () => {
                 let t = e.items[0].id;
                 return null != t && null == o.Z.getProfileEffectById(t);
             });
-        (0, l.z)(t);
+        (0, s.z)(t);
     }, [e]);
 };

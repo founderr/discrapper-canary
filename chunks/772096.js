@@ -145,12 +145,12 @@ t.ZP = {
             return f();
         let k = i().pick(t.rules, L),
             U = l().parserFor(k)(h.whitespaceSanitized, D),
-            G = S.whitespaceSanitized,
-            { target: B } = R;
+            B = S.whitespaceSanitized,
+            { target: G } = R;
         return {
             content: U,
-            target: B,
-            title: G
+            target: G,
+            title: B
         };
     }
 };

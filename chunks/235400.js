@@ -51,8 +51,8 @@ function O(e) {
         { product: M, purchase: P } = (0, f.Z)(null == x ? void 0 : x.skuId),
         k = b.ZP.canUseCollectibles(t),
         U = i.useRef(null),
-        G = (0, p.Z)(s),
-        B = (0, T.sr)(x, void 0 === O ? L : O),
+        B = (0, p.Z)(s),
+        G = (0, T.sr)(x, void 0 === O ? L : O),
         Z = () => {
             D(x), u();
         },
@@ -94,7 +94,7 @@ function O(e) {
                         pendingAvatarDecoration: x,
                         selectedAvatarDecorationRef: U,
                         onSelect: (e) => {
-                            w(e), null != e && G(e);
+                            w(e), null != e && B(e);
                         },
                         onOpenShop: F
                     }),
@@ -114,7 +114,7 @@ function O(e) {
                             (null != P && (!(0, d.qS)(P) || k)) || null === x
                                 ? (0, r.jsx)(o.Button, {
                                       onClick: Z,
-                                      disabled: B,
+                                      disabled: G,
                                       children: C.intl.string(C.t.d6sv6u)
                                   })
                                 : null == P && (k || !(0, d.G1)(M))

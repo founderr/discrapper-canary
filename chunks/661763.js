@@ -352,14 +352,14 @@ function k(e) {
     };
 }
 let U = new Map(),
-    G = new Set();
-function B() {
+    B = new Set();
+function G() {
     if ('undefined' == typeof window) return;
     let e = (t) => {
         let n = U.get(t.target);
         if (n && (n.delete(t.propertyName), 0 === n.size && (t.target.removeEventListener('transitioncancel', e), U.delete(t.target)), 0 === U.size)) {
-            for (let e of G) e();
-            G.clear();
+            for (let e of B) e();
+            B.clear();
         }
     };
     document.body.addEventListener('transitionrun', (t) => {
@@ -370,7 +370,7 @@ function B() {
 }
 function Z(e) {
     requestAnimationFrame(() => {
-        0 === U.size ? e() : G.add(e);
+        0 === U.size ? e() : B.add(e);
     });
 }
 function F() {
@@ -451,7 +451,7 @@ function H(e, t) {
             n.current ? (n.current = !1) : (!i.current || t.some((e, t) => !Object.is(e, i[t]))) && e(), (i.current = t);
         }, t);
 }
-'undefined' != typeof document && ('loading' !== document.readyState ? B() : document.addEventListener('DOMContentLoaded', B));
+'undefined' != typeof document && ('loading' !== document.readyState ? G() : document.addEventListener('DOMContentLoaded', G));
 function Y(e) {
     let { ref: t, onResize: n } = e;
     (0, r.useEffect)(() => {

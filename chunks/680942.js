@@ -1,15 +1,15 @@
 var r = n(200651),
     a = n(192379),
     i = n(481060),
-    s = n(727637),
-    l = n(906732),
+    l = n(727637),
+    s = n(906732),
     o = n(241553),
     c = n(333867),
     d = n(884697),
     u = n(228624),
     m = n(67409),
-    p = n(474936),
-    h = n(231338),
+    h = n(474936),
+    p = n(231338),
     f = n(388032),
     g = n(65297);
 let C = {
@@ -75,11 +75,11 @@ let C = {
     ]
 };
 t.Z = (e) => {
-    let { product: t, selectedVariantIndex: n, returnRef: b, onSuccess: v, tooltipDelay: x, isGiftEasterEggEnabled: _, disableCustomColor: k = !1 } = e,
-        { analyticsLocations: I } = (0, l.ZP)(),
+    let { product: t, selectedVariantIndex: n, returnRef: v, onSuccess: b, tooltipDelay: x, isGiftEasterEggEnabled: _, disableCustomColor: k = !1 } = e,
+        { analyticsLocations: I } = (0, s.ZP)(),
         j = a.useRef(null),
-        S = (0, s.Z)(j),
-        E = k ? h.BR.DARK : h.BR.LIGHT,
+        S = (0, l.Z)(j),
+        E = k ? p.BR.DARK : p.BR.LIGHT,
         T = (0, u.hv)('CollectiblesShopGiftButton');
     return (0, d.x6)(t)
         ? null
@@ -104,14 +104,14 @@ t.Z = (e) => {
                                       selectedVariantIndex: n
                                   }),
                                   isGift: !0,
-                                  giftingOrigin: p.Wt.SHOP_PAGE,
+                                  giftingOrigin: h.Wt.SHOP_PAGE,
                                   analyticsLocations: I,
-                                  returnRef: b,
+                                  returnRef: v,
                                   variantsReturnStyle: T,
                                   onClose:
-                                      null != v
+                                      null != b
                                           ? (e) => {
-                                                e && v();
+                                                e && b();
                                             }
                                           : void 0
                               });

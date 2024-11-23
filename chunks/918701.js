@@ -9,7 +9,7 @@ n.d(t, {
         return $;
     },
     BM: function () {
-        return eG;
+        return eB;
     },
     Bg: function () {
         return ei;
@@ -105,7 +105,7 @@ n.d(t, {
         return eI;
     },
     fY: function () {
-        return eB;
+        return eG;
     },
     gI: function () {
         return eZ;
@@ -114,7 +114,7 @@ n.d(t, {
         return H;
     },
     iQ: function () {
-        return B;
+        return G;
     },
     il: function () {
         return eO;
@@ -174,7 +174,7 @@ n.d(t, {
         return eg;
     },
     zi: function () {
-        return G;
+        return B;
     }
 }),
     n(627341),
@@ -231,7 +231,7 @@ function x(e, t) {
     return D(e) || L(e) ? n === r : null != e.application_id && M(e.application_id, t);
 }
 function w(e, t) {
-    for (let [n, r] of e) if (x(t, r) && !G(r)) return r;
+    for (let [n, r] of e) if (x(t, r) && !B(r)) return r;
 }
 function M(e, t) {
     return null != S.r.build(t.config).application.ids.find((t) => t === e);
@@ -239,7 +239,7 @@ function M(e, t) {
 function P(e, t) {
     let n;
     for (let [r, i] of e)
-        if (M(t, i) && !G(i)) {
+        if (M(t, i) && !B(i)) {
             n = i;
             break;
         }
@@ -248,16 +248,16 @@ function P(e, t) {
 function k(e, t) {
     let n = P(e, t.applicationId);
     if (null != n) return n;
-    for (let [t, n] of e) if (!G(n) && em(n)) return n;
+    for (let [t, n] of e) if (!B(n) && em(n)) return n;
 }
 function U(e, t) {
-    return Array.from(e.values()).find((e) => M(t, e) && !G(e) && ef({ quest: e }));
-}
-function G(e) {
-    return new Date(e.config.expiresAt).valueOf() <= Date.now();
+    return Array.from(e.values()).find((e) => M(t, e) && !B(e) && ef({ quest: e }));
 }
 function B(e) {
-    if (!G(e)) return !1;
+    return new Date(e.config.expiresAt).valueOf() <= Date.now();
+}
+function G(e) {
+    if (!B(e)) return !1;
     let t = Date.now() - 2592000000,
         n = new Date(e.config.expiresAt).valueOf();
     return null != e.config.expiresAt && !(n <= t) && !0;
@@ -398,10 +398,10 @@ function q(e, t, n) {
     let r = t.get(n);
     if (null == r) return;
     let i = e.get(r.id);
-    if (null != i && !G(i)) return i;
+    if (null != i && !B(i)) return i;
 }
 function Q(e, t) {
-    for (let [n, r] of e) if (!G(r) && r.targetedContent.includes(t)) return r;
+    for (let [n, r] of e) if (!B(r) && r.targetedContent.includes(t)) return r;
     return null;
 }
 function X(e, t) {
@@ -704,10 +704,10 @@ let ek = (e, t) => {
 function eU(e) {
     return null != e.userStatus && (ek(e.userStatus, s.X.PLAY_ON_XBOX) || ek(e.userStatus, s.X.PLAY_ON_PLAYSTATION));
 }
-function eG(e) {
+function eB(e) {
     return !!eM(e) && (0, n(952265).nf)(ez(e.id));
 }
-function eB(e, t) {
+function eG(e, t) {
     let { platformType: n, quest: r } = e;
     (0, I._3)({
         questId: r.id,

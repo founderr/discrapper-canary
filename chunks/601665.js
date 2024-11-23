@@ -40,8 +40,8 @@ function C(e) {
             roleId: D
         }),
         U = (0, p.ZP)(t.id, C),
-        G = (0, a.e7)([d.Z], () => (null != C ? d.Z.getGuild(C) : null)),
-        B = (0, a.e7)([c.ZP], () => (null != C ? c.ZP.getMember(C, t.id) : null)),
+        B = (0, a.e7)([d.Z], () => (null != C ? d.Z.getGuild(C) : null)),
+        G = (0, a.e7)([c.ZP], () => (null != C ? c.ZP.getMember(C, t.id) : null)),
         Z = i.useRef(null),
         F = (0, o.Z)(Z);
     i.useEffect(() => {
@@ -59,7 +59,7 @@ function C(e) {
         value: P,
         children: (0, r.jsx)(f.Mt, {
             value: k,
-            shouldTrackViewOnMount: null == B || null != B.fullProfileLoadedTimestamp,
+            shouldTrackViewOnMount: null == G || null != G.fullProfileLoadedTimestamp,
             children: (0, r.jsx)(s.Dialog, {
                 ref: Z,
                 'aria-label': t.username,
@@ -117,7 +117,7 @@ function C(e) {
                             user: t,
                             currentUser: n,
                             displayProfile: U,
-                            guild: G,
+                            guild: B,
                             isHovering: F,
                             onOpenProfile: w ? void 0 : V,
                             channelId: R,

@@ -228,14 +228,14 @@ function U(e) {
     let { firstMessages: t, owners: n } = e;
     null != t && t.forEach((e) => N(e, !0)), null != n && n.forEach((e) => y(e.user, !0));
 }
-function G(e) {
+function B(e) {
     let { threads: t } = e;
     Object.values(t).forEach((e) => {
         let { first_message: t, most_recent_message: n, owner: r } = e;
         null != t && N(t, !0), null != n && N(n, !0), null != r && null != r.user && y(r.user, !0);
     });
 }
-function B(e) {
+function G(e) {
     let { supplementalData: t } = e;
     Object.values(t).forEach((e) => {
         let { message_preview: t } = e;
@@ -566,11 +566,11 @@ class eT extends f.Z {
             GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: ef,
             LOAD_THREADS_SUCCESS: U,
             LOAD_ARCHIVED_THREADS_SUCCESS: U,
-            LOAD_FORUM_POSTS: G,
+            LOAD_FORUM_POSTS: B,
             GUILD_SCHEDULED_EVENT_USERS_FETCH_SUCCESS: Z,
             LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: F,
             NOTIFICATION_CENTER_ITEM_CREATE: V,
-            LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS: B,
+            LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS: G,
             PASSIVE_UPDATE_V2: et,
             LOCAL_MESSAGES_LOADED: en,
             FAMILY_CENTER_INITIAL_LOAD: ep,

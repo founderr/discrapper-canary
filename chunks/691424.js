@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return G;
+        return B;
     }
 }),
     n(47120);
@@ -279,7 +279,7 @@ let U = {
     },
     silentPrefix: { react: (e, t, n) => ('string' == typeof e.content ? (0, r.jsx)('span', { children: e.content }, n.key) : (0, r.jsx)('span', { children: t(e.content, n) }, n.key)) }
 };
-function G(e) {
+function B(e) {
     return {
         ...U,
         link: (0, L.Z)(e),

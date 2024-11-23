@@ -6,19 +6,19 @@ n.d(t, {
 var r = n(200651),
     a = n(192379),
     i = n(481060),
-    s = n(906732),
-    l = n(963249),
+    l = n(906732),
+    s = n(963249),
     o = n(474936),
     c = n(974657);
 let d = (e) => {
     let { text: t } = e,
-        { analyticsLocations: n } = (0, s.ZP)(),
+        { analyticsLocations: n } = (0, l.ZP)(),
         d = a.useRef(null);
     return (0, r.jsx)(i.Clickable, {
         className: c.subscribeNow,
         innerRef: d,
         onClick: () => {
-            (0, l.Z)({
+            (0, s.Z)({
                 subscriptionTier: o.Si.TIER_2,
                 analyticsLocations: n,
                 returnRef: d

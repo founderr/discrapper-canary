@@ -130,8 +130,8 @@ class C extends (i = o.Component) {
             P = null != n,
             k = this.getRatio(),
             U = (0, l.clamp)(Math.round(h * k), null != g ? g : 0, null != v ? v : 1 / 0),
-            G = (0, l.clamp)(Math.round(m * k), null != E ? E : 0, null != I ? I : 1 / 0),
-            B = {
+            B = (0, l.clamp)(Math.round(m * k), null != E ? E : 0, null != I ? I : 1 / 0),
+            G = {
                 alt: e,
                 readyState: x,
                 onContextMenu: null != i ? i : void 0,
@@ -145,7 +145,7 @@ class C extends (i = o.Component) {
                 useFullWidth: N,
                 tabIndex: y,
                 width: U,
-                height: G,
+                height: B,
                 src: '',
                 placeholder: R,
                 placeholderVersion: O,
@@ -168,18 +168,18 @@ class C extends (i = o.Component) {
                 onFocus: this.onFocus,
                 onBlur: this.onBlur
             };
-        if (1 === B.width && 1 === B.height) return null;
-        switch (((P || null != T) && (B.onClick = this.onClick), r && (B.original = null != o && '' !== o ? o : B.src), x)) {
+        if (1 === G.width && 1 === G.height) return null;
+        switch (((P || null != T) && (G.onClick = this.onClick), r && (G.original = null != o && '' !== o ? o : G.src), x)) {
             case b.zo9.LOADING:
-                null != t && (B.src = t);
+                null != t && (G.src = t);
                 break;
             case b.zo9.READY:
                 if (C.isAnimated(this.props)) {
-                    B.onMouseLeave = this.onMouseLeave;
+                    G.onMouseLeave = this.onMouseLeave;
                     let e = (a || w || M) && (null == p || p) && C.visibilityObserver.isVisible(this);
-                    e ? ((B.src = this.getSrc(k)), (B.renderAccessory = S)) : ((B.src = this.getSrc(k, !_ || !a)), (B.renderAccessory = this.renderAccessory)),
+                    e ? ((G.src = this.getSrc(k)), (G.renderAccessory = S)) : ((G.src = this.getSrc(k, !_ || !a)), (G.renderAccessory = this.renderAccessory)),
                         null != f &&
-                            (B.children = (t) => {
+                            (G.children = (t) => {
                                 let { src: n, size: r, alt: i, mediaLayoutType: a } = t;
                                 return f({
                                     src: n,
@@ -189,9 +189,9 @@ class C extends (i = o.Component) {
                                     mediaLayoutType: a
                                 });
                             });
-                } else B.src = this.getSrc(k);
+                } else G.src = this.getSrc(k);
         }
-        return (0, s.jsx)(d.E, { ...B });
+        return (0, s.jsx)(d.E, { ...G });
     }
     async trackLoadingCompleted(e, t, n) {
         var r;

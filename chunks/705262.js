@@ -44,11 +44,11 @@ var r,
     k = n(388032),
     U = n(767023);
 ((i = r || (r = {})).EDITOR = 'EDITOR'), (i.SETTINGS = 'SETTINGS');
-let G = Object.freeze({
+let B = Object.freeze({
         EDITOR: M.fy.SLOW_USER_ACTION,
         SETTINGS: M.fy.INFREQUENT_USER_ACTION
     }),
-    B = s.createContext({}),
+    G = s.createContext({}),
     Z = (e) => {
         let { isPersisted: t, themeName: n, analyticsLocations: r } = e;
         N.default.track(L.rMx.CLIENT_THEME_UPDATED, {
@@ -169,7 +169,7 @@ let G = Object.freeze({
     j = (e) => {
         var t, n;
         let { renderCTAButtons: r } = e,
-            { type: i } = s.useContext(B),
+            { type: i } = s.useContext(G),
             [o, l] = (0, c.Wu)([R.Z], () => [R.Z.isPreview, R.Z.isCoachmark]),
             u = (null === (n = (0, I.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === x.Si.TIER_2;
         return (0, a.jsx)(a.Fragment, {
@@ -205,7 +205,7 @@ let G = Object.freeze({
     },
     H = (e) => {
         let { disabled: t } = e,
-            { type: r, delay: i } = s.useContext(B),
+            { type: r, delay: i } = s.useContext(G),
             { analyticsLocations: o } = (0, m.ZP)(h.Z.CLIENT_THEMES_THEME_SELECTOR),
             [l, u] = (0, c.Wu)([R.Z], () => {
                 var e;
@@ -313,7 +313,7 @@ let G = Object.freeze({
     },
     Y = (e) => {
         let { systemSelectorFirst: t, hideSystemSelector: n = !1 } = e,
-            { delay: r } = s.useContext(B),
+            { delay: r } = s.useContext(G),
             { analyticsLocations: i } = (0, m.ZP)(h.Z.CLIENT_THEMES_THEME_SELECTOR),
             [o, l, u] = (0, c.Wu)([y.Z, A.ZP, R.Z], () => [y.Z.theme, null == R.Z.gradientPreset, A.ZP.useSystemTheme === w.K.ON]),
             d = (e) => {
@@ -380,11 +380,11 @@ let G = Object.freeze({
             o = s.useMemo(
                 () => ({
                     type: t,
-                    delay: G[t]
+                    delay: B[t]
                 }),
                 [t]
             );
-        return (0, a.jsx)(B.Provider, {
+        return (0, a.jsx)(G.Provider, {
             value: o,
             children: (0, a.jsx)('div', {
                 ...i,

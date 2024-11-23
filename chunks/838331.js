@@ -91,7 +91,7 @@ function S(e) {
                 }),
             []
         ),
-        G = i.useCallback(
+        B = i.useCallback(
             () =>
                 new Promise((e) => {
                     let t = w.current;
@@ -100,7 +100,7 @@ function S(e) {
                 }),
             []
         ),
-        B = i.useCallback((e, t) => {
+        G = i.useCallback((e, t) => {
             L(t);
             let n = document.querySelector(e),
                 r = w.current;
@@ -111,8 +111,8 @@ function S(e) {
             isEnabled: !0,
             useVirtualFocus: !0,
             scrollToStart: U,
-            scrollToEnd: G,
-            setFocus: B
+            scrollToEnd: B,
+            setFocus: G
         }),
         F = N ? d.Tv : d.lW;
     return (0, r.jsx)(l.bG, {

@@ -51,10 +51,10 @@ async function U(e) {
     }
     N.GC.update(t, !0), (P = !1);
 }
-function G() {
+function B() {
     N.GC.update();
 }
-function B() {
+function G() {
     return N.GC.update(), !1;
 }
 function Z() {
@@ -65,7 +65,7 @@ function F(e) {
 }
 class V extends (r = u.ZP.Store) {
     initialize() {
-        this.waitFor(h.default, b.Z, g.Z, m.Z, p.Z), this.syncWith([E.Z], B), this.syncWith([T.Z], Z);
+        this.waitFor(h.default, b.Z, g.Z, m.Z, p.Z), this.syncWith([E.Z], G), this.syncWith([T.Z], Z);
     }
     getSocket() {
         return N.Wb;
@@ -216,7 +216,7 @@ class V extends (r = u.ZP.Store) {
                 !1
             );
         },
-        STREAM_CREATE: G,
+        STREAM_CREATE: B,
         STREAM_START: function (e) {
             let { streamType: t, guildId: n, channelId: r } = e;
             if (N.Wb.isSessionEstablished()) {
@@ -245,7 +245,7 @@ class V extends (r = u.ZP.Store) {
         },
         STREAM_STOP: function (e) {
             let { streamKey: t } = e;
-            return F(t), G(), !1;
+            return F(t), B(), !1;
         },
         STREAM_SET_PAUSED: function (e) {
             let { streamKey: t, paused: n } = e;
@@ -269,10 +269,10 @@ class V extends (r = u.ZP.Store) {
         RESET_SOCKET: function (e) {
             if (N.Wb.connectionState !== A.Z.WILL_RECONNECT) N.Wb.resetSocketOnError(e.args);
         },
-        CLIPS_SETTINGS_UPDATE: G,
-        RUNNING_GAMES_CHANGE: G,
+        CLIPS_SETTINGS_UPDATE: B,
+        RUNNING_GAMES_CHANGE: B,
         USER_SETTINGS_PROTO_UPDATE: function (e) {
             var t;
-            e.settings.type === D.yP.PRELOADED_USER_SETTINGS && (null === (t = e.settings.proto.clips) || void 0 === t ? void 0 : t.allowVoiceRecording) != null && G();
+            e.settings.type === D.yP.PRELOADED_USER_SETTINGS && (null === (t = e.settings.proto.clips) || void 0 === t ? void 0 : t.allowVoiceRecording) != null && B();
         }
     }));

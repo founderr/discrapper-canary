@@ -86,9 +86,9 @@ i.prototype.parse = function (e, t, n) {
             }
         }
         this.hostname.length > 255 ? (this.hostname = '') : (this.hostname = this.hostname.toLowerCase()), !R && (this.hostname = r.toASCII(this.hostname));
-        var G = this.port ? ':' + this.port : '',
-            B = this.hostname || '';
-        (this.host = B + G), (this.href += this.host), R && ((this.hostname = this.hostname.substr(1, this.hostname.length - 2)), '/' !== E[0] && (E = '/' + E));
+        var B = this.port ? ':' + this.port : '',
+            G = this.hostname || '';
+        (this.host = G + B), (this.href += this.host), R && ((this.hostname = this.hostname.substr(1, this.hostname.length - 2)), '/' !== E[0] && (E = '/' + E));
     }
     if (!_[b])
         for (var N = 0, D = l.length; N < D; N++) {
@@ -102,9 +102,9 @@ i.prototype.parse = function (e, t, n) {
     -1 !== V && ((this.hash = E.substr(V)), (E = E.slice(0, V)));
     var j = E.indexOf('?');
     if ((-1 !== j ? ((this.search = E.substr(j)), (this.query = E.substr(j + 1)), t && (this.query = m.parse(this.query)), (E = E.slice(0, j))) : t && ((this.search = ''), (this.query = {})), E && (this.pathname = E), h[b] && this.hostname && !this.pathname && (this.pathname = '/'), this.pathname || this.search)) {
-        var G = this.pathname || '',
+        var B = this.pathname || '',
             H = this.search || '';
-        this.path = G + H;
+        this.path = B + H;
     }
     return (this.href = this.format()), this;
 };

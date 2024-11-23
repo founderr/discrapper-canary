@@ -77,7 +77,7 @@ let S = {},
     P = new Set(),
     k = {},
     U = {};
-function G(e, t) {
+function B(e, t) {
     var n;
     let r = S[e],
         i = null !== (n = null == r ? void 0 : r.channel_overrides) && void 0 !== n ? n : {},
@@ -92,7 +92,7 @@ function G(e, t) {
         a().forEach(i, (e) => {
             O.clearTimer(e.channel_id);
         }),
-        B(e, o),
+        G(e, o),
         (S[e] = o),
         (x[e] = q(S[e]));
     let l = a().filter(o.channel_overrides, (e) => {
@@ -113,7 +113,7 @@ function G(e, t) {
         })(e),
         delete y[e];
 }
-function B(e, t) {
+function G(e, t) {
     !0 === t.muted &&
         R.setTimer(e, t.mute_config, () => {
             Z(e, { muted: !1 }),
@@ -139,7 +139,7 @@ function B(e, t) {
 function Z(e, t) {
     var n;
     let r = S[e];
-    G(e, {
+    B(e, {
         channel_overrides: null !== (n = null == r ? void 0 : r.channel_overrides) && void 0 !== n ? n : {},
         ...t
     });
@@ -168,7 +168,7 @@ function j(e, t) {
     var n;
     let r = S[e],
         i = null !== (n = null == r ? void 0 : r.channel_overrides) && void 0 !== n ? n : {};
-    G(e, {
+    B(e, {
         channel_overrides:
             null == r
                 ? t
@@ -439,7 +439,7 @@ let $ = new J(o.Z, {
     USER_GUILD_SETTINGS_FULL_UPDATE: function (e) {
         let { userGuildSettings: t } = e;
         t.forEach((e) => {
-            G(e.guild_id, {
+            B(e.guild_id, {
                 channel_overrides: {},
                 ...e
             });
@@ -471,10 +471,10 @@ let $ = new J(o.Z, {
         z(e.notificationSettings), R.reset(), O.reset(), !e.userGuildSettings.partial && ((S = {}), (x = {}), (w = {}));
         let t = new Set();
         for (let n in (e.userGuildSettings.entries.forEach((e) => {
-            !('channel_overrides' in e) && (e.channel_overrides = {}), G(e.guild_id, e), null != e.guild_id && t.add(e.guild_id);
+            !('channel_overrides' in e) && (e.channel_overrides = {}), B(e.guild_id, e), null != e.guild_id && t.add(e.guild_id);
         }),
         S))
-            !t.has(n) && B(n, S[n]);
+            !t.has(n) && G(n, S[n]);
     },
     CACHE_LOADED: function (e) {
         null != e.userGuildSettings &&

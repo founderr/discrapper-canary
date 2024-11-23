@@ -6,13 +6,13 @@ n.d(t, {
         return o;
     },
     ZI: function () {
-        return s;
+        return l;
     },
     m1: function () {
         return c;
     },
     uc: function () {
-        return l;
+        return s;
     }
 });
 var r = n(987170),
@@ -31,7 +31,7 @@ let i = (0, r.Z)({
             }
         ]
     }),
-    s = (0, r.Z)({
+    l = (0, r.Z)({
         kind: 'user',
         id: '2024-07_ctp_collectibles_shop_open_filters',
         label: 'CTP collectibles shop open - A/A test - Filters',
@@ -45,7 +45,7 @@ let i = (0, r.Z)({
             }
         ]
     }),
-    l = (0, r.Z)({
+    s = (0, r.Z)({
         kind: 'user',
         id: '2024-07_ctp_collectibles_shop_open_multiple_buckets',
         label: 'CTP collectibles shop open - A/A test - Multiple buckets',

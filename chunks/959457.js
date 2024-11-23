@@ -53,10 +53,10 @@ function U(e) {
                 });
             });
 }
-function G() {
+function B() {
     return !0;
 }
-class B extends (a = _.ZP.Store) {
+class G extends (a = _.ZP.Store) {
     getActiveStreamKey() {
         return (0, I.Z)(y.Z) ? i : null;
     }
@@ -166,7 +166,7 @@ class B extends (a = _.ZP.Store) {
     }
 }
 (l = 'StreamRTCConnectionStore'),
-    (o = 'displayName') in (s = B)
+    (o = 'displayName') in (s = G)
         ? Object.defineProperty(s, o, {
               value: l,
               enumerable: !0,
@@ -174,7 +174,7 @@ class B extends (a = _.ZP.Store) {
               writable: !0
           })
         : (s[o] = l),
-    (t.Z = new B(
+    (t.Z = new G(
         h.Z,
         !y.Z.isSupported() || __OVERLAY__
             ? {}
@@ -185,13 +185,13 @@ class B extends (a = _.ZP.Store) {
                   CONNECTION_CLOSED: function () {
                       (r = null), (i = null), k();
                   },
-                  RTC_CONNECTION_STATE: G,
-                  RTC_CONNECTION_PING: G,
-                  RTC_CONNECTION_LOSS_RATE: G,
+                  RTC_CONNECTION_STATE: B,
+                  RTC_CONNECTION_PING: B,
+                  RTC_CONNECTION_LOSS_RATE: B,
                   RTC_CONNECTION_UPDATE_ID: function (e) {
                       return f().some(M, (t) => t === e.connection);
                   },
-                  RTC_CONNECTION_SECURE_FRAMES_UPDATE: G,
+                  RTC_CONNECTION_SECURE_FRAMES_UPDATE: B,
                   STREAM_START: function (e) {
                       let { streamType: t, guildId: n, channelId: r, appContext: i, pid: a, sourceId: s } = e,
                           o = (0, E.V9)({

@@ -1,13 +1,13 @@
 n.d(t, {
     x: function () {
-        return l;
+        return s;
     }
 });
 var r = n(512722),
     a = n.n(r),
     i = n(442837),
-    s = n(594174);
-let l = () => {
-    let e = (0, i.e7)([s.default], () => s.default.getCurrentUser());
+    l = n(594174);
+let s = () => {
+    let e = (0, i.e7)([l.default], () => l.default.getCurrentUser());
     return a()(null != e, 'user has signed in before accessing shop'), e;
 };

@@ -162,20 +162,20 @@ class M extends i.Component {
     }
     render() {
         var e, t, n, i, a, o;
-        let { textValue: l, richValue: u, disabled: c, onChange: d, onKeyDown: _, onResize: p, onSubmit: h, channel: m, type: g, fontSize: E, useSlate: v, spellcheckEnabled: b, useNewSlashCommands: y, canOnlyUseTextCommands: C, className: O, id: L, required: x, maxCharacterCount: M, allowNewLines: P, 'aria-describedby': k, 'aria-labelledby': U, accessibilityLabel: G } = this.props,
-            { submitting: B, popup: Z } = this.state,
+        let { textValue: l, richValue: u, disabled: c, onChange: d, onKeyDown: _, onResize: p, onSubmit: h, channel: m, type: g, fontSize: E, useSlate: v, spellcheckEnabled: b, useNewSlashCommands: y, canOnlyUseTextCommands: C, className: O, id: L, required: x, maxCharacterCount: M, allowNewLines: P, 'aria-describedby': k, 'aria-labelledby': U, accessibilityLabel: B } = this.props,
+            { submitting: G, popup: Z } = this.state,
             F = {
                 channel: m,
                 className: s()(O, D.textArea, {
                     [D.textAreaSlate]: v,
-                    [D.textAreaDisabled]: c || B
+                    [D.textAreaDisabled]: c || G
                 }),
                 id: L,
                 placeholder: this.getPlaceholder(),
                 required: x,
-                accessibilityLabel: G,
+                accessibilityLabel: B,
                 disabled: c || !1,
-                submitting: B,
+                submitting: G,
                 isEdit: g === T.I.EDIT,
                 onFocus: this.handleFocus,
                 onBlur: this.handleBlur,

@@ -7,8 +7,8 @@ var r = n(200651);
 n(192379);
 var a = n(120356),
     i = n.n(a),
-    s = n(213731),
-    l = n(462972),
+    l = n(213731),
+    s = n(462972),
     o = n(17504),
     c = n(352177);
 let d = () => 4 * Math.random() + 8,
@@ -23,15 +23,15 @@ let d = () => 4 * Math.random() + 8,
         });
 t.Z = () =>
     (0, r.jsx)('div', {
-        className: s.skeletons,
+        className: l.skeletons,
         children: u.map((e) =>
             (0, r.jsxs)(
                 'div',
                 {
-                    className: s.cardsContainer,
+                    className: l.cardsContainer,
                     children: [
                         (0, r.jsx)('div', {
-                            className: i()(o.skeleton, l.shopBanner),
+                            className: i()(o.skeleton, s.shopBanner),
                             children: (0, r.jsx)('div', { className: o.bannerBody })
                         }),
                         Array.from({ length: e }, (e, t) => t).map((e) => (0, r.jsx)(m, {}, e))

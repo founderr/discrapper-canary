@@ -47,17 +47,17 @@ let N = new h.Z('GuildMemberStore'),
         removed: []
     };
 function U(e, t) {
-    if (null == t.communicationDisabledUntil || !(0, m.b)(t)) return G(e, t.userId);
+    if (null == t.communicationDisabledUntil || !(0, m.b)(t)) return B(e, t.userId);
     let n = F(e, t.userId);
-    D[n] !== t.communicationDisabledUntil && (0, m.b)(t) && ((D[n] = t.communicationDisabledUntil), B(n));
+    D[n] !== t.communicationDisabledUntil && (0, m.b)(t) && ((D[n] = t.communicationDisabledUntil), G(n));
 }
-function G(e, t) {
+function B(e, t) {
     if (null != t) {
         let n = F(e, t);
-        null != D[n] && B(n), Z(F(e, t));
-    } else for (let t in D) j(t) === e && (B(t), Z(t));
+        null != D[n] && G(n), Z(F(e, t));
+    } else for (let t in D) j(t) === e && (G(t), Z(t));
 }
-function B(e) {
+function G(e) {
     (x += 1), (M[e] = x);
 }
 function Z(e) {
@@ -523,7 +523,7 @@ class er extends (i = f.ZP.Store) {
         },
         GUILD_DELETE: function (e) {
             let { guild: t } = e;
-            delete C[t.id], G(t.id);
+            delete C[t.id], B(t.id);
         },
         GUILD_MEMBER_ADD: K,
         GUILD_MEMBER_UPDATE: K,
@@ -565,7 +565,7 @@ class er extends (i = f.ZP.Store) {
             let { guildId: t, user: n } = e,
                 r = C[t];
             if (null == r || null == r[n.id]) return !1;
-            delete r[n.id], G(t, n.id), w++;
+            delete r[n.id], B(t, n.id), w++;
         },
         THREAD_MEMBER_LIST_UPDATE: function (e) {
             let { guildId: t, members: n } = e;

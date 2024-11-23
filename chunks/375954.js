@@ -34,8 +34,8 @@ var r,
     P = n(594174),
     k = n(981631);
 let U = new Set(),
-    G = new p.Z('MessageStore'),
-    B = !1;
+    B = new p.Z('MessageStore'),
+    G = !1;
 function Z() {
     f.Z.forEach((e) => {
         f.Z.commit(
@@ -146,7 +146,7 @@ class Y extends (r = u.ZP.Store) {
         return null != this.getMessages(e).findNewest((e) => e.author.id === (null == t ? void 0 : t.id));
     }
     hasCurrentUserSentMessageSinceAppStart() {
-        return B;
+        return G;
     }
 }
 (s = 'MessageStore'),
@@ -224,19 +224,19 @@ class Y extends (r = u.ZP.Store) {
         },
         TRUNCATE_MESSAGES: function (e) {
             let { channelId: t, truncateBottom: n, truncateTop: r } = e;
-            G.log('Truncating messages for '.concat(t, ' bottom:').concat(n, ' top:').concat(r));
+            B.log('Truncating messages for '.concat(t, ' bottom:').concat(n, ' top:').concat(r));
             let i = f.Z.getOrCreate(t);
             (i = i.truncate(n, r)), f.Z.commit(i);
         },
         CLEAR_MESSAGES: function (e) {
             let { channelId: t } = e;
-            G.log('Clearing messages for '.concat(t)), f.Z.clear(t), U.clear();
+            B.log('Clearing messages for '.concat(t)), f.Z.clear(t), U.clear();
         },
         MESSAGE_CREATE: function (e) {
             let { channelId: t, message: n, isPushNotification: r } = e,
                 i = f.Z.getOrCreate(t);
             if (r) {
-                G.log('Inserting message tapped on from a push notification', n.id, n.channel_id), f.Z.commit(i.receivePushNotification(n));
+                B.log('Inserting message tapped on from a push notification', n.id, n.channel_id), f.Z.commit(i.receivePushNotification(n));
                 return;
             }
             if (!i.ready) return !1;
@@ -359,6 +359,6 @@ class Y extends (r = u.ZP.Store) {
         LOCAL_MESSAGE_CREATE: function (e) {
             let { message: t } = e,
                 n = P.default.getCurrentUser();
-            null != t && null != t.author && null != n && t.author.id === n.id && (B = !0);
+            null != t && null != t.author && null != n && t.author.id === n.id && (G = !0);
         }
     }));
