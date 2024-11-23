@@ -74,9 +74,10 @@ t.Z = () => {
         s.useEffect(() => {
             h.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: C.cd.COLLECTIBLES_PROFILE_SETTINGS_UPSELL,
-                location_stack: n
+                location_stack: n,
+                version: null == A ? void 0 : A.version
             });
-        }, [n]),
+        }, [n, null == A ? void 0 : A.version]),
         (0, i.jsxs)('div', {
             ref: r,
             className: l()(E.container, { [E.robertContainer]: I === x.C5.ROBERT }),
