@@ -68,13 +68,14 @@ t.Z = function () {
         className: x.container,
         children: [
             (0, i.jsxs)(h.ZP, {
-                variant: J ? h._6.RELATIVE : h._6.OVERLAY,
+                className: B ? x.search : void 0,
                 children: [
-                    !J && (0, i.jsx)(h.z6, { scrollPosition: n }),
+                    !B && (0, i.jsx)(h.z6, { scrollPosition: n }),
                     J
                         ? (0, i.jsx)(h.Cm, {
                               icon: a.ArrowLargeLeftIcon,
-                              onClick: $
+                              onClick: $,
+                              variant: B ? h.HS.DEFAULT : h.HS.OVERLAY
                           })
                         : (0, i.jsx)(h.aV, { icon: a.AppsIcon }),
                     G
