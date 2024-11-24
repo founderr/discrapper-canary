@@ -37,12 +37,16 @@ let b = (e) => ({
 function v() {
     let e = (0, o.Wu)([h.Z], () => h.Z.getWidgetsForLayout(x.OVERLAY_V3_LAYOUT_ID)),
         t = (0, o.e7)([u.Z], () => u.Z.clickZoneDebugMode),
-        n = () => {
+        n = (0, o.e7)([u.Z], () => u.Z.renderDebugMode),
+        a = () => {
             d.Z.setClickZoneDebugMode(!u.Z.clickZoneDebugMode);
         },
-        a = g(Object.values(e), m.Odu.CLICK_ZONE_DEBUG),
         i = () => {
-            if (null != a) (0, s.E9)(a.id);
+            d.Z.setRenderDebugMode(!u.Z.renderDebugMode);
+        },
+        v = g(Object.values(e), m.Odu.CLICK_ZONE_DEBUG),
+        C = () => {
+            if (null != v) (0, s.E9)(v.id);
             else {
                 let e = b(x.OVERLAY_V3_LAYOUT_ID);
                 (0, s.A4)(e);
@@ -59,7 +63,7 @@ function v() {
                         ...e,
                         children: (0, r.jsx)(c.Checkbox, {
                             value: t,
-                            onChange: () => n(),
+                            onChange: () => a(),
                             size: 18,
                             type: c.Checkbox.Types.INVERTED,
                             shape: c.Checkbox.Shapes.BOX,
@@ -74,13 +78,34 @@ function v() {
             }),
             (0, r.jsx)(c.Tooltip, {
                 position: 'left',
+                text: 'Enables a border around any widgets that are rendered on screen that are pinned (even if they are hidden). Blue = pinned widgets, Gray = unpinned widgets',
+                children: (e) =>
+                    (0, r.jsx)('div', {
+                        ...e,
+                        children: (0, r.jsx)(c.Checkbox, {
+                            value: n,
+                            onChange: () => i(),
+                            size: 18,
+                            type: c.Checkbox.Types.INVERTED,
+                            shape: c.Checkbox.Shapes.BOX,
+                            children: (0, r.jsx)(c.Text, {
+                                tag: 'span',
+                                variant: 'text-md/normal',
+                                color: 'text-muted',
+                                children: 'Enable Render Debug Mode'
+                            })
+                        })
+                    })
+            }),
+            (0, r.jsx)(c.Tooltip, {
+                position: 'left',
                 text: 'Creates a widget that has a clickzone inside of it, which will show/hide every few seconds.',
                 children: (e) =>
                     (0, r.jsx)('div', {
                         ...e,
                         children: (0, r.jsx)(c.Checkbox, {
-                            value: null != a,
-                            onChange: () => i(),
+                            value: null != v,
+                            onChange: () => C(),
                             size: 18,
                             type: c.Checkbox.Types.INVERTED,
                             shape: c.Checkbox.Shapes.BOX,

@@ -47,6 +47,12 @@ let _ = {
             enabled: e
         });
     },
+    setRenderDebugMode(e) {
+        i.Z.dispatch({
+            type: 'OVERLAY_RENDER_DEBUG_MODE',
+            enabled: e
+        });
+    },
     setInstanceLocked(e) {
         if (!__OVERLAY__) throw Error('OverlayActionCreators.setInstanceLocked: Must be called within Overlay context');
         _.setInputLocked(e, (0, c.QF)());
