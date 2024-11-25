@@ -3624,7 +3624,6 @@ let _Z = Object.freeze({
     PROFILE_EFFECTS_PREVIEW_TOOL: 'Profile Effects Preview Tool',
     COMMUNITY_ALERTS: 'Community Alerts Settings',
     HIGHLIGHT_NOTIFICATIONS: 'Highlight notification settings',
-    SURVEY_OVERRIDE: 'Survey Override',
     QUESTS: 'Quests',
     QUEST_PREVIEW_TOOL: 'Quest Preview Tool',
     SECURE_FRAMES: 'Secure Frames',
