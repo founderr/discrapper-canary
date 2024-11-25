@@ -57,6 +57,7 @@ function b(e) {
             children: [
                 (0, i.jsx)(v.Z, {
                     application: I,
+                    channel: t,
                     name: L,
                     iconURL: T,
                     scrollerRef: S,

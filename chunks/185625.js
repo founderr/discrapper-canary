@@ -262,7 +262,9 @@ let S = (e, t, n, r) => {
             ...l,
             ...o,
             name: t.name,
-            application_id: t.record.id
+            application_id: t.record.id,
+            guild_id: t.contextualGuildId,
+            channel_id: t.contextualChannelId
         };
     return null;
 };
@@ -275,7 +277,8 @@ function y(e, t, n) {
         stage_instance_id: e.name === c.b.STAGE_CHANNEL ? e.record.id : void 0,
         guild_scheduled_event_id: e.name === c.b.GUILD_SCHEDULED_EVENT ? e.record.id : void 0,
         guild_id: e.name === c.b.GUILD || e.name === c.b.GUILD_DISCOVERY ? e.record.id : e.name === c.b.GUILD_DIRECTORY_ENTRY ? e.record.guildId : e.name === c.b.GUILD_SCHEDULED_EVENT ? e.record.guild_id : void 0,
-        channel_id: e.name === c.b.GUILD_SCHEDULED_EVENT ? e.record.channel_id : e.name === c.b.GUILD_DIRECTORY_ENTRY ? e.record.channelId : void 0
+        channel_id: e.name === c.b.GUILD_SCHEDULED_EVENT ? e.record.channel_id : e.name === c.b.GUILD_DIRECTORY_ENTRY ? e.record.channelId : void 0,
+        application_id: e.name === c.b.APPLICATION ? e.record.id : void 0
     });
 }
 function A(e, t) {

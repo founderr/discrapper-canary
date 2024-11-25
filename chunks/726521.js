@@ -243,15 +243,21 @@ function S(e, t) {
             t
         );
 }
-function y(e, t) {
-    A(o.b.APPLICATION, { application_id: e.id }),
+function y(e, t, n, r) {
+    A(o.b.APPLICATION, {
+        application_id: e.id,
+        guild_id: t,
+        channel_id: n
+    }),
         (0, u.m)(
             {
                 name: o.b.APPLICATION,
-                record: e
+                record: e,
+                contextualGuildId: t,
+                contextualChannelId: n
             },
             {},
-            t
+            r
         );
 }
 function A(e, t) {
