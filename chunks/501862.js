@@ -9,10 +9,23 @@ var r = n(200651),
     s = n(481060),
     o = n(229159);
 function l(e) {
-    let { countdownText: t, className: n } = e;
-    return (0, r.jsx)(s.Text, {
-        variant: 'text-xs/bold',
-        className: a()(o.largeCountdownPillText, n),
-        children: t.toUpperCase()
+    let { countdownText: t, className: n, showInfoIcon: i } = e,
+        l = i
+            ? (0, r.jsx)(s.CircleInformationIcon, {
+                  size: 'xs',
+                  color: 'var(--custom-premium-colors-banner-yellow)',
+                  className: o.largePillIcon
+              })
+            : null;
+    return (0, r.jsxs)('div', {
+        className: a()(o.largeCountdownPill, n),
+        children: [
+            (0, r.jsx)(s.Text, {
+                variant: 'text-xs/bold',
+                className: a()(o.largeCountdownPillText),
+                children: t.toUpperCase()
+            }),
+            l
+        ]
     });
 }
