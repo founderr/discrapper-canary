@@ -22,5 +22,10 @@ let s = (e) => {
     },
     o = (e) => {
         let t = (0, i.hv)('useProductName') === r.v.VARIANTS_GROUP;
-        return null == e ? '' : t && 'baseVariantName' in e ? e.baseVariantName : e.name;
+        if (null == e) return '';
+        if (t) {
+            if ('baseVariantName' in e && null != e.baseVariantName) return e.baseVariantName;
+            if (null != e.variants && e.variants.length > 0) return e.variants[0].baseVariantName;
+        }
+        return e.name;
     };
