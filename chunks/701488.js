@@ -1,9 +1,12 @@
 n.d(t, {
     AC: function () {
-        return J;
+        return $;
     },
     Cb: function () {
         return V;
+    },
+    Cr: function () {
+        return J;
     },
     Ec: function () {
         return k;
@@ -45,7 +48,7 @@ n.d(t, {
         return O;
     },
     OF: function () {
-        return ei;
+        return ea;
     },
     P9: function () {
         return X;
@@ -54,7 +57,7 @@ n.d(t, {
         return w;
     },
     Pc: function () {
-        return $;
+        return ee;
     },
     S4: function () {
         return a;
@@ -108,13 +111,13 @@ n.d(t, {
         return N;
     },
     um: function () {
-        return ee;
+        return et;
     },
     wP: function () {
-        return er;
+        return ei;
     },
     wT: function () {
-        return en;
+        return er;
     },
     xK: function () {
         return o;
@@ -172,18 +175,19 @@ let S = 160,
         LARGE: 160
     },
     Q = ['in_development', 'activities_team', 'employee_release'],
-    X = [j, '235088799074484224', D, '1067803140071620628', '1194351737264406548', '1245041113882955918', '1245040907732910201', '1245040436427489471', '1208090049871351890', '1235205910863806484', '1227719606223765687'];
+    X = [j, '235088799074484224', D, '1067803140071620628', '1194351737264406548', '1245041113882955918', '1245040907732910201', '1245040436427489471', '1208090049871351890', '1235205910863806484', '1227719606223765687'],
+    J = ['1247266306231898122', '1257458870390099989', '1276239071764680926'];
 ((f = r || (r = {})).ADS = 'ADS'), (f.FAILED_LOAD = 'FAILED_LOAD'), (f.LAGGING = 'LAGGING'), (f.CONFUSING = 'CONFUSING'), (f.NOT_FUN = 'NOT_FUN'), (f.OTHER = 'OTHER'), ((_ = i || (i = {}))[(_.PLAY = 0)] = 'PLAY'), (_[(_.SPECTATE = 1)] = 'SPECTATE'), ((p = a || (a = {})).DESKTOP = 'desktop'), (p.MOBILE = 'mobile'), ((h = s || (s = {})).BETRAYAL_MARKETING_TOOLTIP = 'BETRAYAL_MARKETING_TOOLTIP'), (h.FISHINGTON_MARKETING_TOOLTIP = 'FISHINGTON_MARKETING_TOOLTIP'), (h.POKER_MARKETING_TOOLTIP = 'POKER_MARKETING_TOOLTIP'), (h.YOUTUBE_MARKETING_TOOLTIP = 'YOUTUBE_MARKETING_TOOLTIP'), ((m = o || (o = {}))[(m.UNLOCKED = 1)] = 'UNLOCKED'), (m[(m.PORTRAIT = 2)] = 'PORTRAIT'), (m[(m.LANDSCAPE = 3)] = 'LANDSCAPE'), ((g = l || (l = {}))[(g.DIRECTORY = 0)] = 'DIRECTORY'), (g[(g.SELECT_CHANNEL = 1)] = 'SELECT_CHANNEL'), (g[(g.DETAIL_PAGE = 2)] = 'DETAIL_PAGE');
-let J = 'activity-shelf',
-    $ = new Set(['755600276941176913', C, R, M]),
-    ee = new Set([C, R, M]);
+let $ = 'activity-shelf',
+    ee = new Set(['755600276941176913', C, R, M]),
+    et = new Set([C, R, M]);
 ((E = u || (u = {}))[(E.PORTRAIT = 0)] = 'PORTRAIT'), (E[(E.LANDSCAPE = 1)] = 'LANDSCAPE'), ((v = c || (c = {}))[(v.FOCUSED = 0)] = 'FOCUSED'), (v[(v.PIP = 1)] = 'PIP'), (v[(v.GRID = 2)] = 'GRID');
-let et = {
+let en = {
         label_type: b.ww.NONE,
         release_phase: '',
         label_until: null
     },
-    en = {
+    er = {
         application_id: '',
         requires_age_gate: !1,
         legacy_responsive_aspect_ratio: !1,
@@ -191,13 +195,13 @@ let et = {
         tablet_default_orientation_lock_state: 1,
         supported_platforms: [b.C3.WEB],
         client_platform_config: {
-            [b.C3.WEB]: et,
-            [b.C3.IOS]: et,
-            [b.C3.ANDROID]: et
+            [b.C3.WEB]: en,
+            [b.C3.IOS]: en,
+            [b.C3.ANDROID]: en
         },
         has_csp_exception: !1,
         displays_advertisements: !1
     },
-    er = [T.d4z.GUILD_TEXT, T.d4z.DM, T.d4z.GROUP_DM],
-    ei = 'https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety';
+    ei = [T.d4z.GUILD_TEXT, T.d4z.DM, T.d4z.GROUP_DM],
+    ea = 'https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety';
 ((I = d || (d = {})).NORMAL = 'normal'), (I.FULL_SCREEN = 'full-screen');
