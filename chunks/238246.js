@@ -185,13 +185,18 @@ class z extends (i = a.Component) {
             G(this, 'rootRef', a.createRef()),
             G(this, '_cleanupWindowActionCreators', void 0),
             G(this, 'beforeUnload', (e) => {
+                let t = () => {
+                    V.Z.unmountWindow(this.props.windowKey), k.isPlatformEmbedded && D.ZP.close(this.props.windowKey);
+                };
                 if (this.props.connectedToEmbeddedActivity && !O.ZP.disableEmbeddedActivityPopOutAlert) {
-                    if (((e.returnValue = W.intl.string(W.t['bST/Y2'])), !!k.isPlatformEmbedded))
-                        !(0, I.Z)() &&
-                            (0, _.Z)(() => {
-                                V.Z.unmountWindow(this.props.windowKey), k.isPlatformEmbedded && D.ZP.close(this.props.windowKey);
-                            });
-                } else V.Z.unmountWindow(this.props.windowKey);
+                    if (!k.isPlatformEmbedded) return;
+                    (0, I.Z)()
+                        ? t()
+                        : ((e.returnValue = W.intl.string(W.t['bST/Y2'])),
+                          (0, _.Z)(() => {
+                              t();
+                          }));
+                } else t();
             }),
             G(this, 'handleBlur', () => {
                 var e, t;
