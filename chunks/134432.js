@@ -121,12 +121,11 @@ function I(e) {
     return (
         (h *= g),
         (function (e) {
-            let { src: t, sourceWidth: n, sourceHeight: r, targetWidth: a, targetHeight: s, format: l = null, quality: u = null, animated: c = !1, srcIsAnimated: d = !1 } = e;
-            if (t.startsWith('data:image')) return t;
-            let [_, p] = (function (e) {
-                let [t, n] = e.split('?');
-                return [t, o.parse(n)];
-            })(t);
+            let { src: t, sourceWidth: n, sourceHeight: r, targetWidth: a, targetHeight: s, format: l = null, quality: u = null, animated: c = !1, srcIsAnimated: d = !1 } = e,
+                [_, p] = (function (e) {
+                    let [t, n] = e.split('?');
+                    return [t, o.parse(n)];
+                })(t);
             return null != l && (p.format = l), null != u && (p.quality = u), c && d && f.test(t) && (p.animated = !0), (a !== n || s !== r) && ((p.width = 0 | a), (p.height = 0 | s)), !i().isEmpty(p) && (_ += '?' + o.stringify(p)), _;
         })({
             src: t,

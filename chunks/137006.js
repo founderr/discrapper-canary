@@ -61,22 +61,6 @@ let l = {
                             .required()
                     })
                     .required()
-        },
-        [r.Q5.SHARE_INTERACTION]: {
-            request: (e) =>
-                (0, r.C5)(
-                    e.object({
-                        command: e.string().required(),
-                        content: e.string().max(2000),
-                        preview_image: e.object({
-                            height: e.number().required(),
-                            url: e.string().required(),
-                            width: e.number().required()
-                        }),
-                        components: e.array().items(s(e))
-                    })
-                ),
-            response: void 0
         }
     },
     a = (e) =>
@@ -98,16 +82,4 @@ let l = {
                     .description('Details about avatar decoration'),
                 premium_type: e.number().allow(null).description('Nitro premium type')
             })
-            .description('Discord User'),
-    s = (e) =>
-        e.object({
-            type: e.number().valid(1).required(),
-            components: e.array().max(5).items(o(e))
-        }),
-    o = (e) =>
-        e.object({
-            type: e.number().valid(2).required(),
-            style: e.number().min(1).max(5).required(),
-            label: e.string().max(80).description('Text that appears on the button'),
-            custom_id: e.string().max(100).description('Developer-defined identifier for the button; max 100 characters')
-        });
+            .description('Discord User');
