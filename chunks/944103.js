@@ -16,10 +16,12 @@ function o(e) {
         o('');
     }, [e.id]);
     let c = (0, l.e7)([s.Z], () => s.Z.getLastActionTime(e.id));
-    return (
-        i.useEffect(() => {
-            if (!!r.$N.has(e.type) && n !== e.id) t && s.Z.maybeAutoUpgradeChannel(e.id) && o(e.id);
-        }, [n, t, c, e]),
-        n === e.id
-    );
+    i.useEffect(() => {
+        if (!!r.$N.has(e.type) && n !== e.id) t && s.Z.maybeAutoUpgradeChannel(e.id) && o(e.id);
+    }, [n, t, c, e]);
+    let d = i.useCallback(() => o(''), []);
+    return {
+        showUnreadsNotice: n === e.id,
+        clearUnreadsNotice: d
+    };
 }
