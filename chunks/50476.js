@@ -2,7 +2,7 @@ var o = n(200651),
     r = n(481060),
     s = n(388032),
     a = n(597916);
-function l(e) {
+function i(e) {
     let { onClick: t, children: n } = e;
     return (0, o.jsx)(r.Button, {
         onClick: t,
@@ -17,11 +17,11 @@ t.Z = function (e) {
     return (0, o.jsxs)('div', {
         className: a.buttons,
         children: [
-            (0, o.jsxs)(l, {
+            (0, o.jsxs)(i, {
                 onClick: t,
                 children: [s.intl.string(s.t.QXc019), (0, o.jsx)(r.ScreenIcon, { size: 'sm' })]
             }),
-            (0, o.jsxs)(l, {
+            (0, o.jsxs)(i, {
                 onClick: n,
                 children: [s.intl.string(s.t['8lAfuL']), (0, o.jsx)(r.GameControllerIcon, { size: 'sm' })]
             })

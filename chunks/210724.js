@@ -8,8 +8,8 @@ var o = n(200651),
     r = n(192379),
     s = n(120356),
     a = n.n(s),
-    l = n(100621),
-    i = n(442837),
+    i = n(752877),
+    l = n(442837),
     c = n(481060),
     d = n(110924),
     u = n(607070),
@@ -52,8 +52,8 @@ function y(e) {
             quest: s,
             location: T.dr.QUESTS_BAR
         }),
-        w = (0, i.e7)([u.Z], () => u.Z.useReducedMotion),
-        I = (0, i.e7)([p.Z], () => p.Z.hasLayers()),
+        w = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
+        I = (0, l.e7)([p.Z], () => p.Z.hasLayers()),
         k = (null === (t = s.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
         q = (0, d.Z)(k),
         P = (null === (n = s.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
@@ -87,10 +87,10 @@ function y(e) {
         ea = r.useCallback(() => {
             z(!1), !V.current && !P && en(!1);
         }, [P, en]),
-        el = r.useCallback(() => {
+        ei = r.useCallback(() => {
             z(!1), !P && en(!1), (V.current = !1);
         }, [P, en]),
-        ei = r.useCallback(
+        el = r.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
                 if (F) return;
@@ -100,8 +100,8 @@ function y(e) {
             [er, F]
         ),
         ec = r.useCallback(() => {
-            ei();
-        }, [ei]),
+            el();
+        }, [el]),
         ed = r.useCallback(() => {
             if ((window.clearTimeout(H.current), !!Z.canCollapseOnBlur && !U)) !V.current && en(!1);
         }, [U, Z, en]),
@@ -112,8 +112,8 @@ function y(e) {
                 properties: (0, m.mH)(g.jn.QUEST_BAR)
             }),
                 (V.current = !0),
-                ei({ withDelay: !0 });
-        }, [ei, s]),
+                el({ withDelay: !0 });
+        }, [el, s]),
         ep = r.useCallback(() => {
             (0, m.dA)({
                 questId: s.id,
@@ -205,7 +205,7 @@ function y(e) {
                                   questId: s.id,
                                   isExpanded: F
                               }),
-                          (0, o.jsx)(l.animated.div, {
+                          (0, o.jsx)(i.animated.div, {
                               'aria-hidden': !L,
                               onMouseLeave: ep,
                               onMouseEnter: eu,
@@ -222,7 +222,7 @@ function y(e) {
                                       output: [0, !Z.canCollapseOnBlur && F ? $ : D]
                                   })
                               },
-                              children: (0, o.jsx)(l.animated.div, {
+                              children: (0, o.jsx)(i.animated.div, {
                                   className: a()(S.contentWrapper, {
                                       [S.contentWrapperExpanded]: F,
                                       [S.contentWrapperAccepted]: k
@@ -241,7 +241,7 @@ function y(e) {
                                           isExpansionAnimationComplete: Y,
                                           onCtxMenuClosed: ea,
                                           onCtxMenuOpened: es,
-                                          onCtxMenuSelection: el,
+                                          onCtxMenuSelection: ei,
                                           quest: s,
                                           useReducedMotion: w,
                                           collapsedHeight: D

@@ -3,8 +3,8 @@ var o = n(200651),
     r = n(192379),
     s = n(120356),
     a = n.n(s),
-    l = n(100621),
-    i = n(278074),
+    i = n(752877),
+    l = n(278074),
     c = n(442837),
     d = n(692547),
     u = n(481060),
@@ -40,7 +40,7 @@ var o = n(200651),
     Z = n(160443);
 function D(e) {
     var t;
-    let { quest: n, onClick: s, containerClassName: l, imgClassName: i, reducedMotion: c } = e,
+    let { quest: n, onClick: s, containerClassName: i, imgClassName: l, reducedMotion: c } = e,
         [m, x] = r.useState(!1),
         g = r.useRef(null),
         f = (0, T.z)(T.i.QUEST_BAR_PREVIEW_VIDEO, n),
@@ -53,7 +53,7 @@ function D(e) {
         _ = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null && j === v.iw.COMPLETED,
         b = !_ && (!c || m);
     return (0, o.jsxs)(u.Clickable, {
-        className: a()(Z.videoQuestPreviewCont, l),
+        className: a()(Z.videoQuestPreviewCont, i),
         onClick: s,
         onMouseEnter: () => {
             c && !m && x(!0);
@@ -66,7 +66,7 @@ function D(e) {
                 (0, o.jsx)('img', {
                     alt: '',
                     src: h.url,
-                    className: a()(Z.assetBodyVideoPreviewMedia, i)
+                    className: a()(Z.assetBodyVideoPreviewMedia, l)
                 }),
             null != f
                 ? (0, o.jsx)(p.Z, {
@@ -110,7 +110,7 @@ function H(e) {
     });
 }
 function V(e) {
-    let { quest: t, taskDetails: n, expansionSpring: s, isInteractable: a, reducedMotion: i, containerRef: d, isExpanded: m, onAcceptQuest: x } = e,
+    let { quest: t, taskDetails: n, expansionSpring: s, isInteractable: a, reducedMotion: l, containerRef: d, isExpanded: m, onAcceptQuest: x } = e,
         g = (0, c.e7)([f.Z], () => f.Z.isEnrolling(t.id), [t]),
         v = r.useMemo(() => (0, N.fh)(t, N.eC.QUEST_BAR_HERO), [t]),
         b = (0, _.vI)(t, W.dr.QUESTS_BAR, !0),
@@ -124,8 +124,8 @@ function V(e) {
             useV2Variants: B === j.P.V2 || (0, O.a)(t)
         });
     r.useEffect(() => {
-        null != T.current && (i && m ? (T.current.pause(), (T.current.currentTime = 0)) : !i && m && T.current.play());
-    }, [i, m]);
+        null != T.current && (l && m ? (T.current.pause(), (T.current.currentTime = 0)) : !l && m && T.current.play());
+    }, [l, m]);
     let y = (0, C.q8)(t) ? Q.intl.string(Q.t.umdNio) : Q.intl.string(Q.t.l7E81t);
     return (0, o.jsxs)(o.Fragment, {
         children: [
@@ -165,7 +165,7 @@ function V(e) {
                     ]
                 })
             }),
-            (0, o.jsxs)(l.animated.div, {
+            (0, o.jsxs)(i.animated.div, {
                 className: Z.heroAssetWrapper,
                 style: {
                     backdropFilter: s.to([0, 1], [5, 0]).to((e) => 'blur('.concat(e, 'px)')),
@@ -173,13 +173,13 @@ function V(e) {
                     borderRadius: b ? '12px 12px 0 0' : '8px 8px 0 0'
                 },
                 children: [
-                    (0, o.jsx)(l.animated.div, {
+                    (0, o.jsx)(i.animated.div, {
                         className: Z.heroAssetDarken,
                         style: {
                             opacity: s.to([0, 1], [1, 0])
                         }
                     }),
-                    (0, o.jsx)(l.animated.div, {
+                    (0, o.jsx)(i.animated.div, {
                         className: Z.heroAssetTint,
                         style: {
                             backgroundColor: t.config.colors.primary,
@@ -195,7 +195,7 @@ function V(e) {
                                       null != e.current && (T.current = e.current),
                                       (0, o.jsx)(p.Z, {
                                           ref: e,
-                                          autoPlay: !i && m,
+                                          autoPlay: !l && m,
                                           loop: !0,
                                           muted: !0,
                                           playsInline: !0,
@@ -219,7 +219,7 @@ function V(e) {
                                       src: v.url
                                   })
                           }),
-                    (0, o.jsx)(l.animated.div, {
+                    (0, o.jsx)(i.animated.div, {
                         className: Z.legibilityGradient,
                         style: {
                             opacity: s.to({
@@ -250,7 +250,7 @@ function U(e) {
         }, [n]);
     return (0, o.jsxs)(o.Fragment, {
         children: [
-            (0, o.jsx)(l.animated.div, {
+            (0, o.jsx)(i.animated.div, {
                 className: a()(Z.postEnrollmentBackground, Z.postEnrollmentBackgroundCollapsed),
                 style: {
                     backgroundImage: 'linear-gradient(90deg, '.concat(L.aY, ', ').concat(L.v6, ')'),
@@ -314,7 +314,7 @@ function U(e) {
                         children:
                             !_ &&
                             !(0, C.Gd)(n) &&
-                            (0, i.EQ)(T)
+                            (0, l.EQ)(T)
                                 .with(h.LI.SELECT, () =>
                                     (0, o.jsx)(M.Z, {
                                         onConsole: () => S(W.cd.CONSOLE),
@@ -365,7 +365,7 @@ function U(e) {
 }
 let z = r.forwardRef(function (e, t) {
     var n;
-    let { children: s, className: i, collapsedHeight: c, isExpanded: d, isExpansionAnimationComplete: u, expansionSpring: p, onCtxMenuOpen: g, onCtxMenuClose: f, onCtxMenuSelect: v, overlayRef: j, quest: _, useReducedMotion: b, taskDetails: E } = e,
+    let { children: s, className: l, collapsedHeight: c, isExpanded: d, isExpansionAnimationComplete: u, expansionSpring: p, onCtxMenuOpen: g, onCtxMenuClose: f, onCtxMenuSelect: v, overlayRef: j, quest: _, useReducedMotion: b, taskDetails: E } = e,
         N = (0, C.q8)(_),
         T = r.useCallback(() => {
             (0, x.AH)(_.id, {
@@ -376,14 +376,14 @@ let z = r.forwardRef(function (e, t) {
         }, [_, N]),
         B = (null === (n = _.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null,
         S = d && u;
-    return (0, o.jsxs)(l.animated.div, {
+    return (0, o.jsxs)(i.animated.div, {
         'aria-hidden': !S,
-        className: a()(i, Z.contentExpanded, {
+        className: a()(l, Z.contentExpanded, {
             [Z.contentInteractable]: S,
             [Z.contentExpandedAccepted]: B
         }),
         style: {
-            transform: (0, l.to)(
+            transform: (0, i.to)(
                 [
                     p.to({
                         range: [0, 1],
@@ -399,7 +399,7 @@ let z = r.forwardRef(function (e, t) {
         },
         children: [
             s,
-            (0, o.jsx)(l.animated.div, {
+            (0, o.jsx)(i.animated.div, {
                 style: { opacity: 1 },
                 children: B
                     ? (0, o.jsx)(U, {

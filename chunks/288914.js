@@ -31,8 +31,8 @@ var i = n(200651),
     Z = n(481046),
     L = n(687158),
     y = n(899007),
-    P = n(648052),
-    O = n(867176),
+    O = n(648052),
+    P = n(867176),
     R = n(438163),
     j = n(483424),
     D = n(681837),
@@ -350,7 +350,7 @@ function ec(e) {
                         (0, i.jsxs)('header', {
                             className: el.header,
                             children: [
-                                (0, i.jsx)(O.Z, {
+                                (0, i.jsx)(P.Z, {
                                     user: Y,
                                     displayProfile: eu,
                                     profileType: en.y0.BITE_SIZE
@@ -383,7 +383,7 @@ function ec(e) {
                                     nickname: K.ZP.getName(null, null, Y),
                                     onOpenProfile: ed ? void 0 : eb,
                                     pronouns: null == eu ? void 0 : eu.pronouns,
-                                    tags: (0, i.jsx)(P.Z, {
+                                    tags: (0, i.jsx)(O.Z, {
                                         displayProfile: eu,
                                         profileType: en.y0.BITE_SIZE,
                                         onClose: Q

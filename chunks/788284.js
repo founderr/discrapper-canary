@@ -9,8 +9,8 @@ var o = n(200651),
     r = n(192379),
     s = n(120356),
     a = n.n(s),
-    l = n(392711),
-    i = n.n(l),
+    i = n(392711),
+    l = n.n(i),
     c = n(442837),
     d = n(481060),
     u = n(451478),
@@ -26,13 +26,13 @@ async function f(e, t) {
     return (
         (function (e, t, n) {
             for (let o in t) {
-                let t = i().get(e, o);
+                let t = l().get(e, o);
                 if (null == t) continue;
                 let r = t.map((e, t) => {
                     var o;
                     return null !== (o = n[t]) && void 0 !== o ? o : e;
                 });
-                i().set(e, o, r);
+                l().set(e, o, r);
             }
         })(o, g, t),
         o
@@ -40,23 +40,23 @@ async function f(e, t) {
 }
 function h(e) {
     var t;
-    let { animationClassName: n, className: s, quest: l, useReducedMotion: i } = e,
+    let { animationClassName: n, className: s, quest: i, useReducedMotion: l } = e,
         g = (0, c.e7)([u.Z], () => u.Z.isFocused()),
         h = r.useRef(null),
         [C, v] = r.useState(!1),
         j = r.useMemo(() => {
-            if (null == l) return null;
-            let e = (0, p.oo)(l.config.colors.primary),
+            if (null == i) return null;
+            let e = (0, p.oo)(i.config.colors.primary),
                 t = {
                     r: e.r / 255,
                     g: e.g / 255,
                     b: e.b / 255
                 },
                 n = x.reduce((e, n) => [...e, n, t.r, t.g, t.b], []);
-            return f(l.id, n);
-        }, [l]),
-        _ = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-        b = !i && g;
+            return f(i.id, n);
+        }, [i]),
+        _ = (null === (t = i.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
+        b = !l && g;
     r.useEffect(() => {
         var e, t, n, o;
         g ? b && (null === (o = h.current) || void 0 === o || null === (n = o.animation) || void 0 === n || n.play()) : null === (t = h.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0);
@@ -67,7 +67,7 @@ function h(e) {
     return null == j || _
         ? (0, o.jsx)('div', {
               className: m.backgroundFallback,
-              style: { backgroundImage: 'linear-gradient(90deg, '.concat(l.config.colors.primary, ', ').concat(l.config.colors.secondary, ')') }
+              style: { backgroundImage: 'linear-gradient(90deg, '.concat(i.config.colors.primary, ', ').concat(i.config.colors.secondary, ')') }
           })
         : (0, o.jsx)('div', {
               className: a()(m.lottieAnimationBackgroundWrapper, s),
@@ -82,7 +82,7 @@ function h(e) {
                       loop: 0,
                       rendererSettings: { preserveAspectRatio: 'none' }
                   },
-                  l.config.colors.primary
+                  i.config.colors.primary
               )
           });
 }

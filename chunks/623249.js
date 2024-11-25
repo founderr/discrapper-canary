@@ -12,8 +12,8 @@ var o = n(200651),
     r = n(192379),
     s = n(120356),
     a = n.n(s),
-    l = n(442837),
-    i = n(780384),
+    i = n(442837),
+    l = n(780384),
     c = n(481060),
     d = n(607070),
     u = n(600164),
@@ -34,15 +34,15 @@ function E(e) {
     null == T && E();
     let [B, S] = (0, r.useState)(n),
         A = (0, x.KX)(),
-        y = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
+        y = (0, i.e7)([d.Z], () => d.Z.useReducedMotion),
         R = (0, C.g2)({
             useReducedMotion: y,
             className: _.colorTransition
         }),
         w = B.filter((e) => ['xbox', 'playstation'].includes(e.connected_account_type)),
         I = (0, f.Bz)(T),
-        k = (0, l.e7)([p.Z], () => p.Z.getState().theme),
-        q = (0, i.wj)(k) ? v.BRd.DARK : v.BRd.LIGHT,
+        k = (0, i.e7)([p.Z], () => p.Z.getState().theme),
+        q = (0, l.wj)(k) ? v.BRd.DARK : v.BRd.LIGHT,
         { startConsoleQuest: P, startingConsoleQuest: M } = (0, x.GI)({
             questId: T.id,
             beforeRequest: () => {
@@ -196,13 +196,13 @@ function E(e) {
 }
 function N(e) {
     let { icon: t, text: n, errors: r = [], gameTile: s } = e,
-        l = r.length > 0,
-        i = l ? c.ConnectionUnknownIcon : c.ConnectionFineIcon;
+        i = r.length > 0,
+        l = i ? c.ConnectionUnknownIcon : c.ConnectionFineIcon;
     return (0, o.jsxs)('div', {
         className: _.connectionRow,
         children: [
             (0, o.jsxs)('div', {
-                className: a()(_.connectionRowHeader, { [_.connectionRowHeaderError]: l }),
+                className: a()(_.connectionRowHeader, { [_.connectionRowHeaderError]: i }),
                 children: [
                     (0, o.jsxs)('div', {
                         className: _.connectionRowHeaderContent,
@@ -219,12 +219,12 @@ function N(e) {
                         className: _.connectionRowHeaderContent,
                         children: [
                             s,
-                            (0, o.jsx)(i, {
+                            (0, o.jsx)(l, {
                                 color: 'currentColor',
                                 size: 'sm',
                                 className: a()({
-                                    [_.success]: !l,
-                                    [_.error]: l
+                                    [_.success]: !i,
+                                    [_.error]: i
                                 })
                             })
                         ]

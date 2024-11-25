@@ -30,8 +30,8 @@ let c = {
 class d extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         if (null != e) {
-            var t;
-            (c.numberOfDCsShownToday = null !== (t = e.numberOfDCsShownToday) && void 0 !== t ? t : 0), (c.dailyCapPeriodStart = e.dailyCapPeriodStart), (c.dailyCapOverridden = e.dailyCapOverridden);
+            var t, n, r;
+            (c.numberOfDCsShownToday = null !== (t = e.numberOfDCsShownToday) && void 0 !== t ? t : 0), (c.dailyCapPeriodStart = e.dailyCapPeriodStart), (c.dailyCapOverridden = null !== (n = e.dailyCapOverridden) && void 0 !== n && n), (c.newUserMinAgeRequiredOverridden = null !== (r = e.newUserMinAgeRequiredOverridden) && void 0 !== r && r);
         }
         (c.dismissibleContentSeenDuringSession = new Set()), (c.lastDCDismissed = null);
     }

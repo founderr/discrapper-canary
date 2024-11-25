@@ -60,9 +60,9 @@ function N(e) {
         }),
         L = null !== (t = l.getGuildId()) && void 0 !== t ? t : void 0,
         y = p.getAvatarURL(l.guild_id, 24),
-        P = null != N ? N : f.ZP.getName(p),
+        O = null != N ? N : f.ZP.getName(p),
         {
-            icon: O,
+            icon: P,
             colorize: R,
             getStatus: j
         } = null !==
@@ -85,10 +85,10 @@ function N(e) {
         D =
             null != j
                 ? E.intl.formatToPlainString(E.t['1+MVBA'], {
-                      userName: P,
+                      userName: O,
                       status: j()
                   })
-                : P;
+                : O;
     function M(e) {
         null != L
             ? (0, c.jW)(e, async () => {
@@ -143,8 +143,8 @@ function N(e) {
                                 className: a()(I.avatar, { [I.speaking]: Z }),
                                 style: { backgroundImage: 'url('.concat(y, ')') },
                                 children:
-                                    null != O
-                                        ? (0, i.jsx)(O, {
+                                    null != P
+                                        ? (0, i.jsx)(P, {
                                               className: a()(I.avatarIconOverlay, { [I.avatarIconRed]: R }),
                                               color: 'currentColor',
                                               size: 'xs'

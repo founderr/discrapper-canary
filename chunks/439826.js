@@ -9,9 +9,9 @@ var o,
     r,
     s = n(200651),
     a = n(192379),
-    l = n(120356),
-    i = n.n(l),
-    c = n(100621),
+    i = n(120356),
+    l = n.n(i),
+    c = n(752877),
     d = n(186325),
     u = n(780384),
     p = n(481060),
@@ -37,8 +37,8 @@ var o,
     I = n(411702);
 function k(e) {
     var t;
-    let { quest: n, errorHints: o, warningHints: r, isDarkTheme: l } = e,
-        { ref: i, height: d = 0 } = (0, m.Z)([o]),
+    let { quest: n, errorHints: o, warningHints: r, isDarkTheme: i } = e,
+        { ref: l, height: d = 0 } = (0, m.Z)([o]),
         u = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
         x = (0, v.z)(n),
         { type: f, hints: h } = a.useMemo(
@@ -72,12 +72,12 @@ function k(e) {
         }),
         _ = 0 === f ? p.CircleWarningIcon : p.CircleInformationIcon,
         b = (0, g.Lq)(R.Ilk.RED_345),
-        E = 0 === f ? b : l ? p.tokens.colors.TEXT_NORMAL : p.tokens.colors.WHITE;
+        E = 0 === f ? b : i ? p.tokens.colors.TEXT_NORMAL : p.tokens.colors.WHITE;
     return (0, s.jsx)(s.Fragment, {
         children: (0, s.jsx)(c.animated.div, {
             style: j,
             children: (0, s.jsxs)('div', {
-                ref: i,
+                ref: l,
                 className: I.hints,
                 children: [
                     (0, s.jsxs)('div', {
@@ -89,7 +89,7 @@ function k(e) {
                             }),
                             (0, s.jsx)(p.Text, {
                                 variant: 'text-xs/medium',
-                                color: l ? 'text-muted' : 'always-white',
+                                color: i ? 'text-muted' : 'always-white',
                                 children: h.at(0)
                             })
                         ]
@@ -115,18 +115,18 @@ function k(e) {
 function q(e) {
     var t;
     let { asset: n, reducedMotionEnabled: o, visible: r } = e,
-        l = a.useRef(null);
+        i = a.useRef(null);
     return (
         a.useEffect(() => {
-            null != l.current && r && l.current.play();
+            null != i.current && r && i.current.play();
         }, [r]),
         (0, s.jsx)(f.Z, {
-            ref: l,
+            ref: i,
             autoPlay: !o,
             loop: !0,
             muted: !0,
             playsInline: !0,
-            className: i()(I.videoOverlay, { [I.videoOverlayVisible]: r }),
+            className: l()(I.videoOverlay, { [I.videoOverlayVisible]: r }),
             controls: !1,
             children: (0, s.jsx)('source', {
                 src: n.url,
@@ -136,7 +136,7 @@ function q(e) {
     );
 }
 function P(e) {
-    var t, n, o, r, l;
+    var t, n, o, r, i;
     let { quest: c, isHovering: m, errorHints: g, warningHints: N, onCtxMenuClose: y, onCtxMenuOpen: P, onCtxMenuSelect: M } = e,
         O = (0, _.q8)(c),
         W = a.useMemo(() => (0, b.fh)(c, b.eC.HERO), [c]),
@@ -224,7 +224,7 @@ function P(e) {
                 ]
             }),
             (0, s.jsx)('div', {
-                className: i()(I.overlay, {
+                className: l()(I.overlay, {
                     [I.darkThemeGradient]: Q,
                     [I.lightThemeGradient]: !Q
                 })
@@ -279,7 +279,7 @@ function P(e) {
                                                 children: (0, s.jsx)(p.MoreHorizontalIcon, {
                                                     size: 'md',
                                                     color: 'currentColor',
-                                                    className: i()(I.utilButtonIcon)
+                                                    className: l()(I.utilButtonIcon)
                                                 })
                                             })
                                     })
@@ -298,7 +298,7 @@ function P(e) {
                                     (0, s.jsx)(p.Text, {
                                         variant: 'text-sm/medium',
                                         color: Q ? 'text-muted' : 'always-white',
-                                        children: w.intl.format(w.t.buEvBw, { brandName: null !== (l = null === (r = c.config.cosponsorMetadata) || void 0 === r ? void 0 : r.name) && void 0 !== l ? l : c.config.messages.gamePublisher })
+                                        children: w.intl.format(w.t.buEvBw, { brandName: null !== (i = null === (r = c.config.cosponsorMetadata) || void 0 === r ? void 0 : r.name) && void 0 !== i ? i : c.config.messages.gamePublisher })
                                     }),
                                     H || V
                                         ? null

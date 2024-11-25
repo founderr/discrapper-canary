@@ -8,8 +8,8 @@ n(192379);
 var r = n(120356),
     s = n.n(r),
     a = n(54042),
-    l = n(179839),
-    i = n(481060),
+    i = n(179839),
+    l = n(481060),
     c = n(230711),
     d = n(231757),
     u = n(617136),
@@ -21,7 +21,7 @@ var r = n(120356),
     h = n(181284);
 function C(e) {
     let { quest: t, isConnected: n, consoleType: r } = e;
-    return (0, o.jsx)(i.Clickable, {
+    return (0, o.jsx)(l.Clickable, {
         className: h.connectConsoleButtonWrapper,
         onClick: () => {
             (0, u._3)({
@@ -37,7 +37,7 @@ function C(e) {
                       colorClass: s()(h.connectConsoleButton, n ? h.playstationButtonConnected : h.connectConsoleButtonUnconnected),
                       size: 'sm'
                   })
-                : (0, o.jsx)(l.M, {
+                : (0, o.jsx)(i.M, {
                       colorClass: s()(h.connectConsoleButton, n ? h.xboxButtonConnected : h.connectConsoleButtonUnconnected),
                       size: 'sm'
                   })
@@ -45,7 +45,7 @@ function C(e) {
 }
 function v(e) {
     let { text: t, quest: n } = e;
-    return (0, o.jsx)(i.Clickable, {
+    return (0, o.jsx)(l.Clickable, {
         className: h.showConnectionsButton,
         onClick: () => {
             (0, u._3)({
@@ -55,7 +55,7 @@ function v(e) {
             }),
                 c.Z.open(g.oAB.CONNECTIONS);
         },
-        children: (0, o.jsx)(i.Text, {
+        children: (0, o.jsx)(l.Text, {
             'aria-label': t,
             color: 'none',
             variant: 'text-xxs/normal',
@@ -65,7 +65,7 @@ function v(e) {
 }
 function j(e) {
     let { quest: t, xboxAccounts: n, playstationAccounts: r, xboxAndPlaystationAccounts: a } = e,
-        l = a.slice(0, 2),
+        i = a.slice(0, 2),
         c = a.length > 0,
         d = n.length > 0,
         u = r.length > 0;
@@ -75,7 +75,7 @@ function j(e) {
             (0, o.jsxs)('div', {
                 className: h.inlineConsoleConnectionDetailsUpper,
                 children: [
-                    (0, o.jsx)(i.Text, {
+                    (0, o.jsx)(l.Text, {
                         color: 'header-secondary',
                         variant: 'text-xxs/normal',
                         children: c ? f.intl.string(f.t['u30/ur']) : f.intl.string(f.t.owFNBw)
@@ -102,18 +102,18 @@ function j(e) {
                 (0, o.jsxs)('div', {
                     className: h.inlineConsoleConnectionDetailsLower,
                     children: [
-                        l.map((e, t) =>
+                        i.map((e, t) =>
                             (0, o.jsxs)(
                                 'div',
                                 {
                                     className: s()(h.inlineConsoleConnectionDetailsLowerItem, t > 0 ? h.marginTop4px : void 0),
                                     children: [
-                                        (0, o.jsx)(i.Text, {
+                                        (0, o.jsx)(l.Text, {
                                             color: 'header-secondary',
                                             variant: 'text-xxs/normal',
                                             children: e.type === g.ABu.XBOX ? f.intl.string(f.t.MEhKlp) : f.intl.string(f.t['74VQCA'])
                                         }),
-                                        (0, o.jsx)(i.Text, {
+                                        (0, o.jsx)(l.Text, {
                                             color: 'header-secondary',
                                             variant: 'text-xxs/normal',
                                             children: e.name
@@ -146,7 +146,7 @@ function b(e) {
     let t = (0, m.P)({ location: x.dr.QUESTS_BAR });
     return (0, o.jsxs)(o.Fragment, {
         children: [
-            (0, o.jsx)(i.Text, {
+            (0, o.jsx)(l.Text, {
                 color: 'text-muted',
                 variant: 'text-xs/medium',
                 children: f.intl.string(f.t.EJFSvL)

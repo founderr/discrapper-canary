@@ -7,10 +7,10 @@ var o = n(497505),
     r = n(988303),
     s = n(941348),
     a = n(658590),
-    l = n(647365),
-    i = n(743294);
+    i = n(647365),
+    l = n(743294);
 let c = {
-        component: l.Z,
+        component: i.Z,
         getCollapsedHeight: () => 40,
         getPreEnrollmentExpandedHeight: () => 240,
         getPostEnrollmentBackgroundImage: (e) => 'linear-gradient(90deg, '.concat(e.config.colors.primary, ', ').concat(e.config.colors.secondary, ')'),
@@ -22,7 +22,7 @@ let c = {
         shouldExpandOnQuestComplete: (e) => !0,
         getVerticalPadding: () => 8
     },
-    d = i.Li,
+    d = l.Li,
     u = {
         component: s.Z,
         getCollapsedHeight: (e) => {
@@ -30,7 +30,7 @@ let c = {
             return (null === (t = e.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null ? 66 : 40;
         },
         getPreEnrollmentExpandedHeight: () => 270,
-        getPostEnrollmentBackgroundImage: () => 'linear-gradient(90deg, '.concat(i.aY, ', ').concat(i.v6, ')'),
+        getPostEnrollmentBackgroundImage: () => 'linear-gradient(90deg, '.concat(l.aY, ', ').concat(l.v6, ')'),
         getPreEnrollmentBackgroundColor: (e) => 'var(--home-background)',
         canCollapseOnBlur: (e) => !0,
         shouldExpandOnQuestComplete: (e) => !1,
@@ -38,9 +38,9 @@ let c = {
     },
     p = (e, t, n) => {
         var s;
-        let l = (null === (s = e.userStatus) || void 0 === s ? void 0 : s.enrolledAt) != null,
-            i = (!l && t === r.P.V2) || (l && n === r.P.V2) || (0, a.a)(e),
-            d = i ? u : c;
+        let i = (null === (s = e.userStatus) || void 0 === s ? void 0 : s.enrolledAt) != null,
+            l = (!i && t === r.P.V2) || (i && n === r.P.V2) || (0, a.a)(e),
+            d = l ? u : c;
         return {
             component: d.component,
             collapsedHeight: d.getCollapsedHeight(e),
@@ -50,6 +50,6 @@ let c = {
             canCollapseOnBlur: d.canCollapseOnBlur(e),
             shouldExpandOnQuestComplete: d.shouldExpandOnQuestComplete(e),
             paddingVertical: d.getVerticalPadding(),
-            trackingCtx: { content: i ? o.jn.QUEST_BAR_V2 : o.jn.QUEST_BAR }
+            trackingCtx: { content: l ? o.jn.QUEST_BAR_V2 : o.jn.QUEST_BAR }
         };
     };

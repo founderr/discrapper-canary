@@ -2,8 +2,8 @@ var o = n(200651),
     r = n(192379),
     s = n(120356),
     a = n.n(s),
-    l = n(100621),
-    i = n(442837),
+    i = n(752877),
+    l = n(442837),
     c = n(950104),
     d = n(780384),
     u = n(481060),
@@ -34,7 +34,7 @@ var o = n(200651),
 let M = r.forwardRef(function (e, t) {
     var n, s;
     let { children: _, className: M, collapsedHeight: W, expansionSpring: L, isExpanded: Q, isExpansionAnimationComplete: Z, onCtxMenuOpen: D, onCtxMenuClose: H, onCtxMenuSelect: V, quest: U, useReducedMotion: z } = e,
-        F = (0, i.e7)([C.Z], () => C.Z.isEnrolling(U.id), [U]),
+        F = (0, l.e7)([C.Z], () => C.Z.isEnrolling(U.id), [U]),
         G = (0, h.B6)(U.config.expiresAt),
         Y = N.r.build(U.config),
         K = (0, h.B6)(Y.rewardsExpireAt),
@@ -62,8 +62,8 @@ let M = r.forwardRef(function (e, t) {
         er = Y.features.has(w.S7.POST_ENROLLMENT_CTA),
         es = (0, h.Rf)(U),
         ea = (0, h.Jf)(U),
-        el = null != ea ? ea.progress > 0 : es.progressSeconds > 0,
-        ei = (null === (n = U.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null,
+        ei = null != ea ? ea.progress > 0 : es.progressSeconds > 0,
+        el = (null === (n = U.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null,
         ec = (null === (s = U.userStatus) || void 0 === s ? void 0 : s.completedAt) != null,
         ed = r.useMemo(() => (0, j.Xv)(U.config), [U.config]),
         eu = Q && Z,
@@ -86,13 +86,13 @@ let M = r.forwardRef(function (e, t) {
                 '--custom-cta-color-active': (0, c.r5)(e, 0.35)
             };
         }, [U.config.colors.primary]);
-    return (0, o.jsxs)(l.animated.div, {
+    return (0, o.jsxs)(i.animated.div, {
         className: a()(M, P.contentExpanded, { [P.contentInteractable]: eu }),
         style: {
             backgroundColor: U.config.colors.secondary,
             transform: ec
                 ? void 0
-                : (0, l.to)(
+                : (0, i.to)(
                       [
                           L.to({
                               range: [0, 1],
@@ -110,7 +110,7 @@ let M = r.forwardRef(function (e, t) {
             _,
             (0, o.jsx)('div', {
                 'aria-hidden': !eu,
-                children: ei
+                children: el
                     ? (0, o.jsxs)('div', {
                           className: P.questAcceptedContent,
                           ref: t,
@@ -188,7 +188,7 @@ let M = r.forwardRef(function (e, t) {
                                         children: ep
                                     }),
                               (0, o.jsx)(T.Z, { quest: U }),
-                              !em && !el && !J && er && (0, o.jsx)(O, { onClick: eu ? eo : void 0 })
+                              !em && !ei && !J && er && (0, o.jsx)(O, { onClick: eu ? eo : void 0 })
                           ]
                       })
                     : (0, o.jsxs)('div', {

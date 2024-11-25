@@ -29,18 +29,18 @@ function g(e) {
         N = r.useMemo(() => {
             let e = h ? 30 : n.length,
                 t = [];
-            for (let l = 0; l < e; l++) {
-                var r;
+            for (let a = 0; a < e; a++) {
+                var r, l;
                 t.push(
                     (0, i.jsx)(
                         u.Eo,
                         {
-                            guildId: null !== (r = n[l]) && void 0 !== r ? r : null,
-                            index: l,
-                            onClick: (e) => f(e, l, v, p),
+                            guildId: null !== (r = n[a]) && void 0 !== r ? r : null,
+                            index: a,
+                            onClick: (e) => f(e, a, v, p),
                             onView: (e) => _(e, v)
                         },
-                        n[l]
+                        null !== (l = n[a]) && void 0 !== l ? l : a
                     )
                 );
             }

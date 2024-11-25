@@ -114,7 +114,7 @@ t.Z = function (e) {
         em = ec || ed,
         eh = (0, Q.f)(t),
         { previewingVariantIndex: ep } = eh,
-        ef = (0, H.k)(t),
+        ef = (0, H.T)(t),
         eg = (0, h.e7)([b.Z], () => b.Z.useReducedMotion),
         eC = B.ZP.canUseCollectibles(n),
         ev = (0, Z.XM)(t, eC, !1),

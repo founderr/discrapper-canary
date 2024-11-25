@@ -2,8 +2,8 @@ var o = n(200651),
     r = n(192379),
     s = n(120356),
     a = n.n(s),
-    l = n(100621),
-    i = n(481060),
+    i = n(752877),
+    l = n(481060),
     c = n(617136),
     d = n(497505),
     u = n(918701),
@@ -31,7 +31,7 @@ t.Z = (e) => {
         }, [t]),
         A = N && T,
         y = (0, p.vI)(t, h.dr.QUESTS_BAR, !0),
-        R = (0, o.jsx)(i.Clickable, {
+        R = (0, o.jsx)(l.Clickable, {
             onClick: S,
             className: a()(v.clickable, { [v.logo]: A }),
             children: (0, o.jsx)(m.ZP, {
@@ -40,13 +40,13 @@ t.Z = (e) => {
                 withGameTile: !1
             })
         });
-    return (0, o.jsxs)(l.animated.div, {
+    return (0, o.jsxs)(i.animated.div, {
         className: a()(v.wrapper, {
             [v.interactable]: A,
             [v.rewardHighlightWrapper]: y
         }),
         style: {
-            transform: (0, l.to)(
+            transform: (0, i.to)(
                 [
                     s.to({
                         range: [0, 1],
@@ -57,7 +57,7 @@ t.Z = (e) => {
             )
         },
         children: [
-            (0, o.jsx)(l.animated.div, {
+            (0, o.jsx)(i.animated.div, {
                 className: v.opaqueExpandedBackground,
                 style: {
                     opacity: s.to({
@@ -77,7 +77,7 @@ t.Z = (e) => {
                   })
                 : (0, o.jsxs)(o.Fragment, {
                       children: [
-                          (0, o.jsx)(l.animated.img, {
+                          (0, o.jsx)(i.animated.img, {
                               alt: '',
                               className: v.wreathIcon,
                               style: {
@@ -88,9 +88,9 @@ t.Z = (e) => {
                               },
                               src: n(858595)
                           }),
-                          (0, o.jsx)(l.animated.div, {
+                          (0, o.jsx)(i.animated.div, {
                               style: {
-                                  transform: (0, l.to)(
+                                  transform: (0, i.to)(
                                       [
                                           s.to({
                                               range: [0, 1],
@@ -106,14 +106,14 @@ t.Z = (e) => {
                               },
                               children: R
                           }),
-                          (0, o.jsx)(l.animated.div, {
+                          (0, o.jsx)(i.animated.div, {
                               className: v.questAvailable,
                               style: {
                                   opacity: s.to({
                                       range: [0, 1],
                                       output: [0.7, 0]
                                   }),
-                                  transform: (0, l.to)(
+                                  transform: (0, i.to)(
                                       [
                                           s.to({
                                               range: [0, 1],
@@ -123,7 +123,7 @@ t.Z = (e) => {
                                       (e) => 'translate('.concat(e, 'px')
                                   )
                               },
-                              children: (0, o.jsx)(i.Text, {
+                              children: (0, o.jsx)(l.Text, {
                                   color: 'always-white',
                                   variant: 'text-xs/medium',
                                   className: v.questAvailableText,
@@ -132,7 +132,7 @@ t.Z = (e) => {
                           })
                       ]
                   }),
-            (0, o.jsxs)(l.animated.div, {
+            (0, o.jsxs)(i.animated.div, {
                 className: v.promotedBadgeWrapper,
                 style: {
                     opacity: s.to({
@@ -141,17 +141,17 @@ t.Z = (e) => {
                     })
                 },
                 children: [
-                    (0, o.jsxs)(i.Clickable, {
+                    (0, o.jsxs)(l.Clickable, {
                         className: v.promotedBadge,
                         onClick: B,
                         children: [
-                            (0, o.jsx)(i.Text, {
+                            (0, o.jsx)(l.Text, {
                                 color: 'always-white',
                                 variant: 'text-xs/normal',
                                 children: C.intl.string(C.t.o6FLcH)
                             }),
-                            (0, o.jsx)(i.CircleQuestionIcon, {
-                                color: i.tokens.colors.WHITE,
+                            (0, o.jsx)(l.CircleQuestionIcon, {
+                                color: l.tokens.colors.WHITE,
                                 className: v.promotedBadgeIcon
                             })
                         ]
@@ -165,11 +165,11 @@ t.Z = (e) => {
                         shouldShowDisclosure: !0,
                         showShareLink: !0,
                         children: (e) =>
-                            (0, o.jsx)(i.Clickable, {
+                            (0, o.jsx)(l.Clickable, {
                                 ...e,
                                 className: v.submenuWrapper,
                                 'aria-label': C.intl.string(C.t.DEoVWV),
-                                children: (0, o.jsx)(i.MoreHorizontalIcon, {
+                                children: (0, o.jsx)(l.MoreHorizontalIcon, {
                                     size: 'md',
                                     color: 'currentColor',
                                     className: a()(v.submenuIcon, v.white)

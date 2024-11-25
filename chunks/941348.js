@@ -2,8 +2,8 @@ var o = n(200651),
     r = n(192379),
     s = n(113434),
     a = n(308069),
-    l = n(613087),
-    i = n(457153),
+    i = n(613087),
+    l = n(457153),
     c = n(254197),
     d = n(321025),
     u = n(203338);
@@ -14,12 +14,12 @@ t.Z = function (e) {
         b = r.useRef(null),
         E = (null === (t = C.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
         N = (0, s.Rf)(C);
-    return (0, o.jsxs)(l.p, {
+    return (0, o.jsxs)(i.p, {
         expandedContentRef: n,
         collapsedContentRef: _,
         expansionSpring: p,
         children: [
-            (0, o.jsx)(i.Z, {
+            (0, o.jsx)(l.Z, {
                 ref: _,
                 className: u.content,
                 expansionSpring: p,

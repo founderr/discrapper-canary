@@ -2,8 +2,8 @@ var o = n(200651),
     r = n(192379),
     s = n(120356),
     a = n.n(s),
-    l = n(959078),
-    i = n(442837),
+    i = n(959078),
+    l = n(442837),
     c = n(481060),
     d = n(607070),
     u = n(553795),
@@ -55,7 +55,7 @@ function E(e) {
 function N(e) {
     let { quest: t, useReducedMotion: n } = e,
         s = (0, m.n)(),
-        i = (0, C.k3)(t.id, g.jn.QUEST_BAR_V2),
+        l = (0, C.k3)(t.id, g.jn.QUEST_BAR_V2),
         d = (0, C.g2)({ useReducedMotion: n }),
         {
             errorHints: v,
@@ -82,7 +82,7 @@ function N(e) {
                     ? () =>
                           (0, o.jsx)(o.Fragment, {
                               children: v.map((e, n) => {
-                                  if (e.type === l.K.EXPIRED_CREDENTIAL && s) {
+                                  if (e.type === i.K.EXPIRED_CREDENTIAL && s) {
                                       let r = u.Z.getAccount(e.connected_account_id, e.connected_account_type),
                                           s = (0, f.C9)(e),
                                           a = (0, f._j)(e);
@@ -146,7 +146,7 @@ function N(e) {
             }),
             (0, o.jsxs)('div', {
                 className: a()({ [_.opacity_50]: b }),
-                children: [B(), 0 === v.length ? null : (0, o.jsx)(E, { children: i })]
+                children: [B(), 0 === v.length ? null : (0, o.jsx)(E, { children: l })]
             })
         ]
     });
@@ -161,10 +161,10 @@ function T(e) {
 }
 t.Z = function (e) {
     let { quest: t, taskDetails: n } = e,
-        s = (0, i.e7)([d.Z], () => d.Z.useReducedMotion),
+        s = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         a = (0, x.z6)(),
         {
-            steps: l,
+            steps: i,
             hasConnectedAccounts: u,
             isProgressingQuestForLaunchedGame: p,
             isQuestComplete: m
@@ -172,8 +172,8 @@ t.Z = function (e) {
             var e;
             let r = a.xboxAndPlaystationAccounts.length > 0,
                 s = r && (0, f.Bz)(t),
-                l = h.r.build(t.config).application.name,
-                i = (null === (e = t.userStatus) || void 0 === e ? void 0 : e.completedAt) != null;
+                i = h.r.build(t.config).application.name,
+                l = (null === (e = t.userStatus) || void 0 === e ? void 0 : e.completedAt) != null;
             return {
                 steps: [
                     {
@@ -182,20 +182,20 @@ t.Z = function (e) {
                                 ...a,
                                 quest: t
                             }),
-                        isComplete: r || s || i
+                        isComplete: r || s || l
                     },
                     {
-                        renderContent: () => (0, o.jsx)(T, { text: j.intl.formatToPlainString(j.t['+8JB6e'], { gameTitle: l }) }),
-                        isComplete: s || i
+                        renderContent: () => (0, o.jsx)(T, { text: j.intl.formatToPlainString(j.t['+8JB6e'], { gameTitle: i }) }),
+                        isComplete: s || l
                     },
                     {
                         renderContent: () => (0, o.jsx)(T, { text: j.intl.formatToPlainString(j.t.HhfrYW, { numMinutes: n.targetMinutes }) }),
-                        isComplete: i
+                        isComplete: l
                     }
                 ],
                 hasConnectedAccounts: r,
                 isProgressingQuestForLaunchedGame: s,
-                isQuestComplete: i
+                isQuestComplete: l
             };
         }, [a, t, n]);
     return (0, o.jsxs)('div', {
@@ -213,12 +213,12 @@ t.Z = function (e) {
                 className: _.stepsWrapper,
                 children: [
                     (0, o.jsx)('ul', {
-                        children: l.map((e, t) =>
+                        children: i.map((e, t) =>
                             (0, o.jsx)(
                                 b,
                                 {
                                     isComplete: e.isComplete,
-                                    hasNextStep: t < l.length - 1,
+                                    hasNextStep: t < i.length - 1,
                                     children: e.renderContent()
                                 },
                                 t

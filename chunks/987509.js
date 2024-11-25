@@ -1,35 +1,35 @@
 n.d(t, {
     ZP: function () {
-        return A;
+        return S;
     },
     dL: function () {
-        return _;
+        return m;
     },
     hC: function () {
         return g;
     },
     hl: function () {
-        return m;
+        return p;
     },
     qx: function () {
-        return p;
+        return x;
     }
 }),
     n(47120),
     n(653041);
 var l = n(392711),
-    a = n(493683),
+    r = n(493683),
     i = n(212819),
-    r = n(938078),
-    s = n(823385),
+    s = n(938078),
+    a = n(823385),
     o = n(592125),
-    c = n(496675),
-    u = n(594174),
+    u = n(496675),
+    c = n(594174),
     d = n(823379),
     h = n(41837),
     f = n(981631);
 n(388032);
-function _(e) {
+function m(e) {
     let t = o.Z.getChannel(e);
     return (null == t ? void 0 : t.type) === f.d4z.DM
         ? {
@@ -44,25 +44,25 @@ function _(e) {
 function g(e) {
     return ''.concat(e.type, '-').concat(e.id);
 }
-function m(e) {
+function p(e) {
     if ('channel' === e.type) return e.id;
     let t = o.Z.getDMFromUserId(e.id);
     if (null != t) return t;
 }
-async function p(e) {
-    let t = m(e);
+async function x(e) {
+    let t = p(e);
     if (null != t) return t;
     if ('user' === e.type)
         try {
-            return await a.Z.getOrEnsurePrivateChannel(e.id);
+            return await r.Z.getOrEnsurePrivateChannel(e.id);
         } catch (e) {
             return;
         }
 }
-function E(e) {
-    if ('user' !== e.type) return (0, r.Z)(e.id);
+function b(e) {
+    if ('user' !== e.type) return (0, s.Z)(e.id);
     {
-        let t = u.default.getUser(e.id);
+        let t = c.default.getUser(e.id);
         return null != t
             ? {
                   type: i.h8.USER,
@@ -72,36 +72,36 @@ function E(e) {
             : null;
     }
 }
-function I(e, t) {
+function v(e, t) {
     let n;
     let l = new Set();
     if (null != t) for (let e of t) l.add(e);
-    let a = [];
+    let r = [];
     for (let t of e) {
         if (null != t)
             if (t.type === i.h8.HEADER) n = t;
             else {
                 let { id: e } = t.record;
-                !l.has(e) && (l.add(e), null != n && (a.push(n), (n = void 0)), a.push(t));
+                !l.has(e) && (l.add(e), null != n && (r.push(n), (n = void 0)), r.push(t));
             }
     }
-    return a;
+    return r;
 }
-function S(e, t) {
+function C(e, t) {
     return e.filter((e) => {
         var n, l;
-        return (0, d.lm)(e) && (e.type === i.h8.HEADER || ((0, h.o)(e) && ((n = e), (l = t), n.type === i.h8.USER ? l || null != o.Z.getDMChannelFromUserId(n.record.id) : n.type === i.h8.GROUP_DM || (n.record.type !== f.d4z.GUILD_FORUM && n.record.type !== f.d4z.GUILD_MEDIA && c.Z.can(f.Plq.VIEW_CHANNEL, n.record) && c.Z.can(f.Plq.SEND_MESSAGES, n.record)))));
+        return (0, d.lm)(e) && (e.type === i.h8.HEADER || ((0, h.o)(e) && ((n = e), (l = t), n.type === i.h8.USER ? l || null != o.Z.getDMChannelFromUserId(n.record.id) : n.type === i.h8.GROUP_DM || (n.record.type !== f.d4z.GUILD_FORUM && n.record.type !== f.d4z.GUILD_MEDIA && u.Z.can(f.Plq.VIEW_CHANNEL, n.record) && u.Z.can(f.Plq.SEND_MESSAGES, n.record)))));
     });
 }
-function A(e) {
-    let { results: t, hasQuery: n, queryMode: a, frequentChannels: i, targetDestination: o, selectedDestinations: c, pinnedDestinations: u, originDestination: d, includeMissingDMs: h } = e;
-    if (n) return I(S(t, h));
-    let f = null != u && u.length > 0 ? u.map((e) => E(e)) : [],
-        _ = s.Z.getChannelHistory(),
-        g = _.length > 0 ? _.map((e) => (0, r.Z)(e)) : [],
-        m = i.length > 0 ? i.map((e) => (0, r.Z)(e.id)) : [],
-        p = S([...f, null != o ? E(o) : null, ...g, ...m], h),
-        A = (null == c ? void 0 : c.find((e) => (0, l.isEqual)(e, d))) != null,
-        C = null == d || A ? [] : [d.id];
-    return null != a ? I(p.filter((e) => e.type === a)) : I(p, C).slice(0, 15);
+function S(e) {
+    let { results: t, hasQuery: n, queryMode: r, frequentChannels: i, targetDestination: o, selectedDestinations: u, pinnedDestinations: c, originDestination: d, includeMissingDMs: h } = e;
+    if (n) return v(C(t, h));
+    let f = null != c && c.length > 0 ? c.map((e) => b(e)) : [],
+        m = a.Z.getChannelHistory(),
+        g = m.length > 0 ? m.map((e) => (0, s.Z)(e)) : [],
+        p = i.length > 0 ? i.map((e) => (0, s.Z)(e.id)) : [],
+        x = C([...f, null != o ? b(o) : null, ...g, ...p], h),
+        S = (null == u ? void 0 : u.find((e) => (0, l.isEqual)(e, d))) != null,
+        Z = null == d || S ? [] : [d.id];
+    return null != r ? v(x.filter((e) => e.type === r)) : v(x, Z).slice(0, 15);
 }

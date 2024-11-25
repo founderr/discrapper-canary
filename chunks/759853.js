@@ -3,9 +3,9 @@ var o = n(200651),
     r = n(192379),
     s = n(120356),
     a = n.n(s),
-    l = n(703533),
-    i = n(995295),
-    c = n(100621),
+    i = n(703533),
+    l = n(995295),
+    c = n(752877),
     d = n(442837),
     u = n(110924),
     p = n(607070),
@@ -28,23 +28,23 @@ t.Z = (e) => {
         [R, w] = r.useState(null),
         [I, k] = r.useState(null),
         q = r.useRef(
-            new l.qA({
+            new i.qA({
                 gravity: 0,
                 wind: 0
             })
         ),
-        P = (0, l.uR)(R, I),
+        P = (0, i.uR)(R, I),
         M = r.useCallback(() => {
             if (B) return;
             let e = j.current,
                 t = S.current;
             if (null != t && null != e && P.isReady) {
                 var n, o, r, s;
-                let { x: a, y: l } = e.getBoundingClientRect(),
-                    { x: i, y: c } = t.getBoundingClientRect();
+                let { x: a, y: i } = e.getBoundingClientRect(),
+                    { x: l, y: c } = t.getBoundingClientRect();
                 P.createMultipleConfetti(
-                    ((n = a - i),
-                    (o = l - c),
+                    ((n = a - l),
+                    (o = i - c),
                     (r = e.clientHeight),
                     (s = e.clientWidth),
                     {
@@ -131,12 +131,12 @@ t.Z = (e) => {
                               .to((e) => 'translateY('.concat(e, 'px)'))
                       },
                       children: [
-                          (0, o.jsx)(l.O_, {
+                          (0, o.jsx)(i.O_, {
                               ref: w,
                               className: f.confetti,
                               environment: q.current
                           }),
-                          (0, o.jsx)(l.Ji, {
+                          (0, o.jsx)(i.Ji, {
                               ref: k,
                               sprites: [h],
                               colors: C,
@@ -144,7 +144,7 @@ t.Z = (e) => {
                               spriteHeight: g.Ko
                           }),
                           null != s.current &&
-                              (0, i.createPortal)(
+                              (0, l.createPortal)(
                                   (0, o.jsx)(c.animated.div, {
                                       className: a()(f.borders, f.bordersBottom),
                                       style: { opacity: b }
