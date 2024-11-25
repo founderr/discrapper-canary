@@ -1,16 +1,23 @@
 n.d(t, {
     Ji: function () {
-        return l;
+        return d;
     },
     QX: function () {
-        return u;
+        return f;
+    },
+    XN: function () {
+        return c;
+    },
+    jH: function () {
+        return i;
     }
 });
 var r,
     i,
-    a = n(818083);
-n(638395), n(171393);
-let s = (0, a.B)({
+    a = n(818083),
+    s = n(638395);
+n(171393);
+let o = (0, a.B)({
         kind: 'user',
         id: '2024-07_icymi',
         label: 'In-case-you-missed-it tab',
@@ -23,7 +30,7 @@ let s = (0, a.B)({
             }
         ]
     }),
-    o = (0, a.B)({
+    l = (0, a.B)({
         kind: 'user',
         id: '2024-10_icymi_sorting_fe',
         label: 'FE experiment for sorting on ICYMI',
@@ -36,16 +43,60 @@ let s = (0, a.B)({
             }
         ]
     });
-function l(e) {
+((r = i || (i = {}))[(r.BUTTON = 1)] = 'BUTTON'), (r[(r.UNREADS_AT_TOP = 2)] = 'UNREADS_AT_TOP');
+let u = (0, a.B)({
+    kind: 'user',
+    id: '2024-10_merge_notifications_tab',
+    label: 'Merge notifications tab',
+    defaultConfig: {
+        enabled: !1,
+        variant: 1
+    },
+    treatments: [
+        {
+            id: 1,
+            label: 'Merge notifications tab - keep as button on the top right of ICYMI tab',
+            config: {
+                enabled: !0,
+                variant: 1
+            }
+        },
+        {
+            id: 2,
+            label: 'Merge notifications tab - move unread notifs to the top of ICYMI tab',
+            config: {
+                enabled: !0,
+                variant: 2
+            }
+        }
+    ]
+});
+function c(e) {
+    let { location: t, autoTrackExposure: n = !0 } = e,
+        r = s.Z.get('hide_icymi_tab'),
+        i = d(t, !1),
+        { enabled: a, variant: o } = u.getCurrentConfig(
+            { location: t },
+            {
+                autoTrackExposure: n,
+                disable: !0
+            }
+        );
+    return {
+        enabled: a && !r && i,
+        variant: o
+    };
+}
+function d(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        n = s.getCurrentConfig(
+        n = o.getCurrentConfig(
             { location: e },
             {
                 disable: !0,
                 autoTrackExposure: t
             }
         ).enabled,
-        r = o.getCurrentConfig(
+        r = l.getCurrentConfig(
             { location: e },
             {
                 disable: !0,
@@ -54,49 +105,20 @@ function l(e) {
         ).enabled;
     return n || r;
 }
-((r = i || (i = {}))[(r.BUTTON = 1)] = 'BUTTON'),
-    (r[(r.UNREADS_AT_TOP = 2)] = 'UNREADS_AT_TOP'),
-    (0, a.B)({
-        kind: 'user',
-        id: '2024-10_merge_notifications_tab',
-        label: 'Merge notifications tab',
-        defaultConfig: {
-            enabled: !1,
-            variant: 1
-        },
-        treatments: [
-            {
-                id: 1,
-                label: 'Merge notifications tab - keep as button on the top right of ICYMI tab',
-                config: {
-                    enabled: !0,
-                    variant: 1
-                }
-            },
-            {
-                id: 2,
-                label: 'Merge notifications tab - move unread notifs to the top of ICYMI tab',
-                config: {
-                    enabled: !0,
-                    variant: 2
-                }
-            }
-        ]
-    }),
-    (0, a.B)({
-        kind: 'user',
-        id: '2024-07_icymi_negative_items',
-        label: 'icymi negative content (debugging only)',
-        defaultConfig: { enabled: !1 },
-        treatments: [
-            {
-                id: 1,
-                label: 'allow negative items only',
-                config: { enabled: !0 }
-            }
-        ]
-    });
-let u = (0, a.B)({
+(0, a.B)({
+    kind: 'user',
+    id: '2024-07_icymi_negative_items',
+    label: 'icymi negative content (debugging only)',
+    defaultConfig: { enabled: !1 },
+    treatments: [
+        {
+            id: 1,
+            label: 'allow negative items only',
+            config: { enabled: !0 }
+        }
+    ]
+});
+let f = (0, a.B)({
     kind: 'user',
     id: '2024-10_icymi_legacy',
     label: 'Legacy ICYMI experiment',
