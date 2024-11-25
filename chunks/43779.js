@@ -7,8 +7,8 @@ var o = n(200651),
     r = n(192379),
     s = n(120356),
     a = n.n(s),
-    l = n(100621),
-    i = n(442837),
+    i = n(752877),
+    l = n(442837),
     c = n(481060),
     d = n(393238),
     u = n(607070),
@@ -44,14 +44,18 @@ function b(e) {
         Q = (0, p.Bd)(b),
         Z = r.useCallback(
             (e) =>
-                (0, o.jsx)(c.Text, {
-                    variant: 'text-md/semibold',
-                    color: 'text-normal',
-                    tag: 'span',
-                    className: j.header,
-                    children: e
-                }),
-            []
+                (0, o.jsx)(
+                    c.Text,
+                    {
+                        variant: 'text-md/semibold',
+                        color: 'text-normal',
+                        tag: 'span',
+                        className: j.header,
+                        children: e
+                    },
+                    ''.concat(b.id, '_reward')
+                ),
+            [b.id]
         ),
         D = r.useMemo(() => (O ? Z(y) : v.intl.format(v.t['0IUT4e'], { rewardWithArticleHook: () => Z(R) })), [y, R, O, Z]),
         H = r.useMemo(() => {
@@ -63,11 +67,11 @@ function b(e) {
                     children: Q
                 });
         }, [Q]),
-        V = (0, i.e7)([u.Z], () => u.Z.useReducedMotion);
+        V = (0, l.e7)([u.Z], () => u.Z.useReducedMotion);
     return (0, o.jsxs)('div', {
         className: a()(j.container),
         children: [
-            (0, o.jsxs)(l.animated.div, {
+            (0, o.jsxs)(i.animated.div, {
                 style: {
                     maxHeight: P.to([0, 1], [104, (null != k ? k : 0) + 12])
                 },
@@ -135,7 +139,7 @@ function b(e) {
                         ]
                     }),
                     q &&
-                        (0, o.jsx)(l.animated.div, {
+                        (0, o.jsx)(i.animated.div, {
                             style: {
                                 opacity: P.to([0, 1], [1, 0])
                             },
