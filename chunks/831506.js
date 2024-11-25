@@ -37,7 +37,7 @@ function C(e, t, n, i) {
     !(function (e, t, n) {
         var i;
         let r = p[e];
-        if ((null == r && (r = p[e] = {}), (r[t] = n), m.Z.isBlocked(e))) return;
+        if ((null == r && (r = p[e] = {}), (r[t] = n), m.Z.isBlocked(e) || m.Z.isIgnored(e))) return;
         let l = null !== (i = _[n]) && void 0 !== i ? i : new Set();
         (_[n] = l), l.add(e);
     })(t, e, l);
@@ -62,7 +62,17 @@ function N() {
         t = h.Z.getActivities();
     return C(f.ME, e, t);
 }
-class v extends (i = c.ZP.Store) {
+function v(e) {
+    let { relationship: t } = e;
+    if (!m.Z.isBlocked(t.id) && !m.Z.isIgnored(t.id)) return !1;
+    let n = p[t.id];
+    if (null == n) return !1;
+    for (let e of s().values(n)) {
+        let n = _[e];
+        null != n && n.delete(t.id);
+    }
+}
+class T extends (i = c.ZP.Store) {
     initialize() {
         this.syncWith([h.Z], N), this.waitFor(h.Z, m.Z);
     }
@@ -77,7 +87,7 @@ class v extends (i = c.ZP.Store) {
     }
 }
 (a = 'GamePartyStore'),
-    (l = 'displayName') in (r = v)
+    (l = 'displayName') in (r = T)
         ? Object.defineProperty(r, l, {
               value: a,
               enumerable: !0,
@@ -85,7 +95,7 @@ class v extends (i = c.ZP.Store) {
               writable: !0
           })
         : (r[l] = a),
-    (t.Z = new v(u.Z, {
+    (t.Z = new T(u.Z, {
         CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
             let { guilds: t, presences: n } = e,
                 i = !1;
@@ -130,16 +140,8 @@ class v extends (i = c.ZP.Store) {
                 )
             );
         },
-        RELATIONSHIP_ADD: function (e) {
-            let { relationship: t } = e;
-            if (!m.Z.isBlocked(t.id)) return !1;
-            let n = p[t.id];
-            if (null == n) return !1;
-            for (let e of s().values(n)) {
-                let n = _[e];
-                null != n && n.delete(t.id);
-            }
-        },
+        RELATIONSHIP_ADD: v,
+        RELATIONSHIP_UPDATE: v,
         RELATIONSHIP_REMOVE: function (e) {
             let { relationship: t } = e,
                 n = p[t.id];
