@@ -24,8 +24,8 @@ let p = {
 function m(e) {
     let { locked: t, pinned: n } = e,
         [o, s] = l.useState(0),
-        [m, v] = l.useState(0),
-        [g, E] = l.useState(0),
+        [m, g] = l.useState(0),
+        [v, E] = l.useState(0),
         Z = l.useRef(0),
         [C, x] = l.useState(0),
         { timeToLiveMs: S, reappearTimeMs: I } = c.ZP.useState(
@@ -45,7 +45,7 @@ function m(e) {
             () => (
                 (Z.current = setInterval(() => {
                     let e = Date.now();
-                    v(e),
+                    g(e),
                         E((t) => {
                             if (0 === t) return e;
                             let n = e - t,
@@ -64,7 +64,7 @@ function m(e) {
             s(Date.now()), x((e) => e + 1);
         },
         y = o > 0 && m - o < 1000,
-        T = (0, d.useTransition)(g > 0 && g < m && m - g < S, {
+        T = (0, d.useTransition)(v > 0 && v < m && m - v < S, {
             from: { opacity: 0 },
             enter: { opacity: 1 },
             leave: { opacity: 0 },

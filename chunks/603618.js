@@ -21,8 +21,8 @@ var i = n(200651),
     f = n(99690),
     p = n(620662),
     m = n(835473),
-    v = n(194082),
-    g = n(297781),
+    g = n(194082),
+    v = n(297781),
     E = n(656709),
     Z = n(567409),
     C = n(703656),
@@ -44,10 +44,10 @@ function A(e) {
     let { entry: t, currentUserActivity: n, idx: o } = e,
         d = (0, s.e7)([N.default], () => N.default.getUser(t.author_id)),
         [f, m] = l.useState('unsent'),
-        [v, g] = l.useState(!1);
+        [g, v] = l.useState(!1);
     l.useEffect(() => {
         if ('sent' === f) {
-            let e = setTimeout(() => g(!0), 2000);
+            let e = setTimeout(() => v(!0), 2000);
             return () => clearTimeout(e);
         }
     }, [f]);
@@ -111,7 +111,7 @@ function A(e) {
             (0, i.jsx)(a.Button, {
                 ...e,
                 submitting: 'sending' === f,
-                onClick: v ? S : x,
+                onClick: g ? S : x,
                 className: k.inviteButton,
                 wrapperClassName: k.inviteButtonWrapper,
                 innerClassName: k.inviteButtonInner,
@@ -121,7 +121,7 @@ function A(e) {
                 grow: !1,
                 children:
                     'sent' === f
-                        ? v
+                        ? g
                             ? (0, i.jsx)(a.ChatIcon, {
                                   color: 'currentColor',
                                   size: 'sm'
@@ -159,10 +159,10 @@ function M(e) {
                 }
             }
         },
-        v = w.intl.string(w.t.OKsSCQ);
+        g = w.intl.string(w.t.OKsSCQ);
     return (0, i.jsx)(a.Tooltip, {
-        text: v,
-        'aria-label': v,
+        text: g,
+        'aria-label': g,
         children: (e) =>
             (0, i.jsx)(a.Button, {
                 ...e,
@@ -229,13 +229,13 @@ function z(e) {
                                       color: 'header-primary',
                                       children: T.ZP.getName(void 0, void 0, o)
                                   }),
-                                  null != r && (0, i.jsx)(v.ZP, { className: k.liveIndicator })
+                                  null != r && (0, i.jsx)(g.ZP, { className: k.liveIndicator })
                               ]
                           }),
-                          (0, i.jsx)(g.Gk, {
-                              location: g.Gt.OVERLAY,
+                          (0, i.jsx)(v.Gk, {
+                              location: v.Gt.OVERLAY,
                               className: k.badgesContainer,
-                              children: [g.OV, g.wO, g.f, g.v1, g.pQ].map((e, n) => (0, i.jsx)(e, { entry: t }, 'entry-'.concat(n)))
+                              children: [v.OV, v.wO, v.f, v.v1, v.pQ].map((e, n) => (0, i.jsx)(e, { entry: t }, 'entry-'.concat(n)))
                           })
                       ]
                   }),

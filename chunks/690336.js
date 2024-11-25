@@ -14,7 +14,7 @@ var i = n(200651),
 function m(e) {
     return e.widget.id;
 }
-function v(e, t, n, l) {
+function g(e, t, n, l) {
     return n === r.TransitionStates.YEETED
         ? null
         : (0, i.jsx)(
@@ -27,7 +27,7 @@ function v(e, t, n, l) {
               e
           );
 }
-let g = [];
+let v = [];
 t.Z = l.memo(function (e) {
     let { className: t } = e,
         n = (0, f.Z)(),
@@ -36,7 +36,7 @@ t.Z = l.memo(function (e) {
             [s.Z],
             () => {
                 let e = s.Z.getLayout(p.OVERLAY_V3_LAYOUT_ID);
-                if (null == e) return g;
+                if (null == e) return v;
                 let t = [];
                 for (let n of e.widgets) {
                     let e = s.Z.getWidget(n);
@@ -64,7 +64,7 @@ t.Z = l.memo(function (e) {
         );
     return (0, i.jsx)(r.TransitionGroup, {
         items: E,
-        renderItem: v,
+        renderItem: g,
         getItemKey: m,
         wrapChildren: Z
     });

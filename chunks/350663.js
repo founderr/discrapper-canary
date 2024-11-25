@@ -17,10 +17,10 @@ var i,
     f = n(27457),
     p = n(199902),
     m = n(592125),
-    v = n(944486),
-    g = n(981631),
+    g = n(944486),
+    v = n(981631),
     E = n(705617);
-let Z = new Set([g.jm8.ENDED, g.jm8.FAILED, g.jm8.PAUSED]);
+let Z = new Set([v.jm8.ENDED, v.jm8.FAILED, v.jm8.PAUSED]);
 function C(e) {
     let { participant: t, width: i, locked: l, channel: r } = e,
         s = (0, c.bp)(),
@@ -61,7 +61,7 @@ function C(e) {
     (l.VERTICAL = 'vertical'),
     (t.Z = r.memo(function (e) {
         let { tileWidth: t, layout: n, locked: i, streamParticipants: l, participantsVersion: r } = e,
-            s = (0, u.e7)([v.Z], () => v.Z.getVoiceChannelId()),
+            s = (0, u.e7)([g.Z], () => g.Z.getVoiceChannelId()),
             d = (0, u.e7)([m.Z], () => m.Z.getChannel(s), [s]);
         return (0, o.jsx)('div', {
             className: a()({

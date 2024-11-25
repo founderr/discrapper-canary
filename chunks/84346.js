@@ -11,8 +11,8 @@ var i = n(200651),
     f = n(134849),
     p = n(501787),
     m = n(981631),
-    v = n(388032);
-let g = {
+    g = n(388032);
+let v = {
     [m.Odu.VIDEO]: {
         renderWidget(e) {
             let { widget: t, locked: n, size: l, padding: o, borderWidth: r } = e;
@@ -24,7 +24,7 @@ let g = {
                 width: 'auto' === l.width ? 0 : l.width - 2 * o - 2 * r
             });
         },
-        renderTitle: () => (0, i.jsx)(h.PI, { children: v.intl.string(v.t.UPvOiY) }),
+        renderTitle: () => (0, i.jsx)(h.PI, { children: g.intl.string(g.t.UPvOiY) }),
         renderButtons: (e, t) =>
             (0, i.jsxs)(i.Fragment, {
                 children: [
@@ -81,7 +81,7 @@ let g = {
                 isPreviewingInGame: !1
             });
         },
-        renderTitle: () => (0, i.jsx)(h.PI, { children: v.intl.string(v.t.nFv3GR) }),
+        renderTitle: () => (0, i.jsx)(h.PI, { children: g.intl.string(g.t.nFv3GR) }),
         renderButtons: (e, t) =>
             (0, i.jsxs)(i.Fragment, {
                 children: [
@@ -169,7 +169,7 @@ let g = {
                 borderWidth: 2
             });
         },
-        renderTitle: () => (0, i.jsx)(h.PI, { children: v.intl.string(v.t['386XRk']) }),
+        renderTitle: () => (0, i.jsx)(h.PI, { children: g.intl.string(g.t['386XRk']) }),
         renderButtons: (e, t) =>
             (0, i.jsxs)(i.Fragment, {
                 children: [
@@ -237,7 +237,7 @@ let g = {
             let { locked: t } = e;
             return (0, i.jsx)(f.Z, { locked: t });
         },
-        renderTitle: () => (0, i.jsx)(h.PI, { children: v.intl.string(v.t.gnKWdX) }),
+        renderTitle: () => (0, i.jsx)(h.PI, { children: g.intl.string(g.t.gnKWdX) }),
         renderButtons: (e, t) =>
             (0, i.jsxs)(i.Fragment, {
                 children: [
@@ -270,8 +270,8 @@ let g = {
     },
     [m.Odu.ACTIVITY]: {
         renderWidget: () => (0, i.jsx)(o.Z, {}),
-        renderTitle: () => (0, i.jsx)(h.PI, { children: v.intl.string(v.t['6gwSFR']) }),
+        renderTitle: () => (0, i.jsx)(h.PI, { children: g.intl.string(g.t['6gwSFR']) }),
         renderButtons: () => null
     }
 };
-t.Z = g;
+t.Z = v;

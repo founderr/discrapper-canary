@@ -17,8 +17,8 @@ var i = n(200651),
     f = n(350663),
     p = n(388627),
     m = n(757152);
-let v = [];
-function g(e, t, n, i) {
+let g = [];
+function v(e, t, n, i) {
     let l = (i - 1) * 12;
     return e === f.C.HORIZONTAL ? Math.min(Math.max((t - l) / i, 256), Math.max((16 * n) / 9, 256)) : Math.min(Math.max(t, 256), Math.max((((n - l) / i) * 16) / 9, 256));
 }
@@ -38,7 +38,7 @@ function E(e) {
             () => {
                 if (null == y)
                     return {
-                        streamParticipants: v,
+                        streamParticipants: g,
                         participantsVersion: -1
                     };
                 let e = new Set(u.Z.getAllActiveStreamsForChannel(y).map((e) => (0, a.V9)(e))),
@@ -59,8 +59,8 @@ function E(e) {
         k = I ? f.C.HORIZONTAL : f.C.VERTICAL,
         { tileWidth: A } = (function (e, t, n, i, o) {
             let r = (function (e, t, n, i) {
-                    let l = g(f.C.HORIZONTAL, e, t, n),
-                        o = g(f.C.VERTICAL, e, t, n);
+                    let l = v(f.C.HORIZONTAL, e, t, n),
+                        o = v(f.C.VERTICAL, e, t, n);
                     switch (i) {
                         case f.C.VERTICAL:
                             return o;
@@ -70,7 +70,7 @@ function E(e) {
                     let r = ((9 * o) / 16 + 12) * n - 12;
                     return e > (16 * t) / 9 ? l : r <= t ? o : (9 * l) / 16 <= t ? l : o;
                 })(n, i, t, o),
-                s = g(f.C.VERTICAL, n, i, t),
+                s = v(f.C.VERTICAL, n, i, t),
                 a = null != o ? o : r === s ? f.C.VERTICAL : f.C.HORIZONTAL,
                 [u, d] = l.useState(r);
             return (

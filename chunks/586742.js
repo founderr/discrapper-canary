@@ -16,15 +16,15 @@ var i = n(200651),
     f = n(352978),
     p = n(27457),
     m = n(796638),
-    v = n(592125),
-    g = n(944486),
+    g = n(592125),
+    v = n(944486),
     E = n(906037),
     Z = n(501787),
     C = n(65154),
     x = n(253653);
 function S(e) {
     let { context: t = C.Yn.DEFAULT, participants: o, locked: s, widget: u, channel: d, width: c, height: h, containerRef: m } = e,
-        v = (e, l) => {
+        g = (e, l) => {
             (0, a.jW)(l, async () => {
                 let { default: l } = await Promise.all([n.e('79695'), n.e('69220'), n.e('50261')]).then(n.bind(n, 881351));
                 return (n) =>
@@ -36,7 +36,7 @@ function S(e) {
                     });
             });
         },
-        g = o.length > 0 && null != t && null != d && (!s || u.pinned);
+        v = o.length > 0 && null != t && null != d && (!s || u.pinned);
     l.useEffect(() => {
         (0, E.m3)(
             {
@@ -45,11 +45,11 @@ function S(e) {
                 widget: u.type,
                 isPreviewingInGame: !1
             },
-            g
+            v
         );
-    }, [s, u, g]);
+    }, [s, u, v]);
     let Z = 'boolean' != typeof u.meta.horizontal || u.meta.horizontal;
-    return g
+    return v
         ? (0, i.jsx)('div', {
               ref: m,
               className: r()({
@@ -76,7 +76,7 @@ function S(e) {
                                 inPopout: !0,
                                 inCall: !0,
                                 noBorder: !0,
-                                onContextMenu: s ? void 0 : v,
+                                onContextMenu: s ? void 0 : g,
                                 forceIdle: s
                             },
                             n.id
@@ -86,7 +86,7 @@ function S(e) {
         : null;
 }
 function I(e) {
-    let t = (0, s.e7)([g.Z, v.Z], () => v.Z.getChannel(g.Z.getVoiceChannelId())),
+    let t = (0, s.e7)([v.Z, g.Z], () => g.Z.getChannel(v.Z.getVoiceChannelId())),
         n = (0, h.ZP)(t),
         o = (0, s.Wu)([c.Z], () => (null != t ? c.Z.getVideoParticipants(t.id) : [])),
         r = (0, s.e7)([c.Z], () => (null != t ? c.Z.getParticipantsVersion(t.id) : 0)),

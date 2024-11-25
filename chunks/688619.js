@@ -320,8 +320,8 @@ var t, r;
                 }
             });
         var q = i.unpack,
-            J = i.last,
-            z = Math.round,
+            z = i.last,
+            J = Math.round,
             Q = function () {
                 for (var e = [], t = arguments.length; t--; ) e[t] = arguments[t];
                 var r = q(e, 'rgba'),
@@ -329,11 +329,11 @@ var t, r;
                     a = r[1],
                     _ = r[2],
                     o = r[3],
-                    i = J(e) || 'auto';
-                void 0 === o && (o = 1), 'auto' === i && (i = o < 1 ? 'rgba' : 'rgb'), (n = z(n)), (a = z(a));
-                var E = '000000' + ((n << 16) | (a << 8) | (_ = z(_))).toString(16);
+                    i = z(e) || 'auto';
+                void 0 === o && (o = 1), 'auto' === i && (i = o < 1 ? 'rgba' : 'rgb'), (n = J(n)), (a = J(a));
+                var E = '000000' + ((n << 16) | (a << 8) | (_ = J(_))).toString(16);
                 E = E.substr(E.length - 6);
-                var c = '0' + z(255 * o).toString(16);
+                var c = '0' + J(255 * o).toString(16);
                 switch (((c = c.substr(c.length - 2)), i.toLowerCase())) {
                     case 'rgba':
                         return '#' + E + c;
@@ -584,19 +584,19 @@ var t, r;
             ej = i.unpack,
             e$ = i.DEG2RAD,
             eq = Math.sin,
-            eJ = Math.cos,
-            ez = function () {
+            ez = Math.cos,
+            eJ = function () {
                 for (var e = [], t = arguments.length; t--; ) e[t] = arguments[t];
                 var r = ej(e, 'lch'),
                     n = r[0],
                     a = r[1],
                     _ = r[2];
-                return isNaN(_) && (_ = 0), [n, eJ((_ *= e$)) * a, eq(_) * a];
+                return isNaN(_) && (_ = 0), [n, ez((_ *= e$)) * a, eq(_) * a];
             },
             eQ = i.unpack,
             eZ = function () {
                 for (var e = [], t = arguments.length; t--; ) e[t] = arguments[t];
-                var r = ez((e = eQ(e, 'lch'))[0], e[1], e[2]),
+                var r = eJ((e = eQ(e, 'lch'))[0], e[1], e[2]),
                     n = eB(r[0], r[1], r[2]);
                 return [n[0], n[1], n[2], e.length > 3 ? e[3] : 1];
             },
@@ -978,7 +978,7 @@ var t, r;
             }),
             (E.format.oklch = function () {
                 for (var e = [], t = arguments.length; t--; ) e[t] = arguments[t];
-                var r = ez((e = tp(e, 'lch'))[0], e[1], e[2]),
+                var r = eJ((e = tp(e, 'lch'))[0], e[1], e[2]),
                     n = tT(r[0], r[1], r[2]);
                 return [n[0], n[1], n[2], e.length > 3 ? e[3] : 1];
             }),
@@ -1365,14 +1365,14 @@ var t, r;
                     h
                 );
             },
-            tJ = function (e) {
+            tz = function (e) {
                 for (var t = [1, 1], r = 1; r < e; r++) {
                     for (var n = [1], a = 1; a <= t.length; a++) n[a] = (t[a] || 0) + t[a - 1];
                     t = n;
                 }
                 return t;
             },
-            tz = function (e) {
+            tJ = function (e) {
                 var t, r, n, a, _, o, i, E, c, s, l;
                 if (
                     2 ===
@@ -1425,7 +1425,7 @@ var t, r;
                     (c = e.map(function (e) {
                         return e.lab();
                     })),
-                        (s = tJ((l = e.length - 1))),
+                        (s = tz((l = e.length - 1))),
                         (a = function (e) {
                             var t = 1 - e;
                             return new u(
@@ -1713,7 +1713,7 @@ var t, r;
                 return (I /= n), new u(o, t).alpha(I > 0.99999 ? 1 : I, !0);
             }),
             (I.bezier = function (e) {
-                var t = tz(e);
+                var t = tJ(e);
                 return (
                     (t.scale = function () {
                         return tq(t);

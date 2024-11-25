@@ -17,15 +17,15 @@ var l = n(13245),
     f = n(610394),
     p = n(516542),
     m = n(380736),
-    v = n(620954),
-    g = n(987650),
+    g = n(620954),
+    v = n(987650),
     E = n(981631),
     Z = n(388032);
 function C(e, t, n, C) {
     var x;
     let { icon: S, title: I, body: _ } = (0, a.Xi)(e, t, n),
-        { trackView: O, trackClick: N } = (0, v.R)(g.n0.TextChat, {
-            notif_type: g.n0.TextChat,
+        { trackView: O, trackClick: N } = (0, g.R)(v.n0.TextChat, {
+            notif_type: v.n0.TextChat,
             notif_user_id: null === (x = t.author) || void 0 === x ? void 0 : x.id,
             message_id: t.id,
             message_type: t.type,
@@ -44,7 +44,7 @@ function C(e, t, n, C) {
                       hideSimpleEmbedContent: !1
                   }).content
                 : _,
-        hint: (e) => (e ? null : (0, m.Q)((0, v.P)(), Z.t.ykjOAA, Z.intl.string(Z.t.jZkzVF))),
+        hint: (e) => (e ? null : (0, m.Q)((0, g.P)(), Z.t.ykjOAA, Z.intl.string(Z.t.jZkzVF))),
         maxBodyLines: 2,
         renderFooter: (t, n) =>
             t

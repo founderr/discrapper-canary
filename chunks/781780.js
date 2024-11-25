@@ -5,8 +5,8 @@ t.d(n, {
 });
 var i = t(200651),
     o = t(963614),
-    r = t(208156),
-    a = t(701488),
+    a = t(208156),
+    r = t(701488),
     c = t(848556);
 function l(e) {
     var n, t, l;
@@ -19,9 +19,9 @@ function l(e) {
     return (
         null != s && '' !== s && (f.guild_id = s),
         null != d && '' !== d && (f.channel_id = d),
-        (0, i.jsx)(r.J, {
+        (0, i.jsx)(a.J, {
             allowPopups: (0, o.h)(_),
-            referrerPolicy: a.um.has(u.applicationId) ? 'no-referrer' : 'origin',
+            referrerPolicy: r.um.has(u.applicationId) ? 'no-referrer' : 'origin',
             url: u.url,
             queryParams: f,
             className: c.iframe,

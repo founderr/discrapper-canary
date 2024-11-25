@@ -20,8 +20,8 @@ var i = n(200651),
     f = n(333031),
     p = n(693091),
     m = n(981631),
-    v = n(388032),
-    g = n(213973);
+    g = n(388032),
+    v = n(213973);
 function E(e, t, n) {
     return (0, i.jsx)(Z, {
         keybind: e,
@@ -34,7 +34,7 @@ function Z(e) {
         o = (0, d.o)();
     return (0, i.jsx)(i.Fragment, {
         children: o
-            ? v.intl.format(n, {
+            ? g.intl.format(n, {
                   keybind: t,
                   keybindHook: (e) => (0, i.jsx)(h.Z, { keybind: t }, t.join('+'))
               })
@@ -78,7 +78,7 @@ let x = l.memo(function (e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', {
-                className: g.overflowWrapper,
+                className: v.overflowWrapper,
                 onScroll: C,
                 children: (0, i.jsx)(a.Clickable, {
                     innerRef: y,
@@ -86,13 +86,13 @@ let x = l.memo(function (e) {
                     onMouseOver: k,
                     onMouseLeave: A,
                     onClick: f,
-                    className: r()(g.container, { [g.clickable]: null != f }),
+                    className: r()(v.container, { [v.clickable]: null != f }),
                     children: (function () {
                         let e = null == _ ? void 0 : _(b);
                         return (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsxs)(s.animated.div, {
-                                    className: g.iconAndDetails,
+                                    className: v.iconAndDetails,
                                     style: { opacity: O },
                                     children: [
                                         null == x
@@ -101,15 +101,15 @@ let x = l.memo(function (e) {
                                               ? (0, i.jsx)(a.Avatar, {
                                                     src: x,
                                                     size: a.AvatarSizes.SIZE_40,
-                                                    className: g.avatar,
+                                                    className: v.avatar,
                                                     'aria-hidden': !0
                                                 })
                                               : (0, i.jsx)('div', {
-                                                    className: g.avatar,
+                                                    className: v.avatar,
                                                     children: x
                                                 }),
                                         (0, i.jsxs)('div', {
-                                            className: g.details,
+                                            className: v.details,
                                             children: [
                                                 (0, i.jsx)(a.Text, {
                                                     color: 'interactive-normal',
@@ -129,7 +129,7 @@ let x = l.memo(function (e) {
                                                     let e = 'function' == typeof p ? p(b) : p;
                                                     return null != p
                                                         ? (0, i.jsx)(a.Text, {
-                                                              className: g.hint,
+                                                              className: v.hint,
                                                               color: 'text-muted',
                                                               variant: 'text-xxs/medium',
                                                               children: e
@@ -139,25 +139,25 @@ let x = l.memo(function (e) {
                                                 null == d && null == h
                                                     ? null
                                                     : (0, i.jsxs)('div', {
-                                                          className: g.buttonContainer,
+                                                          className: v.buttonContainer,
                                                           children: [
                                                               null != d
                                                                   ? (0, i.jsx)(a.Button, {
-                                                                        className: g.button,
+                                                                        className: v.button,
                                                                         size: a.Button.Sizes.SMALL,
                                                                         color: a.Button.Colors.GREEN,
                                                                         onClick: R,
-                                                                        children: null != Z ? Z : v.intl.string(v.t.BddRzc)
+                                                                        children: null != Z ? Z : g.intl.string(g.t.BddRzc)
                                                                     })
                                                                   : null,
                                                               null != h
                                                                   ? (0, i.jsx)(a.Button, {
-                                                                        className: g.button,
+                                                                        className: v.button,
                                                                         size: a.Button.Sizes.SMALL,
                                                                         look: a.Button.Looks.OUTLINED,
                                                                         color: a.Button.Colors.PRIMARY,
                                                                         onClick: w,
-                                                                        children: null != E ? E : v.intl.string(v.t['ETE/oK'])
+                                                                        children: null != E ? E : g.intl.string(g.t['ETE/oK'])
                                                                     })
                                                                   : null
                                                           ]
@@ -168,7 +168,7 @@ let x = l.memo(function (e) {
                                 }),
                                 null != e &&
                                     (0, i.jsx)(a.Clickable, {
-                                        className: g.footer,
+                                        className: v.footer,
                                         ignoreKeyPress: !0,
                                         onClick: (e) => e.stopPropagation(),
                                         children: e
@@ -179,9 +179,9 @@ let x = l.memo(function (e) {
                 })
             }),
             (0, i.jsx)(c.Z, {
-                className: g.dismissButton,
+                className: v.dismissButton,
                 onDismiss: L,
-                'aria-label': v.intl.string(v.t.LnEgqa)
+                'aria-label': g.intl.string(g.t.LnEgqa)
             })
         ]
     });
@@ -194,7 +194,7 @@ function S(e) {
         locked: u
     } = e;
     return (0, i.jsx)(s.animated.div, {
-        className: g.animationWrapper,
+        className: v.animationWrapper,
         style: {
             pointerEvents: u && 0 !== r ? 'none' : 'auto',
             zIndex: Math.max(5 - r, 0),
@@ -210,7 +210,7 @@ function I(e) {
     let { notification: t, index: n, locked: o, transitionState: r, cleanUp: s } = e,
         {
             id: a,
-            props: { onNotificationShow: d, onDismissClick: c, onNotificationClick: h, onConfirmClick: m, onCancelClick: v, renderFooter: E }
+            props: { onNotificationShow: d, onDismissClick: c, onNotificationClick: h, onConfirmClick: m, onCancelClick: g, renderFooter: E }
         } = t,
         Z = l.useCallback(() => {
             d(a);
@@ -235,9 +235,9 @@ function I(e) {
         ),
         O = l.useCallback(
             (e) => {
-                null == v || v(e, a);
+                null == g || g(e, a);
             },
-            [v, a]
+            [g, a]
         ),
         N = l.useCallback((e) => (null == E ? void 0 : E(e, a)), [E, a]),
         {
@@ -252,7 +252,7 @@ function I(e) {
         locked: o,
         children: (0, i.jsx)(f.Z, {
             observe: 0 === n,
-            className: g.clickZone,
+            className: v.clickZone,
             children: (0, i.jsx)(x, {
                 ...w,
                 containerRef: A,
@@ -261,7 +261,7 @@ function I(e) {
                 onDismissClick: C,
                 onNotificationClick: null != h ? I : void 0,
                 onConfirmClick: null != m ? _ : void 0,
-                onCancelClick: null != v ? O : void 0,
+                onCancelClick: null != g ? O : void 0,
                 renderFooter: N,
                 expand: !1,
                 index: n,

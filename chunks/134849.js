@@ -12,10 +12,10 @@ var i = n(200651),
     f = n(981631),
     p = n(408052);
 let m = [];
-function v(e) {
+function g(e) {
     return e.notification.id;
 }
-function g(e, t, n, l) {
+function v(e, t, n, l) {
     let { index: o, notification: r, locked: s } = t;
     return (0, i.jsx)(
         d.Z,
@@ -67,8 +67,8 @@ t.Z = l.memo(function (e) {
             value: d,
             children: (0, i.jsx)(r.TransitionGroup, {
                 items: n,
-                renderItem: g,
-                getItemKey: v,
+                renderItem: v,
+                getItemKey: g,
                 wrapChildren: E
             })
         })

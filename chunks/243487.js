@@ -17,8 +17,8 @@ var i = n(200651),
     f = n(586902),
     p = n(835473),
     m = n(415635),
-    v = n(933557),
-    g = n(701362),
+    g = n(933557),
+    v = n(701362),
     E = n(552282),
     Z = n(565799),
     C = n(501655),
@@ -62,7 +62,7 @@ function z(e) {
     });
 }
 function D(e) {
-    let { channel: t, flipped: n = !1, locked: o = !1, user: u, nick: d, displayNameMode: c, displayUserMode: p, size: m = k.ipw.LARGE, onClick: v, onContextMenu: E, context: Z, guildId: C, voiceState: _, showStreamPreview: O, onShowStreamPreview: y, onWatchStream: T } = e,
+    let { channel: t, flipped: n = !1, locked: o = !1, user: u, nick: d, displayNameMode: c, displayUserMode: p, size: m = k.ipw.LARGE, onClick: g, onContextMenu: E, context: Z, guildId: C, voiceState: _, showStreamPreview: O, onShowStreamPreview: y, onWatchStream: T } = e,
         j = (0, s.e7)([I.default], () => I.default.getId() === u.id, [u.id]),
         [b, L, R] = (0, s.Wu)([N.Z], () => (j ? [!N.Z.isSupported() || N.Z.isSelfMute() || N.Z.isSelfMutedTemporarily(), N.Z.isSelfDeaf(), !1] : [!N.Z.isSupported() || N.Z.isLocalMute(u.id), !1, N.Z.isLocalVideoDisabled(u.id)]), [j, u.id]),
         w = (0, s.e7)([S.Z], () => S.Z.getCurrentUserActiveStream()),
@@ -77,7 +77,7 @@ function D(e) {
         W = l.useCallback(() => y(null), [y]),
         F = l.useCallback(
             () =>
-                (0, i.jsx)(g.Z, {
+                (0, i.jsx)(v.Z, {
                     user: u,
                     channel: t,
                     onWatch: () => {
@@ -104,7 +104,7 @@ function D(e) {
             [M.interactive]: !o,
             [M.flipped]: n
         }),
-        onClick: o ? void 0 : (e) => (null == v ? void 0 : v(e, u)),
+        onClick: o ? void 0 : (e) => (null == g ? void 0 : g(e, u)),
         onContextMenu: o ? void 0 : (e) => (null == E ? void 0 : E(e, u)),
         onMouseEnter: () => y(u.id),
         onMouseLeave: W,
@@ -161,7 +161,7 @@ function D(e) {
     });
 }
 function P(e) {
-    let { id: t, context: o = A.Yn.DEFAULT, channel: r, sortedVoiceStates: s, displayNameMode: a, displayUserMode: h, locked: f, pinned: p, isPreviewingInGame: m, anchorLeft: v, avatarSizeMode: g } = e,
+    let { id: t, context: o = A.Yn.DEFAULT, channel: r, sortedVoiceStates: s, displayNameMode: a, displayUserMode: h, locked: f, pinned: p, isPreviewingInGame: m, anchorLeft: g, avatarSizeMode: v } = e,
         [E, Z] = l.useState(null),
         C = (e, t) => {
             (0, u.jW)(e, async () => {
@@ -204,11 +204,11 @@ function P(e) {
                                 guildId: null == r ? void 0 : r.guild_id,
                                 user: n,
                                 nick: null !== (t = null == s ? void 0 : s.nick) && void 0 !== t ? t : L.ZP.getName(n),
-                                flipped: !v,
+                                flipped: !g,
                                 voiceState: l,
                                 displayNameMode: a,
                                 displayUserMode: h,
-                                size: g,
+                                size: v,
                                 locked: f || m,
                                 onContextMenu: C,
                                 onClick: C,
@@ -227,7 +227,7 @@ function P(e) {
 function V(e) {
     var t;
     let n = (0, s.e7)([y.Z, _.Z], () => _.Z.getChannel(y.Z.getVoiceChannelId())),
-        l = (0, v.ZP)(n),
+        l = (0, g.ZP)(n),
         o = (function () {
             let [e] = (0, s.e7)(
                 [T.ZP, Z.Z, y.Z, _.Z],

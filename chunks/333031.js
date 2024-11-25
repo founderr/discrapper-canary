@@ -17,8 +17,8 @@ var i = n(200651),
     f = n(928518),
     p = n(358085),
     m = n(610394),
-    v = n(561064),
-    g = n(501787),
+    g = n(561064),
+    v = n(501787),
     E = n(269041);
 function Z(e, t, n) {
     return (
@@ -48,7 +48,7 @@ let x = l.createContext(
             var t;
             if ((null == this.resizeObserver && (this.resizeObserver = new this.window.ResizeObserver(this.handleResize)), null == this.mutationObserver)) {
                 this.mutationObserver = new MutationObserver(this.handleMutations);
-                let e = f.Z.getWindow(g.OVERLAY_V3_KEY);
+                let e = f.Z.getWindow(v.OVERLAY_V3_KEY);
                 null != e &&
                     this.mutationObserver.observe(null == e ? void 0 : e.document.body, {
                         subtree: !0,
@@ -72,7 +72,7 @@ let x = l.createContext(
         }
         updateZones() {
             if (!p.isPlatformEmbedded) return;
-            let e = f.Z.getWindow(g.OVERLAY_V3_KEY);
+            let e = f.Z.getWindow(v.OVERLAY_V3_KEY);
             null != e &&
                 h.Z.setClickZones(
                     Array.from(this.zones.values()).map((t) => {
@@ -131,7 +131,7 @@ let x = l.createContext(
                 ),
                 (this.window = e);
         }
-    })((0, v.i)())
+    })((0, g.i)())
 );
 function S(e) {
     let { observe: t = !0, className: n, children: o } = e,
@@ -154,7 +154,7 @@ function S(e) {
         }, [t, c]),
         (0, i.jsx)('div', {
             ref: u,
-            className: r()(n, a && E.debugMode),
+            className: r()(n, E.clickable, a && E.debugMode),
             'data-click-zone': !0,
             children: o
         })

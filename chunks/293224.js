@@ -34,8 +34,8 @@ var i = n(200651),
     f = n(75735),
     p = n(481060),
     m = n(846027),
-    v = n(239091),
-    g = n(287734),
+    g = n(239091),
+    v = n(287734),
     E = n(40851),
     Z = n(100527),
     C = n(906732),
@@ -91,9 +91,9 @@ function en(e) {
         text: s,
         'aria-label': !1,
         children: (e) => {
-            let { onMouseEnter: s, onMouseLeave: v, ...g } = e;
+            let { onMouseEnter: s, onMouseLeave: g, ...v } = e;
             return (0, i.jsxs)(p.Button, {
-                ...g,
+                ...v,
                 onClick: d,
                 size: p.Button.Sizes.SMALL,
                 color: t ? u : a,
@@ -103,7 +103,7 @@ function en(e) {
                     null == s || s(), null == h || h(e);
                 },
                 onMouseLeave: (e) => {
-                    null == v || v(), null == f || f(e);
+                    null == g || g(), null == f || f(e);
                 },
                 onContextMenu: m,
                 children: [
@@ -198,13 +198,13 @@ function el(e) {
                 (0, O.Z)(r, q.jXE.OVERLAY);
             },
             onCutoutClick: (e) => {
-                (0, v.jW)(e, async () => {
+                (0, g.jW)(e, async () => {
                     let { default: e } = await Promise.resolve().then(n.bind(n, 659580));
                     return () =>
                         (0, i.jsx)(C.Gt, {
                             value: m,
                             children: (0, i.jsx)(e, {
-                                onClose: v.Zy,
+                                onClose: g.Zy,
                                 renderOutputDevices: !0,
                                 renderOutputVolume: !0
                             })
@@ -227,10 +227,10 @@ function eo(e) {
         h = (e) => {
             m.Z.setVideoEnabled(e);
         },
-        v = () => {
+        g = () => {
             d ? h(!0) : (0, V.Z)();
         },
-        g = u ? () => v() : () => h(!r),
+        v = u ? () => g() : () => h(!r),
         {
             Component: E,
             play: Z,
@@ -265,7 +265,7 @@ function eo(e) {
                     size: 'sm'
                 }),
                 tooltip: S,
-                onClick: g,
+                onClick: v,
                 isToggled: r,
                 onCutoutClick: n,
                 onContextMenu: n,
@@ -296,8 +296,8 @@ function er(e) {
         h = (0, s.cj)([H.Z], () => (0, j.Z)(H.Z)),
         f = (0, s.e7)([U.Z], () => U.Z.getCurrentUserActiveStream()),
         m = (0, E.bp)(),
-        v = null == o ? void 0 : o.getGuildId(),
-        g = l.useCallback(() => {
+        g = null == o ? void 0 : o.getGuildId(),
+        v = l.useCallback(() => {
             h &&
                 null != a &&
                 (0, p.openModalLazy)(async () => {
@@ -306,11 +306,11 @@ function er(e) {
                         (0, i.jsx)(e, {
                             ...t,
                             selectSource: !1,
-                            guildId: v,
+                            guildId: g,
                             analyticsLocation: q.Sbl.UNLOCKED_OVERLAY
                         });
                 });
-        }, [h, v, a]),
+        }, [h, g, a]),
         Z = null != f;
     if (Z) t = $.intl.string($.t.S5anIS);
     else if (null != o) {
@@ -319,7 +319,7 @@ function er(e) {
     }
     let C = () => {
             if (Z) return (0, b.Z)(f, !1);
-            g();
+            v();
         },
         {
             Component: x,
@@ -336,7 +336,7 @@ function er(e) {
                       channel: o,
                       currentUser: u,
                       activeStreams: null != f ? [f] : [],
-                      handleGoLive: g,
+                      handleGoLive: v,
                       onClose: O(t),
                       appContext: m,
                       disableChangeWindows: !0
@@ -387,7 +387,7 @@ function es(e) {
         c = null == l || a || u || d;
     function f(e) {
         null != r &&
-            (0, v.jW)(e, async () => {
+            (0, g.jW)(e, async () => {
                 let { default: e } = await n.e('56049').then(n.bind(n, 338991));
                 return (t) =>
                     (0, i.jsx)(e, {
@@ -398,7 +398,7 @@ function es(e) {
     }
     let {
             Component: m,
-            events: { onClick: g, onMouseEnter: E, onMouseLeave: Z }
+            events: { onClick: v, onMouseEnter: E, onMouseLeave: Z }
         } = (0, h.j)(),
         C = et(o);
     return (0, i.jsx)(p.Popout, {
@@ -430,7 +430,7 @@ function es(e) {
                     if (d) return $.intl.string($.t.X1lQlp);
                 })(),
                 onClick: (e) => {
-                    g(), n(e);
+                    v(), n(e);
                 },
                 onContextMenu: f,
                 onMouseEnter: E,
@@ -450,10 +450,10 @@ function ea(e) {
                 .filter(Q.lm)
         ),
         r = () => {
-            l && g.default.disconnect();
+            l && v.default.disconnect();
         },
         u = (e) => {
-            g.default.selectVoiceChannel(e.id);
+            v.default.selectVoiceChannel(e.id);
         },
         {
             Component: d,

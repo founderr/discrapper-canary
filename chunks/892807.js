@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return v;
     }
 });
 var i = n(200651),
@@ -16,14 +16,14 @@ var i = n(200651),
     f = n(594174),
     p = n(981631),
     m = n(388032),
-    v = n(549584);
-function g(e) {
-    let { recentVoiceChannels: t, currentVoiceChannel: n, onClose: g, onSelect: E } = e,
+    g = n(549584);
+function v(e) {
+    let { recentVoiceChannels: t, currentVoiceChannel: n, onClose: v, onSelect: E } = e,
         Z = l.useCallback(
             (e) => {
-                E(e), g();
+                E(e), v();
             },
-            [E, g]
+            [E, v]
         ),
         C = (0, o.e7)([c.Z], () => c.Z.getQuality()),
         x = {
@@ -35,9 +35,9 @@ function g(e) {
     return (0, i.jsx)(s.Z, {
         section: p.jXE.CONTEXT_MENU,
         children: (0, i.jsx)(r.Menu, {
-            onSelect: g,
+            onSelect: v,
             navId: 'manage-streams',
-            onClose: g,
+            onClose: v,
             'aria-label': m.intl.string(m.t['+9QSnp']),
             children: (0, i.jsx)(r.MenuGroup, {
                 children: t.map((e) => {
@@ -50,7 +50,7 @@ function g(e) {
                             id: e.id,
                             label: (0, i.jsxs)(r.Text, {
                                 variant: 'text-sm/semibold',
-                                className: v.label,
+                                className: g.label,
                                 color: o ? 'text-positive' : 'text-normal',
                                 children: [
                                     null != l

@@ -12,8 +12,8 @@ var i,
     f = n(772848),
     p = n(442837),
     m = n(570140),
-    v = n(13245),
-    g = n(435064),
+    g = n(13245),
+    v = n(435064),
     E = n(786761),
     Z = n(695346),
     C = n(314897),
@@ -117,7 +117,7 @@ function en(e, t) {
                     start() {
                         let l = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : t,
                             o = l ? U._1z.TIMED_OUT : U._1z.DISMISSED;
-                        -1 === i && (i = setTimeout(() => v.Z.updateNotificationStatus(e, o), null != n ? n : F));
+                        -1 === i && (i = setTimeout(() => g.Z.updateNotificationStatus(e, o), null != n ? n : F));
                     },
                     stop() {
                         clearTimeout(i), (i = -1);
@@ -280,7 +280,7 @@ let eo = new el(m.Z, {
         en((0, M.f)(W.intl.string(W.t.NBMK9v)));
     },
     CLIPS_SAVE_CLIP: function () {
-        en((0, M.f)(W.intl.format(W.t.KLhk6u, { duration: (0, R.A)(g.Z.getSettings().clipsLength / 1000, !0) })));
+        en((0, M.f)(W.intl.format(W.t.KLhk6u, { duration: (0, R.A)(v.Z.getSettings().clipsLength / 1000, !0) })));
     },
     CLIPS_SAVE_CLIP_ERROR: function () {
         en((0, M.f)(W.intl.string(W.t['1ZbZur'])));
