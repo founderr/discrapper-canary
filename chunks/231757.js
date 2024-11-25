@@ -1,61 +1,76 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return f;
     }
 });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    a = n(842146),
-    s = n(293177),
-    o = n(349407),
-    l = n(49012),
-    u = n(202120),
-    c = n(981631);
-function d(e) {
-    let { platformType: t, location: d, overrideUrl: f, successRedirect: _ } = e;
-    if ((t === c.ABu.LEAGUE_OF_LEGENDS && (t = c.ABu.RIOT_GAMES), t === c.ABu.CRUNCHYROLL)) {
-        a.K([null != d ? d : 'unknown']);
+    a = n(726542),
+    s = n(842146),
+    o = n(293177),
+    l = n(349407),
+    u = n(49012),
+    c = n(202120),
+    d = n(981631);
+function f(e) {
+    var t;
+    let { platformType: f, location: _, overrideUrl: p, successRedirect: h } = e;
+    if ((f === d.ABu.LEAGUE_OF_LEGENDS && (f = d.ABu.RIOT_GAMES), f === d.ABu.CRUNCHYROLL)) {
+        s.K([null != _ ? _ : 'unknown']);
         return;
     }
-    if (t === c.ABu.XBOX) {
-        o.K([null != d ? d : 'unknown']);
+    if (f === d.ABu.XBOX) {
+        l.K([null != _ ? _ : 'unknown']);
         return;
     }
-    if (t === c.ABu.PLAYSTATION || t === c.ABu.PLAYSTATION_STAGING) {
-        s.K([null != d ? d : 'unknown'], t);
+    if (f === d.ABu.PLAYSTATION || f === d.ABu.PLAYSTATION_STAGING) {
+        o.K([null != _ ? _ : 'unknown'], f);
         return;
     }
-    if (t === c.ABu.DOMAIN) {
+    if (f === d.ABu.DOMAIN) {
         (0, i.openModalLazy)(async () => {
             let { default: e } = await n.e('64941').then(n.bind(n, 907053));
             return (t) =>
                 (0, r.jsx)(e, {
-                    analyticsLocation: [null != d ? d : 'unknown'],
+                    analyticsLocation: [null != _ ? _ : 'unknown'],
                     ...t
                 });
         });
         return;
     }
-    if (null != f) {
-        (0, l.q)({
+    if ((null === (t = a.Z.get(f)) || void 0 === t ? void 0 : t.isFederated) === !0) {
+        (0, i.openModalLazy)(async () => {
+            let { default: e } = await n.e('54934').then(n.bind(n, 701460));
+            return (t) =>
+                (0, r.jsx)(e, {
+                    platformType: f,
+                    location: _,
+                    successRedirect: h,
+                    ...t
+                });
+        });
+        return;
+    }
+    if (null != p) {
+        (0, u.q)({
             shouldConfirm: !0,
-            href: f,
+            href: p,
             onConfirm: () => {
-                (0, u.H)(
-                    t,
+                (0, c.H)(
+                    f,
                     {
-                        location: d,
-                        successRedirect: _
+                        location: _,
+                        successRedirect: h
                     },
-                    f
+                    p
                 );
             }
         });
         return;
     }
-    (0, u.H)(t, {
-        location: d,
-        successRedirect: _
+    (0, c.H)(f, {
+        location: _,
+        successRedirect: h
     });
 }

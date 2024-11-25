@@ -32,7 +32,7 @@ var c = n(200651),
     h = n(981631),
     C = n(856651),
     v = n(388032),
-    x = n(962586);
+    x = n(196161);
 function P(e) {
     var t, n;
     let l,
@@ -52,6 +52,8 @@ function P(e) {
             case h.ABu.STEAM:
                 l = (0, m.Dq)(g);
                 break;
+            case h.ABu.BLUESKY:
+            case h.ABu.MASTODON:
             case h.ABu.TWITTER:
                 (l = (0, m.rJ)(g)), '1' === g[C.PC.TWITTER_VERIFIED] && ((r = b), (y = v.intl.string(v.t.Jebrw8)));
                 break;

@@ -73,7 +73,8 @@ let l = [
                 let { id: t } = e;
                 return 'https://bsky.app/profile/'.concat(encodeURIComponent(t).replaceAll('%3A', ':'));
             },
-            isFederated: !0
+            isFederated: !0,
+            hasMetadata: !0
         },
         {
             type: o.ABu.BUNGIE,
@@ -437,7 +438,8 @@ let l = [
                 let { id: t } = e;
                 return t;
             },
-            isFederated: !0
+            isFederated: !0,
+            hasMetadata: !0
         },
         {
             type: o.ABu.CRUNCHYROLL,

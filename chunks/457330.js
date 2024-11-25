@@ -49,27 +49,27 @@ t.Z = {
             ),
     async authorize(e) {
         var t;
-        let { location: n, twoWayLinkType: r, userCode: a, twoWayLink: l, successRedirect: f } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        let { location: n, twoWayLinkType: r, userCode: a, twoWayLink: l, successRedirect: f, handle: p } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
         d.default.track(_.rMx.CONNECTED_ACCOUNT_INITIATED, {
             platform_type: e,
             location: n
         });
-        let p = _.ANM.CONNECTIONS_AUTHORIZE(e),
-            h = new URLSearchParams();
-        null != a && h.append('two_way_user_code', a), null != f && h.append('success_redirect', f), null != r ? (h.append('two_way_link_type', r), h.append('two_way_link', 'true')) : null != l && h.append('two_way_link', String(l));
-        let { enabled: m } = o.g.getCurrentConfig({ location: 'ConnectedAcountsActionCreators.authorize' }, { autoTrackExposure: !0 });
-        if (m) {
+        let h = _.ANM.CONNECTIONS_AUTHORIZE(e),
+            m = new URLSearchParams();
+        null != a && m.append('two_way_user_code', a), null != f && m.append('success_redirect', f), null != r ? (m.append('two_way_link_type', r), m.append('two_way_link', 'true')) : null != l && m.append('two_way_link', String(l)), null != p && m.append('handle', p);
+        let { enabled: g } = o.g.getCurrentConfig({ location: 'ConnectedAcountsActionCreators.authorize' }, { autoTrackExposure: !0 });
+        if (g) {
             let e = u.default.getSessionId();
-            null != e && h.append('session_id', e);
+            null != e && m.append('session_id', e);
         }
-        p = p + '?' + h.toString();
-        let g = await i.tn.get({
-                url: p,
+        h = h + '?' + m.toString();
+        let E = await i.tn.get({
+                url: h,
                 oldFormErrors: !0,
                 rejectWithError: !1
             }),
-            { state: E } = (0, s.xp)(null !== (t = g.body.url) && void 0 !== t ? t : '');
-        return null != E && !o.g.getCurrentConfig({ location: 'ConnectedAccountsActionCreators.authorize' }).enabled && c.Z.addPendingAuthorizedState(E), g;
+            { state: v } = (0, s.xp)(null !== (t = E.body.url) && void 0 !== t ? t : '');
+        return null != v && !o.g.getCurrentConfig({ location: 'ConnectedAccountsActionCreators.authorize' }).enabled && c.Z.addPendingAuthorizedState(v), E;
     },
     callback: h,
     connect(e, t, n, i, a) {
@@ -213,13 +213,14 @@ t.Z = {
             token_redirect_uri: i
         });
     },
-    sessionHandoff: function (e, t, n, r) {
+    sessionHandoff: function (e, t, n, r, a) {
         return i.tn.post({
             url: _.ANM.CONNECTIONS_SESSION_HANDOFF(e),
             body: {
                 state: t,
                 code: n,
-                openid_params: r
+                openid_params: r,
+                iss: a
             },
             oldFormErrors: !0,
             rejectWithError: !1

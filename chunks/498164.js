@@ -81,7 +81,7 @@ function Z(e, t) {
                 return (
                     T.ZP.focus(),
                     (0, s.openModalLazy)(async () => {
-                        let { default: e } = await Promise.all([n.e('10778'), n.e('27815')]).then(n.bind(n, 766775));
+                        let { default: e } = await Promise.all([n.e('10778'), n.e('22769')]).then(n.bind(n, 766775));
                         return (t) =>
                             (0, l.jsx)(e, {
                                 ...t,
@@ -112,7 +112,7 @@ function Z(e, t) {
                                         location: x.SaU
                                     }),
                                     (0, s.openModalLazy)(async () => {
-                                        let { default: e } = await Promise.all([n.e('92446'), n.e('89793')]).then(n.bind(n, 409858));
+                                        let { default: e } = await Promise.all([n.e('92446'), n.e('39418')]).then(n.bind(n, 409858));
                                         return (n) =>
                                             (0, l.jsx)(e, {
                                                 code: t,
@@ -203,16 +203,17 @@ function Z(e, t) {
             scope: b.cE,
             handler: async (e) => {
                 let {
-                    args: { providerType: t, code: n, openid_params: i, state: r }
+                    args: { providerType: t, code: n, openid_params: i, iss: r, state: l }
                 } = e;
-                if (!p.g.getCurrentConfig({ location: 'private.CONNECTIONS_CALLBACK' }).enabled && !I.Z.hasPendingAuthorizedState(r)) throw new A.Z({ errorCode: x.lTL.INVALID_CONNECTION_CALLBACK_STATE }, 'Provider authorization did not originate from this discord client');
+                if (!p.g.getCurrentConfig({ location: 'private.CONNECTIONS_CALLBACK' }).enabled && !I.Z.hasPendingAuthorizedState(l)) throw new A.Z({ errorCode: x.lTL.INVALID_CONNECTION_CALLBACK_STATE }, 'Provider authorization did not originate from this discord client');
                 try {
                     return (
-                        I.Z.deletePendingAuthorizedState(r),
+                        I.Z.deletePendingAuthorizedState(l),
                         await u.Z.callback(t, {
                             code: n,
                             openid_params: i,
-                            state: r
+                            iss: r,
+                            state: l
                         })
                     );
                 } catch (e) {

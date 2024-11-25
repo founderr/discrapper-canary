@@ -37,8 +37,8 @@ var i = n(200651),
     M = n(856651),
     k = n(921944),
     w = n(388032),
-    U = n(979831),
-    V = n(113207);
+    U = n(125009),
+    V = n(232186);
 let G = (e) => {
     var t, n;
     let s,
@@ -297,7 +297,9 @@ function Y(e) {
                     case F.ABu.STEAM:
                         s = (0, f.Dq)(n, U.metadataItem);
                         break;
+                    case F.ABu.BLUESKY:
                     case F.ABu.TWITTER:
+                    case F.ABu.MASTODON:
                         s = (0, f.rJ)(n, U.metadataItem);
                         break;
                     case F.ABu.EBAY:
