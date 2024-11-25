@@ -1,8 +1,4 @@
 e.exports = {
-    avatarDecoration: 'avatarDecoration_b74403',
-    profileEffectContainer: 'profileEffectContainer_b74403',
-    profileEffect: 'profileEffect_b74403',
-    profileEffectBackground: 'profileEffectBackground_b74403',
     previewContainer: 'previewContainer_b74403',
     giftInfoContainer: 'giftInfoContainer_b74403',
     previewContainerSelected: 'previewContainerSelected_b74403',
