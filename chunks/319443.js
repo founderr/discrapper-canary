@@ -22,7 +22,7 @@ var i = n(200651),
     N = n(569527),
     T = n(979007),
     A = n(388032),
-    b = n(842221);
+    b = n(544973);
 t.Z = function () {
     var e;
     let { onScroll: t, scrollPosition: n, resetScrollPosition: x } = (0, d.M)(),
@@ -68,14 +68,13 @@ t.Z = function () {
         className: b.container,
         children: [
             (0, i.jsxs)(h.ZP, {
-                className: B ? b.search : void 0,
+                variant: J ? h._6.RELATIVE : h._6.OVERLAY,
                 children: [
-                    !B && (0, i.jsx)(h.z6, { scrollPosition: n }),
+                    !J && (0, i.jsx)(h.z6, { scrollPosition: n }),
                     J
                         ? (0, i.jsx)(h.Cm, {
                               icon: a.ArrowLargeLeftIcon,
-                              onClick: $,
-                              variant: B ? h.HS.DEFAULT : h.HS.OVERLAY
+                              onClick: $
                           })
                         : (0, i.jsx)(h.aV, { icon: a.AppsIcon }),
                     G

@@ -27,7 +27,7 @@ var i = n(200651),
     I = n(133743),
     C = n(120549),
     v = n(979007),
-    S = n(463051);
+    S = n(378105);
 function N(e) {
     var t;
     let { onSelectApplication: n } = e,
@@ -114,12 +114,13 @@ function N(e) {
             },
             [A]
         );
-    return (0, i.jsxs)(i.Fragment, {
+    return (0, i.jsxs)('div', {
+        className: S.container,
         children: [
             (0, i.jsx)(_.Z, {
                 children: (0, i.jsx)(f.Z, {
                     children: (0, i.jsxs)('div', {
-                        className: S.container,
+                        className: S.contentContainer,
                         children: [
                             (0, i.jsx)('div', {
                                 className: S.topFilterContainer,

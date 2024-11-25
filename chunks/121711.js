@@ -21,7 +21,7 @@ var i = n(200651),
     N = n(46140),
     T = n(981631),
     A = n(388032),
-    b = n(431418);
+    b = n(359643);
 t.Z = function () {
     let { tabs: e, selectedTab: t, onSelectTab: n } = (0, S.z)(),
         { onScroll: x, scrollPosition: Z } = (0, c.M)(),
@@ -49,6 +49,7 @@ t.Z = function () {
             className: b.container,
             children: [
                 (0, i.jsxs)(p.ZP, {
+                    variant: p._6.OVERLAY,
                     children: [(0, i.jsx)('div', { className: b.dragRegion }), (0, i.jsx)(p.z6, { scrollPosition: Z }), (0, i.jsx)(p.aV, { icon: a.QuestsIcon })]
                 }),
                 (0, i.jsxs)(g.Z, {
